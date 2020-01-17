@@ -14,11 +14,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: bd2040199aa2f24f0ae794bda9d13255a4e1d583
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48192372"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62807506"
 ---
 # <a name="create-history-and-status-reports"></a>履歴レポートおよびステータス レポートの作成
   現在読み込まれているソリューション内のファイルの履歴または現在の状態に関するレポートを作成できます。 レポートのプレビューを見ることも、レポートをプリンター、ファイル、クリップボードに送信することも可能です。 この種のレポートは、[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] によっては生成されません。 レポートは [!INCLUDE[msCoName](../includes/msconame-md.md)] Visual SourceSafe によって生成されます。  

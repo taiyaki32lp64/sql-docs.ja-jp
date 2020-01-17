@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 5c0530ad-68d0-4cba-b1af-9386d566c7c5
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: c61852c847231b412d3c4f63ee5b54f5d5947465
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 4274c51be7bc2d94ca26312b246176bd58d197f9
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52541429"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67920182"
 ---
 # <a name="cancel-method-example-vb"></a>Cancel メソッドの例 (VB)
 この例では、[キャンセル](../../../ado/reference/ado-api/cancel-method-ado.md)でコマンドの実行をキャンセルするメソッド、[接続](../../../ado/reference/ado-api/connection-object-ado.md)オブジェクトのかどうか、接続がビジー状態です。  
@@ -103,6 +102,6 @@ End Sub
 'EndCancelVB  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [Cancel メソッド (ADO)](../../../ado/reference/ado-api/cancel-method-ado.md)   
  [Connection オブジェクト (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)

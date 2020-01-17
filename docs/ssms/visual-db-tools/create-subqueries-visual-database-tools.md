@@ -12,15 +12,14 @@ helpviewer_keywords:
 - nested queries
 - subqueries [SQL Server], SQL pane
 ms.assetid: 34f6b9b4-ca3a-4a4f-9594-36e513f1c547
-author: stevestein
-ms.author: sstein
-manager: craigg
-ms.openlocfilehash: ab0ade3d8d811f4fafcf46212e6f8eb11358e5a7
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 5ce4067256d5940f94997e4d5f767cc2f01a1e6a
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47635230"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68264299"
 ---
 # <a name="create-subqueries-visual-database-tools"></a>サブクエリの作成 (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

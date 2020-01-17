@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: d9c30b5a-9ddf-4044-a7c5-0bdb983fdda4
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: fabd9efd5e6dcfcabd318584364d8f1d70752ad9
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 68ed273989d738a768d8e5fffd116ea630d8043d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47800670"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68045055"
 ---
 # <a name="modifying-a-visual-foxpro-data-source"></a>Visual FoxPro データ ソースの変更
 ### <a name="to-modify-a-visual-foxpro-data-source"></a>Visual FoxPro データ ソースを変更するには  

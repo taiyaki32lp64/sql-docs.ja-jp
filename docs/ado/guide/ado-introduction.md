@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: c5b3a134-de22-4e9c-9489-9a1cc7a5dcfa
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 4c56a328d7b3495b57d34f127a2d12947f0ecfd0
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 42bae7f340f7f46bb5a57498b1c846f6d532ff20
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47723840"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67927125"
 ---
 # <a name="ado-overview-and-benefits"></a>ADO の概要と利点
 ActiveX Data Objects (ADO) は、OLE DB の高度な使いやすいインターフェイスです。 OLE DB には、さまざまなデータ ストアの低レベルで高パフォーマンスのインターフェイスです。 ADO と OLE DB の両方で使えるリレーショナル (表形式) と非リレーショナル (階層またはストリーム) データ。

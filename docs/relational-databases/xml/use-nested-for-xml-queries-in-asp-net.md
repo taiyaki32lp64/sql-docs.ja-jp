@@ -13,15 +13,14 @@ helpviewer_keywords:
 - nested FOR XML queries in ASP.NET
 - ASP.NET [SQL Server]
 ms.assetid: 691ac7dd-afc5-4760-932c-2b1dcd9394ed
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: da0d80542158ab25b37864af106ad9fd1ce6f592
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+author: MightyPen
+ms.author: genemi
+ms.openlocfilehash: 6fc25632b2567b191fef3ffa3111a73da9699de9
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51668511"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68001753"
 ---
 # <a name="use-nested-for-xml-queries-in-aspnet"></a>ASP.NET における入れ子になった FOR XML クエリの使用
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

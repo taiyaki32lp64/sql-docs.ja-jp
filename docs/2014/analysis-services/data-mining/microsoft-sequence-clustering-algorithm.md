@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - clusters [Analysis Services]
@@ -16,12 +15,12 @@ ms.assetid: ae779a1f-0adb-4857-afbd-a15543dff299
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: bc90c76792ae6eaaa21ba3e32bea66e4942c354f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 3df71a2facc01abcb3ebdec57aaf243c0b7fda7d
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48190782"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66083829"
 ---
 # <a name="microsoft-sequence-clustering-algorithm"></a>「Microsoft シーケンス クラスター アルゴリズム」
   [!INCLUDE[msCoName](../../includes/msconame-md.md)]シーケンス クラスター アルゴリズムは、によって提供されるシーケンス分析アルゴリズム[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]します。 このアルゴリズムを使用するには、次のパスによってリンクできるイベントを含んでいるデータを探索または*シーケンス*します。 このアルゴリズムは、同一の複数のシーケンスをグループ化またはクラスター化することによって、最も一般的なシーケンスを見つけます。 次に、シーケンスを含むデータの例をいくつか示します。このようなシーケンスはデータ マイニングで使用して、一般的な問題やビジネス シナリオの理解を深めることができます。  
@@ -62,7 +61,7 @@ ms.locfileid: "48190782"
 ## <a name="viewing-a-sequence-clustering-model"></a>シーケンス クラスター モデルの表示  
  このアルゴリズムが作成するマイニング モデルには、データ内の最も一般的なシーケンスの説明が含まれています。 モデルを参照するには、 **Microsoft シーケンス クラスター ビューアー**を使用します。 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] でシーケンス クラスター モデルを表示すると、複数の遷移を含むクラスターが表示されます。 関連する統計情報も表示できます。 詳細については、「 [Microsoft シーケンス クラスター ビューアーを使用したモデルの参照](browse-a-model-using-the-microsoft-sequence-cluster-viewer.md)」を参照してください。  
   
- さらに詳細を知るには、 [Microsoft 汎用コンテンツ ツリー ビューアー](browse-a-model-using-the-microsoft-generic-content-tree-viewer.md)でモデルを参照してください。 モデルに保存される内容には、各ノードのすべての値の分布、各クラスターの確率、および遷移に関する詳細が含まれます。 詳細については、「[シーケンス クラスター モデルのマイニング モデル コンテンツ &#40;Analysis Services - データ マイニング&#41;](mining-model-content-for-sequence-clustering-models.md)」を参照してください。  
+ さらに詳細を知るには、 [Microsoft 汎用コンテンツ ツリー ビューアー](browse-a-model-using-the-microsoft-generic-content-tree-viewer.md)でモデルを参照してください。 モデルに保存される内容には、各ノードのすべての値の分布、各クラスターの確率、および遷移に関する詳細が含まれます。 詳細については、「 [シーケンス クラスター モデルのマイニング モデル コンテンツ (Analysis Services - データ マイニング)](mining-model-content-for-sequence-clustering-models.md)」を参照してください。  
   
 ## <a name="creating-predictions"></a>予測の作成  
  モデルのトレーニング後、結果がパターンのセットとして保存されます。 データ内の最も一般的なシーケンスの説明を使用して、新しいシーケンスの次に来る可能性の高いステップを予測できます。 ただし、アルゴリズムには他の列が含まれるため、結果として得られるモデルを使用して、シーケンス化されたデータとシーケンシャルではない入力との間の関係を識別できます。 たとえば、モデルに人口統計データを追加すると、特定の顧客グループに対する予測を実行できます。 さまざまな数の予測を返したり、説明的な統計情報を返したりするように、予測クエリをカスタマイズできます。  
@@ -77,10 +76,10 @@ ms.locfileid: "48190782"
   
 -   OLAP マイニング モデルの使用およびデータ マイニング ディメンションの作成がサポートされています。  
   
-## <a name="see-also"></a>参照  
- [データ マイニング アルゴリズム&#40;Analysis Services - データ マイニング&#41;](data-mining-algorithms-analysis-services-data-mining.md)   
- [Microsoft シーケンス クラスター アルゴリズム テクニカル リファレンス](microsoft-sequence-clustering-algorithm-technical-reference.md)   
- [シーケンス クラスター モデルのクエリ例](clustering-model-query-examples.md)   
+## <a name="see-also"></a>関連項目  
+ [データ マイニング アルゴリズム &#40;Analysis Services - データ マイニング&#41;](data-mining-algorithms-analysis-services-data-mining.md)   
+ [Microsoft シーケンス クラスタリング アルゴリズム テクニカル リファレンス](microsoft-sequence-clustering-algorithm-technical-reference.md)   
+ [シーケンス クラスター モデルのクエリの例](clustering-model-query-examples.md)   
  [Microsoft シーケンス クラスター ビューアーを使用したモデルの参照](browse-a-model-using-the-microsoft-sequence-cluster-viewer.md)  
   
   

@@ -10,15 +10,15 @@ helpviewer_keywords:
 - SQRT function
 - square root of given expression
 ms.assetid: 54a75389-c501-4e22-87b8-905f66d6a3a5
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: a28999be5ed890e142d7d081637ab0f9aa1baaca
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 308a74501b0b4bf7b071feae2088c1ab1b7f030c
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52822866"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62768768"
 ---
 # <a name="sqrt-ssis-expression"></a>SQRT (SSIS 式)
   数値式の平方根を返します。  
@@ -66,7 +66,7 @@ SQRT(SQUARE(@Side1) + SQUARE(@Side2))
 > [!NOTE]  
 >  式に含まれる変数名には、常にプレフィックス \@ を付けます。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [関数 (SSIS 式)](functions-ssis-expression.md)  
   
   

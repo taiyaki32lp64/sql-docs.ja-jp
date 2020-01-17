@@ -4,26 +4,25 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 3301c328-b0f5-4517-915c-93713413e453
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 8f81996093aa6ac42eaab9c6057c9c8bb706055b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: ac28a67051299b0dbdfc7010d9abe20d0d2d2493
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48203802"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66058172"
 ---
 # <a name="import-an-integration-services-project"></a>Integration Services プロジェクトのインポート
   既存の配置ファイル (.ispac) または Integration Services カタログに配置されたプロジェクトからプロジェクトを作成するには、[!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] の**プロジェクトのインポート ウィザード**を使用します。 この機能は、プロジェクトの元のコピーがない状態で、.ispac ファイルまたは SSISDB カタログからプロジェクトを作成する場合に、特に便利です。  
   
 ### <a name="to-import-a-project"></a>プロジェクトをインポートするには  
   
-1.  [!INCLUDE[vsprvs](../includes/vsprvs-md.md)]で、 **[ファイル]** > **メニューの** [新規作成] **[プロジェクト]** をクリックします。  
+1.  [!INCLUDE[vsprvs](../includes/vsprvs-md.md)]で、 **[ファイル]**  > **メニューの** [新規作成] **[プロジェクト]** をクリックします。  
   
 2.  **[新しいプロジェクト]** ウィンドウの **[インストールされているテンプレート]** 領域で **[ビジネス インテリジェンス]** を展開し、 **[Integration Services]** をクリックします。  
   

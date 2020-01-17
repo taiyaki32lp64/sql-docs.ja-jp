@@ -1,6 +1,6 @@
 ---
-title: SQL Server Integration Services によるインメモリ OLTP のサポート | Microsoft Docs
-ms.custom: ''
+title: SSIS によるインメモリ OLTP のサポート
+ms.custom: seo-dt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -10,14 +10,13 @@ ms.topic: conceptual
 ms.assetid: ea82a9b9-e9ed-4d6f-b3fd-917f6c687ae3
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 6c56202600415e44087f0716fb9f084d831b72c3
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: cdd1d71df1b23b57ab9e55ac16dc6744b21aee9d
+ms.sourcegitcommit: 384e7eeb0020e17a018ef8087970038aabdd9bb7
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47834240"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74412593"
 ---
 # <a name="sql-server-integration-services-support-for-in-memory-oltp"></a>SQL Server Integration Services によるインメモリ OLTP のサポート
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]

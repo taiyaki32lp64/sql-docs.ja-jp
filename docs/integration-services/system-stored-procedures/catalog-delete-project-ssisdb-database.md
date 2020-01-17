@@ -8,17 +8,20 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: language-reference
 ms.assetid: f3431445-8dd2-443b-813e-b99db893977e
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: 2b6235eadbbc2dea71ca809be42c3f81934c4495
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 1a48cb51b363d036f57dfd4f175ab862645ebca1
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47628350"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71296786"
 ---
-# <a name="catalogdeleteproject-ssisdb-database"></a>catalog.delete_project (SSISDB データベース)
+# <a name="catalogdelete_project-ssisdb-database"></a>catalog.delete_project (SSISDB データベース)
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] カタログのフォルダーから既存のプロジェクトを削除します。  
@@ -52,7 +55,7 @@ catalog.delete_project [ @folder_name = ] folder_name , [ @project_name = ] proj
 -   **sysadmin** サーバー ロールのメンバーシップ  
   
 ## <a name="errors-and-warnings"></a>エラーおよび警告  
- 次の一覧には、エラーが発生する delete_project ストアド プロシージャが可能性がある条件について説明します。  
+ 次の一覧は、delete_project ストアド プロシージャにエラーを発生させる可能性があるいくつかの条件を以下に示します。  
   
 -   プロジェクトが存在しない  
   

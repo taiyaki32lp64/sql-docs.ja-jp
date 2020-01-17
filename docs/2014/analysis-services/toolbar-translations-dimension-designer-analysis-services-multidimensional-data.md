@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: c049ced5-55df-47dd-b855-b2da4b7ce17d
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: c5a40ad5418038aec31b64400932173117f17bef
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 9bf5f9fae501c019a7db3c9d78d578729cf1df42
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48103464"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66066001"
 ---
 # <a name="toolbar-translations-tab-dimension-designer-analysis-services---multidimensional-data"></a>ツール バー ([翻訳] タブ、ディメンション デザイナー) (Analysis Services - 多次元データ)
   ツール バーのボタンを使用すると、 **ディメンション デザイナー** の **[翻訳]** タブで一般的な操作を実行できます。  

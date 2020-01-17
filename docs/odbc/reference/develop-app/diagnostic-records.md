@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 92c73f9b-3ed7-410d-9cec-2771004aae60
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 928e9ffa4701568aac8c519a23e7e371596a36eb
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 90133b4a18876c52b9b6b6bffbe4c8c02c953e07
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47765822"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68039879"
 ---
 # <a name="diagnostic-records"></a>診断レコード
 接続、ステートメント、および記述子ハンドルは、各環境では、関連付けられている*診断レコード*します。 これらのレコードには、最後に呼び出される特定のハンドルを使用する関数についての診断情報が含まれます。 レコードは、そのハンドルを使用して、別の関数が呼び出されたときだけに置き換えられます。 いつでも格納できる診断レコードの数に制限はありません。  

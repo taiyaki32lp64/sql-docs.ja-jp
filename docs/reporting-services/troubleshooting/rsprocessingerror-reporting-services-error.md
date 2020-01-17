@@ -2,20 +2,20 @@
 title: rsProcessingError - Reporting Services エラー | Microsoft Docs
 ms.date: 03/15/2017
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: troubleshooting
 ms.topic: conceptual
 helpviewer_keywords:
 - rsProcessingError
 ms.assetid: 414ee58a-8251-4367-9a8e-10c068d17280
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 3d13ce445269ceb4d6de0663a5e8789598b71c58
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 684f2ec1878e7918f9aa43017feb4b4f8d32cfa1
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52409596"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65573821"
 ---
 # <a name="rsprocessingerror---reporting-services-error"></a>rsProcessingError - Reporting Services エラー
     
@@ -100,7 +100,7 @@ ms.locfileid: "52409596"
   
 -   *\<property name>* を評価できませんでした。  
   
--   *\<property name>* を評価できませんでした。 次のエラーを含んでいるデータセット フィールドを参照しています。*\<error string>*。  
+-   *\<property name>* を評価できませんでした。 次のエラーを含んでいるデータセット フィールドを参照しています。 *\<error string>* 。  
   
  詳細については、「 [データのフィルター、グループ化、および並べ替え (レポート ビルダーおよび SSRS)](../../reporting-services/report-design/filter-group-and-sort-data-report-builder-and-ssrs.md)」を参照してください。  
   
@@ -109,13 +109,13 @@ ms.locfileid: "52409596"
   
  特定のスコープの名前を集計関数に渡すこともできます。 スコープでは、データセットの名前、データ領域、またはデータ階層のより上位のスコープの名前を参照できます。 これは、次のメッセージに当てはまります。  
   
--   *\<report item type>* '*\<report item name>*' のスコープ "*\<scope name>*" が無効です。 スコープは現在のスコープであるか、または現在のスコープ内に含まれている必要があります。  
+-   *\<report item type>* ' *\<report item name>* ' のスコープ " *\<scope name>* " が無効です。 スコープは現在のスコープであるか、または現在のスコープ内に含まれている必要があります。  
   
--   *\<report item type>* '*\<report item name>*' の *\<property name>* 式に集計関数では使用できないスコープ パラメーターがあります。 スコープのパラメーターは、含まれるグループの名前、含まれるデータ領域の名前、またはデータセットの名前のいずれかと同じ文字列の定数に設定する必要があります。  
+-   *\<report item type>* ' *\<report item name>* ' の *\<property name>* 式に集計関数では使用できないスコープ パラメーターがあります。 スコープのパラメーターは、含まれるグループの名前、含まれるデータ領域の名前、またはデータセットの名前のいずれかと同じ文字列の定数に設定する必要があります。  
   
  累計を計算する集計関数 (**Previous**、 **RunningValue**、または **RowNumber**) の場合、行グループ名または列グループ名をスコープのパラメーターに指定できますが、両方を指定することはできません。 これは、次のエラー メッセージに当てはまります。  
   
--   *\<report item type>* '*\<report item name>*' のデータ セルに使用されている **Previous**、**RunningValue**、または **RowNumber** 集計関数では、*\<report item type>* の列と行両方のグループ化スコープが参照されています。 *\<report item type>* 内のすべての **Previous**、**RunningValue**、および **RowNumber** 集計関数のスコープのパラメーターでは、行のグループまたはデータ列のグループを参照できますが、両方を参照することはできません。  
+-   *\<report item type>* ' *\<report item name>* ' のデータ セルに使用されている **Previous**、**RunningValue**、または **RowNumber** 集計関数では、 *\<report item type>* の列と行両方のグループ化スコープが参照されています。 *\<report item type>* 内のすべての **Previous**、**RunningValue**、および **RowNumber** 集計関数のスコープのパラメーターでは、行のグループまたはデータ列のグループを参照できますが、両方を参照することはできません。  
   
  詳細については、「[合計、集計、および組み込みコレクションの式のスコープについて (レポート ビルダー 3.0 および SSRS)](../../reporting-services/report-design/expression-scope-for-totals-aggregates-and-built-in-collections.md)」および「[式での組み込みコレクションの使用 (レポート ビルダー 3.0 および SSRS)](../../reporting-services/report-design/built-in-collections-in-expressions-report-builder.md)」を参照してください。  
   

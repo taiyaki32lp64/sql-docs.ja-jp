@@ -15,15 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - STSrid (geometry Data Type)
 ms.assetid: 5e0de983-a0fe-48b7-9e08-30588d7271e2
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: 74cbd1d34ba7503881c8c9ab424be67edc02588c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: MladjoA
+ms.author: mlandzic
+ms.openlocfilehash: f1119c0c906e3a3825882e3fe1043e9bdaceb0f9
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47652540"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68066297"
 ---
 # <a name="stsrid-geometry-data-type"></a>STSrid (geometry データ型)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -42,7 +41,7 @@ STSrid
 ## <a name="return-types"></a>戻り値の型  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 型: **int**  
   
- CLR 型: **SqlInt32**  
+ CLR の型:**SqlInt32**  
   
 ## <a name="examples"></a>使用例  
  最初に、SRID 値が 13 の **geometry** インスタンスを作成し、`STSrid` を使用して SRID を確認する例を示します。  

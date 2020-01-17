@@ -14,14 +14,13 @@ helpviewer_keywords:
 - renaming tables
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 53d48d2522dc32db775782cf147a3e503b543c9f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 84aa56263ec926757871bfdf96661b101bc4dba4
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47601600"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72909909"
 ---
 # <a name="rename-tables-database-engine"></a>テーブル名の変更 (データベース エンジン)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -39,7 +38,7 @@ Azure SQL Data Warehouse または Parallel Data Warehouse でテーブルの名
   
      [制限事項と制約事項](#Restrictions)  
   
-     [Security](#Security)  
+     [セキュリティ](#Security)  
   
 -   **テーブル名を変更する方法:**  
   
@@ -47,7 +46,7 @@ Azure SQL Data Warehouse または Parallel Data Warehouse でテーブルの名
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> 作業を開始する準備  
+##  <a name="BeforeYouBegin"></a> はじめに  
   
 ###  <a name="Restrictions"></a> 制限事項と制約事項  
  テーブル名を変更しても、そのテーブルに対する参照の名前は自動的には変更されません。 名前を変更したテーブルを参照しているオブジェクトに対しては、手動で変更を加える必要があります。 たとえば、テーブルの名前を変更するとき、そのテーブルがトリガーで参照されている場合は、新しいテーブル名が反映されるようにトリガーに変更を加える必要があります。 オブジェクトの名前を変更する前には、 [sys.sql_expression_dependencies](../../relational-databases/system-catalog-views/sys-sql-expression-dependencies-transact-sql.md) を使ってテーブルの従属関係を一覧表示できます。  
@@ -70,7 +69,7 @@ Azure SQL Data Warehouse または Parallel Data Warehouse でテーブルの名
 4.  この操作を取り消すには、このフィールド外に移動する前に Esc キーを押します。  
   
 5.  **[ファイル]** メニューの **[<_テーブル名_> を保存]** をクリックします。  
-  
+
 ##  <a name="TsqlProcedure"></a> Transact-SQL の使用  
   
 #### <a name="to-rename-a-table"></a>テーブル名を変更するには  
@@ -79,7 +78,7 @@ Azure SQL Data Warehouse または Parallel Data Warehouse でテーブルの名
   
 2.  [標準] ツール バーの **[新しいクエリ]** をクリックします。  
   
-3.  次の例では、`Sales` スキーマの `SalesTerritory` テーブルの名前を `SalesTerr` に変更します。 次の例をコピーしてクエリ ウィンドウに貼り付け、**[実行]** をクリックします。  
+3.  次の例では、`Sales` スキーマの `SalesTerritory` テーブルの名前を `SalesTerr` に変更します。 次の例をコピーしてクエリ ウィンドウに貼り付け、 **[実行]** をクリックします。  
   
     ```  
     USE AdventureWorks2012;   

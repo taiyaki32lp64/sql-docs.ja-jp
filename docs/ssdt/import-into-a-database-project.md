@@ -12,15 +12,14 @@ f1_keywords:
 - SQL.DATA.TOOLS.SQLPROJECTIMPORTDATABASESUMMARYDIALOG.DIALOG
 - SQL.DATA.TOOLS.IMPORTSCRIPTWIZARD.SUMMARY
 ms.assetid: d0a0a394-6cb6-416a-a25f-9babf8ba294a
-author: stevestein
-ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 5ed0acd238ebc934c6adf5061eafe3f15ce44bef
-ms.sourcegitcommit: dd794633466b1da8ead9889f5e633bdf4b3389cd
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 89ca0b89957081fa2e93d5d28bbef79ecb7d7834
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54143462"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68119842"
 ---
 # <a name="import-into-a-database-project"></a>データベース プロジェクトへのインポート
 [インポート] を使用すると、ライブ データベースや .dacpac から新しいオブジェクトをプロジェクトに取り込んだり、スクリプトの新しい定義でプロジェクト内の既存のオブジェクトを更新したりできます。 次の 3 つの方法の動作には、注意が必要な相違点がいくつかあります。これらの方法について以下で説明します。  

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - mining models, validating
@@ -16,12 +15,12 @@ ms.assetid: e245ac1f-1230-48e9-9091-e70b131aa2a8
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 0a9ae056818b260ed00df9111d8b06b37378285d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 97268dac1fef029bc35ff702ace0d422ee296d65
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48148852"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66065498"
 ---
 # <a name="validating-models-and-using-models-for-prediction-data-mining-add-ins-for-excel"></a>モデルの検証と予測用モデルの使用 (Excel 用データ マイニング アドイン)
   モデルのテストと検証は、データ マイニング プロセスにおける重要な手順です。 実際のデータに対するマイニング モデルの性能を、運用環境に配置する前に知っておく必要があります。  
@@ -64,7 +63,7 @@ ms.locfileid: "48148852"
   
  [詳細データ マイニング クエリ エディター](advanced-data-mining-query-editor.md)  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [探索とデータのクリーニング](exploring-and-cleaning-data.md)   
  [データ マイニング モデルを作成します。](creating-a-data-mining-model.md)   
  [展開して、マイニング モデルのスケーリング&#40;データ マイニング Excel 用アドイン&#41;](deploying-and-scaling-mining-models-data-mining-add-ins-for-excel.md)  

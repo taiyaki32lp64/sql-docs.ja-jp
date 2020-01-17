@@ -7,15 +7,15 @@ ms.reviewer: ''
 ms.technology: master-data-services
 ms.topic: conceptual
 ms.assetid: b987b141-5abf-4161-a073-4cfc3e7f5aae
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: e18dbbd921fc4acfd75e61bbf402b754a22d22d3
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 757c70398afe0f88d535b6853abe29b79e9617bc
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52784594"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65482564"
 ---
 # <a name="filter-dialog-box-mds-add-in-for-excel"></a>[フィルター] ダイアログ ボックス (Excel 用 MDS アドイン)
   [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)][!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)]では、 **[フィルター]** ダイアログ ボックスを使用して、MDS によって管理されるデータを Excel に読み込む前に絞り込むことができます。  
@@ -31,7 +31,7 @@ ms.locfileid: "52784594"
 |明示的階層|属性の型として **[統合]** を選択した場合に、統合メンバーが属する階層を選択します。 詳細については、「[明示的階層 (マスター データ サービス)](../explicit-hierarchies-master-data-services.md)」を参照してください。|  
 |属性グループ|属性グループは、属性のサブセットをグループ化する方法です。 使用可能な属性のサブセットを表示する場合は、属性グループを選択します。 属性の詳細については、「[属性 (マスター データ サービス)](../attribute-groups-master-data-services.md)」を参照してください。|  
 |[すべて選択]|一覧に表示されているすべての属性を選択します。|  
-|[すべてクリア]|一覧に表示されている選択済みの属性をクリアします。<br /><br /> 注:**[名前]** および **[コード]** をクリアすることはできません。|  
+|[すべてクリア]|一覧に表示されている選択済みの属性をクリアします。<br /><br /> 注: **[名前]** および **[コード]** をクリアすることはできません。|  
 |上矢印|選択した属性を一覧内で上へ移動します。 この順序 (上から下) は、ワークシート内で列が表示される順序 (左から右) に対応します。|  
 |下向きの矢印|選択した属性を一覧内で下へ移動します。 この順序 (上から下) は、ワークシート内で列が表示される順序 (左から右) に対応します。|  
   
@@ -59,7 +59,7 @@ ms.locfileid: "52784594"
 |[行]|Excel に読み込まれる行数。 **[行]** セクションで適用したフィルターに基づきます。|  
 |[列]|Excel に読み込まれる列数。 **[列]** セクションで選択した属性に基づきます。|  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [読み込み前にデータをフィルター処理&#40;MDS アドインの Excel&#41;](filter-data-before-exporting-mds-add-in-for-excel.md)   
  [データの読み込み&#40;MDS アドインの Excel&#41;](overview-exporting-data-to-excel-mds-add-in-for-excel.md)  
   

@@ -16,11 +16,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: c14608a34c2df5a0e93fea985d8135a37d5ffa53
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52795944"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63273277"
 ---
 # <a name="work-with-columns-in-aggregate-queries-visual-database-tools"></a>集計クエリにおける列の使用 (Visual Database Tools)
   集計クエリを作成する場合、 [クエリおよびビュー デザイナー](visual-database-tools.md) は有効なクエリを構築できるように一定の仮説に基づいた処理を行います。 たとえば、集計クエリを作成するときに、あるデータ列を出力するように指定した場合、その列は自動的に GROUP BY 句に含められ、個別の行の内容が誤って要約に表示されるのを防ぎます。  

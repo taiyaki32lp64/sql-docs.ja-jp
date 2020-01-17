@@ -12,15 +12,14 @@ helpviewer_keywords:
 - testing databases
 - database testing [SQL Server]
 ms.assetid: cb403330-8cbe-41c6-bd23-bc432d50f173
-author: stevestein
-ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 214c70d9c71053b81e81b9228bca5b42167eabc5
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: f667fd107935eb0373e7d3ee0c1fcaa2711b8776
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47684217"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68254806"
 ---
 # <a name="development-test-and-production-databases-visual-database-tools"></a>開発用データベース、テスト用データベース、および実行時用データベース (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

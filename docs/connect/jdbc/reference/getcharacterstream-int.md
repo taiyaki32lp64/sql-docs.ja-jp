@@ -1,5 +1,5 @@
 ---
-title: getCharacterStream (int) |Microsoft Docs
+title: Getキャラクターストリーム (int) |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: eb20714b-52bc-4b6c-b23f-c9c3c9d73783
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 7365ac904d342b0408e23360168545646cc3184a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 55fab0482e38afc175718a1b729d68124781dac9
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47839020"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67953308"
 ---
 # <a name="getcharacterstream-int"></a>getCharacterStream (int)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -41,7 +40,7 @@ public final java.io.Reader getCharacterStream(int paramIndex)
  パラメーターのインデックスを示す **int** です。  
   
 ## <a name="return-value"></a>戻り値  
- リーダー オブジェクト。  
+ リーダーオブジェクト。  
   
 ## <a name="exceptions"></a>例外  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  

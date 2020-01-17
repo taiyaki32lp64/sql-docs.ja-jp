@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 829153be-aa8e-4162-87e8-69882feecf19
 author: Shamikg
 ms.author: Shamikg
-manager: craigg
-ms.openlocfilehash: fabc454fe6adc77ec3e9789925e099fb6b0de6b1
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: 03d622c50a8760bbf1767bc8a4f79e215773695f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52407748"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68006604"
 ---
 # <a name="creating-the-server-connection-files-accesstosql"></a>サーバー接続ファイル (AccessToSQL) の作成
 サーバーの情報は、スクリプト ファイルの [サーバー] セクションでいずれかを指定します。 サーバーの情報は、別のサーバー接続ファイルにも指定できます。 サーバー接続ファイルのコマンド ライン パラメーターが`-c <serverconnectionfile>`します。 同じサーバー id がスクリプトとサーバーの両方の接続ファイルに存在する場合は、スクリプト ファイル内のサーバー定義と見なされます。  

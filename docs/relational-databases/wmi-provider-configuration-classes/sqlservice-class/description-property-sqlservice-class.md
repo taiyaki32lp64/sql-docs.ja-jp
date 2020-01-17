@@ -1,6 +1,6 @@
 ---
-title: Description プロパティ (SqlService クラス) |Microsoft Docs
-ms.custom: ''
+title: Description プロパティ (SqlService)
+ms.custom: seo-lt-2019
 ms.date: 03/03/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 0baf050e-7dde-496e-a8b6-da43e6448a09
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: ae3b1cbf9b37b14d8245c6e40757786eee9998ea
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: cbfd9a497e6ac4cec4f8a1ca69ba9e03dc1e3033
+ms.sourcegitcommit: baa40306cada09e480b4c5ddb44ee8524307a2ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51666261"
+ms.lasthandoff: 11/06/2019
+ms.locfileid: "73659673"
 ---
 # <a name="description-property-sqlservice-class"></a>Description プロパティ (SqlService クラス)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -43,9 +42,9 @@ object.Description [= value]
 ## <a name="property-valuereturn-value"></a>プロパティ値/戻り値  
  参照されているサービスの説明テキストが格納されている文字列値。  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>解説  
   
 ## <a name="see-also"></a>参照  
- [開始とサービスの停止](https://technet.microsoft.com/library/ms174886\(v=sql.105\).aspx)  
+ [サービスの開始と停止](https://technet.microsoft.com/library/ms174886\(v=sql.105\).aspx)  
   
   

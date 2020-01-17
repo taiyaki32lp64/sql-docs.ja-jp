@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: bdc182db-4518-4bf2-b63a-05f58fdb4eb8
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: afb5c598a00fe4aa3fb6405dfe7b7edd67f79f29
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d93c58d045741d281158a1716ab43b0b68e49bec
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47654740"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67969494"
 ---
 # <a name="supportsdatamanipulationtransactionsonly-method-sqlserverdatabasemetadata"></a>supportsDataManipulationTransactionsOnly メソッド (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -36,13 +35,13 @@ public boolean supportsDataManipulationTransactionsOnly()
 ```  
   
 ## <a name="return-value"></a>戻り値  
- **true**サポートされている場合。 それ以外の場合は、 **false**です。  
+ サポートされている場合は**true** 。 それ以外の場合は、 **false**です。  
   
 ## <a name="exceptions"></a>例外  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- この supportsDataManipulationTransactionsOnly メソッドは、java.sql.DatabaseMetaData インターフェイスで supportsDataManipulationTransactionsOnly メソッドによって指定されます。  
+ この supportsDataManipulationTransactionsOnly メソッドは、supportsDataManipulationTransactionsOnly メソッドによって、java メタデータインターフェイスで指定されます。  
   
 ## <a name="see-also"></a>参照  
  [SQLServerDatabaseMetaData のメソッド](../../../connect/jdbc/reference/sqlserverdatabasemetadata-methods.md)   

@@ -17,18 +17,17 @@ helpviewer_keywords:
 - SQL tertiary collations
 - TERTIARY_WEIGHTS function
 ms.assetid: 7e1f5350-260b-4c61-8c84-69bb1a214f1f
-author: MashaMSFT
-ms.author: mathoma
-manager: craigg
+author: MikeRayMSFT
+ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: d64d5562c99293894895ad53c034145634b13e49
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 11d5012cadf7bdb028ce921f9039d5502363cbc9
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47823701"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68064691"
 ---
-# <a name="collation-functions---tertiaryweights-transact-sql"></a>照合順序関数 - TERTIARY_WEIGHTS (TRANSACT-SQL)
+# <a name="collation-functions---tertiary_weights-transact-sql"></a>照合順序関数 - TERTIARY_WEIGHTS (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
 この関数は、第 3 の SQL 照合順序で定義された、Unicode 以外の文字列式内の文字ごとに、バイナリ文字列の重みを返します。

@@ -1,5 +1,5 @@
 ---
-title: SQL Server 例:モデルの配置パッケージ (MDS) | Microsoft Docs
+title: モデルの配置パッケージの例
 ms.custom: ''
 ms.date: 07/28/2017
 ms.prod: sql
@@ -11,17 +11,16 @@ keywords:
 - マスター データ サービス
 - sample
 ms.assetid: 9b31b7b6-319b-4840-b67d-eb383e7762b1
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: db84b03b315d9345056cad9653729415b5dcfccf
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
-ms.translationtype: HT
+ms.openlocfilehash: 19b4cc9cc9282fff784059e6ac39bf74792f95a4
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53205821"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73727879"
 ---
-# <a name="sql-server-examples-model-deployment-packages-mds"></a>SQL Server 例:モデル配置パッケージ (MDS)
+# <a name="sql-server-examples-model-deployment-packages-mds"></a>SQL Server の例: モデルの配置パッケージ (MDS)
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - model filter [data mining]
@@ -16,12 +15,12 @@ ms.assetid: c729d9b3-8fda-405e-9497-52b2d7493eae
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 5c9c148995dfe83d24798c31900874e4fe3e80df
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: 3e8fea8d2a7b92ccca9b139b62d429fafe3a9bc4
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52405367"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66083364"
 ---
 # <a name="model-filter-syntax-and-examples-analysis-services---data-mining"></a>モデル フィルターの構文と例 (Analysis Services - データ マイニング)
   ここでは、モデル フィルターの構文について詳しく説明し、サンプル式を示します。  
@@ -112,7 +111,7 @@ ms.locfileid: "52405367"
 ## <a name="examples-of-filters"></a>フィルターの例  
  次の例は、マイニング モデルに適用するフィルターの使用方法を示しています。 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]を使用してフィルター式を作成する場合、 **[プロパティ]** ウィンドウや、フィルターのダイアログ ボックスの **[式]** ペインには、WITH FILTER キーワードより後の文字列だけが表示されます。 ここでは、列の型と使用法をわかりやすくするため、マイニング構造の定義も示します。  
   
-###  <a name="bkmk_Ex1"></a> 例 1:一般的なケースレベルのフィルター処理  
+###  <a name="bkmk_Ex1"></a> 例 1: 一般的なケースレベルのフィルター処理  
  次の例は、モデルに使用するケースを、職業が Architect で 31 歳以上の顧客だけに制限するための、単純なフィルターです。  
   
 ```  
@@ -128,7 +127,7 @@ WITH FILTER (Age > 30 AND Occupation='Architect')
   
 
   
-###  <a name="bkmk_Ex2"></a> 例 2:ケース レベルの入れ子になったテーブルの属性を使用してフィルター処理  
+###  <a name="bkmk_Ex2"></a> 例 2: ケース レベルの入れ子になったテーブルの属性を使用してフィルター処理  
  入れ子になったテーブルがマイニング構造に含まれている場合は、入れ子になったテーブルに値が存在するかどうかに基づいてフィルター処理することも、特定の値を含む入れ子になったテーブル行に基づいてフィルター処理することもできます。 次の例では、モデルに使用するケースを、Milk を購入したことがある 31 歳以上の顧客だけに制限します。  
   
  この例からわかるとおり、フィルターには、モデルに含まれている列のみを使用する必要はありません。 入れ子になったテーブル **Products** はマイニング構造の一部ですが、マイニング モデルには含まれていません。 それでも、この入れ子になったテーブル内の値や属性に基づいてフィルター処理を行うことができます。 これらのケースの詳細を表示するには、ドリルスルーを有効にする必要があります。  

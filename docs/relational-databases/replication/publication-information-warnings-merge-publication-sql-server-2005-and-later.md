@@ -1,6 +1,7 @@
 ---
-title: パブリケーション情報、[警告](マージ パブリケーション、SQL Server 2005 以降) | Microsoft Docs
-ms.custom: ''
+title: 警告 (マージ パブリケーション情報)
+description: SQL Server 2005 以降の SQL Server Management Studio 内の [マージ レプリケーション パブリケーション情報] ページの [警告] タブについて説明します。
+ms.custom: seo-lt-2019
 ms.date: 03/04/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -12,15 +13,14 @@ f1_keywords:
 ms.assetid: 9bef3565-5f13-42ac-8723-ebe55b0c11e6
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: f1d10ba9d868214b78d13c908e9895f4adfc0225
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: 41e709bcbc533c3cf7ff294dd2b07a6c638a0c52
+ms.sourcegitcommit: 02d44167a1ee025ba925a6fefadeea966912954c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54136162"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75321348"
 ---
-# <a name="publication-information-warnings-merge-publication-sql-server-2005-and-later"></a>パブリケーション情報、[警告] \(マージ パブリケーション、SQL Server 2005 以降)
+# <a name="publication-information-warnings-merge-publication-sql-server-2005-and-later"></a>パブリケーション情報、[警告] (マージ パブリケーション、SQL Server 2005 以降)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   **以降を実行しているディストリビューターでは、** [警告] [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] タブを使用できます。 **[警告]** タブでは、選択されているパブリケーションに対して次の操作を実行できます。  
   
@@ -53,7 +53,7 @@ ms.locfileid: "54136162"
   
  しきい値に到達した場合は、レプリケーション モニターに警告を表示でき、さらに通知を発行することができます。 通知を定義するには、 **[警告の構成]** をクリックし、 **[レプリケーションの警告の構成]** ダイアログ ボックスに情報を入力します。  
   
-## <a name="options"></a>および  
+## <a name="options"></a>オプション  
  **有効**  
  警告を有効にする場合に選択します。その場合は、しきい値を指定します。  
   

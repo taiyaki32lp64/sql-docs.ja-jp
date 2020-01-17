@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 9dd871b1-358f-4161-bb79-290bdb024d9d
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 8a1ca952ee2b9230ecfa6db5b48046b48d248ba5
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 5af059a98f32be562678516bacfd6383114ddac4
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47663680"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67935712"
 ---
 # <a name="step-2-create-a-sql-database-for-pyodbc-python-development"></a>ステップ 2: pyodbc Python 開発用の SQL データベースを作成する
 

@@ -16,19 +16,19 @@ helpviewer_keywords:
 ms.assetid: e67d1bab-47b6-441d-ab9c-251a2ca499e1
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 57d421893f8113b4657290fe6aa8ed4b6da37bf0
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
+ms.openlocfilehash: a42dc8a023e1d44e911907cc96a77017dfc69eaf
+ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47827610"
+ms.lasthandoff: 08/03/2019
+ms.locfileid: "68768500"
 ---
 # <a name="errors-and-events-reference-replication"></a>エラーとイベントのリファレンス (レプリケーション)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
   ここでは、レプリケーションに関連するさまざまなエラーの原因と解決方法について説明します。  
   
-|[エラー]|メッセージ|  
+|Error|メッセージ|  
 |-----------|-------------|  
 |[MSSQL_ENG002601](../../relational-databases/replication/mssql-eng002601.md)|一意インデックス '%.*ls' を含むオブジェクト '%.\*ls' には重複するキー行を挿入できません。|  
 |[MSSQL_ENG002627](../../relational-databases/replication/mssql-eng002627.md)|制約 '%.*ls' の %ls 違反。 オブジェクト '%.\*ls' には重複したキーを挿入できません。") です。|  
@@ -78,7 +78,7 @@ ms.locfileid: "47827610"
 |MSSQL_ENG021642。 「 [Troubleshooting Oracle Publishers](../../relational-databases/replication/non-sql/troubleshooting-oracle-publishers.md)」を参照してください。|異種パブリッシャーにはリンク サーバーが必要です。 リンク サーバー '%s' は既に存在します。 リンク サーバーを削除するか、または別のパブリッシャー名を選択してください。|  
 |MSSQL_ENG021663。 「 [Troubleshooting Oracle Publishers](../../relational-databases/replication/non-sql/troubleshooting-oracle-publishers.md)」を参照してください。|ソース テーブル [%s].[%s] に有効な主キーが見つかりません。|  
 |MSSQL_ENG021684。 「 [Troubleshooting Oracle Publishers](../../relational-databases/replication/non-sql/troubleshooting-oracle-publishers.md)」を参照してください。|Oracle パブリッシャー '%s' の管理者ログインに関連付けられた権限が不十分です。|  
-|[MSSQL_ENG021797](../../relational-databases/replication/mssql-eng021797.md)|'%s' は次の形式の有効な Windows ログインにしてください: 'MACHINE\Login' または 'DOMAIN\Login'。 '%s' については、マニュアルを参照してください。|  
+|[MSSQL_ENG021797](../../relational-databases/replication/mssql-eng021797.md)|'%s' には 'MACHINE\Login' または 'DOMAIN\Login' の形式で有効な Windows ログインを指定してください。 '%s' については、マニュアルを参照してください。|  
 |[MSSQL_ENG021798](../../relational-databases/replication/mssql-eng021798.md)|続行する前に、'%s' エージェント ジョブを '%s' 経由で追加してください。 '%s' については、マニュアルを参照してください。|  
 |[MSSQL_REPL020011](../../relational-databases/replication/mssql-repl020011.md)|プロセスは、'%1' を '%2' で実行できませんでした。|  
 |[MSSQL_REPL027056](../../relational-databases/replication/mssql-repl027056.md)|マージ プロセスが、'%1' で生成履歴を変更できませんでした。 トラブルシューティングを行うには、詳細な履歴ログとの同期を再開して、書き込み先の出力ファイルを指定してください。|  

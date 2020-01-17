@@ -2,18 +2,18 @@
 title: レポートの保存 (レポート ビルダー) | Microsoft Docs
 ms.date: 03/01/2017
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: report-builder
 ms.topic: conceptual
 ms.assetid: 59ddc4b8-9517-4d3f-9c88-a07e9907cecb
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 42817b1524bd2bc0ada10e4b49bcd511c51dc549
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 8682d55f6c805066f5b596e79a074f253db9faa9
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56289491"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66499630"
 ---
 # <a name="saving-reports-report-builder"></a>レポートの保存 (レポート ビルダー)
   レポート ビルダーでは、自分が書き込み権限を持っている [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] レポート サーバー、SharePoint ライブラリ、またはファイル共有、あるいは自分のコンピューターにページ分割されたレポートを保存できます。 
@@ -62,7 +62,7 @@ ms.locfileid: "56289491"
    
 ## <a name="see-also"></a>参照  
  [レポート、レポート パーツ、およびレポート定義 (レポート ビルダーおよび SSRS)](../../reporting-services/report-design/reports-report-parts-and-report-definitions-report-builder-and-ssrs.md)   
- [レポート ビルダーのインストールとアンインストール](https://msdn.microsoft.com/library/2c9a5814-17bf-4947-8fb3-6269e7caa416)   
+ [レポート ビルダーをインストール](../install-windows/install-report-builder.md)   
  [レポートの検索、表示、管理 (レポート ビルダーおよび SSRS)](../../reporting-services/report-builder/finding-viewing-and-managing-reports-report-builder-and-ssrs.md)   
  [レポートのエクスポート &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-builder/export-reports-report-builder-and-ssrs.md)   
  [レポートの印刷 (レポート ビルダーおよび SSRS)](../../reporting-services/report-builder/print-reports-report-builder-and-ssrs.md)  

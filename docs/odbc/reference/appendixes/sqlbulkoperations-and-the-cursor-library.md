@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: f6c55be1-f020-4ae2-a423-ef8a0d877e20
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 5d1615c3149fda0ab131a05362542d6ba2d7d572
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 04ffbec622aa26ecebae18c17787a0629848a490
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47740020"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68123401"
 ---
 # <a name="sqlbulkoperations-and-the-cursor-library"></a>SQLBulkOperations およびカーソル ライブラリ
 > [!IMPORTANT]  

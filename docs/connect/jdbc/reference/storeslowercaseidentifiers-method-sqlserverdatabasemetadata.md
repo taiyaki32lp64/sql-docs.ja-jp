@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: b7dd60f5-c4f3-4b14-9a33-d95327395083
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 10a0bc171ca6f31070464471baea496331e550e2
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b0c4a376970658df1bdce94e45694edae18149c9
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47771390"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67969995"
 ---
 # <a name="storeslowercaseidentifiers-method-sqlserverdatabasemetadata"></a>storesLowerCaseIdentifiers メソッド (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -42,7 +41,7 @@ public boolean storesLowerCaseIdentifiers()
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- この storesLowerCaseIdentifiers メソッドは、java.sql.DatabaseMetaData インターフェイスで storesLowerCaseIdentifiers メソッドによって指定されます。  
+ この storesLowerCaseIdentifiers メソッドは、storesLowerCaseIdentifiers メソッドによって、java メタデータインターフェイスで指定されます。  
   
 ## <a name="see-also"></a>参照  
  [SQLServerDatabaseMetaData のメソッド](../../../connect/jdbc/reference/sqlserverdatabasemetadata-methods.md)   

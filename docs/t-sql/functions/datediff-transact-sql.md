@@ -1,7 +1,7 @@
 ---
 title: DATEDIFF (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 12/13/2018
+ms.date: 07/18/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -28,22 +28,19 @@ helpviewer_keywords:
 - crossing date time boundaries [SQL Server]
 - calculating dates times [SQL Server]
 ms.assetid: eba979f2-1a8d-4cce-9d75-b74f9b519b37
-author: MashaMSFT
-ms.author: mathoma
-manager: craigg
+author: MikeRayMSFT
+ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: e70ce6fa8619675b1e275400635bc46d7e371dfd
-ms.sourcegitcommit: 96032813f6bf1cba680b5e46d82ae1f0f2da3d11
+ms.openlocfilehash: 7d6ab92ef6c9f10aea46d375633ae539122299e8
+ms.sourcegitcommit: 0d89bcaebdf87db3bd26db2ca263be9c671b0220
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/15/2019
-ms.locfileid: "54299309"
+ms.lasthandoff: 08/02/2019
+ms.locfileid: "68731130"
 ---
 # <a name="datediff-transact-sql"></a>DATEDIFF (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-> [!div class="nextstepaction"]
-> [SQL ドキュメントの目次に関するご意見を共有してください。](https://aka.ms/sqldocsurvey)
+[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
 この関数は、*startdate* と *enddate* で指定された 2 つの日付間の差を、指定された datepart 境界の数で (符号付き整数値として) で返します。
   
@@ -53,16 +50,21 @@ ms.locfileid: "54299309"
   
 ## <a name="syntax"></a>構文  
   
-```sql
+```
 DATEDIFF ( datepart , startdate , enddate )  
 ```  
   
 ## <a name="arguments"></a>引数  
+
 *datepart*  
-*startdate* と *enddate* の差を求めるときの単位に使用する要素を指定します。 `DATEDIFF` では、ユーザー定義変数に相当するものは受け入れられません。 この表には、有効な *datepart* 引数をすべて一覧表示しています。
-  
-|*datepart*|省略形|  
-|---|---|
+**DATEDIFF** で _startdate_ と _enddate_ の違いを報告する場合の単位。 一般的に使用される _datepart_ の単位には、`month` または `second` が含まれます。
+
+_datepart_ 値を変数に指定することはできません。また、`'month'` のように引用符で囲まれた文字列として指定することもできません。
+
+次の表に、すべての有効な _datepart_ 値の一覧を示します。 **DATEDIFF** は、 _ の完全名、または一覧にある完全名の省略形のいずれかを受け取ります。
+
+|*datepart* 名|*datepart* 省略形|  
+|-----------|------------|
 |**year**|**yy、yyyy**|  
 |**quarter**|**qq, q**|  
 |**month**|**mm, m**|  
@@ -75,7 +77,11 @@ DATEDIFF ( datepart , startdate , enddate )
 |**millisecond**|**ms**|  
 |**microsecond**|**mcs**|  
 |**nanosecond**|**ns**|  
-  
+| &nbsp; | &nbsp; |
+
+> [!NOTE]
+> 特定の各 *datepart* 名と、その *datepart* 名の省略形では、同じ値が返されます。
+
 *startdate*  
 次のいずれかの値に解決できる式。
 
@@ -95,14 +101,16 @@ DATEDIFF ( datepart , startdate , enddate )
  **int**  
   
 ## <a name="return-value"></a>戻り値  
+
+*datepart* により設定された境界に表示された、*startdate* と *enddate* の間の **int** 差。
   
-特定の各 *datepart* と、その *datepart* の省略形では、同じ値が返されます。  
+たとえば、`SELECT DATEDIFF(day, '2036-03-01', '2036-02-28');` からは -2 が返されます。2036 はうるう年である必要があることを示します。 この場合、 _ '2036-03-01' から開始し、-2 日をカウントすると、'2036-02-28' の _enddate_ に達することを意味します。
   
 **int** の範囲 (-2,147,483,648 から +2,147,483,647) を超える戻り値の場合、`DATEDIFF` はエラーを返します。  **millisecond** の場合、*startdate* と *enddate* の差の最大値は 24 日 20 時間 31 分 23.647 秒です。 **second** の場合は、差の最大値は 68 年 19 日 3 時間 14 分 7 秒です。
   
 *startdate* と *enddate* の両方に時刻値のみが割り当てられており、*datepart* が時刻の *datepart* でない場合、`DATEDIFF` は 0 を返します。
   
-`DATEDIFF` では、戻り値を計算する際に、*startdate* または *enddate* のタイム ゾーン オフセット要素を使用しません。
+`DATEDIFF` では、戻り値を計算するために、*startdate* または *enddate* のタイム ゾーン オフセット要素が使用されます。
   
 [smalldatetime](../../t-sql/data-types/smalldatetime-transact-sql.md) の精度は分単位までなので、*startdate* または **enddate** に *smalldatetime* 値を使用した場合、戻り値では秒とミリ秒が常に 0 に設定されます。
   
@@ -110,8 +118,9 @@ DATEDIFF ( datepart , startdate , enddate )
   
 *startdate* と *enddate* で異なる日付データ型が使用されており、一方の時刻要素の数または秒の小数部の有効桁数が、もう一方のデータ型を超えている場合、`DATEDIFF` では、欠落している要素が 0 に設定されます。
   
-## <a name="datepart-boundaries"></a>datepart の差  
-次の各ステートメントには、すべて同じ *startdate* と *enddate* の値が指定されています。 これらの日付は隣接しており、時間的な差は 1 マイクロ秒 (0.0000001 秒) です。 各ステートメントにおける *startdate* と *enddate* の差は、どの要素をとっても、*datepart* の 1 単位分となるように配慮されています。 いずれのステートメントも戻り値は 1 です。 *startdate* と *enddate* の年の値は異なるが、カレンダー週の値が同じである場合、`DATEDIFF` では、*datepart* **week** に対して 0 を返します。
+## <a name="_datepart_-boundaries"></a>_datepart_ の境界
+
+次の各ステートメントには、すべて同じ *startdate* と *enddate* の値が指定されています。 これらの日付は隣接しており、時間的な差は 100 ナノ秒 (0.0000001 秒) です。 各ステートメントにおける *startdate* と *enddate* の差は、どの要素をとっても、*datepart* の 1 単位分となるように配慮されています。 いずれのステートメントも 1 を返します。
   
 ```sql
 SELECT DATEDIFF(year,        '2005-12-31 23:59:59.9999999', '2006-01-01 00:00:00.0000000');
@@ -124,8 +133,11 @@ SELECT DATEDIFF(hour,        '2005-12-31 23:59:59.9999999', '2006-01-01 00:00:00
 SELECT DATEDIFF(minute,      '2005-12-31 23:59:59.9999999', '2006-01-01 00:00:00.0000000');
 SELECT DATEDIFF(second,      '2005-12-31 23:59:59.9999999', '2006-01-01 00:00:00.0000000');
 SELECT DATEDIFF(millisecond, '2005-12-31 23:59:59.9999999', '2006-01-01 00:00:00.0000000');
+SELECT DATEDIFF(microsecond, '2005-12-31 23:59:59.9999999', '2006-01-01 00:00:00.0000000');
 ```
-  
+
+*startdate* と *enddate* の年の値は異なるが、カレンダー週の値が同じである場合、`DATEDIFF` では、*datepart* **week** に対して 0 を返します。
+
 ## <a name="remarks"></a>Remarks  
 `DATEDIFF` は、`SELECT <list>`、`WHERE`、`HAVING`、`GROUP BY`、`ORDER BY` 句で使用します。
   
@@ -195,13 +207,18 @@ SELECT DATEDIFF(day,
 ```sql
 USE AdventureWorks2012;  
 GO  
-SELECT DATEDIFF(day, '2007-05-07 09:53:01.0376635', GETDATE() + 1)   
+SELECT DATEDIFF(day, '2007-05-07 09:53:01.0376635', GETDATE() + 1)
     AS NumberOfDays  
     FROM Sales.SalesOrderHeader;  
 GO  
 USE AdventureWorks2012;  
 GO  
-SELECT DATEDIFF(day, '2007-05-07 09:53:01.0376635', DATEADD(day, 1, SYSDATETIME())) AS NumberOfDays  
+SELECT
+    DATEDIFF(
+            day,
+            '2007-05-07 09:53:01.0376635',
+            DATEADD(day, 1, SYSDATETIME())
+        ) AS NumberOfDays  
     FROM Sales.SalesOrderHeader;  
 GO  
 ```  
@@ -243,8 +260,10 @@ GO
 ### <a name="i-finding-difference-between-startdate-and-enddate-as-date-parts-strings"></a>I. startdate と enddate の差を日付部分の文字列として検索する
 
 ```sql
-DECLARE @date1 DATETIME, @date2 DATETIME, @result VARCHAR(100)
-DECLARE @years INT, @months INT, @days INT, @hours INT, @minutes INT, @seconds INT, @milliseconds INT
+-- DOES NOT ACCOUNT FOR LEAP YEARS
+DECLARE @date1 DATETIME, @date2 DATETIME, @result VARCHAR(100);
+DECLARE @years INT, @months INT, @days INT,
+    @hours INT, @minutes INT, @seconds INT, @milliseconds INT;
 
 SET @date1 = '1900-01-01 00:00:00.000'
 SET @date2 = '2018-12-12 07:08:01.123'
@@ -287,9 +306,12 @@ SELECT @result= ISNULL(CAST(NULLIF(@years,0) AS VARCHAR(10)) + ' years,','')
      + ISNULL(' ' + CAST(NULLIF(@hours,0) AS VARCHAR(10)) + ' hours,','')
      + ISNULL(' ' + CAST(@minutes AS VARCHAR(10)) + ' minutes and','')
      + ISNULL(' ' + CAST(@seconds AS VARCHAR(10)) 
-          + CASE WHEN @milliseconds > 0 THEN '.' + CAST(@milliseconds AS VARCHAR(10)) 
-               ELSE '' END 
-          + ' seconds','')
+     + CASE
+            WHEN @milliseconds > 0
+                THEN '.' + CAST(@milliseconds AS VARCHAR(10)) 
+            ELSE ''
+       END 
+     + ' seconds','')
 
 SELECT @result
 ```

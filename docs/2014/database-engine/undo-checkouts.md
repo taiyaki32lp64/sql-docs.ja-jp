@@ -17,11 +17,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 2057c78f953645c9b1a5915b9912ab99263cb005
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48078322"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62773398"
 ---
 # <a name="undo-checkouts"></a>チェックアウトの取り消し
   使用することができます、**チェック アウトの取り消し**コマンドを既存のチェック アウトを取り消します。 この機能は、ファイルを変更して保存した後に、その変更をロールバックする必要が生じた場合などに特に便利です。  

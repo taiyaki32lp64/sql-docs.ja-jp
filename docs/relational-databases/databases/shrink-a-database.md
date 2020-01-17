@@ -18,14 +18,13 @@ helpviewer_keywords:
 ms.assetid: 83afbf74-fd50-4c39-831c-b1f473a50620
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: f7642b2514f7a73034e8f0c2a5c75db71149d33e
-ms.sourcegitcommit: 1a5448747ccb2e13e8f3d9f04012ba5ae04bb0a3
+ms.openlocfilehash: 13c20f7fb8cd282251c734df1a4bb7b3adab3712
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51559589"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72909622"
 ---
 # <a name="shrink-a-database"></a>データベースの圧縮
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -41,7 +40,7 @@ ms.locfileid: "51559589"
   
      [推奨事項](#Recommendations)  
   
-     [Security](#Security)  
+     [セキュリティ](#Security)  
   
 -   **以下を使用してデータベースを圧縮するには:**  
   
@@ -49,7 +48,7 @@ ms.locfileid: "51559589"
   
      [Transact-SQL](#TsqlProcedure)  
   
--   **補足情報:** [データベースの圧縮](#FollowUp)  
+-   **補足情報:** [データベースを圧縮する](#FollowUp)  
   
 ##  <a name="BeforeYouBegin"></a> はじめに  
   
@@ -88,7 +87,7 @@ ms.locfileid: "51559589"
   
 2.  **[データベース]** を展開し、圧縮するデータベースを右クリックします。  
   
-3.  **[タスク]**、 **[圧縮]** の順にポイントし、 **[データベース]** をクリックします。  
+3.  **[タスク]** 、 **[圧縮]** の順にポイントし、 **[データベース]** をクリックします。  
   
      **[データベース]**  
      選択しているデータベースの名前が表示されます。  
@@ -106,7 +105,7 @@ ms.locfileid: "51559589"
      データベースを圧縮した後に、データベース ファイル内に残す空き領域の最大パーセンテージを入力します。 0 ～ 99 の値を指定できます。  
   
 4.  **[OK]** をクリックします。  
-  
+
 ##  <a name="TsqlProcedure"></a> Transact-SQL の使用  
   
 #### <a name="to-shrink-a-database"></a>データベースを圧縮するには  
@@ -119,7 +118,7 @@ ms.locfileid: "51559589"
   
  [!code-sql[DBCC#DBCC_SHRINKDB1](../../relational-databases/databases/codesnippet/tsql/shrink-a-database_1.sql)]  
   
-##  <a name="FollowUp"></a> 補足情報: データベースを圧縮した後  
+##  <a name="FollowUp"></a>補足情報: データベースを圧縮した後  
  ファイルを圧縮するために移動されたデータは、ファイル内のあらゆる使用可能な場所に分散される場合があります。 これにより、インデックスの断片化が発生し、広範なインデックスを検索するクエリのパフォーマンスが低下する場合があります。 断片化を解消するには、圧縮後にファイルのインデックスを再構築することを検討してください。  
   
 ## <a name="see-also"></a>参照  

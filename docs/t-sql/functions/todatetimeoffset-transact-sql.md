@@ -1,7 +1,7 @@
 ---
 title: TODATETIMEOFFSET (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 03/13/2017
+ms.date: 04/22/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -21,16 +21,15 @@ helpviewer_keywords:
 - functions [SQL Server], date and time
 - time [SQL Server], functions
 ms.assetid: b5fafc08-efd4-4a3b-a0b3-068981a0a685
-author: MashaMSFT
-ms.author: mathoma
-manager: craigg
+author: MikeRayMSFT
+ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 4d2234f6f8d9fa54ccbbae35e1e1dfc7568cc8ff
-ms.sourcegitcommit: 1f53b6a536ccffd701fc87e658ddac714f6da7a2
+ms.openlocfilehash: 7f6978a8344b7a1c9100a701d582193295f34c12
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/10/2019
-ms.locfileid: "54206228"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68098974"
 ---
 # <a name="todatetimeoffset-transact-sql"></a>TODATETIMEOFFSET (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -66,30 +65,27 @@ TODATETIMEOFFSET ( expression , time_zone )
 ### <a name="a-changing-the-time-zone-offset-of-the-current-date-and-time"></a>A. 現在の日付と時刻のタイム ゾーン オフセットを変更する  
  次の例では、現在の日付と時刻のゾーン オフセットを、タイム ゾーン `-07:00` に変更します。  
   
-```  
+```sql  
 DECLARE @todaysDateTime datetime2;  
 SET @todaysDateTime = GETDATE();  
 SELECT TODATETIMEOFFSET (@todaysDateTime, '-07:00');  
--- RETURNS 2007-08-30 15:51:34.7030000 -07:00  
+-- RETURNS 2019-04-22 16:23:51.7666667 -07:00  
 ```  
   
 ### <a name="b-changing-the-time-zone-offset-in-minutes"></a>B. タイム ゾーン オフセットを分単位で変更する  
  次の例では、現在のタイム ゾーンを `-120` 分に変更します。  
   
-```  
-DECLARE @todaysDate datetime2;  
-SET @todaysDate = GETDATE();  
-SELECT TODATETIMEOFFSET (@todaysDate, -120);  
--- RETURNS 2007-08-30 15:52:37.8770000 -02:00  
+```sql  
+SELECT TODATETIMEOFFSET(SYSDATETIME(), -120)
+-- RETURNS: 2019-04-22 11:39:21.6986813 -02:00  
 ```  
   
 ### <a name="c-adding-a-13-hour-time-zone-offset"></a>C. 13 時間のタイム ゾーン オフセットを追加する  
  次の例では、日付と時刻に 13 時間のタイム ゾーン オフセットを追加します。  
   
-```  
-DECLARE @dateTime datetimeoffset(7)= '2007-08-28 18:00:30';  
-SELECT TODATETIMEOFFSET (@dateTime, '+13:00');  
--- RETURNS 2007-08-28 18:00:30.0000000 +13:00  
+```sql  
+SELECT TODATETIMEOFFSET(SYSDATETIME(), '+13:00')
+-- RETURNS: 2019-04-22 11:39:29.0339301 +13:00
 ```  
   
 ## <a name="see-also"></a>参照  

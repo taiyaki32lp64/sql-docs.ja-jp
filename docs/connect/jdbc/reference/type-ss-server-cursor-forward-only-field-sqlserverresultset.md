@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: 16370bc2-6ec1-402d-83f6-213a6831d2ee
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 9426dcf3f4238c6f72b731e6623bc32c69785887
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 8d17b3bdeb0c08c3e4a5e631b6122af04f110690
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47765420"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67989493"
 ---
 # <a name="typessservercursorforwardonly-field-sqlserverresultset"></a>TYPE_SS_SERVER_CURSOR_FORWARD_ONLY フィールド (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -36,7 +35,7 @@ public static final int TYPE_SS_SERVER_CURSOR_FORWARD_ONLY
 ```  
   
 ## <a name="field-value"></a>フィールド値  
- **Int** 2004 年の値。  
+ **Int**値2004。  
   
 ## <a name="see-also"></a>参照  
  [SQLServerResultSet のメンバー](../../../connect/jdbc/reference/sqlserverresultset-members.md)   

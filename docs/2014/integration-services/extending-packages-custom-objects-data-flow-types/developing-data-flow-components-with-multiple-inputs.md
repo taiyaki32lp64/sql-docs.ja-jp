@@ -7,15 +7,15 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: reference
 ms.assetid: 3c7b50e8-2aa6-4f6a-8db4-e8293bc21027
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 334d197e9b251225b3ebe7df4445e47f42131075
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 74bcf1549cdd97752c805f1c6a9cc774ef1a9e52
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52771254"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62896032"
 ---
 # <a name="developing-data-flow-components-with-multiple-inputs"></a>複数の入力を持つデータ フロー コンポーネントの開発
   複数の入力によってデータが不均一なレートで生成される場合に、複数の入力があるデータ フローコンポーネントによって過度にメモリが消費されることがあります。 複数の入力をサポートするカスタム データ フロー コンポーネントを開発するときは、Microsoft.SqlServer.Dts.Pipeline 名前空間の次のメンバーを使用してこのメモリの負荷を管理できます。  
@@ -54,7 +54,7 @@ public class Shuffler : Microsoft.SqlServer.Dts.Pipeline.PipelineComponent
 > [!NOTE]  
 >  <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.IsInputReady%2A> メソッドの実装では、基本クラスで実装を呼び出す必要はありません。 基本クラスでのこのメソッドの既定の実装では、`NotImplementedException` を発生させるだけです。  
   
- このメソッドを実装し、コンポーネントの各入力に対して Boolean 型の *canProcess* 配列で要素の状態を設定します  (入力は *inputIDs* 配列内の ID 値によって識別されます)。内の要素の値を設定すると、 *canProcess*配列`true`入力に対して、データ フロー エンジンによってコンポーネントの<xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.ProcessInput%2A>メソッドと、指定した入力に対してより多くのデータを提供します。  
+ このメソッドを実装し、コンポーネントの各入力に対して Boolean 型の *canProcess* 配列で要素の状態を設定します (入力は *inputIDs* 配列内の ID 値によって識別されます)。内の要素の値を設定すると、 *canProcess*配列`true`入力に対して、データ フロー エンジンによってコンポーネントの<xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.ProcessInput%2A>メソッドと、指定した入力に対してより多くのデータを提供します。  
   
  アップ ストリーム データが使用中の値、 *canProcess*の少なくとも 1 つの入力配列の要素は常にあります`true`、処理が停止します。  
   

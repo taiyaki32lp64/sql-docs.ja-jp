@@ -11,11 +11,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 61173f4b9ef6c8f836b3654bdc5b7366a8a54461
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54129062"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62654063"
 ---
 # <a name="modify-the-target-servers-associated-with-a-sql-server-agent-master-job"></a>SQL Server エージェントのマスター ジョブに関連付けられているターゲット サーバーの変更
   このトピックでは、[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] または [!INCLUDE[tsql](../../includes/tsql-md.md)] を使用して、[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] で SQL Server エージェントのマスター ジョブに関連付けられているターゲット サーバーを変更する方法について説明します。  
@@ -54,9 +54,9 @@ ms.locfileid: "54129062"
   
 3.  プラス記号をクリックして **[ジョブ]** フォルダーを展開します。  
   
-4.  ターゲット サーバーを変更するジョブを右クリックし、**[プロパティ]** を選択します。  
+4.  ターゲット サーバーを変更するジョブを右クリックし、 **[プロパティ]** を選択します。  
   
-5.  **ジョブのプロパティ -**_job_name_ダイアログ ボックスで、**ページの選択**、**ターゲット**。 このページで使用可能なオプションの詳細については、次を参照してください。[ジョブのプロパティ。新しいジョブ&#40;ページを対象と&#41;](job-properties-new-job-targets-page.md)します。  
+5.  **[ジョブのプロパティ - <_ジョブ名_>]** ダイアログ ボックスで、 **[ページの選択]** の **[対象サーバー]** を選択します。 このページで使用可能なオプションの詳細については、次を参照してください。[ジョブのプロパティ。新しいジョブ&#40;ページを対象と&#41;](job-properties-new-job-targets-page.md)します。  
   
 6.  完了したら、 **[OK]** をクリックします。  
   

@@ -15,17 +15,20 @@ helpviewer_keywords:
 - data sources [Integration Services], connections
 - connection managers [Integration Services], ODBC
 ms.assetid: e8c77aa7-6772-485e-918e-cef9eeb18c58
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: 84910634eb684335f42ed8c3c8c36d0b317f4e53
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: b0d115753447a337cc9846942e2c39da54f3658f
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47829410"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71298498"
 ---
 # <a name="odbc-connection-manager"></a>ODBC 接続マネージャー
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   ODBC 接続マネージャーを使用すると、パッケージは Open Database Connectivity (ODBC) の仕様を使用して、さまざまなデータベース管理システムに接続できます。  
   
  ODBC 接続をパッケージに追加して接続マネージャーのプロパティを設定すると、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] は接続マネージャーを作成し、パッケージの **Connections** コレクションに追加します。 接続マネージャーは、実行時に物理 ODBC 接続として解決されます。  
@@ -54,7 +57,7 @@ ms.locfileid: "47829410"
   
  ODBC 接続マネージャーの詳細については、「 [ODBC Connection Manager](../../integration-services/connection-manager/odbc-connection-manager.md)」を参照してください。  
   
-### <a name="options"></a>[変数]  
+### <a name="options"></a>オプション  
  **[データ接続]**  
  既存の ODBC 接続マネージャーを一覧から選択します。  
   

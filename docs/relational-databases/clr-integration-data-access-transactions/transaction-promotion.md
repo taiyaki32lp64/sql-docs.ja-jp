@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 5bc7e26e-28ad-4198-a40d-8b2c648ba304
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 893068965ab4566b6f6e4f78e39141de9be2b6ed
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d75bbf1c4d468a0d6c3872a220566d667b059a5f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47855270"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67937492"
 ---
 # <a name="transaction-promotion"></a>トランザクションの昇格
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -34,7 +33,7 @@ ms.locfileid: "47855270"
   
  アクティブな接続が開かれたときにトランザクションの昇格を使用する利点は**TransactionScope**トランザクション、および他の接続を開くと、トランザクションがコミットされる軽量のトランザクションとしてではなく完全な分散トランザクションのオーバーヘッドが生じることです。 詳細については**TransactionScope**を参照してください[Using System.Transactions](../../relational-databases/clr-integration-data-access-transactions/using-system-transactions.md)します。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [CLR 統合とトランザクション](../../relational-databases/clr-integration-data-access-transactions/clr-integration-and-transactions.md)  
   
   

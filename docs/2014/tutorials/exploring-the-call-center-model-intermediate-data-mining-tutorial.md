@@ -11,11 +11,11 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: a6aa4074aa04af86e478b57b1870fd0dd855bea8
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56037763"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63315078"
 ---
 # <a name="exploring-the-call-center-model-intermediate-data-mining-tutorial"></a>コール センター モデルの検証 (中級者向けデータ マイニング チュートリアル)
   調査モデルを構築したら、それを使用して、データについてより深く考察することができます。具体的には、[!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] に備わっている次のツールを使用します。  

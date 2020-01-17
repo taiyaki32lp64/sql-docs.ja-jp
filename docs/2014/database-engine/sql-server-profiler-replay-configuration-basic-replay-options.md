@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 f1_keywords:
 - sql12.pro.replay.generaloptions.f1
@@ -15,12 +14,12 @@ ms.assetid: 85a1dec6-9bbc-477a-86c5-b463db9ebb31
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 379cb1ab2ed12ad8d5d835068bb68008fd6ca9af
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 6ea9517047321f54734b3ccd8d072ba8f3f23152
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48088302"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66089718"
 ---
 # <a name="sql-server-profiler---replay-configuration-basic-replay-options"></a>SQL Server Profiler - [構成の再生] ([再生オプションの基本設定])
   **[構成の再生]** ダイアログ ボックスの **[再生オプションの基本設定]** ページを使用すると、トレース ファイルまたはテーブルの再生方法を指定できます。  
@@ -35,7 +34,7 @@ ms.locfileid: "48088302"
  **[サーバーへの接続]** ダイアログ ボックスを表示して、別のサーバーへ接続します。  
   
  **[ファイルに保存]**  
- 再生結果をファイルに保存します。 [!INCLUDE[ssSqlProfiler](../includes/sssqlprofiler-md.md)] ファイルを保存する場所を指定する、標準ファイル ダイアログが表示されます。  
+ 再生結果をファイルに保存します。 [!INCLUDE[ssSqlProfiler](../includes/sssqlprofiler-md.md)] により、ファイルを保存する場所を指定するための標準ファイル ダイアログが表示されます。  
   
  **[テーブルに保存]**  
  再生結果をテーブルに保存します。 [!INCLUDE[ssSqlProfiler](../includes/sssqlprofiler-md.md)] により、テーブルを保存する場所を指定するためのテーブル選択ダイアログが表示されます。  
@@ -52,8 +51,8 @@ ms.locfileid: "48088302"
  **[再生結果を表示する]**  
  [!INCLUDE[ssSqlProfiler](../includes/sssqlprofiler-md.md)]に再生結果を表示します。  
   
-## <a name="see-also"></a>参照  
- [トレース テーブルを再生&#40;SQL Server Profiler&#41;](../tools/sql-server-profiler/replay-a-trace-table-sql-server-profiler.md)   
+## <a name="see-also"></a>関連項目  
+ [トレース テーブルを再生する &#40;SQL Server Profiler&#41;](../tools/sql-server-profiler/replay-a-trace-table-sql-server-profiler.md)   
  [トレース ファイルを再生する &#40;SQL Server Profiler&#41;](../tools/sql-server-profiler/replay-a-trace-file-sql-server-profiler.md)   
  [トレースの再生](../tools/sql-server-profiler/replay-traces.md)  
   

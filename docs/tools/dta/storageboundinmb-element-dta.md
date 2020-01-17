@@ -12,15 +12,14 @@ dev_langs:
 helpviewer_keywords:
 - StorageBoundInMB element
 ms.assetid: a8374910-bf68-4edb-b464-53a3a705e7f4
-author: stevestein
-ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 6931edc68458caf16c53b5d0671941ebd181d100
-ms.sourcegitcommit: 0f7cf9b7ab23df15624d27c129ab3a539e8b6457
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: f206c59908ab5c44c1b5026e9c7d6dd054e33f1e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51290656"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68105969"
 ---
 # <a name="storageboundinmb-element-dta"></a>StorageBoundInMB 要素 (DTA)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

@@ -7,16 +7,15 @@ ms.technology: scripting
 ms.reviewer: ''
 ms.topic: conceptual
 ms.assetid: 071eb2cb-f073-41ca-9f4d-11d3b8803495
-author: stevestein
-ms.author: sstein
-manager: craigg
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 35882207de5528147883ed3ebe408344cbd3f7fc
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: c9b1a48c19ad6e6b0e33d2b7f0d9ad326d866e00
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51643998"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68262284"
 ---
 # <a name="objects-supported-by-the-generate-scripts-wizard"></a>スクリプト生成ウィザードでサポートされるオブジェクト
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -33,7 +32,7 @@ ms.locfileid: "51643998"
 |CLR (共通言語ランタイム) ストアド プロシージャ*|インデックス|テーブル|ユーザー定義テーブル||  
 |CLR ユーザー定義関数|Rule|ユーザー**|ユーザー定義型||  
   
- * 暗号化されずにパブリッシュされます。  
+ \* 暗号化されずにパブリッシュされます。  
   
  ** データベースに存在するシステム ユーザー以外のユーザーはすべてロールとしてパブリッシュされます。  
   

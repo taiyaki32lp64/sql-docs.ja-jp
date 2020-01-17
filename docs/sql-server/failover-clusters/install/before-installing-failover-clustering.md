@@ -13,19 +13,18 @@ helpviewer_keywords:
 ms.assetid: a655225d-8c54-4b30-95fd-31f588167899
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 232514d75f55f8f3105fe87e2f3f4ecac9f38805
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 5d2fe2d80b0f9d54e877d6bc1be9a05c8c34c584
+ms.sourcegitcommit: 4c5fb002719627f1a1594f4e43754741dc299346
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52503483"
+ms.lasthandoff: 10/17/2019
+ms.locfileid: "72517941"
 ---
 # <a name="before-installing-failover-clustering"></a>フェールオーバー クラスタリングをインストールする前に
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   SQL Server フェールオーバー クラスターをインストールする前に、SQL Server を実行するハードウェアとオペレーティング システムを選択する必要があります。 また、Windows Server フェールオーバー クラスタリング (WSFC) を構成し、ネットワーク、セキュリティ、およびフェールオーバー クラスターで実行するその他のソフトウェアに関する考慮事項を見直す必要があります。  
   
- Windows クラスターにローカル ディスク ドライブがあり、共有ドライブと同じドライブ文字が 1 つ以上のクラスター ノードでも使用されている場合、そのドライブに [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] をインストールできません。  
+ Windows クラスターにローカル ディスク ドライブがあり、共有ドライブと同じドライブ文字が 1 つ以上のクラスター ノードでも使用されている場合、そのドライブに [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] をインストールできません。 この制限は、Windows フェールオーバー クラスター インスタンスの一部であるサーバー上の SQL Server フェールオーバー クラスター インスタンスとスタンドアロン インスタンスの両方に適用されます。
   
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] フェールオーバー クラスタリングの概念、機能、およびタスクについて詳しく学習するには、次のトピックも確認してください。  
   
@@ -48,9 +47,9 @@ ms.locfileid: "52503483"
   
     -   .NET Framework 3.5 SP1 は [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] セットアップでインストールされなくなりましたが、古い Windows オペレーティング システムに [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] をインストールする際に必要になる場合があります。 詳細については、 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)][リリース ノート](https://go.microsoft.com/fwlink/?LinkId=296445)をインストールするには、Windows PowerShell が必要です。  
   
-    -   **[!INCLUDE[msCoName](../../../includes/msconame-md.md)] Update パッケージ:** セットアップ時に .NET Framework 4 のインストールによるコンピューターの再起動を回避するには、 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] のセットアップを行う前に、 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] の更新プログラムをコンピューターにインストールする必要があります。  [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)] を Windows 7 SP1 または [!INCLUDE[firstref_longhorn](../../../includes/firstref-longhorn-md.md)] SP2 にインストールする場合、この更新プログラムは含まれています。 それより前の Windows オペレーティング システムにインストールする場合は、 [Windows Vista および Windows Server 2008 の .NET Framework 4.0 用 Microsoft Update](https://go.microsoft.com/fwlink/?LinkId=198093)からダウンロードしてください。  
+    -   **[!INCLUDE[msCoName](../../../includes/msconame-md.md)] 更新パッケージ:** セットアップ時に .NET Framework 4 のインストールによるコンピューターの再起動を回避するには、[!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] セットアップで [!INCLUDE[msCoName](../../../includes/msconame-md.md)] の更新プログラムをコンピューターにインストールする必要があります。  [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)] を Windows 7 SP1 または [!INCLUDE[firstref_longhorn](../../../includes/firstref-longhorn-md.md)] SP2 にインストールする場合、この更新プログラムは含まれています。 それより前の Windows オペレーティング システムにインストールする場合は、 [Windows Vista および Windows Server 2008 の .NET Framework 4.0 用 Microsoft Update](https://go.microsoft.com/fwlink/?LinkId=198093)からダウンロードしてください。  
   
-    -   .NET Framework 4: セットアップでは、クラスター化されたオペレーティング システムに対して .NET Framework 4 がインストールされます。 インストール時間を短縮するには、セットアップを実行する前に .NET Framework 4 をインストールすることを検討してください。  
+    -   .NET Framework 4:セットアップでは、クラスター化されたオペレーティング システムに対して .NET Framework 4 がインストールされます。 インストール時間を短縮するには、セットアップを実行する前に .NET Framework 4 をインストールすることを検討してください。  
   
     -   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] セットアップ サポート ファイル。 これらのファイルは、 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] インストール メディアにある SqlSupport.msi を実行してインストールできます。  
   
@@ -146,6 +145,12 @@ ms.locfileid: "52503483"
 -   「 [SQL Server インストールにおけるセキュリティの考慮事項](../../../sql-server/install/security-considerations-for-a-sql-server-installation.md)の内容について検討してください。  
   
 -   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]で Kerberos 認証を有効にするには、 [サポート技術情報の「](https://support.microsoft.com/kb/319723) SQL Server で Kerberos 認証を使用する方法 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] 」を参照してください。  
+
+-   SQL Server フェールオーバー クラスター インスタンス (FCI) では、クラスター ノードをドメイン参加させる必要があります。 次の構成は**サポートされていません**。 
+    *   ワークグループ クラスター上の SQL FCI。 
+    *   マルチドメイン クラスター上の SQL FCI。   
+    *   ドメイン + ワークグループ クラスター上の SQL FCI。 
+
   
 ##  <a name="Network"></a> ネットワーク、ポート、およびファイアウォールに関する注意点の確認  
   
@@ -183,12 +188,12 @@ ms.locfileid: "52503483"
   
 |[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] のエディション|[!INCLUDE[firstref_longhorn](../../../includes/firstref-longhorn-md.md)] Enterprise|[!INCLUDE[firstref_longhorn](../../../includes/firstref-longhorn-md.md)] Datacenter Server|[!INCLUDE[winserver2008r2](../../../includes/winserver2008r2-md.md)] Enterprise|[!INCLUDE[winserver2008r2](../../../includes/winserver2008r2-md.md)] Datacenter Server|  
 |---------------------------------------|------------------------------------------------|-------------------------------------------------------|----------------------------------------------|-----------------------------------------------------|  
-|[!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)] Enterprise (64 ビット) x64*|[ユーザー アカウント制御]|[ユーザー アカウント制御]|可**|可**|  
-|[!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)] Enterprise (32 ビット)|[ユーザー アカウント制御]|[ユーザー アカウント制御]|||  
-|[!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] Developer (64 ビット)|[ユーザー アカウント制御]|[ユーザー アカウント制御]|可**|可**|  
-|[!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] Developer (32 ビット)|[ユーザー アカウント制御]|[ユーザー アカウント制御]|||  
-|[!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] Standard (64 ビット)|[ユーザー アカウント制御]|[はい]|[はい]|[ユーザー アカウント制御]|  
-|[!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] Standard (32 ビット)|[ユーザー アカウント制御]|[ユーザー アカウント制御]|||  
+|[!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)] Enterprise (64 ビット) x64*|はい|はい|可**|可**|  
+|[!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)] Enterprise (32 ビット)|はい|はい|||  
+|[!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] Developer (64 ビット)|はい|はい|可**|可**|  
+|[!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] Developer (32 ビット)|はい|はい|||  
+|[!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] Standard (64 ビット)|はい|はい|はい|はい|  
+|[!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] Standard (32 ビット)|はい|はい|||  
   
  *[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] クラスターは、WOW モードではサポートされません。 これには、WOW で最初にインストールされた [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] フェールオーバー クラスターの以前のバージョンからのアップグレードが含まれます。 この場合に使用できる唯一のアップグレード オプションは、新しいバージョンをサイド バイ サイドでインストールしてから移行することです。  
   

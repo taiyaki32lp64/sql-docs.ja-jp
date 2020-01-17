@@ -10,21 +10,21 @@ ms.assetid: 9373de68-fd43-45f2-b9a6-149c96610aeb
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 595bd70b97b6586071177e2e93281e14ca62c32c
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 414d9135989c39ea183d14d2d6f5dfa6e84e6fe6
+ms.sourcegitcommit: f912c101d2939084c4ea2e9881eb98e1afa29dad
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52798174"
+ms.lasthandoff: 10/23/2019
+ms.locfileid: "72797755"
 ---
 # <a name="specify-instances-in-the-sql-server-powershell-provider"></a>SQL Server PowerShell プロバイダーでのインスタンスの指定
   SQL Server PowerShell プロバイダーに指定するパスでは、 [!INCLUDE[ssDE](../includes/ssde-md.md)] のインスタンスと、それが実行されているコンピューターを示す必要があります。 コンピューターおよびインスタンスを指定する構文は、SQL Server 識別子と Windows PowerShell パスの両方の規則に準拠している必要があります。  
   
-1.  **作業を開始する準備:**[制限事項と制約](#LimitationsRestrictions)  
+1.  **Before you begin:**  [Limitations and Restrictions](#LimitationsRestrictions)  
   
-2.  **インスタンスを指定します。**[例](#Examples)  
+2.  **To specify an instance:**  [Examples](#Examples)  
   
-## <a name="before-you-begin"></a>はじめに  
+## <a name="before-you-begin"></a>作業を開始する準備  
  SQL Server プロバイダーのパスで SQLSERVER:\SQL に続く最初のノードは、たとえば次のような、 [!INCLUDE[ssDE](../includes/ssde-md.md)]のインスタンスが実行されているコンピューターの名前です。  
   
 ```  
@@ -51,33 +51,31 @@ SQLSERVER:\SQL\MyComputer\MyInstance
 ##  <a name="Examples"></a> 例: コンピューター名とインスタンス名  
  この例では、次のように、localhost および DEFAULT を使用してローカル コンピューター上の既定のインスタンスを指定します。  
   
-```  
-Set-Location SQLSERVER:\SQL\localhost\DEFAULT   
+```powershell
+Set-Location SQLSERVER:\SQL\localhost\DEFAULT
 ```  
   
  通常、(local) に使用されているかっこ文字は、Windows PowerShell でコマンドとして扱われます。 次のいずれかの作業を行う必要があります。  
   
 -   パス文字列を引用符で囲みます。  
   
-    ```  
+    ```powershell
     Set-Location "SQLSERVER:\SQL\(local)\DEFAULT"  
     ```  
   
 -   バック ティック文字 (') を使用して、かっこをエスケープします。  
   
-    ```  
+    ```powershell
     Set-Location SQLSERVER:\SQL\`(local`)\DEFAULT  
     ```  
   
 -   16 進数表記を使用して、かっこをエンコードします。  
   
-    ```  
+    ```powershell
     Set-Location SQLSERVER:\SQL\%28local%29\DEFAULT  
     ```  
   
 ## <a name="see-also"></a>参照  
  [PowerShell での SQL Server 識別子](sql-server-identifiers-in-powershell.md)   
- [SQL Server PowerShell プロバイダー](sql-server-powershell-provider.md)   
+ [SQL Server PowerShell Provider](sql-server-powershell-provider.md)   
  [SQL Server PowerShell](sql-server-powershell.md)  
-  
-  

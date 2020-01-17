@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 7ec14b9c-69b8-4c6e-838a-88d1ebdc8725
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: a47c292695eb1f68700eefac1aa63732e8606f26
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 95b60ba35a867135cfc1f823e08b1a99f0262ca9
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47682811"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68135743"
 ---
 # <a name="implementation-notes"></a>実装に関するメモ
 > [!IMPORTANT]  

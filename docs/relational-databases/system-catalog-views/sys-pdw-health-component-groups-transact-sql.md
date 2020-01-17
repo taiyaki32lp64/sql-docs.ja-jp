@@ -9,14 +9,13 @@ ms.topic: conceptual
 ms.assetid: 5ba27432-7a29-4420-b73d-def621c0b3ac
 author: ronortloff
 ms.author: rortloff
-manager: craigg
 monikerRange: '>= aps-pdw-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 7c366b8e823cff578e7f580ded7cf7b959d4c1f0
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 79d459fdff2e26726168f5200b53c82f3bb6a79c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56035663"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68127508"
 ---
 # <a name="syspdwhealthcomponentgroups-transact-sql"></a>sys.pdw_health_component_groups (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md.md)]
@@ -25,7 +24,7 @@ ms.locfileid: "56035663"
   
 |列名|データ型|説明|範囲|  
 |-----------------|---------------|-----------------|-----------|  
-|group_id|**int**|コンポーネントとデバイスの一意の識別子。<br /><br /> このビューのキーです。|NOT NULL|  
+|group_id|**int**|コンポーネントとデバイスの一意の識別子。<br /><br /> このビューのキー。|NOT NULL|  
 |group_name|**nvarchar (255)**|コンポーネントとデバイスの論理グループ名。|NOT NULL|  
   
 ## <a name="see-also"></a>参照  

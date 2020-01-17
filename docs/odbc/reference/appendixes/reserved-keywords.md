@@ -13,15 +13,14 @@ helpviewer_keywords:
 ms.assetid: 8eeede59-a828-44bf-866c-1ca9a77a2c5e
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 1d77d6632d689a1f169c61cb636e3bc89a900419
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a89a24ddbbe14938824819e24fd9112597168507
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47626340"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68057214"
 ---
-# <a name="reserved-keywords"></a>予約済みキーワード
+# <a name="reserved-keywords"></a>予約済みのキーワード
 次の文字列は、ODBC 関数呼び出し用に予約されています。 これらの単語 SQL 文法の制約はありません。ただし、主要な SQL 文法をサポートするドライバーとの互換性を確保する、アプリケーションはこれらのキーワードのいずれかを使用を避ける必要があります。 #**定義**SQL_ODBC_KEYWORDS 値には、これらのキーワードのコンマ区切りの一覧が含まれています。  
   
 |||  
@@ -49,7 +48,7 @@ ms.locfileid: "47626340"
 |BOTH|NATURAL|  
 |BY|NCHAR|  
 |CASCADE|NEXT|  
-|CASCADED|いいえ|  
+|CASCADED|NO|  
 |CASE|なし|  
 |CAST|NOT|  
 |CATALOG|NULL|  
@@ -61,7 +60,7 @@ ms.locfileid: "47626340"
 |CLOSE|ONLY|  
 |COALESCE|OPEN|  
 |COLLATE|OPTION|  
-|COLLATION|OR|  
+|COLLATION|スイッチまたは|  
 |COLUMN|ORDER|  
 |COMMIT|OUTER|  
 |CONNECT|OUTPUT|  
@@ -88,7 +87,7 @@ ms.locfileid: "47626340"
 |DECLARE|ROLLBACK|  
 |DEFAULT|ROWS|  
 |DEFERRABLE|SCHEMA|  
-|DEFERRED|SCROLL|  
+|延期|SCROLL|  
 |Del|[SECOND]|  
 |DESC|SECTION|  
 |DESCRIBE|SELECT|  
@@ -98,11 +97,11 @@ ms.locfileid: "47626340"
 |DISTINCT|SIZE|  
 |DOMAIN|SMALLINT|  
 |DOUBLE|SOME|  
-|DROP|Space|  
+|DROP|SPACE|  
 |ELSE|SQL|  
 |END|SQLCA|  
 |END-EXEC|SQLCODE|  
-|ESCAPE|SQLERROR|  
+|ESCAPE|SQLERROR 関数|  
 |EXCEPT|SQLSTATE|  
 |EXCEPTION|SQLWARNING|  
 |EXEC|[SUBSTRING]|  
@@ -118,7 +117,7 @@ ms.locfileid: "47626340"
 |FOREIGN|TO|  
 |FORTRAN|TRAILING|  
 |FOUND|TRANSACTION|  
-|FROM|変換|  
+|FROM|TRANSLATE|  
 |FULL|TRANSLATION|  
 |GET|TRIM|  
 |GLOBAL|TRUE|  

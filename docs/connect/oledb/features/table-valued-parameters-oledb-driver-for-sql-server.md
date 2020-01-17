@@ -13,13 +13,12 @@ helpviewer_keywords:
 - table-valued parameters (OLE DB Driver for SQL Server)
 author: pmasl
 ms.author: pelopes
-manager: craigg
-ms.openlocfilehash: b68227ee34a15b36378e084fff194fddc4509d49
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: af89c2e803be83143351db85b48173b15fad04d1
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47749720"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67988882"
 ---
 # <a name="table-valued-parameters-ole-db-driver-for-sql-server"></a>テーブル値パラメーター (OLE DB Driver for SQL Server)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -29,7 +28,7 @@ ms.locfileid: "47749720"
   [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)] で導入されたテーブル値パラメーターを使用すると、複数行のデータを効率的にサーバーに渡すことができます。 テーブル値パラメーターの機能はパラメーター配列に似ていますが、より柔軟性が高く、[!INCLUDE[tsql](../../../includes/tsql-md.md)] との統合も緊密です。また、多くの場合、パフォーマンスが向上します。 テーブル値パラメーターはセットベースの操作にも使用できますが、パラメーター配列は使用できません。  
   
   
- テーブル値パラメーターおよび OLE DB の詳細については、次を参照してください。[テーブル値パラメーター &#40;OLE DB&#41;](../../oledb/ole-db-table-valued-parameters/table-valued-parameters-ole-db.md)します。  
+ テーブル値パラメーターと OLE DB の詳細については、「[テーブル値&#40;パラメーター&#41;OLE DB](../../oledb/ole-db-table-valued-parameters/table-valued-parameters-ole-db.md)」を参照してください。  
   
 ## <a name="see-also"></a>参照  
  [OLE DB Driver for SQL Server の機能](../../oledb/features/oledb-driver-for-sql-server-features.md) 

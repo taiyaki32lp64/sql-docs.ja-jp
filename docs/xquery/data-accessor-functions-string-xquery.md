@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 7baa2959-9340-429b-ad53-3df03d8e13fc
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 4df87a9fedffa701858fef9101c58db12c1c3bf2
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 9cb30d81102c17f2c3ce04b31ac7ff2b9689343e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51661681"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68038939"
 ---
 # <a name="data-accessor-functions---string-xquery"></a>データ アクセサー関数 - string (XQuery)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -44,19 +43,19 @@ fn:string($arg as item()?) as xs:string
   
 -   場合 *$arg*空のシーケンスでは、長さ 0 の文字列が返されます。  
   
--   場合 *$arg*ノードで、関数は、文字列値のアクセサーを使用して取得したノードの文字列値を返します。 これは、W3C XQuery 1.0 and XPath 2.0 Data Model 仕様で定義されています。  
+-   場合 *$arg*ノードで、関数は、文字列値のアクセサーを使用して取得したノードの文字列値を返します。 これは、W3C XQuery 1.0 and XPath 2.0 データ モデルの仕様で定義されます。  
   
 -   場合 *$arg*は、アトミック値としてキャスト式によって返されるのと同じ文字列を返します**xs:string**、 *$arg*、以外の場合、それ以外の場合に注意します。  
   
 -   場合の種類 *$arg*は**xs:anyURI**URI は、特殊文字をエスケープせず、文字列に変換されます。  
   
--   この実装では、 **fn:string()** せず、引数は、コンテキストに依存する述語のコンテキストでのみ使用できます。 具体的には、角かっこ ([ ]) 内でしか使用できません。  
+-   この実装では、 **fn:string()** せず、引数は、コンテキストに依存する述語のコンテキストでのみ使用できます。 具体的にのみ使用できます角かっこ () 内で。  
   
 ## <a name="examples"></a>使用例  
  このトピックではさまざまなに格納されている XML インスタンスに対して XQuery の例について**xml**型の列には、AdventureWorks データベース。  
   
-### <a name="a-using-the-string-function"></a>A. string 関数の使用  
- 次のクエリは、<`ProductDescription`> 要素の <`Features`> 子要素ノードを取得します。  
+### <a name="a-using-the-string-function"></a>A. String 関数の使用  
+ 次のクエリを取得します <`Features`> の子要素ノード、<`ProductDescription`> 要素。  
   
 ```  
 SELECT CatalogDescription.query('  
@@ -113,7 +112,7 @@ just text
 '  
 ```  
   
- 次のクエリは、ドキュメント ノードの文字列値を取得します。 この値は、このノードの子孫にあたるすべてのテキスト ノードの文字列値を連結して生成されます。  
+ 次のクエリでは、ドキュメント ノードの文字列値を取得します。 この値は、そのすべての子孫のテキスト ノードの文字列値を連結して形成されます。  
   
 ```  
 select @x.query('string(/)')  
@@ -127,13 +126,13 @@ just text
  20  
 ```  
   
- 次のクエリは、processing-instruction ノードの文字列値を取得します。 ただし、このノードにはテキスト ノードが含まれていないため、空のシーケンスが結果として返されます。  
+ 次のクエリは、processing-instruction ノードの文字列値を取得します。 テキスト ノードが含まれていないため、空のシーケンスになります。  
   
 ```  
 select @x.query('string(/processing-instruction()[1])')  
 ```  
   
- 次のクエリは、comment ノードの文字列値を取得し、そのテキスト ノードを返します。  
+ 次のクエリでは、コメント ノードの文字列値を取得し、テキスト ノードを返します。  
   
 ```  
 select @x.query('string(/comment()[1])')  
@@ -145,7 +144,7 @@ select @x.query('string(/comment()[1])')
 This is a comment   
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [xml データ型に対する XQuery 関数](../xquery/xquery-functions-against-the-xml-data-type.md)  
   
   

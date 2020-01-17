@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 92172f52-6bd2-4b17-9ef0-baf1a97f7510
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 37cf1cb1a6fe2193ec30ad3163950834351c3364
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 18955db5c11f4f338091598ac717a71e7c78969e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47850040"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68023267"
 ---
 # <a name="procedures-odbc"></a>プロシージャ (ODBC)
 A*プロシージャ*はデータ ソースに格納されている実行可能オブジェクトです。 これは通常、プリコンパイルされた 1 つ以上の SQL ステートメントです。  

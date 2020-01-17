@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 41e18b20-526b-45d2-9bd9-e3b7d7fbce4e
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 6c73d2be8550bd6ce3dad9e6c9e07e2403785f7b
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 7fa45029557cc217b89293fa7963bf29b39f373f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51661828"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67946304"
 ---
 # <a name="sequence-expressions-xquery"></a>シーケンス式 (XQuery)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

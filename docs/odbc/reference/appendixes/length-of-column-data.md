@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: c762c881-ebe0-4eac-84d5-f30281fc3eca
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 6d14fa4303dd1f67a77bf14dcebeeb933ccce9e1
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 8d2998eace4772624a1e6590ab2541577147f5c0
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47793640"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68041611"
 ---
 # <a name="length-of-column-data"></a>列データの長さ
 > [!IMPORTANT]  

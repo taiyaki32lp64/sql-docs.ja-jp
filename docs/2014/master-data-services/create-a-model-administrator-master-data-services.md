@@ -9,15 +9,15 @@ ms.topic: conceptual
 helpviewer_keywords:
 - administrators [Master Data Services], creating
 ms.assetid: dae17afc-3b39-490e-b51f-2d8da26d429e
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 6c0ef9c1b18c38b38ddefe900018bd0323956c88
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: bccf908359fa0cb75a8ae0bcfe7a601ccbfd6618
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52797674"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65483403"
 ---
 # <a name="create-a-model-administrator-master-data-services"></a>モデル管理者を作成する (マスター データ サービス)
   [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]、モデル管理者を作成する場合、グループまたはユーザーに与える**Update** 1 つまたは複数のモデルのすべてのオブジェクトへのアクセスを許可します。  
@@ -59,7 +59,7 @@ ms.locfileid: "52797674"
   
  1 つの例外が発生: 場合は、ユーザーがある**Update**階層に割り当てられた権限**ルート**上、**階層メンバー**  タブで、ユーザーがモデルと見なされますが管理者です。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [管理者 (マスター データ サービス)](administrators-master-data-services.md)   
  [モデル オブジェクト権限を割り当てる (マスター データ サービス)](../../2014/master-data-services/assign-model-object-permissions-master-data-services.md)   
  [階層メンバーの権限を割り当てる (マスター データ サービス)](../../2014/master-data-services/assign-hierarchy-member-permissions-master-data-services.md)   

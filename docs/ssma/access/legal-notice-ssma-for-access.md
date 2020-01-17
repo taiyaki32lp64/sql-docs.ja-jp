@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: d614b508-48ad-459e-ae86-79ee9d027a73
 author: Shamikg
 ms.author: Shamikg
-manager: craigg
-ms.openlocfilehash: 563cd62cb600be54ab1e4412db4d8869bd84e18f
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: d22a41b67d4b33d573a1c3ecc5f2235560cceea3
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52527270"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67947515"
 ---
 # <a name="legal-notice-ssma-for-access"></a>法的通知 (SSMA for Access)
 このソフトウェアおよびマニュアルに記載されている参照用のアプリケーションを含んだ内容は、情報の提供のみを目的としており、明示または黙示にかかわらず、このマニュアルは保証なしで提供されます。 このソフトウェアの仕様およびマニュアルに記載されている事柄は、将来予告なしに変更することがあります。 お客様が本製品を運用した結果の影響については、お客様が負うものとします。  

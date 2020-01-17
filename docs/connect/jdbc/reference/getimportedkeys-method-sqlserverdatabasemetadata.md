@@ -1,5 +1,5 @@
 ---
-title: getImportedKeys メソッド (SQLServerDatabaseMetaData) |Microsoft Docs
+title: getImportedKeys メソッド (SQLServerDatabaseMetaData) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: dc8c1a5e-700e-4059-a5ed-5013bbb87fb6
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: cbb50cd617ba1ce85851c08764f3f80cd90cbe67
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 2418bd5e62f00e46ddc329c1c7ba987505fb5a7f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47611630"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67982827"
 ---
 # <a name="getimportedkeys-method-sqlserverdatabasemetadata"></a>getImportedKeys メソッド (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -57,7 +56,7 @@ public java.sql.ResultSet getImportedKeys(java.lang.String cat,
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- この getImportedKeys メソッドは、java.sql.DatabaseMetaData インターフェイスで getImportedKeys メソッドによって指定されます。  
+ この getImportedKeys メソッドは、java メタデータインターフェイスの getImportedKeys メソッドによって指定されます。  
   
  getImportedKeys メソッドによって返される結果セットには、次の情報が含まれます。  
   

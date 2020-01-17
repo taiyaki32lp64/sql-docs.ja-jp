@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 5be75bc7-1171-4440-a37e-c8cc6b5cd865
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: c575683b5ec23c6739a37eae177be004efea0a57
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.openlocfilehash: 8a2a3d22f30a865687e38aedfaf6e688e677efae
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51599903"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67963590"
 ---
 # <a name="readystate-property-rds"></a>ReadyState プロパティ (RDS)
 進行状況を示す、 [DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md)オブジェクトにデータを取得、 [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md)オブジェクト。  
@@ -47,7 +46,7 @@ ms.locfileid: "51599903"
 ## <a name="applies-to"></a>適用対象  
  [DataControl オブジェクト (RDS)](../../../ado/reference/rds-api/datacontrol-object-rds.md)  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [ReadyState プロパティの例 (VBScript)](../../../ado/reference/rds-api/readystate-property-example-vbscript.md)   
  [Cancel メソッド (RDS)](../../../ado/reference/rds-api/cancel-method-rds.md)   
  [ExecuteOptions プロパティ (RDS)](../../../ado/reference/rds-api/executeoptions-property-rds.md)

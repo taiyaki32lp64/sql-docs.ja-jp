@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: 76ee851a-dca9-40cc-8e9e-eb3f74e560ee
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: ba02c28f3243b623695e3e087490ef3f73c60385
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: 0b3a6fced096c779b5ab91bf4e5b6a3f0a66e5f1
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53204341"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68121385"
 ---
 # <a name="sqlcreatedatasource-function"></a>SQLCreateDataSource 関数
 **準拠**  
@@ -36,7 +35,7 @@ ms.locfileid: "53204341"
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
   
 BOOL SQLCreateDataSource(  
      HWND    hwnd,  

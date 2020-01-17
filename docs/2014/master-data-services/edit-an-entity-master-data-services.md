@@ -9,15 +9,15 @@ ms.topic: conceptual
 helpviewer_keywords:
 - entities [Master Data Services], changing name
 ms.assetid: 6a5b9f14-6dfc-49d7-a771-e96461d4feae
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 31f3e298fb708d025bcbd3fccae5ada961a6ca0f
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 49032dd9c8f57f1bb822720ae431098e911fbed1
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52814374"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65483884"
 ---
 # <a name="change-an-entity-name-master-data-services"></a>エンティティ名を変更する (マスター データ サービス)
   [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] では、エンティティの名前を変更できます。  
@@ -48,7 +48,7 @@ ms.locfileid: "52814374"
   
 7.  クリックして**エンティティの保存**します。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [エンティティを作成する&#40;マスター データ サービス&#41;](create-an-entity-master-data-services.md)   
  [エンティティを削除する (マスター データ サービス)](delete-an-entity-master-data-services.md)   
  [エンティティ (マスター データ サービス)](entities-master-data-services.md)  

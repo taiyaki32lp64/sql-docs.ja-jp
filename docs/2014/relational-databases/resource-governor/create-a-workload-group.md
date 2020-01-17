@@ -14,18 +14,18 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 1cd3b72418d0791d70d28d2dca0a434190a2d4a9
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52814054"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68198920"
 ---
 # <a name="create-a-workload-group"></a>ワークロード グループの作成
   ワークロード グループを作成するには、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] または [!INCLUDE[tsql](../../includes/tsql-md.md)]を使用します。  
   
--   **作業を開始する準備:**[制限事項と制約](#LimitationsRestrictions)、[アクセス許可](#Permissions)  
+-   **作業を開始する準備:** [制限事項と制約事項](#LimitationsRestrictions)、[権限](#Permissions)  
   
--   **ワークロードを作成するグループを使用します。**[SQL Server Management Studio](#CreWGProp)、 [TRANSACT-SQL](#CreWGTSQL)  
+-   **ワークロード グループの作成に使用するもの:** [SQL Server Management Studio](#CreWGProp)、[Transact-SQL](#CreWGTSQL)  
   
 ##  <a name="BeforeYouBegin"></a> はじめに  
   
@@ -74,7 +74,7 @@ ALTER RESOURCE GOVERNOR RECONFIGURE;
 GO  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [リソース ガバナー](resource-governor.md)   
  [リソース ガバナーの有効化](enable-resource-governor.md)   
  [リソース プールの作成](create-a-resource-pool.md)   

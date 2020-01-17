@@ -10,15 +10,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - denying permissions [SQL Server], XML server collections
 ms.assetid: e2b300b0-e734-4c43-a4da-c78e6e5d4fba
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: b615f54cc13f432500710a616e995cdffc0c85c8
-ms.sourcegitcommit: bfa10c54e871700de285d7f819095d51ef70d997
+author: MightyPen
+ms.author: genemi
+ms.openlocfilehash: 068701e16d192ca5edfb45267ebee0cece3619a8
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/14/2019
-ms.locfileid: "54256507"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68052283"
 ---
 # <a name="deny-permissions-on-an-xml-schema-collection"></a>XML スキーマ コレクションに対する権限の拒否
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

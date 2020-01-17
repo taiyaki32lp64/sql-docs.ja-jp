@@ -4,21 +4,20 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.adonetdest.mappings.f1
 ms.assetid: 842d075f-8b7a-457c-a1a1-a7acbe10e9b7
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 8df784ef4601cac9d6fbb574deda90cc6828c122
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: b722be21d3b2e2eb10fbd3cc351553df927dbef9
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48102935"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66061750"
 ---
 # <a name="ado-net-destination-editor-mappings-page"></a>[ADO NET 変換先エディター] ([マッピング] ページ)
   **[ADO NET 変換先エディター]** ダイアログ ボックスの **[マッピング]** ページを使用すると、入力列を変換先列にマップできます。  
@@ -47,7 +46,7 @@ ms.locfileid: "48102935"
  マップするかどうかにかかわらず、使用できる変換先列を表示します。  
   
 ## <a name="see-also"></a>参照  
- [ADO NET 変換先エディター&#40;接続マネージャー ページ&#41;](../../2014/integration-services/ado-net-destination-editor-connection-manager-page.md)   
- [ADO NET 変換先エディター&#40;エラー出力 ページ&#41;](../../2014/integration-services/ado-net-destination-editor-error-output-page.md)  
+ [[ADO NET 変換先エディター] &#40;[接続マネージャー] ページ&#41;](../../2014/integration-services/ado-net-destination-editor-connection-manager-page.md)   
+ [[ADO NET 変換先エディター] &#40;[エラー出力] ページ&#41;](../../2014/integration-services/ado-net-destination-editor-error-output-page.md)  
   
   

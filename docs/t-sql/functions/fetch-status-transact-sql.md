@@ -17,15 +17,14 @@ helpviewer_keywords:
 - status information [SQL Server], FETCH
 - '@@FETCH_STATUS function'
 ms.assetid: 93659193-e4ff-4dfb-9043-0c4114921b91
-author: MashaMSFT
-ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 353d6e64d11a7365689b5f57aaab3b5ba93de690
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: MikeRayMSFT
+ms.author: mikeray
+ms.openlocfilehash: d07892e1a47025107205f590d6a41aebebbb571a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47703070"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68071563"
 ---
 # <a name="x40x40fetchstatus-transact-sql"></a>&#x40;&#x40;FETCH_STATUS (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -49,7 +48,7 @@ ms.locfileid: "47703070"
 |------------------|-----------------|  
 |&nbsp;0|FETCH ステートメントは正常に実行されました。|  
 |-1|FETCH ステートメントが失敗したか、または行が結果セットに収まりません。|  
-|-2|取り出した行がありません。|
+|-2|フェッチした行がありません。|
 |-9|カーソルはフェッチ操作を実行しません。|  
   
 ## <a name="remarks"></a>Remarks  
@@ -79,6 +78,6 @@ GO
   
 ## <a name="see-also"></a>参照  
  [カーソル関数 &#40;Transact-SQL&#41;](../../t-sql/functions/cursor-functions-transact-sql.md)   
- [フェッチ (&) #40 です。TRANSACT-SQL と #41 です。](../../t-sql/language-elements/fetch-transact-sql.md)  
+ [FETCH &#40;Transact-SQL&#41;](../../t-sql/language-elements/fetch-transact-sql.md)  
   
   

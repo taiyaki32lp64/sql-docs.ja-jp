@@ -10,15 +10,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - FileTables [SQL Server], accessing files with file APIs
 ms.assetid: fa504c5a-f131-4781-9a90-46e6c2de27bb
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: 74f3fb094b8d3e852a5ffb0cce77e52cdfe47293
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: MikeRayMSFT
+ms.author: mikeray
+ms.openlocfilehash: d1cdc6947c97052660dea3be9d6013a8e61a090d
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47740380"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72908773"
 ---
 # <a name="access-filetables-with-file-input-output-apis"></a>ファイル I/O API を使用した FileTable へのアクセス
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -30,7 +29,7 @@ ms.locfileid: "47740380"
 1.  一般的に、ファイル I/O API は、ファイルまたはディレクトリの論理 UNC パスを取得することによって起動されます。 アプリケーションは、[GetFileNamespacePath &#40;Transact-SQL&#41;](../../relational-databases/system-functions/getfilenamespacepath-transact-sql.md) 関数を含む [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントを使用して、ファイルまたはディレクトリの論理パスを取得できます。 詳しくは、「 [Work with Directories and Paths in FileTables](../../relational-databases/blob/work-with-directories-and-paths-in-filetables.md)」をご覧ください。  
   
 2.  次に、この論理パスを使用して、ファイルまたはディレクトリに対するハンドルを取得し、オブジェクトを操作します。 CreateFile()、CreateDirectory() など、サポート対象のファイル システム API 関数にパスを渡して、ファイルを作成したり、開いたり、ハンドルを取得したりできます。 そのハンドルを使用することで、データのストリーミング、ディレクトリの列挙と編成、ファイル属性の取得と設定、ファイルまたはディレクトリの削除などの操作を実行できます。  
-  
+
 ##  <a name="create"></a> FileTable でのファイルおよびディレクトリの作成  
  ファイル I/O API (CreateFile、CreateDirectory など) を呼び出すことで、FileTable にファイルまたはディレクトリを作成できます。  
   
@@ -106,14 +105,14 @@ ms.locfileid: "47740380"
   
 |機能|Supported|コメント|  
 |----------------|---------------|--------------|  
-|**oplock**|[ユーザー アカウント制御]|レベル 2、レベル 1、バッチ、およびフィルターの各 oplock がサポートされます。|  
+|**oplock**|はい|レベル 2、レベル 1、バッチ、およびフィルターの各 oplock がサポートされます。|  
 |**拡張属性**|いいえ||  
 |**再解析ポイント**|いいえ||  
 |**永続的 ACL**|いいえ||  
 |**名前付きストリーム**|いいえ||  
-|**スパース ファイル**|[ユーザー アカウント制御]|スパースかどうかはファイルにのみ設定できます。この設定はデータ ストリームの記憶域に影響します。 FILESTREAM データは NTFS ボリュームに格納されるため、FileTable 機能では NTFS ファイル システムに要求を転送することによってスパース ファイルをサポートします。|  
-|**圧縮**|[ユーザー アカウント制御]||  
-|**暗号化**|[ユーザー アカウント制御]||  
+|**スパース ファイル**|はい|スパースかどうかはファイルにのみ設定できます。この設定はデータ ストリームの記憶域に影響します。 FILESTREAM データは NTFS ボリュームに格納されるため、FileTable 機能では NTFS ファイル システムに要求を転送することによってスパース ファイルをサポートします。|  
+|**圧縮**|はい||  
+|**暗号化**|はい||  
 |**TxF**|いいえ||  
 |**ファイル ID**|いいえ||  
 |**オブジェクト ID**|いいえ||  
@@ -121,15 +120,15 @@ ms.locfileid: "47740380"
 |**ハード リンク**|いいえ||  
 |**短い名前**|いいえ||  
 |**ディレクトリ変更の通知**|いいえ||  
-|**バイト範囲ロック**|[ユーザー アカウント制御]|バイト範囲ロックの要求は、NTFS ファイル システムに渡されます。|  
+|**バイト範囲ロック**|はい|バイト範囲ロックの要求は、NTFS ファイル システムに渡されます。|  
 |**メモリ マップ ファイル**|いいえ||  
-|**キャンセル I/O**|[ユーザー アカウント制御]||  
+|**キャンセル I/O**|はい||  
 |**セキュリティ**|いいえ|Windows 共有レベルのセキュリティと [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のテーブルおよび列レベルのセキュリティが適用されます。|  
 |**USN ジャーナル**|いいえ|FileTable 内のファイルおよびディレクトリに対するメタデータの変更は、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データベースの DML 操作です。 したがって、これらの操作は対応するデータベース ログ ファイルに記録されます。 ただし、(サイズの変更を除き) NTFS USN ジャーナルには記録されません。<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の変更の追跡機能を使用して、同様の情報をキャプチャします。|  
   
 ## <a name="see-also"></a>参照  
  [FileTable へのファイルの読み込み](../../relational-databases/blob/load-files-into-filetables.md)   
- [FileTable 内のディレクトリとパスの操作](../../relational-databases/blob/work-with-directories-and-paths-in-filetables.md)   
+ [Work with Directories and Paths in FileTables](../../relational-databases/blob/work-with-directories-and-paths-in-filetables.md)   
  [Transact SQL を使用した FileTable へのアクセス](../../relational-databases/blob/access-filetables-with-transact-sql.md)   
  [FileTable DDL、関数、ストアド プロシージャ、およびビュー](../../relational-databases/blob/filetable-ddl-functions-stored-procedures-and-views.md)  
   

@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: e1d2828f-fd20-44b0-b796-dc70f77c5b03
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: d48ba821cee687eca112c405e5f0363244bc7842
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: c3d4b2132c3bbcf5612faa5f319a5358f158e2b7
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47700140"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67977978"
 ---
 # <a name="getxaresource-method-sqlserverxaconnection"></a>getXAResource メソッド (SQLServerXAConnection)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -42,7 +41,7 @@ public javax.transaction.xa.XAResource getXAResource()
  java.sql.SQLException  
   
 ## <a name="remarks"></a>Remarks  
- この getXAResource メソッドは、javax.sql.XAConnection インターフェイスで getXAResource メソッドによって指定されます。  
+ この getXAResource メソッドは、Javax.sql.xaconnection インターフェイスの getXAResource メソッドによって指定されます。  
   
 ## <a name="see-also"></a>参照  
  [SQLServerXAConnection のメソッド](../../../connect/jdbc/reference/sqlserverxaconnection-methods.md)   

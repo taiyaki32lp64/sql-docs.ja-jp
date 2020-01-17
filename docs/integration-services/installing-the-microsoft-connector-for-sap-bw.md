@@ -8,17 +8,20 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 3bfb9023-9597-4f59-9085-4b9057e7702e
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: 6329a37a23e00753dd32ec43b2ef97915f668993
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 24c7f4c128998484be5d75d5db554de605feead7
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51637429"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71284416"
 ---
 # <a name="installing-the-microsoft-connector-for-sap-bw"></a>Microsoft Connector for SAP BW のインストール
+
+[!INCLUDE[ssis-appliesto](../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   [!INCLUDE[msCoName](../includes/msconame-md.md)] Connector for SAP BW for SQL Server 2016 は、SQL Server 2016 の Feature Pack のコンポーネントです。 Connector for SAP BW およびそのドキュメントをインストールするには、 [SQL Server 2016 Feature Pack Web ページ](https://go.microsoft.com/fwlink/?LinkId=746297)からインストーラーをダウンロードして実行します。  
 
 > [!IMPORTANT]

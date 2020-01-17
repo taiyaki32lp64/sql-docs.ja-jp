@@ -15,15 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - STMPolyFromText method
 ms.assetid: 15356c0f-5144-418d-aa96-3e7ea5fecea3
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: fa121faac168a2d3729145eb9b87d5e4e4416fa2
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: MladjoA
+ms.author: mlandzic
+ms.openlocfilehash: 45be9818ed599365ca50648cb08a1c65825d5a11
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47845080"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68120999"
 ---
 # <a name="stmpolyfromtext-geography-data-type"></a>STMPolyFromText (geography データ型)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -49,7 +48,7 @@ STMPolyFromText ( 'multipolygon_tagged_text' , SRID )
   
  CLR の戻り値の型:**Sql Geography**  
   
- OGC の型: **MultiPolygon**  
+ OGC の型:**MultiPolygon**  
   
 ## <a name="remarks"></a>Remarks  
  このメソッドでは、入力が整形式でない場合に、**FormatException** がスローされます。  

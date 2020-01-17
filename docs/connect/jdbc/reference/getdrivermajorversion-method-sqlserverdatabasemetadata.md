@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: 3f3f717f-ef07-4300-8286-1cfe73619a5e
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 886fec81fb93afe92fd06a7f383bb18bff5a6de2
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 147a54a1f8b3b647e64e95b22c60095c67f8ac35
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47835340"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67983464"
 ---
 # <a name="getdrivermajorversion-method-sqlserverdatabasemetadata"></a>getDriverMajorVersion メソッド (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -42,7 +41,7 @@ public int getDriverMajorVersion()
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- この getDriverMajorVersion メソッドは、java.sql.DatabaseMetaData インターフェイスの getDriverMajorVersion メソッドによって指定されます。  
+ この getDriverMajorVersion メソッドは、java メタデータインターフェイスの getDriverMajorVersion メソッドによって指定されます。  
   
 ## <a name="see-also"></a>参照  
  [SQLServerDatabaseMetaData のメソッド](../../../connect/jdbc/reference/sqlserverdatabasemetadata-methods.md)   

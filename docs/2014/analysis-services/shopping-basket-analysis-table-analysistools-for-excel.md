@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - shopping basket analysis
@@ -17,12 +16,12 @@ ms.assetid: ba40cf43-f286-49ad-8316-70f5b11f1dae
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 8d5545d6a6d0deca345207ec73a039e7abe841ca
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 3dadc054a3f9927c09e9e236044dd5ddee7f3a9a
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48049752"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66068680"
 ---
 # <a name="shopping-basket-analysis-table-analysistools-for-excel"></a>買い物かご分析 (Excel 用のテーブル分析ツール)
   ![買い物かごツール](media/tat-shopbskt.gif "買い物かごツール")  
@@ -76,9 +75,9 @@ ms.locfileid: "48049752"
 ### <a name="minimum-support"></a>最小のサポート  
  *最小のサポート*重要と見なされるアイテム セットの特定のアイテム セットを含める必要があるトランザクションの数を意味します。 たとえば、10 個以上の異なるトランザクションで購入されているアイテムセット以外には関心がない場合があります。 アイテム セットの有意性のしきい値を制御する 2 つの方法があり、両方を使用して、**最小のサポート**パラメーター。  
   
- **絶対値として:** を対象のアイテムを含むトランザクションの数を表す数値を入力します。 たとえば「10」と入力すると、10 個以上の買い物かごに表示されたすべてのアイテムセットが結果に含まれます。  
+ **絶対値で指定します。** ターゲット項目を含むトランザクションの数を表す数値を入力します。 たとえば「10」と入力すると、10 個以上の買い物かごに表示されたすべてのアイテムセットが結果に含まれます。  
   
- **パーセンテージ:** アイテム セットのコレクション全体に占める割合を表す数値を入力します。 たとえば「10」と指定すると、すべてのアイテムセットがカウントされ、そのアイテムセットの合計数の 10% 以上が対象のアイテムセットで構成されることになります。 大規模なデータセットがある場合は、パーセンテージを使用して、数ではなくできます最も重要な項目グループに注目します。  
+ **パーセンテージとして。** アイテム セットのコレクション全体の割合を表す数値を入力します。 たとえば「10」と指定すると、すべてのアイテムセットがカウントされ、そのアイテムセットの合計数の 10% 以上が対象のアイテムセットで構成されることになります。 大規模なデータセットがある場合は、パーセンテージを使用して、数ではなくできます最も重要な項目グループに注目します。  
   
 > [!NOTE]  
 >  アイテムセット数は、データ内のトランザクション数とは異なります。 各トランザクションには複数のアイテムセットが含まれる場合があります。ただし、ほとんどのアイテムセットは、データ セット全体で複数回繰り返し検出されます。  

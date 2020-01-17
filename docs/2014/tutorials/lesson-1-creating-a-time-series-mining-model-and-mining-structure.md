@@ -11,16 +11,16 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: 2513bc3837dd224f6561eb0015ced538ea3add8c
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56014163"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62678449"
 ---
-# <a name="lesson-1-creating-a-time-series-mining-model-and-mining-structure"></a>レッスン 1:タイム シリーズ マイニング モデルとマイニング構造を作成します。
+# <a name="lesson-1-creating-a-time-series-mining-model-and-mining-structure"></a>レッスン 1:時系列マイニング モデルおよびマイニング構造の作成
   このレッスンでは、履歴データを基に時間の経過に応じて値を予測するためのマイニング モデルを作成します。 モデルを作成すると、基になる構造が自動的に生成され、追加のマイニング モデルのベースとして使用できるようになります。  
   
- このレッスンは、予測モデルおよび Microsoft タイム シリーズ アルゴリズムの要件について理解していることを前提としています。 詳細については、「 [Microsoft タイム シリーズ アルゴリズム](../../2014/analysis-services/data-mining/microsoft-time-series-algorithm.md)」を参照してください。  
+ このレッスンは、予測モデルおよび Microsoft Time Series アルゴリズムの要件について理解していることを前提としています。 詳細については、「 [Microsoft Time Series アルゴリズム](../../2014/analysis-services/data-mining/microsoft-time-series-algorithm.md)」を参照してください。  
   
 ## <a name="create-mining-model-statement"></a>マイニング モデルのステートメントを作成します。  
  使用するマイニング モデルを直接作成し、基になるマイニング構造を自動的に生成するために、 [CREATE MINING MODEL &#40;DMX&#41; ](/sql/dmx/create-mining-model-dmx)ステートメント。 ステートメント内のコードは、次の部分に分けることができます。  
@@ -59,7 +59,7 @@ CREATE MINING MODEL [Mining Model Name]
 <key columns>  
 ```  
   
- コードの次の行では、予測対象となるモデル内の列を定義します。 1 つのマイニング モデルに複数の予測可能な属性を含めることができます。 予測可能な属性が複数ある場合は、Microsoft タイム シリーズ アルゴリズムによって系列ごとに個別に分析が生成されます。  
+ コードの次の行では、予測対象となるモデル内の列を定義します。 1 つのマイニング モデルに複数の予測可能な属性を含めることができます。 予測可能な属性が複数ある場合は、Microsoft Time Series アルゴリズムによって系列ごとに個別に分析が生成されます。  
   
 ```  
 <predictable attribute columns>  

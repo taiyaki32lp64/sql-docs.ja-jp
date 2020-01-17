@@ -2,18 +2,18 @@
 title: Analysis Services データベースに対する拡張フィールド プロパティ (SSRS) | Microsoft Docs
 ms.date: 03/14/2017
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: report-data
 ms.topic: conceptual
 ms.assetid: 1d7d87e2-bf0d-4ebb-a287-80b5a967a3f2
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 73a2539ad976de2a25361835b9c33b03a79fdf97
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: d315aa1c5037e27d5c48e1ee03addef35cbc22df
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50031261"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65573320"
 ---
 # <a name="extended-field-properties-for-an-analysis-services-database-ssrs"></a>Analysis Services データベースに対する拡張フィールド プロパティ (SSRS)
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] データ処理拡張機能では、拡張フィールド プロパティがサポートされています。 拡張フィールド プロパティとは、データ ソースにありデータ処理拡張機能でサポートされるフィールド プロパティ **Value** および **IsMissing** に加えて使用するプロパティです。 拡張プロパティは、レポート データセットのフィールド コレクションの一部としてレポート データ ペインには表示されません。 拡張フィールド プロパティ値をレポートに含めるには、組み込み **Fields** コレクションを使用して名前で拡張フィールド プロパティ値を指定する式を記述します。  
@@ -126,7 +126,7 @@ CELL PROPERTIES
   
  プロパティは MDX の SELECT ステートメントに含まれていますが、結果セット列には表示されません。 そこで、拡張プロパティ機能を使用すると、データをレポートに使用することができます。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]の MDX クエリ結果ペインで、セルをダブルクリックすると、セルのプロパティ値が表示されます (キューブ内で設定されている場合)。 1,379 という値が格納されている最初の Order Count セルをダブルクリックすると、ポップアップ ウィンドウに次のセル プロパティが表示されます。  
   
-|プロパティ|ReplTest1|  
+|プロパティ|[値]|  
 |--------------|-----------|  
 |CellOrdinal|0|  
 |Value|2481|  

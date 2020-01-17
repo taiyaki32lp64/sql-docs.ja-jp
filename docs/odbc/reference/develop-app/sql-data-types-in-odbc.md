@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: a833a725-3c27-4d6b-9f6a-8c2e6e3e2920
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 35b4d12d48f48aa4bab3d80ab551708b7a2311d5
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: f728c3c71e00b952c433874c0637c02724fec145
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47594120"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68107499"
 ---
 # <a name="sql-data-types-in-odbc"></a>ODBC の SQL データ型
 SQL データ型は、データがデータ ソースに格納されている型です。  

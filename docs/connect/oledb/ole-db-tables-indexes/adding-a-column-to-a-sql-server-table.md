@@ -1,6 +1,6 @@
 ---
-title: SQL Server テーブルに列の追加 |Microsoft Docs
-description: SQL Server の OLE DB ドライバーを使用して SQL Server テーブルに列を追加
+title: SQL Server Table | に列を追加するMicrosoft Docs
+description: OLE DB Driver for SQL Server を使用して SQL Server テーブルに列を追加する
 ms.custom: ''
 ms.date: 06/14/2018
 ms.prod: sql
@@ -15,22 +15,21 @@ helpviewer_keywords:
 - adding columns
 author: pmasl
 ms.author: pelopes
-manager: craigg
-ms.openlocfilehash: 43e279a80bdddd8b34e570116dace51aac60c9ee
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 2c6cd539e499f80342a30371d047c9870c4fda08
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47684720"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67994102"
 ---
 # <a name="adding-a-column-to-a-sql-server-table"></a>SQL Server テーブルへの列の追加
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
-  OLE DB Driver for SQL Server を公開、 **itabledefinition::addcolumn**関数。 これにより、コンシューマーは [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] テーブルに列を追加できます。  
+  SQL Server 用の OLE DB ドライバーは、 **Itabledefinition:: AddColumn**関数を公開します。 これにより、コンシューマーは [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] テーブルに列を追加できます。  
   
- 列を追加すると、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]テーブルの場合は、SQL Server コンシューマーが次のように制約付きの OLE DB ドライバー。  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]テーブルに列を追加する場合、SQL Server コンシューマーの OLE DB ドライバーは次のように制約されます。  
   
 -   DBPROP_COL_AUTOINCREMENT が VARIANT_TRUE の場合、DBPROP_COL_NULLABLE を VARIANT_FALSE にする必要があります。  
   

@@ -17,20 +17,20 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 4b91a2848dda5dff2150d80760c7a43680a8f325
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52783594"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62827017"
 ---
 # <a name="progress-report-event-category"></a>Progress Report イベント カテゴリ
-  **の進行状況レポート**イベント カテゴリに含まれる、**の進行状況レポート。Online Index Operation**イベント クラス。  
+  **の進行状況レポート**イベント カテゴリに含まれる、**の進行状況レポート。Online Index Operation** イベント クラスが含まれます。  
   
 |トピック|説明|  
 |-----------|-----------------|  
 |[Progress Report:Online Index Operation イベント クラス](progress-report-online-index-operation-event-class.md)|オンライン インデックスの構築操作の進行状況を示します。|  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [SQL Server Profiler](../../tools/sql-server-profiler/sql-server-profiler.md)  
   
   

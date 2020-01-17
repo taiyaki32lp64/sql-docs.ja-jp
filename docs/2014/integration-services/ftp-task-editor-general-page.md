@@ -4,23 +4,22 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.ftptask.general.f1
 helpviewer_keywords:
 - File Transfer Protocol Task Editor
 ms.assetid: 28b46fdd-b04a-4f97-a99f-883f5735a6d9
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 1309a746aa60ee1a7c49a0d6569b51d0a57b3a39
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: ad2605902cb523c0147888e4aedee0df3c9f936e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48054202"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66058429"
 ---
 # <a name="ftp-task-editor-general-page"></a>[FTP タスク エディター] ([全般] ページ)
   **[FTP タスク エディター]** ダイアログ ボックスの **[全般]** ページを使用すると、タスクの通信先の FTP サーバーに接続する FTP 接続マネージャーを指定できます。 また、FTP タスクの名前と説明を入力することもできます。  
@@ -29,12 +28,12 @@ ms.locfileid: "48054202"
   
 ## <a name="options"></a>および  
  **[FtpConnection]**  
- 既存の FTP 接続マネージャーを選択するか、[\<**新しい接続...**>] をクリックして接続マネージャーを作成します。  
+ 既存の FTP 接続マネージャーを選択するか、[\<**新しい接続...** >] をクリックして接続マネージャーを作成します。  
   
 > [!IMPORTANT]  
 >  FTP 接続マネージャーでは、匿名認証と基本認証のみがサポートされています。 Windows 認証はサポートされていません。  
   
- **関連トピック**: [FTP 接続マネージャー](connection-manager/ftp-connection-manager.md)、 [FTP 接続マネージャー エディター](../../2014/integration-services/ftp-connection-manager-editor.md)  
+ **関連トピック:** [FTP 接続マネージャー](connection-manager/ftp-connection-manager.md)、[FTP 接続マネージャー エディター](../../2014/integration-services/ftp-connection-manager-editor.md)  
   
  **[StopOnFailure]**  
  FTP 操作が失敗した場合に FTP タスクを終了するかどうかを示します。  
@@ -48,9 +47,9 @@ ms.locfileid: "48054202"
  **[説明]**  
  FTP タスクの説明を入力します。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [Integration Services のエラーおよびメッセージのリファレンス](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [FTP タスク エディター&#40;ファイル転送 ページ&#41;](../../2014/integration-services/ftp-task-editor-file-transfer-page.md)   
+ [FTP タスク エディター ([ファイル転送] ページ)](../../2014/integration-services/ftp-task-editor-file-transfer-page.md)   
  [[式] ページ](expressions/expressions-page.md)  
   
   

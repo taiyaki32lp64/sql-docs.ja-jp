@@ -26,14 +26,13 @@ helpviewer_keywords:
 ms.assetid: f938a666-fdd1-4233-b97f-719f27b1a0e6
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: ffe255903a397fd3bc1f36dd57cf38f17eac00ba
-ms.sourcegitcommit: c4870cb5bebf9556cdb4d8b35ffcca265fb07862
+ms.openlocfilehash: da408c690622f5ba1ef45fa2466ed396d0022599
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/02/2019
-ms.locfileid: "55652551"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68064615"
 ---
 # <a name="set-arithabort-transact-sql"></a>SET ARITHABORT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -71,7 +70,7 @@ SET ARITHABORT と SET ANSI WARNINGS が OFF の場合に、これらのいず�
 > [!NOTE]  
 >  SET ARITHABORT と SET ARITHIGNORE の両方とも ON でない場合、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では NULL が返され、クエリの実行後に警告メッセージが表示されます。  
   
-ANSI_WARNINGS を ON に設定すると、データベース互換性レベルが 90 以上に設定されている場合、暗黙的に ARITHABORT が ON に設定されます。 データベース互換性レベルが 80 以下に設定されている場合、ARITHABORT オプションを明示的に ON に設定する必要があります。  
+ANSI_WARNINGS を ON に設定すると、データベース互換性レベルが 90 以上に設定されている場合、暗黙的に ARITHABORT が ON に設定されます。 データベース互換性レベルが 80 以下に設定されている場合は、ARITHABORT オプションを明示的に ON に設定する必要があります。  
   
 式の評価では、SET ARITHABORT が OFF の場合に、INSERT、UPDATE、または DELETE ステートメントで算術演算エラー、オーバーフロー エラー、0 除算エラー、またはドメイン エラーが検出されると、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では NULL 値が挿入または更新されます。 出力先の列で NULL 値が許容されない場合は、挿入または更新処理は失敗し、エラーが表示されます。  
   

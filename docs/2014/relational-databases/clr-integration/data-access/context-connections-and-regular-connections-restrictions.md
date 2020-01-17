@@ -14,11 +14,11 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 3b721409f0915cb1e13861f6481909e02af37cb2
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48163322"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62919167"
 ---
 # <a name="restrictions-on-regular-and-context-connections"></a>通常の接続とコンテキスト接続に関する制限事項
   このトピックで説明して実行するコードに関する制限事項、[!INCLUDE[msCoName](../../../includes/ssnoversion-md.md)]コンテキストと通常の接続を処理します。  
@@ -47,11 +47,11 @@ ms.locfileid: "48163322"
 ## <a name="restrictions-on-regular-connections"></a>通常の接続に関する制限事項  
  アプリケーションを開発するときは、通常の接続に適用される次の制限事項を考慮してください。  
   
--   内部サーバーに対する非同期コマンドの実行はサポートされません。 コマンドの接続文字列に "async=true" を含めてコマンドを実行すると、`System.NotSupportedException` がスローされます。 このメッセージが表示されます:"内で実行されるときに、非同期処理がサポートされていません、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]プロセスです"。  
+-   内部サーバーに対する非同期コマンドの実行はサポートされません。 コマンドの接続文字列に "async=true" を含めてコマンドを実行すると、`System.NotSupportedException` がスローされます。 このメッセージが表示されます。"内部で実行される非同期処理はサポートされていません、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]プロセスです"。  
   
 -   `SqlDependency` オブジェクトはサポートされません。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [コンテキスト接続](context-connection.md)  
   
   

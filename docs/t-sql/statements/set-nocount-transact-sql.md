@@ -23,14 +23,13 @@ helpviewer_keywords:
 ms.assetid: eb3e6727-cb26-4bc2-84c7-171cbac02029
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: ba1540b5b8ee7b0f6f985f65b8e509da2d019f96
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: f3593709dfbae0406e9952392ef82e184f205208
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47709530"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68034955"
 ---
 # <a name="set-nocount-transact-sql"></a>SET NOCOUNT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-asdw-xxx-md.md)]
@@ -47,7 +46,7 @@ SET NOCOUNT { ON | OFF }
 ```  
   
 ## <a name="remarks"></a>Remarks  
- SET NOCOUNT が ON の場合、行数は返されません。 SET NOCOUNT が OFF の場合、行数が返されます。  
+ SET NOCOUNT が ON の場合、カウントは返されません。 SET NOCOUNT が OFF の場合、行数が返されます。  
   
  SET NOCOUNT が ON の場合でも、@@ROWCOUNT 関数は更新されます。  
   
@@ -68,7 +67,7 @@ SELECT @NOCOUNT AS NOCOUNT;
  ロール **public** のメンバーシップが必要です。  
   
 ## <a name="examples"></a>使用例  
- 次の例では、処理された行数に関するメッセージを表示しないようにします。  
+ 次の例では、影響を受けた行数に関するメッセージを表示しないようにします。  
   
 ```  
 USE AdventureWorks2012;  

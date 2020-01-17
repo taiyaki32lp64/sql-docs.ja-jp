@@ -12,15 +12,14 @@ helpviewer_keywords:
 - opening database diagrams
 - diagrams [SQL Server], opening
 ms.assetid: 06d9a7d5-ef04-400c-a340-7a3e5d54f685
-author: stevestein
-ms.author: sstein
-manager: craigg
-ms.openlocfilehash: cc949044510a1471f0715ccc30209242a1543ac9
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: d183f673a2cd00200c90dd81e7f407ee84170bc2
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47732040"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68263344"
 ---
 # <a name="open-database-diagrams-visual-database-tools"></a>データベース ダイアグラムを開く方法 (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -32,7 +31,7 @@ ms.locfileid: "47732040"
   
 2.  開くデータベース ダイアグラムの名前をダブルクリックします。  
   
-    - または -  
+    \- または -  
   
     開くデータベース ダイアグラムの名前を右クリックし、 **[データベース ダイアグラムのデザイン]** を選択します。  
   

@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: da58ed50-3a13-4172-9065-960559d8f383
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 2a4a04ec504cfbed4fb187c7dcde7f61fb083664
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: f0f2faa0170a892cb48dd91386f8f5155591e71d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53214594"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68011839"
 ---
 # <a name="ekm-provider-enabled-server-configuration-option"></a>EKM provider enabled サーバー構成オプション
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

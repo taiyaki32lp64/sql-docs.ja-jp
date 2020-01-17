@@ -12,19 +12,18 @@ f1_keywords:
 ms.assetid: 46a77d4e-ab92-49d3-a14b-423462e50715
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 909f85eadea12bc015f954fba739bdd801abec2c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 6eb32d81ccab79efa044ed4a21798bebe6ee3fd1
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47794140"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68025476"
 ---
 # <a name="server-properties---memory-page"></a>[サーバーのプロパティ] - [メモリ] ページ
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   このページを使用すると、サーバーのメモリ オプションを表示または変更できます。 **[最小サーバー メモリ]** を 0 に、 **[最大サーバー メモリ]** を 2,147,483,647 MB に設定しておくと、オペレーティング システムおよび他のアプリケーションによって現在どれだけの量のメモリが使用されているかに応じて、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] は常に最適な量のメモリを利用できます。 コンピューターと [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の負荷が変化すると、割り当てメモリも変化します。 この動的メモリ割り当ては、次に示す最小値および最大値に制限できます。  
   
-## <a name="options"></a>[変数]  
+## <a name="options"></a>オプション  
  **[最小サーバー メモリ (MB)]**  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] が最小割り当てメモリ以上で起動されること、およびこの値を下回ってメモリを解放しないことを指定します。 この値は、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のインスタンスのサイズおよび動作に基づいて設定します。 オペレーティング システムが要求する [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 用のメモリが多くなりすぎて Windows パフォーマンスが低下することのないように、このオプションは常に妥当な値に設定しておきます。  
   

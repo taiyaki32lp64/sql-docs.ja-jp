@@ -7,15 +7,15 @@ ms.reviewer: ''
 ms.technology: xml
 ms.topic: conceptual
 ms.assetid: 486ee339-165b-4aeb-b760-d2ba023d7d0a
-author: douglaslMS
-ms.author: douglasl
+author: MightyPen
+ms.author: genemi
 manager: craigg
-ms.openlocfilehash: d8d5493c63b48c627dbc2cb192d8e10f8bfc4a43
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: fd0d493f71bd0a6ac0e2d81d1427027ccdb6496c
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52533988"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62679800"
 ---
 # <a name="specify-paths-and-optimization-hints-for-selective-xml-indexes"></a>選択的 XML インデックスのパスと最適化ヒントの指定
   このトピックでは、選択的な XML インデックスを作成または変更するときに、インデックス設定用のインデックス ヒントと最適化ヒントへのノード パスを指定する方法について説明します。  
@@ -29,7 +29,7 @@ ms.locfileid: "52533988"
  選択的 XML インデックスの詳細については、「 [選択的 XML インデックス &#40;SXI&#41;](../xml/selective-xml-indexes-sxi.md)」を参照してください。  
   
 ##  <a name="untyped"></a> 型指定されていない XML での XQuery 型と SQL Server 型について  
- 選択的 XML インデックスは、2 つの型システムをサポートします。XQuery 型と[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]型。 インデックスを設定するパスを使用して、XQuery 式、または XML データ型の value() メソッドの戻り値の型のいずれかと一致させることができます。  
+ 選択的 XML インデックスは、XQuery 型と [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 型という 2 つの型システムをサポートします。 インデックスを設定するパスを使用して、XQuery 式、または XML データ型の value() メソッドの戻り値の型のいずれかと一致させることができます。  
   
 -   インデックスを設定するパスに注釈が設定されていない場合、または XQUERY キーワードを使用して注釈が設定されている場合、パスは XQuery 式と一致します。 XQUERY 注釈付きノード パスには 2 種類のバリエーションがあります。  
   
@@ -61,7 +61,7 @@ ms.locfileid: "52533988"
   
  既定のマッピングで作成される選択的 XML インデックスの例を次に示します。 3 つのパスのすべてで、既定のノード型 (**xs:untypedAtomic**) とカーディナリティが使用されます。  
   
-```tsql  
+```sql  
 CREATE SELECTIVE XML INDEX example_sxi_UX_default  
 ON Tbl(xmlcol)  
 FOR  
@@ -92,7 +92,7 @@ mypath03 = '/a/b/d'
   
  選択的 XML インデックスは、次に示す方法で最適化できます。  
   
-```tsql  
+```sql  
 CREATE SELECTIVE XML INDEX example_sxi_UX_optimized  
 ON Tbl(xmlcol)  
 FOR  
@@ -110,13 +110,13 @@ pathY = '/a/b/d' as XQUERY 'xs:string' MAXLENGTH(200) SINGLETON
   
 -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 型は、value() メソッドの戻り値の型と一致します。  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 型は、この最適化ヒントをサポートします。シングルトン。  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 型は、次の最適化ヒントをサポートします: SINGLETON。  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 型を返すパスでは、型を必ず指定する必要があります。 value() メソッドで使用するものと同じ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 型を使用します。  
   
  次のクエリを考えてみます。  
   
-```tsql  
+```sql  
 SELECT T.record,  
     T.xmldata.value('(/a/b/d)[1]', 'NVARCHAR(200)')  
 FROM myXMLTable T  
@@ -124,7 +124,7 @@ FROM myXMLTable T
   
  指定されたクエリは、NVARCHAR(200) データ型にパックされたパス `/a/b/d` の値を返すため、ノード用に指定するデータ型は明白です。 ただし、ノードのカーディナリティを型指定されていない XML で指定するスキーマはありません。 ノード `d` を親ノード `b`の下に最大で 1 つ表示するには、次に示すように、SINGLETON 最適化ヒントを使用する XML インデックスを作成します。  
   
-```tsql  
+```sql  
 CREATE SELECTIVE XML INDEX example_sxi_US  
 ON Tbl(xmlcol)  
 FOR  
@@ -215,7 +215,7 @@ node1223 = '/a/b/d' as SQL NVARCHAR(200) SINGLETON
 ### <a name="choosing-the-nodes-to-index"></a>インデックスを設定するノードの選択  
  次の 2 つの単純な原則を使用して、選択的 XML インデックスに追加する適切なノードのサブセットを識別できます。  
   
-1.  **原則 1**:特定の XQuery 式を評価するには、を確認する必要があるすべてのノードをインデックスします。  
+1.  **原則 1**: 特定の XQuery 式を評価するには、調べる必要があるすべてのノードにインデックスを設定します。  
   
     -   その存在または値が XQuery 式で使用されるすべてのノードにインデックスを設定します。  
   
@@ -223,7 +223,7 @@ node1223 = '/a/b/d' as SQL NVARCHAR(200) SINGLETON
   
      このトピックの [サンプル XML ドキュメント](#sample) に対する次の単純なクエリを考慮してください。  
   
-    ```tsql  
+    ```sql  
     SELECT T.record FROM myXMLTable T  
     WHERE T.xmldata.exist('/a/b[./c = "43"]') = 1  
     ```  
@@ -234,11 +234,11 @@ node1223 = '/a/b/d' as SQL NVARCHAR(200) SINGLETON
   
     -   ノード `b`。述語が、XQuery 式の中でノード`b` に適用されるため。  
   
-2.  **原則 2**:最適なパフォーマンス、特定の XQuery 式の評価に必要なすべてのノードをインデックスします。 ノードの一部にのみインデックスを設定した場合、選択的 XML インデックスは、インデックス付きノードのみを含むサブ式の評価を向上させます。  
+2.  **原則 2**: 最大限のパフォーマンスを得るには、特定の XQuery 式を評価するために必要なすべてのノードにインデックスを設定します。 ノードの一部にのみインデックスを設定した場合、選択的 XML インデックスは、インデックス付きノードのみを含むサブ式の評価を向上させます。  
   
  上に示した SELECT ステートメントのパフォーマンスを向上させるには、次に示す選択的 XML インデックスを作成します。  
   
-```tsql  
+```sql  
 CREATE SELECTIVE XML INDEX simple_sxi  
 ON Tbl(xmlcol)  
 FOR  
@@ -251,7 +251,7 @@ FOR
 ### <a name="indexing-identical-paths"></a>同一パスのインデックス設定  
  同一パスを異なる名前で同じデータ型として昇格させることはできません。 たとえば、次のクエリでは、 `pathOne` と `pathTwo` が同じため、エラーが発生します。  
   
-```tsql  
+```sql  
 CREATE SELECTIVE INDEX test_simple_sxi ON T1(xmlCol)  
 FOR  
 (  
@@ -262,7 +262,7 @@ FOR
   
  ただし、同一パスを異なる名前を持つ異なるデータ型として昇格させることはできます。 たとえば、次のクエリはデータ型が異なるため、許容されます。  
   
-```tsql  
+```sql  
 CREATE SELECTIVE INDEX test_simple_sxi ON T1(xmlCol)  
 FOR  
 (  
@@ -278,7 +278,7 @@ FOR
   
  次に示すのは、exist() メソッドを使用する単純な XQuery です。  
   
-```tsql  
+```sql  
 SELECT T.record FROM myXMLTable T  
 WHERE T.xmldata.exist('/a/b/c/d/e/h') = 1  
 ```  
@@ -293,7 +293,7 @@ WHERE T.xmldata.exist('/a/b/c/d/e/h') = 1
   
  次に示すのは、前の XQuery のより複雑なバリエーションです。ここでは述語が適用されます。  
   
-```tsql  
+```sql  
 SELECT T.record FROM myXMLTable T  
 WHERE T.xmldata.exist('/a/b/c/d/e[./f = "SQL"]') = 1  
 ```  
@@ -309,7 +309,7 @@ WHERE T.xmldata.exist('/a/b/c/d/e[./f = "SQL"]') = 1
   
  次に示すのは、value() 句を使用するさらに複雑なクエリです。  
   
-```tsql  
+```sql  
 SELECT T.record,  
     T.xmldata.value('(/a/b/c/d/e[./f = "SQL"]/g)[1]', 'nvarchar(100)')  
 FROM myXMLTable T  
@@ -327,7 +327,7 @@ FROM myXMLTable T
   
  次に示すのは、exist() 句の中で FLWOR 句を使用するクエリです (FLWOR という名前は、XQuery FLWOR 式を構成できる 5 つの句 (for、let、where、order by、および return) に由来します)。  
   
-```tsql  
+```sql  
 SELECT T.record FROM myXMLTable T  
 WHERE T.xmldata.exist('  
   For $x in /a/b/c/d/e  
@@ -360,7 +360,7 @@ WHERE T.xmldata.exist('
 |-----------------------|----------------------------|--------------------------|  
 |**node()**|はい|いいえ|  
 |**SINGLETON**|いいえ|はい|  
-|**DATA TYPE**|はい|はい|  
+|**DATA TYPE**|はい|[はい]|  
 |**MAXLENGTH**|はい|はい|  
   
 ### <a name="optimization-hints-and-data-types"></a>最適化ヒントとデータ型  
@@ -371,7 +371,7 @@ WHERE T.xmldata.exist('
 |**node()**|はい|いいえ|  
 |**SINGLETON**|はい|はい|  
 |**DATA TYPE**|はい|いいえ|  
-|**MAXLENGTH**|はい|いいえ|  
+|**MAXLENGTH**|[はい]|いいえ|  
   
 ### <a name="node-optimization-hint"></a>node() 最適化ヒント  
  適用対象XQuery のデータ型  
@@ -380,7 +380,7 @@ WHERE T.xmldata.exist('
   
  次に例を示します。  
   
-```tsql  
+```sql  
 SELECT T.record FROM myXMLTable T  
 WHERE T.xmldata.exist('/a/b[./c=5]') = 1  
 ```  
@@ -392,7 +392,7 @@ WHERE T.xmldata.exist('/a/b[./c=5]') = 1
  node() ヒントでインデックス設定されているノードの値がクエリで必要な場合、選択的 XML インデックスは使用できません。  
   
 ### <a name="singleton-optimization-hint"></a>SINGLETON 最適化ヒント  
- 適用対象XQuery または[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]データ型  
+ 適用対象XQuery データ型または [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データ型  
   
  SINGLETON 最適化ヒントは、ノードのカーディナリティを指定します。 このヒントは、ノードが親または先祖の中で最大で 1 回出現することを事前に通知するため、クエリのパフォーマンスが向上します。  
   
@@ -437,7 +437,7 @@ WHERE T.xmldata.exist('/a/b[./c=5]') = 1
   
 
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [選択的 XML インデックス &#40;SXI&#41;](../xml/selective-xml-indexes-sxi.md)   
  [選択的 XML インデックスの作成、変更、および削除](../xml/create-alter-and-drop-selective-xml-indexes.md)  
   

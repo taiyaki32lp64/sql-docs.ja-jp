@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 2660ceca-b8b4-4a1f-98a0-719ad5f89f81
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 7502cef1a02ff580b16b8df0d6f1c2c6c54fb8ef
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 4e8ba9bb523d4ce7aed76f61c569f5e8b1775972
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51661881"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67946423"
 ---
 # <a name="path-expressions---specifying-predicates"></a>パス式 - 述語の指定
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]

@@ -4,23 +4,22 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.sqlserverdestadapter.advanced.f1
 helpviewer_keywords:
 - SQL Server Destination Editor
 ms.assetid: 9b46bcf8-ddaf-4d7d-90a6-80bc19517e9b
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: a70bcc9e853908022147ef02e9d2019179c90875
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 087f32510b65d7ea505bc4bf816a5ca9edcfe82d
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52545488"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66055458"
 ---
 # <a name="sql-destination-editor-advanced-page"></a>[SQL 変換先エディター] ([詳細設定] ページ)
   **[SQL 変換先エディター]** ダイアログ ボックスの **[詳細設定]** ページを使用すると、詳細な一括挿入オプションを指定できます。  
@@ -47,19 +46,19 @@ ms.locfileid: "52545488"
  先頭行が挿入されるように指定します。 このプロパティの既定値は、 **-1**です。これは、値が割り当てられていないことを示します。  
   
 > [!NOTE]  
->  このプロパティに値を割り当てない場合、 **[SQL 変換先エディター]** のテキスト ボックスをクリアします。 **[プロパティ]** ウィンドウ、 **[詳細エディター]**、およびオブジェクト モデルでは、-1 を使用します。  
+>  このプロパティに値を割り当てない場合、 **[SQL 変換先エディター]** のテキスト ボックスをクリアします。 **[プロパティ]** ウィンドウ、 **[詳細エディター]** 、およびオブジェクト モデルでは、-1 を使用します。  
   
  **[最終行]**  
  最終行が挿入されるように指定します。 このプロパティの既定値は、 **-1**です。これは、値が割り当てられていないことを示します。  
   
 > [!NOTE]  
->  このプロパティに値を割り当てない場合、 **[SQL 変換先エディター]** のテキスト ボックスをクリアします。 **[プロパティ]** ウィンドウ、 **[詳細エディター]**、およびオブジェクト モデルでは、-1 を使用します。  
+>  このプロパティに値を割り当てない場合、 **[SQL 変換先エディター]** のテキスト ボックスをクリアします。 **[プロパティ]** ウィンドウ、 **[詳細エディター]** 、およびオブジェクト モデルでは、-1 を使用します。  
   
  **[エラーの最大数]**  
  一括挿入を停止する前に許容するエラー数を指定します。 このプロパティの既定値は、 **-1**です。これは、値が割り当てられていないことを示します。  
   
 > [!NOTE]  
->  このプロパティに値を割り当てない場合、 **[SQL 変換先エディター]** のテキスト ボックスをクリアします。 **[プロパティ]** ウィンドウ、 **[詳細エディター]**、およびオブジェクト モデルでは、-1 を使用します。  
+>  このプロパティに値を割り当てない場合、 **[SQL 変換先エディター]** のテキスト ボックスをクリアします。 **[プロパティ]** ウィンドウ、 **[詳細エディター]** 、およびオブジェクト モデルでは、-1 を使用します。  
   
  **Timeout**  
  タイムアウトで一括挿入が停止されるまでの待機時間を秒数で指定します。  

@@ -11,15 +11,14 @@ helpviewer_keywords:
 - Database Engine Tuning Advisor [SQL Server], tutorials
 - tutorials [Database Engine Tuning Advisor]
 ms.assetid: 3b54cbbe-d8c6-424d-92f1-aa58179f4da8
-author: stevestein
-ms.author: sstein
-manager: craigg
-ms.openlocfilehash: a70ee2ad71f6b51f8bb28dc0361e65c6cebc18a8
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: ab03ee7997014308e6753f463119a3a9adc8c963
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51657531"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68105843"
 ---
 # <a name="tutorial-database-engine-tuning-advisor"></a>チュートリアル:データベース エンジン チューニング アドバイザー
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

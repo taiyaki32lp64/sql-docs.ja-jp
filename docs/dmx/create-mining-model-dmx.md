@@ -1,5 +1,5 @@
 ---
-title: マイニング モデル (DMX) の作成 |Microsoft Docs
+title: マイニングモデルの作成 (DMX) |Microsoft Docs
 ms.date: 06/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -8,13 +8,12 @@ ms.topic: conceptual
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-manager: kfile
-ms.openlocfilehash: 0e7ca6765ee44201badc54d15fb2a20aa9a863a5
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: e7215f50705b593130a69cfe076f0878b0ac03d6
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52521197"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68889078"
 ---
 # <a name="create-mining-model-dmx"></a>CREATE MINING MODEL (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -23,7 +22,7 @@ ms.locfileid: "52521197"
   
  マイニング構造には、モデル名の後に「_structure」を追加した名前を付けます。これにより、構造名がモデル名から一意であることが保証されます。  
   
- 既存のマイニング構造のマイニング モデルを作成するには、使用、 [ALTER MINING STRUCTURE &#40;DMX&#41; ](../dmx/alter-mining-structure-dmx.md)ステートメント。  
+ 既存のマイニング構造のマイニングモデルを作成するには、 [ALTER マイニング structure &#40;DMX&#41; ](../dmx/alter-mining-structure-dmx.md)ステートメントを使用します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -41,26 +40,26 @@ CREATE MINING MODEL <model> FROM PMML <xml string>
  *model*  
  モデルの一意の名前です。  
   
- *列定義リスト*  
+ *列定義の一覧*  
  列定義のコンマ区切りのリストです。  
   
  *アルゴリズム*  
  現在のプロバイダーによって定義された、データ マイニング アルゴリズムの名前です。  
   
 > [!NOTE]  
->  使用して現在のプロバイダーでサポートされているアルゴリズムの一覧を取得できる[DMSCHEMA_MINING_SERVICES 行セット](https://docs.microsoft.com/bi-reference/schema-rowsets/data-mining/dmschema-mining-services-rowset)します。 現在のインスタンスでサポートされているアルゴリズムを表示する[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]を参照してください[データ マイニング プロパティ](../analysis-services/server-properties/data-mining-properties.md)します。  
+>  現在のプロバイダーでサポートされているアルゴリズムの一覧は、 [DMSCHEMA_MINING_SERVICES Rowset](https://docs.microsoft.com/bi-reference/schema-rowsets/data-mining/dmschema-mining-services-rowset)を使用して取得できます。 の現在のインスタンスでサポートされている[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]アルゴリズムを表示するには、「[データマイニングのプロパティ](https://docs.microsoft.com/analysis-services/server-properties/data-mining-properties)」を参照してください。  
   
- *パラメーター リスト*  
+ *パラメーターリスト*  
  任意。 アルゴリズムのプロバイダー定義パラメーターのコンマ区切りのリストです。  
   
  *XML 文字列*  
  (詳しい知識のあるユーザーのみ。)XML でエンコードされたモデル (PMML) です。 文字列を示すには必ず単一引用符 (') を使用してください。  
   
- **セッション**句では、接続が終了またはセッションがタイムアウトになるときに、サーバーから自動的に削除されるマイニング モデルを作成することができます。**セッション**マイニング モデルは、するには、データベース管理者、ユーザーは必要ありませんし、接続が開いている限りのみディスク容量を使用するので便利です。  
+ **Session**句を使用すると、接続が閉じられたとき、またはセッションがタイムアウトしたときにサーバーから自動的に削除されるマイニングモデルを作成できます。**セッション**マイニングモデルは、ユーザーがデータベース管理者である必要がなく、接続が開いている間のみディスク領域を使用するため、役に立ちます。  
   
- **WITH DRILLTHROUGH**句は、新しいマイニング モデルでドリルスルーを使用します。 ドリルスルーは、モデルの作成時にのみ可能です。 モデルの種類によっては、カスタム ビューアーでモデルを参照するためにドリルスルーが必要な場合があります。 Microsoft 汎用コンテンツ ツリー ビューアーを使用してモデルを予測または参照する場合は、ドリルスルーは必要ありません。  
+ **WITH ドリルスルー**句を使用すると、新しいマイニングモデルでドリルスルーを実行できます。 ドリルスルーは、モデルの作成時にのみ可能です。 モデルの種類によっては、カスタム ビューアーでモデルを参照するためにドリルスルーが必要な場合があります。 Microsoft 汎用コンテンツ ツリー ビューアーを使用してモデルを予測または参照する場合は、ドリルスルーは必要ありません。  
   
- **CREATE MINING MODEL**ステートメントは、列定義の一覧、アルゴリズム、およびアルゴリズム パラメーターのリストに基づく新しいマイニング モデルを作成します。  
+ **CREATE マイニング model**ステートメントは、列定義の一覧、アルゴリズム、およびアルゴリズムパラメーターの一覧に基づいて、新しいマイニングモデルを作成します。  
   
 ### <a name="column-definition-list"></a>列定義リスト  
  列定義の一覧を使用するモデルの構造を定義するには、次の情報を各列に含めます。  
@@ -71,21 +70,21 @@ CREATE MINING MODEL <model> FROM PMML <xml string>
   
 -   Distribution  
   
--   モデリング フラグの一覧  
+-   モデリングフラグの一覧  
   
 -   コンテンツの種類 (必須)  
   
--   示される予測の要求は、この列を予測するためのアルゴリズムを示す、 **PREDICT**または**PREDICT_ONLY**句  
+-   予測要求。この列を予測するようにアルゴリズムに指示します。これは、 **predict**句または**PREDICT_ONLY**句によって示されます。  
   
--   によって示される属性列 (適用される場合にのみ必須)、リレーションシップ、 **RELATED TO**句  
+-   **関連する to**句によって示される、属性列とのリレーションシップ (適用される場合にのみ必須)  
   
- 1 つの列を定義するのにには、列定義リストの次の構文を使用します。  
+ 列定義リストの次の構文を使用して、単一の列を定義します。  
   
 ```  
 <column name>    <data type>    [<Distribution>]    [<Modeling Flags>]    <Content Type>    [<prediction>]    [<column relationship>]   
 ```  
   
- 入れ子になったテーブル列を定義するのにには、列定義リストの次の構文を使用します。  
+ 入れ子になったテーブル列を定義するには、列定義リストの次の構文を使用します。  
   
 ```  
 <column name>    TABLE    [<prediction>] ( <non-table column definition list> )  
@@ -95,17 +94,17 @@ CREATE MINING MODEL <model> FROM PMML <xml string>
   
  構造列の定義に使用できる、データ型、コンテンツの種類、列分布、モデリング フラグのリストについては、次のトピックを参照してください。  
   
--   [データ型 (データ マイニング)](../analysis-services/data-mining/data-types-data-mining.md)  
+-   [データ型 (データ マイニング)](https://docs.microsoft.com/analysis-services/data-mining/data-types-data-mining)  
   
--   [コンテンツの種類 (データ マイニング)](../analysis-services/data-mining/content-types-data-mining.md)  
+-   [コンテンツの種類 (データ マイニング)](https://docs.microsoft.com/analysis-services/data-mining/content-types-data-mining)  
   
--   [列の分布 (データ マイニング)](../analysis-services/data-mining/column-distributions-data-mining.md)  
+-   [列の分布 (データ マイニング)](https://docs.microsoft.com/analysis-services/data-mining/column-distributions-data-mining)  
   
--   [モデリング フラグ (データ マイニング)](../analysis-services/data-mining/modeling-flags-data-mining.md)  
+-   [モデリング フラグ (データ マイニング)](https://docs.microsoft.com/analysis-services/data-mining/modeling-flags-data-mining)  
   
- ステートメントに句を追加して、2 つの列間のリレーションシップを記述できます。 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 次の使用をサポートする\<Column relationship > 句。  
+ ステートメントに句を追加して、2 つの列間のリレーションシップを記述できます。 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]では、次\<の列リレーションシップ > 句の使用がサポートされています。  
   
- **関連するには**  
+ **関連**  
  この形式は値の階層を示します。 RELATED TO 列の対象にすることが可能なのは、入れ子になったテーブル内のキー列、ケース行内の不連続値の列、RELATED TO 句のある別の列です。これにより、より深い階層が示されます。  
   
  予測列の使用方法を説明するには、予測句を使用します。 次の表は、使用できる 2 つの句について示しています。  
@@ -122,12 +121,12 @@ CREATE MINING MODEL <model> FROM PMML <xml string>
 [<parameter> = <value>, <parameter> = <value>,...]  
 ```  
   
- 各アルゴリズムに関連付けられているパラメーターの一覧は、次を参照してください。[データ マイニング アルゴリズム&#40;Analysis Services - データ マイニング&#41;](../analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining.md)します。  
+ 各アルゴリズムに関連付けられているパラメーターの一覧については、「データマイニング[ &#40;アルゴリズム&#41;Analysis Services-データマイニング](https://docs.microsoft.com/analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining)」を参照してください。  
   
 ## <a name="remarks"></a>コメント  
  組み込みのテスト データセットを持つモデルを作成する場合は、CREATE MINING STRUCTURE ステートメントの後に ALTER MINING STRUCTURE ステートメントを使用します。 ただし、すべての種類のモデルで予約データセットがサポートされるわけではありません。 詳細については、「[CREATE MINING STRUCTURE &#40;DMX&#41;](../dmx/create-mining-structure-dmx.md)」を参照してください。  
   
- CREATEMODEL ステートメントを使用してマイニング モデルを作成する方法のチュートリアルは、次を参照してください。[時系列予測の DMX チュートリアル](https://msdn.microsoft.com/library/38ea7c03-4754-4e71-896a-f68cc2c98ce2)します。  
+ CREATEMODEL ステートメントを使用してマイニングモデルを作成する方法のチュートリアルについては、「[タイムシリーズ予測 DMX のチュートリアル](https://msdn.microsoft.com/library/38ea7c03-4754-4e71-896a-f68cc2c98ce2)」を参照してください。  
   
 ## <a name="naive-bayes-example"></a>Naive Bayes の例  
  次の例では、[!INCLUDE[msCoName](../includes/msconame-md.md)] Naive Bayes アルゴリズムを使用して、新しいマイニング モデルを作成しています。 Bike Buyer の列は、予測可能属性として定義されています。  
@@ -144,7 +143,7 @@ USING Microsoft_Naive_Bayes
 ```  
   
 ## <a name="association-model-example"></a>結合モデルの例  
- 次の例では、[!INCLUDE[msCoName](../includes/msconame-md.md)] 結合アルゴリズムを使用して、新しいマイニング モデルを作成しています。 このステートメントは、テーブル列を使用することで、モデル定義内でテーブルを入れ子にする機能を利用しています。 モデルを使用して、変更、 *MINIMUM_PROBABILITY*と*MINIMUM_SUPPORT*パラメーター。  
+ 次の例では、[!INCLUDE[msCoName](../includes/msconame-md.md)] 結合アルゴリズムを使用して、新しいマイニング モデルを作成しています。 このステートメントは、テーブル列を使用することで、モデル定義内でテーブルを入れ子にする機能を利用しています。 モデルは、 *MINIMUM_PROBABILITY*パラメーターと*MINIMUM_SUPPORT*パラメーターを使用して変更されます。  
   
 ```  
 CREATE MINING MODEL MyAssociationModel (  
@@ -172,10 +171,10 @@ USING Microsoft_Sequence_Clustering
 ```  
   
 ## <a name="time-series-example"></a>時系列の例  
- 次の例では、[!INCLUDE[msCoName](../includes/msconame-md.md)] タイム シリーズ アルゴリズムで、ARTxp アルゴリズムを使用して新しいマイニング モデルを作成しています。 ReportingDate は時系列のキー列で、ModelRegion はデータ系列のキー列です。 この例では、データの周期を 12 か月としています。 そのため、 *PERIODICITY_HINT*パラメーター 12 に設定されます。  
+ 次の例では、[!INCLUDE[msCoName](../includes/msconame-md.md)] タイム シリーズ アルゴリズムで、ARTxp アルゴリズムを使用して新しいマイニング モデルを作成しています。 ReportingDate は時系列のキー列で、ModelRegion はデータ系列のキー列です。 この例では、データの周期を 12 か月としています。 したがって、 *PERIODICITY_HINT*パラメーターは12に設定されます。  
   
 > [!NOTE]  
->  指定する必要があります、 *PERIODICITY_HINT*中かっこ文字を使用してパラメーター。 さらに、値は文字列であるため、囲む必要があります単一引用符で:"{\<数値 >}"。  
+>  *PERIODICITY_HINT*パラメーターは、中かっこ文字を使用して指定する必要があります。 また、値は文字列であるため、単一引用符で囲む必要があります: "{\<numeric value >}"。  
   
 ```  
 CREATE MINING MODEL SalesForecast (  
@@ -188,8 +187,8 @@ USING Microsoft_Time_Series (PERIODICITY_HINT = '{12}', FORECAST_METHOD = 'ARTXP
 ```  
   
 ## <a name="see-also"></a>参照  
- [データ マイニング拡張機能&#40;DMX&#41;データ定義ステートメント](../dmx/dmx-statements-data-definition.md)   
- [データ マイニング拡張機能&#40;DMX&#41;データ操作ステートメント](../dmx/dmx-statements-data-manipulation.md)   
+ [データマイニング拡張&#40;機能&#41; DMX データ定義ステートメント](../dmx/dmx-statements-data-definition.md)   
+ [データマイニング拡張&#40;機能&#41; DMX データ操作ステートメント](../dmx/dmx-statements-data-manipulation.md)   
  [データ マイニング拡張機能 &#40;DMX&#41; ステートメント リファレンス](../dmx/data-mining-extensions-dmx-statements.md)  
   
   

@@ -18,18 +18,18 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 440419f1fb4670ff5bdfc2e49cd9cfe6fa5df65e
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52822186"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62999563"
 ---
 # <a name="execute-business-logic-during-merge-synchronization"></a>マージ同期中のビジネス ロジックの実行
   ビジネス ロジック ハンドラー フレームワークを使用すると、マネージド コードのアセンブリを記述して、マージ同期処理中に呼び出すことができます。 このアセンブリには、データの変更、競合、およびエラーなど、同期中に発生するさまざまな状況に対処するためのビジネス ロジックを記述できます。 ビジネス ロジック ハンドラー フレームワークには単純なプログラミング モデルが用意されており、マージ処理によってアセンブリに提供されるデータは ADO.NET データセットの形式になっています。このため、専用インターフェイスについての知識ではなく ADO.NET についての知識を活用できます。 ビジネス ロジック ハンドラーのプログラミングの詳細については、以下のトピックを参照してください。  
   
 -   アプリケーション プログラミング インターフェイス (API) リファレンス : <xref:Microsoft.SqlServer.Replication.BusinessLogicSupport>  
   
--   ビジネス ロジック ハンドラーを実装する方法については:[マージ アーティクルのビジネス ロジック ハンドラーの実装](../implement-a-business-logic-handler-for-a-merge-article.md)  
+-   ビジネス ロジック ハンドラーの実装方法についての説明: [マージ アーティクルのビジネス ロジック ハンドラーの実装](../implement-a-business-logic-handler-for-a-merge-article.md)  
   
 ## <a name="uses-for-business-logic-handlers"></a>ビジネス ロジック ハンドラーの用途  
  マージ同期処理では、ビジネス ロジック ハンドラーを呼び出して、以下の操作を実行できます。  

@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 3c0dbca4-abfc-4449-b133-66c819681840
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 06bb27e8faf8269090bc5920889d1b70f85dc71e
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.openlocfilehash: c3b4a0fd48809d53cda18f2ceb4eaf1f435210e2
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51600382"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67936412"
 ---
 # <a name="how-to-retrieve-character-data-as-a-stream-using-the-sqlsrv-driver"></a>方法: SQLSRV ドライバーを使用したストリームとしての文字データの取得
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]

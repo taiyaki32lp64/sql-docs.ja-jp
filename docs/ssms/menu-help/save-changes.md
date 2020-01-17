@@ -13,15 +13,14 @@ f1_keywords:
 helpviewer_keywords:
 - Save Changes dialog box
 ms.assetid: abe17944-c538-4106-a18b-ade5e2d8e20f
-author: stevestein
-ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 8d04a26bd1ae3af20eaed7a8aa5cadc68a59cda8
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 79540a380854965621bb58658e12f88c17cb00d5
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47844700"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68256900"
 ---
 # <a name="save-changes"></a>[変更の保存]
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -35,7 +34,7 @@ ms.locfileid: "47844700"
   
 前に保存した項目への変更は、ストレージ内の保存場所に自動的に保存されます。 項目がまだ保存されていない場合は、 **[名前を付けてファイルを保存]** ダイアログ ボックスが表示され、新しい保存場所を入力するように求められます。  
   
-## <a name="options"></a>[変数]  
+## <a name="options"></a>オプション  
 **[以下の項目への変更を保存しますか?]**  
 選択されている項目が保存されます。 項目の選択やクリアを実行できます。  
   

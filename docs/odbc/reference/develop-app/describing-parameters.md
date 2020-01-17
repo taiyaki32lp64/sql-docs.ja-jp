@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 118d0f47-2afd-4955-bb47-38b1e2c2f38f
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 1bc752afc0cb5214e629a343c35464e612b57c36
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 2d32e5212ba1ba28262d871498f2974485d38233
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47808970"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68040021"
 ---
 # <a name="describing-parameters"></a>パラメーターの記述
 **SQLBindParameter**にパラメーターを記述する引数があります。 その SQL 型、有効桁数、およびスケール。 ドライバーは、この情報を使用または*メタデータ、* パラメーター値をデータ ソースで必要な型に変換します。 一見、かもしれませんが、ドライバーが、アプリケーションよりもパラメーター メタデータを認識する最適な位置にあります。結局のところ、結果セット列のドライバーは、メタデータを検出簡単にできます。 結局のところ、これは、当てはまりません。 最初に、ほとんどのデータ ソースには、パラメーターのメタデータを検出するドライバー向けの方法は使えません。 2 つ目は、ほとんどのアプリケーションが既にメタデータを認識します。  

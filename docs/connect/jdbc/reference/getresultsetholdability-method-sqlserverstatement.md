@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: 053549ee-2018-47ab-9538-789dac2b150a
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 3fda68e39b09a21bfc9ac0caea3ce475e5cd8d71
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 153da54f0b70d94b4428e2152db6b159230fa38c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47643983"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67980327"
 ---
 # <a name="getresultsetholdability-method-sqlserverstatement"></a>getResultSetHoldability メソッド (SQLServerStatement)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -42,7 +41,7 @@ public final int getResultSetHoldability()
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- この getResultSetHoldability メソッドは、java.sql.Statement インターフェイスの getResultSetHoldability メソッドによって指定されます。  
+ この getResultSetHoldability メソッドは、getResultSetHoldability インターフェイスのメソッドによって指定されます。  
   
 ## <a name="see-also"></a>参照  
  [SQLServerStatement のメンバー](../../../connect/jdbc/reference/sqlserverstatement-members.md)   

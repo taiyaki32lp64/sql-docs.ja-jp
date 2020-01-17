@@ -1,5 +1,5 @@
 ---
-title: エンティティの依存関係エクスプローラー | Microsoft Docs
+title: エンティティの依存関係エクスプローラー
 ms.custom: ''
 ms.date: 04/06/2016
 ms.prod: sql
@@ -10,15 +10,14 @@ ms.topic: conceptual
 keywords:
 - マスター データ サービス
 ms.assetid: 9d922118-1412-4a9d-9c02-70d6c48d6c0d
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 0665b6f7d54b7f83f3edda224be4e9efad670e90
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
-ms.translationtype: HT
+ms.openlocfilehash: 86b9a2ed9738790cf9747fbad104074393fd33d1
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52816124"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73729274"
 ---
 # <a name="entity-dependencies-explorer"></a>エンティティの依存関係エクスプローラー
 

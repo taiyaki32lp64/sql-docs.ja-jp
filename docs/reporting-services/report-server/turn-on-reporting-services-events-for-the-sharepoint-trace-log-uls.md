@@ -2,18 +2,18 @@
 title: Turn on Reporting Services events for the SharePoint trace log (ULS) | Microsoft Docs
 ms.date: 05/30/2017
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: report-server
 ms.topic: conceptual
 ms.assetid: 81110ef6-4289-405c-a931-e7e9f49e69ba
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 96e3049ecb5e222b6ced7fc6a2202c80e25a7028
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 07f8cd00781717511bbcaba6e76553cc17d0c5bf
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52409539"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68893238"
 ---
 # <a name="turn-on-reporting-services-events-for-the-sharepoint-trace-log-uls"></a>Turn on Reporting Services events for the SharePoint trace log (ULS)
 
@@ -38,7 +38,7 @@ ms.locfileid: "52409539"
 ##  <a name="bkmk_general"></a> ULS ログの一般的な推奨事項  
  次の表は、イベントのカテゴリの一覧です。 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 環境を監視する場合の推奨されるレベルも記載されています。 イベントをログに記録した場合、各エントリには、イベントが記録された時刻、プロセス名、およびスレッド ID が記録されます。  
   
-|カテゴリ|レベル|[説明]|  
+|カテゴリ|Level|[説明]|  
 |--------------|-----------|-----------------|  
 |データベース|"詳細"|データベース アクセスに関連するイベントが記録されます。|  
 |全般|"詳細"|次の項目へのアクセスを伴うイベントが記録されます。<br /><br /> [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] の Web ページ<br /><br /> レポート ビューアーの HTTP ハンドラー<br /><br /> レポート アクセス (.rdl ファイル)<br /><br /> データ ソース (.rsds ファイル)<br /><br /> SharePoint サイト上の URL (.smdl ファイル)|  
@@ -138,7 +138,7 @@ Get-SPDiagnosticConfig
 |共有サービス|サンプルのエントリ:<br /><br /> MediumUpdating ReportingWebServiceApplication<br /><br /> コンテンツ データベースへの MediumGranting アクセス。<br /><br /> ReportingWebServiceApplication の MediumProvisioning インスタンス<br /><br /> ReportingWebServiceApplication の MediumProcessing サービス アカウントの変更<br /><br /> MediumSetting データベース権限。|  
   
 ##  <a name="bkmk_powershell"></a> PowerShell でのログ ファイルの表示  
- ![PowerShell 関連コンテンツ](../../analysis-services/instances/install-windows/media/rs-powershellicon.jpg "PowerShell 関連コンテンツ")PowerShell を使用して、ULS ログ ファイルから [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 関連イベントの一覧を返すことができます。 SharePoint 2010 管理シェルから次のコマンドを入力すると、ULS ログ ファイル UESQL11SPOINT-20110606-1530.log から、"**sql server reporting services**" を含む行のフィルターされたリストが返されます。  
+ ![PowerShell 関連コンテンツ](https://docs.microsoft.com/analysis-services/analysis-services/instances/install-windows/media/rs-powershellicon.jpg "PowerShell 関連コンテンツ")PowerShell を使用して、ULS ログ ファイルから [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 関連イベントの一覧を返すことができます。 SharePoint 2010 管理シェルから次のコマンドを入力すると、ULS ログ ファイル UESQL11SPOINT-20110606-1530.log から、"**sql server reporting services**" を含む行のフィルターされたリストが返されます。  
   
 ```  
 Get-content -path "C:\Program Files\Common Files\Microsoft Shared\Web Server Extensions\14\LOGS\UESQL11SPOINT-20110606-1530.log" | select-string "sql server reporting services"  

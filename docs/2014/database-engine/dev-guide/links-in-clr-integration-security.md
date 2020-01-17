@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: database-engine
 ms.topic: reference
 helpviewer_keywords:
 - table-access links [CLR integration]
@@ -17,12 +15,12 @@ ms.assetid: 168efd01-d12e-4bdf-a1b3-0b5c76474eaf
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 32974fc138cb5bcd444af18d0854c7a07d8fdcad
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 37aa64129658128bd7297f147f317166917e05a6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48067202"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62781071"
 ---
 # <a name="links-in-clr-integration-security"></a>CLR 統合のセキュリティのリンク
   ここでは、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] またはいずれかのマネージド言語で、[!INCLUDE[tsql](../../includes/tsql-md.md)] 内のユーザー コードが相互に呼び出すしくみを説明します。 このようなオブジェクト間のリレーションシップをリンクと呼びます。  
@@ -51,7 +49,7 @@ ms.locfileid: "48067202"
   
 4.  現在の実行コンテキストに対して権限がチェックされます。 呼び出し元とは異なる実行コンテキストでプロシージャや関数を作成できます。 アセンブリは、常に、プロシージャ、関数、またはトリガーに対して定義されている実行コンテキストで作成されます。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [CLR 統合のセキュリティ](../../relational-databases/clr-integration/security/clr-integration-security.md)  
   
   

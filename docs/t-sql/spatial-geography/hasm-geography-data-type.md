@@ -15,32 +15,31 @@ dev_langs:
 helpviewer_keywords:
 - HasM geography
 ms.assetid: e752e97f-1619-437d-b962-48c188b4e94c
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: b5da9f9b70489a87d93521f85dbdb6b708f79066
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: MladjoA
+ms.author: mlandzic
+ms.openlocfilehash: d163148930b656bd31301193d7a5fe22201adedf
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47679450"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67930269"
 ---
 # <a name="hasm-geography-data-type"></a>HasM (geography データ型)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
 
-  空間オブジェクトに少なくとも 1 つの M 値が含まれている場合は 1 (true)、それ以外の場合は 0 (false) を返します。  
+空間オブジェクトに少なくとも 1 つの M 値が含まれている場合は 1 (true)、それ以外の場合は 0 (false) が返されます。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```sql  
   
 .HasM  
 ```  
   
 ## <a name="return-types"></a>戻り値の型  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 戻り値の型: **bit**  
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 戻り値の型: **bit**  
   
- CLR 戻り値の型: **Boolean**  
+CLR の戻り値の型:**Boolean**  
   
 ## <a name="remarks"></a>Remarks  
   

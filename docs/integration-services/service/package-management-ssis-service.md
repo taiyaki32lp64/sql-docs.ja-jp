@@ -25,17 +25,20 @@ helpviewer_keywords:
 - Integration Services service, package management
 - services [Integration Services], package management
 ms.assetid: 0261ed9e-3b01-4e37-a9d4-d039c41029b6
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: 141810965960031cf004f9c9999943760bc6c810
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 33ce0a748381e425371b6f36c1ceeaaba4b62501
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52532084"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71296876"
 ---
 # <a name="package-management-ssis-service"></a>パッケージの管理 (SSIS サービス)
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   パッケージの管理には、パッケージの監視、管理、インポートおよびエクスポートが含まれます。  
  
  ## <a name="package-store"></a>パッケージ ストア  
@@ -72,12 +75,12 @@ ms.locfileid: "52532084"
   
 ### <a name="to-connect-to-integration-services"></a>Integration Services に接続するには  
   
-1.  **[スタート]** ボタンをクリックし、 **[すべてのプログラム]**、 **[Microsoft SQL Server]** の順にポイントし、 **[SQL Server Management Studio]** をクリックします。  
+1.  **[スタート]** ボタンをクリックし、 **[すべてのプログラム]** 、 **[Microsoft SQL Server]** の順にポイントし、 **[SQL Server Management Studio]** をクリックします。  
   
 2.  **[サーバーへの接続]** ダイアログ ボックスで、 **[サーバーの種類]** 一覧の **[Integration Services]** を選択し、 **[サーバー名]** ボックスにサーバー名を入力して **[接続]** をクリックします。  
   
     > [!IMPORTANT]  
-    >  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]に接続できない場合は、 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] サービスが実行されていない可能性があります。 このサービスの状態を調べるには、 **[スタート]** ボタンをクリックし、 **[すべてのプログラム]**、 **[Microsoft SQL Server]**、 **[構成ツール]** の順にポイントして、 **[SQL Server 構成マネージャー]** をクリックします。 左ペインで、 **[SQL Server のサービス]** をクリックします。 右ペインで、 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] サービスを見つけます。 サービスがまだ実行されていない場合は開始します。  
+    >  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]に接続できない場合は、 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] サービスが実行されていない可能性があります。 このサービスの状態を調べるには、 **[スタート]** ボタンをクリックし、 **[すべてのプログラム]** 、 **[Microsoft SQL Server]** 、 **[構成ツール]** の順にポイントして、 **[SQL Server 構成マネージャー]** をクリックします。 左ペインで、 **[SQL Server のサービス]** をクリックします。 右ペインで、 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] サービスを見つけます。 サービスがまだ実行されていない場合は開始します。  
   
      [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] が開きます。 既定では、Management Studio の左下隅にオブジェクト エクスプローラーが開きます。 オブジェクト エクスプローラーが開いていない場合は、 **[表示]** メニューの **[オブジェクト エクスプローラー]** をクリックします。  
   
@@ -107,7 +110,7 @@ ms.locfileid: "52532084"
   
  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] パッケージは、次の場所からインポートしたり、次の場所にエクスポートしたりできます。  
   
--    [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のインスタンス、ファイル システム、または [!INCLUDE[ssIS](../../includes/ssis-md.md)] パッケージ ストアに格納されているパッケージをインポートできます。 インポートしたパッケージは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 、または [!INCLUDE[ssIS](../../includes/ssis-md.md)] パッケージ ストア内のフォルダーに保存されます。  
+-   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のインスタンス、ファイル システム、または [!INCLUDE[ssIS](../../includes/ssis-md.md)] パッケージ ストアに格納されているパッケージをインポートできます。 インポートしたパッケージは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 、または [!INCLUDE[ssIS](../../includes/ssis-md.md)] パッケージ ストア内のフォルダーに保存されます。  
   
 -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のインスタンス、ファイル システム、または [!INCLUDE[ssIS](../../includes/ssis-md.md)] パッケージ ストアに格納されているパッケージを異なるストレージ形式および場所にエクスポートできます。  
   
@@ -121,13 +124,13 @@ ms.locfileid: "52532084"
   
 ### <a name="to-import-a-package-by-using-sql-server-management-studio"></a>SQL Server Management Studio を使用してパッケージをインポートするには  
   
-1.  **[スタート]** ボタンをクリックし、**[Microsoft** ][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] をポイントして、**[SQL Server Management Studio]** をクリックします。  
+1.  **[スタート]** ボタンをクリックし、 **[Microsoft** ][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] をポイントして、 **[SQL Server Management Studio]** をクリックします。  
   
 2.  **[サーバーへの接続]** ダイアログ ボックスで、次のオプションを設定します。  
   
     -   **[サーバーの種類]** ボックスの一覧の **[Integration Services]** をクリックします。  
   
-    -   **[サーバー名]** ボックスでサーバー名を入力するか、**[\<参照...>]** をクリックして使用するサーバーを見つけます。  
+    -   **[サーバー名]** ボックスでサーバー名を入力するか、 **[\<参照...>]** をクリックして使用するサーバーを見つけます。  
   
 3.  オブジェクト エクスプローラーが開いていない場合は、 **[表示]** メニューの **[オブジェクト エクスプローラー]** をクリックします。  
   
@@ -139,35 +142,35 @@ ms.locfileid: "52532084"
   
     -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のインスタンスからインポートするには、 **[SQL Server]** をクリックし、サーバーを指定して認証モードを選択します。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 認証を選択した場合は、ユーザー名とパスワードを指定します。  
   
-         参照ボタン **[...]** をクリックし、インポートするパッケージを選択します。次に、**[OK]** をクリックします。  
+         参照ボタン **[...]** をクリックし、インポートするパッケージを選択します。次に、 **[OK]** をクリックします。  
   
     -   ファイル システムからインポートするには、 **[ファイル システム]** をクリックします。  
   
-         参照ボタン **[...]** をクリックし、インポートするパッケージを選択します。次に、**[開く]** をクリックします。  
+         参照ボタン **[...]** をクリックし、インポートするパッケージを選択します。次に、 **[開く]** をクリックします。  
   
     -   [!INCLUDE[ssIS](../../includes/ssis-md.md)] パッケージ ストアからインポートするには、 **[SSIS パッケージ ストア]** をクリックし、サーバーを指定します。  
   
-         参照ボタン **[...]** をクリックし、インポートするパッケージを選択します。次に、**[OK]** をクリックします。  
+         参照ボタン **[...]** をクリックし、インポートするパッケージを選択します。次に、 **[OK]** をクリックします。  
   
 7.  必要に応じて、パッケージ名を更新します。  
   
-8.  パッケージの保護レベルを更新するには、参照ボタン **[...]** をクリックし、**[パッケージの保護レベル]** ダイアログ ボックスで別の保護レベルを選択します。 **[機微なデータをパスワードで暗号化する]** または **[すべてのデータをパスワードで暗号化する]** をクリックした場合は、パスワードを入力して確認します。  
+8.  パッケージの保護レベルを更新するには、参照ボタン **[...]** をクリックし、 **[パッケージの保護レベル]** ダイアログ ボックスで別の保護レベルを選択します。 **[機微なデータをパスワードで暗号化する]** または **[すべてのデータをパスワードで暗号化する]** をクリックした場合は、パスワードを入力して確認します。  
   
 9. **[OK]** をクリックすると、インポートが完了します。  
   
 ### <a name="to-export-a-package-by-using-sql-server-management-studio"></a>SQL Server Management Studio を使用してパッケージをエクスポートするには  
   
-1.  **[スタート]** ボタンをクリックし、**[Microsoft** ][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] をポイントして、**[SQL Server Management Studio]** をクリックします。  
+1.  **[スタート]** ボタンをクリックし、 **[Microsoft** ][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] をポイントして、 **[SQL Server Management Studio]** をクリックします。  
   
 2.  **[サーバーへの接続]** ダイアログ ボックスで、次のオプションを設定します。  
   
     -   **[サーバーの種類]** ボックスの一覧の **[Integration Services]** をクリックします。  
   
-    -   **[サーバー名]** ボックスでサーバー名を入力するか、**[\<参照...>]** をクリックして使用するサーバーを見つけます。  
+    -   **[サーバー名]** ボックスでサーバー名を入力するか、 **[\<参照...>]** をクリックして使用するサーバーを見つけます。  
   
 3.  オブジェクト エクスプローラーが開いていない場合は、 **[表示]** メニューの **[オブジェクト エクスプローラー]** をクリックします。  
   
-4.  オブジェクト エクスプローラーで、**[格納されたパッケージ]** フォルダーを展開します。  
+4.  オブジェクト エクスプローラーで、 **[格納されたパッケージ]** フォルダーを展開します。  
   
 5.  サブフォルダーを展開し、エクスポートするパッケージを探します。  
   
@@ -185,14 +188,14 @@ ms.locfileid: "52532084"
   
          参照ボタン **[...]** をクリックして **[SSIS パッケージ]** フォルダーを展開し、パッケージを保存するフォルダーを選択します。 必要に応じて、パッケージの新しい名前を **[パッケージ名]** テキスト ボックスに入力します。 [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
-7.  パッケージの保護レベルを更新するには、参照ボタン **[...]** をクリックし、**[パッケージの保護レベル]** ダイアログ ボックスで別の保護レベルを選択します。 **[機微なデータをパスワードで暗号化する]** または **[すべてのデータをパスワードで暗号化する]** をクリックした場合は、パスワードを入力して確認します。  
+7.  パッケージの保護レベルを更新するには、参照ボタン **[...]** をクリックし、 **[パッケージの保護レベル]** ダイアログ ボックスで別の保護レベルを選択します。 **[機微なデータをパスワードで暗号化する]** または **[すべてのデータをパスワードで暗号化する]** をクリックした場合は、パスワードを入力して確認します。  
   
 8.  **[OK]** をクリックすると、エクスポートが完了します。  
 
 ## <a name="import-package-dialog-box-ui-reference"></a>[パッケージのインポート] ダイアログ ボックスの UI リファレンス
   **の** [パッケージのインポート] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]ダイアログ ボックスを使用すると、 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] パッケージをインポートしたり、パッケージの保護レベルの設定や変更を行ったりできます。  
   
-### <a name="options"></a>[変数]  
+### <a name="options"></a>オプション  
  **[パッケージの場所]**  
  パッケージをインポートする格納場所の種類を選択します。 使用できるオプションは以下のとおりです。  
   
@@ -227,12 +230,12 @@ ms.locfileid: "52532084"
  オプションでパッケージの名前を変更できます。 既定の名前は、インポートするパッケージの名前です。  
   
  **保護レベル**  
- 参照ボタン **[...]** をクリックし、**[パッケージの保護レベル]** ダイアログ ボックスで保護レベルを更新します。 詳細については、「 [[パッケージの保護レベル] ダイアログ ボックス](../../integration-services/security/access-control-for-sensitive-data-in-packages.md#protection_dialog)」を参照してください。  
+ 参照ボタン **[...]** をクリックし、 **[パッケージの保護レベル]** ダイアログ ボックスで保護レベルを更新します。 詳細については、「 [[パッケージの保護レベル] ダイアログ ボックス](../../integration-services/security/access-control-for-sensitive-data-in-packages.md#protection_dialog)」を参照してください。  
 
 ## <a name="export-package-dialog-box-ui-reference"></a>[パッケージのエクスポート] ダイアログ ボックスの UI リファレンス
   **の** [パッケージのエクスポート] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]ダイアログ ボックスを使用すると、 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] パッケージを別の場所にエクスポートしたり、必要に応じてパッケージの保護レベルを変更したりできます。  
   
-### <a name="options"></a>[変数]  
+### <a name="options"></a>オプション  
  **[パッケージの場所]**  
  パッケージをエクスポートする格納場所の種類を選択します。 使用できるオプションは以下のとおりです。  
   
@@ -264,7 +267,7 @@ ms.locfileid: "52532084"
  パッケージのパスを入力するか、参照ボタン **[...]** をクリックしてパッケージを格納するフォルダーを指定します。  
   
  **保護レベル**  
- 参照ボタン **[...]** をクリックして、**[パッケージの保護レベル]** ダイアログ ボックスで保護レベルを更新します。 詳細については、「 [[パッケージの保護レベル] ダイアログ ボックス](../../integration-services/security/access-control-for-sensitive-data-in-packages.md#protection_dialog)」を参照してください。  
+ 参照ボタン **[...]** をクリックして、 **[パッケージの保護レベル]** ダイアログ ボックスで保護レベルを更新します。 詳細については、「 [[パッケージの保護レベル] ダイアログ ボックス](../../integration-services/security/access-control-for-sensitive-data-in-packages.md#protection_dialog)」を参照してください。  
 
 ## <a name="back-up-and-restore-packages"></a>パッケージのバックアップと復元
   

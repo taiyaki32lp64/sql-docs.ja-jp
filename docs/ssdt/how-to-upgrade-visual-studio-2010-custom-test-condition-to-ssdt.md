@@ -1,5 +1,5 @@
 ---
-title: Visual Studio 2010 のカスタム テスト条件を、以前のリリースから SQL Server Data Tools にアップグレードする方法 | Microsoft Docs
+title: 方法:Visual Studio 2010 のカスタム テスト条件を、以前のリリースから SQL Server Data Tools にアップグレードする | Microsoft Docs
 ms.custom:
 - SSDT
 ms.date: 02/09/2017
@@ -8,17 +8,16 @@ ms.technology: ssdt
 ms.reviewer: ''
 ms.topic: conceptual
 ms.assetid: 44c895a3-dee0-4032-a60f-812f5fe3c713
-author: stevestein
-ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 95ef5fb0ab3443abbaddd47794d7458d0308d5f9
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 2b46be709cb14ff9105bcfbcacd65bc32af8de77
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47773960"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68035002"
 ---
-# <a name="how-to-upgrade-a-visual-studio-2010-custom-test-condition-from-a-previous-release-to-sql-server-data-tools"></a>Visual Studio 2010 のカスタム テスト条件を、以前のリリースから SQL Server Data Tools にアップグレードする方法
+# <a name="how-to-upgrade-a-visual-studio-2010-custom-test-condition-from-a-previous-release-to-sql-server-data-tools"></a>方法:Visual Studio 2010 のカスタム テスト条件を、以前のリリースから SQL Server Data Tools にアップグレードする
 SQL Server Data Tools より前のバージョンで作成したテスト条件を使用するには、次のようにアップグレードする必要があります。  
   
 -   [参照を更新する](#UpdateReferences)  
@@ -30,27 +29,27 @@ SQL Server Data Tools より前のバージョンで作成したテスト条件�
 ## <a name="UpdateReferences"></a>参照を更新する  
 プロジェクトの参照を更新するには、次の手順を実行します。  
   
-1.  Visual Basic のみで、**ソリューション エクスプローラー**で、**[すべてのファイルを表示]** をクリックします。  
+1.  Visual Basic のみで、**ソリューション エクスプローラー**で、 **[すべてのファイルを表示]** をクリックします。  
   
-2.  **ソリューション エクスプローラー**で、**[参照]** ノードを展開します。  
+2.  **ソリューション エクスプローラー**で、 **[参照]** ノードを展開します。  
   
-3.  次のアセンブリ参照を右クリックし、**[削除]** をクリックします。  
+3.  次のアセンブリ参照を右クリックし、 **[削除]** をクリックします。  
   
     1.  Microsoft.Data.Schema.UnitTesting  
   
     2.  Microsoft.Data.Schema  
   
-4.  **[プロジェクト]** メニューをクリックするか、または**ソリューション エクスプローラー**のプロジェクト フォルダーを右クリックして、**[参照の追加]** をクリックします。  
+4.  **[プロジェクト]** メニューをクリックするか、または**ソリューション エクスプローラー**のプロジェクト フォルダーを右クリックして、 **[参照の追加]** をクリックします。  
   
 5.  **[.NET]** タブをクリックします。  
   
-6.  **[コンポーネント名]** の一覧で **System.ComponentModel.Composition** を選択し、**[OK]** をクリックします。  
+6.  **[コンポーネント名]** の一覧で **System.ComponentModel.Composition** を選択し、 **[OK]** をクリックします。  
   
-7.  必要なアセンブリ参照を追加します。 プロジェクト ノードを右クリックし、**[参照の追加]** をクリックします。 **[参照]** をクリックし、C:\Program Files (x86)\\MicrosoftSQL Server\110\DAC\Bin フォルダーに移動します。 Microsoft.Data.Tools.Schema.Sql.dll を選択し、[追加] をクリックして、[OK] をクリックします。  
+7.  必要なアセンブリ参照を追加します。 プロジェクト ノードを右クリックし、 **[参照の追加]** をクリックします。 **[参照]** をクリックし、C:\Program Files (x86)\\MicrosoftSQL Server\110\DAC\Bin フォルダーに移動します。 Microsoft.Data.Tools.Schema.Sql.dll を選択し、[追加] をクリックして、[OK] をクリックします。  
   
 8.  **[プロジェクト]** メニューの **[プロジェクトのアンロード]** をクリックします。  
   
-9. **ソリューション エクスプローラー**で**プロジェクト**を右クリックして、**[**`project_name`**.csproj の編集]** をクリックします。  
+9. **ソリューション エクスプローラー**で**プロジェクト**を右クリックして、 **[** `project_name` **.csproj の編集]** をクリックします。  
   
 10. `Microsoft.CSharp.targets` をインポートした後、次の Import ステートメントを追加します。  
   
@@ -60,9 +59,9 @@ SQL Server Data Tools より前のバージョンで作成したテスト条件�
     <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\SSDT\Microsoft.Data.Tools.Schema.Sql.UnitTesting.targets" Condition="'$(VisualStudioVersion)' != ''" />  
     ```  
   
-11. ファイルを保存して閉じます。 **ソリューション エクスプローラー**でプロジェクトを右クリックして、**[プロジェクトの再読み込み]** をクリックします。  
+11. ファイルを保存して閉じます。 **ソリューション エクスプローラー**でプロジェクトを右クリックして、 **[プロジェクトの再読み込み]** をクリックします。  
   
-12. テスト条件クラスを開き、**Microsoft.Data.Schema** で始まるすべての using ステートメントを削除します。 この操作を最も簡単に行うには、ファイルを右クリックして、**[using の整理]** を選択し、**[削除および並べ替え]** を選択します。 次の using ステートメントを削除する必要があります。  
+12. テスト条件クラスを開き、**Microsoft.Data.Schema** で始まるすべての using ステートメントを削除します。 この操作を最も簡単に行うには、ファイルを右クリックして、 **[using の整理]** を選択し、 **[削除および並べ替え]** を選択します。 次の using ステートメントを削除する必要があります。  
   
     ```  
     using Microsoft.Data.Schema.UnitTesting;  
@@ -122,14 +121,14 @@ SQL Server Data Tools より前のバージョンで作成したテスト条件�
     ```  
   
 ### <a name="update-type-references"></a>型参照を更新する  
-SQL Server 単体テスト フレームワークでは、いくつかの型名が変更されました。 新しい型名を使用するようにコードを更新するには、**[編集]** メニューの **[検索と置換]** を使用します。 型名は、**Sql** で始まるようになりました。 クラス名は次のように更新されました。  
+SQL Server 単体テスト フレームワークでは、いくつかの型名が変更されました。 新しい型名を使用するようにコードを更新するには、 **[編集]** メニューの **[検索と置換]** を使用します。 型名は、**Sql** で始まるようになりました。 クラス名は次のように更新されました。  
   
 |以前の型名|新しい型名|  
 |-----------------|-----------------|  
 |`ExecutionResult`|`SqlExecutionResult`|  
   
 ## <a name="ApplytheNewRegistrationProcess"></a>アップグレード済みのテスト条件をインストールする  
-以前のバージョンのデータベース単体テストでは、テスト条件の情報をグローバル アセンブリ キャッシュにインストールするか、アセンブリ情報を含む XML ファイルを作成することが要求される場合がありました。 SQL Server 単体テストでは、この追加の処理が必要なくなりました  (詳しくは、「[プロジェクトをコンパイルしてテスト条件をインストールする](../ssdt/walkthrough-use-custom-test-condition-to-verify-stored-procedure-results.md#xxx)」をご覧ください。  
+以前のバージョンのデータベース単体テストでは、テスト条件の情報をグローバル アセンブリ キャッシュにインストールするか、アセンブリ情報を含む XML ファイルを作成することが要求される場合がありました。 SQL Server 単体テストでは、この追加の処理が必要なくなりました (詳しくは、「[プロジェクトをコンパイルしてテスト条件をインストールする](../ssdt/walkthrough-use-custom-test-condition-to-verify-stored-procedure-results.md#xxx)」をご覧ください。  
   
 参照を更新したら、アセンブリが署名され、コンパイルされていることを確認します。  
   

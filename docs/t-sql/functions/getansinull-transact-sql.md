@@ -18,15 +18,14 @@ helpviewer_keywords:
 - default nullability
 - database nullability [SQL Server]
 ms.assetid: 189399e4-428d-4902-b3a8-94f07fdefc6a
-author: MashaMSFT
-ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 081425bf857be0a637159304facdcfb1aa625642
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+author: MikeRayMSFT
+ms.author: mikeray
+ms.openlocfilehash: c5c52edfde8a0cde06ec5a0f2f154df06b6b6c12
+ms.sourcegitcommit: f688a37bb6deac2e5b7730344165bbe2c57f9b9c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56287830"
+ms.lasthandoff: 11/08/2019
+ms.locfileid: "73843719"
 ---
 # <a name="getansinull-transact-sql"></a>GETANSINULL (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -44,7 +43,7 @@ GETANSINULL ( [ 'database' ] )
   
 ## <a name="arguments"></a>引数  
  '*database*'  
- NULL 値を許容するかどうかの情報を返す対象データベースの名前です。 * データベースは **char** または **nchar** です。 場合 **char**, 、*データベース* に暗黙的に変換が **nchar**です。  
+ NULL 値を許容するかどうかの情報を返す対象データベースの名前です。 \* データベースは **char** または **nchar** です。 場合 **char**, 、*データベース* に暗黙的に変換が **nchar**です。  
   
 ## <a name="return-types"></a>戻り値の型  
  **int**  
@@ -80,6 +79,6 @@ GO
  ```  
   
 ## <a name="see-also"></a>参照  
- [システム関数 &#40;Transact-SQL&#41;](../../relational-databases/system-functions/system-functions-for-transact-sql.md)  
+ [システム関数 &#40;Transact-SQL&#41;](../../relational-databases/system-functions/system-functions-category-transact-sql.md)  
   
   

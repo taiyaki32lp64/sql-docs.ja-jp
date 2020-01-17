@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 65f080c7-771f-4cf6-a7a0-88882c637f8d
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: afe9eacb2f5e42dc945505d54e420877a8f4cbca
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: af9086ba9de7d9c61bcedecd4331e7e0e77d6489
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47646500"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68121123"
 ---
 # <a name="syspolicypolicycategories-transact-sql"></a>syspolicy_policy_categories (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -35,15 +34,15 @@ ms.locfileid: "47646500"
 |-----------------|---------------|-----------------|  
 |policy_category_id|**int**|ポリシー カテゴリの識別子です。|  
 |NAME|**sysname**|ポリシー カテゴリの名前。|  
-|mandate_database_subscriptions|**bit**|明示的なサブスクリプションがなくてもポリシー カテゴリをインスタンス内のすべてのデータベースに適用するか (1)、明示的なサブスクリプションを使用してポリシー カテゴリをデータベースに適用する必要があるか (0) を示します。|  
+|mandate_database_subscriptions|**bit**|ポリシー カテゴリ (1) 明示的なサブスクリプションがなくても、インスタンスのすべてのデータベースに適用されますか、ポリシー カテゴリは、明示的なサブスクリプション (0) を使用して、データベースに適用する必要があるかどうかを示します。|  
   
 ## <a name="remarks"></a>コメント  
- ポリシー ベースの管理ポリシー グループが一覧表示されます。  
+ ポリシー ベースの管理ポリシーのグループの一覧が表示されます。  
   
 ## <a name="permissions"></a>アクセス許可  
  msdb データベースの PolicyAdministratorRole ロールのメンバーシップが必要です。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [ポリシー ベースの管理を使用したサーバーの管理](../../relational-databases/policy-based-management/administer-servers-by-using-policy-based-management.md)   
  [ポリシーベースの管理ビュー &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/policy-based-management-views-transact-sql.md)  
   

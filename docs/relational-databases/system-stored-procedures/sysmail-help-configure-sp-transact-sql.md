@@ -1,5 +1,5 @@
 ---
-title: sysmail_help_configure_sp (TRANSACT-SQL) |Microsoft Docs
+title: sysmail_help_configure_sp (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -17,15 +17,14 @@ helpviewer_keywords:
 ms.assetid: e598d4c8-3041-4965-b046-dce3a8e3d3e0
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 1ef80206f9ff82cf1ab2917e90f61432be15c190
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 3d07f77c468bb14b28cd003f599bebd636d6f862
+ms.sourcegitcommit: d00ba0b4696ef7dee31cd0b293a3f54a1beaf458
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47838430"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "74056157"
 ---
-# <a name="sysmailhelpconfiguresp-transact-sql"></a>sysmail_help_configure_sp (Transact-SQL)
+# <a name="sysmail_help_configure_sp-transact-sql"></a>sysmail_help_configure_sp (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   データベース メールの構成設定を表示します。  
@@ -40,34 +39,33 @@ sysmail_help_configure_sp  [ [ @parameter_name = ] 'parameter_name' ]
 ```  
   
 ## <a name="arguments"></a>引数  
- [**@parameter_name** =] **'***parameter_name***'**  
- 取得する構成設定の名前を指定します。 指定した場合、構成設定の値が返されます、 **@parameter_value**出力パラメーター。 ない場合**@parameter_name**を指定すると、このストアド プロシージャは、すべてのインスタンスでデータベース メール構成設定を含む結果セットを返します。  
+取得する構成設定の名前 `[ @parameter_name = ] 'parameter_name'` ます。 指定した場合、構成設定の値が **\@parameter_value**の出力パラメーターに返されます。 **\@parameter_name**が指定されていない場合、このストアドプロシージャは、インスタンス内のすべてのデータベースメール構成設定を含む結果セットを返します。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  **0** (成功) または**1** (失敗)  
   
 ## <a name="result-sets"></a>結果セット  
- ない場合**@parameter_name**が指定された場合、次の列を含む結果セットを返します。  
+ **\@parameter_name**が指定されていない場合、は次の列を含む結果セットを返します。  
   
 ||||  
 |-|-|-|  
-|列名|データ型|説明|  
-|**paramname**|**nvarchar (256)**|構成パラメーターの名前|  
+|列名|データ型|[説明]|  
+|**paramname**|**nvarchar (256)**|構成パラメーターの名前。|  
 |**paramvalue**|**nvarchar (256)**|構成パラメーターの値|  
 |**description**|**nvarchar (256)**|構成パラメーターの説明|  
   
-## <a name="remarks"></a>コメント  
- ストアド プロシージャ**sysmail_help_configure_sp**インスタンスの現在のデータベース メール構成設定を一覧表示されます。  
+## <a name="remarks"></a>Remarks  
+ ストアドプロシージャ**sysmail_help_configure_sp**には、インスタンスの現在のデータベースメール構成設定が一覧表示されます。  
   
- ときに、 **@parameter_name**を指定の出力パラメーターが指定されていないが、 **@parameter_value**、このストアド プロシージャが出力を生成しません。  
+ **\@parameter_name**が指定されていても、 **\@parameter_value**に出力パラメーターが指定されていない場合、このストアドプロシージャは出力を生成しません。  
   
- ストアド プロシージャ**sysmail_help_configure_sp**では、 **msdb**が所有するデータベースにあり、 **dbo**スキーマ。 現在のデータベースがない場合は、3 つの部分の名前を持つプロシージャを起動する必要があります**msdb**します。  
+ ストアドプロシージャ**sysmail_help_configure_sp**は**msdb**データベースにあり、 **dbo**スキーマが所有しています。 現在のデータベースが**msdb**でない場合は、3部構成の名前を使用してプロシージャを呼び出す必要があります。  
   
 ## <a name="permissions"></a>アクセス許可  
- このプロシージャの既定のメンバーへのアクセス許可を実行、 **sysadmin**固定サーバー ロール。  
+ このプロシージャの実行権限は、既定では**sysadmin**固定サーバーロールのメンバーに与えています。  
   
 ## <a name="examples"></a>使用例  
- 次の例ではデータベース メールの構成設定を一覧表示、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]インスタンス。  
+ 次の例では、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスのデータベースメール構成設定を一覧表示します。  
   
 ```  
 EXECUTE msdb.dbo.sysmail_help_configure_sp ;  
@@ -90,6 +88,6 @@ ProhibitedExtensions            exe,dll,vbs,js  Extensions not allowed in outgoi
   
 ## <a name="see-also"></a>参照  
  [データベース メール](../../relational-databases/database-mail/database-mail.md)   
- [データベース メール ストアド プロシージャ&#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/database-mail-stored-procedures-transact-sql.md)  
+ [ストアドプロシージャ&#40;のデータベースメール transact-sql&#41;](../../relational-databases/system-stored-procedures/database-mail-stored-procedures-transact-sql.md)  
   
   

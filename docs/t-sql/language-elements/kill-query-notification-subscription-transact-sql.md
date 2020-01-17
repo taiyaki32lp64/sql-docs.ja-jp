@@ -1,6 +1,8 @@
 ---
-title: KILL QUERY NOTIFICATION SUBSCRIPTION (Transact-SQL) | Microsoft Docs
-ms.custom: ''
+title: KILL QUERY NOTIFICATION SUBSCRIPTION
+description: インスタンスからクエリ通知サブスクリプションを削除します。 このステートメントでは、特定のサブスクリプションまたはすべてのサブスクリプションを削除できます。
+titleSuffix: SQL Server (Transact-SQL)
+ms.custom: seo-lt-2019
 ms.date: 07/27/2017
 ms.prod: sql
 ms.prod_service: sql-database
@@ -18,15 +20,14 @@ helpviewer_keywords:
 - subscriptions [SQL Server query notifications], stopping
 - query notifications [SQL Server], subscriptions
 ms.assetid: 8aeadf51-286c-4748-bef2-d25858b250bf
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: 7ba34906f9ff4b2595644d16b2c13ea3b8a63269
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 3d44551ead01d3a51cd52501460fbc390b18a438
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47713160"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75251060"
 ---
 # <a name="kill-query-notification-subscription-transact-sql"></a>KILL QUERY NOTIFICATION SUBSCRIPTION (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -50,7 +51,7 @@ KILL QUERY NOTIFICATION SUBSCRIPTION
  *subscription_id*  
  *subscription_id* で指定したサブスクリプション ID のサブスクリプションを削除します。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  KILL QUERY NOTIFICATION SUBSCRIPTION ステートメントでクエリ通知サブスクリプションを削除する際、通知メッセージは生成されません。  
   
  *subscription_id* には、動的管理ビュー [sys.dm_qn_subscriptions &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/query-notifications-sys-dm-qn-subscriptions.md) に表示されるサブスクリプションの ID を指定します。  
@@ -60,7 +61,7 @@ KILL QUERY NOTIFICATION SUBSCRIPTION
 ## <a name="permissions"></a>アクセス許可  
  このステートメントの実行権限は、**sysadmin** 固定サーバー ロールのメンバーに制限されます。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
   
 ### <a name="a-removing-all-query-notification-subscriptions-in-the-instance"></a>A. インスタンス内のすべてのクエリ通知サブスクリプションを削除する  
  次の例では、インスタンス内のすべてのクエリ通知サブスクリプションを削除します。  

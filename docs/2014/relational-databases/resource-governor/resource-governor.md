@@ -14,11 +14,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 8d2cdad589ac9c669ae06672260bd99a1de72e8f
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52807314"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62704875"
 ---
 # <a name="resource-governor"></a>[リソース ガバナー]
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] リソース ガバナーは、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] のワークロードとシステム リソースの消費を管理するために使用できる機能です。 リソース ガバナーを使用すると、受信するアプリケーション要求で使用可能な CPU、物理 IO、およびメモリの量に制限を指定できます。  
@@ -82,7 +82,7 @@ ms.locfileid: "52807314"
 |タスクの説明|トピック|  
 |----------------------|-----------|  
 |リソース ガバナーを有効にする方法について説明します。|[リソース ガバナーの有効化](resource-governor.md)|  
-|リソース ガバナーを無効にする方法について説明します。|[リソース ガバナーの無効化](disable-resource-governor.md)|  
+|リソース ガバナーを無効にする方法について説明します。|[リソース ガバナーを無効にしたとき](disable-resource-governor.md)|  
 |リソース プールを作成、変更、および削除する方法について説明します。|[リソース ガバナー リソース プール](resource-governor-resource-pool.md)|  
 |ワークロード グループを作成、変更、移動、および削除する方法について説明します。|[リソース ガバナー ワークロード グループ](resource-governor-workload-group.md)|  
 |ユーザー定義の分類子関数を作成およびテストする方法について説明します。|[リソース ガバナーの分類子関数](resource-governor-classifier-function.md)|  

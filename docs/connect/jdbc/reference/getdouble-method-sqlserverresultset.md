@@ -1,5 +1,5 @@
 ---
-title: getDouble メソッド (SQLServerResultSet) |Microsoft Docs
+title: getDouble メソッド (SQLServerResultSet) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: 55b5b7d0-448f-4b8a-9ca7-563f674d6b81
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 385770b4b9cd009e5f88d708a0c7b68cb6517e86
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ffbc28bd432e310e23427a46946abd9a47036bc2
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47666160"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67983472"
 ---
 # <a name="getdouble-method-sqlserverresultset"></a>getDouble メソッド (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

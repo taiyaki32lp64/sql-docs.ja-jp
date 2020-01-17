@@ -13,17 +13,20 @@ helpviewer_keywords:
 - similar data rows [Integration Services]
 - fuzzy matches
 ms.assetid: ffcb41a6-e23d-49ea-8c32-ac980e3dc495
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: d915bde7fe4722063563f5d453dfc809d3163641
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 9c47bd07fd48431f850744e58ba2838b61d5969d
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47748350"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71291548"
 ---
 # <a name="identify-similar-data-rows-by-using-the-fuzzy-grouping-transformation"></a>あいまいグループ化変換を使用して類似のデータ行を識別する
+
+[!INCLUDE[ssis-appliesto](../../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   あいまいグループ化変換を追加して構成するには、パッケージに 1 つ以上のデータ フロー タスクと 1 つの変換元があらかじめ含まれている必要があります。  
   
 ### <a name="to-implement-fuzzy-grouping-transformation-in-a-data-flow"></a>データ フローにあいまいグループ化変換を実装するには  
@@ -84,6 +87,6 @@ ms.locfileid: "47748350"
  [Fuzzy Grouping Transformation](../../../integration-services/data-flow/transformations/fuzzy-grouping-transformation.md)   
  [Integration Services の変換](../../../integration-services/data-flow/transformations/integration-services-transformations.md)   
  [Integration Services のパス](../../../integration-services/data-flow/integration-services-paths.md)   
- [データ フロー タスク](../../../integration-services/control-flow/data-flow-task.md)  
+ [[データ フロー タスク]](../../../integration-services/control-flow/data-flow-task.md)  
   
   

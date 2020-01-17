@@ -27,13 +27,12 @@ helpviewer_keywords:
 ms.assetid: 9dfe8b76-721e-42fd-81ae-14e22258c4f2
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: 52e2d08a629a2e7272a409f0e84ab9b79299649b
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: 2693b552008760025977a4c0ed0d3f3c3065713a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54132132"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67912613"
 ---
 # <a name="create-partition-function-transact-sql"></a>CREATE PARTITION FUNCTION (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -56,7 +55,7 @@ FOR VALUES ( [ boundary_value [ ,...n ] ] )
  パーティション関数の名前です。 パーティション関数の名前は、データベース内で一意であり、かつ[識別子](../../relational-databases/databases/database-identifiers.md)のルールに従っている必要があります。  
   
  *input_parameter_type*  
- パーティション分割に使用される列のデータ型です。 すべてのデータ型は、 **text**、 **ntext**、 **image**、 **xml**、 **timestamp**、 **varchar(max)**、 **nvarchar(max)**、 **varbinary(max)**、別名データ型、または CLR ユーザー定義データ型を除いて、列を分割して使用することができます。  
+ パーティション分割に使用される列のデータ型です。 すべてのデータ型は、 **text**、 **ntext**、 **image**、 **xml**、 **timestamp**、 **varchar(max)** 、 **nvarchar(max)** 、 **varbinary(max)** 、別名データ型、または CLR ユーザー定義データ型を除いて、列を分割して使用することができます。  
   
  パーティション分割列と呼ばれる実際の列は、CREATE TABLE ステートメントまたは CREATE INDEX ステートメントで指定します。  
   
@@ -74,21 +73,21 @@ FOR VALUES ( [ boundary_value [ ,...n ] ] )
  *boundary_value* で与えられる値の数を指定します。14,999 以下の数を指定する必要があります。 作成されるパーティションの数は *n* + 1 になります。 値を順序どおり指定する必要はありません。 値が順不同の場合、[!INCLUDE[ssDE](../../includes/ssde-md.md)] は値を並び替えて、関数を作成し、値が順に並んでいないという警告を返します。 *n* に重複値が含まれている場合、データベース エンジンはエラーを返します。  
   
  **LEFT** | RIGHT  
- [!INCLUDE[ssDE](../../includes/ssde-md.md)]が境界値を左から右の昇順にソートする場合に、*boundary_value* [ **,**_...n_ ] が各境界値間隔のどちら側 (左または右) に属するかを指定します。 指定しない場合は、LEFT が既定値です。  
+ [!INCLUDE[ssDE](../../includes/ssde-md.md)]が境界値を左から右の昇順にソートする場合に、*boundary_value* [ **,** _...n_ ] が各境界値間隔のどちら側 (左または右) に属するかを指定します。 指定しない場合は、LEFT が既定値です。  
   
 ## <a name="remarks"></a>Remarks  
  パーティション関数のスコープは、関数が作成されたデータベース内に制限されます。 データベース内では、パーティション関数は他の関数とは別の名前空間に配置されます。  
   
- パーティション分割列に NULL 値がある行はすべて、左端のパーティションに配置されます。ただし、NULL が境界値として指定され、RIGHT が指定された場合は除きます。 この場合、左端のパーティションは空のパーティションになり、NULL 値は次のパーティションに配置されます。  
+ NULL が境界値として指定され、RIGHT が指定された場合を除き、パーティション分割列に NULL 値がある行はすべて、左端のパーティションに配置されます。 この場合、左端のパーティションは空のパーティションになり、NULL 値は次のパーティションに配置されます。  
   
 ## <a name="permissions"></a>アクセス許可  
- 次のいずれかの権限を使用すると、CREATE PARTITION FUNCTION を実行できます。  
+ CREATE PARTITION FUNCTION を実行するには、次のいずれかの権限を使用できます。  
   
 -   ALTER ANY DATASPACE 権限。 この権限は、既定では **sysadmin** 固定サーバー ロール、 **db_owner** 固定データベース ロール、および **db_ddladmin** 固定データベース ロールのメンバーに与えられています。  
   
--   データベースの CONTROL 権限または ALTER 権限 (パーティション関数はこのデータベース内で作成)。  
+-   パーティション関数が作成されているデータベースの CONTROL 権限または ALTER 権限。  
   
--   データベースのサーバーの CONTROL SERVER 権限または ALTER ANY DATABASE 権限 (パーティション関数はこのデータベースで作成)。  
+-   パーティション関数が作成されているデータベースのサーバーでの CONTROL SERVER 権限または ALTER ANY DATABASE 権限。  
   
 ##  <a name="BKMK_examples"></a> 使用例  
   
@@ -107,7 +106,7 @@ AS RANGE LEFT FOR VALUES (1, 100, 1000);
 |**値**|**col1** <= `1`|**col1** > `1` AND **col1** <= `100`|**col1** > `100` AND **col1** <=`1000`|**col1** > `1000`|  
   
 ### <a name="b-creating-a-range-right-partition-function-on-an-int-column"></a>B. int 型の列に RANGE RIGHT パーティション関数を作成する  
- 次のパーティション関数は、*boundary_value* [ **,**_...n_ ] に、RANGE RIGHT を除いて前の例と同じ値を指定します。  
+ 次のパーティション関数は、*boundary_value* [ **,** _...n_ ] に、RANGE RIGHT を除いて前の例と同じ値を指定します。  
   
 ```sql  
 CREATE PARTITION FUNCTION myRangePF2 (int)  

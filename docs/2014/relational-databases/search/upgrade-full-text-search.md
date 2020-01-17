@@ -13,15 +13,15 @@ helpviewer_keywords:
 - installing Full-Text Search
 - full-text search [SQL Server], upgrading
 ms.assetid: 2fee4691-f2b5-472f-8ccc-fa625b654520
-author: douglaslMS
-ms.author: douglasl
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: ceeb9a6d964dadd35c725a7ae4cd9e6db7c8d090
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 43ef487dc2049d3ca95f4cddff72a005c98a5d19
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53363644"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66010958"
 ---
 # <a name="upgrade-full-text-search"></a>フルテキスト検索のアップグレード
   [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] へのフルテキスト検索のアップグレードは、セットアップ時のほか、以前のバージョンの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のデータベース ファイルとフルテキスト カタログのアタッチ時、復元時、またはデータベース コピー ウィザードによるコピー時に行われます。  
@@ -135,9 +135,9 @@ ms.locfileid: "53363644"
   
  **サーバー インスタンスでフルテキスト アップグレード動作を変更するには**  
   
--   [!INCLUDE[tsql](../../includes/tsql-md.md)]:使用して、**アップグレード\_オプション**のアクション[sp\_fulltext\_サービス](/sql/relational-databases/system-stored-procedures/sp-fulltext-service-transact-sql)  
+-   [!INCLUDE[tsql](../../includes/tsql-md.md)]:[sp\_fulltext\_service](/sql/relational-databases/system-stored-procedures/sp-fulltext-service-transact-sql) の **upgrade\_option** アクションを使用します  
   
--   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] **:** 使用して、**フルテキスト アップグレード オプション**の**サーバー プロパティ** ダイアログ ボックス。 詳細については、「 [サーバー インスタンスでのフルテキスト検索の管理と監視](manage-and-monitor-full-text-search-for-a-server-instance.md)」を参照してください。  
+-   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] **:** **[サーバーのプロパティ]** ダイアログ ボックスの **[フルテキスト アップグレード オプション]** を使用します。 詳細については、「 [サーバー インスタンスでのフルテキスト検索の管理と監視](manage-and-monitor-full-text-search-for-a-server-instance.md)」を参照してください。  
   
 ##  <a name="Considerations_for_Restore"></a>[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] のフルテキスト カタログを復元する際の注意点: [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]  
  [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] データベースのフルテキスト データを [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] にアップグレードするには、データベースの完全バックアップを [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]に復元する方法があります。  

@@ -8,16 +8,15 @@ ms.reviewer: ''
 ms.technology: ssms
 ms.topic: conceptual
 ms.assetid: dc5013c1-692c-4cc4-820c-1c09482c6886
-author: stevestein
-ms.author: sstein
-manager: craigg
+author: markingmyname
+ms.author: maghan
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 2267cef9b9d0fc0ffb3320f5c3b524271103ad98
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: f28ba5d7be73e5d695b32cbf5a4d7f61b00d07ea
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47663520"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68266369"
 ---
 # <a name="alerts-node-sql-server-agent-f1-help"></a>[警告] ノード (SQL Server エージェント F1 ヘルプ)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -25,6 +24,6 @@ ms.locfileid: "47663520"
 > [!IMPORTANT]  
 > [Azure SQL Database Managed Instance](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance) では現在、すべてではありませんがほとんどの SQL Server エージェントの機能がサポートされています。 詳細については、「[Azure SQL Database Managed Instance と SQL Server の T-SQL の相違点](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent)」を参照してください。
 
-ここでは、[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] のオブジェクト エクスプローラーの **[警告]** ノードの F1 ヘルプについて紹介します。  
+ここでは、 **のオブジェクト エクスプローラーの** [警告] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]ノードの F1 ヘルプについて紹介します。  
   
 

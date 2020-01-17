@@ -2,25 +2,25 @@
 title: レポート ビルダーの既定のオプションを設定する | Microsoft Docs
 ms.date: 03/01/2017
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: report-builder
 ms.topic: conceptual
 f1_keywords:
 - "10427"
 ms.assetid: 423360de-9bed-462e-921f-60a5abab004f
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 0b1f78502b93cffb3f72593d8a383a301362ea39
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: f6c77bc80b31eb34beea99d0634b17934ea01db4
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56295980"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65577918"
 ---
 # <a name="set-default-options-for-report-builder"></a>レポート ビルダーの既定のオプションを設定する
   レポート ビルダーで、レポート作成を簡単かつ迅速にすることができる既定値を設定できます。  たとえば、既定のレポート サーバーを設定または変更すると、特に指定しない限り、同じレポート サーバーに自動的にレポートが保存されます。  
   
--   レポート ビルダーで、 **[ファイル]** > **[オプション]** をクリックします。  
+-   レポート ビルダーで、 **[ファイル]**  >  **[オプション]** をクリックします。  
   
 ## <a name="uielement-list"></a>UI 要素の一覧  
  **[既定で使用するレポート サーバーまたは SharePoint サイト]**  

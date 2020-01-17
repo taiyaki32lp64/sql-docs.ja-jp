@@ -9,15 +9,15 @@ ms.topic: reference
 helpviewer_keywords:
 - custom connection managers [Integration Services], creating
 ms.assetid: e83f8e02-ace4-42e0-b979-2f6be1460985
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 29f435c9554783bdddf9faba165a5b93ab861514
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 2fced98b5844105aa0f333a691cb747656112c10
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53367484"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62768928"
 ---
 # <a name="creating-a-custom-connection-manager"></a>カスタム接続マネージャーの作成
   カスタム接続マネージャーを作成するために必要な手順は、[!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] の他のカスタム オブジェクトの作成手順と同様です。  
@@ -75,7 +75,7 @@ ConnectionManagerBase
   
 ![Integration Services のアイコン (小)](../../media/dts-16.gif "Integration Services アイコン (小)")**Integration Services の日付を維持します。**<br /> マイクロソフトが提供する最新のダウンロード、アーティクル、サンプル、ビデオ、およびコミュニティで選択されたソリューションについては、MSDN の [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] のページを参照してください。<br /><br /> [MSDN の Integration Services のページを参照してください。](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> これらの更新が自動で通知されるようにするには、ページの RSS フィードを定期受信します。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [カスタム接続マネージャーのコーディング](coding-a-custom-connection-manager.md)   
  [カスタム接続マネージャー用ユーザー インターフェイスの開発](developing-a-user-interface-for-a-custom-connection-manager.md)  
   

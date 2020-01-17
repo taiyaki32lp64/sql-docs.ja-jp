@@ -16,11 +16,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 0a1bdbe715aa970f87596060a774ac2b1ed8df15
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56028063"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68210740"
 ---
 # <a name="replication-distribution-agent"></a>レプリケーション ディストリビューション エージェント
   レプリケーション ディストリビューション エージェントは、ディストリビューション データベース テーブルに登録されたスナップショット (スナップショット レプリケーションの場合) とトランザクション (トランザクション レプリケーションの場合) を、サブスクライバーのレプリケーション先のテーブルに移動する実行可能ファイルです。  
@@ -89,14 +89,14 @@ ms.locfileid: "56028063"
  **-?**  
  使用できるすべてのパラメーターを表示します。  
   
- **-Publisher** _server_name_[**\\**_instance_name_]  
- パブリッシャーの名前です。 サーバー上の *server_name* の既定のインスタンスの場合は、 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] を指定します。 サーバー上の _server_name_**\\**_instance_name_ instance_name [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] の既定のインスタンスの場合は、server_name を指定します。  
+ **-Publisher** _server_name_[ **\\** _instance_name_]  
+ パブリッシャーの名前です。 サーバー上の *server_name* の既定のインスタンスの場合は、 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] を指定します。 サーバー上の _server_name_ **\\** _instance_name_ instance_name [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] の既定のインスタンスの場合は、server_name を指定します。  
   
  **-PublisherDB** _publisher_database_  
  パブリッシャー データベースの名前です。  
   
- **-Subscriber** _server_name_[**\\**_instance_name_]  
- サブスクライバーの名前です。 サーバー上の *server_name* の既定のインスタンスの場合は、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] を指定します。 サーバー上の _server_name_**\\**_instance_name_ instance_name [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] の既定のインスタンスの場合は、server_name を指定します。  
+ **-Subscriber** _server_name_[ **\\** _instance_name_]  
+ サブスクライバーの名前です。 サーバー上の *server_name* の既定のインスタンスの場合は、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] を指定します。 サーバー上の _server_name_ **\\** _instance_name_ instance_name [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] の既定のインスタンスの場合は、server_name を指定します。  
   
  **-SubscriberDB** _subscriber_database_  
  サブスクライバー データベースの名前です。  
@@ -204,7 +204,7 @@ ms.locfileid: "56028063"
  ソースに利用可能なレプリケートされたトランザクションがない場合、エージェントはディストリビューターに対してトランザクションなしのメッセージを報告します。 このオプションは、エージェントが次にトランザクションなしのメッセージを報告するまでの待ち時間を指定します。 前回レプリケートされたトランザクションを処理した後で、ソースに利用可能なトランザクションがないことを検出すると、エージェントは必ずトランザクションなしのメッセージを報告します。 既定値は 60 秒です。  
   
  **-OledbStreamThreshold** _oledb_stream_threshold_  
- BLOB データの最小バイト サイズを指定します。この値を超えると、データはストリームとしてバインドされます。 このパラメーターを使用するためには、**-UseOledbStreaming** を指定する必要があります。 400 バイトから 1048576 バイトまでの値を指定できます。既定値は 16384 バイトです。  
+ BLOB データの最小バイト サイズを指定します。この値を超えると、データはストリームとしてバインドされます。 このパラメーターを使用するためには、 **-UseOledbStreaming** を指定する必要があります。 400 バイトから 1048576 バイトまでの値を指定できます。既定値は 16384 バイトです。  
   
  **-Output** _output_path_and_file_name_  
  エージェントの出力ファイルのパスです。 ファイル名が指定されていない場合、出力はコンソールに送られます。 指定された名前のファイルが存在する場合、出力はそのファイルに追加されます。  
@@ -230,7 +230,7 @@ ms.locfileid: "56028063"
  **-QuotedIdentifier** _quoted_identifier_  
  使用する引用符で囲まれた識別子を指定します。 値の最初の文字は、ディストリビューション エージェントが使用する値を示します。 値を指定せずに **QuotedIdentifier** を使用する場合、ディストリビューション エージェントはスペースを使用します。 **QuotedIdentifier** を使用しない場合には、ディストリビューション エージェントはサブスクライバーがサポートしている引用符で囲まれた識別子を使用します。  
   
- **-SkipErrors** _native_error_id_ [**:**_...n_]  
+ **-SkipErrors** _native_error_id_ [ **:** _...n_]  
  このエージェントでスキップされる一連のエラー番号をコロンで区切って指定します。  
   
  **-SubscriberDatabasePath** _subscriber_database_path_  

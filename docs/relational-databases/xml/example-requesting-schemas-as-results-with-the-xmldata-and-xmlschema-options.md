@@ -1,6 +1,5 @@
 ---
-title: '例: XMLDATA オプションと XMLSCHEMA オプションを使用した結果としてのスキーマの要求 | Microsoft Docs'
-ms.custom: ''
+title: XMLDATA & XMLSCHEMA を使用した結果としてのスキーマの要求 | Microsoft Docs
 ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -11,17 +10,17 @@ helpviewer_keywords:
 - RAW mode, requesting schema example
 - RAW mode, with XMLDATA and XMLSCHEMA
 ms.assetid: 3504ca38-be66-42b2-8dab-f499c9584840
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: 2cae25e2d3e6b4a9b235b8f606fc4435add84ca4
-ms.sourcegitcommit: bfa10c54e871700de285d7f819095d51ef70d997
+author: MightyPen
+ms.author: genemi
+ms.custom: seo-lt-2019
+ms.openlocfilehash: a11e6a91c1fea9a0eb7b20124e0de8565540caf5
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/14/2019
-ms.locfileid: "54254857"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75243783"
 ---
-# <a name="example-requesting-schemas-as-results-with-the-xmldata-and-xmlschema-options"></a>例: XMLDATA オプションと XMLSCHEMA オプションを使用した結果としてのスキーマの要求
+# <a name="request-schemas-as-results-with-xmldata--xmlschema"></a>XMLDATA & XMLSCHEMA を使用した結果としてのスキーマの要求
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
   次のクエリでは、ドキュメント構造を記述する XML-DATA スキーマが返されます。  
   
@@ -54,7 +53,7 @@ GO
 ```  
   
 > [!NOTE]  
->  <`Schema`> は、名前空間として宣言されます。 異なる複数の FOR XML クエリで複数の XML-Data スキーマを要求するときに、名前空間の競合を避けるために、名前空間識別子 (この例では `Schema1` ) はクエリを実行するたびに変わります。 名前空間識別子は、**Schema**_**n**_ (_**n**_ は整数) で構成されます。  
+>  <`Schema`> は、名前空間として宣言されます。 異なる複数の FOR XML クエリで複数の XML-Data スキーマを要求するときに、名前空間の競合を避けるために、名前空間識別子 (この例では `Schema1` ) はクエリを実行するたびに変わります。 名前空間識別子は、**Schema** _**n**_ ( _**n**_ は整数) で構成されます。  
   
  `XMLSCHEMA` オプションを指定することにより、結果の XSD スキーマを要求できます。  
   

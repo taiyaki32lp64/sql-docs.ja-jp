@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: e170326f-d126-4ed5-bb01-246e1934b710
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: d4ee8e281c6508b00cecdcde60e516dfbfcd524d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 04eb7dcce16e107cadcce53400d23d995a19fd03
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47807340"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67915992"
 ---
 # <a name="replication-xps-server-configuration-option"></a>Replication XPs サーバー構成オプション
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

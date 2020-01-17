@@ -25,20 +25,20 @@ helpviewer_keywords:
 - hierarchical relationships [SQLXML]
 - named relationships [SQLXML]
 ms.assetid: 98820afa-74e1-4e62-b336-6111a3dede4c
-author: douglaslMS
-ms.author: douglasl
+author: MightyPen
+ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 1ae1037a8b04ad1a16b8d42485105927015359a1
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: f27b47ae8216fa64b537d4c8b22b612c535a1869
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52814874"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66013672"
 ---
 # <a name="specifying-relationships-using-sqlrelationship-sqlxml-40"></a>sql:relationship を使用した、リレーションシップの指定 (SQLXML 4.0)
   XML ドキュメント内の要素は関連付けることができます。 要素は階層的に入れ子にでき、要素間に ID、IDREF、または IDREFS のリレーションシップを指定することができます。  
   
- XSD スキーマでなど、 **\<顧客 >** 要素が含まれます**\<順序 >** 子要素。 AdventureWorks のデータベースにスキーマがマップされている場合、 **\<顧客 >** 要素は Sales.Customer テーブルにマップし、 **\<順序 >** 要素にマップされます、Sales.SalesOrderHeader テーブル。 顧客が注文を行うため、これらの基になるテーブル、Sales.Customer および Sales.SalesOrderHeader に関連します。 ここで、Sales.SalesOrderHeader テーブル内の CustomerID は、Sales.Customer テーブル内の CustomerID 主キーを参照する外部キーです。 使用してマッピング スキーマで要素間のリレーションシップを確立することができます、`sql:relationship`注釈。  
+ XSD スキーマでなど、 **\<顧客 >** 要素が含まれます **\<順序 >** 子要素。 AdventureWorks のデータベースにスキーマがマップされている場合、 **\<顧客 >** 要素は Sales.Customer テーブルにマップし、 **\<順序 >** 要素にマップされます、Sales.SalesOrderHeader テーブル。 顧客が注文を行うため、これらの基になるテーブル、Sales.Customer および Sales.SalesOrderHeader に関連します。 ここで、Sales.SalesOrderHeader テーブル内の CustomerID は、Sales.Customer テーブル内の CustomerID 主キーを参照する外部キーです。 使用してマッピング スキーマで要素間のリレーションシップを確立することができます、`sql:relationship`注釈。  
   
  注釈付き XSD スキーマでは、`sql:relationship` 注釈を使用して、要素のマップ先テーブルにおける主キーと外部キーのリレーションシップを基にスキーマ要素を階層的に入れ子にできます。 指定するときに、`sql:relationship`注釈、以下を識別する必要があります。  
   
@@ -76,7 +76,7 @@ ms.locfileid: "52814874"
  次の例を使用した実際のサンプルを作成するには、特定の条件を満たす必要があります。 詳細については、次を参照してください。 [SQLXML の例を実行するための要件](../sqlxml/requirements-for-running-sqlxml-examples.md)します。  
   
 ### <a name="a-specifying-the-sqlrelationship-annotation-on-an-element"></a>A. 要素に sql:relationship 注釈を指定する  
- 次の注釈付き XSD スキーマを含む**\<顧客 >** と**\<順序 >** 要素。 **\<順序 >** 要素が子要素の**\<顧客 >** 要素。  
+ 次の注釈付き XSD スキーマを含む **\<顧客 >** と **\<順序 >** 要素。 **\<順序 >** 要素が子要素の **\<顧客 >** 要素。  
   
  スキーマで、`sql:relationship`注釈が指定されて、 **\<順序 >** 子要素。 リレーションシップ自体がで定義されている、  **\<xsd:appinfo >** 要素。  
   
@@ -196,7 +196,7 @@ ms.locfileid: "52814874"
 ...  
 ```  
   
- XML ドキュメントでは、Sales.SalesOrderHeader テーブル内の注文ごとに 1 つ**\<順序 >** 要素。 それぞれ**\<順序 >** 要素のリストがある**\<製品 >** 子要素、注文した製品ごとに 1 つ。  
+ XML ドキュメントでは、Sales.SalesOrderHeader テーブル内の注文ごとに 1 つ **\<順序 >** 要素。 それぞれ **\<順序 >** 要素のリストがある **\<製品 >** 子要素、注文した製品ごとに 1 つ。  
   
  この階層を生成する XSD スキーマを指定するには、2 つのリレーションシップを指定する必要があります。指定され、OrderOD と ODProduct します。 OrderOD リレーションシップでは、Sales.SalesOrderHeader テーブルと Sales.SalesOrderDetail テーブル間の親子リレーションシップを指定します。 ODProduct リレーションシップでは、Sales.SalesOrderDetail テーブルと Production.Product テーブル間のリレーションシップを指定します。  
   
@@ -238,7 +238,7 @@ ms.locfileid: "52814874"
 </xsd:schema>  
 ```  
   
- 名前付きリレーションシップを指定する代わりに、匿名のリレーションシップを指定することもできます。 ここでのコンテンツ全体**\<注釈 >**. **\</annotation >**、2 つのリレーションシップについて説明しますの子要素として表示される**\<製品 >** します。  
+ 名前付きリレーションシップを指定する代わりに、匿名のリレーションシップを指定することもできます。 ここでのコンテンツ全体 **\<注釈 >** . **\</annotation >** 、2 つのリレーションシップについて説明しますの子要素として表示される **\<製品 >** します。  
   
 ```  
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"  
@@ -382,11 +382,11 @@ ms.locfileid: "52814874"
 ```  
   
 ### <a name="d-specifying-sqlrelationship-on-multiple-elements"></a>D. 複数の要素に sql:relationship を指定する  
- この例では、注釈付き XSD スキーマを含む、 **\<顧客 >**、 **\<順序 >** と **\<OrderDetail >** 要素。  
+ この例では、注釈付き XSD スキーマを含む、 **\<顧客 >** 、 **\<順序 >** と **\<OrderDetail >** 要素。  
   
- **\<順序 >** 要素が子要素の**\<顧客 >** 要素。 **\<sql:relationship >** が指定されて、 **\<順序 >** の子要素の子要素として、顧客の注文を表示するため、 **\<顧客 >**.  
+ **\<順序 >** 要素が子要素の **\<顧客 >** 要素。 **\<sql:relationship >** が指定されて、 **\<順序 >** の子要素の子要素として、顧客の注文を表示するため、 **\<顧客 >** .  
   
- **\<順序 >** 要素が含まれています、  **\<OrderDetail >** 子要素。 **\<sql:relationship >** が指定されています **\<OrderDetail >** の子要素の子要素として、注文に関連する注文の詳細が表示されるように**\<順序 >** 要素。  
+ **\<順序 >** 要素が含まれています、  **\<OrderDetail >** 子要素。 **\<sql:relationship >** が指定されています **\<OrderDetail >** の子要素の子要素として、注文に関連する注文の詳細が表示されるように **\<順序 >** 要素。  
   
 ```  
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"  
@@ -524,7 +524,7 @@ Emp2(SalesPersonID, FirstName, LastName, ReportsTo)
 </xsd:schema>  
 ```  
   
- スキーマの両方、  **\<Emp1 >** 要素と **\<Emp2 >** 要素は型`EmpType`します。 型`EmpType`について説明します、 **\<順序 >** 子要素と、対応する **\<sql:relationship >** します。 この場合、指定できる 1 つの親はありません **\<sql:relationship >** を使用して、**親**属性。 指定しないこのような状況で、**親**属性 **\<sql:relationship >**、**親**から属性情報を取得、スキーマ内の階層。  
+ スキーマの両方、  **\<Emp1 >** 要素と **\<Emp2 >** 要素は型`EmpType`します。 型`EmpType`について説明します、 **\<順序 >** 子要素と、対応する **\<sql:relationship >** します。 この場合、指定できる 1 つの親はありません **\<sql:relationship >** を使用して、**親**属性。 指定しないこのような状況で、**親**属性 **\<sql:relationship >** 、**親**から属性情報を取得、スキーマ内の階層。  
   
 ##### <a name="to-test-a-sample-xpath-query-against-the-schema"></a>スキーマに対してサンプル XPath クエリをテストするには  
   

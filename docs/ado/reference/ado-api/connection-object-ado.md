@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: ef6b1824-5b12-43db-89d7-8f3d13896d4d
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 4a3b13402f20c149c438aa5a2c678afb068fb0f3
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 278e2d90ed20b99706f00acf72e2892941c42865
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47623990"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67933561"
 ---
 # <a name="connection-object-ado"></a>Connection オブジェクト (ADO)
 データ ソースへの接続を開くを表します。  
@@ -95,7 +94,7 @@ cnn. "parameter"
   
 -   [接続オブジェクトのプロパティ、メソッド、およびイベント](../../../ado/reference/ado-api/connection-object-properties-methods-and-events.md)  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [コマンド オブジェクト (ADO)](../../../ado/reference/ado-api/command-object-ado.md)   
  [エラーのコレクション (ADO)](../../../ado/reference/ado-api/errors-collection-ado.md)   
  [Properties コレクション (ADO)](../../../ado/reference/ado-api/properties-collection-ado.md)   

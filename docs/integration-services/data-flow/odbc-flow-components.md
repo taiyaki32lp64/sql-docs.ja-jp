@@ -8,17 +8,20 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: cf751f1e-2348-4a77-904c-bd92c0d7d0ae
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: 9f24cd7679891d8dd5da42d0df02c416b9741267
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: e7035802b5b4e13c2696af9d76c6a2904547ea25
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47842320"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71292285"
 ---
 # <a name="odbc-flow-components"></a>ODBC フロー コンポーネント
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   このトピックでは、SQL Server 2016 Integration Services (SSIS) を使用して ODBC データ フローを作成するために必要な概念について説明します。 [!INCLUDE[ssISCurrent](../../includes/ssiscurrent-md.md)]  
   
  [!INCLUDE[ssISCurrent](../../includes/ssiscurrent-md.md)] 用の Connector for Open Database Connectivity (ODBC) を使用すると、SSIS 開発者は、ODBC でサポートされているデータベースからのデータの読み込みおよびアンロードを実行するパッケージを簡単に作成できます。  

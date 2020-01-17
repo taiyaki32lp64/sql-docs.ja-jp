@@ -22,21 +22,17 @@ helpviewer_keywords:
 - Transact-SQL cursors, attributes
 - global cursors [SQL Server]
 ms.assetid: 5a3a27aa-03e8-4c98-a27e-809282379b21
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: af3a010f835223a875da7df5028ac1406798c479
-ms.sourcegitcommit: 96032813f6bf1cba680b5e46d82ae1f0f2da3d11
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: f0c5a07b7ff618b3857d9e67b11d50a5a29e8248
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/15/2019
-ms.locfileid: "54300105"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67894787"
 ---
 # <a name="declare-cursor-transact-sql"></a>DECLARE CURSOR (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
-
-  > [!div class="nextstepaction"]
-  > [SQL ドキュメントの目次に関するご意見を共有してください。](https://aka.ms/sqldocsurvey)
 
   [!INCLUDE[tsql](../../includes/tsql-md.md)] サーバー カーソルの属性を定義します。これには、スクロール動作や、カーソルが操作する結果セットを作成するクエリなどが含まれます。 `DECLARE CURSOR` は、ISO 標準に基づく構文と、[!INCLUDE[tsql](../../includes/tsql-md.md)] の拡張機能のセットを使用する構文の両方で指定できます。  
   
@@ -79,7 +75,7 @@ DECLARE cursor_name CURSOR [ LOCAL | GLOBAL ]
  READ ONLY  
  このカーソルによる更新を禁止します。 `UPDATE` または `DELETE` ステートメントの `WHERE CURRENT OF` 句では、このカーソルを参照できません。 このオプションは、更新対象のカーソルの既定の機能をオーバーライドします。  
   
- UPDATE [OF *column_name* [**,**...*n*]]  
+ UPDATE [OF *column_name* [ **,** ...*n*]]  
  カーソル内で更新できる列を定義します。 OF <column_name> [, <... n>] を指定した場合は、指定した列に対してのみ更新ができます。 列リストなしで `UPDATE` を指定した場合は、すべての列を更新できます。  
   
 *cursor_name*  
@@ -110,7 +106,7 @@ KEYSET
 > クエリが一意なインデックスのないテーブルを少なくとも 1 つ参照する場合、このキーセット カーソルは静的カーソルに変換されます。  
   
 DYNAMIC  
-変更がカーソル内またはカーソル外の他のユーザーのどちらによって行われたのかに関係なく、カーソルをスクロールして新しいレコードをフェッチすると、結果内の行に対して行われたすべてのデータ変更が反映されるカーソルを定義します。 したがって、すべてのユーザーによって行われたすべての挿入、更新、削除ステートメントが、カーソルによって表示されます。 行のデータ値、順序、構成要素は、各フェッチ操作で変化する可能性があります。 `ABSOLUTE` フェッチ オプションは、動的カーソルではサポートされません。 カーソルの外部から行った更新は、(カーソルのトランザクション分離レベルが `UNCOMMITTED` に設定されている場合を除き) コミットされるまで表示されません。 たとえば、動的カーソルで 2 つの行がフェッチされた後、別のアプリケーションによって一方の行は更新され、他の行は削除されたものとします。 その後、動的カーソルでこれらの行がフェッチされた場合、削除された行は検出されませんが、更新された行は新しい値が表示されます。 
+変更がカーソル内またはカーソル外の他のユーザーのどちらによって行われたのかに関係なく、カーソルをスクロールして新しいレコードをフェッチすると、結果内の行に対して行われたすべてのデータ変更が反映されるカーソルを定義します。 したがって、すべてのユーザーによって行われたすべての挿入、更新、削除ステートメントが、カーソルによって表示されます。 行のデータ値、順序、メンバーシップは、各フェッチ操作で変化する可能性があります。 `ABSOLUTE` フェッチ オプションは、動的カーソルではサポートされません。 カーソルの外部から行った更新は、(カーソルのトランザクション分離レベルが `UNCOMMITTED` に設定されている場合を除き) コミットされるまで表示されません。 たとえば、動的カーソルで 2 つの行がフェッチされた後、別のアプリケーションによって一方の行は更新され、他の行は削除されたものとします。 その後、動的カーソルでこれらの行がフェッチされた場合、削除された行は検出されませんが、更新された行は新しい値が表示されます。 
   
 FAST_FORWARD  
 パフォーマンスの最適化が有効に設定された `FORWARD_ONLY`、`READ_ONLY` カーソルを指定します。 `SCROLL` または `FOR_UPDATE` も指定されている場合、`FAST_FORWARD` は指定できません。 この種類のカーソルでは、カーソル内からのデータ変更は許可されません。  
@@ -125,10 +121,10 @@ SCROLL_LOCKS
 カーソルによって行われる位置指定更新または位置指定削除の成功が保証されることを指定します。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] はカーソルに読み取られた行をロックし、後で変更できることを保証します。 `FAST_FORWARD` または `STATIC` も指定されている場合、`SCROLL_LOCKS` は指定できません。  
   
 OPTIMISTIC  
-行がカーソルに読み取られてから更新された場合に、カーソルによって行われる位置指定更新または位置指定削除が失敗します。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、行がカーソルに読み取られるとき、その行はロックされません。 代わりに **timestamp** 列の値を比較するか、テーブルに **timestamp** 列がない場合はチェックサム値を使用して、行がカーソルに読み込まれてから変更されたかどうかが判別されます。 行が変更されている場合、位置指定更新または位置指定削除の試行は失敗します。 `FAST_FORWARD` も指定されている場合は、`OPTIMISTIC` を指定できません。  
+行がカーソルに読み取られてから更新された場合に、カーソルによって行われる位置指定更新または位置指定削除が失敗することを指定します。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、行がカーソルに読み取られるとき、その行はロックされません。 代わりに **timestamp** 列の値を比較するか、テーブルに **timestamp** 列がない場合はチェックサム値を使用して、行がカーソルに読み込まれてから変更されたかどうかが判別されます。 行が変更されている場合、位置指定更新または位置指定削除の試行は失敗します。 `FAST_FORWARD` も指定されている場合は、`OPTIMISTIC` を指定できません。  
   
  TYPE_WARNING  
- カーソルの種類が、要求されたものから別のものに暗黙的に変換された場合、クライアントに警告メッセージが送信されます。  
+ カーソルの種類が、要求されたものから別のものに暗黙的に変換された場合、クライアントに警告メッセージが送信されることを指定します。  
   
  *select_statement*  
  カーソルの結果セットを定義する標準の SELECT ステートメントです。 カーソル宣言の *select_statement* 内で `COMPUTE`、`COMPUTE BY`、`FOR BROWSE` および `INTO` キーワードは許可されません。  
@@ -138,7 +134,7 @@ OPTIMISTIC
   
 *select_statement* 内の句が、要求されたカーソルの種類の機能と矛盾する場合、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] によってカーソルが別の種類に暗黙的に変換されます。 詳細については、「暗黙的なカーソル変換」を参照してください。  
   
-FOR UPDATE [OF *column_name* [**,**...*n*]]  
+FOR UPDATE [OF *column_name* [ **,** ...*n*]]  
 カーソル内で更新できる列を定義します。 `OF <column_name> [, <... n>]` を指定した場合は、指定した列に対してのみ更新できます。 列リストなしで `UPDATE` を指定した場合は、すべての列を更新できます。ただし、`READ_ONLY` コンカレンシー オプションを指定した場合を除きます。  
   
 ## <a name="remarks"></a>Remarks  

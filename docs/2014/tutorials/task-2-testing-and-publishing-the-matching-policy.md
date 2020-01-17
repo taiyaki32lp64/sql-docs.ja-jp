@@ -7,15 +7,15 @@ ms.reviewer: ''
 ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: e1ffb6d7-fbc5-4695-b538-cc2302d1a17d
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 21f0cf5a4d096bfa0f4b673fdd716e2e48ee1396
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: a9957625e09bde8bb733eca6e564dfdcfbb0bd98
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56040763"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65484737"
 ---
 # <a name="task-2-testing-and-publishing-the-matching-policy"></a>タスク 2:照合ポリシーをテストおよびパブリッシュする
   このタスクでは、テスト、発行、 **Remove Duplicate Suppliers**照合ポリシー。  
@@ -24,11 +24,11 @@ ms.locfileid: "56040763"
   
 2.  リスト ボックスのすべての一致レコードと照合スコアを確認します。 持つレコードを**緑**関連付けられているアイコンはその前にあるピボット レコードと重複しています。 いくつかの例を次に示します。  
   
-    1.  **レコード ID 1000005**のレコードを一致**レコード Id:1000004**で**スコア。100%** 、両方のレコードの同じ値があるため、 **SupplierID (前提条件)**、 **Supplier Name**、および**ContactEmailAddress 列**します。 DQS はクラスターのピボット レコードとしてレコードをランダムに選択します。  
+    1.  レコードを**レコード ID:1000005**のレコードを一致**レコード Id:1000004**で**スコア。100%** 、両方のレコードの同じ値があるため、 **SupplierID (前提条件)** 、 **Supplier Name**、および**ContactEmailAddress 列**します。 DQS はクラスターのピボット レコードとしてレコードをランダムに選択します。  
   
     2.  レコード**1000023**一致するレコードの**1000022**と照合スコア。93% であるため、2 つのレコードが同じ値を持つこと**SupplierID (前提条件)** と**Supplier Name** 、列の値が異なる、 **ContactEmailAddress**列です。  
   
-    3.  一覧の一番下までスクロールし、レコード ID **1000051**と**1000052**します。 レコード**1000052**照合スコアとの一致と見なされます**91%** 2 つのレコードの同じ値があるため、 **SupplierID**と**ContactEmailAddress** 、列の値が異なる、 **Supplier Name**列。  
+    3.  2 つのレコードとレコード Id を表示するリストの一番下までスクロールします。**1000051**と**1000052**します。 レコード**1000052**照合スコアとの一致と見なされます**91%** 2 つのレコードの同じ値があるため、 **SupplierID**と**ContactEmailAddress** 、列の値が異なる、 **Supplier Name**列。  
   
      ![ポリシー定義 - ポリシーの結果](../../2014/tutorials/media/et-testingandpublishingthematchingpolicy-01.jpg "ポリシー定義 - ポリシーの結果")  
   
@@ -50,6 +50,6 @@ ms.locfileid: "56040763"
 7.  SQL Server Data Quality Services ダイアログ ボックスで、**発行** をクリック**OK**メッセージ ボックス。 定義した照合ポリシーを公開するようになりました、 **Suppliers**ナレッジ ベース。 このナレッジ ベースを使用して、入力ファイルに対して照合プロセスを実行し、重複を特定および削除できます。  
   
 ## <a name="next-step"></a>次の手順  
- [タスク 3:作成と一致するデータ品質プロジェクトを実行](../../2014/tutorials/task-3-creating-and-running-a-data-quality-project-for-matching.md)  
+ [タスク 3: 作成と一致するデータ品質プロジェクトを実行](../../2014/tutorials/task-3-creating-and-running-a-data-quality-project-for-matching.md)  
   
   

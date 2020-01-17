@@ -1,5 +1,5 @@
 ---
-title: getRef メソッド (SQLServerCallableStatement) |Microsoft Docs
+title: getRef メソッド (SQLServerCallableStatement) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: 0c7632a9-1ef6-46f0-8208-06a6cbd202e4
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: cc45aedc48220f2b16155db23dff9dcdb59760a3
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 1f0a37385750db130a82bee39e430f5d4632f139
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47598350"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67980565"
 ---
 # <a name="getref-method-sqlservercallablestatement"></a>getRef メソッド (SQLServerCallableStatement)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

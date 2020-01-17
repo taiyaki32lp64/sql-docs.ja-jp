@@ -8,17 +8,20 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: tutorial
 ms.assetid: 88a973cc-0f23-4ecf-adb6-5b06279c2df6
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: 0c0bf6d7db1b65e5a95413edf2088e3b1b79df60
-ms.sourcegitcommit: dd794633466b1da8ead9889f5e633bdf4b3389cd
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: a5a0b804cb1e5bf130179c7a91ec04fa0d064f12
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54143359"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71296047"
 ---
 # <a name="lesson-2-2-add-and-configure-the-foreach-loop-container"></a>レッスン 2-2:Foreach ループ コンテナーを追加して構成する
+
+[!INCLUDE[ssis-appliesto](../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
 
 このタスクでは、フラット ファイルのフォルダー全体にループ機能を付加し、レッスン 1 のデータ フロー変換と同じ変換を各フラット ファイルに適用します。 そのためには、Foreach ループ コンテナーを制御フローに追加して、構成します。  
   
@@ -43,21 +46,21 @@ Foreach ループ コンテナーを追加したら、フォルダー内の各�
   
 2.  **SSIS ツールボックス**で **[コンテナー]** を展開し、 **[ForEach ループ コンテナー]** を **[制御フロー]** タブのデザイン画面にドラッグします。  
   
-3.  新しい **ForEach ループ コンテナー**を右クリックし、**[編集]** を選択します。  
+3.  新しい **ForEach ループ コンテナー**を右クリックし、 **[編集]** を選択します。  
   
-4.  **[Foreach ループ エディター]** ダイアログの **[全般]** ページで、**[名前]** に「**Foreach File in Folder**」と入力します。 **[OK]** を選択します。  
+4.  **[Foreach ループ エディター]** ダイアログの **[全般]** ページで、 **[名前]** に「**Foreach File in Folder**」と入力します。 **[OK]** を選択します。  
   
-5.  Foreach ループ コンテナーを右クリックして **[プロパティ]** を選択し、**[プロパティ]** ウィンドウで **LocaleID** プロパティが **[英語 (米国)]** に設定されていることを確認します。  
+5.  Foreach ループ コンテナーを右クリックして **[プロパティ]** を選択し、 **[プロパティ]** ウィンドウで **LocaleID** プロパティが **[英語 (米国)]** に設定されていることを確認します。  
   
 ## <a name="configure-the-enumerator-for-the-foreach-loop-container"></a>ForEach ループ コンテナーの列挙子を構成する  
   
-1.  **Foreach File in Folder** をダブルクリックして、**[Foreach ループ エディター]** をもう一度開きます。  
+1.  **Foreach File in Folder** をダブルクリックして、 **[Foreach ループ エディター]** をもう一度開きます。  
   
 2.  **[コレクション]** を選択します。  
   
 3.  **[コレクション]** ページで、 **[Foreach File 列挙子]** を選択します。  
   
-4.  **[列挙子の構成]** で、**[参照]** を選択します。  
+4.  **[列挙子の構成]** で、 **[参照]** を選択します。  
   
 5.  **[フォルダーの参照]** ダイアログ ボックスで、サンプル データに含まれる Currency_*.txt ファイルが保存されている、コンピューター上のフォルダーに移動します。
 
@@ -67,23 +70,23 @@ Foreach ループ コンテナーを追加したら、フォルダー内の各�
   
 1.  **[変数のマッピング]** を選択します。  
   
-2.  **[変数のマッピング]** ページで、**[変数]** 列の空いているセルをクリックし、**[\<新しい変数...>]** を選択します。  
+2.  **[変数のマッピング]** ページで、 **[変数]** 列の空いているセルをクリックし、 **[\<新しい変数...>]** を選択します。  
   
-3.  **[変数の追加]** ダイアログ ボックスで、**[名前]** ボックスに「**varFileName**」と入力します。  
+3.  **[変数の追加]** ダイアログ ボックスで、 **[名前]** ボックスに「**varFileName**」と入力します。  
   
     > [!NOTE]  
     > 変数名の大文字と小文字は区別されます。  
   
 4.  **[OK]** を選択します。  
   
-5.  再び **[OK]** を選択し、**[Foreach ループ エディター]** ダイアログを閉じます。  
+5.  再び **[OK]** を選択し、 **[Foreach ループ エディター]** ダイアログを閉じます。  
   
 ## <a name="add-the-data-flow-task-to-the-loop"></a>データ フロー タスクをループに追加する  
   
 -   **Extract Sample Currency Data** データ フロー タスクを、**Foreach File in Folder** Foreach ループ コンテナーにドラッグします。  
   
 ## <a name="go-to-next-task"></a>次のタスクに進む  
-[手順 3:フラット ファイル接続マネージャーの変更](../integration-services/lesson-2-3-modifying-the-flat-file-connection-manager.md)  
+[ステップ 3:フラット ファイル接続マネージャーの変更](../integration-services/lesson-2-3-modifying-the-flat-file-connection-manager.md)  
   
 ## <a name="see-also"></a>参照  
 [Foreach ループ コンテナーを構成する](https://msdn.microsoft.com/library/519c6f96-5e1f-47d2-b96a-d49946948c25)  

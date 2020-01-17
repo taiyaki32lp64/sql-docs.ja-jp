@@ -1,5 +1,5 @@
 ---
-title: setAutoCommit メソッド (SQLServerConnection) |Microsoft Docs
+title: setAutoCommit コミットメソッド (SQLServerConnection) |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: db1e22d2-e53f-474e-8c99-cb1fff7f491a
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 517ce61f011de7cf5915c88895b9795b08767b20
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: dbf9b18fdc6b590f085b5be6babd64100006163a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47761570"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67975261"
 ---
 # <a name="setautocommit-method-sqlserverconnection"></a>setAutoCommit メソッド (SQLServerConnection)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -44,7 +43,7 @@ public void setAutoCommit(boolean value)
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- この setAutoCommit メソッドは、java.sql.Connection インターフェイスの setAutoCommit メソッドによって指定されます。  
+ この setAutoCommit コミットメソッドは、java. .sql. 接続インターフェイスの setAutoCommit コミットメソッドによって指定されます。  
   
  自動コミット モードの接続では、SQL ステートメントはすべて個別のトランザクションとして実行され、コミットされます。 それ以外の場合、SQL ステートメントは、[commit](../../../connect/jdbc/reference/commit-method-sqlserverconnection.md) メソッドの呼び出しで終了するトランザクションか、[rollback](../../../connect/jdbc/reference/rollback-method-sqlserverconnection.md) メソッドの呼び出しで終了するトランザクションのどちらかにグループ化されます。 既定では、新しい接続は自動コミット モードとなります。  
   

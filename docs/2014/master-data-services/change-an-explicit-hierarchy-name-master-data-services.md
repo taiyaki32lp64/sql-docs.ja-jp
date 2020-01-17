@@ -9,15 +9,15 @@ ms.topic: conceptual
 helpviewer_keywords:
 - explicit hierarchies, changing name
 ms.assetid: 12991603-474e-4042-b160-b1f7979694b1
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: df02cc4a8f3ed35a360ac6d323ce88640c49247e
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: e08f11f924cb74743c1317f4fa1548af62ddb5d8
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52768134"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65484036"
 ---
 # <a name="change-an-explicit-hierarchy-name-master-data-services"></a>明示的階層名を変更する (マスター データ サービス)
   [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]では、明示的階層の名前を変更できます。  
@@ -49,7 +49,7 @@ ms.locfileid: "52768134"
   
 9. クリックして**階層の保存**します。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [明示的階層 (マスター データ サービス)](../../2014/master-data-services/explicit-hierarchies-master-data-services.md)   
  [明示的階層を作成する (マスター データ サービス)](../../2014/master-data-services/create-an-explicit-hierarchy-master-data-services.md)   
  [明示的階層を削除する (マスター データ サービス)](../../2014/master-data-services/delete-an-explicit-hierarchy-master-data-services.md)  

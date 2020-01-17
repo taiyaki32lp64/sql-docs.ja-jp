@@ -11,15 +11,14 @@ helpviewer_keywords:
 ms.assetid: e9dd5357-ee3d-420a-9a89-d12ab5404e73
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 419b45c688f755d6e5f7cf86154ce6cc527fc6ea
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 0cdf2c06311e703b6a07667ba41d1c853c17eb86
+ms.sourcegitcommit: 43c3d8939f6f7b0ddc493d8e7a643eb7db634535
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47761660"
+ms.lasthandoff: 10/14/2019
+ms.locfileid: "72305889"
 ---
-# <a name="mssqlserver10509"></a>MSSQLSERVER_10509
+# <a name="mssqlserver_10509"></a>MSSQLSERVER_10509
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   
 ## <a name="details"></a>詳細  
@@ -31,10 +30,10 @@ ms.locfileid: "47761660"
 |イベント ソース|MSSQLSERVER|  
 |コンポーネント|SQLEngine|  
 |シンボル名|PG_INVALID_STMT|  
-|メッセージ テキスト|プラン ガイド '%.\*ls' を作成できません。**@stmt** または **@statement_start_offset** で指定したステートメントが構文エラーを含んでいるか、またはプラン ガイドでの使用に適していません。 有効な [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントを 1 つだけ指定するか、またはバッチ内のステートメントの有効な開始位置を指定します。 有効な開始位置を取得するには、動的管理関数 sys.dm_exec_query_stats の statement_start_offset 列のクエリを実行します。|  
+|メッセージ テキスト|プラン ガイド '%.\*ls' を作成できません。 **\@stmt** または **\@statement_start_offset** で指定されたステートメントは、構文エラーを含んでいるか、プラン ガイドで使用するには不適切です。 有効な [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントを 1 つだけ指定するか、またはバッチ内のステートメントの有効な開始位置を指定します。 有効な開始位置を取得するには、動的管理関数 sys.dm_exec_query_stats の statement_start_offset 列のクエリを実行します。|  
   
 ## <a name="explanation"></a>説明  
-**@stmt** または **@statement_start_offset** で指定したステートメントが構文エラーを含んでいるか、またはプラン ガイドでの使用に適していません。  
+**\@stmt** または **\@statement_start_offset** で指定されたステートメントは、構文エラーを含んでいるか、プラン ガイドで使用するには不適切です。  
   
 ## <a name="user-action"></a>ユーザーの操作  
 有効な [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントを 1 つだけ指定するか、またはバッチ内のステートメントの有効な開始位置を指定します。 有効な開始位置を取得するには、動的管理関数 sys.dm_exec_query_stats の statement_start_offset 列のクエリを実行します。  

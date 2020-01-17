@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 6e0d5fd1-ec93-4348-a77a-08f5ba738bc6
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: f8dc57d738c1d5726d2208b930c5d4fadcd93b39
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 3f3a7568c0849844526ef5f172bcecc0a5857268
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47786700"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68114327"
 ---
 # <a name="sql-server-browsing-example"></a>SQL Server の参照の例
 次の例はどのように**SQLBrowseConnect** for SQL Server ドライバーで使用可能な接続を参照する場合に使用します。 最初に、アプリケーションは、接続ハンドルを要求します。  
@@ -77,7 +76,7 @@ SQLBrowseConnect(hdbc, "DATABASE=pubs;", SQL_NTS, BrowseResult,
 "DSN=MySQLServer;SERVER=green;UID=Smith;PWD=Sesame;DATABASE=pubs;"  
 ```  
   
- ドライバーによって返される最終的な接続文字列は、それぞれのキーワードの後にわかりやすい名前を含まないも、アプリケーションで指定されていない省略可能なキーワードを含んでいるか。 アプリケーションでは、この文字列を使用します。 **SQLDriverConnect** (切断) 後の現在の接続ハンドル上のデータ ソースに再接続するか、異なる接続ハンドルのデータ ソースに接続します。 以下に例を示します。  
+ ドライバーによって返される最終的な接続文字列は、それぞれのキーワードの後にわかりやすい名前を含まないも、アプリケーションで指定されていない省略可能なキーワードを含んでいるか。 アプリケーションでは、この文字列を使用します。 **SQLDriverConnect** (切断) 後の現在の接続ハンドル上のデータ ソースに再接続するか、異なる接続ハンドルのデータ ソースに接続します。 例:  
   
 ```  
 SQLDriverConnect(hdbc, hwnd, BrowseResult, SQL_NTS, ConnStrOut,  

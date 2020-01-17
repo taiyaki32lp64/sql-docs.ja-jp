@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: 92993f7b-7243-4aec-906d-0b0379798242
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: ed99b26641b6d87fa6fe3bf07f47c21eacb96d89
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: 0c395bb74e8bde83bc2f89fa07f541183297300b
+ms.sourcegitcommit: 0818f6cc435519699866db07c49133488af323f4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52405477"
+ms.lasthandoff: 06/20/2019
+ms.locfileid: "67284935"
 ---
 # <a name="data-types-supported-ssas-tabular"></a>サポートされているデータ型 (SSAS 表形式)
   このトピックでは、テーブル モデルで使用できるデータ型について説明し、データが計算される場合または Data Analysis Expressions (DAX) の数式で使用される場合の暗黙的な変換についても解説します。  
@@ -69,12 +68,12 @@ ms.locfileid: "52405477"
 >  131,072 文字を超える文字列を含む **varchar(max)** 列からインポートすることはできません。  
   
 ### <a name="table-data-type"></a>table データ型  
- また、DAX では *table* データ型を使用します。 このデータ型は、集計やタイム インテリジェンス計算など、DAX の多くの関数で使用されます。 一部の関数は、テーブルへの参照を受け取ります。また、他の関数の入力として使用できるテーブルを返す関数もあります。 入力としてテーブルを受け取る一部の関数では、テーブルに評価される式を指定できます。また、ベース テーブルへの参照を受け取る関数もあります。 特定の関数の要件については、「 [DAX 関数リファレンス](https://msdn.microsoft.com/library/ee634396.aspx)」を参照してください。  
+ また、DAX では *table* データ型を使用します。 このデータ型は、集計やタイム インテリジェンス計算など、DAX の多くの関数で使用されます。 一部の関数は、テーブルへの参照を受け取ります。また、他の関数の入力として使用できるテーブルを返す関数もあります。 入力としてテーブルを受け取る一部の関数では、テーブルに評価される式を指定できます。また、ベース テーブルへの参照を受け取る関数もあります。 特定の関数の要件については、「 [DAX 関数リファレンス](/dax/dax-function-reference)」を参照してください。  
   
 ##  <a name="bkmk_implicit"></a> DAX 数式の暗黙的なデータ型変換と明示的なデータ型変換  
  各 DAX 関数には、入力および出力として使用するデータ型について固有の要件があります。 たとえば、一部の関数は、特定の引数に整数や日付の指定が必要です。テキストやテーブルの指定が必要な関数もあります。  
   
- 引数として指定する列内のデータと、関数が受け取るデータ型との互換性がない場合、DAX では多くの場合エラーが返されます。 ただし、DAX は可能な限り、必要なデータ型への暗黙的な変換を試行します。 以下に例を示します。  
+ 引数として指定する列内のデータと、関数が受け取るデータ型との互換性がない場合、DAX では多くの場合エラーが返されます。 ただし、DAX は可能な限り、必要なデータ型への暗黙的な変換を試行します。 例 :  
   
 -   数値、たとえば「123」, は、文字列として入力できます。 DAX はこの文字列を解析し、数値データ型として指定しようとします。  
   
@@ -189,7 +188,7 @@ ms.locfileid: "52405477"
 |BLANK OR BLANK|空白|[エラー]|  
 |BLANK AND BLANK|空白|[エラー]|  
   
- 特定の関数または演算子で空白を処理する方法の詳細については、「 [DAX 関数リファレンス](https://msdn.microsoft.com/library/ee634396.aspx)」セクションの各 DAX 関数のトピックを参照してください。  
+ 特定の関数または演算子で空白を処理する方法の詳細については、「 [DAX 関数リファレンス](/dax/dax-function-reference)」セクションの各 DAX 関数のトピックを参照してください。  
   
 ## <a name="see-also"></a>参照  
  [データ ソース &#40;SSAS テーブル&#41;](../data-sources-ssas-tabular.md)   

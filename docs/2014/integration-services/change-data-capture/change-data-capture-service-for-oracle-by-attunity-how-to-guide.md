@@ -7,15 +7,15 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: f50178e7-6d9a-45f9-bfce-61260aa882c1
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 87fef8361ee5c04bd144d61e7109fd073755559d
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 712c89918af1b66bb4c3e50c0ec08ef44d1222d7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52804584"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62771422"
 ---
 # <a name="change-data-capture-service-for-oracle-by-attunity-how-to-guide"></a>Change Data Capture Service for Oracle by Attunity 操作ガイド
   このセクションでは、CDC Service 構成コンソールのタスクを実行する方法について説明します。  

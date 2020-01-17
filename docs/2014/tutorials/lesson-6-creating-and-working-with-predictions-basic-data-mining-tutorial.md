@@ -11,11 +11,11 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: df86c46bdae8a40a5fa49d38517e8e5588d50e09
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56041393"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63185396"
 ---
 # <a name="lesson-6-creating-and-working-with-predictions-basic-data-mining-tutorial"></a>レッスン 6: 予測 (基本的なデータ マイニング チュートリアル) の作成と操作
   作成したデータ マイニング モデルのトレーニング、テスト、および検証を行ってきました。 このモデルを使用して、新しい絞り込みメール配信キャンペーンに反応する可能性が最も高い顧客を識別する準備ができています。  

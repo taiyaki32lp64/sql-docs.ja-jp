@@ -7,17 +7,17 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 56105f3f-e500-4669-8c8e-acf434527727
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 4e14cbca906a57f7b15da719a79b45a2291a38d8
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: ef4f5d42ae3451d4199e84480a5672e437d7ca5f
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52780274"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62892438"
 ---
-# <a name="step-2-adding-and-configuring-logging"></a>手順 2:追加してログ記録の構成
+# <a name="step-2-adding-and-configuring-logging"></a>手順 2:ログ機能の追加と設定
   ここでは、Lesson 3.dtsx パッケージのデータ フローのログを有効にします。 次に、PipelineExecutionPlan イベントと PipelineExecuteTrees イベントを記録するテキスト ファイル ログ プロバイダーを構成します。 テキスト ファイル ログ プロバイダーは、表示や移行が容易なログを作成します。 パッケージの基本テスト段階では、この簡潔なログ ファイルは特に便利です。 ログ エントリは、 [!INCLUDE[ssIS](../includes/ssis-md.md)] デザイナーの [ログ イベント] ウィンドウでも確認できます。  
   
 ### <a name="to-add-logging-to-the-package"></a>パッケージにログ機能を追加するには  
@@ -34,7 +34,7 @@ ms.locfileid: "52780274"
   
 5.  必要に応じて、 **[説明]** の内容を修正します。  
   
-6.  **構成**列で、をクリックして**\<新しい接続 >** ログ情報を書き込む先を指定します。  
+6.  **構成**列で、をクリックして **\<新しい接続 >** ログ情報を書き込む先を指定します。  
   
      **[ファイル接続マネージャー エディター]** ダイアログ ボックスで、 **[使用法の種類]** ボックスの一覧から **[ファイルの作成]** を選択し、 **[参照]** をクリックします。 既定では、 **[ファイルの選択]** ダイアログ ボックスにこのプロジェクトのフォルダーが表示されますが、ログ情報を別の場所に保存することもできます。  
   
@@ -58,6 +58,6 @@ ms.locfileid: "52780274"
 14. **[OK]** をクリックします。  
   
 ## <a name="next-steps"></a>次の手順  
- [手順 3:レッスン 3 のチュートリアル パッケージのテスト](../integration-services/lesson-3-3-testing-the-lesson-3-tutorial-package.md)  
+ [ステップ 3:レッスン 3 のチュートリアル パッケージのテスト](../integration-services/lesson-3-3-testing-the-lesson-3-tutorial-package.md)  
   
   

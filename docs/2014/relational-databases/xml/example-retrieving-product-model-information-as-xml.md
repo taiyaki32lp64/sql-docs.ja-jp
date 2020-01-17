@@ -1,5 +1,5 @@
 ---
-title: '例 : XML での製品モデル情報の取得 | Microsoft Docs'
+title: 例:XML での製品モデル情報の取得 | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -9,17 +9,17 @@ ms.topic: conceptual
 helpviewer_keywords:
 - RAW mode, retrieving XML information example
 ms.assetid: 3828b4ca-3ab2-444f-9c58-8be6e7f064a6
-author: douglaslMS
-ms.author: douglasl
+author: MightyPen
+ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 4ec7ed358ab8c6c5f42e378a23dd4ba911800ae3
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: b48b333a5619aaad7f7f6af1c6e8cf908ba35bb1
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48219882"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62704717"
 ---
-# <a name="example-retrieving-product-model-information-as-xml"></a>例 : XML での製品モデル情報の取得
+# <a name="example-retrieving-product-model-information-as-xml"></a>例:XML での製品モデル情報の取得
   次の クエリでは、出力モデル情報が返されます。 `RAW` モードは、 `FOR XML` 句で指定します。  
   
 ## <a name="example"></a>例  
@@ -65,7 +65,7 @@ GO
 </row>  
 ```  
   
- 必要に応じて指定することができます、`TYPE`として結果を取得するディレクティブ`xml`型。 `TYPE` ディレクティブを指定しても、結果の内容は変更されません。 結果のデータ型のみが変更されます。  
+ 結果を `xml` 型で取得するために、必要に応じて `TYPE` ディレクティブを指定できます。 `TYPE` ディレクティブを指定しても、結果の内容は変更されません。 結果のデータ型のみが変更されます。  
   
 ```  
 USE AdventureWorks2012;  

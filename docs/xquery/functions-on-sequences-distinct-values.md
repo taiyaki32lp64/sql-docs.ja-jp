@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: f4c2bb53-2bec-4f1a-9c00-cf997fb7ae5b
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 48b338416b7bd464a69c424354f4029c719fef33
-ms.sourcegitcommit: 0f7cf9b7ab23df15624d27c129ab3a539e8b6457
+ms.openlocfilehash: d2f856c9b351c776651f08e66f90c7f567a5dcfc
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51292398"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68223732"
 ---
 # <a name="functions-on-sequences---distinct-values"></a>シーケンスの関数 - distinct-values
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -40,16 +39,16 @@ fn:distinct-values($arg as xdt:anyAtomicType*) as xdt:anyAtomicType*
  アトミック値のシーケンス。  
   
 ## <a name="remarks"></a>コメント  
- すべての種類に渡されるアトミック値の**distinct-values()** 同じ基本型のサブタイプにする必要があります。 受け付けられるベースの型をサポートする型では、 **eq**操作。 この型には、3 つの組み込み数値基本データ型、date/time 基本データ型、xs:string、xs:boolean、および xdt:untypedAtomic が含まれます。 xdt:untypedAtomic 型の値は、xs:string にキャストされます。 これらの型が混在している場合、または他の型の他の値が渡された場合は、静的エラーが発生します。  
+ すべての種類に渡されるアトミック値の**distinct-values()** 同じ基本型のサブタイプにする必要があります。 受け付けられるベースの型をサポートする型では、 **eq**操作。 これらの型には、次の 3 つの組み込み数値基本データ型、日付/時刻の基本型、xs:string、xs:boolean、および xdt:untypedAtomic が含まれます。 Xdt:untypedAtomic 型の値は、xs:string にキャストされます。 これらの型の混在がある場合、またはその他の種類の他の値が渡された場合は、静的エラーが発生します。  
   
- 結果**distinct-values()** 元のカーディナリティを持つ、xdt:untypedAtomic の場合に xs:string など、渡された型の基本型を受信します。 入力が静的に空の場合は、結果が暗黙的に空になり、静的エラーが生成されます。  
+ 結果**distinct-values()** 元のカーディナリティを持つ、xdt:untypedAtomic の場合に xs:string など、渡された型の基本型を受信します。 入力が静的に空の場合、結果が暗黙的し、静的エラーが発生します。  
   
- xs:string 型の値は、XQuery の既定の Unicode コードポイント照合順序と比較されます。  
+ Xs:string 型の値は、XQuery の既定の Unicode コード ポイント照合順序と比較されます。  
   
 ## <a name="examples"></a>使用例  
  このトピックではさまざまなに格納されている XML インスタンスに対して XQuery の例について**xml**型の列には、AdventureWorks データベース。  
   
-### <a name="a-using-the-distinct-values-function-to-remove-duplicate-values-from-the-sequence"></a>A. distinct-values() 関数を使用てシーケンス内の重複する値を削除する  
+### <a name="a-using-the-distinct-values-function-to-remove-duplicate-values-from-the-sequence"></a>A. Distinct-values() 関数を使用して、シーケンスから重複する値を削除するには  
  この例では電話番号を含む XML インスタンスが割り当てられている、 **xml**型の変数。 この変数を使用してに対して指定した XQuery、 **distinct-values()** 重複部分を含まない電話番号の一覧をコンパイルする関数。  
   
 ```  
@@ -81,7 +80,7 @@ select @x.query('
 ') as result  
 ```  
   
- クエリは 1 2 を返します。  
+ クエリでは、1 2 を返します。  
   
 ### <a name="implementation-limitations"></a>実装の制限事項  
  制限事項を次に示します。  
@@ -92,9 +91,9 @@ select @x.query('
   
 -   **Distinct-values()** xs:duration 型の値に対して関数がサポートされていません。  
   
--   照合順序を指定する構文オプションはサポートされません。  
+-   照合順序を指定する構文オプションはサポートされていません。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [xml データ型に対する XQuery 関数](../xquery/xquery-functions-against-the-xml-data-type.md)  
   
   

@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: d304eae7-5116-40ee-a0fa-0a3c0bc20c01
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 47b1de42b9b9ed41653a7aa2358d7908b3dc894f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 9a0f63af10e8baf21cf17d316f64e66d4e663852
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47801945"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68013181"
 ---
 # <a name="affinity64-input-output-mask-server-configuration-option"></a>affinity64 Input-Output mask サーバー構成オプション
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

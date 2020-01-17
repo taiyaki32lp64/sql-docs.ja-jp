@@ -17,14 +17,13 @@ helpviewer_keywords:
 ms.assetid: ed84567f-7b91-4b44-b5b2-c400bda4590d
 author: rothja
 ms.author: jroth
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: c7c0c75d1bbeb25dade2bb8e333067fb244d8248
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e070cfc4b02ae52ab755306a29eb90c6afc912cf
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47831000"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68075498"
 ---
 # <a name="use-the-inserted-and-deleted-tables"></a>inserted テーブルと deleted テーブルの使用
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -51,7 +50,7 @@ ms.locfileid: "47831000"
 > [!NOTE]  
 >  トリガーの動作が、データ変更の影響のある行の数に依存する場合、複数行データ変更 (SELECT ステートメントに基づく INSERT、DELETE、または UPDATE) に @@ROWCOUNT の検査などのテストを使用し、適切な動作を実行する必要があります。  
   
- [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] では、AFTER トリガー用の inserted テーブルおよび deleted テーブル内で **text**列、 **ntext**列、または **image** 列を参照することを禁止しています。 これらのデータ型は旧バージョンとの互換性のためだけに用意されているものです。 大きなデータを格納するには、 **varchar(max)**、 **nvarchar(max)**、および **varbinary(max)** データ型を使用することをお勧めします。 AFTER トリガーと INSTEAD OF トリガーでは両方とも、inserted テーブルおよび deleted テーブルで **varchar(max)**、**nvarchar(max)**、および **varbinary(max)** 型のデータがサポートされます。 詳細については、「[CREATE TRIGGER &#40;Transact-SQL&#41;](../../t-sql/statements/create-trigger-transact-sql.md)」を参照してください。  
+ [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] では、AFTER トリガー用の inserted テーブルおよび deleted テーブル内で **text**列、 **ntext**列、または **image** 列を参照することを禁止しています。 これらのデータ型は旧バージョンとの互換性のためだけに用意されているものです。 大きなデータを格納するには、 **varchar(max)** 、 **nvarchar(max)** 、および **varbinary(max)** データ型を使用することをお勧めします。 AFTER トリガーと INSTEAD OF トリガーでは両方とも、inserted テーブルおよび deleted テーブルで **varchar(max)** 、**nvarchar(max)** 、および **varbinary(max)** 型のデータがサポートされます。 詳細については、「[CREATE TRIGGER &#40;Transact-SQL&#41;](../../t-sql/statements/create-trigger-transact-sql.md)」を参照してください。  
   
  **トリガーで inserted テーブルを使用してビジネス ルールを適用する例**  
   
@@ -76,7 +75,7 @@ ms.locfileid: "47831000"
   
  INSERT、UPDATE、または DELETE の各ステートメントが INSTEAD OF トリガーを含むビューを参照する場合、 [!INCLUDE[ssDE](../../includes/ssde-md.md)] は、どのテーブルに対しても直接に動作を実行するのではなく、そのトリガーを呼び出します。 呼び出されたトリガーは、inserted テーブルおよび deleted テーブルの情報を使用して、ベース テーブルで要求された動作を実装するために必要なステートメントを作成する必要があります。その際、ビューに作成された inserted テーブルおよび deleted テーブルの情報の形式がベース テーブルのデータ形式と異なっていてもかまいません。  
   
- ビューに定義された INSTEAD OF トリガーに渡される inserted テーブルおよび deleted テーブルの形式は、ビューに定義された SELECT ステートメントの選択リストに一致します。 例 :  
+ ビューに定義された INSTEAD OF トリガーに渡される inserted テーブルおよび deleted テーブルの形式は、ビューに定義された SELECT ステートメントの選択リストに一致します。 例:  
   
 ```  
 USE AdventureWorks2012;  

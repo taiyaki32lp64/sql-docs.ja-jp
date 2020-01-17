@@ -11,11 +11,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: c8a4377d11040abde228383ec35dd9284f14760a
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52754224"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63278933"
 ---
 # <a name="protocols-for-ltservergt-sql-server-configuration-manager"></a>&lt;server&gt; のプロトコル (SQL Server 構成マネージャー)
   [!INCLUDE[ssDE](../../includes/ssde-md.md)]が使用するプロトコルを構成するには、コンソール ペインで目的のサーバー インスタンスに対応する **[プロトコル]** をクリックして、詳細ペインで適切なプロトコルを右クリックし、 **[プロパティ]** をクリックします。  

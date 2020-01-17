@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 75a21910-607f-463a-ae18-a17130dafb7e
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 999eb43304150c9af8d61be591f3c4c0ab62566f
-ms.sourcegitcommit: 1a5448747ccb2e13e8f3d9f04012ba5ae04bb0a3
+ms.openlocfilehash: 31af4a68ec830a5fd514173c831ce3863fef7443
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51559579"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67922354"
 ---
 # <a name="registering-business-objects-on-the-client-for-use-with-dcom"></a>DCOM で使用するためにクライアントにビジネス オブジェクトを登録する
 カスタム ビジネス オブジェクトは、クライアント側が DCOM 経由で使用できる識別子 (CLSID) に、プログラム名 (ProgId) をマップできることを確認する必要があります。 このため、DCOM オブジェクトの ProgID はクライアント側のレジストリにし、サーバー側ビジネス オブジェクトのクラス ID にマップする必要があります。 その他のサポートされているプロトコル (HTTP、HTTPS、およびプロセス内)、これは必要ありません。  

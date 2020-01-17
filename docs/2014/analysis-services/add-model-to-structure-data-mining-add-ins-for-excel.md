@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 12/29/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - mining models, creating
@@ -13,12 +12,12 @@ ms.assetid: 8efd5bf4-4e6a-4ee8-971a-6efaed5f3b76
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 1aa72d2c9e2fcf953e8c34d7fdddd656c76b0685
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: ce68071f27897e181063299e561dfaa7d9f8aab7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52521040"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66062879"
 ---
 # <a name="add-model-to-structure-data-mining-add-ins-for-excel"></a>構造へのモデルの追加 (Excel 用データ マイニング アドイン)
   ![モデル構造 ボタンを追加](media/dmc-addmodel.gif "モデル構造 ボタンの追加")  
@@ -35,7 +34,7 @@ ms.locfileid: "52521040"
   
 2.  **構造の選択** ダイアログ ボックスで、をクリックし、使用するデータが含まれている構造を選択**次**します。  
   
-     **ヒント:**:不明などのマイニング構造には、必要なデータ使用にはが含まれています場合、**ドキュメント モデル**ウィザード列とデータに関する基本的な統計情報を表示します。  
+     **ヒント**:不明などのマイニング構造には、必要なデータ使用にはが含まれています場合、**ドキュメント モデル**ウィザード列とデータに関する基本的な統計情報を表示します。  
   
      マイニング構造が見つからない場合を使用している現在の接続を確認します。 別のサーバーへの接続を開く必要がある場合もあります。  
   

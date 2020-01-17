@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: b14806da-80d9-4da4-bb87-f558b36a6ac0
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 848034e40a4b3a7c98cd59eb7204c7f00b147b67
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 28a16d531cceb7147c5d4971d662797cb57242e2
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47827390"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67918011"
 ---
 # <a name="nextrecordset-method-example-vb"></a>NextRecordset メソッドの例 (VB)
 この例では、 [NextRecordset](../../../ado/reference/ado-api/nextrecordset-method-ado.md)メソッドの 3 つの異なるから成る複合コマンド ステートメントを使用してレコード セット内のデータを表示する**選択**ステートメント。  
@@ -95,6 +94,6 @@ End Sub
 'EndNextRecordsetVB  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [NextRecordset メソッド (ADO)](../../../ado/reference/ado-api/nextrecordset-method-ado.md)   
  [Recordset オブジェクト (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)

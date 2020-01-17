@@ -136,11 +136,11 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: e4e45de57f4ea1ea88b72df7190e5ec8c3a1f768
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53361484"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62627735"
 ---
 # <a name="showplan-logical-and-physical-operators-reference"></a>プラン表示の論理操作と物理操作のリファレンス
   操作は、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] でクエリやデータ操作言語 (DML) ステートメントを実行する方法を示します。 クエリ オプティマイザーでは、操作を使用して、クエリで指定された結果を作成するクエリ プラン、または DML ステートメントで指定された操作を実行するクエリ プランが構築されます。 クエリ プランは、物理操作をツリー構成で表現したものです。 クエリ プランを表示するには、SET SHOWPLAN ステートメント、 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]のグラフィカル実行プラン オプション、または SQL Server Profiler Showplan イベント クラスを使用します。  
@@ -155,11 +155,11 @@ ms.locfileid: "53361484"
   
  物理操作では、初期化、データの収集が行われた後に終了されます。 具体的には、物理操作は次の 3 つのメソッド呼び出しに応答できます。  
   
--   **Init()**:**Init()** メソッドにより、物理操作自体を初期化し、必要なデータ構造を設定します。 通常、物理操作が受け取る **Init()** 呼び出しは 1 つだけですが、多くの Init() 呼び出しを受け取る場合もあります。  
+-   **Init()** :**Init()** メソッドは、物理操作自体を初期化し、必要なデータ構造を設定します。 通常、物理操作が受け取る **Init()** 呼び出しは 1 つだけですが、多くの Init() 呼び出しを受け取る場合もあります。  
   
--   **GetNext()**:**GetNext()** メソッドにより、物理操作を最初に、またはそれ以降のデータ行を取得します。 物理操作が受け取る **GetNext()** 呼び出しは、多数の場合もゼロの場合もあります。  
+-   **GetNext()** :**GetNext()** メソッドにより、物理操作がデータの最初の行または後続の行を取得します。 物理操作が受け取る **GetNext()** 呼び出しは、多数の場合もゼロの場合もあります。  
   
--   **Close()**:**Close()** メソッドにより、物理操作をいくつかのクリーンアップ操作を実行し、シャット ダウンします。 物理操作は、 **Close()** 呼び出しを 1 つだけ受け取ります。  
+-   **Close()** :**Close()** メソッドにより、物理操作はクリーンアップ操作を実行し、物理操作自体がシャットダウンされます。 物理操作は、 **Close()** 呼び出しを 1 つだけ受け取ります。  
   
  **GetNext()** メソッドは、データ行を 1 行返します。このメソッドが呼び出された回数は、SET STATISTICS PROFILE ON または SET STATISTICS XML ON を使用して生成されるプラン表示出力で **ActualRows** として表示されます。 これらの SET オプションの詳細については、「[SET STATISTICS PROFILE &#40;Transact-SQL&#41;](/sql/t-sql/statements/set-statistics-profile-transact-sql)」および「[SET STATISTICS XML &#40;Transact-SQL&#41;](/sql/t-sql/statements/set-statistics-xml-transact-sql)」を参照してください。  
   
@@ -217,9 +217,9 @@ ms.locfileid: "53361484"
 |![Dynamic カーソル操作アイコン](../../2014/database-engine/media/dynamic-32x.gif "Dynamic カーソル操作アイコン")|`Dynamic`|`Dynamic` 操作は、他のユーザーによる変更をすべて表示できるカーソルを使用します。|  
 |![Spool 操作アイコン](../../2014/database-engine/media/spool-32x.gif "Spool 操作アイコン")|**Eager Spool**|**Eager Spool**演算子は、入力全体に格納されている一時隠しオブジェクトに各行を格納する、`tempdb`データベース。 演算子が巻き戻される場合 (など、`Nested Loops`演算子)、再バインドが不要、入力を再スキャンの代わりにスプールされたデータを使用します。 再バインドが必要な場合は、スプールされたデータが破棄され、(再バインドされる) 入力の再スキャンによりスプール オブジェクトが再構築されます。 **Eager Spool** 操作では、操作のスプール ファイルが "集中的" に構築されます。たとえば、スプールの親操作によって最初の行が要求されると、スプール操作によって入力操作からのすべての行が使用され、それらの行がスプールに格納されます。 **Eager Spool** は論理操作です。|  
 |![Fetch Query カーソル操作アイコン](../../2014/database-engine/media/fetch-query-32x.gif "Fetch Query カーソル操作アイコン")|`Fetch Query`|`Fetch Query` 操作は、カーソルに対してフェッチが実行されたときに行を取得します。|  
-|![Filter (データベース エンジン) 操作アイコン](../../2014/database-engine/media/filter-32x.gif "Filter (データベース エンジン) 操作アイコン")|**Assert**|**フィルター**演算子は、入力スキャンに表示されるフィルター式 (述語) を満たす行だけを返す、`Argument`列。|  
+|![Filter (データベース エンジン) 操作アイコン](../../2014/database-engine/media/filter-32x.gif "Filter (データベース エンジン) 操作アイコン")|**[フィルター]**|**フィルター**演算子は、入力スキャンに表示されるフィルター式 (述語) を満たす行だけを返す、`Argument`列。|  
 |なし|`Flow Distinct`|`Flow Distinct` 論理操作は入力をスキャンし、重複部分を削除します。 一方、`Distinct`操作はすべての入力を任意の出力を生成する前に、 **FlowDistinct**操作はこれが、入力から得られると各行を返します (該当する行が重複しない限り、この場合は破棄されます)。|  
-|なし|`Full Outer Join`|`Full Outer Join` 論理操作は、最初 (上部) の入力で結合述語に適合し、2 番目 (下部) の入力の各行と結合された各行を返します。 また、以下の行も返します。<br /><br /> - 2 番目の入力に一致する行がない最初の入力の行。<br /><br /> - 最初の入力に一致する行がない 2 番目の入力の行。<br /><br /> <br /><br /> 一致する値がない入力は NULL 値として返されます。 `Full Outer Join` は論理操作です。|  
+|なし|`Full Outer Join`|`Full Outer Join` 論理操作は、最初 (上部) の入力で結合述語に適合し、2 番目 (下部) の入力の各行と結合された各行を返します。 また、以下の行も返します。<br /><br /> \- 2 番目の入力に一致する行がない最初の入力の行。<br /><br /> \- 最初の入力に一致する行がない 2 番目の入力の行。<br /><br /> <br /><br /> 一致する値がない入力は NULL 値として返されます。 `Full Outer Join` は論理操作です。|  
 |![Gather Streams 並列操作アイコン](../../2014/database-engine/media/parallelism-32x.gif "Gather Streams 並列操作アイコン")|**Gather Streams**|**Gather Streams** 操作は、並列クエリ プランでのみ使用されます。 **Gather Streams** 操作は複数の入力ストリームを使用し、入力ストリームを組み合わせてレコードの単一出力ストリームを作成します。 レコードの内容と形式は変更されません。 この操作で順序を保持する場合は、すべての入力ストリームが並べ替えられている必要があります。 出力を並べ替える場合、`Argument`列には、ORDER BY:() () 述語および並べ替える列の名前が含まれています。 **Gather Streams** は論理操作です。|  
 |![Hash Match 操作アイコン](../../2014/database-engine/media/hash-match-32x.gif "Hash Match 操作アイコン")|`Hash Match`|`Hash Match` 操作は、ビルド入力の行ごとにハッシュ値を計算してハッシュ テーブルを作成します。 ハッシュのハッシュ値の作成に使用される列の一覧を:() () 述語が表示されます、`Argument`列。 次に、該当するプローブ行ごとに同じハッシュ関数を使用してハッシュ値が計算され、ハッシュ テーブル内で一致検索が行われます。 残余述語が存在する場合 (内の residual:() 特定、`Argument`列)、その述語は、行を一致と見なされるにも満たす必要があります。 動作は、次に示すように、実行している論理操作によって異なります。<br /><br /> すべての結合では、最初 (上部) の入力を使用してハッシュ テーブルを作成し、2 番目 (下部) の入力を使用してハッシュ テーブルを探索します。 出力は、結合の種類で指定されているとおりに一致します (または一致しません)。 複数の結合が同じ結合列を使用する場合、これらの操作はハッシュ チームにグループ化されます。<br /><br /> Distinct 操作または Aggregate 操作の場合、入力を使用してハッシュ テーブルを作成します (重複部分を削除し、集計式を計算します)。 ハッシュ テーブルを作成したら、テーブルをスキャンしすべてのエントリを出力します。<br /><br /> Union 操作の場合、最初の入力を使用してハッシュ テーブルを作成します (重複部分は削除します)。 2 番目の入力 (重複部分はありません) を使用して、ハッシュ テーブルを探索して一致しないすべての行を返します。次に、ハッシュ テーブルをスキャンし、すべてのエントリを返します。<br /><br /> <br /><br /> `Hash Match` は物理操作です。|  
 |![If 言語要素アイコン](../../2014/database-engine/media/if-32x.gif "If 言語要素アイコン")|`If`|`If` 操作では、式に基づく条件処理を実行します。 `If` は言語要素です。|  

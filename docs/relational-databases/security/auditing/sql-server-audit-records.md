@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 7a291015-df15-44fe-8d53-c6d90a157118
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: 7a11a699a9bba7f04459bbcc39ef6fcf085cbed1
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 2681d021099e8b10150efd255e27cf436c665a90
+ms.sourcegitcommit: b7618a2a7c14478e4785b83c4fb2509a3e23ee68
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52539685"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73926030"
 ---
 # <a name="sql-server-audit-records"></a>SQL Server 監査レコード
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -28,27 +27,27 @@ ms.locfileid: "52539685"
   
 |列名|[説明]|型|常に使用可能かどうか|  
 |-----------------|-----------------|----------|----------------------|  
-|**event_time**|監査可能なアクションが発生した日付/時刻。|**datetime2**|[ユーザー アカウント制御]|  
-|**sequence_no**|大きすぎて監査の書き込みバッファーに収まらなかった 1 つの監査レコード内のレコードの順序を追跡します。|**int**|[ユーザー アカウント制御]|  
-|**action_id**|アクションの ID。<br /><br /> ヒント: **action_id** を述語として使用するには、文字列から数値に変換する必要があります。 詳細については、「 [Filter SQL Server Audit on action_id / class_type predicate (action_id/class_type 述語での SQL Server 監査のフィルター選択)](https://blogs.msdn.com/b/sqlsecurity/archive/2012/10/03/filter-sql-server-audit-on-action-id-class-type-predicate.aspx)」を参照してください。|**varchar (4)**|[ユーザー アカウント制御]|  
-|**succeeded**|監査イベントをトリガーするアクションのアクセス許可のチェックが成功または失敗したかどうかを示します。 |**bit**<br /> - 1 = 成功 <br />0 = 失敗|[ユーザー アカウント制御]|  
+|**event_time**|監査可能なアクションが発生した日付/時刻。|**datetime2**|はい|  
+|**sequence_no**|大きすぎて監査の書き込みバッファーに収まらなかった 1 つの監査レコード内のレコードの順序を追跡します。|**int**|はい|  
+|**action_id**|アクションの ID。<br /><br /> ヒント:**action_id** を述語として使用するには、文字列から数値に変換する必要があります。 詳細については、「 [Filter SQL Server Audit on action_id / class_type predicate (action_id/class_type 述語での SQL Server 監査のフィルター選択)](https://blogs.msdn.com/b/sqlsecurity/archive/2012/10/03/filter-sql-server-audit-on-action-id-class-type-predicate.aspx)」を参照してください。|**varchar (4)**|はい|  
+|**succeeded**|監査イベントをトリガーするアクションのアクセス許可のチェックが成功または失敗したかどうかを示します。 |**bit**<br /> - 1 = 成功 <br />0 = 失敗|はい|  
 |**permission_bitmask**|権限の許可、拒否、または取り消しを示します (該当する場合)。|**bigint**|いいえ|  
 |**is_column_permission**|列レベル権限を示すフラグ。|**bit** <br />- 1 = True <br />0 = False|いいえ|  
-|**session_id**|イベントが発生したセッションの ID。|**int**|[ユーザー アカウント制御]|  
-|**server_principal_id**|アクションが実行されるログイン コンテキストの ID。|**int**|[ユーザー アカウント制御]|  
+|**session_id**|イベントが発生したセッションの ID。|**int**|はい|  
+|**server_principal_id**|アクションが実行されるログイン コンテキストの ID。|**int**|はい|  
 |**database_principal_id**|アクションが実行されるデータベース ユーザー コンテキストの ID。|**int**|いいえ|  
-|**object_ id**|監査が発生したエンティティのプライマリ ID。 この ID には次が可能です。<br /><br /> サーバー オブジェクト<br /><br /> データベース<br /><br /> データベース オブジェクト<br /><br /> スキーマ オブジェクト|**int**|いいえ|  
-|**target_server_principal_id**|監査可能なアクションが適用されるサーバー プリンシパル。|**int**|[ユーザー アカウント制御]|  
+|**object_id**|監査が発生したエンティティのプライマリ ID。 この ID には次が可能です。<br /><br /> サーバー オブジェクト<br /><br /> データベース<br /><br /> データベース オブジェクト<br /><br /> スキーマ オブジェクト|**int**|いいえ|  
+|**target_server_principal_id**|監査可能なアクションが適用されるサーバー プリンシパル。|**int**|はい|  
 |**target_database_principal_id**|監査可能なアクションが適用されるデータベース プリンシパル。|**int**|いいえ|  
-|**class_type**|監査が発生する監査可能なエンティティの種類。|**varchar(2)**|[ユーザー アカウント制御]|  
-|**session_server_principal_name**|セッションのサーバー プリンシパル。|**sysname**|[ユーザー アカウント制御]|  
-|**server_principal_name**|現在のログイン。|**sysname**|[ユーザー アカウント制御]|  
-|**server_principal_sid**|現在のログイン SID。|**varbinary**|[ユーザー アカウント制御]|  
+|**class_type**|監査が発生する監査可能なエンティティの種類。|**varchar(2)**|はい|  
+|**session_server_principal_name**|セッションのサーバー プリンシパル。|**sysname**|はい|  
+|**server_principal_name**|現在のログイン。|**sysname**|はい|  
+|**server_principal_sid**|現在のログイン SID。|**varbinary**|はい|  
 |**database_principal_name**|現在のユーザー。|**sysname**|いいえ|  
 |**target_server_principal_name**|アクションの対象ログイン。|**sysname**|いいえ|  
 |**target_server_principal_sid**|対象ログインの SID。|**varbinary**|いいえ|  
 |**target_database_principal_name**|アクションの対象ユーザー。|**sysname**|いいえ|  
-|**server_instance_name**|監査が発生したサーバー インスタンスの名前。 標準の machine\instance の形式を使用します。|**nvarchar(120)**|[ユーザー アカウント制御]|  
+|**server_instance_name**|監査が発生したサーバー インスタンスの名前。 標準の machine\instance の形式を使用します。|**nvarchar(120)**|はい|  
 |**database_name**|アクションが発生したデータベース コンテキスト。|**sysname**|いいえ|  
 |**schema_name**|アクションが発生したスキーマ コンテキスト。|**sysname**|いいえ|  
 |**object_name**|監査が発生したエンティティの名前。 この名前には次が可能です。<br /><br /> サーバー オブジェクト<br /><br /> データベース<br /><br /> データベース オブジェクト<br /><br /> スキーマ オブジェクト<br /><br /> TSQL ステートメント (あれば)|**sysname**|いいえ|  

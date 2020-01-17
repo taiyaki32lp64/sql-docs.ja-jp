@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - ClusterCount property
@@ -58,12 +57,12 @@ ms.assetid: 9bc9abed-180a-4bd8-b2eb-89c62fa88110
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 80e7a793973ddbe0e55862d2e68f23e6c7e31dc3
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 96106fc8bc50a2a1b19c54a6970eeeb72952d82d
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48224392"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66069056"
 ---
 # <a name="data-mining-properties"></a>データ マイニング プロパティ
   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] では、次の表に示すデータ マイニング サーバー プロパティがサポートされています。 その他のサーバー プロパティとその設定方法の詳細については、「 [Configure Server Properties in Analysis Services](server-properties-in-analysis-services.md)」を参照してください。  
@@ -118,8 +117,8 @@ ms.locfileid: "48224392"
 > [!NOTE]  
 >  サーバー上で使用可能なデータ マイニング サービスを定義するプロパティ以外に、特定のアルゴリズムの動作を定義するデータ マイニング プロパティが存在します。 データ マイニング モデルをサーバー レベルでなく、個々に作成する場合は、これらのプロパティを構成します。 詳しくは、「[データ マイニング アルゴリズム &#40;Analysis Services - データ マイニング&#41;](../data-mining/data-mining-algorithms-analysis-services-data-mining.md)」をご覧ください。  
   
-## <a name="see-also"></a>参照  
- [物理アーキテクチャ&#40;Analysis Services - データ マイニング&#41;](../data-mining/physical-architecture-analysis-services-data-mining.md)   
+## <a name="see-also"></a>関連項目  
+ [物理アーキテクチャ &#40;Analysis Services - データ マイニング&#41;](../data-mining/physical-architecture-analysis-services-data-mining.md)   
  [Analysis services サーバーのプロパティを構成します。](server-properties-in-analysis-services.md)   
  [Analysis Services インスタンスのサーバー モードの決定](../instances/determine-the-server-mode-of-an-analysis-services-instance.md)  
   

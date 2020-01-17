@@ -13,13 +13,13 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 0cbde879e2b7f215c5044936dfbdacab9196f02d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48150826"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63215964"
 ---
-# <a name="sqlvariant-support-for-date-and-time-types"></a>sql_variant による日付型と時刻型のサポート
+# <a name="sql_variant-support-for-date-and-time-types"></a>sql_variant による日付型と時刻型のサポート
   このトピックでは、日付と時刻に関する `sql_variant` データ型の機能強化について説明します。  
   
  SQL_CA_SS_VARIANT_TYPE 列属性は、バリアント型結果列の C 型を返すために使用されます。 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] SQL_CA_SS_VARIANT_SQL_TYPE は、実装行記述子 (IRD) 内のバリアント型結果列の SQL 型を設定する、追加の属性について説明します。 SQL_SS_VARIANT 型で SQL_C_BINARY C 型を持つ SQL_SS_TIMESTAMPOFFSET パラメーターがバインドされているまたは SQL_SS_TIME2 の SQL 型を指定する実装パラメーター記述子 (IPD) で SQL_CA_SS_VARIANT_SQL_TYPE が使用こともできます。  
@@ -38,9 +38,9 @@ ms.locfileid: "48150826"
 |SQL_C_STINYINT|SMALLINT|SQL_CA_SS_VARIANT_SQL_TYPE は無視されます。|  
 |SQL_C_SHORT|SMALLINT|SQL_CA_SS_VARIANT_SQL_TYPE は無視されます。|  
 |SQL_C_SSHORT|SMALLINT|SQL_CA_SS_VARIANT_SQL_TYPE は無視されます。|  
-|SQL_C_USHORT|ssNoversion|SQL_CA_SS_VARIANT_SQL_TYPE は無視されます。|  
-|SQL_C_LONG|ssNoversion|SQL_CA_SS_VARIANT_SQL_TYPE は無視されます。|  
-|SQL_C_SLONG|ssNoversion|SQL_CA_SS_VARIANT_SQL_TYPE は無視されます。|  
+|SQL_C_USHORT|int|SQL_CA_SS_VARIANT_SQL_TYPE は無視されます。|  
+|SQL_C_LONG|int|SQL_CA_SS_VARIANT_SQL_TYPE は無視されます。|  
+|SQL_C_SLONG|int|SQL_CA_SS_VARIANT_SQL_TYPE は無視されます。|  
 |SQL_C_ULONG|BIGINT|SQL_CA_SS_VARIANT_SQL_TYPE は無視されます。|  
 |SQL_C_SBIGINT|BIGINT|SQL_CA_SS_VARIANT_SQL_TYPE は無視されます。|  
 |SQL_C_FLOAT|REAL|SQL_CA_SS_VARIANT_SQL_TYPE は無視されます。|  

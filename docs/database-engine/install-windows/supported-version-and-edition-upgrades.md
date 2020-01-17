@@ -15,13 +15,12 @@ ms.assetid: 702359c4-6ca9-42a8-860c-a95a802898a1
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-manager: craigg
-ms.openlocfilehash: 205e24b2187ad84887868acc452e66503900af98
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 99b6522316928fcd7397d27c1a5c85d927a8e0b9
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47611000"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67934861"
 ---
 # <a name="supported-version-and-edition-upgrades"></a>サポートされるバージョンとエディションのアップグレード
 
@@ -115,7 +114,7 @@ SQL Server 2016 では、次のバージョンの SQL Server からのアップ�
 -   [!INCLUDE[ssASversion2005](../../includes/ssasversion2005-md.md)] キューブをバックアップし、 [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)]に復元します。  
   
 > [!NOTE]  
-> [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] データベースを [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] にアップグレードすると、そのデータベースの互換性レベルは 90 から 100 に変更されます  [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] のデータベース互換性レベルの有効な値は 100、110、120、および 130 です。 [ALTER DATABASE Compatibility Level &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md) は、互換性レベルの変更が [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] アプリケーションに与える影響について説明します。  
+> [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] データベースを [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] にアップグレードすると、そのデータベースの互換性レベルは 90 から 100 に変更されます [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] のデータベース互換性レベルの有効な値は 100、110、120、および 130 です。 [ALTER DATABASE Compatibility Level &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md) は、互換性レベルの変更が [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] アプリケーションに与える影響について説明します。  
   
 上記の一覧で説明されていないどのシナリオもサポートされていませんが、以下のシナリオに限定されるものではありません。  
   

@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: fe88c1c2-4ee4-45e0-8500-b8c25c047815
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: c71967bd72f7f13a725d47517cb9e66eee7da87f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 0e625e01b9bf4771f18dd8e9807ab09100ca580c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47645990"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68107649"
 ---
 # <a name="binding-parameter-markers"></a>バインディング パラメーター マーカー
 アプリケーションが呼び出すことによってパラメーターをバインド**SQLBindParameter**します。 **SQLBindParameter**一度に 1 つのパラメーターをバインドします。 アプリケーションは、次を指定します。  
@@ -28,7 +27,7 @@ ms.locfileid: "47645990"
   
 -   パラメーターの型 (入力、入力/出力、または出力)。 プロシージャ呼び出しのパラメーターを除くすべてのパラメーターは入力パラメーターが。 詳細については、次を参照してください。[プロシージャ パラメーター](../../../odbc/reference/develop-app/procedure-parameters.md)、このセクションで後述します。  
   
--   変数の C データ型、アドレス、およびバイト長は、パラメーターにバインドします。 ドライバーは、データを C データ型から SQL データ型に変換できる必要があります。 またはエラーが返されます。 サポートされる変換の一覧は、次を参照してください。 [C から SQL データ型への変換データ](../../../odbc/reference/appendixes/converting-data-from-c-to-sql-data-types.md)付録 d: データ型。  
+-   変数の C データ型、アドレス、およびバイト長は、パラメーターにバインドします。 ドライバーは、データを C データ型から SQL データ型に変換できる必要があります。 またはエラーが返されます。 サポートされる変換の一覧は、次を参照してください[C から SQL データ型への変換データ](../../../odbc/reference/appendixes/converting-data-from-c-to-sql-data-types.md)付録 d:。データ型。  
   
 -   SQL データ型、有効桁数、およびパラメーター自体の小数点以下桁数。  
   

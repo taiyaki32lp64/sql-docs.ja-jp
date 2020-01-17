@@ -14,19 +14,18 @@ helpviewer_keywords:
 ms.assetid: f9e6c3c7-4f98-483f-89d8-ebc5680f021b
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: cc5d09bca83724bb956d39512c51c3dc47db1bad
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e90f7683c13d8693529c60f1ba893bd645920bb2
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47854010"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68041910"
 ---
 # <a name="interval-literals"></a>Interval のリテラル
 ODBC では、すべてのドライバーが SQL_CHAR または SQL_VARCHAR データ型のすべての C interval データ型への変換をサポートすることが必要です。 基になるデータ ソースが interval データ型をサポートしていない場合は、ドライバーをこれらの変換をサポートするために、正しい形式の SQL_CHAR フィールドの値を知る必要があります。 同様に、ODBC では、ドライバーは、どのような形式の文字のフィールドに格納されている間隔を知る必要があるために、型が SQL_CHAR、SQL_VARCHAR、またはに変換できるすべての ODBC C を使用する必要があります。 このセクションでは、ドライバー開発者が使用するか、C interval データ型からの変換中に SQL_CHAR フィールドを検証する必要がある interval のリテラルの構文について説明します。  
   
 > [!NOTE]  
->  Interval のリテラルの BNF 構文は、セクションに示した[Interval のリテラル構文](../../../odbc/reference/appendixes/interval-literal-syntax.md)付録 c: SQL の文法でします。  
+>  Interval のリテラルの BNF 構文は、セクションに示した[Interval のリテラル構文](../../../odbc/reference/appendixes/interval-literal-syntax.md)付録 c:SQL 文法。  
   
  Interval のリテラルを渡す SQL ステートメントの一部として、interval のリテラルのエスケープ句の構文が定義されます。 詳細については、次を参照してください。[日付、時刻、およびタイムスタンプのリテラル](../../../odbc/reference/develop-app/date-time-and-timestamp-literals.md)します。  
   
@@ -46,7 +45,7 @@ INTERVAL[<sign>] 'value' <interval qualifier>
   
  間隔の文字列*値*が単一引用符で囲まれています。 年月のリテラルまたは日付時刻リテラルのいずれかを指定できます。 内の文字列の形式*値*は、次の規則によって決定されます。  
   
--   文字列には、権限が含まれるすべてのフィールドの 10 進値が含まれています、 \<*間隔**修飾子*>。  
+-   文字列には、権限が含まれるすべてのフィールドの 10 進値が含まれています、 \<*間隔* *修飾子*>。  
   
 -   間隔の有効桁数には、年および月フィールドが含まれている場合は、これらのフィールドの値がマイナス記号で区切られます。  
   

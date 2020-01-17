@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 4ec83e96-88a5-4b7b-8d5a-f3429d9a936b
 author: Shamikg
 ms.author: Shamikg
-manager: craigg
-ms.openlocfilehash: fdfdfc65abef5c7d0793c4a00cdb78a033e67998
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 672aff153c2f31416550bc850af959faca253ff1
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51659531"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68006640"
 ---
 # <a name="convert-load-and-migrate-accesstosql"></a>変換、読み込み、および (AccessToSQL) の移行
 **変換、読み込み、および移行** ダイアログ ボックスが、変換、読み込み、および移行のボタンまたは移行ウィザードを使用する場合に、移行の状態を報告します。  
@@ -32,7 +31,7 @@ ms.locfileid: "51659531"
 **レポート**  
 関連付けられている変換または移行レポートが表示されます。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
 [ユーザー インターフェイスの Reference(Access)](https://msdn.microsoft.com/af24c303-4a41-449b-9c86-d6558a97e839)  
 [移行ウィザード](migration-wizard-accesstosql.md)  
   

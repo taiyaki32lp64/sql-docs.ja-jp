@@ -10,27 +10,27 @@ helpviewer_keywords:
 - FileTables [SQL Server], security
 - FileTables [SQL Server], managing access
 ms.assetid: 93af982c-b4fe-4be0-8268-11f86dae27e1
-author: douglaslMS
-ms.author: douglasl
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: bfb5fa710122df0e467b27a99c08d75cc2897adf
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: b6653f2340dfbcf6265c527f85d87d60a3680f30
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52416723"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66009993"
 ---
 # <a name="manage-filetables"></a>FileTable の管理
   FileTable を管理するための一般的な管理タスクについて説明します。  
   
-##  <a name="HowToEnumerate"></a> 操作方法：FileTable と関連オブジェクトの一覧を取得する  
+##  <a name="HowToEnumerate"></a>方法:FileTable と関連オブジェクトの一覧を取得する  
  FileTable の一覧を取得するには、次のいずれかのカタログ ビューに対してクエリを実行します。  
   
 -   [sys.filetables &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-filetables-transact-sql)  
   
 -   [sys.tables &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-tables-transact-sql) (**is_filetable** 列の値を確認)  
   
-```tsql  
+```sql  
 SELECT * FROM sys.filetables;  
 GO  
   
@@ -40,7 +40,7 @@ GO
   
  関連付けられている FileTable の作成時に作成されたシステム定義オブジェクトの一覧を取得するには、カタログ ビュー [sys.filetable_system_defined_objects &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-filetable-system-defined-objects-transact-sql) に対してクエリを実行します。  
   
-```tsql  
+```sql  
 SELECT object_id, OBJECT_NAME(object_id) AS 'Object Name'  
     FROM sys.filetable_system_defined_objects  
     WHERE object_id = filetable_object_id;  
@@ -79,13 +79,13 @@ GO
   
 -   FILESTREAM がインスタンス レベルで無効化された場合、そのインスタンスのデータベース レベルのディレクトリはすべて表示されません。  
   
-###  <a name="HowToDisable"></a> 操作方法：データベース レベルで非トランザクション アクセスを無効化および再有効化する  
+###  <a name="HowToDisable"></a> 方法:データベース レベルで非トランザクション アクセスを無効化および再有効化する  
  詳細については、「[ALTER DATABASE の SET オプション &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql-set-options)」を参照してください。  
   
  **完全な非トランザクション アクセスを無効化するには**  
  **ALTER DATABASE** ステートメントを呼び出し、 **NON_TRANSACTED_ACCESS** の値を **READ_ONLY** または **OFF**に設定します。  
   
-```tsql  
+```sql  
 -- Disable write access.  
 ALTER DATABASE database_name  
     SET FILESTREAM ( NON_TRANSACTED_ACCESS = READ_ONLY );  
@@ -100,13 +100,13 @@ GO
  **完全な非トランザクション アクセスを再有効化するには**  
  **ALTER DATABASE** ステートメントを呼び出し、 **NON_TRANSACTED_ACCESS** の値を **FULL**に設定します。  
   
-```tsql  
+```sql  
 ALTER DATABASE database_name  
     SET FILESTREAM ( NON_TRANSACTED_ACCESS = FULL );  
 GO  
 ```  
   
-###  <a name="visible"></a> 操作方法：データベースの Filetable の可視性を確認します。  
+###  <a name="visible"></a> 方法:データベースの FileTable が必ず表示されるようにする  
  以下のすべての条件が満たされる場合、データベース レベルのディレクトリとその下の FileTable ディレクトリは表示状態になります。  
   
 1.  インスタンス レベルで FILESTREAM が有効になっている。  
@@ -138,18 +138,18 @@ GO
   
 -   FileTable ディレクトリと、それに含まれているファイルおよびディレクトリは、ファイル システムに表示され、ファイル I/O アクセスに使用できるようになります。  
   
-###  <a name="HowToEnableNS"></a> 操作方法：テーブル レベルで FileTable 名前空間を無効化および再有効化する  
+###  <a name="HowToEnableNS"></a> 方法:テーブル レベルで FileTable 名前空間を無効化および再有効化する  
  **{ ENABLE | DISABLE } FILETABLE_NAMESPACE** オプションを指定して ALTER TABLE ステートメントを呼び出します。  
   
  **FileTable 名前空間を無効にするには**  
- ```tsql  
+ ```sql  
 ALTER TABLE filetable_name  
     DISABLE FILETABLE_NAMESPACE;  
 GO  
 ```  
   
  **FileTable 名前空間を再有効化するには**  
- ```tsql  
+ ```sql  
 ALTER TABLE filetable_name  
     ENABLE FILETABLE_NAMESPACE;  
 GO  
@@ -161,15 +161,15 @@ GO
 > [!WARNING]  
 >  開いているファイル ハンドルを終了すると、保存されていないデータをユーザーが失う可能性があります。 この動作は、ファイル システム自体の動作と一致しています。  
   
-###  <a name="HowToListOpen"></a> 操作方法：FileTable に関連付けられている開いているファイル ハンドルの一覧を取得します。  
+###  <a name="HowToListOpen"></a> 方法:FileTable に関連付けられた開いているファイル ハンドルの一覧を取得する  
  カタログ ビュー [sys.dm_filestream_non_transacted_handles &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-filestream-non-transacted-handles-transact-sql) に対してクエリを実行します。  
   
-```tsql  
+```sql  
 SELECT * FROM sys.dm_filestream_non_transacted_handles;  
 GO  
 ```  
   
-###  <a name="HowToKill"></a> 操作方法：FileTable に関連付けられた開いているファイル ハンドルを終了する  
+###  <a name="HowToKill"></a> 方法:FileTable に関連付けられた開いているファイル ハンドルを終了する  
  データベースまたは FileTable のすべての開いているファイル ハンドルを終了するか、特定のハンドルを終了するための適切な引数を指定して、[sp_kill_filestream_non_transacted_handles &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/filestream-and-filetable-sp-kill-filestream-non-transacted-handles) ストアド プロシージャを呼び出します。  
   
 ```  
@@ -188,13 +188,13 @@ EXEC sp_kill_filestream_non_transacted_handles @handle_id = integer_handle_id;
 GO  
 ```  
   
-###  <a name="HowToIdentifyLocks"></a> 操作方法：ロックを識別 Filetable によって保持されています。  
+###  <a name="HowToIdentifyLocks"></a> 方法:FileTable によって保持されているロックを識別する  
  FileTable によって取得されるほとんどのロックは、アプリケーションによって開かれたファイルに対応します。  
   
  **開いているファイルおよび関連付けられているロックを識別するには**  
  動的管理ビュー [sys.dm_tran_locks &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql) の **request_owner_id** フィールドを [sys.dm_filestream_non_transacted_handles &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-filestream-non-transacted-handles-transact-sql) の **fcb_id** フィールドと結合します。 場合によっては、ロックが単一の開いているファイル ハンドルと対応しないこともあります。  
   
-```tsql  
+```sql  
 SELECT opened_file_name  
     FROM sys.dm_filestream_non_transacted_handles  
     WHERE fcb_id IN  
@@ -231,7 +231,7 @@ GO
 ##  <a name="OtherDBCC"></a> DBCC と FileTable  
  DBCC CHECKCONSTRAINTS を使用すると、システム定義の制約を含む FileTable に対する制約を検証できます。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [FileTable と他の SQL Server 機能の互換性](filetable-compatibility-with-other-sql-server-features.md)   
  [FileTable DDL、関数、ストアド プロシージャ、およびビュー](../views/views.md)  
   

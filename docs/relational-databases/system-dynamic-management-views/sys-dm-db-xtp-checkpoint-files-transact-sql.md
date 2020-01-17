@@ -1,5 +1,5 @@
 ---
-title: sys.dm_db_xtp_checkpoint_files (TRANSACT-SQL) |Microsoft Docs
+title: sys.dm_db_xtp_checkpoint_files (Transact-SQL) |Microsoft Docs
 ms.date: 03/20/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -19,34 +19,33 @@ helpviewer_keywords:
 ms.assetid: ac8e6333-7a9f-478a-b446-5602283e81c9
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: =azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: f2c7f7f4296b3cbed025303f58cf07717db06c8e
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: fb3aa62880de7013cf503e61eb2d86a3454c2350
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52510868"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68026910"
 ---
-# <a name="sysdmdbxtpcheckpointfiles-transact-sql"></a>sys.dm_db_xtp_checkpoint_files (Transact-SQL)
+# <a name="sysdm_db_xtp_checkpoint_files-transact-sql"></a>sys.dm_db_xtp_checkpoint_files (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2014-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2014-asdb-xxxx-xxx-md.md)]
 
   ファイル サイズ、物理的な場所、トランザクション ID など、チェックポイント ファイルに関する情報を表示します。  
   
-> **注:** 現在のチェックポイントが閉じられていない、s の [状態] 列の`ys.dm_db_xtp_checkpoint_files`新しいファイルの UNDER CONSTRUCTION になります。 最後のチェックポイント以降のトランザクション ログ拡張のための十分ながある場合、または発行した場合に、チェックポイントが自動的に閉じられます、`CHECKPOINT`コマンド ([チェックポイント&#40;TRANSACT-SQL&#41;](../../t-sql/language-elements/checkpoint-transact-sql.md))。  
+> **注:** 現在のチェックポイントが閉じられていない、s の [状態] 列の`ys.dm_db_xtp_checkpoint_files`新しいファイルの UNDER CONSTRUCTION になります。 最後のチェックポイント以降のトランザクション ログ拡張のための十分ながある場合、または発行した場合に、チェックポイントが自動的に閉じられます、`CHECKPOINT`コマンド ([CHECKPOINT &#40;Transact-SQL&#41;](../../t-sql/language-elements/checkpoint-transact-sql.md))。  
   
  メモリ最適化ファイル グループは、内部的には、インメモリ テーブルの挿入および削除された行を格納するのに追加専用のファイルを使用します。 これらのファイルには 2 つの種類があります。 データ ファイルには、デルタ ファイルが削除された行への参照が含まれている挿入された行が含まれています。 
   
  [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 新しいバージョンから大幅に異なるし、下位にあるトピックの説明は[SQL Server 2014](#bkmk_2014)します。  
   
- 詳細については、次を参照してください。[の作成とメモリ最適化オブジェクト用ストレージの管理](../../relational-databases/in-memory-oltp/creating-and-managing-storage-for-memory-optimized-objects.md)します。  
+ 詳細については、「[メモリ最適化オブジェクト用ストレージの作成と管理](../../relational-databases/in-memory-oltp/creating-and-managing-storage-for-memory-optimized-objects.md)」を参照してください。  
   
 ##  <a name="bkmk_2016"></a> [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] およびそれ以降  
  次の表に、列の`sys.dm_db_xtp_checkpoint_files`以降 **[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]** します。  
   
 |列名|型|説明|  
 |-----------------|----------|-----------------|  
-|container_id|**int**|データまたはデルタ ファイルが含まれているコンテナー (sys.database_files で FILESTREAM 型のファイルとして表される) の ID。 内の file_id と結合[sys.database_files &#40;TRANSACT-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-files-transact-sql.md)します。|  
+|container_id|**int**|データまたはデルタ ファイルが含まれているコンテナー (sys.database_files で FILESTREAM 型のファイルとして表される) の ID。 内の file_id と結合[sys.database_files &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-files-transact-sql.md)します。|  
 |container_guid|**uniqueidentifier**|で、ルート、データまたはデルタ ファイルがの一部であるコンテナーの GUID です。 File_guid sys.database_files テーブルに結合します。|  
 |checkpoint_file_id|**uniqueidentifier**|チェックポイント ファイルの GUID です。|  
 |relative_file_path|**nvarchar (256)**|コンテナーにマップされている、ファイルのパスです。|  
@@ -72,7 +71,7 @@ ms.locfileid: "52510868"
   
 |列名|型|説明|  
 |-----------------|----------|-----------------|  
-|container_id|**int**|データまたはデルタ ファイルが含まれているコンテナー (sys.database_files で FILESTREAM 型のファイルとして表される) の ID。 内の file_id と結合[sys.database_files &#40;TRANSACT-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-files-transact-sql.md)します。|  
+|container_id|**int**|データまたはデルタ ファイルが含まれているコンテナー (sys.database_files で FILESTREAM 型のファイルとして表される) の ID。 内の file_id と結合[sys.database_files &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-files-transact-sql.md)します。|  
 |container_guid|**uniqueidentifier**|データまたはデルタ ファイルが含まれているコンテナーの GUID。|  
 |checkpoint_file_id|**GUID**|データ ファイルまたはデルタ ファイルの ID。|  
 |relative_file_path|**nvarchar (256)**|コンテナーの場所を基準とする、データ ファイルまたはデルタ ファイルの相対パス。|  
@@ -86,7 +85,7 @@ ms.locfileid: "52510868"
 |deleted_row_count|**bigint**|デルタ ファイル内の削除された行の数。|  
 |drop_table_deleted_row_count|**bigint**|drop table の影響を受けたデータ ファイル内の行数。 state 列が 1.に等しい場合にデータ ファイルに適用されます。<br /><br /> 削除されたテーブルについて、削除された行数を示します。 drop_table_deleted_row_count の統計情報は、削除されたテーブルの行に関するメモリ ガベージ コレクションが完了し、チェックポイントが作成されてから、コンパイルされます。 テーブルの削除に関する統計情報がこの列に反映される前に [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] を再起動した場合、復旧操作の一環として統計情報が更新されます。 復旧プロセスでは、削除されたテーブルの行は読み込まれません。 削除されたテーブルに関する統計情報は、読み込みフェーズ中にコンパイルされ、復旧が完了するとこの列で報告されます。|  
 |state|**int**|0 - 事前に作成されました。<br /><br /> 1-UNDER CONSTRUCTION<br /><br /> 2 - ACTIVE<br /><br /> 3 - ターゲットをマージします。<br /><br /> 4-マージされたソース<br /><br /> 5-必要な FOR バックアップ/HA<br /><br /> 6 - 廃棄 (TOMBSTONE) に移行中<br /><br /> 7-廃棄 (TOMBSTONE)|  
-|state_desc|**nvarchar(60)**|PRECREATED の少数のデータとデルタ ファイル ペア、チェックポイント ファイル ペア (Cfp) とも呼ばれますは、事前に割り当てられたトランザクションが実行されているように、新しいファイルを割り当てるときの待機時間を排除または最小限に保持されます。 これらは最大サイズで作成され、データ ファイルのサイズは 128 MB、デルタ ファイルのサイズは 8 MB になりますが、データは含まれません。 CFP の数は、8 を最小として、論理プロセッサまたはスケジューラの数に応じて計算されます (コアにつき 1 個で、最大値なし)。 これは、メモリ最適化テーブルのあるデータベースにおける固定のストレージ オーバーヘッドです。<br /><br /> UNDER CONSTRUCTION の新しく保存する Cfp のセットが挿入され、可能性がある最後のチェックポイント以降のデータ行を削除します。<br /><br /> ACTIVE - この中には、閉じられた前のチェックポイント以降に挿入された行と削除された行が含まれます。 これらの CFP には、データベースの再起動時に、トランザクション ログのアクティブな部分を適用する前に必要とされる、必須である挿入された行と削除された行すべてが含まれます。 マージ操作がトランザクション ワークロードにとって最新であることを想定すると、これらの CFP のサイズは、メモリ最適化されたテーブルのインメモリ サイズの約 2 倍です。<br /><br /> MERGE TARGET -、CFP は、マージ ポリシーによって識別された CFP から統合されたデータ行を格納します。 マージをインストールした段階で、MERGE TARGET は ACTIVE 状態に遷移します。<br /><br /> マージされたソース - 1 回のマージ操作がインストールされている、ソース Cfp は MERGED SOURCE としてマークされます。 マージ ポリシー エバリュエーターは複数のマージを識別できますが、各 CFP はただ 1 つのマージ操作のみに参加できます。<br /><br /> 必要な FOR BACKUP/HA - マージがインストールされると、MERGE TARGET CFP は、持続性チェックポイントの場合は、この状態に遷移の Cfp のマージ ソースの一部です。 この状態にある CFP は、メモリ最適化されたテーブルを持つデータベースを正しく運用するうえで必要とされます。  たとえば、持続性チェックポイントから復元を行う際に、時間をさかのぼる目的で使用されます。 ログの切り捨てポイントが CFP のトランザクション範囲を超えた位置に移動すれば、その CFP をガベージ コレクションの対象としてマークできます。<br /><br /> IN TRANSITION TO TOMBSTONE - これらの Cfp は、インメモリ OLTP エンジンによって不要し、することができますガベージ コレクションします。 この状態は、これらの CFP がバックグラウンド スレッドによって次の状態である TOMBSTONE に遷移されるのを待機していることを示します。<br /><br /> 廃棄 (tombstone) のこれらの Cfp は、filestream ガベージ コレクターによるガベージ コレクションを待機しています。 ([sp_filestream_force_garbage_collection &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/filestream-and-filetable-sp-filestream-force-garbage-collection.md))|  
+|state_desc|**nvarchar(60)**|PRECREATED の少数のデータとデルタ ファイル ペア、チェックポイント ファイル ペア (Cfp) とも呼ばれますは、事前に割り当てられたトランザクションが実行されているように、新しいファイルを割り当てるときの待機時間を排除または最小限に保持されます。 これらは最大サイズで作成され、データ ファイルのサイズは 128 MB、デルタ ファイルのサイズは 8 MB になりますが、データは含まれません。 CFP の数は、8 を最小として、論理プロセッサまたはスケジューラの数に応じて計算されます (コアにつき 1 個で、最大値なし)。 これは、メモリ最適化テーブルのあるデータベースにおける固定のストレージ オーバーヘッドです。<br /><br /> UNDER CONSTRUCTION の新しく保存する Cfp のセットが挿入され、可能性がある最後のチェックポイント以降のデータ行を削除します。<br /><br /> ACTIVE - この中には、閉じられた前のチェックポイント以降に挿入された行と削除された行が含まれます。 これらの CFP には、データベースの再起動時に、トランザクション ログのアクティブな部分を適用する前に必要とされる、必須である挿入された行と削除された行すべてが含まれます。 マージ操作がトランザクション ワークロードにとって最新であることを想定すると、これらの CFP のサイズは、メモリ最適化されたテーブルのインメモリ サイズの約 2 倍です。<br /><br /> MERGE TARGET -、CFP は、マージ ポリシーによって識別された CFP から統合されたデータ行を格納します。 マージをインストールした段階で、MERGE TARGET は ACTIVE 状態に遷移します。<br /><br /> マージされたソース - 1 回のマージ操作がインストールされている、ソース Cfp は MERGED SOURCE としてマークされます。 マージ ポリシー エバリュエーターは複数のマージを識別できますが、各 CFP はただ 1 つのマージ操作のみに参加できます。<br /><br /> 必要な FOR BACKUP/HA - マージがインストールされると、MERGE TARGET CFP は、持続性チェックポイントの場合は、この状態に遷移の Cfp のマージ ソースの一部です。 この状態にある CFP は、メモリ最適化されたテーブルを持つデータベースを正しく運用するうえで必要とされます。  たとえば、持続性チェックポイントから復元を行う際に、時間をさかのぼる目的で使用されます。 ログの切り捨てポイントが CFP のトランザクション範囲を超えた位置に移動すれば、その CFP をガベージ コレクションの対象としてマークできます。<br /><br /> IN TRANSITION TO TOMBSTONE - これらの Cfp は、インメモリ OLTP エンジンによって不要し、することができますガベージ コレクションします。 この状態は、これらの CFP がバックグラウンド スレッドによって次の状態である TOMBSTONE に遷移されるのを待機していることを示します。<br /><br /> 廃棄 (tombstone) のこれらの Cfp は、filestream ガベージ コレクターによるガベージ コレクションを待機しています。 ([sp_filestream_force_garbage_collection &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/filestream-and-filetable-sp-filestream-force-garbage-collection.md))|  
 |lower_bound_tsn|**bigint**|ファイルに含まれているトランザクションの下限。 State 列が 2、3、または 4 以外の場合は null です。|  
 |upper_bound_tsn|**bigint**|ファイルに含まれているトランザクションの上限。 State 列が 2、3、または 4 以外の場合は null です。|  
 |last_backup_page_count|**int**|最後のバックアップによって決定された論理ページ数。 State 列が 2、3、4、または 5 に設定されている場合に適用されます。 ページ数が不明な場合は NULL。|  
@@ -123,6 +122,6 @@ ORDER BY state, file_type
 
   
 ## <a name="see-also"></a>参照  
- [メモリ最適化テーブルの動的管理ビュー &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/memory-optimized-table-dynamic-management-views-transact-sql.md)  
+ [メモリ最適化テーブルの動的管理ビュー &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/memory-optimized-table-dynamic-management-views-transact-sql.md)  
   
   

@@ -13,16 +13,15 @@ helpviewer_keywords:
 - Query Editor [SQL Server Management Studio], regular expression searches
 - searches [SQL Server Management Studio], regular expressions
 ms.assetid: a057690c-d118-4159-8e4d-2ed5ccfe79d3
-author: stevestein
-ms.author: sstein
-manager: craigg
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: ac5b1039e6424a66842fcd156fe3475d14826694
-ms.sourcegitcommit: 40c3b86793d91531a919f598dd312f7e572171ec
+ms.openlocfilehash: 1dba6a77288a4bebba70372ecf6fbd7a1f05dda6
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53329032"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68264171"
 ---
 # <a name="search-text-with-regular-expressions"></a>正規表現によるテキストの検索
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -31,7 +30,7 @@ ms.locfileid: "53329032"
   
 ## <a name="find-using-regular-expressions"></a>正規表現を使用して検索を行う  
   
-1.  **[クイック検索]**、**[フォルダーを指定して検索]**、 **[クイック置換]**、 **[フォルダーを指定して置換]** の各操作を実行するときに **[検索する文字列]** フィールドで正規表現が使用できるようにするには、 **[検索オプション]** の下の **[条件]** をオンにし、 **[正規表現]** を選択します。  
+1.  **[クイック検索]** 、 **[フォルダーを指定して検索]** 、 **[クイック置換]** 、 **[フォルダーを指定して置換]** の各操作を実行するときに **[検索する文字列]** フィールドで正規表現が使用できるようにするには、 **[検索オプション]** の下の **[条件]** をオンにし、 **[正規表現]** を選択します。  
   
 2.  **[検索する文字列]** フィールドの横にある三角形の **参照一覧** ボタンが使用可能になります。 このボタンをクリックすると、一般的に使用される正規表現の一覧が表示されます。 正規表現ビルダーから項目を選択すると、その項目が **[検索する文字列]** の文字列に挿入されます。  
   

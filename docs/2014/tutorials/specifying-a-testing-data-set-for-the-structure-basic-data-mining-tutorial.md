@@ -11,11 +11,11 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: 21eaa86fb1ff594e8b9d2b779b787276ee13ab4b
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56028893"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62720101"
 ---
 # <a name="specifying-a-testing-data-set-for-the-structure-basic-data-mining-tutorial"></a>構造のテスト データ セットの指定 (基本的なデータ マイニング チュートリアル)
   データ マイニング ウィザードの最後の数画面では、データをテスト セットとトレーニング セットに分割します。 次に、構造に名前を付けて、モデルのドリルスルーを有効にします。  

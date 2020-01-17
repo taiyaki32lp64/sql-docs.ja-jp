@@ -9,15 +9,15 @@ ms.topic: conceptual
 helpviewer_keywords:
 - Data Profiling task [Integration Services], configuring
 ms.assetid: fe050ca4-fe45-43d7-afa9-99478041f9a8
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: c6bc7964ee9ffaca02a81d52a50104089736e2ae
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 1d2378426a3cd55b6df183cac7782d63578e2ed0
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53376554"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62830223"
 ---
 # <a name="setup-of-the-data-profiling-task"></a>データ プロファイル タスクのセットアップ
   ソース データのプロファイルを確認する前に、まずデータ プロファイル タスクを設定して実行します。 このタスクは、 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] パッケージ内に作成します。 データ プロファイル タスクを構成するには、[データ プロファイル タスク エディター] を使用します。 このエディターを使用すると、プロファイルの出力先と計算するプロファイルを選択できます。 タスクを設定したら、パッケージを実行してデータ プロファイルを計算します。  
@@ -56,7 +56,7 @@ ms.locfileid: "53376554"
 |選択された列に含まれる文字列値の長さごとの、その長さと、テーブル内におけるその長さの行の比率。|**無効な文字列値** - たとえば、米国州コードとして 2 文字を使用する列をプロファイルし、3 文字以上の値を検出できます。|**列長分布-** これらのデータ型のいずれかの列に対して有効です。<br /><br /> 文字データ型 : `char`、`nchar`、`varchar`、および `nvarchar`|  
 |文字列型の列に含まれる指定された比率の値に対応する一連の正規表現。<br /><br /> また、新しい値を検証するために将来使用できる正規表現も見つけます。|**無効な文字列値または形式が正しくない文字列値** - たとえば、米国郵便番号列のパターン プロファイルでは、\d{5}-\d{4}、\d{5}、\d{9} という正規表現が生成されます。 出力にその他の正規表現が示された場合、データに無効な値または形式が正しくない値が含まれています。|**列パターン プロファイル-** これらのデータ型のいずれかの列に対して有効です。<br /><br /> 文字データ型 : `char`、`nchar`、`varchar`、および `nvarchar`|  
 |選択した列の NULL 値の比率。|**予想外に高い、列の NULL 値の比率** - たとえば、米国郵便番号を想定している列をプロファイルし、許容範囲を超える欠落した郵便番号の比率を検出できます。|**列 Null 比率-** これらのデータ型の列に対して有効です。<br /><br /> 任意のデータ型。 これには、`image`、`text`、`xml`、ユーザー定義型、およびバリアント型が含まれます。|  
-|数値型列の最小値、最大値、平均値、標準偏差や、`datetime` 列の最小値、最大値などの統計。|**無効な数値および日付** - たとえば、履歴の日付の列をプロファイルし、将来の日付の最大値を検出できます。|**列統計プロファイル-** これらのデータ型のいずれかの列に対して有効です。<br /><br /> 数値データ型 : 整数型 (`bit` は除く)、`money`、`smallmoney`、`decimal`、`float`、`real`、および `numeric`<br /><br /> 日付および時刻データ型 : `datetime`、`smalldatetime`、`timestamp`、`date`、`time`、`datetime2`、および `datetimeoffset`<br />注:日付および時刻データ型を使用する列の場合、プロファイルでは最小値と最大値だけが計算されます。|  
+|数値型列の最小値、最大値、平均値、標準偏差や、`datetime` 列の最小値、最大値などの統計。|**無効な数値および日付** - たとえば、履歴の日付の列をプロファイルし、将来の日付の最大値を検出できます。|**列統計プロファイル-** これらのデータ型のいずれかの列に対して有効です。<br /><br /> 数値データ型 : 整数型 (`bit` は除く)、`money`、`smallmoney`、`decimal`、`float`、`real`、および `numeric`<br /><br /> 日付および時刻データ型 : `datetime`、`smalldatetime`、`timestamp`、`date`、`time`、`datetime2`、および `datetimeoffset`<br />注:日付と時刻データ型を使用する列の場合、プロファイルでは最小値と最大値だけが計算されます。|  
 |選択された列に含まれる値ごとの、その値と、テーブル内におけるその値の行の比率。 または、テーブル内の指定された比率を超えている値。|**列に含まれる個別の値の数が正しくない** - たとえば、米国の州を含む列をプロファイルし、50 個を超える個別の値を検出できます。|**列の値の配布-** これらのデータ型のいずれかの列に対して有効です。<br /><br /> 数値データ型 : 整数型 (`bit` は除く)、`money`、`smallmoney`、`decimal`、`float`、`real`、および `numeric`<br /><br /> 文字データ型 : `char`、`nchar`、`varchar`、および `nvarchar`<br /><br /> 日付および時刻データ型 : `datetime`、`smalldatetime`、`timestamp`、`date`、`time`、`datetime2`、および `datetimeoffset`|  
 |列または列のセットが、選択したテーブルのキーまたは近似キーであるかどうか。|**キーとなる可能性がある列の重複値** - たとえば、Customers テーブルの名前列と住所列をプロファイルし、名前と住所の組み合わせは一意である必要があるにもかかわらず重複している値を検出できます。|**候補キー プロファイル** - 列または列のセットが、選択したテーブルのキーとして適しているかどうかを報告する複数列のプロファイルです。 次のいずれかのデータ型の列に対して有効です。<br /><br /> 整数データ型 : `bit`、`tinyint`、`smallint`、`int`、および `bigint`<br /><br /> 文字データ型 : `char`、`nchar`、`varchar`、および `nvarchar`<br /><br /> 日付および時刻データ型 : `datetime`、`smalldatetime`、`timestamp`、`date`、`time`、`datetime2`、および `datetimeoffset`|  
 |ある列 (依存列) の値が別の列または列のセット (決定列) の値にどの程度依存しているか。|**依存列に含まれる無効な値** - たとえば、米国郵便番号を含む列と米国の州を含む列の間の依存関係をプロファイルできます。 郵便番号によって州が一意に決定されますが、 このプロファイルでは、この依存関係の違反を検出できます。|**機能の依存関係を**これらのデータ型のいずれかの列に対して有効です。<br /><br /> 整数データ型 : `bit`、`tinyint`、`smallint`、`int`、および `bigint`<br /><br /> 文字データ型 : `char`、`nchar`、`varchar`、および `nvarchar`<br /><br /> 日付および時刻データ型 : `datetime`、`smalldatetime`、`timestamp`、`date`、`time`、`datetime2`、および `datetimeoffset`|  

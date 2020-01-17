@@ -13,16 +13,15 @@ helpviewer_keywords:
 - column level encryption
 - cell level encryption
 ms.assetid: 38e9bf58-10c6-46ed-83cb-e2d76cda0adc
-author: aliceku
-ms.author: aliceku
-manager: craigg
+author: jaszymas
+ms.author: jaszymas
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 6f8238abce193ea7582c278d0c843f5f1b695fc8
-ms.sourcegitcommit: fa2f85b6deeceadc0f32aa7f5f4e2b6e4d99541c
+ms.openlocfilehash: 08899661d3638b03aaf848bd207625e168812e87
+ms.sourcegitcommit: 39ea690996a7390e3d13d6fb8f39d8641cd5f710
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/03/2019
-ms.locfileid: "53997544"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "74957419"
 ---
 # <a name="encrypt-a-column-of-data"></a>データの列の暗号化
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -60,7 +59,7 @@ PASSWORD = '<some strong password>';
 2. [標準] ツール バーの **[新しいクエリ]** をクリックします。  
   
 3. 次の例をコピーしてクエリ ウィンドウに貼り付け、 **[実行]** をクリックします。  
-  
+
     ```sql
     USE AdventureWorks2012;  
     GO  
@@ -76,7 +75,7 @@ PASSWORD = '<some strong password>';
   
     -- Create a column in which to store the encrypted data.  
     ALTER TABLE Sales.CreditCard   
-        ADD CardNumber_Encrypted varbinary(128);   
+        ADD CardNumber_Encrypted varbinary(160);   
     GO  
   
     -- Open the symmetric key with which to encrypt the data.  
@@ -167,7 +166,7 @@ PASSWORD = '<some strong password>';
     GO  
     ```  
   
- 詳細については、以下を参照してください。  
+ 詳細については、「  
   
 -   [CREATE CERTIFICATE &#40;Transact-SQL&#41;](../../../t-sql/statements/create-certificate-transact-sql.md)  
   

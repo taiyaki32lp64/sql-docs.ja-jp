@@ -12,15 +12,14 @@ dev_langs:
 helpviewer_keywords:
 - EventString element
 ms.assetid: f76c37b4-2f6e-4274-8ee2-87e89d98e8a2
-author: stevestein
-ms.author: sstein
-manager: craigg
-ms.openlocfilehash: aa14c737f4fc3b56a80983ab772970302629097d
-ms.sourcegitcommit: 0f7cf9b7ab23df15624d27c129ab3a539e8b6457
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 157c50f419b7003a9dde862c3a2c74c4033fe794
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51290995"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68008802"
 ---
 # <a name="eventstring-element-dta"></a>EventString 要素 (DTA)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

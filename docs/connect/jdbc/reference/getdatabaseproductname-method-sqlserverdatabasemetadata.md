@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: 548bd099-019f-487c-87cc-6f0b665f164d
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: e34bdc5294b8f68ccf2d364cff71d3df6599f266
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 62677c494f4f613846fb6ea621fb143f27098267
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47740640"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67984098"
 ---
 # <a name="getdatabaseproductname-method-sqlserverdatabasemetadata"></a>getDatabaseProductName メソッド (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -42,7 +41,7 @@ public java.lang.String getDatabaseProductName()
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- この getDatabaseProductName メソッドは、java.sql.DatabaseMetaData インターフェイスで getDatabaseProductName メソッドによって指定されます。  
+ この getDatabaseProductName メソッドは、java メタデータインターフェイスの getDatabaseProductName メソッドによって指定されます。  
   
 ## <a name="see-also"></a>参照  
  [SQLServerDatabaseMetaData のメソッド](../../../connect/jdbc/reference/sqlserverdatabasemetadata-methods.md)   

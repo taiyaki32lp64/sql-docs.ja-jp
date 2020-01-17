@@ -1,7 +1,7 @@
 ---
-title: リソース ガバナーを使用してバックアップの圧縮による CPU 使用率を制限する方法 (Transact-SQL) | Microsoft Docs
-ms.custom: ''
-ms.date: 03/16/2017
+title: CPU 負荷を制限する:バックアップの圧縮にリソース ガバナーを使用する
+ms.custom: seo-lt-2019
+ms.date: 12/17/2019
 ms.prod: sql
 ms.prod_service: backup-restore
 ms.reviewer: ''
@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 01796551-578d-4425-9b9e-d87210f7ba72
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: d3094df3f5fff3a0dbeb70573236432202420224
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: 73fd6d47d3108fbfc46e1d1a6189ac21892a3eb9
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53210541"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75245410"
 ---
 # <a name="use-resource-governor-to-limit-cpu-usage-by-backup-compression-transact-sql"></a>リソース ガバナーを使用してバックアップの圧縮による CPU 使用率を制限する方法 (Transact-SQL)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -262,9 +261,9 @@ GO
  [&#91;先頭に戻る&#93;](#Top)  
   
 ##  <a name="creating_compressed_backup"></a> CPU が制限されているセッションを使用したバックアップの圧縮  
- 最大 CPU が制限されているセッションで圧縮されたバックアップを作成するには、分類子関数で指定したユーザーでログインします。 バックアップ コマンドで、WITH COMPRESSION ([!INCLUDE[tsql](../../includes/tsql-md.md)]) を指定するか、**[バックアップを圧縮する]** ([!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]) を選択します。 圧縮されたデータベース バックアップを作成する方法については、「[データベースの完全バックアップの作成 &#40;SQL Server&#41;](../../relational-databases/backup-restore/create-a-full-database-backup-sql-server.md)」をご覧ください。  
+ 最大 CPU が制限されているセッションで圧縮されたバックアップを作成するには、分類子関数で指定したユーザーでログインします。 バックアップ コマンドで、WITH COMPRESSION ([!INCLUDE[tsql](../../includes/tsql-md.md)]) を指定するか、 **[バックアップを圧縮する]** ([!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]) を選択します。 圧縮されたデータベース バックアップを作成する方法については、「[データベースの完全バックアップの作成 &#40;SQL Server&#41;](../../relational-databases/backup-restore/create-a-full-database-backup-sql-server.md)」をご覧ください。  
   
-### <a name="example-c-creating-a-compressed-backup-transact-sql"></a>例 C:圧縮されたバックアップの作成 (Transact-SQL)  
+### <a name="example-c-creating-a-compressed-backup-transact-sql"></a>例 C: 圧縮されたバックアップの作成 (Transact-SQL)  
  次に示す [BACKUP](../../t-sql/statements/backup-transact-sql.md) の例では、 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] データベースの圧縮された完全バックアップを、新たな形式のバックアップ ファイル `Z:\SQLServerBackups\AdvWorksData.bak`に作成します。  
   
 ```sql  

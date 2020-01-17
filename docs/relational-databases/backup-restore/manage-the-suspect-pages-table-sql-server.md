@@ -18,15 +18,14 @@ helpviewer_keywords:
 ms.assetid: f394d4bc-1518-4e61-97fc-bf184d972e2b
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: d1081ea3a972dea318e7ad7952f313a95f407223
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 97c69fe0a6e1de53840b5f31c16d51d1d6d08263
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47621550"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72908922"
 ---
-# <a name="manage-the-suspectpages-table-sql-server"></a>suspect_pages テーブルの管理 (SQL Server)
+# <a name="manage-the-suspect_pages-table-sql-server"></a>suspect_pages テーブルの管理 (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   このトピックでは、 **または** を使用して、 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] で [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] suspect_pages [!INCLUDE[tsql](../../includes/tsql-md.md)]テーブルを管理する方法について説明します。 **suspect_pages** テーブルは、問題があると考えられるページに関する情報を保持するためのテーブルであり、復元が必要かどうかを判断する際に使用します。 [suspect_pages](../../relational-databases/system-tables/suspect-pages-transact-sql.md) テーブルは、 [msdb データベース](../../relational-databases/databases/msdb-database.md)にあります。  
   
@@ -52,7 +51,7 @@ ms.locfileid: "47621550"
   
      [推奨事項](#Recommendations)  
   
-     [Security](#Security)  
+     [セキュリティ](#Security)  
   
 -   **suspect_pages テーブルを管理する方法:**  
   
@@ -124,19 +123,19 @@ ms.locfileid: "47621550"
   
 ##  <a name="SSMSProcedure"></a> SQL Server Management Studio の使用  
   
-#### <a name="to-manage-the-suspectpages-table"></a>suspect_pages テーブルを管理するには  
+#### <a name="to-manage-the-suspect_pages-table"></a>suspect_pages テーブルを管理するには  
   
 1.  **オブジェクト エクスプローラー**で、 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]のインスタンスに接続して、そのインスタンスを展開します。次に、 **[データベース]** を展開します。  
   
-2.  **[システム データベース]**、 **[msdb]**、 **[テーブル]**、 **[システム テーブル]** の順に展開します。  
+2.  **[システム データベース]** 、 **[msdb]** 、 **[テーブル]** 、 **[システム テーブル]** の順に展開します。  
   
 3.  **[dbo.suspect_pages]** を展開し、 **[上位 200 行の編集]** を右クリックします。  
   
 4.  クエリ ウィンドウで、目的の行を編集、更新、または削除します。  
-  
+
 ##  <a name="TsqlProcedure"></a> Transact-SQL の使用  
   
-#### <a name="to-manage-the-suspectpages-table"></a>suspect_pages テーブルを管理するには  
+#### <a name="to-manage-the-suspect_pages-table"></a>suspect_pages テーブルを管理するには  
   
 1.  [!INCLUDE[ssDE](../../includes/ssde-md.md)]に接続します。  
   

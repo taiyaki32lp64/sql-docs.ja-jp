@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: acb69343-d766-46ff-b771-0c7655c5231a
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 69eac8b023c1db489f3407ade244dc605df23cf7
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: c268c356e41c957349f452d2f83fc4b807042d9e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47821629"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67990501"
 ---
 # <a name="spaddtargetservergroup-transact-sql"></a>sp_add_targetservergroup (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -40,8 +39,7 @@ sp_add_targetservergroup [ @name = ] 'name'
 ```  
   
 ## <a name="arguments"></a>引数  
- [  **@name=**] **'***名前***'**  
- 作成するサーバー グループ名を指定します。 *名前*は**sysname**、既定値はありません。 *名前*コンマを含めることはできません。  
+`[ @name = ] 'name'` 作成するサーバー グループの名前。 *名前*は**sysname**、既定値はありません。 *名前*コンマを含めることはできません。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  **0** (成功) または**1** (失敗)  

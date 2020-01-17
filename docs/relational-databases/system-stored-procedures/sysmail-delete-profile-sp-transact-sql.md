@@ -17,18 +17,17 @@ helpviewer_keywords:
 ms.assetid: 71998653-4a02-446d-b6f7-50646a29e8a2
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: c1f358385205c15954fe033a2f6631964a86fabc
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 9442f4d3637fcb7c891eacbe7546254708918ad3
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47793280"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67909199"
 ---
 # <a name="sysmaildeleteprofilesp-transact-sql"></a>sysmail_delete_profile_sp (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  データベース メールによって使用されるメール プロファイルを削除します。  
+  データベース メールで使用されるメール プロファイルを削除します。  
   
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -40,11 +39,9 @@ sysmail_delete_profile_sp  { [ @profile_id = ] profile_id | [ @profile_name = ] 
 ```  
   
 ## <a name="arguments"></a>引数  
- [ **@profile_id** = ] *profile_id*  
- 削除するプロファイルのプロファイル ID を指定します。 *profile_id*は**int**、既定値は NULL です。 いずれか*profile_id*または*profile_name*指定する必要があります。  
+`[ @profile_id = ] profile_id` 削除するプロファイルのプロファイル id です。 *profile_id*は**int**、既定値は NULL です。 いずれか*profile_id*または*profile_name*指定する必要があります。  
   
- [ **@profile_name** =] **'***profile_name***'**  
- 削除するプロファイルの名前を指定します。 *profile_name*は**sysname**、既定値は NULL です。 いずれか*profile_id*または*profile_name*指定する必要があります。  
+`[ @profile_name = ] 'profile_name'` 削除するプロファイルの名前です。 *profile_name*は**sysname**、既定値は NULL です。 いずれか*profile_id*または*profile_name*指定する必要があります。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  **0** (成功) または**1** (失敗)  
@@ -53,9 +50,9 @@ sysmail_delete_profile_sp  { [ @profile_id = ] profile_id | [ @profile_name = ] 
  なし  
   
 ## <a name="remarks"></a>コメント  
- プロファイルを削除しても、そのプロファイルで使用されているアカウントは削除されません。  
+ プロファイルを削除する場合は、プロファイルで使用されるアカウントは削除されません。  
   
- このストアド プロシージャでは、プロファイルにアクセスできるかどうかに関係なく、プロファイルを削除できます。 ユーザーの既定のプライベート プロファイル、または既定のパブリック プロファイルを削除するときに注意を使用して、 **msdb**データベース。 既定のプロファイルが使用できないときに**sp_send_dbmail**を引数としてプロファイルの名前が必要です。 そのため、既定のプロファイルを削除する可能性への呼び出し**sp_send_dbmail**が失敗します。 詳細については、次を参照してください。 [sp_send_dbmail &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-send-dbmail-transact-sql.md)します。  
+ このストアド プロシージャでは、プロファイルへのアクセスをユーザーがあるかどうかに関係なくプロファイルを削除します。 ユーザーの既定のプライベート プロファイル、または既定のパブリック プロファイルを削除するときに注意を使用して、 **msdb**データベース。 既定のプロファイルが使用できないときに**sp_send_dbmail**を引数としてプロファイルの名前が必要です。 そのため、既定のプロファイルを削除する可能性への呼び出し**sp_send_dbmail**が失敗します。 詳細については、次を参照してください。 [sp_send_dbmail &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-send-dbmail-transact-sql.md)します。  
   
  ストアド プロシージャ**sysmail_delete_profile_sp**では、 **msdb**が所有するデータベースにあり、 **dbo**スキーマ。 現在のデータベースがない場合、3 つの部分の名前を持つプロシージャを実行する必要があります**msdb**します。  
   

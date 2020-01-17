@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 ms.assetid: 9d718ba8-d323-49fb-aac8-e7013a117b75
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 27aaffc85ee01f2645b9bb590aa7816d2fa01f71
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: d4a06a24525b3d9d0c4e4a5f3f0b749a7db70261
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56292900"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66105166"
 ---
 # <a name="rownumber-function-report-builder-and-ssrs"></a>RowNumber 関数 (レポート ビルダーおよび SSRS)
   指定されたスコープの実行中の行数を返します。  

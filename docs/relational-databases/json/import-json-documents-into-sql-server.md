@@ -1,7 +1,6 @@
 ---
-title: JSON ドキュメントの SQL Server へのインポート | Microsoft Docs
-ms.custom: ''
-ms.date: 01/19/2019
+title: JSON ドキュメントのインポート
+ms.date: 10/28/2019
 ms.prod: sql
 ms.reviewer: genemi
 ms.technology: ''
@@ -9,20 +8,20 @@ ms.topic: conceptual
 ms.assetid: 0e908ec0-7173-4cd2-8f48-2700757b53a5
 author: jovanpop-msft
 ms.author: jovanpop
-manager: craigg
+ms.custom: seo-dt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 8174179f116f7b84f31cfdd563b6cef16ab05131
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: de1dc6567603b0b16324aa798527a0b79282fa83
+ms.sourcegitcommit: 15fe0bbba963d011472cfbbc06d954d9dbf2d655
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56033743"
+ms.lasthandoff: 11/14/2019
+ms.locfileid: "74095742"
 ---
 # <a name="import-json-documents-into-sql-server"></a>JSON ドキュメントの SQL Server へのインポート
 
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
-このトピックでは、SQL Server に JSON ファイルをインポートする方法について説明します。 現在、多数の JSON ドキュメントがファイルに保存されています。 たとえば、アプリケーションは JSON ファイルに情報を記録し、センサーは JSON ファイルに保存される情報を生成します。 ファイルに保存されている JSON データ読み取り、そのデータを SQL Server に読み込んで分析できることが重要です。
+この記事では、SQL Server に JSON ファイルをインポートする方法について説明します。 現在、多数の JSON ドキュメントがファイルに保存されています。 たとえば、アプリケーションは JSON ファイルに情報を記録し、センサーは JSON ファイルに保存される情報を生成します。 ファイルに保存されている JSON データ読み取り、そのデータを SQL Server に読み込んで分析できることが重要です。
 
 ## <a name="import-a-json-document-into-a-single-column"></a>JSON ドキュメントを 1 つの列にインポートする
 
@@ -52,23 +51,6 @@ SELECT BulkColumn
 
 JSON ファイルの内容を読み込んだ後、JSON テキストをテーブルに保存できます。
 
-## <a name="import-multiple-json-documents"></a>複数の JSON ドキュメントをインポートする
-
-同じ方法を使用して、ファイル システムから複数の JSON ファイルを一度に 1 つずつローカル変数に読み込むことができます。 ファイルは `book<index>.json` という名前です。
-  
-```sql
-DECLARE @i INT = 1
-DECLARE @json AS NVARCHAR(MAX)
-
-WHILE(@i < 10)
-BEGIN
-    SET @file = 'C:\JSON\Books\book' + cast(@i AS VARCHAR(5)) + '.json';
-    SELECT @json = BulkColumn FROM OPENROWSET (BULK (@file), SINGLE_CLOB) AS j
-    SELECT * FROM OPENJSON(@json) AS json
-    -- Optionally, save the JSON text in a table.
-    SET @i = @i + 1 ;
-END
-```
 
 ## <a name="import-json-documents-from-azure-file-storage"></a>Azure File Storage から JSON ドキュメントをインポートする
 
@@ -140,9 +122,7 @@ SELECT value
  CROSS APPLY OPENJSON(BulkColumn)
 ```
 
-### <a name="example-2"></a>例 2
-
-OPENROWSET は 1 つのテキスト値をファイルから読み取り、BulkColumn として返し、OPENJSON 関数に渡します。 OPENJSON は BulkColumn 配列内の JSON オブジェクトの配列を反復処理し、各行で JSON 形式の 1 冊の書籍を返します。
+上記の OPENROWSET では、ファイルから 1 つのテキスト値が読み取られます。 OPENROWSET では値が BulkColumn として返され、OPENJSON 関数に BulkColumn が渡されます。 OPENJSON では、BulkColumn 配列内の JSON オブジェクトの配列が反復処理されて、各行で 1 冊の書籍が返されます。 次に示すように、各行は JSON として書式設定されます。
 
 ```json
 {"id":"978-0641723445", "cat":["book","hardcover"], "name":"The Lightning Thief", ... }
@@ -151,7 +131,7 @@ OPENROWSET は 1 つのテキスト値をファイルから読み取り、BulkCo
 {"id":"978-1933988177", "cat":["book","paperback"], "name":"Lucene in Action, Second", ... }
 ```
 
-### <a name="example-3"></a>例 3
+### <a name="example-2"></a>例 2
 
 OPENJSON 関数は JSON の内容を解析し、テーブルまたは結果セットに変換することができます。 次の例は内容を読み込み、読み込まれた JSON を解析し、5 つのフィールドを列として返します。
 

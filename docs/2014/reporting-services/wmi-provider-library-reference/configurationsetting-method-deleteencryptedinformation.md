@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 api_name:
 - DeleteEncryptedInformation (WMI MSReportServer_ConfigurationSetting Class)
@@ -16,15 +15,15 @@ topic_type:
 helpviewer_keywords:
 - DeleteEncryptedInformation method
 ms.assetid: c14ed187-bdd9-4304-88e3-72072f03c21b
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: a0566d2a271c891aaa85e7624974e7bcd2769891
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 4ffe9834ea57f3f4a0d48387f631ae08a45182ad
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56021483"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66098523"
 ---
 # <a name="deleteencryptedinformation-method-wmi-msreportserverconfigurationsetting"></a>DeleteEncryptedInformation メソッド (WMI MSReportServer_ConfigurationSetting)
   レポート サーバー データベースから暗号化された情報を削除します。  

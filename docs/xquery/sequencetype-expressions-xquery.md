@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: ad3573da-d820-4d1c-81c4-a83c4640ce22
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 59c6718ce034f8a0b9d37bc62591a7ffc44ce999
-ms.sourcegitcommit: bfa10c54e871700de285d7f819095d51ef70d997
+ms.openlocfilehash: e7c3cdf33b0765ba50e5553f3bc31fd5c69312e0
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/14/2019
-ms.locfileid: "54255127"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67946283"
 ---
 # <a name="sequencetype-expressions-xquery"></a>SequenceType 式 (XQuery)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -44,7 +43,7 @@ Expression instance of SequenceType[Occurrence indicator]
   
  場合、**でしょうか。** 出現インジケーターが指定されていない`sequence of`場合にのみ、True を返します、`Expression`入力と一致する、`Type`指定と`Expression`シングルトンを返します。  
   
- **注**プラス記号 (**+**) およびアスタリスク (**&#42;**) では、出現インジケーターはサポートされていない[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]します。  
+ **注**プラス記号 ( **+** ) およびアスタリスク ( **&#42;** ) では、出現インジケーターはサポートされていない[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]します。  
   
  次の例では、使用、**のインスタンス**XQuery 演算子。  
   

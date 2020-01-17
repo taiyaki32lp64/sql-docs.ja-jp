@@ -18,11 +18,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 13511f66d2636634daa11b8e6555bb1f5ccd335f
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52781194"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62667185"
 ---
 # <a name="set-thresholds-and-warnings-in-replication-monitor"></a>レプリケーション モニターのしきい値と警告の設定
   [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] レプリケーション モニターには、パブリケーションおよびサブスクリプションの状態情報が表示されます。 既定で表示される警告は、初期化されていないサブスクリプションに対する警告だけですが、その他の条件に対する警告を有効にすることもできます。 トポロジに対する警告を有効にすることをお勧めします。この警告を有効にすると、状態やパフォーマンスに関する情報をタイムリーに受け取ることができます。  
@@ -61,7 +61,7 @@ ms.locfileid: "52781194"
   
 2.  **[警告]** タブをクリックします。このタブの各オプションに関する情報を表示するには、メニュー バーの **[ヘルプ]** をクリックしてください。  
   
-3.  適切なチェック ボックスをオンにして警告を有効にします。**サブスクリプションのしきい値内で切れるかどうかに警告**または**待機時間がしきい値を超えたかどうかに警告**します。  
+3.  適切なチェック ボックスをオンにして警告を有効にします。 **[サブスクリプションの有効期限がしきい値内で切れる場合に警告します]** または **[待機時間がしきい値を超えた場合に警告します]** 。  
   
 4.  **[しきい値]** 列で警告のしきい値を設定します。 たとえば、手順 3. で **[待機時間がしきい値を超えた場合に警告します]** チェック ボックスをオンにした場合、 **[しきい値]** 列で **60 秒** の待機時間を選択します。  
   

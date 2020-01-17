@@ -1,81 +1,80 @@
 ---
-title: チュートリアル:TRANSACT-SQL エディターを使用して、データベース オブジェクトを作成するには
+title: Transact-SQL エディターを使用し、データベース オブジェクトを作成する
 titleSuffix: Azure Data Studio
-description: このチュートリアルでは、T-SQL での作業を簡略化する Azure Data Studio の主な機能について説明します。
-ms.custom: seodec18
-ms.date: 09/24/2018
+description: このチュートリアルでは、T-SQL の操作を簡単にする Azure Data Studio の主な機能について説明します。
 ms.prod: sql
 ms.technology: azure-data-studio
-ms.reviewer: alayu; sstein
 ms.topic: tutorial
-author: stevestein
-ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 04e6e366d1fd0a5d710296353d6326022f716199
-ms.sourcegitcommit: 189a28785075cd7018c98e9625c69225a7ae0777
-ms.translationtype: MT
+author: markingmyname
+ms.author: maghan
+ms.reviewer: alayu; sstein
+ms.custom: seodec18; seo-lt-2019
+ms.date: 09/24/2018
+ms.openlocfilehash: 65f078c16080f9ae54563acb5bd21c50d2036057
+ms.sourcegitcommit: 39ea690996a7390e3d13d6fb8f39d8641cd5f710
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53030456"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "74957036"
 ---
-# <a name="tutorial-use-the-transact-sql-editor-to-create-database-objects---includename-sosincludesname-sos-shortmd"></a>チュートリアル:TRANSACT-SQL エディターを使用して、データベースのオブジェクトを作成するには [!INCLUDE[name-sos](../includes/name-sos-short.md)]
+# <a name="tutorial-use-the-transact-sql-editor-to-create-database-objects---includename-sosincludesname-sos-shortmd"></a>チュートリアル:Transact-SQL エディターを使用し、データベース オブジェクトを作成する - [!INCLUDE[name-sos](../includes/name-sos-short.md)]
 
-クエリやストアドプロシージャ、スクリプトなどを作成し、実行することは、データベース担当者の中核となるタスクです。 このチュートリアルでは、T-SQL エディターの主要な機能を使用してデータベースオブジェクトを作成する方法を説明します。
+クエリ、ストアド プロシージャ、スクリプトなどの作成と実行は、データベース プロフェッショナルの中心的な仕事です。 このチュートリアルでは、データベース オブジェクトを作成するための T-SQL の主な機能について説明します。
 
-このチュートリアルでは、以下の操作を [!INCLUDE[name-sos-short](../includes/name-sos-short.md)] で行う方法を示しています:
+このチュートリアルでは、次の目的で [!INCLUDE[name-sos-short](../includes/name-sos-short.md)] を使用する方法について学習します。
 > [!div class="checklist"]
-> * データベース オブジェクトの検索
-> * テーブル データの編集 
-> * スニペットを使用してすばやく T-SQL を記述する
-> * 使用してデータベース オブジェクトの詳細の表示*ピークの定義*と*定義へ移動*
+> * データベース オブジェクトを検索する
+> * テーブル データを編集する 
+> * スニペットを利用して T-SQL を簡単に記述する
+> * *[定義をここに表示]* と *[定義へ移動]* を使用し、データベース オブジェクトの詳細を表示する
 
 
 ## <a name="prerequisites"></a>前提条件
 
-このチュートリアルでは、SQL Server または Azure SQL Database に *TutorialDB* が必要です。 *TutorialDB* データベースを作成するには、次のクイック スタートのいずれかを行います。
+このチュートリアルには、SQL Server か Azure SQL Database *TutorialDB* が必要です。 *TutorialDB* データベースを作成するには、次のクイックスタートのいずれかを実行します。
 
-- [[!INCLUDE[name-sos-short](../includes/name-sos-short.md)] を使用して、SQL Server に接続し、クエリを実行する](quickstart-sql-server.md)
-- [[!INCLUDE[name-sos-short](../includes/name-sos-short.md)] を使用して、Azure SQL Database に接続し、クエリを実行する](quickstart-sql-database.md)
+- [[!INCLUDE[name-sos-short](../includes/name-sos-short.md)] を使用して SQL Server に接続し、クエリを実行する](quickstart-sql-server.md)
+- [[!INCLUDE[name-sos-short](../includes/name-sos-short.md)] を使用して Azure SQL Database に接続し、クエリを実行する](quickstart-sql-database.md)
 
 
-## <a name="quickly-locate-a-database-object-and-perform-a-common-task"></a>すぐにデータベース オブジェクトを見つけて、一般的なタスクを実行
+## <a name="quickly-locate-a-database-object-and-perform-a-common-task"></a>データベース オブジェクトを簡単に見つけ、一般的タスクを実行する
 
-[!INCLUDE[name-sos-short](../includes/name-sos-short.md)] はデータベース オブジェクトをすばやく検索する検索ウィジェットを提供します。 結果一覧には、選択したオブジェクトに関連する、例えばテーブルの*データ編集*のような一般的なタスクのためのコンテキスト メニューが提供されます。
+[!INCLUDE[name-sos-short](../includes/name-sos-short.md)] には、データベース オブジェクトを簡単に見つけるための検索ウィジェットがあります。 結果一覧からは、テーブルの*データ編集*など、選択したオブジェクトに関連する一般的タスクのコンテキスト メニューが与えられます。
 
-1. [サーバー] サイド バーを開き (**Ctrl + G**)、**[データベース]** を展開して、**[TutorialDB]** を選択します。 
+1. [サーバー] サイドバーを開き (**Ctrl + G**)、 **[データベース]** を展開し、 **[TutorialDB]** を選択します。 
 
-1. **[TutorialDB]** を右クリックして、コンテキスト メニューの **[管理]** を選択し、*TutorialDB ダッシュボード*を開きます。
+1. **[TutorialDB]** を右クリックし、コンテキスト メニューから **[管理]** を選択することで *[TutorialDB ダッシュボード]* を開きます。
 
    ![コンテキスト メニュー - 管理](./media/tutorial-sql-editor/insight-open-dashboard.png)
 
-1. ダッシュ ボードの右クリックして**dbo します。顧客**(検索のウィジェット) で選択および**データの編集**します。
+1. ダッシュボードで (検索ウィジェットで) **[dbo.Customers]** を右クリックし、 **[データの編集]** を選択します。
    
    > [!TIP]
-   > 多くのオブジェクトをデータベースの検索ウィジェットを使用して、テーブル、ビュー、探しているなどをすばやく検索します。
+   > オブジェクトがたくさん含まれるデータベースの場合、検索ウィジェットを使用することで、探しているテーブルやビューなどが簡単に見つかります。
 
    ![クイック検索ウィジェット](./media/tutorial-sql-editor/quick-search-widget.png)
 
-1. 編集、**電子メール**最初の行では、型の列*orlando0@adventure-works.com*、キーを押します**Enter**の変更を保存します。
+1. 最初の行の **[電子メール]** 列を編集して「*orlando0\@adventure-works.com*」と入力し、**Enter** キーを押して変更を保存します。
 
-   ![データを編集します。](./media/tutorial-sql-editor/edit-data.png)
+   ![データの編集](./media/tutorial-sql-editor/edit-data.png)
 
-## <a name="use-t-sql-snippets-to-create-stored-procedures"></a>T-SQL のスニペットを使用してストアド プロシージャを作成するには
+## <a name="use-t-sql-snippets-to-create-stored-procedures"></a>T-SQL スニペットを使用し、ストアド プロシージャを作成する
 
-[!INCLUDE[name-sos](../includes/name-sos-short.md)] ステートメントをすばやく作成するためには、多くの組み込み TSQL スニペットを提供します。
+[!INCLUDE[name-sos](../includes/name-sos-short.md)] には、ステートメントを簡単に作成するための T-SQL スニペットがたくさん組み込まれています。
 
 
-1. キーを押して、新しいクエリ エディターを開く**Ctrl + N**します。
+1. **Ctrl + N** を押し、新しいクエリ エディターを開きます。
 
-2. 型**sql**エディターで、下にある矢印**sqlCreateStoredProcedure**、キーを押すと、*タブ*キー (または *」と入力*) に格納されている作成を読み込むプロシージャのスニペットです。
+2. エディターに「**sql**」と入力し、矢印を下に押して **[sqlCreateStoredProcedure]** を見つけ、*Tab* キー (または *Enter*) を押して create ストアド プロシージャ スニペットを読み込みます。
 
-   ![snippet-list](./media/tutorial-sql-editor/snippet-list.png)
+   ![スニペットの一覧](./media/tutorial-sql-editor/snippet-list.png)
 
-3. 作成するストアド プロシージャのスニペットがクイック編集を設定する 2 つのフィールド*StoredProcedureName*と*SchemaName*します。 選択*StoredProcedureName*、右クリックし、**変更箇所をすべて**します。 ここで「 *getCustomer*すべてと*StoredProcedureName*エントリを変更する*getCustomer*します。
+3. create ストアド プロシージャには、簡単に編集するためのフィールドが 2 つ設定されています。*StoredProcedureName* と *SchemaName* です。 *[StoredProcedureName]* を選択し、右クリックし、 **[すべての出現箇所を変更]** を選択します。 ここで「*getCustomer*」と入力すると、*StoredProcedureName* エントリがすべて、*getCustomer* に変わります。
 
    ![スニペット](./media/tutorial-sql-editor/snippet.png)
 
-5. 出現箇所をすべて*SchemaName*に*dbo*します。 
-6. スニペットには、プレース ホルダー パラメーターと更新が必要な本文が含まれています。 *EXECUTE*手順には、パラメーターの数を認識していないためにステートメントがプレース ホルダー テキストにも含まれます。 このチュートリアルは、スニペットを更新のためようになります次のコード。
+5. *SchemaName* が出現する箇所をすべて *dbo* に変更します。 
+6. このスニペットには、更新を必要とするプレースホルダー パラメーターと本文テキストが含まれています。 *EXECUTE* ステートメントには、プレースホルダー テキストも含まれています。プロシージャに与えられるパラメーターの数がわからないためです。 このチュートリアルのために、次のコードのようになるようにスニペットを更新します。
 
     ```sql
     -- Create a new stored procedure called 'getCustomer' in schema 'dbo'
@@ -108,36 +107,36 @@ ms.locfileid: "53030456"
     GO
     ```
     
-5. ストアド プロシージャを作成し、テストの実行を試して、キーを押して**F5**します。
+5. ストアド プロシージャを作成し、テスト実行するには、**F5** を押します。
 
-ストアド プロシージャが作成されましたが、および**結果**ペインには、JSON で返された顧客が表示されます。 書式設定された JSON を表示するには、返されるレコードをクリックします。 
+これでストアド プロシージャが作成され、 **[結果]** ペインに返された顧客が JSON で表示されます。 書式設定された JSON を表示するには、返されたレコードをクリックします。 
 
 
-## <a name="use-peek-definition"></a>ピークの定義を使用 
+## <a name="use-peek-definition"></a>[定義をここに表示] を使用する 
 
-[!INCLUDE[name-sos](../includes/name-sos-short.md)] ピークの定義機能を使用して、オブジェクト定義を表示する機能を提供します。 このセクションでは、2 番目のストアド プロシージャを作成し、ピークの定義が使用すると、どのような列は、テーブル、ストアド プロシージャの本体をすばやく作成します。
+[!INCLUDE[name-sos](../includes/name-sos-short.md)] では、[定義をここに表示] 機能を使用し、オブジェクトの定義を表示できます。 このセクションでは、2 つ目のストアド プロシージャを作成します。[定義をここに表示] を使用してテーブルに入っている列を表示し、ストアド プロシージャの本文を簡単に作成します。
 
-1. キーを押して新しいエディターを開く**Ctrl + N**します。 
+1. **Ctrl + N** を押し、新しいエディターを開きます。 
 
-2. 型*sql*エディターで、下にある矢印*sqlCreateStoredProcedure*、キーを押すと、*タブ*キー (または *」と入力*) に格納されている作成を読み込むプロシージャのスニペットです。
-3. 入力*setCustomer*の*StoredProcedureName*と*dbo*の*SchemaName*
+2. エディターに「*sql*」と入力し、矢印を下に押して *[sqlCreateStoredProcedure]* を見つけ、*Tab* キー (または *Enter*) を押して create ストアド プロシージャ スニペットを読み込みます。
+3. *[StoredProcedureName]* に「*setCustomer*」と入力し、 *[SchemaName]* に「*dbo*」と入力します。
 
-3. 置換、@paramプレース ホルダーを次のパラメーターの定義。
+3. @param プレースホルダーを次のパラメーター定義に置き換えます。
 
    ```sql
    @json_val nvarchar(max)
    ```
 
-4. ストアド プロシージャの本体を次のコードに置き換えます。
+4. ストアド プロシージャの本文を次のコードに置き換えます。
    ```sql
    INSERT INTO dbo.Customers
    ```
 
-5. *挿入*行が追加された、右クリックして**dbo します。顧客**選択**ピークの定義**します。
+5. 追加したばかりの *[INSERT]* 行で、 **[dbo.Customers]** を右クリックし、 **[定義をここに表示]** を選択します。
 
-   ![ピークの定義](./media/tutorial-sql-editor/peek-definition.png)
+   ![[定義をここに表示]](./media/tutorial-sql-editor/peek-definition.png)
 
-6. テーブルの定義は、簡単にわかるようには、テーブル内の列が表示されます。 ストアド プロシージャのステートメントを簡単に完了する列の一覧を参照してください。 ストアド プロシージャの本体を完了し、ピークの定義ウィンドウを閉じる前に追加した INSERT ステートメントの作成を完了するには。
+6. テーブルの定義が表示されるので、テーブルに入っている列を簡単に確認できます。 列の一覧を参照することで、ストアド プロシージャのステートメント入力が簡単になります。 前に追加した INSERT ステートメントを作成してストアド プロシージャの本文を完了し、[定義をここに表示] ウィンドウを閉じます。
 
    ```sql
    INSERT INTO dbo.Customers (CustomerId, Name, Location, Email)
@@ -149,8 +148,8 @@ ms.locfileid: "53030456"
                Email nvarchar(50)
     )
    ```
-7. 削除 (またはコメント アウト)、 *EXECUTE*クエリの下部にあるコマンド。
-8. ステートメント全体は、次のコードのようになります。
+7. クエリの一番下にある *EXECUTE* コマンドを削除します (または、コメントアウトします)。
+8. ステートメント全体は次のコードのようになります。
 
    ```sql
    -- Create a new stored procedure called 'setCustomer' in schema 'dbo'
@@ -179,22 +178,22 @@ ms.locfileid: "53030456"
    GO
    ```
 
-8. 作成する、 *setCustomer*ストアド プロシージャ、キーを押して**F5**します。
+8. *setCustomer* ストアド プロシージャを作成するには、**F5** を押します。
 
-## <a name="use-save-query-results-as-json-to-test-the-setcustomer-stored-procedure"></a>使用は、setCustomer ストアド プロシージャをテストする JSON としてクエリ結果を保存します。
+## <a name="use-save-query-results-as-json-to-test-the-setcustomer-stored-procedure"></a>クエリ結果を JSON として保存し、setCustomer ストアド プロシージャをテストする
 
-*SetCustomer*前のセクションで作成したストアド プロシージャは、JSON を必要がありますに渡すデータ、 *@json_val*パラメーター。 このセクションでは、ストアド プロシージャをテストできるように、パラメーターに渡す JSON の正しく書式設定されたビットを取得する方法を示します。
+前のセクションで作成した *setCustomer* ストアド プロシージャでは、JSON データを *\@json_val* パラメーターに渡す必要があります。 このセクションでは、ストアド プロシージャをテストできるように、パラメーターに渡す目的で正しく書式設定した JSON を用意する方法について説明します。
 
-1. **サーバー**サイド バーを右クリックし、 *dbo します。顧客*テーブルし、クリックして**上位 1000 行**します。
+1. **[サーバー]** サイドバーで、 *[dbo.Customers]* テーブルを右クリックし、 **[SELECT TOP 1000 Rows]\(上位 1000 行を選択する\)** をクリックします。
 
-2. 結果ビューで最初の行を選択します。 行全体が選択されているかどうかを確認してください (クリックで一番左の列番号 1)、選択と**JSON として保存**。  
-3. 後 (例のデスクトップ) のファイルを削除し、をクリックしてできるようにわかりやすい場所にフォルダーを変更**保存**します。 JSON の形式でファイルを開く。
+2. 結果ビューの最初の行を選択し、行全体が選択されるようにします (左端の列の番号 1 をクリックします)。それから **[Save as JSON]\(JSON として保存\)** を選択します。  
+3. ファイルを後で削除できるように、覚えやすい場所にフォルダーを変更し (デスクトップなど)、 **[保存]** をクリックします。 JSON 形式のファイルが開きます。
 
-   ![JSON として保存します。](./media/tutorial-sql-editor/save-as-json.png)
+   ![JSON として保存する](./media/tutorial-sql-editor/save-as-json.png)
 
-4. エディターで JSON データを選択し、それをコピーします。
-5. キーを押して新しいエディターを開く**Ctrl + N**します。
-6. 前の手順を表示する呼び出しを完了する適切な形式のデータを簡単に取得する方法、 *setCustomer*プロシージャ。 次のコードは、テストできるように新しい顧客の詳細と同じ JSON 形式を使用を参照してください、 *setCustomer*プロシージャ。 ステートメントには、パラメーターを宣言し、新しい get を実行してプロシージャを設定するための構文が含まれています。 前のセクションからコピーしたデータを貼り付けるため、これは、次の例と同じ編集または、次のステートメントをクエリ エディターに貼り付けるだけです。
+4. エディターで JSON データを選択してコピーします。
+5. **Ctrl + N** を押し、新しいエディターを開きます。
+6. 前の手順からは、*setCustomer* プロシージャを呼び出せるように正しく書式設定されたデータを簡単に得る方法がわかります。 次のコードでは、新しい顧客詳細で同じ JSON フォーマットを使用しています。そのため、*setCustomer* プロシージャをテストできます。 ステートメントには、パラメーターを宣言し、新しい get プロシージャと set プロシージャを実行する構文が含まれています。 前のセクションからコピーしたデータを貼り付け、次の例と同じになるように編集できます。あるいは、クエリ エディターに次のステートメントを単純に貼り付けてください。
 
    ```sql
    -- example to execute the stored procedure we just created
@@ -214,20 +213,20 @@ ms.locfileid: "53030456"
    EXECUTE dbo.getCustomer @ID = 5
    ```
 
-7. 押してスクリプトを実行する**F5**します。 スクリプトでは、新しい顧客を挿入し、JSON 形式で、新しい顧客の情報を返します。 結果を書式設定されたビューを開く をクリックします。
+7. **F5** を押してスクリプトを実行します。 このスクリプトにより、新しい顧客が挿入され、新しい顧客の情報が JSON 形式で返されます。 結果をクリックし、書式設定されたビューを開きます。
 
    ![テスト結果](./media/tutorial-sql-editor/test-result.png)
 
-## <a name="next-steps"></a>次の手順
-このチュートリアルでは、以下の使用方法を学習しました:
+## <a name="next-steps"></a>次のステップ
+このチュートリアルでは、以下の内容を学習しました。
 > [!div class="checklist"]
-> * クイック検索スキーマ オブジェクト
-> * テーブル データの編集 
-> * スニペットを使用して T-SQL スクリプトの記述
-> * 定義を使用してデータベース オブジェクトの詳細について説明しますと、定義へ移動
+> * スキーマ オブジェクトをクイック検索する
+> * テーブル データを編集する 
+> * スニペットを使用して T-SQL スクリプトを記述する
+> * [定義をここに表示] と [定義へ移動] を使用し、データベース オブジェクトの詳細を確認する
 
 
-有効にする方法については、 **5 つの最も低速なクエリ**ウィジェットで、次のチュートリアルを完了します。
+**最低速 5 つのクエリ**を有効にする方法については、次のチュートリアルを完了してください。
 
 > [!div class="nextstepaction"]
-> [低速のクエリ サンプル洞察のウィジェットを有効にします。](tutorial-qds-sql-server.md)
+> [最低速クエリのサンプル分析情報ウィジェットを有効にする](tutorial-qds-sql-server.md)

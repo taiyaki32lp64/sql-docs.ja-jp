@@ -14,15 +14,14 @@ dev_langs:
 helpviewer_keywords:
 - ToString method
 ms.assetid: 045c12fa-8fc6-441a-9500-7021cb4ff13e
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: 4c02e0b4e92ad8b8811ff05607b06aaf239eb676
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: MladjoA
+ms.author: mlandzic
+ms.openlocfilehash: 3e4ca89d9fa8dccf2e819e76db188f84b25f0b59
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47773970"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68120683"
 ---
 # <a name="tostring-geography-data-type"></a>ToString (geography データ型)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -41,7 +40,7 @@ ms.locfileid: "47773970"
 ## <a name="return-types"></a>戻り値の型  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 戻り値の型: **nvarchar(max)**  
   
- CLR の戻り値の型: **SqlString**  
+ CLR の戻り値の型:**SqlString**  
   
 ## <a name="remarks"></a>Remarks  
  このメソッドは、NULL インスタンスで呼び出されたときに文字列 "Null" を返します。 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] では、サーバー上で使用可能な結果セットが **FullGlobe** インスタンスに拡張されています。 このメソッドは、`AsTextZM()` と同じ値を返します。  

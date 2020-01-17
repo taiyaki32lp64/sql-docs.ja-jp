@@ -13,12 +13,12 @@ ms.assetid: b35af2b6-6594-40d1-9861-4d5dd906048c
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: ed3c7cf100d0105d393bb8c22bbc0d38d2e9de26
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 7126b01fcaee1a0ab3f7776cc54e6eb0dbe2774d
+ms.sourcegitcommit: f912c101d2939084c4ea2e9881eb98e1afa29dad
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52808884"
+ms.lasthandoff: 10/23/2019
+ms.locfileid: "72798310"
 ---
 # <a name="create-a-job"></a>ジョブの作成
   このトピックでは、[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]、[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]、または SQL Server 管理オブジェクト (SMO) を使用して、[!INCLUDE[tsql](../../includes/tsql-md.md)] で SQL Server エージェント ジョブを作成する方法について説明します。  
@@ -49,7 +49,7 @@ ms.locfileid: "52808884"
   
 -   ローカル ジョブはローカル [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェントによってキャッシュに格納されます。 したがって、ジョブを変更すると、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェントは暗黙的にジョブをキャッシュに再登録します。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sp_add_jobserver **が呼び出されるまで** エージェントはジョブをキャッシュに格納しないので、 **sp_add_jobserver** を最後に呼び出す方が効率的です。  
   
-###  <a name="Security"></a> セキュリティ  
+###  <a name="Security"></a> Security  
   
 -   ジョブの所有者を変更するには、システム管理者でなければなりません。  
   
@@ -58,7 +58,7 @@ ms.locfileid: "52808884"
     > [!NOTE]  
     >  ジョブの所有権を **sysadmin** 固定サーバー ロールのメンバーでないユーザーに変更し、そのジョブがプロキシ アカウントを必要とするジョブ ステップを実行する ( [!INCLUDE[ssIS](../../includes/ssis-md.md)] パッケージの実行など) 場合は、ユーザーがそのプロキシ アカウントにアクセスできることを確認してください。アクセスできない場合、ジョブは失敗します。  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> アクセス許可  
  詳細については、「 [SQL Server エージェントのセキュリティの実装](implement-sql-server-agent-security.md)」をご覧ください。  
   
 ##  <a name="SSMSProcedure"></a> SQL Server Management Studio の使用  
@@ -69,19 +69,19 @@ ms.locfileid: "52808884"
   
 2.  プラス記号をクリックして **[SQL Server エージェント]** を展開します。  
   
-3.  **[ジョブ]** フォルダーを右クリックし、**[新しいジョブ]** を選択します。  
+3.  **[ジョブ]** フォルダーを右クリックし、 **[新しいジョブ]** を選択します。  
   
-4.  **[新しいジョブ]** ダイアログ ボックスの **[全般]** ページで、ジョブの全般的なプロパティを変更します。 このページで使用可能なオプションの詳細については、次を参照してください[ジョブのプロパティと新しいジョブ&#40;[全般] ページ。&#41;](../../integration-services/general-page-of-integration-services-designers-options.md)  
+4.  **[新しいジョブ]** ダイアログ ボックスの **[全般]** ページで、ジョブの全般的なプロパティを変更します。 このページで利用可能なオプションの詳細については、「[ジョブの&#40;プロパティ」&#41;および「[新しいジョブの全般] ページ](../../integration-services/general-page-of-integration-services-designers-options.md)」を参照してください。  
   
-5.  **[ステップ]** ページで、ジョブ ステップを編成します。 このページで使用可能なオプションの詳細については、次を参照してください[ジョブのプロパティ: 新しいジョブ&#40;[ステップ] ページ。&#41;](job-properties-new-job-steps-page.md)  
+5.  **[ステップ]** ページで、ジョブ ステップを編成します。 このページで使用可能なオプションの詳細については、「[ジョブの&#40;プロパティ:&#41; [新しいジョブステップ] ページ](job-properties-new-job-steps-page.md)」を参照してください。  
   
-6.  **[スケジュール** ] ページで、ジョブのスケジュールを編成します。 このページで使用可能なオプションの詳細については、次を参照してください。[ジョブのプロパティ。新しいジョブ&#40;[スケジュール] ページ&#41;](job-properties-new-job-schedules-page.md)  
+6.  **[スケジュール** ] ページで、ジョブのスケジュールを編成します。 このページで使用可能なオプションの詳細については、「[ジョブの&#40;プロパティ:&#41; [新しいジョブスケジュール] ページ](job-properties-new-job-schedules-page.md)」を参照してください。  
   
-7.  **[警告]** ページで、ジョブの警告を編成します。 このページで使用可能なオプションの詳細については、次を参照してください。[ジョブのプロパティ。新しいジョブ&#40;警告 ページ&#41;](job-properties-new-job-alerts-page.md)  
+7.  **[警告]** ページで、ジョブの警告を編成します。 このページで使用可能なオプションの詳細については、「[ジョブの&#40;プロパティ:&#41; [新しいジョブの警告] ページ](job-properties-new-job-alerts-page.md)」を参照してください。  
   
-8.  **[通知]** ページで、ジョブの完了時に [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェントが実行するアクションを設定します。 このページで使用可能なオプションの詳細については、次を参照してください。[ジョブのプロパティ。新しいジョブ&#40;通知ページ&#41;](job-properties-new-job-notifications-page.md)します。  
+8.  **[通知]** ページで、ジョブの完了時に [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェントが実行するアクションを設定します。 このページで利用可能なオプションの詳細については、「[ジョブの&#40;プロパティ:&#41;新しいジョブの通知」ページ](job-properties-new-job-notifications-page.md)を参照してください。  
   
-9. **[ターゲット]** ページで、ジョブの対象サーバーを管理します。 このページで使用可能なオプションの詳細については、次を参照してください。[ジョブのプロパティ。新しいジョブ&#40;ページを対象と&#41;](job-properties-new-job-targets-page.md)します。  
+9. **[ターゲット]** ページで、ジョブのターゲット サーバーを管理します。 このページで使用可能なオプションの詳細については、「[ジョブの&#40;プロパティ:&#41;新しいジョブターゲット」ページ](job-properties-new-job-targets-page.md)を参照してください。  
   
 10. 完了したら、 **[OK]** をクリックします。  
   
@@ -95,7 +95,7 @@ ms.locfileid: "52808884"
   
 3.  次の例をコピーしてクエリ ウィンドウに貼り付け、 **[実行]** をクリックします。  
   
-    ```  
+    ```sql
     USE msdb ;  
     GO  
     EXEC dbo.sp_add_job  
@@ -134,9 +134,9 @@ ms.locfileid: "52808884"
   
 -   [sp_attach_schedule &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-attach-schedule-transact-sql)  
   
--   [sp_add_jobserver &#40;TRANSACT-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-add-jobserver-transact-sql)  
+-   [sp_add_jobserver &#40;transact-sql&#41;](/sql/relational-databases/system-stored-procedures/sp-add-jobserver-transact-sql)  
   
-##  <a name="SMOProcedure"></a> SQL Server 管理オブジェクトの使用  
+##  <a name="SMOProcedure"></a>SQL Server 管理オブジェクトの使用  
  **SQL Server エージェントのジョブを作成するには**  
   
  Visual Basic、Visual C#、PowerShell などのプログラミング言語で `Create` クラスの `Job` メソッドを呼び出します。 コード例については、「 [SQL Server エージェントでの自動管理タスクのスケジュール設定](sql-server-agent.md)」を参照してください。  

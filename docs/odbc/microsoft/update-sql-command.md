@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: ff1e0331-c060-4304-b280-039725b45f63
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 3fbd5ec98791d782fe7ad1fdb1e1884b646dcf9f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 0230329d10d2414724379d4b9d38c4851a031bca
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47818310"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67912333"
 ---
 # <a name="update---sql-command"></a>UPDATE - SQL コマンド
 新しい値では、テーブル内のレコードを更新します。  
@@ -36,7 +35,7 @@ SET Column_Name1 = eExpression1
 ```  
   
 ## <a name="arguments"></a>引数  
- 更新プログラム [ *DatabaseName1!*]*TableName1*  
+ UPDATE [ *DatabaseName1!* ] *TableName1*  
  新しい値を持つレコードを更新するテーブルを指定します。  
   
  *DatabaseName1!* テーブルを含むデータ ソースで指定されたデータベース以外のデータベースの名前を指定します。 データベースで現在ない場合は、テーブルを含むデータベースの名前を含める必要があります。 データベース名の後に、テーブル名の前に感嘆符 (!) 区切り記号が含まれます。  
@@ -57,6 +56,6 @@ SET Column_Name1 = eExpression1
 ## <a name="driver-remarks"></a>ドライバーの解説  
  アプリケーションでは、ODBC SQL ステートメントの更新をデータ ソースに送信するときに、Visual FoxPro ODBC ドライバーを翻訳しないで Visual FoxProUPDATE コマンドに、コマンドに変換します。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [DELETE - SQL コマンド](../../odbc/microsoft/delete-sql-command.md)   
  [INSERT - SQL コマンド](../../odbc/microsoft/insert-sql-command.md)

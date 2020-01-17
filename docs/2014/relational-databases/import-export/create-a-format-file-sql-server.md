@@ -9,15 +9,15 @@ ms.topic: conceptual
 helpviewer_keywords:
 - format files [SQL Server], creating
 ms.assetid: f680b4a0-630f-4052-9c79-d348c1076f7b
-author: douglaslMS
-ms.author: douglasl
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 4d5e8b6e3bc008263c83a9bdf5b36b4235897921
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: 9596aefb51c8b895abdb69ddf179282d5d930d76
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54126702"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66265151"
 ---
 # <a name="create-a-format-file-sql-server"></a>フォーマット ファイルの作成 (SQL Server)
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] テーブルにデータを一括インポートする場合、またはテーブルからデータを一括エクスポートする場合、フォーマット ファイルを使用して、他のデータ形式に準拠するため、または他のソフトウェアからデータ ファイルを読み取るための編集をほとんど (あるいはまったく) 必要としないデータ ファイルを柔軟なシステムに出力できます。  
@@ -29,12 +29,12 @@ ms.locfileid: "54126702"
 > [!NOTE]  
 >  フォーマット ファイルの読み取りに使用される **bcp** ユーティリティ (Bcp.exe) のバージョンは、フォーマット ファイルの作成に使用されたバージョン、またはそれ以降のバージョンである必要があります。 たとえば、[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] の **bcp** では、[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] の **bcp** によって生成されるバージョン 10.0 のフォーマット ファイルを読み取ることができますが、[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] の **bcp** では、[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] の **bcp** によって生成されるバージョン 11.0 のフォーマット ファイルを読み取ることができません。  
   
- このトピックでは、 [bcp ユーティリティ](../../tools/bcp-utility.md) を使用して、特定のテーブルのフォーマット ファイルを作成する方法について説明します。 フォーマット ファイルは、指定されたデータ型のオプション (**-n**、 **-c**、 **-w**、または **-N**)、およびテーブルやビューの区切り記号から構成されます。  
+ このトピックでは、 [bcp ユーティリティ](../../tools/bcp-utility.md) を使用して、特定のテーブルのフォーマット ファイルを作成する方法について説明します。 フォーマット ファイルは、指定されたデータ型のオプション ( **-n**、 **-c**、 **-w**、または **-N**)、およびテーブルやビューの区切り記号から構成されます。  
   
 ## <a name="creating-a-non-xml-format-file"></a>XML 以外のフォーマット ファイルの作成  
  **bcp** コマンドを使用してフォーマット ファイルを作成するには、 **format** 引数を指定し、データ ファイルのパスの代わりに **nul** を使用します。 **format** オプションには、次に示す **-f** オプションが必要です。  
   
- **bcp** _table_or_view_ **format** nul **-f***format_file_name*  
+ **bcp** _table_or_view_ **format** nul **-f**_format_file_name_  
   
 > [!NOTE]  
 >  XML 以外のフォーマット ファイルであることを区別するには、MyTable.fmt のように、ファイル名拡張子として .fmt を使用することをお勧めします。  
@@ -163,7 +163,7 @@ bcp AdventureWorks2012.HumanResources.Department format nul -T -w -f Department-
 |----------------|-----------------|  
 |**formatnul-f** _format_file_ **-x**|XML フォーマット ファイルを指定します。|  
 |**-c**|文字データを指定します。|  
-|**-t** `,`|コンマ (**,**) をフィールド ターミネータとして指定します。<br /><br /> 注:データ ファイルが既定のフィールド ターミネータを使用している場合 (`\t`)、 **-t**スイッチが必要ではありません。|  
+|**-t** `,`|コンマ ( **,** ) をフィールド ターミネータとして指定します。<br /><br /> 注: データ ファイルで既定のフィールド ターミネータ (`\t`) が使用されている場合、 **-t** スイッチは不要です。|  
 |**-T**|**bcp** ユーティリティが統合セキュリティを使用した信頼関係接続を使用して [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] に接続することを指定します。 **-T** を指定しない場合、正常にログインするには **-U** や **-P** を指定する必要があります。|  
   
  Windows コマンド プロンプトで、次の `bcp` コマンドを入力します。  
@@ -243,7 +243,7 @@ bcp AdventureWorks2012.HumanResources.Department format nul -x -f Department-n..
 -   [フォーマット ファイルを使用したテーブル列とデータ ファイル フィールドのマッピング &#40;SQL Server&#41;](use-a-format-file-to-map-table-columns-to-data-file-fields-sql-server.md)  
   
 ## <a name="see-also"></a>参照  
- [bcp ユーティリティ](../../tools/bcp-utility.md)   
+ [bcp Utility](../../tools/bcp-utility.md)   
  [フォーマット ファイルを使用したテーブル列とデータ ファイル フィールドのマッピング &#40;SQL Server&#41;](use-a-format-file-to-map-table-columns-to-data-file-fields-sql-server.md)   
  [フォーマット ファイルを使用したテーブル列のスキップ &#40;SQL Server&#41;](use-a-format-file-to-skip-a-table-column-sql-server.md)   
  [フォーマット ファイルを使用したデータ フィールドのスキップ &#40;SQL Server&#41;](use-a-format-file-to-skip-a-data-field-sql-server.md)   

@@ -13,15 +13,15 @@ helpviewer_keywords:
 - XML source [Integration Services]
 - XML Source Editor
 ms.assetid: 68c27ea5-e93d-4e26-bfb2-d967ca0a5282
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 7e8d49827c9f533c75933a316ff3b655d3f13025
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 28e7a7395c02e44e52469992f3738f0d873e227f
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53353898"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62899945"
 ---
 # <a name="xml-source"></a>XML ソース
   XML ソースは XML データ ファイルを読み取り、ソース出力の列にデータを設定します。  
@@ -83,7 +83,7 @@ ms.locfileid: "53353898"
   
  **[詳細エディター]** ダイアログ ボックスには、プログラムによって設定できるプロパティが反映されます。 **[詳細エディター]** ダイアログ ボックスまたはプログラムで設定できるプロパティの詳細については、次のトピックのいずれかを参照してください。  
   
--   [Common Properties](../common-properties.md)  
+-   [共通プロパティ](../common-properties.md)  
   
 -   [XML 入力元のカスタム プロパティ](xml-source-custom-properties.md)  
   
@@ -95,6 +95,6 @@ ms.locfileid: "53353898"
  [XML ソースを使用してデータを抽出する](xml-source.md)  
   
 ## <a name="related-content"></a>関連コンテンツ  
- curatedviews.cloudapp.net の Curated Answer 「[SSIS パッケージ用の XML 変換先を作成する](https://go.microsoft.com/fwlink/?LinkId=321993)」  
+ 技術記事「 [XML ファイルを使用して、SSIS パッケージを構成する](https://www.sqlshack.com/using-xml-file-configure-ssis-package/)します。  
   
   

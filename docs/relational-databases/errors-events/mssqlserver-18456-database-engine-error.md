@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: c417631d-be1f-42e0-8844-9f92c77e11f7
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 627af74608a462cd336c6bb3775511bd5920eb11
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 737e64973e4651dd36c58fa9ff97a61c65a604a9
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51673591"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68137091"
 ---
 # <a name="mssqlserver18456"></a>MSSQLSERVER_18456
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -34,7 +33,7 @@ ms.locfileid: "51673591"
 |メッセージ テキスト|ユーザー '%.*ls'.%.\*ls はログインできませんでした|  
   
 ## <a name="explanation"></a>説明  
-無効なパスワードまたはユーザー名を含む認証の失敗によって接続試行が拒否された場合、クライアントには "ユーザー '<user_name>' はログインできませんでした。 (Microsoft SQL Server、エラー: 18456)" のようなメッセージが返されます。  
+無効なパスワードまたはユーザー名の使用による認証の失敗によって接続の試行が拒否された場合、クライアントに次のようのメッセージが表示されます。"ユーザー '<user_name>' はログインできませんでした。 (Microsoft SQL Server、エラー:18456)"。  
   
 クライアントに返される追加情報には、次のようなものがあります。  
   
@@ -44,13 +43,13 @@ ms.locfileid: "51673591"
   
 "サーバー名: <computer_name>"  
   
-"エラー番号: 18456"  
+"エラー番号:18456"  
   
-"重大度: 14"  
+"重大度:14"  
   
-"状態: 1"  
+"状態:1"  
   
-"行番号: 65536"  
+"行番号:65536"  
   
 次のメッセージが返されることもあります。  
   
@@ -70,7 +69,7 @@ ms.locfileid: "51673591"
 |7|ログインが無効で、パスワードが正しくありません。|  
 |8|パスワードが正しくありません。|  
 |9|パスワードが無効です。|  
-|11|ログインは有効ですが、サーバー アクセスに失敗しました。 このエラーで考えられる原因の 1 つは、Windows ユーザーがローカル管理者グループのメンバーとして [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] へのアクセス権限を持っている一方で、Windows から管理者資格情報が提供されないことです。 接続するには、**[管理者として実行]** オプションを使用して接続プログラムを開始してから、その Windows ユーザーを特定のログインとして [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] に追加します。|  
+|11|ログインは有効ですが、サーバー アクセスに失敗しました。 このエラーで考えられる原因の 1 つは、Windows ユーザーがローカル管理者グループのメンバーとして [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] へのアクセス権限を持っている一方で、Windows から管理者資格情報が提供されないことです。 接続するには、 **[管理者として実行]** オプションを使用して接続プログラムを開始してから、その Windows ユーザーを特定のログインとして [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] に追加します。|  
 |12|ログインは有効なログインですが、サーバー アクセスに失敗しました。|  
 |18|パスワードを変更する必要があります。|  
 |38, 46|ユーザーによって要求されたデータベースを見つけることができませんでした。|
@@ -83,7 +82,7 @@ ms.locfileid: "51673591"
   
 **その他の特殊な原因**  
   
-エラーの理由として、**"SQL 認証を使用したログインに失敗しました。サーバーは、Windows 認証専用に構成されています。** 次の状況で返される場合があります。  
+エラーの理由として、 **"SQL 認証を使用したログインに失敗しました。サーバーは、Windows 認証専用に構成されています。** 次の状況で返される場合があります。  
   
 -   サーバーが混合モード認証で構成され、ODBC 接続で TCP プロトコルを使用し、接続でセキュリティ接続を使用することが明示的に指定されていない場合。  
   
@@ -96,11 +95,11 @@ ms.locfileid: "51673591"
   
 |date|Source|メッセージ|  
 |--------|----------|-----------|  
-|2007-12-05 20:12:56.34|ログオン|エラー: 18456、重大度: 14、状態: 8。|  
+|2007-12-05 20:12:56.34|ログオン|エラー:18456、重大度:14、状態:8.|  
 |2007-12-05 20:12:56.34|ログオン|ユーザー '<user_name>' はログインできませんでした。 [CLIENT: <ip address>]|  
   
 > [!NOTE]  
-> Windows 認証モードを使用して [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] をインストールし、後で [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 認証モードと Windows 認証モードに変更すると、**sa** ログインは最初は無効になります。 これにより、状態 7 のエラー "ユーザー 'sa' はログインできませんでした。" が発生します。**sa** ログインを有効にするには、「[サーバーの認証モードの変更](~/database-engine/configure-windows/change-server-authentication-mode.md)」を参照してください。  
+> Windows 認証モードを使用して [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] をインストールし、後で [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 認証モードと Windows 認証モードに変更すると、**sa** ログインは最初は無効になります。 これにより、次の状態 7 のエラーが発生します。"ユーザー 'sa' はログインできませんでした。"**sa** ログインを有効にするには、「[サーバーの認証モードの変更](~/database-engine/configure-windows/change-server-authentication-mode.md)」を参照してください。  
   
 ## <a name="user-action"></a>ユーザーの操作  
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 認証を使用して接続しようとしている場合は、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] が混合モード認証で構成されていることを確認します。  
@@ -111,9 +110,9 @@ Windows 認証を使用して接続しようとしている場合は、正しい
   
 エラーが状態 1 を示している場合は、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 管理者に問い合わせてください。  
   
-管理者の資格情報を使用して接続する場合、**[管理者として実行]** オプションを使用してアプリケーションを起動します。 接続したら、Windows ユーザーを個別のログインとして追加します。  
+管理者の資格情報を使用して接続する場合、 **[管理者として実行]** オプションを使用してアプリケーションを起動します。 接続したら、Windows ユーザーを個別のログインとして追加します。  
   
 [!INCLUDE[ssDE](../../includes/ssde-md.md)]で包含データベースがサポートされる場合、包含データベース ユーザーへの移行後にそのログインが削除されていないことを確認してください。  
   
-ローカルの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスに接続している場合、**NT AUTHORITY\NETWORK SERVICE** で実行されているサービスからの接続は、コンピューターの完全修飾ドメイン名を使用して認証する必要があります。 詳細については、「[How To: ASP.NET で Network Service アカウントを使用してリソースにアクセスする方法](https://msdn.microsoft.com/library/ff647402.aspx)」を参照してください。  
+ローカルの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスに接続している場合、**NT AUTHORITY\NETWORK SERVICE** で実行されているサービスからの接続は、コンピューターの完全修飾ドメイン名を使用して認証する必要があります。 詳細については、このトピックの「[方法: ASP.NET で Network Service アカウントを使用してリソースにアクセスする方法](https://msdn.microsoft.com/library/ff647402.aspx)」を参照してください。  
   

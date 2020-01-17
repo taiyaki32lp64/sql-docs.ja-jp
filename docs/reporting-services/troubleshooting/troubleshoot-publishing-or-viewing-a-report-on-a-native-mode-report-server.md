@@ -2,18 +2,18 @@
 title: ネイティブ モードのレポート サーバーでのレポートのパブリッシュまたは表示のトラブルシューティング | Microsoft Docs
 ms.date: 02/28/2016
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: troubleshooting
 ms.topic: conceptual
 ms.assetid: df7720a1-d178-45bb-8d6f-63e208cae7fe
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: ff2caeab1399ac45523b8b0adae753225271840e
-ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 6e3a96e3eef90778b0e7877b88ba79cb4e0dd43e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51811775"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65573863"
 ---
 # <a name="troubleshoot-publishing-or-viewing-a-report-on-a-native-mode-report-server"></a>ネイティブ モードのレポート サーバーでのレポートのパブリッシュまたは表示のトラブルシューティング
   

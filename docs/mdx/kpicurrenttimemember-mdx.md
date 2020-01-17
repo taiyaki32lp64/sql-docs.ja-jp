@@ -1,5 +1,5 @@
 ---
-title: KPICurrentTimeMember (MDX) |Microsoft ドキュメント
+title: KPICurrentTimeMember (MDX) |Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -8,13 +8,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-manager: kfile
-ms.openlocfilehash: 34fb8bbfbda3f6fcab865697749aca3f76ae2603
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.openlocfilehash: 69c4a15108e682659cd95a20b4fc4ec5c41da007
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34740241"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67905904"
 ---
 # <a name="kpicurrenttimemember-mdx"></a>KPICurrentTimeMember (MDX)
 
@@ -30,12 +29,12 @@ KPICurrentTimeMember(KPI_Name)
   
 ## <a name="arguments"></a>引数  
  *KPI_Nam*e  
- KPI の名前を指定する有効な文字列式です。  
+ KPI の名前を指定する有効な文字列式。  
   
 ## <a name="remarks"></a>コメント  
- KPI には、時間ディメンションの既定のメンバーとは異なる時間メンバーを含めることができます。  
+ KPI は、時間ディメンションの既定のメンバーから別の時間メンバーを持つことができます。  
   
-## <a name="see-also"></a>参照  
- [MDX 関数リファレンス&#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
+## <a name="see-also"></a>関連項目  
+ [MDX 関数リファレンス &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
   
   

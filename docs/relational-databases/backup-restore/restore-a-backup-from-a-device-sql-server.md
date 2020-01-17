@@ -15,26 +15,25 @@ helpviewer_keywords:
 ms.assetid: 6e139de7-7de2-4d18-9df0-beac31ba7ff1
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 9237872d09667f0b67dc90b48cc813cb5b3197d2
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: bd2512c66c072c047ec8aec1bfa4cc353864d463
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47641610"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72908847"
 ---
 # <a name="restore-a-backup-from-a-device-sql-server"></a>デバイスからのバックアップ復元 (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   このトピックでは、 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] で [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] または [!INCLUDE[tsql](../../includes/tsql-md.md)]を使用して、バックアップをデバイスから復元する方法について説明します。  
   
 > [!NOTE]  
->  Windows Azure BLOB ストレージ サービスへの SQL Server のバックアップについては、「 [Microsoft Azure BLOB ストレージ サービスを使用した SQL Server のバックアップと復元](../../relational-databases/backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md)」をご覧ください。  
+>  Azure Blob Storage サービスへの SQL Server のバックアップについては、「[Microsoft Azure BLOB ストレージ サービスを使用した SQL Server のバックアップと復元](../../relational-databases/backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md)」をご覧ください。  
   
  **このトピックの内容**  
   
 -   **作業を開始する準備:**  
   
-     [Security](#Security)  
+     [セキュリティ](#Security)  
   
 -   **デバイスからバックアップを復元する方法:**  
   
@@ -42,7 +41,7 @@ ms.locfileid: "47641610"
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> 作業を開始する準備  
+##  <a name="BeforeYouBegin"></a> はじめに  
   
 ###  <a name="Security"></a> セキュリティ  
   
@@ -61,7 +60,7 @@ ms.locfileid: "47641610"
   
 3.  データベースを右クリックして **[タスク]** をポイントし、 **[復元]** をクリックします。  
   
-4.  実行する復元操作の種類 (**[データベース]**、 **[ファイルとファイル グループ]**、または **[トランザクション ログ]**) をクリックします。 対応する復元ダイアログ ボックスが開きます。  
+4.  実行する復元操作の種類 ( **[データベース]** 、 **[ファイルとファイル グループ]** 、または **[トランザクション ログ]** ) をクリックします。 対応する復元ダイアログ ボックスが開きます。  
   
 5.  **[全般]** ページの **[復元用のソース]** セクションで、 **[デバイスから]** をクリックします。  
   
@@ -70,7 +69,7 @@ ms.locfileid: "47641610"
 7.  **[バックアップ メディア]** ボックスの一覧で、 **[バックアップ デバイス]** をクリックします。次に、 **[追加]** をクリックして **[バックアップ デバイスの選択]** ダイアログ ボックスを開きます。  
   
 8.  **[バックアップ デバイス]** ボックスで、復元操作に使用するデバイスを選択します。  
-  
+
 ##  <a name="TsqlProcedure"></a> Transact-SQL の使用  
   
 #### <a name="to-restore-a-backup-from-a-device"></a>デバイスからバックアップを復元するには  

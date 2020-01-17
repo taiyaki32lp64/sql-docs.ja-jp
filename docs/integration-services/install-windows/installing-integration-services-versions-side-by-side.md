@@ -11,17 +11,20 @@ helpviewer_keywords:
 - interoperability and coexistence [Integration Services]
 - Integration Services, interoperability and coexistence
 ms.assetid: edfbcd56-012f-462e-a542-95491394fda9
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: a6662176bc0a266982ec1e81dadff815e1490061
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 89126793193172dbdc35de2cb059a91173bb6faa
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47645770"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71296226"
 ---
 # <a name="installing-integration-services-versions-side-by-side"></a>Integration Services バージョンのサイド バイ サイド インストール
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   Integration Services (SSIS) は、   
       [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 前のバージョンの SSIS とサイド バイ サイドでインストールできます。 このトピックでは、サイド バイ サイド インストールの制限事項について説明します。  
   

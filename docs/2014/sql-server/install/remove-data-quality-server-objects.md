@@ -11,11 +11,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: f273823825cf94da6269a58389f04207ad1c2707
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53211883"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68190667"
 ---
 # <a name="remove-data-quality-server-objects"></a>Data Quality Server オブジェクトの削除
   [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] インスタンスから [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]をアンインストールしても、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] を持つ [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] インスタンスを完全に削除しても、DQS データベースを含む一部の [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] オブジェクトは削除されません。 これは、SQL Server セットアップを使用して [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] をアンインストールする場合、DQS データが失われないことを意味します。 このような [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] オブジェクトは、アンインストール プロセスの完了後に手動で削除する必要があります。  
@@ -42,7 +42,7 @@ ms.locfileid: "53211883"
 ## <a name="uninstall-sql-server-instance-containing-data-quality-server"></a>Data Quality Server を含む SQL Server インスタンスのアンインストール  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] を含む [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] インスタンスを完全にアンインストールする場合、アンインストール プロセスの完了後に、コンピューターから DQS_MAIN データベース、DQS_PROJECTS データベース、および DQS_STAGING_DATA データベースを手動で削除する必要があります。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の既定のインストールでは、DQS_MAIN、DQS_PROJECTS、および DQS_STAGING_DATA のデータベース ファイルは C:\Program Files\Microsoft SQL Server\MSSQL12.MSSQLSERVER\MSSQL\DATA にあります。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [SQL Server の既存のインスタンスのアンインストール &#40;セットアップ&#41;](../../../2014/sql-server/install/uninstall-an-existing-instance-of-sql-server-setup.md)   
  [SQL Server 2014 のアンインストール](uninstall-sql-server.md)  
   

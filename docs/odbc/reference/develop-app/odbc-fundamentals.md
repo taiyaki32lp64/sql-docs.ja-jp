@@ -10,18 +10,17 @@ ms.topic: conceptual
 ms.assetid: bdaa40d5-1c63-4aee-94fb-7b2edd0bdc47
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 3e59323b682370befd6782c2999af8ac0d15013c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 2b0f093559c463b22df0444e740eb4c314f062e9
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47631830"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68086292"
 ---
 # <a name="odbc-fundamentals"></a>ODBC の基礎
 このセクションでは、次のトピックを扱います。  
   
--   [ハンドル](../../../odbc/reference/develop-app/handles.md)  
+-   [Handles](../../../odbc/reference/develop-app/handles.md)  
   
 -   [バッファー](../../../odbc/reference/develop-app/buffers.md)  
   

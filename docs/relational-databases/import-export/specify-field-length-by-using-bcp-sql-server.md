@@ -14,23 +14,22 @@ helpviewer_keywords:
 - data formats [SQL Server], field length
 - bcp utility [SQL Server], field length
 ms.assetid: 240f33ca-ef4a-413a-a4de-831885cb505b
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
+author: MashaMSFT
+ms.author: mathoma
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: bd8995c954d88a90b5e1c5cd8802f69d96b33186
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 0cbb165d6c0b56626849a74eed191402b65623de
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47627290"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68062529"
 ---
 # <a name="specify-field-length-by-using-bcp-sql-server"></a>bcp を使用したフィールド長の指定 (SQL Server)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
   フィールド長は、文字形式でデータを表現するために必要な文字の最大数を示します。 データがネイティブ形式で格納されている場合、フィールド長は既にわかっています。たとえば、 **int** データ型では 4 バイトになります。 プレフィックス長に 0 を指定した場合、 **bcp** コマンドを実行すると、フィールド長、既定のフィールド長、 **char** データを含むデータ ファイル内のデータ ストレージに対するフィールド長の影響を確認するプロンプトが表示されます。  
   
 ## <a name="the-bcp-prompt-for-field-length"></a>フィールド長を要求する bcp プロンプト  
- 対話型の **bcp** コマンドで、フォーマット ファイル スイッチ (**-f**) またはデータ形式スイッチ (**-n**、**-c**、**-w** または **-N**) のどちらも付けずに **in** または **out** オプションを指定すると、次のように各データ フィールドの長さを要求するプロンプトが表示されます。  
+ 対話型の **bcp** コマンドで、フォーマット ファイル スイッチ ( **-f**) またはデータ形式スイッチ ( **-n**、 **-c**、 **-w** または **-N**) のどちらも付けずに **in** または **out** オプションを指定すると、次のように各データ フィールドの長さを要求するプロンプトが表示されます。  
   
  `Enter length of field <field_name> [<default>]:`  
   
@@ -67,7 +66,7 @@ ms.locfileid: "47627290"
 |**テキスト**|0|  
 |**ntext**|0|  
 |**bit**|1|  
-|**[バイナリ]**|列に対して定義された長さの 2 倍 + 1|  
+|**binary**|列に対して定義された長さの 2 倍 + 1|  
 |**varbinary**|列に対して定義された長さの 2 倍 + 1|  
 |**image**|0|  
 |**datetime**|24|  
@@ -101,7 +100,7 @@ ms.locfileid: "47627290"
 |データ型|既定の長さ (文字数)|  
 |---------------|-----------------------------------|  
 |**bit**|1|  
-|**[バイナリ]**|列に対して定義された長さ|  
+|**binary**|列に対して定義された長さ|  
 |**varbinary**|列に対して定義された長さ|  
 |**image**|0|  
 |**datetime**|8|  

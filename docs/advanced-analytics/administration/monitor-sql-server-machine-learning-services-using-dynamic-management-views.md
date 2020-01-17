@@ -1,62 +1,63 @@
 ---
-title: 動的管理ビュー (Dmv) - SQL Server Machine Learning を使用して R と Python スクリプトの実行を監視します。
-description: 動的管理ビュー (Dmv) を使用すると、SQL Server Machine Learning Services での R と Python の外部スクリプト実行を監視できます。
+title: DMV を使用してスクリプトを監視する
+description: 動的管理ビュー (DMV) を使用して、SQL Server Machine Learning Services での Python および R の外部スクリプトの実行を監視します。
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 10/29/2018
+ms.date: 09/17/2019
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
-manager: cgronlun
-ms.openlocfilehash: 0d07288bccc641f67644a37cd027e093fc3967c8
-ms.sourcegitcommit: ee76332b6119ef89549ee9d641d002b9cabf20d2
-ms.translationtype: MT
+ms.custom: seo-lt-2019
+monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
+ms.openlocfilehash: ddaca1490782c8fd3a88b941fbabe6af48531726
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/20/2018
-ms.locfileid: "53645551"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73727753"
 ---
-# <a name="monitor-sql-server-machine-learning-services-using-dynamic-management-views-dmvs"></a>SQL Server Machine Learning Services の動的管理ビュー (Dmv) を使用した監視します。
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+# <a name="monitor-sql-server-machine-learning-services-using-dynamic-management-views-dmvs"></a>動的管理ビュー (DMV) を使用して SQL Server Machine Learning Services を監視する
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-動的管理ビュー (Dmv) 外部の実行を監視するスクリプトを使用すると、(R および Python) のリソースを使用して、問題を診断し、SQL Server Machine Learning Services でのパフォーマンスを調整します。
+動的管理ビュー (DMV) を使用して、外部スクリプト (Python と R) の実行、使用されたリソース、問題の診断、SQL Server Machine Learning Services のパフォーマンスの調整を監視します。
 
-この記事では、SQL Server Machine Learning Services の固有の Dmv を紹介します。 表示するクエリの例も表示されます。
+この記事では、SQL Server Machine Learning Services に固有の DMV について説明します。 また、次のようなクエリの例も紹介します。
 
-+ 設定と machine learning 用の構成オプション
-+ 外部の R または Python スクリプトを実行しているアクティブなセッション
-+ 外部 R と Python のランタイム実行統計
++ 機械学習の設定オプションと構成オプション
++ 外部の Python またはスクリプトを実行しているアクティブなセッション
++ Python および R 用の外部ランタイムの実行の統計
 + 外部スクリプトのパフォーマンス カウンター
 + OS、SQL Server、および外部リソース プールのメモリ使用量
-+ SQL Server と外部リソース プールのメモリの構成
-+ 外部リソース プールを含めて、リソース ガバナー リソース プール
-+ R と Python のインストール済みパッケージ
++ SQL Server および外部リソース プールのメモリ構成
++ 外部リソース プールを含むリソース ガバナーのリソース プール
++ Python および R 用にインストールされたパッケージ
 
-Dmv の概要については、次を参照してください。[システム動的管理ビュー](../../relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)します。
+DMV に関する一般情報については、「[システムの動的管理ビュー](../../relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)」を参照してください。
 
 > [!TIP]
-> SQL Server Machine Learning サービスを監視するのにカスタム レポートを使用することもできます。 詳細については、次を参照してください。 [Management Studio でカスタム レポートを使用して機械学習の監視](../../advanced-analytics/r/monitor-r-services-using-custom-reports-in-management-studio.md)します。
+> カスタム レポートを使用して、SQL Server Machine Learning Services を監視することもできます。 詳細については、「[Management Studio でカスタム レポートを使用して機械学習を監視する](../../advanced-analytics/r/monitor-r-services-using-custom-reports-in-management-studio.md)」を参照してください。
 
 ## <a name="dynamic-management-views"></a>動的管理ビュー
 
-SQL server machine learning ワークロードを監視する場合、次の動的管理ビューを使用できます。 Dmv を照会する必要があります`VIEW SERVER STATE`インスタンスに対する権限。
+SQL Server で機械学習のワークロードを監視するときに、次の動的管理ビューを使用できます。 DMV に対してクエリを実行するには、インスタンスに対する `VIEW SERVER STATE` 権限が必要です。
 
-| 動的管理ビュー | 型 | 説明 |
+| 動的管理ビュー | 型 | [説明] |
 |-------------------------|------|-------------|
 | [sys.dm_external_script_requests](../../relational-databases/system-dynamic-management-views/sys-dm-external-script-requests.md) | 実行 | 外部スクリプトを実行しているアクティブなワーカー アカウントごとに行を返します。 |
 | [sys.dm_external_script_execution_stats](../../relational-databases/system-dynamic-management-views/sys-dm-external-script-execution-stats.md) | 実行 | 外部スクリプト要求の種類ごとに 1 つの行を返します。 |
-| [sys.dm_os_performance_counters](../../relational-databases/system-dynamic-management-views/sys-dm-os-performance-counters-transact-sql.md) | 実行 | サーバーで管理されているパフォーマンス カウンターごとに 1 行のデータを返します。 検索条件を使用する場合`WHERE object_name LIKE '%External Scripts%'`、この情報を使用するには、スクリプトの数は実行を確認する認証モード、または数の R を使用してスクリプトが実行されたか、インスタンス全体で Python の呼び出しが発行されました。 |
-| [sys.dm_resource_governor_external_resource_pools](../../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-external-resource-pools.md) | [リソース ガバナー] | リソース ガバナーで、リソース プール、およびリソース プール統計の現在の構成、現在の外部リソース プールの状態に関する情報を返します。 |
-| [sys.dm_resource_governor_external_resource_pool_affinity](../../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-external-resource-pool-affinity-transact-sql.md) | [リソース ガバナー] | リソース ガバナーにおける外部リソース プールの現在の構成について、CPU アフィニティ情報を返します。 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] のスケジューラごとに 1 行のデータを返します。各スケジューラは個別のプロセッサにマップされています。 このビューは、スケジューラの状況の監視やランナウェイ タスクの特定に使用できます。 |
+| [sys.dm_os_performance_counters](../../relational-databases/system-dynamic-management-views/sys-dm-os-performance-counters-transact-sql.md) | 実行 | サーバーによって管理されているパフォーマンス カウンターごとに 1 つの行を返します。 検索条件 `WHERE object_name LIKE '%External Scripts%'` を使用する場合、この情報を使用して、実行されたスクリプトの数、実行されたスクリプトで使用された認証モード、またはインスタンス全体で発行された R または Python の呼び出しの総数を確認できます。 |
+| [sys.dm_resource_governor_external_resource_pools](../../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-external-resource-pools.md) | [リソース ガバナー] | リソース ガバナーの外部リソース プールの現在の状態、リソース プールの現在の構成、および統計に関する情報を返します。 |
+| [sys.dm_resource_governor_external_resource_pool_affinity](../../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-external-resource-pool-affinity-transact-sql.md) | [リソース ガバナー] | リソース ガバナー内の現在の外部リソース プールの構成に関する CPU アフィニティ情報を返します。 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] のスケジューラごとに 1 行のデータを返します。各スケジューラは個別のプロセッサにマップされています。 このビューは、スケジューラの状況の監視やランナウェイ タスクの特定に使用できます。 |
 
-監視について[!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]インスタンスを参照してください[カタログ ビュー](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)と[リソース ガバナー関連の動的管理ビュー](../../relational-databases/system-dynamic-management-views/resource-governor-related-dynamic-management-views-transact-sql.md)します。
+[!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] インスタンスの監視の詳細については、「[カタログ ビュー](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)」と「[リソース ガバナー関連の動的管理ビュー](../../relational-databases/system-dynamic-management-views/resource-governor-related-dynamic-management-views-transact-sql.md)」を参照してください。
 
 ## <a name="settings-and-configuration"></a>設定と構成
 
-Machine Learning サービスのインストールの設定と構成オプションを表示します。
+Machine Learning Services のインストール設定と構成オプションを表示します。
 
-![設定および構成のクエリからの出力](media/dmv-settings-and-configuration.png "設定および構成のクエリからの出力")
+![設定と構成クエリからの出力](media/dmv-settings-and-configuration.png "設定と構成クエリからの出力")
 
-この出力を取得する次のクエリを実行します。 ビューおよび関数の使用の詳細については、次を参照してください。 [sys.dm_server_registry](../../relational-databases/system-dynamic-management-views/sys-dm-server-registry-transact-sql.md)、 [sys.configurations](../../relational-databases/system-catalog-views/sys-configurations-transact-sql.md)、および[SERVERPROPERTY](../../t-sql/functions/serverproperty-transact-sql.md)します。
+この出力を取得するには、次のクエリを実行します。 使用するビューと関数の詳細については、「[sys. dm_server_registry](../../relational-databases/system-dynamic-management-views/sys-dm-server-registry-transact-sql.md)」、「[sys.configurations](../../relational-databases/system-catalog-views/sys-configurations-transact-sql.md)」、および「[SERVERPROPERTY](../../t-sql/functions/serverproperty-transact-sql.md)」を参照してください。
 
 ```sql
 SELECT CAST(SERVERPROPERTY('IsAdvancedAnalyticsInstalled') AS INT) AS IsMLServicesInstalled
@@ -76,22 +77,22 @@ FROM sys.configurations
 WHERE name = 'external scripts enabled';
 ```
 
-このクエリでは、次の列を返します。
+このクエリは次の列を返します。
 
-| [列] | 説明 |
+| [列] | [説明] |
 |--------|-------------|
-| IsMLServicesInstalled | インスタンスの SQL Server Machine Learning サービスがインストールされている場合は、1 を返します。 それ以外の場合、0 を返します。 |
-| ExternalScriptsEnabled | インスタンスの外部のスクリプトが有効になっている場合は、1 を返します。 それ以外の場合、0 を返します。 |
-| ImpliedAuthenticationEnabled | 暗黙の認証の場合は 1 になっています。 それ以外の場合、0 を返します。 SQLRUserGroup のログインが存在するかどうかを確認し、暗黙の認証の構成がチェックされます。 |
-| IsTcpEnabled | インスタンスの TCP/IP プロトコルが有効になっている場合は、1 を返します。 それ以外の場合、0 を返します。 詳細については、次を参照してください。 [SQL サーバー ネットワーク プロトコルの構成を既定の](../../database-engine/configure-windows/default-sql-server-network-protocol-configuration.md)します。 |
+| IsMLServicesInstalled | インスタンスに対して SQL Server Machine Learning Services がインストールされている場合は 1 を返します。 それ以外の場合は 0 を返します。 |
+| ExternalScriptsEnabled | インスタンスの外部スクリプトが有効になっている場合は 1 を返します。 それ以外の場合は 0 を返します。 |
+| ImpliedAuthenticationEnabled | 暗黙の認証が有効になっている場合は 1 を返します。 それ以外の場合は 0 を返します。 暗黙の認証の構成は、SQLRUserGroup のログインが存在するかどうかを確認することによって確認されます。 |
+| IsTcpEnabled | インスタンスの TCP/IP プロトコルが有効になっている場合は 1 を返します。 それ以外の場合は 0 を返します。 詳細については、「[SQL Server の既定のネットワーク プロトコル構成](../../database-engine/configure-windows/default-sql-server-network-protocol-configuration.md)」を参照してください。 |
 
 ## <a name="active-sessions"></a>Active sessions
 
-外部スクリプトを実行しているアクティブなセッションを表示します。
+外部のスクリプトを実行しているアクティブなセッションを表示します。
 
-![アクティブな設定のクエリからの出力](media/dmv-active-sessions.png "アクティブな設定のクエリからの出力")
+![アクティブな設定クエリからの出力](media/dmv-active-sessions.png "アクティブな設定クエリからの出力")
 
-この出力を取得する次のクエリを実行します。 使用する動的管理ビューの詳細については、次を参照してください。 [sys.dm_exec_requests](../../relational-databases/system-dynamic-management-views/sys-dm-external-script-requests.md)、 [sys.dm_external_script_requests](../../relational-databases/system-catalog-views/sys-configurations-transact-sql.md)、および[sys.dm_exec_sessions](../../relational-databases/system-dynamic-management-views/sys-dm-exec-sessions-transact-sql.md)します。
+この出力を取得するには、次のクエリを実行します。 使用される動的管理ビューの詳細については、「[sys. dm_exec_requests](../../relational-databases/system-dynamic-management-views/sys-dm-external-script-requests.md)」、「[sys. dm_external_script_requests](../../relational-databases/system-catalog-views/sys-configurations-transact-sql.md)」、および「[dm_exec_sessions](../../relational-databases/system-dynamic-management-views/sys-dm-exec-sessions-transact-sql.md)」を参照してください。
 
 ```sql
 SELECT r.session_id, r.blocking_session_id, r.status, DB_NAME(s.database_id) AS database_name
@@ -104,17 +105,17 @@ INNER JOIN sys.dm_exec_sessions AS s
 ON s.session_id = r.session_id;
 ```
 
-このクエリでは、次の列を返します。
+このクエリは次の列を返します。
 
-| [列] | 説明 |
+| [列] | [説明] |
 |--------|-------------|
-| session_id | アクティブな各プライマリ接続に関連付けられたセッションの識別子。 |
+| session_id | アクティブな各プライマリ接続に関連付けられたセッションを識別します。 |
 | blocking_session_id | 要求をブロックしているセッションの ID。 この列が NULL の場合は、要求がブロックされていないか、ブロックしているセッションのセッション情報が使用または識別できません。 |
-| status | 要求の状態です。 |
+| ステータス | 要求の状態。 |
 | database_name | 各セッションの現在のデータベースの名前。 |
-| login_name | セッションが現在実行されている SQL Server ログインの名前。 |
+| login_name | 現在セッションを実行している SQL Server ログイン名。 |
 | wait_time | 要求が現在ブロックされている場合の現時点での待機時間 (ミリ秒単位)。 NULL 値は許可されません。 |
-| wait_type | 要求が現在ブロックされている場合の待機の種類。 待機の種類については、次を参照してください。 [sys.dm_os_wait_stats](../../relational-databases/system-dynamic-management-views/sys-dm-os-wait-stats-transact-sql.md)します。 |
+| wait_type | 要求が現在ブロックされている場合の待機の種類。 待機の種類の詳細については、「[sys.dm_os_wait_stats](../../relational-databases/system-dynamic-management-views/sys-dm-os-wait-stats-transact-sql.md)」を参照してください。 |
 | last_wait_type | 要求がブロックされていた場合の最後の待機の種類。 |
 | total_elapsed_time | 要求を受信してから経過した総時間 (ミリ秒単位)。 |
 | cpu_time | 要求で使用される CPU 時間 (ミリ秒単位)。 |
@@ -127,11 +128,11 @@ ON s.session_id = r.session_id;
 
 ## <a name="execution-statistics"></a>実行の統計
 
-R と Python の外部のランタイム実行の統計を表示します。 RevoScaleR、revoscalepy、または microsoftml パッケージ関数の統計情報のみが現在使用できません。
+R および Python 用の外部ランタイムの実行の統計を表示します。 現在使用できるのは、RevoScaleR、revoscalepy、または microsoftml パッケージ関数の統計情報のみです。
 
-![実行の統計情報のクエリからの出力](media/dmv-execution-statistics.png "実行の統計情報のクエリからの出力")
+![実行統計クエリからの出力](media/dmv-execution-statistics.png "実行統計クエリからの出力")
 
-この出力を取得する次のクエリを実行します。 使用する動的管理ビューの詳細については、次を参照してください。 [sys.dm_external_script_execution_stats](../../relational-databases/system-dynamic-management-views/sys-dm-external-script-execution-stats.md)します。 クエリは、複数回実行された関数のみを返します。
+この出力を取得するには、次のクエリを実行します。 使用される動的管理ビューの詳細については、「[sys.dm_external_script_execution_stats](../../relational-databases/system-dynamic-management-views/sys-dm-external-script-execution-stats.md)」を参照してください。 このクエリは、複数回実行された関数のみを返します。
 
 ```sql
 SELECT language, counter_name, counter_value
@@ -140,9 +141,9 @@ WHERE counter_value > 0
 ORDER BY language, counter_name;
 ```
 
-このクエリでは、次の列を返します。
+このクエリは次の列を返します。
 
-| [列] | 説明 |
+| [列] | [説明] |
 |--------|-------------|
 | language | 登録されている外部スクリプト言語の名前です。 |
 | counter_name | 登録されている外部スクリプト関数の名前です。 |
@@ -152,9 +153,9 @@ ORDER BY language, counter_name;
 
 外部スクリプトの実行に関連するパフォーマンス カウンターを表示します。
 
-![出力、パフォーマンスからカウンター クエリ](media/dmv-performance-counters.png "出力、パフォーマンスからカウンターのクエリ")
+![パフォーマンス カウンター クエリからの出力](media/dmv-performance-counters.png "パフォーマンス カウンター クエリからの出力")
 
-この出力を取得する次のクエリを実行します。 使用する動的管理ビューの詳細については、次を参照してください。 [sys.dm_os_performance_counters](../../relational-databases/system-dynamic-management-views/sys-dm-os-performance-counters-transact-sql.md)します。
+この出力を取得するには、次のクエリを実行します。 使用される動的管理ビューの詳細については、「[sys.dm_os_performance_counters](../../relational-databases/system-dynamic-management-views/sys-dm-os-performance-counters-transact-sql.md)」を参照してください。
 
 ```sql
 SELECT counter_name, cntr_value
@@ -162,25 +163,25 @@ FROM sys.dm_os_performance_counters
 WHERE object_name LIKE '%External Scripts%'
 ```
 
-**sys.dm_os_performance_counters**外部スクリプトの次のパフォーマンス カウンターを出力します。
+**sys.dm_os_performance_counters** は、外部スクリプトの次のパフォーマンス カウンターを出力します。
 
-| カウンター | 説明 |
+| カウンター | [説明] |
 |---------|-------------|
-| Total Executions | ローカルまたはリモートの呼び出しによって開始された外部のプロセスの数。 |
-| Parallel Executions | スクリプトが含まれている回数、 _@parallel_仕様と[!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]生成し、並列クエリ プランを使用することができました。 |
-| Streaming Executions | ストリーミングの機能が呼び出された回数。 |
-| SQL CC Executions | 外部スクリプトの呼び出しがリモートでインスタンス化、および SQL Server の実行の数は、計算コンテキストとして使用されました。 |
-| Implied Auth.Login | 暗黙の認証を使用して ODBC ループバック呼び出しが行われた回数つまり、[!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]スクリプト要求を送信するユーザーの代理呼び出しを実行します。 |
+| Total Executions | ローカルまたはリモート呼び出しによって開始された外部プロセスの数。 |
+| Parallel Executions | スクリプトに _\@並列処理_仕様が含まれ、[!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] が並列クエリ プランを生成して使用することができた回数。 |
+| Streaming Executions | ストリーミング機能が呼び出された回数。 |
+| SQL CC Executions | 呼び出しがリモートでインスタンス化され、SQL Server が計算コンテキストとして使用された外部スクリプトの実行回数。 |
+| Implied Auth.Login | ODBC ループバック呼び出しが暗黙の認証を使用して行われた回数。つまり、スクリプト要求を送信したユーザーに代わって [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] が呼び出しを実行した回数。 |
 | Total Execution Time (ms) | 呼び出しと呼び出しの完了までの経過時間。 |
-| Execution Errors | スクリプトにエラーが報告された回数。 この数には、R または Python のエラーは含まれません。 |
+| Execution Errors | スクリプトがエラーを報告した回数。 この数には R または Python のエラーは含まれません。 |
 
 ## <a name="memory-usage"></a>メモリ使用量
 
-OS、SQL Server、および外部プールによって使用されるメモリについての情報を表示します。
+OS、SQL Server、および外部プールによって使用されているメモリに関する情報を表示します。
 
-![メモリの使用状況クエリからの出力](media/dmv-memory-usage.png "メモリの使用状況クエリからの出力")
+![メモリ使用量クエリからの出力](media/dmv-memory-usage.png "メモリ使用量クエリからの出力")
 
-この出力を取得する次のクエリを実行します。 使用する動的管理ビューの詳細については、次を参照してください。 [sys.dm_resource_governor_external_resource_pools](../../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-external-resource-pools.md)と[sys.dm_os_sys_info](../../relational-databases/system-dynamic-management-views/sys-dm-os-sys-info-transact-sql.md)します。
+この出力を取得するには、次のクエリを実行します。 使用される動的管理ビューの詳細については、「[sys.dm_resource_governor_external_resource_pools](../../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-external-resource-pools.md)」および「[sys.dm_os_sys_info](../../relational-databases/system-dynamic-management-views/sys-dm-os-sys-info-transact-sql.md)」を参照してください。
 
 ```sql
 SELECT physical_memory_kb, committed_kb
@@ -190,21 +191,21 @@ SELECT physical_memory_kb, committed_kb
 FROM sys.dm_os_sys_info;
 ```
 
-このクエリでは、次の列を返します。
+このクエリは次の列を返します。
 
-| [列] | 説明 |
+| [列] | [説明] |
 |--------|-------------|
-| physical_memory_kb | コンピューターの物理メモリの総量。 |
-| committed_kb | メモリ マネージャーでは、キロバイト (KB) でコミットされたメモリ。 メモリ マネージャー内の予約済みメモリは含まれません。 |
-| external_pool_peak_memory_kb | 合計、使用済みメモリ (キロバイト単位)、すべての外部リソース プールの最大量。 |
+| physical_memory_kb | マシンに搭載されている物理メモリの合計。 |
+| committed_kb | メモリ マネージャーでコミットされたメモリ (KB 単位)。 メモリ マネージャー内の予約済みメモリは含まれません。 |
+| external_pool_peak_memory_kb | すべての外部リソース プールで使用されるメモリの最大量の合計 (KB 単位)。 |
 
 ## <a name="memory-configuration"></a>メモリ構成
 
-SQL Server と外部リソース プールの割合の最大メモリ構成に関する情報を表示します。 既定値は、SQL Server が実行されているかどうかは`max server memory (MB)`、OS メモリの 100% としてと見なされます。
+SQL Server と外部リソース プールの割合での最大メモリ構成に関する情報を表示します。 SQL Server が `max server memory (MB)` の既定値で実行されている場合、OS メモリの 100% と見なされます。
 
-![メモリ構成のクエリからの出力](media/dmv-memory-configuration.png "メモリ構成のクエリからの出力")
+![メモリ構成クエリからの出力](media/dmv-memory-configuration.png "メモリ構成クエリからの出力")
 
-この出力を取得する次のクエリを実行します。 ビューの使用の詳細については、次を参照してください。 [sys.configurations](../../relational-databases/system-catalog-views/sys-configurations-transact-sql.md)と[sys.dm_resource_governor_external_resource_pools](../../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-external-resource-pools.md)します。
+この出力を取得するには、次のクエリを実行します。 使用されるビューの詳細については、「[sys.configurations](../../relational-databases/system-catalog-views/sys-configurations-transact-sql.md)」および「[sys.dm_resource_governor_external_resource_pools](../../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-external-resource-pools.md)」を参照してください。
 
 ```sql
 SELECT 'SQL Server' AS name
@@ -219,20 +220,20 @@ SELECT CONCAT ('External Pool - ', ep.name) AS pool_name, ep.max_memory_percent
 FROM sys.dm_resource_governor_external_resource_pools AS ep;
 ```
 
-このクエリでは、次の列を返します。
+このクエリは次の列を返します。
 
-| [列] | 説明 |
+| [列] | [説明] |
 |--------|-------------|
 | NAME | 外部リソース プールまたは SQL Server の名前。 |
-| max_memory_percent | SQL Server または外部リソース プールが使用できる最大のメモリ。 |
+| max_memory_percent | SQL Server または外部リソース プールが使用できる最大メモリ。 |
 
 ## <a name="resource-pools"></a>[リソース プール]
 
-[SQL Server リソース ガバナー](../../relational-databases/resource-governor/resource-governor.md)、[リソース プール](../../relational-databases/resource-governor/resource-governor-resource-pool.md)インスタンスの物理リソースのサブセットを表します。 CPU、物理 IO、および外部のスクリプトの実行など、アプリケーションの受信要求がリソース プール内で使用できることをメモリの量に制限を指定できます。 SQL Server と外部のスクリプトを使用するリソース プールを表示します。
+[SQL Server のリソース ガバナー](../../relational-databases/resource-governor/resource-governor.md)では、[リソース プール](../../relational-databases/resource-governor/resource-governor-resource-pool.md)は、 インスタンスの物理リソースのサブセットを表します。 受信するアプリケーション要求 (外部スクリプトの実行を含む) がリソース プール内で使用できる CPU、物理 IO、およびメモリの量に制限を指定できます。 SQL Server と外部スクリプトに使用されるリソース プールを表示します。
 
-![クエリ プールのリソースからの出力](media/dmv-resource-pools.png "クエリ プールのリソースからの出力")
+![リソース プール クエリからの出力](media/dmv-resource-pools.png "リソース プール クエリからの出力")
 
-この出力を取得する次のクエリを実行します。 使用する動的管理ビューの詳細については、次を参照してください。 [sys.dm_resource_governor_resource_pools](../../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-resource-pools-transact-sql.md)と[sys.dm_resource_governor_external_resource_pools](../../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-external-resource-pools.md)します。
+この出力を取得するには、次のクエリを実行します。 使用される動的管理ビューの詳細については、「[sys.dm_resource_governor_resource_pools](../../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-resource-pools-transact-sql.md)」および「[sys.dm_resource_governor_external_resource_pools](../../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-external-resource-pools.md)」を参照してください。
 
 ```sql
 SELECT CONCAT ('SQL Server - ', p.name) AS pool_name
@@ -244,26 +245,26 @@ SELECT CONCAT ('External Pool - ', ep.name) AS pool_name
 FROM sys.dm_resource_governor_external_resource_pools AS ep;
 ```
 
-このクエリでは、次の列を返します。
+このクエリは次の列を返します。
 
-| [列] | 説明 |
+| [列] | [説明] |
 |--------|-------------|
-| pool_name | リソース プールの名前。 SQL Server リソース プールが付いて`SQL Server`外部リソース プールがというプレフィックスが付いた`External Pool`します。
-| total_cpu_usage_hours | リソース ガバナー統計がリセットされた後のミリ秒単位で累積の CPU 使用率。 |
+| pool_name | リソース プールの名前。 SQL Server リソース プールの先頭には `SQL Server` が付けられ、外部リソース プールの先頭には `External Pool` が付けられます。
+| total_cpu_usage_hours | リソース ガバナー統計がリセットされてからの累積 CPU 使用率 (ミリ秒単位)。 |
 | read_io_completed_total | リソース ガバナー統計がリセットされた後に完了した読み取り IO の合計。 |
 | write_io_completed_total | リソース ガバナー統計がリセットされた後に完了した書き込み IO の合計。 |
 
-## <a name="installed-packages"></a>インストールされているパッケージ
+## <a name="installed-packages"></a>インストール済みパッケージ
 
-これらを出力する R または Python スクリプトを実行することによって、SQL Server Machine Learning Services でインストールされている R と Python のパッケージを表示することができます。
+SQL Server Machine Learning Services にインストールされている R パッケージと Python パッケージを表示するには、これらを出力する R または Python のスクリプトを実行します。
 
-### <a name="installed-packages-for-r"></a>R のパッケージをインストールします。
+### <a name="installed-packages-for-r"></a>R のインストール済みパッケージ
 
-SQL Server Machine Learning Services でインストールされている R パッケージを表示します。
+SQL Server Machine Learning Services にインストールされた R パッケージを表示します。
 
-![クエリの R のインストールされているパッケージからの出力](media/dmv-installed-packages-r.png "R クエリにインストールされているパッケージからの出力")
+![R クエリ用にインストールされたパッケージからの出力](media/dmv-installed-packages-r.png "R クエリ用にインストールされたパッケージからの出力")
 
-この出力を取得する次のクエリを実行します。 クエリの使用状況を R パッケージを特定の R スクリプトは、SQL Server と共にインストールします。
+この出力を取得するには、次のクエリを実行します。 このクエリでは、R スクリプトを使用して、SQL Server を使用してインストールする R パッケージを決定します。
 
 ```sql
 EXEC sp_execute_external_script @language = N'R'
@@ -275,21 +276,21 @@ WITH result sets((Package NVARCHAR(255), Version NVARCHAR(100), Depends NVARCHAR
 
 返される列は次のとおりです。
 
-| [列] | 説明 |
+| [列] | [説明] |
 |--------|-------------|
-| [パッケージ] | インストールされているパッケージの名前です。 |
-| バージョン | パッケージのバージョンです。 |
-| 依存 | インストールされているパッケージが依存するパッケージを一覧表示します。 |
+| [パッケージ] | インストールされているパッケージの名前。 |
+| Version | パッケージのバージョン。 |
+| 依存 | インストールされているパッケージが依存しているパッケージを一覧表示します。 |
 | ライセンス | インストールされているパッケージのライセンス。 |
-| LibPath | ディレクトリは、パッケージを見つけることができます。 |
+| LibPath | パッケージが格納されているディレクトリ。 |
 
-### <a name="installed-packages-for-python"></a>Python 用のパッケージのインストール
+### <a name="installed-packages-for-python"></a>Python 用にインストールされたパッケージ
 
-SQL Server Machine Learning Services でインストールされた Python パッケージを表示します。
+SQL Server Machine Learning Services にインストールされた Python パッケージを表示します。
 
-![クエリの Python のインストールされているパッケージからの出力](media/dmv-installed-packages-python.png "Python クエリにインストールされているパッケージからの出力")
+![Python クエリ用にインストールされたパッケージからの出力](media/dmv-installed-packages-python.png "Python クエリ用にインストールされたパッケージからの出力")
 
-この出力を取得する次のクエリを実行します。 クエリでは、Python スクリプトを使用を SQL Server と共にインストールされる Python パッケージを特定します。
+この出力を取得するには、次のクエリを実行します。 このクエリでは、Python スクリプトを使用して、SQL Server を使用してインストールする Python パッケージを決定します。
 
 ```sql
 EXEC sp_execute_external_script @language = N'Python'
@@ -301,16 +302,16 @@ WITH result sets((Package NVARCHAR(128), Version NVARCHAR(128), Location NVARCHA
 
 返される列は次のとおりです。
 
-| [列] | 説明 |
+| [列] | [説明] |
 |--------|-------------|
-| [パッケージ] | インストールされているパッケージの名前です。 |
-| バージョン | パッケージのバージョンです。 |
-| 場所 | ディレクトリは、パッケージを見つけることができます。 |
+| [パッケージ] | インストールされているパッケージの名前。 |
+| Version | パッケージのバージョン。 |
+| Location | パッケージが格納されているディレクトリ。 |
 
 ## <a name="next-steps"></a>次の手順
 
 + [Machine Learning ソリューションの管理と監視](../../advanced-analytics/r/managing-and-monitoring-r-solutions.md)
-+ [Machine learning の拡張イベント](../../advanced-analytics/r/extended-events-for-sql-server-r-services.md)
++ [機械学習の拡張イベント](../../advanced-analytics/r/extended-events-for-sql-server-r-services.md)
 + [リソース ガバナー関連の動的管理ビュー](../../relational-databases/system-dynamic-management-views/resource-governor-related-dynamic-management-views-transact-sql.md)
 + [システム動的管理ビュー](../../relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)
-+ [Management Studio でカスタム レポートを使用して機械学習を監視します。](../../advanced-analytics/r/monitor-r-services-using-custom-reports-in-management-studio.md)
++ [Management Studio でカスタム レポートを使用して機械学習を監視する](../../advanced-analytics/r/monitor-r-services-using-custom-reports-in-management-studio.md)

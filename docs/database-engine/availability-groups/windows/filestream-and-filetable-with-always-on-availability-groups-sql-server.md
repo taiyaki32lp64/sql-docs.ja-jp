@@ -14,14 +14,13 @@ helpviewer_keywords:
 ms.assetid: fdceda9a-a9db-4d1d-8745-345992164a98
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 1f27403dcce14e657915abe3d8a98f886dd7cc9a
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: 6398c949f5cccbd6c437eaddba04ab5bb32aae12
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53214863"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68008411"
 ---
 # <a name="use-filestream-and-filetable-with-always-on-availability-groups"></a>Always On 可用性グループで FILESTREAM と FileTable を使用する
 
@@ -32,16 +31,6 @@ ms.locfileid: "53214863"
  すべての FILESTREAM 機能がサポートされています。 フェールオーバー後、FILESTREAM データは読み取り可能なセカンダリ レプリカと新しいプライマリの両方でアクセスできます。  
   
  FileTable 機能は部分的にサポートされています。 フェールオーバー後、FileTable データはプライマリ レプリカ上でアクセスできますが、読み取り可能なセカンダリ レプリカ上ではアクセスできません。  
-  
- **このトピックの内容**  
-  
--   [前提条件](#Prerequisites)  
-  
--   [FILESTREAM および FileTable アクセスでの仮想ネットワーク名 (VNN) の使用](#vnn)  
-  
--   [関連タスク](#RelatedTasks)  
-  
--   [関連コンテンツ](#RelatedContent)  
   
 ##  <a name="Prerequisites"></a> 前提条件  
   

@@ -10,17 +10,20 @@ ms.topic: conceptual
 helpviewer_keywords:
 - FINDSTRING function
 ms.assetid: c83cb1b1-3c52-4496-b518-4c9253b9336d
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: 601d6b6f3cff35ace4ec64b7c24215696dbc4520
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: a9eb015bbab987c37df2390eee81af2f3338644b
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47694900"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71297594"
 ---
 # <a name="findstring-ssis-expression"></a>FINDSTRING (SSIS 式)
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   文字式内の文字列のうち、指定された文字列が検出された場所を返します。 返される結果は、1 を基点とする検出場所のインデックスです。 文字列パラメーターは文字式に評価され、検出場所を示すパラメーターは整数に評価される必要があります。 文字列が見つからない場合、戻り値は 0 になります。 文字列の検出回数が、引数によって指定された数より少ない場合の戻り値は 0 です。  
   
 ## <a name="syntax"></a>構文  
@@ -79,6 +82,6 @@ FINDSTRING(Name,Size,1)
   
 ## <a name="see-also"></a>参照  
  [REPLACE &#40;SSIS &#41;](../../integration-services/expressions/replace-ssis-expression.md)   
- [関数 (SSIS 式)](../../integration-services/expressions/functions-ssis-expression.md)  
+ [関数 &#40;SSIS 式&#41;](../../integration-services/expressions/functions-ssis-expression.md)  
   
   

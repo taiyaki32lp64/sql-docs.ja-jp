@@ -13,11 +13,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: ea7bd1ada1c5efcc4ce64d0703192df8ddd6d9ba
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52767434"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63280377"
 ---
 # <a name="partition-column-list-dialog-box-visual-database-tools"></a>[パーティション列の一覧] ダイアログ ボックス (Visual Database Tools)
   テーブルがパーティション スキームに関連付けられている場合、このダイアログ ボックスを使用すると、パーティション関数を適用する列を選択できます。 関数が動作するためには、切り替え先の列のデータ型が、パーティション関数で定義されている列のデータ型と同じである必要があります。  

@@ -14,19 +14,19 @@ helpviewer_keywords:
 ms.assetid: 01a992d2-e4ff-417c-93f0-dc43ab2d1624
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: b45f374ecc0768c87052974b9d6c0eae575c0031
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
+ms.openlocfilehash: 53f07adfd7479edba22370f3d4fd8c9ad7ad4450
+ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47813510"
+ms.lasthandoff: 08/03/2019
+ms.locfileid: "68768212"
 ---
 # <a name="ltagentprofilenamegt-properties"></a>&lt;AgentProfileName&gt; プロパティ
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
   **[&lt;AgentProfileName&gt; のプロパティ]** ダイアログ ボックスを使用すると、プロファイル内の各エージェント パラメーターに対して指定された値を表示したり、ユーザー定義のプロファイルの値を変更したりできます。  
   
-## <a name="options"></a>[変数]  
+## <a name="options"></a>オプション  
  **名前**  
  プロファイルの名前。  
   

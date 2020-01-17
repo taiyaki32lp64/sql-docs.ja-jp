@@ -1,7 +1,7 @@
 ---
-title: DMV を使用してビューの使用統計とパフォーマンスを確認する
+title: DMV - ビューの使用統計とパフォーマンス
 description: DMV を使用してビューの使用統計とパフォーマンスを確認する
-manager: craigg
+ms.custom: seo-dt-2019
 author: julieMSFT
 ms.author: jrasnick
 ms.date: 09/27/2018
@@ -9,17 +9,17 @@ ms.prod: sql
 ms.reviewer: ''
 ms.technology: performance
 ms.topic: conceptual
-ms.openlocfilehash: 75563b5dcceead80b5b4d55c07413b37c9d0c278
-ms.sourcegitcommit: 0c1d552b3256e1bd995e3c49e0561589c52c21bf
+ms.openlocfilehash: e80ba0a8252881b7447dda721f02fc9c3e545917
+ms.sourcegitcommit: f018eb3caedabfcde553f9a5fc9c3e381c563f1a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/14/2018
-ms.locfileid: "53380663"
+ms.lasthandoff: 11/18/2019
+ms.locfileid: "74165891"
 ---
 # <a name="use-dmvs-to-determine-usage-statistics-and-performance-of-views"></a>DMV を使用してビューの使用統計とパフォーマンスを確認する
 この記事では、**ビューを使用するクエリのパフォーマンス**に関する情報を取得するために使用する方法とスクリプトについて説明します。 これらのスクリプトの目的は、データベース内のさまざまなビューの使用とパフォーマンスのインジケーターを提供することです。 
 
-## <a name="sysdmexecqueryoptimizerinfo"></a>sys.dm_exec_query_optimizer_info
+## <a name="sysdm_exec_query_optimizer_info"></a>sys.dm_exec_query_optimizer_info
 DMV [sys.dm_exec_query_optimizer_info](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-optimizer-info-transact-sql.md) では、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] クエリ オプティマイザーによって行われた最適化に関する統計情報が公開されます。 これらの値は累積的であり、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の起動時に記録を開始します。 クエリ オプティマイザーの詳細については、「[クエリ処理アーキテクチャ ガイド](../../relational-databases/query-processing-architecture-guide.md)」を参照してください。   
 
 次の common_table_expression (CTE) では、この DMV を使用して、ビューを参照するクエリの割合など、ワークロードに関する情報を提供します。 このクエリによって返される結果では、パフォーマンスの問題自体は示されませんが、クエリのパフォーマンスが悪いというユーザーの不満と組み合わせることで、基になる問題が明らかになります。 
@@ -165,7 +165,7 @@ CROSS APPLY
 GO
 ```
 
-## <a name="sysdmvexeccachedplans"></a>sys.dmv_exec_cached_plans
+## <a name="sysdmv_exec_cached_plans"></a>sys.dmv_exec_cached_plans
 最後のクエリでは、DMV [sys.dmv_exec_cached_plans](../../relational-databases/system-dynamic-management-views/sys-dm-exec-cached-plans-transact-sql.md) を使用して、未使用のビューに関する情報が提供されます。 ただし、実行プランのキャッシュは動的であり、結果は異なることがあります。 そのため、ある程度の期間についてこのクエリを使用し、ビューが実際に使用されているかどうかを判断します。 
 
 ```sql

@@ -13,15 +13,15 @@ helpviewer_keywords:
 - relative location path [SQLXML]
 - location path for XPath query
 ms.assetid: a23a2b75-bc69-49f0-99db-05e14dc15bc0
-author: douglaslMS
-ms.author: douglasl
+author: MightyPen
+ms.author: genemi
 manager: craigg
-ms.openlocfilehash: c814d1b486a7ba7736cf19119a66ab0845d33c6b
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 795e27c020c9ea4c80c858da734ebd315d56615c
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52807234"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66012657"
 ---
 # <a name="specifying-a-location-path-sqlxml-40"></a>ロケーション パスの指定 (SQLXML 4.0)
   XPath クエリは式の形式で指定され、 式の種類にはさまざまなものがあります。 ロケーション パスは、コンテキスト ノードに相対的なノードのセットを選択する式です。 ロケーション パスを評価すると、結果はノード セットになります。  
@@ -49,9 +49,9 @@ ms.locfileid: "52807234"
   
 -   **ノード テスト**  
   
-     ノード テストによって、ロケーション ステップで選択されるノードの型が決まります。 すべての軸 (`child`、`parent`、`attribute`、および `self`) には主ノード型があります。 `attribute`軸の主ノード型は**\<属性 >** します。 `parent`、 `child`、および`self`軸の場合、主ノード型は**\<要素 >** します。  
+     ノード テストによって、ロケーション ステップで選択されるノードの型が決まります。 すべての軸 (`child`、`parent`、`attribute`、および `self`) には主ノード型があります。 `attribute`軸の主ノード型は **\<属性 >** します。 `parent`、 `child`、および`self`軸の場合、主ノード型は **\<要素 >** します。  
   
-     たとえば、次の場所のパスを指定します**child::customer**、 **\<顧客 >** コンテキスト ノードの子要素を選択します。 `child`軸に**\<要素 >** 、主ノード型と、ノード テスト Customer 場合は、TRUE 顧客、 **\<要素 >** ノード。  
+     たとえば、次の場所のパスを指定します**child::customer**、 **\<顧客 >** コンテキスト ノードの子要素を選択します。 `child`軸に **\<要素 >** 、主ノード型と、ノード テスト Customer 場合は、TRUE 顧客、 **\<要素 >** ノード。  
   
 -   **選択述語 (0 個以上)**  
   

@@ -13,11 +13,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 998d42d262e3f980b4b35ed82b26904399d6b33c
-ms.sourcegitcommit: 04dd0620202287869b23cc2fde998a18d3200c66
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "52640833"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62809383"
 ---
 # <a name="server-properties-advanced-page"></a>[サーバーのプロパティ] ([詳細設定] ページ)
   このページを使用すると、サーバーの詳細設定を表示または変更できます。  

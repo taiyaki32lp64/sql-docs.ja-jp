@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 7e036b66-2fbe-4ce2-815c-2fd03b6fce4d
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 3e6d88e53ae40d98f9f6edf799be714ad0ba2814
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ddc680dce5e4d39dd88e8677718a83ad0ea89cac
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47646000"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68063412"
 ---
 # <a name="setup-dll"></a>DLL のセットアップ
 関数を呼び出す ODBC アドミニストレーター **ConfigDSN**ユーザーがデータ ソースを構成する場合。

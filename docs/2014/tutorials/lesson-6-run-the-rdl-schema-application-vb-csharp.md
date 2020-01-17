@@ -11,11 +11,11 @@ author: markingmyname
 ms.author: maghan
 manager: kfile
 ms.openlocfilehash: 1f2f1c579e4f4eccad8015b1ed5448bd0b6e376a
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56022224"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63254501"
 ---
 # <a name="lesson-6-run-the-rdl-schema-application-vb-c"></a>レッスン 6: RDL スキーマ アプリケーションを実行する (VB -C#)
   [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] には、統合開発環境 (IDE) からコンソール アプリケーションをビルドおよび実行する方法が 2 とおり用意されています。  

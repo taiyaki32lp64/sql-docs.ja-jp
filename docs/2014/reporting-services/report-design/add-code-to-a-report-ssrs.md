@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 helpviewer_keywords:
 - code [Reporting Services]
@@ -14,15 +13,15 @@ helpviewer_keywords:
 - adding code
 - reports [Reporting Services], code
 ms.assetid: 00ef8fc6-99fe-49b2-8a22-7eb475881dc4
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 008b4b322c11d0ef9ce3e218e2575a1de710a290
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: e8109678c3e9695b842eb57b976da9e653afd737
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56291914"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66106657"
 ---
 # <a name="add-code-to-a-report-ssrs"></a>レポートにコードを追加する (SSRS)
   どの式でも独自のカスタム コードを呼び出すことができます。 次の 2 つの方法でコードを提供できます。  
@@ -58,7 +57,7 @@ ms.locfileid: "56291914"
   
      この式をカテゴリの値を表示するテーブル セルに追加すると、"Bike" という単語がその行のデータセット フィールドに現れるたびに、テーブル セルの値は "Bicycle" という単語を表示します。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [[コード] ([レポートのプロパティ] ダイアログ ボックス)](../report-properties-dialog-box-code.md)   
  [式の例 (レポート ビルダーおよび SSRS)](expression-examples-report-builder-and-ssrs.md)   
  [Parameters コレクションの参照 (レポート ビルダーおよび SSRS)](built-in-collections-parameters-collection-references-report-builder.md)  

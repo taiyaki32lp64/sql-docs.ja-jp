@@ -17,12 +17,12 @@ ms.assetid: 3228065d-de8f-4ece-a9b1-e06d3dca9310
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: eebda510e90c499a0bae774d1288d3b886896d25
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: a288f5c9f42e282694b864e4493d02dcd6cfa3a3
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52766614"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62743499"
 ---
 # <a name="create-linked-servers-sql-server-database-engine"></a>リンク サーバーの作成 (SQL Server データベース エンジン)
   このトピックでは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] または [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] を使用してリンク サーバーを作成し、別の [!INCLUDE[tsql](../../includes/tsql-md.md)]からデータにアクセスする方法について説明します。 リンク サーバーを作成すると、複数のソースのデータを操作できます。 リンク サーバーは別の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]インスタンスである必要はありませんが、そのようにするのが一般的です。  
@@ -83,7 +83,7 @@ ms.locfileid: "52766614"
   
 3.  **[サーバーの種類]** 領域で **[SQL Server]** をクリックし、リンク サーバーが別の **SQL Server** インスタンスであることを指定します。  
   
-4.  **[セキュリティ]** ページで、元の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] がリンク サーバーに接続するときに使用するセキュリティ コンテキストを指定します。 ユーザーがドメイン ログインを使用して接続するドメイン環境では、**[ログインの現在のセキュリティ コンテキストを使用する]** を選択することが最適な場合が多くあります。 ユーザーが **SQL Server** ログインを使用して元の **SQL Server** に接続する場合は、 **[このセキュリティ コンテキストを使用する]** をクリックして、リンク サーバーでの認証に必要な資格情報を指定することが最適です。  
+4.  **[セキュリティ]** ページで、元の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] がリンク サーバーに接続するときに使用するセキュリティ コンテキストを指定します。 ユーザーがドメイン ログインを使用して接続するドメイン環境では、 **[ログインの現在のセキュリティ コンテキストを使用する]** を選択することが最適な場合が多くあります。 ユーザーが **SQL Server** ログインを使用して元の **SQL Server** に接続する場合は、 **[このセキュリティ コンテキストを使用する]** をクリックして、リンク サーバーでの認証に必要な資格情報を指定することが最適です。  
   
      **[ローカル ログイン]**  
      リンク サーバーに接続できるローカル ログインを指定します。 ローカル ログインは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 認証ログインまたは Windows 認証ログインのいずれかを使用するログインにすることができます。 この一覧を使用して、特定のログインへの接続を制限することも、一部のログインが別のログインとして接続できるように設定することもできます。  
@@ -199,7 +199,7 @@ ms.locfileid: "52766614"
   
 1.  クエリ エディターで、次の [!INCLUDE[tsql](../../includes/tsql-md.md)] コマンドを入力して、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] という名前の `SRVR002\ACCTG`インスタンスにリンクします。  
   
-    ```tsql  
+    ```sql  
     USE [master]  
     GO  
     EXEC master.dbo.sp_addlinkedserver   
@@ -211,7 +211,7 @@ ms.locfileid: "52766614"
   
 2.  次のコードを実行して、リンク サーバーを使用しているログインのドメイン資格情報を使用するようにリンク サーバーを構成します。  
   
-    ```tsql  
+    ```sql  
     EXEC master.dbo.sp_addlinkedsrvlogin   
         @rmtsrvname = N'SRVR002\ACCTG',   
         @locallogin = NULL ,   
@@ -220,13 +220,13 @@ ms.locfileid: "52766614"
   
     ```  
   
-##  <a name="FollowUp"></a> フォローしてください：リンク サーバーの作成後に実行する手順  
+##  <a name="FollowUp"></a>補足情報: リンク サーバーの作成後に行う手順  
   
 #### <a name="to-test-the-linked-server"></a>リンク サーバーをテストするには  
   
 -   次のコードを実行して、リンク サーバーへの接続をテストします。 この例は、リンク サーバーにあるデータベースの名前を返します。  
   
-    ```tsql  
+    ```sql  
     SELECT name FROM [SRVR002\ACCTG].master.sys.databases ;  
     GO  
   
@@ -236,7 +236,7 @@ ms.locfileid: "52766614"
   
 -   4 つの要素で構成される名前を使用して、リンク サーバー上のオブジェクトを参照します。 次のコードを実行して、ローカル サーバー上のすべてのログインとリンク サーバー上の対応するログインの一覧を取得します。  
   
-    ```tsql  
+    ```sql  
     SELECT local.name AS LocalLogins, linked.name AS LinkedLogins  
     FROM master.sys.server_principals AS local  
     LEFT JOIN [SRVR002\ACCTG].master.sys.server_principals AS linked  
@@ -246,7 +246,7 @@ ms.locfileid: "52766614"
   
      リンク サーバー ログインに対して NULL が返される場合は、リンク サーバー上にログインが存在しないことを示します。 リンク サーバーが別のセキュリティ コンテキストを渡すように構成されている場合、またはリンク サーバーが匿名接続を許可する場合を除き、これらのログインではリンク サーバーを使用できません。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [リンク サーバー &#40;データベース エンジン&#41;](linked-servers-database-engine.md)   
  [sp_addlinkedserver &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql)   
  [sp_serveroption &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-serveroption-transact-sql)  

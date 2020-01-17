@@ -40,19 +40,15 @@ helpviewer_keywords:
 ms.assetid: 864b393f-225f-4895-8c8d-4db59ea60032
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: cf2f90329896524a96425f69f9dc3afd46d7ac3c
-ms.sourcegitcommit: 96032813f6bf1cba680b5e46d82ae1f0f2da3d11
+ms.openlocfilehash: 35cf1b37a7c10992e17a52e4a44a473127ffb586
+ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/15/2019
-ms.locfileid: "54299929"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "73982794"
 ---
 # <a name="create-function-transact-sql"></a>CREATE FUNCTION (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
-
-> [!div class="nextstepaction"]
-> [SQL ドキュメントの目次に関するご意見を共有してください。](https://aka.ms/sqldocsurvey)
 
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] と [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] でユーザー定義関数を作成します。 ユーザー定義関数は、パラメーターを受け取り、複雑な計算などのアクションを実行し、そのアクションの結果を値として返す [!INCLUDE[tsql](../../includes/tsql-md.md)] または共通言語ランタイム (CLR) のルーチンです。 戻り値は、スカラー (単一) 値またはテーブルにすることができます。 このステートメントを使用して、次の方法で使用できる再利用可能なルーチンを作成します。  
   
@@ -273,7 +269,7 @@ RETURNS return_data_type
   
 ## <a name="arguments"></a>引数
 *OR ALTER*  
- **適用対象**:[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1 から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]) と [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]  
+ **適用対象**:[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1 以降) と [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]  
   
  条件付きで、既に存在する場合にのみ関数を変更します。 
  
@@ -305,7 +301,7 @@ RETURNS return_data_type
 *type_schema_name* が指定されていない場合、[!INCLUDE[ssDE](../../includes/ssde-md.md)] は次の順序で *scalar_parameter_data_type* を探します。  
   
 -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] システム データ型の名前を含むスキーマ  
--   現在のデータベースにおける現在のユーザーの既定のスキーマ  
+-   現在のデータベースにおける現在のユーザーの既定のスキーマ。  
 -   現在のデータベースの **dbo** スキーマ。  
   
 [ =*default* ]  
@@ -317,7 +313,7 @@ RETURNS return_data_type
  関数のパラメーターに既定値がある場合に、既定値を取得する目的でその関数を呼び出すときは、DEFAULT キーワードを指定する必要があります。 この動作は、ストアド プロシージャで既定値を持つパラメーターを使用する場合とは異なります。ストアド プロシージャの場合は、パラメーターを省略すると既定値が暗黙的に使用されます。 ただし、EXECUTE ステートメントを使用してスカラー関数を呼び出す場合は、DEFAULT キーワードは必要ありません。  
   
  READONLY  
- パラメーターを関数の定義内で更新または変更できないことを示します。 パラメーターの型がユーザー定義テーブル型の場合は、READONLY を指定する必要があります。  
+ パラメーターを関数の定義内で更新または変更できないことを示します。 パラメーターの型がユーザー定義のテーブル型の場合は、READONLY を指定する必要があります。  
   
  *return_data_type*  
  スカラー ユーザー定義関数の戻り値です。 [!INCLUDE[tsql](../../includes/tsql-md.md)] 関数の場合は、CLR ユーザー定義型を含めたデータ型のうち、**timestamp** を除くすべてのデータ型を指定できます。 CLR 関数の場合は、CLR ユーザー定義型を含めたデータ型のうち、**text**、**ntext**、**image**、**timestamp** を除くすべてのデータ型を指定できます。 非スカラー型である **cursor** と **table** は、[!INCLUDE[tsql](../../includes/tsql-md.md)] または CLR 関数で戻りデータ型として指定できません。  
@@ -337,7 +333,7 @@ RETURNS return_data_type
   
  インライン TVF の TABLE 戻り値は、単一の SELECT ステートメントを使用して定義されます。 インライン関数には、関連付けられている戻り変数はありません。  
   
- <a name="mstvf"></a> MSTVF の @*return_variable* は TABLE 変数で、その関数の値として返される必要がある行の格納および蓄積に使用されます。 @ *return_variable* は [!INCLUDE[tsql](../../includes/tsql-md.md)] 関数にのみ指定でき、CLR 関数には指定できません。  
+ <a name="mstvf"></a> MSTVF の \@*return_variable* は TABLE 変数で、その関数の値として返される必要がある行の格納および蓄積に使用されます。 \@ *return_variable* は [!INCLUDE[tsql](../../includes/tsql-md.md)] 関数にのみ指定でき、CLR 関数には指定できません。  
   
  *select_stmt*  
  インライン テーブル値関数 (TVF) の戻り値を定義する単一の SELECT ステートメントです。  
@@ -345,7 +341,7 @@ RETURNS return_data_type
  ORDER (\<order_clause>) は、テーブル値関数から結果が返される順序を指定します。 詳細については、このトピックで後述する「[並べ替え順序の使用に関するガイダンス](#using-sort-order-in-clr-table-valued-functions)」を参照してください。  
   
  EXTERNAL NAME \<method_specifier> *assembly_name*.*class_name*.*method_name*    
- **適用対象**:[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] SP1 から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)])
+ **適用対象**:[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] SP1 以降)
   
  アセンブリおよび作成した関数名が参照するメソッドを指定します。  
   
@@ -370,34 +366,34 @@ RETURNS return_data_type
 > [!NOTE]  
 > このオプションは、包含データベースでは使用できません。  
   
- *\<* table_type_definition*>* ( { \<column_definition> \<column_constraint>    | \<computed_column_definition> }    [ \<table_constraint> ] [ ,...*n* ] ) [!INCLUDE[tsql](../../includes/tsql-md.md)] 関数のテーブル データ型を定義します。 テーブルの定義には、列の定義、および列またはテーブルの制約が含まれます。 テーブルは、常にプライマリ ファイル グループに保存されます。  
+ *\<* table_type_definition *>* ( { \<column_definition> \<column_constraint>    | \<computed_column_definition> }    [ \<table_constraint> ] [ ,...*n* ] ) [!INCLUDE[tsql](../../includes/tsql-md.md)] 関数のテーブル データ型を定義します。 テーブルの定義には、列の定義、および列またはテーブルの制約が含まれます。 テーブルは、常にプライマリ ファイル グループに保存されます。  
   
  \< clr_table_type_definition >  ( { *column_name**data_type* } [ ,...*n* ] )    
- **適用対象**:[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] SP1 から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]) と [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] ([一部のリージョンではプレビュー](https://azure.microsoft.com/documentation/articles/sql-database-preview-whats-new/?WT.mc_id=TSQL_GetItTag))。  
+ **適用対象**:[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] SP1 以降) と [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] ([一部のリージョンではプレビュー](https://azure.microsoft.com/documentation/articles/sql-database-preview-whats-new/?WT.mc_id=TSQL_GetItTag))。  
   
  CLR 関数のテーブル データ型を定義します。 テーブルの定義には、列名およびデータ型のみが含まれます。 テーブルは、常にプライマリ ファイル グループに保存されます。  
   
- NULL|NULL でないです。  
- ネイティブ コンパイル、スカラー ユーザー定義関数でのみサポートされます。 詳しくは、「[インメモリ OLTP でのユーザー定義のスカラー関数](../../relational-databases/in-memory-oltp/scalar-user-defined-functions-for-in-memory-oltp.md)」をご覧ください。  
+ NULL|NOT NULL  
+ ネイティブにコンパイルされた、スカラー ユーザー定義関数でのみサポートされます。 詳しくは、「[インメモリ OLTP でのユーザー定義のスカラー関数](../../relational-databases/in-memory-oltp/scalar-user-defined-functions-for-in-memory-oltp.md)」をご覧ください。  
   
  NATIVE_COMPILATION  
- ユーザー定義の関数をネイティブでコンパイルするかどうかを示します。 この引数は、ネイティブ コンパイル、スカラー ユーザー定義関数に必要です。  
+ ユーザー定義の関数をネイティブでコンパイルするかどうかを示します。 この引数は、ネイティブにコンパイルされたスカラー ユーザー定義関数に必要です。  
   
- アトミックの開始します。  
- ユーザー定義スカラー関数、および、必要なはネイティブでコンパイルすると、のみサポートされます。 詳細については、「 [Atomic Blocks](../../relational-databases/in-memory-oltp/atomic-blocks-in-native-procedures.md)」を参照してください。  
+ BEGIN ATOMIC WITH  
+ ネイティブにコンパイルされたスカラー ユーザー定義関数でのみサポートされます。これは必須です。 詳細については、「 [Atomic Blocks](../../relational-databases/in-memory-oltp/atomic-blocks-in-native-procedures.md)」を参照してください。  
   
  SCHEMABINDING  
- SCHEMABINDING の引数は、ネイティブ コンパイル、スカラー ユーザー定義関数に必要です。  
+ SCHEMABINDING の引数は、ネイティブにコンパイルされたスカラー ユーザー定義関数に必要です。  
   
  EXECUTE AS  
- EXECUTE AS は、ネイティブ コンパイル、スカラー ユーザー定義関数に必要です。  
+ EXECUTE AS は、ネイティブにコンパイルされたスカラー ユーザー定義関数に必要です。  
   
  **\<function_option>::= および \<clr_function_option>::=** 
   
  関数に以下のオプションを 1 つ以上指定します。  
   
  ENCRYPTION  
- **適用対象**:[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] SP1 から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)])  
+ **適用対象**:[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] SP1 以降)  
   
  [!INCLUDE[ssDE](../../includes/ssde-md.md)]で、CREATE FUNCTION ステートメントの元のテキストを、暗号化した形式に変換することを示します。 暗号化した形式の出力は、どのカタログ ビューでも直接見ることはできません。 システム テーブルまたはデータベース ファイルへのアクセス権を持たないユーザーは、暗号化した形式のテキストを取得できません。 ただし、[DAC ポート](../../database-engine/configure-windows/diagnostic-connection-for-database-administrators.md)経由でシステム テーブルにアクセスする権限、または直接データベース ファイルにアクセスする権限を持っているユーザーは、このテキストを使用できます。 また、サーバー プロセスにデバッガーをアタッチできるユーザーは、実行時、元のプロシージャをメモリから取得できます。 システム メタデータのアクセス方法について詳しくは、「[メタデータ表示の構成](../../relational-databases/security/metadata-visibility-configuration.md)」をご覧ください。  
   
@@ -406,7 +402,7 @@ RETURNS return_data_type
  SCHEMABINDING  
  参照するデータベース オブジェクトに対して、その関数がバインドされるように指定します。 SCHEMABINDING を指定した場合、ベース オブジェクトに対して関数定義に影響を与えるような変更は行えません。 まず関数定義を変更または削除して、変更するオブジェクトとの依存関係を解消する必要があります。  
   
- 関数からその参照先のオブジェクトへのバインドは、次のいずれかの操作が行われた場合にのみ削除されます。 
+ 関数が参照するオブジェクトへのバインドは、次のいずれかの操作が行われた場合にのみ削除されます。 
   
 -   関数を削除した場合。  
   
@@ -442,19 +438,19 @@ INLINE = { ON | OFF }
   
  **\< column_definition >::=** 
   
- Table データ型を定義します。 テーブルの定義には、列の定義および制約が含まれます。 CLR 関数では、*column_name* と *data_type* のみを指定できます。  
+ Table データ型を定義します。 テーブルの宣言には、列の定義および制約が含まれます。 CLR 関数では、*column_name* と *data_type* のみを指定できます。  
   
  *column_name*  
  テーブルの列名です。 列名は、識別子のルールに従っていること、およびテーブル内で一意であることが必要です。 *column_name* は 1 ～ 128 文字で指定できます。  
   
  *data_type*  
- 列のデータ型を指定します。 [!INCLUDE[tsql](../../includes/tsql-md.md)] 関数の場合は、CLR ユーザー定義型を含めたデータ型のうち、**timestamp** を除くすべてのデータ型を指定できます。 CLR 関数の場合は、CLR ユーザー定義型を含めたデータ型のうち、**text**、**ntext**、**image**、**char**、**varchar**、**varchar(max)**、**timestamp** を除くすべてのデータ型を指定できます。非スカラー型の **cursor** は、[!INCLUDE[tsql](../../includes/tsql-md.md)] 関数と CLR 関数の両方で、列のデータ型として指定できません。  
+ 列のデータ型を指定します。 [!INCLUDE[tsql](../../includes/tsql-md.md)] 関数の場合は、CLR ユーザー定義型を含めたデータ型のうち、**timestamp** を除くすべてのデータ型を指定できます。 CLR 関数の場合は、CLR ユーザー定義型を含めたデータ型のうち、**text**、**ntext**、**image**、**char**、**varchar**、**varchar(max)** 、**timestamp** を除くすべてのデータ型を指定できます。非スカラー型の **cursor** は、[!INCLUDE[tsql](../../includes/tsql-md.md)] 関数と CLR 関数の両方で、列のデータ型として指定できません。  
   
  DEFAULT *constant_expression*  
  挿入の際に明示的な値を指定しない場合に、列に入力される値を指定します。 *constant_expression* は、定数、NULL、またはシステム関数値です。 DEFAULT 定義は、IDENTITY プロパティを持つ列を除くすべての列に適用できます。 CLR テーブル値関数には DEFAULT を指定できません。  
   
  COLLATE *collation_name*  
- 列の照合順序を指定します。 照合順序を指定しない場合、データベースの既定の照合順序が列に割り当てられます。 照合順序名には、Windows 照合順序名または SQL 照合順序名を指定できます。 照合順序の一覧と詳細については、「[Windows 照合順序名 &#40;Transact-SQL&#41;](../../t-sql/statements/windows-collation-name-transact-sql.md)」と「[SQL Server 照合順序名 &#40;Transact-SQL&#41;](../../t-sql/statements/sql-server-collation-name-transact-sql.md)」をご覧ください。  
+ 列の照合順序を指定します。 指定しない場合、データベースの既定の照合順序が列に割り当てられます。 照合順序名には、Windows 照合順序名または SQL 照合順序名を指定できます。 照合順序の一覧と詳細については、「[Windows 照合順序名 &#40;Transact-SQL&#41;](../../t-sql/statements/windows-collation-name-transact-sql.md)」と「[SQL Server 照合順序名 &#40;Transact-SQL&#41;](../../t-sql/statements/sql-server-collation-name-transact-sql.md)」をご覧ください。  
   
  COLLATE 句を使用して照合順序を変更できるのは、**char**、**varchar**、**nchar**、**nvarchar** データ型の列だけです。  
   
@@ -467,7 +463,7 @@ INLINE = { ON | OFF }
  ROWGUIDCOL プロパティは、列に格納されている値の一意性を設定しません。 また、テーブルに挿入される新しい行の値を自動的に生成しません。 各列に対して一意な値を生成するには、INSERT ステートメントで NEWID 関数を使用します。 既定値も指定できますが、NEWID を既定値として指定することはできません。  
   
  IDENTITY  
- 新しい列が ID 列であることを指定します。 テーブルに行が新しく追加されると、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] は列に一意な増加値を設定します。 ID 列は通常、PRIMARY KEY 制約と共に使用され、テーブルの一意な行識別子 (ROWID) の役割を果たします。 IDENTITY プロパティは、**tinyint**、**smallint**、**int**、**bigint**、**decimal(p,0)**、**numeric(p,0)** のいずれかの列に割り当てることができます。 ID 列は 1 つのテーブルにつき 1 つだけ作成できます。 バインドされた既定値および DEFAULT 制約を ID 列と組み合わせて使用することはできません。 *seed* と *increment* は、両方を指定するか、どちらも指定しないでください。 どちらも指定しないときの既定値は (1,1) です。  
+ 新しい列が ID 列であることを指定します。 テーブルに行が新しく追加されると、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] は列に一意な増加値を設定します。 ID 列は通常、PRIMARY KEY 制約と共に使用され、テーブルの一意な行識別子 (ROWID) の役割を果たします。 IDENTITY プロパティは、**tinyint**、**smallint**、**int**、**bigint**、**decimal(p,0)** 、**numeric(p,0)** のいずれかの列に割り当てることができます。 ID 列は 1 つのテーブルにつき 1 つだけ作成できます。 バインドされた既定値および DEFAULT 制約を ID 列と組み合わせて使用することはできません。 *seed* と *increment* は、両方を指定するか、どちらも指定しないでください。 どちらも指定しないときの既定値は (1,1) です。  
   
  CLR テーブル値関数には IDENTITY を指定できません。  
   
@@ -491,7 +487,7 @@ INLINE = { ON | OFF }
  一意なインデックスによって、指定した 1 つ以上の列にエンティティの整合性を提供する制約です。 1 つのテーブルには複数の UNIQUE 制約を指定できます。 CLR テーブル値関数には UNIQUE を指定できません。  
   
  CLUSTERED | NONCLUSTERED  
- PRIMARY KEY 制約または UNIQUE 制約に対して、クラスター化インデックスまたは非クラスター化インデックスを作成することを示します。 PRIMARY KEY 制約では CLUSTERED が、UNIQUE 制約では NONCLUSTERED が、それぞれ使用されます。  
+ PRIMARY KEY または UNIQUE 制約に対して、クラスター化インデックスまたは非クラスター化インデックスを作成することを示します。 PRIMARY KEY 制約では CLUSTERED が、UNIQUE 制約では NONCLUSTERED が、それぞれ使用されます。  
   
  CLUSTERED は 1 つの制約にのみ指定できます。 UNIQUE 制約で CLUSTERED が指定され、PRIMARY KEY 制約も指定した場合には、PRIMARY KEY は NONCLUSTERED を使用します。  
   
@@ -561,7 +557,7 @@ INLINE = { ON | OFF }
  CLR 関数のプログラミング方法について詳しくは、「[CLR ユーザー定義関数](../../relational-databases/clr-integration-database-objects-user-defined-functions/clr-user-defined-functions.md)」をご覧ください。  
   
 ## <a name="general-remarks"></a>全般的な解説  
- スカラー関数は、スカラー式が使用されている場所で呼び出すことができます。 これには、計算列および CHECK 制約定義が含まれます。 スカラー関数は、[EXECUTE](../../t-sql/language-elements/execute-transact-sql.md) ステートメントを使用して実行することもできます。 スカラー関数は、2 つ以上の要素から構成される名前を使用して呼び出す必要があります (*<schema>.<function>*)。 マルチパート名の詳細については、「[Transact-SQL 構文表記規則 (Transact-SQL)](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)」を参照してください。 `SELECT`、`INSERT`、`UPDATE`、`DELETE` の各ステートメントの `FROM` 句でテーブル式を使用できる場合は、テーブル値関数を呼び出すことができます。 詳しくは、「[ユーザー定義関数の実行](../../relational-databases/user-defined-functions/execute-user-defined-functions.md)」をご覧ください。  
+ スカラー関数は、スカラー式が使用されている場所で呼び出すことができます。 これには、計算列および CHECK 制約定義が含まれます。 スカラー関数は、[EXECUTE](../../t-sql/language-elements/execute-transact-sql.md) ステートメントを使用して実行することもできます。 スカラー関数は、2 つ以上の要素から構成される名前を使用して呼び出す必要があります ( *<schema>.<function>* )。 マルチパート名の詳細については、「[Transact-SQL 構文表記規則 (Transact-SQL)](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)」を参照してください。 `SELECT`、`INSERT`、`UPDATE`、`DELETE` の各ステートメントの `FROM` 句でテーブル式を使用できる場合は、テーブル値関数を呼び出すことができます。 詳しくは、「[ユーザー定義関数の実行](../../relational-databases/user-defined-functions/execute-user-defined-functions.md)」をご覧ください。  
   
 ## <a name="interoperability"></a>相互運用性  
  関数で有効なステートメントは以下のとおりです。  
@@ -587,7 +583,7 @@ INLINE = { ON | OFF }
   
 |プロパティ|[説明]|注|  
 |--------------|-----------------|-----------|  
-|**IsDeterministic**|関数が決定的か非決定的かを示します。|決定的関数では、ローカル データ アクセスが可能です。 たとえば、特定の一連の入力値を使用して同じ状態のデータベースで呼び出されるたびに、必ず同じ結果を返す関数は、決定的と呼ばれます。|  
+|**IsDeterministic**|関数が決定的か非決定的かを示します。|決定的関数では、ローカル データ アクセスが可能です。 決定的関数とは、たとえば、特定の一連の入力値を使用して同じ状態のデータベースで呼び出されるたびに、必ず同じ結果を返す関数です。|  
 |**IsPrecise**|関数が正確か不正確かを示します。|不正確な関数には、浮動小数点演算などの演算を含みます。|  
 |**IsSystemVerified**|関数の有効桁数のプロパティと決定性のプロパティは、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] で確認できます。||  
 |**SystemDataAccess**|関数が、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のローカル インスタンスのシステム データ (システム カタログまたは仮想システム テーブル) にアクセスします。||  
@@ -790,7 +786,7 @@ GO
 ### <a name="d-creating-a-clr-function"></a>D. CLR 関数を作成する  
  この例では、CLR 関数 `len_s` を作成します。 関数が作成される前に、アセンブリ `SurrogateStringFunction.dll` がローカル データベースに登録されます。  
   
-**適用対象**:[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] SP1 から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)])  
+**適用対象**:[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] SP1 以降)  
   
 ```sql  
 DECLARE @SamplesPath nvarchar(1024);  

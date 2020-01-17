@@ -27,15 +27,14 @@ helpviewer_keywords:
 - reducing database size
 - DBCC SHRINKFILE statement
 ms.assetid: e02b2318-bee9-4d84-a61f-2fddcf268c9f
-author: uc-msft
+author: pmasl
 ms.author: umajay
-manager: craigg
-ms.openlocfilehash: c63b735a5067f8ca1cd6b65f4f986c94e3614e21
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: ac274000ffdb1bcd29ebad2a2e0d0395b8daba0c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56286480"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67930324"
 ---
 # <a name="dbcc-shrinkfile-transact-sql"></a>DBCC SHRINKFILE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -75,7 +74,7 @@ DBCC SHRINKFILE
 指定した場合、DBCC SHRINKFILE では、*target_size* までファイルの圧縮が試行されます。 解放対象のファイルの領域内にある使用ページは、ファイルの保持領域内の空き領域に移動されます。 たとえば、10 MB のデータ ファイルで、8 *target_size* を指定した DBCC SHRINKFILE 操作を実行すると、ファイルの末尾 2 MB 内にあるすべての使用ページがファイルの先頭 8 MB にある未割り当てページに移動されます。 DBCC SHRINKFILE では、格納されているデータ サイズ以下に、ファイルを圧縮することはできません。 たとえば、10 MB のデータ ファイルのうち 7 MB が使用されている場合、*target_size* を 6 にして DBCC SHRINKFILE ステートメントを実行しても、ファイルは 7 MB にまでしか圧縮できず、6 MB にはなりません。
   
 EMPTYFILE  
-指定したファイルから、**同じファイル グループ**内の他のファイルにすべてのデータを移動します。 つまり、EMPTYFILE は、指定したファイルから、同じファイル グループ内の他のファイルにデータを移動します。 ENPTYFILE を使用すると、このファイルが読み取り専用でなくても、ファイルに新しいデータが追加されません。 ファイルを削除するには [ALTER DATABASE](../../t-sql/statements/alter-database-transact-sql.md) ステートメントを使用できます。 [ALTER DATABASE](../../t-sql/statements/alter-database-transact-sql.md) ステートメントを使用してファイル サイズを変更すると、読み取り専用フラグがリセットされ、データを追加することができます。
+指定したファイルから、**同じファイル グループ**内の他のファイルにすべてのデータを移動します。 つまり、EMPTYFILE は、指定したファイルから、同じファイル グループ内の他のファイルにデータを移動します。 EMPTYFILE を使用すると、このファイルが読み取り専用でなくても、ファイルに新しいデータが追加されません。 ファイルを削除するには [ALTER DATABASE](../../t-sql/statements/alter-database-transact-sql.md) ステートメントを使用できます。 [ALTER DATABASE](../../t-sql/statements/alter-database-transact-sql.md) ステートメントを使用してファイル サイズを変更すると、読み取り専用フラグがリセットされ、データを追加することができます。
 
 FILESTREAM ファイル グループ コンテナーでは、FILESTREAM ガベージ コレクターが実行され、EMPTYFILE によって他のコンテナーにコピーされた不要なすべてのファイル グループ コンテナー ファイルが削除された後でなければ、ALTER DATABASE を使用してファイルを削除できません。 詳細については、「[sp_filestream_force_garbage_collection &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/filestream-and-filetable-sp-filestream-force-garbage-collection.md)」を参照してください。
   
@@ -154,7 +153,7 @@ FROM sys.database_files;
   
 ### <a name="the-shrink-operation-is-blocked"></a>圧縮操作がブロックされる  
 
-[行のバージョン管理に基づく分離レベル](../../t-sql/statements/set-transaction-isolation-level-transact-sql.md)で実行されているトランザクションによって、圧縮操作がブロックされることがあります。 たとえば、DBCC SHRINK DATABASE 操作を実行するときに、行のバージョン管理に基づく分離レベルでの大規模な削除操作が進行中の場合、圧縮操作は削除が完了してから続行されます。 このブロックが発生すると、DBCC SHRINKFILE および DBCC SHRINKDATABASE 操作によって、情報メッセージ (SHRINKDATABASE は 5202、SHRINKFILE は 5203) が SQL Server エラー ログに出力されます。 このメッセージは、最初の 1 時間は 5 分ごと、それ以降は 1 時間ごとにログに記録されます。 たとえば、エラー ログに次のエラー メッセージが含まれている場合は、このエラーが発生します。
+[行のバージョン管理に基づく分離レベル](../../t-sql/statements/set-transaction-isolation-level-transact-sql.md)で実行されているトランザクションによって、圧縮操作がブロックされることがあります。 たとえば、DBCC SHRINK DATABASE 操作を実行するときに、行のバージョン管理に基づく分離レベルでの大規模な削除操作が進行中の場合、圧縮操作は削除が完了してから続行されます。 このブロックが発生すると、DBCC SHRINKFILE および DBCC SHRINKDATABASE 操作によって、情報メッセージ (SHRINKDATABASE は 5202、SHRINKFILE は 5203) が SQL Server エラー ログに出力されます。 このメッセージは、最初の 1 時間は 5 分ごと、それ以降は 1 時間ごとにログに記録されます。 たとえば、エラー ログに次のエラー メッセージが含まれている場合は、次のエラーが発生します。
   
 ```sql
 DBCC SHRINKFILE for file ID 1 is waiting for the snapshot   

@@ -1,5 +1,5 @@
 ---
-title: getCursorName メソッド (SQLServerResultSet) |Microsoft Docs
+title: getCursorName メソッド (SQLServerResultSet) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: e5b3af67-423a-4551-a4c6-a4bc076bd504
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: a299f8505e279cc752670b92338c893aa6b9e13d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a4f57b300cb402f422b92330bfe33f1e3c61cf4f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47624830"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67984191"
 ---
 # <a name="getcursorname-method-sqlserverresultset"></a>getCursorName メソッド (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -45,7 +44,7 @@ public java.lang.String getCursorName()
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- この getCursorName メソッドは、java.sql.ResultSet インターフェイスでなく、getCursorName メソッドによって指定されます。  
+ この Getカーソル名メソッドは、java. ResultSet インターフェイスの Getカーソル名メソッドによって指定されます。  
   
 ## <a name="see-also"></a>参照  
  [SQLServerResultSet のメンバー](../../../connect/jdbc/reference/sqlserverresultset-members.md)   

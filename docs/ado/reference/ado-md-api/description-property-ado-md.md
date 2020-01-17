@@ -20,13 +20,12 @@ helpviewer_keywords:
 ms.assetid: 6d626d35-0bf3-4f24-9934-ad9c9c91273a
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 643bcfef67b1f3c5434d7beaac46da2d46bbdd14
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 5636b5f4e49ff9a5bbe46937a8d7b972e61b4502
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47655548"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67938575"
 ---
 # <a name="description-property-ado-md"></a>Description プロパティ (ADO MD)
 現在のオブジェクトを説明するテキストを返します。  

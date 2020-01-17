@@ -14,17 +14,20 @@ helpviewer_keywords:
 - Union All transformation
 - datasets [Integration Services], merging
 ms.assetid: 78304403-a81c-4101-b87e-ec80ddfdac98
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: 200ac8d4c430c739bc7a886025a72cc18709faaa
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 42c556b3c348205833f4d080199c184dd30c8cf3
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47757386"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71291255"
 ---
 # <a name="merge-data-by-using-the-union-all-transformation"></a>全体結合変換を使用してデータをマージする
+
+[!INCLUDE[ssis-appliesto](../../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   全体結合変換を追加して構成するには、パッケージに 1 つ以上のデータ フロー タスクと 2 つのデータ ソースがあらかじめ含まれている必要があります。  
   
  全体結合変換は、複数の入力を結合します。 この変換に連結される最初の入力は参照入力であり、その後に連結される入力はセカンダリ入力と呼ばれます。 出力には、参照入力内の列が含まれます。  
@@ -59,6 +62,6 @@ ms.locfileid: "47757386"
  [Union All Transformation](../../../integration-services/data-flow/transformations/union-all-transformation.md)   
  [Integration Services の変換](../../../integration-services/data-flow/transformations/integration-services-transformations.md)   
  [Integration Services のパス](../../../integration-services/data-flow/integration-services-paths.md)   
- [データ フロー タスク](../../../integration-services/control-flow/data-flow-task.md)  
+ [[データ フロー タスク]](../../../integration-services/control-flow/data-flow-task.md)  
   
   

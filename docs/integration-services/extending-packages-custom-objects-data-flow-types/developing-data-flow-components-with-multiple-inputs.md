@@ -8,17 +8,20 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: reference
 ms.assetid: 3c7b50e8-2aa6-4f6a-8db4-e8293bc21027
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: 2910ab9222608f69754538ac0adfb15f5f7f25e1
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: df06f7dad35edcbdd299794a7724b3e52e7974f0
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47618111"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71287713"
 ---
 # <a name="developing-data-flow-components-with-multiple-inputs"></a>複数の入力を持つデータ フロー コンポーネントの開発
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   複数の入力によってデータが不均一なレートで生成される場合に、複数の入力があるデータ フローコンポーネントによって過度にメモリが消費されることがあります。 複数の入力をサポートするカスタム データ フロー コンポーネントを開発するときは、Microsoft.SqlServer.Dts.Pipeline 名前空間の次のメンバーを使用してこのメモリの負荷を管理できます。  
   
 -   <xref:Microsoft.SqlServer.Dts.Pipeline.DtsPipelineComponentAttribute.SupportsBackPressure%2A> クラスの <xref:Microsoft.SqlServer.Dts.Pipeline.DtsPipelineComponentAttribute> プロパティ。 カスタム データ フロー コンポーネントに必要なコードを実装して不均一なレートのデータ フローを管理する場合は、このプロパティの値を **true** に設定します。  
@@ -55,7 +58,7 @@ public class Shuffler : Microsoft.SqlServer.Dts.Pipeline.PipelineComponent
 > [!NOTE]  
 >  <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.IsInputReady%2A> メソッドの実装では、基本クラスで実装を呼び出す必要はありません。 基本クラスでのこのメソッドの既定の実装では、**NotImplementedException** を発生させるだけです。  
   
- このメソッドを実装し、コンポーネントの各入力に対して Boolean 型の *canProcess* 配列で要素の状態を設定します  (入力は *inputIDs* 配列内の ID 値によって識別されます)。入力に対して *canProcess* 配列の要素の値を **true** に設定すると、データ フロー エンジンは、コンポーネントの <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.ProcessInput%2A> メソッドを呼び出し、指定した入力に対して追加データを提供します。  
+ このメソッドを実装し、コンポーネントの各入力に対して Boolean 型の *canProcess* 配列で要素の状態を設定します (入力は *inputIDs* 配列内の ID 値によって識別されます)。入力に対して *canProcess* 配列の要素の値を **true** に設定すると、データ フロー エンジンは、コンポーネントの <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.ProcessInput%2A> メソッドを呼び出し、指定した入力に対して追加データを提供します。  
   
  アップストリーム データを追加で使用できますが、少なくとも 1 つの入力に対して *canProcess* 配列要素の値を常に **true** に設定する必要があります。設定しない場合は、処理が停止します。  
   

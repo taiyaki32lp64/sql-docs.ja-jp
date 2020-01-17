@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: e5e6686c-1360-480e-8c0d-8a56204fbed9
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 935cd8ec3f4e5069807e914e5af20e39b645deb3
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: a1026597a0ae000b91e088d2457b3c9dd607044b
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52520171"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66083114"
 ---
 # <a name="prediction-queries-data-mining"></a>Prediction Queries (Data Mining)
   一般的なデータ マイニング プロジェクトの目標は、マイニング モデルを使用して予測を行うことです。 たとえば、あるサーバーの集まりのダウンタイムを予測したり、顧客区分が広告キャンペーンに反応するかどうかを示すスコアを生成したりする場合があります。 これらすべてを行うには、予測クエリを作成します。  
@@ -146,7 +145,7 @@ FROM
   
  階層的な行セットを処理できないプロバイダーを使用している場合は、予測クエリ内で FLATTEN キーワードを使用して結果をフラット化することができます。 フラットな行セットの例などの詳細については、「[SELECT &#40;DMX&#41;](/sql/dmx/select-dmx)」をご覧ください。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [コンテンツ クエリ &#40;データ マイニング&#41;](content-queries-data-mining.md)   
  [データ定義クエリ &#40;データ マイニング&#41;](data-definition-queries-data-mining.md)  
   

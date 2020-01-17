@@ -1,5 +1,5 @@
 ---
-title: WMI プロバイダーを使用してサービスとネットワーク設定の管理 |Microsoft Docs
+title: WMI プロバイダーを使用したサービスとネットワーク設定の管理 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -15,12 +15,12 @@ ms.assetid: ef8c3986-1098-4f21-b03a-f1f6bdb51c26
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 3d16548f201f047ba83516469050e41380b7bc6f
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 9ba2f9688adb5579616693470be151d757818117
+ms.sourcegitcommit: f912c101d2939084c4ea2e9881eb98e1afa29dad
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52762204"
+ms.lasthandoff: 10/23/2019
+ms.locfileid: "72796630"
 ---
 # <a name="managing-services-and-network-settings-by-using-wmi-provider"></a>WMI プロバイダーを使用したサービスの管理とネットワーク設定
   WMI プロバイダーは、 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] のサービスおよびネットワーク プロトコルを管理するために、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 管理コンソール (MMC) によって使用される、公開されたインターフェイスです。 SMO では、<xref:Microsoft.SqlServer.Management.Smo.Wmi.ManagedComputer> オブジェクトは WMI プロバイダーを表します。  
@@ -30,7 +30,7 @@ ms.locfileid: "52762204"
 ## <a name="example"></a>例  
  [!INCLUDE[ssChooseProgEnv](../../../includes/sschooseprogenv-md.md)]  
   
- プログラムを使用して、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]含める必要があります、WMI プロバイダー、 `Imports` WMI 名前空間を修飾するステートメント。 アプリケーションの宣言の前、かつ他の `Imports` ステートメントの後に、次のようにステートメントを挿入します。  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] WMI プロバイダーを使用するプログラムでは、WMI 名前空間を修飾する `Imports` ステートメントを含める必要があります。 アプリケーションの宣言の前、かつ他の `Imports` ステートメントの後に、次のようにステートメントを挿入します。  
   
  `Imports Microsoft.SqlServer.Management.Smo`  
   
@@ -46,7 +46,7 @@ ms.locfileid: "52762204"
 ## <a name="enabling-a-server-protocol-using-a-urn-string-in-visual-basic"></a>Visual Basic での URN 文字列を使用したサーバー プロトコルの有効化  
  このコード例は、URN オブジェクトを使用してサーバー プロトコルを識別し、そのプロトコルを有効化する方法を示しています。  
   
-```  
+```vb
 'This program must run with administrator privileges.  
         'Declare the ManagedComputer WMI interface.  
         Dim mc As New ManagedComputer()  
@@ -68,7 +68,7 @@ ms.locfileid: "52762204"
 ## <a name="enabling-a-server-protocol-using-a-urn-string-in-powershell"></a>PowerShell での URN 文字列を使用したサーバー プロトコルの有効化  
  このコード例は、URN オブジェクトを使用してサーバー プロトコルを識別し、そのプロトコルを有効化する方法を示しています。  
   
-```  
+```powershell
 #This example shows how to identify a server protocol using a URN object, and then enable the protocol  
 #This program must run with administrator privileges.  
   
@@ -95,7 +95,7 @@ $sp.Alter()
 ## <a name="starting-and-stopping-a-service-in-visual-c"></a>Visual C# でのサービスの停止と開始  
  このコード例では、SQL Server のインスタンスを停止および起動する方法を示します。  
   
-```  
+```csharp
 {   
    //Declare and create an instance of the ManagedComputer   
    //object that represents the WMI Provider services.   
@@ -139,7 +139,7 @@ $sp.Alter()
 ## <a name="starting-and-stopping-a-service-in-powershell"></a>PowerShell でのサービスの停止と開始  
  このコード例では、SQL Server のインスタンスを停止および起動する方法を示します。  
   
-```  
+```powershell
 #Load the assembly containing the objects used in this example  
 [reflection.assembly]::LoadWithPartialName("Microsoft.SqlServer.SqlWmiManagement")  
   
@@ -172,11 +172,8 @@ $svc.Refresh()
 $svc.ServiceState  
 }  
 $svc.ServiceState  
-"Service" + $svc.Name + "is now started"  
-  
+"Service" + $svc.Name + "is now started"
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>「  
  [構成管理用の WMI プロバイダーの概念](../../wmi-provider-configuration/wmi-provider-for-configuration-management.md)  
-  
-  

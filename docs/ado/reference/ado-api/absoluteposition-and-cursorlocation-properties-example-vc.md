@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 48c07216-d199-4822-89f8-ce928d3d2b74
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 922ccc2768b317d3ea0dac612bf965def9c7f2e9
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 76ff99822c47ffc14c686b1e6703663c8e309845
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47826789"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67921706"
 ---
 # <a name="absoluteposition-and-cursorlocation-properties-example-vc"></a>AbsolutePosition および CursorLocation プロパティの例 (vc++)
 この例では、どのように[AbsolutePosition](../../../ado/reference/ado-api/absoluteposition-property-ado.md)プロパティのすべてのレコードを列挙するループの進行状況を追跡できます、[レコード セット](../../../ado/reference/ado-api/recordset-object-ado.md)します。 使用して、 [CursorLocation](../../../ado/reference/ado-api/cursorlocation-property-ado.md)プロパティを有効にする、 **AbsolutePosition**クライアント カーソルをカーソルを設定するプロパティ。  
@@ -258,7 +257,7 @@ void PrintProviderError(_ConnectionPtr pConnection) {
 }  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [AbsolutePosition プロパティ (ADO)](../../../ado/reference/ado-api/absoluteposition-property-ado.md)   
  [CursorLocation プロパティ (ADO)](../../../ado/reference/ado-api/cursorlocation-property-ado.md)   
  [Recordset オブジェクト (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)

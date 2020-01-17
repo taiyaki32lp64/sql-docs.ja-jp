@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 f1_keywords:
 - Installation
@@ -16,15 +15,15 @@ ms.assetid: 4dd5d5b7-01b7-4b51-9589-764f69bdb7ae
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 5e9c8f954d5c9839b732912e8f747a443b57f7bb
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: e2bb9829f49f8ce777e98e3e43191a29466fc8c1
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48126805"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66093259"
 ---
 # <a name="ready-to-install"></a>インストールの準備完了
-  [インストールの準備完了] ページには、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] セットアップでインストールまたは変更される機能の概要が示されます。  
+  [インストールの準備完了] ページには、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] セットアップでインストールまたは変更される機能の概要が示されます。  
   
 ## <a name="options"></a>および  
  このページには、次のオプションがあります。  

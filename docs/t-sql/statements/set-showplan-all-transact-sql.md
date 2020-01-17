@@ -26,15 +26,14 @@ helpviewer_keywords:
 ms.assetid: a500b682-bae4-470f-9e00-47de905b851b
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: 8ef59fc6349a588bbb58515614d6d977253d213a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 063c4c94fc457b6b9bb69fa0395398c62bf49516
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47733981"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67941693"
 ---
-# <a name="set-showplanall-transact-sql"></a>SET SHOWPLAN_ALL (Transact-SQL)
+# <a name="set-showplan_all-transact-sql"></a>SET SHOWPLAN_ALL (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] で [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントを実行せず、 代わりに、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 、ステートメントのリソース要件の見積もりを示し、ステートメントの実行方法に関する詳細情報を返します。  
@@ -49,38 +48,38 @@ SET SHOWPLAN_ALL { ON | OFF }
 ```  
   
 ## <a name="remarks"></a>Remarks  
- SET SHOWPLAN_ALL は、解析時ではなく実行時に設定されます。  
+ SET SHOWPLAN_ALL の設定は、解析時ではなく実行時に設定されます。  
   
  SET SHOWPLAN_ALL が ON の場合、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では各ステートメントの実行情報だけが返され、[!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントは実行されません。 返される情報は、このオプションが ON に設定されてから OFF に設定されるまでに実行されたすべての [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントに関する情報です。 たとえば、SET SHOWPLAN_ALL が ON のときに CREATE TABLE ステートメントを実行し、その後この同じテーブルを参照する SELECT ステートメントを実行すると、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では指定したテーブルが存在しないというエラー メッセージが返されます。 その後、このテーブルに対して行われる参照は失敗します。 SET SHOWPLAN_ALL が OFF の場合、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ではレポートを作成せずに、ステートメントを実行します。  
   
- SET SHOWPLAN_ALL は、出力処理用に作成されたアプリケーションで使用できます。 SET SHOWPLAN_TEXT は、**osql** ユーティリティなどの Microsoft Win32 コマンド プロンプト アプリケーションが読み取れる形式の出力を返す場合に使用します。  
+ SET SHOWPLAN_ALL は、その出力を処理するように作成されたアプリケーションから使用されることを意図しています。 SET SHOWPLAN_TEXT は、**osql** ユーティリティなどの Microsoft Win32 コマンド プロンプト アプリケーションが読み取れる形式の出力を返す場合に使用します。  
   
- SET SHOWPLAN_TEXT ステートメントと SET SHOWPLAN_ALL ステートメントは、ストアド プロシージャ内では指定できません。これらのステートメントは、バッチ内にのみ指定できます。  
+ SET SHOWPLAN_TEXT および SET SHOWPLAN_ALL をストアド プロシージャ内で指定することはできません。これらはバッチ内の唯一のステートメントである必要があります。  
   
- SET SHOWPLAN_ALL では情報が行セットとして返されます。これは階層構造になっており、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] クエリ プロセッサで各ステートメントが実行されるときのステップを表しています。 出力結果には、ステートメントごとに、ステートメントのテキストを示す 1 行と、実行ステップの詳細を示す複数行が含まれます。 次の表は、出力に含まれる列の一覧です。  
+ SET SHOWPLAN_ALL では情報が行セットとして返されます。これは階層構造になっており、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] クエリ プロセッサで各ステートメントが実行されるときのステップを表しています。 出力結果には、ステートメントごとに、ステートメントのテキストを示す 1 行と、実行ステップの詳細を示す複数行が含まれます。 次の表に、出力結果に含まれる列を示します。  
   
 |列名|[説明]|  
 |-----------------|-----------------|  
 |**StmtText**|PLAN_ROW 型でない行の場合、[!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントのテキストが含まれます。 PLAN_ROW 型の行の場合、この列には操作の説明が含まれます。 またこの列には物理操作と、必要に応じて論理操作が含まれます。 この列の後に説明が続くこともありますが、その説明は物理操作によって決定されます。 詳細については、「[プラン表示の論理操作と物理操作のリファレンス](../../relational-databases/showplan-logical-and-physical-operators-reference.md)」を参照してください。|  
-|**StmtId**|現在のバッチに含まれるステートメントの数。|  
-|**NodeId**|現在のクエリ内にあるノードの ID。|  
-|**Parent**|親ステップのノードの ID。|  
-|**PhysicalOp**|ノードの物理的な実装アルゴリズム。 PLAN_ROWS 型の行の場合だけ返されます。|  
-|**LogicalOp**|ノードが表す関係代数操作。 PLAN_ROWS 型の行の場合だけ返されます。|  
-|**Argument**|実行されている操作に関する補足情報。 この列の内容は、物理操作に応じて異なります。|  
-|**DefinedValues**|操作によって導入される値のコンマ区切りの一覧。 これらの値は、現在のクエリ (たとえば、SELECT リストや WHERE 句) に指定された計算式であるか、またはこのクエリを処理するためにクエリ プロセッサで導入された内部値です。 定義されたこれらの値は、このクエリ内の他の場所で参照できます。 PLAN_ROWS 型の行の場合だけ返されます。|  
-|**EstimateRows**|操作によって出力される行数の見積もり。 PLAN_ROWS 型の行の場合だけ返されます。|  
-|**EstimateIO**|操作の I/O コスト* の見積もり。 PLAN_ROWS 型の行の場合だけ返されます。|  
-|**EstimateCPU**|操作の CPU コスト* の見積もり。 PLAN_ROWS 型の行の場合だけ返されます。|  
-|**AvgRowSize**|操作を介して渡される行の平均サイズ (バイト単位)。|  
-|**TotalSubtreeCost**|親演算とすべての子演算に関する (累積) コスト* の見積もり。|  
+|**StmtId**|現在のバッチに含まれるステートメント数。|  
+|**NodeId**|現在のクエリに含まれるノードの ID。|  
+|**Parent**|親ステップのノード ID。|  
+|**PhysicalOp**|ノードの物理実装アルゴリズム。 型 PLAN_ROWS の行のみ。|  
+|**LogicalOp**|ノードが表す関係代数操作。 型 PLAN_ROWS の行のみ。|  
+|**Argument**|実行されている操作に関する補足情報を指定します。 この列の内容は、物理操作に応じて異なります。|  
+|**DefinedValues**|この演算子によって導入された値のコンマ区切りの一覧を含みます。 これらの値は、現在のクエリ (たとえば、SELECT リストや WHERE 句) に指定された計算式であるか、またはこのクエリを処理するためにクエリ プロセッサで導入された内部値です。 これらの定義された値は、このクエリ内の他の場所で参照される可能性があります。 型 PLAN_ROWS の行のみ。|  
+|**EstimateRows**|操作によって出力される行数の見積もり。 型 PLAN_ROWS の行のみ。|  
+|**EstimateIO**|この演算子の推定 I/O コスト*。 型 PLAN_ROWS の行のみ。|  
+|**EstimateCPU**|操作の CPU コスト* の見積もり。 型 PLAN_ROWS の行のみ。|  
+|**AvgRowSize**|この演算子に渡される行の推定平均行サイズ (バイト単位)。|  
+|**TotalSubtreeCost**|この操作とすべての子操作の推定 (累積) コスト*。|  
 |**OutputList**|現在の演算によって示される列のコンマ区切りの一覧。|  
-|**Warnings**|現在の演算に関係する警告メッセージのコンマ区切りの一覧。 警告メッセージには、"NO STATS:()" という文字列と列の一覧が含まれることがあります。 この警告メッセージは、クエリ オプティマイザーが列の統計を基に判断を下そうとしたときに、使用できる統計がなかったことを意味します。 この結果、クエリ オプティマイザーでは推定値が用いられ、効率の悪いクエリ プランが作成された可能性があります。 クエリ オプティマイザーで効率的なクエリ プランを選択できるような列統計を作成し更新する方法の詳細については、「[UPDATE STATISTICS](../../t-sql/statements/update-statistics-transact-sql.md)」を参照してください。 場合によっては、この列には "MISSING JOIN PREDICATE" という文字列が含まれることがあります。これは、結合述語のない結合 (テーブルを含む) が実行されていることを意味します。 結合述語を誤って破棄すると、予想より実行時間が長くなり、巨大な結果セットを返すクエリが作成される可能性があります。 この警告が返された場合は、結合述語が意図的に省略されているかどうかを確認してください。|  
-|**型**|ノード型です。 各クエリの親ノードの場合は、[!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントの種類 (SELECT、INSERT、EXECUTE など) を表します。 実行プランを表すサブノードの場合は、型は PLAN_ROW です。|  
+|**Warnings**|現在の演算に関係する警告メッセージのコンマ区切りの一覧。 警告メッセージには、列の一覧が指定された文字列 "NO STATS:()" が含まれる場合があります。 この警告メッセージは、クエリ オプティマイザーによって、この列の統計に基づいて判断が試行され、使用できるものがなかったことを意味します。 その結果、クエリ オプティマイザーで推測する必要があり、結果として非効率的なクエリ プランが選択された可能性がありました。 クエリ オプティマイザーで効率的なクエリ プランを選択できるような列統計を作成し更新する方法の詳細については、「[UPDATE STATISTICS](../../t-sql/statements/update-statistics-transact-sql.md)」を参照してください。 この列には、必要に応じて文字列 "MISSING JOIN PREDICATE" を含めることができます。これは、(テーブルを含む) 結合が結合述語なしで行われていることを意味します。 結合述部を誤ってドロップすると、クエリの実行に予想よりも時間がかかり、膨大な結果セットが返される可能性があります。 この警告が返された場合は、結合述語が意図的に省略されているかどうかを確認してください。|  
+|**Type**|ノード型です。 各クエリの親ノードの場合は、[!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントの種類 (SELECT、INSERT、EXECUTE など) を表します。 実行プランを表すサブノードの場合、種類は PLAN_ROW です。|  
 |**Parallel**|**0** = 操作は並列実行されません。<br /><br /> **1** = 操作は並列実行されます。|  
 |**EstimateExecutions**|現在のクエリの実行中に、操作が実行される推定回数。|  
   
- * コスト単位は、ウォール クロック時間ではなく、内部測定時間に基づいています。 コスト単位は、プランの相対コストを他のプランと比較して決定するために使用されます。  
+ \* コスト単位は、実時間ではなく、時間の内部測定に基づいています。 コスト単位は、プランの相対コストを他のプランと比較して決定するために使用されます。  
   
 ## <a name="permissions"></a>アクセス許可  
  SET SHOWPLAN_ALL を使用するには、SET SHOWPLAN_ALL の実行ステートメントを実行するための適切な権限が与えられている必要があります。また、参照されるオブジェクトを含むすべてのデータベースに対して、SHOWPLAN 権限が必要です。  

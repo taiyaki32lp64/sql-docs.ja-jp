@@ -1,44 +1,42 @@
 ---
-title: Linux 上の SQL Server のセキュリティの概要 |Microsoft Docs
-description: この記事では、一般的なセキュリティ アクションを説明します。
-author: rothja
-ms.author: jroth
-manager: craigg
+title: Linux での SQL Server のセキュリティの概要
+description: この記事では、一般的なセキュリティ アクションについて説明します。
+author: VanMSFT
+ms.author: vanto
 ms.date: 10/02/2017
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: ecc72850-8b01-492e-9a27-ec817648f0e0
-ms.custom: sql-linux
-ms.openlocfilehash: c3d3c4a6ac5d5d49e880fc2af1546bdcf9a73779
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
-ms.translationtype: MT
+ms.openlocfilehash: 1e64ce76ef2528c96ecc0206b7a56b31d4c95ef7
+ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53211741"
+ms.lasthandoff: 07/25/2019
+ms.locfileid: "68019501"
 ---
-# <a name="walkthrough-for-the-security-features-of-sql-server-on-linux"></a>Linux 上の SQL Server のセキュリティ機能のチュートリアル
+# <a name="walkthrough-for-the-security-features-of-sql-server-on-linux"></a>SQL Server on Linux のセキュリティ機能のチュートリアル
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
-新しい SQL Server にある Linux ユーザーの場合は、次のタスクはセキュリティ タスクの一部を説明します。 これらは Linux に固有のものではありませんが、より詳しく調べたい領域を知るのに役立ちます。 それぞれの例では、リンクがその領域の詳細なドキュメントに提供されます。
+SQL Server を初めて使用する Linux ユーザーの場合は、以下のタスクでは一部のセキュリティ タスクの手順がわかります。 これらは Linux 独自または固有のものではありませんが、さらに調べる領域について考えるヒントになります。 各例には、その領域の詳細なドキュメントのリンクが記載されています。
 
 > [!NOTE]
->  次の例を使用して、 **AdventureWorks2014**サンプル データベース。 このサンプル データベースを入手し、インストールする方法については、次を参照してください。 [Windows から Linux に SQL Server のデータベースを復元](sql-server-linux-migrate-restore-database.md)。
+>  次の例では、**AdventureWorks2014** サンプル データベースを使用します。 このサンプル データベースを入手してインストールする手順については、[Windows から Linux への SQL Server データベースの復元](sql-server-linux-migrate-restore-database.md)に関する記事を参照してください。
 
 
-## <a name="create-a-login-and-a-database-user"></a>ログインとデータベース ユーザーを作成します。 
+## <a name="create-a-login-and-a-database-user"></a>ログインとデータベース ユーザーを作成する 
 
-使用して、master データベースでログインを作成して、SQL Server へのアクセスを与える他のユーザー、 [CREATE LOGIN](../t-sql/statements/create-login-transact-sql.md)ステートメント。 以下に例を示します。
+[CREATE LOGIN](../t-sql/statements/create-login-transact-sql.md) ステートメントを使って master データベースにログインを作成することにより、他のユーザーに SQL Server へのアクセスを許可します。 例:
 
 ```
 CREATE LOGIN Larry WITH PASSWORD = '************';  
 ```
 
 > [!NOTE]
->  上記のコマンドで、アスタリスクの代わりに、強力なパスワードを常に使用します。
+>  前のコマンドのアスタリスクの代わりに、常に強力なパスワードを使用します。
 
-ログインでは、SQL Server に接続でき、master データベースに (制限された権限) にアクセスすることができます。 ユーザー データベースに接続するには、ログインには、データベース ユーザーと呼ばれる、データベース レベルで対応する id が必要があります。 ユーザーは、各データベースに固有し、アクセスを許可するには、各データベースで個別に作成する必要があります。 次の例は、AdventureWorks2014 データベースに移動しを使用して、 [CREATE USER](../t-sql/statements/create-user-transact-sql.md) Larry をという名前のログインに関連付けられている Larry という名前のユーザーを作成するステートメント。 ただし、ログインとユーザーは、(相互にマップされる) に関連する、さまざまなオブジェクトであります。 ログインはサーバー レベルのプリンシプルいます。 ユーザーは、データベース レベルのプリンシパルです。
+ログインは、SQL Server に接続し、master データベースに (制限付きで) アクセスできます。 ユーザー データベースに接続するには、データベース レベルで対応するデータベース ユーザーと呼ばれる ID がログインに必要です。 ユーザーは各データベースに固有であり、アクセス権を付与するには、データベースごとに個別に作成する必要があります。 次の例では、AdventureWorks2014 データベースに移動し、[CREATE USER](../t-sql/statements/create-user-transact-sql.md) ステートメントを使って、ログイン名 Larry に関連付けられている Larry という名前のユーザーを作成します。 ログインとユーザーは関連して (相互にマップされて) いますが、それらは異なるオブジェクトです。 ログインは、サーバー レベルの原則です。 ユーザーは、データベース レベルのプリンシパルです。
 
 ```
 USE AdventureWorks2014;
@@ -47,10 +45,10 @@ CREATE USER Larry;
 GO
 ```
 
-- SQL Server の管理者アカウントは、任意のデータベースに接続できるし、任意のデータベースで複数のログインとユーザーを作成できます。  
-- データベースを作成するとき、そのデータベースに接続できるデータベースの所有者になります。 データベース所有者より多くのユーザーを作成できます。
+- SQL Server の管理者アカウントでは、任意のデータベースに接続し、データベースにさらに多くのログインとユーザーを作成できます。  
+- データベースを作成したユーザーはデータベース所有者になり、そのデータベースに接続できます。 データベース所有者は、さらにユーザーを作成できます。
 
-後で許可することによって複数のログインを作成するには、その他のログインを承認できる、`ALTER ANY LOGIN`権限。 データベース内に付与することでより多くのユーザーを作成するには、他のユーザーを承認することができます、`ALTER ANY USER`権限。 以下に例を示します。   
+その後、他のログインに `ALTER ANY LOGIN` アクセス許可を付与することで、より多くのログインを作成することを承認できます。 データベース内では、他のユーザーに `ALTER ANY USER` アクセス許可を付与することで、より多くのユーザーを作成することを承認できます。 例:   
 
 ```
 GRANT ALTER ANY LOGIN TO Larry;   
@@ -62,14 +60,14 @@ GRANT ALTER ANY USER TO Jerry;
 GO   
 ```
 
-Larry ログインが複数のログインを作成するようになりましたし、Jerry はユーザーがより多くのユーザーを作成します。
+これで、ログイン Larry はさらに多くのログインを作成でき、ユーザー Jerry はより多くのユーザーを作成できるようになります。
 
 
-## <a name="granting-access-with-least-privileges"></a>最小限の特権を持つアクセス権の付与
+## <a name="granting-access-with-least-privileges"></a>最小限の特権でアクセス権を付与する
 
-ユーザー データベースに接続する最初のユーザーは、管理者およびデータベース所有者アカウントになります。 ただしこれらのユーザーでは、データベースに使用可能なすべての権限があります。 これは、多くのアクセス許可よりも、ほとんどのユーザーである必要があります。 
+ユーザー データベースに最初に接続するユーザーは、管理者アカウントとデータベース所有者アカウントになります。 ただし、これらのユーザーは、データベースに対するすべてのアクセス許可を使用できます。 これは、ほとんどのユーザーが持つべきものより多いアクセス許可です。 
 
-組み込みを使用してアクセス許可のいくつかの一般的なカテゴリを割り当てることができますを始めたばかり、ときに*固定データベース ロール*します。 たとえば、`db_datareader`固定データベース ロールが、データベース内のすべてのテーブルが変更しない場合します。 使用しての固定データベース ロールのメンバーシップの付与、 [ALTER ROLE](../t-sql/statements/alter-role-transact-sql.md)ステートメント。 次の例では、ユーザーを追加する`Jerry`を`db_datareader`固定データベース ロール。   
+作業を始めるだけのときは、組み込みの "*固定データベース ロール*" を使って、いくつかの一般的なアクセス許可のカテゴリを割り当てることができます。 たとえば、`db_datareader` 固定データベース ロールでは、データベース内のすべてのテーブルを読み取ることができますが、変更することはできません。 固定データベース ロールのメンバーシップを許可するには、[ALTER ROLE](../t-sql/statements/alter-role-transact-sql.md) ステートメントを使います。 次の例では、ユーザー `Jerry` を `db_datareader` 固定データベース ロールに追加します。   
    
 ```   
 USE AdventureWorks2014;   
@@ -78,11 +76,11 @@ GO
 ALTER ROLE db_datareader ADD MEMBER Jerry;   
 ```   
 
-固定データベース ロールの一覧では、次を参照してください。[データベース レベル ロール](../relational-databases/security/authentication-access/database-level-roles.md)します。
+固定データベース ロールの一覧については、「[データベース レベルのロール](../relational-databases/security/authentication-access/database-level-roles.md)」をご覧ください。
 
-後で、(強く推奨) データをより正確なアクセスを構成する準備ができたら、作成を使用して、独自のユーザー定義データベース ロール[CREATE ROLE](../t-sql/statements/create-role-transact-sql.md)ステートメント。 カスタム ロールに特定の詳細なアクセス許可を割り当てます。
+後で、データへのより正確なアクセス (強くお勧めします) を構成する準備ができたら、[CREATE ROLE](../t-sql/statements/create-role-transact-sql.md) ステートメントを使って、独自のユーザー定義のデータベース ロールを作成します。 次に、カスタム ロールに特定の詳細なアクセス許可を割り当てます。
 
-たとえば、次のステートメントがという名前のデータベース ロールを作成`Sales`、付与、`Sales`を参照してください、更新、および行を削除する機能をグループ化、`Orders`テーブル、およびユーザーを追加`Jerry`を`Sales`ロール。   
+たとえば、次のステートメントでは、`Sales` という名前のデータベース ロールが作成され、`Sales` グループに対して `Orders` テーブルの行を表示、更新、削除する権限が与えられてから、ユーザー `Jerry` が `Sales` ロールに追加されます。   
    
 ```   
 CREATE ROLE Sales;   
@@ -137,11 +135,11 @@ WHERE ('SalesPerson' + CAST(@SalesPersonId as VARCHAR(16)) = USER_NAME())
 Create a security policy adding the function as both a filter and a block predicate on the table:  
 
 ```
-セキュリティ ポリシー SalesFilter を作成します。   
-フィルター述語 Security.fn_securitypredicate(SalesPersonID) を追加します。    
-  Sales.SalesOrderHeader、   
-ブロック述語 Security.fn_securitypredicate(SalesPersonID) を追加します。    
-  Sales.SalesOrderHeader で   
+CREATE SECURITY POLICY SalesFilter   
+ADD FILTER PREDICATE Security.fn_securitypredicate(SalesPersonID)    
+  ON Sales.SalesOrderHeader,   
+ADD BLOCK PREDICATE Security.fn_securitypredicate(SalesPersonID)    
+  ON Sales.SalesOrderHeader   
 WITH (STATE = ON);   
 ```
 
@@ -149,19 +147,19 @@ Execute the following to query the `SalesOrderHeader` table as each user. Verify
 
 ```    
 EXECUTE AS USER = 'SalesPerson280';   
-選択 * Sales.SalesOrderHeader; から    
-元に戻します。 
+SELECT * FROM Sales.SalesOrderHeader;    
+REVERT; 
  
-EXECUTE AS USER = 'マネージャー';   
-選択 * Sales.SalesOrderHeader; から   
-元に戻します。   
+EXECUTE AS USER = 'Manager';   
+SELECT * FROM Sales.SalesOrderHeader;   
+REVERT;   
 ```
  
 Alter the security policy to disable the policy.  Now both users can access all rows. 
 
 ```
-セキュリティ ポリシー SalesFilter を変更します。   
-使用 (状態 = オフ)。    
+ALTER SECURITY POLICY SalesFilter   
+WITH (STATE = OFF);    
 ``` 
 
 
@@ -172,19 +170,19 @@ Alter the security policy to disable the policy.  Now both users can access all 
 Use an `ALTER TABLE` statement to add a masking function to the `EmailAddress` column in the `Person.EmailAddress` table: 
  
 ```
-AdventureWorks2014; の使用します。移動の ALTER TABLE Person.EmailAddress     ALTER 列 EmailAddress    
-追加マスクで (関数 = ' email()');
+USE AdventureWorks2014; GO ALTER TABLE Person.EmailAddress     ALTER COLUMN EmailAddress    
+ADD MASKED WITH (FUNCTION = 'email()');
 ``` 
  
 Create a new user `TestUser` with `SELECT` permission on the table, then execute a query as `TestUser` to view the masked data:   
 
 ```  
-TestUser のユーザーを作成しますログインに関係なく。   
-GRANT SELECT ON Person.EmailAddress TestUser; に    
+CREATE USER TestUser WITHOUT LOGIN;   
+GRANT SELECT ON Person.EmailAddress TO TestUser;    
  
-EXECUTE AS USER ="TestUser";   
-SELECT EmailAddressID、EmailAddress Person.EmailAddress; から       
-元に戻します。    
+EXECUTE AS USER = 'TestUser';   
+SELECT EmailAddressID, EmailAddress FROM Person.EmailAddress;       
+REVERT;    
 ```
  
 Verify that the masking function changes the email address in the first record from:
@@ -224,21 +222,21 @@ The following example illustrates encrypting and decrypting the `AdventureWorks2
 USE master;  
 GO  
 
-マスター_キーをパスワードで暗号化を作成する = ' * * * ';  
+CREATE MASTER KEY ENCRYPTION BY PASSWORD = '**********';  
 GO  
 
-作成 MyServerCert の証明書の件名の付いた = '、データベース暗号化キー証明書';  
+CREATE CERTIFICATE MyServerCert WITH SUBJECT = 'My Database Encryption Key Certificate';  
 GO  
 
-AdventureWorks2014; の使用します。 移動
+USE AdventureWorks2014;   GO
   
 CREATE DATABASE ENCRYPTION KEY  
-アルゴリズムで AES_256 を =  
-サーバー証明書 MyServerCert; による暗号化  
+WITH ALGORITHM = AES_256  
+ENCRYPTION BY SERVER CERTIFICATE MyServerCert;  
 GO
   
 ALTER DATABASE AdventureWorks2014  
-セットの暗号化。   
+SET ENCRYPTION ON;   
 ```
 
 To remove TDE, execute `ALTER DATABASE AdventureWorks2014 SET ENCRYPTION OFF;`   
@@ -260,13 +258,13 @@ SQL Server has the ability to encrypt the data while creating a backup. By speci
  
 The following example creates a certificate, and then creates a backup protected by the certificate.
 ```
-使用して master; 移動 証明書の作成 BackupEncryptCert サブジェクト = 'データベースのバックアップ'; データベースのバックアップ [AdventureWorks2014] に移動して ディスク N'/var/opt/mssql/backups/AdventureWorks2014.bak を ='  
+USE master;   GO   CREATE CERTIFICATE BackupEncryptCert   WITH SUBJECT = 'Database backups';   GO BACKUP DATABASE [AdventureWorks2014]   TO DISK = N'/var/opt/mssql/backups/AdventureWorks2014.bak'  
 WITH  
-  圧縮、  
+  COMPRESSION,  
   ENCRYPTION   
    (  
-   アルゴリズム、AES_256 を =  
-   サーバー証明書 BackupEncryptCert を =  
+   ALGORITHM = AES_256,  
+   SERVER CERTIFICATE = BackupEncryptCert  
    ),  
   STATS = 10  
 GO  

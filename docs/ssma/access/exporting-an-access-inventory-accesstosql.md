@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: 7e1941fb-3d14-4265-aff6-c77a4026d0ed
 author: Shamikg
 ms.author: Shamikg
-manager: craigg
-ms.openlocfilehash: f35ae03cb6588bc7828349dd4a4beafcc5a7b2f3
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 0c05eafd1fb58b6ece15f5ad8721228d9d4beab6
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47746450"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68006559"
 ---
 # <a name="exporting-an-access-inventory-accesstosql"></a>Access インベントリ (AccessToSQL) のエクスポート
 複数の Access データベースがあるし、に移行するものがわからない場合[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]プロジェクト内のすべての Access データベースのインベントリをエクスポートすることができます。 確認し、データベースと移行するには、そのデータベース内のオブジェクトを決定するインベントリのメタデータを照会します。 このインベントリすることができます簡単に、次の質問に対する回答を検索します。  
@@ -103,11 +102,11 @@ Access インベントリをエクスポートするに最初に開くまたは 
   
 2.  接続ダイアログ ボックスで入力するかのインスタンスの名前を選択[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]します。  
   
-    -   ローカル コンピューターの既定のインスタンスに接続する場合は、入力**localhost**またはドット (**.**)。  
+    -   ローカル コンピューターの既定のインスタンスに接続する場合は、入力**localhost**またはドット ( **.** )。  
   
     -   別のコンピューターで既定のインスタンスに接続する場合は、コンピューターの名前を入力します。  
   
-    -   名前付きインスタンスに接続する場合は、コンピューター名、バック スラッシュ、およびインスタンス名を入力します。 例: \myinstance します。  
+    -   名前付きインスタンスに接続する場合は、コンピューター名、バック スラッシュ、およびインスタンス名を入力します。 以下に例を示します。\Myinstance します。  
   
 3.  **データベース**ボックスに、エクスポートされたメタデータのターゲット データベースの名前を入力します。  
   
@@ -146,7 +145,7 @@ Access データベースに関するメタデータをエクスポートした�
   
 5.  クエリを実行する F5 キーを押します。  
   
-## <a name="query-examples"></a>クエリ例  
+## <a name="query-examples"></a>クエリの例  
 次のクエリを実行する前にを使用してを実行する必要があります*database_name*エクスポートされたメタデータを含むデータベースに対してクエリを実行することを確認するクエリ。 たとえば、MyAccessMetadata という名前のデータベースにメタデータをエクスポートする場合は追加する、次の先頭に、[!INCLUDE[tsql](../../includes/tsql-md.md)]コード。  
   
 ```  

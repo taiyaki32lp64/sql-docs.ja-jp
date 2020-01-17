@@ -16,12 +16,12 @@ ms.assetid: baf1a4b1-6790-4275-b261-490bca33bdb9
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: ae13b028a740469a2acc4957038d7c2a2f5a6fc6
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 43bb7fdd5b9c8cf8a73c423ac21e8ba7f779ec79
+ms.sourcegitcommit: f912c101d2939084c4ea2e9881eb98e1afa29dad
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48213892"
+ms.lasthandoff: 10/23/2019
+ms.locfileid: "72797931"
 ---
 # <a name="create-a-database-mirroring-endpoint-for-windows-authentication-transact-sql"></a>Windows 認証でのデータベース ミラーリング エンドポイントの作成 (Transact-SQL)
   このトピックでは、 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] に、Windows 認証を使用するデータベース ミラーリング エンドポイントを [!INCLUDE[tsql](../../includes/tsql-md.md)]で作成する方法について説明します。 データベース ミラーリングまたは [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] をサポートするには、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の各インスタンスにデータベース ミラーリング エンドポイントが必要となります。 サーバー インスタンスは、単一のポートを備えたデータベース ミラーリング エンドポイントを 1 つだけ持つことができます。 データベース ミラーリング エンドポイントは、作成される際に、ローカル システムで利用できる任意のポートを使用できます。 サーバー インスタンス上のすべてのデータベース ミラーリング セッションはそのポートでリッスンし、データベース ミラーリングに対するすべての着信接続はそのポートを使用します。  
@@ -31,11 +31,11 @@ ms.locfileid: "48213892"
   
  **このトピックの内容**  
   
--   **作業を開始する準備:**  [セキュリティ](#Security)  
+-   **Before you begin:**  [Security](#Security)  
   
 -   **以下を使用してデータベース ミラーリング エンドポイントを作成するには:** [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> 作業を開始する準備  
+##  <a name="BeforeYouBegin"></a> はじめに  
   
 ###  <a name="Security"></a> セキュリティ  
  サーバー インスタンスの認証方法と暗号化方法は、システム管理者が設定します。  
@@ -43,7 +43,7 @@ ms.locfileid: "48213892"
 > [!IMPORTANT]  
 >  RC4 アルゴリズムは非推奨とされます。 [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)] AES を使用することをお勧めします。  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> アクセス許可  
  CREATE ENDPOINT 権限、または sysadmin 固定サーバー ロールのメンバーシップが必要です。 詳細については、「 [GRANT (エンドポイントの権限の許可) &#40;Transact-SQL&#41;](/sql/t-sql/statements/grant-endpoint-permissions-transact-sql)」を参照してください。  
   
 ##  <a name="TsqlProcedure"></a> Transact-SQL の使用  
@@ -56,8 +56,8 @@ ms.locfileid: "48213892"
   
 3.  次のステートメントを使用して、データベース ミラーリング エンドポイントが既に存在するかどうかを判断します。  
   
-    ```  
-    SELECT name, role_desc, state_desc FROM sys.database_mirroring_endpoints;   
+    ```sql
+    SELECT name, role_desc, state_desc FROM sys.database_mirroring_endpoints;
     ```  
   
     > [!IMPORTANT]  
@@ -65,33 +65,33 @@ ms.locfileid: "48213892"
   
 4.  Transact-SQL を使用して、Windows 認証を使用するエンドポイントを作成するには、CREATE ENDPOINT ステートメントを使用します。 ステートメントは、通常、次のような形式になります。  
   
-     CREATE ENDPOINT \<*endpointName*>  
+     CREATE ENDPOINT *\<endpointName*>  
   
      STATE=STARTED  
   
-     AS TCP ( LISTENER_PORT = \<*listenerPortList*> )  
+     AS TCP ( LISTENER_PORT = *\<listenerPortList*> )  
   
      FOR DATABASE_MIRRORING  
   
      (  
   
-     [ AUTHENTICATION = **WINDOWS** [ \<*authorizationMethod*> ]  
+     [ AUTHENTICATION = **WINDOWS** [ *\<authorizationMethod*> ]  
   
      ]  
   
-     **[,]** ENCRYPTION = **REQUIRED**  
+     [ **[,]** ENCRYPTION = **REQUIRED**  
   
-     [ ALGORITHM { \<*algorithm*> } ]  
+     [ ALGORITHM { *\<algorithm*> } ]  
   
      ]  
   
-     **[,]** ROLE = \<*role*>  
+     **[,]** ROLE = *\<role*>  
   
      )  
   
      パラメーターの説明  
   
-    -   \<*endpointName*> は、サーバー インスタンスのデータベース ミラーリング エンドポイントの一意名です。  
+    -   *\<endpointName*> は、サーバー インスタンスのデータベース ミラーリング エンドポイントの一意名です。  
   
     -   STARTED によって、エンドポイントが開始され、接続のリッスンが開始されることを指定します。 データベース ミラーリング エンドポイントは、通常、STARTED 状態で作成されます。 STOPPED 状態 (既定) または DISABLED 状態でセッションを開始することもできます。  
   
@@ -106,11 +106,11 @@ ms.locfileid: "48213892"
         > [!IMPORTANT]  
         >  各サーバー インスタンスには、一意のリスナー ポートが 1 つだけ必要です。  
   
-    -   Windows 認証の場合、エンドポイントで接続の認証に NTLM または Kerberos だけを使用する場合を除き、AUTHENTICATION オプションは省略可能です。 \<*authorizationMethod*> では、NTLM、KERBEROS、NEGOTIATE のいずれかで、接続の認証に使用する方法を指定します。 既定値の NEGOTIATE を使用すると、エンドポイントでは、使用する Windows ネゴシエーション プロトコルに NTLM または Kerberos のいずれかが選択されます。 ネゴシエーションでは、相手側のエンドポイントの認証レベルに応じて、認証ありまたは認証なしの接続が可能になります。  
+    -   Windows 認証の場合、エンドポイントで接続の認証に NTLM または Kerberos だけを使用する場合を除き、AUTHENTICATION オプションは省略可能です。 *\<authorizationMethod*> では、NTLM、KERBEROS、NEGOTIATE のいずれかで、接続の認証に使用する方法を指定します。 既定値の NEGOTIATE を使用すると、エンドポイントでは、使用する Windows ネゴシエーション プロトコルに NTLM または Kerberos のいずれかが選択されます。 ネゴシエーションでは、相手側のエンドポイントの認証レベルに応じて、認証ありまたは認証なしの接続が可能になります。  
   
     -   既定では、ENCRYPTION は REQUIRED に設定されます。 これは、このエンドポイントへのすべての接続に暗号化を使用する必要があることを意味します。 ただし、エンドポイントで暗号化を無効にしたり、オプションにできます。 選択肢は次のとおりです。  
   
-        |値|定義|  
+        |ReplTest1|[定義]|  
         |-----------|----------------|  
         |DISABLED|接続を経由して送信されたデータが暗号化されないことを指定します。|  
         |SUPPORTED|反対側のエンドポイントで SUPPORTED または REQUIRED が指定されている場合に限り、データを暗号化することを指定します。|  
@@ -118,24 +118,24 @@ ms.locfileid: "48213892"
   
          あるエンドポイントで暗号化が必要な場合は、他のエンドポイントで ENCRYPTION が SUPPORTED または REQUIRED に設定されている必要があります。  
   
-    -   \<*algorithm*> には、エンドポイントの暗号化標準を指定するオプションが用意されています。 \<*algorithm*> の値は、RC4、AES、AES RC4、または RC4 AES の各アルゴリズムまたはそれらの組み合わせになります。  
+    -   *\<algorithm*> には、エンドポイントの暗号化標準を指定するオプションが用意されています。 *\<algorithm*> の値は、RC4、AES、AES RC4、または RC4 AES の各アルゴリズムまたはそれらの組み合わせになります。  
   
          AES RC4 では、エンドポイントが暗号化アルゴリズムのネゴシエートを行う際に、AES アルゴリズムを優先することが示されます。 RC4 AES では、エンドポイントが暗号化アルゴリズムのネゴシエートを行う際に、RC4 アルゴリズムを優先することが示されます。 両方のエンドポイントで両方のアルゴリズムを異なる順序で指定した場合、接続を受け入れた方のエンドポイントが優先されます。  
   
         > [!NOTE]  
         >  RC4 アルゴリズムは非推奨とされます。 [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)] AES を使用することをお勧めします。  
   
-    -   \<*role*> では、サーバーが実行できるロールが定義されます。 ROLE の指定は必須です。 ただし、エンドポイントのロールが適用されるのは、データベース ミラーリングの場合のみです。 [!INCLUDE[ssHADR](../../includes/sshadr-md.md)]では、エンドポイントのロールが無視されます。  
+    -   *\<role*> では、サーバーが実行できるロールが定義されます。 ROLE の指定は必須です。 ただし、エンドポイントのロールが適用されるのは、データベース ミラーリングの場合のみです。 [!INCLUDE[ssHADR](../../includes/sshadr-md.md)]では、エンドポイントのロールが無視されます。  
   
          サーバー インスタンスが、あるデータベース ミラーリング セッションではあるロールを使用し、他のセッションでは別のロールを使用できるようにするには、ROLE=ALL を指定します。 パートナーまたはミラーリング監視サーバーのいずれかになるようにサーバー インスタンスを制限するには、ROLE=PARTNER または ROLE=WITNESS をそれぞれ指定します。  
   
         > [!NOTE]  
-        >  各エディションのデータベース ミラーリング オプションの詳細については[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]を参照してください[機能は、SQL Server 2014 の各エディションでサポートされている](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md)します。  
+        >  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]の各エディションのデータベースミラーリングオプションの詳細については、「 [SQL Server 2014 の各エディションがサポートする機能](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md)」を参照してください。  
   
      CREATE ENDPOINT 構文の詳細な説明については、「 [CREATE ENDPOINT &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-endpoint-transact-sql)で作成する方法について説明します。  
   
     > [!NOTE]  
-    >  既存のエンドポイントを変更するには、「 [ALTER ENDPOINT &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-endpoint-transact-sql)で作成する方法について説明します。  
+    >  既存のエンドポイントを変更するには、「[ALTER ENDPOINT &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-endpoint-transact-sql)」を使用します。  
   
 ###  <a name="TsqlExample"></a> 例: データベース ミラーリングをサポートするエンドポイントの作成 (Transact-SQL)  
  次の例では、3 台の異なるコンピューター システムに既定のサーバー インスタンスのデータベース ミラーリング エンドポイントを作成します。  
@@ -153,7 +153,7 @@ ms.locfileid: "48213892"
 > [!IMPORTANT]  
 >  各サーバー インスタンスにはエンドポイントを 1 つしか作成できません。 したがって、1 つのサーバー インスタンスをセッションによってパートナーにしたりミラーリング監視サーバーにしたりする場合は、ROLE=ALL を指定します。  
   
-```  
+```sql
 --Endpoint for initial principal server instance, which  
 --is the only server instance running on SQLHOST01.  
 CREATE ENDPOINT endpoint_mirroring  
@@ -178,9 +178,10 @@ GO
 ```  
   
 ##  <a name="RelatedTasks"></a> 関連タスク  
- **データベース ミラーリング エンドポイントを構成するには**  
+
+### <a name="to-configure-a-database-mirroring-endpoint"></a>データベース ミラーリング エンドポイントを構成するには
   
--   [データベース ミラーリング エンドポイントの AlwaysOn 可用性グループの作成&#40;SQL Server PowerShell&#41;](../availability-groups/windows/database-mirroring-always-on-availability-groups-powershell.md)  
+-   [AlwaysOn 可用性グループ&#40;SQL Server PowerShell のデータベースミラーリングエンドポイントを作成する&#41;](../availability-groups/windows/database-mirroring-always-on-availability-groups-powershell.md)  
   
 -   [データベース ミラーリング エンドポイントでの証明書の使用 &#40;Transact-SQL&#41;](use-certificates-for-a-database-mirroring-endpoint-transact-sql.md)  
   
@@ -203,5 +204,3 @@ GO
  [サーバー ネットワーク アドレスの指定 &#40;データベース ミラーリング&#41;](specify-a-server-network-address-database-mirroring.md)   
  [Windows 認証を使用したデータベース ミラーリングの設定の例 &#40;Transact-SQL&#41;](example-setting-up-database-mirroring-using-windows-authentication-transact-sql.md)   
  [データベース ミラーリング エンドポイント &#40;SQL Server&#41;](the-database-mirroring-endpoint-sql-server.md)  
-  
-  

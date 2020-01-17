@@ -19,11 +19,11 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: 815158ddcdb93b1e779f9a12ef06f034741de590
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53355242"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62643417"
 ---
 # <a name="properties-property-servernetworkprotocolipaddress-class"></a>Properties プロパティ (ServerNetworkProtocolIPAddress クラス)
   IP アドレスに関連付けられたプロパティを取得します。  
@@ -45,7 +45,7 @@ object
   
 ## <a name="remarks"></a>コメント  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [サーバー ネットワーク プロトコルとネットワーク ライブラリの構成](https://msdn.microsoft.com/library/ms177485\(v=sql.100\).aspx)  
   
   

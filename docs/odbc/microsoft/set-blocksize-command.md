@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 0c11580f-37f5-4a8e-99be-9fb9c44bb433
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: e904d341513047b3940cf5b3fc2ba9538cdb5c8f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 4fe84a470f5e877c73701168394cd85d75253fb7
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47764230"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67997760"
 ---
 # <a name="set-blocksize-command"></a>SET BLOCKSIZE コマンド
 メモ フィールドの記憶域のディスク領域の割り当て方法を指定します。  

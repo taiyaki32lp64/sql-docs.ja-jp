@@ -1,95 +1,95 @@
 ---
-title: Tempdb データベース - Parallel Data Warehouse |Microsoft ドキュメント
-description: 並列データ ウェアハウス データベースは Tempdb です。
+title: Tempdb データベース
+description: 並列データウェアハウスの Tempdb データベース。
 author: mzaman1
-manager: craigg
 ms.prod: sql
 ms.technology: data-warehouse
 ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: 7e11f4eff980358f4b4906f8a100cfc509d19dd5
-ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
+ms.custom: seo-dt-2019
+ms.openlocfilehash: 3772e2b4cabac84c00854eba85f7a0c2a33d48bc
+ms.sourcegitcommit: d587a141351e59782c31229bccaa0bff2e869580
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/19/2018
-ms.locfileid: "31538862"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74400140"
 ---
-# <a name="tempdb-database-in-parallel-data-warehouse"></a>Parallel Data Warehouse で tempdb データベース
-**tempdb**はユーザー データベースのローカル一時テーブルを格納する SQL Server PDW システム データベースです。 一時テーブルは、クエリのパフォーマンスを向上させるためによく使用されます。 たとえば、一時テーブルを使用して、スクリプトをモジュール化でき、計算されたデータを再利用できます。  
+# <a name="tempdb-database-in-parallel-data-warehouse"></a>並列データウェアハウスの tempdb データベース
+**tempdb**は、ユーザーデータベースのローカル一時テーブルを格納する SQL Server PDW システムデータベースです。 一時テーブルは、多くの場合、クエリのパフォーマンスを向上させるために使用されます。 たとえば、一時テーブルを使用してスクリプトをモジュール化し、計算されたデータを再利用することができます。  
   
-システム データベースの詳細については、次を参照してください。[システム データベース](system-databases.md)です。  
+システムデータベースの詳細については、「[システムデータベース](system-databases.md)」を参照してください。  
   
 ## <a name="Basics"></a>主な用語と概念  
 *ローカル一時テーブル*  
-A*ローカル一時テーブル*をローカル ユーザーのセッションが作成された一時テーブルであり、テーブル名の前に # プレフィックスを使用します。 各セッションでは、独自のセッションのローカル一時テーブルのデータにのみアクセスできます。  
+*ローカル一時テーブル*では、テーブル名の前に # プレフィックスが使用されます。これは、ローカルユーザーセッションによって作成された一時テーブルです。 各セッションは、独自のセッションのローカル一時テーブルのデータにのみアクセスできます。  
   
-各セッションは、すべてのセッションでローカル一時テーブルのメタデータを表示できます。 たとえば、すべてのセッションがのすべてのローカル一時テーブルのメタデータを表示できます、`SELECT * FROM tempdb.sys.tables`クエリ。  
+各セッションでは、すべてのセッションでローカル一時テーブルのメタデータを表示できます。 たとえば、すべてのセッションで、 `SELECT * FROM tempdb.sys.tables`クエリを使用してすべてのローカル一時テーブルのメタデータを表示できます。  
   
 グローバル一時テーブル  
-*グローバル一時テーブル*、SQL Server でサポートされている、## の構文は、SQL Server PDW のこのリリースではサポートされていません。  
+# # 構文の SQL Server でサポートされている*グローバル一時テーブル*は、このリリースの SQL Server PDW ではサポートされていません。  
   
 pdwtempdb  
-**pdwtempdb**はローカル一時テーブルを格納するデータベースです。  
+**pdwtempdb**は、ローカル一時テーブルを格納するデータベースです。  
   
-PDW は、SQL Server を使用して、一時テーブルを実装しません**tempdb**データベース。 代わりに、PDW データベースに保存、pdwtempdb と呼ばれます。 このデータベースは、各計算ノードに存在し、PDW インターフェイスを通じてユーザーには表示されません。 管理者コンソールで、[ストレージ] ページが表示されますこれらを占めてのという名前の PDW システム データベースで**tempdb sql**です。  
+PDW では、SQL Server**tempdb**データベースを使用した一時テーブルは実装されません。 代わりに、PDW は pdwtempdb という名前のデータベースにそれらを格納します。 このデータベースは各コンピューティングノード上に存在し、PDW インターフェイスを介してユーザーには表示されません。 管理コンソールの [ストレージ] ページには、「 **tempdb-sql**」という名前の PDW システムデータベースに含まれていることが表示されます。  
   
 tempdb  
-**tempdb**は、SQL Server tempdb データベース。 最小ログ記録を使用します。 SQL Server では、コンピューティング ノードで tempdb を使用して、SQL Server 操作を実行する過程で必要な一時テーブルを格納します。  
+**tempdb は SQL Server** tempdb データベースです。 最小ログ記録を使用します。 SQL Server は、コンピューティングノードで tempdb を使用して、SQL Server 操作を実行する過程で必要な一時テーブルを格納します。  
   
-SQL Server PDW からテーブルを削除する**tempdb**とき。  
+SQL Server PDW は、次の場合に**tempdb**からテーブルを削除します。  
   
 -   DROP TABLE ステートメントが実行されます。  
   
--   セッションは切断されます。 セッションの一時テーブルだけが削除されます。  
+-   セッションは切断されています。 セッションの一時テーブルだけが削除されます。  
   
--   アプライアンスは、シャット ダウンします。  
+-   アプライアンスはシャットダウンされています。  
   
--   コントロールのノードには、クラスターのフェールオーバーがあります。  
+-   制御ノードには、クラスターのフェールオーバーがあります。  
   
 ## <a name="general-remarks"></a>全般的な解説  
-SQL Server PDW は、特に明示しない限り、一時テーブルと永続的なテーブルに対して同じ操作を実行します。 たとえば、パーマネント テーブルと同じように、ローカル一時テーブル内のデータが分散またはコンピューティング ノード間でレプリケートします。  
+SQL Server PDW は、明示的に指定されていない限り、一時テーブルとパーマネントテーブルに対して同じ操作を実行します。 たとえば、パーマネントテーブルと同様に、ローカル一時テーブル内のデータは、コンピューティングノード全体に分散されるか、レプリケートされます。  
   
 ## <a name="LimitationsRestrictions"></a>制限事項と制約事項  
-制限事項と制約 SQL Server PDW**tempdb**データベース。 *ことはできません。*  
+SQL Server PDW**tempdb**データベースの制限事項と制約事項。 *次のことはできません。*  
   
--   始まり、グローバル一時テーブルを作成する ## します。  
+-   # # で始まるグローバル一時テーブルを作成します。  
   
--   バックアップまたは復元の実行**tempdb**です。  
+-   **Tempdb**のバックアップまたは復元を実行します。  
   
--   アクセス許可を変更**tempdb**で、 **GRANT**、 **DENY**、または**取り消す**ステートメントです。  
+-   **GRANT**、 **DENY**、または**REVOKE**ステートメントを使用して、 **tempdb**に対する権限を変更します。  
   
--   実行**DBCC SHRINKLOG**の**tempdb**tempdb です。  
+-   **Tempdb**Tempdb の**DBCC SHRINKLOG**を実行します。  
   
--   DDL 操作の実行**tempdb**です。 これにはいくつかの例外があります。 詳細については、ローカル一時テーブル上の制限事項と制約事項の次の一覧を参照してください。  
+-   **Tempdb**に対して DDL 操作を実行します。 これにはいくつかの例外があります。 詳細については、ローカル一時テーブルに関する制限事項と制限事項を次の一覧で参照してください。  
   
-制限事項とローカル一時テーブルに制約します。 *ことはできません。*  
+ローカル一時テーブルに関する制限事項と制約事項。 *次のことはできません。*  
   
--   一時テーブル名の変更します。  
+-   一時テーブルの名前を変更する  
   
--   一時テーブルでは、パーティション、ビュー、または非クラスター化インデックスを作成します。 **ALTER INDEX**いずれかで作成されたテーブルのクラスター化インデックスを再構築するために使用できます。  
+-   一時テーブルにパーティション、ビュー、または非クラスター化インデックスを作成します。 **ALTER INDEX**を使用すると、1つのを使用して作成されたテーブルのクラスター化インデックスを再構築できます。  
   
--   許可、拒否、一時テーブルへのアクセス許可を変更するか、ステートメントを取り消します。  
+-   GRANT、DENY、または REVOKE ステートメントを使用して、一時テーブルに対する権限を変更します。  
   
--   一時テーブル上でデータベース コンソール コマンドを実行します。  
+-   一時テーブルに対してデータベースコンソールコマンドを実行します。  
   
--   同じバッチ内の 2 つ以上の一時テーブルに同じ名前を使用します。 バッチ内で 1 つ以上のローカル一時テーブルを使用した場合、一意の名前でそれぞれ必要があります。 複数のセッションは同じバッチを実行して、同じローカル一時テーブルを作成する場合、SQL Server PDW は内部的に各ローカル一時テーブルの一意の名前を維持するためにローカル一時テーブル名に数値サフィックスを追加します。  
+-   同じバッチ内で、2つ以上の一時テーブルに同じ名前を使用します。 バッチ内で複数のローカル一時テーブルを使用する場合、各テーブルの名前は一意でなければなりません。 複数のセッションが同じバッチを実行していて、同じローカル一時テーブルを作成している場合、では、ローカル一時テーブルごとに一意の名前を維持するために、内部的にローカル一時テーブル名に数値サフィックスを追加 SQL Server PDW ます。  
   
 > [!NOTE]  
-> *できます*を作成し、一時テーブルで統計を更新します **。ALTER INDEX**をクラスター化インデックスを再構築するために使用できます。  
+> 一時テーブルの統計を作成および更新*でき*ます。**ALTER INDEX**を使用して、クラスター化インデックスを再構築できます。  
   
-## <a name="permissions"></a>権限  
+## <a name="permissions"></a>アクセス許可  
 すべてのユーザーが tempdb 内に一時オブジェクトを作成できます。 ユーザーは追加の権限を付与されない限り、自分で作成したオブジェクトにしかアクセスできません。 ユーザーが tempdb を使用できないように tempdb への接続権限を取り消すことはできますが、一部のルーチン処理で tempdb を使用する必要があるためお勧めしません。  
   
 ## <a name="RelatedTasks"></a>関連タスク  
   
-|処理手順|Description|  
+|タスク|説明|  
 |---------|---------------|  
-|内のテーブルを作成する**tempdb**です。|CREATE TABLE と CREATE TABLE AS SELECT ステートメントを使用して、ユーザーの一時テーブルを作成できます。 詳細については、次を参照してください。 [CREATE TABLE](../t-sql/statements/create-table-azure-sql-data-warehouse.md)と[CREATE TABLE AS SELECT](../t-sql/statements/create-table-as-select-azure-sql-data-warehouse.md)です。|  
-|既存のテーブルの一覧を表示**tempdb**です。|`SELECT * FROM tempdb.sys.tables;`|  
-|既存の列の一覧を表示**tempdb**です。|`SELECT * FROM tempdb.sys.columns;`|  
-|既存のオブジェクトの一覧を表示**tempdb**です。|`SELECT * FROM tempdb.sys.objects;`|  
+|**Tempdb**にテーブルを作成します。|CREATE TABLE と CREATE TABLE を SELECT ステートメントと共に使用して、ユーザーの一時テーブルを作成できます。 詳細については、「 [CREATE TABLE](../t-sql/statements/create-table-azure-sql-data-warehouse.md) 」および「 [SELECT として CREATE TABLE](../t-sql/statements/create-table-as-select-azure-sql-data-warehouse.md)」を参照してください。|  
+|**Tempdb**内の既存のテーブルの一覧を表示します。|`SELECT * FROM tempdb.sys.tables;`|  
+|**Tempdb**内の既存の列の一覧を表示します。|`SELECT * FROM tempdb.sys.columns;`|  
+|**Tempdb**内の既存のオブジェクトの一覧を表示します。|`SELECT * FROM tempdb.sys.objects;`|  
   
 <!-- MISSING LINKS 
 ## See Also  

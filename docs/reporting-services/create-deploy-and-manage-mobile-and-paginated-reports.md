@@ -1,9 +1,9 @@
 ---
 title: SQL Server Reporting Services (SSRS) とは | Microsoft Docs
 description: オンプレミスのモバイル レポートやページ分割された Reporting Services レポートに使用するツールやサービスについて説明します。
-ms.date: 05/25/2018
+ms.date: 05/06/2019
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: reporting-services
 ms.topic: conceptual
 helpviewer_keywords:
@@ -13,14 +13,14 @@ helpviewer_keywords:
 - Reporting Services
 - SQL Server Reporting Services
 ms.assetid: b8d18d3d-9db0-43e7-8286-7b46cc3a37ed
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 08a71374d72a70e9bba6863eb9f6b5ac548d28f7
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 26fa81278afd686d25192fdd49bbc3f2119a5762
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56297400"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65571565"
 ---
 # <a name="what-is-sql-server-reporting-services-ssrs"></a>SQL Server Reporting Services (SSRS) とは
 
@@ -28,13 +28,13 @@ ms.locfileid: "56297400"
 
 Power BI Report Server が見つからない場合は、 「[Power BI Report Server とは](https://docs.microsoft.com/power-bi/report-server/get-started)」を参照してください。
 
-SQL Server Reporting Services (SSRS) のすぐに使えるさまざまなツールやサービスで、オンプレミスのモバイル レポートやページ分割された Reporting Services レポートを作成、配置、管理します。
+SQL Server Reporting Services (SSRS) では、モバイルおよびページ分割されたレポートの作成、配置、管理を行う一連のオンプレミス ツールおよびサービスを提供しています。
 
 ![SQL Server Reporting Services 一式](../reporting-services/media/ss-reporting-services-all-together.png "SQL Server Reporting Services 一式")
 
 ## <a name="create-deploy-and-manage-mobile-and-paginated-reports"></a>モバイル レポートやページ分割されたレポートを作成、配置、管理する
 
-SQL Server Reporting Services は、レポートを作成、パブリッシュ、管理し、Web ブラウザー、モバイル デバイス、受信トレイ内のメールなどで表示できるようにさまざまな方法で適切なユーザーに提供するための、ユーザーのオンプレミスに配置されるソリューションです。
+SSRS ソリューションは、正しいユーザーに正しい情報を柔軟に提供します。 ユーザーは自分のモバイル デバイス上の Web ブラウザーを使用して、または電子メール経由でレポートを使用できます。
 
 SQL Server の Reporting Services では、更新された製品スイートが提供されます。
 
@@ -56,9 +56,9 @@ SQL Server の Reporting Services では、更新された製品スイートが�
 
 ![ssrs-paginated-reports](../reporting-services/media/ssrs-paginated-reports.png)
 
-Reporting Services は "従来の" ページ分割されたドキュメント スタイルのレポートと関連付けられており、データ、テーブルの行、レポートのページをより多く提供できます。 PDF ファイルや Word ファイルのような印刷用に最適化された固定レイアウトで完全なピクセルのドキュメントの生成に最適です。
+Reporting Services は "従来の" ページ分割されたレポートと関連付けられており、PDF ファイルや Word ファイルのような印刷用に最適化された固定レイアウトのドキュメントに最適です。
 
-その中核となる BI ワークロードは最新のものになっています。 [レポート ビルダー](../reporting-services/report-builder/report-builder-in-sql-server-2016.md)または [SQL Server Data Tools (SSDT) のレポート デザイナー](../reporting-services/tools/reporting-services-in-sql-server-data-tools-ssdt.md)を使って、更新された新しい機能でモダンな外観のレポートを作成できます。
+その中核となる BI ワークロードは最新のものになっています。 [SQL Server Data Tools (SSDT)](../reporting-services/tools/reporting-services-in-sql-server-data-tools-ssdt.md) のレポート ビルダーまたはレポート デザイナーを使って、更新済みの新しい機能でモダンな外観のレポートを作成できます。
 
 * 既定のスタイルとカラー パレットはすべて更新されており、既定の設定で最新のミニマリズム スタイルのレポートを作成できます。
 * 更新された [パラメーター] ウィンドウでは、必要に応じてパラメーターを調整できます。
@@ -71,25 +71,36 @@ Reporting Services は "従来の" ページ分割されたドキュメント �
 
 モバイル コンピューティングによって使用する必要のあるデバイスが変化し、現在では異なるレポート ニーズが生まれています。 タブレットや携帯電話を導入すると、固定レイアウトのレポート エクスペリエンスではうまく機能しません。 PC のワイド画面用に設計されたレポートは、小さいだけでなく縦方向または横方向のスマートフォンの画面では最適なエクスペリエンスになりません。
 
-このように大きく異なる画面フォーム ファクターに必要なものは固定レイアウトではなく、さまざまなデバイスと持ち方に適応する対応性の高いレイアウトです。 そのため、新しいレポートの種類であるモバイル レポートを追加しました。これは、約 1 年前に買収して製品に統合した Datazen のテクノロジが基になっています。 [SQL Server Migration Assistant for Datazen](https://www.microsoft.com/download/details.aspx?id=53128)を使って、既存の Datazen レポートを Reporting Services に移行できます。 
+このように大きく異なる画面フォーム ファクターに必要なものは、さまざまな画面サイズと方向に適応する対応性の高いレイアウトです。 そのため、新しいレポートの種類であるモバイル レポートを追加しました。これは、約 1 年前に買収して製品に統合した Datazen のテクノロジが基になっています。 [SQL Server Migration Assistant for Datazen](https://www.microsoft.com/download/details.aspx?id=53128)を使って、既存の Datazen レポートを Reporting Services に移行できます。
 
-モバイル レポートは新しい [Mobile Report Publisher](../reporting-services/mobile-reports/create-mobile-reports-with-sql-server-mobile-report-publisher.md) アプリで作成します。 その後、Windows 10、iOS、Android、HTML5 用のネイティブな[モバイル デバイス用 Power BI アプリ](https://powerbi.microsoft.com/documentation/powerbi-power-bi-apps-for-mobile-devices/)で、クラウドの Power BI データやオンプレミスの SQL Server Reporting Services データにアクセスできます。 視覚エフェクトを作成すると、Mobile Report Publisher によりサンプル データが自動的に生成されるので、実際のデータでの視覚エフェクトの見え方や、各視覚エフェクトに適したデータの種類を確認できます。
+モバイル レポートは新しい [Mobile Report Publisher](../reporting-services/mobile-reports/create-mobile-reports-with-sql-server-mobile-report-publisher.md) アプリで作成します。 すると、Windows 10、iOS、Android、HTML5 用のネイティブな[モバイル デバイス用 Power BI アプリ](https://powerbi.microsoft.com/documentation/powerbi-power-bi-apps-for-mobile-devices/)で、Power BI、クラウド、または SSRS にあるデータにアクセスできます。
+
+視覚エフェクトを作成すると、Mobile Report Publisher によりサンプル データが自動的に生成されます。 この機能により、実際のデータでの視覚エフェクトの見え方や、各視覚エフェクトに適したデータの種類を確認できます。
 
 ## <a name="web-portal"></a>Web ポータル
 
 ![ssrs-web-portal](../reporting-services/media/ssrs-web-portal.png)
 
-ネイティブ モードの Reporting Services のエンド ユーザーの入り口は、最新のブラウザーで表示できる最新の Web ポータルです。 新しいポータルからは、Reporting Services のモバイル レポートと KPI およびページ分割されたレポートと KPI のすべてにアクセスできます。
+ネイティブ モードの Reporting Services のエンド ユーザーにとっての入り口は、最新のブラウザーで表示できる最新の Web ポータルです。 新しいポータルからは、Reporting Services のモバイル レポート、ページ分割されたレポート、KPI のすべてにアクセスできます。 KPI を使うと、レポートを開かなくても、主要なビジネス指標をブラウザーで簡単に見ることができます。
 
-独自のカスタム ブランドを Web ポータルに適用することができます。 また、Web ポータルでは KPI の権限を作成できます。 KPI を使うと、レポートを開かなくても、主要なビジネス指標をブラウザーで簡単に見ることができます。 
+新しい Web サイトは、レポート マネージャーを完全に書き直したものです。 それは、単一ページで標準ベースの HTML5 アプリであり、その最新ブラウザーは、Microsoft Edge、Internet Explorer 10 と 11、Chrome、Firefox、Safari、およびすべての主要なブラウザー用に最適化されています。
 
-新しい Web サイトは、レポート マネージャーを完全に書き直したものです。 単一ページで標準ベースの HTML5 アプリであり、すべての主要な最新ブラウザーが最適化されています。具体的には、Microsoft Edge、Internet Explorer 10 と 11、Chrome、Firefox、Safari などです。
+Web ポータルのコンテンツは、種類別に整理されます。つまり、
 
-Web ポータルのコンテンツは、種類別に整理されます。つまり、Reporting Services のモバイルやページ分割されたレポートと KPI、Excel ブック、共有データセット、レポートの構成要素として使用される共有データ ソースなどです。 従来のフォルダー階層で、ここから安全に保存および管理することができます。 お気に入りのタグを付けることができ、管理者はコンテンツを管理できます。
+* ページ分割されたレポート
+* モバイル レポート 
+* KPI
+* Excel ブック
+* 共有データセット
+* 共有データ ソース
+
+従来のフォルダー階層で、ここから安全に保存および管理することができます。 すばやくアクセスするため、お気に入りのレポートをタグ付けします。 適切なアクセス許可を持つものによって、SSRS コンテンツを管理できます。
 
 また、レポート処理のスケジュール設定、オンデマンドでのレポート アクセス、新しい Web ポータルでパブリッシュされたレポートのサブスクライブも、引き続き可能です。
 
-詳細については、「[Web ポータル (SSRS ネイティブ モード)](../reporting-services/web-portal-ssrs-native-mode.md)」を参照してください。
+詳細については、「[Web ポータル](../reporting-services/web-portal-ssrs-native-mode.md)」を参照してください。
+
+::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
 
 ## <a name="reporting-services-in-sharepoint-integrated-mode"></a>Reporting Services の SharePoint 統合モード
 
@@ -97,16 +108,18 @@ SharePoint 統合モードで Reporting Services にレポートをパブリッ�
 
 詳しくは、「 [Reporting Services Report Server (SharePoint Mode)](../reporting-services/report-server-sharepoint/reporting-services-report-server-sharepoint-mode.md)」をご覧ください。
 
+::: moniker-end
+
 ## <a name="includessrsnoversionincludesssrsnoversion-mdmd-programming-features"></a>[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] のプログラミング機能
 
-[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] のプログラミング機能を活用し、API を使用してカスタム アプリケーションのデータ処理とレポート処理を統合または拡張して、レポート作成機能を拡張およびカスタマイズできます。
+[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] のプログラミング機能を活用し、レポート作成機能を拡張およびカスタマイズできます。 SSRS API を使用してカスタム アプリケーションのデータ処理とレポート処理を統合または拡張します。
 
-詳しくは、「 [開発者ガイド (Reporting Services)](../reporting-services/reporting-services-developer-documentation.md)」をご覧ください。 
+詳しくは、「 [開発者ガイド (Reporting Services)](../reporting-services/reporting-services-developer-documentation.md)」をご覧ください。
 
 ## <a name="next-steps"></a>次の手順
 
-* [Reporting Services のインストール](../reporting-services/install-windows/install-reporting-services.md)  
-* [レポート ビルダーをインストールする](../reporting-services/install-windows/install-report-builder.md)   
-* [SQL Server Data Tools (SSDT) のダウンロード](https://go.microsoft.com/fwlink/?LinkID=616714)  
+* [Reporting Services のインストール](../reporting-services/install-windows/install-reporting-services.md)
+* [SQL Server Data Tools (SSDT) のダウンロード](https://go.microsoft.com/fwlink/?LinkID=616714)
+* [レポート ビルダーをインストールする](../reporting-services/install-windows/install-report-builder.md)
 
-その他の質問 [Reporting Services のフォーラムに質問してみてください](https://go.microsoft.com/fwlink/?LinkId=620231)
+* その他の質問 [Reporting Services のフォーラムに質問してみてください](https://go.microsoft.com/fwlink/?LinkId=620231)

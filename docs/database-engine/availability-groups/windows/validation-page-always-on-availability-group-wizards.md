@@ -1,6 +1,7 @@
 ---
-title: '[検証] ページ (Always On 可用性グループ ウィザード) | Microsoft Docs'
-ms.custom: ''
+title: '可用性グループ ウィザード: [検証] ページ'
+description: このトピックでは、Always On 可用性グループ ウィザードの [検証] ページにあるオプションについて説明します。
+ms.custom: seo-lt-2019
 ms.date: 05/17/2016
 ms.prod: sql
 ms.reviewer: ''
@@ -15,18 +16,15 @@ helpviewer_keywords:
 ms.assetid: c8971556-240c-491a-bc86-9cc72f71a3dd
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: ff7bb0be3ecc9ef02e38994bebda675c016ef8b1
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: f22ac0e249e693b7bcd102f6d9242c601e14331f
+ms.sourcegitcommit: f8cf8cc6650a22e0b61779c20ca7428cdb23c850
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47847710"
+ms.lasthandoff: 12/04/2019
+ms.locfileid: "74821841"
 ---
 # <a name="validation-page-always-on-availability-group-wizards"></a>[検証] ページ (Always On 可用性グループ ウィザード)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-
-  
     
   このヘルプ トピックでは、 **[検証]** ページのオプションについて説明します。 このトピックの対象は、 [!INCLUDE[ssAoNewAgWiz](../../../includes/ssaonewagwiz-md.md)]の [!INCLUDE[ssAoAddRepWiz](../../../includes/ssaoaddrepwiz-md.md)]、 [!INCLUDE[ssAoAddDbWiz](../../../includes/ssaoadddbwiz-md.md)] 、および [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]です。 このページでは、ウィザードのこれまでのページで選択したすべての構成が、使用している環境でサポートされているかどうかを検証できます。  
   
@@ -34,7 +32,7 @@ ms.locfileid: "47847710"
  **[可用性グループの検証の結果。]**  
  このグリッドでは、完了した検証手順ごとの結果が表示されます。 グリッドの列は次のとおりです。  
   
- **名前**  
+ **Name**  
  各手順についての説明が表示されます。  
   
  **結果**  
@@ -42,9 +40,9 @@ ms.locfileid: "47847710"
   
 |結果|[説明]|  
 |------------|-----------------|  
-|**[エラー]**|検証手順が失敗したことを示します。 エラー メッセージを表示するには、リンクをクリックします。|  
-|**スキップ**|不要と指定されていたため、検証手順がスキップされたことを示します。 手順がスキップされた理由を表示するには、リンクをクリックします。|  
-|**成功**|検証手順が正常に完了したことを示します。|  
+|**Error**|検証手順が失敗したことを示します。 エラー メッセージを表示するには、リンクをクリックします。|  
+|**Skipped**|不要と指定されていたため、検証手順がスキップされたことを示します。 手順がスキップされた理由を表示するには、リンクをクリックします。|  
+|**Success**|検証手順が正常に完了したことを示します。|  
 |**警告**|可用性グループの構成に関する潜在的な問題を示します。  警告メッセージを表示するには、リンクをクリックします。|  
   
  **[検証の再実行]**  
@@ -60,6 +58,6 @@ ms.locfileid: "47847710"
   
   
 ## <a name="see-also"></a>参照  
- [AlwaysOn 可用性グループの概要 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)  
+ [Always On 可用性グループの概要 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)  
   
   

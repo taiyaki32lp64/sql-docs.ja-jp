@@ -1,6 +1,6 @@
 ---
-title: ProtocolName プロパティ (SqlServerAlias クラス) |Microsoft Docs
-ms.custom: ''
+title: ProtocolName プロパティ (SqlServerAlias)
+ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 8fb81ab3-15f1-4a71-be72-2072c6bcc670
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: 9c42ccc814abdb4bc75890b91759637261805ed4
-ms.sourcegitcommit: 6c9d35d03c1c349bc82b9ed0878041d976b703c6
+ms.openlocfilehash: 957faa6c58c9149ec703fe9fa269e379d4e5b6f6
+ms.sourcegitcommit: baa40306cada09e480b4c5ddb44ee8524307a2ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/06/2018
-ms.locfileid: "51216920"
+ms.lasthandoff: 11/06/2019
+ms.locfileid: "73660420"
 ---
 # <a name="protocolname-property-sqlserveralias-class"></a>ProtocolName プロパティ (SqlServerAlias クラス)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -43,5 +42,5 @@ object.ProtocolName [= value]
 ## <a name="property-valuereturn-value"></a>プロパティ値/戻り値  
  サーバー接続別名によって使用されるプロトコルの名前を指定する文字列値。  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>解説  
   

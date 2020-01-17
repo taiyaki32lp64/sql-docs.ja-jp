@@ -10,15 +10,15 @@ helpviewer_keywords:
 - annotations [Master Data Services]
 - annotations [Master Data Services], about annotations
 ms.assetid: 8c6401ef-17f0-41f5-be7a-01f49141f04c
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 73be214576870a13b37b16c0774e645e77518bea
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: b9906aa967f98b41df8eabf63e11fe6e518a3734
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52778514"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65480067"
 ---
 # <a name="annotations-master-data-services"></a>注釈 (Master Data Services)
   [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]の注釈は、トランザクションに関する詳細を提供するために入力するコメントです。  

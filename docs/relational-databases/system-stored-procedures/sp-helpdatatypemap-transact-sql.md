@@ -1,5 +1,5 @@
 ---
-title: sp_helpdatatypemap (TRANSACT-SQL) |Microsoft Docs
+title: sp_helpdatatypemap (Transact-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -15,18 +15,17 @@ helpviewer_keywords:
 ms.assetid: 800c9c65-723e-4961-a63d-327987f129f0
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: c1d4addec6f0b5a7faff69d513c655450202d099
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: 0b9666c13a2e4d8183d19fade64bf49b13377b9a
+ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53210851"
+ms.lasthandoff: 08/03/2019
+ms.locfileid: "68771060"
 ---
-# <a name="sphelpdatatypemap-transact-sql"></a>sp_helpdatatypemap (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+# <a name="sp_helpdatatypemap-transact-sql"></a>sp_helpdatatypemap (Transact-SQL)
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
-  間の定義済みのデータ型マッピングに関する情報を返します[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]と非-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]データベース管理システム (DBMS)。 このストアド プロシージャは、ディストリビューター側で任意のデータベースについて実行されます。  
+  と非[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データベース管理システム(DBMS)の間の定義済みデータ型マッピングに関する情報[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]を返します。 このストアドプロシージャは、ディストリビューター側で任意のデータベースに対して実行されます。  
   
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -44,63 +43,56 @@ sp_helpdatatypemap [ @source_dbms = ] 'source_dbms'
 ```  
   
 ## <a name="arguments"></a>引数  
- [ **@source_dbms**=] **'***source_dbms***'**  
- データ型のマップ元となる DBMS の名前を指定します。 *source_dbms*は**sysname**値は次のいずれかを指定できます。  
+`[ @source_dbms = ] 'source_dbms'`データ型のマップ元となる DBMS の名前を指定します。 *source_dbms*は**sysname**で、次のいずれかの値を指定できます。  
   
 |値|説明|  
 |-----------|-----------------|  
-|**MSSQLSERVER**|マップ元は [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データベース。|  
+|**MSSQLSERVER**|ソースは[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]データベースです。|  
 |**ORACLE**|マップ元は Oracle データベース。|  
   
- [ **@source_version**=] **'***source_version***'**  
- マップ元 DBMS の製品バージョンです。 *source_version*は**varchar (10)** を指定しない場合、データの型マッピング DBMS が返される、ソースのすべてのバージョン。 値を指定した場合は、マップ元 DBMS のバージョンによって結果セットがフィルター選択されます。  
+`[ @source_version = ] 'source_version'`は、ソース DBMS の製品バージョンです。 *source_version*は**varchar (10)** ,、指定しない場合は、すべてのバージョンのソース DBMS のデータ型マッピングが返されます。 値を指定した場合は、マップ元 DBMS のバージョンによって結果セットがフィルター選択されます。  
   
- [ **@source_type**=] **'***source_type***'**  
- マップ元 DBMS で定義されているデータ型です。 *source_type*は**sysname**、指定されていない場合のマップ元 DBMS でのすべてのデータ型マッピングが返されます。 値を指定した場合は、マップ元 DBMS のデータ型によって結果セットがフィルター選択されます。  
+`[ @source_type = ] 'source_type'`は、ソース DBMS に表示されるデータ型です。 *source_type*は**sysname**です。指定されていない場合、マップ元 DBMS のすべてのデータ型のマッピングが返されます。 結果セットをソース DBMS のデータ型でフィルター処理できるようにします。  
   
- [ **@destination_dbms** =] **'***destination_dbms***'**  
- マップ先 DBMS の名前です。 *destination_dbms*は**sysname**値は次のいずれかを指定できます。  
+`[ @destination_dbms = ] 'destination_dbms'`マップ先 DBMS の名前を指定します。 *destination_dbms*は**sysname**で、次のいずれかの値を指定できます。  
   
 |値|説明|  
 |-----------|-----------------|  
 |**MSSQLSERVER**|マップ先は [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データベース。|  
-|**ORACLE**|マップ先は Oracle データベース。|  
+|**ORACLE**|変換先は、Oracle データベースです。|  
 |**DB2**|マップ先は IBM DB2 データベース。|  
-|**SYBASE**|マップ先は Sybase データベース。|  
+|**SYBASE**|コピー先は Sybase データベースです。|  
   
- [ **@destination_version**=] **'***destination_version***'**  
- マップ先 DBMS の製品バージョンを指定します。 *destination_version*は**varchar (10)**、マップ先 DBMS のすべてのバージョンのマッピングが返されますが指定されていない場合。 値を指定した場合は、マップ先 DBMS のバージョンによって結果セットがフィルター選択されます。  
+`[ @destination_version = ] 'destination_version'`マップ先 DBMS の製品バージョンを指定します。 *destination_version*は**varchar (10)** ,、指定しない場合、マップ先 DBMS のすべてのバージョンのマッピングが返されます。 結果セットを DBMS の対象バージョンでフィルター処理できるようにします。  
   
- [ **@destination_type**=] **'***destination_type***'**  
- マップ先 DBMS で定義されているデータ型を指定します。 *destination_type*は**sysname**、指定されていない場合のマップ先 DBMS でのすべてのデータ型マッピングが返されます。 値を指定した場合は、マップ先 DBMS のデータ型によって結果セットがフィルター選択されます。  
+`[ @destination_type = ] 'destination_type'`マップ先 DBMS に表示されるデータ型です。 *destination_type*は**sysname**です。指定されていない場合、マップ先 DBMS のすべてのデータ型のマッピングが返されます。 結果セットをマップ先 DBMS のデータ型でフィルター処理できるようにします。  
   
- [ **@defaults_only**=] *defaults_only*  
- 既定のデータ型マッピングのみを返すかどうかを示します。 *defaults_only*は**ビット**、既定値は**0**します。 **1**とする、のみの既定のデータ型マッピングが返されます。 **0**と既定値と、ユーザー定義データ型のマッピングが返されます。  
+`[ @defaults_only = ] defaults_only`既定のデータ型マッピングのみが返される場合はです。 *defaults_only*は**ビット**,、既定値は**0**です。 **1**は、既定のデータ型マッピングのみが返されることを意味します。 **0**は、既定のデータ型とユーザー定義データ型のマッピングが返されることを意味します。  
   
 ## <a name="result-sets"></a>結果セット  
   
 |列名|説明|  
 |-----------------|-----------------|  
 |**mapping_id**|データ型マッピングを識別します。|  
-|**source_dbms**|マップ元 DBMS の名前とバージョン番号です。|  
-|**source_type**|マップ元 DBMS のデータ型です。|  
+|**source_dbms**|ソース DBMS の名前とバージョン番号を指定します。|  
+|**source_type**|は、ソース DBMS のデータ型です。|  
 |**destination_dbms**|マップ先 DBMS の名前です。|  
 |**destination_type**|マップ先 DBMS のデータ型です。|  
-|**is_default**|既定のマッピングか既定以外のマッピングかを示します。 値**0**このマッピングがユーザー定義であることを示します。|  
+|**is_default**|マッピングが既定または代替マッピングであるかどうかを示します。 値**0**は、このマッピングがユーザー定義であることを示します。|  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  **0** (成功) または**1** (失敗)  
   
 ## <a name="remarks"></a>コメント  
- **sp_helpdatatypemap**から SQL Server 以外のパブリッシャーとの両方からのデータ型マッピングを定義します。[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]に以外のパブリッシャーを[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]サブスクライバー。  
+ **sp_helpdatatypemap**は、SQL Server 以外のパブリッシャーおよび[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]パブリッシャーから以外のサブスクライバーへのデータ型マッピングを定義します。  
   
- 指定したソースとマップ先 DBMS の組み合わせがサポートされていない場合**sp_helpdatatypemap**空の結果セットを返します。  
+ 指定した変換元と変換先の DBMS の組み合わせがサポートされていない場合、 **sp_helpdatatypemap**は空の結果セットを返します。  
   
 ## <a name="permissions"></a>アクセス許可  
- メンバーのみ、 **sysadmin**のメンバー、またはディストリビューターの固定サーバー ロール、 **db_owner** 、ディストリビューション データベースの固定データベース ロールが実行できる**sp_helpdatatypemap**.  
+ **Sp_helpdatatypemap**を実行できるのは、ディストリビューター側の固定サーバーロール**sysadmin**のメンバー、またはディストリビューションデータベースの**db_owner**固定データベースロールのメンバーだけです。  
   
-## <a name="see-also"></a>参照  
- [sp_getdefaultdatatypemapping &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-getdefaultdatatypemapping-transact-sql.md)   
- [sp_setdefaultdatatypemapping &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-setdefaultdatatypemapping-transact-sql.md)  
+## <a name="see-also"></a>関連項目  
+ [sp_getdefaultdatatypemapping &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-getdefaultdatatypemapping-transact-sql.md)   
+ [sp_setdefaultdatatypemapping &#40;transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-setdefaultdatatypemapping-transact-sql.md)  
   
   

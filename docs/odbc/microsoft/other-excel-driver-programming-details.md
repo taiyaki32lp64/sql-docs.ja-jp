@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 92453ef5-86d6-4d13-bdd6-a4f5cf9c453f
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 15710b867c5d766787480b1830de3257f54da6be
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 464d454928b575e5151b09663d96b1f837356761
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47847110"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68043774"
 ---
 # <a name="other-excel-driver-programming-details"></a>その他の Excel ドライバーのプログラミングの詳細
 > [!NOTE]  

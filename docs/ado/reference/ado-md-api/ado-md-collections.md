@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 01c53429-ccc9-4077-b738-d3c1f43bd76c
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: f2e96b05ed8d772fc86679aafda1397ac972277d
-ms.sourcegitcommit: 1e28f923cda9436a4395a405ebda5149202f8204
+ms.openlocfilehash: 8b4e8d3c36054cd4e9dc49e940e60df51f17ddc0
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/25/2019
-ms.locfileid: "55044855"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67940020"
 ---
 # <a name="ado-md-collections"></a>ADO MD のコレクション
 
@@ -33,7 +32,7 @@ ms.locfileid: "55044855"
 |[メンバー](../../../ado/reference/ado-md-api/members-collection-ado-md.md)|含まれています、**メンバー**レベル、または軸に沿った位置からのオブジェクト。|  
 |[位置](../../../ado/reference/ado-md-api/positions-collection-ado-md.md)|含まれています、**位置**軸の位置を定義するオブジェクト。|  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [ADO MD の API リファレンス](../../../ado/reference/ado-md-api/ado-md-api-reference.md)   
  [ADO MD のコード例](../../../ado/reference/ado-md-api/ado-md-code-examples.md)   
  [ADO MD の列挙定数](../../../ado/reference/ado-md-api/ado-md-enumerated-constants.md)   

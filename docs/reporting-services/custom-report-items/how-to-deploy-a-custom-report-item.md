@@ -8,21 +8,21 @@ ms.topic: reference
 helpviewer_keywords:
 - custom report items, deploying
 ms.assetid: 80e97b0d-e355-4240-aebd-08cbc84089ed
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 6315362b4c8d308e3be8d812ccfdeadaa1e7de8b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: b28d1b2f29dca3ab23ba658c8718173fe5d09779
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47717051"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63194139"
 ---
 # <a name="how-to-deploy-a-custom-report-item"></a>カスタム レポート アイテムを配置する方法
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] でカスタム レポート アイテムを配置するには、レポート サーバー構成ファイルを変更し、デザイン時と実行時のコンポーネント アセンブリをレポート デザイナーとレポート サーバーの両方に対する適切なアプリケーション フォルダーにコピーする必要があります。  
   
 ### <a name="to-deploy-a-custom-report-item"></a>カスタム レポート アイテムを配置するには  
   
-1.  Rsreportdesigner.config ファイルを編集して、デザイナーで使用するカスタム レポート アイテムの実行時とデザイン時のコンポーネントを構成します。 **ReportItemName** エントリは、**CustomReportItemDesigner** クラスで使用される **CustomReportItemAttribute** 属性と一致する必要があることにご注意ください。 例 :  
+1.  Rsreportdesigner.config ファイルを編集して、デザイナーで使用するカスタム レポート アイテムの実行時とデザイン時のコンポーネントを構成します。 **ReportItemName** エントリは、**CustomReportItemDesigner** クラスで使用される **CustomReportItemAttribute** 属性と一致する必要があることにご注意ください。 例:  
   
     ```  
     <ReportItems>  
@@ -36,7 +36,7 @@ ms.locfileid: "47717051"
     </ReportItemConverter>  
     ```  
   
-2.  Rsreportserver.config ファイルを編集して、カスタム レポート アイテムの実行時コンポーネントを登録します。 例 :  
+2.  Rsreportserver.config ファイルを編集して、カスタム レポート アイテムの実行時コンポーネントを登録します。 例:  
   
     ```  
     <ReportItems>  
@@ -44,7 +44,7 @@ ms.locfileid: "47717051"
     </ReportItems>  
     ```  
   
-3.  Rsssrvpolicy.config ファイルを編集して、カスタム レポート アイテムに適切なアクセス許可を付与する **CodeGroup** を追加します。 例 :  
+3.  Rsssrvpolicy.config ファイルを編集して、カスタム レポート アイテムに適切なアクセス許可を付与する **CodeGroup** を追加します。 例:  
   
     ```  
     <CodeGroup   

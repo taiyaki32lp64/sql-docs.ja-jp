@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 6117ac77-1020-4f0c-8eed-e671c34c1f21
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: bc5a354aeaf186b4baeabd96e7424939fe463bfb
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 523f44924858af182e953aa1ce2b72e20cf97a45
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47777420"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68047082"
 ---
 # <a name="sqlstatistics-access-driver"></a>SQLStatistics (Access ドライバー)
 > [!NOTE]  

@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 1fd7a374-587b-4ca9-9204-3a4019b67a71
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 050d1c9ec8aa5a158d5c08fb77d3743e55567699
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.openlocfilehash: a78db07f5ba445c54108558b2ff222bd217c2bbe
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51602242"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67924245"
 ---
 # <a name="service-providers-and-components"></a>サービス プロバイダーとコンポーネント
 サービス プロバイダーは、データ ストアによってネイティブでサポートされていない拡張インターフェイスを実装するデータ プロバイダーの機能を拡張するコンポーネントです。  
@@ -29,4 +28,4 @@ ms.locfileid: "51602242"
   
  たとえば、カーソル エンジンをなど[for OLE DB、カーソル サービス](https://msdn.microsoft.com/57638feb-4ecd-4051-becb-8f828d21cf44)はスクロール可能なデータを生成するために、シーケンシャルな前方参照専用のデータ ストアからデータを使用できるサービス コンポーネントです。 ADO でよく使用されるその他のサービス プロバイダーには、 [Microsoft OLE DB Persistence Provider (サービス プロバイダーの ADO)](../../../ado/guide/appendixes/microsoft-ole-db-persistence-provider-ado-service-provider.md) (ファイルにデータを保存します)、用、 [Microsoft Data Shaping Service for OLE DB (ADO サービス プロバイダー)](../../../ado/guide/appendixes/microsoft-data-shaping-service-for-ole-db-ado-service-provider.md) (の階層**レコード セット**)、および[Microsoft OLE DB リモート処理 Provider (サービス プロバイダーの ADO)](../../../ado/guide/appendixes/microsoft-ole-db-remoting-provider-ado-service-provider.md) (リモート コンピューター上のデータ プロバイダーの呼び出し) にします。  
   
- サービスおよびデータ プロバイダーの詳細については、次を参照してください。[付録 a: プロバイダー](../../../ado/guide/appendixes/appendix-a-providers.md)します。
+ サービスおよびデータ プロバイダーの詳細については、次を参照してください[付録 a:。プロバイダー](../../../ado/guide/appendixes/appendix-a-providers.md)します。

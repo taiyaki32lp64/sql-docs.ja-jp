@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: bec845a1-d10c-4d45-9acf-0a302adfee47
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: bddbad8ebe91aaa57ab76fdd4f30a5ebb9e5ab3d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 84e134854770f0096cc99c94698cfd8d7e3e818a
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48068312"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66076555"
 ---
 # <a name="create-a-cube-using-a-data-source-view"></a>データ ソース ビューを使用したキューブの作成
   既存のデータ ソース ビューを使用する場合、新しいキューブを構築するには、ここで説明する方法を使用します。 この方法では、データ ソース ビューを指定して、データ ソース ビューで使用するファクト テーブルとディメンション テーブルを選択します。 次に、キューブに含めるディメンションとメジャーを選択します。  
@@ -62,7 +61,7 @@ ms.locfileid: "48068312"
 ## <a name="selecting-dimensions"></a>ディメンションの選択  
  ウィザードの **[既存のディメンションの選択]** ページを使用して、キューブに既存のディメンションを追加します。 このページは、新しいキューブのディメンション テーブルに対応する共有ディメンションが既に存在する場合にのみ表示されます。  
   
- 既存のディメンションを追加するには、 **[共有ディメンション]** の一覧で 1 つ以上のディメンションを選択し、右矢印ボタン (**>**) をクリックして、 **[キューブ ディメンション]** の一覧に移動します。 二重矢印ボタン (**>>**) をクリックすると、一覧のすべてのディメンションを移動できます。  
+ 既存のディメンションを追加するには、 **[共有ディメンション]** の一覧で 1 つ以上のディメンションを選択し、右矢印ボタン ( **>** ) をクリックして、 **[キューブ ディメンション]** の一覧に移動します。 二重矢印ボタン ( **>>** ) をクリックすると、一覧のすべてのディメンションを移動できます。  
   
  表示されるはずの既存のディメンションが一覧に表示されない場合、 **[戻る]** をクリックし、1 つ以上のテーブルについてテーブル型の設定を変更します。 また、既存のディメンションは、 **[共有ディメンション]** の一覧に表示されるキューブの 1 つ以上のファクト テーブルに関連付けられている必要があります。  
   

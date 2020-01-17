@@ -13,11 +13,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 4305438285ae5f3b51ab8ac51ec2b1d0699aee64
-ms.sourcegitcommit: 04dd0620202287869b23cc2fde998a18d3200c66
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "52639299"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62810350"
 ---
 # <a name="connect-to-another-computer-sql-server-configuration-manager"></a>別のコンピューターへの接続 (SQL Server 構成マネージャー)
   このトピックでは、[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] で別のコンピューターに接続する方法について説明します。 Windows の [コンピューターの管理] の [!INCLUDE[msCoName](../../includes/msconame-md.md)] Management Console (MMC) を開くための最初の手順に従って、コンピューターに接続し、[サービスとアプリケーション] ツリーを展開します。 2 番目の手順に従って、リモート コンピューター上の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 構成マネージャーへのリンクを含むファイルを作成します。  
@@ -59,7 +59,7 @@ ms.locfileid: "52639299"
   
 8.  **[スナップインの追加と削除]** ウィンドウで **[OK]** をクリックします。  
   
-9. **[コンピューターの管理 (***\<コンピューター名>***)]**、**[サービスとアプリケーション]** の順に展開します。  
+9. **[コンピューターの管理 (***\<コンピューター名>***)]** 、 **[サービスとアプリケーション]** の順に展開します。  
   
 10. **[SQL Server 構成マネージャー]** を右クリックして、 **[ここから新しいウィンドウ]** をクリックします。  
   

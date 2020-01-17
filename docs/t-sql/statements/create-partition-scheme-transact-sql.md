@@ -28,13 +28,12 @@ helpviewer_keywords:
 ms.assetid: 5b21c53a-b4f4-4988-89a2-801f512126e4
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: 83017a49354eb3da8220ae2fa4536961d1fed420
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: 6ee0ca48835d87c379008c1894ed63596d23ac9b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54124782"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68048153"
 ---
 # <a name="create-partition-scheme-transact-sql"></a>CREATE PARTITION SCHEME (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -63,16 +62,16 @@ AS PARTITION partition_function_name
  パーティション構成を使用するパーティション関数の名前です。 パーティション関数によって作成されたパーティションは、パーティション構成で指定されたファイル グループにマップされます。 *partition_function_name* はデータベースに既に存在する必要があります。 1 つのパーティションに FILESTREAM ファイル グループと非 FILESTREAM ファイル グループの両方を含めることはできません。  
   
  ALL  
- すべてのパーティションを *file_group_name* で提供されるファイル グループにマップすることを指定します。**[** PRIMARY **]** を指定した場合は、すべてのパーティションをプライマリ ファイル グループにマップすることを指定します。 ALL を指定した場合は、指定できる *file_group_name* は 1 つだけです。  
+ すべてのパーティションを *file_group_name* で提供されるファイル グループにマップすることを指定します。 **[** PRIMARY **]** を指定した場合は、すべてのパーティションをプライマリ ファイル グループにマップすることを指定します。 ALL を指定した場合は、指定できる *file_group_name* は 1 つだけです。  
   
- *file_group_name* | **[** PRIMARY **]** [ **,**_...n_]  
+ *file_group_name* |  **[** PRIMARY **]** [ **,** _...n_]  
  *partition_function_name* によって指定されたパーティションを保持するファイル グループの名前を指定します。 *file_group_name* がデータベースに既に存在する必要があります。  
   
- **[** PRIMARY **]** を指定した場合、パーティションはプライマリ ファイル グループに格納されます。 ALL を指定した場合は、指定できる *file_group_name* は 1 つだけです。 パーティションは、パーティション 1 から始まり、[**,**_...n_] で一覧表示されているファイル グループの順序で、ファイル グループに割り当てられます。 [**,**_...n_] では、同じ *file_group_name* を複数回指定できます。 *n* が *partition_function_name* で指定されたパーティションの数を保持するのに十分ではない場合、CREATE PARTITION SCHEME は失敗し、エラーが発生します。  
+ **[** PRIMARY **]** を指定した場合、パーティションはプライマリ ファイル グループに格納されます。 ALL を指定した場合は、指定できる *file_group_name* は 1 つだけです。 パーティションは、パーティション 1 から始まり、[ **,** _...n_] で一覧表示されているファイル グループの順序で、ファイル グループに割り当てられます。 [ **,** _...n_] では、同じ *file_group_name* を複数回指定できます。 *n* が *partition_function_name* で指定されたパーティションの数を保持するのに十分ではない場合、CREATE PARTITION SCHEME は失敗し、エラーが発生します。  
   
- *partition_function_name* によって生成されるパーティションの数がファイル グループより少ない場合、割り当てられていない最初のファイル グループが NEXT USED とマークされ、情報メッセージに NEXT USED ファイル グループの名前が表示されます。 ALL を指定した場合、唯一の *file_group_name* に、この *partition_function_name* に対する NEXT USED プロパティが設定されます。 ALTER PARTITION FUNCTION ステートメントで追加のパーティションを作成した場合は、NEXT USED ファイル グループがそのパーティションを受け取ります。 割り当てられていないファイル グループを追加作成して新しいパーティションを保持するには、ALTER PARTITION SCHEME を使用します。  
+ *partition_function_name* によって生成されるパーティションの数がファイル グループより少ない場合、割り当てられていない最初のファイル グループが NEXT USED とマークされ、情報メッセージに NEXT USED ファイル グループの名前が表示されます。 ALL を指定した場合、唯一の *file_group_name* に、この *partition_function_name* に対する NEXT USED プロパティが設定されます。 ALTER PARTITION FUNCTION ステートメントで追加のパーティションを作成した場合は、NEXT USED ファイル グループがそのパーティションを受け取ります。 追加の割り当てられていないファイル グループを作成して新しいパーティションを保持するには、ALTER PARTITION SCHEME を使用します。  
   
- *file_group_name* [ 1 **,**_...n_] でプライマリ ファイル グループを指定するときは、PRIMARY を **[** PRIMARY **]** のように区切る必要があります。これは、PRIMARY がキーワードであるためです。  
+ *file_group_name* [ 1 **,** _...n_] でプライマリ ファイル グループを指定するときは、PRIMARY を **[** PRIMARY **]** のように区切る必要があります。これは、PRIMARY がキーワードであるためです。  
   
  [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] では PRIMARY のみサポートされます。 後半の例 E をご覧ください。 
   
@@ -88,7 +87,7 @@ AS PARTITION partition_function_name
 ## <a name="examples"></a>使用例  
   
 ### <a name="a-creating-a-partition-scheme-that-maps-each-partition-to-a-different-filegroup"></a>A. 各パーティションを異なるファイル グループにマップするパーティション構成を作成する  
- 次の例では、テーブルまたはインデックスを 4 つのパーティションに分割するパーティション関数を作成します。 その後、4 つのパーティションそれぞれを保持するファイル グループを指定するパーティション構成を作成します。 この例では、ファイル グループが既にデータベースに存在していると仮定しています。  
+ 次の例では、テーブルまたはインデックスを 4 つのパーティションに分割するパーティション関数を作成します。 その後、4 つのパーティションをそれぞれ保持するファイル グループを指定するパーティション構成を作成します。 この例では、ファイル グループが既にデータベースに存在していると仮定しています。  
   
 ```  
 CREATE PARTITION FUNCTION myRangePF1 (int)  
@@ -108,7 +107,7 @@ TO (test1fg, test2fg, test3fg, test4fg);
 |**値**|**col1** <= `1`|**col1** > `1` AND **col1** <= `100`|**col1** > `100` AND **col1** <= `1000`|**col1** > `1000`|  
   
 ### <a name="b-creating-a-partition-scheme-that-maps-multiple-partitions-to-the-same-filegroup"></a>B. 複数のパーティションを同じファイル グループにマップするパーティション構成を作成する  
- すべてのパーティションを同じファイル グループにマップする場合は、ALL キーワードを使用します。 ただし、複数の (すべてではない) パーティションを同じファイル グループにマップする場合は、次の例に示すように、ファイル グループ名を繰り返し記述する必要があります。  
+ すべてのパーティションを同じファイル グループにマップする場合は、ALL キーワードを使用します。 ただし、複数の (すべてではない) パーティションを同じファイル グループにマップする場合は、次の例に示すように、ファイル グループ名を繰り返す必要があります。  
   
 ```  
 CREATE PARTITION FUNCTION myRangePF2 (int)  

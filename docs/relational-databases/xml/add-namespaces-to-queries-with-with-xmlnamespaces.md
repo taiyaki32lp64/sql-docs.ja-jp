@@ -19,15 +19,14 @@ helpviewer_keywords:
 - xml data type [SQL Server], WITH XMLNAMESPACES clause
 - WITH XMLNAMESPACES clause
 ms.assetid: 2189cb5e-4460-46c5-a254-20c833ebbfec
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: 7c7c3b925b018ea7f212693b5de02fb43b425bc4
-ms.sourcegitcommit: bfa10c54e871700de285d7f819095d51ef70d997
+author: MightyPen
+ms.author: genemi
+ms.openlocfilehash: cede10b01e1300a1b354cdc5a0d1dd5f80d5a006
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/14/2019
-ms.locfileid: "54256967"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68095453"
 ---
 # <a name="add-namespaces-to-queries-with-with-xmlnamespaces"></a>WITH XMLNAMESPACES を使用したクエリへの名前空間の追加
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -220,7 +219,7 @@ WHERE CatalogDescription.exist('
     ) = 1  
 ```  
   
- 上記のクエリでは、**query()** メソッドと **exist()** メソッドのいずれのプロローグでも、同じ名前空間が宣言されています。 例 :  
+ 上記のクエリでは、**query()** メソッドと **exist()** メソッドのいずれのプロローグでも、同じ名前空間が宣言されています。 例:  
   
 ```  
 declare namespace pd="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription";  

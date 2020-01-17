@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 07abef8a-28e8-4a66-927c-c9a5b8c938ef
 author: Shamikg
 ms.author: Shamikg
-manager: craigg
-ms.openlocfilehash: d3ccc9fe24d770fa64b2bef86feabab0dd2e7fba
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: d2c585764e5bb7fffa55624054aecc7a4c589bbe
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51671381"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68086180"
 ---
 # <a name="working-with-ssma-projects-db2tosql"></a>SSMA プロジェクト (DB2ToSQL) での作業
 DB2 のデータベースを移行する[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]、SSMA プロジェクトを作成します。 プロジェクトは、次の情報を含むファイルです。  
@@ -60,7 +59,7 @@ DB2 データベースからデータを移行する[!INCLUDE[ssNoVersion](../..
   
 **プロジェクトを作成するには**  
   
-1.  **ファイル** メニューのをクリックして**新しいプロジェクト**します。  
+1.  **[ファイル]** メニューの **[新しいプロジェクト]** をクリックします。  
   
     **[新しいプロジェクト]** ダイアログ ボックスが表示されます。  
   
@@ -96,7 +95,7 @@ DB2 データベースからデータを移行する[!INCLUDE[ssNoVersion](../..
   
         メタデータの保存には数分かかる場合があります。 まだメタデータを保存したくない場合は、チェック ボックスをオンされません。  
   
-    2.  をクリックして、**保存**ボタンをクリックします。  
+    2.  **[保存]** ボタンをクリックします。  
   
         SSMA は DB2 スキーマを解析し、プロジェクト ファイルにメタデータを保存します。  
   

@@ -15,15 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - BufferWithTolerance (geometry Data Type)
 ms.assetid: 7049d37a-3e72-4e93-87a1-c96a6f0e2b99
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: ec055010a1769a8a5595ae17f4b3ea1d00c5d26d
-ms.sourcegitcommit: 467b2c708651a3a2be2c45e36d0006a5bbe87b79
+author: MladjoA
+ms.author: mlandzic
+ms.openlocfilehash: 9d8b500415aa5e6812524fff6403735a11cf765a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53979928"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68017540"
 ---
 # <a name="bufferwithtolerance-geometry-data-type"></a>BufferWithTolerance (geometry データ型)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]

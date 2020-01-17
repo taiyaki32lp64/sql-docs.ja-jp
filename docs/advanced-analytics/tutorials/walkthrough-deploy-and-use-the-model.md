@@ -1,40 +1,41 @@
 ---
-title: SQL Server - SQL Server Machine Learning で予測のため、R モデルをデプロイします。
-description: データベース内分析用の SQL Server で R モデルをデプロイする方法を示すチュートリアルです。
+title: R チュートリアル:モデルの配置
+description: データベース内分析のために SQL Server に R モデルを配置する方法を示すチュートリアル。
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 11/26/2018
 ms.topic: tutorial
-author: HeidiSteen
-ms.author: heidist
-manager: cgronlun
-ms.openlocfilehash: 7b14b70fc5ba8ac39535d9dd6dedbfa1bd309aa4
-ms.sourcegitcommit: ee76332b6119ef89549ee9d641d002b9cabf20d2
-ms.translationtype: MT
+author: dphansen
+ms.author: davidph
+ms.custom: seo-lt-2019
+monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
+ms.openlocfilehash: d553d991bd07785a6a6a7592cee38a1e66badf29
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/20/2018
-ms.locfileid: "53645202"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73723710"
 ---
-# <a name="deploy-the-r-model-and-use-it-in-sql-server-walkthrough"></a>R モデルを展開し、SQL Server (チュートリアル) で使用
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+# <a name="deploy-the-r-model-and-use-it-in-sql-server-walkthrough"></a>R モデルを配置して SQL Server で使用する (チュートリアル)
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-このレッスンでは、ストアド プロシージャからトレーニング済みモデルを呼び出すことによって、運用環境で R モデルをデプロイする方法を説明します。 R またはサポートするアプリケーション プログラミング言語からストアド プロシージャを呼び出すことができます[!INCLUDE[tsql](../../includes/tsql-md.md)](などC#、Java、Python、およびなど) と、モデルを使用して新しい観察結果を予測します。
+このレッスンでは、ストアド プロシージャからトレーニング済みのモデルを呼び出すことによって、運用環境に R モデルを配置する方法について説明します。 R または [!INCLUDE[tsql](../../includes/tsql-md.md)] をサポートするアプリケーション プログラミング言語 (C#、Java、Python など) からストアド プロシージャを呼び出し、モデルを使用して新しい観察結果を予測することができます。
 
-この記事では、スコアリングにモデルを使用する 2 つの最も一般的な方法を示しています。
+この記事では、スコアリングでモデルを使用する最も一般的な 2 つの方法について説明します。
 
 > [!div class="checklist"]
-> * **バッチ スコアリング モード**複数の予測を生成します。
-> * **個別スコアリング モード**一度に 1 つずつ予測を生成します。
+> * 複数の予測を生成する**バッチ スコアリング モード**
+> * 一度に 1 つの予測を生成する**個別スコアリング モード**
 
 ## <a name="batch-scoring"></a>バッチ スコアリング
 
-ストアド プロシージャの作成*PredictTipBatchMode*、SQL クエリまたはテーブルを入力として渡す複数の予測を生成します。 結果のテーブルが返されます、直接テーブルに挿入したり、ファイルに書き込む可能性があります。
+複数の予測を生成し、SQL クエリまたはテーブルを入力として渡す、*PredictTipBatchMode* というストアド プロシージャを作成します。 結果のテーブルが返されます。これにテーブルに直接挿入したり、ファイルに書き込んだりすることができます。
 
 - SQL クエリとして一連の入力データを取得する
 - 前のレッスンで保存したトレーニング済みのロジスティック回帰モデルを呼び出す
-- ドライバーが、0 以外のヒントを取得する確率を予測します。
+- 運転手がチップを受け取ることができる確率を予測する
 
-1. Management Studio で、新しいクエリ ウィンドウを開き PredictTipBatchMode ストアド プロシージャを作成する次の T-SQL スクリプトを実行します。
+1. Management Studio で、新しいクエリ ウィンドウを開き、次の T-SQL スクリプトを実行して、PredictTipBatchMode ストアド プロシージャを作成します。
   
     ```sql
     USE [NYCTaxi_Sample]
@@ -71,15 +72,15 @@ ms.locfileid: "53645202"
     END
     ```
 
-    + SQL テーブルから、格納されたモデルを呼び出すには、SELECT ステートメントを使用します。 モデルがテーブルから取得した**varbinary (max)** SQL 変数に格納されたデータを _\@lmodel2_、およびパラメーターとして渡された*mod*システムにストアド プロシージャ[sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md)します。
+    + SELECT ステートメントを使用して、SQL テーブルから格納されているモデルを呼び出します。 このモデルは **varbinary (max)** データとしてテーブルから取得され、SQL 変数 _\@lmodel2_ に格納された後、パラメーター *mod* としてシステム ストアド プロシージャ [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md) に渡されます。
 
-    + スコア付けは SQL クエリとして定義され、文字列として、SQL 変数に格納されているは、入力として使用されるデータ_\@入力_します。 呼ばれるデータ フレームに格納されているように、データベースからデータを取得すると、 *InputDataSet*への入力データの既定の名前だけである、 [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md)プロシージャを定義できます別の変数名、パラメーターを使用して必要な場合は  *_\@input_data_1_name_* します。
+    + スコアリングの入力として使用されるデータは、SQL クエリとして定義され、SQL 変数 _\@input_ に文字列として格納されます。 データベースからデータが取得されると、*InputDataSet* と呼ばれるデータ フレームに格納されます。これは、[sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md) プロシージャに対する入力データの既定の名前にすぎません。必要に応じて、 *_\@input_data_1_name_* パラメーターを使用して別の変数名を定義できます。
 
-    + スコアを生成するには、ストアド プロシージャはから rxPredict 関数を呼び出します。、 **RevoScaleR**ライブラリ。
+    + スコアを生成するために、ストアド プロシージャで **RevoScaleR** ライブラリの rxPredict 関数が呼び出されます。
 
-    + 戻り値、*スコア*、確率、そのドライバー モデルを指定するには、ヒントを取得します。 必要に応じて、ある種のフィルターは、戻り値を「ヒント」と「チップなし」グループに分類に返される値を簡単に適用できます。  たとえば、確率が 0.5 よりも小さいでは、ヒントはほとんどありませんが意味します。
+    + 戻り値 (*Score*) は、特定のモデルで、そのドライバーがチップをもらう確率です。 (省略可能) 戻り値に特定の種類のフィルターを適用して、戻り値を "チップあり" グループと "チップなし" グループに容易に分類できます。  たとえば、確率が 0.5 よりも小さい場合、チップをもらえない可能性が高いと考えられます。
   
-2.  バッチ モードでは、ストアド プロシージャを呼び出して、ストアド プロシージャへの入力として必要なクエリを定義します。 それが動作することを確認する SSMS 内で実行する SQL クエリを次に示します。
+2.  バッチ モードでストアド プロシージャを呼び出すには、ストアド プロシージャへの入力として必要なクエリを定義します。 次の SQL クエリは、SSMS で実行して動作することを確認できます。
 
     ```sql
     SELECT TOP 10
@@ -100,32 +101,32 @@ ms.locfileid: "53645202"
       WHERE b.medallion is null
     ```
 
-3. SQL クエリから、入力文字列を作成するのにには、この R コードを使用します。
+3. 次の R コードを使用して、SQL クエリから入力文字列を作成します。
 
     ```R
     input <- "N'SELECT TOP 10 a.passenger_count AS passenger_count, a.trip_time_in_secs AS trip_time_in_secs, a.trip_distance AS trip_distance, a.dropoff_datetime AS dropoff_datetime, dbo.fnCalculateDistance(pickup_latitude, pickup_longitude, dropoff_latitude, dropoff_longitude) AS direct_distance FROM (SELECT medallion, hack_license, pickup_datetime, passenger_count,trip_time_in_secs,trip_distance, dropoff_datetime, pickup_latitude, pickup_longitude, dropoff_latitude, dropoff_longitude FROM nyctaxi_sample)a LEFT OUTER JOIN ( SELECT medallion, hack_license, pickup_datetime FROM nyctaxi_sample  tablesample (1 percent) repeatable (98052)  )b ON a.medallion=b.medallion AND a.hack_license=b.hack_license AND  a.pickup_datetime=b.pickup_datetime WHERE b.medallion is null'";
-    q <- paste("EXEC PredictTipBatchMode @inquery = ", input, sep="");
+    q <- paste("EXEC PredictTipBatchMode @input = ", input, sep="");
     ```
 
-4. ストアド プロシージャ R からを実行するには、呼び出し、 **sqlQuery**のメソッド、 **RODBC**パッケージ化し、SQL 接続を使用して、`conn`前に定義します。
+4. R からストアド プロシージャを実行するには、**RODBC** パッケージの **sqlQuery** メソッドを呼び出し、先ほど定義した SQL 接続 `conn` を使用します。
 
     ```R
     sqlQuery (conn, q);
     ```
 
-    ODBC エラーが発生する場合は、構文エラーと適切な数の引用符があるかどうかを確認します。 
+    ODBC エラーが発生した場合は、構文エラーを確認し、適切な数の引用符があるかどうかを確認します。 
     
-    アクセス許可エラーが発生する場合は、ログインには、ストアド プロシージャを実行する機能を確認します。
+    権限エラーが発生した場合は、ログインにストアド プロシージャを実行する権限があることを確認します。
 
 ## <a name="single-row-scoring"></a>単一行のスコアリング
 
-個別スコアリング モードは、一連の個別の値を入力としてストアド プロシージャに渡す、一度に 1 つずつ予測を生成します。 値は、予測を作成するモデルを使用すると、モデル内の機能に対応していますか、確率値などの別の結果を生成します。 アプリケーション、またはユーザーにその値を表示できます。
+個別スコアリング モードでは、一度に 1 つの予測が生成され、個別の値のセットが入力としてストアド プロシージャに渡されます。 値は、モデル内の特徴に対応しています。モデルではこの特徴を使用して、予測の作成や、確率値などの別の結果の生成が行われます。 その後、その値をアプリケーションまたはユーザーに返すことができます。
 
-行ごとに予測モデルを呼び出すときに、一連の個別の各ケースの機能を表す値を渡します。 ストアド プロシージャは、1 つの予測と確率を返します。 
+予測のために行単位でモデルを呼び出す場合は、個々のケースの特徴を表す値のセットを渡します。 その後、ストアド プロシージャによって 1 つの予測または確率が返されます。 
 
-ストアド プロシージャ*PredictTipSingleMode*この方法を示します。 これは、入力特徴値 (たとえば、乗客数、乗車距離) を表す複数のパラメーター、スコアを格納された R モデルを使用してこれらの機能、およびヒント確率を出力します。
+ストアド プロシージャ *PredictTipSingleMode* で、このアプローチを確認できます。 これは、特徴の値 (乗客数や走行距離など) を表す複数のパラメーターを入力として受け取り、格納されている R モデルを使用してこれらの特徴をスコア付けし、チップの確率を出力します。
 
-1. ストアド プロシージャを作成する次の TRANSACT-SQL ステートメントを実行します。
+1. ストアド プロシージャを作成するには、次の Transact-SQL ステートメントを実行します。
 
     ```sql
     USE [NYCTaxi_Sample]
@@ -191,23 +192,23 @@ ms.locfileid: "53645202"
     END
     ```
 
-2. SQL Server Management studio で使用することができます、 [!INCLUDE[tsql](../../includes/tsql-md.md)] **EXEC**プロシージャ (または**EXECUTE**)、ストアド プロシージャを呼び出すし、必要な入力を渡すことにします。 たとえば、Management Studio でこのステートメントを実行してみてください。
+2. SQL Server Management Studio で、[!INCLUDE[tsql](../../includes/tsql-md.md)] **EXEC** プロシージャ (または **EXECUTE**) を使用して、ストアド プロシージャを呼び出し、必要な入力に渡すことができます。 たとえば、Management Studio で次のステートメントを実行してみます。
 
     ```sql
     EXEC [dbo].[PredictTipSingleMode] 1, 2.5, 631, 40.763958,-73.973373, 40.782139,-73.977303
     ```
 
-    ここで渡される値は、それぞれ、変数の_乗客\_カウント_、 _trip_distance_、_トリップ\_時間\_で\_秒_、 _pickup\_緯度_、 _pickup\_経度_、_降車\_緯度_、および_降車\_経度_します。
+    ここで渡される値は、それぞれ、変数 _passenger\_count_、_trip_distance_、_trip\_time\_in\_secs_、_pickup\_latitude_、_pickup\_longitude_、_dropoff\_latitude_、_dropoff\_longitude_ に対応します。
 
-3. R コードからこの同じ呼び出しを実行するには、次のような全体のストアド プロシージャの呼び出しを含む R 変数の定義だけです。
+3. R コードからこの同じ呼び出しを実行するには、次のようにストアド プロシージャの呼び出しをすべて含む R 変数を定義するだけです。
 
     ```R
     q2 = "EXEC PredictTipSingleMode 1, 2.5, 631, 40.763958,-73.973373, 40.782139,-73.977303 ";
     ```
 
-    ここで渡される値は、それぞれ、変数の_乗客\_カウント_、_トリップ\_距離_、_トリップ\_時間\_で\_秒_、 _pickup\_緯度_、 _pickup\_経度_、_降車\_緯度_、および_降車\_経度_します。
+    ここで渡される値は、それぞれ、変数 _passenger\_count_、_trip\_distance_、_trip\_time\_in\_secs_、_pickup\_latitude_、_pickup\_longitude_、_dropoff\_latitude_、_dropoff\_longitude_ に対応します。
 
-4. 呼び出す`sqlQuery`(から、 **RODBC**パッケージ) ストアド プロシージャの呼び出しを含む文字列変数と共に、接続文字列を渡します。
+4. (**RODBC** パッケージから) `sqlQuery` を呼び出し、接続文字列を、ストアド プロシージャの呼び出しを含む文字列変数と共に渡します。
 
     ```R
     # predict with stored procedure in single mode
@@ -215,18 +216,18 @@ ms.locfileid: "53645202"
     ```
 
     >[!TIP]
-    > R Tools for Visual Studio (RTVS) は、SQL Server と R. の両方の優れた統合を提供します。RODBC を使用して、SQL Server 接続の例については、この記事を参照してください。[SQL Server と R の使用](https://docs.microsoft.com/visualstudio/rtvs/sql-server)
+    > R Tools for Visual Studio (RTVS) により、SQL Server と R の両方の優れた統合がもたらされます。SQL Server 接続での RODBC の使用例については、こちらの記事を参照してください。[SQL Server と R の使用](https://docs.microsoft.com/visualstudio/rtvs/sql-server)
 
 ## <a name="next-steps"></a>次の手順
 
-操作する方法を学習する[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]データをトレーニング済みの R モデルを永続化と[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]、このデータ セットに基づく新しいモデルを作成するには比較的簡単である必要があります。 たとえば、これらの追加のモデルを作成してみてください可能性があります。
+ここでは、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データを使用し、トレーニング済みの R モデルを [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]に保持する方法を学習したので、このデータセットに基づいて比較的容易に新しいモデルを作成できます。 たとえば、次のような追加のモデルを作成することができます。
 
 + チップの金額を予測する回帰モデル
-+ ヒントは、ビッグ、中、または小さいかどうかを予測する多クラス分類モデル
++ チップが多い、普通、少ないのいずれになるかを予測するマルチクラス分類モデル
 
-これらの他のサンプルおよびリソースを探索する可能性がありますも。
+次の追加のサンプルとリソースを調べることもできます。
 
 + [データ サイエンスのシナリオとソリューション テンプレート](data-science-scenarios-and-solution-templates.md)
 + [高度な分析 (データベース内)](sqldev-in-database-r-for-sql-developers.md)
-+ [Microsoft R - Diving into Data Analysis](https://msdn.microsoft.com/microsoft-r/data-analysis-in-microsoft-r)
-+ [その他のリソース](https://msdn.microsoft.com/microsoft-r/microsoft-r-more-resources)
++ [Machine Learning Server に関するハウツー ガイド](https://docs.microsoft.com/machine-learning-server/r/how-to-introduction)
++ [Machine Learning Server のその他のリソース](https://docs.microsoft.com//machine-learning-server/resources-more)

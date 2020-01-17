@@ -11,11 +11,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: d2b01eceff763d554644065fdb5137695bd82f69
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53374574"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62774344"
 ---
 # <a name="managed-instance-details-sql-server-utility"></a>マネージド インスタンスの詳細 (SQL Server ユーティリティ)
   ユーティリティ エクスプローラーの [マネージド インスタンス] ビューでは、個々の [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]インスタンスの使用率に関するデータ、CPU 使用率の履歴、ファイル レベルでの記憶域使用率の詳細を参照できます。ポリシーしきい値の表示と更新も可能です。 ポリシーのしきい値は、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] インスタンス レベルでコンピューター、データベース ファイル、およびログ ファイルを対象に制御するか、記憶域ボリュームのレベルで制御することができます。 特定の [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]マネージド インスタンスのプロパティ詳細を参照することもできます。  
@@ -175,7 +175,7 @@ ms.locfileid: "53374574"
   
 -   [言語]  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [配置済みのデータ層アプリケーションの詳細 &#40;SQL Server ユーティリティ&#41;](../../2014/database-engine/deployed-data-tier-application-details-sql-server-utility.md)   
  [ユーティリティ ダッシュ ボード&#40;SQL Server ユーティリティ&#41;](../../2014/database-engine/utility-dashboard-sql-server-utility.md)   
  [SQL Server ユーティリティでの SQL Server のインスタンスの監視](../relational-databases/manage/monitor-instances-of-sql-server-in-the-sql-server-utility.md)   

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.bidtoolset.tableprop.f1
@@ -13,12 +12,12 @@ ms.assetid: 16d3347b-7e43-4a6b-9956-fdd6ede092e6
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 5b9fbcb4aa054d261d47bea61edf1d1815cba27f
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: 97d6731c5e85c3b37facc7172ecacbd2c7c74176
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52401035"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66066469"
 ---
 # <a name="table-properties-ssas-tabular"></a>Table Properties (SSAS Tabular)
   このトピックでは、テーブル モデルのテーブルのプロパティについて説明します。 ここで説明するプロパティは、ソースのどの列をインポートするかを定義する [テーブルのプロパティの編集] ダイアログ ボックスのプロパティとは異なります。  

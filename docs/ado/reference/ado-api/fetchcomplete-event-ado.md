@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: a28d3858-566c-468d-b070-d1de4339fbea
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 09ba18e3680579c7a09e4f51f3bfe3e083dda697
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: f3e5f5ae1c886f8d08d522fac19cee563efbb86c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47611490"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67932832"
 ---
 # <a name="fetchcomplete-event-ado"></a>FetchComplete イベント (ADO)
 **FetchComplete**に時間のかかる非同期操作のすべてのレコードが取得された後、イベントが呼び出される、 [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md)します。  
@@ -49,6 +48,6 @@ FetchComplete pError, adStatus, pRecordset
 ## <a name="remarks"></a>コメント  
  使用する**FetchComplete** Microsoft Visual Basic、Visual Basic 6.0 以降が必要です。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [ADO イベント モデルの例 (vc++)](../../../ado/reference/ado-api/ado-events-model-example-vc.md)   
  [ADO イベント ハンドラーの概要](../../../ado/guide/data/ado-event-handler-summary.md)

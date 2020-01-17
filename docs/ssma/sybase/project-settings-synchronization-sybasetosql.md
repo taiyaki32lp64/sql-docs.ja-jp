@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 2cd6bc01-b8e5-4312-83a4-eac66dc1d460
 author: Shamikg
 ms.author: Shamikg
-manager: craigg
-ms.openlocfilehash: 0a221d5c24606707ba9876e0980e6c28d2dacc67
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 663a4b1e49d1f81ce040254a2c8f39a1a1f84b38
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47834420"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68028680"
 ---
 # <a name="project-settings-synchronization-sybasetosql"></a>プロジェクトの設定 (同期) (SybaseToSQL)
 [同期] ページ、**プロジェクト設定** ダイアログ ボックスには、SSMA にテーブルおよびストアド プロシージャなどのデータベース オブジェクトを読み込む方法をカスタマイズする設定が含まれています。[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]または SQL Azure です。  

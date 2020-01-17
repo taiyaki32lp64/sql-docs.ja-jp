@@ -17,15 +17,14 @@ helpviewer_keywords:
 - preprocessor tool [XML schemas]
 - XML schemas [SQL Server]
 ms.assetid: cde1de5f-077a-4a6d-8a81-1ecb6e10d549
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: dd8e4b828e6304748ffd9a913d7508ba37adaca3
-ms.sourcegitcommit: bfa10c54e871700de285d7f819095d51ef70d997
+author: MightyPen
+ms.author: genemi
+ms.openlocfilehash: 58773dbce29589d66403c6584b5360c0dc8026d4
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/14/2019
-ms.locfileid: "54255807"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67995330"
 ---
 # <a name="preprocess-a-schema-to-merge-included-schemas"></a>含まれているスキーマをマージするためのスキーマの前処理
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

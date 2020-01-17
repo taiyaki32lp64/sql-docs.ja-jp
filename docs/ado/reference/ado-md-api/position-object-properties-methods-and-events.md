@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: c3e824b1-30c7-4afa-9a27-213c407453e8
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 0b7759de493ab82f0558f6a7fd754473c4bfd2eb
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 6758484e5f8dc4b4f4e3c87734ad7dc5be9ce4e1
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47836040"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67949235"
 ---
 # <a name="position-object-properties-methods-and-events"></a>Position オブジェクトのプロパティ、メソッド、およびイベント
 ## <a name="propertiescollections"></a>プロパティ/コレクション  
@@ -33,5 +32,5 @@ ms.locfileid: "47836040"
 ## <a name="events"></a>イベント  
  [なし] :  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [Position オブジェクト (ADO MD)](../../../ado/reference/ado-md-api/position-object-ado-md.md)

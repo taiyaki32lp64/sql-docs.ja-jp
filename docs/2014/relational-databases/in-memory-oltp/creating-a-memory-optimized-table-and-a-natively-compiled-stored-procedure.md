@@ -10,12 +10,12 @@ ms.assetid: 48a9a0a3-930f-477b-bd0f-e82e77999ecc
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 05706bf69cb0f607810808c9185647c10404d582
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 927a89c36019ebc7232a110f5a10fcbf2cfa74af
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48056588"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63157977"
 ---
 # <a name="creating-a-memory-optimized-table-and-a-natively-compiled-stored-procedure"></a>メモリ最適化テーブルおよびネイティブ コンパイル ストアド プロシージャの作成
   このトピックでは、インメモリ OLTP の構文を紹介する例を示します。  
@@ -36,7 +36,7 @@ ms.locfileid: "48056588"
   
  次のコード サンプルでは、c:\Data というディレクトリが必要です。  
   
-```tsql  
+```sql  
 -- create a database with a memory-optimized filegroup and a container.  
 CREATE DATABASE imoltp   
 GO  

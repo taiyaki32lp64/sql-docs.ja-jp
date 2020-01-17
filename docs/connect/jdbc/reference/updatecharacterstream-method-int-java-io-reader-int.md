@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: b692c372-f6d7-4528-9c5d-cd8421bdb12e
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: dbd6d01951e6d3864031739f4f0c1794ee02ee53
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: da62f9647b6d9aeff40e43c80a59213d5e8cd239
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47604780"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67996863"
 ---
 # <a name="updatecharacterstream-method-int-javaioreader-int"></a>updateCharacterStream (int, java.io.Reader, int) メソッド
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -44,7 +43,7 @@ public void updateCharacterStream(int columnIndex,
   
  *readerValue*  
   
- リーダー オブジェクト。  
+ リーダーオブジェクト。  
   
  *length*  
   
@@ -54,9 +53,9 @@ public void updateCharacterStream(int columnIndex,
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- この updateCharacterStream メソッドは、java.sql.ResultSet インターフェイスの updateCharacterStream メソッドによって指定されます。  
+ この updateCharacterStream メソッドは、java.sql.ResultSet インターフェイスの updateCharacterStream メソッドで規定されています。  
   
- このメソッドは、Unicode 文字を Reader オブジェクトから選択したテキストおよびバイナリ列に渡します。 これには、すべてのテキスト列と **binary**、**varbinary**、**varbinary(max)**、**image**、**xml** の各列が含まれますが、**udt** 列は含まれません。  
+ このメソッドは、Unicode 文字を Reader オブジェクトから選択したテキストおよびバイナリ列に渡します。 これには、すべてのテキスト列と **binary**、**varbinary**、**varbinary(max)** 、**image**、**xml** の各列が含まれますが、**udt** 列は含まれません。  
   
  ストリームの長さが、*length* パラメーターで指定された長さと異なる場合は、行の更新または挿入時に JDBC ドライバーが例外をスローします。  
   

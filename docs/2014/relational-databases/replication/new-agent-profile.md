@@ -15,11 +15,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 12fc3e7e7b67b9f02f2a9744d4af2af175ce0812
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52780294"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63022666"
 ---
 # <a name="new-agent-profile"></a>[新しいエージェント プロファイル]
   **[新しいエージェント プロファイル]** ダイアログ ボックスを使用すると、新しいプロファイルを作成できます。 新しいプロファイルは常に既存のプロファイルに基づきますが、アプリケーション要件に一致するように変更することもできます。 プロファイルを作成したら、 **[エージェント プロファイル]** ダイアログ ボックスで、既存のエージェントおよび今後のエージェントのジョブに適用できます。 エージェントのパラメーター値は、[\<**AgentProfileName> のプロパティ]** ダイアログ ボックスで編集できます。  
@@ -34,7 +34,7 @@ ms.locfileid: "52780294"
  **パラメーター**  
  プロファイルに含まれるエージェント パラメーターです。 新しいプロファイルが基づくプロファイルは、必ずしもパラメーターごとの値を指定する必要はありません。 指定されたエージェントで有効なパラメーターをすべて表示するには、 **[このプロファイルに使用されているパラメーターのみ表示する]** チェック ボックスをオフにします。 各パラメーターの詳細については、次を参照してください。  
   
--   [Replication Snapshot Agent](agents/replication-snapshot-agent.md)  
+-   [レプリケーション スナップショット エージェント](agents/replication-snapshot-agent.md)  
   
 -   [レプリケーション ログ リーダー エージェント](agents/replication-log-reader-agent.md)  
   
@@ -53,7 +53,7 @@ ms.locfileid: "52780294"
  **[このプロファイルに使用されているパラメーターのみ表示する]**  
  指定されたエージェントに有効なパラメーターをすべて表示するにはオフにします。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [レプリケーション エージェント プロファイルの操作](agents/work-with-replication-agent-profiles.md)   
  [レプリケーション エージェントの概要](agents/replication-agents-overview.md)   
  [レプリケーション エージェント プロファイル](agents/replication-agent-profiles.md)  

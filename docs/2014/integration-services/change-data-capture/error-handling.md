@@ -7,20 +7,20 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: ff79e19d-afca-42a4-81b0-62d759380d11
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 2c0e18f728c48975aa6f09209f87aeca3e3abb2c
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: e0924c4ac6d2ddd4e14b35794b9c03ac7fb2e136
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52804994"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62835652"
 ---
 # <a name="error-handling"></a>エラー処理
   Oracle CDC インスタンスでは、単一の Oracle ソース データベース (Oracle RAC クラスターは単一のデータベースと見なされます) から変更を検出し、対象の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスに含まれる CDC データベースの変更テーブルにコミット済みの変更を書き込みます。  
   
- CDC インスタンスでは、 **cdc.xdbcdc_state**というシステム テーブルで状態を管理します。 このテーブルをクエリすると、CDC インスタンスの状態をいつでも確認することができます。 cdc.xdbcdc_state テーブルの詳細については、「 [cdc.xdbcdc_state](the-oracle-cdc-databases.md#BKMK_cdcxdbcdc_state)」をご覧ください。  
+ CDC インスタンスでは、 **cdc.xdbcdc_state**というシステム テーブルで状態を管理します。 このテーブルをクエリすると、CDC インスタンスの状態をいつでも確認することができます。 cdc.xdbcdc_state テーブルの詳細については、「 [cdc.xdbcdc_state](the-oracle-cdc-databases.md#bkmk_cdcxdbcdc_state)」をご覧ください。  
   
  次の表は、xdbcdc_state テーブルで示される CDC インスタンスの状態について説明したものです。  
   
@@ -37,11 +37,11 @@ ms.locfileid: "52804994"
 |状態|Active 状態コード|Error 状態コード|説明|  
 |------------|------------------------|-----------------------|------------------|  
 |ABORTED|0|1|Oracle CDC インスタンスが実行されていません。 ABORTED 副状態は、ACTIVE だった Oracle CDC インスタンスが予期せず停止したことを示します。<br /><br /> ABORTED 副状態になるのは、実行されていない Oracle CDC インスタンスの状態が ACTIVE になっていることが Oracle CDC Service のメイン インスタンスで検出された場合です。|  
-|[error]|0|1|Oracle CDC インスタンスが実行されていません。 ERROR 状態は、回復できないエラーが発生したために ACTIVE だった CDC インスタンスが無効になったことを示します。 ERROR 状態には、次の副状態コードがあります。<br /><br /> 正しく構成されていません。回復不可能な構成エラーが検出されました。<br /><br /> パスワードに必要な。Change Data Capture Designer for Oracle by Attunity のパスワードが設定されていないか、構成されているパスワードが無効です。 サービスの非対称キーのパスワードが変更されたことが原因として考えられます。|  
-|RUNNING|1|0|CDC インスタンスが実行されていて、変更レコードが処理されています。 RUNNING 状態には、次の副状態コードがあります。<br /><br /> アイドルします。すべての変更レコードが処理され、ターゲット コントロールに格納されている (**_CT**) テーブル。 制御テーブルにアクティブなトランザクションはありません。<br /><br /> 処理:コントロールにまだ書き込まれていない処理中の変更レコードが (**_CT**) テーブル。|  
+|[error]|0|1|Oracle CDC インスタンスが実行されていません。 ERROR 状態は、回復できないエラーが発生したために ACTIVE だった CDC インスタンスが無効になったことを示します。 ERROR 状態には、次の副状態コードがあります。<br /><br /> MISCONFIGURED: 回復できない構成エラーが検出されました。<br /><br /> PASSWORD-REQUIRED: Change Data Capture Designer for Oracle by Attunity のパスワードが設定されていないか、構成されているパスワードが無効です。 サービスの非対称キーのパスワードが変更されたことが原因として考えられます。|  
+|RUNNING|1|0|CDC インスタンスが実行されていて、変更レコードが処理されています。 RUNNING 状態には、次の副状態コードがあります。<br /><br /> IDLE: すべての変更レコードが処理され、対象の制御 ( **_CT**) テーブルに格納されました。 制御テーブルにアクティブなトランザクションはありません。<br /><br /> PROCESSING: 制御 ( **_CT**) テーブルにまだ書き込まれていない、処理中の変更レコードがあります。|  
 |STOPPED|0|0|CDC インスタンスが実行されていません。 STOP 副状態は、ACTIVE だった CDC インスタンスが適切に停止されたことを示します。|  
-|SUSPENDED|1|1|CDC インスタンスが実行されていますが、回復可能なエラーにより処理が中断されています。 SUSPENDED 状態には、次の副状態コードがあります。<br /><br /> 切断されています。ソース Oracle データベースとの接続を確立できません。 接続が回復すると処理が再開されます。<br /><br /> 記憶域:記憶域がいっぱいです。 記憶領域に空きができると処理が再開されます。 この状態は、状態テーブルを更新できないために表示されない場合があります。<br /><br /> ロガー:ロガーは Oracle に接続されているが、その一時的な問題のため、Oracle トランザクション ログを読み取ることができません。|  
-|DATAERROR|x|x|この状態コードは、 **xdbcdc_trace** テーブルにのみ使用されます。 **xdbcdc_state** テーブルには表示されません。 この状態のトレース レコードは、Oracle のログ レコードに問題があることを示します。 問題があるログ レコードは、**[data]** 列に BLOB として格納されます。 DATAERROR 状態には、次の副状態コードがあります。<br /><br /> BADRECORD:アタッチされたログ レコードを解析できませんでした。<br /><br /> 変換エラー:一部の列のデータをキャプチャ テーブル内のターゲット列に変換されませんでした。 この状態は、変換エラーについてのトレース レコードを生成するように構成で指定されている場合にのみ表示されます。|  
+|SUSPENDED|1|1|CDC インスタンスが実行されていますが、回復可能なエラーにより処理が中断されています。 SUSPENDED 状態には、次の副状態コードがあります。<br /><br /> DISCONNECTED: ソース Oracle データベースとの接続を確立できません。 接続が回復すると処理が再開されます。<br /><br /> STORAGE: 記憶領域がいっぱいです。 記憶領域に空きができると処理が再開されます。 この状態は、状態テーブルを更新できないために表示されない場合があります。<br /><br /> LOGGER: ロガーは Oracle に接続されていますが、一時的な問題が発生しており、Oracle トランザクション ログを読み取ることができません。|  
+|DATAERROR|○|○|この状態コードは、 **xdbcdc_trace** テーブルにのみ使用されます。 **xdbcdc_state** テーブルには表示されません。 この状態のトレース レコードは、Oracle のログ レコードに問題があることを示します。 問題があるログ レコードは、 **[data]** 列に BLOB として格納されます。 DATAERROR 状態には、次の副状態コードがあります。<br /><br /> BADRECORD: アタッチされたログ レコードを解析できませんでした。<br /><br /> CONVERT-ERROR: 一部の列のデータをキャプチャ テーブル内の対象の列に変換できませんでした。 この状態は、変換エラーについてのトレース レコードを生成するように構成で指定されている場合にのみ表示されます。|  
   
  Oracle CDC Service の状態は [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]に格納されるため、データベース内の状態の値にサービスの実際の状態が反映されていない場合もあります。 最も一般的なシナリオは、サービスと [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の間の接続が失われ、なんらかの理由で再開できない場合です。 この場合、 **cdc.xdbcdc_state** に最新の状態が格納されなくなります。 最終更新のタイムスタンプ (UTC) から 1 分以上経過していれば、古い状態を示していると考えられます。 この場合は、Windows イベント ビューアーを使用して、サービスの状態に関する詳しい情報を確認してください。  
   
@@ -115,5 +115,3 @@ ms.locfileid: "52804994"
 ## <a name="see-also"></a>参照  
  [Attunity の Change Data Capture Designer for Oracle](change-data-capture-designer-for-oracle-by-attunity.md)   
  [Oracle CDC インスタンス](the-oracle-cdc-instance.md)  
-  
-  

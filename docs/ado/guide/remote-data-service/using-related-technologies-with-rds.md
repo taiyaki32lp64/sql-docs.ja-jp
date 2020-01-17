@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: a98a7245-06a7-455c-82ef-950807b9f1e7
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 28f03940214817a4f578e76e1d56f2b9a99c1482
-ms.sourcegitcommit: 1a5448747ccb2e13e8f3d9f04012ba5ae04bb0a3
+ms.openlocfilehash: ca2a49e1a0eb9d69baa875d8ee956a5ec1ccb374
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51558395"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67921895"
 ---
 # <a name="using-related-technologies-with-rds"></a>RDS での関連テクノロジの使用
 このセクションでは、次のトピックを扱います。  
@@ -44,7 +43,7 @@ ms.locfileid: "51558395"
   
  **Microsoft Windows NT Server または Windows 2000 Server** Microsoft Windows NT Server または Windows 2000 Server でのセキュリティの詳細については、Microsoft Windows Web サイトを参照してください。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [RDS の基礎](../../../ado/guide/remote-data-service/rds-fundamentals.md)
 
 

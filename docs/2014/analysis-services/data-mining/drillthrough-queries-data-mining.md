@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - AllowDrillThrough property
@@ -15,23 +14,23 @@ ms.assetid: 246c784b-1b0c-4f0b-96f7-3af265e67051
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 89900ccb182c58041af7b428af336ddab217d245
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: ca74fe9ec36262130e01a58280f9d966c35c3485
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52538890"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66084551"
 ---
 # <a name="drillthrough-queries-data-mining"></a>ドリルスルー クエリ (データ マイニング)
   *ドリルスルー クエリ*を使用すると、マイニング モデルにクエリを送信して、基になるケースまたは構造データから詳細を取得できます。 ドリルスルーは、モデルのトレーニングに使用されたケースとテストに使用されたケースを比較する際や、ケース データの詳細を確認する際に役立ちます。  
   
  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] データ マイニングは、ドリルスルーの次の 2 つのオプションを提供します。  
   
--    **モデル ケース**へのドリルスルー  
+-   **モデル ケース** へのドリルスルー  
   
      モデル_ケースへのドリルスルーがクラスターまたはデシジョン ツリーの分岐としてモデルなどの特定のパターンから移動する場合に使用されるのと、個々 のケースに関する詳細を表示します。  
   
--    **構造ケース**へのドリルスルー  
+-   **構造ケース** へのドリルスルー  
   
      構造ケースのドリルスルーは、モデル内で使用できない情報が構造に含まれている際に使用します。 たとえば、構造のデータとして顧客の連絡先情報が含まれていても、クラスター モデルでは使用しません。 しかし、モデルを作成した後に、特定のクラスターにグループ化された顧客に関する連絡先情報を取得する必要が生じる場合もあります。  
   
@@ -87,7 +86,7 @@ ms.locfileid: "52538890"
 |Microsoft ニューラル ネットワーク アルゴリズム|サポートされていません。 これらのアルゴリズムでは、コンテンツ内の特定のノードにケースが割り当てられません。|  
 |Microsoft ロジスティック回帰アルゴリズム|サポートされていません。 これらのアルゴリズムでは、コンテンツ内の特定のノードにケースが割り当てられません。|  
 |Microsoft 線形回帰アルゴリズム|サポートされています。 ただし、モデルによって作成されるノードが `All` だけであるため、ドリルスルーすると、モデルのすべてのトレーニング ケースが返されます。 トレーニング セットが大きいと、結果の読み込みに非常に時間がかかることがあります。|  
-|Microsoft タイム シリーズ アルゴリズム (Microsoft Time Series algorithm)|サポートされています。 ただし、構造やケース データのドリルスルーに、データ マイニング デザイナーの **[マイニング モデル ビューアー]** を使用することはできません。 代わりに、DMX クエリを作成する必要があります。<br /><br /> また、タイム シリーズ モデルでは、特定のノードをドリルスルーしたり、特定のノード内のケースを取得する DMX クエリを記述したりすることができません。 日付や属性値などの他の条件を使用して、モデルや構造からケース データを取得することは可能です。<br /><br /> [Lag (DMX)](/sql/dmx/lag-dmx) 関数を使用すると、モデルのケースから日付を返すこともできます。<br /><br /> Microsoft タイム シリーズ アルゴリズムで作成された ARTXP ノードおよび ARIMA ノードの詳細を表示する場合は、[Microsoft 汎用コンテンツ ツリー ビューアー (データ マイニング)](../microsoft-generic-content-tree-viewer-data-mining.md) を使用できます。|  
+|Microsoft Time Series アルゴリズム|サポートされています。 ただし、構造やケース データのドリルスルーに、データ マイニング デザイナーの **[マイニング モデル ビューアー]** を使用することはできません。 代わりに、DMX クエリを作成する必要があります。<br /><br /> また、タイム シリーズ モデルでは、特定のノードをドリルスルーしたり、特定のノード内のケースを取得する DMX クエリを記述したりすることができません。 日付や属性値などの他の条件を使用して、モデルや構造からケース データを取得することは可能です。<br /><br /> [Lag (DMX)](/sql/dmx/lag-dmx) 関数を使用すると、モデルのケースから日付を返すこともできます。<br /><br /> Microsoft タイム シリーズ アルゴリズムで作成された ARTXP ノードおよび ARIMA ノードの詳細を表示する場合は、[Microsoft 汎用コンテンツ ツリー ビューアー (データ マイニング)](../microsoft-generic-content-tree-viewer-data-mining.md) を使用できます。|  
   
 ##  <a name="bkmk_Tasks"></a> 関連タスク  
  次のリンクを使用して特定のシナリオでのドリルスルーを行います。  

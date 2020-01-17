@@ -21,21 +21,20 @@ helpviewer_keywords:
 - characters [SQL Server], replacing
 - inserting data
 ms.assetid: abb0afa9-44f6-42a2-a871-5f471dfb222b
-author: MashaMSFT
-ms.author: mathoma
-manager: craigg
+author: MikeRayMSFT
+ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: a8e57db7a35640a71f4fc737ffb33bc37d1fdea8
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 0bb5b030b138fa49f90c77c13e12bf2f64968da3
+ms.sourcegitcommit: c4875c097e3aae1b76233777d15e0a0ec8e0d681
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47667305"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71342002"
 ---
 # <a name="stuff-transact-sql"></a>STUFF (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-  STUFF 関数は、文字列を別の文字列に挿入します。 まず、1 番目の文字列の指定された開始位置から指定された長さの文字を削除し、次に、2 番目の文字列を 1 番目の文字列の指定された開始位置に挿入します。  
+  STUFF 関数では、文字列が別の文字列に挿入されます。 まず、1 番目の文字列の指定された開始位置から指定された長さの文字を削除し、次に、2 番目の文字列を 1 番目の文字列の指定された開始位置に挿入します。  
   
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -50,10 +49,10 @@ STUFF ( character_expression , start , length , replaceWith_expression )
  文字データの[式](../../t-sql/language-elements/expressions-transact-sql.md)です。 *character_expression* には、文字データまたはバイナリ データの定数、変数、または列を使用できます。  
   
  *start*  
- 削除と挿入を開始する位置を整数で指定します。 *start* が負の値またはゼロの場合は、null 文字列が返されます。 *start* が最初の *character_expression* よりも長い場合は、null 文字列が返されます。 *start* には **bigint** 型を使用できます。  
+ 削除と挿入を開始する位置を指定する整数値です。 *start* が負の値またはゼロの場合は、null 文字列が返されます。 *start* が最初の *character_expression* よりも長い場合は、null 文字列が返されます。 *start* には **bigint** 型を使用できます。  
   
  *length*  
- 削除する文字数を整数で指定します。 *length* が負の値の場合は、null 文字列が返されます。 *length* が最初の *character_expression* よりも長い場合、最後の *character_expression* の末尾の文字まで削除が実行されます。  *length* がゼロの場合、文字列の先頭の文字の前に挿入が実行されます。 *length* には **bigint** 型を使用できます。
+ 削除する文字数を指定する整数です。 *length* が負の値の場合は、null 文字列が返されます。 *length* が最初の *character_expression* よりも長い場合、最後の *character_expression* の末尾の文字まで削除が実行されます。  *length* がゼロの場合、挿入は *start* の場所で行われ、文字は一切削除されません。 *length* には **bigint** 型を使用できます。
 
  *replaceWith_expression*  
  文字データの[式](../../t-sql/language-elements/expressions-transact-sql.md)です。 *character_expression* には、文字データまたはバイナリ データの定数、変数、または列を使用できます。 この式は、*character_expression* の *start* から始まる *length* 文字を置き換えます。 `NULL` に *replaceWith_expression* を指定すると、何も挿入されず、文字が削除されます。   

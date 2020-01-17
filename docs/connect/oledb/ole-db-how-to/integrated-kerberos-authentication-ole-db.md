@@ -10,20 +10,19 @@ ms.technology: connectivity
 ms.topic: reference
 author: pmasl
 ms.author: pelopes
-manager: craigg
-ms.openlocfilehash: 5e2f63185ff0092e2df3814e634b5178ca79dcf9
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 9829c7857ec86c7a1f623691c04b0dd0ac62bafe
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47634120"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67994768"
 ---
 # <a name="integrated-kerberos-authentication-ole-db"></a>統合 Kerberos 認証 (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
-  このサンプルでは、OLE DB driver for SQL Server OLE DB を使用して、Kerberos 相互認証を取得する方法を示します。 このサンプルは、[!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)] 以降で動作します。  
+  このサンプルでは、SQL Server 用に OLE DB ドライバーの OLE DB を使用して、相互 Kerberos 認証を取得する方法を示します。 このサンプルは、[!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)] 以降で動作します。  
   
  SPN および Kerberos 認証の詳細については、「[クライアント接続でのサービス プリンシパル名 &#40;SPN&#41; のサポート](../../oledb/features/service-principal-name-spn-support-in-client-connections.md)」を参照してください。  
   

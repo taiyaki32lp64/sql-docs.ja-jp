@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 121cf99d-0722-494c-be24-3369c1a0badc
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: efb5a75c1aae3d6eb22d17c6bbfea60f62039352
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 73aa376cc47b649b6c9cba336a61ab734a0ae3a1
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47802010"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68103663"
 ---
 # <a name="mssqlserver2534"></a>MSSQLSERVER_2534
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -31,7 +30,7 @@ ms.locfileid: "47802010"
 |イベント ソース|MSSQLSERVER|  
 |コンポーネント|SQLEngine|  
 |シンボル名|DBCC_PAGE_ALLOCATED_TO_OTHER_OBJECT|  
-|メッセージ テキスト|テーブル エラー: ページ P_ID が別のオブジェクトによって割り当てられています。このページのヘッダーは、ページがオブジェクト ID O_ID、インデックス ID I_ID、パーティション ID PN_ID、アロケーション ユニット ID A_ID (型 TYPE) に割り当てられていることを示しています。|  
+|メッセージ テキスト|テーブル エラー:ページ P_ID が別のオブジェクトによって割り当てられています。このページのヘッダーは、ページがオブジェクト ID O_ID、インデックス ID I_ID、パーティション ID PN_ID、アロケーション ユニット ID A_ID (型 TYPE) に割り当てられていることを示しています。|  
   
 ## <a name="explanation"></a>説明  
 ページのヘッダーにはアロケーション ユニット ID、*A_ID* が含まれていますが、このアロケーション ユニットのどの IAM (Index Allocation Map) ページにもこのページが割り当てられていません。 ページのヘッダーに含まれているアロケーション ユニット ID は誤りであり、ページが実際に割り当てられているアロケーション ユニット ID に対応した MSSQLServer_2533 エラーがこのページで生じます。  

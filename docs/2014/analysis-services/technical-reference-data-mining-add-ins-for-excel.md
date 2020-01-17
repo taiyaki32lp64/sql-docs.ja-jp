@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: 1a435875-cbee-49d1-914c-4aa15fad7628
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: c657fc64bcc844d7c17153f83489a35594027ffc
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: cdf32878788bd68f9f0da36500be75fed5b96691
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48157562"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66066216"
 ---
 # <a name="technical-reference-data-mining-add-ins-for-excel"></a>テクニカル リファレンス (Excel 用データ マイニング アドイン)
   Office 用データ マイニング アドインには、プログラマおよび高度なデータ マイニング担当者に役立つ機能があります。  

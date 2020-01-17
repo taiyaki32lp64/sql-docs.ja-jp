@@ -1,235 +1,234 @@
-items:
-- name: SQL Server ルートの目次 +
-  href: /sql/sql-server/sql-server-technical-documentation
+- name: SQL Server >>
+  href: ../sql-server/index.yml
+- name: APS の概要
+  href: ../analytics-platform-system/home-analytics-platform-system-aps-pdw.md
 - name: RAPS の新機能
   href: ../analytics-platform-system/whats-new-analytics-platform-system.md
   items:
-  - name: APS CU7.3
-    href: ../analytics-platform-system/whats-new-analytics-platform-system.md#h2-aps-cu7.3
-  - name: APS CU7.2
-    href: ../analytics-platform-system/whats-new-analytics-platform-system.md#h2-aps-cu7.2
-  - name: APS CU7.1
-    href: ../analytics-platform-system/whats-new-analytics-platform-system.md#h2-aps-cu7.1
-  - name: APS AU7
-    href: ../analytics-platform-system/whats-new-analytics-platform-system.md#h2-aps-au7
-  - name: APS 2016
-    href: ../analytics-platform-system/whats-new-analytics-platform-system.md#h2-aps-au6
+    - name: APS CU7.5
+      href: '../analytics-platform-system/whats-new-analytics-platform-system.md#h2-aps-cu7.5'
+    - name: APS CU7.4
+      href: '../analytics-platform-system/whats-new-analytics-platform-system.md#h2-aps-cu7.4'
+    - name: APS CU7.3
+      href: '../analytics-platform-system/whats-new-analytics-platform-system.md#h2-aps-cu7.3'
+    - name: APS CU7.2
+      href: '../analytics-platform-system/whats-new-analytics-platform-system.md#h2-aps-cu7.2'
+    - name: APS CU7.1
+      href: '../analytics-platform-system/whats-new-analytics-platform-system.md#h2-aps-cu7.1'
+    - name: APS AU7
+      href: '../analytics-platform-system/whats-new-analytics-platform-system.md#h2-aps-au7'
+    - name: APS 2016
+      href: '../analytics-platform-system/whats-new-analytics-platform-system.md#h2-aps-au6'
 - name: Architecture
   items:
-  - name: 並列データ ウェアハウスの概要
-    href: ../analytics-platform-system/parallel-data-warehouse-overview.md
-  - name: ハードウェア コンポーネント
-    href: ../analytics-platform-system/hardware-components.md
-  - name: ハードウェア構成
-    href: ../analytics-platform-system/hardware-configurations.md
-  - name: 処理およびストレージの容量
-    href: ../analytics-platform-system/processing-and-storage-capacity-planning.md
-  - name: 高可用性
-    href: ../analytics-platform-system/high-availability.md
+    - name: 並列データ ウェアハウスの概要
+      href: ../analytics-platform-system/parallel-data-warehouse-overview.md
+    - name: ハードウェア コンポーネント
+      href: ../analytics-platform-system/hardware-components.md
+    - name: ハードウェア構成
+      href: ../analytics-platform-system/hardware-configurations.md
+    - name: 処理およびストレージの容量
+      href: ../analytics-platform-system/processing-and-storage-capacity-planning.md
+    - name: 高可用性
+      href: ../analytics-platform-system/high-availability.md
 - name: ハードウェアのバックアップと読み込み
   items:
-  - name: 概要
-    href: ../analytics-platform-system/backup-and-loading-hardware.md
-  - name: 読み込みサーバーの取得と構成
-    href: ../analytics-platform-system/acquire-and-configure-loading-server.md
-  - name: サーバーの処理容量の見積もりワークシートの読み込み
-    href: ../analytics-platform-system/loading-server-capacity-planning-worksheet.md
-  - name: バックアップ サーバーの取得と構成
-    href: ../analytics-platform-system/acquire-and-configure-backup-server.md
-  - name: サーバーの処理容量の見積もりワークシートのバックアップ
-    href: ../analytics-platform-system/backup-capacity-planning-worksheet.md
-  - name: InfiniBand ネットワーク アダプターの構成
-    href: ../analytics-platform-system/configure-infiniband-network-adapters.md
-- name: '[クエリ]'
+    - name: 概要
+      href: ../analytics-platform-system/backup-and-loading-hardware.md
+    - name: 読み込みサーバーの取得と構成
+      href: ../analytics-platform-system/acquire-and-configure-loading-server.md
+    - name: サーバーの処理容量の見積もりワークシートの読み込み
+      href: ../analytics-platform-system/loading-server-capacity-planning-worksheet.md
+    - name: バックアップ サーバーの取得と構成
+      href: ../analytics-platform-system/acquire-and-configure-backup-server.md
+    - name: サーバーの処理容量の見積もりワークシートのバックアップ
+      href: ../analytics-platform-system/backup-capacity-planning-worksheet.md
+    - name: InfiniBand ネットワーク アダプターの構成
+      href: ../analytics-platform-system/configure-infiniband-network-adapters.md
+- name: クエリ
   items:
-  - name: auto stats の構成
-    href: ../analytics-platform-system/configure-auto-statistics.md
-  - name: アクティブなクエリの監視
-    href: ../analytics-platform-system/monitoring-active-queries.md
-  - name: 共通部分式の削除
-    href: ../analytics-platform-system/common-sub-expression-elimination.md
+    - name: auto stats の構成
+      href: ../analytics-platform-system/configure-auto-statistics.md
+    - name: アクティブなクエリの監視
+      href: ../analytics-platform-system/monitoring-active-queries.md
+    - name: 共通部分式の削除
+      href: ../analytics-platform-system/common-sub-expression-elimination.md
 - name: '[読み込み]'
   items:
-  - name: 概要
-    href: ../analytics-platform-system/load-overview.md
-  - name: ステージング データベースの作成
-    href: ../analytics-platform-system/staging-database.md
-  - name: Integration Services での読み込み
-    href: ../analytics-platform-system/load-with-ssis.md
-  - name: PDW 変換先アダプターを使用した Integration Services スクリプト タスクの作成
-    href: ../analytics-platform-system/create-ssis-script-task-using-pdw-destination-adapter.md
-  - name: dwloader のデータ型の変換規則
-    href: ../analytics-platform-system/dwloader-data-type-conversion-rules.md
-  - name: INSERT を使用したデータの読み込み
-    href: ../analytics-platform-system/load-with-insert.md
-  - name: dwloader のコマンドライン読み込みツール
-    href: ../analytics-platform-system/dwloader.md
-  - name: 負荷の監視
-    href: ../analytics-platform-system/monitor-loads.md
+    - name: 概要
+      href: ../analytics-platform-system/load-overview.md
+    - name: ステージング データベースの作成
+      href: ../analytics-platform-system/staging-database.md
+    - name: Integration Services での読み込み
+      href: ../analytics-platform-system/load-with-ssis.md
+    - name: PDW 変換先アダプターを使用した Integration Services スクリプト タスクの作成
+      href: ../analytics-platform-system/create-ssis-script-task-using-pdw-destination-adapter.md
+    - name: dwloader のデータ型の変換規則
+      href: ../analytics-platform-system/dwloader-data-type-conversion-rules.md
+    - name: INSERT を使用したデータの読み込み
+      href: ../analytics-platform-system/load-with-insert.md
+    - name: dwloader のコマンドライン読み込みツール
+      href: ../analytics-platform-system/dwloader.md
+    - name: 負荷の監視
+      href: ../analytics-platform-system/monitor-loads.md
 - name: データベースの管理
   items:
-  - name: バックアップと復元
-    items:
-    - name: 概要
-      href: ../analytics-platform-system/backup-and-restore-overview.md
-    - name: TDE で保護されたデータベースの復元
-      href: ../analytics-platform-system/restore-database-protected-by-tde.md
-  - name: PDW のアクセス許可
-    href: ../analytics-platform-system/pdw-permissions.md
-    items:
-    - name: '[アクセス許可の付与]'
-      href: ../analytics-platform-system/grant-permissions.md
-  - name: エラー メッセージ
-    href: ../analytics-platform-system/error-messages.md
-  - name: ロック動作
-    href: ../analytics-platform-system/locking-behavior.md
-  - name: リモート テーブルのコピー
-    href: ../analytics-platform-system/remote-table-copy.md
-    items:
-    - name: InfiniBand を使用したリモート テーブル コピーを受け取るための外部の Windows システムの構成
-      href: ../analytics-platform-system/configure-an-external-windows-system-to-receive-remote-table-copies-using-infiniband.md
-    - name: リモート テーブル コピーを受け取るための外部 SMP SQL Server の構成
-      href: ../analytics-platform-system/configure-an-external-smp-sql-server-to-receive-remote-table-copies.md
-    - name: リモート テーブル コピー用の SQL Server PDW の構成
-      href: ../analytics-platform-system/configure-sql-server-pdw-for-remote-table-copies.md
-  - name: システム データベース
-    href: ../analytics-platform-system/system-databases.md
-    items:
-    - name: 予約済みのデータベース名
-      href: ../analytics-platform-system/reserved-database-names.md
-    - name: tempdb データベース
-      href: ../analytics-platform-system/tempdb-database.md
-    - name: master データベース (master database)
-      href: ../analytics-platform-system/master-database.md
-  - name: ユーザー セッション
-    href: ../analytics-platform-system/user-sessions.md
-  - name: ワークロードの管理
-    href: ../analytics-platform-system/workload-management.md
-    items:
-    - name: ワークロードの管理タスク
-      href: ../analytics-platform-system/workload-management-tasks.md
+    - name: バックアップと復元
+      items:
+        - name: 概要
+          href: ../analytics-platform-system/backup-and-restore-overview.md
+        - name: TDE で保護されたデータベースの復元
+          href: ../analytics-platform-system/restore-database-protected-by-tde.md
+    - name: PDW のアクセス許可
+      href: ../analytics-platform-system/pdw-permissions.md
+      items:
+        - name: '[アクセス許可の付与]'
+          href: ../analytics-platform-system/grant-permissions.md
+    - name: エラー メッセージ
+      href: ../analytics-platform-system/error-messages.md
+    - name: ロック動作
+      href: ../analytics-platform-system/locking-behavior.md
+    - name: リモート テーブルのコピー
+      href: ../analytics-platform-system/remote-table-copy.md
+      items:
+        - name: InfiniBand を使用したリモート テーブル コピーを受け取るための外部の Windows システムの構成
+          href: ../analytics-platform-system/configure-an-external-windows-system-to-receive-remote-table-copies-using-infiniband.md
+        - name: リモート テーブル コピーを受け取るための外部 SMP SQL Server の構成
+          href: ../analytics-platform-system/configure-an-external-smp-sql-server-to-receive-remote-table-copies.md
+        - name: リモート テーブル コピー用の SQL Server PDW の構成
+          href: ../analytics-platform-system/configure-sql-server-pdw-for-remote-table-copies.md
+    - name: システム データベース
+      href: ../analytics-platform-system/system-databases.md
+      items:
+        - name: 予約済みのデータベース名
+          href: ../analytics-platform-system/reserved-database-names.md
+        - name: tempdb データベース
+          href: ../analytics-platform-system/tempdb-database.md
+        - name: master データベース (master database)
+          href: ../analytics-platform-system/master-database.md
+    - name: ユーザー セッション
+      href: ../analytics-platform-system/user-sessions.md
+    - name: ワークロードの管理
+      href: ../analytics-platform-system/workload-management.md
+      items:
+        - name: ワークロードの管理タスク
+          href: ../analytics-platform-system/workload-management-tasks.md
 - name: Security
   items:
-  - name: 透過的なデータ暗号化
-    href: ../analytics-platform-system/transparent-data-encryption.md
-  - name: 証明書のプロビジョニング
-    href: ../analytics-platform-system/provision-certificate.md
+    - name: 透過的なデータ暗号化
+      href: ../analytics-platform-system/transparent-data-encryption.md
+    - name: 証明書のプロビジョニング
+      href: ../analytics-platform-system/provision-certificate.md
 - name: アプライアンスの管理タスク
   href: ../analytics-platform-system/appliance-management-tasks.md
   items:
-  - name: アプライアンスのインストールと構成の概要
-    href: ../analytics-platform-system/appliance-installation-and-configuration-overview.md
-    items:
-    - name: IHV から取得する情報
-      href: ../analytics-platform-system/information-to-obtain-from-your-ihv.md
-    - name: ハードウェアのインストール
-      href: ../analytics-platform-system/hardware-installation.md
-  - name: アプライアンス ノードへの接続
-    href: ../analytics-platform-system/connect-to-appliance-nodes.md
-  - name: ウイルス対策ソフトウェア
-    href: ../analytics-platform-system/antivirus-software.md
-  - name: アプライアンスの構成
-    href: ../analytics-platform-system/appliance-configuration.md
-    items:
-    - name: PDW およびアプライアンス ファブリックの物理的なコンポーネント
-      href: ../analytics-platform-system/pdw-and-appliance-fabric-physical-components.md
-    - name: Configuration Manager の起動
-      href: ../analytics-platform-system/launch-the-configuration-manager.md
-    - name: アプライアンスのトポロジ
-      href: ../analytics-platform-system/appliance-topology.md
-    - name: パスワードのリセット
-      href: ../analytics-platform-system/password-reset.md
-    - name: アプライアンスのタイム ゾーンの構成
-      href: ../analytics-platform-system/appliance-time-zone-configuration.md
-    - name: アプライアンスのネットワーク構成
-      href: ../analytics-platform-system/appliance-network-configuration.md
-    - name: PDW のトポロジ
-      href: ../analytics-platform-system/pdw-topology.md
-    - name: PDW の証明書のプロビジョニング
-      href: ../analytics-platform-system/pdw-certificate-provisioning.md
-    - name: PDW の機能スイッチ
-      href: ../analytics-platform-system/appliance-feature-switch.md
-    - name: PDW のファイアウォールの構成
-      href: ../analytics-platform-system/pdw-firewall-configuration.md
-    - name: PDW のサービス状態
-      href: ../analytics-platform-system/pdw-services-status.md
-    - name: ファイルの瞬時初期化の構成
-      href: ../analytics-platform-system/instant-file-initialization-configuration.md
-    - name: master データベースの復元
-      href: ../analytics-platform-system/restore-the-master-database.md
-    - name: ディレクトリ サービス復元モード (DSRM) で AD ノードにログオンするための管理者パスワードの設定
-      href: ../analytics-platform-system/set-admin-password-for-logging-on-to-ad-nodes-in-directory-services-restore-mode.md
-    - name: Windows Server Update Services の構成
-      href: ../analytics-platform-system/configure-windows-server-update-services-wsus.md
-    - name: 外部データへの PolyBase 接続の構成
-      href: ../analytics-platform-system/configure-polybase-connectivity-to-external-data.md
+    - name: アプライアンスのインストールと構成の概要
+      href: ../analytics-platform-system/appliance-installation-and-configuration-overview.md
       items:
-      - name: Hadoop と接続する
-        href: ../analytics-platform-system/polybase-configure-hadoop.md
-      - name: Hadoop セキュリティの構成
-        href: ../analytics-platform-system/polybase-configure-hadoop-security.md
-      - name: Azure Blob Storage
-        href: ../analytics-platform-system/polybase-configure-azure-blob-storage.md
-    - name: APS での TLS 1.2 の構成
-      href: ../analytics-platform-system/configure-tls12-aps.md
-    - name: 非アプライアンス DNS 名解決のための DNS フォワーダーの使用
-      href: ../analytics-platform-system/use-a-dns-forwarder-to-resolve-non-appliance-dns-names.md
-    - name: APS ドメイン管理者の作成
-      href: ../analytics-platform-system/create-an-aps-domain-administrator-aps.md
-    - name: Microsoft への製品利用統計情報のフィードバックの送信
-      href: ../analytics-platform-system/send-telemetry-feedback-to-microsoft-sql-server-pdw.md
-  - name: ソフトウェアのサービス
-    href: ../analytics-platform-system/software-servicing.md
-    items:
-    - name: Microsoft の更新プログラムのダウンロードと適用
-      href: ../analytics-platform-system/download-and-apply-microsoft-updates.md
-    - name: Microsoft の更新プログラムのアンインストール
-      href: ../analytics-platform-system/uninstall-microsoft-updates.md
-    - name: Analytics Platform System の修正プログラムの適用
-      href: ../analytics-platform-system/apply-analytics-platform-system-hotfixes.md
-    - name: Analytics Platform System の修正プログラムのアンインストール
-      href: ../analytics-platform-system/uninstall-analytics-platform-system-hotfixes.md
-  - name: APS アプライアンスの電源をオンまたはオフにする
-    href: ../analytics-platform-system/power-the-aps-appliance-on-or-off.md
-  - name: アプライアンスの監視
-    href: ../analytics-platform-system/appliance-monitoring.md
-    items:
-    - name: 管理コンソールを使用したアプライアンスの監視
-      href: ../analytics-platform-system/monitor-the-appliance-by-using-the-admin-console.md
-    - name: システム ビューを使用したアプライアンスの監視
-      href: ../analytics-platform-system/monitor-the-appliance-by-using-system-views.md
-    - name: System Center Operations Manager を使用したアプライアンスの監視
-      href: ../analytics-platform-system/monitor-the-appliance-by-using-system-center-operations-manager.md
+        - name: IHV から取得する情報
+          href: ../analytics-platform-system/information-to-obtain-from-your-ihv.md
+        - name: ハードウェアのインストール
+          href: ../analytics-platform-system/hardware-installation.md
+    - name: アプライアンス ノードへの接続
+      href: ../analytics-platform-system/connect-to-appliance-nodes.md
+    - name: ウイルス対策ソフトウェア
+      href: ../analytics-platform-system/antivirus-software.md
+    - name: アプライアンスの構成
+      href: ../analytics-platform-system/appliance-configuration.md
       items:
-      - name: SCOM 管理パックのインストール
-        href: ../analytics-platform-system/install-the-scom-management-packs.md
-      - name: PDW 用の SCOM 管理パックのインポート
-        href: ../analytics-platform-system/import-the-scom-management-pack-for-pdw.md
-      - name: Analytics Platform System を監視するための SCOM の構成
-        href: ../analytics-platform-system/configure-scom-to-monitor-analytics-platform-system.md
-    - name: アプライアンスの正常性状態の監視
-      href: ../analytics-platform-system/monitor-appliance-health-state.md
-    - name: アプライアンスの警告の追跡
-      href: ../analytics-platform-system/track-appliance-alerts.md
-    - name: 容量使用率の参照
-      href: ../analytics-platform-system/view-capacity-utilization.md
-    - name: ポーリング間隔の決定
-      href: ../analytics-platform-system/determine-polling-frequency.md
-    - name: 失敗したクラスター ノードの判断
-      href: ../analytics-platform-system/determine-which-cluster-node-failed.md
-    - name: 管理コンソールの警告について
-      href: ../analytics-platform-system/understanding-admin-console-alerts.md
+        - name: PDW およびアプライアンス ファブリックの物理的なコンポーネント
+          href: ../analytics-platform-system/pdw-and-appliance-fabric-physical-components.md
+        - name: Configuration Manager の起動
+          href: ../analytics-platform-system/launch-the-configuration-manager.md
+        - name: アプライアンスのトポロジ
+          href: ../analytics-platform-system/appliance-topology.md
+        - name: パスワードのリセット
+          href: ../analytics-platform-system/password-reset.md
+        - name: アプライアンスのタイム ゾーンの構成
+          href: ../analytics-platform-system/appliance-time-zone-configuration.md
+        - name: アプライアンスのネットワーク構成
+          href: ../analytics-platform-system/appliance-network-configuration.md
+        - name: PDW のトポロジ
+          href: ../analytics-platform-system/pdw-topology.md
+        - name: PDW の証明書のプロビジョニング
+          href: ../analytics-platform-system/pdw-certificate-provisioning.md
+        - name: PDW の機能スイッチ
+          href: ../analytics-platform-system/appliance-feature-switch.md
+        - name: PDW のファイアウォールの構成
+          href: ../analytics-platform-system/pdw-firewall-configuration.md
+        - name: PDW のサービス状態
+          href: ../analytics-platform-system/pdw-services-status.md
+        - name: ファイルの瞬時初期化の構成
+          href: ../analytics-platform-system/instant-file-initialization-configuration.md
+        - name: master データベースの復元
+          href: ../analytics-platform-system/restore-the-master-database.md
+        - name: ディレクトリ サービス復元モード (DSRM) で AD ノードにログオンするための管理者パスワードの設定
+          href: ../analytics-platform-system/set-admin-password-for-logging-on-to-ad-nodes-in-directory-services-restore-mode.md
+        - name: Windows Server Update Services の構成
+          href: ../analytics-platform-system/configure-windows-server-update-services-wsus.md
+        - name: 外部データへの PolyBase 接続の構成
+          href: ../analytics-platform-system/configure-polybase-connectivity-to-external-data.md
+          items:
+            - name: Hadoop と接続する
+              href: ../analytics-platform-system/polybase-configure-hadoop.md
+            - name: Hadoop セキュリティの構成
+              href: ../analytics-platform-system/polybase-configure-hadoop-security.md
+            - name: Azure Blob Storage
+              href: ../analytics-platform-system/polybase-configure-azure-blob-storage.md
+        - name: APS での TLS 1.2 の構成
+          href: ../analytics-platform-system/configure-tls12-aps.md
+        - name: 非アプライアンス DNS 名解決のための DNS フォワーダーの使用
+          href: ../analytics-platform-system/use-a-dns-forwarder-to-resolve-non-appliance-dns-names.md
+        - name: APS ドメイン管理者の作成
+          href: ../analytics-platform-system/create-an-aps-domain-administrator-aps.md
+        - name: Microsoft への製品利用統計情報のフィードバックの送信
+          href: ../analytics-platform-system/send-telemetry-feedback-to-microsoft-sql-server-pdw.md
+    - name: ソフトウェアのサービス
+      href: ../analytics-platform-system/software-servicing.md
+      items:
+        - name: Microsoft の更新プログラムのダウンロードと適用
+          href: ../analytics-platform-system/download-and-apply-microsoft-updates.md
+        - name: Microsoft の更新プログラムのアンインストール
+          href: ../analytics-platform-system/uninstall-microsoft-updates.md
+        - name: Analytics Platform System の修正プログラムの適用
+          href: ../analytics-platform-system/apply-analytics-platform-system-hotfixes.md
+        - name: Analytics Platform System の修正プログラムのアンインストール
+          href: ../analytics-platform-system/uninstall-analytics-platform-system-hotfixes.md
+    - name: APS アプライアンスの電源をオンまたはオフにする
+      href: ../analytics-platform-system/power-the-aps-appliance-on-or-off.md
+    - name: アプライアンスの監視
+      href: ../analytics-platform-system/appliance-monitoring.md
+      items:
+        - name: 管理コンソールを使用したアプライアンスの監視
+          href: ../analytics-platform-system/monitor-the-appliance-by-using-the-admin-console.md
+        - name: システム ビューを使用したアプライアンスの監視
+          href: ../analytics-platform-system/monitor-the-appliance-by-using-system-views.md
+        - name: System Center Operations Manager を使用したアプライアンスの監視
+          href: ../analytics-platform-system/monitor-the-appliance-by-using-system-center-operations-manager.md
+          items:
+            - name: SCOM 管理パックのインストール
+              href: ../analytics-platform-system/install-the-scom-management-packs.md
+            - name: PDW 用の SCOM 管理パックのインポート
+              href: ../analytics-platform-system/import-the-scom-management-pack-for-pdw.md
+            - name: Analytics Platform System を監視するための SCOM の構成
+              href: ../analytics-platform-system/configure-scom-to-monitor-analytics-platform-system.md
+        - name: アプライアンスの正常性状態の監視
+          href: ../analytics-platform-system/monitor-appliance-health-state.md
+        - name: アプライアンスの警告の追跡
+          href: ../analytics-platform-system/track-appliance-alerts.md
+        - name: 容量使用率の参照
+          href: ../analytics-platform-system/view-capacity-utilization.md
+        - name: ポーリング間隔の決定
+          href: ../analytics-platform-system/determine-polling-frequency.md
+        - name: 失敗したクラスター ノードの判断
+          href: ../analytics-platform-system/determine-which-cluster-node-failed.md
+        - name: 管理コンソールの警告について
+          href: ../analytics-platform-system/understanding-admin-console-alerts.md
 - name: リファレンス
   items:
-  - name: T-SQL 言語要素
-    href: ../analytics-platform-system/tsql-language-elements.md
-  - name: T-SQL ステートメント
-    href: ../analytics-platform-system/tsql-statements.md
-  - name: T-SQL システム ビュー
-    href: ../analytics-platform-system/tsql-system-views.md
-ms.openlocfilehash: 8b437c93b4fee98c1ad29b9ab10c6c97f633fceb
-ms.sourcegitcommit: c1105ce638078d2c941cd656b34f78486e6b2d89
-ms.translationtype: HT
-ms.contentlocale: ja-JP
-ms.lasthandoff: 02/22/2019
-ms.locfileid: "56676030"
+    - name: T-SQL 言語要素
+      href: ../analytics-platform-system/tsql-language-elements.md
+    - name: T-SQL ステートメント
+      href: ../analytics-platform-system/tsql-statements.md
+    - name: T-SQL システム ビュー
+      href: ../analytics-platform-system/tsql-system-views.md

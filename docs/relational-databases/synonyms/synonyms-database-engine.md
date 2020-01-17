@@ -14,14 +14,13 @@ helpviewer_keywords:
 ms.assetid: 6210e1d5-075f-47e4-ac8d-f84bcf26fbc0
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: e0c3f19abb7b6730e51630c9077310b5331c14bf
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: 267209440bf68ecb2e6f3382823b30f3d19728f3
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52409139"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67952334"
 ---
 # <a name="synonyms-database-engine"></a>シノニム (データベース エンジン)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -67,7 +66,7 @@ ms.locfileid: "52409139"
   
 |||  
 |-|-|  
-|CONTROL|Del|  
+|CONTROL|DELETE|  
 |EXECUTE|INSERT|  
 |SELECT|TAKE OWNERSHIP|  
 |UPDATE|VIEW DEFINITION|  

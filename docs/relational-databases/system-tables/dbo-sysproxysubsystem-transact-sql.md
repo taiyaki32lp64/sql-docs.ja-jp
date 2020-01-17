@@ -19,18 +19,17 @@ helpviewer_keywords:
 ms.assetid: 6d7713f5-1253-4a19-b1fb-635c377c95c1
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: e6fa0ff8c90f4532d87191f827e0815de8636033
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: f3a140a4cf1c82deda3b9d6a15b419b33b411974
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47781620"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68097017"
 ---
-# <a name="dbosysproxysubsystem-transact-sql"></a>dbo.sysproxysubsystem (Transact-SQL)
+# <a name="dbosysproxysubsystem-transact-sql"></a>dbo.sysproxysubsystem (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  記録[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]各プロキシ アカウントでエージェント サブシステムを使用します。 このテーブルに格納されます、 **msdb**データベース。  
+  各プロキシ アカウントで、どの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェントのサブシステムが使用されているかを記録します。 このテーブルに格納されます、 **msdb**データベース。  
   
 |列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
@@ -40,7 +39,7 @@ ms.locfileid: "47781620"
 ## <a name="remarks"></a>コメント  
  メンバーのみ、 **sysadmin**固定サーバー ロールがこのテーブルにアクセスできます。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [dbo.syssubsystems &#40;TRANSACT-SQL&#41;](../../relational-databases/system-tables/dbo-syssubsystems-transact-sql.md)   
  [dbo.sysproxies &#40;TRANSACT-SQL&#41;](../../relational-databases/system-tables/dbo-sysproxies-transact-sql.md)  
   

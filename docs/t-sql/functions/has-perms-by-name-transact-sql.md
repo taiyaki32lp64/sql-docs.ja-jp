@@ -20,17 +20,16 @@ helpviewer_keywords:
 - testing permissions
 - HAS_PERMS_BY_NAME function
 ms.assetid: eaf8cc82-1047-4144-9e77-0e1095df6143
-author: MashaMSFT
-ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 0227ad3719b7b3ca02fa8595ed8cccf6ff8705f6
-ms.sourcegitcommit: fc6a6eedcea2d98c93e33d39c1cecd99fbc9a155
+author: VanMSFT
+ms.author: vanto
+ms.openlocfilehash: 1420c5f8a1a16dc7430af0b445a8464c16d1b763
+ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49169212"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "73982949"
 ---
-# <a name="haspermsbyname-transact-sql"></a>HAS_PERMS_BY_NAME (Transact-SQL)
+# <a name="has_perms_by_name-transact-sql"></a>HAS_PERMS_BY_NAME (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   セキュリティ保護可能なリソースに対して現在のユーザーが持つ有効な権限を評価します。 関連する関数は [fn_my_permissions](../../relational-databases/system-functions/sys-fn-my-permissions-transact-sql.md) です。  
@@ -50,18 +49,18 @@ HAS_PERMS_BY_NAME ( securable , securable_class , permission
  セキュリティ保護可能なリソースの名前を指定します。 セキュリティ保護可能なリソースがサーバー自体の場合、この値は NULL に設定する必要があります。 *securable* には **sysname** 型のスカラー式を指定します。 既定値はありません。  
   
  *securable_class*  
- 権限を評価するセキュリティ保護可能なリソースのクラスの名前を指定します。 *securable_class* には **nvarchar(60)** 型のスカラー式を指定します。  
+ 権限のテスト対象とするセキュリティ保護可能なリソースのクラスの名前を指定します。 *securable_class* には **nvarchar(60)** 型のスカラー式を指定します。  
   
- [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] において、securable_class 引数は、**DATABASE**、**OBJECT**、**ROLE**、**SCHEMA**、**USER** のうちのいずれか 1 つに設定する必要があります。  
+ [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] では、securable_class 引数を次のいずれかに設定する必要があります。**DATABASE**、**OBJECT**、**ROLE**、**SCHEMA**、または **USER**。  
   
  *permission*  
- チェックする権限名を表す、NULL 以外の **sysname** 型のスカラー式を指定します。 既定値はありません。 権限名 ANY はワイルドカードとして扱われます。  
+ チェックする権限名を表す、NULL 以外の **sysname** 型のスカラー式を指定します。 既定値はありません。 権限名 ANY はワイルドカードです。  
   
  *sub-securable*  
  権限をチェックするセキュリティ保護可能なサブエンティティの名前を表す、**sysname** 型のスカラー式を指定します (省略可能)。 既定値は NULL です。  
   
 > [!NOTE]  
->  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] までのバージョンの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、sub-securables に **'[**_sub name_**]'** の形式で角かっこを使用することはできません。 代わりに **'**_sub name_**'** を使用してください。  
+>  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 以降のバージョンでは、sub-securables に **'[** _sub name_ **]'** の形式で角かっこを使用することはできません。 代わりに **'** _sub name_ **'** を使用してください。  
   
  *sub-securable_class*  
  権限をチェックするセキュリティ保護可能なサブエンティティのクラスを表す、**nvarchar(60)** 型のスカラー式を指定します (省略可能)。 既定値は NULL です。  
@@ -84,7 +83,7 @@ HAS_PERMS_BY_NAME ( securable , securable_class , permission
   
 -   プリンシパルがメンバーとなっているロールまたはグループが保持しており、拒否されていない権限。  
   
- 権限の評価は、常に呼び出し元のセキュリティ コンテキストで実行されます。 ユーザーに有効な権限があるかどうかを評価するには、呼び出し元に、そのユーザーに対する IMPERSONATE 権限が必要です。  
+ 権限の評価は、常に呼び出し元のセキュリティ コンテキストで実行されます。 他のユーザーに有効な権限があるかどうかを評価する場合、呼び出し元には、そのユーザーに対する IMPERSONATE 権限が必要です。  
   
  スキーマ レベルのエンティティの場合、1 部、2 部、または 3 部構成の、NULL でない名前を使用できます。 データベース レベルのエンティティの場合、1 部構成の名前を使用できます。NULL 値は "現在のデータベース" を示します。 リソースがサーバー自体の場合は、"現在のサーバー" を表す NULL 値を使用する必要があります。 この関数では、リンク サーバーに対する権限や、サーバー レベルのプリンシパルが作成されていない Windows ユーザーの権限をチェックできません。  
   
@@ -96,9 +95,9 @@ SELECT class_desc FROM sys.fn_builtin_permissions(default);
   
  次の照合順序が使用されます。  
   
--   現在のデータベースの照合順序: データベース レベルのセキュリティ保護可能なリソース (スキーマに含まれていないセキュリティ保護可能なリソースを含む)、スキーマ スコープの 1 部または 2 部構成のセキュリティ保護可能なリソース、3 部構成の名前を使用する場合は対象のデータベース。  
+-   現在のデータベースの照合順序: データベース レベルのセキュリティ保護可能なリソース (スキーマに含まれていないセキュリティ保護可能なリソースを含む)。スキーマ スコープの 1 部または 2 部構成のセキュリティ保護可能なリソース。3 部構成の名前を使用する場合のターゲット データベース。  
   
--   master データベースの照合順序 : サーバー レベルのセキュリティ保護可能なリソース。  
+-   マスター データベース照合順序: サーバー レベルのセキュリティ保護可能なリソース。  
   
 -   列レベルのチェックの場合、"ANY" はサポートされません。 適切な権限を指定する必要があります。  
   
@@ -106,7 +105,7 @@ SELECT class_desc FROM sys.fn_builtin_permissions(default);
   
 ### <a name="a-do-i-have-the-server-level-view-server-state-permission"></a>A. サーバー レベルの VIEW SERVER STATE 権限を保持しているかどうかをチェックする  
   
-**適用対象**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
+**適用対象**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 以降
   
 ```  
 SELECT HAS_PERMS_BY_NAME(null, null, 'VIEW SERVER STATE');  
@@ -114,7 +113,7 @@ SELECT HAS_PERMS_BY_NAME(null, null, 'VIEW SERVER STATE');
   
 ### <a name="b-am-i-able-to-impersonate-server-principal-ps"></a>B. サーバー プリンシパル Ps に対する IMPERSONATE 権限を保持しているかどうかをチェックする  
   
-**適用対象**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
+**適用対象**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 以降
   
 ```  
 SELECT HAS_PERMS_BY_NAME('Ps', 'LOGIN', 'IMPERSONATE');  

@@ -1,7 +1,7 @@
 ---
-title: SQL Server 2016 の別のエディションへのアップグレード (セットアップ) | Microsoft Docs
-ms.custom: ''
-ms.date: 07/24/2017
+title: 別のエディションへのアップグレード
+ms.custom: seo-lt-2019
+ms.date: 12/13/2019
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: install
@@ -10,13 +10,12 @@ ms.assetid: 31d16820-d126-4c57-82cc-27701e4091bc
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-manager: craigg
-ms.openlocfilehash: a7bbf62397971834da589d7232070300296f10c4
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.openlocfilehash: 996d0f90a76760c4c02a7a3d2bbf08f8c7ba6981
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51601952"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75258794"
 ---
 # <a name="upgrade-to-a-different-edition-of-sql-server-setup"></a>SQL Server の別のエディションへのアップグレード (セットアップ)
 
@@ -30,9 +29,9 @@ ms.locfileid: "51601952"
 - [SQL Server のインストールに必要なハードウェアおよびソフトウェア](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md)  
   
 > [!NOTE]  
-> **フェールオーバー クラスター インスタンスの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] フェールオーバー クラスター インスタンスのノードのいずれかで、エディションのアップグレードを実行するだけです。 このノードはアクティブとパッシブのいずれかになります。エディションのアップグレード中にリソースがオフラインになることはありません。 エディションをアップグレードした後は、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスを再起動するか、別のノードにフェールオーバーする必要があります。  
+> **フェールオーバー クラスター インスタンス上の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] フェールオーバー クラスター インスタンスのノードのいずれかで、エディションのアップグレードを実行するだけです。 このノードはアクティブとパッシブのいずれかになります。エディションのアップグレード中にリソースがオフラインになることはありません。 エディションをアップグレードした後は、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスを再起動するか、別のノードにフェールオーバーする必要があります。  
   
-## <a name="prerequisites"></a>Prerequisites  
+## <a name="prerequisites"></a>前提条件  
 ローカル インストールの場合は、セットアップを管理者として実行する必要があります。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] をリモート共有からインストールする場合は、そのリモート共有に対する読み取り権限を持つドメイン アカウントを使用する必要があります。  
   
 > [!IMPORTANT]  
@@ -64,7 +63,7 @@ ms.locfileid: "51601952"
   
 11. [完了] ページにインストールの概要ログ ファイルへのリンクと、その他の重要な注意事項が表示されます。  
   
-12. コンピューターの再起動を求めるメッセージが表示されたら、再起動してください。 セットアップが完了した時点で、インストール ウィザードによるメッセージを確認することが重要です。 セットアップ ログ ファイルの詳細については、「 [SQL Server セットアップ ログ ファイルの表示と読み取り](../../database-engine/install-windows/view-and-read-sql-server-setup-log-files.md)」をご覧ください。  
+12. コンピューターの再起動を求めるメッセージが表示されたら、再起動してください。 セットアップが完了した時点で、インストール ウィザードによるメッセージを確認することが重要です。 セットアップ ログ ファイルの詳細については、「 [SQL Server セットアップ ログ ファイルの表示と読み取り](../../database-engine/install-windows/view-and-read-sql-server-setup-log-files.md)」を参照してください。  
   
 13. [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)]からアップグレードした場合は、アップグレード済みの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]インスタンスを使用する前に、追加の手順を実行する必要があります。  
   

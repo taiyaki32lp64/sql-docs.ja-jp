@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 ms.assetid: 1b344449-6f7c-47d2-a737-972d88c0faf8
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 990e6b8f74eb2066175bcf92a22e2478ba4ef6de
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 1de9a0091fa072fccea4825d31deb50463f6cd8c
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56040404"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66109078"
 ---
 # <a name="general-properties-page-shared-data-sources-report-manager"></a>[全般] プロパティ ページ、共有データ ソース (レポート マネージャー)
   [全般] プロパティ ページでは、共有データ ソース アイテムのプロパティを表示または変更できます。 アイテムのプロパティに対して行った変更は、 **[適用]** をクリックしたときに、そのプロパティを参照するすべてのレポートに反映されます。  

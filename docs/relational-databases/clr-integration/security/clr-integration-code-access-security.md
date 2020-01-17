@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 2111cfe0-d5e0-43b1-93c3-e994ac0e9729
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 25f802f5c9cb67646903179c9100c7014fe466df
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: f49968392dd813b48f43e5e63586fd0c6bec71d8
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47802280"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68118517"
 ---
 # <a name="clr-integration-code-access-security"></a>CLR 統合のコード アクセス セキュリティ
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -30,18 +29,18 @@ ms.locfileid: "47802280"
   
  アセンブリに許可される権限を決定するセキュリティ ポリシーは、次の 3 つに分類されます。  
   
--   コンピューター ポリシー : [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] がインストールされているコンピューターで実行されるすべてのマネージド コードに対して効力を持つポリシーです。  
+-   マシン ポリシー:マシンで実行されているすべてのマネージ コードについて、ポリシーを有効になってこの[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]がインストールされています。  
   
--   ユーザー ポリシー : 特定のプロセスをホストとするマネージド コードに対して効力を持つポリシーです。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] の場合、ユーザー ポリシーは [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] サービスを実行している Windows アカウントに対して固有になります。  
+-   ユーザー ポリシー:これは、プロセスによってホストされるマネージド コードで有効なポリシーです。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] の場合、ユーザー ポリシーは [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] サービスを実行している Windows アカウントに対して固有になります。  
   
--   ホスト ポリシー : CLR のホスト (この場合は [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]) によって設定され、そのホストで実行されるマネージド コードに対して効力を持つポリシーです。  
+-   ホスト ポリシー:これは、CLR のホストを設定するポリシー (この場合、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]) そのホストで実行されるマネージ コードは有効にします。  
   
  CLR でサポートされるコード アクセス セキュリティ メカニズムは、ランタイムが完全に信頼されるコードと部分的に信頼されるコードの両方をホストできるという前提に基づいています。 CLR コード アクセス セキュリティで保護されるリソースは、通常、そのリソースへのアクセスを許可する前に適切な権限を必要とするマネージド アプリケーション プログラミング インターフェイスによってラップされます。 権限の要求は、(アセンブリ レベルで) 呼び出し履歴内のすべての呼び出し側が、対応するリソース権限を持つ場合にのみ満たされます。  
   
  マネージド コードを [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 内部で実行する際に許可されるコード アクセス セキュリティ権限のセットは、上記の 3 つのポリシー レベルで許可される権限のセットの共通部分です。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] に読み込まれたアセンブリに [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] が一連の権限を許可しても、最終的にユーザー コードに許可される権限セットは、ユーザー レベルおよびコンピューター レベルのポリシーによってさらに制限されることがあります。  
   
 ## <a name="sql-server-host-policy-level-permission-sets"></a>SQL Server ホスト ポリシー レベルの権限セット  
- [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ホスト ポリシー レベルでアセンブリに許可されるコード アクセス セキュリティ権限のセットは、アセンブリの作成時にどの権限セットを指定するかによって決定されます。 次の 3 つのアクセス許可セットがある:**セーフ**、 **EXTERNAL_ACCESS**と**UNSAFE** (を使用して指定、 **PERMISSION_SET** のオプション[アセンブリを作成&#40;TRANSACT-SQL&#41;](../../../t-sql/statements/create-assembly-transact-sql.md))。  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ホスト ポリシー レベルでアセンブリに許可されるコード アクセス セキュリティ権限のセットは、アセンブリの作成時にどの権限セットを指定するかによって決定されます。 これには次の 3 つのアクセス許可セットがあります。**安全な**、 **EXTERNAL_ACCESS**と**UNSAFE** (を使用して指定、 **PERMISSION_SET**オプションの[CREATE ASSEMBLY &#40;Transact-SQL&#41;](../../../t-sql/statements/create-assembly-transact-sql.md))。  
   
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] は、CLR のホスト時に、ホスト レベルのセキュリティ ポリシー レベルを提供します。このポリシーは、常に効力を持つ 2 つのポリシー レベルより下位の追加ポリシー レベルになります。 このポリシーは、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]によって作成されるアプリケーション ドメインごとに設定されます。 このポリシーは、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] が CLR のインスタンスを作成するときに有効になる、既定のアプリケーション ドメイン用ではありません。  
   
@@ -58,8 +57,8 @@ ms.locfileid: "47802280"
   
 |権限|値/説明|  
 |----------------|-----------------------------|  
-|**SecurityPermission**|**実行:** マネージ コードを実行する権限。|  
-|**SqlClientPermission**|**コンテキスト接続 = true**、**コンテキスト接続 = [はい]**: のみコンテキスト接続を使用し、接続文字列は、の値を指定できますのみ"コンテキスト接続 = true"または"コンテキスト接続 = [はい]"。<br /><br /> **AllowBlankPassword = false:** 空白のパスワードは許可されていません。|  
+|**SecurityPermission**|**実行:** マネージ コードを実行する権限です。|  
+|**SqlClientPermission**|**コンテキスト接続 = true**、**コンテキスト接続 = [はい]** :コンテキスト接続を使用して、接続文字列は、の値を指定できますのみ専用"コンテキスト接続 = true"または"コンテキスト接続 = [はい]"。<br /><br /> **AllowBlankPassword = false。** 空のパスワードを指定することはできません。|  
   
 ### <a name="externalaccess"></a>EXTERNAL_ACCESS  
  EXTERNAL_ACCESS アセンブリと同じアクセス許可がある**セーフ**アセンブリ、追加ファイル、ネットワーク、環境変数、レジストリなどの外部システム リソースにアクセスすることができます。  
@@ -68,20 +67,20 @@ ms.locfileid: "47802280"
   
 |権限|値/説明|  
 |----------------|-----------------------------|  
-|**DistributedTransactionPermission**|**無制限の:** 分散トランザクションが許可されます。|  
-|**コード**|**無制限の:** ドメイン ネーム サーバーから情報を要求するアクセス許可。|  
-|**EnvironmentPermission**|**無制限の:** 完全なシステムおよびユーザーの環境変数へのアクセスを許可します。|  
-|**EventLogPermission**|**管理:** 次の操作を許可する: イベント ソースまたはログをオフにすると、イベントをリッスンして、すべてのイベント ログのコレクションへのアクセスのイベント ログ エントリに対する応答を削除する既存のログを読み取るイベント ソースを作成します。|  
-|**FileIOPermission**|**無制限:** ファイルへのフル アクセス、フォルダーを許可します。|  
-|**KeyContainerPermission**|**無制限の:** 完全なキー コンテナーへのアクセスを許可します。|  
-|**NetworkInformationPermission**|**アクセス:** Pinging が許可されます。|  
+|**DistributedTransactionPermission**|**無制限の。** 分散トランザクションが許可されます。|  
+|**コード**|**無制限の。** ドメイン ネーム サーバーから情報を要求する権限です。|  
+|**EnvironmentPermission**|**無制限の。** システムとユーザーの環境変数へのフル アクセスが許可されます。|  
+|**EventLogPermission**|**管理します。** 次の操作を許可する: イベント ソースまたはログをオフにすると、イベントをリッスンして、すべてのイベント ログのコレクションへのアクセスのイベント ログ エントリに対する応答を削除する既存のログを読み取るイベント ソースを作成します。|  
+|**FileIOPermission**|**無制限の。** ファイルとフォルダーへのフル アクセスを許可します。|  
+|**KeyContainerPermission**|**無制限の。** キー コンテナーへのフル アクセスを許可します。|  
+|**NetworkInformationPermission**|**アクセス:** Ping が許可されます。|  
 |**RegistryPermission**|読み取り権限を許可**HKEY_CLASSES_ROOT**、 **HKEY_LOCAL_MACHINE**、 **HKEY_CURRENT_USER**、 **HKEY_CURRENT_CONFIG**、および**HKEY_USERS します。**|  
-|**SecurityPermission**|**アサーション:** このコードのすべての呼び出し元に、操作に必要な権限があることをアサートする機能。<br /><br /> **ControlPrincipal:** プリンシパル オブジェクトを操作する機能。<br /><br /> **実行:** マネージ コードを実行する権限。<br /><br /> **:** シリアル化サービスを提供する機能。|  
-|**SmtpPermission**|**アクセス:** SMTP ホスト ポート 25 への発信接続を許可します。|  
-|**SocketPermission**|**接続:** トランスポート アドレスで送信接続 (すべてのポートおよびプロトコル) が許可されます。|  
-|**SqlClientPermission**|**無制限の:** 完全なデータ ソースへのアクセスを許可します。|  
-|**StorePermission**|**無制限:** フル アクセスを X.509 証明書ストアを許可します。|  
-|**WebPermission**|**接続:** web リソースへの発信接続を許可します。|  
+|**SecurityPermission**|**アサーション:** このコードのすべての呼び出し元に、操作に必要な権限があることをアサートする機能。<br /><br /> **ControlPrincipal:** プリンシパル オブジェクトを操作する権限です。<br /><br /> **実行:** マネージ コードを実行する権限です。<br /><br /> **する:** シリアル化サービスを提供する機能。|  
+|**SmtpPermission**|**アクセス:** SMTP ホスト ポート 25 への発信接続が許可されています。|  
+|**SocketPermission**|**接続します。** トランスポート アドレスでの発信接続 (すべてのポートおよびプロトコル) が許可されます。|  
+|**SqlClientPermission**|**無制限の。** データ ソースへのフル アクセスを許可します。|  
+|**StorePermission**|**無制限の。** X.509 証明書ストアへのフル アクセスが許可されます。|  
+|**WebPermission**|**接続します。** Web リソースへの発信接続が許可されています。|  
   
 ### <a name="unsafe"></a>UNSAFE  
  UNSAFE では、アセンブリから [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] の内外のリソースにも無制限にアクセスできます。 内から実行されるコード、 **UNSAFE**アセンブリはアンマネージ コードを呼び出すこともできます。  
@@ -94,7 +93,7 @@ ms.locfileid: "47802280"
 ## <a name="accessing-external-resources"></a>外部リソースへのアクセス  
  ユーザー定義型 (UDT)、ストアド プロシージャ、またはその他の種類のコンストラクト アセンブリに登録されている場合、**セーフ**アクセス許可を設定し、コンストラクトで実行されるマネージ コードでは外部リソースにアクセスできません。 ただし、いずれか、 **EXTERNAL_ACCESS**または**UNSAFE**アクセス許可セットが指定され、マネージ コードが、外部のリソースにアクセスしようとしています。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 、次の規則が適用されます。  
   
-|状況|そうしたら|  
+|If|Then|  
 |--------|----------|  
 |実行コンテキストが [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ログインに対応している場合。|外部リソースへのアクセスが拒否され、セキュリティ例外が発生します。|  
 |実行コンテキストが Windows ログインに対応していると同時に、本来の呼び出し元である場合。|外部リソースへのアクセスは、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] サービス アカウントのセキュリティ コンテキストで行われます。|  
@@ -109,11 +108,11 @@ ms.locfileid: "47802280"
 ||**SAFE**|**EXTERNAL_ACCESS**|**UNSAFE**|  
 |**コード アクセス セキュリティ アクセス許可**|実行のみ|実行および外部リソースへのアクセス|無制限 (P/Invoke を含む)|  
 |**プログラミング モデルの制限**|はい|はい|制限なし|  
-|**検証の必要性**|はい|はい|いいえ|  
-|**ローカル データ アクセス**|はい|はい|はい|  
+|**検証の必要性**|[はい]|[はい]|いいえ|  
+|**ローカル データ アクセス**|[はい]|[はい]|[はい]|  
 |**ネイティブ コードを呼び出す機能**|いいえ|いいえ|はい|  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [CLR 統合のセキュリティ](../../../relational-databases/clr-integration/security/clr-integration-security.md)   
  [ホスト保護属性と CLR 統合プログラミング](../../../relational-databases/clr-integration-security-host-protection-attributes/host-protection-attributes-and-clr-integration-programming.md)   
  [CLR 統合プログラミング モデルの制限事項](../../../relational-databases/clr-integration/database-objects/clr-integration-programming-model-restrictions.md)   

@@ -9,15 +9,15 @@ ms.topic: conceptual
 helpviewer_keywords:
 - business logic [XML]
 ms.assetid: 0877fb38-f1a2-43d8-86cf-4754be224dc1
-author: douglaslMS
-ms.author: douglasl
+author: MightyPen
+ms.author: genemi
 manager: craigg
-ms.openlocfilehash: d548353668aadbf67f2c0bc39c7e69eea756c041
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: ca0953b9ac191dfb765992f79988f3cc1502dfa4
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48078499"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68211565"
 ---
 # <a name="add-business-logic-to-xml-data"></a>XML データへのビジネス ロジックの追加
   XML データにはいくつかの方法でビジネス ロジックを追加できます。  
@@ -30,7 +30,7 @@ ms.locfileid: "48078499"
   
 -   ビジネス ニーズに合わせて XML 列の処理を開始する Transact-SQL ストアド プロシージャや関数を記述できます。  
   
-## <a name="example-applying-xsl-transformation"></a>例 : XSL 変換の適用  
+## <a name="example-applying-xsl-transformation"></a>例: XSL 変換の適用  
  CLR 関数を考えてみます**TransformXml()** を受け入れる、`xml`データ型のインスタンスおよびファイルに格納されている XSL 変換、変換が、XML データに適用および結果の変換後の XML を返します。 次に示すのは、C# で記述した関数の骨組みです。  
   
 ```  

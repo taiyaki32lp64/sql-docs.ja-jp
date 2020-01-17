@@ -21,14 +21,13 @@ helpviewer_keywords:
 ms.assetid: 8dfb7b16-3dac-4e1e-8c97-adf2aad07830
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: 304e5ec2722f8556c2d9c873f4ff5c3cfab4b7d2
-ms.sourcegitcommit: 97340deee7e17288b5eec2fa275b01128f28e1b8
+ms.openlocfilehash: 1e05ad220147e7f46bfaa66127fcc492aaeae6a2
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55421089"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67927184"
 ---
 # <a name="alter-route-transact-sql"></a>ALTER ROUTE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
@@ -60,12 +59,12 @@ WITH
  WITH  
  変更するルート情報を定義するための句を、WITH の後に指定します。  
   
- SERVICE_NAME **='**_service\_name_**'**  
+ SERVICE_NAME **='** _service\_name_ **'**  
  このルートが示すリモート サービスの名前を指定します。 *service_name* はリモート サービスで使用される名前と正確に一致する必要があります。 [!INCLUDE[ssSB](../../includes/sssb-md.md)] は *service_name* をバイト単位で照合します。 つまり、この比較では大文字と小文字が区別され、現在の照合順序は考慮されません。 **'SQL/ServiceBroker/BrokerConfiguration'** というサービス名を持つルートは、Broker Configuration Notice サービスへのルートです。 このサービスへのルートは、ブローカー インスタンスを指定できない場合があります。  
   
  SERVICE_NAME 句を省略した場合、ルートのサービス名は変更されません。  
   
- BROKER_INSTANCE **='**_broker\_instance_**'**  
+ BROKER_INSTANCE **='** _broker\_instance_ **'**  
  発信先サービスをホストするデータベースを指定します。 *broker_instance* パラメーターは、リモート データベース用のブローカー インスタンス識別子である必要があります。これは選択したデータベースで次のクエリを実行することにより取得できます。  
   
 ```  
@@ -79,14 +78,14 @@ WHERE database_id = DB_ID();
 > [!NOTE]  
 >  このオプションは、包含データベースでは使用できません。  
   
- LIFETIME **=**_route\_lifetime_  
+ LIFETIME **=** _route\_lifetime_  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] がルーティング テーブルにルートを保持する時間を秒単位で指定します。 有効期間が終了するとルートは期限切れとなり、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、新しいメッセージ交換用のルートを選択するときに、そのルートは考慮されなくなります。 この句を省略した場合、ルートの有効期限は変更されません。  
   
- ADDRESS **='**_next\_hop\_address_'  
+ ADDRESS **='** _next\_hop\_address_'  
 
  Azure SQL Database マネージド インスタンスの場合、`ADDRESS` はローカルである必要があります。
 
- ルート用のネットワーク アドレスを指定します。 *next_hop_address* の次の形式で TCP/IP アドレスを指定します。  
+ このルート用のネットワーク アドレスを指定します。 *next_hop_address* の次の形式で TCP/IP アドレスを指定します。  
   
  **TCP://** { *dns_name* | *netbios_name* |*ip_address* } **:** *port_number*  
   
@@ -109,10 +108,10 @@ WHERE ssbe.name = N'MyServiceBrokerEndpoint';
 > [!NOTE]  
 >  このオプションは、包含データベースでは使用できません。  
   
- MIRROR_ADDRESS **='**_next\_hop\_mirror\_address_**'**  
+ MIRROR_ADDRESS **='** _next\_hop\_mirror\_address_ **'**  
  プリンシパル サーバーが *next_hop_address* となっているミラーリング ペアのミラー サーバーのネットワーク アドレスを指定します。 *next_hop_mirror_address* は、次の形式で TCP/IP アドレスを指定します。  
   
- **TCP://**{ *dns_name* | *netbios_name* | *ip_address* } **:** *port_number*  
+ **TCP://** { *dns_name* | *netbios_name* | *ip_address* } **:** *port_number*  
   
  指定した *port_number* は、指定したコンピューターにおける [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスの [!INCLUDE[ssSB](../../includes/sssb-md.md)] エンドポイント用のポート番号と一致する必要があります。 これは選択したデータベースで次のクエリを実行することにより取得できます。  
   
@@ -130,9 +129,9 @@ WHERE ssbe.name = N'MyServiceBrokerEndpoint';
 >  このオプションは、包含データベースでは使用できません。  
   
 ## <a name="remarks"></a>Remarks  
- ルートを格納するルーティング テーブルは、**sys.routes** カタログ ビューを使用して読み取ることができるメタデータ テーブルです。 このルーティング テーブルは、CREATE ROUTE、ALTER ROUTE、および DROP ROUTE ステートメントでのみ更新できます。  
+ ルートを格納するルーティング テーブルは、**sys.routes** カタログ ビューを使用して読み取ることができるメタデータ テーブルです。 このルーティング テーブルは、CREATE ROUTE、ALTER ROUTE、DROP ROUTE ステートメントでのみ更新できます。  
   
- ALTER ROUTE コマンドで指定できない句に関する情報は、変更されません。 したがって、ALTER を使用して、ルートのタイムアウトを無効にしたり、ルートをすべてのサービス名やブローカー インスタンスと照合するような変更はできません。 このようなルート情報を変更するには、既存のルートを削除して新しいルートを作成し、新しい情報を指定する必要があります。  
+ ALTER ROUTE コマンドで指定されない句は、変更されません。 したがって、ALTER を使用して、ルートのタイムアウトを無効にしたり、ルートをすべてのサービス名やブローカー インスタンスと照合したりするようにルートを変更することはできません。 このようなルートの特性を変更するには、既存のルートを削除して新しいルートを作成し、新しい情報を指定する必要があります。  
   
  ルートが *next_hop_address* に **'TRANSPORT'** を指定した場合、ネットワーク アドレスはサービスの名前に基づいて決定されます。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、*next_hop_address* のネットワーク アドレスが有効な形式であれば、このネットワーク アドレスで始まるサービス名が適切に処理されます。 名前に有効なネットワーク アドレスが含まれているサービスは、そのサービス名のネットワーク アドレスにルートされます。  
   
@@ -154,7 +153,7 @@ ALTER ROUTE ExpenseRoute
      SERVICE_NAME = '//Adventure-Works.com/Expenses';  
 ```  
   
-### <a name="b-changing-the-target-database-for-a-route"></a>B. ルートの対象データベースを変更する  
+### <a name="b-changing-the-target-database-for-a-route"></a>B. ルートのターゲット データベースを変更する  
  次の例では、`ExpenseRoute` ルートの対象データベースを、一意識別子 `D8D4D268-00A3-4C62-8F91-634B89B1E317.` によって指定されるデータベースに変更します。  
   
 ```  

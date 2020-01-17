@@ -17,14 +17,13 @@ helpviewer_keywords:
 ms.assetid: 671577e4-d757-4b8d-9aa9-0fc8d51ea9ca
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: e5e90fb00a74324cce6267e372199153707ca7ee
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 9e059265dc5f5e0d2e4bc4a3b1396d2401386d7b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47726110"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68102375"
 ---
 # <a name="sysmaskedcolumns-transact-sql"></a>sys.masked_columns (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -37,13 +36,13 @@ ms.locfileid: "47726110"
 |NAME|**sysname**|列の名前です。 オブジェクト内で一意です。|  
 |column_id|**int**|列の ID です。 オブジェクト内で一意です。<br /><br /> 列 ID は連続した値にならないことがあります。|  
 |**sys.masked_columns**から継承された数の多い列を返します**sys.columns**します。|さまざまな|参照してください[sys.columns &#40;TRANSACT-SQL&#41; ](../../relational-databases/system-catalog-views/sys-columns-transact-sql.md)列定義の詳細についてはします。|  
-|is_masked|**bit**|列はマスクされているかどうかを示します。 1 には、マスクのことを示します。|  
-|masking_function|**nvarchar (4000)**|列のマスキング関数。|  
+|is_masked|**bit**|列がマスクされるかどうかを示します。 1 には、マスクのことを示します。|  
+|masking_function|**nvarchar (4000)**|列のマスク関数です。|  
   
 ## <a name="remarks"></a>コメント  
   
 ## <a name="permissions"></a>アクセス許可  
- このビューは、ユーザーが、テーブルにある種のアクセス許可を持っているか、ユーザーが VIEW ANY DEFINITION 権限を持つかどうかに、テーブルに関する情報を返します。  
+ このビューは、ユーザーがテーブルに何らかのアクセス許可を持っているか、ユーザーが VIEW ANY DEFINITION 権限を持っているテーブルに関する情報を返します。  
   
 ## <a name="example"></a>例  
  次のクエリの結合**sys.masked_columns**に**sys.tables**すべてに関する情報を返すには、列をマスクします。  
@@ -56,8 +55,8 @@ JOIN sys.tables AS tbl
 WHERE is_masked = 1;  
 ```  
   
-## <a name="see-also"></a>参照  
- [動的データ マスク](../../relational-databases/security/dynamic-data-masking.md)   
+## <a name="see-also"></a>関連項目  
+ [動的なデータ マスキング](../../relational-databases/security/dynamic-data-masking.md)   
  [sys.columns &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-columns-transact-sql.md)  
   
   

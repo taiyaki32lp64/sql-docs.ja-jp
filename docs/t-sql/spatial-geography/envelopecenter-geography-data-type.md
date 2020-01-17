@@ -15,15 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - EnvelopeCenter method
 ms.assetid: dee9d807-faad-45b8-b3f3-7e8aa7d07147
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: 9b81d00f3cb8e208cd2fa34792a2d61943ff1bca
-ms.sourcegitcommit: c61c7b598aa61faa34cd802697adf3a224aa7dc4
+author: MladjoA
+ms.author: mlandzic
+ms.openlocfilehash: da1c2fd6f1e6732f28f79196b433b8e46a595a85
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56154937"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68066433"
 ---
 # <a name="envelopecenter-geography-data-type"></a>EnvelopeCenter (geography データ型 )
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]

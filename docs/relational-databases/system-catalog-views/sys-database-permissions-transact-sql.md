@@ -1,5 +1,5 @@
 ---
-title: sys.database_permissions (TRANSACT-SQL) |Microsoft Docs
+title: database_permissions (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 08/11/2017
 ms.prod: sql
@@ -19,46 +19,45 @@ helpviewer_keywords:
 ms.assetid: c1e261f8-6cb0-4759-b5f1-5ec233602655
 author: VanMSFT
 ms.author: vanto
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 04d86251149708aa521166018d643fe8735d3ec6
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a87be6fe0a68172a99ade4704ae4111cabbe95f1
+ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47837532"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "73982728"
 ---
-# <a name="sysdatabasepermissions-transact-sql"></a>sys.database_permissions (Transact-SQL)
+# <a name="sysdatabase_permissions-transact-sql"></a>database_permissions (Transact-sql)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-  データベースに含まれている、権限ごとまたは列例外の権限ごとに 1 行のデータを返します。 列権限が、対応するオブジェクトレベルの権限とは異なる場合、列権限ごとに行が存在します。 列権限がオブジェクトに対応する権限と同じである場合、その行がないと、適用されるアクセス許可は、オブジェクトの。  
+  データベースに含まれている、権限ごとまたは列例外の権限ごとに 1 行のデータを返します。 列権限が、対応するオブジェクトレベルの権限とは異なる場合、列権限ごとに行が存在します。 列権限が対応するオブジェクト権限と同じ場合、その行は存在せず、適用されている権限はオブジェクトの権限です。  
   
 > [!IMPORTANT]  
->  列レベルの権限は、同じエンティティ上のオブジェクトレベルの権限をオーバーライドします。  
+>  列レベルの権限は、同じエンティティに対するオブジェクトレベルの権限をオーバーライドします。  
   
-|列名|データ型|説明|  
+|列名|データ型|[説明]|  
 |-----------------|---------------|-----------------|  
-|**class**|**tinyint**|権限が存在するクラスの識別子。<br /><br /> 0 = データベース<br />1 = オブジェクトまたは列<br />3 = スキーマ<br />4 = データベース プリンシパル<br />5 = アセンブリが**に適用されます**:[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]を通じて[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]します。<br />6 = 型<br />10 = XML スキーマ コレクションの場合 - <br />                      **適用対象**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]<br />15 = メッセージの種類 -**に適用されます**:[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]を通じて[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]します。<br />16 = サービス コントラクトの**に適用されます**:[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]を通じて[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]します。<br />17 = サービス -**に適用されます**:[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]を通じて[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]します。<br />18 = リモート サービス バインドの**に適用されます**:[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]を通じて[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]します。<br />19 = ルート -**に適用されます**:[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]を通じて[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]します。<br />23 = フルテキスト カタログ -**に適用されます**:[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]を通じて[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]します。<br />24 = 対称キー -**に適用されます**:[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]を通じて[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]します。<br />25 = 証明書 -**に適用されます**:[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]を通じて[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]します。<br />26 = 非対称キー -**に適用されます**:[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]を通じて[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]します。|  
-|**class_desc**|**nvarchar(60)**|権限が存在するクラスの説明。<br /><br /> DATABASE<br /><br /> OBJECT_OR_COLUMN<br /><br /> SCHEMA<br /><br /> DATABASE_PRINCIPAL<br /><br /> ASSEMBLY<br /><br /> TYPE<br /><br /> XML_SCHEMA_COLLECTION<br /><br /> MESSAGE_TYPE<br /><br /> SERVICE_CONTRACT<br /><br /> SERVICE<br /><br /> REMOTE_SERVICE_BINDING<br /><br /> ROUTE<br /><br /> FULLTEXT_CATALOG<br /><br /> SYMMETRIC_KEYS<br /><br /> CERTIFICATE<br /><br /> ASYMMETRIC_KEY|  
-|**major_id**|**int**|権限が存在するリソースの ID。クラスに基づいて解釈されます。 通常、 **major_id**はクラス自体に適用される ID の種類だけです。 <br /><br /> 0 = データベース自体 <br /><br /> > 0 = ユーザー オブジェクトのためのオブジェクト Id <br /><br /> \<0 = システム オブジェクトのためのオブジェクト Id |  
-|**minor_id**|**int**|アクセス許可が存在するリソースのセカンダリ ID は、クラスに基づいて解釈されます。 多くの場合、 **minor_id** 0 の場合は、オブジェクトのクラスのサブカテゴリがないためです。 それ以外の場合、テーブルの列 ID を勧めします。|  
-|**grantee_principal_id**|**int**|権限が許可されているデータベース プリンシパル ID。|  
-|**grantor_principal_id**|**int**|権限の許可者のデータベース プリンシパル ID。|  
-|**type**|**char(4)**|データベース権限の種類。 権限の種類の一覧については、次の表を参照してください。|  
+|**class**|**tinyint**|権限が存在するクラスを識別します。<br /><br /> 0 = データベース<br />1 = オブジェクトまたは列<br />3 = スキーマ<br />4 = データベースプリンシパル<br />5 = アセンブリ**適用対象**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 以降。<br />6 = 型<br />10 = XML スキーマコレクション- <br />                      **適用対象**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 以降。<br />15 = メッセージの種類: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 以降**に適用さ**れます。<br />16 = サービスコントラクト: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 以降**に適用さ**れます。<br />17 = サービス**適用対象**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 以降。<br />18 = リモートサービスバインド: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 以降**に適用さ**れます。<br />19 = ルート: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 以降**に適用さ**れます。<br />23 = フルテキストカタログ-**に適用さ**れます: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 以降。<br />24 = 対称キー: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 以降**に適用さ**れます。<br />25 = 証明書: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 以降**に適用さ**れます。<br />26 = 非対称キー: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 以降**に適用さ**れます。|  
+|**class_desc**|**nvarchar(60)**|権限が存在するクラスの説明です。<br /><br /> DATABASE<br /><br /> OBJECT_OR_COLUMN<br /><br /> SCHEMA<br /><br /> DATABASE_PRINCIPAL<br /><br /> ASSEMBLY<br /><br /> TYPE<br /><br /> XML_SCHEMA_COLLECTION<br /><br /> MESSAGE_TYPE<br /><br /> SERVICE_CONTRACT<br /><br /> SERVICE<br /><br /> REMOTE_SERVICE_BINDING<br /><br /> ROUTE<br /><br /> FULLTEXT_CATALOG<br /><br /> SYMMETRIC_KEYS<br /><br /> CERTIFICATE<br /><br /> ASYMMETRIC_KEY|  
+|**major_id**|**int**|権限が存在する対象の ID。クラスに従って解釈されます。 通常、 **major_id**は、クラスが表すものに適用される id の種類にすぎません。 <br /><br /> 0 = データベース自体 <br /><br /> > 0 = ユーザーオブジェクトのオブジェクト Id <br /><br /> \<0 = システムオブジェクトのオブジェクト Id |  
+|**minor_id**|**int**|権限が存在することを示すセカンダリ ID。クラスに従って解釈されます。 多くの場合、オブジェクトのクラスに使用できるサブカテゴリがないため、 **minor_id**は0になります。 それ以外の場合は、テーブルの列 ID です。|  
+|**grantee_principal_id**|**int**|権限が許可されるデータベースプリンシパル ID。|  
+|**grantor_principal_id**|**int**|これらのアクセス許可の権限の許可のあるデータベースプリンシパル ID。|  
+|**型**|**char (4)**|データベース権限の種類。 権限の種類の一覧については、次の表を参照してください。|  
 |**permission_name**|**nvarchar(128)**|権限名。|  
-|**state**|**char(1)**|権限の状態。<br /><br /> D = 拒否<br /><br /> R = 取り消し<br /><br /> G = 許可<br /><br /> W = 許可の許可オプション|  
+|**state**|**char(1)**|アクセス許可の状態:<br /><br /> D = 拒否<br /><br /> R = 取り消し<br /><br /> G = 許可<br /><br /> W = 許可の許可オプション|  
 |**state_desc**|**nvarchar(60)**|権限の状態の説明。<br /><br /> DENY<br /><br /> REVOKE<br /><br /> GRANT<br /><br /> GRANT_WITH_GRANT_OPTION|  
 
 ## <a name="database-permissions"></a>データベース権限   
-次の種類のアクセス許可もあります。
+次の種類のアクセス許可が可能です。
   
-|権限の種類|アクセス許可の名前|適用されるセキュリティ保護可能なリソース|  
+|権限の種類|アクセス許可名|適用されるセキュリティ保護可能なリソース|  
 |---------------------|---------------------|--------------------------|  
 |AADS |ALTER ANY DATABASE EVENT SESSION |DATABASE |  
 |AAMK |任意のマスクを変更します。 |DATABASE |  
 |AEDS |すべての外部データ ソースを変更します。 |DATABASE |  
 |AEFF |任意の外部のファイル形式を変更します。 |DATABASE |  
-|AL|ALTER|APPLICATION ROLE、ASSEMBLY、ASYMMETRIC KEY、CERTIFICATE、CONTRACT、DATABASE、FULLTEXT CATALOG、MESSAGE TYPE、OBJECT、REMOTE SERVICE BINDING、ROLE、ROUTE、SCHEMA、SERVICE、SYMMETRIC KEY、USER、XML SCHEMA COLLECTION|  
+|AL|ALTER|アプリケーションロール、アセンブリ、非対称キー、証明書、コントラクト、データベース、フルテキストカタログ、メッセージの種類、オブジェクト、リモートサービスバインド、ロール、ルート、スキーマ、サービス、対称キー、ユーザー、XML スキーマコレクション|  
 |ALAK|ALTER ANY ASYMMETRIC KEY|DATABASE|  
 |ALAR|ALTER ANY APPLICATION ROLE|DATABASE|  
 |ALAS|ALTER ANY ASSEMBLY|DATABASE|  
@@ -103,44 +102,44 @@ ms.locfileid: "47837532"
 |CRSK|CREATE SYMMETRIC KEY|DATABASE|  
 |CRSM|CREATE SCHEMA|DATABASE|  
 |CRSN|CREATE SYNONYM|DATABASE|  
-|CRSO|**適用対象**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]<br /><br /> CREATE SEQUENCE|DATABASE|  
+|CRSO|**適用対象**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 以降。<br /><br /> CREATE SEQUENCE|DATABASE|  
 |CRSV|CREATE SERVICE|DATABASE|  
 |CRTB|CREATE TABLE|DATABASE|  
 |CRTY|CREATE TYPE|DATABASE|  
 |CRVW|CREATE VIEW|DATABASE|  
-|CRXS|**適用対象**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]<br /><br /> CREATE XML SCHEMA COLLECTION|DATABASE|  
+|CRXS|**適用対象**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 以降。<br /><br /> CREATE XML SCHEMA COLLECTION|DATABASE|  
 |DABO |ADMINISTER DATABASE BULK OPERATIONS | DATABASE |
-|DL|Del|DATABASE、OBJECT、SCHEMA|  
+|DL|DELETE|データベース、オブジェクト、スキーマ|  
 |EAES |EXECUTE ANY EXTERNAL SCRIPT |DATABASE |
-|EX|EXECUTE|ASSEMBLY、DATABASE、OBJECT、SCHEMA、TYPE、XML SCHEMA COLLECTION|  
+|EX|CREATE ステートメントを実行する前に、|ASSEMBLY、DATABASE、OBJECT、SCHEMA、TYPE、XML SCHEMA COLLECTION|  
 |IM|IMPERSONATE|User|  
-|IN|INSERT|DATABASE、OBJECT、SCHEMA|  
+|IN|Insert|データベース、オブジェクト、スキーマ|  
 |RC|RECEIVE|OBJECT|  
-|RF|REFERENCES|ASSEMBLY、ASYMMETRIC KEY、CERTIFICATE、CONTRACT、DATABASE、FULLTEXT CATALOG、MESSAGE TYPE、OBJECT、SCHEMA、SYMMETRIC KEY、TYPE、XML SCHEMA COLLECTION|  
-|SL|SELECT|DATABASE、OBJECT、SCHEMA|  
+|RF|REFERENCES|アセンブリ、非対称キー、証明書、コントラクト、データベース、フルテキストカタログ、メッセージ型、オブジェクト、スキーマ、対称キー、型、XML スキーマコレクション|  
+|SL|SELECT|データベース、オブジェクト、スキーマ|  
 |SN|SEND|SERVICE|  
 |SPLN|SHOWPLAN|DATABASE|  
 |SUQN|SUBSCRIBE QUERY NOTIFICATIONS|DATABASE|  
 |TO|TAKE OWNERSHIP|ASSEMBLY、ASYMMETRIC KEY、CERTIFICATE、CONTRACT、DATABASE、FULLTEXT CATALOG、MESSAGE TYPE、OBJECT、REMOTE SERVICE BINDING、ROLE、ROUTE、SCHEMA、SERVICE、SYMMETRIC KEY、TYPE、XML SCHEMA COLLECTION|  
-|UP|UPDATE|DATABASE、OBJECT、SCHEMA|  
+|UP|UPDATE|データベース、オブジェクト、スキーマ|  
 |VW|VIEW DEFINITION|APPLICATION ROLE、ASSEMBLY、ASYMMETRIC KEY、CERTIFICATE、CONTRACT、DATABASE、FULLTEXT CATALOG、MESSAGE TYPE、OBJECT、REMOTE SERVICE BINDING、ROLE、ROUTE、SCHEMA、SERVICE、SYMMETRIC KEY、TYPE、USER、XML SCHEMA COLLECTION|  
 |VWCK |列の暗号化キーの定義を表示します。|DATABASE |  
 |VWCM |任意の列のマスター_キーの定義の表示|DATABASE |  
-|VWCT|VIEW CHANGE TRACKING|TABLE、SCHEMA|  
+|VWCT|VIEW CHANGE TRACKING|テーブル、スキーマ|  
 |VWDS|VIEW DATABASE STATE|DATABASE|  
   
 ## <a name="permissions"></a>アクセス許可  
- すべてのユーザーは自分の権限を参照できます。 他のユーザーの権限を参照するには、VIEW DEFINITION、ALTER ANY USER、またはユーザーに対するすべての権限が必要です。 ユーザー定義ロールを参照するには、ALTER ANY ROLE、またはロール (public など) のメンバーシップが必要です。  
+ すべてのユーザーは自分の権限を参照できます。 他のユーザーの権限を表示するには、VIEW DEFINITION、ALTER ANY USER、またはユーザーに対する権限が必要です。 ユーザー定義ロールを表示するには、ALTER ANY ROLE、またはロールのメンバーシップ (public など) が必要です。  
   
- [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] 詳細については、「 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)」を参照してください。  
+ [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] 詳細については、「 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)」をご覧ください。  
   
 ## <a name="examples"></a>使用例  
   
 ### <a name="a-listing-all-the-permissions-of-database-principals"></a>A: データベース プリンシパルのすべての権限を一覧表示する  
- 次のクエリは、データベース プリンシパルに対して明示的に付与または拒否されている権限を一覧表示します。  
+ 次のクエリは、データベースプリンシパルに対して明示的に許可または拒否されている権限を一覧表示します。  
   
 > [!IMPORTANT]  
->  固定データベース ロールの権限は、sys.database_permissions には表示されません。 したがって、データベース プリンシパルには、ここに一覧表示されていない追加の権限がある可能性があります。  
+>  固定データベースロールの権限は、sys. database_permissions には表示されません。 そのため、データベースプリンシパルには、ここに記載されていない追加のアクセス許可がある場合があります。  
   
 ```  
 SELECT pr.principal_id, pr.name, pr.type_desc,   
@@ -150,8 +149,8 @@ JOIN sys.database_permissions AS pe
     ON pe.grantee_principal_id = pr.principal_id;  
 ```  
   
-### <a name="b-listing-permissions-on-schema-objects-within-a-database"></a>B: データベース内のスキーマ オブジェクト上の権限を一覧表示する  
- 次のクエリは、sys.database_principals と sys.database_permissions を sys.objects と sys.schemas に結合して、特定のスキーマ オブジェクトに対して付与または拒否されている権限を一覧表示します。  
+### <a name="b-listing-permissions-on-schema-objects-within-a-database"></a>B: データベース内のスキーマオブジェクトに対する権限を一覧表示する  
+ 次のクエリでは、sys. database_principals と sys. database_permissions を、特定のスキーマオブジェクトに対して許可または拒否されている権限を一覧表示するために、sys. オブジェクトと sys スキーマに結合します。  
   
 ```  
 SELECT pr.principal_id, pr.name, pr.type_desc,   

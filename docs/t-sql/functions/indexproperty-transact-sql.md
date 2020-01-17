@@ -1,7 +1,7 @@
 ---
 title: INDEXPROPERTY (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 03/06/2017
+ms.date: 06/26/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -17,16 +17,15 @@ helpviewer_keywords:
 - indexes [SQL Server], viewing
 - indexes [SQL Server], properties
 ms.assetid: 998d5788-4871-44a8-8125-0d9390868b84
-author: MashaMSFT
-ms.author: mathoma
-manager: craigg
+author: MikeRayMSFT
+ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 0b604dfaf700acf82b49934017121aa5749578ba
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 3bfdfb5c3579b43ada97c9ef72b72dbaf3d29308
+ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47830100"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "73982935"
 ---
 # <a name="indexproperty-transact-sql"></a>INDEXPROPERTY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -46,7 +45,7 @@ INDEXPROPERTY ( object_ID , index_or_statistics_name , property )
  インデックス プロパティ情報の提供元となるテーブルまたはインデックス付きビューのオブジェクト ID 番号を含む式です。 *object_ID* は **int** です。  
   
  *index_or_statistics_name*  
- 返されるプロパティ情報の基となるインデックスまたは統計の名前を含む式です。 *index_or_statistics_name* is **nvarchar(128)**.  
+ 返されるプロパティ情報の基となるインデックスまたは統計の名前を含む式です。 *index_or_statistics_name* is **nvarchar(128)** .  
   
  *property*  
  返されるデータベース プロパティの名前を含む式です。 *property* のデータ型は **varchar(128)** で、次のいずれかの値を指定できます。  
@@ -54,22 +53,23 @@ INDEXPROPERTY ( object_ID , index_or_statistics_name , property )
 > [!NOTE]  
 >  *property* が有効なプロパティ名でない場合、*object_ID* が有効なオブジェクト ID でない場合、*object_ID* が指定したプロパティでサポートされていないオブジェクトの種類であった場合、または呼び出し側にオブジェクトのメタデータを表示する権限がない場合は、特に指定のない限り、NULL が返されます。  
   
-|プロパティ|[説明]|ReplTest1|  
+|プロパティ|[説明]|[値]|  
 |--------------|-----------------|-----------|  
 |**IndexDepth**|インデックスの深さです。|インデックス レベルの数です。<br /><br /> NULL = XML インデックスまたは無効な入力|  
 |**IndexFillFactor**|インデックスが作成されたとき、または最後に再構築されたときに使用された FILL FACTOR 値です。|FILL FACTOR|  
-|**IndexID**|指定のテーブルまたはインデックス付きビュー上のインデックスの ID です。|インデックス ID です。|  
-|**IsAutoStatistics**|ALTER DATABASE の AUTO_CREATE_STATISTICS オプションによって生成された統計です。|1 = True<br /><br /> 0 = FALSE または XML インデックス|  
-|**IsClustered**|インデックスはクラスター化されています。|1 = True<br /><br /> 0 = FALSE または XML インデックス|  
-|**IsDisabled**|インデックスは無効です。|1 = True<br /><br /> 0 = False<br /><br /> NULL = 無効な入力|  
-|**IsFulltextKey**|インデックスは、テーブルのフルテキストおよびセマンティック インデックス作成のキーです。|**適用対象**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]<br /><br /> 1 = True<br /><br /> 0 = FALSE または XML インデックス<br /><br /> NULL = 無効な入力|  
-|**IsHypothetical**|インデックスは仮想的であり、データへのアクセス パスとして直接使用することはできません。 仮想インデックスは、列レベルの統計を保持し、データベース エンジン チューニング アドバイザーによって管理および使用されます。|1 = True<br /><br /> 0 = False または XML インデックス<br /><br /> NULL = 無効な入力|  
-|**IsPadIndex**|インデックスは各内部ノード上で空けておく領域を指定します。|**適用対象**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]<br /><br /> 1 = True<br /><br /> 0 = FALSE または XML インデックス|  
-|**IsPageLockDisallowed**|ALTER INDEX の ALLOW_PAGE_LOCKS オプションによって設定されたページ ロックの値です。|**適用対象**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]<br /><br /> 1 = ページ ロックの禁止<br /><br /> 0 = ページ ロックの許可<br /><br /> NULL = 無効な入力|  
-|**IsRowLockDisallowed**|ALTER INDEX の ALLOW_ROW_LOCKS オプションによって設定された行ロックの値です。|**適用対象**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]<br /><br /> 1 = 行ロックの禁止<br /><br /> 0 = 行ロックの許可<br /><br /> NULL = 無効な入力|  
-|**IsStatistics**|*index_or_statistics_name* は、CREATE STATISTICS ステートメントまたは ALTER DATABASE の AUTO_CREATE_STATISTICS オプションによって作成された統計です。|1 = True<br /><br /> 0 = FALSE または XML インデックス|  
-|**IsUnique**|インデックスは一意です。|1 = True<br /><br /> 0 = FALSE または XML インデックス|  
-|**IsColumnstore**|インデックスは xVelocity メモリ最適化列ストア インデックスです。|**適用対象**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]<br /><br /> 1 = True<br /><br /> 0 = False|  
+|**IndexID**|指定のテーブルまたはインデックス付きビュー上のインデックスの ID です。|インデックス ID|  
+|**IsAutoStatistics**|ALTER DATABASE の AUTO_CREATE_STATISTICS オプションによって生成された統計です。|1 = True<br /><br /> 0 = False または XML インデックス。|  
+|**IsClustered**|インデックスはクラスター化されています。|1 = True<br /><br /> 0 = False または XML インデックス。|  
+|**IsDisabled**|インデックスは無効です。|1 = True<br /><br /> 0 = False<br /><br /> NULL = 入力は無効です。|  
+|**IsFulltextKey**|インデックスは、テーブルのフルテキストおよびセマンティック インデックス作成のキーです。|**適用対象**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 以降。<br /><br /> 1 = True<br /><br /> 0 = False または XML インデックス。<br /><br /> NULL = 入力は無効です。|  
+|**IsHypothetical**|インデックスは仮想的であり、データへのアクセス パスとして直接使用することはできません。 仮想インデックスは、列レベルの統計を保持し、データベース エンジン チューニング アドバイザーによって管理および使用されます。|1 = True<br /><br /> 0 = False または XML インデックス<br /><br /> NULL = 入力は無効です。|  
+|**IsPadIndex**|インデックスは各内部ノード上で空けておく領域を指定します。|**適用対象**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 以降。<br /><br /> 1 = True<br /><br /> 0 = False または XML インデックス。|  
+|**IsPageLockDisallowed**|ALTER INDEX の ALLOW_PAGE_LOCKS オプションによって設定されたページ ロックの値です。|**適用対象**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 以降。<br /><br /> 1 = ページ ロックの禁止<br /><br /> 0 = ページ ロックの許可<br /><br /> NULL = 入力は無効です。|  
+|**IsRowLockDisallowed**|ALTER INDEX の ALLOW_ROW_LOCKS オプションによって設定された行ロックの値です。|**適用対象**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 以降。<br /><br /> 1 = 行ロックの禁止。<br /><br /> 0 = 行ロックの許可<br /><br /> NULL = 入力は無効です。|  
+|**IsStatistics**|*index_or_statistics_name* は、CREATE STATISTICS ステートメントまたは ALTER DATABASE の AUTO_CREATE_STATISTICS オプションによって作成された統計です。|1 = True<br /><br /> 0 = False または XML インデックス。|  
+|**IsUnique**|インデックスは一意です。|1 = True<br /><br /> 0 = False または XML インデックス。|  
+|**IsColumnstore**|インデックスは xVelocity メモリ最適化列ストア インデックスです。|**適用対象**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 以降。<br /><br /> 1 = True<br /><br /> 0 = False| 
+|**IsOptimizedForSequentialKey**|インデックスには、最終ページ挿入が有効になっている場合の最適化があります。|**適用対象**: [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 以降。 <br><br>1 = True<br><br>0 = False| 
   
 ## <a name="return-types"></a>戻り値の型  
  **int**  
@@ -93,7 +93,7 @@ SELECT
   
 ```  
   
- Here is the result set:  
+ 以下に結果セットを示します。  
   
 ```  
 Is Clustered Index Depth Fill Factor   

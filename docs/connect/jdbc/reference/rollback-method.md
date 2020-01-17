@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: 7adb6772-4047-4d8e-931d-b3d20eec44b5
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 9109894cbab3a3e7992a03fd48c057129151ec87
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e3b4575251cb4eb55f9af37bb81ed2c4bedbf564
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47726510"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67975700"
 ---
 # <a name="rollback-method-"></a>rollback () メソッド
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -39,7 +38,7 @@ public void rollback()
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- このロールバック メソッドは、java.sql.Connection インターフェイスの rollBack メソッドによって指定されます。  
+ このロールバックメソッドは、java. .sql. 接続インターフェイスの rollBack メソッドによって指定されます。  
   
  このメソッドは、自動コミット モードが無効になっている場合にのみ使用してください。  
   

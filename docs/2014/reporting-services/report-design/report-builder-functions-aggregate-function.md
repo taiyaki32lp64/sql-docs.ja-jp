@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 ms.assetid: 16ce643f-bbb3-40a5-ba78-7aed73156f3e
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 4de1651cb33413f6629a12ce409004b1372a2a5e
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: f0c58b99b616c07e2144a30a9ea996b135b6f8a4
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56296320"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66105338"
 ---
 # <a name="aggregate-function-report-builder-and-ssrs"></a>集計関数 (レポート ビルダーおよび SSRS)
   データ プロバイダーの定義に従い、指定された式のカスタムの集計を返します。  

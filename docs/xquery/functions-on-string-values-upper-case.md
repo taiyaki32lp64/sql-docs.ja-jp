@@ -15,18 +15,17 @@ helpviewer_keywords:
 ms.assetid: 5bd01ad2-7adf-48fb-bf42-41e200419d37
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 9d20e638fbbedfe1985ac66ee1cfd336fa291196
-ms.sourcegitcommit: bfa10c54e871700de285d7f819095d51ef70d997
+ms.openlocfilehash: 0dcbcbc0cd6c0cf479aee7a7c3fd8c5e53a53d28
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/14/2019
-ms.locfileid: "54254486"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68004609"
 ---
 # <a name="functions-on-string-values---upper-case"></a>文字列値に使用する関数 - upper-case
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
-  この関数では、各文字に変換 *$arg*大文字にします。 Unicode コード ポイント用の Microsoft Windows バイナリ大文字/小文字変換では、文字を大文字に変換する方法が指定されています。 この標準は、Unicode 標準のコード ポイントの標準のマッピングよりも異なります。  
+  この関数では、各文字に変換 *$arg*大文字にします。 Unicode コード ポイント用 Microsoft Windows バイナリ大文字/小文字の変換では、文字を大文字に変換する方法を指定します。 この標準は、Unicode 標準のコード ポイントの標準のマッピングよりも異なります。  
   
 ## <a name="syntax"></a>構文  
   
@@ -39,7 +38,7 @@ fn:upper-case($arg as xs:string?) as xs:string
   
 |||  
 |-|-|  
-|項目|定義|  
+|用語|定義|  
 |*$arg*|大文字に変換する文字列値。|  
   
 ## <a name="remarks"></a>コメント  
@@ -47,7 +46,7 @@ fn:upper-case($arg as xs:string?) as xs:string
   
 ## <a name="examples"></a>使用例  
   
-### <a name="a-changing-a-string-to-upper-case"></a>A. 文字列を大文字に変更する  
+### <a name="a-changing-a-string-to-upper-case"></a>A. 文字列を大文字に変更します。  
  次の例では、変更、入力文字列 ' abcDEF!@4' を大文字に変換します。  
   
 ```  
@@ -119,7 +118,7 @@ where CatalogDescription.exist('
   
  `</Prod>`  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [xml データ型に対する XQuery 関数](../xquery/xquery-functions-against-the-xml-data-type.md)  
   
   

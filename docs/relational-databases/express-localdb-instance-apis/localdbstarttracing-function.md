@@ -15,13 +15,12 @@ apitype: DLLExport
 ms.assetid: c7b83833-6d2a-4a06-9cb7-42767bed52c6
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: 61e5e0e3205064ec1fefe6464a0915193fc9618f
-ms.sourcegitcommit: ddb682c0061c2a040970ea88c051859330b8ac00
+ms.openlocfilehash: 8fd4d94debcaaaa90447b3bc85621ae973d7f70d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51570901"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68022070"
 ---
 # <a name="localdbstarttracing-function"></a>LocalDBStartTracing 関数
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

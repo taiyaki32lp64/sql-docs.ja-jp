@@ -17,15 +17,14 @@ helpviewer_keywords:
 ms.assetid: cb1ab102-1ae0-4811-9144-9a8121ef2d7e
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: 57c7ef9242b6c974c8043f8f6ab237b0fbe07941
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 95598885a80b1f697f5e1287e22c1048e737ba6b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47706656"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67944721"
 ---
-# <a name="sprevokelogin-transact-sql"></a>sp_revokelogin (Transact-SQL)
+# <a name="sprevokelogin-transact-sql"></a>sp_revokelogin (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   ログイン エントリを削除します。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Windows ユーザーまたはログインの作成を使用して作成したグループの**sp_grantlogin**、または**sp_denylogin**します。  
@@ -43,8 +42,7 @@ sp_revokelogin [ @loginame= ] 'login'
 ```  
   
 ## <a name="arguments"></a>引数  
- [  **@loginame=**] **'***ログイン***'**  
- Windows ユーザーまたはグループの名前です。 *ログイン*は**sysname**、既定値はありません。 *ログイン*、既存の Windows ユーザー名またはフォーム内のグループを指定することができます*コンピューター名*\\*ユーザーまたはドメイン*\\*ユーザー*します。  
+`[ @loginame = ] 'login'` Windows ユーザーまたはグループの名前です。 *ログイン*は**sysname**、既定値はありません。 *ログイン*、既存の Windows ユーザー名またはフォーム内のグループを指定することができます*コンピューター名*\\*ユーザーまたはドメイン*\\*ユーザー*します。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  0 (成功) または 1 (失敗)  
@@ -74,13 +72,13 @@ sp_revokelogin [ADVWORKS\john]
 EXEC sp_revokelogin 'Corporate\MollyA';  
 ```  
   
- スイッチまたは  
+ または  
   
 ```  
 EXEC sp_revokelogin [Corporate\MollyA];  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [セキュリティ ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md)   
  [DROP LOGIN &#40;Transact-SQL&#41;](../../t-sql/statements/drop-login-transact-sql.md)   
  [sp_denylogin &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-denylogin-transact-sql.md)   

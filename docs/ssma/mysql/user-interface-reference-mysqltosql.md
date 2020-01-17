@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 2fad3fa2-5729-4b96-99d4-2c6edfab0a54
 author: Shamikg
 ms.author: Shamikg
-manager: craigg
-ms.openlocfilehash: e4aaf05b0d53e7d0fea5e509f02562ea9213bbef
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 17a287b38eb1dd1c1d9e3cee6943f7c069a39c61
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51671342"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67944628"
 ---
 # <a name="user-interface-reference-mysqltosql"></a>ユーザー インターフェイス リファレンス (MySQLToSQL)
 このセクションでは、for MySQL の SQL Server Migration Assistant (SSMA) のヘルプ トピックを紹介します。  
@@ -49,7 +48,7 @@ SSMA のダイアログ ボックスを次の表に示します。
 |[データベースからの更新&#40;MySQLToSQL&#41;](../../ssma/mysql/refresh-from-database-mysqltosql.md)|使用して、**データベースからの更新** ダイアログ ボックス、MySQL データベースから更新するオブジェクトを選択します。|  
 |[メタデータの保存&#40;MySQLToSQL&#41;](../../ssma/mysql/save-metadata-mysqltosql.md)|**メタデータの保存**メタデータが不足しているプロジェクトを保存するときに、ダイアログ ボックスが表示されます。|  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
 [Ssma for MySQL 作業の開始&#40;MySQLToSQL&#41;](../../ssma/mysql/getting-started-with-ssma-for-mysql-mysqltosql.md)  
 [SQL Server - Azure SQL DB への移行 MySQL データベース&#40;MySQLToSql&#41;](../../ssma/mysql/migrating-mysql-databases-to-sql-server-azure-sql-db-mysqltosql.md)  
   

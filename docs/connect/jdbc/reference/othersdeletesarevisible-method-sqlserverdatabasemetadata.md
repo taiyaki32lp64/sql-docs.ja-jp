@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: c4692a8c-e6b7-4edc-9dad-7af816988de5
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 0067eaedb37d5916c55c61c700d8c1e69d1ae251
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 710d06a43aa1eb23ae9750c1cee1b5c4d1460085
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47732547"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67976618"
 ---
 # <a name="othersdeletesarevisible-method-sqlserverdatabasemetadata"></a>othersDeletesAreVisible メソッド (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -65,7 +64,7 @@ public boolean othersDeletesAreVisible(int type)
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- この othersDeletesAreVisible メソッドは、java.sql.DatabaseMetaData インターフェイスで othersDeletesAreVisible メソッドによって指定されます。  
+ この othersDeletesAreVisible メソッドは、othersDeletesAreVisible メソッドによって、java メタデータインターフェイスで指定されます。  
   
 ## <a name="see-also"></a>参照  
  [SQLServerDatabaseMetaData のメソッド](../../../connect/jdbc/reference/sqlserverdatabasemetadata-methods.md)   

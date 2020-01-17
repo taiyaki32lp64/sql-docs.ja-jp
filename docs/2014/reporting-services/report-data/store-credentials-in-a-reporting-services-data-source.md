@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 09/23/2015
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 helpviewer_keywords:
 - credentials [Reporting Services]
@@ -13,15 +12,15 @@ helpviewer_keywords:
 - stored credentials [Reporting Services]
 - data sources [Reporting Services], stored credentials
 ms.assetid: dc700922-97fa-4b30-9547-05bbbec4f09c
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 70f466ab701e75d5a6ff05a63bb425fcf60b903e
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 9e2c29e97a360b9e595b972643645e2e8d549c67
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56032610"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68892018"
 ---
 # <a name="store-credentials-in-a-reporting-services-data-source"></a>Store Credentials in a Reporting Services Data Source
   [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] レポート サーバーが、レポートに必要な外部データにアクセスするときに使用する、保存された資格情報を構成できます。 保存された資格情報は、レポートを自動実行する場合に使用されます。たとえば、 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] サブスクリプションがレポートを電子メールとしてパブリッシュする場合などです。 この資格情報は、レポート処理がスケジュールで設定されている場合、または、レポート処理がトリガーされた場合に、レポート サーバーによって取得されて使用されます。 このトピックでは、ネイティブ モードと SharePoint モードの両方のレポート サーバーに対して、保存された資格情報を構成する方法について説明します。  
@@ -41,7 +40,7 @@ ms.locfileid: "56032610"
 -   [共有データ ソース用の保存された資格情報を構成する (SharePoint モード)](#bkmk_stored_credentials_shared_data_source_sharepoint)  
   
 ##  <a name="bkmk_top"></a> 保存された資格情報のセキュリティ ポリシー要件  
- ![as_powerpivot_refresh_sss_set_key](../../analysis-services/media/as-powerpivot-refresh-sss-set-key.gif "as_powerpivot_refresh_sss_set_key") 保存された資格情報に使用するアカウントを、レポート サーバー上で、次のいずれかのセキュリティ ポリシー用に構成する必要があります。 環境に必要な最小レベルの権限を持つポリシーを選択することをお勧めします。  
+ ![as_powerpivot_refresh_sss_set_key](https://docs.microsoft.com/analysis-services/analysis-services/media/as-powerpivot-refresh-sss-set-key.gif "as_powerpivot_refresh_sss_set_key") 保存された資格情報に使用するアカウントを、レポート サーバー上で、次のいずれかのセキュリティ ポリシー用に構成する必要があります。 環境に必要な最小レベルの権限を持つポリシーを選択することをお勧めします。  
   
 1.  **ローカル ログオンを許可する**。 詳細については、「 [ローカル ログオンを許可する](https://technet.microsoft.com/library/cc756809\(v=WS.10\).aspx)」を参照してください。  
   
@@ -69,7 +68,7 @@ ms.locfileid: "56032610"
   
 7.  ユーザー名とパスワードを入力します。  
   
-    -   このアカウントが Windows ドメイン ユーザー アカウントである場合は、\<ドメイン>\\<アカウント\> という形式で指定し、**[データ ソースへの接続時に Windows 資格情報として使用する]** チェック ボックスをオンにします。  
+    -   このアカウントが Windows ドメイン ユーザー アカウントである場合は、\<ドメイン>\\<アカウント\> という形式で指定し、 **[データ ソースへの接続時に Windows 資格情報として使用する]** チェック ボックスをオンにします。  
   
     -   ユーザー名とパスワードがデータベースの資格情報である場合は、 **[データ ソースへの接続時に Windows 資格情報として使用する]** を選択しないでください。 データベース サーバーが権限の借用または委譲をサポートしている場合は、 **[データ ソースへの接続が確立した後に、認証されているユーザーの権限を借用する]** を選択できます。  
   
@@ -81,7 +80,7 @@ ms.locfileid: "56032610"
   
 1.  レポートを含むドキュメント ライブラリを参照し、開くメニューをクリックします![ssrs 項目のドキュメント ライブラリのコンテキスト メニュー](../media/ssrs-sharepoint-item-context-menu.png "ssrs 項目のドキュメント ライブラリのコンテキスト メニュー")。  
   
-2.  2 番目の開くメニューをクリックし![ssrs 項目のドキュメント ライブラリのコンテキスト メニュー](../media/ssrs-sharepoint-item-context-menu.png "ssrs 項目のドキュメント ライブラリのコンテキスト メニュー")、**[データ ソースの管理]** をクリックします。  
+2.  2 番目の開くメニューをクリックし![ssrs 項目のドキュメント ライブラリのコンテキスト メニュー](../media/ssrs-sharepoint-item-context-menu.png "ssrs 項目のドキュメント ライブラリのコンテキスト メニュー")、 **[データ ソースの管理]** をクリックします。  
   
 3.  資格情報を使用して構成する **[カスタム]** データ ソースの名前をクリックします。  
   
@@ -97,7 +96,7 @@ ms.locfileid: "56032610"
   
 7.  **[ユーザー名]** と **[パスワード]** を入力します。  
   
-    -   このアカウントが Windows ドメイン ユーザー アカウントである場合は、\<ドメイン>\\<アカウント\> という形式で指定し、**[データ ソースへの接続時に Windows 資格情報として使用する]** チェック ボックスをオンにします。  
+    -   このアカウントが Windows ドメイン ユーザー アカウントである場合は、\<ドメイン>\\<アカウント\> という形式で指定し、 **[データ ソースへの接続時に Windows 資格情報として使用する]** チェック ボックスをオンにします。  
   
     -   ユーザー名とパスワードがデータベースの資格情報である場合は、 **[Windows 資格情報として使用する]** を選択しないでください。 データベース サーバーが権限の借用または委譲をサポートしている場合は、 **[実行コンテキストをこのアカウントに設定する]** を選択できます。  
   
@@ -109,7 +108,7 @@ ms.locfileid: "56032610"
   
 1.  ネイティブ モードのレポート マネージャーで、共有データ ソース アイテムに移動します。 ![共有データ ソースのアイコン](../media/hlp-16datasource.png "共有データ ソースのアイコン")  
   
-2.  コンテキスト メニューをクリックし![レポート マネージャーの ssrs 項目のコンテキスト メニュー](../media/ssrs-report-manager-item-context-menu.png "レポート マネージャーの ssrs 項目のコンテキスト メニュー")、**[管理]** をクリックします。  
+2.  コンテキスト メニューをクリックし![レポート マネージャーの ssrs 項目のコンテキスト メニュー](../media/ssrs-report-manager-item-context-menu.png "レポート マネージャーの ssrs 項目のコンテキスト メニュー")、 **[管理]** をクリックします。  
   
 3.  **[データ ソースの種類]** の一覧で、データ ソースから取得したデータの処理に使用するデータ処理拡張機能を指定します。  
   
@@ -123,7 +122,7 @@ ms.locfileid: "56032610"
   
 5.  ユーザー名とパスワードを入力します。  
   
-    -   このアカウントが Windows ドメイン ユーザー アカウントである場合は、\<ドメイン>\\<アカウント\> という形式で指定し、**[データ ソースへの接続時に Windows 資格情報として使用する]** チェック ボックスをオンにします。  
+    -   このアカウントが Windows ドメイン ユーザー アカウントである場合は、\<ドメイン>\\<アカウント\> という形式で指定し、 **[データ ソースへの接続時に Windows 資格情報として使用する]** チェック ボックスをオンにします。  
   
     -   ユーザー名とパスワードがデータベースの資格情報である場合は、 **[データ ソースへの接続時に Windows 資格情報として使用する]** を選択しないでください。 データベース サーバーが権限の借用または委譲をサポートしている場合は、 **[データ ソースへの接続が確立した後に、認証されているユーザーの権限を借用する]** を選択できます。  
   
@@ -151,7 +150,7 @@ ms.locfileid: "56032610"
   
 6.  ユーザー名とパスワードを入力します。  
   
-    -   このアカウントが Windows ドメイン ユーザー アカウントである場合は、\<ドメイン>\\<アカウント\> という形式で指定し、**[Windows 資格情報として使用する]** を選択します。  
+    -   このアカウントが Windows ドメイン ユーザー アカウントである場合は、\<ドメイン>\\<アカウント\> という形式で指定し、 **[Windows 資格情報として使用する]** を選択します。  
   
     -   ユーザー名とパスワードがデータベースの資格情報である場合は、 **[Windows 資格情報として使用する]** を選択しないでください。 データベース サーバーが権限の借用または委譲をサポートしている場合は、 **[実行コンテキストをこのアカウントに設定する]** を選択できます。  
   
@@ -159,7 +158,7 @@ ms.locfileid: "56032610"
   
      ![[トップに戻る] リンクで使用される矢印アイコン](../../2014-toc/media/uparrow16x16.gif "[トップに戻る] リンクで使用される矢印アイコン")[保存された資格情報のセキュリティ ポリシーの要件](#bkmk_top)  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [レポート データ ソースに関する資格情報と接続情報を指定する](../../integration-services/connection-manager/data-sources.md)   
  [レポートのデータ ソースのプロパティを構成する &#40;レポート マネージャー&#41;](configure-data-source-properties-for-a-report-report-manager.md)   
  [共有データ ソースを作成、削除、または変更する &#40;レポート マネージャー&#41;](../create-delete-or-modify-a-shared-data-source-report-manager.md)   

@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: 04b93ef9-11de-47a3-8bd8-ba963c42f182
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: c77d60ea3ef1412e66c8bf40937b45647e776e98
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: f952b21267b73c7ae508f46d896dbfdbb4160e20
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47769360"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68100567"
 ---
 # <a name="processing-batches-of-sql-statements"></a>SQL ステートメントのバッチ処理
 > [!IMPORTANT]  

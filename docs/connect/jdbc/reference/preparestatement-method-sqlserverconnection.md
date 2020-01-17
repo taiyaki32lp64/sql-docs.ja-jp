@@ -1,5 +1,5 @@
 ---
-title: prepareStatement メソッド (SQLServerConnection) |Microsoft Docs
+title: SQLServerConnection (ステートメント) メソッド () |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: bd4e4085-f704-4a73-b6a7-7d443d564728
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 5c3f1085c240940394ff02c61415fac2f689d4f3
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 744e76a5a41305df909ef29df6c1a1719751064e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47643040"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67976095"
 ---
 # <a name="preparestatement-method-sqlserverconnection"></a>prepareStatement メソッド (SQLServerConnection)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

@@ -1,5 +1,5 @@
 ---
-title: NonEmpty (MDX) |Microsoft ドキュメント
+title: NonEmpty (MDX) |Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -8,13 +8,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-manager: kfile
-ms.openlocfilehash: 91e6d478397cf9fa77a6ca33748b5a4515034471
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.openlocfilehash: 45daf970f69322cad36bbe5419bf1dc8cc8009b9
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34742301"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68088341"
 ---
 # <a name="nonempty-mdx"></a>NonEmpty (MDX)
 
@@ -36,16 +35,16 @@ NONEMPTY(set_expression1 [,set_expression2])
  セットを返す有効な多次元式 (MDX) です。  
   
 ## <a name="remarks"></a>コメント  
- この関数は、指定されている 1 番目のセット内の組のうち、2 番目のセット内のすべての組に対して評価した際に空でなかった組を返します。 **NonEmpty**関数は計算を考慮し、重複する組を保持します。 2 番目のセットが指定されなかった場合、属性階層のメンバーとキューブ内のメジャーの現在の座標のコンテキストで式が評価されます。  
+ この関数は、2 番目のセット内の組に対して評価するときに空でないのは最初の指定されたセット内の組を返します。 **NonEmpty**計算を関数を受け取り、重複する組を保持します。 2 番目のセットが指定されていない場合、式は、キューブ内のメジャー、属性階層のメンバーの現在の座標のコンテキストで評価されます。  
   
 > [!NOTE]  
->  非推奨ではなくこの関数を使用して[NonEmptyCrossjoin &#40;MDX&#41; ](../mdx/nonemptycrossjoin-mdx.md)関数。  
+>  非推奨ではなくこの関数を使用して、 [NonEmptyCrossjoin &#40;MDX&#41; ](../mdx/nonemptycrossjoin-mdx.md)関数。  
   
 > [!IMPORTANT]  
->  空ではないという特性は、組自体ではなく、組から参照されるセルの特性です。  
+>  空以外では、組、組自体から参照されるセルの特性です。  
   
 ## <a name="examples"></a>使用例  
- 次のクエリは、簡単な例を示しています。 **NonEmpty**、年 7 月 1 日の 2001 年に Internet Sales Amount の null 以外の値を持っている顧客をすべて返します。  
+ 次のクエリは、簡単な例を示しています。 **NonEmpty**、年 7 月 1 日の 2001 年に Internet Sales Amount の null 以外の値を持っているすべての顧客を返します。  
   
  `SELECT [Measures].[Internet Sales Amount] ON 0,`  
   
@@ -61,7 +60,7 @@ NONEMPTY(set_expression1 [,set_expression2])
   
  `FROM [Adventure Works]`  
   
- 次の例は、顧客と購入日を使用する組のセットを返します、**フィルター**関数および**NonEmpty**する最後の日付を確認するには、各顧客が購入を行う関数。  
+ 次の例は、顧客とを使用して、購入日を含む組のセットを返します、**フィルター**関数と**空でない**各顧客が購入を行う最後の日付を検索する関数。  
   
  `WITH SET MYROWS AS FILTER`  
   
@@ -87,11 +86,11 @@ NONEMPTY(set_expression1 [,set_expression2])
   
  `FROM [Adventure Works]`  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [DefaultMember &#40;MDX&#41;](../mdx/defaultmember-mdx.md)   
- [フィルター &#40;MDX&#41;](../mdx/filter-mdx.md)   
+ [Filter &#40;MDX&#41;](../mdx/filter-mdx.md)   
  [IsEmpty &#40;MDX&#41;](../mdx/isempty-mdx.md)   
- [MDX 関数リファレンス&#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)   
+ [MDX 関数リファレンス &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)   
  [NonEmptyCrossjoin &#40;MDX&#41;](../mdx/nonemptycrossjoin-mdx.md)  
   
   

@@ -16,11 +16,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: b8e3854d98833354fd859d687bfa7e85e99601de
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52771164"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62670445"
 ---
 # <a name="delete-a-database-diagram-visual-database-tools"></a>データベース ダイアグラムの削除 (Visual Database Tools)
   不要になったデータベース ダイアグラムは削除できます。  

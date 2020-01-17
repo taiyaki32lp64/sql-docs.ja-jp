@@ -1,8 +1,8 @@
 ---
 title: サイズの大きなレポートの処理 | Microsoft Docs
-ms.date: 03/01/2017
+ms.date: 06/10/2019
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: report-server
 ms.topic: conceptual
 helpviewer_keywords:
@@ -12,14 +12,14 @@ helpviewer_keywords:
 - size [SQL Server], reports
 - distributing reports [Reporting Services], large reports
 ms.assetid: c5275a9f-c95b-46d7-bc62-633879a8a291
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 89293d1ed4f4c70306f5f6d0a31238830e2313e6
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 574fcc9c8e180b75d5d3def6d97798708c40996c
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50020186"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "67140260"
 ---
 # <a name="process-large-reports"></a>サイズの大きなレポートの処理
   サイズの大きなレポートは、処理が困難となる場合があり、正常に実行するには特定の構成が必要です。 サイズの大きなレポートは、ページ割り当てをサポートするように構成されている場合以外は、要求時に実行しないでください。  
@@ -31,12 +31,12 @@ ms.locfileid: "50020186"
   
  変化しやすいデータを含むレポートの場合、レポートのサイズはレポートを実行するたびに大きく変化する可能性があります。 この場合、データ ソースを監視し、データの変化がレポートへ及ぼす影響を見極めた上で、このトピックに記載されている手順に従う必要があるかどうかを判断する必要があります。  
   
- タイムアウト エラーやメモリ不足エラーを診断する方法の詳細とヒントについては、blogs.msdn.com の記事「 [レポート サーバーでのレポート実行の問題を診断する方法](https://go.microsoft.com/fwlink/?LinkId=85634) 」を参照してください。  
+ タイムアウト エラーやメモリ不足エラーを診断する方法の詳細とヒントについては、blogs.msdn.microsoft.com 上の[レポート サーバーでレポート実行時の問題を診断する方法](https://go.microsoft.com/fwlink/?LinkId=85634)に関する記事をご覧ください。  
   
 ## <a name="configuration-recommendations"></a>構成に関する推奨事項  
  レポートの実行、レポートの表示、およびレポートのアクセスに関する推奨事項としては、次の事項が挙げられます。  
   
--   ページ割り当てをサポートするようにレポートをデザインします。 レポート サーバーはレポートを一度に 1 ページずつ送信します。 レポートにページ割り当てがある場合は、ブラウザーにストリーム送信されるデータ量を制御できます。 詳細については、「 [キャッシュの事前読み込み &#40;レポート マネージャー&#41;](../../reporting-services/report-server/preload-the-cache-report-manager.md)」を参照してください。  
+-   ページ割り当てをサポートするようにレポートをデザインします。 レポート サーバーはレポートを一度に 1 ページずつ送信します。 レポートにページ割り当てがある場合は、ブラウザーにストリーム送信されるデータ量を制御できます。 詳細については、次を参照してください。[キャッシュ (SSRS) の事前読み込み](../../reporting-services/report-server/preload-the-cache-report-manager.md)します。  
   
 -   レポートは、要求時に実行されることを防ぐため、スケジュールされたレポート スナップショットとして実行するように構成します。 レポートの実行にタイムアウト値は設定しないでください。 レポートは、オフピーク時間中に実行してください。  
   
@@ -46,7 +46,7 @@ ms.locfileid: "50020186"
   
 -   レポートへのアクセスを制限します。 アイテムレベルのセキュリティを使用するようにレポートを構成し、既定のロール割り当てを、そのレポートを必要とするユーザーだけがアクセスできるように変更してください。  
   
-     既定では、ユーザーはフォルダー階層に表示されているレポートをすべて開くことができます。 レポートをスナップショットとして実行するように構成していても、フォルダー内にあるそのレポート アイテムを表示できるユーザーがレポートを開いてしまう可能性があります。 レポートのサイズが非常に大きい場合、ユーザーがレポート マネージャーでそのレポートを開いた際に、ブラウザーが応答しなくなる可能性があります。  
+     既定では、ユーザーはフォルダー階層に表示されているレポートをすべて開くことができます。 レポートをスナップショットとして実行するように構成していても、フォルダー内にあるそのレポート アイテムを表示できるユーザーがレポートを開いてしまう可能性があります。 レポートのサイズが非常に大きい場合、ユーザーが Web ポータルでそのレポートを開いた際に、ブラウザーが応答しなくなる可能性があります。  
   
 ## <a name="rendering-recommendations"></a>表示に関する推奨事項  
  レポートの配信の構成に先立ち、どの表示クライアントでサイズの大きなドキュメントを処理できるかを把握しておくことが重要です。 推奨される形式は、ソフト改ページを使用する既定の HTML 表示拡張機能ですが、ページ割り当てをサポートする形式であれば、任意の形式を選択できます。  
@@ -54,7 +54,7 @@ ms.locfileid: "50020186"
  パフォーマンスとメモリの使用量は、表示形式ごとに異なります。 選択した形式によって、同じレポートがさまざまなパフォーマンス レートで表示され、必要なメモリの容量も変わります。 最も高速でメモリの使用量が少ない形式は、CSV、XML、および HTML です。 最もパフォーマンスが低いのは PDF と Excel ですが、理由はそれぞれ異なります。 PDF は CPU を集中的に使用しますが、Excel は RAM を集中的に使用します。 画像の表示は、2 つのグループの中間に分類されます。 形式は、レポートの配信方法を定義する際に、指定することができます。  
   
 ## <a name="deployment-and-distribution-recommendations"></a>配置および配信に関する推奨事項  
- 改ページを使用してレポートの表示を制御している場合は、サイズの大きなレポートを、通常のレポートと同じ方法で配置することができます。 レポートへのアクセスは、レポート マネージャー、SharePoint Web パーツ、またはポータルや Web サイトに追加した URL を使用することで提供できます。 これらのすべての配置オプションは、以前に実行したレポートのスナップショットだけでなく、要求時アクセスもサポートします。  
+ 改ページを使用してレポートの表示を制御している場合は、サイズの大きなレポートを、通常のレポートと同じ方法で配置することができます。 レポートへのアクセスは、Web ポータル、SharePoint Web パーツ、またはポータルや Web サイトに追加した URL を使用することで提供できます。 これらのすべての配置オプションは、以前に実行したレポートのスナップショットだけでなく、要求時アクセスもサポートします。  
   
  これらの配置方法とは別に、レポートを個々のユーザーに配信する方法もあります。 配信オプションを慎重に構成した上で、サブスクリプションを通じてサイズの大きなレポートを配信することができます。 レポートの配信には、標準のサブスクリプションまたはデータ ドリブン サブスクリプションのいずれかを使用できます。 サブスクリプションおよび配信の推奨事項は、次のとおりです。  
   
@@ -71,6 +71,4 @@ ms.locfileid: "50020186"
  [レポート処理プロパティの設定](../../reporting-services/report-server/set-report-processing-properties.md)   
  [レポート データ ソースに関する資格情報と接続情報を指定する](../../reporting-services/report-data/specify-credential-and-connection-information-for-report-data-sources.md)   
  [レポート サーバー コンテンツの管理 &#40;SSRS ネイティブ モード&#41;](../../reporting-services/report-server/report-server-content-management-ssrs-native-mode.md)   
- [キャッシュの事前読み込み &#40;レポート マネージャー&#41;](../../reporting-services/report-server/preload-the-cache-report-manager.md)  
-  
-  
+ [キャッシュを事前に読み込む (SSRS)](../../reporting-services/report-server/preload-the-cache-report-manager.md)  

@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 958a179c-97d9-4717-8d06-d33b715a9773
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: d5dd87cbf93ff2acd7c2c3753e85b1d6f7d110cf
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 4d985786e4743b8bcc691cf6888c24153f5cb5f1
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47691702"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68019060"
 ---
 # <a name="cursor-library-code-example"></a>カーソル ライブラリのコード例
 > [!IMPORTANT]  

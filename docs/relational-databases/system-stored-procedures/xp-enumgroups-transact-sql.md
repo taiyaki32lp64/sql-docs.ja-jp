@@ -17,18 +17,17 @@ helpviewer_keywords:
 ms.assetid: 0bd3ed36-e260-469c-a5ff-b033fb9ea59d
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: 43366fd6463c885a41ad0304d45c2df1375015f8
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 885e29f8abbeb185017bc2472566e41596a56900
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47792050"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68116768"
 ---
-# <a name="xpenumgroups-transact-sql"></a>xp_enumgroups (Transact-SQL)
+# <a name="xpenumgroups-transact-sql"></a>xp_enumgroups (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Microsoft Windows のローカル グループの一覧、または指定した Windows ドメインで定義されるグローバル グループの一覧を提供します。  
+  指定した Windows ドメインで定義されているグローバル グループの一覧またはローカルの Microsoft Windows グループの一覧を提供します。  
   
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -50,8 +49,8 @@ xp_enumgroups [ 'domain_name' ]
   
 |列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
-|**グループ**|**sysname**|Windows グループの名前|  
-|**comment**|**sysname**|Windows で提供される Windows グループの説明。|  
+|**group**|**sysname**|Windows グループの名前|  
+|**comment**|**sysname**|Windows で提供される Windows グループの説明|  
   
 ## <a name="remarks"></a>コメント  
  場合*domain_name* Windows ベースのコンピューターの名前を指定するのインスタンス[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]で実行されている、またはドメイン名を指定すると、 **xp_enumgroups**コンピューターからローカル グループを列挙実行している[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]します。  
@@ -68,7 +67,7 @@ xp_enumgroups [ 'domain_name' ]
 EXEC xp_enumgroups 'sales';  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [sp_grantlogin &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-grantlogin-transact-sql.md)   
  [sp_revokelogin &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-revokelogin-transact-sql.md)   
  [システム ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   

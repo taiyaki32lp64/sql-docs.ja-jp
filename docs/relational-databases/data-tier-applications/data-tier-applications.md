@@ -14,15 +14,14 @@ helpviewer_keywords:
 ms.assetid: a04a2aba-d07a-4423-ab8a-0a31658f6317
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: ba71da1f77d0fed61908b6d7aab953505a33e511
-ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
+ms.openlocfilehash: 2068c9a4daa05ec659fa074f431b86f7fee7bc81
+ms.sourcegitcommit: 710d60e7974e2c4c52aebe36fceb6e2bbd52727c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/18/2018
-ms.locfileid: "53591476"
+ms.lasthandoff: 10/11/2019
+ms.locfileid: "72278287"
 ---
-# <a name="data-tier-applications"></a>の
+# <a name="data-tier-applications"></a>データ層アプリケーション
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   データ層アプリケーション (DAC) は、テーブル、ビュー、インスタンス オブジェクト (ログインを含む) など、ユーザーのデータベースに関連付けられたすべての [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] オブジェクトを定義する論理的なデータベース管理エンティティです。 DAC は、データ層の開発者とデータベース管理者が [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] オブジェクトを DAC パッケージ (DACPAC とも呼ばれます) という移植可能なアーティファクトにパッケージ化できるようにする自己完結型の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データベース配置単位です。  
   
@@ -31,7 +30,7 @@ ms.locfileid: "53591476"
 ## <a name="benefits-of-data-tier-applications"></a>データ層アプリケーションの利点  
  ほとんどのデータベース アプリケーションのライフサイクルでは、開発者と DVA が共有および交換するスクリプトと、アプリケーションの更新およびメンテナンス アクティビティ用のアドホック統合メモが使用されます。 これは少数のデータベースでは許容されますが、データベースの数、サイズ、および複雑さが増大するとすぐにスケーラブルでなくなります。  
   
- DAC は、宣言的なデータベース開発で配置と管理を簡略化できるようにするデータベース ライフ サイクル管理および生産性ツールです。 開発者は、SQL Server データ ツール データベース プロジェクトでデータベースを作成してから、DBA に渡すためにデータベースを DACPAC に構築できます。 DBA は、SQL Server Management Studio を使用して DAC を配置して、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] または [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)]のテスト インスタンスまたは実稼働インスタンスをテストできます。 また、DBA は DACPAC を使用して、SQL Server Management Studio で以前に配置したデータベースをアップグレードできます。 ライフサイクルを完了するために、DBA はデータベースを DACPAC に抽出し、開発者に渡して、テストまたは実稼働の調整を反映したり、アプリケーションの変更に応じたデータベース デザインの変更を可能にしたりできます。  
+ DAC は、宣言的なデータベース開発で配置と管理を簡略化できるようにするデータベース ライフ サイクル管理および生産性ツールです。 開発者は、SQL Server Data Tools データベース プロジェクトでデータベースを作成してから、DBA に渡すためにデータベースを DACPAC に構築できます。 DBA は、SQL Server Management Studio を使用して DAC を配置して、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] または [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)]のテスト インスタンスまたは実稼働インスタンスをテストできます。 また、DBA は DACPAC を使用して、SQL Server Management Studio で以前に配置したデータベースをアップグレードできます。 ライフサイクルを完了するために、DBA はデータベースを DACPAC に抽出し、開発者に渡して、テストまたは実稼働の調整を反映したり、アプリケーションの変更に応じたデータベース デザインの変更を可能にしたりできます。  
   
  DAC ドリブン配置がスクリプト ドリブンの配置より優れている点は、ツールによって DBA が異なるソースおよびターゲット データベースからの動作を識別および検証できることです。 アップグレード中に、アップグレードによりデータ損失の可能性がある場合にはツールによって DBA に警告され、アップグレード計画も提供されます。 DBA は、計画を評価し、ツールを利用してアップグレードを続行できます。  
   
@@ -54,7 +53,7 @@ ms.locfileid: "53591476"
   
 -   DACPAC は、.dacpac 拡張子を持つ Windows ファイルです。 このファイルでは、DACPAC の生成元、データベース内のオブジェクト、およびその他の特性を詳細に表す複数の XML セクションから構成されるオープン フォーマットがサポートされます。 上級ユーザーは、製品に付属の DacUnpack.exe ユーティリティを使用してファイルをパッケージ解除して、各セクションをより詳細に調査できます。  
   
--   ユーザーがデータベースを作成 (DAC パッケージを配置することによるデータベースの作成を含む) するには、dbmanager ロールのメンバーであるか、CREATE DATABASE 権限が割り当てられている必要があります。 ユーザーがデータベースを削除するには、dbmanager ロールのメンバーであるか、DROP DATABASE 権限を割り当てられている必要があります。  
+-   ユーザーがデータベースを作成 (DAC パッケージを配置することによるデータベースの作成を含む) するには、**dbmanager** ロールのメンバーであるか、**CREATE DATABASE** 権限が割り当てられている必要があります。 ユーザーがデータベースを削除するには、**dbmanager** ロールのメンバーであるか、**DROP DATABASE** 権限を割り当てられている必要があります。  
   
 ## <a name="dac-tools"></a>DAC ツール  
  DACPAC は、 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]に付属の複数のツール間でシームレスに使用できます。 これらのツールは、相互運用性の単位として DACPAC を使用して、異なるユーザーの要件に対処します。  
@@ -97,8 +96,7 @@ ms.locfileid: "53591476"
 -   **UPGRADE**: DACPAC を使用してデータベースをアップグレードできます。 アップグレードは、データ層アプリケーションとして登録されていないデータベースでもサポートされますが、アップグレードの結果として、データベースが暗黙的に登録されます。  
   
 ## <a name="bacpac"></a>BACPAC  
- BACPAC は .bacpac 拡張子を持つ Windows ファイルで、データベースのスキーマとデータをカプセル化します。 BACPAC の基本的なユース ケースは、あるサーバーから別のサーバーにデータベースを移動、または[ローカル サーバーからクラウドにデータベースを移行](https://azure.microsoft.com/documentation/articles/sql-database-cloud-migrate/)し、既存のデータベースをオープン フォーマットでアーカイブすることです。  
-  
+ BACPAC は .bacpac 拡張子を持つ Windows ファイルであり、データベースのスキーマとデータがカプセル化されています。 BACPAC の基本的なユース ケースは、あるサーバーから別のサーバーにデータベースを移動、または[ローカル サーバーからクラウドにデータベースを移行](https://azure.microsoft.com/documentation/articles/sql-database-cloud-migrate/)し、既存のデータベースをオープン フォーマットでアーカイブすることです。  
  DACPAC と同様に、BACPAC ファイル形式は公開されており、BACPAC のスキーマ コンテンツは DACPAC のスキーマ コンテンツと同じです。 BACPAC 内のデータは JSON 形式で格納されます。  
   
  DACPAC と BACPAC は似ていますが、ターゲットとするシナリオは異なります。 DACPAC は、既存のデータベースのアップグレードなど、スキーマのキャプチャと配置に重点を置きます。 DACPAC の主なユースケースは、厳密に定義されたスキーマを開発環境、テスト環境、その後運用環境に配置することです。 またその逆に、運用環境のスキーマをキャプチャし、テスト環境や開発環境に適用して戻します。  

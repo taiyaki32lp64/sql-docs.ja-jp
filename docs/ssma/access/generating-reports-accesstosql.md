@@ -9,20 +9,19 @@ ms.topic: conceptual
 ms.assetid: abb4264a-622e-4215-af5b-14e309b8a399
 author: Shamikg
 ms.author: Shamikg
-manager: craigg
-ms.openlocfilehash: fe6f45b2e35761fac5f8c49012b1eb370645bcb1
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: d9d1879cd5583ee7b87c12edb19bf5486cee4fcf
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52412769"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67986434"
 ---
 # <a name="generating-reports-accesstosql"></a>レポートの生成 (AccessToSQL)
 オブジェクト ツリーのレベルでの SSMA コンソールのコマンドを使用して実行される特定のアクティビティ レポートが生成されます。  
   
 レポートを生成するのにには、次の手順を使用します。  
   
-1.  指定、**書き込みで概要レポート-を**パラメーター。 (指定した) 場合に、ファイル名として、関連するレポートが格納されているまたはでフォルダーを指定します。 ファイル名は、where、次の表で説明したようにシステム定義済み**&lt;n&gt;** は、同じコマンドを実行するたびに 1 桁の数字をインクリメントする一意のファイル数です。  
+1.  指定、**書き込みで概要レポート-を**パラメーター。 (指定した) 場合に、ファイル名として、関連するレポートが格納されているまたはでフォルダーを指定します。 ファイル名は、where、次の表で説明したようにシステム定義済み **&lt;n&gt;** は、同じコマンドを実行するたびに 1 桁の数字をインクリメントする一意のファイル数です。  
   
     レポートの vis-比べて-vis コマンドは次のとおりです。  
   
@@ -38,7 +37,7 @@ ms.locfileid: "52412769"
     > [!IMPORTANT]  
     > レポートの出力は、評価レポートと異なります。 前者はコマンドの実行中のパフォーマンス上のレポート、後者は、プログラムによる使用量の XML レポート。  
   
-    コマンド オプションの出力からのレポート (上記の Sl. No.  2 ~ 4) を参照してください、 [SSMA コンソールを実行する&#40;AccessToSQL&#41; ](../../ssma/access/executing-the-ssma-console-accesstosql.md)セクションです。   
+    コマンド オプションの出力からのレポート (上記の Sl. No. 2 ~ 4) を参照してください、 [SSMA コンソールを実行する&#40;AccessToSQL&#41; ](../../ssma/access/executing-the-ssma-console-accesstosql.md)セクションです。  
   
 2.  レポートの詳細度の設定を使用して、出力レポートに必要な詳細の程度を示します。  
   
@@ -57,7 +56,7 @@ ms.locfileid: "52412769"
     |-|-|-|  
     |**Sl.No.**|**コマンドとパラメーター**|**出力の説明**|  
     |1|レポート エラー ="false"|エラーの詳細はありません/警告/情報メッセージ。|  
-    |2|レポート エラー ="true"|エラーの詳細/警告/情報メッセージ。|  
+    |2|report-errors="true"|エラーの詳細/警告/情報メッセージ。|  
   
     > [!NOTE]  
     > 上記で指定したエラー報告の設定は生成評価レポート、convert スキーマ、データの移行コマンドです。  

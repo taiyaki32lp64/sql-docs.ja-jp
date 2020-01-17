@@ -7,15 +7,15 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 5e6ee618-b89b-46c7-92ad-4fc5ef7b777a
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: daa62b343adca72d28da5d83469409ed476a210e
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: c8f876852ff78e254bdff7ed687d2196d01d9c1d
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52782504"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62835349"
 ---
 # <a name="oracle-supplemental-logging-script"></a>Oracle の補足ログ スクリプト
   このダイアログ ボックスには、Oracle の補足ログ スクリプトが表示されます。  
@@ -33,10 +33,10 @@ ms.locfileid: "52782504"
  **[名前を付けて保存]**  
  スクリプトをテキスト ファイルに保存します。 このオプションは、Oracle データベース管理者 (DBA) が補足ログ スクリプトを調べて実行する必要がある場合に使用されます。ユーザーはスクリプトをテキスト ファイルに保存し、そのテキスト ファイルを後で Oracle DBA に電子メールまたはその他の方法で送信して実行してもらうことができます (SQL*Plus Oracle ユーティリティまたは Oracle データベースでスクリプトを実行するためのその他のツールを使用)。  
   
- **[コピー]**  
+ **コピー**  
  スクリプトをクリップボードにコピーします。 Oracle 管理者 (DBA) が補足ログ スクリプトを調べて実行する必要がある場合は、必要な場所にスクリプトを貼り付けることができます。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [How to Manage a CDC Instance](manage-a-cdc-instance.md)   
  [CDC インスタンスの管理](manage-a-cdc-instance.md)  
   

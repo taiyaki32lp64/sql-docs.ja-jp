@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: 2cb4ffa8-19d3-4664-8c2f-6682cdcc3f33
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 4a24ccf58a1cd0f6d0f4fb2fd32dbee79feb896b
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: 06c158c49c0ce175204bc9738a4f4136db7fe344
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53204441"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68006215"
 ---
 # <a name="sqlgetconnectattr-function"></a>SQLGetConnectAttr 関数
 **準拠**  
@@ -39,7 +38,7 @@ ms.locfileid: "53204441"
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
   
 SQLRETURN SQLGetConnectAttr(  
      SQLHDBC        ConnectionHandle,  
@@ -51,7 +50,7 @@ SQLRETURN SQLGetConnectAttr(
   
 ## <a name="arguments"></a>引数  
  *ConnectionHandle*  
- [入力]接続ハンドルです。  
+ [入力] 接続ハンドル。  
   
  *属性*  
  [入力]取得する属性。  
@@ -75,7 +74,7 @@ SQLRETURN SQLGetConnectAttr(
 -   場合 *\*ValuePtr* 、固定長データ型を含む*BufferLength* SQL_IS_INTEGER または SQL_IS_UINTEGER のいずれかを適切なは。  
   
  *StringLengthPtr*  
- [出力](Null 終了文字を除く) バイトの合計数を返すバッファーへのポインターで返される使用可能な\* *ValuePtr*します。 場合\* *ValuePtr* null ポインターの場合は、長さは返されません。 属性値が文字の文字列と、返される使用可能なバイト数がより大きい場合*BufferLength* null 終了文字のデータの長さマイナス *\*ValuePtr*に切り捨てられます*BufferLength* null 終了文字の長さマイナスはドライバーによって null で終わるとします。  
+ [出力] (Null 終了文字を除く) バイトの合計数を返すバッファーへのポインターで返される使用可能な\* *ValuePtr*します。 場合\* *ValuePtr* null ポインターの場合は、長さは返されません。 属性値が文字の文字列と、返される使用可能なバイト数がより大きい場合*BufferLength* null 終了文字のデータの長さマイナス *\*ValuePtr*に切り捨てられます*BufferLength* null 終了文字の長さマイナスはドライバーによって null で終わるとします。  
   
 ## <a name="returns"></a>戻り値  
  SQL_SUCCESS、SQL_SUCCESS_WITH_INFO、SQL_NO_DATA、SQL_ERROR、または SQL_INVALID_HANDLE。  

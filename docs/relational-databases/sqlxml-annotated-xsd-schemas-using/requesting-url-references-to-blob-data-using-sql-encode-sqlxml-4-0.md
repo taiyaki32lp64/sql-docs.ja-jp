@@ -1,10 +1,8 @@
 ---
-title: '使用した BLOB データへの URL 参照の要求: (SQLXML 4.0) のエンコード |マイクロソフトのドキュメント'
-ms.custom: ''
+title: 'Sql: encode (SQLXML) を使用して BLOB データへの URL 参照を取得する'
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.reviewer: ''
 ms.technology: xml
 ms.topic: reference
 helpviewer_keywords:
@@ -18,36 +16,37 @@ helpviewer_keywords:
 - Base 64-encoded format
 ms.assetid: 2f8cd93b-c636-462b-8291-167197233ee0
 author: MightyPen
-ms.author: douglasl
-manager: craigg
+ms.author: genemi
+ms.reviewer: ''
+ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: fe54541e6f6f86b712e87c73cabc4ac6c4064181
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: e1cd65cce635c89cb7ece1b88851d5f4a9b7cb09
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56028533"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75257417"
 ---
 # <a name="requesting-url-references-to-blob-data-using-sqlencode-sqlxml-40"></a>sql:encode を使用した、BLOB データへの URL 参照の要求 (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   注釈付き XSD スキーマで、属性 (または要素) が Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の BLOB 列にマップされた場合、XML 内に返されるデータは Base 64 エンコード形式になります。  
   
- 指定、およびバイナリ形式で BLOB データを取得する場合、データへの参照 (URI) を返すを後で使用できます、 **sql: エンコード**注釈。 指定できる**sql: エンコード**属性または単純型の要素にします。  
+ バイナリ形式で BLOB データを取得するために後で使用できるデータ (URI) への参照が必要な場合は、 **sql: encode**注釈を指定します。 **Sql: encode**は、単純型の属性または要素に対して指定できます。  
   
- 指定、 **sql: エンコード**フィールドの値ではなく、フィールドへの URL が返されることを示すの注釈。 **sql: エンコード**URL で単一の選択を生成する主キーに依存します。 使用して主キーを指定することができます、 **sql:key-フィールド**注釈。  
+ フィールドの値の代わりにフィールドへの URL が返されることを示すには、 **sql: encode**注釈を指定します。 **sql: encode**は、URL でシングルトン select を生成する主キーに依存します。 主キーは、 **sql: キーフィールド**の注釈を使用して指定できます。  
   
- **Sql: エンコード**"url"または"default"の値は、注釈を割り当てられていることができます。 "default" の場合、データは Base 64 エンコード形式で返されます。  
+ **Sql: encode**注釈には、"url" または "default" の値を割り当てることができます。 "default" の場合、データは Base 64 エンコード形式で返されます。  
   
- **Sql: エンコード**で注釈は使用できません**sql:use-cdata** ID、IDREF、IDREFS、NMTOKEN、または NMTOKENS 属性型またはします。 ないこともできます XSD で**固定**属性。  
+ Sql: **encode**注釈は、sql と共に使用することはできません **: cdata** 、または ID、IDREF、IDREFS、NMTOKEN、または NMTOKENS 属性の型。 XSD **fixed**属性と共に使用することもできません。  
   
 > [!NOTE]  
 >  BLOB 型の列は、キーの一部または外部キーとして使用することはできません。  
   
-## <a name="examples"></a>使用例  
- 次の例を使用した実際のサンプルを作成するには、特定の条件を満たす必要があります。 詳細については、次を参照してください。 [SQLXML の例を実行するための要件](../../relational-databases/sqlxml/requirements-for-running-sqlxml-examples.md)します。  
+## <a name="examples"></a>例  
+ 次の例を使用した実際のサンプルを作成するには、特定の条件を満たす必要があります。 詳細については、「 [SQLXML の例を実行するための要件](../../relational-databases/sqlxml/requirements-for-running-sqlxml-examples.md)」を参照してください。  
   
 ### <a name="a-specifying-sqlencode-to-obtain-a-url-reference-to-blob-data"></a>A. BLOB データへの URL 参照を取得するため、sql:encode を指定する  
- この例では、マッピング スキーマを指定します**sql: エンコード**上、 **LargePhoto** (Base 64 - でバイナリ データを取得する代わりに特定の製品写真への URI 参照を取得する属性エンコードされた形式)。  
+ この例では、マッピングスキーマによって、 **LargePhoto**属性に**sql: encode**が指定されており、特定の製品写真への URI 参照が取得されます (Base 64 エンコード形式でバイナリデータを取得するのではありません)。  
   
 ```  
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"  
@@ -85,9 +84,9 @@ ms.locfileid: "56028533"
   
 3.  SQLXML 4.0 テスト スクリプト (sqlxml4test.vbs) を作成し、それを使用してテンプレートを実行します。  
   
-     詳細については、次を参照してください。 [SQLXML 4.0 クエリの実行に ADO を使用する](../../relational-databases/sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md)します。  
+     詳細については、「ADO を使用した[SQLXML 4.0 クエリの実行](../../relational-databases/sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md)」を参照してください。  
   
- これは、結果です。  
+ 結果を次に示します。  
   
 ```  
 <ROOT xmlns:sql="urn:schemas-microsoft-com:xml-sql">  

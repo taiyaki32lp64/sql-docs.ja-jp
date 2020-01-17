@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 9cc8774b-6711-4837-b442-959eaf79343e
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 951594b22cbae817c2fa7a968794a25f2cba2451
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 5962d04ddae54f2455a99eb29587d3dc98d69420
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47695046"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67921257"
 ---
 # <a name="addnew-method-example-vc"></a>AddNew メソッドの例 (VC++)
 この例では、 [AddNew](../../../ado/reference/ado-api/addnew-method-ado.md)メソッドを指定した名前の新しいレコードを作成します。  
@@ -214,6 +213,6 @@ void PrintProviderError(_ConnectionPtr pConnection) {
 }  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [AddNew メソッド (ADO)](../../../ado/reference/ado-api/addnew-method-ado.md)   
  [Recordset オブジェクト (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)

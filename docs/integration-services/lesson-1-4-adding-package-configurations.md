@@ -1,5 +1,5 @@
 ---
-title: '手順 4: パッケージ構成の追加 | Microsoft Docs'
+title: 手順 4:パッケージ構成の追加 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -8,17 +8,20 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: tutorial
 ms.assetid: e04a5321-63d5-4ec5-85b9-cb4eaf6c87f6
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: c9ed2d231414ca36bef186a8d2e70d491a469fb4
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 6ca9674a5bb3128e86d9cceaca4a971066da0fef
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47605690"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71283678"
 ---
 # <a name="lesson-1-4---adding-package-configurations"></a>レッスン 1-4 - パッケージ構成の追加
+
+[!INCLUDE[ssis-appliesto](../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
 ここでは、各パッケージに構成を追加します。 パッケージ プロパティとパッケージ オブジェクトの値は、構成によって実行時に更新されます。  
   
 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] にはさまざまな種類の構成があります。 構成は、環境変数、レジストリ エントリ、ユーザー定義変数、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] テーブル、XML ファイルに格納できます。 さらに柔軟性を高めるため、 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] では間接構成を使用することもできます。 これは、環境変数を使用して構成の場所を指定し、それによって実際の値を指定する方法です。 Deployment Tutorial プロジェクトのパッケージでは、XML 構成ファイルと間接構成を組み合わせて使用します。 XML 構成ファイルには、複数のプロパティの構成を含めることができ、必要に応じて複数のパッケージから参照できます。 このチュートリアルでは、パッケージごとに異なる構成ファイルを使用します。  
@@ -32,6 +35,8 @@ DataTransferConfig.dtsConfig と LoadXMLData.dtsConfig の 2 つの構成ファ�
 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] で、DataTransferConfig.dtsConfig と LoadXMLData.dtsConfig が DataTransfer および LoadXMLData パッケージと依存関係にあることが認識され、次のレッスンで配置バンドルを作成するときに構成ファイルが自動的に追加されます。  
   
 ### <a name="to-create-indirect-configuration-for-the-datatransfer-package"></a>DataTransfer パッケージの間接構成を作成するには  
+
+プロジェクトの現在の配置モデルを確認し、必要に応じて **[パッケージ配置モデル]** に設定します。 **[プロジェクト]** メニューの **[パッケージ配置モデルに変換]** をクリックします。
   
 1.  ソリューション エクスプローラーで DataTransfer.dtsx をダブルクリックします。  
   
@@ -130,7 +135,7 @@ DataTransferConfig.dtsConfig と LoadXMLData.dtsConfig の 2 つの構成ファ�
 12. **[パッケージ構成オーガナイザー]** ダイアログ ボックスで、LoadXMLData EV Configuration が最初に、LoadXMLData Configuration が 2 番目に表示されていることを確認し、 **[閉じる]** をクリックします。  
   
 ## <a name="next-task-in-lesson"></a>このレッスンの次の作業  
-[手順 5: 更新したパッケージのテスト](../integration-services/lesson-1-5-testing-the-updated-packages.md)  
+[手順 5:更新したパッケージのテスト](../integration-services/lesson-1-5-testing-the-updated-packages.md)  
   
 ## <a name="see-also"></a>参照  
 [[パッケージ構成]](../integration-services/packages/package-configurations.md)  

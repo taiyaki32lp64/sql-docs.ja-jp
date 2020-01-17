@@ -1,6 +1,6 @@
 ---
-title: Ibcpsession::bcpwritefmt (OLE DB) |Microsoft Docs
-description: Ibcpsession::bcpwritefmt を使用して、xml またはテキストのいずれかの形式 (OLE DB) でフォーマット ファイルを保存するには
+title: 'IBCPSession:: BCPWriteFmt (OLE DB) |Microsoft Docs'
+description: 'IBCPSession:: BCPWriteFmt を使用して、フォーマットファイルを xml またはテキスト形式で保存する (OLE DB)'
 ms.custom: ''
 ms.date: 06/14/2018
 ms.prod: sql
@@ -15,13 +15,12 @@ helpviewer_keywords:
 - BCPWriteFmt method
 author: pmasl
 ms.author: pelopes
-manager: craigg
-ms.openlocfilehash: e7941234243c06ecd894b250327e6fcc367f9cd5
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.openlocfilehash: 42a8b450fcc5536920ead44d4f401fb2e81d2b08
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51605532"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67994537"
 ---
 # <a name="ibcpsessionbcpwritefmt-ole-db"></a>IBCPSession::BCPWriteFmt (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

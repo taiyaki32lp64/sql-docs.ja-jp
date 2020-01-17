@@ -1,1 +1,1 @@
- Azure SQL データ ウェアハウス
+ Azure Synapse Analytics (SQL DW)

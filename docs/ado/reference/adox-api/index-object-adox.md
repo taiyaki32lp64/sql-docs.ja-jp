@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 6b9578c0-bc94-46b9-b801-c18e14b04b31
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 0b6fca30201a93b84f59e9356c5201e1070053d5
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 7bff462b7c9ffe115cdfd52d1ec1f0a810a50531
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47822440"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67966083"
 ---
 # <a name="index-object-adox"></a>Index オブジェクト (ADOX)
 データベース テーブルからインデックスを表します。  
@@ -62,7 +61,7 @@ Dim obj As New Index
   
 -   [Index オブジェクトのプロパティ、メソッド、およびイベント](../../../ado/reference/adox-api/index-object-properties-methods-and-events.md)  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [Indexes Append メソッドの例 (VB)](../../../ado/reference/adox-api/indexes-append-method-example-vb.md)   
  [IndexNulls プロパティの例 (VB)](../../../ado/reference/adox-api/indexnulls-property-example-vb.md)   
  [PrimaryKey および Unique プロパティの例 (VB)](../../../ado/reference/adox-api/primarykey-and-unique-properties-example-vb.md)   

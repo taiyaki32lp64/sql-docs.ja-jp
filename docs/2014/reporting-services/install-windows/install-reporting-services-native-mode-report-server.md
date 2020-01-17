@@ -4,23 +4,22 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 helpviewer_keywords:
 - default configuration [Reporting Services]
 - report servers [Reporting Services], default configurations
 - installation options [Reporting Services]
 ms.assetid: 8f25e6dc-b753-400e-9e9a-50f4f35bf6c4
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: f0c52d22f9592d149f25f6ae8a6de2813dfcba1d
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: f3a54650403458eec09826b51f1528a844e48791
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56043293"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66108811"
 ---
 # <a name="install-reporting-services-native-mode-report-server"></a>Reporting Services ネイティブ モードのレポート サーバーのインストール
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] ネイティブ モード レポート サーバーは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インストール ウィザードまたはコマンド ラインからインストールできます。 セットアップ ウィザードで、1) ファイルをインストールして既定の設定でサーバーを構成する、または 1) ファイルのインストールのみを行いインストール ウィザードではサーバーを構成しない、のいずれかを選択できます。 このトピックでは *ネイティブ モードの既定の構成* について確認します。このインストールでは、セットアップでレポート サーバー インスタンスのインストールと構成の両方が行われます。 セットアップが完了すると、レポート サーバーが実行され、使用できる状態になります。 ネイティブ モードのレポート サーバーは、スタンドアロンのアプリケーション サーバーとして実行されます。 ネイティブ モードは既定のサーバー モードです。  
@@ -98,7 +97,7 @@ ms.locfileid: "56043293"
 |要素|説明|  
 |----------|-----------------|  
 |Prefix|既定のプレフィックスは HTTP です。 以前に SSL (Secure Sockets Layer) 証明書をインストールした場合は、HTTPS プレフィックスを使用する URL 予約がセットアップで作成されます。|  
-|ホスト名|既定のホスト名は、強いワイルドカード (+) です。 レポート サーバーが、 http:// を含め、コンピューターに解決されるあらゆるホスト名の指定のポートですべての HTTP 要求を受け入れることを指定します\<computername >/reportserver、 http://localhost/reportserver、または http://\<IPAddress >/reportserver です。|  
+|ホスト名|既定のホスト名は、強いワイルドカード (+) です。 レポート サーバーが、 http:// を含め、コンピューターに解決されるあらゆるホスト名の指定のポートですべての HTTP 要求を受け入れることを指定します\<computername >/reportserver、 http://localhost/reportserver 、または http://\< IPAddress >/reportserver です。|  
 |Port|既定のポートは 80 です。 80 以外のポートを使用する場合は、 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Web アプリケーションをブラウザー ウィンドウで開くときに、そのポートを URL に明示的に追加する必要があるので注意してください。|  
 |仮想ディレクトリ|既定では、reportserver _ の形式で仮想ディレクトリが作成\<*instance_name*> レポート サーバー Web サービスの場合は reports _\<*instance_name*>レポート マネージャー。 レポート サーバー Web サービスの既定の仮想ディレクトリは、 **reportserver**です。 レポート マネージャーの既定の仮想ディレクトリは、 **reports**です。|  
   
@@ -106,7 +105,7 @@ ms.locfileid: "56043293"
   
 -   http://+:80/reportserver は、レポート サーバーへのアクセスを提供します。  
   
--   http://+:80/reports、レポート マネージャーへのアクセスを提供します。  
+-   http://+:80/reports 、レポート マネージャーへのアクセスを提供します。  
   
 ##  <a name="bkmk_installwithwizard"></a> SQL Server のインストール ウィザードによるネイティブ モードをインストールします。  
  次に示すのは、SQL Server インストール ウィザードで選択する  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 固有の手順とオプションです。 ここでは、インストール ウィザードに表示されるそれぞれのページではなく、ネイティブ モードのインストールに含まれる [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 関連のページについてのみ説明します。  
@@ -117,7 +116,7 @@ ms.locfileid: "56043293"
   
 2.  **[機能の選択]** ページで、次のオプションを選択します。  
   
-    -   **[データベース エンジン サービス]**(データベース エンジンのインスタンスがまだインストールされていない場合)。  
+    -   **[データベース エンジン サービス]** (データベース エンジンのインスタンスがまだインストールされていない場合)。  
   
     -   **Reporting Services-ネイティブ**します。  
   

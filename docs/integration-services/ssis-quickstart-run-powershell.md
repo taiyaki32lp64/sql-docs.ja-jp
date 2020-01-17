@@ -6,17 +6,20 @@ ms.prod: sql
 ms.prod_service: integration-services
 ms.custom: ''
 ms.technology: integration-services
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: 084a1e3db36188939542ac578cee327cbc1d62f3
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: b3a77db696e684a499ffcfc09fb64271be5c6b64
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47848090"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71295607"
 ---
 # <a name="run-an-ssis-package-with-powershell"></a>PowerShell を使用して SSIS パッケージを実行する
+
+[!INCLUDE[ssis-appliesto](../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
 このクイックスタートでは、PowerShell スクリプトを使用してデータベース サーバーに接続し、SSIS パッケージを実行する方法を示します。
 
 ## <a name="prerequisites"></a>Prerequisites
@@ -37,12 +40,22 @@ Linux で SSIS パッケージを実行する場合は、このクイックス�
 
 Azure SQL Database でパッケージを実行するには、SSIS カタログ データベース (SSISDB) に接続するために必要な接続情報を取得します。 次の手順では、完全修飾サーバー名とログイン情報が必要です。
 
-1. [Azure ポータル](https://portal.azure.com/)にログインします。
-2. 左側のメニューから **[SQL Databases]** を選択し、**[SQL データベース]** ページで SSISDB データベースを選びます。 
+1. [Azure portal](https://portal.azure.com/) にサインインします。
+2. 左側のメニューから **[SQL Databases]** を選択し、 **[SQL データベース]** ページで SSISDB データベースを選びます。 
 3. データベースの **[概要]** ページで、完全修飾サーバー名を確認します。 **[クリックしてコピー]** オプションを表示するには、サーバー名にマウス ポインターを移動します。 
 4. Azure SQL Database サーバーのログイン情報を忘れた場合は、[SQL Database サーバー] ページに移動し、サーバーの管理者名を表示します。 必要に応じて、パスワードをリセットできます。
 5. **[データベース接続文字列の表示]** をクリックします。
 6. 完全な **ADO.NET** 接続文字列を確認します。
+
+## <a name="ssis-powershell-provider"></a>SSIS PowerShell プロバイダー
+SSIS PowerShell プロバイダーを使用すると、SSIS カタログに接続し、その中のパッケージを実行することができます。
+
+SSIS PowerShell プロバイダーを使用してパッケージ カタログ内の SSIS パッケージを実行する方法の基本的な例を次に示します。
+
+```powershell
+(Get-ChildItem SQLSERVER:\SSIS\localhost\Default\Catalogs\SSISDB\Folders\Project1Folder\Projects\'Integration Services Project1'\Packages\ |
+WHERE { $_.Name -eq 'Package.dtsx' }).Execute("false", $null)
+```
 
 ## <a name="powershell-script"></a>PowerShell スクリプト
 次のスクリプトの一番上で変数の適切な値を指定し、スクリプトを実行して SSIS パッケージを実行します。

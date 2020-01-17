@@ -12,16 +12,15 @@ helpviewer_keywords:
 ms.assetid: 63b3f9a3-1c36-4d06-a6b0-49b5eb5adf06
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 45cd4c98de56a37c81c40505869851134e281852
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: bffb3dfc89f07169bdbedc0d8960325e3f780085
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47633530"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67931686"
 ---
 # <a name="parameters-collection-properties-methods-and-events"></a>Parameters コレクションのプロパティ、メソッド、およびイベント
-## <a name="properties"></a>[プロパティ]  
+## <a name="properties"></a>Properties  
  [Count プロパティ](../../../ado/reference/ado-api/count-property-ado.md)  
   
  [項目のプロパティ](../../../ado/reference/ado-api/item-property-ado.md)  
@@ -36,5 +35,5 @@ ms.locfileid: "47633530"
 ## <a name="events"></a>イベント  
  [なし] :  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [Parameters コレクション (ADO)](../../../ado/reference/ado-api/parameters-collection-ado.md)

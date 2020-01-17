@@ -1,11 +1,10 @@
 ---
-title: IntelliSense の構成 (SQL Server Management Studio) | Microsoft Docs
-ms.custom: ''
+title: IntelliSense の構成
+ms.custom: seo-lt-2019
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 helpviewer_keywords:
 - Options [SQL Server Management Studio], IntelliSense
@@ -15,29 +14,33 @@ ms.assetid: 3ffc9f31-4efa-4c1a-a033-ed1dc48b065f
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: cafcf49f5552f9de1e94cf6978924e88246ec075
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 6060d6deba748ee800dfae41ab7e8da0e558f91f
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48155152"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75245160"
 ---
 # <a name="configure-intellisense-sql-server-management-studio"></a>IntelliSense の構成 (SQL Server Management Studio)
   ほとんどの [!INCLUDE[msCoName](../../includes/msconame-md.md)] IntelliSense オプションは、既定でオンになっています。 IntelliSense オプションをオフにして、メニュー コマンドやキーストロークの組み合わせによって起動することも可能です。  
   
 ### <a name="to-turn-statement-completion-options-off-by-default"></a>入力候補オプションを既定でオフにするには  
   
-1.  **[ツール]** メニューの **[オプション]** をクリックします。  
+1.  
+  **[ツール]** メニューの **[オプション]** をクリックします。  
   
-2.  **[テキスト エディター]** を展開し、 **[すべての言語]**、 **[Transact-SQL]**、 **[XML]** のいずれかを展開して、 **[全般]** をクリックします。  
+2.  
+  **[テキスト エディター]** を展開し、 **[すべての言語]**、 **[Transact-SQL]**、 **[XML]** のいずれかを展開して、 **[全般]** をクリックします。  
   
 3.  入力候補オプションのうち、使用しないオプションのチェック ボックスをオフにし、 **[OK]** をクリックします。  
   
 ### <a name="to-modify-transact-sql-intellisense-options"></a>Transact-SQL IntelliSense オプションを変更するには  
   
-1.  **[ツール]** メニューの **[オプション]** をクリックします。  
+1.  
+  **[ツール]** メニューの **[オプション]** をクリックします。  
   
-2.  **[テキスト エディター]** を展開し、 **[Transact-SQL]** を展開し、 **[IntelliSense]** をクリックします。  
+2.  
+  **[テキスト エディター]** を展開し、 **[Transact-SQL]** を展開し、 **[IntelliSense]** をクリックします。  
   
 3.  使用しない IntelliSense オプションのチェック ボックスをオフにします。  
   

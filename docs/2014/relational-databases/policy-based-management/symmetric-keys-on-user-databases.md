@@ -13,11 +13,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: d080cfc68ebab00a7b699d427be064ef4a49ecaf
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52818334"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63253412"
 ---
 # <a name="symmetric-keys-on-user-databases"></a>ユーザー データベースの対称キー
   このルールでは、長さが 128 バイト未満のキーが RC2 または RC4 暗号化アルゴリズムを使用していないかどうかを確認します。  
@@ -28,7 +28,7 @@ ms.locfileid: "52818334"
 ## <a name="for-more-information"></a>詳細情報  
  [暗号化アルゴリズムの選択](../security/encryption/choose-an-encryption-algorithm.md)  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [ポリシー ベースの管理を使用したベスト プラクティスの監視と実行](monitor-and-enforce-best-practices-by-using-policy-based-management.md)  
   
   

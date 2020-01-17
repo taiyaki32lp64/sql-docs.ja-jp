@@ -15,14 +15,13 @@ helpviewer_keywords:
 ms.assetid: c4351ef5-e7d0-46e7-8367-88695e9974f8
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: f1b47a38cd1fc5cc4d95b611dbafbf8d30b22878
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: 4575c9cbc20faf6afa03201645b736a13325e66b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52407470"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68140302"
 ---
 # <a name="view-the-dependencies-of-a-table"></a>テーブルの依存関係の表示
 [!INCLUDE[tsql-appliesto-ss2016-all-md](../../includes/tsql-appliesto-ss2016-all-md.md)]
@@ -33,7 +32,7 @@ ms.locfileid: "52407470"
   
 -   **作業を開始する準備:**  
   
-     [Security](#Security)  
+     [セキュリティ](#Security)  
   
 -   **テーブルの依存関係を表示するには、次を使用します:**  
   
@@ -56,7 +55,7 @@ ms.locfileid: "52407470"
   
 2.  テーブルを右クリックし、 **[依存関係の表示]** をクリックします。  
   
-3.  **[オブジェクトの依存関係_\<object name\>_]** ダイアログ ボックスで、**[_\<object name\>_ に依存するオブジェクト]** または **[**_\<object name\>_ **が依存するオブジェクト]** を選択します。  
+3.  **[オブジェクトの依存関係 _\<object name\>_ ]** ダイアログ ボックスで、 **[ _\<object name\>_ に依存するオブジェクト]** または **[** _\<object name\>_ **が依存するオブジェクト]** を選択します。  
   
 4.  **[依存関係]** グリッドでオブジェクトをクリックします。 オブジェクトの種類 ("トリガー" や "ストアド プロシージャ" など) が、 **[種類]** ボックスに表示されます。  
   

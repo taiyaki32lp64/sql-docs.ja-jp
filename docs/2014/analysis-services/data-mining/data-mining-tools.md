@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - tools [Analysis Services]
@@ -16,12 +15,12 @@ ms.assetid: 003ada6a-0bcd-4f16-8c34-1a9ffc75cd2c
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 70669026a7953ba1c2818ebc35b3d8fa7cb55427
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: dd0e6b696e692a9e88edd234d22f41983acbe961
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48171552"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66084827"
 ---
 # <a name="data-mining-tools"></a>データ マイニング ツール
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] には、データ マイニング ソリューションの作成に使用できる次のツールが用意されています。  
@@ -43,7 +42,7 @@ ms.locfileid: "48171552"
 ## <a name="data-mining-wizard"></a>では、  
  データ マイニング ウィザードを使用して、データ マイニング ソリューションの作成を開始します。 このウィザードはすぐに簡単に使用でき、データ マイニング構造および初期関連マイニング モデルを順を追って作成する方法が示されます。また、アルゴリズムの種類やデータ ソースの選択と、分析に使用されるケース データの定義も行うことができます。  
   
- **詳細:** [データ マイニング ウィザード (Analysis Services - データ マイニング)](data-mining-wizard-analysis-services-data-mining.md)  
+ **詳細情報。** [データ マイニング ウィザード (Analysis Services - データ マイニング)](data-mining-wizard-analysis-services-data-mining.md)  
   
 ## <a name="data-mining-designer"></a>Data Mining Designer  
  データ マイニング ウィザードを使用してマイニング構造およびマイニング モデルを作成したら、 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] または [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] のデータ マイニング デザイナーを使用して、既存のモデルと構造に対する操作を行うことができます。  
@@ -62,7 +61,7 @@ ms.locfileid: "48171552"
   
 -   既存のマイニング モデルに対する予測とコンテンツ クエリの作成。 1 回限りのクエリの作成、または外部データのテーブル全体の予測を生成するクエリの設定。  
   
- **詳細情報:** [データ マイニング デザイナー](data-mining-designer.md)  
+ **詳細情報。** [データ マイニング デザイナー](data-mining-designer.md)  
   
 ## <a name="sql-server-management-studio"></a>SQL Server Management Studio  
  マイニング モデルを作成してサーバーに配置したら、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] を使用して、データ マイニング オブジェクトをホストする [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] データベースを管理できます。 また、モデルの調査、新しいデータの処理、予測の作成など、モデルを使用するタスクの実行を続けることもできます。  
@@ -72,7 +71,7 @@ ms.locfileid: "48171552"
 ## <a name="integration-services-data-mining-tasks-and-transformations"></a>Integration Services のデータ マイニング タスクおよび変換  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] では、データ マイニングをサポートする多くのコンポーネントが提供されます。  
   
- [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] には、一般的なデータ マイニング タスク (予測、モデル作成、処理など) を自動化するためのツールが含まれます。 以下に例を示します。  
+ [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] には、一般的なデータ マイニング タスク (予測、モデル作成、処理など) を自動化するためのツールが含まれます。 例 :  
   
 -   新しい顧客によってデータセットが更新されるたびに自動的にモデルを更新する、 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] パッケージの作成。  
   
@@ -88,10 +87,10 @@ ms.locfileid: "48171552"
   
 -   新たな顧客をリスク別にセグメント化する、ロジスティック回帰の使用。  
   
- **詳細:** [データ マイニング ソリューションの関連プロジェクト](data-mining-solutions.md)  
+ **詳細情報。** [データ マイニング ソリューションの関連プロジェクト](data-mining-solutions.md)  
   
 ## <a name="see-also"></a>参照  
- [データ マイニング拡張機能&#40;DMX&#41;リファレンス](/sql/dmx/data-mining-extensions-dmx-reference)   
+ [データ マイニング拡張機能 &#40;DMX&#41; リファレンス](/sql/dmx/data-mining-extensions-dmx-reference)   
  [マイニング モデル タスクと操作方法](mining-model-tasks-and-how-tos.md)   
  [マイニング モデル ビューアーのタスクと操作方法](mining-model-viewer-tasks-and-how-tos.md)   
  [データ マイニング ソリューション](data-mining-solutions.md)  

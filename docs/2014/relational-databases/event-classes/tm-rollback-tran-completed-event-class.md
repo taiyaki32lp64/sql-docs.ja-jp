@@ -1,5 +1,5 @@
 ---
-title: TM:Rollback Tran Completed イベント クラス |Microsoft Docs
+title: 'TM: Rollback Tran Completed イベント クラス |Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,21 +15,21 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 105c5da23d5d827271c5c94c70b293acf051d1aa
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52786924"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63061338"
 ---
-# <a name="tm-rollback-tran-completed-event-class"></a>TM:Rollback Tran Completed イベント クラス
+# <a name="tm-rollback-tran-completed-event-class"></a>TM: Rollback Tran Completed イベント クラス
   TM:Rollback Tran Completed イベント クラスは、ROLLBACK TRANSACTION 要求が完了したことを示します。 要求は、トランザクション管理のインターフェイスを使用してクライアントから送信されます。 EventSubClass 列は、現在のトランザクションがロールバックされた後に新しいトランザクションが開始されるかどうかを示します。  
   
-## <a name="tm-rollback-tran-completed-event-class-data-columns"></a>TM:Rollback Tran Completed イベント クラスのデータ列  
+## <a name="tm-rollback-tran-completed-event-class-data-columns"></a>TM: Rollback Tran Completed イベント クラスのデータ列  
   
 |データ列名|データ型|説明|列 ID|フィルターの適用|  
 |----------------------|---------------|-----------------|---------------|----------------|  
 |ApplicationName|`nvarchar`|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のインスタンスへの接続を作成したクライアント アプリケーションの名前。 この列には、プログラムの表示名ではなく、アプリケーションによって渡された値が格納されます。|10|はい|  
-|ClientProcessID|`int`|クライアント アプリケーションが実行されているプロセスに対し、ホスト コンピューターが割り当てた ID。 クライアントによりクライアント プロセス ID が指定されると、このデータ列に値が格納されます。|9|はい|  
+|ClientProcessID|`int`|クライアント アプリケーションが実行されているプロセスに対し、ホスト コンピューターが割り当てた ID。 クライアントによりクライアント プロセス ID が指定されると、このデータ列に値が格納されます。|9|[はい]|  
 |DatabaseID|`int`|USE *database* ステートメントで指定されたデータベースの ID、または特定のインスタンスについて USE *database* ステートメントが実行されていない場合は既定のデータベースの ID となります。 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] では、ServerName データ列がトレースにキャプチャされ、そのサーバーが利用可能な場合、データベースの名前が表示されます。 データベースに対応する値は、DB_ID 関数を使用して特定します。|3|はい|  
 |DatabaseName|`nvarchar`|ユーザーのステートメントが実行されているデータベースの名前。|35|はい|  
 |[エラー]|`int`|特定のイベントのエラー番号。 多くの場合、sys.messages テーブルに保存されているエラー番号です。|31|はい|  

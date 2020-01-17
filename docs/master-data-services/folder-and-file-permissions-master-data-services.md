@@ -1,5 +1,5 @@
 ---
-title: フォルダーとファイルのアクセス許可 (マスター データ サービス) | Microsoft Docs
+title: フォルダーとファイルの権限
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -12,15 +12,14 @@ helpviewer_keywords:
 - folders [Master Data Services]
 - files [Master Data Services]
 ms.assetid: 6402d81d-7349-47b1-95ca-99b0c0f4f373
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 97dc32d375c34d0e4993cdd297783f44a0f28d13
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
-ms.translationtype: HT
+ms.openlocfilehash: 2e125f1dc6b4cb9f30a69c7410c5c404b38d42ba
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52760165"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73728200"
 ---
 # <a name="folder-and-file-permissions-master-data-services"></a>フォルダーとファイルの権限 (マスター データ サービス)
 

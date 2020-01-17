@@ -11,11 +11,11 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: 04231d0020d44107f9c8136aad9f26e8c098df47
-ms.sourcegitcommit: ca9b5cb6bccfdba4cdbe1697adf5c673b4713d6c
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/18/2019
-ms.locfileid: "56407506"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63035321"
 ---
 # <a name="about-the-sql-server-license-terms-sscm"></a>SQL Server のライセンス条項について (SSCM)
   [!INCLUDE[msCoName](../../includes/msconame-md.md)]ソフトウェア ライセンス条項は、ローカル コンピューターにコピー時に[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]がインストールされています。 同じエディションと言語の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスを、同じコンピューターに複数インストールする場合、それらのエディションと言語のすべてのインスタンスに対して単一の使用許諾条件が適用されます。 ファイルに書き込まれます: %ProgramFiles%\Microsoft SQL server \110\license terms \ または %programfiles (x86) %\Microsoft SQL server \110\license 条項\\します。  
@@ -62,7 +62,7 @@ ms.locfileid: "56407506"
   
 -   ESN - スペイン語  
   
--   CHS - 簡体字中国語  
+-   CHS - 簡体中国語  
   
 -   CHT - 繁体字中国語  
   
@@ -77,7 +77,7 @@ ms.locfileid: "56407506"
 ## <a name="sql-server-licensing-options"></a>SQL Server ライセンス オプション  
  詳細については[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]価格およびライセンス オプションを参照してください、 [Microsoft SQL Server](https://go.microsoft.com/fwlink/?LinkId=190955) Web サイト。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [Microsoft SQL Server のプライバシーに関する声明](../../../2014/getting-started/microsoft-sql-server-privacy-statement.md)   
  [ドキュメントの免責事項](../../../2014/getting-started/legal-notice-for-documentation.md)  
   

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords:
 - time data types [Integration Services]
@@ -13,15 +12,15 @@ helpviewer_keywords:
 - date data types
 - date and time formats for fast parse
 ms.assetid: bed6e2c1-791a-4fa1-b29f-cbfdd1fa8d39
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: d84f3158b41f2cff79572ad7a65c3033a4d2ca77
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 26bd117cb63ccc623ee54f3370e1d07237de9c52
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48112748"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66059646"
 ---
 # <a name="date-and-time-formats"></a>日付および時刻の形式
   高速解析は、データを解析するための高速で単純なルーチンのセットです。 高速解析では、日付および時刻のデータ型に対し次の形式がサポートされています。  
@@ -33,7 +32,7 @@ ms.locfileid: "48112748"
   
 -   次の表に示す ISO 8601 形式。  
   
-    |[形式]|説明|  
+    |形式|説明|  
     |------------|-----------------|  
     |YYYYMMDD<br /><br /> -YYYY-MM-DD|4 桁の年、2 桁の月、および 2 桁の日を表す、基本および拡張形式です。 拡張形式では、日付部分はハイフン (-) で区切られます。|  
     |YYYY-MM|4 桁の年および 2 桁の月を表す、有効桁数を減らした基本および拡張形式です。 拡張形式では、日付部分はハイフン (-) で区切られます。|  
@@ -64,7 +63,7 @@ ms.locfileid: "48112748"
   
 -   次の表に示す ISO 8601 時刻形式。  
   
-    |[形式]|説明|  
+    |形式|説明|  
     |------------|-----------------|  
     |HHMISS<br /><br /> HH:MI:SS|2 桁の時、2 桁の分、および 2 桁の秒を表す、基本および拡張形式です。 拡張形式では、時刻の部分はコロン (:) で区切られます。|  
     |HHMI<br /><br /> HH:MI|2 桁の時と 2 桁の分を表す、基本および拡張の切り捨て形式です。 拡張形式では、時刻の部分はコロン (:) で区切られます。|  
@@ -73,7 +72,7 @@ ms.locfileid: "48112748"
   
 -   次の表に示す、タイム ゾーンを指定する時刻形式。  
   
-    |[形式]|説明|  
+    |形式|説明|  
     |------------|-----------------|  
     |+HH:MI<br /><br /> +HHMI|ローカル時間を求めるために協定世界時 (UTC) に加算される時間数と分数を示す基本形式と拡張形式。|  
     |-HH:MI<br /><br /> -HHMI|ローカル時間を求めるために協定世界時 (UTC) から減算される時間数と分数を示す基本形式と拡張形式。|  
@@ -91,7 +90,7 @@ ms.locfileid: "48112748"
   
 -   次の表に示す、小数部を含む時刻形式。  
   
-    |[形式]|説明|  
+    |形式|説明|  
     |------------|-----------------|  
     |HH[.nnnnnnn]|n は、時間の端数を表す 0 ～ 9999999 の範囲の値です。 角かっこは、この値が省略可能であることを示しています。<br /><br /> たとえば、値 12.750 は 12:45 を示します。|  
     |HHMI[.nnnnnnn]<br /><br /> HH:MI[.nnnnnnn]|n は、分の端数を表す 0 ～ 9999999 の範囲の値です。 角かっこは、この値が省略可能であることを示しています。<br /><br /> たとえば、値 1220.500 は 12:20:30 を示します。|  

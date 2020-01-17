@@ -18,12 +18,12 @@ ms.assetid: 94918d1d-7c10-4be7-bf9f-27e00b003a0f
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 5ef0cb341c0f37f6961eebb759f2a236510044f3
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 4bc7254d8a3eafa3c7c7d152d323051a3c5bea94
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48097493"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62875081"
 ---
 # <a name="view-or-change-the-recovery-model-of-a-database-sql-server"></a>データベースの復旧モデルの表示または変更 (SQL Server)
   このトピックでは、 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] または [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] を使用して [!INCLUDE[tsql](../../includes/tsql-md.md)]でデータベースの復旧モデルを表示または変更する方法について説明します。 *復旧モデル*は、トランザクションをログに記録する方法、トランザクション ログのバックアップを必須 (および可能) にするかどうか、利用できる復元操作の種類などを制御するデータベース プロパティです。 復旧モデルの種類は、単純、完全、および一括ログの 3 種類です。 通常、データベースには完全復旧モデルまたは単純復旧モデルが使用されます。 データベースは、任意の時点で別の復旧モデルに切り替えることができます。 **model** データベースは、新しいデータベースの既定の復旧モデルを設定します。  
@@ -42,11 +42,11 @@ ms.locfileid: "48097493"
   
      [Transact-SQL](#TsqlProcedure)  
   
--   **補足の推奨事項:** [復旧モデルを変更した後](#FollowUp)  
+-   **補足の推奨事項。** [復旧モデルを変更した後](#FollowUp)  
   
 -   [関連タスク](#RelatedTasks)  
   
-##  <a name="BeforeYouBegin"></a> 作業を開始する準備  
+##  <a name="BeforeYouBegin"></a> はじめに  
   
 ###  <a name="Recommendations"></a> 推奨事項  
   
@@ -82,7 +82,7 @@ ms.locfileid: "48097493"
   
 5.  **[復旧モデル]** ボックスの一覧に現在の復旧モデルが表示されています。  
   
-6.  復旧モデルを変更する必要がある場合は、別のモデルをこの一覧で選択します。 選択できるのは、 **[完全]**、 **[一括ログ]**、 **[単純]** のいずれかです。  
+6.  復旧モデルを変更する必要がある場合は、別のモデルをこの一覧で選択します。 選択できるのは、 **[完全]** 、 **[一括ログ]** 、 **[単純]** のいずれかです。  
   
 7.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
@@ -96,7 +96,7 @@ ms.locfileid: "48097493"
   
 3.  次の例をコピーしてクエリ ウィンドウに貼り付け、 **[実行]** をクリックします。 この例では、 [sys.databases](/sql/relational-databases/system-catalog-views/sys-databases-transact-sql) カタログ ビューにクエリを実行して、 **model** データベースの復旧モデルを確認する方法を示します。  
   
-```tsql  
+```sql  
 SELECT name, recovery_model_desc  
    FROM sys.databases  
       WHERE name = 'model' ;  
@@ -112,12 +112,12 @@ GO
   
 3.  次の例をコピーしてクエリ ウィンドウに貼り付け、 **[実行]** をクリックします。 この例では、 `model` ALTER DATABASE `FULL` ステートメントの `SET RECOVERY` オプションを使用して、 [データベース内の復旧モデルを](/sql/t-sql/statements/alter-database-transact-sql-set-options) に変更する方法を示します。  
   
-```tsql  
+```sql  
 USE master ;  
 ALTER DATABASE model SET RECOVERY FULL ;  
 ```  
   
-##  <a name="FollowUp"></a> 補足の推奨事項: 復旧モデルを変更した後  
+##  <a name="FollowUp"></a> 補足の推奨事項。復旧モデルを変更した後  
   
 -   **完全復旧モデルと一括ログ復旧モデルの切り替え後の処理**  
   
@@ -154,13 +154,13 @@ ALTER DATABASE model SET RECOVERY FULL ;
   
 -   [ジョブの作成](../../ssms/agent/create-a-job.md)  
   
--   [Disable or Enable a Job](../../ssms/agent/disable-or-enable-a-job.md)  
+-   [ジョブの有効化または無効化](../../ssms/agent/disable-or-enable-a-job.md)  
   
 ##  <a name="RelatedContent"></a> 関連コンテンツ  
   
 -   [メンテナンス プラン](../maintenance-plans/maintenance-plans.md) ( [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] オンライン ブック)  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [復旧モデル &#40;SQL Server&#41;](recovery-models-sql-server.md)   
  [トランザクション ログ &#40;SQL Server&#41;](../logs/the-transaction-log-sql-server.md)   
  [ALTER DATABASE &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql)   

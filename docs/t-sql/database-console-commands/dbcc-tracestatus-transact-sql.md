@@ -22,18 +22,17 @@ helpviewer_keywords:
 - session trace flags [SQL Server]
 - displaying trace flag status
 ms.assetid: 9be51199-78b4-4b87-ae6e-557246b7e29a
-author: uc-msft
+author: pmasl
 ms.author: umajay
-manager: craigg
-ms.openlocfilehash: 6a5f7d153bc518abde56995ea802f20f46531930
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 3d353a6c11d19f96f590e11aa5ebe48677c3cd84
+ms.sourcegitcommit: 3de1fb410de2515e5a00a5dbf6dd442d888713ba
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47847550"
+ms.lasthandoff: 09/02/2019
+ms.locfileid: "70211235"
 ---
 # <a name="dbcc-tracestatus-transact-sql"></a>DBCC TRACESTATUS (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
 
 トレース フラグの状態を表示します。
   
@@ -65,7 +64,7 @@ WITH NO_INFOMSGS
 |列名|[説明]|  
 |---|---|
 |**TraceFlag**|トレース フラグの名前です。|  
-|**ステータス**|トレース フラグがグローバルまたはセッションごとに ON または OFF に設定されているかどうかを示します。<br /><br /> 1 = ON <br /><br /> 0 = OFF|  
+|**ステータス**|トレース フラグがグローバルまたはセッションごとに ON または OFF に設定されているかどうかを示します。<br /><br /> 1 = ON<br /><br /> 0 = OFF|  
 |**Global**|トレース フラグがグローバルに設定されているかどうかを示します。<br /><br /> 1 = True<br /><br /> 0 = False|  
 |**Session**|トレース フラグがセッションに対して設定されているかどうかを示します。<br /><br /> 1 = True<br /><br /> 0 = False|  
   

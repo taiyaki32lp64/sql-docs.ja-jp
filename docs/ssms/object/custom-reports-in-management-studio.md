@@ -12,15 +12,14 @@ f1_keywords:
 helpviewer_keywords:
 - SQL Server Management Studio [SQL Server], custom reports
 ms.assetid: 1ba3f758-f39b-4f5f-91ca-516cedc78979
-author: stevestein
-ms.author: sstein
-manager: craigg
-ms.openlocfilehash: e5486e2dc10e13d3c022ec3d470781a5556c63dc
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 8f2fd6eb4e5c3c6b50f7fd96a0dd5ff51034d305
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47723800"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68259516"
 ---
 # <a name="custom-reports-in-management-studio"></a>Management Studio におけるカスタム レポート
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -36,7 +35,7 @@ ms.locfileid: "47723800"
   
 -   オブジェクト エクスプローラーでノードを右クリックし、 **[レポート]** をポイントして、 **[カスタム レポート]** を左クリックします。 **[ファイルを開く]** ダイアログ ボックスで .rdl ファイルを含むフォルダーを見つけ、適切なレポート ファイルを開きます。  
   
--   オブジェクト エクスプローラーでノードを右クリックして、 **[レポート]**、 **[カスタム レポート]** の順にポイントし、最近使用したファイル一覧からカスタム レポートを選択します。  
+-   オブジェクト エクスプローラーでノードを右クリックして、 **[レポート]** 、 **[カスタム レポート]** の順にポイントし、最近使用したファイル一覧からカスタム レポートを選択します。  
   
 ## <a name="limitations"></a>制限事項  
 カスタム レポートを操作する場合は、次の制限事項に注意してください。  

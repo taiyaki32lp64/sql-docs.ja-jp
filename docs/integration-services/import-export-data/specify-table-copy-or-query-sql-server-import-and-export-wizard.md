@@ -3,24 +3,26 @@ title: テーブルのコピーまたはクエリの指定 (SQL Server インポ
 ms.custom: ''
 ms.date: 02/17/2017
 ms.prod: sql
-ms.prod_service: integration-services
 ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql13.dts.impexpwizard.specifytablecopyorquery.f1
 ms.assetid: 08aa7158-40e6-4ef3-84d3-1265a8ba194c
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: 4b05d989d5d6657a0006d485c4e2b65488feb449
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: f561fd0e5817ecc03e8d5fe4cc8c32661ebdca21
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47665237"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71296251"
 ---
 # <a name="specify-table-copy-or-query-sql-server-import-and-export-wizard"></a>[テーブルのコピーまたはクエリの指定] \(SQL Server インポートおよびエクスポート ウィザード)
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   データの出力先とデータへの接続方法を指定すると、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インポートおよびエクスポート ウィザードには、 **[テーブルのコピーまたはクエリの指定]** が表示されます。 このページで、次のいずれかのオプションを選択します。
 -   **1 つ以上のテーブルまたはビューからデータをコピーする**が表示されます。 一覧からテーブル (複数可) を選択します。
 -   **転送するデータを指定するためのクエリを記述する**が表示されます。 SQL クエリのテキストを入力するか貼り付けます。
@@ -51,7 +53,7 @@ ms.locfileid: "47665237"
 ## <a name="why-isnt-the-copy-option-available"></a>[コピー] オプションはどうして利用できないのですか?    
  ウィザードで **データ プロバイダーを使用してデータ ソースに接続する場合、** [1 つ以上のテーブルまたはビューからデータをコピーする] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] オプションを使用できないことがあります。 データ ソースからテーブルおよびビューの一覧を要求するために必要なデータ プロバイダーに関する十分な情報がウィザードにない場合に、このような問題が起こります。 
  
-通常、SQL クエリを記述しない場合でも、エクスポートするテーブルの名前がわかっている限り、**[クエリを記述する]** オプションを使用できます。 **[次へ]** をクリックした後に表示される **[基になるクエリの指定]** ダイアログ ボックスで、`SELECT * FROM <name of table>` としてクエリを入力します。 テーブルの名前にスペースや特殊文字が含まれる場合は、角かっこで名を囲みます。`SELECT * FROM [<name of table>]`
+通常、SQL クエリを記述しない場合でも、エクスポートするテーブルの名前がわかっている限り、 **[クエリを記述する]** オプションを使用できます。 **[次へ]** をクリックした後に表示される **[基になるクエリの指定]** ダイアログ ボックスで、`SELECT * FROM <name of table>` としてクエリを入力します。 テーブルの名前にスペースや特殊文字が含まれる場合は、角かっこで名を囲みます。`SELECT * FROM [<name of table>]`
 
 ### <a name="more-info"></a>詳細
  **[1 つ以上のテーブルまたはビューからデータをコピーする]** オプションは、ProviderDescriptors.xml ファイルに ProviderDescription セクションがあるプロバイダーでのみ使用できます。 (既定では、このファイルは、\<*ドライブ*>:\Program Files\Microsoft SQL Server\130\DTS\ProviderDescriptors に格納されています)。このファイルの各 ProviderDescription セクションには、対応するプロバイダーからメタデータを取得するのに必要な情報が含まれています。    

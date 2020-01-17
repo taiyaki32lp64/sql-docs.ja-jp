@@ -21,21 +21,20 @@ helpviewer_keywords:
 ms.assetid: ee5ad283-9e44-4109-902f-0ce12669ee11
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 9aea2cb62ad12745a8ad03fd9998a47ee77173e6
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 2b318f7be6b403cb540305eb492cf99a776efc9d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47838610"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68044230"
 ---
 # <a name="drop-function-transact-sql"></a>DROP FUNCTION (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-  1 つ以上のユーザー定義関数を現在のデータベースから削除します。 ユーザー定義関数は [CREATE FUNCTION](../../t-sql/statements/create-function-transact-sql.md) を使って作成し、[ALTER FUNCTION](../../t-sql/statements/alter-function-transact-sql.md) を使って変更します。  
+  1 つまたは複数のユーザー定義関数を現在のデータベースから削除します。 ユーザー定義関数は [CREATE FUNCTION](../../t-sql/statements/create-function-transact-sql.md) を使って作成し、[ALTER FUNCTION](../../t-sql/statements/alter-function-transact-sql.md) を使って変更します。  
   
- ドロップ関数には、ネイティブ コンパイル、スカラー ユーザー定義関数がサポートしています。 詳しくは、「[インメモリ OLTP でのユーザー定義のスカラー関数](../../relational-databases/in-memory-oltp/scalar-user-defined-functions-for-in-memory-oltp.md)」をご覧ください。  
+ DROP 関数では、ネイティブ コンパイル、スカラー ユーザー定義関数をサポートしています。 詳しくは、「[インメモリ OLTP でのユーザー定義のスカラー関数](../../relational-databases/in-memory-oltp/scalar-user-defined-functions-for-in-memory-oltp.md)」をご覧ください。  
   
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -64,7 +63,7 @@ DROP FUNCTION [ schema_name. ] function_name
  ユーザー定義関数が属するスキーマの名前を指定します。  
   
  *function_name*  
- 削除するユーザー定義関数の名前を指定します。 スキーマ名の指定は省略可能です。 サーバー名とデータベース名は指定できません。  
+ 削除するユーザー定義関数の名前です。 スキーマ名の指定は省略可能です。 サーバー名とデータベース名は指定できません。  
   
 ## <a name="remarks"></a>Remarks  
  データベース内に、この関数を参照し SCHEMABINDING を使って作成された [!INCLUDE[tsql](../../includes/tsql-md.md)] 関数またはビューがある場合、または、この関数を参照する計算列、CHECK 制約、DEFAULT 制約がある場合、DROP FUNCTION は失敗します。  

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 08/10/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 helpviewer_keywords:
 - report servers [Reporting Services], databases
@@ -15,15 +14,15 @@ helpviewer_keywords:
 - reportservertempdb
 - reportserver database
 ms.assetid: 97b2e1b5-3869-4766-97b9-9bf206b52262
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 6870e52124d303b2e04e85158adb98872b78085f
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: d155437880f1fb93779a2352bd507ea83de16256
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56041253"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66104279"
 ---
 # <a name="administer-a-report-server-database-ssrs-native-mode"></a>レポート サーバー データベースを管理する (SSRS ネイティブ モード)
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] の環境では、2 つの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] リレーショナル データベースが内部記憶域として使用されます。 既定では、データベース名がそれぞれ ReportServer と ReportServerTempdb になります。 ReportServerTempdb は、レポート サーバーのプライマリ データベースと共に作成され、一時データ、セッション情報、およびキャッシュされたレポートを格納する目的に使用されます。  
@@ -59,7 +58,7 @@ ms.locfileid: "56041253"
  ReportServerTempdb の名前は内部的に保存され、ストアド プロシージャが内部的な操作を実行するときに使用されるため、このエラーが発生します。 一時データベースの名前を変更すると、ストアド プロシージャが正しく機能しなくなります。  
   
 ## <a name="enabling-snapshot-isolation-on-the-report-server-database"></a>レポート サーバー データベースのスナップショット分離の有効化  
- レポート サーバー データベースのスナップショット分離を有効にすることはできません。 スナップショット分離を有効にした場合、"選択したレポートは、表示できる状態ではありません。 レポートが表示の準備中か、またはレポート スナップショットが利用できません" というエラーが発生します。  
+ レポート サーバー データベースのスナップショット分離を有効にすることはできません。 スナップショット分離が有効な場合は、次のエラーが発生するは。"選択したレポートが表示できていません。 レポートが表示の準備中か、またはレポート スナップショットが利用できません" というエラーが発生します。  
   
  スナップショット分離を意図的に有効にしなくても、他のアプリケーションによって属性が設定されたり、 **model** データベースのスナップショット分離が有効になっていたために、新しいデータベースがすべてその設定を引き継いでしまうことも考えられます。  
   
@@ -77,7 +76,7 @@ SET READ_COMMITTED_SNAPSHOT OFF
 ```  
   
 ## <a name="about-database-versions"></a>データベースのバージョンについて  
- [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]では、データベースのバージョンについて明確な情報を入手できません。 ただし、データベースのバージョンは常に製品のバージョンと同期しているので、製品バージョンの情報からデータベースのバージョンが変更された時期がわかります。 製品バージョンの情報[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]ファイル バージョン情報のすべての SOAP 呼び出しのヘッダー内のログ ファイルに表示されると、レポート サーバーの URL に接続するときに示されます (たとえば、ブラウザーを開く http://localhost/reportserver)します。  
+ [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]では、データベースのバージョンについて明確な情報を入手できません。 ただし、データベースのバージョンは常に製品のバージョンと同期しているので、製品バージョンの情報からデータベースのバージョンが変更された時期がわかります。 製品バージョンの情報[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]ファイル バージョン情報のすべての SOAP 呼び出しのヘッダー内のログ ファイルに表示されると、レポート サーバーの URL に接続するときに示されます (たとえば、ブラウザーを開く http://localhost/reportserver) します。  
   
 ## <a name="see-also"></a>参照  
  [Reporting Services 構成マネージャー &#40;ネイティブ モード&#41;](../../sql-server/install/reporting-services-configuration-manager-native-mode.md)   

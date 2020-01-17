@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: f0dd84c6-5c33-4ab9-82b4-4c42dfdd2277
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 60d3b2660f3a20883e9b9f2d3b4202526c15a943
-ms.sourcegitcommit: 1a5448747ccb2e13e8f3d9f04012ba5ae04bb0a3
+ms.openlocfilehash: 158b9084ebe9aac28a2ec05c18938338c1bc90ae
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51559779"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67922969"
 ---
 # <a name="address-book-navigation-buttons"></a>アドレス帳のナビゲーション ボタン
 アドレス帳アプリケーションでは、Web ページの下部にあるナビゲーション ボタンが表示されます。 データの最初と最後の行または行の現在の選択範囲の横にあるいずれかを選択して、HTML のグリッド表示内のデータを移動するナビゲーション ボタンを使用できます。  
@@ -62,7 +61,7 @@ Sub Last_OnClick
 End Sub  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [DataControl オブジェクト (RDS)](../../../ado/reference/rds-api/datacontrol-object-rds.md)   
  [MoveFirst、MoveLast、MoveNext、MovePrevious メソッド (RDS)](../../../ado/reference/rds-api/movefirst-movelast-movenext-and-moveprevious-methods-rds.md)
 

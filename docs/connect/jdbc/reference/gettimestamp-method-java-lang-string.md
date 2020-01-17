@@ -1,5 +1,5 @@
 ---
-title: getTimestamp (java.lang.String) メソッド |Microsoft Docs
+title: getTimestamp メソッド (java.lang.String) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: 4d5174db-365c-4476-9472-7871578ef34c
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: b2bc525c760bfdfafc019cf54e1a3c5da3106b61
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 999cfba0f0bd98bfc7e13f436303160ef66962b3
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47835370"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67978736"
 ---
 # <a name="gettimestamp-method-javalangstring"></a>getTimestamp (java.lang.String) メソッド
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -41,7 +40,7 @@ public java.sql.Timestamp getTimestamp(java.lang.String sCol)
  パラメーターの名前を含む**文字列**です。  
   
 ## <a name="return-value"></a>戻り値  
- タイムスタンプのオブジェクト。  
+ タイムスタンプオブジェクト。  
   
 ## <a name="exceptions"></a>例外  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  

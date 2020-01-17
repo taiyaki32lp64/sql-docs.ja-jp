@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 6dc27c85-84e1-472a-b057-d1854b8c98a3
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 4d434cf2afaecd7f088df3b4a8b771a1e370440d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b8a888460d115ee5ee3e9b392292c50587709357
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47806902"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67952184"
 ---
 # <a name="ado-programmer39s-reference"></a>ADO プログラマ&#39;リファレンス
 このセクションでは、次のトピックを扱います。  

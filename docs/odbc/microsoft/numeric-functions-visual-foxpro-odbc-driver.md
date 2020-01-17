@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 7caab48e-cbb5-4bbc-a09b-5cf902e5bc45
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 73379b769da61fe14ba18815446337d0172c2805
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 34d2ceb19bce2e466ff5cae7647125e94fdb7c03
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47654412"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68044987"
 ---
 # <a name="numeric-functions-visual-foxpro-odbc-driver"></a>数値関数 (Visual FoxPro ODBC ドライバー)
 次の表に、Visual FoxPro ODBC ドライバーでサポートされている ODBC 数値関数ODBC 構文から同じ関数の場合、Visual FoxPro の文法が異なる場合は、Visual FoxPro のと同じですが一覧表示されます。  

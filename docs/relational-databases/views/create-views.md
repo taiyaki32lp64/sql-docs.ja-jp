@@ -12,14 +12,13 @@ helpviewer_keywords:
 ms.assetid: 0b7bd2a1-544c-42ba-8e7b-4822f34d7b64
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 1d4d718b38780b7dd77f356269a431daf0f91b03
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: db933c5382049767fcb205b8daa2356a497f3d43
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52514640"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72909475"
 ---
 # <a name="create-views"></a>ビューの作成
 [!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -37,7 +36,7 @@ ms.locfileid: "52514640"
   
      [制限事項と制約事項](#Restrictions)  
   
-     [Security](#Security)  
+     [セキュリティ](#Security)  
   
 -   **以下を使用してビューを作成するには**  
   
@@ -63,7 +62,7 @@ ms.locfileid: "52514640"
   
 1.  **オブジェクト エクスプローラー**で、新しいビューを作成するデータベースを展開します。  
   
-2.  **[ビュー]** フォルダーを右クリックし、**[新しいビュー]** をクリックします。  
+2.  **[ビュー]** フォルダーを右クリックし、 **[新しいビュー]** をクリックします。  
   
 3.  **[テーブルの追加]** ダイアログ ボックスで、新しいビューに含める 1 つまたは複数の要素を、[テーブル]、[ビュー]、[関数]、および [シノニム] のいずれかのタブから選択します。  
   
@@ -76,7 +75,7 @@ ms.locfileid: "52514640"
 7.  **ファイル** メニューの **view name**_の保存_をクリックします。  
   
 8.  **[名前の選択]** ダイアログ ボックスで、新しいビューの名前を入力し、 **[OK]** をクリックします。  
-  
+
      クエリおよびビュー デザイナーの詳細については、「[クエリおよびビュー デザイナー &#40;Visual Database Tools&#41;](https://msdn.microsoft.com/library/12e4b5a5-b793-4b6c-a0e5-c450c49bf26f)」を参照してください。  
   
 ##  <a name="TsqlProcedure"></a> Transact-SQL の使用  

@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: b616632b-5987-470d-b36c-b22fa9213145
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 135dad379d0642059af19060b9df27baec0e3e24
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: cf4c90644282ff420e064e7a7b5b99a93c257194
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47615192"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67971379"
 ---
 # <a name="sqlserverdatasourceobjectfactory-class"></a>SQLServerDataSourceObjectFactory クラス
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -39,7 +38,7 @@ public class SQLServerDataSourceObjectFactory
 ## <a name="remarks"></a>Remarks  
  このクラスはすべてのデータ ソース クラスに継承されます。 Referenceable インターフェイスのサポートの一部として、[!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)] では、ObjectFactory を実装するこのクラスが公開されています。 Java アプリケーション サーバーはデータ ソース クラスで getReference を呼び出し、それによって、内部的にクラス名をクラス ファクトリとして使用する Reference オブジェクトが作成されます。  
   
- SQLServerDataSourceObjectFactory のオブジェクトと呼び出しのインスタンスを作成、参照オブジェクトを逆参照する場合、Java アプリケーション サーバー、 [getObjectInstance](../../../connect/jdbc/reference/getobjectinstance-method-sqlserverdatasourceobjectfactory.md)参照オブジェクトを渡してメソッドデータ ソースのインスタンスを取得します。  
+ Java アプリケーションサーバーが参照オブジェクトを逆参照する必要がある場合は、SQLServerDataSourceObjectFactory オブジェクトのインスタンスを作成し、 [Getobjectinstance](../../../connect/jdbc/reference/getobjectinstance-method-sqlserverdatasourceobjectfactory.md)メソッドを呼び出して、参照オブジェクトを渡してデータソースを取得します。instance.  
   
 ## <a name="see-also"></a>参照  
  [SQLServerDataSourceObjectFactory のメンバー](../../../connect/jdbc/reference/sqlserverdatasourceobjectfactory-members.md)   

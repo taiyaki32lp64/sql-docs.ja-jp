@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: c05b180f-c2b0-437b-8d1c-ce7f4da93287
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: ae95160a11a965e47845726748c2b9449a819e8a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 55d7017c659ca4d0b8094ed4a665d27c10b355f7
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47775960"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68020450"
 ---
 # <a name="retrieving-the-values-in-descriptor-fields"></a>記述子フィールドの値の取得
 アプリケーションが呼び出すことができます**SQLGetDescField**記述子レコードの 1 つのフィールドを取得します。 **SQLGetDescField** ODBC では、定義されているすべての記述子フィールドをドライバーで定義されたフィールドも、アプリケーションにアクセスします。  

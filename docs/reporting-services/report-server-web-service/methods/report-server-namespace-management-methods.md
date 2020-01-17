@@ -11,14 +11,14 @@ helpviewer_keywords:
 - methods [Reporting Services], about methods
 - methods [Reporting Services]
 ms.assetid: 2aa43ce9-f51e-408a-8ce0-b40d3dd62561
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: b09f9e6d9700a56eaa36ddd40ad038fd291c6058
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 7639cd7ce7cd33f59fbc65116264a8b887879b77
+ms.sourcegitcommit: 710d60e7974e2c4c52aebe36fceb6e2bbd52727c
+ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47848130"
+ms.lasthandoff: 10/11/2019
+ms.locfileid: "72278296"
 ---
 # <a name="report-server-namespace-management-methods"></a>レポート サーバー名前空間管理メソッド
   レポート サーバー管理 Web サービスには、レポート サーバー データベースのレポート、フォルダー、およびリソースの管理に使用できるメソッドが含まれています。  
@@ -28,7 +28,7 @@ ms.locfileid: "47848130"
 |<xref:ReportService2010.ReportingService2010.CancelJob%2A>|ジョブの実行を取り消します。|  
 |<xref:ReportService2010.ReportingService2010.CreateFolder%2A>|レポート サーバー データベースまたは SharePoint ライブラリにフォルダーを追加します。|  
 |<xref:ReportService2010.ReportingService2010.CreateCatalogItem%2A>|レポート サーバー データベースまたは SharePoint ライブラリに新しいアイテムを追加します。 このメソッドが適用されるアイテムの種類は、**Report**、**Model**、**Dataset**、**Component**、**Resource**、**DataSource** です。|  
-|M:ReportService2010.ReportingService2010.CreateReportEditSession(System.String,System.String,System.Byte[],ReportService2010.Warning[]@)|新しいレポート編集セッションを作成します。|  
+|M:ReportService2010.ReportingService2010.CreateReportEditSession (System.string, system.string, System.string [], ReportService2010 [] @) を指定します。|新しいレポート編集セッションを作成します。|  
 |<xref:ReportService2010.ReportingService2010.DeleteItem%2A>|レポート サーバー データベースまたは SharePoint ライブラリからアイテムを削除します。|  
 |<xref:ReportService2010.ReportingService2010.FindItems%2A>|指定した検索条件に一致する、レポート サーバー データベースまたは SharePoint ライブラリのアイテムを返します。|  
 |<xref:ReportService2010.ReportingService2010.FireEvent%2A>|指定したパラメーターに基づいてイベントをトリガーします。|  

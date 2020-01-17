@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: c23912f0-1288-4727-8fb4-f643b8811cf7
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: f2d10136a9074be9ffa9f0465c0856bd9d669e24
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.openlocfilehash: b92db747267f250501b11200c870526fe79e713b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51600002"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67964605"
 ---
 # <a name="cancelupdate-method-example-vbscript"></a>CancelUpdate メソッドの例 (VBScript)
 > [!IMPORTANT]
@@ -118,7 +117,7 @@ End Sub
 <!-- EndCancelUpdateVBS -->  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [CancelUpdate メソッド (ADO)](../../../ado/reference/ado-api/cancelupdate-method-ado.md)
 
 

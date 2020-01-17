@@ -18,22 +18,18 @@ helpviewer_keywords:
 - ranking rows
 - RANK function [Transact-SQL]
 ms.assetid: 2d96f6d2-5db7-4b3c-a63e-213c58e4af55
-author: MashaMSFT
-ms.author: mathoma
-manager: craigg
+author: MikeRayMSFT
+ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: c16cc921eb563da666850c611325329e2530d65a
-ms.sourcegitcommit: 96032813f6bf1cba680b5e46d82ae1f0f2da3d11
+ms.openlocfilehash: 631ef62034027217e8893f2fab42ce299157c1ba
+ms.sourcegitcommit: 97e94b76f9f48d161798afcf89a8c2ac0f09c584
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/15/2019
-ms.locfileid: "54300119"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68661446"
 ---
 # <a name="rank-transact-sql"></a>RANK (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
-
-> [!div class="nextstepaction"]
-> [SQL ドキュメントの目次に関するご意見を共有してください。](https://aka.ms/sqldocsurvey)
 
 結果セットのパーティション内の各行の順位を返します。 行の順位は、その行より上にある順位の数に 1 を加えたものです。  
 
@@ -46,13 +42,13 @@ ROW_NUMBER と RANK は似ています。 ROW_NUMBER は、すべての行に順
   
 ## <a name="syntax"></a>構文  
   
-```  
+```sql  
 RANK ( ) OVER ( [ partition_by_clause ] order_by_clause )  
 ```  
   
 ## <a name="arguments"></a>引数  
- OVER **(** [ _partition\_by\_clause_ ] _order\_by\_clause_**)**  
- *partition_by_clause* は、FROM 句で生成された結果セットをパーティションに分割します。このパーティションに関数が適用されます。 指定しない場合、関数ではクエリ結果セットのすべての行を 1 つのグループとして扱います。 _order\_by\_clause_ は、関数を適用する前にデータの順序を決定します。 *order_by_clause* が必要です。 OVER 句の \<rows or range clause/> は、RANK 関数では指定できません。 詳細については、を参照してください。 [経由句 (&) #40 です。TRANSACT-SQL と #41;](../../t-sql/queries/select-over-clause-transact-sql.md).  
+ OVER **(** [ _partition\_by\_clause_ ] _order\_by\_clause_ **)**  
+ *partition_by_clause* は、FROM 句で生成された結果セットをパーティションに分割します。このパーティションに関数が適用されます。 指定しない場合、関数ではクエリ結果セットのすべての行を 1 つのグループとして扱います。 _order\_by\_clause_ は、関数を適用する前にデータの順序を決定します。 *order_by_clause* が必要です。 OVER 句の \<rows or range clause/> は、RANK 関数では指定できません。 詳細については、[OVER 句 &#40;Transact-SQL&#41;](../../t-sql/queries/select-over-clause-transact-sql.md)を参照してください。  
   
 ## <a name="return-types"></a>戻り値の型  
  **bigint**  
@@ -69,7 +65,7 @@ RANK ( ) OVER ( [ partition_by_clause ] order_by_clause )
 ### <a name="a-ranking-rows-within-a-partition"></a>A. パーティション内の行に順位を付ける  
  次の例では、指定された在庫場所の在庫内の製品を数量に応じて順位付けしています。 結果セットは `LocationID` によってパーティションに分割され、`Quantity` によって論理的に順序付けされます。 494 と 495 の製品が同じ数量であることを確認します。 これらは数量が同じなので、両方とも順位が 1 位になっています。  
   
-```  
+```sql  
 USE AdventureWorks2012;  
 GO  
 SELECT i.ProductID, p.Name, i.LocationID, i.Quantity  
@@ -85,7 +81,7 @@ GO
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
-```  
+```sql  
   
 ProductID   Name                   LocationID   Quantity Rank  
 ----------- ---------------------- ------------ -------- ----  
@@ -105,7 +101,7 @@ ProductID   Name                   LocationID   Quantity Rank
 ### <a name="b-ranking-all-rows-in-a-result-set"></a>B. 結果セット内のすべての行に順位を付ける  
  次の例では、給与に順位を付け、トップ 10 の従業員を返します。 PARTITION BY 句が指定されていないため、RANK 関数は結果セットのすべての行に適用されます。  
   
-```  
+```sql  
 USE AdventureWorks2012  
 SELECT TOP(10) BusinessEntityID, Rate,   
        RANK() OVER (ORDER BY Rate DESC) AS RankBySalary  
@@ -118,7 +114,7 @@ ORDER BY BusinessEntityID;
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
-```  
+```sql  
 BusinessEntityID Rate                  RankBySalary  
 ---------------- --------------------- --------------------  
 1                125.50                1  
@@ -138,7 +134,7 @@ BusinessEntityID Rate                  RankBySalary
 ### <a name="c-ranking-rows-within-a-partition"></a>C:パーティション内の行に順位を付ける  
  次の例では、売上合計に応じて販売区域ごとに販売担当者をランク付けします。 行セットは `SalesTerritoryGroup` によってパーティション分割され、`SalesAmountQuota` によって並べ替えられます。  
   
-```  
+```sql  
 -- Uses AdventureWorks  
   
 SELECT LastName, SUM(SalesAmountQuota) AS TotalSales, SalesTerritoryRegion,  
@@ -152,8 +148,8 @@ GROUP BY LastName, SalesTerritoryRegion;
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
-```
-LastName          TotalSales     SalesTerritoryGroup  RankResult
+```sql
+LastName          TotalSales     SalesTerritoryRegion  RankResult
 ----------------  -------------  -------------------  --------
 Tsoflias          1687000.0000   Australia            1
 Saraiva           7098000.0000   Canada               1
@@ -172,10 +168,10 @@ Pak               10514000.0000  United Kingdom       1
 ```  
   
 ## <a name="see-also"></a>参照  
- D[ENSE_RANK (&) #40 です。TRANSACT-SQL と #41 です。](../../t-sql/functions/dense-rank-transact-sql.md)   
+ [DENSE_RANK &#40;Transact-SQL&#41;](../../t-sql/functions/dense-rank-transact-sql.md)   
  [ROW_NUMBER &#40;Transact-SQL&#41;](../../t-sql/functions/row-number-transact-sql.md)   
  [NTILE &#40;Transact-SQL&#41;](../../t-sql/functions/ntile-transact-sql.md)   
- [順位付け関数 (&) #40 です。TRANSACT-SQL と #41 です。](../../t-sql/functions/ranking-functions-transact-sql.md)   
+ [順位付け関数 &#40;Transact-SQL&#41;](../../t-sql/functions/ranking-functions-transact-sql.md)   
  [組み込み関数 &#40;Transact-SQL&#41;](~/t-sql/functions/functions.md)  
   
   

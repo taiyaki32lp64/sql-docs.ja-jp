@@ -18,18 +18,17 @@ helpviewer_keywords:
 ms.assetid: f15f6b05-6808-4b76-b6a8-48dec844cf63
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: f535bf0ce2bf455fea72db4ebcdf9879749441cb
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 174fa1af651c2e713bdb91ba217e896b833467b2
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47681410"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68060371"
 ---
-# <a name="syscollectorconfigstore-transact-sql"></a>syscollector_config_store (Transact-SQL)
+# <a name="syscollectorconfigstore-transact-sql"></a>syscollector_config_store (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  コレクション セットのインスタンスではなく、データ コレクター全体に適用されたプロパティを返します。 このビューの各行は、管理データ ウェアハウスの名前や、管理データ ウェアハウスが置かれているインスタンスの名前など、データ コレクターの特定のプロパティを表します。  
+  コレクションではなく、すべてのデータ コレクターに適用されるプロパティを返しますでは、インスタンスを設定します。 このビューの各行は、管理データ ウェアハウスの名前や、管理データ ウェアハウスが置かれているインスタンスの名前など、データ コレクターの特定のプロパティを表します。  
   
 |列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
@@ -40,15 +39,15 @@ ms.locfileid: "47681410"
  ビューの SELECT 権限、または dc_operator、dc_proxy、dc_admin のいずれかの固定データベース ロールのメンバーシップが必要です。  
   
 ## <a name="remarks"></a>コメント  
- このビューで確認できるプロパティはあらかじめ決まっており、実際の値は適切なストアド プロシージャを使ってのみ変更できます。 次の表で、このビューを介して公開されるプロパティについて説明します。  
+ 使用可能なプロパティの一覧が固定され、適切なストアド プロシージャを使用してその値を変更することができますのみ。 次の表で、このビューを介して公開されるプロパティについて説明します。  
   
 |プロパティ名|説明|  
 |-------------------|-----------------|  
 |CacheDirectory|コレクター型のパッケージが一時的な情報を格納するファイル システム内のディレクトリの名前です。<br /><br /> NULL = 既定の一時[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]ディレクトリが使用されます。|  
-|CacheWindow|データのアップロード時にエラーが発生した場合に使用される、キャッシュ ディレクトリのデータの保有ポリシーを示します。<br /><br /> -1 = アップロード エラーが発生した場合は常にデータを保持します。<br /><br /> 0 = アップロード エラーが発生した場合にデータを保持しません。<br /><br /> *n*からデータの保持を = *n*以前のアップロード エラー、 *n* > = 1。<br /><br /> この値を変更するには、sp_syscollector_set_cache_window ストアド プロシージャを使用します。|  
+|CacheWindow|失敗したデータのアップロード用のキャッシュ ディレクトリのデータ保有ポリシーを示します。<br /><br /> -1 = アップロード エラーが発生した場合は常にデータを保持します。<br /><br /> 0 = アップロード エラーが発生した場合にデータを保持しません。<br /><br /> *n*からデータの保持を = *n*以前のアップロード エラー、 *n* > = 1。<br /><br /> この値を変更するには、sp_syscollector_set_cache_window ストアド プロシージャを使用します。|  
 |CollectorEnabled|データ コレクターの状態を示します。<br /><br /> 0 = 無効になっています<br /><br /> 1 = 有効になっています。<br /><br /> この値を変更するには、sp_syscollector_enable_collector ストアド プロシージャまたは sp_syscollector_disable_collector ストアド プロシージャを使用します。|  
-|MDWDatabase|管理データ ウェアハウスの名前です。 この値を変更するには、sp_syscollector_set_warehouse_database_name ストアド プロシージャを使用します。|  
-|MDWInstance|管理データ ウェアハウスが存在する [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスの名前です。 この値を変更するには、sp_syscollector_set_warehouse_instance_name ストアド プロシージャを使用します。|  
+|MDWDatabase|管理データ ウェアハウスの名前。 この値を変更するには、sp_syscollector_set_warehouse_database_name ストアド プロシージャを使用します。|  
+|なっています|管理データ ウェアハウスが存在する [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスの名前です。 この値を変更するには、sp_syscollector_set_warehouse_instance_name ストアド プロシージャを使用します。|  
   
 ## <a name="examples"></a>使用例  
  次の例では、syscollector_config_store ビューのクエリを実行します。  
@@ -58,7 +57,7 @@ SELECT parameter_name, parameter_value
 FROM msdb.dbo.syscollector_config_store;  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [データ コレクター ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/data-collector-stored-procedures-transact-sql.md)   
  [データ コレクターのビュー &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/data-collector-views-transact-sql.md)   
  [[データ コレクション]](../../relational-databases/data-collection/data-collection.md)   

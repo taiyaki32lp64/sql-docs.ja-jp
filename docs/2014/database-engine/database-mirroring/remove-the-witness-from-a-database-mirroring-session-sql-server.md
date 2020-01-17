@@ -15,11 +15,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 0fee60fa1a78c2d6d0becb63b2319105016adf1c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48205512"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62754675"
 ---
 # <a name="remove-the-witness-from-a-database-mirroring-session-sql-server"></a>データベース ミラーリング セッションからのミラーリング監視の削除 (SQL Server)
   このトピックでは、 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] または [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] を使用して、 [!INCLUDE[tsql](../../includes/tsql-md.md)]でデータベース ミラーリング セッションからミラーリング監視サーバーを削除する方法について説明します。 データベース ミラーリング セッション中のどの時点でも、データベース所有者は、データベース ミラーリング セッションのミラーリング監視サーバーを無効にできます。  
@@ -36,9 +36,9 @@ ms.locfileid: "48205512"
   
      [Transact-SQL](#TsqlProcedure)  
   
--   **補足情報:**  [ミラーリング監視サーバーを削除した後](#FollowUp)  
+-   **補足情報:** [ミラーリング監視サーバーを削除した後](#FollowUp)  
   
-##  <a name="BeforeYouBegin"></a> 作業を開始する準備  
+##  <a name="BeforeYouBegin"></a> はじめに  
   
 ###  <a name="Security"></a> セキュリティ  
   
@@ -80,7 +80,7 @@ ms.locfileid: "48205512"
     ALTER DATABASE AdventureWorks2012 SET WITNESS OFF ;  
     ```  
   
-##  <a name="FollowUp"></a> 補足情報: ミラーリング監視サーバーを削除した後  
+##  <a name="FollowUp"></a>補足情報: ミラーリング監視サーバーを削除した後  
  ミラーリング監視を無効にすると、 [動作モード](database-mirroring-operating-modes.md)トランザクションの安全性の設定に応じて変更されます。  
   
 -   トランザクションの安全性の設定が FULL (既定値) の場合、セッションは自動フェールオーバーを伴わない高い安全性の同期モードで動作します。  

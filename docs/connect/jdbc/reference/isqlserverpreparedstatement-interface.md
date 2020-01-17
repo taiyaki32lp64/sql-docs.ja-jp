@@ -1,5 +1,5 @@
 ---
-title: ISQLServerPreparedStatement インターフェイス |Microsoft Docs
+title: ISQLServerPreparedStatement Interface |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: cf87892e-5c34-4ac6-8258-c2a81e117b26
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 98d1e33b3775e6aaafa3951cb38de286694f203c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 05fda4ea42c1819f3cbb4f16fcc7f02da2a06b8e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47615150"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67977437"
 ---
 # <a name="isqlserverpreparedstatement-interface"></a>ISQLServerPreparedStatement インターフェイス
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -35,7 +34,7 @@ public interface ISQLServerPreparedStatement
 ```  
   
 ## <a name="remarks"></a>Remarks  
- このインターフェイスによって実装されます[SQLServerPreparedStatement クラス](../../../connect/jdbc/reference/sqlserverpreparedstatement-class.md)します。  
+ このインターフェイスは、 [SQLServerPreparedStatement クラス](../../../connect/jdbc/reference/sqlserverpreparedstatement-class.md)によって実装されます。  
   
  このインターフェイスでは、次の [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)] 固有のメソッドが公開されます。  
   

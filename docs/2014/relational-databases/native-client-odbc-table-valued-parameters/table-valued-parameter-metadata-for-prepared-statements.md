@@ -13,11 +13,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 43ef41affecd131626da17ec7d608249437abed6
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48210612"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62626516"
 ---
 # <a name="table-valued-parameter-metadata-for-prepared-statements"></a>準備されたステートメント用のテーブル値パラメーターのメタデータ
   アプリケーションでは、SQLNumParams SQLDescribeParam して準備されたプロシージャ呼び出しのメタデータを取得できます。 テーブル値パラメーターの*DataTypePtr*が SQL_SS_TABLE に設定します。 追加のメタデータを SQLGetDescField SQL_CA_SS_TYPE_NAME、SQL_CA_SS_CATALOG_NAME、および SQL_CA_SS_SCHEMA_NAME を通じてご利用いただけます。  

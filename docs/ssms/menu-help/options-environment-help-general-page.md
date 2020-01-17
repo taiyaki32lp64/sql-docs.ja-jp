@@ -10,15 +10,14 @@ ms.topic: conceptual
 f1_keywords:
 - VS.ToolsOptionsPages.Environment.Help.General
 ms.assetid: deaf23d6-6cbe-4984-ab09-71d2a7ba06c8
-author: stevestein
-ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 59b250e2bf91d94e7b65a029300499e21a38051a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 63331d03066e10a5e6364b73bc61814569e41102
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47773100"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68257222"
 ---
 # <a name="options-environment---help---general-page"></a>オプション (環境 - ヘルプ - [全般] ページ)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

@@ -17,17 +17,20 @@ helpviewer_keywords:
 - connections [Integration Services], files
 - File connection manager
 ms.assetid: 019078bc-44ee-4975-9169-0f9a89e3f3be
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: 5862182467390962469a048057ad965804ed7e9f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 6c2578e1f002878ade93551a5abc48dfd2144709
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47824830"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71294507"
 ---
 # <a name="file-connection-manager"></a>ファイル接続マネージャー
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   ファイル接続マネージャーを使用すると、パッケージで既存のファイルやフォルダーを参照したり、実行時にファイルやフォルダーを作成できます。 たとえば、Excel ファイルを参照できます。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] の特定のコンポーネントでは、ファイルの情報を使用して作業を実行します。 たとえば、SQL 実行タスクでは、そのタスクで実行する SQL ステートメントが含まれるファイルを参照できます。 他のコンポーネントは、ファイルに対する操作を実行します。 たとえば、ファイル システム タスクは新しい場所にコピーするファイルを参照できます。  
   
 ## <a name="usage-types-of-the-file-connection-manager"></a>ファイル接続マネージャーの使用法の種類  
@@ -35,7 +38,7 @@ ms.locfileid: "47824830"
   
  次の表に **FileUsageType**の値を示します。  
   
-|ReplTest1|[説明]|  
+|[値]|[説明]|  
 |-----------|-----------------|  
 |**0**|ファイル接続マネージャーは、既存のファイルを使用します。|  
 |**1**|ファイル接続マネージャーは、ファイルを作成します。|  
@@ -72,11 +75,11 @@ ms.locfileid: "47824830"
   
  ファイル接続マネージャーの詳細については、「 [File Connection Manager](../../integration-services/connection-manager/file-connection-manager.md)」を参照してください。  
   
-### <a name="options"></a>[変数]  
+### <a name="options"></a>オプション  
  **[使用法の種類]**  
  **ファイル接続マネージャー** が既存のファイルまたはフォルダーに接続するか、新しいファイルまたはフォルダーを作成するかを指定します。  
   
-|ReplTest1|[説明]|  
+|[値]|[説明]|  
 |-----------|-----------------|  
 |[ファイルの作成]|実行時に新しいファイルを作成します。|  
 |[既存のファイル]|既存のファイルを使用します。|  

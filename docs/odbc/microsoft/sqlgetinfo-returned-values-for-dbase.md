@@ -1,5 +1,5 @@
 ---
-title: Sqlgetinfo で dbase に返される値 |Microsoft Docs
+title: SQLGetInfo が dBASE | の値を返しましたMicrosoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -16,26 +16,25 @@ helpviewer_keywords:
 ms.assetid: af64753c-c758-4b68-954b-2c84e3bbd93f
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 7440c46a8dea10096efc66b4680a2b6c8536695a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 247928cfbc7e051853bba0c7f49644a1a6203614
+ms.sourcegitcommit: bcc3b2c7474297aba17b7a63b17c103febdd0af9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47616680"
+ms.lasthandoff: 08/05/2019
+ms.locfileid: "68794686"
 ---
 # <a name="sqlgetinfo-returned-values-for-dbase"></a>SQLGetInfo で dBASE に返される値
-次の表に、C 言語 # の defines、 *fInfoType*引数と対応する値によって返される**SQLGetInfo**します。 この情報を一覧表示されている C 言語を渡すことによって取得できます #defines **SQLGetInfo**で、 *fInfoType*引数。 によって返される値の詳細については**SQLGetInfo**を参照してください、 *ODBC プログラマ リファレンス*します。  
+次の表に、 *Fin$ type*引数の C 言語 #defines と**SQLGetInfo**によって返される対応する値の一覧を示します。 この情報を取得するには、一覧表示されている C 言語の #defines を**SQLGetInfo**に渡します。 **SQLGetInfo**によって返される値の詳細については、 *ODBC プログラマーズリファレンス*を参照してください。  
   
 > [!NOTE]  
->  場所**SQLGetInfo**縦棒、32 ビット ビットマスクを返します (&#124;)、ビットごとの OR を表します。  
+>  **SQLGetInfo**が32ビットのビットマスクを返す場合、縦棒 (&#124;) はビットごとの or を表します。  
   
 |InfoType|戻り値|  
 |--------------|--------------------|  
 |SQL_ACCESSIBLE_PROCEDURES|"N"|  
 |SQL_ACCESSIBLE_TABLES|"Y"|  
 |SQL_ACTIVE_ENVIRONMENTS|0|  
-|SQL_AGGREGATE_FUNCTIONS|すべての設定|  
+|SQL_AGGREGATE_FUNCTIONS|すべてのセット|  
 |SQL_ALTER_DOMAIN|0|  
 |SQL_ALTER_TABLE|[複数の値]|  
 |SQL_ASYNC_MODE|0|  
@@ -45,7 +44,7 @@ ms.locfileid: "47616680"
 |SQL_CATALOG_LOCATION|SQL_QL_START|  
 |SQL_CATALOG_NAME|"Y"|  
 |SQL_CATALOG_NAME_SEPARATOR|"\\"|  
-|SQL_CATALOG_TERM|"Directory"|  
+|SQL_CATALOG_TERM|名簿|  
 |SQL_CATALOG_USAGE|[複数の値]|  
 |SQL_COLLATION_SEQ|""|  
 |SQL_COLUMN_ALIAS|"Y"|  
@@ -82,22 +81,22 @@ ms.locfileid: "47616680"
 |SQL_CURSOR_COMMIT_BEHAVIOR|SQL_CB_CLOSE|  
 |SQL_CURSOR_ROLLBACK_BEHAVIOR|SQL_CB_CLOSE|  
 |SQL_CURSOR_SENSITIVITY|SQL_UNSPECIFIED|  
-|SQL_DATA_SOURCE_NAME|Odbc.ini の DSN または""Odbc.ini で DRIVER キーワードを使用する場合|  
-|SQL_DATA_SOURCE_READ_ONLY|"N"(これはデータ ソースに依存します。)|  
-|SQL_DATABASE_NAME|現在のデータベース ディレクトリ|  
+|SQL_DATA_SOURCE_NAME|Odbc .ini の DSN または "" if DRIVER キーワードが Odbc .ini で使用されている場合|  
+|SQL_DATA_SOURCE_READ_ONLY|"N" (これはデータソースによって異なります。)|  
+|SQL_DATABASE_NAME|現在のデータベースディレクトリ|  
 |SQL_DATETIME_LITERALS|0|  
-|SQL_DBMS_NAME|"DBASE"|  
+|SQL_DBMS_NAME|DBASE|  
 |SQL_DBMS_VER|[複数の値]|  
 |SQL_DDL_INDEX|[複数の値]|  
 |SQL_DEFAULT_TXN_ISOLATION|0|  
 |SQL_DESCRIBE_PARAMETER|0|  
-|SQL_DRIVER_HDBC|ドライバー マネージャーによって処理されます。|  
-|SQL_DRIVER_HENV|ドライバー マネージャーによって処理されます。|  
-|SQL_DRIVER_HLIB|ドライバー マネージャーによって処理されます。|  
-|SQL_DRIVER_HSTMT|ドライバー マネージャーによって処理されます。|  
+|SQL_DRIVER_HDBC|ドライバーマネージャーによって処理されます。|  
+|SQL_DRIVER_HENV|ドライバーマネージャーによって処理されます。|  
+|SQL_DRIVER_HLIB|ドライバーマネージャーによって処理されます。|  
+|SQL_DRIVER_HSTMT|ドライバーマネージャーによって処理されます。|  
 |SQL_DRIVER_NAME|"OdbcJt32.dll"|  
 |SQL_DRIVER_ODBC_VER|"3.51.0000"|  
-|SQL_DRIVER_VER|"4.00*nnnn*"(*nnnn*ビルド日を指定します)。|  
+|SQL_DRIVER_VER|"4.00"(*nnnn*はビルド日付を指定します)|  
 |SQL_DROP_ASSERTION|0|  
 |SQL_DROP_CHARACTER_SET|0|  
 |SQL_DROP_COLLATION|0|  
@@ -111,8 +110,8 @@ ms.locfileid: "47616680"
 |SQL_FORWARD_ONLY_CURSOR_ATTRIBUTES1|SQL_CA1_NEXT|  
 |SQL_GETDATA_EXTENSIONS|[複数の値]|  
 |SQL_GROUP_BY|SQL_GB_GROUP_BY_CONTAINS_SELECT|  
-|SQL_IDENTIFIER_CASE|SQL_IC_UPPER (修飾子が返されます大文字小文字混在で Windows NT は、ディレクトリを特定できるようにします。)|  
-|SQL_IDENTIFIER_QUOTE_CHAR|"'"(引用符をバックアップする場合)|  
+|SQL_IDENTIFIER_CASE|SQL_IC_UPPER (修飾子は、Windows NT がディレクトリを見つけることができるように、大文字と小文字が混在して返されます)。|  
+|SQL_IDENTIFIER_QUOTE_CHAR|"\`" (バッククォート)|  
 |SQL_KEYWORDS|[複数の値]|  
 |SQL_LIKE_ESCAPE_CLAUSE|"N"|  
 |SQL_MAX_BINARY_LITERAL_LEN|255|  
@@ -120,7 +119,7 @@ ms.locfileid: "47616680"
 |SQL_MAX_CHAR_LITERAL_LEN|254|  
 |SQL_MAX_COLUMN_NAME_LEN|10|  
 |SQL_MAX_COLUMNS_IN_GROUP_BY|10|  
-|SQL_MAX_COLUMNS_IN_INDEX|0 (制限不明または該当なし)|  
+|SQL_MAX_COLUMNS_IN_INDEX|0 (不明または該当なしの制限)|  
 |SQL_MAX_COLUMNS_IN_ORDER_BY|10|  
 |SQL_MAX_COLUMNS_IN_SELECT|255|  
 |SQL_MAX_COLUMNS_IN_TABLE|255|  
@@ -142,9 +141,9 @@ ms.locfileid: "47616680"
 |SQL_NON_NULLABLE_COLUMNS|SQL_NNC_NON_NULL|  
 |SQL_NULL_COLLATION|SQL_NC_LOW|  
 |SQL_NUMERIC_FUNCTIONS|[複数の値]|  
-|SQL_ODBC_SAG_CLI_ への準拠|SQL_OSCC_COMPLIANT|  
+|SQL_ODBC_SAG_CLI_ CONFORMANCE|SQL_OSCC_COMPLIANT|  
 |SQL_ODBC_SQL_INTEGRITY|"N"|  
-|SQL_ODBC_VER|ドライバー マネージャーから|  
+|SQL_ODBC_VER|ドライバーマネージャーから|  
 |SQL_OJ_CAPABILITIES|[複数の値]|  
 |SQL_ORDER_BY_COLUMNS_IN_SELECT|"N"|  
 |SQL_OUTER_JOINS|"Y"|  
@@ -156,12 +155,12 @@ ms.locfileid: "47616680"
 |SQL_SCHEMA_USAGE|0|  
 |SQL_SCROLL_OPTIONS|[複数の値]|  
 |SQL_SEARCH_PATTERN_ESCAPE|"\\"|  
-|SQL_SERVER_NAME|"DBASE"|  
-|SQL_SPECIAL_CHARACTERS|"~`@#$%^&*_-+=\\}{"';:?/><,.!'[]&#124;"|  
+|SQL_SERVER_NAME|DBASE|  
+|SQL_SPECIAL_CHARACTERS|"~\`\@}{\?" ';:/<,.!\>'#$%^&\*\_-+=\\\[]&#124;"|  
 |SQL_STRING_FUNCTIONS|[複数の値]|  
 |SQL_SUBQUERIES|[複数の値]|  
 |SQL_SYSTEM_FUNCTIONS|0|  
-|SQL_TABLE_TERM|"TABLE"|  
+|SQL_TABLE_TERM|一覧|  
 |SQL_TIMEDATE_ADD_INTERVALS|0|  
 |SQL_TIMEDATE_DIFF_INTERVALS|0|  
 |SQL_TIMEDATE_FUNCTIONS|[複数の値]|  

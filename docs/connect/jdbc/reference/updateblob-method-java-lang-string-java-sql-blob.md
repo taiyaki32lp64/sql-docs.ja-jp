@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: fdd47885-c7ec-4599-a645-ad0e082586f4
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 81d089b7a0cd2d052be6df55791559f4a45aa1b1
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 945595e147825b0c9c026166fa14b2bbda90a20c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47674091"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67997086"
 ---
 # <a name="updateblob-method-javalangstring-javasqlblob"></a>updateBlob (java.lang.String, java.sql.Blob) メソッド
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -43,13 +42,13 @@ public void updateBlob(java.lang.String columnName,
   
  *x*  
   
- Blob オブジェクト。  
+ Blob オブジェクトです。  
   
 ## <a name="exceptions"></a>例外  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- この updateBlob メソッドは、java.sql.ResultSet インターフェイスの updateBlob メソッドによって指定されます。  
+ この updateBlob メソッドは、java.sql.ResultSet インターフェイスの updateBlob メソッドで規定されています。  
   
 ## <a name="see-also"></a>参照  
  [updateBlob メソッド &#40;SQLServerResultSet&#41;](../../../connect/jdbc/reference/updateblob-method-sqlserverresultset.md)   

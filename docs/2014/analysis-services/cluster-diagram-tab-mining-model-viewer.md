@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dm.miningmodeleditor.clustering.diagram.f1
@@ -13,17 +12,17 @@ ms.assetid: 180e6f48-5c4d-4160-b84d-608b98f7b840
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: bd66205c6f7a03d1bba0783aabbed3936b25e691
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 127ff0c386a1f93c00178624b54499e33cf9042a
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48184203"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66088006"
 ---
 # <a name="cluster-diagram-tab-mining-model-viewer"></a>[クラスター ダイアグラム] タブ マイニング モデル ビューアー)
   **[クラスター ダイアグラム]** タブでは、クラスター モデルに含まれているすべてのクラスターがグラフィックで表示されます。  
   
- **詳細:** [Microsoft クラスター アルゴリズム](data-mining/microsoft-clustering-algorithm.md)、 [Microsoft クラスター ビューアーを使用したモデルの参照](data-mining/browse-a-model-using-the-microsoft-cluster-viewer.md)  
+ **詳細情報。** [Microsoft クラスタ リング アルゴリズム](data-mining/microsoft-clustering-algorithm.md)、 [Microsoft クラスター ビューアーを使用してモデルの参照](data-mining/browse-a-model-using-the-microsoft-cluster-viewer.md)  
   
 ## <a name="options"></a>および  
  **ビューアーのコンテンツを更新します。**  
@@ -71,8 +70,8 @@ ms.locfileid: "48184203"
  クラスター間に表示するリンクの数を、スライダーを上下に移動することで調整します。 スライダーを下に移動すると、クラスター間の最も強い関連性だけが残ります。  
   
 ## <a name="see-also"></a>参照  
- [データ マイニング アルゴリズム&#40;Analysis Services - データ マイニング&#41;](data-mining/data-mining-algorithms-analysis-services-data-mining.md)   
- [マイニング モデル ビューアー&#40;データ マイニング モデル デザイナー&#41;](mining-model-viewers-data-mining-model-designer.md)   
+ [データ マイニング アルゴリズム &#40;Analysis Services - データ マイニング&#41;](data-mining/data-mining-algorithms-analysis-services-data-mining.md)   
+ [マイニング モデル ビューアー (データ マイニング モデル デザイナー)](mining-model-viewers-data-mining-model-designer.md)   
  [データ マイニング モデル ビューアー](data-mining/data-mining-model-viewers.md)  
   
   

@@ -9,13 +9,12 @@ ms.topic: reference
 ms.assetid: dcd24cd6-f4ab-42cc-9786-a1604e8a4b4e
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 93b898480b3aa04666eeefb4e06c3bd7ba2c44de
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 8d3282d3781305e806a6ed5d12c35ae42fd735cf
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47709847"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68028141"
 ---
 # <a name="disallowed-types-and-members-in-systemcoredll"></a>System.Core.dll の許可されない型およびメンバー
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

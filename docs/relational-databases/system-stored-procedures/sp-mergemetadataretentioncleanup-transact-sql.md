@@ -15,15 +15,14 @@ helpviewer_keywords:
 ms.assetid: 4e8d6343-2a38-421d-a3f3-c37d437a0f88
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: d9158521710ec866955f5b028a2338f9c6f6ff0b
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 41c3a6848d71d7ba8f22667c117686485bb569b6
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52823156"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68019975"
 ---
-# <a name="spmergemetadataretentioncleanup-transact-sql"></a>sp_mergemetadataretentioncleanup (Transact-SQL)
+# <a name="spmergemetadataretentioncleanup-transact-sql"></a>sp_mergemetadataretentioncleanup (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   内のメタデータの手動クリーンアップを実行、 [MSmerge_genhistory](../../relational-databases/system-tables/msmerge-genhistory-transact-sql.md)、 [MSmerge_contents](../../relational-databases/system-tables/msmerge-contents-transact-sql.md)、 [MSmerge_tombstone](../../relational-databases/system-tables/msmerge-tombstone-transact-sql.md)、 [MSmerge_past_partition_マッピング](../../relational-databases/system-tables/msmerge-past-partition-mappings-transact-sql.md)、および[MSmerge_current_partition_mappings](../../relational-databases/system-tables/msmerge-current-partition-mappings.md)システム テーブル。 このストアド プロシージャは、トポロジ内の各パブリッシャーおよびサブスクライバーで実行されます。  
@@ -41,17 +40,13 @@ sp_mergemetadataretentioncleanup [ [ @num_genhistory_rows = ] num_genhistory_row
 ```  
   
 ## <a name="arguments"></a>引数  
- [  **@num_genhistory_rows=** ] *num_genhistory_rows*出力  
- 行からクリーンアップの数を返します、 [MSmerge_genhistory](../../relational-databases/system-tables/msmerge-genhistory-transact-sql.md)テーブル。 *num_genhistory_rows*は**int**、既定値は**0**します。  
+`[ @num_genhistory_rows = ] num_genhistory_rows OUTPUT` 行からクリーンアップの数を返します、 [MSmerge_genhistory](../../relational-databases/system-tables/msmerge-genhistory-transact-sql.md)テーブル。 *num_genhistory_rows*は**int**、既定値は**0**します。  
   
- [  **@num_contents_rows=** ] *num_contents_rows*出力  
- 行からクリーンアップの数を返します、 [MSmerge_contents](../../relational-databases/system-tables/msmerge-contents-transact-sql.md)テーブル。 *num_contents_rows*は**int**、既定値は**0**します。  
+`[ @num_contents_rows = ] num_contents_rows OUTPUT` 行からクリーンアップの数を返します、 [MSmerge_contents](../../relational-databases/system-tables/msmerge-contents-transact-sql.md)テーブル。 *num_contents_rows*は**int**、既定値は**0**します。  
   
- [  **@num_tombstone_rows=** ] *num_tombstone_rows*出力  
- 行からクリーンアップの数を返します、 [MSmerge_tombstone](../../relational-databases/system-tables/msmerge-tombstone-transact-sql.md)テーブル。 *num_tombstone_rows*は**int**、既定値は**0**します。  
+`[ @num_tombstone_rows = ] num_tombstone_rows OUTPUT` 行からクリーンアップの数を返します、 [MSmerge_tombstone](../../relational-databases/system-tables/msmerge-tombstone-transact-sql.md)テーブル。 *num_tombstone_rows*は**int**、既定値は**0**します。  
   
- [  **@aggressive_cleanup_only=** ] *aggressive_cleanup_only*  
- 内部使用のみです。  
+`[ @aggressive_cleanup_only = ] aggressive_cleanup_only` 内部でのみ使用します。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  **0** (成功) または**1** (失敗)  
@@ -64,7 +59,7 @@ sp_mergemetadataretentioncleanup [ [ @num_genhistory_rows = ] num_genhistory_row
 ## <a name="permissions"></a>アクセス許可  
  メンバーのみ、 **db_owner** 、パブリッシュされたデータベースで実行できるは、データベース ロールまたはパブリケーション アクセス リスト内のユーザーを固定**sp_mergemetadataretentioncleanup**します。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [システム ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

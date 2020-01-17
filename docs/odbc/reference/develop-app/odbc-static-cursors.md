@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 28cb324c-e1c3-4b5c-bc3e-54df87037317
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 8ddd2b4d998ab2718757db4dd58de6aea8bee05e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: bcb7c39d39492b91c0b62c5eff2229eb5f61df6b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47757160"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67987837"
 ---
 # <a name="odbc-static-cursors"></a>ODBC 静的カーソル
 静的カーソルは静的に結果セットが表示されます。 メンバーシップ、順序、または、カーソルを開いた後に結果セットの値に加えられた変更が通常は検出されません。 たとえば、静的カーソルは行と別のアプリケーションをフェッチし、行を更新します。 静的カーソルは、行を変わりません場合を認識する値は、その他のアプリケーションによって行われた変更に関係なく、変更されたできません。  

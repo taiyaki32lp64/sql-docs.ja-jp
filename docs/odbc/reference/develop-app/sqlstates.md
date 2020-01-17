@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: f29fff2e-3d09-4a8c-a2f9-2059062cbebf
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 3ad31d9fd07e0b9f7bdf633f8ed546331880787c
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 8213c08e6844003d880129dda4b441a5592bbc86
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52527733"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68107346"
 ---
 # <a name="sqlstates"></a>SQLSTATE
 については、警告またはエラーの原因に関する詳細情報を提供します。 このマニュアルでについては、IM で始まるこれらについては、ODBC に固有ですでは、ISO/IEF CLI 仕様に基づいています。  

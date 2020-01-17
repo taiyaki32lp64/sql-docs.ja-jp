@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 667d92ec-fed9-4028-81d4-bb9ba867356a
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: cd82e2c3c44f05a27e9d14442d8d0fb58e1986cc
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 2e6d053e4d2a5520432c4c1debbafb35fdb17bc4
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47849140"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68016741"
 ---
 # <a name="static-sql"></a>静的 SQL
 示すように埋め込まれた SQL [Embedded SQL 例](../../odbc/reference/embedded-sql-example.md)は静的 SQL と呼ばれます。 プログラムで SQL ステートメントは静的にするために、静的 SQL を呼び出されますプログラムを実行するたびに、変更しないでください。 前のセクションで説明した、プログラムの残りの部分はコンパイル時にこれらのステートメントがコンパイルされます。  

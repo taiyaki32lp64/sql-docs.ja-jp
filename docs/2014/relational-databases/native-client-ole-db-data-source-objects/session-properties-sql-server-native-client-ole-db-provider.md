@@ -14,11 +14,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 19ce2c6ca7b36a5d2147e7efda657fb2433aef25
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48158702"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63062542"
 ---
 # <a name="session-properties"></a>セッション プロパティ
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB プロバイダーが OLE DB セッションのプロパティを次のように解釈します。  
@@ -31,11 +31,11 @@ ms.locfileid: "48158702"
   
 |プロパティ ID|説明|  
 |-----------------|-----------------|  
-|SSPROP_QUOTEDCATALOGNAMES|型 : VT_BOOL<br /><br /> R/W: 読み取り/書き込み<br /><br /> 既定値 : VARIANT_FALSE<br /><br /> 説明 : CATALOG 制約で、引用符で囲まれた識別子を許可するかどうかを指定します。<br /><br /> VARIANT_TRUE: 分散クエリをサポートするスキーマ行セットのカタログ制約で、引用符で囲まれた識別子が認識されます。<br /><br /> VARIANT_FALSE: 分散クエリをサポートするスキーマ行セットのカタログ制約で、引用符で囲まれた識別子が認識されません。<br /><br /> 分散クエリをサポートするスキーマ行セットの詳細については、「[スキーマ行セットでの分散クエリのサポート](../native-client/ole-db/schema-rowsets-distributed-query-support.md)」を参照してください。|  
-|SSPROP_ALLOWNATIVEVARIANT|型 : VT_BOOL<br /><br /> R/W: 読み取り/書き込み<br /><br /> 既定値 : VARIANT_FALSE<br /><br /> 説明 : データを DBTYPE_VARIANT と DBTYPE_SQLVARIANT のどちらとしてフェッチするかを決定します。<br /><br /> VARIANT_TRUE: 列の型は DBTYPE_SQLVARIANT として返され、バッファーには SSVARIANT 構造体が保持されます。<br /><br /> VARIANT_FALSE: 列の型は DBTYPE_VARIANT として返され、バッファーには VARIANT 構造体が保持されます。|  
+|SSPROP_QUOTEDCATALOGNAMES|型:VT_BOOL<br /><br /> R/W読み取り/書き込み<br /><br /> 既定値:VARIANT_FALSE<br /><br /> 説明:引用符付き識別子のカタログ制約で許可します。<br /><br /> VARIANT_TRUE:分散クエリをサポートするスキーマ行セットのカタログ制約は、引用符で囲まれた識別子が認識します。<br /><br /> VARIANT_FALSE:引用符で囲まれた識別子は、分散クエリをサポートするスキーマ行セットのカタログの制限については認識されません。<br /><br /> 分散クエリをサポートするスキーマ行セットの詳細については、「[スキーマ行セットでの分散クエリのサポート](../native-client/ole-db/schema-rowsets-distributed-query-support.md)」を参照してください。|  
+|SSPROP_ALLOWNATIVEVARIANT|型:VT_BOOL<br /><br /> R/W[読み取り/書き込み]<br /><br /> 既定値:VARIANT_FALSE<br /><br /> 説明:フェッチされるデータを DBTYPE_VARIANT と dbtype_sqlvariant のどちらとしてかどうかを判断します。<br /><br /> VARIANT_TRUE:列の型は、SSVARIANT 構造体をバッファーが保持されます DBTYPE_SQLVARIANT として返されます。<br /><br /> VARIANT_FALSE:列の型は DBTYPE_VARIANT として返されます、バッファーは VARIANT 構造体に必要があります。|  
 |SSPROP_ASYNCH_BULKCOPY|非同期モードを使用するには、プロバイダー固有のセッション プロパティ SSPROP_ASYNCH_BULKCOPY を VARIANT_TRUE に設定してから、BCPExec メソッドを呼び出します。 このプロパティは、DBPROPSET_SQLSERVERSESSION プロパティ セットに含まれています。|  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [データ ソース オブジェクト&#40;OLE DB&#41;](data-source-objects-ole-db.md)  
   
   

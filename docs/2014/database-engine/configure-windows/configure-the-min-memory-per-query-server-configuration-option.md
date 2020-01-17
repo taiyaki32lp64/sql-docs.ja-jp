@@ -15,12 +15,12 @@ ms.assetid: ecd3fb79-b4a6-432f-9ef5-530e0d42d5a6
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 185ad6db579052c127c73c1770283e877174ab31
-ms.sourcegitcommit: 04dd0620202287869b23cc2fde998a18d3200c66
+ms.openlocfilehash: dfee7265529419aecf2b05831503ed134b93f525
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "52640075"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62787045"
 ---
 # <a name="configure-the-min-memory-per-query-server-configuration-option"></a>min memory per query サーバー構成オプションの構成
   このトピックでは、構成する方法を説明します、`min memory per query`サーバー構成オプション[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]を使用して[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]または[!INCLUDE[tsql](../../includes/tsql-md.md)]します。 `min memory per query`オプション (単位: キロバイト) クエリを実行するために割り当てられるメモリの最小量を指定します。 たとえば場合、`min memory per query`設定されているを 2,048 KB は、少なくともそのメモリを取得するクエリは保証します。 既定値は 1,024 KB です。 最小値は 512 KB、最大値は 2,147,483,647 KB (2 GB) です。  
@@ -41,7 +41,7 @@ ms.locfileid: "52640075"
   
      [Transact-SQL](#TsqlProcedure)  
   
--   **補足情報:**[Min memory per query オプションを構成した後](#FollowUp)  
+-   **補足情報:** [Min memory per query オプションを構成した後](#FollowUp)  
   
 ##  <a name="BeforeYouBegin"></a> はじめに  
   
@@ -80,7 +80,7 @@ ms.locfileid: "52640075"
   
 3.  次の例をコピーしてクエリ ウィンドウに貼り付け、 **[実行]** をクリックします。 この例では、 [sp_configure](/sql/relational-databases/system-stored-procedures/sp-configure-transact-sql) を使用して、 `min memory per query` オプションの値を `3500` KB に設定する方法を示します。  
   
-```tsql  
+```sql  
 USE AdventureWorks2012 ;  
 GO  
 EXEC sp_configure 'show advanced options', 1;  
@@ -94,10 +94,10 @@ GO
   
 ```  
   
-##  <a name="FollowUp"></a> フォローしてください：Min memory per query オプションを構成した後  
+##  <a name="FollowUp"></a>補足情報: Min memory per query オプションを構成した後  
  新しい設定は、サーバーを再起動しなくてもすぐに有効になります。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [RECONFIGURE &#40;Transact-SQL&#41;](/sql/t-sql/language-elements/reconfigure-transact-sql)   
  [サーバー構成オプション &#40;SQL Server&#41;](server-configuration-options-sql-server.md)   
  [sp_configure &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-configure-transact-sql)   

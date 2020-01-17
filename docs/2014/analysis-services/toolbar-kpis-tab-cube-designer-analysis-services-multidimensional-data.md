@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: f21e1e4a-24c9-422f-a4be-84615a68095e
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: c4c8938944401ad03e2bcbf1188b21c67bdf7654
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 7db4849a71644772f055059d18faa9f964603913
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48198772"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66066011"
 ---
 # <a name="toolbar-kpis-tab-cube-designer-analysis-services---multidimensional-data"></a>ツール バー (キューブ デザイナーの [KPI] タブ) (Analysis Services - 多次元データ)
   **ツール バー** ペインを使用すると、キューブ デザイナーの **[KPI]** タブで一般的な操作を実行できます。  

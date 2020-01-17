@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - server architecture [Analysis Services]
@@ -14,12 +13,12 @@ ms.assetid: 25eeecf0-6e85-4527-b94d-5503d27edaed
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: a147330733efe641b8baf844723e4027e7ada5bc
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 81c9ee3db0a05107913d3b75fba20ebe8607f941
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48094152"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66083199"
 ---
 # <a name="physical-architecture-analysis-services---data-mining"></a>物理アーキテクチャ (Analysis Services - データ マイニング)
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] では、サーバーとクライアントの両方のコンポーネントを使用して、ビジネス インテリジェンス アプリケーションにデータ マイニング機能を提供しています。  
@@ -52,6 +51,6 @@ ms.locfileid: "48094152"
  クライアントと Analysis Services サーバーの間のすべての通信には、プラットフォームや言語に依存しないプロトコルである XMLA が使用されます。 Analysis Services は、クライアントからの要求を受け取ると、その要求が OLAP に関連しているかデータ マイニングに関連しているかを判断して、適切にルーティングします。 サーバー コンポーネントの詳細については、「 [OLAP エンジンのサーバー コンポーネント](../multidimensional-models/olap-physical/olap-engine-server-components.md)」を参照してください。  
   
 ## <a name="see-also"></a>参照  
- [論理アーキテクチャ&#40;Analysis Services - データ マイニング&#41;](logical-architecture-analysis-services-data-mining.md)  
+ [論理アーキテクチャ (Analysis Services - データ マイニング)](logical-architecture-analysis-services-data-mining.md)  
   
   

@@ -1,7 +1,7 @@
 ---
-title: Server Core インストールでの SQL Server の構成 | Microsoft Docs
-ms.custom: ''
-ms.date: 09/05/2017
+title: Server Core インストールの構成
+ms.custom: seo-lt-2019
+ms.date: 12/13/2019
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: install
@@ -13,13 +13,12 @@ ms.assetid: ed6e5e94-4b8d-422a-a17e-61b05a4df903
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-manager: craigg
-ms.openlocfilehash: 15dd8854a12f5cfc12a4bca095742f2095c44724
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: ce38e546aa77e375d65a9f95f708718d283a53b0
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53209071"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75251597"
 ---
 # <a name="configure-sql-server-on-a-server-core-installation"></a>Server Core インストールでの SQL Server の構成
 
@@ -95,22 +94,22 @@ Setup.exe /qs /ACTION=Install /FEATURES=SQLEngine /INSTANCENAME=MSSQLSERVER /SQL
 また、Net サービスを使用して [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] サービスを起動および停止することもできます。  
   
 ## <a name="BKMK_EnableAlwaysON"></a> [AlwaysOn 可用性グループを有効にする]  
-AlwaysOn 可用性グループが有効になっていることは、サーバー インスタンスが High Availability and Disaster Recovery ソリューションとして可用性グループを使用するための前提条件です。 AlwaysOn 可用性グループの管理に関する詳細については、「 [AlwaysOn 可用性グループの有効化と無効化 (SQL Server)](../../database-engine/availability-groups/windows/enable-and-disable-always-on-availability-groups-sql-server.md)」を参照してください。  
+AlwaysOn 可用性グループが有効になっていることは、サーバー インスタンスが高可用性ディザスター リカバリー ソリューションとして可用性グループを使用するための前提条件です。 AlwaysOn 可用性グループの管理に関する詳細については、「 [AlwaysOn 可用性グループの有効化と無効化 (SQL Server)](../../database-engine/availability-groups/windows/enable-and-disable-always-on-availability-groups-sql-server.md)」を参照してください。  
   
 ### <a name="using-includessnoversionincludesssnoversion-mdmd-configuration-manager-remotely"></a>[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 構成マネージャーをリモートで使用する  
 次の手順は、Windows のクライアント エディションを実行している PC、またはサーバー グラフィック シェルがインストールされている Windows Server で実行することを意図しています。  
   
-1. **[コンピューターの管理]** を開きます。 **[コンピューターの管理]** を開くには、**[スタート]** をクリックして、`compmgmt.msc` と入力し、**[OK]** をクリックします。    
+1. **[コンピューターの管理]** を開きます。 **[コンピューターの管理]** を開くには、 **[スタート]** をクリックして、`compmgmt.msc` と入力し、 **[OK]** をクリックします。    
   
-2. コンソール ツリーで、**[コンピューターの管理]** を右クリックし、**[別のコンピューターへ接続]** をクリックします。  
+2. コンソール ツリーで、 **[コンピューターの管理]** を右クリックし、 **[別のコンピューターへ接続]** をクリックします。  
   
-3. **[コンピューターの選択]** ダイアログ ボックスで、管理する Server Core コンピューターの名前を入力するか、**[参照]** をクリックして目的のコンピューターを探し、**[OK]** をクリックします。  
+3. **[コンピューターの選択]** ダイアログ ボックスで、管理する Server Core コンピューターの名前を入力するか、 **[参照]** をクリックして目的のコンピューターを探し、 **[OK]** をクリックします。  
   
 4. コンソール ツリーで、選択した Server Core コンピューターの **[コンピューターの管理]** の下にある **[サービスとアプリケーション]** をクリックします。  
   
 5. **[[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 構成マネージャー]** をダブルクリックします。  
   
-6. **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 構成マネージャー**で、**[[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のサービス]** をクリックし、**[[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]** (\<instance name>)] を右クリックして、[プロパティ] をクリックします。この場合、\<instance name> は、AlwaysOn 可用性グループを有効にするローカル サーバー インスタンスの名前です。  
+6. **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 構成マネージャー**で、 **[[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のサービス]** をクリックし、 **[[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]** (\<instance name>)] を右クリックして、[プロパティ] をクリックします。この場合、\<instance name> は、AlwaysOn 可用性グループを有効にするローカル サーバー インスタンスの名前です。  
   
 7. **[AlwaysOn 高可用性]** タブを選択します。  
   
@@ -176,13 +175,13 @@ Enable-SqlAlwaysOn -Path SQLSERVER:\SQL\Machine\Instance
  Windows ファイアウォールで [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] アクセスの例外を作成するには、「 [SQL Server のアクセスを許可するための Windows ファイアウォールの構成](../../sql-server/install/configure-the-windows-firewall-to-allow-sql-server-access.md)」で指定されている手順に従います。  
   
 ### <a name="enable-tcpip-on-the-instance-of-includessnoversionincludesssnoversion-mdmd"></a>のインスタンスで TCP/IP を有効にする [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
- Server Core 上の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスに対して TCP/IP プロトコルを有効にするには、Windows PowerShell を使用します。 以下の操作を行ってください。  
+ Server Core 上の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスに対して TCP/IP プロトコルを有効にするには、Windows PowerShell を使用します。 次の手順に従います。  
   
 1.  Windows Server Core を実行しているコンピューターで、**タスク マネージャー**を起動します。  
   
 2.  **[アプリケーション]** タブで、 **[新しいタスク]** をクリックします。  
   
-3.  **[新しいタスクの作成]** ダイアログ ボックスで、**[開く]** フィールドに **sqlps.exe** と入力して、**[OK]** をクリックします。 **[Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Powershell]** ウィンドウが開きます。  
+3.  **[新しいタスクの作成]** ダイアログ ボックスで、 **[開く]** フィールドに **sqlps.exe** と入力して、 **[OK]** をクリックします。 **[Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Powershell]** ウィンドウが開きます。  
   
 4.  **[Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Powershell]** ウィンドウで、次のスクリプトを実行して TCP/IP プロトコルを有効にします。  
   
@@ -210,7 +209,7 @@ $Tcp
 ##  <a name="BKMK_CMD"></a> コマンド プロンプト ユーティリティ  
  次のコマンド プロンプト ユーティリティを使用すると、Server Core コンピューターでの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 操作のスクリプトを作成できます。 次の表は、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] に付属する、Server Core 用のコマンド プロンプト ユーティリティの一覧です。  
   
-|**Utility**|**[説明]**|**インストール先**|  
+|**Utility**|**説明**|**インストール先**|  
 |-----------------|---------------------|----------------------|  
 |[bcp ユーティリティ](../../tools/bcp-utility.md)|ユーザー指定の形式で、 [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスとデータ ファイルとの間でデータをコピーします。|[!INCLUDE[ssInstallPathVar](../../includes/ssinstallpathvar-md.md)]Tools\Binn|  
 |[dtexec ユーティリティ](../../integration-services/packages/dtexec-utility.md)|[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] パッケージを構成および実行します。|[!INCLUDE[ssInstallPathVar](../../includes/ssinstallpathvar-md.md)]DTS\Binn|  

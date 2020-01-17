@@ -1,5 +1,5 @@
 ---
-title: SQL Server 2014 の開発者向けリファレンス |Microsoft Docs
+title: SQL Server 2014 | の開発者向けリファレンス |Microsoft Docs
 ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql-server-2014
@@ -12,12 +12,12 @@ ms.assetid: e60866bf-c726-479e-8a38-6bced16f527c
 author: mightypen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 8d3a1a2c3c5f1f4bce9a3662e1bc7c7bc49f2836
-ms.sourcegitcommit: e3f5b70bbb4c66294df8c7b2c70186bdf2365af9
+ms.openlocfilehash: 7acd40dde7275eb813c5f48a2b6ea97e284cb2c0
+ms.sourcegitcommit: f5807ced6df55dfa78ccf402217551a7a3b44764
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/18/2019
-ms.locfileid: "54397601"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69493812"
 ---
 # <a name="developer-reference-for-sql-server-2014"></a>SQL Server 2014 の開発者向けリファレンス
 
@@ -25,47 +25,47 @@ ms.locfileid: "54397601"
   
 ## <a name="programming-reference-sections"></a>プログラミング リファレンスのセクション  
 
- ![小さいファイル フォルダー アイコン](../integration-services/media/filefolder-small.gif "小さいファイル フォルダー アイコン")[共通言語ランタイム&#40;CLR&#41;統合のプログラミング概念](../relational-databases/clr-integration/common-language-runtime-clr-integration-programming-concepts.md)  
+ ![小さいファイルフォルダーアイコン](../integration-services/media/filefolder-small.gif "小さいファイルフォルダーアイコン")[共通言語ランタイム&#40;CLR&#41;統合プログラミングの概念](../relational-databases/clr-integration/common-language-runtime-clr-integration-programming-concepts.md)  
   
- ![小さいファイル フォルダー アイコン](../integration-services/media/filefolder-small.gif "小さいファイル フォルダー アイコン")[ネイティブ XML](https://technet.microsoft.com/library/ms191274.aspx)  
+ ![小さいファイルフォルダーアイコン](../integration-services/media/filefolder-small.gif "小さいファイルフォルダーアイコン")[ネイティブ XML](https://technet.microsoft.com/library/ms191274.aspx)  
   
- ![小さいファイル フォルダー アイコン](../integration-services/media/filefolder-small.gif "小さいファイル フォルダー アイコン") [SQL Server Native Client プログラミング](../relational-databases/native-client/sql-server-native-client-programming.md)  
+ ![小さいファイルフォルダーアイコン](../integration-services/media/filefolder-small.gif "小さいファイルフォルダーアイコン")[SQL Server Native Client プログラミング](../relational-databases/native-client/sql-server-native-client-programming.md)  
   
- ![小さいファイル フォルダー アイコン](../integration-services/media/filefolder-small.gif "小さいファイル フォルダー アイコン") [SQLXML 4.0 のプログラミング概念](../relational-databases/sqlxml/sqlxml-4-0-programming-concepts.md)  
+ ![小さいファイルフォルダーアイコン](../integration-services/media/filefolder-small.gif "小さいファイルフォルダーアイコン")[SQLXML 4.0 プログラミングの概念](../relational-databases/sqlxml/sqlxml-4-0-programming-concepts.md)  
   
- ![小さいファイル フォルダー アイコン](../integration-services/media/filefolder-small.gif "小さいファイル フォルダー アイコン") [WMI Provider for Configuration Management Concepts](../relational-databases/wmi-provider-configuration/wmi-provider-for-configuration-management.md)  
+ ![小さいファイルフォルダーアイコン](../integration-services/media/filefolder-small.gif "小さいファイルフォルダーアイコン")[構成管理のための WMI プロバイダーの概念](../relational-databases/wmi-provider-configuration/wmi-provider-for-configuration-management.md)  
   
- ![小さいファイル フォルダー アイコン](../integration-services/media/filefolder-small.gif "小さいファイル フォルダー アイコン") [WMI Provider for Server Events の概念](../relational-databases/wmi-provider-server-events/wmi-provider-for-server-events-concepts.md)  
+ ![小さいファイルフォルダーアイコン](../integration-services/media/filefolder-small.gif "小さいファイルフォルダーアイコン")[WMI Provider For Server Events の概念](../relational-databases/wmi-provider-server-events/wmi-provider-for-server-events-concepts.md)  
   
- ![小さいファイル フォルダー アイコン](../integration-services/media/filefolder-small.gif "小さいファイル フォルダー アイコン") [WMI プロバイダー イベントとエラー](../relational-databases/native-client-ole-db-errors/errors.md)  
+ ![小さいファイルフォルダーアイコン](../integration-services/media/filefolder-small.gif "小さいファイルフォルダーアイコン")[WMI プロバイダーのイベントとエラー](../relational-databases/native-client-ole-db-errors/errors.md)  
   
- ![小さいファイル フォルダー アイコン](../integration-services/media/filefolder-small.gif "小さいファイル フォルダー アイコン") [SQL Server 管理オブジェクト&#40;SMO&#41;プログラミング ガイド](../relational-databases/server-management-objects-smo/sql-server-management-objects-smo-programming-guide.md)  
+ ![小さいファイルフォルダーアイコン](../integration-services/media/filefolder-small.gif "小さいファイルフォルダーアイコン")[SQL Server 管理オブジェクト&#40;SMO&#41;プログラミングガイド](../relational-databases/server-management-objects-smo/sql-server-management-objects-smo-programming-guide.md)  
   
- ![小さいファイル フォルダー アイコン](../integration-services/media/filefolder-small.gif "小さいファイル フォルダー アイコン")[データベース エンジン拡張ストアド プロシージャ プログラミング](../relational-databases/database-engine-extended-stored-procedure-programming.md)  
+ ![小さいファイルフォルダーアイコン](../integration-services/media/filefolder-small.gif "小さいファイルフォルダーアイコン")[データベースエンジン拡張ストアドプロシージャのプログラミング](../relational-databases/database-engine-extended-stored-procedure-programming.md)  
   
- ![小さいファイル フォルダー アイコン](../integration-services/media/filefolder-small.gif "小さいファイル フォルダー アイコン")[データ コレクターのプログラミング](../database-engine/dev-guide/data-collector-programming.md)  
+ ![小さいファイルフォルダーアイコン](../integration-services/media/filefolder-small.gif "小さいファイルフォルダーアイコン")[データコレクターのプログラミング](../database-engine/dev-guide/data-collector-programming.md)  
   
- ![小さいファイル フォルダー アイコン](../integration-services/media/filefolder-small.gif "小さいファイル フォルダー アイコン")[例外メッセージ ボックスのプログラミング](../database-engine/dev-guide/exception-message-box-programming.md)  
+ ![小さいファイルフォルダーアイコン](../integration-services/media/filefolder-small.gif "小さいファイルフォルダーアイコン")[例外メッセージボックスのプログラミング](../database-engine/dev-guide/exception-message-box-programming.md)  
   
- ![小さいファイル フォルダー アイコン](../integration-services/media/filefolder-small.gif "小さいファイル フォルダー アイコン") [ADOMD.NET での開発](../analysis-services/multidimensional-models/adomd-net/developing-with-adomd-net.md)  
+ ![小さいファイルフォルダーアイコン](../integration-services/media/filefolder-small.gif "小さいファイルフォルダーアイコン")[ADOMD.NET を使用した開発](https://docs.microsoft.com/bi-reference/adomd/developing-with-adomd-net)  
   
- ![小さいファイル フォルダー アイコン](../integration-services/media/filefolder-small.gif "小さいファイル フォルダー アイコン") [Analysis Management Objects を使用した開発&#40;AMO&#41;](../analysis-services/multidimensional-models/analysis-management-objects/developing-with-analysis-management-objects-amo.md)  
+ ![小さいファイルフォルダーアイコン](../integration-services/media/filefolder-small.gif "小さいファイルフォルダーアイコン")[分析管理オブジェクト&#40;AMO&#41;を使用した開発](https://docs.microsoft.com/bi-reference/amo/developing-with-analysis-management-objects-amo)  
   
- ![小さいファイル フォルダー アイコン](../integration-services/media/filefolder-small.gif "小さいファイル フォルダー アイコン") [Services スクリプト言語の分析を使用した開発&#40;ASSL&#41;](../analysis-services/multidimensional-models/scripting-language-assl/developing-with-analysis-services-scripting-language-assl.md)  
+ ![小さいファイルフォルダーアイコン](../integration-services/media/filefolder-small.gif "小さいファイルフォルダーアイコン")[Analysis Services スクリプト言語&#40;assl&#41;を使用した開発](https://docs.microsoft.com/analysis-services/multidimensional-models/scripting-language-assl/developing-with-analysis-services-scripting-language-assl)  
   
- ![小さいファイル フォルダー アイコン](../integration-services/media/filefolder-small.gif "小さいファイル フォルダー アイコン")[データ マイニング用の OLE DB](../analysis-services/dev-guide/ole-db-for-data-mining.md)  
+ ![小さいファイルフォルダーアイコン](../integration-services/media/filefolder-small.gif "小さいファイルフォルダーアイコン")[データマイニングの OLE DB](https://docs.microsoft.com/sql/analysis-services/dev-guide/ole-db-for-data-mining?view=sql-server-2014)  
   
- ![小さいファイル フォルダー アイコン](../integration-services/media/filefolder-small.gif "小さいファイル フォルダー アイコン") [Integration Services の開発者ガイド](../integration-services/integration-services-developer-documentation.md)  
+ ![小さいファイルフォルダーアイコン](../integration-services/media/filefolder-small.gif "小さいファイルフォルダーアイコン")[Integration Services 開発者ガイド](../integration-services/integration-services-developer-documentation.md)  
   
- ![小さいファイル フォルダー アイコン](../integration-services/media/filefolder-small.gif "小さいファイル フォルダー アイコン")[レプリケーション開発者ガイド](../relational-databases/replication/concepts/replication-developer-documentation.md)  
+ ![小さいファイルフォルダーアイコン](../integration-services/media/filefolder-small.gif "小さいファイルフォルダーアイコン")[レプリケーション開発者ガイド](../relational-databases/replication/concepts/replication-developer-documentation.md)  
   
- ![小さいファイル フォルダー アイコン](../integration-services/media/filefolder-small.gif "小さいファイル フォルダー アイコン") [Reporting Services の開発者ガイド](../reporting-services/reporting-services-features-and-tasks-ssrs.md)  
+ ![小さいファイルフォルダーアイコン](../integration-services/media/filefolder-small.gif "小さいファイルフォルダーアイコン")[Reporting Services 開発者ガイド](../reporting-services/reporting-services-features-and-tasks-ssrs.md)  
   
 ## <a name="other-programming-resources"></a>その他のプログラミング リソース  
 
  データ アクセス アプリケーションの開発では、以下に示すテクノロジの 1 つ以上が必要になる可能性があります。  
   
- [Visual Studio でのデータにアクセスします。](https://go.microsoft.com/fwlink/?LinkId=129902)  
+ [Visual Studio でのデータへのアクセス](https://go.microsoft.com/fwlink/?LinkId=129902)  
   
  [SQL Server Driver for PHP](https://go.microsoft.com/fwlink/?LinkID=119889)  
   

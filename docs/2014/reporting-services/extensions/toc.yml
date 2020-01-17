@@ -22,9 +22,9 @@
     - name: データ処理拡張機能の配置
       href: data-processing/deploying-a-data-processing-extension.md
       items:
-        - name: データ処理拡張機能をレポート サーバーに配置する方法
+        - name: '方法:データ処理拡張機能をレポート サーバーに配置する'
           href: data-processing/deploying-a-data-processing-extension-to-a-report-server.md
-        - name: データ処理拡張機能をレポート デザイナーに配置する方法
+        - name: '方法:データ処理拡張機能をレポート デザイナーに配置する'
           href: data-processing/deploying-a-data-processing-extension-to-report-designer.md
     - name: データ処理拡張機能コードのデバッグ
       href: data-processing/debugging-data-processing-extension-code.md

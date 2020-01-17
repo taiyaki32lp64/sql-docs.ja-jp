@@ -1,7 +1,7 @@
 ---
-title: 同時実行制御の理解 |Microsoft Docs
+title: 同時実行制御について |Microsoft Docs
 ms.custom: ''
-ms.date: 01/19/2017
+ms.date: 08/12/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 98b7dabe-9b12-4e1d-adeb-e5b5cb0c96f3
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 35d62927e8f7579c207ddaa4cd5c7fe04a4cd3f1
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 3cbc805ece4cc28a646d93d6607bcc45d65cd563
+ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47654350"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "69027644"
 ---
 # <a name="understanding-concurrency-control"></a>コンカレンシー制御について
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -40,7 +39,7 @@ ms.locfileid: "47654350"
 ## <a name="result-sets-that-are-not-updateable"></a>更新不可能な結果セット  
  更新可能な結果セットは、行の挿入、更新、および削除が可能な結果セットです。 次の場合、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] は更新可能なカーソルを作成できません。 "結果セットは更新可能ではありません" という意味の例外が生成されます。  
   
-|原因|[説明]|Remedy|  
+|原因|[説明]|救済|  
 |-----------|-----------------|------------|  
 |ステートメントが JDBC 2.0 (以降) の構文を使用して作成されていない|JDBC 2.0 では、ステートメントを作成するための新しい方法が導入されました。 JDBC 1.0 の構文を使用した場合、結果セットは既定で読み取り専用になります。|ステートメントを作成するときに、結果セットの種類とコンカレンシーを指定します。|  
 |ステートメントが TYPE_SCROLL_INSENSITIVE を使用して作成されている|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] は、静的スナップショット カーソルを作成します。 このカーソルは、他のユーザーによる行の更新からカーソルを保護するために、基になるテーブル行から切り離されています。|TYPE_SCROLL_SENSITIVE、TYPE_SS_SCROLL_KEYSET、TYPE_SS_SCROLL_DYNAMIC、または TYPE_FORWARD_ONLY を CONCUR_UPDATABLE と共に使用し、静的カーソルが作成されないようにします。|  

@@ -15,15 +15,14 @@ helpviewer_keywords:
 - geography data type [SQL Server], Transact-SQL
 - spatial data types [SQL Server]
 ms.assetid: d9e4952a-1841-4465-a64b-11e9288dba1d
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: a91e42ca4103fe854198d1559b88c7934b1117ef
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: MladjoA
+ms.author: mlandzic
+ms.openlocfilehash: 5b98f2283cfb9d89277ad97ffc7a883e43a42b4f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47678080"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68042519"
 ---
 # <a name="spatial-types---geography"></a>空間型 - geography
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]

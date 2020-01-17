@@ -11,15 +11,14 @@ helpviewer_keywords:
 - SQL Server Management Studio [SQL Server], tool windows
 - tool windows [SQL Server Management Studio]
 ms.assetid: d3be5062-234c-43a8-8d47-cce111dd3c25
-author: stevestein
-ms.author: sstein
-manager: craigg
-ms.openlocfilehash: ad294613de972bd2e183d22499f852a2796ed520
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: dbb2464faa8620b7642dbd01affe3f9de318a8eb
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47649427"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68266708"
 ---
 # <a name="tool-windows-in-sql-server-management-studio"></a>SQL Server Management Studio のツール ウィンドウ
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

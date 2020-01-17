@@ -7,25 +7,24 @@ ms.reviewer: ''
 ms.technology: ''
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
 ms.topic: conceptual
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || >= sql-server-linux-2017 || = sqlallproducts-allversions'
-ms.openlocfilehash: 6f2e8a96d6f9a6270cec06aaa47f33b3b830f4e5
-ms.sourcegitcommit: 480961f14405dc0b096aa8009855dc5a2964f177
+ms.openlocfilehash: 5d9b834d94469adf8394dc12f3b812a0dfd1fbbc
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/22/2019
-ms.locfileid: "54419747"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68067585"
 ---
 # <a name="sql-server-include-files-for-versioning-and-applies-to"></a>バージョン管理と applies-to に関する SQL Server インクルード ファイル
 
 ドキュメント内の参照は、Markdown でインクルード ファイルを使用することにより、個々のアーティクルの実際のテキストを変更することなく簡単に変更できます。 SQL のコンテンツには、次の 3 種類のインクルード ファイルがあります:SQL のバージョン、applies-to、参照のテキスト。 **SQL Server のバージョン** インクルード ファイルは、SQL Server 2016 や 2017 など、説明している SQL のバージョンを示すために使用されます。 **applies-to** インクルード ファイルは、SQL Server on Linux や Azure SQL Database など、ドキュメントで適用される SQL 製品とサービスを示します。 **参照のテキスト** インクルード ファイルは、他の 2 つのカテゴリに該当しないインクルードです。たとえば "Get Help" インクルード (顧客が SQL Server でのヘルプを参照するために使用できるリンクの一覧) などです。
 
-この記事は、最初の 2 種類のインクルード ファイルに対する基準点を提供することのみが目的です。 インクルード ファイルの完全な一覧は、[sql-docs リポジトリ](https://github.com/MicrosoftDocs/sql-docs/tree/live/docs/includes)で参照できます。
+この記事は、最初の 2 種類のインクルード ファイルのみについて、参照ポイントとして使用することを目的としています。 インクルード ファイルの完全な一覧は、[sql-docs リポジトリ](https://github.com/MicrosoftDocs/sql-docs/tree/live/docs/includes)で参照できます。
 
 ## <a name="sql-server-version-include-files"></a>SQL Server のバージョンのインクルード ファイル
 
-SQL のコンテンツの作成者は、製品名や SQL Server のバージョンを含める必要があることが頻繁にあります。 この方法では、名前に変更があると、各アーティクルごとに値を手動で更新する代わりに、インクルード ファイルが更新されます。 次のインクルード ファイルは製品名のプレースホルダーとして使用されますが、すべての SQL ドキュメントで一貫して使用されているわけではありません。 SQL Server vNext は、まだバージョン番号を持っておらず、これに対する例外となる SQL の将来のリリースを指します。  
+SQL のコンテンツの作成者は、製品名や SQL Server のバージョンを含める必要が頻繁に生じます。 この方法では、名前に変更があると、各アーティクルごとに値を手動で更新する代わりに、インクルード ファイルが更新されます。 次のインクルード ファイルは製品名のプレースホルダーとして使用されますが、すべての SQL ドキュメントで一貫して使用されているわけではありません。 SQL Server vNext は、まだバージョン番号を持っておらず、これに対する例外となる SQL の将来のリリースを指します。  
 
 |SQL バージョン| [ファイル名]| Markdown の例 |Text|
 | :------------  | :-------------| :----------| :-------------------|
@@ -140,3 +139,5 @@ SQL のコンテンツの作成者は、製品名や SQL Server のバージョ�
 ## <a name="next-steps"></a>次の手順
 
 これらのインクルード ファイルを使用する方法の詳細については、「[applies-to インクルード](sql-server-docs-contribute.md#applies-to-includes)」を参照してください。
+
+これはテストです

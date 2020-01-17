@@ -16,17 +16,20 @@ helpviewer_keywords:
 - components [Integration Services], data flow
 - data flow [Integration Services], components
 ms.assetid: 404ecab7-7698-447b-93d6-dd256beb11ff
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: 8074535e3361e8f4694877ab09dcacb940cb8a84
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 02cb2a76fdf24837546e8fc29326db79c8b2c977
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47748050"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71294912"
 ---
 # <a name="connecting-data-flow-components-programmatically"></a>プログラムによるデータ フロー コンポーネントの接続
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   データ フロー タスクにコンポーネントを追加したら、コンポーネントを接続して、変換元から変換を経由して変換先に至るデータ フローを表す実行ツリーを作成します。 データ フロー内のコンポーネントを接続するには、<xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSPath100> オブジェクトを使用します。  
   
 ## <a name="creating-a-path"></a>パスの作成  

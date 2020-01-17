@@ -10,15 +10,18 @@ ms.technology: integration-services
 ms.topic: conceptual
 author: haoqian
 ms.author: haoqian
-manager: craigg
-ms.openlocfilehash: b028c143cdc635792f9f1bd01cbdadf9e8f98454
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: c1b9941b60dc8a5f1fc87627094513ce6f20711b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47642990"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67897010"
 ---
 # <a name="add-a-scale-out-worker-with-scale-out-manager"></a>Scale Out Manager による Scale Out Worker の追加
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
 
 Integration Services Scale Out Manager を使用すると、既存の Scale Out 環境に Scale Out Worker を追加するプロセスが簡単になります。 
 
@@ -28,7 +31,7 @@ Integration Services Scale Out Manager を使用すると、既存の Scale Out 
 SQL Server のインストール ウィザードの **[機能の選択]** ページで、[統合サービス] と [スケール アウト ワーカー] を選択します。 
 ![Worker 機能の選択](media/feature-select-worker.PNG)
 
-**[Integration Services Scale Out の構成 - ワーカーノード]** ページで、**[次へ]** をクリックして、この時点での構成を省略し、**[Scale Out Manager]** を使用してインストール後に構成することができます。
+**[Integration Services Scale Out の構成 - ワーカーノード]** ページで、 **[次へ]** をクリックして、この時点での構成を省略し、 **[Scale Out Manager]** を使用してインストール後に構成することができます。
 
 インストール ウィザードを最後まで実行します。
 
@@ -38,11 +41,11 @@ Scale Out Master コンピューターの Windows ファイアウォールで、
 ## <a name="3-add-a-scale-out-worker-with-scale-out-manager"></a>3.Scale Out Manager による Scale Out Worker の追加
 SQL Server Management Studio を管理者として実行し、Scale Out Master の SQL Server インスタンスに接続します。
 
-オブジェクト エクスプローラーで、**[SSISDB]** を右クリックして、**[スケール アウトの管理]** を選択します。 
+オブジェクト エクスプローラーで、 **[SSISDB]** を右クリックして、 **[スケール アウトの管理]** を選択します。 
 
 ![スケール アウトの管理](media/manage-scale-out.PNG)
 
-**[Scale Out Manager]** ダイアログ ボックスで、**[ワーカー マネージャー]** に切り替えます。 **[+]** を選択し、**[ワーカーの接続]** ダイアログ ボックスの指示に従います。 
+**[Scale Out Manager]** ダイアログ ボックスで、 **[ワーカー マネージャー]** に切り替えます。 **[+]** を選択し、 **[ワーカーの接続]** ダイアログ ボックスの指示に従います。 
 
 ## <a name="next-steps"></a>次の手順
 詳細については、[Scale Out Manager](integration-services-ssis-scale-out-manager.md) に関するページを参照してください。

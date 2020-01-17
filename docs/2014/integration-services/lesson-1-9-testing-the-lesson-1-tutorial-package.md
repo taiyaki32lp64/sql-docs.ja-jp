@@ -7,15 +7,15 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 9aee7acf-797b-46f2-830d-80ab64a9f0b6
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 069f9ca26aa59c8edb8b97f1acbdf336a61b7d9b
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 566284668ac8ea27aded665da7028375d97623e8
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52793984"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62767611"
 ---
 # <a name="step-9-testing-the-lesson-1-tutorial-package"></a>手順 9:レッスン 1 のチュートリアル パッケージのテスト
   このレッスンでは次の作業を行いました。  

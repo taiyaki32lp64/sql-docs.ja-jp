@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: b6b625ea-c7ce-4a32-a9e0-6d2b4321bfd8
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: bda86d281e8e2fe2370ed4ee40d48a2aba261f55
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 406e7f7cbf2cd7656fe50531027c8566cb6c3243
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47752260"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67975761"
 ---
 # <a name="releasesavepoint-method-sqlserverconnection"></a>releaseSavepoint メソッド (SQLServerConnection)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -41,13 +40,13 @@ public void releaseSavepoint(java.sql.Savepoint savepoint)
 #### <a name="parameters"></a>パラメーター  
  *savepoint*  
   
- 削除するセーブポイント オブジェクト。  
+ 削除するセーブポイントオブジェクト。  
   
 ## <a name="exceptions"></a>例外  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- この releaseSavepoint メソッドは、java.sql.Connection インターフェイスの releaseSavepoint メソッドによって指定されます。  
+ この releaseSavepoint メソッドは、releaseSavepoint インターフェイスのメソッドによって指定されます。  
   
 ## <a name="see-also"></a>参照  
  [SQLServerConnection のメンバー](../../../connect/jdbc/reference/sqlserverconnection-members.md)   

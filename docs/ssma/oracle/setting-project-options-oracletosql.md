@@ -11,13 +11,13 @@ helpviewer_keywords:
 ms.assetid: a324d07d-cfdf-43bd-98a0-acf332c5a4db
 author: Shamikg
 ms.author: Shamikg
-manager: v-thobro
-ms.openlocfilehash: 7760a893082f7b4a8899e00480fc43914b1c12ab
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: shamikg
+ms.openlocfilehash: 6947a51b731b22b28ffbaa509f7cd38be5e7ebc5
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47753930"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68266528"
 ---
 # <a name="setting-project-options-oracletosql"></a>プロジェクト オプションの設定 (OracleToSQL)
 SSMA プロジェクトごとに、プロジェクト レベルのオプションを設定できます。 これらのオプションは、オブジェクトへの変換、オブジェクトの読み込み、ユーザー インターフェイスとデータ移行の設定を指定します。 オブジェクトを変換する前に[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]にデータを移行または[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]、構成オプションが、プロジェクトの適切なことを確認します。  

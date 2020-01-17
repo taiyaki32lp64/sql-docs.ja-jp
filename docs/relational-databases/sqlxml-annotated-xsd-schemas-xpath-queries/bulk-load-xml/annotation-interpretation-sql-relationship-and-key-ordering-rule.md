@@ -1,6 +1,5 @@
 ---
-title: sql:relationship とキーの順序付け規則 (SQLXML 4.0) |マイクロソフトのドキュメント
-ms.custom: ''
+title: 'sql: relationship とキーの順序付け規則 (SQLXML)'
 ms.date: 03/17/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -14,20 +13,20 @@ helpviewer_keywords:
 ms.assetid: 914cb152-09f5-4b08-b35d-71940e4e9986
 author: MightyPen
 ms.author: genemi
-manager: craigg
+ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: e16bbc20d98a313be039f207556b963ac43fa541
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 6c04b14f474e2afc0e6feb18eaa0bd321fdbb5e0
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56035723"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75246771"
 ---
 # <a name="annotation-interpretation---sqlrelationship-and-key-ordering-rule"></a>注釈の解釈 - sql:relationship とキーの順序付けルール
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   XML 一括読み込みでは、ノードがスコープ内に入るときにレコードが生成され、ノードがスコープ外に出るときに、これらのレコードが Microsoft [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] に送信されます。したがって、レコードのデータはノードのスコープ内に存在する必要があります。  
   
- これで、次の XSD スキーマを検討してください間の一対多リレーションシップ**\<顧客 >** と**\<順序 >** 要素 (1 人の顧客は、多数の注文を配置できます)使用して指定された、  **\<sql:relationship >** 要素。  
+ 次の XSD スキーマについて考えてみます。このスキーマでは、 ** \<顧客の>** と** \<注文>** の要素 (1 人の顧客が多数の注文を配置できます) の間の一対多リレーションシップが、 ** \<sql: relationship>** 要素を使用して指定されています。  
   
 ```  
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"<>   
@@ -61,13 +60,13 @@ ms.locfileid: "56035723"
 </xsd:schema>  
 ```  
   
- として、 **\<顧客 >** 要素ノードがスコープに入った、XML 一括読み込みで顧客レコードが生成されます。 XML 一括読み込みを読み取るまでにこのレコードがまだ **\</Customer >** します。 処理で、 **\<順序 >** 要素ノード、XML 一括読み込みは **\<sql:relationship >** CustOrder テーブルの CustomerID 外部キー列の値を取得するには**\<顧客 >** ため、要素の親、 **\<順序 >** 要素で指定されていない、 **CustomerID**属性。 つまり、定義で、 **\<顧客 >** 要素が指定する必要があります、 **CustomerID**属性を指定する前に、スキーマで **\<sql:リレーションシップ >** します。 それ以外の場合、時、 **\<順序 >** 要素がスコープに入った、XML 一括読み込みでは CustOrder テーブルのレコードを生成および、XML 一括読み込みに達すると、  **\</order >** 終了タグに送信するレコード[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]CustomerID 外部キー列の値のないです。  
+ ** \<Customer>** 要素ノードがスコープ内に入ると、XML 一括読み込みでは顧客レコードが生成されます。 このレコードは、XML 一括読み込みによって、または** \<顧客>** が読み取られるまで続きます。 Order ** \<>** 要素で**customerid**属性が指定されていないため、 ** \<order>** 要素ノードの処理では、XML 一括読み込みでは、 ** \<sql: relationship>** を使用して、 ** \<顧客>** 親要素から custorder テーブルの customerid 外部キー列の値を取得します。 これは、 ** \<Customer>** 要素を定義する際に、 ** \<sql: relationship>** を指定する前に、スキーマで**CustomerID**属性を指定する必要があることを意味します。 このようにしないと、 ** \<Order>** 要素がスコープに入ると、xml 一括読み込みでは custorder テーブルのレコードが生成されます。また、xml 一括読み込みでは、xml [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]一括読み込みが** \</order>** 終了タグに達すると、CustomerID 外部キー列の値なしでレコードがに送信されます。  
   
  この例のスキーマを SampleSchema.xml として保存します。  
   
 ### <a name="to-test-a-working-sample"></a>実際のサンプルをテストするには  
   
-1.  これらのテーブルを作成します。  
+1.  次のテーブルを作成します。  
   
     ```  
     CREATE TABLE Cust (  
@@ -107,7 +106,7 @@ ms.locfileid: "56035723"
     ```  
   
 3.  XML 一括読み込みを実行するには、次の [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Visual Basic Scripting Edition (VBScript) の例を MySample.vbs として保存し、実行します。  
-  
+
     ```  
     set objBL = CreateObject("SQLXMLBulkLoad.SQLXMLBulkload.4.0")  
     objBL.ConnectionString = "provider=SQLOLEDB;data source=localhost;database=tempdb;integrated security=SSPI"  
@@ -118,9 +117,9 @@ ms.locfileid: "56035723"
     set objBL=Nothing  
     ```  
   
-     この結果、XML 一括読み込みでは CustOrder テーブルの CustomerID 外部キー列に NULL 値が挿入されます。 XML のサンプル データを変更するとように、  **\<CustomerID >** 前に子要素が表示されます、 **\<順序 >** 予期される結果を取得する子要素。XML 一括読み込みでは、列に指定された外部キーの値を挿入します。  
+     この結果、XML 一括読み込みでは CustOrder テーブルの CustomerID 外部キー列に NULL 値が挿入されます。 Xml サンプルデータを変更して、 ** \<CustomerID>** 子要素が** \<Order>** 子要素の前にあるようにすると、xml 一括読み込みでは、指定された外部キー値が列に挿入されます。  
   
- これは、同等の XDR スキーマです。  
+ これは、これと同等の XDR スキーマです。  
   
 ```  
 <?xml version="1.0" ?>  

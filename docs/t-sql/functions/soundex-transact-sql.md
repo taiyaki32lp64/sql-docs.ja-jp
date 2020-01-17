@@ -19,16 +19,15 @@ helpviewer_keywords:
 - strings [SQL Server], comparing
 - SOUNDEX values
 ms.assetid: 8f1ed34e-8467-4512-a211-e0f43dee6584
-author: MashaMSFT
-ms.author: mathoma
-manager: craigg
+author: MikeRayMSFT
+ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: efd2ea94d7f1eeef885df323ca522503c9e15cd1
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 3f0a8dd4c5faecc54b7d1c5a5d506fc7cf4ecd00
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47762741"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67907076"
 ---
 # <a name="soundex-transact-sql"></a>SOUNDEX (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -51,9 +50,9 @@ SOUNDEX ( character_expression )
  **varchar**  
   
 ## <a name="remarks"></a>Remarks  
- SOUNDEX は、英数字の文字列を、文字列の音声表現に基づいた 4 文字のコードに変換します。 コードの最初の文字の最初の文字は *character_expression*, 、大文字に変換されます。 コードの 2 番目から 4 番目までの文字は、式の中の文字を表す数字です。 A、E、I、O、U、H、W、Y の各文字は、文字列の先頭の文字である場合を除き無視されます。 4 文字のコードを生成するために必要な場合は、最後にゼロが追加されます。 SOUNDEX コードの詳細については、次を参照してください。 [The Soundex Indexing System](https://www.archives.gov/research/census/soundex.html)です。  
+ SOUNDEX では、英数字の文字列が、読み上げ時の文字列の発音方法に基づいた 4 文字コードに変換されます。 コードの最初の文字の最初の文字は *character_expression*, 、大文字に変換されます。 コードの 2 番目から 4 番目までの文字は式の中の文字を表す数字です。 A、E、I、O、U、H、W、Y の各文字は、文字列の先頭の文字である場合を除き無視されます。 4 文字コードを生成するために、必要に応じて、末尾にゼロが追加されます。 SOUNDEX コードの詳細については、次を参照してください。 [The Soundex Indexing System](https://www.archives.gov/research/census/soundex.html)です。  
   
- さまざまな文字列の SOUNDEX コードを比較して、文字列の音声表現の類似性を確認できます。 DIFFERENCE 関数は、2 つの文字列に対して SOUNDEX を実行し、それらの文字列の SOUNDEX コードの類似性を表す整数を返します。  
+ さまざまな文字列からの SOUNDEX コードを比較して、読み上げ時の文字列の発音がどの程度類似しているかを確認できます。 DIFFERENCE 関数では 2 つの文字列に対して SOUNDEX が実行され、これらの文字列について SOUNDEX コードがどの程度類似しているかを示す整数が返されます。  
   
  SOUNDEX は照合順序に依存します。 文字列関数は入れ子にすることができます。  
   
@@ -64,7 +63,7 @@ SOUNDEX ( character_expression )
   
 -   SOUNDEX で定義された保存される計算列を含むヒープは、`ALTER TABLE <table> REBUILD` ステートメントを実行してヒープが再構築されるまでクエリできません。  
   
--   SOUNDEX で定義された CHECK 制約は、アップグレード時に無効になります。 無効になった制約を有効にするには、`ALTER TABLE <table> WITH CHECK CHECK CONSTRAINT ALL` ステートメントを実行します。  
+-   SOUNDEX で定義された CHECK 制約は、アップグレード時に無効にされます。 無効になった制約を有効にするには、`ALTER TABLE <table> WITH CHECK CHECK CONSTRAINT ALL` ステートメントを実行します。  
   
 -   SOUNDEX で定義された保存される計算列を含むインデックス (インデックス付きビューを含む) は、`ALTER INDEX ALL ON <object> REBUILD` ステートメントを実行してインデックスが再構築されるまでクエリできません。  
   
@@ -86,7 +85,7 @@ S530  S530
 (1 row(s) affected)  
 ```  
   
- `DIFFERENCE` 関数は、`SOUNDEX` パターンの結果を比較します。 次の例では、母音が違うだけの 2 つの文字列の場合を示しています。 返される値は、類似性が最も高い `4` です。  
+ `DIFFERENCE` 関数は、`SOUNDEX` パターンの結果を比較します。 次の例では、母音のみが異なる 2 つの文字列を示します。 返される値は、類似性が最も高い `4` です。  
   
 ```  
 -- Using DIFFERENCE  

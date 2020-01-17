@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - Schema Generation Wizard, F1 Help
@@ -13,12 +12,12 @@ ms.assetid: 41e5e3d1-cc45-4bb0-ac09-4639d2ffc0ea
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 913d830772403f1a7e9abd622611663a0a0e141f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: dbc1f6daf1039d24830bc91140f82e061b88ae65
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48123312"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66069944"
 ---
 # <a name="schema-generation-wizard-f1-help-analysis-services---multidimensional-data"></a>スキーマ生成ウィザードの F1 ヘルプ (Analysis Services - 多次元データ)
   スキーマ生成ウィザードを使用すると、既存のキューブとディメンションに基づくサブジェクト領域データベースのリレーショナル スキーマが自動的に生成されます。 さらに、ウィザードで生成されたテーブルに時間ディメンションを入力したり、サブジェクト領域データベースの名前付け規則やオプションを管理したりできます。  

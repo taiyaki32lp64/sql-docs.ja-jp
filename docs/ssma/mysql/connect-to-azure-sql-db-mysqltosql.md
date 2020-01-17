@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 81623d27-25af-444f-9779-1edb8c6fb470
 author: Shamikg
 ms.author: Shamikg
-manager: craigg
-ms.openlocfilehash: 713a0ba96a2e82f10d4150b337d51f9f1774548f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 12da1aa42f468b92e1833410e635183aabf3a384
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47705140"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68103242"
 ---
 # <a name="connect-to-azure-sql-db-mysqltosql"></a>Azure SQL DB への接続 (MySQLToSQL)
 SQL Azure ダイアログ ボックスに、Connect を使用して、移行する SQL Azure データベースに接続します。  

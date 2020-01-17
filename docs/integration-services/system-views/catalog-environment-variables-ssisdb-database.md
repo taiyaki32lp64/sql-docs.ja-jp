@@ -8,17 +8,20 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: language-reference
 ms.assetid: 45f5aacd-505a-443b-8fc2-c7929e78cff8
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: a7b6a4442371e59ee3324b345bee644b377119d7
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: fdb7a7c325a6189feaea690fe2cc22d685ba86e6
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47775390"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71296656"
 ---
-# <a name="catalogenvironmentvariables-ssisdb-database"></a>catalog.environment_variables (SSISDB データベース)
+# <a name="catalogenvironment_variables-ssisdb-database"></a>catalog.environment_variables (SSISDB データベース)
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] カタログのすべての環境に対する環境変数の詳細を表示します。  

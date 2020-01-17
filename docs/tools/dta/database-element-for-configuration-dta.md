@@ -1,5 +1,5 @@
 ---
-title: 要素をデータベースの構成 (DTA) |Microsoft Docs
+title: Configuration の Database 要素 (DTA) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -12,15 +12,14 @@ dev_langs:
 helpviewer_keywords:
 - Database element
 ms.assetid: e91ba243-6cc9-457a-8f5a-134f3c71ae69
-author: stevestein
-ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 2823734aec3138dd030a0d0399d11d458a970a8a
-ms.sourcegitcommit: 0f7cf9b7ab23df15624d27c129ab3a539e8b6457
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 713fe8d41b4ec47e624b8fcc501c7e2b87653346
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51291058"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68116944"
 ---
 # <a name="database-element-for-configuration-dta"></a>Configuration の Database 要素 (DTA)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

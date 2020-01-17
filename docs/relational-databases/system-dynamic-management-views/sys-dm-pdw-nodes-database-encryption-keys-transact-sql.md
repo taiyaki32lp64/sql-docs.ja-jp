@@ -1,6 +1,6 @@
 ---
-title: sys.dm_pdw_nodes_database_encryption_keys (TRANSACT-SQL) |Microsoft Docs
-ms.custom: ''
+title: dm_pdw_nodes_database_encryption_keys (Transact-sql)
+ms.custom: seo-dt-2019
 ms.date: 03/07/2017
 ms.prod: sql
 ms.technology: data-warehouse
@@ -11,40 +11,39 @@ dev_langs:
 ms.assetid: e7fd02b2-5d7e-4816-a0af-b58ae2ac3f7a
 author: ronortloff
 ms.author: rortloff
-manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 4d31e3cdd8d4035840f1529a64317d17ba2571d3
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: c319259d8997db2ff39d90b408056d03eb008782
+ms.sourcegitcommit: d587a141351e59782c31229bccaa0bff2e869580
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56036053"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74401645"
 ---
-# <a name="sysdmpdwnodesdatabaseencryptionkeys-transact-sql"></a>sys.dm_pdw_nodes_database_encryption_keys (TRANSACT-SQL)
+# <a name="sysdm_pdw_nodes_database_encryption_keys-transact-sql"></a>dm_pdw_nodes_database_encryption_keys (Transact-sql)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
 
-  データベースの暗号化の状態およびデータベースに関連付けられているデータベース暗号化キーに関する情報を返します。 **sys.dm_pdw_nodes_database_encryption_keys** provides this information for each node. データベース暗号化の詳細については、次を参照してください。 [Transparent Data Encryption (SQL Server PDW)](https://msdn.microsoft.com/b82ad21d-09dd-43dd-8fab-bcf2c8c3ac6d)します。  
+  データベースの暗号化の状態と、それに関連付けられているデータベース暗号化キーに関する情報を返します。 **dm_pdw_nodes_database_encryption_keys**は、各ノードにこの情報を提供します。 データベース暗号化の詳細については、「 [Transparent Data Encryption (SQL Server PDW)](../../analytics-platform-system/transparent-data-encryption.md)」を参照してください。  
   
 |列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
-|database_id|**int**|各ノード上の物理データベースの ID です。|  
-|encryption_state|**int**|このノード上のデータベースが暗号化または暗号化されていないかどうかを示します。<br /><br /> 0 = データベース暗号化キーがなく暗号化されていない<br /><br /> 1 = 暗号化されていない<br /><br /> 2 = 暗号化中<br /><br /> 3 = 暗号化<br /><br /> 4 = キーの変更中<br /><br /> 5 = 暗号化解除中<br /><br /> 6 = 保護の変更中 (データベース暗号化キーを暗号化するための証明書変更されています)。|  
-|create_date|**datetime**|暗号化キーが作成された日付を表示します。|  
-|regenerate_date|**datetime**|暗号化キーが再生成された日付を表示します。|  
-|modify_date|**datetime**|暗号化キーが変更された日付を表示します。|  
-|set_date|**datetime**|暗号化キーがデータベースに適用された日付を表示します。|  
-|opened_date|**datetime**|データベース キーが最後に開かれた日時を表示します。|  
-|key_algorithm|**varchar(?)**|キーで使用されるアルゴリズムを表示します。|  
-|key_length|**int**|キーの長さを表示します。|  
+|database_id|**通り**|各ノード上の物理データベースの ID。|  
+|encryption_state|**通り**|このノードのデータベースが暗号化されているか、暗号化されていないかを示します。<br /><br /> 0 = データベース暗号化キーは存在しません。暗号化は行われません。<br /><br /> 1 = 暗号化されていない<br /><br /> 2 = 暗号化が進行中<br /><br /> 3 = 暗号化<br /><br /> 4 = キーの変更中<br /><br /> 5 = 暗号化解除中<br /><br /> 6 = 保護の変更中 (データベース暗号化キーを暗号化する証明書が変更されています)|  
+|create_date|**/**|暗号化キーが作成された日付が表示されます。|  
+|regenerate_date|**/**|暗号化キーが再生成された日付が表示されます。|  
+|modify_date|**/**|暗号化キーが変更された日付が表示されます。|  
+|set_date|**/**|暗号化キーがデータベースに適用された日付が表示されます。|  
+|opened_date|**/**|データベースキーが最後に開かれた日時を表示します。|  
+|key_algorithm|**varchar (?)**|キーに使用されるアルゴリズムが表示されます。|  
+|key_length|**通り**|キーの長さを表示します。|  
 |encryptor_thumbprint|**varbin**|暗号化のサムプリントを表示します。|  
-|percent_complete|**real**|データベース暗号化の状態変更の完了率です。 状態変更がない場合は 0 になります。|  
-|node_id|**int**|ノードに関連付けられている一意の数値 id です。|  
+|percent_complete|**real**|データベース暗号化状態の変更の完了率。 状態の変更がない場合、これは0になります。|  
+|node_id|**通り**|ノードに関連付けられている一意の数値 id。|  
   
 ## <a name="permissions"></a>アクセス許可  
  サーバーに対する VIEW SERVER STATE 権限が必要です。  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>例: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] および [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
- 次の例の結合 `sys.dm_pdw_nodes_database_encryption_keys` を TDE の各ノードには、データベースが保護されているは、暗号化の状態を示す場合は、他のシステム テーブルにします。  
+## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>例: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]、[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+ 次の例で`sys.dm_pdw_nodes_database_encryption_keys`は、他のシステムテーブルと結合して、tde で保護されたデータベースの各ノードの暗号化状態を示しています。  
   
 ```  
 SELECT D.database_id AS DBIDinMaster, D.name AS UserDatabaseName,   
@@ -61,10 +60,10 @@ ORDER BY D.database_id, PD.pdw_node_ID;
 ```  
   
 ## <a name="see-also"></a>参照  
- [SQL Data Warehouse と Parallel Data Warehouse の動的管理ビュー &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sql-and-parallel-data-warehouse-dynamic-management-views.md)   
- [CREATE DATABASE ENCRYPTION KEY &#40;Transact-SQL&#41;](../../t-sql/statements/create-database-encryption-key-transact-sql.md)   
- [ALTER DATABASE ENCRYPTION KEY &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-encryption-key-transact-sql.md)   
- [DROP DATABASE ENCRYPTION KEY &#40;Transact-SQL&#41;](../../t-sql/statements/drop-database-encryption-key-transact-sql.md)  
+ [SQL Data Warehouse および並列データウェアハウスの動的管理ビュー &#40;Transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sql-and-parallel-data-warehouse-dynamic-management-views.md)   
+ [Transact-sql&#41;&#40;データベース暗号化キーを作成する](../../t-sql/statements/create-database-encryption-key-transact-sql.md)   
+ [Transact-sql&#41;&#40;データベース暗号化キーの変更](../../t-sql/statements/alter-database-encryption-key-transact-sql.md)   
+ [Transact-sql&#41;&#40;データベース暗号化キーを削除します。](../../t-sql/statements/drop-database-encryption-key-transact-sql.md)  
   
   
 

@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: bdbbf325-14f6-460e-a35a-d3861d3c961e
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 9ae478cb2efc557acfd86e174d59a160fb8920c2
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b3476ba45f7f563524cdfd9855e80f9c5dd96524
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47686540"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68054454"
 ---
 # <a name="managing-clr-integration-assemblies"></a>CLR 統合アセンブリの管理
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -34,7 +33,7 @@ ms.locfileid: "47686540"
 |assembly_id|アセンブリに定義される ID。 この番号は、同じアセンブリに関連するすべてのオブジェクトに割り当てられます。|  
 |NAME|オブジェクトの名前。|  
 |file_id|最初のオブジェクトに関連付けられている各オブジェクトを識別する番号を指定した**assembly_id** 1 の値が指定されています。 複数のオブジェクトが関連付けられている場合**assembly_id**、以降の各し**file_id**値が 1 ずつインクリメントされます。|  
-|content|アセンブリまたはファイルの 16 進数表記。|  
+|コンテンツ|アセンブリまたはファイルの 16 進数表記。|  
   
 ## <a name="in-this-section"></a>このセクションの内容  
  [アセンブリの作成](../../../relational-databases/clr-integration/assemblies/creating-an-assembly.md)  
@@ -46,7 +45,7 @@ ms.locfileid: "47686540"
  [アセンブリの削除](../../../relational-databases/clr-integration/assemblies/dropping-an-assembly.md)  
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] からの CLR アセンブリの削除について説明します。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [CLR 統合のセキュリティ](../../../relational-databases/clr-integration/security/clr-integration-security.md)   
  [CLR 統合のコード アクセス セキュリティ](../../../relational-databases/clr-integration/security/clr-integration-code-access-security.md)  
   

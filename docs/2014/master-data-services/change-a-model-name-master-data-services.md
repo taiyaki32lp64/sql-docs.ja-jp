@@ -4,21 +4,20 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.topic: conceptual
 helpviewer_keywords:
 - models [Master Data Services], changing name
 ms.assetid: 399eed32-7c61-4239-9c06-996a65219518
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: bf8c70a3d1f97ce3be25833c8f0af93d693654d9
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: d933475231913edeccbc5206afb675916a765302
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56021714"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66054216"
 ---
 # <a name="change-a-model-name-master-data-services"></a>モデル名を変更する (マスター データ サービス)
   [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] では、モデルの名前を変更できます。  
@@ -47,7 +46,7 @@ ms.locfileid: "56021714"
   
 6.  **[モデルの保存]** をクリックします。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [モデルを作成する (マスター データ サービス)](../../2014/master-data-services/create-a-model-master-data-services.md)   
  [モデルを削除する (マスター データ サービス)](../../2014/master-data-services/delete-a-model-master-data-services.md)   
  [モデル (マスター データ サービス)](../../2014/master-data-services/models-master-data-services.md)  

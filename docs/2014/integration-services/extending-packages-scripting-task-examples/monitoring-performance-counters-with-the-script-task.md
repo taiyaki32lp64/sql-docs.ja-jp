@@ -16,15 +16,15 @@ helpviewer_keywords:
 - Script task [Integration Services], performance counters
 - counters [Integration Services]
 ms.assetid: 86609bf1-cae6-435e-a58d-41bdfc521e94
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: b0f74eac21eb974669adbd96e909ac2cb233b4a6
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 5de911200c7fbe91c912c7ac7a321f79226b6452
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53371614"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62768508"
 ---
 # <a name="monitoring-performance-counters-with-the-script-task"></a>スクリプト タスクによるパフォーマンス カウンターの監視
   システム管理者は、大容量のデータ上で複雑な変換を実行する [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] パッケージのパフォーマンスを監視する必要が生じる場合があります。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] の **System.Diagnostics** 名前空間には、既存のパフォーマンス カウンターを使用したり、ユーザー独自のパフォーマンス カウンターを作成するためのクラスが用意されています。  

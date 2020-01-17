@@ -14,11 +14,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 3f6123f66d687327ba56601419328e44fd920a2a
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53368002"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62815751"
 ---
 # <a name="always-on-availability-groups-interoperability-sql-server"></a>Always On 可用性グループ:相互運用性 (SQL Server)
   このトピックでは、 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] の他の [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 機能との間の [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]の相互運用性について説明します。  
@@ -58,7 +58,7 @@ ms.locfileid: "53368002"
   
 -   **ブログ:**  
   
-     [移行ガイド:フェールオーバー クラスタ リングと可用性グループ、以前のクラスタ リングとミラーリングの展開によるから SQL Server 2012 に移行します。](https://blogs.msdn.com/b/sqlalwayson/archive/2012/04/09/now-available-migration-guide-migrating-to-sql-server-2012-failover-clustering-and-availability-groups-from-prior-clustering-and-mirroring-deployments.aspx)  
+     [移行ガイド: フェールオーバー クラスタ リングと可用性グループ、以前のクラスタ リングとミラーリングの展開によるから SQL Server 2012 に移行します。](https://blogs.msdn.com/b/sqlalwayson/archive/2012/04/09/now-available-migration-guide-migrating-to-sql-server-2012-failover-clustering-and-availability-groups-from-prior-clustering-and-mirroring-deployments.aspx)  
   
      [SQL Server AlwaysOn チームのブログ:SQL Server AlwaysOn チームのオフィシャル ブログ](https://blogs.msdn.com/b/sqlalwayson/)  
   
@@ -66,7 +66,7 @@ ms.locfileid: "53368002"
   
 -   **ホワイト ペーパー:**  
   
-     [移行ガイド:AlwaysOn 可用性グループへの移行前の配置の結合データベース ミラーリングとログ配布から](https://msdn.microsoft.com/library/jj635217)  
+     [移行ガイド: AlwaysOn 可用性グループへの移行前の配置の結合データベース ミラーリングとログ配布から](https://msdn.microsoft.com/library/jj635217)  
   
      [Microsoft SQL Server AlwaysOn ソリューション ガイド高可用性とディザスター リカバリー](https://go.microsoft.com/fwlink/?LinkId=227600)  
   

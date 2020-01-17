@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 4ae44fa2-0b9b-4e19-ab45-c1dc93b68406
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: eb02dd54ea57af668e56fe910ca92830fb09c418
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 92b8ca2b8c780e48cd9f3bf815ca86e3bd27081e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52514688"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68135629"
 ---
 # <a name="data-sources"></a>ソリューション エクスプローラー
 A*データソース*はデータのソースだけです。 ファイル、DBMS、またはデータ フィードではさらに、特定のデータベースになります。 データをプログラムと同じコンピューター上またはネットワーク上のどこか別のコンピューター上にあることがあります。 たとえば、データ ソースは OS/2® オペレーティング システムを Novell® Netware; からアクセスで実行されている Oracle データベース管理システム可能性があります。ゲートウェイを使用してアクセスを IBM DB2 DBMSサーバー ディレクトリ; Xbase ファイルのコレクションまたは、ローカルの Microsoft® Access データベース ファイル。  

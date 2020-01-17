@@ -4,23 +4,22 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.dimprocessingtransformation.mappings.f1
 helpviewer_keywords:
 - Dimension Processing Destination Editor
 ms.assetid: bf98aa4b-10ba-4978-9fae-a5873ff88613
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: ed72704f230ede202d9363a37d4775b2fdd250d3
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 6eaf39005e6c5d1d5cf401738fe82f3c97cdf693
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48178343"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66059407"
 ---
 # <a name="dimension-processing-destination-editor-mappings-page"></a>[ディメンション処理変換先エディター] ([マッピング] ページ)
   **[ディメンション処理変換先エディター]** ダイアログ ボックスの **[マッピング]** ページを使用すると、入力列を変換先列にマップできます。  
@@ -40,9 +39,9 @@ ms.locfileid: "48178343"
  **変換先列**  
  使用できる変換先列を表示し、それぞれがマップされるかどうかを示します。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [Integration Services のエラーおよびメッセージのリファレンス](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [ディメンション処理変換先エディター&#40;接続マネージャー ページ&#41;](../../2014/integration-services/dimension-processing-destination-editor-connection-manager-page.md)   
- [ディメンション処理変換先エディター &#40;[詳細] ページ&#41;](../../2014/integration-services/dimension-processing-destination-editor-advanced-page.md)  
+ [ディメンション処理変換先エディター &#40;[接続マネージャー] ページ&#41;](../../2014/integration-services/dimension-processing-destination-editor-connection-manager-page.md)   
+ [ディメンション処理変換先エディター &#40;[詳細設定] ページ&#41;](../../2014/integration-services/dimension-processing-destination-editor-advanced-page.md)  
   
   

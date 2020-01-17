@@ -24,14 +24,13 @@ helpviewer_keywords:
 ms.assetid: 55da6b94-3a4b-4bae-850f-4bf7f6e918ca
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 50c62db9ef3d635f8486285aef75f6e3d9bfc06c
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: a50c5344f8742a8483d952b8cab3b03d8d666b31
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52534837"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68057909"
 ---
 # <a name="about-log-shipping-sql-server"></a>ログ配布について (SQL Server)
 

@@ -8,18 +8,17 @@ ms.topic: conceptual
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-manager: kfile
-ms.openlocfilehash: 8ab2b355c551b868cec3ee4329460f8bb0532236
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 17f1233310ce8b070e12fbf25dca0e256ff34664
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37972668"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68070739"
 ---
-# <a name="divide-dmx"></a>(除算)(DMX)
+# <a name="divide-dmx"></a>(除算) (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
-  1 つの数を別の数で除算する算術演算を実行します。  
+  1 つの数値を別の数値で除算する算術演算を実行します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -30,7 +29,7 @@ Dividend / Divisor
   
 #### <a name="parameters"></a>パラメーター  
  *被除数*  
- 数値を返す有効なデータ マイニング拡張機能 (DMX) 式です。  
+ 数値の値を返す有効なデータ マイニング拡張機能 (DMX) 式。  
   
  *除数*  
  数値の値を返す有効な DMX 式。  
@@ -39,11 +38,11 @@ Dividend / Divisor
  優先順位の高いパラメーターのデータ型を持つ値です。  
   
 ## <a name="remarks"></a>コメント  
- この演算子が返す値は、1 番目の式を 2 番目の式で除算して得られる商を表します。  
+ この演算子が返す値は、最初の 2 番目の式で割った値式の商を表します。  
   
- 両方の式は、同じデータ型でなければなりません。または、一方の式をもう一方の式のデータ型に暗黙的に変換できる必要があります。 除算の結果が NULL 値になる場合、演算子はエラーになります。 除数と被除数の両方の結果が NULL 値になる場合、演算子は NULL 値を返します。  
+ 両方の式は、同じデータ型でなければなりません。または、一方の式をもう一方の式のデータ型に暗黙的に変換できる必要があります。 除算の結果が NULL 値になる場合、演算子はエラーになります。 除数と被除数の両方が null 値に評価される、演算子は null 値を返します。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [算術演算子&#40;DMX&#41;](../dmx/operators-arithmetic.md)   
  [データ マイニング拡張機能&#40;DMX&#41;演算子リファレンス](../dmx/data-mining-extensions-dmx-operator-reference.md)   
  [演算子&#40;DMX&#41;](../dmx/operators-dmx.md)   

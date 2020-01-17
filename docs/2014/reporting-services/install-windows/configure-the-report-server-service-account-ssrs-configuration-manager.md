@@ -1,7 +1,7 @@
 ---
 title: レポート サーバー サービス アカウントの構成 (SSRS 構成マネージャー) | Microsoft Docs
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
 ms.reviewer: ''
 ms.prod: sql-server-2014
@@ -9,12 +9,12 @@ ms.technology: ''
 ms.topic: conceptual
 ms.custom: seodec18
 ms.date: 12/10/2018
-ms.openlocfilehash: 19eca52c1686f218b2c59449b139d684700822b5
-ms.sourcegitcommit: 40c3b86793d91531a919f598dd312f7e572171ec
+ms.openlocfilehash: cb867bfdfc8d9ecb686d3ecc52c48c80bc60d9cd
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53328962"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63261067"
 ---
 # <a name="configure-the-report-server-service-account-ssrs-configuration-manager"></a>レポート サーバー サービス アカウントの構成 (SSRS 構成マネージャー)
 
@@ -66,7 +66,7 @@ ms.locfileid: "53328962"
   
 - SQL Server のオンライン ブックの「[Windows サービス アカウントと権限の構成](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md) 」。  
   
-- [サービスと Service Accounts Security Planning Guide](http://usergroup.doubletake.com/file_cabinet/download/0x000021733)します。  
+- [サービスおよびサービス アカウントのセキュリティ計画ガイド](http://usergroup.doubletake.com/file_cabinet/download/0x000021733)。  
   
 ## <a name="updating-an-expired-password"></a>期限切れのパスワードの更新
 
@@ -74,7 +74,7 @@ ms.locfileid: "53328962"
   
  パスワードをリセットするには、次の操作を行います。  
   
-1. **開始**メニューで、**コントロール パネルの **、 をポイント**管理者ツール**、 をクリック**サービス**します。  
+1. **開始**メニューで、**コントロール パネルの** 、 をポイント**管理者ツール**、 をクリック**サービス**します。  
   
 2. 右クリックして**SQL Server Reporting Services**、**プロパティ**します。  
   

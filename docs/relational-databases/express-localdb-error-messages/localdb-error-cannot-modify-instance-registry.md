@@ -9,13 +9,12 @@ ms.topic: reference
 ms.assetid: bb14e3c5-5349-47e8-8e6b-16ff26dfb368
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 103d4f7b00702ca1af4f2f42e7b9d4ac5f1d4573
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d5619735b0164b337613d160b5057f7514a021af
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47618210"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67995888"
 ---
 # <a name="localdberrorcannotmodifyinstanceregistry"></a>LOCALDB_ERROR_CANNOT_MODIFY_INSTANCE_REGISTRY
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

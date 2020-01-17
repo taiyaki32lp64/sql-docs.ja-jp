@@ -10,17 +10,20 @@ ms.topic: conceptual
 ms.assetid: 06b166a1-a9df-48ea-a0e8-9b8d6979c0a1
 f1_keywords:
 - sql13.dts.designer.sapbwconnectionmanager.f1
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: 38482743b988419f2aa16d874bed5fdc7a60286d
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 0f0ebc393c48562c5fcd783b4c056aa218e8ffaa
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52528428"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71298477"
 ---
 # <a name="sap-bw-connection-manager"></a>SAP BW 接続マネージャー
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   SAP BW 接続マネージャーは、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector 1.1 for SAP BW の接続マネージャー コンポーネントです。 したがって、SAP BW 接続マネージャーは、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector 1.1 for SAP BW の変換元と変換先コンポーネントが必要とする SAP Netweaver BW version 7 システムへの接続を提供します ( [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector 1.1 for SAP BW パッケージの一部の SAP BW 変換元と変換先は、SAP BW 接続マネージャーを使用する唯一の [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] コンポーネントです)。  
   
 > [!IMPORTANT]  
@@ -37,7 +40,7 @@ ms.locfileid: "52528428"
   
 -   単一のアプリケーション サーバーのホストとシステム数を指定するか、負荷分散されたサーバー グループのメッセージ サーバー、グループ、および SID を指定します。  
   
--   [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector 1.1 for SAP BW のコンポーネントに対する RFC 関数呼び出しのカスタム ログを有効にします (このログは、[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] パッケージで有効にできる、省略可能なログとは異なります)。RFC 関数呼び出しのログを有効にするには、RFC の各関数呼び出しの前後に作成されるログ ファイルを格納するディレクトリを指定します  (このログ機能は、XML 形式で多くのログ ファイルを作成します。 これらのログ ファイルには転送されるデータのすべての行も含まれるため、大量のディスク領域を消費する可能性があります)。ログ ディレクトリを選択しないと、ログ記録は有効になりません。  
+-   [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector 1.1 for SAP BW のコンポーネントに対する RFC 関数呼び出しのカスタム ログを有効にします (このログは、[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] パッケージで有効にできる、省略可能なログとは異なります)。RFC 関数呼び出しのログを有効にするには、RFC の各関数呼び出しの前後に作成されるログ ファイルを格納するディレクトリを指定します (このログ機能は、XML 形式で多くのログ ファイルを作成します。 これらのログ ファイルには転送されるデータのすべての行も含まれるため、大量のディスク領域を消費する可能性があります)。ログ ディレクトリを選択しないと、ログ記録は有効になりません。  
   
     > [!IMPORTANT]  
     >  転送されるデータに機密情報が含まれている場合、ログ ファイルには機密情報も含まれることになります。  
@@ -69,11 +72,11 @@ ms.locfileid: "52528428"
   
     -   [SAP BW 接続マネージャー] をダブルクリックします。  
   
-         - または -  
+         \- または -  
   
     -   [SAP BW 接続マネージャー] を右クリックし、 **[編集]** を選択します。  
   
-### <a name="options"></a>[変数]  
+### <a name="options"></a>オプション  
   
 > [!NOTE]  
 >  接続マネージャーを構成するために必要な値がわからない場合は、SAP 管理者に確認してください。  

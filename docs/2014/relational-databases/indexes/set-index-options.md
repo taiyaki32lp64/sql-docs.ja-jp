@@ -24,11 +24,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 24587f27710381ac787fe8045029df681e401af5
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54130192"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63036208"
 ---
 # <a name="set-index-options"></a>インデックス オプションの設定
   このトピックでは、 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] におけるインデックスのプロパティを、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] または [!INCLUDE[tsql](../../includes/tsql-md.md)]を使用して変更する方法について説明します。  
@@ -51,9 +51,9 @@ ms.locfileid: "54130192"
   
 ###  <a name="Restrictions"></a> 制限事項と制約事項  
   
--   次のオプションは、ALTER INDEX ステートメントの SET 句を使用して、すぐに、インデックスに適用されます。ALLOW_PAGE_LOCKS、ALLOW_ROW_LOCKS、IGNORE_DUP_KEY、および STATISTICS_NORECOMPUTE します。  
+-   ALTER INDEX ステートメントに SET 句を使用することによって、次の各オプションが直ちにインデックスに適用されます:ALLOW_PAGE_LOCKS、ALLOW_ROW_LOCKS、IGNORE_DUP_KEY、STATISTICS_NORECOMPUTE。  
   
--   ALTER INDEX REBUILD または CREATE INDEX WITH DROP_EXISTING のいずれかを使用してインデックスを再構築するときは、次のオプションを設定できます。PAD_INDEX、FILLFACTOR、SORT_IN_TEMPDB、IGNORE_DUP_KEY、STATISTICS_NORECOMPUTE、ONLINE、ALLOW_ROW_LOCKS、ALLOW_PAGE_LOCKS、MAXDOP、および DROP_EXISTING (CREATE INDEX のみ)。  
+-   ALTER INDEX REBUILD または CREATE INDEX WITH DROP_EXISTING を使用してインデックスを再構築するときは、次の各オプションを設定できます:PAD_INDEX、FILLFACTOR、SORT_IN_TEMPDB、IGNORE_DUP_KEY、STATISTICS_NORECOMPUTE、ONLINE、ALLOW_ROW_LOCKS、ALLOW_PAGE_LOCKS、MAXDOP、DROP_EXISTING (CREATE INDEX のみ)。  
   
 ###  <a name="Security"></a> セキュリティ  
   
@@ -68,7 +68,7 @@ ms.locfileid: "54130192"
   
 2.  プラス記号をクリックして **[テーブル]** フォルダーを展開します。  
   
-3.  インデックスのプロパティを変更するテーブルを右クリックし、**[デザイン]** を選択します。  
+3.  インデックスのプロパティを変更するテーブルを右クリックし、 **[デザイン]** を選択します。  
   
 4.  **[テーブル デザイナー]** メニューの **[インデックス/キー]** をクリックします。  
   

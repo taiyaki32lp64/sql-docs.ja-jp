@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 ms.assetid: acc9a905-90f8-4544-aec6-b2ab3a1b0015
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 9a2f664e4d8611cb50eda3ffdbb911d72eea6b39
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 6c0b0cc68c73c66dabb237d859aba641fb234647
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56040653"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66102176"
 ---
 # <a name="security-page-site-settings-report-manager"></a>[セキュリティ] ページ、サイトの設定 ( レポート マネージャー)
   [セキュリティ] ページは、レポート サーバー サイトへのアクセスを制御するシステム ロールの割り当てを表示するために使用します。 システム ロールの割り当ては、レポート サーバー名前空間やフォルダー階層の外の領域でも有効です。 システム ロールの割り当てはグローバルであり、特定のアイテムによって変わることがありません。 システム ロールの割り当てによってサポートされる操作には、共有スケジュールの作成と使用、レポート ビルダーの使用、および一部のサーバー機能の既定値の設定が含まれます。  

@@ -9,14 +9,14 @@ helpviewer_keywords:
 - deploying [Reporting Services], scale-out deployment model
 - scale-out deployments [Reporting Services]
 ms.assetid: b30d0308-4d9b-4f85-9f83-dece4dcb2775
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: a0e990b52a9433f959288dcf2e3518f85b8a6f67
-ms.sourcegitcommit: c7febcaff4a51a899bc775a86e764ac60aab22eb
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 9822af554536d9168c2ee3dd690c641865e66574
+ms.sourcegitcommit: 312b961cfe3a540d8f304962909cd93d0a9c330b
+ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "52710643"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73593862"
 ---
 # <a name="configure-a-native-mode-report-server-scale-out-deployment"></a>ネイティブ モード レポート サーバーのスケールアウト配置の構成
 
@@ -27,6 +27,9 @@ Reporting Services ネイティブ モードでは、1 つのレポート サー
 Power BI Report Server の場合、任意のスケール アウト環境向けのロード バランサー上でクライアント アフィニティ (スティッキー セッションと呼ばれることもある) を構成することで、適切なパフォーマンスを保証する必要があります。  
   
 SQL Server 2016 Reporting Services 以前の場合、SharePoint モードのレポート サーバーは、SharePoint 製品のインフラストラクチャを利用してスケールアウトを行います。SharePoint モードのスケールアウトは、SharePoint モードのレポート サーバーを SharePoint ファームに追加することによって実行されます。 SharePoint モードでのスケールアウトについては、 「[ファームへのレポート サーバーの追加 &#40;SSRS スケールアウト&#41;](../../reporting-services/install-windows/add-an-additional-report-server-to-a-farm-ssrs-scale-out.md)」を参照してください。  
+
+> [!NOTE]
+> SharePoint と Reporting Services の統合は、SQL Server 2016 以降では使用できません。
  
   *スケールアウト配置* は次のシナリオで使用します。  
   
@@ -90,9 +93,9 @@ An error occurred within the report server database.  This may be due to a conne
   
 2.  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 構成ツールを起動します。  
   
-3.  レポート サーバー Web サービスの URL、Web ポータルの URL、およびレポート サーバー データベースを構成します。 詳細については、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] オンライン ブックの「[レポート サーバーの構成 &#40;Reporting Services ネイティブ モード&#41;](../../reporting-services/report-server/configure-a-report-server-reporting-services-native-mode.md)」を参照してください。  
+3.  レポート サーバー Web サービスの URL、Web ポータルの URL、およびレポート サーバー データベースを構成します。 詳細については、「[レポート サーバーの構成 &#40;Reporting Services ネイティブ モード&#41;](../../reporting-services/report-server/configure-a-report-server-reporting-services-native-mode.md)」を参照してください。
   
-4.  レポート サーバーが稼働することを確認します。 詳細については、 [オンライン ブックの「](../../reporting-services/install-windows/verify-a-reporting-services-installation.md) Reporting Services のインストール状態の検証 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 」を参照してください。  
+4.  レポート サーバーが稼働することを確認します。 詳細については、「 [Verify a Reporting Services Installation](../../reporting-services/install-windows/verify-a-reporting-services-installation.md)」をご覧ください。  
   
 ## <a name="to-install-and-configure-the-second-report-server-instance"></a>2 番目のレポート サーバー インスタンスをインストールして構成するには  
   
@@ -128,7 +131,7 @@ An error occurred within the report server database.  This may be due to a conne
   
 2.  **[スケールアウト配置]** をクリックして、[スケールアウト配置] ページを開きます。 レポート サーバー データベースに接続されている各レポート サーバーに対応する 2 つのエントリが表示されます。 最初のレポート サーバー インスタンスは既に参加済みで、 2 番目のレポート サーバー インスタンスは "参加を待っています" になっているはずです。 このようなエントリが表示されない場合は、レポート サーバー データベースを使用するように構成および初期化されている最初のレポート サーバーに接続していることを確認してください。  
   
-     ![[スケール アウト配置] ページの部分的なスクリーン ショット](../../reporting-services/install-windows/media/scaloutscreen.gif "[スケール アウト配置] ページの部分的なスクリーン ショット")  
+     ![[スケールアウト配置] ページの部分的なスクリーンショット](../../reporting-services/install-windows/media/scaloutscreen.gif "[スケールアウト配置] ページの部分的なスクリーンショット")  
   
 3.  [スケールアウト配置] ページで、配置への参加を待機しているレポート サーバー インスタンスを選択し、 **[サーバーの追加]** をクリックします。  
   
@@ -143,8 +146,8 @@ An error occurred within the report server database.  This may be due to a conne
 
 ## <a name="next-steps"></a>次の手順
 
-[サービス アカウントの構成](https://msdn.microsoft.com/library/25000ad5-3f80-4210-8331-d4754dc217e0)   
-[URL の構成](../../reporting-services/install-windows/configure-a-url-ssrs-configuration-manager.md)   
+[URL  を構成](../../reporting-services/install-windows/configure-a-url-ssrs-configuration-manager.md)
+[サービスアカウントを構成](configure-the-report-server-service-account-ssrs-configuration-manager.md)する  
 [ネイティブ モードのレポート サーバー データベースの作成](../../reporting-services/install-windows/ssrs-report-server-create-a-native-mode-report-server-database.md)   
 [レポート サーバーの URL の構成](../../reporting-services/install-windows/configure-report-server-urls-ssrs-configuration-manager.md)   
 [レポート サーバー データベース接続の構成](../../reporting-services/install-windows/configure-a-report-server-database-connection-ssrs-configuration-manager.md)   

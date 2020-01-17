@@ -16,11 +16,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 66329d4c25a23a6b3dbc3570723bab8aecfa3d4a
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56039883"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68190965"
 ---
 # <a name="instance-configuration"></a>インスタンスの構成
   **インストール ウィザードの** [インスタンスの構成] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ページを使用して、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]の既定のインスタンスまたは名前付きインスタンスのどちらを作成するのかを指定します。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスがまだインストールされていない場合は、名前付きインスタンスを指定しない限り、既定のインスタンスが作成されます。  
@@ -29,7 +29,7 @@ ms.locfileid: "56039883"
   
  インスタンスには、既定のインスタンスと名前付きインスタンスがあります。 既定のインスタンス名は MSSQLSERVER です。 接続時に、クライアントでインスタンス名を指定する必要はありません。 名前付きインスタンスは、ユーザーがセットアップ中に指定します。 先に既定のインスタンスをインストールしなくても、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] を名前付きインスタンスとしてインストールできます。 既定のインスタンスにできるのは、バージョンにかかわらず、一度に 1 つの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インストールだけです。  
   
- **警告!** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SysPrep では、**[インスタンスの構成]** ページで準備済みインスタンスを完了するときにインスタンス名を指定できます。 コンピューター上に [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の既存のインスタンスがない場合は、完了しようとしている準備済みインスタンスを既存のインスタンスとして構成するように選択できます。  
+ **警告!** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SysPrep では、 **[インスタンスの構成]** ページで準備済みインスタンスを完了するときにインスタンス名を指定できます。 コンピューター上に [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の既存のインスタンスがない場合は、完了しようとしている準備済みインスタンスを既存のインスタンスとして構成するように選択できます。  
   
 ## <a name="multiple-instances"></a>複数のインスタンス  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、1 台のサーバー (1 つのプロセッサ) 上に複数の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスをインストールできます。ただし、既定のインスタンスにできるのはそのうち 1 つだけです。 その他のインスタンスはすべて、名前付きインスタンスにする必要があります。 コンピューターは [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の複数のインスタンスを同時に実行でき、それぞれ他のインスタンスとは関係なく動作します。  

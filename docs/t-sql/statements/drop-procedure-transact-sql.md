@@ -24,14 +24,13 @@ helpviewer_keywords:
 ms.assetid: 1c2d7235-7b9b-4336-8f17-429e7d82c2c3
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 04aa3cb75b5b77ad096860bf1c2a232617cb930f
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: 4ed342f6b73ee596d8429aa4b952c4becf7d41ab
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53205431"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68044030"
 ---
 # <a name="drop-procedure-transact-sql"></a>DROP PROCEDURE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -67,7 +66,7 @@ DROP { PROC | PROCEDURE } { [ schema_name. ] procedure_name }
  削除するストアド プロシージャまたはストアド プロシージャ グループの名前です。 番号の付いたプロシージャ グループ内の個々のプロシージャは削除できません。プロシージャ グループ全体が削除されます。  
   
 ## <a name="best-practices"></a>ベスト プラクティス  
- ストアド プロシージャを削除する前に、依存オブジェクトを確認し、それらのオブジェクトを適切に修正します。 ストアド プロシージャを削除すると、依存オブジェクトとスクリプトが更新されていない場合、それらのオブジェクトがエラーになることがあります。 詳細については、「[ストアド プロシージャの依存関係の表示](../../relational-databases/stored-procedures/view-the-dependencies-of-a-stored-procedure.md)」を参照してください  
+ ストアド プロシージャを削除する前に、依存オブジェクトを確認し、それらのオブジェクトを適切に修正します。 ストアド プロシージャを削除すると、これらのオブジェクトが更新されていない場合、依存オブジェクトとスクリプトがエラーになることがあります。 詳細については、「[ストアド プロシージャの依存関係の表示](../../relational-databases/stored-procedures/view-the-dependencies-of-a-stored-procedure.md)」を参照してください  
   
 ## <a name="metadata"></a>メタデータ  
  既存のプロシージャの一覧を表示するには、**sys.objects** カタログ ビューに対してクエリを実行します。 プロシージャの定義を表示するには、**sys.sql_modules** カタログ ビューに対してクエリを実行します。  

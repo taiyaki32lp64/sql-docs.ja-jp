@@ -15,12 +15,12 @@ ms.assetid: b741894f-d267-4b10-adfe-cbc14aa6caeb
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 0e4756834e28ad07e42f57235a30e59fd924da22
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: f66cb56380f0e027d08e53154c05b7ad1e3be89f
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53202111"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62670578"
 ---
 # <a name="enable-and-disable-change-data-capture-sql-server"></a>変更データ キャプチャの有効化と無効化 (SQL Server)
   このトピックでは、データベースおよびテーブルに対して変更データ キャプチャを有効または無効にする方法について説明します。  
@@ -37,7 +37,7 @@ ms.locfileid: "53202111"
 > [!IMPORTANT]  
 >  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]でこのテンプレートを見つけるには、 **[表示]** メニューの **[テンプレート エクスプローラー]** をクリックし、 **[SQL Server テンプレート]** を選択します。 **Change Data Capture** はサブフォルダーです。 このトピックで参照したすべてのテンプレートは、このフォルダー内にあります。 **ツール バーには** [テンプレート エクスプローラー] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] アイコンもあります。  
   
-```tsql  
+```sql  
 -- ====  
 -- Enable Database for CDC template   
 -- ====  
@@ -55,9 +55,9 @@ GO
  データベースの無効化の例については、データベースでの変更データ キャプチャの無効化のテンプレートを参照してください。  
   
 > [!IMPORTANT]  
->  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]でこのテンプレートを見つけるには、 **[表示]**、 **[テンプレート エクスプローラー]**、 **[SQL Server テンプレート]** の順にクリックします。 **Change Data Capture** は、このトピックで参照されるすべてのテンプレートを含んだサブフォルダーです。 **ツール バーには** [テンプレート エクスプローラー] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] アイコンもあります。  
+>  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]でこのテンプレートを見つけるには、 **[表示]** 、 **[テンプレート エクスプローラー]** 、 **[SQL Server テンプレート]** の順にクリックします。 **Change Data Capture** は、このトピックで参照されるすべてのテンプレートを含んだサブフォルダーです。 **ツール バーには** [テンプレート エクスプローラー] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] アイコンもあります。  
   
-```tsql  
+```sql  
 -- =======  
 -- Disable Database for Change Data Capture template   
 -- =======  
@@ -72,15 +72,15 @@ GO
   
  キャプチャ インスタンスの作成時に、次のオプションを指定できます。  
   
- `Columns in the source table to be captured` 。  
+ `Columns in the source table to be captured`。  
   
  既定では、ソース テーブルのすべての列がキャプチャ対象列として識別されます。 プライバシーやパフォーマンス上の理由で、列のサブセットのみを追跡する場合は、 *@captured_column_list* パラメーターを使用して列のサブセットを指定します。  
   
  `A filegroup to contain the change table.`  
   
- 既定では、変更テーブルはデータベースの既定のファイル グループにあります。 データベース所有者が個々の変更テーブルの場所を制御するには、 *@filegroup_name* パラメーターを使用して、キャプチャ インスタンスに関連付けられている変更テーブルに対して特定のファイル グループを指定します。 指定するファイル グループはあらかじめ存在している必要があります。 通常、変更テーブルはソース テーブルとは別のファイル グループに配置することをお勧めします。 参照してください、`Enable a Table Specifying Filegroup Option`テンプレートの使用方法を示す例については、 *@filegroup_name*パラメーター。  
+ 既定では、変更テーブルはデータベースの既定のファイル グループにあります。 データベース所有者が個々の変更テーブルの場所を制御するには、 *@filegroup_name* パラメーターを使用して、キャプチャ インスタンスに関連付けられている変更テーブルに対して特定のファイル グループを指定します。 指定するファイル グループはあらかじめ存在している必要があります。 通常、変更テーブルはソース テーブルとは別のファイル グループに配置することをお勧めします。 参照してください、`Enable a Table Specifying Filegroup Option`テンプレートの使用方法を示す例については、 *@filegroup_name* パラメーター。  
   
-```tsql  
+```sql  
 -- =========  
 -- Enable a Table Specifying Filegroup Option Template  
 -- =========  
@@ -102,7 +102,7 @@ GO
   
  ゲーティング ロールを使用しない場合は、 *@role_name* パラメーターを明示的に NULL に設定する必要があります。 ゲーティング ロールなしでテーブルを有効にする例については、`Enable a Table Without Using a Gating Role` のテンプレートを参照してください。  
   
-```tsql  
+```sql  
 -- =========  
 -- Enable a Table Without Using a Gating Role template   
 -- =========  
@@ -127,7 +127,7 @@ GO
   
  両方のクエリ関数を使用したキャプチャ インスタンスの作成例については、`Enable a Table for All and Net Changes Queries`のテンプレートを参照してください。  
   
-```tsql  
+```sql  
 -- =============  
 -- Enable a Table for All and Net Changes Queries template   
 -- =============  
@@ -151,7 +151,7 @@ GO
   
  テーブルの無効化の例については、テーブルでのキャプチャ インスタンスの無効化のテンプレートを参照してください。  
   
-```tsql  
+```sql  
 -- =====  
 -- Disable a Capture Instance for a Table template   
 -- =====  

@@ -19,14 +19,14 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: 3fe78e6b1ed4513fff8d6ea6fafc15b8f90c43c2
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53362384"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63137302"
 ---
 # <a name="instancename-property-serversettingsgeneralflag-class"></a>InstanceName プロパティ (ServerSettingsGeneralFlag クラス)
-   [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]のインスタンスの名前を取得します。  
+  [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]のインスタンスの名前を取得します。  
   
 ## <a name="syntax"></a>構文  
   

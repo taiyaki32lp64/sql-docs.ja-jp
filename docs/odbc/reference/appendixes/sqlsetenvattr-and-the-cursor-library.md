@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 59cc8eae-09ae-4796-869a-c5806488ae83
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 74e57f98b7d5e3e1508a960b342521ea5d315a3d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: db1608415ae74bcaafd89f4afe01393cfb700379
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47693490"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68125555"
 ---
 # <a name="sqlsetenvattr-and-the-cursor-library"></a>SQLSetEnvAttr およびカーソル ライブラリ
 > [!IMPORTANT]  

@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 6b43cf70-9695-47b0-9e68-f36898859b6b
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 184ae6f4d603ff1f4175d54f041d624ae047c6f0
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ad717081698efcc3c976376a8f1f1f3cab604e54
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47644750"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67917761"
 ---
 # <a name="parameter-visual-c-syntax-index-with-import"></a>パラメーター (Visual C 構文のインデックスで #import)
 ## <a name="methods"></a>メソッド  
@@ -30,7 +29,7 @@ ms.locfileid: "47644750"
 HRESULT AppendChunk( const _variant_t & Val );  
 ```  
   
-## <a name="properties"></a>[プロパティ]  
+## <a name="properties"></a>Properties  
   
 ```  
 long GetAttributes( );  
@@ -70,5 +69,5 @@ void PutValue( const _variant_t & pvar );
 __declspec(property(get=GetValue,put=PutValue)) _variant_t Value;  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [Parameter オブジェクト](../../../ado/reference/ado-api/parameter-object.md)

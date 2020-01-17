@@ -14,28 +14,18 @@ helpviewer_keywords:
 ms.assetid: 2a54eef8-9e8e-4e04-909c-6970112d55cc
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 2e31c26430433b26eb858b967f54df4e61b103b2
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: 64f427de0a2b2735671a885ca550c76386ce0177
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53214663"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67991505"
 ---
 # <a name="add-a-database-to-an-always-on-availability-group"></a>Always On 可用性グループへのデータベースの追加
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   このトピックでは、 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]で [!INCLUDE[tsql](../../../includes/tsql-md.md)]、 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]、または PowerShell を使用して、AlwaysOn 可用性グループにデータベースを追加する方法について説明します。  
   
--   **作業を開始する準備:**  
-  
-     [前提条件と制限](#Prerequisites)    
-     [権限](#Permissions)    
--   **可用性グループにデータベースを追加する方法:**  
-  
-     [SQL Server Management Studio](#SSMSProcedure)    
-     [Transact-SQL](#TsqlProcedure)    
-     [PowerShell](#PowerShellProcedure)  
-  
+
   
 ## <a name="prerequisites-and-restrictions"></a>前提条件と制限  
   
@@ -43,8 +33,7 @@ ms.locfileid: "53214663"
   
 -   プライマリ レプリカがホストされるサーバー インスタンスにデータベースが存在し、データベースが可用性データベースの前提条件と制限に準拠している必要があります。 詳細については、「 [Always On 可用性グループの前提条件、制限事項、および推奨事項 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/prereqs-restrictions-recommendations-always-on-availability.md)の構成に関する一般的な問題のトラブルシューティングに役立つ情報を提供します。  
   
-##  <a name="Security"></a> セキュリティ  
-  
+ 
 ##  <a name="Permissions"></a> Permissions  
  可用性グループの ALTER AVAILABILITY GROUP 権限、CONTROL AVAILABILITY GROUP 権限、ALTER ANY AVAILABILITY GROUP 権限、または CONTROL SERVER 権限が必要です。  
   
@@ -53,7 +42,7 @@ ms.locfileid: "53214663"
   
 1.  オブジェクト エクスプローラーで、プライマリ レプリカをホストするサーバー インスタンスに接続し、サーバー ツリーを展開します。  
   
-2.  [ **AlwaysOn 高可用性** ] ノードと [ **可用性グループ** ] ノードを展開します。  
+2.  **[AlwaysOn 高可用性]** ノードと **[可用性グループ]** ノードを展開します。  
   
 3.  可用性グループを右クリックし、次のコマンドのどちらかを選択します。  
   
@@ -144,5 +133,3 @@ Add-SqlAvailabilityDatabase -Path $MyAgSecondaryPath -Database "MyDatabase"
  [可用性グループの作成と構成 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/creation-and-configuration-of-availability-groups-sql-server.md)   
  [Always On ダッシュボードの使用 &#40;SQL Server Management Studio&#41;](../../../database-engine/availability-groups/windows/use-the-always-on-dashboard-sql-server-management-studio.md)   
  [可用性グループの監視 &#40;Transact-SQL&#41;](../../../database-engine/availability-groups/windows/monitor-availability-groups-transact-sql.md)  
-  
-  

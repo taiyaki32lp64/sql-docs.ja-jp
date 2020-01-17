@@ -16,18 +16,17 @@ helpviewer_keywords:
 ms.assetid: 39ca3d2e-e928-4333-872b-75c4ccde8e79
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 2786295b344cfc2df6ae613e42a39f71aee4d3d8
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: b113fbd8111072790d1f0904b3e751c6629725b2
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56038893"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67945954"
 ---
 # <a name="xquery-operators-against-the-xml-data-type"></a>xml データ型に対する XQuery の演算子
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
-  XQuery では、次の演算子がサポートされています。  
+  XQuery には、次の演算子がサポートされています。  
   
 -   数値演算子 (+、-、*、div、mod)  
   
@@ -39,10 +38,10 @@ ms.locfileid: "56038893"
   
 ## <a name="examples"></a>使用例  
   
-### <a name="a-using-general-operators"></a>A. 一般的な演算子の使用  
- 次のクエリでは、シーケンスおよびシーケンスの比較に適用される一般的な演算子の用途について説明します。 クエリは、各顧客からの電話番号のシーケンスを取得する、 **AdditionalContactInfo**の列、**連絡先**テーブル。 取得されたシーケンスは、2 つの電話番号 ("111-111-1111"、"222-2222") のシーケンスと比較されます。  
+### <a name="a-using-general-operators"></a>A. 一般的な演算子を使用します。  
+ 次のクエリでは、シーケンスおよびシーケンスの比較に適用される一般的な演算子の用途について説明します。 クエリは、各顧客からの電話番号のシーケンスを取得する、 **AdditionalContactInfo**の列、**連絡先**テーブル。 このシーケンスは、(「111-111-1111」、「222-2222」) の 2 つの電話番号のシーケンスと比較されます。  
   
- クエリを使用して、 **=** 比較演算子。 右側にあるシーケンス内の各ノード、 **=** 演算子が左側にあるシーケンス内の各ノードと比較されます。 ノードの比較では、ノードが一致している場合**TRUE**します。 次に、シーケンスは int 型に変換されて 1 と比較され、クエリが顧客 ID を返します。  
+ クエリを使用して、 **=** 比較演算子。 右側にあるシーケンス内の各ノード、 **=** 演算子が左側にあるシーケンス内の各ノードと比較されます。 ノードの比較では、ノードが一致している場合**TRUE**します。 クエリは、顧客 ID を返し、、int 型に変換し、1 と比較し、  
   
 ```sql
 WITH XMLNAMESPACES (  
@@ -59,7 +58,7 @@ WHERE  AdditionalContactInfo.value('
  前のクエリの動作を観察する別の方法があります。各電話番号の値から取得した、 **AdditionalContactInfo**列が 2 つの電話番号のセットと比較されます。 値がセット内にある場合、その顧客が結果に返されます。  
   
 ### <a name="b-using-a-numeric-operator"></a>B. 数値演算子の使用  
- このクエリの + 演算子は 1 つのアイテムに適用されるので、値の演算子です。 たとえば、クエリによって返されたロット サイズに値 1 が加算されます。  
+ 1 つの項目に適用されるため、このクエリでは演算子は、値の演算子 + です。 たとえば、値 1 は、クエリによって返されたロット サイズに追加されます。  
   
 ```sql
 SELECT ProductModelID, Instructions.query('  
@@ -79,7 +78,7 @@ where ProductModelID=7
 ```  
   
 ### <a name="c-using-a-value-operator"></a>C. 値の演算子の使用  
- 次のクエリでは、写真のサイズが "small" である製品モデルの <`Picture`> 要素が取得されます。  
+ 次のクエリを取得します <`Picture`>、写真のサイズが"small"製品モデルの要素。  
   
 ```sql
 SELECT CatalogDescription.query('  
@@ -94,7 +93,7 @@ where ProductModelID=19
   
  に、両方のオペランド、 **eq**演算子はアトミック値、値の演算子は、クエリで使用します。 一般的な比較演算子を使用して、同じクエリを記述することができます ( **=** )。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [Xml データ型に対する XQuery 関数](../xquery/xquery-functions-against-the-xml-data-type.md)   
  [XML データ &#40;SQL Server&#41;](../relational-databases/xml/xml-data-sql-server.md)   
  [XQuery 言語リファレンス &#40;SQL Server&#41;](../xquery/xquery-language-reference-sql-server.md)  

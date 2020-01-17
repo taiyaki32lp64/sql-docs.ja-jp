@@ -1,5 +1,5 @@
 ---
-title: 最初のメソッド (SQLServerResultSet) |Microsoft Docs
+title: first メソッド (SQLServerResultSet) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: 67ed9447-7b10-4c87-98e7-f4c2e2470b3a
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: ca6176a183739f410f1d3aac2d7a08015a6289ff
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 98f35916270d7cb7026e994cb11d564d70739c7e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47786860"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67954554"
 ---
 # <a name="first-method-sqlserverresultset"></a>first メソッド (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

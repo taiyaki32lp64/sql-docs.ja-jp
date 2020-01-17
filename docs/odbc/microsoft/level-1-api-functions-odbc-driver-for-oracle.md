@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 98cced6f-41b8-43c1-a3cd-f4ea1615c0af
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 6a70116fb0e8ef1236b18cb478184e96fe08fce5
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: cb1771f88987073b1ef0bcc106f8de28549affe6
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47829420"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68085474"
 ---
 # <a name="level-1-api-functions-odbc-driver-for-oracle"></a>レベル 1 API 関数 (ODBC Driver for Oracle)
 > [!IMPORTANT]  
@@ -42,7 +41,7 @@ ms.locfileid: "47829420"
 |**SQLGetTypeInfo**|データ ソースでサポートされるデータ型に関する情報を返します。 ドライバーは、SQL 結果セット内の情報を返します。|  
 |**SQLParamData**|組み合わせて使用**SQLPutData**ステートメントの実行時にパラメーターのデータを指定します。|  
 |**SQLPutData**|ステートメントの実行時にドライバーをパラメーターまたは列のデータを送信するアプリケーションをできるようにします。|  
-|**SQLSetConnectOption**|接続の側面を制御するオプションへのアクセスを提供します。 この関数が部分的にサポートされています: ドライバーのすべての値をサポートする、 *fOption*引数一部サポートされていませんが、 *vParam*の値を*fOption*引数[SQL_TXN_ISOLATION](../../odbc/microsoft/connect-options.md)します。 詳細については、次を参照してください。[接続オプション](../../odbc/microsoft/connect-options.md)します。|  
+|**SQLSetConnectOption**|接続の側面を制御するオプションへのアクセスを提供します。 この関数は部分的にサポートされています。ドライバーのすべての値をサポートする、 *fOption*引数がいくつかサポートしていません*vParam*の値を*fOption*引数[SQL_TXN_ISOLATION](../../odbc/microsoft/connect-options.md). 詳細については、次を参照してください。[接続オプション](../../odbc/microsoft/connect-options.md)します。|  
 |**SQLSetStmtOption**|ステートメント ハンドルに関連するオプションを設定*hstmt*します。 詳細については、次を参照してください。[ステートメント オプション](../../odbc/microsoft/statement-options.md)します。|  
 |**SQLSpecialColumns**|テーブルの行を一意に識別する最適な列のセットを取得します。|  
 |**SQLStatistics**|1 つのテーブルとインデックス、またはテーブルに関連付けられているタグの名前に関する統計情報の一覧を取得します。 ドライバーは、その結果、情報を設定を返します。|  

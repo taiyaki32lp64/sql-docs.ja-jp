@@ -11,16 +11,15 @@ f1_keywords:
 - sql13.ag.jobactivitymonitor.alljobs.f1
 - SQL13.SWB.ACTIVITYMON.F1
 ms.assetid: 11f2182c-5f71-46f8-8d2b-74f0fc48f2d6
-author: stevestein
-ms.author: sstein
-manager: craigg
+author: markingmyname
+ms.author: maghan
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: b99c0999f85b1e2a3b5071961629808054e18b19
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a3e08cddb16b38d49c93ad596e3bcb87a3afa0d7
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47808140"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68262360"
 ---
 # <a name="job-activity-monitor"></a>[ジョブの利用状況モニター]
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -30,14 +29,14 @@ ms.locfileid: "47808140"
 
 このページでは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェント ジョブの現在の利用状況を参照できます。 **[フィルター]** をクリックすると、表示されるジョブが限定されます。 **[エージェント ジョブの利用状況]** グリッドは読み取り専用です。 列ヘッダーをクリックすると、グリッドが並べ替えられます。 ジョブを変更するには、ジョブをダブルクリックして **[ジョブのプロパティ]** ダイアログ ボックスを開きます。 グリッドでジョブを右クリックして表示されるメニューから、すべてのジョブ ステップの実行の開始、特定のジョブ ステップの実行、ジョブの無効化または有効化、ジョブの更新、ジョブの削除、ジョブの履歴の表示、ジョブのプロパティの表示ができます。 **[最新の情報に更新]** をクリックすると、グリッドが現在の情報で更新されます。  
   
-## <a name="options"></a>[変数]  
+## <a name="options"></a>オプション  
 **名前**  
 ジョブの名前。  
   
 **有効**  
-ジョブが有効 (**[はい]**) か無効 (**[いいえ]**) かを示します。  
+ジョブが有効 ( **[はい]** ) か無効 ( **[いいえ]** ) かを示します。  
   
-**[状態]***  
+**[状態]** *  
 ジョブの現在の状態です。  
   
 **[最終実行の結果]**  
@@ -46,7 +45,7 @@ ms.locfileid: "47808140"
 **[最終実行]**  
 サーバーのローカル時刻に基づき、ジョブが最後に実行された日付と時刻を示します。  
   
-**[次の実行]***  
+**[次の実行]** *  
 サーバーのローカル時刻に基づき、ジョブが次に実行される予定の日付と時刻を示します。  
   
 **カテゴリ**  
@@ -58,7 +57,7 @@ ms.locfileid: "47808140"
 **[スケジュール]**  
 ジョブがジョブ スケジュールに割り当てられている場合は **[はい]** 、ジョブにスケジュールがない場合は **[いいえ]** になります。  
   
-* [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の sysadmin 固定サーバー ロールおよびサーバー管理者グループのメンバーのみがこの列の値を表示できます。 SQLAgentOperatorRole ロールのメンバーはこの列の値を表示できません。  
+\* [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の sysadmin 固定サーバー ロールおよびサーバー管理者グループのメンバーのみがこの列の値を表示できます。 SQLAgentOperatorRole ロールのメンバーはこの列の値を表示できません。  
   
 #### <a name="to-open-the-job-activity-monitor"></a>[ジョブの利用状況モニター] を開くには  
   

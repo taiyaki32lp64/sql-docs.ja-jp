@@ -1,27 +1,26 @@
 ---
-title: 'レッスン 6: 追加のグループ化と集計 (Reporting Services) |Microsoft Docs'
+title: 'レッスン 6: グループと合計の追加 (Reporting Services) | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 ms.assetid: e3d61228-2aa4-42cc-955e-602dbf3406a7
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 5409938a5e859d5df6a153cddf327129b2ca8878
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: 5607dfb046e7f50eb3a015e1f4f13711256435a8
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56296900"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66108412"
 ---
-# <a name="lesson-6-adding-grouping-and-totals-reporting-services"></a>レッスン 6: グループと合計の追加 (Reporting Services)
+# <a name="lesson-6-adding-grouping-and-totals-reporting-services"></a>レッスン 6: グループ化と集計 (Reporting Services) を追加します。
   レポートにグループと合計を追加すると、データを整理して要約できます。  
   
- レポートに集計途中経過を追加する方法の詳細については、curah.microsoft.com のキュレーション[Reporting Services (SSRS) レポートに合計を追加](https://go.microsoft.com/fwlink/p/?LinkId=403698)します。  
+ レポートを実行中の合計を追加する方法についてを参照してください。[Reporting Services (SSRS) レポートに合計を追加](https://www.tutorialgateway.org/add-total-and-subtotal-to-ssrs-report/)します。  
   
  **このトピックの内容:**  
   
@@ -41,13 +40,13 @@ ms.locfileid: "56296900"
   
 2.  表示されない場合、**行グループ**ウィンドウがデザイン サーフェイスを右クリックし、クリックして**ビュー**順にクリックします**グループ化**します。  
   
-3.  **レポート データ**ウィンドウで、ドラッグ、`Date`フィールドを**行グループ**ウィンドウ。 **(詳細)** 行の上に配置します。  
+3.  **[レポート データ]** ウィンドウから、`Date` フィールドを **[行グループ]** ウィンドウにドラッグします。 **(詳細)** 行の上に配置します。  
   
      グループを示す角かっこが行ハンドルに表示されます。 テーブルにも 2 つの日付列が表示されます (点線の両側に 1 つずつ)。  
   
      ![](../../2014/tutorials/media/rs-basictablegroups1design.gif "rs_BasicTableGroups1Design")  
   
-4.  **レポート データ**ウィンドウで、ドラッグ、`Order`フィールドを**行グループ**ウィンドウ。 **(詳細)** の上、Date の下に配置します。  
+4.  **[レポート データ]** ウィンドウから、`Order` フィールドを **[行グループ]** ウィンドウにドラッグします。 **(詳細)** の上、Date の下に配置します。  
   
      2 つのグループを示す 2 個の角かっこが行ハンドルに表示されます。 テーブルに 2 つ`Order`列、すぎます。  
   
@@ -79,7 +78,7 @@ ms.locfileid: "56296900"
   
 6.  **[書式]** メニューの **[背景色]** をクリックし、 **[淡い灰色]** をクリックして、 **[OK]** をクリックします。  
   
-     ![デザイン ビュー:注文合計がある基本的なテーブル](../../2014/tutorials/media/rs-basictablesumlinetotaldesign.gif "デザイン ビュー。注文合計がある基本的なテーブル")  
+     ![デザイン ビュー:注文合計がある基本的なテーブル](../../2014/tutorials/media/rs-basictablesumlinetotaldesign.gif ":デザイン ビュー:注文合計がある基本的なテーブル")  
   
 ##  <a name="bkmk_adddailytotal"></a> レポートに毎日の合計を追加するには  
   
@@ -107,13 +106,13 @@ ms.locfileid: "56296900"
   
 4.  **[書式]** メニューの **[背景色]** をクリックし、 **[薄い青]** をクリックして、 **[OK]** をクリックします。  
   
-     ![デザイン ビュー:基本的なテーブルの総計](../../2014/tutorials/media/rs-basictablesumgrandtotaldesign.gif "デザイン ビュー。基本的なテーブルの総計")  
+     ![デザイン ビュー:基本的なテーブルの総計](../../2014/tutorials/media/rs-basictablesumgrandtotaldesign.gif "デザイン ビュー:基本的なテーブルの総計")  
   
 5.  [プレビュー] をクリックします。  
   
      最終的なページは次のようになります。  
   
-     ![プレビュー：総計がある基本的なテーブル](../../2014/tutorials/media/rs-basictablesumgrandtotalpreview.gif "プレビュー。総計がある基本的なテーブル")  
+     ![プレビュー:総計がある基本的なテーブル](../../2014/tutorials/media/rs-basictablesumgrandtotalpreview.gif "プレビュー:総計がある基本的なテーブル")  
   
 ##  <a name="bkmk_publishreport"></a> (省略可能) レポート サーバーにレポートをパブリッシュするには  
   
@@ -129,7 +128,7 @@ ms.locfileid: "56296900"
   
      出力ウィンドウに次のようなメッセージが表示されていれば、正常に展開されたことを示しています。  
   
-    > ---ビルド開始:プロジェクト: tutorial、構成:デバッグ---'Sales Orders.rdl' をスキップしています。 項目が最新の状態です。ビルド完了--0 個のエラー、警告 0-展開の開始。プロジェクト: tutorial、構成:デバッグ--- http:// へのデプロイ\<サーバー名 >]、[レポートの reportserverDeploying ' チュートリアル/Sales Orders'。配置完了--エラー 0、0 件の警告ステージ ビルドします。正常終了または最新の状態は 1、0 失敗、0 スキップ ステージの展開。1 正常終了、0 失敗、0 スキップ ステージ  
+    > ------ ビルド開始:プロジェクト: tutorial、構成:デバッグ---'Sales Orders.rdl' をスキップしています。 項目が最新の状態です。ビルド完了--0 個のエラー、警告 0-展開の開始。プロジェクト: tutorial、構成:デバッグ--- http:// へのデプロイ\<サーバー名 >]、[レポートの reportserverDeploying ' チュートリアル/Sales Orders'。配置完了--エラー 0、0 件の警告ステージ ビルドします。正常終了または最新の状態は 1、0 失敗、0 スキップ ステージの展開。1 正常終了、0 失敗、0 スキップ ==========  
   
      次のようなメッセージが表示されている場合は、レポート サーバーに対する権限があることと、管理者特権を使用して [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)] を開始したことを確認してください。  
   

@@ -18,12 +18,12 @@ ms.assetid: 4d93489e-e9bb-45b3-8354-21f58209965d
 author: VanMSFT
 ms.author: vanto
 manager: craigg
-ms.openlocfilehash: 2195c4efcec60b5a350475ab2600b42ef5c93b36
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: c1a701f1e63877c807964a8d81a829afdc9f7b81
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53359564"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68891614"
 ---
 # <a name="securing-sql-server"></a>SQL Server の保護
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の保護は、プラットフォーム、認証、オブジェクト (データを含む)、およびシステムにアクセスするアプリケーションの 4 つの領域が関係する一連の手順としてとらえることができます。 以下の各トピックでは、効果的なセキュリティ計画を作成および実装する方法について、順を追って説明します。  
@@ -51,7 +51,7 @@ ms.locfileid: "53359564"
 |---------------------------|---------|  
 |ファイアウォールの構成: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|[データベース エンジン アクセスを有効にするための Windows ファイアウォールを構成する](../../database-engine/configure-windows/configure-a-windows-firewall-for-database-engine-access.md)|  
 |ファイアウォールの構成: [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]|[SSIS サービスにアクセスするように Windows ファイアウォールを構成する](../../integration-services/configure-a-windows-firewall-for-access-to-the-ssis-service.md)|  
-|ファイアウォールの構成: [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]|[Analysis Services のアクセスを許可するための Windows ファイアウォールの構成](../../analysis-services/instances/configure-the-windows-firewall-to-allow-analysis-services-access.md)|  
+|ファイアウォールの構成: [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]|[Analysis Services のアクセスを許可するための Windows ファイアウォールの構成](https://docs.microsoft.com/analysis-services/instances/configure-the-windows-firewall-to-allow-analysis-services-access)|  
 |アクセスするためにファイアウォールの特定のポートを開く: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|[SQL Server のアクセスを許可するための Windows ファイアウォールの構成](../../sql-server/install/configure-the-windows-firewall-to-allow-sql-server-access.md)|  
 |チャネル バインドとサービス バインドを使用して認証の拡張保護をサポートするように構成します。|[拡張保護を使用したデータベース エンジンへの接続](../../database-engine/configure-windows/connect-to-the-database-engine-using-extended-protection.md)|  
   

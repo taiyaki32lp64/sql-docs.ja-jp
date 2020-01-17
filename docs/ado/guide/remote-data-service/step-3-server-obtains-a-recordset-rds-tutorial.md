@@ -1,5 +1,5 @@
 ---
-title: '手順 3: サーバーを取得するレコード セット (RDS チュートリアル) |Microsoft Docs'
+title: 手順 3:サーバーは、レコード セット (RDS チュートリアル) を取得します |。Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -12,15 +12,14 @@ helpviewer_keywords:
 ms.assetid: 9c6779c9-1208-4696-ac51-c39f3a6d9240
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 5dc57cd55667691433515319762f9c4727060cdf
-ms.sourcegitcommit: 1a5448747ccb2e13e8f3d9f04012ba5ae04bb0a3
+ms.openlocfilehash: 685dd476b5d434ff9dd8feb0e23400dd703ca0d5
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51557769"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67922082"
 ---
-# <a name="step-3-server-obtains-a-recordset-rds-tutorial"></a>手順 3: サーバーがレコード セットを取得する (RDS チュートリアル)
+# <a name="step-3-server-obtains-a-recordset-rds-tutorial"></a>手順 3:サーバーがレコード セットを取得する (RDS チュートリアル)
 サーバー プログラムでは、接続文字列とコマンドのテキストを使用して、目的の行のデータ ソースをクエリします。 ADO では、このを取得するために使用が通常**レコード セット**など、OLE DB を使用することが、その他の Microsoft データ アクセス インターフェイス, が、します。  
   
 > [!IMPORTANT]
@@ -38,6 +37,6 @@ Dim rs as New ADODB.Recordset
 End Function  
 ```  
   
-## <a name="see-also"></a>参照  
- [手順 4: サーバーは、レコード セット (RDS チュートリアル) を返します](../../../ado/guide/remote-data-service/step-4-server-returns-the-recordset-rds-tutorial.md)   
+## <a name="see-also"></a>関連項目  
+ [手順 4:サーバーは、レコード セット (RDS チュートリアル) を返します。](../../../ado/guide/remote-data-service/step-4-server-returns-the-recordset-rds-tutorial.md)   
  [RDS のチュートリアル (VBScript)](../../../ado/guide/remote-data-service/rds-tutorial-vbscript.md)   

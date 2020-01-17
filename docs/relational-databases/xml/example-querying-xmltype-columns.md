@@ -10,15 +10,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - RAW mode, querying XML example
 ms.assetid: d9f3710d-7a2e-4abe-9c02-3e3c0df4d620
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: c8556fe5f398ef72670900596fcf58053366158f
-ms.sourcegitcommit: bfa10c54e871700de285d7f819095d51ef70d997
+author: MightyPen
+ms.author: genemi
+ms.openlocfilehash: fa648babb6c6ba6ae9578921833d2c2201fb4c95
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/14/2019
-ms.locfileid: "54255147"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68006814"
 ---
 # <a name="example-querying-xmltype-columns"></a>例: XML 型の列のクエリ
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

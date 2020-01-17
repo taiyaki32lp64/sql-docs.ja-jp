@@ -8,17 +8,20 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: language-reference
 ms.assetid: 54226c01-5b8f-4730-8a5f-1da2613f9689
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: cdeec947608f9a18c29349f3559103b1a738b74f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 5f3450320f28a2f0abd133c93d1b43512484d446
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47789640"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71296572"
 ---
-# <a name="catalogexecutiondatataps"></a>catalog.execution_data_taps
+# <a name="catalogexecution_data_taps"></a>catalog.execution_data_taps 
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
   実行で定義されたデータ タップごとに情報が表示されます。  
@@ -29,7 +32,7 @@ ms.locfileid: "47789640"
 |execution_id|**bigint**|実行のインスタンスの一意識別子 (ID)。|  
 |package_path|**nvarchar(max)**|データがタップされたデータ フロー タスクのパッケージ パス。|  
 |dataflow_path_id_string|**nvarchar (4000)**|データ フロー パスの識別文字列です。|  
-|dataflow_task_guid|**uniqueidentifier**|データ フロー タスクの一意 の ID。|  
+|dataflow_task_guid|**uniqueidentifier**|データ フロー タスクの一意の ID。|  
 |max_rows|**int**|キャプチャする行の数。 この値が指定されていない場合は、すべての行がキャプチャされます。|  
 |filename|**nvarchar (4000)**|データ ダンプ ファイルの名前。 詳細については、「 [パッケージ実行用のダンプ ファイルを生成する](../../integration-services/troubleshooting/generating-dump-files-for-package-execution.md)」を参照してください。|  
   

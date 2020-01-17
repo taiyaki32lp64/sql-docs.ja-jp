@@ -23,15 +23,15 @@ helpviewer_keywords:
 - table/view mapping [SQLXML], default mapping
 - element/attribute mapping [SQLXML]
 ms.assetid: 9a18e92a-6cfb-4a14-993a-663a95aabb63
-author: douglaslMS
-ms.author: douglasl
+author: MightyPen
+ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 673e96509061f3d4fdc808b4165ff56991baa8ad
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 404ae57711a7d8376774c4e5340017f784b916e7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52793684"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66013880"
 ---
 # <a name="default-mapping-of-xsd-elements-and-attributes-to-tables-and-columns-sqlxml-40"></a>テーブルおよび列への XSD 要素および属性の既定のマッピング (SQLXML 4.0)
   既定では、XSD 注釈付きスキーマの複合型の要素は、指定されたデータベース内の同じ名前のテーブル (ビュー) にマップされ、単純型の要素または属性は、テーブル内の同じ名前の列にマップされます。  
@@ -40,7 +40,7 @@ ms.locfileid: "52793684"
  次の例を使用した実際のサンプルを作成するには、特定の条件を満たす必要があります。 詳細については、次を参照してください。 [SQLXML の例を実行するための要件](../sqlxml/requirements-for-running-sqlxml-examples.md)します。  
   
 ### <a name="a-specifying-default-mapping"></a>A. 既定のマッピングを指定する  
- この例では、XSD スキーマで注釈は指定されていません。  **\<Person.Contact >** 要素の複合型では、AdventureWorks データベースの Person.Contact テーブルに既定ではこのため、マップします。 すべての属性 (< FirstName、lastname など)、  **\<Person.Contact >** 要素の単純型は、Person.Contact テーブルに同じ名前を持つ列に既定でマップされます。  
+ この例では、XSD スキーマで注釈は指定されていません。 **\<Person.Contact >** 要素の複合型では、AdventureWorks データベースの Person.Contact テーブルに既定ではこのため、マップします。 すべての属性 (< FirstName、lastname など)、  **\<Person.Contact >** 要素の単純型は、Person.Contact テーブルに同じ名前を持つ列に既定でマップされます。  
   
 ```  
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"   
@@ -91,7 +91,7 @@ ms.locfileid: "52793684"
 ```  
   
 ### <a name="b-mapping-an-xml-element-to-a-database-column"></a>B. XML 要素をデータベース列にマップする  
- この例では、注釈が使用されず、既定のマッピングが行われます。  **\<Person.Contact >** 要素の複合型は、データベース内の同じ名前のテーブルをマップします。 要素**\<名 >** と **\<[氏名] >** と **[社員コード]** 属性は、単純型のし、そのため、マップ、同じ名前の列です。 前の例との唯一の違いは、FirstName フィールドと LastName フィールドのマップに要素を使用する点です。  
+ この例では、注釈が使用されず、既定のマッピングが行われます。 **\<Person.Contact >** 要素の複合型は、データベース内の同じ名前のテーブルをマップします。 要素 **\<名 >** と **\<[氏名] >** と **[社員コード]** 属性は、単純型のし、そのため、マップ、同じ名前の列です。 前の例との唯一の違いは、FirstName フィールドと LastName フィールドのマップに要素を使用する点です。  
   
 ```  
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"   
@@ -145,7 +145,7 @@ ms.locfileid: "52793684"
 ```  
   
 ### <a name="c-mapping-an-xml-element-to-an-xml-data-type-column"></a>C. XML 要素を XML データ型の列にマップする  
- この例では、注釈が使用されず、既定のマッピングが行われます。  **\<Production.ProductModel >** 要素の複合型は、データベース内の同じ名前のテーブルをマップします。 **ProductModelID**属性の単純型のであり、したがって、同じ名前の列にマップします。 前の例との唯一の違いは、 **\<指示 >** 要素が使用する列にマップして、`xml`データ型を使用して、`xsd:anyType`型。  
+ この例では、注釈が使用されず、既定のマッピングが行われます。 **\<Production.ProductModel >** 要素の複合型は、データベース内の同じ名前のテーブルをマップします。 **ProductModelID**属性の単純型のであり、したがって、同じ名前の列にマップします。 前の例との唯一の違いは、 **\<指示 >** 要素が使用する列にマップして、`xml`データ型を使用して、`xsd:anyType`型。  
   
 ```  
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"   

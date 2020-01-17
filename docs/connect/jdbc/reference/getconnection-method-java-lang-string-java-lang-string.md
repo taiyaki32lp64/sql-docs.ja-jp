@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: 78db89d6-a8a0-4116-8885-548e627220ed
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: f72babc3375c0720807322520a9761cb49e05919
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 87d3dfc2183bdc00261417a024507b41ea5fde28
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47677464"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67952740"
 ---
 # <a name="getconnection-method-javalangstring-javalangstring"></a>getConnection (java.lang.String, java.lang.String) メソッド
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -52,9 +51,9 @@ public java.sql.Connection getConnection(java.lang.String username,
  java.sql.SQLException  
   
 ## <a name="remarks"></a>Remarks  
- この getConnection メソッドは、javax.sql.DataSource インターフェイスの getConnection メソッドによって指定されます。  
+ この getConnection メソッドは、javax.mail インターフェイスの getConnection メソッドによって指定されます。  
   
- 呼び出す、getConnection、null 以外のユーザー名やパスワードを持つメソッドは、SQLServerConnection オブジェクトを初期化する際に、SQLServerDataSource クラスに設定されているユーザー名とパスワードのプロパティに置き換えられます。 たとえば、データ ソースに対して [setUser](../../../connect/jdbc/reference/setuser-method-sqlserverdatasource.md) と [setPassword](../../../connect/jdbc/reference/setpassword-method-sqlserverdatasource.md) を呼び出した後、getConnection を呼び出して null 以外のユーザー名またはパスワードを指定した場合、setUser と setPassword で設定したユーザー名とパスワードが getConnection に渡したユーザー名とパスワードに置き換えられます。  
+ Null 以外のユーザー名またはパスワードを使用して getConnection メソッドを呼び出すと、SQLServerConnection オブジェクトを初期化するときに、SQLServerDataSource クラスに設定されているユーザー名とパスワードのプロパティが置き換えられます。 たとえば、データ ソースに対して [setUser](../../../connect/jdbc/reference/setuser-method-sqlserverdatasource.md) と [setPassword](../../../connect/jdbc/reference/setpassword-method-sqlserverdatasource.md) を呼び出した後、getConnection を呼び出して null 以外のユーザー名またはパスワードを指定した場合、setUser と setPassword で設定したユーザー名とパスワードが getConnection に渡したユーザー名とパスワードに置き換えられます。  
   
 > [!NOTE]  
 >  この場合、[setURL](../../../connect/jdbc/reference/seturl-method-sqlserverdatasource.md) メソッドを呼び出して URL 内に設定したユーザー名とパスワードは変更されません。  

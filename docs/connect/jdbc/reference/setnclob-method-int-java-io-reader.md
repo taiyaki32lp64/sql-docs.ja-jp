@@ -1,5 +1,5 @@
 ---
-title: setNClob (int, java.io.Reader) メソッド |Microsoft Docs
+title: setNClob メソッド (int, java. io. Reader) |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 9fc9938c-b821-41c7-8df7-e21cb83a46d4
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: a25a3d95086d6368d7375920dab79059c690576d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 4abac6b892ae5960e8cafc5f265d6a81081e878b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47637160"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67973774"
 ---
 # <a name="setnclob-method-int-javaioreader"></a>setNClob (int, java.io.Reader) メソッド
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -44,7 +43,7 @@ public final void setNClob(int parameterIndex,
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- この setNClob メソッドは、java.sql.PreparedStatement インターフェイスの setNClob メソッドによって指定されます。  
+ この setNClob メソッドは、java.sql.PreparedStatement インターフェイスの setNClob メソッドで規定されています。  
   
 ## <a name="see-also"></a>参照  
  [setNClob メソッド &#40;SQLServerPreparedStatement&#41;](../../../connect/jdbc/reference/setnclob-method-sqlserverpreparedstatement.md)   

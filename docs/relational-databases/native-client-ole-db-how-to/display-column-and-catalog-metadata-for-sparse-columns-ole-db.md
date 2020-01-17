@@ -1,5 +1,5 @@
 ---
-title: スパース列に対する列およびカタログ メタデータの表示 (OLE DB) | Microsoft Docs
+title: スパース列のメタデータ (OLE DB)
 ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
@@ -10,27 +10,25 @@ ms.topic: reference
 ms.assetid: 3b8ccad5-411d-4b79-b95e-ee524714f7d6
 author: MightyPen
 ms.author: genemi
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: cc904fc250262d686b4a2ba0bc1f1511b7970ec5
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 29af8a66447644b1e672dca4dfaf2cb890e3d186
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47778740"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75226031"
 ---
 # <a name="display-column-and-catalog-metadata-for-sparse-columns-ole-db"></a>スパース列に対する列およびカタログ メタデータの表示 (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-[!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
 
   このサンプルでは、スパース列、非スパース列、columnset 列の 3 つの列を持ったテーブルを作成します。 その後、非スパース列および columnset 列に対する列およびカタログ メタデータを示す OLE DB フラグを表示します。  
   
- このサンプルは、[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 以降で動作します。 スパース列の詳細については、次を参照してください。 [SQL Server Native Client におけるスパース列のサポート](../../relational-databases/native-client/features/sparse-columns-support-in-sql-server-native-client.md)します。  
+ このサンプルは、[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 以降で動作します。 スパース列の詳細については、「 [SQL Server Native Client でのスパース列のサポート](../../relational-databases/native-client/features/sparse-columns-support-in-sql-server-native-client.md)」を参照してください。  
   
 ## <a name="example"></a>例  
- INCLUDE 環境変数には、sqlncli.h を含むディレクトリが含まれています。 を確認します。  
+ INCLUDE 環境変数に、sqlncli を含むディレクトリが含まれていることを確認します。  
   
-```  
+```cpp
 #include <stddef.h>  
 #include <comdef.h>  
 #include <msdasc.h>  
@@ -117,7 +115,7 @@ void DumpErrorInfo ( IUnknown* pObjectWithError, REFIID IID_InterfaceWithError )
    SSERRORINFO * pSSErrorInfo = NULL;  
    OLECHAR * pSSErrorStrings = NULL;  
   
-   // Hard-code an American English locale for the example.  
+   // Hard-code an English (United States) locale for the example.  
    DWORD MYLOCALEID = 0x0409;  
   
    // Only ask for error information if the interface supports it.  

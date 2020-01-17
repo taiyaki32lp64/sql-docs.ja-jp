@@ -17,15 +17,14 @@ dev_langs:
 helpviewer_keywords:
 - AsTextZM method
 ms.assetid: e9dc27f6-e945-4457-8498-7644db34008e
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: f8a147ff48d0436c51519532af3485e0bde11ed2
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: MladjoA
+ms.author: mlandzic
+ms.openlocfilehash: a711e81c796293f9c9ac8694b1dc32e0e60f6938
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47713020"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68066600"
 ---
 # <a name="astextzm-geography-data-type"></a>AsTextZM (geography データ型)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -42,7 +41,7 @@ ms.locfileid: "47713020"
 ## <a name="return-types"></a>戻り値の型  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 戻り値の型: **nvarchar(max)**  
   
- CLR の戻り値の型: **SqlChars**  
+ CLR の戻り値の型:**SqlChars**  
   
 ## <a name="remarks"></a>Remarks  
   

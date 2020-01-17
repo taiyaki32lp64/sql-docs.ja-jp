@@ -17,15 +17,14 @@ helpviewer_keywords:
 ms.assetid: d0714913-8d6b-4de3-b042-3ae9934f839d
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: aa5df082287f0ddf3e37bc246d53bd31fac2a510
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ba1cbbfb95dafaa99a33d95b1d92a9e6e5f4e9a2
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47723770"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68010764"
 ---
-# <a name="sphelpsrvrolemember-transact-sql"></a>sp_helpsrvrolemember (Transact-SQL)
+# <a name="sphelpsrvrolemember-transact-sql"></a>sp_helpsrvrolemember (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 固定サーバー ロールのメンバーに関する情報を返します。  
@@ -40,15 +39,14 @@ sp_helpsrvrolemember [ [ @srvrolename = ] 'role' ]
 ```  
   
 ## <a name="arguments"></a>引数  
- [  **@srvrolename =** ] **'***ロール***'**  
- 固定サーバー ロールの名前です。 *ロール*は**sysname**、既定値は NULL です。 場合*ロール*が指定されていない、結果セットには、すべての固定サーバー ロールに関する情報が含まれています。  
+`[ @srvrolename = ] 'role'` 固定サーバー ロールの名前です。 *ロール*は**sysname**、既定値は NULL です。 場合*ロール*が指定されていない、結果セットには、すべての固定サーバー ロールに関する情報が含まれています。  
   
  *ロール*値は次のいずれかを指定できます。  
   
 |固定サーバー ロール|説明|  
 |-----------------------|-----------------|  
-|sysadmin|システム管理者。|  
-|securityadmin|セキュリティ管理者。|  
+|sysadmin|システム管理者|  
+|securityadmin|セキュリティ管理者|  
 |serveradmin|サーバー管理者。|  
 |setupadmin|セットアップ管理者。|  
 |processadmin|プロセス管理者。|  
@@ -63,8 +61,8 @@ sp_helpsrvrolemember [ [ @srvrolename = ] 'role' ]
   
 |列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
-|ServerRole|**sysname**|サーバー ロールの名前。|  
-|MemberName|**sysname**|サーバー ロールのメンバーの名前|  
+|ServerRole|**sysname**|サーバー ロールの名前|  
+|メンバー名|**sysname**|サーバー ロールのメンバーの名前|  
 |MemberSID|**varbinary(85)**|メンバー名のセキュリティ識別子|  
   
 ## <a name="remarks"></a>コメント  
@@ -86,7 +84,7 @@ sp_helpsrvrolemember [ [ @srvrolename = ] 'role' ]
 EXEC sp_helpsrvrolemember 'sysadmin';  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [sp_helprole &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helprole-transact-sql.md)   
  [sp_helprolemember &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helprolemember-transact-sql.md)   
  [システム ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   

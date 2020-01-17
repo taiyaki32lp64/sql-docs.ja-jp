@@ -14,15 +14,14 @@ helpviewer_keywords:
 - queries [SQL Server], verifying
 - checking queries
 ms.assetid: 1382c0c0-46dc-45f9-ab38-9bba1d347eea
-author: stevestein
-ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 827cee98b9ddc40385eb47d7588770b62a6558ab
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: e19fbe26a7f3382885a8a1cd2bcbeaed71108708
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47711850"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68261583"
 ---
 # <a name="verify-queries-visual-database-tools"></a>クエリの検査 (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

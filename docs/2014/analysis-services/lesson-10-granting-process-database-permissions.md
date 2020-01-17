@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: 69ba952e-09ae-49a9-9297-00e32e8e89a8
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 955cb236d3b89d5fe682770150b7ab723865ff0c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: bc77762698b04143802ad38c05385d4b18555e1c
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48171762"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66079148"
 ---
 # <a name="granting-process-database-permissions"></a>データベースの処理権限の許可
   [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] のインスタンスをインストールすると、そのインスタンス内の [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] サーバー管理者ロールのすべてのメンバーは、サーバー全体について [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] のインスタンス内で任意のタスクを実行する権限を与えられます。 既定では、 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]インスタンス内のオブジェクトを管理および表示する権限は他のユーザーに一切与えられません。  
@@ -56,7 +55,7 @@ ms.locfileid: "48171762"
 > [!NOTE]  
 >  レッスン 10 の操作内容が反映されたプロジェクトを入手するには、サンプルをダウンロードしてインストールしてください。 詳細については、「 [Analysis Services 多次元モデリング チュートリアル用のサンプル データおよびプロジェクトのインストール](install-sample-data-and-projects.md)」を参照してください。  
   
-## <a name="see-also"></a>関連項目  
- [ロールとアクセス許可&#40;Analysis Services&#41;](multidimensional-models/roles-and-permissions-analysis-services.md)  
+## <a name="see-also"></a>参照  
+ [ロールと権限 &#40;Analysis Services&#41;](multidimensional-models/roles-and-permissions-analysis-services.md)  
   
   

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 12/29/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - connections
@@ -14,12 +13,12 @@ ms.assetid: 85962ad6-d840-4bc6-905e-c667c3276944
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: f9ca50a030fef65c9de02bc93dcd970df2686b0a
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: 3c9abd1b891d47f1711db21eec017ec755526e02
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52420393"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66087347"
 ---
 # <a name="connect-to-a-data-mining-server"></a>データ マイニング サーバーへの接続
   ![[接続] ボタン](media/misc-connection.gif "[接続] ボタン")  

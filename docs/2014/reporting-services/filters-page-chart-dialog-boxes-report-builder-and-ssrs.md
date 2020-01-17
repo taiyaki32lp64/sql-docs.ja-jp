@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 f1_keywords:
 - sql12.rtp.rptdesigner.categorygroupproperties.filters.f1
@@ -15,15 +14,15 @@ f1_keywords:
 - sql12.rtp.rptdesigner.chartproperties.filters.f1
 - "10165"
 ms.assetid: fab97b2f-d53f-42f2-900c-c159653d89ed
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: fbc8f19763baa473bbe62d6f02c46cad8ed4d51a
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: 268ca47f33e8e2514b297c2bb2a30eb77b7a8f08
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56285192"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66109139"
 ---
 # <a name="filters-page-chart-dialog-boxes-report-builder-and-ssrs"></a>[フィルター] ページ (グラフのダイアログ ボックス) (レポート ビルダーおよび SSRS)
   クリックして**フィルター**でします。  
@@ -48,7 +47,7 @@ ms.locfileid: "56285192"
  クリックして、選択したフィルターを一覧内で下に移動します。  
   
  **[式]**  
- フィルターを適用する式を入力または選択します。 式を編集するには、式 (**[fx]**) ボタンをクリックします。  
+ フィルターを適用する式を入力または選択します。 式を編集するには、式 ( **[fx]** ) ボタンをクリックします。  
   
  **データ型**  
  **[値]** のデータ型を選択します。 可能であれば、 **[式]** のデータ型と一致するデータ型を選択します。  

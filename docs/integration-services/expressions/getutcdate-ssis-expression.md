@@ -13,17 +13,20 @@ helpviewer_keywords:
 - UTC time
 - GETUTCDATE function
 ms.assetid: 2282339c-c24f-493e-8e66-181ea8af5ad0
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: 4afe3909387669e1bfcc230744ff7cf5dbd7ae20
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: cfef4d05eb95afe0c8ede44df061f95eeb221c41
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47648180"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71297578"
 ---
 # <a name="getutcdate-ssis-expression"></a>GETUTCDATE (SSIS 式)
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   システムの現在の日付を、DT_DBTIMESTAMP 形式を使用して UTC 時刻 (世界協定時またはグリニッジ標準時) で返します。 GETUTCDATE 関数に引数はありません。  
   
 ## <a name="syntax"></a>構文  

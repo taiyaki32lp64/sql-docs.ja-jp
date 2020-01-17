@@ -15,15 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - STGeometryType (geometry Data Type)
 ms.assetid: 224cdc83-aa83-4ad4-bb82-b7481031e910
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: 3c91ae4decb540d80e371153504121ee22bf3ccc
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: MladjoA
+ms.author: mlandzic
+ms.openlocfilehash: 7aa87371bda53f1c329b0b30a490450cd7d9cba5
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47663460"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67950182"
 ---
 # <a name="stgeometrytype-geometry-data-type"></a>STGeometryType (geometry データ型)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -40,7 +39,7 @@ ms.locfileid: "47663460"
 ## <a name="return-types"></a>戻り値の型  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 戻り値の型: **nvarchar(4000)**  
   
- CLR の戻り値の型: **SqlString**  
+ CLR の戻り値の型:**SqlString**  
   
 ## <a name="remarks"></a>Remarks  
  `STGeometryType()` によって返される OGC の型名は、**Point**、**LineString**、**CircularString**、**CompoundCurve**、**Polygon、CurvePolygon**、**GeometryCollection**、**MultiPoint**、**MultiLineString** および **MultiPolygon** です。  

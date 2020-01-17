@@ -20,16 +20,15 @@ helpviewer_keywords:
 ms.assetid: 96b28abb-b059-48db-be2b-d60fe127f6aa
 author: rothja
 ms.author: jroth
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 73e30668dc103c478d0308d1fd8ee09689822129
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: aade9e02515e0d18e4edae188d72e5edafebbd3f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47731810"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68059187"
 ---
-# <a name="sysfnvirtualfilestats-transact-sql"></a>sys.fn_virtualfilestats (Transact-SQL)
+# <a name="sysfnvirtualfilestats-transact-sql"></a>sys.fn_virtualfilestats (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   ログ ファイルを含む、データベース ファイルの I/O 統計を返します。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]からこの情報はまた、 [sys.dm_io_virtual_file_stats](../../relational-databases/system-dynamic-management-views/sys-dm-io-virtual-file-stats-transact-sql.md)動的管理ビュー。  
@@ -48,27 +47,27 @@ fn_virtualfilestats ( { database_id | NULL } , { file_id | NULL } )
  データベースの ID です。 *database_id* は **int**, 、既定値はありません。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスのすべてのデータベースに関する情報を返すには NULL を指定します。  
   
  *file_id* | NULL  
- ファイルの ID を指定します。 *file_id*は**int**、既定値はありません。 データベース内のすべてのファイルに関する情報を返すには NULL を指定します。  
+ ファイルの ID を指定します。 *file_id*は**int**、既定値はありません。 データベースのすべてのファイルの情報を返す NULL を指定します。  
   
 ## <a name="table-returned"></a>返されるテーブル  
   
-|列名|データ型|説明|  
+|列名|データの種類|説明|  
 |-----------------|---------------|-----------------|  
 |**DbId**|**smallint**|データベース ID。|  
 |**FileId**|**smallint**|ファイル ID。|  
 |**TimeStamp**|**bigint**|データが取り出されたデータベース タイムスタンプです。 **int**より前に、のバージョンで[!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)]します。 |  
 |**NumberReads**|**bigint**|ファイルで実行された読み取りの数。|  
-|**BytesRead**|**bigint**|そのファイルで実行された読み取りバイト数です。|  
-|**IoStallReadMS**|**bigint**|そのファイルで、ユーザーが読み取り I/O の完了を待機した時間の合計 (ミリ秒単位) です。|  
+|**BytesRead**|**bigint**|ファイルに対して実行された読み取りバイト数。|  
+|**IoStallReadMS**|**bigint**|ユーザーが、読み取りの待機している、ミリ秒単位の時間の合計 I/o 数のファイルが完了します。|  
 |**NumberWrites**|**bigint**|そのファイルで実行された書き込みの数です。|  
-|**BytesWritten**|**bigint**|そのファイルで実行された書き込みバイト数です。|  
-|**IoStallWriteMS**|**bigint**|そのファイルで、ユーザーが書き込み I/O の完了を待機した時間の合計 (ミリ秒単位) です。|  
+|**BytesWritten**|**bigint**|ファイルに書き込まれたバイト数。|  
+|**IoStallWriteMS**|**bigint**|ユーザーが書き込み、ファイル、完了する I/o の待機している、ミリ秒単位の時間の合計。|  
 |**IoStallMS**|**bigint**|合計**IoStallReadMS**と**IoStallWriteMS**します。|  
-|**FileHandle**|**bigint**|ファイル ハンドルの値です。|  
-|**BytesOnDisk**|**bigint**|ディスク上の物理ファイル サイズ (バイト数) です。<br /><br /> データベース ファイルの場合と同じ値は、この**サイズ**で**sys.database_files**ページではなくバイトで表現されますが、します。<br /><br /> データベース スナップショット スパース ファイルの場合は、オペレーティング システムがこのファイル用に使用する領域です。|  
+|**FileHandle**|**bigint**|ファイル ハンドルの値。|  
+|**BytesOnDisk**|**bigint**|ディスク上の物理ファイル サイズ (バイト数)。<br /><br /> データベース ファイルの場合と同じ値は、この**サイズ**で**sys.database_files**ページではなくバイトで表現されますが、します。<br /><br /> データベース スナップショットのスパース ファイルでは、これは、ファイルのオペレーティング システムが使用している領域です。|  
   
 ## <a name="remarks"></a>コメント  
- **fn_virtualfilestats**ファイルで I/o の合計数などの統計情報を提供するテーブル値関数は実行システムです。 この関数を使用して、ユーザーがファイルに対する読み取りまたは書き込みを待機する時間の長さを追跡できます。 また、この関数は、大量の I/O 利用量が生じたファイルを確認する場合にも役立ちます。  
+ **fn_virtualfilestats**ファイルで I/o の合計数などの統計情報を提供するテーブル値関数は実行システムです。 ユーザーは、読み取りまたはファイルへの書き込みを待機するのに必要がある時間の長さを追跡するのに役立つ、この関数を使用することができます。 関数は、多数の I/O アクティビティが発生するファイルの特定にも役立ちます。  
   
 ## <a name="permissions"></a>アクセス許可  
  サーバーに対する VIEW SERVER STATE 権限が必要です。  
@@ -84,7 +83,7 @@ FROM fn_virtualfilestats(1, 1);
 GO  
 ```  
   
-### <a name="b-displaying-statistical-information-for-a-named-database-and-file"></a>B. 指定されたデータベースおよびファイルの統計情報を表示する  
+### <a name="b-displaying-statistical-information-for-a-named-database-and-file"></a>B. 名前付きデータベースおよびファイルの統計情報を表示します。  
  次の例では、[!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] サンプル データベースのログ ファイルの統計情報を表示します。 システム関数`DB_ID`を指定するために使用、 *database_id*パラメーター。  
   
 ```sql  
@@ -102,7 +101,7 @@ FROM fn_virtualfilestats(NULL,NULL);
 GO  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [DB_ID &#40;TRANSACT-SQL&#41;](../../t-sql/functions/db-id-transact-sql.md)   
  [FILE_IDEX &#40;Transact-SQL&#41;](../../t-sql/functions/file-idex-transact-sql.md)   
  [sys.database_files &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-files-transact-sql.md)   

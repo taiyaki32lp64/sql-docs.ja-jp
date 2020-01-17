@@ -1,6 +1,5 @@
 ---
-title: ROOT オプションを使用して JSON 出力にルート ノードを追加する (SQL Server) | Microsoft Docs
-ms.custom: ''
+title: ROOT オプションを使用して JSON 出力にルート ノードを追加する
 ms.date: 06/02/2016
 ms.prod: sql
 ms.reviewer: genemi
@@ -11,14 +10,14 @@ helpviewer_keywords:
 ms.assetid: b9afa74a-f59f-483e-a178-42be2e9882c9
 author: jovanpop-msft
 ms.author: jovanpop
-manager: craigg
+ms.custom: seo-dt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 0fbe3cdef207cd70851ac6fd88381dd457258793
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 482b098d253d078f57c26a482584c2863266a16a
+ms.sourcegitcommit: 15fe0bbba963d011472cfbbc06d954d9dbf2d655
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56026853"
+ms.lasthandoff: 11/14/2019
+ms.locfileid: "74095831"
 ---
 # <a name="add-a-root-node-to-json-output-with-the-root-option-sql-server"></a>ROOT オプションを使用して JSON 出力にルート ノードを追加する (SQL Server)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]

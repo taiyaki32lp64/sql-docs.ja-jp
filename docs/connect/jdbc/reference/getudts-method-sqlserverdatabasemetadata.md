@@ -1,5 +1,5 @@
 ---
-title: getUDTs メソッド (SQLServerDatabaseMetaData) |Microsoft Docs
+title: getUDTs メソッド (SQLServerDatabaseMetaData) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: c4396453-dcb0-4132-8325-06b3c7896b3b
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: f3cd97e796235e47ed1f3003ec5973fd6d6dda61
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: f51e5345cf7c7b78a0a3a37220927000af7d0fa7
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47614915"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67978425"
 ---
 # <a name="getudts-method-sqlserverdatabasemetadata"></a>getUDTs メソッド (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -52,7 +51,7 @@ public java.sql.ResultSet getUDTs(java.lang.String catalog,
   
  *typeNamePattern*  
   
- 型名のパターンを含む **String** です。  
+ 型名のパターンを含む**文字列**です。  
   
  *types*  
   

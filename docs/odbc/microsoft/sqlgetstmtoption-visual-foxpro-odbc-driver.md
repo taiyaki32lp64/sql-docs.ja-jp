@@ -12,21 +12,20 @@ helpviewer_keywords:
 ms.assetid: 984a8b1d-f12c-420c-8be4-f555114c764b
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 373f5e13712ef7b0864401ea3d2c204cb03ebb09
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 5521fb11cad064cf487d38562f4146fd32587993
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47647000"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67898785"
 ---
 # <a name="sqlgetstmtoption-visual-foxpro-odbc-driver"></a>SQLGetStmtOption (Visual FoxPro ODBC ドライバー)
 > [!NOTE]  
 >  このトピックでには、Visual FoxPro ODBC ドライバー固有の情報が含まれています。 この関数の詳細については、該当するトピックを参照してください。 [ODBC API リファレンス](../../odbc/reference/syntax/odbc-api-reference.md)します。  
   
- サポート: 完全な  
+ サポート:[完全]  
   
- レベル 1 の ODBC API 準拠:  
+ ODBC API 準拠:1 つのレベル  
   
  ステートメント オプションの現在の設定を返します。  
   

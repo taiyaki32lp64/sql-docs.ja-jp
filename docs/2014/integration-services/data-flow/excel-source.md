@@ -12,15 +12,15 @@ helpviewer_keywords:
 - Excel [Integration Services]
 - sources [Integration Services], Excel
 ms.assetid: e66349f3-b1b8-4763-89b7-7803541a4d62
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: ed41329f41471e2c62384561ae983e24f279114a
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 14153d38d53a87729231b60b2b2846dc12401fc1
+ms.sourcegitcommit: 9af07bd57b76a34d3447e9e15f8bd3b17709140a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53369264"
+ms.lasthandoff: 07/08/2019
+ms.locfileid: "67624355"
 ---
 # <a name="excel-source"></a>Excel ソース
   Excel ソースは、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Excel ブック内のワークシートまたは範囲からデータを抽出します。  
@@ -51,7 +51,7 @@ ms.locfileid: "53369264"
   
 -   **データ ソース**。 Excel ブックの変換元データには、ワークシートまたは名前付き範囲 (MyRange など) を使用できます。ワークシート名には $ 記号を付加する必要があります (Sheet1$ など)。 SQL ステートメントでは、$ 記号による構文エラーを回避するため、ワークシートの名前を [Sheet1$] などのように区切る必要があります。 クエリ ビルダーは、これらの区切り記号を自動的に付加します。 ワークシートまたは範囲を指定した場合、ドライバーは、ワークシートまたは範囲の左上の空でない最初のセルから、連続したセルのブロックを読み取ります。 したがって、ソース データには、タイトル行またはヘッダー行とデータ行との間に空の行を入れることはできません。  
   
--   **不足している値**。 Excel ドライバーは、指定した変換元の特定の行数 (既定では 8 行) を読み取り、各列のデータ型を推測します。 1 つの列に複数のデータ型が混在している可能性がある場合、特に数値データとテキスト データが混合している場合に、Excel ドライバーは数が多い方のデータ型を優先して判定し、それ以外のデータ型のデータが含まれるセルについては NULL 値を返します  (同数の場合は、数値型が優先されます)。Excel ワークシートでのセル書式のほとんどのオプションは、このデータ型の判定に影響しません。 Excel ドライバーのこの動作を変更するには、インポート モードを指定します。 インポート モードを指定する追加`IMEX=1`で Excel 接続マネージャーの接続文字列の拡張プロパティの値に、**プロパティ**ウィンドウ。 詳細については、次を参照してください[PRB:。DAO の OpenRecordset を使用して NULL として返される値を excel](https://support.microsoft.com/kb/194124)します。  
+-   **不足している値**。 Excel ドライバーは、指定した変換元の特定の行数 (既定では 8 行) を読み取り、各列のデータ型を推測します。 1 つの列に複数のデータ型が混在している可能性がある場合、特に数値データとテキスト データが混合している場合に、Excel ドライバーは数が多い方のデータ型を優先して判定し、それ以外のデータ型のデータが含まれるセルについては NULL 値を返します (同数の場合は、数値型が優先されます)。Excel ワークシートでのセル書式のほとんどのオプションは、このデータ型の判定に影響しません。 Excel ドライバーのこの動作を変更するには、インポート モードを指定します。 インポート モードを指定する追加`IMEX=1`で Excel 接続マネージャーの接続文字列の拡張プロパティの値に、**プロパティ**ウィンドウ。 詳細については、次を参照してください[PRB:。DAO の OpenRecordset を使用して NULL として返される値を excel](https://support.microsoft.com/kb/194124)します。  
   
 -   **切り捨てられたテキスト**。 Excel の列にテキスト データが含まているとドライバーが判定した場合、ドライバーはサンプリングした最も長い値に基づいて、データ型 (文字列またはメモ) を選択します。 ドライバーがサンプリングした行で 255 文字より長い値が検出されなかった場合、その列はメモ列ではなく、255 文字の文字列の列として扱われます。 このため、255 文字より長い値があると、切り捨てられる場合があります。 切り捨てを発生させずにメモ列からデータをインポートするには、サンプリングされた行のうち 1 行以上のメモ列に、255 文字より長い値が含まれている状態にする必要があります。または、そのような行が含まれるように、ドライバーがサンプリングする行数を増やす必要があります。 サンプリングする行数を増やすには、 **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Jet\4.0\Engines\Excel** レジストリ キーの **TypeGuessRows** の値を増やします。 詳細については、次を参照してください[PRB:。Jet 4.0 ole DB ソースからデータの転送エラーで失敗](https://support.microsoft.com/kb/281517)します。  
   
@@ -90,7 +90,7 @@ ms.locfileid: "53369264"
   
  **[詳細エディター]** ダイアログ ボックスには、プログラムによって設定できるすべてのプロパティが反映されます。 **[詳細エディター]** ダイアログ ボックスまたはプログラムで設定できるプロパティの詳細については、次のトピックのいずれかを参照してください。  
   
--   [Common Properties](../common-properties.md)  
+-   [共通プロパティ](../common-properties.md)  
   
 -   [Excel のカスタム プロパティ](excel-custom-properties.md)  
   
@@ -118,6 +118,6 @@ ms.locfileid: "53369264"
   
 -   ブログ エントリ「 [Integration Services における Excel、3 の第 3 部。問題と代替策](https://go.microsoft.com/fwlink/?LinkId=217676)、dougbert.com します。  
   
--   ブログ エントリ「 [SSIS での使用の XLSX ファイル](https://go.microsoft.com/fwlink/?LinkId=233704)、sqlservergeeks.com します。  
+-   ブログ エントリ「[接続を Excel (XLSX) (SSIS) で](https://microsoft-ssis.blogspot.com/2014/02/connecting-to-excel-xlsx-in-ssis.html)します。  
   
   

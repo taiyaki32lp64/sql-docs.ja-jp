@@ -385,7 +385,7 @@
   items:
     - name: OData ソース コンポーネントのインストールと、アンインストール
       href: ../install-and-uninstall-odata-source-component.md
-    - name: 'チュートリアル: OData ソースの使用'
+    - name: 'チュートリアル:OData ソースの使用'
       href: tutorial-using-the-odata-source.md
     - name: 実行時の OData ソース クエリの変更
       href: modify-odata-source-query-at-runtime.md

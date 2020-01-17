@@ -18,22 +18,18 @@ helpviewer_keywords:
 - ELSE keyword
 - IF keyword
 ms.assetid: 676c881f-dee1-417a-bc51-55da62398e81
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
+author: rothja
+ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 1b5068b47f1622171ec4d39087cb16fa3d37838f
-ms.sourcegitcommit: 96032813f6bf1cba680b5e46d82ae1f0f2da3d11
+ms.openlocfilehash: 266d03b1eb5b96f4f4e78ed1a7985e5071a12d20
+ms.sourcegitcommit: af5e1f74a8c1171afe759a4a8ff2fccb5295270a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/15/2019
-ms.locfileid: "54299032"
+ms.lasthandoff: 10/02/2019
+ms.locfileid: "71823610"
 ---
 # <a name="ifelse-transact-sql"></a>IF...ELSE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
-
-> [!div class="nextstepaction"]
-> [SQL ドキュメントの目次に関するご意見を共有してください。](https://aka.ms/sqldocsurvey)
 
 [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントを実行する条件を設定します。 IF キーワードおよびその条件に続く [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントは、条件が満たされる (ブール式から TRUE が返される) 場合に実行されます。 オプションの ELSE キーワードは、IF 条件が満たされない (ブール式から FALSE が返される) 場合に実行される別の [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントを指定します。  
   
@@ -64,7 +60,7 @@ IF Boolean_expression
   
 ## <a name="example"></a>例  
   
-```  
+```sql
 IF DATENAME(weekday, GETDATE()) IN (N'Saturday', N'Sunday')
        SELECT 'Weekend';
 ELSE 
@@ -76,23 +72,20 @@ ELSE
 ## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>例: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] および [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
  次の例では、`IF...ELSE` を使用し、`DimProduct` テーブルの項目の重み付けを基にして、2 つの応答のどちらをユーザーに表示するかを決定します。  
   
-```  
+```sql
 -- Uses AdventureWorksDW  
-  
+
 DECLARE @maxWeight float, @productKey integer  
 SET @maxWeight = 100.00  
 SET @productKey = 424  
-IF @maxWeight <= (SELECT Weight from DimProduct 
-                  WHERE ProductKey = @productKey)   
-    (SELECT @productKey AS ProductKey, EnglishDescription, Weight, 
-    'This product is too heavy to ship and is only available for pickup.' 
+IF @maxWeight <= (SELECT Weight from DimProduct WHERE ProductKey = @productKey)   
+    SELECT @productKey AS ProductKey, EnglishDescription, Weight, 'This product is too heavy to ship and is only available for pickup.' 
         AS ShippingStatus
-    FROM DimProduct WHERE ProductKey = @productKey);  
+    FROM DimProduct WHERE ProductKey = @productKey
 ELSE  
-    (SELECT @productKey AS ProductKey, EnglishDescription, Weight, 
-    'This product is available for shipping or pickup.' 
+    SELECT @productKey AS ProductKey, EnglishDescription, Weight, 'This product is available for shipping or pickup.' 
         AS ShippingStatus
-    FROM DimProduct WHERE ProductKey = @productKey);  
+    FROM DimProduct WHERE ProductKey = @productKey
 ```  
   
 ## <a name="see-also"></a>参照  
@@ -102,8 +95,3 @@ ELSE
  [WHILE &#40;Transact-SQL&#41;](../../t-sql/language-elements/while-transact-sql.md)   
  [CASE &#40;Transact-SQL&#41;](../../t-sql/language-elements/case-transact-sql.md)   
  [フロー制御言語 &#40;Transact-SQL&#41;](~/t-sql/language-elements/control-of-flow.md) [ELSE &#40;IF...ELSE&#41; &#40;Transact-SQL&#41;](../../t-sql/language-elements/else-if-else-transact-sql.md) 
-  
-  
-
-
-

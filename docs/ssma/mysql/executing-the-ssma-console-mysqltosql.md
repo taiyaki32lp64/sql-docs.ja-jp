@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: e3e9f7e4-0619-4861-a202-3d5d39953b26
 author: Shamikg
 ms.author: Shamikg
-manager: craigg
-ms.openlocfilehash: 761cb5368c0b586b63f92952f3938d8708daaf86
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: d309a1d0bbdf21c94458771e38aa67fd3eb3fe4d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52411259"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68102989"
 ---
 # <a name="executing-the-ssma-console-mysqltosql"></a>SSMA コンソールの実行 (MySQLToSQL)
 Microsoft は、ファイルのコマンドを実行し、SSMA アクティビティを制御する堅牢なスクリプトのセットを提供します。  

@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: 599cf463-e19f-4baa-bacb-513cad7c6cd8
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 5e60b24dd437ec100616da264b54997c9021554d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d66ceda5c9afee28240de5af9fe833acd4e25bbb
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47834732"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67954774"
 ---
 # <a name="executequery-method-sqlserverstatement"></a>executeQuery メソッド (SQLServerStatement)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -38,7 +37,7 @@ public java.sql.ResultSet executeQuery(java.lang.String sql)
 #### <a name="parameters"></a>パラメーター  
  *sql*  
   
- A**文字列**SQL ステートメントを格納しています。  
+ SQL ステートメントを含む**文字列**です。  
   
 ## <a name="return-value"></a>戻り値  
  SQLServerResultSet オブジェクトです。  

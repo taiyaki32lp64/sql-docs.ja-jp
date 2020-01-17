@@ -23,13 +23,12 @@ helpviewer_keywords:
 ms.assetid: a68fd0ee-70ce-4104-aca0-fcae5f41fc38
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: ee122adb459586f370f2b115f161c56468f4ce7a
-ms.sourcegitcommit: c6e71ed14198da67afd7ba722823b1af9b4f4e6f
+ms.openlocfilehash: a4bbbb9b08c63e6ab6f8b68d304b611847707558
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/16/2019
-ms.locfileid: "54327663"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68141245"
 ---
 # <a name="restore-service-master-key-transact-sql"></a>RESTORE SERVICE MASTER KEY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -47,11 +46,11 @@ RESTORE SERVICE MASTER KEY FROM FILE = 'path_to_file'
 ```  
   
 ## <a name="arguments"></a>引数  
- FILE **='**_path\_to\_file_**'**  
+ FILE **='** _path\_to\_file_ **'**  
  格納されているサービス マスター キーへの完全なパスを、ファイル名を含めて指定します。 *path_to_file* には、ローカル パスまたはネットワーク上の場所を示す UNC パスを指定できます。  
   
- PASSWORD **='**_password_**'**  
- ファイルからインポートされるサービス マスター キーの暗号化解除に必要なパスワードを指定します。  
+ PASSWORD **='** _password_ **'**  
+ ファイルからインポートされるサービス マスター キーの暗号化の解除に必要なパスワードを指定します。  
   
  FORCE  
  データが失われる可能性があっても、強制的にサービス マスター キーを置換します。  
@@ -83,6 +82,4 @@ GO
  [サービス マスター キー](../../relational-databases/security/encryption/service-master-key.md)   
  [ALTER SERVICE MASTER KEY &#40;Transact-SQL&#41;](../../t-sql/statements/alter-service-master-key-transact-sql.md)   
  [BACKUP SERVICE MASTER KEY &#40;Transact-SQL&#41;](../../t-sql/statements/backup-service-master-key-transact-sql.md)   
- [暗号化階層](../../relational-databases/security/encryption/encryption-hierarchy.md)  
-  
-  
+ [暗号化階層](../../relational-databases/security/encryption/encryption-hierarchy.md)

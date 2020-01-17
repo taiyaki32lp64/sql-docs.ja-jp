@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 11ca8825-765e-4bb4-a6ce-3f6564ad8755
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: d7317b6b9a5251c8d104e6c2153ec8c009b2aea7
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ee7a94a06aa574c84c01cb8b9d05ebfcdf327d44
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47772900"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67917596"
 ---
 # <a name="prepared-property-ado"></a>Prepared プロパティ (ADO)
 コンパイル済みのバージョンを保存するかどうかを示す、[コマンド](../../../ado/reference/ado-api/command-object-ado.md)実行前にします。  
@@ -39,6 +38,6 @@ ms.locfileid: "47772900"
 ## <a name="applies-to"></a>適用対象  
  [Command オブジェクト (ADO)](../../../ado/reference/ado-api/command-object-ado.md)  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [Prepared プロパティの例 (VB)](../../../ado/reference/ado-api/prepared-property-example-vb.md)   
  [Prepared プロパティの例 (VC++)](../../../ado/reference/ado-api/prepared-property-example-vc.md)   

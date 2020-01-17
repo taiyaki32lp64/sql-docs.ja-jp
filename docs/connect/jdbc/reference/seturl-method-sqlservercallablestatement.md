@@ -1,5 +1,5 @@
 ---
-title: setURL メソッド (SQLServerCallableStatement) |Microsoft Docs
+title: setURL メソッド (SQLServerCallableStatement) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: 3d83675e-74ca-49d9-8461-6326773c5c8c
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 203c579d9d4161da12d75c763b527eefdaefaa7c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d14c319da416990acd4dddc47843e7709895499b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47625310"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67972153"
 ---
 # <a name="seturl-method-sqlservercallablestatement"></a>setURL メソッド (SQLServerCallableStatement)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -43,7 +42,7 @@ public void setURL(java.lang.String sCol,
   
  *u*  
   
- URL のオブジェクト。  
+ URL オブジェクト。  
   
 ## <a name="exceptions"></a>例外  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  

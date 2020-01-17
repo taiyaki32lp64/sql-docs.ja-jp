@@ -15,15 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - Point (geometry Data Type)
 ms.assetid: 7a2e593a-4d4c-4214-b0c5-02d1ac46bc66
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: 798f6193bd872fa28083a0db95abb8524758ab04
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: MladjoA
+ms.author: mlandzic
+ms.openlocfilehash: 3a0c9f31f0e724c56c22a46653eb56d51f2616fe
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47835790"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68101036"
 ---
 # <a name="point-geometry-data-type"></a>Point (geometry データ型)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -50,7 +49,7 @@ Point ( X, Y, SRID )
 ## <a name="return-types"></a>戻り値の型  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の戻り値の型: **geometry**  
   
- CLR 戻り値の型: **SqlGeometry**  
+ CLR の戻り値の型:**SqlGeometry**  
   
 ## <a name="remarks"></a>Remarks  
   

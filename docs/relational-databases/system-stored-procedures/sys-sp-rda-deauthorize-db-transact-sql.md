@@ -14,15 +14,14 @@ dev_langs:
 helpviewer_keywords:
 - sys.sp_rda_deauthorize_db stored procedure
 ms.assetid: 2e362e15-2cd5-4856-9f0b-54df56b0866b
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: 5d9497400cd555d3d9ce9d216ba5dd393b1d76ce
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: MikeRayMSFT
+ms.author: mikeray
+ms.openlocfilehash: 6aeb27d4fb452a4ed5b7f45086f601eacb4f0339
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47608410"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67905113"
 ---
 # <a name="syssprdadeauthorizedb-transact-sql"></a>sys.sp_rda_deauthorize_db (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -38,7 +37,7 @@ sp_rda_deauthorize_db
 ```  
   
 ## <a name="return-code-values"></a>リターン コードの値  
- 0 (成功) または >0 (失敗)  
+ 0 (成功) または > 0 (失敗)  
   
 ## <a name="permissions"></a>アクセス許可  
  Db_owner アクセス許可が必要です。  
@@ -50,7 +49,7 @@ sp_rda_deauthorize_db
   
 -   実行[sys.sp_rda_set_query_mode &#40;TRANSACT-SQL&#41; ](../../relational-databases/system-stored-procedures/sys-sp-rda-set-query-mode-transact-sql.md)をクエリがローカルのデータのみに対して引き続き実行できるように、LOCAL_ONLY 引数。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [sys.sp_rda_set_query_mode &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-rda-set-query-mode-transact-sql.md)   
  [sys.sp_rda_reauthorize_db &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-rda-reauthorize-db-transact-sql.md)   
  [Stretch Database](../../sql-server/stretch-database/stretch-database.md)  

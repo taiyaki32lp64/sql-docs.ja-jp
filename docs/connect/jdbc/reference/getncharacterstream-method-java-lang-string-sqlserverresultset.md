@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: a117f3a3-9c25-41e1-9adb-a40e90620dd6
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: b4c4ffead9ca22f1ef72784deb1970ff92e79761
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 6c2cd07b0420d8ca961c61c205c94cd19fe6666e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47834080"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67981638"
 ---
 # <a name="getncharacterstream-method-javalangstring-sqlserverresultset"></a>getNCharacterStream (java.lang.String) メソッド (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -36,15 +35,15 @@ public java.io.Reader getNCharacterStream(java.lang.String columnLabel)
  列ラベルを含む文字列です。  
   
 ## <a name="return-value"></a>戻り値  
- リーダー オブジェクト。  
+ リーダーオブジェクト。  
   
 ## <a name="exceptions"></a>例外  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- この getNCharacterStream メソッドは、java.sql.ResultSet インターフェイスの getNCharacterStream メソッドによって指定されます。  
+ この getNCharacterStream メソッドは、java.sql.ResultSet インターフェイスの getNCharacterStream メソッドで規定されています。  
   
- 値を取得するこのメソッドを使用できます、 **nvarchar**、 **nchar**、 **nvarchar (max)**、 **ntext**、または**xml**これの現在の行に列[SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md)オブジェクト。 このメソッドを使用して他のデータ型の値を取得しようとすると、例外がスローされます。  
+ このメソッドを使用すると、この[SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md)オブジェクトの現在の行にある**nvarchar**、 **nchar**、 **nvarchar (max)** 、 **ntext**、または**xml**列の値を取得できます。 このメソッドを使用して他のデータ型の値を取得しようとすると、例外がスローされます。  
   
 ## <a name="see-also"></a>参照  
  [getNCharacterStream メソッド &#40;SQLServerResultSet&#41;](../../../connect/jdbc/reference/getncharacterstream-method-sqlserverresultset.md)   

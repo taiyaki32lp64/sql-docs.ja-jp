@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 2db6dd3f-5a9c-438c-ae62-d09242906c98
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: e9ad6da47838b28583bcec3d5c6501d60d317f74
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 09b6c0303f11be8534ec46fcf2f719175f463e4b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47705090"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67921864"
 ---
 # <a name="absolutepage-pagecount-and-pagesize-properties-example-jscript"></a>AbsolutePage、PageCount、PageSize プロパティの例 (JScript)
 この例では、AbsolutePage、PageCount、PageSize プロパティを示します。 切り取り、メモ帳または別のテキスト エディターに次のコードを貼り付けてととして保存**AbsolutePageJS.asp**します。  
@@ -110,7 +109,7 @@ BODY {
                     if (iRecord == 1)  
                         strMessage += "<td>Page " + i + " of " + rsEmployee.PageCount + "</td>"  
                     else  
-                        strMessage += "<td> </td>";  
+                        strMessage += "<td> </td>";  
   
                     // First and last name are in first column.  
                     strMessage += "<TD>" + rsEmployee.Fields("FirstName") + " ";  
@@ -158,7 +157,7 @@ BODY {
 <!-- EndAbsolutePageJS -->  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [AbsolutePage プロパティ (ADO)](../../../ado/reference/ado-api/absolutepage-property-ado.md)   
  [PageCount プロパティ (ADO)](../../../ado/reference/ado-api/pagecount-property-ado.md)   
  [PageSize プロパティ (ADO)](../../../ado/reference/ado-api/pagesize-property-ado.md)   

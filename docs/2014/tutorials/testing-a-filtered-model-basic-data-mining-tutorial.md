@@ -11,11 +11,11 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: baa4910b2849c4eb2dd04c6d0115c83683ee8bea
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56011143"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63044097"
 ---
 # <a name="testing-a-filtered-model-basic-data-mining-tutorial"></a>フィルター選択されたモデルのテスト (基本的なデータ マイニング チュートリアル)
   確認しましたところ、`TM_Decision_Tree`最も正確なモデルは、のニーズに合うように、モデルのカスタマイズ、[!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)]絞り込みメール配信キャンペーン。 具体的には、マーケティング部門では男性顧客と女性顧客に違いがあるかどうかを知りたいと考えています。 情報には、広告のために使用する雑誌を決定するためでしたやにダイレクト_メールで特集する製品です。  

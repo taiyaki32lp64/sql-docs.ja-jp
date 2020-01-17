@@ -19,32 +19,35 @@ helpviewer_keywords:
 - SSIS Script component, coding
 - VSTA
 ms.assetid: c3913c15-66aa-4b61-89b5-68488fa5f0a4
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: eb86e0b92b34878573b44a6323094e536ff3dc40
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: c4b3337be486123545a187337949da1c160343ad
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51637636"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71286542"
 ---
 # <a name="coding-and-debugging-the-script-component"></a>スクリプト コンポーネントのコーディングおよびデバッグ
+
+[!INCLUDE[ssis-appliesto](../../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   [!INCLUDE[ssIS](../../../includes/ssis-md.md)] デザイナーでは、スクリプト コンポーネントにメタデータ デザイン モードとコード デザイン モードの 2 つのモードがあります。 **[スクリプト変換エディター]** を開くと、スクリプト コンポーネントはメタデータ デザイン モードになります。このモードでは、メタデータを構成し、コンポーネントのプロパティを設定します。 メタデータ デザイン モードで、スクリプト コンポーネントのプロパティを設定して、入力と出力を構成したら、コード デザイン モードに切り替えてカスタム スクリプトを記述できます。 メタデータ デザイン モードとコード デザイン モードについて詳しくは、「[スクリプト コンポーネント エディターでのスクリプト コンポーネントの構成](../../../integration-services/extending-packages-scripting/data-flow-script-component/configuring-the-script-component-in-the-script-component-editor.md)」をご覧ください。  
   
 ## <a name="writing-the-script-in-code-design-mode"></a>コード デザイン モードでのスクリプトの記述  
   
 ### <a name="script-component-development-environment"></a>スクリプト コンポーネント開発環境  
- スクリプトを記述するには、**[スクリプト変換エディター]** の **[スクリプト]** ページで **[スクリプトの編集]** をクリックし、[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] Tools for Applications (VSTA) IDE を開きます。 VSTA IDE には、色分け表示が可能な [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] エディター、IntelliSense、オブジェクト ブラウザーなど、[!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] .NET 環境での標準機能がすべて含まれています。  
+ スクリプトを記述するには、 **[スクリプト変換エディター]** の **[スクリプト]** ページで **[スクリプトの編集]** をクリックし、[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] Tools for Applications (VSTA) IDE を開きます。 VSTA IDE には、色分け表示が可能な [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] エディター、IntelliSense、オブジェクト ブラウザーなど、[!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] .NET 環境での標準機能がすべて含まれています。  
   
- スクリプト コードは、[!INCLUDE[msCoName](../../../includes/msconame-md.md)] Visual Basic または [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Visual C# で記述されます。 スクリプト言語を指定するには、**[スクリプト変換エディター]** で **[ScriptLanguage]** プロパティを設定します。 その他のプログラミング言語を使用する場合は、選択した言語でカスタム アセンブリを作成し、スクリプト コンポーネント内のコードからその機能を呼び出すことができます。  
+ スクリプト コードは、[!INCLUDE[msCoName](../../../includes/msconame-md.md)] Visual Basic または [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Visual C# で記述されます。 スクリプト言語を指定するには、 **[スクリプト変換エディター]** で **[ScriptLanguage]** プロパティを設定します。 その他のプログラミング言語を使用する場合は、選択した言語でカスタム アセンブリを作成し、スクリプト コンポーネント内のコードからその機能を呼び出すことができます。  
   
  スクリプト コンポーネントで作成したスクリプトは、パッケージ定義に格納されます。 スクリプト ファイルが別途存在するわけではありません。 したがって、スクリプト コンポーネントを使用してもパッケージの配置には影響しません。  
   
 > [!NOTE]  
 >  パッケージをデザインする際、スクリプト コードは一時的にプロジェクト ファイルに書き込まれます。 機密情報をファイルに保存することはセキュリティ上危険であるため、パスワードなどの重要な情報はスクリプト コードに書き込まないことをお勧めします。  
   
- 既定では、**[Option Strict]** が IDE で無効になっています。  
+ 既定では、 **[Option Strict]** が IDE で無効になっています。  
   
 ### <a name="script-component-project-structure"></a>スクリプト コンポーネント プロジェクトの構造  
  スクリプト コンポーネントの威力は、インフラストラクチャ コードを生成して、記述する必要のあるコード量を減らす機能にあります。 この機能を実現するには、入力と出力、およびその列とプロパティが固定され、既知である必要があります。 したがって、コンポーネントのメタデータに後で変更を加えた場合、記述したコードが無効になり、 パッケージの実行中にコンパイル エラーが発生する可能性があります。  
@@ -60,9 +63,9 @@ ms.locfileid: "51637636"
   
     -   **Connections** コレクション クラス。[スクリプト変換エディター] の [接続マネージャー] ページで選択された、接続への参照が含まれています。  
   
-    -   **Variables** コレクション クラス。**[スクリプト変換エディター]** の **[スクリプト]** ページで、**ReadOnlyVariable** および **ReadWriteVariables** プロパティに入力された変数への参照が含まれています。  
+    -   **Variables** コレクション クラス。 **[スクリプト変換エディター]** の **[スクリプト]** ページで、**ReadOnlyVariable** および **ReadWriteVariables** プロパティに入力された変数への参照が含まれています。  
   
--   **BufferWrapper** プロジェクト アイテム。**[スクリプト変換エディター]** の **[入力および出力]** ページで構成された各入力および出力に対して、<xref:Microsoft.SqlServer.Dts.Pipeline.ScriptBuffer> から継承されたクラスが含まれています。 これらの各クラスには、構成された入力列と出力列、およびそれらの列が含まれるデータ フロー バッファーに対応する、型指定されたアクセサー プロパティが含まれています。  
+-   **BufferWrapper** プロジェクト アイテム。 **[スクリプト変換エディター]** の **[入力および出力]** ページで構成された各入力および出力に対して、<xref:Microsoft.SqlServer.Dts.Pipeline.ScriptBuffer> から継承されたクラスが含まれています。 これらの各クラスには、構成された入力列と出力列、およびそれらの列が含まれるデータ フロー バッファーに対応する、型指定されたアクセサー プロパティが含まれています。  
   
  これらのオブジェクト、メソッド、およびプロパティの使用方法については、「[スクリプト コンポーネントのオブジェクト モデルについて](../../../integration-services/extending-packages-scripting/data-flow-script-component/understanding-the-script-component-object-model.md)」をご覧ください。 特定の種類のスクリプト コンポーネントで、これらのクラスのメソッドおよびプロパティを使用する方法については、セクション「[その他のスクリプト コンポーネントの例](../../../integration-services/extending-packages-scripting-data-flow-script-component-examples/additional-script-component-examples.md)」をご覧ください。 サンプルについてのトピックでは、完全なコード例も示します。  
   
@@ -157,10 +160,10 @@ public class ScriptMain : UserComponent
  追加したすべてのアイテムは、パッケージ内部に保存されます。  
   
 #### <a name="references-in-the-script-component-project"></a>スクリプト コンポーネント プロジェクトの参照  
- 参照をマネージド アセンブリに追加するには、**[プロジェクト エクスプローラー]** でスクリプト タスク プロジェクトを右クリックし、**[参照の追加]** をクリックします。 詳しくは、「[スクリプティング ソリューションでの他のアセンブリの参照](../../../integration-services/extending-packages-scripting/referencing-other-assemblies-in-scripting-solutions.md)」をご覧ください。  
+ 参照をマネージド アセンブリに追加するには、 **[プロジェクト エクスプローラー]** でスクリプト タスク プロジェクトを右クリックし、 **[参照の追加]** をクリックします。 詳しくは、「[スクリプティング ソリューションでの他のアセンブリの参照](../../../integration-services/extending-packages-scripting/referencing-other-assemblies-in-scripting-solutions.md)」をご覧ください。  
   
 > [!NOTE]  
->  プロジェクト参照は、VSTA IDE の **[クラス ビュー]** または**プロジェクト エクスプローラー**で表示できます。 どちらのウィンドウも **[表示]** メニューから開きます。 新しい参照は、**[プロジェクト]** メニュー、**プロジェクト エクスプローラー**、または **[クラス ビュー]** から追加できます。  
+>  プロジェクト参照は、VSTA IDE の **[クラス ビュー]** または**プロジェクト エクスプローラー**で表示できます。 どちらのウィンドウも **[表示]** メニューから開きます。 新しい参照は、 **[プロジェクト]** メニュー、**プロジェクト エクスプローラー**、または **[クラス ビュー]** から追加できます。  
   
 ## <a name="interacting-with-the-package-in-the-script-component"></a>スクリプト コンポーネント内でのパッケージとの対話  
  スクリプト コンポーネント内で記述するカスタム スクリプトは、自動生成された基本クラス内の、厳密に型指定されたアクセサーを使用して、コンポーネントに含まれているパッケージの変数や接続マネージャーにアクセスし、それらを使用できます。 ただし、変数および接続マネージャーをスクリプトで使用できるようにするには、コード デザイン モードに切り替える前に、その両方を設定する必要があります。 また、スクリプト コンポーネントのコードから、イベントを発生させたり、ログ記録を実行することもできます。  
@@ -187,7 +190,7 @@ public class ScriptMain : UserComponent
   
 -   実行を中断し、**System.Windows.Forms** 名前空間の **MessageBox.Show** メソッドを使って、モーダル メッセージを表示します。 デバッグが完了したら、このコードは削除してください。  
   
--   情報メッセージ、警告、およびエラーを発生させます。 FireInformation、FireWarning、FireError の各メソッドでは、イベントの説明が Visual Studio の **[出力]** ウィンドウに表示されます。 ただし、FireProgress メソッド、Console.Write メソッド、および Console.WriteLine メソッドでは、**[出力]** ウィンドウに情報は表示されません。 FireProgress イベントからのメッセージが [!INCLUDE[ssIS](../../../includes/ssis-md.md)] デザイナーの **[進行状況]** タブに表示されます。 詳しくは、「[スクリプト コンポーネントでのイベントの発生](../../../integration-services/extending-packages-scripting/data-flow-script-component/raising-events-in-the-script-component.md)」をご覧ください。  
+-   情報メッセージ、警告、およびエラーを発生させます。 FireInformation、FireWarning、FireError の各メソッドでは、イベントの説明が Visual Studio の **[出力]** ウィンドウに表示されます。 ただし、FireProgress メソッド、Console.Write メソッド、および Console.WriteLine メソッドでは、 **[出力]** ウィンドウに情報は表示されません。 FireProgress イベントからのメッセージが [!INCLUDE[ssIS](../../../includes/ssis-md.md)] デザイナーの **[進行状況]** タブに表示されます。 詳しくは、「[スクリプト コンポーネントでのイベントの発生](../../../integration-services/extending-packages-scripting/data-flow-script-component/raising-events-in-the-script-component.md)」をご覧ください。  
   
 -   イベントまたはユーザー定義のメッセージを、有効なログ プロバイダーに記録します。 詳しくは、「[スクリプト コンポーネントでのログ記録](../../../integration-services/extending-packages-scripting/data-flow-script-component/logging-in-the-script-component.md)」をご覧ください。  
   

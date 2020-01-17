@@ -13,11 +13,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 5849baa119174cacc99d4ab99a68de28c2966c53
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53353194"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68210800"
 ---
 # <a name="advanced-edit-condition-dialog-box"></a>[高度な編集] \(条件) ダイアログ ボックス
   **[高度な編集]** ダイアログ ボックスでは、ポリシー ベースの管理条件に使用する複雑な式を作成できます。  
@@ -82,7 +82,7 @@ ms.locfileid: "53353194"
 |`False()`|Bool False()<br /><br /> ブール値 FALSE を返します。||ブール値 FALSE を返します。|`IsDatabaseMailEnabled = False()`|  
 |`GetDate()`|DateTime GetDate()<br /><br /> システム日付を返します。||システム日付を DateTime として返します。|`@DateLastModified = GetDate()`|  
 |`Guid()`|Guid Guid(String *guidString*)<br /><br /> 文字列から GUID を返します。|*guidString* - 作成される GUID の文字列表記です。|文字列から作成された GUID を返します。|`Guid('12340000-0000-3455-0000-000000000454')`|  
-|`IsNull()`|Variant IsNull (Variant *check_expression*, Variant *replacement_value*)<br /><br /> *check_expression* の値が NULL でない場合、その値が返されます。それ以外の場合は、 *replacement_value* が返されます。 型が異なる場合、 *replacement_value* は *check_expression*の型に暗黙的に変換されます。|*check_expression* - NULL かどうかを調べる式です。 *check_expression*の任意のポリシー ベース管理でサポートされる種類があります。数値、文字列、Bool、DateTime、Array、および Guid です。<br /><br /> *replacement_value* - *check_expression* が NULL の場合に返される式です。 *replacement_value* は、暗黙的に *check_expression*の型に変換される型である必要があります。|戻り値の型は、 *check_expression* が NULL 以外の場合は *check_expression* の型です。それ以外の場合は *replacement_value* の型が返されます。||  
+|`IsNull()`|Variant IsNull (Variant *check_expression*, Variant *replacement_value*)<br /><br /> *check_expression* の値が NULL でない場合、その値が返されます。それ以外の場合は、 *replacement_value* が返されます。 型が異なる場合、 *replacement_value* は *check_expression*の型に暗黙的に変換されます。|*check_expression* - NULL かどうかを調べる式です。 *check_expression* には、ポリシー ベースの管理でサポートされる型 Numeric、String、Bool、DateTime、Array、および Guid です。<br /><br /> *replacement_value* - *check_expression* が NULL の場合に返される式です。 *replacement_value* は、暗黙的に *check_expression*の型に変換される型である必要があります。|戻り値の型は、 *check_expression* が NULL 以外の場合は *check_expression* の型です。それ以外の場合は *replacement_value* の型が返されます。||  
 |`Len()`|Numeric Len (*string_expression*)<br /><br /> 指定された文字列式の文字数 (末尾の空白文字を除く) を返します。|*string_expression* - 評価する文字列式です。|整数のデータ型カテゴリの値を返します。|`Len('Hello')` は `5` を返します。|  
 |`Lower()`|String Lower (String *_expression*)<br /><br /> 文字列の大文字をすべて小文字に変換して返します。|*expression* - 変換対象の文字列式です。|大文字をすべて小文字に変換した後のソース文字列式を表す文字列を返します。|`Len('HeLlO')` は `'hello'` を返します。|  
 |`Mod()`|Numeric Mod (Numeric *expression_dividend*, Numeric *expression_divisor*)<br /><br /> 最初の数値式を 2 番目の数値式で割った剰余を整数値で返します。|*expression_dividend* - 除算される数値式です。 *expression_dividend* には、整数または数値に分類されるデータ型の有効な式を指定する必要があります。<br /><br /> *expression_divisor* - 被除数を除算する数値式です。 *expression_divisor* には、整数または数値に分類されるデータ型の有効な式を指定する必要があります。|整数のデータ型カテゴリの値を返します。|`Mod(Property1, 3)`|  

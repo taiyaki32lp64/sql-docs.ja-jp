@@ -12,15 +12,14 @@ dev_langs:
 helpviewer_keywords:
 - DropOnlyMode element
 ms.assetid: 80960676-7581-4074-889b-80ee665963dd
-author: stevestein
-ms.author: sstein
-manager: craigg
-ms.openlocfilehash: f75d3a4c293ebcb2f91c39df4cb1c008601dcde2
-ms.sourcegitcommit: 0f7cf9b7ab23df15624d27c129ab3a539e8b6457
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 8e7c6648cdc3257b0fecef77ed4c09b27a52f2c6
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51292874"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68132783"
 ---
 # <a name="droponlymode-element-dta"></a>DropOnlyMode 要素 (DTA)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

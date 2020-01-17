@@ -23,13 +23,12 @@ helpviewer_keywords:
 ms.assetid: 0436e4a8-ca26-4d23-93f1-e31e2a1c8bfb
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: 3d35982c6c1b26b957f1aa59b934106f4c09edc8
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: f9caf29596f3a5cf610e02ffcf4f27bfacbce668
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52529303"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68001635"
 ---
 # <a name="alter-search-property-list-transact-sql"></a>ALTER SEARCH PROPERTY LIST (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -67,12 +66,12 @@ SELECT name FROM sys.registered_search_property_lists;
  指定した検索プロパティを *list_name* で指定したプロパティ リストに追加します。 プロパティが、検索プロパティ リストに登録されます。 新しく追加されたプロパティをプロパティ検索で使用できるようにするには、関連付けられたフルテキスト インデックスを再作成する必要があります。 詳細については、「 [ALTER FULLTEXT INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/alter-fulltext-index-transact-sql.md)」を参照してください。  
   
 > [!NOTE]  
->  特定の検索プロパティを検索プロパティ リストに追加するには、そのプロパティ セット GUID (*property_set_guid*) およびプロパティ整数 ID (*property_int_id*) を指定する必要があります。 詳細については、このトピックの「プロパティ値の取得」を参照してください。  
+>  特定の検索プロパティを検索プロパティ リストに追加するには、そのプロパティ セット GUID (*property_set_guid*) およびプロパティ整数 ID (*property_int_id*) を指定する必要があります。 詳細については、このトピックの後でプロパティ セット GUID と ID の取得に関する記事を参照してください。  
   
  *property_name*  
  フルテキスト クエリでプロパティを識別するために使用される名前を指定します。 *property_name* は、プロパティ セット内で一意にプロパティを識別する名前である必要があります。 プロパティ名の内部にはスペースを含めることができます。 *property_name* の長さは最大 256 文字です。 この名前は "作成者" や "ホーム アドレス" などのわかりやすい名前、または、Windows の正規のプロパティ名 (**System.Author** または **System.Contact.HomeAddress** など) にすることができます。  
   
- 開発者は、*property_name* に指定された値を使用して、[CONTAINS](../../t-sql/queries/contains-transact-sql.md) 述語内のプロパティを識別する必要があります。 したがって、プロパティ追加する場合は、指定されたプロパティ セット GUID (*property_set_guid*) とプロパティ識別子 (*property_int_id*) によって定義された、プロパティを明確に表す値を指定することが重要です。 プロパティ名の詳細については、このトピックの「解説」を参照してください。  
+ 開発者は、*property_name* に指定された値を使用して、[CONTAINS](../../t-sql/queries/contains-transact-sql.md) 述語内のプロパティを識別する必要があります。 したがって、プロパティ追加する場合は、指定されたプロパティ セット GUID (*property_set_guid*) とプロパティ識別子 (*property_int_id*) によって定義された、プロパティを明確に表す値を指定することが重要です。 プロパティ名の詳細については、このトピックの後で「解説」を参照してください。  
   
  現在のデータベースの検索プロパティ リストに現在存在するプロパティの名前を表示するには、次のように [sys.registered_search_properties](../../relational-databases/system-catalog-views/sys-registered-search-properties-transact-sql.md) カタログ ビューを使用します。  
   
@@ -81,7 +80,7 @@ SELECT property_name FROM sys.registered_search_properties;
 ```  
   
  PROPERTY_SET_GUID ='*property_set_guid*'  
- プロパティが属するプロパティ セットの識別子を指定します。 これはグローバル一意識別子 (GUID) です。 この値の取得に関する情報については、このトピックの「解説」を参照してください。  
+ プロパティが属するプロパティ セットの ID を指定します。 これはグローバル一意識別子 (GUID) です。 この値の取得に関する情報については、このトピックの「解説」を参照してください。  
   
  現在のデータベースの検索プロパティ リストに存在する任意のプロパティのプロパティ セット GUID を表示するには、次のように [sys.registered_search_properties](../../relational-databases/system-catalog-views/sys-registered-search-properties-transact-sql.md) カタログ ビューを使用します。  
   
@@ -99,7 +98,7 @@ SELECT property_int_id FROM sys.registered_search_properties;
 ```  
   
 > [!NOTE]  
->  *property_set_guid* と *property_int_id* の特定の組み合わせは、検索プロパティ リスト内で一意である必要があります。 既存の組み合わせを追加しようとすると、ALTER SEARCH PROPERTY LIST 操作が失敗しエラーが発生します。 つまり、1 つのプロパティに定義できる名前は 1 つだけです。  
+>  *property_set_guid* と *property_int_id* の特定の組み合わせは、検索プロパティ リスト内で一意である必要があります。 既存の組み合わせを追加しようとすると、ALTER SEARCH PROPERTY LIST 操作が失敗しエラーが発生します。 つまり、指定したプロパティに定義できる名前は 1 つだけということです。  
   
  PROPERTY_DESCRIPTION ='*property_description*'  
  プロパティに関するユーザー定義の説明を指定します。 *property_description* は最大 512 文字の文字列です。 このオプションは省略可能です。  
@@ -110,9 +109,9 @@ SELECT property_int_id FROM sys.registered_search_properties;
 ## <a name="remarks"></a>Remarks  
  それぞれのフルテキスト インデックスは、検索プロパティ リストを 1 つだけ持つことができます。  
   
- 特定の検索プロパティのクエリを有効にするには、フルテキスト インデックスの検索プロパティ リストにその検索プロパティを追加した後、インデックスの再作成を行う必要があります。  
+ 指定した検索プロパティのクエリを有効にするには、フルテキスト インデックスの検索プロパティ リストにその検索プロパティを追加した後、インデックスの再作成を行う必要があります。  
   
- プロパティを指定する場合は、PROPERTY_SET_GUID 句、PROPERTY_INT_ID 句、および PROPERTY_DESCRIPTION 句を、かっこで囲まれたコンマ区切りのリストとして任意の順序で指定できます。次に例を示します。  
+ プロパティを指定する場合は、PROPERTY_SET_GUID 句、PROPERTY_INT_ID 句、PROPERTY_DESCRIPTION 句を、かっこで囲まれたコンマ区切りのリストとして任意の順序で配置できます。次に例を示します。  
   
 ```  
 ALTER SEARCH PROPERTY LIST CVitaProperties  
@@ -131,7 +130,7 @@ WITH (
  フルテキスト検索では、プロパティ セット GUID とプロパティ整数 ID を使用して、検索プロパティがフルテキスト インデックスにマップされます。 Microsoft によって定義されているプロパティのこれらの値を取得する方法については、「[検索プロパティのプロパティ セット GUID およびプロパティ整数 ID の取得](../../relational-databases/search/find-property-set-guids-and-property-integer-ids-for-search-properties.md)」をご覧ください。 独立系ソフトウェア ベンダー (ISV) によって定義されたプロパティの詳細については、そのベンダーのマニュアルを参照してください。  
   
 ## <a name="making-added-properties-searchable"></a>追加したプロパティを検索可能にする  
- 検索プロパティを検索プロパティ リストに追加すると、そのプロパティが登録されます。 新しく追加されたプロパティは、[CONTAINS](../../t-sql/queries/contains-transact-sql.md) クエリですぐに指定することができます。 ただし、関連付けられているフルテキスト インデックスを再作成しない限り、新しく追加されたプロパティに対するプロパティスコープのフルテキスト クエリを実行してもドキュメントは返されません。 たとえば、新しく追加されたプロパティ *new_search_property* に対する次のプロパティスコープのクエリは、対象のテーブル (*table_name*) と関連付けられているフルテキスト インデックスが再作成されない限り、ドキュメントを返しません。  
+ 検索プロパティを検索プロパティ リストに追加すると、そのプロパティが登録されます。 新しく追加されたプロパティは、[CONTAINS](../../t-sql/queries/contains-transact-sql.md) クエリですぐに指定することができます。 しかし、関連付けられているフルテキスト インデックスを再作成しない限り、新しく追加されたプロパティに対するプロパティスコープのフルテキスト クエリを実行してもドキュメントは返されません。 たとえば、新しく追加されたプロパティ *new_search_property* に対する次のプロパティスコープのクエリは、対象のテーブル (*table_name*) と関連付けられているフルテキスト インデックスが再作成されない限り、ドキュメントを返しません。  
   
 ```  
 SELECT column_name  
@@ -151,7 +150,7 @@ GO
 ```  
   
 > [!NOTE]  
->  プロパティ リストからプロパティを削除した場合、検索プロパティ リストに残っているプロパティのみがフルテキスト クエリの対象となるため、インデックスを再作成する必要はありません。  
+>  プロパティ リストからプロパティを削除した後、検索プロパティ リストに残っているプロパティのみがフルテキスト クエリの対象となるため、再作成は必要ありません。  
   
 ## <a name="related-references"></a>関連リファレンス  
  **プロパティ リストを作成するには**  

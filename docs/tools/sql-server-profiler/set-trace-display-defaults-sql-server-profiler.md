@@ -10,15 +10,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - traces [SQL Server], defaults
 ms.assetid: d471aaed-c40c-4c55-a993-835e6394b5d2
-author: stevestein
-ms.author: sstein
-manager: craigg
-ms.openlocfilehash: f7edcb08ee08103a0d2fc67ba77d714de6bd0b57
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: bc875bf091b2dac6f3bfb393c7a716c3fa49caea
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47778210"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68059707"
 ---
 # <a name="set-trace-display-defaults-sql-server-profiler"></a>トレース表示の既定値の設定 (SQL Server Profiler)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -30,7 +29,7 @@ ms.locfileid: "47778210"
   
 2.  **[全般オプション]** ダイアログ ボックスで、 **[フォントの選択]** をクリックします。  
   
-3.  **[フォント]** ダイアログ ボックスで、 **でのトレースの表示に使用する**[フォント名] **、**[スタイル] **、** [サイズ] [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] を選択します。  
+3.  **[フォント]** ダイアログ ボックスで、 **でのトレースの表示に使用する**[フォント名] **、** [スタイル] **、** [サイズ] [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] を選択します。  
   
 4.  **[OK]** をクリックして設定を適用し、 **[フォント]** ダイアログ ボックスを閉じます。  
   

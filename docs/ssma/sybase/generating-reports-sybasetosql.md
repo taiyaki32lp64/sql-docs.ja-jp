@@ -13,20 +13,19 @@ helpviewer_keywords:
 ms.assetid: 19278f6a-6d58-4867-9d71-c6228040466e
 author: Shamikg
 ms.author: Shamikg
-manager: craigg
-ms.openlocfilehash: bb377e36f73bad59da35fabc2f6e9189544230e1
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: a63ad1dad1a1dcab28e2a8ffb5c96d9564210475
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52411029"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68029130"
 ---
 # <a name="generating-reports-sybasetosql"></a>レポートの生成 (SybaseToSQL)
 オブジェクト ツリーのレベルでの SSMA コンソールのコマンドを使用して実行される特定のアクティビティ レポートが生成されます。  
   
 レポートを生成するのにには、次の手順を使用します。  
   
-1.  指定、**書き込みで概要レポート-を**パラメーター。 (指定した) 場合に、ファイル名として、関連するレポートが格納されているまたはでフォルダーを指定します。 ファイル名は、where、次の表で説明したようにシステム定義済み**&lt;n&gt;** は、同じコマンドを実行するたびに 1 桁の数字をインクリメントする一意のファイル数です。  
+1.  指定、**書き込みで概要レポート-を**パラメーター。 (指定した) 場合に、ファイル名として、関連するレポートが格納されているまたはでフォルダーを指定します。 ファイル名は、where、次の表で説明したようにシステム定義済み **&lt;n&gt;** は、同じコマンドを実行するたびに 1 桁の数字をインクリメントする一意のファイル数です。  
   
     レポートの vis-比べて-vis コマンドは次のとおりです。  
   
@@ -43,7 +42,7 @@ ms.locfileid: "52411029"
     > [!IMPORTANT]  
     > レポートの出力は、評価レポートと異なります。 前者はコマンドの実行中のパフォーマンス上のレポート、後者は、プログラムによる使用量の XML レポート。  
   
-    コマンド オプションの出力からのレポート (上記の Sl. No.  2 ~ 4) を参照してください、 [SSMA コンソールを実行する&#40;SybaseToSQL&#41; ](../../ssma/sybase/executing-the-ssma-console-sybasetosql.md)セクションです。  
+    コマンド オプションの出力からのレポート (上記の Sl. No. 2 ~ 4) を参照してください、 [SSMA コンソールを実行する&#40;SybaseToSQL&#41; ](../../ssma/sybase/executing-the-ssma-console-sybasetosql.md)セクションです。  
   
 2.  レポートの詳細度の設定を使用して、出力レポートに必要な詳細の程度を示します。  
   
@@ -62,7 +61,7 @@ ms.locfileid: "52411029"
     |-|-|-|  
     |**Sl.No.**|**コマンドとパラメーター**|**出力の説明**|  
     |1|レポート エラー ="false"|エラーの詳細はありません/警告/情報メッセージ。|  
-    |2|レポート エラー ="true"|エラーの詳細/警告/情報メッセージ。|  
+    |2|report-errors="true"|エラーの詳細/警告/情報メッセージ。|  
   
     > [!NOTE]  
     > 上記で指定したエラー報告の設定は生成評価レポート、convert スキーマ、データの移行、sql ステートメントの変換コマンド。  
@@ -145,6 +144,6 @@ ms.locfileid: "52411029"
   
 -   フェールオーバー スクリプト  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
 [SSMA コンソール (Sybase) の実行](https://msdn.microsoft.com/ea8950b7-fabc-4aa4-89f8-9573a2617d70)  
   

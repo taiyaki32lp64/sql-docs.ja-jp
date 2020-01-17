@@ -1,7 +1,7 @@
 ---
 title: CREATE CERTIFICATE (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 09/07/2018
+ms.date: 04/22/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -26,14 +26,13 @@ helpviewer_keywords:
 ms.assetid: a4274b2b-4cb0-446a-a956-1c8e6587515d
 author: VanMSFT
 ms.author: vanto
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 42a486a50e49e2d64024355617e77a84833edba9
-ms.sourcegitcommit: c6e71ed14198da67afd7ba722823b1af9b4f4e6f
+ms.openlocfilehash: 7864be7bbf270e235fd1948a1f70f34417a8dec4
+ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/16/2019
-ms.locfileid: "54326543"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "73982782"
 ---
 # <a name="create-certificate-transact-sql"></a>CREATE CERTIFICATE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-pdw-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-pdw-md.md)]
@@ -126,8 +125,12 @@ CREATE CERTIFICATE certificate_name
 > [!IMPORTANT]
 > Azure SQL Database では、ファイルからの証明書の作成や秘密キー ファイルの使用はサポートされません。
   
+ BINARY =*asn_encoded_certificate*  
+ バイナリ定数として指定された、ASN でエンコードされた証明書バイト。  
+ **適用対象**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 以降。  
+  
  WITH PRIVATE KEY  
- 証明書の秘密キーを [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] に読み込むように指定します。 この句は、ファイルから証明書を作成する場合にのみ有効です。 アセンブリの秘密キーを読み込むには、[ALTER CERTIFICATE](../../t-sql/statements/alter-certificate-transact-sql.md) を使用します。  
+ 証明書の秘密キーを [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] に読み込むように指定します。 この句は、アセンブリから証明書を作成する場合には無効です。 アセンブリから作成された証明書の秘密キーを読み込むには、[ALTER CERTIFICATE](../../t-sql/statements/alter-certificate-transact-sql.md) を使用します。  
   
  FILE ='*path_to_private_key*'  
  秘密キーへの完全なパスを、ファイル名を含めて指定します。 *path_to_private_key* には、ローカル パスまたはネットワーク上の場所を示す UNC パスを指定できます。 ファイルには、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] サービス アカウントのセキュリティ コンテキストでアクセスします。 このアカウントは、ファイル システムで必要となる権限を保持している必要があります。  
@@ -135,11 +138,8 @@ CREATE CERTIFICATE certificate_name
 > [!IMPORTANT]  
 >  このオプションは、包含データベースまたは Azure SQL Database では使用できません。  
   
- asn_encoded_certificate  
- バイナリ定数として指定された、ASN でエンコードされた証明書ビット。  
-  
  BINARY =*private_key_bits*  
- **適用対象**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]  
+ **適用対象**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 以降。  
   
  バイナリ定数として指定された秘密キーのビット。 これらのビットは暗号化された形式でもかまいません。 暗号化されている場合は、ユーザーは暗号化解除パスワードを指定する必要があります。 パスワード ポリシーのチェックは、このパスワードに対しては実行されません。 秘密キーのビットは PVK ファイル形式にする必要があります。  
   
@@ -162,7 +162,7 @@ CREATE CERTIFICATE certificate_name
  [!INCLUDE[ssSB](../../includes/sssb-md.md)] メッセージ交換の発信側で証明書を使用できるようにします。 既定値は ON です。  
   
 ## <a name="remarks"></a>Remarks  
- 証明書は、X.509 標準に準拠したデータベース レベルのセキュリティ保護可能なリソースであり、X.509 V1 フィールドをサポートします。 CREATE CERTIFICATE では、ファイルまたはアセンブリから証明書を読み込むことができます。 このステートメントでは、キー ペアを生成して自己署名証明書を作成することもできます。  
+ 証明書は、X.509 標準に準拠したデータベース レベルのセキュリティ保護可能なリソースであり、X.509 V1 フィールドをサポートします。 CREATE CERTIFICATE では、ファイル、バイナリ定数、またはアセンブリから証明書を読み込むことができます。 このステートメントでは、キー ペアを生成して自己署名証明書を作成することもできます。  
   
  秘密キーは、暗号化された形式で 2500 バイト以下でなければなりません。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] によって生成される秘密キーの長さは、[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] までは 1024 ビット、[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 以降は 2048 ビットです。 外部ソースからインポートされる秘密キーの最小の長さは 384 ビットで、最大の長さは 4,096 ビットです。 インポートされる秘密キーの長さは、64 ビットの整数倍であることが必要です。 TDE に使用される証明書では、秘密キーのサイズが 3456 ビットに制限されています。  
   
@@ -191,7 +191,7 @@ CREATE CERTIFICATE certificate_name
 ### <a name="a-creating-a-self-signed-certificate"></a>A. 自己署名証明書を作成する  
  次の例では、`Shipping04` という証明書を作成します。 この証明書の秘密キーは、パスワードを使用して保護されます。  
   
-```  
+```sql  
 CREATE CERTIFICATE Shipping04   
    ENCRYPTION BY PASSWORD = 'pGFD4bb925DGvbd2439587y'  
    WITH SUBJECT = 'Sammamish Shipping Records',   
@@ -202,7 +202,7 @@ GO
 ### <a name="b-creating-a-certificate-from-a-file"></a>B. ファイルから証明書を作成する  
  次の例では、データベースに証明書を作成し、ファイルからキー ペアを読み込みます。  
   
-```  
+```sql  
 CREATE CERTIFICATE Shipping11   
     FROM FILE = 'c:\Shipping\Certs\Shipping11.cer'   
     WITH PRIVATE KEY (FILE = 'c:\Shipping\Certs\Shipping11.pvk',   
@@ -215,7 +215,7 @@ GO
    
 ### <a name="c-creating-a-certificate-from-a-signed-executable-file"></a>C. 署名付き実行可能ファイルから証明書を作成する  
   
-```  
+```sql  
 CREATE CERTIFICATE Shipping19   
     FROM EXECUTABLE FILE = 'c:\Shipping\Certs\Shipping19.dll';  
 GO  
@@ -223,7 +223,7 @@ GO
   
  `dll` ファイルからアセンブリを作成し、次にそのアセンブリから証明書を作成することもできます。  
   
-```  
+```sql  
 CREATE ASSEMBLY Shipping19   
     FROM ' c:\Shipping\Certs\Shipping19.dll'   
     WITH PERMISSION_SET = SAFE;  
@@ -233,11 +233,14 @@ GO
 ```  
 > [!IMPORTANT]
 > Azure SQL Database では、ファイルからの証明書の作成はサポートされません。
-   
+
+> [!IMPORTANT]
+> [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] 以降では、最初にセキュリティを設定しなくても、['CLR strict security'](../../database-engine/configure-windows/clr-strict-security.md) サーバー構成オプションによりアセンブリの読み込みが防止されます。 証明書を読み込み、そこからログインを作成し、`UNSAFE ASSEMBLY` にそのログインを付与してから、アセンブリを読み込みます。
+
 ### <a name="d-creating-a-self-signed-certificate"></a>D. 自己署名証明書を作成する  
  次の例では、暗号化パスワードを指定しないで、`Shipping04` という証明書を作成します。 この例は、[!INCLUDE[ssPDW](../../includes/sspdw-md.md)] で使用できます。
   
-```  
+```sql  
 CREATE CERTIFICATE Shipping04   
    WITH SUBJECT = 'Sammamish Shipping Records';  
 GO  
@@ -251,6 +254,8 @@ GO
  [EVENTDATA &#40;Transact-SQL&#41;](../../t-sql/functions/eventdata-transact-sql.md)   
  [CERTENCODED &#40;Transact-SQL&#41;](../../t-sql/functions/certencoded-transact-sql.md)   
  [CERTPRIVATEKEY &#40;Transact-SQL&#41;](../../t-sql/functions/certprivatekey-transact-sql.md)  
+ [CERT_ID &#40;Transact-SQL&#41;](../../t-sql/functions/cert-id-transact-sql.md)  
+ [CERTPROPERTY &#40;Transact-SQL&#41;](../../t-sql/functions/certproperty-transact-sql.md)  
   
   
 

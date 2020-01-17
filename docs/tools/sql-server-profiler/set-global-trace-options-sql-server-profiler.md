@@ -1,5 +1,5 @@
 ---
-title: 設定のグローバル トレース オプション (SQL Server Profiler) |Microsoft Docs
+title: グローバルトレースオプションの設定 (SQL Server プロファイラー) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -10,15 +10,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - global trace options [SQL Server]
 ms.assetid: 2854608a-c3c7-4eb8-b567-034bfec4b1a9
-author: stevestein
-ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 6aa85ddbfc5a90731284f8a3798c08375eb93ce6
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 9605f5e12b1dcc206d50e958d8c1787750e98941
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47739880"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68104179"
 ---
 # <a name="set-global-trace-options-sql-server-profiler"></a>グローバル トレース オプションの設定 (SQL Server Profiler)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -46,7 +45,7 @@ ms.locfileid: "47739880"
   
     -   **[再生スレッドの既定の数]** では、再生時に使用するプロセッサ スレッドの数を制御します。 スレッド数を多くすると、再生は早く完了しますが、再生時にサーバーのパフォーマンスが低下します。 推奨設定値は **4**です。 次の表は、使用可能な値の一覧です。  
   
-        |ReplTest1|[説明]|  
+        |[値]|[説明]|  
         |-----------|-----------------|  
         |**2**|最小値です。 2 つのスレッドを使用して再生します。|  
         |**4**|既定値です。|  
@@ -54,7 +53,7 @@ ms.locfileid: "47739880"
   
     -   **[ヘルス モニターの既定の待機間隔 (秒)]** では、再生スレッドが他のプロセスをブロックできる最長時間を秒単位で設定します。 次の表は、その値を示しています。  
   
-        |ReplTest1|[説明]|  
+        |[値]|[説明]|  
         |-----------|-----------------|  
         |**0**|最小値です。 **0** に設定すると、 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] によってブロック プロセスが停止されません。|  
         |**3600**|既定値です。 **3600** 秒 (1 時間) を超えないブロック プロセスを使用できます。|  
@@ -62,7 +61,7 @@ ms.locfileid: "47739880"
   
     -   **[ヘルス モニターの既定のポーリング間隔 (秒)]** では、ブロック プロセスの再生スレッドを呼び出す頻度を設定します。 次の表は、その値を示しています。  
   
-        |ReplTest1|[説明]|  
+        |[値]|[説明]|  
         |-----------|-----------------|  
         |**1**|最小値です。 **1** に設定すると、 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] によって毎秒 1 回ブロック プロセスが呼び出されます。|  
         |**60**|既定値です。 毎分 1 回ブロック プロセスを呼び出します。|  

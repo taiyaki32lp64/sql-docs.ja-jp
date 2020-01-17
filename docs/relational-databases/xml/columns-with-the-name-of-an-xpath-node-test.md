@@ -11,15 +11,14 @@ helpviewer_keywords:
 - names [SQL Server], columns with
 - XPath node test
 ms.assetid: b48adccd-3b6b-486a-b326-20f57170186f
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: 27b3e78f821dd2b2debe28647ced66c8919aeb0c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: MightyPen
+ms.author: genemi
+ms.openlocfilehash: 2e1b4811e15d9f6927d06a4d4f9ff99466eb164c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47795020"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68112898"
 ---
 # <a name="columns-with-the-name-of-an-xpath-node-test"></a>XPath ノード テストの名前が付いた列
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

@@ -15,11 +15,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: a9a7bdca770bccaac50da1ac6a7688eabd335e20
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53353755"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62791866"
 ---
 # <a name="availability-group-is-not-ready-for-automatic-failover"></a>可用性グループの自動フェールオーバーの準備ができていない
     
@@ -28,7 +28,7 @@ ms.locfileid: "53353755"
 |||  
 |-|-|  
 |**ポリシー名**|可用性グループの自動フェールオーバーの準備|  
-|**問題点**|可用性グループで自動フェールオーバーの準備ができていません。|  
+|**問題**|可用性グループで自動フェールオーバーの準備ができていません。|  
 |**カテゴリ**|**重大**|  
 |**ファセット**|可用性グループ|  
   

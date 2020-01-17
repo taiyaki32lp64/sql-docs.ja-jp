@@ -8,15 +8,14 @@ ms.reviewer: ''
 ms.technology: tools-other
 ms.topic: conceptual
 ms.assetid: aee11dde-daad-439b-b594-9f4aeac94335
-author: stevestein
-ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 166e5e929863a9c7213f3cda6f43e6c1007865b2
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 092b08697580d79f800dcc539ed90559262ff44f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54125562"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68023768"
 ---
 # <a name="configure-distributed-replay"></a>Configure Distributed Replay
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -30,7 +29,7 @@ ms.locfileid: "54125562"
   
 -   [再生構成ファイル](#ReplayConfig)  
   
-##  <a name="DReplayController"></a> コントローラー構成ファイル:DReplayController.config  
+##  <a name="DReplayController"></a> コントローラー構成ファイル: DReplayController.config  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributed Replay Controller サービスを開始すると、コントローラー構成ファイル `DReplayController.config`からログ記録レベルが読み込まれます。 このファイルは、Distributed Replay Controller サービスをインストールしたフォルダーにあります。  
   
  **\<コントローラーのインストール パス>\DReplayController.config**  
@@ -51,7 +50,7 @@ ms.locfileid: "54125562"
 </Options>  
 ```  
   
-##  <a name="DReplayClient"></a> クライアント構成ファイル:DReplayClient.config  
+##  <a name="DReplayClient"></a> クライアント構成ファイル: DReplayClient.config  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributed Replay Client サービスを開始すると、クライアント構成ファイル `DReplayClient.config`から構成設定が読み込まれます。 このファイルは、各クライアントの Distributed Replay Client サービスをインストールしたフォルダーにあります。  
   
  **\<クライアントのインストール パス>\DReplayClient.config**  
@@ -78,7 +77,7 @@ ms.locfileid: "54125562"
 </Options>  
 ```  
   
-##  <a name="PreprocessConfig"></a> 前処理構成ファイル:DReplay.exe.preprocess.config  
+##  <a name="PreprocessConfig"></a> 前処理構成ファイル : DReplay.exe.preprocess.config  
  前処理段階を開始するために管理ツールを使用すると、管理ツールは前処理構成ファイル `DReplay.exe.preprocess.config` から前処理設定を読み込みます。  
   
  既定の構成ファイルまたは管理ツール **-c** パラメーターを使用して、変更された前処理構成ファイルの場所を指定します。 管理ツールの前処理オプションの使用の詳細については、「[前処理オプション &#40;Distributed Replay 管理ツール&#41;](../../tools/distributed-replay/preprocess-option-distributed-replay-administration-tool.md)」を参照してください。  
@@ -107,7 +106,7 @@ ms.locfileid: "54125562"
 </Options>  
 ```  
   
-##  <a name="ReplayConfig"></a> 再生構成ファイル:DReplay.exe.replay.config  
+##  <a name="ReplayConfig"></a> 再生構成ファイル : DReplay.exe.replay.config  
  イベント再生段階を開始するために管理ツールを使用すると、管理ツールは再生構成ファイル `DReplay.exe.replay.config`から再生設定を読み込みます。  
   
  既定の構成ファイルまたは管理ツール **-c** パラメーターを使用して、変更された再生構成ファイルの場所を指定します。 管理ツールの再生オプションの使用の詳細については、「[replay オプション &#40;Distributed Replay 管理ツール&#41;](../../tools/distributed-replay/replay-option-distributed-replay-administration-tool.md)」を参照してください。  
@@ -165,27 +164,27 @@ ms.locfileid: "54125562"
 </Options>  
 ```  
 
-### <a name="possible-issue-when-running-with-synchronization-sequencing-mode"></a>同期シーケンス モードで実行するときに、考えられる問題
- 再生の機能が表示される「停止」、または再生イベントを非常に遅くなります現象が発生する可能性があります。 この現象は、データまたは復元先データベースに存在しないイベントが再生されるトレースが依存する場合に発生することができます。 
+### <a name="possible-issue-when-running-with-synchronization-sequencing-mode"></a>同期シーケンスモードで実行するときに発生する可能性のある問題
+ 再生機能が "停止" と表示されたり、イベントの再生が非常に遅くなったりする症状が発生する可能性があります。 この現象は、再生中のトレースが、復元されたターゲットデータベースに存在しないデータやイベントに依存している場合に発生する可能性があります。 
  
- 1 つの例は、キャプチャされたワークロードなど、Service Broker の受信の WAITFOR ステートメントで、WAITFOR を使用します。 同期シーケンス モードを使用して、バッチが順番に再生されます。 データベースのバックアップ後にソース データベースに対して挿入が発生した場合は、トレースを開始する再生キャプチャする前に、WAITFOR 受信再生中に発行された、WAITFOR の期間全体を待機する必要があります。 イベントは、WAITFOR の受信が停止している後に再生するのに設定します。 これにより、再生のデータベース ターゲットをゼロに削除するには、バッチ要求/秒パフォーマンス モニター カウンターで、WAITFOR が完了するまでです。 
+ 1つの例として、Service Broker の WAITFOR RECEIVE ステートメントなど、WAITFOR を使用するキャプチャされたワークロードがあります。 同期シーケンスモードを使用する場合、バッチは直列に再生されます。 データベースのバックアップ後、再生キャプチャトレースが開始される前にソースデータベースに対して挿入が行われた場合、再生中に実行された WAITFOR RECEIVE は WAITFOR の全期間を待機する必要があります。 WAITFOR RECEIVE が停滞した後に再生されるように設定されたイベント。 これにより、replay データベースターゲットに対する Batch Requests/sec パフォーマンスモニターカウンターが、WAITFOR が完了するまで0に削除される可能性があります。 
  
- 同期モードでありを使用して、この動作を回避する必要がある場合は、次の操作を行う必要があります。
+ 同期モードを使用する必要があり、この動作を回避する必要がある場合は、次の操作を行う必要があります。
  
-1.  休止再生ターゲットとして使用するデータベース。
+1.  再生ターゲットとして使用するデータベースを停止します。
 
-2.  完了する保留中のすべてのアクティビティを許可します。
+2.  すべての保留中のアクティビティの完了を許可します。
 
-3.  データベースをバックアップし、バックアップの完了を許可します。
+3.  データベースをバックアップし、バックアップを完了できるようにします。
 
-4.  分散再生のトレース キャプチャを開始し、標準的なワークロードを再開します。 
+4.  分散再生トレースのキャプチャを開始し、通常のワークロードを再開します。 
  
  
 ## <a name="see-also"></a>参照  
  [管理ツール コマンド ライン オプション &#40;Distributed Replay Utility&#41;](../../tools/distributed-replay/administration-tool-command-line-options-distributed-replay-utility.md)   
  [SQL Server Distributed Replay](../../tools/distributed-replay/sql-server-distributed-replay.md)   
  [SQL Server Distributed Replay フォーラム](https://social.technet.microsoft.com/Forums/sl/sqldru/)   
- [分散再生を使用した SQL Server のロード テスト – パート 2](https://blogs.msdn.com/b/mspfe/archive/2012/11/14/using-distributed-replay-to-load-test-your-sql-server-part-2.aspx)   
+ [分散再生を使用した SQL Server のロード テスト – パート 1](https://blogs.msdn.com/b/mspfe/archive/2012/11/14/using-distributed-replay-to-load-test-your-sql-server-part-2.aspx)   
  [分散再生を使用した SQL Server のロード テスト – パート 1](https://blogs.msdn.com/b/mspfe/archive/2012/11/08/using-distributed-replay-to-load-test-your-sql-server-part-1.aspx)  
   
   

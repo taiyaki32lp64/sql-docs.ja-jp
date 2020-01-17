@@ -11,17 +11,20 @@ helpviewer_keywords:
 - executions view [Integration Services]
 - catalog.executions view [Integration Services]
 ms.assetid: 879f13b0-331d-4dee-a079-edfaca11ae5b
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: b70f7bc5680c297572380a273ad2cff35691ffe7
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 9daa6cf4c788c4ca63a9cc394c9a814a8c27cb5b
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47729880"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71295209"
 ---
 # <a name="catalogexecutions-ssisdb-database"></a>catalog.executions (SSISDB データベース)
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] カタログのパッケージ実行のインスタンスを表示します。 パッケージ実行タスクで実行されるパッケージは、親パッケージと同じ実行のインスタンスで実行されます。  
@@ -46,7 +49,7 @@ ms.locfileid: "47729880"
 |start_time|**datetimeoffset**|実行のインスタンスが起動された時間。|  
 |end_time|**datetimeoffsset**|実行のインスタンスが終了した時間。|  
 |caller_sid|**varbinary(85)**|ログオンに Windows 認証が使用された場合はユーザーのセキュリティ ID (SID)。|  
-|させていただきたいと|**nvarchar(128)**|操作を実行したアカウントの名前。|  
+|caller_name|**nvarchar(128)**|操作を実行したアカウントの名前。|  
 |process_id|**int**|外部プロセスのプロセス ID (該当する場合)。|  
 |stopped_by_sid|**varbinary(85)**|実行のインスタンスを停止したユーザーのセキュリティ ID (SID)。|  
 |stopped_by_name|**nvarchar(128)**|実行のインスタンスを停止したユーザーの名前。|  

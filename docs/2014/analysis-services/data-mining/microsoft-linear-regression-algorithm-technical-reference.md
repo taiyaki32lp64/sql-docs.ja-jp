@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - AUTO_DETECT_PERIODICITY parameter
@@ -15,12 +14,12 @@ ms.assetid: 7807b5ff-8e0d-418d-a05b-b1a9644536d2
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 3a4bd34c0ce6a84ca4f9050f4c4b428123c379dd
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: db8b36fbccc4139071f54ddf9f73f876e9517799
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48106072"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66084056"
 ---
 # <a name="microsoft-linear-regression-algorithm-technical-reference"></a>Microsoft 線形回帰アルゴリズム テクニカル リファレンス
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] 線形回帰アルゴリズムは、連続属性のペアのモデリングに最適化された、特殊な Microsoft デシジョン ツリー アルゴリズムです。 このトピックでは、アルゴリズムの実装について説明し、アルゴリズムの動作をカスタマイズする方法を示します。モデルのクエリに関する追加情報へのリンクも示します。  
@@ -60,7 +59,7 @@ ms.locfileid: "48106072"
 |モデリング フラグ|説明|  
 |-------------------|-----------------|  
 |NOT NULL|列に NULL を含めることはできないことを示します。 モデルのトレーニング中に NULL が検出された場合はエラーが発生します。<br /><br /> マイニング構造列に適用されます。|  
-|REGRESSOR|列には、分析中に潜在的な独立変数として扱われる連続する数値が含まれることを示します。<br /><br /> 注: 列にリグレッサーとしてフラグを設定しても、最終的なモデルでその列がリグレッサーとして使用されるかどうかは保証されません。<br /><br /> マイニング モデル列に適用されます。|  
+|REGRESSOR|列には、分析中に潜在的な独立変数として扱われる連続する数値が含まれることを示します。<br /><br /> 注:列がリグレッサーとしてフラグを設定しても、列が、最終的なモデルでリグレッサーとして使用されることとは限りません。<br /><br /> マイニング モデル列に適用されます。|  
   
 ### <a name="regressors-in-linear-regression-models"></a>線形回帰モデルのリグレッサー  
  線形回帰モデルは、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] デシジョン ツリー アルゴリズムに基づいています。 ただし、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 線形回帰アルゴリズムを使用していない場合でも、連続属性の回帰を表すツリーやノードがデシジョン ツリー モデルに含まれることはあります。  
@@ -71,7 +70,7 @@ ms.locfileid: "48106072"
   
  FORCED_REGRESSOR パラメーターを使用すると、アルゴリズムで特定のリグレッサーが使用されるようにすることができます。 このパラメーターは、Microsoft デシジョン ツリー アルゴリズムと Microsoft 線形回帰アルゴリズムで使用できます。  
   
-## <a name="requirements"></a>要件  
+## <a name="requirements"></a>必要条件  
  線形回帰モデルには、キー列、入力列、および少なくとも 1 つの予測可能列が必要です。  
   
 ### <a name="input-and-predictable-columns"></a>入力列と予測可能列  
@@ -83,11 +82,11 @@ ms.locfileid: "48106072"
 |予測可能な属性|Continuous、Cyclical、Ordered|  
   
 > [!NOTE]  
->  `Cyclical` `Ordered`コンテンツの種類がサポートされますが、アルゴリズムは不連続の値として扱うを特別な処理は実行されません。  
+>  コンテンツの種類 `Cyclical` および `Ordered` はサポートされますが、アルゴリズムはこれらを不連続の値として扱い、特別な処理は行いません。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [Microsoft 線形回帰アルゴリズム](microsoft-linear-regression-algorithm.md)   
  [線形回帰モデルのクエリ例](linear-regression-model-query-examples.md)   
- [線形回帰モデルのマイニング モデル コンテンツ&#40;Analysis Services - データ マイニング&#41;](mining-model-content-for-linear-regression-models-analysis-services-data-mining.md)  
+ [線形回帰モデルのマイニング モデル コンテンツ (Analysis Services - データ マイニング)](mining-model-content-for-linear-regression-models-analysis-services-data-mining.md)  
   
   

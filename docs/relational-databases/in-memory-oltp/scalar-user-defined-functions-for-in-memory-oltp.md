@@ -10,14 +10,13 @@ ms.topic: conceptual
 ms.assetid: d2546e40-fdfc-414b-8196-76ed1f124bf5
 author: MightyPen
 ms.author: genemi
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: c00861c25c03e73f3c5ac2b1f2fe2b94bc0d552d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: f3614b1f9c058405c041aa2b4de27d97caadb8fd
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47795690"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68111766"
 ---
 # <a name="scalar-user-defined-functions-for-in-memory-oltp"></a>インメモリ OLTP でのユーザー定義のスカラー関数
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]

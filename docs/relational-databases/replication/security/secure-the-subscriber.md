@@ -14,17 +14,19 @@ helpviewer_keywords:
 ms.assetid: c8f0d62a-8b5d-4a21-9aec-223da52bb708
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 0b91a574a9b239e2e9f7bca83151fd50d37b08c9
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+monikerRange: =azuresqldb-current||>=sql-server-2014||=sqlallproducts-allversions
+ms.openlocfilehash: 2ab65d61abb497c1930b94868f0a8b3433b44c95
+ms.sourcegitcommit: 734529a6f108e6ee6bfce939d8be562d405e1832
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54131652"
+ms.lasthandoff: 09/02/2019
+ms.locfileid: "70212299"
 ---
 # <a name="secure-the-subscriber"></a>サブスクライバーのセキュリティ保護
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md.md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   マージ エージェントとディストリビューション エージェントはサブスクライバーに接続します。 これらの接続は、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ログインまたは Windows ログインのコンテキスト下で行われます。 最低限必要な権限のみを与え、かつ、すべてのパスワードの格納を保護するという原則に従って、これらの各エージェントに対し適切なログインを提供することが重要です。 各エージェントに必要な権限の詳細については、「 [Replication Agent Security Model](../../../relational-databases/replication/security/replication-agent-security-model.md)」を参照してください。  
+
+[!INCLUDE[azure-sql-db-replication-supportability-note](../../../includes/azure-sql-db-replication-supportability-note.md)]
   
 ## <a name="distribution-agent"></a>ディストリビューション エージェント  
  サブスクリプションごとに 1 つのディストリビューション エージェント (パブリケーションの新規作成ウィザードで既定で作成される独立したエージェント)、またはパブリケーション データベースとサブスクリプション データベースのペアごとに 1 つのディストリビューション エージェント (共有エージェント) があります。 T  
@@ -55,7 +57,7 @@ ms.locfileid: "54131652"
  詳細については、「[トランザクション パブリケーションの更新可能なサブスクリプションの作成](../../../relational-databases/replication/publish/create-an-updatable-subscription-to-a-transactional-publication.md)」および「[レプリケーションのセキュリティ設定の表示および変更](../../../relational-databases/replication/security/view-and-modify-replication-security-settings.md)」を参照してください。  
   
 > [!IMPORTANT]  
->  接続用に指定するアカウントには、レプリケーションによってパブリケーション データベース内に作成されるビューのデータの挿入、更新、および削除だけを実行できる権限を与える必要があります。それ以外の権限は与えないでください。 各サブスクライバーで構成したアカウントに、**syncobj_***\<HexadecimalNumber>* の形式で名前が指定されたパブリケーション データベース内のビューに対するアクセス許可を与えます。  
+>  接続用に指定するアカウントには、レプリケーションによってパブリケーション データベース内に作成されるビューのデータの挿入、更新、および削除だけを実行できる権限を与える必要があります。それ以外の権限は与えないでください。 各サブスクライバーで構成したアカウントに、**syncobj_**_\<HexadecimalNumber>_ の形式で名前が指定されたパブリケーション データベース内のビューに対する権限を与えます。  
   
 ## <a name="queued-updating-subscriptions"></a>キュー更新サブスクリプション  
  キュー更新サブスクリプションを構成する際には、セキュリティに関して、以下の 2 点に注意してください。  

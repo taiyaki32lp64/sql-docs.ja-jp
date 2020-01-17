@@ -13,11 +13,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: e9df2b0158504577630caa6830687a2665c91327
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53365784"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63050086"
 ---
 # <a name="failover-policy-for-failover-cluster-instances"></a>Failover Policy for Failover Cluster Instances
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] フェールオーバー クラスター インスタンス (FCI) において、特定の時点で Windows Server フェールオーバー クラスター (WSFC) クラスター リソース グループを所有できるノードは 1 つだけです。 FCI のこのノードを通じて、クライアント要求が処理されます。 万一障害が発生した場合や再起動が失敗した場合、グループの所有権が、FCI 内の別の WSFC ノードに移ります。 この処理はフェールオーバーと呼ばれます。 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] では、障害検出の信頼性が向上し、柔軟なフェールオーバー ポリシーが提供されます。  
@@ -101,14 +101,14 @@ ms.locfileid: "53365784"
 |4|中程度のサーバー エラーによるフェールオーバーまたは再起動|次のいずれかの状態が発生した場合に、サーバーの再起動またはフェールオーバーが行われることを示します。<br /><br /> SQL Server サービスが停止した。<br /><br /> SQL Server インスタンスが応答しない (リソース DLL が HealthCheckTimeout の設定時間内に sp_server_diagnostics からデータを受け取れない)。<br /><br /> システム ストアド プロシージャ sp_server_diagnostics から 'system エラー' が返される。<br /><br /> システム ストアド プロシージャ sp_server_diagnostics から 'resource エラー' が返される。|  
 |5|限定されたエラー状態によるフェールオーバーまたは再起動|次のいずれかの状態が発生した場合に、サーバーの再起動またはフェールオーバーが行われることを示します。<br /><br /> SQL Server サービスが停止した。<br /><br /> SQL Server インスタンスが応答しない (リソース DLL が HealthCheckTimeout の設定時間内に sp_server_diagnostics からデータを受け取れない)。<br /><br /> システム ストアド プロシージャ sp_server_diagnostics から 'system エラー' が返される。<br /><br /> システム ストアド プロシージャ sp_server_diagnostics から 'resource エラー' が返される。<br /><br /> システム ストアド プロシージャ sp_server_diagnostics から 'query_processing エラー' が返される。|  
   
- * 既定値  
+ \* 既定値  
   
 ####  <a name="respond"></a> エラーへの対応  
  1 つまたは複数のエラー条件が検出された後で WSFC サービスがどのようにエラーに対応するかは、WSFC クォーラムの状態と、FCI リソース グループの再起動およびフェールオーバー設定に依存します。 FCI がその WSFC クォーラムを失った場合、FCI 全体がオフラインになり、FCI は高可用性を失います。 FCI が WSFC クォーラムを保持し続けた場合、WSFC サービスは、最初に障害が発生したノードの再起動を試み、再起動の試行が失敗した場合はフェールオーバーを実行することによって対応します。 再起動とフェールオーバーの設定は、フェールオーバー クラスター マネージャー スナップインで構成します。 詳細については、これらの設定を参照してください[\<リソース > プロパティ。[ポリシー] タブ](https://technet.microsoft.com/library/cc725685.aspx)します。  
   
  クォーラムの正常性の維持については、「[WSFC クォーラム モードと投票の構成 &#40;SQL Server&#41;](wsfc-quorum-modes-and-voting-configuration-sql-server.md)」をご覧ください。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [ALTER SERVER CONFIGURATION &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-server-configuration-transact-sql)  
   
   

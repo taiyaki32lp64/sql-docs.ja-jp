@@ -10,15 +10,15 @@ helpviewer_keywords:
 - attributes [Master Data Services], creating link attributes
 - creating link attributes [Master Data Services]
 ms.assetid: e6658e9c-5b08-4b8d-b556-17ec2dd041d2
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 943cb761e9c456b0c9da24be3ef14e22a2310dde
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 055bb2e9bc0bc2f1ef70b8a7a7eee07071929ad9
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52755254"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65479954"
 ---
 # <a name="create-a-link-attribute-master-data-services"></a>リンク属性を作成する (マスター データ サービス)
   [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] でユーザーに属性値としてハイパーリンク (http://www.contoso.com など) を入力させる場合、リンク属性を作成します。  

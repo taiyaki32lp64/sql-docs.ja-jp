@@ -1,7 +1,7 @@
 ---
-title: マークされたトランザクションを含む関連データベースの復旧 | Microsoft Docs
-ms.custom: ''
-ms.date: 03/14/2017
+title: マークされたトランザクションを含む関連データベースの復旧
+ms.custom: seo-lt-2019
+ms.date: 12/17/2019
 ms.prod: sql
 ms.prod_service: backup-restore
 ms.reviewer: ''
@@ -22,13 +22,12 @@ helpviewer_keywords:
 ms.assetid: 77a0d9c0-978a-4891-8b0d-a4256c81c3f8
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: a548fe7327c6e3c8ac4febca3db442490c983058
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: 002b5e92c94abece7ea935cb06985a51b78e98c4
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54131702"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75238890"
 ---
 # <a name="recovery-of-related--databases-that-contain-marked-transaction"></a>マークされたトランザクションを含む関連データベースの復旧
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -61,13 +60,13 @@ BEGIN TRANSACTION Tx1 WITH MARK 'not the mark name, just a description'
  複数のデータベースに関係するトランザクションにマークを挿入する方法については、「 [マークされたトランザクションを使用して関連するデータベースを一貫した状態に復元する方法 &#40;完全復旧モデル&#41;](../../relational-databases/backup-restore/use-marked-transactions-to-recover-related-databases-consistently.md)」を参照してください。  
   
 ## <a name="transact-sql-syntax-for-recovering-to-a-mark"></a>特定のマークの時点へ復旧するための Transact-SQL 構文  
- マークされたトランザクションを [RESTORE LOG](../../t-sql/statements/restore-statements-transact-sql.md) ステートメントで指定する場合、次のいずれかの句を使用して、マークに到達した時点またはマークの直前まで復旧できます。  
+ マークされたトランザクションを[RESTORE LOG](../../t-sql/statements/restore-statements-transact-sql.md)ステートメントで指定する場合、次のいずれかの句を使用して、マークに到達した時点またはマークの直前まで復旧できます。  
   
--   WITH STOPATMARK = **'**_<mark_name>_**'** 句を使用して、マークされたトランザクションが復旧ポイントであることを指定します。  
+-   WITH STOPATMARK = **'** _<mark_name>_ **'** 句を使用して、マークされたトランザクションが復旧ポイントであることを指定します。  
   
      STOPATMARK では、マークまでロールフォワードされます。ロールフォワードには、マークされたトランザクションも含まれます。  
   
--   WITH STOPBEFOREMARK = **'**_<mark_name>_**'** 句を使用して、マークの直前のログ レコードが復旧ポイントであることを指定します。  
+-   WITH STOPBEFOREMARK = **'** _<mark_name>_ **'** 句を使用して、マークの直前のログ レコードが復旧ポイントであることを指定します。  
   
      STOPBEFOREMARK では、マークまでロールフォワードされますが、マークされたトランザクションは含まれません。  
   
@@ -118,7 +117,7 @@ BEGIN TRANSACTION Tx1 WITH MARK 'not the mark name, just a description'
  [トランザクション ログ バックアップの適用 &#40;SQL Server&#41;](../../relational-databases/backup-restore/apply-transaction-log-backups-sql-server.md)   
  [マークされたトランザクションを使用して関連するデータベースを一貫した状態に復元する方法 &#40;完全復旧モデル&#41;](../../relational-databases/backup-restore/use-marked-transactions-to-recover-related-databases-consistently.md)   
  [復元と復旧の概要 &#40;SQL Server&#41;](../../relational-databases/backup-restore/restore-and-recovery-overview-sql-server.md)   
- [SQL Server データベースを特定の時点に復元する &#40;完全復旧モデル&#41;](../../relational-databases/backup-restore/restore-a-sql-server-database-to-a-point-in-time-full-recovery-model.md)   
+ [SQL Server データベースを特定の時点に復元する方法 &#40;完全復旧モデル&#41;](../../relational-databases/backup-restore/restore-a-sql-server-database-to-a-point-in-time-full-recovery-model.md)   
  [復元シーケンスの計画と実行 &#40;完全復旧モデル&#41;](../../relational-databases/backup-restore/plan-and-perform-restore-sequences-full-recovery-model.md)  
   
   

@@ -7,15 +7,15 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: b6e23b0c-949a-46d1-8424-4dc3d9035e79
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: bc7f5fb5abe290a24268d6cb813a3b6e365a57da
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 8eb25ae1083e05ccb85dda6d07d391ca58d7951a
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52791054"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62770710"
 ---
 # <a name="sap-bw-source-editor-error-output-page"></a>[SAP BW 変換元エディター] ([エラー出力] ページ)
   **[SAP BW 変換元エディター]** の **[エラー出力]** ページを使用すると、エラー処理オプションを選択したり、エラー出力列のプロパティを設定したりできます。  

@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 6a1b7b7e-5d08-4df8-aa4a-688da7da1b30
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 3f7c22eea63e00126eb674532736071ed39aa9a7
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: c12a94abcc8f31071bb13639c6df1e9c1e2e264a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47796280"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68023259"
 ---
 # <a name="programming-considerations"></a>プログラミングの考慮事項
 ODBC アプリケーションおよびドライバーの作成に関連するトピック数について簡単に説明します。  
@@ -25,7 +24,7 @@ ODBC アプリケーションおよびドライバーの作成に関連するト
   
 -   [マルチスレッド](../../../odbc/reference/develop-app/multithreading.md)  
   
--   [配置](../../../odbc/reference/develop-app/alignment.md)  
+-   [アラインメント](../../../odbc/reference/develop-app/alignment.md)  
   
 -   [Unicode](../../../odbc/reference/develop-app/unicode.md)  
   

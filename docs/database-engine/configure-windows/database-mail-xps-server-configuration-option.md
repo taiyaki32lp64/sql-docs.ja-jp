@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: e22c4e63-1792-473b-af11-14a7931ca9ed
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 2bd57caf166bc86cbd894d316cb62466f3324750
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: e16286e558d860a346ba8fff366009f064e65f91
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52522165"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68011959"
 ---
 # <a name="database-mail-xps-server-configuration-option"></a>Database Mail XPs サーバー構成オプション
 
@@ -27,9 +26,9 @@ ms.locfileid: "52522165"
 
 **Database Mail XPs** オプションを使用して、サーバーのデータベース メールを有効にします。 可能な値は次のとおりです。  
   
-- `0`: データベース メールを使用できません (既定)。  
+- `0`:データベース メールを使用できません (既定)。  
   
-- `1`: データベース メールを使用できます。  
+- `1`:データベース メールを使用できます。  
   
  この設定は、サーバーを停止して再起動しなくてもすぐに有効になります。  
   

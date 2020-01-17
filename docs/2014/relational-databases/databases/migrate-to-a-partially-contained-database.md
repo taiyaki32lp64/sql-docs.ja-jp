@@ -12,12 +12,12 @@ ms.assetid: 90faac38-f79e-496d-b589-e8b2fe01c562
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: e8a7910b943b3d913e419d49fa4641bdc689e4e0
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 0e535935da5c99668e39ab4f84eb98ccd5bab064
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52803695"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62871731"
 ---
 # <a name="migrate-to-a-partially-contained-database"></a>Migrate to a Partially Contained Database
   このトピックでは、部分的包含データベース モデルへの変更を準備する方法を説明し、移行手順を示します。  
@@ -53,7 +53,7 @@ ms.locfileid: "52803695"
 ### <a name="enabling-contained-databases-using-transact-sql"></a>Transact SQL を使用して包含データベースを有効にする  
  次の例では、 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]のインスタンスで包含データベースを有効にします。  
   
-```tsql  
+```sql  
 sp_configure 'contained database authentication', 1;  
 GO  
 RECONFIGURE ;  
@@ -75,7 +75,7 @@ GO
 ### <a name="converting-a-database-to-partially-contained-using-transact-sql"></a>Transact-SQL を使用してデータベースを部分的包含に変換する  
  次の例では、 `Accounting` という名前のデータベースを部分的包含データベースに変換します。  
   
-```tsql  
+```sql  
 USE [master]  
 GO  
 ALTER DATABASE [Accounting] SET CONTAINMENT = PARTIAL  
@@ -94,7 +94,7 @@ GO
 ##  <a name="users"></a> 包含データベース ユーザーへのユーザーの移行  
  次の例では、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ログインに基づくすべてのユーザーを、パスワードを持つ包含データベース ユーザーに移行します。 有効になっていないログインは除外します。 この例は、包含データベースで実行する必要があります。  
   
-```tsql  
+```sql  
 DECLARE @username sysname ;  
 DECLARE user_cursor CURSOR  
     FOR   

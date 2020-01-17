@@ -1,5 +1,5 @@
 ---
-title: getByte (int) メソッド (SQLServerResultSet) |Microsoft Docs
+title: getByte メソッド (int) (SQLServerResultSet) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: b22ba097-6cb8-4c5d-916b-6360dd01d2c5
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: d06874d3bdef4954c6cfc3c2037f9971ce610b80
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: bf00138e512b966614a19adaf152f038c516f9fd
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47763650"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67953491"
 ---
 # <a name="getbyte-method-int-sqlserverresultset"></a>getByte (int) メソッド (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -47,7 +46,7 @@ public byte getByte(int columnIndex)
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- この getByte メソッドは、java.sql.ResultSet インターフェイスの getByte メソッドによって指定されます。  
+ この getByte メソッドは、java.sql.ResultSet インターフェイスの getByte メソッドで規定されています。  
   
  このメソッドは、tinyint や bit などのバイト値を安全に返すことができる [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] データ型でのみサポートされています。 その他のデータ型では例外がスローされます。  
   

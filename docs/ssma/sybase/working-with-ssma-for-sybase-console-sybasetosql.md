@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: c465e477-c479-4aa8-918d-58bf30884789
 author: Shamikg
 ms.author: Shamikg
-manager: craigg
-ms.openlocfilehash: 117438f012686ee7fb40070539aa0848ecc78661
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: fcc1543a26c179ae6a775b6d735283ba068312ab
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51663391"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68112873"
 ---
 # <a name="working-with-ssma-for-sybase-console-sybasetosql"></a>SSMA for Sybase Console の操作 (SybaseToSQL)
 [!INCLUDE[msCoName](../../includes/msconame_md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Migration Assistant (SSMA)、リリースの Sybase Adaptive Server Enterprise (ASE) は、コマンドラインでコンソール アプリケーションからアクセスできるようになりました。 スクリプト ファイルは、コマンドを実行するためのアプリケーションへの入力を形成します。 コンソール アプリケーションとしては、SSMA はにより、スクリプト レベルのインターフェイス、移行サイクルが削減され、移行作業を拡大または縮小します。  
@@ -38,6 +37,6 @@ ms.locfileid: "51663391"
 |[レポートを生成する&#40;SybaseToSQL&#41;](../../ssma/sybase/generating-reports-sybasetosql.md)|レポートを生成するコマンドが表示されます。|  
 |[トラブルシューティング&#40;SybaseToSQL&#41;](../../ssma/sybase/troubleshooting-sybasetosql.md)|移行に関する問題の解決方法に関する簡単な情報を提供します。|  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
 [Ssma for Sybase Console(SybaseToSQL) 作業の開始](https://msdn.microsoft.com/43219dbe-bcfa-427d-9242-f07b1455f15f)  
   

@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 257c6f53-9137-4619-a613-eee33d2077e8
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: cda57aaa1271182540ed83acc9d21856f7c1f013
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 2073159ce86604109c71c7addce7caac431851c5
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47727470"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67993566"
 ---
 # <a name="how-to-configure-error-and-warning-handling-using-the-sqlsrv-driver"></a>方法: SQLSRV ドライバーを使用してエラーおよび警告処理を構成する
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -101,7 +100,7 @@ sqlsrv_close($conn);
 ## <a name="see-also"></a>参照  
 [アクティビティのログ記録](../../connect/php/logging-activity.md)
 
-[For PHP for SQL Server のプログラミング、Microsoft ドライバーのガイド](../../connect/php/programming-guide-for-php-sql-driver.md)
+[SQL Server 用 Microsoft Drivers for PHP のためのプログラミング ガイド](../../connect/php/programming-guide-for-php-sql-driver.md)
 
 [SQLSRV ドライバー API リファレンス](../../connect/php/sqlsrv-driver-api-reference.md)  
   

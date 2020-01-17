@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.bidtoolset.rolemanager.f1
@@ -14,12 +13,12 @@ ms.assetid: e23d27a8-e968-4082-9dbe-963fc724b5d9
 author: minewiskan
 ms.author: owend
 manager: kfile
-ms.openlocfilehash: 5d789812cb8dc3b6c880c4e2234aedbba3cc25bb
-ms.sourcegitcommit: 1a5448747ccb2e13e8f3d9f04012ba5ae04bb0a3
+ms.openlocfilehash: 10e5e26142cd1819e4f2c5f884af9c2f2af10812
+ms.sourcegitcommit: 0818f6cc435519699866db07c49133488af323f4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51558509"
+ms.lasthandoff: 06/20/2019
+ms.locfileid: "67284900"
 ---
 # <a name="create-and-manage-roles-ssas-tabular"></a>ロールの作成および管理 (SSAS テーブル)
   テーブル モデルでは、ロールはあるモデルのメンバー アクセス許可を定義します。 モデル プロジェクトのロールは、 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]の [ロール マネージャー] ダイアログ ボックスを使用して定義します。 モデルが配置されると、データベース管理者は [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]を使用してロールを管理することができます。  
@@ -45,7 +44,7 @@ ms.locfileid: "51558509"
   
     |権限|説明|  
     |----------------|-----------------|  
-    |**なし**|メンバーは、モデル スキーマを変更したり、データをクエリしたりすることはできません。|  
+    |**None**|メンバーは、モデル スキーマを変更したり、データをクエリしたりすることはできません。|  
     |**読み取り**|メンバーは、(行フィルターに基づいて) データをクエリできますが、モデル スキーマを変更することはできません。|  
     |**読み取りと処理**|メンバーは、(行レベル フィルターに基づいて) データをクエリでき、処理およびすべて処理の各操作も実行できますが、モデル スキーマを変更することはできません。|  
     |**[処理]**|メンバーは、処理およびすべて処理の各操作を実行できます。 モデル スキーマを変更することはできませんし、データをクエリすることもできません。|  
@@ -64,11 +63,11 @@ ms.locfileid: "51558509"
   
 9. **[OK]** をクリックします。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [ロール &#40;SSAS テーブル&#41;](roles-ssas-tabular.md)   
  [パースペクティブ (SSAS テーブル)](perspectives-ssas-tabular.md)   
  [Excel で分析 &#40;SSAS テーブル&#41;](analyze-in-excel-ssas-tabular.md)   
- [USERNAME 関数&#40;DAX&#41;](https://msdn.microsoft.com/library/hh230954.aspx)   
- [CUSTOMDATA 関数&#40;DAX&#41;](https://msdn.microsoft.com/library/hh213140.aspx)  
+ [USERNAME 関数&#40;DAX&#41;](/dax/username-function-dax)   
+ [CUSTOMDATA 関数&#40;DAX&#41;](/dax/customdata-function-dax)  
   
   

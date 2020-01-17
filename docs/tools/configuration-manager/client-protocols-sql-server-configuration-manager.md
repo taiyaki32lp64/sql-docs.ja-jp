@@ -8,16 +8,15 @@ ms.reviewer: ''
 ms.technology: configuration
 ms.topic: conceptual
 ms.assetid: 538062f3-4629-4675-8568-5dcf2fff098b
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-manager: craigg
-ms.openlocfilehash: 1734bd4916ff073c0571dfd88b15ba8bd9ab0ca7
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 4f432440bc3428e770af2efd140862a83cac4651
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47821690"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68010219"
 ---
 # <a name="client-protocols-sql-server-configuration-manager"></a>クライアント プロトコル (SQL Server 構成マネージャー)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]

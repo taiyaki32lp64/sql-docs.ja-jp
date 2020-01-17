@@ -11,11 +11,11 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: 63f46f2d548437a707922bb9cf8b58727061253b
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56022173"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63188145"
 ---
 # <a name="processing-the-sequence-clustering-model"></a>シーケンス クラスター モデルの処理
   新しいマイニング構造を作成したら、データ マイニング ソリューションに加えた変更を配置し、構造を処理する必要があります。 新しい構造およびマイニング モデルの両方の処理が完了すると、マイニング モデルを参照できるようになります。  
@@ -39,7 +39,7 @@ ms.locfileid: "56022173"
 ## <a name="next-task-in-lesson"></a>このレッスンの次の作業  
  [シーケンス クラスター モデルの検証&#40;中級者向けデータ マイニング チュートリアル&#41;](../../2014/tutorials/exploring-the-sequence-clustering-model-intermediate-data-mining-tutorial.md)  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [Data Mining Designer](../../2014/analysis-services/data-mining/data-mining-designer.md)   
  [Microsoft Sequence Clustering Algorithm](../../2014/analysis-services/data-mining/microsoft-sequence-clustering-algorithm.md)   
  [処理の要件および注意事項 &#40;データ マイニング&#41;](../../2014/analysis-services/data-mining/processing-requirements-and-considerations-data-mining.md)  

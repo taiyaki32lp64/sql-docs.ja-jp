@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: d8d875bc-7823-46b7-a939-867cefd4de12
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: cf954178516cef633dbe34c1b8b01579c8f3e4ea
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: b4851c8054434713e69d8bf63b046484a01f0398
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53374864"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66071156"
 ---
 # <a name="schedule-data-refresh-and-data-sources-that-do-not-support-windows-authentication-powerpivot-for-sharepoint"></a>定期データ更新と Windows 認証をサポートしないデータ ソース (PowerPivot for SharePoint)
   このトピックでは、Windows 認証を**サポートしない**データ ソースを使用できる PowerPivot for SharePoint 定期データ更新のワークフローについて説明します。 たとえば、Oracle データ ソースまたは IDM DB2 データ ソースが該当します。 このトピックにある図と手順では、Oracle データ ソースを参照していますが、他のデータ ソースにも同じワークフローが当てはまります。  
@@ -55,15 +54,15 @@ ms.locfileid: "53374864"
   
 4.  **[Secure Store のターゲット アプリケーションを新規に作成します]** ページで、次の値を構成します。  
   
-    -   **ターゲット アプリケーション ID:** PowerPivotDataRefresh  
+    -   **ターゲット アプリケーション ID:** PowerPivotDataRefresh します。  
   
-    -   **表示名:** PowerPivotDataRefresh  
+    -   **表示名:** PowerPivotDataRefresh します。  
   
     -   **連絡先の電子メール:** ?  
   
     -   **ターゲット アプリケーションの種類:** グループ。  
   
-    -   **ターゲット アプリケーション ページの URL:**[なし] :  
+    -   **ターゲット アプリケーション ページの URL:** [なし] :  
   
 5.  **[次へ]** をクリックします。  
   
@@ -89,15 +88,15 @@ ms.locfileid: "53374864"
   
 4.  **[Secure Store のターゲット アプリケーションを新規に作成します]** ページで、次の値を構成します。  
   
-    -   **ターゲット アプリケーション ID:** OracleAuthentication  
+    -   **ターゲット アプリケーション ID:** OracleAuthentication します。  
   
-    -   **表示名:** OracleAuthentication  
+    -   **表示名:** OracleAuthentication します。  
   
     -   **連絡先の電子メール:** ?  
   
     -   **ターゲット アプリケーションの種類:** グループ。  
   
-    -   **ターゲット アプリケーション ページの URL:**[なし] :  
+    -   **ターゲット アプリケーション ページの URL:** [なし] :  
   
 5.  **[次へ]** をクリックします。  
   
@@ -115,7 +114,7 @@ ms.locfileid: "53374864"
   
 11. Oracle ユーザー ID と Oracle パスワードを入力して、 **[OK]** をクリックします。  
   
- 詳細については、「SQL Server 認証の対象アプリケーションを作成するには」セクションを参照してください[SQL Server 認証 (SharePoint Server 2013) で Secure Store を使用する](https://technet.microsoft.com/library/gg298949.aspx)(https://technet.microsoft.com/library/gg298949.aspx)します。  
+ 詳細については、「SQL Server 認証の対象アプリケーションを作成するには」セクションを参照してください[SQL Server 認証 (SharePoint Server 2013) で Secure Store を使用する](https://technet.microsoft.com/library/gg298949.aspx)(https://technet.microsoft.com/library/gg298949.aspx) します。  
   
 ## <a name="to-configure-the-powerpivot-service-application"></a>PowerPivot サービス アプリケーションを構成するには  
   

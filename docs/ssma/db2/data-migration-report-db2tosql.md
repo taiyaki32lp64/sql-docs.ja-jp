@@ -9,19 +9,18 @@ ms.topic: conceptual
 ms.assetid: 46ebada7-db36-4ae9-b7ae-baa4b854b237
 author: Shamikg
 ms.author: Shamikg
-manager: craigg
-ms.openlocfilehash: 2305040ee7dc8541ff400f5f87c5c87fd85c118e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 2fb50ca8cab409e117becdc1335d956d05cb818b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47827050"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67989748"
 ---
 # <a name="data-migration-report-db2tosql"></a>データ移行レポート (DB2ToSQL)
 **データ移行レポート**へのデータを移行した後、ダイアログ ボックスが表示されます[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]します。  
   
 ## <a name="options"></a>および  
-**ステータス**  
+**状態**  
 ソースからターゲット データベースへのデータ移行の状態が表示されます。  
   
 **From**  

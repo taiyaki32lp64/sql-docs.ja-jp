@@ -8,17 +8,20 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: language-reference
 ms.assetid: ef3b0325-d8e9-472b-bf11-7d3efa6312ff
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: f1e9343712dd16e57e69504cbf7324f941e224e0
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: bcab50f0e1082ecbff8f19a9261a1d7694616b26
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47605920"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71296753"
 ---
-# <a name="catalogmoveproject---ssisdb-database"></a>catalog.move_project - SSISDB データベース
+# <a name="catalogmove_project---ssisdb-database"></a>catalog.move_project - SSISDB データベース
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
   特定のフォルダーのプロジェクトを [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] カタログ内の別のフォルダーに移動します。  

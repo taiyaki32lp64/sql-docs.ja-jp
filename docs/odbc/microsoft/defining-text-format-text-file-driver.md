@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 3af46dad-52cc-4d5c-a27e-6315d65a74e6
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 00d20f8a6dd4d79b3100549d9286e7534bc8ce6e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 500a81146397fa5c50bd8b74c600d04887ecc99c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47697710"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68096353"
 ---
 # <a name="defining-text-format-text-file-driver"></a>テキスト形式の定義 (テキスト ファイル ドライバー)
 テキストのドライバーを使用すると、ときに使用できます、**テキスト形式の定義** ダイアログ ボックスで選択したファイルの列の形式を定義します。 このダイアログ ボックスでは、各データ テーブルのスキーマを指定することができます。 この情報は、データ ソース ディレクトリに Schema.ini ファイルに書き込まれます。 テキスト データのソース ディレクトリごとに個別の Schema.ini ファイルが作成されます。  
@@ -29,7 +28,7 @@ ms.locfileid: "47697710"
   
  次のオプションが表示されます、**テキスト形式の定義** ダイアログ ボックス。  
   
-|オプション|[情報]|  
+|OPTION|[情報]|  
 |------------|-----------------|  
 |**[追加]**|内の値を使用して、列を追加します**データ型**、**名前**と**幅** ダイアログ ボックスで、かどうか、該当する日付の区切り記号値 Schema.ini から。|  
 |**文字**|**ANSI**または**OEM**します。 OEM では、ANSI 以外の文字セットを指定します。 項目の形式が選択されている場合に、OEM にこれが既定で、**テーブル**リストが以前によって定義されていませんこのダイアログ ボックス。|  

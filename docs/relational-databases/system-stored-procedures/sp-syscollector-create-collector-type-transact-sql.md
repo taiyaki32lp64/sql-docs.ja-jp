@@ -18,15 +18,14 @@ helpviewer_keywords:
 ms.assetid: 568e9119-b9b0-4284-9cef-3878c691de5f
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: f7b50d9cf05f1242ae853f7aa24e7e681bdc245f
-ms.sourcegitcommit: bfa10c54e871700de285d7f819095d51ef70d997
+ms.openlocfilehash: bd8c82a401f78f4907bb891ede845017c00ac5ad
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/14/2019
-ms.locfileid: "54256237"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68032635"
 ---
-# <a name="spsyscollectorcreatecollectortype-transact-sql"></a>sp_syscollector_create_collector_type (Transact-SQL)
+# <a name="spsyscollectorcreatecollectortype-transact-sql"></a>sp_syscollector_create_collector_type (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   データ コレクターのコレクター型を作成します。 コレクター型はの論理ラッパー、[!INCLUDE[ssIS](../../includes/ssis-md.md)]データの収集および管理データ ウェアハウスにアップロードすることの実際のメカニズムを提供するパッケージ。  
@@ -53,17 +52,17 @@ sp_syscollector_create_collector_type
  [ @name = ] '*name*'  
  コレクター型の名前を指定します。 *名前*は**sysname**と指定する必要があります。  
   
- [ @parameter_schema = ] '*parameter_schema*'  
+ [ @parameter_schema =] '*parameter_schema*'  
  このコレクター型の XML スキーマを指定します。 *parameter_schema*は**xml**既定値は NULL です。  
   
- [ @parameter_formatter = ] '*parameter_formatter*'  
+ [ @parameter_formatter =] '*parameter_formatter*'  
  コレクション セットのプロパティ ページで使用するために XML を変換するときのテンプレートです。 *parameter_formatter*は**xml**既定値は NULL です。  
   
- [@collection_package_id = ] *collection_package_id*  
- コレクション セットで使用される [!INCLUDE[ssIS](../../includes/ssis-md.md)] コレクション パッケージを参照する一意なローカル識別子を指定します。 *collection_package_id*は**uniqueidentifer**必要があります。  
+ [@collection_package_id =] *collection_package_id*  
+ ローカル一意識別子が指すは、[!INCLUDE[ssIS](../../includes/ssis-md.md)]コレクション パッケージのコレクション セットによって使用されます。 *collection_package_id*は**uniqueidentifer**必要があります。  
   
- [@upload_package_id = ] *upload_package_id*  
- コレクション セットで使用される [!INCLUDE[ssIS](../../includes/ssis-md.md)] アップロード パッケージを参照する一意なローカル識別子を指定します。 *upload_package_id*は**uniqueidentifier**必要があります。  
+ [@upload_package_id =] *upload_package_id*  
+ ローカル一意識別子が指すは、[!INCLUDE[ssIS](../../includes/ssis-md.md)]コレクション セットによって使用されるパッケージをアップロードします。 *upload_package_id*は**uniqueidentifier**必要があります。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  **0** (成功) または**1** (失敗)  
@@ -109,7 +108,7 @@ EXEC sp_syscollector_create_collector_type
 GO  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [システム ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
  [[データ コレクション]](../../relational-databases/data-collection/data-collection.md)  
   

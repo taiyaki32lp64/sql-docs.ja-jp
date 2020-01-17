@@ -1,5 +1,5 @@
 ---
-title: SQLServerXADataSource コンス トラクター () |Microsoft Docs
+title: SQLServerXADataSource コンストラクター () |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: 03649d56-3319-4867-bef1-559dfd221b8b
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: a807b460c98c87d9269c9cddbc3b933626029a76
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b76d6e6f88580585f00148d8b01be586e3937b96
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47669030"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67970202"
 ---
 # <a name="sqlserverxadatasource-constructor-"></a>SQLServerXADataSource () コンストラクター
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

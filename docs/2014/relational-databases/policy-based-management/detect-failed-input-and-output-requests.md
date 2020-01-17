@@ -13,11 +13,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 0abd1541baeda6152a80980e85e6c902b45e886c
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53371874"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62705172"
 ---
 # <a name="detect-failed-input-output-request"></a>失敗した入出力要求を検出します。
   このルールでは、システム イベント ログの EventId 50 を確認します。 このエラーは、I/O 要求失敗によって発生します。  

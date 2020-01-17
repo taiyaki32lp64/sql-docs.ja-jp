@@ -15,15 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - STInteriorRingN (geometry Data Type)
 ms.assetid: 47310f9f-2cdb-41e0-a6da-7c3cfbf139ac
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: c1e78bb2f5959045dd47f32bb91d057a09fa8f0d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: MladjoA
+ms.author: mlandzic
+ms.openlocfilehash: 328e77c0a5be561f795d1892512e7a72fd21340a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47741140"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67950157"
 ---
 # <a name="stinteriorringn-geometry-data-type"></a>STInteriorRingN (geometry データ型)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -44,9 +43,9 @@ ms.locfileid: "47741140"
 ## <a name="return-types"></a>戻り値の型  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の戻り値の型: **geometry**  
   
- CLR 戻り値の型: **SqlGeometry**  
+ CLR の戻り値の型:**SqlGeometry**  
   
- Open Geospatial Consortium (OGC) の型: **LineString**  
+ Open Geospatial Consortium (OGC) の型:**LineString**  
   
 ## <a name="remarks"></a>Remarks  
  **geometry** インスタンスが多角形ではない場合、このメソッドは **NULL** を返します。 また、式がリングの数より大きい場合、このメソッドは **ArgumentOutOfRangeException** をスローします。 リングの数は `STNumInteriorRing``()` を使用して返すことができます。  

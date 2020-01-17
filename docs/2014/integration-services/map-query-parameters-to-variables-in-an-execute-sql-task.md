@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords:
 - queries [Integration Services], parameter mapping
@@ -15,15 +14,15 @@ helpviewer_keywords:
 - Execute SQL task [Integration Services]
 - variables [Integration Services], mapping parameters to
 ms.assetid: 6a164349-dfcf-4995-80bc-d4e7aee52a83
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 4adc96042090ee1cd184eebdb9f9ca5526312dd2
-ms.sourcegitcommit: a13256f484eee2f52c812646cc989eb0ce6cf6aa
+ms.openlocfilehash: 8863de6fc0418dbf502492ac20f7c5c846696aea
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/25/2019
-ms.locfileid: "56803087"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66057794"
 ---
 # <a name="map-query-parameters-to-variables-in-an-execute-sql-task"></a>クエリ パラメーターを SQL 実行タスクの変数にマップする方法
 

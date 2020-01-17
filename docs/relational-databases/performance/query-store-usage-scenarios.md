@@ -12,14 +12,13 @@ helpviewer_keywords:
 ms.assetid: f5309285-ce93-472c-944b-9014dc8f001d
 author: julieMSFT
 ms.author: jrasnick
-manager: craigg
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 3b9b0e74eebe3a1cf86af9e3bf8a9a8d4e58495b
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||= azure-sqldw-latest||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: b01305a689f7dbe7937560350200d3e81a1785dd
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53372484"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72909817"
 ---
 # <a name="query-store-usage-scenarios"></a>クエリ ストアの使用シナリオ
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
@@ -37,7 +36,7 @@ ms.locfileid: "53372484"
   
  クエリ ストアを使って、次に示す操作を短時間で実行できます。  
   
--   特定の期間 (最後の 1 時間、1 日、1 週間など) にわたって実行メトリックが低下しているすべてのクエリを識別します。 分析をスピードアップさせるために、[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]で、**[後退したクエリ]** を使用します。  
+-   特定の期間 (最後の 1 時間、1 日、1 週間など) にわたって実行メトリックが低下しているすべてのクエリを識別します。 分析をスピードアップさせるために、[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]で、 **[後退したクエリ]** を使用します。  
   
 -   後退したクエリの中から、複数のプランがあり、プランの選択が不適切だったためにパフォーマンスが低下しているクエリを簡単に見つけ出します。 **[Regressed Queries]** (後退したクエリ) の **[プランの概要]** ウィンドウを使用して、後退したクエリのすべてのプランと一定期間のクエリのパフォーマンスを視覚化します。  
   
@@ -50,7 +49,7 @@ ms.locfileid: "53372484"
 ## <a name="identify-and-tune-top-resource-consuming-queries"></a>リソースを大量に消費しているクエリを識別して調整する  
  ワークロードで数千のクエリが生成される可能性がありますが、通常は少数のクエリのみがシステム リソースの大半を実際に使用しています。このため、そのような少数のクエリに注目する必要があります。 ほとんどの場合、リソースを大量に消費しているクエリの中から、後退しているクエリか、調整を行うことで改善できるクエリを見つけることができます。  
   
- 調査を開始する最も簡単な方法は、 **で** [Top Resource Consuming Queries] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)](上位リソース消費クエリ) を開くことです。 ユーザー インターフェイスは、次の 3 つのウィンドウに分かれています。上位リソース消費クエリを表すヒストグラム (左側)、選択したクエリで使用されたプランの概要 (右側)、および選択したプランの視覚化されたクエリ プラン (下部)。 分析するクエリの数と関心のある期間を制御するには、 **[構成]** ボタンをクリックします。 異なるリソース消費ディメンション (期間、CPU、メモリ、IO、実行回数) とベースライン (平均、最小、最大、合計、標準偏差) も選択できます。  
+ 調査を開始する最も簡単な方法は、 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] で **[Top Resource Consuming Queries]** (上位リソース消費クエリ) を開くことです。 ユーザー インターフェイスは、次の 3 つのウィンドウに分かれています。上位リソース消費クエリを表すヒストグラム (左側)、選択したクエリで使用されたプランの概要 (右側)、および選択したプランの視覚化されたクエリ プラン (下部)。 分析するクエリの数と関心のある期間を制御するには、 **[構成]** ボタンをクリックします。 異なるリソース消費ディメンション (期間、CPU、メモリ、IO、実行回数) とベースライン (平均、最小、最大、合計、標準偏差) も選択できます。  
   
  ![query-store-usage-2](../../relational-databases/performance/media/query-store-usage-2.png "query-store-usage-2")  
   
@@ -67,7 +66,7 @@ ms.locfileid: "53372484"
 4.  クエリで使用されるインデックスがデフラグされていることを確認します。  
   
 5.  高コストのクエリの書き直しを検討します。 たとえば、クエリのパラメーター化を利用して、動的 SQL の使用率を下げます。 データを読み取るときに最適なロジックを実装します (アプリケーション側ではなく、データベース側でデータのフィルター処理を適用します)。  
-  
+
 ## <a name="ab-testing"></a>A/B テストを実行する  
  クエリ ストアを使用して、予定しているアプリケーションの変更の導入前と導入後のワークロードのパフォーマンスを比較します。 次の一覧は、クエリ ストアを使用して、環境またはアプリケーションの変更がワークロードのパフォーマンスに与える影響を評価できるさまざまな例を示しています。  
   
@@ -131,6 +130,9 @@ ms.locfileid: "53372484"
     A.  回帰がある場合は、クエリ ストアで、正常に機能していた前のプランを強制的に適用します。  
   
     B.  クエリ プランの適用に失敗した場合、またはパフォーマンスが依然として十分ではない場合は、[データベースの互換性レベル](../../relational-databases/databases/view-or-change-the-compatibility-level-of-a-database.md)を前の設定に戻し、Microsoft カスタマー サポートにお問い合わせください。  
+    
+> [!TIP]
+> [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] *データベースのアップグレード* タスクを使用して、データベースの[データベース互換レベル](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md#compatibility-levels-and-database-engine-upgrades)をアップグレードします。 詳細については、「[クエリ調整アシスタントを使用したデータベースのアップグレード](../../relational-databases/performance/upgrade-dbcompat-using-qta.md)」を参照してください。
   
 ## <a name="identify-and-improve-ad-hoc-workloads"></a>アドホック ワークロードを識別して改善する  
 一部のワークロードには、アプリケーション全体のパフォーマンスを向上させるために調整できる支配的なクエリはありません。 通常、これらのワークロードは、それぞれがシステムリソースの一部を消費する、比較的多数の異なるクエリに分類されます。 これらのクエリは非常にまれに実行される一意のクエリである (通常は 1 回のみ実行されます。このためアドホックという名前がついています) ため、それらのランタイム消費は重要ではありません。 一方で、アプリケーションが常に新しいクエリを生成する場合、システム リソースのかなりの部分がクエリのコンパイルで消費され、これは最適な状況ではありません。 このような状況はクエリ ストアにとって理想的ではなく、大量のクエリとプランが予約済みの領域に殺到した場合、クエリ ストアが非常に短時間で読み取り専用モードに至る可能性があることを意味します。 **サイズ ベース クリーンアップ ポリシー** がアクティブな場合 (クエリ ストアを常に稼働させるために[強くお勧めします](best-practice-with-the-query-store.md) )、バックグラウンド プロセスによってほぼ常にクエリ ストア構造がクリーンアップされますが、この動作もシステム リソースを大幅に消費します。  
@@ -139,7 +141,7 @@ ms.locfileid: "53372484"
   
 ![query-store-usage-6](../../relational-databases/performance/media/query-store-usage-6.png "query-store-usage-6")  
   
-**[実行回数]** メトリックを使用して、上位クエリがアドホックであるかどうかを分析します (クエリ ストアを `QUERY_CAPTURE_MODE = ALL`で実行する必要があります)。 上の図から、**[リソースを消費するクエリの上位]** の 90% が 1 回だけ実行されていることがわかります。  
+**[実行回数]** メトリックを使用して、上位クエリがアドホックであるかどうかを分析します (クエリ ストアを `QUERY_CAPTURE_MODE = ALL`で実行する必要があります)。 上の図から、 **[リソースを消費するクエリの上位]** の 90% が 1 回だけ実行されていることがわかります。  
   
 別の方法として、[!INCLUDE[tsql](../../includes/tsql-md.md)] スクリプトを実行して、システム内のクエリ テキスト、クエリ、およびプランの合計数を取得し、query_hash と plan_hash を比較することで、それらの違いを判別できます。  
   
@@ -216,7 +218,7 @@ ALTER DATABASE [QueryStoreTest] SET QUERY_STORE = ON
 ```  
   
 ## <a name="see-also"></a>参照  
- [関連するビュー、関数、プロシージャ](../../relational-databases/performance/monitoring-performance-by-using-the-query-store.md)   
- [クエリ ストアを使用する際の推奨事項](../../relational-databases/performance/best-practice-with-the-query-store.md)  
-  
+ [クエリのストアを使用した、パフォーマンスの監視](../../relational-databases/performance/monitoring-performance-by-using-the-query-store.md)   
+ [クエリ ストアを使用する際の推奨事項](../../relational-databases/performance/best-practice-with-the-query-store.md)         
+ [クエリ調整アシスタントを使用したデータベースのアップグレード](../../relational-databases/performance/upgrade-dbcompat-using-qta.md)           
   

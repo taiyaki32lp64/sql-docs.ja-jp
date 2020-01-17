@@ -30,15 +30,15 @@ helpviewer_keywords:
 - PROPERTY index
 - XML indexes [SQL Server], creating
 ms.assetid: f5c9209d-b3f3-4543-b30b-01365a5e7333
-author: douglaslMS
-ms.author: douglasl
+author: MightyPen
+ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 09aaf68c28e9f647f2f682de09e3f681bc3d739f
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 7004f2cae60ab69c6c4bf94ceee47d270579570b
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53368124"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62631368"
 ---
 # <a name="xml-indexes-sql-server"></a>XML インデックス (SQL Server)
   `xml` データ型の列には XML インデックスを作成できます。 列に保存されている XML インスタンスのすべてのタグ、値、およびパスにインデックスが設定されるので、クエリのパフォーマンスが向上します。 次のような場合、XML インデックスの効果が得られる可能性があります。  
@@ -53,7 +53,7 @@ ms.locfileid: "53368124"
   
 -   セカンダリ XML インデックス  
   
- `xml` 型の列の最初のインデックスは、プライマリ XML インデックスである必要があります。 プライマリ XML インデックスを使用して、セカンダリ インデックスの次の種類がサポートされます。パス、値、およびプロパティ。 クエリの種類によって異なりますが、これらのセカンダリ XML インデックスを使用することで、クエリのパフォーマンス向上に役立つ場合があります。  
+ `xml` 型の列の最初のインデックスは、プライマリ XML インデックスである必要があります。 プライマリ XML インデックスを使用している場合は、PATH、VALUE、および PROPERTY という種類のセカンダリ XML インデックスがサポートされます。 クエリの種類によって異なりますが、これらのセカンダリ XML インデックスを使用することで、クエリのパフォーマンス向上に役立つ場合があります。  
   
 > [!NOTE]  
 >  XML インデックスを作成したり変更したりするには、`xml` データ型を操作できるようにデータベース オプションが正しく設定されている必要があります。 詳細については、「 [XML 列でのフルテキスト検索の使用](use-full-text-search-with-xml-columns.md)」を参照してください。  
@@ -93,11 +93,11 @@ WHERE CatalogDescription.exist ('/PD:ProductDescription/@ProductModelID[.="19"]'
   
 -   ベース テーブルの主キー。 ベース テーブルとの逆結合のため、ベース テーブルの主キーがプライマリ XML インデックスにコピーされます。ベース テーブルの主キーの最大列数は 15 です。  
   
- このノード情報は、指定されたクエリに対して XML の結果を評価し構築するために使用されます。 最適化のために、タグ名とノード型の情報は整数値でエンコードされるので、パス列でも同じエンコードを使用します。 また、パスのサフィックスが既知の場合にのみパスを照合できるように、パスは逆の順序で格納されます。 以下に例を示します。  
+ このノード情報は、指定されたクエリに対して XML の結果を評価し構築するために使用されます。 最適化のために、タグ名とノード型の情報は整数値でエンコードされるので、パス列でも同じエンコードを使用します。 また、パスのサフィックスが既知の場合にのみパスを照合できるように、パスは逆の順序で格納されます。 例 :  
   
 -   `//ContactRecord/PhoneNumber` 最後の 2 つのロケーション ステップだけが既知です。  
   
- OR  
+ スイッチまたは  
   
 -   `/Book/*/Title` 式の中間でワイルドカード文字 (`*`) が指定されています。  
   
@@ -141,7 +141,7 @@ USE AdventureWorks2012;SELECT InstructionsFROM Production.ProductModel WHERE Pro
   
 -   `/root/Location` パスだけを指定しています。  
   
- OR  
+ スイッチまたは  
   
 -   `/root/Location/@LocationID[.="10"]` パスとノード値の両方を指定しています。  
   
@@ -213,7 +213,7 @@ WHERE ProductModelID = 19
   
  XML インデックスによる領域の使用状況は、テーブル値関数 [sys.dm_db_index_physical_stats](/sql/relational-databases/system-dynamic-management-views/sys-dm-db-index-physical-stats-transact-sql)でわかります。 この関数は、すべてのインデックスの種類について、占有しているディスク ページの数、バイト単位の平均行サイズ、レコードの数などの情報を示します。 また、この情報には XML インデックスも含まれています。 この情報はデータベース パーティションごとに取得できます。 どの XML インデックスにも同一の、ベース テーブルのパーティション構成とパーティション関数が使用されます。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [sys.dm_db_index_physical_stats &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-db-index-physical-stats-transact-sql)   
  [XML Data &#40;SQL Server&#41;](../xml/xml-data-sql-server.md)  
   

@@ -1,5 +1,5 @@
 ---
-title: PDOStatement::fetchObject |Microsoft Docs
+title: 'PDOStatement:: fetchObject |Microsoft Docs'
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 71ad1932-cab3-4c29-8950-f5e82547d3b5
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: c65d059d786d33f324ba254f23216269c0ca0f80
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.openlocfilehash: 118a473e3e1675b81b732eb76f0271bbbe9d2e15
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51604394"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67936012"
 ---
 # <a name="pdostatementfetchobject"></a>PDOStatement::fetchObject
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]

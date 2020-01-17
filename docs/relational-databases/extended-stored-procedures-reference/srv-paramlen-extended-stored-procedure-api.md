@@ -19,15 +19,14 @@ helpviewer_keywords:
 ms.assetid: d1fe92ff-cad6-4396-8216-125e5642e81e
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 26bf69a399621713f19ae89617766e84f9f817be
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 5c89a9ddc1020f29bbcd661ec4c9672ba37f7770
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51663651"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68005702"
 ---
-# <a name="srvparamlen-extended-stored-procedure-api"></a>srv_paramlen (拡張ストアド プロシージャ API)
+# <a name="srv_paramlen-extended-stored-procedure-api"></a>srv_paramlen (拡張ストアド プロシージャ API)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
     
 > [!IMPORTANT]  
@@ -62,7 +61,7 @@ n
   
 |新しいデータ型|入力データ長|  
 |--------------------|-----------------------|  
-|**BITN**|**NULL:** 1<br /><br /> **ZERO:** 1<br /><br /> **>=255:** N/A<br /><br /> **<255:** N/A|  
+|**BITN**|**NULL:** 1<br /><br /> **ZERO:** 1<br /><br /> **>=255:** なし<br /><br /> **<255:** なし|  
 |**BIGVARCHAR**|**NULL:** 0<br /><br /> **ZERO:** 1<br /><br /> **>=255:** 255<br /><br /> **<255:** 実際の *len*|  
 |**BIGCHAR**|**NULL:** 0<br /><br /> **ZERO:** 255<br /><br /> **>=255:** 255<br /><br /> **<255:** 255|  
 |**BIGBINARY**|**NULL:** 0<br /><br /> **ZERO:** 255<br /><br /> **>=255:** 255<br /><br /> **<255:** 255|  

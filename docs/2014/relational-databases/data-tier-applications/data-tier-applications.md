@@ -16,13 +16,13 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: b9731a25633b5bc127039ae81a31df8c69bb8ccb
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52540119"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62873103"
 ---
-# <a name="data-tier-applications"></a>の
+# <a name="data-tier-applications"></a>データ層アプリケーション
   データ層アプリケーション (DAC) は、テーブル、ビュー、インスタンス オブジェクト (ログインを含む) など、ユーザーのデータベースに関連付けられたすべての [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] オブジェクトを定義する論理的なデータベース管理エンティティです。 DAC は、データ層の開発者とデータベース管理者が [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] オブジェクトを DAC パッケージ (DACPAC とも呼ばれます) という移植可能なアーティファクトにパッケージ化できるようにする自己完結型の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データベース配置単位です。  
   
  BACPAC は、データベース スキーマおよびデータベースに格納されているデータをカプセル化する関連アーティファクトです。  
@@ -108,7 +108,7 @@ ms.locfileid: "52540119"
   
 -   **IMPORT**: ユーザーは、スキーマおよびデータをホスト サーバーの新しいデータベースにインポートできます。  
   
- データベースの管理ツールでは、両方の機能がサポートされています。Server Management Studio、Management Portal for SQL Azure、および DACFx API。  
+ この両方の機能が、次のデータベース管理ツールでサポートされます:Server Management Studio、Management Portal for SQL Azure、および DACFx API。  
   
 ## <a name="permissions"></a>アクセス許可  
  データベースを作成 (DAC パッケージを配置することによるデータベースの作成を含む) するには、`dbmanager` ロールのメンバーであるか、`CREATE DATABASE` 権限が割り当てられている必要があります。 データベースを削除するには、`dbmanager` ロールのメンバーであるか、`DROP DATABASE` 権限が割り当てられている必要があります。  

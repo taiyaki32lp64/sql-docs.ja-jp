@@ -21,17 +21,20 @@ helpviewer_keywords:
 - tasks [Integration Services], custom
 - TaskHost object
 ms.assetid: dcbd8615-fa6d-4ddb-b8a5-0b19dddd6239
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: d2c4f5455a1a305805a7d2322906c569b400b062
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 671c49e0b36107682994fdc2192a11db0b40d9d1
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47603680"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71297114"
 ---
 # <a name="developing-a-custom-task"></a>カスタム タスクの開発
+
+[!INCLUDE[ssis-appliesto](../../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] は、作業単位を実行するタスクを使用して、データの抽出、変換、および読み込みをサポートします。 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] には、SQL ステートメントの実行から、FTP サイトからのファイルのダウンロードまで、頻繁に使用される操作を実行するためのさまざまなタスクが用意されています。 用意されているタスクとサポートされている操作が、要件を完全には満たない場合は、カスタム タスクを作成できます。  
   
  カスタム タスクを作成するには、<xref:Microsoft.SqlServer.Dts.Runtime.Task> 基本クラスを継承するクラスを作成し、新しいクラスに <xref:Microsoft.SqlServer.Dts.Runtime.DtsTaskAttribute> 属性を適用して、<xref:Microsoft.SqlServer.Dts.Runtime.Task.Execute%2A> メソッドなど、基本クラスの重要なメソッドとプロパティをオーバーライドする必要があります。  

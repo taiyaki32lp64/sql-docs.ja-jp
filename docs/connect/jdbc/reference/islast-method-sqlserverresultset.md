@@ -1,5 +1,5 @@
 ---
-title: isLast メソッド (SQLServerResultSet) |Microsoft Docs
+title: isLast メソッド (SQLServerResultSet) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: 85d4451f-6392-470e-ab21-78a495b45792
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: b9030898e71ec13a75da9b91e41f9792d31cce82
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 840d1183794a5d69ad108aef8eee9ef7aedffe4b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47798029"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67977612"
 ---
 # <a name="islast-method-sqlserverresultset"></a>isLast メソッド (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -36,13 +35,13 @@ public boolean isLast()
 ```  
   
 ## <a name="return-value"></a>戻り値  
- **true**場合は、カーソルが最後の行にします。 **false**カーソルがそれ以外の場所にある場合、または結果セットに行が含まれていない場合。  
+ カーソルが最後の行にある場合は**true** 。 カーソルが他の位置にある場合、または結果セットに行が含まれていない場合は**false** 。  
   
 ## <a name="exceptions"></a>例外  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- この isLast メソッドは、java.sql.ResultSet インターフェイスの isLast メソッドによって指定されます。  
+ この isLast メソッドは、java.sql.ResultSet インターフェイスの isLast メソッドで規定されています。  
   
  このメソッドを順方向カーソルおよび動的カーソルで使用すると、例外がスローされます。  
   

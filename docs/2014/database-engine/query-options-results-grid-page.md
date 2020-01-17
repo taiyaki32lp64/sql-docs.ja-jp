@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 f1_keywords:
 - sql12.swb.query.grid.f1
@@ -13,12 +12,12 @@ ms.assetid: 764bf435-3aab-4c62-b4e0-64fe020a5a95
 author: craigg-msft
 ms.author: craigg
 manager: craigg
-ms.openlocfilehash: a0351173100703b8b78f7b4b019fcd2c63688918
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 7c50957f59ef4e4743ca1667d6eb7a97869bec18
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48088092"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66089004"
 ---
 # <a name="query-options-results-grid-page"></a>[クエリ オプション] の [結果] ([グリッド] ページ)
   このページを使用すると、クエリ結果セットをグリッド形式で表示するためのオプションを指定できます。  
@@ -49,7 +48,7 @@ ms.locfileid: "48088092"
   
  **[XML データ]**  
   
- **[1 MB]**、 **[2 MB]**、または **[5 MB]** を選択します。 すべての文字を取得する場合は、 **[無制限]** を選択します。  
+ **[1 MB]** 、 **[2 MB]** 、または **[5 MB]** を選択します。 すべての文字を取得する場合は、 **[無制限]** を選択します。  
   
  **既定値にリセット**  
  このページ上のすべての値を元の既定値にリセットします。  

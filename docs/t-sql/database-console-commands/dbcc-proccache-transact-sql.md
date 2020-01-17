@@ -19,20 +19,19 @@ helpviewer_keywords:
 - displaying procedure cache information
 - DBCC PROCCACHE statement
 ms.assetid: 7a4f9f8a-13ff-4bf2-ba29-c17012a23659
-author: uc-msft
+author: pmasl
 ms.author: umajay
-manager: craigg
-ms.openlocfilehash: 2d4580bb57680392c1e3901c2fd64b399c125736
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 7720324915ea147cf5cac938c196957a6cb04c51
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47741110"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68116456"
 ---
 # <a name="dbcc-proccache-transact-sql"></a>DBCC PROCCACHE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-テーブル フォーマット内のプロシージャ キャッシュに関する情報を表示します。
+表形式でプロシージャ キャッシュに関する情報を表示します。
   
 ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
@@ -47,7 +46,7 @@ DBCC PROCCACHE [ WITH NO_INFOMSGS ]
  オプションの指定を許可します。  
   
  NO_INFOMSGS  
- 重大度レベル 0 ～ 10 のすべての情報メッセージを表示しないようにします。  
+ 重大度レベルが 0 から 10 のすべての情報メッセージを表示しないようにします。  
   
 ## <a name="remarks"></a>Remarks  
 プロシージャ キャッシュを使用してコンパイル済みの実行プランをキャッシュし、バッチの実行速度を上げます。 プロシージャ キャッシュ内のエントリはバッチ レベルです。 プロシージャ キャッシュには、次のエントリが含まれます。

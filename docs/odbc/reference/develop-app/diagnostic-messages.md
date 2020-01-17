@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 98027871-9901-476e-a722-ee58b7723c1f
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 883cd29d8628f1e9270ae95a772c4d116b896710
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 39ebda5de5820cdfd7333ad1d0997593922e0a4f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47767630"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68039894"
 ---
 # <a name="diagnostic-messages"></a>診断メッセージ
 各 sqlstate は、診断メッセージが返されます。 同じ SQLSTATE は多くの場合、さまざまなメッセージの数が返されます。 たとえば、SQL 構文でほとんどのエラーの SQLSTATE 42000 (構文エラーまたはアクセス違反) が返されます。 ただし、各構文エラーは、別のメッセージで説明を取得する可能性があります。  
@@ -33,11 +32,11 @@ ms.locfileid: "47767630"
   
  エラーまたは警告のソースがコンポーネント自体の場合は、診断メッセージはこれを説明する必要があります。 したがって、メッセージのテキストには、2 つの異なる形式があります。 エラーとデータ ソースで発生しない警告では、診断メッセージは、この形式を使用する必要があります。  
   
- **[** *仕入先 id* **] [** *ODBC コンポーネント-id* **]** *コンポーネント指定されたテキスト*  
+ **[** *vendor-identifier* **][** *ODBC-component-identifier* **]** *component-supplied-text*  
   
  エラーとデータ ソースで発生する警告は、診断メッセージは、この形式を使用する必要があります。  
   
- **[** *仕入先 id* **] [** *ODBC コンポーネント-id* **] [** *データ ソースの識別子* **]** *データ ソースの指定-テキスト*  
+ **[** *vendor-identifier* **][** *ODBC-component-identifier* **][** *data-source-identifier* **]** *data-source-supplied-text*  
   
  次の表では、各要素の意味を示します。  
   
@@ -47,8 +46,8 @@ ms.locfileid: "47767630"
 |*ODBC コンポーネントの識別子*|エラーまたは警告が発生したか、データ ソースから直接、エラーまたは警告を受信するコンポーネントを識別します。|  
 |*データ ソースの識別子*|データ ソースを識別します。 ファイル ベースのドライバーでは、これは通常、ファイル形式など Xbase [1] の DBMS ベースのドライバーでは、これは、DBMS の製品です。|  
 |*コンポーネント指定されたテキスト*|ODBC コンポーネントによって生成されます。|  
-|*データ ソースの指定-テキスト*|データ ソースによって生成されます。|  
+|*data-source-supplied-text*|データ ソースによって生成されます。|  
   
  [1] この場合は、ドライバーは、ドライバーとデータ ソースの両方として機能しています。  
   
- 角かっこ (**[ ]**) メッセージに含める必要があるし、省略可能な項目が示されていません。
+ 角かっこ ( **[ ]** ) メッセージに含める必要があるし、省略可能な項目が示されていません。

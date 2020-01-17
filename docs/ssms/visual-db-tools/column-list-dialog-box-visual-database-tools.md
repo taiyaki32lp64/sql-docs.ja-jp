@@ -10,26 +10,25 @@ ms.topic: conceptual
 f1_keywords:
 - vdt.dlgbox.columnlist
 ms.assetid: 9ebd08b6-fa93-4581-bb6c-96b51d2c895c
-author: stevestein
-ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 3e347f35f176a1c0419d160206cbcb6ee9313590
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: f7290121f2375033c9e731d86ed42b6110fe6f6d
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52515378"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68262539"
 ---
 # <a name="column-list-dialog-box-visual-database-tools"></a>[列一覧] ダイアログ ボックス (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 クエリを記述するときに、選択したテーブル値オブジェクトで利用可能な列の一覧を確認できると便利なことがあります。  
   
-このダイアログ ボックスを **[クエリ デザイナー]** メニューから表示するには、ダイアグラム ペインでテーブル値オブジェクトのヘッダーを右クリックして、 **[プロパティ]** をクリックします。 **[プロパティ]** ウィンドウで、 **[列一覧]** フィールドをクリックします。 次に、フィールドの右側にある省略記号 (**[...]**) をクリックします。  
+このダイアログ ボックスを **[クエリ デザイナー]** メニューから表示するには、ダイアグラム ペインでテーブル値オブジェクトのヘッダーを右クリックして、 **[プロパティ]** をクリックします。 **[プロパティ]** ウィンドウで、 **[列一覧]** フィールドをクリックします。 次に、フィールドの右側にある省略記号 ( **[...]** ) をクリックします。  
   
 このダイアログ ボックスには、選択したテーブル値オブジェクトの列と、その基本的なプロパティ (データ型やその列で null 値が使用できるかどうかなど) が一覧表示されます。  
   
-## <a name="options"></a>[変数]  
-**名前**  
+## <a name="options"></a>オプション  
+**[名前]**  
 選択したテーブル値オブジェクトに含まれる列の名前を表示します。  
   
 **[データ型]**  

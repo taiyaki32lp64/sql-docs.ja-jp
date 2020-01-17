@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 1c9c96ca-81cb-48e2-a71b-0657439a4c51
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 91ea8783ad9baf47bc927a40669ae01d7b008184
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 793df21782fd3bcb06ad8cbe91c3ba325b2f8a95
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48068802"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66061520"
 ---
 # <a name="assign-a-reader-and-writer-role-to-a-package"></a>リーダー ロールおよびライター ロールをパッケージに割り当てる
   リーダー ロールおよびライター ロールをそれぞれのパッケージに割り当てることができます。  

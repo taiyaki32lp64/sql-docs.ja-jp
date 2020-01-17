@@ -15,11 +15,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: a2bc6e2b1becdcecdd6ef7eef5635b6460440b40
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52769104"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63227007"
 ---
 # <a name="view-join-properties-visual-database-tools"></a>結合のプロパティの表示 (Visual Database Tools)
   結合に関する一連のプロパティを [プロパティ] ウィンドウで表示できます。  

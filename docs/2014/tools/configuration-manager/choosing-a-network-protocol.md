@@ -24,11 +24,11 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: 9c167994c7145bce348b6959a57533e398e1d6bb
-ms.sourcegitcommit: ca9b5cb6bccfdba4cdbe1697adf5c673b4713d6c
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/18/2019
-ms.locfileid: "56407552"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63035289"
 ---
 # <a name="choosing-a-network-protocol"></a>ネットワーク プロトコルの選択
   [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]に接続するには、ネットワーク プロトコルを有効にする必要があります。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 同時にいくつかのプロトコルで要求を処理することができます。 クライアントは、1 つのプロトコルを使用して [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] に接続します。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] がどのプロトコルでリッスンしているかをクライアント プログラムによって判別できない場合は、複数のプロトコルを順に試みるようにクライアントを構成してください。 ネットワーク プロトコルを有効化、無効化、または構成するには、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 構成マネージャーを使用します。  
@@ -45,7 +45,7 @@ ms.locfileid: "56407552"
 ## <a name="named-pipes"></a>名前付きパイプ  
  名前付きパイプは、ローカル エリア ネットワークのために開発されたプロトコルです。 このプロトコルでは、1 つのプロセスが、メモリの一部を使用して別のプロセスに情報を渡します。このとき、1 つ目のプロセスの出力が 2 つ目のプロセスの入力になります。 2 つ目のプロセスは、ローカル (1 つ目のプロセスと同じコンピューター上にある) またはリモート (ネットワーク コンピューター上にある) のどちらでもかまいません。  
   
-## <a name="named-pipes-vs-tcpip-sockets"></a>名前付きパイプとTCP/IP ソケット  
+## <a name="named-pipes-vs-tcpip-sockets"></a>名前付きパイプとします。TCP/IP ソケット  
  高速ローカル エリア ネットワーク (LAN) 環境の場合、TCP/IP ソケットを使用するクライアントと、名前付きパイプを使用するクライアントには、パフォーマンスの点でほとんど差はありません。 ただし、両者のパフォーマンスの違いは、ワイド エリア ネットワーク (WAN) やダイヤルアップ ネットワークなどの低速のネットワークの場合に明らかになります。 これは、プロセス間通信 (IPC) メカニズムによるピア間の通信方法が異なるためです。  
   
  名前付きパイプの場合、ネットワーク通信は通常、より対話的なものになります。 ピアは、別のピアから read コマンドによる要求があるまでデータを送信しません。 ネットワークでの読み取りでは通常、データの読み取りを開始する前に、一連の名前付きパイプ メッセージを処理する必要があります。 これらは低速のネットワークにとって大きなコストとなり、過剰なネットワーク トラフィックを引き起こすので、他のネットワーク クライアントに影響を及ぼします。  

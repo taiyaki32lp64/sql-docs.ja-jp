@@ -1,22 +1,23 @@
 ---
 layout: HubPage
 hide_bc: true
-title: Microsoft Azure ドキュメント
-description: Microsoft Azure クラウド サービスを使用して強力なアプリケーションを構築および管理する方法について説明します。 ドキュメント、コード例、チュートリアルなどを取得します。
+experimental: true
+experiment_id: 81ba5f65-59fb-4d
+title: SQL Server 教育センター
+description: SQL Server と Azure SQL Database について学習するために使用できるリソースの概要。 クイックスタートやチュートリアルから Microsoft Learn や LinkedIn Learning まで。
 ms.topic: hub-page
 ms.prod: sql
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.date: 12/15/2018
+ms.date: 11/05/2019
 featureFlags:
 - clicktale
-ms.openlocfilehash: 73d8181f8e8d04d23dc5adce5a6279c6c4e884be
-ms.sourcegitcommit: 769b71f01052ec9b4fc5eb02d9da9a1a58118029
+ms.openlocfilehash: b05ebcd71bed887d711705b3dffa99bf6ecf05fc
+ms.sourcegitcommit: baa40306cada09e480b4c5ddb44ee8524307a2ab
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56319443"
+ms.lasthandoff: 11/06/2019
+ms.locfileid: "73637927"
 ---
 <div id="main" class="v2">
     <div class="container">
@@ -32,7 +33,7 @@ ms.locfileid: "56319443"
                                     </div>
                                 </div>
                                 <div class="cardText">
-                                    <span class="likeAnH3">SQL Server 2019 (プレビュー) の試用</span>
+                                    <span class="likeAnH3">SQL Server 2019 (プレビュー) を試す</span>
                                 </div>
                             </div>
                         </div>
@@ -79,7 +80,7 @@ ms.locfileid: "56319443"
     </div>
     <div class="container">
         <h1>SQL Server:教育センター</h1>
-        <h2>クイック スタート</h2>
+        <h2>クイックスタート</h2>
          <ul class="cardsF panelContent singlePanelContent" style="display:flex!important;">
                         <li>
                             <a href="/azure/virtual-machines/windows/sql/quickstart-sql-vm-create-portal" data-linktype="external">
@@ -129,6 +130,60 @@ ms.locfileid: "56319443"
                                         </div>
                                         <div class="cardText">
                                             <p>Linux 上での SQL Server の実行</p> 
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/azure/sql-database/sql-database-single-database-get-started" data-linktype="external">
+                            <div class="cardSize">
+                                <div class="cardPadding">
+                                    <div class="card">
+                                        <div class="cardImageOuter">
+                                            <div class="cardImage">
+                                                <img src="media/sql-education-center/ads-quickstart.svg" alt="" data-linktype="external">
+                                            </div>
+                                        </div>
+                                        <div class="cardText">
+                                            <p>Azure SQL Database 単一データベース</p> 
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/azure/sql-database/sql-database-managed-instance-get-started" data-linktype="external">
+                            <div class="cardSize">
+                                <div class="cardPadding">
+                                    <div class="card">
+                                        <div class="cardImageOuter">
+                                            <div class="cardImage">
+                                                <img src="media/sql-education-center/ads-quickstart.svg" alt="" data-linktype="external">
+                                            </div>
+                                        </div>
+                                        <div class="cardText">
+                                            <p>Azure SQL Database マネージド インスタンス</p> 
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            </a>
+                        </li>
+                            <li>
+                            <a href="/azure/sql-data-warehouse/create-data-warehouse-portal" data-linktype="external">
+                            <div class="cardSize">
+                                <div class="cardPadding">
+                                    <div class="card">
+                                        <div class="cardImageOuter">
+                                            <div class="cardImage">
+                                                <img src="media/sql-education-center/ads-quickstart.svg" alt="" data-linktype="external">
+                                            </div>
+                                        </div>
+                                        <div class="cardText">
+                                            <p>Azure SQL Data Warehouse</p> 
                                         </div>
                                     </div>
                                 </div>
@@ -257,7 +312,7 @@ ms.locfileid: "56319443"
                                             </div>
                                         </div>
                                         <div class="cardText">
-                                            <p>Windows Azure BLOB ストレージ サービスへの SQL Server のバックアップと復元</p>
+                                            <p>Azure Blob Storage サービスへの SQL Server のバックアップと復元</p>
                                         </div>
                                     </div>
                                 </div>

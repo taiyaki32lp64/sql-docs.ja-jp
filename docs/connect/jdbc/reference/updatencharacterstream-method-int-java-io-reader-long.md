@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: aeec0a56-038e-45b1-98c8-b1046ebd25db
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 5fad76cca594595a5efbf16a334975869684a039
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 03d1ea61a0f14baed7e83e27fbc585c96ee0e2ab
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47624870"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67998757"
 ---
 # <a name="updatencharacterstream-method-int-javaioreader-long"></a>updateNCharacterStream (int, java.io.Reader, long) メソッド
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -39,7 +38,7 @@ public void updateNCharacterStream(int columnIndex,
   
  *x*  
   
- リーダー オブジェクト。  
+ リーダーオブジェクト。  
   
  *length*  
   
@@ -49,9 +48,9 @@ public void updateNCharacterStream(int columnIndex,
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- この updateNCharacterStream メソッドは、java.sql.ResultSet インターフェイスの updateNCharacterStream メソッドによって指定されます。  
+ この Updaten; Stream メソッドは、java. ResultSet インターフェイスの Updatenキャラクターストリームメソッドによって指定されます。  
   
- このメソッドは、選択するリーダー オブジェクトから Unicode 文字を渡します**nchar**、 **nvarchar (max)**、 **ntext**、および**xml**列。 このメソッドを他のデータ型の列で使用すると、例外がスローされます。  
+ このメソッドは、リーダーオブジェクトから選択した**nchar**、 **nvarchar (max)** 、 **ntext**、および**xml**列に Unicode 文字を渡します。 このメソッドを他のデータ型の列で使用すると、例外がスローされます。  
   
  ストリームの長さが、*length* パラメーターで指定された長さと異なる場合は、行の更新または挿入時に JDBC ドライバーが例外をスローします。  
   

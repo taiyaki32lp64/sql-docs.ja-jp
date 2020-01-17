@@ -7,15 +7,15 @@ ms.reviewer: ''
 ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: 3bd2ec05-933f-4947-b1fe-c9226961eb7d
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 6b3bc7d64e10e4803a2c2c069ab4b21cf8b139ec
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 7cb2f12115e3fe743c49c2f7e69f765da4501ba2
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56039333"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65489547"
 ---
 # <a name="task-9-creating-a-derived-hierarchy-using-master-data-manager"></a>タスク 9:マスター データ マネージャーを使用して派生階層を作成する
   ここでは、マスター データ マネージャーを使用して派生階層を作成します。 この派生階層は、ドメイン ベースの属性リレーションシップから派生した、 **Supplier**と**状態**エンティティ。  

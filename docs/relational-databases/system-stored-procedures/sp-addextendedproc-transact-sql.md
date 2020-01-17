@@ -17,15 +17,14 @@ helpviewer_keywords:
 ms.assetid: c0d4b47b-a855-451e-90e5-5fb2d836ebfa
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: 23c97002d5400d3794bed23fea4fb4eb05efd7f0
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: 0bc8ea22699762927a026ae4cc811500c193555c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54133012"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68072753"
 ---
-# <a name="spaddextendedproc-transact-sql"></a>sp_addextendedproc (Transact-SQL)
+# <a name="spaddextendedproc-transact-sql"></a>sp_addextendedproc (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   拡張ストアド プロシージャの新しい名前を登録します[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]します。  
@@ -44,11 +43,9 @@ sp_addextendedproc [ @functname = ] 'procedure' ,
 ```  
   
 ## <a name="arguments"></a>引数  
- [  **@functname =** ] **'**_プロシージャ_**'**  
- ダイナミックリンク ライブラリ (DLL) の内部で呼び出す関数の名前を指定します。 *プロシージャ*は**nvarchar (517)**、既定値はありません。 *プロシージャ*形式で所有者名を含めることができます必要に応じて*owner.function*します。  
+`[ @functname = ] 'procedure'` ダイナミック リンク ライブラリ (DLL) 内で呼び出す関数の名前です。 *プロシージャ*は**nvarchar (517)** 、既定値はありません。 *プロシージャ*形式で所有者名を含めることができます必要に応じて*owner.function*します。  
   
- [  **@dllname =** ] **'**_dll_**'**  
- 関数が含まれている DLL の名前を指定します。 *dll*は**varchar (255)**、既定値はありません。 DLL の完全パスを指定することをお勧めします。  
+`[ @dllname = ] 'dll'` 関数を含む DLL の名前です。 *dll*は**varchar (255)** 、既定値はありません。 DLL の完全なパスを指定することをお勧めします。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  0 (成功) または 1 (失敗)  

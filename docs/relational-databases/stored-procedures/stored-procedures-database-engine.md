@@ -12,14 +12,13 @@ helpviewer_keywords:
 ms.assetid: cc6daf62-9663-4c3e-950a-ab42e2830427
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: d7165b90db10cab6060d674ad8ae4779af843173
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: e64a097fb4d2eed917155fb3881d233231c413bc
+ms.sourcegitcommit: a154b3050b6e1993f8c3165ff5011ff5fbd30a7e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51671581"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "70148296"
 ---
 # <a name="stored-procedures-database-engine"></a>ストアド プロシージャ (データベース エンジン)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -60,18 +59,19 @@ ms.locfileid: "51671581"
  プロシージャにより参照されるテーブルまたはデータに大幅な変更があると、事前にコンパイルされているプランによりプロシージャの実行が遅くなる場合があります。 この場合には、プロシージャを再コンパイルするか、新しい実行プランを強制することにより、パフォーマンスを向上できます。  
   
 ## <a name="types-of-stored-procedures"></a>ストアド プロシージャの種類  
- ユーザー定義  
+
+ **ユーザー定義**  
  ユーザー定義プロシージャは、ユーザー定義データベース、または **リソース** データベースを除くすべてのシステム データベースに作成できます。 プロシージャは [!INCLUDE[tsql](../../includes/tsql-md.md)] に開発するか、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 共通言語ランタイム (CLR) メソッドの参照として開発できます。  
   
- 一時  
+ **一時**  
  一時プロシージャは、ユーザー定義プロシージャの 1 形式です。 一時プロシージャは永続的なプロシージャと同様ですが、一時プロシージャは **tempdb**に格納されることが異なります。 一時プロシージャには、ローカル一時プロシージャとグローバル一時プロシージャの 2 種類があります。 この 2 種類の一時テーブルでは、名前、表示設定、および可用性が異なります。 ローカル一時プロシージャ名の先頭には、番号記号 (#) が 1 つ付いています。このプロシージャは、作成したユーザーの現在の接続でのみ表示され、この接続が閉じられたときに削除されます。 グローバル一時プロシージャ名の先頭には、番号記号が 2 つ (##) 付いています。このプロシージャは、作成されるとすべてのユーザーに表示され、このプロシージャを使用する最後のセッションの終了時に削除されます。  
   
- システム  
+ **システム**  
  システム プロシージャは [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]に含まれています。 物理的には内部の非表示 **リソース** データベースに格納されますが、論理的には各システム データベースとユーザー定義データベースの **sys** スキーマに表示されます。 さらに、 **msdb** データベースには、警告とジョブのスケジュール設定に使用される **dbo** スキーマ内にシステム ストアド プロシージャも含まれます。 システム プロシージャ名には **sp_** というプレフィックスが付くため、ユーザー定義プロシージャ名を付けるときにこのプレフィックスを使用しないようにすることをお勧めします。 すべてのシステム プロシージャの一覧については、「[システム ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)」を参照してください。  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] から外部プログラムへの、さまざまなメンテナンス作業に使用するためのインターフェイスになるシステム プロシージャがサポートされます。 そのような拡張プロシージャには xp_ プレフィックスが付きます。 すべての拡張プロシージャの一覧については、「[汎用拡張ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/general-extended-stored-procedures-transact-sql.md)」を参照してください。  
   
- 拡張ユーザー定義  
+ **拡張ユーザー定義**  
  拡張プロシージャを使用すると、C などのプログラミング言語で外部ルーチンを作成できます。これらのプロシージャは DLL なので、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスで動的に読み込んで実行できます。  
   
 > [!NOTE]  
@@ -95,6 +95,6 @@ ms.locfileid: "51671581"
 |ストアド プロシージャでパラメーターを使用する方法について説明します。|[パラメーター](../../relational-databases/stored-procedures/parameters.md)|  
   
 ## <a name="related-content"></a>関連コンテンツ  
- [CLR ストアド プロシージャ](https://msdn.microsoft.com/library/bbdd51b2-a9b4-4916-ba6f-7957ac6c3f33)  
-  
+ [CLR ストアド プロシージャ](https://docs.microsoft.com/dotnet/framework/data/adonet/sql/clr-stored-procedures)  
+ [名前の遅延解決](../../t-sql/statements/create-trigger-transact-sql.md#deferred-name-resolution)
   

@@ -11,17 +11,20 @@ helpviewer_keywords:
 - LEN function
 - number of characters
 ms.assetid: d961398b-e4d0-4936-be17-8f4c5882a640
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: 09ef57d07b85f432e7b0ef4e4e814d5aa89a7979
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 4f84bb32435afe7cbe52cea6ed25f59940dbd42c
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47611320"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71297527"
 ---
 # <a name="len-ssis-expression"></a>LEN (SSIS 式)
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   文字式の文字数を返します。 文字列の先頭および末尾に空白が含まれる場合、この関数は、それらの空白をカウントに含めます。 1 バイト文字の文字列と 2 バイト文字の文字列が同一の場合、LEN 関数は同一の値を返します。  
   
 ## <a name="syntax"></a>構文  

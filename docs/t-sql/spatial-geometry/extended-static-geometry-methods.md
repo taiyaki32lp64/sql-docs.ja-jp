@@ -12,15 +12,14 @@ dev_langs:
 helpviewer_keywords:
 - Extended Static Geometry Methods [SQL Server]
 ms.assetid: 04c02af0-5243-4d53-b35a-ddc4113ee8f6
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: 43e7e88c10ffa05036e4a89d32ac6fa9021142f3
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+author: MladjoA
+ms.author: mlandzic
+ms.openlocfilehash: 8b7373754e9f2cd8323e5fdd421a556167380b73
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52530573"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68081154"
 ---
 # <a name="extended-static-geometry-methods"></a>拡張された静的なジオメトリ メソッド
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]

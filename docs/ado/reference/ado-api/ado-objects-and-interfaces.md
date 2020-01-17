@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: d0b7e254-c89f-4406-b846-a060ef038c30
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: f0bba8402bb49d481886e4c81071443873834c8c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e5ecc6de67defb2366bf208c38bd2de5bff643e4
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47660650"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67920908"
 ---
 # <a name="ado-objects-and-interfaces"></a>ADO のオブジェクトとインターフェイス
 これらのオブジェクト間のリレーションシップが表現されて、 [ADO オブジェクト モデル](../../../ado/reference/ado-api/ado-object-model.md)します。  
@@ -43,12 +42,12 @@ ms.locfileid: "47660650"
 |[レコード セット](../../../ado/reference/ado-api/recordset-object-ado.md)|ベース テーブル、またはコマンドの実行の結果からレコード セットを表します。 いつでもでも、 **Recordset**オブジェクトとして現在のレコード セット内で 1 つのレコードのみを参照します。<br /><br /> **Recordset**オブジェクトがスクリプトを実行します。|  
 |[ストリーム](../../../ado/reference/ado-api/stream-object-ado.md)|データのバイナリ ストリームを表します。<br /><br /> **Stream**オブジェクトがスクリプトを実行します。|  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [ADO の API リファレンス](../../../ado/reference/ado-api/ado-api-reference.md)   
  [ADO のコレクション](../../../ado/reference/ado-api/ado-collections.md)   
  [ADO の動的プロパティ](../../../ado/reference/ado-api/ado-dynamic-properties.md)   
  [ADO の列挙定数](../../../ado/reference/ado-api/ado-enumerated-constants.md)   
- [付録 b: ADO エラー](../../../ado/guide/appendixes/appendix-b-ado-errors.md)   
+ [付録 B: ADO エラー](../../../ado/guide/appendixes/appendix-b-ado-errors.md)   
  [ADO イベント](../../../ado/reference/ado-api/ado-events.md)   
  [ADO メソッド](../../../ado/reference/ado-api/ado-methods.md)   
  [ADO オブジェクト モデル](../../../ado/reference/ado-api/ado-object-model.md)   

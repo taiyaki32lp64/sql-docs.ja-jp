@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 helpviewer_keywords:
 - FOR XML AUTO [SQL Server]
@@ -13,12 +12,12 @@ ms.assetid: 10c32f06-f7e1-40e0-8f79-6d921f2bef1d
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 068346ed0adb5c74d5e892d25c2cc7b93fc57871
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 5b42d8fd7694aaa3962d049cb0e9663479778958
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48096762"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66095189"
 ---
 # <a name="for-xml-auto-queries-return-derived-table-references-in-90-or-later-compatibility-modes"></a>互換性モード 90 以上では FOR XML AUTO クエリが派生テーブルの参照を返す
   データベースの互換性レベルが 90 以上に設定されている場合、AUTO モードで実行する FOR XML クエリは派生テーブルの別名への参照を返します。 互換性レベルが 80 に設定されている場合、FOR XML AUTO クエリは派生テーブルを定義するベース テーブルへの参照を返します。  
@@ -62,6 +61,6 @@ FOR XML AUTO;
   
 ## <a name="see-also"></a>参照  
  [データベース エンジンのアップグレードに関する問題](../../../2014/sql-server/install/database-engine-upgrade-issues.md)   
- [SQL Server 2014 アップグレード アドバイザー&#91;新規&#93;](/sql/2014/sql-server/install/sql-server-2014-upgrade-advisor)  
+ [SQL Server 2014 アップグレード アドバイザー&#91;新規&#93;](sql-server-2014-upgrade-advisor.md)  
   
   

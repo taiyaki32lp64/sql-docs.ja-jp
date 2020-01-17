@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 f1_keywords:
 - "10521"
@@ -21,15 +20,15 @@ f1_keywords:
 - sql12.rtp.rptdesigner.mapgroupproperties.general.f1
 - "10507"
 ms.assetid: fdd9b994-d138-4990-a291-279b0249eb72
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 2b2290b738a7433fa1cc67bfd08079790f3029d3
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: 3cc939ac63f1b53e2d2d24d70edc5fe0798bcc51
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56289550"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66106094"
 ---
 # <a name="customize-the-data-and-display-of-a-map-or-map-layer-report-builder-and-ssrs"></a>マップまたはマップ レイヤーのデータと表示のカスタマイズ (レポート ビルダーおよび SSRS)
   ウィザードを使用してマップまたはマップ レイヤーをレポートに追加した後、必要に応じてレポート内のマップの体裁を変更することができます。 改善のヒントを次に示します。  
@@ -126,11 +125,11 @@ ms.locfileid: "56289550"
  レイヤーの詳細については、「[マップまたはマップ レイヤーの追加、変更、または削除 &#40;レポート ビルダーおよび SSRS&#41;](add-change-or-delete-a-map-or-map-layer-report-builder-and-ssrs.md)」を参照してください。  
   
 ##  <a name="DataGrouping"></a> レイヤーのデータ グループを変更する  
- 独自の図形の空間データをどのように集計するかをカスタマイズできます。 レイヤーのグループ プロパティを設定するには、レイヤーのマップ ペインおよびプロパティ ペインでレイヤーを選択し、**[グループ]** をクリックしてから参照ボタン [...] をクリックし、グループ プロパティを開きます。 このダイアログ ボックスでは、グループ式の指定、グループ変数の作成、およびグループ化に使用するデータのフィルター処理を行うことができます。  
+ 独自の図形の空間データをどのように集計するかをカスタマイズできます。 レイヤーのグループ プロパティを設定するには、レイヤーのマップ ペインおよびプロパティ ペインでレイヤーを選択し、 **[グループ]** をクリックしてから参照ボタン [...] をクリックし、グループ プロパティを開きます。 このダイアログ ボックスでは、グループ式の指定、グループ変数の作成、およびグループ化に使用するデータのフィルター処理を行うことができます。  
   
  グループ式は、空間データとの間にリレーションシップを持つ分析データをレイヤー上の各マップ要素に対してどのように集計するかを指定します。 既定では、グループ式は、空間データと分析データの間のリレーションシップに対して指定された対応フィールドのセットです。 たとえば、国または地域の市区町村の場所と人口規模を表示するバブル マップの場合、同じ名前を持つ複数の市区町村が存在する可能性があるため、対応フィールドには、市区町村名を示す [City] と地域名を示す [Region] が含まれます。 対応するグループ式には、[City] と [Region] の 2 つのフィールドが含まれます。  
   
- 詳細については、次を参照してください。[マップ ヒント。SQL Server と空間データの集計にシェープファイルをインポートする方法](https://go.microsoft.com/fwlink/?LinkID=214991)します。  
+ 詳細については、「[Map Tips:How To Import Shapefiles Into SQL Server and Aggregate Spatial Data (マップ ヒント: シェープファイルの SQL Server へのインポートと空間データの集計方法)](https://go.microsoft.com/fwlink/?LinkID=214991)」を参照してください。  
   
  
   

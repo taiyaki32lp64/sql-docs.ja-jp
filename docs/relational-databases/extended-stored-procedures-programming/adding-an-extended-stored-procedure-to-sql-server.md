@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 10f1bb74-3b43-4efd-b7ab-7a85a8600a50
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: fdfd4effc0d41dc31c4aefb95e8574525fb03544
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: bba543dbf89cb1dd3c0eb8a456a54c3c31c51d02
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47648250"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67903409"
 ---
 # <a name="adding-an-extended-stored-procedure-to-sql-server"></a>SQL Server への拡張ストアド プロシージャの追加
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -35,7 +34,7 @@ ms.locfileid: "47648250"
 > [!IMPORTANT]  
 >  システム管理者は、拡張ストアド プロシージャをサーバーに追加し、他のユーザーに実行権限を許可する前に、拡張ストアド プロシージャに有害なコードや悪意のあるコードが含まれていないことを十分に確認する必要があります。  すべてのユーザー入力を検証します。 また、ユーザー入力は検証するまで連結しないでください。 検証していないユーザー入力から作成されたコマンドは、絶対に実行しないでください。  
   
- sp_addextendedproc の最初のパラメーターには、関数の名前を指定します。2 番目のパラメーターには、その関数が含まれている DLL の名前を指定します。 DLL の完全パスを指定することをお勧めします。  
+ sp_addextendedproc の最初のパラメーターには、関数の名前を指定します。2 番目のパラメーターには、その関数が含まれている DLL の名前を指定します。 DLL の完全なパスを指定することをお勧めします。  
   
 > [!IMPORTANT]  
 >  完全パスを使用して登録されなかった既存の DLL は、SQL Server 2005 以降へのアップグレード後に機能しなくなります。 この問題を修正するには、sp_dropextendedproc を使用して DLL の登録を解除し、sp_addextendedproc を使用して完全パスと共に登録し直します。  
@@ -94,7 +93,7 @@ Server: Msg 2812, Level 16, State 62, Line 1
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] を停止して再起動する必要はありません。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [sp_addextendedproc &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addextendedproc-transact-sql.md)   
  [sp_dropextendedproc &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropextendedproc-transact-sql.md)  
   

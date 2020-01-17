@@ -1,5 +1,5 @@
 ---
-title: setInt メソッド (SQLServerCallableStatement) |Microsoft Docs
+title: setInt メソッド (SQLServerCallableStatement) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: 7de05cf4-3a48-4c60-9a1b-6ad2ae43d258
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: d8eb7134d07e48372dc133a92f0b44367348ad5e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 45361c22d1e453b12f8bedf2fba2a4c10f02de0d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47811740"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67974187"
 ---
 # <a name="setint-method-sqlservercallablestatement"></a>setInt メソッド (SQLServerCallableStatement)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

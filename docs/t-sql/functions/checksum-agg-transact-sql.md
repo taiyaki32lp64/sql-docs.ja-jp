@@ -17,15 +17,14 @@ helpviewer_keywords:
 - CHECKSUM_AGG function
 - groups [SQL Server], checksum values
 ms.assetid: cdede70c-4eb5-4c92-98ab-b07787ab7222
-author: MashaMSFT
-ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: f74f05dcb91885bf6f95571242699672f10fb871
-ms.sourcegitcommit: 032273bfbc240fe22ac6c1f6601a14a6d99573f7
+author: MikeRayMSFT
+ms.author: mikeray
+ms.openlocfilehash: 6fa6d6c5736f57338474c17ac41eee55411c865b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/01/2019
-ms.locfileid: "55513812"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68105016"
 ---
 # <a name="checksumagg-transact-sql"></a>CHECKSUM_AGG (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -60,7 +59,7 @@ DISTINCT
   
 式リストの値が変更された場合、リストのチェックサム値リストも変更される可能性があります。 ただし、まれには、計算されたチェックサムが変更されない可能性があります。
   
-`CHECKSUM_AGG` には、他の集計関数と同様の機能があります。 詳細については、を参照してください。 [集計関数 (&) #40 です。TRANSACT-SQL と #41;](../../t-sql/functions/aggregate-functions-transact-sql.md).
+`CHECKSUM_AGG` には、他の集計関数と同様の機能があります。 詳細については、[集計関数 &#40;Transact-SQL&#41;](../../t-sql/functions/aggregate-functions-transact-sql.md)を参照してください。
   
 ## <a name="examples"></a>使用例  
 次の例では、`CHECKSUM_AGG` を使用して、[!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] データベースの `ProductInventory` テーブルの `Quantity` 列の変更を検出します。
@@ -99,8 +98,8 @@ FROM Production.ProductInventory;
 ```  
   
 ## <a name="see-also"></a>参照
-[チェックサム (&) #40 です。TRANSACT-SQL と #41 です。](../../t-sql/functions/checksum-transact-sql.md)  
-[HASHBYTES (&) #40 です。TRANSACT-SQL と #41 です。](../../t-sql/functions/hashbytes-transact-sql.md)  
-[BINARY_CHECKSUM  &#40;Transact-SQL&#41;](../../t-sql/functions/binary-checksum-transact-sql.md)
+[CHECKSUM &#40;Transact-SQL&#41;](../../t-sql/functions/checksum-transact-sql.md)  
+[HASHBYTES &#40;Transact-SQL&#41;](../../t-sql/functions/hashbytes-transact-sql.md)  
+[BINARY_CHECKSUM &#40;Transact-SQL&#41;](../../t-sql/functions/binary-checksum-transact-sql.md)
 [OVER Clause &#40;Transact-SQL&#41;](../../t-sql/queries/select-over-clause-transact-sql.md)
   

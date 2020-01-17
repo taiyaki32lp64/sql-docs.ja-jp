@@ -11,11 +11,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 6eb2a23761dc24243a7a10b0e4cdbeb5b9ffe58d
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52775441"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63137535"
 ---
 # <a name="sql-server-agent-properties-service-tab"></a>[SQL Server Agent のプロパティ] ダイアログ ボックス ([サービス] タブ)
   このサービスは、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェント サービスです。 グレー表示になっているプロパティ値をこのアプリケーションで変更することはできません。  
@@ -52,6 +52,6 @@ ms.locfileid: "52775441"
 -   無効になっています。このサービスを開始できません。  
   
  **State**  
- このサービスが実行中か、停止しているか、無効になっているかが表示されます。 "**...**" の場合は、状態の変更が保留になっています。  
+ このサービスが実行中か、停止しているか、無効になっているかが表示されます。 " **...** " の場合は、状態の変更が保留になっています。  
   
   

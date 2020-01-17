@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: be4eda13-d4e4-4d6b-bb0d-3310b0a96fc2
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 204ffb54eb0a48f55d4ec1974b123ed4a0e430be
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 5fe89d90510e95468e18b0d744ff566f69654320
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47741580"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67932680"
 ---
 # <a name="fieldenum"></a>FieldEnum
 参照されている特別なフィールドを指定します、[レコード](../../../ado/reference/ado-api/record-object-ado.md)オブジェクトの[フィールド](../../../ado/reference/ado-api/fields-collection-ado.md)コレクション。  
@@ -29,7 +28,7 @@ ms.locfileid: "47741580"
 ## <a name="remarks"></a>コメント  
  これらの定数は、"shortcut"に関連付けられている特別なフィールドへのアクセスを提供する**レコード**します。 取得、[フィールド](../../../ado/reference/ado-api/field-object.md)オブジェクトから、**フィールド**、コレクションでその内容を取得し、**フィールド**オブジェクトの[値](../../../ado/reference/ado-api/value-property-ado.md)プロパティ。  
   
-|定数|値|説明|  
+|定数|Value|説明|  
 |--------------|-----------|-----------------|  
 |**adDefaultStream**|-1|既定値を格納しているフィールドを参照して[Stream](../../../ado/reference/ado-api/stream-object-ado.md)オブジェクトに関連付けられている、**レコード**します。|  
 |**adRecordURL**|-2|現在の絶対 URL 文字列を含むフィールドを参照して**レコード**します。|

@@ -32,21 +32,18 @@ helpviewer_keywords:
 - inflectional forms [full-text search]
 - prefix searches [full-text search]
 ms.assetid: 996c72fc-b1ab-4c96-bd12-946be9c18f84
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: dccf940867666cf9d3a6ca88c2e6980cc4db0dc7
-ms.sourcegitcommit: 96032813f6bf1cba680b5e46d82ae1f0f2da3d11
+author: VanMSFT
+ms.author: vanto
+ms.openlocfilehash: 613dc7c05707d9a432ec6f8f7eab7b8b3bce2cce
+ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/15/2019
-ms.locfileid: "54300259"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "73982832"
 ---
 # <a name="contains-transact-sql"></a>CONTAINS (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  > [!div class="nextstepaction"]
-  > [SQL ドキュメントの目次に関するご意見を共有してください。](https://aka.ms/sqldocsurvey)
 
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] で、単語または語句との完全一致検索やあいまい一致検索、特定の範囲内での検索、または重み付き検索を行います。 CONTAINS は [!INCLUDE[tsql](../../includes/tsql-md.md)] SELECT ステートメントの [WHERE 句](../../t-sql/queries/where-transact-sql.md)で使用される述語です。文字ベースのデータ型を含むフルテキスト インデックス列で [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のフルテキスト検索を実行します。  
   
@@ -58,9 +55,9 @@ ms.locfileid: "54300259"
   
 -   別の単語の近くにある単語。  
   
--   他の単語を語形変化して生成した単語。たとえば、drive という単語からは、drives、drove、driving、driven などの単語が生成されます。  
+-   他の単語を語形変化して生成された単語。たとえば、drive という単語からは、drives、drove、driving、driven などの単語が生成されます。  
   
--   別の単語のシノニムになっている単語 (類義語を使用)。たとえば、"金属" という単語には、"アルミニウム" や "スチール" などのシノニムがあります。  
+-   シソーラスで別の単語のシノニムになっている単語。たとえば、"金属" という単語には、"アルミニウム" や "スチール" などのシノニムがあります。  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] でサポートされているフルテキスト検索の形式については、「[フルテキスト検索でのクエリ](../../relational-databases/search/query-with-full-text-search.md)」を参照してください。  
  
@@ -154,7 +151,7 @@ CONTAINS (
  検索条件の FROM 句で指定したテーブルのすべてのフルテキスト インデックス付きの列が検索対象になります。 CONTAINS 句内の列は、フルテキスト インデックスがある単一テーブルから取得する必要があります。 *language_term* を指定しない場合、テーブルのすべての列の言語は同じである必要があります。  
   
  PROPERTY ( *column_name* , '*property_name*')  
-**適用対象**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 
+**適用対象**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 以降。 
   
  指定した検索条件を検索するドキュメント プロパティを指定します。  
   
@@ -207,18 +204,18 @@ WHERE CONTAINS(Description, @SearchWord);
  スペースまたは句読点なしの文字列を指定します。  
   
  *phrase*  
- 単語の間をスペースで区切った 1 つ以上の単語を指定します。  
+ 単語間をスペースで区切った 1 つ以上の語を指定します。  
   
 > [!NOTE]  
->  一部のアジア言語など、言語の中には、語句を構成するときに単語の間にスペースを挿入しないものがあります。  
+>  アジアの一部の言語などのフレーズでは、語句を構成するときに単語間にスペースを挿入しないものがあります。  
   
 \<simple_term>  
-単語または語句に対する完全一致を指定します。 有効な単純語の例として、"blue berry"、blueberry、および "Microsoft SQL Server" などがあります。 語句は二重引用符 ("") で囲みます。 語句内の単語は、*\<contains_search_condition>* の指定と同じ順序で、データベース列に含まれている必要があります。 単語または語句内の文字の検索では、大文字と小文字は区別されません。 フルテキスト インデックス化された列の a、and、the などのノイズ ワード ([ストップワード](../../relational-databases/search/configure-and-manage-stopwords-and-stoplists-for-full-text-search.md)) は、フルテキスト インデックスには格納されません。 1 つの単語の検索にノイズ ワードを使用した場合、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ではクエリにノイズ ワードだけが指定されていることを示すエラーが返されます。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の各インスタンスのディレクトリ \Mssql\Binn\FTERef にノイズ ワードの標準リストがあります。  
+単語または語句に対する完全一致を指定します。 有効な単純語の例には、"blue berry"、blueberry、および "Microsoft SQL Server" などがあります。 語句は二重引用符 ("") で囲みます。 語句内の単語は、 *\<contains_search_condition>* の指定と同じ順序で、データベース列に含まれている必要があります。 単語または語句内の文字の検索では、大文字と小文字は区別されません。 フルテキスト インデックス化された列の a、and、the などのノイズ ワード ([ストップワード](../../relational-databases/search/configure-and-manage-stopwords-and-stoplists-for-full-text-search.md)) は、フルテキスト インデックスには格納されません。 1 つの単語の検索にノイズ ワードを使用した場合、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ではクエリにノイズ ワードだけが指定されていることを示すエラーが返されます。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の各インスタンスのディレクトリ \Mssql\Binn\FTERef にノイズ ワードの標準リストがあります。  
   
- 句読点は無視されます。 したがって、`CONTAINS(testing, "computer failure")` は、"Where is my computer?  Failure to find it would be expensive." がある行に一致します。 ワード ブレーカーの動作の詳細については、「[検索用のワード ブレーカーとステミング機能の構成と管理](../../relational-databases/search/configure-and-manage-word-breakers-and-stemmers-for-search.md)」を参照してください。  
+ 句読点は無視されます。 したがって、`CONTAINS(testing, "computer failure")` は、"Where is my computer? Failure to find it would be expensive." がある行に一致します。 ワード ブレーカーの動作の詳細については、「[検索用のワード ブレーカーとステミング機能の構成と管理](../../relational-databases/search/configure-and-manage-word-breakers-and-stemmers-for-search.md)」を参照してください。  
   
  \<prefix_term>  
- 指定のテキストで始まる単語または語句の照合を指定します。 プレフィックス語句を二重引用符 ("") で囲み、後ろの二重引用符の前にアスタリスク (\*) を挿入すると、アスタリスクの前に指定された文字列で始まるすべてのテキストが照合されます。 句は、`CONTAINS (column, '"text*"')` のように指定してください。 アスタリスクは、一致する文字がないか、1 つまたはそれ以上の文字に一致します。その単語または語句を語根とする文字も対象になります。 テキストとアスタリスクが二重引用符で区切られていないと、述語が読み取る内容は `CONTAINS (column, 'text*')` となり、フルテキスト検索でアスタリスクが文字と見なされ、`text*` への完全一致が検索されます。 単語区切りでは通常このような文字は無視されるため、アスタリスク (\*) 文字が付いた文字はフルテキスト エンジンによって検索されません。  
+ 指定のテキストで始まる単語または語句の一致を指定します。 プレフィックス語句を二重引用符 ("") で囲み、後ろの二重引用符の前にアスタリスク (\*) を挿入すると、アスタリスクの前に指定された文字列で始まるすべてのテキストが照合されます。 句は、`CONTAINS (column, '"text*"')` のように指定してください。 アスタリスクは、一致する文字がないか、1 つまたはそれ以上の文字に一致します。その単語または語句を語根とする文字も対象になります。 テキストとアスタリスクが二重引用符で区切られていないと、述語が読み取る内容は `CONTAINS (column, 'text*')` となり、フルテキスト検索でアスタリスクが文字と見なされ、`text*` への完全一致が検索されます。 単語区切りでは通常このような文字は無視されるため、アスタリスク (\*) 文字が付いた文字はフルテキスト エンジンによって検索されません。  
   
  *\<prefix_term>* が語句のときは、語句に含まれるそれぞれの単語が独立したプレフィックスと見なされます。 したがって、"local wine *" というプレフィックスを指定しているクエリでは、"local winery"、"locally wined and dined"などの行が一致します。  
   
@@ -226,7 +223,7 @@ WHERE CONTAINS(Description, @SearchWord);
  指定されている原形の語または語句が、検索対象である元の単語の変形を含んでいる場合に、これらの単語も照合の対象であることを指定します。  
   
  INFLECTIONAL  
- 言語依存の語幹検索が、指定した単純語に対して使用されます。 語幹検索の動作は、特定の各言語の語幹ルールに基づいて定義されます。 ニュートラル言語には、関連する語幹検索がありません。 クエリの対象となっている列の列言語は、必要な語幹検索を参照する場合に使用されます。 *language_term* が指定されると、その言語に対応する語幹検索が使用されます。  
+ 言語依存の語幹検索が、指定した単純語に対して使用されます。 語幹検索の動作は、各言語の語幹ルールに基づいて定義されています。 ニュートラル言語には、関連する語幹検索がありません。 クエリの対象となっている列の列言語は、必要な語幹検索を参照する場合に使用されます。 *language_term* が指定されると、その言語に対応する語幹検索が使用されます。  
   
  *\<generation_term>* 内に指定された *\<simple_term>* は、名詞と動詞のどちらにも一致しません。  
   
@@ -240,7 +237,7 @@ WHERE CONTAINS(Description, @SearchWord);
 >  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] \<custom_proximity_term>を使用することをお勧めします。  
   
  NEAR | ~  
- 一致が返されるためには、NEAR (~) 演算子の両側の単語または語句がドキュメントに含まれている必要があります。 2 つの検索語句を指定する必要があります。 検索語句には、二重引用符で区切られた 1 つの単語または語句を指定できます ("*語句*")。  
+ 一致が返されるには、NEAR (~) 演算子の両側の単語または語句がドキュメントに含まれている必要があります。 検索語句は 2 つ指定する必要があります。 検索語句には、二重引用符で区切られた 1 つの単語または語句を指定できます ("*語句*")。  
   
  `a NEAR b NEAR c` または `a ~ b ~ c` のように、複数の近接語句をつないで指定できます。 一致が返されるためには、指定したすべての近接語句がドキュメントに含まれている必要があります。  
   
@@ -249,13 +246,13 @@ WHERE CONTAINS(Description, @SearchWord);
  汎用近接語句の詳細については、「[NEAR による他の単語の近くにある単語の検索](../../relational-databases/search/search-for-words-close-to-another-word-with-near.md)」を参照してください。  
   
  \<custom_proximity_term>  
-**適用対象**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
+**適用対象**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 以降。
   
- 単語または語句の照合と、必要に応じて検索語句間の許容最大距離を指定します。 また、検索語句を指定したとおりの順序で検索するように指定することもできます (\<match_order>)。  
+ 一致させる単語または語句と、必要に応じて検索語句間の許容最大距離を指定します。 また、検索語句を指定したとおりの順序で検索するように指定することもできます (\<match_order>)。  
   
  検索語句には、二重引用符で区切られた 1 つの単語または語句を指定できます ("*語句*")。 一致が返されるためには、指定したすべての語句がドキュメントに含まれている必要があります。 2 つ以上の検索語句を指定する必要があります。 検索語句の最大数は 64 です。  
   
- 既定では、カスタム近接語句の場合、語句の間の距離やその順序に関係なく、指定した語句が含まれているすべての行が返されます。 たとえば、次のクエリと一致するには、`term1` と "`term3 term4`" が任意の場所に任意の順序でドキュメントに含まれているだけで十分です。  
+ カスタム近接語句の場合、既定では、語句の間の距離やその順序に関係なく、指定した語句が含まれているすべての行が返されます。 たとえば、次のクエリと一致するには、`term1` と "`term3 term4`" が任意の場所に任意の順序でドキュメントに含まれているだけで十分です。  
   
 ```  
 CONTAINS(column_name, 'NEAR(term1,"term3 term4")')  
@@ -266,8 +263,8 @@ CONTAINS(column_name, 'NEAR(term1,"term3 term4")')
  \<maximum_distance>  
  文字列と一致すると見なされるための、その文字列の先頭と末尾にある検索語句間の許容最大距離を指定します。  
   
- *整数 (integer)*  
- 0 ～ 4294967295 の正の整数を指定します。 この値により、指定した他の検索用語を除く最初と最後の検索語句間にある非検索語句の数を制御します。  
+ *integer*  
+ 0 から 4294967295 の正の整数を指定します。 この値により、指定した他の検索用語を除く最初と最後の検索語句間にある非検索語句の数を制御できます。  
   
  たとえば、次のクエリでは、最大距離が 5 語以内で `AA` と `BB` を任意の順序で検索します。  
   
@@ -296,7 +293,7 @@ CONTAINS(column_name, 'NEAR((AA,BB,CC),5)')
  \<match_order> には、次のいずれかの値を指定します。  
   
  **TRUE**  
- 語句を指定した順序が適用されます。 たとえば、`NEAR(A,B)` は、`A ... B` とだけ一致します。  
+ 語句の指定した順序が適用されます。 たとえば、`NEAR(A,B)` は、`A ... B` とだけ一致します。  
   
  **FALSE**  
  指定した順序を無視します。 たとえば、`NEAR(A,B)` は、`A ... B` と `B ... A` の両方と一致します。  
@@ -318,12 +315,12 @@ CONTAINS(column_name, 'NEAR ((Monday, Tuesday, Wednesday), MAX, TRUE)')
  *\<weighted_term>* キーワードを指定します。  
   
  WEIGHT(*weight_value*)  
- 0.0 ～ 1.0 の間で重み値を指定します。 *\<weighted_term>* 内の各コンポーネントには、*weight_value* を含めることができます。 *weight_value* は、クエリのさまざまな部分に影響を与える、クエリに一致する各行に割り当てられる順位値を変更することです。 WEIGHT は CONTAINS クエリの結果に影響しませんが、WEIGHT は [CONTAINSTABLE](../../relational-databases/system-functions/containstable-transact-sql.md) クエリ内のランクに影響します。  
+ 0\.0 から 1.0 の間で重み値を指定します。 *\<weighted_term>* 内の各コンポーネントには、*weight_value* を含めることができます。 *weight_value* は、クエリのさまざまな部分に影響を与える、クエリに一致する各行に割り当てられる順位値を変更することです。 WEIGHT は CONTAINS クエリの結果に影響しませんが、WEIGHT は [CONTAINSTABLE](../../relational-databases/system-functions/containstable-transact-sql.md) クエリ内のランクに影響します。  
   
 > [!NOTE]  
 >  小数点区切り文字は、オペレーティング システムのロケールにかかわらず常にピリオドです。  
   
- { AND | & } | { AND NOT | &! } | { OR | | }   
+ { AND | & } | { AND NOT | &! } | { OR | | }  
  2 つの contains 検索条件の間の論理演算を指定します。  
   
  { AND | & }  
@@ -374,7 +371,7 @@ WHERE CONTAINS((Name, Color), 'Red');
   
 ## <a name="examples"></a>使用例  
   
-### <a name="a-using-contains-with-simpleterm"></a>A. CONTAINS を \<simple_term> と共に使用する  
+### <a name="a-using-contains-with-simple_term"></a>A. CONTAINS を \<simple_term> と共に使用する  
  次の例では、 `Mountain` という単語を含み、価格が `$80.99` であるすべての製品を検索します。  
   
 ```sql  
@@ -387,7 +384,7 @@ WHERE ListPrice = 80.99
 GO  
 ```  
   
-### <a name="b-using-contains-and-phrase-with-simpleterm"></a>B. CONTAINS と語句を \<simple_term> と共に使用する  
+### <a name="b-using-contains-and-phrase-with-simple_term"></a>B. CONTAINS と語句を \<simple_term> と共に使用する  
  次の例では、`Mountain` または `Road` のいずれかの語句が含まれている、すべての製品を返します。  
   
 ```sql  
@@ -399,7 +396,7 @@ WHERE CONTAINS(Name, ' Mountain OR Road ')
 GO  
 ```  
   
-### <a name="c-using-contains-with-prefixterm"></a>C. CONTAINS を \<prefix_term> と共に使用する  
+### <a name="c-using-contains-with-prefix_term"></a>C. CONTAINS を \<prefix_term> と共に使用する  
  次の例では、`Name` 列の中で、chain というプレフィックスで始まる 1 つ以上の単語が含まれている、すべての製品名を返します。  
   
 ```sql  
@@ -411,7 +408,7 @@ WHERE CONTAINS(Name, ' "Chain*" ');
 GO  
 ```  
   
-### <a name="d-using-contains-and-or-with-prefixterm"></a>D. CONTAINS および OR を \<prefix_term> と共に使用する  
+### <a name="d-using-contains-and-or-with-prefix_term"></a>D. CONTAINS および OR を \<prefix_term> と共に使用する  
  次の例では、`chain` または `full` のいずれかのプレフィックスを持つ文字列が含まれている、すべてのカテゴリ説明を返します。  
   
 ```sql  
@@ -423,9 +420,9 @@ WHERE CONTAINS(Name, '"chain*" OR "full*"');
 GO  
 ```  
   
-### <a name="e-using-contains-with-proximityterm"></a>E. CONTAINS を \<proximity_term> と共に使用する  
+### <a name="e-using-contains-with-proximity_term"></a>E. CONTAINS を \<proximity_term> と共に使用する  
   
-**適用対象**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 
+**適用対象**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 以降。 
   
  次の例では、`Production.ProductReview` テーブルを対象として、10 語以内の距離で `bike` と "`control`" という単語を含むすべてのコメントを、指定した順序 (つまり、"`bike`"、"`control`" の順) で検索します。  
   
@@ -438,7 +435,7 @@ WHERE CONTAINS(Comments , 'NEAR((bike,control), 10, TRUE)');
 GO  
 ```  
   
-### <a name="f-using-contains-with-generationterm"></a>F. CONTAINS を \<generation_term> と共に使用する  
+### <a name="f-using-contains-with-generation_term"></a>F. CONTAINS を \<generation_term> と共に使用する  
  次の例では、`ride` を原型とする riding、ridden などの単語が含まれている、すべての製品を検索します。  
   
 ```sql  
@@ -450,7 +447,7 @@ WHERE CONTAINS(Description, ' FORMSOF (INFLECTIONAL, ride) ');
 GO  
 ```  
   
-### <a name="g-using-contains-with-weightedterm"></a>G. CONTAINS を \<weighted_term> と共に使用する  
+### <a name="g-using-contains-with-weighted_term"></a>G. CONTAINS を \<weighted_term> と共に使用する  
  次の例では、`performance`、`comfortable`、または `smooth` という単語を含むすべての製品名を検索します。各単語にはそれぞれ異なる重み付けが割り当てられています。  
   
 ```sql  
@@ -522,7 +519,7 @@ GO
   
 ### <a name="k-querying-on-a-document-property"></a>K. ドキュメント プロパティに対してクエリを実行する  
   
-**適用対象**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 
+**適用対象**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 以降。 
   
  次のクエリでは、`Production.Document` テーブルの `Document` 列内で、インデックス化されたプロパティ `Title` を検索します。 このクエリは、`Title` または `Maintenance` という文字列が `Repair` プロパティに含まれているドキュメントのみを返します。  
   

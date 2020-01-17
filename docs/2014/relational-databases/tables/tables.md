@@ -14,11 +14,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 7a456d68283d81cf7eb4f879d76f086484c5e052
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52782884"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68211786"
 ---
 # <a name="tables"></a>テーブル
   テーブルは、データベースのすべてのデータを格納するデータベース オブジェクトです。 テーブルでは、スプレッドシートのように、データが論理的に行と列の形式にまとめられます。 各行は一意なレコードを表し、各列はレコードのフィールドを表します。 たとえば、会社の従業員のデータを格納するテーブルを、各従業員に相当する行と、従業員の社員番号、姓名、住所、役職名、自宅の電話番号などの情報を格納する列から構成する場合があります。  
@@ -83,7 +83,7 @@ ms.locfileid: "52782884"
 |テーブルに計算列を作成する方法について説明します。|[テーブルの計算列の指定](specify-computed-columns-in-a-table.md)|  
 |列の既定値を指定する方法を説明します。 この値は、別の値が指定されない場合に使用されます。|[列の既定値の指定](specify-default-values-for-columns.md)|  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [主キー制約と外部キー制約](primary-and-foreign-key-constraints.md)   
  [UNIQUE 制約と CHECK 制約](unique-constraints-and-check-constraints.md)  
   

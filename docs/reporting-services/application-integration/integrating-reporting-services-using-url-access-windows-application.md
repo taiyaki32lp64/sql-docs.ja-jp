@@ -12,14 +12,14 @@ helpviewer_keywords:
 - browser controls [Reporting Services]
 - URL access [Reporting Services], Windows applications
 ms.assetid: a4b222e5-0cbd-409c-92c4-046a674db8ac
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 3d225f20cae31e9f462d7f7c85c7109a3cecf43d
-ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 30ebdf11faf4780e8091f44ef1460d8980e82505
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51812965"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63012186"
 ---
 # <a name="integrating-reporting-services-using-url-access---windows-application"></a>URL アクセスを使用した Reporting Services の統合 - Windows アプリケーション
   レポート サーバーへの URL アクセスは Web 環境用に最適化されていますが、URL アクセスを使用して [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] レポートを [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows アプリケーションに埋め込むこともできます。 ただし、Windows フォームに関連する URL アクセスでは、Web ブラウザー テクノロジを使用する必要があります。 URL アクセスと Windows フォームでは、次の統合シナリオを使用できます。  
@@ -89,7 +89,7 @@ private void viewReportButton_Click(object sender, System.EventArgs e)
   
 2.  **[ツールボックス]** ダイアログ ボックスで <xref:System.Windows.Forms.WebBrowser> コントロールを探します。  
   
-     **ツールボックス**が表示されていない場合は、**[表示]** メニュー項目をクリックして **[ツールボックス]** を選択することでアクセスできます。  
+     **ツールボックス**が表示されていない場合は、 **[表示]** メニュー項目をクリックして **[ツールボックス]** を選択することでアクセスできます。  
   
 3.  <xref:System.Windows.Forms.WebBrowser> コントロールを Windows フォームのデザイン画面にドラッグします。  
   

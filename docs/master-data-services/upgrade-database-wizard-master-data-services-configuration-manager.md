@@ -1,5 +1,5 @@
 ---
-title: データベースのアップグレード ウィザード (Master Data Services 構成マネージャー) | Microsoft Docs
+title: データベースのアップグレード ウィザード
 ms.custom: ''
 ms.date: 03/20/2017
 ms.prod: sql
@@ -8,21 +8,20 @@ ms.reviewer: ''
 ms.technology: master-data-services
 ms.topic: conceptual
 ms.assetid: b74edba7-d0a2-456b-9673-b1e02bcdea43
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: dd7ac0496532ca0cd034d34fa44d922700c045a8
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
-ms.translationtype: HT
+ms.openlocfilehash: e6d5f9fd7dfe49b71424e13818de51d8c323676c
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52782184"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73728914"
 ---
 # <a name="upgrade-database-wizard-master-data-services-configuration-manager"></a>データベースのアップグレード ウィザード (Master Data Services 構成マネージャー)
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-  **データベースのアップグレード ウィザード** を使用すると、 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] データベースをアップグレードすることができます。  
+  **データベースのアップグレード ウィザード**を使用すると、[!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] データベースをアップグレードすることができます。  
   
 ## <a name="action"></a>操作  
  これは、ウィザードの最初のページです。 **[次へ]** をクリックして、データベースのアップグレード処理を開始します。  
@@ -33,7 +32,7 @@ ms.locfileid: "52782184"
 |コントロール名|[説明]|  
 |------------------|-----------------|  
 |**SQL Server インスタンス (SQL Server instance)**|現在選択されている [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)][!INCLUDE[ssDE](../includes/ssde-md.md)] インスタンスの名前です。|  
-|**[Master Data Services データベース]**|現在選択されている [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] データベースの名前です。|  
+|**[マスター データ サービス データベース]**|現在選択されている [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] データベースの名前です。|  
   
 ## <a name="progress-and-finish"></a>[続行して完了する]  
  アップグレード処理の進捗状況を表示します。 データベースのアップグレードが完了したら、ログ ファイルへのリンクをクリックしてアップグレードに関する詳細情報を表示するか、 **[完了]** をクリックしてデータベースのウィザードを終了し、 **[データベース]** ページに戻ります。 アップグレードされたデータベースが選択され、そのシステム設定を表示および変更できます。  

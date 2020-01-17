@@ -12,17 +12,20 @@ helpviewer_keywords:
 - transformations [Integration Services], about transformations
 - transforming data [Integration Services]
 ms.assetid: e1340b6f-ef75-4b14-af6f-823586eff0ed
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: 9ddbce6d12a8a3697b473eccaf9d8cd89dccd1a1
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: ccabb3d2964d1a2a5d4de6beab7e299eb9befb03
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51640259"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71297723"
 ---
 # <a name="transform-data-with-transformations"></a>変換を使用してデータを変換する
+
+[!INCLUDE[ssis-appliesto](../../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] には、変換元、変換、および変換先という 3 種類のデータ フロー コンポーネントが含まれています。  
   
  次の図は、1 つの変換元、2 つの変換、および 1 つの変換先を持つ、簡単なデータ フローを示しています。  

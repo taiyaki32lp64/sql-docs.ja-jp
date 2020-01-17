@@ -11,11 +11,11 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: 583a6fda2dbb4698405a3d69f33955531b3c1c10
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56040205"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62720048"
 ---
 # <a name="specifying-the-data-type-and-content-type-basic-data-mining-tutorial"></a>データ型およびコンテンツの種類の指定 (基本的なデータ マイニング チュートリアル)
   前の作業では、構造の作成およびモデルのトレーニングに使用する列を選択しました。次の作業では、ウィザードによって設定されたデータ型およびコンテンツの種類を変更します。  
@@ -60,7 +60,7 @@ ms.locfileid: "56040205"
 ## <a name="previous-task-in-lesson"></a>このレッスンの前の作業  
  [ターゲット メーリングのマイニング モデル構造の作成&#40;基本的なデータ マイニング チュートリアル&#41;](../../2014/tutorials/creating-a-targeted-mailing-mining-model-structure-basic-data-mining-tutorial.md)  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [コンテンツの種類 &#40;です。 データ マイニング&#41;](../../2014/analysis-services/data-mining/content-types-data-mining.md)   
  [データ型 (データ マイニング)](../../2014/analysis-services/data-mining/data-types-data-mining.md)  
   

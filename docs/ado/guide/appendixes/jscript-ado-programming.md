@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 62273658-0fe7-4aac-b4d8-f725e6baf043
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: da87199347052189e5af8b881154b37723408d1f
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: 8d07759405dc337667cc8971ce7795af428a0cfa
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53214181"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67926802"
 ---
 # <a name="jscript-ado-programming"></a>JScript での ADO プログラミング
 ## <a name="creating-an-ado-project"></a>ADO プロジェクトの作成  

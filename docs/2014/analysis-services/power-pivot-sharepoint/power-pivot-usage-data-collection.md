@@ -4,24 +4,23 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: 9057cb89-fb17-466e-a1ce-192c8ca20692
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: f9acdc193b608d42b21c69c380fb21db23ec3b89
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 46504906b13323ac4881ca2289e87e31f1cea72f
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48187482"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66071088"
 ---
 # <a name="powerpivot-usage-data-collection"></a>PowerPivot 使用状況データ収集
   使用状況データ収集は、ファーム レベルの SharePoint 機能です。 PowerPivot for SharePoint では、このシステムを使用および拡張して、PowerPivot のデータやサービスがどのように使用されているかを示すレポートが PowerPivot 管理ダッシュボードに用意されています。 SharePoint のインストール方法によっては、使用状況データ収集がファームに対して無効になっていることがあります。 ファーム管理者は、使用状況のログ記録を有効にして、PowerPivot 管理ダッシュボードに表示される使用状況データを作成する必要があります。 イベントを有効にして、powerpivot 使用状況データ収集を構成する方法の詳細について参照してください[の使用状況データ収集を構成する&#40;PowerPivot for SharePoint](configure-usage-data-collection-for-power-pivot-for-sharepoint.md)します。  
   
- PowerPivot 管理ダッシュ ボードの使用状況データについては、次を参照してください。 [PowerPivot Management Dashboard and Usage Data](power-pivot-management-dashboard-and-usage-data.md)します。  
+ PowerPivot 管理ダッシュボードの使用状況データの詳細については、「 [PowerPivot Management Dashboard and Usage Data](power-pivot-management-dashboard-and-usage-data.md)」を参照してください。  
   
  **このトピックの内容:**  
   
@@ -38,7 +37,7 @@ ms.locfileid: "48187482"
   
  使用状況データ収集システムでは、イベント情報が、アプリケーション サーバーまたは Web フロント エンド上の使用状況コレクション システムに入力されます。 使用状況データは、タイマー ジョブに応じてシステム内を移動します。タイマー ジョブにより、データは物理サーバー上の一時データ ファイルからデータベース サーバー上の永続的なストレージに移動します。 次の図に、使用状況データをデータ コレクションおよびレポート システム内で移動させるコンポーネントとプロセスを示します。  
   
- **注:** 使用状況データ収集が有効になっていることを確認してください。 確認するには、SharePoint サーバーの全体管理の **[監視]** に移動します。 詳細については、次を参照してください。[の使用状況データ収集を構成する&#40;PowerPivot for SharePoint](configure-usage-data-collection-for-power-pivot-for-sharepoint.md)します。  
+ **注:** 使用状況データ収集が有効になっていることを確認します。 確認するには、SharePoint サーバーの全体管理の **[監視]** に移動します。 詳細については、次を参照してください。[の使用状況データ収集を構成する&#40;PowerPivot for SharePoint](configure-usage-data-collection-for-power-pivot-for-sharepoint.md)します。  
   
  ![コンポーネントと使用状況データ収集のプロセス。](../media/gmni-usagedata.gif "コンポーネントと使用状況データ収集のプロセス。")  
   
@@ -60,7 +59,7 @@ ms.locfileid: "48187482"
 |データ読み込み|[!INCLUDE[ssGeminiSrv](../../includes/ssgeminisrv-md.md)]によるデータ読み込み操作。 データ読み込みイベントは、最も頻繁に使用されるデータ ソースを特定します。|有効または無効にできます[の使用状況データ収集を構成する&#40;PowerPivot for SharePoint](configure-usage-data-collection-for-power-pivot-for-sharepoint.md)します。|  
 |データ アンロード|PowerPivot サービス アプリケーションによるデータ アンロード操作。 [!INCLUDE[ssGeminiSrv](../../includes/ssgeminisrv-md.md)] は、PowerPivot データ ソースが使用されていない場合、またはサーバーのメモリが不足しているかデータ更新ジョブを実行するために追加のメモリが必要な場合に、非アクティブな PowerPivot データ ソースをアンロードします。|有効または無効にできます[の使用状況データ収集を構成する&#40;PowerPivot for SharePoint](configure-usage-data-collection-for-power-pivot-for-sharepoint.md)します。|  
 |サーバー状態|CPU およびメモリの使用率で測定されたサーバー状態を示すサーバー操作。 このデータは、履歴的なデータです。 サーバーの現在の処理負荷に関するリアルタイム情報は提供されません。|No. このイベントに対して使用状況データは常に収集されます。|  
-|データ更新|スケジュール設定されたデータ更新に応じて PowerPivot サービスにより開始されるデータ更新操作。 データ更新の使用状況履歴は、運用レポート用にアプリケーション レベルで収集され、個々のブックの [データ更新の管理] ページに反映されます。<br /><br /> **注:**[!INCLUDE[ssSQL11SP1](../../includes/sssql11sp1-md.md)] および SharePoint 2013 の配置では、Analysis Services サーバーではなく Excel Services によってデータ更新が管理されます。|No. PowerPivot サービス アプリケーション用のデータ更新を有効にした場合、データ更新の使用状況データは常に収集されます。|  
+|データ更新|スケジュール設定されたデータ更新に応じて PowerPivot サービスにより開始されるデータ更新操作。 データ更新の使用状況履歴は、運用レポート用にアプリケーション レベルで収集され、個々のブックの [データ更新の管理] ページに反映されます。<br /><br /> **注:** [!INCLUDE[ssSQL11SP1](../../includes/sssql11sp1-md.md)] SharePoint 2013 の配置、データ更新は、Excel Services と Analysis Services サーバーではなくによって管理されます。|No. PowerPivot サービス アプリケーション用のデータ更新を有効にした場合、データ更新の使用状況データは常に収集されます。|  
   
 ##  <a name="servicesjobs"></a> サービスおよびタイマー ジョブ  
  次の表に、使用状況データ収集システムのサービスとデータ コレクション ストアを示します。 PowerPivot 管理ダッシュ ボードのレポート サーバーの状態と使用状況データのデータ更新を強制するため、タイマー ジョブ スケジュールをオーバーライドする方法については、次を参照してください。 [SharePoint 2010 で PowerPivot データ更新](../powerpivot-data-refresh-with-sharepoint-2010.md)します。 タイマー ジョブは、SharePoint サーバーの全体管理で確認できます。 **[監視]** に移動し、 **[ジョブ状態の確認]** をクリックして、 **[ジョブ定義の確認]** をクリックします。  

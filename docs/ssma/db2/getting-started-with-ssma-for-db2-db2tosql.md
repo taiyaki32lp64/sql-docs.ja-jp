@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 48ca32fc-1830-4d1f-add7-480ba5ad02e8
 author: Shamikg
 ms.author: Shamikg
-manager: craigg
-ms.openlocfilehash: 86a931c9132a23d9ceb3d46b48fbdce23bf76f92
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 0eab4f23e342c95d83baa70dd03aba2f5d4bc8d1
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47737350"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67989640"
 ---
 # <a name="getting-started-with-ssma-for-db2-db2tosql"></a>Ssma for DB2 作業の開始 (DB2ToSQL)
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Migration Assistant (SSMA) の DB2 できます簡単に変換する DB2 データベース スキーマ[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]スキーマへの結果として得られるスキーマのアップロード[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]を DB2 からデータを移行および[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]します。  
@@ -60,7 +59,7 @@ DB2 メタデータ エクスプ ローラーでは、DB2 スキーマに関す�
 使用することができます[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]変換後の DB2 データベース オブジェクトを選択しのインスタンスとそれらのオブジェクトを同期するメタデータ エクスプ ローラー[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]します。  
   
 ### <a name="metadata"></a>メタデータ  
-各メタデータ エクスプ ローラーの右側には、選択したオブジェクトを記述するタブが。 たとえば、DB2 メタデータ エクスプ ローラーでテーブルを選択する場合は、6 つのタブが表示されます:**テーブル**、 **SQL**、**型マッピング]、[レポート**、**プロパティ**、および**データ**します。 **レポート** タブには、選択したオブジェクトを格納しているレポートを作成した後にのみ情報が含まれます。 内のテーブルを選択した場合[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]メタデータ エクスプ ローラーで、3 つのタブが表示されます:**テーブル**、 **SQL**、および**データ**します。  
+各メタデータ エクスプ ローラーの右側には、選択したオブジェクトを記述するタブが。 たとえば、DB2 メタデータ エクスプ ローラーでテーブルを選択する場合は、6 つのタブが表示されます。**テーブル**、 **SQL**、**型マッピング、レポート**、**プロパティ**、および**データ**します。 **レポート** タブには、選択したオブジェクトを格納しているレポートを作成した後にのみ情報が含まれます。 内のテーブルを選択した場合[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]メタデータ エクスプ ローラーで、3 つのタブが表示されます。**テーブル**、 **SQL**、および**データ**します。  
   
 ほとんどのメタデータの設定とは、読み取り専用です。 ただし、次のメタデータを変更できます。  
   

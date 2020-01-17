@@ -14,12 +14,12 @@ ms.assetid: b456448d-1757-48c8-8bbb-2d1c2d6d61e9
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 1368d29801a414de866003b86c63fb4823c4a7b8
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: d8a1b81d60ef691e02d4b69cc71fa961bbaddf18
+ms.sourcegitcommit: 56b963446965f3a4bb0fa1446f49578dbff382e0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53355762"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67793430"
 ---
 # <a name="always-on-client-connectivity-sql-server"></a>Always On クライアント接続 (SQL Server)
   このトピックでは、AlwaysOn 可用性グループへのクライアント接続に関して、クライアント構成および設定の前提条件、制限、推奨などの考慮事項について説明します。  
@@ -37,13 +37,13 @@ ms.locfileid: "53355762"
 |------------|----------------------------|------------------------|------------------------|--------------------------------------------------------------------|-----------------------------------------------------------------------------------|  
 |SQL Native Client 11.0 ODBC|はい|[はい]|[はい]|[はい]|はい|  
 |SQL Native Client 11.0 OLEDB|いいえ|はい|[はい]|いいえ|いいえ|  
-|ADO.NET with .NET Framework 4.0 の接続の修正プログラムと**<sup>*</sup>**|はい|[はい]|[はい]|[はい]|はい|  
-|.NET Framework 3.5 sp1 の ADO.NET と接続性に関する修正プログラム **<sup>**</sup>**|はい|[はい]|[はい]|[はい]|はい|  
+|ADO.NET with .NET Framework 4.0 の接続の修正プログラムと **<sup>*</sup>** |はい|[はい]|[はい]|[はい]|[はい]|  
+|.NET Framework 3.5 sp1 の ADO.NET と接続性に関する修正プログラム **<sup>** </sup>** |はい|[はい]|[はい]|[はい]|[はい]|  
 |Microsoft JDBC Driver 4.0 for SQL Server|はい|[はい]|[はい]|[はい]|はい|  
   
  **<sup>*</sup>**  ADO .NET with .NET Framework 4.0 用接続の修正プログラムのダウンロード: [ https://support.microsoft.com/kb/2600211](https://support.microsoft.com/kb/2600211)します。  
   
- **<sup>**</sup>* * ADO.NET with .NET Framework 3.5 SP1 用接続の修正プログラムのダウンロード: [ https://support.microsoft.com/kb/2654347](https://support.microsoft.com/kb/2654347)します。  
+ **<sup>** </sup>* * ADO.NET with .NET Framework 3.5 SP1 用接続の修正プログラムのダウンロード: [ https://support.microsoft.com/kb/2654347](https://support.microsoft.com/kb/2654347)します。  
   
 > [!IMPORTANT]  
 >  クライアントは、可用性グループ リスナーに接続するために、TCP 接続文字列を使用する必要があります。  
@@ -56,7 +56,7 @@ ms.locfileid: "53355762"
   
 
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [AlwaysOn 可用性グループの概要&#40;SQL Server&#41;](overview-of-always-on-availability-groups-sql-server.md)   
  [フェールオーバー クラスタ リングと AlwaysOn 可用性グループ&#40;SQL Server&#41;](failover-clustering-and-always-on-availability-groups-sql-server.md)   
  [前提条件、制限事項、および AlwaysOn 可用性グループの推奨事項&#40;SQL Server&#41;](prereqs-restrictions-recommendations-always-on-availability.md)   

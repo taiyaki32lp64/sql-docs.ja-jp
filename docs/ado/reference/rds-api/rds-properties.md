@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: e4e04cbd-21fc-44a1-9f21-49aa68746934
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 08dea52e952986f37be30bb6fc40a295ecfdc898
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.openlocfilehash: 5f6ada7e9c6c793ebc412abc00bf4c0957072740
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51604239"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67963615"
 ---
 # <a name="rds-properties"></a>RDS プロパティ
 > [!IMPORTANT]

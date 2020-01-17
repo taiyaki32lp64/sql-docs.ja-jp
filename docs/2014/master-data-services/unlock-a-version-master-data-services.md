@@ -10,15 +10,15 @@ helpviewer_keywords:
 - unlocking versions [Master Data Services]
 - versions [Master Data Services], unlocking
 ms.assetid: b4cf4404-40f3-46fb-801d-cbf80a95448c
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: cfe3d83f83f24e6867e3555855e79049c4bf0ec2
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 8541dec5d64de7e0e98e30bbc48c5a5c4eeea9fe
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52798104"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65482595"
 ---
 # <a name="unlock-a-version-master-data-services"></a>バージョンをロック解除する (マスター データ サービス)
   [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]でモデルのバージョンをロック解除して、モデルのメンバーおよびメンバーの属性に対する変更を有効にします。  
@@ -30,7 +30,7 @@ ms.locfileid: "52798104"
   
 -   モデル管理者である必要があります。 詳細については、「 [管理者 &#40;マスター データ サービス&#41;](administrators-master-data-services.md)にアクセスすることなくグループに対してユーザーの追加または削除を行うことができます。  
   
--   バージョンのステータスは、**[ロック済み]** である必要があります。 詳細については、「 [バージョンをロックする (マスター データ サービス)](../../2014/master-data-services/lock-a-version-master-data-services.md)」を参照してください。  
+-   バージョンのステータスは、 **[ロック済み]** である必要があります。 詳細については、「 [バージョンをロックする (マスター データ サービス)](../../2014/master-data-services/lock-a-version-master-data-services.md)」を参照してください。  
   
 ### <a name="to-unlock-a-version"></a>バージョンをロック解除するには  
   
@@ -46,7 +46,7 @@ ms.locfileid: "52798104"
   
 -   [バージョンをロックする (マスター データ サービス)](../../2014/master-data-services/lock-a-version-master-data-services.md)  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [バージョン (マスター データ サービス)](../../2014/master-data-services/versions-master-data-services.md)  
   
   

@@ -10,17 +10,20 @@ ms.topic: reference
 helpviewer_keywords:
 - custom log providers [Integration Services], coding
 ms.assetid: 979a29ca-956e-4fdd-ab47-f06e84cead7a
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: 9ab6a6670a2ccb10054108b49724291eed899a1e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 7c6c5cdc269c757b8578314d39fd07f9f947a5e7
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47742480"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71287147"
 ---
 # <a name="coding-a-custom-log-provider"></a>カスタム ログ プロバイダーのコーディング
+
+[!INCLUDE[ssis-appliesto](../../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   <xref:Microsoft.SqlServer.Dts.Runtime.LogProviderBase> 基本クラスを継承するクラスを作成し、<xref:Microsoft.SqlServer.Dts.Runtime.DtsLogProviderAttribute> 属性をそのクラスに適用したら、基本クラスのプロパティとメソッドの実装をオーバーライドして、カスタム機能を提供する必要があります。  
   
  カスタム ログ プロバイダーの実際のサンプルが必要であれば、「[カスタム ログ プロバイダー用ユーザー インターフェイスの開発](../../../integration-services/extending-packages-custom-objects/log-provider/developing-a-user-interface-for-a-custom-log-provider.md)」をご覧ください。  

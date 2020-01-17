@@ -1,6 +1,6 @@
 ---
-title: メモリ最適化テーブルのパーティション分割に関するアプリケーションのパターン | Microsoft Docs
-ms.custom: ''
+title: アプリケーションのパターン - メモリ最適化テーブルのパーティション分割
+ms.custom: seo-dt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -10,14 +10,13 @@ ms.topic: conceptual
 ms.assetid: 3f867763-a8e6-413a-b015-20e9672cc4d1
 author: MightyPen
 ms.author: genemi
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 1502b5f4e71807f0141ecd404011947ec8a10d57
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 0c871da0fcd20cffc2c6510d7084f79faefa2d50
+ms.sourcegitcommit: 384e7eeb0020e17a018ef8087970038aabdd9bb7
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47846090"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74412800"
 ---
 # <a name="application-pattern-for-partitioning-memory-optimized-tables"></a>メモリ最適化テーブルのパーティション分割に関するアプリケーションのパターン
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -38,7 +37,7 @@ ms.locfileid: "47846090"
   
 -   アクティブなパーティションを追加します。  
   
- ![パーティション切り替え。](../../relational-databases/in-memory-oltp/media/hekaton-partitioned-tables.gif "パーティション切り替え。")  
+ ![パーティションの切り替え](../../relational-databases/in-memory-oltp/media/hekaton-partitioned-tables.gif "|::ref1::|")  
 アクティブなデータの管理  
   
  ActiveOrders の削除で始まる操作は、データの削除とステージング テーブルでの切り替えの間のクエリのデータ欠落を回避するために、メンテナンス期間中に実行する必要があります。  
@@ -55,8 +54,15 @@ CREATE DATABASE partitionsample;
 GO  
   
 -- enable for In-Memory OLTP - change file path as needed  
-ALTER DATABASE partitionsample ADD FILEGROUP partitionsample_mod CONTAINS MEMORY_OPTIMIZED_DATA  
-ALTER DATABASE partitionsample ADD FILE( NAME = 'partitionsample_mod' , FILENAME = 'c:\data\partitionsample_mod') TO FILEGROUP partitionsample_mod;  
+ALTER DATABASE partitionsample
+    ADD FILEGROUP partitionsample_mod
+    CONTAINS MEMORY_OPTIMIZED_DATA;
+
+ALTER DATABASE partitionsample
+    ADD FILE(
+        NAME = 'partitionsample_mod',
+        FILENAME = 'c:\data\partitionsample_mod')
+    TO FILEGROUP partitionsample_mod;  
 GO  
   
 USE partitionsample;  
@@ -108,18 +114,18 @@ GO
 -- aggregate view of the hot and cold data  
 CREATE VIEW dbo.SalesOrders  
 AS SELECT so_id,  
-   cust_id,  
-   so_date,  
-   so_total,  
-   1 AS 'is_hot'  
-   FROM dbo.SalesOrders_hot  
+          cust_id,  
+          so_date,  
+          so_total,  
+          1 AS 'is_hot'  
+       FROM dbo.SalesOrders_hot  
    UNION ALL  
    SELECT so_id,  
           cust_id,  
           so_date,  
           so_total,  
           0 AS 'is_hot'  
-          FROM dbo.SalesOrders_cold;  
+       FROM dbo.SalesOrders_cold;  
 GO  
   
 -- move all sales orders up to the split date to cold storage  
@@ -140,9 +146,16 @@ CREATE PROCEDURE dbo.usp_SalesOrdersOffloadToCold @splitdate datetime2
       -- update partition function, and switch in new partition  
       ALTER PARTITION SCHEME [ByDateRange] NEXT USED [PRIMARY];  
   
-      DECLARE @p INT = ( SELECT MAX( partition_number) FROM sys.partitions WHERE object_id = OBJECT_ID( 'dbo.SalesOrders_cold'));  
-      EXEC sp_executesql N'alter table dbo.SalesOrders_cold_staging  
-         SWITCH TO dbo.SalesOrders_cold partition @i' , N'@i int' , @i = @p;  
+      DECLARE @p INT = (
+        SELECT MAX(partition_number)
+            FROM sys.partitions
+            WHERE object_id = OBJECT_ID('dbo.SalesOrders_cold'));
+
+      EXEC sp_executesql
+        N'ALTER TABLE dbo.SalesOrders_cold_staging
+            SWITCH TO dbo.SalesOrders_cold partition @i',
+        N'@i int',
+        @i = @p;  
   
       ALTER PARTITION FUNCTION [ByDatePF]()  
       SPLIT RANGE( @splitdate);  

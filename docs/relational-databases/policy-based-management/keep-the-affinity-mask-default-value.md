@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 8abdc79b-fc26-42e9-8f73-ec6c98713142
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: c7611c5621d0939302c6b7e1ae563b37bac78b38
-ms.sourcegitcommit: ef6e3ec273b0521e7c79d5c2a4cb4dcba1744e67
+ms.openlocfilehash: 57f68bea18cfbe8d5718e8b45d5d4a5b443713f2
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51512607"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68087213"
 ---
 # <a name="keep-the-affinity-mask-default-value"></a>関係マスクの既定値の保持
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

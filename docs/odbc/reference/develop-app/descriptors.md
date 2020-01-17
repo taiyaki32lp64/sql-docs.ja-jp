@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: ef2cbb93-cd00-40f8-b1d2-5f5723a991aa
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: d50ce0c2023e187d63d08aa862398d18dc188fd1
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: f2138a5f8417fc9156c916719e96d707b9a29de9
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47818720"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68040011"
 ---
 # <a name="descriptors"></a>記述子
 記述子ハンドルは、列または動的パラメーターのいずれかに関する情報を保持するデータ構造を表します。  

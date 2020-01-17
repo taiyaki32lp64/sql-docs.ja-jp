@@ -1,5 +1,5 @@
 ---
-title: sp_adddistributiondb (TRANSACT-SQL) |Microsoft Docs
+title: sp_adddistributiondb (Transact-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 04/30/2018
 ms.prod: sql
@@ -13,20 +13,19 @@ f1_keywords:
 helpviewer_keywords:
 - sp_adddistributiondb
 ms.assetid: e9bad56c-d2b3-44ba-a4d7-ff2fd842e32d
-author: CarlRabeler
-ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: 6c55e0f8d7c2e102b18f7c17fb263c8f76658ede
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+author: mashamsft
+ms.author: mathoma
+ms.openlocfilehash: ef595adcf3772dcac92c58764d99bca4374aeb0a
+ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52765804"
+ms.lasthandoff: 08/03/2019
+ms.locfileid: "68771354"
 ---
-# <a name="spadddistributiondb-transact-sql"></a>sp_adddistributiondb (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+# <a name="sp_adddistributiondb-transact-sql"></a>sp_adddistributiondb (Transact-SQL)
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
-  新しいディストリビューション データベースを作成し、ディストリビューター スキーマをインストールします。 ディストリビューション データベースには、レプリケーションで使用されるプロシージャ、スキーマ、およびメタデータが格納されます。 このストアド プロシージャは、master データベース上のディストリビューター側で実行され、ディストリビューション データベースを作成して、レプリケーション ディストリビューションの有効化に必要なテーブルおよびストアド プロシージャをインストールします。  
+  新しいディストリビューション データベースを作成し、ディストリビューター スキーマをインストールします。 ディストリビューションデータベースには、レプリケーションで使用されるプロシージャ、スキーマ、およびメタデータが格納されます。 このストアドプロシージャは、ディストリビューションデータベースを作成するために、ディストリビューター側で master データベースに対して実行されます。また、レプリケーションディストリビューションを有効にするために必要なテーブルとストアドプロシージャをインストールします。  
   
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -54,73 +53,56 @@ sp_adddistributiondb [ @database= ] 'database'
 ```  
   
 ## <a name="arguments"></a>引数  
- [  **@database=**]*データベース '*  
- 作成するディストリビューション データベースの名前を指定します。 *データベース*は**sysname**、既定値はありません。 指定したデータベースが既に存在しており、まだディストリビューション データベースとしてマークされていない場合は、ディストリビューションの有効化に必要なオブジェクトがインストールされ、データベースがディストリビューション データベースとしてマークされます。 指定したデータベースが、既にディストリビューション データベースとして有効な場合は、エラーが返されます。  
+`[ @database = ] database'`作成するディストリビューションデータベースの名前を指定します。 *データベースのデータ*型は**sysname**で、既定値はありません。 指定したデータベースが既に存在し、既にディストリビューションデータベースとしてマークされていない場合は、ディストリビューションを有効にするために必要なオブジェクトがインストールされ、データベースがディストリビューションデータベースとしてマークされます。 指定したデータベースが、既にディストリビューション データベースとして有効な場合は、エラーが返されます。  
   
- [  **@data_folder=**] **'**_data_folder'_  
- ディストリビューション データベース データ ファイルの格納に使用するディレクトリの名前を指定します。 *data_folder*は**nvarchar (255)**、既定値は NULL です。 NULL の場合、その [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスのデータ ディレクトリ、たとえば `C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\MSSQL\Data` が使用されます。  
+`[ @data_folder = ] 'data_folder'_`ディストリビューションデータベースのデータファイルを格納するために使用するディレクトリの名前を指定します。 *data_folder*は**nvarchar (255)** ,、既定値は NULL です。 NULL の場合、その [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスのデータ ディレクトリ、たとえば `C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\MSSQL\Data` が使用されます。  
   
- [  **@data_file=**] **'**_data_file_**'**  
- データベース ファイルの名前を指定します。 *data_file*は**nvarchar (255)**、既定値は**データベース**します。 NULL を指定した場合、このストアド プロシージャではデータベース名を使用してファイル名が生成されます。  
+`[ @data_file = ] 'data_file'`データベースファイルの名前を指定します。 *data_file*は**nvarchar (255)** ,、既定値は**database**です。 NULL の場合、ストアドプロシージャはデータベース名を使用してファイル名を構築します。  
   
- [  **@data_file_size=**] *data_file_size*  
- データ ファイルの初期サイズをメガバイト (MB) 単位で指定します。 *data_file_size は*s **int**、既定値は 5 MB です。  
+`[ @data_file_size = ] data_file_size`初期データファイルのサイズをメガバイト (MB) 単位で示します。 *data_file_size i*s **int**,、既定値は 5 mb です。  
   
- [  **@log_folder=**] **'**_log_folder_**'**  
- データベース ログ ファイルを格納するディレクトリの名前を指定します。 *log_folder*は**nvarchar (255)**、既定値は NULL です。 NULL の場合、その [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスのデータ ディレクトリ、たとえば `C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\MSSQL\Data` が使用されます。  
+`[ @log_folder = ] 'log_folder'`データベースログファイルのディレクトリの名前を指定します。 *log_folder*は**nvarchar (255)** ,、既定値は NULL です。 NULL の場合、の[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]インスタンスのデータディレクトリが使用されます (たとえば、 `C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\MSSQL\Data`)。  
   
- [  **@log_file=**] **'**_log_file_**'**  
- ログ ファイルの名前です。 *log_file*は**nvarchar (255)**、既定値は NULL です。 NULL を指定した場合、このストアド プロシージャではデータベース名を使用してファイル名が生成されます。  
+`[ @log_file = ] 'log_file'`ログファイルの名前を指定します。 *log_file*は**nvarchar (255)** ,、既定値は NULL です。 NULL の場合、ストアドプロシージャはデータベース名を使用してファイル名を構築します。  
   
- [  **@log_file_size=**] *log_file_size*  
- ログ ファイルの初期サイズをメガバイト (MB) 単位で指定します。 *log_file_size*は**int**、ファイルで許容されるサイズ、既定値は 0 MB には、ファイル サイズが最小のログを使用して作成することを意味[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]します。  
+`[ @log_file_size = ] log_file_size`ログファイルの初期サイズをメガバイト (MB) 単位で示します。 *log_file_size*は**int**,、既定値は 0 MB,、で[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]許容される最小のログファイルサイズを使用してファイルサイズが作成されることを意味します。  
   
- [  **@min_distretention=**] *min_distretention*  
- トランザクションがディストリビューション データベースから削除されるまでの最小保有期間を時間単位で指定します。 *min_distretention*は**int**、既定値は 0 時間です。  
+`[ @min_distretention = ] min_distretention`トランザクションがディストリビューションデータベースから削除されるまでの最小保有期間を時間単位で示します。 *min_distretention*は**int**,、既定値は0時間です。  
   
- [  **@max_distretention=**] *max_distretention*  
- トランザクションを削除するまでの最大保有期間を時間単位で指定します。 *max_distretention*は**int**、既定値は 72 時間です。 ディストリビューションの最長保持時間より古い、レプリケートされたコマンドを受け取っていないサブスクリプションには、非アクティブのマークが付きます。このようなサブスクリプションは再初期化する必要があります。 アクティブでないサブスクリプションに対しては RAISERROR 21011 が発行されます。 値**0**レプリケートされたトランザクションをことを意味はディストリビューション データベースに格納されません。  
+`[ @max_distretention = ] max_distretention`トランザクションを削除するまでの最大保有期間を時間単位で示します。 *max_distretention*は**int**,、既定値は72時間です。 ディストリビューションの最長保持時間より古い、レプリケートされたコマンドを受け取っていないサブスクリプションには、非アクティブのマークが付きます。このようなサブスクリプションは再初期化する必要があります。 アクティブでないサブスクリプションに対しては RAISERROR 21011 が発行されます。 値**0**は、レプリケートされたトランザクションがディストリビューションデータベースに格納されないことを意味します。  
   
- [  **@history_retention=**] *history_retention*  
- 履歴を保有する時間を指定します。 *history_retention*は**int**、既定値は 48 時間です。  
+`[ @history_retention = ] history_retention`履歴を保持する時間数を指定します。 *history_retention*は**int**,、既定値は48時間です。  
   
- [  **@security_mode=**] *security_mode*  
- ディストリビューターに接続するときに使用するセキュリティ モードを指定します。 *security_mode*は**int**、既定値は 1 です。 **0**指定[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]認証。**1** Windows 統合認証を指定します。  
+`[ @security_mode = ] security_mode`ディストリビューターに接続するときに使用するセキュリティモードを示します。 *security_mode*は**int**,、既定値は1です。 **0**は[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]認証を指定します。**1** Windows 統合認証を指定します。  
   
- [  **@login=**] **'**_ログイン_**'**  
- ディストリビューターに接続してディストリビューション データベースを作成するときに使用するログイン名を指定します。 これは、必要な場合*security_mode*に設定されている**0**します。 *login* のデータ型は **sysname** で、既定値は NULL です。  
+`[ @login = ] 'login'`ディストリビューションデータベースを作成するためにディストリビューターに接続するときに使用されるログイン名を指定します。 *Security_mode*が**0**に設定されている場合は、これが必要です。 *login* のデータ型は **sysname** で、既定値は NULL です。  
   
- [  **@password=**] **'**_パスワード_**'**  
- ディストリビューターに接続するときに使用するパスワードを指定します。 これは、必要な場合*security_mode*に設定されている**0**します。 *パスワード*は**sysname**、既定値は NULL です。  
+`[ @password = ] 'password'`ディストリビューターに接続するときに使用するパスワードを入力します。 *Security_mode*が**0**に設定されている場合は、これが必要です。 *パスワード*は**sysname**,、既定値は NULL です。  
   
- [  **@createmode=**] *(createmode = restore)*  
- *(createmode = restore)* は**int**、既定値は 1、次の値のいずれかを指定できます。  
+`[ @createmode = ] createmode`*createmode*は**int**,、既定値は 1,、値は次のいずれかを指定することができます。  
   
 |値|説明|  
 |-----------|-----------------|  
 |**0**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
-|**1** (既定値)|データベースの作成または既存のデータベースにあり、適用**instdist.sql**ディストリビューション データベースでレプリケーション オブジェクトを作成するファイル。|  
+|**1** (既定値)|データベースを作成するか、既存のデータベースを使用してから、 **instdist .sql**ファイルを適用して、ディストリビューションデータベースにレプリケーションオブジェクトを作成します。|  
 |**2**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
   
- [  **@from_scripting =** ] *from_scripting*  
- [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
+`[ @from_scripting = ] from_scripting` [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
  
- [  **@deletebatchsize_xact=**] *deletebatchsize_xact*  
- MSRepl_Transactions テーブルから期限切れのトランザクションのクリーンアップ時に使用されるバッチ サイズを指定します。 *deletebatchsize_xact*は**int**、既定値は 5000 です。 このパラメーターは、SQL Server 2012 SP4 および SQL Server 2016 SP2 のリリース後に、SQL Server 2017 で初めて導入されました。  
+`[ @deletebatchsize_xact = ] deletebatchsize_xact`MSRepl_Transactions テーブルから有効期限が切れたトランザクションのクリーンアップ中に使用されるバッチサイズを指定します。 *deletebatchsize_xact*は**int**,、既定値は5000です。 このパラメーターは、SQL Server 2017 で初めて導入され、SQL Server 2012 SP4 および SQL Server 2016 SP2 のリリースが導入されました。  
 
- [  **@deletebatchsize_cmd=**] *deletebatchsize_cmd*  
- 有効期限が切れたコマンドの MSRepl_Commands テーブルのクリーンアップ時に使用されるバッチ サイズを指定します。 *deletebatchsize_cmd*は**int**、既定値は 2000年です。 このパラメーターは、SQL Server 2012 SP4 および SQL Server 2016 SP2 のリリース後に、SQL Server 2017 で初めて導入されました。 
+`[ @deletebatchsize_cmd = ] deletebatchsize_cmd`MSRepl_Commands テーブルから有効期限が切れたコマンドのクリーンアップ中に使用されるバッチサイズを指定します。 *deletebatchsize_cmd*は**int**,、既定値は2000です。 このパラメーターは、SQL Server 2017 で初めて導入され、SQL Server 2012 SP4 および SQL Server 2016 SP2 のリリースが導入されました。 
  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  0 (成功) または 1 (失敗)  
   
 ## <a name="remarks"></a>コメント  
- **sp_adddistributiondb**はあらゆる種類のレプリケーションで使用します。 ただし、このストアド プロシージャは、ディストリビューター側でのみ動作します。  
+ **sp_adddistributiondb**は、すべての種類のレプリケーションで使用されます。 ただし、このストアド プロシージャは、ディストリビューター側でのみ動作します。  
   
- 実行してディストリビューターを構成する必要があります[sp_adddistributor](../../relational-databases/system-stored-procedures/sp-adddistributor-transact-sql.md)実行する前に**sp_adddistributiondb**します。  
+ **Sp_adddistributiondb**を実行する前に[sp_adddistributor](../../relational-databases/system-stored-procedures/sp-adddistributor-transact-sql.md)を実行してディストリビューターを構成する必要があります。  
   
- 実行**sp_adddistributor**実行する前に**sp_adddistributiondb**します。  
+ **Sp_adddistributiondb**を実行する前に**sp_adddistributor**を実行します。  
   
 ## <a name="example"></a>例  
   
@@ -179,14 +161,14 @@ GO
 ```  
   
 ## <a name="permissions"></a>アクセス許可  
- メンバーのみ、 **sysadmin**固定サーバー ロールが実行できる**sp_adddistributiondb**します。  
+ **Sp_adddistributiondb**を実行できるのは、 **sysadmin**固定サーバーロールのメンバーだけです。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [パブリッシングとディストリビューションの構成](../../relational-databases/replication/configure-publishing-and-distribution.md)   
- [sp_changedistributiondb &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-changedistributiondb-transact-sql.md)   
- [sp_dropdistributiondb &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropdistributiondb-transact-sql.md)   
+ [sp_changedistributiondb &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-changedistributiondb-transact-sql.md)   
+ [sp_dropdistributiondb &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropdistributiondb-transact-sql.md)   
  [sp_helpdistributiondb &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpdistributiondb-transact-sql.md)   
  [システム ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
- [[ディストリビューションの構成]](../../relational-databases/replication/configure-distribution.md)  
+ [ディストリビューションの構成](../../relational-databases/replication/configure-distribution.md)  
   
   

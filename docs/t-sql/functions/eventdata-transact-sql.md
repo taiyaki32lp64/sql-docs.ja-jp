@@ -22,15 +22,14 @@ helpviewer_keywords:
 - status information [SQL Server], events
 - DDL triggers, returning event data
 ms.assetid: 03a80e63-6f37-4b49-bf13-dc35cfe46c44
-author: MashaMSFT
-ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 0ec1c2d952c334b1ccb394f5abb36ea91d5f1a87
-ms.sourcegitcommit: 467b2c708651a3a2be2c45e36d0006a5bbe87b79
+author: MikeRayMSFT
+ms.author: mikeray
+ms.openlocfilehash: 73e0c8737a65b040552029717bf6848e1fc0cb63
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53979848"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68094575"
 ---
 # <a name="eventdata-transact-sql"></a>EVENTDATA (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -86,7 +85,7 @@ EVENTDATA は、**xml** データ型の値を返します。 既定では、す�
 この例では、新しいデータベース テーブルが作成されないようにする DDL トリガーを作成します。 `EVENTDATA` によって生成された XML データに対して XQuery を使用して、トリガーを発生させる [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントをキャプチャします。 詳しくは、「[XQuery 言語リファレンス &#40;SQL Server&#41;](../../xquery/xquery-language-reference-sql-server.md)」をご覧ください。  
   
 > [!NOTE]  
->  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] で **[結果をグリッドに表示]** を使用して `<TSQLCommand>` 要素をクエリすると、コマンド テキストに改行が表示されません。 代わりに、**[結果をテキストで表示]** を使用してください。  
+>  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] で **[結果をグリッドに表示]** を使用して `<TSQLCommand>` 要素をクエリすると、コマンド テキストに改行が表示されません。 代わりに、 **[結果をテキストで表示]** を使用してください。  
   
 ```  
 USE AdventureWorks2012;  

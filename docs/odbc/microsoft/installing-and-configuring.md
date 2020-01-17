@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 4202165e-b89c-47a5-ae59-0c98988caad5
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: d190dec4220a7ddb4bde5cc4a730396a14a8add9
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 753489fe50b6d36f2ac6a6ef1167ecf8f1a6d976
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51666591"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68019433"
 ---
 # <a name="installing-and-configuring"></a>インストールと構成
 Visual FoxPro ODBC ドライバーをダウンロードするには、次を参照してください。 [Visual FoxPro ODBC ドライバーのダウンロード サイト](https://go.microsoft.com/fwlink/?LinkId=121318)します。  

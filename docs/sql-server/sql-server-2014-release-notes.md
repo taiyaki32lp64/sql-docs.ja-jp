@@ -9,14 +9,13 @@ ms.topic: conceptual
 ms.assetid: bf4c4922-80b3-4be3-bf71-228247f97004
 author: craigg-msft
 ms.author: craigg
-manager: jhubbard
 monikerRange: = sql-server-2014 || = sqlallproducts-allversions
-ms.openlocfilehash: d4346f3c30020d49f49deab4988b754a31ec401f
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 94175594fe2539320941b5a83c1a7aa4b127783f
+ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52503492"
+ms.lasthandoff: 08/29/2019
+ms.locfileid: "70155686"
 ---
 # <a name="sql-server-2014-release-notes"></a>SQL Server 2014 リリース ノート
 [!INCLUDE[tsql-appliesto-ss2014-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2014-xxxx-xxxx-xxx-md.md)]
@@ -50,7 +49,7 @@ SQL Server 2014 SP2 には、SQL Server 2014 SP1 CU7 以降にリリースされ
 |DROP DDL によるレプリケーションのサポート|トランザクション レプリケーション パブリケーションにアーティクルとして含まれるテーブルを、データベースとパブリケーションから削除できます。|[KB 3170123](https://support.microsoft.com/help/3170123/supports-drop-table-ddl-for-articles-that-are-included-in-transactiona)
 |SQL サービス アカウントに対する IFI 特権|SQL Server サービスの起動時にファイルの瞬時初期化 (IFI) が有効かどうかを判断します。|[データベース ファイルの初期化](https://docs.microsoft.com/sql/relational-databases/databases/database-instant-file-initialization)
 |メモリ許可 - 問題の処理|メモリ許可を制限してメモリの競合を防ぐことにより、クエリ実行中に診断ヒントを利用できます。|[KB 3107401](https://support.microsoft.com/help/3107401/new-query-memory-grant-options-are-available-min-grant-percent-and-max)
-|演算子ごとのクエリ実行軽量プロファイリング |実際の行数など、演算子ごとのクエリ実行統計の収集を最適化します。|[開発者の選択: クエリの進行状況 - いつでも、どこでも](https://blogs.msdn.microsoft.com/sql_server_team/query-progress-anytime-anywhere/)
+|演算子ごとのクエリ実行軽量プロファイリング |実際の行数など、演算子ごとのクエリ実行統計の収集を最適化します。|[開発者の選択:クエリの進行状況 - いつでも、どこでも](https://blogs.msdn.microsoft.com/sql_server_team/query-progress-anytime-anywhere/)
 |クエリ実行の診断|クエリ パフォーマンスのトラブルシューティング向上のため、読み取られた実際の行がクエリ実行プランで報告されるようになりました。|[KB 3107397](https://support.microsoft.com/help/3107397/improved-diagnostics-for-query-execution-plans-that-involve-residual-p)
 |tempdb の書き込みに対するクエリ実行の診断|Hash Warning および Sort Warnings に、物理 I/O 統計、メモリ使用、および行への影響を追跡するための列が追加されました。 |[temptdb 書き込み診断の向上](https://support.microsoft.com/help/3107172/improve-tempdb-spill-diagnostics-by-using-extended-events-in-sql-serve)
 |tempdb のサポート性 |サーバーの起動時に、tempdb ファイルの数および tempdb データ ファイルの変更に対して新しいエラー ログ メッセージを使います。|[KB 2963384](https://support.microsoft.com/help/2963384/fix-sql-server-crashes-when-the-log-file-of-tempdb-database-is-full-in)
@@ -83,7 +82,7 @@ SQL Server 2014 SP1 には、SQL Server 2014 CU 1 から CU 5 までで提供さ
 
 - [Microsoft SQL Server 2014 用 Service Pack 1 のダウンロード](https://www.microsoft.com/download/details.aspx?id=46694)
 - [SQL Server 2014 Service Pack 1 がリリースされました – 更新](https://blogs.msdn.microsoft.com/sqlreleaseservices/sql-server-2014-service-pack-1-has-released-updated/)
-- [Microsoft SQL Server 2014 SP1 Express](https://www.microsoft.com/download/details.aspx?id=46697)
+- [Microsoft SQL Server 2014 SP1 Express](https://www.microsoft.com/download/details.aspx?id=42299)
 - [Microsoft SQL Server 2014 SP1 Feature Pack](https://www.microsoft.com/download/details.aspx?id=46696)
 
 
@@ -95,7 +94,7 @@ SQL Server 2014 SP1 には、SQL Server 2014 CU 1 から CU 5 までで提供さ
 2.  SQL Server 2014 CTP 1 と SQL Server 2014 RTM のサイド バイ サイド インストールはサポートされていません。  
 3.  SQL Server 2014 RTM への SQL Server 2014 CTP 1 データベースのアタッチまたは復元はサポートされていません。  
 
-**回避策:** ありません。
+**回避策:** [なし] :
 
 #### <a name="upgrading-from-sql-server-2014-ctp-2-to-sql-server-rtm"></a>SQL Server 2014 CTP 2 から SQL Server RTM へのアップグレード
 アップグレードは完全にサポートされています。 具体的には、次のことを実行できます。
@@ -114,7 +113,7 @@ SQL Server 2014 SP1 には、SQL Server 2014 CU 1 から CU 5 までで提供さ
 #### <a name="incorrect-version-of-streaminsight-client-on-sql-server-2014-mediaisocab"></a>SQL Server 2014 メディア/ISO/CAB 上の不正なバージョンの StreamInsight クライアント  
 SQL Server メディア/ISO/CAB 上に間違ったバージョンの StreamInsight.msi および StreamInsightClient.msi があります (パスは StreamInsight\\\<Architecture\>\\\<Language ID\>)。  
   
-**回避策:** [SQL Server 2014 用 Feature Pack のダウンロード ページ](https://go.microsoft.com/fwlink/?LinkID=306709)から正しいバージョンをダウンロードしてインストールしてください。  
+**回避策:** [SQL Server 2014 Feature Pack のダウンロード ページ](https://go.microsoft.com/fwlink/?LinkID=306709)から正しいバージョンをダウンロードしてインストールします。  
   
 ### <a name="ProdDoc"></a>製品ドキュメント RTM
   
@@ -129,9 +128,9 @@ SQL Server メディア/ISO/CAB 上に間違ったバージョンの StreamInsig
   
 [!INCLUDE[ssSQL11](../includes/sssql11-md.md)]では、このコンテンツは製品に付属する CHM ファイルから入手でき、上記の言語でも使用可能でした。 現在 CHM ファイルは製品に付属しておらず、レポート ビルダーのコンテンツは MSDN でのみ使用できます。 MSDN では、これらの言語はサポートされていません。 レポート ビルダーは TechNet からも削除され、上記のサポートされる言語では使用できなくなりました。  
   
-**回避策:** ありません。  
+**回避策:** [なし] :  
   
-**問題点:** PowerPivot のコンテンツは、次の言語では使用できません。
+**問題点:** Power Pivot のコンテンツは、次の言語では使用できません。
   
 -   ギリシャ語 (el-GR)  
 -   ノルウェー語 (ボークモール) (nb-NO)  
@@ -147,7 +146,7 @@ SQL Server メディア/ISO/CAB 上に間違ったバージョンの StreamInsig
   
 [!INCLUDE[ssSQL11](../includes/sssql11-md.md)]では、このコンテンツは TechNet から入手でき、上記の言語でも使用可能でした。 このコンテンツは TechNet から削除され、上記のサポートされる言語では使用できなくなりました。  
   
-**回避策:** ありません。  
+**回避策:** [なし] :  
   
 ### <a name="DBEngine"></a>データベース エンジン (RTM)
   
@@ -168,7 +167,7 @@ SQL Server 2014 Standard では、次の点が変更されています。
 4.  移行スクリプトを実行します。  
   
 #### <a name="informational-message-file-access-denied-incorrectly-reported-as-an-error-in-the-sql-server-2014-error-log"></a>情報メッセージ "ファイルのアクセスが拒否されました。" が、SQL Server 2014 のエラー ログに誤ってエラーとして報告される  
-**問題点:** メモリ最適化テーブルを含むデータベースがあるサーバーを再起動すると、SQL Server 2014 のエラー ログに次の種類のエラー メッセージが出力されることがあります。  
+**問題点:** メモリ最適化テーブルを含むデータベースを持つサーバーを再起動すると、SQL Server 2014 のエラー ログに次の種類のエラー メッセージが出力されることがあります。  
   
 ```  
 [ERROR]Unable to delete file C:\Program Files\Microsoft SQL   
@@ -177,7 +176,7 @@ memory-optimized table DLLs.
 ```  
 実際は、このメッセージは情報提供だけを目的としており、ユーザーが対応する必要はありません。  
   
-**回避策:** ありません。 これは情報メッセージです。  
+**回避策:** [なし] : これは情報メッセージです。  
   
 #### <a name="missing-index-details-incorrectly-report-included-columns-for-memory-optimized-table"></a>欠落インデックスの詳細で、メモリ最適化テーブルに対応する付加列が誤って報告される  
 **問題点:** SQL Server 2014 がメモリ最適化テーブルに対するクエリで欠落インデックスを検出した場合は、SHOWPLAN_XML 内で欠落インデックスが報告され、sys.dm_db_missing_index_details などでも欠落インデックス DMV が報告されます。 場合によっては、欠落インデックスの詳細に、付加列が含まれています。 メモリ最適化テーブルのすべてのインデックスにはすべての列が暗黙的に含まれているため、メモリ最適化インデックスで付加列を明示的に指定することは許可されません。  
@@ -185,14 +184,14 @@ memory-optimized table DLLs.
 **回避策:** メモリ最適化テーブルのインデックスでは、INCLUDE 句を指定しないでください。  
   
 #### <a name="missing-index-details-omit-missing-indexes-when-a-hash-index-exists-but-is-not-suitable-for-the-query"></a>ハッシュ インデックスが存在していてもクエリに適していない場合は、欠落インデックスの詳細で欠落インデックスが省略される  
-**問題点:** クエリ内で参照されているメモリ最適化テーブルの列でハッシュ インデックスを使用しているが、クエリでインデックスを使用できない場合は、SQL Server 2014 で SHOWPLAN_XML 内や DMV sys.dm_db_missing_index_details 内の欠落インデックスが報告されない場合があります。  
+**問題点:** クエリ内で参照されているメモリ最適化テーブルの列でハッシュ インデックスを使用しているが、クエリでインデックスを使用できない場合は、SQL Server 2014 は SHOWPLAN_XML 内や DMV sys.dm_db_missing_index_details 内で欠落インデックスを常に報告するとは限りません。  
   
 特に、インデックス キー列のサブセットが関係する等値述語がクエリに含まれている場合や、インデックス キー列が関係する不等値述語がクエリに含まれている場合は、HASH インデックスをそのまま使用することはできず、クエリを効率的に実行するために別のインデックスが必要になります。  
   
 **回避策:** ハッシュ インデックスを使用している場合は、クエリとクエリ プランを検討し、インデックス キーのサブセットに対する Index Seek 操作や、不等値述語に対する Index Seek 操作によってクエリに利点がもたらされるかどうかを判断します。 インデックス キーのサブセットに対するシークを実行する必要がある場合は、NONCLUSTERED インデックスを使用するか、シークする必要のある正確な列に対応する HASH インデックスを使用します。 不等値述語に対するシークを実行する必要がある場合は、HASH の代わりに NONCLUSTERED インデックスを使用します。  
   
-#### <a name="failure-when-using-a-memory-optimized-table-and-memory-optimized-table-variable-in-the-same-query-if-the-database-option-readcommittedsnapshot-is-set-to-on"></a>データベース オプション READ_COMMITTED_SNAPSHOT を ON に設定した場合、メモリ最適化テーブルとメモリ最適化テーブル変数を同じクエリで使用したときにエラーが発生する  
-**問題点:** データベース オプション READ_COMMITTED_SNAPSHOT を ON に設定し、ユーザー トランザクションのコンテキスト外にある同じステートメントで、メモリ最適化テーブルとメモリ最適化されたテーブル変数の両方にアクセスした場合、次のエラー メッセージが表示される可能性があります。  
+#### <a name="failure-when-using-a-memory-optimized-table-and-memory-optimized-table-variable-in-the-same-query-if-the-database-option-read_committed_snapshot-is-set-to-on"></a>データベース オプション READ_COMMITTED_SNAPSHOT を ON に設定した場合、メモリ最適化テーブルとメモリ最適化テーブル変数を同じクエリで使用したときにエラーが発生する  
+**問題点:** データベース オプション READ_COMMITTED_SNAPSHOT を ON に設定し、ユーザー トランザクションのコンテキスト外にある同じステートメントで、メモリ最適化テーブルとメモリ最適化されたテーブル変数の両方にアクセスした場合は、このエラー メッセージが表示される可能性があります。  
   
 ```  
 Msg 41359  
@@ -212,10 +211,10 @@ SET MEMORY_OPTIMIZED_ELEVATE_TO_SNAPSHOT=ON
 #### <a name="procedure-and-query-execution-statistics-for-natively-compiled-stored-procedures-record-worker-time-in-multiples-of-1000"></a>ネイティブ コンパイル ストアド プロシージャに関するプロシージャとクエリ実行の統計で、ワーカー時間が 1,000 の倍数で記録される  
 **問題点:** sp_xtp_control_proc_exec_stats または sp_xtp_control_query_exec_stats を使用してネイティブ コンパイル ストアド プロシージャに対するプロシージャまたはクエリ実行の統計の収集を有効にした後、DMV sys.dm_exec_procedure_stats と sys.dm_exec_query_stats 内で、*_worker_time が 1,000 の倍数で報告されます。 ワーカー時間が 500 ミリ秒未満のクエリ実行では、worker_time として 0 が報告されます。  
   
-**回避策:** ありません。 ネイティブ コンパイル ストアド プロシージャの実行時間が短いクエリに対応する実行統計 DMV 内で報告された worker_time を信頼しないでください。  
+**回避策:** [なし] : ネイティブ コンパイル ストアド プロシージャの実行時間が短いクエリに対応する実行統計 DMV 内で報告された worker_time を信頼しないでください。  
   
-#### <a name="error-with-showplanxml-for-natively-compiled-stored-procedures-that-contain-long-expressions"></a>長い式を含むネイティブ コンパイル ストアド プロシージャに対応する SHOWPLAN_XML にエラーが出力される  
-**問題点:** ネイティブ コンパイル ストアド プロシージャに長い式が含まれていて、そのプロシージャに対応する SET SHOWPLAN_XML を取得する状況で、T-SQL オプション SET SHOWPLAN_XML ON を使用する場合、または Management Studio で [推定実行プランの表示] オプションを使用する場合、次のエラーが発生する可能性があります。  
+#### <a name="error-with-showplan_xml-for-natively-compiled-stored-procedures-that-contain-long-expressions"></a>長い式を含むネイティブ コンパイル ストアド プロシージャに対応する SHOWPLAN_XML にエラーが出力される  
+**問題点:** ネイティブ コンパイル ストアド プロシージャに長い式が含まれていて、そのプロシージャに対応する SHOWPLAN_XML を取得する状況で、T-SQL オプション SET SHOWPLAN_XML ON を使用する場合、または Management Studio で "Display Estimated Execution Plan" オプションを使用する場合は、次のエラーが発生する可能性があります。  
   
 ```  
 Msg 41322. MAT/PIT export/import encountered a failure for memory  
@@ -224,7 +223,7 @@ optimized table or natively compiled stored procedure with object ID
 0xc00cee81.  
 ```  
   
-**回避策:** 2 つの回避策が推奨されます。  
+**回避策:** 以下の 2 つの回避策があります。  
   
 1.  次の例のように、式にかっこを追加します。  
   
@@ -255,7 +254,7 @@ optimized table or natively compiled stored procedure with object ID
 #### <a name="using-a-string-parameter-or-variable-with-datepart-and-related-functions-in-a-natively-compiled-stored-procedure-results-in-an-error"></a>ネイティブ コンパイル ストアド プロシージャ内にある DATEPART とそれに関連する関数で文字列パラメーターまたは文字列変数を使用するとエラーが発生する  
 **問題点:** ネイティブ コンパイル ストアド プロシージャ内の組み込み関数 DATEPART、DAY、MONTH、YEAR で文字列のパラメーターまたは変数を使うと、datetimeoffset はネイティブ コンパイル ストアド プロシージャでサポートされていないことを示すエラー メッセージが表示されます。  
   
-**回避策:** 文字列パラメーターまたは文字列変数に対して、新しい変数型である datetime2 を割り当て、DATEPART、DAY、MONTH、または YEAR 関数を使用します。 例 :  
+**回避策:** 文字列パラメーターまたは文字列変数を、新しい変数型である datetime2 に代入し、その変数を DATEPART、DAY、MONTH、または YEAR 関数の中で使用します。 例:  
   
 ```  
 DECLARE @d datetime2 = @string  
@@ -265,12 +264,12 @@ DATEPART(weekday, @d)
 #### <a name="native-compilation-advisor-flags-delete-from-clauses-incorrectly"></a>ネイティブ コンパイル アドバイザーが DELETE FROM 句に対して誤ってフラグを設定する  
 **問題点:** ネイティブ コンパイル アドバイザーが、ストアド プロシージャ内の DELETE FROM 句に対して互換性なしのフラグを誤って設定します。  
   
-**回避策:** ありません。  
+**回避策:** [なし] :  
   
 #### <a name="register-through-ssms-adds-dac-meta-data-with-mismatched-instance-ids"></a>SSMS を使用して登録を行うと、不一致のインスタンス ID を持つ DAC メタデータが追加される  
-**問題点:** SQL Server Management Studio を使用してデータ層アプリケーション パッケージ (.dacpac) を登録または削除すると、sysdac* テーブルが正しく更新されず、データベースに対して dacpac 履歴のクエリを実行することができません。  sysdac_history_internal と sysdac_instances_internal の instance_id が一致せず、結合が許可されません。  
+**問題点:** SQL Server Management Studio を使用してデータ層アプリケーション パッケージ (.dacpac) を登録または削除すると、sysdac* テーブルが正しく更新されず、データベースに対して dacpac 履歴のクエリを実行できません。  sysdac_history_internal と sysdac_instances_internal の instance_id が一致せず、結合が許可されません。  
   
-**回避策:** [データ層アプリケーション フレームワーク](https://www.microsoft.com/download/details.aspx?id=42295)の Feature Pack の再配布で、この問題点は修正されています。  更新プログラムを適用した後、すべての新しい履歴エントリは sysdac_instances_internal テーブル内の instance_id の一覧に含まれる値を使用します。  
+**回避策:** この問題は、[データ層アプリケーション フレームワーク](https://www.microsoft.com/download/details.aspx?id=42295)の Feature Pack の再配布で修正されています。  更新プログラムを適用した後、すべての新しい履歴エントリは sysdac_instances_internal テーブル内の instance_id の一覧に含まれる値を使用します。  
   
 instance_id の値の不一致という問題が既に発生している場合は、不一致の値を修正する唯一の方法は、MSDB データベースへ書き込む特権を持つユーザーとしてサーバーに接続し、instance_id の値を更新して一致させることです。  同じデータベースから複数の登録イベントと登録解除イベントが発生する場合は、時刻と日付を参照し、どのレコードが現在の instance_id の値と一致しているかを確認する必要があります。  
   
@@ -294,7 +293,7 @@ instance_id の値の不一致という問題が既に発生している場合�
 #### <a name="the-sql-server-2012-reporting-services-native-mode-report-server-cannot-run-side-by-side-with-sql-server-2014-reporting-services-sharepoint-components"></a>SQL Server 2012 Reporting Services ネイティブ モード レポート サーバーを SQL Server 2014 Reporting Services SharePoint コンポーネントとサイド バイ サイドで実行できない  
 **問題点:** [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] SharePoint コンポーネントが同じサーバーにインストールされている場合、[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] ネイティブ モードの Windows サービス SQL Server Reporting Services (ReportingServicesService.exe) の起動に失敗します。  
   
-**回避策:**  [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] SharePoint コンポーネントをアンインストールし、Microsoft SQL Server 2012 Reporting Services の Windows サービスを再起動します。  
+**回避策:** [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] SharePoint コンポーネントをアンインストールし、Microsoft SQL Server 2012 Reporting Services の Windows サービスを再起動します。  
   
 **詳細情報:**  
   
@@ -326,19 +325,19 @@ Description:   Report Server (DENALI) cannot connect to the report server databa
 詳細については、「 [SQL Server 2014 Reporting Services の役立つヒントおよびトラブルシューティング](https://go.microsoft.com/fwlink/?LinkID=391254)」を参照してください。  
   
 #### <a name="required-upgrade-order-for-multi-node-sharepoint-farm-to-sql-server-2014-reporting-services"></a>SQL Server 2014 Reporting Services を使用する複数ノードの SharePoint ファームで必要なアップグレードの順序  
-**問題点:** SharePoint 製品用 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] アドインのすべてのインスタンスをアップグレードする前に、 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] SharePoint 共有サービスのインスタンスをアップグレードした場合は、複数ノード ファームでレポートを表示できなくなります。  
+**問題点:** SharePoint 製品用 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] アドインのすべてのインスタンスをアップグレードする前に、[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] SharePoint 共有サービスのインスタンスをアップグレードした場合は、複数ノード ファームでのレポートの表示に失敗します。  
   
-**回避策:** 複数ノードの SharePoint ファームで、次の手順を実行します。  
+**回避策:** 複数ノードの SharePoint ファームで、次の手順を行います。  
   
 1.  最初に、SharePoint 製品用 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] アドインのすべてのインスタンスをアップグレードします。    
 2.  次に、 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] SharePoint 共有サービスのすべてのインスタンスをアップグレードします。  
   
 詳細については、「 [SQL Server 2014 Reporting Services の役立つヒントおよびトラブルシューティング](https://go.microsoft.com/fwlink/?LinkID=391254)」を参照してください。  
   
-### <a name="AzureVM"></a>Microsoft Azure Virtual Machines 上の SQL Server 2014 RTM  
+### <a name="AzureVM"></a>Azure Virtual Machines 上の SQL Server 2014 RTM  
   
-#### <a name="the-add-azure-replica-wizard-returns-an-error-when-configuring-an-availability-group-listener-in-windows-azure"></a>Windows Azure で可用性グループ リスナーを構成するときに Azure のレプリカ追加ウィザードでエラーが返される  
-**問題点:** 可用性グループ にリスナーが存在する場合は、Windows Azure でリスナーを構成しようとしたときに、Azure のレプリカ追加ウィザードでエラーが返されます。  
+#### <a name="the-add-azure-replica-wizard-returns-an-error-when-configuring-an-availability-group-listener-in-azure"></a>Azure で可用性グループ リスナーを構成するときに Azure のレプリカ追加ウィザードでエラーが返される  
+**問題点:** 可用性グループにリスナーが存在する場合は、Azure でリスナーを構成しようとしたときに、Azure のレプリカ追加ウィザードでエラーが返されます。  
   
 Azure サブネットを含め、可用性グループのレプリカをホストしているすべてのサブネットで、可用性グループ リスナーに 1 つの IP アドレスを割り当てることが必要とされるのが、この問題の原因です。  
   
@@ -346,9 +345,9 @@ Azure サブネットを含め、可用性グループのレプリカをホス�
   
 1.  リスナーのページで、可用性グループ レプリカをホストする Azure サブネット内にある未使用の静的 IP アドレスを、可用性グループ リスナーに割り当てます。  
   
-    この回避策により、ウィザードは Windows Azure 内でレプリカの追加を完了することができます。  
+    この回避策により、ウィザードは Azure 内でレプリカの追加を完了することができます。  
   
-2.  ウィザードが完了した後、 [チュートリアル: Windows Azure AlwaysOn 可用性グループのリスナー構成](https://msdn.microsoft.com/library/dn376546.aspx)で説明されているように、Windows Azure 内のリスナー構成を完了する必要があります。  
+2.  ウィザードが完了した後、「[Azure での AlwaysOn 可用性グループに対するリスナーの構成](https://msdn.microsoft.com/library/dn376546.aspx)」で説明されているように、Azure でリスナーの構成を完了する必要があります  
   
 ### <a name="SSAS"></a>Analysis Services (RTM)
   
@@ -409,12 +408,12 @@ Azure サブネットを含め、可用性グループのレプリカをホス�
 ### <a name="UA"></a>アップグレード アドバイザーの問題点 (RTM)
   
 #### <a name="sql-server-2014-upgrade-advisor-reports-irrelevant-upgrade-issues-for-sql-server-reporting-services"></a>SQL Server 2014 アップグレード アドバイザーが SQL Server Reporting Services に関係のないアップグレードの問題点を報告する  
-**問題点:** SQL Server 2014 メディアに収録されている SQL Server Upgrade Advisor (SSUA) が SQL Server Reporting Services サーバーを分析するときに、不適切な複数のエラーを報告します。  
+**問題点:** SQL Server 2014 メディアに収録されている SQL Server アップグレード アドバイザー (SSUA) が SQL Server Reporting Services サーバーを分析するときに、不適切な複数のエラーを報告します。  
   
-**回避策:** [SSUA に対応する SQL Server 2014 Feature Pack](https://go.microsoft.com/fwlink/?LinkID=306709)の一部として提供される SQL Server アップグレード アドバイザーで、この問題が解決されます。  
+**回避策:** この問題は、[SSUA 用の SQL Server 2014 Feature Pack](https://go.microsoft.com/fwlink/?LinkID=306709) の一部として提供される SQL Server アップグレード アドバイザーで解決できます。  
   
 #### <a name="sql-server-2014-upgrade-advisor-reports-an-error-when-analyzing-sql-server-integration-services-server"></a>SQL Server 2014 アップグレード アドバイザーで SQL Server Integration Services サーバーを分析するときにエラーが報告される  
-**問題点:** SQL Server 2014 メディアに収録されている SQL Server Upgrade Advisor (SSUA) が、SQL Server Integration Services サーバーを分析するときにエラーを報告します。  ユーザーに対して表示されるエラーは、次のようなものです。  
+**問題点:** SQL Server 2014 メディアに収録されている SQL Server Upgrade Advisor (SSUA) により、SQL Server Integration Services サーバーを分析するときにエラーが報告されます。  ユーザーに対して表示されるエラーは、次のようなものです。  
   
 ```  
 The installed version of Integration Services does not support Upgrade Advisor.   
@@ -422,6 +421,6 @@ The assembly information is "Microsoft.SqlServer.ManagedDTS, Version=11.0.0.0,
 Culture=neutral, PublicKeyToken=89845dcd8080cc91  
 ```  
   
-**回避策:** [SSUA に対応する SQL Server 2014 Feature Pack](https://go.microsoft.com/fwlink/?LinkID=306709)の一部として提供される SQL Server アップグレード アドバイザーで、この問題が解決されます。  
+**回避策:** この問題は、[SSUA 用の SQL Server 2014 Feature Pack](https://go.microsoft.com/fwlink/?LinkID=306709) の一部として提供される SQL Server アップグレード アドバイザーで解決できます。  
   
 [!INCLUDE[get-help-options](../includes/paragraph-content/get-help-options.md)]

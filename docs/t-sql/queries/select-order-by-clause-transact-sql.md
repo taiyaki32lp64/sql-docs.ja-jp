@@ -36,18 +36,18 @@ helpviewer_keywords:
 - sort orders [SQL Server], ORDER BY clause
 - FETCH clause
 ms.assetid: bb394abe-cae6-4905-b5c6-8daaded77742
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
+author: VanMSFT
+ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 8babb966273c05524a373a14c6a084e5c74cfc7b
-ms.sourcegitcommit: 467b2c708651a3a2be2c45e36d0006a5bbe87b79
+ms.openlocfilehash: 7ccced8b93b5f657d8fd0afe96f95d7b9f8a98a6
+ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53980278"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "73981711"
 ---
 # <a name="select---order-by-clause-transact-sql"></a>SELECT - ORDER BY 句 (Transact-SQL)
+
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] でクエリによって返されるデータを並べ替えます。 この句は次の場合に使用します。  
@@ -63,7 +63,7 @@ ms.locfileid: "53980278"
 
 ## <a name="syntax"></a>構文  
   
-```sql  
+```
 -- Syntax for SQL Server and Azure SQL Database  
   
 ORDER BY order_by_expression  
@@ -116,7 +116,7 @@ ORDER BY SchemaName + ''; -- wrong
  OFFSET { *integer_constant* | *offset_row_count_expression* } { ROW | ROWS }  
  クエリ式から行を取得する前にスキップする行の数を指定します。 0 以上の整数の定数か式を指定できます。  
   
-**適用対象**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] および [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。  
+**適用対象**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 以降と [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。  
   
  *offset_row_count_expression* には、変数、パラメーター、または定数スカラー サブクエリを指定できます。 サブクエリを使用する場合は、クエリ スコープの外部で定義された列は参照できません。 つまり、外部のクエリと関連付けることはできません。  
   
@@ -127,7 +127,7 @@ ORDER BY SchemaName + ''; -- wrong
  FETCH { FIRST | NEXT } { *integer_constant* | *fetch_row_count_expression* } { ROW | ROWS } ONLY  
  OFFSET 句が処理された後に取得する行の数を指定します。 1 以上の整数の定数か式を指定できます。  
   
-**適用対象**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] および [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。  
+**適用対象**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 以降と [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。  
   
  *fetch_row_count_expression* には、変数、パラメーター、または定数スカラー サブクエリを指定できます。 サブクエリを使用する場合は、クエリ スコープの外部で定義された列は参照できません。 つまり、外部のクエリと関連付けることはできません。  
   
@@ -152,7 +152,7 @@ ORDER BY SchemaName + ''; -- wrong
   
  **ntext**、**text**、**image**、**geography**、**geometry**、および **xml** 型の列は、ORDER BY 句では使用できません。  
   
- 順位付け関数に *order_by_expression* が使用されている場合、整数または定数は指定できません。 詳細については、を参照してください。 [経由句 (&) #40 です。TRANSACT-SQL と #41;](../../t-sql/queries/select-over-clause-transact-sql.md).  
+ 順位付け関数に *order_by_expression* が使用されている場合、整数または定数は指定できません。 詳細については、[OVER 句 &#40;Transact-SQL&#41;](../../t-sql/queries/select-over-clause-transact-sql.md)を参照してください。  
   
  FROM 句でテーブルの別名を指定している場合、ORDER BY 句でその列を修飾する際に使用できるのは別名だけです。  
   
@@ -364,7 +364,7 @@ WHERE TerritoryID IS NOT NULL AND SalesYTD <> 0;
 ###  <a name="Offset"></a> 返される行の数の制限  
  次の例では、OFFSET と FETCH を使用して、クエリによって返される行の数を制限します。  
   
-**適用対象**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] および [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。  
+**適用対象**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 以降と [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。  
   
 #### <a name="a-specifying-integer-constants-for-offset-and-fetch-values"></a>A. OFFSET と FETCH の値として整数の定数を指定する  
  次の例では、OFFSET および FETCH 句の値として整数の定数を指定します。 最初のクエリにより、`DepartmentID` 列で並べ替えられたすべての行が返されます。 このクエリによって返される結果と、後の 2 つのクエリの結果を比べてみてください。 次のクエリは、`OFFSET 5 ROWS` 句を使用して最初の 5 行をスキップし、残りのすべての行を返します。 最後のクエリでは、`OFFSET 0 ROWS` 句を使用して最初の行から処理を開始した後、`FETCH NEXT 10 ROWS ONLY` を使用して、返される行を、並べ替えられた結果セットからの 10 行に制限します。  
@@ -444,7 +444,6 @@ FROM HumanResources.Department
 ORDER BY DepartmentID ASC   
     OFFSET @StartingRowNumber ROWS   
     FETCH NEXT (SELECT PageSize FROM dbo.AppSettings WHERE AppSettingID = 1) ROWS ONLY;  
-  
 ```  
   
 #### <a name="e-running-multiple-queries-in-a-single-transaction"></a>E. 単一のトランザクションで複数のクエリを実行する  
@@ -463,7 +462,7 @@ GO
 SET TRANSACTION ISOLATION LEVEL SNAPSHOT;  
 GO  
   
--- Beging the transaction  
+-- Beginning the transaction.
 BEGIN TRANSACTION;  
 GO  
 -- Declare and set the variables for the OFFSET and FETCH values.  
@@ -488,7 +487,6 @@ END;
 GO  
 COMMIT TRANSACTION;  
 GO  
-  
 ```  
   
 ###  <a name="Union"></a> UNION、EXCEPT、および INTERSECT と ORDER BY の併用  
@@ -506,7 +504,6 @@ SELECT Name, Color, ListPrice
 FROM Production.Product  
 WHERE Color = 'Yellow'  
 ORDER BY ListPrice ASC;  
-  
 ```  
   
 ## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>例: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] および [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
@@ -554,7 +551,7 @@ ORDER BY LastName, FirstName;
  [式 &#40;Transact-SQL&#41;](../../t-sql/language-elements/expressions-transact-sql.md)   
  [SELECT &#40;Transact-SQL&#41;](../../t-sql/queries/select-transact-sql.md)   
  [FROM &#40;Transact-SQL&#41;](../../t-sql/queries/from-transact-sql.md)   
- [順位付け関数 (&) #40 です。TRANSACT-SQL と #41 です。](../../t-sql/functions/ranking-functions-transact-sql.md)   
+ [順位付け関数 &#40;Transact-SQL&#41;](../../t-sql/functions/ranking-functions-transact-sql.md)   
  [TOP &#40;Transact-SQL&#41;](../../t-sql/queries/top-transact-sql.md)   
  [クエリ ヒント &#40;Transact-SQL&#41;](../../t-sql/queries/hints-transact-sql-query.md)   
  [EXCEPT および INTERSECT &#40;Transact-SQL&#41;](../../t-sql/language-elements/set-operators-except-and-intersect-transact-sql.md)   

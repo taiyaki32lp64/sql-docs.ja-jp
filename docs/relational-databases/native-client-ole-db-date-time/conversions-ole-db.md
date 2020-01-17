@@ -1,6 +1,5 @@
 ---
-title: バインドと変換 (OLE DB) |マイクロソフトのドキュメント
-ms.custom: ''
+title: バインドと変換 (OLE DB)
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
@@ -14,24 +13,23 @@ helpviewer_keywords:
 ms.assetid: c187df58-a8c8-4c74-a76f-663abbc5f0c1
 author: MightyPen
 ms.author: genemi
-manager: craigg
+ms.custom: seo-dt-2019
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: d138d5ef09c4de32b0fb279287898a4933eb4e84
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a1d02ef5827ff9d121c19dd055f97feea5184758
+ms.sourcegitcommit: 15fe0bbba963d011472cfbbc06d954d9dbf2d655
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47612562"
+ms.lasthandoff: 11/14/2019
+ms.locfileid: "74095356"
 ---
 # <a name="conversions-ole-db"></a>変換 (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-[!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
 
-  このセクションの間で変換する方法を説明します**datetime**と**datetimeoffset**値。 ここで説明する変換は、OLE DB によって既に提供されているか、OLE DB の一貫性がある拡張機能です。  
+  ここでは、 **datetime**値と**datetimeoffset**値の間で変換を行う方法について説明します。 ここで説明する変換は、OLE DB によって既に提供されているか、OLE DB の一貫性がある拡張機能です。  
   
  OLE DB における日付と時刻のリテラルと文字列の形式は、通常 ISO に従うため、クライアントのロケールに依存しません。 これには、標準が OLE オートメーションである DBTYPE_DATE という例外があります。 ただし、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client では、クライアントとの間でデータが転送される際に型の変換しか実行されないため、アプリケーションでは、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client に DBTYPE_DATE と文字列形式の変換を強制することができません。 それ以外の場合、文字列では次の形式を使用します (角かっこに囲まれたテキストは省略可能な要素を示します)。  
   
--   形式**datetime**と**datetimeoffset**文字列です。  
+-   **Datetime**および**datetimeoffset**文字列の形式は次のとおりです。  
   
      *yyyy*-*mm*-*dd*[ *hh*:*mm*:*ss*[.*9999999*][ ± *hh*:*mm*]]  
   
@@ -39,14 +37,14 @@ ms.locfileid: "47612562"
   
      *hh*:*mm*:*ss*[.*9999999*]  
   
--   形式**日付**文字列です。  
+-   **日付**文字列の形式は次のとおりです。  
   
      *yyyy*-*mm*-*dd*  
   
 > [!NOTE]  
 >  以前のバージョンの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client および SQLOLEDB では、標準の変換が失敗した場合に備えて OLE 変換が実装されていました。 このため、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client 10.0 以降によって実行された変換には、OLE DB 仕様と異なるものがあります。  
   
- 文字列からの変換では、空白文字やフィールドの幅を柔軟に処理できます。 詳細については、「データ形式: 文字列とリテラルをデータする」セクションを参照してください。 [OLE DB の日付と時刻の強化に対するデータ型のサポート](../../relational-databases/native-client-ole-db-date-time/data-type-support-for-ole-db-date-and-time-improvements.md)します。  
+ 文字列からの変換では、空白文字やフィールドの幅を柔軟に処理できます。 詳細については、「データ型のサポート」の「データ形式: 文字列とリテラル」を参照してください。 [OLE DB の日付と時刻の機能強化に関するセクションを](../../relational-databases/native-client-ole-db-date-time/data-type-support-for-ole-db-date-and-time-improvements.md)参照してください。  
   
  一般的な変換規則を次に示します。  
   

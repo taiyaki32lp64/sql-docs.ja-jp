@@ -1,202 +1,61 @@
 ---
-title: チュートリアル:Linux 上の SQL Server の active Directory 認証
+title: チュートリアル:SQL Server on Linux に対して AD 認証を使用する
 titleSuffix: SQL Server
-description: このチュートリアルでは、SQL Server on Linux の AAD 認証の構成手順を提供します。
-author: meet-bhagdev
-ms.date: 02/23/2018
-ms.author: meetb
-manager: craigg
-ms.topic: conceptual
+description: このチュートリアルでは、SQL Server on Linux 用に Active Directory (AD) 認証を構成する手順について説明します。
+author: Dylan-MSFT
+ms.author: dygray
+ms.reviewer: vanto
+ms.date: 12/18/2019
+ms.topic: tutorial
 ms.prod: sql
-ms.custom: sql-linux, seodec18
+ms.custom: seodec18
 ms.technology: linux
 helpviewer_keywords:
 - Linux, AAD authentication
-ms.openlocfilehash: 237924a1bc4309b4e4d686076d1e0862ea3afe92
-ms.sourcegitcommit: de8ef246a74c935c5098713f14e9dd06c4733713
-ms.translationtype: MT
+ms.openlocfilehash: 72a1a554203349e9e6bd8cee43d2a6fe9d093ad8
+ms.sourcegitcommit: a02727aab143541794e9cfe923770d019f323116
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53160604"
+ms.lasthandoff: 01/08/2020
+ms.locfileid: "75755862"
 ---
-# <a name="tutorial-use-active-directory-authentication-with-sql-server-on-linux"></a>チュートリアル:SQL Server on Linux で Active Directory 認証を使用します。
+# <a name="tutorial-use-active-directory-authentication-with-sql-server-on-linux"></a>チュートリアル:SQL Server on Linux で Active Directory 認証を使用する
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
-このチュートリアルでは、[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] on Linux で Active Directory (AD) 認証をサポートさせるための構成方法を説明します。 概要については、「[SQL Server on Linux の Active Directory 認証](sql-server-linux-active-directory-auth-overview.md)」を参照してください。
+このチュートリアルでは、Active Directory (AD) 認証 (統合認証とも呼ばれます) をサポートするように [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] on Linux を構成する方法について説明します。 概要については、「[SQL Server on Linux に対する Active Directory 認証](sql-server-linux-active-directory-auth-overview.md)」をご覧ください。
 
-このチュートリアルでは、次のタスクで構成されます。
+このチュートリアルは、次のタスクで構成されています。
 
 > [!div class="checklist"]
-> * [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]ドメインにホスト
-> * [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]の AD ユーザーを作成し、SPN を設定する
-> * [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]サービス keytab を構成する
-> * TRANSACT-SQL で AD に基づくログインを作成する
-> * AD Authentication を使用して [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] へ接続する
-
-> [!NOTE]
->
-> 構成する場合[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]サード パーティ製の AD プロバイダーを使用する linux を参照してください[サード パーティの Active Directory プロバイダーを使用して、SQL Server on Linux で](./sql-server-linux-active-directory-third-party-providers.md)します。
+> * [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] ホストを AD ドメインに参加させる
+> * [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 用の AD ユーザーを作成し、SPN を設定する
+> * [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] サービスの keytab を構成する
+> * keytab ファイルをセキュリティで保護する
+> * Kerberos 認証に keytab ファイルを使用するように SQL Server を構成する
+> * Transact-SQL で AD ベースのログインを作成する
+> * AD 認証を使用して [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] に接続する
 
 ## <a name="prerequisites"></a>前提条件
 
-AD 認証を構成する前にする必要があります。
+AD 認証を構成する前に、次のことを行う必要があります。
 
-* AD ドメイン コント ローラー (Windows)、ネットワークの設定します。  
+* ネットワーク上に AD ドメイン コントローラー (Windows) をセットアップします  
 * [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] のインストール
-  * [Red Hat Enterprise Linux](quickstart-install-connect-red-hat.md)
-  * [SUSE Linux Enterprise Server](quickstart-install-connect-suse.md)
+  * [Red Hat Enterprise Linux (RHEL)](quickstart-install-connect-red-hat.md)
+  * [SUSE Linux Enterprise Server (SLES)](quickstart-install-connect-suse.md)
   * [Ubuntu](quickstart-install-connect-ubuntu.md)
 
-## <a id="join"></a> 参加[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]AD ドメインにホスト
+## <a id="join"></a>[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] ホストを AD ドメインに参加させる
 
-参加を次の手順を使用して、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Active Directory ドメインにホスト。
+SQL Server Linux ホストを Active Directory ドメイン コントローラーに参加させます。 Active Directory ドメインに参加する方法については、「[Linux ホスト上の SQL Server を Active Directory ドメインに参加させる](sql-server-linux-active-directory-join-domain.md)」をご覧ください。
 
-1. 使用**[realmd](https://www.freedesktop.org/software/realmd/docs/guide-active-directory-join.html)** ホスト マシンを AD ドメインに参加させる。 まだインストールしていない場合に、realmd と Kerberos クライアント パッケージの両方をインストール、[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]ホスト マシンの Linux ディストリビューションのパッケージ マネージャーを使用します。
+## <a id="createuser"></a>[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 用の AD ユーザー (または MSA) を作成して SPN を設定する
 
-   ```bash
-   # RHEL
-   sudo yum install realmd krb5-workstation
+> [!NOTE]
+> 以下の手順では、[完全修飾ドメイン名](https://en.wikipedia.org/wiki/Fully_qualified_domain_name)を使います。 **Azure** を使用している場合は、先に進む前に **[作成する](https://docs.microsoft.com/azure/virtual-machines/linux/portal-create-fqdn)** 必要があります。
 
-   # SUSE
-   sudo zypper install realmd krb5-client
-
-   # Ubuntu
-   sudo apt-get install realmd krb5-user software-properties-common python-software-properties packagekit
-   ```
-
-1. Kerberos クライアント パッケージのインストールでは、領域名を求め、大文字で、ドメイン名を入力します。
-
-   > [!NOTE]
-   > このチュートリアルでは使用"contoso.com"を"CONTOSO.COM"ドメインおよび領域名の例としてそれぞれします。 これらを独自の値を置き換える必要があります。 これらのコマンドは大文字小文字を区別ので、使用することを確認して大文字このチュートリアルで使用される任意の場所。
-
-1. 構成、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] DNS ネーム サーバーとして AD ドメイン コントローラの IP アドレスを使用するホスト コンピューター。 
-
-   - **Ubuntu**:
-
-      編集、`/etc/network/interfaces`ファイルに dns ネーム サーバーとして AD ドメイン コントローラの IP アドレスが表示されます。 以下に例を示します。 
-
-      ```/etc/network/interfaces
-      <...>
-      # The primary network interface
-      auto eth0
-      iface eth0 inet dhcp
-      dns-nameservers **<AD domain controller IP address>**
-      dns-search **<AD domain name>**
-      ```
-
-      > [!NOTE]
-      > さまざまなコンピューターのネットワーク インターフェイス (eth0) が異なる場合があります。 使用しているかを確認するには、ifconfig を実行し、IP アドレスと送信および受信したバイト数を持つインターフェイスをコピーします。
-
-      このファイルを編集した後、ネットワーク サービスを再起動します。
-
-      ```bash
-      sudo ifdown eth0 && sudo ifup eth0
-      ```
-
-      これでいることを確認、`/etc/resolv.conf`ファイルには、次の例のような行が含まれています。  
-
-      ```/etc/resolv.conf
-      nameserver **<AD domain controller IP address>**
-      ```
-
-   - **RHEL**:
-
-     編集、`/etc/sysconfig/network-scripts/ifcfg-eth0`ファイル (またはその他のインターフェイス構成をファイルに適切な) DNS サーバーとして AD ドメイン コントローラの IP アドレスが表示されるようします。
-
-     ```/etc/sysconfig/network-scripts/ifcfg-eth0
-     <...>
-     PEERDNS=no
-     DNS1=**<AD domain controller IP address>**
-     ```
-
-     このファイルを編集した後、ネットワーク サービスを再起動します。
-
-     ```bash
-     sudo systemctl restart network
-     ```
-
-     これでいることを確認、`/etc/resolv.conf`ファイルには、次の例のような行が含まれています。  
-
-     ```/etc/resolv.conf
-     nameserver **<AD domain controller IP address>**
-     ```
-
-   - **SLES**:
-
-     編集、 `/etc/sysconfig/network/config` AD ドメイン コント ローラー IP が DNS クエリに使用するように、ファイルと、AD ドメインがドメインの検索リストには。
-
-     ```/etc/sysconfig/network/config
-     <...>
-     NETCONFIG_DNS_STATIC_SERVERS="**<AD domain controller IP address>**"
-     ```
-
-     このファイルを編集した後、ネットワーク サービスを再起動します。
-
-     ```bash
-     sudo systemctl restart network
-     ```
-
-     これでいることを確認、`/etc/resolv.conf`ファイルには、次の例のような行が含まれています。
-
-     ```/etc/resolv.conf
-     nameserver **<AD domain controller IP address>**
-     ```
-
-1. ドメインに参加します。
-
-   DNS が正しく構成されていることを確認したら、次のコマンドを実行して、ドメインに参加します。 新しいマシンをドメインに参加させる AD のための十分な特権を持つ AD アカウントを使用して認証する必要があります。
-
-   具体的には、このコマンドは AD で新しいコンピューター アカウントを作成、作成、 `/etc/krb5.keytab` keytab ファイルをホストしでドメインを構成する`/etc/sssd/sssd.conf`:
-
-   ```bash
-   sudo realm join contoso.com -U 'user@CONTOSO.COM' -v
-   <...>
-   * Successfully enrolled machine in realm
-   ```
-
-   > [!NOTE]
-   > エラーが表示し、「必要なパッケージがインストールされていない」実行する前に、Linux ディストリビューションのパッケージ マネージャーを使用してそれらのパッケージをインストールする必要があります、`realm join`コマンドを再実行します。
-   >
-   > 「、ドメインに参加する十分なアクセス許可」、エラーが発生する場合は、Linux マシンをドメインに参加させるための十分なアクセス許可があるドメイン管理者に確認する必要があります。
-   >
-   > 「KDC 応答と一致しませんでした予測を行い、」エラーが発生した場合を指定していないユーザーの適切な領域の名前。 領域名の大文字小文字を区別、大文字は通常、およびコマンドを使用して識別できます`realm discover contoso.com`します。
-   
-   > SQL Server は、ユーザー アカウントとグループをセキュリティ識別子 (SID) にマップするための SSSD と NSS を使用します。 SSSD 構成され、AD ログインを正常に作成する SQL Server の順序で実行されている必要があります。 Realmd は、ドメインへの参加の一環として自動的にこれは通常が、場合によってはこれを行うとは別にします。
-   >
-   > チェック アウトを構成するには、次[SSSD 手動で](https://access.redhat.com/articles/3023951)、および[SSSD を使用する NSS を構成します。](https://access.redhat.com/documentation/red_hat_enterprise_linux/7/html/system-level_authentication_guide/configuring_services#Configuration_Options-NSS_Configuration_Options)
-
-  
-5. ドメインからユーザーに関する情報を収集できますようになりましたこととそのユーザーとして Kerberos チケットを取得することを確認します。
-
-   次の例では**id**、  **[kinit](https://web.mit.edu/kerberos/krb5-1.12/doc/user/user_commands/kinit.html)**、および**[klist](https://web.mit.edu/kerberos/krb5-1.12/doc/user/user_commands/klist.html)** このコマンド。
-
-   ```bash
-   id user@contoso.com
-   uid=1348601103(user@contoso.com) gid=1348600513(domain group@contoso.com) groups=1348600513(domain group@contoso.com)
-
-   kinit user@CONTOSO.COM
-   Password for user@CONTOSO.COM:
-
-   klist
-   Ticket cache: FILE:/tmp/krb5cc_1000
-   Default principal: user@CONTOSO.COM
-   <...>
-   ```
-
-   > [!NOTE]
-   > 場合`id user@contoso.com`戻り値は、「しないこのようなユーザー、」コマンドを実行して、SSSD サービスが正常に開始されたことを確認`sudo systemctl status sssd`します。 サービスが実行されても「このようなユーザーはありません」エラーが発生した場合は、SSSD の詳細ログ記録を有効にしてください。 詳細については、Red Hat のドキュメントを参照してください[トラブルシューティング SSSD](https://access.redhat.com/documentation/Red_Hat_Enterprise_Linux/7/html/System-Level_Authentication_Guide/trouble.html#SSSD-Troubleshooting)します。
-   >
-   > 場合`kinit user@CONTOSO.COM`戻り値は、「KDC の応答が想定どおりでない最初の資格情報の取得中に」ことを realm は大文字で指定することを確認します。
-
-詳細については、Red Hat のドキュメントを参照してください[探索および結合の Id ドメイン](https://access.redhat.com/documentation/Red_Hat_Enterprise_Linux/7/html/Windows_Integration_Guide/realmd-domain.html)します。 
-
-## <a id="createuser"></a> AD ユーザーを作成[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]SPN の設定
-
-  > [!NOTE]
-  > 次の手順を使用して[完全修飾ドメイン名](https://en.wikipedia.org/wiki/Fully_qualified_domain_name)します。 使用している場合**Azure**、する必要があります**[作成](https://docs.microsoft.com/azure/virtual-machines/linux/portal-create-fqdn)** 続行する前にします。
-
-1. ドメイン コント ローラーで実行、 [New-aduser](https://technet.microsoft.com/library/ee617253.aspx)パスワードを無期限で新しい AD ユーザーを作成する PowerShell コマンド。 この例で、アカウントの"mssql"は名前が、アカウント名には、どのようなを指定できます。 アカウントの新しいパスワードの入力が求められます。
+1. ドメイン コントローラーで [New-ADUser](https://technet.microsoft.com/library/ee617253.aspx) PowerShell コマンドを実行して、有効期限がないパスワードを持つ新しい AD ユーザーを作成します。 次の例では `mssql` というアカウント名を使っていますが、任意のアカウント名にすることができます。 アカウントの新しいパスワードを入力するように求められます。
 
    ```PowerShell
    Import-Module ActiveDirectory
@@ -205,164 +64,213 @@ AD 認証を構成する前にする必要があります。
    ```
 
    > [!NOTE]
-   > SQL Server の資格情報は、同じアカウントを使用して他のサービスと共有されないように、SQL Server の専用の AD アカウントにセキュリティのベスト プラクティスを勧めします。 ただし、再利用できます既存の AD アカウント場合は、(次の手順で keytab ファイルを生成するために必要な) アカウントのパスワードがわかっている場合。
+   > SQL Server 専用の AD アカウントを使用して、SQL Server の資格情報が同じアカウントを使用する他のサービスと共有されないようにすることが、セキュリティのベスト プラクティスです。 ただし、アカウントのパスワードがわかっている場合は、必要に応じて既存の AD アカウントを再利用できます (次のステップで keytab ファイルを生成するために必要です)。
 
-2. このアカウントを使用するためのサービス プリンシパル名 (SPN) の設定、`setspn.exe`ツール。 SPN は、次の例では指定どおり正確にフォーマットする必要があります。 完全修飾ドメイン名を見つけることができます、[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]ホスト マシンを実行して`hostname --all-fqdns`上、[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]ホスト、および TCP ポートは 1433 構成していない限り[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]別のポート番号を使用します。
+2. **setspn.exe** ツールを使って、このアカウントの ServicePrincipalName (SPN) を設定します。 SPN は、次の例で指定したとおりに書式設定されている必要があります。 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] ホスト コンピューターの完全修飾ドメイン名は、[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] ホスト上で `hostname --all-fqdns` を実行することによって確認できます。 別のポート番号を使うように [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] を構成している場合を除き、TCP ポートは 1433 にする必要があります。
 
    ```PowerShell
    setspn -A MSSQLSvc/**<fully qualified domain name of host machine>**:**<tcp port>** mssql
+   setspn -A MSSQLSvc/**<netbios name of the host machine>**:**<tcp port>** mssql
    ```
 
    > [!NOTE]
-   > 「十分なアクセス権、」エラーが発生した場合は、このアカウントの SPN を設定するための十分なアクセス許可があるドメイン管理者に確認する必要があります。
+   > エラー `Insufficient access rights` が発生する場合は、ドメイン管理者に連絡して、このアカウントに SPN を設定するための十分なアクセス許可があることを確認してください。 SPN の登録に使用されるアカウントには **Write servicePrincipalName** 権限が必要になります。 詳細については、「 [Kerberos 接続用のサービス プリンシパル名の登録](../database-engine/configure-windows/register-a-service-principal-name-for-kerberos-connections.md)」を参照してください。
    >
-   > 今後、TCP ポートを変更する場合は、新しいポート番号、setspn コマンドをもう一度実行する必要があります。 また、次のセクションの手順に従って、SQL Server サービス keytab に新しい SPN を追加する必要があります。
+   > 後で TCP ポートを変更する場合は、新しいポート番号を指定して **setspn** コマンドを再度実行する必要があります。 また、次のセクションの手順に従って、SQL Server サービスの keytab に新しい SPN を追加する必要があります。
 
-3. 詳細については、「 [Kerberos 接続用のサービス プリンシパル名の登録](../database-engine/configure-windows/register-a-service-principal-name-for-kerberos-connections.md)」を参照してください。
+詳細については、「 [Kerberos 接続用のサービス プリンシパル名の登録](../database-engine/configure-windows/register-a-service-principal-name-for-kerberos-connections.md)」を参照してください。
 
-## <a id="configurekeytab"></a> 構成[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]サービス keytab
+## <a id="configurekeytab"></a>[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] サービスの keytab を構成する
 
-1. 前の手順で作成した AD アカウントのキーのバージョン番号 (kvno) を確認します。 通常は 2 ですが、アカウントのパスワードを複数回変更した場合、別の整数がある可能性があります。 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]ホスト コンピューターで、次を実行します。
+Linux で SQL Server の AD 認証を構成するには、AD アカウント (MSA または AD ユーザー アカウント) と、前のセクションで作成された SPN が必要です。
+
+> [!IMPORTANT]
+> AD アカウントのパスワードが変更された場合、または SPN が割り当てられているアカウントのパスワードが変更された場合は、新しいパスワードとキー バージョン番号 (KVNO) を使用して、keytab を更新する必要があります。 一部のサービスでは、パスワードが自動的にローテーションされる場合もあります。 問題のアカウントのパスワード ローテーション ポリシーを確認し、予期しないダウンタイムが発生しないように、スケジュールされたメンテナンス アクティビティと一致させます。
+
+### <a id="spn"></a> SPN の keytab エントリ
+
+1. 前のステップで作成した AD アカウントのキー バージョン番号 (KVNO) を確認します。 通常は 2 ですが、アカウントのパスワードを複数回変更した場合は、別の整数になることがあります。 SQL Server のホスト コンピューターで、次のコマンドを実行します。
+
+    - 次の例では、`user` が `@CONTOSO.COM` ドメインにあることを前提としています。 ユーザーとドメイン名を自分のユーザーとドメイン名に変更します。
 
    ```bash
    kinit user@CONTOSO.COM
-
-   kvno MSSQLSvc/**<fully qualified domain name of host machine>**:**<tcp port>**
+   kvno user@CONTOSO.COM
+   kvno MSSQLSvc/**<fully qualified domain name of host machine>**:**<tcp port>**@CONTOSO.COM
    ```
 
    > [!NOTE]
-   > Spn で、ドメインが大きい場合は特に、数分に反映されるまで、ドメインがかかる場合があります。 エラーが発生した場合"kvno:サーバーで Kerberos のデータベースが見つかりません MSSQLSvc の資格情報を取得中に/\*\*\<ホスト コンピューターの完全修飾ドメイン名\>\*\*:\* \* \< 。tcp ポート\>\*\*\@CONTOSO.COM"、数分待ってから、もう一度やり直してください。
+   > SPN がドメインに反映されるまでに数分かかる場合があります (特に、ドメインが大きい場合)。 `kvno: Server not found in Kerberos database while getting credentials for MSSQLSvc/**<fully qualified domain name of host machine>**:**<tcp port>**@CONTOSO.COM` というエラーが発生する場合は、数分待ってからもう一度やり直してください。</br></br> 上記のコマンドは、サーバーが AD ドメインに参加している場合にのみ機能します。これについては前のセクションで説明しました。
 
-2. Keytab ファイルを作成**[ktutil](https://web.mit.edu/kerberos/krb5-1.12/doc/admin/admin_commands/ktutil.html)** 前の手順で作成した AD ユーザーにします。 入力を求められたら、その AD アカウントのパスワードを入力します。
+1. [**ktpass**](/windows-server/administration/windows-commands/ktpass) を使用し、各 SPN の keytab エントリを追加します。その際、Windows コンピューターのコマンド プロンプトで次のコマンドを使用します。
+
+    - `<DomainName>\<UserName>` - MSA または AD ユーザー アカウントを指定できます
+    - `@CONTOSO.COM` - お使いのドメインの名前を使用します
+    - `/kvno <#>` - `<#>` を前の手順で取得した KVNO に置換します
+    - `<StrongPassword>` - 強力なパスワードを使用します
 
    ```bash
-   sudo ktutil
+   ktpass /princ MSSQLSvc/**<fully qualified domain name of host machine>**:**<tcp port>**@CONTOSO.COM /ptype KRB5_NT_PRINCIPAL /crypto aes256-sha1 /mapuser <DomainName>\<UserName> /out mssql.keytab -setpass -setupn /kvno <#> /pass <StrongPassword>
 
-   ktutil: addent -password -p MSSQLSvc/**<fully qualified domain name of host machine>**:**<tcp port>**@CONTOSO.COM -k **<kvno from above>** -e aes256-cts-hmac-sha1-96
+   ktpass /princ MSSQLSvc/**<fully qualified domain name of host machine>**:**<tcp port>**@CONTOSO.COM /ptype KRB5_NT_PRINCIPAL /crypto rc4-hmac-nt /mapuser <DomainName>\<UserName> /in mssql.keytab /out mssql.keytab -setpass -setupn /kvno <#> /pass <StrongPassword>
 
-   ktutil: addent -password -p MSSQLSvc/**<fully qualified domain name of host machine>**:**<tcp port>**@CONTOSO.COM -k **<kvno from above>** -e rc4-hmac
+   ktpass /princ MSSQLSvc/**<netbios name of the host machine>**:**<tcp port>**@CONTOSO.COM /ptype KRB5_NT_PRINCIPAL /crypto aes256-sha1 /mapuser <DomainName>\<UserName> /out mssql.keytab -setpass -setupn /kvno <#> /pass <StrongPassword>
 
-   ktutil: wkt /var/opt/mssql/secrets/mssql.keytab
+   ktpass /princ MSSQLSvc/**<netbios name of the host machine>**:**<tcp port>**@CONTOSO.COM /ptype KRB5_NT_PRINCIPAL /crypto rc4-hmac-nt /mapuser <DomainName>\<UserName> /in mssql.keytab /out mssql.keytab -setpass -setupn /kvno <#> /pass <StrongPassword>
 
-   quit
+   ktpass /princ <UserName>@<DomainName.com> /ptype KRB5_NT_PRINCIPAL /crypto aes256-sha1 /mapuser <DomainName>\<UserName> /in mssql.keytab /out mssql.keytab -setpass -setupn /kvno <#> /pass <StrongPassword>
+
+   ktpass /princ <UserName>@<DomainName.com> /ptype KRB5_NT_PRINCIPAL /crypto rc4-hmac-nt /mapuser <DomainName>\<UserName> /in mssql.keytab /out mssql.keytab -setpass -setupn /kvno <#> /pass <StrongPassword>
    ```
 
    > [!NOTE]
-   > Ktutil ツールはないパスワードの検証、ので正しく入力してください。
+   > 上記のコマンドでは、AD 認証に AES と RC4 の両方の暗号化暗号を使用できます。 RC4 は古い暗号化暗号です。より高度なセキュリティが必要な場合、AES 暗号化暗号のみを使用して keytab エントリを作成することを選択できます。
 
-3. Keytab にコンピューター アカウントを追加 **[ktutil](https://web.mit.edu/kerberos/krb5-1.12/doc/admin/admin_commands/ktutil.html)** します。 (UPN とも呼ばれます) コンピューターのアカウントは存在`/etc/krb5.keytab`形式で"\<ホスト名\>$\@\<realm.com\>"(例: sqlhost$\@CONTOSO.COM)。 これらのエントリからコピーします`/etc/krb5.keytab`に`mssql.keytab`します。
+1. 上記のコマンドの実行後、mssql.keytab という名前の keytab ファイルが与えられるはずです。 SQL Server コンピューターにあるフォルダー `/var/opt/mssql/secrets` にこのファイルをコピーします。
 
-   ```bash
-   sudo ktutil
+1. keytab ファイルをセキュリティで保護します。
 
-   # Read all entries from /etc/krb5.keytab
-   ktutil: rkt /etc/krb5.keytab
+    この keytab ファイルにアクセスできるすべてのユーザーは、ドメインで SQL Server を偽装できるので、mssql アカウントのみに読み取りアクセス権が付与されるように、ファイルへのアクセスを制限する必要があります。
 
-   # List all entries
-   ktutil: list
+    ```bash
+    sudo chown mssql:mssql /var/opt/mssql/secrets/mssql.keytab
+    sudo chmod 400 /var/opt/mssql/secrets/mssql.keytab
+    ```
 
-   # Delete all entries by their slot number which are not the UPN one at a
-   # time.
-   # Warning: when an entry is deleted (e.g. slot 1), all values slide up by
-   # one to take its place (e.g. the entry in slot 2 moves to slot 1 when slot
-   # 1's entry is deleted)
-   ktutil: delent <slot num>
-   ktutil: delent <slot num>
-   ...
-
-   # List all entries to ensure only UPN entries are left
-   ktutil: list
-
-   # When only UPN entries are left, append these values to mssql.keytab
-   ktutil: wkt /var/opt/mssql/secrets/mssql.keytab
-
-   quit
-   ```
-
-4. これにアクセスできる人物による`keytab`ファイル権限を借用できます[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]ドメインで、ようにしてこのようなファイルへのアクセスを制限するだけ、`mssql`アカウントは、読み取りアクセス。
+1. 次の構成オプションを **mssql-conf** ツールで設定し、keytab ファイルにアクセスするときに使用するアカウントを指定する必要があります。
 
    ```bash
-   sudo chown mssql:mssql /var/opt/mssql/secrets/mssql.keytab
-   sudo chmod 400 /var/opt/mssql/secrets/mssql.keytab
+   sudo mssql-conf set network.privilegedadaccount <username>
    ```
 
-5. 構成[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]これを使用する`keytab`Kerberos 認証用のファイル。
+   > [!NOTE]
+   > ユーザー名のみを含め、domainname\username や username@domain は含めません。 SQL Server の内部では、このユーザー名と共に必須となるドメイン名が使用時に追加されます。
 
-   ```bash
-   sudo /opt/mssql/bin/mssql-conf set network.kerberoskeytabfile /var/opt/mssql/secrets/mssql.keytab
-   sudo systemctl restart mssql-server
-   ```
+1. 次の手順を使用して、Kerberos 認証用の keytab ファイルを使って開始するように SQL Server を構成します。
 
-6. 省略可能:パフォーマンスを向上させるために、ドメイン コント ローラーへの UDP 接続を無効にします。 多くの場合、UDP 接続は常に失敗構成オプションを設定するために、ドメイン コント ローラーに接続するときに`/etc/krb5.conf`UDP 呼び出しをスキップします。 編集`/etc/krb5.conf`し、次のオプションを設定します。
+    ```bash
+    sudo mssql-conf set network.kerberoskeytabfile /var/opt/mssql/secrets/mssql.keytab
+    sudo systemctl restart mssql-server
+    ```
 
-   ```/etc/krb5.conf
-   [libdefaults]
-   udp_preference_limit=0
-   ```
+    > [!TIP]
+    > 必要に応じて、パフォーマンスを向上させるため、ドメイン コントローラーへの UDP 接続を無効にします。 多くの場合、ドメイン コントローラーに接続するときは UDP 接続が常に失敗するので、UDP の呼び出しをスキップするように **/etc/krb5.conf** の構成オプションを設定できます。 **/etc/krb5.conf** を編集して、次のオプションを設定します。
+    > ```bash
+    > /etc/krb5.conf
+    > [libdefaults]
+    > udp_preference_limit=0
+    > ```
 
-## <a id="createsqllogins"></a> TRANSACT-SQL での AD ベースのログインを作成します。
+この時点で、SQL Server で AD ベースのログインを使用できるようになります。
 
-1. 接続する[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]、AD ベースの新しいログインを作成します。
+## <a id="createsqllogins"></a> Transact-SQL で AD ベースのログインを作成する
+
+1. SQL Server に接続し、AD ベースの新しいログインを作成します。
 
    ```sql
    CREATE LOGIN [CONTOSO\user] FROM WINDOWS;
    ```
 
-2. ログインが現在表示されていることを確認、 [sys.server_principals](../relational-databases/system-catalog-views/sys-server-principals-transact-sql.md)システム カタログ ビュー。
+1. [sys.server_principals](../relational-databases/system-catalog-views/sys-server-principals-transact-sql.md) システム カタログ ビューにログインが表示されていることを確認します。
 
    ```sql
    SELECT name FROM sys.server_principals;
    ```
 
-## <a id="connect"></a> 接続する[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]AD 認証を使用します。
+## <a id="connect"></a> AD 認証を使用して SQL Server に接続する
 
-ドメインの資格情報を使用して、クライアント コンピューターにログインします。 接続できるようになりました[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]AD 認証を使用して、パスワードを再入力しなくてもします。 AD グループのログインを作成する場合、そのグループのメンバーになっている AD ユーザーは、同じ方法で接続できます。
+ドメイン資格情報を使用してクライアント コンピューターにログインします。 AD 認証を使用してパスワードを再入力することなく SQL Server に接続できるようになります。 AD グループに対するログインを作成した場合は、そのグループのメンバーであるすべての AD ユーザーが、同じ方法で接続できます。
 
-使用してドライバーをクライアントが AD 認証を使用する特定の接続文字列パラメーターに依存します。 次の例を考えてみます。
+クライアントで AD 認証を使用するための特定の接続文字列パラメーターは、使用しているドライバーによって異なります。 次のセクションの例を検討してください。
 
-* `sqlcmd` ドメインに参加している Linux クライアントに
+### <a name="sqlcmd-on-a-domain-joined-linux-client"></a>ドメインに参加している Linux クライアントでの sqlcmd
 
-   使用してドメインに参加している Linux クライアントにログイン`ssh`とドメインの資格情報。
+**ssh** とドメイン資格情報を使用して、ドメインに参加している Linux クライアントにログインします。
 
-   ```bash
-   ssh -l user@contoso.com client.contoso.com
-   ```
-
-   インストールされていることを確認、 [mssql ツール](sql-server-linux-setup-tools.md)をパッケージ化しを使用して接続`sqlcmd`任意の資格情報の指定なし。
-
-   ```bash
-   sqlcmd -S mssql-host.contoso.com
-   ```
-
-* ドメインに参加している Windows クライアント上の SSMS
-
-   ドメインの資格情報を使用してドメインに参加している Windows クライアントにログインします。 確認[!INCLUDE[ssmanstudiofull-md](../includes/ssmanstudiofull-md.md)]がインストールされている場合、その後に接続、[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]インスタンス (例:"mssql-host.contoso.com") を指定して**Windows 認証**で、**サーバーへの接続**ダイアログ。
-
-* その他のクライアント ドライバーを使用して AD 認証
-
-  * JDBC:[Kerberos 統合認証を使用して、SQL Server に接続するには](https://docs.microsoft.com/sql/connect/jdbc/using-kerberos-integrated-authentication-to-connect-to-sql-server)
-  * ODBC :[統合認証を使用する](https://docs.microsoft.com/sql/connect/odbc/linux/using-integrated-authentication)
-  * ADO.NET:[接続文字列の構文](https://msdn.microsoft.com/library/system.data.sqlclient.sqlauthenticationmethod(v=vs.110).aspx)
-
-## <a name="performance-improvements"></a>パフォーマンスの強化
-AD の構成は手順で有効な AD アカウントの参照は、しばらく時間をチェックすることを確認する場合[サード パーティ製 AD プロバイダー経由の Linux 上の SQL Server と Active Directory 認証を使用して](sql-server-linux-active-directory-third-party-providers.md)、追加することができます、線の下に`/var/opt/mssql/mssql.conf`を SSSD 呼び出しをスキップし、直接の LDAP 呼び出しを使用します。
-
-```/var/opt/mssql/mssql.conf
-[network]
-disablesssd = true
+```bash
+ssh -l user@contoso.com client.contoso.com
 ```
 
-## <a name="next-steps"></a>次の手順
+[mssql-tools](sql-server-linux-setup-tools.md) パッケージがインストールされていることを確認した後、資格情報を指定せずに **sqlcmd** を使用して接続します。
 
-このチュートリアルでは、SQL Server on Linux での Active Directory 認証を設定する方法を説明しました。 学習したします。
+```bash
+sqlcmd -S mssql-host.contoso.com
+```
+SQL Windows とは異なり、Kerberos 認証は SQL Linux のローカル接続で動作します。 ただし、SQL Linux ホストの FQDN を指定する必要があります。'.'、'localhost'、'127.0.0.1' に接続しようとしても AD 認証は機能しません。
+
+### <a name="ssms-on-a-domain-joined-windows-client"></a>ドメインに参加している Windows クライアントでの SSMS
+
+ドメイン資格情報を使用して、ドメインに参加している Windows クライアントにログインします。 SQL Server Management Studio がインストールされていることを確認した後、 **[サーバーへの接続]** ダイアログで **[Windows 認証]** を指定して、SQL Server インスタンス (例 : `mssql-host.contoso.com`) に接続します。
+
+### <a name="ad-authentication-using-other-client-drivers"></a>他のクライアント ドライバーを使用した AD 認証
+
+次の表では、他のクライアント ドライバーに関する推奨事項について説明します。
+
+| クライアント ドライバー | 推奨 |
+|---|---|
+| **JDBC** | Kerberos 統合認証を使用して、SQL Server に接続します。 |
+| **ODBC** | 統合認証を使用します。 |
+| **ADO.NET** | 接続文字列の構文。 |
+
+## <a id="additionalconfig"></a> その他の構成オプション
+
+[PBIS](https://www.beyondtrust.com/)、[VAS](https://www.oneidentity.com/products/authentication-services/)、[Centrify](https://www.centrify.com/) などのサードパーティ製ユーティリティを使って Linux ホストを AD ドメインに参加させていて、SQL Server で強制的に openldap ライブラリを直接使いたい場合は、次のように **mssql-conf** で **disablesssd** オプションを構成できます。
+
+```bash
+sudo mssql-conf set network.disablesssd true
+systemctl restart mssql-server
+```
+
+> [!NOTE]
+> **realmd** のように SSSD が設定されるユーティリティもありますが、PBIS、VAS、Centrify などの他のツールでは SSSD は設定されません。 AD ドメインへの参加に使用しているユーティリティで SSSD が設定されない場合は、**disablesssd** オプションを `true` に設定することをお勧めします。 openldap メカニズムにフォールバックする前に、SQL Server では AD に対して SSSD の使用が試みられるので、必須ではありませんが、SQL Server で SSSD メカニズムをバイパスして openldap が直接呼び出されるように構成すると、パフォーマンスが向上します。
+
+ドメイン コントローラーで LDAPS がサポートされている場合は、SQL Server からドメイン コントローラーへのすべての接続で LDAPS が使用されるように強制することができます。 クライアントが LDAPS 経由でドメイン コントローラーに接続できることを確認するには、Bash コマンド `ldapsearch -H ldaps://contoso.com:3269` を実行します。 LDAPS のみを使うように SQL Server を設定するには、以下を実行します。
+
+```bash
+sudo mssql-conf set network.forcesecureldap true
+systemctl restart mssql-server
+```
+
+これにより、ホストでの AD ドメイン参加が SSSD パッケージによって行われていて、**disablesssd** が true に設定されていない場合は、SSSD で LDAPS が使用されます。 **disablesssd** が true に設定されていて、**forcesecureldap** が true に設定されている場合は、SQL Server によって行われる openldap ライブラリの呼び出しで LDAPS プロトコルが使われます。
+
+### <a name="post-sql-server-2017-cu14"></a>SQL Server 2017 CU14 以降
+
+SQL Server 2017 CU14 以降では、SQL Server で、AD ドメイン コントローラーへの参加にサードパーティのプロバイダーが使われていて、**disablesssd** を true に設定することによって一般的な AD 参照に openldap の呼び出しが使われるように構成されている場合は、**enablekdcfromkrb5** オプションを使うことにより、KDC サーバーの逆引き DNS 参照ではなく、krb5 ライブラリを使って KDC 参照を行うように、SQL Server を強制することができます。
+
+これは、SQL Server が通信を試みるドメイン コントローラーを手動で構成する場合に便利です。 また、**krb5.conf** で KDC リストを使うことにより、openldap ライブラリのメカニズムを使用します。
+
+最初に、**disablesssd** と **enablekdcfromkrb5conf** を true に設定した後、SQL Server を再起動します。
+
+```bash
+sudo mssql-conf set network.disablesssd true
+sudo mssql-conf set network.enablekdcfromkrb5conf true
+systemctl restart mssql-server
+```
+
+次に、 **/etc/krb5.conf** で KDC リストを次のように構成します。
+
+```/etc/krb5.conf
+[realms]
+CONTOSO.COM = {
+  kdc = dcWithGC1.contoso.com
+  kdc = dcWithGC2.contoso.com
+}
+```
+
+> [!NOTE]
+> 推奨されませんが、Linux ホストをドメインに参加させるときに SSSD が設定される **realmd** などのユーティリティを使用しながら、**disablesssd** を true に設定することで、SQL Server による Active Directory 関連の呼び出しに SSSD ではなく openldap の呼び出しが使われるようにすることができます。
+
+## <a name="next-steps"></a>次のステップ
+
+このチュートリアルでは、SQL Server on Linux で Active Directory 認証を設定する方法について説明しました。 以下の方法を学習しました。
 > [!div class="checklist"]
-> * [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]ドメインにホスト
-> * [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]の AD ユーザーを作成し、SPN を設定する
-> * [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]サービス keytab を構成する
-> * TRANSACT-SQL で AD に基づくログインを作成する
-> * AD Authentication を使用して [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] へ接続する
+> * [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] ホストを AD ドメインに参加させる
+> * [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 用の AD ユーザーを作成し、SPN を設定する
+> * [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] サービスの keytab を構成する
+> * Transact-SQL で AD ベースのログインを作成する
+> * AD 認証を使用して [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] に接続する
 
-次に、その他のセキュリティのシナリオについて調べる for SQL Server on Linux。
+次に、SQL Server on Linux の他のセキュリティ シナリオを調べます。
 
 > [!div class="nextstepaction"]
->[SQL Server on Linux への接続の暗号化](sql-server-linux-encrypted-connections.md)
+> [SQL Server on Linux への接続の暗号化](sql-server-linux-encrypted-connections.md)

@@ -20,13 +20,12 @@ helpviewer_keywords:
 ms.assetid: c6cd5d0f-18f4-49be-b161-64d9c5569086
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: b272b3b5df01931cfabf1f19945bba477cc680bc
-ms.sourcegitcommit: c6e71ed14198da67afd7ba722823b1af9b4f4e6f
+ms.openlocfilehash: 7d39f716717fe517fb3274e4c5519606916afb7b
+ms.sourcegitcommit: e9c1527281f2f3c7c68981a1be94fe587ae49ee9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/16/2019
-ms.locfileid: "54326713"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73064672"
 ---
 # <a name="alter-application-role-transact-sql"></a>ALTER APPLICATION ROLE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -70,7 +69,7 @@ ALTER APPLICATION ROLE application_role_name
  アプリケーション ロールは、sys.database_principals カタログ ビューで参照できます。  
   
 > [!CAUTION]  
->  [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] でのスキーマの動作は、以前のバージョンの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] から変更されました。 コードで、スキーマがデータベース ユーザーと同じであることが前提となっている場合、正しい結果が返されない場合があります。 以下の DDL ステートメントが使用されているデータベースでは、sysobjects などの古いカタログ ビューを使用してはいけません:CREATE SCHEMA、ALTER SCHEMA、DROP SCHEMA、CREATE USER、ALTER USER、DROP USER、CREATE ROLE、ALTER ROLE、DROP ROLE、CREATE APPROLE、ALTER APPROLE、DROP APPROLE、ALTER AUTHORIZATION。 このようなデータベースでは、新しいカタログ ビューを使用する必要があります。 新しいカタログ ビューでは、[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] で導入されたプリンシパルとスキーマの分離が考慮されます。 カタログ ビューの詳細については、「[カタログ ビュー &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)」を参照してください。  
+>  [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] でのスキーマの動作は、以前のバージョンの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] から変更されました。 コードで、スキーマがデータベース ユーザーと同じであることが前提となっている場合、正しい結果が返されない場合があります。 以下の DDL ステートメントが使用されているデータベースでは、sysobjects などの古いカタログ ビューを使用してはいけません:CREATE SCHEMA、ALTER SCHEMA、DROP SCHEMA、CREATE USER、ALTER USER、DROP USER、CREATE ROLE、ALTER ROLE、DROP ROLE、CREATE APPROLE、ALTER APPROLE、DROP APPROLE、ALTER AUTHORIZATION。 これらのいずれかのステートメントが使用されたデータベースでは、新しいカタログ ビューを使用する必要があります。 新しいカタログ ビューでは、[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] で導入されたプリンシパルとスキーマの分離が考慮されます。 カタログ ビューの詳細については、「[カタログ ビュー &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)」を参照してください。  
   
 ## <a name="permissions"></a>アクセス許可  
  データベースに対する ALTER ANY APPLICATION ROLE 権限が必要です。 既定のスキーマを変更するには、アプリケーション ロールに対する ALTER 権限も必要です。 アプリケーション ロールは、それ自体の既定のスキーマを変更できますが、名前とパスワードは変更できません。  
@@ -80,7 +79,7 @@ ALTER APPLICATION ROLE application_role_name
 ### <a name="a-changing-the-name-of-application-role"></a>A. アプリケーション ロールの名前を変更する  
  次の例では、アプリケーション ロール `weekly_receipts` の名前を `receipts_ledger` に変更します。  
   
-```  
+```sql  
 USE AdventureWorks2012;  
 CREATE APPLICATION ROLE weekly_receipts   
     WITH PASSWORD = '987Gbv8$76sPYY5m23' ,   
@@ -94,7 +93,7 @@ GO
 ### <a name="b-changing-the-password-of-application-role"></a>B. アプリケーション ロールのパスワードを変更する  
  次の例では、アプリケーション ロール `receipts_ledger` のパスワードを変更します。  
   
-```  
+```sql  
 ALTER APPLICATION ROLE receipts_ledger   
     WITH PASSWORD = '897yUUbv867y$200nk2i';  
 GO  
@@ -103,7 +102,7 @@ GO
 ### <a name="c-changing-the-name-password-and-default-schema"></a>C. 名前、パスワード、および既定のスキーマを変更する  
  次の例では、アプリケーション ロール `receipts_ledger` の名前、パスワード、および既定のスキーマをすべて同時に変更します。  
   
-```  
+```sql  
 ALTER APPLICATION ROLE receipts_ledger   
     WITH NAME = weekly_ledger,   
     PASSWORD = '897yUUbv77bsrEE00nk2i',   

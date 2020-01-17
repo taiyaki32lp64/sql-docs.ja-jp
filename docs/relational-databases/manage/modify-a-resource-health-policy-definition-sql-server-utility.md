@@ -12,13 +12,12 @@ f1_keywords:
 ms.assetid: 27bec0b6-92e9-448e-8c70-fe36802cf128
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: b26249363db9ffb2f90dd25d7663300ebe5d5ede
-ms.sourcegitcommit: af1d9fc4a50baf3df60488b4c630ce68f7e75ed1
+ms.openlocfilehash: 83d1f152ef414022803d84781a7948d04c4a77b6
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/06/2018
-ms.locfileid: "51029779"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68115407"
 ---
 # <a name="modify-a-resource-health-policy-definition-sql-server-utility"></a>リソース正常性ポリシーの定義の変更 (SQL Server ユーティリティ)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -38,7 +37,7 @@ ms.locfileid: "51029779"
   
 4.  ポリシーの説明の右側にあるコントロールを使用して、過小使用ポリシーまたは過大使用ポリシーのしきい値を設定します。  
   
-5.  必要に応じて、 **[適用]**、 **[破棄]**、または **[既定値に戻す]** ボタンをクリックします。 ポリシーの変更は、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ユーティリティのダッシュボードおよびリスト ビューの詳細に反映されるまで最大 15 分かかる場合があります。  
+5.  必要に応じて、 **[適用]** 、 **[破棄]** 、または **[既定値に戻す]** ボタンをクリックします。 ポリシーの変更は、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ユーティリティのダッシュボードおよびリスト ビューの詳細に反映されるまで最大 15 分かかる場合があります。  
   
 6.  データを更新するには、ユーティリティ エクスプローラーのナビゲーション ウィンドウで **[ユーティリティ管理]** ノードを右クリックし、 **[更新]** をクリックします。  
   
@@ -52,11 +51,11 @@ ms.locfileid: "51029779"
   
 4.  矢印またはポリシーの説明をクリックして、表示または変更するポリシーを選択します。 既定では、グローバル ポリシーが選択されます。  
   
-5.  グローバル ポリシーをオーバーライドして、指定したデータ層アプリケーションに個別のポリシー定義を実装するには、**[グローバル ポリシーをオーバーライド]** をクリックします。  
+5.  グローバル ポリシーをオーバーライドして、指定したデータ層アプリケーションに個別のポリシー定義を実装するには、 **[グローバル ポリシーをオーバーライド]** をクリックします。  
   
 6.  ポリシーの説明の右側にあるコントロールを使用して、過小使用ポリシーまたは過大使用ポリシーのしきい値を設定します。  
   
-7.  必要に応じて、 **[適用]**、 **[破棄]**、または **[既定値に戻す]** ボタンをクリックします。 ポリシーの変更は、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ユーティリティのダッシュボードおよびリスト ビューの詳細に反映されるまで最大 15 分かかる場合があります。  
+7.  必要に応じて、 **[適用]** 、 **[破棄]** 、または **[既定値に戻す]** ボタンをクリックします。 ポリシーの変更は、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ユーティリティのダッシュボードおよびリスト ビューの詳細に反映されるまで最大 15 分かかる場合があります。  
   
 8.  データを更新するには、ユーティリティ エクスプローラーのナビゲーション ウィンドウで **[配置済みのデータ層アプリケーション]** ノードを右クリックし、 **[更新]** をクリックします。  
   

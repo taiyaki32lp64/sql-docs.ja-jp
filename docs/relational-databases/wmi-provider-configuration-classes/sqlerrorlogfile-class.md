@@ -1,5 +1,5 @@
 ---
-title: SqlErrorLogFile クラス |Microsoft Docs
+title: SqlErrorLogFile クラス
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -10,13 +10,12 @@ ms.topic: reference
 ms.assetid: 2b83ae4a-c0d4-414c-b6e5-a41ec7c13159
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: 2794e4f59b6c898b1fd956c0f9390ba9bbbd439e
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 0dd923f17fe0267edf40d07da982d0856ec4ba06
+ms.sourcegitcommit: baa40306cada09e480b4c5ddb44ee8524307a2ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51668021"
+ms.lasthandoff: 11/06/2019
+ms.locfileid: "73659052"
 ---
 # <a name="sqlerrorlogfile-class"></a>SqlErrorLogFile クラス
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -37,7 +36,7 @@ class SQLErrorLogFile
 };  
 ```  
   
-## <a name="properties"></a>[プロパティ]  
+## <a name="properties"></a>プロパティ  
  SQLErrorLogFile クラスは、次のプロパティを定義します。  
   
 |||  
@@ -46,18 +45,18 @@ class SQLErrorLogFile
 |InstanceName|データ型:**文字列**<br /><br /> アクセスの種類: 読み取り専用<br /><br /> 修飾子: キー<br /><br /> <br /><br /> ログ ファイルが存在する [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスの名前。|  
 |LastModified|データ型: **datetime**<br /><br /> アクセスの種類: 読み取り専用<br /><br /> <br /><br /> ログ ファイルの最終変更日。|  
 |LogFileSize|データ型: **uint32**<br /><br /> アクセスの種類: 読み取り専用<br /><br /> <br /><br /> ログ ファイルのサイズ (バイト単位)。|  
-|名前|データ型:**文字列**<br /><br /> アクセスの種類: 読み取り専用<br /><br /> 修飾子: キー<br /><br /> <br /><br /> ログ ファイルの名前。|  
+|[オブジェクト名]|データ型:**文字列**<br /><br /> アクセスの種類: 読み取り専用<br /><br /> 修飾子: キー<br /><br /> <br /><br /> ログ ファイルの名前。|  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>Remarks  
   
 |||  
 |-|-|  
 |MOF|Sqlmgmprovider xpsp2up.mof|  
 |DLL|Sqlmgmprovider.dll|  
-|Namespace|\root\Microsoft\SqlServer\ComputerManagement10|  
+|名前空間|\root\Microsoft\SqlServer\ComputerManagement10|  
   
 ## <a name="example"></a>例  
- 次の例では、指定した [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンス上にあるすべての [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ログ ファイルに関する情報を取得します。 例を実行する置換\< *Instance_Name*> 'Instance1' など、インスタンスの名前に置き換えます。  
+ 次の例では、指定した [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンス上にあるすべての [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ログ ファイルに関する情報を取得します。 この例を実行するには、\<*Instance_Name*> をインスタンスの名前 (' Instance1 ' など) に置き換えます。  
   
 ```  
 on error resume next  
@@ -77,25 +76,25 @@ Next
 ```  
   
 ## <a name="comments"></a>コメント  
- ときに*InstanceName*が指定されていない WQL ステートメントで、クエリには、既定のインスタンスの情報が返されます。 たとえば、次の WQL ステートメントは、既定のインスタンス (MSSQLSERVER) からすべてのログ ファイルに関する情報を返します。  
+ WQL ステートメントで*InstanceName*が指定されていない場合、クエリは既定のインスタンスの情報を返します。 たとえば、次の WQL ステートメントは、既定のインスタンス (MSSQLSERVER) からすべてのログ ファイルに関する情報を返します。  
   
 ```  
 "SELECT * FROM SqlErrorLogFile"  
 ```  
   
-## <a name="security"></a>セキュリティ  
- 接続するため、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]ログ ファイルは、WMI からはローカルおよびリモートの両方のコンピューターで次のアクセス許可が必要があります。  
+## <a name="security"></a>Security  
+ WMI を使用して [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ログファイルに接続するには、ローカルコンピューターとリモートコンピューターの両方に対して次のアクセス許可を持っている必要があります。  
   
--   読み取りアクセス、 **root \microsoft\sqlserver\computermanagement10** WMI 名前空間。 既定では、すべてのユーザーがアカウントの有効化権限による読み取りアクセスを持ちます。  
+-   **Root\Microsoft\SqlServer\ComputerManagement10** WMI 名前空間への読み取りアクセス。 既定では、すべてのユーザーがアカウントの有効化権限による読み取りアクセスを持ちます。  
   
     > [!NOTE]  
-    >  WMI のアクセス許可を確認する方法については、トピックの [セキュリティ] セクションを参照してください。[オフライン ログ ファイルの表示](../../relational-databases/logs/view-offline-log-files.md)します。  
+    >  WMI のアクセス許可を確認する方法については、「[オフラインログファイルの表示](../../relational-databases/logs/view-offline-log-files.md)」の「セキュリティ」セクションを参照してください。  
   
--   エラー ログを格納したフォルダーへの読み取り権限。 既定では、エラー ログは、次のパスにあります (ここ\<*ドライブ >* インストール先ドライブを表す[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]と\< *InstanceName*> は、インスタンスの名前[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)])。  
+-   エラー ログを格納したフォルダーへの読み取り権限。 既定では、エラーログは次のパスにあります (\<*ドライブ >* は [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] をインストールしたドライブを表し、\<*InstanceName*> は [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のインスタンスの名前です)。  
   
-     **\<ドライブ >: \Program Files\Microsoft SQL Server\MSSQL11** **.\<InstanceName > \MSSQL\Log**  
+     **\<Drive >: Server\MSSQL11 を実行** **します。\<InstanceName > \MSSQL\Log**  
   
- ファイアウォール経由で接続する場合は、接続先のリモート コンピューターのファイアウォールで WMI 用に例外が設定されていることを確認する必要があります。 詳細については、次を参照してください。 [WMI は、Windows Vista でリモート起動に接続する](https://go.microsoft.com/fwlink/?LinkId=178848)します。  
+ ファイアウォール経由で接続する場合は、リモート ターゲット コンピューターのファイアウォールで WMI 用に例外が設定されていることを確認する必要があります。 詳細については、「 [Windows Vista 以降で WMI にリモート接続する](https://go.microsoft.com/fwlink/?LinkId=178848)」を参照してください。  
   
 ## <a name="see-also"></a>参照  
  [SqlErrorLogEvent クラス](../../relational-databases/wmi-provider-configuration-classes/sqlerrorlogevent-class.md)   

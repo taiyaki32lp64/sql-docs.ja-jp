@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - mining structures [Analysis Services], dimensions
@@ -13,12 +12,12 @@ ms.assetid: 9f0c39e5-3516-43ab-b203-f3f6dbcff89a
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: feff90d769016492f10c3699ebd563aac13a84b7
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: b642d7a0bdf552d8944602761aa76eec1cf35306
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48117315"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66085497"
 ---
 # <a name="create-a-data-mining-dimension"></a>データ マイニング ディメンションの作成
   マイニング構造が OLAP キューブに基づいている場合は、マイニング モデルのコンテンツが含まれているディメンションを作成できます。 作成したディメンションは、ソース キューブに戻すことができます。  

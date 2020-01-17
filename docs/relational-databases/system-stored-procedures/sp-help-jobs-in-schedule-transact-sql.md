@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 1168aa2c-136b-4ba3-b18e-9070d95a26fa
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 24b70a8327a69496438be7739e3b5eba6b24533f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 1713974a8ba90474393ff9bb65f6b98a5c74b601
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47746390"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68054899"
 ---
 # <a name="sphelpjobsinschedule-transact-sql"></a>sp_help_jobs_in_schedule (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -42,11 +41,9 @@ sp_help_jobs_in_schedule
 ```  
   
 ## <a name="arguments"></a>引数  
- [ **@schedule_id =** ] *schedule_id*  
- 情報を一覧表示するスケジュールの識別子を指定します。 *schedule_id*は**int**、既定値はありません。 いずれか*schedule_id*または*schedule_name*指定することがあります。  
+`[ @schedule_id = ] schedule_id` に関する情報を表示するスケジュールの識別子です。 *schedule_id*は**int**、既定値はありません。 いずれか*schedule_id*または*schedule_name*指定することがあります。  
   
- [ **@schedule_name =** ] **'***schedule_name***'**  
- 情報を一覧表示するスケジュールの名前を指定します。 *schedule_name*は**sysname**、既定値はありません。 いずれか*schedule_id*または*schedule_name*指定することがあります。  
+`[ @schedule_name = ] 'schedule_name'` に関する情報を表示するスケジュールの名前。 *schedule_name*は**sysname**、既定値はありません。 いずれか*schedule_id*または*schedule_name*指定することがあります。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  **0** (成功) または**1** (失敗)  
@@ -86,7 +83,7 @@ sp_help_jobs_in_schedule
 |**current_retry_attempt**|**int**|ジョブの実行中にステップを再試行した場合、現在の再試行を示します。|  
 |**has_step**|**int**|ジョブのジョブ ステップ数。|  
 |**has_schedule**|**int**|ジョブのジョブ スケジュール数。|  
-|**has_target**|**int**|ジョブの対象サーバー数。|  
+|**has_target**|**int**|ジョブのターゲット サーバー数。|  
 |**type**|**int**|ジョブの種類:<br /><br /> **1** = ローカル ジョブ。<br /><br /> **2** = マルチ サーバー ジョブです。<br /><br /> **0** = ジョブには、対象サーバーがありません。|  
   
 ## <a name="remarks"></a>コメント  

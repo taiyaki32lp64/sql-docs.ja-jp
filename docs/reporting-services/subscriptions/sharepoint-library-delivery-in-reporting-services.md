@@ -2,7 +2,7 @@
 title: Reporting Services での SharePoint ライブラリへの配信 | Microsoft Docs
 ms.date: 03/14/2017
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: subscriptions
 ms.topic: conceptual
 helpviewer_keywords:
@@ -10,14 +10,14 @@ helpviewer_keywords:
 - delivering reports [Reporting Services]
 - subscriptions [Reporting Services], SharePoint library delivery
 ms.assetid: cb4e4f71-f2d5-475a-9284-ea324c93c7de
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: f511dc6bd39366d8c7706966ec78e36e3ed983b8
-ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: b4bf1f99d6ebadaa0b5740d3563386802bbc3e69
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51813245"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65578064"
 ---
 # <a name="sharepoint-library-delivery-in-reporting-services"></a>Reporting Services での SharePoint ライブラリへの配信
   SharePoint 統合用に構成されているレポート サーバーでは、レポートを SharePoint ライブラリに送信する配信拡張機能を使用できます。  
@@ -51,7 +51,7 @@ ms.locfileid: "51813245"
   
 2.  レポートを選択し、レポートの横にある下向きの矢印をクリックして、 **[サブスクリプションの管理]** をクリックします。  
   
-3.  **[作成]**、 **[編集]**、または **[削除]** をクリックします。  
+3.  **[作成]** 、 **[編集]** 、または **[削除]** をクリックします。  
   
  [サブスクリプションの管理] リストの状態メッセージに、サブスクリプションの現在の情報が表示されます。この情報には、サブスクリプションの状態や、サブスクリプションの最終実行日時などが含まれます。  
   

@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 98db9631-eb9b-4962-abe4-96f495133a5d
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 48dc5dff83e942b894548d44e3673c19ca0746c5
-ms.sourcegitcommit: 1e28f923cda9436a4395a405ebda5149202f8204
+ms.openlocfilehash: 20043c96771bf888defa2c8fbeb028aaa18f5abc
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/25/2019
-ms.locfileid: "55044875"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67905342"
 ---
 # <a name="sqlsetstmtoption-desktop-database-drivers"></a>SQLSetStmtOption (デスクトップ データベース ドライバー)
 

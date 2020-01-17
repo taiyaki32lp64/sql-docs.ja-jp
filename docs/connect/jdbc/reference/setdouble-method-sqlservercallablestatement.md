@@ -1,5 +1,5 @@
 ---
-title: setDouble メソッド (SQLServerCallableStatement) |Microsoft Docs
+title: setDouble メソッド (SQLServerCallableStatement) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: c054bb84-1292-4b70-b574-2ae189cd4e68
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 7ebb554c0fada590e22a151293738bd16b7447f4
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 2b103bae2e7de26997545d0158ec2e3c440a0c59
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47839170"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68213685"
 ---
 # <a name="setdouble-method-sqlservercallablestatement"></a>setDouble メソッド (SQLServerCallableStatement)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -43,7 +42,7 @@ public void setDouble(java.lang.String sCol,
   
  *d*  
   
- A**二重**値。  
+ **Double**値。  
   
 ## <a name="exceptions"></a>例外  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  

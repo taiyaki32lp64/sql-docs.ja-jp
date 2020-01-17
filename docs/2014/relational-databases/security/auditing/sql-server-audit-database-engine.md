@@ -16,11 +16,11 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: 8286c918c224b92e1f391931569030a7218252f1
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53373524"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68198421"
 ---
 # <a name="sql-server-audit-database-engine"></a>SQL Server Audit (データベース エンジン)
   [!INCLUDE[ssDEnoversion](../../../includes/ssdenoversion-md.md)] のインスタンスや個々のデータベースの *監査* を行うためには、 [!INCLUDE[ssDE](../../../includes/ssde-md.md)]で発生するイベントの追跡およびログ記録が必要です。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 監査では、サーバー レベルのイベントのためのサーバー監査仕様とデータベース レベルのイベントのためのデータベース監査仕様を含めることができる、サーバー監査を作成できます。 監査イベントは、イベント ログまたは監査ファイルへ書き込むことができます。  
@@ -61,7 +61,7 @@ ms.locfileid: "53373524"
 > [!IMPORTANT]  
 >  Windows アプリケーション イベント ログの読み取りおよび書き込みは、認証されているユーザーならば、だれでも行うことができます。 アプリケーション イベント ログでは、Windows セキュリティ イベント ログほど高いアクセス許可は要求されません。したがって、Windows セキュリティ イベント ログに比べてセキュリティが低くなります。  
   
- Windows セキュリティ ログへの書き込みを行うには、"セキュリティ監査の生成 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]**" ポリシーに** サービス アカウントを追加する必要があります。 既定では、ローカル システム、ローカル サービス、およびネットワーク サービスがこのポリシーに追加されています。 この設定は、セキュリティ ポリシー スナップイン (secpol.msc) を使用して構成できます。 さらに、 **オブジェクト アクセスの監査** セキュリティ ポリシーを、 **成功** と **失敗**の両方について有効にする必要があります。 この設定は、セキュリティ ポリシー スナップイン (secpol.msc) を使用して構成できます。 [!INCLUDE[wiprlhext](../../../includes/wiprlhext-md.md)] Windows Server 2008 では、設定することもできるより細かい**生成されたアプリケーション**監査ポリシー プログラムを使用してコマンドラインからのポリシー (`AuditPol.exe)`します。 Windows セキュリティ ログへの書き込みを有効にする手順の詳細については、「 [セキュリティ ログへの SQL サーバー監査イベントの書き込み](write-sql-server-audit-events-to-the-security-log.md)」を参照してください。 Auditpol.exe プログラムの詳細については、 [グループ ポリシーを使用して詳細なセキュリティの監査を構成する方法](https://support.microsoft.com/kb/921469/)に関するサポート技術情報の記事 921469 を参照してください。 Windows イベント ログは、すべての Windows オペレーティング システムで使用できます。 Windows イベント ログの詳細については、「 [イベント ビューアーの概要](https://go.microsoft.com/fwlink/?LinkId=101455)」を参照してください。 監査でより厳密なアクセス許可が必要な場合は、バイナリ ファイル ターゲットを使用します。  
+ Windows セキュリティ ログへの書き込みを行うには、"セキュリティ監査の生成 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] **" ポリシーに** サービス アカウントを追加する必要があります。 既定では、ローカル システム、ローカル サービス、およびネットワーク サービスがこのポリシーに追加されています。 この設定は、セキュリティ ポリシー スナップイン (secpol.msc) を使用して構成できます。 さらに、 **オブジェクト アクセスの監査** セキュリティ ポリシーを、 **成功** と **失敗**の両方について有効にする必要があります。 この設定は、セキュリティ ポリシー スナップイン (secpol.msc) を使用して構成できます。 [!INCLUDE[wiprlhext](../../../includes/wiprlhext-md.md)] Windows Server 2008 では、設定することもできるより細かい**生成されたアプリケーション**監査ポリシー プログラムを使用してコマンドラインからのポリシー (`AuditPol.exe)`します。 Windows セキュリティ ログへの書き込みを有効にする手順の詳細については、「 [セキュリティ ログへの SQL サーバー監査イベントの書き込み](write-sql-server-audit-events-to-the-security-log.md)」を参照してください。 Auditpol.exe プログラムの詳細については、 [グループ ポリシーを使用して詳細なセキュリティの監査を構成する方法](https://support.microsoft.com/kb/921469/)に関するサポート技術情報の記事 921469 を参照してください。 Windows イベント ログは、すべての Windows オペレーティング システムで使用できます。 Windows イベント ログの詳細については、「 [イベント ビューアーの概要](https://go.microsoft.com/fwlink/?LinkId=101455)」を参照してください。 監査でより厳密なアクセス許可が必要な場合は、バイナリ ファイル ターゲットを使用します。  
   
  改ざんを防止するために監査情報をファイルに保存している場合、次の方法でそのファイルの場所へのアクセスを制限できます。  
   
@@ -100,14 +100,14 @@ ms.locfileid: "53373524"
   
 3.  監査を有効にします。  
   
-4.  Windows **イベント ビューアー**、 **[ログ ファイルの表示]**、または fn_get_audit_file 関数を使用して、監査イベントを閲覧します。  
+4.  Windows **イベント ビューアー**、 **[ログ ファイルの表示]** 、または fn_get_audit_file 関数を使用して、監査イベントを閲覧します。  
   
  詳細については、「 [サーバー監査およびサーバー監査の仕様を作成する](create-a-server-audit-and-server-audit-specification.md) 」および「 [サーバー監査およびデータベース監査の仕様を作成する](create-a-server-audit-and-database-audit-specification.md)」を参照してください。  
   
 ## <a name="considerations"></a>考慮事項  
  監査の開始時にエラーが発生すると、サーバーが起動しなくなります。 その場合にサーバーを起動するには、コマンド ラインで **-f** オプションを使用します。  
   
- 監査に対して ON_FAILURE=SHUTDOWN が指定されているために監査エラーによってサーバーがシャットダウンしたり起動しなくなったりすると、MSG_AUDIT_FORCED_SHUTDOWN イベントがログに書き込まれます。 シャットダウンはこの設定が初めて検出されたときに生じるため、このイベントが書き込まれるのは 1 回だけです。 このイベントは、シャットダウンを引き起こした監査のエラー メッセージの後に書き込まれます。 管理者は、**-m** フラグを使用して [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] をシングル ユーザー モードで起動することで、監査に伴うシャットダウンを回避することができます。 シングル ユーザー モードで起動すると、ON_FAILURE=SHUTDOWN が指定されているすべての監査がダウングレードされて、そのセッションでは ON_FAILURE=CONTINUE として実行されます。 **-m** フラグを使用して [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] を起動すると、エラー ログに MSG_AUDIT_SHUTDOWN_BYPASSED メッセージが書き込まれます。  
+ 監査に対して ON_FAILURE=SHUTDOWN が指定されているために監査エラーによってサーバーがシャットダウンしたり起動しなくなったりすると、MSG_AUDIT_FORCED_SHUTDOWN イベントがログに書き込まれます。 シャットダウンはこの設定が初めて検出されたときに生じるため、このイベントが書き込まれるのは 1 回だけです。 このイベントは、シャットダウンを引き起こした監査のエラー メッセージの後に書き込まれます。 管理者は、 **-m** フラグを使用して [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] をシングル ユーザー モードで起動することで、監査に伴うシャットダウンを回避することができます。 シングル ユーザー モードで起動すると、ON_FAILURE=SHUTDOWN が指定されているすべての監査がダウングレードされて、そのセッションでは ON_FAILURE=CONTINUE として実行されます。 **-m** フラグを使用して [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] を起動すると、エラー ログに MSG_AUDIT_SHUTDOWN_BYPASSED メッセージが書き込まれます。  
   
  スタートアップ オプションの詳細については、「 [データベース エンジン サービスのスタートアップ オプション](../../../database-engine/configure-windows/database-engine-service-startup-options.md)」を参照してください。  
   
@@ -119,7 +119,7 @@ ms.locfileid: "53373524"
 ### <a name="database-mirroring-and-sql-server-audit"></a>データベース ミラーリングと SQL Server 監査  
  データベース監査の仕様が定義されていて、データベース ミラーリングを使用するデータベースには、そのデータベース監査の仕様が含まれます。 ミラー化された SQL インスタンスでも正しく機能するようにするには、以下の項目を構成する必要があります。  
   
--   データベース監査の仕様が監査レコードを書き込めるようにするには、同じ GUID を持つ監査をミラー サーバーに作成する必要があります。 これは、CREATE AUDIT WITH GUID コマンドを使用して構成できます`=`*\<ソース Server Audit の GUID*>。  
+-   データベース監査の仕様が監査レコードを書き込めるようにするには、同じ GUID を持つ監査をミラー サーバーに作成する必要があります。 これは、CREATE AUDIT WITH GUID コマンドを使用して構成できます`=` *\<ソース Server Audit の GUID*>。  
   
 -   バイナリ ファイル ターゲットの場合は、監査記録が書き込まれる場所に対する適切なアクセス許可がミラー サーバーのサービス アカウントに必要です。  
   
@@ -213,10 +213,10 @@ ms.locfileid: "53373524"
  [DDL トリガー](../../triggers/ddl-triggers.md)  
  データ定義言語 (DDL) トリガーを使用してデータベースの変更を追跡する方法について説明します。  
   
- [Microsoft TechNet:SQL Server TechCenter:SQL Server 2005 のセキュリティと保護](https://go.microsoft.com/fwlink/?LinkId=101152)  
+ [Microsoft TechNet:SQL Server TechCenter:SQL Server 2005 - セキュリティと保護](https://go.microsoft.com/fwlink/?LinkId=101152)  
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] セキュリティに関する最新の情報を提供します。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [SQL Server 監査のアクション グループとアクション](sql-server-audit-action-groups-and-actions.md)   
  [SQL Server 監査レコード](sql-server-audit-records.md)  
   

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - Business Intelligence enhancements [Analysis Services], dimension intelligence
@@ -16,12 +15,12 @@ ms.assetid: b64fa386-eac2-4286-a320-0631a1887aac
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 1bee662934a8c63393da3fdf1f6c64b3e9def579
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: fd5d6917544cca3506d37ec13e058f4bce9fe77f
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48061282"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66076921"
 ---
 # <a name="add-dimension-intelligence-to-a-dimension"></a>ディメンションへのディメンション インテリジェンスの追加
   ディメンションに標準のビジネスの種類を指定するには、ディメンション インテリジェンス拡張機能をキューブまたはディメンションに追加します。 この拡張機能により、ディメンション属性に対応する型も指定されます。 クライアント アプリケーションでは、指定された種類をデータの分析時に使用できます。  
@@ -35,7 +34,7 @@ ms.locfileid: "48061282"
 >  ディメンションに **[勘定科目]** を選択した場合は、ディメンションに勘定科目インテリジェンスを指定します。 詳細については、「 [ディメンションへの勘定科目インテリジェンスの追加](bi-wizard-add-account-intelligence-to-a-dimension.md)」を参照してください。  
   
 ## <a name="specifying-dimension-attributes"></a>ディメンション属性の指定  
- **ディメンション インテリジェンスの定義**] ページの [**ディメンションの種類**一覧で、選択は、設定、ディメンションの`Type`プロパティ。 `Type`プロパティの設定は、ディメンションの内容に関するアプリケーションのサーバーとクライアントの情報を提供します。 一部の設定はクライアント アプリケーションにガイダンス情報のみを提供するもので、これらの設定は省略できます。 [勘定科目] や [時間] などのその他の設定は特定の動作を決定するので、特定のビジネス インテリジェンス拡張機能を実装するために必要な場合があります。 たとえば、SQL Server Management Studio では、通貨ディメンションを識別し、適切な通貨換算規則を設定するためにディメンションの種類が使用されます。 **[ディメンションの種類]** の既定値は **[標準]** で、ディメンションのコンテンツに関する仮定は行われません。  
+ **ディメンション インテリジェンスの定義**] ページの [**ディメンションの種類**一覧で、選択は、設定、ディメンションの`Type`プロパティ。 `Type` プロパティの設定により、サーバーとクライアント アプリケーションにディメンションのコンテンツに関する情報が提供されます。 一部の設定はクライアント アプリケーションにガイダンス情報のみを提供するもので、これらの設定は省略できます。 [勘定科目] や [時間] などのその他の設定は特定の動作を決定するので、特定のビジネス インテリジェンス拡張機能を実装するために必要な場合があります。 たとえば、SQL Server Management Studio では、通貨ディメンションを識別し、適切な通貨換算規則を設定するためにディメンションの種類が使用されます。 **[ディメンションの種類]** の既定値は **[標準]** で、ディメンションのコンテンツに関する仮定は行われません。  
   
  ディメンションの種類を選択したら、 **[ディメンションの属性]** の **[追加]** 列で、ディメンションに対応する属性がある標準の属性型の隣のチェック ボックスをオンにします。 最後に、 **[ディメンションの属性]** 列で、ドロップダウン リストを展開し、選択した属性の型に対応するディメンション内の属性を選択します。 一覧から属性を選択すると、その属性の `Type` プロパティが設定されます。  
   

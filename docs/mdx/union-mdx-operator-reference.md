@@ -1,5 +1,5 @@
 ---
-title: + (Union)(MDX) |Microsoft ドキュメント
+title: + (Union)(MDX) |Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -8,18 +8,17 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-manager: kfile
-ms.openlocfilehash: be12a1af53957ab0d8f3347a0464dd987152bca0
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.openlocfilehash: cd352b95853cc5fe52857a080b6ca2e515f5c013
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34743351"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68097352"
 ---
 # <a name="union---mdx-operator-reference"></a>共用体の MDX 演算子リファレンス
 
 
-  2 つのセットの重複メンバーを削除して和集合を返すセット演算を実行します。  
+  重複するメンバーを削除して、2 つのセットの和集合を返すセット演算を実行します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -39,7 +38,7 @@ Set_Expression + Set_Expression
  **+ (Union)** 演算子は機能的に等価、[共用体&#40;MDX&#41; ](../mdx/union-mdx.md)関数。  
   
 ## <a name="examples"></a>使用例  
- この演算子の使用例を以下に示します。  
+ 次の例では、この演算子の使用を示します。  
   
 ```  
 -- This member returns the gross profit margin for each year for North American countries.  
@@ -53,7 +52,7 @@ WHERE
     ([Measures].[Gross Profit Margin])  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [MDX 演算子リファレンス&#40;MDX&#41;](../mdx/mdx-operator-reference-mdx.md)  
   
   

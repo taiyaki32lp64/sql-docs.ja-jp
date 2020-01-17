@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 0a5f827c-0b80-4627-85cb-f10292b9fb33
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: ae444cfb293e12bd94281957335da1d4f4a97885
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: bc163f53c9dc234702f6f74426eb65f57cec26b5
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47831464"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68096686"
 ---
 # <a name="configuring-the-odbc-driver-for-oracle"></a>ODBC Driver for Oracle の構成
 > [!IMPORTANT]  

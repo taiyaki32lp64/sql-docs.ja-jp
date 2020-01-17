@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - data source views [Analysis Services], bindings
@@ -34,12 +33,12 @@ ms.assetid: bc028030-dda2-4660-b818-c3160d79fd6d
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 60b3e29ae94c4dcf5d136bcc01bf291a9a6118fe
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: b909423c431507d7709d814bfa4061eaf0a0e342
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52510544"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66076078"
 ---
 # <a name="data-sources-and-bindings-ssas-multidimensional"></a>データ ソースとバインド (SSAS 多次元)
   キューブ、ディメンション、その他の [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] オブジェクトはデータ ソースにバインドできます。 データ ソースとは次のいずれかのオブジェクトです。  
@@ -60,14 +59,14 @@ ms.locfileid: "52510544"
 |Analysis Services のデータ型|説明|  
 |---------------------------------|-----------------|  
 |BigInt|64 ビットの符号付き整数です。 このデータ型は、Microsoft [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] の Int64 データ型と、OLE DB の DBTYPE_I8 データ型にマップされます。|  
-|Bool|ブール値。 このデータ型は、 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] の Boolean データ型と、OLE DB の DBTYPE_BOOL データ型にマップされます。|  
+|Bool|ブール値です。 このデータ型は、 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] の Boolean データ型と、OLE DB の DBTYPE_BOOL データ型にマップされます。|  
 |通貨|通貨単位の 1 万分の 1 までの精度を持つ -263 (-922,337,203,685,477.5808) ～ 263-1 (+922,337,203,685,477.5807) の通貨の値です。 このデータ型は、 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] の Decimal データ型と、OLE DB の DBTYPE_CY データ型にマップされます。|  
 |date|倍精度浮動小数点数として保存される日付データです。 整数部分は 1899 年 12 月 30 日からの日数で、小数部分は日の端数です。 このデータ型は、 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] の DateTime データ型と、OLE DB の DBTYPE_DATE データ型にマップされます。|  
 |Double|-1.79E +308 ～ 1.79E +308 の範囲の倍精度浮動小数点数です。 このデータ型は、 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] の Double データ型と、OLE DB の DBTYPE_R8 データ型にマップされます。|  
 |Integer|32 ビットの符号付き整数です。 このデータ型は、 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] の Int32 データ型と、OLE DB の DBTYPE_I4 データ型にマップされます。|  
 |単一|-3.40E +38 ～ 3.40E +38 の範囲の単精度浮動小数点数です。 このデータ型は、 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] の Single データ型と、OLE DB の DBTYPE_R4 データ型にマップされます。|  
 |SmallInt|16 ビットの符号付き整数です。 このデータ型は、 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] の Int16 データ型と、OLE DB の DBTYPE_I2 データ型にマップされます。|  
-|TinyInt|8 ビットの符号付き整数です。 このデータ型は、 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] の SByte データ型と、OLE DB の DBTYPE_I1 データ型にマップされます。<br /><br /> 注:データ ソースに tinyint データ型のフィールドが含まれ、AutoIncrement プロパティが True に設定されている場合、それらのフィールドはデータ ソース ビューで整数に変換されます。|  
+|TinyInt|8 ビットの符号付き整数です。 このデータ型は、 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] の SByte データ型と、OLE DB の DBTYPE_I1 データ型にマップされます。<br /><br /> 注:データ ソースに tinyint データ型と、AutoIncrement プロパティのフィールドが含まれている場合は、データ ソース ビューで整数に変換されますし、True に設定されます。|  
 |UnsignedBigInt|64 ビットの符号なし整数です。 このデータ型は、 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] の UInt64 データ型と、OLE DB の DBTYPE_UI8 データ型にマップされます。|  
 |UnsignedInt|32 ビットの符号なし整数です。 このデータ型は、 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] の UInt32 データ型と、OLE DB の DBTYPE_UI4 データ型にマップされます。|  
 |UnsignedSmallInt|16 ビットの符号なし整数です。 このデータ型は、 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] の UInt16 データ型と、OLE DB の DBTYPE_UI2 データ型にマップされます。|  
@@ -149,7 +148,7 @@ ms.locfileid: "52510544"
   
 -   入れ子になっていないテーブルの各列は、多対一または一対一のリレーションシップに従って、ケース テーブルまたはケース テーブルに関連するテーブルの列にバインドされます。 DSV はテーブル間のリレーションシップを定義します。  
   
--   入れ子になったテーブルの各列はソース テーブルにバインドされます。 入れ子になったテーブルの列が所有している列は、そのソース テーブルまたはソース テーブルに関連するテーブルの列にバインドされます  (この場合もバインドは多対一または一対一のリレーションシップに従います)。マイニング モデルのバインドは、入れ子になったテーブルの結合パスを提供しません。 この情報は、DSV で定義されているリレーションシップによって提供されます。  
+-   入れ子になったテーブルの各列はソース テーブルにバインドされます。 入れ子になったテーブルの列が所有している列は、そのソース テーブルまたはソース テーブルに関連するテーブルの列にバインドされます (この場合もバインドは多対一または一対一のリレーションシップに従います)。マイニング モデルのバインドは、入れ子になったテーブルの結合パスを提供しません。 この情報は、DSV で定義されているリレーションシップによって提供されます。  
   
 ### <a name="bindings-for-an-olap-mining-model"></a>OLAP マイニング モデルのバインド  
  OLAP マイニング モデルには DSV に相当するものがありません。 したがって、データ バインドによって、列とデータ ソースの間のあいまいさを排除する必要があります。 たとえば、マイニング モデルが Sales キューブに基づき、列が Qty、Amount、および Product Name に基づくことが可能です。 または、マイニング モデルが Product に基づき、列が Product Name、Product Color、および Sales Qty の入れ子になったテーブルに基づくことも可能です。  
@@ -178,7 +177,7 @@ ms.locfileid: "52510544"
  不一致バインドに関連する要素はすべてオプションです。 指定されていない要素については、ASSL では持続オブジェクトの DDL に含まれている指定が使用されます。 `DataSource` コマンドの `DataSourceView` または `Process` の指定はオプションです。 `DataSource` または `DataSourceView` が指定されている場合は、インスタンス化されず、`Process` コマンドの完了後は持続しません。  
   
 ### <a name="definition-of-the-out-of-line-binding-type"></a>不一致バインド型の定義  
- ASSL では、不一致 `Bindings` コレクション内で、複数のオブジェクトのバインドのコレクションである、各 `Binding` を使用できます。 各 `Binding` には拡張オブジェクト参照があります。これはオブジェクト参照に似ていますが、マイナー オブジェクト (たとえばディメンション属性やメジャー グループ属性) の参照も可能です。 このオブジェクトは特有のフラット形式、`Object`要素`Process`いる点を除き、コマンド、 \<*オブジェクト*>\<*/オブジェクト*>タグはありません。  
+ ASSL では、不一致 `Bindings` コレクション内で、複数のオブジェクトのバインドのコレクションである、各 `Binding` を使用できます。 各 `Binding` には拡張オブジェクト参照があります。これはオブジェクト参照に似ていますが、マイナー オブジェクト (たとえばディメンション属性やメジャー グループ属性) の参照も可能です。 このオブジェクトは特有のフラット形式、`Object`要素`Process`いる点を除き、コマンド、 \<*オブジェクト*>\< */オブジェクト*>タグはありません。  
   
  バインドが指定されている各オブジェクトが、フォームの XML 要素によって識別される\<*オブジェクト*> ID (たとえば、 `DimensionID`)。 オブジェクトを識別したら、フォームで具体的にできるだけ\<*オブジェクト*> ID は、通常、バインドされているが指定されている、要素を識別する`Source`。 一般に、属性の列バインドの場合のように、`Source` は `DataItem` のプロパティです。 この場合は、`DataItem` タグを指定しないで、バインドする列に直接存在するかのように `Source` プロパティを指定するだけです。  
   

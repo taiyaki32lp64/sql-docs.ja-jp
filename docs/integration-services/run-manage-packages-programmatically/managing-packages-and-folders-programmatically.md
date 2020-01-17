@@ -12,17 +12,20 @@ helpviewer_keywords:
 - packages [Integration Services], managing
 - custom enumerators [Integration Services]
 ms.assetid: ec59b75d-ba09-44ac-9039-9d593bb462d9
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: 9b8b29d4a2050420cee4796f8f7dd588b474d74d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: a14ae64026443324f7a5dc3f47dcea15f9907f5f
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47650010"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71295730"
 ---
 # <a name="managing-packages-and-folders-programmatically"></a>プログラムによるパッケージとフォルダーの管理
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
 <a name="top"></a> プログラムで [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] パッケージを操作する際に、個々のパッケージやフォルダーが存在するかどうかを判断したり、パッケージが格納されたフォルダーを管理したりする必要がある場合があります。 <xref:Microsoft.SqlServer.Dts.Runtime.Application> 名前空間の <xref:Microsoft.SqlServer.Dts.Runtime> クラスは、これらの要件を満たすさまざまなメソッドを提供します。    
     
 ##  <a name="exists"></a> パッケージまたはフォルダーが存在するかどうかの判断    

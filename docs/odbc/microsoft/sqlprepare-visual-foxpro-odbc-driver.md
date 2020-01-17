@@ -12,21 +12,20 @@ helpviewer_keywords:
 ms.assetid: 0c4cb5a4-9729-4b2e-a0c6-52027b92e8fc
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: f3ef083829b1ce322f2cede53f853c80683f01cb
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 5835ddaf27d097dcfff608649f50c1f7f41a93df
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47692180"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67996307"
 ---
 # <a name="sqlprepare-visual-foxpro-odbc-driver"></a>SQLPrepare (Visual FoxPro ODBC ドライバー)
 > [!NOTE]  
 >  このトピックでには、Visual FoxPro ODBC ドライバー固有の情報が含まれています。 この関数の詳細については、該当するトピックを参照してください。 [ODBC API リファレンス](../../odbc/reference/syntax/odbc-api-reference.md)します。  
   
- サポート: 完全な  
+ サポート:[完全]  
   
- ODBC API 準拠: コア レベル  
+ ODBC API 準拠:コア レベル  
   
  最適化し、ステートメントを実行する方法を計画することにより、SQL ステートメントを準備します。 実行するため、SQL ステートメントがコンパイルされる[SQLExecDirect](../../odbc/microsoft/sqlexecdirect-visual-foxpro-odbc-driver.md)します。  
   

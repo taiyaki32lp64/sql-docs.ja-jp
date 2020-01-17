@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 12b0e160-5e5c-441f-bed7-ac0bd061e003
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: d24d67f3c798c061fe10c932f36aa4e7f007f772
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.openlocfilehash: 7c9eb9a15094f6c08bacb9e063c707163548875a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51602362"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67964334"
 ---
 # <a name="dataspace-object-and-createobject-method-example-vbscript"></a>DataSpace オブジェクトおよび CreateObject メソッドの例 (VBScript)
 > [!IMPORTANT]
@@ -147,7 +146,7 @@ Sub Window_OnLoad()
 End Sub  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [CreateObject メソッド (RDS)](../../../ado/reference/rds-api/createobject-method-rds.md)   
  [DataSpace オブジェクト (RDS)](../../../ado/reference/rds-api/dataspace-object-rds.md)
 

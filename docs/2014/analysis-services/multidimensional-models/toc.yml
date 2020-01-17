@@ -74,7 +74,7 @@
           href: understanding-incremental-generation.md
         - name: データ ソース ビューおよびデータ ソースへの変更の管理
           href: manage-changes-to-data-source-views-and-data-sources.md
-- name: ディメンション
+- name: Dimensions
   href: dimensions-in-multidimensional-models.md
   items:
     - name: ディメンション ウィザードを使用したディメンションの作成

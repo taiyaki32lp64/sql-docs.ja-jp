@@ -1,7 +1,7 @@
 ---
-title: SQL Server 2016 のインストールに必要なハードウェアおよびソフトウェア | Microsoft Docs
-ms.custom: ''
-ms.date: 11/06/2018
+title: SQL Server のインストールに必要なハードウェアおよびソフトウェア | Microsoft Docs
+ms.custom: sqlfreshmay19
+ms.date: 07/24/2019
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: install
@@ -44,28 +44,26 @@ helpviewer_keywords:
 ms.assetid: 09bcf20b-0a40-4131-907f-b61479d5e4d8
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 39644282daad5df5986a703b1052e5fd0945e507
-ms.sourcegitcommit: a13256f484eee2f52c812646cc989eb0ce6cf6aa
+ms.openlocfilehash: 553c01ea02c83a57370e596d67ad077b43328d9b
+ms.sourcegitcommit: d00ba0b4696ef7dee31cd0b293a3f54a1beaf458
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/25/2019
-ms.locfileid: "56802006"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "74056801"
 ---
 # <a name="hardware-and-software-requirements-for-installing-sql-server"></a>SQL Server のインストールに必要なハードウェアおよびソフトウェア
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 この記事では、Windows オペレーティング システムでの [!INCLUDE[ssNoVer](../../includes/ssnoversion-md.md)] のインストールと実行に必要な最低限のハードウェア要件とソフトウェア要件について説明します。 
 
-[!INCLUDE[sscurrent](../../includes/sssqlv14-md.md)] では、Linux での [!INCLUDE[ssNoVer](../../includes/ssnoversion-md.md)] が新たにサポートされています。 詳細については、[Linux での [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインストールに必要なハードウェアおよびソフトウェア](../../linux/sql-server-linux-setup.md#system)に関するページを参照してください。 
+[!INCLUDE[sscurrent](../../includes/sssqlv14-md.md)] では、Linux での [!INCLUDE[ssNoVer](../../includes/ssnoversion-md.md)] が新たにサポートされました。 詳細については、[Linux での [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインストールに必要なハードウェアおよびソフトウェア](../../linux/sql-server-linux-setup.md#system)に関するページを参照してください。 
 
-> この記事は、[!INCLUDE[ss2016](../../includes/sssql15-md.md)] 以降に適用されます。 
   
 **お試しください:**  
   
 -   [**Evaluation Center**](https://www.microsoft.com/evalcenter/evaluate-sql-server-2016)から SQL Server をダウンロードします。 
   
--   [**SQL Server 2016**](https://azure.microsoft.com/services/virtual-machines/sql-server/?wt.mc_id=sqL16_vm) がインストール済みの Virtual Machine をすぐにご利用いただけます。  
+-   [**SQL Server 2017**](https://azure.microsoft.com/services/virtual-machines/sql-server/?wt.mc_id=sqL16_vm) がインストール済みの仮想マシンをすぐにご利用いただけます。  
   
 **すべてのエディションに次の考慮事項が適用されます。**  
   
@@ -83,15 +81,15 @@ ms.locfileid: "56802006"
   
     -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] セットアップ サポート ファイル  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] を [!INCLUDE[win8srv](../../includes/win8srv-md.md)] または [!INCLUDE[win8](../../includes/win8-md.md)] にインストールするための最小限のバージョン要件については、「[Windows 8 以降のバージョンの Windows オペレーティング システムでの SQL Server の使用](https://support.microsoft.com/kb/2681562)」(https://support.microsoft.com/kb/2681562)) を参照してください。  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] を [!INCLUDE[win8srv](../../includes/win8srv-md.md)] または [!INCLUDE[win8](../../includes/win8-md.md)] にインストールするための最低限のバージョン要件については、[ Windows Server 2012 または Windows 8 への SQL Server のインストール](https://support.microsoft.com/kb/2681562)に関するページを参照してください。  
   
 ##  <a name="hwswr"></a> ハードウェアとソフトウェアの要件  
 次の要件は、すべてのインストールに適用されます。  
   
 |コンポーネント|要件|  
 |---------------|-----------------|  
-|.NET Framework|[!INCLUDE[sql2016](../../includes/sssql15-md.md)] RC1 以降では、データベース エンジン、マスター データ サービス、レプリケーションのために [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 4.6 が必要になります。 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] セットアップにより [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]が自動的にインストールされます。 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] Microsoft .NET Framework 4.6 (Web Installer) for Windows [から](https://support.microsoft.com/kb/3045560)を手動でインストールすることもできます。<br/><br/>[!INCLUDE[sql2019](../../includes/sssqlv15-md.md)] では .NET Framework 4.6.2 が必要です。 [ダウンロード センター](https://www.microsoft.com/download/details.aspx?id=53344)から入手できます<br/><br/> [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 4.6 の詳細、推奨事項、ガイダンスについては、「 [.NET Framework 配置ガイド (開発者向け)](https://msdn.microsoft.com/library/ee942965\(v=vs.110\).aspx)」を参照してください。<br/><br/>[!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 4.6 をインストールするには、[!INCLUDE[winblue_client_2](../../includes/winblue-client-2-md.md)] と [!INCLUDE[winblue_server_2](../../includes/winblue-server-2-md.md)] に [KB2919355](https://support.microsoft.com/kb/2919355) が必要になります。|  
-|ネットワーク ソフトウェア|[!INCLUDE[ssCurrent](../../includes/ssnoversion-md.md)] でサポートされるオペレーティング システムにはネットワーク ソフトウェアが組み込まれています。 スタンドアロン インストールの名前付きインスタンスおよび既定のインスタンスは、次のネットワーク プロトコルをサポートしています。共有メモリ、名前付きパイプ、TCP/IP、および VIA。<br/><br/> **注:** VIA プロトコルはフェールオーバー クラスターではサポートされません。 SQL Server インスタンスと同じフェールオーバー クラスターのノード上で実行されているクライアントまたはアプリケーションは、そのローカル パイプ アドレスを使用して SQL Server に接続するために、共有メモリ プロトコルを使用することができます。 ただし、この種の接続はクラスターに対応しないため、インスタンスのフェールオーバー後に失敗します。 したがって、これは非推奨であり、非常に限られたシナリオでのみ使用する必要があります。<br/><br/> **重要:** VIA プロトコルは非推奨とされます。 [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]<br/><br/> ネットワーク プロトコルとネットワーク ライブラリの詳細については、「 [Network Protocols and Network Libraries](../../sql-server/install/network-protocols-and-network-libraries.md)」を参照してください。|  
+|.NET Framework|[!INCLUDE[sql2016](../../includes/sssql15-md.md)] RC1 以降では、データベース エンジン、マスター データ サービス、レプリケーションのために [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 4.6 が必要になります。 SQL Server セットアップで [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] が自動的にインストールされます。 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] Microsoft .NET Framework 4.6 (Web Installer) for Windows [から](https://support.microsoft.com/kb/3045560)を手動でインストールすることもできます。<br/><br/>[!INCLUDE[sql2019](../../includes/sssqlv15-md.md)] では .NET Framework 4.6.2 が必要です。 [ダウンロード センター](https://www.microsoft.com/download/details.aspx?id=53344)から入手できます<br/><br/> [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 4.6 の詳細、推奨事項、ガイダンスについては、「 [.NET Framework 配置ガイド (開発者向け)](https://msdn.microsoft.com/library/ee942965\(v=vs.110\).aspx)」を参照してください。<br/><br/>[!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 4.6 をインストールするには、[!INCLUDE[winblue_client_2](../../includes/winblue-client-2-md.md)] と [!INCLUDE[winblue_server_2](../../includes/winblue-server-2-md.md)] に [KB2919355](https://support.microsoft.com/kb/2919355) が必要になります。|  
+|ネットワーク ソフトウェア|[!INCLUDE[ssCurrent](../../includes/ssnoversion-md.md)] でサポートされるオペレーティング システムにはネットワーク ソフトウェアが組み込まれています。 スタンドアロン インストールの名前付きおよび既定のインスタンスでは、次のネットワーク プロトコルがサポートされています。共有メモリ、名前付きパイプ、TCP/IP、および VIA。<br/><br/> **注:** VIA プロトコルはフェールオーバー クラスターではサポートされません。 SQL Server インスタンスと同じフェールオーバー クラスターのノード上で実行されているクライアントまたはアプリケーションは、そのローカル パイプ アドレスを使用して SQL Server に接続するために、共有メモリ プロトコルを使用することができます。 ただし、この種の接続はクラスターに対応しないため、インスタンスのフェールオーバー後に失敗します。 したがって、これは非推奨であり、非常に限られたシナリオでのみ使用する必要があります。<br/><br/> **重要:** VIA プロトコルは非推奨とされます。 [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]<br/><br/> ネットワーク プロトコルとネットワーク ライブラリの詳細については、「 [Network Protocols and Network Libraries](../../sql-server/install/network-protocols-and-network-libraries.md)」を参照してください。|  
 |ハード ディスク|[!INCLUDE[ssCurrent](../../includes/ssnoversion-md.md)] では 6 GB 以上のハード ディスク空き容量が必要です。<br/><br/> 必要となるディスク空き容量は、インストールする [!INCLUDE[ssCurrent](../../includes/ssnoversion-md.md)] のコンポーネントに応じて異なります。 詳細については、この記事で後述する「[必要なハード ディスク空き容量](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md#HardDiskSpace)」を参照してください。 データ ファイルでサポートされているストレージの種類の詳細については、「 [Storage Types for Data Files](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md#StorageTypes)」を参照してください。|  
 |ドライブ|ディスクからインストールする場合は、DVD ドライブが必要です。|  
 |モニター|[!INCLUDE[ssCurrent](../../includes/ssnoversion-md.md)] では Super-VGA (800x600) 以上の解像度のモニターが必要です。|  
@@ -108,9 +106,9 @@ ms.locfileid: "56802006"
   
 |コンポーネント|要件|  
 |---------------|-----------------|  
-|メモリ \*|**最小:**<br/><br/> Express Edition:512 MB<br/><br/> 他のすべてのエディション:1 GB<br/><br/> **推奨:**<br/><br/> Express Edition:1 GB<br/><br/> 他のすべてのエディション:4 GB 以上。最適なパフォーマンスを確保するために、データベースのサイズが大きくなるにつれて増やす必要があります。|  
+|メモリ \*|**最小:**<br/><br/> Express Edition: 512 MB<br/><br/> 他のすべてのエディション: 1 GB<br/><br/> **推奨:**<br/><br/> Express Edition: 1 GB<br/><br/> 他のすべてのエディション: 4 GB 以上。最適なパフォーマンスを確保するために、データベースのサイズが大きくなるにつれて増やす必要があります。|  
 |プロセッサの速度|**最小:** x64 プロセッサ:1.4 GHz<br/><br/> **推奨:** 2.0 GHz 以上|  
-|プロセッサの種類|x64 プロセッサ:AMD Opteron、AMD Athlon 64、Intel Xeon (Intel EM64T 対応)、Intel Pentium IV (EM64T 対応)|  
+|プロセッサの種類|x64 プロセッサ: AMD Opteron、AMD Athlon 64、Intel Xeon (Intel EM64T 対応)、Intel Pentium IV (EM64T 対応)|  
   
 > [!NOTE]  
 > [!INCLUDE[ssCurrent](../../includes/ssnoversion-md.md)] は x64 プロセッサでのみイントールできます。 X86 プロセッサではインストールできません。  
@@ -120,64 +118,108 @@ ms.locfileid: "56802006"
  **WOW64 サポート:**  
   
  WOW64 (Windows 32-bit on Windows 64-bit) は 64 ビット版 Windows の機能で、32 ビット アプリケーションをネイティブの 32 ビット モードで実行することができます。 つまり、基盤となるオペレーティング システムが 64 ビット オペレーティング システムであっても、アプリケーションは 32 ビット モードで動作します。 WOW64 は、 [!INCLUDE[ssCurrent](../../includes/ssnoversion-md.md)] インストールではサポートされていません。 ただし、管理ツールは WOW64 でサポートされています。  
-  
- **オペレーティング システムのサポート:**  
-  
- [!INCLUDE[ssCurrent](../../includes/ssnoversion-md.md)] のエディションは次のように分類されます。  
-  
--   [プリンシパル エディション](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md#TOP_Principal)  
-  
--   [拡張エディション](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md#TOP_Breadth)  
-  
-> [!NOTE]  
-> このセクションで注記されているオペレーティング システム サポートの例外は、以下の [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 以前の Business Intelligence 機能です。これは Windows Server 2008 R2 SP1 以降にインストールできます。  
->  
->-   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] - SharePoint  
-> 
->-   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePoint 製品用アドイン  
+
+
+**Server Core サポート:**
+
+::: moniker range=">=sql-server-ver15||=sqlallproducts-allversions" 
+
+SQL Server 2019 の Server Core モードでのインストールは、次のエディションの Windows Server でサポートされます。
+
+|                              |                                |
+| :------------------------    | :------------------------------|
+| Windows Server 2019 Standard | Windows Server 2019 Datacenter |
+| Windows Server 2016 Standard | Windows Server 2016 Datacenter |
+   | &nbsp; | &nbsp; |
+
+::: moniker-end
+
+::: moniker range=">=sql-server-2016 <=sql-server-2017||=sqlallproducts-allversions"
+
+SQL Server 2016 および 2017 の Server Core モードでのインストールは、次のエディションの Windows Server でサポートされます。
+
+|                              |                                |
+| :------------------------    | :------------------------------|
+| Windows Server 2019 Standard | Windows Server 2019 Datacenter |
+| Windows Server 2016 Standard | Windows Server 2016 Datacenter |
+| Windows Server 2012 R2 Standard | Windows Server 2012 R2 Datacenter|
+| Windows Server 2012 Standard | Windows Server 2012 Datacenter |
+| &nbsp; | &nbsp; |
+::: moniker-end
+
+Server Core への SQL Server のインストールの詳細については、「[Server Core への SQL Server のインストール](../../database-engine/install-windows/install-sql-server-on-server-core.md)」を参照してください。  
+
   
 ### <a name="features-supported-on-32-bit-client-operating-systems"></a>32 ビット クライアント オペレーティング システムでサポートされている機能  
  Windows 10 や Windows 8.1 など、Windows クライアント オペレーティング システムは 32 ビットまたは 64 ビットのアーキテクチャとして利用できます。   すべての SQL Server 機能は 64 ビット クライアント オペレーティング システムでサポートされています。 サポートされている 32 ビット クライアント オペレーティング システムでは、マイクロソフトは次の機能をサポートします。  
   
--   Data Quality クライアント  
-  
--   クライアント ツール接続  
-  
--   Integration Services  
-  
--   クライアント ツールの旧バージョンとの互換性  
-  
--   クライアント ツール SDK  
-  
--   Documentation コンポーネント  
-  
--   分散再生コンポーネント  
-  
--   分散再生コントローラー  
-  
--   分散再生クライアント  
-  
--   SQL クライアント接続 SDK  
+-   Data Quality クライアント
+-   クライアント ツール接続
+-   Integration Services
+-   クライアント ツールの旧バージョンとの互換性
+-   クライアント ツール SDK
+-   Documentation コンポーネント
+-   分散再生コンポーネント
+-   分散再生コントローラー
+-   分散再生クライアント
+-   SQL クライアント接続 SDK
   
  [!INCLUDE[winserver2008r2](../../includes/winserver2008r2-md.md)] 以降のサーバー オペレーティング システムは 32 ビットのアーキテクチャとして利用できません。 サポートされているサーバー オペレーティング システムはすべて 64 ビットのみを利用できます。 すべての機能は 64 ビット サーバー オペレーティング システムでサポートされています。  
   
-###  <a name="TOP_Principal"></a> [!INCLUDE[ssCurrent](../../includes/ssnoversion-md.md)]のプリンシパル エディション  
- 次の表は、 [!INCLUDE[ssCurrent](../../includes/ssnoversion-md.md)]のプリンシパル エディションのオペレーティング システム要件を示しています。  
-  
-|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エディション|サポートされるオペレーティング システム|  
-|---------------------------------------|--------------------------------|  
-|[!INCLUDE[ssEnterprise](../../includes/ssenterprise-md.md)]|[!INCLUDE[winserver2019_datacenter_md](../../includes/winserver2019-datacenter-md.md)]<br/><br/>[!INCLUDE[winserver2019_standard_md](../../includes/winserver2019-standard-md.md)]<br/><br/>[!INCLUDE[winserver2019_essentials_md](../../includes/winserver2019-essentials-md.md)] <br/><br/>[!INCLUDE[winserver2016_datacenter_md](../../includes/winserver2016-datacenter-md.md)]<br/><br/>[!INCLUDE[winserver2016_standard_md](../../includes/winserver2016-standard-md.md)]<br/><br/>[!INCLUDE[winserver2016_essentials_md](../../includes/winserver2016-essentials-md.md)] <br/><br/>[!INCLUDE[win8srv](../../includes/win8srv-md.md)] R2 Datacenter<br/><br/>[!INCLUDE[win8srv](../../includes/win8srv-md.md)] R2 Standard<br/><br/>[!INCLUDE[win8srv](../../includes/win8srv-md.md)] R2 Essentials<br/><br/>[!INCLUDE[win8srv](../../includes/win8srv-md.md)] R2 Foundation<br/><br/>[!INCLUDE[win8srv](../../includes/win8srv-md.md)] Datacenter<br/><br/>[!INCLUDE[win8srv](../../includes/win8srv-md.md)] Standard<br/><br/>[!INCLUDE[win8srv](../../includes/win8srv-md.md)] Essentials<br/><br/>[!INCLUDE[win8srv](../../includes/win8srv-md.md)] Foundation|  
-|[!INCLUDE[ssStandard](../../includes/ssstandard-md.md)]|[!INCLUDE[winserver2019_datacenter_md](../../includes/winserver2019-datacenter-md.md)]<br/><br/>[!INCLUDE[winserver2019_standard_md](../../includes/winserver2019-standard-md.md)]<br/><br/>[!INCLUDE[winserver2019_essentials_md](../../includes/winserver2019-essentials-md.md)] <br/><br/>[!INCLUDE[winserver2016_datacenter_md](../../includes/winserver2016-datacenter-md.md)]<br/><br/>[!INCLUDE[winserver2016_standard_md](../../includes/winserver2016-standard-md.md)]<br/><br/>[!INCLUDE[winserver2016_essentials_md](../../includes/winserver2016-essentials-md.md)] <br/><br/>[!INCLUDE[win8srv](../../includes/win8srv-md.md)] R2 Datacenter<br/><br/>[!INCLUDE[win8srv](../../includes/win8srv-md.md)] R2 Standard<br/><br/>[!INCLUDE[win8srv](../../includes/win8srv-md.md)] R2 Essentials<br/><br/>[!INCLUDE[win8srv](../../includes/win8srv-md.md)] R2 Foundation<br/><br/>[!INCLUDE[win8srv](../../includes/win8srv-md.md)] Datacenter<br/><br/>[!INCLUDE[win8srv](../../includes/win8srv-md.md)] Standard<br/><br/>[!INCLUDE[win8srv](../../includes/win8srv-md.md)] Essentials<br/><br/>[!INCLUDE[win8srv](../../includes/win8srv-md.md)] Foundation<br/><br/> Windows 10 Home<br/><br/> Windows 10 Professional<br/><br/> Windows 10 Enterprise<br/><br/>Windows 10 IoT Enterprise<br/><br/>[!INCLUDE[winblue_client_2](../../includes/winblue-client-2-md.md)]<br/><br/>[!INCLUDE[winblue_client_pro_2](../../includes/winblue-client-pro-2-md.md)]<br/><br/>[!INCLUDE[winblue_client_ent_2](../../includes/winblue-client-ent-2-md.md)]<br/><br/>[!INCLUDE[win8](../../includes/win8-md.md)]<br/><br/>[!INCLUDE[win8_client_pro_2](../../includes/win8-client-pro-2-md.md)]<br/><br/>[!INCLUDE[win8_client_ent_2](../../includes/win8-client-ent-2-md.md)]|  
-|[!INCLUDE[ssWeb](../../includes/ssweb-md.md)]|[!INCLUDE[winserver2019_datacenter_md](../../includes/winserver2019-datacenter-md.md)]<br/><br/>[!INCLUDE[winserver2019_standard_md](../../includes/winserver2019-standard-md.md)]<br/><br/>[!INCLUDE[winserver2019_essentials_md](../../includes/winserver2019-essentials-md.md)] <br/><br/>[!INCLUDE[winserver2016_datacenter_md](../../includes/winserver2016-datacenter-md.md)]<br/><br/>[!INCLUDE[winserver2016_standard_md](../../includes/winserver2016-standard-md.md)]<br/><br/>[!INCLUDE[winserver2016_essentials_md](../../includes/winserver2016-essentials-md.md)] <br/><br/>[!INCLUDE[win8srv](../../includes/win8srv-md.md)] R2 Datacenter<br/><br/>[!INCLUDE[win8srv](../../includes/win8srv-md.md)] R2 Standard<br/><br/>[!INCLUDE[win8srv](../../includes/win8srv-md.md)] R2 Essentials<br/><br/>[!INCLUDE[win8srv](../../includes/win8srv-md.md)] R2 Foundation<br/><br/>[!INCLUDE[win8srv](../../includes/win8srv-md.md)] Datacenter<br/><br/>[!INCLUDE[win8srv](../../includes/win8srv-md.md)] Standard<br/><br/>[!INCLUDE[win8srv](../../includes/win8srv-md.md)] Essentials<br/><br/>[!INCLUDE[win8srv](../../includes/win8srv-md.md)] Foundation|  
+###  <a name="TOP_Principal"></a> OS の互換性   
 
+::: moniker range=">=sql-server-ver15||=sqlallproducts-allversions" 
+次の表では、Windows のバージョンと SQL Server 2019 のエディションとの互換性を示します。  
   
-###  <a name="TOP_Breadth"></a> [!INCLUDE[ssCurrent](../../includes/ssnoversion-md.md)] の拡張エディション  
- 次の表は、 [!INCLUDE[ssCurrent](../../includes/ssnoversion-md.md)]の拡張エディションのオペレーティング システム要件を示しています。  
+
+| SQL Server のエディション:               | Enterprise | Developer | Standard | Web | Express |  
+| :------------------------         | :--------- | :-------- | :------- | :-- | :------ | 
+| Windows Server 2019 Datacenter    |    はい     |    はい    |    はい   | はい |   はい   |
+| Windows Server 2019 Standard      |    はい     |    はい    |    はい   | はい |   はい   |
+| Windows Server 2019 Essentials    |    はい     |    はい    |    はい   | はい |   はい   |
+| Windows Server 2016 Datacenter    |    はい     |    はい    |    はい   | はい |   はい   |
+| Windows Server 2016 Standard      |    はい     |    はい    |    はい   | はい |   はい   |
+| Windows Server 2016 Essentials    |    はい     |    はい    |    はい   | はい |   はい   |
+| &nbsp; | &nbsp; |
+::: moniker-end
+
+::: moniker range=">=sql-server-2016 <=sql-server-2017||=sqlallproducts-allversions"
+
+次の表では、Windows のバージョンと SQL Server 2016 と 2017 のエディションとの互換性を示します。  
   
-|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エディション|サポートされるオペレーティング システム|  
-|---------------------------------------|--------------------------------|  
-|[!INCLUDE[ssDeveloper](../../includes/ssdeveloper-md.md)]|[!INCLUDE[winserver2019_datacenter_md](../../includes/winserver2019-datacenter-md.md)]<br/><br/>[!INCLUDE[winserver2019_standard_md](../../includes/winserver2019-standard-md.md)]<br/><br/>[!INCLUDE[winserver2019_essentials_md](../../includes/winserver2019-essentials-md.md)] <br/><br/>[!INCLUDE[winserver2016_datacenter_md](../../includes/winserver2016-datacenter-md.md)]<br/><br/>[!INCLUDE[winserver2016_standard_md](../../includes/winserver2016-standard-md.md)]<br/><br/>[!INCLUDE[winserver2016_essentials_md](../../includes/winserver2016-essentials-md.md)] <br/><br/>[!INCLUDE[win8srv](../../includes/win8srv-md.md)] R2 Datacenter<br/><br/>[!INCLUDE[win8srv](../../includes/win8srv-md.md)] R2 Standard<br/><br/>[!INCLUDE[win8srv](../../includes/win8srv-md.md)] R2 Essentials<br/><br/>[!INCLUDE[win8srv](../../includes/win8srv-md.md)] R2 Foundation<br/><br/>[!INCLUDE[win8srv](../../includes/win8srv-md.md)] Datacenter<br/><br/>[!INCLUDE[win8srv](../../includes/win8srv-md.md)] Standard<br/><br/>[!INCLUDE[win8srv](../../includes/win8srv-md.md)] Essentials<br/><br/>[!INCLUDE[win8srv](../../includes/win8srv-md.md)] Foundation<br/><br/> Windows 10 Home<br/><br/> Windows 10 Professional<br/><br/> Windows 10 Enterprise<br/><br/>Windows 10 IoT Enterprise<br/><br/>[!INCLUDE[winblue_client_2](../../includes/winblue-client-2-md.md)]<br/><br/>[!INCLUDE[winblue_client_pro_2](../../includes/winblue-client-pro-2-md.md)]<br/><br/>[!INCLUDE[winblue_client_ent_2](../../includes/winblue-client-ent-2-md.md)]<br/><br/>[!INCLUDE[win8](../../includes/win8-md.md)]<br/><br/>[!INCLUDE[win8_client_pro_2](../../includes/win8-client-pro-2-md.md)]<br/><br/>[!INCLUDE[win8_client_ent_2](../../includes/win8-client-ent-2-md.md)]|  
-|[!INCLUDE[ssExpress](../../includes/ssexpress-md.md)]|[!INCLUDE[winserver2019_datacenter_md](../../includes/winserver2019-datacenter-md.md)]<br/><br/>[!INCLUDE[winserver2019_standard_md](../../includes/winserver2019-standard-md.md)]<br/><br/>[!INCLUDE[winserver2019_essentials_md](../../includes/winserver2019-essentials-md.md)] <br/><br/>[!INCLUDE[winserver2016_datacenter_md](../../includes/winserver2016-datacenter-md.md)]<br/><br/>[!INCLUDE[winserver2016_standard_md](../../includes/winserver2016-standard-md.md)]<br/><br/>[!INCLUDE[winserver2016_essentials_md](../../includes/winserver2016-essentials-md.md)] <br/><br/>[!INCLUDE[win8srv](../../includes/win8srv-md.md)] R2 Datacenter<br/><br/>[!INCLUDE[win8srv](../../includes/win8srv-md.md)] R2 Standard<br/><br/>[!INCLUDE[win8srv](../../includes/win8srv-md.md)] R2 Essentials<br/><br/>[!INCLUDE[win8srv](../../includes/win8srv-md.md)] R2 Foundation<br/><br/>[!INCLUDE[win8srv](../../includes/win8srv-md.md)] Datacenter<br/><br/>[!INCLUDE[win8srv](../../includes/win8srv-md.md)] Standard<br/><br/>[!INCLUDE[win8srv](../../includes/win8srv-md.md)] Essentials<br/><br/>[!INCLUDE[win8srv](../../includes/win8srv-md.md)] Foundation<br/><br/> Windows 10 Home<br/><br/> Windows 10 Professional<br/><br/> Windows 10 Enterprise<br/><br/>Windows 10 IoT Enterprise<br/><br/>[!INCLUDE[winblue_client_2](../../includes/winblue-client-2-md.md)]<br/><br/>[!INCLUDE[winblue_client_pro_2](../../includes/winblue-client-pro-2-md.md)]<br/><br/>[!INCLUDE[winblue_client_ent_2](../../includes/winblue-client-ent-2-md.md)]<br/><br/>[!INCLUDE[win8](../../includes/win8-md.md)]<br/><br/>[!INCLUDE[win8_client_pro_2](../../includes/win8-client-pro-2-md.md)]<br/><br/>[!INCLUDE[win8_client_ent_2](../../includes/win8-client-ent-2-md.md)]|  
+| SQL Server のエディション:               | Enterprise | Developer | Standard | Web | Express |  
+| :------------------------         | :--------- | :-------- | :------- | :-- | :------ | 
+| Windows Server 2019 Datacenter    |    はい     |    はい    |    はい   | はい |   はい   |
+| Windows Server 2019 Standard      |    はい     |    はい    |    はい   | はい |   はい   |
+| Windows Server 2019 Essentials    |    はい     |    はい    |    はい   | はい |   はい   |
+| Windows Server 2016 Datacenter    |    はい     |    はい    |    はい   | はい |   はい   |
+| Windows Server 2016 Standard      |    はい     |    はい    |    はい   | はい |   はい   |
+| Windows Server 2016 Essentials    |    はい     |    はい    |    はい   | はい |   はい   |
+| Windows Server 2012 R2 Datacenter |    はい     |    はい    |    はい   | はい |   はい   |
+| Windows Server 2012 R2 Standard   |    はい     |    はい    |    はい   | はい |   はい   |
+| Windows Server 2012 R2 Essentials |    はい     |    はい    |    はい   | はい |   はい   |
+| Windows Server 2012 R2 Foundation |    はい     |    はい    |    はい   | はい |   はい   |
+| Windows Server 2012 Datacenter    |    はい     |    はい    |    はい   | はい |   はい   |
+| Windows Server 2012 Standard      |    はい     |    はい    |    はい   | はい |   はい   |
+| Windows Server 2012 Essentials    |    はい     |    はい    |    はい   | はい |   はい   |
+| Windows Server 2012 Foundation    |    はい     |    はい    |    はい   | はい |   はい   |
+| Windows 10 IoT Enterprise         |    いいえ      |    はい    |    はい   | いいえ  |   はい   |
+| Windows 10 Enterprise             |    いいえ      |    はい    |    はい   | いいえ  |   はい   |
+| Windows 10 Professional           |    いいえ      |    はい    |    はい   | いいえ  |   はい   |
+| Windows 10 Home                   |    いいえ      |    はい    |    はい   | いいえ  |   はい   |
+| Windows 8.1 Enterprise            |    いいえ      |    はい    |    はい   | いいえ  |   はい   |
+| Windows 8.1 Pro                   |    いいえ      |    はい    |    はい   | いいえ  |   はい   |
+| Windows 8.1 Enterprise            |    いいえ      |    はい    |    はい   | いいえ  |   はい   |
+| Windows 8 Pro                     |    いいえ      |    はい    |    はい   | いいえ  |   はい   |
+| Windows 8                         |    いいえ      |    はい    |    はい   | いいえ  |   はい   | 
+
+> [!NOTE]  
+> このセクションで注記されているオペレーティング システム サポートの例外は、以下の [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 以前の Business Intelligence 機能です。これは Windows Server 2008 R2 SP1 以降にインストールできます。  
+>  
+>-   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] - SharePoint  
+>-   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePoint 製品用アドイン  
+::: moniker-end
+
 
   
 ##  <a name="CrossLanguageSupport"></a> 言語間サポート  
@@ -211,41 +253,35 @@ ms.locfileid: "56802006"
 ##  <a name="StorageTypes"></a> データ ファイルのストレージの種類  
  データ ファイルでサポートされているストレージの種類は、次のとおりです。  
   
--   ローカル ディスク  
-  
+-   ローカル ディスク 
+    - [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] は現在、標準のネイティブ セクター サイズである 512 バイトと 4 KB のディスク ドライブに対応しています。  ハード ディスクのセクター サイズが 4 KB を超える場合、それに [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データ ファイルを格納しようとするとエラーが発生することがあります。  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] でサポートされているハード ディスク セクターのサイズに関する詳細については、[SQL Server でのハード ディスク ドライブ セクターのサイズのサポート範囲](https://support.microsoft.com/kb/926930)に関するページを参照してください。 
+    - [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] フェールオーバー クラスターのインストールでは、tempdb ファイルをインストールする場合のみローカル ディスクがサポートされます。 tempdb のデータ ファイルおよびログ ファイルに指定されたパスが、すべてのクラスター ノードで有効であることを確認してください。 フェールオーバー中に、tempdb のディレクトリがフェールオーバーのターゲット ノード上で利用できない場合、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] リソースはオンラインへの移行に失敗します。
 -   ストレージの共有  
-
--   [記憶域スペース ダイレクト \(S2D\)](https://technet.microsoft.com/windows-server-docs/storage/storage-spaces/storage-spaces-direct-overview)
-  
+-   [記憶域スペース ダイレクト \(S2D\)](https://technet.microsoft.com/windows-server-docs/storage/storage-spaces/storage-spaces-direct-overview)  
 -   SMB ファイル共有  
+    - スタンドアロン インストールやクラスター化されたインストールでは、 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] データ ファイルに対して SMB ストレージはサポートされていません。 代わりに、直接アタッチされたストレージ、ストレージ エリア ネットワーク、または S2D を使用してください。 
+    - SMB ストレージは、Windows ファイル サーバーまたはサード パーティ SMB ストレージ デバイスによってホストされます。 Windows ファイル サーバーが使用される場合、Windows ファイル サーバーのバージョンは 2008 以降である必要があります。 ストレージ オプションとして SMB ファイル共有をとして使用する [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインストールの詳細については、「 [SQL Server をストレージ オプションとして SMB ファイル共有にインストールする](../../database-engine/install-windows/install-sql-server-with-smb-fileshare-as-a-storage-option.md)のインストールおよび実行に必要な最低限のハードウェア要件とソフトウェア要件について説明します。  
   
-    > [!NOTE]  
-    > スタンドアロン インストールやクラスター化されたインストールでは、 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] データ ファイルに対して SMB ストレージはサポートされていません。 代わりに、直接アタッチされたストレージ、ストレージ エリア ネットワーク、または S2D を使用してください。  
   
-    > [!IMPORTANT]  
-    > SMB ストレージは、Windows ファイル サーバーまたはサード パーティ SMB ストレージ デバイスによってホストされます。 Windows ファイル サーバーが使用される場合、Windows ファイル サーバーのバージョンは 2008 以降である必要があります。 ストレージ オプションとして SMB ファイル共有をとして使用する [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインストールの詳細については、「 [Install SQL Server with SMB Fileshare as a Storage Option](../../database-engine/install-windows/install-sql-server-with-smb-fileshare-as-a-storage-option.md)のインストールおよび実行に必要な最低限のハードウェア要件とソフトウェア要件について説明します。  
   
-    > [!WARNING]  
-    > [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] フェールオーバー クラスターのインストールでは、tempdb ファイルをインストールする場合のみローカル ディスクがサポートされます。 tempdb のデータ ファイルおよびログ ファイルに指定されたパスが、すべてのクラスター ノードで有効であることを確認してください。 フェールオーバー中に、tempdb のディレクトリがフェールオーバーのターゲット ノード上で利用できない場合、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] リソースはオンラインへの移行に失敗します。  
-  
-##  <a name="DC_support"></a> FAT32 ファイル システムのコンピューターへの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインストール  
+##  <a name="DC_support"></a>ドメイン コントローラーへの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインストール  
  セキュリティ上の理由から、ドメイン コントローラーには [!INCLUDE[ssCurrent](../../includes/ssnoversion-md.md)] をインストールしないことをお勧めします。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のセットアップ時にインストールが中止されることはありませんが、次の制限事項が適用されます。  
   
--   ローカル サービス アカウントを使用して、ドメイン コントローラー上で [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] サービスを実行することはできません。  
-  
--   コンピューターに [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] をインストールした後で、そのコンピューターをドメイン メンバーからドメイン コントローラーに変更することはできません。 ホスト コンピューターをドメイン コントローラーに変更する前に、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] をアンインストールする必要があります。  
-  
--   コンピューターに [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] をインストールした後で、そのコンピューターをドメイン コントローラーからドメイン メンバーに変更することはできません。 ホスト コンピューターをドメイン メンバーに変更する前に、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] をアンインストールする必要があります。  
-  
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] フェールオーバー クラスター インスタンスは、クラスター ノードがドメイン コントローラーの場合はサポートされません。  
-  
-- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] は、読み取り専用ドメイン コントローラーではサポートされません。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] セットアップでは、読み取り専用ドメイン コントローラーにセキュリティ グループを作成したり [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] サービス アカウントを準備したりすることはできません。 この場合、セットアップは失敗します。  
+-   ローカル サービス アカウントを使用して、ドメイン コントローラー上で [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] サービスを実行することはできません。    
+-   コンピューターに [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] をインストールした後で、そのコンピューターをドメイン メンバーからドメイン コントローラーに変更することはできません。 ホスト コンピューターをドメイン コントローラーに変更する前に、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] をアンインストールする必要があります。    
+-   コンピューターに [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] をインストールした後で、そのコンピューターをドメイン コントローラーからドメイン メンバーに変更することはできません。 ホスト コンピューターをドメイン メンバーに変更する前に、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] をアンインストールする必要があります。   
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] フェールオーバー クラスター インスタンスは、クラスター ノードがドメイン コントローラーの場合はサポートされません。   
+- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] は、読み取り専用ドメイン コントローラーではサポートされません。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] セットアップでは、読み取り専用ドメイン コントローラーにセキュリティ グループを作成したり [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] サービス アカウントを準備したりすることはできません。 この場合、セットアップは失敗します。 
+
+  > [!NOTE]
+  > この制限は、ドメイン メンバー ノードへのインストールにも適用されます。
 
 - [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] フェールオーバー クラスター インスタンスは、読み取り専用ドメイン コントローラーのみにアクセスできる環境ではサポートされません。 
+
+  > [!NOTE]
+  > この制限は、ドメイン メンバー ノードへのインストールにも適用されます。
   
 ## <a name="see-also"></a>参照  
  [SQL Server のインストール計画](../../sql-server/install/planning-a-sql-server-installation.md)   
  [SQL Server インストールにおけるセキュリティの考慮事項](../../sql-server/install/security-considerations-for-a-sql-server-installation.md)   
- [SQL Server 2016 の製品仕様](https://msdn.microsoft.com/library/6445fd53-6844-4170-a86b-7fe76a9f64cb)  
-  
-  
+

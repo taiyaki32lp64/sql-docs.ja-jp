@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - cross-validation
@@ -15,12 +14,12 @@ ms.assetid: bf9483b3-4099-41c4-bbc5-da7005e07bcd
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 95d0a5e0f7d3d108543d6741dea84efde4280387
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 0cc3a132792cca8ecdf5a33a2fe4e4d40116c497
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48171752"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66086650"
 ---
 # <a name="cross-validation-sql-server-data-mining-add-ins"></a>クロス検証 (SQL Server データ マイニング アドイン)
   ![クロス検証 ボタン、データ マイニング リボン](media/dmc-xvalid.gif "クロス検証 ボタン、データ マイニング リボン")  
@@ -68,7 +67,7 @@ ms.locfileid: "48171752"
     > [!NOTE]  
     >  Microsoft Excel は、モデルがパーティション分割されて各分割がテストされている間、一時的に応答しなくなることがあります。  
   
-### <a name="requirements"></a>要件  
+### <a name="requirements"></a>必要条件  
  クロス検証レポートを作成するには、データ マイニング構造と関連モデルを作成しておく必要があります。 ウィザードでは、ダイアログ ボックスを使用して既存の構造およびモデルから選択できます。  
   
  複数のマイニング モデルをサポートするマイニング構造を選択した場合、それらのモデルで異なる予測可能な属性が使用されていると、クロス検証ウィザードでは、同一の予測可能な属性を共有するモデルのみがテストされます。  
@@ -96,12 +95,12 @@ ms.locfileid: "48171752"
   
 -   モデル内のすべてのパーティションを対象とした、特定メジャーの平均値に基づく偏差の平均。  
   
-#### <a name="classification-passfail"></a>分類 : 合格/不合格  
+#### <a name="classification-passfail"></a>分類:成功/失敗  
  このメジャーは、予測可能な属性に対象の値を指定していない場合に分類モデルで使用されます。 たとえば、複数の確率を予測するモデルを作成した場合、このメジャーは可能なすべての値の予測におけるモデルの精度を示します。  
   
  成功/失敗は、次の条件を満たすケースのカウントによって計算されます:**渡す**確率が最も高い予測された状態が入力状態と同じであり、確率が指定した値よりも大きいかどうか**状態のしきい値**、それ以外の**失敗**します。  
   
-#### <a name="classification-true-or-false-positives-and-negatives"></a>分類 : 真陽性、偽陽性、真陰性、偽陰性  
+#### <a name="classification-true-or-false-positives-and-negatives"></a>分類:真または偽陽性および偽陰性  
  このテストは、指定した対象を持つすべての分類モデルに対して使用されます。 このメジャーは、モデルで予測した対象と実際の結果に応じて、各ケースの分類方法を示します。  
   
 |[メジャー]|説明|  
@@ -136,7 +135,7 @@ ms.locfileid: "48171752"
   
  クラスター モデルには、モデルの作成に使用した方法に応じて 2 種類のクラスター メンバーシップがあります。 一部のモデルでは、K-Means アルゴリズムに基づいて、新しいケースは 1 つのクラスターのみに属すると予想されます。 ただし、Microsoft クラスタリング アルゴリズムでは既定で Expectation Maximization 手法が使用され、この手法では新しいケースが任意のクラスターに属する可能性があることも想定されます。 したがって、これらのモデルではケースに複数の `CaseLikelihood` 値が含まれる可能性がありますが、既定で報告されるのは、新しいケースに最も適合するクラスターに属するケースの確率値になります。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [モデルの検証と予測用モデルの使用&#40;データ マイニング Excel 用アドイン&#41;](validating-models-and-using-models-for-prediction-data-mining-add-ins-for-excel.md)  
   
   

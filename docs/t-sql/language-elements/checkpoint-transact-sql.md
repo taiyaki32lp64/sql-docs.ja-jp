@@ -24,18 +24,17 @@ helpviewer_keywords:
 - manual checkpoints [SQL Server]
 - pages [SQL Server], checkpoints
 ms.assetid: ccdfc689-ad4e-44c0-83f7-0f2cfcfb6406
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: ba84c4df4af4c4bba82fb63a668ec2b57cf39c3e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: juliemsft
+ms.author: jrasnick
+ms.openlocfilehash: d662eb333ae932370c09847319cb69a5deb4773e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47744560"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67950332"
 ---
 # <a name="checkpoint-transact-sql"></a>CHECKPOINT (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   現在接続している [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データベースで手動チェックポイントを生成します。  
   
@@ -58,7 +57,7 @@ CHECKPOINT [ checkpoint_duration ]
 ## <a name="factors-affecting-the-duration-of-checkpoint-operations"></a>チェックポイントの操作時間に影響を与える要因  
  通常、書き込む必要のあるダーティ ページの数が増えると、チェックポイント操作に必要とされる時間が長くなります。 他のアプリケーションのパフォーマンスに与える影響を最小にするため、既定では、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] によってチェックポイント操作による書き込み頻度が調節されます。 書き込みの頻度が減ると、チェックポイント操作の完了に必要な時間は長くなります。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、*checkpoint_duration* 値が CHECKPOINT コマンドで指定されていない場合、この方法に基づいて手動チェックポイントが実行されます。  
   
- *checkpoint_duration* の使用によるパフォーマンスへの影響は、ダーティ ページの数、システムにあるアクティビティ、実際に指定された時間によって異なります。 たとえば、通常、チェックポイントが 120 秒で完了する場合、*checkpoint_duration* を 45 秒に設定すると、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] によって、既定で割り当てられるリソースよりも多くのリソースがチェックポイントに割り当てられます。 逆に、*checkpoint_duration* を 180 秒に指定すると、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、既定で割り当てられるリソースよりも少ないリソースしか割り当てられません。 一般に、*checkpoint_duration* が短いとチェックポイントに割り当てるリソースが増え、*checkpoint_duration* が長いとチェックポイントに割り当てるリソースが減ります。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] は、常に可能な限りチェックポイントを完了し、チェックポイントが完了するとすぐに CHECKPOINT ステートメントによって値が返されます。 したがってチェックポイントの完了は、状況に応じて、指定した時間よりも早まったり、遅くなることがあります。  
+ *checkpoint_duration* の使用によるパフォーマンスへの影響は、ダーティ ページの数、システムにあるアクティビティ、実際に指定された時間によって異なります。 たとえば、通常、チェックポイントが 120 秒で完了する場合、*checkpoint_duration* を 45 秒に設定すると、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] によって、既定で割り当てられるリソースよりも多くのリソースがチェックポイントに割り当てられます。 逆に、*checkpoint_duration* を 180 秒に指定すると、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、既定で割り当てられるリソースよりも少ないリソースしか割り当てられません。 一般に、*checkpoint_duration* が短いとチェックポイントに割り当てるリソースが増え、*checkpoint_duration* が長いとチェックポイントに割り当てるリソースが減ります。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] は、常に可能な限りチェックポイントを完了し、チェックポイントが完了するとすぐに CHECKPOINT ステートメントによって値が返されます。 したがってチェックポイントの完了は、状況に応じて、指定した時間よりも早まったり、遅くなったりすることがあります。  
   
 ##  <a name="Security"></a> セキュリティ  
   

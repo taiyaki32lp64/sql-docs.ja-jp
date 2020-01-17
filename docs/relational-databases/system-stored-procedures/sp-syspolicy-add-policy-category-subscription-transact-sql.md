@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 4284f550-9a3f-4726-8181-15e407fbf08f
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: 8299578d8becf6ef0f1572596795454ff9d98fc9
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 795a806b1b945407a2db947f6037c435efe68b56
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47595340"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68010513"
 ---
 # <a name="spsyspolicyaddpolicycategorysubscription-transact-sql"></a>sp_syspolicy_add_policy_category_subscription (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -43,19 +42,15 @@ sp_syspolicy_add_policy_category_subscription [ @target_type = ] 'target_type'
 ```  
   
 ## <a name="arguments"></a>引数  
- [ **@target_type=** ] **'***target_type***'**  
- カテゴリ サブスクリプションの対象の種類を指定します。 *target_type*は**sysname**、必要なおよび 'DATABASE' に設定する必要があります。  
+`[ @target_type = ] 'target_type'` カテゴリのサブスクリプションのターゲット型です。 *target_type*は**sysname**、必要なおよび 'DATABASE' に設定する必要があります。  
   
- [ **@target_object=** ] **'***target_object***'**  
- カテゴリにサブスクライブするデータベースの名前です。 *target_object*は**sysname**、必要があります。  
+`[ @target_object = ] 'target_object'` カテゴリにサブスクライブするデータベースの名前です。 *target_object*は**sysname**、必要があります。  
   
- [ **@policy_category=** ] **'***policy_category***'**  
- サブスクライブするポリシー カテゴリの名前です。 *policy_category*は**sysname**、必要があります。  
+`[ @policy_category = ] 'policy_category'` サブスクライブするポリシー カテゴリの名前です。 *policy_category*は**sysname**、必要があります。  
   
  値を取得する*policy_category*、msdb.dbo.syspolicy_policy_categories システム ビューをクエリします。  
   
- [  **@policy_category_subscription_id=** ] *policy_category_subscription_id*  
- カテゴリ サブスクリプションの識別子を指定します。 *policy_category_subscription_id*は**int**、出力として返されます。  
+`[ @policy_category_subscription_id = ] policy_category_subscription_id` カテゴリのサブスクリプションの識別子です。 *policy_category_subscription_id*は**int**、出力として返されます。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  **0** (成功) または**1** (失敗)  
@@ -79,7 +74,7 @@ EXEC msdb.dbo.sp_syspolicy_add_policy_category_subscription @target_type = N'DAT
 GO  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [ポリシー ベースの管理ストアド プロシージャ&#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/policy-based-management-stored-procedures-transact-sql.md)   
  [sp_syspolicy_update_policy_category_subscription &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-syspolicy-update-policy-category-subscription-transact-sql.md)   
  [sp_syspolicy_unsubscribe_from_policy_category &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-syspolicy-unsubscribe-from-policy-category-transact-sql.md)  

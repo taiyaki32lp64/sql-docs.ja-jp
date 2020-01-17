@@ -1,7 +1,7 @@
 ---
 title: CREATE TRIGGER (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 08/10/2017
+ms.date: 10/30/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: mathoma
@@ -28,19 +28,16 @@ helpviewer_keywords:
 ms.assetid: edeced03-decd-44c3-8c74-2c02f801d3e7
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: c2c96519627b5fff5ba7e892561392d4fdb2e7c6
-ms.sourcegitcommit: c61c7b598aa61faa34cd802697adf3a224aa7dc4
+ms.openlocfilehash: 7735298fc669d8e5b385501cd3f235a0a08abb9d
+ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56154807"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "73982699"
 ---
 # <a name="create-trigger-transact-sql"></a>CREATE TRIGGER (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-> [!div class="nextstepaction"]
-> [SQL ドキュメントの目次に関するご意見をお寄せください。](https://aka.ms/sqldocsurvey)
 
 DML トリガー、DDL トリガー、またはログオン トリガーを作成します。 トリガーとは、特別な種類のストアド プロシージャであり、データベース サーバーでイベントが発生したときに自動的に実行されます。 DML トリガーは、ユーザーがデータ操作言語 (DML) イベントを介してデータを変更しようとしたときに実行されます。 DML イベントは、テーブルやビューに対する INSERT、UPDATE、または DELETE ステートメントによって発生するイベントです。 これらのトリガーは、テーブル行が影響を受けるかどうかにかかわらず、有効なイベントが発生したときに起動されます。 詳しくは、「 [DML Triggers](../../relational-databases/triggers/dml-triggers.md)」をご覧ください。  
   
@@ -182,12 +179,12 @@ DATABASE
 DDL トリガーのスコープを現在のデータベースに適用します。 これを指定すると、現在のデータベースで *event_type* または *event_group* が発生するたびにトリガーが起動します。  
   
 ALL SERVER  
-**適用対象**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]  
+**適用対象**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 以降。  
   
 DDL トリガーまたはログオン トリガーのスコープを現在のサーバーに適用します。 これを指定すると、現在のサーバーの任意の場所で *event_type* または *event_group* が発生するたびにトリガーが起動します。  
   
 WITH ENCRYPTION  
-**適用対象**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]  
+**適用対象**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 以降。  
   
 CREATE TRIGGER ステートメントのテキストをわかりにくくします。 WITH ENCRYPTION を使用すると、そのトリガーを [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] レプリケーションの一部としてパブリッシュできなくなります。 WITH ENCRYPTION は、CLR トリガーに対しては指定できません。  
   
@@ -208,10 +205,8 @@ SCHEMABINDING
   
 このオプションは、メモリ最適化テーブルのトリガーで必要であり、従来のテーブルのトリガーではサポートされていません。  
   
-FOR | AFTER   
-AFTER を指定した場合は、トリガー元の SQL ステートメントで指定したすべての処理が正常に開始された場合のみ、DML トリガーが起動されます。 このトリガーの実行前に、すべての連鎖参照操作と制約チェックも成功している必要があります。  
-  
-指定したキーワードが FOR だけの場合は、AFTER が既定値になります。  
+FOR | AFTER  
+FOR または AFTER を指定した場合は、トリガー元の SQL ステートメントで指定したすべての操作が正常に開始された場合のみ、DML トリガーが起動されます。 このトリガーの実行前に、すべての連鎖参照操作と制約チェックも成功している必要があります。  
   
 ビューに AFTER トリガーを定義することはできません。  
   
@@ -222,7 +217,7 @@ INSTEAD OF
   
 INSTEAD OF トリガーは、WITH CHECK OPTION を使用する更新可能なビューには定義できません。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] これを行うと、WITH CHECK OPTION が指定されている更新可能なビューに INSTEAD OF トリガーを追加した場合にエラーが発生します。 INSTEAD OF トリガーを定義する前に、ALTER VIEW を使用してそのオプションを削除する必要があります。  
   
-{ [ DELETE ] [ , ] [ INSERT ] [ , ] [ UPDATE ] }   
+{ [ DELETE ] [ , ] [ INSERT ] [ , ] [ UPDATE ] }  
 テーブルまたはビューに対して試行されたときに、DML トリガーをアクティブにするデータ変更ステートメントを指定します。 少なくとも 1 つのオプションを指定します。 これらのオプションを任意の順序で組み合わせて、トリガー定義内で使用できます。  
   
 INSTEAD OF トリガーでは、ON DELETE 連鎖操作を指定する参照関係があるテーブルで、DELETE オプションを使用することはできません。 同様に、ON UPDATE 連鎖操作を指定する参照関係があるテーブルで、UPDATE オプションを使用することはできません。  
@@ -241,7 +236,7 @@ WITH APPEND
 *event_group* は、対応するイベントの種類を sys.trigger_events カタログ ビューに追加した場合、CREATE TRIGGER が終了した後でマクロとしても動作します。  
   
 NOT FOR REPLICATION  
-**適用対象**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]  
+**適用対象**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 以降。  
   
 トリガーに関係するテーブルがレプリケーション エージェントによって変更される場合は、トリガーを実行しないことを示します。  
   
@@ -265,11 +260,11 @@ DDL トリガーおよびログオン トリガーでは、[EVENTDATA &#40;Trans
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、テーブルまたはビューに対する INSTEAD OF トリガーによって、**text**、**ntext**、または **image** 型の列を更新できます。  
   
 > [!IMPORTANT]
->  **ntext**、**text**、および **image** データ型は、[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の将来のバージョンで削除される予定です。 新しい開発作業では、これらのデータ型の使用は避け、現在これらのデータ型を使用しているアプリケーションは修正するようにしてください。 代わりに、 [nvarchar(max)](../../t-sql/data-types/nchar-and-nvarchar-transact-sql.md)、 [varchar(max)](../../t-sql/data-types/char-and-varchar-transact-sql.md)、 [varbinary(max)](../../t-sql/data-types/binary-and-varbinary-transact-sql.md) を使用してください。 AFTER トリガーと INSTEAD OF トリガーでは両方とも、inserted テーブルおよび deleted テーブルで **varchar(MAX)**、 **nvarchar(MAX)**、および **varbinary(MAX)** 型のデータがサポートされます。  
+>  **ntext**、**text**、および **image** データ型は、[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の将来のバージョンで削除される予定です。 新しい開発作業では、これらのデータ型の使用は避け、現在これらのデータ型を使用しているアプリケーションは修正するようにしてください。 代わりに、 [nvarchar(max)](../../t-sql/data-types/nchar-and-nvarchar-transact-sql.md)、 [varchar(max)](../../t-sql/data-types/char-and-varchar-transact-sql.md)、 [varbinary(max)](../../t-sql/data-types/binary-and-varbinary-transact-sql.md) を使用してください。 AFTER トリガーと INSTEAD OF トリガーでは両方とも、inserted テーブルおよび deleted テーブルで **varchar(MAX)** 、 **nvarchar(MAX)** 、および **varbinary(MAX)** 型のデータがサポートされます。  
   
 メモリ最適化テーブルのトリガーの場合、最上位レベルで許可される唯一の *sql_statement* は ATOMIC ブロックです。 ATOMIC ブロック内で使用できる T-SQL は、ネイティブ プロシージャ内で使用できる T-SQL によって制限されます。  
   
-\< method_specifier > **適用対象**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。  
+\< method_specifier > **適用対象**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 以降。  
   
 CLR トリガーに対して、トリガーにバインドするアセンブリのメソッドを指定します。 このメソッドは引数を受け取らず、void を返す必要があります。 *class_name* は有効な [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 識別子であり、アセンブリ内にアセンブリで可視のクラスとして存在している必要があります。 このクラスの名前が名前空間で修飾されており、名前空間の部分がピリオド (.) で分けられている場合は、このクラス名を角かっこ ([ ]) または引用符 (" ") で区切る必要があります。 入れ子になったクラスは使用できません。  
   
@@ -357,7 +352,7 @@ DDL トリガーは、ローカルまたはグローバルの一時テーブル�
 DML トリガーと異なり、DDL トリガーのスコープはスキーマではありません。 このため、DDL トリガーに関するメタデータのクエリに、OBJECT_ID、OBJECT_NAME、OBJECTPROPERTY、OBJECTPROPERTYEX などの関数を使用することはできません。 代わりに、カタログ ビューを使用してください。 詳しくは、「[DDL トリガーに関する情報の取得](../../relational-databases/triggers/get-information-about-ddl-triggers.md)」をご覧ください。  
   
 > [!NOTE]  
->  サーバー スコープの DDL トリガーは、[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] オブジェクト エクスプローラーの **[トリガー]** フォルダーに表示されます。 このフォルダーは、 **[Server Objects]** フォルダーにあります。 データベース スコープの DDL トリガーは、**[データベース トリガー]** フォルダーに表示されます。 このフォルダーは対応するデータベースの **[Programmability]** フォルダーにあります。  
+>  サーバー スコープの DDL トリガーは、[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] オブジェクト エクスプローラーの **[トリガー]** フォルダーに表示されます。 このフォルダーは、 **[Server Objects]** フォルダーにあります。 データベース スコープの DDL トリガーは、 **[データベース トリガー]** フォルダーに表示されます。 このフォルダーは対応するデータベースの **[Programmability]** フォルダーにあります。  
   
 ## <a name="logon-triggers"></a>ログオン トリガー  
 ログオン トリガーは、LOGON イベントに応答してストアド プロシージャを実行します。 このイベントは、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスでユーザー セッションが確立されるときに発生します。 ログオン トリガーは、ログインの認証段階が終了した後、ユーザー セッションが確立される前に発生します。 したがって、通常は、エラー メッセージや PRINT ステートメントからのメッセージはユーザーに表示されますが、このトリガー内で発生したすべてのメッセージは [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のエラー ログに記録されます。 詳細については、「[ログオン トリガー](../../relational-databases/triggers/logon-triggers.md)」を参照してください。  
@@ -401,7 +396,7 @@ RECURSIVE_TRIGGERS の設定を無効にすると、直接再帰のみが無効�
   
 いずれかのトリガーで ROLLBACK TRANSACTION が実行されると、入れ子のレベルにかかわらず、それ以降のトリガーは実行されません。  
   
-### <a name="nested-triggers"></a>入れ子にされたトリガー  
+### <a name="nested-triggers"></a>入れ子になったトリガー  
 トリガーは、最大 32 レベルの入れ子にすることができます。 トリガーによって別のトリガーが存在するテーブルが変更された場合、2 番目のトリガーがアクティブになり、3 番目のトリガーを呼び出すことができ、以下同様になります。 この連鎖的なトリガーで無限ループが発生すると、入れ子レベルを超過した時点でトリガーは取り消されます。 [!INCLUDE[tsql](../../includes/tsql-md.md)] トリガーで、CLR ルーチン、データ型、または集計を参照することによってマネージド コードが開始された場合、この参照は 32 レベルの入れ子制限の 1 レベルとしてカウントされます。 マネージド コード内から呼び出されたメソッドは、この制限としてはカウントされません。  
   
 入れ子にされたトリガーを無効にするには、sp_configure の nested triggers オプションを 0 (オフ) に設定します。 既定の構成では、入れ子になったトリガーがサポートされます。 入れ子になったトリガーがオフの場合、ALTER DATABASE によって RECURSIVE_TRIGGERS がどのように設定されていても、再帰トリガーは無効になります。  
@@ -506,7 +501,7 @@ FOR DROP_SYNONYM
 AS   
 IF (@@ROWCOUNT = 0)
 RETURN;
-   RAISERROR ('You must disable Trigger "safety" to drop synonyms!',10, 1)  
+   RAISERROR ('You must disable Trigger "safety" to remove synonyms!', 10, 1)  
    ROLLBACK  
 GO  
 DROP TRIGGER safety  
@@ -517,7 +512,7 @@ GO
 ### <a name="e-using-a-server-scoped-ddl-trigger"></a>E. サーバー スコープの DDL トリガーを使用する  
 次の例では、DDL トリガーを使用して、現在のサーバー インスタンスで CREATE DATABASE イベントが発生したときにメッセージを表示し、`EVENTDATA` 関数を使用して、対応する [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントのテキストを取得します。 DDL トリガーで EVENTDATA を使用するその他の例については、「[EVENTDATA 関数の使用](../../relational-databases/triggers/use-the-eventdata-function.md)」を参照してください。  
   
-**適用対象**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]  
+**適用対象**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 以降。  
   
 ```sql  
 CREATE TRIGGER ddl_trig_database   
@@ -535,7 +530,7 @@ GO
 ### <a name="f-using-a-logon-trigger"></a>F. ログオン トリガーを使用する  
 次のログオン トリガーの例では、*login_test* ログインで既に 3 つのユーザー セッションが実行されている場合に、そのログインのメンバーとして [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] にログインを試行すると拒否されます。  
   
-**適用対象**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]  
+**適用対象**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 以降。  
   
 ```sql  
 USE master;  

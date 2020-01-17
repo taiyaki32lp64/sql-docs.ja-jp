@@ -10,15 +10,15 @@ helpviewer_keywords:
 - names [SQL Server], columns with
 - XPath node test
 ms.assetid: b48adccd-3b6b-486a-b326-20f57170186f
-author: douglaslMS
-ms.author: douglasl
+author: MightyPen
+ms.author: genemi
 manager: craigg
-ms.openlocfilehash: b2ac7154d80a33907cb27bf191dcb41bca866894
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 804ca2ebe3aa307272645fa5a626ea2212367f87
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52783924"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62637965"
 ---
 # <a name="columns-with-the-name-of-an-xpath-node-test"></a>XPath ノード テストの名前が付いた列
   XPath ノード テストのいずれかが列名である場合、内容は次の表に示すようにマップされます。 列名がいずれかの XPath ノード テストであれば、対応するノードに内容がマップされます。 列の SQL 型が `xml` の場合は、エラーが返されます。  
@@ -57,7 +57,7 @@ WHERE  E.BusinessEntityID=1
 FOR XML PATH;  
 ```  
   
- これは、結果です。  
+ 結果を次に示します。  
   
  `<row EmpID="1">`  
   

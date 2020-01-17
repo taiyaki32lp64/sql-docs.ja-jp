@@ -10,13 +10,12 @@ ms.assetid: 854c0b2f-02d2-46a4-a8cc-6b7a5d191cf8
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-manager: craigg
-ms.openlocfilehash: 6c49902a8774d68950984d6d4e339124172a32f4
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.openlocfilehash: f445d1b28c7f76274a2a64e813805f820d005aa6
+ms.sourcegitcommit: 381595e990f2294dbf324ef31071e2dd2318b8dd
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51602442"
+ms.lasthandoff: 11/20/2019
+ms.locfileid: "74200473"
 ---
 # <a name="install-sql-server-powershell"></a>SQL Server PowerShell のインストール
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -35,9 +34,9 @@ ms.locfileid: "51602442"
  
 - [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] は、オブジェクト エクスプローラー ツリーからの Windows PowerShell セッションの起動をサポートします。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェントは、Windows PowerShell ジョブ ステップをサポートします。  
   
-Windows Server 2012 以降と Windows 8 以降には、PowerShell がインストールされ構成されています。 Windows PowerShell のインストールの詳細については、「[Windows PowerShell のインストール](https://docs.microsoft.com/powershell/scripting/setup/installing-windows-powershell)」を参照してください。  
+Windows Server 2012 以降と Windows 8 以降には、PowerShell がインストールされ構成されています。 Windows PowerShell のインストールの詳細については、「[Windows PowerShell のインストール](https://docs.microsoft.com/powershell/scripting/install/installing-windows-powershell)」を参照してください。  
 
-詳細については、以下をご覧ください。   
+詳細については、次を参照してください。   
 
 - [SQL Server PowerShell](../../relational-databases/scripting/sql-server-powershell.md)  
   

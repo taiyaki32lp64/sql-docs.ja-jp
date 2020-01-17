@@ -14,11 +14,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 855d0baf0b0b890b9343378f8060919979d5f206
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52401617"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63207107"
 ---
 # <a name="bulk-copy-changes-for-enhanced-date-and-time-types-ole-db-and-odbc"></a>機能強化された日付型と時刻型向けの一括コピーの変更 (OLE DB および ODBC)
   このトピックでは、一括コピー機能をサポートするための日付と時刻の機能強化について説明します。 このトピックの情報は、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client の OLE DB と ODBC の両方に当てはまります。  
@@ -26,7 +26,7 @@ ms.locfileid: "52401617"
 ## <a name="format-files"></a>フォーマット ファイル  
  フォーマット ファイルを対話形式で作成する場合に、日付型と時刻型の指定に使用する入力、および対応するホスト ファイル データ型名を次の表に示します。  
   
-|ファイル ストレージ型|ホスト ファイル データ型|次のプロンプトへの応答:"フィールド < field_name > のファイル ストレージ型を入力します [\<既定 >]:"。|  
+|ファイル ストレージ型|ホスト ファイル データ型|プロンプトに応答します。"フィールド < field_name > のファイル ストレージ型を入力します [\<既定 >]:"。|  
 |-----------------------|-------------------------|-----------------------------------------------------------------------------------------------------|  
 |DATETIME|SQLDATETIME|d|  
 |Smalldatetime|SQLDATETIM4|D|  
@@ -104,7 +104,7 @@ ms.locfileid: "52401617"
   
  **OLE DB に関するメモ** 次の変換は、IBCPSession によって実行されます。 IRowsetFastLoad で定義されている OLE DB 変換を使用して[サーバーにクライアントから変換](../native-client-ole-db-date-time/conversions-performed-from-client-to-server.md)します。 次に示すクライアントでの変換が実行されると、datetime 値は 1/300 秒単位に丸められ、smalldatetime 値の秒は 0 に設定されます。 datetime の丸め処理は、時間と分に適用されますが、日付には適用されません。  
   
-|変換先 --><br /><br /> From|日付|time|smalldatetime|DATETIME|datetime2|datetimeoffset|char|wchar|  
+|--> を<br /><br /> From|日付|time|smalldatetime|DATETIME|datetime2|datetimeoffset|char|wchar|  
 |------------------------|----------|----------|-------------------|--------------|---------------|--------------------|----------|-----------|  
 |date|1|-|1,6|1,6|1,6|1,5,6|1,3|1,3|  
 |Time|なし|1,10|1,7,10|1,7,10|1,7,10|1,5,7,10|1,3|1,3|  

@@ -9,13 +9,13 @@ ms.topic: conceptual
 ms.assetid: 91f7f558-025d-4f4d-ac2c-aa095e7d1ace
 author: Shamikg
 ms.author: Shamikg
-manager: v-thobro
-ms.openlocfilehash: 96b60573b81625c8896fb9022a6a718770f349ed
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+manager: shamikg
+ms.openlocfilehash: 2b435b02060d32e61bc3e75054171023262a87b8
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51656139"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68264215"
 ---
 # <a name="data-migration-settings-oracletosql"></a>データ移行の設定 (OracleToSQL)
   
@@ -48,10 +48,10 @@ ms.locfileid: "51656139"
   
 存在する 2 つのボタンを viz。  
   
--   **適用:** クリックして**適用**変更されている設定を適用します。  
+-   **適用されます。** クリックして**適用**変更されている設定を適用します。  
   
--   **[キャンセル]:** クリックして**キャンセル**変更が行われた前に、現在の設定を復元します。  
+-   **キャンセル：** クリックして**キャンセル**変更が行われた前に、現在の設定を復元します。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
 [SQL Server への Oracle データの移行](migrating-oracle-data-into-sql-server-oracletosql.md)  
   

@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: 38477e91-d084-4df7-b1de-b930c5580189
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: bb56b0fd04842ba006de99db9b5dcabdca3ee8a6
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 371f8e2bf9a5d67d68e9c1d48502bf3fa2f81db6
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47721490"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67904576"
 ---
 # <a name="sysremotelogins-transact-sql"></a>sys.remote_logins (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -34,15 +33,15 @@ ms.locfileid: "47721490"
   
 |列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
-|**server_id**|**int**|内のサーバーの ID **sys.servers**します。 この名前は、"リモート" サーバーからの接続によって提供されます。|  
-|**remote_name**|**sysname**|接続がマップ用に提供するログイン名です。 NULL の場合、接続で指定されたログイン名が使用されます。|  
-|**local_principal_id**|**int**|ログインのマップ先となるサーバー プリンシパルの ID です。 0 の場合、リモート ログインは同じ名前のログインにマップされます。|  
-|**modify_date**|**datetime**|リンク ログインが前回変更された日付。|  
+|**server_id**|**int**|内のサーバーの ID **sys.servers**します。 この名前は、「リモート」サーバーからの接続によって提供されます。|  
+|**remote_name**|**sysname**|マップへの接続を提供するログイン名です。 NULL の場合、接続で指定されているログイン名が使用されます。|  
+|**local_principal_id**|**int**|ログインがマップ先のサーバー プリンシパルの ID。 0 の場合、リモート ログインは、同じ名前のログインにマップされます。|  
+|**modify_date**|**datetime**|リンク ログインが最後に変更された日付。|  
   
 ## <a name="permissions"></a>アクセス許可  
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] 詳細については、「 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)」を参照してください。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [リンク サーバーのカタログ ビュー &#40;TRANSACT-SQL&#41;](../../relational-databases/system-catalog-views/linked-servers-catalog-views-transact-sql.md)   
  [カタログ ビュー &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)  
   

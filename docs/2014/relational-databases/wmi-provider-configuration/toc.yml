@@ -23,9 +23,9 @@
       href: ../wmi-provider-server-events/using-wql-with-the-wmi-provider-for-server-events.md
     - name: WMI Provider for Server Events のクラスとプロパティ
       href: ../wmi-provider-server-events/wmi-provider-for-server-events-classes-and-properties.md
-    - name: 'サンプル : WMI Provider for Server Events の使用による SQL Server エージェント警告の作成'
+    - name: 'サンプル:WMI Provider for Server Events の使用による SQL Server エージェント警告の作成'
       href: ../wmi-provider-server-events/sample-creating-a-sql-server-agent-alert-with-the-wmi-provider.md
-    - name: 'サンプル: .NET Framework での WMI イベント プロバイダーの使用'
+    - name: 'サンプル:.NET Framework での WMI イベント プロバイダーの使用'
       href: ../wmi-provider-server-events/sample-using-the-wmi-event-provider-with-the-net-framework.md
 - name: WMI プロバイダーのイベントとエラー
   href: ../../database-engine/dev-guide/wmi-provider-events-and-errors.md

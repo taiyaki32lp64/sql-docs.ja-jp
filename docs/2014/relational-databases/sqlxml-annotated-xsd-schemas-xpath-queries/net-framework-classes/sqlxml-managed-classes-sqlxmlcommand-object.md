@@ -27,15 +27,15 @@ helpviewer_keywords:
 - ClientSideXML property
 - CommandStream property
 ms.assetid: c1f9e0bb-a89d-4d6a-a96e-289ef516a3a6
-author: douglaslMS
-ms.author: douglasl
+author: MightyPen
+ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 736345b7ee5b9c3e40f0ae34fe139cb911cad42f
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: d002208a83b58a4c8547bc6ce85db073ced70974
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52807344"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66010743"
 ---
 # <a name="sqlxmlcommand-object-sqlxml-managed-classes"></a>SqlXmlCommand オブジェクト (SQLXML マネージド クラス)
   SqlXmlCommand オブジェクトのコンス トラクターです。  
@@ -101,7 +101,7 @@ public SqlXmlCommand(string cnString)
  コマンドのテキストを指定します。 このプロパティは、実行するコマンドのテキストを指定するときに使用します。 実際のサンプルでは、次を参照してください。 [SQL クエリの実行&#40;SQLXML マネージ クラス&#41;](sqlxml-4-0-net-framework-support-managed-classes.md)します。  
   
  CommandStream  
- コマンド ストリームを指定します。 このプロパティは、XML テンプレートなどのファイルからコマンドを実行する場合に便利です。 CommandStream、のみを使用する場合 **"Template"**、 **"UpdateGram"** と **"DiffGram"CommandType**値がサポートされています。 実際のサンプルでは、次を参照してください。 [CommandStream プロパティを使用してテンプレート ファイルを実行する](executing-template-files-by-using-the-commandstream-property.md)します。  
+ コマンド ストリームを指定します。 このプロパティは、XML テンプレートなどのファイルからコマンドを実行する場合に便利です。 CommandStream、のみを使用する場合 **"Template"** 、 **"UpdateGram"** と **"DiffGram"CommandType**値がサポートされています。 実際のサンプルでは、次を参照してください。 [CommandStream プロパティを使用してテンプレート ファイルを実行する](executing-template-files-by-using-the-commandstream-property.md)します。  
   
  CommandType  
  コマンドの種類を指定します。 このプロパティは、実行するコマンドの種類を指定するときに使用します。 コマンドの種類の値を、次の表に示します。 実際のサンプルでは、次を参照してください。 [.NET 環境での SQLXML 機能へのアクセス](accessing-sqlxml-functionality-in-the-net-environment.md)します。  

@@ -1,5 +1,5 @@
 ---
-title: '概要: Excel へのデータのエクスポート (Excel 用 MDS アドイン) | Microsoft Docs'
+title: 概要:(MDS アドインを Excel の) Excel にデータをエクスポートする |Microsoft Docs
 ms.custom: microsoft-excel-add-in
 ms.date: 03/01/2017
 ms.prod: sql
@@ -8,17 +8,16 @@ ms.reviewer: ''
 ms.technology: master-data-services
 ms.topic: conceptual
 ms.assetid: b628548b-982b-4e45-abf4-c8e83e3ab1c2
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 05b5eb61afee1c38c64c2b071efd7b808fade030
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
-ms.translationtype: HT
+ms.openlocfilehash: 75a23041a3e822ec103012aa18475a092b27b816
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52396805"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68074506"
 ---
-# <a name="overview-exporting-data-to-excel-mds-add-in-for-excel"></a>概要: Excel へのデータのエクスポート (Excel 用 MDS アドイン)
+# <a name="overview-exporting-data-to-excel-mds-add-in-for-excel"></a>概要:Excel へのデータのエクスポート (Excel 用 MDS アドイン)
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
@@ -52,7 +51,7 @@ ms.locfileid: "52396805"
   
 -   [接続 (Excel 用 MDS アドイン)](../../master-data-services/microsoft-excel-add-in/connections-mds-add-in-for-excel.md)  
   
--   [ショートカット クエリ ファイル (Excel 用 MDS アドイン)](../../master-data-services/microsoft-excel-add-in/shortcut-query-files-mds-add-in-for-excel.md)  
+-   [ショートカット クエリ ファイル &#40;Excel 用 MDS アドイン&#41;](../../master-data-services/microsoft-excel-add-in/shortcut-query-files-mds-add-in-for-excel.md)  
   
 -   [Microsoft Excel 用マスター データ サービス アドイン](../../master-data-services/microsoft-excel-add-in/master-data-services-add-in-for-microsoft-excel.md)  
   

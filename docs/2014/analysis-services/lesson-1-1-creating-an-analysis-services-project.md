@@ -4,26 +4,25 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: 065fdc60-1791-4e27-9ed5-51d751b3f8c4
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 8b6e7fca1013811f8a5a8b36e85970bd7a74b6d9
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 56b0a13c30100a12ce7307fc3896b5976e30ad59
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48066967"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66079358"
 ---
 # <a name="creating-an-analysis-services-project"></a>Analysis Services プロジェクトの作成
   次のタスクで使用して[!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]新たに作成する[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]という名前のプロジェクト`Analysis Services Tutorial`を基に、[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]プロジェクト テンプレート。 *プロジェクト* とは、関連するオブジェクトのコレクションです。 プロジェクトはソリューションに追加され、各ソリューションは 1 つ以上のプロジェクトで構成されます。 詳しくは、「[Analysis Services プロジェクトの作成 (SSDT)](multidimensional-models/create-an-analysis-services-project-ssdt.md)」を参照してください。  
   
 ### <a name="to-create-a-new-analysis-services-project"></a>Analysis Services プロジェクトを作成するには  
   
-1.  **[スタート]** ボタンをクリックし、 **[すべてのプログラム]**、 **[Microsoft SQL Server 2012]** の順にポイントし、 **[SQL Server データ ツール]** をクリックします。  
+1.  **[スタート]** ボタンをクリックし、 **[すべてのプログラム]** 、 **[Microsoft SQL Server 2012]** の順にポイントし、 **[SQL Server データ ツール]** をクリックします。  
   
      [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] の開発環境が開きます。  
   
@@ -41,7 +40,7 @@ ms.locfileid: "48066967"
  [データ ソースの定義](lesson-1-2-defining-a-data-source.md)  
   
 ## <a name="see-also"></a>参照  
- [マルチ ディメンションを作成する SQL Server データ ツールの使用をモデル化&#40;SSDT&#41;](multidimensional-models/creating-multidimensional-models-using-sql-server-data-tools-ssdt.md)   
- [Analysis Services プロジェクトの作成&#40;SSDT&#41;](multidimensional-models/create-an-analysis-services-project-ssdt.md)  
+ [SQL Server データ ツール (SSDT) を使用した多次元モデルの作成](multidimensional-models/creating-multidimensional-models-using-sql-server-data-tools-ssdt.md)   
+ [Analysis Services プロジェクトの作成 (SSDT)](multidimensional-models/create-an-analysis-services-project-ssdt.md)  
   
   

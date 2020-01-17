@@ -6,14 +6,14 @@ ms.prod_service: reporting-services-native
 ms.technology: mobile-reports
 ms.topic: conceptual
 ms.assetid: 8adce9ad-6a08-4d20-b1cf-d3c45544d8de
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: fc62408e329f0ea6e75e96a6da272237f3a0ac7b
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 9ded496c3509420d54325dc054e018048ede0732
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56288480"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62499933"
 ---
 # <a name="prepare-data-for-reporting-services-mobile-reports"></a>Reporting Services モバイル レポート用にデータを準備する
   

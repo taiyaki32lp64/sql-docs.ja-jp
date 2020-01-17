@@ -4,23 +4,22 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.asexecuteddltask.general.f1
 helpviewer_keywords:
 - Analysis Services Execute DDL Task Editor
 ms.assetid: 28788cc5-7c84-4c6f-9650-62372c519728
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 272240e73be28bcfe29b21b86d4d7b4e59d99f46
-ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
+ms.openlocfilehash: 6a8178eeb65c83836a979d79c605260692b549cb
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50148307"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66061552"
 ---
 # <a name="analysis-services-execute-ddl-task-editor-general-page"></a>[Analysis Services DDL 実行タスク エディター] ([全般] ページ)
   **[Analysis Services DDL 実行タスク エディター]** ダイアログ ボックスの **[全般]** ページを使用すると、[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] DDL 実行タスクの名前と説明を入力できます。  
@@ -37,7 +36,7 @@ ms.locfileid: "50148307"
  **[説明]**  
  [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] DDL 実行タスクの説明を入力します。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [Integration Services のエラーおよびメッセージのリファレンス](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [[Analysis Services DDL 実行タスク エディター] ([DDL] ページ)](../../2014/integration-services/analysis-services-execute-ddl-task-editor-ddl-page.md)   
  [[式] ページ](expressions/expressions-page.md)   

@@ -15,15 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - MakeValid (geometry Data Type)
 ms.assetid: 38673010-ab77-4ebb-9c4d-b26b79e3b7ea
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: 28871e1c4558c62ec1262b93902eb62ba375c92f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: MladjoA
+ms.author: mlandzic
+ms.openlocfilehash: 9c613a95ea3bee42d51ac1805ff65281fa96ec33
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47673700"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68101195"
 ---
 # <a name="makevalid-geometry-data-type"></a>MakeValid (geometry データ型)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
@@ -40,7 +39,7 @@ ms.locfileid: "47673700"
 ## <a name="return-types"></a>戻り値の型  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の戻り値の型: **geometry**  
   
- CLR 戻り値の型: **SqlGeometry**  
+ CLR の戻り値の型:**SqlGeometry**  
   
 ## <a name="remarks"></a>Remarks  
  このメソッドにより、**geometry** インスタンスの型が変更されるだけでなく、**geometry** インスタンスの地点がわずかに移動する場合があります。  

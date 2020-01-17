@@ -11,15 +11,14 @@ helpviewer_keywords:
 - modifying queries
 - queries [SQL Server], modifying
 ms.assetid: e2618a89-90fb-43d8-ac4e-cabd2aa3f1dc
-author: stevestein
-ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 98495d6362aa723c69a30d40fd419d5ecaffe003
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 93383453d4c8d76cda5944356ba31e8cd97e1f52
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47785370"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68258460"
 ---
 # <a name="modify-queries-visual-database-tools"></a>クエリの変更 (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

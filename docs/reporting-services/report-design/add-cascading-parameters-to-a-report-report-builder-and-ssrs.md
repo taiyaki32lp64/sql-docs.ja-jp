@@ -2,18 +2,18 @@
 title: カスケード型パラメーターのレポートへの追加 (レポート ビルダーおよび SSRS) | Microsoft Docs
 ms.date: 08/17/2018
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: report-design
 ms.topic: conceptual
 ms.assetid: 3a22eec3-57a7-478e-b6fc-102a9dbe0591
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 9a597a7cf808028127e6c04d991e20bf7b83bc51
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 56f701d86c180b6bb1d10c3c6ffebfbe057eaf7c
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56292320"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65582087"
 ---
 # <a name="add-cascading-parameters-to-a-report-report-builder-and-ssrs"></a>カスケード型パラメーターのレポートへの追加 (レポート ビルダーおよび SSRS)
   カスケード型パラメーターを使用すると、大量のレポート データの管理が可能になります。 パラメーターの値の一覧が、別のパラメーターで選択された値によって決まるように、関連するパラメーターのセットを定義できます。 たとえば、最初のパラメーターが独立しており、製品カテゴリの一覧を表すとします。 ユーザーが任意のカテゴリを選択すると、2 番目のパラメーターは最初のパラメーターの値によって決まります。 その値は、選択したカテゴリ内のサブカテゴリの一覧で更新されます。 ユーザーがレポートを表示するとき、カテゴリ パラメーターとサブカテゴリ パラメーターの両方の値を使用して、レポート データにフィルターが適用されます。  
@@ -43,7 +43,7 @@ ms.locfileid: "56292320"
   
     2.  カスケード型パラメーターごとに 1 つのクエリ パラメーター。 クエリ パラメーターは、クエリに含める特定の値またはクエリから除外する特定の値を指定することによって、データ ソースから取得するデータを制限します。 通常、クエリ パラメーターはクエリの制約句で使用されます。 たとえば [!INCLUDE[tsql](../../includes/tsql-md.md)] SELECT ステートメントでは、クエリ パラメーターは WHERE 句で使用されます。  
   
-6.  **[実行]** (**!**) をクリックします。 クエリ パラメーターを指定し、クエリを実行したら、クエリ パラメーターに対応するレポート パラメーターが自動的に作成されます。  
+6.  **[実行]** ( **!** ) をクリックします。 クエリ パラメーターを指定し、クエリを実行したら、クエリ パラメーターに対応するレポート パラメーターが自動的に作成されます。  
   
     > [!NOTE]  
     >  最初にクエリを実行したときのクエリ パラメーターの順序によって、クエリ パラメーターがレポート内で作成される順序が決まります。 順序を変更するには、「[レポート パラメーターの順序の変更 &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/change-the-order-of-a-report-parameter-report-builder-and-ssrs.md)」を参照してください。  
@@ -70,7 +70,7 @@ ms.locfileid: "56292320"
   
      SELECT DISTINCT コマンドは、指定したテーブルの指定した列から一意の各値を取得できるように、結果セットから重複する値を削除します。  
   
-     **[実行]** (**!**) をクリックします。 結果セットには、この最初のパラメーターに使用可能な値が表示されます。  
+     **[実行]** ( **!** ) をクリックします。 結果セットには、この最初のパラメーターに使用可能な値が表示されます。  
   
 6.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
@@ -154,7 +154,7 @@ ms.locfileid: "56292320"
 ## <a name="see-also"></a>参照  
  [レポート パラメーターの追加、変更、または削除 (レポート ビルダーおよび SSRS)](../../reporting-services/report-design/add-change-or-delete-a-report-parameter-report-builder-and-ssrs.md)   
  [レポート パラメーター (レポート ビルダーおよびレポート デザイナー)](../../reporting-services/report-design/report-parameters-report-builder-and-report-designer.md)   
- [チュートリアル: レポートへのパラメーターの追加 &#40;レポート ビルダー&#41;](../../reporting-services/tutorial-add-a-parameter-to-your-report-report-builder.md)   
+ [チュートリアル: レポートへのパラメーターの追加 (レポート ビルダー)](../../reporting-services/tutorial-add-a-parameter-to-your-report-report-builder.md)   
  [レポート ビルダー チュートリアル](../../reporting-services/report-builder-tutorials.md)   
  [データセット フィルター、データ領域フィルター、およびグループ フィルターの追加 (レポート ビルダーおよび SSRS)](../../reporting-services/report-design/add-dataset-filters-data-region-filters-and-group-filters.md)   
  [レポート埋め込みデータセットと共有データセット (レポート ビルダーおよび SSRS)](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)  

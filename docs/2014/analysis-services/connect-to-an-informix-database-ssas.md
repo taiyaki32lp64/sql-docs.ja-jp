@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.bidtoolset.conninformixdb.f1
@@ -13,12 +12,12 @@ ms.assetid: b01d537c-1c04-4d7d-9146-051c249b08e4
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: ca54a226097860e563fd439261e8ce1f2690cacd
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 88849f85a5f2614961cb67db070f508c2c0718d0
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48054871"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66087158"
 ---
 # <a name="connect-to-an-informix-database-ssas"></a>[Informix データベースへの接続] (SSAS)
   **テーブルのインポート ウィザード**のこのページを使用すると、Informix データベースに接続するための設定を指定できます。 [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]からウィザードにアクセスするには、 **[モデル]** メニューの **[データ ソースからのインポート]** をクリックします。  

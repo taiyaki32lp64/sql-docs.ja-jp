@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: d9c18a93-cab9-4db8-ae09-c6bd8145ab8f
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 831571621256a34611672ae6444379c375370f1a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 1dbaf429acb94334540f0e147eae2808e1655309
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47679277"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68119354"
 ---
 # <a name="backupmediaset-transact-sql"></a>backupmediaset (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -34,16 +33,16 @@ ms.locfileid: "47679277"
   
 |列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
-|**media_set_id**|**int**|一意なメディア セット識別番号。 ID、主キー。|  
+|**media_set_id**|**int**|一意なメディア セット識別番号です。 ID、主キー。|  
 |**media_uuid**|**uniqueidentifier**|メディア セットの UUID。 すべて[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]メディア セットは UUID があります。<br /><br /> 以前のバージョンの[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]、ただし、メディア セットには、1 つだけのメディア ファミリが含まれている場合、 **media_uuid**列は NULL になります (**media_family_count**は 1)。|  
 |**media_family_count**|**tinyint**|メディア セット内のメディア ファミリの数。 NULL にすることができます。|  
 |**name**|**nvarchar(128)**|メディア セットの名前。 NULL にすることができます。<br /><br /> 詳細についてを参照してください MEDIANAME と MEDIADESCRIPTION[バックアップ&#40;TRANSACT-SQL&#41;](../../t-sql/statements/backup-transact-sql.md)します。|  
 |**description**|**nvarchar (255)**|メディア セットの説明。 NULL にすることができます。<br /><br /> 詳細についてを参照してください MEDIANAME と MEDIADESCRIPTION[バックアップ&#40;TRANSACT-SQL&#41;](../../t-sql/statements/backup-transact-sql.md)します。|  
-|**software_name**|**nvarchar(128)**|メディア ラベルを記述したバックアップ ソフトウェアの名前。 NULL にすることができます。|  
+|**software_name**|**nvarchar(128)**|メディア ラベルを作成したバックアップ ソフトウェアの名前。 NULL にすることができます。|  
 |**software_vendor_id**|**int**|バックアップ メディア ラベルを記述したソフトウェア ベンダーの識別番号。 NULL にすることができます。<br /><br /> 値は、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]は 16 進数の 0x1200 です。|  
 |**MTF_major_version**|**tinyint**|メジャー バージョン番号の[!INCLUDE[msCoName](../../includes/msconame-md.md)]Tape Format は、このメディア セットの生成に使用します。 NULL にすることができます。|  
-|**mirror_count**|**tinyint**|メディア セットのミラー数。|  
-|**is_password_protected**|**bit**|メディア セットのパスワードが保護されているかどうか。<br /><br /> 0 = 保護されていない<br /><br /> 1 = 保護されている|  
+|**mirror_count**|**tinyint**|メディア セット内のミラーの数。|  
+|**is_password_protected**|**bit**|メディアはパスワードで保護を設定します。<br /><br /> 0 = 保護されていない<br /><br /> 1 = 保護されている|  
 |**is_compressed**|**bit**|バックアップが圧縮されているかどうか。<br /><br /> 0 = 非圧縮<br /><br /> 1 = 圧縮<br /><br /> 中に、 **msdb**アップグレードすると、この値は NULL に設定するされます。 これは圧縮されていないバックアップを示します。|  
 |**is_encrypted**|**Bit**|バックアップが暗号化されているかどうか。<br /><br /> 0 = 暗号化なし<br /><br /> 1 = 暗号化|  
   

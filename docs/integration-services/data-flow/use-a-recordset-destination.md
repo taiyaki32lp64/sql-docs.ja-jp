@@ -10,17 +10,20 @@ ms.topic: conceptual
 helpviewer_keywords:
 - Recordset destination
 ms.assetid: a7b143dc-8008-404f-83b0-b45ffbca6029
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: d47d625bada340c98726a725c03c5e4ae1c6ae72
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 94c1d149dd152a9cf83e5464cde2c56ec9b42af7
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47808420"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71290989"
 ---
 # <a name="use-a-recordset-destination"></a>レコードセット変換先を使用する
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   レコードセット変換先では、データは外部データ ソースに保存されません。 代わりに、レコードセット変換先では、 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] Object **データ型の** パッケージ変数に格納されるレコードセットのメモリにデータが保存されます。 レコードセット変換先でデータが保存されたら、通常、Foreach ループ コンテナーと Foreach ADO 列挙子を使用して、一度に 1 つのレコードセット行を処理します。 Foreach ADO 列挙子によって、現在の行の各列の値が個別のパッケージ変数に保存されます。 その後、Foreach ループ コンテナー内で構成したタスクによって変数から値が読み取られ、その値を使用してアクションが実行されます。  
   
  レコードセット変換先は、さまざまなシナリオで使用できます。 次にいくつかの例を示します。  
@@ -99,7 +102,7 @@ ms.locfileid: "47808420"
   
 1.  **デザイナーの** [制御フロー] [!INCLUDE[ssIS](../../includes/ssis-md.md)] タブで、データ フロー タスクをデザイン画面に追加します。  
   
-2.  **[データ フロー]** tab, add an OLE DB source to the [データ フロー] task, and then open the **[OLE DB ソース エディター]** を開きます。  
+2.  **[データ フロー]** タブで、OLE DB ソースをデータ フロー タスクに追加し、 **[OLE DB ソース エディター]** を開きます。  
   
 3.  エディターの **[接続マネージャー]** ページで、次の設定を使用してソースを構成します。  
   
@@ -154,7 +157,7 @@ ms.locfileid: "47808420"
   
     5.  **[MessageSourceType]** に対して **[直接入力]** を選択します。  
   
-5.  **[メール送信タスク エディター]** の **[式]** ページで、参照ボタン (**[...]**) をクリックして **[プロパティ式エディター]** を開きます。  
+5.  **[メール送信タスク エディター]** の **[式]** ページで、参照ボタン ( **[...]** ) をクリックして **[プロパティ式エディター]** を開きます。  
   
 6.  **[プロパティ式エディター]** で、次の情報を入力します。  
   

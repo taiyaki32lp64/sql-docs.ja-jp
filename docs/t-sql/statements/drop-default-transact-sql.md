@@ -18,21 +18,20 @@ helpviewer_keywords:
 ms.assetid: d2d3af25-8877-46ba-95d9-1844961d97ee
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: 72accd7718280b4994c3339531c8e5d0fef067c1
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: 885336e48d7b8820ac7c1015be6d770b851978af
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53210791"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67898076"
 ---
 # <a name="drop-default-transact-sql"></a>DROP DEFAULT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  1 つ以上のユーザー定義のデフォルトを現在のデータベースから削除します。  
+  1 つまたは複数のユーザー定義の既定値を現在のデータベースから削除します。  
   
 > [!IMPORTANT]
->  DROP DEFAULT は、次期バージョンの [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では削除される予定です。 新しい開発作業では、DROP DEFAULT の使用は避け、現在このオプションを使用しているアプリケーションは修正するようにしてください。 代わりに、[ALTER TABLE](../../t-sql/statements/alter-table-transact-sql.md) または [CREATE TABLE](../../t-sql/statements/create-table-transact-sql.md) の DEFAULT キーワードを使用して作成できるデフォルト定義を使用してください。  
+>  DROP DEFAULT は、次期バージョンの [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では削除される予定です。 新しい開発作業では、DROP DEFAULT の使用は避け、現在これらを使用しているアプリケーションは変更するようにしてください。 代わりに、[ALTER TABLE](../../t-sql/statements/alter-table-transact-sql.md) または [CREATE TABLE](../../t-sql/statements/create-table-transact-sql.md) の DEFAULT キーワードを使用して作成できるデフォルト定義を使用してください。  
   
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -52,7 +51,7 @@ DROP DEFAULT [ IF EXISTS ] { [ schema_name . ] default_name } [ ,...n ] [ ; ]
  デフォルトが所属するスキーマの名前を指定します。  
   
  *default_name*  
- 既存のデフォルトの名前です。 既存のデフォルトの一覧を表示するには、**sp_help** を実行します。 デフォルトは、[識別子](../../relational-databases/databases/database-identifiers.md)の規則に従っている必要があります。 デフォルトのスキーマ名の指定は省略可能です。  
+ 既存の既定値の名前です。 既存のデフォルトの一覧を表示するには、**sp_help** を実行します。 デフォルトは、[識別子](../../relational-databases/databases/database-identifiers.md)の規則に従っている必要があります。 デフォルトのスキーマ名の指定は省略可能です。  
   
 ## <a name="remarks"></a>Remarks  
  デフォルトが列または別名データ型にバインドされている場合は、デフォルトを削除する前に、**sp_unbindefault** を実行してデフォルトをアンバインドしてください。  
@@ -65,7 +64,7 @@ DROP DEFAULT [ IF EXISTS ] { [ schema_name . ] default_name } [ ,...n ] [ ; ]
 ## <a name="examples"></a>使用例  
   
 ### <a name="a-dropping-a-default"></a>A. デフォルトを削除する  
- デフォルトが列または別名データ型にバインドされていない場合は、DROP DEFAULT を使うだけで削除できます。 次の例では、ユーザーが作成したデフォルト `datedflt` を削除します。  
+ 既定値が列または別名データ型にバインドされていない場合は、DROP DEFAULT を使うだけで削除できます。 次の例では、ユーザーが作成したデフォルト `datedflt` を削除します。  
   
 ```  
 USE AdventureWorks2012;  
@@ -84,7 +83,7 @@ DROP DEFAULT IF EXISTS datedflt;
 GO  
 ```  
   
-### <a name="b-dropping-a-default-that-has-been-bound-to-a-column"></a>B. 列にバインドされたデフォルトを削除する  
+### <a name="b-dropping-a-default-that-has-been-bound-to-a-column"></a>B. 列にバインドされた既定値を削除する  
  次の例では、`EmergencyContactPhone` テーブルの `Contact` 列に関連付けられているデフォルトをアンバインドし、デフォルト `phonedflt` を削除します。  
   
 ```  

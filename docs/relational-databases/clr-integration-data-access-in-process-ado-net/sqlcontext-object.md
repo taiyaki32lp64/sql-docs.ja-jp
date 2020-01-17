@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 67437853-8a55-44d9-9337-90689ebba730
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 3293cbed44cc6eeae12c3c48247de8748ddad894
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 746ce8cec228b6fe9a9d36c4e0287ad7c2f3c517
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51664872"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67951674"
 ---
 # <a name="sqlcontext-object"></a>SqlContext オブジェクト
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -30,13 +29,13 @@ ms.locfileid: "51664872"
   
  **SqlContext**次のコンポーネントへのアクセスを提供します。  
   
--   **SqlPipe**: **SqlPipe**オブジェクトは、クライアントに流れる結果が通過「パイプ」を表します。 詳細については、 **SqlPipe**オブジェクトを参照してください[SqlPipe オブジェクト](../../relational-databases/clr-integration-data-access-in-process-ado-net/sqlpipe-object.md)します。  
+-   **SqlPipe**:**SqlPipe**オブジェクトは、クライアントに流れる結果が通過「パイプ」を表します。 詳細については、 **SqlPipe**オブジェクトを参照してください[SqlPipe オブジェクト](../../relational-databases/clr-integration-data-access-in-process-ado-net/sqlpipe-object.md)します。  
   
--   **SqlTriggerContext**: **SqlTriggerContext** CLR トリガー内からオブジェクトが取得のみできます。 このオブジェクトでは、トリガーを起動した操作や、更新された列のマップについての情報を提供します。 詳細については、 **SqlTriggerContext**オブジェクトを参照してください[SqlTriggerContext オブジェクト](../../relational-databases/clr-integration-data-access-in-process-ado-net/sqltriggercontext-object.md)します。  
+-   **SqlTriggerContext**:**SqlTriggerContext** CLR トリガー内からオブジェクトが取得のみできます。 このオブジェクトでは、トリガーを起動した操作や、更新された列のマップについての情報を提供します。 詳細については、 **SqlTriggerContext**オブジェクトを参照してください[SqlTriggerContext オブジェクト](../../relational-databases/clr-integration-data-access-in-process-ado-net/sqltriggercontext-object.md)します。  
   
--   **IsAvailable**: **IsAvailable**プロパティはコンテキスト可用性を確認するために使用します。  
+-   **IsAvailable**:**IsAvailable**プロパティはコンテキスト可用性を確認するために使用します。  
   
--   **WindowsIdentity**: **WindowsIdentity**プロパティを使用して、呼び出し元の Windows id を取得します。  
+-   **WindowsIdentity**:**WindowsIdentity**プロパティを使用して、呼び出し元の Windows id を取得します。  
   
 ## <a name="determining-context-availability"></a>コンテキスト可用性の判断  
  クエリ、 **SqlContext**クラスを現在実行中のコードがインプロセスで実行されているかどうか。 これを行うには、確認、 **IsAvailable**のプロパティ、 **SqlContext**オブジェクト。 **IsAvailable**プロパティは読み取り専用、および返します**True**内で呼び出し元のコードが実行されている場合[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]おり、他**SqlContext**メンバーにアクセスできます。 場合、 **IsAvailable**プロパティが返す**False**、他のすべての**SqlContext**メンバーをスロー、 **InvalidOperationException**使用されている場合、. 場合**IsAvailable**返します**False**をされている接続オブジェクトを開く"コンテキスト接続 = true"では、接続文字列が失敗します。  
@@ -129,7 +128,7 @@ Public Shared Sub  WindowsIDTestProcVB ()
 End Sub  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [SqlPipe オブジェクト](../../relational-databases/clr-integration-data-access-in-process-ado-net/sqlpipe-object.md)   
  [SqlTriggerContext オブジェクト](../../relational-databases/clr-integration-data-access-in-process-ado-net/sqltriggercontext-object.md)   
  [CLR トリガー](https://msdn.microsoft.com/library/302a4e4a-3172-42b6-9cc0-4a971ab49c1c)   

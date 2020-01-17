@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: 985fcee1-f204-425c-bdd1-deb0e7d7bbd9
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 794dc83a27d3c4882b5df4edbb4f2a645cd5ca1c
-ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
+ms.openlocfilehash: 0fa34020478308c1e0d5c5fe112bbeb04920f07e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/18/2018
-ms.locfileid: "53590706"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68003123"
 ---
 # <a name="sqlexecdirect-function"></a>SQLExecDirect 関数
 **準拠**  
@@ -36,7 +35,7 @@ ms.locfileid: "53590706"
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
   
 SQLRETURN SQLExecDirect(  
      SQLHSTMT     StatementHandle,  
@@ -85,8 +84,8 @@ SQLRETURN SQLExecDirect(
 |22012|0 による除算|**StatementText* 0 による除算する算術式を含む SQL ステートメントに含まれています。<br /><br /> 算術式の入力/出力の計算または 0 による除算で出力パラメーターが発生しました。|  
 |22015|Interval フィールド オーバーフロー|*\*StatementText*正確な数値または間隔パラメーターに含まれている、間隔の SQL データ型に変換するときは、有効桁数の損失を原因となった。<br /><br /> *\*StatementText*は間隔パラメーターは、複数のフィールドに含まれる、列の数値データ型に変換するときになかった表現で数値データ型。<br /><br /> *\*StatementText*間隔 SQL 型に割り当てられたパラメーター データが含まれているし、SQL 型の間隔で C 型の値の表現はありませんでした。<br /><br /> 真数型または SQL 型の有効桁数が失われました C の間隔の種類の間隔、または入力/出力の出力パラメーターを割り当てます。<br /><br /> C interval 構造体を入力/出力または出力パラメーターが割り当てられると、間隔のデータ構造内のデータの表現はありませんでした。|  
 |22018|キャストの無効な文字の値|*\*StatementText* C 型が含まれている、真数または概数の数値、datetime、または間隔のデータ型があった; 列の SQL 型が文字データ型と列の値がバインドされた C 型の有効なリテラルではありませんでした。<br /><br /> SQL 型が、真数または概数の数値、datetime、または、interval データ型が、入力/出力または出力パラメーターが返されると、C 型が SQL_C_CHAR;列の値がバインドされた SQL 型の有効なリテラルではありませんでした。|  
-|22019|無効なエスケープ文字|\**StatementText*を含む SQL ステートメントに含まれている、**など**の述語では、**エスケープ**で、**場所**句とエスケープの長さ次の文字**エスケープ**が 1 と等しくありません。|  
-|22025|無効なエスケープ シーケンス|\**StatementText*を含む SQL ステートメントに含まれる"**など**_パターン値_**エスケープ**_エスケープ文字_"で、**場所**句、およびパターンの値のエスケープ文字の後の文字が「%」または「_」のいずれか。|  
+|22019|無効なエスケープ文字|\**StatementText*を含む SQL ステートメントに含まれている、**LIKE**の述語では、**エスケープ**で、**WHERE**句とエスケープの長さ次の文字**エスケープ**が 1 と等しくありません。|  
+|22025|無効なエスケープ シーケンス|\**StatementText*を含む SQL ステートメントに含まれる"**LIKE**_パターン値_**エスケープ**_エスケープ文字_"で、**WHERE**句、およびパターンの値のエスケープ文字の後の文字が「%」または「_」のいずれか。|  
 |23000|整合性制約違反|**StatementText*パラメーターまたはリテラルを含む SQL ステートメントに含まれています。 パラメーターの値が NULL、関連付けられているテーブル列に NOT NULL として定義されている列、制約を一意の値のみを含む列の重複する値が指定されてまたはその他の整合性制約に違反していた。|  
 |24000|カーソル状態が無効|カーソルが配置されている、 *StatementHandle*によって**SQLFetch**または**SQLFetchScroll**します。 このエラーが返されますドライバー マネージャーによって**SQLFetch**または**SQLFetchScroll** 、SQL_NO_DATA が返されなかったと場合、ドライバーによって返される**SQLFetch**または**SQLFetchScroll** SQL_NO_DATA が返されます。<br /><br /> カーソルが開いていてもいないに配置されている、 *StatementHandle*します。<br /><br /> **StatementText*または結果セットの終了後に、結果セットの開始前に、カーソルが配置された位置指定の update または delete ステートメント、および含まれています。|  
 |34000|カーソル名が無効|**StatementText*包含の位置指定の update または delete ステートメント、および実行中のステートメントによって参照されたカーソルが開かれていませんでした。|  

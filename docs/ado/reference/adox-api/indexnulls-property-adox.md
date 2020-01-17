@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: 313b0bf7-3f37-4823-8fca-bd9c80e078a7
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 0bf43d2a0c2a2c8006df0513d4643fb4c0363506
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 25a319d81fb3ecde22691f5197e93acb38a5e04a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47615910"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67966004"
 ---
 # <a name="indexnulls-property-adox"></a>IndexNulls プロパティ (ADOX)
 インデックスのエントリをインデックス フィールドに null 値を持つレコードがあるかどうかを示します。  
@@ -39,5 +38,5 @@ ms.locfileid: "47615910"
 ## <a name="applies-to"></a>適用対象  
  [Index オブジェクト (ADOX)](../../../ado/reference/adox-api/index-object-adox.md)  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [IndexNulls プロパティの例 (VB)](../../../ado/reference/adox-api/indexnulls-property-example-vb.md)

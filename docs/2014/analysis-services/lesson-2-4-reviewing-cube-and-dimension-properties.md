@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: dda922b8-6d75-4662-b09e-8a317c6a1c70
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: b4db6133a486e77369630dc717fab02b3be7f8e2
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: c95d241d136f290110ac8a2b72540011a3922e24
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48196272"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66078999"
 ---
 # <a name="reviewing-cube-and-dimension-properties"></a>キューブとディメンションのプロパティの確認
   キューブを定義した後は、その結果をキューブ デザイナーで確認できます。 この実習では、 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Tutorial プロジェクトのキューブの構造を確認します。  
@@ -35,7 +34,7 @@ ms.locfileid: "48196272"
   
 4.  **[キューブ構造]** タブの **[ディメンション]** ペインで **[Customer]** を展開し、 **[Customer の編集]** をクリックしてディメンション デザイナーでディメンションを開きます。  
   
-     ディメンション デザイナーには、 **[ディメンション構造]**、 **[属性リレーションシップ]**、 **[翻訳]**、 **[ブラウザー]** というタブがあります。 **[ディメンション構造]** タブには、 **[属性]**、 **[階層]**、 **[データ ソース ビュー]** の 3 つのペインがあります。 ディメンションに含まれている属性は **[属性]** ペインに表示されます。 詳細については、次を参照してください。 [Dimension Attribute Properties Reference](multidimensional-models/dimension-attribute-properties-reference.md)、[ユーザー定義階層の](multidimensional-models/user-defined-hierarchies-create.md)します。  
+     ディメンション デザイナーには、これらのタブが含まれています。**ディメンション構造**、**属性リレーションシップ**、**翻訳**、および**ブラウザー**します。 注意、**ディメンション構造** タブには、3 つのペインが含まれています。**属性**、**階層**、および**データ ソース ビュー**します。 ディメンションに含まれている属性は **[属性]** ペインに表示されます。 詳細については、次を参照してください。 [Dimension Attribute Properties Reference](multidimensional-models/dimension-attribute-properties-reference.md)、[ユーザー定義階層の](multidimensional-models/user-defined-hierarchies-create.md)します。  
   
 5.  キューブ デザイナーに切り替えるには、ソリューション エクスプローラーの **[キューブ]** ノードで **[Analysis Services Tutorial]** キューブを右クリックし、 **[ビュー デザイナー]** をクリックします。  
   

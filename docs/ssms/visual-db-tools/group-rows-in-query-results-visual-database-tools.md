@@ -12,15 +12,14 @@ helpviewer_keywords:
 - grouping rows
 - grouping query results
 ms.assetid: b07082d5-4d55-4903-9af9-4c470554c6d3
-author: stevestein
-ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 0a88702993b95978ea0ca0d49f23247b2c05d93e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 3208a3458098b85325a19c014d99bca3b4f05c4d
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47719406"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68254471"
 ---
 # <a name="group-rows-in-query-results-visual-database-tools"></a>クエリ結果内の行のグループ化 (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

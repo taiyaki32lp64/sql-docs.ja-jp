@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 11f8017e-5bc3-4bab-8060-c16282cfbac1
 author: pelopes
 ms.author: harinid
-manager: craigg
-ms.openlocfilehash: 7e9e96ee56895c38a8c242d3cd48804884f581d1
-ms.sourcegitcommit: 1f53b6a536ccffd701fc87e658ddac714f6da7a2
+ms.openlocfilehash: 915dde0b6b2083c45b5bfe4196e7578537a91379
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/10/2019
-ms.locfileid: "54206368"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72909155"
 ---
 # <a name="post-migration-validation-and-optimization-guide"></a>移行後の検証および最適化ガイド
 
@@ -53,7 +52,7 @@ ms.locfileid: "54206368"
 **適用対象:** 外部プラットフォーム (Oracle、DB2、MySQL、Sybase など) から [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] への移行。
 
 > [!NOTE]
-> [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] から [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] への移行で、移行元の [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] にこの問題がある場合、[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]  のより新しいバージョンにそのまま移行したのでは、このシナリオには対処できません。 
+> [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] から [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] への移行で、移行元の [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] にこの問題が存在していた場合、[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] の新しいバージョンにそのまま移行したのでは、このシナリオには対処できません。 
 
 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] は、最初のコンパイルで入力パラメーターのスニッフィングを使って、その入力データの分布に最適化された、パラメーター化された再利用可能なプランを生成することで、ストアド プロシージャのクエリ プランをコンパイルします。 ストアド プロシージャではない場合でも、単純なプランを生成するほとんどのステートメントがパラメーター化されます。 プランが最初にキャッシュされた後、それ以降の実行は前にキャッシュされたプランにマップします。
 その最初のコンパイルで通常のワークロードに対する最も一般的なパラメーターのセットが使われないことがある場合、問題が発生する可能性があります。 異なるパラメーターに対して実行プランが同じでは非効率的になります。 このトピックの詳細については、「[パラメーター スニッフィング](../relational-databases/query-processing-architecture-guide.md#ParamSniffing)」を参照してください。
@@ -108,6 +107,7 @@ SARGable ではない述語の例を次に示します。
   -   これには、データベースに格納されるユーザー定義のコード構造 (ストアド プロシージャ、ユーザー定義関数、ビューなど) と、基になるテーブルで使われるデータ型についての情報を保持するシステム テーブル ([sys.columns](../relational-databases/system-catalog-views/sys-columns-transact-sql.md) など) の比較が含まれる場合があります。
 2. 前のポイントまですべてのコードをスキャンできない場合は、同じ目的で、変数/パラメーターの宣言と一致するように、テーブルのデータ型を変更します。
 3. 次の構造の有用性を熟考します。
+
   -   述語として使われている関数
   -   ワイルドカード検索
   -   列データに基づく複雑な式 – インデックスを作成できる永続計算列を代わりに作成する必要性を評価します。

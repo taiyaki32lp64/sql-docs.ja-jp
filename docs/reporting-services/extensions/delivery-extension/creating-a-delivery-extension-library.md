@@ -10,14 +10,14 @@ helpviewer_keywords:
 - library [Reporting Services]
 - assigning namespaces to extensions
 ms.assetid: 63b32f93-4bab-4b07-bd72-39a47aca1cda
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 13003add2f2b5d55871555a285e224c6c604e822
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 06b204e9cc3c13492b0ab6815c7d36abdc628d4b
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47818114"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63193876"
 ---
 # <a name="creating-a-delivery-extension-library"></a>配信拡張機能ライブラリの作成
   作成する [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 配信拡張機能は、それぞれ一意の名前空間に割り当てられ、ライブラリまたはアセンブリ ファイルに組み込まれている必要があります。 名前空間の正確な名前はあまり重要ではありませんが、名前は他の拡張機能とは共有しない一意のものである必要があります。 会社の配信拡張機能には、独自に一意の名前空間を作成してください。  

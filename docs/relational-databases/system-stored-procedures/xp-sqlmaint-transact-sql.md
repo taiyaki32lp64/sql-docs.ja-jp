@@ -17,15 +17,14 @@ helpviewer_keywords:
 ms.assetid: bda66e1b-6bbd-49be-b86e-37efc920e912
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 2157462ca1f9509034f33208cce7aed2983ae4f2
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 9948767ca0eca5721207079f978987142653e9c2
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47746520"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68091907"
 ---
-# <a name="xpsqlmaint-transact-sql"></a>xp_sqlmaint (Transact-SQL)
+# <a name="xpsqlmaint-transact-sql"></a>xp_sqlmaint (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   呼び出し、 **sqlmaint**ユーティリティを含む文字列**sqlmaint**スイッチ。 **Sqlmaint**ユーティリティは、1 つまたは複数のデータベースでメンテナンス操作のセットを実行します。  
@@ -71,7 +70,7 @@ EXEC xp_sqlmaint '-D AdventureWorks2012 -PlanID 02A52657-D546-11D1-9D8A-00A0C905
 The command(s) executed successfully.  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [sqlmaint ユーティリティ](../../tools/sqlmaint-utility.md)   
  [システム ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   

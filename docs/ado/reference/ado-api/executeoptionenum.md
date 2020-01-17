@@ -15,18 +15,17 @@ helpviewer_keywords:
 ms.assetid: 68bfa83a-5df4-4bef-8736-0f88ae8c29ea
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 7512f456d1423caf6318903119c2ad55c1938dec
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: bef70bd72425e749865e31ecf162e719737dd272
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47719120"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67932844"
 ---
 # <a name="executeoptionenum"></a>ExecuteOptionEnum
 プロバイダーがコマンドを実行する方法を指定します。  
   
-|定数|値|説明|  
+|定数|Value|説明|  
 |--------------|-----------|-----------------|  
 |**adAsyncExecute**|0x10|コマンドを非同期的に実行することを示します。<br /><br /> この値は組み合わせることができない、 [CommandTypeEnum](../../../ado/reference/ado-api/commandtypeenum.md)値**adCmdTableDirect**します。|  
 |**adAsyncFetch**|0x20|残りの行を後で指定した初期量を示します、 [CacheSize](../../../ado/reference/ado-api/cachesize-property-ado.md)プロパティを非同期的に取得する必要があります。|  

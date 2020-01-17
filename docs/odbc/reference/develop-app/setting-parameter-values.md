@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 13e5da79-b60c-48d0-b467-773f481ef2a4
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 66811d2364db546c3bddd787c1e0794f936f97c4
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 0bb1115290f53c19fae1aacb0a976cfcef63e086
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47729160"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68094232"
 ---
 # <a name="setting-parameter-values"></a>パラメーターの値の設定
 パラメーターの値を設定するには、アプリケーションは単に、パラメーターにバインドされた変数の値を設定します。 重要ではありませんこの値が設定されている場合、ステートメントが実行される前に設定されている限り、します。 アプリケーションは、変数のバインドの前後に値を設定でき、必要な回数の値を変更することができます。 ステートメントが実行されたときに、ドライバーは単に、変数の現在の値を取得します。 準備されたステートメントが複数回実行されたときに特に有効です。アプリケーションは、ステートメントが実行されるたびに、変数の一部またはすべての新しい値を設定します。 これの例は、次を参照してください。[準備された実行](../../../odbc/reference/develop-app/prepared-execution-odbc.md)、このセクションでは以前のバージョン。  

@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 9469ba3a-5e4f-4a10-bbb8-a51a6c9660ea
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: db2065bd599b1aca1542318bfab0d0ce57e2a938
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 18117be8dccc64f7ed2583170cf062145836f337
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52542598"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67932874"
 ---
 # <a name="errorvalueenum"></a>ErrorValueEnum
 ADO の実行時エラーの種類を指定します。  
@@ -37,7 +36,7 @@ ADO の実行時エラーの種類を指定します。
 > [!NOTE]
 >  OLE DB エラーは、ADO アプリケーションに渡すことがあります。 これらを識別しての Windows 機能のコードで通常、 *4*します。 たとえば、0x800***4***します。  
   
-|定数|値|説明|  
+|定数|Value|説明|  
 |--------------|-----------|-----------------|  
 |**adErrBoundToCommand**|3707 -2146824581 0x800A0E7B|変更することはできません、 **ActiveConnection**のプロパティを**レコード セット**を持つオブジェクトを**コマンド**のソースとしてオブジェクト。|  
 |**adErrCannotComplete**|3732 -2146824556 0x800A0E94|サーバーは、操作を完了できません。|  
@@ -91,8 +90,8 @@ ADO の実行時エラーの種類を指定します。
 |**adErrURLNamedRowDoesNotExist**|3737 -2146824551 0x800A0E99|この URL でという名前のレコードが存在しません。|  
 |**adErrVolumeNotFound**|3733 -2146824555 0x800A0E95|プロバイダーは、URL で指定されたストレージ デバイスに見つかりません。 URL が正しく入力されていることを確認します。|  
 |**adErrWriteFile**|3004 -2146825284 0x800A0BBC|ファイルへ書き込めませんでした。|  
-|**adWrnSecurityDialog**|3717 -2146824571 0x800A0E85|内部使用のみです。 使用しないでください。|  
-|**adWrnSecurityDialogHeader**|3718 -2146824570 0x800A0E86|内部使用のみです。 使用しないでください。|  
+|**adWrnSecurityDialog**|3717 -2146824571 0x800A0E85|内部使用専用。 使わないでください。|  
+|**adWrnSecurityDialogHeader**|3718 -2146824570 0x800A0E86|内部使用専用。 使わないでください。|  
   
 ## <a name="adowfc-equivalent"></a>ADO と WFC と同等  
  パッケージ: **com.ms.wfc.data**  
@@ -126,5 +125,5 @@ ADO の実行時エラーの種類を指定します。
 ## <a name="applies-to"></a>適用対象  
  [Number プロパティ (ADO)](../../../ado/reference/ado-api/number-property-ado.md)  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [ADO エラー コード](../../../ado/guide/appendixes/ado-error-codes.md)

@@ -11,11 +11,11 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: 64402f73fdf43c0ebcbeff338ed72d56d55227be
-ms.sourcegitcommit: f62f70298651d6223fa5d215b6a7a0d2ffecbd0d
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/19/2018
-ms.locfileid: "51947566"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63155576"
 ---
 # <a name="the-memory-optimized-filegroup"></a>メモリ最適化ファイルグループ
   メモリ最適化テーブルを作成するには、まずメモリ最適化ファイルグループを作成する必要があります。 メモリ最適化ファイル グループには 1 つ以上のコンテナーが含まれています。 各コンテナーには、データ ファイルかデルタ ファイル、あるいはその両方が含まれています。  
@@ -67,7 +67,7 @@ X と Y のドライブで一様にデータとデルタ ファイルを配布�
 同様に、次のデータとデルタ ファイルがコンテナー 3 と Y ドライブにマップするコンテナー 4 から割り当てられます。これにより、2 つのドライブで一様にデータとデルタ ファイルを配布できます。  
  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
 [メモリ最適化オブジェクト用ストレージの作成と管理](creating-and-managing-storage-for-memory-optimized-objects.md)     
 [データベース ファイルとファイル グループ](../../relational-databases/databases/database-files-and-filegroups.md)    
   

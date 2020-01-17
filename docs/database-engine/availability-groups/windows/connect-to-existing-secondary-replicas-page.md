@@ -13,13 +13,12 @@ f1_keywords:
 ms.assetid: 850f1bc8-d7d0-425c-bd7b-03f0e9d3348e
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: ee9e77356304670fa884c4ba8cf70667e040f940
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: 3d891c38cecd1132fc5b3779c082a69c72e407b1
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53211231"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67991143"
 ---
 # <a name="connect-to-existing-secondary-replicas-page---always-on-availability-groups"></a>[既存のセカンダリ レプリカへの接続] ページ - Always On 可用性グループ
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

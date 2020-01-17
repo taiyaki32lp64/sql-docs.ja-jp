@@ -6,21 +6,21 @@ ms.prod_service: reporting-services-native
 ms.technology: mobile-reports
 ms.topic: conceptual
 ms.assetid: e84dc855-aede-4fb4-b721-e6d8787961f4
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: d3e35d889db2cbfa8eaead8f1f0e9a2015e007b5
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: b3fd0fc3530ec35da61e2314ef7a80a58d9bdd7d
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56295206"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63316455"
 ---
 # <a name="create-a-reporting-services-mobile-report"></a>Reporting Services モバイル レポートの作成
 SQL Server Mobile Report Publisher を使用すると、調整可能なグリッド行とグリッド列、および柔軟なモバイル レポート要素を備えたデザイン画面で、任意の画面サイズに対応する SQL Server Reporting Services モバイル レポートをすばやく作成できます。  
   
 初めてモバイル レポートを作成するときは、Reporting Services Web ポータルから SQL Server Mobile Report Publisher をローカル コンピューターにインストールできます。 または、 [Microsoft ダウンロード センター](https://go.microsoft.com/fwlink/?LinkID=733527)からインストールすることもできます。 2 回目以降は、Web ポータルまたはローカルのいずれかから開始できます。   
     
-1. Reporting Services Web ポータルの上部のバーで、**[新規]** > **[モバイル レポート]** の順に選択します。  
+1. Reporting Services Web ポータルの上部のバーで、 **[新規]**  >  **[モバイル レポート]** の順に選択します。  
   
    ![PBI_SSMRP_NewMenu](../../reporting-services/mobile-reports/media/pbi-ssmrp-newmenu.png)  
      
@@ -42,7 +42,7 @@ SQL Server Mobile Report Publisher を使用すると、調整可能なグリッ
   
 6. **[ローカル Excel]** または **[レポート サーバー]** を選択します。  
   
-   >**ヒント**:Excel からデータを追加する場合、次を確認します。  
+   >**ヒント**: Excel からデータを追加する場合、次を確認します。  
     >* モバイル レポートで作業できるよう、 [Excel データを準備します](../../reporting-services/mobile-reports/prepare-excel-data-for-reporting-services-mobile-reports.md) 。  
     >* まずファイルを閉じます。  
 7. 目的のワークシートを選択し、 **[インポート]** を選択します。   
@@ -54,7 +54,7 @@ SQL Server Mobile Report Publisher を使用すると、調整可能なグリッ
   
    ![SSMRP_DataProps](../../reporting-services/mobile-reports/media/ssmrp-dataprops.png)  
   
-9. **[レイアウト]** タブに戻り、 **[表示プロパティ]** ボックスで、 **[タイトル]**、 **[時間の単位]**、 **[数値書式]** などのプロパティを設定します。  
+9. **[レイアウト]** タブに戻り、 **[表示プロパティ]** ボックスで、 **[タイトル]** 、 **[時間の単位]** 、 **[数値書式]** などのプロパティを設定します。  
   
    ![SSMRP_ChartVizProps](../../reporting-services/mobile-reports/media/ssmrp-chartvizprops.png)  
     

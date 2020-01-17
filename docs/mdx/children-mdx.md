@@ -8,18 +8,17 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-manager: kfile
-ms.openlocfilehash: 03c96a1c90f7ca0a18bd49c371a2ec90582b38f1
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 0af4d7b97777002dc5683c075f82531ccc8df86e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52533414"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68016799"
 ---
 # <a name="children-mdx"></a>Children (MDX)
 
 
-  指定されたメンバーの子のセットを返します。  
+  指定したメンバーの子のセットを返します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -36,7 +35,7 @@ Member_Expression.Children
  **子**関数は、指定したメンバーの子を含む自然順序のセットを返します。 指定されているメンバーに子メンバーがない場合、この関数は空のセットを返します。  
   
 ## <a name="example"></a>例  
- 次の例では、Geography ディメンション内の Geography 階層の United States メンバーの子が返されます。  
+ 次の例では、Geography ディメンションの Geography 階層の United States メンバーの子を返します。  
   
 ```  
 SELECT [Geography].[Geography].[Country].&[United States].Children ON 0  
@@ -58,7 +57,7 @@ FROM
 |-------------|-------------|  
 |[!INCLUDE[ssBOL2005_R03](../includes/ssbol2005-r03-md.md)]|**変更内容:**<br /> -わかりやすくするための向上に構文および引数を更新します。<br /><br /> -更新された例を追加しました。|  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [MDX 関数リファレンス &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
   
   

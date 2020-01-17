@@ -14,16 +14,15 @@ helpviewer_keywords:
 - Query Editor [Database Engine], SQLCMD scripts
 - scripts [SQL Server], SQL Server Management Studio
 ms.assetid: f77b866d-c330-47c9-9e74-0b8d8dff4b31
-author: stevestein
-ms.author: sstein
-manager: craigg
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 0999d5011df80bae97c767ac910b2a5fd810127c
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: 7931e678db7e93dfea385b5ca905dd6968ec78eb
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53211811"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68263477"
 ---
 # <a name="edit-sqlcmd-scripts-with-query-editor"></a>クエリ エディターによる SQLCMD スクリプトの編集
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -89,7 +88,7 @@ ms.locfileid: "53211811"
  SQLCMD の実行方法の詳細については、「 [sqlcmd Utility](../../tools/sqlcmd-utility.md)」または SQLCMD のチュートリアルを参照してください。  
   
 ## <a name="enable-sqlcmd-scripting-by-default"></a>SQLCMD スクリプト操作を既定で有効にする方法  
- SQLCMD スクリプト操作を既定でオンにするには、 **[ツール]** メニューの **[オプション]** をクリックし、 **[クエリ実行]**、 **[SQL Server]** の順に展開します。次に、 **[全般]** ページをクリックし、 **[既定で、新しいクエリを SQLCMD モードで開始する]** チェック ボックスをオンにします。  
+ SQLCMD スクリプト操作を既定でオンにするには、 **[ツール]** メニューの **[オプション]** をクリックし、 **[クエリ実行]** 、 **[SQL Server]** の順に展開します。次に、 **[全般]** ページをクリックし、 **[既定で、新しいクエリを SQLCMD モードで開始する]** チェック ボックスをオンにします。  
   
 ## <a name="writing-and-editing-sqlcmd-scripts"></a>SQLCMD スクリプトの作成と編集  
  スクリプト モードを有効にしたら、SQLCMD コマンドと [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントを作成できます。 この場合に当てはまる規則を以下に示します。  

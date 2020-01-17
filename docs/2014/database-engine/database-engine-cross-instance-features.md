@@ -11,11 +11,11 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: bd95133bee73720e6117a0eedd93f8de56b5496f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48096752"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62807526"
 ---
 # <a name="database-engine-cross-instance-features"></a>データベース エンジンのインスタンス間機能
   このセクションには、サーバー インスタンスとデータベース インスタンスの管理および監視に関連するツールとタスクが含まれます。  

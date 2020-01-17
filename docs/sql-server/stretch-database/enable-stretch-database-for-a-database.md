@@ -1,5 +1,5 @@
 ---
-title: データベースに対して Stretch Database を有効にする | Microsoft Docs
+title: Enable Stretch Database for a database
 ms.date: 08/05/2016
 ms.service: sql-server-stretch-database
 ms.reviewer: ''
@@ -10,13 +10,13 @@ helpviewer_keywords:
 ms.assetid: 37854256-8c99-4566-a552-432e3ea7c6da
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 89127c43b8c9c10761820f337935e265a4865213
-ms.sourcegitcommit: ec1f01b4bb54621de62ee488decf9511d651d700
+ms.custom: seo-dt-2019
+ms.openlocfilehash: db08d84dd1619d8c9e2e4d8e796abdd0c9d202fc
+ms.sourcegitcommit: f688a37bb6deac2e5b7730344165bbe2c57f9b9c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/14/2019
-ms.locfileid: "56240806"
+ms.lasthandoff: 11/08/2019
+ms.locfileid: "73844590"
 ---
 # <a name="enable-stretch-database-for-a-database"></a>Enable Stretch Database for a database
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md-winonly](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md-winonly.md)]

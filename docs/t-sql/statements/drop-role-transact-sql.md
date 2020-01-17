@@ -22,14 +22,13 @@ helpviewer_keywords:
 ms.assetid: 1f6f13ae-56a2-4ef1-93f5-8e6151b83e1d
 author: VanMSFT
 ms.author: vanto
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 45ad478b02f5abfeea07024a74af90b02ecc808a
-ms.sourcegitcommit: 9c99f992abd5f1c174b3d1e978774dffb99ff218
+ms.openlocfilehash: 3b3227fa8aa15b2254e6f4a38caa0e5ac60163a7
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/17/2019
-ms.locfileid: "54361472"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68043919"
 ---
 # <a name="drop-role-transact-sql"></a>DROP ROLE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-pdw-md.md)]
@@ -62,7 +61,7 @@ DROP ROLE role_name
  データベースから削除するロールを指定します。  
   
 ## <a name="remarks"></a>Remarks  
- セキュリティ保護可能なリソースを所有するロールは、データベースから削除できません。 セキュリティ保護可能なリソースを所有するデータベース ロールを削除するには、最初に、セキュリティ保護可能なリソースの所有権を転送するか、リソースをデータベースから削除する必要があります。 メンバーを含むロールは、データベースから削除できません。 メンバーを含むロールを削除するには、最初にロールのメンバーを削除する必要があります。  
+ セキュリティ保護可能なリソースを所有するロールは、データベースから削除できません。 セキュリティ保護可能なリソースを所有するデータベース ロールを削除するには、まず、セキュリティ保護可能なリソースの所有権を転送するか、リソースをデータベースから削除する必要があります。 メンバーを含むロールは、データベースから削除できません。 メンバーを含むロールを削除するには、まず、ロールのメンバーを削除する必要があります。  
   
  データベース ロールからメンバーを削除するには、[ALTER ROLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-role-transact-sql.md) を使います。  
   

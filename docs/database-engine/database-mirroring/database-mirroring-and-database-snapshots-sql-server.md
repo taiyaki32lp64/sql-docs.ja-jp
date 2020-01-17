@@ -1,5 +1,6 @@
 ---
-title: データベース ミラーリングとデータベース スナップショット (SQL Server) | Microsoft Docs
+title: データベース ミラーリングとデータベース スナップショット
+description: データベース スナップショットとデータベース ミラーリングを使用する場合の相互運用性について説明します。
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -14,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 0bf1be90-7ce4-484c-aaa7-f8a782f57c5f
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: e03a85102928b3b56f2c5b705b61f47c1a428717
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a184bdf227b412ea5464c86058d33903fa7d8d7a
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47708151"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75258811"
 ---
 # <a name="database-mirroring-and-database-snapshots-sql-server"></a>データベース ミラーリングとデータベース スナップショット (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

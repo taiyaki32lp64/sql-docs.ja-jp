@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 53952466-4a9c-4396-bba6-cf44bec1da88
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 45cf2031d9b87b569f206364f984db17633b7a5e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e20cb08ccfedbc2fa60b703279f8494d0f3f53c1
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47659696"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67917786"
 ---
 # <a name="parameter-object-properties-methods-and-events"></a>パラメーター オブジェクトのプロパティ、メソッド、およびイベント
 ## <a name="propertiescollections"></a>プロパティ/コレクション  
@@ -46,5 +45,5 @@ ms.locfileid: "47659696"
 ## <a name="events"></a>イベント  
  [なし] :  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [Parameter オブジェクト](../../../ado/reference/ado-api/parameter-object.md)

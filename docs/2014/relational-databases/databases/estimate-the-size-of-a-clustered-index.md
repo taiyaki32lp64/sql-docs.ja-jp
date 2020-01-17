@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 helpviewer_keywords:
 - space allocation [SQL Server], index size
@@ -23,12 +22,12 @@ ms.assetid: 2b5137f8-98ad-46b5-9aae-4c980259bf8d
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: ebb0adc7d0aba7bd9da9a5026b5d0eaa3b770019
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: fe7b988590de54a3cb02aa540b244e1f56f3ba24
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48140792"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66054130"
 ---
 # <a name="estimate-the-size-of-a-clustered-index"></a>クラスター化インデックスのサイズの見積もり
   クラスター化インデックスにデータを格納するために必要な領域を見積もるには、次の手順を実行します。  
@@ -84,7 +83,7 @@ ms.locfileid: "48140792"
      ***Max_Var_Size*** に追加されたバイトは、それぞれの可変長列を追跡するためのものです。 この式は、すべての可変長列がいっぱいになることを前提としています。 可変長列の格納領域の使用率が 100% 以下になることが予想される場合、その使用率に基づいて ***Max_Var_Size*** の値を調整し、テーブルの全体サイズをより正確に見積もることができます。  
   
     > [!NOTE]  
-    >  組み合わせることができます`varchar`、 `nvarchar`、 `varbinary`、または`sql_variant`8,060 バイトを超える定義されているテーブルの合計幅となる列にします。 この場合も、`varchar`、`varbinary`、または `sql_variant` 列の場合は 8,000 バイト、`nvarchar` 列の場合は 4,000 バイトの制限内に、各列のサイズを収める必要があります。 ただし、これらの列を連結したサイズは、テーブルの制限である 8,060 バイトを超過してもかまいません。  
+    >  定義済みのテーブルの合計サイズが 8,060 バイトを超える `varchar`、`nvarchar`、`varbinary`、または `sql_variant` 列の連結が可能です。 この場合も、`varchar`、`varbinary`、または `sql_variant` 列の場合は 8,000 バイト、`nvarchar` 列の場合は 4,000 バイトの制限内に、各列のサイズを収める必要があります。 ただし、これらの列を連結したサイズは、テーブルの制限である 8,060 バイトを超過してもかまいません。  
   
      可変長列が存在しない場合は、 ***Variable_Data_Size*** に 0 を設定します。  
   
@@ -212,7 +211,7 @@ ms.locfileid: "48140792"
   
 -   ラージ オブジェクト (LOB) の値  
   
-     LOB データ型を格納する領域の量を使用する正確に特定するアルゴリズム`varchar(max)`、 `varbinary(max)`、 `nvarchar(max)`、 `text`、 `ntext`、 `xml`、および`image`値は複雑です。 LOB データ型の値で使用される領域の計算は、必要な LOB 値の平均サイズを合計し、 ***Num_Rows***で乗算し、クラスター化インデックスの合計サイズに加算するだけで十分です。  
+     LOB データ型の `varchar(max)`、`varbinary(max)`、`nvarchar(max)`、`text`、`ntext`、`xml`、および `image` の値を格納するために使用される領域を正確に特定するのアルゴリズムは複雑です。 LOB データ型の値で使用される領域の計算は、必要な LOB 値の平均サイズを合計し、 ***Num_Rows***で乗算し、クラスター化インデックスの合計サイズに加算するだけで十分です。  
   
 -   圧縮  
   

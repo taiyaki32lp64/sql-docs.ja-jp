@@ -17,15 +17,15 @@ helpviewer_keywords:
 - expressions [Integration Services], identifiers
 - qualified identifiers [Integration Services]
 ms.assetid: 56af984d-88b4-4db8-b6a2-6b07315a699e
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 83c0d4b810f3835659849bd63766d45b101d5339
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: a7913d82b471b50605c51fbfb61b3782cf135382
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53360274"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62898860"
 ---
 # <a name="identifiers-ssis"></a>識別子 (SSIS)
   識別子とは、式の内部で演算に使用できる列および変数のことです。 式では、標準識別子と修飾された識別子を使用できます。  
@@ -121,6 +121,6 @@ ms.locfileid: "53360274"
 ```  
   
 ## <a name="related-content"></a>関連コンテンツ  
- pragmaticworks.com の技術記事「 [SSIS 式チート シート](https://go.microsoft.com/fwlink/?LinkId=217683)」  
+ pragmaticworks.com の技術記事「 [SSIS 式チート シート](https://pragmaticworks.com/Resources/Cheat-Sheets/SSIS-Expression-Cheat-Sheet)」  
   
   

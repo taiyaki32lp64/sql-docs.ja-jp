@@ -1,6 +1,6 @@
 ---
-title: テーブルとパーティション インデックス |Microsoft Docs
-description: 作成、変更、および落としたりのテーブルとパーティション インデックスの SQL Server 用の OLE DB ドライバーの使用
+title: テーブルとインデックス |Microsoft Docs
+description: OLE DB Driver for SQL Server を使用したテーブルとインデックスの作成、変更、および変更
 ms.custom: ''
 ms.date: 06/14/2018
 ms.prod: sql
@@ -19,13 +19,12 @@ helpviewer_keywords:
 - indexes [OLE DB]
 author: pmasl
 ms.author: pelopes
-manager: craigg
-ms.openlocfilehash: 9c491180eaf101ef3495ed015252b0fad60ef222
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 0fc8aeed348f64c17894fa3432a7a81274ffbea4
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47743120"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68015244"
 ---
 # <a name="tables-and-indexes"></a>テーブルとインデックス
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -36,7 +35,7 @@ ms.locfileid: "47743120"
   
  テーブルやインデックスを作成または削除できるかどうかは、コンシューマー アプリケーション ユーザーの [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] アクセス権によって決まります。 テーブルの削除は、宣言参照整合性制約やその他の要因の指定によってさらに制約できます。  
   
- 対象とするほとんどのアプリケーション[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]インターフェイスの SQL Server のこの OLE DB ドライバーではなく、SQL-DMO を使用します。 SQL-DMO は、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] のすべての管理機能をサポートする OLE オートメーション オブジェクトの集まりです。 複数の OLE DB プロバイダーを対象とするアプリケーションでは、さまざまな OLE DB プロバイダーでサポートされる、これらの汎用 OLE DB インターフェイスを使用します。  
+ を対象[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]とするほとんどのアプリケーションは、これらの OLE DB ドライバーではなく、sql-dmo を使用して SQL Server インターフェイスを使用します。 SQL-DMO は、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] のすべての管理機能をサポートする OLE オートメーション オブジェクトの集まりです。 複数の OLE DB プロバイダーを対象とするアプリケーションでは、さまざまな OLE DB プロバイダーでサポートされる、これらの汎用 OLE DB インターフェイスを使用します。  
   
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] では、プロバイダー固有の DBPROPSET_SQLSERVERCOLUMN プロパティ セットで、次のプロパティを定義しています。  
   

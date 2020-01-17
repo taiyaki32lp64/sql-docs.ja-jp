@@ -17,15 +17,14 @@ helpviewer_keywords:
 ms.assetid: 24200295-9a54-4cab-9922-fb2e88632721
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: 40e397bd63d8018d2043a1aced4824f48e4ddc9a
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: 74860a8f4c8dee263ea7ee0eea75679c721d1fa5
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54135872"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68032982"
 ---
-# <a name="spaddapprole-transact-sql"></a>sp_addapprole (Transact-SQL)
+# <a name="spaddapprole-transact-sql"></a>sp_addapprole (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   アプリケーション ロールを現在のデータベースに追加します。  
@@ -43,25 +42,23 @@ sp_addapprole [ @rolename = ] 'role' , [ @password = ] 'password'
 ```  
   
 ## <a name="arguments"></a>引数  
- [  **@rolename =** ] **'**_ロール_**'**  
- 新しいアプリケーション ロールの名前を指定します。 *ロール*は**sysname**、既定値はありません。 *ロール*有効な識別子である必要があり、現在のデータベースに既に存在することはできません。  
+`[ @rolename = ] 'role'` 新しいアプリケーション ロールの名前です。 *ロール*は**sysname**、既定値はありません。 *ロール*有効な識別子である必要があり、現在のデータベースに既に存在することはできません。  
   
- アプリケーション ロール名の長さは 1 ～ 128 文字で、英字、記号、および数字を含めることができます。 ロール名が円記号を含めることはできません (\\) NULL または空の文字列 (") したりします。  
+ 1 ~ 128 文字、文字、記号、および数字からアプリケーション ロール名を含めることができます。 ロール名が円記号を含めることはできません (\\) NULL または空の文字列 (") したりします。  
   
- [  **@password =** ] **'**_パスワード_**'**  
- アプリケーション ロールをアクティブにするために必要なパスワードを指定します。 *パスワード*は**sysname**、既定値はありません。 *パスワード*NULL にすることはできません。  
+`[ @password = ] 'password'` アプリケーション ロールをアクティブ化するために必要なパスワードです。 *パスワード*は**sysname**、既定値はありません。 *パスワード*NULL にすることはできません。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  0 (成功) または 1 (失敗)  
   
 ## <a name="remarks"></a>コメント  
- 以前のバージョンの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、ユーザー (およびロール) はスキーマと完全には区別されていません。 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 以降では、スキーマはロールとは完全に区別されています。 この新しいアーキテクチャは CREATE APPLICATION ROLE の動作に反映されています。 このステートメントよりも優先されます**sp_addapprole**します。  
+ 以前のバージョンの[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]ユーザー (およびロール) はスキーマを完全に区別されません。 以降で[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]スキーマは、ロールを完全に区別します。 この新しいアーキテクチャは CREATE APPLICATION ROLE の動作に反映されています。 このステートメントよりも優先されます**sp_addapprole**します。  
   
  以前のバージョンとの下位互換性を維持するために[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]、 **sp_addapprole**は次の処理します。  
   
--   アプリケーション ロールと同じ名前のスキーマが存在しない場合、同じ名前のスキーマが作成されます。 新しいスキーマは、アプリケーション ロールが所有し、そのアプリケーション ロールの既定のスキーマになります。  
+-   アプリケーション ロールと同じ名前のスキーマが存在しない場合、同じ名前のスキーマが作成されます。 新しいスキーマが所有するアプリケーション ロール、およびアプリケーション ロールの既定のスキーマになります。  
   
--   アプリケーション ロールと同じ名前のスキーマが既に存在する場合、この処理は失敗します。  
+-   アプリケーション ロールと同じ名前のスキーマが既に存在する場合、プロシージャは失敗します。  
   
 -   パスワードの複雑さによってチェックされない**sp_addapprole**します。 ただし、CREATE APPLICATION ROLE では確認されます。  
   
@@ -83,7 +80,7 @@ EXEC sp_addapprole 'SalesApp', 'x97898jLJfcooFUYLKm387gf3' ;
 GO  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [CREATE APPLICATION ROLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-application-role-transact-sql.md)  
   
   

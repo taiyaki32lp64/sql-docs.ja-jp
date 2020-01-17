@@ -12,17 +12,20 @@ helpviewer_keywords:
 - sources [Integration Services], OLE DB
 - OLE DB source [Integration Services]
 ms.assetid: 4ca6eeb5-b60e-4b81-86dd-0674be8ae8d8
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: 25c9ff0ea58e4c6f2b8baf99516ed66f5186062d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 82bebe29ff6fe9eb385a078aa762d5b8f171783a
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47676730"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71292607"
 ---
 # <a name="extract-data-by-using-the-ole-db-source"></a>OLE DB ソースを使用してデータを抽出する
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   OLE DB ソースを追加して構成するには、パッケージに 1 つ以上のデータ フロー タスクがあらかじめ含まれている必要があります。  
   
 ### <a name="to-extract-data-using-an-ole-db-source"></a>OLE DB ソースを使用してデータを抽出するには  
@@ -69,6 +72,6 @@ ms.locfileid: "47676730"
  [OLE DB ソース](../../integration-services/data-flow/ole-db-source.md)   
  [Integration Services の変換](../../integration-services/data-flow/transformations/integration-services-transformations.md)   
  [Integration Services のパス](../../integration-services/data-flow/integration-services-paths.md)   
- [データ フロー タスク](../../integration-services/control-flow/data-flow-task.md)  
+ [[データ フロー タスク]](../../integration-services/control-flow/data-flow-task.md)  
   
   

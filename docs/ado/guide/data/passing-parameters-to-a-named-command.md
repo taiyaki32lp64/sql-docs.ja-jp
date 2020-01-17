@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 36e0cdbe-7f50-40f5-af0d-700f5d8dc75a
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 4c221030b54aef21ffa0a2df891561976aacff76
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 9799fb3f05871c16cfcd8edb5f2a50c6f7792978
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52505714"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67924690"
 ---
 # <a name="passing-parameters-to-a-named-command"></a>名前付きコマンドにパラメーターを渡す
 コマンドの結果がとして渡された場合と同様、*アウト*名前付きのコマンドでは、パラメーターの変数されているパラメーター化コマンドとして渡された*で*変数を名前付きコマンド。  
@@ -93,5 +92,5 @@ objConn.GetOrdersOf "12345", objRs
   
  -有効ですが、データベースにこのようなレコードが存在しないため、設定、空の結果になります。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [Connection オブジェクト (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)

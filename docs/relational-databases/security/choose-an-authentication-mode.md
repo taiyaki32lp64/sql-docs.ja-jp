@@ -25,17 +25,16 @@ helpviewer_keywords:
 ms.assetid: ff7a6a48-3d38-4209-aa0f-7d6c0a8c64ef
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: ac0c3526439d0dc899e81554305c7602c4fa8a9d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: caee3b1fab893e456a5a781641b6cf70222b16ff
+ms.sourcegitcommit: 0d5b0aeee2a2b34fd448aec2e72c0fa8be473ebe
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47781910"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75721357"
 ---
 # <a name="choose-an-authentication-mode"></a>認証モードの選択
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  セットアップ中に、 [!INCLUDE[ssDE](../../includes/ssde-md.md)]の認証モードを選択する必要があります。 Windows 認証モードと混在モードという 2 つのモードを使用できます。 Windows 認証モードを選択すると、Windows 認証が有効になり、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 認証が無効になります。 混合モードを選択すると、Windows 認証と [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 認証の両方が有効になります。 Windows 認証は常に使用可能であり、無効にすることはできません。  
+  セットアップ中に、 [!INCLUDE[ssDE](../../includes/ssde-md.md)]の認証モードを選択する必要があります。 選択できるモードは、Windows 認証モードと混合モードの 2 つです。 Windows 認証モードを選択すると、Windows 認証が有効になり、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 認証が無効になります。 混合モードを選択すると、Windows 認証と [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 認証の両方が有効になります。 Windows 認証は常に使用可能であり、無効にすることはできません。  
   
 ## <a name="configuring-the-authentication-mode"></a>認証モードの構成  
  セットアップ中に混合モード認証を選択した場合は、sa という組み込みの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] システム管理者アカウントの強力なパスワードを入力して確認する必要があります。 sa アカウントは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 認証を使用して接続します。  
@@ -73,8 +72,8 @@ ms.locfileid: "47781910"
   
 2.  **[ファイル名を指定して実行]** ダイアログ ボックスで、「 **secpol.msc**」と入力し、 **[OK]** をクリックします。  
   
-3.  **[ローカル セキュリティ設定]** アプリケーションで、 **[セキュリティの設定]**、 **[アカウント ポリシー]** の順に展開して、 **[パスワードのポリシー]** をクリックします。  
-  
+3.  **[ローカル セキュリティ設定]** アプリケーションで、 **[セキュリティの設定]** 、 **[アカウント ポリシー]** の順に展開して、 **[パスワードのポリシー]** をクリックします。  
+
      結果ペインに、パスワードのポリシーが表示されます。  
   
 ### <a name="disadvantages-of-sql-server-authentication"></a>SQL Server 認証の欠点  
@@ -93,7 +92,7 @@ ms.locfileid: "47781910"
   
 -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、すべてのユーザーが Windows ドメインで認証されていない、オペレーティング システムが混在する環境をサポートできます。  
   
--   ユーザーが、不明なドメインや信頼されていないドメインから接続できます。 たとえば、既存の顧客が、割り当てられた [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ログインを使用して接続し、発注状況を確認するアプリケーションの場合です。  
+-   ユーザーが不明または信頼されていないドメインから接続できる場合。 たとえば、既存の顧客が、割り当てられた [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ログインを使用して接続し、発注状況を確認するアプリケーションの場合です。  
   
 -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、ユーザーが独自の ID を作成する Web ベースのアプリケーションをサポートできます。  
   

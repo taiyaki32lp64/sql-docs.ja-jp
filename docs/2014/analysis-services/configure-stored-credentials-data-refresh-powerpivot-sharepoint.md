@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: 987eff0f-bcfe-4bbd-81e0-9aca993a2a75
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 73ee3f7f86203f4fa0ac2e4da86fecee0e2b4cf5
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 23f35c8998b204182f25f85f8f7694fb60d042b4
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53365085"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66087459"
 ---
 # <a name="configure-stored-credentials-for-powerpivot-data-refresh-powerpivot-for-sharepoint"></a>PowerPivot データ更新用の保存された資格情報の構成 (PowerPivot for SharePoint)
   使用する資格情報を保存するために、対象アプリケーションを Secure Store Service で作成してあれば、PowerPivot データ更新ジョブは任意の Windows ユーザー アカウントで実行できます。 同様に、PowerPivot for Excel のデータを最初にインポートするときに使用するものとは異なるデータベース ログインを提供する場合は、その資格情報を Secure Store Service の対象アプリケーションにマップし、データ更新スケジュールでその対象アプリケーションを指定できます。  
@@ -102,7 +101,7 @@ ms.locfileid: "53365085"
   
 17. **[OK]** をクリックします。  
   
-###  <a name="bkmk_grant"></a> 手順 2:アカウントに投稿権限を付与します。  
+###  <a name="bkmk_grant"></a> ステップ 2:アカウントに投稿権限を付与します。  
  保存された資格情報を使用する前に、使用するすべての PowerPivot ブックで、このアカウントに投稿権限を割り当てる必要があります。 この権限レベルは、ライブラリからブックを開き、データの更新後に再度ライブラリに保存するために必要です。  
   
  権限の割り当ては、サイト コレクションの管理者が実行する手順です。 SharePoint の権限は、ルート サイト コレクションで割り当てるか、ルート サイト コレクションより下位の任意のレベル (個々のドキュメントやアイテムを含む) で割り当てることができます。 権限の設定方法は、権限をどのくらい細かく設定する必要があるかによって異なります。 次の手順は、権限を付与する方法の一例を示しています。  
@@ -117,7 +116,7 @@ ms.locfileid: "53365085"
   
 5.  選択**投稿**、 をクリックし、 **OK**。  
   
-###  <a name="bkmk_dbread"></a> 手順 3:読み取りデータの更新で使用される外部データ ソースにアクセスする権限の付与  
+###  <a name="bkmk_dbread"></a> ステップ 3:読み取りデータの更新で使用される外部データ ソースにアクセスする権限の付与  
  データを PowerPivot ブックにインポートする場合、通常、外部データへの接続は、信頼関係接続か、(現在のユーザーの ID を使用してデータ ソースに接続する) 権限を借用した接続に基づきます。 これらの種類の接続は、現在のユーザーがインポートする対象のデータに対する読み取り権限を持つ場合にのみ有効です。  
   
  データ更新シナリオでは、データをインポートするために使用された接続文字列が、データを更新するために再利用されます。 接続文字列が現在のユーザーを想定している (たとえば、Integrated_Security=SSPI を含む文字列) 場合、PowerPivot System サービスは、対象アプリケーションで指定したユーザー ID を現在のユーザーとして渡します。 この接続は、外部データ ソースに対する読み取り権限がアカウントに付与されている場合にのみ成功します。  

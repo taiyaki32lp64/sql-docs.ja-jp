@@ -12,16 +12,15 @@ helpviewer_keywords:
 ms.assetid: cd69e4b7-82bf-4ffc-bc53-c535ba20161f
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 27d81c35e01da846982be46a606a6274eefdc0d4
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: def593c725f2faa004e13bbdb3e6ded3287f51ae
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47827650"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67933010"
 ---
 # <a name="error-object-properties-methods-and-events"></a>Error オブジェクトのプロパティ、メソッド、およびイベント
-## <a name="properties"></a>[プロパティ]  
+## <a name="properties"></a>Properties  
  [Description プロパティ](../../../ado/reference/ado-api/description-property.md)  
   
  [HelpContext、HelpFile プロパティ](../../../ado/reference/ado-api/helpcontext-helpfile-properties.md)  
@@ -40,5 +39,5 @@ ms.locfileid: "47827650"
 ## <a name="events"></a>イベント  
  [なし] :  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [Error オブジェクト](../../../ado/reference/ado-api/error-object.md)

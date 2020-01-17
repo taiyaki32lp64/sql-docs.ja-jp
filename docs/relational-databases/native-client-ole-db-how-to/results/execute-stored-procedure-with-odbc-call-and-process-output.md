@@ -1,5 +1,5 @@
 ---
-title: ODBC 呼び出しと処理の出力でのストアド プロシージャの実行 | Microsoft Docs
+title: ストアドプロシージャ、ODBC 呼び出し、出力
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -13,19 +13,18 @@ helpviewer_keywords:
 ms.assetid: 921a24d1-ea09-4a3c-980a-4dcbd0a43d31
 author: MightyPen
 ms.author: genemi
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: a8670b3e6a12f6e512788586a69348f0ddb7ee25
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: d0d61d50f7ff79da77dab15b654ec1720b1ee3b4
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53215508"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75244494"
 ---
 # <a name="execute-stored-procedure-with-odbc-call-and-process-output"></a>ODBC 呼び出しと処理の出力でのストアド プロシージャの実行
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-[!INCLUDE[SNAC_Deprecated](../../../includes/snac-deprecated.md)]
 
+  
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] のストアド プロシージャでは、整数のリターン コードと出力パラメーターを使用できます。 リターン コードと出力パラメーターはサーバーからの最後のパケットで送信されるため、行セットが完全に解放されるまでアプリケーションでは使用できません。 コマンドが複数の結果を返す場合は、**IMultipleResults::GetResult** が DB_S_NORESULT を返すか **IMultipleResults** インターフェイスが完全に解放されると、いずれか早いほうが発生した時点で、出力パラメーター データを使用できるようになります。  
   
 > [!IMPORTANT]  
@@ -37,13 +36,14 @@ ms.locfileid: "53215508"
   
 2.  DBBINDING 構造体の配列を使用して、各パラメーター マーカーに 1 つずつ一連のバインドを作成します。  
   
-3.  使用して、定義済みパラメーターのアクセサーを作成、 **iaccessor::createaccessor**メソッド。 **CreateAccessor** では、バインドのセットからアクセサーを作成します。  
+3.  **IAccessor:: CreateAccessor**メソッドを使用して、定義済みパラメーターのアクセサーを作成します。 **Createaccessor**は、一連のバインドからアクセサーを作成します。  
   
 4.  DBPARAMS 構造体にデータを格納します。  
   
-5.  **Execute** コマンド (この場合はストアド プロシージャへの呼び出し) を呼び出します。  
+5.  
+  **Execute** コマンド (この場合はストアド プロシージャへの呼び出し) を呼び出します。  
   
-6.  行セットを処理し、リリースを使用して、 **irowset::release**メソッド。  
+6.  行セットを処理し、 **IRowset:: release**メソッドを使用して解放します。  
   
 7.  ストアド プロシージャから受信したリターン コードと出力パラメーターの値を処理します。  
   
@@ -52,13 +52,14 @@ ms.locfileid: "53215508"
   
  このサンプルには AdventureWorks サンプル データベースが必要です。このサンプル データベースは、[Microsoft SQL Server サンプルとコミュニティのプロジェクト](https://go.microsoft.com/fwlink/?LinkID=85384)のホーム ページからダウンロードできます。  
   
- 最初の実行 ( [!INCLUDE[tsql](../../../includes/tsql-md.md)]) コード リストをアプリケーションで使用されるストアド プロシージャを作成します。  
+ 1 つ目の ([!INCLUDE[tsql](../../../includes/tsql-md.md)]) コード リストを実行して、アプリケーションで使用するストアド プロシージャを作成します。  
   
- ole32.lib と oleaut32.lib を使用して 2 つ目の (C++) コード リストをコンパイルし、実行します。 このアプリケーションは、コンピューターの既定の [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] インスタンスに接続します。 一部の Windows オペレーティング システムでは、(localhost) または (local) を実際の [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] インスタンスの名前に変更する必要があります。 名前付きインスタンスに接続するには、接続文字列を L"(local)" から L"(local)\\\name" に変更します。ここで、name は名前付きインスタンスです。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Express は、既定で名前付きインスタンスとしてインストールされます。 INCLUDE 環境変数には、sqlncli.h を含むディレクトリが含まれています。 を確認します。  
+ ole32.lib と oleaut32.lib を使用して 2 つ目の (C++) コード リストをコンパイルし、実行します。 このアプリケーションは、コンピューターの既定の [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] インスタンスに接続します。 一部の Windows オペレーティング システムでは、(localhost) または (local) を実際の [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] インスタンスの名前に変更する必要があります。 名前付きインスタンスに接続するには、接続文字列を L"(local)" から L"(local)\\\name" に変更します。ここで、name は名前付きインスタンスです。 
+  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Express は、既定で名前付きインスタンスとしてインストールされます。 INCLUDE 環境変数に、sqlncli を含むディレクトリが含まれていることを確認します。  
   
- 3 つ目の実行 ( [!INCLUDE[tsql](../../../includes/tsql-md.md)]) コード リストをアプリケーションで使用されるストアド プロシージャを削除します。  
+ 3 つ目の ([!INCLUDE[tsql](../../../includes/tsql-md.md)]) コード リストを実行して、アプリケーションで使用したストアド プロシージャを削除します。  
   
-```  
+```sql
 USE AdventureWorks  
 if exists (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[myProc]'))  
    DROP PROCEDURE myProc  
@@ -80,7 +81,7 @@ ELSE
 GO  
 ```  
   
-```  
+```cpp
 // compile with: ole32.lib oleaut32.lib  
 void InitializeAndEstablishConnection();  
   
@@ -352,13 +353,13 @@ void InitializeAndEstablishConnection() {
 }  
 ```  
   
-```  
+```sql
 USE AdventureWorks  
 DROP PROCEDURE myProc  
 GO  
 ```  
   
 ## <a name="see-also"></a>参照  
- [結果を処理する方法に関するトピック &#40;OLE DB&#41;](../../../relational-databases/native-client-ole-db-how-to/results/processing-results-how-to-topics-ole-db.md)  
+ [結果の処理方法に関するトピック &#40;OLE DB&#41;](../../../relational-databases/native-client-ole-db-how-to/results/processing-results-how-to-topics-ole-db.md)  
   
   

@@ -16,11 +16,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 4a31052bb0633d370098e328741432f6b854d65e
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52774654"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68205949"
 ---
 # <a name="back-up-database-task-maintenance-plan"></a>[データベースのバックアップ タスク] (メンテナンス プラン)
   **[データベースのバックアップ タスク]** ダイアログ ボックスを使用すると、バックアップ タスクをメンテナンス プランに追加できます。 システムまたはハードウェアのトラブル (またはユーザー エラー) が原因でデータがなんらかの損傷を受けた場合、データの回復にはバックアップ コピーからの復元が必要になるため、データベースのバックアップは定期的に実行することが重要です。 このタスクを使用すると、ファイル、ファイル グループ、トランザクション ログの完全バックアップと差分バックアップを実行できます。  
@@ -30,7 +30,7 @@ ms.locfileid: "52774654"
 -   [メンテナンス プランの作成](create-a-maintenance-plan.md)  
   
 ## <a name="options"></a>および  
- **[接続]**  
+ **Connection**  
  このタスクを実行するときに使用するサーバー接続を選択します。  
   
  **[新規作成]**  
@@ -125,7 +125,7 @@ ms.locfileid: "52774654"
  Windows 認証を使用して [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] のインスタンスに接続します。  
   
  **[特定のユーザー名とパスワードを使用する]**  
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)]  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスに接続します。 このオプションは利用できません。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)]  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスに接続します。 このオプションは利用できません。  
   
  **ユーザー名**  
  認証に使用する [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ログインを指定します。 このオプションは利用できません。  
@@ -133,7 +133,7 @@ ms.locfileid: "52774654"
  **Password**  
  認証に使用するパスワードを指定します。 このオプションは利用できません。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [BACKUP &#40;Transact-SQL&#41;](/sql/t-sql/statements/backup-transact-sql)  
   
   

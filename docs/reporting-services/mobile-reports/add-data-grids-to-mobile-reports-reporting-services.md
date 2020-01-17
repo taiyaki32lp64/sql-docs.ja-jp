@@ -6,14 +6,14 @@ ms.prod_service: reporting-services-native
 ms.technology: mobile-reports
 ms.topic: conceptual
 ms.assetid: fe98a970-90d3-44d1-9189-9141c237f141
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 39b22e5d32d835281e6194e996ab7e27b2c3519d
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 2658eb0eec1bd99c4e4503e8d8ae8894638e8c23
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56292290"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63280461"
 ---
 # <a name="add-data-grids-to-mobile-reports--reporting-services"></a>モバイル レポートにデータ グリッドを追加する | Reporting Services
 最善の視覚化がデータ自体である場合があります。 ここでは、 *に使用できる次種類*データ グリッド [!INCLUDE[SS_MobileReptPub_Long](../../includes/ss-mobilereptpub-long.md)]つまりテーブルについて説明します。
@@ -69,7 +69,7 @@ ms.locfileid: "56292290"
 
 5. **[オプション]** を選択し、 **[グラフの種類]** を選択します。
  
-6. **[Chart data field (グラフのデータ フィールド)]**、 **[ソースのルックアップ]**、 **[対象のルックアップ]** を選択します。 
+6. **[Chart data field (グラフのデータ フィールド)]** 、 **[ソースのルックアップ]** 、 **[対象のルックアップ]** を選択します。 
    これらの 3 つのプロパティは、データ グリッドから列内の各グラフへのデータの提供方法を指定します。
    
    *   **[ソースのルックアップ]** には、 **[グリッド ビューのデータ]** で選択したデータ テーブルのフィールドを設定します。 このフィールドは、各行の埋め込みグラフにデータを提供するためにグラフの参照データ テーブルに適用される、行ごとのフィルターとして機能します。 

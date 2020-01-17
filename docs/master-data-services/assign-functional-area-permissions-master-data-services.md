@@ -1,5 +1,5 @@
 ---
-title: 機能領域のアクセス許可を割り当てる (マスター データ サービス) | Microsoft Docs
+title: 機能領域の権限を割り当てる
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -11,21 +11,20 @@ helpviewer_keywords:
 - permissions [Master Data Services], assigning functional area permissions
 - functional area permissions [Master Data Services], assigning
 ms.assetid: af6fe2f3-37d0-4413-ab27-b3a0fb95eb50
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: b6faced4ac5f4d585c48571833a61b1ca96bccb3
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
-ms.translationtype: HT
+ms.openlocfilehash: 41ab7567a1037c2f0f625cd977a80e38a591bcee
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52790164"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73728756"
 ---
 # <a name="assign-functional-area-permissions-master-data-services"></a>機能領域の権限を割り当てる (マスター データ サービス)
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-  機能領域の権限を割り当てて、ユーザーまたはグループに [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]の機能領域へのアクセス権を付与します。  
+  機能領域の権限を割り当てて、ユーザーまたはグループに[!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]の機能領域へのアクセス権を付与します。  
   
 ## <a name="prerequisites"></a>Prerequisites  
  この手順を実行するには  
@@ -54,6 +53,6 @@ ms.locfileid: "52790164"
   
 ## <a name="see-also"></a>参照  
  [モデル管理者を作成する (マスター データ サービス)](../master-data-services/create-a-model-administrator-master-data-services.md)   
- [セキュリティ (マスター データ サービス)](../master-data-services/security-master-data-services.md)  
+ [セキュリティ &#40;マスター データ サービス&#41;](../master-data-services/security-master-data-services.md)  
   
   

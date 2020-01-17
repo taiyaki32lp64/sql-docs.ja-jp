@@ -4,22 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords:
 - Precedence Constraint Editor dialog box
 - precedence constraints [Integration Services], properties
 ms.assetid: d990f600-5c09-4cd5-8528-0a58d79dc9f2
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 82d10d177de353736336d8cebd0a9a171ae4e9c7
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: bc83e1b636aa03e37717ac62de1a44e9c6f1cfd2
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48140657"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66055736"
 ---
 # <a name="set-the-properties-of-a-precedence-constraint"></a>優先順位制約のプロパティを設定する
   優先順位制約のプロパティを設定するには、次のいずれかのツールを使用します。  
@@ -63,7 +62,7 @@ ms.locfileid: "48140657"
   
 2.  ソリューション エクスプローラーで、パッケージをダブルクリックして開きます。  
   
-3.  **[制御フロー]** タブをクリックします。**[制御フロー]** タブのデザイン画面で優先順位制約を右クリックし、 **[プロパティ]** をクリックします。 [プロパティ] ウィンドウで、プロパティの値を変更します。  
+3.  **[制御フロー]** タブをクリックします。 **[制御フロー]** タブのデザイン画面で優先順位制約を右クリックし、 **[プロパティ]** をクリックします。 [プロパティ] ウィンドウで、プロパティの値を変更します。  
   
 4.  **[プロパティ]** ウィンドウで、優先順位制約の次の読み取り/書き込みプロパティを設定します。  
   
@@ -81,7 +80,7 @@ ms.locfileid: "48140657"
   
 6.  更新したパッケージを保存するには、 **[ファイル]** メニューの **[選択されたファイルを上書き保存]** をクリックします。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [優先順位制約](control-flow/precedence-constraints.md)   
  [既定の優先順位制約を使用してタスクとコンテナーを連結する](../../2014/integration-services/connect-tasks-and-containers-by-using-a-default-precedence-constraint.md)   
  [ショートカット メニューを使用して、優先順位制約の値を設定します。](../../2014/integration-services/set-the-value-of-a-precedence-constraint-by-using-the-shortcut-menu.md)   

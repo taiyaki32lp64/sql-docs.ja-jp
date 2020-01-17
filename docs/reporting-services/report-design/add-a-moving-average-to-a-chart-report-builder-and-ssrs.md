@@ -2,18 +2,18 @@
 title: グラフへの移動平均の追加 (レポート ビルダーおよび SSRS) | Microsoft Docs
 ms.date: 03/03/2017
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: report-design
 ms.topic: conceptual
 ms.assetid: 166cf9c1-0750-4866-8381-542e4fbfe65a
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 7131bbd8f325deea3ef34c0f7e45bebfb7f3688a
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 58dae055e89d2c1be50c7bbc515298cfadf9fd60
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56298387"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65574994"
 ---
 # <a name="add-a-moving-average-to-a-chart-report-builder-and-ssrs"></a>グラフへの移動平均の追加 (レポート ビルダーおよび SSRS)
 移動平均は、定義された期間にわたって計算される、系列内のデータの平均です。 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 改ページされたレポートでは、移動平均をグラフに表示すると、重要な傾向を特定することができます。  
@@ -22,7 +22,7 @@ ms.locfileid: "56298387"
   
  移動平均式は、技術的分析で最も一般的に使用される価格指標です。 他にも、平均値、中央値、標準偏差など、多くの式をグラフ上の系列から算出することができます。 移動平均を指定する場合、各式には、指定する必要のあるパラメーターが 1 つ以上設定されていることがあります。  
  
- 「[チュートリアル:レポートへの縦棒グラフの追加 (レポート ビルダー)](Tutorial:%20Add%20a%20Column%20Chart%20to%20Your%20Report%20\(Report%20Builder\).md)」では、サンプル データを使って試す場合に、移動平均をグラフに追加する手順について説明します。
+ 「[チュートリアル: レポートへの縦棒グラフの追加 (レポート ビルダー)](Tutorial:%20Add%20a%20Column%20Chart%20to%20Your%20Report%20\(Report%20Builder\).md)」では、サンプル データを使って試す場合に、移動平均をグラフに追加する手順について説明します。
   
  デザイン モードで移動平均式を追加した際に、追加される線系列は、視覚的なプレースホルダーにすぎません。 グラフでは、レポート処理中に各式のデータ ポイントが計算されます。  
   

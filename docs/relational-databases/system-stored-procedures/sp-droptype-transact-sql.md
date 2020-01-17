@@ -17,15 +17,14 @@ helpviewer_keywords:
 ms.assetid: e78464ac-2370-4c4e-9cc0-06aebc07cec5
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 00062834702d9d9610994e59bdc5c0f77b85e37d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 13ef625d778fe20aa5d33b2958c90aa8cd5a2a8e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47856940"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68088470"
 ---
-# <a name="spdroptype-transact-sql"></a>sp_droptype (Transact-SQL)
+# <a name="spdroptype-transact-sql"></a>sp_droptype (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
   別名データ型からの削除**systypes**します。  
@@ -40,8 +39,7 @@ sp_droptype [ @typename = ] 'type'
 ```  
   
 ## <a name="arguments"></a>引数  
- [  **@typename=**] **'***型***'**  
- 所有している別名データ型の名前を指定します。 *型*は**sysname**、既定値はありません。  
+`[ @typename = ] 'type'` 所有している別名データ型の名前です。 *型*は**sysname**、既定値はありません。  
   
 ## <a name="return-code-type"></a>リターン コードの種類  
  0 (成功) または 1 (失敗)  
@@ -53,7 +51,7 @@ sp_droptype [ @typename = ] 'type'
  **型**エイリアス テーブルやその他のデータベース オブジェクトが参照している場合のデータ型を削除することはできません。  
   
 > [!NOTE]  
->  別名データ型は、テーブル定義内で使用されている場合や、ルールやデフォルトがバインドされている場合は削除できません。  
+>  別名データ型は、テーブル定義内で使用されている場合、またはをルールまたはデフォルトがバインドされている場合、別名データ型を削除できません。  
   
 ## <a name="permissions"></a>アクセス許可  
  メンバーシップが必要です、 **db_owner**固定データベース ロール、または**db_ddladmin**固定データベース ロール。  
@@ -71,7 +69,7 @@ EXEC sp_droptype 'birthday';
 GO  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [データベース エンジン ストアド プロシージャ&#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
  [sp_addtype &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addtype-transact-sql.md)   
  [sp_rename &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-rename-transact-sql.md)   

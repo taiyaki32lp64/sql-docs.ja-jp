@@ -12,15 +12,15 @@ helpviewer_keywords:
 - errors [Integration Services]
 - Integration Services, errors
 ms.assetid: cf4f0f14-8087-42d7-9b67-e4929228abd6
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 736e5d7e614a1df300dd5d283994c54702114dea
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 71efd530222ce548bb867b9e886b1891d5aedb05
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52791214"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62899450"
 ---
 # <a name="errors-and-events-reference-integration-services"></a>エラーとイベントのリファレンス (Integration Services)
   ここでは、 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]に関連するいくつかのエラーとイベントについて説明します。 エラー メッセージについては、原因と解決方法も示します。  
@@ -76,7 +76,7 @@ ms.locfileid: "52791214"
 |SQLISService_273|構成ファイルを読み取ることができなかったか、無効であることを示しています。|  
 |SQLISService_274|構成ファイルの場所を含むレジストリ エントリが存在しないか、空であることを示しています。|  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [Integration Services のエラーおよびメッセージのリファレンス](../../2014/integration-services/integration-services-error-and-message-reference.md)  
   
   

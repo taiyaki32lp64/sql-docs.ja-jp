@@ -13,11 +13,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 3a42d496a59f489238d270fcb6bb17f3e1ff6421
-ms.sourcegitcommit: 04dd0620202287869b23cc2fde998a18d3200c66
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "52639450"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62809006"
 ---
 # <a name="server-properties-security-page"></a>[サーバーのプロパティ] ([セキュリティ] ページ)
   このページを使用すると、サーバー セキュリティ オプションを表示したり変更したりできます。  

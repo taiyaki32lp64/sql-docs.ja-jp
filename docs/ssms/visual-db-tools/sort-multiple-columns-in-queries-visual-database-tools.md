@@ -10,15 +10,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - multiple query columns
 ms.assetid: 5057a6ee-3ca8-4734-9e96-592b24624c55
-author: stevestein
-ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 5afeeaec91d6c7e2443360be67ffca88ef23df8b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: eb337c62726bb74e2955e20ef940c044d82a8624
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47710220"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68263644"
 ---
 # <a name="sort-multiple-columns-in-queries-visual-database-tools"></a>クエリ内の複数の列の並べ替え (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

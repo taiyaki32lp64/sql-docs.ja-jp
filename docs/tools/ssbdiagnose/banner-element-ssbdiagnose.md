@@ -1,5 +1,5 @@
 ---
-title: Banner 要素 (ssbdiagnose) |Microsoft Docs
+title: バナー要素 (ssbdiagnose) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -12,15 +12,14 @@ helpviewer_keywords:
 - XML output file format [ssbdiagnose], banner element
 - ssbdiagnose
 ms.assetid: cc6cd49a-acf0-4cfb-8c6a-554692b89de2
-author: stevestein
-ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 26882b39f9f3dfdd8b565b02794ade0bf7cb65c0
-ms.sourcegitcommit: 0f7cf9b7ab23df15624d27c129ab3a539e8b6457
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 202652271b9d8de9603706b9d1c7be8ca9411bb7
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51291499"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67986208"
 ---
 # <a name="banner-element-ssbdiagnose"></a>Banner 要素 (ssbdiagnose)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

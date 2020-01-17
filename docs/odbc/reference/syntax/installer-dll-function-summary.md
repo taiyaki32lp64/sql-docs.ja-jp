@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 666c09d3-1e10-4d89-9b42-eda2957a87f0
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: ecb486f51caa97c715d54885c34575a60bfdfb83
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e6d2a865764a3d802a7e5a5341226d7d1aa855f5
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47723330"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68095680"
 ---
 # <a name="installer-dll-function-summary"></a>インストーラー DLL 関数の概要
 次の表では、インストーラー DLL 内の関数について説明します。 構文とセマンティクスの各関数の詳細については、次を参照してください。 [Installer DLL API リファレンス](../../../odbc/reference/syntax/installer-dll-api-reference-function.md)します。  

@@ -1,6 +1,5 @@
 ---
-title: FOR JSON が SQL Server データ型を JSON データ型に変換する方法 (SQL Server) | Microsoft Docs
-ms.custom: ''
+title: FOR JSON が SQL Server データ型を JSON データ型に変換する方法
 ms.date: 07/07/2016
 ms.prod: sql
 ms.reviewer: genemi
@@ -11,14 +10,14 @@ helpviewer_keywords:
 ms.assetid: da356f06-efd0-4ea3-8157-77395bf790d7
 author: jovanpop-msft
 ms.author: jovanpop
-manager: craigg
+ms.custom: seo-dt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 7e59fa518c4682c77548cb5b408b4856e7096ed6
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 537ad4d796792c7d4fce56eda25adcca8b1fea01
+ms.sourcegitcommit: 15fe0bbba963d011472cfbbc06d954d9dbf2d655
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56033203"
+ms.lasthandoff: 11/14/2019
+ms.locfileid: "74095795"
 ---
 # <a name="how-for-json-converts-sql-server-data-types-to-json-data-types-sql-server"></a>FOR JSON が SQL Server データ型を JSON データ型に変換する方法 (SQL Server)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]

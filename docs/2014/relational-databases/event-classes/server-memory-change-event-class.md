@@ -15,14 +15,14 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 358d468c900d367496cd904b4f401b0948af0853
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52793440"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63044157"
 ---
 # <a name="server-memory-change-event-class"></a>Server Memory Change イベント クラス
-   **Server Memory Change** イベント クラスは、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のメモリ使用率が 1 MB または最大サーバー メモリ容量の 5 % のどちらか大きい方を超えて増加または減少したときに発生します。  
+  **Server Memory Change** イベント クラスは、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のメモリ使用率が 1 MB または最大サーバー メモリ容量の 5 % のどちらか大きい方を超えて増加または減少したときに発生します。  
   
 ## <a name="server-memory-change-event-class-data-columns"></a>Server Memory Change イベント クラスのデータ列  
   

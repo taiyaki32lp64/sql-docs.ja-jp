@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: 03d013a9-b53f-46c3-9628-da77f099c74a
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 44eba48983d2dd9e3610b5534997ca6a4a3849b5
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: f9a2253165045d74f669c52d0247b716e5576e8b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56019073"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68051334"
 ---
 # <a name="binding-relational-data-inside-xml-data"></a>XML データ内部のリレーショナル データのバインド
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]

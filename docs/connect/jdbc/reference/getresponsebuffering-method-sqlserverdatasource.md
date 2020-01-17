@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: 19585a93-88a4-415e-a20e-12ba58cddeaa
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 7f63ae057278b996b02b42668c3ad97bcf7b3f50
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 4b3e53579b8c95cce0585e9614152053f39cafa8
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47645470"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67980435"
 ---
 # <a name="getresponsebuffering-method-sqlserverdatasource"></a>getResponseBuffering メソッド (SQLServerDataSource)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -36,14 +35,14 @@ public java.lang.String getResponseBuffering()
 ```  
   
 ## <a name="return-value"></a>戻り値  
- A**文字列**小文字を含む**完全**または**アダプティブ**します。  
+ 小文字の**完全**または**アダプティブ**を含む**文字列**。  
   
 ## <a name="remarks"></a>Remarks  
  **full** 値は、実行時にサーバーから結果全体を読み取ることを示します。  
   
  **adaptive** 値は、必要に応じて最小限のデータをバッファリングすることを示します。 既定のバッファリング モードは **adaptive** 値です。  
   
- 詳細については、応答バッファリング モードを使用して、次を参照してください。[アダプティブ バッファリングを使用して](../../../connect/jdbc/using-adaptive-buffering.md)します。  
+ 応答バッファリングモードの使用方法の詳細については、「[アダプティブバッファリングの使用](../../../connect/jdbc/using-adaptive-buffering.md)」を参照してください。  
   
 ## <a name="see-also"></a>参照  
  [setResponseBuffering メソッド &#40;SQLServerDataSource&#41;](../../../connect/jdbc/reference/setresponsebuffering-method-sqlserverdatasource.md)   

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 helpviewer_keywords:
 - items [Reporting Services], expressions
@@ -17,15 +16,15 @@ helpviewer_keywords:
 - data manipulation [Reporting Services]
 - SQL Server Reporting Services, expressions
 ms.assetid: ae8a0166-2ccc-45f4-8d28-c150da7b73de
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: beec46edc483bee002f8fc2605c22b59a63d7048
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: df09ab032929de0eca51c9640f5c5cb23d1cde21
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56041203"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66106111"
 ---
 # <a name="custom-code-and-assembly-references-in-expressions-in-report-designer-ssrs"></a>レポート デザイナーでカスタム コードやアセンブリを式から参照する (SSRS)
   レポート内に埋め込まれたカスタム コードや、ビルドして自分のコンピューターに保存 (またはレポート サーバーに配置) したカスタム アセンブリは、レポート内から参照することができます。 カスタム定数、複雑な関数、または 1 レポート内で何度も使用される関数には、埋め込みコードを使用します。 コードを 1 か所で管理し、そのコードを複数のレポートで共有する場合は、カスタム コード アセンブリを使用します。 カスタム コードには、新しいカスタム定数、変数、関数、またはサブルーチンを含めることができます。 Parameters コレクションなど、組み込みコレクションへの読み取り専用の参照を含めることが可能です。 ただし、レポート データ値セットをカスタム関数に渡すことはできません。特に、カスタム集計はサポートされていません。  
@@ -51,7 +50,7 @@ ms.locfileid: "56041203"
 2.  カスタム アセンブリへの参照を含んだレポートをローカル モードでプレビューする。  
   
 ##  <a name="Common"></a> 使用頻度の高い関数への参照の追加  
- **[式]** ダイアログ ボックスを使用すると、 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]に組み込まれている共通の関数の一覧がカテゴリ別に表示されます。 **[共通の関数]** を展開してカテゴリをクリックすると、式に含める関数の一覧が **[アイテム]** ペインに表示されます。 共通の関数には、 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] <xref:System.Math> 名前空間と <xref:System.Convert> 名前空間のクラス、および [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] ランタイム ライブラリ関数が含まれています。 便宜上、最もよく使用される関数を表示できます、**式** ダイアログ ボックスで、カテゴリ別一覧はどこで。このダイアログ ボックスでは、これらの関数は、テキスト、日付と時刻、数学、検査、プログラム フロー、集計、財務、変換、その他というカテゴリごとに表示されます。 使用頻度の低い関数は、一覧に表示されませんが、式で使用することはできます。  
+ **[式]** ダイアログ ボックスを使用すると、 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]に組み込まれている共通の関数の一覧がカテゴリ別に表示されます。 **[共通の関数]** を展開してカテゴリをクリックすると、式に含める関数の一覧が **[アイテム]** ペインに表示されます。 共通の関数には、 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] <xref:System.Math> 名前空間と <xref:System.Convert> 名前空間のクラス、および [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] ランタイム ライブラリ関数が含まれています。 便宜上、最もよく使用される関数を表示できます、**式** ダイアログ ボックスで、カテゴリ別一覧はどこで。テキスト、日付し、時刻、数学、検査、プログラム フロー、集計、財務、変換、およびその他。 使用頻度の低い関数は、一覧に表示されませんが、式で使用することはできます。  
   
  組み込み関数を使用するには、[アイテム] ペインで関数名をダブルクリックします。 関数の説明が説明ペインに表示され、関数呼び出しの例がサンプル ペインに表示されます。 コード ペインで、関数名の後に左かっこ **(** を入力すると、IntelliSense により、関数呼び出しの有効な各構文が表示されます。 たとえば、テーブルの `Quantity` という名前のフィールドの最大値を計算するには、 `=Max(` という単純な式をコード ペインに追加した後、スマート タグを使用して、関数呼び出しに使用できる有効な構文をすべて表示します。 この例を完成させるには、「 `=Max(Fields!Quantity.Value)`」と入力します。  
   

@@ -1,5 +1,5 @@
 ---
-title: getString (int) メソッド |Microsoft Docs
+title: getString (int) メソッドMicrosoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: f3fce8bf-8d6e-476f-aa6d-992daa79b899
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: c8908a2ac8d6d591997d9a36c6d362c5a59c64e3
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 2160e7214b3ad60d2c8629d55bd79de8a5b15905
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47652327"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67979493"
 ---
 # <a name="getstring-method-int"></a>getString (int) メソッド
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

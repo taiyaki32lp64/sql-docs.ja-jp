@@ -4,23 +4,22 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.wmieventwatcher.general.f1
 helpviewer_keywords:
 - WMI Event Watcher Task Editor
 ms.assetid: 5813279b-52ca-4232-8826-38001467d9bd
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 598ce51e4270e419e925d7aa82516e27ed3bf230
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: bf462fc9084468b3a76b7c6bd61f07a16ae4f466
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53370734"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66054348"
 ---
 # <a name="wmi-event-watcher-task-editor-general-page"></a>[WMI イベント監視タスク エディター] ([全般] ページ)
   **[WMI イベント監視タスク エディター]** ダイアログ ボックスの **[全般]** ページを使用すると、WMI イベント監視タスクに名前を付けて説明を記述することができます。  

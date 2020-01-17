@@ -19,28 +19,27 @@ helpviewer_keywords:
 ms.assetid: 7247f065-5441-4bcf-9f25-c84a03290dc6
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: f45b4be7f62b58bd69f427e37da2243ad4665264
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ad5bd8f5391e5903a6f9fd10e0cfb340cf4952b6
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47640350"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68133978"
 ---
-# <a name="sysforeignkeycolumns-transact-sql"></a>sys.foreign_key_columns (Transact-SQL)
+# <a name="sysforeignkeycolumns-transact-sql"></a>sys.foreign_key_columns (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-  外部キーで構成される列 (または列のセット) ごとに 1 行のデータを保持します。  
+  列、または外部キーを構成するには、列のセットごとに行が含まれています。  
   
 |列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
-|**constraint_object_id**|**int**|FOREIGN KEY 制約の ID です。|  
+|**constraint_object_id**|**int**|FOREIGN KEY 制約の ID。|  
 |**constraint_column_id**|**int**|列、または外部キーを構成するには、列のセットの ID (*1..n*列の数を n =)。|  
-|**parent_object_id**|**int**|参照元のオブジェクトである、制約の親の ID です。|  
+|**parent_object_id**|**int**|制約が参照するオブジェクトの親の ID です。|  
 |**parent_column_id**|**int**|参照元の列である、親列の ID です。|  
-|**referenced_object_id**|**int**|候補キーを持つ、参照先オブジェクトの ID です。|  
-|**referenced_column_id**|**int**|参照先列の ID (候補キー列) です。|  
+|**referenced_object_id**|**int**|候補キーには、参照先のオブジェクトの ID です。|  
+|**referenced_column_id**|**int**|(候補キー列) の参照先の列の ID です。|  
   
 ## <a name="permissions"></a>アクセス許可  
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] 詳細については、「 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)」を参照してください。  

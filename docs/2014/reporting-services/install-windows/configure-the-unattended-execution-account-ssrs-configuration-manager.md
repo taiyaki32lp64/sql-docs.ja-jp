@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 helpviewer_keywords:
 - no credentials option [Reporting Services]
@@ -16,15 +15,15 @@ helpviewer_keywords:
 - accounts [Reporting Services]
 - reports [Reporting Services], processing
 ms.assetid: 4e50733e-bd8c-4bf6-8379-98b1531bb9ca
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 22810ae8acf19782997245a3746c70f95628fd1b
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 42299bce176f3fa93b9a145204ff95e292aed542
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56012073"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66108888"
 ---
 # <a name="configure-the-unattended-execution-account-ssrs-configuration-manager"></a>自動実行アカウントの構成 (SSRS 構成マネージャー)
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] には、自動レポート処理とネットワークを介した接続要求の送信に使用される特別なアカウントが用意されています。 アカウントは次の場合に使用します。  
@@ -36,7 +35,7 @@ ms.locfileid: "56012073"
  自動レポート処理とは、ユーザーの要求ではなく、イベント (スケジュール ドリブンのイベントまたはデータ更新イベント) によって起動されたレポート実行処理を示します。 レポート サーバーは、自動レポート処理アカウントを使用して、外部データ ソースをホストしているコンピューターにログオンします。 レポート サーバー サービス アカウントの資格情報は他のコンピューターへの接続に使用されないため、このアカウントは必要です。  
   
 > [!IMPORTANT]  
->  アカウントの構成は任意ですが、 構成しない場合は、一部のデータ ソースに接続するときのオプションを制限することになり、リモート コンピューターから画像ファイルを取得できない場合があります。 アカウントを構成する場合は、アカウントを最新の状態に保つ必要があります。 特に、パスワードの有効期限が切れたり、Active Directory でアカウント情報が変更されると、次回レポートを処理するときに "ログオンに失敗しました。(rsLogonFailed) ログオン失敗: ユーザー名が不明またはパスワードが正しくありません。" というエラーが発生します。 外部画像を取得したり外部コンピューターに接続要求を送信する場合でも、自動レポート処理アカウントの適切なメンテナンスは必須です。 構成したアカウントを使用していない場合は、アカウントを削除すると、日常的なアカウント メンテナンス作業を行わずに済みます。  
+>  アカウントの構成は任意ですが、 構成しない場合は、一部のデータ ソースに接続するときのオプションを制限することになり、リモート コンピューターから画像ファイルを取得できない場合があります。 アカウントを構成する場合は、アカウントを最新の状態に保つ必要があります。 具体的には、パスワードの有効期限を許可するか、Active Directory でアカウント情報が変更した場合、次のエラーに、次回レポートの処理を発生は。"ログオンに失敗しました (rsLogonFailed) ログオン エラー: 不明なユーザー名またはパスワードが間違っています"。 外部画像を取得したり外部コンピューターに接続要求を送信する場合でも、自動レポート処理アカウントの適切なメンテナンスは必須です。 構成したアカウントを使用していない場合は、アカウントを削除すると、日常的なアカウント メンテナンス作業を行わずに済みます。  
   
 ## <a name="how-to-configure-the-account"></a>アカウントの構成方法  
  ドメイン ユーザー アカウントを使用する必要があります。 目的上このアカウントは、レポート サーバー サービスの実行に使用されるアカウントとは別のアカウントである必要があります。 必ず最小限の権限 (十分なネットワーク接続権限のある読み取り専用アクセス) を持つアカウントを使用し、アクセスする対象を、レポート サーバーにデータ ソースとリソースを提供するコンピューターのみに制限してください。 詳細については、「 [Reporting Services 構成マネージャー &#40;ネイティブ モード&#41;](../../sql-server/install/reporting-services-configuration-manager-native-mode.md)」を参照してください。  
@@ -104,7 +103,7 @@ ms.locfileid: "56012073"
   
  アカウント情報が RSReportServer.config ファイルから削除されます。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [Reporting Services 構成マネージャー &#40;del&#41;](../../sql-server/install/reporting-services-configuration-manager-native-mode.md)  
   
   

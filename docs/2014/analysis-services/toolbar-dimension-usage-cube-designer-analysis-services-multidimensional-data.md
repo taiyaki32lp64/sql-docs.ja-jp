@@ -4,22 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: 23cb6106-8799-4157-ba5e-408b4fbd8fbb
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 44af3840dc6e54a461bedc19db45de12204e8c94
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: e4205cc3a99e5ce5fb9e4309813531a451e7bd92
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48191052"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66066016"
 ---
 # <a name="toolbar-dimension-usage-tab-cube-designer-analysis-services---multidimensional-data"></a>ツール バー (キューブ デザイナーの [ディメンションの使用法] タブ) (Analysis Services - 多次元データ)
-  ツール バー ペインを使用すると、キューブ デザイナーの **[ディメンションの使用法]** タブでキューブ **ディメンションの追加**やキューブの処理などの一般的な操作を実行できます。   
+  ツール バー ペインを使用すると、キューブ デザイナーの **[ディメンションの使用法]** タブでキューブ **ディメンションの追加**やキューブの処理などの一般的な操作を実行できます。  
   
 ## <a name="options"></a>および  
   

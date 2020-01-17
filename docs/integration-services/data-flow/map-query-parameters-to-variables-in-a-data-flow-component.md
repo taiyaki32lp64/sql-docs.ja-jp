@@ -13,17 +13,20 @@ helpviewer_keywords:
 - mapping query parameters to variables [Integration Services]
 - variables [Integration Services], mapping parameters to
 ms.assetid: 5e26977c-758c-46d6-acf1-4fd9238f0950
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: 2f40944b370a49d65615a6771b1ad7fd5bc1516d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 0eef24cbeac94a6447c2cd6b4f5a43fd0ca93657
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47629480"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71292295"
 ---
 # <a name="map-query-parameters-to-variables-in-a-data-flow-component"></a>クエリ パラメーターをデータ フロー コンポーネントの変数にマップする
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   パラメーター化クエリを使用するように OLE DB ソースを構成すると、パラメーターを変数にマップすることができます。  
   
  OLE DB ソースは、データ ソースに接続する際に、パラメーター化クエリを使用してデータのフィルター選択を行うことができます。  
@@ -44,7 +47,7 @@ ms.locfileid: "47629480"
   
 7.  **[パラメーター]** をクリックします。  
   
-8.  **[クエリ パラメーターの設定]** ダイアログ ボックスで、**[パラメーター]** 一覧にある各パラメーターを、**[変数]** 一覧の変数にマップするか、**[\<新しい変数>]** をクリックして新しい変数を作成します。 **[OK]** をクリックします。  
+8.  **[クエリ パラメーターの設定]** ダイアログ ボックスで、 **[パラメーター]** 一覧にある各パラメーターを、 **[変数]** 一覧の変数にマップするか、 **[\<新しい変数>]** をクリックして新しい変数を作成します。 **[OK]** をクリックします。  
   
     > [!NOTE]  
     >  マッピングで使用できる変数は、パッケージのスコープ内、Foreach ループなどの親コンテナーのスコープ内、またはデータ フロー コンポーネントが含まれるデータ フロー タスクのスコープ内にある、システム変数およびユーザー定義変数だけです。 変数のデータ型は、パラメーターが割り当てられる WHERE 句の列と互換性がある必要があります。  

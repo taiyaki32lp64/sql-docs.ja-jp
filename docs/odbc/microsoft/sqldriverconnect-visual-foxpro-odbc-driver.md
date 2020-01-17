@@ -12,21 +12,20 @@ helpviewer_keywords:
 ms.assetid: 10492c8f-3a18-4971-9db8-879e878083b9
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: dc0bcf6a191f67b87b422b17778f56feda1f5227
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: c6fd8f3be1213a91195cd74a8b723629e2c5833f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47792720"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68053894"
 ---
 # <a name="sqldriverconnect-visual-foxpro-odbc-driver"></a>SQLDriverConnect (Visual FoxPro ODBC ドライバー)
 > [!NOTE]  
 >  このトピックでには、Visual FoxPro ODBC ドライバー固有の情報が含まれています。 この関数の詳細については、該当するトピックを参照してください。 [ODBC API リファレンス](../../odbc/reference/syntax/odbc-api-reference.md)します。  
   
- サポート: 完全な  
+ サポート:[完全]  
   
- レベル 1 の ODBC API 準拠:  
+ ODBC API 準拠:レベル 1  
   
  いずれかになりますが、既存のデータ ソースに接続する、[データベース](../../odbc/microsoft/visual-foxpro-terminology.md)のディレクトリまたは[テーブルを無料](../../odbc/microsoft/visual-foxpro-terminology.md)します。 UID および PWD ODBC 属性キーワードは無視されます。 次の表では、追加のサポートされている属性のキーワードを示します。  
   

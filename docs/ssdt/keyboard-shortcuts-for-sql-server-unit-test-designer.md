@@ -8,15 +8,14 @@ ms.technology: ssdt
 ms.reviewer: ''
 ms.topic: conceptual
 ms.assetid: b1c61454-242f-4948-a9ca-e2cd5df26102
-author: stevestein
-ms.author: sstein
-manager: craigg
-ms.openlocfilehash: a6d6621f14b8294e93110311ca5ea210652bb868
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 424d36ea56d2c47886cd0b1cfc169bee93fb9f7c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51659582"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68037222"
 ---
 # <a name="keyboard-shortcuts-for-sql-server-unit-test-designer"></a>SQL Server 単体テスト デザイナーのキーボード ショートカット
 次のキーボード ショートカットを使用すると、SQL Server 単体テスト デザイナー内を移動できます。  

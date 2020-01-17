@@ -1,46 +1,45 @@
 ---
 title: 拡張性 API
 titleSuffix: Azure Data Studio
-description: Azure Data Studio 機能拡張 Api について説明します
-ms.custom: seodec18
-ms.date: 09/24/2018
-ms.reviewer: alayu; sstein
+description: Azure Data Studio 用の拡張 API について学習します
 ms.prod: sql
 ms.technology: azure-data-studio
 ms.topic: conceptual
-author: stevestein
-ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 0a8177492de46c92577eb98e79ece42e77ba947b
-ms.sourcegitcommit: ca9b5cb6bccfdba4cdbe1697adf5c673b4713d6c
-ms.translationtype: MT
+author: markingmyname
+ms.author: maghan
+ms.reviewer: alayu; sstein
+ms.custom: seodec18
+ms.date: 09/24/2018
+ms.openlocfilehash: 8a4ebe26cbbf768222c7b97b95fa7df238faded3
+ms.sourcegitcommit: 56fb0b7750ad5967f5d8e43d87922dfa67b2deac
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/18/2019
-ms.locfileid: "56407612"
+ms.lasthandoff: 12/11/2019
+ms.locfileid: "75001897"
 ---
-# <a name="azure-data-studio-extensibility-apis"></a>Azure Data Studio 機能拡張 Api
+# <a name="azure-data-studio-extensibility-apis"></a>Azure Data Studio 拡張 API
 
-[!INCLUDE[name-sos](../includes/name-sos.md)] 拡張機能は、オブジェクト エクスプ ローラーなどの Azure Data Studio の他の部分との対話に使用できる API を提供します。 これらの Api はから利用可能な[ `src/sql/sqlops.d.ts` ](https://github.com/Microsoft/azuredatastudio/blob/master/src/sql/sqlops.d.ts)ファイルし、以下に示します。
+[!INCLUDE[name-sos](../includes/name-sos.md)] では、拡張機能を使用して、オブジェクト エクスプローラーなどの Azure Data Studio の他の部分とやりとりできる API を提供します。 これらの API は、[`src/sql/azdata.d.ts`](https://github.com/Microsoft/azuredatastudio/blob/master/src/sql/azdata.d.ts) ファイルから入手できます。以下で説明します。
 
 ## <a name="connection-management"></a>接続の管理
-`sqlops.connection`
+`azdata.connection`
 
 ### <a name="top-level-functions"></a>最上位の関数
 
-- `getCurrentConnection(): Thenable<sqlops.connection.Connection>` アクティブなエディターまたはオブジェクト エクスプ ローラーの選択に基づいて、現在の接続を取得します。
+- `getCurrentConnection(): Thenable<azdata.connection.Connection>` アクティブなエディターまたはオブジェクト エクスプローラーの選択に基づいて現在の接続を取得します。
 
-- `getActiveConnections(): Thenable<sqlops.connection.Connection[]>` アクティブになっているすべてのユーザーの接続の一覧を取得します。 このような接続がない場合は、空のリストを返します。
+- `getActiveConnections(): Thenable<azdata.connection.Connection[]>` アクティブなすべてのユーザーの接続のリストを取得します。 そのような接続がない場合は、空のリストを返します。
 
-- `getCredentials(connectionId: string): Thenable<{ [name: string]: string }>` 接続に関連付けられている資格情報を格納しているディクショナリを取得します。 これらは下のオプションのディクショナリの一部として返されるそれ以外の場合、`sqlops.connection.Connection`オブジェクトしますが、そのオブジェクトから取り除かれを取得します。 
+- `getCredentials(connectionId: string): Thenable<{ [name: string]: string }>` 接続に関連付けられている資格情報を含むディクショナリを取得します。 それ以外の場合、これらは `azdata.connection.Connection` オブジェクトの下のオプション ディクショナリの一部として返されますが、そのオブジェクトからは削除されます。 
 
 ### `Connection`
-- `options: { [name: string]: string }` 接続オプションの辞書
-- `providerName: string` 接続プロバイダーの名前 (例。"MSSQL")
-- `connectionId: string` 接続の一意の識別子
+- `options: { [name: string]: string }` 接続オプションのディクショナリ
+- `providerName: string` 接続プロバイダーの名前 (例: "MSSQL")
+- `connectionId: string` 接続の一意識別子
 
 ### <a name="example-code"></a>コード例
 ```
-> let connection = sqlops.connection.getCurrentConnection();
+> let connection = azdata.connection.getCurrentConnection();
 connection: {
     providerName: 'MSSQL',
     connectionId: 'd97bb63a-466e-4ef0-ab6f-00cd44721dcc',
@@ -52,7 +51,7 @@ connection: {
     },
     ...
 }
-> let credentials = sqlops.connection.getCredentials(connection.connectionId);
+> let credentials = azdata.connection.getCredentials(connection.connectionId);
 credentials: {
     password: 'abc123'
 }
@@ -61,20 +60,20 @@ credentials: {
 
 ## <a name="object-explorer"></a>オブジェクト エクスプローラー
 
-`sqlops.objectexplorer`
+`azdata.objectexplorer`
 
 
 ### <a name="top-level-functions"></a>最上位の関数
-- `getNode(connectionId: string, nodePath?: string): Thenable<sqlops.objectexplorer.ObjectExplorerNode>` 特定の接続とパスに対応するオブジェクト エクスプ ローラーのノードを取得します。 パスが指定されていない場合は、指定された接続の最上位ノードを返します。 返すかどうかのノードがない指定されたパスに、`undefined`します。 注:`nodePath`のオブジェクトは、SQL ツール サービスのバックエンドによって生成され、手動で構築することは困難です。 API の今後の機能強化を使用して、名前、種類、スキーマなど、ノードについて指定したメタデータに基づいてノードを取得するができます。
+- `getNode(connectionId: string, nodePath?: string): Thenable<azdata.objectexplorer.ObjectExplorerNode>` 指定された接続とパスに対応するオブジェクト エクスプローラー ノードを取得します。 パスが指定されていない場合は、指定された接続の最上位のノードが返されます。 指定されたパスにノードがない場合は、`undefined` が返されます。 注:オブジェクトの `nodePath` は、SQL ツール サービスのバックエンドによって生成されるため、手動では構成しにくいです。 将来の API の改善により、ノード (名前、型、スキーマなど) について指定したメタデータに基づいてノードを取得できるようになります。
 
-- `getActiveConnectionNodes(): Thenable<sqlops.objectexplorer.ObjectExplorerNode>` アクティブなすべてのオブジェクト エクスプ ローラー接続ノードを取得します。
+- `getActiveConnectionNodes(): Thenable<azdata.objectexplorer.ObjectExplorerNode>` アクティブなオブジェクト エクスプローラーの接続ノードをすべて取得します。
 
-- `findNodes(connectionId: string, type: string, schema: string, name: string, database: string, parentObjectNames: string[]): Thenable<sqlops.objectexplorer.ObjectExplorerNode[]>` 指定したメタデータと一致するすべてのオブジェクト エクスプ ローラー ノードを検索します。 `schema`、 `database`、および`parentObjectNames`引数には、`undefined`ときに適用できません。 `parentObjectNames` 目的のオブジェクトであるオブジェクト エクスプ ローラーで最下位のレベルを高いものから、データベース以外の親オブジェクトの一覧を示します。 たとえば、接続の id 列、テーブル"schema1.table1"とデータベース"database1"に属している"column1"を検索するときに`connectionId`、呼び出す`findNodes(connectionId, 'Column', undefined, 'column1', 'database1', ['schema1.table1'])`します。 参照してください、 [Azure Data Studio は既定でサポートされる種類の一覧](https://github.com/Microsoft/azuredatastudio/wiki/Object-Explorer-types-supported-by-FindNodes-API)この API 呼び出し。
+- `findNodes(connectionId: string, type: string, schema: string, name: string, database: string, parentObjectNames: string[]): Thenable<azdata.objectexplorer.ObjectExplorerNode[]>` 指定されたメタデータに一致するオブジェクト エクスプローラー ノードをすべて検索します。 適用できない場合、`schema`、`database`、`parentObjectNames` の引数は `undefined` にする必要があります。 `parentObjectNames` は、目的のオブジェクトが下にある、オブジェクト エクスプローラーの最上位から最下位までのレベルで、データベース以外の親オブジェクトのリストです。 たとえば、接続 ID `connectionId` を使って、テーブル "schema1.table1" とデータベース "database1" に属している列 "column1" を検索している場合、`findNodes(connectionId, 'Column', undefined, 'column1', 'database1', ['schema1.table1'])` を呼び出します。 また、この API 呼び出しについては、[既定で Azure Data Studio でサポートされている型のリスト](https://github.com/Microsoft/azuredatastudio/wiki/Object-Explorer-types-supported-by-FindNodes-API)も参照してください。
 
 ### <a name="objectexplorernode"></a>ObjectExplorerNode
-- `connectionId: string` 下のノードが存在する接続の id
+- `connectionId: string` ノードが存在する接続の ID
 
-- `nodePath: string` 呼び出しに使用されるため、ノードのパス、`getNode`関数。
+- `nodePath: string``getNode` 関数への呼び出しに使用されるノードのパス
 
 - `nodeType: string` ノードの型を表す文字列
 
@@ -82,28 +81,28 @@ credentials: {
 
 - `nodeStatus: string` ノードの状態を表す文字列
 
-- `label: string` オブジェクト エクスプ ローラーで、ノードのラベルが表示されます。
+- `label: string` オブジェクト エクスプローラーに表示されるノードのラベル
 
-- `isLeaf: boolean` ノードがリーフ ノードは、子を持たないかどうか
+- `isLeaf: boolean` ノードがリーフ ノードのため、子がないかどうか
 
-- `metadata: sqlops.ObjectMetadata` このノードによって表されるオブジェクトを記述するメタデータ
+- `metadata: azdata.ObjectMetadata` このノードによって表されるオブジェクトを記述するメタデータ
 
-- `errorMessage: string` ノードがエラー状態がかどうかに表示されるメッセージ
+- `errorMessage: string` ノードがエラー状態の場合に表示されるメッセージ
 
-- `isExpanded(): Thenable<boolean>` オブジェクト エクスプ ローラーでノードが現在展開されているかどうか
+- `isExpanded(): Thenable<boolean>` 現在、ノードがオブジェクト エクスプローラーで展開されているかどうか
 
-- `setExpandedState(expandedState: vscode.TreeItemCollapsibleState): Thenable<void>` ノードを展開または折りたたまれているかどうかを設定します。 状態が [なし] に設定されている場合、ノードは変更されません。
+- `setExpandedState(expandedState: vscode.TreeItemCollapsibleState): Thenable<void>` ノードを展開するか、折りたたむかを設定します。 状態が None に設定されている場合、ノードは変更されません。
 
-- `setSelected(selected: boolean, clearOtherSelections?: boolean): Thenable<void>` ノードが選択されているかどうかを設定します。 場合`clearOtherSelections`は true、新しい選択を行うときにその他のチェックをオフにします。 False の場合、既存の選択のままにします。 `clearOtherSelections` 既定値は true が`selected`true および false はときに、`selected`は false です。
+- `setSelected(selected: boolean, clearOtherSelections?: boolean): Thenable<void>` ノードが選択されているかどうかを設定します。 `clearOtherSelections` が True の場合は、新しい選択を行うときに他の選択をすべてクリアします。 False の場合は、既存の選択をすべてそのままにします。 `clearOtherSelections` は、`selected` が True の場合、既定で True に設定されます。`selected` が False の場合は、既定で False に設定されます。
 
-- `getChildren(): Thenable<sqlops.objectexplorer.ObjectExplorerNode[]>` このノードのノードのすべての子を取得します。 子が存在しない場合は、空のリストを返します。
+- `getChildren(): Thenable<azdata.objectexplorer.ObjectExplorerNode[]>` このノードの子ノードをすべて取得します。 子が存在しない場合は、空のリストを返します。
 
-- `getParent(): Thenable<sqlops.objectexplorer.ObjectExplorerNode>` このノードの親ノードを取得します。 返すには、親が存在しない場合が定義されていません。
+- `getParent(): Thenable<azdata.objectexplorer.ObjectExplorerNode>` このノードの親ノードを取得します。 親が存在しない場合は、未定義を返します。
 
 ### <a name="example-code"></a>コード例
 
 ```cs
-private async interactWithOENode(selectedNode: sqlops.objectexplorer.ObjectExplorerNode): Promise<void> {
+private async interactWithOENode(selectedNode: azdata.objectexplorer.ObjectExplorerNode): Promise<void> {
     let choices = ['Expand', 'Collapse', 'Select', 'Select (multi)', 'Deselect', 'Deselect (multi)'];
     if (selectedNode.isLeaf) {
         choices[0] += ' (is leaf)';
@@ -123,7 +122,7 @@ private async interactWithOENode(selectedNode: sqlops.objectexplorer.ObjectExplo
     let children = await selectedNode.getChildren();
     children.forEach(child => choices.push(child.label));
     let choice = await vscode.window.showQuickPick(choices);
-    let nextNode: sqlops.objectexplorer.ObjectExplorerNode = undefined;
+    let nextNode: azdata.objectexplorer.ObjectExplorerNode = undefined;
     if (choice === choices[0]) {
         selectedNode.setExpandedState(vscode.TreeItemCollapsibleState.Expanded);
     } else if (choice === choices[1]) {
@@ -143,13 +142,13 @@ private async interactWithOENode(selectedNode: sqlops.objectexplorer.ObjectExplo
         nextNode = childNode;
     }
     if (nextNode) {
-        let updatedNode = await sqlops.objectexplorer.getNode(nextNode.connectionId, nextNode.nodePath);
+        let updatedNode = await azdata.objectexplorer.getNode(nextNode.connectionId, nextNode.nodePath);
         this.interactWithOENode(updatedNode);
     }
 }
 
 vscode.commands.registerCommand('mssql.objectexplorer.interact', () => {
-    sqlops.objectexplorer.getActiveConnectionNodes().then(activeConnections => {
+    azdata.objectexplorer.getActiveConnectionNodes().then(activeConnections => {
         vscode.window.showQuickPick(activeConnections.map(connection => connection.label + ' ' + connection.connectionId)).then(selection => {
             let selectedNode = activeConnections.find(connection => connection.label + ' ' + connection.connectionId === selection);
             this.interactWithOENode(selectedNode);
@@ -158,8 +157,8 @@ vscode.commands.registerCommand('mssql.objectexplorer.interact', () => {
 });
 ```
 
-## <a name="proposed-apis"></a>提案された Api
+## <a name="proposed-apis"></a>提案された API
 
-ダイアログ ボックス、ウィザード、およびその他の機能の間でのドキュメント タブにカスタム UI を表示する拡張機能を許可する提案された Api が追加されました。 参照してください、[提案されている API の種類のファイル](https://github.com/Microsoft/azuredatastudio/blob/master/src/sql/sqlops.proposed.d.ts)詳細なドキュメントについては、ただしするこれらの API は、いつでも変更されることに注意してください。 これらの Api の一部を使用する方法の例が記載されて、 ["sql サービス"の拡張機能サンプル](https://github.com/Microsoft/azuredatastudio/tree/master/samples/sqlservices)します。
+ダイアログ、ウィザード、ドキュメント タブなどの機能の中で、拡張機能でダイアログにカスタム UI を表示できるように、提案された API を追加しました。 その他のドキュメントについては、[提案された API 型ファイル](https://github.com/Microsoft/azuredatastudio/blob/master/src/sql/azdata.proposed.d.ts)を参照してください。しかし、これらの API はいつでも変更される可能性があることに注意してください。 これらの API の一部を使用する方法の例は、["sqlservices" のサンプル拡張機能](https://github.com/Microsoft/azuredatastudio/tree/master/samples/sqlservices)で見つけることができます。
 
 

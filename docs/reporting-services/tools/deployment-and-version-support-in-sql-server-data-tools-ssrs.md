@@ -2,18 +2,18 @@
 title: SQL Server データ ツールの配置およびバージョン サポート (SSDT) | Microsoft Docs
 ms.date: 03/15/2017
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: tools
 ms.topic: conceptual
 ms.assetid: 36f5686d-7e40-4f31-be81-bd197ca33a02
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: aa2b5df78043d202d87cc01849aa9a9d10911b0a
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 5f055219476507f52894fe7d5b246710e6054a20
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52397135"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65571495"
 ---
 # <a name="deployment-and-version-support-in-sql-server-data-tools-ssdt"></a>SQL Server データ ツールの配置およびバージョン サポート (SSDT)
   [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] では、次のシナリオがサポートされます。  
@@ -57,7 +57,7 @@ ms.locfileid: "52397135"
 > [!NOTE]  
 >  [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]以降にスキーマが変更されました。  
   
-|プロジェクトまたはファイルの種類|[バージョンのオプション]|レポートの作成|レポートのパブリッシュ|注|  
+|プロジェクトまたはファイルの種類|バージョン|レポートの作成|レポートのパブリッシュ|注|  
 |--------------------------|-------------|--------------------|---------------------|-----------|  
 |レポート サーバー プロジェクト<br /><br /> 内の複数の<br /><br /> レポート サーバー プロジェクト ウィザード|[!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)]|2016 RDL スキーマ|[!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)]||  
 |レポート サーバー プロジェクト<br /><br /> 内の複数の<br /><br /> レポート サーバー プロジェクト ウィザード|[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]|2014 RDL スキーマ|[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]||  

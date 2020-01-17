@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 38e3492c-c1e1-42e3-a71a-befdc90204db
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 348b2876e4293ad912383859ace47e462da31bcf
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: dd64ba8119db1ecf2d2b621cd202c9f700b53475
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47707972"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67967285"
 ---
 # <a name="append-method-adox-procedures"></a>Append メソッド (ADOX Procedures)
 新しく追加[プロシージャ](../../../ado/reference/adox-api/procedure-object-adox.md)オブジェクトを[プロシージャ](../../../ado/reference/adox-api/procedures-collection-adox.md)コレクション。  
@@ -52,7 +51,7 @@ Procedures.Append Name, Command
 ## <a name="applies-to"></a>適用対象  
  [Procedures コレクション (ADOX)](../../../ado/reference/adox-api/procedures-collection-adox.md)  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [Procedures Append メソッドの例 (VB)](../../../ado/reference/adox-api/procedures-append-method-example-vb.md)   
  [Append メソッド (ADOX Columns)](../../../ado/reference/adox-api/append-method-adox-columns.md)   
  [Append メソッド (ADOX Groups)](../../../ado/reference/adox-api/append-method-adox-groups.md)   

@@ -10,15 +10,15 @@ helpviewer_keywords:
 - dates [Integration Services], DATEPART
 - DATEPART function
 ms.assetid: 3e590094-fc49-4144-805f-fdc1bf2fe509
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 33935997c2c53867555001fa93ba9973257650d8
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 22225f9a1791185ed78dfc75d92c3dbced7be3ff
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52793694"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62769339"
 ---
 # <a name="datepart-ssis-expression"></a>DATEPART (SSIS 式)
   ある日付の、特定の日付要素を整数で返します。  

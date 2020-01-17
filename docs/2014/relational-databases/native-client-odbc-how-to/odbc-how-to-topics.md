@@ -11,11 +11,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 359419f0da19151172689090272e0c42e18cc906
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48193353"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63200374"
 ---
 # <a name="odbc-how-to-topics"></a>ODBC の使用法に関するトピック
   使用する、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ODBC ドライバーでは、する必要がありますを ODBC データ ソースを作成して、サーバーのカタログ ストアド プロシージャの正しいバージョンがあることを確認します。 SQL Server を使用する ODBC アプリケーションをコーディングするには、ODBC ハンドルの割り当て方法、属性の設定方法、SQL Server インスタンスへの接続方法、クエリの実行方法、および結果の処理方法を理解しておく必要があります。  

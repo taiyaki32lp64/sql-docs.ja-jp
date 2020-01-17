@@ -1,29 +1,28 @@
 ---
 title: SharePoint サーバーの全体管理でレポート サーバー ファイル同期機能をアクティブ化 |Microsoft Docs
+ms.prod: sql-server-2014
+ms.technology: reporting-services
+ms.topic: conceptual
+author: maggiesMSFT
+ms.author: maggies
+manager: kfile
+ms.reviewer: ''
 ms.custom: ''
 ms.date: 03/06/2017
-ms.prod: sql-server-2014
-ms.reviewer: ''
-ms.technology:
-- reporting-services-native
-ms.topic: conceptual
-ms.assetid: 32d1988d-07e7-41c2-b636-e65ecfae4677
-author: markingmyname
-ms.author: maghan
-manager: kfile
-ms.openlocfilehash: 69d059807b7d48fe71cffb120c73fa9aa004a8bb
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 762cf7e67a9983c345b58d2afd1c47da93306bd0
+ms.sourcegitcommit: 0a4879dad09c6c42ad1ff717e4512cfea46820e9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56018004"
+ms.lasthandoff: 06/27/2019
+ms.locfileid: "67413142"
 ---
 # <a name="activate-the-report-server-file-sync-feature-in-sharepoint-central-administration"></a>SharePoint サーバーの全体管理でレポート サーバーのファイル同期機能をアクティブにする
-  [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] レポート サーバー ファイル同期機能では、SharePoint イベント ハンドラーを利用して、レポート サーバー カタログをドキュメント ライブラリのアイテムと同期します。 この機能は、ユーザーがパブリッシュされたレポート アイテムを SharePoint ドキュメント ライブラリに頻繁に直接アップロードする場合に役立ちます。 ファイル同期機能がアクティブになっていない場合、コンテンツの同期は行われますが、その頻度が下がります。  
+
+[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] レポート サーバー ファイル同期機能では、SharePoint イベント ハンドラーを利用して、レポート サーバー カタログをドキュメント ライブラリのアイテムと同期します。 この機能は、ユーザーがパブリッシュされたレポート アイテムを SharePoint ドキュメント ライブラリに頻繁に直接アップロードする場合に役立ちます。 ファイル同期機能がアクティブになって、コンテンツは引き続き頻繁ではなく同期します。  
   
- ファイル同期機能は、SharePoint 製品用 [!INCLUDE[ssRSCurrent](../includes/ssrscurrent-md.md)] アドインをインストールしてから SharePoint サイトの管理でアクティブ化できます。  
+ファイル同期機能は、SharePoint 製品用 [!INCLUDE[ssRSCurrent](../includes/ssrscurrent-md.md)] アドインをインストールしてから SharePoint サイトの管理でアクティブ化できます。  
   
- この機能は、サイトごとに手動でアクティブ化および非アクティブ化できますが、サイト コレクション レベルではアクティブ化および非アクティブ化することはできません。  
+この機能は、サイトごとに手動でアクティブ化および非アクティブ化できますが、サイト コレクション レベルではアクティブ化および非アクティブ化することはできません。  
   
 ## <a name="prerequisites"></a>前提条件  
  SharePoint 用 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] アドインをインストールする必要があります。 アドインがインストールされていない場合は、ファイル同期機能がサイト機能の一覧に表示されません。  
@@ -32,9 +31,9 @@ ms.locfileid: "56018004"
   
 ### <a name="to-activate-or-deactivate-the-reporting-services-file-sync-feature-on-a-site"></a>サイトの Reporting Services ファイル同期機能をアクティブ化または非アクティブ化するには  
   
-1.  サイトのメイン ページから、 **[サイトの操作]** メニューをクリックし、 **[サイトの設定]** をクリックします。  
+1.  サイトのメイン ページでをクリックして、**サイトの操作**メニューをクリックします**サイト設定**します。  
   
-2.  **[サイトの操作]** で、 **[サイト機能の管理]** をクリックします。  
+2.  **サイトの操作**、 をクリックして**サイト機能の管理**します。  
   
 3.  一覧で **[レポート サーバー ファイル同期]** を見つけます。  
   

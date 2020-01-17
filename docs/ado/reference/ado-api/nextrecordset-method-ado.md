@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: ab1fa449-a695-4987-b1ee-bc68f89418dd
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: fba1826dcad9a183bab9b9b0106bb9b45eb29846
-ms.sourcegitcommit: 0d6e4cafbb5d746e7d00fdacf8f3ce16f3023306
+ms.openlocfilehash: 3c7af4f5d217670ab23e71a3c53ccd5cf7944b0c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/11/2018
-ms.locfileid: "49085140"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67932035"
 ---
 # <a name="nextrecordset-method-ado"></a>NextRecordset メソッド (ADO)
 現在のクリア[レコード セット](../../../ado/reference/ado-api/recordset-object-ado.md)オブジェクトし、[次へ] を返します**レコード セット**一連のコマンドを進めることで。  
@@ -63,6 +62,6 @@ Set recordset2 = recordset1.NextRecordset(RecordsAffected )
 ## <a name="applies-to"></a>適用対象  
  [Recordset オブジェクト (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [NextRecordset メソッドの例 (VB)](../../../ado/reference/ado-api/nextrecordset-method-example-vb.md)   
  [NextRecordset メソッドの例 (VC++)](../../../ado/reference/ado-api/nextrecordset-method-example-vc.md)   

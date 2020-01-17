@@ -4,23 +4,22 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.unionalltransformation.f1
 helpviewer_keywords:
 - Union All Transformation Editor
 ms.assetid: 32fbc1c1-da83-4684-9479-31fc3e2df98c
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: f34b73358bf9a268e4a2eef14f51800b0c9fea94
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: b62fb5e33311f1011911c40fc858723b218bac55
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48138802"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66054827"
 ---
 # <a name="union-all-transformation-editor"></a>全体結合変換エディター
   **[全体結合変換エディター]** ダイアログ ボックスを使用すると、複数の入力行セットを 1 つの出力行セットにマージできます。 データ フローに全体結合変換を含めることで、複数のデータ フローのデータをマージしたり、全体結合変換を入れ子にして複雑なデータセットを作成したり、データ内のエラーを修正した後で行を再マージしたりできます。  
@@ -39,7 +38,7 @@ ms.locfileid: "48138802"
   
 ## <a name="see-also"></a>参照  
  [Integration Services のエラーおよびメッセージのリファレンス](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [結合をすべての変換を使用してデータをマージします。](data-flow/transformations/merge-data-by-using-the-union-all-transformation.md)   
+ [全体結合変換を使用してデータをマージする](data-flow/transformations/merge-data-by-using-the-union-all-transformation.md)   
  [マージ変換](data-flow/transformations/merge-transformation.md)   
  [マージ結合変換](data-flow/transformations/merge-join-transformation.md)  
   

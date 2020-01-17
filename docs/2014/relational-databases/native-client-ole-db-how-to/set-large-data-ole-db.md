@@ -13,11 +13,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 24d05ef704e37af9d0d8c1e2a9e9eefe0b20f1d8
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53355984"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63218663"
 ---
 # <a name="set-large-data-ole-db"></a>大きなデータの設定 (OLE DB)
   このサンプルでは、BLOB データを設定し、テーブルを作成して、サンプル レコードを追加し、行セット内のそのレコードをフェッチして、BLOB フィールドの値を設定する方法を示します。 このサンプルは IA64 ではサポートされていません。  

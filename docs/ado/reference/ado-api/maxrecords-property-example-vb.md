@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 630a3be4-7a87-41cf-997e-8bb50d89db1e
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: c687f2b7a11dba37c05412c03cf14da4a3daa543
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 3caa09a03a7aabd87eddedff335abc3bddd1b318
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47684190"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67918186"
 ---
 # <a name="maxrecords-property-example-vb"></a>MaxRecords プロパティの例 (VB)
 この例では、 [MaxRecords](../../../ado/reference/ado-api/maxrecords-property-ado.md)プロパティを開き、[レコード セット](../../../ado/reference/ado-api/recordset-object-ado.md)で最も高価な 10 のタイトルを含む、***タイトル***テーブル。  
@@ -88,6 +87,6 @@ End Sub
 'EndMaxRecordsVB  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [MaxRecords プロパティ (ADO)](../../../ado/reference/ado-api/maxrecords-property-ado.md)   
  [Recordset オブジェクト (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)

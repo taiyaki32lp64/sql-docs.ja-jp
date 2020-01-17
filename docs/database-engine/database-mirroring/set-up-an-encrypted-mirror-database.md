@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 7329a575-be29-46e0-abc6-1344db37920c
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 1a76f15ff644a23617c006bfa282ec609640891b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e96342ca114ae06d2c1d75954ccd32a674f900a4
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47784440"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68025233"
 ---
 # <a name="set-up-an-encrypted-mirror-database"></a>暗号化されたミラー データベースの設定
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

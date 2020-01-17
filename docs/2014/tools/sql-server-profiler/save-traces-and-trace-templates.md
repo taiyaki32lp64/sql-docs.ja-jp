@@ -20,11 +20,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: d4baca63080a3f67c1f9e54a8a0aa955a27029df
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52796984"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63267428"
 ---
 # <a name="save-traces-and-trace-templates"></a>トレースとトレース テンプレートの保存
   トレース ファイルの保存とトレース テンプレートの保存は、区別して考えることが重要です。 トレース ファイルを保存すると、キャプチャされたイベント データが特定の場所に保存されます。 トレース テンプレートを保存すると、特定のデータ列、イベント クラス、フィルターなどのトレースの定義が保存されます。  

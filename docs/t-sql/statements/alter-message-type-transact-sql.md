@@ -19,16 +19,15 @@ helpviewer_keywords:
 ms.assetid: 98c94176-2bdf-4725-b4bc-d33b6b14817d
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: 42e41f16ba720b8641d8fdf8f8ce40a386de11d6
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b08bd61a0150b0e3711219eea783985f80ffd72f
+ms.sourcegitcommit: a97d551b252b76a33606348082068ebd6f2c4c8c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47654240"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70745307"
 ---
 # <a name="alter-message-type-transact-sql"></a>ALTER MESSAGE TYPE (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
 
   メッセージ型のプロパティを変更します。  
   
@@ -51,20 +50,20 @@ ALTER MESSAGE TYPE message_type_name
  *message_type_name*  
  変更するメッセージ型の名前を指定します。 サーバー名、データベース名、スキーマ名は指定できません。  
   
- VALIDATION   
+ VALIDATION  
  [!INCLUDE[ssSB](../../includes/sssb-md.md)] によって、この型のメッセージの本文が検証される方法を指定します。  
   
- なし  
+ NONE  
  検証が実行されません。 メッセージ本文には何らかのデータが含まれることがあれば、NULL の場合もあります。  
   
  EMPTY  
  メッセージの本文は NULL であることが必要です。  
   
- WELL_FORMED_XML   
+ WELL_FORMED_XML  
  メッセージの本文には、整形式の XML が含まれている必要があります。  
   
  VALID_XML_WITH_SCHEMA = *schema_collection_name*  
- メッセージの本文には、指定されたスキーマ コレクションのスキーマに準拠する XML が含まれている必要があります。 *schema_collection_name* は、既存の XML スキーマ コレクションの名前であることが必要です。  
+ メッセージの本文には、指定されたスキーマ コレクション内のスキーマに準拠する XML が含まれている必要があります。 *schema_collection_name* は、既存の XML スキーマ コレクションの名前であることが必要です。  
   
 ## <a name="remarks"></a>Remarks  
  メッセージ型の検証を変更しても、既にキューに配布されているメッセージには影響しません。  
@@ -74,7 +73,7 @@ ALTER MESSAGE TYPE message_type_name
 ## <a name="permissions"></a>アクセス許可  
  メッセージ型を変更する権限は、既定ではメッセージ型の所有者、**db_ddladmin** 固定データベース ロールまたは **db_owner** 固定データベース ロールのメンバーと **sysadmin** 固定サーバー ロールのメンバーに与えられています。  
   
- ALTER MESSAGE TYPE ステートメントがスキーマ コレクションを指定する場合、ステートメントを実行するユーザーは、指定されているスキーマ コレクションに対する REFERENCES 権限が必要です。  
+ ALTER MESSAGE TYPE ステートメントでスキーマ コレクションが指定されている場合、このステートメントを実行するユーザーは、指定されているスキーマ コレクションに対する REFERENCES 権限が必要です。  
   
 ## <a name="examples"></a>使用例  
  次の例では、メッセージ型 `//Adventure-Works.com/Expenses/SubmitExpense` を変更し、メッセージ本文に整形式の XML ドキュメントが含まれることを要求します。  

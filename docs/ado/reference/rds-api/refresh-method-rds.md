@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: c90a8050-0ff4-4c83-9925-261f2f2ccfe9
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 822430c56070bb459e36ca3a3310d186258aea34
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.openlocfilehash: fb7cb94edab6b5422c315b71c2900662f85aa1e2
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51601923"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67963509"
 ---
 # <a name="refresh-method-rds"></a>Refresh メソッド (RDS)
 指定されたデータ ソースを再クエリ、 [Connect](../../../ado/reference/rds-api/connect-property-rds.md)プロパティと、クエリの結果を更新します。  
@@ -50,7 +49,7 @@ DataControl.Refresh
 ## <a name="applies-to"></a>適用対象  
  [DataControl オブジェクト (RDS)](../../../ado/reference/rds-api/datacontrol-object-rds.md)  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [Refresh メソッドの例 (VB)](../../../ado/reference/ado-api/refresh-method-example-vb.md)   
  [Refresh メソッドの例 (VBScript)](../../../ado/reference/rds-api/refresh-method-example-vbscript.md)   
  [アドレス帳のコマンド ボタン](../../../ado/guide/remote-data-service/address-book-command-buttons.md)   

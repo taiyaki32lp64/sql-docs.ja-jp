@@ -2,19 +2,19 @@
 title: SharePoint ライブラリへの Reporting Services のコンテンツの種類の追加 | Microsoft Docs
 ms.date: 09/25/2017
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: report-server-sharepoint
 ms.topic: conceptual
 ms.assetid: ac9136c8-9ef4-484c-8e9d-05008a186db5
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 63cdf3f760c332bfe6d0b7438a1e5778f90295cc
-ms.sourcegitcommit: c19696d3d67161ce78aaa5340964da3256bf602d
-ms.translationtype: HT
+ms.openlocfilehash: d50d7e273be27f6b03d98db40c2da1dc70b23306
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/29/2018
-ms.locfileid: "52617812"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68887751"
 ---
 # <a name="add-reporting-services-content-types-to-a-sharepoint-library"></a>SharePoint ライブラリへの Reporting Services のコンテンツの種類の追加
 
@@ -22,7 +22,7 @@ ms.locfileid: "52617812"
 
 [!INCLUDE [ssrs-previous-versions](../../includes/ssrs-previous-versions.md)]
 
-[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] では、共有データ ソース (.rsds) ファイル、レポート モデル (.smdl)、レポート ビルダーのレポート定義 (.rdl) ファイルを管理する際に使用するコンテンツの種類が、あらかじめ定義されています。 コンテンツの種類として、 **[レポート ビルダー レポート]**、 **[レポート モデル]**、および **[レポート データ ソース]** をライブラリに追加すると、 **[新規作成]** コマンドが有効になり、その種類のドキュメントを新規作成できるようになります。
+[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] では、共有データ ソース (.rsds) ファイル、レポート モデル (.smdl)、レポート ビルダーのレポート定義 (.rdl) ファイルを管理する際に使用するコンテンツの種類が、あらかじめ定義されています。 コンテンツの種類として、 **[レポート ビルダー レポート]** 、 **[レポート モデル]** 、および **[レポート データ ソース]** をライブラリに追加すると、 **[新規作成]** コマンドが有効になり、その種類のドキュメントを新規作成できるようになります。
 
 > [!NOTE]
 > SharePoint と Reporting Services の統合は、SQL Server 2016 以降では使用できません。
@@ -38,7 +38,7 @@ ms.locfileid: "52617812"
 > [!TIP]  
 >  以前にライブラリのコンテンツの種類を構成して **いない** 場合は、コンテンツの種類の管理を有効にしてから、 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] のコンテンツの種類を有効にします。 単一のドキュメント ライブラリでコンテンツの種類の管理を有効にするための手順を参照してください。  
   
- **短いビデオ:** [(SSRS) Enabling Content Types in SharePoint2010.wmv](https://www.youtube.com/watch?v=yqhm3DrtT1w) (https://www.youtube.com/watch?v=yqhm3DrtT1w)。  
+ **短いビデオ:** [(SSRS) Enabling Content Types in SharePoint2010.wmv](https://www.youtube.com/watch?v=yqhm3DrtT1w) (https://www.youtube.com/watch?v=yqhm3DrtT1w) 。  
   
  **このトピックの内容:**  
   
@@ -60,7 +60,7 @@ ms.locfileid: "52617812"
   
 2.  **[サイトの設定]** に移動します。  
   
-    -   SharePoint 2013 の場合、 **[設定]** アイコンをクリックします。 ![SharePoint の設定](../../analysis-services/media/as-sharepoint2013-settings-gear.gif "SharePoint の設定")  
+    -   SharePoint 2013 の場合、 **[設定]** アイコンをクリックします。 ![SharePoint の設定](https://docs.microsoft.com/analysis-services/analysis-services/media/as-sharepoint2013-settings-gear.gif "SharePoint の設定")  
   
     -   SharePoint 2010 の場合、 **[サイトの操作]** をクリックし、 **[サイトの設定]** をクリックします。  
   
@@ -123,7 +123,7 @@ ms.locfileid: "52617812"
   
 ##  <a name="bkmk_enable_content_management_2010"></a> 1 つのドキュメント ライブラリでコンテンツの種類の管理を有効にするには (SharePoint 2010)  
   
-1.  複数のコンテンツの種類を有効にする対象ライブラリを開きます。 ライブラリ メニュー バーに表示されるメニューは、 **[新規作成]**、 **[アップロード]**、 **[アクション]**、および **[設定]** です。 コンテンツの種類を追加する権限を持っていない場合は、 **[設定]** が表示されません。  
+1.  複数のコンテンツの種類を有効にする対象ライブラリを開きます。 ライブラリ メニュー バーに表示されるメニューは、 **[新規作成]** 、 **[アップロード]** 、 **[アクション]** 、および **[設定]** です。 コンテンツの種類を追加する権限を持っていない場合は、 **[設定]** が表示されません。  
   
 2.  **[ライブラリ ツール]** リボンで、 **[ライブラリ]** をクリックします。  
   

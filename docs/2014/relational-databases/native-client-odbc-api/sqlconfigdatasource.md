@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 155d70856ae46a83f07ecd9c5c6848ee74f813dc
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53364314"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63067710"
 ---
 # <a name="sqlconfigdatasource"></a>SQLConfigDataSource
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC ドライバーでは、さまざまなサポートしている[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-特定のキーワード/値ペアのデータ ソース構成属性文字列。  

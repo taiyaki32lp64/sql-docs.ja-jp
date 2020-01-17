@@ -1,6 +1,7 @@
 ---
-title: 論理レコードによる関連行への変更のグループ化 | Microsoft Docs
-ms.custom: ''
+title: 論理レコードによる関連行への変更のグループ化
+description: SQL Server でマージ レプリケーションを使用して、関連する行を 1 つの単位として変更する方法について説明します。
+ms.custom: seo-lt-2019
 ms.date: 03/07/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -14,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: ad76799c-4486-4b98-9705-005433041321
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: a4bebb60c7d40ab7d1a98bbb6c8b28ff64ea7b09
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: a7752007e36d7dd1a2da8522a531b4f46f3b5571
+ms.sourcegitcommit: 02d44167a1ee025ba925a6fefadeea966912954c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54134272"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75321489"
 ---
 # <a name="group-changes-to-related-rows-with-logical-records"></a>論理レコードによる関連行への変更のグループ化
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -41,7 +41,7 @@ ms.locfileid: "54134272"
   
  この例の論理レコードは、単一の **CustID** 値に関連付けられている **Orders** テーブルのすべての行と、 **Orders** テーブル内の行に関連付けられている **OrderItems** テーブルのすべての行で構成されます。 次の図は、Customer2 の論理レコードに含まれる、3 つのテーブルのすべての行を示しています。  
   
- ![値を持つ論理レコードの 3 つのテーブル](../../../relational-databases/replication/merge/media/logical-records-02.gif "値を持つ論理レコードの 3 つのテーブル")  
+ ![値を持つ 3 つのテーブルの論理レコード](../../../relational-databases/replication/merge/media/logical-records-02.gif "値を持つ 3 つのテーブルの論理レコード")  
   
  アーティクル間で論理レコード リレーションシップを定義するには、「 [マージテーブル記事間の論理レコード関係を定義する](../../../relational-databases/replication/publish/define-a-logical-record-relationship-between-merge-table-articles.md)」を参照してください。  
   
@@ -55,7 +55,7 @@ ms.locfileid: "54134272"
 ### <a name="the-application-of-changes-as-a-unit"></a>変更を 1 つの単位として適用  
  論理レコードを使用している場合、マージ処理が接続の切断などで中断されると、関連するレプリケートされた変更の部分的に完了したセットは、ロールバックされます。 たとえば、サブスクライバーが **OrderID** = 6 で新しい注文を追加し、 **OrderItems** テーブルに **OrderID** = 6 用の新しい 2 つの行を **OrderItemID** = 10 および **OrderItemID** = 11 で追加したとします。  
   
- ![値を持つ論理レコードの 3 つのテーブル](../../../relational-databases/replication/merge/media/logical-records-04.gif "値を持つ論理レコードの 3 つのテーブル")  
+ ![値を持つ 3 つのテーブルの論理レコード](../../../relational-databases/replication/merge/media/logical-records-04.gif "値を持つ 3 つのテーブルの論理レコード")  
   
  **OrderID** = 6 の **Orders** 行の処理を完了後、 **OrderItems** 10 および 11 の処理が完了するまでの間にレプリケーション処理が中断されると、論理レコードを使用していない場合、 **OrderID** = 6 の **OrderTotal** 値は、 **OrderItems** 行の **OrderAmount** 値の合計とは一致しません。 論理レコードを使用している場合、 **OrderID** = 6 の **Orders** 行は、関連する **OrderItems** の変更がレプリケートされるまで、コミットされません。  
   
@@ -75,7 +75,7 @@ ms.locfileid: "54134272"
 ## <a name="considerations-for-using-logical-records"></a>論理レコードの使用に関する注意点  
  論理レコードを使用するときは、以下の点に注意してください。  
   
-### <a name="general-considerations"></a>全般的な注意点  
+### <a name="general-considerations"></a>一般的な考慮事項  
   
 -   論理レコード内のテーブルは可能な限り少なくすることをお勧めします。テーブル数は 5 つ以下にすることをお勧めします。  
   
@@ -87,7 +87,7 @@ ms.locfileid: "54134272"
   
     -   **text** および **ntext**  
   
-    -   **image**  
+    -   **画像**  
   
     -   **XML**  
   
@@ -99,7 +99,7 @@ ms.locfileid: "54134272"
   
 -   ビジネス ロジック ハンドラーまたはカスタム競合回避モジュールによるカスタム競合解決は、論理レコードに含まれているアーティクルについてはサポートされていません。  
   
--   パラメーター化されたフィルターを含むパブリケーションで論理レコードが使用されている場合、各サブスクライバーをそのパーティションのスナップショットで初期化する必要があります。 サブスクライバーを別の方法で初期化した場合、マージ エージェントは失敗します。 詳細については、「 [Snapshots for Merge Publications with Parameterized Filters](../../../relational-databases/replication/create-a-snapshot-for-a-merge-publication-with-parameterized-filters.md)」を参照してください。  
+-   パラメーター化されたフィルターを含むパブリケーションで論理レコードが使用されている場合、各サブスクライバーをそのパーティションのスナップショットで初期化する必要があります。 サブスクライバーを別の方法で初期化した場合、マージ エージェントは失敗します。 詳しくは、「 [Snapshots for Merge Publications with Parameterized Filters](../../../relational-databases/replication/create-a-snapshot-for-a-merge-publication-with-parameterized-filters.md)」をご覧ください。  
   
 -   論理レコードに関連する競合は、競合表示モジュールに表示されません。 これらの競合に関する情報を表示するには、レプリケーション ストアド プロシージャを使用します。 詳細については、「[マージ パブリケーションの競合情報の表示 (レプリケーション Transact-SQL プログラミング)](../../../relational-databases/replication/view-conflict-information-for-merge-publications.md)」を参照してください。  
   

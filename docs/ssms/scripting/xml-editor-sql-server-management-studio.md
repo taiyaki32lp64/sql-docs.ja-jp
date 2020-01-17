@@ -14,16 +14,15 @@ f1_keywords:
 helpviewer_keywords:
 - XML Designer [SQL Server Management Studio]
 ms.assetid: 0824a5ce-e67b-4b53-98d9-d371faf2d23c
-author: stevestein
-ms.author: sstein
-manager: craigg
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: adf261e9abf18bce685a98a55c1128c1a121eba4
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: f9b82bec0f3def57ac575b4e338e437c05f0bbd1
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51644149"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68252827"
 ---
 # <a name="xml-editor-sql-server-management-studio"></a>XML エディター (SQL Server Management Studio)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -83,10 +82,10 @@ ms.locfileid: "51644149"
 ## <a name="data-view"></a>データ ビュー  
  データ ビューでは、.xml ファイルを編集するためにデータ グリッドを使用できます。 データ ビューでは、XML ファイルの内容 (タグおよび構造体を除く) だけを編集できます。  
   
- データ ビューは、 **[データ テーブル]** 領域と **[データ]** 領域から構成されます。 **[データ テーブル]** 領域には、XML ファイルに定義されている関係の一覧がその入れ子の順 (最も外側から最も内側の順) に示されます。 **[データ]** 領域は、[データ テーブル] 領域の選択内容に基づいてデータを表示するデータ グリッドです。  
+ データ ビューには 2 つの独立した領域があります: **[データ テーブル]** と **[データ]** です。 **[データ テーブル]** 領域には、XML ファイルに定義されている関係の一覧がその入れ子の順 (最も外側から最も内側の順) に示されます。 **[データ]** 領域は、[データ テーブル] 領域の選択内容に基づいてデータを表示するデータ グリッドです。  
   
 > [!NOTE]  
->  新しく作成された XML ファイルにはデータは含まれていないので、データ ビューに表示することはできません。 また、データ ビューをまったく呼び出すことができない XML ドキュメントのインスタンスもあります。 XML は適切な形式と見なされますが、構造化データではなく、データ ビューへの切り替えが試行されている場合は、"この XML ドキュメントは正しい形式ですが、データ ビューで表示できない構造体を含んでいます。" というメッセージが表示されます。  
+>  新しく作成された XML ファイルにはデータは含まれていないので、データ ビューに表示することはできません。 また、データ ビューをまったく呼び出すことができない XML ドキュメントのインスタンスもあります。 XML は適切な形式と見なされますが、構造化データではない場合、データ ビューに切り替えようとすると次のメッセージが表示されます:「このドキュメントは正しい形式ですが、データ ビューで表示できない構造を含んでいます。」  
   
  データ ビューでは、次の操作を行うことができます。  
   

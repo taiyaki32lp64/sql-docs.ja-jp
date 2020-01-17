@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 5c7f39f3-c261-4f70-8beb-08242d4ac242
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 651bab70f71726beeb9f3b28026e8ee4683c404f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a632e6923ab3127a363650c63533fa548d1acc12
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47731970"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68006120"
 ---
 # <a name="sphelpsrvrole-transact-sql"></a>sp_helpsrvrole (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -40,13 +39,12 @@ sp_helpsrvrole [ [ @srvrolename = ] 'role' ]
 ```  
   
 ## <a name="arguments"></a>引数  
- [  **@srvrolename=** ] **'***ロール***'**  
- 固定サーバー ロールの名前を指定します。 *ロール*は**sysname**、既定値は NULL です。 *ロール*値は次のいずれかを指定できます。  
+`[ @srvrolename = ] 'role'` 固定サーバー ロールの名前です。 *ロール*は**sysname**、既定値は NULL です。 *ロール*値は次のいずれかを指定できます。  
   
 |固定サーバー ロール|説明|  
 |-----------------------|-----------------|  
-|sysadmin|システム管理者。|  
-|securityadmin|セキュリティ管理者。|  
+|sysadmin|システム管理者|  
+|securityadmin|セキュリティ管理者|  
 |serveradmin|サーバー管理者。|  
 |setupadmin|セットアップ管理者。|  
 |processadmin|プロセス管理者。|  
@@ -61,7 +59,7 @@ sp_helpsrvrole [ [ @srvrolename = ] 'role' ]
   
 |列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
-|ServerRole|**sysname**|サーバー ロールの名前。|  
+|ServerRole|**sysname**|サーバー ロールの名前|  
 |説明|**sysname**|サーバー ロールの説明|  
   
 ## <a name="remarks"></a>コメント  
@@ -78,15 +76,15 @@ sp_helpsrvrole [ [ @srvrolename = ] 'role' ]
   
 ## <a name="examples"></a>使用例  
   
-### <a name="a-listing-the-fixed-server-roles"></a>A. 固定サーバー ロールを一覧表示する  
+### <a name="a-listing-the-fixed-server-roles"></a>A. 固定サーバー ロールを一覧表示  
  次のクエリでは、固定サーバー ロールの一覧が返されます。  
   
 ```  
 EXEC sp_helpsrvrole ;  
 ```  
   
-### <a name="b-listing-fixed-and-user-defined-server-roles"></a>B. 固定サーバー ロールおよびユーザー定義のサーバー ロールを一覧表示する  
- 次のクエリでは、固定サーバー ロールとユーザー定義のサーバー ロールの一覧を返します。  
+### <a name="b-listing-fixed-and-user-defined-server-roles"></a>B. 固定の一覧とユーザー定義サーバー ロール  
+ 次のクエリでは、両方の固定とユーザー定義サーバー ロールの一覧を返します。  
   
 ```  
 SELECT * FROM sys.server_principals WHERE type = 'R' ;  
@@ -99,7 +97,7 @@ SELECT * FROM sys.server_principals WHERE type = 'R' ;
 sp_helpsrvrole 'diskadmin' ;  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [セキュリティ ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md)   
  [サーバー レベルのロール](../../relational-databases/security/authentication-access/server-level-roles.md)   
  [sp_addsrvrolemember &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addsrvrolemember-transact-sql.md)   

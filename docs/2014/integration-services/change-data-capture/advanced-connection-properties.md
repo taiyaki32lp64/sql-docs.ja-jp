@@ -7,15 +7,15 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 4edfab68-7e68-45e8-a3f3-a0049ff7eb9e
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 66681c42718e2c71e89eb673f30764af670ede73
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: a7a5744aa2adcaab74ca09bbb962c8c69d985b79
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52770804"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62771518"
 ---
 # <a name="advanced-connection-properties"></a>高度な接続プロパティ
   **[高度な接続プロパティ]** ダイアログ ボックスを使用すると、接続文字列に接続パラメーターをさらに追加できます。  
@@ -31,7 +31,7 @@ ms.locfileid: "52770804"
 > [!IMPORTANT]  
 >  **[高度な接続プロパティ]** ダイアログ ボックスにはログイン資格情報を含めないでください。 このダイアログ ボックスで指定したパラメーターは、ネットワーク経由で渡されるときに暗号化されません。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [CDC デザイナー コンソールへのアクセス](access-the-cdc-designer-console.md)   
  [インスタンスの作成のための SQL サーバー接続](sql-server-connection-for-instance-creation.md)  
   

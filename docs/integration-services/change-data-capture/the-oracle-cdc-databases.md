@@ -8,17 +8,20 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: a96486e9-f79b-4b24-bfaf-56203dd0e435
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: 2dc364cc2665d800e311625d754716e4582b6b65
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 6cce219b5e5d5d324e5e116bb9f55a931d7caaf8
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52392865"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71298627"
 ---
 # <a name="the-oracle-cdc-databases"></a>Oracle CDC データベース
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   Oracle CDC インスタンスは、ターゲット [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスの同名の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データベースに関連付けられます。 このデータベースは、Oracle CDC データベース (または CDC データベース) と呼ばれます。  
   
  CDC データベースは、Oracle CDC デザイナー コンソールを使用して作成および構成されます。このデータベースには次の要素が含まれています。  
@@ -99,7 +102,7 @@ ms.locfileid: "52392865"
 |----------|-----------------|  
 |version|CDC インスタンスの構成のバージョンを追跡します。 このテーブルが更新されたり、キャプチャ インスタンスが追加または削除されたりするたびに更新されます。|  
 |connect_string|Oracle の接続文字列です。 基本的な例を以下に示します。<br /><br /> `<server>:<port>/<instance>` (例: `erp.contoso.com:1521/orcl`)<br /><br /> 接続文字列で Oracle Net 接続記述子を指定することもできます (例: `(DESCRIPTION=(ADDRESS=(PROTOCOL=tcp) (HOST=erp.contoso.com) (PORT=1521)) (CONNECT_DATA=(SERVICE_NAME=orcl)))`)。<br /><br /> ディレクトリ サーバーまたは tnsnames を使用している場合は、接続文字列を接続の名前にすることができます。<br /><br /> Oracle の接続文字列の詳細については、[https://go.microsoft.com/fwlink/?LinkId=231153](https://go.microsoft.com/fwlink/?LinkId=231153) を参照してください。Oracle CDC Service によって使用される Oracle Instant Client の Oracle データベース接続文字列について詳しく説明されています。|  
-|use_windows_authentication|次のいずれかのブール値です。<br /><br /> **0**: 認証のために Oracle のユーザー名とパスワードを指定します (既定値)。<br /><br /> **1**: Windows 認証を使用して Oracle データベースに接続します。 このオプションは、Oracle データベースが Windows 認証と連動するように構成されている場合にのみ使用できます。|  
+|use_windows_authentication|次のいずれかのブール値です。<br /><br /> **0**:認証のために Oracle のユーザー名とパスワードを指定します (既定値)。<br /><br /> **1**:Windows 認証を使用して Oracle データベースに接続します。 このオプションは、Oracle データベースが Windows 認証と連動するように構成されている場合にのみ使用できます。|  
 |username|ログ マイニング Oracle データベース ユーザーの名前です。 **use_windows_authentication = 0**の場合のみ必須です。|  
 |パスワード|ログ マイニング Oracle データベース ユーザーのパスワードです。 **use_windows_authentication = 0**の場合のみ必須です。|  
 |transaction_staging_timeout|メモリに保持されている、コミットされていない Oracle トランザクションが **cdc.xdbcdc_staged_transactions** テーブルに書き込まれるまでの時間 (秒) です。 既定値は 120 秒です。|  
@@ -142,8 +145,8 @@ ms.locfileid: "52392865"
 |----------|-----------------|  
 |ステータス|現在の Oracle CDC インスタンスの現在の状態コードです。 CDC の現在の状態を表します。|  
 |sub_status|現在の状態に関する追加情報を提供する二次的な状態です。|  
-|active|次のいずれかのブール値です。<br /><br /> **0**: Oracle CDC インスタンス プロセスはアクティブではありません。<br /><br /> **1**: Oracle CDC インスタンス プロセスはアクティブです。|  
-|error|次のいずれかのブール値です。<br /><br /> **0**: Oracle CDC インスタンス プロセスはエラー状態ではありません。<br /><br /> **1**: Oracle CDC インスタンスはエラー状態です。|  
+|active|次のいずれかのブール値です。<br /><br /> **0**:Oracle CDC インスタンス プロセスはアクティブではありません。<br /><br /> **1**:Oracle CDC インスタンス プロセスはアクティブです。|  
+|error|次のいずれかのブール値です。<br /><br /> **0**:Oracle CDC インスタンス プロセスはエラー状態ではありません。<br /><br /> **1**:Oracle CDC インスタンスはエラー状態です。|  
 |status_message|エラーまたは状態の説明を表す文字列です。|  
 |TIMESTAMP|キャプチャ状態が最後に更新された時刻 (UTC) のタイムスタンプです。|  
 |active_capture_node|現在 Oracle CDC Service と (Oracle トランザクション ログを処理している) Oracle CDC インスタンスを実行しているホストの名前です (クラスターのノードの場合があります)。|  

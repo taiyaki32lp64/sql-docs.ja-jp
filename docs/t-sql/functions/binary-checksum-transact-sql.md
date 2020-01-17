@@ -16,23 +16,22 @@ helpviewer_keywords:
 - BINARY_CHECKSUM function
 - binary [SQL Server], checksum values
 ms.assetid: 07fece4d-58e3-446e-a3b5-92fe24d2d1fb
-author: MashaMSFT
-ms.author: mathoma
-manager: craigg
+author: MikeRayMSFT
+ms.author: mikeray
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: ef3f36df1c96d2909e401b83441ddeb7f3cc9d31
-ms.sourcegitcommit: 032273bfbc240fe22ac6c1f6601a14a6d99573f7
+ms.openlocfilehash: 506f3f0e79501b16ea5455ab1ff4d4ee83a7abff
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/01/2019
-ms.locfileid: "55513879"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68040208"
 ---
-# <a name="binarychecksum--transact-sql"></a>BINARY_CHECKSUM (TRANSACT-SQL)
+# <a name="binarychecksum--transact-sql"></a>BINARY_CHECKSUM (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-asdw-xxx-md.md)]
 
 テーブルの 1 つの行、または一連の式に対して計算された、バイナリのチェックサム値を返します。
   
-![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
+![記事のリンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "記事のリンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
 ## <a name="syntax"></a>構文  
   
@@ -43,7 +42,7 @@ BINARY_CHECKSUM ( * | expression [ ,...n ] )
 ## <a name="arguments"></a>引数  
 *\**  
 計算がすべてのテーブルの列に対して行われることを指定します。 BINARY_CHECKSUM の計算では、比較できないデータ型の列は無視されます。 比較できないデータ型は次のとおりです。  
-* **カーソル (cursor)**  
+* **cursor**  
 * **image**  
 * **ntext**  
 * **text**  
@@ -58,11 +57,11 @@ BINARY_CHECKSUM ( * | expression [ ,...n ] )
  **int**
   
 ## <a name="remarks"></a>Remarks  
-テーブルの任意の行で計算される `BINARY_CHECKSUM(*)` では、行が変更されていない限り、同じ値が返されます。 `BINARY_CHECKSUM` はハッシュ関数のプロパティに対応します。2 つの式のリストに適用した場合、2 つのリストの対応する要素のデータ型が同じであり、等号 (=) 演算子による比較で等価であれば、同じ値が返されます。 この定義では、指定した型が NULL 値であるとすると、等しい値として比較されます。 式リストのいずれかの値を変更した場合は、その式のチェックサムも変わります。 ただし、これは保証されません。 そのため、値が変更されたかどうかを検出する際には、アプリケーションが変更を検出できないことを許容できる場合のみ、`BINARY_CHECKSUM` の使用をお勧めします。 それ以外の場合は、代わりに `HASHBYTES` の使用を検討してください。 MD5 ハッシュ アルゴリズムを指定した場合は、`HASHBYTES` から 2 つの異なる入力に対して同じ結果が返される可能性が `BINARY_CHECKSUM` よりもはるかに低くなります。
+テーブルの任意の行で計算される `BINARY_CHECKSUM(*)` では、行が後で変更されていない限り、同じ値が返されます。 `BINARY_CHECKSUM` はハッシュ関数のプロパティに対応します。2 つの式のリストに適用した場合、2 つのリストの対応する要素のデータ型が同じであり、等号 (=) 演算子による比較で等価であれば、同じ値が返されます。 この定義では、指定した型が NULL 値であるとすると、等しい値として比較されます。 式リストのいずれかの値を変更した場合は、その式のチェックサムも変わります。 ただし、この変更は保証されていないため、値が変更されたかどうかを検出するには、アプリケーションが変更を検出できないことを許容できる場合のみ、`BINARY_CHECKSUM` の使用をお勧めします。 それ以外の場合は、代わりに `HASHBYTES` の使用を検討してください。 MD5 ハッシュ アルゴリズムを指定した場合は、`HASHBYTES` から 2 つの異なる入力に対して同じ結果が返される可能性が `BINARY_CHECKSUM` よりもはるかに低くなります。
   
 `BINARY_CHECKSUM` は式のリスト全体を処理でき、指定されたリストに対して同じ値を返します。 `BINARY_CHECKSUM` を 2 つの式のリストに適用した場合、2 つのリストの対応する要素が同じ型と同じバイト表現であれば、同じ値が返されます。 この定義では、指定した型の値が NULL であった場合、これらの値は同じバイト表現として扱われます。
   
-`BINARY_CHECKSUM` と `CHECKSUM` は類似する関数です。 式のリストにあるチェックサム値を計算するために使用でき、式の順序は結果となる値に影響します。 `BINARY_CHECKSUM(*)` で使用される列の順序は、テーブルまたはビュー定義に指定された列の順序です。 これには、計算列が含まれます。
+`BINARY_CHECKSUM` と `CHECKSUM` は類似する関数です。 式のリストにあるチェックサム値を計算するために使用でき、式の順序は結果となる値に影響します。 `BINARY_CHECKSUM(*)` で使用される列の順序は、テーブルまたはビュー定義に指定された列の順序です。 この順序には、計算列が含まれます。
   
 ロケールによっては、異なる表現の文字列が等しいとして比較される場合があります。このような場合、`BINARY_CHECKSUM` と `CHECKSUM` では文字列データ型に対して異なる値が返されます。 文字列データ型は次のとおりです。  
 
@@ -71,7 +70,7 @@ BINARY_CHECKSUM ( * | expression [ ,...n ] )
 * **nvarchar**  
 * **varchar**  
 
-または  
+内の複数の  
 
 * **sql_variant** (**sql_variant** の基本データ型が文字列データ型の場合)。  
   
@@ -98,9 +97,9 @@ GO
 ```  
   
 ## <a name="see-also"></a>参照
-[集計関数 (&) #40 です。TRANSACT-SQL と #41 です。](../../t-sql/functions/aggregate-functions-transact-sql.md)  
+[集計関数 &#40;Transact-SQL&#41;](../../t-sql/functions/aggregate-functions-transact-sql.md)  
 [CHECKSUM_AGG &#40;Transact-SQL&#41;](../../t-sql/functions/checksum-agg-transact-sql.md)  
-[チェックサム (&) #40 です。TRANSACT-SQL と #41 です。](../../t-sql/functions/checksum-transact-sql.md)  
-[HASHBYTES (&) #40 です。TRANSACT-SQL と #41 です。](../../t-sql/functions/hashbytes-transact-sql.md)  
+[CHECKSUM &#40;Transact-SQL&#41;](../../t-sql/functions/checksum-transact-sql.md)  
+[HASHBYTES &#40;Transact-SQL&#41;](../../t-sql/functions/hashbytes-transact-sql.md)  
   
   

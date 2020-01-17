@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 helpviewer_keywords:
 - subscriptions [Reporting Services], report distribution
@@ -19,15 +18,15 @@ helpviewer_keywords:
 - subscriptions [Reporting Services], about subscriptions
 - subscriptions [Reporting Services]
 ms.assetid: be7ec052-28e2-4558-bc09-8479e5082926
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 189605c6de3115d873ce6411d3d64da605126e7e
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: f598946ec6231d1ca5edacf1810431beb4638f88
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56037973"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66100667"
 ---
 # <a name="subscriptions-and-delivery-reporting-services"></a>サブスクリプションと配信 (Reporting Services)
   [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] サブスクリプションは、特定の時刻で、またはイベントへの応答として、指定されたファイル形式でレポートを配信する構成です。 たとえば、毎週水曜日に、MonthlySales.rdl レポートを Microsoft Word 文書としてファイル共有に保存します。 サブスクリプションを使用して、レポート配信のスケジュールや自動化を設定したり、レポート パラメーターの特定の値セットを指定したりすることができます。  
@@ -104,7 +103,7 @@ ms.locfileid: "56037973"
 |要件|説明|  
 |-----------------|-----------------|  
 |アクセス許可|レポートへのアクセス権は必須です。 レポートをサブスクライブするには、レポートを表示する権限が必要です。<br /><br /> ロールの割り当てには、"個別のサブスクリプションを管理" タスクを含める必要があります。|  
-|格納された資格情報|サブスクリプションを作成するには、レポートが保存された資格情報を使用するか、または実行時にデータを取得するために資格情報を使用しないことが必要です。 現在のユーザーの資格情報の権限借用や委任を使用して外部データ ソースに接続するように構成されているレポートは、サブスクライブすることはできません。 保存された資格情報は、Windows アカウントまたはデータベース ユーザー アカウントのいずれかです。 詳細については、「 [レポート データ ソースに関する資格情報と接続情報を指定する](../report-data/specify-credential-and-connection-information-for-report-data-sources.md)」を参照してください。<br /><br /> レポートを閲覧するための権限のほか、各サブスクリプションを作成するための権限を所有していることが必要です。 レポート サーバーでは、**[定期的なイベントおよびレポート配信]** が有効になっている必要があります。 詳細については、「 [ネイティブ モード レポート サーバーのサブスクリプションの作成と管理](../create-manage-subscriptions-native-mode-report-servers.md)」を参照してください。|  
+|格納された資格情報|サブスクリプションを作成するには、レポートが保存された資格情報を使用するか、または実行時にデータを取得するために資格情報を使用しないことが必要です。 現在のユーザーの資格情報の権限借用や委任を使用して外部データ ソースに接続するように構成されているレポートは、サブスクライブすることはできません。 保存された資格情報は、Windows アカウントまたはデータベース ユーザー アカウントのいずれかです。 詳細については、「 [レポート データ ソースに関する資格情報と接続情報を指定する](../report-data/specify-credential-and-connection-information-for-report-data-sources.md)」を参照してください。<br /><br /> レポートを閲覧するための権限のほか、各サブスクリプションを作成するための権限を所有していることが必要です。 レポート サーバーでは、 **[定期的なイベントおよびレポート配信]** が有効になっている必要があります。 詳細については、「 [ネイティブ モード レポート サーバーのサブスクリプションの作成と管理](../create-manage-subscriptions-native-mode-report-servers.md)」を参照してください。|  
 |レポート内のユーザー依存の値|標準的なサブスクリプションに限り、ユーザー アカウント情報をフィルターに組み込んだレポートや、レポートに表示されるテキストとしてのレポートのサブスクリプションを作成できます。 レポートでは、現在のユーザーとして解釈される `User!UserID` 式を使用して、ユーザー アカウント名を指定します。 サブスクリプションを作成する時点では、サブスクリプションを作成するユーザーが現在のユーザーとして想定されます。|  
 |モデル アイテム セキュリティは無効|モデルにモデル アイテム セキュリティの設定が含まれている場合、データ ソースとしてモデルを使用するレポート ビルダー レポートをサブスクライブすることはできません。 この制限は、モデル アイテム セキュリティを使用するレポートのみが対象となります。|  
 |パラメーターの値|レポートでパラメーターを使用する場合、レポート自体または定義するサブスクリプションでパラメーター値を指定する必要があります。 レポートで既定値が定義されている場合は、パラメーター値でその既定値を使用するように設定できます。|  

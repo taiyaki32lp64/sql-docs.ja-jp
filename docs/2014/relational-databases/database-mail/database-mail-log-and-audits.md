@@ -17,11 +17,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: e500eb47af39502e1bcf59f60b3dd24fed0713fa
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52787244"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62872129"
 ---
 # <a name="database-mail-log-and-audits"></a>データベース メールのログ記録と監査
   データベース メールのログ記録機能は、問題の特定および修正の手段を提供する目的でデザインされました。 データベース メールは、 **msdb** データベースにログ情報を格納します。 データベース メールの電子メールの内容、電子メールの状態、エラーなどの受信メッセージがデータベース メールによってログに記録され、トラブルシューティングや監査のために使用できます。  
@@ -40,7 +40,7 @@ ms.locfileid: "52787244"
 |データベース メールのメッセージ、添付ファイル、およびログ エントリのクリーンアップ|[sysmail_delete_mailitems_sp &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sysmail-delete-mailitems-sp-transact-sql)<br /><br /> [sysmail_delete_log_sp &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sysmail-delete-log-sp-transact-sql)|  
 |データベース メールのメッセージとログのアーカイブ|[データベース メール メッセージやイベント ログをアーカイブする SQL Server エージェント ジョブの作成](create-a-sql-server-agent-job-to-archive-database-mail-messages-and-event-logs.md)|  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [リソースの利用状況の監視 &#40;システム モニター&#41;](../performance-monitor/monitor-resource-usage-system-monitor.md)  
   
   

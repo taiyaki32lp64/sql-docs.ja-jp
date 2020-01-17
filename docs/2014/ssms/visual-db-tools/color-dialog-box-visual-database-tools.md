@@ -13,11 +13,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 29d748f6ff75fc46bef3f667e50aa9cbd92bff5f
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52800284"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62936697"
 ---
 # <a name="color-dialog-box-visual-database-tools"></a>[色の設定] ダイアログ ボックス (Visual Database Tools)
   **[色の設定]** ダイアログ ボックスは、ユーザーが選択した色の RGB 値を返します。 ユーザーは、ディスプレイ ドライバーによって決定された一連の基本色または作成した一連の色から選択できます。 基本色を選択するか、カスタムの色を作成します。 カラー マトリックスに表示された色をクリックするか、 **[色合い]**、 **[鮮やかさ]**、 **[明るさ]**、 **[赤]**、 **[緑]**、 **[青]** の各テキスト ボックスに入力して、色を定義します。  

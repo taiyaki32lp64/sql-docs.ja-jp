@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: b299b20d-d1cd-45b3-91dc-dcf579498570
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 9735b94f6b888f3ee83f7c9e807d4d8ecef22cdb
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: c36d7980355eed1e1a1e8f42fb53c75fdb70d0ed
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47672850"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67976950"
 ---
 # <a name="jdbccompliant-method-sqlserverdriver"></a>jdbcCompliant メソッド (SQLServerDriver)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -39,7 +38,7 @@ public boolean jdbcCompliant()
  JDBC ドライバーが最低限の要件を満たしている場合は **true** です。 それ以外の場合は、 **false**です。  
   
 ## <a name="remarks"></a>Remarks  
- この jdbcCompliant メソッドは、java.sql.Driver インターフェイスで jdbcCompliant メソッドによって指定されます。  
+ この jdbcCompliant メソッドは、java. .sql. Driver インターフェイスの jdbcCompliant メソッドによって指定されます。  
   
 ## <a name="see-also"></a>参照  
  [SQLServerDriver のメソッド](../../../connect/jdbc/reference/sqlserverdriver-methods.md)   

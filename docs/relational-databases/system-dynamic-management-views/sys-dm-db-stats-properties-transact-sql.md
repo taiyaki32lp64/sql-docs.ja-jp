@@ -19,16 +19,15 @@ helpviewer_keywords:
 ms.assetid: 8a54889d-e263-4881-9fcb-b1db410a9453
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 19a5f2f82fd46b8aa4c3f54b62287f447c8b2c1a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 274e801bfb8e627564f5586574c16ecd916e9859
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47845140"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67910712"
 ---
-# <a name="sysdmdbstatsproperties-transact-sql"></a>sys.dm_db_stats_properties (Transact-SQL)
+# <a name="sysdmdbstatsproperties-transact-sql"></a>sys.dm_db_stats_properties (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   現在の指定されたデータベース オブジェクト (テーブルまたはインデックス付きビュー) の統計情報のプロパティを返します[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]データベース。 パーティション分割されたテーブルの場合と同様を参照してください[sys.dm_db_incremental_stats_properties](../../relational-databases/system-dynamic-management-views/sys-dm-db-incremental-stats-properties-transact-sql.md)します。 
@@ -50,21 +49,21 @@ sys.dm_db_stats_properties (object_id, stats_id)
   
 |列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
-|object_id|**int**|統計オブジェクトのプロパティを返す対象であるオブジェクト (テーブルまたはインデックス付きビュー) の ID。|  
-|stats_id|**int**|統計オブジェクトの ID。 テーブルまたはインデックス付きビューで一意です。 詳細については、「[sys.stats &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-stats-transact-sql.md)」を参照してください。|  
+|object_id|**int**|統計オブジェクトのプロパティを取得する対象のオブジェクト (テーブルまたはインデックス付きビュー) の ID。|  
+|stats_id|**int**|統計オブジェクトの ID。 テーブルまたはインデックス付きビュー内で一意です。 詳細については、「[sys.stats &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-stats-transact-sql.md)」を参照してください。|  
 |last_updated|**datetime2**|オブジェクトが最後に更新された日付と時刻。 詳細については、このページの「[解説](#Remarks)」セクションを参照してください。|  
 |rows|**bigint**|テーブルまたはインデックス付きビューの統計が最後に更新されたときに行の合計数。 統計がフィルター選択されている場合、またはフィルター選択されたインデックスに対応している場合は、行数がテーブルの行数よりも少なくなることがあります。|  
 |rows_sampled|**bigint**|統計の計算時にサンプリングされた行の合計数。|  
 |steps|**int**|ヒストグラムの区間の数。 詳細については、「 [DBCC SHOW_STATISTICS &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-show-statistics-transact-sql.md)には含まれていません。|  
 |unfiltered_rows|**bigint**|フィルター式を適用する前のテーブル内の行の合計数 (フィルター選択された統計情報の場合)。 統計がフィルター選択されていない場合は unfiltered_rows は行の列に返される値と同じです。|  
 |modification_counter|**bigint**|統計情報が前回更新されてから先頭の統計列 (構築するヒストグラムの基になる列) に対して行われた変更の総数。<br /><br /> メモリ最適化テーブル: 開始[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]し[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]この列が含まれます: 前回の統計が更新されたか、データベースの再起動以降にこのテーブルの変更の合計数。|  
-|persisted_sample_percent|**float**|サンプリングの割合を明示的に指定しない統計情報の更新に使用される永続化されたサンプルのパーセンテージです。 値がゼロの場合、永続化されたサンプルのパーセンテージがこの統計に設定されていません。<br /><br /> [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1 CU4 **に適用されます**。|  
+|persisted_sample_percent|**float**|サンプリングの割合を明示的に指定しない統計情報の更新に使用される永続化されたサンプルのパーセンテージです。 値がゼロの場合、永続化されたサンプルのパーセンテージがこの統計に設定されていません。<br /><br /> **適用対象:** [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1 CU4|  
   
 ## <a name="Remarks"></a> 解説  
  **sys.dm_db_stats_properties**次の条件のいずれかで空の行セットを返します。  
   
 -   **object_id**または**stats_id**は NULL です。    
--   指定したオブジェクトが見つからないか、テーブルまたはインデックス付きビューに対応しない。    
+-   指定したオブジェクトが見つからないか、テーブルまたはインデックス付きビューに対応していません。    
 -   指定した統計 ID が、指定したオブジェクト ID の既存の統計情報に対応しない。    
 -   現在のユーザーに統計オブジェクトを表示する権限がない。  
   
@@ -84,8 +83,8 @@ sys.dm_db_stats_properties (object_id, stats_id)
 SELECT * FROM sys.dm_db_stats_properties (object_id('Person.Person'), 1);
 ``` 
   
-### <a name="b-returning-all-statistics-properties-for-a-table"></a>B. テーブルのすべての統計プロパティを返す  
- 次の例では、テーブル TEST に関して存在するすべての統計のプロパティを返します。  
+### <a name="b-returning-all-statistics-properties-for-a-table"></a>B. テーブルのすべての統計のプロパティを返す  
+ 次の例は、テーブル TEST に関して存在するすべての統計のプロパティを返します。  
   
 ```sql  
 SELECT sp.stats_id, name, filter_definition, last_updated, rows, rows_sampled, steps, unfiltered_rows, modification_counter   
@@ -105,7 +104,7 @@ CROSS APPLY sys.dm_db_stats_properties(stat.object_id, stat.stats_id) AS sp
 WHERE modification_counter > 1000;  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [DBCC SHOW_STATISTICS &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-show-statistics-transact-sql.md)   
  [sys.stats &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-stats-transact-sql.md)   
  [オブジェクト関連の動的管理ビューおよび関数 &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/object-related-dynamic-management-views-and-functions-transact-sql.md)   

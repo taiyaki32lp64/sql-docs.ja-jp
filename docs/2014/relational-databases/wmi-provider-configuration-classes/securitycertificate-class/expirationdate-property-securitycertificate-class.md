@@ -19,11 +19,11 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: 54a1bed6d43deb132dc4acc125e2948852bf7574
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53363834"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63242729"
 ---
 # <a name="expirationdate-property-securitycertificate-class"></a>ExpirationDate プロパティ (SecurityCertificate クラス)
   セキュリティ証明書が有効でなくなる日付を取得します。  

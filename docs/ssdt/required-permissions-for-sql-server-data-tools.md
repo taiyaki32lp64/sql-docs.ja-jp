@@ -8,15 +8,14 @@ ms.technology: ssdt
 ms.reviewer: ''
 ms.topic: conceptual
 ms.assetid: b27038c4-94ab-449c-90b7-29d87ce37a8b
-author: stevestein
-ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 58d283ffaf2c8efd2b360a977af17d985117a2ef
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 4199109ef0492a23206233c82b6051b88564cc26
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47682232"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68110764"
 ---
 # <a name="required-permissions-for-sql-server-data-tools"></a>SQL Server Data Tools に必要な権限
 Visual Studio でデータベースに対してアクションを実行する前に、そのデータベースに対して特定の権限を持つアカウントを使用してログオンする必要があります。 必要となる特定の権限は、実行するアクションによって異なります。 以下のセクションでは、実行する各アクションと、そのアクションの実行に必要な特定の権限について説明します。  
@@ -63,8 +62,8 @@ Visual Studio でデータベースに対してアクションを実行する前
 |テスト アクションを実行する|実行コンテキストのデータベース接続を使用する必要があります。 詳細については、「[接続文字列とアクセス許可の概要](../ssdt/overview-of-connection-strings-and-permissions.md)」を参照してください。|  
 |事前テスト アクションまたは事後テスト アクションを実行する|特権コンテキストのデータベース接続を使用する必要があります。 このデータベース接続では、実行コンテキスト接続よりも多くの権限が認められます。|  
 |TestInitialize スクリプトと TestCleanup スクリプトを実行する|特権コンテキストのデータベース接続を使用する必要があります。|  
-|テストの実行前にデータベースの変更を配置する|特権コンテキストのデータベース接続を使用する必要があります。 詳細については、「[SQL Server の単体テストの実行を構成する方法](../ssdt/how-to-configure-sql-server-unit-test-execution.md)」を参照してください。|  
-|テストの実行前にデータを生成する|特権コンテキストのデータベース接続を使用する必要があります。 詳細については、「[SQL Server の単体テストの実行を構成する方法](../ssdt/how-to-configure-sql-server-unit-test-execution.md)」を参照してください。|  
+|テストの実行前にデータベースの変更を配置する|特権コンテキストのデータベース接続を使用する必要があります。 詳細については、「[ソフト NUMA を使用するようにSQL Server の単体テストの実行を構成する方法](../ssdt/how-to-configure-sql-server-unit-test-execution.md)」を参照してください。|  
+|テストの実行前にデータを生成する|特権コンテキストのデータベース接続を使用する必要があります。 詳細については、「[ソフト NUMA を使用するようにSQL Server の単体テストの実行を構成する方法](../ssdt/how-to-configure-sql-server-unit-test-execution.md)」を参照してください。|  
   
 ## <a name="DataGenerationPermissions"></a>データを生成する権限  
 データ ジェネレーターを使用してテスト データを生成するには、ターゲット データベース内のオブジェクトに対する **INSERT** 権限と **SELECT** 権限が必要です。 データを生成する前にデータを消去する場合は、ターゲット データベース内のオブジェクトに対する **DELETE** 権限も必要です。 テーブルの **IDENTITY** 列を再設定するには、そのテーブルを所有しているか、db_owner ロールまたは db_ddladmin ロールのメンバーである必要があります。  

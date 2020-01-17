@@ -8,16 +8,15 @@ ms.reviewer: ''
 ms.technology: ssms
 ms.topic: conceptual
 ms.assetid: 0fc668d4-6244-4fef-b90e-62d2c776cd7c
-author: stevestein
-ms.author: sstein
-manager: craigg
+author: markingmyname
+ms.author: maghan
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 7cce2c7f4303d3c293862e989b4cb70e4ab58a20
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: 178e2e6305cb7be46d1ae8f398d100427b91b34d
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51700700"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68267562"
 ---
 # <a name="list-job-category-information"></a>ジョブ カテゴリ情報の一覧の表示
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -29,7 +28,7 @@ ms.locfileid: "51700700"
   
 -   **作業を開始する準備:**  
   
-    [Security](#Security)  
+    [セキュリティ](#Security)  
   
 -   **ジョブ カテゴリ情報の一覧を表示する方法:**  
   
@@ -39,7 +38,7 @@ ms.locfileid: "51700700"
   
 ## <a name="BeforeYouBegin"></a>はじめに  
   
-### <a name="Security"></a>Security  
+### <a name="Security"></a>セキュリティ  
 詳細については、「 [Implement SQL Server Agent Security](../../ssms/agent/implement-sql-server-agent-security.md)」をご覧ください。  
   
 ## <a name="TSQL"></a>Transact-SQL の使用  

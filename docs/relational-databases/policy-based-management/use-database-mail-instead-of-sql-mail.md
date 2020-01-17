@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: b08df7be-d8be-4184-a661-38ec0ac85cd1
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: 6cba711740695f692f6c5bbca20c19353ef35c5f
-ms.sourcegitcommit: ef6e3ec273b0521e7c79d5c2a4cb4dcba1744e67
+ms.openlocfilehash: c029883591c49c1be52d23a025ff522b4095a6f5
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51512647"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68069153"
 ---
 # <a name="use-database-mail-instead-of-sql-mail"></a>SQL Mail ではなくデータベース メールを使用する
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

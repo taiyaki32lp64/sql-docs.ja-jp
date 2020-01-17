@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.bidtoolset.connsqlserveras.f1
@@ -13,12 +12,12 @@ ms.assetid: 7f3244ee-b690-471c-893d-68e361c2d416
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 350251b6813027455f8e1e9b83dcf2508371df70
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: fe8eee02d019b5cf68e257b3fac4266a18ead795
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48129852"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66087027"
 ---
 # <a name="connect-to-microsoft-sql-server-analysis-services-ssas"></a>[Microsoft SQL Server Analysis Service への接続] (SSAS)
   このページで、**テーブルのインポート ウィザード**Microsoft SQL Server Analysis Services キューブまたは SharePoint でホストされている PowerPivot ブックからデータをインポートする設定を指定することができます。 [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]からウィザードにアクセスするには、 **[モデル]** メニューの **[データ ソースからのインポート]** をクリックします。  

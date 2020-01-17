@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 686b9a4a-ea61-4263-9ab8-f444a3077679
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: b9c9e3f77ef7d94fa1847bb1df9f846423ec56fc
-ms.sourcegitcommit: ef6e3ec273b0521e7c79d5c2a4cb4dcba1744e67
+ms.openlocfilehash: 6d0491eb44eb2880927aef006ccc705230ab1940
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51512387"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68021649"
 ---
 # <a name="set-the-pageverify-database-option-to-checksum"></a>PAGE_VERIFY データベース オプションを CHECKSUM に設定
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

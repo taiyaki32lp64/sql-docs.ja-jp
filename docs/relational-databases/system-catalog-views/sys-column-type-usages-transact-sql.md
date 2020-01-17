@@ -19,15 +19,14 @@ helpviewer_keywords:
 ms.assetid: 1ead375e-f662-4837-903f-8947496c51e4
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: 4b4cc317872d81572c4994d54459e3de55b8d25f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 5dc3ff14375d0e07a1235f0ba79ed36e3e084e58
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47742640"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68139992"
 ---
-# <a name="syscolumntypeusages-transact-sql"></a>sys.column_type_usages (Transact-SQL)
+# <a name="syscolumntypeusages-transact-sql"></a>sys.column_type_usages (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   ユーザー定義型の列ごとに 1 行のデータを保持します。  

@@ -15,15 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - ShortestLineTo method (geography)
 ms.assetid: 9d7c9885-5d1b-49ae-af31-5ef9fb8acaba
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: c495bd27ef5464b0fa56b94513c24eeb4641240e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: MladjoA
+ms.author: mlandzic
+ms.openlocfilehash: 7844f1d38f5d2e6f36f971eb83d8961596483142
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47689210"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68042613"
 ---
 # <a name="shortestlineto-geography-data-type"></a>ShortestLineTo (geography データ型)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
@@ -44,7 +43,7 @@ ms.locfileid: "47689210"
 ## <a name="return-types"></a>戻り値の型  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 戻り値の型: **geography**  
   
- CLR の戻り値の型: **SqlGeography**  
+ CLR の戻り値の型:**SqlGeography**  
   
 ## <a name="remarks"></a>Remarks  
  このメソッドでは、比較対象の 2 つの交差しない **geography** インスタンスの境界上にあるエンドポイントを持つ **LineString** インスタンスが返されます。 返される **LineString** インスタンスの長さは、2 つの **geography** インスタンスの間の最短距離です。 2 つの **geography** インスタンスが相互に交差している場合、空の **LineString** インスタンスが返されます。  

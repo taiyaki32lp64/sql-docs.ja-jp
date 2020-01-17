@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 6fffee7d-891f-4d9d-b2c3-dd19855a1c2c
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 73aca1900afc191dd3df795b1716b624d5c36201
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 12b27321182e19d2a366e44c0a5ad1c325ee486d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52527648"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68075032"
 ---
 # <a name="distributed-replay-requirements"></a>Distributed Replay Requirements
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -27,7 +26,7 @@ ms.locfileid: "52527648"
 ### <a name="input-trace-versions"></a>入力トレースのバージョン  
  分散再生は、次のバージョンの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]で収集される入力トレース データをサポートします。  
   
--   [!INCLUDE[ssSQL15](../../includes/sssqlv14-md.md)]  累積更新プログラム 1 以降。 参照してください - [SQL Server 2017 の累積的な更新](https://aka.ms/sql2017cu)します。
+-   [!INCLUDE[ssSQL15](../../includes/sssqlv14-md.md)]累積的な更新プログラム1以降。 [SQL Server 2017 の累積的な更新プログラム](https://aka.ms/sql2017cu)を参照してください。
 -   [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]   
 -   [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]  
 -   [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]  

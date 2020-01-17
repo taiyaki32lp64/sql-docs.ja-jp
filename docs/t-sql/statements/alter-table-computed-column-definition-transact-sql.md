@@ -14,15 +14,14 @@ helpviewer_keywords:
 ms.assetid: 746eabda-3b4f-4940-b0b5-1c379f5cf7a5
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: 7ffaa3267a512fc85b223290c76e239013612d11
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 7eaa4c35079d8eec49d7197778a01b7bac6cf9c1
+ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47672000"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "73982041"
 ---
-# <a name="alter-table-computedcolumndefinition-transact-sql"></a>ALTER TABLE computed_column_definition (Transact-SQL)
+# <a name="alter-table-computed_column_definition-transact-sql"></a>ALTER TABLE computed_column_definition (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   [ALTER TABLE](../../t-sql/statements/alter-table-transact-sql.md) を使ってテーブルに追加された計算列のプロパティを指定します。  
@@ -56,7 +55,7 @@ column_name AS computed_column_expression
  変更、追加、または削除する列の名前を指定します。 *column_name* の有効文字数は、1 ～ 128 文字です。 **timestamp** データ型で作成された新しい列の場合、*column_name* は省略できます。 **timestamp** データ型の列に対して *column_name* を指定しない場合には、名前 **timestamp** が使われます。  
   
 *computed_column_expression*  
- 計算列の値を定義する式です。 計算列は仮想列であり、テーブル内に物理的に格納されている列ではありません。したがって、式を基にして同じテーブル内の別の列を使用して計算されます。 たとえば、計算列は cost AS price * qty のように定義できます。式には、非計算列の名前、定数、関数、および変数のほか、これらを 1 つ以上の演算子によって結合した組み合わせを使用できます。 サブクエリを式にすることはできません。また、別名データ型を含むこともできません。  
+ 計算列の値を定義する式です。 計算列は仮想列であり、テーブル内に物理的に格納されている列ではありません。したがって、式を基にして同じテーブル内の別の列を使用して計算されます。 たとえば、計算列は cost AS price * qty のように定義できます。式には、非計算列の名前、定数、関数、変数、および 1 つ以上の演算子によってこれらを結合した組み合わせを使用できます。 サブクエリを式にすることはできません。また、別名データ型を含むこともできません。  
   
  計算列は、選択リスト、WHERE 句、ORDER BY 句、および正規表現を使用できるその他の場所で使用できます。ただし、次の場合は除きます。  
   
@@ -73,7 +72,7 @@ PERSISTED
  [!INCLUDE[ssDE](../../includes/ssde-md.md)]で、計算値をテーブルに物理的に保存し、依存する計算列のいずれかが更新された場合にその値を更新するように指定します。 計算列に PERSISTED とマークを付けることで、計算列に対し、完全ではないものの決定性のあるインデックスを作成することができます。 詳細については、「 [計算列のインデックス](../../relational-databases/indexes/indexes-on-computed-columns.md)」を参照してください。 パーティション テーブルのパーティション分割列として使用する計算列は、明示的に PERSISTED のマークを付ける必要があります。 PERSISTED が指定されている場合、*computed_column_expression* は決定的である必要があります。 
 
 NULL | NOT NULL  
- 列で NULL 値を許容するかどうかを指定します。 NULL は厳密には制約ではありませんが、NOT NULL と同じように指定することができます。 計算列で NOT NULL を指定できるのは、同時に PERSISTED も指定した場合だけです。  
+ 列で NULL 値を許容するかどうかを指定します。 NULL は厳密には制約ではありませんが、NOT NULL と同じように指定することができます。 計算列で NOT NULL を指定できるのは、PERSISTED も指定した場合のみです。  
   
 CONSTRAINT  
  PRIMARY KEY または UNIQUE 制約の定義の開始を指定します。  
@@ -99,7 +98,7 @@ WITH FILLFACTOR =*fillfactor*
 >  マニュアルには、WITH FILLFACTOR = *fillfactor* が PRIMARY KEY 制約または UNIQUE 制約に適用される唯一のインデックス オプションとして記述されていますが、これは旧バージョンとの互換性を維持するために記載されており、将来のリリースではこのような記述はなくなります。 ALTER TABLE の [index_option &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-index-option-transact-sql.md) 句で他のインデックス オプションも指定できます。  
   
 FOREIGN KEY REFERENCES  
- 1 つ以上の列内のデータに参照整合性を持たせる制約です。 FOREIGN KEY 制約では、列内の各値が、参照されるテーブル内のその値に対応する参照される列に存在している必要があります。 FOREIGN KEY 制約は、参照されるテーブル内の PRIMARY KEY 制約または UNIQUE 制約である列、または参照されるテーブルの UNIQUE INDEX で参照される列のみを参照できます。 計算列の外部キーには、PERSISTED も設定する必要があります。  
+ 1 つ以上の列内のデータに参照整合性を持たせる制約です。 FOREIGN KEY 制約では、列内の各値が、参照されるテーブル内の対応する参照される列 (1 つまたは複数) に存在している必要があります。 FOREIGN KEY 制約は、参照されるテーブル内の PRIMARY KEY 制約または UNIQUE 制約である列、または参照されるテーブルの UNIQUE INDEX で参照される列のみを参照できます。 計算列上の外部キーも、PERSISTED とマークする必要があります。  
   
 *ref_table*  
  FOREIGN KEY 制約によって参照されるテーブルの名前です。  
@@ -128,23 +127,23 @@ ON UPDATE { **NO ACTION** }
  作成されたテーブル内の行が参照関係を持ち、親テーブルで参照先の行が更新された場合、作成されたテーブル内の行に対して発生する操作を指定します。 NO ACTION が指定されている場合、ProductVendor テーブルに Vendor テーブルの行を参照する行が 1 つでもあると、[!INCLUDE[ssDE](../../includes/ssde-md.md)]でエラーが発生し、Vendor 行の更新操作がロールバックされます。  
   
 NOT FOR REPLICATION  
- **適用対象**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]  
+ **適用対象**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 以降。  
   
  FOREIGN KEY 制約と CHECK 制約に対して指定できます。 制約でこの句を指定すると、レプリケーション エージェントが挿入、更新、削除操作を行う際に制約が適用されません。  
   
 CHECK  
- 1 つ以上の列に入力できる値を制限することによってドメインの整合性を設定する制約です。 計算列の CHECK 制約には、PERSISTED も設定する必要があります。  
+ 1 つ以上の列に入力できる値を制限することによってドメインの整合性を設定する制約です。 計算列の CHECK 制約も、PERSISTED とマークする必要があります。  
   
 *logical_expression*  
  TRUE または FALSE を返す論理式です。 この式には、別名データ型の参照を含めることはできません。  
   
 ON { *partition_scheme_name*(*partition_column_name*) | *filegroup*| "default"}  
- **適用対象**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]  
+ **適用対象**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 以降。  
   
  制約に対して作成されるインデックスの格納場所を指定します。 *partition_scheme_name* を指定した場合、インデックスがパーティション分割され、分割後のパーティションは *partition_scheme_name* で指定したファイル グループにマップされます。 *filegroup* を指定すると、インデックスは指定されたファイル グループに作成されます。 "default" を指定するか、ON を指定しなかった場合、インデックスはテーブルと同じファイル グループに作成されます。 PRIMARY KEY 制約または UNIQUE 制約のクラスター化インデックスを追加する場合に ON を指定すると、クラスター化インデックスの作成時に、指定したファイル グループにテーブル全体が移動します。  
   
 > [!NOTE]  
->  ここでは、default はキーワードではありません。 default は、既定ファイル グループの識別子なので、ON "default" または ON [default] のように区切る必要があります。 "default" を指定する場合は、現在のセッションに対して QUOTED_IDENTIFIER オプションが ON である必要があります。 これが既定の設定です。 詳細については、「[SET QUOTED_IDENTIFIER &#40;Transact-SQL&#41;](../../t-sql/statements/set-quoted-identifier-transact-sql.md)」をご覧ください。  
+>  このコンテキストでは、default はキーワードではありません。 それは、既定ファイル グループの識別子なので、ON "default" または ON [default] のように区切る必要があります。 "default" を指定する場合は、現在のセッションに対して QUOTED_IDENTIFIER オプションが ON である必要があります。 これが既定の設定です。 詳細については、「[SET QUOTED_IDENTIFIER &#40;Transact-SQL&#41;](../../t-sql/statements/set-quoted-identifier-transact-sql.md)」をご覧ください。  
   
 ## <a name="remarks"></a>Remarks  
  PRIMARY KEY 制約と UNIQUE 制約では、それぞれインデックスが生成されます。 UNIQUE 制約と PRIMARY KEY 制約によって生成されるテーブル上のインデックスの個数は、999 個の非クラスター化インデックスと 1 つのクラスター化インデックスに収まる必要があります。  

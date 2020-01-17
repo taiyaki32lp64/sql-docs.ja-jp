@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 helpviewer_keywords:
 - editing, data alerts
@@ -15,15 +14,15 @@ helpviewer_keywords:
 - creating, data alerts
 - creating, alerts
 ms.assetid: b2018116-cf1a-4e54-b29c-39e0ca2bda77
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 61eaf801c3033200626c0a28294be2d3af66efb1
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 94faa6587f69f5944f29f6ec17f3899a6632b49a
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56018074"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66109558"
 ---
 # <a name="data-alert-designer"></a>データ警告デザイナー
   データ警告の定義は、データ警告デザイナーで作成および編集します。 警告定義は、メタデータのコレクションです (関心のあるレポート データ、データ警告インスタンスの作成とデータ警告メッセージの送信のためにレポート データが満たさなければならないルール、警告メッセージの受信者など)。  
@@ -76,9 +75,9 @@ ms.locfileid: "56018074"
 ### <a name="rules-and-clauses"></a>ルールと句  
  警告をトリガーするデータ変更は、警告ルール内のデータ変更のスコープによって定義されます。 データ変更のスコープは、次のとおりです。  
   
--   **[いずれかのデータに適合]**: データ内の少なくとも 1 つの値が、条件で指定されたルールを満たしている。  
+-   **[いずれかのデータに適合]** : データ内の少なくとも 1 つの値が、条件で指定されたルールを満たしている。  
   
--   **[いずれのデータにも適合なし]**: 条件で指定されたルールを満たす値がデータ内にない。  
+-   **[いずれのデータにも適合なし]** : 条件で指定されたルールを満たす値がデータ内にない。  
   
  ルールに含まれる句の数は 0 個、1 個、または複数個の場合があります。 複数のルールは AND 論理演算子で組み合わされます。 列に文字列データ型が含まれている場合は、OR 演算子によって結合された複数の句をルールに含めることができます。 次に示すのは、句を 1 つだけ使用した基本的なルール、AND 演算子を使用して結合された複数のルール、および 1 つ以上の OR 句を使用した複数のルールの例です。  
   
@@ -165,7 +164,7 @@ ms.locfileid: "56018074"
 ### <a name="email-settings"></a>電子メールの設定  
  電子メールでデータ警告メッセージを受信する受信者の電子メール アドレスは、 **[受信者]** オプションで指定します。 Microsoft Office Outlook の電子メール メッセージと同じように、複数の電子メール アドレスはセミコロンで区切ります。 配布グループを受信者として指定することもできます。これにより、受信者の一覧をより簡単かつ効率的に管理できます。 警告定義の作成時に、作成者の電子メール アドレスを SharePoint が取得できた場合は、そのアドレスが受信者リストに自動的に追加されますが、それ以外の場合は自分自身を受信者として明示的に追加する必要があります。  
   
- 電子メールの既定の件名は、"**\<警告名> に関するデータの警告**" です。 件名は必要に応じて変更できます。  
+ 電子メールの既定の件名は、" **\<警告名> に関するデータの警告**" です。 件名は必要に応じて変更できます。  
   
  **[説明]** オプションで、データ警告メッセージに含める説明を入力することもできます。 説明は、似たようなデータ警告がある場合などに、警告メッセージをすばやく区別したり、内容をすばやく理解するのに役立ちます。 レポート データが指定のルールに合致した場合に送信される警告メッセージに加えて、エラーが発生した際には、すべての受信者に警告メッセージが送信されます。 詳細については、「 [Data Alert Messages](../../2014/reporting-services/data-alert-messages.md)」を参照してください。  
   
@@ -206,7 +205,7 @@ ms.locfileid: "56018074"
 -   [警告デザイナーでのデータ警告の作成](create-a-data-alert-in-data-alert-designer.md)  
   
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [Reporting Services Data Alerts](../ssms/agent/alerts.md)   
  [警告管理者用のデータ警告マネージャー](../../2014/reporting-services/data-alert-manager-for-alerting-administrators.md)  
   

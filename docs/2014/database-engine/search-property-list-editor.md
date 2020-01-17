@@ -13,11 +13,11 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: 818e1176cb5a4f81205a36dc7be6fd9fded286ea
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48148942"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62773670"
 ---
 # <a name="search-property-list-editor"></a>検索プロパティ リスト エディター
   このダイアログ ボックスを使用すると、検索プロパティ リストの検索プロパティを追加または削除できます。  
@@ -29,7 +29,7 @@ ms.locfileid: "48148942"
  **プロパティ名**  
  フルテキスト クエリのプロパティを識別するために使用される名前を指定します。 プロパティ名の内部にはスペースを含めることができます。 **プロパティ名** の長さは最大 256 文字です。 この名前は "作成者" や "ホーム アドレス" などのわかりやすい名前、または、Windows の正規のプロパティ名 (`System.Author` または `System.Contact.HomeAddress` など) にすることができます。 **プロパティ名** は、プロパティ セット内でプロパティを一意に識別する名前である必要があります。  
   
- 開発者のプロパティを識別するために、プロパティ名を使用して、 [CONTAINS](/sql/t-sql/queries/contains-transact-sql)述語。 したがって、プロパティを追加する場合は、そのプロパティの意味を明確に表す名前を指定することが重要です。  
+ 開発者は、このプロパティ名を使って [CONTAINS](/sql/t-sql/queries/contains-transact-sql) 述語のプロパティを識別します。 したがって、プロパティを追加する場合は、そのプロパティの意味を明確に表す名前を指定することが重要です。  
   
  **プロパティ セット GUID**  
  プロパティが属するプロパティ セットの識別子を指定します。 これはグローバル一意識別子 (GUID) です。 プロパティ セットは論理的に関連するプロパティのグループです。 この値の取得に関する情報については、このトピックの「解説」を参照してください。  

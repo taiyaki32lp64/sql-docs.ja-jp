@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 41625f6f-e12d-4d8d-9f60-0729ce64c31e
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 6f5649d879a46605e7c5cf8326111100ab46e9b1
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 810cb2cdeb45c3ab7ea907864b344c4624bfa527
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47617540"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67941647"
 ---
 # <a name="updatebatch-and-cancelbatch-methods-example-vb"></a>UpdateBatch および CancelBatch メソッドの例 (VB)
 この例では、 [UpdateBatch](../../../ado/reference/ado-api/updatebatch-method.md)メソッドと組み合わせて、 [CancelBatch](../../../ado/reference/ado-api/cancelbatch-method-ado.md)メソッド。  
@@ -124,6 +123,6 @@ End Sub
 'EndUpdateBatchVB  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [CancelBatch メソッド (ADO)](../../../ado/reference/ado-api/cancelbatch-method-ado.md)   
  [UpdateBatch メソッド](../../../ado/reference/ado-api/updatebatch-method.md)

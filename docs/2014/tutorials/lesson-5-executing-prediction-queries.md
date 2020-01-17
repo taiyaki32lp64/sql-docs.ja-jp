@@ -11,11 +11,11 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: a5f4d6dd79f62541e207df688349f694680e2421
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56038413"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62822314"
 ---
 # <a name="lesson-5-executing-prediction-queries"></a>レッスン 5: 予測クエリの実行
   このレッスンでは、使用、 [SELECT FROM \<model > PREDICTION JOIN (DMX)](/sql/dmx/select-from-model-cases-dmx)形式の 2 種類のデシジョン ツリーに基づく予測を作成する SELECT ステートメントをモデルで作成した[レッスン 2:アソシエーション マイニング構造にマイニング モデルの追加](../../2014/tutorials/lesson-2-adding-mining-models-to-the-market-basket-mining-structure.md)します。 作成する予測の種類は次のとおりです。  
@@ -76,7 +76,7 @@ ORDER BY <expression>
   
 #### <a name="to-create-a-singleton-prediction-query"></a>単一予測クエリを作成するには  
   
-1.  **オブジェクト エクスプ ローラー**のインスタンスを右クリックして[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]、 をポイント**新しいクエリ**、 をクリックし、 **DMX**します。  
+1.  **オブジェクト エクスプ ローラー**のインスタンスを右クリックして[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]、をポイント**新しいクエリ**、をクリックし、 **DMX**します。  
   
      クエリ エディターが開き、新しい空のクエリが表示されます。  
   
@@ -195,7 +195,7 @@ ORDER BY <expression> [DESC|ASC]
   
 #### <a name="to-create-a-batch-prediction-query"></a>バッチ予測クエリを作成するには  
   
-1.  **オブジェクト エクスプ ローラー**のインスタンスを右クリックして[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]、 をポイント**新しいクエリ**、 をクリックし、 **DMX**します。  
+1.  **オブジェクト エクスプ ローラー**のインスタンスを右クリックして[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]、をポイント**新しいクエリ**、をクリックし、 **DMX**します。  
   
      クエリ エディターが開き、新しい空のクエリが表示されます。  
   

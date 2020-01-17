@@ -1,10 +1,8 @@
 ---
 title: RANK を使用して検索結果を制限する方法 | Microsoft Docs
-ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: search, sql-database
-ms.reviewer: ''
 ms.technology: search
 ms.topic: conceptual
 helpviewer_keywords:
@@ -16,16 +14,16 @@ helpviewer_keywords:
 - rankings [full-text search]
 - per-row rank values [full-text search]
 ms.assetid: 06a776e6-296c-4ec7-9fa5-0794709ccb17
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
+author: pmasl
+ms.author: pelopes
+ms.reviewer: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 5b6d92770fd91231bb2f491f38b6c3dc4563d08a
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 7740c95e40b4902e88d1ae5f632b34c7f759f441
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52521002"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68132283"
 ---
 # <a name="limit-search-results-with-rank"></a>RANK を使用して検索結果を制限する方法
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -40,7 +38,7 @@ ms.locfileid: "52521002"
   
 ##  <a name="examples"></a> RANK を使用して検索結果を制限する例  
   
-### <a name="example-a-searching-for-only-the-top-three-matches"></a>例 A: 上位 3 件の一致結果のみを検索する  
+### <a name="example-a-searching-for-only-the-top-three-matches"></a>例 A:上位 3 件の一致結果のみを検索する  
  次の例では、CONTAINSTABLE を使用して上位 3 件の一致結果のみを返します。  
   
 ```  
@@ -71,7 +69,7 @@ RANK        Address                          City
 ```  
   
   
-### <a name="example-b-searching-for-the-top-ten-matches"></a>例 B: 上位 10 件の一致結果を検索する  
+### <a name="example-b-searching-for-the-top-ten-matches"></a>例 B:上位 10 件の一致結果を検索する  
  次の例では、CONTAINSTABLE を使用して、 `Description` 列内で "light" または "lightweight" という単語の近くに "aluminum" という語句を含んでいる、上位 5 種の製品の説明を返します。  
   
 ```  

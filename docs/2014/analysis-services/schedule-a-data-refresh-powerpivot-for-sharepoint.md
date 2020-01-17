@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - unattended data refresh [Analysis Services with SharePoint]
@@ -15,12 +14,12 @@ ms.assetid: 8571208f-6aae-4058-83c6-9f916f5e2f9b
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 58764334a6ee1902a09941e9fc9bb9723e517cdf
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 429b35f6865deb5c0c3dd79e21cfe16cac7fae91
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53363844"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66070008"
 ---
 # <a name="schedule-a-data-refresh-powerpivot-for-sharepoint"></a>データ更新のスケジュール (PowerPivot for SharePoint)
   データ更新をスケジュールすると、SharePoint サイトにパブリッシュした Excel ブック内の PowerPivot データが自動更新されるようになります。  

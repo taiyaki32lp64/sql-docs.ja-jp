@@ -1,7 +1,7 @@
 ---
 title: SQL インメモリ OLTP のハードウェア | Microsoft Docs
 ms.custom: ''
-ms.date: 11/30/2018
+ms.date: 03/28/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -9,22 +9,21 @@ ms.technology: in-memory-oltp
 ms.topic: conceptual
 author: MightyPen
 ms.author: genemi
-manager: craigg
 monikerRange: =azuresqldb-current||=azuresqldb-mi-current||>=sql-server-2016||>=sql-server-linux-2017||=sqlallproducts-allversions
-ms.openlocfilehash: 9efb08ec81de552581fd2d1d0c34bbf731dac7d7
-ms.sourcegitcommit: b51edbe07a0a2fdb5f74b5874771042400baf919
+ms.openlocfilehash: 21293308f2b21d0a41cca901a084d65ca0250573
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/28/2019
-ms.locfileid: "55087592"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67951137"
 ---
-# <a name="hardware-considerations-for-in-memory-oltp-in-sql-server-2014"></a>SQL Server 2014 におけるインメモリ OLTP のハードウェアに関する考慮事項
+# <a name="hardware-considerations-for-in-memory-oltp-in-sql-server"></a>SQL Server におけるインメモリ OLTP のハードウェアに関する考慮事項
 
 インメモリ OLTP では、従来のディスク ベース テーブルと異なる方法でメモリとディスクを使用します。 インメモリ OLTP で見られるパフォーマンスの向上は、使用するハードウェアによって異なります。 このブログの投稿では、全般的なハードウェアのさまざまな考慮事項について説明し、インメモリ OLTP で使用するハードウェアの汎用的なガイドラインを提供しています。
 
 > [!NOTE]
-> この記事は、2013 年 8 月 1 日に Microsoft SQL Server 2014 チームによって発行されたブログです。 このブログの Web ページは廃止されます。この記事は、ブログの文章を大まかにまとめたものです。 このブログに対してリンクしていたドキュメントの記事は、現在はこの記事にリンクされています。 この記事は更新されません。 この記事は、目次から除外される可能性があります。
-> 
+> この記事は、2013 年 8 月 1 日に Microsoft SQL Server 2014 チームによって発行されたブログです。 このブログの Web ページは廃止されます。
+>
 > [SQL Server インメモリ OLTP](index.md)
 
 <!--
@@ -32,7 +31,7 @@ ms.locfileid: "55087592"
     https://cloudblogs.microsoft.com/sqlserver/2013/08/01/hardware-considerations-for-in-memory-oltp-in-sql-server-2014/
     At least one pre-existing article that contained the obsolete blog link was:
         relational-databases\in-memory-oltp\sample-database-for-in-memory-oltp.md
- -->
+-->
 
 ## <a name="cpu"></a>CPU
 
@@ -47,7 +46,7 @@ ms.locfileid: "55087592"
 所定のメモリ最適化テーブルで使用されるメモリの量を判断するには、次のクエリを実行します。
 
 ```sql
-select object_name(object_id), * from sys.dm_db_xtp_table_memory_stats
+select object_name(object_id), * from sys.dm_db_xtp_table_memory_stats;
 ```
 
 結果に、メモリ最適化テーブルとそのインデックスに使用されるメモリが示されます。 テーブル データには、ユーザー データと、トランザクションの実行でこれまでどおり必要になるすべての古い行のバージョンや、システムでまだクリーンアップされていないすべての古い行のバージョンが含まれます。 ハッシュ インデックスで使用されるメモリは一定です。テーブル内の行数に左右されません。
@@ -74,3 +73,6 @@ select object_name(object_id), * from sys.dm_db_xtp_table_memory_stats
 
 ディスクの容量の点では、2 から 3 倍のサイズのメモリ最適化テーブルを利用可能にすることをお勧めします。
 
+## <a name="see-also"></a>参照
+
+[インメモリ OLTP のサンプル データベース](sample-database-for-in-memory-oltp.md)

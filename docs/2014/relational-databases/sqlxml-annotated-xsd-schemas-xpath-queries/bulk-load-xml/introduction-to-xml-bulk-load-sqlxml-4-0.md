@@ -13,15 +13,15 @@ helpviewer_keywords:
 - transacted XML Bulk Load operations
 - streaming XML data
 ms.assetid: 38bd3cbd-65ef-4c23-9ef3-e70ecf6bb88a
-author: douglaslMS
-ms.author: douglasl
+author: MightyPen
+ms.author: genemi
 manager: craigg
-ms.openlocfilehash: e81a952e72875353880bff0367389ce7139932d2
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: d257b6eee1fb3adc0ba611f58a1d5eea5adf3f86
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52823276"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66013388"
 ---
 # <a name="introduction-to-xml-bulk-load-sqlxml-40"></a>XML 一括読み込みの概要 (SQLXML 4.0)
   Microsoft に半構造化 XML データを読み込むことができるようにするスタンドアロンの COM オブジェクトは、XML 一括読み込み[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]テーブル。  
@@ -45,7 +45,7 @@ ms.locfileid: "52823276"
 ## <a name="streaming-of-xml-data"></a>XML データのストリーミング  
  ソースの XML ドキュメントは大きい可能性があるため、一括読み込み処理では、メモリにドキュメント全体は読み込まれません。 代わりに、XML 一括読み込みでは XML データがストリームとして解釈され読み取られます。 データが読み取られるとき、このユーティリティではデータベース テーブルが特定され、XML データ ソースを基に適切なレコードが生成された後、そのレコードが挿入のため [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] に送信されます。  
   
- たとえば、次のソース XML ドキュメントから成る**\<顧客 >** 要素と**\<順序 >** 子要素。  
+ たとえば、次のソース XML ドキュメントから成る **\<顧客 >** 要素と **\<順序 >** 子要素。  
   
 ```  
 <Customer ...>  

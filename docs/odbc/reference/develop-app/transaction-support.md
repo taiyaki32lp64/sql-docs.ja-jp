@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: d56e1458-8da2-4d73-a777-09e045c30a33
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: be133079c1b6beffd484942eb9ae058c14dd5c1f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a0b5e33f94c5452a2062f7c18339f27c8da73fa9
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47808940"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68086064"
 ---
 # <a name="transaction-support"></a>トランザクションのサポート
 トランザクションのサポートの程度は、ドライバーの定義です。 ODBC は、そのデータを複数の更新プログラムを管理する必要がない、またはデスクトップでのシングル ユーザー データベースの実装に設計されています。 さらに、トランザクションをサポートする一部のデータベースのみに行うため SQL; のデータ操作言語 (DML) ステートメントトランザクションがアクティブな場合に、制限、またはデータ定義言語 (DDL) の使用に関する特別なトランザクション セマンティクスはあります。 つまり、テーブルに複数の同時更新プログラムの数と、トランザクション中にテーブルの定義の変更ではなく、トランザクションのサポートがあります。  

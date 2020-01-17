@@ -19,16 +19,15 @@ helpviewer_keywords:
 - '*= (multiply equals)'
 - '*= (multiplication assignment)'
 ms.assetid: 816ff5dc-9a40-4c07-8351-39c194dbc079
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
+author: rothja
+ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 0b88b98271d44039e70dfec3e47fa48099f3dd33
-ms.sourcegitcommit: 01e17c5f1710e7058bad8227c8011985a9888d36
+ms.openlocfilehash: c6ad2f4cd1c650831415eb4fea8182eaf5fb81fe
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/14/2019
-ms.locfileid: "56265239"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68122089"
 ---
 # <a name="-multiplication-assignment-transact-sql"></a>*= (乗算代入) (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]

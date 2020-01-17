@@ -1,5 +1,5 @@
 ---
-title: sys.dm_db_fts_index_physical_stats (TRANSACT-SQL) |Microsoft Docs
+title: sys.dm_db_fts_index_physical_stats (Transact-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/20/2017
 ms.prod: sql
@@ -19,16 +19,15 @@ helpviewer_keywords:
 ms.assetid: 997c3278-3630-47f6-ada3-190b6c16ce0e
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 2e80aef6d8a0ee33aa7a9a0d9bb71abc3ddf1e15
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 4394483cd17510c998126a70c12f4d669c9282aa
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47763720"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68264494"
 ---
-# <a name="sysdmdbftsindexphysicalstats-transact-sql"></a>sys.dm_db_fts_index_physical_stats (Transact-SQL)
+# <a name="sysdm_db_fts_index_physical_stats-transact-sql"></a>sys.dm_db_fts_index_physical_stats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
 
   フルテキスト インデックスまたはセマンティック インデックスを関連付けられている各テーブル内のフルテキスト インデックスまたはセマンティック インデックスごとに 1 行のデータを返します。  
@@ -36,7 +35,7 @@ ms.locfileid: "47763720"
 ||||  
 |-|-|-|  
 |**列名**|**型**|**[説明]**|  
-|**object_id**|ssNoversion|インデックスを含むテーブルのオブジェクト ID。|  
+|**object_id**|int|インデックスを含むテーブルのオブジェクト ID。|  
 |**fulltext_index_page_count**|**bigint**|インデックス ページの数で表された、抽出の論理サイズ。|  
 |**keyphrase_index_page_count**|**bigint**|インデックス ページの数で表された、抽出の論理サイズ。|  
 |**similarity_index_page_count**|**bigint**|インデックス ページの数で表された、抽出の論理サイズ。|  
@@ -54,7 +53,7 @@ ms.locfileid: "47763720"
 ## <a name="permissions"></a>アクセス許可
 
 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]、必要があります`VIEW SERVER STATE`権限。   
-[!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]が必要です、`VIEW DATABASE STATE`データベースの権限。   
+[!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] Premium レベルでは、必要があります、`VIEW DATABASE STATE`データベースの権限。 [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] Standard および Basic 階層は、必要があります、**サーバー管理者**または**Azure Active Directory 管理者**アカウント。   
 
 ## <a name="examples"></a>使用例  
  次の例では、フルテキスト インデックスまたはセマンティック インデックスを関連付けられているすべてのテーブル内の各フルテキスト インデックスまたはセマンティック インデックスの論理サイズについてクエリを実行する方法を示しています。  

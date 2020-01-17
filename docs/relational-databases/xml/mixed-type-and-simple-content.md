@@ -10,15 +10,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - mixed types [SQL Server]
 ms.assetid: 6ea1f11d-e64b-4ebb-ab68-4eb6e4027665
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: 910bd30f684459aae49b583f7e867c24b436c750
-ms.sourcegitcommit: bfa10c54e871700de285d7f819095d51ef70d997
+author: MightyPen
+ms.author: genemi
+ms.openlocfilehash: b1a0fb6a72fde7ba871554abf4e3b40d6bb6c9fc
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/14/2019
-ms.locfileid: "54256137"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68137532"
 ---
 # <a name="mixed-type-and-simple-content"></a>混合型と単純コンテンツ
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

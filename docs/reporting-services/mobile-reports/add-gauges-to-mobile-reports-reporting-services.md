@@ -6,14 +6,14 @@ ms.prod_service: reporting-services-native
 ms.technology: mobile-reports
 ms.topic: conceptual
 ms.assetid: 76d8fc8f-c37f-44d3-ab44-45fbeed4e064
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 1740846b348449cc1a2d4e072255a1339b96c478
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 90440119ec21cbfe97096b439e61074c7e515e00
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56288550"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63280565"
 ---
 # <a name="add-gauges-to-mobile-reports--reporting-services"></a>モバイル レポートにゲージを追加する | Reporting Services
 ゲージは、モバイル レポートで広く使用されている最も基本的なビジュアルです。 データセットに含まれる 1 つの値 (値自体か、目標値と比較した値) を表示します。
@@ -42,7 +42,7 @@ SQL Server Mobile Report Publisher のすべてのゲージに少なくとも 1 
 
 4. (省略可能) 集計を変更するには、 **[オプション]** をクリックして別の集計を選択します。
    
-   >**注**:主要な値の集計を変更すると、多くの場合、比較対象値の集計も変更する必要があります。ただし、場合によっては異なる集計方法を組み合わせることもできます。  
+   >**注**: 主要な値の集計を変更すると、多くの場合、比較対象値の集計も変更する必要があります。ただし、場合によっては異なる集計方法を組み合わせることもできます。  
 
 ## <a name="filter-a-gauge"></a>ゲージにフィルターを適用する
   
@@ -58,7 +58,7 @@ SQL Server Mobile Report Publisher のすべてのゲージに少なくとも 1 
   
 ゲージの要素をデータ フィールドに結び付けるデータのプロパティのほかにも、数多くの機能に関するプロパティやビジュアルのプロパティをカスタマイズできます。 
 
-### <a name="set-value-direction-high-or-low-is-better"></a>値の方向を設定する:[大きい値が適当] または [低い値が適当]
+### <a name="set-value-direction-high-or-low-is-better"></a>値の方向を設定する: [大きい値が適当] または [低い値が適当]
 * ゲージを選択し、 **[レイアウト]** タブの **[ビジュアルのプロパティ]** ペインで、 **[値の方向]** を **[大きい値が適当]** または **[低い値が適当]** に設定します。 
 
 **[大きい値が適当]** を選択すると、正の数は緑色で表示され、望ましい良い変化であることを示し、低下した値は赤色で表示され、望ましくない悪い変化であることを示します。 

@@ -1,5 +1,5 @@
 ---
-title: setBinaryStream メソッドを時間の入力ストリームの |Microsoft Docs
+title: setBinaryStream メソッドを入力ストリーム-long |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: d59c7327-c9dc-4e4f-9dff-19e1a3c62eb2
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 36ba3cf5fec53024faf83a83d7e9a24116f143be
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 32d909e721e38ac2a459188e31236e43398a28de
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47849580"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67975158"
 ---
 # <a name="setbinarystream-method-javalangstring-javaioinputstream-long"></a>setBinaryStream メソッド (java.lang.String, java.io.InputStream, long)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -49,7 +48,7 @@ public void setBinaryStream(java.lang.String parameterName,
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- この setBinaryStream メソッドは、java.sql.CallableStatement インターフェイスの setBinaryStream メソッドによって指定されます。  
+ この setBinaryStream メソッドは、java. sql. CallableStatement インターフェイスの setBinaryStream メソッドによって指定されます。  
   
  ストリームの長さが、*length* パラメーターで指定された長さと異なる場合は、行の更新または挿入時に JDBC ドライバーが例外をスローします。  
   

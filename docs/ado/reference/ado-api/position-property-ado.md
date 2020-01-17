@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: daa8319a-49aa-4c1c-9af6-0b01e9ab2f9d
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 333b06ef76ae6407ca8a5605f1917dc0bb609aca
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: dba8636f07b88f1c05d465b844376c6ef3e61240
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47615890"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67931654"
 ---
 # <a name="position-property-ado"></a>Position プロパティ (ADO)
 内の現在位置を示す、 [Stream](../../../ado/reference/ado-api/stream-object-ado.md)オブジェクト。  
@@ -44,5 +43,5 @@ ms.locfileid: "47615890"
 ## <a name="applies-to"></a>適用対象  
  [Stream オブジェクト (ADO)](../../../ado/reference/ado-api/stream-object-ado.md)  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [Charset プロパティ (ADO)](../../../ado/reference/ado-api/charset-property-ado.md)

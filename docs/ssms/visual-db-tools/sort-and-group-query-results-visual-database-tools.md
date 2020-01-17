@@ -20,15 +20,14 @@ helpviewer_keywords:
 - Results pane
 - sorting query results [SQL Server]
 ms.assetid: b004e1c0-cacc-4241-9426-9fd426978918
-author: stevestein
-ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 1eaedd08722d9db933cdbf9b6c348d52158c2acf
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: d285e646bec8a09dbd9b32b4d71766907772bb4a
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47744530"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68266810"
 ---
 # <a name="sort-and-group-query-results-visual-database-tools"></a>クエリ結果の並べ替えおよびグループ化 (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: a6001168-b954-47f0-ba0d-c05c4cc40c58
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: ae4b9a3c623fdcb22d7665e4242ce2f58397b2a1
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 194b72ce66eb2efdc3a246f24948b01c790f7b8e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47753140"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67949376"
 ---
 # <a name="ordinal-property-ado-md-cell"></a>Ordinal プロパティ (ADO MD セル)
 一意に識別する、[セル](../../../ado/reference/ado-md-api/cell-object-ado-md.md)でセル セット内の位置。  
@@ -38,7 +37,7 @@ ms.locfileid: "47753140"
 ## <a name="applies-to"></a>適用対象  
  [Cell オブジェクト (ADO MD)](../../../ado/reference/ado-md-api/cell-object-ado-md.md)  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [軸の例 (VBScript)](../../../ado/reference/ado-md-api/axis-example-vbscript.md)   
  [Cellset オブジェクト (ADO MD)](../../../ado/reference/ado-md-api/cellset-object-ado-md.md)   
  [Item プロパティ (ADO MD セルセット)](../../../ado/reference/ado-md-api/item-property-ado-md-cellset.md)   

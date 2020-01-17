@@ -1,5 +1,5 @@
 ---
-title: Stretch Database 向きのデータベースとテーブルを識別する | Microsoft Docs
+title: データベースとテーブルの識別
 ms.date: 10/30/2017
 ms.service: sql-server-stretch-database
 ms.reviewer: ''
@@ -12,13 +12,13 @@ helpviewer_keywords:
 ms.assetid: 81bd93d8-eef8-4572-88d7-5c37ab5ac2bf
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: cc6869720018e6787c915fd56e5810b319c651de
-ms.sourcegitcommit: ec1f01b4bb54621de62ee488decf9511d651d700
+ms.custom: seo-dt-2019
+ms.openlocfilehash: ec8df33c7af98889529232bbcd56437745339fba
+ms.sourcegitcommit: f688a37bb6deac2e5b7730344165bbe2c57f9b9c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/14/2019
-ms.locfileid: "56240746"
+ms.lasthandoff: 11/08/2019
+ms.locfileid: "73843751"
 ---
 # <a name="identify-databases-and-tables-for-stretch-database-with-data-migration-assistant"></a>Data Migration Assistant で Stretch Database 向きのデータベースとテーブルを識別する
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md-winonly](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md-winonly.md)]
@@ -35,26 +35,26 @@ ms.locfileid: "56240746"
 
 2.  **[評価]** タイプの新しいプロジェクトを作成し、名前を指定します。
 
-3.  **[ソース サーバーの種類]** と **[ターゲット サーバーの種類]** の両方で、**[SQL Server]** を選びます。
+3.  **[ソース サーバーの種類]** と **[ターゲット サーバーの種類]** の両方で、 **[SQL Server]** を選びます。
 
 4.  **[作成]** を選択します。 
 
-5. **[オプション]** ページ (ステップ 1) で、**[New features recommendation]\(新しい機能の推奨事項\)** を選びます。 必要に応じて、**[Compatibility issues]\(互換性の問題\)** をオフにします。
+5. **[オプション]** ページ (ステップ 1) で、 **[New features recommendation]\(新しい機能の推奨事項\)** を選びます。 必要に応じて、 **[Compatibility issues]\(互換性の問題\)** をオフにします。
 
-6.  **[Select sources]\(ソースの選択\)** ページ (ステップ 2) で、サーバーに接続し、データベースを選んで、**[追加]** を選びます。
+6.  **[Select sources]\(ソースの選択\)** ページ (ステップ 2) で、サーバーに接続し、データベースを選んで、 **[追加]** を選びます。
 
 7.  **[Start Assessment]\(評価の開始\)** を選びます。
 
 ## <a name="review-the-results"></a>結果の確認  
   
-1.  分析が終了したら、**[Review results]\(結果のレビュー\)** ページ (ステップ 3) で **[機能に関する推奨事項]** オプションを選び、**[ストレージ]** タブを選びます。
+1.  分析が終了したら、 **[Review results]\(結果のレビュー\)** ページ (ステップ 3) で **[機能に関する推奨事項]** オプションを選び、 **[ストレージ]** タブを選びます。
 
 2.  Stretch Database に関する推奨事項を確認します。 各推奨事項には、Stretch Database が適している可能性のあるテーブルの一覧と、潜在的なブロッキングの問題が表示されます。
 
 ## <a name="historical-note"></a>これまでの経緯
 Stretch Database Advisor は、以前は SQL Server 2016 アップグレード アドバイザーのコンポーネントでした。 その時点では、別のアクションとして Stretch Database Advisor を選んで実行する必要がありました。
 
-アップグレード アドバイザーの代わりとなる拡張版の Data Migration Assistant のリリースを機に、Stretch Database Advisor の機能はこの新しいツールに組み込まれます。 Stretch Database に関する推奨事項を取得するために、オプションを選ぶ必要はありません。 Data Migration Assistant で Assessment を実行すると、Stretch Database に関する結果が、**[機能に関する推奨事項]** の **[ストレージ]** タブに表示されます。
+アップグレード アドバイザーの代わりとなる拡張版の Data Migration Assistant のリリースを機に、Stretch Database Advisor の機能はこの新しいツールに組み込まれます。 Stretch Database に関する推奨事項を取得するために、オプションを選ぶ必要はありません。 Data Migration Assistant で Assessment を実行すると、Stretch Database に関する結果が、 **[機能に関する推奨事項]** の **[ストレージ]** タブに表示されます。
   
 ## <a name="next-step"></a>次の手順  
  Stretch Database を有効にします。  

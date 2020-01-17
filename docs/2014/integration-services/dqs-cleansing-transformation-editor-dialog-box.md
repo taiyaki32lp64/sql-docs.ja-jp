@@ -4,22 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.ssdqs.designer.cleansing.f1
 - SQL12.SSDQS.DESIGNER.DQCONNECTION.F1
 ms.assetid: 07e79641-71ee-45d0-a9ba-ed6f9f68f333
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 0de01fcb7f694331eb9ab4df33429f9a32ee1308
-ms.sourcegitcommit: 467b2c708651a3a2be2c45e36d0006a5bbe87b79
+ms.openlocfilehash: cbb5ca8c048b42313b4776b4a2e4b99e44eec406
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53978418"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66059421"
 ---
 # <a name="dqs-cleansing-transformation-editor-dialog-box"></a>[DQS クレンジング変換エディター] ダイアログ ボックス
   **[DQS クレンジング変換エディター]** ダイアログ ボックスを使用すると、Data Quality Services (DQS) を使用してデータを修正できます。 詳細については、「 [Data Quality Services の概念](../../2014/data-quality-services/data-quality-services-concepts.md)」を参照してください。  
@@ -69,9 +68,9 @@ ms.locfileid: "53978418"
   
  有効な値は次のとおりです。  
   
--   **[エラー コンポーネント]**: 変換に失敗したこと、およびデータが Data Quality Services データベースに挿入されていないことを示します。 これが既定値です。  
+-   **[エラー コンポーネント]** : 変換に失敗したこと、およびデータが Data Quality Services データベースに挿入されていないことを示します。 これが既定値です。  
   
--   **[行のリダイレクト]**: 入力データが Data Quality Services データベースに挿入されていないために、エラー出力にリダイレクトされることを示します。  
+-   **[行のリダイレクト]** : 入力データが Data Quality Services データベースに挿入されていないために、エラー出力にリダイレクトされることを示します。  
   
 ##  <a name="mapping"></a> [マッピング] タブのオプションの設定  
  複合ドメインに列をマップする方法については、「 [複合ドメインへの列のマップ](data-flow/transformations/map-columns-to-composite-domains.md)」を参照してください。  

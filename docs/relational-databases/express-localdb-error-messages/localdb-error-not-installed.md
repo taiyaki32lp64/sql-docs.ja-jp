@@ -9,13 +9,12 @@ ms.topic: reference
 ms.assetid: e7912885-1c14-409b-9022-83ad4c36f3bd
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: b88f152c1c8d7e586f3da3fc5bc0bd2eac8305c2
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 9abf6ef954a493d4386d46b9d113348a9cb91e1a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47815850"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68011127"
 ---
 # <a name="localdberrornotinstalled"></a>LOCALDB_ERROR_NOT_INSTALLED
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -28,7 +27,7 @@ ms.locfileid: "47815850"
 |イベント ID|278|  
 |イベント ソース|SQL Server Local Database Runtime 12.0|  
 |コンポーネント|Local Database Runtime API|  
-|メッセージ テキスト|注: メッセージのテキストが空の場合このメッセージが全体を意味するため (HRESULTS をメッセージ テキストにマップする FormatMessage 関数を含む)、LocalDB API をご利用いただけません。|  
+|メッセージ テキスト|注:メッセージ テキストが空の場合このメッセージが全体を意味するため (HRESULTS をメッセージ テキストにマップする FormatMessage 関数を含む)、LocalDB API をご利用いただけません。|  
   
 ## <a name="explanation"></a>説明  
  Local Database Runtime は、コンピューターにインストールされていません。  

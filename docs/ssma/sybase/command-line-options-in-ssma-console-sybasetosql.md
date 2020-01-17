@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 337cbd26-67b7-4c88-9deb-d0a69a3d7714
 author: Shamikg
 ms.author: Shamikg
-manager: craigg
-ms.openlocfilehash: 11e379973d6ef0c124427a2897ef7293811f9e3f
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 285f5c58c94db0f5506f84d19c992dfcdbbd00d3
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52539060"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68083483"
 ---
 # <a name="command-line-options-in-ssma-console-sybasetosql"></a>SSMA コンソールのコマンド ライン オプション (SybaseToSQL)
 Microsoft は、堅牢なコマンド ライン オプションを実行し、制御 SSMA アクティビティのセットを提供します。 次のセクションでは、同じについて説明します。  
@@ -27,7 +26,7 @@ Microsoft は、堅牢なコマンド ライン オプションを実行し、�
   
 ここでは、用語 'option' と呼ばれるもを 'switch'。  
   
--   オプションは、小文字は区別されず、いずれかで始めることは '**-**'、'**/**' 文字。  
+-   オプションは、小文字は区別されず、いずれかで始めることは ' **-** '、' **/** ' 文字。  
   
 -   オプションを指定する場合、対応するオプションのパラメーターの指定が必須になります。  
   

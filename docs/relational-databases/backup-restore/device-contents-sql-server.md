@@ -12,13 +12,12 @@ f1_keywords:
 ms.assetid: 95e1902e-8c7a-4830-bdf9-1a6aca414a24
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 7b18f044dbeb09e70b017afa6f78efb84b527336
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ecddec60e1a0fd30d28bfae52a5fef29a6425fbf
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47686530"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68068492"
 ---
 # <a name="device-contents-sql-server"></a>デバイス コンテンツ (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -30,7 +29,7 @@ ms.locfileid: "47686530"
   
 -   [論理バックアップ デバイスのプロパティと内容の表示 &#40;SQL Server&#41;](../../relational-databases/backup-restore/view-the-properties-and-contents-of-a-logical-backup-device-sql-server.md)  
   
-## <a name="options"></a>[変数]  
+## <a name="options"></a>オプション  
  **[メディア]**  
  バックアップ情報が保存されるディスク、またはテープのセットです。  
   
@@ -43,7 +42,7 @@ ms.locfileid: "47686530"
  **[メディア セット]**  
  メディア セットとは、一定の数のバックアップ デバイスを使用し、1 回以上のバックアップ操作で書き込まれたバックアップ メディアを番号順に並べた集合体です。  
   
- **名前**  
+ **[名前]**  
  メディア セットの名前を表示します。  
   
  **[説明]**  
@@ -57,13 +56,13 @@ ms.locfileid: "47686530"
   
 |[ヘッダー]|値|  
 |------------|------------|  
-|**名前**|バックアップ セットの名前です。|  
-|**型**|実行されたバックアップの種類。[完全]、[差分]、[トランザクション ログ] のいずれかになります。|  
-|**コンポーネント**|バックアップされるコンポーネント。[データベース]、[ファイル]、または *[\<空白>]* (トランザクション ログ用) のいずれかを指定します。|  
+|**[名前]**|バックアップ セットの名前です。|  
+|**型**|実行するバックアップの種類: [完全]、[差分]、[トランザクション ログ]。|  
+|**コンポーネント**|バックアップされるコンポーネント:[データベース]、[ファイル]、または *[\<空白>]* (トランザクション ログ用)。|  
 |**[サーバー]**|バックアップ操作を実行した [!INCLUDE[ssDE](../../includes/ssde-md.md)] のインスタンスの名前。|  
 |**[データベース]**|バックアップされたデータベースの名前。|  
 |**[位置]**|ボリューム内でのバックアップ セットの位置。|  
-|**日付**|バックアップ操作が完了したときの日付と時刻。クライアントの地域設定で表示されます。|  
+|**Date**|バックアップ操作が完了したときの日付と時刻。クライアントの地域設定で表示されます。|  
 |**[サイズ]**|バックアップ セットのサイズ (バイト単位) です。|  
 |**[ユーザー名]**|バックアップ操作を実行したユーザーの名前。|  
 |**[有効期限]**|バックアップ セットの期限が切れる日付と時刻。|  

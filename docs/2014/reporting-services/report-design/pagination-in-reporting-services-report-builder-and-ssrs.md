@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 ms.assetid: e0894b0d-dc5b-4a75-8142-75092972a034
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 073f032967c0546659b79a57c79d995e0e6f09b9
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: 58abb892f737b3f5b3c707c9e26fd44249d8e54f
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56293250"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66105475"
 ---
 # <a name="pagination-in-reporting-services-report-builder--and-ssrs"></a>Reporting Services の改ページ (レポート ビルダーおよび SSRS)
   ページ割り付けとは、レポートに含まれるページ数と、ページ上でのレポート アイテムの配置方法をいいます。 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] での改ページは、レポートの閲覧と作成に使用する表示拡張機能によって異なります。 レポート サーバーでレポートを実行した場合は HTML レンダラーが使用されます。 HTML には、特定の改ページ規則が適用されます。 たとえば、同じレポートを PDF にエクスポートした場合は、PDF レンダラーが使用され、異なる規則が適用されるため、レポートの改ページも異なります。 レポート作成に使用するレンダラーに最適化された、ユーザーにとって見やすいレポートをデザインするには、 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]における改ページの制御規則を理解しておく必要があります。  
@@ -72,7 +71,7 @@ ms.locfileid: "56293250"
   
 -   ResetPageNumber は、改ページが生じたときにページ番号を 1 にリセットするかどうかを指定します。 このプロパティによって True に評価された場合、ページ番号はリセットされます。  
   
- **[Tablix のプロパティ]**、 **[四角形のプロパティ]**、または **[グループのプロパティ]** ダイアログ ボックスの BreakLocation プロパティを設定できますが、レポート ビルダーのプロパティ ペインで Disabled、ResetPageNumber、および PageName の各プロパティを設定する必要があります。 プロパティ ペインのプロパティがカテゴリごとに整理されている場合、これらのプロパティは **PageBreak** カテゴリ内にあります。 グループの場合、 **PageBreak** カテゴリは、 **Group** カテゴリ内にあります。  
+ **[Tablix のプロパティ]** 、 **[四角形のプロパティ]** 、または **[グループのプロパティ]** ダイアログ ボックスの BreakLocation プロパティを設定できますが、レポート ビルダーのプロパティ ペインで Disabled、ResetPageNumber、および PageName の各プロパティを設定する必要があります。 プロパティ ペインのプロパティがカテゴリごとに整理されている場合、これらのプロパティは **PageBreak** カテゴリ内にあります。 グループの場合、 **PageBreak** カテゴリは、 **Group** カテゴリ内にあります。  
   
  定数と、単純型または複合型の式を使用して、Disabled および ResetPageNumber プロパティの値を設定します。 ただし、BreakLocation プロパティを持つ式は使用できません。 式の記述と使用の詳細については、「[式 &#40;レポート ビルダーおよび SSRS&#41;](expressions-report-builder-and-ssrs.md)」をご覧ください。  
   

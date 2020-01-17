@@ -14,20 +14,19 @@ helpviewer_keywords:
 ms.assetid: c91bef31-3794-4736-966a-d50997b2233c
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 5472595383c7e4fcf448374c1fd85587246328f7
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 748347b0a5b20f22cf7191213c59d2879df67522
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47654290"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68118718"
 ---
 # <a name="c-data-types-in-odbc"></a>ODBC の C データ型
-ODBC では、アプリケーション変数とその対応する型識別子で使用される C データ型を定義します。 これらは、結果セットの列とステートメントのパラメーターにバインドされているバッファーが使用されます。 たとえば、アプリケーションが文字形式で結果セット列からデータを取得しようとします。 SQLCHAR を持つ変数を宣言します * データ型で、この変数を SQL_C_CHAR の型識別子を持つ結果セット列にバインドします。 C データ型と型識別子の完全な一覧を参照してください。[付録 d: データ型](../../../odbc/reference/appendixes/appendix-d-data-types.md)します。  
+ODBC では、アプリケーション変数とその対応する型識別子で使用される C データ型を定義します。 これらは、結果セットの列とステートメントのパラメーターにバインドされているバッファーが使用されます。 たとえば、アプリケーションが文字形式で結果セット列からデータを取得しようとします。 SQLCHAR を持つ変数を宣言します * データ型で、この変数を SQL_C_CHAR の型識別子を持つ結果セット列にバインドします。 C データ型と型識別子の完全な一覧を参照してください[付録 d:。データ型](../../../odbc/reference/appendixes/appendix-d-data-types.md)します。  
   
  ODBC では、各 SQL データ型から C データ型に既定のマッピングも定義します。 たとえば、データ ソース内の 2 バイト整数は、アプリケーションで 2 バイトの整数にマップされます。 既定のマッピングを使用するには、アプリケーションは、SQL_C_DEFAULT 型の識別子を指定します。 ただし、この識別子の使用は相互運用性上の理由から推奨されません。  
   
- ODBC 1 で定義されているすべての整数値 C データ型 *.x*が署名されています。 符号なしの C データ型とその対応する型識別子は、ODBC 2.0 で追加されました。 このため、アプリケーションとドライバーの必要がある 1 を扱う場合に特に注意する *.x*バージョン。  
+ ODBC で定義されているすべての整数値 C データ型*1.x*が署名されています。 符号なしの C データ型とその対応する型識別子は、ODBC 2.0 で追加されました。 このため、アプリケーションとドライバーが必要を扱うときに特に注意する*1.x*バージョン。  
   
 ## <a name="c-data-type-extensibility"></a>C データ型の機能拡張  
  ODBC 3.8、ドライバー固有の C データ型を指定できます。 これにより、SQL 型を呼び出すときに ODBC アプリケーションで、ドライバー固有の C 型としてバインド[SQLBindCol](../../../odbc/reference/syntax/sqlbindcol-function.md)、 [SQLGetData](../../../odbc/reference/syntax/sqlgetdata-function.md)、または[SQLBindParameter](../../../odbc/reference/syntax/sqlbindparameter-function.md)します。 既存の C データ型が新しいサーバーのデータ型を正しく表現していないため、新しいサーバーの型をサポートするための便利なできます。 ドライバー固有の C 型を使用すると、ドライバーを実行できる変換の数を増やすことができます。  

@@ -4,21 +4,20 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.cacheconnection.f1
 ms.assetid: 0d8f9324-0c35-4eea-b06d-da3cc2426d2c
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 0b9ede014f68d06f84132664ee3f4e1413f715e0
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 0802ed589813a43ffac516c05a3a52de382d36c7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48130832"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66061081"
 ---
 # <a name="cache-connection-manager-editor"></a>[キャッシュ接続マネージャー エディター]
   キャッシュ接続マネージャーでは、キャッシュ変換またはキャッシュ ファイル (.caw) から参照データセットを読み取り、そのデータをキャッシュ ファイルに保存できます。 データは常にメモリに格納されます。  
@@ -88,18 +87,18 @@ ms.locfileid: "48130832"
  列のデータ型を指定します。  
   
  `Length`  
- 列のデータ型を指定します。 かどうか、データ型に該当する更新できます`Length`します。  
+ 列のデータ型を指定します。 `Length` は、そのデータ型で使用できる範囲内であれば更新できます。  
   
  `Precision`  
- 特定の列のデータ型の有効桁数を指定します。 precision は、数値全体の桁数です。 かどうか、データ型に該当する更新できます`Precision`します。  
+ 特定の列のデータ型の有効桁数を指定します。 precision は、数値全体の桁数です。 `Precision` は、そのデータ型で使用できる範囲内であれば更新できます。  
   
  `Scale`  
- 特定の列のデータ型の小数点以下桁数を指定します。 scale は、数値の中で小数点より右側の桁数です。 かどうか、データ型に該当する更新できます`Scale`します。  
+ 特定の列のデータ型の小数点以下桁数を指定します。 scale は、数値の中で小数点より右側の桁数です。 `Scale` は、そのデータ型で使用できる範囲内であれば更新できます。  
   
  `Code Page`  
- 列の型のコード ページを指定します。 かどうか、データ型に該当する更新できます`Code Page`します。  
+ 列の型のコード ページを指定します。 `Code Page` は、そのデータ型で使用できる範囲内であれば更新できます。  
   
 ## <a name="see-also"></a>参照  
- [参照変換](data-flow/transformations/lookup-transformation.md)  
+ [Lookup Transformation](data-flow/transformations/lookup-transformation.md)  
   
   

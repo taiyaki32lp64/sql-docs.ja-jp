@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: a9602174-b7e2-4e16-8ded-dfd8eb9264d7
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 923467270901b91c35b40005c75207e7b1799194
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 89ba538c3ac3dfd7a262e4ae17cb9ddd6cf7265c
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52518971"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66082611"
 ---
 # <a name="data-set-filter-or-model-filter-dialog-box"></a>[データセット フィルター] または [モデル フィルター] ダイアログ ボックス
   このダイアログ ボックスを使用すると、データセットに適用できるフィルターを作成できます。  データセットとして、テスト用の外部データセット、またはマイニング モデルのケース データを使用できます。 フィルターの対象が外部データセットかマイニング モデルかによって、ダイアログ ボックスの名前が異なります。  
@@ -32,7 +31,7 @@ ms.locfileid: "52518971"
 > [!TIP]  
 >  元のトレーニング データのサブセットを使用して精度をテストするには、トレーニング セットを定義するときに使用したデータ ソース ビューを外部テスト データとして追加し、次に条件を **[データセット フィルター]** グリッドに追加します。  
   
- **詳細:**[テストおよび検証 &#40;データ マイニング&#41;](data-mining/testing-and-validation-data-mining.md)  
+ **詳細:** [テストおよび検証 (データ マイニング)](data-mining/testing-and-validation-data-mining.md)  
   
 ## <a name="options"></a>および  
  **条件**  

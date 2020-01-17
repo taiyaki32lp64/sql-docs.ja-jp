@@ -18,17 +18,20 @@ helpviewer_keywords:
 - expressions [Integration Services], identifiers
 - qualified identifiers [Integration Services]
 ms.assetid: 56af984d-88b4-4db8-b6a2-6b07315a699e
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: 285141958996c85de736020c33bee0afabb9b5b9
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 6ddde15e9ca4fac2fd98b598ee8334f3ff28d6df
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51638789"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71297555"
 ---
 # <a name="identifiers-ssis"></a>識別子 (SSIS)
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   識別子とは、式の内部で演算に使用できる列および変数のことです。 式では、標準識別子と修飾された識別子を使用できます。  
   
 ## <a name="regular-identifiers"></a>標準識別子  

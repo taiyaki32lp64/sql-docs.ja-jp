@@ -1,6 +1,5 @@
 ---
-title: .dqs ファイルからのナレッジ ベースのインポート | Microsoft Docs
-ms.custom: ''
+title: .dqs ファイルからのナレッジ ベースのインポート
 ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: data-quality-services
@@ -8,15 +7,14 @@ ms.reviewer: ''
 ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: 9b9786fe-9e80-429a-afcb-dc3b3dd6f0b0
-author: leolimsft
-ms.author: lle
-manager: craigg
-ms.openlocfilehash: fc622f0f8d4e8d07594fca5ebead56502cfc3526
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
-ms.translationtype: HT
+author: swinarko
+ms.author: sawinark
+ms.openlocfilehash: cd001817ccb5906905db1b0623d2491dd0463c07
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56019563"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75251566"
 ---
 # <a name="import-a-knowledge-base-from-a-dqs-file"></a>.dqs ファイルからのナレッジ ベースのインポート
 
@@ -30,35 +28,41 @@ ms.locfileid: "56019563"
   
  ナレッジ ベースをインポートする際に同じ名前を使用できますが、クライアント アプリケーションにそのナレッジ ベースの名前が既に存在する場合は名前を変更する必要があります。  
   
-##  <a name="BeforeYouBegin"></a> はじめに  
+##  <a name="BeforeYouBegin"></a>開始する前に  
   
-###  <a name="Prerequisites"></a> 前提条件  
+###  <a name="Prerequisites"></a>応募  
  ナレッジ ベースを .dqs ファイルからインポートするには、事前にナッレジ ベースを .dqs ファイルにエクスポートしている必要があります。  
   
-###  <a name="Security"></a> セキュリティ  
+###  <a name="Security"></a>保護  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a>許可  
  ナレッジ ベースを .dqs データ ファイルからインポートするには、DQS_MAIN データベースの dqs_kb_editor ロールまたは dqs_administrator ロールが必要です。  
   
-##  <a name="Import"></a> ナレッジ ベースを .dqs ファイルからインポートします。  
+##  <a name="Import"></a>Dqs ファイルからナレッジベースをインポートする  
   
-1.  [!INCLUDE[ssDQSInitialStep](../includes/ssdqsinitialstep-md.md)]「[Data Quality Client アプリケーションの実行](../data-quality-services/run-the-data-quality-client-application.md)」をご覧ください。  
+1.  [!INCLUDE[ssDQSInitialStep](../includes/ssdqsinitialstep-md.md)][Data Quality Client アプリケーションを実行](../data-quality-services/run-the-data-quality-client-application.md)します。  
   
-2.  [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] のホーム画面で **[新しいナレッジ ベース]** をクリックします。  
+2.  
+  [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] のホーム画面で **[新しいナレッジ ベース]** をクリックします。  
   
 3.  ナレッジ ベースの名前を入力します。  
   
-4.  **[次の場所からナレッジ ベースを作成]** の下矢印をクリックし、 **[DQS ファイルからインポート]** をクリックします。  
+4.  
+  **[次の場所からナレッジ ベースを作成]** の下矢印をクリックし、 **[DQS ファイルからインポート]** をクリックします。  
   
-5.  **[データ ファイルの選択]** で **[参照]** をクリックします。  
+5.  
+  **[データ ファイルの選択]** で **[参照]** をクリックします。  
   
-6.  **[データ ファイルからインポート]** ダイアログ ボックスで、インポートする .dqs ファイルを含むフォルダーに移動してファイル名をクリックします。 **[開く]** をクリックします。  
+6.  
+  **[データ ファイルからインポート]** ダイアログ ボックスで、インポートする .dqs ファイルを含むフォルダーに移動してファイル名をクリックします。 
+  **[開く]** をクリックします。  
   
 7.  正しいナレッジ ベースとドメインが **[ドメイン]** リストに表示されていることを確認します。  
   
 8.  実行するアクティビティを選択して **[作成]** をクリックします。  
   
-9. **[ナレッジ ベースのインポート]** ダイアログ ボックスで、ステータス行にインポートの完了が表示されていることを確認します。 **[OK]** をクリックします。  
+9. 
+  **[ナレッジ ベースのインポート]** ダイアログ ボックスで、ステータス行にインポートの完了が表示されていることを確認します。 [**OK**] をクリックすると、  
   
 10. 必要なナレッジ検出、ドメイン管理、または照合ポリシー タスクを実行し、 **[完了]** をクリックします。  
   
@@ -68,7 +72,7 @@ ms.locfileid: "56019563"
   
 13. Data Quality Services のホーム ページで、 **[最近使用したナレッジ ベース]** の下にナレッジ ベースが表示されていることを確認します。  
   
-##  <a name="FollowUp"></a>補足情報: .dqs ファイルからナレッジ ベースをインポートした後  
+##  <a name="FollowUp"></a>補足情報: dqs ファイルからナレッジベースをインポートした後  
  .dqs ファイルからナレッジ ベースをインポートした後で、ナレッジ ベースのコンテンツに応じてナレッジをナレッジ ベースに追加したり、ナレッジ ベースをクレンジング プロジェクトや照合プロジェクトで使用したりすることができます。 詳しくは、「[ナレッジ検出の実行](../data-quality-services/perform-knowledge-discovery.md)」、「[ドメインの管理](../data-quality-services/managing-a-domain.md)」、「[複合ドメインの管理](../data-quality-services/managing-a-composite-domain.md)」、「[照合ポリシーの作成](../data-quality-services/create-a-matching-policy.md)」、「[データ クレンジング](../data-quality-services/data-cleansing.md)」、または「[データ照合](../data-quality-services/data-matching.md)」をご覧ください。  
   
   

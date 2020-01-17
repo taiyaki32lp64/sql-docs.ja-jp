@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: a945cb65-ba7a-42f4-bbd9-6ec675745523
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: fb094e4b31cdb70f7f9950ae7a82cc884e5fce9a
-ms.sourcegitcommit: 6c9d35d03c1c349bc82b9ed0878041d976b703c6
+ms.openlocfilehash: 1dc50611e1497d84335f29d763c280cb09e9d41b
+ms.sourcegitcommit: f76b4e96c03ce78d94520e898faa9170463fdf4f
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/06/2018
-ms.locfileid: "51217966"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70874745"
 ---
 # <a name="create-a-maintenance-plan"></a>メンテナンス プランの作成
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -32,7 +31,7 @@ ms.locfileid: "51217966"
      
      [前提条件](#Prerequisite)  
   
-     [Security](#Security)  
+     [セキュリティ](#Security)  
   
 -   **メンテナンス プランを作成するために使用するもの:**  
   
@@ -43,7 +42,7 @@ ms.locfileid: "51217966"
 ##  <a name="BeforeYouBegin"></a> はじめに  
   
 ###  <a name="Restrictions"></a> 制限事項と制約事項  
- マルチサーバー メンテナンス プランを作成するには、1 台のマスター サーバーと 1 台以上の対象サーバーを含むマルチサーバー環境を構成する必要があります。 マルチサーバー メンテナンス プランは、マスター サーバー上で作成および管理する必要があります。 このプランは対象サーバー上でも表示できますが、対象サーバーでは管理できません。 
+ マルチサーバー メンテナンス プランを作成するには、1 台のマスター サーバーと 1 台以上のターゲット サーバーを含むマルチサーバー環境を構成する必要があります。 マルチサーバー メンテナンス プランは、マスター サーバー上で作成および管理する必要があります。 このプランはターゲット サーバー上でも表示できますが、ターゲット サーバーでは管理できません。 
  
 ###  <a name="Prerequisite"></a> 前提条件  
 [Agent XP サーバー構成オプション](../../database-engine/configure-windows/agent-xps-server-configuration-option.md) を有効にする必要があります。
@@ -71,7 +70,7 @@ ms.locfileid: "51217966"
   
 2.  プラス記号をクリックして **[管理]** フォルダーを展開します。  
   
-3.  **[メンテナンス プラン]** フォルダーを右クリックし、**[新しいメンテナンス プラン]** をクリックします。  
+3.  **[メンテナンス プラン]** フォルダーを右クリックし、 **[新しいメンテナンス プラン]** をクリックします。  
   
 4.  「[メンテナンス プランの作成 &#40;メンテナンス プラン デザイン画面&#41;](../../relational-databases/maintenance-plans/create-a-maintenance-plan-maintenance-plan-design-surface.md)」の手順に従って、メンテナンス プランを作成します。  
   
@@ -136,7 +135,7 @@ ms.locfileid: "51217966"
     GO  
     -- Attaches the RunOnce schedule to the job HistoryCleanupTask_1.   
     EXEC sp_attach_schedule  
-       @job_name = N'HistoryCleanupTask_1'  
+       @job_name = N'HistoryCleanupTask_1',  
        @schedule_name = N'RunOnce' ;   
     GO  
   

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - time-out
@@ -13,12 +12,12 @@ ms.assetid: f1add4bc-e882-440a-a98b-333cfa274c3e
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 11480432c19f84d58c5804927c3c22ac31be4342
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 640d07115e2a071bb5d57e87955c11670f4c38b0
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48077463"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66085889"
 ---
 # <a name="change-the-time-out-value-for-data-mining-queries"></a>データ マイニング クエリのタイムアウト値の変更
   リフト チャートの作成時や、予測クエリの実行時には、予測に必要なすべてのデータの生成に時間がかかる場合があります。 クエリがタイムアウトするのを防ぐため、クエリの完了を [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] サーバーで待機する時間を制御する値を変更できます。  
@@ -36,7 +35,7 @@ ms.locfileid: "48077463"
 3.  **[クエリ タイムアウト]** ボックスをクリックし、秒数の値を入力します。  
   
 ## <a name="see-also"></a>参照  
- [データ マイニング クエリ タスクと操作方法](data-mining-query-tasks-and-how-tos.md)   
+ [データ マイニングのクエリ タスクと操作方法](data-mining-query-tasks-and-how-tos.md)   
  [データ マイニング クエリ](data-mining-queries.md)  
   
   

@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 9194bffa-5bdf-4dff-af86-f7158c23bfa7
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: d75a5dcd8a09388c031e4e01c8bb8b9c1d62bb80
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.openlocfilehash: bbd27490e20e8c615ba934299e80f55eb06a5481
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51600562"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67964354"
 ---
 # <a name="dataspace-object-rds"></a>DataSpace オブジェクト (RDS)
 > [!IMPORTANT]
@@ -29,7 +28,7 @@ ms.locfileid: "51600562"
   
  リモート データ サービスには、クライアント側コンポーネントは、中間層にあるビジネス オブジェクトと通信できるように、ビジネス オブジェクトのプロキシが必要があります。 パッケージ化、アンパッケージ処理、およびトランスポート (マーシャ リング) のアプリケーションのプロキシを容易に[Recordset](../../../ado/reference/ado-api/recordset-object-ado.md)プロセスやコンピューターの境界を越えてデータ。  
   
- リモート データ サービスを使用して、 **rds.DataSpace**オブジェクトの[CreateObject](../../../ado/reference/rds-api/createobject-method-rds.md)ビジネス オブジェクトのプロキシを作成します。 中間層ビジネス オブジェクトの対応のインスタンスが作成されるたびに、ビジネス オブジェクトのプロキシが動的に作成されます。 リモート データ サービスは、次のプロトコルをサポートしています: HTTP、HTTPS (HTTP Secure Sockets)、DCOM、およびインプロセス (クライアント コンポーネントと同じコンピューター上にビジネス オブジェクト)。  
+ リモート データ サービスを使用して、 **rds.DataSpace**オブジェクトの[CreateObject](../../../ado/reference/rds-api/createobject-method-rds.md)ビジネス オブジェクトのプロキシを作成します。 中間層ビジネス オブジェクトの対応のインスタンスが作成されるたびに、ビジネス オブジェクトのプロキシが動的に作成されます。 リモート データ サービスには、次のプロトコルがサポートされています。HTTP、HTTPS (HTTP Secure Sockets)、DCOM、およびインプロセス (クライアント コンポーネントと同じコンピューター上にビジネス オブジェクト)。  
   
 > [!NOTE]
 >  RDS の「ステートレス」方法で動作時に、 **rds.DataSpace**オブジェクトが HTTP または HTTPS プロトコルを使用します。 つまり、サーバーに応答が返された後にクライアント要求に関する内部情報は破棄されます。  
@@ -48,7 +47,7 @@ ms.locfileid: "51600562"
   
 -   [DataSpace オブジェクト (RDS) のプロパティ、メソッド、およびイベント](../../../ado/reference/rds-api/dataspace-object-rds-properties-methods-and-events.md)  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [DataSpace オブジェクトおよび CreateObject メソッドの例 (VBScript)](../../../ado/reference/rds-api/dataspace-object-and-createobject-method-example-vbscript.md)
 
 

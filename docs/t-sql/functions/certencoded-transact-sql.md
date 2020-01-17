@@ -15,15 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - CERTENCODED
 ms.assetid: 677a0719-7b9a-4f0b-bc61-41634563f924
-author: MashaMSFT
-ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: dc3aec9795bd8d002602020e97d061b358ad55c9
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+author: VanMSFT
+ms.author: vanto
+ms.openlocfilehash: e81c4101d03fd6f8426b1a15a29b206a0c2be7a5
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52506847"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68040103"
 ---
 # <a name="certencoded-transact-sql"></a>CERTENCODED (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]

@@ -19,11 +19,11 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: 9a47f6e17a85fdf9cec169a611b9fe205ba02543
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53351523"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63192036"
 ---
 # <a name="numberofflags-property-clientnetworkprotocol-class"></a>NumberOfFlags プロパティ (ClientNetworkProtocol クラス)
   によって指定されたクライアント ネットワーク プロトコルに必要なフラグ オプションの数を取得、 [SetOrderValue メソッド (ClientNetworkProtocol クラス)](clientnetworkprotocol-class.md)します。  
@@ -45,7 +45,7 @@ object
   
 ## <a name="remarks"></a>コメント  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [クライアント プロトコルの構成](https://technet.microsoft.com/library/ms181035.aspx)  
   
   

@@ -13,17 +13,20 @@ helpviewer_keywords:
 - operators [Integration Services]
 - expressions [Integration Services], operators
 ms.assetid: 33df3a3d-1f5c-429b-a3b9-52b7d8689089
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: 4395090e03c904970b5cefcd71b0570a3e184a1e
-ms.sourcegitcommit: 98324d9803edfa52508b6d5d3554614d0350a0b9
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: b625b23dc45a3a5ed9abc00f0068ed3e7fbfeb58
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52321728"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71297449"
 ---
 # <a name="operators-ssis-expression"></a>演算子 (SSIS 式)
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   このセクションでは、式の言語が提供する演算子、および式エバリュエーターが使用する演算子の優先順位と結合性について説明します。  
   
  次の表に、演算子に関するこのセクションのトピックの一覧を示します。  

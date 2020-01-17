@@ -15,15 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - STIsRing (geometry Data Type)
 ms.assetid: ea0063be-1c74-4cc4-ac6f-b65321ddfa54
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: dfe97518539396e53a8b0f051bf80186b85791f4
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: MladjoA
+ms.author: mlandzic
+ms.openlocfilehash: a9aa9b1b8e97f78887710309019e80ff4276c732
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47676190"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68030885"
 ---
 # <a name="stisring-geometry-data-type"></a>STIsRing (geometry データ型)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -46,7 +45,7 @@ ms.locfileid: "47676190"
 ## <a name="return-types"></a>戻り値の型  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 戻り値の型: **bit**  
   
- CLR の戻り値の型: **SqlBoolean**  
+ CLR の戻り値の型:**SqlBoolean**  
   
 ## <a name="remarks"></a>Remarks  
  インスタンスが **LineString** でない場合、このメソッドは null を返します。  

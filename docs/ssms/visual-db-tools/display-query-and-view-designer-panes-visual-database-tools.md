@@ -15,15 +15,14 @@ helpviewer_keywords:
 - displaying View Designer panes
 - displaying Query Designer panes
 ms.assetid: 605c63af-f91e-410d-8d60-5cf6f899d756
-author: stevestein
-ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 21afc4ccdddead6cc16bae2461c00e2cb03453b6
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 27d29536d74f59b9477259ea9f5e335c1c0eae6d
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47763090"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68254857"
 ---
 # <a name="display-query-and-view-designer-panes-visual-database-tools"></a>クエリおよびビュー デザイナーのペインの表示 (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

@@ -13,11 +13,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: ed3a5a48a4c327decc75e37142c77d7d4ee52f1d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48141120"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62914658"
 ---
 # <a name="mssqlserver2534"></a>MSSQLSERVER_2534
     
@@ -30,7 +30,7 @@ ms.locfileid: "48141120"
 |イベント ソース|MSSQLSERVER|  
 |コンポーネント|SQLEngine|  
 |シンボル名|DBCC_PAGE_ALLOCATED_TO_OTHER_OBJECT|  
-|メッセージ テキスト|テーブル エラー: ページ P_ID が別のオブジェクトによって割り当てられています。このページのヘッダーは、ページがオブジェクト ID O_ID、インデックス ID I_ID、パーティション ID PN_ID、アロケーション ユニット ID A_ID (型 TYPE) に割り当てられていることを示しています。|  
+|メッセージ テキスト|テーブル エラー:アロケーション ユニット ID A_ID (型 TYPE) が別のオブジェクトによって割り当てられたページ P_ID、ようにオブジェクト ID O_ID、インデックス ID I_ID、パーティション ID PN_ID に割り当てられている場合のヘッダーを示します。|  
   
 ## <a name="explanation"></a>説明  
  ページのヘッダーにはアロケーション ユニット ID、*A_ID* が含まれていますが、このアロケーション ユニットのどの IAM (Index Allocation Map) ページにもこのページが割り当てられていません。 ページのヘッダーに含まれているアロケーション ユニット ID は誤りであり、ページが実際に割り当てられているアロケーション ユニット ID に対応した MSSQLServer_2533 エラーがこのページで生じます。  

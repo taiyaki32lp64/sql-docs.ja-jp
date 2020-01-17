@@ -1,5 +1,5 @@
 ---
-title: '手順 3: パッケージとその他のファイルの追加 | Microsoft Docs'
+title: 手順 3:パッケージとその他のファイルの追加 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -8,17 +8,20 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: tutorial
 ms.assetid: a7e6ec9c-d31d-4613-9525-8947a7b358f7
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: b9cca20997ed2bfe8b32d09376186691253d6e90
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: be3dcb5bd42624ee943db4393809e2889808a11e
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52528598"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71283837"
 ---
 # <a name="lesson-1-3---adding-packages-and-other-files"></a>レッスン 1-3 - パッケージとその他のファイルの追加
+
+[!INCLUDE[ssis-appliesto](../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
 このタスクでは、既存のパッケージ、個々のパッケージをサポートする補助ファイル、および Readme を、前のタスクで作成した Deployment Tutorial プロジェクトに追加します。 たとえば、パッケージのデータを含んでいる XML データ ファイルや、プロジェクトのすべてのパッケージに関する Readme 情報を提供するテキスト ファイルを追加します。  
   
 パッケージをテスト環境または運用環境に配置するとき、通常はデータ ファイルを配置に含めるのではなく、テスト バージョンまたは運用バージョンのデータ ファイルまたはデータベースにアクセスできるように、構成ファイルでデータ ソースへのパスを更新します。 このチュートリアルでは、手順を説明する目的で、データ ファイルをパッケージの配置に含めます。  
@@ -44,13 +47,13 @@ ms.locfileid: "52528598"
   
 ### <a name="to-add-packages-to-the-deployment-tutorial-project"></a>Deployment Tutorial プロジェクトにパッケージを追加するには  
   
-1.  [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] がまだ開いていない場合は、**[スタート]** ボタンをクリックし、**[すべてのプログラム]**、**[Microsoft SQL Server]** の順にポイントして、**[SQL Server Data Tools]** をクリックします。  
+1.  [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] がまだ開いていない場合は、 **[スタート]** ボタンをクリックし、 **[すべてのプログラム]** 、 **[Microsoft SQL Server]** の順にポイントして、 **[SQL Server Data Tools]** をクリックします。  
   
-2.  **[ファイル]** メニューの **[開く]** をクリックし、**[プロジェクト/ソリューション]** をクリックします。次に、**[Deployment Tutorial]** フォルダーをクリックして **[開く]** をクリックし、 **Deployment Tutorial.sln**をダブルクリックします。  
+2.  **[ファイル]** メニューの **[開く]** をクリックし、 **[プロジェクト/ソリューション]** をクリックします。次に、 **[Deployment Tutorial]** フォルダーをクリックして **[開く]** をクリックし、 **Deployment Tutorial.sln**をダブルクリックします。  
   
-3.  ソリューション エクスプローラーで、[Deployment Tutorial] を右クリックして **[追加]** をクリックし、**[既存のパッケージ]** をクリックします。  
+3.  ソリューション エクスプローラーで、Deployment Tutorial を右クリックして  **追加** をクリックし、**既存のパッケージ** をクリックします。  
   
-4.  **[既存のパッケージのコピーを追加]** ダイアログ ボックスの **[パッケージの場所]** で、**[ファイル システム]** をクリックします。  
+4.  **[既存のパッケージのコピーを追加]** ダイアログ ボックスの **[パッケージの場所]** で、 **[ファイル システム]** をクリックします。  
   
 5.  参照ボタン ( **[...]** ) をクリックして、C:\Program Files\Microsoft SQL Server\100\Samples\Integration ServicesTutorial\Deploying Packages\Completed Packages に移動し、**DataTransfer.dtsx** をクリックして **[開く]** をクリックします。  
   
@@ -60,16 +63,16 @@ ms.locfileid: "52528598"
   
 ### <a name="to-add-ancillary-files-to-the-deployment-tutorial-project"></a>Deployment Tutorial プロジェクトに付属ファイルを追加するには  
   
-1.  ソリューション エクスプローラーで、[Deployment Tutorial] を右クリックして **[追加]** をクリックし、**[既存の項目]** をクリックします。  
+1.  ソリューション エクスプローラーで、Deployment Tutorial を右クリックして  **追加** をクリックし、**既存の項目** をクリックします。  
   
-2.  **[既存の項目の追加 - Deployment Tutorial]** ダイアログ ボックスで C:\Program Files\Microsoft SQL Server\100\Samples\Integration Services\Tutorial\Deployment Packages\Sample Data に移動し、orders.xml、orders.xsd、および NewCustomers.txt を選択して、**[追加]** をクリックします。  
+2.  **[既存の項目の追加 - Deployment Tutorial]** ダイアログ ボックスで C:\Program Files\Microsoft SQL Server\100\Samples\Integration Services\Tutorial\Deployment Packages\Sample Data に移動し、orders.xml、orders.xsd、および NewCustomers.txt を選択して、 **[追加]** をクリックします。  
   
-3.  **[既存の項目の追加 - Deployment Tutorial]** ダイアログ ボックスで C:\Program Files\Microsoft SQL Server\100\Samples\Integration Services\Tutorial\Deployment Packages\\に移動し、Readme.txt を選択して、**[追加]** をクリックします。  
+3.  **[既存の項目の追加 - Deployment Tutorial]** ダイアログ ボックスで C:\Program Files\Microsoft SQL Server\100\Samples\Integration Services\Tutorial\Deployment Packages\\に移動し、Readme.txt を選択して、 **[追加]** をクリックします。  
   
-4.  [ファイル] メニューの **[すべてを保存]** をクリックします。  
+4.  ファイル メニューの  **すべてを保存** をクリックします。  
   
 ## <a name="next-task-in-lesson"></a>このレッスンの次の作業  
-[手順 4: パッケージ構成の追加](../integration-services/lesson-1-4-adding-package-configurations.md)  
+[手順 4:パッケージ構成の追加](../integration-services/lesson-1-4-adding-package-configurations.md)  
   
   
   

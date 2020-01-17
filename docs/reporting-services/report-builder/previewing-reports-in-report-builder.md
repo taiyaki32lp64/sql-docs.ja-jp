@@ -2,18 +2,18 @@
 title: レポート ビルダーでのレポートのプレビュー | Microsoft Docs
 ms.date: 01/09/2017
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: report-builder
 ms.topic: conceptual
 ms.assetid: ba6b5bdd-d8c6-4aa8-ba32-3a10b11969d4
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 6fe16659ce288a664d684eced0de22ce4382f3a7
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 36c1c3172e4d37963340fdbebce85eff9b5086b9
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56288290"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65580714"
 ---
 # <a name="previewing-reports-in-report-builder"></a>レポート ビルダーでのレポートのプレビュー
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] の改ページページ分割されたレポートを作成する際は、レポートが思いどおりに表示されるかどうかを確認するために、レポートをたびたびプレビューすると効果的です。 レポートをプレビューするには、 **[実行]** をクリックします。 レポートがプレビュー モードで表示されます。  

@@ -14,11 +14,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: a39a6715a9ba8ab08d846aabb96e5b0665a2aa43
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48142182"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63200297"
 ---
 # <a name="retrieve-result-set-information-odbc"></a>結果セットの情報の取得 (ODBC)
     
@@ -30,7 +30,7 @@ ms.locfileid: "48142182"
   
     -   呼び出す[SQLDescribeCol](../native-client-odbc-api/sqldescribecol.md)結果列に関する情報を取得します。  
   
-     スイッチまたは  
+     または  
   
     -   呼び出す[SQLColAttribute](../native-client-odbc-api/sqlcolattribute.md)結果列に関する具体的な記述子情報を取得します。  
   

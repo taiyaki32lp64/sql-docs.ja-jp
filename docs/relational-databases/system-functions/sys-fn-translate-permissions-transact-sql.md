@@ -21,18 +21,17 @@ helpviewer_keywords:
 ms.assetid: ac97121f-2bd0-4f71-8e45-42c8584edbc5
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: b098dafc5764db96bdf3dc9e604f3e69a687ab94
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: c08fd2235750a8a7be99b5290813331141ddf0de
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47700500"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68055375"
 ---
 # <a name="sysfntranslatepermissions-transact-sql"></a>sys.fn_translate_permissions (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  SQL トレースにより返された権限のビットマスクを権限名のテーブルに変換します。  
+  権限名のテーブルに SQL トレースによって返される権限のビットマスクを変換します。  
   
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -44,7 +43,7 @@ sys.fn_translate_permissions ( level , perms )
 ```  
   
 ## <a name="arguments"></a>引数  
- *レベル*  
+ *level*  
  権限が適用されるセキュリティ保護可能なリソースの種類を指定します。 *レベル*は**nvarchar (60)** します。  
   
  *perms*  
@@ -53,8 +52,8 @@ sys.fn_translate_permissions ( level , perms )
 ## <a name="returns"></a>戻り値  
  **テーブル**  
   
-## <a name="remarks"></a>Remarks  
- 戻り値、**権限**SQL トレースの列で使用されるビットマスクを整数で表したの[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]有効なアクセス許可を計算します。 25 種類のセキュリティ保護可能なリソースにはそれぞれ、数値が対応付けられた固有の権限セットがあります。 **sys.fn_translate_permissions**このビットマスクを権限名のテーブルに変換します。  
+## <a name="remarks"></a>コメント  
+ 戻り値、**権限**SQL トレースの列で使用されるビットマスクを整数で表したの[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]有効なアクセス許可を計算します。 それぞれ 25 種類のセキュリティ保護可能なは、独自の対応する数値を使用した権限セットがあります。 **sys.fn_translate_permissions**このビットマスクを権限名のテーブルに変換します。  
   
 ## <a name="permissions"></a>アクセス許可  
  ロール **public** のメンバーシップが必要です。  

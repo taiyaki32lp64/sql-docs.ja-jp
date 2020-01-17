@@ -13,11 +13,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 262b2c795da92b2ef32c6956d9a2deda0e45a39d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48151922"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62915229"
 ---
 # <a name="mssqlserver21889"></a>MSSQLSERVER_21889
     
@@ -36,6 +36,6 @@ ms.locfileid: "48151922"
  パブリッシャー データベースをホストするためには、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスがレプリケーション パブリッシャーである必要があります。 `sp_validate_redirected_publisher` は、リモート サーバーで `sp_helpdistributor` を呼び出し、サーバーがレプリケーション パブリッシャーであるかどうかを判断します。 このエラーは、ストアド プロシージャ `sp_helpdistributor` を実行して、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の対象のインスタンがレプリケーション パブリッシャーでないことが示された場合に発生します。  
   
 ## <a name="user-action"></a>ユーザーの操作  
- パブリッシャー データベースをホストする [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスで `sp_adddistributor` を実行します。 `sp_adddistributor` を実行するときに、正しいディストリビューターを指定します。 に対して同じ値を使用して、 *@password*とパラメーターが使用されるときに`sp_adddistributor`がディストリビューターで最初に実行します。  
+ パブリッシャー データベースをホストする [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスで `sp_adddistributor` を実行します。 `sp_adddistributor` を実行するときに、正しいディストリビューターを指定します。 に対して同じ値を使用して、 *@password* とパラメーターが使用されるときに`sp_adddistributor`がディストリビューターで最初に実行します。  
   
   

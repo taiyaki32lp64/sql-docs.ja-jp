@@ -23,15 +23,14 @@ helpviewer_keywords:
 - verifying column updates
 - checking column updates
 ms.assetid: 8e3be25b-2e3b-4d1f-a610-dcbbd8d72084
-author: MashaMSFT
-ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 9677ef3717fb83bdaf6ea108279b98a6598adced
-ms.sourcegitcommit: 467b2c708651a3a2be2c45e36d0006a5bbe87b79
+author: MikeRayMSFT
+ms.author: mikeray
+ms.openlocfilehash: fefd85737e5d58e71dae6fd81dc2c0306b0838e0
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53980348"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67927630"
 ---
 # <a name="update---trigger-functions-transact-sql"></a>UPDATE - トリガー関数 (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -52,7 +51,7 @@ UPDATE ( column )
  INSERT 動作または UPDATE 動作をテストする列の名前です。 トリガーの ON 句にテーブル名が指定されているため、列名の前にテーブル名を含めないでください。 この列の[データ型](../../t-sql/data-types/data-types-transact-sql.md)は、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] がサポートしているものであれば、どのようなデータ型でもかまいません。 ただし、計算列を使用することはできません。  
   
 ## <a name="return-types"></a>戻り値の型  
- ブール値  
+ Boolean  
   
 ## <a name="remarks"></a>Remarks  
  INSERT または UPDATE が成功するかどうかにかかわらず、UPDATE() は TRUE を返します。  
@@ -65,6 +64,8 @@ UPDATE ( column )
 >  IF UPDATE(*column*) 句は、IF 句、IF...ELSE 句、または WHILE 句と同じように機能し、BEGIN...END ブロックを使用できます。 詳細については、「[フロー制御言語](~/t-sql/language-elements/control-of-flow.md)」を参照してください。  
   
  UPDATE(*column*) は、[!INCLUDE[tsql](../../includes/tsql-md.md)] トリガーの内部のどこでも使用できます。  
+ 
+トリガーを列に適用すると、列の値が更されない場合でも、`UPDATED` 値が `true` または `1` として返されます。 これは意図されたもので、トリガーでは挿入/更新/削除操作を許容するかどうかを決定するビジネス ロジックを実装する必要があります。 
   
 ## <a name="examples"></a>使用例  
  次の例では、`StateProvinceID` テーブルの `PostalCode` 列または `Address` 列を更新しようとするときにクライアントへのメッセージを出力する、トリガーを作成します。  

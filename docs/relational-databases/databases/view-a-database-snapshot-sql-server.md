@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 123f19b2-0850-4033-8507-59ebdfb368ee
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 388c7c40afcf370b181378259c97fd399781e983
-ms.sourcegitcommit: 1a5448747ccb2e13e8f3d9f04012ba5ae04bb0a3
+ms.openlocfilehash: 5f09f279c82a9fb28e259951be2bf78f9ca93aae
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51560359"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72907911"
 ---
 # <a name="view-a-database-snapshot-sql-server"></a>データベース スナップショットの表示 (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -45,7 +44,7 @@ ms.locfileid: "51560359"
 2.  **[データベース]** を展開します。  
   
 3.  **[データベース スナップショット]** を展開し、表示するスナップショットを選択します。  
-  
+
 ##  <a name="TsqlProcedure"></a> Transact-SQL の使用  
  **データベース スナップショットを確認するには**  
   

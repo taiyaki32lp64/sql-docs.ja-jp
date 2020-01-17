@@ -17,15 +17,14 @@ helpviewer_keywords:
 - CURSOR_STATUS function
 - cursors [SQL Server], status information
 ms.assetid: 3a4a840e-04f8-43bd-aada-35d78c3cb6b0
-author: MashaMSFT
-ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 2543cb82826957ecf596b05adb352fa05d1ab2d0
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: MikeRayMSFT
+ms.author: mikeray
+ms.openlocfilehash: 892e4c09154e93ded7718819c86dfe91c18c85ca
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47599972"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68026251"
 ---
 # <a name="cursorstatus-transact-sql"></a>CURSOR_STATUS (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -72,7 +71,7 @@ CURSOR_STATUS
 |-2|該当なし。|次のいずれかの可能性があります。<br /><br /> 以前に呼び出されたプロシージャでは、この OUTPUT 変数にカーソルが割り当てられませんでした。<br /><br /> 以前に割り当てられたプロシージャによって、この OUTPUT 変数にカーソルが割り当てられましたが、プロシージャの終了時点ではカーソルはクローズした状態でした。 このため、カーソルの割り当てが解除され、呼び出し元のプロシージャに返されません。<br /><br /> 宣言されたカーソル変数にはカーソルが割り当てられていません。|  
 |-3|指定された名前のカーソルは存在しません。|指定された名前のカーソル変数は存在しません。あるいは、存在しているとしても、それにはカーソルがまだ割り当てられていません。|  
   
-* 動的カーソルがこのような結果を返すことはありません。
+\* 動的カーソルがこのような結果を返すことはありません。
   
 ## <a name="examples"></a>使用例  
 この例では、`CURSOR_STATUS` 関数を使用し、カーソルの宣言後、そのオープン後、そのクローズ後の状態を示しています。

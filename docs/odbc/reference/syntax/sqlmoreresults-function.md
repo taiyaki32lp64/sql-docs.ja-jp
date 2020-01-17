@@ -19,24 +19,23 @@ helpviewer_keywords:
 ms.assetid: bf169ed5-4d55-412c-b184-12065a726e89
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 3a680f5579b241f6b279f5ecc994d32c8fad784f
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: 3ca7ed4f6bbcd31b8f67b95dc14a2c6c301b5a59
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53205361"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68138827"
 ---
 # <a name="sqlmoreresults-function"></a>SQLMoreResults 関数
 **準拠**  
  バージョンが導入されました。ODBC 1.0 規格に準拠します。ODBC  
   
  **まとめ**  
- **SQLMoreResults**以上結果が含まれているステートメントで使用できるかどうかを判断します**選択**、 **UPDATE**、**挿入**、または**削除**ステートメントと、それらの結果の初期化が処理そうである場合。  
+ **SQLMoreResults**以上結果が含まれているステートメントで使用できるかどうかを判断します**SELECT**、 **UPDATE**、**INSERT**、または**DELETE**ステートメントと、それらの結果の初期化が処理そうである場合。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
   
 SQLRETURN SQLMoreResults(  
      SQLHSTMT     StatementHandle);  
@@ -71,9 +70,9 @@ SQLRETURN SQLMoreResults(
 |IM018|**SQLCompleteAsync**このハンドルに対する前の非同期操作を完了が呼び出されていません。|通知モードが有効になっている場合、ハンドルでは、前の関数呼び出しに SQL_STILL_EXECUTING が返された場合と**SQLCompleteAsync**後処理を行い、操作を完了するハンドルで呼び出す必要があります。|  
   
 ## <a name="comments"></a>コメント  
- **選択**ステートメントの結果セットを返します。 **UPDATE**、**挿入**、および**削除**ステートメントが影響を受ける行の数を返します。 これらのステートメントのいずれかがバッチ処理されて、プロシージャ、または (昇順にバッチ内で出現する順序で、パラメーターの順序番号付き) パラメーターの配列で送信された場合は、複数の結果セットを返すことまたは行をカウントします。 ステートメントのバッチおよびパラメーターの配列については、次を参照してください。 [SQL ステートメントのバッチ](../../../odbc/reference/develop-app/batches-of-sql-statements.md)と[パラメーター値の配列](../../../odbc/reference/develop-app/arrays-of-parameter-values.md)します。  
+ **SELECT**ステートメントの結果セットを返します。 **UPDATE**、**INSERT**、および**削除**ステートメントが影響を受ける行の数を返します。 これらのステートメントのいずれかがバッチ処理されて、プロシージャ、または (昇順にバッチ内で出現する順序で、パラメーターの順序番号付き) パラメーターの配列で送信された場合は、複数の結果セットを返すことまたは行をカウントします。 ステートメントのバッチおよびパラメーターの配列については、次を参照してください。 [SQL ステートメントのバッチ](../../../odbc/reference/develop-app/batches-of-sql-statements.md)と[パラメーター値の配列](../../../odbc/reference/develop-app/arrays-of-parameter-values.md)します。  
   
- バッチを実行した後、アプリケーションは最初の結果セットに配置されます。 アプリケーションを呼び出して**SQLBindCol**、 **SQLBulkOperations**、 **SQLFetch**、 **SQLGetData**、 **SQLFetchScroll**、 **SQLSetPos**、および最初またはそれ以降の結果セットでは、1 つの結果セットだけがあった場合と同様に、すべてのメタデータ関数。 完了すると、最初の結果セットで、アプリケーションを呼び出す**SQLMoreResults**次の結果セットに移動します。 もう 1 つの結果セットまたは count が使用可能な場合**SQLMoreResults** SQL_SUCCESS を返し、結果セットまたは追加の処理の数を初期化します。 結果セットを生成するステートメント間にあるすべての行の数を生成するステートメントが表示されない場合は、キーを呼び出す場所を空けるステップを実行できる**SQLMoreResults**します。呼び出した後**SQLMoreResults**の**UPDATE**、**挿入**、または**削除**ステートメントでは、アプリケーションはを呼び出すことができます**SQLRowCount**します。  
+ バッチを実行した後、アプリケーションは最初の結果セットに配置されます。 アプリケーションを呼び出して**SQLBindCol**、 **SQLBulkOperations**、 **SQLFetch**、 **SQLGetData**、 **SQLFetchScroll**、 **SQLSetPos**、および最初またはそれ以降の結果セットでは、1 つの結果セットだけがあった場合と同様に、すべてのメタデータ関数。 完了すると、最初の結果セットで、アプリケーションを呼び出す**SQLMoreResults**次の結果セットに移動します。 もう 1 つの結果セットまたは count が使用可能な場合**SQLMoreResults** SQL_SUCCESS を返し、結果セットまたは追加の処理の数を初期化します。 結果セットを生成するステートメント間にあるすべての行の数を生成するステートメントが表示されない場合は、キーを呼び出す場所を空けるステップを実行できる**SQLMoreResults**します。呼び出した後**SQLMoreResults**の**UPDATE**、**INSERT**、または**DELETE**ステートメントでは、アプリケーションはを呼び出すことができます**SQLRowCount**します。  
   
  現在の結果が取り出されていない行は、セットがあった場合**SQLMoreResults**その結果セットを破棄し、次の結果セットまたは使用可能なカウントを使用します。 すべての結果が処理された場合**SQLMoreResults** sql_no_data が返されます。 一部のドライバーでは、出力パラメーターと戻り値は使用できませんすべての結果セットと行の数が処理されるまでです。 このようなドライバーは、出力パラメーターと戻り値のときに使用可能になる**SQLMoreResults** sql_no_data が返されます。  
   
@@ -83,26 +82,26 @@ SQLRETURN SQLMoreResults(
   
  呼び出す**SQLCloseCursor**、または**SQLFreeStmt**で、*オプション*SQL_CLOSE のすべての結果セットとの実行の結果として使用可能になった行カウントを破棄します。バッチです。 ステートメント ハンドルを割り当てられたまたは準備された状態のいずれかを返します。 呼び出す**SQLCancel**されときにバッチが実行されたカーソル位置で実行された、ステートメント ハンドルは、または非同期状態がすべてのセットを結果行をカウントに非同期的に実行中の関数をキャンセルするにはキャンセル呼び出しが成功した場合に破棄されるバッチによって生成されます。 次のステートメントは、準備済みまたは割り当て済みの状態に戻ります。  
   
- ステートメントまたはプロシージャのバッチが他の SQL ステートメントとを混在かどうか**選択**、**更新**、**挿入**、および**削除**ステートメント、これらの他のステートメントには影響しません**SQLMoreResults**します。  
+ ステートメントまたはプロシージャのバッチが他の SQL ステートメントとを混在かどうか**SELECT**、**UPDATE**、**INSERT**、および**DELETE**ステートメント、これらの他のステートメントには影響しません**SQLMoreResults**します。  
   
  詳細については、次を参照してください。[複数結果](../../../odbc/reference/develop-app/multiple-results.md)します。  
   
- ステートメントのバッチにデータ ソースで行が削除されない場合は、検索結果を更新、挿入、または delete ステートメントで**SQLMoreResults** SQL_SUCCESS を返します。 異なる検索の更新の場合、挿入、または delete ステートメントで実行される**SQLExecDirect**、 **SQLExecute**、または**SQLParamData**をデータ ソースの行には影響しない場合は、SQL_NO_DATA を返します。 アプリケーションを呼び出す場合**SQLRowCount**呼び出しの後に行の数を取得する**SQLMoreResults** 、どの行が影響を受けません**SQLRowCount** SQL_NO_DATA が返されます。  
+ ステートメントのバッチにデータ ソースで行が削除されない場合は、検索結果をupdate、insert、または delete ステートメントで**SQLMoreResults** SQL_SUCCESS を返します。 異なる検索のUPDATEの場合、INSERT、または delete ステートメントで実行される**SQLExecDirect**、 **SQLExecute**、または**SQLParamData**をデータ ソースの行には影響しない場合は、SQL_NO_DATA を返します。 アプリケーションを呼び出す場合**SQLRowCount**呼び出しの後に行の数を取得する**SQLMoreResults** 、どの行が影響を受けません**SQLRowCount** SQL_NO_DATA が返されます。  
   
- 結果の処理関数の有効なシーケンス処理に関する詳細については、次を参照してください[付録 b:。ODBC の状態遷移テーブル](../../../odbc/reference/appendixes/appendix-b-odbc-state-transition-tables.md)します。  
+ 結果の処理関数の有効なシーケンス処理に関する詳細については、[付録 b:。ODBC の状態遷移テーブル](../../../odbc/reference/appendixes/appendix-b-odbc-state-transition-tables.md)を参照してください。  
   
- SQL_PARAM_DATA_AVAILABLE とストリーミングされる出力パラメーターの詳細については、次を参照してください。 [SQLGetData を使用して出力パラメーターを取得する](../../../odbc/reference/develop-app/retrieving-output-parameters-using-sqlgetdata.md)します。  
+ SQL_PARAM_DATA_AVAILABLE とストリーミングされる出力パラメーターの詳細については、 [SQLGetData を使用して出力パラメーターを取得する](../../../odbc/reference/develop-app/retrieving-output-parameters-using-sqlgetdata.md)を参照してください。  
   
 ## <a name="availability-of-row-counts"></a>行の数の可用性  
  バッチに複数の連続する行の数を生成するステートメントが含まれている場合は、これらの行カウントが 1 つの行の数にロール アップすることができます。 たとえば、このバッチの場合は、特定のデータ ソースが 5 つの個別の行の数を返すことのできるステートメントの 5 つは挿入します。 その他の特定のデータ ソースは、5 つの個別の行の数の合計を表す 1 つだけの行の数を返します。  
   
- バッチに結果セットを生成して行の数を生成するステートメントの組み合わせが含まれている場合、行数は可能性があります。 またはできない場合がありますすべての。 行の数の可用性に関して、ドライバーの動作が呼び出しを通じて SQL_BATCH_ROW_COUNT 情報の種類に列挙された**SQLGetInfo**します。 たとえば、バッチが含まれている、**選択**、その後に 2 つ**挿入**s、もう**選択**。 次のケースが考えられます。  
+ バッチに結果セットを生成して行の数を生成するステートメントの組み合わせが含まれている場合、行数は可能性があります。 またはできない場合がありますすべての。 行の数の可用性に関して、ドライバーの動作が呼び出しを通じて SQL_BATCH_ROW_COUNT 情報の種類に列挙された**SQLGetInfo**します。 たとえば、バッチが含まれている、**SELECT**、その後に 2 つ**INSERT**s、もう**SELECT**。 次のケースが考えられます。  
   
--   2 つに対応する行のカウント**挿入**ステートメントは使用できませんに。 最初の呼び出し**SQLMoreResults** 、2 つ目の結果セットに位置する**選択**ステートメント。  
+-   2 つに対応する行のカウント**INSERT**ステートメントは使用できませんに。 最初の呼び出し**SQLMoreResults** 、2 つ目の結果セットに位置する**SELECT**ステートメント。  
   
--   2 つに対応する行のカウント**挿入**ステートメントは個別に使用できます。 (呼び出し**SQLGetInfo** SQL_BRC_ROLLED_UP ビット SQL_BATCH_ROW_COUNT 情報の種類には返されません)。最初の呼び出し**SQLMoreResults**最初の行の数に位置する**挿入**、2 番目の呼び出しの位置で 2 番目の行の数と**挿入**します。 3 番目の呼び出し**SQLMoreResults** 、2 つ目の結果セットに位置する**選択**ステートメント。  
+-   2 つに対応する行のカウント**INSERT**ステートメントは個別に使用できます。 (呼び出し**SQLGetInfo** SQL_BRC_ROLLED_UP ビット SQL_BATCH_ROW_COUNT 情報の種類には返されません)。最初の呼び出し**SQLMoreResults**最初の行の数に位置する**INSERT**、2 番目の呼び出しの位置で 2 番目の行の数と**INSERT**します。 3 番目の呼び出し**SQLMoreResults** 、2 つ目の結果セットに位置する**SELECT**ステートメント。  
   
--   2 つに対応する行のカウント**挿入**使用できる 1 つの 1 つの行の数にロール アップされます。 (呼び出し**SQLGetInfo** SQL_BATCH_ROW_COUNT 情報の種類のビット SQL_BRC_ROLLED_UP を返します)。最初の呼び出し**SQLMoreResults**ロールアップされた行の数と、2 番目の呼び出しに位置する**SQLMoreResults** 、2 つ目の結果セットに位置する**選択**.  
+-   2 つに対応する行のカウント**INSERT**使用できる 1 つの 1 つの行の数にロール アップされます。 (呼び出し**SQLGetInfo** SQL_BATCH_ROW_COUNT 情報の種類のビット SQL_BRC_ROLLED_UP を返します)。最初の呼び出し**SQLMoreResults**ロールアップされた行の数と、2 番目の呼び出しに位置する**SQLMoreResults** 、2 つ目の結果セットに位置する**SELECT**.  
   
  特定のドライバーは、ストアド プロシージャではないおよび明示的なバッチに対してのみ使用可能な行数を作成します。  
   

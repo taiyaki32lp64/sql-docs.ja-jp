@@ -10,15 +10,15 @@ helpviewer_keywords:
 - granting permissions [SQL Server], XML schema collections
 - ALTER permission
 ms.assetid: ffbb829c-3b8f-4e5d-97d9-ab4059aab0db
-author: douglaslMS
-ms.author: douglasl
+author: MightyPen
+ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 365a47a47abd0e74c1716971998f145501a3cae4
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: e009f0fe22156f9a652dd19fceddf02bbc48c247
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48150980"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63288756"
 ---
 # <a name="grant-permissions-on-an-xml-schema-collection"></a>XML スキーマ コレクションに対する権限の許可
   XML スキーマ コレクションを作成する権限、および XML スキーマ コレクション オブジェクトに対する権限を許可できます。  
@@ -57,11 +57,11 @@ ms.locfileid: "48150980"
   
 -   TAKE OWNERSHIP 権限。XML スキーマ コレクションの所有者権を特定のプリンシパルから別のプリンシパルに転送するために必要です。  
   
--   REFERENCES 権限は、XML スキーマ コレクションを使用して、型指定や制約するプリンシパルを承認`xml`型の列、テーブル、ビュー、およびパラメーターにします。 また、REFERENCES 権限は、ある XML スキーマ コレクションで別の XML スキーマ コレクションを参照する場合にも必要です。  
+-   REFERENCES 権限。許可されたプリンシパルは、XML スキーマ コレクションを使用してテーブル、ビュー、およびパラメーター内の `xml` 型の列に対して型指定や制約を行えます。 また、REFERENCES 権限は、ある XML スキーマ コレクションで別の XML スキーマ コレクションを参照する場合にも必要です。  
   
 -   VIEW DEFINITION 権限。このコレクションに対する ALTER 権限、REFERENCES 権限、または CONTROL 権限のいずれかがあれば、XML_SCHEMA_NAMESPACE またはカタログ ビューのどちらかを使用して XML スキーマ コレクションの内容に対してクエリ実行できるようになります。  
   
--   EXECUTE 権限が挿入または更新を指定または制約は、XML スキーマ コレクションに対して、プリンシパルの値を検証するために必要な`xml`列、変数、およびパラメーターを入力します。 また、これらの列や変数に格納されている XML に対してクエリを実行する場合にも必要な権限です。  
+-   EXECUTE 権限。`xml` 型の列、変数、およびパラメーターの型指定または制約を定義している XML スキーマ コレクションに対して、プリンシパルが挿入または更新した値を検証するために必要です。 また、これらの列や変数に格納されている XML に対してクエリを実行する場合にも必要な権限です。  
   
 ## <a name="examples"></a>使用例  
  次の例に示すシナリオでは、XML スキーマ権限のしくみを説明します。 各例では、必要なテスト データベース、リレーショナル スキーマ、およびログインを作成します。 それらのログインには、必要な XML スキーマ コレクション権限が許可されています。 各例の最後には、必要なクリーン アップを行います。  

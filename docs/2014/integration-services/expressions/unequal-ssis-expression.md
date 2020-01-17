@@ -10,15 +10,15 @@ helpviewer_keywords:
 - unequal operator (!=)
 - '!= (not equal to)'
 ms.assetid: fad20e85-c0e6-42bf-af70-2bc80ee09be5
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: b7df4340e2dc54a2c30b1c5693efeda26ecc9b3b
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 4752685d9590056cb47e88ee2ec4fea5128cc86b
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52785524"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62896519"
 ---
 # <a name="-unequal-ssis-expression"></a>!= (等しくない) (SSIS 式)
   互換性のあるデータ型の 2 つの式が等しくないかどうかを判別するための比較を実行します。 式エバリュエーターは、比較の実行前にさまざまなデータ型を自動的に変換します。  
@@ -52,7 +52,7 @@ expression1 != expression2
     > [!NOTE]  
     >  文字列の比較では、大文字と小文字、アクセント、かな、および文字幅が区別されます。  
   
--   **日付、時刻、または日付/時刻**両方*expression1*と*expression2*次のデータ型のいずれかを評価する必要があります。DT_DBDATE、DT_DATE、DT_DBTIME、DT_DBTIME2、DT_DBTIMESTAMP、DT_DBTIMESTAMP2、DT_DBTIMESTAPMOFFSET、または DT_FILETIME。  
+-   **日付、時刻、または日付/時刻** *expression1* と *expression2* は、どちらも次のいずれかのデータ型に評価される必要があります。DT_DBDATE、DT_DATE、DT_DBTIME、DT_DBTIME2、DT_DBTIMESTAMP、DT_DBTIMESTAMP2、DT_DBTIMESTAPMOFFSET、DT_FILETIME。  
   
     > [!NOTE]  
     >  時刻データ型に評価される式と、日付データ型または日付/時刻データ型に評価される式との間の比較はサポートされていません。 システムによってエラーが生成されます。  
@@ -81,7 +81,7 @@ expression1 != expression2
   
 -   **バイナリ** *expression1* と *expression2* は、どちらも DT_BYTES データ型に評価される必要があります。  
   
--   **BLOB**両方*expression1*と*expression2*同じバイナリ ラージ オブジェクト ブロック (BLOB) データ型に評価される必要があります。DT_TEXT、DT_NTEXT、または DT_IMAGE です。  
+-   **BLOB** *expression1* と *expression2* のいずれも評価された結果、値は次の内いずれかの同じバイナリ ラージ オブジェクト ブロック (BLOB) データ型になる必要があります。DT_TEXT、DT_NTEXT または DT_IMAGE。  
   
  データ型について詳しくは、「 [Integration Services のデータ型](../data-flow/integration-services-data-types.md)」をご覧ください。  
   

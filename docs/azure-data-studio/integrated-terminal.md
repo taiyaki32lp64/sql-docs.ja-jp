@@ -1,7 +1,7 @@
 ---
 title: 統合ターミナル
 titleSuffix: Azure Data Studio
-description: Azure Data Studio の統合ターミナルについて説明します。
+description: Azure Data Studio 内の統合ターミナルについて説明します。
 ms.custom: seodec18
 ms.date: 09/24/2018
 ms.prod: sql
@@ -10,47 +10,46 @@ ms.reviewer: alayu; sstein
 ms.topic: conceptual
 author: yualan
 ms.author: alayu
-manager: craigg
-ms.openlocfilehash: 6677119a35d1d51ac8b6563d9bd9b9f32668c273
-ms.sourcegitcommit: 189a28785075cd7018c98e9625c69225a7ae0777
-ms.translationtype: MT
+ms.openlocfilehash: 13a0e3c17f45e0ba136d83f832d3531bc8059884
+ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53030436"
+ms.lasthandoff: 07/25/2019
+ms.locfileid: "67959535"
 ---
 # <a name="integrated-terminal"></a>統合ターミナル
 
-[!INCLUDE[name-sos](../includes/name-sos-short.md)]、最初に、ワークスペースのルートから始まり、統合ターミナルを開くことができます。 これは、windows を切り替えるか、クイック コマンド ライン タスクを実行する既存の端末の状態を変更する必要はありません、便利です。
+[!INCLUDE[name-sos](../includes/name-sos-short.md)] では、統合ターミナルを開くことができ、最初はご利用のワークスペースのルートから開始します。 簡単なコマンドライン タスクを実行するのにウィンドウを切り替えたり、既存のターミナルの状態を変更したりする必要がないので、これは便利な場合があります。
 
-ターミナルを開きます。
+ターミナルを開くには: 
 
-* 使用して、 **Ctrl +'** アクサン グラーブ文字をキーボード ショートカット。
-* 使用して、**ビュー** | **統合ターミナル**メニュー コマンド。
-* **コマンド パレット**(**Ctrl + Shift + P**) を使用して、**表示の切り替えの統合ターミナル**コマンド。
+* **Ctrl + '** キーボード ショートカットとバッククォート文字を使用します。
+* **[表示** | **Integrated Terminal]\(統合端末\)** メニュー コマンドを使用します。
+* **コマンド パレット** (**Ctrl + Shift + P**) から、**[View:Toggle Integrated Terminal]\(表示:統合ターミナルの切り替え\)** コマンドを使用します。
 
 ![ターミナル](media/integrated-terminal/terminal-screen.png)
 
 > [!NOTE]
-> エクスプ ローラーで外部シェルを開くことができますも**コマンド プロンプトで開く**コマンド (**ターミナルで開く**Mac または Linux で) 外の共同作業する場合[!INCLUDE[name-sos](../includes/name-sos-short.md)]します。
+> [!INCLUDE[name-sos](../includes/name-sos-short.md)] の外部で作業したい場合は、引き続き、エクスプローラーの **[コマンド プロンプトで開く]** コマンド (Mac または Linux の場合は **[Open in Terminal]\(ターミナルで開く\)**) を使用して外部シェルを開くことができます。
 
-## <a name="managing-multiple-terminals"></a>複数の端末を管理します。
+## <a name="managing-multiple-terminals"></a>複数のターミナルを管理する
 
-複数の端末に別の場所を作成し、それらの間を簡単に移動できます。 押して、プラス アイコンの右上でターミナルのインスタンスを追加することができます、**ターミナル** パネルまたはトリガーによって、 **Ctrl + Shift +'** コマンド。 これにより、それらを切り替えるために使用できるドロップダウン リストで別のエントリが作成されます。
+さまざまな場所で開かれる複数のターミナルを作成し、それらのターミナル間を簡単に移動することができます。 ターミナル インスタンスは追加することができます。そのためには、**[ターミナル]** パネルの右上にあるプラス アイコンを押すか、または **Ctrl + Shift + `** コマンドをトリガーします。 これにより、ドロップ ダウンリストに別のエントリが作成され、ターミナルを切り替えるときに使用できます。
 
-![複数の端末](media/integrated-terminal/terminal-multiple-instances.png)
+![複数のターミナル](media/integrated-terminal/terminal-multiple-instances.png)
 
-ごみ箱を押してターミナル インスタンスを削除できるボタンをクリックします。
+ターミナル インスタンスを削除するには、ごみ箱ボタンを押します。
 
 > [!TIP]
-> 複数端末を広範に使用する場合のキー バインドを追加することができます、 `focusNext`、`focusPrevious`と`kill`に記載されているコマンド、[キー バインディング セクション](#key-bindings)キーボードのみを使用してそれらの間を移動できるようにします。
+> 多数のターミナルを使用する場合は、キーボードのみを使用してターミナル間を移動できるように、[ターミナル キーのバインド](#key-bindings)のセクションに概説する `focusNext`、`focusPrevious`、および `kill` コマンドのキー バインドを追加することができます。
 
 ## <a name="configuration"></a>構成
 
-シェルに使用される既定値は`$SHELL`Linux、macOS、Windows 10 で PowerShell と Windows の以前のバージョンで cmd.exe でします。 設定を手動でオーバーライドできます`terminal.integrated.shell.*`で[設定](settings.md)します。 引数は、Linux と macOS を使用してターミナル シェルに渡すことができます、`terminal.integrated.shellArgs.*`設定します。
+既定で使用されるシェルは、Linux および macOS の場合は `$SHELL`、Windows 10 の場合は PowerShell、それ以前のバージョンの Windows の場合は cmd.exe です。 [設定](settings.md)で `terminal.integrated.shell.*` を設定することで、それらを手動で上書きすることができます。 Linux および macOS の場合は、`terminal.integrated.shellArgs.*` 設定を使用してターミナル シェルに引数を渡すことができます。
 
 ### <a name="windows"></a>Windows
 
-Windows で、シェルを正しく構成するには適切な実行可能ファイルを特定し、設定を更新します。 一般的なシェルの実行可能ファイルと既定の場所の一覧を次に示します。
+Windows 上でシェルを正しく構成することは、適切な実行可能ファイルを見つけて、その設定を更新することです。 以下は、一般的なシェル実行可能ファイルとその既定の場所の一覧です。
 
 ```json
 // 64-bit cmd if available, otherwise 32-bit
@@ -64,91 +63,91 @@ Windows で、シェルを正しく構成するには適切な実行可能ファ
 ```
 
 > [!NOTE]
-> 統合ターミナルとして使用される、シェルの実行可能ファイルがコンソール アプリケーションをある必要がありますように`stdin/stdout/stderr`リダイレクトできます。
+> 統合ターミナルとして使用するには、`stdin/stdout/stderr` をリダイレクトできるように、シェル実行可能ファイルをコンソール アプリケーションにする必要があります。
 
 > [!TIP]
-> 統合ターミナル シェルがの権限で実行されている[!INCLUDE[name-sos](../includes/name-sos-short.md)]します。 管理者特権 (管理者) または別の権限を持つシェル コマンドを実行する必要がある場合、プラットフォームのユーティリティをなど、使用できる`runas.exe`ターミナル内。
+> 統合ターミナル シェルは、[!INCLUDE[name-sos](../includes/name-sos-short.md)] のアクセス許可を使用して実行されています。 昇格された (管理者) 権限または異なる権限を使用してシェル コマンドを実行する必要がある場合は、プラットフォーム ユーティリティ (ターミナル内の `runas.exe` など) を使用することができます。
 
 ### <a name="shell-arguments"></a>シェルの引数
 
-起動時に引数をシェルに渡すことができます。
+シェルを起動するときに、そのシェルに引数を渡すことができます。
 
-たとえば、ログイン シェルとして bash を実行中に有効にするため (実行に使用する`.bash_profile`)、渡す、 `-l` (二重引用符) を使用して引数。
+たとえば、bash をログイン シェルとして実行できるようにする (`.bash_profile` を実行する) には、引数 `-l` を渡します (二重引用符で囲んで)。
 
 ```json
 // Linux
 "terminal.integrated.shellArgs.linux": ["-l"]
 ```
 
-## <a name="terminal-display-settings"></a>端末のディスプレイの設定
+## <a name="terminal-display-settings"></a>ターミナル表示の設定
 
-次の設定では、統合ターミナルのフォントと行の高さをカスタマイズできます。
+次の設定を使用すると、統合ターミナルのフォントおよび行の高さをカスタマイズできます。
 
 * `terminal.integrated.fontFamily`
 * `terminal.integrated.fontSize`
 * `terminal.integrated.lineHeight`
 
-## <a id="key-bindings"></a>ターミナルのキー バインド
+## <a id="key-bindings"></a>ターミナル キーのバインド
 
-**ビュー。統合ターミナルを切り替える**にコマンドがバインドされている**Ctrl +'** ビューとの間の統合ターミナル パネルをすばやく切り替える。
+**[ビュー]:[Toggle Integrated Terminal]\(統合ターミナルの切り替え\)** コマンドは **Ctrl + `** キーにバインドされており、統合ターミナル パネルの表示と非表示をすばやく切り替えます。
 
-統合ターミナル内のナビゲーションを迅速にキーボード ショートカットを次に示します。
+統合ターミナル内をすばやく移動するためのキーボード ショートカットを次に示します。
 
-Key|コマンド
----|---
-**Ctrl +'**|統合ターミナルを表示します。
-**Ctrl + Shift +'**|新しいターミナルを作成します。
-**Ctrl + ↑**|上にスクロール
-**Ctrl キーを押しながら下方向**|下にスクロール
-**Ctrl キーを押しながら PageUp**|ページにスクロール
-**Ctrl + PageDown**|ページを下にスクロール
-**Ctrl + ホーム**|一番上にスクロールします。
-**Ctrl + end**|一番下までスクロールします。
-**Ctrl + K**|ターミナルをクリアします。
+|Key|コマンド|  
+|---|---|  
+|**Ctrl + \`**|統合ターミナルを表示します|  
+|**Ctrl + Shift + \`**|新しいターミナルを作成します|  
+|**Ctrl + Up**|上にスクロール|  
+|**Ctrl + Down**|下にスクロール|  
+|**Ctrl + PageUp**|ページを上にスクロールします|  
+|**Ctrl + PageDown**|ページを下にスクロールします|  
+|**Ctrl + Home**|一番上にスクロールします|  
+|**Ctrl + End**|一番下にスクロールします|  
+|**Ctrl + K**|ターミナルをクリアします|  
 
-その他のターミナル コマンドは、使用、好みのキーボード ショートカット キーにバインドすることができます。
+その他のターミナル コマンドも使用でき、好みのキーボード ショートカットにバインドできます。
 
 これらは次のとおりです。
 
-* `workbench.action.terminal.focus`:端末の焦点を当てます。 これは、切り替えのようなものですが、表示されている場合、非表示ではなくターミナル重点を置いています。
-* `workbench.action.terminal.focusNext`:次の端末のインスタンスに焦点を当てます。
-* `workbench.action.terminal.focusPrevious`:以前のターミナル インスタンスをについて説明します。
-* `workbench.action.terminal.kill`:ターミナルの現在のインスタンスを削除します。
-* `workbench.action.terminal.runSelectedText`:ターミナルのインスタンスでは、選択したテキストを実行します。
-* `workbench.action.terminal.runActiveFile`:ターミナルのインスタンスでは、作業中のファイルを実行します。
+* `workbench.action.terminal.focus`:ターミナルにフォーカスを移動します。 これはトグルに似ていますが、ターミナルが表示されている場合、それを非表示にするのではなく、それにフォーカスを当てます。
+* `workbench.action.terminal.focusNext`:次のターミナル インスタンスにフォーカスを移動します。
+* `workbench.action.terminal.focusPrevious`:前のターミナル インスタンスにフォーカスを移動します。
+* `workbench.action.terminal.kill`:現在のターミナル インスタンスを削除します。
+* `workbench.action.terminal.runSelectedText`:ターミナル インスタンス内の選択したテキストを実行します。
+* `workbench.action.terminal.runActiveFile`:ターミナル インスタンス内のアクティブ ファイルを実行します。
 
-### <a name="run-selected-text"></a>選択したテキストの実行
+### <a name="run-selected-text"></a>選択したテキストを実行する
 
-使用する、`runSelectedText`コマンド、エディターでテキストを選択し、コマンドを実行**ターミナル。選択したテキストのアクティブなターミナルで実行**を使用して、**コマンド パレット**(**Ctrl + Shift + P**)。 端末は、選択したテキストを実行しようとします。
+`runSelectedText` コマンドを使用するには、エディターでテキストを選択して、**[ターミナル]:[Run Selected Text in Active Terminal]\(アクティブなターミナルで選択したテキストを実行\)** コマンドを**コマンド パレット** (**Ctrl + Shift +P**) を介して実行します。 ターミナルでは、選択したテキストの実行が試みられます。
 
-![選択したテキストを実行します。](media/integrated-terminal/terminal_run_selected.png)
+![選択したテキストを実行する](media/integrated-terminal/terminal_run_selected.png)
 
-アクティブなエディターでテキストが選択されていない場合は、上にカーソルが行が、ターミナルで実行されます。
+アクティブなエディターでテキストが選択されていない場合は、カーソルが置かれている行がターミナルで実行されます。
 
-### <a name="copy--paste"></a>コピーと貼り付け
+### <a name="copy--paste"></a>コピーして貼り付ける
 
-コピーと貼り付けのキー バインドでは、プラットフォームの標準に従います。
+コピーおよび貼り付け用のキーバインドは、次のプラットフォーム標準に従います。
 
-* Linux の場合:**Ctrl + Shift + C**と**Ctrl + Shift + V**
-* Mac の場合:**Cmd キーを押しながら C キー**と**Cmd キーを押しながら V キー**
-* Windows:**Ctrl + C**と**Ctrl + V**
+* Linux: **Ctrl + Shift + C** および **Ctrl + Shift + V**
+* MAC: **Cmd + C** および **Cmd + V**
+* Windows: **Ctrl + C** および **Ctrl + V**
 
 ### <a name="find"></a>[検索]
 
-統合ターミナルでトリガーできる基本的な検索機能を持つ**Ctrl + F**します。
+統合ターミナルには、**Ctrl + F** キーを使用してトリガーできる基本的な検索機能があります。
 
-場合**Ctrl + F** Linux、Windows で、検索ウィジェットを起動するのではなくシェルに移動するには、キー バインドを削除する必要がありますようになります。
+Linux および Windows 上で [検索] ウィジェットを起動するのでなく、**Ctrl + F** キーを使用してシェルに切り替える場合は、次のようにキーバインドを削除する必要があります。
 
 ```js
 { "key": "ctrl+f", "command": "-workbench.action.terminal.focusFindWidget",
                       "when": "terminalFocus" },
 ```
 
-### <a name="rename-terminal-sessions"></a>ターミナル セッションの名前を変更します。
+### <a name="rename-terminal-sessions"></a>ターミナル セッションの名前を変更する
 
-使用して統合ターミナル セッションを変更することができますようになりました、**ターミナル。名前を変更**(`workbench.action.terminal.rename`) コマンド。 新しい名前は、ターミナルの選択ドロップダウンに表示されます。
+統合ターミナル セッションの名前は、**[ターミナル]:[名前の変更]** (`workbench.action.terminal.rename`) コマンドを使用して変更できるようになりました。 新しい名前がターミナルの選択ドロップダウンに表示されます。
 
-### <a name="forcing-key-bindings-to-pass-through-the-terminal"></a>ターミナルを通過する強制のキー バインド
+### <a name="forcing-key-bindings-to-pass-through-the-terminal"></a>キー バインドを強制的にターミナルをパススルーさせる
 
-統合ターミナルでフォーカスがあるときに、キーストロークに渡されは端末自体によって消費されるため、多くのキー バインドは機能しません。 `terminal.integrated.commandsToSkipShell`設定は、この問題を回避するために使用できます。 キー バインドは、シェルによって処理をスキップし、代わりに、によって処理されるコマンド名の配列が含まれている、[!INCLUDE[name-sos](../includes/name-sos-short.md)]バインド システムのキーします。 既定では、選択のいくつか一般的に使用されるキー バインドだけでなく、すべてのターミナル キー バインドが含まれます。
+統合ターミナルにフォーカスがある間、キー ストロークはターミナル自体に渡され、そこで使われるため、キー バインドの多くは機能しません。 `terminal.integrated.commandsToSkipShell` 設定を使用すれば、これを回避することができます。 これにはコマンド名の配列が含められ、それらのコマンドのキー バインドはシェルによる処理をスキップし、代わりに [!INCLUDE[name-sos](../includes/name-sos-short.md)] キー バインド システムによって処理されます。 既定では、これには、いくつかの一般的に使用されるキー割り当てに加えて、すべてのターミナル キー バインドが含まれます。
 

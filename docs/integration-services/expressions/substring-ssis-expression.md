@@ -11,17 +11,20 @@ helpviewer_keywords:
 - SUBSTRING function
 - part of expression returned [Integration Services]
 ms.assetid: 3a46748a-f5f8-4a6c-9108-673666754068
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: 3f064df452bc531e3a2a8ee995cf942022536571
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 6bb017bdd22b98c255f5b40b680f9e7aa5ef31f5
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47828810"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71288265"
 ---
 # <a name="substring-ssis-expression"></a>SUBSTRING (SSIS 式)
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   指定された位置で始まり、かつ指定された長さを持つ文字式の一部を返します。 *position* パラメーターと *length* パラメーターは整数に評価される必要があります。  
   
 ## <a name="syntax"></a>構文  

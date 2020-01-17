@@ -1,7 +1,7 @@
 ---
-title: 可用性グループでの運用上の問題に対するポリシー ベースの管理
+title: ポリシー ベースの管理:可用性グループ
 description: Always On 可用性グループの正常性モデルは、定義済みポリシー ベースの管理 (PBM) ポリシーのセットを評価します。 これらのポリシーを使用すると、可用性グループとレプリカおよびデータベースの正常性を SQL Server で表示できます。
-ms.custom: seodec18
+ms.custom: seo-lt-2019
 ms.date: 05/17/2016
 ms.prod: sql
 ms.reviewer: ''
@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: afa5289c-641a-4c03-8749-44862384ec5f
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 07cc3b6b11d4f40792ede3c0d2a9668c5ada0db6
-ms.sourcegitcommit: 170c275ece5969ff0c8c413987c4f2062459db21
+ms.openlocfilehash: ac339e638377778065f158b4cbd20280d5d4bb65
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/11/2019
-ms.locfileid: "54226559"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75244061"
 ---
 # <a name="policy-based-management-for-operational-issues-with-always-on-availability-groups"></a>Always On 可用性グループでの運用上の問題に対するポリシー ベースの管理
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -49,17 +48,17 @@ ms.locfileid: "54226559"
 ##  <a name="Always OnPBM"></a> 定義済みのポリシーと問題点  
  次の表は、定義済みのポリシーをまとめたものです。  
   
-|ポリシー名|問題点|カテゴリ **&#42;**|ファセット|  
+|ポリシー名|問題|カテゴリ **&#42;**|ファセット|  
 |-----------------|-----------|--------------------|-----------|  
-|WSFC クラスターの状態|[WSFC クラスター サービスはオフラインです](../../../database-engine/availability-groups/windows/wsfc-cluster-service-is-offline.md)。|重大|SQL Server のインスタンス|  
-|可用性グループのオンライン状態|[可用性グループがオフライン](../../../database-engine/availability-groups/windows/availability-group-is-offline.md)。|重大|可用性グループ|  
-|可用性グループの自動フェールオーバーの準備|[可用性グループの自動フェールオーバーの準備ができていない](../../../database-engine/availability-groups/windows/availability-group-is-not-ready-for-automatic-failover.md)。|重大|可用性グループ|  
+|WSFC クラスターの状態|[WSFC クラスター サービスはオフラインです](../../../database-engine/availability-groups/windows/wsfc-cluster-service-is-offline.md)。|Critical|SQL Server のインスタンス|  
+|可用性グループのオンライン状態|[可用性グループがオフライン](../../../database-engine/availability-groups/windows/availability-group-is-offline.md)。|Critical|可用性グループ|  
+|可用性グループの自動フェールオーバーの準備|[可用性グループの自動フェールオーバーの準備ができていない](../../../database-engine/availability-groups/windows/availability-group-is-not-ready-for-automatic-failover.md)。|Critical|可用性グループ|  
 |可用性レプリカのデータ同期状態|[一部の可用性レプリカでデータが同期されない](../../../database-engine/availability-groups/windows/some-availability-replicas-are-not-synchronizing-data.md)。|警告|可用性グループ|  
 |同期レプリカのデータの同期状態|[いくつかの同期のレプリカが同期されていません](../../../database-engine/availability-groups/windows/some-synchronous-replicas-are-not-synchronized.md)。|警告|可用性グループ|  
 |可用性レプリカのロールの状態|[一部の可用性レプリカに正常なロールがありません](../../../database-engine/availability-groups/windows/some-availability-replicas-do-not-have-a-healthy-role.md)。|警告|可用性グループ|  
 |可用性レプリカの接続状態|[いくつかの可用性レプリカが切断されている](../../../database-engine/availability-groups/windows/some-availability-replicas-are-disconnected.md)。|警告|可用性グループ|  
-|可用性レプリカのロールの状態|[可用性レプリカに正常なロールがありません](../../../database-engine/availability-groups/windows/availability-replica-does-not-have-a-healthy-role.md)。|重大|可用性レプリカ|  
-|可用性レプリカの接続状態|[可用性レプリカが切断されている](../../../database-engine/availability-groups/windows/availability-replica-is-disconnected.md)。|重大|可用性レプリカ|  
+|可用性レプリカのロールの状態|[可用性レプリカに正常なロールがありません](../../../database-engine/availability-groups/windows/availability-replica-does-not-have-a-healthy-role.md)。|Critical|可用性レプリカ|  
+|可用性レプリカの接続状態|[可用性レプリカが切断されている](../../../database-engine/availability-groups/windows/availability-replica-is-disconnected.md)。|Critical|可用性レプリカ|  
 |可用性レプリカの参加状態|[可用性レプリカが参加していません](../../../database-engine/availability-groups/windows/availability-replica-is-not-joined.md)。|警告|可用性レプリカ|  
 |可用性レプリカのデータの同期状態|[一部の可用性データベースのデータ同期状態が正常ではありません](../../../database-engine/availability-groups/windows/data-synchronization-state-of-some-availability-database-is-not-healthy.md)。|警告|可用性レプリカ|  
 |可用性データベースの中断状態|[可用性データベースが中断されています](../../../database-engine/availability-groups/windows/availability-database-is-suspended.md)。|警告|可用性データベース|  

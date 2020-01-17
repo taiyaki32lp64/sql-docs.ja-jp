@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: a8ab9259-af47-438f-9fff-042e8ebb1c58
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 29b59bc33d34af9d9521f30fd7028c6d073a9bd7
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 1c9f578d632ab999edb6064fcbb949ba6f4e1b60
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47791200"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68071821"
 ---
 # <a name="drop-index-statement-limitations"></a>DROP INDEX ステートメントの制限事項
 DROP INDEX ステートメントは、Microsoft Excel またはテキストのドライバーではサポートされていません。

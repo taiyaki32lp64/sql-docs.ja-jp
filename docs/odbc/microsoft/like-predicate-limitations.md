@@ -1,5 +1,5 @@
 ---
-title: 述語の制限事項など |Microsoft Docs
+title: LIKE 述語の制限事項 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: dbd39099-caf6-4c4c-9ad8-f6c63c1bd5e4
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 8035eed9e0aaff1f914f386b6d4bc9f2d65f9a0f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 8cd3cebfcf20df2f8a3a786ea66fd28dd76307c0
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47652979"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68119712"
 ---
 # <a name="like-predicate-limitations"></a>LIKE 述語の制限事項
 列のデータが 255 文字より長い場合は、LIKE 比較は最初の 255 文字にのみ基づきます。  

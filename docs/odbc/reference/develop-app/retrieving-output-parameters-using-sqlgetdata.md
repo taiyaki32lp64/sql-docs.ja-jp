@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 7a8c298a-2160-491d-a300-d36f45568d9c
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: ebb09b3118c2d16041d4ca60bf738d0fda561346
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: eeb8fae9c563e675499dec47839acdd0a003765a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47837365"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68020513"
 ---
 # <a name="retrieving-output-parameters-using-sqlgetdata"></a>SQLGetData を使用した出力パラメーターの取得
 ODBC 3.8、前に、アプリケーションは、バインドされた出力バッファーを持つクエリの出力パラメーターを取得のみでした。 ただし、これはパラメーター値のサイズが (大きいイメージなど) の非常に大きい場合は、非常に大きなバッファーを割り当てることは困難です。 ODBC 3.8 には、部分の出力パラメーターを取得する新しい方法が導入されています。 アプリケーションで呼び出せるようになりました**SQLGetData**小さなバッファーを複数回に大きなパラメーター値を取得します。 これは、大きな列データの取得に似ています。  
@@ -30,7 +29,7 @@ ODBC 3.8、前に、アプリケーションは、バインドされた出力バ
  この機能は ODBC 3.8 アプリケーションで使用できるまたは ODBC を再コンパイル 3.x と ODBC 2.x アプリケーションでは、これらのアプリケーションに、ODBC 3.8 をサポートするドライバーを使用して出力パラメーターを取得する必要があります**SQLGetData**と ODBC 3.8 ドライバーマネージャー。 ODBC の新しい機能を使用する古いアプリケーションを有効にする方法については、次を参照してください。[の互換性対応表](../../../odbc/reference/develop-app/compatibility-matrix.md)します。  
   
 ## <a name="usage-example"></a>使用例  
- たとえば、ストアド プロシージャでは、実行する **{呼び出し sp_f(?,?)}**、場所として SQL_PARAM_OUTPUT_STREAM、両方のパラメーターがバインドされているし、ストアド プロシージャが結果セットを返さない (このトピックの後半が見つかったらより複雑なシナリオ)。  
+ たとえば、ストアド プロシージャでは、実行する **{呼び出し sp_f(?,?)}** 、場所として SQL_PARAM_OUTPUT_STREAM、両方のパラメーターがバインドされているし、ストアド プロシージャが結果セットを返さない (このトピックの後半が見つかったらより複雑なシナリオ)。  
   
 1.  パラメーターごとに、呼び出す**SQLBindParameter**で*InputOutputType* SQL_PARAM_OUTPUT_STREAM に設定し、 *ParameterValuePtr*パラメーター番号などのトークンに設定、、のデータへのポインターまたは入力パラメーターをバインドするアプリケーションが使用する構造体へのポインター。 この例では、パラメーターの序数をトークンとして使用します。  
   
@@ -112,7 +111,7 @@ ODBC 3.8、前に、アプリケーションは、バインドされた出力バ
   
  アプリケーションは引き続き使用できます**SQLSetDescField**または**SQLSetDescRec**バインド情報を設定します。 フィールド マッピングは変更されません。 ただし、記述子内のフィールドは、新しい値を返す可能性があります。 たとえば、SQL_DESC_PARAMETER_TYPE には、SQL_PARAM_INPUT_OUTPUT_STREAM または SQL_PARAM_OUTPUT_STREAM を返す可能性があります。  
   
-## <a name="usage-scenario-retrieve-an-image-in-parts-from-a-result-set"></a>使用シナリオ: 結果セットからの部分でイメージを取得します。  
+## <a name="usage-scenario-retrieve-an-image-in-parts-from-a-result-set"></a>使用シナリオ:結果セットからの部分でイメージを取得します。  
  **SQLGetData**ストアド プロシージャが 1 行のイメージに関するメタデータを含む結果セットを返すし、イメージが大規模な出力パラメーターで返されるときに、部分でデータを取得するために使用できます。  
   
 ```  
@@ -194,7 +193,7 @@ BOOL displayPicture(SQLUINTEGER idOfPicture, SQLHSTMT hstmt) {
 }  
 ```  
   
-## <a name="usage-scenario-send-and-receive-a-large-object-as-a-streamed-inputoutput-parameter"></a>使用シナリオ: ストリーミング入力/出力パラメーターとしてのラージ オブジェクトの送受信  
+## <a name="usage-scenario-send-and-receive-a-large-object-as-a-streamed-inputoutput-parameter"></a>使用シナリオ:ストリームの入力/出力パラメーターとしてのラージ オブジェクトの送受信  
  **SQLGetData**を取得し、ストアド プロシージャでは、ラージ オブジェクトを渡すと、データベースの間の値をストリーミング入力/出力パラメーターとしての部分でデータを送信するために使用できます。 メモリ内のすべてのデータを格納する必要はありません。  
   
 ```  

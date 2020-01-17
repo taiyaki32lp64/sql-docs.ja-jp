@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 helpviewer_keywords:
 - filters [Full-Text Search]
@@ -14,12 +13,12 @@ ms.assetid: 8d06bda9-0bbf-4baa-b270-07b1c1f640eb
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 6c973b6c0868729c43b56f588aed944845ab898d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 7eebd70d700a36898c59f1fce8a51806bc78f91d
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48210415"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66094990"
 ---
 # <a name="full-text-search-word-breakers-and-filters-significantly-improved-in-sql-server-2005-and-sql-server-2008"></a>SQL Server 2005 および SQL Server 2008 では、フルテキスト検索ワード ブレーカーとフィルターが大幅に機能向上
   ワード ブレーカーとフィルターは大幅に変更されました。 対応言語の拡充や信頼性の向上など、ワード ブレーカーにさらなる改良が加えられています。  

@@ -19,22 +19,18 @@ helpviewer_keywords:
 - second string expressions [SQL Server]
 - REPLACE function
 ms.assetid: 8a7aaaf2-62e3-46c0-8e44-fa22290dd86b
-author: MashaMSFT
-ms.author: mathoma
-manager: craigg
+author: MikeRayMSFT
+ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 743c812bf5fbb0ec9673c3a07d4d08a91d21aae3
-ms.sourcegitcommit: 96032813f6bf1cba680b5e46d82ae1f0f2da3d11
+ms.openlocfilehash: 59cbaf203b8e877f9476e807008345b9af05b0fd
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/15/2019
-ms.locfileid: "54299729"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67944536"
 ---
 # <a name="replace-transact-sql"></a>REPLACE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
-
-> [!div class="nextstepaction"]
-> [SQL ドキュメントの目次に関するご意見を共有してください。](https://aka.ms/sqldocsurvey)
 
 指定した文字列値をすべて別の文字列値に置き換えます。  
   
@@ -51,10 +47,10 @@ REPLACE ( string_expression , string_pattern , string_replacement )
  検索する文字列[式](../../t-sql/language-elements/expressions-transact-sql.md)を指定します。 *string_expression* 文字またはバイナリ データ型であることができます。  
   
  *string\_pattern*  
- 検索するサブストリングを指定します。 *string_pattern* 文字またはバイナリ データ型であることができます。 *string_pattern* には空の文字列 ("") は指定できません。また、1 ページに収まる最大バイト数を超えないようにしてください。  
+ 検索するサブストリングです。 *string_pattern* 文字またはバイナリ データ型であることができます。 *string_pattern* には空の文字列 ("") は指定できません。また、1 ページに収まる最大バイト数を超えないようにしてください。  
   
  *string\_replacement*  
- 置き換え後の文字列を指定します。 *string_replacement* 文字またはバイナリ データ型であることができます。  
+ 置き換え後の文字列です。 *string_replacement* 文字またはバイナリ データ型であることができます。  
   
 ## <a name="return-types"></a>戻り値の型  
  返します **nvarchar** が、入力引数のいずれかの場合、 **nvarchar** データが入力のそれ以外の場合を返します。 を置き換える **varchar** です。  
@@ -66,7 +62,7 @@ REPLACE ( string_expression , string_pattern , string_replacement )
 ## <a name="remarks"></a>Remarks  
  REPLACE は、入力の照合順序に基づいて比較を行います。 特定の照合順序で比較を行うには、[COLLATE](~/t-sql/statements/collations.md) を使用して、入力に明示的な照合順序を適用します。  
   
- 0x0000 (**char(0)**) の Windows 照合順序で未定義の文字は、REPLACE に含めることができません。  
+ 0x0000 (**char(0)** ) の Windows 照合順序で未定義の文字は、REPLACE に含めることができません。  
   
 ## <a name="examples"></a>使用例  
  次の例では、`abcdefghi` にある文字列 `cde` を `xxx` に置換します。  

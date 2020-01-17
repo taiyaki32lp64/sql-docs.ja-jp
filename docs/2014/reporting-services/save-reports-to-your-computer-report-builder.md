@@ -4,26 +4,25 @@ ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 ms.assetid: 56d2d0d7-1eb6-4c6b-aaf4-0521723ef4af
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 68bf430f1b1bcf7a687ecaa77c883fdb5d6cce82
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: 493e042e58c5a13bc94f299197ac8a75972f7ed6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56289790"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66102311"
 ---
 # <a name="save-reports-to-your-computer-report-builder"></a>自分のコンピューターへのレポートの保存 (レポート ビルダー)
   レポート ビルダーでは、レポート定義を自分のコンピューターに保存できます。 ただし、コンピューターに保存した場合、他のユーザーはそのレポートを表示できません。また、共有データ ソースを参照したり、画像やサブレポートなどのレポート アイテムを外部に格納するレポートは実行できない場合があります。 レポートは、レポート サーバーまたは SharePoint サイトに保存することをお勧めします。  
   
 ### <a name="to-save-a-report"></a>レポートを保存するには  
   
-1.  レポート ビルダーのボタンの **[保存]** をクリックします。 **[Save As**_\<Report Item>]\(<レポート アイテム> として保存\)_ ダイアログ ボックスが開きます。  
+1.  レポート ビルダーのボタンの **[保存]** をクリックします。 **[Save As** _\<Report Item>]\(<レポート アイテム> として保存\)_ ダイアログ ボックスが開きます。  
   
     > [!NOTE]  
     >  レポートを再保存すると、自動的に以前の場所に再保存されます。 場所を変更するには、 **[名前を付けて保存]** を使用します。  
@@ -36,7 +35,7 @@ ms.locfileid: "56289790"
   
 ### <a name="to-save-a-report-as-a-different-name"></a>レポートを別の名前で保存するには  
   
-1.  レポート ビルダーのボタンの **[名前を付けて保存]** をクリックします。 **[Save As**_\<Report Item>]\(<レポート アイテム> として保存\)_ ダイアログ ボックスが開きます。  
+1.  レポート ビルダーのボタンの **[名前を付けて保存]** をクリックします。 **[Save As** _\<Report Item>]\(<レポート アイテム> として保存\)_ ダイアログ ボックスが開きます。  
   
 2.  レポートを保存するコンピューター上の場所を参照します。  
   

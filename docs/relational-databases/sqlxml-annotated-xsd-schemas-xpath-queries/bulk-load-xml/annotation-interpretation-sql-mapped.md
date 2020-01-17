@@ -1,6 +1,5 @@
 ---
-title: 'sql: マッピング (SQLXML 4.0) |マイクロソフトのドキュメント'
-ms.custom: ''
+title: 'sql: マップ済み (SQLXML)'
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -17,20 +16,20 @@ helpviewer_keywords:
 ms.assetid: 7042741e-ce4d-4912-9c4a-d77194a028fc
 author: MightyPen
 ms.author: genemi
-manager: craigg
+ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: b33bdeff7f34993681fbdede0200e9bcab8ab96e
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 055b4d25b6c501e9cf3afdf99460cd54ca7e720c
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56040073"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75246775"
 ---
 # <a name="annotation-interpretation---sqlmapped"></a>注釈の解釈 - sql:mapped
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-  XML 一括読み込みの処理、 **sql: マップ**予想こととして、XSD スキーマで注釈は、マッピング スキーマが指定されている場合**sql: マップ ="false"** の任意の要素または属性を使用して、XML 一括読み込みしません。対応する列に関連付けられているデータを格納しようとしてください。  
+  XML 一括読み込みでは、XSD スキーマの**sql: マップ**された注釈が想定どおりに処理されます。つまり、マッピングスキーマで任意の要素または属性に**sql: mapping = "false"** が指定されている場合、xml 一括読み込みでは、関連付けられているデータが対応する列に格納されません。  
   
- XML 一括読み込みは、要素とマップされていない属性は無視されます (スキーマに記述されていないか、または、XSD スキーマで注釈が付いて ため**sql: マップ ="false"**)。 使用してこのような列が指定されている場合に、オーバーフロー列にマップされていないすべてのデータが**sql:overflow-フィールド**します。  
+ XML 一括読み込みでは、マップされていない要素と属性が無視されます。これは、スキーマで記述されていないか、XSD スキーマで**sql: マップト = "false"** で注釈が付けられているためです。 このような列が**sql: overflow-field**を使用して指定されている場合は、マップされていないすべてのデータがオーバーフロー列に入ります。  
   
  たとえば、次の XSD スキーマを考えてみます。  
   
@@ -56,11 +55,11 @@ ms.locfileid: "56040073"
 </xsd:schema>  
 ```  
   
- **HomePhone**属性を指定します**sql: マップ ="false"**、XML 一括読み込みでは、この属性の対応する列にマップされません。 XSD スキーマ、オーバーフロー列を識別する (**OverflowColumn**) この未使用のデータを格納する XML 一括ロードします。  
+ **HomePhone**属性は**sql: map = "false"** を指定しているため、XML 一括読み込みでは、この属性は対応する列にマップされません。 XSD スキーマでは、XML 一括読み込みでこの未使用データが格納されるオーバーフロー列 (**OverflowColumn**) が識別されます。  
   
 ### <a name="to-test-a-working-sample"></a>実際のサンプルをテストするには  
   
-1.  次の表を作成、 **tempdb**データベース。  
+1.  次のテーブルを**tempdb**データベースに作成します。  
   
     ```  
     USE tempdb  
@@ -86,7 +85,7 @@ ms.locfileid: "56040073"
     ```  
   
 4.  XML 一括読み込みを実行するには、この [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Visual Basic Scripting Edition (VBScript) の例を Sample.vbs として保存し実行します。  
-  
+
     ```  
     set objBL = CreateObject("SQLXMLBulkLoad.SQLXMLBulkload.4.0")  
     objBL.ConnectionString = "provider=SQLOLEDB;data source=localhost;database=tempdb;integrated security=SSPI"  
@@ -96,7 +95,7 @@ ms.locfileid: "56040073"
     set objBL=Nothing  
     ```  
   
- これは、同等の XDR スキーマです。  
+ これは、これと同等の XDR スキーマです。  
   
 ```  
 <?xml version="1.0" ?>  

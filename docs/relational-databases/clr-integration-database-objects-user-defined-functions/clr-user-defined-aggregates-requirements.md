@@ -19,17 +19,16 @@ helpviewer_keywords:
 ms.assetid: dbf9eb5a-bd99-42f7-b275-556d0def045d
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: f7ec6322489ba862d335c5c52021d643da73deb1
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: c007beeab554486fe490a0d2f6bfc335e1a50cf9
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51662471"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68009747"
 ---
 # <a name="clr-user-defined-aggregates---requirements"></a>CLR ユーザー定義集計 - 要件
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  CLR (共通言語ランタイム) アセンブリの型は、必要な集計コントラクトが実装されていれば、ユーザー定義集計関数として登録できます。 この契約から成る、 **SqlUserDefinedAggregate**属性と集計コントラクトのメソッド。 集計コントラクトには、集計関数の中間の状態を保存するためのメカニズムと 4 つの方法で構成される、新しい値を累積する機構が含まれています: **Init**、 **Accumulate**、 **マージ**、および**終了**します。 これらの要件が満たされると、完全なユーザー定義集計で活用するためにできるは[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]します。 このトピックの次のセクションでは、ユーザー定義集計を作成し、そのユーザー定義集計を使用して作業する方法について詳しく説明します。 例については、次を参照してください。 [Invoking CLR User-Defined 集計関数](../../relational-databases/clr-integration-database-objects-user-defined-functions/clr-user-defined-aggregate-invoking-functions.md)します。  
+  CLR (共通言語ランタイム) アセンブリの型は、必要な集計コントラクトが実装されていれば、ユーザー定義集計関数として登録できます。 この契約から成る、 **SqlUserDefinedAggregate**属性と集計コントラクトのメソッド。 集計コントラクトには、集計関数の中間の状態を保存するためのメカニズムと 4 つの方法で構成される、新しい値を累積する機構が含まれます。**Init**、**蓄積**、**マージ**、および**終了**します。 これらの要件が満たされると、完全なユーザー定義集計で活用するためにできるは[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]します。 このトピックの次のセクションでは、ユーザー定義集計を作成し、そのユーザー定義集計を使用して作業する方法について詳しく説明します。 例については、次を参照してください。 [Invoking CLR User-Defined 集計関数](../../relational-databases/clr-integration-database-objects-user-defined-functions/clr-user-defined-aggregate-invoking-functions.md)します。  
   
 ## <a name="sqluserdefinedaggregate"></a>SqlUserDefinedAggregate  
  詳細については、次を参照してください。 [SqlUserDefinedAggregateAttribute](https://go.microsoft.com/fwlink/?LinkId=124626)します。  

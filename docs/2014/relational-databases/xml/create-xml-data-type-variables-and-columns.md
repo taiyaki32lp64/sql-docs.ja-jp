@@ -10,15 +10,15 @@ helpviewer_keywords:
 - xml data type [SQL Server], variables
 - xml data type [SQL Server], columns
 ms.assetid: 8994ab6e-5519-4ba2-97a1-fac8af6f72db
-author: douglaslMS
-ms.author: douglasl
+author: MightyPen
+ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 27f4458299fd82a1afe74122edba3cbf886d9425
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 3fe1414131991a35b316a50da730f42e8b02d462
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48114102"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62637995"
 ---
 # <a name="create-xml-data-type-variables-and-columns"></a>XML データ型の変数と列の作成
   `xml`データ型は組み込みのデータ型[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]などの他の組み込み型に少し似ていますが、`int`と`varchar`します。 他の組み込み型で使用できるように、`xml`変数の型、パラメーターの型、関数の戻り値の型、またはテーブルを作成するときに、データ型列の型として[CAST および CONVERT](/sql/t-sql/functions/cast-and-convert-transact-sql)します。  
@@ -53,7 +53,7 @@ CREATE PROCEDURE SampleProc(@XmlDoc xml) AS ...
 ## <a name="assigning-defaults"></a>既定の XML の割り当て  
  テーブル内で、`xml` 型の列に、既定の XML インスタンスを割り当てることができます。 既定の XML を割り当てるには、XML 定数を使用する方法と、`xml` 型への明示的なキャストを使用する方法の 2 つがあります。  
   
- 既定の XML を XML 定数として割り当てるには、次の例の構文を使用します。 注、文字列は暗黙的にキャストされる`xml`型。  
+ 既定の XML を XML 定数として割り当てるには、次の例の構文を使用します。 文字列は暗黙的に `xml` 型にキャストされることに注意してください。  
   
 ```  
 CREATE TABLE T (XmlColumn xml default N'<element1/><element2/>')  
@@ -66,7 +66,7 @@ CREATE TABLE T (XmlColumn xml
                   default CAST(N'<element1/><element2/>' AS xml))  
 ```  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、`xml` 型の列に対する NULL 制約および NOT NULL 制約もサポートされます。 以下に例を示します。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、`xml` 型の列に対する NULL 制約および NOT NULL 制約もサポートされます。 例 :  
   
 ```  
 CREATE TABLE T (XmlColumn xml NOT NULL)  
@@ -79,7 +79,7 @@ CREATE TABLE T (XmlColumn xml NOT NULL)
   
 -   制約が、テーブル内の他の XML 列または XML 以外の列に関係している場合。 たとえば、XML インスタンスに現れる Customer の ID (`/Customer/@CustId`) が、CustomerID リレーショナル列の値と一致する必要がある場合などです。  
   
- 制約は、型指定された `xml` データ型の列にも、型指定されていない  データ型の列にも指定できます。 ただし、制約を指定するとき、[XML データ型のメソッド](/sql/t-sql/xml/xml-data-type-methods) は使用できません。 また、`xml` データ型では次の列およびテーブルの制約はサポートされません。  
+ 制約は、型指定された `xml` データ型の列にも、型指定されていない  データ型の列にも指定できます。 ただし、制約を指定するとき、 [XML データ型のメソッド](/sql/t-sql/xml/xml-data-type-methods) は使用できません。 また、`xml` データ型では次の列およびテーブルの制約はサポートされません。  
   
 -   PRIMARY KEY/ FOREIGN KEY  
   
@@ -91,7 +91,7 @@ CREATE TABLE T (XmlColumn xml NOT NULL)
   
 -   RULE  
   
- 制約を使用する代わりに、ラップするラッパー、ユーザー定義関数を作成する、`xml`データは、メソッドを入力し、次の例に示すように、check 制約で、ユーザー定義関数を指定します。  
+ 制約を使用する代わりに、次の例に示すように、`xml` データ型のメソッドをラップするためのラッパーと呼ばれるユーザー定義関数を作成し、ユーザー定義関数を CHECK 制約を適用して指定します。  
   
  次の例では、 `Col2` 列に対して、保存する各 XML インスタンスには `<ProductDescription>` 属性を持つ `ProductID` 要素が必要であるという制約を指定します。 この制約は、次のユーザー定義関数によって適用されます。  
   
@@ -135,9 +135,9 @@ INSERT INTO T values(1,'<Product />')
   
 -   `xml` データ型の列に XML インデックスを作成するときに、メイン テーブルの主キーがクラスター化キーと同一である場合。 詳細については、「[XML インデックス &#40;SQL Server&#41;](xml-indexes-sql-server.md)」をご覧ください。  
   
- 作成、`xml`次の条件に該当する場合、別のテーブルにデータ型の列。  
+ 次の条件に該当する場合は、別のテーブルに `xml` データ型の列を作成してください。  
   
--   XML インデックスを作成する、`xml`メイン テーブルの主キーのデータ型の列は、クラスター化キーと異なるまたはメイン テーブルには、主キーではありません。 または、メイン テーブルがヒープ (クラスター化キーがありません)。 メイン テーブルが既に存在する場合、これに該当している可能性があります。  
+-   `xml` データ型の列に XML インデックスを作成するときに、メイン テーブルの主キーがクラスター化キーと異なる場合、メイン テーブルに主キーがない場合、またはメイン テーブルがヒープである (クラスター化キーがない) 場合。 メイン テーブルが既に存在する場合、これに該当している可能性があります。  
   
 -   テーブルに XML 列が存在することでテーブル スキャンが遅くなるのを避ける場合。 テーブル スキャンは、XML が行内に保存されていても行外に保存されていても領域を消費します。  
   

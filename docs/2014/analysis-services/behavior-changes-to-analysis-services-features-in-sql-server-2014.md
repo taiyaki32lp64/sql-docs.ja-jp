@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: 92ebd5cb-afb6-4b62-968f-39f5574a452b
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 0f7cc154a79a329bc18d02535e3f3332aa7e8b61
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: 5a5525984fa4b1f1823f526097d271780a072bd4
+ms.sourcegitcommit: 0818f6cc435519699866db07c49133488af323f4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52391785"
+ms.lasthandoff: 06/20/2019
+ms.locfileid: "67284809"
 ---
 # <a name="behavior-changes-to-analysis-services-features-in-sql-server-2014"></a>SQL Server 2014 における Analysis Services 機能の動作の変更
   ここでは、多次元、テーブル、データ マイニング、 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] の展開に関する [!INCLUDE[ssGeminiShort](../includes/ssgeminishort-md.md)] での動作変更について説明します。 動作の変更の影響は、現在のバージョンの SQL Server の機能や操作方法が、以前のバージョンの SQL Server とは異なることに表れます。  
@@ -40,8 +39,8 @@ ms.locfileid: "52391785"
   
 |問題点|説明|  
 |-----------|-----------------|  
-|SQL Server 2008 R2 PowerPivot ブックを SQL Server 2012 SP1 PowerPivot for SharePoint 2013 で使用しているとき、モデルのアップグレードおよび更新が自動的に行われません。 そのため、SQL Server 2008 R2 PowerPivot ブックの定期データ更新が機能しません。|2008 R2 ブックは、 [!INCLUDE[ssGeminiShortvnext](../includes/ssgeminishortvnext-md.md)]で開きますが、定期更新は機能しません。 更新履歴を確認すると、次のようなエラー メッセージが表示されます。<br /> "ブックには、サポートされていない PowerPivot モデルが含まれています。 ブックの PowerPivot モデルは、SQL Server 2008 R2 PowerPivot for Excel 2010 形式です。 サポートされている PowerPivot モデルは、 <br />SQL Server 2012 PowerPivot for Excel 2010 <br />SQL Server 2012 PowerPivot for Excel 2013 です。」<br /><br /> **ブックをアップグレードする方法。** ブックを 2012年ブックにアップグレードするまで定期更新は行われません。 ブックとブックに含まれるモデルをアップグレードするには、次のいずれかの手順を実行します。<br /><br /> SQL Server 2012 PowerPivot for Excel アドインがインストールされた Microsoft Excel 2010 でブックをダウンロードして開きます。 ブックを保存して、SharePoint サーバーに再発行します。<br /><br /> Microsoft Excel 2013 でブックをダウンロードして開きます。 ブックを保存して、SharePoint サーバーに再発行します。<br /><br /> <br /><br /> ブックのアップグレードの詳細については、次を参照してください。[ブックのアップグレードと定期データ更新&#40;SharePoint 2013&#41;](instances/install-windows/upgrade-workbooks-and-scheduled-data-refresh-sharepoint-2013.md)します。|  
-|DAX [ALL Function](https://msdn.microsoft.com/library/ee634802(v=sql.120).aspx)の動作の変更|[!INCLUDE[ssSQL11SP1](../includes/sssql11sp1-md.md)]より前のバージョンでは、タイム インテリジェンスでの使用のために "日付テーブルとしてマーク" で [Date] 列を指定した場合に、この [Date] 列が ALL 関数の引数として渡され、さらに CALCULATE 関数のフィルターとして渡されると、日付列のスライサーに関係なく、テーブルのすべての列に対してすべてのフィルターが無視されました。<br /><br /> 例えば以下のようにします。<br /><br /> `= CALCULATE (<expression>, ALL (DateTable[Date]))`<br /><br /> [!INCLUDE[ssSQL11SP1](../includes/sssql11sp1-md.md)]より前のバージョンでは、ALL の引数として渡された [Date] 列に関係なく、DateTable のすべての列に対してすべてのフィルターが無視されます。<br /><br /> [!INCLUDE[ssSQL11SP1](../includes/sssql11sp1-md.md)] および PowerPivot in Excel 2013 では、ALL の引数として渡された指定の列に対してのみ、フィルターが無視されます。<br /><br /> この新しい動作に対処するには、つまりテーブル全体のフィルターとしてすべての列を無視するには、次のように引数から [Date] を除外します。<br /><br /> `=CALCULATE (<expression>, ALL(DateTable))`<br /><br /> これにより、 [!INCLUDE[ssSQL11SP1](../includes/sssql11sp1-md.md)]より前のバージョンと同じ動作になります。|  
+|SQL Server 2008 R2 PowerPivot ブックを SQL Server 2012 SP1 PowerPivot for SharePoint 2013 で使用しているとき、モデルのアップグレードおよび更新が自動的に行われません。 そのため、SQL Server 2008 R2 PowerPivot ブックの定期データ更新が機能しません。|2008 R2 ブックは、 [!INCLUDE[ssGeminiShortvnext](../includes/ssgeminishortvnext-md.md)]で開きますが、定期更新は機能しません。 更新履歴を確認すると、次のようなエラー メッセージが表示されます。<br /> "ブックには、サポートされていない PowerPivot モデルが含まれています。 ブックの PowerPivot モデルは、SQL Server 2008 R2 PowerPivot for Excel 2010 形式です。 サポートされている PowerPivot モデルは、 <br />SQL Server 2012 PowerPivot for Excel 2010<br />SQL Server 2012 PowerPivot for Excel 2013"<br /><br /> **ブックをアップグレードする方法。** ブックを 2012年ブックにアップグレードするまで定期更新は行われません。 ブックとブックに含まれるモデルをアップグレードするには、次のいずれかの手順を実行します。<br /><br /> SQL Server 2012 PowerPivot for Excel アドインがインストールされた Microsoft Excel 2010 でブックをダウンロードして開きます。 ブックを保存して、SharePoint サーバーに再発行します。<br /><br /> Microsoft Excel 2013 でブックをダウンロードして開きます。 ブックを保存して、SharePoint サーバーに再発行します。<br /><br /> <br /><br /> ブックのアップグレードの詳細については、次を参照してください。[ブックのアップグレードと定期データ更新&#40;SharePoint 2013&#41;](instances/install-windows/upgrade-workbooks-and-scheduled-data-refresh-sharepoint-2013.md)します。|  
+|DAX [ALL Function](/dax/all-function-dax)の動作の変更|[!INCLUDE[ssSQL11SP1](../includes/sssql11sp1-md.md)]より前のバージョンでは、タイム インテリジェンスでの使用のために "日付テーブルとしてマーク" で [Date] 列を指定した場合に、この [Date] 列が ALL 関数の引数として渡され、さらに CALCULATE 関数のフィルターとして渡されると、日付列のスライサーに関係なく、テーブルのすべての列に対してすべてのフィルターが無視されました。<br /><br /> 例えば以下のようにします。<br /><br /> `= CALCULATE (<expression>, ALL (DateTable[Date]))`<br /><br /> [!INCLUDE[ssSQL11SP1](../includes/sssql11sp1-md.md)]より前のバージョンでは、ALL の引数として渡された [Date] 列に関係なく、DateTable のすべての列に対してすべてのフィルターが無視されます。<br /><br /> [!INCLUDE[ssSQL11SP1](../includes/sssql11sp1-md.md)] および PowerPivot in Excel 2013 では、ALL の引数として渡された指定の列に対してのみ、フィルターが無視されます。<br /><br /> この新しい動作に対処するには、つまりテーブル全体のフィルターとしてすべての列を無視するには、次のように引数から [Date] を除外します。<br /><br /> `=CALCULATE (<expression>, ALL(DateTable))`<br /><br /> これにより、 [!INCLUDE[ssSQL11SP1](../includes/sssql11sp1-md.md)]より前のバージョンと同じ動作になります。|  
   
 ##  <a name="bkmk_sql2012"></a> 動作の変更 [!INCLUDE[ssSQL11](../includes/sssql11-md.md)]  
  ここでは、 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] での [!INCLUDE[ssSQL11](../includes/sssql11-md.md)]の機能に関する動作変更について説明します。 これらの変更は、 [!INCLUDE[ssSQL14](../includes/sssql14-md.md)]にも適用されます。  
@@ -103,7 +102,7 @@ ms.locfileid: "52391785"
 #### <a name="new-default-setting-for-load-balancing-requests-changed-from-round-robin-to-health-based"></a>ラウンド ロビン方式からヘルス ベース方式に変更された、要求の負荷分散の既定の設定  
  PowerPivot サービス アプリケーションには、PowerPivot データに対する要求をファーム内の複数の PowerPivot for SharePoint サーバー間でどのように分散するかを決める既定の設定があります。 以前のリリースでの既定の設定は **ラウンド ロビン**方式で、要求は使用可能なサーバー間で順番に分散されていました。 今回のリリースでは、既定の設定は **ヘルス ベース**方式になりました。 PowerPivot サービス アプリケーションは、使用可能なメモリや CPU などのサーバーの状態の統計を基に、次の要求を受け取るサーバー インスタンスを決定します。  
   
- サーバーを以前のリリースからアップグレードした場合、PowerPivot サービス アプリケーションには前の既定の設定 (**ラウンド ロビン**) が保持されています。 **ヘルス ベース** の割り当て方式の設定を使用するには、構成設定を変更する必要があります。 詳細については、次を参照してください。[を作成し、サーバーの全体管理で PowerPivot サービス アプリケーションを構成する](power-pivot-sharepoint/create-and-configure-power-pivot-service-application-in-ca.md)します。  
+ サーバーを以前のリリースからアップグレードした場合、PowerPivot サービス アプリケーションには前の既定の設定 (**ラウンド ロビン**) が保持されています。 **ヘルス ベース** の割り当て方式の設定を使用するには、構成設定を変更する必要があります。 詳細については、[を作成し、サーバーの全体管理で PowerPivot サービス アプリケーションを構成する](power-pivot-sharepoint/create-and-configure-power-pivot-service-application-in-ca.md)を参照してください。  
   
 ## <a name="see-also"></a>参照  
  [旧バージョンとの互換性](../../2014/getting-started/backward-compatibility.md)   

@@ -1,10 +1,7 @@
 ---
 title: ジョブを自動的に削除する | Microsoft Docs
-ms.custom: ''
-ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
 ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
@@ -15,18 +12,21 @@ helpviewer_keywords:
 - deleting jobs
 - removing jobs
 ms.assetid: 92dbb6da-5919-4bde-9354-d454e9ea3da0
-author: stevestein
-ms.author: sstein
-manager: craigg
+author: markingmyname
+ms.author: maghan
+ms.reviewer: ''
+ms.custom: ''
+ms.date: 01/19/2017
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 3c3d2c3a414c4d9a69fbb7f214f737cc16398d70
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: d5139a6e413a15527439d7a62ba0749cdf022ef7
+ms.sourcegitcommit: 57e20b7d02853ec9af46b648106578aed133fb45
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51703229"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69553349"
 ---
 # <a name="automatically-delete-a-job"></a>Automatically Delete a Job
+
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
 > [!IMPORTANT]  
@@ -48,22 +48,10 @@ ms.locfileid: "51703229"
   
     このジョブを再実行する必要がないことが明らかな場合に、このジョブ応答を使用します。  
   
-**このトピックの内容**  
-  
--   **作業を開始する準備:**  
-  
-    [Security](#Security)  
-  
--   **ジョブ応答を指定する方法:**  
-  
-    [SQL Server Management Studio](#SSMS)  
-  
-    [SQL Server 管理オブジェクト](#SMO)  
-  
 ## <a name="BeforeYouBegin"></a>はじめに  
   
-### <a name="Security"></a>Security  
-詳細については、「 [Implement SQL Server Agent Security](../../ssms/agent/implement-sql-server-agent-security.md)」をご覧ください。  
+### <a name="Security"></a>セキュリティ  
+詳細については、「 [SQL Server エージェントのセキュリティの実装](../../ssms/agent/implement-sql-server-agent-security.md)」をご覧ください。  
   
 ## <a name="SSMS"></a>SQL Server Management Studio の使用  
   

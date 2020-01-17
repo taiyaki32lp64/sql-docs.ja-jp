@@ -16,15 +16,14 @@ helpviewer_keywords:
 - displaying XML schema collections
 - viewing XML schema collections
 ms.assetid: e38031af-22df-4cd9-a14e-e316b822f91b
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: d8fcf71ee23aa1254b0d52a267a4e282bc5942c7
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+author: MightyPen
+ms.author: genemi
+ms.openlocfilehash: 2e62fd82b302576dfbaf45cbb8073c2e94f7a67e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51658161"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68096974"
 ---
 # <a name="view-a-stored-xml-schema-collection"></a>格納されている XML スキーマ コレクションの表示
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

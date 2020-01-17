@@ -1,29 +1,28 @@
 ---
-title: 'クイック スタート: SQL Server の拡張イベント | Microsoft Docs'
-ms.custom: ''
-ms.date: 09/10/2016
+title: クイック スタート:SQL Server の拡張イベント
+ms.date: 05/28/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
 ms.technology: xevents
-ms.topic: conceptual
+ms.topic: quickstart
 ms.assetid: 7bb78b25-3433-4edb-a2ec-c8b2fa58dea1
 author: MightyPen
 ms.author: genemi
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: b7c3718d1402ebdc6ff82bddc55172f09ff8b61a
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 8e4512400d2f05500f2db9a98a72f57ac50bc3a7
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51658351"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75242921"
 ---
-# <a name="quick-start-extended-events-in-sql-server"></a>クイック スタート: SQL Server 拡張イベント
+# <a name="quickstart-extended-events-in-sql-server"></a>クイック スタート:SQL Server の拡張イベント
+
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
 
-この記事は、拡張イベントを初めて使用する SQL 開発者および数分でイベント セッションを作成したい SQL 開発者を対象としています。 拡張イベントを使用すると、SQL システムと自身のアプリケーションの内部処理に関する詳細を確認できます。 拡張イベント セッションを作成するときに、システムを以下のことを指示します。
+拡張イベントは、SQL Server に関する問題の監視とトラブルシューティングを行うために必要なデータを収集できるようにする、軽量なパフォーマンス監視システムです。 拡張イベントのアーキテクチャについて詳しくは、「[拡張イベントの概要](extended-events.md)」をご覧ください。  この記事は、拡張イベントを初めて使用する SQL 開発者および数分でイベント セッションを作成したい SQL 開発者を対象としています。 拡張イベントを使用すると、SQL システムと自身のアプリケーションの内部処理に関する詳細を確認できます。 拡張イベント セッションを作成するときに、システムを以下のことを指示します。
 
 - 興味がある事象
 - システムにデータを報告させる方法
@@ -79,17 +78,17 @@ SSMS.exe では、拡張イベント向けに優れたユーザー インター�
 デモを行わない場合でも、手順を理解できます。 デモにより **[新しいセッション]** ダイアログが起動します。 次の 4 つのページを処理します。
 
 - 全般
-- イベント
+- events
 - データ ストレージ
 - 詳細設定
 
 
-SSMS UI が数カ月または数年にわたって微調整されると、テキストとそれを補助するスクリーンショットが少し正確ではなくなる場合があります。 しかし、差異が小さいものであれば、スクリーンショットは説明には十分に役立ちます。
+SSMS UI が数カ月または数年にわたって微調整されると、テキストとそれを補助するスクリーンショットが少し正確ではなくなる場合があります。 しかしながら、差異がほんのわずかなものであれば、スクリーンショットは説明には十分に役立ちます。
 
 
 1. SSMS と接続します。
 
-2. オブジェクト エクスプローラーで、 **[管理]** > **[拡張イベント]** > **[新しいセッション]** をクリックします。 **[新しいセッション]** ダイアログと **新規セッション ウィザード**は互いに似ていますが、[新しいセッション] をお勧めします。
+2. オブジェクト エクスプローラーで、 **[管理]**  >  **[拡張イベント]**  >  **[新しいセッション]** をクリックします。 **[新しいセッション]** ダイアログと **新規セッション ウィザード**は互いに似ていますが、[新しいセッション] をお勧めします。
 
 3. 左上で、 **[全般]** ページをクリックします。 *[セッション名]* テキスト ボックスに ” **YourSession** ” または任意の名前を入力します。 **[OK]** ボタンはデモの終了時にのみ押すため、まだ*押さないで*ください。
 
@@ -105,7 +104,7 @@ SSMS UI が数カ月または数年にわたって微調整されると、テキ
     - 右矢印ボタン **>** をクリックして、イベントを **[選択したイベント]** ボックスに移動します。
 
 6. **[イベント]** ページで、右端にある **[構成]** ボタンをクリックします。
-    - 見やすくするために左側を切り取った次のスクリーンショットで、**[イベントの構成オプション]** 領域を確認できます。
+    - 見やすくするために左側を切り取った次のスクリーンショットで、 **[イベントの構成オプション]** 領域を確認できます。
 
     ![[新しいセッション] > [イベント] > [構成] > [フィルター (述語)] > [フィールド]](../../relational-databases/extended-events/media/xevents-session-newsessions-20b-events-ssms-yoursessionnode.png)
 
@@ -113,7 +112,7 @@ SSMS UI が数カ月または数年にわたって微調整されると、テキ
 
 8. **[フィールド]** ドロップ ダウン リストから、 **[sqlserver.sql_text]** を選択します。
    - **[演算子]** に LIKE 演算子を選択します。
-   - **[値]** に " **%SELECT%HAVING%**” を入力します。
+   - **[値]** に " **%SELECT%HAVING%** ” を入力します。
 
     > [!NOTE]
     > この 2 部構成の名前では、 *sqlserver* がパッケージ名、 *sql_text* がフィールド名です。 前の手順で選択したイベント *sql_statement_completed* は、選択したフィールドと同じパッケージ内にある必要があります。
@@ -132,11 +131,11 @@ SSMS UI が数カ月または数年にわたって微調整されると、テキ
 
     ![[新しいセッション] > [詳細] > [ディスパッチの最大待機時間] > [OK]](../../relational-databases/extended-events/media/xevents-session-newsessions-40-advanced-ssms-yoursessionnode.png)
 
-12. 左上で、**[詳細]** ページをクリックします。
+12. 左上で、 **[詳細]** ページをクリックします。
     - **[ディスパッチの最大待機時間]** を 3 秒に減らします。
     - 最後に、下部にある **[OK]** ボタンをクリックします。
 
-13. **オブジェクト エクスプローラー**に戻り、**[管理]** > **[セッション]** の順に展開して、**YourSession** の新しいノードを表示します。
+13. **オブジェクト エクスプローラー**に戻り、 **[管理]**  >  **[セッション]** の順に展開して、**YourSession** の新しいノードを表示します。
 
     ![オブジェクト エクスプローラーで [管理] > [拡張イベント] > [セッション] の下に表示される YourSession という名前の新しい *イベント セッション* のノード](../../relational-databases/extended-events/media/xevents-session-newsessions-50-objectexplorer-ssms-yoursessionnode.png)
 
@@ -152,7 +151,7 @@ SSMS **オブジェクト エクスプローラー**でイベント セッショ
 
 SSMS UI を使用して、イベント セッションを作成した T-SQL スクリプトを生成しました。 生成されたスクリプトは、次の手順で表示できます。
 
-- セッション ノードを右クリックし、 **[セッションをスクリプト化]** > **[CREATE]** > **[クリップボード]** の順にクリックします。
+- セッション ノードを右クリックし、 **[セッションをスクリプト化]**  >  **[CREATE]**  >  **[クリップボード]** の順にクリックします。
 - 任意のテキスト エディターに貼り付けます。
 
 
@@ -230,7 +229,7 @@ ALTER EVENT SESSION [YourSession]
 
 SQL Server インスタンスの開始時に、自動的に開始するようにイベント セッションに指示することもできます。 CREATE EVENT SESSION でキーワード **STARTUP STATE = ON** を参照してください。
 
-- SSMS UI は **[新しいセッション]** > **[全般]** ページで対応するチェック ボックスを提供しています。
+- SSMS UI は **[新しいセッション]**  >  **[全般]** ページで対応するチェック ボックスを提供しています。
 
 
 ## <a name="test-your-event-session"></a>イベント セッションのテスト
@@ -410,7 +409,7 @@ SSMS **オブジェクト エクスプローラー**で、イベント セッシ
 拡張イベントの効果的な使用には、多くのシナリオがあります。 次の記事では、クエリ中に取得したロックに関連するシナリオの例を示します。
 
 
-ロックの評価を目的としたイベント セッションの具体的なシナリオは、次の記事で説明しています。 これらの記事では、 **@dbid**の使用や、動的な `EXECUTE (@YourSqlString)`の使用など、高度な技法もいくつか紹介しています。
+ロックの評価を目的としたイベント セッションの具体的なシナリオは、次の記事で説明しています。 これらの記事では、 **\@dbid** の使用や、動的な `EXECUTE (@YourSqlString)` の使用など、高度な技法もいくつか紹介されています。
 
 - [ロックの大半を取得しているオブジェクトを見つける](../../relational-databases/extended-events/find-the-objects-that-have-the-most-locks-taken-on-them.md)
   - このシナリオでは、生のイベント データを表示する前に処理するターゲット package0.histogram を使用します。
@@ -424,14 +423,14 @@ SSMS **オブジェクト エクスプローラー**で、イベント セッシ
 次の表は、拡張イベントで使用される用語とその意味を示しています。
 
 
-| 項目 | [説明] |
+| 期間 | [説明] |
 | :--- | :---------- |
-| イベント セッション | 1 つ以上のイベントを中心にしたコンストラクトと、アクションなどのサポート アイテムがターゲットです。 CREATE EVENT SESSION ステートメントは、各イベント セッションを構築します。 ALTER を使用してイベント セッションを任意に開始、停止できます。 <br/> <br/> イベント セッションは、文脈から *イベント セッション*を指していることが明らかな場合には、単に *セッション*と呼ばれることがあります。 <br/> <br/> イベント セッションの詳細は、「 [SQL Server 拡張イベント セッション](../../relational-databases/extended-events/sql-server-extended-events-sessions.md)」で説明しています。 |
+| イベント セッション | 1 つ以上のイベントを中心にしたコンストラクトと、アクションなどのサポート アイテムがターゲットです。 CREATE EVENT SESSION ステートメントは、各イベント セッションを構築します。 ALTER を使用してイベント セッションを任意に開始、停止できます。 <br/> <br/> イベント セッションは、文脈から *イベント セッション*を指していることが明らかな場合には、単に *セッション*と呼ばれることがあります。 <br/> <br/> イベント セッションの詳細については、次で説明しています。[SQL Server 拡張イベント セッション](../../relational-databases/extended-events/sql-server-extended-events-sessions.md)。 |
 | イベント | アクティブなイベント セッションによって監視されるシステムでの内の特定の事象です。 <br/> <br/> たとえば、 *sql_statement_completed* イベントは、指定された T-SQL ステートメントが完了した時点を表します。 イベントは、その継続時間とその他のデータを報告できます。 |
 | ターゲット (target) | キャプチャしたイベントからの出力データを受信するアイテムです。 ターゲットはデータを表示します。 <br/> <br/> 例には、 *event_file*と、それに類似する便利な軽量メモリ *ring_buffer*が含まれています。 より魅力的な *ヒストグラム* ターゲットが、データを表示する前にいくつかの処理を実行します。 <br/> <br/> どのターゲットも任意のイベント セッションに使用できます。 詳細については、「 [Targets for Extended Events in SQL Server](../../relational-databases/extended-events/targets-for-extended-events-in-sql-server.md)」 (SQL Server の拡張イベントのターゲット) を参照してください。 |
-| アクション (action) | イベントにとって既知のフィールドです。 フィールドのデータは、ターゲットに送信されます。 アクション フィールドは *述語フィルター*に密接に関係しています。 |
+| action | イベントにとって既知のフィールドです。 フィールドのデータは、ターゲットに送信されます。 アクション フィールドは *述語フィルター*に密接に関係しています。 |
 | 述語フィルター | イベント発生の興味のあるサブセットのみがターゲットに送信されるように使用される、イベント フィールド内のデータのテストです。 <br/> <br/> たとえば、フィルターには、T-SQL ステートメントが文字列 *HAVING* を含めている、これらの *sql_statement_completed*イベント発生のみを含めることができます。 |
-| パッケージ (package) | イベントのコアを軸として展開するアイテム セット内の各アイテムにアタッチされている名前修飾子です。 <br/> <br/> たとえば、パッケージには、T-SQL テキストに関するイベントを含めることができます。 1 つのイベントが、GO 区切り文字のバッチ内のすべての T-SQL に関係する場合があります。 一方、個別の T-SQL ステートメントに関する別のより狭義のイベントもあります。 さらに、どの T-SQL ステートメントにも、開始イベントと完了イベントがあります。 <br/> <br/> イベントに適したフィールドも、イベントとともにパッケージされています。 ほとんどのターゲットが *package0* 内にあり、その他の多くのパッケージからのイベントとともに使用されます。 |
+| パッケージ | イベントのコアを軸として展開するアイテム セット内の各アイテムにアタッチされている名前修飾子です。 <br/> <br/> たとえば、パッケージには、T-SQL テキストに関するイベントを含めることができます。 1 つのイベントが、GO 区切り文字のバッチ内のすべての T-SQL に関係する場合があります。 一方、個別の T-SQL ステートメントに関する別のより狭義のイベントもあります。 さらに、どの T-SQL ステートメントにも、開始イベントと完了イベントがあります。 <br/> <br/> イベントに適したフィールドも、イベントとともにパッケージされています。 ほとんどのターゲットが *package0* 内にあり、その他の多くのパッケージからのイベントとともに使用されます。 |
 
 
 ## <a name="how-to-discover-the-available-events-in-packages"></a>パッケージ内で使用可能なイベントを見つける方法
@@ -478,14 +477,14 @@ Package-Guid = 655FD93F-3364-40D5-B2BA-330F7FFB6491
 #### <a name="ssms-ui-for-search"></a>検索の SSMS UI
 
 
-もう 1 つの検索オプションは、前述のスクリーンショットで示した **[新しいセッション]** > **[イベント]** > **[イベント ライブラリ]** ダイアログに SSMS UI を使用することです。
+もう 1 つの検索オプションは、前述のスクリーンショットで示した **[新しいセッション]**  >  **[イベント]**  >  **[イベント ライブラリ]** ダイアログに SSMS UI を使用することです。
 
 
 
 #### <a name="sql-trace-event-classes-with-extended-events"></a>SQL トレース イベント クラスと拡張イベント
 
 
-拡張イベントと SQL トレース イベント クラスおよび列の使用に関する説明は、「 [SQL トレースのイベント クラスと等価な拡張イベントを確認する](../../relational-databases/extended-events/view-the-extended-events-equivalents-to-sql-trace-event-classes.md)」をご覧ください。
+SQL トレースのイベント クラスと列で拡張されたイベントの使用に関する説明は次の場所で確認できます。[SQL トレースのイベント クラスと等価な拡張イベントを確認する](../../relational-databases/extended-events/view-the-extended-events-equivalents-to-sql-trace-event-classes.md)
 
 
 
@@ -514,7 +513,7 @@ ETW イベントは、Azure SQL Database の拡張イベントではご利用い
 
 SQL Server には、作成済みの拡張イベントがいくつか付属します。 いずれも SQL システムを起動すると開始されるように設定されています。 これらのイベント セッションは、システム エラーが発生した場合に役立つデータを収集します。 すべての拡張イベントと同様に、これらのセッションはほんの少しのリソースしか消費しないため、実行したままにしておくことをお勧めします。
 
-これらのイベント セッションは、 **[管理]** [拡張イベント] **[セッション]** > **の下の SSMS** > **オブジェクト エクスプローラー**で確認できます。  2016年 6 月時点での、これらのインストール済みのイベント セッションの一覧は次のとおりです。
+これらのイベント セッションは、 **[管理]** [拡張イベント] **[セッション]**  > **の下の SSMS** > **オブジェクト エクスプローラー**で確認できます。  2016年 6 月時点での、これらのインストール済みのイベント セッションの一覧は次のとおりです。
 
 - AlwaysOn_health
 - system_health
@@ -525,7 +524,7 @@ SQL Server には、作成済みの拡張イベントがいくつか付属しま
 ### <a name="powershell-provider-for-extended-events"></a>拡張イベントの PowerShell プロバイダー
 
 
-SQL Server PowerShell を使用して、SQL Server 拡張イベントを管理することができます。 詳細は、「 [拡張イベントへの PowerShell プロバイダーの使用](../../relational-databases/extended-events/use-the-powershell-provider-for-extended-events.md)」をご覧ください。
+SQL Server PowerShell を使用して、SQL Server 拡張イベントを管理することができます。 詳細については、以下を参照してください。[拡張イベントへの PowerShell プロバイダーの使用](../../relational-databases/extended-events/use-the-powershell-provider-for-extended-events.md)
 
 
 ### <a name="system-views-for-extended-events"></a>拡張イベントのシステム ビュー
@@ -552,14 +551,15 @@ SQL Server PowerShell を使用して、SQL Server 拡張イベントを管理�
     - CREATE EVENT SESSION 句
     - SSMS UI コントロール
 
+## <a name="code-examples-can-differ-for-azure-sql-database"></a>Azure SQL Database では、コード例が異なる可能性があります。
 
-<a name="appendix1"></a>
-## <a name="appendix-selects-to-ascertain-permission-owner-in-advance"></a>付録: アクセス許可の所有者を事前に確認するための SELECT
+[!INCLUDE[sql-on-premises-vs-azure-similar-sys-views-include.](../../includes/paragraph-content/sql-on-premises-vs-azure-similar-sys-views-include.md)]
 
+## <a name="appendix1"></a>付録: アクセス許可の所有者を事前に確認するための SELECT
 
 この記事で言及されているアクセス許可は次のとおりです。
 
-- サーバー アクセス許可
+- ALTER ANY EVENT SESSION
 - VIEW SERVER STATE
 - CONTROL SERVER
 
@@ -622,7 +622,7 @@ SELECT
 ```
 
 
-#### <a name="haspermsbyname-function"></a>HAS_PERMS_BY_NAME 関数
+#### <a name="has_perms_by_name-function"></a>HAS_PERMS_BY_NAME 関数
 
 
 次の SELECT はユーザーのアクセス許可を報告します。 これは組み込み関数 [HAS_PERMS_BY_NAME](../../t-sql/functions/has-perms-by-name-transact-sql.md)に依存します。

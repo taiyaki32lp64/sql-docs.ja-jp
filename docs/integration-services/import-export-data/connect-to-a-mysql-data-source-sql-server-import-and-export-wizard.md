@@ -3,22 +3,24 @@ title: MySQL データ ソースに接続する (SQL Server インポートお�
 ms.custom: ''
 ms.date: 06/20/2017
 ms.prod: sql
-ms.prod_service: integration-services
 ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 3d7c5a38-18d3-4cc9-a241-04422cb250d3
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: 52c45cbc39a4f6acb7590698c31bdca2d7f175d5
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 9fc1128ff50a6b5f6fbb459dca23f518cbcd4f26
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47692110"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71285685"
 ---
 # <a name="connect-to-a-mysql-data-source-sql-server-import-and-export-wizard"></a>MySQL データ ソースに接続する (SQL Server インポートおよびエクスポート ウィザード)
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
 このトピックでは、SQL Server インポートおよびエクスポート ウィザードの **[データ ソースの選択]** ページまたは **[変換先の選択]** ページから **MySQL** データ ソースに接続する方法を説明します。 MySQL への接続に使用できるいくつかのデータ プロバイダーがあります。
 
 > [!IMPORTANT]
@@ -82,7 +84,7 @@ MySQL データベースの名前。
     ```
 
 ### <a name="enter-the-connection-string"></a>接続文字列を入力する
-**[データ ソースの選択]** ページまたは **[変換先の選択]** ページで、**[ConnectionString]** フィールドに接続文字列を入力するか、**[Dsn]** フィールドに DSN 名を入力します。 接続文字列を入力すると、ウィザードによって文字列が解析され、個々のプロパティとその値が一覧に表示されます。
+**[データ ソースの選択]** ページまたは **[変換先の選択]** ページで、 **[ConnectionString]** フィールドに接続文字列を入力するか、 **[Dsn]** フィールドに DSN 名を入力します。 接続文字列を入力すると、ウィザードによって文字列が解析され、個々のプロパティとその値が一覧に表示されます。
 
 次の例では、この接続文字列を使用しています。
 

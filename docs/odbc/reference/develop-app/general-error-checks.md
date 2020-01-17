@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 0c9a3425-0a7c-48de-9ff6-73601c26283e
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 5645e00d9e3f93b2479c88ba37ec4ccf6fc5d295
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: f6b7c37febee411571b8ac8316d3800912e35758
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47728940"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68069921"
 ---
 # <a name="general-error-checks"></a>一般的なエラー チェック
-ドライバー マネージャーは、1 つの一般的なエラーを確認します。 次のエラーが発生したときに常に SQL_ERROR を返します、: ドライバーによって、関数をサポートする必要があります。
+ドライバー マネージャーは、1 つの一般的なエラーを確認します。 次のエラーが発生したときに常に SQL_ERROR を返します。関数は、ドライバーでサポートする必要があります。

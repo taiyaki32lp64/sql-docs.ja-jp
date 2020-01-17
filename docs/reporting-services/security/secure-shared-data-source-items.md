@@ -2,7 +2,7 @@
 title: 共有データ ソース アイテムをセキュリティで保護する | Microsoft Docs
 ms.date: 03/01/2017
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: security
 ms.topic: conceptual
 helpviewer_keywords:
@@ -10,14 +10,14 @@ helpviewer_keywords:
 - data sources [Reporting Services], shared
 - security [Reporting Services], data sources
 ms.assetid: 7299e498-0a1a-4821-a22a-5199bb773ce0
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 09ec5980236f5bd7f48431ff58a7ff9ae3ddb66c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: daf21bcf8bff9886db5b640531380c628abfb198
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47603500"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65570580"
 ---
 # <a name="secure-shared-data-source-items"></a>共有データ ソース アイテムをセキュリティで保護する
   共有データ ソース アイテムにセキュリティを設定して、そのアイテムへのアクセスを有効または無効にすることができます。  
@@ -42,6 +42,6 @@ ms.locfileid: "47603500"
  [フォルダーをセキュリティで保護する](../../reporting-services/security/secure-folders.md)   
  [レポートとリソースの保護](../../reporting-services/security/secure-reports-and-resources.md)   
  [ネイティブ モードのレポート サーバーに対する権限の許可](../../reporting-services/security/granting-permissions-on-a-native-mode-report-server.md)   
- [Reporting Services データ ソースに資格情報を保存する](../../reporting-services/report-data/store-credentials-in-a-reporting-services-data-source.md)  
+ [Store Credentials in a Reporting Services Data Source](../../reporting-services/report-data/store-credentials-in-a-reporting-services-data-source.md)  
   
   

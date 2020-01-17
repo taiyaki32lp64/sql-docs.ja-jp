@@ -1,5 +1,5 @@
 ---
-title: 属性を削除する (マスター データ サービス) | Microsoft Docs
+title: 属性を削除する
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -11,28 +11,27 @@ helpviewer_keywords:
 - attributes [Master Data Services], deleting
 - deleting attributes [Master Data Services]
 ms.assetid: ec3e66f7-0e35-43d7-a80d-64899948ebfe
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 6967178e237f62695bc4843087e8ff8fe676fba7
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
-ms.translationtype: HT
+ms.openlocfilehash: 2d48e8c51f8151f8626e971f928a245ba6776c3e
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52819122"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73728334"
 ---
 # <a name="delete-an-attribute-master-data-services"></a>属性を削除する (マスター データ サービス)
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-  [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]で、属性とそれに関連付けられたすべての属性値を完全に削除するには、属性を削除します。  
+  [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] で、属性とそれに関連付けられたすべての属性値を完全に削除するには、属性を削除します。  
   
 ## <a name="prerequisites"></a>Prerequisites  
  この手順を実行するには  
   
 -   **[システム管理]** 機能領域にアクセスする権限が必要です。  
   
--   モデル管理者である必要があります。 詳細については、「 [管理者 (マスター データ サービス)](../master-data-services/administrators-master-data-services.md)にアクセスすることなくグループに対してユーザーの追加または削除を行うことができます。  
+-   モデル管理者である必要があります。 詳細については、「[Administrators &#40;Master Data Services&#41; (管理者 &#40;マスター データ サービス&#41;)](../master-data-services/administrators-master-data-services.md)」を参照してください。  
   
 ### <a name="to-delete-an-attribute"></a>属性を削除するには  
   

@@ -16,15 +16,14 @@ helpviewer_keywords:
 - hidden characters
 - OPENROWSET function, BCP guidelines
 ms.assetid: a82ef43c-d006-4c71-bfca-f001a3ba1ba0
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: e3196670f21070297b27046ca70878fb94c39d12
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: MashaMSFT
+ms.author: mathoma
+ms.openlocfilehash: b65577b7f6b69bd4fb27392a7d71a2d68f17d7c5
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47622550"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68063164"
 ---
 # <a name="prepare-to-bulk-import-data-sql-server"></a>データの一括インポートの準備 (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 8406a3a4-e8f0-46f4-a262-084bc119600b
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: a01283d45e6c9a4cb41784d31f8c9d36c39ea08b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 000cad4ae35f4cc5d2cd77de94ff94ef94667877
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47638950"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68022964"
 ---
 # <a name="mssqlserver2592"></a>MSSQLSERVER_2592
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -31,7 +30,7 @@ ms.locfileid: "47638950"
 |イベント ソース|MSSQLSERVER|  
 |コンポーネント|SQLEngine|  
 |シンボル名|DBCC_REPAIR_INDEX_REBUILT|  
-|メッセージ テキスト|修復 : INDEX_TYPE インデックスは、データベース 'DATABASE' のオブジェクト OBJECT で正しく再構築されました。|  
+|メッセージ テキスト|修復:INDEX_TYPE インデックスは、データベース 'DATABASE' のオブジェクト OBJECT で正しく再構築されました。|  
   
 ## <a name="explanation"></a>説明  
 REPAIR によってインデックスが再構築されたことを示しています。  

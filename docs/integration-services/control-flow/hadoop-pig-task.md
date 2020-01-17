@@ -10,24 +10,27 @@ ms.topic: conceptual
 f1_keywords:
 - sql13.ssis.designer.hadooppigtask.f1
 ms.assetid: 90646316-9822-48aa-9900-295a33750780
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: ea94918ce0c09033ed716d12026151c410d7d1f9
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: a624228a0df45ee0ba2954d27e38be511db629fe
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47805410"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71294092"
 ---
 # <a name="hadoop-pig-task"></a>Hadoop Pig Task
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   Hadoop Pig Task は、Hadoop クラスターで Pig スクリプトを実行するために使用します。  
   
  Hadoop Pig Task を追加するには、デザイナーにドラッグ アンド ドロップします。 その後タスクをダブルクリックするか、右クリックして **[編集]** をクリックし、 **[Hadoop Pig タスク エディター]** ダイアログ ボックスを表示します。  
   
  ![[Hadoop Pig タスク エディター]](../../integration-services/control-flow/media/hadoop-pig-task.png "[Hadoop Pig タスク エディター]")  
   
-## <a name="options"></a>[変数]  
+## <a name="options"></a>オプション  
  **[Hadoop Pig Task Editor]** (Hadoop Pig Task エディター) ダイアログ ボックスで、次のオプションを構成します。  
   
 |フィールド|[説明]|  

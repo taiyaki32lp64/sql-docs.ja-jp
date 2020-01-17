@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: c9ad82b7-8dba-45b0-bdb9-f4668b37c0d6
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: e9f0c59324542793301965c7d3555cf35ad40f5d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e9b10037883ef9cfa4051195270e6477c5cc04ee
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47653090"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68091622"
 ---
 # <a name="updating-rows-by-bookmark-with-sqlbulkoperations"></a>SQLBulkOperations を使ったブックマークによる行の更新
 ブックマークで行を更新するときに**SQLBulkOperations**データ ソースのテーブルの 1 つまたは複数の行を更新します。 行は、バインドされたブックマーク列内のブックマークによって識別されます。 バインドされた各列 (列の長さ/インジケーター バッファーの値が SQL_COLUMN_IGNORE) を除くアプリケーションのバッファーでデータを使用して、行が更新されます。 バインドされていない列は更新されません。  

@@ -1,5 +1,5 @@
 ---
-title: 再生オプション (SQL Server Profiler) |Microsoft Docs
+title: 再生オプション (SQL Server プロファイラー) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -13,15 +13,14 @@ helpviewer_keywords:
 - health monitor [SQL Server]
 - Replay Configuration dialog box
 ms.assetid: 58761a25-a84f-4a90-9c61-97700bc5ad9c
-author: stevestein
-ms.author: sstein
-manager: craigg
-ms.openlocfilehash: ded43c2d61999b0bf4fe4cfe7501f4907492f399
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 4a79c932739fa8d9d5d9125cdd93cc3564d16f55
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47808040"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68031443"
 ---
 # <a name="replay-options-sql-server-profiler"></a>再生オプション (SQL Server Profiler)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -77,7 +76,7 @@ ms.locfileid: "47808040"
  ブロックされるプロセス モニターが、ブロックされているプロセスまたはブロックしているプロセスを検索する頻度を設定します。  
   
 ## <a name="about-the-health-monitor"></a>ヘルス モニターについて  
- ヘルス モニターは、トレースの再生に伴うシミュレートされたプロセスを監視するアプリケーション スレッドです。これらのプロセスのうち、再生内でブロックされているプロセスを終了します。 **[再生の構成]** ダイアログ ボックスの **[再生オプションの詳細設定]** タブで、ブロックされているプロセスを終了するまでにヘルス モニターが待機する時間を秒単位で指定できます (**[ヘルス モニターの待機間隔]**)。 この間隔が 0 に設定されていると、ヘルス モニターは、再生されているトレース中のブロックしているシミュレートされたプロセスを終了しません。  
+ ヘルス モニターは、トレースの再生に伴うシミュレートされたプロセスを監視するアプリケーション スレッドです。これらのプロセスのうち、再生内でブロックされているプロセスを終了します。 **[再生の構成]** ダイアログ ボックスの **[再生オプションの詳細設定]** タブで、ブロックされているプロセスを終了するまでにヘルス モニターが待機する時間を秒単位で指定できます ( **[ヘルス モニターの待機間隔]** )。 この間隔が 0 に設定されていると、ヘルス モニターは、再生されているトレース中のブロックしているシミュレートされたプロセスを終了しません。  
   
 ## <a name="see-also"></a>参照  
  [トレースの再生](../../tools/sql-server-profiler/replay-traces.md)   

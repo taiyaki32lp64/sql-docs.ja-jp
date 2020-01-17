@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - output neurons [Analysis Services]
@@ -21,12 +20,12 @@ ms.assetid: ea21ff9d-857f-475c-bd3d-6d1405bad069
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 0d5b823481d47f6e986815673aa3ab65d44f07c9
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 7e19dfcdc284f048cffbb3a95e076b6e3a57294d
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48218702"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66083585"
 ---
 # <a name="mining-model-content-for-neural-network-models-analysis-services---data-mining"></a>Mining Model Content for Neural Network Models (Analysis Services - Data Mining)
   このトピックでは、Microsoft ニューラル ネットワーク アルゴリズムを使用するモデルに固有のマイニング モデル コンテンツについて説明します。 すべてのモデルの種類に共通の統計および構造を解釈する方法の説明、およびマイニング モデル コンテンツに関連する用語の一般的な定義については、「[マイニング モデル コンテンツ &#40;Analysis Services - データ マイニング&#41;](mining-model-content-analysis-services-data-mining.md)」を参照してください。  
@@ -73,7 +72,7 @@ ms.locfileid: "48218702"
 |マージナル統計|空白|  
 |入力層|空白|  
 |入力ノード|入力属性名|  
-|非表示層|空白|  
+|hidden layer|空白|  
 |隠しノード|空白|  
 |出力層|空白|  
 |出力ノード|出力属性名|  
@@ -132,7 +131,7 @@ ms.locfileid: "48218702"
 |マージナル統計|空白|  
 |入力層|空白|  
 |入力ノード|入力属性名|  
-|非表示層|空白|  
+|hidden layer|空白|  
 |隠しノード|隠しノードの一覧における隠しノードのシーケンスを示す整数。|  
 |出力層|空白|  
 |出力ノード|出力属性が連続属性の場合は、出力属性名が含まれます。<br /><br /> 出力属性が不連続属性または分離された属性の場合は、出力属性名と値が含まれます。|  
@@ -217,11 +216,11 @@ ms.locfileid: "48218702"
 ### <a name="input-nodes"></a>入力ノード  
  入力層には、モデルで使用された属性の値ごとに 1 つのノードが含まれます。  
   
- **不連続属性:** 入力ノードには、属性名とその値だけが ATTRIBUTE_NAME 列と ATTRIBUTE_VALUE 列に格納されます。 たとえば、列が [勤務シフト] の場合、モデルで使用されたその列の値 (AM や PM など) ごとに個別のノードが作成されます。 各ノードの NODE_DISTRIBUTION テーブルには、属性の現在の値だけが表示されます。  
+ **不連続属性:** 入力ノードは、ATTRIBUTE_NAME 列と ATTRIBUTE_VALUE 列で、属性とその値の名前のみを格納します。 たとえば、列が [勤務シフト] の場合、モデルで使用されたその列の値 (AM や PM など) ごとに個別のノードが作成されます。 各ノードの NODE_DISTRIBUTION テーブルには、属性の現在の値だけが表示されます。  
   
- **分離された数値属性 :** 入力ノードには、属性名と値 (値の範囲または特定の値) が格納されます。 すべての値は式で表されます。たとえば [問題あたりの時間] の場合の値は、"77.4 - 87.4" や "< 64.0" などと表現されます。 各ノードの NODE_DISTRIBUTION テーブルには、属性の現在の値だけが表示されます。  
+ **分離された数値属性:** 入力ノードには、属性と、値は、範囲、または特定の値の名前が格納されます。 すべての値は式で表されます。たとえば [問題あたりの時間] の場合の値は、"77.4 - 87.4" や "< 64.0" などと表現されます。 各ノードの NODE_DISTRIBUTION テーブルには、属性の現在の値だけが表示されます。  
   
- **連続属性 :** 入力ノードには、属性の平均値が格納されます。 各ノードの NODE_DISTRIBUTION テーブルには、属性の現在の値だけが表示されます。  
+ **連続属性:** 入力ノードには、属性の平均値が格納されます。 各ノードの NODE_DISTRIBUTION テーブルには、属性の現在の値だけが表示されます。  
   
 ### <a name="hidden-layer-nodes"></a>非表示層ノード  
  非表示層には可変数のノードが含まれます。 各ノードの NODE_DISTRIBUTION テーブルには、非表示層から入力層のノードへのマッピングが含まれます。 ATTRIBUTE_NAME 列には、入力層のノードに対応するノード ID が含まれます。 ATTRIBUTE_VALUE 列には、入力ノードと非表示層ノードの組み合わせに関連付けられた重みが含まれます。 テーブルの最終行には、非表示層内のその隠しノードの重みを表す係数が含まれます。  
@@ -231,15 +230,15 @@ ms.locfileid: "48218702"
   
  属性の型に応じて、NODE_DISTRIBUTION テーブルには次の追加情報が含まれます。  
   
- **不連続属性:** NODE_DISTRIBUTION テーブルの最後の 2 行には、ノード全体の係数と、属性の現在の値が含まれます。  
+ **不連続属性:** NODE_DISTRIBUTION テーブルの最後の 2 行には、ノード全体と、属性の現在の値としての係数が含まれます。  
   
- **分離された数値属性 :** 属性の値が値の範囲である点を除くと、不連続属性と同じです。  
+ **分離された数値属性:** 不連続属性の場合と同じです、属性の値が値の範囲である点が異なります。  
   
- **連続属性:** NODE_DISTRIBUTION テーブルの最後の 2 行には、属性の平均、ノード全体の係数、および係数の分散が含まれます。  
+ **連続属性:** NODE_DISTRIBUTION テーブルの最後の 2 行には、属性、ノード全体の係数の平均および係数の分散が含まれます。  
   
-## <a name="see-also"></a>参照  
- [Microsoft ニューラル ネットワーク アルゴリズム](microsoft-neural-network-algorithm.md)   
- [Microsoft ニューラル ネットワーク アルゴリズム テクニカル リファレンス](microsoft-neural-network-algorithm-technical-reference.md)   
- [ニューラル ネットワーク モデルのクエリ例](neural-network-model-query-examples.md)  
+## <a name="see-also"></a>関連項目  
+ [Microsoft Neural Network Algorithm](microsoft-neural-network-algorithm.md)   
+ [Microsoft Neural Network Algorithm Technical Reference](microsoft-neural-network-algorithm-technical-reference.md)   
+ [Neural Network Model Query Examples](neural-network-model-query-examples.md)  
   
   

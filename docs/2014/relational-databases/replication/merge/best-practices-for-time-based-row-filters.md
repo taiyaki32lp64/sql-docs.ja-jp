@@ -13,11 +13,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 5df70271c281673c71fb378564f454f0822998ab
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52786144"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68210712"
 ---
 # <a name="best-practices-for-time-based-row-filters"></a>時間ベースの行フィルターの推奨事項
   アプリケーションのユーザーは、テーブルに対して時間ベースのデータ サブセットを要求することがよくあります。 たとえば、販売員が先週の注文データを必要としたり、イベント プランナーが次週のイベントのデータを必要とする場合などです。 多くの場合、アプリケーションでは、`GETDATE()` 関数を含むクエリを使用して、この処理を実行します。 次の行フィルター ステートメントについて考えてみましょう。  
@@ -90,7 +90,7 @@ GO
   
  次週のイベントは、レプリケート準備済みとしてフラグが付けられています。 イベント コーディネーター 112 が使用するサブスクリプションでマージ エージェントが次に実行されると、1 行目以外の行がサブスクライバーにダウンロードされ、1 行目がサブスクライバーから削除されます。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [GETDATE (Transact-SQL)](/sql/t-sql/functions/getdate-transact-sql)   
  [ジョブの実装](../../../ssms/agent/implement-jobs.md)   
  [パラメーター化された行フィルター](parameterized-filters-parameterized-row-filters.md)  

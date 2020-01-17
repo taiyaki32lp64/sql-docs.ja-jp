@@ -4,23 +4,22 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.scripttask.general.f1
 helpviewer_keywords:
 - Script Task Editor
 ms.assetid: 0d153dce-6661-4c99-b1db-2bd3b5038b4f
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: dc55de3d17111ed8085a90c57e2876b142be5701
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 5e889c4da9e20a547f5a512f4aab1ee823bde5f5
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48204002"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66056180"
 ---
 # <a name="script-task-editor-general-page"></a>[スクリプト タスク エディター] \([全般] ページ)
   **[スクリプト タスク エディター]** ダイアログ ボックスの **[全般]** ページを使用すると、スクリプト タスクの名前と説明を入力できます。  
@@ -37,9 +36,9 @@ ms.locfileid: "48204002"
  **[説明]**  
  スクリプト タスクの説明を入力します。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [Integration Services のエラーおよびメッセージのリファレンス](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [スクリプト タスク エディター &#40;[スクリプト] ページ&#41;](../../2014/integration-services/script-task-editor-script-page.md)   
+ [[スクリプト タスク エディター] ([スクリプト] ページ)](../../2014/integration-services/script-task-editor-script-page.md)   
  [[式] ページ](expressions/expressions-page.md)   
  [スクリプト タスクの例](extending-packages-scripting-task-examples/script-task-examples.md)  
   

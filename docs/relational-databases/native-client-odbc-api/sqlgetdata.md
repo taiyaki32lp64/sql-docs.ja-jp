@@ -13,37 +13,35 @@ helpviewer_keywords:
 ms.assetid: 204848be-8787-45b4-816f-a60ac9d56fcf
 author: MightyPen
 ms.author: genemi
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 1ac7c2cc1600b3a9c6ce2e6cef57c4ea6551bd78
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 27b8fe304f26c60697e5d6fb147be20e30c86094
+ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51668870"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73786539"
 ---
 # <a name="sqlgetdata"></a>SQLGetData
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-[!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
 
-  **SQLGetData**列の値をバインドしないで結果セットのデータを取得するために使用します。 **SQLGetData**列から大量のデータを取得する同じ列に連続して呼び出すことができます、**テキスト**、 **ntext**、または**イメージ**データ型。  
+  **SQLGetData**は、列の値をバインドせずに結果セットのデータを取得するために使用します。 **SQLGetData**を同じ列に対して連続して呼び出すと、 **text**、 **ntext**、または**image**データ型の列から大量のデータを取得できます。  
   
- アプリケーションでは、変数をバインドして結果セット データをフェッチする必要はありません。 任意の列のデータを取得できる、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC ドライバーを使用して**SQLGetData**します。  
+ アプリケーションでは、変数をバインドして結果セット データをフェッチする必要はありません。 **SQLGetData**を使用して、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] NATIVE Client ODBC ドライバーから任意の列のデータを取得できます。  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC ドライバーでは、使用はサポートしません**SQLGetData**ランダムな列の順序でデータを取得します。 バインドされていないすべての列が処理される**SQLGetData**結果セットにバインドされた列数よりも高い列の序数を指定する必要があります。 アプリケーションでは、バインドされていない列の値を、列序数の小さい列から大きい列へと処理する必要があります。 前に処理した列よりも列序数が小さい列からデータを取得しようとすると、エラーが発生します。 アプリケーションで、結果セット行を報告するためにサーバー カーソルを使用している場合は、現在の行を再フェッチしてから列の値をフェッチできます。 既定の読み取り専用、順方向専用カーソルで、ステートメントを実行すると場合、は、バックアップするステートメントを再実行する必要があります**SQLGetData**します。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC ドライバーでは、ランダム列の順序でデータを取得するための**SQLGetData**の使用はサポートされていません。 **SQLGetData**で処理されるすべてのバインドされていない列には、結果セット内のバインドされた列よりも大きな列序数が必要です。 アプリケーションでは、バインドされていない列の値を、列序数の小さい列から大きい列へと処理する必要があります。 前に処理した列よりも列序数が小さい列からデータを取得しようとすると、エラーが発生します。 アプリケーションで、結果セット行を報告するためにサーバー カーソルを使用している場合は、現在の行を再フェッチしてから列の値をフェッチできます。 ステートメントが既定の読み取り専用、順方向専用カーソルで実行される場合、ステートメントを再実行して**SQLGetData**をバックアップする必要があります。  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC ドライバーの長さを正確に報告する**テキスト**、 **ntext**、および**イメージ**データを使用して取得**SQLGetData**. アプリケーションの適切な使い方をすることができます、 *StrLen_or_IndPtr*長い形式のデータを迅速に取得するパラメーターを返します。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC ドライバーでは、 **SQLGetData**を使用して取得した**text**型、 **ntext**型、および**image**型のデータの長さが正確に報告されます。 アプリケーションでは、 *StrLen_or_IndPtr*パラメーターの戻り値を使用して、長いデータを迅速に取得することができます。  
   
 > [!NOTE]  
->  大きな値型、 *StrLen_or_IndPtr*ケース データの切り捨ての SQL_NO_TOTAL が返されます。  
+>  大きな値型の場合、 *StrLen_or_IndPtr*はデータの切り捨て時に SQL_NO_TOTAL を返します。  
   
 ## <a name="sqlgetdata-support-for-enhanced-date-and-time-features"></a>SQLGetData による機能強化された日付と時刻のサポート  
- 説明されているように、日付/時刻型の結果列の値が変換されます[SQL から C への変換](../../relational-databases/native-client-odbc-date-time/datetime-data-type-conversions-from-sql-to-c.md)します。  
+ Date 型または time 型の結果列の値は、「 [SQL から C への変換](../../relational-databases/native-client-odbc-date-time/datetime-data-type-conversions-from-sql-to-c.md)」で説明されているように変換されます。  
   
- 詳細については、次を参照してください。[日付と時刻の強化&#40;ODBC&#41;](../../relational-databases/native-client-odbc-date-time/date-and-time-improvements-odbc.md)します。  
+ 詳細については、「[日付と&#40;時刻&#41;の機能強化 ODBC](../../relational-databases/native-client-odbc-date-time/date-and-time-improvements-odbc.md)」を参照してください。  
   
 ## <a name="sqlgetdata-support-for-large-clr-udts"></a>SQLGetData による大きな CLR UDT のサポート  
- **SQLGetData**大きなの CLR ユーザー定義型 (Udt) をサポートしています。 詳細については、次を参照してください。 [Large CLR User-Defined 型&#40;ODBC&#41;](../../relational-databases/native-client/odbc/large-clr-user-defined-types-odbc.md)します。  
+ **SQLGetData**は、大きな CLR ユーザー定義型 (udt) をサポートしています。 詳細については、「 [LARGE CLR ユーザー定義&#40;型&#41;ODBC](../../relational-databases/native-client/odbc/large-clr-user-defined-types-odbc.md)」を参照してください。  
   
 ## <a name="example"></a>例  
   

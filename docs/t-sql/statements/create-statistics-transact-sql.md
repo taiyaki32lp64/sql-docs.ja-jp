@@ -25,19 +25,18 @@ helpviewer_keywords:
 ms.assetid: b23e2f6b-076c-4e6d-9281-764bdb616ad2
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: edaaf496dc8f58c2db8b3e01938b43d2437b39f8
-ms.sourcegitcommit: dc3543e81e32451568133e9b1b560f7ee76d7fb5
+ms.openlocfilehash: 7efc30e37b1242c66df856f79944de687650b99d
+ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/31/2019
-ms.locfileid: "55428629"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "73982566"
 ---
 # <a name="create-statistics-transact-sql"></a>CREATE STATISTICS (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-  テーブル、インデックス付きビュー、または、外部テーブルの 1 つまたは複数の列には、クエリの最適化に関する統計を作成します。 ほとんどのクエリでは、高品質のクエリ プランに必要な統計がクエリ オプティマイザーによって既に生成されていますが、クエリのパフォーマンスを向上させるために CREATE STATISTICS で追加の統計を作成したりクエリのデザインを変更したりする必要がある場合もあります。  
+  テーブル、インデックス付きビュー、または、外部テーブルの 1 つまたは複数の列に関するクエリ最適化の統計を作成します。 ほとんどのクエリでは、高品質のクエリ プランに必要な統計がクエリ オプティマイザーによって既に生成されていますが、クエリのパフォーマンスを向上させるために CREATE STATISTICS で追加の統計を作成したりクエリのデザインを変更したりする必要がある場合もあります。  
   
  詳しくは、「[統計](../../relational-databases/statistics/statistics.md)」をご覧ください。  
   
@@ -93,7 +92,7 @@ ON { table_or_indexed_view_name } ( column [ ,...n ] )
 -- Syntax for Azure SQL Data Warehouse and Parallel Data Warehouse  
   
 CREATE STATISTICS statistics_name   
-    ON [ database_name . [schema_name ] . | schema_name. ] table_name   
+    ON { database_name.schema_name.table_name | schema_name.table_name | table_name }
     ( column_name  [ ,...n ] )   
     [ WHERE <filter_predicate> ]  
     [ WITH {  
@@ -124,10 +123,10 @@ CREATE STATISTICS statistics_name
  作成する統計の名前です。  
   
  *table_or_indexed_view_name*  
- テーブル、インデックス付きビュー、または外部テーブルには、統計を作成するための名前です。 を別のデータベースで統計を作成するには、修飾テーブル名を指定します。  
+ 統計を作成するテーブル、インデックス付きビュー、または外部テーブルの名前です。 別のデータベースの統計を作成するには、修飾テーブル名を指定します。  
   
  *column [ ,...n]*  
- 統計情報に含まれる 1 つまたは複数の列。 列は、左から右への優先順位にする必要があります。 ヒストグラムを作成する最初の列のみが使用されます。 すべての列では、密度と呼ばれる列間の相関関係の統計が使用されます。  
+ 統計に含める 1 つまたは複数の列。 列は、左から右への優先順位にする必要があります。 ヒストグラムの作成には最初の列のみが使用されます。 すべての列は、密度と呼ばれる列間の相関統計に使用されます。  
   
  インデックス キー列として指定できる任意の列を指定できますが、次の例外があります。  
   
@@ -150,25 +149,28 @@ CREATE STATISTICS statistics_name
  フィルター述語について詳しくは、「[フィルター選択されたインデックスの作成](../../relational-databases/indexes/create-filtered-indexes.md)」をご覧ください。  
   
  FULLSCAN  
- すべての行をスキャンして統計を計算します。 FULLSCAN と SAMPLE 100 PERCENT は同じ結果になります。 FULLSCAN では SAMPLE オプションは使用できません。  
+ すべての行をスキャンして統計を計算します。 FULLSCAN と SAMPLE 100 PERCENT は同じ結果になります。 SAMPLE オプションには FULLSCAN を使用できません。  
   
- SQL Server がサンプリングを使用して、統計を作成して、高品質のクエリ プランを作成するために必要なサンプル サイズを決定します。 省略すると、  
+ 省略すると、SQL Server ではサンプリングを使用して統計が作成され、高品質のクエリ プランを作成するために必要なサンプル サイズが決定されます。  
   
  SAMPLE *number* { PERCENT | ROWS }  
  テーブルやインデックス付きビューに含まれている行について、クエリ オプティマイザーで統計を作成する際に使用するおおよその割合または数を指定します。 PERCENT の場合、*number* には 0 ～ 100 を指定します。ROWS の場合、*number* には 0 ～合計行数を指定します。 クエリ オプティマイザーによってサンプリングされる行の実際の割合や行数が、指定した割合や行数と一致しない場合もあります。 たとえば、データ ページではすべての行がスキャンされます。  
   
- SAMPLE は、既定のサンプリングに基づくクエリ プランが最適ではない特殊な場合に使用できます。 ほとんどの場合は、高品質のクエリ プランを作成するために必要なように、クエリ オプティマイザーは、既にサンプリングを使用して、既定では、統計的に有意なサンプル サイズを決定するためにサンプルを指定する必要はありません。  
+ SAMPLE は、既定のサンプリングに基づくクエリ プランが最適ではない特殊な場合に使用できます。 クエリ オプティマイザーによって既にサンプリングが使用され、既定で統計的に有意なサンプル サイズが決定されるため、ほとんどの場合は SAMPLE を指定する必要がありませんが、高品質のクエリ プランを作成する場合は必要です。  
   
- SAMPLE では FULLSCAN オプションは使用できません。 SAMPLE も FULLSCAN も指定しない場合、既定ではクエリ オプティマイザーはサンプリングしたデータを使用してサンプル サイズを計算します。  
+ FULLSCAN オプションには SAMPLE を使用できません。 SAMPLE も FULLSCAN も指定しない場合、既定でサンプリングしたデータが使用され、サンプル サイズが計算されます。  
   
  0 PERCENT や 0 ROWS を指定することはお勧めしません。 0 PERCENT または 0 ROWS を指定した場合、統計オブジェクトは作成されますが、統計データは含まれません。  
  
  PERSIST_SAMPLE_PERCENT = { ON | OFF }  
  **ON** の場合、統計では、サンプリング率が明示的に指定されていない後続の更新の作成サンプリング率が保持されます。 **OFF** の場合、統計サンプリング率は、サンプリング率が明示的に指定されていない後続の更新で既定のサンプリングにリセットされます。 既定値は **OFF** です。 
  
- **適用対象**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1 CU4 以降) から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] ([!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU1 以降)。    
+ > [!NOTE]
+ > テーブルが切り捨てられた場合、切り捨てられた HoBT に基づいて作成されたすべての統計は、既定のサンプリング率を使用するように戻されます。
+
+ **適用対象**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1 CU4 以降) 以降 ([!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU1 以降)。    
   
- STATS_STREAM **=**_stats_stream_  
+ STATS_STREAM **=** _stats_stream_  
  [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
   
  NORECOMPUTE  
@@ -194,7 +196,7 @@ CREATE STATISTICS statistics_name
 -   内部テーブルに対して作成された統計。  
 -   空間インデックスまたは XML インデックスを使用して作成された統計。  
   
-**適用対象**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]  
+**適用対象**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 以降。  
   
 MAXDOP = *max_degree_of_parallelism*  
 **適用対象**:[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 および [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3 以降)。  
@@ -218,14 +220,14 @@ MAXDOP = *max_degree_of_parallelism*
  これらのアクセス許可のいずれかが必要です。  
   
 -   ALTER TABLE  
--   ユーザーがテーブルの所有者  
+-   ユーザーがテーブルの所有者です  
 -   **db_ddladmin** 固定データベース ロールのメンバーシップ  
   
 ## <a name="general-remarks"></a>全般的な解説  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 統計を構築する前に、サンプリングされた行を並べ替えるには、tempdb を使用できます。  
   
 ### <a name="statistics-for-external-tables"></a>外部テーブルの統計  
- 外部テーブルの統計を作成するときに [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 、一時的なに外部テーブル インポート [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] テーブル、および統計を作成します。 サンプルの統計のサンプリングされた行のみがインポートされます。 場合は、大きな外部テーブルがある場合は、フル スキャンのオプションの代わりに、既定のサンプリングを使用する方が速くなります。  
+ 外部テーブルの統計を作成するときに [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 、一時的なに外部テーブル インポート [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] テーブル、および統計を作成します。 サンプルの統計の場合は、サンプリングされた行のみがインポートされます。 大きな外部テーブルがある場合は、フル スキャン オプションではなく既定のサンプリングを使用する方がはるかに高速です。  
   
 ### <a name="statistics-with-a-filtered-condition"></a>条件がフィルター選択された統計情報  
  適切に定義されたデータのサブセットから選択するクエリでは、フィルター選択された統計情報を使用するとクエリのパフォーマンスを向上させることができます。 フィルター選択された統計情報では、統計情報に含まれるデータのサブセットを選択するために WHERE 句でフィルター述語を使用します。  
@@ -237,7 +239,7 @@ MAXDOP = *max_degree_of_parallelism*
  [sys.sql_expression_dependencies](../../relational-databases/system-catalog-views/sys-sql-expression-dependencies-transact-sql.md) カタログ ビューでは、フィルター選択された統計情報の述語の各列を、参照による依存関係として追跡します。 フィルター選択された統計情報の述語で定義されているテーブル列の定義を削除、名前変更、または変更することはできないので、フィルター選択された統計情報を作成する前に、テーブル列で実行する操作を検討してください。  
   
 ## <a name="limitations-and-restrictions"></a>制限事項と制約事項  
-* テーブルの外部では、統計を更新することはできません。 外部テーブルの統計を更新するには、削除し、統計を再作成します。  
+* テーブルの外部では、統計を更新することはできません。 外部テーブルの統計を更新するには、統計を削除して再作成します。  
 * 統計オブジェクトごとに最大 64 列の一覧を取得できます。
 * MAXDOP オプションは、STATS_STREAM、ROWCOUNT、PAGECOUNT オプションと互換性がありません。
 * MAXDOP オプションは、Resource Governor ワークロード グループの MAX_DOP の設定によって制限されます (使用されている場合)。
@@ -275,10 +277,10 @@ WITH SAMPLE 50 PERCENT;
 GO  
 ```  
   
-### <a name="d-create-statistics-on-an-external-table"></a>D. 統計、外部テーブルを作成します。  
- 列の一覧を提供するだけでなく、外部テーブルの統計を作成するときにする必要がある唯一の意思決定は、行をサンプリングすることによって、またはすべての行をスキャンして統計を作成するかどうかです。  
+### <a name="d-create-statistics-on-an-external-table"></a>D. 外部テーブルの統計を作成する  
+ 列の一覧を指定する以外に、外部テーブルの統計を作成するときに必要な決定事項は、統計を作成する際に行をサンプリングするか、すべての行をスキャンするかという点のみです。  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] フル スキャンのオプション、統計を作成するを一時テーブルに外部テーブルからデータをインポートがかなり長くかかります。 大きなテーブルの場合は、既定のサンプリング方法通常で十分です。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] フル スキャンのオプション、統計を作成するを一時テーブルに外部テーブルからデータをインポートがかなり長くかかります。 大きなテーブルの場合、通常は既定のサンプリング方法で十分です。  
   
 ```sql  
 --Create statistics on an external table and use default sampling.  
@@ -288,19 +290,19 @@ CREATE STATISTICS CustomerStats1 ON DimCustomer (CustomerKey, EmailAddress);
 CREATE STATISTICS CustomerStats1 ON DimCustomer (CustomerKey, EmailAddress) WITH FULLSCAN;  
 ```  
 
-### <a name="e-using-create-statistics-with-fullscan-and-persistsamplepercent"></a>E. CREATE STATISTICS を FULLSCAN および PERSIST_SAMPLE_PERCENT と共に使用する  
+### <a name="e-using-create-statistics-with-fullscan-and-persist_sample_percent"></a>E. CREATE STATISTICS を FULLSCAN および PERSIST_SAMPLE_PERCENT と共に使用する  
  次の例では、`Person` テーブルの `BusinessEntityID` 列と `EmailPromotion` 列のすべての行について `NamePurchase` 統計を作成し、サンプリング率を明示的に指定しない後続のすべての更新について 100 パーセントのサンプリング率を設定します。  
   
 ```sql  
 CREATE STATISTICS NamePurchase  
     ON AdventureWorks2012.Person.Person (BusinessEntityID, EmailPromotion)  
     WITH FULLSCAN, PERSIST_SAMPLE_PERCENT = ON;  
-```  
+```  
   
-### Examples using AdventureWorksDW database. 
+### <a name="examples-using-adventureworksdw-database"></a>AdventureWorksDW データベースの使用例。 
   
-### F. Create statistics on two columns  
- The following example creates the `CustomerStats1` statistics, based on the `CustomerKey` and `EmailAddress` columns of the `DimCustomer` table. The statistics are created based on a statistically significant sampling of the rows in the `Customer` table.  
+### <a name="f-create-statistics-on-two-columns"></a>F. 2 つの列の統計を作成する  
+ 次の例では、`DimCustomer` テーブルの `CustomerKey` 列と `EmailAddress` 列に基づいて、`CustomerStats1` 統計を作成します。 統計は、`Customer` テーブルの行の統計的に優位なサンプリングに基づいて作成されます。  
   
 ```sql  
 CREATE STATISTICS CustomerStats1 ON DimCustomer (CustomerKey, EmailAddress);  

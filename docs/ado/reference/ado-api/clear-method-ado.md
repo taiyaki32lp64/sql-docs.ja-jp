@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 0a61ba7a-20b8-426a-91a0-9040e7c5a98a
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 0e69e7d2d2a66ccb9df0e03f6f77849c502f3bf2
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 96bd13f130966b1830d07e49633842e4154b52b4
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47753220"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67920065"
 ---
 # <a name="clear-method-ado"></a>Clear メソッド (ADO)
 すべてを削除、[エラー](../../../ado/reference/ado-api/error-object.md)オブジェクトから、[エラー](../../../ado/reference/ado-api/errors-collection-ado.md)コレクション。  
@@ -42,7 +41,7 @@ Errors.Clear
 ## <a name="applies-to"></a>適用対象  
  [Errors コレクション (ADO)](../../../ado/reference/ado-api/errors-collection-ado.md)  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [Execute、Requery、および Clear のメソッドの例 (VB)](../../../ado/reference/ado-api/execute-requery-and-clear-methods-example-vb.md)   
  [Execute、Requery、および Clear のメソッドの例 (VBScript)](../../../ado/reference/ado-api/execute-requery-and-clear-methods-example-vbscript.md)   
  [Execute、Requery、および Clear のメソッドの例 (vc++)](../../../ado/reference/ado-api/execute-requery-and-clear-methods-example-vc.md)   

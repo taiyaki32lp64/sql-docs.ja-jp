@@ -15,18 +15,17 @@ helpviewer_keywords:
 ms.assetid: cd0db27a-1080-40af-a491-3893e7bef9cd
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: aba6b8a983b831919987417cd8faef66b08b8e8b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: cc20ff68e90d504a6eed69d4845cacc0e3e687be
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47678560"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67966882"
 ---
 # <a name="columnattributesenum"></a>ColumnAttributesEnum
 特性を指定します、[列](../../../ado/reference/adox-api/column-object-adox.md)します。  
   
-|定数|値|説明|  
+|定数|Value|説明|  
 |--------------|-----------|-----------------|  
 |**adColFixed**|1|列は、固定長です。|  
 |**adColNullable**|2|列には、null 値を含めることができます。|  

@@ -14,11 +14,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: a862c5c9cea1087f54a4dbff13b6c39eb5e39385
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54126985"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62791991"
 ---
 # <a name="maintaining-an-alwayson-publication-database-sql-server"></a>AlwaysOn パブリケーション データベースのメンテナンス (SQL Server)
   このトピックでは、AlwaysOn 可用性グループを使用するときのパブリケーション データベースのメンテナンスについての特別な考慮事項について説明します。  
@@ -32,17 +32,17 @@ ms.locfileid: "54126985"
   
 -   レプリケーション モニターは、常に元のパブリッシャーの下でパブリケーション情報を表示します。 ただし、元のパブリッシャーをサーバーとして追加することで、この情報を任意のレプリカからレプリケーション モニターで表示することができます。  
   
--   ストアド プロシージャまたはレプリケーション管理オブジェクト (RMO) を使用して現在のプライマリでレプリケーションを管理する場合、パブリッシャー名を指定する際には、データベースのレプリケーションを有効にしたインスタンス (元のパブリッシャー) の名前を指定する必要があります。 適切な名前を決定するには、`PUBLISHINGSERVERNAME` 関数を使用します。 パブリッシング データベースを可用性グループに参加させると、セカンダリ データベース レプリカに格納されているレプリケーション メタデータは、プライマリにあるレプリケーション メタデータと同一になります。 その結果、プライマリでレプリケーションが有効なパブリケーション データベースでは、セカンダリのシステム テーブルに格納されるパブリッシャー インスタンス名は、セカンダリではなくプライマリの名前になります。 これにより、パブリケーション データベースがセカンダリにフェールオーバーした場合に、レプリケーションの構成およびメンテナンスに影響が出ます。 たとえば、フェールオーバー後は、セカンダリでストアド プロシージャでレプリケーションを構成して、別のレプリカで有効化されたパブリケーション データベースへのプル サブスクリプションが必要の場合は、代わりに元のパブリッシャーの名前を指定する必要があります、として現在のパブリッシャー、 *@publisher*パラメーターの`sp_addpullsubscription`または`sp_addmergepulllsubscription`します。 ただし、フェールオーバー後にパブリケーション データベースを有効にした場合、システム テーブルに格納されるパブリッシャー インスタンス名は、現在のプライマリ ホストの名前になります。 この場合、 *@publisher* パラメーターに現在のプライマリ レプリカのホスト名を使用します。  
+-   ストアド プロシージャまたはレプリケーション管理オブジェクト (RMO) を使用して現在のプライマリでレプリケーションを管理する場合、パブリッシャー名を指定する際には、データベースのレプリケーションを有効にしたインスタンス (元のパブリッシャー) の名前を指定する必要があります。 適切な名前を決定するには、`PUBLISHINGSERVERNAME` 関数を使用します。 パブリッシング データベースを可用性グループに参加させると、セカンダリ データベース レプリカに格納されているレプリケーション メタデータは、プライマリにあるレプリケーション メタデータと同一になります。 その結果、プライマリでレプリケーションが有効なパブリケーション データベースでは、セカンダリのシステム テーブルに格納されるパブリッシャー インスタンス名は、セカンダリではなくプライマリの名前になります。 これにより、パブリケーション データベースがセカンダリにフェールオーバーした場合に、レプリケーションの構成およびメンテナンスに影響が出ます。 たとえば、フェールオーバー後は、セカンダリでストアド プロシージャでレプリケーションを構成して、別のレプリカで有効化されたパブリケーション データベースへのプル サブスクリプションが必要の場合は、代わりに元のパブリッシャーの名前を指定する必要があります、として現在のパブリッシャー、 *@publisher* パラメーターの`sp_addpullsubscription`または`sp_addmergepulllsubscription`します。 ただし、フェールオーバー後にパブリケーション データベースを有効にした場合、システム テーブルに格納されるパブリッシャー インスタンス名は、現在のプライマリ ホストの名前になります。 この場合、 *@publisher* パラメーターに現在のプライマリ レプリカのホスト名を使用します。  
   
     > [!NOTE]  
-    >  一部のプロシージャなど`sp_addpublication`、 *@publisher*パラメーターがのインスタンスではないパブリッシャーに対してのみサポートされている[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]; このような場合は関係しません[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]AlwaysOn。  
+    >  一部のプロシージャなど`sp_addpublication`、 *@publisher* パラメーターがのインスタンスではないパブリッシャーに対してのみサポートされている[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]; このような場合は関係しません[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]AlwaysOn。  
   
 -   フェールオーバー後に [!INCLUDE[ssManStudio](../../../includes/ssmanstudio-md.md)] でサブスクリプションを同期するには、サブスクライバーからプル サブスクリプションを同期し、アクティブなパブリッシャーからプッシュ サブスクリプションを同期します。  
   
 ##  <a name="RemovePublDb"></a> 可用性グループからのパブリッシュされたデータベースの削除  
  パブリッシュされたデータベースを可用性グループから削除する場合、またはパブリッシュされたメンバー データベースを含む可用性グループを削除する場合、次の点を考慮します。  
   
--   実行する必要がある元のパブリッシャーでパブリケーション データベースを可用性グループのプライマリ レプリカから削除する場合`sp_redirect_publisher`の値を指定せず、 *@redirected_publisher*パラメーターを削除するには、パブリッシャー/データベース ペアをリダイレクトします。  
+-   実行する必要がある元のパブリッシャーでパブリケーション データベースを可用性グループのプライマリ レプリカから削除する場合`sp_redirect_publisher`の値を指定せず、 *@redirected_publisher* パラメーターを削除するには、パブリッシャー/データベース ペアをリダイレクトします。  
   
     ```  
     EXEC sys.sp_redirect_publisher   
@@ -106,7 +106,7 @@ ms.locfileid: "54126985"
   
 -   [レプリケーション、変更の追跡、変更データ キャプチャ、および AlwaysOn 可用性グループ&#40;SQL Server&#41;](replicate-track-change-data-capture-always-on-availability.md)  
   
--   [レプリケーションの管理に関する FAQ](../../../relational-databases/replication/administration/frequently-asked-questions-for-replication-administrators.md)  
+-   [レプリケーション管理に関する FAQ](../../../relational-databases/replication/administration/frequently-asked-questions-for-replication-administrators.md)  
   
 -   [レプリケーション サブスクライバーと AlwaysOn 可用性グループ&#40;SQL Server&#41;](replication-subscribers-and-always-on-availability-groups-sql-server.md)  
   

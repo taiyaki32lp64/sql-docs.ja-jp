@@ -13,11 +13,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 13c1acf24212a236eae5e377a7febfd398e579c3
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54135922"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63022013"
 ---
 # <a name="publication-information-all-subscriptions-merge-publication"></a>パブリケーション情報、[すべてのサブスクリプション] (マージ パブリケーション)
   **[すべてのサブスクリプション]** タブには、選択したマージ パブリケーションに対するすべてのサブスクリプションの情報が表示されます。  
@@ -25,13 +25,13 @@ ms.locfileid: "54135922"
 ## <a name="options"></a>および  
  サブスクリプションに関する詳細情報やタスクを調べるには、そのサブスクリプションの行を右クリックし、ショートカット メニューのオプションをクリックします。 グリッドにデータを表示する方法を変更するには、グリッドを右クリックし、次のいずれかのオプションをクリックします。  
   
--   **並べ替え**:1 つ以上の列で並べ替え、**列の並べ替え** ダイアログ ボックス。  
+-   **[並べ替え]** : **[列の並べ替え]** ダイアログ ボックスで、1 つ以上の列を基準にして並べ替えを行います。  
   
--   **表示する列を選択**:列の表示とその表示順序を選択、**列の選択** ダイアログ ボックス。  
+-   **[表示する列の選択]** : **[列の選択]** ダイアログ ボックスで、表示する列とその表示順序を選択します。  
   
--   **フィルター**:列の値に基づいてグリッドの行をフィルター選択、**フィルター設定** ダイアログ ボックス。  
+-   **[フィルター]** : **[フィルターの設定]** ダイアログ ボックスで、列の値に基づいてグリッドの行をフィルター処理します。  
   
--   **フィルターのクリア**:グリッドのすべてのフィルター設定をオフにします。  
+-   **[フィルターのクリア]** :グリッドのフィルター設定をすべてクリアします。  
   
  フィルター設定は各グリッドに固有です。 列の選択と並べ替えは、各パブリッシャーのパブリケーション グリッドなど、同じ種類のすべてのグリッドに適用されます。  
   
@@ -61,12 +61,12 @@ ms.locfileid: "54135922"
   
  特定のサブスクリプションが複数の状態である場合に表示される値も、並べ替え順によって決まります。 たとえば、サブスクリプションにエラーがあり、まもなく期限切れになる場合、 **[状態]** 列には **[エラー]** と表示されます。  
   
- 状態値 **[パフォーマンス クリティカル]**、 **[長期マージ]**、 **[まもなく期限切れ/期限切れ]**、および **[初期化されていないサブスクリプション]** は警告です。 警告が表示される場合、 **[状態]** 列にはエージェントが同期中かどうかも表示されます。 たとえば、 **[同期中]、[パフォーマンス クリティカル]** という形で状態が表示されます。  
+ 状態値 **[パフォーマンス クリティカル]** 、 **[長期マージ]** 、 **[まもなく期限切れ/期限切れ]** 、および **[初期化されていないサブスクリプション]** は警告です。 警告が表示される場合、 **[状態]** 列にはエージェントが同期中かどうかも表示されます。 たとえば、 **[同期中]、[パフォーマンス クリティカル]** という形で状態が表示されます。  
   
  状態値 **[まもなく期限切れ/期限切れ]** および **[長期マージ]** は、しきい値が設定されている場合のみ表示されます。 **[パフォーマンス クリティカル]** の状態の値は、同じ種類の接続 (ダイヤルアップまたは LAN) によるサブスクリプションの同期が 5 回行われた後にのみ表示されます。 パフォーマンスの測定としきい値の設定については、「[Monitor Performance with Replication Monitor](monitor/monitor-performance-with-replication-monitor.md)」 (レプリケーション モニターを使用したパフォーマンスの監視) と「[レプリケーション モニターのしきい値と警告の設定](monitor/set-thresholds-and-warnings-in-replication-monitor.md)」を参照してください。  
   
  **サブスクリプション**  
- サブスクリプションごとに、フォームでの名前:*SubscriberName:SubscriptionDatabaseName*します。  
+ 各サブスクリプションの名前です。*SubscriberName:SubscriptionDatabaseName* という形式になります。  
   
  **表示名**  
  [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 以降のバージョンのみです。 各サブスクリプションの説明です。 この説明は、 **[サブスクリプションのプロパティ]** ダイアログ ボックスで入力するか、 **@description** または [sp_addmergepullsubscription](/sql/relational-databases/system-stored-procedures/sp-addmergesubscription-transact-sql) の [@description](/sql/relational-databases/system-stored-procedures/sp-addmergepullsubscription-transact-sql)と表示されます。 多くの場合、この説明は "表示名"、つまりサブスクリプションの通称として使用されます。  
@@ -99,11 +99,11 @@ ms.locfileid: "54135922"
  最後の同期中におけるマージ エージェントの実行時間です。 マージ エージェントが現在同期中の場合、これは経過時間を表します。マージ エージェントが以前に同期された場合、これは合計時間を表します。  
   
  **[接続]**  
- [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 以降のバージョンのみです。 サブスクライバーとパブリッシャーの接続の種類です。 **[LAN]**、 **[ダイヤルアップ]**、 **[インターネット]** のいずれかの値になります。 サブスクリプションで Web 同期が使用されている場合、 **[インターネット]** が表示されます。  
+ [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 以降のバージョンのみです。 サブスクライバーとパブリッシャーの接続の種類です。 **[LAN]** 、 **[ダイヤルアップ]** 、 **[インターネット]** のいずれかの値になります。 サブスクリプションで Web 同期が使用されている場合、 **[インターネット]** が表示されます。  
   
 ## <a name="see-also"></a>参照  
  [レプリケーション モニターの開始](monitor/start-the-replication-monitor.md)   
- [表示情報とレプリケーション モニターを使用してタスクを実行します。](monitor/view-information-and-perform-tasks-replication-monitor.md)   
+ [レプリケーション モニターを使用して情報を表示し、タスクを実行する](monitor/view-information-and-perform-tasks-replication-monitor.md)   
  [レプリケーションの監視](monitoring-replication.md)   
  [マージ レプリケーションの Web 同期](web-synchronization-for-merge-replication.md)  
   

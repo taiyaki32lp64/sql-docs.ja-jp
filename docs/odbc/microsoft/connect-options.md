@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: abfdc133-cb33-435f-a467-fbe15444f687
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 06695bf1770c9e362decac5702dcd924d47c23bb
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 4358756deaa595ee5e10df0490522631201b9c87
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47750472"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68023375"
 ---
 # <a name="connect-options"></a>接続のオプション
 > [!IMPORTANT]  
@@ -28,13 +27,13 @@ ms.locfileid: "47750472"
   
  これらのオプションは、アプリケーション内でデータベース接続のカスタマイズを許可します。  
   
-|接続オプション|注|  
+|接続オプション|メモ|  
 |--------------------|-----------|  
 |SQL_AUTOCOMMIT|アプリケーションのコミットまたはとのトランザクションをロールバックする必要があります明示的に SQL_AUTOCOMMIT_OFF 場合は、 [SQLTransact](../../odbc/microsoft/core-level-api-functions-odbc-driver-for-oracle.md)します。|  
 |SQL_ODBC_CURSORS|この接続属性は、ドライバー マネージャーで実装されます。|  
 |SQL_OPT_TRACE|この接続属性は、ドライバー マネージャーで実装されます。|  
 |SQL_OPT_TRACEFILE|この接続属性は、ドライバー マネージャーで実装されます。|  
-|SQL_TRANSLATE_DLL|エラーが返されます"Driver できません。"。|  
+|SQL_TRANSLATE_DLL|エラーが返されます。"Driver できません。"|  
 |SQL_TRANSLATE_OPTION|翻訳の .dll に 32 ビット値が渡されます。|  
 |SQL_TXN_ISOLATION|ドライバーでは、SQL_TXN_READ_COMMITTED のみ使用できます。<br /><br /> 次の vParams がサポートされていません。<br /><br /> SQL_TXN_READ_UNCOMMITTED<br /><br /> SQL_TXN_REAPEATABLE_READ<br /><br /> SQL_TXN_SERIALIZABLE|  
 |SQL_ATTR_ENLIST_IN_DTC|この ODBC 3.0 接続属性を使用すると、Oracle の Microsoft コンポーネント サービス (または Windows NT を使用している場合は、MTS) によってコーディネートされる分散トランザクションで ODBC ドライバーを使用できます。 インターフェイス ポインターを提供します*pITransaction*としてトランザクションに、 *vParam*引数。|  

@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 3fdfead2-b5ab-4163-9b1d-3d2143a5db8c
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: b78abac5ccbade0b686176f432618b4abc35ccab
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: fa6862808643f3d687fa406cb3fc2aa23c9b7d7b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53201791"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67924145"
 ---
 # <a name="shape-compute-clause"></a>Shape COMPUTE 句
 図形の COMPUTE 句には、親が生成されます**レコード セット**の子への参照で構成されている列を持つ**レコード セット**は省略可能内容は章では、新しい、または計算列、列、または子の集計関数の実行結果**レコード セット**または以前に整形**レコード セット**; と任意の列の子から**レコード セット**記載されています句で省略可能。  

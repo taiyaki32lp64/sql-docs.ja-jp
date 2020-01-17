@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 9c1e2322-c225-49d1-a120-a343f23cea73
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: fc8f2ee894416d8e290fe9e1a54b6123664b3c7c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: bf9fc4f0e96a714c8d00d2ffa9e36dea73e55fe1
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47612400"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67932050"
 ---
 # <a name="numericscale-and-precision-properties-example-vb"></a>NumericScale および Precision プロパティの例 (VB)
 この例では、 [NumericScale](../../../ado/reference/ado-api/numericscale-property-ado.md)と[精度](../../../ado/reference/ado-api/precision-property-ado.md)内のフィールドの有効桁数と小数点以下桁数を表示するプロパティ、***割引***のテーブル、 ***Pubs***データベース。  
@@ -74,7 +73,7 @@ End Sub
 'EndNumericScaleVB  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [Field オブジェクト](../../../ado/reference/ado-api/field-object.md)   
  [NumericScale プロパティ (ADO)](../../../ado/reference/ado-api/numericscale-property-ado.md)   
  [パラメーター オブジェクト](../../../ado/reference/ado-api/parameter-object.md)   

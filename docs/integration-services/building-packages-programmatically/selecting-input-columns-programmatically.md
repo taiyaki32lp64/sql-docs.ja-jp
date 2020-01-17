@@ -19,17 +19,20 @@ helpviewer_keywords:
 - data flow [Integration Services], column mapping
 - data flow [Integration Services], components
 ms.assetid: b53b110a-dcf4-4464-ae98-81e892ab74c3
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: f277acbaa9713e5fcb0906551ba902fba05a390b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: edae052096c67e294f12a8f0f35e77b7f5a46187
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47788610"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71294887"
 ---
 # <a name="selecting-input-columns-programmatically"></a>プログラムによる入力列の選択
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   プログラムによってコンポーネントを接続したら、変換する列または下流コンポーネントに渡す列を上流コンポーネントから選択します。 コンポーネント用の入力列を選択しないと、コンポーネントはデータ フロー タスクから行を受信しません。  
   
 ## <a name="selecting-columns"></a>列の選択  

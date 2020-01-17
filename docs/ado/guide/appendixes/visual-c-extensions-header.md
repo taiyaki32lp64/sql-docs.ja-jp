@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: e492d307-24cb-489c-a5b0-99cdc09b07da
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: b9e9d744955faa41b771834095a6cc51233af4bd
-ms.sourcegitcommit: 96b2355d54dfad259826e88bdff91cc9344e16f2
+ms.openlocfilehash: 675a31ab333a6c2d92e6afcd6a461b3baebd5b3c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51350386"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67926387"
 ---
 # <a name="visual-c-extensions-header"></a>Visual C++ Extensions のヘッダー
 次のヘッダー **icrsint.h**、クライアントからのフィールドを取得できるようにするインターフェイスの詳細、 **Recordset**から派生したクラスで定義された変数に**CADORecordBinding**. 各フィールドにアクセスするための ADO バインディング マクロを指定する必要があります。  
@@ -208,6 +207,6 @@ public:
 #endif // !_ICRSINT_H_  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [Visual C 拡張機能の例](../../../ado/guide/appendixes/visual-c-extensions-example.md)   
  [Visual C++ Extensions を使用する](../../../ado/guide/appendixes/using-visual-c-extensions.md)

@@ -17,11 +17,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 6f96e45cdf5f94e3e8b71514e1bb3e7ed4d99cfb
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52786394"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62806743"
 ---
 # <a name="shrink-database-task-maintenance-plan"></a>[データベースの圧縮タスク]\(メンテナンス プラン)
   **[データベースの圧縮タスク]** ダイアログを使用すると、選択されているデータベースのサイズを小さくするタスクを作成できます。 次に示すオプションを使用して、データベースを圧縮する際に残す未使用領域の割合をパーセント比率で指定します (指定値を大きくするほど、データベースは少ししか圧縮されなくなります)。 残される未使用領域の大きさは、データベースに格納されているデータの量に対する比率で決められます。 たとえば、60 MB のデータと 40 MB の空き領域を含む 100 MB のデータベースに対して 50% の値を指定した場合、そのデータベースは、60 MB のデータと (60 MB の 50% に当たる) 30 MB の空き領域から成る 90 MB のデータベースに圧縮されます。 削除されるのは、指定の割合を超える分の未使用領域だけです。 有効値は、0 ～ 100 です。  
@@ -34,7 +34,7 @@ ms.locfileid: "52786394"
  このタスクでは、DBCC SHRINKDATABASE ステートメントが実行されます。  
   
 ## <a name="options"></a>および  
- **[接続]**  
+ **Connection**  
  このタスクを実行するときに使用するサーバー接続を選択します。  
   
  **[新規作成]**  
@@ -81,17 +81,17 @@ ms.locfileid: "52786394"
  **[サーバー名の選択または入力]**  
  このタスクを実行するときに接続するサーバーを選択します。  
   
- **[更新]**  
+ **更新**  
  使用できるサーバーの一覧を表示します。  
   
  **[サーバーにログオンするための情報の入力]**  
  サーバーの認証情報を指定します。  
   
  **[Windows NT の統合セキュリティを使用する]**  
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)]  [!INCLUDE[msCoName](../../includes/msconame-md.md)] のインスタンスに接続します。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)]  [!INCLUDE[msCoName](../../includes/msconame-md.md)] のインスタンスに接続します。  
   
  **[特定のユーザー名とパスワードを使用する]**  
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)]  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスに接続します。 このオプションは利用できません。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)]  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスに接続します。 このオプションは利用できません。  
   
  **ユーザー名**  
  認証に使用する [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ログインを指定します。 このオプションは利用できません。  
@@ -99,7 +99,7 @@ ms.locfileid: "52786394"
  **Password**  
  認証に使用するパスワードを指定します。 このオプションは利用できません。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [DBCC SHRINKDATABASE &#40;Transact-SQL&#41;](/sql/t-sql/database-console-commands/dbcc-shrinkdatabase-transact-sql)  
   
   

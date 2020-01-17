@@ -19,17 +19,20 @@ helpviewer_keywords:
 - datasets [Integration Services], sample
 - training mining models
 ms.assetid: 59767e52-f732-4b3f-8602-be50d0a64ef2
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: db2feb442aceb42d24757e59245914351e5100dc
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: c51d65dabef5efa4de7ecb4c62b633e62ed0b082
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51638079"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71297886"
 ---
 # <a name="percentage-sampling-transformation"></a>比率サンプリング変換
+
+[!INCLUDE[ssis-appliesto](../../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   比率サンプリング変換は、変換入力行の比率を選択することにより、サンプル データセットを作成します。 サンプル データセットとは、変換入力からランダムに行を選択し、その結果、入力のサンプルとなるデータセットのことです。  
   
 > [!NOTE]  
@@ -61,7 +64,7 @@ ms.locfileid: "51638079"
 ## <a name="percentage-sampling-transformation-editor"></a>比率サンプリング変換エディター
   **[比率サンプリング変換エディター]** ダイアログ ボックスを使用すると、指定された行の割合を使用して、入力の一部をサンプルに分割できます。 この変換は、入力を 2 つの別個の出力に分割します。  
   
-### <a name="options"></a>[変数]  
+### <a name="options"></a>オプション  
  **[行の割合]**  
  サンプルとして使用する入力における行の割合を指定します。  
   

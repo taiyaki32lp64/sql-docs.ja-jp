@@ -1,5 +1,5 @@
 ---
-title: トレース テーブル (SQL Server Profiler) を開く |Microsoft Docs
+title: トレーステーブル (SQL Server プロファイラー) を開きます。Microsoft Docs
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -10,15 +10,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - opening trace tables
 ms.assetid: 8f7cc6b9-c717-4995-9af9-cacc6501aee2
-author: stevestein
-ms.author: sstein
-manager: craigg
-ms.openlocfilehash: b7f99e1b4957332b66ed710c0416f545d883ecc3
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 03e7d69d4011caf60d733ab6f0bb17b680fcb4de
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47629430"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67911678"
 ---
 # <a name="open-a-trace-table-sql-server-profiler"></a>トレース テーブルを開く (SQL Server Profiler)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

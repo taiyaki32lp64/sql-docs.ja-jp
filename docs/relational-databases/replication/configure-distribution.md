@@ -20,16 +20,16 @@ helpviewer_keywords:
 ms.assetid: 94d52169-384e-4885-84eb-2304e967d9f7
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 01ba981bc0d299dfe4584d6cc066ae20d7c7732c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
+ms.openlocfilehash: 36e89b7092ea497f3ad2ca0267e7f5dab99056e7
+ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47717920"
+ms.lasthandoff: 08/03/2019
+ms.locfileid: "68768673"
 ---
 # <a name="configure-distribution"></a>ディストリビューションの構成
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
   ディストリビューターは、ディストリビューション データベースを含むサーバーです。ディストリビューション データベースには、すべての種類のレプリケーションのメタデータと履歴データ、およびトランザクション レプリケーションに対するトランザクションが格納されます。 レプリケーションを設定するには、ディストリビューターを構成する必要があります。 パブリッシャーはそれぞれ 1 つのディストリビューター インスタンスにしか割り当てることができませんが、複数のパブリッシャーで 1 つのディストリビューターを共有できます。 サーバーがディストリビューターとして指定されると、次のようなリソースが新たに消費されることになります。  
   
 -   パブリケーションのスナップショット ファイルをディストリビューターに格納する場合 (通常の場合) は、そのためのディスク領域  

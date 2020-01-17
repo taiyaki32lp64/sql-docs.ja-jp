@@ -18,16 +18,15 @@ helpviewer_keywords:
 - navigating code
 - Go To command
 ms.assetid: f63247ff-9751-4e99-8ee3-0772ad4009d0
-author: stevestein
-ms.author: sstein
-manager: craigg
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 78f5aa14e5633c50d45592962459a26f136c3de0
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: 4171d67bafa5b2f692a0a1a0b7e87dc9ed9b8525
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51643733"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68258191"
 ---
 # <a name="navigate-code-and-text"></a>コード内とテキスト内の移動
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -66,7 +65,7 @@ ms.locfileid: "51643733"
 -   Ctrl キーを押しながら上方向キーまたは下方向キーを押すと、カーソルの位置を変えずにテキストをスクロールできます。  
   
 ## <a name="go-to-command"></a>[ジャンプ] コマンド  
- **[ｼﾞｬンプ]** コマンドを使用して、特定の行番号にジャンプできます。 行番号を表示するには、 **[オプション]** ダイアログ ボックスで、 **[テキスト エディター]**、 **[すべての言語]**、 **[全般]** の順にクリックし、 **[行番号]** チェック ボックスをオンにします。  
+ **[ｼﾞｬンプ]** コマンドを使用して、特定の行番号にジャンプできます。 行番号を表示するには、 **[オプション]** ダイアログ ボックスで、 **[テキスト エディター]** 、 **[すべての言語]** 、 **[全般]** の順にクリックし、 **[行番号]** チェック ボックスをオンにします。  
   
  **特定の行番号にジャンプするには**  
   

@@ -7,15 +7,15 @@ ms.reviewer: ''
 ms.technology: master-data-services
 ms.topic: conceptual
 ms.assetid: b628548b-982b-4e45-abf4-c8e83e3ab1c2
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 465b14ab5cb96f3f587222427ea793bbaf225b01
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 3bbd3ac1bf97530d64760d1434b9e7e8f6a81d34
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52762404"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65482798"
 ---
 # <a name="loading-data-mds-add-in-for-excel"></a>データの読み込み (Excel 用 MDS アドイン)
   [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] [!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)]、する必要がありますにデータを読み込む、MDS リポジトリから Excel ワークシートを使用する前にします。 データの操作が完了したら、そのデータを他のユーザーが共有できるように MDS リポジトリにパブリッシュします。  

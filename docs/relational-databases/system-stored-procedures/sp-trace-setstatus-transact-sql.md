@@ -17,18 +17,17 @@ helpviewer_keywords:
 ms.assetid: 29e7a7d7-b9c1-414a-968a-fc247769750d
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 2a350cf6b7f37aca830f4c74c23ce214f86376f6
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 1e6d3ed9c31307fb032d4ccc3cc950565c39c52c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47702390"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68095933"
 ---
-# <a name="sptracesetstatus-transact-sql"></a>sp_trace_setstatus (Transact-SQL)
+# <a name="sptracesetstatus-transact-sql"></a>sp_trace_setstatus (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  指定したトレースの現在の状態を変更します。  
+  指定されたトレースの現在の状態を変更します。  
   
 > [!IMPORTANT]  
 >  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] 代わりに拡張イベントを使用します。  
@@ -43,19 +42,17 @@ sp_trace_setstatus [ @traceid = ] trace_id , [ @status = ] status
 ```  
   
 ## <a name="arguments"></a>引数  
- [ **@traceid=** ] *trace_id*  
- 変更するトレースの ID を指定します。 *trace_id*は**int**、既定値はありません。 ユーザーがこれを採用して*trace_id*識別、変更、およびトレースを制御する値。 取得する方法について、 *trace_id*を参照してください[sys.fn_trace_getinfo &#40;TRANSACT-SQL&#41;](../../relational-databases/system-functions/sys-fn-trace-getinfo-transact-sql.md)します。  
+`[ @traceid = ] trace_id` 変更するトレースの ID です。 *trace_id*は**int**、既定値はありません。 ユーザーがこれを採用して*trace_id*識別、変更、およびトレースを制御する値。 取得する方法について、 *trace_id*を参照してください[sys.fn_trace_getinfo &#40;TRANSACT-SQL&#41;](../../relational-databases/system-functions/sys-fn-trace-getinfo-transact-sql.md)します。  
   
- [  **@status=** ]*状態*  
- トレースに実装する操作を指定します。 *ステータス*は**int**、既定値はありません。  
+`[ @status = ] status` トレースに実装する操作を指定します。 *ステータス*は**int**、既定値はありません。  
   
- 次の表は、指定できる状態の一覧です。  
+ 次の表では、指定可能性のある状態を示します。  
   
 |状態|説明|  
 |------------|-----------------|  
 |**0**|指定されたトレースを停止します。|  
 |**1**|指定されたトレースを開始します。|  
-|**2**|指定されたトレースを閉じて、その定義をサーバーから削除します。|  
+|**2**|指定されたトレースを閉じて、サーバーからその定義を削除します。|  
   
 > [!NOTE]  
 >  トレースを閉じるには、最初にそのトレースを停止する必要があります。 トレースを表示するには、最初にそのトレースを停止して閉じる必要があります。  
@@ -66,10 +63,10 @@ sp_trace_setstatus [ @traceid = ] trace_id , [ @status = ] status
 |リターン コード|説明|  
 |-----------------|-----------------|  
 |**0**|エラーなし。|  
-|**1**|不明なエラーです。|  
+|**1**|不明なエラー。|  
 |**8**|指定した状態は無効です。|  
 |**9**|指定したトレース ハンドルは無効です。|  
-|**13**|メモリ不足。 指定した操作を実行するための十分なメモリがない場合に返されます。|  
+|**13**|メモリ不足。 指定したアクションを実行するための十分なメモリがない場合に返されます。|  
   
  トレースが、指定した状態で既に場合[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]戻ります**0**します。  
   
@@ -79,9 +76,9 @@ sp_trace_setstatus [ @traceid = ] trace_id , [ @status = ] status
  トレース ストアド プロシージャを使用した例については、「[トレースの作成 &#40;Transact-SQL&#41;](../../relational-databases/sql-trace/create-a-trace-transact-sql.md)」を参照してください。  
   
 ## <a name="permissions"></a>アクセス許可  
- ユーザーに ALTER TRACE 権限が必要です。  
+ ALTER TRACE 権限が必要です。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [sys.fn_trace_geteventinfo &#40;TRANSACT-SQL&#41;](../../relational-databases/system-functions/sys-fn-trace-geteventinfo-transact-sql.md)   
  [sys.fn_trace_getfilterinfo &#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-trace-getfilterinfo-transact-sql.md)   
  [sp_trace_generateevent &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-trace-generateevent-transact-sql.md)   

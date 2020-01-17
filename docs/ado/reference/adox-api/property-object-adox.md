@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 6a56def6-dbe6-4ccc-a491-8d076889f019
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 2502dcdab170102f526aa1ea0fe67235e6bf3048
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b7911608970e9860d7eddcf3e83156ac99645c3f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47815600"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67965393"
 ---
 # <a name="property-object-adox"></a>Property オブジェクト (ADOX)
 ADOX オブジェクトの特性を表します。  

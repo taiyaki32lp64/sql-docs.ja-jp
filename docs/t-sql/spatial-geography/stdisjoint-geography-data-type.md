@@ -15,15 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - STDisjoint
 ms.assetid: 98328a02-e018-47d6-aa93-de162b8aef62
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: 57071fc6530f8fdcb6d2a0eab83fea1bf43ac42e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: MladjoA
+ms.author: mlandzic
+ms.openlocfilehash: 2129c9990156fe970faa2ce134eaf2a17b35c764
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47687340"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68042322"
 ---
 # <a name="stdisjoint-geography-data-type"></a>STDisjoint (geography データ型)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -44,7 +43,7 @@ ms.locfileid: "47687340"
 ## <a name="return-types"></a>戻り値の型  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 戻り値の型: **bit**  
   
- CLR の戻り値の型: **SqlBoolean**  
+ CLR の戻り値の型:**SqlBoolean**  
   
 ## <a name="remarks"></a>Remarks  
  比較する 2 つのインスタンスに含まれる地点のセットの交点が空である場合、これらの **geography** インスタンスは連結されていません。  

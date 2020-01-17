@@ -20,41 +20,52 @@ helpviewer_keywords:
 ms.assetid: bcce65f9-10db-4b3e-bfaf-dfc06c6f820f
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 22ea90a5876c6c824f7e80683503f1f8bf863675
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: f844874da3ba4c7a644331f521293e1c0f94fed5
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56017073"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67940247"
 ---
 # <a name="binary-and-varbinary-transact-sql"></a>binary と varbinary (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-固定長または可変長のバイナリ データ型です。
+固定長または可変長のbinary データ型です。
   
 ## <a name="arguments"></a>引数  
-**binary** [ ( *n* ) ]。長さ *n* バイトの固定長のバイナリ データです。*n* は 1 ～ 8,000 の値になります。 ストレージのサイズは *n* バイトです。
+**binary** [ ( _n_ ) ]。長さ _n_ バイトの固定長のbinary データです。_n_ は 1 ～ 8,000 の値になります。 ストレージのサイズは _n_ バイトです。
   
-**varbinary** [ ( *n* | **max**) ] 可変長のバイナリ データ。 *n* には 1 ～ 8,000 の値を指定できます。 **max** 記憶域の最大サイズが 2 であることを示します。 ^ 31-1 バイトです。 格納サイズは、入力したデータの実際の長さ + 2 バイトとなります。 入力するデータの長さは 0 バイトでもかまいません。 ANSI SQL シノニム **varbinary** は **バイナリのさまざまなです**。
+**varbinary** [ ( _n_ | **max**) ] 可変長のbinary データ。 _n_ には 1 ～ 8,000 の値を指定できます。 **max** 記憶域の最大サイズが 2 であることを示します。 ^ 31-1 バイトです。 格納サイズは、入力したデータの実際の長さ + 2 バイトとなります。 入力するデータの長さは 0 バイトでもかまいません。 **varbinary** の ANSI SQL シノニム **binary** 可変です。
   
 ## <a name="remarks"></a>Remarks  
-データ定義または変数宣言ステートメントで *n* を指定しないと、既定の長さは 1 になります。 CAST 関数で *n* を指定しないと、既定の長さは 30 になります。
+データ定義または変数宣言ステートメントで _n_ を指定しないと、既定の長さは 1 になります。 CAST 関数で _n_ を指定しないと、既定の長さは 30 になります。
 
 | データ型 | 次の場合に使用 |
 | --- | --- |
-| **[バイナリ]** | 列データ エントリのサイズが一定である。|
+| **binary** | 列データ エントリのサイズが一定である。|
 | **varbinary** | 列データ エントリのサイズが大幅に変化する。|
 | **varbinary(max)** | 列データ エントリのサイズが 8,000 バイトを超える。|
 
 
 ## <a name="converting-binary-and-varbinary-data"></a>binary 型データと varbinary 型データの変換
-データが文字列データ型から変換される場合 (**char,** 、**varchar**, 、**nchar**, 、**nvarchar,** 、**バイナリ**, 、**varbinary**, 、**テキス**ト, 、**ntext**, 、または **イメージ**) を **バイナリ** または **varbinary** データの型、長さが等しくない [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 埋め込み文字を埋め込むか、または右にデータを切り捨てます。 他のデータ型が変換される場合 **バイナリ** または **varbinary**, 、データが埋め込まれるか、左側に切り捨てられます。 桁の埋め込みには 16 進数の 0 が使用されます。
+データが文字列データ型からデータ長の異なる **binary** データ型または **varbinary** データ型に変換される場合、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] によりデータの右側の桁が埋め込まれるか、切り捨てられます。 文字列データ型は次のとおりです。
+
+* **char** 
+* **varchar**
+* **nchar**
+* **nvarchar**
+* **binary**
+* **varbinary**
+* **text**
+* **ntext**
+* **image**
+
+他のデータ型が変換される場合 **binary** または **varbinary**, 、データが埋め込まれるか、左側に切り捨てられます。 桁の埋め込みには 16 進数の 0 が使用されます。
   
-データの **binary** データ型と **varbinary** データ型への変換は、データ間を移動するもっとも簡単な方法が**バイナリ** データである場合に便利です。 任意の型の任意の値を十分なサイズのバイナリ値に変換した後、元の型に戻す場合、両方の変換が [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の同じバージョンで実行されれば、結果は常に同じになります。 値の 2 進表現は、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のバージョン間で異なる場合があります。
+データの **binary** データ型と **varbinary** データ型への変換は、データ間を移動するもっとも簡単な方法が**binary** データである場合に便利です。 ある時点で、値の型をサイズが十分に大きなバイナリ値に変換し、その後、元に戻すことがあります。 両方の変換が同じバージョンの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] で行われる場合、この変換では常に結果的に同じ値が生成されます。 値の 2 進表現は、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のバージョン間で異なる場合があります。
   
-変換することができます **int**, 、**smallint**, 、および **tinyint** に **バイナリ** または **varbinary**, 、変換する場合は、 **バイナリ** 切り捨てが発生した場合は、整数値、この値に値を元の整数値を異なる場合がします。 たとえば、次の SELECT ステートメントは整数値 `123456` を通常はバイナリ値 `0x0001e240` として格納することを示しています。
+**int**、**smallint**、**tinyint** を **binary** または **varbinary** に変換できます。 **binary** 型の値を再度 integer 型の値に戻した場合、切り捨てが行われていると、この値は元の integer の値とは同じになりません。 たとえば、次の SELECT ステートメントは整数値 `123456` をバイナリ値 `0x0001e240` として格納することを示しています。
   
 ```sql
 SELECT CAST( 123456 AS BINARY(4) );  
@@ -81,11 +92,11 @@ GO
 最終的な値は `57921` ではなく `123457` になります。
   
 > [!NOTE]  
->  すべてのデータ間の変換の入力と **バイナリ** データ型は、バージョンの間で同じであるとは限りません [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]です。  
+>  すべてのデータ間の変換の入力と **binary** データ型は、バージョンの間で同じであるとは限りません [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]です。  
   
 ## <a name="see-also"></a>参照
 [CAST および CONVERT &#40;Transact-SQL&#41;](../../t-sql/functions/cast-and-convert-transact-sql.md)  
-[データ型の変換 (&) #40";"データベース エンジン"&"#41 です。](../../t-sql/data-types/data-type-conversion-database-engine.md)  
+[データ型の変換 &#40;データベース エンジン&#41;](../../t-sql/data-types/data-type-conversion-database-engine.md)  
 [データ型 &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)
   
   

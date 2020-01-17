@@ -1,6 +1,8 @@
 ---
-title: サブクエリ (Azure SQL Data Warehouse、Parallel Data Warehouse) | Microsoft Docs
-ms.custom: ''
+title: サブクエリ
+description: SQL Data Warehouse と Parallel Data Warehouse でのサブクエリ
+ms.custom: seo-lt-2019
+titleSuffix: Azure SQL Data Warehouse
 ms.date: 03/03/2017
 ms.prod: sql
 ms.reviewer: ''
@@ -9,14 +11,13 @@ ms.topic: conceptual
 ms.assetid: 0e8ebd60-1936-48c9-b2b9-e099c8269fcf
 author: shkale-msft
 ms.author: shkale
-manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: e0c7434f6b4ebee94afdb7ea2ee206bc7b102894
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: c8f60ee25f00c4b9ba4b7959a6447e11a0f549b1
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47767990"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75244831"
 ---
 # <a name="subqueries-azure-sql-data-warehouse-parallel-data-warehouse"></a>サブクエリ (Azure SQL Data Warehouse、Parallel Data Warehouse)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
@@ -25,11 +26,11 @@ ms.locfileid: "47767990"
   
  SELECT ステートメントの詳細については、「[SELECT &#40;Transact-SQL&#41;](../../t-sql/queries/select-transact-sql.md)」を参照してください。  
   
-## <a name="contents"></a>目次  
+## <a name="contents"></a>内容  
   
 -   [基本操作](#Basics)  
   
--   [例: SQL Data Warehouse と Parallel Data Warehouse](#Examples)  
+-   [例:SQL Data Warehouse と Parallel Data Warehouse](#Examples)  
   
 ##  <a name="Basics"></a> 基本操作  
  サブクエリ  
@@ -140,7 +141,7 @@ WHERE EXISTS
 ORDER BY EnglishProductName;  
 ```  
   
- スイッチまたは  
+ または  
   
 ```  
 SELECT DISTINCT EnglishProductName  

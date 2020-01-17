@@ -2,18 +2,18 @@
 title: レポート サーバー上のアイテムの URL の例 - SharePoint モード | Microsoft Docs
 ms.date: 03/14/2017
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: tools
 ms.topic: conceptual
 ms.assetid: 54cb861a-8cec-445c-875d-599fb9bd1973
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 7b787bdccdb913bd95051c8e3a4a3dd37fed5c01
-ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: af9333214aa10f8c21d8b7eb31b92c261ff155e9
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51812955"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65574017"
 ---
 # <a name="url-examples-for-items-on-a-report-server---sharepoint-mode"></a>レポート サーバー上のアイテムの URL の例 - SharePoint モード
   レポートおよび関連アイテムを SharePoint ライブラリにパブリッシュするには、レポート デザイナーなどの [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 作成ツールを使用してコンテンツをパブリッシュするか、SharePoint サイトのアクションを使用してコンテンツをアップロードします。  
@@ -56,7 +56,7 @@ ms.locfileid: "51812955"
   
  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[winSPServ](../../includes/winspserv-md.md)] 3.0 または [!INCLUDE[SPF2010](../../includes/spf2010-md.md)] では、ライブラリはサーバー名の後に示されます。たとえば、`https://*servername/*Shared Documents` のようになります。  
   
- [!INCLUDE[offSPServ](../../includes/offspserv-md.md)] 2007 または [!INCLUDE[SPS2010](../../includes/sps2010-md.md)]では、ライブラリはサイトおよびサブサイトの後に示されます。 たとえば、`https://*servername/site/*Documents` のようにします。  
+ [!INCLUDE[offSPServ](../../includes/offspserv-md.md)] 2007 または [!INCLUDE[SPS2010](../../includes/sps2010-md.md)]では、ライブラリはサイトおよびサブサイトの後に示されます。 たとえば、`https://*servername/site/*Documents` のようになります。  
   
  新しい SharePoint ライブラリまたは使用したことがないサイトのパス情報を見つけるには、ブラウザーを開き、レポートのパブリッシュ先として使用する SharePoint ライブラリを探します。 ライブラリが空である場合は、任意のファイルをアップロードします。 ファイルを右クリックして **[プロパティ]** をクリックし、 **[プロパティ]** ウィンドウを開きます。 ファイルのアドレスには、パブリッシュ操作に必要な URL 値が含まれています。  
   

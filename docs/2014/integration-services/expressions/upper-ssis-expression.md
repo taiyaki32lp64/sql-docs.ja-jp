@@ -12,15 +12,15 @@ helpviewer_keywords:
 - uppercase characters [Integration Services]
 - lowercase characters
 ms.assetid: d33985f7-1048-4023-83e4-274090acda78
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 5f3ef91893527091763e8523aca6465b6989adc2
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 278a85ddce309f276f61603961169529ffcdfe67
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52793464"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62896344"
 ---
 # <a name="upper-ssis-expression"></a>UPPER (SSIS 式)
   小文字が大文字に変換された状態の文字式を返します。  

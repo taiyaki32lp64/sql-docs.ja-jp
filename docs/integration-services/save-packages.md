@@ -16,17 +16,20 @@ helpviewer_keywords:
 - SSIS packages, saving
 - SQL Server Integration Services packages, saving
 ms.assetid: 17c1de2c-637f-45c2-a148-79294bae0af4
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: 4e9a2cbb66b7b77a9cb87b779baf76f63f627bd2
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 60dcf1692fb8b805b9eef8fad228353104131c93
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52542026"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71295736"
 ---
 # <a name="save-packages"></a>パッケージを保存する
+
+[!INCLUDE[ssis-appliesto](../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] では、 [!INCLUDE[ssIS](../includes/ssis-md.md)] デザイナーを使用してパッケージを構築し、XML ファイル (.dtsx ファイル) としてファイル システムに保存します。 パッケージ XML ファイルのコピーは、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] の msdb データベースまたはパッケージ ストアに保存することもできます。 パッケージ ストアとは、 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] サービスが管理するファイル システムの場所にあるフォルダーのことです。  
   
  ファイル システムに保存したパッケージは、後で [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] サービスを使用して、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] またはパッケージ ストアにインポートできます。 詳細については、「[Integration Services サービス (SSIS サービス)](../integration-services/service/integration-services-service-ssis-service.md)」を参照してください。  
@@ -59,7 +62,7 @@ ms.locfileid: "52542026"
   
 2.  **[ファイル]** メニューの **[\<パッケージ ファイル> のコピーに名前を付けて保存]** をクリックします。  
   
-3.  **[パッケージのコピーの保存]** ダイアログ ボックスで、**[パッケージの場所]** 一覧からパッケージの保存場所を選択します。 使用できるオプションは以下のとおりです。  
+3.  **[パッケージのコピーの保存]** ダイアログ ボックスで、 **[パッケージの場所]** 一覧からパッケージの保存場所を選択します。 使用できるオプションは以下のとおりです。  
     -   SQL Server
     -   [ファイル システム] 
     -   [SSIS パッケージ ストア] 
@@ -78,7 +81,7 @@ ms.locfileid: "52542026"
   
 7.  パッケージの保護レベルを確認します。  
   
-8.  必要に応じて、**[保護レベル]** ボックスの近くの参照ボタン **[...]** をクリックし、保護レベルを変更します。  
+8.  必要に応じて、 **[保護レベル]** ボックスの近くの参照ボタン **[...]** をクリックし、保護レベルを変更します。  
   
     -   **[パッケージの保護レベル]** ダイアログ ボックスで、別の保護レベルを選択します。  
   
@@ -105,7 +108,7 @@ ms.locfileid: "52542026"
   
 1.  [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]で、パッケージを作成する [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] プロジェクトを開きます。  
   
-2.  ソリューション エクスプローラーで、プロジェクトを右クリックして **[追加]** をポイントし、**[新しい項目]** をクリックします。  
+2.  ソリューション エクスプローラーで、プロジェクトを右クリックして **[追加]** をポイントし、 **[新しい項目]** をクリックします。  
   
 3.  **[新しい項目の追加 - \<プロジェクト名>]** ダイアログ ボックスで、テンプレートとして使うパッケージをクリックします。  
   

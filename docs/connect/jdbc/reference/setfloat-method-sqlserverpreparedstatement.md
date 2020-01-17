@@ -1,5 +1,5 @@
 ---
-title: setFloat メソッド (SQLServerPreparedStatement) |Microsoft Docs
+title: setFloat メソッド (SQLServerPreparedStatement) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: 870d0031-6871-4dc0-b03a-fb0a9ff6ab98
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 167c9b477a7078f10b3452ea96f96a77d85bb1d0
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 83221ed88b354eb7b00ae151755129d1a7dc020c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47660290"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67974229"
 ---
 # <a name="setfloat-method-sqlserverpreparedstatement"></a>setFloat メソッド (SQLServerPreparedStatement)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -43,13 +42,13 @@ public final void setFloat(int n,
   
  *x*  
   
- A **float**値。  
+ **浮動小数点**値です。  
   
 ## <a name="exceptions"></a>例外  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- この setFloat メソッドは、java.sql.PreparedStatement インターフェイスの setFloat メソッドによって指定されます。  
+ この setFloat メソッドは、java.sql.PreparedStatement インターフェイスの setFloat メソッドで規定されています。  
   
 ## <a name="see-also"></a>参照  
  [SQLServerPreparedStatement のメンバー](../../../connect/jdbc/reference/sqlserverpreparedstatement-members.md)   

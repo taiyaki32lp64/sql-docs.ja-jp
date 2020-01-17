@@ -2,7 +2,7 @@
 title: Reporting Services と Power View のブラウザー サポート | Microsoft Docs
 ms.date: 07/02/2017
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: reporting-services
 ms.topic: conceptual
 helpviewer_keywords:
@@ -15,14 +15,14 @@ helpviewer_keywords:
 - components [Reporting Services], browsers
 - Web browsers [Reporting Services]
 ms.assetid: 48a75bbb-0029-4c43-891d-dc8f4fc0ebe1
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 7282fd5627bc46d9f392a449c4707c75c867dd92
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 46176d786314284f4056b58ba351dacee37a06e4
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50021219"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65574816"
 ---
 # <a name="browser-support-for-reporting-services-and-power-view"></a>Reporting Services と Power View のブラウザー サポート
 
@@ -82,7 +82,11 @@ SQL Server Reporting Services、ReportViewer コントロール、Power View. �
 
  **(+)** 最新公開リリース バージョン
 
+::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
+
  [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]に統合されている SharePoint 製品を使用している場合は、「  [SharePoint 2016 でブラウザー サポートを計画する](https://technet.microsoft.com//library/cc263526\(v=office.16\).aspx)」を参照してください。
+
+::: moniker-end
 
 ### <a name="authentication-requirements"></a>認証の要件
 
@@ -104,7 +108,7 @@ SQL Server Reporting Services、ReportViewer コントロール、Power View. �
 
  スクリプトが有効になっていない場合は、レポートを開くときに次のようなエラー メッセージが表示されます。
 
-- **ブラウザーでスクリプトがサポートされていないか、スクリプトを許可するように構成されていません。ここをクリックして、スクリプトを使用せずにこのレポートを表示します**。
+- **ブラウザーでスクリプトがサポートされていないか、スクリプトの実行を許可するように構成されていません。ここをクリックして、スクリプトを使用せずにこのレポートを表示します**。
 
  スクリプトを使用せずにレポートを表示することを選択した場合、レポート ツール バーやドキュメント マップなどのレポート ビューアー機能を使用しない HTML でレポートが表示されます。
 
@@ -142,7 +146,11 @@ SQL Server Reporting Services、ReportViewer コントロール、Power View. �
 
  **(+)** 最新公開リリース バージョン
 
+::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
+
  SharePoint 2016 のブラウザー サポートの詳細については、「 [SharePoint 2013 でブラウザー サポートを計画する](https://technet.microsoft.com//library/cc263526\(v=office.16\).aspx)」を参照してください。
+
+::: moniker-end
 
 ## <a name="next-steps"></a>次の手順
 

@@ -10,15 +10,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - SQL Server Management Studio [SQL Server], custom reports
 ms.assetid: c7b84355-71ba-402d-85af-23826f18b7da
-author: stevestein
-ms.author: sstein
-manager: craigg
-ms.openlocfilehash: ea06c538f83e6bed00a84a4724b827d380c51389
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: e3bc3c116f8082b17f392d04ae14e0895762fc37
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51702790"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68262066"
 ---
 # <a name="use-custom-reports-with-object-explorer-node-properties"></a>カスタム レポートでのオブジェクト エクスプローラー ノード プロパティの使用
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

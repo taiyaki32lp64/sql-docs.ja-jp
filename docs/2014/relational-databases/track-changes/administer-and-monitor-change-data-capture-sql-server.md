@@ -15,11 +15,11 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: c3843fafac0616ffed52e82a307b1f3bfa801cc2
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52788904"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62672147"
 ---
 # <a name="administer-and-monitor-change-data-capture-sql-server"></a>変更データ キャプチャの管理と監視 (SQL Server)
   このトピックでは、変更データ キャプチャを管理および監視する方法について説明します。  
@@ -75,7 +75,7 @@ ms.locfileid: "52788904"
  クリーンアップが実行されると、すべてのキャプチャ インスタンスの低水位マークが単一のトランザクションで最初に更新されます。 その後、使用されなくなったエントリの変更テーブルおよび cdc.lsn_time_mapping テーブルからの削除が試みられます。 単一のステートメントで削除できるエントリの数は、構成可能なしきい値によって制限されます。 1 つのテーブルで削除が失敗しても、残りのテーブルで削除操作ができなくなるわけではありません。  
   
 ### <a name="cleanup-job-customization"></a>クリーンアップ ジョブのカスタマイズ  
- クリーンアップ ジョブの場合、カスタマイズが可能なのは、破棄する変更テーブル エントリを決定する戦略です。 配布されたクリーンアップ ジョブでサポートされる唯一の戦略は時間ベースのものです。 この状況では、新しい低水位マークは最後に処理されたトランザクションのコミット時刻から許容保有期間を引いて計算します。 基になるクリーンアップ プロシージャが基づいているため`lsn`時間ではなく任意の数の戦略を使用して、最小値を決定する`lsn`変更テーブルに保持します。 厳密には時間ベースのものはそのうちの一部のみです。 たとえばクライアントに関する知識は、変更テーブルへのアクセスを必要とするダウンストリーム プロセスを実行できない場合にフェールセーフを提供するために使用できます。 また、同じ既定の戦略は`lsn`すべてのデータベースの変更テーブルをクリーンアップする、基になるクリーンアップ プロシージャも呼び出せるキャプチャ インスタンス レベルでクリーンアップします。  
+ クリーンアップ ジョブの場合、カスタマイズが可能なのは、破棄する変更テーブル エントリを決定する戦略です。 配布されたクリーンアップ ジョブでサポートされる唯一の戦略は時間ベースのものです。 この状況では、新しい低水位マークは最後に処理されたトランザクションのコミット時刻から許容保有期間を引いて計算します。 基になるクリーンアップ プロシージャは、時間ではなく `lsn` に基づいているため、変更テーブルに保持する最小の `lsn` を決定する戦略はいくつもあります。 厳密には時間ベースのものはそのうちの一部のみです。 たとえばクライアントに関する知識は、変更テーブルへのアクセスを必要とするダウンストリーム プロセスを実行できない場合にフェールセーフを提供するために使用できます。 また、既定の戦略ではすべてのデータベースの変更テーブルのクリーンアップに同じ `lsn` を使用しますが、基になるクリーンアップ プロシージャを呼び出してキャプチャ インスタンス レベルでクリーンアップすることもできます。  
   
 ##  <a name="Monitor"></a> 変更データ キャプチャ プロセスの監視  
  変更データ キャプチャ プロセスを監視すると、変更が変更テーブルに適切に書き込まれているかどうか、および書き込み時の待機時間が妥当かどうかを判断できます。 また、発生する可能性のあるエラーを特定することもできます。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] には、変更データ キャプチャの監視に役立つ 2 つの動的管理ビューが用意されています。 [sys.dm_cdc_log_scan_sessions](../native-client-ole-db-data-source-objects/sessions.md) と [sys.dm_cdc_errors](../native-client-ole-db-errors/errors.md)です。  
@@ -155,11 +155,11 @@ SELECT command_count/duration AS [Throughput] FROM sys.dm_cdc_log_scan_sessions 
     GO  
     ```  
   
-3.  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]で、 **[管理]**、 **[データ コレクション]** の順に展開します。 **[CDC パフォーマンス データ コレクター]** を右クリックし、 **[データ コレクション セットの開始]** をクリックします。  
+3.  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]で、 **[管理]** 、 **[データ コレクション]** の順に展開します。 **[CDC パフォーマンス データ コレクター]** を右クリックし、 **[データ コレクション セットの開始]** をクリックします。  
   
 4.  手順 1. で構成したデータ ウェアハウスで、custom_snapshots.cdc_log_scan_data テーブルを検索します。 このテーブルには、ログ スキャン セッションのデータの履歴スナップショットが格納されています。 このデータを使用すると、待機時間やスループットなどのパフォーマンス指標を時系列で分析できます。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [データ変更の追跡 &#40;SQL Server&#41;](track-data-changes-sql-server.md)   
  [変更データ キャプチャについて &#40;SQL Server&#41;](../track-changes/about-change-data-capture-sql-server.md)   
  [変更データ キャプチャの有効化と無効化 &#40;SQL Server&#41;](enable-and-disable-change-data-capture-sql-server.md)   

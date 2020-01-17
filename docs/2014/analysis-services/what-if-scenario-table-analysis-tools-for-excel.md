@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - Table Analysis tools
@@ -15,12 +14,12 @@ ms.assetid: 4df5a5c5-1983-4009-a7c5-cd340649fd2f
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: e8355c828cdc3479b108a693b07b3dfb5a92a289
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: fef8ca20bd3e137d21b5121f42a0d7fee82ae4a7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48140362"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66065390"
 ---
 # <a name="what-if-scenario-table-analysis-tools-for-excel"></a>What-If シナリオ (Excel 用のテーブル分析ツール)
   ![テーブル分析ツールには、どのようなシナリオの場合はボタン](media/tat-whatif.gif "テーブル分析ツールで What-if シナリオのボタンをクリックします。")  
@@ -84,7 +83,7 @@ ms.locfileid: "48140362"
   
  **'自転車を購入' = [はい]**  
   
- **信頼度: フェア**  
+ **信頼度:公正です**  
   
  この結果は、データ テーブルの既存の行に基づいて作成されています。つまり、特定の顧客について、他のすべての条件はそのままで、年齢だけを 25 歳に変更した場合、その顧客は自転車を購入する可能性が高いことを示しています。  
   

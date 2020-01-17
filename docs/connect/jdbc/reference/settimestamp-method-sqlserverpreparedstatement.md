@@ -1,5 +1,5 @@
 ---
-title: setTimestamp メソッド (SQLServerPreparedStatement) |Microsoft Docs
+title: setTimestamp メソッド (SQLServerPreparedStatement) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: 1de95320-3085-4b34-b722-a02aaa2dd6b0
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 5f055c3cf5ac08ff5e8742757bf6f1fe80447d88
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: f758a718b268984300a9d5a8a386216c67f17393
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47597590"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67972348"
 ---
 # <a name="settimestamp-method-sqlserverpreparedstatement"></a>setTimestamp メソッド (SQLServerPreparedStatement)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

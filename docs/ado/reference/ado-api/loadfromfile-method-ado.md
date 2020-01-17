@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: b18d8d38-7354-4a94-b637-6ac035faa433
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: ed02b621b79ebf46dbb0dc6e66a2e5366610a19d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ce90b13a677246fb64462fbe691eb9e3efaa3c7f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47761240"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67918268"
 ---
 # <a name="loadfromfile-method-ado"></a>LoadFromFile メソッド (ADO)
 既存のファイルの内容を読み込み、 [Stream](../../../ado/reference/ado-api/stream-object-ado.md)します。  

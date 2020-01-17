@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: b7dec3fa-d9d9-409d-b946-f9b9a3202829
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 66dc8bd94030b499b93e2f05c1c56fb7d7ef0a62
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 3b93c9b438a22cba125bb7487b393371b4ffd8c1
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47699280"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68033441"
 ---
 # <a name="advanced-merge-replication-conflict---choose-a-resolver"></a>マージ レプリケーションの競合の詳細 - 競合回避モジュールの選択
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -36,7 +35,7 @@ ms.locfileid: "47699280"
   
 |競合解決に際して考慮すべき問題|推奨|  
 |-------------------------------|--------------------|  
-|異なるジョブ カテゴリのユーザーに対して異なる優先度が必要な場合|既定の競合回避モジュールを使用して、異なる優先度値を持つサーバー サブスクリプションを作成する。<br /><br /> スイッチまたは<br /><br /> アーティクル内の権限値の列を認識するアーティクル競合回避モジュールを使用して、競合を解決する。|  
+|異なるジョブ カテゴリのユーザーに対して異なる優先度が必要な場合|既定の競合回避モジュールを使用して、異なる優先度値を持つサーバー サブスクリプションを作成する。<br /><br /> または<br /><br /> アーティクル内の権限値の列を認識するアーティクル競合回避モジュールを使用して、競合を解決する。|  
 |最初に変更されたデータが優先される競合解決方法が必要な場合|既定の競合回避モジュールを使用して、クライアント サブスクリプションを作成する。|  
 |同じ行に対する変更の競合がない限り、複数のユーザーが同じデータ行を変更することを認める場合|既定の競合回避モジュール、または列レベルの追跡を有効にしたアーティクル競合回避モジュールを使用する。|  
 |行の値に対して複数の変更が発生したときに競合のフラグを付ける場合|既定の競合回避モジュール、または行レベルの追跡を有効にしたアーティクル競合回避モジュールを使用する。|  

@@ -10,12 +10,12 @@ ms.assetid: 7d6c962b-c8d0-49f7-a2ac-00ad8dca930a
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 823967123c459112c77fb460eb10b011895110e8
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 07f438f86a22b866351a0b83ee7634338f3ad2cd
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53374555"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62775345"
 ---
 # <a name="install-sql-server-2014-servicing-updates"></a>SQL Server 2014 サービス更新プログラムのインストール
   このトピックでは、 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]の更新プログラムのインストールについて説明します。 このセクションでは、次の項目について説明します。  
@@ -46,7 +46,7 @@ ms.locfileid: "53374555"
   
 ## <a name="see-also"></a>参照  
  [SQL Server 2014 インストール ウィザードからインストール&#40;セットアップ&#41;](install-sql-server-from-the-installation-wizard-setup.md)   
- [SQL Server 2014 のインスタンスに機能を追加&#40;セットアップ&#41;](add-features-to-an-instance-of-sql-server-setup.md)   
+ [コマンド プロンプトから更新プログラムのインストール](installing-updates-from-the-command-prompt.md) [、インスタンスの SQL Server 2014 への機能の追加&#40;セットアップ&#41;](add-features-to-an-instance-of-sql-server-setup.md)   
  [SQL Server 2014 のインストールの削除](repair-a-failed-sql-server-installation.md)  
   
   

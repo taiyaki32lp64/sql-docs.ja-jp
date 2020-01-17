@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: ef37e858-c05f-4f52-a65f-3ce6037e0d03
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: ee1d76052402ab775e9e8de20e1ef6da07e23432
-ms.sourcegitcommit: 1a5448747ccb2e13e8f3d9f04012ba5ae04bb0a3
+ms.openlocfilehash: c6230fb7ffbaa1226bc65d391d988ad064617998
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51558450"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67922896"
 ---
 # <a name="configuring-rds-on-windows-2000"></a>Windows 2000 での RDS の構成
 Windows 2000 にアップグレードした後に正常に機能する rds 問題が発生した場合、問題をトラブルシューティングする手順に従います。  
@@ -29,7 +28,7 @@ Windows 2000 にアップグレードした後に正常に機能する rds 問�
   
 3.  RegEdit ユーティリティを使用して、"HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\DataFactory\HandlerInfo"に移動し、確認**HandlerRequired** 0 に設定されていると**DefaultHandler**は""(Null 文字列)。  
   
-     **注**を停止し、コマンド プロンプトで次のコマンドを入力して、World Wide Web 発行サービスを再起動する必要があります、レジストリのこのセクションを変更する場合:"NET W3SVC を停止"、"NET 開始 W3SVC"。  
+     **注**を停止し、コマンド プロンプトで次のコマンドを入力して、World Wide Web 発行サービスを再起動する必要があります、レジストリのこのセクションを変更する場合。"NET STOP W3SVC"と"NET 開始 W3SVC"。  
   
 4.  RegEdit ユーティリティを使用してレジストリ"HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\W3SVC\Parameters\ADCLaunch"に移動し、という名前のキーがあることを確認**RDSServer.Datafactory**します。 それ以外の場合は、作成します。  
   
@@ -40,7 +39,7 @@ Windows 2000 にアップグレードした後に正常に機能する rds 問�
 > [!IMPORTANT]
 >  Windows 8 および Windows Server 2012 以降、RDS サーバー コンポーネントに含まれていない、Windows オペレーティング システム (Windows 8 を参照してくださいと[Windows Server 2012 の互換性クックブック](https://www.microsoft.com/download/details.aspx?id=27416)の詳細)。 RDS クライアント コンポーネントは、Windows の将来のバージョンで削除されます。 新規の開発作業ではこの機能を使用しないようにし、現在この機能を使用しているアプリケーションは修正することを検討してください。 RDS を使用するアプリケーションに移行する必要があります[WCF Data Service](https://go.microsoft.com/fwlink/?LinkId=199565)します。Windows 8 および Windows Server 2012 以降、Windows オペレーティング システムで RDS サーバー コンポーネントは含まれなくします。 RDS を使用するアプリケーションを移行[WCF Data Service](https://go.microsoft.com/fwlink/?LinkId=199565)します。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [RDS の基礎](../../../ado/guide/remote-data-service/rds-fundamentals.md)
 
 

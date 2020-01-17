@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 5b9e7545-cf30-464d-80ef-5c99c8306bab
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 1cef615f2009809cb84d62b284d2c08167b6ba86
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 4cc293c966b044c7d580907d55c7b94f96e077dc
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47705020"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67949219"
 ---
 # <a name="positions-collection-ado-md"></a>Positions コレクション (ADO MD)
 含まれています、[位置](../../../ado/reference/ado-md-api/position-object-ado-md.md)軸の位置を定義するオブジェクト。  
@@ -41,7 +40,7 @@ ms.locfileid: "47705020"
   
 -   [プロパティ、メソッド、およびイベント](../../../ado/reference/ado-md-api/positions-collection-properties-methods-and-events.md)  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [セルセットの例 (VB)](../../../ado/reference/ado-md-api/cellset-example-vb.md)   
  [軸オブジェクト (ADO MD)](../../../ado/reference/ado-md-api/axis-object-ado-md.md)   
  [Cell オブジェクト (ADO MD)](../../../ado/reference/ado-md-api/cell-object-ado-md.md)   

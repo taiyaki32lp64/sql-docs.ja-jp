@@ -1,1 +1,1 @@
-SQL Server 2019 プレビュー
+SQL Server 2019 (15.x)

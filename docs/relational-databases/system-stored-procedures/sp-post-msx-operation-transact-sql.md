@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 085deef8-2709-4da9-bb97-9ab32effdacf
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: aa0293daf2c7dacf65450d8d3b9323b2903e77ce
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 93e9c574346ad57a6947645552616cd8db46fe85
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47832700"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68056369"
 ---
 # <a name="sppostmsxoperation-transact-sql"></a>sp_post_msx_operation (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -46,8 +45,7 @@ sp_post_msx_operation
 ```  
   
 ## <a name="arguments"></a>引数  
- [  **@operation =**] **'***操作***'**  
- 通知する操作の種類を指定します。 *操作*は**varchar (64)**、既定値はありません。 有効な操作が異なります*object_type*します。  
+`[ @operation = ] 'operation'` ポストされた操作の操作の種類。 *操作*は**varchar (64)** 、既定値はありません。 有効な操作が異なります*object_type*します。  
   
 |オブジェクトの種類|操作|  
 |-----------------|---------------|  
@@ -55,20 +53,15 @@ sp_post_msx_operation
 |**サーバー**|RE-ENLIST<br /><br /> DEFECT<br /><br /> SYNC-TIME<br /><br /> SET-POLL|  
 |**SCHEDULE**|INSERT<br /><br /> UPDATE<br /><br /> Del|  
   
- [  **@object_type =**] **'***オブジェクト***'**  
- 操作を通知するオブジェクトの種類を指定します。 有効な種類は**ジョブ**、 **SERVER**、および**スケジュール**します。 *オブジェクト*は**varchar (64)**、既定値は**ジョブ**します。  
+`[ @object_type = ] 'object'` 操作を投稿する対象のオブジェクトの型。 有効な種類は**ジョブ**、 **SERVER**、および**スケジュール**します。 *オブジェクト*は**varchar (64)** 、既定値は**ジョブ**します。  
   
- [ **@job_id =**] *job_id*  
- 操作が適用されるジョブのジョブ識別番号を指定します。 *job_id*は**uniqueidentifier**、既定値はありません。 **0x00**すべてのジョブを示します。 場合*オブジェクト*は**SERVER**、し*job_id*は必要ありません。  
+`[ @job_id = ] job_id` 操作が適用されるジョブのジョブ識別番号。 *job_id*は**uniqueidentifier**、既定値はありません。 **0x00**すべてのジョブを示します。 場合*オブジェクト*は**SERVER**、し*job_id*は必要ありません。  
   
- [ **@specific_target_server =**] **'***target_server***'**  
- 指定した操作を適用するターゲット サーバーの名前を指定します。 場合*job_id*が指定されているが、 *target_server*が指定されていない、すべてのジョブ、ジョブのサーバー操作が通知されます。 *target_server*は**nvarchar (30)**、既定値は NULL です。  
+`[ @specific_target_server = ] 'target_server'` 指定された操作を適用するターゲット サーバーの名前。 場合*job_id*が指定されているが、 *target_server*が指定されていない、すべてのジョブ、ジョブのサーバー操作が通知されます。 *target_server*は**nvarchar (30)** 、既定値は NULL です。  
   
- [ **@value =**] *value*  
- ポーリング間隔を秒数で指定します。 *value* のデータ型は **int**で、既定値は NULL です。 場合にのみ、このパラメーターを指定*操作*は**SET-POLL**します。  
+`[ @value = ] value` ポーリング間隔 (秒) です。 *value* のデータ型は **int**で、既定値は NULL です。 場合にのみ、このパラメーターを指定*操作*は**SET-POLL**します。  
   
- [ **@schedule_uid=** ] *schedule_uid*  
- 操作が適用されるスケジュールの一意識別子を指定します。 *schedule_uid*は**uniqueidentifier**、既定値はありません。  
+`[ @schedule_uid = ] schedule_uid` 操作が適用されるスケジュールの一意の識別子。 *schedule_uid*は**uniqueidentifier**、既定値はありません。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  **0** (成功) または**1** (失敗)  

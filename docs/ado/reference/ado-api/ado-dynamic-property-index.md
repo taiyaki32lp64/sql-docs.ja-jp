@@ -11,16 +11,15 @@ helpviewer_keywords:
 ms.assetid: 80d389dd-46ef-459f-b0d4-6f712fc4f32d
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 60347cbffcc169c47149e27cf1064cd9c68494f3
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 9eb88905f56abf9c1c702f5fd73cbe61a1bcde3d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47684730"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67921083"
 ---
 # <a name="ado-dynamic-property-index"></a>ADO Dynamic プロパティ インデックス
-データ プロバイダー、サービス プロバイダー、およびサービス コンポーネントが動的プロパティを追加、**プロパティ**、開かれていないのコレクション[接続](../../../ado/reference/ado-api/connection-object-ado.md)と[Recordset](../../../ado/reference/ado-api/recordset-object-ado.md)オブジェクト。 指定されたプロバイダーは、これらのオブジェクトが開かれたときに、追加のプロパティを挿入も可能性があります。 これらのプロパティのいくつか記載されている、 [ADO の動的プロパティ](../../../ado/reference/ado-api/ado-dynamic-properties.md)セクション。 特定のプロバイダーの詳細に表示される、[付録 a: プロバイダー](../../../ado/guide/appendixes/appendix-a-providers.md)セクション。  
+データ プロバイダー、サービス プロバイダー、およびサービス コンポーネントが動的プロパティを追加、**プロパティ**、開かれていないのコレクション[接続](../../../ado/reference/ado-api/connection-object-ado.md)と[Recordset](../../../ado/reference/ado-api/recordset-object-ado.md)オブジェクト。 指定されたプロバイダーは、これらのオブジェクトが開かれたときに、追加のプロパティを挿入も可能性があります。 これらのプロパティのいくつか記載されている、 [ADO の動的プロパティ](../../../ado/reference/ado-api/ado-dynamic-properties.md)セクション。 特定のプロバイダーの詳細に表示される、[付録 a:プロバイダー](../../../ado/guide/appendixes/appendix-a-providers.md)セクション。  
   
  次の表は、各標準 OLE DB プロバイダー動的プロパティ用の ADO および OLE DB 名の cross-indexes です。 プロバイダーは、ここで表示されているより多くのプロパティを追加できます。 プロバイダー固有の動的プロパティに関する特定の情報をプロバイダーのドキュメントを参照してください。  
   
@@ -52,7 +51,7 @@ ms.locfileid: "47684730"
 |分離レベル|DBPROP_SUPPORTEDTXNISOLEVELS|  
 |分離の保持|DBPROP_SUPPORTEDTXNISORETAIN|  
 |[Locale Identifier]|DBPROP_INIT_LCID|  
-|場所|DBPROP_INIT_LOCATION|  
+|Location|DBPROP_INIT_LOCATION|  
 |インデックスの最大サイズ|DBPROP_MAXINDEXSIZE|  
 |行の最大サイズ|DBPROP_MAXROWSIZE|  
 |最大行サイズには、BLOB が含まれています。|DBPROP_MAXROWSIZEINCLUDESBLOB|  
@@ -196,7 +195,7 @@ ms.locfileid: "47684730"
 |一意のカタログ|DBPROP_ADC_UNIQUECATALOG|  
 |一意の行|DBPROP_UNIQUEROWS|  
 |一意のスキーマ|DBPROP_ADC_UNIQUESCHEMA|  
-|一意テーブル|DBPROP_ADC_UNIQUETABLE|  
+|Unique Table|DBPROP_ADC_UNIQUETABLE|  
 |更新機能|DBPROP_UPDATABILITY|  
 |更新基準|DBPROP_ADC_UPDATECRITERIA|  
 |更新プログラムの再同期|DBPROP_ADC_UPDATERESYNC|  

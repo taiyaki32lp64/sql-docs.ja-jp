@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 4d1c8892-4bbc-4e71-bf4b-ba52c0ea9549
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: ebc5caa6ccdb3c14faf722f1ccc66c46befa6fbb
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.openlocfilehash: eaaa72c302c9218810ce653ea59fe5ff29a54ef0
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51606472"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67963874"
 ---
 # <a name="internettimeout-property-rds"></a>InternetTimeout プロパティ (RDS)
 要求がタイムアウトするまで待機するミリ秒数を示します。  
@@ -41,7 +40,7 @@ ms.locfileid: "51606472"
 |-|-|  
 |[DataControl オブジェクト (RDS)](../../../ado/reference/rds-api/datacontrol-object-rds.md)|[DataSpace オブジェクト (RDS)](../../../ado/reference/rds-api/dataspace-object-rds.md)|  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [InternetTimeout プロパティの例 (VB)](../../../ado/reference/rds-api/internettimeout-property-example-vb.md)   
  [InternetTimeout プロパティの例 (VC++)](../../../ado/reference/rds-api/internettimeout-property-example-vc.md)   
  

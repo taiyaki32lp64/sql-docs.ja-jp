@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 60366ae8-175c-456a-ae5e-bdd860786911
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 54da54a63fb1234478a3161cd46e7143258d2d65
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: fda38811fa876c9a0fad55e7f2ee7566ad3026d2
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52510593"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67943767"
 ---
 # <a name="rowset-size"></a>行セット サイズ
 使用するには、どの行セット サイズは、アプリケーションに依存します。 通常、画面ベースのアプリケーションでは、2 つの方法のいずれかに従います。 1 つは、行セット サイズを画面に表示される行の数に設定するのには場合は、ユーザーは、画面をサイズ変更、アプリケーションがそれに応じて行セットのサイズを変更します。 2 つ目より大きななどの番号を 100、データ ソースへの呼び出しの数が減少する行セットのサイズを設定します。 アプリケーションでは、可能な場合に、行セット内でローカルにスクロールし、スクロール、行セット外の場合にのみ新しい行がフェッチされます。  

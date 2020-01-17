@@ -21,15 +21,15 @@ helpviewer_keywords:
 - Integration Services service, package management
 - services [Integration Services], package management
 ms.assetid: 0261ed9e-3b01-4e37-a9d4-d039c41029b6
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: beee5a99f345a4f70f31bfec78b4fb6d9280ab0a
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 89e925d72b4ca4815c05e9f4ab67211a1a7ea980
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52761290"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62766630"
 ---
 # <a name="package-management-ssis-service"></a>パッケージの管理 (SSIS サービス)
   パッケージの管理には、次のタスクを含むいくつかのタスクを伴います。  
@@ -52,11 +52,11 @@ ms.locfileid: "52761290"
   
  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] を開いて [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] に接続すると、[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] サービスが管理する msdb フォルダーが、[格納されたパッケージ] フォルダー内に一覧表示されます。 構成ファイルでルート ファイル システム フォルダーを指定している場合は、[格納されたパッケージ] フォルダーにファイル システムのルート フォルダーとすべてのサブフォルダーに保存されているパッケージも一覧表示されます。  
   
- パッケージは任意のファイル システム フォルダーに保存できますが、そのフォルダーをパッケージ ストアの構成ファイルのフォルダー一覧に追加していない場合、**[格納されたパッケージ]** フォルダーのサブフォルダーにはパッケージが一覧表示されません。 構成ファイルの詳細については、「[Integration Services サービスの構成 (SSIS サービス)](integration-services-service-ssis-service.md)」を参照してください。  
+ パッケージは任意のファイル システム フォルダーに保存できますが、そのフォルダーをパッケージ ストアの構成ファイルのフォルダー一覧に追加していない場合、 **[格納されたパッケージ]** フォルダーのサブフォルダーにはパッケージが一覧表示されません。 構成ファイルの詳細については、「[Integration Services サービスの構成 (SSIS サービス)](integration-services-service-ssis-service.md)」を参照してください。  
   
  **[実行中のパッケージ]** フォルダーにはサブフォルダーがなく、拡張もできません。  
   
- 既定で、**格納されたパッケージ**フォルダーには、2 つのフォルダーが含まれています。**ファイル システム**と**MSDB**します。 **[ファイル システム]** フォルダーには、ファイル システムに保存されるパッケージが一覧表示されます。 これらのファイルの場所は、 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] サービスの構成ファイルで指定されます。 既定のフォルダーは、%Program Files%\Microsoft SQL Server\100\DTS の Packages フォルダーです。 **[MSDB]** フォルダーには、サーバーの [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] msdb データベースに保存されている [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] パッケージが一覧表示されます。 sysssispackages テーブルには、msdb に保存されるパッケージが格納されています。  
+ 既定では、 **[格納されたパッケージ]** フォルダーには、 **[ファイル システム]** と **[MSDB]** の 2 つのフォルダーがあります。 **[ファイル システム]** フォルダーには、ファイル システムに保存されるパッケージが一覧表示されます。 これらのファイルの場所は、 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] サービスの構成ファイルで指定されます。 既定のフォルダーは、%Program Files%\Microsoft SQL Server\100\DTS の Packages フォルダーです。 **[MSDB]** フォルダーには、サーバーの [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] msdb データベースに保存されている [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] パッケージが一覧表示されます。 sysssispackages テーブルには、msdb に保存されるパッケージが格納されています。  
   
  パッケージ ストア内のパッケージの一覧を表示するには、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] を開き、 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]に接続する必要があります。 詳細については、「 [SQL Server Management Studio で Integration Services パッケージを表示する (SSIS サービス)](../view-integration-services-packages-in-sql-server-management-studio-ssis-service.md)との互換性を維持するために、このサービスをサポートしています。  
   

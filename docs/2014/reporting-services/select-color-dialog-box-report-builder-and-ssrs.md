@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 f1_keywords:
 - sql12.rtp.rptdesigner.selectcolor.f1
@@ -13,15 +12,15 @@ f1_keywords:
 helpviewer_keywords:
 - Select Color dialog box
 ms.assetid: ac7089a3-5c7b-4f53-8348-180610e86da2
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 882f7ba5aed75aec20d656c5ca49da66625ec6e6
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: 6bcbbe828da811ace5df4feea5cfdf888e1e6ca5
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56293110"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66101383"
 ---
 # <a name="select-color-dialog-box-report-builder-and-ssrs"></a>[色の選択] ダイアログ ボックス (レポート ビルダーおよび SSRS)
   **[色の選択]** ダイアログ ボックスを使用すると、データ領域やテキスト ボックスにある 1 つまたは複数のセルの背景色や、グラフの色のオプションを指定できます。  

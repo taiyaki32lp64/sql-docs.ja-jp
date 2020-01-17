@@ -17,18 +17,17 @@ helpviewer_keywords:
 ms.assetid: caedc43d-44b8-415a-897e-92923f6de3b8
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: bbecf5d57ae6e11f3a29aca64b7ce8c52a6f6b76
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e6568b15a12949180ca0e2df41063c100abc3290
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47733834"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68085299"
 ---
-# <a name="sphelpoperator-transact-sql"></a>sp_help_operator (Transact-SQL)
+# <a name="sphelpoperator-transact-sql"></a>sp_help_operator (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  サーバーに対して定義されたオペレーターに関する情報をレポートします。  
+  サーバーに対して定義されたオペレーターに関する情報を報告します。  
   
   
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
@@ -43,11 +42,9 @@ sp_help_operator
 ```  
   
 ## <a name="arguments"></a>引数  
- [  **@operator_name=** ] **'***operator_name***'**  
- オペレーター名を指定します。 *operator_name*は**sysname**します。 場合*operator_name*が指定されていないすべての演算子に関する情報が返されます。  
+`[ @operator_name = ] 'operator_name'` 演算子の名前。 *operator_name*は**sysname**します。 場合*operator_name*が指定されていないすべての演算子に関する情報が返されます。  
   
- [ **@operator_id=** ] *operator_id*  
- 要求する情報の対象となるオペレーターの識別番号を指定します。 *operator_id*は**int**、既定値は NULL です。  
+`[ @operator_id = ] operator_id` 情報が要求される演算子の識別番号。 *operator_id*は**int**、既定値は NULL です。  
   
 > [!NOTE]  
 >  いずれか*operator_id*または*operator_name*指定する必要がありますが、両方を指定することはできません。  
@@ -63,20 +60,20 @@ sp_help_operator
 |**name**|**sysname**|演算子の名前。|  
 |**enabled**|**tinyint**|オペレーターが通知を受け取ることが可能かどうか。<br /><br /> **1** = はい<br /><br /> **0** = いいえ|  
 |**email_address**|**nvarchar(100)**|オペレーターの電子メール アドレスです。|  
-|**last_email_date**|**int**|オペレーターが前回、電子メールによる通知を受け取った日付。|  
-|**last_email_time**|**int**|オペレーターが前回、電子メールによる通知を受け取った時刻。|  
+|**last_email_date**|**int**|オペレーターが前回に電子メールで通知を受け取った日付。|  
+|**last_email_time**|**int**|オペレーターが前回に電子メールで通知を受け取った時刻。|  
 |**pager_address**|**nvarchar(100)**|オペレーターのポケットベル アドレス。|  
 |**last_pager_date**|**int**|オペレーターが前回、ポケットベルによる通知を受け取った日付。|  
-|**last_pager_time**|**int**|オペレーターが前回、ポケットベルによる通知を受け取った時刻。|  
+|**last_pager_time**|**int**|オペレーターが前回にポケットベルによる通知を受け取った時刻。|  
 |**weekday_pager_start_time**|**int**|平日にオペレーターがポケットベルによる通知を受け取ることのできる開始時刻。|  
-|**weekday_pager_end_time**|**int**|平日にオペレーターがポケットベルによる通知を受け取ることのできる最終時刻。|  
-|**saturday_pager_start_time**|**int**|土曜日にオペレーターがポケットベルによる通知を受け取ることのできる開始時刻。|  
+|**weekday_pager_end_time**|**int**|オペレーターが平日にポケットベルによる通知を受信する使用可能な期間の終了。|  
+|**saturday_pager_start_time**|**int**|この中に演算子が毎週土曜日にポケットベルによる通知を受信する使用可能な期間の開始。|  
 |**saturday_pager_end_time**|**int**|土曜日にオペレーターがポケットベルによる通知を受け取ることのできる最終時刻。|  
 |**sunday_pager_start_time**|**int**|日曜日にオペレーターがポケットベルによる通知を受け取ることのできる開始時刻。|  
 |**sunday_pager_end_time**|**int**|日曜日にオペレーターがポケットベルによる通知を受け取ることのできる最終時刻。|  
 |**pager_days**|**tinyint**|ビットマスク (**1** = 日曜日、 **64** = 土曜日) のオペレーターがポケットベルによる通知の受信に使用できることを示す日の週。|  
 |**netsend_address**|**nvarchar(100)**|ネットワーク ポップアップ通知のオペレーター アドレス。|  
-|**last_netsend_date**|**int**|オペレーターが前回、ネットワーク ポップアップによる通知を受け取った日付。|  
+|**last_netsend_date**|**int**|オペレーターが前回にネットワーク ポップアップによる通知を受け取った日付。|  
 |**last_netsend_time**|**int**|オペレーターが前回、ネットワーク ポップアップによる通知を受け取った時刻。|  
 |**category_name**|**sysname**|このオペレーターが所属するオペレーター カテゴリの名前。|  
   

@@ -9,15 +9,15 @@ ms.topic: conceptual
 helpviewer_keywords:
 - FileTables [SQL Server], database objects
 ms.assetid: 7e2e0f7f-94a8-4178-8bc7-d2e14ac8528c
-author: douglaslMS
-ms.author: douglasl
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: cd9f8912ff167e70caf601d4816d2d92f1af04c0
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 85e0c761f5dc784698b3aed361ce50488a93e366
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48154342"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66010100"
 ---
 # <a name="filetable-ddl-functions-stored-procedures-and-views"></a>FileTable DDL、関数、ストアド プロシージャ、およびビュー
   [!INCLUDE[tsql](../../includes/tsql-md.md)] の FileTable 機能をサポートするために追加または変更された [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ステートメントおよび [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]データベース オブジェクトの一覧を示します。  
@@ -30,7 +30,7 @@ ms.locfileid: "48154342"
   
 |オブジェクト|状態|詳細情報|  
 |------------|------------|----------------------|  
-|[ALTER DATABASE &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql)<br /><br /> [ALTER DATABASE SET のオプション &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql-set-options)|変更|[FileTable の前提条件の有効化](enable-the-prerequisites-for-filetable.md)<br /><br /> [FileTable の管理](manage-filetables.md)|  
+|[ALTER DATABASE &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql)<br /><br /> [ALTER DATABASE SET オプション &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql-set-options)|変更|[FileTable の前提条件の有効化](enable-the-prerequisites-for-filetable.md)<br /><br /> [FileTable の管理](manage-filetables.md)|  
 |[ALTER TABLE &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-table-transact-sql)|変更|[FileTable の作成、変更、および削除](create-alter-and-drop-filetables.md)<br /><br /> [FileTable の管理](manage-filetables.md)|  
 |[CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](/sql/t-sql/statements/create-database-sql-server-transact-sql)|変更|[FileTable の前提条件の有効化](enable-the-prerequisites-for-filetable.md)|  
 |[CREATE TABLE &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-table-transact-sql)|変更|[FileTable の作成、変更、および削除](create-alter-and-drop-filetables.md)|  

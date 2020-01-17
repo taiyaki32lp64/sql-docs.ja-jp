@@ -1,5 +1,5 @@
 ---
-title: ステージング中に発生したエラーの表示 (Master Data Services) | Microsoft Docs
+title: ステージング中に発生したエラーの表示
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -10,21 +10,20 @@ ms.topic: conceptual
 helpviewer_keywords:
 - staging process [Master Data Services], viewing errors
 ms.assetid: 6d2bff84-624b-47fc-a4a5-d9ea01d13412
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 9f4e66d45a7116f20d4903da21508d0d22c6da61
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
-ms.translationtype: HT
+ms.openlocfilehash: d3bb33d8c3a9237c96fc0bde1becba07df9a7bdc
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52817674"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73728840"
 ---
 # <a name="view-errors-that-occur-during-staging-master-data-services"></a>ステージング中に発生したエラーの表示 (Master Data Services)
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-  [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]では、ステージング処理中に発生したエラーを表示できます。 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] データベースには、エラーを表示する 2 つのビューがあります。  
+  [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] では、ステージング処理中に発生したエラーを表示できます。 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] データベースには、エラーを表示する 2 つのビューがあります。  
   
 -   stg.viw_name_MemberErrorDetails (リーフ メンバーまたは統合メンバーの更新用)。  
   
@@ -35,7 +34,7 @@ ms.locfileid: "52817674"
   
 -   [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] データベースでは、stg.viw_name_MemberErrorDetails ビューまたは stg.viw_name_RelationshipErrorDetails ビューのどちらかに対する SELECT 権限が必要です。  
   
--   モデル管理者である必要があります。 詳細については、「 [管理者 (マスター データ サービス)](../master-data-services/administrators-master-data-services.md)にアクセスすることなくグループに対してユーザーの追加または削除を行うことができます。  
+-   モデル管理者である必要があります。 詳細については、「[Administrators &#40;Master Data Services&#41; (管理者 &#40;マスター データ サービス&#41;)](../master-data-services/administrators-master-data-services.md)」を参照してください。  
   
 ### <a name="to-view-staging-errors"></a>ステージング エラーを表示するには  
   
@@ -53,7 +52,7 @@ ms.locfileid: "52817674"
  エラー メッセージの詳細については、「[ステージング処理のエラー (マスター データ サービス)](../master-data-services/staging-process-errors-master-data-services.md)」を参照してください。  
   
 ## <a name="see-also"></a>参照  
- [概要:テーブルからデータをインポートする (マスター データ サービス)](../master-data-services/overview-importing-data-from-tables-master-data-services.md)   
+ [概要: テーブルからデータをインポートする (マスター データ サービス)](../master-data-services/overview-importing-data-from-tables-master-data-services.md)   
  [ステージング処理のトラブルシューティング (マスター データ サービス)](https://social.technet.microsoft.com/wiki/contents/articles/troubleshooting-the-staging-process-master-data-services.aspx)  
   
   

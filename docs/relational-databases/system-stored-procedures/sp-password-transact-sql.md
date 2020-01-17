@@ -17,15 +17,14 @@ helpviewer_keywords:
 ms.assetid: 0ecbec81-e637-44a9-a61e-11bf060ef084
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: 0bef77291c0a719b9cdc96106d3c173dff652da1
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: c02b9327dbff75e3c0816bb3eec19e3cb3135d50
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47644680"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68008922"
 ---
-# <a name="sppassword-transact-sql"></a>sp_password (Transact-SQL)
+# <a name="sppassword-transact-sql"></a>sp_password (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   追加または変更するためのパスワードを[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]ログインします。  
@@ -45,35 +44,32 @@ sp_password [ [ @old = ] 'old_password' , ]
 ```  
   
 ## <a name="arguments"></a>引数  
- [  **@old=** ] **'***old_password***'**  
- 古いパスワードを指定します。 *old_password*は**sysname**、既定値は NULL です。  
+`[ @old = ] 'old_password'` 古いパスワードです。 *old_password*は**sysname**、既定値は NULL です。  
   
- [  **@new=** ] **'***新しい _ パスワード***'**  
- 新しいパスワードです。 *新しい _ パスワード*は**sysname**、既定値はありません。 *old_password*名前付きパラメーターを使用しないかどうかは指定する必要があります。  
+`[ @new = ] 'new_password'` 新しいパスワードです。 *新しい _ パスワード*は**sysname**、既定値はありません。 *old_password*名前付きパラメーターを使用しないかどうかは指定する必要があります。  
   
 > [!IMPORTANT]  
->  パスワードは NULL にせず、 強力なパスワードを使用してください。 詳細については、「 [Strong Passwords](../../relational-databases/security/strong-passwords.md)」を参照してください。  
+>  パスワードは NULL を使用しないでください。 強力なパスワードを使用してください。 詳細については、「 [Strong Passwords](../../relational-databases/security/strong-passwords.md)」を参照してください。  
   
- [  **@loginame=** ] **'***ログイン***'**  
- パスワード変更の対象となるログインの名前を指定します。 *login* のデータ型は **sysname** で、既定値は NULL です。 *ログイン*が既に存在しのメンバーでのみ指定できます、 **sysadmin**または**securityadmin**固定サーバー ロール。  
+`[ @loginame = ] 'login'` パスワードの変更により影響を受けるログインの名前です。 *login* のデータ型は **sysname** で、既定値は NULL です。 *ログイン*が既に存在しのメンバーでのみ指定できます、 **sysadmin**または**securityadmin**固定サーバー ロール。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  0 (成功) または 1 (失敗)  
   
 ## <a name="remarks"></a>コメント  
- **sp_password**は ALTER LOGIN を呼び出します。 このステートメントでは追加オプションがサポートされます。 パスワードを変更する方法の詳細については、次を参照してください。 [ALTER LOGIN &#40;TRANSACT-SQL&#41;](../../t-sql/statements/alter-login-transact-sql.md)します。  
+ **sp_password**は ALTER LOGIN を呼び出します。 このステートメントは、追加のオプションをサポートします。 パスワードを変更する方法の詳細については、次を参照してください。 [ALTER LOGIN &#40;TRANSACT-SQL&#41;](../../t-sql/statements/alter-login-transact-sql.md)します。  
   
  **sp_password**ユーザー定義のトランザクション内で実行することはできません。  
   
 ## <a name="permissions"></a>アクセス許可  
  ALTER ANY LOGIN 権限が必要です。 古いパスワードを指定しないでパスワードをリセットする場合、または変更されるログインに CONTROL SERVER 権限がある場合は、CONTROL SERVER 権限も必要です。  
   
- プリンシパルは自分のパスワードを変更できます。  
+ プリンシパルは、独自のパスワードを変更できます。  
   
 ## <a name="examples"></a>使用例  
   
-### <a name="a-changing-the-password-of-a-login-without-knowing-the-old-password"></a>A. 古いパスワードがわからない場合にログインのパスワードを変更する  
- 次の例では、`ALTER LOGIN` を使って、`Victoria` ログイン用のパスワードを `B3r1000d#2-36` に変更します。 これは推奨される方法です。 このコマンドを実行するユーザーには、CONTROL SERVER 権限が必要です。  
+### <a name="a-changing-the-password-of-a-login-without-knowing-the-old-password"></a>A. 古いパスワードがわからない場合、ログインのパスワードを変更します。  
+ 次の例では、`ALTER LOGIN` を使って、`Victoria` ログイン用のパスワードを `B3r1000d#2-36` に変更します。 これは推奨される方法です。 このコマンドを実行しているユーザーは、CONTROL SERVER 権限が必要です。  
   
 ```  
 ALTER LOGIN Victoria WITH PASSWORD = 'B3r1000d#2-36';  

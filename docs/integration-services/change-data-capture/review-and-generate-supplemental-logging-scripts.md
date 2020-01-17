@@ -10,18 +10,21 @@ ms.topic: conceptual
 f1_keywords:
 - scripts
 ms.assetid: 5c858ae2-37d6-42e8-a252-7f6ed4e628a7
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: 4c659c24c0a13c96a6c9dca275e8483ad3c0df26
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 2de7acdd60a4d88c6523929615541cbed7674d12
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47789810"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71294577"
 ---
 # <a name="review-and-generate-supplemental-logging-scripts"></a>補足ログ スクリプトの確認および生成
-  補足ログを設定する Oracle ソース データベースでスクリプトを実行または再実行するには、**[スクリプト]** タブを使用します。  
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
+  補足ログを設定する Oracle ソース データベースでスクリプトを実行または再実行するには、 **[スクリプト]** タブを使用します。  
   
  スクリプトを実行する前に、次のいずれかを選択します。  
   
@@ -56,6 +59,6 @@ ms.locfileid: "47789810"
   
 ## <a name="see-also"></a>参照  
  [CDC インスタンスのプロパティを編集する方法](../../integration-services/change-data-capture/how-to-edit-the-cdc-instance-properties.md)   
- [スクリプトを実行するための Oracle 資格情報](../../integration-services/change-data-capture/oracle-credentials-for-running-script.md)  
+ [Oracle Credentials for Running Script](../../integration-services/change-data-capture/oracle-credentials-for-running-script.md)  
   
   

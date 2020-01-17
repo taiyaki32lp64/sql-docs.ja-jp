@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: f929226f-b83d-4900-a07c-a62f64527c7f
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 931c881651b87fd7ab8ce4b47a4e24710ce8c487
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: 261f22847c8b397d57ff5f732ea4d97091895daa
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54136072"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67939202"
 ---
 # <a name="enhance-merge-replication-performance"></a>マージ レプリケーション パフォーマンスの向上
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -43,7 +42,7 @@ ms.locfileid: "54136072"
   
 -   Large Object (LOB) データ型を含むテーブルで、正規化を十分に行うことを検討する。  
   
-     同期が発生するとき、マージ エージェントはパブリッシャーまたはサブスクライバーからすべての行を読み取って転送する必要があります。 行に LOB を使用する列が含まれている場合、この処理には追加のメモリ割り当てが必要となることがあり、これらの列が更新されていない場合でもパフォーマンスを低下させる可能性があります。 このようなパフォーマンス低下が発生する可能性を減らすには、LOB 列を別のテーブルに置き、残りの行データとの一対一リレーションシップを使用することを検討してください。 **text**、 **ntext**、および **image** の各データ型は非推奨とされます。 LOB が必要な場合は、 **varchar(max)**、 **nvarchar(max)**、および **varbinary(max)** の各データ型を使用することをお勧めします。  
+     同期が発生するとき、マージ エージェントはパブリッシャーまたはサブスクライバーからすべての行を読み取って転送する必要があります。 行に LOB を使用する列が含まれている場合、この処理には追加のメモリ割り当てが必要となることがあり、これらの列が更新されていない場合でもパフォーマンスを低下させる可能性があります。 このようなパフォーマンス低下が発生する可能性を減らすには、LOB 列を別のテーブルに置き、残りの行データとの一対一リレーションシップを使用することを検討してください。 **text**、 **ntext**、および **image** の各データ型は非推奨とされます。 LOB が必要な場合は、 **varchar(max)** 、 **nvarchar(max)** 、および **varbinary(max)** の各データ型を使用することをお勧めします。  
   
 ## <a name="publication-design"></a>パブリケーションの設計  
   

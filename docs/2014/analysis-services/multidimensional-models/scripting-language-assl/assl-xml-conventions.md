@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: analysis-services
 ms.topic: reference
 helpviewer_keywords:
 - whitespace [Analysis Services Scripting Language]
@@ -26,12 +24,12 @@ ms.assetid: bce4edad-4420-41ce-9672-8c00c5c0dec6
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: cd0a84928e1d5b531119a0a37dbb60d2b9eb3db9
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 41e0a3fcf4348efcb2108a1205c1d2d8eabfb85c
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52531410"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62736395"
 ---
 # <a name="assl-xml-conventions"></a>ASSL XML 規則
   Analysis Services スクリプト言語 (ASSL) はオブジェクトの階層を要素の型のセットとして表し、それぞれが含むことのできる子要素を定義します。  

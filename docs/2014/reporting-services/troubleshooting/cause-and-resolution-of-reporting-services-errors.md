@@ -4,23 +4,22 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 helpviewer_keywords:
 - messages [Reporting Services]
 - errors [Reporting Services]
 - troubleshooting [Reporting Services], errors
 ms.assetid: 3db0fef3-37f8-40d0-acc7-1928760dc0e9
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 2cf5c9b37fbf6e5d213d35ec9837943e2dfb95ef
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: fa98b9f760485b80f4fa4ac74f3b8008dc3bbec3
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56020264"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66099378"
 ---
 # <a name="cause-and-resolution-of-reporting-services-errors"></a>Reporting Services エラーの原因と解決方法
   このトピックでは、 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]に関連するさまざまなエラーの原因と解決方法について説明します。 このセクションのエラー メッセージ トピックでは、エラー メッセージとその原因、および問題を解決するための対策について説明します。  

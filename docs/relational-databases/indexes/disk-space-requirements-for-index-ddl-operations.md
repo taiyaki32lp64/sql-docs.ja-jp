@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 35930826-c870-44c1-a966-a6a4638f62ef
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 34275fc7bf81da91f65114a8be68b5ec8013f567
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e49ef1ad379f675ca457f8cd9c82a5e4ecc3fd04
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47686550"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68107130"
 ---
 # <a name="disk-space-requirements-for-index-ddl-operations"></a>インデックス DDL 操作に必要なディスク領域
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

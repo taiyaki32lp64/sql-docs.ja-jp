@@ -11,15 +11,14 @@ helpviewer_keywords:
 - user-defined functions [SQL Server], XML
 - xml data type [SQL Server], FOR XML clause
 ms.assetid: 365de07d-694c-4c8b-b671-8825be27f87c
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: a8fc76144542a779f9adb4d0f598af55ae98cdd6
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+author: MightyPen
+ms.author: genemi
+ms.openlocfilehash: fa53478ba653961d255ee3a03038d44fcbd15f3e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51668621"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67943258"
 ---
 # <a name="for-xml-support-for-the-xml-data-type"></a>xml データ型に対する FOR XML サポート
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

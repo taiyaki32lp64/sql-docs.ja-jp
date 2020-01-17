@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: 69b306f6-ee8a-44d2-8f51-0cad2c0bc135
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: cf88f781199937c5b74d8c4645764f883d812a0a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: f058516059c0cadf92b9d558a47990af0a54725f
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48213902"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66071659"
 ---
 # <a name="create-a-bi-semantic-model-connection-to-a-tabular-model-database"></a>テーブル モデル データベースへの BI セマンティック モデル接続の作成
   このトピックでは、SharePoint ファーム外の Analysis Services インスタンスで実行しているテーブル モデル データベースにリダイレクトする BI セマンティック モデル接続を設定する方法について説明します。  

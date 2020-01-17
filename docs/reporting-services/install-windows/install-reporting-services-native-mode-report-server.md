@@ -9,14 +9,14 @@ helpviewer_keywords:
 - report servers [Reporting Services], default configurations
 - installation options [Reporting Services]
 ms.assetid: 8f25e6dc-b753-400e-9e9a-50f4f35bf6c4
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 8598ed98c9a7f8876d210b8b358b66ffb8cbff7c
-ms.sourcegitcommit: c7febcaff4a51a899bc775a86e764ac60aab22eb
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: d660cc7b3c15706951981540f592589ba92e9df2
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "52712383"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62513665"
 ---
 # <a name="install-reporting-services-2016-native-mode-report-server"></a>Reporting Services 2016 ネイティブ モード レポート サーバーをインストールする
 
@@ -120,9 +120,9 @@ ms.locfileid: "52712383"
   
 3.  **[機能の選択]** ページで、次のオプションを選択します。  
   
-    -   (1) **[データベース エンジン サービス]**(データベース エンジンのインスタンスがまだインストールされていない場合)。  
+    -   (1) **[データベース エンジン サービス]** (データベース エンジンのインスタンスがまだインストールされていない場合)。  
   
-    -   (2) **[Reporting Services - ネイティブ]**。  
+    -   (2) **[Reporting Services - ネイティブ]** 。  
   
      ![機能の選択での SSRS ネイティブ モードの選択](../../reporting-services/install-windows/media/rs-setupfeatureselection-native-withcircles.png "機能の選択での SSRS ネイティブ モードの選択")  
   

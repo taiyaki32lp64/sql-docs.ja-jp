@@ -8,17 +8,20 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: tutorial
 ms.assetid: 5215b77d-c2ec-4b25-a3de-ca49ea197d74
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: 36b0fe9670eceb2520c1c792cf247a9d4da47598
-ms.sourcegitcommit: 5ca813d045e339ef9bebe0991164a5d39c8c742b
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 342845789df01a7803196076ea20c03a80dac9f9
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/24/2019
-ms.locfileid: "54880455"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71283077"
 ---
 # <a name="lesson-5-4-test-the-lesson-5-package"></a>レッスン 5-4:レッスン 5 のパッケージをテストする
+
+[!INCLUDE[ssis-appliesto](../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
 
 実行時、パッケージは、パッケージの作成時に指定したディレクトリ名からではなく、構成変数から **Directory** プロパティの値を取得します。 変数の値は、**SSISTutorial.dtsConfig** XML ファイルから取得されます。  
   
@@ -39,7 +42,7 @@ ms.locfileid: "54880455"
   
 1.  **[デバッグ]** メニューの **[デバッグの開始]** を選択します。  
   
-2.  パッケージの実行が完了したら、**[デバッグ]** メニューの **[デバッグの停止]** を選択します。  
+2.  パッケージの実行が完了したら、 **[デバッグ]** メニューの **[デバッグの停止]** を選択します。  
   
 ## <a name="next-lesson"></a>次のレッスン  
 [レッスン 6:SSIS でプロジェクト配置モデルを持つパラメーターを使用する](../integration-services/lesson-6-using-parameters-with-the-project-deployment-model-in-ssis.md)  

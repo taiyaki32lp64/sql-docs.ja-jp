@@ -1,5 +1,5 @@
 ---
-title: LOCALDB_ERROR_AUTO_INSTANCE_CREATE_FAILED |Microsoft Docs
+title: LOCALDB_ERROR_AUTO_INSTANCE_CREATE_FAILED | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,11 +11,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: cee93e798f7fd43af06bc8aae33ac6cd5f013c4c
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52775944"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63062430"
 ---
 # <a name="localdberrorautoinstancecreatefailed"></a>LOCALDB_ERROR_AUTO_INSTANCE_CREATE_FAILED
     

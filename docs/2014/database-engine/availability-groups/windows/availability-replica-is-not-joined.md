@@ -15,11 +15,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: c1143efc4d5a695dd00766d1f78132f7e69adc46
-ms.sourcegitcommit: 1f53b6a536ccffd701fc87e658ddac714f6da7a2
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/10/2019
-ms.locfileid: "54206258"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62815289"
 ---
 # <a name="availability-replica-is-not-joined"></a>可用性レプリカが参加していない
     
@@ -28,7 +28,7 @@ ms.locfileid: "54206258"
 |||  
 |-|-|  
 |**ポリシー名**|可用性レプリカの参加状態|  
-|**問題点**|可用性レプリカが参加していません。|  
+|**問題**|可用性レプリカが参加していません。|  
 |**カテゴリ**|**警告**|  
 |**ファセット**|可用性レプリカ|  
   
@@ -44,7 +44,7 @@ ms.locfileid: "54206258"
 ## <a name="possible-solution"></a>考えられる解決方法  
  Transact-SQL、PowerShell、または SQL Server Management Studio を使用して、セカンダリ レプリカを可用性グループに参加させます。 セカンダリ レプリカを可用性グループに参加させる方法の詳細については、「 [可用性グループへのセカンダリ レプリカの参加 (SQL Server)](https://msdn.microsoft.com/library/ff878473\(en-us,SQL.110\).aspx)」をご覧ください。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [AlwaysOn 可用性グループの概要&#40;SQL Server&#41;](overview-of-always-on-availability-groups-sql-server.md)   
  [AlwaysOn ダッシュボードの使用 &#40;SQL Server Management Studio&#41;](use-the-always-on-dashboard-sql-server-management-studio.md)  
   

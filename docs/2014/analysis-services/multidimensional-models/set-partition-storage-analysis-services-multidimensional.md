@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - low latency MOLAP
@@ -26,12 +25,12 @@ ms.assetid: e525e708-f719-4905-a4cc-20f6a9a3edcd
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 0738c0968606ea4f618f4d527db8c99cfff19296
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 8d86734023080c9b7fc62cff636d4f1952d00d0c
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48052212"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66072990"
 ---
 # <a name="set-partition-storage-analysis-services---multidimensional"></a>パーティション ストレージの設定 (Analysis Services - 多次元)
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] には、ストレージ モードおよびキャッシュ オプションの標準ストレージ構成がいくつか用意されています。 これにより、更新通知、待機時間、およびデータの再構築に一般的に使用される構成が提供されます。  

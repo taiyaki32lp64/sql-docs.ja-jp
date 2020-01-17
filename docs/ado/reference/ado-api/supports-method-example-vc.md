@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 6e174179-9d95-41b9-b72b-6cdbdca6e255
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 98ccc6dfdc904c2789f1ee8a68c0097d5ec6f817
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 8eb0aa12a31337340854f941237d673abd1c601c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47828370"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67936715"
 ---
 # <a name="supports-method-example-vc"></a>Supports メソッドの例 (VC++)
 この例では、[サポート](../../../ado/reference/ado-api/supports-method.md)レコード セットでサポートされるオプションを表示するメソッドが別のカーソルの種類で開かれています。 DisplaySupport 関数は、この例を実行する必要があります。  
@@ -226,6 +225,6 @@ void PrintComError(_com_error &e) {
 }  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [RecordSet オブジェクト (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)   
  [Supports メソッド](../../../ado/reference/ado-api/supports-method.md)

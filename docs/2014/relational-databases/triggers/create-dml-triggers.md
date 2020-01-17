@@ -19,12 +19,12 @@ ms.assetid: b2b52258-642b-462e-8e0f-18c09d2eccf4
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: b4f4e9c799e7c2554807bf43083dece0f1899896
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 10399a26335912a9370aa21a386f58d04d04321e
+ms.sourcegitcommit: f912c101d2939084c4ea2e9881eb98e1afa29dad
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48194302"
+ms.lasthandoff: 10/23/2019
+ms.locfileid: "72796389"
 ---
 # <a name="create-dml-triggers"></a>DML トリガーの作成
   このトピックでは、 [!INCLUDE[tsql](../../includes/tsql-md.md)] および [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] の CREATE TRIGGER ステートメントを使用して、 [!INCLUDE[tsql](../../includes/tsql-md.md)] DML トリガーを作成する方法について説明します。  
@@ -34,7 +34,7 @@ ms.locfileid: "48194302"
 ### <a name="limitations-and-restrictions"></a>制限事項と制約事項  
  DML トリガーの作成に関する制限事項と制約事項の一覧については、「[CREATE TRIGGER &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-trigger-transact-sql)」を参照してください。  
   
-###  <a name="Permissions"></a> Permissions  
+###  <a name="Permissions"></a> アクセス許可  
  トリガーを作成するテーブルまたはビューに対する ALTER 権限が必要です。  
   
 ##  <a name="Procedures"></a> DML トリガーの作成方法  
@@ -48,7 +48,7 @@ ms.locfileid: "48194302"
   
 1.  **オブジェクト エクスプローラー**で、 [!INCLUDE[ssDE](../../../includes/ssde-md.md)] のインスタンスに接続し、そのインスタンスを展開します。  
   
-2.  **[データベース]**、 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] データベース、 **[テーブル]** 、 **Purchasing.PurchaseOrderHeader**テーブルの順に展開します。  
+2.  **[データベース]** 、 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] データベース、 **[テーブル]** 、 **Purchasing.PurchaseOrderHeader**テーブルの順に展開します。  
   
 3.  **[トリガー]** を右クリックし、 **[新しいトリガー]** をクリックします。  
   
@@ -56,21 +56,21 @@ ms.locfileid: "48194302"
   
 5.  **[テンプレート パラメーターの値の指定]** ダイアログ ボックスで、各パラメーターに次の値を入力します。  
   
-    |パラメーター|値|  
+    |パラメーター|の値|  
     |---------------|-----------|  
     |Author|*名前*|  
     |Create Date|*今日の日付*|  
-    |説明|ベンダーへの新しい購買発注の挿入を許可する前に、ベンダーの信用格付けを確認します。|  
+    |Description|ベンダーへの新しい購買発注の挿入を許可する前に、ベンダーの信用格付けを確認します。|  
     |Schema_Name|Purchasing|  
     |Trigger_Name|NewPODetail2|  
     |Table_Name|PurchaseOrderDetail|  
     |Data_Modification_Statement|一覧から UPDATE と DELETE を削除します。|  
   
-6.  **[OK]** をクリックします。  
+6.  クリックして **OK**です。  
   
 7.  **クエリ エディター**で、コメント `-- Insert statements for trigger here` を次のステートメントに置き換えます。  
   
-    ```tsql  
+    ```sql  
     IF @@ROWCOUNT = 1  
     BEGIN  
        UPDATE Purchasing.PurchaseOrderHeader  
@@ -108,7 +108,7 @@ ms.locfileid: "48194302"
   
 3.  次の例をコピーしてクエリ ウィンドウに貼り付け、 **[実行]** をクリックします。 この例は、上と同じ DML トリガーを作成します。  
   
-    ```  
+    ```sql
     -- Trigger valid for multirow and single row inserts  
     -- and optimal for single row inserts.  
     USE AdventureWorks2012;  
@@ -136,7 +136,3 @@ ms.locfileid: "48194302"
           (SELECT PurchaseOrderID FROM inserted)  
     END;  
     ```  
-  
-##  <a name="PowerShellProcedure"></a> [はじめに](#Top)  
-  
-  

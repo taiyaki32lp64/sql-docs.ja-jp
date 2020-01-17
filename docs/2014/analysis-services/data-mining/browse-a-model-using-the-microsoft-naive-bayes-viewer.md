@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - discrimination [Analysis Services]
@@ -23,12 +22,12 @@ ms.assetid: 19743095-63c1-4486-8c1d-2efc143243be
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: e90593dc605d700ed766d089e4605bd8cd243399
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 668ca4cfae7b660ff9e44de06c8523d8f9324cc9
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48112082"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66086030"
 ---
 # <a name="browse-a-model-using-the-microsoft-naive-bayes-viewer"></a>Microsoft Naive Bayes ビューアーを使用したモデルの参照
   [!INCLUDE[msCoName](../../includes/msconame-md.md)]  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] Naive Bayes ビューアーには、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Naive Bayes アルゴリズムを使用して作成されたマイニング モデルが表示されます。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Naive Bayes アルゴリズムは、予測モデリング タスクに非常に適した分類アルゴリズムです。 このアルゴリズムの詳細については、「 [Microsoft Naive Bayes アルゴリズム](microsoft-naive-bayes-algorithm.md)」を参照してください。  
@@ -73,7 +72,7 @@ ms.locfileid: "48112082"
  [トップに戻る](#BKMK_ViewerTabs)  
   
 ##  <a name="BKMK_Discrimination"></a> 属性の識別  
- **[属性の識別]** タブを使用するには、予測可能属性を選択し、 **[属性]**、 **[値 1]**、および **[値 2]** の一覧から属性の状態を 2 つ選択します。 **[属性の識別]** タブのグリッドの列に、次の情報が表示されます。  
+ **[属性の識別]** タブを使用するには、予測可能属性を選択し、 **[属性]** 、 **[値 1]** 、および **[値 2]** の一覧から属性の状態を 2 つ選択します。 **[属性の識別]** タブのグリッドの列に、次の情報が表示されます。  
   
  **[属性]**  
  予測可能属性の 1 つの状態を優先する状態が含まれているデータセット内の別の属性が一覧表示されます。  

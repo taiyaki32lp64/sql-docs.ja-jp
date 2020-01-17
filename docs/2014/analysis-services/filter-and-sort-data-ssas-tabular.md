@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.bidtoolset.customfilterdb.f1sql12.asvs.bidtoolset.notallitemsshowing.f1sql12.asvs.bidtoolset.autofiltermenu.f1
@@ -13,12 +12,12 @@ ms.assetid: 55ebd7a6-2458-4398-911f-fcfeb2413f1b
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 0987dc64ae4e2fe750073c67cb38b73924708643
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: faa6198bc9fa42b55be63ec57ff49ed6703ef260
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48195742"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66081256"
 ---
 # <a name="filter-and-sort-data-ssas-tabular"></a>データのフィルター処理と並べ替え (SSAS テーブル)
   テーブル モデルのテーブルで作業する場合は、モデル デザイナーのコントロールを使用してデータのフィルター処理または並べ替えを行うことができます。 計算内にフィルターを作成して、データの列またはテーブルから使用されるデータを制御することもできます。 各種のフィルターは、対応するウィンドウ内でのみ機能します。  

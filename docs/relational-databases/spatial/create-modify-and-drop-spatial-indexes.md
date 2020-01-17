@@ -14,16 +14,15 @@ helpviewer_keywords:
 - indexes [SQL Server], modifying
 - spatial indexes [SQL Server], modifying
 ms.assetid: 00c1b927-8ec5-44cf-87c2-c8de59745735
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
+author: MladjoA
+ms.author: mlandzic
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: efaa2078b561c0c69fbcff2f83eed09f7d3c24ff
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 1c6be1e3a8b05daf16ec845a307679620d2b1d00
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51669611"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68048707"
 ---
 # <a name="create-modify-and-drop-spatial-indexes"></a>空間インデックスの作成、変更、および削除
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -57,7 +56,7 @@ ms.locfileid: "51669611"
   
 7.  インデックスを作成する空間列を指定するには、 **[追加]** をクリックします。  
   
-8.  **[*\<テーブル名>* から列を選択]** ダイアログ ボックスで、**geometry** 型または **geography** 型の列を選択します (対応するチェック ボックスをオンにします)。 その他の空間列は編集できなくなります。 別の空間列を選択するには、先に現在選択されている列の選択を解除する必要があります。 完了したら、 **[OK]** をクリックします。  
+8.  **[ *\<テーブル名>* から列を選択]** ダイアログ ボックスで、**geometry** 型または **geography** 型の列を選択します (対応するチェック ボックスをオンにします)。 その他の空間列は編集できなくなります。 別の空間列を選択するには、先に現在選択されている列の選択を解除する必要があります。 完了したら、 **[OK]** をクリックします。  
   
 9. **[インデックス キー列]** グリッドで、選択した列を確認します。  
   
@@ -65,7 +64,7 @@ ms.locfileid: "51669611"
   
 11. **[空間]** ページで、インデックスの空間プロパティに対して使用する値を指定します。  
   
-     **geometry** 型の列にインデックスを作成する場合は、境界ボックスの座標 **(**_X-min_**,**_Y-min_**)** および **(**_X-max_**,**_Y-max_**)** を指定する必要があります。 **geography** 型の列のインデックスの場合は、 **[地理グリッド]** テセレーション スキームを指定すると境界ボックスのフィールドが読み取り専用になります。地理グリッド テセレーションでは境界ボックスは使用されません。  
+     **geometry** 型の列にインデックスを作成する場合は、境界ボックスの座標 **(** _X-min_ **,** _Y-min_ **)** および **(** _X-max_ **,** _Y-max_ **)** を指定する必要があります。 **geography** 型の列のインデックスの場合は、 **[地理グリッド]** テセレーション スキームを指定すると境界ボックスのフィールドが読み取り専用になります。地理グリッド テセレーションでは境界ボックスは使用されません。  
   
      また、 **[オブジェクトごとのセル数]** フィールドに既定以外の値を指定したり、テセレーション スキームの任意のレベルのグリッド密度を指定したりすることもできます。 オブジェクトごとのセル数の既定値は、 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] では 16、 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 以降では 8 で、 **のグリッド密度の既定値は** [中] [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]です。  
   

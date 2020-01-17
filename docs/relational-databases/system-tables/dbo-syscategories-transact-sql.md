@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: eb2cb75c-dc58-4a5b-b329-664e9fe20ce0
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 0ee0509469f7a9bddca066a6e05416a13685ad9e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 27056917d828313eaa97ad204d0297cec0fb7995
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47703520"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68084671"
 ---
 # <a name="dbosyscategories-transact-sql"></a>dbo.syscategories (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

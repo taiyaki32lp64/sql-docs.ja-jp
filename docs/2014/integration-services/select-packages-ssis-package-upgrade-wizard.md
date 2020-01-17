@@ -4,21 +4,20 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.is.upgradewizard.selectpackages.f1
 ms.assetid: 224100f1-51f6-4f1f-91a2-054819c76ae8
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: c355c5f85fe68e091bcaf8f45f8dea9856a7ab89
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: ccf14ace0a160be4ca9ecc5287ca45f077ba7e16
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48187367"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66056018"
 ---
 # <a name="select-packages-ssis-package-upgrade-wizard"></a>[パッケージの選択] (SSIS パッケージ アップグレード ウィザード)
   **[パッケージの選択]** ページを使用すると、アップグレードするパッケージを選択できます。 このページには、ウィザードの **[ソースの場所を選択]** ページで指定した場所に格納されているパッケージが一覧表示されます。  

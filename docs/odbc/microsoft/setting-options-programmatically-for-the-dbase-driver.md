@@ -15,17 +15,16 @@ helpviewer_keywords:
 ms.assetid: 336d0fd4-5448-4d8c-b7d9-49e857228e36
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: a268e72262f9f8252ea89774876f3d04008fe4c4
-ms.sourcegitcommit: 1e28f923cda9436a4395a405ebda5149202f8204
+ms.openlocfilehash: 27f675cca5115a8336f2be4b7fa96c091aee1b62
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/25/2019
-ms.locfileid: "55044438"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68063561"
 ---
 # <a name="setting-options-programmatically-for-the-dbase-driver"></a>dBASE ドライバーのプログラムでオプションの設定
 
-|オプション|説明|方法|  
+|OPTION|説明|メソッド|  
 |------------|-----------------|------------|  
 |おおよその行数|テーブル サイズの統計情報を近似するかどうかを判断します。 このオプションは、ODBC ドライバーを使用するすべてのデータ ソースに適用されます。|このオプションを動的に設定するには、使用、**統計**への呼び出しでキーワード[SQLConfigDataSource](../../odbc/microsoft/sqlconfigdatasource-dbase-driver.md)します。|  
 |照合順序|シーケンスは、フィールドが並べ替えられます。<br /><br /> シーケンスを指定できます。ASCII (既定値) または国際します。|このオプションを動的に設定するには、使用、 **COLLATINGSEQUENCE**への呼び出しでキーワード[SQLConfigDataSource](../../odbc/microsoft/sqlconfigdatasource-dbase-driver.md)します。|  

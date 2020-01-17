@@ -23,13 +23,12 @@ helpviewer_keywords:
 ms.assetid: a7f95ddc-5154-4ed5-8117-c9fcf2221f13
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 0eafeec6fb34729de0545df636386ed42186c7b1
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 3f8ebb1119e84caa80c0faa03c5c1405992723b2
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47629270"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68006345"
 ---
 # <a name="database-mirroring-sql-server"></a>データベース ミラーリング (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -54,7 +53,7 @@ ms.locfileid: "47629270"
   
      データベース ミラーリングを使用すると、動作モードが高い安全性モードであるか高パフォーマンス モードであるかに応じて、データの冗長化が完全に、またはほぼ完全に行われます。 詳細については、このトピックの「 [動作モード](#OperatingModes)」を参照してください。  
   
-     [!INCLUDE[ssEnterpriseEd10](../../includes/ssenterpriseed10-md.md)] 以降のバージョンで動作するデータベース ミラーリング パートナーには、データ ページの読み取りを妨げるエラーを自動的に解決するための機能が備わっています。 ミラーリング セッションを構成する一方のパートナーは、ページを読み取れない場合、もう一方のパートナーに新しいコピーを要求します。 要求が受け入れられ、新しいコピーを取得できた場合は、読み取り不可能なページがそのコピーに置き換えられます。通常、これによりエラーは解決します。 詳細については、このトピックの「 [ページの自動修復 &#40;可用性グループ: データベース ミラーリング&#41;](../../sql-server/failover-clusters/automatic-page-repair-availability-groups-database-mirroring.md)」を参照してください。  
+     [!INCLUDE[ssEnterpriseEd10](../../includes/ssenterpriseed10-md.md)] 以降のバージョンで動作するデータベース ミラーリング パートナーには、データ ページの読み取りを妨げるエラーを自動的に解決するための機能が備わっています。 ミラーリング セッションを構成する一方のパートナーは、ページを読み取れない場合、もう一方のパートナーに新しいコピーを要求します。 要求が受け入れられ、新しいコピーを取得できた場合は、読み取り不可能なページがそのコピーに置き換えられます。通常、これによりエラーは解決します。 詳細については、「[ページの自動修復 &#40;可用性グループ:データベース ミラーリング&#41;](../../sql-server/failover-clusters/automatic-page-repair-availability-groups-database-mirroring.md)」を参照してください。  
   
 -   アップグレード中の実稼働データベースの可用性が向上します。  
   
@@ -110,7 +109,7 @@ ms.locfileid: "47629270"
  ミラーリング セッションが開始または再開された後で、プリンシパル サーバーに蓄積されたプリンシパル データベースのログ レコードがミラー サーバーに送信される処理のこと。この処理では、遅延を解消するために、送信されたログ レコードをできるだけ短時間でディスクに書き込みます。  
   
  トランザクションの安全性  
- データベース ミラーリング セッションが同期して動作するか、非同期で動作するかを決定する、ミラーリング固有のデータベース プロパティ。 安全性レベルには FULL と OFF の 2 種類があります。  
+ データベース ミラーリング セッションが同期して動作するか、非同期で動作するかを決定する、ミラーリング固有のデータベース プロパティ。 安全性レベルには次の 2 種類があります: FULL と OFF。  
   
  ミラーリング監視サーバー  
  高い安全性モードの場合にのみ使用します。必要に応じて配置できる SQL Server のインスタンスです。ミラーリング監視サーバーを使用することにより、ミラー サーバーが自動フェールオーバーをいつ開始するかを認識できるようになります。 2 つのフェールオーバー パートナーとは異なり、ミラーリング監視サーバーではデータベースの操作は行いません。 ミラーリング監視サーバーの唯一の役割は、自動フェールオーバーをサポートすることです。  
@@ -345,11 +344,11 @@ ms.locfileid: "47629270"
   
 ## <a name="see-also"></a>参照  
  [データベース ミラーリング エンドポイント &#40;SQL Server&#41;](../../database-engine/database-mirroring/the-database-mirroring-endpoint-sql-server.md)   
- [ページの自動修復 &#40;可用性グループ: データベース ミラーリング&#41;](../../sql-server/failover-clusters/automatic-page-repair-availability-groups-database-mirroring.md)   
+ [ページの自動修復 &#40;可用性グループ:データベース ミラーリング&#41;](../../sql-server/failover-clusters/automatic-page-repair-availability-groups-database-mirroring.md)   
  [データベース ミラーリング構成のトラブルシューティング &#40;SQL Server&#41;](../../database-engine/database-mirroring/troubleshoot-database-mirroring-configuration-sql-server.md)   
  [データベース ミラーリング: 相互運用性と共存 &#40;SQL Server&#41;](../../database-engine/database-mirroring/database-mirroring-interoperability-and-coexistence-sql-server.md)   
  [データベース ミラーリングの前提条件、制限事項、推奨事項](../../database-engine/database-mirroring/prerequisites-restrictions-and-recommendations-for-database-mirroring.md)   
- [AlwaysOn 可用性グループの概要 &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   
+ [Always On 可用性グループの概要 &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   
  [ログ配布について &#40;SQL Server&#41;](../../database-engine/log-shipping/about-log-shipping-sql-server.md)  
   
   

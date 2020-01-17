@@ -23,11 +23,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 11e5b26a9e2a953aff319b41749d2c12be1a880e
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54135682"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63017103"
 ---
 # <a name="change-an-operator39s-availability"></a>オペレーターの可用性の変更
   このトピックでは、 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] で [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] または [!INCLUDE[tsql](../../includes/tsql-md.md)]を使用して、オペレーターの警告通知受信スケジュールを変更する方法について説明します。  
@@ -61,9 +61,9 @@ ms.locfileid: "54135682"
   
 3.  プラス記号をクリックして **[オペレーター]** フォルダーを展開します。  
   
-4.  有効または無効にするオペレーターを右クリックし、**[プロパティ]** を選択した後、**[全般]** タブをクリックします。  
+4.  有効または無効にするオペレーターを右クリックし、 **[プロパティ]** を選択した後、 **[全般]** タブをクリックします。  
   
-5.  [_operator_name_ **のプロパティ**] ダイアログ ボックスで、**[有効]** チェック ボックスをオンまたはオフにします。  
+5.  [_operator_name_ **のプロパティ**] ダイアログ ボックスで、 **[有効]** チェック ボックスをオンまたはオフにします。  
   
 6.  **[OK]** をクリックします。  
   

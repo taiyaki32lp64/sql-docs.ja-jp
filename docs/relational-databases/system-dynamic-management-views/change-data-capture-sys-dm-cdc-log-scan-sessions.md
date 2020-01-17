@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: d337e9d0-78b1-4a07-8820-2027d0b9f87c
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: d789ec1dd936b7eb40ecae56226a5879754a2260
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 52abdd077d892982c7fb63a34cec8bbdbd973379
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47698590"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68017995"
 ---
 # <a name="change-data-capture---sysdmcdclogscansessions"></a>変更データ キャプチャ - sys.dm_cdc_log_scan_sessions
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -38,7 +37,7 @@ ms.locfileid: "47698590"
 |**start_time**|**datetime**|セッションの開始時刻です。<br /><br /> ときに**session_id**集計されたデータの収集が開始された時間、0 を = です。|  
 |**end_time**|**datetime**|セッションの時間が終了しました。<br /><br /> NULL は、セッションがアクティブであることを表します。<br /><br /> ときに**session_id** 0、最後のセッションが終了した時刻を = です。|  
 |**duration**|**bigint**|セッションの実行時間 (秒単位) です。<br /><br /> 変更データ キャプチャ トランザクションがセッションに存在しない場合は 0 になります。<br /><br /> ときに**session_id** = 0、変更データ キャプチャ トランザクションですべてのセッションの期間を秒単位での合計。|  
-|**scan_phase**|**nvarchar(200)**|セッションの現在のフェーズです。 使用可能な値とその説明を次に示します。<br /><br /> 1: 構成の読み取り<br />2: 最初のスキャン、ハッシュ テーブルの作成<br />3: 2 つ目のスキャン<br />4: 2 つ目のスキャン<br />5: 2 つ目のスキャン<br />6: スキーマのバージョン管理<br />7: 最後のスキャン<br />8: 完了<br /><br /> ときに**session_id** = 0 の場合、この値は"Aggregate"は常にします。|  
+|**scan_phase**|**nvarchar(200)**|セッションの現在のフェーズです。 使用可能な値とその説明を次に示します。<br /><br /> 1:構成の読み取り<br />2:最初のスキャン、ハッシュ テーブルの作成<br />3:1 番目のスキャン<br />4:1 番目のスキャン<br />5:1 番目のスキャン<br />6:スキーマのバージョン管理<br />7:最後のスキャン<br />8:完成です<br /><br /> ときに**session_id** = 0 の場合、この値は"Aggregate"は常にします。|  
 |**error_count**|**int**|発生したエラーの数です。<br /><br /> ときに**session_id** = 0、すべてのセッションのエラーの合計数。|  
 |**start_lsn**|**nvarchar(23)**|セッションの開始 LSN です。<br /><br /> ときに**session_id** = 0 の場合、最後のセッションの開始の LSN。|  
 |**current_lsn**|**nvarchar(23)**|現在スキャン中の LSN です。<br /><br /> ときに**session_id** = 0 の場合、現在の LSN は 0。|  

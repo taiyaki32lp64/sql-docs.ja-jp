@@ -1,7 +1,7 @@
 ---
-title: システム構成チェッカーの検査パラメーター | Microsoft Docs
-ms.custom: ''
-ms.date: 09/05/2017
+title: システム構成チェッカーの検査パラメーター
+ms.custom: seo-lt-2019
+ms.date: 12/13/2019
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: install
@@ -22,13 +22,12 @@ ms.assetid: 8e712c15-6bfa-4d71-b303-9526101e5594
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-manager: craigg
-ms.openlocfilehash: 869461d6054d3db263f96604c16bae39b63293a5
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 09f7ccbaf84f035b882f56a6dc32f1233686db4d
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47622080"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75251558"
 ---
 # <a name="check-parameters-for-the-system-configuration-checker"></a>システム構成チェッカーの検査パラメーター
 

@@ -1,5 +1,5 @@
 ---
-title: Wtd (MDX) |Microsoft ドキュメント
+title: Wtd (MDX) |Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -8,13 +8,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-manager: kfile
-ms.openlocfilehash: 9a548f25d9114e9032f2462bbc97bda637abd6d9
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.openlocfilehash: eee40829c72394bf95a1bc06540a434a1c74e166
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34743782"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68125810"
 ---
 # <a name="wtd-mdx"></a>Wtd (MDX)
 
@@ -33,14 +32,14 @@ Wtd( [ Member_Expression ] )
  メンバーを 1 つ返す有効な多次元式 (MDX) 式です。  
   
 ## <a name="remarks"></a>コメント  
- 既定値は型のレベルを持つ最初の階層の現在のメンバーではメンバー式が指定されていない場合は、Time 型の最初のディメンションの週 (**Time.CurrentMember**)、メジャー グループにします。  
+ メンバー式が指定されていない、既定値は型のレベルを持つ最初の階層の現在のメンバーの Time 型の最初の次元数週間 (**Time.CurrentMember**) メジャー グループ内。  
   
- **Wtd**関数のショートカット関数では、 [PeriodsToDate](../mdx/periodstodate-mdx.md)レベルに設定されている関数*週間*です。 つまり、`Wtd(Member_Expression)`は等価`PeriodsToDate(Week_Level_Expression,Member_Expression)`です。  
+ **Wtd**関数のショートカット関数では、 [PeriodsToDate](../mdx/periodstodate-mdx.md)レベルに設定されている関数*週間*します。 つまり、`Wtd(Member_Expression)`と等価`PeriodsToDate(Week_Level_Expression,Member_Expression)`します。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [Qtd &#40;MDX&#41;](../mdx/qtd-mdx.md)   
  [Mtd &#40;MDX&#41;](../mdx/mtd-mdx.md)   
  [Ytd &#40;MDX&#41;](../mdx/ytd-mdx.md)   
- [MDX 関数リファレンス&#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
+ [MDX 関数リファレンス &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
   
   

@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 367835aa-9855-4791-a989-b3d08402ad4c
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 0bd0382906d3ee56055cc026036816af64b55dc6
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: a9597686f4c9ca5a90a8344b425b6808cd96477a
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52408974"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66060568"
 ---
 # <a name="configure-the-integration-services-service-as-a-cluster-resource"></a>クラスター リソースとして Integration Services サービスを構成する
   このセクションでは、 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] サービスをクラスター リソースとして構成する利点が欠点を上回ると判断したユーザー向けに、必要な構成手順を説明します。 ただし、 [!INCLUDE[msCoName](../includes/msconame-md.md)] では、 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] サービスをクラスター リソースとして構成することをお勧めしません。  
@@ -79,7 +78,7 @@ ms.locfileid: "52408974"
   
 4.  **[ファイル]** メニューの **[新規作成]** をポイントし、 **[リソース]** をクリックします。  
   
-5.  リソース ウィザードの **[新しいリソース]** ページで、名前を入力し、**[サービスの種類]** として **[汎用サービス]** を選択します。 **[グループ]** の値は変更せずに、 **[次へ]** をクリックします。  
+5.  リソース ウィザードの **[新しいリソース]** ページで、名前を入力し、 **[サービスの種類]** として **[汎用サービス]** を選択します。 **[グループ]** の値は変更せずに、 **[次へ]** をクリックします。  
   
 6.  **[実行可能な所有者]** ページで、リソースの実行可能な所有者として、クラスターのノードを追加または削除し、 **[次へ]** をクリックします。  
   

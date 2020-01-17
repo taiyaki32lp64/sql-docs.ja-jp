@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 266d987c-ecc5-4fa4-bfdf-8c584f1a1332
 author: Shamikg
 ms.author: Shamikg
-manager: craigg
-ms.openlocfilehash: 3a1a5172de403d7ecfa99887439db218adb1141a
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: b10d8704a6badaed7cb10888e266fcdc7bb339f3
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52504105"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68028924"
 ---
 # <a name="managing-backups-sybasetosql"></a>バックアップの管理 (SybaseToSQL)
 Sybase のバックアップの管理は、バックアップと復元のテストの実行の前後にデータをテーブルことができます。 バックアップ コンテンツの管理 ダイアログで、バックアップ コンテンツを管理することもできます。  
@@ -93,6 +92,6 @@ SQL Server のバックアップ管理は、バックアップと復元のテス
   
 -   をクリックして、**閉じます**ボタンをクリックしてダイアログを閉じます。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
 [移行されたデータベース オブジェクトのテスト&#40;SybaseToSQL&#41;](../../ssma/sybase/testing-migrated-database-objects-sybasetosql.md)  
   

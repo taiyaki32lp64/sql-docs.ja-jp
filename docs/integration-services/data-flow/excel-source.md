@@ -16,17 +16,20 @@ helpviewer_keywords:
 - Excel [Integration Services]
 - sources [Integration Services], Excel
 ms.assetid: e66349f3-b1b8-4763-89b7-7803541a4d62
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: 3a6d3345b1a6e8f7ffdebec05ae3f71d04cb8fe3
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 38af7d056eab840a5cf83eefa96ec2731e58bc67
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51639309"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71292769"
 ---
 # <a name="excel-source"></a>Excel ソース
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   Excel ソースは、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Excel ブック内のワークシートまたは範囲からデータを抽出します。  
 
 > [!IMPORTANT]
@@ -74,10 +77,10 @@ ms.locfileid: "51639309"
  **[データ アクセス モード]**  
  ソースからデータを選択する方法を指定します。  
   
-|ReplTest1|[説明]|  
+|[値]|[説明]|  
 |-----------|-----------------|  
 |[テーブルまたはビュー]|Excel ファイルのワークシートまたは名前付き範囲からデータを取得します。|  
-|[テーブル名またはビュー名の変数]|ワークシートまたは範囲の名前を変数に指定します。<br /><br /> **関連情報:** [パッケージで変数を使用する](https://msdn.microsoft.com/library/7742e92d-46c5-4cc4-b9a3-45b688ddb787)|  
+|[テーブル名またはビュー名の変数]|ワークシートまたは範囲の名前を変数に指定します。<br /><br /> **関連情報**: [パッケージで変数を使用する](https://msdn.microsoft.com/library/7742e92d-46c5-4cc4-b9a3-45b688ddb787)|  
 |[SQL コマンド]|SQL クエリを使用して、Excel ファイルからデータを取得します。 |  
 |[変数からの SQL コマンド]|SQL クエリ テキストを変数で指定します。|  
   
@@ -117,7 +120,7 @@ ms.locfileid: "51639309"
 ## <a name="excel-source-editor-columns-page"></a>[Excel ソース エディター] ([列] ページ)
   **[Excel ソース エディター]** ダイアログ ボックスの **[列]** ページを使用すると、出力列をそれぞれの外部 (変換元) 列にマップできます。  
   
-### <a name="options"></a>[変数]  
+### <a name="options"></a>オプション  
  **使用できる外部列**  
  データ ソース内の使用できる外部列の一覧を表示します。 このテーブルを使用して列を追加または削除することはできません。  
   
@@ -130,7 +133,7 @@ ms.locfileid: "51639309"
 ## <a name="excel-source-editor-error-output-page"></a>[Excel ソース エディター] ([エラー出力] ページ)
   **[Excel ソース エディター]** ダイアログ ボックスの **[エラー出力]** ページを使用すると、エラー処理オプションを選択したり、エラー出力列のプロパティを設定したりできます。  
   
-### <a name="options"></a>[変数]  
+### <a name="options"></a>オプション  
  **入力または出力**  
  データ ソースの名前を表示します。  
   

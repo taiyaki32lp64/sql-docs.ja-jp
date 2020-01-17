@@ -12,15 +12,14 @@ f1_keywords:
 helpviewer_keywords:
 - Delete Objects dialog box
 ms.assetid: 49541441-179c-40d3-ba0c-01bcae545984
-author: stevestein
-ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 0bbf560a9e38627e695cafb1463519a82979939f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 17a400e737a5df73c996db861ab00d72954c748a
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47640845"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68259370"
 ---
 # <a name="delete-objects"></a>[オブジェクトの削除]
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

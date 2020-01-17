@@ -15,15 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - STPointFromWKB method
 ms.assetid: b3b4e3bb-47bc-4621-99c4-c97aa60cdf8b
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: c511fd82dfdbe8d61faa2b19052c5d9478a4016c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: MladjoA
+ms.author: mlandzic
+ms.openlocfilehash: 97c519350024947ed6854554526b65754c6621a2
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47620711"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68120827"
 ---
 # <a name="stpointfromwkb-geography-data-type"></a>STPointFromWKB (geography データ型)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -47,9 +46,9 @@ STPointFromWKB ( 'WKB_point' , SRID )
 ## <a name="return-types"></a>戻り値の型  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 戻り値の型: **geography**  
   
- CLR 戻り値の型: **SqlGeography**  
+ CLR の戻り値の型:**SqlGeography**  
   
- OGC の型: **Point**  
+ OGC の型:**Point**  
   
 ## <a name="remarks"></a>Remarks  
  このメソッドでは、入力が整形式でない場合に、**FormatException** がスローされます。  

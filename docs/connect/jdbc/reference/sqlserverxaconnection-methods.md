@@ -10,17 +10,16 @@ ms.topic: conceptual
 ms.assetid: 89543177-b77c-4220-9f49-5d0c5379b567
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 1b67c1fc5045c4c6cfa9a99d3ba9842fd8e58ef8
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 20a0f24b36380995e7f317ce3979a9b24c49a5de
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47823230"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67970239"
 ---
 # <a name="sqlserverxaconnection-methods"></a>SQLServerXAConnection メソッド
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  メンバーに関する情報の[SQLServerXAConnection](../../../connect/jdbc/reference/sqlserverxaconnection-class.md)を参照してください[SQLServerXAConnection のメンバー](../../../connect/jdbc/reference/sqlserverxaconnection-members.md)します。  
+  [SQLServerXAConnection](../../../connect/jdbc/reference/sqlserverxaconnection-class.md)のメンバーの詳細については、「 [SQLServerXAConnection members](../../../connect/jdbc/reference/sqlserverxaconnection-members.md)」を参照してください。  
   
   

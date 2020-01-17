@@ -1,5 +1,5 @@
 ---
-title: 派生階層 (Master Data Services) | Microsoft Docs
+title: 派生階層
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -12,15 +12,14 @@ helpviewer_keywords:
 - hierarchies [Master Data Services], derived hierarchies
 - derived hierarchies, about derived hierarchies
 ms.assetid: a0fbd519-a10e-4cbd-92e6-5de9b8d3e3f0
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 2158ebe21779866fbdc3c356164eb3a17d1eed04
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
-ms.translationtype: HT
+ms.openlocfilehash: b7440834e5f12cd18081687aa584a8dcfe3ce2e8
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52767814"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73728277"
 ---
 # <a name="derived-hierarchies-master-data-services"></a>派生階層 (Master Data Services)
 
@@ -59,20 +58,20 @@ ms.locfileid: "52767814"
   
  階層構造は、メンバーがグループ化されている方法を示します。 ほとんどのメンバーを持つエンティティは一番下に位置します。  
   
- ![モデル構造体から派生した階層](../master-data-services/media/mds-conc-derived-hierarchy-structure.gif "モデル構造から派生した階層")  
+ ![モデル構造から派生した階層](../master-data-services/media/mds-conc-derived-hierarchy-structure.gif "モデル構造から派生した階層")  
   
  派生階層では、Product と Subcategory 間のリレーションシップを強調表示してから、Subcategory と Category 間のリレーションシップを強調表示できます。 この階層内にメンバーを表示すると、ツリー内の各レベルに同じエンティティのメンバーが含まれています。  
   
- ![マウンテン バイク派生階層の例](../master-data-services/media/mds-conc-derived-hierarchy-example.gif "マウンテン バイク派生階層の例")  
+ ![マウンテンバイク派生階層の例](../master-data-services/media/mds-conc-derived-hierarchy-example.gif "マウンテンバイク派生階層の例")  
   
  この種類の階層では、無効なレベルにメンバーを移動できません。 たとえば、自転車 Road-650 は、Road Bikes というサブカテゴリから Mountain Bikes という別のサブカテゴリに移動することはできますが、 1 {Bikes} などのカテゴリの直下に移動することはできません。 階層ツリー内でメンバーを移動するたびに、メンバーのドメイン ベースの属性値は、移動を反映して変更されます。  
   
 ## <a name="notes"></a>注  
- 派生階層ツリー内のすべてのメンバーは、コードによって並べ替えられます。 並べ替え順序は変更できません。  
+ 派生階層ツリー内のすべてのメンバーは、ID で並べ替えられます。 並べ替え順序は変更できません。  
   
  メンバーのドメイン ベースの属性が空で、その属性が派生階層で使用される場合、そのメンバーは階層内に表示されません。 属性への値の設定を要求するビジネス ルールを作成してください。 詳細については、「[属性値を要求する &#40;マスター データ サービス&#41;](../master-data-services/require-attribute-values-master-data-services.md)」を参照してください。  
   
-## <a name="related-tasks"></a>Related Tasks  
+## <a name="related-tasks"></a>関連タスク  
   
 |タスクの説明|トピック|  
 |----------------------|-----------|  

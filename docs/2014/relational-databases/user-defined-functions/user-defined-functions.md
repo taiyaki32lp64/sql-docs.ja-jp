@@ -14,11 +14,11 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 1ce64f821edd68dceaa1809a62a6b894ded6a868
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48084692"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68211697"
 ---
 # <a name="user-defined-functions"></a>ユーザー定義関数
   プログラミング言語の関数と同様、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のユーザー定義関数は、パラメーターを受け取り複雑な計算などの処理を実行してその結果を値として返すルーチンです。 戻り値は、単一のスカラー値または結果セットになります。  
@@ -61,10 +61,10 @@ ms.locfileid: "48084692"
   
 ##  <a name="FunctionTypes"></a> 関数の種類  
  スカラー関数  
- ユーザー定義のスカラー関数は、RETURNS 句で定義された型の単一のデータ値を返します。 インライン スカラー関数の場合、スカラー値は単一ステートメントの結果であり、関数の本体がありません。 複数ステートメントを持つスカラー関数の場合、BEGIN...END ブロックで定義された関数本体に、単一の値を返す一連の [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントが含まれています。 戻り値の型を除く任意のデータ型を指定できます`text`、 `ntext`、 `image`、 `cursor`、および`timestamp`します。  
+ ユーザー定義のスカラー関数は、RETURNS 句で定義された型の単一のデータ値を返します。 インライン スカラー関数の場合、スカラー値は単一ステートメントの結果であり、関数の本体がありません。 複数ステートメントを持つスカラー関数の場合、BEGIN...END ブロックで定義された関数本体に、単一の値を返す一連の [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントが含まれています。 この関数の戻り値には、`text`、`ntext`、`image`、`cursor`、および `timestamp` 以外の任意のデータ型を指定できます。  
   
  テーブル値関数  
- ユーザー定義テーブル値関数を返す、`table`データ型。 インライン テーブル値関数の場合、テーブルは単一の SELECT ステートメントの結果セットであり、関数の本体がありません。  
+ ユーザー定義テーブル値関数は、`table` データ型を返します。 インライン テーブル値関数の場合、テーブルは単一の SELECT ステートメントの結果セットであり、関数の本体がありません。  
   
  システム関数  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] には、さまざまな操作を実行するために使用できる多数のシステム関数が用意されています。 システム関数は変更できません。 詳細については、「[組み込み関数 &#40;Transact-SQL&#41;](/sql/t-sql/functions/functions)」、「[システム ストアド関数 &#40;Transact-SQL&#41;](/sql/relational-databases/system-functions/system-functions-for-transact-sql)」、および「[動的管理ビューと動的管理関数 &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/system-dynamic-management-views)」を参照してください。  

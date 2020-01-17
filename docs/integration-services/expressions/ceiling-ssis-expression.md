@@ -11,17 +11,20 @@ helpviewer_keywords:
 - smallest integer great than or equal to expression
 - CEILING function [SSIS]
 ms.assetid: c35bd4ee-1ab6-46ab-89a7-cf771527faa2
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: b3de7c4bd0d60c17feeb596859a34b877f9cfc3f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: a50fd15830d3509cd086ad4b62938658e1866494
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47759120"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71297675"
 ---
 # <a name="ceiling-ssis-expression"></a>CEILING (SSIS 式)
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   数値式以上で最小の整数値を返します。  
   
 ## <a name="syntax"></a>構文  
@@ -60,7 +63,7 @@ CEILING(-124.27)
 CEILING(0.00)  
 ```  
   
- 0.00 を返します。  
+ 0\.00 を返します。  
   
 ## <a name="see-also"></a>参照  
  [FLOOR &#40;SSIS 式&#41;](../../integration-services/expressions/floor-ssis-expression.md)   

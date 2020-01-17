@@ -13,11 +13,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 2e3d2a420529778584b9e187550772a112d459c9
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48219172"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62867966"
 ---
 # <a name="mssqlserver5229"></a>MSSQLSERVER_5229
     
@@ -30,7 +30,7 @@ ms.locfileid: "48219172"
 |イベント ソース|MSSQLSERVER|  
 |コンポーネント|SQLEngine|  
 |シンボル名|DBCC4_ANTIMATTER_IN_HEAP_OR_CLUSTERED_INDEX|  
-|メッセージ テキスト|テーブル エラー : オブジェクト ID O_ID、インデックス ID I_ID、パーティション ID PN_ID、アロケーション ユニット ID A_ID (型 TYPE) は問題のある列を含みますが、非クラスター化インデックスではありません。|  
+|メッセージ テキスト|テーブル エラー:オブジェクト ID O_ID、インデックス ID I_ID、パーティション ID PN_ID、アロケーション ユニット ID A_ID (型 TYPE) は、問題のある列が含まれていますが、非クラスター化インデックスではありません。|  
   
 ## <a name="explanation"></a>説明  
  ヒープまたはクラスター化インデックスに、含まれていてはいけない問題のある列が含まれています。  

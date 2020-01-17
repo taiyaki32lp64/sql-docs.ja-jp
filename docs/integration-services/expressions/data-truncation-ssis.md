@@ -13,17 +13,20 @@ helpviewer_keywords:
 - expressions [Integration Services], data truncation
 - truncate options [Integration Services]
 ms.assetid: 02461e15-49ca-445b-abb3-5c369c283ec2
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: d576dc67c517d5ce18bf8e931bc2f833338075fa
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 03b521f06925ad21847cf588b27c211167dbd425
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47601100"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71297643"
 ---
 # <a name="data-truncation-ssis"></a>データの切り捨て (SSIS)
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   あるデータ型から別のデータ型に値を変換すると、値が切り詰められる場合があります。  
   
  切り詰めは、次の場合に発生します。  

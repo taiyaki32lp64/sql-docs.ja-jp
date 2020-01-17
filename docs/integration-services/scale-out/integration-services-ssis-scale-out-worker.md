@@ -10,20 +10,23 @@ ms.technology: integration-services
 ms.topic: conceptual
 author: haoqian
 ms.author: haoqian
-manager: craigg
-ms.openlocfilehash: 1612e35dc2b586825d47979b6baa1a002b0d9895
-ms.sourcegitcommit: 480961f14405dc0b096aa8009855dc5a2964f177
+ms.openlocfilehash: 1f2be60ff216b65afbb50c0e97da4edfb4239aec
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/22/2019
-ms.locfileid: "54419817"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68082071"
 ---
 # <a name="integration-services-ssis-scale-out-worker"></a>Integration Services (SSIS) Scale Out Worker
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
 
 Scale Out Worker は Scale Out Worker サービスを実行し、Scale Out Master から実行タスクをプルします。 次に、ワーカーは `ISServerExec.exe` を利用し、ローカルでパッケージを実行します。
 
 ## <a name="configure-the-scale-out-worker-service"></a>Scale Out Worker サービスを構成する
-` \<drive\>:\Program Files\Microsoft SQL Server\140\DTS\Binn\WorkerSettings.config` ファイルを使用して Scale Out Worker サービスを構成できます。 構成ファイルの更新後に、サービスを再起動する必要があります。
+`\<drive\>:\Program Files\Microsoft SQL Server\140\DTS\Binn\WorkerSettings.config` ファイルを使用して、Scale Out Worker サービスを構成できます。 構成ファイルの更新後に、サービスを再起動する必要があります。
 
 |構成  |[説明]  |既定値|
 |---------|---------|---------|
@@ -36,16 +39,16 @@ Scale Out Worker は Scale Out Worker サービスを実行し、Scale Out Maste
 |StoreName|ワーカー証明書ストアの名前。|My|
 |AgentHeartbeatInterval|Scale Out Worker ハートビートの間隔。|00:01:00|
 |TaskHeartbeatInterval|Scale Out Worker でのタスク状態のレポート間隔。|00:00:10|
-|HeartbeatErrorTollerance|最後の正常なタスク ハートビート以降、この時間が経過すると、ハートビートのエラー応答が受信された場合にタスクは終了します。|00:10:00|
+|HeartbeatErrorTolerance|最後の正常なタスク ハートビート以降、この時間が経過すると、ハートビートのエラー応答が受信された場合にタスクは終了します。|00:10:00|
 |TaskRequestMaxCPU|Scale Out Worker のタスク要求時の CPU の上限。|70.0|
 |TaskRequestMinMemory|Scale Out Worker のタスク要求時のメモリの下限 (MB 単位)。|100.0|
 |MaxTaskCount|Scale Out Worker が保持できるタスクの最大数。|10|
-|LeaseInternval|Scale Out Worker によって保持されているタスクのリース間隔。|00:01:00|
+|LeaseInterval|Scale Out Worker によって保持されているタスクのリース間隔。|00:01:00|
 |TasksRootFolder|タスク ログのフォルダー。 値が空の場合、`\<drive\>:\Users\[account]\AppData\Local\SSIS\Cluster\Tasks` フォルダー パスが使用されます。 [アカウント] は、Scale Out Worker サービスを実行するアカウントです。 既定のアカウントは SSISScaleOutWorker140 です。|空|
 |TaskLogLevel|Scale Out Worker のタスク ログ レベル。 (Verbose 0x01、Information 0x02、Warning 0x04、Error 0x08、Progress 0x10、CriticalError 0x20、Audit 0x40)|126 (Information、Warning、Error、Progress、CriticalError、Audit)|
 |TaskLogSegment|タスク ログ ファイルの期間。|00:00:00|
 |TaskLogEnabled|タスク ログが有効かどうかを示します。|true|
-|ExecutionLogCacheFolder|パッケージ実行ログのキャッシュに使用するフォルダー。 値が空の場合、` \<drive\>:\Users\[account]\AppData\Local\SSIS\Cluster\Agent\ELogCache` フォルダー パスが使用されます。 [アカウント] は、Scale Out Worker サービスを実行するアカウントです。 既定のアカウントは SSISScaleOutWorker140 です。|空|
+|ExecutionLogCacheFolder|パッケージ実行ログのキャッシュに使用するフォルダー。 値が空の場合、`\<drive\>:\Users\[account]\AppData\Local\SSIS\Cluster\Agent\ELogCache` フォルダー パスが使用されます。 [アカウント] は、Scale Out Worker サービスを実行するアカウントです。 既定のアカウントは SSISScaleOutWorker140 です。|空|
 |ExecutionLogMaxBufferLogCount|メモリ内の 1 つの実行ログ バッファーの、キャッシュされる実行ログの最大数。|10000|
 |ExecutionLogMaxInMemoryBufferCount|実行ログ用のメモリ内の実行ログ バッファーの最大数。|10|
 |ExecutionLogRetryCount|実行ログに失敗した場合の再試行回数。|3|

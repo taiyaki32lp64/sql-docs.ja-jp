@@ -4,23 +4,22 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.exceldestadapter.erroroutput.f1
 helpviewer_keywords:
 - Excel Destination Editor
 ms.assetid: 72ae01cc-1774-4a36-9674-a0f2b2bf8c42
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 7807d702a09fabce5c1aba6c6782e7379d540b8c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 7eb1fa72d3ee607405a3ddc1dadafdac5d3e0088
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48125032"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66059198"
 ---
 # <a name="excel-destination-editor-error-output-page"></a>[Excel 変換先エディター] ([エラー出力] ページ)
   **[Excel 変換先エディター]** ダイアログ ボックスの **[詳細設定]** ページを使用すると、エラー処理オプションを指定できます。  
@@ -51,10 +50,10 @@ ms.locfileid: "48125032"
  **[適用]**  
  選択したセルにエラー処理オプションを適用します。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [Integration Services のエラーおよびメッセージのリファレンス](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [Excel 変換先エディター&#40;接続マネージャー ページ&#41;](../../2014/integration-services/excel-destination-editor-connection-manager-page.md)   
- [Excel 変換先エディター&#40;マッピング ページ&#41;](../../2014/integration-services/excel-destination-editor-mappings-page.md)   
+ [[Excel 変換先エディター] ([接続マネージャー] ページ)](../../2014/integration-services/excel-destination-editor-connection-manager-page.md)   
+ [[Excel 変換先エディター] ([マッピング] ページ)](../../2014/integration-services/excel-destination-editor-mappings-page.md)   
  [Foreach ループ コンテナーを使用して Excel のファイルおよびテーブルをループ処理する](control-flow/foreach-loop-container.md)  
   
   

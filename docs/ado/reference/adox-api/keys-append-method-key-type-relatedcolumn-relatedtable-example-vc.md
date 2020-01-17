@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: 28495b8f-18dc-482c-995d-a120f6ae2006
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 5e90a0bfa98a17a4b9330997cb3f59ef57778403
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 37fc296ecf520dc6ccc2964315a449bf508a2284
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47726370"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67965836"
 ---
 # <a name="keys-append-method-key-type-relatedcolumn-relatedtable-and-updaterule-properties-example-vc"></a>Keys Append メソッド、Key Type、RelatedColumn、RelatedTable、UpdateRule プロパティの例 (VC++)
 次のコードでは、新しい外部キーを作成する方法を示します。 これは、(顧客と注文) の 2 つのテーブルが存在しないと仮定します。  

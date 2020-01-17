@@ -21,16 +21,16 @@ helpviewer_keywords:
 ms.assetid: 67084a67-43ff-4065-987a-3b16d1841565
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: e526bbe9191aa83cedd45c2115b3cb4b54a937d2
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
+ms.openlocfilehash: f50978c19295f5973e787bdaab46efea6367308a
+ms.sourcegitcommit: 8732161f26a93de3aa1fb13495e8a6a71519c155
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54136082"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71710377"
 ---
 # <a name="enhance-transactional-replication-performance"></a>トランザクション レプリケーションのパフォーマンスの向上
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
   「 [レプリケーションの全般的パフォーマンスの向上](../../../relational-databases/replication/administration/enhance-general-replication-performance.md)」で説明した全般的なパフォーマンス向上のヒントを検討した後、トランザクション レプリケーションに固有なこれらの項目を併せて検討してください。  
   
 ## <a name="database-design"></a>データベースの設計  
@@ -58,7 +58,7 @@ ms.locfileid: "54136082"
   
 -   複数のパブリケーションにアーティクルを分散する。  
   
-     [**-SubscriptionStreams** パラメーター](#subscriptionstreams)を使用できない場合は、複数のパブリケーションを作成することを検討してください。 これらのパブリケーションにアーティクルを分散させると、サブスクライバーに対する変更をレプリケーションで並列的に適用できます。  
+     [ **-SubscriptionStreams** パラメーター](#subscriptionstreams)を使用できない場合は、複数のパブリケーションを作成することを検討してください。 これらのパブリケーションにアーティクルを分散させると、サブスクライバーに対する変更をレプリケーションで並列的に適用できます。  
   
 ## <a name="subscription-considerations"></a>サブスクリプションに関する注意点  
   
@@ -91,7 +91,7 @@ ms.locfileid: "54136082"
 #### <a name="readbatchsize"></a>ReadBatchSize
 - ログ リーダー エージェントの **-ReadBatchSize** パラメーターの値を大きくする。  
   
-ログ リーダー エージェントとディストリビューション エージェントは、トランザクションの読み取りとコミット操作のバッチ サイズをサポートしています。 バッチ サイズの既定値は 500 トランザクションです。 ログ リーダー エージェントは、レプリケーション用にマークが付けられているかどうかにかかわらず、一定の数のトランザクションをログから読み取ります。 多数のトランザクションがパブリケーション データベースに書き込まれているが、その中のごくわずかなサブセットだけにレプリケーションのマークが付いている場合、**-ReadBatchSize** パラメーターでログ リーダー エージェントの読み取りバッチ サイズを増やす必要があります。 このパラメーターは、Oracle パブリッシャーには適用されません。  
+ログ リーダー エージェントとディストリビューション エージェントは、トランザクションの読み取りとコミット操作のバッチ サイズをサポートしています。 バッチ サイズの既定値は 500 トランザクションです。 ログ リーダー エージェントは、レプリケーション用にマークが付けられているかどうかにかかわらず、一定の数のトランザクションをログから読み取ります。 多数のトランザクションがパブリケーション データベースに書き込まれているが、その中のごくわずかなサブセットだけにレプリケーションのマークが付いている場合、 **-ReadBatchSize** パラメーターでログ リーダー エージェントの読み取りバッチ サイズを増やす必要があります。 このパラメーターは、Oracle パブリッシャーには適用されません。  
 
    - 小さいトランザクション (500 コマンド未満) のワークロードでは、**ReadBatchSize** を大きくすると (最大 5000)、1 秒間に処理されるコマンドの数が増えます。 
    - 大きいワークロード (500 ～ 1000 コマンドのトランザクション) では、**ReadBatchSize** を大きくしてもパフォーマンスはあまり向上しません。 **ReadBatchSize** を大きくすると、1 回のラウンドトリップでディストリビューション データベースに書き込まれるトランザクションの数が増えます。 これにより、トランザクションとコマンドがディストリビューション エージェントによって処理される時間が長くなり、レプリケーション処理の待ち時間が増えます。  
@@ -116,7 +116,7 @@ ms.locfileid: "54136082"
   
 **–SubscriptionStreams** パラメーターを使用すると、集計レプリケーションのスループットを大幅に向上できます。 このパラメーターを使用すると、単一のスレッドを使用するときに存在するトランザクション特性の多くを維持しつつ、変更のバッチをサブスクライバーへの複数の接続で並列的に適用できます。 いずれかの接続が実行またはコミットに失敗した場合、進行中のバッチがすべての接続について中止されます。その場合、エージェントは、単一のストリームを使用して、失敗したバッチを再試行します。 この再試行フェーズが完了するまでは、サブスクライバー側に、トランザクションの一時的な不整合が存在する可能性があります。 サブスクライバーのトランザクション一貫性は、前回失敗したバッチが正常にコミットされた後で復元されます。  
   
-このエージェント パラメーターの値は、[sp_addsubscription &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addsubscription-transact-sql.md) の **@subscriptionstreams** を使用して指定できます。  
+このエージェント パラメーターの値は、[sp_addsubscription &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addsubscription-transact-sql.md) の `@subscriptionstreams` を使用して指定できます。  
 
 サブスクリプション ストリームの実装について詳しくは、「[Navigating SQL replication subscriptionStream setting](https://blogs.msdn.microsoft.com/repltalk/2010/03/01/navigating-sql-replication-subscriptionstreams-setting)」(SQL レプリケーション サブスクリプション ストリームの設定のナビゲーション) をご覧ください。
   

@@ -1,6 +1,7 @@
 ---
-title: 可用性データベースの中断 (SQL Server) | Microsoft Docs
-ms.custom: ''
+title: 可用性データベースの中断
+description: SQL Server Management Studio (SSMS)、Transact-SQL (T-SQL)、または PowerShell を使用して、Always On 可用性グループ内のデータベースのデータ移動を中断する方法について説明します。
+ms.custom: seo-lt-2019
 ms.date: 05/17/2016
 ms.prod: sql
 ms.reviewer: ''
@@ -16,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 86858982-6af1-4e80-9a93-87451f0d7ee9
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 409432676e85dd6d6626b3be2ec5aa375c802424
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 92f83bb31569a055bf9158a0388d9cb0630e9a1d
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47700940"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75251272"
 ---
 # <a name="suspend-an-availability-database-sql-server"></a>可用性データベースの中断 (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -44,9 +44,9 @@ ms.locfileid: "47700940"
   
      [前提条件](#Prerequisites)  
   
-     [推奨事項](#Recommendations)  
+     [Recommendations (推奨事項)](#Recommendations)  
   
-     [Security](#Security)  
+     [セキュリティ](#Security)  
   
 -   **データベースを中断するために使用するもの:**  
   
@@ -60,7 +60,7 @@ ms.locfileid: "47700940"
   
 -   [関連タスク](#RelatedTasks)  
   
-##  <a name="BeforeYouBegin"></a> 作業を開始する準備  
+##  <a name="BeforeYouBegin"></a> はじめに  
   
 ###  <a name="Restrictions"></a> 制限事項と制約事項  
  SUSPEND コマンドは、対象のデータベースをホストするレプリカによって受け付けられるとすぐに戻りますが、実際にはデータベースの中断が非同期に行われます。  
@@ -69,7 +69,7 @@ ms.locfileid: "47700940"
  中断するデータベースをホストするサーバー インスタンスに接続している必要があります。 プライマリ データベースとそれに対応するセカンダリ データベースを中断するには、プライマリ レプリカをホストするサーバー インスタンスに接続します。 プライマリ データベースを使用可能な状態で維持したままセカンダリ データベースを中断するには、セカンダリ レプリカに接続します。  
   
 ###  <a name="Recommendations"></a> 推奨事項  
- ボトルネックの発生中、1 つ以上のセカンダリ データベースを短時間中断すると、プライマリ レプリカのパフォーマンスが一時的に高まる効果が見込めます。 セカンダリ データベースが中断している間、対応するプライマリ データベースのトランザクション ログを切り捨てることはできません。 これにより、プライマリ データベースでログ レコードが蓄積されます。 そのため、中断したセカンダリ データベースをすぐに再開または削除することをお勧めします。 詳細については、このトピックの「 [補足情報: トランザクション ログがいっぱいになった状態の回避](#FollowUp)」を参照してください。  
+ ボトルネックの発生中、1 つ以上のセカンダリ データベースを短時間中断すると、プライマリ レプリカのパフォーマンスが一時的に高まる効果が見込めます。 セカンダリ データベースが中断している間、対応するプライマリ データベースのトランザクション ログを切り捨てることはできません。 これにより、プライマリ データベースでログ レコードが蓄積されます。 そのため、中断したセカンダリ データベースをすぐに再開または削除することをお勧めします。 詳細については、このトピックで後述する「[補足情報: トランザクション ログがいっぱいになった状態の回避](#FollowUp)」を参照してください。  
   
 ###  <a name="Security"></a> セキュリティ  
   
@@ -101,9 +101,9 @@ ms.locfileid: "47700940"
   
 1.  中断するデータベースのレプリカをホストするサーバー インスタンスに接続します。 詳細については、このトピックの「 [前提条件](#Prerequisites)」をご覧ください。  
   
-2.  次の [ALTER DATABASE](../../../t-sql/statements/alter-database-transact-sql-set-hadr.md)ステートメントを使用して、データベースを中断します。  
+2.  次の [ALTER DATABASE](../../../t-sql/statements/alter-database-transact-sql-set-hadr.md) ステートメントを使用して、データベースを中断します。  
   
-     ALTER DATABASE *database_name* SET HADR SUSPEND  
+     ALTER DATABASE *database_name* SET HADR SUSPEND;
   
 ##  <a name="PowerShellProcedure"></a> PowerShell の使用  
  **データベースを中断するには**  
@@ -126,7 +126,7 @@ ms.locfileid: "47700940"
   
 -   [SQL Server PowerShell プロバイダー](../../../relational-databases/scripting/sql-server-powershell-provider.md)  
   
-##  <a name="FollowUp"></a> Follow Up: Avoiding a Full Transaction Log  
+##  <a name="FollowUp"></a>補足情報: トランザクション ログがいっぱいになった状態の回避  
  通常、データベースで自動チェックポイントが実行されている場合は、次のログ バックアップの後、そのチェックポイントまでトランザクション ログが切り捨てられます。 ただし、セカンダリ データベースを中断している間、現在のすべてのログ レコードは、プライマリ データベースでアクティブのままになります。 最大サイズに到達したか、サーバー インスタンスの領域が不足して、トランザクション ログがいっぱいになると、データベースではそれ以上の更新を実行できません。  
   
  この問題を回避するには、次のいずれかの操作を実行する必要があります。  

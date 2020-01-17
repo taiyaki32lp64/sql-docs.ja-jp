@@ -1,7 +1,7 @@
 ---
 title: カーディナリティ推定 (SQL Server) | Microsoft Docs
 ms.custom: ''
-ms.date: 09/06/2017
+ms.date: 02/24/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -14,34 +14,55 @@ helpviewer_keywords:
 ms.assetid: baa8a304-5713-4cfe-a699-345e819ce6df
 author: julieMSFT
 ms.author: jrasnick
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 4f827b1de0a9cba06a17fc2b84724277e9daab22
-ms.sourcegitcommit: 40c3b86793d91531a919f598dd312f7e572171ec
+ms.openlocfilehash: 0f9e7ef2d1503088cba081b931e09f1fb3536b56
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53328852"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67946994"
 ---
 # <a name="cardinality-estimation-sql-server"></a>カーディナリティ推定 (SQL Server)
+
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
-この記事では、SQL システムに最適なカーディナリティ推定 (CE) 構成を評価し選択する方法を示しています。 最も正確なので、ほとんどのシステムで最新の CE のメリットを享受できます。 CE はクエリが返す可能性のある行の数を予測します。 クエリ オプティマイザーではカーディナリティ予測を使用して、最適なクエリ プランを生成します。 推定が正確であるほど、通常はクエリ オプティマイザーでより最適なクエリ プランを生成できます。  
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] クエリ オプティマイザーは、コストベースのオプティマイザーです。 つまり、実行のための推定処理コストが最も低いクエリ プランが選択されます。 クエリ オプティマイザーでは、主に次の 2 つの要素に基づいてクエリ プランを実行する際のコストが決定されます。
+
+- クエリ プランの各レベルで処理される行の総数。これをプランのカーディナリティと呼びます。
+- クエリ内の演算子で指示されているアルゴリズムのコスト モデル。
+
+最初の要素であるカーディナリティは、2 番目の要素であるコスト モデルの入力パラメーターとして使用します。 そのため、カーディナリティが向上すると、推定コストが適切になり、その結果実行プランも高速化します。
+
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] でのカーディナリティ推定は、インデックスまたは統計を作成するときに手動か自動で作成されたヒストグラムから主に取得されます。 また、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、クエリの制約情報および論理再書き込みを使用して、カーディナリティが決定されることもあります。
+
+次の例では、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] を使用してカーディナリティを正確に計算することができません。 その場合コストが正しく計算されないので、最適なクエリ プランが選択されない場合があります。 次に示す構造をクエリで使用しないようにすることで、クエリのパフォーマンスが向上する場合があります。 別のクエリ式や他の方法で代替できることがあるので、それについても記載してあります。
+
+- 同一テーブルの異なる列どうしを比較する比較演算子を述語で使用しているクエリ。
+- 次のいずれかの条件に該当し、演算子を述語で使用しているクエリ。
+  - 演算子の一方の側で使用されている列の統計が存在しない。
+  - 統計内の値の分布が不均一であるにもかかわらず、クエリにより選択度の高い値セットがシークされる。 これに該当するのは、主に演算子が等号 (=) 以外である場合です。
+  - 等しくない (!=) 比較演算子または `NOT` 論理演算子を述語で使用している。
+- SQL Server の組み込み関数、または引数が定数値でないスカラー値関数かユーザー定義関数を使用するクエリ。
+- 算術連結演算子または文字列連結演算子によって結合した列を含んでいるクエリ。
+- クエリのコンパイル時または最適化時に値が確定しない変数を比較するクエリ。
+
+この記事では、ご利用のシステムに最適な CE 構成を評価して選択する方法を示しています。 最も正確なので、ほとんどのシステムで最新の CE のメリットを享受できます。 CE はクエリが返す可能性のある行の数を予測します。 クエリ オプティマイザーではカーディナリティ予測を使用して、最適なクエリ プランを生成します。 推定が正確であるほど、通常はクエリ オプティマイザーでより最適なクエリ プランを生成できます。  
   
 アプリケーション システムには、新しい CE が原因で低速のプランに変更された重要なクエリが含まれている可能性があります。 そのようなクエリは、次のいずれかのようになります。  
   
 - OLTP (オンライン トランザクション処理) クエリ。頻繁に実行され、その複数のインスタンスがしばしば同時に実行されます。  
 - SELECT。OLTP 営業時間中に実行される大量の集計と一緒に実行されます。  
   
-新規の CE で低速で実行するクエリを識別するための手法があります。 そして、パフォーマンスの問題に対処する方法のオプションもあります。     
+新規の CE で低速で実行するクエリを識別するための手法があります。 そして、パフォーマンスの問題に対処する方法のオプションもあります。
   
-## <a name="versions-of-the-ce"></a>CE のバージョン  
+## <a name="versions-of-the-ce"></a>CE のバージョン
+
 1998 年には、CE の主要な更新プログラムは、互換性レベルが 70 の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 7.0 の一部でした。 このバージョンの CE モデルは、次の 4 つの基本的な前提条件で設定されています。
 
 -  **非依存性:** 異なる列のデータ分布は、相関関係情報があって使用可能な場合を除き、相互に独立しているものと想定されます。
 -  **統一性:** 個別の値は等間隔であり、すべて同じ頻度です。 具体的には、各[ヒストグラム](../../relational-databases/statistics/statistics.md#histogram) ステップ内では、個別の値は均等に分散し、各値は同じ頻度です。 
 -  **コンテインメント (単純):** ユーザーは存在するデータをクエリします。 たとえば、2 つのテーブル間の等価結合では、結合の選択度を推定するためにヒストグラムを結合する前に、各入力のヒストグラムの述語選択度<sup>1</sup>を考慮します。 
--  **包含:**`Column = Constant` のフィルター述語では、定数が関連付けられた列に実際に存在すると想定されます。 対応するヒストグラム ステップが空ではない場合、ステップの個別値のいずれかは述語の値と一致するものと想定されます。
+-  **包含:** `Column = Constant` のフィルター述語では、定数が関連付けられた列に実際に存在すると想定されます。 対応するヒストグラム ステップが空ではない場合、ステップの個別値のいずれかは述語の値と一致するものと想定されます。
 
   <sup>1</sup> 述語を満たす行数。
 
@@ -50,7 +71,7 @@ ms.locfileid: "53328852"
 -  **非依存性**が**相関関係**になります:異なる列の値の組み合わせは必ずしも独立していません。 これはより実際のデータ クエリと似ている可能性があります。
 -  **単純なコンテインメント**は**ベース コンテインメント**になります:ユーザーは存在しないデータをクエリする可能性があります。 たとえば、2 つのテーブル間の等価結合では、ベース テーブル ヒストグラムを使用して結合の選択度を推定した後、述語選択度を考慮します。
   
-**互換性レベル:**[COMPATIBILITY_LEVEL](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md) に次の [!INCLUDE[tsql](../../includes/tsql-md.md)] コードを使用して、データベースが特定のレベルであることを確認します。  
+**互換性レベル:** [COMPATIBILITY_LEVEL](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md) に次の [!INCLUDE[tsql](../../includes/tsql-md.md)] コードを使用して、データベースが特定のレベルであることを確認します。  
 
 ```sql  
 SELECT ServerProperty('ProductVersion');  
@@ -86,11 +107,11 @@ GO
  ```sql  
 SELECT CustomerId, OrderAddedDate  
 FROM OrderTable  
-WHERE OrderAddedDate >= '2016-05-01'; 
+WHERE OrderAddedDate >= '2016-05-01'
 OPTION (USE HINT ('FORCE_LEGACY_CARDINALITY_ESTIMATION'));  
 ```
  
-**クエリ ストア:**[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] から導入されたクエリ ストアは、クエリのパフォーマンスを確認する場合に便利なツールです。 クエリ ストアを有効にすると、[!INCLUDE[ssManStudio](../../includes/ssManStudio-md.md)] の**オブジェクト エクスプローラー**で、データベース ノード以下に**クエリ ストア** ノードが表示されます。  
+**クエリ ストア:** [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] から導入されたクエリ ストアは、クエリのパフォーマンスを確認する場合に便利なツールです。 クエリ ストアを有効にすると、[!INCLUDE[ssManStudio](../../includes/ssManStudio-md.md)] の**オブジェクト エクスプローラー**で、データベース ノード以下に**クエリ ストア** ノードが表示されます。  
   
 ```sql  
 ALTER DATABASE <yourDatabase>  
@@ -225,7 +246,7 @@ CE 120 以降で効果の低いクエリ プランが、クエリで生成され
   
 - **sp_query_store_force_plan**を実行します。  
   
-- [!INCLUDE[ssManStudio](../../includes/ssManStudio-md.md)] で、**[クエリ ストア]** ノードを展開し、**[トップ リソース コンシューマー ノード]** を右クリックして、**[トップ リソース コンシューマー ノードの表示]** をクリックします。 **[プランの強制]** と **[プランを強制しない]** というラベルのボタンが表示されます。  
+- [!INCLUDE[ssManStudio](../../includes/ssManStudio-md.md)] で、 **[クエリ ストア]** ノードを展開し、 **[トップ リソース コンシューマー ノード]** を右クリックして、 **[トップ リソース コンシューマー ノードの表示]** をクリックします。 **[プランの強制]** と **[プランを強制しない]** というラベルのボタンが表示されます。  
   
 クエリ ストアの詳細については、「 [クエリのストアを使用した、パフォーマンスの監視](../../relational-databases/performance/monitoring-performance-by-using-the-query-store.md)」を参照してください。  
   
@@ -273,5 +294,6 @@ WHERE s.ticket = r.ticket AND
  [SQL Server 2014 のカーディナリティ推定機能によるクエリプランの最適化](https://msdn.microsoft.com/library/dn673537.aspx)  
  [クエリ ヒント](../../t-sql/queries/hints-transact-sql-query.md)     
  [USE HINT クエリ ヒント](../../t-sql/queries/hints-transact-sql-query.md#use_hint)       
- [関連するビュー、関数、プロシージャ](../../relational-databases/performance/monitoring-performance-by-using-the-query-store.md)    
+ [クエリ調整アシスタントを使用したデータベースのアップグレード](../../relational-databases/performance/upgrade-dbcompat-using-qta.md)           
+ [クエリのストアを使用した、パフォーマンスの監視](../../relational-databases/performance/monitoring-performance-by-using-the-query-store.md)    
  [クエリ処理アーキテクチャ ガイド](../../relational-databases/query-processing-architecture-guide.md)   

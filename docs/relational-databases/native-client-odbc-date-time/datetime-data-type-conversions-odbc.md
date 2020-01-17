@@ -14,18 +14,16 @@ helpviewer_keywords:
 ms.assetid: 66b9d282-c88d-40e5-93c2-fd5499a74458
 author: MightyPen
 ms.author: genemi
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 269b07032cd76d18dabfe43e14435c830c4a627f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 8c5d601f53492b72efbcf730200fbd431f2649b1
+ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47748030"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73783909"
 ---
 # <a name="datetime-data-type-conversions-odbc"></a>datetime データ型変換 (ODBC)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-[!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
 
   次の変換は、ODBC によって既に定義されているか、ODBC の一貫性がある拡張機能です。 各プロバイダーによって提供される変換は、プロバイダーが管理するコミュニティによって決まるので、プロバイダー間で一貫性がないことがよくあります。 角かっこで囲まれている値は省略可能です。  
   
@@ -35,7 +33,7 @@ ms.locfileid: "47748030"
   
 -   date 型の文字列の形式は 'yyyy-mm-dd' です。  
   
- 文字列からの変換では、空白文字やフィールドの幅を柔軟に処理できます。 詳細については、の「データ形式: 文字列とリテラルをデータする"セクションを参照してください。 [ODBC の日付と時刻の強化に対するデータ型のサポート](../../relational-databases/native-client-odbc-date-time/data-type-support-for-odbc-date-and-time-improvements.md)します。  
+ 文字列からの変換では、空白文字やフィールドの幅を柔軟に処理できます。 詳細については、「 [ODBC の日付と時刻の機能強化のためのデータ型のサポート](../../relational-databases/native-client-odbc-date-time/data-type-support-for-odbc-date-and-time-improvements.md)」の「データ形式: 文字列とリテラル」を参照してください。  
   
  一般的な変換規則を次に示します。  
   
@@ -47,9 +45,9 @@ ms.locfileid: "47748030"
   
 -   サーバーの型にタイム ゾーンが存在しなくても、クライアントの型にタイム ゾーンがある場合、時刻は UTC に変換されてからサーバーに格納されます。  
   
--   受信側が時刻を格納できない時間が存在する場合、時刻部分は無視されます。  
+-   時刻が存在するが、受信側が時刻を格納できない場合、時刻部分は無視されます。  
   
--   日付が存在する、受信側が日付を格納できない場合、日付部分は無視されます。  
+-   日付が存在するが、受信側が日付を格納できない場合、日付部分は無視されます。  
   
 -   C データ型から SQL データ型に変換する際に秒または秒の小数部の切り捨てが発生すると、"Datetime フィールド オーバーフロー" というメッセージで SQLSTATE 22008 の診断レコードが生成されます。  
   
@@ -63,6 +61,6 @@ ms.locfileid: "47748030"
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の日付型または時刻型から C 型に変換する際に考慮する問題を示します。  
   
 ## <a name="see-also"></a>参照  
- [日付と時刻の強化&#40;ODBC&#41;](../../relational-databases/native-client-odbc-date-time/date-and-time-improvements-odbc.md)  
+ [日付と時刻の&#40;機能強化 ODBC&#41;](../../relational-databases/native-client-odbc-date-time/date-and-time-improvements-odbc.md)  
   
   

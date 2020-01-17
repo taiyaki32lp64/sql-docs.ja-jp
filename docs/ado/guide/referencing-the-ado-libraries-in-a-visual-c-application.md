@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: d3ea12ec-bca8-48c3-af57-ce14576108c9
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 772dbc55fdeb3b038399a3740be472497666e4da
-ms.sourcegitcommit: 0f7cf9b7ab23df15624d27c129ab3a539e8b6457
+ms.openlocfilehash: 62fb1b89299af1f466e446c8adba422a841f0196
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51290788"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67923024"
 ---
 # <a name="referencing-the-ado-libraries-in-a-visual-c-application"></a>Visual C++ アプリケーションで ADO ライブラリを参照する
 Visual C アプリケーションでの ADO の最新バージョンを使用するには、次を使用して`#import`ディレクティブ。  

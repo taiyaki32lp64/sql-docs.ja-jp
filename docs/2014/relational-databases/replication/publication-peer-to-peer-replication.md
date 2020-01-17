@@ -13,11 +13,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 09aea8e66b76103c27bdc44ade4df48a1e505e7f
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52766164"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63021625"
 ---
 # <a name="publication-peer-to-peer-replication"></a>[パブリケーション] (ピア ツー ピア レプリケーション)
   **[パブリケーション]** ページでは、ピア ツー ピア レプリケーションに対して有効になっているトランザクション パブリケーションを表示します。 パブリケーションは、 **[パブリケーションのプロパティ]** ダイアログ ボックスの **[サブスクリプション オプション]** ページで有効になっています。  

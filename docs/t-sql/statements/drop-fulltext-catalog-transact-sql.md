@@ -21,13 +21,12 @@ helpviewer_keywords:
 ms.assetid: b54efb0b-400b-49ce-923b-ce20a2a12255
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: bcaaf027081bbd8713d52cc2642e1bacb460278c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 03d1c92ddd48daf48f6b410e5a613f997b08640c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47847360"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68044255"
 ---
 # <a name="drop-fulltext-catalog-transact-sql"></a>DROP FULLTEXT CATALOG (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]

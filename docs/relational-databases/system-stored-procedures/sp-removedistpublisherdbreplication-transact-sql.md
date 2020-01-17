@@ -1,5 +1,5 @@
 ---
-title: sp_removedistpublisherdbreplication (TRANSACT-SQL) |Microsoft Docs
+title: sp_removedistpublisherdbreplication (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
@@ -15,16 +15,15 @@ helpviewer_keywords:
 ms.assetid: 9bfe002a-25b5-4226-bcfb-feb2060d6b4a
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: d57034b65559e696a9692a1c71e612c7d921661b
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 49c06ac45a91014199caa75c5893971f6f3de715
+ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52754644"
+ms.lasthandoff: 08/03/2019
+ms.locfileid: "68771031"
 ---
 # <a name="spremovedistpublisherdbreplication-transact-sql"></a>sp_removedistpublisherdbreplication (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
   ディストリビューター側の特定のパブリケーションに属するパブリッシュ メタデータを削除します。 このストアド プロシージャは、ディストリビューター側でディストリビューション データベースについて実行されます。  
   
@@ -39,32 +38,30 @@ sp_removedistpublisherdbreplication [ @publisher = ] 'publisher'
 ```  
   
 ## <a name="arguments"></a>引数  
- [  **@publisher=** ] **'***パブリッシャー***'**  
- パブリッシャー サーバーの名前を指定します。 *パブリッシャー*は**sysname**、既定値はありません。  
+`[ @publisher = ] 'publisher'`パブリッシャーサーバーの名前を指定します。 *パブリッシャー* は **sysname** 、既定値はありません。  
   
- [  **@publisher_db=** ] **'***publisher_db***'**  
- パブリケーション データベースの名前です。 *publisher_db*は**sysname**既定値はありません。  
+`[ @publisher_db = ] 'publisher_db'`パブリケーションデータベースの名前を指定します。 *publisher_db*は**sysname**既定値はありません。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  **0** (成功) または**1** (失敗)  
   
 ## <a name="remarks"></a>コメント  
- **sp_removedistpublisherdbreplication**トランザクションとスナップショット レプリケーションで使用されます。  
+ **sp_removedistpublisherdbreplication**は、トランザクションレプリケーションとスナップショットレプリケーションで使用します。  
   
- **sp_removedistpublisherdbreplication**もディストリビューション データベースを削除しない限り、パブリッシュされたデータベースを再作成する必要があるときに使用されます。 次のメタデータが削除されます。  
+ **sp_removedistpublisherdbreplication**は、ディストリビューションデータベースを削除せずに、パブリッシュされたデータベースを再作成する必要がある場合に使用します。 次のメタデータが削除されます。  
   
 -   すべてのパブリケーション メタデータ  
   
 -   そのパブリケーションに属するすべてのアーティクルのメタデータ  
   
--   そのパブリケーションのすべてのサブスクリプションのメタデータ  
+-   パブリケーションに対するすべてのサブスクリプションのメタデータ。  
   
--   そのパブリケーションに属するすべてのレプリケーション エージェント ジョブのメタデータ  
+-   パブリケーションに属するすべてのレプリケーションエージェントジョブのメタデータ。  
   
 ## <a name="permissions"></a>アクセス許可  
- メンバーのみ、 **sysadmin**のメンバー、またはディストリビューターの固定サーバー ロール、 **db_owner**ディストリビューション データベースの固定データベース ロールが実行できる**sp _removedistpublisherdbreplication**します。  
+ **Sp_removedistpublisherdbreplication**を実行できるのは、ディストリビューター側の固定サーバーロール**sysadmin**のメンバー、またはディストリビューションデータベースの**db_owner**固定データベースロールのメンバーだけです。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [システム ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

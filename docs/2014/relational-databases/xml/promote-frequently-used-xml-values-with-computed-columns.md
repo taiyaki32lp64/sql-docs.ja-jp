@@ -10,15 +10,15 @@ helpviewer_keywords:
 - promoting properties [XML in SQL Server]
 - property promotion [XML in SQL Server]
 ms.assetid: f5111896-c2fd-4209-b500-f2baa45489ad
-author: douglaslMS
-ms.author: douglasl
+author: MightyPen
+ms.author: genemi
 manager: craigg
-ms.openlocfilehash: bcd6d8cb39405e525b779678e0b203ca1246e1af
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: b5b2d167ca9bb2f5a39802bacceb3dd0eb3c96d5
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48065312"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68195572"
 ---
 # <a name="promote-frequently-used-xml-values-with-computed-columns"></a>計算列を使用した使用頻度の高い XML 値の昇格
   クエリが主に少数の要素や属性の値に対して行われる場合、対象になる値をリレーショナル列に昇格できます。 XML インスタンス全体を取得する一方で、XML データの一部に対してクエリを実行する場合に昇格が役立ちます。 XML 列に XML インデックスを作成する必要はありません。 代わりに、昇格した列にインデックスを設定できます。 クエリは昇格した列を使用するように記述する必要があります。 クエリ オプティマイザーは、クエリの対象を XML 列から、昇格した列に振り替えないためです。  
@@ -28,7 +28,7 @@ ms.locfileid: "48065312"
 ## <a name="computed-column-based-on-the-xml-data-type"></a>xml データ型を基にした計算列  
  呼び出すユーザー定義関数を使用して計算列を作成できる`xml`データ型のメソッド。 計算列の型は、XML を含めどの SQL 型でもかまいません。 この例を次に示します。  
   
-### <a name="example-computed-column-based-on-the-xml-data-type-method"></a>例 : xml データ型のメソッドを基にした計算列  
+### <a name="example-computed-column-based-on-the-xml-data-type-method"></a>例: xml データ型のメソッドを基にした計算列  
  書籍の ISBN 番号を取得するユーザー定義関数を作成します。  
   
 ```  
@@ -50,7 +50,7 @@ ADD   ISBN AS dbo.udf_get_book_ISBN(xCol)
   
  計算列は、通常の方法でインデックスを設定できます。  
   
-### <a name="example-queries-on-a-computed-column-based-on-xml-data-type-methods"></a>例 : xml データ型のメソッドを基にした計算列へのクエリ  
+### <a name="example-queries-on-a-computed-column-based-on-xml-data-type-methods"></a>例: xml データ型のメソッドを基にした計算列へのクエリ  
  ISBN が 0-7356-1588-2 の <`book`> を取得します。  
   
 ```  
@@ -84,14 +84,14 @@ WHERE  ISBN = '0-7356-1588-2'
   
     -   主キーを使用してテーブルどうしを結合し、プロパティ テーブルに SQL アクセスを行うクエリ、およびベース テーブルの XML 列に XML アクセスを行うクエリを記述します。  
   
-### <a name="example-create-a-property-table"></a>例 : プロパティ テーブルの作成  
+### <a name="example-create-a-property-table"></a>例: プロパティ テーブルの作成  
  たとえば、著者の名 (ファースト ネーム) を昇格させるとします。 共著の場合もあるので、名は複数の値から構成されるプロパティです。 それぞれの名は、プロパティ テーブルの個別の行に保存されます。 逆結合のため、ベース テーブルの主キーをプロパティ テーブルで複製します。  
   
 ```  
 create table tblPropAuthor (propPK int, propAuthor varchar(max))  
 ```  
   
-### <a name="example-create-a-user-defined-function-to-generate-a-rowset-from-an-xml-instance"></a>例 : XML インスタンスから行セットを生成するユーザー定義関数の作成  
+### <a name="example-create-a-user-defined-function-to-generate-a-rowset-from-an-xml-instance"></a>例: XML インスタンスから行セットを生成するユーザー定義関数の作成  
  次のテーブル値関数 udf_XML2Table は、主キーの値と XML インスタンスを受け取ります。 <`book`> 要素のすべての著者の名を取得し、主キーと名の組み合わせから構成される行セットを返します。  
   
 ```  
@@ -107,7 +107,7 @@ begin
 end  
 ```  
   
-### <a name="example-create-triggers-to-populate-a-property-table"></a>例 : プロパティ テーブルにデータを格納するトリガーの作成  
+### <a name="example-create-triggers-to-populate-a-property-table"></a>例: プロパティ テーブルにデータを格納するトリガーの作成  
  次の挿入トリガーを使用して、プロパティ テーブルに行を挿入します。  
   
 ```  
@@ -154,8 +154,8 @@ begin
 end  
 ```  
   
-### <a name="example-find-xml-instances-whose-authors-have-the-same-first-name"></a>例 : 著者の名が同一の XML インスタンスの検索  
- XML 列に対するクエリも作成できますが、 プロパティ テーブルで名 "David" を検索し、ベース テーブルとの逆結合を実行して XML インスタンスを返すこともできます。 以下に例を示します。  
+### <a name="example-find-xml-instances-whose-authors-have-the-same-first-name"></a>例: 著者の名が同一の XML インスタンスの検索  
+ XML 列に対するクエリも作成できますが、 プロパティ テーブルで名 "David" を検索し、ベース テーブルとの逆結合を実行して XML インスタンスを返すこともできます。 例:  
   
 ```  
 SELECT xCol   
@@ -163,7 +163,7 @@ FROM     T JOIN tblPropAuthor ON T.pk = tblPropAuthor.propPK
 WHERE    tblPropAuthor.propAuthor = 'David'  
 ```  
   
-### <a name="example-solution-using-the-clr-streaming-table-valued-function"></a>例 : CLR ストリーミング テーブル値関数を使用したソリューション  
+### <a name="example-solution-using-the-clr-streaming-table-valued-function"></a>例: CLR ストリーミング テーブル値関数を使用したソリューション  
  このソリューションは、次の手順で実行します。  
   
 1.  CLR クラス SqlReaderBase を定義します。このクラスは ISqlReader を実装し、XML インスタンスにパス式を適用することでストリーミング テーブル値出力を生成します。  
@@ -253,7 +253,7 @@ as
   
  削除トリガーは CLR を使用しない場合と同じです。 更新トリガーは関数 udf_XML2Table() を CLR_udf_XML2Table() に置き換えます。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [計算列での XML の使用](use-xml-in-computed-columns.md)  
   
   

@@ -13,18 +13,17 @@ helpviewer_keywords:
 ms.assetid: 5e7b1af4-996b-47c5-9161-c5575ad4fec9
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 2ba956d2e442c914ddc50f2f023f225252fb1295
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 7094c2dba004e35593f5ab11b1162efbdf3283c1
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52524498"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67925312"
 ---
 # <a name="field-related-error-information"></a>フィールドに関連するエラー情報
 エラーは、フィールドに直接関連している場合など、データが不足している場合、または、フィールドに対して無効な型である場合を取得できます、問題の原因の詳細についてを調べることで、**フィールド**オブジェクトの**ステータス**プロパティ。 このプロパティは、問題の特定の情報を提供する拡張されています。 そのため、たとえばへの呼び出し時に**UpdateBatch**失敗した場合、問題の原因を調べることで決定できます、**状態**のプロパティ、**フィールド**影響を受ける各レコードがあります。 内の値のいずれかのプロパティには、 **FieldStatusEnum**定数。 次の表には、エラーが発生したときに特定の関心のあるこれらの値が含まれています。  
   
-|定数|値|説明|  
+|定数|Value|説明|  
 |--------------|-----------|-----------------|  
 |**adFieldCantConvertValue**|2|フィールドを取得またはデータの損失なしで保存できないことを示します。|  
 |**adFieldDataOverflow**|6|プロバイダーから返されるデータが、フィールドのデータ型がオーバーフローしたことを示します。|  

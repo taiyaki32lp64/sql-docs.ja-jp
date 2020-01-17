@@ -10,12 +10,12 @@ ms.assetid: f730e70c-4f92-411d-9984-289e241e43ee
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 7ea148b3a17f11ce0993beff82dfb38701af251f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: fa7115be43361e25f5ad2b082a92929298ce8bef
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48075232"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62842480"
 ---
 # <a name="using-trycatch-in-natively-compiled-stored-procedures"></a>ネイティブ コンパイル ストアド プロシージャでの Try..Catch の使用
   ネイティブ コンパイル ストアド プロシージャ内で try..catch ブロックを使用できます。 次の構造がサポートされます。  
@@ -32,7 +32,7 @@ ms.locfileid: "48075232"
   
 -   ERROR_STATE  
   
-```tsql  
+```sql  
 CREATE PROCEDURE test_try_catch  
 with native_compilation, schemabinding, execute as owner   
 as  

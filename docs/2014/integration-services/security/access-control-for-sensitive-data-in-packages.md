@@ -15,15 +15,15 @@ helpviewer_keywords:
 - cryptography [Integration Services]
 - security [Integration Services], protection levels
 ms.assetid: d4b073c4-4238-41fc-a258-4e114216e185
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 58927abb300bce1e6ec0b2764fccbd31bd229338
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 2d59a42fa7b77e6800218f1eeca4986320c1dcef
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53365944"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62766781"
 ---
 # <a name="access-control-for-sensitive-data-in-packages"></a>パッケージ内の機微なデータへのアクセス制御
   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] パッケージ内のデータを保護するために、保護レベルを設定できます。保護レベルを使用すると、パッケージ内の機微なデータのみを保護することも、すべてのデータを保護することもできます。 さらに、パスワードまたはユーザー キーでこのデータを暗号化したり、データベースを使用してデータを暗号化したりすることもできます。 また、パッケージに使用する保護レベルは静的である必要はなく、パッケージのライフ サイクルの各段階で変更できます。 多くの場合、開発中に保護レベルを 1 つ設定し、パッケージを配置した時点で別の保護レベルを設定します。  
@@ -81,7 +81,7 @@ ms.locfileid: "53365944"
   
 -   [パッケージの保護レベルを設定または変更する](../set-or-change-the-protection-level-of-packages.md)  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [パッケージをインポートおよびエクスポートする &#40;SSIS サービス&#41;](../import-and-export-packages-ssis-service.md)   
  [Integration Services &#40;SSIS&#41; パッケージ](../integration-services-ssis-packages.md)   
  [セキュリティの概要 &#40;Integration Services&#41;](security-overview-integration-services.md)  

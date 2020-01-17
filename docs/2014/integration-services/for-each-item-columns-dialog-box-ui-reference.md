@@ -4,23 +4,22 @@ ms.custom: ''
 ms.date: 08/22/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.foreachitemcolumns.f1
 helpviewer_keywords:
 - For Each Item Columns dialog box
 ms.assetid: ea76aae0-8798-4677-8ab8-4a579de4957c
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 432d348d2c224d3be1f24966da5e3793e7cc5db8
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 12f9b5ad88ce49eb13b4aa460e02e295b13135ed
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48093852"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66058548"
 ---
 # <a name="for-each-item-columns-dialog-box-ui-reference"></a>[For Each Item 列] ダイアログ ボックスの UI リファレンス
   **[For Each Item 列]** ダイアログ ボックスを使用すると、Foreach Item 列挙子が列挙するアイテムの列を定義できます。  

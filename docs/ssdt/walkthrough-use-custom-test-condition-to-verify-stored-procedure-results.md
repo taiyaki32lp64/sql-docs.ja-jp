@@ -1,5 +1,5 @@
 ---
-title: 'チュートリアル: カスタム テスト条件を使用してストアド プロシージャの結果を検証する | Microsoft Docs'
+title: チュートリアル:カスタム テスト条件を使用してストアド プロシージャの結果を検証する | Microsoft Docs
 ms.custom:
 - SSDT
 ms.date: 02/09/2017
@@ -8,18 +8,17 @@ ms.technology: ssdt
 ms.reviewer: ''
 ms.topic: conceptual
 ms.assetid: 4c33b494-a85e-4dd2-97b6-c88ee858a99c
-author: stevestein
-ms.author: sstein
-manager: craigg
-ms.openlocfilehash: f109fd19d6c74fc60746fdccd5560b8aa482eb02
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 6ef888bf2cf4259ec904194a39aa74ed44040586
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47833000"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68068982"
 ---
-# <a name="walkthrough-using-a-custom-test-condition-to-verify-the-results-of-a-stored-procedure"></a>チュートリアル: カスタム テスト条件を使用してストアド プロシージャの結果を検証する
-機能の拡張に関するこのチュートリアルでは、テスト条件を作成し、SQL Server の単体テストを作成して機能を検証します。 これには、テスト条件のクラス ライブラリ プロジェクトの作成およびクラス ライブラリ プロジェクトの署名とインストールが含まれます。 更新するテスト条件が既にある場合は、「[Visual Studio 2010 のカスタム テスト条件を、以前のリリースから SQL Server Data Tools にアップグレードする方法](../ssdt/how-to-upgrade-visual-studio-2010-custom-test-condition-to-ssdt.md)」をご覧ください。  
+# <a name="walkthrough-using-a-custom-test-condition-to-verify-the-results-of-a-stored-procedure"></a>チュートリアル:カスタム テスト条件を使用してストアド プロシージャの結果を検証する
+機能の拡張に関するこのチュートリアルでは、テスト条件を作成し、SQL Server の単体テストを作成して機能を検証します。 これには、テスト条件のクラス ライブラリ プロジェクトの作成およびクラス ライブラリ プロジェクトの署名とインストールが含まれます。 更新するテスト条件が既にある場合は、「[Visual Studio 2010 のカスタム テスト条件を、以前のリリースから SQL Server Data Tools にアップグレードする方法](../ssdt/how-to-upgrade-visual-studio-2010-custom-test-condition-to-ssdt.md)」を参照してください。  
   
 このチュートリアルでは、次の作業について説明します。  
   
@@ -40,13 +39,13 @@ ms.locfileid: "47833000"
 ## <a name="creating-a-custom-test-condition"></a>カスタムのテスト条件を作成する  
 まず、クラス ライブラリを作成します。  
   
-1.  **[ファイル]** メニューの **[新規作成]** をクリックし、**[プロジェクト]** をクリックします。  
+1.  **[ファイル]** メニューの **[新規作成]** をクリックし、 **[プロジェクト]** をクリックします。  
   
 2.  **[新しいプロジェクト]** ダイアログ ボックスの **[プロジェクトの種類]** で、[Visual C\#] をクリックします。  
   
-3.  **[テンプレート]** で、**[クラス ライブラリ]** をクリックします。  
+3.  **[テンプレート]** で、 **[クラス ライブラリ]** をクリックします。  
   
-4.  **[名前]** テキスト ボックスに「**ColumnCountCondition**」と入力して、**[OK]** をクリックします。  
+4.  **[名前]** テキスト ボックスに「**ColumnCountCondition**」と入力して、 **[OK]** をクリックします。  
   
 次に、プロジェクトに署名します。  
   
@@ -54,13 +53,13 @@ ms.locfileid: "47833000"
   
 2.  **[署名]** タブの **[アセンブリの署名]** チェック ボックスをオンにします。  
   
-3.  **[厳密な名前のキー ファイルを選択してください]** で、**[\<新規作成...>]** をクリックします。  
+3.  **[厳密な名前のキー ファイルを選択してください]** で、 **[\<新規作成...>]** をクリックします。  
   
     **[厳密な名前キーの作成]** ダイアログ ボックスが表示されます。  
   
 4.  **[キー ファイル]** ボックスに「**SampleKey**」と入力します。  
   
-5.  パスワードを入力および確認し、**[OK]** をクリックします。 ソリューションをビルドすると、キー ファイルを使用してアセンブリに署名されます。  
+5.  パスワードを入力および確認し、 **[OK]** をクリックします。 ソリューションをビルドすると、キー ファイルを使用してアセンブリに署名されます。  
   
 6.  **[ファイル]** メニューの **[すべてを保存]** をクリックします。  
   
@@ -70,17 +69,17 @@ ms.locfileid: "47833000"
   
 1.  **ソリューション エクスプローラー**で、**ColumnCountCondition** プロジェクトを選択します。  
   
-2.  **[プロジェクト]** メニューの **[参照の追加]** をクリックし、**[参照の追加]** ダイアログ ボックスを表示します。  
+2.  **[プロジェクト]** メニューの **[参照の追加]** をクリックし、 **[参照の追加]** ダイアログ ボックスを表示します。  
   
 3.  **[.NET]** タブを選択します。  
   
-4.  **[コンポーネント名]** 列で、**System.ComponentModel.Composition** コンポーネントを探して選択します。 コンポーネントを選択した後、**[OK]** をクリックします。  
+4.  **[コンポーネント名]** 列で、**System.ComponentModel.Composition** コンポーネントを探して選択します。 コンポーネントを選択した後、 **[OK]** をクリックします。  
   
-5.  必要なアセンブリ参照を追加します。 プロジェクト ノードを右クリックし、**[参照の追加]** をクリックします。 **[参照]** をクリックし、C:\Program Files (x86)\\MicrosoftSQL Server\110\DAC\Bin フォルダーに移動します。 Microsoft.Data.Tools.Schema.Sql.dll を選択し、[追加] をクリックして、[OK] をクリックします。  
+5.  必要なアセンブリ参照を追加します。 プロジェクト ノードを右クリックし、 **[参照の追加]** をクリックします。 **[参照]** をクリックし、C:\Program Files (x86)\\MicrosoftSQL Server\110\DAC\Bin フォルダーに移動します。 Microsoft.Data.Tools.Schema.Sql.dll を選択し、[追加] をクリックして、[OK] をクリックします。  
   
 6.  **[プロジェクト]** メニューの **[プロジェクトのアンロード]** をクリックします。  
   
-7.  **ソリューション エクスプローラー**でプロジェクトを右クリックして、**[<project name>.csproj の編集]** を選択します。  
+7.  **ソリューション エクスプローラー**でプロジェクトを右クリックして、 **[<project name>.csproj の編集]** を選択します。  
   
 8.  **Microsoft.CSharp.targets** をインポートした後、次の Import ステートメントを追加します。  
   
@@ -90,14 +89,14 @@ ms.locfileid: "47833000"
     <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\SSDT\Microsoft.Data.Tools.Schema.Sql.UnitTesting.targets" Condition="'$(VisualStudioVersion)' != ''" />  
     ```  
   
-9. ファイルを保存して閉じます。 **ソリューション エクスプローラー**でプロジェクトを右クリックして、**[プロジェクトの再読み込み]** をクリックします。  
+9. ファイルを保存して閉じます。 **ソリューション エクスプローラー**でプロジェクトを右クリックして、 **[プロジェクトの再読み込み]** をクリックします。  
   
     **ソリューション エクスプローラー**で、プロジェクトの **[参照設定]** ノードの下に必要な参照が表示されます。  
   
 ## <a name="creating-the-resultsetcolumncountcondition-class"></a>ResultSetColumnCountCondition クラスを作成する  
 **Class1** の名前を **ResultSetColumnCountCondition** に変更し、[testcondition](https://msdn.microsoft.com/library/microsoft.data.tools.schema.sql.unittesting.conditions.testcondition(v=vs.103).aspx) から派生するようにします。 **ResultSetColumnCountCondition** クラスは、ResultSet に返される列数を検証する簡単なテスト条件です。 この条件は、ストアド プロシージャのコントラクトに誤りがないことを確認するために使用できます。  
   
-1.  **ソリューション エクスプローラー**で、Class1.cs を右クリックし、**[名前の変更]** をクリックして「**ResultSetColumnCountCondition.cs**」と入力します。  
+1.  **ソリューション エクスプローラー**で、Class1.cs を右クリックし、 **[名前の変更]** をクリックして「**ResultSetColumnCountCondition.cs**」と入力します。  
   
 2.  **[はい]** をクリックして、Class1 へのすべての参照名の変更を確定します。  
   
@@ -357,31 +356,31 @@ namespace ColumnCountCondition
   
 1.  Visual Studio の 2 つ目のセッションを開始します。  
   
-2.  **[ファイル]** メニューの **[新規作成]** をクリックし、**[プロジェクト]** をクリックします。  
+2.  **[ファイル]** メニューの **[新規作成]** をクリックし、 **[プロジェクト]** をクリックします。  
   
-3.  **[新しいプロジェクト]** ダイアログ ボックスのインストール済みテンプレートの一覧で、**[SQL Server]** ノードを選択します。  
+3.  **[新しいプロジェクト]** ダイアログ ボックスのインストール済みテンプレートの一覧で、 **[SQL Server]** ノードを選択します。  
   
-4.  詳細ウィンドウで、**[SQL Server データベース プロジェクト]** をクリックします。  
+4.  詳細ウィンドウで、 **[SQL Server データベース プロジェクト]** をクリックします。  
   
-5.  **[名前]** テキスト ボックスに「**SampleConditionDB**」と入力して、**[OK]** をクリックします。  
+5.  **[名前]** テキスト ボックスに「**SampleConditionDB**」と入力して、 **[OK]** をクリックします。  
   
 次に、単体テストを作成します。 新しいテスト クラス内に SQL Server の単体テストを作成するには:  
   
-1.  **[テスト]** メニューの **[新しいテスト]** をクリックし、**[新しいテストの追加]** ダイアログ ボックスを表示します。  
+1.  **[テスト]** メニューの **[新しいテスト]** をクリックし、 **[新しいテストの追加]** ダイアログ ボックスを表示します。  
   
-    また、**ソリューション エクスプローラー**でテスト プロジェクトを右クリックし、**[追加]** をポイントして、**[新しいテスト]** をクリックすることもできます。  
+    また、**ソリューション エクスプローラー**でテスト プロジェクトを右クリックし、 **[追加]** をポイントして、 **[新しいテスト]** をクリックすることもできます。  
   
-2.  テンプレートの一覧で、**[SQL Server 単体テスト]** をクリックします。  
+2.  テンプレートの一覧で、 **[SQL Server 単体テスト]** をクリックします。  
   
 3.  **[テスト名]** に「**SampleUnitTest**」と入力します。  
   
-4.  **[テスト プロジェクトに追加]** で、**[新しい Visual C\# テスト プロジェクトの作成]** をクリックします。 続いて、**[OK]** をクリックして **[新しいテスト プロジェクト]** ダイアログ ボックスを表示します。  
+4.  **[テスト プロジェクトに追加]** で、 **[新しい Visual C\# テスト プロジェクトの作成]** をクリックします。 続いて、 **[OK]** をクリックして **[新しいテスト プロジェクト]** ダイアログ ボックスを表示します。  
   
 5.  プロジェクト名に「**SampleUnitTest**」と入力します。  
   
 6.  **[キャンセル]** をクリックして、データベース接続を使用するテスト プロジェクトを構成せずに単体テストを作成します。 SQL Server 単体テスト デザイナーに、空白のテストが表示されます。 テスト プロジェクトに Visual C\# のソース コード ファイルが追加されます。  
   
-    データベース接続が関連付けられたデータベース単体テストの作成および構成について詳しくは、「[空の SQL Server の単体テストを作成する方法](../ssdt/how-to-create-an-empty-sql-server-unit-test.md)」をご覧ください。  
+    データベース接続が関連付けられたデータベース単体テストの作成および構成の詳細については、「[空の SQL Server の単体テストを作成する方法](../ssdt/how-to-create-an-empty-sql-server-unit-test.md)」を参照してください。  
   
 7.  **[作成するにはここをクリックしてください]** をクリックし、単体テストの作成を完了します。 SQL Server プロジェクトに新しいテスト条件が表示されます。  
   
@@ -390,17 +389,17 @@ namespace ColumnCountCondition
   
 新しいテスト条件を表示するには、次の手順を実行します。  
   
-1.  **SQL Server 単体テスト デザイナー**で、**[テスト条件]** の **[名前]** 列にある inconclusiveCondition1 テストをクリックします。  
+1.  **SQL Server 単体テスト デザイナー**で、 **[テスト条件]** の **[名前]** 列にある inconclusiveCondition1 テストをクリックします。  
   
 2.  **[テスト条件を削除します]** ツール バー ボタンをクリックして、inconclusiveCondition1 テストを削除します。  
   
-3.  **[テスト条件]** ボックスをクリックし、**[ResultSet 列数]** を選択します。  
+3.  **[テスト条件]** ボックスをクリックし、 **[ResultSet 列数]** を選択します。  
   
 4.  **[テスト条件を追加します]** ツール バー ボタンをクリックして、カスタムのテスト条件を追加します。  
   
 5.  **[プロパティ]** ウィンドウで、Count プロパティ、Enabled プロパティ、および ResultSet プロパティを構成します。  
   
-    詳しくは、「[SQL Server の単体テストにテスト条件を追加する方法](../ssdt/how-to-add-test-conditions-to-sql-server-unit-tests.md)」をご覧ください。  
+    詳細については、「[ソフト NUMA を使用するようにSQL Server の単体テストにテスト条件を追加する方法](../ssdt/how-to-add-test-conditions-to-sql-server-unit-tests.md)」を参照してください。  
   
 ## <a name="see-also"></a>参照  
 [SQL Server の単体テストのカスタム テスト条件](../ssdt/custom-test-conditions-for-sql-server-unit-tests.md)  

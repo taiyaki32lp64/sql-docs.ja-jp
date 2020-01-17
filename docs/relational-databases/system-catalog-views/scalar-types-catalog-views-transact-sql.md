@@ -15,24 +15,23 @@ helpviewer_keywords:
 ms.assetid: f7688ba3-aa6e-41b1-811e-f70212029f4f
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: c35cb96241e9883558daaa87c82946f64e5a8ea8
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: b73a3de04b90a91cb66d060c6559088a7d0e8855
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51663751"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68018347"
 ---
 # <a name="scalar-types-catalog-views-transact-sql"></a>スカラー型カタログ ビュー (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  ここでは、次のカタログ ビューについて説明します。  
+  このセクションには、次のカタログ ビューが含まれています。  
   
 |||  
 |-|-|  
 |[sys.assembly_types](../../relational-databases/system-catalog-views/sys-assembly-types-transact-sql.md)|[sys.types](../../relational-databases/system-catalog-views/sys-types-transact-sql.md)|  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [カタログ ビュー &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
  [システム ビュー &#40;TRANSACT-SQL&#41;](https://msdn.microsoft.com/library/35a6161d-7f43-4e00-bcd3-3091f2015e90)  
   

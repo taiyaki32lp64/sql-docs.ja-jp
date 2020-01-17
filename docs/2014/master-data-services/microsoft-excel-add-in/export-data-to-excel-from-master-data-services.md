@@ -7,15 +7,15 @@ ms.reviewer: ''
 ms.technology: master-data-services
 ms.topic: conceptual
 ms.assetid: dd29389b-928c-4e50-995c-c6af27f97805
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: e15b0a4d2cb4e6aef865cd01c81568e6762db3ca
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: bbe1188773d0770ff345cd54ea47e03a3c05555f
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52784294"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65482714"
 ---
 # <a name="load-data-from-mds-into-excel"></a>MDS から Excel へのデータの読み込み
   [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] [!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)]、それを使用するには、MDS リポジトリからデータを読み込む必要があります。  

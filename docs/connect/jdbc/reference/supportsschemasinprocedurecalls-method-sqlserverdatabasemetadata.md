@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: 8955457a-b176-4674-9366-39a1942164a5
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 960bd16a1a7656a93033f0e79ad1606e0bb72566
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: fb938a2a63afa6f52fe241fcb50a209fea4557a3
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47746800"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67968882"
 ---
 # <a name="supportsschemasinprocedurecalls-method-sqlserverdatabasemetadata"></a>supportsSchemasInProcedureCalls メソッド (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -36,13 +35,13 @@ public boolean supportsSchemasInProcedureCalls()
 ```  
   
 ## <a name="return-value"></a>戻り値  
- **true**サポートされている場合。 それ以外の場合は、 **false**です。  
+ サポートされている場合は**true** 。 それ以外の場合は、 **false**です。  
   
 ## <a name="exceptions"></a>例外  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- この supportsSchemasInProcedureCalls メソッドは、java.sql.DatabaseMetaData インターフェイスで supportsSchemasInProcedureCalls メソッドによって指定されます。  
+ この supportsSchemasInProcedureCalls メソッドは、supportsSchemasInProcedureCalls メソッドによって、java メタデータインターフェイスで指定されます。  
   
 ## <a name="see-also"></a>参照  
  [SQLServerDatabaseMetaData のメソッド](../../../connect/jdbc/reference/sqlserverdatabasemetadata-methods.md)   

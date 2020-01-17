@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: analysis-services
 ms.topic: reference
 helpviewer_keywords:
 - personalization extensions [Multidimensional Databases]
@@ -14,12 +12,12 @@ ms.assetid: 0f144059-24e0-40c0-bde4-d48c75e46598
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: d1d563b4cefc2e074c437fa0ab3b66bfea9796fb
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 313b1764dfb17c3a8b49fa3ffa139668f9b2b421
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53372224"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62726118"
 ---
 # <a name="analysis-services-personalization-extensions"></a>Analysis Services のパーソナル化拡張機能
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] パーソナル化拡張機能は、プラグイン アーキテクチャを実装するという概念の基礎です。 プラグイン アーキテクチャでは、新しいキューブ オブジェクトや機能を動的に開発し、他の開発者と簡単に共有することができます。 そのため、[!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]パーソナル化拡張機能は、次を実現するためにできるようにする機能を提供します。  
@@ -143,7 +141,7 @@ ms.locfileid: "53372224"
 ### <a name="schema-rowsets-extensions"></a>スキーマ行セットの拡張  
  Mdschema_members*スコープ*列が追加されます。 スコープの値は次のとおりです。MDMEMBER_SCOPE_GLOBAL = 1 と MDMEMBER_SCOPE_SESSION = 2 です。  
   
- Mdschema_sets *set_evaluation_context*列が追加されます。 評価コンテキストの値の設定は次のとおりです。MDSET_RESOLUTION_STATIC = 1 と MDSET_RESOLUTION_DYNAMIC = 2 です。  
+ Mdschema_sets *set_evaluation_context*列が追加されます。 評価コンテキストの値の設定は次のとおりです。MDSET_RESOLUTION_STATIC = 1, MDSET_RESOLUTION_DYNAMIC = 2.  
   
  MDSCHEMA_KPIS に scope 列が追加されました。 スコープの値は次のとおりです。MDKPI_SCOPE_GLOBAL = 1 と MDKPI_SCOPE_SESSION = 2 です。  
   

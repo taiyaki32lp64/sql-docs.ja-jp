@@ -16,11 +16,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: e2a45cf4f34b73996b6ecbd4f9cbb5f5a902e760
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52773304"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62854968"
 ---
 # <a name="create-synonyms"></a>シノニムの作成
   このトピックでは、 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] で [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] または [!INCLUDE[tsql](../../includes/tsql-md.md)]を使用して、シノニムを作成する方法について説明します。  
@@ -50,7 +50,7 @@ ms.locfileid: "52773304"
   
 1.  **オブジェクト エクスプローラー**で、新しいビューを作成するデータベースを展開します。  
   
-2.  **[シノニム]** フォルダーを右クリックし、**[新しいシノニム...]** をクリックします。  
+2.  **[シノニム]** フォルダーを右クリックし、 **[新しいシノニム...]** をクリックします。  
   
 3.  **[シノニムの追加]** ダイアログ ボックスで、次の情報を入力します。  
   

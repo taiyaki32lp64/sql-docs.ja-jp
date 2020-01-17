@@ -15,14 +15,13 @@ helpviewer_keywords:
 ms.assetid: b1dd8413-0cd0-411b-a79b-1bb043ccc62d
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 0aa09ddef11c733abda1a5e706c1b788c3745c8e
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 2c83006aab69b7d72a2c3006dab48811eeda8495
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52511884"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72909120"
 ---
 # <a name="create-a-user-defined-data-type-alias"></a>ユーザー定義データ型の別名の作成
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -34,7 +33,7 @@ ms.locfileid: "52511884"
   
      [制限事項と制約事項](#Restrictions)  
   
-     [Security](#Security)  
+     [セキュリティ](#Security)  
   
 -   **以下を使用してユーザー定義データ型の別名を作成するには:**  
   
@@ -57,7 +56,7 @@ ms.locfileid: "52511884"
   
 #### <a name="to-create-a-user-defined-data-type"></a>ユーザー定義データ型を作成するには  
   
-1.  オブジェクト エクスプローラーで、 **[データベース]** を展開し、データベースを展開します。次に、 **[プログラミング]**、 **[種類]** を順に展開し、 **[ユーザー定義データ型]** を右クリックして、 **[新しいユーザー定義データ型]** をクリックします。  
+1.  オブジェクト エクスプローラーで、 **[データベース]** を展開し、データベースを展開します。次に、 **[プログラミング]** 、 **[種類]** を順に展開し、 **[ユーザー定義データ型]** を右クリックして、 **[新しいユーザー定義データ型]** をクリックします。  
   
      **[NULL を許容]**  
      ユーザー定義データ型が NULL 値を受け入れるかどうかを指定します。 既存のユーザー定義データ型に対する NULL 値の許容/非許容は編集できません。  
@@ -71,9 +70,9 @@ ms.locfileid: "52511884"
      **[長さ]/[有効桁数]**  
      データ型の長さまたは有効桁数を表示します (適用可能な場合)。 **[長さ]** は、文字ベースのユーザー定義データ型に適用されます。 **[有効桁数]** は、数値に基づくユーザー定義データ型にのみ適用されます。 ラベルは、先に選択されたデータ型によって変わります。 選択されているデータ型の長さまたは有効桁数が固定されている場合、このボックスは変更できません。  
   
-     長さは、 **nvarchar (max)**、 **varchar (max)**、 **varbinary (max)** の各データ型に対しては表示されません。  
+     長さは、 **nvarchar (max)** 、 **varchar (max)** 、 **varbinary (max)** の各データ型に対しては表示されません。  
   
-     **名前**  
+     **[名前]**  
      ユーザー定義データ型の別名を新規に作成する場合、ユーザー定義データ型を表すためにデータベース全体で使用する一意の名前を入力します。 文字の最大数は、システム **sysname** データ型に一致する必要があります。 既存のユーザー定義データ型の別名は編集できません。  
   
      **Rule**  
@@ -97,7 +96,7 @@ ms.locfileid: "52511884"
   
      **nchar** データ型および **nvarchar** データ型の場合、ストレージ値は常に **[長さ]** の値の 2 倍です。  
   
-     ストレージは、 **nvarchar (max)**、 **varchar (max)**、 **varbinary (max)** の各データ型に対しては表示されません。  
+     ストレージは、 **nvarchar (max)** 、 **varchar (max)** 、 **varbinary (max)** の各データ型に対しては表示されません。  
   
 2.  **[新しいユーザー定義データ型]** ダイアログ ボックスで、 **[スキーマ]** ボックスに、このデータ型の別名を所有するスキーマを入力するか、参照ボタン [...] を使用してスキーマを選択します。  
   
@@ -105,12 +104,12 @@ ms.locfileid: "52511884"
   
 4.  **[データ型]** ボックスで、新しいデータ型の別名の基になるデータ型を選択します。  
   
-5.  選択したデータ型に該当する場合は、 **[長さ]**、 **[有効桁数]**、および **[小数点以下桁数]** ボックスへの設定を完了します。  
+5.  選択したデータ型に該当する場合は、 **[長さ]** 、 **[有効桁数]** 、および **[小数点以下桁数]** ボックスへの設定を完了します。  
   
 6.  新しいデータ型の別名で NULL 値を許可する場合は、 **[NULL を許容]** チェック ボックスをオンにします。  
   
 7.  新しいデータ型の別名に既定値またはルールをバインドする場合は、 **[バインド]** で、 **[既定値]** または **[ルール]** ボックスへの設定を完了します。 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]では、既定値やルールを作成できません。 [!INCLUDE[tsql](../../includes/tsql-md.md)]を使用します。 既定値やルールを作成するためのサンプル コードは、テンプレート エクスプローラーで使用できます。  
-  
+
 ##  <a name="TsqlProcedure"></a> Transact-SQL の使用  
   
 #### <a name="to-create-a-user-defined-data-type-alias"></a>ユーザー定義データ型の別名を作成するには  

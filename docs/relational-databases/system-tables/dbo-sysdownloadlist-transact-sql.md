@@ -19,18 +19,17 @@ helpviewer_keywords:
 ms.assetid: 71087a4c-e829-488e-aa7d-a9476e2b4779
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: d0568403cb7f5bdf48d9be33e1b40f0be3fc1c33
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 03e888cc3d36b909035247d5f1c16dd1ab61e0d3
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47745092"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68061194"
 ---
 # <a name="dbosysdownloadlist-transact-sql"></a>dbo.sysdownloadlist (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  すべての対象サーバーに対するダウンロード命令のキューを格納します。  
+  すべてのターゲット サーバーに対するダウンロード命令のキューを格納します。  
   
 |列名|データ型|説明|  
 |-----------------|---------------|-----------------|  

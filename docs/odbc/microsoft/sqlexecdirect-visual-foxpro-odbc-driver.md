@@ -12,21 +12,20 @@ helpviewer_keywords:
 ms.assetid: 5004060f-8510-4018-87a4-d41789e69d3e
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 808d7890c18839c0e9059cdc3181a4579eb2ec4f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e701340217a885fbf1e3372c33ed1a8cfdb21457
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47716040"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68053850"
 ---
 # <a name="sqlexecdirect-visual-foxpro-odbc-driver"></a>SQLExecDirect (Visual FoxPro ODBC ドライバー)
 > [!NOTE]  
 >  このトピックでには、Visual FoxPro ODBC ドライバー固有の情報が含まれています。 この関数の詳細については、該当するトピックを参照してください。 [ODBC API リファレンス](../../odbc/reference/syntax/odbc-api-reference.md)します。  
   
- サポート: 完全な  
+ サポート:[完全]  
   
- ODBC API 準拠: コア レベル  
+ ODBC API 準拠:コア レベル  
   
  新しい実行[準備可能な SQL ステートメント](../../odbc/microsoft/visual-foxpro-terminology.md)します。 Visual FoxPro ODBC ドライバーでは、任意のパラメーターは、ステートメントに存在しない場合、パラメーター マーカーの変数の現在の値が使用されます。  
   

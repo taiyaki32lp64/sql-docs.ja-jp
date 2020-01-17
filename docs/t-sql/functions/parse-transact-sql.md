@@ -15,15 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - PARSE function
 ms.assetid: 6a2dbf10-f692-471b-9458-24d246963049
-author: MashaMSFT
-ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: fd5affbbd6a7cee83e1b14ae1e0b42952e8f2965
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: MikeRayMSFT
+ms.author: mikeray
+ms.openlocfilehash: 991d27258b37895ebb2bf54e267fd07fbe87d78e
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47824586"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68892498"
 ---
 # <a name="parse-transact-sql"></a>PARSE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
@@ -63,7 +62,7 @@ PARSE ( string_value AS data_type [ USING culture ] )
   
 2.  実行時に null の値を含んだパラメーターが渡された場合、バッチ全体がキャンセルされないように null が返されます。  
   
- PARSE は、文字列型から日付/時刻型および数値型への変換にのみ使用します。 一般的な型変換では、引き続き CAST または CONVERT を使用します。 一定のパフォーマンス オーバーヘッドが文字列値を解析中に注意してください。  
+ PARSE は、文字列型から日付/時刻型および数値型への変換にのみ使用します。 一般的な型変換では、引き続き CAST または CONVERT を使用します。 文字列値の解析中に一定のパフォーマンス オーバーヘッドが発生することに注意してください。  
   
  PARSE は、.NET Framework の共通言語ランタイム (CLR) の存在に依存しています。  
   
@@ -76,16 +75,16 @@ PARSE ( string_value AS data_type [ USING culture ] )
 |カテゴリ|型|.NET Framework 型|使用されるスタイル|  
 |--------------|----------|-------------------------|-----------------|  
 |数値|BIGINT|Int64|NumberStyles.Number|  
-|数値|ssNoversion|Int32|NumberStyles.Number|  
+|数値|INT|Int32|NumberStyles.Number|  
 |数値|SMALLINT|Int16|NumberStyles.Number|  
 |数値|TINYINT|Byte|NumberStyles.Number|  
 |数値|Decimal|Decimal|NumberStyles.Number|  
 |数値|NUMERIC|Decimal|NumberStyles.Number|  
 |数値|FLOAT|Double|NumberStyles.Float|  
 |数値|REAL|Single|NumberStyles.Float|  
-|数値|smallmoney|Decimal|NumberStyles.Currency|  
+|数値|SMALLMONEY|Decimal|NumberStyles.Currency|  
 |数値|money|Decimal|NumberStyles.Currency|  
-|日時|日付|DateTime|DateTimeStyles.AllowWhiteSpaces &#124; DateTimeStyles.AssumeUniversal|  
+|日時|date|DateTime|DateTimeStyles.AllowWhiteSpaces &#124; DateTimeStyles.AssumeUniversal|  
 |日時|time|TimeSpan|DateTimeStyles.AllowWhiteSpaces &#124; DateTimeStyles.AssumeUniversal|  
 |日時|DATETIME|DateTime|DateTimeStyles.AllowWhiteSpaces &#124; DateTimeStyles.AssumeUniversal|  
 |日時|smalldatetime|DateTime|DateTimeStyles.AllowWhiteSpaces &#124; DateTimeStyles.AssumeUniversal|  
@@ -98,39 +97,39 @@ PARSE ( string_value AS data_type [ USING culture ] )
   
 |完全名|別名|LCID (LCID)|特定のカルチャ|  
 |---------------|-----------|----------|----------------------|  
-|us_english|英語|1033|en-US|  
-|Deutsch|ドイツ語|1031|de-DE|  
-|Français|フランス語|1036|fr-FR|  
-|日本語|日本語|1041|ja-JP|  
-|Dansk|デンマーク語|1030|da-DK|  
-|Español|スペイン語|3082|es-ES|  
-|Italiano|イタリア語|1040|it-IT|  
-|Nederlands|オランダ語|1043|nl-NL|  
+|us_english|English|1033|en-US|  
+|Deutsch|German|1031|de-DE|  
+|Français|French|1036|fr-FR|  
+|Japanese|Japanese|1041|ja-JP|  
+|Dansk|Danish|1030|da-DK|  
+|Español|Spanish|3082|es-ES|  
+|Italiano|Italian|1040|it-IT|  
+|Nederlands|Dutch|1043|nl-NL|  
 |Norsk|ノルウェー語|2068|nn-NO|  
-|Português|ポルトガル語|2070|pt-PT|  
-|Suomi|フィンランド語|1035|fi|  
-|Svenska|スウェーデン語|1053|sv-SE|  
-|Čeština|チェコ語|1029|Cs-CZ|  
-|magyar|ハンガリー語|1038|Hu-HU|  
-|polski|ポーランド語|1045|Pl-PL|  
-|română|ルーマニア語|1048|Ro-RO|  
-|hrvatski|クロアチア語|1050|hr-HR|  
-|slovenčina|スロバキア語|1051|Sk-SK|  
-|slovenski|スロベニア語|1060|Sl-SI|  
-|ΕΛΛΗΝΙΚΆ|ギリシャ語|1032|El-GR|  
-|БЪЛГАРСКИ|ブルガリア語|1026|bg-BG|  
-|РУССКИЙ|ロシア語|1049|Ru-RU|  
-|Türkçe|トルコ語|1055|Tr-TR|  
+|Português|Portuguese|2070|pt-PT|  
+|Suomi|Finnish|1035|fi-FI|  
+|Svenska|Swedish|1053|sv-SE|  
+|čeština|Czech|1029|Cs-CZ|  
+|magyar|Hungarian|1038|Hu-HU|  
+|polski|Polish|1045|Pl-PL|  
+|română|Romanian|1048|Ro-RO|  
+|hrvatski|Croatian|1050|hr-HR|  
+|slovenčina|Slovak|1051|Sk-SK|  
+|slovenski|Slovenian|1060|Sl-SI|  
+|ελληνικά|Greek|1032|El-GR|  
+|български|Bulgarian|1026|bg-BG|  
+|русский|Russian|1049|Ru-RU|  
+|Türkçe|Turkish|1055|Tr-TR|  
 |British|英語 (U.K.)|2057|en-GB|  
-|eesti|エストニア語|1061|Et-EE|  
-|latviešu|ラトビア語|1062|lv-LV|  
-|lietuvių|リトアニア語|1063|lt-LT|  
-|ポルトガル語 (ブラジル)|ブラジル|1046|pt-BR|  
-|繁體中文|繁体字中国語|1028|zh-TW|  
-|한국어|韓国語|1042|Ko-KR|  
-|简体中文|簡体字中国語|2052|zh-CN|  
+|eesti|Estonian|1061|Et-EE|  
+|latviešu|Latvian|1062|lv-LV|  
+|lietuvių|Lithuanian|1063|lt-LT|  
+|Português (Brasil)|Brazilian|1046|pt-BR|  
+|繁體中文|Traditional Chinese|1028|zh-TW|  
+|한국어|Korean|1042|Ko-KR|  
+|简体中文|Simplified Chinese|2052|zh-CN|  
 |アラビア語|アラビア語|1025|ar-SA|  
-|ไทย|タイ語|1054|Th-TH|  
+|ไทย|Thai|1054|Th-TH|  
   
 ## <a name="examples"></a>使用例  
   
@@ -150,7 +149,7 @@ Result
 (1 row(s) affected)  
 ```  
   
-### <a name="b-parse-with-currency-symbol"></a>B. 通貨記号で解析します。  
+### <a name="b-parse-with-currency-symbol"></a>B. 通貨記号で解析します  
   
 ```  
 SELECT PARSE('€345,98' AS money USING 'de-DE') AS Result;  
@@ -166,7 +165,7 @@ Result
 (1 row(s) affected)  
 ```  
   
-### <a name="c-parse-with-implicit-setting-of-language"></a>C. 暗黙的な言語設定で解析します。  
+### <a name="c-parse-with-implicit-setting-of-language"></a>C. 暗黙的な言語設定で解析します  
   
 ```  
 -- The English language is mapped to en-US specific culture  

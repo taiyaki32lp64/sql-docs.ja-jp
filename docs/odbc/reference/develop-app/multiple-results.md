@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: a3c32e4b-8fe7-4a33-ae39-ae664001f315
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 47e1250a92b78aefdc1611fd88e0ee9b0f772ad0
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: f8679bea49b63ffd5dc7164942b42ac9eed7e9ab
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52539900"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68086362"
 ---
 # <a name="multiple-results"></a>複数の結果
 A*結果*何かによって返されるデータ ソース、ステートメントが実行された後にします。 ODBC には 2 つの種類の結果: 結果セットと、行の数。 *行数*は、更新によって影響を受ける行の数は、削除、またはステートメントを挿入します。 説明されているバッチ、 [SQL ステートメントのバッチ](../../../odbc/reference/develop-app/batches-of-sql-statements.md)、複数の結果を生成することができます。  

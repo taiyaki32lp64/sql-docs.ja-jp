@@ -18,21 +18,20 @@ helpviewer_keywords:
 ms.assetid: ca202580-c37e-4ccd-9275-77ce79481f64
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 8cdff2d0646dcce13257bb10f7f447169fd8c8b8
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: c16bc1e0c8d8d6b5a62e2823aa011b58520b1d00
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47749710"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68018358"
 ---
 # <a name="querying-the-sql-server-system-catalog-faq"></a>SQL Server システム カタログに対するクエリに関してよく寄せられる質問
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
-  このトピックでは、よく寄せられる質問の一覧を掲載しています。 これらの質問に対する答えは、カタログ ビューに基づくクエリです。  
+  このトピックでには、よく寄せられる質問の一覧が含まれています。 これらの質問に対する回答は、カタログ ビューに基づくクエリです。  
   
 ##  <a name="_TOP"></a> よく寄せられる質問  
- 以下のセクションでは、よく寄せられる質問をカテゴリ別に示しています。  
+ 一覧の下のセクションでは、よく寄せられる質問カテゴリ。  
   
 ### <a name="data-types"></a>データ型  
   
@@ -102,7 +101,7 @@ ms.locfileid: "47749710"
   
 -   [サーバー レベル トリガーの定義を表示する方法を教えてください。](#_FAQ19)  
   
-### <a name="schemas-users-roles-and-permissions"></a>スキーマ、ユーザー、ロール、および権限  
+### <a name="schemas-users-roles-and-permissions"></a>スキーマ、ユーザー、ロール、およびアクセス許可  
   
 -   [指定したスキーマに含まれるエンティティのすべての所有者を検索する方法はありますか](#_FAQ2)  
   
@@ -189,7 +188,7 @@ GO
   
 ```  
   
- または次のクエリを実行します。  
+ または、次のクエリを実行することができます。  
   
 ```  
 USE <database_name>;  
@@ -238,10 +237,10 @@ GO
   
 ```  
   
- または次のクエリを実行します。  
+ または、次のクエリを実行することができます。  
   
 > [!NOTE]  
->  このクエリは列の名前を返しません。  
+>  このクエリでは、列の名前は返しません。  
   
 ```  
 USE <database_name>;  
@@ -534,7 +533,7 @@ WHERE f.parent_object_id = OBJECT_ID('<schema_name.table_name>');
  [TOP](#_TOP)  
   
 ###  <a name="_FAQ18"></a> 指定したプリンシパルに付与または拒否のアクセス許可を検出する方法はありますか  
- 次の例では、権限が確認されたエンティティの名前を返す関数を作成します。 作成された関数は、後続のクエリで呼び出されます。 この関数は権限を確認する各データベースに作成する必要があります。  
+ 次の例では、アクセス許可がチェックは、エンティティの名前を返す関数を作成します。 関数は、次のクエリで呼び出されます。 この関数は権限を確認する各データベースに作成する必要があります。  
   
 ```  
 -- Create a function to return the name of the entity on which the permissions are checked.  
@@ -617,7 +616,7 @@ GO
  [TOP](#_TOP)  
   
 ###  <a name="_FAQ20"></a> 列が計算列の式で使用されるかどうかを判断する方法  
- 次のクエリの `<database_name>`、`<schema_name.table_name>`、および `<column_name` を有効な名前に置き換えてから、クエリを実行します。  
+ 次のクエリを実行する前に置き換える`<database_name>`、 `<schema_name.table_name>`、および`<column_name`> を有効な名前。  
   
 ```  
 USE <database_name>;  
@@ -682,7 +681,7 @@ GO
   
 ```  
   
- 次のクエリが CLR ユーザー定義型または別名に依存する列の制限、絞り込まれたビューを返しますが、結果セットを表示、**パブリック**ロール。 ユーザー型の REFERENCE 権限を他のユーザーに付与できる場合は、他のユーザーがその型を使用して作成したオブジェクトのメタデータを参照できる権限がなくても、このクエリを使用できます。  
+ 次のクエリが CLR ユーザー定義型または別名に依存する列の制限、絞り込まれたビューを返しますが、結果セットを表示、**パブリック**ロール。 他のユーザーとユーザー定義型の REFERENCE 権限型を使用する他のユーザーが作成されたオブジェクトのメタデータを表示するアクセス許可がありませんが許可した場合は、このクエリを使用できます。  
   
 ```  
 USE <database_name>;  
@@ -741,7 +740,7 @@ GO
   
 ```  
   
- 次のクエリは、CLR ユーザー定義型または別名に依存するパラメーターの制限、絞り込まれたビューを返しますが、結果セットを表示、**パブリック**ロール。 ユーザー型の REFERENCE 権限を他のユーザーに付与できる場合は、他のユーザーがその型を使用して作成したオブジェクトのメタデータを参照できる権限がなくても、このクエリを使用できます。  
+ 次のクエリは、CLR ユーザー定義型または別名に依存するパラメーターの制限、絞り込まれたビューを返しますが、結果セットを表示、**パブリック**ロール。 他のユーザーとユーザー定義型の REFERENCE 権限型を使用する他のユーザーが作成されたオブジェクトのメタデータを表示するアクセス許可がありませんが許可した場合は、このクエリを使用できます。  
   
 ```  
 USE <database_name>;  
@@ -780,7 +779,7 @@ GO
 ###  <a name="_FAQ26"></a> ビュー、TRANSACT-SQL 関数、および指定された CLR ユーザー定義型または別名型に依存する TRANSACT-SQL ストアド プロシージャの検索方法  
  次のクエリの `<database_name>` を有効な名前に置き換え、`<schema_name.data_type_name>` をスキーマ修飾の CLR ユーザー定義型または別名型の有効な名前に置き換えてから、クエリを実行します。  
   
- 関数やプロシージャ内で定義されたパラメーターは、暗黙のうちにスキーマにバインドされます。 CLR ユーザー定義型または別名型に依存するパラメーターを表示してを使用して、そのため、 [sys.sql_dependencies](../../relational-databases/system-catalog-views/sys-sql-dependencies-transact-sql.md)カタログ ビューです。 プロシージャやトリガーはスキーマにバインドされません。 つまり、プロシージャやトリガーの本体で定義されている式と、CLR ユーザー定義型または別名型の間の依存関係は保守されません。 スキーマ バインド ビューと CLR ユーザー定義型に依存する式を持つユーザー定義関数がスキーマにバインドされている、または別名型に保持されます、 **sys.sql_dependencies**カタログ ビューです。 型と CLR 関数や CLR プロシージャとの間の依存関係は保守されません。  
+ 関数またはプロシージャで定義されているパラメーターは、暗黙的に、スキーマ バインドです。 CLR ユーザー定義型または別名型に依存するパラメーターを表示してを使用して、そのため、 [sys.sql_dependencies](../../relational-databases/system-catalog-views/sys-sql-dependencies-transact-sql.md)カタログ ビューです。 プロシージャとトリガーはスキーマ バインドではありません。 つまり、プロシージャやトリガーの本体で定義されている式と、CLR ユーザー定義型または別名型の間の依存関係は保守されません。 スキーマ バインド ビューと CLR ユーザー定義型に依存する式を持つユーザー定義関数がスキーマにバインドされている、または別名型に保持されます、 **sys.sql_dependencies**カタログ ビューです。 型と CLR 関数や CLR プロシージャとの間の依存関係は保持されません。  
   
  次のクエリは、指定された CLR ユーザー定義型または別名型に関して、ビュー、[!INCLUDE[tsql](../../includes/tsql-md.md)] 関数、および [!INCLUDE[tsql](../../includes/tsql-md.md)] ストアド プロシージャ内でスキーマにバインドされた依存関係をすべて返します。  
   
@@ -871,7 +870,7 @@ GO
   
 ```  
   
- スイッチまたは  
+ または  
   
 ```  
 USE <database_name>;  
@@ -989,7 +988,7 @@ GO
   
  [TOP](#_TOP)  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [システム ビューへのシステム テーブルのマッピング&#40;TRANSACT-SQL&#41;](../../relational-databases/system-tables/mapping-system-tables-to-system-views-transact-sql.md)  
   
   

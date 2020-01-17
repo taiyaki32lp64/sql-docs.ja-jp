@@ -12,17 +12,20 @@ f1_keywords:
 - sql13.dts.designer.toolbox.F1
 - sql13.dts.designer.toolboxcommon.F1
 ms.assetid: 552ff592-eeef-46e8-b4a2-9b2384c869aa
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: 96ad709b12fc8bcbdb588fc1abb511b4b4ee081e
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 5b6c50ffe5278003a70fcba77818cb8333800dc5
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51640829"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71295625"
 ---
 # <a name="ssis-toolbox"></a>SSIS ツールボックス
+
+[!INCLUDE[ssis-appliesto](../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   **SSIS ツールボックス**には、ローカル コンピューターにインストールされているすべてのコンポーネントが表示されます。 他のコンポーネントをインストールするときは、ツールボックスの内側を右クリックし、 **[ツールボックスの更新]** をクリックして、コンポーネントを追加します。  
  
  新しい SSIS プロジェクトを作成するか、既存のプロジェクトを開くと、**SSIS ツールボックス**が自動的に表示されます。 ツールボックスは、パッケージ デザイン画面の右上端にあるツールボックス ボタンをクリックするか、[ビュー] -> [その他のウィンドウ] -> [SSIS ツールボックス] をクリックして開くこともできます。
@@ -38,7 +41,7 @@ ms.locfileid: "51640829"
 ## <a name="toolbox-categories"></a>ツールボックス カテゴリ
  **SSIS ツールボックス**では、制御フローとデータ フローのコンポーネントがカテゴリ別にまとめられています。  カテゴリを展開したり折りたたんだり、コンポーネントを再配置することができます。  ツールボックスの内側を右クリックして **[既定のツールボックスの復元]** をクリックして、既定の編成に戻します。  
   
- **[制御フロー]** タブ、 **[データ フロー]** タブ、および **[イベント ハンドラー]** タブを選択すると、 **[お気に入り]** カテゴリおよび **[共通]** カテゴリがツールボックスに表示されます。 **[制御フロー]** タブまたは **[イベント ハンドラー]** タブを選択すると、 **[その他のタスク]** カテゴリがツールボックスに表示されます。[データ フロー]タブを選択すると、 **[その他の変換]**、 **[その他の変換元]** 、 **[その他の変換先]** の各カテゴリがツールボックスに表示されます。  
+ **[制御フロー]** タブ、 **[データ フロー]** タブ、および **[イベント ハンドラー]** タブを選択すると、 **[お気に入り]** カテゴリおよび **[共通]** カテゴリがツールボックスに表示されます。 **[制御フロー]** タブまたは **[イベント ハンドラー]** タブを選択すると、 **[その他のタスク]** カテゴリがツールボックスに表示されます。 **[データ フロー]** タブを選択すると、 **[その他の変換]** 、 **[その他の変換元]** 、 **[その他の変換先]** の各カテゴリがツールボックスに表示されます。  
 
  ## <a name="add-azure-components-to-the-toolbox"></a>Azure のコンポーネントをツールボックスに追加する  
  Integration Services 用の Azure Feature Pack には、Azure データソースとタスクに接続して、Azure の一般的な操作を実行するための接続マネージャーが含まれています。 これらのアイテムをツールボックスに追加するには機能パックをインストールします。 詳細については、「[Azure Feature Pack for Integration Services &#40;SSIS&#41; (Integration Services 用の Azure Feature Pack &#40;SSIS&#41;)](../integration-services/azure-feature-pack-for-integration-services-ssis.md)」を参照してください。  

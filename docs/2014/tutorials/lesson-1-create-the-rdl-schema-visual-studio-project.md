@@ -11,13 +11,13 @@ author: markingmyname
 ms.author: maghan
 manager: kfile
 ms.openlocfilehash: c34062acefc2dfd847790a39cea35b03727f49ff
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56018913"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62678520"
 ---
-# <a name="lesson-1-create-the-rdl-schema-visual-studio-project"></a>レッスン 1:RDL スキーマ Visual Studio プロジェクトを作成します。
+# <a name="lesson-1-create-the-rdl-schema-visual-studio-project"></a>レッスン 1:RDL スキーマ Visual Studio プロジェクトの作成
   このチュートリアルでは、簡単なコンソール アプリケーションを作成します。 このチュートリアルで開発するいると想定[!INCLUDE[msCoName](../includes/msconame-md.md)][!INCLUDE[vs_dev10_long](../includes/vs-dev10-long-md.md)]します。  
   
 > [!NOTE]  
@@ -197,7 +197,7 @@ ms.locfileid: "56018913"
     ```  
   
 ## <a name="next-lesson"></a>次のレッスン  
- 次のレッスンでは、XML スキーマ定義ツール (Xsd.exe) を使用して RDL スキーマからクラスを生成し、プロジェクトに組み込みます。 参照してください[レッスン 2。Xsd ツールを使用して RDL スキーマからクラスを生成](../../2014/tutorials/lesson-2-generate-classes-from-the-rdl-schema-using-the-xsd-tool.md)します。  
+ 次のレッスンでは、XML スキーマ定義ツール (Xsd.exe) を使用して RDL スキーマからクラスを生成し、プロジェクトに組み込みます。 「[レッスン 2:Xsd ツールを使用して RDL スキーマからクラスを生成](../../2014/tutorials/lesson-2-generate-classes-from-the-rdl-schema-using-the-xsd-tool.md)します。  
   
 ## <a name="see-also"></a>参照  
  [RDL スキーマから生成されたクラスを使用してレポートを更新&#40;SSRS チュートリアル&#41;](../../2014/tutorials/updating-reports-using-classes-generated-from-the-rdl-schema-ssrs-tutorial.md)   

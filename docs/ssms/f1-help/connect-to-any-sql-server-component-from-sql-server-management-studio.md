@@ -13,15 +13,14 @@ helpviewer_keywords:
 - components [SQL Server], connections
 - SQL Server Management Studio [SQL Server], connections
 ms.assetid: 5eeb41bd-b25b-4d3b-a005-a7d9e4b5978e
-author: stevestein
-ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 3acb06bf912f0c5f9195ad002c9aab8b721e60d4
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 5ff8f8f4b71b108597f367c7ca041f2a3feba962
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47720150"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68265127"
 ---
 # <a name="connect-to-any-sql-server-component-from-sql-server-management-studio"></a>SQL Server Management Studio から SQL Server コンポーネントへの接続
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -31,9 +30,9 @@ ms.locfileid: "47720150"
   
 -   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion_md.md)]の各コンポーネントを管理する機能があります。  
   
--   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]」をご覧ください。  
+-   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]の各コンポーネントを管理する機能があります。  
   
--   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]」をご覧ください。  
+-   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]の各コンポーネントを管理する機能があります。  
   
 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] では、データ ソースへの接続を確立していなくてもクエリの編集は行えますが、他のほとんどのタスクの場合には接続が必要です。 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] では **[サーバーへの接続]** ダイアログ ボックスを使用して [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] コンポーネントへの接続プロパティを設定できます。 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] の起動時には **[サーバーへの接続]** ダイアログ ボックスが表示され、サーバーへの接続を求められます。 **[サーバーへの接続]** ダイアログ ボックスには最後に使用したときの接続設定が保持されます。  
   

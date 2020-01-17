@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dm.miningmodeleditor.timeseries.chart.f1
@@ -13,17 +12,17 @@ ms.assetid: 8803cdbb-f1b3-436c-994d-ee662ecf64dd
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 5d4fd0da06ec6e0cbdc578fe55e2549cefdc2794
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 57efea3fb5134312ac1ec3e7e9c719bb49872c5a
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48146018"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66088175"
 ---
 # <a name="chart-tab-mining-model-viewers"></a>[グラフ] タブ (マイニング モデル ビューアー)
-  タイム シリーズ モデルのトレーニングで使用する履歴データを、予測される値と共に表示するには、**[グラフ]** ペインを使用します。 グラフの縦軸はタイム シリーズの値を表し、横軸は時間を表します。 将来の予測は、点線によって表します。  
+  タイム シリーズ モデルのトレーニングで使用する履歴データを、予測される値と共に表示するには、 **[グラフ]** ペインを使用します。 グラフの縦軸はタイム シリーズの値を表し、横軸は時間を表します。 将来の予測は、点線によって表します。  
   
- **詳細情報:** [Microsoft タイム シリーズ アルゴリズム](data-mining/microsoft-time-series-algorithm.md)、 [Microsoft タイム シリーズ ビューアーを使用したモデルの参照](data-mining/browse-a-model-using-the-microsoft-time-series-viewer.md)  
+ **詳細情報。** [Microsoft タイム シリーズ アルゴリズム](data-mining/microsoft-time-series-algorithm.md)、 [Microsoft タイム シリーズ ビューアーを使用してモデルの参照](data-mining/browse-a-model-using-the-microsoft-time-series-viewer.md)  
   
 ## <a name="options"></a>および  
  **ビューアーのコンテンツを更新します。**  
@@ -60,8 +59,8 @@ ms.locfileid: "48146018"
  ビューアーに含める系列を選択できるダイアログ ボックスが開きます。  
   
 ## <a name="see-also"></a>参照  
- [データ マイニング アルゴリズム&#40;Analysis Services - データ マイニング&#41;](data-mining/data-mining-algorithms-analysis-services-data-mining.md)   
- [マイニング モデル ビューアー&#40;データ マイニング モデル デザイナー&#41;](mining-model-viewers-data-mining-model-designer.md)   
+ [データ マイニング アルゴリズム &#40;Analysis Services - データ マイニング&#41;](data-mining/data-mining-algorithms-analysis-services-data-mining.md)   
+ [マイニング モデル ビューアー (データ マイニング モデル デザイナー)](mining-model-viewers-data-mining-model-designer.md)   
  [データ マイニング モデル ビューアー](data-mining/data-mining-model-viewers.md)  
   
   

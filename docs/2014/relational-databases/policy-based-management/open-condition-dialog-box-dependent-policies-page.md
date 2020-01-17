@@ -13,11 +13,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: a47820c60b221773ad4ce312f49d2192eeddc547
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52762034"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63182934"
 ---
 # <a name="open-condition-dialog-box-dependent-policies-page"></a>[条件を開く] ダイアログ ボックスの [依存ポリシー] ページ
   このダイアログ ボックスを使用すると、このポリシー ベースの管理条件を現在参照しているポリシーの一覧を表示できます。 条件と各ファセットおよびポリシーとの関係の詳細については、「 [ポリシー ベースの管理を使用したサーバーの管理](administer-servers-by-using-policy-based-management.md)」を参照してください。  
@@ -26,7 +26,7 @@ ms.locfileid: "52762034"
  **名前**  
  この現在の条件を参照している各ポリシーの名前を一覧表示します。  
   
- **Enabled**  
+ **有効**  
  チェック マークは、ポリシーが現在有効になっていることを示します。 ポリシーが無効な場合は空白になります。  
   
  **履歴**  

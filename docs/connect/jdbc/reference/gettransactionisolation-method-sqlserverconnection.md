@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: 179772e9-6572-4ce5-83c5-ab2b196cee67
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 2ede685773480a1651158b2098796f0fd3fffff8
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 4b9a8b537e110f220203c0cda7d3ea27e8a6385e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47779060"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67978671"
 ---
 # <a name="gettransactionisolation-method-sqlserverconnection"></a>getTransactionIsolation メソッド (SQLServerConnection)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -54,7 +53,7 @@ public int getTransactionIsolation()
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- この getTransactionIsolation メソッドは、java.sql.Connection インターフェイスの getTransactionIsolation メソッドによって指定されます。  
+ この getTransactionIsolation メソッドは、java. .sql. 接続インターフェイスの getTransactionIsolation メソッドによって指定されます。  
   
 ## <a name="see-also"></a>参照  
  [SQLServerConnection のメンバー](../../../connect/jdbc/reference/sqlserverconnection-members.md)   

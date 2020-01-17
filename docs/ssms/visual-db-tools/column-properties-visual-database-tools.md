@@ -14,15 +14,14 @@ f1_keywords:
 - vdt.designers.properties.Column.ColumnComputedColumnSpec
 - vdt.designers.properties.Column.ColumnFulltextSpec
 ms.assetid: e549a2a8-4154-4ec8-b146-614564169b39
-author: stevestein
-ms.author: sstein
-manager: craigg
-ms.openlocfilehash: b6914306472ae5eb438c8d7384f2a5e0d9128c17
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 3ee1e24b0f9b55d299f56aa02c99405e001c33c1
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52527082"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68262565"
 ---
 # <a name="column-properties-visual-database-tools"></a>[列のプロパティ] \(Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -43,7 +42,7 @@ ms.locfileid: "52527082"
 **[IDENTITY] カテゴリ**  
 展開すると、 **[オブジェクト名]** プロパティと **[データベース]** プロパティが表示されます。  
   
-**名前**  
+**[名前]**  
 列の名前が表示されます。  
   
 **[データベース]**  
@@ -83,7 +82,7 @@ ID 列の以降の各行で **[IDENTITY シード]** に追加される増分値
 > これらのプロパティは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のみに適用されます。  
   
 **[全般] カテゴリ**  
-展開すると、 **[オブジェクト名]**、 **[Null を許容]**、 **[データ型]**、 **[既定値またはバインド]**、 **[長さ]**、 **[有効桁数]**、 **[小数点以下桁数]** が表示されます。  
+展開すると、 **[オブジェクト名]** 、 **[Null を許容]** 、 **[データ型]** 、 **[既定値またはバインド]** 、 **[長さ]** 、 **[有効桁数]** 、 **[小数点以下桁数]** が表示されます。  
   
 **[オブジェクト名]**  
 列の名前が表示されます。 名前を編集するには、テキスト ボックスに入力します。  
@@ -113,7 +112,7 @@ ID 列の以降の各行で **[IDENTITY シード]** に追加される増分値
 展開すると、その他のプロパティが表示されます。  
   
 **[照合順序]**  
-選択した列における照合順序の設定が表示されます。 この設定を変更するには、**[照合順序]** をクリックした後、値の右側にある **[...]** をクリックします  
+選択した列における照合順序の設定が表示されます。 この設定を変更するには、 **[照合順序]** をクリックした後、値の右側にある **[...]** をクリックします  
   
 **[計算列の指定] カテゴリ**  
 展開すると、 **[式]** と **[永続化されている]** のプロパティが表示されます。 列が計算列である場合、式も表示されます。 式を編集するには、このカテゴリを展開して、 **[式]** プロパティで式を編集します。  
@@ -151,7 +150,7 @@ image 型の列のドキュメントの種類を定義するために使用さ�
 列に Microsoft SQL Server 以外のサブスクライバーが含まれているかどうかが表示されます  
   
 **[IDENTITY の指定] カテゴリ**  
-展開すると、 **[ID]**、 **[ID の増分値]**、 **[IDENTITY シード]** のプロパティが表示されます。  
+展開すると、 **[ID]** 、 **[ID の増分値]** 、 **[IDENTITY シード]** のプロパティが表示されます。  
   
 **[Is Identity]**  
 選択されている列がテーブルの ID 列であるかどうかを示します。 プロパティを変更するには、テーブル デザイナーでテーブルを開き、 **[プロパティ]** ウィンドウでプロパティを編集します。 この設定は、 *int*などの数値に基づくデータ型の列にのみ適用されます。  
@@ -163,7 +162,7 @@ image 型の列のドキュメントの種類を定義するために使用さ�
 テーブルの最初の行に割り当てられる値が表示されます。 このセルを空白にすると、既定により値が 1 に設定されます。 このプロパティを編集するには、値を直接入力します。  
   
 **[Deterministic]**  
-選択した列のデータ型を明確に決定できるかどうかが表示されます   
+選択した列のデータ型を明確に決定できるかどうかが表示されます  
   
 **[DTS-published]**  
 列が SSIS によりパブリッシュされているかどうかが表示されます  

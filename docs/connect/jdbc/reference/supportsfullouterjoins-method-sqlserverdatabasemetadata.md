@@ -1,5 +1,5 @@
 ---
-title: supportsFullOuterJoins メソッド (SQLServerDatabaseMetaData) |Microsoft Docs
+title: supportsFullOuterJoins メソッド (SQLServerDatabaseMetaData) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: 836f1f45-59ed-4a34-9809-2000d3062576
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 74f9508431e4c8d8d5b460c055b69837c09a4fe6
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 4a59e2c8bc82a54080b7413e13928b0e85a49270
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47702030"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67969445"
 ---
 # <a name="supportsfullouterjoins-method-sqlserverdatabasemetadata"></a>supportsFullOuterJoins メソッド (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -36,13 +35,13 @@ public boolean supportsFullOuterJoins()
 ```  
   
 ## <a name="return-value"></a>戻り値  
- **true**サポートされている場合。 それ以外の場合は、 **false**です。  
+ サポートされている場合は**true** 。 それ以外の場合は、 **false**です。  
   
 ## <a name="exceptions"></a>例外  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- この supportsFullOuterJoins メソッドは、java.sql.DatabaseMetaData インターフェイスで supportsFullOuterJoins メソッドによって指定されます。  
+ この supportsFullOuterJoins メソッドは、java メタデータインターフェイスの supportsFullOuterJoins メソッドによって指定されます。  
   
 ## <a name="see-also"></a>参照  
  [SQLServerDatabaseMetaData のメソッド](../../../connect/jdbc/reference/sqlserverdatabasemetadata-methods.md)   

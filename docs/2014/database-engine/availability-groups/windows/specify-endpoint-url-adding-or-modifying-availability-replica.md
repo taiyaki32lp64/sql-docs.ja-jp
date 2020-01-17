@@ -1,5 +1,5 @@
 ---
-title: 追加または可用性レプリカ (SQL Server) を変更する場合は、エンドポイント URL の指定 |Microsoft Docs
+title: 可用性レプリカを追加または変更するときにエンドポイント URL を指定する (SQL Server) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,12 +15,12 @@ ms.assetid: d7520c13-a8ee-4ddc-9e9a-54cd3d27ef1c
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 85f3fe4115f770f45df6dc226eac81e798514f08
-ms.sourcegitcommit: 78e32562f9c1fbf2e50d3be645941d4aa457e31f
+ms.openlocfilehash: 524f9d4b3173a70d3491f2efc0f00f4061c4d6b4
+ms.sourcegitcommit: f912c101d2939084c4ea2e9881eb98e1afa29dad
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/08/2019
-ms.locfileid: "54100267"
+ms.lasthandoff: 10/23/2019
+ms.locfileid: "72797970"
 ---
 # <a name="specify-the-endpoint-url-when-adding-or-modifying-an-availability-replica-sql-server"></a>可用性レプリカを追加または変更する場合のエンドポイント URL の指定 (SQL Server)
   可用性グループの可用性レプリカをホストするには、サーバー インスタンスにデータベース ミラーリング エンドポイントが存在する必要があります。 サーバー インスタンスでは、このエンドポイントを使用して、他のサーバー インスタンスによってホストされる可用性レプリカから [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] のメッセージをリッスンします。 可用性グループの可用性レプリカを定義するには、そのレプリカをホストするサーバー インスタンスのエンドポイント URL を指定する必要があります。 *エンドポイント URL* は、データベース ミラーリング エンドポイントのトランスポート プロトコル (TCP)、サーバー インスタンスのシステム アドレス、およびエンドポイントに関連付けられているポート番号を識別します。  
@@ -39,23 +39,23 @@ ms.locfileid: "54100267"
 ##  <a name="SyntaxOfURL"></a> エンドポイント URL の構文  
  エンドポイント URL の構文は、次のような形式になります。  
   
- TCP<strong>://</strong>*\<system-address>*<strong>:<strong>*\<port>*  
+ TCP<strong>://</strong> *\<system-address>* <strong>:</strong> *\<port>*  
   
  パラメーターの説明  
   
--   *\<system-address* は、ミラーリング先のコンピューター システムを明確に識別する文字列です。 通常、サーバー アドレスは、システム名 (システムが同じドメインに存在する場合)、完全修飾ドメイン名、または IP アドレスになります。  
+-   *\<system-address&gt;* は、ターゲット コンピューター システムを明確に識別する文字列です。 通常、サーバー アドレスは、システム名 (システムが同じドメインに存在する場合)、完全修飾ドメイン名、または IP アドレスになります。  
   
     -   Windows Server フェールオーバー クラスタリング (WSFC) クラスターのノードが同じドメイン内にある場合、コンピューター システムの名前 ( `SYSTEM46`など) を使用できます。  
   
-    -   IP アドレスを使用するには、それが環境内で一意である必要があります。 IP アドレスが静的である場合にのみ、IP アドレスを使用することをお勧めします。 IP アドレスには、IP Version 4 (IPv4) または IP Version 6 (IPv6) を使用できます。 IPv6 アドレスは、**[**_<IPv6_address>_**]** のように、角かっこで囲む必要があります。  
+    -   IP アドレスを使用するには、それが環境内で一意である必要があります。 IP アドレスが静的である場合にのみ、IP アドレスを使用することをお勧めします。 IP アドレスには、IP Version 4 (IPv4) または IP Version 6 (IPv6) を使用できます。 IPv6 アドレスは、 **[** _<IPv6_address>_ **]** のように、角かっこで囲む必要があります。  
   
          システムの IP アドレスを参照するには、Windows コマンド プロンプトで、 **ipconfig** コマンドを入力します。  
   
     -   完全修飾ドメイン名は動作が保証されています。 これは、場所によって異なる形式を使用するローカルに定義されたアドレス文字列です。 常にではありませんが多くの場合、完全修飾ドメイン名は、次の形式のようにコンピューター名、およびピリオド区切りの一連のドメイン セグメントを含む複合名になります。  
   
-         _computer_name_ **など) を使用できます。** _domain_segment_[...**.**_domain_segment_]  
+         _computer_name_ **など) を使用できます。** _domain_segment_[... **.** _domain_segment_]  
   
-         *computer_name*はサーバー インスタンスを実行しているコンピューターのネットワーク名、および *domain_segment*[...**.**_domain_segment_] はサーバーのその他のドメイン情報です。たとえば、 `localinfo.corp.Adventure-Works.com`のようになります。  
+         *computer_name*はサーバー インスタンスを実行しているコンピューターのネットワーク名、および *domain_segment*[... **.** _domain_segment_] はサーバーのその他のドメイン情報です。たとえば、 `localinfo.corp.Adventure-Works.com`のようになります。  
   
          ドメイン セグメントの内容と数は、会社内または組織内で決定されます。 詳細については、このトピックの「 [完全修飾ドメイン名の検索](#Finding_FQDN)」を参照してください。  
   
@@ -65,11 +65,11 @@ ms.locfileid: "54100267"
   
      エンドポイント URL で、ターゲット コンピューターのミラーリング エンドポイントに関連付けられているサーバー インスタンスを識別するのは、ポートの番号だけです。 次の図は、1 台のコンピューターにある 2 つのサーバー インスタンスのエンドポイント URL を示しています。 既定のインスタンスではポート `7022` が使用され、名前付きインスタンスではポート `7033`が使用されます。 これら 2 つのサーバー インスタンスのエンドポイント URL は、それぞれ `TCP://MYSYSTEM.Adventure-works.MyDomain.com:7022` と `TCP://MYSYSTEM.Adventure-works.MyDomain.com:7033`です。 アドレスにサーバー インスタンス名が含まれていないことに注意してください。  
   
-     ![既定のインスタンスのサーバー ネットワーク アドレス](../../media/dbm-2-instances-ports-1-system.gif "既定のインスタンスのサーバー ネットワーク アドレス")  
+     ![既定のインスタンスのサーバーネットワークアドレス](../../media/dbm-2-instances-ports-1-system.gif "既定のインスタンスのサーバーネットワークアドレス")  
   
      サーバー インスタンスのデータベース ミラーリング エンドポイントに現在関連付けられているポートを識別するには、次の [!INCLUDE[tsql](../../../includes/tsql-md.md)] ステートメントを使用します。  
   
-    ```  
+    ```sql
     SELECT type_desc, port FROM sys.TCP_endpoints  
     ```  
   
@@ -82,7 +82,7 @@ ms.locfileid: "54100267"
   
  `TCP://SYSTEM46:7022`  
   
-#### <a name="b-using-a-fully-qualified-domain-name"></a>B. 完全修飾ドメイン名を使用する  
+#### <a name="b-using-a-fully-qualified-domain-name"></a>b. 完全修飾ドメイン名を使用する  
  次のエンドポイント URL では、完全修飾ドメイン名 `DBSERVER8.manufacturing.Adventure-Works.com`およびポート `7024`を指定しています。  
   
  `TCP://DBSERVER8.manufacturing.Adventure-Works.com:7024`  
@@ -102,7 +102,7 @@ ms.locfileid: "54100267"
   
  **IPCONFIG /ALL**  
   
- 完全修飾ドメイン名を作成するには、次に示すように、*<host_name>* と *<Primary_Dns_Suffix>* の値を連結します:  
+ 完全修飾ドメイン名を作成するには、次に示すように、 *<host_name>* と *<Primary_Dns_Suffix>* の値を連結します:  
   
  _<host_name>_ **.** _<Primary_Dns_Suffix>_  
   
@@ -122,9 +122,9 @@ ms.locfileid: "54100267"
 ##  <a name="RelatedTasks"></a> 関連タスク  
  **データベース ミラーリング エンドポイントを構成するには**  
   
--   [データベース ミラーリング エンドポイントの AlwaysOn 可用性グループの作成&#40;SQL Server PowerShell&#41;](database-mirroring-always-on-availability-groups-powershell.md)  
+-   [AlwaysOn 可用性グループ&#40;SQL Server PowerShell のデータベースミラーリングエンドポイントを作成する&#41;](database-mirroring-always-on-availability-groups-powershell.md)  
   
--   [Windows 認証でのデータベース ミラーリング エンドポイントの作成 &#40;Transact-SQL&#41;](../../database-mirroring/create-a-database-mirroring-endpoint-for-windows-authentication-transact-sql.md)  
+-   [Windows 認証でのデータベース ミラーリング エンドポイントを作成する &#40;Transact-SQL&#41;](../../database-mirroring/create-a-database-mirroring-endpoint-for-windows-authentication-transact-sql.md)  
   
 -   [データベース ミラーリング エンドポイントでの証明書の使用 &#40;Transact-SQL&#41;](../../database-mirroring/use-certificates-for-a-database-mirroring-endpoint-transact-sql.md)  
   
@@ -134,7 +134,7 @@ ms.locfileid: "54100267"
   
 -   [サーバー ネットワーク アドレスの指定 &#40;データベース ミラーリング&#41;](../../database-mirroring/specify-a-server-network-address-database-mirroring.md)  
   
--   [AlwaysOn 可用性グループの構成のトラブルシューティングを行う&#40;SQL Server&#41;削除](troubleshoot-always-on-availability-groups-configuration-sql-server.md)  
+-   [AlwaysOn 可用性グループ構成&#40;SQL Server&#41;削除された問題のトラブルシューティング](troubleshoot-always-on-availability-groups-configuration-sql-server.md)  
   
  **データベース ミラーリング エンドポイントに関する情報を表示するには**  
   
@@ -148,11 +148,9 @@ ms.locfileid: "54100267"
   
 ##  <a name="RelatedContent"></a> 関連コンテンツ  
   
--   [Microsoft SQL Server AlwaysOn ソリューション ガイド高可用性とディザスター リカバリー](https://go.microsoft.com/fwlink/?LinkId=227600)  
+-   [高可用性とディザスターリカバリーのための AlwaysOn ソリューションガイドの Microsoft SQL Server](https://go.microsoft.com/fwlink/?LinkId=227600)  
   
 ## <a name="see-also"></a>参照  
  [可用性グループの作成と構成 &#40;SQL Server&#41;](creation-and-configuration-of-availability-groups-sql-server.md)   
- [AlwaysOn 可用性グループの概要&#40;SQL Server&#41;](overview-of-always-on-availability-groups-sql-server.md)   
+ [AlwaysOn 可用性グループ&#40;SQL Server&#41;の概要](overview-of-always-on-availability-groups-sql-server.md)   
  [CREATE ENDPOINT &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-endpoint-transact-sql)  
-  
-  

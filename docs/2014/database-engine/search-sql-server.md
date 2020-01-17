@@ -11,11 +11,11 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: 441fbef735366b63ad56fc6652f79c977378ba2c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48106362"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62843718"
 ---
 # <a name="search-sql-server"></a>検索 (SQL Server)
   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] テキストおよび凌ぐ機能のドキュメントの検索機能を提供、 [!INCLUDE[tsql](../includes/tsql-md.md)] `LIKE`キーワード。  

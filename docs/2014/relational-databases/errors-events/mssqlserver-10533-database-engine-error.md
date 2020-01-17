@@ -13,11 +13,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 86bd82dfd095baeacb35f8454859adb938123f52
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48066342"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62916189"
 ---
 # <a name="mssqlserver10533"></a>MSSQLSERVER_10533
     
@@ -38,7 +38,7 @@ ms.locfileid: "48066342"
 ## <a name="user-action"></a>ユーザーの操作  
  124 文字以下の名前を指定します。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [プラン ガイド](../performance/plan-guides.md)   
  [sp_create_plan_guide &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-create-plan-guide-transact-sql)   
  [sp_create_plan_guide_from_handle &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-create-plan-guide-from-handle-transact-sql)  

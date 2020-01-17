@@ -12,17 +12,20 @@ helpviewer_keywords:
 - add operator (+)
 - adding expressions
 ms.assetid: 44df4154-fed5-4e7f-9995-e703a0164f6a
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: db51309754644c99bebb06c94f8d7c0dd628289b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 0b733b2f19cb4bb8af3096d65a2c3099832aea10
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47818290"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71297715"
 ---
 # <a name="-add-ssis"></a>+ (加算) (SSIS)
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   2 つの数値式を加算します。  
   
 ## <a name="syntax"></a>構文  
@@ -64,6 +67,6 @@ StandardCost + (StandardCost * @[Profit%])
   
 ## <a name="see-also"></a>参照  
  [演算子の優先順位と結合規則](../../integration-services/expressions/operator-precedence-and-associativity.md)   
- [演算子 (SSIS 式)](../../integration-services/expressions/operators-ssis-expression.md)  
+ [演算子 &#40;SSIS 式&#41;](../../integration-services/expressions/operators-ssis-expression.md)  
   
   

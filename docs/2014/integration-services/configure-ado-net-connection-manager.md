@@ -4,23 +4,22 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.adonetconnection.f1
 helpviewer_keywords:
 - Configure ADO.NET Connection Manager dialog box
 ms.assetid: 609f8354-e876-4fed-adab-ac8d57a94f1c
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 1da34cc7b964824f25939bcbafcecd71ec71a86d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 51d115aaeebcedd102709b0e1f3fab81e439a521
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48090522"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66060835"
 ---
 # <a name="configure-adonet-connection-manager"></a>[ADO.NET の接続マネージャーの構成]
   **[ADO.NET の接続マネージャーの構成]** ダイアログ ボックスでは、SqlClient プロバイダーなど、.NET Framework データ プロバイダーを使用してアクセスできるデータ ソースへの接続を追加できます。 接続マネージャーでは、既存の接続を使用することも、新しく接続を作成することもできます。  
@@ -40,7 +39,7 @@ ms.locfileid: "48090522"
  **削除**  
  接続を選択し、 **[削除]** ボタンを使用して削除します。  
   
-## <a name="see-also"></a>参照  
- [Integration Services のエラーとメッセージのリファレンス](../../2014/integration-services/integration-services-error-and-message-reference.md)  
+## <a name="see-also"></a>関連項目  
+ [Integration Services のエラーおよびメッセージのリファレンス](../../2014/integration-services/integration-services-error-and-message-reference.md)  
   
   

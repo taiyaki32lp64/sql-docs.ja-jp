@@ -9,16 +9,15 @@ ms.topic: language-reference
 dev_langs:
 - TSQL
 ms.assetid: 73f598cf-b02a-4dba-8d89-9fc0b55a12b8
-author: uc-msft
+author: pmasl
 ms.author: umajay
-manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 78fc2d4b2d7c5f4e1727149243e40c4c559e998e
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: f8c5d7ac822546d8334f1a174684f35733d9571b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56029193"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68116489"
 ---
 # <a name="dbcc-pdwshowspaceused-transact-sql"></a>DBCC PDW_SHOWSPACEUSED (Transact-SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
@@ -40,8 +39,8 @@ DBCC PDW_SHOWSPACEUSED ( " [ database_name . [ schema_name ] . ] | [ schema_name
 ```  
   
 ## <a name="arguments"></a>引数  
- [ *database_name* . [ *schema_name* ] . | *schema_name* . ] *table_name*  
- 1 つ、2 枚、または表示するテーブルの 3 部構成の名前。 2 つの 3 つの要素名、名前は、二重引用符で囲む必要がありますか ("")。 1 つの部分から成るテーブル名を囲む引用符を使用したはオプションです。 テーブル名が指定されていない場合は、現在のデータベースの情報が表示されます。  
+ `[ database_name . [ schema_name ] . | schema_name . ] table_name`  
+ 表示される 1 部、2 部、または 3 部構成のテーブル名。 2 部または 3 部構成のテーブル名は、二重引用符 ("") で囲む必要があります。 1 部構成のテーブル名を囲む引用符を使用することは省略できます。 テーブル名が指定されていない場合は、現在のデータベースの情報が表示されます。  
   
 ## <a name="permissions"></a>アクセス許可  
 VIEW SERVER STATE 権限が必要です。
@@ -51,23 +50,23 @@ VIEW SERVER STATE 権限が必要です。
   
 |[列]|データ型|[説明]|  
 |------------|---------------|-----------------|  
-|reserved_space|BIGINT|領域の合計 (KB 単位) をデータベースに使用します。|  
-|data_space|BIGINT|(KB 単位) のデータに使用される領域です。|  
-|index_space|BIGINT|領域を kb 単位でのインデックスに使用します。|  
-|unused_space|BIGINT|な領域を予約した領域の一部であり、使用しない、(KB 単位)。|  
-|pdw_node_id|ssNoversion|データの使用されているノードを計算します。|  
+|reserved_space|BIGINT|データベースに使用されている合計領域 (KB 単位)。|  
+|data_space|BIGINT|データに使用されている領域 (KB 単位)。|  
+|index_space|BIGINT|インデックスに使用されている領域 (KB 単位)。|  
+|unused_space|BIGINT|予約済み領域の一部で使用されていない領域 (KB 単位)。|  
+|pdw_node_id|INT|データに使用されているコンピューティング ノード。|  
   
 これは、1 つのテーブルの結果セットです。
   
 |[列]|データ型|[説明]|範囲|  
 |------------|---------------|-----------------|-----------|  
 |rows|BIGINT|行の数。||  
-|reserved_space|BIGINT|領域の合計 (KB 単位) のオブジェクト用に予約されています。||  
-|data_space|BIGINT|領域が kb 単位で、データに使用します。||  
-|index_space|BIGINT|領域を kb 単位でのインデックスに使用します。||  
-|unused_space|BIGINT|な領域を予約した領域の一部であり、使用しない、(KB 単位)。||  
-|pdw_node_id|ssNoversion|領域の使用状況の報告に使用するためのコンピューティング ノードです。||  
-|distribution_id|ssNoversion|領域の使用状況をレポートに使用する配布します。|値は、レプリケートされたテーブルの場合は-1 です。|  
+|reserved_space|BIGINT|オブジェクトに予約されている合計領域 (KB 単位)。||  
+|data_space|BIGINT|データに使用されている領域 (KB 単位)。||  
+|index_space|BIGINT|インデックスに使用されている領域 (KB 単位)。||  
+|unused_space|BIGINT|予約済み領域の一部で使用されていない領域 (KB 単位)。||  
+|pdw_node_id|INT|領域の使用状況の報告に使用されるコンピューティング ノード。||  
+|distribution_id|INT|領域の使用状況の報告に使用されるディストリビューション。|レプリケートされたテーブルの場合、値は -1 です。|  
   
 ## <a name="examples-includesssdwincludessssdw-mdmd-and-includesspdwincludessspdw-mdmd"></a>例: [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] および [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
 ### <a name="a-dbcc-pdwshowspaceused-basic-syntax"></a>A. DBCC PDW_SHOWSPACEUSED の基本的な構文  
@@ -82,7 +81,7 @@ DBCC PDW_SHOWSPACEUSED ( "dbo.FactInternetSales" );
 DBCC PDW_SHOWSPACEUSED ( FactInternetSales );  
 ```  
   
-### <a name="b-show-the-disk-space-used-by-all-tables-in-the-current-database"></a>B. 現在のデータベース内のすべてのテーブルで使用されるディスク領域を表示します。  
+### <a name="b-show-the-disk-space-used-by-all-tables-in-the-current-database"></a>B. 現在のデータベース内のすべてのテーブルで使用されているディスク領域を表示する  
  次の例では、[!INCLUDE[ssawPDW](../../includes/ssawpdw-md.md)] のすべてのユーザー テーブルとシステム テーブルで使用される予約済みのディスク領域を示します。  
   
 ```sql

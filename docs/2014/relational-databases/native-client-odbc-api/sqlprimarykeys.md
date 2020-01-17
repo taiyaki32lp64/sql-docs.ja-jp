@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: a12392f9e70fec2fae3b7790b43f12779b8868b5
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53352914"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63046690"
 ---
 # <a name="sqlprimarykeys"></a>SQLPrimaryKeys
   または、一意の行識別子として使用できる複数の列をテーブルとして使用することがあり、PRIMARY KEY 制約なしで作成されたテーブルが空の結果セットに SQLPrimaryKeys を返します。 ODBC 関数[SQLSpecialColumns](sqlspecialcolumns.md)レポート行の主キーのないテーブルの識別子の候補とします。  

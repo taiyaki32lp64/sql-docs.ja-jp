@@ -1,11 +1,10 @@
 ---
-title: レポートまたはデータ フィード (SSAS) への接続 |Microsoft Docs
+title: レポートまたはデータフィードへの接続 (SSAS) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.bidtoolset.connreportdatafeed.f1
@@ -13,12 +12,12 @@ ms.assetid: e0ccfb0b-e646-4de8-b7da-f88c986c96e4
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 4a55f15074257ae19b026ef373ea0c7838a55081
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: f7a8feb912a7987328afa06043b18586f6e9bb29
+ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48090212"
+ms.lasthandoff: 08/29/2019
+ms.locfileid: "70151828"
 ---
 # <a name="connect-to-a-report-or-data-feed-ssas"></a>[レポートまたはデータ フィードへの接続] (SSAS)
   **テーブルのインポート ウィザード** のこのページを使用すると、データ フィードに接続できます。 [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]からウィザードにアクセスするには、 **[モデル]** メニューの **[データ ソースからのインポート]** をクリックします。  
@@ -45,7 +44,7 @@ ms.locfileid: "48090212"
  **接続の表示名**  
  データ フィード接続の表示名を入力します。  
   
- **データ フィードの URL**  
+ **データフィード URL**  
  Atom サービス ドキュメント (.atomsvc、.atom) への完全なパス、または単一のデータ フィードの URL を入力するか、 **[参照]** をクリックして Atom サービス ドキュメントを選択します。  
   
  **[参照]**  
@@ -54,12 +53,12 @@ ms.locfileid: "48090212"
  使用可能なデータセットを表示するには、 **[使用可能な Azure DataMarket データセットの表示]** をクリックします。  
   
  **アカウント キー**  
- Windows Azure Marketplace データセットのサブスクリプションにアクセスするために使用するアカウント キーを指定します。  
+ Azure Marketplace データセットサブスクリプションへのアクセスに使用するアカウントキーを指定します。  
   
- **検索**  
+ **探す**  
  Windows Live アカウントに関連付けられたアカウント キーを検索します。  
   
- **アカウント キーを保存します。**  
+ **アカウントキーを保存する**  
  暗号化されたアカウント キーをデータ接続と共に保存します。  
   
  **詳細設定**  
@@ -72,7 +71,7 @@ ms.locfileid: "48090212"
  **接続の表示名**  
  データ フィード接続の表示名を入力します。  
   
- **データ フィードの URL**  
+ **データフィード URL**  
  Atom サービス ドキュメント (.atomsvc、.atom) への完全なパス、または単一のデータ フィードの URL を入力するか、 **[参照]** をクリックして Atom サービス ドキュメントを選択します。  
   
  **[すべてのフィード列を含める]** をクリックして、すべてのデータ フィード列をインポートするかどうかを指定します。  

@@ -7,15 +7,15 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 45298179-4ac1-4723-8b3c-56f5926be40a
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: d8df088a088a68d91668978bef5761cc2b5b543f
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: fba97c2e348b238702206ebf194c2390f155ad16
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52779894"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62834644"
 ---
 # <a name="the-cdc-designer-console-introduction"></a>CDC デザイナー コンソールの概要
   ここでは、Change Data Capture Designer for Oracle by Attunity のインストール手順について説明します。  

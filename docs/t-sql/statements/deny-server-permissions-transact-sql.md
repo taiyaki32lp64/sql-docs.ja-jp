@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 68d6b2a9-c36f-465a-9cd2-01d43a667e99
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: 9f480a406983fa0e4bdce4c100b4ccb4d44c5c3a
-ms.sourcegitcommit: 9c99f992abd5f1c174b3d1e978774dffb99ff218
+ms.openlocfilehash: de59423c368bc966fab3958fbeb4b04888f4e2a8
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/17/2019
-ms.locfileid: "54361592"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68114776"
 ---
 # <a name="deny-server-permissions-transact-sql"></a>DENY (サーバーの権限の拒否) (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -57,16 +56,19 @@ DENY permission [ ,...n ]
   
 ## <a name="arguments"></a>引数  
  *permission*  
- サーバーで拒否できる権限を指定します。 権限の一覧については、後の「解説」を参照してください。  
+ サーバー上で拒否できる権限を指定します。 権限の一覧については、後の「解説」を参照してください。  
   
  CASCADE  
- このプリンシパルによって権限が許可されている他のプリンシパルに対しても、同じ権限を拒否することを示します。  
+ 指定したプリンシパル、およびこのプリンシパルによって権限が許可されている他のすべてのプリンシパルに対しても、同じ権限を拒否することを示します。 GRANT OPTION を使用してプリンシパルに権限が与えられている場合に必要となります。 
   
  TO \<server_principal>  
  権限を拒否するプリンシパルを指定します。  
   
  AS \<grantor_principal>  
- このクエリを実行するプリンシパルが権限を拒否する権利を取得した、元のプリンシパルを指定します。  
+ このクエリを実行するプリンシパルが権限を拒否する権利を取得した、元のプリンシパルを指定します。
+AS <principal> 句は、権限の拒否者として記録されるプリンシパルは、ステートメントを実行しているユーザー以外のプリンシパルでなければならないことを示すために使います。 たとえば、ユーザー Mary の principal_id は 12、ユーザー Raul の principal_id は 15 であるものとします。 Mary が `DENY SELECT ON OBJECT::X TO Steven WITH GRANT OPTION AS Raul;` を実行します。ステートメントは実際にはユーザー 13 (Mary) によって実行されましたが、sys.database_permissions テーブルでは、DENY ステートメントの grantor_prinicpal_id は 15 (Raul) であることが示されます。
+  
+このステートメントで AS を使っても、別のユーザーを偽装できることは意味しません。    
   
  *SQL_Server_login*  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ログインを指定します。  
@@ -91,7 +93,7 @@ DENY permission [ ,...n ]
   
  サーバー権限に関する情報は [sys.server_permissions](../../relational-databases/system-catalog-views/sys-server-permissions-transact-sql.md) カタログ ビュー、サーバー プリンシパルに関する情報は [sys.server_principals](../../relational-databases/system-catalog-views/sys-server-principals-transact-sql.md) カタログ ビューでそれぞれ確認できます。 サーバー ロールのメンバーシップに関する情報は、[sys.server_role_members](../../relational-databases/system-catalog-views/sys-server-role-members-transact-sql.md) カタログ ビューで確認できます。  
   
- サーバーは権限の階層の最上位となります。 次の表に、サーバーで拒否できる最も限定的な権限を示します。  
+ サーバーは権限の階層の最上位となります。 次の表に、サーバー上で拒否できる最も限定的な権限を示します。  
   
 |サーバー権限|権限が含まれるサーバー権限|  
 |-----------------------|----------------------------------|  
@@ -156,7 +158,7 @@ DENY CONNECT SQL TO Annika CASCADE;
 GO  
 ```  
   
-### <a name="b-denying-create-endpoint-permission-to-a-sql-server-login-using-the-as-option"></a>B. AS オプションを使用して、SQL Server ログインに対し CREATE ENDPOINT 権限を拒否する  
+### <a name="b-denying-create-endpoint-permission-to-a-sql-server-login-using-the-as-option"></a>B. AS オプションを使用して、SQL Server ログインに対して CREATE ENDPOINT 権限を拒否する  
  次の例では、ユーザー `CREATE ENDPOINT` に対して `ArifS` 権限を拒否します。 この例では `AS` オプションを使って、このステートメントを実行するプリンシパルに権限を許可した、元のプリンシパルとして `MandarP` を指定します。  
   
 ```  

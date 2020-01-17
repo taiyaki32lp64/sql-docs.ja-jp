@@ -15,18 +15,17 @@ apitype: Assembly
 ms.assetid: 6f341d0b-265a-415e-abe5-8f408fedbb21
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: b1c59076fa1ed26985ff9abe515a0dc3806f951a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 62b60d2f35e1149f7f809f486f5a64e8bb99f45a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47618580"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67952680"
 ---
 # <a name="getconnection-method-sqlserverstatement"></a>getConnection メソッド (SQLServerStatement)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  この [SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md) オブジェクトを生成した [SQLServerConnection](../../../connect/jdbc/reference/sqlserverconnection-class.md) オブジェクトを取得します。  
+  [SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md) オブジェクトを生成した [SQLServerConnection](../../../connect/jdbc/reference/sqlserverconnection-class.md) オブジェクトを取得します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -39,7 +38,7 @@ public final java.sql.Connection getConnection()
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- この getConnection メソッドは、java.sql.Statement インターフェイスの getConnection メソッドによって指定されます。  
+ この getConnection メソッドは、java. .sql. ステートメントインターフェイスの getConnection メソッドによって指定されます。  
   
 ## <a name="see-also"></a>参照  
  [SQLServerStatement のメンバー](../../../connect/jdbc/reference/sqlserverstatement-members.md)   

@@ -1,5 +1,5 @@
 ---
-title: bcp_readfmt |Microsoft Docs
+title: bcp_readfmt | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -19,11 +19,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 76ccc4271877b81ae103a89b5df727b74017d9ab
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48109132"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62688671"
 ---
 # <a name="bcpreadfmt"></a>bcp_readfmt
   指定されたフォーマット ファイルからデータ ファイル形式の定義を読み取ります。  
@@ -62,7 +62,7 @@ szFormatFile
  `BCPDELAYREADFMT`の値、 *eOption*パラメーターの[bcp_control](bcp-control.md) bcp_readfmt の動作を変更します。  
   
 > [!NOTE]  
->  4.2 以降のバージョンによって、フォーマット ファイルが生成される必要がありますが、 **bcp**ユーティリティ。  
+>  4\.2 以降のバージョンによって、フォーマット ファイルが生成される必要がありますが、 **bcp**ユーティリティ。  
   
 ## <a name="example"></a>例  
   

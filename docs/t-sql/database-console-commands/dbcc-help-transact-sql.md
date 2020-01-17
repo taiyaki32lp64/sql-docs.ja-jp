@@ -16,18 +16,17 @@ helpviewer_keywords:
 - DBCC statement syntax information
 - DBCC HELP statement
 ms.assetid: 306092c6-4354-4e47-928b-606124fbdc6e
-author: uc-msft
+author: pmasl
 ms.author: umajay
-manager: craigg
-ms.openlocfilehash: 6f12c565bfb53c5d22dcb4255482d7e1c1713838
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: eaad7e6f3e66bb39ec43f402c531b7f89bdcf980
+ms.sourcegitcommit: c426c7ef99ffaa9e91a93ef653cd6bf3bfd42132
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47797343"
+ms.lasthandoff: 10/10/2019
+ms.locfileid: "72251386"
 ---
 # <a name="dbcc-help-transact-sql"></a>DBCC HELP (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
 
 指定された DBCC コマンドに関する構文情報を返します。
   
@@ -41,7 +40,7 @@ DBCC HELP ( 'dbcc_statement' | @dbcc_statement_var | '?' )
 ```  
   
 ## <a name="arguments"></a>引数  
- *dbcc_statement* | *@dbcc_statement_var*  
+ *dbcc_statement* |  *\@dbcc_statement_var*  
  構文情報を取得する DBCC コマンドの名前を指定します。 DBCC コマンドの "DBCC" より後の部分のみを指定します (たとえば、DBCC CHECKDB ではなく CHECKDB と指定します)。  
   
  ?  
@@ -67,7 +66,7 @@ DBCC HELP (@dbcc_stmt);
 GO  
 ```  
   
-### <a name="b-using-dbcc-help-with-the--option"></a>B. DBCC HELP と ?  オプション  
+### <a name="b-using-dbcc-help-with-the--option"></a>B. DBCC HELP と ? オプション  
 次の例は、ヘルプ情報を取得できるすべての DBCC ステートメントを返します。
   
 ```sql  

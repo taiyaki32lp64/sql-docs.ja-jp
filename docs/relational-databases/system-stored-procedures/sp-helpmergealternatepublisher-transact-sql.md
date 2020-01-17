@@ -15,18 +15,17 @@ helpviewer_keywords:
 ms.assetid: a96e365f-5967-4580-9d79-5bacf2d12211
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: a0ff0acfc4e3eff25b4281637d1f707ce925a7df
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 6875e745cc05735b9f116c2d4afa5e5218defb99
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52802254"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68122389"
 ---
-# <a name="sphelpmergealternatepublisher-transact-sql"></a>sp_helpmergealternatepublisher (Transact-SQL)
+# <a name="sphelpmergealternatepublisher-transact-sql"></a>sp_helpmergealternatepublisher (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  マージ パブリケーションの代替パブリッシャーとして有効なすべてのサーバーの一覧を返します。 このストアド プロシージャは、サブスクライバー側でサブスクリプション データベースについて実行されます。  
+  マージ パブリケーションの代替パブリッシャーとして有効になっているすべてのサーバーの一覧を返します。 このストアド プロシージャは、サブスクライバーのサブスクリプション データベースで実行されます。  
   
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -38,14 +37,11 @@ sp_helpmergealternatepublisher [ @publisher = ] 'publisher', [ @publisher_db = ]
 ```  
   
 ## <a name="arguments"></a>引数  
- [ **@publisher=**] **'***publisher***'**  
- 代替パブリッシャーの名前です。*パブリッシャー*は**sysname**、既定値はありません。  
+`[ @publisher = ] 'publisher'` 代替パブリッシャーの名前です。*パブリッシャー*は**sysname**、既定値はありません。  
   
- [ **@publisher_db=**] **'***publisher_db***'**  
- パブリケーション データベースの名前です。*publisher_db*は**sysname**、既定値はありません。  
+`[ @publisher_db = ] 'publisher_db'` パブリケーション データベースの名前です。*publisher_db*は**sysname**、既定値はありません。  
   
- [ **@publication=**] **'***publication***'**  
- パブリケーションの名前です。*パブリケーション*は**sysname**、既定値はありません。  
+`[ @publication = ] 'publication'` パブリケーションの名前です。*パブリケーション*は**sysname**、既定値はありません。  
   
 ## <a name="result-sets"></a>結果セット  
   
@@ -69,7 +65,7 @@ sp_helpmergealternatepublisher [ @publisher = ] 'publisher', [ @publisher_db = ]
 ## <a name="permissions"></a>アクセス許可  
  パブリケーションのパブリケーション アクセス リストのメンバーだけが実行できる**sp_helpmergealternatepublisher**します。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [システム ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

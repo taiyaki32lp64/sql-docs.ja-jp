@@ -20,13 +20,12 @@ helpviewer_keywords:
 ms.assetid: 53a33c8d-e5f0-430d-a712-b65f43d64318
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 0ff0be855fe7c610b98942cd26a008c8085dffb6
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ead3e8b7df6eb563ce87fa6d6abbffa4a5d2b413
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47836390"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68053407"
 ---
 # <a name="syssysindexkeys-transact-sql"></a>sys.sysindexkeys (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -38,12 +37,12 @@ ms.locfileid: "47836390"
   
 |列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
-|**id**|**int**|テーブルの ID を指定します。|  
+|**id**|**int**|テーブルの ID。|  
 |**indid**|**smallint**|インデックスの ID。|  
 |**colid**|**smallint**|列の ID です。|  
 |**keyno**|**smallint**|インデックス内での列の位置です。|  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [システム ビューへのシステム テーブルのマッピング&#40;TRANSACT-SQL&#41;](../../relational-databases/system-tables/mapping-system-tables-to-system-views-transact-sql.md)   
  [互換性ビュー &#40;TRANSACT-SQL&#41;](~/relational-databases/system-compatibility-views/system-compatibility-views-transact-sql.md)   
  [sys.index_columns &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-index-columns-transact-sql.md)  

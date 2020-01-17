@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 33c559c4-4db7-4850-9309-2743a7ae5521
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: cf72b40a6a1e4caf5f630298dd57cc4055fe41f5
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 23c6970dd503c15e0eb04d6d97bed15c5a90dc71
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47661040"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67966076"
 ---
 # <a name="indexes-append-method-example-vc"></a>Indexes Append メソッドの例 (VC++)
 次のコードでは、新しいインデックスを作成する方法を示します。 テーブル内の 2 つの列にインデックスがあります。  

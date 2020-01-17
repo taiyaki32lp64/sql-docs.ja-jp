@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - dimensions [Analysis Services], defining
@@ -13,15 +12,15 @@ ms.assetid: fe84588b-66a3-4100-a1cf-59b21b7adf01
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 6225e17feef079fba352b0656fb8fc9d28c86748
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 18cc4dfd6f1d17340cc06803367737b841bade70
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52518985"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66075613"
 ---
 # <a name="define-database-dimensions"></a>データベース ディメンションの定義
-   [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] のディメンション デザイナーを使用します。 ディメンション デザイナーを使用すると、次の操作を実行できます。  
+  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] のディメンション デザイナーを使用します。 ディメンション デザイナーを使用すると、次の操作を実行できます。  
   
 -   ディメンションレベルのプロパティを構成します。  
   

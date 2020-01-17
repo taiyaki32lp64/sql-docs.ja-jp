@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: a6a7f4d6-68aa-4a38-93bf-53eba0d7dc82
 author: Shamikg
 ms.author: Shamikg
-manager: craigg
-ms.openlocfilehash: 1e5c4c996a7dea9da3eccb24da2b6021a13d2590
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: 83a4a2d1bea5074cc268590d4074bde631f28694
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52400205"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67908832"
 ---
 # <a name="migrating-mysql-data-into-sql-server---azure-sql-db-mysqltosql"></a>MySQL のデータの移行には、SQL Server - Azure SQL DB (MySQLToSQL)
 変換後のオブジェクトが正常に同期[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]または SQL Azure のデータを移行する MySQL から[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]または SQL Azure です。  
@@ -64,7 +63,7 @@ ms.locfileid: "52400205"
   
 **データを移行するには**  
   
-1.  次を確認します。  
+1.  次のことを検証します。  
   
     -   MySQL プロバイダーは、SSMA を実行しているコンピューターにインストールされます。  
   

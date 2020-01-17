@@ -26,14 +26,13 @@ helpviewer_keywords:
 ms.assetid: c32d1e01-9ee9-4665-a516-fcfece58078e
 author: VanMSFT
 ms.author: vanto
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: f3ca28e379188c13c266871c4b2afdeecca773bf
-ms.sourcegitcommit: 9c99f992abd5f1c174b3d1e978774dffb99ff218
+ms.openlocfilehash: 5a3fa36b42af67c26a5351a9d8ba7319fc37c4b4
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/17/2019
-ms.locfileid: "54361652"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67984399"
 ---
 # <a name="deny-transact-sql"></a>DENY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -91,7 +90,7 @@ DENY
  ALL  
  このオプションでは、可能な権限がすべて拒否されるわけではありません。 ALL を指定すると、次の権限が拒否されます。  
   
--   セキュリティ保護可能なリソースがデータベースの場合、BACKUP DATABASE、BACKUP LOG、CREATE DATABASE、CREATE DEFAULT、CREATE FUNCTION、CREATE PROCEDURE、CREATE RULE、CREATE TABLE、および CREATE VIEW。  
+-   セキュリティ保護可能なリソースがデータベースの場合、ALL は BACKUP DATABASE、BACKUP LOG、CREATE DATABASE、CREATE DEFAULT、CREATE FUNCTION、CREATE PROCEDURE、CREATE RULE、CREATE TABLE、および CREATE VIEW を意味します。  
   
 -   セキュリティ保護可能なリソースがスカラー関数の場合、EXECUTE および REFERENCES。  
   
@@ -99,12 +98,12 @@ DENY
   
 -   セキュリティ保護可能なリソースがストアド プロシージャの場合、EXECUTE。  
   
--   セキュリティ保護可能なリソースがテーブルの場合、DELETE、INSERT、REFERENCES、SELECT、UPDATE。  
+-   セキュリティ保護可能なリソースがテーブルの場合、ALL は DELETE、INSERT、REFERENCES、SELECT、および UPDATE を意味します。  
   
--   セキュリティ保護可能なリソースがビューの場合、DELETE、INSERT、REFERENCES、SELECT、UPDATE。  
+-   セキュリティ保護可能なリソースがビューの場合、ALL は DELETE、INSERT、REFERENCES、SELECT、および UPDATE を意味します。  
   
 > [!NOTE]  
->  DENY ALL 構文は非推奨とされます。 [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]代わりに特定の権限を拒否してください。  
+>  DENY ALL 構文は非推奨です。 [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]代わりに特定の権限を拒否してください。  
   
  PRIVILEGES  
  ISO 準拠のために用意されています。 ALL の動作は変更されません。  
@@ -122,31 +121,32 @@ DENY
  権限を拒否するセキュリティ保護可能なリソースを指定します。  
   
  TO *principal*  
- プリンシパルの名前を指定します。 セキュリティ保護可能なリソースに対する権限を拒否できるプリンシパルは、そのリソースによって異なります。 有効な組み合わせについては、後のセキュリティ保護可能なリソースごとのトピックを参照してください。  
+ プリンシパルの名前です。 セキュリティ保護可能なリソースに対する権限を拒否できるプリンシパルは、そのリソースによって異なります。 有効な組み合わせについては、後のセキュリティ保護可能なリソースの各トピックを参照してください。  
   
  CASCADE  
- 指定したプリンシパル、およびこのプリンシパルによって権限が許可されている他のすべてのプリンシパルに対しても、同じ権限を拒否することを示します。 このオプションは、GRANT OPTION を使用してプリンシパルに権限が与えられている場合に必要となります。  
+ 指定したプリンシパル、およびこのプリンシパルによって権限が許可されている他のすべてのプリンシパルに対しても、同じ権限を拒否することを示します。 GRANT OPTION を使用してプリンシパルに権限が与えられている場合に必要となります。  
   
  AS *principal*  
-  AS <principal> 句は、権限の拒否者として記録されるプリンシパルは、ステートメントを実行しているユーザー以外のプリンシパルでなければならないことを示すために使います。 たとえば、ユーザー Mary の principal_id は 12、ユーザー Raul の principal_id は 15 であるものとします。 Mary が `DENY SELECT ON OBJECT::X TO Steven WITH GRANT OPTION AS Raul;` を実行します。ステートメントは実際にはユーザー 13 (Mary) によって実行されましたが、sys.database_permissions テーブルでは、DENY ステートメントの grantor_prinicpal_id は 15 (Raul) であることが示されます。
+ このクエリを実行するプリンシパルが権限を拒否する権利を取得した、元のプリンシパルを指定します。
+AS <principal> 句は、権限の拒否者として記録されるプリンシパルは、ステートメントを実行しているユーザー以外のプリンシパルでなければならないことを示すために使います。 たとえば、ユーザー Mary の principal_id は 12、ユーザー Raul の principal_id は 15 であるものとします。 Mary が `DENY SELECT ON OBJECT::X TO Steven WITH GRANT OPTION AS Raul;` を実行します。ステートメントは実際にはユーザー 13 (Mary) によって実行されましたが、sys.database_permissions テーブルでは、DENY ステートメントの grantor_prinicpal_id は 15 (Raul) であることが示されます。
   
 このステートメントで AS を使っても、別のユーザーを偽装できることは意味しません。  
   
 ## <a name="remarks"></a>Remarks  
  DENY ステートメントの完全な構文は複雑です。 前の構文ダイアグラムは、構造をわかりやすくするために簡略化されています。 セキュリティ保護可能なリソースに対する権限を拒否するための完全な構文については、後のトピックを参照してください。  
   
- GRANT OPTION で権限が許可されたプリンシパルに対しては、その権限を拒否するときに CASCADE を指定しないと、DENY は失敗します。  
+ GRANT OPTION で権限が付与されたプリンシパルに対して、その権限を拒否するときに CASCADE を指定しないと、DENY は失敗します。  
   
- システム ストアド プロシージャ sp_helprotect では、データベース レベルのセキュリティ保護可能なリソースに対する権限がレポートされます。  
+ システム ストアド プロシージャ sp_helprotect では、データベース レベルのセキュリティ保護可能なリソースに対する権限をレポートします。  
   
 > [!CAUTION]  
->  テーブル レベルの DENY ステートメントは列レベルの GRANT ステートメントよりも優先されません。 この動作は権限の階層内で一貫していませんが、旧バージョンとの互換性のために保持されています。 将来のリリースでは削除される予定です。  
+>  テーブル レベルの DENY は列レベルの GRANT ステートメントよりも優先されません。 この動作は権限の階層内で一貫していませんが、旧バージョンとの互換性のために保持されています。 将来のリリースでは削除される予定です。  
   
 > [!CAUTION]  
 >  データベースに対する CONTROL 権限を拒否すると、そのデータベースに対する CONNECT 権限が暗黙的に拒否されます。 データベースに対する CONTROL 権限を拒否されたプリンシパルは、そのデータベースに接続できません。  
   
 > [!CAUTION]  
->  CONTROL SERVER 権限を拒否すると、そのサーバーに対する CONNECT SQL 権限が暗黙的に拒否されます。 サーバーに対する CONTROL SERVER 権限を拒否されたプリンシパルは、そのサーバーに接続できません。  
+>  CONTROL SERVER 権限を拒否すると、そのサーバーに対する CONNECT SQL 権限が暗黙的に拒否されます。 サーバーに対する CONTROL SERVER 権限が拒否されたプリンシパルは、そのサーバーに接続できません。  
   
 ## <a name="permissions"></a>アクセス許可  
  呼び出し元 (または AS オプションで指定されたプリンシパル) は、セキュリティ保護可能なリソースに対する CONTROL 権限、またはセキュリティ保護可能なリソースに対する CONTROL 権限を暗黙的に与える上位の権限を保持している必要があります。 AS オプションを使用する場合、指定されたプリンシパルは、権限が拒否されるセキュリティ保護可能なリソースを所有している必要があります。  
@@ -154,7 +154,7 @@ DENY
  固定サーバー ロール sysadmin のメンバーなど、CONTROL SERVER 権限が許可されているユーザーは、サーバー内のセキュリティ保護可能なリソースに対する権限を拒否できます。 db_owner 固定データベース ロールのメンバーなど、データベースに対する CONTROL 権限が許可されているユーザーは、データベース内のセキュリティ保護可能なリソースに対する権限を拒否できます。 スキーマに対する CONTROL 権限が許可されているユーザーは、スキーマ内のオブジェクトに対する権限を拒否できます。 AS 句を使用する場合、指定されるプリンシパルは、権限の拒否対象となるセキュリティ保護可能なリソースを所有している必要があります。  
   
 ## <a name="examples"></a>使用例  
- 次の表は、セキュリティ保護可能なリソースと、その構文について説明しているトピックの一覧です。  
+ 次の表は、セキュリティ保護可能なリソースと、セキュリティ保護可能なリソース固有の構文について説明しているトピックの一覧です。  
   
 |||  
 |-|-|  

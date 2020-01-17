@@ -2,7 +2,7 @@
 title: タスクとアクセス許可 | Microsoft Docs
 ms.date: 03/01/2017
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: security
 ms.topic: conceptual
 helpviewer_keywords:
@@ -14,14 +14,14 @@ helpviewer_keywords:
 - predefined tasks [Reporting Services]
 - tasks [Reporting Services]
 ms.assetid: d7ff90b5-b976-4270-b9ad-9d7b801d8263
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 4793fef2ab0460c5adce81aa418130681ccdabfc
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 8724bbcfdb410f573ea65fbc1b9364d44f9af23d
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47709330"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65578507"
 ---
 # <a name="tasks-and-permissions"></a>タスクと権限
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]における *タスク* とは、ユーザーまたは管理者が実行できるアクションのことです。 タスクは事前に定義されています。 カスタム タスクを作成したり、プログラムまたはツールから提供されるタスクを変更することはできません。 タスクは全部で 25 種類あります。 これらのタスクにより、ロールベースのセキュリティで実行できる操作の全体が構成されています。 タスクの例としては、"レポートの表示"、"レポートの管理"、"レポート サーバーのプロパティを管理" などがあります。  
@@ -43,7 +43,7 @@ ms.locfileid: "47709330"
   
 ## <a name="see-also"></a>参照  
  [ロールの定義](../../reporting-services/security/role-definitions.md)   
- [定義済みロール](../../reporting-services/security/role-definitions-predefined-roles.md)   
+ [Predefined Roles](../../reporting-services/security/role-definitions-predefined-roles.md)   
  [ネイティブ モードのレポート サーバーに対する権限の許可](../../reporting-services/security/granting-permissions-on-a-native-mode-report-server.md)  
   
   

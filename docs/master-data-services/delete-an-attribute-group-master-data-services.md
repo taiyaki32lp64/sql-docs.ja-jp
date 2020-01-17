@@ -1,5 +1,5 @@
 ---
-title: 属性グループを削除する (マスター データ サービス) | Microsoft Docs
+title: 属性グループを削除する
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -11,21 +11,20 @@ helpviewer_keywords:
 - deleting attribute groups [Master Data Services]
 - attribute groups [Master Data Services], deleting
 ms.assetid: f915e89b-629d-4725-aea6-a7f051978244
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: d9b308459c406555c81a89203fea5de768356a11
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
-ms.translationtype: HT
+ms.openlocfilehash: 78ba8b955fe0702a5b1737c1de24426d586f9ffa
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52759904"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73729369"
 ---
 # <a name="delete-an-attribute-group-master-data-services"></a>属性グループを削除する (マスター データ サービス)
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-  [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]で、 **の** [エクスプローラー] [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]機能領域にタブを表示する必要がなくなった属性グループを削除します。  
+  [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] で、**の** [エクスプローラー][!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] 機能領域にタブを表示する必要がなくなった属性グループを削除します。  
   
 -   **注** 属性グループが存在する場合、いずれの属性グループにも属さない属性は **[エクスプローラー]** に表示されません。 属性グループが存在しない場合、すべての属性が表示されます。  
   
@@ -34,7 +33,7 @@ ms.locfileid: "52759904"
   
 -   **[システム管理]** 機能領域にアクセスする権限が必要です。  
   
--   モデル管理者である必要があります。 詳細については、「 [管理者 (マスター データ サービス)](../master-data-services/administrators-master-data-services.md)にアクセスすることなくグループに対してユーザーの追加または削除を行うことができます。  
+-   モデル管理者である必要があります。 詳細については、「[Administrators &#40;Master Data Services&#41; (管理者 &#40;マスター データ サービス&#41;)](../master-data-services/administrators-master-data-services.md)」を参照してください。  
   
 ### <a name="to-delete-an-attribute-group"></a>属性グループを削除するには  
   
@@ -46,7 +45,7 @@ ms.locfileid: "52759904"
   
 4.  **[属性グループ]** をクリックします。  
   
-5.  **[属性グループの管理]** ページで、 **[メンバーの種類]** ドロップダウン リストからメンバーの種類を選択し、削除するグループの種類に応じて **[リーフ]**、 **[統合]**、 **[コレクション]** を展開します。  
+5.  **[属性グループの管理]** ページで、 **[メンバーの種類]** ドロップダウン リストからメンバーの種類を選択し、削除するグループの種類に応じて **[リーフ]** 、 **[統合]** 、 **[コレクション]** を展開します。  
   
 6.  削除する属性グループをクリックします。  
   

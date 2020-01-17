@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 00a0c8b8-8b63-433f-95b8-020ab05874a0
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: b7bcb751fb32634fc544dfa11ee862cd47112514
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 582d0b87edd4729ce54cc2a7323b0a63443cab82
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47836070"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67938853"
 ---
 # <a name="underlyingvalue-property"></a>UnderlyingValue プロパティ
 現在の値を示す、[フィールド](../../../ado/reference/ado-api/field-object.md)データベース内のオブジェクト。  
@@ -44,7 +43,7 @@ ms.locfileid: "47836070"
 ## <a name="applies-to"></a>適用対象  
  [Field オブジェクト](../../../ado/reference/ado-api/field-object.md)  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [OriginalValue および UnderlyingValue プロパティの例 (VB)](../../../ado/reference/ado-api/originalvalue-and-underlyingvalue-properties-example-vb.md)   
  [OriginalValue および UnderlyingValue プロパティの例 (vc++)](../../../ado/reference/ado-api/originalvalue-and-underlyingvalue-properties-example-vc.md)   
  [OriginalValue プロパティ (ADO)](../../../ado/reference/ado-api/originalvalue-property-ado.md)   

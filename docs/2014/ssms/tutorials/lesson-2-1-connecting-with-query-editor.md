@@ -11,11 +11,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: bcb2454d9f6b4a6df465c33ca218c4a960f8099b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48145869"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68187817"
 ---
 # <a name="connecting-with-query-editor"></a>クエリ エディターとの接続
   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] では、サーバーから切断されていてもコードの記述と編集を行うことができます。 この機能は、サーバーを利用できない場合、またはサーバーやネットワークの限られたリソースを節約したい場合に有効です。 さらに、新しいクエリ エディター ウィンドウを開いたり、コードを再入力したりしなくても、クエリ エディターの接続を [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の新しいインスタンスに変更することもできます。  
@@ -35,7 +35,7 @@ ms.locfileid: "48145869"
     GO  
     ```  
   
-     この時点で、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [接続] **、**[実行] **、**[解析] **、または**[推定実行プランの表示] **をクリックすることにより、** のインスタンスに接続できます。これらのオプションは、 **[クエリ]** メニュー、クエリ エディターのツール バー、または [クエリ エディター] ウィンドウを右クリックすると表示されるショートカット メニューから実行できます。 この実習ではツール バーを使用します。  
+     この時点で、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [接続] **、** [実行] **、** [解析] **、または**[推定実行プランの表示] **をクリックすることにより、** のインスタンスに接続できます。これらのオプションは、 **[クエリ]** メニュー、クエリ エディターのツール バー、または [クエリ エディター] ウィンドウを右クリックすると表示されるショートカット メニューから実行できます。 この実習ではツール バーを使用します。  
   
 4.  ツール バーの **[実行]** ボタンをクリックします。 **[データベース エンジンへの接続]** ダイアログ ボックスが表示されます。  
   

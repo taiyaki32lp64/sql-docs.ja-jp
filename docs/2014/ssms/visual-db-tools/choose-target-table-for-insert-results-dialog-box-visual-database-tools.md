@@ -14,11 +14,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 8d69745b3316222f9ebabbad29fbc12e023351d2
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52768890"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63067528"
 ---
 # <a name="choose-target-table-for-insert-results-dialog-box-visual-database-tools"></a>[挿入先のテーブル選択] ダイアログ ボックス (Visual Database Tools)
   INSERT RESULTS クエリの結果として、どのテーブルにデータ行を追加するかを指定できます。 このダイアログ ボックスは、INSERT RESULTS クエリを開始すると表示されます。  

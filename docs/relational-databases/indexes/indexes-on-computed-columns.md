@@ -16,14 +16,13 @@ helpviewer_keywords:
 ms.assetid: 8d17ac9c-f3af-4bbb-9cc1-5cf647e994c4
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: da5528a606fdfc72aec7f1b0bba4348d389f3c98
-ms.sourcegitcommit: eb1f3a2f5bc296f74545f17d20c6075003aa4c42
+ms.openlocfilehash: cf54565115df53dc7d502f48aad68f9974adebd0
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52191016"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67909689"
 ---
 # <a name="indexes-on-computed-columns"></a>計算列のインデックス
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -96,7 +95,7 @@ COLUMNPROPERTY 関数の **IsPrecise** プロパティは、 *computed_column_ex
 ## <a name="data-type-requirements"></a>データ型の要件
   
 -   計算列で定義された *computed_column_expression* は、 **text**データ型、 **ntext**データ型、または **image** データ型として評価できません。  
--   **image**、 **ntext**、 **text**、 **varchar(max)**、 **nvarchar(max)**、 **varbinary(max)**、および **xml** データ型から派生した計算列には、計算列のデータ型をインデックス キー列として使用できる限り、インデックスを作成できます。  
+-   **image**、 **ntext**、 **text**、 **varchar(max)** 、 **nvarchar(max)** 、 **varbinary(max)** 、および **xml** データ型から派生した計算列には、計算列のデータ型をインデックス キー列として使用できる限り、インデックスを作成できます。  
 -   **image**、 **ntext**、および **text** データ型から派生した計算列は、計算列のデータ型を非キー インデックス列として使用できる限り、非クラスター化インデックスの非キー列 (付加列) にすることができます。  
 
 

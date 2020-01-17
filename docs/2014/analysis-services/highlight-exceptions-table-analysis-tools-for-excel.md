@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - Table Analysis tools
@@ -14,12 +13,12 @@ ms.assetid: d90a12f8-7bc3-4fdb-95a1-7c89058f0d9a
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 1fb3dcd1729805c9458b7cc882e1d33f6be918e4
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 18bf54b7b97598c6c61d7e282ad5791d926cc25a
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48149222"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66080762"
 ---
 # <a name="highlight-exceptions-table-analysis-tools-for-excel"></a>例外の強調表示 (Excel 用のテーブル分析ツール)
   ![リボンの [例外] ボタンを強調表示](media/tat-highlightex.gif "リボンの例外の強調表示 ボタン")  

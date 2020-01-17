@@ -17,17 +17,17 @@ helpviewer_keywords:
 ms.assetid: 926c88d7-a844-402f-bcb9-db49e5013b69
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: c82c9913b75ca363d4ace1413c0c4413989c116a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
+ms.openlocfilehash: 3d0d6fd90b9ec4c933da13d2a3780213095de721
+ms.sourcegitcommit: 02449abde606892c060ec9e9e9a85a3f49c47c6c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47605370"
+ms.lasthandoff: 11/26/2019
+ms.locfileid: "74542066"
 ---
 # <a name="make-schema-changes-on-publication-databases"></a>パブリケーション データベースでのスキーマの変更
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  レプリケーションは、パブリッシュされたオブジェクトに対するさまざまなスキーマ変更をサポートしています。 パブリッシュされた適切なオブジェクトに対して、以下に示すスキーマ変更を [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] パブリッシャーで実行した場合、既定ではすべての [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] サブスクライバーにその変更が反映されます。  
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+  レプリケーションは、パブリッシュされたオブジェクトに対するさまざまなスキーマ変更をサポートしています。 パブリッシュされた適切なオブジェクトに対して、以下に示すスキーマ変更を [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] パブリッシャーで行った場合、既定ではすべての [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] サブスクライバーにその変更が反映されます。  
   
 -   ALTER TABLE  
   
@@ -57,7 +57,7 @@ ms.locfileid: "47605370"
 ## <a name="considerations-for-schema-changes"></a>スキーマ変更に関する注意点  
  スキーマ変更をレプリケートする際には、以下の点に注意してください。  
   
-### <a name="general-considerations"></a>全般的な注意点  
+### <a name="general-considerations"></a>一般的な考慮事項  
   
 -   スキーマ変更は、 [!INCLUDE[tsql](../../../includes/tsql-md.md)]の制限の対象となります。 たとえば、ALTER TABLE で主キー列を変更することはできません。  
   
@@ -73,7 +73,7 @@ ms.locfileid: "47605370"
   
 -   外部キーを追加するときに参照されるサブスクライバーのすべてのオブジェクトは、パブリッシャーの対応するオブジェクトと名前と所有者が同じである必要があります。  
   
--   インデックスの明示的な追加、削除、および変更はサポートされていません。 制約 (主キー制約など) に対して暗黙的に作成されたインデックスはサポートされます。  
+-   明示的なインデックスの追加、削除、または変更はレプリケートされません。また、明示的なインデックスに関連する変更は、各レプリカ セットで個別に実行する必要があります。 制約 (主キー制約など) に対して暗黙的に作成されたインデックスはサポートされます。  
   
 -   レプリケーションによって管理されている ID 列の変更や削除はサポートされていません。 ID 列の自動管理の詳細については、「[ID 列のレプリケート](../../../relational-databases/replication/publish/replicate-identity-columns.md)」を参照してください。  
   
@@ -109,7 +109,7 @@ ms.locfileid: "47605370"
   
 -   削除する列は、データベースのどのパブリケーションのどのアーティクルのフィルター句でも使用できません。  
   
--   パブリッシュされたアーティクルから列を削除するときには、データベースに影響する可能性のある列の制約、インデックスまたはプロパティについて考慮する必要があります。 例 :  
+-   パブリッシュされたアーティクルから列を削除するときには、データベースに影響する可能性のある列の制約、インデックスまたはプロパティについて考慮する必要があります。 次に例を示します。  
   
     -   主キーで使用されている列をトランザクション パブリケーションのアーティクルから削除することはできません。それらの列は、レプリケーションによって使用されます。  
   

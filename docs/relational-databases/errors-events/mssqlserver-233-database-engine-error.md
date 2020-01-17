@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 201665dc-7ac8-4c19-90d3-33354c5caa72
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 02a8806494a016e1aca0fd442968857b0428a21b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d724f74c659fee878965f261f6b9b28f04181be2
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47676710"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68044942"
 ---
 # <a name="mssqlserver233"></a>MSSQLSERVER_233
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -33,7 +32,7 @@ ms.locfileid: "47676710"
 |イベント ソース|MSSQLSERVER|  
 |コンポーネント|SQLEngine|  
 |シンボル名||  
-|メッセージ テキスト|サーバーとの接続は正常に確立されましたが、ログイン プロセスでエラーが発生しました。 (プロバイダー: 共有メモリ プロバイダー、エラー: 0 - パイプの他端にプロセスがありません。) (Microsoft SQL Server、エラー: 233)|  
+|メッセージ テキスト|サーバーとの接続は正常に確立されましたが、ログイン プロセスでエラーが発生しました。 (プロバイダー:共有メモリ プロバイダー、エラー:0 - パイプの他端にプロセスがありません。) (Microsoft SQL Server、エラー:233)|  
   
 ## <a name="explanation"></a>説明  
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] クライアントがサーバーに接続できません。 このエラーは、サーバーがリモート接続を許可するように構成されていないことが原因で発生することがあります。  

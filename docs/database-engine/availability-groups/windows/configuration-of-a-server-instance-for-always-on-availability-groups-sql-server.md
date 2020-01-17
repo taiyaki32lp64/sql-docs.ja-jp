@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: fad8db32-593e-49d5-989c-39eb8399c416
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: a640900ca67b2341d0250a48c25358bb5162d247
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: 94f3a9b92e05983ff9e2a10473a171069acf9a77
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53206001"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67988555"
 ---
 # <a name="enable-the-always-on-availability-group-feature-for-a-sql-server-instance"></a>SQL Server インスタンスの Always On 可用性グループ機能を有効にする
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -28,17 +27,7 @@ ms.locfileid: "53206001"
   
 > [!IMPORTANT]  
 >  Windows Server フェールオーバー クラスタリング (WSFC) ノードおよび [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] インスタンスの [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]の前提条件と制限に関する基本情報については、「 [Always On 可用性グループの前提条件、制限事項、および推奨事項 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/prereqs-restrictions-recommendations-always-on-availability.md)」を参照してください。  
-  
- **このトピックの内容**  
-  
--   [用語と定義](#TermsAndDefinitions)  
-  
--   [Always On 可用性グループをサポートするようにサーバー インスタンスを構成するには](#ConfigSI)  
-  
--   [関連タスク](#RelatedTasks)  
-  
--   [関連コンテンツ](#RelatedContent)  
-  
+   
 ##  <a name="TermsAndDefinitions"></a> 用語と定義  
  [Always On 可用性グループ](../../../database-engine/availability-groups/windows/always-on-availability-groups-sql-server.md)  
  データベース ミラーリングに代わる、高可用性と災害復旧のためのエンタープライズ レベルのソリューション。 *可用性グループ* は、 *可用性データベース*として知られる、ひとまとまりでフェールオーバーされる個別のユーザー データベースのセットのためのフェールオーバー環境をサポートします。  
@@ -95,7 +84,7 @@ ms.locfileid: "53206001"
   
      [SQL Server 2012 に関する Microsoft ホワイト ペーパー](https://msdn.microsoft.com/library/hh403491.aspx)  
   
-     [SQL Server ユーザー諮問チームのホワイト ペーパー](https://sqlcat.com/)  
+     [SQL Server ユーザー諮問チームのホワイト ペーパー](https://techcommunity.microsoft.com/t5/DataCAT/bg-p/DataCAT/)  
   
 ## <a name="see-also"></a>参照  
  [AlwaysOn 可用性グループの概要 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   

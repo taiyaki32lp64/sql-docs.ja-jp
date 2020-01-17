@@ -19,11 +19,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 9b81a7871434691a5940a04c7c60aaad9254b645
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48115694"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63201165"
 ---
 # <a name="odbc-cursor-library"></a>ODBC カーソル ライブラリ
   一部の ODBC ドライバーは、既定のカーソル設定しかサポートします。これらのドライバーもサポートされません、カーソルの位置指定操作など**SQLSetPos**します。 ODBC カーソル ライブラリは、通常はブロック カーソルや静的カーソルがサポートされないドライバーに対して、これらのカーソルを実装するときに使用される MDAC (Microsoft Data Access Components) のコンポーネントです。 カーソル ライブラリは、位置指定の UPDATE および DELETE ステートメントも実装し、 **SQLSetPos**カーソルが作成されます。  
@@ -37,10 +37,10 @@ ms.locfileid: "48115694"
  SQL_CUR_USE_ODBC  
  このオプションを設定すると、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client ODBC ドライバーでは、ODBC カーソル ライブラリよりも優先、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client ODBC ドライバーのネイティブ カーソル サポートします。 接続で使用できるのは、カーソル ライブラリでサポートされているカーソルのみで、サーバー カーソルは使用できません。  
   
- SQL_CUR_USE_DRIVER   
+ SQL_CUR_USE_DRIVER  
  カーソルのすべてをサポートするネイティブこのオプションが設定されている場合、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client ODBC ドライバーは、接続に使用することができます。 この場合、ODBC カーソル ライブラリは使用できません。 すべてのカーソルはサーバー カーソルとして実装されます。  
   
- SQL_CUR_USE_IF_NEEDED   
+ SQL_CUR_USE_IF_NEEDED  
  SQL_CUR_USE_DRIVER で使用する場合と同じ効果は、このオプションが設定されている場合、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client ODBC ドライバー。 接続時に、ODBC ドライバー マネージャーのテストに接続されている ODBC ドライバーの SQL_FETCH_PRIOR オプションでサポートされているかどうかに[SQLFetchScroll](../../native-client-odbc-api/sqlfetchscroll.md)します。 ドライバーでこのオプションがサポートされていない場合、ODBC ドライバー マネージャーは ODBC カーソル ライブラリを読み込みます。 サポートされている場合、ODBC ドライバー マネージャーは ODBC カーソル ライブラリを読み込みません。この場合、アプリケーションではドライバーのネイティブ サポートが使用されます。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client ODBC ドライバーには SQL_FETCH_PRIOR がサポートしている、ODBC ドライバー マネージャーは ODBC カーソル ライブラリを読み込みません。  
   
  カーソル ライブラリにより、アプリケーションはスクロール可能なカーソルや更新可能なカーソルを使用できるだけでなく、1 つの接続に対して複数のアクティブ ステートメントを使用できます。 この機能をサポートする場合は、カーソル ライブラリを読み込む必要があります。 使用[SQLSetConnectAttr](../../native-client-odbc-api/sqlsetconnectattr.md)カーソル ライブラリの使用方法を指定し、 [SQLSetStmtAttr](../../native-client-odbc-api/sqlsetstmtattr.md)カーソルの種類、同時実行性、および行セットのサイズを指定します。  

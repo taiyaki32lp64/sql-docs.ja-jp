@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: 9e78dc37-a3f0-415d-847c-32fec69efa8c
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: d13d7b7f65ca1f121145815555afa055926c81fe
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: ee52be5eb8c9110e4486a1fa199e3e00572081f3
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53374274"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66079568"
 ---
 # <a name="spn-registration-for-an-analysis-services-instance"></a>Analysis Services インスタンスの SPN 登録
   クライアントとサービス ID の相互認証に Kerberos が使用されている場合、サービス プリンシパル名 (SPN) は、Active Directory ドメイン内のサービス インスタンスを一意に識別します。 SPN は、サービス インスタンスを実行するログオン アカウントに関連付けられます。  
@@ -80,7 +79,7 @@ ms.locfileid: "53374274"
 |サービス アカウント|これは、 **MSSQLServerOLAPService** Windows サービスの開始アカウントです。 アカウントには、Windows ドメイン ユーザー アカウント、仮想アカウント、管理されたサービス アカウント (MSA)、またはサービスごとの SID、NetworkService、LocalSystem などのビルトイン アカウントを使用できます。 Windows ドメイン ユーザー アカウントを domain \user として書式設定できますかuser@domainします。|  
   
 ##  <a name="bkmk_virtual"></a> 仮想アカウントに対する SPN の登録  
- 仮想アカウントは、SQL Server サービスの既定のアカウント タイプです。 仮想アカウントは**NT service \msolapservice**の既定のインスタンスと**NT service \msolap$**\<インスタンス名 >、名前付きインスタンス。  
+ 仮想アカウントは、SQL Server サービスの既定のアカウント タイプです。 仮想アカウントは**NT service \msolapservice**の既定のインスタンスと**NT service \msolap$** \<インスタンス名 >、名前付きインスタンス。  
   
  "仮想" という名前が示すとおり、Active Directory にはこれらのアカウントが存在しません。 仮想アカウントは、ローカル コンピューター上にのみ存在します。 外部のサービス、アプリケーション、またはデバイスに接続するときは、ローカル コンピューターのアカウントを使って接続が行われます。 したがって、仮想アカウントで実行されている Analysis Services には、実際にはコンピューターのアカウントに対する SPN が登録されていることになります。  
   
@@ -97,7 +96,7 @@ Setspn -s MSOLAPSvc.3/AW-SRV01.AdventureWorks.com AW-SRV01
   
  **NT service \msolap$ として実行されている名前付きインスタンスの構文例\<インスタンス名 >**  
   
- この例に示した **setspn** の構文は、名前付きインスタンスが既定の仮想アカウントで実行されていることを想定しています。 この例のコンピューターのホスト名は **AW-SRV02**、インスタンス名は **AW-FINANCE** です。 仮想アカウントではなく、spn に指定されているマシン アカウント**NT service \msolap$**\<インスタンス名 >。  
+ この例に示した **setspn** の構文は、名前付きインスタンスが既定の仮想アカウントで実行されていることを想定しています。 この例のコンピューターのホスト名は **AW-SRV02**、インスタンス名は **AW-FINANCE** です。 仮想アカウントではなく、spn に指定されているマシン アカウント**NT service \msolap$** \<インスタンス名 >。  
   
 ```  
 Setspn -s MSOLAPSvc.3/AW-SRV02.AdventureWorks.com:AW-FINANCE AW-SRV02  
@@ -142,7 +141,7 @@ Setspn -S MSOLAPDisco.3/AW-SRV01.AdventureWorks.com AW-SRV01
 ```  
   
 ##  <a name="bkmk_spnCluster"></a> SSAS クラスターのための SPN の登録  
- Analysis Services フェールオーバー クラスターの場合、ホスト名はクラスターに割り当てられた仮想名にする必要があります。 これは、既存の WSFC の上に Analysis Services をインストールしたときに、SQL Server のセットアップ中に指定された、SQL Server のネットワーク名です。 Active Directory で、この名前を見つけることができます。 また、 **[フェールオーバー クラスター マネージャー]** | **[ロール]** | **[リソース]** タブにも表示されます。[リソース] タブにあるサーバー名は、SPN コマンドで '仮想名' として使用する必要があります。  
+ Analysis Services フェールオーバー クラスターの場合、ホスト名はクラスターに割り当てられた仮想名にする必要があります。 これは、既存の WSFC の上に Analysis Services をインストールしたときに、SQL Server のセットアップ中に指定された、SQL Server のネットワーク名です。 Active Directory で、この名前を見つけることができます。 また、 **[フェールオーバー クラスター マネージャー]**  |  **[ロール]**  |  **[リソース]** タブにも表示されます。[リソース] タブにあるサーバー名は、SPN コマンドで '仮想名' として使用する必要があります。  
   
  **Analysis Services クラスターの SPN 構文**  
   
@@ -166,7 +165,7 @@ Setspn -s msolapsvc.3/<virtualname.FQDN > <domain user account>
   
  1 つの Analysis Services インスタンスは、1 つのポートでしかリッスンできません。 複数のポートの使用はサポートされていません。 ポートの構成の詳細については、「 [Configure the Windows Firewall to Allow Analysis Services Access](configure-the-windows-firewall-to-allow-analysis-services-access.md)」をご覧ください。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [Microsoft BI 認証と ID 委任](https://go.microsoft.com/fwlink/?LinkID=286576)   
  [Kerberos を使用した相互認証](https://go.microsoft.com/fwlink/?LinkId=299283)   
  [Kerberos 認証を使用するように SQL Server 2008 Analysis Services および SQL Server 2005 Analysis Services を構成する方法](https://support.microsoft.com/kb/917409)   

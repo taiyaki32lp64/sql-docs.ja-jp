@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 f1_keywords:
 - sql.asvs.dimensiondesigner.dbv.datasourcepane.f1
@@ -13,12 +12,12 @@ ms.assetid: c4bd3c5e-8986-448f-b9db-3551f50f0696
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 989b84d027db5dc1f5956aab6e2e4fec84ae6461
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 38d61436f6245024dcc477d39b7b2589234658ee
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48112222"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66082344"
 ---
 # <a name="data-source-view-dimension-structure-tab-dimension-designer-analysis-services---multidimensional-data"></a>[データ ソース ビュー] ([ディメンション構造] タブ、ディメンション デザイナー) (Analysis Services - 多次元データ)
   **[データ ソース ビュー]** ペインを使用すると、選択したディメンションに関連付けられているデータ ソース ビューからテーブルと列を表示できます。 **[データ ソース ビュー]** ペインでは、このペインから **[属性]** ペインまたは **[階層とレベル]** ペインに列をドラッグすることにより、属性、メンバー プロパティ、階層、およびレベルを作成します。  

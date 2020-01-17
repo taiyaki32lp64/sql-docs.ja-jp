@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: b9b90b8d-241f-4b74-ac14-de7b10ea1821
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 1be0f1b4a9aa114c6c0d630be5919b5f519ff6a2
-ms.sourcegitcommit: af1d9fc4a50baf3df60488b4c630ce68f7e75ed1
+ms.openlocfilehash: 08811675cce441406534da3c31e2d01f314a2c20
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/06/2018
-ms.locfileid: "51033332"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68115433"
 ---
 # <a name="connect-to-a-sql-server-utility"></a>SQL Server ユーティリティへの接続
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -32,7 +31,7 @@ ms.locfileid: "51033332"
   
 3.  **[表示]** をクリックし、 **[ユーティリティ エクスプローラー]** をクリックします。  
   
-4.  ユーティリティ エクスプローラーのナビゲーション ウィンドウで、**[ユーティリティへの接続]** ![](../../relational-databases/manage/media/connect-to-utility.gif "Connect_to_Utility") をクリックします。  
+4.  ユーティリティ エクスプローラーのナビゲーション ウィンドウで、 **[ユーティリティへの接続]** ![](../../relational-databases/manage/media/connect-to-utility.gif "Connect_to_Utility") をクリックします。  
   
 5.  **[サーバーへの接続]** ダイアログ ボックスで、UCP インスタンス名を指定し、 **[接続]** をクリックします。  
   

@@ -20,19 +20,19 @@ ms.assetid: 08e52aa6-12f3-41dd-a793-14b99a083fd5
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 1b33e0d78dfe308c537ea5297b55415bce304474
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: 8ed991d65858d40b96013659caa2d83c479ca1d3
+ms.sourcegitcommit: a165052c789a327a3a7202872669ce039bd9e495
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54129420"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72782721"
 ---
 # <a name="register-a-database-as-a-dac"></a>データベースを DAC として登録する方法
-  いずれかを使用して、**登録データ層アプリケーションのウィザード**または既存のデータベース内のオブジェクトを表すデータ層アプリケーション (DAC) 定義を作成するスクリプトを作成し、にDAC定義が登録は、WindowsPowerShell`msdb`システム データベース (**マスター**で[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)])。  
+  **データ層アプリケーションの登録ウィザード**または Windows PowerShell スクリプトを使用して、既存のデータベース内のオブジェクトを表すデータ層アプリケーション (dac) 定義を作成し、その dac 定義を `msdb` システムデータベースに登録します ( [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)])。  
   
--   **作業を開始する準備:**[制限事項と制約](#LimitationsRestrictions)、[アクセス許可](#Permissions)  
+-   **作業を開始する準備:** [制限事項と制約事項](#LimitationsRestrictions)、[権限](#Permissions)  
   
--   **DAC のアップグレードに使用します。**[データ層アプリケーションの登録ウィザード](#UsingRegisterDACWizard)、 [PowerShell](#RegisterDACPowerShell)  
+-   **DAC のアップグレード:** [データ層アプリケーションの登録ウィザードの使用](#UsingRegisterDACWizard)、[PowerShell の使用](#RegisterDACPowerShell)  
   
 ## <a name="before-you-begin"></a>はじめに  
  登録プロセスでデータベース オブジェクトを定義する DAC 定義を作成します。 DAC の定義とデータベースを組み合わせたものが DAC インスタンスになります。 データベース エンジンのマネージド インスタンス上で DAC としてデータベースを登録した場合は、SQL Server ユーティリティ コレクション セットをこのインスタンスからユーティリティ コントロール ポイントへ次に送信するときに、登録した DAC が SQL Server ユーティリティに組み込まれます。 その後、DAC は [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] **ユーティリティ エクスプローラー** の **配置されたデータ層アプリケーション** ノードに現れるようになり、**配置されたデータ層アプリケーション** の詳細ページで報告されます。  
@@ -52,7 +52,7 @@ ms.locfileid: "54129420"
   
 2.  **[データベース]** ノードを展開します。  
   
-3.  登録するデータベースを右クリックし、**[タスク]** をポイントして **[データ層アプリケーションとして登録]** をクリックします。  
+3.  登録するデータベースを右クリックし、 **[タスク]** をポイントして **[データ層アプリケーションとして登録]** をクリックします。  
   
 4.  ウィザードの各ダイアログの手順を実行します。  
   
@@ -78,11 +78,11 @@ ms.locfileid: "54129420"
   
  **[アプリケーション名]** : DAC 定義を識別するための名前。このフィールドには、選択したデータベースの名前が自動的に入力されます。  
   
- **[バージョン]** : DAC のバージョンを表す数値。 DAC のバージョンは、開発者が操作している DAC のバージョンを特定するために Visual Studio で使用します。 バージョンが格納されている DAC をデプロイするとき、`msdb`データベースし、後で下に表示できます、**データ層アプリケーション**内のノード[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]します。  
+ **[バージョン]** : DAC のバージョンを表す数値。 DAC のバージョンは、開発者が操作している DAC のバージョンを特定するために Visual Studio で使用します。 DAC を配置すると、バージョンは `msdb` データベースに格納され、後で [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]の **[データ層アプリケーション]** ノードの下に表示できます。  
   
- **説明** : 省略可。 この DAC の目的についての説明。 説明が格納されている DAC をデプロイするとき、`msdb`データベースし、後で下に表示できます、**データ層アプリケーション**内のノード[!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]します。  
+ **説明** : 省略可。 この DAC の目的についての説明。 DAC を配置すると、説明は `msdb` データベースに格納され、後で [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]の **[データ層アプリケーション]** ノードの下に表示できます。  
   
- **\< 以前**-に戻り、**概要**ページ。  
+ **\< 前**へ-**概要** ページに戻ります。  
   
  **[次へ >]** : データベースのオブジェクトから DAC を作成できるかどうかを検証し、その結果を **[検証と概要]** ページに表示します。  
   
@@ -94,18 +94,18 @@ ms.locfileid: "54129420"
 ### <a name="retrieving-objects"></a>オブジェクトの取得  
  **[データベース オブジェクトとサーバー オブジェクトを取得しています。]** : データベースおよびデータベース エンジンのインスタンスから必要なすべてのオブジェクトを取得する間、進行状況バーが表示されます。  
   
- **\< 以前**-に戻り、**プロパティの設定**エントリを変更するページ。  
+ [**前\<** ]: **[プロパティの設定]** ページに戻り、エントリを変更します。  
   
- **[次へ >]** : DAC が登録され、**[DAC の登録]** ページが表示されます。  
+ **[次へ >]** : DAC が登録され、 **[DAC の登録]** ページが表示されます。  
   
  **[キャンセル]** : DAC を登録せずにウィザードを終了します。  
   
 ### <a name="validating-objects"></a>オブジェクトの検証  
- **Checking**  _SchemaName_ **.** _ObjectName_ **.** : 取得したオブジェクトの依存関係を検証し、それらすべてのオブジェクトが DAC に対して有効かどうかを確認する間、進行状況バーが表示されます。 _SchemaName_**.**_ObjectName_ は、現在検証されているオブジェクトを示します。  
+ **Checking**  _SchemaName_ **.** _ObjectName_ **.** : 取得したオブジェクトの依存関係を検証し、それらすべてのオブジェクトが DAC に対して有効かどうかを確認する間、進行状況バーが表示されます。 _SchemaName_ **.** _ObjectName_ は、現在検証されているオブジェクトを示します。  
   
- **\< 以前**-に戻り、**プロパティの設定**エントリを変更するページ。  
+ [**前\<** ]: **[プロパティの設定]** ページに戻り、エントリを変更します。  
   
- **[次へ >]** : DAC が登録され、**[DAC の登録]** ページが表示されます。  
+ **[次へ >]** : DAC が登録され、 **[DAC の登録]** ページが表示されます。  
   
  **[キャンセル]** : DAC を登録せずにウィザードを終了します。  
   
@@ -114,9 +114,9 @@ ms.locfileid: "54129420"
   
  **[レポートの保存]** : 検証レポートのコピーを HTML ファイルに保存します。 既定のフォルダーは、Windows アカウントの Documents フォルダーにある **SQL Server Management Studio\DAC Packages** フォルダーです。  
   
- **\< 以前**-に戻り、**プロパティの設定**エントリを変更するページ。  
+ [**前\<** ]: **[プロパティの設定]** ページに戻り、エントリを変更します。  
   
- **[次へ >]** : DAC が登録され、**[DAC の登録]** ページが表示されます。  
+ **[次へ >]** : DAC が登録され、 **[DAC の登録]** ページが表示されます。  
   
  **[キャンセル]** : DAC を登録せずにウィザードを終了します。  
   
@@ -143,10 +143,10 @@ ms.locfileid: "54129420"
 ### <a name="example-powershell"></a>例 (PowerShell)  
  次の例は、DAC として MyDB というデータベースを登録します。  
   
-```  
+```powershell
 ## Set a SMO Server object to the default instance on the local computer.  
 CD SQLSERVER:\SQL\localhost\DEFAULT  
-$srv = get-item .  
+$srv = Get-Item .  
   
 ## Specify the database to register as a DAC.  
 $dbname = "MyDB"  
@@ -162,7 +162,5 @@ $registerunit.Description = $description
 $registerunit.Register()  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [データ層アプリケーション](data-tier-applications.md)  
-  
-  

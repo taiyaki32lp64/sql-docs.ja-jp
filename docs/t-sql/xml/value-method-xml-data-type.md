@@ -14,20 +14,19 @@ helpviewer_keywords:
 ms.assetid: 298a7361-dc9a-4902-9b1e-49a093cd831d
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 0a208baaf237987c9f3e544da4d02dca72b191f9
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 9224e9050ecf01255151e5ec8e11ecaf282d7387
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56021453"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68051217"
 ---
 # <a name="value-method-xml-data-type"></a>value() メソッド (xml データ型)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   XML に対して XQuery を実行し、SQL 型の値を返します。 このメソッドは、スカラー値を返します。  
   
- このメソッドは、通常、**xml** 型の列、パラメーター、または変数に格納されている XML インスタンスから値を取得するために使用します。 このメソッドを使用すると、XML データと XML 型ではない列のデータを結合したり、比較する SELECT クエリを指定することができます。  
+ このメソッドは、通常、**xml** 型の列、パラメーター、または変数に格納されている XML インスタンスから値を取得するために使用します。 このメソッドを使用すると、XML データと XML 型ではない列のデータを結合したり、比較する SELECT クエリを指定したりすることができます。  
   
 ## <a name="syntax"></a>構文  
   
@@ -38,7 +37,7 @@ value (XQuery, SQLType)
   
 ## <a name="arguments"></a>引数  
  *XQuery*  
- XML インスタンス内のデータを取得する *XQuery* 式 (文字列リテラル) です。 XQuery により、返される値は最大 1 つである必要があります。 それ以外の式を指定すると、エラーが返されます。  
+ XML インスタンス内のデータを取得する *XQuery* 式 (文字列リテラル) です。 XQuery により、返される値は最大 1 つである必要があります。 それ以外の場合は、エラーが返されます。  
   
  *SQLType*  
  正常な結果として返される SQL 型 (文字列リテラル) です。 このメソッドの戻り値の型は、*SQLType* パラメーターと一致します。 *SQLType* は、**xml** データ型、共通言語ランタイム (CLR) ユーザー定義型、**image**、**text**、**ntext**、または **sql_variant** データ型にすることはできません。 *SQLType* には、SQL ユーザー定義データ型を指定できます。  
@@ -136,7 +135,7 @@ Result
 ```  
   
 ### <a name="d-using-the-exist-method-instead-of-the-value-method"></a>D. value() メソッドの代替としての exist() メソッドの使用  
- パフォーマンス上の理由から、リレーショナル値との比較を行う述語内では `value()` メソッドではなく、`exist()` と `sql:column()` を使用してください。 例 :  
+ パフォーマンス上の理由から、リレーショナル値との比較を行う述語内では `value()` メソッドではなく、`exist()` と `sql:column()` を使用してください。 例:  
   
 ```  
 CREATE TABLE T (c1 int, c2 varchar(10), c3 xml)  

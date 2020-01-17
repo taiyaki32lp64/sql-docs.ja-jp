@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - CREATE SET statement
@@ -14,12 +13,12 @@ ms.assetid: b751e1e4-6d4c-4d36-a28d-ffdaaee0f1c7
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 96b34d8b3fd2dce31f604c50a7431b993a29beca
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 545bbdb171388f06c28644e0b8caa48db95e7e7f
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48216372"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66074046"
 ---
 # <a name="creating-session-scoped-named-sets-mdx"></a>セッション スコープの名前付きセットの作成 (MDX)
   多次元式 (MDX) セッション全体で使用できる名前付きセットを作成するには、[CREATE SET](/sql/mdx/mdx-data-definition-create-set) ステートメントを使用します。 CREATE SET ステートメントを使用して作成された名前付きセットは、MDX セッションが閉じるまで削除されません。  
@@ -53,7 +52,7 @@ create Session set [Store].[SetCities_2_3] as
 select SetCities_2_3 on 0 from [Store]  
 ```  
   
-## <a name="see-also"></a>参照  
- [名前付きセットのクエリ スコープを作成する&#40;MDX&#41;](mdx-named-sets-creating-query-scoped-named-sets.md)  
+## <a name="see-also"></a>関連項目  
+ [クエリ スコープの名前付きセットの作成 &#40;MDX&#41;](mdx-named-sets-creating-query-scoped-named-sets.md)  
   
   

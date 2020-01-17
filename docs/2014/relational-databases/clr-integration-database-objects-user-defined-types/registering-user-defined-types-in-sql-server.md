@@ -34,11 +34,11 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 19ea6e9f077b5097b8c5daa6d967a17336553ba7
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52508455"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62919947"
 ---
 # <a name="registering-user-defined-types-in-sql-server"></a>SQL Server でのユーザー定義型の登録
   ユーザー定義型 (UDT) を使用するには[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]、登録する必要があります。 UDT を登録するには、UDT を使用するデータベースにアセンブリを登録し、型を作成する必要があります。 UDT は、1 つのデータベースにスコープが設定されるので、同一のアセンブリと UDT を各データベースに登録しない限り、複数のデータベースでは使用できません。 UDT アセンブリを登録し、型を作成すると、[!INCLUDE[tsql](../../includes/tsql-md.md)] やクライアント コードでその UDT を使用できます。 詳細については、「 [CLR ユーザー定義型](clr-user-defined-types.md)」を参照してください。  
@@ -59,7 +59,7 @@ ms.locfileid: "52508455"
 5.  **ビルド**メニューの **デプロイ**します。 この結果、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データベースにアセンブリが登録され、型が作成されます。  
   
 ## <a name="using-transact-sql-to-deploy-udts"></a>Transact-SQL を使用した UDT の配置  
- [!INCLUDE[tsql](../../includes/tsql-md.md)] CREATE ASSEMBLY 構文は、UDT を使用するデータベースにアセンブリを登録する場合に使用します。 アセンブリは、ファイル システムに外部的に格納されるのではなく、データベース システム テーブルに内部的に格納されます。 UDT が外部アセンブリに依存する場合は、それらのアセンブリもデータベースに読み込む必要があります。 CREATE TYPE ステートメントは、UDT を使用するデータベースに UDT を作成する場合に使用します。 詳細については、次を参照してください。 [CREATE ASSEMBLY & #40 です。TRANSACT-SQL と #41 です。](/sql/t-sql/statements/create-assembly-transact-sql)と[型 & #40; を作成します。TRANSACT-SQL と #41 です](/sql/t-sql/statements/create-type-transact-sql)。  
+ [!INCLUDE[tsql](../../includes/tsql-md.md)] CREATE ASSEMBLY 構文は、UDT を使用するデータベースにアセンブリを登録する場合に使用します。 アセンブリは、ファイル システムに外部的に格納されるのではなく、データベース システム テーブルに内部的に格納されます。 UDT が外部アセンブリに依存する場合は、それらのアセンブリもデータベースに読み込む必要があります。 CREATE TYPE ステートメントは、UDT を使用するデータベースに UDT を作成する場合に使用します。 詳細については、[CREATE ASSEMBLY & #40 を参照してください。TRANSACT-SQL と #41 です。](/sql/t-sql/statements/create-assembly-transact-sql)と[型 & #40; を作成します。TRANSACT-SQL と #41 です](/sql/t-sql/statements/create-type-transact-sql)。  
   
 ### <a name="using-create-assembly"></a>CREATE ASSEMBLY の使用  
  CREATE ASSEMBLY 構文では、UDT を使用するデータベースにアセンブリが登録されます。 アセンブリを登録すると、そのアセンブリに依存関係がなくなります。  
@@ -92,7 +92,7 @@ FROM 0xfeac4 ... 21ac78
 > [!NOTE]  
 >  CREATE TYPE 構文は、ネイティブな [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 別名データ型を作成する場合にも使用され、別名データ型を作成する手段として `sp_addtype` に置き換わるものです。 CREATE TYPE 構文の省略可能な一部の引数は CLR の UDT の作成に関係しており、(基本型などの) 別名データ型の作成には適用されません。  
   
- 詳細については、次を参照してください。[の種類の作成 & #40 です。TRANSACT-SQL と #41 です](/sql/t-sql/statements/create-type-transact-sql)。  
+ 詳細については、[の種類の作成 & #40 を参照してください。TRANSACT-SQL と #41 です](/sql/t-sql/statements/create-type-transact-sql)。  
   
 #### <a name="example"></a>例  
  次の [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントでは、`Point` 型を作成します。 2 つの部分の名前付け構文を使用して外部名が指定された*AssemblyName*.*UDTName*します。  

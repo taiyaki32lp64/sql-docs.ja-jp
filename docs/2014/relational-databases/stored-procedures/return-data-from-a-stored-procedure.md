@@ -14,11 +14,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 6b11f924ce5692378896f1fd7d50186861abf223
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48220532"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63140445"
 ---
 # <a name="return-data-from-a-stored-procedure"></a>ストアド プロシージャからデータを返す
   結果セットやプロシージャからのデータを呼び出し元のプログラムに返す手段には、出力パラメーターとリターン コードの 2 つがあります。 このトピックでは、両方のアプローチについて説明します。  
@@ -74,10 +74,10 @@ GO
  [!INCLUDE[tsql](../../../includes/tsql-md.md)] プロシージャが使用できる、`cursor`のみ出力パラメーターのデータ型します。 場合、`cursor`プロシージャの定義でそのパラメーターに対して VARYING と出力の両方のキーワードを指定する必要があります、パラメーターのデータ型が指定されています。 パラメーターは OUTPUT としてしか指定できますが、パラメーターの宣言で VARYING キーワードが指定されている場合、データ型がある必要があります`cursor`と OUTPUT キーワードも指定する必要があります。  
   
 > [!NOTE]  
->  `cursor`データ型は、OLE DB、ODBC、ADO、Db-library などのデータベース Api からアプリケーション変数にバインドすることはできません。 アプリケーションは、プロシージャを使用したプロシージャを実行するには、出力パラメーターをバインドする必要がありますので`cursor`出力パラメーターは、データベース Api から呼び出すことができません。 これらのプロシージャを呼び出すことが[!INCLUDE[tsql](../../../includes/tsql-md.md)]バッチ、プロシージャ、またはトリガーの場合にのみ、`cursor`出力変数に代入する、[!INCLUDE[tsql](../../../includes/tsql-md.md)]ローカル`cursor`変数。  
+>  `cursor` データ型は OLE DB、ODBC、ADO、DB-Library などのデータベース API からアプリケーション変数にバインドすることができません。 アプリケーションでプロシージャを実行するには OUTPUT パラメーターがバインドされている必要があるので、`cursor` 型の OUTPUT パラメーターを指定したプロシージャはデータベース API から呼び出すことができません。 そのようなプロシージャは、`cursor` 型の OUTPUT 変数を [!INCLUDE[tsql](../../../includes/tsql-md.md)] の `cursor` 型のローカル変数に代入したときのみ、[!INCLUDE[tsql](../../../includes/tsql-md.md)] バッチ、プロシージャ、またはトリガーから呼び出すことができます。  
   
 ### <a name="rules-for-cursor-output-parameters"></a>cursor 出力パラメーターに関する規則  
- 次の規則に関連する`cursor`プロシージャを実行すると、出力パラメーター。  
+ プロシージャの実行時には、次の規則が `cursor` 出力パラメーターに適用されます。  
   
 -   順方向専用カーソルの場合、カーソルの結果セットとして返される行は、プロシージャの実行が終了したときにカーソルがあった位置以降の行に限られます。たとえば、次のようになります。  
   
@@ -253,7 +253,7 @@ GO
   
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [DECLARE @local_variable &#40;Transact-SQL&#41;](/sql/t-sql/language-elements/declare-local-variable-transact-sql)   
  [PRINT &#40;Transact-SQL&#41;](/sql/t-sql/language-elements/print-transact-sql)   
  [SET @local_variable &#40;Transact-SQL&#41;](/sql/t-sql/language-elements/set-local-variable-transact-sql)   

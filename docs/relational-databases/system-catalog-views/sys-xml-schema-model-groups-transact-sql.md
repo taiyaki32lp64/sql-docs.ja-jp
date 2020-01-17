@@ -17,17 +17,16 @@ dev_langs:
 helpviewer_keywords:
 - sys.xml_schema_model_groups catalog view
 ms.assetid: 566556dc-a8c8-465c-9196-c7e0ae092a8a
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: 69ec526d4ea98e128b29003d5ad4bbfd38799185
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: MightyPen
+ms.author: genemi
+ms.openlocfilehash: 041b09d544d5301d42d929e29c7f42b3502e294b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47848730"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68060529"
 ---
-# <a name="sysxmlschemamodelgroups-transact-sql"></a>sys.xml_schema_model_groups (Transact-SQL)
+# <a name="sysxmlschemamodelgroups-transact-sql"></a>sys.xml_schema_model_groups (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   モデル グループである XML スキーマ コンポーネントごとに 1 行を返します**symbol_space**の**M**.  
@@ -36,7 +35,7 @@ ms.locfileid: "47848730"
 |-----------------|---------------|-----------------|  
 |**\<列を継承 >**||列を継承[sys.xml_schema_components](../../relational-databases/system-catalog-views/sys-xml-schema-components-transact-sql.md)します。|  
 |**compositor**|**char(1)**|グループのコンポジターの種類。<br /><br /> A = XSD\<すべて > グループ<br /><br /> C = XSD \<choice > グループ<br /><br /> S = XSD\<シーケンス > グループ|  
-|**compositor_desc**|**Nvarchar (60)**|グループのコンポジターの種類に関する説明。<br /><br /> XSD_ALL_GROUP<br /><br /> XSD_CHOICE_GROUP<br /><br /> XSD_SEQUENCE_GROUP|  
+|**compositor_desc**|**Nvarchar (60)**|グループのコンポジターの種類の説明です。<br /><br /> XSD_ALL_GROUP<br /><br /> XSD_CHOICE_GROUP<br /><br /> XSD_SEQUENCE_GROUP|  
   
 ## <a name="permissions"></a>アクセス許可  
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] 詳細については、「 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)」を参照してください。  

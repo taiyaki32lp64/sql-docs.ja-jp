@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 3ea68271-0a6b-4d77-991c-4757f48f747a
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 779519ef5ba3098e205a70d8c5923adc993f44f6
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: c4f0ceb580ddc7538dd1ea98b9e08a82cd8d35b4
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47700752"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68044487"
 ---
 # <a name="sysmailhelpprofileaccountsp-transact-sql"></a>sysmail_help_profileaccount_sp (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -44,17 +43,13 @@ sysmail_help_profileaccount_sp
 ```  
   
 ## <a name="arguments"></a>引数  
- [ **@profile_id** = ] *profile_id*  
- 表示するプロファイルのプロファイル ID を指定します。 *profile_id*は**int**、既定値は NULL です。 いずれか*profile_id*または*profile_name*指定する必要があります。  
+`[ @profile_id = ] profile_id` 表示するプロファイルのプロファイル ID です。 *profile_id*は**int**、既定値は NULL です。 いずれか*profile_id*または*profile_name*指定する必要があります。  
   
- [ **@profile_name** =] **'***profile_name***'**  
- 表示するプロファイルのプロファイル名を指定します。 *profile_name*は**sysname**、既定値は NULL です。 いずれか*profile_id*または*profile_name*指定する必要があります。  
+`[ @profile_name = ] 'profile_name'` 表示するプロファイルのプロファイル名です。 *profile_name*は**sysname**、既定値は NULL です。 いずれか*profile_id*または*profile_name*指定する必要があります。  
   
- [ **@account_id** =] *account_id*  
- 表示するアカウント ID を指定します。 *account_id*は**int**、既定値は NULL です。 ときに*account_id*と*account_name*が両方の NULL の場合、プロファイル内のすべてのアカウントを一覧表示されます。  
+`[ @account_id = ] account_id` 一覧にアカウント ID です。 *account_id*は**int**、既定値は NULL です。 ときに*account_id*と*account_name*が両方の NULL の場合、プロファイル内のすべてのアカウントを一覧表示されます。  
   
- [ **@account_name** =] **'***account_name***'**  
- 表示するアカウント名を指定します。 *account_name*は**sysname**、既定値は NULL です。 ときに*account_id*と*account_name*が両方の NULL の場合、プロファイル内のすべてのアカウントを一覧表示されます。  
+`[ @account_name = ] 'account_name'` 一覧にアカウントの名前です。 *account_name*は**sysname**、既定値は NULL です。 ときに*account_id*と*account_name*が両方の NULL の場合、プロファイル内のすべてのアカウントを一覧表示されます。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  **0** (成功) または**1** (失敗)  
@@ -65,11 +60,11 @@ sysmail_help_profileaccount_sp
 ||||  
 |-|-|-|  
 |列名|データ型|説明|  
-|**profile_id**|**int**|プロファイルのプロファイル ID。|  
+|**profile_id**|**int**|プロファイルのプロファイル ID です。|  
 |**profile_name**|**sysname**|プロファイルの名前。|  
 |**account_id**|**int**|アカウントのアカウント ID。|  
 |**account_name**|**sysname**|アカウントの名前。|  
-|**sequence_number**|**int**|プロファイ内のアカウントのシーケンス番号。|  
+|**sequence_number**|**int**|プロファイル内のアカウントのシーケンス番号。|  
   
 ## <a name="remarks"></a>コメント  
  ない場合*profile_id*または*profile_name*を指定すると、このストアド プロシージャがインスタンス内のすべてのプロファイル情報を返します。  
@@ -118,7 +113,7 @@ profile_id  profile_name                 account_id  account_name         sequen
   
  **C.すべてのプロファイルのアカウントを一覧表示**  
   
- 次の例では、インスタンスのすべてのプロファイルのアカウントを一覧表示します。  
+ インスタンス内のすべてのプロファイルのアカウントを一覧表示する次の例を示しています。  
   
 ```  
 EXECUTE msdb.dbo.sysmail_help_profileaccount_sp;  
@@ -134,7 +129,7 @@ profile_id  profile_name                 account_id  account_name         sequen
 106         AdventureWorks Operator      210         Operator-MainServer  1  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [データベース メール](../../relational-databases/database-mail/database-mail.md)   
  [データベース メール アカウントを作成します。](../../relational-databases/database-mail/create-a-database-mail-account.md)   
  [データベース メール構成オブジェクト](../../relational-databases/database-mail/database-mail-configuration-objects.md)   

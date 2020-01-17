@@ -10,7 +10,7 @@ ms.topic: conceptual
 helpviewer_keywords:
 - Data sync
 - SQL Database
-- Windows Azure Training Kit
+- Azure Training Kit
 - Database development
 - Database backup
 - Database connection management
@@ -18,7 +18,7 @@ helpviewer_keywords:
 - Backup and restore
 - Database import and export
 - SQL Data Sync
-- Windows Azure Service Dashboard
+- Azure Service Dashboard
 - SQL Server Management Studio
 - Database management
 - Database export
@@ -30,14 +30,13 @@ helpviewer_keywords:
 ms.assetid: 91da13a4-0eea-4e88-b608-dada881ff5f2
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: f6771cb18d227c4e81290129ed5611da584988e7
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 9ed1f0716e3919e88ad7dfd1ae6c54f8e702761f
+ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51665018"
+ms.lasthandoff: 08/29/2019
+ms.locfileid: "70155489"
 ---
 # <a name="database-lifecycle-management"></a>データベースのライフサイクル管理
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -48,10 +47,10 @@ ms.locfileid: "51665018"
  トピック全体を確認するには、「 [データベース ライフ サイクル管理 (DLM)](https://go.microsoft.com/fwlink/?LinkId=276949)」を参照してください。  
   
 ## <a name="see-also"></a>参照  
- [Microsoft Azure ホーム ページ](https://www.windowsazure.com/)   
- [Microsoft Azure デベロッパー センター](https://www.windowsazure.com/develop/overview/)   
- [Microsoft Azure の管理のセンター](https://www.windowsazure.com/manage/overview/)   
- [Windows Azure チーム ブログ](https://www.windowsazure.com/community/blog/)   
- [Microsoft Azure のサポート オプション](https://www.windowsazure.com/support/contact/)  
+ [Azure ホーム ページ](https://www.windowsazure.com/)   
+ [Azure デベロッパー センター](https://www.windowsazure.com/develop/overview/)   
+ [Azure 管理センター](https://www.windowsazure.com/manage/overview/)   
+ [Azure チーム ブログ](https://www.windowsazure.com/community/blog/)   
+ [Azure サポート オプション](https://www.windowsazure.com/support/contact/)  
   
   

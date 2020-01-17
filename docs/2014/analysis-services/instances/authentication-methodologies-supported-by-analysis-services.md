@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: b7aee903-d33a-4c20-86c2-aa013a50949f
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: da6d96efaa23d50042ea4f4501b89b4a5cc1dd31
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: a57aff903d41e8bcddef25e21def39a45e33d23f
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53365046"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66080342"
 ---
 # <a name="authentication-methodologies-supported-by-analysis-services"></a>Analysis Services でサポートされる認証方法
   クライアント アプリケーションから Analysis Services インスタンスへの接続には Windows 認証 (統合) が必要です。 次の手法のいずれかを使用して Windows ユーザー ID を指定できます。  
@@ -79,7 +78,7 @@ ms.locfileid: "53365046"
   
  保存された資格情報の詳細については、「[共有データ ソースを作成、変更、および削除する &#40;SSRS&#41;](../../reporting-services/report-data/create-modify-and-delete-shared-data-sources-ssrs.md)」および「[SharePoint Server 2013 の Secure Store Service で Excel Services を使用する](https://go.microsoft.com/fwlink/?LinkID=309869)」をご覧ください。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [トランスポート セキュリティでの権限借用の使用](https://go.microsoft.com/fwlink/?LinkId=311727)   
  [インターネット インフォメーション サービス &#40;IIS&#41; 8.0 上の Analysis Services への HTTP アクセスの構成](configure-http-access-to-analysis-services-on-iis-8-0.md)   
  [Kerberos の制約付き委任のための Analysis Services の構成](configure-analysis-services-for-kerberos-constrained-delegation.md)   

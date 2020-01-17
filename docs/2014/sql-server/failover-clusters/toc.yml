@@ -1,74 +1,67 @@
-items:
 - name: 概要
   href: windows/windows-server-failover-clustering-wsfc-with-sql-server.md
   items:
-  - name: AlwaysOn フェールオーバー クラスター インスタンス
-    href: windows/always-on-failover-cluster-instances-sql-server.md
+    - name: AlwaysOn フェールオーバー クラスター インスタンス
+      href: windows/always-on-failover-cluster-instances-sql-server.md
 - name: 操作方法
   items:
-  - name: 展開
-    items:
-    - name: インストールの準備
-      href: install/before-installing-failover-clustering.md
-    - name: インストール
-      href: install/sql-server-failover-cluster-installation.md
-    - name: クラスターの作成
-      href: install/create-a-new-sql-server-failover-cluster-setup.md
-    - name: クライアント ツールのインストール
-      href: install/install-client-tools-on-a-sql-server-failover-cluster.md
-    - name: SQL Server フェールオーバー クラスターでのノードの追加または削除
-      href: install/add-or-remove-nodes-in-a-sql-server-failover-cluster-setup.md
-    - name: SQL Server フェールオーバー クラスター インスタンスの削除
-      href: install/remove-a-sql-server-failover-cluster-instance-setup.md
-    - name: フェールオーバー クラスター インスタンスのアップグレード
-      href: windows/upgrade-a-sql-server-failover-cluster-instance.md
+    - name: 展開
       items:
-      - name: SQL Server フェールオーバー クラスター インスタンスのアップグレード
-        href: windows/upgrade-a-sql-server-failover-cluster-instance-setup.md
-  - name: 構成
-    items:
-    - name: フェールオーバー クラスター インスタンスの名前変更
-      href: install/rename-a-sql-server-failover-cluster-instance.md
-    - name: SQL Server リソースへの依存関係の追加
-      href: windows/add-dependencies-to-a-sql-server-resource.md
-    - name: クラスター クォーラムの NodeWeight の設定の構成
-      href: windows/configure-cluster-quorum-nodeweight-settings.md
-    - name: フェールオーバー クラスター インスタンスの IP アドレスの変更
-      href: windows/change-the-ip-address-of-a-failover-cluster-instance.md
-    - name: FailureConditionLevel プロパティ設定の構成
-      href: windows/configure-failureconditionlevel-property-settings.md
-    - name: フェールオーバー クラスター インスタンスの診断ログを表示して読む方法
-      href: windows/view-and-read-failover-cluster-instance-diagnostics-log.md
-  - name: 管理
-    items:
-    - name: クラスター クォーラムの NodeWeight 設定を表示
-      href: windows/view-cluster-quorum-nodeweight-settings.md
-    - name: WSFC の強制クォーラムによる災害復旧
-      href: windows/wsfc-disaster-recovery-through-forced-quorum-sql-server.md
-    - name: クォーラムを使用せずに WSFC クラスターを強制的に起動する
-      href: windows/force-a-wsfc-cluster-to-start-without-a-quorum.md
-    - name: クォーラムを使用せずに WSFC クラスターを強制的に起動する
-      href: windows/force-a-wsfc-cluster-to-start-without-a-quorum.md
-    - name: 孤立ユーザーのトラブルシューティング
-      href: troubleshoot-orphaned-users-sql-server.md
+        - name: インストールの準備
+          href: install/before-installing-failover-clustering.md
+        - name: インストール
+          href: install/sql-server-failover-cluster-installation.md
+        - name: クラスターの作成
+          href: install/create-a-new-sql-server-failover-cluster-setup.md
+        - name: クライアント ツールのインストール
+          href: install/install-client-tools-on-a-sql-server-failover-cluster.md
+        - name: SQL Server フェールオーバー クラスターでのノードの追加または削除
+          href: install/add-or-remove-nodes-in-a-sql-server-failover-cluster-setup.md
+        - name: SQL Server フェールオーバー クラスター インスタンスの削除
+          href: install/remove-a-sql-server-failover-cluster-instance-setup.md
+        - name: フェールオーバー クラスター インスタンスのアップグレード
+          href: windows/upgrade-a-sql-server-failover-cluster-instance.md
+          items:
+            - name: SQL Server フェールオーバー クラスター インスタンスのアップグレード
+              href: windows/upgrade-a-sql-server-failover-cluster-instance-setup.md
+    - name: 構成
+      items:
+        - name: フェールオーバー クラスター インスタンスの名前変更
+          href: install/rename-a-sql-server-failover-cluster-instance.md
+        - name: SQL Server リソースへの依存関係の追加
+          href: windows/add-dependencies-to-a-sql-server-resource.md
+        - name: クラスター クォーラムの NodeWeight の設定の構成
+          href: windows/configure-cluster-quorum-nodeweight-settings.md
+        - name: フェールオーバー クラスター インスタンスの IP アドレスの変更
+          href: windows/change-the-ip-address-of-a-failover-cluster-instance.md
+        - name: FailureConditionLevel プロパティ設定の構成
+          href: windows/configure-failureconditionlevel-property-settings.md
+        - name: フェールオーバー クラスター インスタンスの診断ログを表示して読む方法
+          href: windows/view-and-read-failover-cluster-instance-diagnostics-log.md
+    - name: 管理
+      items:
+        - name: クラスター クォーラムの NodeWeight 設定を表示
+          href: windows/view-cluster-quorum-nodeweight-settings.md
+        - name: WSFC の強制クォーラムによる災害復旧
+          href: windows/wsfc-disaster-recovery-through-forced-quorum-sql-server.md
+        - name: クォーラムを使用せずに WSFC クラスターを強制的に起動する
+          href: windows/force-a-wsfc-cluster-to-start-without-a-quorum.md
+        - name: クォーラムを使用せずに WSFC クラスターを強制的に起動する
+          href: windows/force-a-wsfc-cluster-to-start-without-a-quorum.md
+        - name: 孤立ユーザーのトラブルシューティング
+          href: troubleshoot-orphaned-users-sql-server.md
 - name: 概念
   items:
-  - name: 構成
-    items:
-    - name: WSFC クォーラム モードと投票の構成
-      href: windows/wsfc-quorum-modes-and-voting-configuration-sql-server.md
-    - name: SQL Server マルチサブネット クラスタリング
-      href: windows/sql-server-multi-subnet-clustering-sql-server.md
-  - name: 管理
-    href: windows/failover-cluster-instance-administration-and-maintenance.md
-    items:
-    - name: ページの自動修復 (可用性グループとデータベース ミラーリング)
-      href: automatic-page-repair-availability-groups-database-mirroring.md
-    - name: 役割の交代後のログインとジョブの管理
-      href: management-of-logins-and-jobs-after-role-switching-sql-server.md
-ms.openlocfilehash: 7ab9ae4e45983d34d420fedb6b52f8c827f06f5e
-ms.sourcegitcommit: a192814756570bcbce3b1dbbb05acb24a79d1530
-ms.translationtype: HT
-ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54457525"
+    - name: 構成
+      items:
+        - name: WSFC クォーラム モードと投票の構成
+          href: windows/wsfc-quorum-modes-and-voting-configuration-sql-server.md
+        - name: SQL Server マルチサブネット クラスタリング
+          href: windows/sql-server-multi-subnet-clustering-sql-server.md
+    - name: 管理
+      href: windows/failover-cluster-instance-administration-and-maintenance.md
+      items:
+        - name: ページの自動修復 (可用性グループとデータベース ミラーリング)
+          href: automatic-page-repair-availability-groups-database-mirroring.md
+        - name: 役割の交代後のログインとジョブの管理
+          href: management-of-logins-and-jobs-after-role-switching-sql-server.md

@@ -17,12 +17,12 @@ ms.assetid: e7399505-27ac-48d9-a637-73bf92b9df49
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 268f75902f752551e33467e422b6f33ea6c4dcb7
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: ff9340d7c9fb768f9e057d00868a9e238421a5f4
+ms.sourcegitcommit: f912c101d2939084c4ea2e9881eb98e1afa29dad
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53369184"
+ms.lasthandoff: 10/23/2019
+ms.locfileid: "72798202"
 ---
 # <a name="notify-an-operator-of-job-status"></a>Notify an Operator of Job Status
   このトピックでは、 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] で [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../includes/tsql-md.md)]、または SQL Server 管理オブジェクトを使用して、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェントからジョブに関する通知をオペレーターに送信するための通知オプションを設定する方法について説明します。  
@@ -43,7 +43,7 @@ ms.locfileid: "53369184"
   
 ##  <a name="BeforeYouBegin"></a> はじめに  
   
-###  <a name="Security"></a> セキュリティ  
+###  <a name="Security"></a> Security  
  詳細については、「 [SQL Server エージェントのセキュリティの実装](implement-sql-server-agent-security.md)」をご覧ください。  
   
 ##  <a name="SSMS"></a> SQL Server Management Studio の使用  
@@ -88,9 +88,9 @@ ms.locfileid: "53369184"
   
 2.  [標準] ツール バーの **[新しいクエリ]** をクリックします。  
   
-3.  次の例をコピーしてクエリ ウィンドウに貼り付け、 **[実行]** をクリックします。  
+3.  次の例をコピーしてクエリ ウィンドウに貼り付け、**[実行]** をクリックします。  
   
-    ```  
+    ```sql
     -- adds an e-mail notification for the specified alert (Test Alert).  
     -- This example assumes that Test Alert already exists and that Fran??ois Ajenstat is a valid operator name.  
     USE msdb ;  
@@ -102,11 +102,9 @@ ms.locfileid: "53369184"
     GO  
     ```  
   
- 詳細については、次を参照してください。 [sp_add_notification &#40;TRANSACT-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-add-notification-transact-sql)します。  
+ 詳細については、「 [sp_add_notification &#40;transact-sql&#41;](/sql/relational-databases/system-stored-procedures/sp-add-notification-transact-sql)」を参照してください。  
   
-##  <a name="SMO"></a> SQL Server 管理オブジェクトの使用  
+##  <a name="SMO"></a>SQL Server 管理オブジェクトの使用  
  **オペレーターにジョブの状態を通知するには**  
   
- 使用して、 `Job` Visual Basic、Visual c#、PowerShell など、選択したプログラミング言語を使用してクラス。 詳細については、「 [SQL Server 管理オブジェクト (SMO) プログラミング ガイド](https://msdn.microsoft.com/library/ms162169.aspx)」を参照してください。  
-  
-  
+ Visual Basic、ビジュアルC#、PowerShell などのプログラミング言語で `Job` クラスを使用します。 詳細については、「 [SQL Server 管理オブジェクト (SMO) プログラミング ガイド](https://msdn.microsoft.com/library/ms162169.aspx)」を参照してください。  

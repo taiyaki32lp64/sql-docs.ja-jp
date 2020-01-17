@@ -9,14 +9,13 @@ ms.topic: conceptual
 ms.assetid: 66999c0c-dc43-4327-99fb-8366f465e69d
 author: ronortloff
 ms.author: rortloff
-manager: craigg
 monikerRange: '>= aps-pdw-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: e6f74c53c7b7380308ee0c620bcf07c1a8ddbc8f
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: c2bca7f0deef9a5cb137525e165670404cad65ae
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56010863"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68016553"
 ---
 # <a name="syspdwhealthcomponentproperties-transact-sql"></a>sys.pdw_health_component_properties (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md.md)]
@@ -31,7 +30,7 @@ ms.locfileid: "56010863"
 |physical_name|**nvarchar(32)**|プロパティ名、製造元によって定義されています。|NOT NULL|  
 |is_key|**bit**|デバイス インスタンスが一意または一意でないかどうかを判断します。|NOT NULL<br /><br /> 0 - デバイスのインスタンスは一意です。<br /><br /> 1-デバイスのインスタンスは一意ではありません。|  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [SQL Data Warehouse と Parallel Data Warehouse カタログ ビュー](../../relational-databases/system-catalog-views/sql-data-warehouse-and-parallel-data-warehouse-catalog-views.md)  
   
   

@@ -11,11 +11,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 49fce70b4fc01f77fe7ca54e3951f0372ba18489
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52815734"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63067648"
 ---
 # <a name="sql-server-failover-cluster-installation"></a>SQL Server フェールオーバー クラスターのインストール
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] のフェールオーバー クラスターをインストールするには、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] セットアップを実行してフェールオーバー クラスター インスタンスを作成し、構成する必要があります。  
@@ -43,7 +43,7 @@ ms.locfileid: "52815734"
   
 ## <a name="includessnoversionincludesssnoversion-mdmd-failover-cluster-installation-options"></a>[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] フェールオーバー クラスター インストール オプション  
   
-##### <a name="option-1-integrated-installation-with-add-node"></a>オプション 1: ノードの追加を伴う統合インストール  
+##### <a name="option-1-integrated-installation-with-add-node"></a>オプション 1:ノードの追加を伴う統合インストール  
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 統合フェールオーバー クラスター インストールは、次の 2 つの手順で構成されています。  
   
 1.  単一ノードの [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] フェールオーバー クラスター インスタンスを作成および構成します。 ノードの構成が正常に完了すると、完全に機能するフェールオーバー クラスター インスタンスが完成します。 フェールオーバー クラスターには 1 つのノードしかないので、この時点では高可用性は備わっていません。  
@@ -79,7 +79,7 @@ ms.locfileid: "52815734"
 ##### <a name="includessnoversionincludesssnoversion-mdmd-multi-subnet-failover-cluster"></a>[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] マルチサブネット フェールオーバー クラスター  
  クラスター上のノードが別々のサブネットにある場合、OR 依存関係を設定できます。 ただし、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] マルチサブネット フェールオーバー クラスターの各ノードが、指定されている 1 つ以上の IP アドレスの実行可能な所有者である必要があります。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [フェールオーバー クラスタリングをインストールする前に](before-installing-failover-clustering.md)   
  [新しい SQL Server フェールオーバー クラスターの作成 &#40;セットアップ&#41;](create-a-new-sql-server-failover-cluster-setup.md)   
  [コマンド プロンプトから SQL Server 2014 をインストールします。](../../../database-engine/install-windows/install-sql-server-from-the-command-prompt.md)   

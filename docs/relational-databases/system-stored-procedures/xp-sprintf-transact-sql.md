@@ -17,19 +17,18 @@ helpviewer_keywords:
 ms.assetid: 1eedd65c-03cc-4eab-b76e-04684fdfec52
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 43889665b93da0b4fffe6e5db71ddb4e8bdf9ac9
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ec2ad672135453750d5880d63a8f90f3e3d4c558
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47772860"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67898356"
 ---
-# <a name="xpsprintf-transact-sql"></a>xp_sprintf (Transact-SQL)
+# <a name="xpsprintf-transact-sql"></a>xp_sprintf (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-  文字列の出力パラメーターの連続した文字および値を書式化して格納します。 各フォーマット引数は対応する引数に置き換えられます。  
+  書式化して、文字列の出力パラメーターで、一連の文字や値を格納します。 各フォーマット引数は対応する引数に置き換えられます。  
   
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -46,16 +45,16 @@ xp_sprintf { string OUTPUT , format }
  **Varchar**出力を受け取る変数。  
   
  OUTPUT  
- 指定した場合は、変数の値が出力パラメーターに格納されます。  
+ 指定した場合は、変数の値を出力パラメーターになります。  
   
  *format*  
- 書式文字の文字列のプレース ホルダーでは、*引数*C 言語でサポートされているような値は、 **sprintf**関数。 現在サポートしているのは %s フォーマット引数のみです。  
+ 書式文字の文字列のプレース ホルダーでは、*引数*C 言語でサポートされているような値は、 **sprintf**関数。 現時点では、%s フォーマット引数のみがサポートされています。  
   
  *argument*  
  対応するフォーマット引数の値を表す文字列。  
   
  *n*  
- 最大 50 の引数を指定できることを示すプレースホルダーです。  
+ 最大 50 の引数を指定できることを示すプレース ホルダー。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  0 (成功) または 1 (失敗)  
@@ -68,7 +67,7 @@ xp_sprintf { string OUTPUT , format }
 ## <a name="permissions"></a>アクセス許可  
  ロール **public** のメンバーシップが必要です。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [システム ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
  [汎用拡張ストアド プロシージャ&#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/general-extended-stored-procedures-transact-sql.md)   
  [xp_sscanf &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/xp-sscanf-transact-sql.md)  

@@ -17,15 +17,14 @@ dev_langs:
 helpviewer_keywords:
 - sys.xml_schema_namespaces catalog view
 ms.assetid: 3ed42dd6-929a-41de-80e8-d3a0a488bc7a
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: 21fe5b26035bc07f81e8112e530588230e34b168
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: MightyPen
+ms.author: genemi
+ms.openlocfilehash: ec58d18c874f8b0060aadb753330976aad259b3b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47794200"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68060438"
 ---
 # <a name="sysxmlschemanamespaces-transact-sql"></a>sys.xml_schema_namespaces (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -35,8 +34,8 @@ ms.locfileid: "47794200"
 |列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
 |**xml_collection_id**|**int**|名前空間を含む XML スキーマ コレクションの ID。|  
-|**name**|**nvarchar (4000)**|XML 名前空間の名前。 空白**名前**ターゲットの名前空間がないことを示します。|  
-|**xml_namespace_id**|**int**|データベースの XML 名前空間を一意に識別する、1 から始まる序数。|  
+|**name**|**nvarchar (4000)**|XML 名前空間の名前です。 空白**名前**ターゲットの名前空間がないことを示します。|  
+|**xml_namespace_id**|**int**|データベース内の XML 名前空間を一意に識別する 1 から始まる序数。|  
   
 ## <a name="permissions"></a>アクセス許可  
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] 詳細については、「 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)」を参照してください。  

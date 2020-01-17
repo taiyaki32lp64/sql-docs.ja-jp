@@ -12,22 +12,25 @@ f1_keywords:
 helpviewer_keywords:
 - Data Profiling Task Editor
 ms.assetid: d2fac9ce-730e-474e-961a-69406b633778
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: 1adcb5703b2f05282d564bca3eba43012d14e3a1
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: fefb8e6c4cd29804f28cb2813fe20aba7c70427c
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47599823"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71293906"
 ---
 # <a name="single-table-quick-profile-form-data-profiling-task"></a>[単一テーブル クイック プロファイル フォーム] (データ プロファイル タスク)
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   **[単一テーブル クイック プロファイル フォーム]** を使用すると、既定の設定を使用して単一のテーブルまたはビューをプロファイルするように、データ プロファイル タスクをすばやく構成できます。  
   
  データ プロファイル タスクの使用方法の詳細については、「 [データ プロファイル タスクのセットアップ](../../integration-services/control-flow/setup-of-the-data-profiling-task.md)」を参照してください。 Data Profile Viewer を使用してデータ プロファイル タスクの出力を分析する方法の詳細については、「 [Data Profile Viewer](../../integration-services/control-flow/data-profile-viewer.md)」を参照してください。  
   
-## <a name="options"></a>[変数]  
+## <a name="options"></a>オプション  
  **[接続]**  
  プロファイル対象のテーブルまたはビューを含む [!INCLUDE[vstecado](../../includes/vstecado-md.md)] データベースに接続するには、.NET Data Provider for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (SqlClient) を使用する既存の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 接続マネージャーを選択します。  
   
@@ -37,7 +40,7 @@ ms.locfileid: "47599823"
  **[計算]**  
  計算するプロファイルを選択します。  
   
-|ReplTest1|[説明]|  
+|[値]|[説明]|  
 |-----------|-----------------|  
 |**列の NULL 比プロファイル**|選択したテーブルまたはビュー内のすべての該当する列に対して既定の設定を使用して、列の NULL 比プロファイルを計算します。<br /><br /> このプロファイルは、選択した列の NULL 値の比率を報告します。 このプロファイルを使用すると、列の NULL 値の比率が予想外に高いなどのデータの問題を特定できます。 このプロファイルの設定の詳細については、「[[列の NULL 比プロファイル要求] のオプション &#40;データ プロファイル タスク&#41;](../../integration-services/control-flow/column-null-ratio-profile-request-options-data-profiling-task.md)」を参照してください。|  
 |**列統計プロファイル**|選択したテーブルまたはビュー内のすべての該当する列に対して既定の設定を使用して、列統計プロファイルを計算します。<br /><br /> このプロファイルは、数値型列の最小値、最大値、平均値、標準偏差や、 **datetime** 列の最小値、最大値などの統計を報告します。 このプロファイルを使用すると、無効な日付などのデータの問題を特定できます。 このプロファイルの設定の詳細については、「[[列統計プロファイル要求] のオプション &#40;データ プロファイル タスク&#41;](../../integration-services/control-flow/column-statistics-profile-request-options-data-profiling-task.md)」を参照してください。|  

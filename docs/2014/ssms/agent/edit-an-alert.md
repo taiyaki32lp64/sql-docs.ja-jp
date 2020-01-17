@@ -15,11 +15,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: f035f9173477a3954a949f9ed27bc6f4f66be741
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52795744"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68211402"
 ---
 # <a name="edit-an-alert"></a>Edit an Alert
   このトピックでは、[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] で [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] または [!INCLUDE[tsql](../../includes/tsql-md.md)] を使用して、[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェントの警告を編集する方法について説明します。  
@@ -55,7 +55,7 @@ ms.locfileid: "52795744"
   
 4.  編集する警告を右クリックし、 **[プロパティ]** をクリックします。  
   
-5.  **[全般]**、 **[応答]**、および **[オプション]** の各ページで、警告のプロパティを更新します。  
+5.  **[全般]** 、 **[応答]** 、および **[オプション]** の各ページで、警告のプロパティを更新します。  
   
 6.  完了したら、 **[OK]** をクリックします。  
   

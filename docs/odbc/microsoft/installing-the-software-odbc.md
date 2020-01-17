@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: dfac8ade-eebe-4ebe-a199-feb740ed5bae
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 6737a995db78f2a5ba625ddf200a0171582026ae
-ms.sourcegitcommit: 480961f14405dc0b096aa8009855dc5a2964f177
+ms.openlocfilehash: f3be4f2ce9a3388d53a4d8474e5c1ca172842b5c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/22/2019
-ms.locfileid: "54419737"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68085510"
 ---
 # <a name="installing-the-software-odbc"></a>インストール (ODBC)
 > [!IMPORTANT]  

@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: cd8d6382-abe6-48ee-9d10-4e6c52c0cb9a
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: aefee98fefc5ae0b47ce3ea734580799c8abe57c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 3f77439f2369d7fbf4e27603bcbf8c8a2f8d8399
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47698740"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67993480"
 ---
 # <a name="how-to-retrieve-binary-data-as-a-stream-using-the-sqlsrv-driver"></a>方法: SQLSRV ドライバーを使用してバイナリ データをストリームとして取得する
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]

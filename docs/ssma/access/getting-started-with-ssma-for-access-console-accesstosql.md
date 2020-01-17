@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 8585ec16-7e0a-483a-b250-adab9b9232a3
 author: Shamikg
 ms.author: Shamikg
-manager: craigg
-ms.openlocfilehash: 44e89e7c6ab10df13927247222e1f8564500fb8e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 899070b1405b031e919f50a6d16bc5d6df3adf3e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47763078"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68222220"
 ---
 # <a name="getting-started-with-ssma-for-access-console-accesstosql"></a>Ssma for Access コンソール (AccessToSQL) 作業の開始
 このセクションを起動し、Access のコンソール アプリケーションを使用する手順について説明します。 一覧表示、ここで、規則で使用されます SSMA コンソールの一般的な出力ウィンドウ。  

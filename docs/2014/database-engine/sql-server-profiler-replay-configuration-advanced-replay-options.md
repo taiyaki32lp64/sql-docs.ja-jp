@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 f1_keywords:
 - sql12.pro.replay.generaloptions.advanced.f1
@@ -15,12 +14,12 @@ ms.assetid: b4eb34f7-3af6-4a44-ba7e-2b8430ec3cd7
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: fff89f4be7953e2eb0cec3ed9a04883052ed6d1f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 0bf91032c1514037c754fd489ac266cf68063fa4
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48192482"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66089729"
 ---
 # <a name="sql-server-profiler---replay-configuration-advanced-replay-options"></a>[SQL Server Profiler] - [構成の再生] ([再生オプションの詳細設定])
   **[構成の再生]** ダイアログ ボックスの **[再生オプションの詳細設定]** タブを使用すると、トレース ファイルの再生方法を指定できます。  
@@ -58,8 +57,8 @@ ms.locfileid: "48192482"
  **[ブロックされるプロセスの監視の待機間隔 (秒)]**  
  ブロックされるプロセス モニターで、ブロックされるプロセスまたはブロックするプロセスを検索する頻度を設定します。  
   
-## <a name="see-also"></a>参照  
- [トレース テーブルを再生&#40;SQL Server Profiler&#41;](../tools/sql-server-profiler/replay-a-trace-table-sql-server-profiler.md)   
+## <a name="see-also"></a>関連項目  
+ [トレース テーブルを再生する &#40;SQL Server Profiler&#41;](../tools/sql-server-profiler/replay-a-trace-table-sql-server-profiler.md)   
  [トレース ファイルを再生する &#40;SQL Server Profiler&#41;](../tools/sql-server-profiler/replay-a-trace-file-sql-server-profiler.md)   
  [トレースの再生](../tools/sql-server-profiler/replay-traces.md)  
   

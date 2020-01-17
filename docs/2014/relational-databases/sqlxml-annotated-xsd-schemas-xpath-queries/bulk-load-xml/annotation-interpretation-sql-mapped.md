@@ -14,15 +14,15 @@ helpviewer_keywords:
 - sql:mapped
 - column mapping [SQLXML]
 ms.assetid: 7042741e-ce4d-4912-9c4a-d77194a028fc
-author: douglaslMS
-ms.author: douglasl
+author: MightyPen
+ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 14934b2b4c98b09a6596887dc2b4ced7ec04dd65
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 4878ff0bc8e284af1515d5ea0d531c3a7471a113
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52807274"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66013474"
 ---
 # <a name="sqlmapped-sqlxml-40"></a>sql:mapped (SQLXML 4.0)
   XML 一括読み込みの処理、`sql:mapped`予想こととして、XSD スキーマで注釈は、マッピング スキーマが指定されている場合`sql:mapped="false"`の任意の要素または属性を使用して、XML 一括読み込みを試行しません、対応する列に関連付けられているデータを格納します。  

@@ -20,13 +20,12 @@ helpviewer_keywords:
 ms.assetid: 512f9cee-ffad-439b-b612-b49c34c32658
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: d82fde382bf3ed92f400dbbe234790ccd510cc93
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 2610383df0f3dde453fe3ba40b10dea85582b9c7
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52512458"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67915762"
 ---
 # <a name="odbc-functions-and-the-visual-foxpro-odbc-driver"></a>ODBC 関数と Visual FoxPro ODBC ドライバー
 このセクションのトピックでは、ODBC API 関数の簡単な概要と、Visual FoxPro 固有の詳細情報を提供します。  

@@ -14,20 +14,19 @@ helpviewer_keywords:
 ms.assetid: 17277ab3-33ad-44d3-a81c-a26b5e338512
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 2c26aff8220d2ebaf4024a881e8b48f165999f8f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 0f466d98d5d1edec2efa824ac644ad6bb49e990a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47776410"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68022165"
 ---
 # <a name="using-sqlbindcol"></a>SQLBindCol の使用
 アプリケーションが呼び出すことによって列をバインド**SQLBindCol**します。 この関数は、一度に 1 つの列をバインドします。 アプリケーションは、次を指定します。  
   
 -   列番号。 0 の列がブックマーク列です。この列は、いくつかの結果セットは含まれません。 その他のすべての列は、番号 1 から始まります。 結果セットに列があるよりも大きい番号の列をバインドするとエラーにはこのエラーを検出できません、結果セットが作成されるまでによって返されるように**SQLFetch**ではなく、 **SQLBindCol**します。  
   
--   変数の C データ型、アドレス、およびバイト長は、その列にバインドします。 列の SQL データ型を変換できません。 C データ型を指定するとエラーにはこのエラーが検出されない結果セットが作成されるまでによって返されるように**SQLFetch**ではなく、 **SQLBindCol**します。 サポートされる変換の一覧は、次を参照してください。 [SQL から C データ型への変換データ](../../../odbc/reference/appendixes/converting-data-from-sql-to-c-data-types.md)付録 d: データ型。 バイトの長さの詳細については、次を参照してください。[データ バッファーの長さ](../../../odbc/reference/develop-app/data-buffer-length.md)します。  
+-   変数の C データ型、アドレス、およびバイト長は、その列にバインドします。 列の SQL データ型を変換できません。 C データ型を指定するとエラーにはこのエラーが検出されない結果セットが作成されるまでによって返されるように**SQLFetch**ではなく、 **SQLBindCol**します。 サポートされる変換の一覧は、次を参照してください[SQL から C データ型への変換データ](../../../odbc/reference/appendixes/converting-data-from-sql-to-c-data-types.md)付録 d:。データ型。 バイトの長さの詳細については、次を参照してください。[データ バッファーの長さ](../../../odbc/reference/develop-app/data-buffer-length.md)します。  
   
 -   長さ/インジケーター バッファーのアドレス。 長さ/インジケーター バッファーは省略可能です。 データが NULL の場合は、バイナリまたは文字データまたは SQL_NULL_DATA の戻り値のバイトの長さを返すために使用されます。 詳細については、次を参照してください。[長さ/インジケーターの値を使用して](../../../odbc/reference/develop-app/using-length-and-indicator-values.md)します。  
   
@@ -35,7 +34,7 @@ ms.locfileid: "47776410"
   
  たとえば、次のコードでは、販売員と CustID 列に変数をバインドします。 列のデータが返されます*販売員*と*CustID*します。 *販売員*文字バッファーには、ドライバーは、データを切り捨てるかどうかを確認できるように、アプリケーションは、バイトの長さ (11) を指定します。 返されたのバイト長のタイトルまたは NULL であるかどうかで返される*SalesPersonLenOrInd*。  
   
- *CustID*整数型の変数し、が固定長のバイトの長さを指定する必要はありません。 ドライバーであると**sizeof (** SQLUINTEGER **)**。 返された顧客のバイト長のデータを ID または NULL であるかどうかに返されます*CustIDInd*します。 バイトの長さが常にあるために、アプリケーションが、給与が NULL であるかのみを求めていることに注意してください。 **sizeof (** SQLUINTEGER **)** します。  
+ *CustID*整数型の変数し、が固定長のバイトの長さを指定する必要はありません。 ドライバーであると**sizeof (** SQLUINTEGER **)** 。 返された顧客のバイト長のデータを ID または NULL であるかどうかに返されます*CustIDInd*します。 バイトの長さが常にあるために、アプリケーションが、給与が NULL であるかのみを求めていることに注意してください。 **sizeof (** SQLUINTEGER **)** します。  
   
 ```  
 SQLCHAR       SalesPerson[11];  

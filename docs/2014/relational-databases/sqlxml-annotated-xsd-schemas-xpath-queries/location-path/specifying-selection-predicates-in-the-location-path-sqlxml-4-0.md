@@ -14,15 +14,15 @@ helpviewer_keywords:
 - filtering [SQLXML]
 - location path for XPath query
 ms.assetid: dbef4cf4-a89b-4d7e-b72b-4062f7b29a80
-author: douglaslMS
-ms.author: douglasl
+author: MightyPen
+ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 4ded9395af45d9445f9189f411c7a0911a26e653
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 5d35b70c157dc5285355fcd15b38739757f0be9a
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52807454"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66012579"
 ---
 # <a name="specifying-selection-predicates-in-the-location-path-sqlxml-40"></a>ロケーション パスでの選択述語の指定 (SQLXML 4.0)
   述語は、SELECT ステートメントの WHERE 句と同様に、軸についてノード セットをフィルター選択するものです。 述語はかっこで囲みます。 フィルター選択されたノード セットの各ノードに対し、ノードをコンテキスト ノード、ノード セット内のノード数をコンテキストのサイズとして、述語式が評価されます。 述語式が TRUE と評価された場合、そのノードは結果のノード セットに含められます。  
@@ -71,7 +71,7 @@ child::Customer[child::ContactName]
   
  この例では、  **\<ContactName >** の子要素には、 **\<顧客 >** と呼ばれる XML ドキュメント内の要素*要素中心のマッピング*注釈付き XSD スキーマです。  
   
- この XPath 式では、`child` が軸名で、 `Customer` ノード テストです (場合に TRUE を`Customer`は、 **\<要素 >** ノード、ため**\<要素 >** のプリンシパル ノード型は、`child`軸) です。 `child::ContactName` は述語です。 述語では、`child`は、軸と`ContactName`はノード テストです (TRUE の場合`ContactName`は、 **\<要素 >** ノード)。  
+ この XPath 式では、`child` が軸名で、 `Customer` ノード テストです (場合に TRUE を`Customer`は、 **\<要素 >** ノード、ため **\<要素 >** のプリンシパル ノード型は、`child`軸) です。 `child::ContactName` は述語です。 述語では、`child`は、軸と`ContactName`はノード テストです (TRUE の場合`ContactName`は、 **\<要素 >** ノード)。  
   
  この式だけを返す、 **\<顧客 >** を持つコンテキスト ノードの要素の子 **\<ContactName >** 子要素。  
   
@@ -82,7 +82,7 @@ Customer[ContactName]
 ```  
   
 ## <a name="selection-predicate-example-4"></a>選択述語。例 4  
- 次の XPath 式を選択します**\<顧客 >** がない、コンテキスト ノードの要素の子 **\<ContactName >** 子要素。  
+ 次の XPath 式を選択します **\<顧客 >** がない、コンテキスト ノードの要素の子 **\<ContactName >** 子要素。  
   
 ```  
 child::Customer[not(child::ContactName)]  

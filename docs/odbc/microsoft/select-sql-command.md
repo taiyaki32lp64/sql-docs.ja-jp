@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 2149c3ca-3a71-446d-8d53-3d056e2f301a
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 0c2d991afa179fdfbb536853e302b33de8bf12e1
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 85f281aefe79a09806c42e13cd771f976362d053
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52540240"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67943787"
 ---
 # <a name="select---sql-command"></a>SELECT - SQL コマンド
 1 つまたは複数のテーブルからデータを取得します。  
@@ -97,7 +96,7 @@ FROM [DatabaseName!]Table [Local_Alias]
  AS *Column_Name*  
  クエリの出力列の見出しを指定します。 これは、ときに便利です*Select_Item*式またはフィールドを含む関数とするが、列にわかりやすい名前を付与します。 *Column_Name*式を指定できますが、テーブルのフィールド名は許可されない文字 (スペースなど) を含めることはできません。  
   
- [*DatabaseName*!]*テーブル*[*Local_Alias*] [、[*DatabaseName*!]*テーブル*[*Local_Alias*]...]  
+ FROM [*DatabaseName*!]*Table* [*Local_Alias*]   [, [*DatabaseName*!]*Table* [*Local_Alias*] ...]  
  クエリで取得されたデータを含むテーブルを一覧表示します。 開いているテーブルがない場合は、Visual FoxPro が表示されます、**開く** ダイアログ ボックスのファイルの場所を指定できるようにします。 開かれた後、テーブルは、クエリが完了したら開いたのままです。  
   
  *DatabaseName*! データ ソースで指定されている以外のデータベースの名前を指定します。 データ ソースと、データベースが指定されていない場合は、テーブルを含むデータベースの名前を含める必要があります。 データベース名の後に、テーブル名の前に感嘆符 (!) 区切り記号が含まれます。  
@@ -122,15 +121,15 @@ FROM [DatabaseName!]Table [Local_Alias]
   
      *FieldName1* 1 つのテーブルからのフィールドの名前を指定*FieldName2*別のテーブルからのフィールドの名前を指定および*比較*は、次の表で説明されている演算子の 1 つです。  
   
-|演算子|比較|  
+|演算子|条件式|  
 |--------------|----------------|  
-|=|等号|  
+|=|等しい|  
 |==|正確に等しい|  
 |LIKE|ような SQL|  
-|<>, !=, #|等しくないです。|  
+|<>, !=, #|等しくない|  
 |>|複数の|  
 |>=|大きいか等しい|  
-|<|より小さい|  
+|<|次の値未満|  
 |<=|以下|  
   
  使用すると、= 演算子、文字列、動作が異なる、設定の ANSI の設定に応じて。 ANSI の設定が OFF に設定されている場合、Visual FoxPro は、Xbase ユーザーが使い慣れている方法で文字列比較を扱います。 ANSI の設定が ON に設定されている場合、Visual FoxPro には、文字列比較のための ANSI 規格に従います。 参照してください[設定の ANSI](../../odbc/microsoft/set-ansi-command.md)と[設定の正確な](../../odbc/microsoft/set-exact-command.md)Visual FoxPro が文字列の比較を実行する方法の詳細についてはします。  
@@ -195,7 +194,7 @@ FROM [DatabaseName!]Table [Local_Alias]
   
  `customer.country NOT LIKE "USA"`  
   
- このフィルター条件に一致する各フィールドを検索*cExpression*します。 一部として、パーセント記号 (%) とアンダー スコア (_) ワイルドカード文字を使用することができます*cExpression*します。 アンダー スコアは、文字列内の 1 つの不明な文字を表します。  
+ このフィルター条件に一致する各フィールドを検索*cExpression*します。 パーセント記号 (%) を使用することができます。一部として、アンダー スコア (_) ワイルドカード文字と*cExpression*します。 アンダー スコアは、文字列内の 1 つの不明な文字を表します。  
   
  GROUP BY *GroupColumn* [、 *GroupColumn* ...]  
  1 つまたは複数の列の値に基づくクエリで行グループ。 *GroupColumn*次のいずれかを指定できます。  
@@ -281,7 +280,7 @@ WHERE customer.cust_id NOT IN ;
 ## <a name="driver-remarks"></a>ドライバーの解説  
  アプリケーションでは、ODBC SQL ステートメント を選択をデータ ソースに送信するときに Visual FoxPro ODBC ドライバーは、コマンドには、ODBC エスケープ シーケンスが含まれていない場合、翻訳しないで Visual FoxPro 選択コマンドにコマンドを変換します。 ODBC エスケープ シーケンスで囲まれた項目は、Visual FoxPro 構文に変換されます。 ODBC を使用しての詳細については、エスケープ シーケンスは、「[時刻および日付関数](../../odbc/microsoft/time-and-date-functions-visual-foxpro-odbc-driver.md)し、 *Microsoft ODBC プログラマ リファレンス*、を参照してください[odbc エスケープ シーケンス](../../odbc/reference/develop-app/escape-sequences-in-odbc.md).  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [CREATE TABLE - SQL](../../odbc/microsoft/create-table-sql-command.md)   
  [INSERT - SQL](../../odbc/microsoft/insert-sql-command.md)   
  [セットの ANSI](../../odbc/microsoft/set-ansi-command.md)   

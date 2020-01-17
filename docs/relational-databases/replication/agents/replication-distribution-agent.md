@@ -15,16 +15,16 @@ helpviewer_keywords:
 ms.assetid: 7b4fd480-9eaf-40dd-9a07-77301e44e2ac
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: b1b43a2c739de3ae0f23871c7bc023b3f215b4ce
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+monikerRange: =azuresqldb-current||>=sql-server-2014||=sqlallproducts-allversions
+ms.openlocfilehash: 7524d1c984d1e12b744c57b97cfeb586dff3f7ce
+ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54126643"
+ms.lasthandoff: 08/03/2019
+ms.locfileid: "68770747"
 ---
 # <a name="replication-distribution-agent"></a>レプリケーション ディストリビューション エージェント
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md.md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   レプリケーション ディストリビューション エージェントは、ディストリビューション データベース テーブルに登録されたスナップショット (スナップショット レプリケーションの場合) とトランザクション (トランザクション レプリケーションの場合) を、サブスクライバーのレプリケーション先のテーブルに移動する実行可能ファイルです。  
   
 > [!NOTE]  
@@ -92,14 +92,14 @@ distrib [-?]
  **-?**  
  使用できるすべてのパラメーターを表示します。  
   
- **-Publisher** _server_name_[**\\**_instance_name_]  
- パブリッシャーの名前です。 サーバー上の *server_name* の既定のインスタンスの場合は、 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] を指定します。 サーバー上の _server_name_**\\**_instance_name_ instance_name [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] の既定のインスタンスの場合は、server_name を指定します。  
+ **-Publisher** _server_name_[ **\\** _instance_name_]  
+ パブリッシャーの名前です。 サーバー上の *server_name* の既定のインスタンスの場合は、 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] を指定します。 サーバー上の _server_name_ **\\** _instance_name_ instance_name [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] の既定のインスタンスの場合は、server_name を指定します。  
   
  **-PublisherDB** _publisher_database_  
  パブリッシャー データベースの名前です。  
   
- **-Subscriber** _server_name_[**\\**_instance_name_]  
- サブスクライバーの名前です。 サーバー上の *server_name* の既定のインスタンスの場合は、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] を指定します。 サーバー上の _server_name_**\\**_instance_name_ instance_name [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] の既定のインスタンスの場合は、server_name を指定します。  
+ **-Subscriber** _server_name_[ **\\** _instance_name_]  
+ サブスクライバーの名前です。 サーバー上の *server_name* の既定のインスタンスの場合は、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] を指定します。 サーバー上の _server_name_ **\\** _instance_name_ instance_name [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] の既定のインスタンスの場合は、server_name を指定します。  
   
  **-SubscriberDB** _subscriber_database_  
  サブスクライバー データベースの名前です。  
@@ -111,10 +111,10 @@ distrib [-?]
  一括コピー操作によって送られる行の数です。 **bcp in** 操作を実行する場合、バッチ サイズは 1 つのトランザクションとしてサーバーに送る行数です。ディストリビューション エージェントが **bcp** 実行状況メッセージをログに記録する前に、これらの行数を送る必要があります。 **bcp out** 操作を実行する場合は、固定バッチ サイズ **1000** が使用されます。  
   
  **-CommitBatchSize** _commit_batch_size_  
- COMMIT ステートメントを実行する前に、サブスクライバーに対して実行するトランザクションの数です。 既定値は、100 です。  
+ COMMIT ステートメントを実行する前に、サブスクライバーに対して実行するトランザクションの数です。 既定は 100、最大値は 10,000 です。
   
  **-CommitBatchThreshold**  _commit_batch_threshold_  
- COMMIT ステートメントを実行する前に、サブスクライバーに対して実行するレプリケーション コマンドの数です。 既定値は 1000 です。  
+ COMMIT ステートメントを実行する前に、サブスクライバーに対して実行するレプリケーション コマンドの数です。 既定は 1,000、最大値は 10,000 です。 
   
  **-Continuous**  
  エージェントがレプリケートされたトランザクションの呼び出しを継続的に試みるかどうかを指定します。 このパラメーターを指定する場合、保留されているトランザクションがなくても、エージェントはポーリング間隔でレプリケートされたトランザクションをソースから呼び出します。  
@@ -207,7 +207,7 @@ distrib [-?]
  ソースに利用可能なレプリケートされたトランザクションがない場合、エージェントはディストリビューターに対してトランザクションなしのメッセージを報告します。 このオプションは、エージェントが次にトランザクションなしのメッセージを報告するまでの待ち時間を指定します。 前回レプリケートされたトランザクションを処理した後で、ソースに利用可能なトランザクションがないことを検出すると、エージェントは必ずトランザクションなしのメッセージを報告します。 既定値は 60 秒です。  
   
  **-OledbStreamThreshold** _oledb_stream_threshold_  
- BLOB データの最小バイト サイズを指定します。この値を超えると、データはストリームとしてバインドされます。 このパラメーターを使用するためには、**-UseOledbStreaming** を指定する必要があります。 400 バイトから 1048576 バイトまでの値を指定できます。既定値は 16384 バイトです。  
+ BLOB データの最小バイト サイズを指定します。この値を超えると、データはストリームとしてバインドされます。 このパラメーターを使用するためには、 **-UseOledbStreaming** を指定する必要があります。 400 バイトから 1048576 バイトまでの値を指定できます。既定値は 16384 バイトです。  
   
  **-Output** _output_path_and_file_name_  
  エージェントの出力ファイルのパスです。 ファイル名が指定されていない場合、出力はコンソールに送られます。 指定された名前のファイルが存在する場合、出力はそのファイルに追加されます。  
@@ -233,7 +233,7 @@ distrib [-?]
  **-QuotedIdentifier** _quoted_identifier_  
  使用する引用符で囲まれた識別子を指定します。 値の最初の文字は、ディストリビューション エージェントが使用する値を示します。 値を指定せずに **QuotedIdentifier** を使用する場合、ディストリビューション エージェントはスペースを使用します。 **QuotedIdentifier** を使用しない場合には、ディストリビューション エージェントはサブスクライバーがサポートしている引用符で囲まれた識別子を使用します。  
   
- **-SkipErrors** _native_error_id_ [**:**_...n_]  
+ **-SkipErrors** _native_error_id_ [ **:** _...n_]  
  このエージェントでスキップされる一連のエラー番号をコロンで区切って指定します。  
   
  **-SubscriberDatabasePath** _subscriber_database_path_  

@@ -18,14 +18,13 @@ helpviewer_keywords:
 ms.assetid: f0d5dd10-73fd-4e05-9177-07f56552bdf7
 author: rothja
 ms.author: jroth
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 6b2ff8188f2733fd0467ac39266bc9f0510de621
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 62d63c65ce1fae63fa9453a0dc37ddc134a87012
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52515482"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68138750"
 ---
 # <a name="create-user-defined-functions-database-engine"></a>ユーザー定義関数の作成 (データベース エンジン)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -200,7 +199,7 @@ FROM dbo.ufn_FindReports(1);
 > [!IMPORTANT]
 > MSTVF の固定のカーディナリティの推定は、[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 以降のバージョンでは 100、それより前の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] バージョンでは 1 となります。    
 > [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] 以降、MSTVF を使用する実行プランの最適化ではインターリーブ実行を活用できます。それを活用すると、上記のヒューリスティックではなく実際のカーディナリティが使用されます。     
-> 詳細については、「[複数ステートメントのテーブル値関数のインターリーブ実行](../../relational-databases/performance/adaptive-query-processing.md#interleaved-execution-for-multi-statement-table-valued-functions)」を参照してください。
+> 詳細については、「[複数ステートメントのテーブル値関数のインターリーブ実行](../../relational-databases/performance/intelligent-query-processing.md#interleaved-execution-for-mstvfs)」を参照してください。
 
 > [!NOTE]  
 > ストアド プロシージャまたはユーザー定義関数でパラメーターを渡すとき、あるいはバッチ ステートメントで変数を宣言して設定するときには、ANSI_WARNINGS が無視されます。 たとえば、変数を **char(3)** と定義し、これに 4 文字以上の値を設定すると、データが定義されたサイズに合わせて切り捨てられてから、`INSERT` または `UPDATE` ステートメントが成功します。

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.aggregationdesignwizard.selectpartition.f1
@@ -13,12 +12,12 @@ ms.assetid: 0da64d58-6e03-45f3-8443-6b94d4158891
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 4f23574c99ba05cd5e53d18cde799b2e415daaf0
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 4f33066c622e3d1d736b1e8b800db96b0e9c35fb
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48131442"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66069300"
 ---
 # <a name="select-partitions-to-modify-aggregation-design-wizard"></a>[変更するパーティションの選択] (集計のデザイン ウィザード)
   **[変更するパーティションの選択]** ページを使用すると、集計をデザインするパーティションを選択できます。  

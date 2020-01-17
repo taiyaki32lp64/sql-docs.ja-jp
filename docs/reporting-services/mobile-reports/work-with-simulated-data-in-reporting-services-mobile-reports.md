@@ -6,14 +6,14 @@ ms.prod_service: reporting-services-native
 ms.technology: mobile-reports
 ms.topic: conceptual
 ms.assetid: 6baabc36-58fb-4a98-bb9c-c42bafb16d0f
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: e7b776893c15532efc1d2dac54d16a7bc9035991
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 15c2ebe8c7084e10e4b7ff1ad556ed465d91c799
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56295910"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62474871"
 ---
 # <a name="work-with-simulated-data-in-reporting-services-mobile-reports"></a>Reporting Services のモバイル レポートでシミュレートされたデータを使用する
 デザイン サーフェイスにギャラリー要素を配置すると、 [!INCLUDE[PRODUCT_NAME](../../includes/ss-mobilereptpub-short.md)] は、その要素のシミュレートされたデータを即座に生成します。 このデータは、モバイル レポートを作成するときにさまざまな目的を果たします。   
@@ -38,7 +38,7 @@ ms.locfileid: "56295910"
   
 実際のデータにすべてのコントロールがバインドされたら、使用されなくなったシミュレートされたテーブルはモバイル レポートから自動的に削除されます。 デザイン サーフェイス上の要素によって参照されているシミュレートされたテーブルは削除できません。  
   
->**注**:シミュレートされたデータによって、モバイル レポートの全体的なサイズは増加しません。これは、これらのデータはモバイル レポートでシリアル化されず、実行時にその場で生成されるからです。  
+>**注**: シミュレートされたデータによって、モバイル レポートの全体的なサイズは増加しません。これは、これらのデータはモバイル レポートでシリアル化されず、実行時にその場で生成されるからです。  
   
 ### <a name="see-also"></a>参照  
 - [Create and publish mobile reports with SQL Server Mobile Report Publisher (SQL Server Mobile Report Publisher でモバイル レポートを作成し発行する)](../../reporting-services/mobile-reports/create-mobile-reports-with-sql-server-mobile-report-publisher.md)  

@@ -11,14 +11,14 @@ helpviewer_keywords:
 - methods [Reporting Services], arguments
 - XML Web service [Reporting Services], methods
 ms.assetid: f7b9ca05-fc4c-4b30-8e5d-172dd0f4a832
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 47c2312ab472714263509e2d5201bce07d1c1df3
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: ad5251471fe9be594bf0ffb09c13f5f9afc35990
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47765030"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63128958"
 ---
 # <a name="supplying-web-service-method-arguments"></a>Web サービス メソッドの引数の指定
   レポート サーバー Web サービスのメソッドは、SOAP を使用し、HTTP 経由で特定の URL のサービスに対して要求を送信します。 サービスでは、要求を受信し、処理した後、応答を返します。 これらの要求と応答は XML ドキュメント形式です。  

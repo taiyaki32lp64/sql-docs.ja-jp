@@ -1,6 +1,6 @@
 ---
-title: MultiIpConfigurationSupport プロパティ (ServerNetworkProtocol クラス) |Microsoft Docs
-ms.custom: ''
+title: MultiIpConfigurationSupport プロパティ (ServerNetworkProtocol)
+ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -8,7 +8,7 @@ ms.reviewer: ''
 ms.technology: wmi
 ms.topic: reference
 apiname:
-- MultiIpConfigurationSupport Property (ServerNetworkProtocol Class)
+- MultiIpConfigurationSupport Property (ServerNetworkProtocol
 apilocation:
 - sqlmgmproviderxpsp2up.mof
 apitype: MOFDef
@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 442c6133-4038-42db-a67d-2631285ac76b
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: 2b2113eb968b9c2547ed05da44516236c8568df2
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 6ed53a60bd0ef285468d71c4018ba7a4ed9cd8c6
+ms.sourcegitcommit: baa40306cada09e480b4c5ddb44ee8524307a2ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51672561"
+ms.lasthandoff: 11/06/2019
+ms.locfileid: "73660383"
 ---
 # <a name="multiipconfigurationsupport-property-servernetworkprotocol-class"></a>MultiIpConfigurationSupport プロパティ (ServerNetworkProtocol クラス)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -38,14 +37,14 @@ object.MultiIpConfigurationSupport [= value]
   
 ## <a name="parts"></a>要素  
  *object*  
- A [ProtocolName プロパティ (ServerNetworkProtocol クラス)](../../../relational-databases/wmi-provider-configuration-classes/servernetworkprotocol-class/protocolname-property-servernetworkprotocol-class.md)のインスタンスによって使用されるネットワーク プロトコルを表すオブジェクトを[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]します。  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]のインスタンスによって使用されるネットワークプロトコルを表す[Protocolname プロパティ (ServerNetworkProtocol クラス)](../../../relational-databases/wmi-provider-configuration-classes/servernetworkprotocol-class/protocolname-property-servernetworkprotocol-class.md)オブジェクト。  
   
 ## <a name="property-valuereturn-value"></a>プロパティ値/戻り値  
- 複数の IP アドレスがサーバー ネットワーク プロトコルによってサポートされるかどうかを指定するブール値: **true**複数の IP アドレスがサーバー ネットワーク プロトコルによってサポートされている場合または**false**場合複数の IP アドレスは、サーバー ネットワーク プロトコルによってサポートされていません。  
+ 複数の IP アドレスがサーバーネットワークプロトコルによってサポートされているかどうかを指定するブール値。サーバーネットワークプロトコルによって複数の ip アドレスがサポートされている場合は**true** 、複数の ip アドレスがによってサポートされていない場合は**false**を指定します。サーバーネットワークプロトコル。  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>解説  
   
 ## <a name="see-also"></a>参照  
- [サーバー ネットワーク プロトコルとネットワーク ライブラリの構成](https://msdn.microsoft.com/library/ms177485\(v=sql.100\).aspx)  
+ [サーバーネットワークプロトコルと Net-library の構成](https://msdn.microsoft.com/library/ms177485\(v=sql.100\).aspx)  
   
   

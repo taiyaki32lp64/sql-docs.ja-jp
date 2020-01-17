@@ -1,5 +1,5 @@
 ---
-title: 不明なサービス (ログオン タブ) |Microsoft Docs
+title: '[不明なサービス] ([ログオン] タブ) |Microsoft Docs'
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -8,16 +8,15 @@ ms.reviewer: ''
 ms.technology: configuration
 ms.topic: conceptual
 ms.assetid: e9b35cb5-d8ae-42ea-b59e-deedc99c4823
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-manager: craigg
-ms.openlocfilehash: 51de4095ebae8a70eadeddaa9e01086675f2fd28
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 32b6943792ae89d25709217fe9325d2450aba893
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47714260"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68023785"
 ---
 # <a name="unknown-service-log-on-tab"></a>[不明なサービス] ダイアログ ボックス ([ログオン] タブ)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -29,7 +28,7 @@ ms.locfileid: "47714260"
   
  適切なサービスを表示していると確信できる場合は、 **[不明なサービス]** ダイアログ ボックスの **[ログオン]** タブで、そのサービスが使用するアカウントの指定や、そのサービスの開始と停止を行います。  
   
-## <a name="options"></a>[変数]  
+## <a name="options"></a>オプション  
  **[ローカル システム アカウント]**  
  ローカル システム アカウントを指定します。このアカウントはパスワードを必要としません。 ただし、ローカル システム アカウントに与えられている特権によっては、そのサービスが他のサーバーと対話できないこともあります。  
   
@@ -39,13 +38,13 @@ ms.locfileid: "47714260"
  **アカウント名**  
  ローカル ユーザー アカウント名またはドメイン ユーザー アカウント名を指定します。  
   
- **Password**  
+ **パスワード**  
  アカウントのパスワードを入力します。  
   
  **[パスワードの確認入力]**  
  アカウントのパスワードを再度入力します。  
   
- **コントロール パネルの  ◆セグ : 文が分断されているため、訳の位置が入れ替わっています◇**  
+ **[開始]**  
  サービスを開始します。  
   
  **[停止]**  

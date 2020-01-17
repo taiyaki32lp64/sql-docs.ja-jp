@@ -7,18 +7,18 @@ ms.reviewer: ''
 ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: 6f89a720-fce5-4f60-bef3-a159bbc9f25c
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 85a6ca52573bec3d7e6c19e68f809048ed0786db
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 3e4777cf05e7f3eab62c389ace8b8d8a96cae304
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56033873"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65481313"
 ---
 # <a name="task-1-defining-a-matching-policy"></a>タスク 1:照合ポリシーを定義する
-  ここでは、1 つのルールを持つ照合ポリシーを作成します。 このルールでは、**Supplier ID**、つまり、ルール内の他のドメインを使用する前に Supplier Id が一致する必要があります。 このルールでは、そのほかに、**Supplier Name**で**類似性**値に設定**70%** と**Contact Email**で**類似性**に値の設定**30%** します。  
+  ここでは、1 つのルールを持つ照合ポリシーを作成します。 ルールは、1 つの前提条件が適用されます。**Supplier ID**、つまり、ルール内の他のドメインを使用する前に Supplier Id が一致する必要があります。 ルールは、その他の 2 つのドメインを使用します。**Supplier Name**で**類似性**値に設定**70%** と**Contact Email**で**類似性**に値の設定**30%** します。  
   
 1.  メイン ページで**DQS クライアント**、 をクリックして**右矢印**横に**Suppliers**ナレッジ ベース、および選択**照合ポリシー**します。  
   
@@ -57,7 +57,7 @@ ms.locfileid: "56033873"
   
 12. 追加する 2 つ前の手順を繰り返して**Contact Email**を持つドメイン**30**の**重み**。  
   
-13. 注意して、**最小照合スコア**に設定されている**80%**、これは、値で参照してください、**全般**のタブ、**構成**のページ**DQS 管理**します。 このスコアは、しきい値より大きな値に増やすことだけができます。  
+13. 注意して、**最小照合スコア**に設定されている**80%** 、これは、値で参照してください、**全般**のタブ、**構成**のページ**DQS 管理**します。 このスコアは、しきい値より大きな値に増やすことだけができます。  
   
 14. 注意**重複するクラスター**オプションを選択します。 このオプションを使用すると、レコードを複数のクラスターに表示できます。 [重複しないクラスター] に設定を変更すると、共通のレコードを持つクラスターが 1 つのクラスターに結合されます。  
   
@@ -66,6 +66,6 @@ ms.locfileid: "56033873"
 16. をクリックして**次**に切り替える、**照合結果**ページ。  
   
 ## <a name="next-step"></a>次の手順  
- [タスク 2:テストと一致するポリシーを公開](../../2014/tutorials/task-2-testing-and-publishing-the-matching-policy.md)  
+ [タスク 2: テストと一致するポリシーを公開](../../2014/tutorials/task-2-testing-and-publishing-the-matching-policy.md)  
   
   

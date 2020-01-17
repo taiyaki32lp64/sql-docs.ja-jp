@@ -1,26 +1,34 @@
 ---
-title: SQL Server Reporting Services のインストール (2017 以降) | Microsoft Docs
-ms.date: 12/20/2017
+title: SQL Server Reporting Services のインストール | Microsoft Docs
+ms.date: 10/02/2019
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.topic: conceptual
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 monikerRange: '>= sql-server-2017 || = sqlallproducts-allversions'
-ms.openlocfilehash: a3f79fd96bdfb51bb9ca0301552876a536336df7
-ms.sourcegitcommit: c7febcaff4a51a899bc775a86e764ac60aab22eb
-ms.translationtype: HT
+ms.openlocfilehash: 749dfd8f7cce37aeeb9721af9f951caa6ab15dfd
+ms.sourcegitcommit: ffe2fa1b22e6040cdbd8544fb5a3083eed3be852
+ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "52712653"
+ms.lasthandoff: 10/04/2019
+ms.locfileid: "71952739"
 ---
-# <a name="install-sql-server-reporting-services-2017-and-later"></a>SQL Server Reporting Services のインストール (2017 以降)
+# <a name="install-sql-server-reporting-services"></a>SQL Server Reporting Services のインストール
 
 [!INCLUDE[ssrs-appliesto](../../includes/ssrs-appliesto.md)] [!INCLUDE[ssrs-appliesto-2017-and-later](../../includes/ssrs-appliesto-2017-and-later.md)] [!INCLUDE[ssrs-appliesto-not-pbirsi](../../includes/ssrs-appliesto-not-pbirs.md)]
 
 SQL Server Reporting Services をインストールするには、レポート アイテムの格納、レポートの表示、およびサブスクリプションや他のレポート サービスの処理を行うためのサーバー コンポーネントが必要です。 
 
-SQL Server 2017 Reporting Services をダウンロードするには、「[Microsoft ダウンロード センター](https://www.microsoft.com/download/details.aspx?id=55252)」に移動します。
+::: moniker range=">=sql-server-ver15||=sqlallproducts-allversions"
+Microsoft ダウンロード センターから [SQL Server 2019 Reporting Services](https://www.microsoft.com/download/details.aspx?id=100122) をダウンロードします。
+
+::: moniker-end
+
+::: moniker range="=sql-server-2017||=sqlallproducts-allversions"
+Microsoft ダウンロード センターから [SQL Server 2017 Reporting Services](https://www.microsoft.com/download/details.aspx?id=55252) をダウンロードします。
+
+::: moniker-end
 
 > [!NOTE]
 > Power BI Report Server が見つからない場合は、 「[Power BI Report Server のインストール](https://powerbi.microsoft.com/documentation/reportserver-install-report-server/)」を参照してください。
@@ -40,34 +48,24 @@ Reporting Services をインストールする前に、「[Hardware and software
 
 2. **[Reporting Services のインストール]** を選択します。
 
-    ![Reporting Services のインストール](media/install-reporting-services/report-server-install.png)
-
-3. インストールするエディションを選択して、**[次へ]** を選択します。
-
-    ![エディションの選択](media/install-reporting-services/report-server-install-edition.png)
+3. インストールするエディションを選択して、 **[次へ]** を選択します。
 
     無料版の場合、ドロップダウンから [Evaluation] または [Developer] を選択します。
 
     ![Evaluation エディションまたは Developer エディション](media/install-reporting-services/report-server-install-edition-select.png)
 
-    それ以外の場合は、プロダクト キーを入力します。 [SQL Server 2017 Reporting Services のプロダクト キーを見つけます](find-reporting-services-product-key-ssrs.md)。
+    それ以外の場合は、プロダクト キーを入力します。 [SQL Server Reporting Services のプロダクト キーを見つけます](find-reporting-services-product-key-ssrs.md)。
 
-4. ライセンス条項および条件を読んで同意し、**[次へ]** をクリックします。
+4. ライセンス条項および条件を読んで同意し、 **[次へ]** をクリックします。
 
 5. レポート サーバー データベースを格納するには、データベース エンジンを利用可能にする必要があります。 **[次へ]** を選択して、レポート サーバーのみをインストールします。
 
-    ![インストールにデータベースは必要ありません](media/install-reporting-services/report-server-install-db-engine.png)
-
 6. レポート サーバーをインストールする場所を指定します。 **[インストール]** を選択して次に進みます。
-
-    ![インストール パスの指定](media/install-reporting-services/report-server-install-file-path.png)
 
     > [!NOTE]
     > 既定のパスは、C:\Program Files\Microsoft SQL Server Reporting Services です。
 
-7. 正常にセットアップした後、**[レポート サーバーの構成]** を選択して、Reporting Services Configuration Manager を起動します。
-
-    ![レポート サーバーの構成](media/install-reporting-services/report-server-install-configure.png)
+7. 正常にセットアップした後、 **[レポート サーバーの構成]** を選択して、Reporting Services Configuration Manager を起動します。
 
 ## <a name="configuration-your-report-server"></a>レポート サーバーの構成
 
@@ -124,7 +122,13 @@ Web サービス URL および Web ポータル URL 用に構成されている 
 
 ## <a name="related-information"></a>関連情報
 
-SQL Server Reporting Services ネイティブ モードをインストールする方法については、「[Reporting Services ネイティブ モードのレポート サーバーのインストール](install-reporting-services-native-mode-report-server.md)」を参照してください。 SharePoint 統合モードで SQL Server 2016 Reporting Services (およびそれ以降) をインストールする方法については、「[SharePoint モードでの最初のレポート サーバーのインストール](install-the-first-report-server-in-sharepoint-mode.md)」を参照してください。
+SQL Server Reporting Services ネイティブ モードをインストールする方法については、「[Reporting Services ネイティブ モードのレポート サーバーのインストール](install-reporting-services-native-mode-report-server.md)」を参照してください。 
+
+::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
+
+SharePoint 統合モードで SQL Server 2016 Reporting Services (およびそれ以降) をインストールする方法については、「[SharePoint モードでの最初のレポート サーバーのインストール](install-the-first-report-server-in-sharepoint-mode.md)」を参照してください。
+
+::: moniker-end
 
 ## <a name="next-steps"></a>次の手順
 

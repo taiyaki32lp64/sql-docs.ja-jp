@@ -10,19 +10,18 @@ ms.topic: conceptual
 ms.assetid: 010318a0-6807-47c3-8ecc-bb7cb60513f0
 author: MightyPen
 ms.author: genemi
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 92ff4159d8584a6670b60dd7c0d9c0b890c8df09
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: 6979d05d29b151a34edfe1c220c9d9a4d3046359
+ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53204571"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "73983011"
 ---
 # <a name="altering-natively-compiled-t-sql-modules"></a>Altering Natively Compiled T-SQL Modules
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]) および [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] では、`ALTER` ステートメントを使用して、ネイティブ コンパイル ストアド プロシージャおよびスカラー UDF やトリガーなどの他のネイティブ コンパイル [!INCLUDE[tsql](../../includes/tsql-md.md)] モジュールに対して、`ALTER` 操作を実行できます。  
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 以降) と [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] では、`ALTER` ステートメントを使用して、ネイティブ コンパイル ストアド プロシージャおよびスカラー UDF やトリガーなどの他のネイティブ コンパイル [!INCLUDE[tsql](../../includes/tsql-md.md)] モジュールに対して、`ALTER` 操作を実行できます。  
   
 ネイティブ コンパイル [!INCLUDE[tsql](../../includes/tsql-md.md)] モジュールに対して `ALTER` を実行すると、モジュールは新しい定義を使用して再コンパイルされます。 再コンパイルの進行中、古いバージョンのモジュールは引き続き実行に使用できます。 コンパイルが完了すると、モジュールの実行は削除され、新しいバージョンのモジュールがインストールされます。 ネイティブ コンパイル [!INCLUDE[tsql](../../includes/tsql-md.md)] モジュールを変更する場合、次のオプションを変更できます。  
   

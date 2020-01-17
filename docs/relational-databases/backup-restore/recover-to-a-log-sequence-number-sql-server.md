@@ -1,7 +1,7 @@
 ---
 title: ログ シーケンス番号への復旧 (SQL Server) | Microsoft Docs
 ms.custom: ''
-ms.date: 03/17/2017
+ms.date: 10/23/2019
 ms.prod: sql
 ms.prod_service: backup-restore
 ms.reviewer: ''
@@ -21,13 +21,12 @@ helpviewer_keywords:
 ms.assetid: f7b3de5b-198d-448d-8c71-1cdd9239676c
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 70f932e1372fb3cb185167b778b9f280dbbee816
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 46ab24ff86eb7a68e48f58e67f03a859d0c43aa7
+ms.sourcegitcommit: e7c3c4877798c264a98ae8d51d51cb678baf5ee9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52540303"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72916041"
 ---
 # <a name="recover-to-a-log-sequence-number-sql-server"></a>ログ シーケンス番号への復旧 (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -36,16 +35,11 @@ ms.locfileid: "52540303"
  ログ シーケンス番号 (LSN) を使用して、復元操作の復旧ポイントを定義できます。 ただし、この機能はツール ベンダーを対象としたものであり、一般的には、あまり有益ではない場合があります。  
   
 ##  <a name="LSNs"></a> ログ シーケンス番号の概要  
- LSN は、RESTORE シーケンス中に、データを復元する時点を追跡するために内部で使用されます。 バックアップを復元するときに、データはバックアップが実行された時点に対応する LSN まで復元されます。 差分バックアップとログ バックアップの場合、復元されるデータベースは LSN が大きい方、つまり、より後の時点に向かって進められます。  
-  
- トランザクション ログのすべてのレコードは、ログ シーケンス番号 (LSN) によって一意に識別されます。 LSN の順序は、LSN2 が LSN1 より大きい場合、LSN2 によって参照されるログ レコードで示される変更が、ログ レコード LSN1 で示される変更の後に行われたようになっています。  
-  
- 重要なイベントが発生した時点のログ レコードの LSN を、正しい復元シーケンスの構築に役立てることができます。 LSN は順序付けられているので、等号または不等号 ( **\<**、 **>**、 **=**, **\<=**、 **>=**) を使用して比較できます。 このような比較は、復元シーケンスを構築するときに役立ちます。  
+ LSN は、RESTORE シーケンス中に、データを復元する時点を追跡するために内部で使用されます。 バックアップを復元するときに、データはバックアップが実行された時点に対応する LSN まで復元されます。 差分バックアップとログ バックアップの場合、復元されるデータベースは LSN が大きい方、つまり、より後の時点に向かって進められます。 LSN の詳細については、「[SQL Server トランザクション ログのアーキテクチャと管理ガイド](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#Logical_Arch)」を参照してください。  
   
 > [!NOTE]  
->  LSN は、データ型 **numeric**(25,0) の値です。 算術演算 (加算や減算など) は、意味が無いので LSN では行わないでください。  
-  
-  
+> LSN は、データ型 **numeric(25,0)** の値です。 算術演算 (加算や減算など) は、意味が無いので LSN では行わないでください。  
+ 
 ## <a name="viewing-lsns-used-by-backup-and-restore"></a>バックアップと復元で使用される LSN の表示  
  特定のバックアップと復元イベントが発生したログ レコードの LSN は、次の 1 つ以上の方法を使用して表示できます。  
   
@@ -60,16 +54,16 @@ ms.locfileid: "52540303"
 -   [RESTORE FILELISTONLY](../../t-sql/statements/restore-statements-filelistonly-transact-sql.md)  
   
 > [!NOTE]  
->  LSN は、一部のメッセージ テキストにも表示されます。  
+>  LSN は、エラー ログの一部のメッセージにも表示されます。  
   
 ## <a name="transact-sql-syntax-for-restoring-to-an-lsn"></a>LSN に復元するための Transact-SQL 構文  
  [RESTORE](../../t-sql/statements/restore-statements-transact-sql.md) ステートメントを使用して、次のように LSN または LSN の直前まで復元できます。  
   
--   WITH STOPATMARK **= '** lsn:_<lsn_number>_**'** 句を使用します。ここで、lsn:*<lsn_number\<* は、指定された LSN が含まれるログ レコードが復旧ポイントであることを指定する文字列です。  
+-   WITH STOPATMARK **= '** lsn: _<lsn_number>_ **'** 句を使用します。ここで、lsn: *<lsn_number\<* は、指定された LSN が含まれるログ レコードが復旧ポイントであることを指定する文字列です。  
   
      STOPATMARK によって LSN までロールフォワードされ、そのログ レコードがロールフォワードに含められます。  
   
--   WITH STOPBEFOREMARK **= '** lsn:_<lsn_number>_**'** 句を使用します。ここで、lsn:*\<lsnNumber>* は、指定した LSN 番号が含まれるログ レコードの直前のログ レコードが、復旧ポイントであることを指定する文字列です。  
+-   WITH STOPBEFOREMARK **= '** lsn: _<lsn_number>_ **'** 句を使用します。ここで、lsn: *\<lsnNumber>* は、指定した LSN 番号が含まれるログ レコードの直前のログ レコードが、復旧ポイントであることを指定する文字列です。  
   
      STOPBEFOREMARK では、LSN までロールフォワードされますが、指定されたログ レコードはロールフォワードから除外されます。  
   
@@ -78,7 +72,7 @@ ms.locfileid: "52540303"
 ## <a name="examples"></a>使用例  
  次の例では、完全復旧モデルを使用するように `AdventureWorks` データベースが変更されていることを想定しています。  
   
-```  
+```sql  
 RESTORE LOG AdventureWorks FROM DISK = 'c:\adventureworks_log.bak'   
 WITH STOPATMARK = 'lsn:15000000040000037'  
 GO  
@@ -100,7 +94,8 @@ GO
   
 ## <a name="see-also"></a>参照  
  [トランザクション ログ バックアップの適用 &#40;SQL Server&#41;](../../relational-databases/backup-restore/apply-transaction-log-backups-sql-server.md)   
- [トランザクション ログ &#40;SQL Server&#41;](../../relational-databases/logs/the-transaction-log-sql-server.md)   
- [RESTORE &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-transact-sql.md)  
-  
+ [トランザクション ログ &#40;SQL Server&#41;](../../relational-databases/logs/the-transaction-log-sql-server.md)     
+ [RESTORE &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-transact-sql.md)     
+ [復元と復旧の概要 (SQL Server)](../../relational-databases/backup-restore/restore-and-recovery-overview-sql-server.md#TlogAndRecovery)       
+ [SQL Server トランザクション ログのアーキテクチャと管理ガイド](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md)      
   

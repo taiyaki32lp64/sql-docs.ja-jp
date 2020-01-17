@@ -8,15 +8,14 @@ ms.reviewer: ''
 ms.technology: ssms
 ms.topic: conceptual
 ms.assetid: 2eaba888-68b2-4bc1-8f62-e96e710c3db9
-author: stevestein
-ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 2a799ff3a36ebf3c2381bdaf17c697f190ebf2fe
-ms.sourcegitcommit: 40c3b86793d91531a919f598dd312f7e572171ec
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: dfe3339bfe2b965c46e2abd212a09b50021814ad
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53328632"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68265022"
 ---
 # <a name="choose-search-folders-dialog-box-visual-studio"></a>[検索フォルダーの選択] ダイアログ ボックス (Visual Studio)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -40,7 +39,7 @@ ms.locfileid: "53328632"
 **[フォルダー一覧]** に入力するために、この一覧からドライブまたはフォルダーを選択します。  
   
 **[フォルダー一覧]**  
-**[使用できるフォルダー]** ドロップダウン リストで選択されたボリューム内の利用可能なドライブおよびフォルダーを一覧表示します。 一覧表示された任意のドライブまたはフォルダーを展開するにはダブルクリックします。 1 つのフォルダーを選択するか、Shift キーまたは Ctrl キーを押したまま複数のフォルダーを選択します。  **Add (>)** (追加) をクリックし、選択したフォルダーを **[選択されたフォルダー]** の一覧に追加します。  
+**[使用できるフォルダー]** ドロップダウン リストで選択されたボリューム内の利用可能なドライブおよびフォルダーを一覧表示します。 一覧表示された任意のドライブまたはフォルダーを展開するにはダブルクリックします。 1 つのフォルダーを選択するか、Shift キーまたは Ctrl キーを押したまま複数のフォルダーを選択します。 **Add (>)** (追加) をクリックし、選択したフォルダーを **[選択されたフォルダー]** の一覧に追加します。  
   
 **Parent**  
 **[フォルダー一覧]** で選択したフォルダーをフォルダー階層内で 1 レベル上にします。  

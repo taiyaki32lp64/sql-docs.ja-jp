@@ -11,15 +11,14 @@ f1_keywords:
 - vdtsql.chm:69636
 - vdt.ppg.querydesigner.query
 ms.assetid: 07495669-6ed5-4004-904e-aae1230be5e4
-author: stevestein
-ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 8c274b4e442d161071960af4578ccf7485050b26
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: a5365ffd384ae7feeee35924388ad0f89b03d629
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52524820"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68266290"
 ---
 # <a name="query-properties-visual-database-tools"></a>クエリのプロパティ (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -28,11 +27,11 @@ ms.locfileid: "52524820"
 > [!NOTE]  
 > このトピックでは、アルファベット順ではなくカテゴリ別にプロパティが示されています。  
   
-## <a name="options"></a>[変数]  
+## <a name="options"></a>オプション  
 **[IDENTITY] カテゴリ**  
 展開して **[オブジェクト名]** プロパティを表示します。  
   
-**名前**  
+**[名前]**  
 現在のクエリの名前を表示します。 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]では変更できません。  
   
 **Database Name**  
@@ -68,7 +67,7 @@ MAKE TABLE クエリの場合は、新しいテーブルの名前を入力しま
 SQL ステートメントの説明を表示します。 説明全体を表示したり、説明を編集したりするには、説明をクリックして、プロパティの右側にある省略記号 ( **[...]** ) をクリックします。 クエリの使用者やクエリをいつ使用するかなどの情報をコメントに含めることもできます。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 7.0 以降のデータベースだけに適用されます。  
   
 **[Top の指定] カテゴリ**  
-展開すると、 **[Top]**、 **[パーセント]**、 **[式]**、および **[With Ties]** の各プロパティが表示されます。  
+展開すると、 **[Top]** 、 **[パーセント]** 、 **[式]** 、および **[With Ties]** の各プロパティが表示されます。  
   
 **[[(Top)]]**  
 クエリに TOP 句が含まれるように指定します。この場合、最初の *n* 行または最初の *n* % の行だけが結果セットに返されます。 既定では、クエリは最初の 10 行を結果セットに返します。  

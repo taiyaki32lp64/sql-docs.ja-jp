@@ -16,15 +16,14 @@ helpviewer_keywords:
 - inline XSD schema generation [SQL Server]
 - XMLDATA option
 ms.assetid: 04b35145-1cca-45f4-9eb7-990abf2e647d
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: 1fdf5f600cd455803fe102b487e7a39296bc6fb9
-ms.sourcegitcommit: bfa10c54e871700de285d7f819095d51ef70d997
+author: MightyPen
+ms.author: genemi
+ms.openlocfilehash: a0902765a96f68acf811bd3583a41a8e8198d5ca
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/14/2019
-ms.locfileid: "54257007"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67943157"
 ---
 # <a name="generate-an-inline-xsd-schema"></a>インライン XSD スキーマの生成
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -38,7 +37,7 @@ ms.locfileid: "54257007"
   
  FOR XML クエリに XMLSCHEMA を指定すると、クエリ結果としてスキーマと XML データの両方が返されます。 データの最上位レベルの各要素が既定の名前空間宣言を使用して前のスキーマを参照し、次に、既定の名前空間宣言がインライン スキーマの対象の名前空間を参照します。  
   
- 例 :  
+ 例:  
   
 ```  
 <xsd:schema targetNamespace="urn:schemas-microsoft-com:sql:SqlRowSet1" xmlns:schema="urn:schemas-microsoft-com:sql:SqlRowSet1" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:sqltypes="https://schemas.microsoft.com/sqlserver/2004/sqltypes" elementFormDefault="qualified">  

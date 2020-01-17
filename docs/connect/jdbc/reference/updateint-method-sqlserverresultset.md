@@ -1,5 +1,5 @@
 ---
-title: updateInt メソッド (SQLServerResultSet) |Microsoft Docs
+title: updateInt メソッド (SQLServerResultSet) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: 2bb0319e-12cb-4604-a7e3-b22a24b02296
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: ab21b064b119e46c2d96d8b2cc5f67f13038308f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 013b5e011c9a2dfd7e263a2b04f926abff02a2df
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47632776"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67998815"
 ---
 # <a name="updateint-method-sqlserverresultset"></a>updateInt メソッド (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

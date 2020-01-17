@@ -1,10 +1,8 @@
 ---
-title: フルテキスト検索に使用する類義語辞典ファイルの構成と管理 | Microsoft Docs
-ms.custom: ''
+title: フルテキスト検索に使用する類義語辞典ファイルの構成と管理
 ms.date: 12/04/2017
 ms.prod: sql
 ms.prod_service: search, sql-database
-ms.reviewer: ''
 ms.technology: search
 ms.topic: conceptual
 helpviewer_keywords:
@@ -12,15 +10,16 @@ helpviewer_keywords:
 - thesaurus [full-text search], configuring
 - thesaurus [full-text search]
 ms.assetid: 3ef96a63-8a52-45be-9a1f-265bff400e54
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: b3fc363a3ea7922c6c486f250222b5ce62da8e6e
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+author: pmasl
+ms.author: pelopes
+ms.reviewer: mikeray
+ms.custom: seo-lt-2019
+ms.openlocfilehash: c54c1774622416adb213b31852941c934be7af24
+ms.sourcegitcommit: d00ba0b4696ef7dee31cd0b293a3f54a1beaf458
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52514272"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "74056201"
 ---
 # <a name="configure-and-manage-thesaurus-files-for-full-text-search"></a>フルテキスト検索に使用する類義語辞典ファイルの構成と管理
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -45,7 +44,7 @@ ms.locfileid: "52514272"
 
 -   分音文字の設定  
   
-     類義語辞典では、チルダ (**~**)、アキュート アクセント記号 (**´**)、ウムラウト (**¨**) などの分音記号をすべての検索パターンで区別するかしないか ( *アクセントを区別する* 、または *アクセントを区別しない*) が設定されます。 たとえば、フルテキスト クエリで "café" というパターンが他のパターンに置き換えられるように指定するとします。 類義語辞典でアクセントが区別されない場合、フルテキスト検索では、パターン "café" と "cafe" が置き換えられます。 類義語辞典でアクセントが区別される場合、フルテキスト検索では "café" というパターンのみが置き換えられます。 既定では、類義語辞典でアクセントは区別されません。  
+     類義語辞典では、チルダ ( **~** )、アキュート アクセント記号 ( **&acute;** )、ウムラウト ( **&uml;** ) などの分音記号をすべての検索パターンで区別するかしないか (つまり、"*アクセントを区別する*" か "*アクセントを区別しない*" か) が設定されます。 たとえば、フルテキスト クエリで "caf&eacute;" というパターンが他のパターンに置き換えられるように指定するとします。 類義語辞典でアクセントが区別されない場合、フルテキスト検索では、パターン "caf&eacute;" と "cafe" が置き換えられます。 類義語辞典でアクセントが区別される場合、フルテキスト検索では "caf&eacute;" というパターンのみが置き換えられます。 既定では、類義語辞典でアクセントは区別されません。  
   
 ##  <a name="initial_thesaurus_files"></a> 既定の類義語辞典ファイル
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] には XML 類義語辞典ファイルのセットが用意されており、サポートされている各言語に対して 1 つのファイルが存在します。 これらのファイルは基本的に空です。 すべての [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 類義語辞典およびコメント アウトされたサンプル類義語辞典に共通する最上位の XML 構造のみが格納されています。  
@@ -171,7 +170,7 @@ ms.locfileid: "52514272"
   
 類義語辞典の分音文字の設定は、単一の `<diacritics_sensitive>` 要素で指定されます。 この要素には、次のようにアクセントの区別を制御する整数値が含まれます。  
   
-|分音文字の設定|ReplTest1|XML|  
+|分音文字の設定|[値]|XML|  
 |------------------------|-----------|---------|  
 |アクセントを区別しない|0|`<diacritics_sensitive>0</diacritics_sensitive>`|  
 |アクセントを区別する|1|`<diacritics_sensitive>1</diacritics_sensitive>`|  

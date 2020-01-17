@@ -26,17 +26,20 @@ helpviewer_keywords:
 - term extractions [Integration Services]
 - stemming words [Integration Services]
 ms.assetid: d0821526-1603-4ea6-8322-2d901568fbeb
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: 85a35b34610982ac4418e0e8ab05d3e1b188b968
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 23ae71eff12e7155580eff8238a459c47211c5de
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52507470"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71297755"
 ---
 # <a name="term-extraction-transformation"></a>用語抽出変換
+
+[!INCLUDE[ssis-appliesto](../../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   用語抽出変換は、変換入力列内のテキストから用語を抽出し、変換出力列に書き込みます。 この変換で処理されるテキストは英語テキストのみで、独自の英語辞書および英語に関する言語情報を使用します。  
   
  用語抽出変換を使用すると、データセットの内容を検出できます。 たとえば、電子メール メッセージが含まれるテキストに、製品に関する有用なフィードバックがある場合、用語抽出変換を使用してメッセージに記述されているトピックを抽出し、フィードバックの分析に使用できます。  
@@ -150,7 +153,7 @@ ms.locfileid: "52507470"
   
 -   数字、句読点、および英文字の組み合わせ。 たとえば、 *A23B#99* は、用語 *A23B*を返します。  
   
--   %、@、&、$、#、\*、:、;、.、**,**、!、?、\<、>、+、=、^、~、|、\\、/、(、)、[、]、{、}、"、' 文字。  
+-   %、@、&、$、#、\*、:、;、.、 **,** 、!、?、\<、>、+、=、^、~、|、\\、/、(、)、[、]、{、}、"、' 文字。  
   
     > [!NOTE]  
     >  1 つ以上のピリオド (.) が含まれる頭字語は、複数の文に分割されません。  
@@ -186,7 +189,7 @@ ms.locfileid: "52507470"
 ## <a name="term-extraction-transformation-editor-term-extraction-tab"></a>[用語抽出変換エディター] ([用語抽出] タブ)
   **[用語抽出変換エディター]** ダイアログ ボックスの **[用語抽出]** タブを使用すると、抽出するテキストを含むテキスト列を指定できます。  
   
-### <a name="options"></a>[変数]  
+### <a name="options"></a>オプション  
  **使用できる入力列**  
  チェック ボックスを使用して、用語の抽出に使用するテキスト列を 1 つ選択します。  
   
@@ -202,7 +205,7 @@ ms.locfileid: "52507470"
 ## <a name="term-extraction-transformation-editor-exclusion-tab"></a>[用語抽出変換エディター] ([除外] タブ)
   **[用語抽出変換エディター]** ダイアログ ボックスの **[除外]** タブを使用すると、除外テーブルへの接続を設定し、除外用語が含まれている列を指定できます。  
   
-### <a name="options"></a>[変数]  
+### <a name="options"></a>オプション  
  **[除外用語を使用する]**  
  除外用語が含まれている列を指定することにより、用語抽出のときに特定の用語を除外するかどうかを示します。 用語を除外する場合は、次のソース プロパティを指定する必要があります。  
   
@@ -224,7 +227,7 @@ ms.locfileid: "52507470"
 ## <a name="term-extraction-transformation-editor-advanced-tab"></a>[用語抽出変換エディター] ([詳細設定] タブ)
   **[用語抽出変換エディター]** ダイアログ ボックスの **[詳細設定]** タブを使用すると、頻度、長さ、語または句の抽出の有無など、抽出に関するプロパティを指定できます。  
   
-### <a name="options"></a>[変数]  
+### <a name="options"></a>オプション  
  **[名詞]**  
  変換によって個別の名詞のみを抽出するように指定します。  
   
@@ -238,7 +241,7 @@ ms.locfileid: "52507470"
  スコアが用語の頻度であることを指定します。  
   
  **[TFIDF]**  
- スコアが用語の TFIDF 値であることを指定します。 TFIDF スコアは、Term Frequency と Inverse Document Frequency の積です。"用語 T の TFIDF = (T の頻度) * log( (入力の行数) / (T を含む行数) )" として定義されます。  
+ スコアが用語の TFIDF 値であることを指定します。 TFIDF スコアは、Term Frequency と Inverse Document Frequency の積であり、次のように定義されます: 用語 T の TFIDF = (T の頻度) * log( (入力の行数) / (T を含む行数) )  
   
  **[頻度のしきい値]**  
  語または句を抽出する前の語または句の出現回数を指定します。 既定値は 2 です。  

@@ -15,18 +15,17 @@ helpviewer_keywords:
 ms.assetid: acb255ff-1734-4b70-89bb-aef862b4c63b
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 832372ee3f8e80a9da4a758c759d9b5399a20a57
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b3af18120af91fe06da48c2e3636bf8a7c572161
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47614736"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67919292"
 ---
 # <a name="cursorlocationenum"></a>CursorLocationEnum
 カーソル サービスの場所を指定します。  
   
-|定数|値|説明|  
+|定数|Value|説明|  
 |--------------|-----------|-----------------|  
 |**adUseClient**|3|ローカル カーソル ライブラリによって提供されたクライアント側のカーソルを使用します。 ローカル カーソル サービス多くの場合は、ドライバーによって提供されるカーソルよりも多くの機能が有効にする機能に関する利点を提供可能性がありますこの設定を使用できます。 旧バージョンと互換性のため、シノニム**adUseClientBatch**もサポートされています。|  
 |**adUseNone**|1|カーソルのサービスを使用しません。 (この定数は廃止は、旧バージョンと互換性のためにのみ表示されます)。|  

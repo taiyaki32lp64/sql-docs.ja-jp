@@ -1,5 +1,5 @@
 ---
-title: Pdostatement::errorcode |Microsoft Docs
+title: 'PDOStatement:: errorCode |Microsoft Docs'
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 4161abec-c12b-444e-9de5-f1dac7b3e0e4
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: b5bbe2c3bc3aa3b75a32e5567ee4e1891b303e52
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.openlocfilehash: 78a7486d17d103bec3c8b1ef29d533da2f164c29
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51604752"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67936076"
 ---
 # <a name="pdostatementerrorcode"></a>PDOStatement::errorCode
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]

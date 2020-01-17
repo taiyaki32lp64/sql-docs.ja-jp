@@ -16,11 +16,11 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 40a621af401b33394b996468c581e85e3635355c
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53351916"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63137607"
 ---
 # <a name="extended-stored-procedures-programmer39s-reference"></a>拡張ストアド プロシージャのプログラマ&#39;リファレンス
     

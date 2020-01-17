@@ -1,5 +1,5 @@
 ---
-title: データベースに対して Stretch Database を有効にする | Microsoft Docs
+title: Enable Stretch Database for a table
 ms.date: 08/05/2016
 ms.service: sql-server-stretch-database
 ms.reviewer: ''
@@ -10,19 +10,19 @@ helpviewer_keywords:
 ms.assetid: de4ac0c5-46ef-4593-a11e-9dd9bcd3ccdc
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 390407a35d52067c41d1e2a56c1ab62806ffb4cc
-ms.sourcegitcommit: ec1f01b4bb54621de62ee488decf9511d651d700
+ms.custom: seo-dt-2019
+ms.openlocfilehash: 49d3f7fa266be69c767b0fb0450cc6898351f39b
+ms.sourcegitcommit: f688a37bb6deac2e5b7730344165bbe2c57f9b9c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/14/2019
-ms.locfileid: "56240866"
+ms.lasthandoff: 11/08/2019
+ms.locfileid: "73843806"
 ---
 # <a name="enable-stretch-database-for-a-table"></a>Enable Stretch Database for a table
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md-winonly](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md-winonly.md)]
 
 
-  Stretch Database 用にテーブルを構成するには、SQL Server Management Studio でテーブルに対して **[ストレッチ]、[有効にする]** の順に選択し、**[テーブルのストレッチの有効化]** ウィザードを開きます。 Transact-SQL を使用して、既存のテーブルで Stretch Database を有効にしたり、Stretch Database が有効になっている新しいテーブルを作成することもできます。  
+  Stretch Database 用にテーブルを構成するには、SQL Server Management Studio でテーブルに対して **[ストレッチ]、[有効にする]** の順に選択し、 **[テーブルのストレッチの有効化]** ウィザードを開きます。 Transact-SQL を使用して、既存のテーブルで Stretch Database を有効にしたり、Stretch Database が有効になっている新しいテーブルを作成することもできます。  
   
 -   コールド データを別のテーブルに保存している場合は、そのテーブル全体を移行できます。  
   

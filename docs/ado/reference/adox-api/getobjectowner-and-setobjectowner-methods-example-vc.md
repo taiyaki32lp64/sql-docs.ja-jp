@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: f5f2aa4b-d790-458f-9e70-1643e3e203b2
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 176105cafaccafab2fc2a85a716db6dee958d31e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 1cf3526681095fd5d1cc1dd67b5dd16061f601b7
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47735080"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67966364"
 ---
 # <a name="getobjectowner-and-setobjectowner-methods-example-vc"></a>GetObjectOwner および SetObjectOwner メソッドの例 (VC++)
 この例では、 [GetObjectOwner](../../../ado/reference/adox-api/getobjectowner-method-adox.md)と[SetObjectOwner](../../../ado/reference/adox-api/setobjectowner-method.md)メソッド。 このコードを想定して、グループのアカウンティング (を参照してください、[グループとユーザーの Append、ChangePassword メソッドの例 (vc++)](../../../ado/reference/adox-api/groups-and-users-append-changepassword-methods-example-vc.md)をシステムにこのグループを追加する方法を参照してください)。 Categories テーブルの所有者は、アカウンティングに設定されます。  

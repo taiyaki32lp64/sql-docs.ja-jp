@@ -4,20 +4,18 @@ ms.custom: ''
 ms.date: 04/27/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: analysis-services
 ms.topic: reference
 ms.assetid: 910be4f4-3010-41cd-9fdc-f0a79a0ce823
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 5c697a0bcf7c7b338169100aeac0d65b341c86f5
-ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
+ms.openlocfilehash: 4ecdc64918e582f25f0e017d263c66e78c0d1bee
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50146357"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62725386"
 ---
 # <a name="data-types-in-analysis-services"></a>Analysis Services で使用するデータ型
   すべての<xref:Microsoft.AnalysisServices.DataItem>オブジェクト、[!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]のサブセットをサポート`System.Data.OleDb.OleDbType`します。 を設定またはデータ型を読み取るには、使用[DataItem データ型&#40;ASSL&#41;](https://docs.microsoft.com/bi-reference/assl/data-type/dataitem-data-type-assl)します。  
@@ -49,7 +47,7 @@ ms.locfileid: "50146357"
 |------------|-------------|------------------------|  
 |DimensionAttribute|[KeyColumns]|Binary 以外のすべて|  
 ||NameColumn|WChar のみ|  
-||SkippedLevelsColumn|BigInt、Integer、SmallInt、TinyInt、UnsignedBigInt、UnsignedInt、UnsignedSmallInt、UnsignedTinyInt の整数型のみ|  
+||SkippedLevelsColumn|整数型のみ:BigInt, Integer, SmallInt, TinyInt, UnsignedBigInt, UnsignedInt, UnsignedSmallInt, UnsignedTinyInt|  
 ||CustomRollupColumn|WChar のみ|  
 ||CustomRollupPropertiesColumn|WChar のみ|  
 ||UnaryOperatorColumn|WChar のみ|  
@@ -59,6 +57,6 @@ ms.locfileid: "50146357"
 ||NameColumn|WChar のみ|  
 |TableMiningStructureColumn|ForeignKeyColumns|Binary 以外のすべて|  
 |MeasureGroupAttribute|[KeyColumns]|Binary 以外のすべて|  
-|個別のカウント メジャー|Source|BigInt、Currency、Double、Integer、Single、SmallInt、TinyInt、UnsignedBigInt、UnsignedInt、UnsignedSmallInt、UnsignedTinyInt|  
+|個別のカウント メジャー|ソース|BigInt、Currency、Double、Integer、Single、SmallInt、TinyInt、UnsignedBigInt、UnsignedInt、UnsignedSmallInt、UnsignedTinyInt|  
   
   

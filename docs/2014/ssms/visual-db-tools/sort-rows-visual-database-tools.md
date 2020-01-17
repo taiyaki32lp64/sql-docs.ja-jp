@@ -14,11 +14,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 3235c9a9305e4476214add63f8710ba9de7b4c19
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52768601"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63049157"
 ---
 # <a name="sort-rows-visual-database-tools"></a>行の並べ替え (Visual Database Tools)
   クエリ結果の行は、並べ替えることができます。 つまり、特定の列または列のセットを指定し、その値で結果セットの行の順序を決定できます。  

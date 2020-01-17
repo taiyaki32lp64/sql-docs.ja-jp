@@ -13,11 +13,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 7912da245a04f2f62086e9ef08f0077aaac0196f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48072622"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62762864"
 ---
 # <a name="mssqlserver7988"></a>MSSQLSERVER_7988
     
@@ -30,7 +30,7 @@ ms.locfileid: "48072622"
 |イベント ソース|MSSQLSERVER|  
 |コンポーネント|SQLEngine|  
 |シンボル名|DBCC2_PRE_CHECKS_CHAIN_LOOP_DETECTED|  
-|メッセージ テキスト|システム テーブルの事前チェック: オブジェクト ID O_ID。 データ チェーンでのループが P_ID で検出されました。 修復できないエラーにより、Check ステートメントが終了しました。|  
+|メッセージ テキスト|システム テーブルの事前チェック:オブジェクト ID O_ID。 データ チェーンでのループが P_ID で検出されました。 修復できないエラーにより、Check ステートメントが終了しました。|  
   
 ## <a name="explanation"></a>説明  
  DBCC CHECKDB の最初のフェーズで行われるのは、重要なシステム テーブルのデータ ページに対する初期チェックです。 この時点でエラーが検出されても修正できないので、DBCC CHECKDB は直ちに終了します。 *P_ID* ページで、ページ リンケージ ループが検出されています。 ページ リンケージ ループとは、あるページからの次ページ ポインターが最終的にそのページに戻ってくる状態です。  

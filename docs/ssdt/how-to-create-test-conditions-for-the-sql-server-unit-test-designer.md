@@ -1,5 +1,5 @@
 ---
-title: SQL Server 単体テスト デザイナーのテスト条件を作成する方法 | Microsoft Docs
+title: 方法:SQL Server 単体テスト デザイナーのテスト条件を作成する | Microsoft Docs
 ms.custom:
 - SSDT
 ms.date: 02/09/2017
@@ -8,17 +8,16 @@ ms.technology: ssdt
 ms.reviewer: ''
 ms.topic: conceptual
 ms.assetid: 48076062-1ef5-419a-8a55-3c7b4234cc35
-author: stevestein
-ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 0b58d17340eeee18fdda5b6ea56f9aebd291ba1f
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 6406c2e2ff709e163057163424719169cb2b9787
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52400036"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67911790"
 ---
-# <a name="how-to-create-test-conditions-for-the-sql-server-unit-test-designer"></a>SQL Server 単体テスト デザイナーのテスト条件を作成する方法
+# <a name="how-to-create-test-conditions-for-the-sql-server-unit-test-designer"></a>方法:SQL Server 単体テスト デザイナーのテスト条件を作成する
 新しいテスト条件の作成には、拡張可能な [TestCondition](https://msdn.microsoft.com/library/microsoft.data.tools.schema.sql.unittesting.conditions.testcondition(v=vs.103).aspx) クラスを利用できます。 たとえば、列数や結果セットの値を検証するテスト条件を作成することができます。  
   
 ## <a name="to-create-a-test-condition"></a>テスト条件を作成するには  
@@ -30,13 +29,13 @@ ms.locfileid: "52400036"
   
 3.  **[.NET]** タブをクリックします。  
   
-4.  **[コンポーネント名]** の一覧で **System.ComponentModel.Composition** を選択し、**[OK]** をクリックします。  
+4.  **[コンポーネント名]** の一覧で **System.ComponentModel.Composition** を選択し、 **[OK]** をクリックします。  
   
-5.  必要なアセンブリ参照を追加します。 プロジェクト ノードを右クリックし、**[参照の追加]** をクリックします。 **[参照]** をクリックし、C:\Program Files (x86)\\MicrosoftSQL Server\110\DAC\Bin フォルダーに移動します。 Microsoft.Data.Tools.Schema.Sql.dll を選択し、[追加] をクリックして、[OK] をクリックします。  
+5.  必要なアセンブリ参照を追加します。 プロジェクト ノードを右クリックし、 **[参照の追加]** をクリックします。 **[参照]** をクリックし、C:\Program Files (x86)\\MicrosoftSQL Server\110\DAC\Bin フォルダーに移動します。 Microsoft.Data.Tools.Schema.Sql.dll を選択し、[追加] をクリックして、[OK] をクリックします。  
   
 6.  **[プロジェクト]** メニューの **[プロジェクトのアンロード]** をクリックします。  
   
-7.  **ソリューション エクスプローラー**でプロジェクトを右クリックして、**[<project name>.csproj の編集]** を選択します。  
+7.  **ソリューション エクスプローラー**でプロジェクトを右クリックして、 **[<project name>.csproj の編集]** を選択します。  
   
 8.  Microsoft.CSharp.targets をインポートした後、次の Import ステートメントを追加します。  
   
@@ -45,11 +44,11 @@ ms.locfileid: "52400036"
     <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\SSDT\Microsoft.Data.Tools.Schema.Sql.UnitTesting.targets" Condition="'$(VisualStudioVersion)' != ''" />  
     ```  
   
-9. ファイルを保存して閉じます。 **ソリューション エクスプローラー**でプロジェクトを右クリックして、**[プロジェクトの再読み込み]** をクリックします。  
+9. ファイルを保存して閉じます。 **ソリューション エクスプローラー**でプロジェクトを右クリックして、 **[プロジェクトの再読み込み]** をクリックします。  
   
 10. [TestCondition](https://msdn.microsoft.com/library/microsoft.data.tools.schema.sql.unittesting.conditions.testcondition(v=vs.103).aspx) クラスから、独自のクラスを派生します。  
   
-11. アセンブリに厳密な名前で署名します。 詳細については、「[方法 : 厳密な名前でアセンブリに署名する](https://msdn.microsoft.com/library/xc31ft41.aspx)」を参照してください。  
+11. アセンブリに厳密な名前で署名します。 詳細については、「[ソフト NUMA を使用するように厳密な名前でアセンブリに署名する](https://msdn.microsoft.com/library/xc31ft41.aspx)」を参照してください。  
   
 12. クラス ライブラリをビルドします。  
   
@@ -178,7 +177,7 @@ namespace Ssdt.Samples.SqlUnitTesting
   
 |属性パラメーター|[位置]|[説明]|  
 |-----------------------|------------|---------------|  
-|DisplayName|1|[テスト条件] ボックスの文字列を識別します。 この名前は一意であることが必要です。 2 つの条件に同じ表示名が付いている場合、ユーザーには最初に検出された条件が表示され、Visual Studio エラー マネージャーに警告が表示されます。|  
+|DisplayName|1|[テスト条件] ボックスの文字列を識別します。 この名前は一意である必要があります。 2 つの条件に同じ表示名が付いている場合、ユーザーには最初に検出された条件が表示され、Visual Studio エラー マネージャーに警告が表示されます。|  
 |ImplementingType|2|拡張型を一意に識別するために使用されます。 属性を配置する型に一致するように、このパラメーターを変更する必要があります。 この例では、**ResultSetColumnCountCondition** 型を使用しているため、**typeof(ResultSetColumnCountCondition)** を使用します。 型が **NewTestCondition** である場合は、**typeof(NewTestCondition)** を使用します。|  
   
 この例では、2 つのプロパティを追加します。 カスタムのテスト条件では、ResultSet プロパティで、列数の検証に使用する結果セットを指定できます。 さらに、Count プロパティで、予期される列数を指定できます。  

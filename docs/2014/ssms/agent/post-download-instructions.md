@@ -13,11 +13,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 607ca94af07916fc76ddb02d2c81bf299efc39c5
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52763014"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62473051"
 ---
 # <a name="post-download-instructions"></a>ダウンロード命令の通知
   このページを使用すると、ターゲット サーバーに対するダウンロード命令を指定できます。  
@@ -33,10 +33,10 @@ ms.locfileid: "52763014"
  ターゲット サーバーに対するポーリングの間隔を設定します。 **[ポーリング間隔の設定]** 命令に対してのみ適用されます。  
   
  **[すべての対象サーバー]**  
- このオプションをクリックすると、ダウンロード命令がすべての対象サーバーに送信されます。  
+ このオプションをクリックすると、ダウンロード命令がすべてのターゲット サーバーに送信されます。  
   
  **[特定の対象サーバー]**  
- このオプションをクリックすると、ダウンロード命令が、選択された対象サーバーに送信されます。  
+ このオプションをクリックすると、ダウンロード命令が、選択されたターゲット サーバーに送信されます。  
   
  **Select**  
  ターゲット サーバーでダウンロード命令を受け取るよう指定します。  

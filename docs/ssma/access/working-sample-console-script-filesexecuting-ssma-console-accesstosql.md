@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: ad75b648-d119-4119-98f0-d18f058be68d
 author: Shamikg
 ms.author: Shamikg
-manager: craigg
-ms.openlocfilehash: 286e7b466e4868ab698168e6ac573d7e25422829
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: d6fea9a78928e2944cba1571737008965d679759
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52407849"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67938383"
 ---
 # <a name="working-with-the-sample-console-script-filesexecuting-the-ssma-console-accesstosql"></a>サンプルのコンソール スクリプト FilesExecuting (AccessToSQL) SSMA コンソールの操作
 いくつかのサンプル ファイルは、ユーザーの参照と使用状況の製品と共に提供されています。 このセクションでは、エンドユーザーのニーズに合わせてこれらのスクリプトを簡単にカスタマイズする方法について説明します。  

@@ -1,60 +1,66 @@
 ---
-title: 事前トレーニング済みの機械学習モデルの SQL Server Machine Learning のインストールします。
-description: センチメントの分析とイメージの特性付けの事前トレーニング済みモデルを SQL Server 2017 Machine Learning サービス (R または Python) または SQL Server 2016 R Services を追加します。
+title: 事前トレーニング済みモデルのインストール
+description: 感情分析およびイメージの特性付けのための事前トレーニング済みのモデルを SQL Server Machine Learning Services (R または Python) または SQL Server R Services に追加します。
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 07/18/2018
+ms.date: 07/30/2019
 ms.topic: conceptual
-author: HeidiSteen
-ms.author: heidist
-manager: cgronlun
-ms.openlocfilehash: 901ab45ea727ec03a439f07ac2b4a971c98060f2
-ms.sourcegitcommit: ee76332b6119ef89549ee9d641d002b9cabf20d2
-ms.translationtype: MT
+author: dphansen
+ms.author: davidph
+ms.custom: seo-lt-2019
+monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
+ms.openlocfilehash: 97da2ed795d002fa47900eb21ead90b48b525387
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/20/2018
-ms.locfileid: "53645441"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73727560"
 ---
-# <a name="install-pre-trained-machine-learning-models-on-sql-server"></a>事前トレーニング済みの machine learning のモデルでは、SQL Server をインストールします。
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+# <a name="install-pre-trained-machine-learning-models-on-sql-server"></a>事前トレーニング済みの機械学習モデルを SQL Server にインストールする
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-この記事では、Powershell を使用して無料事前トレーニング済みの機械学習モデルを追加する方法を説明します*感情分析*と*イメージ特性付け*R または Python を持つ SQL Server データベース エンジン インスタンスに。統合します。 事前トレーニング済みモデルは、Microsoft とすぐに使用して作成された、インストール後のタスクとして、データベース エンジンのインスタンスに追加します。 これらのモデルの詳細については、次を参照してください。、[リソース](#bkmk_resources)この記事の「します。
+この記事では Powershell を使用して、"*感情分析*" および "*イメージの特性付け*" のための事前トレーニング済みの機械学習モデルを、R または Python が統合されている SQL Server インスタンスに追加する方法について説明します。 事前トレーニング済みのモデルは Microsoft によって構築され、すぐに使用できる状態で、インストール後のタスクとしてインスタンスに追加されます。 これらのモデルの詳細については、この記事の「[リソース](#bkmk_resources)」セクションを参照してください。
 
-インストールされると、事前トレーニング済みモデルは MicrosoftML (R) および microsoftml (Python) ライブラリの特定の機能を実装の詳細と見なされます。 できますに処理するカスタム コードでは独立したリソースとしてもしていない必要があります (ことはできません) を表示したり、カスタマイズ、したり、モデルの再トレーニングまたはその他の関数をペアになっています。 
+インストールが完了すると、事前トレーニング済みのモデルは、MicrosoftML (R) ライブラリと microsoftml (Python) ライブラリの特定の機能を強化する実装の詳細と見なされます。 モデルを表示、カスタマイズ、または再トレーニングしないでください (そうすることもできません)。また、これらをカスタム コードの独立したリソースとして扱うことや、他の関数と組み合わせて使用することもできません。 
 
-事前トレーニング済みモデルを使用するには、次の表に示す関数を呼び出します。
+事前トレーニング済みのモデルを使用するには、次の表に示す関数を呼び出します。
 
 | R 関数 (MicrosoftML) | Python 関数 (microsoftml) | 使用方法 |
 |--------------------------|-------------------------------|-------|
-| [getSentiment](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/getsentiment) | [get_sentiment](https://docs.microsoft.com//machine-learning-server/python-reference/microsoftml/get-sentiment) | テキスト入力には、正、負のセンチメント スコアを生成します。 [詳細については](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2017/11/01/sentiment-analysis-with-python-in-sql-server-machine-learning-services/)します。|
-| [featurizeImage](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/featurizeimage) | [featurize_image](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/featurize-image) | イメージ ファイルの入力からのテキスト情報を抽出します。 [詳細については](https://blogs.msdn.microsoft.com/mlserver/2017/04/12/image-featurization-with-a-pre-trained-deep-neural-network-model/)します。 |
+| [getSentiment](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/getsentiment) | [get_sentiment](https://docs.microsoft.com//machine-learning-server/python-reference/microsoftml/get-sentiment) | テキスト入力に対して正/負のセンチメント スコアを生成します。 |
+| [featurizeImage](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/featurizeimage) | [featurize_image](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/featurize-image) | 画像ファイル入力からテキスト情報を抽出します。 |
 
-## <a name="prerequisites"></a>前提条件
+## <a name="prerequisites"></a>Prerequisites
 
-機械学習アルゴリズムでは、コンピューターに負荷ができません。 低から中レベルのワークロードでは、すべてのサンプル データを使用したチュートリアルのチュートリアルの完了を含む 16 GB の RAM をお勧めします。
+機械学習アルゴリズムは、計算を集中的に行います。 すべてのサンプル データを使用したチュートリアルの完了など、低から中レベルのワークロードには 16 GB の RAM を使用することをお勧めします。
 
-事前トレーニング済みモデルを追加するコンピューターと SQL Server の管理者権限が必要です。
+事前トレーニング済みのモデルを追加するには、コンピューターおよび SQL Server に対する管理者権限が必要です。
 
-外部スクリプトを有効にする必要があり、SQL Server スタート パッド サービスを実行する必要があります。 インストール手順については、有効にして、これらの機能を確認するための手順を提供します。 
+外部スクリプトを有効にし、SQL Server LaunchPad サービスが実行されている必要があります。 インストール手順では、これらの機能を有効にして確認する手順について説明します。 
 
-[MicrosoftML の R パッケージ](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/microsoftml-package)または[microsoftml Python パッケージ](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/microsoftml-package)事前トレーニング済みモデルが含まれています。
+::: moniker range=">=sql-server-2017||=sqlallproducts-allversions"
+[MicrosoftML R パッケージ](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/microsoftml-package)または [microsoftml Python パッケージ](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/microsoftml-package)には、事前トレーニング済みモデルが含まれています。
 
-+ [SQL Server 2017 Machine Learning Services](sql-machine-learning-services-windows-install.md)操作を行わなくてもユーザー側でこの前提条件を満たすために、machine learning ライブラリの両方の言語バージョンが含まれています。 ライブラリが存在するので、これらのライブラリに事前トレーニング済みモデルを追加するのにこの記事で説明する PowerShell スクリプトを使用できます。
+[SQL Server Machine Learning Services](sql-machine-learning-services-windows-install.md) には、機械学習ライブラリの両方の言語バージョンが含まれているため、ユーザー側でこれ以上の操作をしなくてもこの前提条件は満たされます。 ライブラリが存在するため、この記事で説明されている PowerShell スクリプトを使用して、事前トレーニング済みのモデルをこれらのライブラリに追加できます。
+::: moniker-end
 
-+ [SQL Server 2016 R Services](sql-r-services-windows-install.md)、のみ、R は含まない[MicrosoftML パッケージ](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/microsoftml-package)すぐします。 MicrosoftML を追加することを実行する必要があります、[コンポーネントのアップグレード](../r/use-sqlbindr-exe-to-upgrade-an-instance-of-sql-server.md)します。 コンポーネントのアップグレードの利点の 1 つは、同時に追加できる事前トレーニング済みのモデルでは、これにより、不要な PowerShell スクリプトを実行します。 ただし、既にアップグレードが、事前トレーニング済みモデルを追加するには、初回使用時に実行されなかった、この記事の説明に従って PowerShell スクリプトを実行できます。 SQL Server の両方のバージョンで動作します。 実行する前に、C:\Program files \microsoft SQL Server\MSSQL13 に MicrosoftML ライブラリが存在することを確認します。MSSQLSERVER\R_SERVICES\library します。
+::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
+[MicrosoftML R package](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/microsoftml-package) には、事前トレーニング済みモデルが含まれています。
 
+[SQL Server R Services](sql-r-services-windows-install.md) は、R 専用であり、すぐに使用可能な [MicrosoftML パッケージ](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/microsoftml-package)が含まれていません。 MicrosoftML を追加するには、[コンポーネントのアップグレード](../install/upgrade-r-and-python.md)を行う必要があります。 コンポーネントのアップグレードの利点の 1 つは、事前トレーニング済みのモデルを同時に複数追加できるため、PowerShell スクリプトを実行する必要がないことです。 ただし、既にアップグレードしたが、事前トレーニング済みのモデルを最初に追加しなかった場合は、この記事の説明に従って PowerShell スクリプトを実行できます。 これは両方のバージョンの SQL Server で機能します。 その前に、`C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\R_SERVICES\library` に MicrosoftML ライブラリが存在することを確認してください。
+::: moniker-end
 
 <a name="file-location"></a>
 
-## <a name="check-whether-pre-trained-models-are-installed"></a>事前トレーニング済みモデルがインストールされているかどうかを確認します。
+## <a name="check-whether-pre-trained-models-are-installed"></a>事前トレーニング済みのモデルがインストールされているかどうかを確認する
 
-R および Python のモデルのインストール パスは次のとおりです。
+R モデルと Python モデルのインストール パスは次のとおりです。
 
-+ R: の `C:\Program Files\Microsoft SQL Server\MSSQL14.MSSQLSERVER\R_SERVICES\library\MicrosoftML\mxLibs\x64`
++ R の場合: `C:\Program Files\Microsoft SQL Server\MSSQL14.MSSQLSERVER\R_SERVICES\library\MicrosoftML\mxLibs\x64`
 
-+ Python: `C:\Program Files\Microsoft SQL Server\MSSQL14.MSSQLSERVER\PYTHON_SERVICES\Lib\site-packages\microsoftml\mxLibs `
++ Python の場合: `C:\Program Files\Microsoft SQL Server\MSSQL14.MSSQLSERVER\PYTHON_SERVICES\Lib\site-packages\microsoftml\mxLibs`
 
-モデル ファイル名は、以下に示します。
+モデル ファイル名を次に示します。
 
 + AlexNet\_Updated.model
 + ImageNet1K\_mean.xml
@@ -63,16 +69,16 @@ R および Python のモデルのインストール パスは次のとおりで
 + ResNet\_18\_Updated.model
 + ResNet\_50\_Updated.model
 
-モデルが既にインストールされている場合に進んで、[検証ステップ](#verify)可用性を確認します。
+モデルが既にインストールされている場合は、[検証手順](#verify)に進んで利用可能かどうかを確認します。
 
-## <a name="download-the-installation-script"></a>インストール スクリプトをダウンロードします。
+## <a name="download-the-installation-script"></a>インストール スクリプトをダウンロードする
 
-クリックして[ https://aka.ms/mlm4sql ](https://aka.ms/mlm4sql)ファイルをダウンロードする**インストール MLModels.ps1**します。
+[https://aka.ms/mlm4sql](https://aka.ms/mlm4sql) をクリックして、ファイル **Install-MLModels.ps1** をダウンロードします。
 
-## <a name="execute-with-elevated-privileges"></a>昇格した特権で実行します。
+## <a name="execute-with-elevated-privileges"></a>昇格された特権で実行する
 
-1. PowerShell を起動します。 タスク バーでは、PowerShell のプログラム アイコンを右クリックして**管理者として実行**します。
-2. インストールのスクリプト ファイルに完全修飾パスを入力し、インスタンス名を含めます。 ダウンロード フォルダーと既定のインスタンスと仮定すると、このようコマンドになります。
+1. PowerShell を開始します。 タスクバーで、PowerShell プログラム アイコンを右クリックし、 **[管理者として実行]** を選択します。
+2. インストール スクリプト ファイルへの完全修飾パスを入力し、インスタンス名を含めます。 Downloads フォルダーおよび既定のインスタンスがある場合、コマンドは次のようになります。
 
    ```powershell
    PS C:\WINDOWS\system32> C:\Users\<user-name>\Downloads\Install-MLModels.ps1 MSSQLSERVER
@@ -80,7 +86,7 @@ R および Python のモデルのインストール パスは次のとおりで
 
 **出力**
 
-インターネットに接続された SQL Server 2017 の Machine Learning 既定インスタンス上で R と Python、次のようなメッセージが表示されます。
+インターネットに接続された SQL Server Machine Learning Services の既定のインスタンスで、R と Python を使用している場合、次のようなメッセージが表示されます。
 
    ```powershell
    MSSQL14.MSSQLSERVER
@@ -96,13 +102,13 @@ R および Python のモデルのインストール パスは次のとおりで
 
 ## <a name="verify-installation"></a>インストールの確認
 
-最初に、新しいファイルの確認、 [mxlibs フォルダー](#file-location)します。 次に、モデルが機能していることを確認するデモ コードを実行します。 
+まず、[mxlibs フォルダー](#file-location)に新しいファイルがあるかどうかを確認します。 次に、デモ コードを実行して、モデルがインストールされて機能していることを確認します。 
 
 ### <a name="r-verification-steps"></a>R の検証手順
 
-1. 開始**RGUI します。EXE** C:\Program files \microsoft SQL Server\MSSQL14 にします。MSSQLSERVER\R_SERVICES\bin\x64 します。
+1. C:\Program Files\Microsoft SQL Server\MSSQL14.MSSQLSERVER\R_SERVICES\bin\x64 にある **RGUI.EXE** を開始します。
 
-2. コマンド プロンプトで次の R スクリプトを貼り付けます。
+2. コマンド プロンプトに次の R スクリプトを貼り付けます。
 
     ```R
     # Create the data
@@ -124,7 +130,7 @@ R および Python のモデルのインストール パスは次のとおりで
     sentimentScores
     ```
 
-3. センチメント スコアを表示するには Enter キーを押します。 出力は次のようにする必要があります。
+3. Enter キーを押して、センチメント スコアを表示します。 出力は次のようになります。
 
     ```R
     > sentimentScores
@@ -140,9 +146,9 @@ R および Python のモデルのインストール パスは次のとおりで
 
 ### <a name="python-verification-steps"></a>Python の検証手順
 
-1. 開始**Python.exe** C:\Program files \microsoft SQL Server\MSSQL14 にします。MSSQLSERVER\PYTHON_SERVICES します。
+1. C:\Program Files\Microsoft SQL Server\MSSQL14.MSSQLSERVER\PYTHON_SERVICES にある **Python.exe** を開始します。
 
-2. コマンド プロンプトで次の Python スクリプトを貼り付けます
+2. コマンド プロンプトに次の Python スクリプトを貼り付けます
 
     ```python
     import numpy
@@ -166,7 +172,7 @@ R および Python のモデルのインストール パスは次のとおりで
     print(sentiment_scores)
     ```
 
-3. スコアを印刷するには Enter キーを押します。 出力は次のようにする必要があります。
+3. Enter キーを押してスコアを出力します。 出力は次のようになります。
 
     ```python
     >>> print(sentiment_scores)
@@ -178,43 +184,36 @@ R および Python のモデルのインストール パスは次のとおりで
     ```
 
 > [!NOTE]
-> デモ スクリプトが失敗した場合は、まず、ファイルの場所を確認します。 システムで、SQL Server の複数のインスタンスを持つまたはのインスタンスを実行する - サイド スタンドアロン バージョンと、ミスは環境を読み取るし、誤った場所にファイルを配置するインストール スクリプトのことができます。 通常は、正しい mxlib フォルダーにファイルを手動でコピーの問題を解決します。
+> デモ スクリプトが失敗した場合は、最初にファイルの場所を確認してください。 SQL Server の複数のインスタンスがあるシステム、またはスタンドアロン バージョンと並行して実行されているインスタンスの場合、インストール スクリプトによって環境が誤って読み取られ、ファイルが間違った場所に配置される可能性があります。 通常は、ファイルを正しい mxlib フォルダーに手動でコピーすることで問題が解決されます。
 
-## <a name="examples-using-pre-trained-models"></a>事前トレーニング済みモデルの使用例
+## <a name="examples-using-pre-trained-models"></a>事前トレーニング済みのモデルを使用した例
 
-次のリンクには、事前トレーニング済みモデルを呼び出すことのチュートリアルおよびサンプルのコードが含まれます。
+次のリンクには、事前トレーニング済みのモデルを呼び出すコード例が含まれています。
 
-+ [SQL Server Machine Learning Services での Python の感情分析](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2017/11/01/sentiment-analysis-with-python-in-sql-server-machine-learning-services/)
-
-+ [事前トレーニング済みのディープ ニューラル ネットワーク モデルでのイメージの特性付け](https://blogs.msdn.microsoft.com/mlserver/2017/04/12/image-featurization-with-a-pre-trained-deep-neural-network-model/)
-
-  イメージの事前トレーニング済みモデルでは、指定したイメージの特徴の生成をサポートします。 モデルを使用して、呼び出す、 **featurizeImage**変換します。 イメージが読み込まれるサイズ変更、トレーニング済みモデルを特徴とします。 DNN featurizer の出力は画像の分類の線形モデルのトレーニングに使用されます。 このモデルを使用するには、トレーニング済みモデルの要件を満たすすべてのイメージのサイズを変更する必要があります。 たとえば、AlexNet モデルを使用する場合、イメージ必要がありますを変更する場合 227 x 227 ピクセルです。
-
-+ [コード サンプル:テキストの特徴抽出器を使った感情分析](https://github.com/Microsoft/microsoft-r/tree/master/microsoft-ml/Samples/101/BinaryClassification/SimpleSentimentAnalysis)
++ [コード サンプル:テキスト フィーチャライザーを使用した感情分析](https://github.com/Microsoft/microsoft-r/tree/master/microsoft-ml/Samples/101/BinaryClassification/SimpleSentimentAnalysis)
 
 <a name="bkmk_resources"></a> 
 
 ## <a name="research-and-resources"></a>調査とリソース
 
-現在利用できるモデルは、センチメント分析とイメージの分類のためのディープ ニューラル ネットワーク (DNN) モデルをします。 Microsoft を使用してすべての事前トレーニング済みモデル トレーニングを受けた[計算 Network Toolkit](https://cntk.ai/Features/Index.html)、または**CNTK**します。
+現在使用できるモデルは、感情分析とイメージ分類のためのディープ ニューラル ネットワーク (DNN) モデルです。 事前トレーニング済みのモデルはすべて、Microsoft の [Computation Network Toolkit](https://cntk.ai/Features/Index.html) (**CNTK**) を使用してトレーニングされています。
 
-各ネットワークの構成は、次の参照実装に基づくされました。
+各ネットワークの構成は、次の参照実装に基づいています。
 
 + ResNet-18
-+ Resnet-50
-+ ResNet 101
++ ResNet-50
++ ResNet-101
 + AlexNet
 
-これらのディープ ラーニング モデルの実装方法で使用されるアルゴリズムの詳細については、CNTK を使用してトレーニングすると、次の記事を参照してください。
+これらのディープ ラーニング モデルで使用されるアルゴリズムの詳細と、CNTK を使用したこれらの実装方法とトレーニング方法については、次の記事を参照してください。
 
-+ [Microsoft の研究者のアルゴリズム ImageNet チャレンジ マイルス トーンを設定します。](https://www.microsoft.com/research/blog/microsoft-researchers-algorithm-sets-imagenet-challenge-milestone/)
++ [Microsoft の研究者のアルゴリズムが ImageNet の課題のマイルストーンを設定](https://www.microsoft.com/research/blog/microsoft-researchers-algorithm-sets-imagenet-challenge-milestone/)
 
-+ [Microsoft Computational Network Toolkit は、最も効率的なの分散深層に優れたコンピューティング性能を学習を提供しています](https://www.microsoft.com/research/blog/microsoft-computational-network-toolkit-offers-most-efficient-distributed-deep-learning-computational-performance/)
++ [Microsoft Computational Network Toolkit では、最も効率的な分散型ディープ ラーニングの計算パフォーマンスが提供される](https://www.microsoft.com/research/blog/microsoft-computational-network-toolkit-offers-most-efficient-distributed-deep-learning-computational-performance/)
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
-+ [SQL Server 2016 R Services](sql-r-services-windows-install.md)
-+ [SQL Server 2017 の Machine Learning サービス](sql-machine-learning-services-windows-install.md)
-+ [SQL Server インスタンスで R と Python のコンポーネントをアップグレードします。](../r/use-sqlbindr-exe-to-upgrade-an-instance-of-sql-server.md)
++ [SQL Server Machine Learning Services](sql-machine-learning-services-windows-install.md)
++ [SQL Server のインスタンス内の R および Python コンポーネントをアップグレードする](../install/upgrade-r-and-python.md)
 + [R 用の MicrosoftML パッケージ](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/microsoftml-package)
 + [Python 用の microsoftml パッケージ](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/microsoftml-package)

@@ -8,14 +8,14 @@ helpviewer_keywords:
 - report servers [Reporting Services], databases
 - databases [Reporting Services], creating
 ms.assetid: 81b9f4ad-800b-4688-8b47-a5a83dc8ff10
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: aa026182ac6001a9ca360dedba85dfc7ea8eafec
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 5b80a7e6ee0d68009ff21f01ba0c75b3f0a7fb33
+ms.sourcegitcommit: 312b961cfe3a540d8f304962909cd93d0a9c330b
+ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50020266"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73593555"
 ---
 # <a name="create-a-native-mode-report-server-database"></a>ネイティブ モードのレポート サーバー データベースの作成
 
@@ -57,7 +57,7 @@ ms.locfileid: "50020266"
   
 1.  リモートの [!INCLUDE[ssDE](../../includes/ssde-md.md)] インスタンスを使用している場合は、データベース サーバーにログオンして、TCP/IP 接続を確認するか有効にします。  
   
-2.  **[スタート]** ボタンをクリックし、 **[すべてのプログラム]**、 **[Microsoft SQL Server]**、 **[構成ツール]** の順にポイントして、 **[SQL Server 構成マネージャー]** をクリックします。  
+2.  **[スタート]** ボタンをクリックし、 **[すべてのプログラム]** 、 **[Microsoft SQL Server]** 、 **[構成ツール]** の順にポイントして、 **[SQL Server 構成マネージャー]** をクリックします。  
   
 3.  **[SQL Server ネットワークの構成]** を開きます。  
   
@@ -67,7 +67,7 @@ ms.locfileid: "50020266"
   
 6.  サービスを再起動します。  
   
-7.  ファイアウォール ソフトウェアを開き、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] がリッスンするポートを開きます。 既定のインスタンスの場合、このポートは通常、TCP/IP 接続のポート 1433 です。 Windows ファイアウォールの詳細については、 [オンライン ブックの「](../../database-engine/configure-windows/configure-a-windows-firewall-for-database-engine-access.md) データベース エンジン アクセスを有効にするための Windows ファイアウォールを構成する [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 」を参照してください。  
+7.  ファイアウォール ソフトウェアを開き、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] がリッスンするポートを開きます。 既定のインスタンスの場合、このポートは通常、TCP/IP 接続のポート 1433 です。 詳しくは、「 [データベース エンジン アクセスを有効にするための Windows ファイアウォールを構成する](../../database-engine/configure-windows/configure-a-windows-firewall-for-database-engine-access.md)」をご覧ください。  
   
 ### <a name="to-create-a-local-report-server-database"></a>ローカルのレポート サーバー データベースを作成するには  
   
@@ -111,7 +111,7 @@ ms.locfileid: "50020266"
   
 7.  [概要] ページの情報で設定が正しいことを確認し、 **[次へ]** を選択します。  
   
-8.  [レポート サーバー URL] ページで URL を選択することにより、接続を確認します。 このテストが成功するように URL を定義する必要があります。 レポート サーバー データベースの接続が有効な場合は、レポート サーバーのフォルダー階層が表示されます。 詳細については、 [オンライン ブックの「](../../reporting-services/install-windows/verify-a-reporting-services-installation.md) Reporting Services のインストール状態の検証 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 」を参照してください。  
+8.  [レポート サーバー URL] ページで URL を選択することにより、接続を確認します。 このテストが成功するように URL を定義する必要があります。 レポート サーバー データベースの接続が有効な場合は、レポート サーバーのフォルダー階層が表示されます。 詳細については、「 [Reporting Services のインストール状態の検証](../../reporting-services/install-windows/verify-a-reporting-services-installation.md)」をご覧ください。  
 
 ## <a name="change-database-credentials"></a>データベース資格情報の変更
 

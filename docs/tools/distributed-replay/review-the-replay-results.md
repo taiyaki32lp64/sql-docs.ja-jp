@@ -8,15 +8,14 @@ ms.reviewer: ''
 ms.technology: tools-other
 ms.topic: conceptual
 ms.assetid: da999781-f0ff-47eb-ba7a-09c0ed8f61ad
-author: stevestein
-ms.author: sstein
-manager: craigg
-ms.openlocfilehash: afb259625e100c886efabc00e21f7bd41f04389d
-ms.sourcegitcommit: 0f7cf9b7ab23df15624d27c129ab3a539e8b6457
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: e6b68d6e5376bdf24efb09c50e3df63ed5810373
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51291758"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67949930"
 ---
 # <a name="review-the-replay-results"></a>再生結果の確認
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -63,7 +62,7 @@ ms.locfileid: "51291758"
 |EventClass|**nvarchar**|イベント クラスの名前。|1|  
 |EventSequence|**bigint**|プロバイダー エラー、内部エラー、および警告に対しては、これはエラーまたは警告に対応するキャプチャ イベント シーケンスです。<br /><br /> その他のすべてのイベント クラスに対しては、これは元のトレース データ内のイベント シーケンスです。|2|  
 |ReplaySequence|**bigint**|プロバイダー エラー、内部エラー、および警告に対しては、これはエラーまたは警告に対応する再生イベント シーケンスです。<br /><br /> その他のすべてのイベント クラスに対しては、これは再生中に割り当てられるイベント シーケンスです。|3|  
-|TextData|**ntext**|TextData の内容は、EventClass に依存します。<br /><br /> Audit Login および ExistingConnection では、これは接続の設定オプションです。<br /><br /> SQL:BatchStarting では、これはバッチ要求の本文です。<br /><br /> RPC:Starting では、これは呼び出されたストアド プロシージャです。<br /><br /> Replay Settings Event では、この列には再生構成ファイルで定義された設定が含まれます。<br /><br /> Replay Statistics Event では、これは次の情報を含みます。<br /><br /> - 再生対象 SQL サーバー<br /><br /> - 再生可能なイベントの総数<br /><br /> - プロバイダー エラーの数<br /><br /> - 内部エラーの数<br /><br /> - 内部の警告<br /><br /> - エラーの総数<br /><br /> - 全体のパス レート<br /><br /> - 再生時間 (HH:MM:SS: MMM)<br /><br /> Replay Result Set Event では、これは返される結果の列ヘッダーのリストを示します。<br /><br /> Replay Result Row Event では、その行のすべての列の戻り値を示します。<br /><br /> Replay Internal Warning および Replay Provider Error では、この列はプロバイダー警告またはエラーを含みます。|4|  
+|TextData|**ntext**|TextData の内容は、EventClass に依存します。<br /><br /> Audit Login および ExistingConnection では、これは接続の設定オプションです。<br /><br /> SQL:BatchStarting では、これはバッチ要求の本文です。<br /><br /> RPC:Starting では、これは呼び出されたストアド プロシージャです。<br /><br /> Replay Settings Event では、この列には再生構成ファイルで定義された設定が含まれます。<br /><br /> Replay Statistics Event では、これは次の情報を含みます。<br /><br /> \- 再生対象 SQL サーバー<br /><br /> \- 再生可能なイベントの総数<br /><br /> \- プロバイダー エラーの数<br /><br /> \- 内部エラーの数<br /><br /> \- 内部の警告<br /><br /> \- エラーの総数<br /><br /> \- 全体のパス レート<br /><br /> \- 再生時間 (HH:MM:SS: MMM)<br /><br /> Replay Result Set Event では、これは返される結果の列ヘッダーのリストを示します。<br /><br /> Replay Result Row Event では、その行のすべての列の戻り値を示します。<br /><br /> Replay Internal Warning および Replay Provider Error では、この列はプロバイダー警告またはエラーを含みます。|4|  
 |Attention|**bigint**|イベントのアテンション期間 (マイクロ秒)。 これは、キャプチャ トレースのアテンション イベントから計算されます。 イベントにクエリ タイムアウトが指定されていない場合は、この列は設定されません (null)。|5|  
 |SubmitTime|**datetime**|イベントが [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]に送信された時刻。|6|  
 |IsSuccessful|**int**|特定のイベントが正常に実行されたかどうか、および結果セットがクライアント側に返されたかどうかを示すブール型のフラグ。<br /><br /> 警告を生成するイベント (アテンションまたはユーザー定義のタイムアウトにより、イベントが取り消された場合など) は成功と見なされます。<br /><br /> IsSuccessful の値は、次のいずれかです。<br /><br /> 1 = 成功<br /><br /> 0 = 失敗|7|  

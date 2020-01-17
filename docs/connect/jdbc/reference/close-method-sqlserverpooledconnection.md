@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: 8de23939-aa84-47a1-aeb9-b03c69c090dc
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: eb62fa568a327dff25ec7404270066d9dc91ef24
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e04edd22f354440d1ef3704090f3d3c0b8189f23
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47776070"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67955570"
 ---
 # <a name="close-method-sqlserverpooledconnection"></a>close メソッド (SQLServerPooledConnection)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

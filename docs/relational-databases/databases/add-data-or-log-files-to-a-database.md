@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: 8ead516a-1334-4f40-84b2-509d0a8ffa45
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 48881cbff003b37e0a58dd7d6eb3c11c220ed268
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 34e976dca163289450c3aa481d1f72bb46712046
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52507721"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68137404"
 ---
 # <a name="add-data-or-log-files-to-a-database"></a>データベースに対するデータ ファイルまたはログ ファイルの追加
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -36,7 +35,7 @@ ms.locfileid: "52507721"
   
      [制限事項と制約事項](#Restrictions)  
   
-     [Security](#Security)  
+     [セキュリティ](#Security)  
   
 -   **以下を使用してデータ ファイルまたはログ ファイルをデータベースに追加するには:**  
   
@@ -73,11 +72,11 @@ ms.locfileid: "52507721"
   
 6.  ファイルの種類 (データまたはログ) を選択します。  
   
-7.  データ ファイルの場合、ファイルを含めるファイル グループを一覧から選択するか、**[\<新しいファイル グループ>]** をクリックして新しいファイル グループを作成します。 トランザクション ログはファイル グループに追加できません。  
+7.  データ ファイルの場合、ファイルを含めるファイル グループを一覧から選択するか、 **[\<新しいファイル グループ>]** をクリックして新しいファイル グループを作成します。 トランザクション ログはファイル グループに追加できません。  
   
 8.  ファイルの初期サイズを指定します。 データベースに格納するデータの予想最大量に基づいて、データ ファイルのサイズを可能な限り大きく設定しておきます。  
   
-9. ファイルの拡張方法を指定するには、**[自動拡張]** 列で参照ボタン ( **[...]** ) をクリックします。 次のオプションから選択します。  
+9. ファイルの拡張方法を指定するには、 **[自動拡張]** 列で参照ボタン ( **[...]** ) をクリックします。 次のオプションから選択します。  
   
     1.  データ領域の追加が必要になったときに、現在選択されているファイルを拡張できるようにするには、 **[自動拡張を有効にする]** チェック ボックスをオンにして、次のオプションから選択します。  
   

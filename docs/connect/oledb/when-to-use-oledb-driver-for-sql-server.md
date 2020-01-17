@@ -14,20 +14,19 @@ helpviewer_keywords:
 - data access [OLE DB Driver for SQL Server], about OLE DB Driver for SQL Server
 author: pmasl
 ms.author: pelopes
-manager: craigg
-ms.openlocfilehash: 7b2f7bf5a09294803ab620b22a75910c5f5e3e34
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.openlocfilehash: 74bd79c24b913cd3c3d2f782b77cf2bb4c23e397
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51602812"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68015192"
 ---
 # <a name="when-to-use-ole-db-driver-for-sql-server"></a>OLE DB Driver for SQL Server をいつ使用するか
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../includes/driver_oledb_download.md)]
 
-  OLE DB Driver for SQL Server がデータにアクセスするのに使用できる 1 つのテクノロジを[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]データベース。  各種データ アクセス テクノロジの詳細については、「[データ アクセス テクノロジのロードマップ](https://go.microsoft.com/fwlink/?LinkID=179186)」を参照してください。  
+  SQL Server 用の OLE DB ドライバーは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]データベース内のデータにアクセスするために使用できる1つのテクノロジです。  各種データ アクセス テクノロジの詳細については、「[データ アクセス テクノロジのロードマップ](https://go.microsoft.com/fwlink/?LinkID=179186)」を参照してください。  
   
  アプリケーションのデータ アクセス テクノロジとして OLE DB Driver for SQL Server を使用するかどうかを決める場合は、いくつかの要素を検討する必要があります。  
   
@@ -37,9 +36,9 @@ ms.locfileid: "51602812"
   
  既存の OLE DB アプリケーションの場合、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の新機能にアクセスする必要があるかどうかが重要な問題になります。 アプリケーションが既に完成していて、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の新機能を必要としない場合は、引き続き WDAC を使用できます。 ただし、[xml データ型](../../t-sql/xml/xml-transact-sql.md)などの新機能にアクセスする必要がある場合は、OLE DB Driver for SQL Server を使用する必要があります。  
   
- 両方 OLE DB Driver for SQL Server と MDAC のサポートは read committed トランザクション分離の行のバージョン管理が OLE DB ドライバーのみを使用して、SQL Server サポートのスナップショット トランザクションの分離です。 (プログラミング用語では、"行のバージョン管理機能を使用した Read Committed トランザクション分離" は "Read Committed トランザクション" と同義です)。  
+ SQL Server と MDAC 用の OLE DB ドライバーはどちらも、行のバージョン管理を使用した read committed トランザクション分離をサポートしますが、スナップショットトランザクション分離をサポートしているのは、SQL Server の OLE DB ドライバーだけです。 (プログラミング用語では、"行のバージョン管理機能を使用した Read Committed トランザクション分離" は "Read Committed トランザクション" と同義です)。  
   
- OLE DB Driver for SQL Server と MDAC の違いについては、次を参照してください。 [MDAC から SQL Server の OLE DB ドライバーへのアプリケーションの更新](../oledb/applications/updating-an-application-to-oledb-driver-for-sql-server-from-mdac.md)します。  
+ SQL Server と MDAC の OLE DB ドライバーの違いについては、「 [mdac から SQL Server の OLE DB ドライバーへのアプリケーションの更新](../oledb/applications/updating-an-application-to-oledb-driver-for-sql-server-from-mdac.md)」を参照してください。  
   
 ## <a name="see-also"></a>参照  
  [OLE DB Driver for SQL Server](../oledb/oledb-driver-for-sql-server.md)     

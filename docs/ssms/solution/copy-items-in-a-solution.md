@@ -12,15 +12,14 @@ helpviewer_keywords:
 - projects [SQL Server Management Studio], copying
 - solutions [SQL Server Management Studio], item copying
 ms.assetid: f95f084e-9f3d-4d15-90b4-1094ab2eda51
-author: stevestein
-ms.author: sstein
-manager: craigg
-ms.openlocfilehash: a6697e9e179e0ee9114da63ea2b994281c96e97e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: aae60868de366c26af77c3f52906f23280177969
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47666070"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68258296"
 ---
 # <a name="copy-items-in-a-solution"></a>ソリューションの項目のコピー
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

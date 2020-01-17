@@ -21,17 +21,20 @@ helpviewer_keywords:
 - LogProvider object
 - packages [Integration Services], logs
 ms.assetid: 3222a1ed-83eb-421c-b299-a53b67bba740
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: 7ac9abe2be8227d6df1fc5dbb3d14b8953aab6ef
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 45e97657bf70bdf023388f97497f9c2a8c5dd0f4
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47672440"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71294944"
 ---
 # <a name="enabling-logging-programmatically"></a>プログラムによるログ記録の有効化
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   ランタイム エンジンでは、パッケージの検証中および実行中にイベント固有の情報のキャプチャを有効にするための <xref:Microsoft.SqlServer.Dts.Runtime.LogProvider> オブジェクトのコレクションが提供されます。 <xref:Microsoft.SqlServer.Dts.Runtime.LogProvider> オブジェクトは、<xref:Microsoft.SqlServer.Dts.Runtime.DtsContainer> オブジェクト群、つまり <xref:Microsoft.SqlServer.Dts.Runtime.TaskHost>、<xref:Microsoft.SqlServer.Dts.Runtime.Package>、<xref:Microsoft.SqlServer.Dts.Runtime.ForLoop>、<xref:Microsoft.SqlServer.Dts.Runtime.ForEachLoop> などの各オブジェクトで使用できます。 ログ記録は、個別のコンテナーでも、パッケージ全体でも有効にすることができます。  
   
  コンテナーで使用できるログ プロバイダーには、いくつかの種類があります。 そのため、さまざまな形式でログ情報を作成し、保存することができます。 コンテナー オブジェクトをログ記録に登録するには、まずログ記録を有効にし、次にログ プロバイダーを選択するという、2 段階の処理が必要です。 コンテナーの <xref:Microsoft.SqlServer.Dts.Runtime.DtsContainer.LoggingOptions%2A> プロパティおよび <xref:Microsoft.SqlServer.Dts.Runtime.DtsContainer.LoggingMode%2A> プロパティを使用して、ログ記録するイベントを指定し、ログ プロバイダーを選択します。  
@@ -46,7 +49,7 @@ ms.locfileid: "47672440"
   
 |プロバイダー|[説明]|ConfigString プロパティ|  
 |--------------|-----------------|---------------------------|  
-|SQL Server Profiler|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Profiler でキャプチャおよび表示される SQL トレースを生成します。 このプロバイダーで使用されるファイル名の既定の拡張子は、.trc です。|構成は必要ありません。|  
+|SQL Server プロファイラー|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Profiler でキャプチャおよび表示される SQL トレースを生成します。 このプロバイダーで使用されるファイル名の既定の拡張子は、.trc です。|構成は必要ありません。|  
 |SQL Server|イベント ログ エントリを [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データベースの **sysssislog** テーブルに書き込みます。|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] プロバイダーの場合は、データベースへの接続と対象データベースの名前を指定する必要があります。|  
 |テキスト ファイル|イベント ログ エントリをコンマ区切り (CSV) 形式で ASCII テキスト ファイルに書き込みます。 このプロバイダーで使用されるファイル名の既定の拡張子は、.log です。|ファイル接続マネージャーの名前。|  
 |Windows イベント ログ|ローカル コンピューター上のアプリケーション ログの標準 Windows イベント ログにログを記録します。|構成は必要ありません。|  

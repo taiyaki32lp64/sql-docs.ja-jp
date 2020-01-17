@@ -12,15 +12,14 @@ helpviewer_keywords:
 - adding tables
 - related tables [SQL Server]
 ms.assetid: be6f421b-5697-4a52-8cab-ed5f90c3f506
-author: stevestein
-ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 9846e37e890f15fc6663d2539c8b21790eed0e0e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 42411256ce4b94604c8a358bfa997a5f48bdc440
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47704990"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68266200"
 ---
 # <a name="add-related-tables-to-diagrams-visual-database-tools"></a>ダイアグラムへの関連テーブルの追加 (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

@@ -13,11 +13,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: f16133abfa0d16e4b5614bdfefa5cf7c163516e1
-ms.sourcegitcommit: 40c3b86793d91531a919f598dd312f7e572171ec
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53328482"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62470009"
 ---
 # <a name="customize-toolbars-page"></a>[ユーザー設定] ([ツール バー] ページ)
   **[ツール バー]** タブを使用すると、ツール バーの作成、名前の変更、削除、リセットができます。 このタブを開くには、 **[ツール]** メニューの **[ユーザー設定]** をクリックした後、 **[ツール バー]** をクリックします。  

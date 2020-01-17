@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: edc62024-4c4c-4970-b5fa-2e54a5aca631
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 7875796167917700e5a1a952106915ca70a61c3f
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: b34570120b22cea1ca12eaf146d41b596e43aecf
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51673572"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67946258"
 ---
 # <a name="string-search-in-xquery"></a>XQuery での文字列検索
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -32,7 +31,7 @@ ms.locfileid: "51673572"
   
 ## <a name="examples"></a>使用例  
   
-### <a name="a-find-feature-descriptions-that-contain-the-word-maintenance-in-the-product-catalog"></a>A. 製品カタログから "maintenance" という語を含む機能説明を検索する  
+### <a name="a-find-feature-descriptions-that-contain-the-word-maintenance-in-the-product-catalog"></a>A. 製品カタログから"maintenance"という単語を含む機能説明を検索します。  
   
 ```  
 SELECT CatalogDescription.query('  

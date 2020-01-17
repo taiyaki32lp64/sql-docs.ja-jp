@@ -16,16 +16,16 @@ f1_keywords:
 ms.assetid: 1f499277-7f12-42ba-8cf4-52b683434944
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: a0275065ac80f9b34e32da885ba838da63ea6711
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
+ms.openlocfilehash: 043a13a84eebe9fc1c2cac96628ce6303653e8ac
+ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54135397"
+ms.lasthandoff: 08/03/2019
+ms.locfileid: "68768591"
 ---
 # <a name="distributor-information-publications"></a>ディストリビューター情報、パブリケーション
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
   **[パブリケーション]** タブを使用すると、左ペインで選択したディストリビューターにおけるすべてのパブリケーションに関する要約情報を取得できます。  
   
 ディストリビューターによりサポートされるパブリケーションについて表示される情報には、パブリッシャーの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスを含む列などがあります。 それ以外は、レプリケーション モニターのパブリッシャー ビューに表示されるものと同じパブリケーション情報です。 **[パブリケーション]** タブ内の列の詳細については、「 [Publisher Information, Publications](../../relational-databases/replication/publisher-information-publications.md)」を参照してください。  

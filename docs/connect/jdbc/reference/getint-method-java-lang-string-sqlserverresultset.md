@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: 76b7054d-46dd-4d87-93a4-a7ea2ae9b7fd
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: f92082a14ed0c86d38e2955288db9bbba2bc0e41
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 31acd78f47af77ea034e653a0857aac182804d4d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47605706"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67982729"
 ---
 # <a name="getint-method-javalangstring-sqlserverresultset"></a>getInt (java.lang.String) メソッド (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

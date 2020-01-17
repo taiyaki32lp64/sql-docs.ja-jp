@@ -21,11 +21,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: ca92258bb764014b6f985ea08aa1a2606037a019
-ms.sourcegitcommit: 40c3b86793d91531a919f598dd312f7e572171ec
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53328382"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63316070"
 ---
 # <a name="design-queries-and-views-how-to-topics-visual-database-tools"></a>クエリおよびビューのデザインの操作方法に関するトピック (Visual Database Tools)
   クエリおよびビュー デザイナーを使用すると、アプリケーションのデータ取得部分およびデータ操作部分を作成および保守できます。  

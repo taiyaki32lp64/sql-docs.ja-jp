@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: af8f2d35-d1bf-495c-af25-630654542b7d
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 6ad253c2d0603846d6d1f795f6115e7bb727b3da
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 95392367b70af3eb820f0943af5dc668783a3fe5
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47778586"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68046964"
 ---
 # <a name="driver-manager-diagnostic-example"></a>ドライバー マネージャー診断の例
 ドライバー マネージャー診断メッセージを生成できます。 たとえば、アプリケーションに渡された無効な方向を**SQLDataSources**、ドライバー マネージャーが書式設定しから次の値を返す可能性があります**SQLGetDiagRec**:  

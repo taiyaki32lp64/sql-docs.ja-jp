@@ -1,6 +1,6 @@
 ---
-title: SetNumericalValue メソッド (ServerNetworkProtocolProperty クラス) |Microsoft Docs
-ms.custom: ''
+title: SetNumericalValue メソッド (ServerNetworkProtocolProperty)
+ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -8,7 +8,7 @@ ms.reviewer: ''
 ms.technology: wmi
 ms.topic: reference
 apiname:
-- SetNumericalValue Method (ServerNetworkProtocolProperty Class)
+- SetNumericalValue Method (ServerNetworkProtocolProperty
 apilocation:
 - sqlmgmproviderxpsp2up.mof
 apitype: MOFDef
@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: b3b4bce8-9d9e-4ccb-a223-0454281353b0
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: 0d61c99f046e1030ef00925e13bcd39b6abeddb0
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 4c73916392c87df199ce5cb99e71a325f45a9540
+ms.sourcegitcommit: baa40306cada09e480b4c5ddb44ee8524307a2ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51666077"
+ms.lasthandoff: 11/06/2019
+ms.locfileid: "73658922"
 ---
 # <a name="setnumericalvalue-method-servernetworkprotocolproperty-class"></a>SetNumericalValue メソッド (ServerNetworkProtocolProperty クラス)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -38,20 +37,20 @@ object.SetNumericalValue(NumValue)
   
 ## <a name="parts"></a>要素  
  *object*  
- A [ServerNetworkProtocolProperty クラス](../../../relational-databases/wmi-provider-configuration-classes/servernetworkprotocolproperty-class/servernetworkprotocolproperty-class.md)オブジェクトのインスタンス上のネットワーク プロトコルの属性を表す[!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]します。  
+ [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]のインスタンス上のネットワークプロトコルの属性を表す[Servernetworkprotocolproperty クラス](../../../relational-databases/wmi-provider-configuration-classes/servernetworkprotocolproperty-class/servernetworkprotocolproperty-class.md)オブジェクト。  
   
 #### <a name="parameters"></a>パラメーター  
   
 |パラメーター|説明|  
 |---------------|-----------------|  
-|*%Numvalue% 個*|A **uint32**現在のプロパティの新しい値を指定する値。|  
+|*NumValue*|現在のプロパティの新しい値を指定する**uint32**値。|  
   
 ## <a name="property-valuereturn-value"></a>プロパティ値/戻り値  
  **uint32** 値。サービスが正常に変更された場合は 0、要求がサポートされていない場合は 1 になります。それ以外の数値はエラーを示します。  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>解説  
   
 ## <a name="see-also"></a>参照  
- [サーバー ネットワーク プロトコルとネットワーク ライブラリの構成](https://msdn.microsoft.com/library/ms177485\(v=sql.100\).aspx)  
+ [サーバーネットワークプロトコルと Net-library の構成](https://msdn.microsoft.com/library/ms177485\(v=sql.100\).aspx)  
   
   

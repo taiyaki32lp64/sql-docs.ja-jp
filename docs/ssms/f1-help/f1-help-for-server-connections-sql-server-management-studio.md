@@ -14,19 +14,18 @@ helpviewer_keywords:
 - connections [SQL Server Management Studio]
 - Connect to Server dialog box
 ms.assetid: 6a72e24f-9e11-4032-ab9e-5ecc6edd4890
-author: stevestein
-ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 1539e3ed4c75ccb7837f1ea16717b9af8c5f3f59
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 495e32c9930711562876c87c5781d51535f1ff2a
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47773925"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68265070"
 ---
 # <a name="f1-help-for-server-connections-sql-server-management-studio"></a>サーバー接続の F1 ヘルプ (SQL Server Management Studio)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-ここでは、 **の** [サーバーへの接続] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]ダイアログ ボックス ページの F1 ヘルプについて紹介します。  
+ここでは、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] の **[サーバーへの接続]** ダイアログ ボックス ページの F1 ヘルプについて紹介します。  
   
 [[サーバーの参照] ([ローカル サーバー])](../../ssms/f1-help/browse-for-servers-local-servers.md)  
   

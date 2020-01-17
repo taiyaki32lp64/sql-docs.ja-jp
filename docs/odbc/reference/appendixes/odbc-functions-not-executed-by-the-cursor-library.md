@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: f2941522-75eb-4db9-9468-4800b884dac2
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 9e3daee4ea5f5d46ecf0e7490e1d2e82303dd8a4
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 62fcf860aba5c9f0be80e575428a362a7f3ca588
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47697598"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68100652"
 ---
 # <a name="odbc-functions-not-executed-by-the-cursor-library"></a>カーソル ライブラリによって実行されない ODBC 関数
 > [!IMPORTANT]  

@@ -17,13 +17,13 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: daa9064feb59ab7052077d9d67701630ee7fcef5
-ms.sourcegitcommit: 480961f14405dc0b096aa8009855dc5a2964f177
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/22/2019
-ms.locfileid: "54420067"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68220355"
 ---
-# <a name="object-catalog-views-transact-sql"></a>オブジェクト カタログ ビュー (Transact-SQL)
+# <a name="object-catalog-views-transact-sql"></a>オブジェクト カタログ ビュー (TRANSACT-SQL)
 
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
@@ -52,7 +52,7 @@ ms.locfileid: "54420067"
 |[sys.views](../../relational-databases/system-catalog-views/sys-views-transact-sql.md)|[sys.numbered_procedure_parameters](../../relational-databases/system-catalog-views/sys-numbered-procedure-parameters-transact-sql.md)|
 |[sys.numbered_procedures](../../relational-databases/system-catalog-views/sys-numbered-procedures-transact-sql.md)||  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [システム カタログ ビュー](catalog-views-transact-sql.md) [システム ビュー &#40;TRANSACT-SQL&#41;](https://msdn.microsoft.com/library/35a6161d-7f43-4e00-bcd3-3091f2015e90)  
   
   

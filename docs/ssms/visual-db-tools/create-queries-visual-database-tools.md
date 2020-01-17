@@ -10,15 +10,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - queries [SQL Server], creating
 ms.assetid: 696a080d-848f-44d3-a918-e29bafaab85a
-author: stevestein
-ms.author: sstein
-manager: craigg
-ms.openlocfilehash: e34e3515159652ba322709e46108219552169e55
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: ded6c850d45cee6bee2fb820503eb17575a6377d
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47700740"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68264311"
 ---
 # <a name="create-queries-visual-database-tools"></a>クエリの作成 (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

@@ -25,13 +25,12 @@ helpviewer_keywords:
 ms.assetid: 0669b1d0-46cc-4fac-8df7-5f7fa7af5db4
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: 3829348777930a9184620d21a0969e166ce37efc
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 7d2061479ac8f93dfcdbc4a8039ef3914d897f87
+ms.sourcegitcommit: e9c1527281f2f3c7c68981a1be94fe587ae49ee9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47661310"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73064651"
 ---
 # <a name="create-fulltext-stoplist-transact-sql"></a>CREATE FULLTEXT STOPLIST (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -41,7 +40,7 @@ ms.locfileid: "47661310"
  ストップワードは、"*ストップリスト*" と呼ばれるオブジェクトを使用してデータベースで管理されます。 ストップリストは、フルテキスト インデックスに関連付けられている場合、そのインデックスのフルテキスト クエリに適用されるストップワードの一覧です。 詳細については、「 [フルテキスト検索に使用するストップワードとストップリストの構成と管理](../../relational-databases/search/configure-and-manage-stopwords-and-stoplists-for-full-text-search.md)」を参照してください。  
   
 > [!IMPORTANT]  
->  CREATE FULLTEXT STOPLIST、ALTER FULLTEXT STOPLIST、および DROP FULLTEXT STOPLIST は、互換性レベル 100 でのみサポートされています。 互換性レベルが 80 および 90 の場合、これらのステートメントはサポートされません。 ただし、システム ストップリストは、どの互換性レベルでも自動的に新しいフルテキスト インデックスに関連付けられます。  
+>  CREATE FULLTEXT STOPLIST、ALTER FULLTEXT STOPLIST、DROP FULLTEXT STOPLIST は、互換性レベル 100 以下でのみサポートされています。 互換性レベルが 80 および 90 の場合、これらのステートメントはサポートされません。 ただし、システム ストップリストは、どの互換性レベルでも自動的に新しいフルテキスト インデックスに関連付けられます。  
   
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -65,7 +64,7 @@ CREATE FULLTEXT STOPLIST stoplist_name
  *source_stoplist_name* で指定したストップリストが置かれているデータベースの名前です。 指定しない場合、*database_name* は現在のデータベースに設定されます。  
   
  *source_stoplist_name*  
- 既存のストップリストをコピーして新しいストップリストを作成するように指定します。 *source_stoplist_name* が存在しない場合、またはデータベース ユーザーに適切な権限がない場合は、CREATE FULLTEXT STOPLIST がエラーで失敗します。 ソース ストップリストのストップワードに指定された言語が現在のデータベースに登録されていない場合、CREATE FULLTEXT STOPLIST は成功しますが、警告が表示され、対応するストップワードは追加されません。  
+ 既存のストップリストをコピーすることで、新しいストップリストを作成するように指定します。 *source_stoplist_name* が存在しない場合、またはデータベース ユーザーに適切な権限がない場合は、CREATE FULLTEXT STOPLIST がエラーで失敗します。 ソース ストップリストのストップワードに指定された言語が現在のデータベースに登録されていない場合、CREATE FULLTEXT STOPLIST は成功しますが、警告が表示され、対応するストップワードは追加されません。  
   
  SYSTEM STOPLIST  
  [リソース データベース](../../relational-databases/databases/resource-database.md)に既定で存在するストップリストから新しいストップリストを作成するように指定します。  
@@ -87,7 +86,7 @@ CREATE FULLTEXT STOPLIST stoplist_name
 ### <a name="a-creating-a-new-full-text-stoplist"></a>A. 新しいフルテキスト ストップリストを作成する  
  次の例では、`myStoplist` という名前の新しいフルテキスト ストップリストを作成しています。  
   
-```  
+```sql  
 CREATE FULLTEXT STOPLIST myStoplist;  
 GO  
 ```  
@@ -95,7 +94,7 @@ GO
 ### <a name="b-copying-a-full-text-stoplist-from-an-existing-full-text-stoplist"></a>B. 既存のフルテキスト ストップリストからフルテキスト ストップリストをコピーする  
  次の例では、`myStoplist2` という名前の既存の AdventureWorks ストップリストをコピーして、`Customers.otherStoplist` という名前の新しいフルテキスト ストップリストを作成しています。  
   
-```  
+```sql  
 CREATE FULLTEXT STOPLIST myStoplist2 FROM AdventureWorks.otherStoplist;  
 GO  
 ```  
@@ -103,7 +102,7 @@ GO
 ### <a name="c-copying-a-full-text-stoplist-from-the-system-full-text-stoplist"></a>C. システムのフルテキスト ストップリストからフルテキスト ストップリストをコピーする  
  次の例では、システム ストップリストをコピーして、`myStoplist3` という名前の新しいフルテキスト ストップリストを作成しています。  
   
-```  
+```sql  
 CREATE FULLTEXT STOPLIST myStoplist3 FROM SYSTEM STOPLIST;  
 GO  
 ```  

@@ -1,5 +1,5 @@
 ---
-title: getTimestamp (int, java.util.Calendar) メソッド |Microsoft Docs
+title: getTimestamp メソッド (int, java.util.Calendar) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: f2dd5688-7344-437a-8716-7024fb8e9c31
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: c6d4908025700c6dda9a5636991ba3f799e628e8
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: c4022d3a90e81ba3d4de73aab88b740108584c5f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47667412"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67978895"
 ---
 # <a name="gettimestamp-method-int-javautilcalendar-sqlserverresultset"></a>getTimestamp (int, java.util.Calendar) メソッド (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -41,18 +40,18 @@ public java.sql.Timestamp getTimestamp(int columnIndex,
   
  列インデックスを示す **int** です。  
   
- *cal*  
+ *カレンダー*  
   
- 暦オブジェクト。  
+ Calendar オブジェクト。  
   
 ## <a name="return-value"></a>戻り値  
- タイムスタンプのオブジェクト。  
+ タイムスタンプオブジェクト。  
   
 ## <a name="exceptions"></a>例外  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- この getTimestamp メソッドは、java.sql.ResultSet インターフェイスの getTimestamp メソッドによって指定されます。  
+ この getTimestamp メソッドは、java.sql.ResultSet インターフェイスの getTimestamp メソッドで規定されています。  
   
  このメソッドでは、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] の datetime 列と smalldatetime 列からのみ値が返されます。  
   

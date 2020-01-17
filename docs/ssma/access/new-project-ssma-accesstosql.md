@@ -1,5 +1,5 @@
 ---
-title: 新しいプロジェクト (SSMA) (AccessToSQL) |Microsoft Docs
+title: 新しいプロジェクト (SSMA) (Sql server への追加) |Microsoft Docs
 ms.prod: sql
 ms.custom: ''
 ms.date: 01/19/2017
@@ -11,29 +11,28 @@ helpviewer_keywords:
 ms.assetid: ca294f6d-eeb5-42ca-9306-156281a3f0f3
 author: Shamikg
 ms.author: Shamikg
-manager: craigg
-ms.openlocfilehash: af3859f5e402dce2854cce02439ff6cb26529f46
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: 3e7e854b532040c9a0d9468ad98a7e08048569de
+ms.sourcegitcommit: 66dbc3b740f4174f3364ba6b68bc8df1e941050f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52413459"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73632672"
 ---
-# <a name="new-project-ssma-accesstosql"></a>新しいプロジェクト (SSMA) (AccessToSQL)
-使用して、**新しいプロジェクト**新しい SSMA プロジェクトを作成する ダイアログ ボックス。 アクセスする、**新しいプロジェクト** ダイアログ ボックスで、**ファイル** メニューのをクリックして**新しいプロジェクト**します。  
+# <a name="new-project-ssma-accesstosql"></a>新しいプロジェクト (SSMA) (Sql server への追加)
+新しい SSMA プロジェクトを作成するには、 **[新しいプロジェクト]** ダイアログボックスを使用します。 **[新しいプロジェクト]** ダイアログボックスにアクセスするには、 **[ファイル]** メニューの **[新しいプロジェクト]** をクリックします。  
   
-## <a name="options"></a>および  
+## <a name="options"></a>オプション  
 **名前**  
   
-プロジェクトの名前を入力します。 SSMA は、ファイル拡張子を追加します。  
+プロジェクトの名前を入力します。 SSMA によってファイル拡張子が追加されます。  
   
 **場所**  
   
-入力するか、フォルダーまたはプロジェクトを保存するネットワークの場所を参照します。  
+フォルダーまたはネットワークの場所を入力するか、参照してプロジェクトを保存します。  
   
 **MigrateTo**  
   
-下の一覧からターゲット データベースのバージョンのいずれかを選択します  
+次の一覧からターゲットデータベースのバージョンの1つを選択します  
   
 -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2005  
   
@@ -48,6 +47,6 @@ ms.locfileid: "52413459"
 -   SQL Azure  
   
 > [!IMPORTANT]  
-> 'SQL Azure' 型の新しいプロジェクトを必要とする SQL Server Native Client (SNAC) バージョン 10.5 またはの上へのアクセスをリンクするテーブルを SQL Azure データベース。   
-> SNAC の最新バージョンを取得する[Microsoft® SQL Server® 2008 R2 用 Feature Pack](https://go.microsoft.com/fwlink/?LinkId=196940)します。  
+> ' SQL Azure ' 型の新しいプロジェクトでは、SQL Azure データベースにアクセステーブルをリンクするには、SQL Server Native Client (SNAC) バージョン10.5 以降が必要です。   
+> 最新バージョンの SNAC は、 [Microsoft® SQL Server® 2008 R2 Feature Pack](https://www.microsoft.com/download/details.aspx?id=16978)から入手できます。  
   

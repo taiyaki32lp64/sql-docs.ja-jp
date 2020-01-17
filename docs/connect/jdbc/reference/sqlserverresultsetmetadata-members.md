@@ -1,5 +1,5 @@
 ---
-title: SQLServerResultSetMetaData のメンバー |Microsoft Docs
+title: SQLServerResultSetMetaData Members |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 37587981-2979-49a3-a6ab-df4bfb9b8748
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 912bd276e9b80911e7dec71d7edbb68cd30676af
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 5998d16986c23b351fe565bbad0d84d2619aaa2f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47818602"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67970520"
 ---
 # <a name="sqlserverresultsetmetadata-members"></a>SQLServerResultSetMetaData のメンバー
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

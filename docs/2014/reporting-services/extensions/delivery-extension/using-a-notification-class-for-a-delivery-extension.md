@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 04/27/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- docset-sql-devref
-- reporting-services-native
+ms.technology: reporting-services
 ms.topic: reference
 helpviewer_keywords:
 - delivery extensions [Reporting Services], notifications
@@ -14,15 +12,15 @@ helpviewer_keywords:
 - retry queues
 - Nofication class
 ms.assetid: 549c40c4-d33d-46c2-9d6a-7bbb671ac67a
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 1beb87fd647ccf033b40764d40cb8a3349d00fe3
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: db6467b21f84a80bb14a5e6ccad30e16d7cfb584
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56019663"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63180388"
 ---
 # <a name="using-a-notification-class-for-a-delivery-extension"></a>配信拡張機能での Notification クラスの使用
   <xref:Microsoft.ReportingServices.Interfaces.Notification> クラスは <xref:Microsoft.ReportingServices.Interfaces> 名前空間にあり、配信拡張機能がレポートの配信に使用するサブスクリプション情報を表します。 <xref:Microsoft.ReportingServices.Interfaces.Notification> クラスには、配信するレポートの表示、通知の状態の決定、およびユーザー データの設定に使用できる多数のプロパティが用意されています。  
@@ -39,7 +37,7 @@ notification は、配信の中心的なオブジェクトです。
 ## <a name="retry-functionality"></a>再試行機能  
  [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] では、すぐに配信できない通知に対する再試行キューを作成できます。 レポート サーバーが配信拡張機能の <xref:Microsoft.ReportingServices.Interfaces.IDeliveryExtension.Deliver%2A> メソッドを呼び出した後、配信拡張機能はレポート サーバーが後で配信を再試行するように要求できます。 この場合、レポート サーバーは通知を内部キューに配置し、特定の時間が経過した後に配信を再試行します。 管理者は、**MaxNumberOfRetries** XML 要素と **PeriodBetweenRetries** XML 要素を使用して、RSReportServer.config ファイルの配信拡張機能セクションに、レポート サーバーが実行する再試行回数の最大数と再試行の間隔を構成できます。 後の配信が成功するか、再試行の最大回数に達すると、通知が再試行キューから削除されます。 再試行の最大回数後に配信が失敗すると、通知が破棄されます。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [配信拡張機能の実装](../delivery-extension/implementing-a-delivery-extension.md)   
  [Reporting Services 拡張機能ライブラリ](../reporting-services-extension-library.md)  
   

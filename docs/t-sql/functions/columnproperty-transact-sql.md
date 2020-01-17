@@ -17,15 +17,14 @@ helpviewer_keywords:
 - parameters [SQL Server], properties
 - COLUMNPROPERTY function
 ms.assetid: 2408c264-6eca-4120-bb71-df043c7c2792
-author: MashaMSFT
-ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 451b92b502a22d8cefc32e8ea82570cd1e0187e1
-ms.sourcegitcommit: 467b2c708651a3a2be2c45e36d0006a5bbe87b79
+author: MikeRayMSFT
+ms.author: mikeray
+ms.openlocfilehash: ff96377eac69c1596e0d2e2661714f82dd2cae9a
+ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53980548"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "73983021"
 ---
 # <a name="columnproperty-transact-sql"></a>COLUMNPROPERTY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -55,13 +54,13 @@ COLUMNPROPERTY ( id , column , property )
 |**AllowsNull**|NULL 値を許可します。|1:TRUE<br /><br /> 0:FALSE<br /><br /> NULL: 無効な入力|  
 |**ColumnId**|**sys.columns.column_id** に対応する列の ID 値です。|列 ID<br /><br /> **注:** 複数の列に対してクエリを実行する場合、列の ID 値の順序にギャップが生じることがあります。|  
 |**FullTextTypeColumn**|*column* のドキュメント型情報を保持する、テーブル内の TYPE COLUMN。|この関数の 2 番目のパラメーターとして渡される列名の式の、フルテキストの TYPE COLUMN の ID。|  
-|**GeneratedAlwaysType**|システムによって生成された列の値です。 **sys.columns.generated_always_type** に対応します|**適用対象**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]<br /><br /> 0:常に生成されなかった<br /><br /> 1:行の先頭として常に生成された<br /><br /> 2:行の終わりに常に生成された|  
+|**GeneratedAlwaysType**|システムによって生成された列の値です。 **sys.columns.generated_always_type** に対応します|**適用対象**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 以降。<br /><br /> 0:常に生成されなかった<br /><br /> 1:行の先頭として常に生成された<br /><br /> 2:行の終わりに常に生成された|  
 |**IsColumnSet**|列は列セットです。 詳細については、「 [列セットの使用](../../relational-databases/tables/use-column-sets.md)」を参照してください。|1:TRUE<br /><br /> 0:FALSE<br /><br /> NULL: 無効な入力|  
 |**IsComputed**|列は計算列です。|1:TRUE<br /><br /> 0:FALSE<br /><br /> NULL: 無効な入力|  
 |**IsCursorType**|プロシージャ パラメーターは CURSOR 型です。|1:TRUE<br /><br /> 0:FALSE<br /><br /> NULL: 無効な入力|  
 |**IsDeterministic**|列は決定的です。 このプロパティは、計算列およびビュー列にのみ適用されます。|1:TRUE<br /><br /> 0:FALSE<br /><br /> NULL: 無効な入力 (計算列またはビュー列ではありません)|  
 |**IsFulltextIndexed**|列はフルテキスト インデックス作成用に登録されます。|1:TRUE<br /><br /> 0:FALSE<br /><br /> NULL: 無効な入力|  
-|**IsHidden**|システムによって生成された列の値です。 **sys.columns.is_hidden** に対応します|**適用対象**: [!INCLUDE[ssCurrentLong](../../includes/sscurrent-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]<br /><br /> 0:非表示ではない<br /><br /> 1:[非表示]|  
+|**IsHidden**|システムによって生成された列の値です。 **sys.columns.is_hidden** に対応します|**適用対象**: [!INCLUDE[ssCurrentLong](../../includes/sscurrent-md.md)] 以降。<br /><br /> 0:非表示ではない<br /><br /> 1:[非表示]|  
 |**IsIdentity**|列で IDENTITY プロパティを使用します。|1:TRUE<br /><br /> 0:FALSE<br /><br /> NULL: 無効な入力|  
 |**IsIdNotForRepl**|列で IDENTITY_INSERT の設定が確認されます。|1:TRUE<br /><br /> 0:FALSE<br /><br /> NULL: 無効な入力|  
 |**IsIndexable**|列にインデックスを作成できます。|1:TRUE<br /><br /> 0:FALSE<br /><br /> NULL: 無効な入力|  
@@ -108,7 +107,7 @@ Column Length
 ```  
   
 ## <a name="see-also"></a>参照
-[メタデータ関数 (&) #40 です。TRANSACT-SQL と #41 です。](../../t-sql/functions/metadata-functions-transact-sql.md)  
+[メタデータ関数 &#40;Transact-SQL&#41;](../../t-sql/functions/metadata-functions-transact-sql.md)  
 [TYPEPROPERTY &#40;Transact-SQL&#41;](../../t-sql/functions/typeproperty-transact-sql.md)
   
   

@@ -17,24 +17,22 @@ helpviewer_keywords:
 ms.assetid: 4513a18d-dd6e-407a-b009-49dc9432ec7e
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 17a920a45381b20e4ea246619810856624a29025
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
+ms.openlocfilehash: d2d1746a9ace097c8d915bb1cb5425170883250d
+ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54132952"
+ms.lasthandoff: 08/03/2019
+ms.locfileid: "68769638"
 ---
 # <a name="secure-the-publisher"></a>パブリッシャーのセキュリティ保護
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  次のレプリケーション エージェントはパブリッシャーに接続します。  
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
   
--   ログ リーダー エージェント (Log Reader Agent)  
+次のレプリケーション エージェントはパブリッシャーに接続します。  
   
--   スナップショット エージェント  
-  
+-   ログ リーダー エージェント
+-   スナップショット エージェント
 -   キュー リーダー エージェント (Queue Reader Agent)  
-  
 -   [マージ エージェント]  
   
  最低限必要な権限のみを与え、かつ、すべてのパスワードの格納を保護するという原則に従って、これらの各エージェントに対し適切なログインを提供することをお勧めします。 各エージェントに必要な権限の詳細については、「 [Replication Agent Security Model](../../../relational-databases/replication/security/replication-agent-security-model.md)」を参照してください。  
@@ -45,7 +43,7 @@ ms.locfileid: "54132952"
  PAL は、パブリッシャーでパブリケーションの安全を確保する主要なメカニズムです。 PAL は、 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Windows のアクセス制御リストによく似た機能を備えています。 パブリケーションを作成すると、レプリケーションによってそのパブリケーションから PAL が作成されます。 PAL は、パブリケーションへのアクセスを許可されているログインとグループのリストを含めるように構成できます。 エージェントがパブリッシャーまたはディストリビューターに接続し、パブリケーションへのアクセスを要求すると、PAL 内の認証情報が、エージェントによって提供されるパブリッシャー ログインと比較されます。 このプロセスでは、クライアント ツールがパブリッシャーとディストリビューターのログインを使用してパブリッシャー側で直接変更を行う危険性を回避できるので、パブリッシャーのセキュリティを向上できます。  
   
 > [!NOTE]  
->  PAL のメンバーに含めるため、レプリケーションによって、各パブリケーションに対してパブリッシャー上にロールが作成されます。 ロールには、マージ レプリケーションの場合は **Msmerge_**_\<PublicationID>_ という形式、トランザクション レプリケーションとスナップショット レプリケーションの場合は **MSReplPAL_**_\<PublicationDatabaseID>_**_**_\<PublicationID>_ という形式で名前が付けられます。  
+>  PAL のメンバーに含めるため、レプリケーションによって、各パブリケーションに対してパブリッシャー上にロールが作成されます。 ロールには、マージ レプリケーションの場合は **Msmerge_** _\<PublicationID>_ という形式、トランザクション レプリケーションとスナップショット レプリケーションの場合は **MSReplPAL_** _\<PublicationDatabaseID>_ **_** _\<PublicationID>_ という形式で名前が付けられます。  
   
  既定で PAL に含まれるログインは、パブリケーションが作成された時点の **sysadmin** 固定サーバー ロールのメンバー、およびパブリケーションを作成するために使用されるログインです。 既定で、パブリケーション データベース上の **sysadmin** 固定サーバー ロールまたは **db_owner** 固定データベース ロールのメンバーであるすべてのログインは、明示的に PAL に追加しなくても、パブリケーションに対してサブスクライブできます。  
   

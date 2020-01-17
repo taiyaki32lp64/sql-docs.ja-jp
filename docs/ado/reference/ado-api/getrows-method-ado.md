@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 14b92860-4171-47d9-a413-dd60dd6a8880
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 65d346cb9394613a92f95f7466e429b10c54b1a8
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d96b7968c7aba8d1249db2f43b53fc8a22596419
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47616967"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67918449"
 ---
 # <a name="getrows-method-ado"></a>GetRows メソッド (ADO)
 複数のレコードを取得、 [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md)オブジェクトを配列にします。  
@@ -41,7 +40,7 @@ array = recordset.GetRows(Rows, Start, Fields )
  *行数*  
  任意。 A [GetRowsOptionEnum](../../../ado/reference/ado-api/getrowsoptionenum.md)を取得するレコードの数を示す値。 既定値は**adGetRowsRest**します。  
   
- *開始*  
+ *[開始]*  
  任意。 A**文字列**値または**バリアント**元となるレコードのブックマークに評価される、 **GetRows**の操作を開始する必要があります。 使用することも、 [BookmarkEnum](../../../ado/reference/ado-api/bookmarkenum.md)値。  
   
  *Fields*  
@@ -61,6 +60,6 @@ array = recordset.GetRows(Rows, Start, Fields )
 ## <a name="applies-to"></a>適用対象  
  [Recordset オブジェクト (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [GetRows メソッドの例 (VB)](../../../ado/reference/ado-api/getrows-method-example-vb.md)   
  [GetRows メソッドの例 (VC++)](../../../ado/reference/ado-api/getrows-method-example-vc.md)   

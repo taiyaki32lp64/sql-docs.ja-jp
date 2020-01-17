@@ -9,13 +9,12 @@ ms.topic: reference
 ms.assetid: 67bca4f1-915d-46d4-9293-3742c16930a1
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: b28e3870fa5b9d3bbd62d3c4e4f4ea576c6b729f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ed44a434d8c66075c8281bb7ae1f645a189a0da6
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47613612"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68010986"
 ---
 # <a name="localdberrorunknowninstance"></a>LOCALDB_ERROR_UNKNOWN_INSTANCE
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

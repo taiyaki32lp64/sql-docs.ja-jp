@@ -1,7 +1,7 @@
 ---
 title: 円記号 (行の連結) (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 11/09/2017
+ms.date: 07/25/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -26,17 +26,17 @@ helpviewer_keywords:
 - line continuation character
 - reverse solidus
 ms.assetid: c97fbb20-3d12-4d0b-9b52-62a229bc83c0
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: 3e0c1b85e5dbcf1742fc229445f61a4eb175edab
-ms.sourcegitcommit: 467b2c708651a3a2be2c45e36d0006a5bbe87b79
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 54e1dcd9735610f7cc8f109f00aa56fa7728ce04
+ms.sourcegitcommit: 63c6f3758aaacb8b72462c2002282d3582460e0b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53979448"
+ms.lasthandoff: 07/25/2019
+ms.locfileid: "68495442"
 ---
 # <a name="backslash-line-continuation-transact-sql"></a>円記号 (行の連結) (Transact-SQL)
+
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
 `\` は、読みやすくするために、長い文字列定数、文字、またはバイナリを複数の行に改行します。  
@@ -58,7 +58,7 @@ ms.locfileid: "53979448"
  文字列の 2 行目以降を指定します。  
   
 ## <a name="remarks"></a>Remarks  
- このコマンドは、文字列の 1 行目と 2 行目以降を 1 つの文字列として、円記号を含めずに返します。  
+このコマンドは、文字列の 1 行目と 2 行目以降を 1 つの文字列として、円記号を含めずに返します。 円記号の後の改行は、改行文字 (U+000A) か、復帰 (U+000D) と改行 (U+000A) の順序での組み合わせである必要があります。 
 
 ## <a name="examples"></a>使用例  
 
@@ -85,7 +85,7 @@ def' AS [ColumnResult];
 次の例では、円記号と復帰を使用してバイナリ文字列を 2 行に分けます。  
 
 ```  
-SELECT 0xabc\  
+SELECT 0xabc\
 def AS [ColumnResult];  
   
 ```  

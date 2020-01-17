@@ -1,6 +1,6 @@
 ---
-title: プロパティ (ServerNetworkProtocolIpAddress クラス) を有効になっている |Microsoft Docs
-ms.custom: ''
+title: Enabled プロパティ (ServerNetworkProtocolIpAddress)
+ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 870fd4d0-6c77-462a-b480-d42eb044b2e7
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: 57a467de4cfe05232a73fd42a40b401c71c8c6fa
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: d3800388f5c47d575f649ea83c05830fbe77fbc8
+ms.sourcegitcommit: baa40306cada09e480b4c5ddb44ee8524307a2ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51675591"
+ms.lasthandoff: 11/06/2019
+ms.locfileid: "73660603"
 ---
 # <a name="enabled-property-servernetworkprotocolipaddress-class"></a>Enabled プロパティ (ServerNetworkProtocolIpAddress クラス)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -38,12 +37,12 @@ object.Enabled [= value]
   
 ## <a name="parts"></a>要素  
  *object*  
- A [ServerNetworkProtocolIPAdress クラス](../../../relational-databases/wmi-provider-configuration-classes/servernetworkprotocolipaddress-class/servernetworkprotocolipaddress-class.md)のインスタンス上のネットワーク プロトコルの IP アドレスを表すオブジェクトを[!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]します。  
+ [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]のインスタンス上のネットワークプロトコルの IP アドレスを表す[ServerNetworkProtocolIPAdress クラス](../../../relational-databases/wmi-provider-configuration-classes/servernetworkprotocolipaddress-class/servernetworkprotocolipaddress-class.md)オブジェクト。  
   
 ## <a name="property-valuereturn-value"></a>プロパティ値/戻り値  
- IP アドレスが有効になっているかどうかを指定するブール値: **true** IP アドレスが有効になっている場合または**false** IP アドレスが無効になっている場合。  
+ Ip アドレスが有効かどうかを指定するブール値です。 ip アドレスが有効な場合は**true** 、ip アドレスが無効な場合は**false**です。  
   
 ## <a name="see-also"></a>参照  
- [サーバー ネットワーク プロトコルとネットワーク ライブラリの構成](https://msdn.microsoft.com/library/ms177485\(v=sql.100\).aspx)  
+ [サーバーネットワークプロトコルと Net-library の構成](https://msdn.microsoft.com/library/ms177485\(v=sql.100\).aspx)  
   
   

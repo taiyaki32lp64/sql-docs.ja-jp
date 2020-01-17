@@ -1,6 +1,5 @@
 ---
-title: アップデート グラム (SQLXML 4.0) で注釈付きマッピング スキーマの指定 |Microsoft Docs
-ms.custom: ''
+title: アップデートグラム用の注釈付きマッピングスキーマ (SQLXML)
 ms.date: 03/17/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -20,36 +19,36 @@ helpviewer_keywords:
 ms.assetid: 2e266ed9-4cfb-434a-af55-d0839f64bb9a
 author: MightyPen
 ms.author: genemi
-manager: craigg
+ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 9e55ec7d8ed06914299f56b3d613186d8c612a05
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 4feb8e282390b4808b69493a299cbad990f1e91b
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56015554"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75243565"
 ---
 # <a name="specifying-an-annotated-mapping-schema-in-an-updategram-sqlxml-40"></a>アップデートグラムでの注釈付きマッピング スキーマの指定 (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-  ここでは、アップデートグラムで指定したマッピング スキーマ (XSD または XDR) が、更新の処理にどのように使用されるかについて説明します。 アップデート グラムでのテーブルと列を要素と属性のアップデート グラムのマッピングで使用する、注釈付きマッピング スキーマの名前を行うことができます[!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]します。 アップデートグラムでマッピング スキーマを指定する場合、アップデートグラムで指定する要素と属性名は、マッピング スキーマ内の要素と属性にマップされる必要があります。  
+  ここでは、アップデートグラムで指定したマッピング スキーマ (XSD または XDR) が、更新の処理にどのように使用されるかについて説明します。 アップデートグラムでは、アップデートグラムの要素と属性をの[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]テーブルと列にマップするときに使用する、注釈付きマッピングスキーマの名前を指定できます。 アップデートグラムでマッピング スキーマを指定する場合、アップデートグラムで指定する要素と属性名は、マッピング スキーマ内の要素と属性にマップされる必要があります。  
   
- 使用するマッピング スキーマを指定する、**マッピング スキーマ**の属性、 **\<同期 >** 要素。 次の例では、単純なマッピング スキーマを使用するアップデートグラムと、より複雑なスキーマを使用するアップデートグラムの 2 つのアップデートグラムを示します。  
+ マッピングスキーマを指定するには、 ** \<sync>** 要素の**マッピングスキーマ**属性を使用します。 次の例では、単純なマッピング スキーマを使用するアップデートグラムと、より複雑なスキーマを使用するアップデートグラムの 2 つのアップデートグラムを示します。  
   
 > [!NOTE]  
->  このドキュメントは、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] でサポートされるテンプレートとマッピング スキーマについて理解していることを前提としています。 詳細については、次を参照してください。[注釈付き XSD スキーマの概要&#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml/annotated-xsd-schemas/introduction-to-annotated-xsd-schemas-sqlxml-4-0.md)します。 XDR を使用する従来のアプリケーションでは、次を参照してください。[注釈付き XDR スキーマ&#40;SQLXML 4.0 では非推奨&#41;](../../../relational-databases/sqlxml/annotated-xsd-schemas/annotated-xdr-schemas-deprecated-in-sqlxml-4-0.md)します。  
+>  このドキュメントは、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] でサポートされるテンプレートとマッピング スキーマについて理解していることを前提としています。 詳細については、「[注釈付き XSD スキーマの概要 &#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml/annotated-xsd-schemas/introduction-to-annotated-xsd-schemas-sqlxml-4-0.md)」を参照してください。 XDR を使用するレガシアプリケーションでは、 [SQLXML 4.0&#41;では、注釈付き Xdr スキーマ &#40;非推奨](../../../relational-databases/sqlxml/annotated-xsd-schemas/annotated-xdr-schemas-deprecated-in-sqlxml-4-0.md)とされています。  
   
 ## <a name="dealing-with-data-types"></a>データ型の扱い  
- スキーマが指定されている場合、**イメージ**、**バイナリ**、または**varbinary** [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]データ型 (を使用して**sql:datatype**) していません。XML データ型では、指定、アップデート グラムでは、XML データ型が**バイナリの base 64**します。 データが場合**bin.base**型、型を明示的に指定する必要があります (**dt:type=bin.base**または**型 ="xsd:hexBinary"**)。  
+ スキーマで**image**、 **binary**、または**varbinary** [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]データ型 ( **sql: datatype**を使用) が指定されており、xml データ型が指定されていない場合、アップデートグラムでは xml データ型が**バイナリベース 64**であると想定されます。 データが**bin. 基本**型の場合は、型 (**dt: type = bin. base**または**Type = "xsd: hexBinary"**) を明示的に指定する必要があります。  
   
- スキーマが指定されている場合、 **dateTime**、**日付**、または**時間**XSD データ型を指定することする必要がありますも、対応する[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]データ型を使用して**sql:datatype ="dateTime"** します。  
+ スキーマで**dateTime**、 **date**、または**time**のいずれかの XSD データ型を指定する場合は[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 、 **sql: datatype = "dateTime"** を使用して、対応するデータ型も指定する必要があります。  
   
- パラメーターを処理するときに[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] **money**型、明示的に指定してください**sql:datatype ="money"** マッピング スキーマで適切なノード。  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] **Money**型のパラメーターを処理する場合は、マッピングスキーマの適切なノードに**sql: datatype = "money"** を明示的に指定する必要があります。  
   
-## <a name="examples"></a>使用例  
- 次の例を使用して実際のサンプルを作成するで指定された要件を満たす必要があります[SQLXML の例を実行するための要件](../../../relational-databases/sqlxml/requirements-for-running-sqlxml-examples.md)します。  
+## <a name="examples"></a>例  
+ 次の例を使用して実際のサンプルを作成するには、 [SQLXML の例を実行するための要件](../../../relational-databases/sqlxml/requirements-for-running-sqlxml-examples.md)を満たす必要があります。  
   
 ### <a name="a-creating-an-updategram-with-a-simple-mapping-schema"></a>A. 単純なマッピング スキーマを使用するアップデートグラムを作成する  
- 次の XSD スキーマ (SampleSchema.xml) は、マップするマッピング スキーマ、 **\<顧客 >** 要素は Sales.Customer テーブルにします。  
+ 次の XSD スキーマ (sampleschema.xml) は、 ** \<customer>** 要素を Sales. customer テーブルにマップするマッピングスキーマです。  
   
 ```  
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"  
@@ -67,7 +66,7 @@ ms.locfileid: "56015554"
 </xsd:schema>  
 ```  
   
- 次のアップデートグラムでは、Sales.Customer テーブルにレコードを挿入します。ここでは上のマッピング スキーマに従って、このデータをテーブルに適切にマップします。 アップデート グラムでは、要素名が同じ通知 **\<顧客 >** スキーマで定義されています。 アップデートグラムで特定のスキーマを指定するときには、これが必須となります。  
+ 次のアップデートグラムでは、Sales.Customer テーブルにレコードを挿入します。ここでは上のマッピング スキーマに従って、このデータをテーブルに適切にマップします。 アップデートグラムでは、スキーマで定義されているのと同じ要素名 ( ** \<Customer>**) が使用されていることに注意してください。 アップデートグラムで特定のスキーマを指定するときには、これが必須となります。  
   
 ##### <a name="to-test-the-updategram"></a>アップデートグラムをテストするには  
   
@@ -96,9 +95,9 @@ ms.locfileid: "56015554"
   
 3.  SQLXML 4.0 テスト スクリプト (sqlxml4test.vbs) を作成し、それを使用してテンプレートを実行します。  
   
-     詳細については、次を参照してください。 [SQLXML 4.0 クエリの実行に ADO を使用する](../../../relational-databases/sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md)します。  
+     詳細については、「ADO を使用した[SQLXML 4.0 クエリの実行](../../../relational-databases/sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md)」を参照してください。  
   
- これは、同等の XDR スキーマです。  
+ これは、これと同等の XDR スキーマです。  
   
 ```  
 <?xml version="1.0" ?>  
@@ -116,9 +115,9 @@ ms.locfileid: "56015554"
 ```  
   
 ### <a name="b-inserting-a-record-by-using-the-parent-child-relationship-specified-in-the-mapping-schema"></a>B. マッピング スキーマに指定されている親子リレーションシップを使用して、レコードを挿入する  
- スキーマ要素は関連付けることができます。 **\<Sql:relationship >** 要素がスキーマ要素間の親子リレーションシップを指定します。 この情報は、主キー/外部キーのリレーションシップがある対応するテーブルを更新するときに使用されます。  
+ スキーマ要素は関連付けることができます。 ** \<Sql: relationship>** 要素は、スキーマ要素間の親子リレーションシップを指定します。 この情報は、主キー/外部キーのリレーションシップがある対応するテーブルを更新するときに使用されます。  
   
- 次のマッピング スキーマ (SampleSchema.xml) は、2 つの要素で構成されます **\<順序 >** と **\<OD >**:  
+ 次のマッピングスキーマ (sampleschema.xml) は、 ** \<順序>** と** \<OD>** の2つの要素で構成されています。  
   
 ```  
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"  
@@ -157,7 +156,7 @@ ms.locfileid: "56015554"
 </xsd:schema>  
 ```  
   
- 次のアップデート グラムでは、この XSD スキーマを使用して、新しい注文明細レコードを追加する (、 **\<OD >** 内の要素、 **\<後 >** ブロック) 注文 43860 の。 **マッピング スキーマ**アップデート グラムでマッピング スキーマを指定する属性を使用します。  
+ 次のアップデートグラムでは、この XSD スキーマを使用して、注文43860の新しい注文明細レコード ( ** \<after>** ブロックに** \<OD>** 要素) を追加します。 **マッピング**スキーマ属性は、アップデートグラムでマッピングスキーマを指定するために使用されます。  
   
 ```  
 <ROOT xmlns:updg="urn:schemas-microsoft-com:xml-updategram">  
@@ -189,9 +188,9 @@ ms.locfileid: "56015554"
   
 3.  SQLXML 4.0 テスト スクリプト (sqlxml4test.vbs) を作成し、それを使用してテンプレートを実行します。  
   
-     詳細については、次を参照してください。 [SQLXML 4.0 クエリの実行に ADO を使用する](../../../relational-databases/sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md)します。  
+     詳細については、「ADO を使用した[SQLXML 4.0 クエリの実行](../../../relational-databases/sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md)」を参照してください。  
   
- これは、同等の XDR スキーマです。  
+ これは、これと同等の XDR スキーマです。  
   
 ```  
 <?xml version="1.0" ?>  
@@ -233,13 +232,15 @@ ms.locfileid: "56015554"
 ```  
   
 ### <a name="c-inserting-a-record-by-using-the-parent-child-relationship-and-inverse-annotation-specified-in-the-xsd-schema"></a>C. XSD スキーマで指定されている親子リレーションシップと inverse 注釈を使用して、レコードを挿入する  
- この例では、アップデート グラム ロジックが、更新プログラムを処理する XSD に指定されて、親子リレーションシップを使用する方法について説明する方法と、**逆**注釈を使用します。 詳細については、**逆**注釈を参照してください[sql:relationship での sql:inverse 属性指定&#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-using/specifying-the-sql-inverse-attribute-on-sql-relationship-sqlxml-4-0.md)します。  
+ この例では、更新プログラムを処理するために、アップデートグラムのロジックが XSD で指定されている親子関係を使用する方法と、**逆**の注釈の使用方法を示します。 **逆**の注釈の詳細については、「 [sql: relationship での Sql: 逆属性の指定 &#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-using/specifying-the-sql-inverse-attribute-on-sql-relationship-sqlxml-4-0.md)」を参照してください。  
   
- この例では、次の表にある、 **tempdb**データベース。  
+ この例では、次のテーブルが**tempdb**データベースにあることを前提としています。  
   
--   `Cust (CustomerID, CompanyName)`。ここでは `CustomerID` は主キーです。  
+-   
+  `Cust (CustomerID, CompanyName)`。ここでは `CustomerID` は主キーです。  
   
--   `Ord (OrderID, CustomerID)`。ここでは `CustomerID` は外部キーで、`CustomerID` テーブル内の `Cust` 主キーを参照します。  
+-   
+  `Ord (OrderID, CustomerID)`。ここでは `CustomerID` は外部キーで、`CustomerID` テーブル内の `Cust` 主キーを参照します。  
   
  このアップデートグラムでは次の XSD スキーマを使用して、Cust および Ord テーブルにレコードを挿入します。  
   
@@ -276,11 +277,11 @@ ms.locfileid: "56015554"
 </xsd:schema>  
 ```  
   
- この例では、XSD スキーマが **\<顧客 >** と **\<順序 >** され、2 つの要素間の親子リレーションシップを指定します。 識別 **\<順序 >** 親要素としてと **\<顧客 >** の子要素として。  
+ この例の XSD スキーマには、 ** \<Customer>** と** \<Order>** の要素があり、2つの要素間の親子リレーションシップが指定されています。 親要素と** \<顧客**が子要素として>する** \<順序>** を識別します。  
   
- アップデートグラム処理ロジックでは、親子リレーションシップに関する情報に基づいて、レコードがテーブルに挿入される順序が決定されます。 この例では、アップデート グラム ロジックまずしよう Ord テーブルにレコードを挿入 (ため **\<順序 >** 親である)、Cust テーブルにレコードを挿入しようと (ため **\<顧客 >** 子である)。 しかし、データベース テーブル スキーマに含まれる主キー/外部キーの情報に対して、この挿入操作はデータベースの外部キー違反となるため、挿入は失敗します。  
+ アップデートグラム処理ロジックでは、親子リレーションシップに関する情報に基づいて、レコードがテーブルに挿入される順序が決定されます。 この例では、アップデートグラムロジックはまず、Ord テーブルにレコードを挿入しようとします ( ** \<注文>** が親であるため)。次に、Cust テーブルにレコードを挿入しようとします ( ** \<Customer>** は子であるため)。 しかし、データベース テーブル スキーマに含まれる主キー/外部キーの情報に対して、この挿入操作はデータベースの外部キー違反となるため、挿入は失敗します。  
   
- 更新操作中に親子リレーションシップを逆に、アップデート グラム ロジックに指示する、**逆**注釈が指定されて、 **\<リレーションシップ >** 要素。 こうすると、最初に Cust テーブル、次に Ord テーブルにレコードが追加され、操作は成功します。  
+ 更新操作中に親子関係を反転するようにアップデートグラムのロジックを指定するには、 ** \<リレーションシップの>** 要素に**逆**注釈を指定します。 こうすると、最初に Cust テーブル、次に Ord テーブルにレコードが追加され、操作は成功します。  
   
  次のアップデートグラムでは、指定された XSD スキーマを使用して、Ord テーブルに注文 (OrderID=2)、Cust テーブルに顧客 (CustomerID='AAAAA') を挿入します。  
   
@@ -299,7 +300,7 @@ ms.locfileid: "56015554"
   
 ##### <a name="to-test-the-updategram"></a>アップデートグラムをテストするには  
   
-1.  これらのテーブルを作成、 **tempdb**データベース。  
+1.  次のテーブルを**tempdb**データベースに作成します。  
   
     ```  
     USE tempdb  
@@ -323,9 +324,9 @@ ms.locfileid: "56015554"
   
 4.  SQLXML 4.0 テスト スクリプト (sqlxml4test.vbs) を作成し、それを使用してテンプレートを実行します。  
   
-     詳細については、次を参照してください。 [SQLXML 4.0 クエリの実行に ADO を使用する](../../../relational-databases/sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md)します。  
+     詳細については、「ADO を使用した[SQLXML 4.0 クエリの実行](../../../relational-databases/sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md)」を参照してください。  
   
 ## <a name="see-also"></a>参照  
- [アップデート グラムのセキュリティに関する考慮事項&#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/security/updategram-security-considerations-sqlxml-4-0.md)  
+ [SQLXML 4.0&#41;&#40;アップデートグラムのセキュリティに関する考慮事項](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/security/updategram-security-considerations-sqlxml-4-0.md)  
   
   

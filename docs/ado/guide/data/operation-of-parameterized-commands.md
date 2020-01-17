@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 4fae0d54-83b6-4ead-99cc-bcf532daa121
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: faa4d4887079064ac6ccbe9536ac6c36fe8b9f79
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: e7d4399a8cf279ed2283061fff9064ffcc1adfba
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52516990"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67924735"
 ---
 # <a name="operation-of-parameterized-commands"></a>パラメーター化コマンドの操作
 大規模な子を使用する場合**レコード セット**、特に、親のサイズと比較**レコード セット**、いくつかの子章のみにアクセスする必要がある場合がありますを使用する方が効率的、パラメーター化されたコマンド。  
@@ -36,7 +35,7 @@ SHAPE {SELECT * FROM customer}
    RELATE cust_id TO PARAMETER 0)  
 ```  
   
- 親と子テーブルに、一般的な cust_id で列名がある*します。* *子コマンド*が、"でしょうか"プレース ホルダー、RELATE 句で参照する (つまり、"…。パラメーター 0")。  
+ 親と子テーブルが共通の列名を含ま*cust_id*します。 *子コマンド*が、"でしょうか"プレース ホルダー、RELATE 句で参照する (つまり、"…。パラメーター 0")。  
   
 > [!NOTE]
 >  パラメーターの句は、shape コマンドの構文にのみ関連します。 ADO のいずれかに関連付けられてない[パラメーター](../../../ado/reference/ado-api/parameter-object.md)オブジェクトまたは[パラメーター](../../../ado/reference/ado-api/parameters-collection-ado.md)コレクション。  
@@ -89,7 +88,7 @@ APPEND ({SELECT * FROM games WHERE home_team = ? OR visiting_team = ?}
 > [!NOTE]
 >  WHERE 句を使用して、パラメーターは使用できません、SQL データ型 text、ntext および image またはエラーが発生する場合は、次の説明が含まれています:`Invalid operator for data type`します。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [データ シェイプの例](../../../ado/guide/data/data-shaping-example.md)   
  [Shape の正式文法](../../../ado/guide/data/formal-shape-grammar.md)   
  [一般的な Shape コマンド](../../../ado/guide/data/shape-commands-in-general.md)

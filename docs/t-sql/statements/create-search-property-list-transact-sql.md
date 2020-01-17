@@ -23,13 +23,12 @@ helpviewer_keywords:
 ms.assetid: 5440cbb8-3403-4d27-a2f9-8e1f5a1bc12b
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: c4ac1a0066e91580e18cfb0646961d33cd0761d8
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e838729d064a6101d4efb8fc57c7cd7b9910ad8e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47773530"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68117282"
 ---
 # <a name="create-search-property-list-transact-sql"></a>CREATE SEARCH PROPERTY LIST (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
@@ -92,7 +91,7 @@ CREATE SEARCH PROPERTY LIST new_list_name
  現在のデータベースには CREATE FULLTEXT CATALOG 権限が必要であり、ソース プロパティ リストのコピー元のデータベースには REFERENCES 権限が必要です。  
   
 > [!NOTE]  
->  リストとフルテキスト インデックスを関連付けるには、REFERENCE 権限が必要です。 プロパティを追加または削除するか、リストを削除するには、CONTROL 権限が必要です。 プロパティ リストの REFERENCE 権限または CONTROL 権限は、そのプロパティ リストの所有者が許可できます。 CONTROL 権限を持つユーザーは、他のユーザーに REFERENCES 権限を与えることができます。  
+>  リストとフルテキスト インデックスを関連付けるには、REFERENCES 権限が必要です。 プロパティを追加または削除するか、リストを削除するには、CONTROL 権限が必要です。 プロパティ リストの REFERENCES 権限または CONTROL 権限は、そのプロパティ リストの所有者が許可できます。 CONTROL 権限を持つユーザーは、他のユーザーに REFERENCES 権限を与えることができます。  
   
 ## <a name="examples"></a>使用例  
   

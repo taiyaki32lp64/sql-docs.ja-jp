@@ -12,26 +12,25 @@ helpviewer_keywords:
 ms.assetid: 2b42a52a-6353-494c-a179-3a7533cd729f
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 1a13356aae88f332132bc6e8f6d6578971d2be99
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: e6191995c9d1c488fc5af056248ba39dd3eb4607
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54128062"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68076981"
 ---
 # <a name="date-time-and-timestamp-literals"></a>日付、時刻、およびタイムスタンプのリテラル
 日付、時刻、およびタイムスタンプのリテラルのエスケープ シーケンスは、します。  
   
- **{**_-型_ **'** _値_ **'}**  
+ **{** _-型_ **'** _値_ **'}**  
   
  場所*リテラル型*は、値の 1 つは、次の表に表示されています。  
   
 |*リテラル型*|説明|書式設定*値*|  
 |---------------------|-------------|-----------------------|  
 |**d**|date|*yyyy*-*mm*-*dd*|  
-|**t**|時間 *|*hh*:*mm*:*ss*[1]|  
-|**ts**|Timestamp|*yyyy*-*mm*-*dd* *hh*:*mm*:*ss*[.*f.*] [1]|  
+|**t**|Time*|*hh*:*mm*:*ss*[1]|  
+|**ts**|Timestamp|*yyyy*-*mm*-*dd* *hh*:*mm*:*ss*[.*f.* ] [1]|  
   
  [秒コンポーネントを含むリテラル、時刻、またはタイムスタンプ間隔で小数点の右側にある数字の 1] の番号は SQL_DESC_PRECISION の記述子フィールドに含まれる秒の有効桁数に依存します。 (詳細については、次を参照してください[SQLSetDescField](../../../odbc/reference/syntax/sqlsetdescfield-function.md)。)。  
   

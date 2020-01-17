@@ -21,15 +21,14 @@ helpviewer_keywords:
 - overwriting data
 - data updates [SQL Server], WRITETEXT statement
 ms.assetid: 80c252fd-a8b8-4a2e-888a-059081ed4109
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: 29345e463715bf787b7b7ada9d96c97aa42f38ed
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+author: VanMSFT
+ms.author: vanto
+ms.openlocfilehash: c10e7259062316454e4e0ecf430f6fdb87c53caf
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53204451"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67948102"
 ---
 # <a name="writetext-transact-sql"></a>WRITETEXT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

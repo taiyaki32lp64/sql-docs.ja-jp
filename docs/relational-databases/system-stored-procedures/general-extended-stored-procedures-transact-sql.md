@@ -19,15 +19,14 @@ helpviewer_keywords:
 ms.assetid: 9129f571-d162-42e6-a66b-340fbbf0acd1
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: ff1d003f4ddb20adf6ada2899df47c07b16d5bf4
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: daa3dc088a4a448e6b20cdf2ade73e64e86d491d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47763790"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67942196"
 ---
-# <a name="general-extended-stored-procedures-transact-sql"></a>汎用拡張ストアド プロシージャ (Transact-SQL)
+# <a name="general-extended-stored-procedures-transact-sql"></a>汎用拡張ストアド プロシージャ (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、次のシステム ストアド プロシージャのインスタンスからインターフェイスを提供する[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]さまざまなメンテナンスのための外部のプログラムにします。  
@@ -41,7 +40,7 @@ ms.locfileid: "47763790"
 |[xp_loginconfig](../../relational-databases/system-stored-procedures/xp-loginconfig-transact-sql.md)|[xp_sqlmaint](../../relational-databases/system-stored-procedures/xp-sqlmaint-transact-sql.md)|  
 ||[xp_sscanf](../../relational-databases/system-stored-procedures/xp-sscanf-transact-sql.md)|  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [システム ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

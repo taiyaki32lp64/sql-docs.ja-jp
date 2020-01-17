@@ -15,13 +15,12 @@ apitype: DLLExport
 ms.assetid: 1d50e040-8602-4ffa-be8f-b8633fdfa7ff
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: 699346c30d9e6684cfe39fdd79709fce211b007d
-ms.sourcegitcommit: ddb682c0061c2a040970ea88c051859330b8ac00
+ms.openlocfilehash: e35b0c9b806b435a4a98a319180801094068caf1
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51570751"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68022045"
 ---
 # <a name="localdbstoptracing-function"></a>LocalDBStopTracing 関数
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

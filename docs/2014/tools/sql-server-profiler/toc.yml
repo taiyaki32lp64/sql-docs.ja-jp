@@ -1,4 +1,4 @@
-- name: SQL Server Profiler
+- name: SQL Server プロファイラー
   href: sql-server-profiler.md
 - name: SQL Server プロファイラーのテンプレートと権限
   href: sql-server-profiler-templates-and-permissions.md

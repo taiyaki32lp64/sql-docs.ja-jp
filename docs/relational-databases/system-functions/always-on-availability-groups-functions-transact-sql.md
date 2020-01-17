@@ -12,13 +12,12 @@ dev_langs:
 ms.assetid: 293cc233-8688-4823-9887-176ed772f53d
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 10db07b70c383f1b77254b58344b64e9d90b5d12
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 7168d2f9842c482ff7474e700d0d1a1aa7fd734f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47659150"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68043146"
 ---
 # <a name="always-on-availability-groups-functions-transact-sql"></a>Always On 可用性グループの関数 (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]

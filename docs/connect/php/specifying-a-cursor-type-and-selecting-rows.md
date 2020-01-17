@@ -1,5 +1,5 @@
 ---
-title: カーソルの種類を指定して、行の選択 |Microsoft Docs
+title: カーソルの種類を指定して行を選択する |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 51147e4f-5f07-4ee6-8245-e937eefec71f
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: b48291a8b8ceed008d40048f1a27a3d5ba3c4b02
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: adc776d009a6836a6ce46207d0d426f7e444259b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47733270"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67935877"
 ---
 # <a name="specifying-a-cursor-type-and-selecting-rows"></a>カーソルの種類を指定し、行を選択する
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]

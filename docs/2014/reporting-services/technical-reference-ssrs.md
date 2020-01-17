@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 helpviewer_keywords:
 - Reporting Services, technical reference
@@ -14,15 +13,15 @@ helpviewer_keywords:
 - tools [Reporting Services]
 - user interface reference [Reporting Services]
 ms.assetid: 4876bee2-071f-4a8d-ab8a-b03337625b74
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 455eaec943cb649023ecea1b9ee4964a23961191
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: c9d14f27e1b41bf2a636f53ecb13c4fd88a9e4bc
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56037743"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66100612"
 ---
 # <a name="technical-reference-ssrs"></a>テクニカル リファレンス (SSRS)
   [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] には、[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] を使用または管理するためのツールおよび PowerShell のリファレンス ドキュメントがあります。  

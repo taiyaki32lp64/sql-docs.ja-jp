@@ -20,13 +20,12 @@ helpviewer_keywords:
 ms.assetid: 792fe7cf-b3b8-4f25-8329-78d63f0e6921
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 0796f25396d4c5303fb0de1762f6f04a18035fa9
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 7d14e4e85d6ee52955ba17f42d288e0c770a183a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47705630"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68046353"
 ---
 # <a name="sysfncdcisbitset-transact-sql"></a>sys.fn_cdc_is_bit_set (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -44,16 +43,16 @@ sys.fn_cdc_is_bit_set ( position , update_mask )
   
 ## <a name="arguments"></a>引数  
  *position*  
- 確認するマスク内の序数位置を指定します。 *位置*は**int**します。  
+ 確認するマスク内の序数位置です。 *位置*は**int**します。  
   
  *update_mask*  
- 更新された列を識別するマスクを指定します。 *update_mask*は**varbinary (128)** します。  
+ マスクを識別する列を更新します。 *update_mask*は**varbinary (128)** します。  
   
 ## <a name="return-type"></a>戻り値の型  
  **bit**  
   
 ## <a name="remarks"></a>コメント  
- 通常、この関数は、列が変更されたかどうかを示すために変更データ クエリの一部として使用します。 このシナリオでは、関数で[sys.fn_cdc_get_column_ordinal](../../relational-databases/system-functions/sys-fn-cdc-get-column-ordinal-transact-sql.md)クエリの前に必要な列の序数を取得するために使用します。 **sys.fn_cdc_is_bit_set**は返された結果セットの一部として列固有の情報を提供する、返される変更データの各行に適用されます。  
+ この関数は、列が変更されたかどうかを示す通常、変更データ クエリの一部として使用されます。 このシナリオでは、関数で[sys.fn_cdc_get_column_ordinal](../../relational-databases/system-functions/sys-fn-cdc-get-column-ordinal-transact-sql.md)クエリの前に必要な列の序数を取得するために使用します。 **sys.fn_cdc_is_bit_set**は返された結果セットの一部として列固有の情報を提供する、返される変更データの各行に適用されます。  
   
  関数の代わりにこの関数を使用することをお勧めします。 [sys.fn_cdc_has_column_changed](../../relational-databases/system-functions/sys-fn-cdc-has-column-changed-transact-sql.md)返された結果セットのすべての行の列が変更されたかどうかを決定するときにします。  
   
@@ -77,7 +76,7 @@ WHERE __$operation = 4;
 GO  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [変更データ キャプチャの関数 &#40;Transact-SQL&#41;](../../relational-databases/system-functions/change-data-capture-functions-transact-sql.md)   
  [sys.fn_cdc_get_column_ordinal &#40;TRANSACT-SQL&#41;](../../relational-databases/system-functions/sys-fn-cdc-get-column-ordinal-transact-sql.md)   
  [sys.fn_cdc_has_column_changed &#40;TRANSACT-SQL&#41;](../../relational-databases/system-functions/sys-fn-cdc-has-column-changed-transact-sql.md)   

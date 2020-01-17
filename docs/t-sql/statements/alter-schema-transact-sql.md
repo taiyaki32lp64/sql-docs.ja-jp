@@ -21,14 +21,13 @@ helpviewer_keywords:
 ms.assetid: 0a760138-460e-410a-a3c1-d60af03bf2ed
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: ad0ac154636885ab54f8873ff118e59330350380
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 162cccb3bba13d6d72f1af11effd6ceb8f26ff79
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47798450"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68044313"
 ---
 # <a name="alter-schema-transact-sql"></a>ALTER SCHEMA (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -62,7 +61,7 @@ ALTER SCHEMA schema_name
   
 ## <a name="arguments"></a>引数  
  *schema_name*  
- 現在のデータベース内にあるスキーマの名前を指定します。セキュリティ保護可能なリソースの移動先です。 SYS または INFORMATION_SCHEMA は指定できません。  
+ セキュリティ保護可能なリソースの移動先である、現在のデータベース内にあるスキーマの名前です。 SYS または INFORMATION_SCHEMA は指定できません。  
   
  \<entity_type>  
  所有者を変更するエンティティのクラスを指定します。 既定値はオブジェクトです。  
@@ -73,7 +72,7 @@ ALTER SCHEMA schema_name
 ## <a name="remarks"></a>Remarks  
  ユーザーとスキーマは完全に分離されています。  
   
- ALTER SCHEMA は、セキュリティ保護可能なリソースを同じデータベース内のスキーマ間で移動する場合にのみ使用できます。 スキーマ内のセキュリティ保護可能なリソースを変更または削除するには、そのリソースに対応した ALTER または DROP ステートメントを使用します。  
+ ALTER SCHEMA は、セキュリティ保護可能なリソースを同じデータベース内のスキーマ間で移動する場合にのみ使用できます。 スキーマ内のセキュリティ保護可能なリソースを変更または削除するには、そのリソースに固有の ALTER または DROP ステートメントを使用します。  
   
  *securable_name* に 1 つの要素から構成される名前を使用した場合、セキュリティ保護可能なリソースを特定するために、現在有効な名前解決規則が使用されます。  
   
@@ -83,13 +82,13 @@ ALTER SCHEMA schema_name
   
  テーブルやシノニムなどのオブジェクトを移動しても、そのオブジェクトに対する参照は自動的には更新されません。 移動したオブジェクトを参照しているオブジェクトに対しては、手動で変更を加える必要があります。 たとえば、テーブルを移動するとき、そのテーブルがトリガーで参照されている場合は、新しいスキーマ名が反映されるようにトリガーに変更を加える必要があります。 オブジェクトを移動する前には、[sys.sql_expression_dependencies](../../relational-databases/system-catalog-views/sys-sql-expression-dependencies-transact-sql.md) を使ってオブジェクトの従属関係を一覧表示できます。  
 
- [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] を使用してテーブルのスキーマを変更するには、オブジェクト エクスプローラーでテーブルを右クリックし、**[デザイン]** をクリックします。 **F4** キーを押して [プロパティ] ウィンドウを開きます。 **[スキーマ]** ボックスで新しいスキーマを選択します。  
+ [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] を使用してテーブルのスキーマを変更するには、オブジェクト エクスプローラーでテーブルを右クリックし、 **[デザイン]** をクリックします。 **F4** キーを押して [プロパティ] ウィンドウを開きます。 **[スキーマ]** ボックスで新しいスキーマを選択します。  
   
 > [!CAUTION]  
 >  [!INCLUDE[ssCautionUserSchema](../../includes/sscautionuserschema-md.md)]  
   
 ## <a name="permissions"></a>アクセス許可  
- 他のスキーマからセキュリティ保護可能なリソースを移動する場合、現在のユーザーには、(スキーマではなく) セキュリティ保護可能なリソースに対する CONTROL 権限と対象スキーマに対する ALTER 権限が必要です。  
+ 別のスキーマからセキュリティ保護可能なリソースを移動する場合、現在のユーザーには、(スキーマではなく) セキュリティ保護可能なリソースに対する CONTROL 権限とターゲット スキーマに対する ALTER 権限が必要です。  
   
  セキュリティ保護可能なリソースに EXECUTE AS OWNER の指定があり、所有者が SCHEMA OWNER に設定されている場合は、対象スキーマの所有者に対する IMPERSONATE 権限も必要です。  
   

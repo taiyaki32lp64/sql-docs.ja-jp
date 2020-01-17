@@ -10,17 +10,20 @@ ms.topic: reference
 helpviewer_keywords:
 - custom objects [Integration Services]
 ms.assetid: b03685bc-5398-4c3f-901a-1219c1098fbe
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: 424fb19d14d1851cd647f0fa21a4d3271c8dd2b6
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 112a925c051b5345933ee4c8fc1fb3b1147c2e48
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52502884"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71297314"
 ---
 # <a name="building-deploying-and-debugging-custom-objects"></a>カスタム オブジェクトのビルド、配置、およびデバッグ
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 用カスタム オブジェクトのコードを記述したら、アセンブリをビルドして配置し、[!INCLUDE[ssIS](../../includes/ssis-md.md)] デザイナーに統合してパッケージで使用できるようにし、テストとデバッグを行う必要があります。  
   
 ##  <a name="top"></a> Integration Services 用カスタム オブジェクトのビルド、配置、およびデバッグ手順  
@@ -57,7 +60,7 @@ ms.locfileid: "52502884"
   
 -   厳密な名前でのアセンブリへの署名  
   
- アセンブリには、[!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] でビルド時に厳密な名前を使用して簡単に署名できます。 **[プロジェクトのプロパティ]** ダイアログ ボックスで、**[署名]** タブをクリックします。**[アセンブリの署名]** を選択し、キー (.snk) ファイルのパスを指定します。  
+ アセンブリには、[!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] でビルド時に厳密な名前を使用して簡単に署名できます。 **[プロジェクトのプロパティ]** ダイアログ ボックスで、 **[署名]** タブをクリックします。 **[アセンブリの署名]** を選択し、キー (.snk) ファイルのパスを指定します。  
   
 ##  <a name="building"></a> アセンブリのビルド  
  プロジェクトに署名したら、[!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] の **[ビルド]** メニューで使用可能なコマンドを使用して、プロジェクトまたはソリューションを、ビルドまたはリビルドする必要があります。 ソリューションには、カスタム ユーザー インターフェイス用の独立したプロジェクトが含まれている場合があります。このプロジェクトにも厳密な名前で署名する必要があり、同時にビルドすることが可能です。  
@@ -80,7 +83,7 @@ copy $(TargetFileName) "C:\Program Files\Microsoft SQL Server\130\DTS\LogProvide
   
  アセンブリをフォルダーに配置する方法は 2 つあります。  
   
--   コンパイル済みのアセンブリをビルド後に適切なフォルダーに移動またはコピーします  (ビルド後のイベントにコピー コマンドを含めると便利です)。  
+-   コンパイル済みのアセンブリをビルド後に適切なフォルダーに移動またはコピーします (ビルド後のイベントにコピー コマンドを含めると便利です)。  
   
 -   適切なフォルダーでアセンブリを直接ビルドします。  
   
@@ -129,7 +132,7 @@ copy $(TargetFileName) "C:\Program Files\Microsoft SQL Server\130\DTS\LogProvide
   
 1.  デバッグ構成でプロジェクトへの署名とビルドを行い、プロジェクトを配置し、このトピックで説明したようにグローバル アセンブリ キャッシュにインストールします。  
   
-2.  **[プロジェクトのプロパティ]** の **[デバッグ]** タブで、**[開始動作]** として **[外部プログラムの開始]** を選択し、**dtexec.exe** を探します。これは、既定では C:\Program Files\Microsoft SQL Server\130\DTS\Binn にインストールされています。  
+2.  **[プロジェクトのプロパティ]** の **[デバッグ]** タブで、 **[開始動作]** として **[外部プログラムの開始]** を選択し、**dtexec.exe** を探します。これは、既定では C:\Program Files\Microsoft SQL Server\130\DTS\Binn にインストールされています。  
   
 3.  **[開始オプション]** の **[コマンド ライン オプション]** テキスト ボックスに、コンポーネントを使用するパッケージを実行するために必要なコマンド ライン引数を入力します。 多くの場合、コマンド ライン引数は /F[ILE] スイッチと、それに続く .dtsx ファイルのパスおよびファイル名で構成されます。 詳細については、「 [dtexec Utility](../../integration-services/packages/dtexec-utility.md)」を参照してください。  
   
@@ -145,7 +148,7 @@ copy $(TargetFileName) "C:\Program Files\Microsoft SQL Server\130\DTS\LogProvide
   
 3.  [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] の 2 番目のインスタンスを開き、カスタム オブジェクトを使用するパッケージが含まれている [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] プロジェクトを読み込みます。  
   
-4.  [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] の最初のインスタンスから、**[デバッグ]** メニューの **[プロセスにアタッチ]** をクリックして、パッケージが読み込まれる **devenv.exe** の 2 番目のインスタンスにアタッチします。  
+4.  [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] の最初のインスタンスから、 **[デバッグ]** メニューの **[プロセスにアタッチ]** をクリックして、パッケージが読み込まれる **devenv.exe** の 2 番目のインスタンスにアタッチします。  
   
 5.  [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] の 2 番目のインスタンスからパッケージを実行します。  
   
@@ -153,9 +156,9 @@ copy $(TargetFileName) "C:\Program Files\Microsoft SQL Server\130\DTS\LogProvide
   
 1.  上記の一覧にある手順を完了したら、**DtsDebugHost.exe** にアタッチできるようにパッケージの実行を一時停止します。 ここで強制的に一時停止するには、ブレークポイントを **OnPreExecute** イベントに追加します。または、スクリプト タスクをプロジェクトに追加し、モーダル メッセージ ボックスを表示するスクリプトを入力します。  
   
-2.  パッケージを実行します。 実行が一時停止されたら、コンポーネント プロジェクトが開かれている [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] のインスタンスに切り替え、**[デバッグ]** メニューの **[プロセスにアタッチ]** をクリックします。 **[x86]** としてのみ一覧に表示されているインスタンスではなく、必ず、**[型]** 列で **[マネージド, x86]** として表示されている **DtsDebugHost.exe** のインスタンスにアタッチします。  
+2.  パッケージを実行します。 実行が一時停止されたら、コンポーネント プロジェクトが開かれている [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] のインスタンスに切り替え、 **[デバッグ]** メニューの **[プロセスにアタッチ]** をクリックします。 **[x86]** としてのみ一覧に表示されているインスタンスではなく、必ず、 **[型]** 列で **[マネージド, x86]** として表示されている **DtsDebugHost.exe** のインスタンスにアタッチします。  
   
-3.  一時停止したパッケージに戻り、ブレークポイント以降を続行します。または、**[OK]** をクリックしてスクリプト タスクが生成したメッセージ ボックスを破棄し、パッケージの実行とデバッグを続けます。  
+3.  一時停止したパッケージに戻り、ブレークポイント以降を続行します。または、 **[OK]** をクリックしてスクリプト タスクが生成したメッセージ ボックスを破棄し、パッケージの実行とデバッグを続けます。  
   
 ## <a name="see-also"></a>参照  
  [Integration Services 用のカスタム オブジェクトの開発](../../integration-services/extending-packages-custom-objects/developing-custom-objects-for-integration-services.md)   

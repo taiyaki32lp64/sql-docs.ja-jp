@@ -12,26 +12,25 @@ dev_langs:
 ms.assetid: cca96a8f-7737-42d2-bbcc-03d5f858dcc1
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: 2ef7298fea5aa4c4d74932a7238a5603862ed626
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 7883a99a223af67f536a0991bb0ba48f30211bc6
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47813790"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68071363"
 ---
 # <a name="alter-index-selective-xml-indexes"></a>ALTER INDEX (選択的 XML インデックス)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
 
   既存の選択的 XML インデックスを変更します。 ALTER INDEX ステートメントは次のアイテムの 1 つ以上を変更します。  
   
--   インデックス パスの一覧 (FOR 句)。  
+-   インデックス付きパスの一覧 (FOR 句)。  
   
 -   名前空間の一覧 (WITH XMLNAMESPACES 句)。  
   
 -   インデックス オプション (WITH 句)。  
   
- 選択的セカンダリ XML インデックスを変更することはできません。 詳しくは、「[選択的セカンダリ XML インデックスの作成、変更、および削除](../../relational-databases/xml/create-alter-and-drop-secondary-selective-xml-indexes.md)」をご覧ください。  
+ セカンダリ選択的 XML インデックスを変更することはできません。 詳しくは、「[選択的セカンダリ XML インデックスの作成、変更、および削除](../../relational-databases/xml/create-alter-and-drop-secondary-selective-xml-indexes.md)」をご覧ください。  
   
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -45,7 +44,7 @@ ALTER INDEX index_name
     [WITH ( <index_options> )]  
   
 <table_object> ::=   
-{ [database_name. [schema_name ] . | schema_name. ] table_name }  
+{ database_name.schema_name.table_name | schema_name.table_name | table_name }  
 <promoted_node_path_action_list> ::=   
 <promoted_node_path_action_item> [, <promoted_node_path_action_list>]  
   
@@ -115,7 +114,7 @@ identifier
  変更する既存のインデックスの名前です。  
   
  *\<table_object>*  
- インデックスを作成する XML 列が含まれるテーブルを指定します。 次のどちらかの形式を使用します。  
+ インデックスに XML 列を含むテーブルです。 次のいずれかの形式を使用します。  
   
 -   `database_name.schema_name.table_name`  
   
@@ -125,18 +124,18 @@ identifier
   
 -   `table_name`  
   
- [WITH XMLNAMESPACES **(** \<xmlnamespace_list> **)**]  
+ [WITH XMLNAMESPACES **(** \<xmlnamespace_list> **)** ]  
  インデックスを作成するパスで使用される名前空間の一覧を指定します。 WITH XMLNAMESPACES 句の構文については、「[WITH XMLNAMESPACES &#40;Transact-SQL&#41;](../../t-sql/xml/with-xmlnamespaces.md)」をご覧ください。  
   
  FOR **(** \<promoted_node_path_action_list> **)**  
  追加または削除するインデックス付きパスの一覧です。  
   
--   **パスを追加 (ADD) します。** パスを追加 (ADD) するときは、CREATE SELECTIVE XML INDEX ステートメントを使用してパスを作成するときと同じ構文を使用します。 CREATE または ALTER ステートメントで指定できるパスについては、「[選択的 XML インデックスのパスと最適化ヒントの指定](../../relational-databases/xml/specify-paths-and-optimization-hints-for-selective-xml-indexes.md)」をご覧ください。  
+-   **パスを追加 (ADD) します。** パスを追加する場合は、CREATE SELECTIVE XML INDEX ステートメントでパスを作成するために使用する同じ構文を使用します。 CREATE または ALTER ステートメントで指定できるパスについては、「[選択的 XML インデックスのパスと最適化ヒントの指定](../../relational-databases/xml/specify-paths-and-optimization-hints-for-selective-xml-indexes.md)」をご覧ください。  
   
--   **パスを削除 (REMOVE) します。** パスを削除 (REMOVE) するときは、作成時にパスに付けた名前を指定します。  
+-   **パスを削除 (REMOVE) します。** パスを削除 (REMOVE) する場合、パスの作成時にパスに付けられた名前を指定します。  
   
- [WITH **(** \<index_options> **)**]  
- \<index_options> は、ALTER INDEX を FOR 句なしで使用する場合にのみ、指定することができます。 ALTER INDEX を使用してインデックスのパスを追加または削除する場合、インデックス オプションは引数として無効です。 インデックス オプションについては、「[CREATE XML INDEX &#40;選択的 XML インデックス&#41;](../../t-sql/statements/create-xml-index-selective-xml-indexes.md)」をご覧ください。  
+ [WITH **(** \<index_options> **)** ]  
+ \<index_options> は、ALTER INDEX を FOR 句なしで使用する場合にのみ、指定することができます。 ALTER INDEX を使用して、インデックスにパスを追加または削除する場合、インデックス オプションは有効な引数ではありません。 インデックス オプションについては、「[CREATE XML INDEX &#40;選択的 XML インデックス&#41;](../../t-sql/statements/create-xml-index-selective-xml-indexes.md)」をご覧ください。  
   
 ## <a name="remarks"></a>Remarks  
   
@@ -161,7 +160,7 @@ FOR
 );  
 ```  
   
- 次の例では、インデックス オプションを指定する ALTER INDEX ステートメントを示しています。 このステートメントは FOR 句を使用してパスを追加または削除していないため、インデックス オプションを指定できます。  
+ 次の例では、インデックス オプションを指定する ALTER INDEX ステートメントを示しています。 ステートメントで、パスを追加または削除するために FOR 句を使用しないため、インデックス オプションを使用できます。  
   
 ```sql  
 ALTER INDEX sxi_index  

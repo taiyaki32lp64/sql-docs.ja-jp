@@ -13,15 +13,14 @@ helpviewer_keywords:
 - table joins [SQL Server]
 - derived tables
 ms.assetid: 05f1ba1d-465f-4e36-84bb-21b963c9b8f9
-author: stevestein
-ms.author: sstein
-manager: craigg
-ms.openlocfilehash: e21d05f42eaf41d932c82c7f24f63df9d42c8a9e
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: da76d9e2f82f832e5426522047caa01d76262e39
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51699490"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68263349"
 ---
 # <a name="add-derived-tables-to-queries-visual-database-tools"></a>クエリへの派生テーブルの追加 (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

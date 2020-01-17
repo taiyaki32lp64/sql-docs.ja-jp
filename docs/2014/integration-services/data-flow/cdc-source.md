@@ -9,15 +9,15 @@ ms.topic: conceptual
 f1_keywords:
 - sql12.ssis.designer.cdcsource.f1
 ms.assetid: 99775608-e177-44ed-bb44-aaccb0f4f327
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: af2f56c92947cd8e210b8532cb6899c52486707e
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 4572e9fc61649f638b7c86ee23c75450216a4342
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53349812"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62828128"
 ---
 # <a name="cdc-source"></a>CDC ソース
   CDC ソースは [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 変更テーブルから変更データの範囲を読み取り、変更内容を下流の他の SSIS コンポーネントに伝えます。  
@@ -45,11 +45,11 @@ ms.locfileid: "53349812"
 ## <a name="error-handling"></a>エラー処理  
  CDC ソースにはエラー出力があります。 コンポーネントのエラー出力には、次の出力列があります。  
   
--   **エラー コード**:値は、常に-1 です。  
+-   **エラー コード**: 値は常に -1 です。  
   
--   **エラー列**:(変換エラー) エラーを原因となるソース列。  
+-   **エラー列**: (変換エラーの) エラーの原因となるソース列。  
   
--   **エラー行の列**:エラーが発生するレコード データ。  
+-   **エラー行の列**: エラーの原因となったレコード データ。  
   
  CDC ソースは、エラー動作の設定に応じて、抽出処理中に発生したエラー (データ変換、切り捨て) をエラー出力に返します。 詳細については、「 [[CDC ソース エディター] &#40;[エラー出力] ページ&#41;](../cdc-source-editor-error-output-page.md)」を参照してください。  
   
@@ -81,7 +81,7 @@ use <cdc-enabled-database-name>
   
 -   \<value-from-state-ce> は、CDC 状態変数に、CE/\<value-from-state-ce>/ として示される値です (CE は Current-processing-range-End (現在の処理範囲の終了) の略語です)。  
   
--   \<mode> は、CDC の処理モードです。 この処理モードは、 **[すべて]**、 **[古い値を含むすべて]**、 **[差分]**、 **[更新マスクを含む差分]**、 **[結合を含む差分]** のいずれかの値です。  
+-   \<mode> は、CDC の処理モードです。 この処理モードは、 **[すべて]** 、 **[古い値を含むすべて]** 、 **[差分]** 、 **[更新マスクを含む差分]** 、 **[結合を含む差分]** のいずれかの値です。  
   
  このスクリプトを実行すると、エラーの再現と特定を簡単に行うことができる [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]で問題を再現することによって、問題を特定できます。  
   
@@ -125,6 +125,6 @@ use <cdc-enabled-database-name>
   
 ## <a name="related-content"></a>関連コンテンツ  
   
--   mattmasson.com のブログ「[CDC ソースの処理モード](https://go.microsoft.com/fwlink/?LinkId=242541)」  
+-   mattmasson.com のブログ「[CDC ソースの処理モード](https://www.mattmasson.com/2012/01/processing-modes-for-the-cdc-source/)」  
   
   

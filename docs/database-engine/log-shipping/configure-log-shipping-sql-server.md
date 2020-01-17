@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: c42aa04a-4945-4417-b4c7-50589d727e9c
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 20fc1e12f4aa3647016b4f39734eb0fa05cd7105
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 4a262ba4daf1a54e4a57a71baa0b97308d473720
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47703810"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68057893"
 ---
 # <a name="configure-log-shipping-sql-server"></a>ログ配布の構成 (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -33,7 +32,7 @@ ms.locfileid: "47703810"
   
      [前提条件](#Prerequisites)  
   
-     [Security](#Security)  
+     [セキュリティ](#Security)  
   
 -   **以下を使用してログ配布を構成するには:**  
   
@@ -43,7 +42,7 @@ ms.locfileid: "47703810"
   
 -   [関連タスク](#RelatedTasks)  
   
-##  <a name="BeforeYouBegin"></a> 作業を開始する準備  
+##  <a name="BeforeYouBegin"></a> はじめに  
   
 ###  <a name="Prerequisites"></a> 前提条件  
   
@@ -70,7 +69,7 @@ ms.locfileid: "47703810"
   
 5.  **[バックアップ フォルダーのネットワーク パスを指定する]** ボックスに、トランザクション ログ バックアップ フォルダー用に作成した共有へのネットワーク パスを入力します。  
   
-6.  バックアップ フォルダーがプライマリ サーバー上にある場合は、 **[バックアップ フォルダーがプライマリ サーバーに存在する場合は、バックアップ フォルダーのローカル パスを入力 (例: c:\\backup)]** ボックスに、バックアップ フォルダーへのローカル パスを入力します (バックアップ フォルダーが、プライマリ サーバー上にない場合は、このボックスは空のままでかまいません)。  
+6.  **バックアップ フォルダーがプライマリ サーバーに存在する場合は、バックアップ フォルダー ボックスにローカル パスを入力します** (バックアップ フォルダーが、プライマリ サーバー上にない場合は、このボックスは空のままでかまいません)。  
   
     > [!IMPORTANT]  
     >  プライマリ サーバーの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] サービス アカウントがローカル システム アカウントで実行されている場合、バックアップ フォルダーはプライマリ サーバー上に作成し、このフォルダーへのローカル パスを指定する必要があります。  
@@ -79,7 +78,7 @@ ms.locfileid: "47703810"
   
 8.  **[バックアップ ジョブ]** の **[スケジュール]** ボックスに、バックアップ スケジュールの一覧が表示されます。 スケジュールをカスタマイズする場合は、 **[スケジュール]** をクリックし、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェントのスケジュールを必要に応じて調整します。  
   
-9. [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] では、 [バックアップの圧縮](../../relational-databases/backup-restore/backup-compression-sql-server.md)がサポートされています。 ログ配布構成を作成する際には、 **[既定のサーバー設定を使用する]**、 **[バックアップを圧縮する]**、または **[バックアップを圧縮しない]** のいずれかのオプションを選択することで、ログ バックアップのバックアップ圧縮動作を制御できます。 詳細については、「 [Log Shipping Transaction Log Backup Settings](../../relational-databases/databases/log-shipping-transaction-log-backup-settings.md)」をご覧ください。  
+9. [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] では、 [バックアップの圧縮](../../relational-databases/backup-restore/backup-compression-sql-server.md)がサポートされています。 ログ配布構成を作成する際には、次のオプションのいずれかを選択して、ログ バックアップのバックアップ圧縮動作を制御することができます: **既定のサーバー設定を使用する**、**バックアップを圧縮する**、**バックアップを圧縮しない**。 詳細については、「 [Log Shipping Transaction Log Backup Settings](../../relational-databases/databases/log-shipping-transaction-log-backup-settings.md)」をご覧ください。  
   
 10. **[OK]** をクリックします。  
   
@@ -100,7 +99,7 @@ ms.locfileid: "47703810"
   
 17. **[復元]** タブの **[バックアップ復元時のデータベース状態]** で、 **[復旧モードなし]** または **[スタンバイ モード]** を選択します。  
     > [!IMPORTANT]  
-    > **スタンバイ モード**は、プライマリ サーバーとセカンダリ サーバーのバージョンが同じである場合にのみ使用できるオプションです。 セカンダリ サーバーのメジャー バージョンがプライマリ サーバーよりも新しい場合は、**[復旧モードなし]** しか選択できません
+    > **スタンバイ モード**は、プライマリ サーバーとセカンダリ サーバーのバージョンが同じである場合にのみ使用できるオプションです。 セカンダリ サーバーのメジャー バージョンがプライマリ サーバーよりも新しい場合は、 **[復旧モードなし]** しか選択できません
   
 18. **[スタンバイ モード]** を選択する場合は、復元操作の進行中にセカンダリ データベースからユーザーを切断するかどうかを選択します。  
   

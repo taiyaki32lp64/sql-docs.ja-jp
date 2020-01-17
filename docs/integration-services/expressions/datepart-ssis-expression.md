@@ -11,17 +11,20 @@ helpviewer_keywords:
 - dates [Integration Services], DATEPART
 - DATEPART function
 ms.assetid: 3e590094-fc49-4144-805f-fdc1bf2fe509
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: 8d3eef374c42f11b9e97da4d8b96b1abcef10d27
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: e85eb7e41a3211f132ea32858bf859c153f15de7
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47666189"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71290280"
 ---
 # <a name="datepart-ssis-expression"></a>DATEPART (SSIS 式)
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   ある日付の、特定の日付要素を整数で返します。  
   
 ## <a name="syntax"></a>構文  
@@ -83,8 +86,8 @@ DATEPART("yy",GETDATE())
   
 ## <a name="see-also"></a>参照  
  [DATEADD &#40;SSIS 式&#41;](../../integration-services/expressions/dateadd-ssis-expression.md)   
- [DATEDIFF &#40;SSIS 式&#41;](../../integration-services/expressions/datediff-ssis-expression.md)   
- [DAY &#40;SSIS 式&#41;](../../integration-services/expressions/day-ssis-expression.md)   
+ [DATEDIFF (SSIS 式)](../../integration-services/expressions/datediff-ssis-expression.md)   
+ [DAY (SSIS 式)](../../integration-services/expressions/day-ssis-expression.md)   
  [MONTH &#40;SSIS 式&#41;](../../integration-services/expressions/month-ssis-expression.md)   
  [YEAR &#40;SSIS 式&#41;](../../integration-services/expressions/year-ssis-expression.md)   
  [関数 (SSIS 式)](../../integration-services/expressions/functions-ssis-expression.md)  

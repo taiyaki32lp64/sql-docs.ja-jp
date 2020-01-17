@@ -1,5 +1,5 @@
 ---
-title: 手順 3:パッケージとその他のファイルの追加 |Microsoft Docs
+title: 手順 3:パッケージとその他のファイルの追加 | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -7,15 +7,15 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: a7e6ec9c-d31d-4613-9525-8947a7b358f7
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 83902f57b758089235abafc9f8289b6f9fdb8653
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 7db3e293c95b358d78e445e6b7534f90ea7b9310
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53361604"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62892134"
 ---
 # <a name="step-3-adding-packages-and-other-files"></a>手順 3:パッケージとその他のファイルの追加
   このタスクでは、既存のパッケージ、個々のパッケージをサポートする補助ファイル、および Readme を、前のタスクで作成した Deployment Tutorial プロジェクトに追加します。 たとえば、パッケージのデータを含んでいる XML データ ファイルや、プロジェクトのすべてのパッケージに関する Readme 情報を提供するテキスト ファイルを追加します。  
@@ -43,13 +43,13 @@ ms.locfileid: "53361604"
   
 ### <a name="to-add-packages-to-the-deployment-tutorial-project"></a>Deployment Tutorial プロジェクトにパッケージを追加するには  
   
-1.  [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] がまだ開いていない場合は、**[スタート]** ボタンをクリックし、**[すべてのプログラム]**、**[Microsoft SQL Server]** の順にポイントして、**[SQL Server Data Tools]** をクリックします。  
+1.  [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] がまだ開いていない場合は、 **[スタート]** ボタンをクリックし、 **[すべてのプログラム]** 、 **[Microsoft SQL Server]** の順にポイントして、 **[SQL Server Data Tools]** をクリックします。  
   
-2.  **[ファイル]** メニューの **[開く]** をクリックし、**[プロジェクト/ソリューション]** をクリックします。次に、**[Deployment Tutorial]** フォルダーをクリックして **[開く]** をクリックし、 **Deployment Tutorial.sln**をダブルクリックします。  
+2.  **[ファイル]** メニューの **[開く]** をクリックし、 **[プロジェクト/ソリューション]** をクリックします。次に、 **[Deployment Tutorial]** フォルダーをクリックして **[開く]** をクリックし、 **Deployment Tutorial.sln**をダブルクリックします。  
   
-3.  ソリューション エクスプローラーで、[Deployment Tutorial] を右クリックして **[追加]** をクリックし、**[既存のパッケージ]** をクリックします。  
+3.  ソリューション エクスプローラーで、[Deployment Tutorial] を右クリックして **[追加]** をクリックし、 **[既存のパッケージ]** をクリックします。  
   
-4.  **[既存のパッケージのコピーを追加]** ダイアログ ボックスの **[パッケージの場所]** で、**[ファイル システム]** をクリックします。  
+4.  **[既存のパッケージのコピーを追加]** ダイアログ ボックスの **[パッケージの場所]** で、 **[ファイル システム]** をクリックします。  
   
 5.  参照ボタン ( **[...]** ) をクリックして、C:\Program Files\Microsoft SQL Server\100\Samples\Integration ServicesTutorial\Deploying Packages\Completed Packages に移動し、**DataTransfer.dtsx** をクリックして **[開く]** をクリックします。  
   
@@ -59,11 +59,11 @@ ms.locfileid: "53361604"
   
 ### <a name="to-add-ancillary-files-to-the-deployment-tutorial-project"></a>Deployment Tutorial プロジェクトに付属ファイルを追加するには  
   
-1.  ソリューション エクスプローラーで、[Deployment Tutorial] を右クリックして **[追加]** をクリックし、**[既存の項目]** をクリックします。  
+1.  ソリューション エクスプローラーで、[Deployment Tutorial] を右クリックして **[追加]** をクリックし、 **[既存の項目]** をクリックします。  
   
-2.  **[既存の項目の追加 - Deployment Tutorial]** ダイアログ ボックスで C:\Program Files\Microsoft SQL Server\100\Samples\Integration Services\Tutorial\Deployment Packages\Sample Data に移動し、orders.xml、orders.xsd、および NewCustomers.txt を選択して、**[追加]** をクリックします。  
+2.  **[既存の項目の追加 - Deployment Tutorial]** ダイアログ ボックスで C:\Program Files\Microsoft SQL Server\100\Samples\Integration Services\Tutorial\Deployment Packages\Sample Data に移動し、orders.xml、orders.xsd、および NewCustomers.txt を選択して、 **[追加]** をクリックします。  
   
-3.  **[既存の項目の追加 - Deployment Tutorial]** ダイアログ ボックスで C:\Program Files\Microsoft SQL Server\100\Samples\Integration Services\Tutorial\Deployment Packages\\に移動し、Readme.txt を選択して、**[追加]** をクリックします。  
+3.  **[既存の項目の追加 - Deployment Tutorial]** ダイアログ ボックスで C:\Program Files\Microsoft SQL Server\100\Samples\Integration Services\Tutorial\Deployment Packages\\に移動し、Readme.txt を選択して、 **[追加]** をクリックします。  
   
 4.  [ファイル] メニューの **[すべてを保存]** をクリックします。  
   

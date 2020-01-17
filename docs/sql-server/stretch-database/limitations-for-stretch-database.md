@@ -1,5 +1,5 @@
 ---
-title: Stretch Database の制限事項 | Microsoft Docs
+title: Stretch Database の制限事項
 ms.date: 06/14/2016
 ms.service: sql-server-stretch-database
 ms.reviewer: ''
@@ -12,13 +12,13 @@ helpviewer_keywords:
 ms.assetid: 2b1fbec1-7859-44fc-8417-724fc57a59c0
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 90e6bbd804d69af00d8e006d3ca363e09dacd8c3
-ms.sourcegitcommit: ec1f01b4bb54621de62ee488decf9511d651d700
+ms.custom: seo-dt-2019
+ms.openlocfilehash: 12b3fae80a7bf2c46c8d1d10ad5c45d74212eef0
+ms.sourcegitcommit: f688a37bb6deac2e5b7730344165bbe2c57f9b9c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/14/2019
-ms.locfileid: "56240766"
+ms.lasthandoff: 11/08/2019
+ms.locfileid: "73843792"
 ---
 # <a name="limitations-for-stretch-database"></a>Stretch Database の制限事項
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md-winonly](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md-winonly.md)]

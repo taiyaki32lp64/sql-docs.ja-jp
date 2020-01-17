@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: cc438701-ad91-419d-9f23-ebc4c548c700
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 63b8fdb66b868d7fc0c1c7a83d574bafb92224b6
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 487d88a7580432bf947893920d307e2f0adffd18
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47692250"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68111991"
 ---
 # <a name="spdeletetargetserver-transact-sql"></a>sp_delete_targetserver (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -42,14 +41,11 @@ sp_delete_targetserver [ @server_name = ] 'server'
 ```  
   
 ## <a name="arguments"></a>引数  
- [ **@server_name=** ] **'***server***'**  
- 利用可能なターゲット サーバーから削除するサーバーの名前を指定します。 *server*は**nvarchar (30)**、既定値はありません。  
+`[ @server_name = ] 'server'` 使用可能なターゲット サーバーとして削除するサーバーの名前。 *server*は**nvarchar (30)** 、既定値はありません。  
   
- [ **@clear_downloadlist=** ] *clear_downloadlist*  
- ターゲット サーバーのダウンロード一覧を消去するかどうかを指定します。 *clear_downloadlist*型は、**ビット**、既定値は**1**します。 ときに*clear_downloadlist*は**1**サーバーを削除する前に、サーバーのダウンロード一覧が消去されます。 ときに*clear_downloadlist*は**0**ダウンロードの一覧は消去されません。  
+`[ @clear_downloadlist = ] clear_downloadlist` 対象サーバーに対するダウンロードの一覧を消去するかどうかを指定します。 *clear_downloadlist*型は、**ビット**、既定値は**1**します。 ときに*clear_downloadlist*は**1**サーバーを削除する前に、サーバーのダウンロード一覧が消去されます。 ときに*clear_downloadlist*は**0**ダウンロードの一覧は消去されません。  
   
- [ **@post_defection=** ] *post_defection*  
- ターゲット サーバーに参加解除の命令を投稿するかどうかを指定します。 *post_defection*型は、**ビット**、既定値は 1 です。 ときに*post_defection*は**1**サーバーを削除する前に、ターゲット サーバーを参加解除の命令が通知されます。 ときに*post_defection*は**0**プロシージャは、ターゲット サーバーを参加解除の命令が通知されません。  
+`[ @post_defection = ] post_defection` ターゲット サーバーを参加解除の命令を投稿するかどうかを指定します。 *post_defection*型は、**ビット**、既定値は 1 です。 ときに*post_defection*は**1**サーバーを削除する前に、ターゲット サーバーを参加解除の命令が通知されます。 ときに*post_defection*は**0**プロシージャは、ターゲット サーバーを参加解除の命令が通知されません。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  **0** (成功) または**1** (失敗)  

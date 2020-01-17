@@ -4,23 +4,22 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.scriptcomponent.inputcolumn.f1
 helpviewer_keywords:
 - Script Transformation Editor
 ms.assetid: d6e4ce84-3335-48e6-82d3-1c359ed87f63
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: d467606c562b0fd9b5f1176ecbe14322aa634a24
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 9e321507e8531f9732ae1096ebfc9c0d31031ec8
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48164892"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66056088"
 ---
 # <a name="script-transformation-editor-input-columns-page"></a>[スクリプト変換エディター] ([入力列] ページ)
   **[スクリプト変換エディター]** ダイアログ ボックスの **[入力列]** ページを使用すると、入力列のプロパティを設定できます。  
@@ -48,10 +47,10 @@ ms.locfileid: "48164892"
   
 ## <a name="see-also"></a>参照  
  [Integration Services のエラーおよびメッセージのリファレンス](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [スクリプト コンポーネントの種類を選択します。](../../2014/integration-services/select-script-component-type.md)   
- [スクリプト変換エディター&#40;入力し、出力のページ&#41;](../../2014/integration-services/script-transformation-editor-inputs-and-outputs-page.md)   
- [スクリプト変換エディター &#40;[スクリプト] ページ&#41;](../../2014/integration-services/script-transformation-editor-script-page.md)   
- [スクリプト変換エディター&#40;接続マネージャー ページ&#41;](../../2014/integration-services/script-transformation-editor-connection-managers-page.md)   
+ [[スクリプト コンポーネントの種類を選択]](../../2014/integration-services/select-script-component-type.md)   
+ [スクリプト変換エディター &#40;[入力および出力] ページ&#41;](../../2014/integration-services/script-transformation-editor-inputs-and-outputs-page.md)   
+ [スクリプト変換エディター ([スクリプト] ページ)](../../2014/integration-services/script-transformation-editor-script-page.md)   
+ [スクリプト変換エディター ([接続マネージャー] ページ)](../../2014/integration-services/script-transformation-editor-connection-managers-page.md)   
  [その他のスクリプト コンポーネントの例](extending-packages-scripting-data-flow-script-component-examples/additional-script-component-examples.md)  
   
   

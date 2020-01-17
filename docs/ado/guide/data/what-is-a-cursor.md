@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 596eb4b6-c22f-4cde-b23f-172dd66c3161
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 0d5704a43e1ede850a225c4ec2b4df9a3563606b
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 7d903b2a5f971d0b6c7114a9e5229bff6133d743
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52540113"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67923455"
 ---
 # <a name="what-is-a-cursor"></a>カーソルとは
 リレーショナル データベースで操作を実行する場合、行の完全なセットが操作の対象になります。 SELECT ステートメントでは、WHERE 句で指定した条件を満たすすべての行のセットが返されます。 このステートメントが返す行の完全なセットを結果セットと呼びます。 全体の結果セットを単位としてでは、アプリケーション、特に対話型と、オンラインであるが効率的に作業常にことはできません。 そのため、このようなアプリケーションでは、一度に 1 行または少数の行のブロックを使用するためのメカニズムが必要になります。 カーソルはそのメカニズムを提供する結果セットの拡張機能です。  
@@ -68,7 +67,7 @@ ms.locfileid: "52540113"
   
  他のアプリケーションでは、同時実行は重要ではないです。 このような場合は、常に現在のデータを管理することで費用を正当化されることはできません。  
   
-## <a name="position"></a>[位置]  
+## <a name="position"></a>位置  
  カーソルもの追跡結果セット内の現在の位置。 考える、カーソルの位置と同じように、現在のレコードへのポインターとして配列インデックスが指す配列内の特定の場所にある値。  
   
 ## <a name="scrollability"></a>スクロール可能  

@@ -1,7 +1,7 @@
 ---
 title: 空間データ型のサンプル |Microsoft Docs
 ms.custom: ''
-ms.date: 07/31/2018
+ms.date: 08/12/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -9,19 +9,18 @@ ms.technology: connectivity
 ms.topic: conceptual
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: ce1fc22b5cc953d79e3faacb609d2a2e10ed14fc
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d2f56ed8036602357f8128b0426fbb90c0bab801
+ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47742862"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "69028272"
 ---
 # <a name="spatial-data-types-sample"></a>空間データ型のサンプル
 
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-これは、[!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)]サンプル アプリケーションは、作成、挿入、および空間データ型 (Geometry と Geography) を取得する方法を示します。
+この[!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)]サンプルアプリケーションでは、空間データ型 (Geometry および Geography) を作成、挿入、および取得する方法を示します。
   
 このサンプルのコード ファイルは SpatialDataTypes.java という名前で、次の場所にあります。  
 
@@ -31,18 +30,18 @@ ms.locfileid: "47742862"
 
 ## <a name="requirements"></a>必要条件  
 
-このサンプル アプリケーションを実行するには、クラスパスを設定して mssql-jdbc jar ファイルを含める必要があります。 クラスパスを設定する方法の詳細については、次を参照してください。 [JDBC ドライバーを使用して](../../../connect/jdbc/using-the-jdbc-driver.md)します。  
+このサンプル アプリケーションを実行するには、クラスパスを設定して mssql-jdbc jar ファイルを含める必要があります。 クラスパスの設定方法の詳細については、「 [JDBC ドライバーの使用](../../../connect/jdbc/using-the-jdbc-driver.md)」を参照してください。  
 
 > [!NOTE]  
-> [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)] には、必要な Java ランタイム環境 (JRE) 設定に応じて使用される mssql-jdbc クラス ライブラリ ファイルが用意されています。 選択する JAR ファイルの詳細については、次を参照してください。 [JDBC Driver のシステム要件](../../../connect/jdbc/system-requirements-for-the-jdbc-driver.md)します。  
+> [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)] には、必要な Java ランタイム環境 (JRE) 設定に応じて使用される mssql-jdbc クラス ライブラリ ファイルが用意されています。 選択する JAR ファイルの詳細については、「[JDBC Driver のシステム要件](../../../connect/jdbc/system-requirements-for-the-jdbc-driver.md)」を参照してください。  
   
 ## <a name="example"></a>例
 
-次の例では、サンプル コードは、'Geometry' と 'Geography' の列を含む SpatialDataTypesTable_JDBC_Sample という名前のテーブルを作成します。
+次の例では、サンプルコードによって、' Geometry ' 列と ' Geography ' 列を含む、SpatialDataTypesTable_JDBC_Sample という名前のテーブルが作成されます。
 
-サンプルは、まずも-Known-テキストから (WKT) 時点を表す 'Geometry' と 'Geography' のオブジェクトを作成します。 パラメーター化クエリをそれに応じて、データを各列にマップする SQLServerPreparedStatement を使います。
+このサンプルでは、最初に、POINT を表す Well-known Text (WKT) から ' Geometry ' オブジェクトと ' Geography ' オブジェクトを作成します。 SQLServerPreparedStatement とパラメーター化されたクエリを使用して、データをそれぞれの列に適切にマップします。
 
-最後に、このサンプルは、テーブルにデータを挿入し、それを取得します。 WKT 形式でデータが表示されます。
+最後に、このサンプルでは、データをテーブルに挿入して取得します。 データは WKT の形式で表示されます。
 
 ```java
 import java.sql.Connection;

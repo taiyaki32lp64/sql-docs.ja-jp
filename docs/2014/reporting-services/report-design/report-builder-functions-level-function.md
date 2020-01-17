@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 ms.assetid: 41235402-bb9e-4cb7-b91e-431e77db19cf
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: a0eab4c54be4f849a735b7da4de54a9b85cb78f3
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: 35526e8928a98ccca2e2e61e88fb9361a6d00d6c
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56285310"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66105241"
 ---
 # <a name="level-function-report-builder-and-ssrs"></a>Level 関数 (レポート ビルダーおよび SSRS)
   再帰型階層の現在の深さのレベルを返します。  

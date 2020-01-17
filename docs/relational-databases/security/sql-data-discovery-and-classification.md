@@ -2,22 +2,21 @@
 title: SQL データの検出と分類 | Microsoft Docs
 description: SQL データの検出と分類
 documentationcenter: ''
-ms.reviewer: carlrab
+ms.reviewer: vanto
 ms.assetid: 89c2a155-c2fb-4b67-bc19-9b4e03c6d3bc
 ms.service: sql-database
 ms.prod_service: sql-database,sql
 ms.custom: security
 ms.topic: conceptual
-ms.date: 02/13/2018
-ms.author: giladm
-author: giladm
-manager: shaik
-ms.openlocfilehash: 18495f81289981d4ce5a72ac943150bfea4c4f3d
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.date: 09/12/2019
+ms.author: mibar
+author: barmichal
+ms.openlocfilehash: ef05b068c016cdea00e813f5dbff174494440a19
+ms.sourcegitcommit: 77293fb1f303ccfd236db9c9041d2fb2f64bce42
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52539136"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70929786"
 ---
 # <a name="sql-data-discovery-and-classification"></a>SQL データの検出と分類
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -28,7 +27,7 @@ ms.locfileid: "52539136"
 * 機密性の高いデータを含むデータベース/列へのアクセスを制御し、セキュリティを強化する。
 
 > [!NOTE]
-> データの検出と分類は、**SQL Server 2008 以降でサポート**されます。 Azure SQL Database については、「[Azure SQL Database のデータの検出と分類](https://go.microsoft.com/fwlink/?linkid=866265)」を参照してください。
+> データの検出と分類は、**SQL Server 2008 以降でサポートされ、SSMS 17.5 以降で使用できます**。 Azure SQL Database については、「[Azure SQL Database のデータの検出と分類](https://go.microsoft.com/fwlink/?linkid=866265)」を参照してください。
 
 ## <a id="subheading-1"></a>概要
 データの検出と分類では高度な一連のサービスが導入され、データベースだけでなく、データの保護を目的とした新しい SQL Information Protection パラダイムが形成されます。
@@ -43,12 +42,11 @@ ms.locfileid: "52539136"
 * ラベル - 列に格納されるデータの機密レベルを定義するために使用される、主な分類属性です。  
 * 情報の種類 - 列に格納されるデータの種類をさらに細分化します。
 
-<br>
 **SQL Server データベースを分類するには:**
 
 1. SQL Server Management Studio (SSMS) で、SQL Server に接続します。
 
-2. SSMS オブジェクト エクスプローラーで、分類するデータベースを右クリックして、**[タスク]** > **[データの分類]** の順に選択します。
+2. SSMS オブジェクト エクスプローラーで、分類するデータベースを右クリックして、 **[タスク]**  >  **[データの分類]** の順に選択します。
 
     ![ナビゲーション ウィンドウ][1]
 
@@ -101,7 +99,7 @@ ms.locfileid: "52539136"
 
 メタデータには、拡張プロパティ カタログ ビュー [sys.extended_properties](https://docs.microsoft.com/sql/relational-databases/system-catalog-views/extended-properties-catalog-views-sys-extended-properties) を使用してアクセスすることができます。
 
-次のコード例では、対応する分類を使用して分類済みのすべての列が返されます。
+SQL Server 2017 の場合、次のコード例では、対応する分類を使用して分類済みのすべての列が返されます。
 
 ```sql
 SELECT
@@ -141,6 +139,21 @@ FROM
     ON  EP.major_id = O.object_id 
     JOIN sys.columns C 
     ON  EP.major_id = C.object_id AND EP.minor_id = C.column_id
+```
+
+SQL Server 2019 の場合:
+```sql
+SELECT 
+    schema_name(O.schema_id) AS schema_name,
+    O.NAME AS table_name,
+    C.NAME AS column_name,
+    information_type,
+    label
+FROM sys.sensitivity_classifications sc
+    JOIN sys.objects O
+    ON  sc.major_id = O.object_id
+    JOIN sys.columns C 
+    ON  sc.major_id = C.object_id  AND sc.minor_id = C.column_id
 ```
 
 ## <a id="subheading-4"></a>次の手順

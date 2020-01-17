@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: cb7f917d-4291-4115-9b78-ee7692ebbb2d
 author: julieMSFT
 ms.author: jrasnick
-manager: craigg
-ms.openlocfilehash: 494f730142e293feb662d72b4fe21e5ea9ae1a06
-ms.sourcegitcommit: 0c1d552b3256e1bd995e3c49e0561589c52c21bf
+ms.openlocfilehash: c690c2cd19acae2fb3a6bde8b2dcd6d72b3acf18
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/14/2018
-ms.locfileid: "53380633"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67947883"
 ---
 # <a name="sql-server-wait-statistics-object"></a>SQL Server: Wait Statistics オブジェクト
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

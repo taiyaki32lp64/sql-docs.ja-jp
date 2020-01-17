@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - removing logical primary keys
@@ -16,12 +15,12 @@ ms.assetid: 172bc267-c637-4caa-bf55-0ba198d30b1e
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 653d8a4f5fa8e0580e8b56a136cf2ca97c3e705a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: f3fa1ce62b3c7402e1f938bea8e400173ef79f5e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48142519"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66075640"
 ---
 # <a name="define-logical-primary-keys-in-a-data-source-view-analysis-services"></a>データ ソース ビューでの論理主キーの定義 (Analysis Services)
   データ ソース ビュー ウィザードとデータ ソース ビュー デザイナーでは、データベース テーブルから生成されたデータ ソース ビューにテーブルを追加した場合、そのテーブルの主キーが自動的に定義されます。  
@@ -47,6 +46,6 @@ ms.locfileid: "48142519"
   
 ## <a name="see-also"></a>参照  
  [多次元モデルのデータ ソース ビュー](data-source-views-in-multidimensional-models.md)   
- [データ ソース ビューで名前付き計算の定義&#40;Analysis Services&#41;](define-named-calculations-in-a-data-source-view-analysis-services.md)  
+ [データ ソース ビューでの名前付き計算の定義 (Analysis Services)](define-named-calculations-in-a-data-source-view-analysis-services.md)  
   
   

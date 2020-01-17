@@ -11,17 +11,20 @@ helpviewer_keywords:
 - catalog.operation_messages view [Integration Services]
 - operation_messages view [Integration Services]
 ms.assetid: 0b3cbe38-ce24-47ca-83ef-6538a5299d1a
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: 1cd45e4350bb09c215fb6f6104effbf5f3326973
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: bfad11f3bcba41160fcb46ede37f6e7ea3c5ece4
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47655350"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71295160"
 ---
-# <a name="catalogoperationmessages-ssisdb-database"></a>catalog.operation_messages (SSISDB データベース)
+# <a name="catalogoperation_messages-ssisdb-database"></a>catalog.operation_messages (SSISDB データベース)
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] カタログでの操作中に記録されるメッセージを表示します。  
@@ -30,7 +33,7 @@ ms.locfileid: "47655350"
 |-----------------|---------------|-----------------|  
 |operation_message_id|**bigint**|メッセージの一意識別子 (ID)。|  
 |operation_id|**bigint**|操作の一意の ID。|  
-|message_time|**datetimeoffset(7)**|メッセージが作成された時間。|  
+|message_time|**datetimeoffset(7)**|メッセージが作成された日時。|  
 |message_type|**smallint**|表示されるメッセージの種類。|  
 |message_source_type|**smallint**|メッセージ ソースの種類の ID。|  
 |message|**nvarchar(max)**|メッセージのテキストです。|  
@@ -44,7 +47,7 @@ ms.locfileid: "47655350"
 |**message_type** 値|[説明]|  
 |-----------------------------|-----------------|  
 |-1|Unknown|  
-|120|[エラー]|  
+|120|エラー|  
 |110|警告|  
 |70|[情報]|  
 |10|検証前|  

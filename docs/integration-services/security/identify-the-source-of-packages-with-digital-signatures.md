@@ -16,17 +16,20 @@ helpviewer_keywords:
 - security [Integration Services], certificates
 - signing policies [Integration Services]
 ms.assetid: a433fbef-1853-4740-9d5e-8a32bc4ffbb2
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: 6c0139abead73541a39f9207e94ae7d0a4d1a8f2
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: fd8b17acb904ae0d33b06e85531e531792f1d60e
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51639496"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71295695"
 ---
 # <a name="identify-the-source-of-packages-with-digital-signatures"></a>デジタル署名を使用してパッケージのソースを特定する
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] パッケージは、そのソースを識別するために、デジタル証明書を使用して署名できます。 パッケージがデジタル証明書を使用して署名されたら、パッケージを読み込む前に [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] でデジタル署名を確認できます。 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] で署名を確認するには、 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] または **dtexec** ユーティリティ (dtexec.exe) でオプションを設定するか、オプションのレジストリ値を設定します。  
   
 ## <a name="sign-a-package-with-a-digital-certificate"></a>デジタル証明書を使用してパッケージに署名する  
@@ -59,7 +62,7 @@ ms.locfileid: "51639496"
   
  次の表に、DWORD データの有効な値、およびそれらに関連付けられたポリシーを示します。  
   
-|ReplTest1|Description|  
+|[値]|Description|  
 |-----------|-----------------|  
 |0|管理制限はありません。|  
 |1|署名が無効なパッケージをブロックします。<br /><br /> この設定では、署名がないパッケージはブロックしません。|  
@@ -139,7 +142,7 @@ ms.locfileid: "51639496"
   
  詳細については、「 [デジタル証明書を使用してパッケージに署名する](#cert)」を参照してください。  
   
-### <a name="options"></a>[変数]  
+### <a name="options"></a>オプション  
  **[署名]**  
  **[証明書の選択]** ダイアログ ボックスを開き、使用する証明書を選択します。  
   

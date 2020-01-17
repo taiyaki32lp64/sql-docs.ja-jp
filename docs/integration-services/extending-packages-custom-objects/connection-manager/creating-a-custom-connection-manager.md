@@ -10,17 +10,20 @@ ms.topic: reference
 helpviewer_keywords:
 - custom connection managers [Integration Services], creating
 ms.assetid: e83f8e02-ace4-42e0-b979-2f6be1460985
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: 6ad69ee69ee6a98456199bc0246fd4e1bc011fa4
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 2e6015aa5f7d9271c71a534fab6126cba9a8dcbf
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47719244"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71297276"
 ---
 # <a name="creating-a-custom-connection-manager"></a>カスタム接続マネージャーの作成
+
+[!INCLUDE[ssis-appliesto](../../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   カスタム接続マネージャーを作成するために必要な手順は、[!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] の他のカスタム オブジェクトの作成手順と同様です。  
   
 -   基本クラスを継承する新しいクラスを作成します。 接続マネージャー用の基本クラスは <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManagerBase> です。  
@@ -44,7 +47,7 @@ ms.locfileid: "47719244"
  どちらのプロジェクトも、アセンブリに署名するよう構成します。アセンブリは、厳密な名前のキー ファイルを使用して、ビルド時に生成されます。  
   
 ### <a name="applying-the-dtsconnection-attribute"></a>DtsConnection 属性の適用  
- 作成したクラスに <xref:Microsoft.SqlServer.Dts.Runtime.DtsConnectionAttribute> 属性を適用して、そのクラスが接続マネージャーとして識別されるようにします。 この属性には、接続マネージャーの名前、説明、および接続の種類など、デザイン時の情報を指定します。 <xref:Microsoft.SqlServer.Dts.Runtime.DtsConnectionAttribute.ConnectionType%2A> プロパティと **Description** プロパティは、**[SSIS 接続マネージャーの追加]** ダイアログ ボックスに表示される **[種類]** 列と **[説明]** 列に対応します。このダイアログ ボックスは、[!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)] でパッケージの接続を構成するときに表示されます。  
+ 作成したクラスに <xref:Microsoft.SqlServer.Dts.Runtime.DtsConnectionAttribute> 属性を適用して、そのクラスが接続マネージャーとして識別されるようにします。 この属性には、接続マネージャーの名前、説明、および接続の種類など、デザイン時の情報を指定します。 <xref:Microsoft.SqlServer.Dts.Runtime.DtsConnectionAttribute.ConnectionType%2A> プロパティと **Description** プロパティは、 **[SSIS 接続マネージャーの追加]** ダイアログ ボックスに表示される **[種類]** 列と **[説明]** 列に対応します。このダイアログ ボックスは、[!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)] でパッケージの接続を構成するときに表示されます。  
   
  <xref:Microsoft.SqlServer.Dts.Runtime.DtsConnectionAttribute.UITypeName%2A> プロパティを使用して、接続マネージャーをそのカスタム ユーザー インターフェイスにリンクします。 このプロパティに必要な公開キー トークンを取得するには、**sn.exe -t** を使用して、ユーザー インターフェイス アセンブリへの署名に使用するキー ペア (.snk) ファイルから公開キー トークンを表示します。  
   

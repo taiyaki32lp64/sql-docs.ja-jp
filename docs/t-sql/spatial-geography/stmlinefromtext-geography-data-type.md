@@ -15,15 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - STLineFromText method
 ms.assetid: 66dfd722-a9bd-45d3-9788-f1946dd23e17
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: 8b4dd80bdc3930f396703db04fb7d4282a9535f2
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: MladjoA
+ms.author: mlandzic
+ms.openlocfilehash: 57d0edaed1d26de79813939c9606b9934646e5f7
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47742140"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68223651"
 ---
 # <a name="stmlinefromtext-geography-data-type"></a>STMLineFromText (geography データ型)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -47,9 +46,9 @@ STMLineFromText ( 'multilinestring_tagged_text' , SRID )
 ## <a name="return-types"></a>戻り値の型  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 戻り値の型: **geography**  
   
- CLR の戻り値の型: **SqlGeography**  
+ CLR の戻り値の型:**SqlGeography**  
   
- OGC の型: **MultiLineString**  
+ OGC の型:**MultiLineString**  
   
 ## <a name="remarks"></a>Remarks  
  このメソッドでは、入力が整形式でない場合に、**FormatException** がスローされます。  

@@ -13,11 +13,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 402622033abd307d71b0dac8894ff4f6facebef9
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52789914"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62467856"
 ---
 # <a name="utility-explorer-f1-help"></a>ユーティリティ エクスプローラーの F1 ヘルプ
   次のトピックでは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ユーティリティの機能と関連する操作について説明します。  
@@ -31,7 +31,7 @@ ms.locfileid: "52789914"
   
  [ユーティリティの管理 &#40;SQL Server ユーティリティ&#41;](../../database-engine/utility-administration-sql-server-utility.md)  
   
-## <a name="reference"></a>参照  
+## <a name="reference"></a>リファレンス  
  [SQL Server ユーティリティ コントロール ポイントの作成 &#40;SQL Server ユーティリティ&#41;](create-a-sql-server-utility-control-point-sql-server-utility.md)  
   
  [SQL Server ユーティリティへの接続](connect-to-a-sql-server-utility.md)  

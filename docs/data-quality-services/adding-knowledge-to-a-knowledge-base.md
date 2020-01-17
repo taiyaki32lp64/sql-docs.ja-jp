@@ -1,6 +1,5 @@
 ---
-title: ナレッジ ベースへのナレッジの追加 | Microsoft Docs
-ms.custom: ''
+title: ナレッジ ベースへのナレッジの追加
 ms.date: 06/04/2013
 ms.prod: sql
 ms.prod_service: data-quality-services
@@ -8,15 +7,14 @@ ms.reviewer: ''
 ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: da148a7f-55bc-4990-a157-e61968b831d7
-author: leolimsft
-ms.author: lle
-manager: craigg
-ms.openlocfilehash: 15802f061f9996d377aa5110b180e0a1fb065081
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
-ms.translationtype: HT
+author: swinarko
+ms.author: sawinark
+ms.openlocfilehash: b10dcb5c3f959612323e960c471a710e0b94b8dd
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56020354"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75258865"
 ---
 # <a name="adding-knowledge-to-a-knowledge-base"></a>ナレッジ ベースへのナレッジの追加
 
@@ -30,46 +28,46 @@ ms.locfileid: "56020354"
   
 -   [ナレッジ検出の実行](#Discovery)  
   
--   [ドメイン内のデータ値の管理](#ManageDomain)  
+-   [ドメイン内のデータ値を管理する](#ManageDomain)  
   
--   [.dqs ファイルからのナレッジのインポート](#DQSFile)  
+-   [Dqs ファイルからのナレッジのインポート](#DQSFile)  
   
 -   [Excel ファイルからのナレッジのインポート](#Excel)  
   
--   [プロジェクトからナレッジ ベースへのナレッジの再インポート](#Project)  
+-   [プロジェクトからナレッジベースへのナレッジのインポート](#Project)  
   
--   [既定の DQS ナレッジ ベースの使用](#Default)  
+-   [既定の DQS ナレッジベースを使用する](#Default)  
   
-##  <a name="Discovery"></a> ナレッジ検出の実行  
+##  <a name="Discovery"></a>ナレッジ検出の実行  
  ナレッジ検出では、データ品質基準を取得するためにデータのサンプルを分析し、取得したナレッジをナレッジ ベースに追加します。 これは、データの不整合と構文エラーを識別し、データへの変更を提案するコンピューター支援型のプロセスです。 ナレッジ検出アクティビティは、ドメイン値を対話的に管理できるページを含むウィザードです。  
   
 -   ドキュメント化された詳細情報については、「 [Perform Knowledge Discovery](../data-quality-services/perform-knowledge-discovery.md)」を参照してください。  
   
 -   ナレッジ検出の実行方法を示すビデオについては、 [ここ](https://msdn.microsoft.com/sqlserver/hh323825.aspx)をクリックしてください。  
   
-##  <a name="ManageDomain"></a> ドメイン内のデータ値の管理  
+##  <a name="ManageDomain"></a>ドメイン内のデータ値を管理する  
  DQS では、コンピューター支援型のナレッジ検出アクティビティで生成されたメタデータを対話的に変更および拡張することができます。 これはドメイン管理アクティビティで行います。ドメイン管理アクティビティでは、特定のデータ値に変更を適用することができます。  
   
 -   ドキュメント化された詳細情報については、「 [Change Domain Values](../data-quality-services/change-domain-values.md)」を参照してください。  
   
 -   ドメイン管理の実行方法を示すビデオについては、 [ここ](https://msdn.microsoft.com/sqlserver/hh323825.aspx)をクリックしてください。 このビデオでは、ナレッジ検出ウィザードの [ドメイン値の管理] ページでドメイン値を変更します。 この手順は、ドメイン管理アクティビティの [ドメイン値] ページでも行うことができます。  
   
-##  <a name="DQSFile"></a> .dqs ファイルからのナレッジのインポート  
+##  <a name="DQSFile"></a>Dqs ファイルからのナレッジのインポート  
  .dqs データ ファイルから既存のナレッジ ベースにドメインをインポートしたり、.dqs から新しいナレッジ ベースにナレッジ ベース全体をインポートしたりできます。 これを行うには、まず既存のドメインまたはナレッジ ベースを .dqs ファイルにエクスポートする必要があります。 ドメインを含む .dqs ファイルには、ドメインのすべてのデータが格納されています。ナレッジ ベースを含む .dqs ファイルには、ドメインや照合ポリシーを含むナレッジ ベースのすべての情報が格納されています。  
   
 -   ドキュメントについて詳しくは、「[.dqs ファイルからのドメインのインポート](../data-quality-services/import-a-domain-from-a-dqs-file.md)」または「[.dqs ファイルからのナレッジ ベースのインポート](../data-quality-services/import-a-knowledge-base-from-a-dqs-file.md)」をご覧ください。  
   
-##  <a name="Excel"></a> Excel ファイルからのナレッジのインポート  
+##  <a name="Excel"></a>Excel ファイルからのナレッジのインポート  
  Excel スプレッドシート ファイルから既存のドメインまたはナレッジ ベースにドメイン値をインポートできます。 これを行うには、まずインポートするドメイン値を含む Excel スプレッドシートを作成し、 [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] を使用して値をインポートできるように Excel が [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)]コンピューターにインストールされていることを確認する必要があります。 ドメインまたはナレッジ ベースから Excel ファイルにドメイン値をエクスポートすることはできません。  
   
 -   ドキュメントについて詳しく、「[値を Excel ファイルからドメインへインポートする](../data-quality-services/import-values-from-an-excel-file-into-a-domain.md)」または「[ナレッジ検出でドメインを Excel ファイルからインポートする](../data-quality-services/import-domains-from-an-excel-file-in-knowledge-discovery.md)」をご覧ください。  
   
-##  <a name="Project"></a> プロジェクトからナレッジ ベースへのナレッジの再インポート  
+##  <a name="Project"></a>プロジェクトからナレッジベースへのナレッジのインポート  
  ナレッジ ベースを使用してクレンジングまたは照合データ品質プロジェクトを実行した後、クレンジングまたは照合中に作成されたナレッジをそのナレッジ ベースに再インポートできます。 これにより、プロジェクト中に生成されたナレッジを保持し、ナレッジ ベースにナレッジを継続的に構築することができます。  
   
 -   ドキュメントについて詳しくは、「[ドメインへのクレンジング プロジェクトの値のインポート](../data-quality-services/import-cleansing-project-values-into-a-domain.md)」をご覧ください。  
   
-##  <a name="Default"></a> 既定の DQS ナレッジ ベースの使用  
+##  <a name="Default"></a>既定の DQS ナレッジベースを使用する  
  DQS には、DQS データと呼ばれる構築済みのナレッジ ベースが同梱されています。このナレッジ ベースには、米国の会社および住所データのドメインが含まれています。 このナレッジ ベースを使用すると、新しいナレッジ ベースを作成することなく、プロジェクトをすばやく開始できます。 DQS データ ナレッジ ベースは読み取り専用ですが、データ スチュワードはこれに基づいて新しいナレッジ ベースを作成できます。  
   
 -   ドキュメント化された詳細情報については、「 [Using the DQS Default Knowledge Base](../data-quality-services/using-the-dqs-default-knowledge-base.md)」を参照してください。  

@@ -11,11 +11,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: a8be48dd3895f669aad8d1ed5af7be578ba23b9a
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52809474"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63245710"
 ---
 # <a name="sql-server-agent-f1-help"></a>SQL Server エージェントの F1 ヘルプ
   ここでは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェントの F1 ヘルプについて紹介します。 このヘルプ トピックは、F1 キーを押すか、ダイアログ ボックスで [ヘルプ] をクリックすることにより、ユーザー インターフェイスから表示できます。  

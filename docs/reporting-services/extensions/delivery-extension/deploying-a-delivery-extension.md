@@ -10,14 +10,14 @@ helpviewer_keywords:
 - Extension element
 - deploying [Reporting Services], extensions
 ms.assetid: 4436ce48-397d-42c7-9b5d-2a267e2a1b2c
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 4661104c1254dd7b3cf58a5e8be1dbe7c598fd6e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 06cffe614eaa55713fed862dc03f7c81da7bc287
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47768700"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63193764"
 ---
 # <a name="deploying-a-delivery-extension"></a>配信拡張機能の配置
   配信拡張機能では、その構成情報を XML 構成ファイルの形式で指定します。 XML ファイルは、配信拡張機能に定義された XML スキーマに従います。 配信拡張機能により、構成ファイルを設定および変更するためのインフラストラクチャが提供されます。  
@@ -33,7 +33,7 @@ ms.locfileid: "47768700"
   
 |属性|[説明]|  
 |---------------|-----------------|  
-|**名前**|拡張機能の一意な名前 (たとえば、電子メール配信拡張機能の場合は "レポート サーバーの電子メール"、ファイル共有配信拡張機能の場合は "レポート サーバーのファイル共有")。 **Name** 属性の最大文字数は 255 文字です。 名前は、構成ファイルの **Extension** 要素内にあるすべてのエントリの間で一意にする必要があります。 重複する名前がある場合には、レポート サーバーによってエラーが返されます。|  
+|**[名前]**|拡張機能の一意な名前 (たとえば、電子メール配信拡張機能の場合は "レポート サーバーの電子メール"、ファイル共有配信拡張機能の場合は "レポート サーバーのファイル共有")。 **Name** 属性の最大文字数は 255 文字です。 名前は、構成ファイルの **Extension** 要素内にあるすべてのエントリの間で一意にする必要があります。 重複する名前がある場合には、レポート サーバーによってエラーが返されます。|  
 |**型**|アセンブリの名前と共に完全修飾名前空間を含むコンマ区切りの一覧。|  
 |**[表示]**|**false** の値は、配信拡張機能がユーザー インターフェイスに表示されないことを示します。 この属性が指定されない場合、既定値は **true**になります。|  
   
@@ -87,7 +87,7 @@ ms.locfileid: "47768700"
      URL 構成要素は、配信拡張機能に選択できる多くの構成要素条件のうちの 1 つにすぎません。 [!INCLUDE[ssRS](../../../includes/ssrs.md)] のコード アクセス セキュリティの詳細については、「[セキュリティで保護された配置 &#40;Reporting Services&#41;](../../../reporting-services/extensions/secure-development/secure-development-reporting-services.md)」を参照してください。  
    
 ## <a name="verifying-the-deployment"></a>配置の確認  
- 配信拡張機能が正常にレポート サーバーに配置されたかどうかを確認するには、Web サービスの <xref:ReportService2010.ReportingService2010.ListExtensions%2A> メソッドを使用します。 また、Web ポータルを開き、配信拡張機能がサブスクリプションに有効な配信拡張機能の一覧に含まれていることを確認する方法もあります。 Web ポータルとサブスクリプションの詳細については、「[サブスクリプションと配信 &#40;Reporting Services&#41](../../../reporting-services/subscriptions/subscriptions-and-delivery-reporting-services.md)」を参照してください。  
+ 配信拡張機能が正常にレポート サーバーに配置されたかどうかを確認するには、Web サービスの <xref:ReportService2010.ReportingService2010.ListExtensions%2A> メソッドを使用します。 また、Web ポータルを開き、配信拡張機能がサブスクリプションに有効な配信拡張機能の一覧に含まれていることを確認する方法もあります。 Web ポータルとサブスクリプションの詳細については、「[サブスクリプションと配信 &#40;Reporting Services&#41;](../../../reporting-services/subscriptions/subscriptions-and-delivery-reporting-services.md)」を参照してください。  
   
 ## <a name="see-also"></a>参照  
  [配信拡張機能の実装](../../../reporting-services/extensions/delivery-extension/implementing-a-delivery-extension.md)   

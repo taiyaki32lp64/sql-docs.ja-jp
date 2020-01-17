@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: 316f067c-9e08-456a-af19-b80b0bbd4a5c
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 26a7c8e0cc876c8d13e9beb621354cead2f6296c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 5fe82d2709aa8efa32408a9d9d86f0f660bed823
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47708580"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67982548"
 ---
 # <a name="getlogintimeout-method-sqlserverdatasource"></a>getLoginTimeout メソッド (SQLServerDataSource)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -41,7 +40,7 @@ public int getLoginTimeout()
 ## <a name="remarks"></a>Remarks  
  アプリケーションがタイムアウト値を明示的に指定しない場合、このメソッドは既定値の 15 秒を返します。  
   
- この getLoginTimeout メソッドは、javax.sql.DataSource インターフェイスで getLoginTimeout メソッドによって指定されます。  
+ この getLoginTimeout メソッドは、javax.mail インターフェイスの getLoginTimeout メソッドによって指定されます。  
   
 ## <a name="see-also"></a>参照  
  [SQLServerDataSource のメンバー](../../../connect/jdbc/reference/sqlserverdatasource-members.md)   

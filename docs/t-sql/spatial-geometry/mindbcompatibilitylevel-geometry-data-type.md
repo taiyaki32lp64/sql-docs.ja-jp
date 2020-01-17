@@ -12,15 +12,14 @@ dev_langs:
 helpviewer_keywords:
 - MinDbCompatibilityLevel method (geometry)
 ms.assetid: c848b974-8ccb-4c5c-a7eb-b019a9538d99
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: 4cd9253f02b07cebb98dd87dc5e5b8a1180c31a1
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: MladjoA
+ms.author: mlandzic
+ms.openlocfilehash: ddebe254c44d1577b2da5200cec02011c5bca89f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47855750"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68101203"
 ---
 # <a name="mindbcompatibilitylevel-geometry-data-type"></a>MinDbCompatibilityLevel (geometry データ型)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]

@@ -1,5 +1,5 @@
 ---
-title: SELECT FROM&lt;モデル&gt;します。コンテンツ (DMX) |Microsoft Docs
+title: '[モデル&lt;&gt;から] を選択します。コンテンツ (DMX) |Microsoft Docs'
 ms.date: 06/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -8,15 +8,14 @@ ms.topic: conceptual
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-manager: kfile
-ms.openlocfilehash: 3498e841b70ca7a19d9353d277221a88b9cbf86f
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 61cbacee45147b7b6203e9cb2164c02cdc2c7453
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52512254"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68892831"
 ---
-# <a name="select-from-ltmodelgtcontent-dmx"></a>SELECT FROM&lt;モデル&gt;します。コンテンツ (DMX)
+# <a name="select-from-ltmodelgtcontent-dmx"></a>[モデル&lt;&gt;から] を選択します。コンテンツ (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
   指定されたデータ マイニング モデルのマイニング モデル スキーマ行セットを返します。  
@@ -34,7 +33,7 @@ SELECT [FLATTENED] [TOP <n>] <expression list> FROM <model>.CONTENT
  *n*  
  任意。 返す行数を指定する整数値です。  
   
- *式リスト*  
+ *式の一覧*  
  Content スキーマ行セットから派生する、列のコンマ区切りのリストです。  
   
  *model*  
@@ -47,12 +46,12 @@ SELECT [FLATTENED] [TOP <n>] <expression list> FROM <model>.CONTENT
  任意。 スカラー値を返す式。  
   
 ## <a name="remarks"></a>コメント  
- **SELECT FROM** _\<モデル >_**します。コンテンツ**ステートメントは、各アルゴリズムに固有のコンテンツを返します。 たとえば、カスタム アプリケーション内のアソシエーション ルール モデルに関するすべてのルールの記述を使用する場合があります。 使用することができます、 **SELECT FROM\<モデル >。コンテンツ**ステートメントをモデルの NODE_RULE 列の値を返します。  
+ **SELECT**  _FROM\<model >_ **。CONTENT**ステートメントでは、各アルゴリズムに固有のコンテンツが返されます。 たとえば、カスタム アプリケーション内のアソシエーション ルール モデルに関するすべてのルールの記述を使用する場合があります。 **[モデルから\<選択] > を使用できます。** モデルの NODE_RULE 列の値を返すコンテンツステートメント。  
   
  次の表に、マイニング モデル コンテンツに含まれる列を示します。  
   
 > [!NOTE]  
->  アルゴリズムでは、コンテンツを適切に表すため、列の解釈が異なる場合があります。 マイニング モデル コンテンツの各アルゴリズム、および解釈および各種類のモデル コンテンツのマイニング モデルをクエリする方法に関するヒントについては、次を参照してください。[マイニング モデル コンテンツ&#40;Analysis Services - データ マイニング&#41;](../analysis-services/data-mining/mining-model-content-analysis-services-data-mining.md)します。  
+>  アルゴリズムでは、コンテンツを適切に表すため、列の解釈が異なる場合があります。 各アルゴリズムのマイニングモデルコンテンツの説明、および各種類のモデルのマイニングモデルコンテンツの解釈とクエリの方法に関するヒントについては、「[マイニングモデルコンテンツ&#40;Analysis Services&#41;-データマイニング](https://docs.microsoft.com/analysis-services/data-mining/mining-model-content-analysis-services-data-mining)」を参照してください。  
   
 |CONTENT 行セット列|説明|  
 |---------------------------|-----------------|  
@@ -89,10 +88,10 @@ WHERE NODE_TYPE = 1
 |-----------------|----------------|  
 |TM_DecisionTree|0|  
   
- 次のクエリは、 **IsDescendant**関数を前のクエリで返されたノードの直下の子を返します。  
+ 次のクエリでは、 **Isdescendant**関数を使用して、前のクエリで返されたノードの直下の子を返します。  
   
 > [!NOTE]  
->  NODE_NAME の値は文字列であるためへの引数として NODE_ID を返す下位選択ステートメントを使用することはできません、 **IsDescendant**関数。  
+>  NODE_NAME の値は文字列であるため、サブ select ステートメントを使用して NODE_ID を**Isdescendant**関数の引数として返すことはできません。  
   
 ```  
 SELECT NODE_NAME, NODETYPE, NODE_CAPTION   
@@ -102,7 +101,7 @@ WHERE ISDESCENDANT('0')
   
  期待される結果:  
   
- モデルがデシジョン ツリー モデルであるため、モデルの親ノードの子孫には、1 つのマージナル統計ノード、予測可能な属性を表すノード、および入力属性と入力値を含む複数のノードが含まれています。 詳細については、「 [デシジョン ツリー モデルのマイニング モデル コンテンツ &#40;Analysis Services - データ マイニング&#41;](../analysis-services/data-mining/mining-model-content-for-decision-tree-models-analysis-services-data-mining.md)」を参照してください。  
+ モデルがデシジョン ツリー モデルであるため、モデルの親ノードの子孫には、1 つのマージナル統計ノード、予測可能な属性を表すノード、および入力属性と入力値を含む複数のノードが含まれています。 詳細については、「 [デシジョン ツリー モデルのマイニング モデル コンテンツ &#40;Analysis Services - データ マイニング&#41;](https://docs.microsoft.com/analysis-services/data-mining/mining-model-content-for-decision-tree-models-analysis-services-data-mining)」を参照してください。  
   
 ## <a name="using-the-flattened-keyword"></a>FLATTENED キーワードの使用  
  多くの場合、マイニング モデル コンテンツには、入れ子になったテーブル列のモデルに関する有用な情報が含まれています。 FLATTENED キーワードを使用すると、階層的な行セットをサポートするプロバイダーを使用しなくても、入れ子になったテーブル列からデータを取得することができます。  
@@ -144,8 +143,8 @@ WHERE NODE_TYPE = 26
 |TM_NaiveBayes|Bike Buyer|1|6383|  
   
 ## <a name="see-also"></a>参照  
- [選択&AMP;#40;DMX&AMP;#41;](../dmx/select-dmx.md)   
- [データ マイニング拡張機能&#40;DMX&#41;データ操作ステートメント](../dmx/dmx-statements-data-manipulation.md)   
+ [SELECT&#40;DMX&#41;](../dmx/select-dmx.md)   
+ [データマイニング拡張&#40;機能&#41; DMX データ操作ステートメント](../dmx/dmx-statements-data-manipulation.md)   
  [データ マイニング拡張機能 &#40;DMX&#41; ステートメント リファレンス](../dmx/data-mining-extensions-dmx-statements.md)  
   
   

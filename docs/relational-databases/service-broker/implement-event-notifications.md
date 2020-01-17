@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 29ac8f68-a28a-4a77-b67b-a8663001308c
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 0cc1e8e4405c6900860d8323d31d52e4a320639d
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: acdbd90268b1282bd6011ac7816157c70f66bb71
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51662238"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68048827"
 ---
 # <a name="implement-event-notifications"></a>イベント通知の実装
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -88,7 +87,7 @@ TO SERVICE 'NotifyService', '8140a771-3c4b-4479-8ac0-81008ab17984' ;
 >   
 >  `CREATE TABLE t1 (col1 int)`  
 >   
->  この場合イベント通知は、CREATE_SCHEMA イベントの発生時に 1 回、CREATE_TABLE イベントの発生時にもう 1 回、合計 2 回発生します。 CREATE_SCHEMA イベントと、対応するすべての CREATE SCHEMA 定義の <schema_element> テキストの両方でイベント通知が作成されないようにするか、または不要なイベント データのキャプチャを防止するためのロジックをアプリケーションに組み込むことをお勧めします。  
+>  この場合イベント通知は、次のように合計 2 回発生します: CREATE_SCHEMA イベントの発生時に 1 回、CREATE_TABLE イベントの発生時にもう 1 回。 CREATE_SCHEMA イベントと、対応するすべての CREATE SCHEMA 定義の <schema_element> テキストの両方でイベント通知が作成されないようにするか、または不要なイベント データのキャプチャを防止するためのロジックをアプリケーションに組み込むことをお勧めします。  
   
  **イベント通知を作成するには**  
   

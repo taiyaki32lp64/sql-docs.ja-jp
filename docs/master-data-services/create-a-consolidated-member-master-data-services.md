@@ -1,5 +1,5 @@
 ---
-title: 統合メンバーを作成する (マスター データ サービス) | Microsoft Docs
+title: 統合メンバーを作成する
 ms.custom: ''
 ms.date: 04/01/2016
 ms.prod: sql
@@ -12,15 +12,14 @@ helpviewer_keywords:
 - members [Master Data Services], creating consolidated members
 - consolidated members [Master Data Services], creating
 ms.assetid: 431ab2d2-5517-4372-9980-142b05427c08
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 33eea7308e4f2729a14ca1f3a0361b83ac566006
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
-ms.translationtype: HT
+ms.openlocfilehash: bcca8ec5850b7f787fa4fcb99f2c009a77b56b48
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52780534"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73729602"
 ---
 # <a name="create-a-consolidated-member-master-data-services"></a>統合メンバーを作成する (マスター データ サービス)
 
@@ -55,7 +54,7 @@ ms.locfileid: "52780534"
   
 9. 省略可。 **[注釈]** ボックスに、メンバーを追加した理由についてのコメントを入力します。 そのメンバーにアクセスできるすべてのユーザーが、その注釈を表示できます。  
   
-10. **[OK]** をクリックします。  
+10. クリックして **OK**です。  
   
 ## <a name="see-also"></a>参照  
  [明示的階層を作成する (マスター データ サービス)](../master-data-services/create-an-explicit-hierarchy-master-data-services.md)   

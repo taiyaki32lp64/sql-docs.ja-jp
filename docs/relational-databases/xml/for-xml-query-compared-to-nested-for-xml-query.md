@@ -11,15 +11,14 @@ helpviewer_keywords:
 - FOR XML query
 - queries [XML in SQL Server], comparing query types
 ms.assetid: 19225b4a-ee3f-47cf-8bcc-52699eeda32c
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: 52e2475748a96d8be757890552225061a241d32a
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+author: MightyPen
+ms.author: genemi
+ms.openlocfilehash: f00e060bf477d6e43f2ddd42e0fd4bbbf6515898
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52539096"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67943344"
 ---
 # <a name="for-xml-query-compared-to-nested-for-xml-query"></a>FOR XML クエリと入れ子になった FOR XML クエリの比較
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

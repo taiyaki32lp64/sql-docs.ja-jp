@@ -15,15 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - STPointFromWKB (geometry Data Type)
 ms.assetid: 1157c172-2dc7-4393-bae6-b85406171a34
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: 3cef65b2d51cba199b3a908ee8f71880663aee53
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: MladjoA
+ms.author: mlandzic
+ms.openlocfilehash: 985fb4f48363a1cb3f8411b80365705ee2392498
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47600440"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68066421"
 ---
 # <a name="stpointfromwkb-geometry-data-type"></a>STPointFromWKB (geometry データ型)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -47,9 +46,9 @@ STPointFromWKB ( 'WKB_point' , SRID )
 ## <a name="return-types"></a>戻り値の型  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の戻り値の型: **geometry**  
   
- CLR の戻り値の型: **SqlGeometry**  
+ CLR の戻り値の型:**SqlGeometry**  
   
- OGC の型: **Point**  
+ OGC の型:**Point**  
   
 ## <a name="remarks"></a>Remarks  
  このメソッドでは、入力が正しい形式でない場合に、**FormatException** をスローします。  

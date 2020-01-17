@@ -11,17 +11,20 @@ helpviewer_keywords:
 - LN function
 - natural logarithm of expression [Integration Services]
 ms.assetid: 55d7b657-b5fd-4753-9c81-54ed7575e720
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: 3c5df9e40cd3a50a02ed343d1c03ba43fb23ba1a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 4bbf59211c35a6048c715594d9c298ba041bcf15
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47711060"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71289126"
 ---
 # <a name="ln-ssis-expression"></a>LN (SSIS 式)
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   数値式の自然対数を返します。  
   
 ## <a name="syntax"></a>構文  

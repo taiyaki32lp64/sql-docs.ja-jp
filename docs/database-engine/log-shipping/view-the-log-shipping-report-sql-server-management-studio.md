@@ -1,6 +1,7 @@
 ---
-title: ログ配布レポートの表示 (SQL Server Management Studio) | Microsoft Docs
-ms.custom: ''
+title: ログ配布レポートの表示 (SSMS)
+description: SQL Server Management Studio (SSMS) GUI を使用してログ配布レポートを表示する方法について説明します。
+ms.custom: seo-lt-2019
 ms.date: 03/04/2017
 ms.prod: sql
 ms.reviewer: ''
@@ -14,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 3b549f2f-3683-45e5-b8e8-8095276c41ab
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: ead50c19fa0729f136ed2806bcb4030cc7e3b852
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: de5a925e9d583d1263fb8b99ebca2f8edac51165
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47770240"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75258561"
 ---
 # <a name="view-the-log-shipping-report-sql-server-management-studio"></a>ログ配布レポートの表示 (SQL Server Management Studio)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -30,7 +30,7 @@ ms.locfileid: "47770240"
   
  現在のサーバー インスタンスによって実行される役割ごとに、次の情報を表示できます。  
   
-|ロール|表示される情報|  
+|Role|表示される情報|  
 |----------|---------------------------|  
 |モニター|このサーバー インスタンスを監視サーバーとして使用するすべてのプライマリ サーバーとセカンダリ サーバーの名前と状態。|  
 |プライマリ|プライマリ データベースごとの、現在のサーバー インスタンスの (プライマリ サーバーとしての) 状態と名前、およびプライマリ データベース名。 このレポートには、(プライマリ サーバーのローカルに格納された) バックアップ ジョブの状態が表示されます。<br /><br /> また、このレポートには、対応するセカンダリ サーバーごとに 1 行のデータが含まれます。 構成に監視サーバーを使用していて、ストアド プロシージャからそのモニターに接続できる場合は、これらの行に最新のログ バックアップのコピー状態と復元状態が表示されます。|  

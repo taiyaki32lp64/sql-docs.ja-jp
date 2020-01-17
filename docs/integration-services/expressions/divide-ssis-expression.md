@@ -11,17 +11,20 @@ helpviewer_keywords:
 - / (divide)
 - divide operator (/)
 ms.assetid: 5bde9223-872d-443e-8a27-57735e1d8f3d
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: df98bbe47861ca2fa03acec444a9881a7f2c6a42
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 7341a6dad3633b95882ba1b06e5f27e8c7af50db
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47765598"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71289924"
 ---
 # <a name="divide-ssis-expression"></a>除算 (SSIS 式)
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   最初の数値式を 2 番目の数値式で除算します。  
   
 ## <a name="syntax"></a>構文  
@@ -68,6 +71,6 @@ ListPrice / StandardCost
   
 ## <a name="see-also"></a>参照  
  [演算子の優先順位と結合規則](../../integration-services/expressions/operator-precedence-and-associativity.md)   
- [演算子 (SSIS 式)](../../integration-services/expressions/operators-ssis-expression.md)  
+ [演算子 &#40;SSIS 式&#41;](../../integration-services/expressions/operators-ssis-expression.md)  
   
   

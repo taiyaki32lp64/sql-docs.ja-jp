@@ -19,15 +19,14 @@ helpviewer_keywords:
 ms.assetid: ee2afd4e-0d91-462b-9403-98d481546330
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: e473b213321af7366881f0f9a0f32c5ac4ab70cd
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
-ms.translationtype: HT
+ms.openlocfilehash: 85efd235861522754cbcdc209d6cf28558907d76
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51677571"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68058769"
 ---
-# <a name="srvparaminfo-extended-stored-procedure-api"></a>srv_paraminfo (拡張ストアド プロシージャ API)
+# <a name="srv_paraminfo-extended-stored-procedure-api"></a>srv_paraminfo (拡張ストアド プロシージャ API)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
     
 > [!IMPORTANT]  
@@ -77,7 +76,7 @@ pfNull
  パラメーターの最大長へのポインターです。  
   
  *pcbActualLen*  
- パラメーターの実際の長さへのポインターです。 **pfNull* が FALSE に設定されている場合、値 0 (\**pcbActualLen* == 0) はデータの長さがゼロであることを示します。  
+ パラメーターの実際の長さへのポインターです。 *pfNull* が FALSE に設定されている場合、値 0 (\**pcbActualLen* == 0) はデータの長さがゼロであることを示します。  
   
  *pbData*  
  パラメーター データのバッファーへのポインターです。 *pbData* が NULL でない場合、拡張ストアド プロシージャ API により \**pbData* に \**pcbActualLen* バイトのデータが書き込まれます。 *pbData* が NULL の場合、\**pbData* にデータは書き込まれませんが、関数により \**pbType*、\**pcbMaxLen*、\**pcbActualLen*、**pfNull* が返されます。 このバッファーのメモリは、アプリケーションで管理する必要があります。  

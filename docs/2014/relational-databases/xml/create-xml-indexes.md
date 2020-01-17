@@ -10,15 +10,15 @@ helpviewer_keywords:
 - indexes [XML in SQL Server]
 - XML indexes [SQL Server], creating
 ms.assetid: 6ecac598-355d-4408-baf7-1b2e8d4cf7c1
-author: douglaslMS
-ms.author: douglasl
+author: MightyPen
+ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 3685674df21d909d88779d1aa82030b8ee3cc283
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 7da89810a92c14f5b59ebcd546c4fb4cfa256f02
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48142722"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62637762"
 ---
 # <a name="create-xml-indexes"></a>XML インデックスの作成
   このトピックでは、プライマリ XML インデックスとセカンダリ XML インデックスの作成方法について説明します。  
@@ -46,7 +46,7 @@ ms.locfileid: "48142722"
   
  XML インデックスを作成することはできません、`xml`で、ビューの列を入力、**テーブル**を持つ変数の値を持つ`xml`種類の列、または`xml`変数を入力します。  
   
--   変更する、`xml`からに型指定されていない型の列の型指定された XML、またはその逆の場合、ALTER TABLE ALTER COLUMN オプションを使用すると、その列に XML インデックスは存在しません。 XML インデックスが存在する場合は、列の型を変更する前にその XML インデックスを削除する必要があります。  
+-   ALTER TABLE ALTER COLUMN オプションを使用して、`xml` 型の列を型指定されていない XML から型指定された XML に変更する場合、またはその逆の変更を行う場合は、その列に XML インデックスが存在してはいけません。 XML インデックスが存在する場合は、列の型を変更する前にその XML インデックスを削除する必要があります。  
   
 -   XML インデックスを作成する場合は、ARITHABORT オプションが ON に設定されている必要があります。 XML データ型メソッドを使用して XML 列内の値のクエリ、挿入、削除、または更新を行うには、同じオプションがその接続に設定される必要があります。 異なるオプションが設定された場合、XML データ型のメソッドは失敗します。  
   
@@ -55,7 +55,7 @@ ms.locfileid: "48142722"
   
  **以降のバージョンでは、プライマリ XML インデックスを作成または再作成する XML データ型の列に、XML スキーマ型** xs:date **または** xs:dateTime [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] (またはこれらのサブタイプ) で 1 未満の年の値が含まれていると、インデックスの作成が失敗します。 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)][!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]ではこれらの値が許可されていたため、この問題は、生成されたデータベースでインデックスを作成する際に発生する可能性があります。 詳細については、「 [型指定された XML と型指定されていない XML の比較](../xml/compare-typed-xml-to-untyped-xml.md)」を参照してください。  
   
-### <a name="example-creating-a-primary-xml-index"></a>例: プライマリ XML インデックスの作成  
+### <a name="example-creating-a-primary-xml-index"></a>例:プライマリ XML インデックスの作成  
  ここからはほとんどの例で、型指定されていない XML 列を含んだテーブル T (pk INT PRIMARY KEY, xCol XML) を使用します。 XML 列は、型指定された XML に簡単に拡張できます。 説明を簡単にするため、次に示す XML データ インスタンスに対するクエリについて説明します。  
   
 ```  

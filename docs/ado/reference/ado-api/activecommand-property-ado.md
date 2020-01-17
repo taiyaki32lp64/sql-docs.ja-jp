@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: fb4088d5-5968-42d6-aeaa-3955046bb4da
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 4dfdb60f9a394fa4d11e9b66ffb1f4b205881293
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d2a2f23360cf3ce032d14af7ca475d5c2c3ea638
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47705540"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67921674"
 ---
 # <a name="activecommand-property-ado"></a>ActiveCommand プロパティ (ADO)
 示す、[コマンド](../../../ado/reference/ado-api/command-object-ado.md)作成、関連付けられているオブジェクトを[レコード セット](../../../ado/reference/ado-api/recordset-object-ado.md)オブジェクト。  
@@ -29,7 +28,7 @@ ms.locfileid: "47705540"
 ## <a name="return-value"></a>戻り値  
  返します、**バリアント**を格納している、**コマンド**オブジェクト。 既定では、null オブジェクト参照です。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>コメント  
  **ActiveCommand**プロパティは読み取り専用です。  
   
  場合、**コマンド**オブジェクトが現在の作成に使用されなかった**Recordset**、 **Null**オブジェクト参照が返されます。  

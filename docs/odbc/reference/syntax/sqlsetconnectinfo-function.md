@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 0782a1c3-c5d1-499b-a8ba-134162db9990
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 88af314c1cca5ef2d7cdbdb2b5e555b81d02be01
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: e5d8087e7672dd331d0b078cea4930be7582a026
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52404837"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68093004"
 ---
 # <a name="sqlsetconnectinfo-function"></a>SQLSetConnectInfo 関数
 **準拠**  
@@ -29,7 +28,8 @@ ms.locfileid: "52404837"
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp
+  
 SQLRETURN  SQLSetConnectInfo(  
                 SQLHDBC_INFO_TOKEN   TokenHandle,  
                 WCHAR *              ServerName,  
@@ -56,7 +56,7 @@ SQLRETURN  SQLSetConnectInfo(
  *NameLength2*  
  [入力]長さ **UserName*文字数。  
   
- *[認証]*  
+ *\[認証]*  
  [入力]認証の文字列 (通常はパスワード)。  
   
  *NameLength3*  

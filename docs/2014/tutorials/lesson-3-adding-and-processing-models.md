@@ -11,13 +11,13 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: 2596ed7eb2d714ff0790daa013a5e47ecd134b38
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56018933"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62653704"
 ---
-# <a name="lesson-3-adding-and-processing-models"></a>レッスン 3: 追加して、モデルの処理
+# <a name="lesson-3-adding-and-processing-models"></a>レッスン 3: モデルの追加と処理
   前のレッスンで作成したマイニング構造には、[!INCLUDE[msCoName](../includes/msconame-md.md)] デシジョン ツリー アルゴリズムに基づくマイニング モデルが 1 つ含まれています。 ターゲット メーリング キャンペーンの顧客を識別するために、このモデルを使用することができます。 ただし、徹底的な分析を行うには、異なるアルゴリズムを使用して関連モデルを作成し、それらの結果を比較する方が一般的です。 これにより、さまざまな洞察を得ることもできます。 このため、追加の 2 つのモデルを作成し、それらのモデルを処理および配置します。  
   
  このレッスンでは、見込み顧客のリストの中から、製品を購入する可能性の高い顧客を予測するマイニング モデルのセットを作成します。  

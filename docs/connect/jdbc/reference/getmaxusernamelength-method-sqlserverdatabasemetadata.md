@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: 09ec7d40-4c4a-4d89-ba11-78e5327b5759
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 76e42e523dbd883dfd7c8b95c59687b1c91a8260
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 272fd1bbcacabda3bf2b3ecfe236e6c14354f9cf
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47743014"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67981893"
 ---
 # <a name="getmaxusernamelength-method-sqlserverdatabasemetadata"></a>getMaxUserNameLength メソッド (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -36,13 +35,13 @@ public int getMaxUserNameLength()
 ```  
   
 ## <a name="return-value"></a>戻り値  
- 許容される最大文字数を示す **int**。  
+ 許容される最大文字数を示す **int** です。  
   
 ## <a name="exceptions"></a>例外  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- この getMaxUserNameLength メソッドは、java.sql.DatabaseMetaData インターフェイスで getMaxUserNameLength メソッドによって指定されます。  
+ この getMaxUserNameLength メソッドは、getMaxUserNameLength メソッドによって、java メタデータインターフェイスで指定されます。  
   
 ## <a name="see-also"></a>参照  
  [SQLServerDatabaseMetaData のメソッド](../../../connect/jdbc/reference/sqlserverdatabasemetadata-methods.md)   

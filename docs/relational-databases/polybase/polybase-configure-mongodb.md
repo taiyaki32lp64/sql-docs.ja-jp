@@ -1,108 +1,77 @@
 ---
-title: MongoDB 上の外部データにアクセスするための PolyBase の構成 | Microsoft Docs
-ms.custom: ''
-ms.date: 09/24/2018
+title: 外部データへのアクセス:MongoDB - PolyBase
+ms.date: 12/13/2019
+ms.metadata: seo-lt-2019
 ms.prod: sql
-ms.reviewer: ''
 ms.technology: polybase
 ms.topic: conceptual
-author: Abiola
-ms.author: aboke
-manager: craigg
-monikerRange: '>= sql-server-ver15 || = sqlallproducts-allversions'
-ms.openlocfilehash: 6c4ccf371cdcac99d50c3142ec42641380623501
-ms.sourcegitcommit: 1e28f923cda9436a4395a405ebda5149202f8204
+author: MikeRayMSFT
+ms.author: mikeray
+ms.reviewer: mikeray
+monikerRange: '>= sql-server-linux-ver15 || >= sql-server-ver15 || =sqlallproducts-allversions'
+ms.openlocfilehash: aed736096918d121835149f8cbc9ba32399a3e80
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/25/2019
-ms.locfileid: "55044498"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75255431"
 ---
 # <a name="configure-polybase-to-access-external-data-in-mongodb"></a>MongoDB 上の外部データにアクセスするための PolyBase の構成
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 この記事では、SQL Server インスタンス上で PolyBase を使用して、MongoDB 上の外部データに対してクエリを実行する方法について説明します。
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>前提条件
 
 PolyBase をインストールしていない場合は、「[PolyBase のインストール](polybase-installation.md)」をご覧ください。
 
-## <a name="configure-an-external-table"></a>外部テーブルの構成
+データベース スコープ資格情報より前に、[マスター キー](../../t-sql/statements/create-master-key-transact-sql.md)を作成しておく必要があります。 
+    
+
+## <a name="configure-a-mongodb-external-data-source"></a>MongoDB の外部データ ソースを構成する
 
 MongoDB データ ソースのデータに対してクエリを実行するには、外部テーブルを作成して外部データを参照する必要があります。 このセクションでは、これらの外部テーブルを作成するサンプル コードを示します。
 
-このセクションでは、次のオブジェクトを作成します。
+このセクションでは以下の Transact-SQL コマンドが使用されます。
 
-- データベース スコープ ベースの資格情報 (TRANSACT-SQL) の作成します。
-- 外部データ ソース (TRANSACT-SQL) を作成します。
-- 外部テーブル (TRANSACT-SQL) を作成します。
-- CREATE STATISTICS (Transact-SQL)
+- [CREATE DATABASE SCOPED CREDENTIAL (Transact-SQL)](../../t-sql/statements/create-database-scoped-credential-transact-sql.md)
+- [CREATE EXTERNAL DATA SOURCE (Transact-SQL)](../../t-sql/statements/create-external-data-source-transact-sql.md) 
+- [CREATE STATISTICS (Transact-SQL)](../../t-sql/statements/create-statistics-transact-sql.md)
 
-1. まだ存在しない場合は、データベースにマスター キーを作成します。 これは、資格情報のシークレットの暗号化に必須です。
+1. MongoDB ソースにアクセスするために、データベース スコープ資格情報を作成します。
 
-     ```sql
-      CREATE MASTER KEY ENCRYPTION BY PASSWORD = 'password';  
-     ```
-    ## <a name="arguments"></a>引数
-    PASSWORD ='password'
+    ```sql
+    /*  specify credentials to external data source
+    *  IDENTITY: user name for external source. 
+    *  SECRET: password for external source.
+    */
+    CREATE DATABASE SCOPED CREDENTIAL credential_name WITH IDENTITY = 'username', Secret = 'password';
+    ```
+1. [CREATE EXTERNAL DATA SOURCE](../../t-sql/statements/create-external-data-source-transact-sql.md) を使用して外部データ ソースを作成します。
 
-    データベース内のマスター キーの暗号化に使用されているパスワードを指定します。 パスワードは、SQL Server のインスタンスをホストしている、コンピューターの Windows パスワード ポリシー要件を満たす必要があります。
-
-1.   MongoDB ソースにアクセスするために、データベース スコープ資格情報を作成します。
-
-     ```sql
-     /*  specify credentials to external data source
-     *  IDENTITY: user name for external source.  
-     *  SECRET: password for external source.
-     */
-     CREATE DATABASE SCOPED CREDENTIAL credential_name 
-     WITH IDENTITY = 'username', Secret = 'password';
-     ```
-
-1.  [CREATE EXTERNAL DATA SOURCE](../../t-sql/statements/create-external-data-source-transact-sql.md) を使用して外部データ ソースを作成します。
-
-     ```sql
-     /*  LOCATION: Location string should be of format '<type>://<server>[:<port>]'.
+    ```sql
+    /*  LOCATION: Location string should be of format '<type>://<server>[:<port>]'.
     *  PUSHDOWN: specify whether computation should be pushed down to the source. ON by default.
     *CONNECTION_OPTIONS: Specify driver location
     *  CREDENTIAL: the database scoped credential, created above.
-    */  
+    */
     CREATE EXTERNAL DATA SOURCE external_data_source_name
-    WITH (
-    LOCATION = mongodb://<server>[:<port>],
+    WITH (LOCATION = 'mongodb://<server>[:<port>]',
     -- PUSHDOWN = ON | OFF,
-      CREDENTIAL = credential_name
-    );
-     ```
-
-1.  [CREATE EXTERNAL TABLE](../../t-sql/statements/create-external-table-transact-sql.md) を使用して、外部の MongoDB システムに格納されているデータを表す外部テーブルを作成します。
-
-     ```sql
-     /*  LOCATION: MongoDB table/view in '<database_name>.<schema_name>.<object_name>' format
-     *  DATA_SOURCE: the external data source, created above.
-     */
-     CREATE EXTERNAL TABLE customers(
-     [O_ORDERKEY] DECIMAL(38) NOT NULL,
-     [O_CUSTKEY] DECIMAL(38) NOT NULL,
-     [O_ORDERSTATUS] CHAR COLLATE Latin1_General_BIN NOT NULL,
-     [O_TOTALPRICE] DECIMAL(15,2) NOT NULL,
-     [O_ORDERDATE] DATETIME2(0) NOT NULL,
-     [O_COMMENT] VARCHAR(79) COLLATE Latin1_General_BIN NOT NULL
-     )
-     WITH (
-     LOCATION='customer',
-     DATA_SOURCE= external_data_source_name
-     );
-     ```
+    CREDENTIAL = credential_name);
+    ```
 
 1. **省略可能:** 外部テーブルの統計を作成します。
 
     最適なクエリのパフォーマンスを得るために、外部テーブルの列、特に結合、フィルター、集計に使用される列に対して統計を作成することをお勧めします。
 
-     ```sql
-      CREATE STATISTICS statistics_name ON customer (C_CUSTKEY) WITH FULLSCAN; 
-     ```
+    ```sql
+    CREATE STATISTICS statistics_name ON customer (C_CUSTKEY) WITH FULLSCAN; 
+    ```
 
+>[!IMPORTANT] 
+>外部データ ソースを作成すると、[CREATE EXTERNAL TABLE](../../t-sql/statements/create-external-table-transact-sql.md) コマンドを使用して、そのソース上でクエリ可能なテーブルを作成することができます。 
 
 ## <a name="flattening"></a>フラット化
  フラット化は、MongoDB ドキュメント コレクションの入れ子になったデータと繰り返しデータに対して有効になります。 ユーザーは、入れ子になったデータや繰り返しデータを含む可能性のある MongoDB ドキュメント コレクションに対して `create an external table` を有効にし、リレーショナル スキーマを明示的に指定する必要があります。 その後のマイルストーンで、mongo ドキュメント コレクションに対する自動スキーマ検出を有効にします。
@@ -155,6 +124,6 @@ JSON の入れ子になったデータ型/繰り返しデータ型は次のよ�
 
 Cosmos DB の Mongo API および Mongo DB PolyBase コネクタを使用すると、**Cosmos DB インスタンス**の外部テーブルを作成することができます。 これは、上記と同じ手順に従って行います。 データベースのスコープ資格情報、サーバーのアドレス、ポート、場所の文字列が Cosmos DB サーバーのものを反映していることを確認してください。 
 
-## <a name="next-steps"></a>次の手順
+## <a name="next-steps"></a>次のステップ
 
 PolyBase の詳細については、[SQL Server PolyBase の概要](polybase-guide.md)に関する記事をご覧ください。

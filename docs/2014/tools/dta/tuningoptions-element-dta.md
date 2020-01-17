@@ -15,11 +15,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 3050ce285cc98386f6de6278bedd2520cb39ba36
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53348753"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63061066"
 ---
 # <a name="tuningoptions-element-dta"></a>TuningOptions 要素 (DTA)
   特定のチューニング セッションのチューニング オプションが含まれます。  
@@ -53,7 +53,7 @@ ms.locfileid: "53348753"
 ## <a name="example"></a>例  
  例については、`TuningOptions`要素を参照してください、 [XML 入力ファイルのサンプル&#40;DTA&#41;](xml-input-file-samples-dta.md)します。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [XML 入力ファイル リファレンス &#40;データベース エンジン チューニング アドバイザー&#41;](xml-input-file-reference-database-engine-tuning-advisor.md)  
   
   

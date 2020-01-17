@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: 140d0b43-9455-4907-9827-16564a904268
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 2693bd51da682e9af0133c8400f2cfeacd2737ca
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: af4d5dfa6d59338fb9640143b387b78421375e05
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53373684"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66067799"
 ---
 # <a name="tabular-modeling-adventure-works-tutorial"></a>テーブル モデリング (Adventure Works チュートリアル)
   このチュートリアルでは、 [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] を使用して、 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]Analysis Services テーブル モデルを作成する方法を学習します。  
@@ -72,10 +71,10 @@ ms.locfileid: "53373684"
 |[レッスン 2:データを追加します。](lesson-2-add-data.md)|20 分|  
 |[レッスン 3:列名の変更します。](rename-columns.md)|20 分|  
 |[レッスン 4:日付テーブルとしてマークします。](lesson-3-mark-as-date-table.md)|3 分|  
-|[レッスン 5:リレーションシップを作成します。](lesson-4-create-relationships.md)|10 分|  
+|[レッスン 5: リレーションシップを作成します。](lesson-4-create-relationships.md)|10 分|  
 |[レッスン 6:計算列を作成します。](lesson-5-create-calculated-columns.md)|15 分|  
-|[レッスン 7:メジャーを作成します。](lesson-6-create-measures.md)|30 分|  
-|[レッスン 8:主要業績評価指標を作成します。](lesson-7-create-key-performance-indicators.md)|15 分|  
+|[レッスン 7: メジャーを作成します。](lesson-6-create-measures.md)|30 分|  
+|[レッスン 8: 主要業績評価指標を作成します。](lesson-7-create-key-performance-indicators.md)|15 分|  
 |[レッスン 9:パースペクティブを作成します。](lesson-8-create-perspectives.md)|5 分|  
 |[レッスン 10:階層を作成します。](lesson-9-create-hierarchies.md)|20 分|  
 |[レッスン 11:パーティションを作成します。](lesson-10-create-partitions.md)|15 分|  

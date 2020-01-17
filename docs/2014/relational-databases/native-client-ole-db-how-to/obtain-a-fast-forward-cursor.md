@@ -13,11 +13,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: f966d8aa907c6a92f4ac964fd7d937dab94afa95
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53366804"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63225549"
 ---
 # <a name="obtain-a-fastforward-cursor"></a>FAST_FORWARD カーソルの取得
   読み取り専用の順方向専用カーソルを取得するには、行セット プロパティ DBPROP_SERVERCURSOR、DBPROP_OTHERINSERT、DBPROP_OTHERUPDATEDELETE、DBPROP_OWNINSERT、および DBPROP_OWNUPDATEDELETE を VARIANT_TRUE に設定します。  

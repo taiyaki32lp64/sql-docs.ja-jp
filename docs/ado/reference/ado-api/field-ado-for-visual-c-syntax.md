@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 04631b08-3937-440b-ac09-cd166f239908
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: e65d9922a040fa1a24442c98e9d16b57d29188db
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: f2d5b70e1c00b34c4f1a32822b7896b088d62376
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47674150"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67932773"
 ---
 # <a name="field-ado-for-visual-c-syntax"></a>Field (Visual C++ 構文用の ADO)
 ## <a name="methods"></a>メソッド  
@@ -31,7 +30,7 @@ AppendChunk(VARIANT Data)
 GetChunk(long Length, VARIANT *pvar)  
 ```  
   
-## <a name="properties"></a>[プロパティ]  
+## <a name="properties"></a>Properties  
   
 ```  
 get_ActualSize(long *pl)  
@@ -54,5 +53,5 @@ get_Value(VARIANT *pvar)
 put_Value(VARIANT Val)  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [Field オブジェクト](../../../ado/reference/ado-api/field-object.md)

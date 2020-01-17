@@ -4,23 +4,22 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.scriptcomponent.connections.f1
 helpviewer_keywords:
 - Script Transformation Editor
 ms.assetid: 709f048e-0b8b-46c3-9dde-3e912361157f
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: ed1cd92ee057ce9a6901bab931d1986237ff7384
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: b0090534872f0c2ae73e4047d30a6bcc0729b9d5
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48081372"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66056201"
 ---
 # <a name="script-transformation-editor-connection-managers-page"></a>[スクリプト変換エディター] ([接続マネージャー] ページ)
   **[スクリプト変換エディター]** の **[接続マネージャー]** ページを使用すると、スクリプトで使用される接続を指定できます。  
@@ -35,7 +34,7 @@ ms.locfileid: "48081372"
  接続を表す一意な名前を入力します。  
   
  **接続マネージャー**  
- 使用できる接続マネージャーの一覧から選択するか、[**\<新しい接続>**] を選択して **[SSIS 接続マネージャーの追加]** ダイアログ ボックスを開きます。  
+ 使用できる接続マネージャーの一覧から選択するか、[ **\<新しい接続>** ] を選択して **[SSIS 接続マネージャーの追加]** ダイアログ ボックスを開きます。  
   
  **[説明]**  
  接続の説明を入力します。  
@@ -48,10 +47,10 @@ ms.locfileid: "48081372"
   
 ## <a name="see-also"></a>参照  
  [Integration Services のエラーおよびメッセージのリファレンス](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [スクリプト コンポーネントの種類を選択します。](../../2014/integration-services/select-script-component-type.md)   
- [スクリプト変換エディター&#40;入力列 ページ&#41;](../../2014/integration-services/script-transformation-editor-input-columns-page.md)   
- [スクリプト変換エディター&#40;入力し、出力のページ&#41;](../../2014/integration-services/script-transformation-editor-inputs-and-outputs-page.md)   
- [スクリプト変換エディター &#40;[スクリプト] ページ&#41;](../../2014/integration-services/script-transformation-editor-script-page.md)   
+ [[スクリプト コンポーネントの種類を選択]](../../2014/integration-services/select-script-component-type.md)   
+ [スクリプト変換エディター ([入力列] ページ)](../../2014/integration-services/script-transformation-editor-input-columns-page.md)   
+ [スクリプト変換エディター &#40;[入力および出力] ページ&#41;](../../2014/integration-services/script-transformation-editor-inputs-and-outputs-page.md)   
+ [スクリプト変換エディター ([スクリプト] ページ)](../../2014/integration-services/script-transformation-editor-script-page.md)   
  [その他のスクリプト コンポーネントの例](extending-packages-scripting-data-flow-script-component-examples/additional-script-component-examples.md)  
   
   

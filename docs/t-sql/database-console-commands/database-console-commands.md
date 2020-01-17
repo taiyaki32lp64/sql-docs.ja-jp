@@ -10,18 +10,17 @@ ms.topic: language-reference
 dev_langs:
 - TSQL
 ms.assetid: 02265d6f-44fb-4e28-af58-115ba1ef6c75
-author: uc-msft
+author: pmasl
 ms.author: umajay
-manager: craigg
-ms.openlocfilehash: 74f5f6de736b50aa2fe22933519d145b75190c5d
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: dcf26d7720a8ca35be9202d0e5765b338ec6a59b
+ms.sourcegitcommit: 3de1fb410de2515e5a00a5dbf6dd442d888713ba
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52526739"
+ms.lasthandoff: 09/02/2019
+ms.locfileid: "70211211"
 ---
 # <a name="database-console-commands"></a>データベース コンソール コマンド
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
 
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] には、以下の管理コマンドが用意されています。
   

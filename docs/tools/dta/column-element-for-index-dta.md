@@ -1,5 +1,5 @@
 ---
-title: Column 要素 (DTA) のインデックスの |Microsoft Docs
+title: Index の Column 要素 (DTA) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/09/2017
 ms.prod: sql
@@ -12,15 +12,14 @@ dev_langs:
 helpviewer_keywords:
 - Column element
 ms.assetid: ba9fac20-26bd-4333-940e-842c15241b46
-author: stevestein
-ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 77972892b2efcac8554f79ea9c41720f9ae40277
-ms.sourcegitcommit: 0f7cf9b7ab23df15624d27c129ab3a539e8b6457
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 3abd394ea3b7c061deac894e611d1cae3e7d1c03
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51290818"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67949855"
 ---
 # <a name="column-element-for-index-dta"></a>Index の Column 要素 (DTA)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

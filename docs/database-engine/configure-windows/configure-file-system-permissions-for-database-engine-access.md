@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 78bba43c-4edb-4216-84ac-d6246ae5546d
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: f8139bec00a512a9be6d5805e17f09671135eadb
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a42a4a17a1eee9222318e2b508b28d190361d85e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47640140"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68012782"
 ---
 # <a name="configure-file-system-permissions-for-database-engine-access"></a>データベース エンジン アクセスのファイル システム権限の構成
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -39,7 +38,7 @@ ms.locfileid: "47640140"
 4.  **[選択するオブジェクト名を入力してください]** ボックスに、オンライン ブックのトピック「 [**Windows サービス アカウントと権限の構成**](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md)」に記載されているサービスごとの SID の名前を入力します。 ( [!INCLUDE[ssDE](../../includes/ssde-md.md)] のサービスごとの SID の名前の場合、既定のインスタンスには **NT SERVICE\MSSQLSERVER** 、指定のインスタンスには **NT SERVICE\MSSQL$InstanceName** を使用します。)  
   
 5.  **[名前の確認]** をクリックして、このエントリを検証します。 (検証に失敗した場合、名前が見つからないと示されることがあります。 **[OK]** をクリックすると、 **[複数の名前が見つかりました]** ダイアログ ボックスが表示されます。 ここで、サービスごとの SID の名前として **MSSQLSERVER** または **NT SERVICE\MSSQL$InstanceName**を選択し、 **[OK]** をクリックします。  **[OK]** を再度クリックして、 **[権限]** ダイアログ ボックスに戻ります。)   
-6.  **[グループまたはユーザー名]** ボックスで、サービスごとの SID を選択します。**[\<名前> のアクセス許可]** ボックスで、**[フル コントロール]** の **[許可]** チェック ボックスをオンにします。  
+6.  **[グループまたはユーザー名]** ボックスで、サービスごとの SID を選択します。 **[\<名前> のアクセス許可]** ボックスで、 **[フル コントロール]** の **[許可]** チェック ボックスをオンにします。  
   
 7. **[適用]** をクリックし、 **[OK]** を 2 回クリックして終了します。  
   

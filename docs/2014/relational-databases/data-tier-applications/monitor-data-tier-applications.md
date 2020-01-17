@@ -15,17 +15,17 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 8fe96b7d84a2e363166238c3e840cac383f443dc
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52758565"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62918130"
 ---
 # <a name="monitor-data-tier-applications"></a>データ層アプリケーションの監視
   データ層アプリケーション (DAC) は、システム ビューおよびシステム テーブルと共に **(SSMS) で** ユーティリティ エクスプローラー **および** オブジェクト エクスプローラー [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] から監視できます。 さらに、DAC に含まれるデータベース内のオブジェクトもすべて、データベースと [!INCLUDE[ssDE](../../includes/ssde-md.md)] の標準的な監視方法を使用して監視できます。  
   
 ## <a name="before-you-begin"></a>はじめに  
- [!INCLUDE[ssDE](../../includes/ssde-md.md)]のマネージド インスタンスに DAC を配置した場合、その配置した DAC の情報は、次回ユーティリティ コレクション セットがインスタンスからユーティリティ コントロール ポイントへと送信されるときに SQL Server ユーティリティに組み込まれます。  [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] **ユーティリティ エクスプローラー**を使用すると、DAC に関する基本的な正常性の情報を表示できます。  
+ [!INCLUDE[ssDE](../../includes/ssde-md.md)]のマネージド インスタンスに DAC を配置した場合、その配置した DAC の情報は、次回ユーティリティ コレクション セットがインスタンスからユーティリティ コントロール ポイントへと送信されるときに SQL Server ユーティリティに組み込まれます。 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] **ユーティリティ エクスプローラー**を使用すると、DAC に関する基本的な正常性の情報を表示できます。  
   
  SSMS **オブジェクト エクスプローラー** では、 [!INCLUDE[ssDE](../../includes/ssde-md.md)]のインスタンスが SQL Server ユーティリティに管理されているかどうかにかかわらず、インスタンスに配置された各 DAC についての基本的な構成情報が表示されます。 また、データベースの監視と同じ手順で、配置された DAC に関連付けられたデータベースを監視することもできます。  
   
@@ -73,7 +73,7 @@ ms.locfileid: "52758565"
 ## <a name="monitoring-dac-databases"></a>DAC データベースの監視  
  DAC が正常に配置されると、DAC に含まれるデータベースは、他のデータベースと同様に動作します。 データベースに関するパフォーマンス、ログ、イベント、およびリソース使用状況は、 [!INCLUDE[ssDE](../../includes/ssde-md.md)] の標準的なテクニックとツールを使用して監視できます。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [[データ層アプリケーション]](data-tier-applications.md)   
  [データ層アプリケーションの配置](deploy-a-data-tier-application.md)  
   

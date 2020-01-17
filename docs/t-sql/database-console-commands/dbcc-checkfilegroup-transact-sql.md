@@ -23,15 +23,14 @@ helpviewer_keywords:
 - table integrity checks [SQL Server]
 - checking database objects
 ms.assetid: 8c70bf34-7570-4eb6-877a-e35064a1380a
-author: uc-msft
+author: pmasl
 ms.author: umajay
-manager: craigg
-ms.openlocfilehash: f40aa64f4406c8847870f26cf25d3a059bcbc6e4
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: c3b8061b49d0acacedae323645cd8822beaa016e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51698220"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68102036"
 ---
 # <a name="dbcc-checkfilegroup-transact-sql"></a>DBCC CHECKFILEGROUP (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -71,7 +70,7 @@ DBCC CHECKFILEGROUP
  ユーザー テーブルの非クラスター化インデックスの集中チェックを実行しないように指定します。 これにより、全体の実行時間が短縮されます。 DBCC CHECKFILEGROUP は、常にすべてのシステム テーブルのインデックスをチェックするため、NOINDEX はシステム テーブルには影響を与えません。  
   
  ALL_ERRORMSGS  
- オブジェクトごとにエラーを無制限に表示します。 既定では、すべてのエラー メッセージが表示されます。 そのため、このオプションを指定しても省略しても影響はありません。  
+ オブジェクトごとにエラーを無制限に表示します。 既定では、すべてのエラー メッセージが表示されます。 このオプションを指定しても省略しても影響はありません。  
   
  NO_INFOMSGS  
  すべての情報メッセージを表示しないようにします。  
@@ -83,7 +82,7 @@ DBCC CHECKFILEGROUP
  必要な他のオプションをすべて指定した状態で、DBCC CHECKFILEGROUP の実行時に必要となる tempdb 領域の予測サイズを表示します。  
   
  PHYSICAL_ONLY  
- チェック内容を、ページ、レコード ヘッダー、および B-Tree の物理構造の整合性に限定します。 ファイル グループの物理的一貫性に関する低オーバーヘッド チェックを提供するように設計されているため、このチェックではデータが損傷する可能性のある破損ページおよび一般的なハードウェア障害も検出できます。 完全な DBCC CHECKFILEGROUP を実行すると、以前のバージョンよりはるかに時間がかかることがあります。 原因は次のとおりです。  
+ チェック内容を、ページ、レコード ヘッダー、および B ツリーの物理構造の整合性に限定します。 ファイル グループの物理的一貫性に関する低オーバーヘッド チェックを提供するように設計されているため、このチェックではデータが損傷する可能性のある破損ページおよび一般的なハードウェア障害も検出できます。 完全な DBCC CHECKFILEGROUP を実行すると、以前のバージョンよりはるかに時間がかかることがあります。 この現象は次の原因により発生します。  
  -   論理チェックの対象範囲が広がった。  
  -   チェック対象の、基になる構造の一部が複雑になった。  
  -   新機能を含めるために多数の新しいチェックが導入された。  
@@ -93,16 +92,16 @@ DBCC CHECKFILEGROUP
 >  PHYSICAL_ONLY を指定すると、DBCC CHECKFILEGROUP で FILESTREAM データのチェックがすべてスキップされるようになります。  
   
  MAXDOP  
- **適用対象**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2014 SP2 から[現在のバージョン](https://go.microsoft.com/fwlink/p/?LinkId=299658)まで  
+ **適用対象**:[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2014 SP2 から[現在のバージョン](https://go.microsoft.com/fwlink/p/?LinkId=299658)。  
   
- ステートメントの **sp_configure** の **max degree of parallelism** 構成オプションをオーバーライドします。 MAXDOP では、sp_configure で構成されている値を超えることができます。 MAXDOP では、リソース ガバナーで構成されている値を超えると、データベース エンジンは、ALTER WORKLOAD GROUP (TRANSACT-SQL)」に記載のリソース ガバナーの MAXDOP 値を使用します。 MAXDOP クエリ ヒントを使用している場合は、max degree of parallelism 構成オプションで使用されるすべての意味ルールを適用できます。 詳細については、「 [max degree of parallelism サーバー構成オプションの構成](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md)」を参照してください。  
+ ステートメントの **sp_configure** の **max degree of parallelism** 構成オプションをオーバーライドします。 MAXDOP では、sp_configure で構成されている値を超えることができます。 MAXDOP では、Resource Governor で構成されている値を超えると、データベース エンジンは、「ALTER WORKLOAD GROUP (Transact-SQL)」に記載のリソース ガバナーの MAXDOP 値を使用します。 MAXDOP クエリ ヒントを使用している場合は、max degree of parallelism 構成オプションで使用されるすべての意味ルールを適用できます。 詳細については、「 [max degree of parallelism サーバー構成オプションの構成](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md)」を参照してください。  
   
 > [!CAUTION]  
 >  MAXDOP が 0 に設定されている場合、サーバーでは最大限の並列処理が実行されます。  
   
 ## <a name="remarks"></a>Remarks  
 DBCC CHECKFILEGROUP と DBCC CHECKDB はほぼ同じ DBCC コマンドです。 主な相違点は、DBCC CHECKFILEGROUP の対象が、指定された単一のファイル グループと必要なテーブルのみに限定されることです。
-DBCC CHECKFILEGROUP は、次のコマンドを実行します。
+DBCC CHECKFILEGROUP は次のコマンドを実行します。
 -   ファイル グループの [DBCC CHECKALLOC](../../t-sql/database-console-commands/dbcc-checkalloc-transact-sql.md)。  
 -   ファイル グループ内のすべてのテーブルおよびインデックス付きビューの [DBCC CHECKTABLE](../../t-sql/database-console-commands/dbcc-checktable-transact-sql.md)。  
   

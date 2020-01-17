@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: bc9fddea-134e-4440-ba54-a1f74bb40c46
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 18452e922be67e0656ef52b0117552dad0c661c7
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 98069f3b907d923a7eeca295b1c2a0d983c2edc1
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47654948"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67974557"
 ---
 # <a name="setclob-method-javalangstring-javaioreader-long"></a>setClob (java.lang.String, java.io.Reader, long) メソッド
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -39,7 +38,7 @@ public final void setClob(java.lang.String parameterName,
   
  *value*  
   
- リーダー オブジェクト。  
+ リーダーオブジェクト。  
   
  *length*  
   

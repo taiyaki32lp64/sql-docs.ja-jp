@@ -10,14 +10,13 @@ ms.topic: reference
 ms.assetid: d33cb556-0380-490a-9220-b74062dbd6d9
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: a976209d482df88c2b35226bb1f333b0ac7df9dc
-ms.sourcegitcommit: ddb682c0061c2a040970ea88c051859330b8ac00
+ms.openlocfilehash: bde97833b8d2a3cfc56756b26f7d74cddf77b2d6
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51570972"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68126604"
 ---
 # <a name="sqltoolsvsnativehelpers"></a>SqlToolsVSNativeHelpers
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]

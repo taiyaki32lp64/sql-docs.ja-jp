@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: b362a075-16e7-423f-b63f-e1e9f02844a9
 author: Shamikg
 ms.author: Shamikg
-manager: craigg
-ms.openlocfilehash: a32f7f321baa17dbcdaf557bb7de033422a02dbc
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: e0600778b938a7736ab1112f31bbe4828605cdaf
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51668261"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67907158"
 ---
 # <a name="mapping-source-and-target-data-types-accesstosql"></a>ソースとターゲットのデータ型 (AccessToSQL) のマッピング
 Access データベースの型が異なる[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]データベースの型。 Access データベースのオブジェクトに変換する際に[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]オブジェクトへのアクセスからのデータ型にマップする方法を指定する必要があります[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]します。 既定のデータ型マッピングをそのまま使用できるまたはマッピングをカスタマイズするには、次の手順で示すようにします。  
@@ -66,7 +65,7 @@ SSMA では、データ型マッピングの既定セットがあります。 �
   
     4.  **ターゲットの種類**、ターゲットを選択して[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]データ型。  
   
-        一部の種類には、対象のデータ型の長さが必要です。 必要な場合で新しいデータの長さを入力してください。、**置換**ボックスをクリック **[ok]**。  
+        一部の種類には、対象のデータ型の長さが必要です。 必要な場合で新しいデータの長さを入力してください。、**置換**ボックスをクリック **[ok]** 。  
   
 3.  データ型のマッピングを編集するには、次の操作を行います。  
   
@@ -80,7 +79,7 @@ SSMA では、データ型マッピングの既定セットがあります。 �
   
     4.  **ターゲットの種類**、ターゲットを選択して[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]データ型。  
   
-        一部の種類には、対象のデータ型の長さが必要です。 必要な場合で新しいデータの長さを入力してください。、**置換**ボックスをクリック **[ok]**。  
+        一部の種類には、対象のデータ型の長さが必要です。 必要な場合で新しいデータの長さを入力してください。、**置換**ボックスをクリック **[ok]** 。  
   
 4.  データ型のマッピングを削除するには、次の操作を行います。  
   

@@ -1,5 +1,5 @@
 ---
-title: 共用体 (MDX) |Microsoft ドキュメント
+title: Union (MDX) |Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -8,18 +8,17 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-manager: kfile
-ms.openlocfilehash: e51749416c0668ccc4760132bb860121ebae6e3d
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.openlocfilehash: 170e3764795e1bb6db3fc9589ecf1fe486078633
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34743491"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68097298"
 ---
-# <a name="union--mdx"></a>共用体 (MDX)
+# <a name="union--mdx"></a>Union (MDX)
 
 
-  2 つのセットの和集合として生成されるセットを返します。重複するメンバーを保持することも可能です。  
+  重複するメンバーを残すこともできます 2 つのセットの和集合によって生成されるセットを返します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -43,10 +42,10 @@ Alternate syntax 2
  セットを返す有効な多次元式 (MDX) です。  
   
 ## <a name="remarks"></a>コメント  
- この関数は、2 つの和集合を返しますまたは、複数の指定されたセット*です。* 標準構文を使用して、代替構文 1、重複は既定では除外されます。 標準の構文を使用して、**すべて**フラグ、結合されたセット内の重複部分を保持します。 重複部分はセットの末尾から削除されます。 代替構文 2 では、重複部分が常に保持されます。  
+ この関数は、2 つの和集合を返します。 または、複数の指定されたセット。 標準の構文および代替構文 1、重複が既定で除外されます。 標準の構文を使用して、**すべて**フラグは、結合されたセットに重複部分を保持します。 重複部分は、セットの末尾から削除されます。 代替構文 2 では、重複部分が常に保持されます。  
   
 ## <a name="examples"></a>使用例  
- 次の例では、動作、**共用体**関数の各構文を使用します。  
+ 次の例では、動作、**共用体**各構文を使用して機能します。  
   
 ### <a name="standard-syntax-duplicates-eliminated"></a>標準構文、重複部分の除去  
   
@@ -84,7 +83,7 @@ FROM [Adventure Works]
   
 ```  
   
-### <a name="alternate-syntax-2-duplicates-retained"></a>代替構文 2、重複部分の保持  
+### <a name="alternate-syntax-2-duplicates-retained"></a>代替構文 2、重複の保持  
   
 ```  
 SELECT   
@@ -95,8 +94,8 @@ FROM [Adventure Works]
   
 ```  
   
-## <a name="see-also"></a>参照  
- [+&#40;共用体&#41; &#40;MDX&#41;](../mdx/union-mdx-operator-reference.md)   
- [MDX 関数リファレンス&#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
+## <a name="see-also"></a>関連項目  
+ [+&#40;Union&#41; &#40;MDX&#41;](../mdx/union-mdx-operator-reference.md)   
+ [MDX 関数リファレンス &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
   
   

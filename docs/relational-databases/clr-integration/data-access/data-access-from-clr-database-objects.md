@@ -22,13 +22,12 @@ helpviewer_keywords:
 ms.assetid: 9a0f4dee-71c1-42e9-a85e-52382807010f
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: f99d182691ed08ebf7a3e8e71572068cd08848f2
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 29110ecb83493ec95fbc594d0f743c3c4cb07a68
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51673441"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68216408"
 ---
 # <a name="data-access-from-clr-database-objects"></a>CLR データベース オブジェクトからのデータ アクセス
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

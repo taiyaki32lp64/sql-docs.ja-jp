@@ -13,15 +13,14 @@ helpviewer_keywords:
 - deleting columns
 - dropping columns
 ms.assetid: 6d9819b8-ee2f-4838-9713-c5e3ad37ab46
-author: stevestein
-ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 2321aa58c51eb87aac26931cdbd24b357ab6d1c0
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 54f99801992ba804861d6712edaadae24720c8bf
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47674372"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68266233"
 ---
 # <a name="remove-columns-from-queries-visual-database-tools"></a>クエリからの列の削除 (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -34,7 +33,7 @@ ms.locfileid: "47674372"
   
 -   **抽出条件ペイン**で、削除する列を含むグリッド行を選択し、Del キーを押します。  
   
-    - または -  
+    \- または -  
   
 -   [SQL ペイン](../../ssms/visual-db-tools/sql-pane-visual-database-tools.md)の列に対するすべての参照を削除します。  
   

@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: dce1e027-f859-4967-bdda-16a95ae460d0
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: a173858ed438cf1b865b887d16e4811cd131347e
-ms.sourcegitcommit: c6e71ed14198da67afd7ba722823b1af9b4f4e6f
+ms.openlocfilehash: 2f375de9db1cce966206402b99d3e54724cbf2bf
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/16/2019
-ms.locfileid: "54326383"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68065607"
 ---
 # <a name="grant-assembly-permissions-transact-sql"></a>GRANT (アセンブリの権限の許可) (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -42,9 +41,9 @@ GRANT { permission [ ,...n ] } ON ASSEMBLY :: assembly_name
   
 ## <a name="arguments"></a>引数  
  *permission*  
- アセンブリで許可できる権限を指定します。 下の表をご覧ください。  
+ アセンブリで許可できる権限を指定します。 以下に一覧を示します。  
   
- ON ASSEMBLY **::**_assembly_name_  
+ ON ASSEMBLY **::** _assembly_name_  
  権限を許可するアセンブリを指定します。 スコープ修飾子 "::" が必要です。  
   
  *database_principal*  

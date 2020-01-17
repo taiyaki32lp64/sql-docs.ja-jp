@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 38ca4e1b-c109-4fba-b590-bdd6994f770e
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 707d8ca7db6d61e324c0c97839711965801a0433
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a14b6ad09d33fd3e856065919dff52da99911fa7
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47617100"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67921844"
 ---
 # <a name="absolutepage-pagecount-and-pagesize-properties-example-vc"></a>AbsolutePage、PageCount、PageSize プロパティの例 (vc++)
 この例では、 [AbsolutePage](../../../ado/reference/ado-api/absolutepage-property-ado.md)、 [PageCount](../../../ado/reference/ado-api/pagecount-property-ado.md)、および[PageSize](../../../ado/reference/ado-api/pagesize-property-ado.md)プロパティ名を表示およびから日付を採用する、***従業員***テーブル、一度に 5 つのレコードです。  
@@ -179,7 +178,7 @@ void PrintProviderError(_ConnectionPtr pConnection) {
 }  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [AbsolutePage プロパティ (ADO)](../../../ado/reference/ado-api/absolutepage-property-ado.md)   
  [PageCount プロパティ (ADO)](../../../ado/reference/ado-api/pagecount-property-ado.md)   
  [PageSize プロパティ (ADO)](../../../ado/reference/ado-api/pagesize-property-ado.md)   

@@ -1,25 +1,25 @@
 ---
 title: RSExecRole を作成する | Microsoft Docs
-ms.date: 05/30/2017
+ms.date: 06/12/2019
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: security
 ms.topic: conceptual
 helpviewer_keywords:
 - RSExecRole
 ms.assetid: 7ac17341-df7e-4401-870e-652caa2859c0
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: f08ddfed806f1b6476599b0d83ef3d795633cb0e
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 50347f9a975aeb4856a5ee140697f7b13de3e3b2
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50029698"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "67140475"
 ---
 # <a name="create-the-rsexecrole"></a>RSExecRole を作成する
 
-  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] では、 **RSExecRole** と呼ばれる定義済みのデータベース ロールを使用して、レポート サーバー データベースに対するレポート サーバーの権限が付与されます。 **RSExecRole** ロールは、レポート サーバー データベースで自動的に作成されます。 原則として、このロールを変更したり、他のユーザーをこのロールに割り当てたりすることはできません。 ただし、レポート サーバー データベースを新規または別の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)]に移動した場合は、master および MSDB システム データベースでロールを再作成する必要があります。  
+  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] では、 **RSExecRole** と呼ばれる定義済みのデータベース ロールを使用して、レポート サーバー データベースに対するレポート サーバーの権限が付与されます。 **RSExecRole** ロールは、レポート サーバー データベースで自動的に作成されます。 原則として、このロールを変更したり、他のユーザーをこのロールに割り当てたりすることはできません。 ただし、レポート サーバー データベースを新規または別の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] に移動した場合は、master および MSDB システム データベースでロールを再作成する必要があります。  
   
  ここで説明する手順に従って、次の操作を実行します。  
   
@@ -28,7 +28,7 @@ ms.locfileid: "50029698"
 -   MSDB システム データベースでの **RSExecRole** の作成と準備  
   
 > [!NOTE]  
->  ここで説明する手順は、レポート サーバー データベースを準備する方法としてスクリプトの実行や WMI コードの作成を考えていないユーザーを対象としています。 大規模な配置を管理していて、データベースを定期的に移動する予定がある場合は、上記の操作を自動的に実行するスクリプトを作成する必要があります。 詳細については、「 [Reporting Service WMI プロバイダーへのアクセス](../../reporting-services/tools/access-the-reporting-services-wmi-provider.md)」を参照してください。  
+> ここで説明する手順は、レポート サーバー データベースを準備する方法としてスクリプトの実行や WMI コードの作成を考えていないユーザーを対象としています。 大規模な配置を管理していて、データベースを定期的に移動する予定がある場合は、上記の操作を自動的に実行するスクリプトを作成する必要があります。 詳細については、「 [Reporting Service WMI プロバイダーへのアクセス](../../reporting-services/tools/access-the-reporting-services-wmi-provider.md)」を参照してください。  
   
 ## <a name="before-you-start"></a>開始前の準備  
   
@@ -38,14 +38,14 @@ ms.locfileid: "50029698"
   
 -   使用する予定の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスに [!INCLUDE[ssDE](../../includes/ssde-md.md)] エージェント サービスがインストールされ、実行されていることを確認します。  
   
--   reportservertempdb および reportserver データベースをアタッチします。 実際のロールを作成するためにデータベースをアタッチする必要はありませんが、作業を確認する場合は事前にデータベースをアタッチする必要があります。  
+-   ReportServerTempDB および ReportServer データベースをアタッチします。 実際のロールを作成するためにデータベースをアタッチする必要はありませんが、作業を確認する場合は事前にデータベースをアタッチする必要があります。  
   
  **RSExecRole** を手動で作成する手順は、レポート サーバー インストールの移行というコンテキストで使用されることを目的としています。 レポート サーバー データベースのバックアップや移動などの重要なタスクは、このトピックでは取り上げませんが、データベース エンジンのドキュメントで説明されています。  
   
 ## <a name="create-rsexecrole-in-master"></a>master での RSExecRole の作成  
  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] では、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェント サービスの拡張ストアド プロシージャを使用して、スケジュールされた操作をサポートします。 次の手順では、プロシージャの実行権限を **RSExecRole** ロールに付与する方法について説明します。  
   
-#### <a name="to-create-rsexecrole-in-the-master-system-database-using-management-studio"></a>Management Studio を使用して master システム データベースに RSExecRole を作成するには  
+### <a name="to-create-rsexecrole-in-the-master-system-database-using-management-studio"></a>Management Studio を使用して master システム データベースに RSExecRole を作成するには  
   
 1.  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] を起動し、レポート サーバー データベースをホストする [!INCLUDE[ssDE](../../includes/ssde-md.md)] インスタンスに接続します。  
   
@@ -59,13 +59,13 @@ ms.locfileid: "50029698"
   
 6.  **[ロール]** を開きます。  
   
-7.  **[データベース ロール]** を右クリックして **[新しいデータベース ロール]** をクリックします。 [全般] ページが表示されます。  
+7.  **[データベース ロール]** を右クリックして **[新しいデータベース ロール]** をクリックします。 **データベース ロール - 新しい**ページが表示されます。  
   
 8.  **[ロール名]** に「 **RSExecRole**」と入力します。  
   
-9. **[所有者]** に「 **DBO**」と入力します。  
+9. **[所有者]** に「**dbo**」と入力します。  
   
-10. **[セキュリティ保護可能なリソース]** をクリックします。  
+10. [選択] ページ**セキュリティ保護可能な**します。  
   
 11. **[検索]** をクリックします。 **[オブジェクトの追加]** ダイアログ ボックスが表示されます。 既定では、 **[特定のオブジェクト]** オプションが選択されています。  
   
@@ -89,16 +89,18 @@ ms.locfileid: "50029698"
   
 18. **[OK]** をクリックし、もう一度 **[OK]** をクリックします。  
   
-19. **[実行]** 行の **[許可]** 列で、チェック ボックスをオンにし、 **[OK]** をクリックします。  
+19. **Execute**行の**Grant**列で、チェック ボックスをオンにします。  
   
 20. 残りの各ストアド プロシージャに同じ操作を繰り返します。 **RSExecRole** には、3 個のストアド プロシージャすべてに対する実行権限を付与する必要があります。  
+
+21. **[OK]** を選択して作業を終了します。  
   
  ![データベース ロールのプロパティ ページ](../../reporting-services/security/media/rsexecroledbproperties.gif "データベース ロールのプロパティ ページ")  
   
 ## <a name="create-rsexecrole-in-msdb"></a>MSDB での RSExecRole の作成  
  Reporting Services は、スケジュールされた操作をサポートするために、SQL Server エージェント サービスのストアド プロシージャを使用し、システム テーブルからジョブ情報を取得します。 次の手順では、プロシージャに対する実行権限およびテーブルでの選択権限を RSExecRole に付与する方法を説明します。  
   
-#### <a name="to-create-rsexecrole-in-the-msdb-system-database"></a>MSDB システム データベースで RSExecRole を作成するには  
+### <a name="to-create-rsexecrole-in-the-msdb-system-database"></a>MSDB システム データベースで RSExecRole を作成するには  
   
 1.  MSDB のストアド プロシージャとテーブルに対する権限を付与する場合は、同様の手順を繰り返します。 手順を簡素化するために、ストアド プロシージャとテーブルを別々に準備します。  
   
@@ -112,11 +114,11 @@ ms.locfileid: "50029698"
   
 6.  [ロール名] に「 **RSExecRole**」と入力します。  
   
-7.  [所有者] に「 **DBO**」と入力します。  
+7.  [所有者] に「**dbo**」と入力します。  
   
-8.  **[セキュリティ保護可能なリソース]** をクリックします。  
+8.  選択、**セキュリティ保護可能な**ページ。  
   
-9. **[追加]** をクリックします。 **[オブジェクトの追加]** ダイアログ ボックスが表示されます。 **[オブジェクトの指定]** オプションが既定で選択されます。  
+9.  **[検索]** をクリックします。 **[オブジェクトの追加]** ダイアログ ボックスが表示されます。 **[オブジェクトの指定]** オプションが既定で選択されます。  
   
 10. **[OK]** をクリックします。  
   
@@ -150,15 +152,15 @@ ms.locfileid: "50029698"
   
     10. sp_verify_job_identifiers  
   
-16. **[OK]** をクリックし、もう一度 **[OK]** をクリックします。  
+16. **[OK]** をクリックしてから、もう一度 **[OK]** をクリックします。  
   
 17. 最初のストアド プロシージャ sp_add_category を選択します。  
   
-18. **[実行]** 行の **[許可]** 列で、チェック ボックスをオンにし、 **[OK]** をクリックします。  
+18. **[実行]** 行の **[許可]** 列で、チェック ボックスをオンにします。  
   
 19. 残りの各ストアド プロシージャに同じ操作を繰り返します。 RSExecRole には、10 個のストアド プロシージャすべてに対する実行権限を付与する必要があります。  
   
-20. [セキュリティ保護可能なリソース] タブで、もう一度 **[追加]** をクリックします。 **[オブジェクトの追加]** ダイアログ ボックスが表示されます。 **[オブジェクトの指定]** オプションが既定で選択されます。  
+20. **セキュリティ保護可能な**] ページで [**検索**もう一度です。 **[オブジェクトの追加]** ダイアログ ボックスが表示されます。 **[オブジェクトの指定]** オプションが既定で選択されます。  
   
 21. **[OK]** をクリックします。  
   
@@ -180,21 +182,23 @@ ms.locfileid: "50029698"
   
 28. 最初のテーブル syscategories を選択します。  
   
-29. **[選択]** 行の **[許可]** 列で、チェック ボックスをオンにし、 **[OK]** をクリックします。  
+29. **[選択]** 行の **[許可]** 列で、チェック ボックスをオンにします。  
   
 30. sysjobs テーブルに同じ操作を繰り返します。 RSExecRole には、両方のテーブルに対する選択権限を付与する必要があります。  
+  
+31. **[OK]** を選択して作業を終了します。  
   
 ## <a name="move-the-report-server-database"></a>レポート サーバー データベースの移動  
  ロールを作成したら、レポート サーバー データベースを新しい SQL Server インスタンスに移動できます。 詳細については、「[別のコンピューターへのレポート サーバー データベースの移動](../../reporting-services/report-server/moving-the-report-server-databases-to-another-computer-ssrs-native-mode.md)」を参照してください。  
   
- [!INCLUDE[ssDE](../../includes/ssde-md.md)] を SQL Server 2016 にアップグレードする場合、そのアップグレードはデータベースを移動する前と後のどちらでも実行できます。  
+ [!INCLUDE[ssDE](../../includes/ssde-md.md)] を SQL Server 2016 以降にアップグレードする場合、そのアップグレードはデータベースを移動する前と後のどちらでも実行できます。  
   
  レポート サーバー データベースは、レポート サーバーがそのデータベースに接続するときに、自動的にアップグレードされます。 データベースをアップグレードするために特定の手順を実行する必要はありません。  
   
 ## <a name="restore-encryption-keys-and-verify-your-work"></a>暗号化キーの復元と作業の確認  
  レポート サーバー データベースをアタッチしたら、次の手順を実行して作業を確認します。  
   
-#### <a name="to-verify-report-server-operability-after-a-database-move"></a>データベース移動後にレポート サーバーの運用性を確認するには  
+### <a name="to-verify-report-server-operability-after-a-database-move"></a>データベース移動後にレポート サーバーの運用性を確認するには  
   
 1.  Reporting Services 構成ツールを起動して、レポート サーバーに接続します。  
   
@@ -206,13 +210,13 @@ ms.locfileid: "50029698"
   
 5.  データベース エンジンのサーバー名を入力します。 レポート サーバー データベースを名前付きインスタンスにアタッチした場合は、\<サーバー名>\\<インスタンス名\> の形式でインスタンス名を入力する必要があります。  
   
-6.  **[接続テスト]** をクリックします。  
+6.  **[接続テスト]** をクリックします。 「テスト接続成功」を示すダイアログ ボックスを表示する必要があります。
   
-7.  **[次へ]** をクリックします。  
+7.  選択**Ok**をクリックしてダイアログ ボックスを閉じます**次**。  
   
 8.  [データベース] で、レポート サーバー データベースを選択します。  
   
-9. **[次へ]** をクリックし、ウィザードを終了します。  
+9.  **[次へ]** をクリックし、ウィザードを終了します。  
   
 10. **[暗号化キー]** をクリックします。  
   
@@ -222,9 +226,9 @@ ms.locfileid: "50029698"
   
 13. パスワードを入力し、 **[OK]** をクリックします。  
   
-14. **[レポート マネージャー URL]** をクリックします。  
+14. **[Web ポータルの URL]** をクリックします。  
   
-15. レポート マネージャーを開くリンクをクリックします。 レポート サーバー データベースのレポート サーバー アイテムが表示されます。  
+15. Web ポータルを開くためのリンクをクリックします。 レポート サーバー データベースのレポート サーバー アイテムが表示されます。  
 
 ## <a name="creating-the-rsexecrole-role-and-permissions-using-t-sql"></a>T-SQL を使用した RSExecRole ロールおよびアクセス許可の作成
 次の T-SQL スクリプトを使用すると、システム データベースにロールも作成し、該当する権限を付与することができます。

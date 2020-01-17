@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 667673f2-3151-432b-894a-3fc60b704ea4
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 7e3e491ccb659d8739cb93d72e0c923fce480015
-ms.sourcegitcommit: 1f53b6a536ccffd701fc87e658ddac714f6da7a2
+ms.openlocfilehash: a84ccbb97c26ea92f31212933aac79bde2784b72
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/10/2019
-ms.locfileid: "54206438"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67927165"
 ---
 # <a name="ado-features-for-each-release"></a>各リリースの ADO の機能
 

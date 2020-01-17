@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: f8a9bbed-ba9c-4698-945d-317ad22d2e92
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 5e03e29d5c9696efb55ef5ce6ec47fcf28fc0467
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 17fa0ff30e8dcdbf7ea67080f17c3e066bba8605
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47712392"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67920670"
 ---
 # <a name="append-method-ado"></a>Append メソッド (ADO)
 コレクションにオブジェクトを追加します。 コレクションが場合[フィールド](../../../ado/reference/ado-api/fields-collection-ado.md)、新しい[フィールド](../../../ado/reference/ado-api/field-object.md)それをコレクションに追加する前に、オブジェクトを作成できます。  
@@ -91,7 +90,7 @@ fields.Append Name, Type, DefinedSize, Attrib, FieldValue
 - [Fields コレクション (ADO)](../../../ado/reference/ado-api/fields-collection-ado.md)  
 - [Parameters コレクション (ADO)](../../../ado/reference/ado-api/parameters-collection-ado.md)  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [Append および CreateParameter メソッドの例 (VB)](../../../ado/reference/ado-api/append-and-createparameter-methods-example-vb.md)   
  [Append および CreateParameter メソッドの例 (vc++)](../../../ado/reference/ado-api/append-and-createparameter-methods-example-vc.md)   
  [CreateParameter メソッド (ADO)](../../../ado/reference/ado-api/createparameter-method-ado.md)   

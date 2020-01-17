@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 helpviewer_keywords:
 - Database Engine [SQL Server], getting assistance
@@ -14,12 +13,12 @@ ms.assetid: 2ed7a37f-4640-4379-84a1-e4e97335ef33
 author: craigg-msft
 ms.author: craigg
 manager: craigg
-ms.openlocfilehash: be016421136f10f7f78bdebffd8c524e4bee72e3
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 408b6b605e14fd5e7aa52cd0df7fba13b225c20c
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48206672"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66064828"
 ---
 # <a name="feature-reference-database-engine"></a>機能リファレンス (データベース エンジン)
   [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] には、データベース オブジェクトとデータを作成、管理、表示できるツールとアプリケーションが数種類用意されています。 さらに、サーバーおよびデータベースのパフォーマンスの監視とトラブルシューティングに使用できるツールや、機能、サービス、ネットワーク プロトコルの有効化および無効化に使用できるツールがあります。 ここでは、これらのツールとアプリケーションのダイアログ ボックスに関するトピックを紹介します。  

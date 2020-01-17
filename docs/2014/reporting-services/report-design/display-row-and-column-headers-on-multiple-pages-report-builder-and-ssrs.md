@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 ms.assetid: 2422b1e2-822f-4379-9d7f-9afebb350e3f
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: cda91c882af3cead946a764ddd826e1291c5e18b
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: 8b5b343a32480d7d8ae59e9fa27fbe7d1f531213
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56294951"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66106020"
 ---
 # <a name="display-row-and-column-headers-on-multiple-pages-report-builder-and-ssrs"></a>複数のページへの行および列ヘッダーの表示 (レポート ビルダーおよび SSRS)
   Tablix データ領域が複数のページにわたる場合、各ページで行ヘッダーおよび列ヘッダーを繰り返すかどうかを制御できます。 Tablix データ領域は、テーブル、マトリックス、または一覧のいずれかです。  
@@ -56,7 +55,7 @@ ms.locfileid: "56294951"
   
 3.  スクロール中も表示したままにする静的メンバー (行または列) に対応する静的メンバーをクリックします。 プロパティ ペインに **[Tablix メンバー]** プロパティが表示されます。  
   
-     プロパティ ペインが表示されない場合は、レポート ビルダー ウィンドウの上部にある **[表示]** タブをクリックし、**[プロパティ]** をクリックします。  
+     プロパティ ペインが表示されない場合は、レポート ビルダー ウィンドウの上部にある **[表示]** タブをクリックし、 **[プロパティ]** をクリックします。  
   
 4.  プロパティ ペインで、 **RepeatOnNewPage** を True に設定します。  
   
@@ -71,7 +70,7 @@ ms.locfileid: "56294951"
 ## <a name="see-also"></a>参照  
  [レポートの検索、表示、管理 (レポート ビルダーおよび SSRS)](../report-builder/finding-viewing-and-managing-reports-report-builder-and-ssrs.md)   
  [レポートのエクスポート&#40;レポート ビルダーおよび SSRS&#41;](../report-builder/export-reports-report-builder-and-ssrs.md)   
- [改ページ、見出し、列、および行の制御 (レポート ビルダーおよび SSRS)](controlling-page-breaks-headings-columns-and-rows-report-builder-and-ssrs.md)   
+ [改ページ、見出し、列、および行の制御 &#40;レポート ビルダーおよび SSRS&#41;](controlling-page-breaks-headings-columns-and-rows-report-builder-and-ssrs.md)   
  [グループ単位でのヘッダーとフッターの表示 &#40;レポート ビルダーおよび SSRS&#41;](display-headers-and-footers-with-a-group-report-builder-and-ssrs.md)   
  [レポートのスクロール時にヘッダーを表示したままにする (レポート ビルダーおよび SSRS)](keep-headers-visible-when-scrolling-through-a-report-report-builder-and-ssrs.md)  
   

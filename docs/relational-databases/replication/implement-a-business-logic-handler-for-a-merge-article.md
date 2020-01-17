@@ -1,6 +1,7 @@
 ---
-title: マージ アーティクルのビジネス ロジック ハンドラーの実装 | Microsoft Docs
-ms.custom: ''
+title: マージ アーティクルのビジネス ロジック ハンドラーの設定
+description: レプリケーション プログラミングまたはレプリケーション管理オブジェクトを使用し、マージ レプリケーション同期のビジネス ロジック ハンドラーを構成します。
+ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -18,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: ed477595-6d46-4fa2-b0d3-a5358903ec05
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 8aed6c45ec44e6373db0d018a1190f7295e9775f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 8ba12a2dc53b845d52d2a3dcac574bed08865c12
+ms.sourcegitcommit: 02d44167a1ee025ba925a6fefadeea966912954c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47658080"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75322149"
 ---
 # <a name="implement-a-business-logic-handler-for-a-merge-article"></a>マージ アーティクルのビジネス ロジック ハンドラーの実装
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -60,7 +60,7 @@ ms.locfileid: "47658080"
   
 2.  次の名前空間の参照をプロジェクトに追加します。  
   
-    |アセンブリ参照|場所|  
+    |アセンブリ参照|Location|  
     |------------------------|--------------|  
     |<xref:Microsoft.SqlServer.Replication.BusinessLogicSupport>|[!INCLUDE[ssInstallPath](../../includes/ssinstallpath-md.md)]COM (既定インストール)|  
     |<xref:System.Data>|GAC (.NET Framework のコンポーネント)|  
@@ -101,18 +101,18 @@ ms.locfileid: "47658080"
   
 1.  パブリッシャーで、[sp_enumcustomresolvers &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-enumcustomresolvers-transact-sql.md) を実行して、アセンブリがまだビジネス ロジック ハンドラーとして登録されていないことを確認します。  
   
-2.  ディストリビューターで [sp_registercustomresolver &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-registercustomresolver-transact-sql.md) を実行し、**@article_resolver** にビジネス ロジック ハンドラーの表示名、**@is_dotnet_assembly** に値 **true**、**@dotnet_assembly_name** にアセンブリの名前、**@dotnet_class_name** に <xref:Microsoft.SqlServer.Replication.BusinessLogicSupport.BusinessLogicModule> をオーバーライドするクラスの完全修飾名を指定します。  
+2.  ディストリビューターで、[sp_registercustomresolver &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-registercustomresolver-transact-sql.md) を実行します。 **\@article_resolver** にビジネス ロジック ハンドラーの表示名を、 **\@is_dotnet_assembly** に **true** を、 **\@dotnet_assembly_name** にアセンブリの名前を、 **\@dotnet_class_name** に <xref:Microsoft.SqlServer.Replication.BusinessLogicSupport.BusinessLogicModule> をオーバーライドするクラスの完全修飾名を指定します。  
   
     > [!NOTE]  
-    >  マージ エージェント実行可能ファイルがあるディレクトリ、マージ エージェントを同期的に起動するアプリケーションがあるディレクトリ、およびグローバル アセンブリ キャッシュ (GAC) の、いずれとも異なる場所にビジネス ロジック ハンドラー アセンブリが配置されている場合は、 **@dotnet_assembly_name**」を参照してください。 Web 同期を使用する場合は、Web サーバーでアセンブリの位置を指定する必要があります。  
+    >  マージ エージェント実行可能ファイルがあるディレクトリ、マージ エージェントを同期的に起動するアプリケーションがあるディレクトリ、およびグローバル アセンブリ キャッシュ (GAC) の、いずれとも異なる場所にアセンブリが配置されている場合は、 **\@dotnet_assembly_name** にアセンブリ名を含む完全なパスを指定する必要があります。 Web 同期を使用する場合は、Web サーバーでアセンブリの位置を指定する必要があります。  
   
 #### <a name="to-use-a-business-logic-handler-with-a-new-table-article"></a>新しいテーブル アーティクルでビジネス ロジック ハンドラーを使用するには  
   
-1.  [sp_addmergearticle &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md) を実行してアーティクルを定義し、**@article_resolver** にビジネス ロジック ハンドラーの表示名を指定します。 詳しくは、「 [アーティクルを定義](../../relational-databases/replication/publish/define-an-article.md)」をご覧ください。  
+1.  [sp_addmergearticle &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md) を実行してアーティクルを定義し、 **\@article_resolver** にビジネス ロジック ハンドラーの表示名を指定します。 詳しくは、「 [アーティクルを定義](../../relational-databases/replication/publish/define-an-article.md)」をご覧ください。  
   
 #### <a name="to-use-a-business-logic-handler-with-an-existing-table-article"></a>既存のテーブル アーティクルでビジネス ロジック ハンドラーを使用するには  
   
-1.  [sp_changemergearticle &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql.md) を実行し、**@publication**、**@article** を指定し、**@property** に **article_resolver** 値、**@value** にビジネス ロジック ハンドラーの表示名を指定します。  
+1.  [sp_changemergearticle &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql.md) を実行し、 **\@publication**、 **\@article** を指定し、 **\@property** に **article_resolver** 値、 **\@value** にビジネス ロジック ハンドラーの表示名を指定します。  
   
 ###  <a name="TsqlExample"></a> 例 (レプリケーション プログラミング)  
  次の例に、監査ログを作成するビジネス ロジック ハンドラーを示します。  
@@ -133,7 +133,7 @@ ms.locfileid: "47658080"
   
 2.  次の名前空間の参照をプロジェクトに追加します。  
   
-    |アセンブリ参照|場所|  
+    |アセンブリ参照|Location|  
     |------------------------|--------------|  
     |<xref:Microsoft.SqlServer.Replication.BusinessLogicSupport>|[!INCLUDE[ssInstallPath](../../includes/ssinstallpath-md.md)]COM (既定インストール)|  
     |<xref:System.Data>|GAC (.NET Framework のコンポーネント)|  
@@ -184,7 +184,7 @@ ms.locfileid: "47658080"
   
     -   <xref:Microsoft.SqlServer.Replication.BusinessLogicHandler.FriendlyName%2A> - ビジネス ロジック ハンドラーへのアクセス時に使用する表示名です。  
   
-    -   <xref:Microsoft.SqlServer.Replication.BusinessLogicHandler.IsDotNetAssembly%2A> - **@is_dotnet_assembly**」を参照してください。  
+    -   <xref:Microsoft.SqlServer.Replication.BusinessLogicHandler.IsDotNetAssembly%2A> - **\@is_dotnet_assembly**」を参照してください。  
   
 #### <a name="to-deploy-a-business-logic-handler"></a>ビジネス ロジック ハンドラーを配置するには  
   

@@ -18,11 +18,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 821fd05e94ac820dff50bd08c70c75e7e9cc653d
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52520383"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62779596"
 ---
 # <a name="install-a-service-pack-on-a-system-with-minimal-downtime-for-mirrored-databases"></a>ミラー化されたデータベースのダウンタイムを最小限に抑えた Service Pack のシステムへのインストール
   このトピックでは、Service Pack および修正プログラムをインストールする際に、ミラー化されたデータベースのダウンタイムを最小限に抑える方法について説明します。 このプロセスには、データベース ミラーリングに参加している [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] のインスタンスを順次アップグレードする処理が伴います。 この形式と呼ばれる更新プログラムの*ローリング アップデート*、単一のフェールオーバーのダウンタイムを短縮します。 ただし、ミラー サーバーがプリンシパル サーバーを地理的に離れている高パフォーマンス モード セッションでは、ローリング アップデートを適切です。  
@@ -34,7 +34,7 @@ ms.locfileid: "52520383"
 -   セッションにミラーリング監視サーバーが含まれる場合は、ミラーリング監視サーバーを削除しておくことをお勧めします。 そうしないと、ミラー サーバー インスタンスをアップデートする際のデータベースの可用性が、プリンシパル サーバー インスタンスに接続されたミラーリング監視サーバーに依存することになります。 削除したミラーリング監視サーバーは、ローリング アップデート プロセス中にいつでもアップデートでき、また、そうすることでデータベースのダウンタイムを最小限に抑えることができます。  
   
     > [!NOTE]  
-    >  詳細については、次を参照してください。[クォーラム。ミラーリング監視サーバーがデータベースの可用性に与える影響&#40;データベース ミラーリング&#41;](database-mirroring/quorum-how-a-witness-affects-database-availability-database-mirroring.md)します。  
+    >  詳細については、「[クォーラム: データベースの可用性にミラーリング監視サーバーが与える影響 (データベース ミラーリング)](database-mirroring/quorum-how-a-witness-affects-database-availability-database-mirroring.md)」を参照してください。  
   
 -   セッションが高パフォーマンス モードで動作している場合は、動作モードを高い安全性モードに変更する。  
   
@@ -74,13 +74,13 @@ ms.locfileid: "52520383"
   
 1.  ミラーリング セッションを高パフォーマンス モードで実行している場合は、ローリング アップデートを実行する前に、動作モードを、自動フェールオーバーを伴わない高い安全性モードに変更します。 以下のいずれかの方法を使用します。  
   
-    -   [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]:変更、**オペレーティング モード**オプションを **(同期) の自動フェールオーバーを伴わない高い安全性**を使用して、[ミラーリング ページ](../relational-databases/databases/database-properties-mirroring-page.md)の**データベースプロパティ** ダイアログ ボックス。 このページにアクセスする方法については、「[データベース ミラーリング セキュリティ構成ウィザードの起動 &#40;SQL Server Management Studio&#41;](database-mirroring/start-the-configuring-database-mirroring-security-wizard.md)」を参照してください。  
+    -   [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]: 変更、**オペレーティング モード**オプションを **(同期) の自動フェールオーバーを伴わない高い安全性**を使用して、[ミラーリング ページ](../relational-databases/databases/database-properties-mirroring-page.md)の**データベースプロパティ** ダイアログ ボックス。 このページにアクセスする方法については、「[データベース ミラーリング セキュリティ構成ウィザードの起動 &#40;SQL Server Management Studio&#41;](database-mirroring/start-the-configuring-database-mirroring-security-wizard.md)」を参照してください。  
   
-    -   [!INCLUDE[tsql](../includes/tsql-md.md)]:トランザクションの安全性を FULL に設定します。 詳細については、｢[データベース ミラーリング セッションでのトランザクションの安全性の変更 &#40;Transact-SQL&#41;](database-mirroring/change-transaction-safety-in-a-database-mirroring-session-transact-sql.md)」を参照してください。  
+    -   [!INCLUDE[tsql](../includes/tsql-md.md)]: トランザクションの安全性を FULL に設定します。 詳細については、「[データベース ミラーリング セッションでのトランザクションの安全性の変更 &#40;Transact-SQL&#41;](database-mirroring/change-transaction-safety-in-a-database-mirroring-session-transact-sql.md)」を参照してください。  
   
 ### <a name="to-perform-the-rolling-update"></a>ローリング アップデートを実行するには  
   
-1.  ダウンタイムを最小限に抑えるには、次のお勧めします。すべてのミラーリング セッションで現在ミラー サーバーは、すべてのミラーリング パートナーを更新することで、ローリング アップデートを開始します。 場合によっては、この時点で複数のサーバー インスタンスを更新する必要があります。  
+1.  ダウンタイムを最小限に抑えるため、次をお勧めします: すべてのミラーリング セッションで現在ミラー サーバーは、すべてのミラーリング パートナーを更新することで、ローリング アップデートを開始します。 場合によっては、この時点で複数のサーバー インスタンスを更新する必要があります。  
   
     > [!NOTE]  
     >  ミラーリング監視サーバーは、ローリング アップデート プロセス中、いつでもアップデートできます。 たとえば、セッション 1 ではミラー サーバーとして、セッション 2 ではミラーリング監視サーバーとして機能しているサーバー インスタンスであれば、今すぐにアップデートすることもできます。  
@@ -123,9 +123,9 @@ ms.locfileid: "52520383"
   
 1.  必要に応じて、高パフォーマンス モードに戻す場合は、次のいずれかの方法を使用します。  
   
-    -   [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]:変更、**オペレーティング モード**オプションを**高パフォーマンス (非同期)** を使用して、[ミラーリング ページ](../relational-databases/databases/database-properties-mirroring-page.md)の**データベース プロパティ** ダイアログ ボックス。  
+    -   [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]: 変更、**オペレーティング モード**オプションを**高パフォーマンス (非同期)** を使用して、[ミラーリング ページ](../relational-databases/databases/database-properties-mirroring-page.md)の**データベース プロパティ** ダイアログ ボックス。  
   
-    -   [!INCLUDE[tsql](../includes/tsql-md.md)]:使用[ALTER DATABASE](/sql/t-sql/statements/alter-database-transact-sql-database-mirroring)トランザクションの安全性を OFF に設定します。  
+    -   [!INCLUDE[tsql](../includes/tsql-md.md)]: 使用[ALTER DATABASE](/sql/t-sql/statements/alter-database-transact-sql-database-mirroring)トランザクションの安全性を OFF に設定します。  
   
 ### <a name="to-return-a-witness-to-a-mirroring-session"></a>ミラーリング セッションにミラーリング監視サーバーを返す  
   

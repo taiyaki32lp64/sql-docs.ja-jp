@@ -1,5 +1,5 @@
 ---
-title: マスター データ マネージャー Web アプリケーションのセキュリティ保護 | Microsoft Docs
+title: マスター データ マネージャー Web アプリケーションのセキュリティ保護
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -7,15 +7,14 @@ ms.reviewer: ''
 ms.technology: install
 ms.topic: conceptual
 ms.assetid: e360ba3a-e96b-4f85-b588-ed1f767fa973
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: a51b4a791de70421a80f7a62a1ab13b865688529
-ms.sourcegitcommit: 04dd0620202287869b23cc2fde998a18d3200c66
-ms.translationtype: HT
+ms.openlocfilehash: 0442f63413c3fd0213fb5b63151208fb10b55351
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "52641483"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73729175"
 ---
 # <a name="secure-a-master-data-manager-web-application"></a>マスター データ マネージャー Web アプリケーションのセキュリティ保護
 
@@ -26,7 +25,7 @@ ms.locfileid: "52641483"
 > [!NOTE]  
 >  [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] Web アプリケーションは、HTTP または HTTPS のいずれかを使用できますが、両方を使用することはできません。  
   
-## <a name="prerequisites"></a>Prerequisites  
+## <a name="prerequisites"></a>前提条件  
  この手順を実行するには  
   
 -   [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] がインストールされている Web サーバーの管理者である必要があります。  
@@ -62,7 +61,7 @@ ms.locfileid: "52641483"
 
 12. Silverlight クライアントで発生する可能性がある問題を回避するには、`<serviceMetadata httpGetEnable="true" httpsGetEnabled="false">` を `<serviceMetadata httpGetEnable="false" httpsGetEnabled="true">` に変更します。
 
-13. ファイルを保存して閉じます。 エラーが発生した場合は、UAC が有効になっている可能性があります。 詳細については、 [ユーザー アカウント制御の無効化](http://technet.microsoft.com/library/cc709691\(WS.10\).aspx)に関する記事を参照してください。 これで、ユーザーが HTTPS を使用してサイトにアクセスできるようになりました。  
+13. ファイルを保存して閉じます。 エラーが発生した場合は、UAC が有効になっている可能性があります。 これで、ユーザーが HTTPS を使用してサイトにアクセスできるようになりました。  
 
   
 ## <a name="see-also"></a>参照  

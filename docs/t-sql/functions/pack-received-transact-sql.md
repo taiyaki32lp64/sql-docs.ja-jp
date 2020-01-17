@@ -17,15 +17,14 @@ helpviewer_keywords:
 - number of packets read
 - packets [SQL Server], number read
 ms.assetid: 5c0b3d36-bfad-4f0b-abb8-e8f6391b32cd
-author: MashaMSFT
-ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 1ac28510dbe464a1628746b34ecfc94a7c53edc1
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: VanMSFT
+ms.author: vanto
+ms.openlocfilehash: a570e51fb9d46875f47196d2469a3464bee761a9
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47752460"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67914437"
 ---
 # <a name="x40x40packreceived-transact-sql"></a>&#x40;&#x40;PACK_RECEIVED (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

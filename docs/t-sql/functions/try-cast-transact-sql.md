@@ -15,20 +15,20 @@ dev_langs:
 helpviewer_keywords:
 - TRY_CAST function
 ms.assetid: ea3a16de-995b-415c-b5f0-9355cf7bb401
-author: MashaMSFT
-ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 78a32d990eb4a63251750e3e40e0de72bb1ff080
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: MikeRayMSFT
+ms.author: mikeray
+monikerRange: = azuresqldb-current||>= sql-server-2016 ||>= sql-server-linux-2017||= sqlallproducts-allversions||>= aps-pdw-2016||= azure-sqldw-latest
+ms.openlocfilehash: 915ea023442ab9d787a481cab44259b1fc4a3857
+ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47658290"
+ms.lasthandoff: 08/29/2019
+ms.locfileid: "70151952"
 ---
-# <a name="trycast-transact-sql"></a>TRY_CAST (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
+# <a name="try_cast-transact-sql"></a>TRY_CAST (Transact-SQL)
+[!INCLUDE[tsql-appliesto-ss2012-all-md](../../includes/tsql-appliesto-ss2012-all-md.md)]
 
-  キャストが成功した場合は、指定したデータ型にキャストされた値を返します。それ以外の場合は null を返します。  
+  指定されたデータ型へのキャストが成功した場合は、キャストされる値が返されます。それ以外の場合は、null が返されます。  
   
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -52,7 +52,7 @@ TRY_CAST ( expression AS data_type [ ( length ) ] )
  許容される値の範囲は、*data_type* の値によって決まります。  
   
 ## <a name="return-types"></a>戻り値の型  
- キャストが成功した場合は、指定したデータ型にキャストされた値を返します。それ以外の場合は null を返します。  
+ 指定されたデータ型へのキャストが成功した場合は、キャストされる値が返されます。それ以外の場合は、null が返されます。  
   
 ## <a name="remarks"></a>Remarks  
  **TRY_CAST** は渡された値を使用して、指定された *data_type* への変換を試みます。 キャストが成功した場合、**TRY_CAST** は指定された *data_type* と同じ値を返します。エラーが発生した場合は null が返されます。 ただし、明示的に許可されない変換を要求すると、**TRY_CAST** はエラーが発生して失敗します。  
@@ -61,8 +61,8 @@ TRY_CAST ( expression AS data_type [ ( length ) ] )
   
 ## <a name="examples"></a>使用例  
   
-### <a name="a-trycast-returns-null"></a>A. TRY_CAST が null を返す  
- キャストに失敗して TRY_CAST が null を返す場合の例を次に示します。  
+### <a name="a-try_cast-returns-null"></a>A. TRY_CAST が null を返す  
+ 次の例は、キャストが失敗した場合に TRY_CAST から null が返されることを示しています。  
   
 ```sql  
 SELECT   
@@ -101,8 +101,8 @@ NULL
 (1 row(s) affected)  
 ```  
   
-### <a name="b-trycast-fails-with-an-error"></a>B. TRY_CAST でエラーが発生して失敗する  
- キャストが明示的に許可されていないときに TRY_CAST がエラーを返す場合の例を次に示します。  
+### <a name="b-try_cast-fails-with-an-error"></a>B. TRY_CAST でエラーが発生して失敗する  
+ 次の例では、キャストが明示的に許可されていない場合に TRY_CAST がエラーを返すことを示します。  
   
 ```sql  
 SELECT TRY_CAST(4 AS xml) AS Result;  
@@ -115,7 +115,7 @@ GO
 Explicit conversion from data type int to xml is not allowed.  
 ```  
   
-### <a name="c-trycast-succeeds"></a>C. TRY_CAST が成功する  
+### <a name="c-try_cast-succeeds"></a>C. TRY_CAST が成功する  
  この例は、式を求められている形式にする必要があることを示しています。  
   
 ```  

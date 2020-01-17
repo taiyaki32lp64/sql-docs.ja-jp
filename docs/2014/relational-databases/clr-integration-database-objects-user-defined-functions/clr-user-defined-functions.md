@@ -17,11 +17,11 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: f48a62e1dff2fbc1d226077c2271e8a8a71efb2e
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48185902"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62874486"
 ---
 # <a name="clr-user-defined-functions"></a>CLR ユーザー定義関数
   ユーザー定義関数は、パラメーターを受け取り、計算やその他の操作を実行し、その結果を返すことができるルーチンです。 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] からは、[!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual Basic .NET や [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual C# などの [!INCLUDE[msCoName](../../includes/msconame-md.md)] .NET Framework プログラミング言語でユーザー定義関数を記述できます。  
@@ -39,7 +39,7 @@ ms.locfileid: "48185902"
  [CLR ユーザー定義集計](clr-user-defined-aggregates.md)  
  ユーザー定義集計の実装方法と使用方法について説明します。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [ユーザー定義関数](../user-defined-functions/user-defined-functions.md)  
   
   

@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: 1ba0d113-dc05-4431-8689-e14a8821bafd
 author: Shamikg
 ms.author: Shamikg
-manager: craigg
-ms.openlocfilehash: 8924ffbbbbbedccdc3bb99469c92667efb822a4c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 6c35168f1c77f0574b202b77da515dab497a3ec7
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47750300"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68006660"
 ---
 # <a name="connecting-to-azure-sql-db-accesstosql"></a>Azure SQL DB (AccessToSQL) への接続
 Access データベースを SQL Azure に移行するには、SQL Azure のターゲット インスタンスに接続する必要があります。 接続するときに、SSMA は SQL Azure のインスタンスのすべてのデータベースに関するメタデータを取得し、SQL Azure メタデータ エクスプ ローラーでデータベースのメタデータを表示します。 SSMA では、SQL Azure のインスタンスについてに接続しているがパスワードを保存しない情報を格納します。  
@@ -107,6 +106,6 @@ SQL Azure に再接続するための手順では、接続を確立するため�
   
 -   これらのタスクを実行する必要はありません場合、Access データベース オブジェクトの定義を SQL Azure のオブジェクトの定義に変換できます。 詳細については、次を参照してください[Access データベースの変換。](converting-access-database-objects-accesstosql.md)  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
 [SQL Server へのアクセス データベースの移行](migrating-access-databases-to-sql-server-azure-sql-db-accesstosql.md)  
   

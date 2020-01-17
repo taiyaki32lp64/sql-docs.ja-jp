@@ -13,15 +13,15 @@ helpviewer_keywords:
 - members [Master Data Services], deleting
 - consolidated members [Master Data Services], deleting
 ms.assetid: 519130a7-4226-4d71-9124-d2ee0ce7e5bd
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 9efe4245fd10e8fc0c5dbd0d114ba429ad13d1dc
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: f3164bca23e709fd434c6ba7850ec21179a076ef
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52758674"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65479712"
 ---
 # <a name="delete-a-member-or-collection-master-data-services"></a>メンバーまたはコレクションを削除する (マスター データ サービス)
   [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]で、不要になったメンバーまたはコレクションを削除します。 複数のメンバーを一括で削除する場合は、代わりにステージング処理を使用します。 詳細については、次を参照してください。[非アクティブ化またはステージング処理を使用してメンバーの削除&#40;Master Data Services&#41;](add-update-and-delete-data-master-data-services.md)します。  
@@ -56,7 +56,7 @@ ms.locfileid: "52758674"
   
 5.  グリッドで、削除するメンバーまたはコレクションの行をクリックします。  
   
-6.  **[メンバーの削除]**、 **[削除]**、または **[コレクションの削除]** をクリックします。  
+6.  **[メンバーの削除]** 、 **[削除]** 、または **[コレクションの削除]** をクリックします。  
   
 7.  確認のダイアログ ボックスで **[OK]** をクリックします。  
   

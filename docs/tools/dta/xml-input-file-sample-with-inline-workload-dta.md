@@ -12,15 +12,14 @@ dev_langs:
 helpviewer_keywords:
 - sample applications [DTA]
 ms.assetid: 7c04fe1d-6669-44a1-8b73-36d469e9b002
-author: stevestein
-ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 3b08565d38044ba7af93b5614e2758e524b406ff
-ms.sourcegitcommit: 0f7cf9b7ab23df15624d27c129ab3a539e8b6457
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: c3e1121f2f7a504e90f971015ae16e6a4d6e6ad2
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51290718"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68105792"
 ---
 # <a name="xml-input-file-sample-with-inline-workload-dta"></a>インライン ワークロードを使用した XML 入力ファイルのサンプル (DTA)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

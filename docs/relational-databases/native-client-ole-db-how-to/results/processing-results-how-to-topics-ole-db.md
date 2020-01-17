@@ -1,5 +1,5 @@
 ---
-title: 結果の操作方法に関するトピック (OLE DB) の処理 |Microsoft Docs
+title: 結果の処理方法に関するトピック (OLE DB) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: sql
@@ -12,18 +12,16 @@ helpviewer_keywords:
 ms.assetid: 23cc2688-6080-497e-8151-712d10da5fef
 author: MightyPen
 ms.author: genemi
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: cb993a762ed4fed61c1a290fb8fa4c6eb7c0b885
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 0bc0494bc85111f2220f95f83850a625e817e891
+ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47696823"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73789845"
 ---
 # <a name="processing-results-how-to-topics-ole-db"></a>結果を処理する方法に関するトピック (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-[!INCLUDE[SNAC_Deprecated](../../../includes/snac-deprecated.md)]
 
   OLE DB アプリケーションの結果の処理では、最初に結果セットの特性を確認し、次にデータをプログラム変数に取り込みます。 コマンドでストアド プロシージャを実行する場合は、ストアド プロシージャからのリターン コードと出力パラメーターの処理方法を理解しておく必要があります。  
   

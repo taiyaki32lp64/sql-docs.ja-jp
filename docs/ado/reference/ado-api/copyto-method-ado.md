@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: b4aa5714-916b-48b8-8b09-cc2708379602
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 01b2e7dc8b70c109fc6cf998cec2bbad1147692c
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 25d57116e1fa24658d62a0c9083e00a3e320d2a8
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52529609"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67933372"
 ---
 # <a name="copyto-method-ado"></a>CopyTo メソッド (ADO)
 指定した数の文字またはバイトのコピー (に応じて[型](../../../ado/reference/ado-api/type-property-ado-stream.md)) で、 [Stream](../../../ado/reference/ado-api/stream-object-ado.md)間**Stream**オブジェクト。  

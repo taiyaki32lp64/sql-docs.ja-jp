@@ -3,24 +3,26 @@ title: '[テーブル作成 SQL ステートメント] (SQL Server インポー�
 ms.custom: ''
 ms.date: 02/16/2017
 ms.prod: sql
-ms.prod_service: integration-services
 ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql13.dts.impexpwizard.createtablesql.f1
 ms.assetid: 0d6f6b3b-d023-4770-a8a9-65b2977c8d05
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: dec571f93da2ca51aadc6a79a54090bcb0eab08d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: bc7255cdcb9758f2bdd55b043e70669affadabd8
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47601150"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71285229"
 ---
 # <a name="create-table-sql-statement-sql-server-import-and-export-wizard"></a>[テーブル作成 SQL ステートメント] (SQL Server インポートおよびエクスポート ウィザード)
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
 **[変換先テーブルを作成する]** を選択してから **[列マッピング]** ダイアログ ボックスで **[SQL の編集]** を選択した場合、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インポートおよびエクスポート ウィザードに **[テーブル作成 SQL ステートメント]** ダイアログ ボックスが表示されます。 このページでは、**CREATE TABLE** コマンドを確認し、必要に応じてカスタマイズします。このコマンドは、新しいターゲット テーブルを作成するためにウィザードで実行されます。
   
 > [!NOTE]
@@ -37,7 +39,7 @@ ms.locfileid: "47601150"
  **SQL ステートメント**  
 自動生成された SQL ステートメントが表示され、編集できます。
  
-既定の CREATE TABLE コマンドを変更する場合は、**[列マッピング]** ダイアログ ボックスに戻るときに、関連付けられている列マッピングの変更が必要になることもあります。  
+既定の CREATE TABLE コマンドを変更する場合は、 **[列マッピング]** ダイアログ ボックスに戻るときに、関連付けられている列マッピングの変更が必要になることもあります。  
   
 SQL ステートメントのテキストにキャリッジ リターンを含めるには、Ctrl キーを押しながら Enter キーを押します。 Enter キーだけを押すと、ダイアログ ボックスが閉じます。  
   

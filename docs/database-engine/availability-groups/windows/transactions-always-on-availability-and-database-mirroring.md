@@ -1,6 +1,7 @@
 ---
-title: トランザクション - Always On 可用性グループとデータベース ミラーリング | Microsoft Docs
-ms.custom: ''
+title: 'トランザクション: 可用性グループとデータベース ミラーリング'
+descripton: Learn about cross-database and distributed transaction support for SQL Server Always On availability groups and database mirroring.
+ms.custom: seo-lt-2019
 ms.date: 12/11/2018
 ms.prod: sql
 ms.reviewer: ''
@@ -15,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 9f7ed895-ad65-43e3-ba08-00d7bff1456d
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: af982fa485cb9fbcc394a063e0390b795e87e0b0
-ms.sourcegitcommit: 40c3b86793d91531a919f598dd312f7e572171ec
+ms.openlocfilehash: 407e477be98f386adc27fc965b1d099d1dec4dfa
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53328952"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75251231"
 ---
 # <a name="transactions---availability-groups-and-database-mirroring"></a>トランザクション - 可用性グループとデータベース ミラーリング
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -90,7 +90,7 @@ SQL Server 2016 では、トランザクションの 1 つ以上のデータベ�
 > [!NOTE]  
 >  この記事で承認されていない DTC とデータベース ミラーリングの使用や DTC と可用性グループの使用はサポートされていません。  これは、DTC に関係しない部分はサポートされないことを意味するものではありません。ただし、分散トランザクションの不適切な使用により発生する問題はサポートされません。  
   
-## <a name="next-steps"></a>次の手順  
+## <a name="next-steps"></a>次のステップ  
  [Always On 可用性グループ:相互運用性 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/always-on-availability-groups-interoperability-sql-server.md)  
   
   

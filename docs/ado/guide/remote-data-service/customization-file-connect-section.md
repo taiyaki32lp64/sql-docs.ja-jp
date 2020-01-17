@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: d50eb3cc-a822-486f-b80b-65bb50547ecd
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 627bbbafd272b6bb7682b776132445041207f8e1
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: 1de3710590cf49de30ff8e79a6ff829b124c42dd
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54133332"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67922804"
 ---
 # <a name="customization-file-connect-section"></a>カスタマイズ ファイルの Connect セクション
 ハンドラーの既定の動作では、すべての接続を拒否します。 **接続**セクションでは、その動作の例外を指定します。 たとえば、すべての場合、**接続**セクションが存在しない場合、または空の場合、既定で接続を確立できませんでした。  
@@ -63,7 +62,7 @@ connectionString
   
  (影響-既定のハンドラーの動作を無効にする) で任意の接続を許可する場合でアクセス エントリを設定、**接続既定**セクションを`Access=ReadWrite`、および削除またはコメント アウト、他の**を接続**_識別子_セクション。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [カスタマイズ ファイル Logs セクション](../../../ado/guide/remote-data-service/customization-file-logs-section.md)   
  [カスタマイズ ファイル SQL セクション](../../../ado/guide/remote-data-service/customization-file-sql-section.md)   
  [カスタマイズ ファイル UserList セクション](../../../ado/guide/remote-data-service/customization-file-userlist-section.md)   

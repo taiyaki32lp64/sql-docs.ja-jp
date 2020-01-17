@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 9410b686-4b5b-4b51-b5ef-f9d2e7a48faa
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 23ce67350b7fa7d0a88f3d51e618ce9bb9f9ebcf
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 89157178aa9c134bdb1b9518343007adb1e1e05f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47796220"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68132423"
 ---
 # <a name="sqltables-excel-driver"></a>SQLTables (Excel ドライバー)
 > [!NOTE]  

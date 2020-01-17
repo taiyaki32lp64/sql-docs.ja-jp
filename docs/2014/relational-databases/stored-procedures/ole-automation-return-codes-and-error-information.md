@@ -15,14 +15,14 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 34744bedb701155d2695f6efc5aab3c493e6cf48
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48132933"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63011269"
 ---
 # <a name="ole-automation-return-codes-and-error-information"></a>OLE オートメーションのリターン コードとエラー情報
-  OLE オートメーション システム ストアド プロシージャ、`int`リターン コードが、基になる OLE オートメーション操作から返される HRESULT です。 HRESULT 0 は成功を示しています。 0 以外の HRESULT は、0x800 という 16 進数形式の OLE エラー コード*nnnnn*、として返された場合は、 `int` HRESULT ストアド プロシージャのリターン コードの値が、形式は 214*nnnnnnn*します。  
+  OLE オートメーション システム ストアド プロシージャでは、`int` のリターン コードが返されます。これは、基になる OLE オートメーション操作から返される HRESULT です。 HRESULT 0 は成功を示しています。 0 以外の HRESULT は、0x800 という 16 進数形式の OLE エラー コード*nnnnn*、として返された場合は、 `int` HRESULT ストアド プロシージャのリターン コードの値が、形式は 214*nnnnnnn*します。  
   
  たとえば、無効なオブジェクト名を渡す (SQLDMO です。Xyzzy) sp_OACreate ににより、プロシージャから返される、 `int` 16 進数では 0x800401f3 ですと HRESULT。  
   

@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: 6dea35a0-56a8-412c-8cd3-6539527ff597
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 672246665ed978264ecf38ecb06b65ca12da86c8
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: fe27259efbc3448fd0d8d4350d0c2e93e906c34a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47736710"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67982853"
 ---
 # <a name="getidentifierquotestring-method-sqlserverdatabasemetadata"></a>getIdentifierQuoteString メソッド (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -42,7 +41,7 @@ public java.lang.String getIdentifierQuoteString()
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- この getIdentifierQuoteString メソッドは、java.sql.DatabaseMetaData インターフェイスで getIdentifierQuoteString メソッドによって指定されます。  
+ この getIdentifierQuoteString メソッドは、getIdentifierQuoteString メソッドによって、java メタデータインターフェイスで指定されます。  
   
  [!INCLUDE[msCoName](../../../includes/msconame_md.md)] JDBC Driver を [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] データベースと共に使用している場合、このメソッドは**二重**引用符 ("") が返されます。  
   

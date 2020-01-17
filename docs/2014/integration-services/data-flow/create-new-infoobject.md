@@ -7,15 +7,15 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 3587a633-1c0b-4d63-a22a-6b2b93923c3a
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 17e9b7508317abc2ceb3b6e273c46fdea5a5abb3
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 1c57974bc671802d3ade3263d8650883683c846e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52781255"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62827907"
 ---
 # <a name="create-new-infoobject"></a>[新しいインフォオブジェクトの作成]
   SAP Netweaver BW システムで新しいインフォオブジェクトを作成するには、 **[新しいインフォオブジェクトの作成]** ダイアログ ボックスを使用します。  

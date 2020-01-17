@@ -1,5 +1,5 @@
 ---
-title: sys.crypt_properties (TRANSACT-SQL) |Microsoft Docs
+title: sys.crypt_properties (Transact-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -19,34 +19,33 @@ helpviewer_keywords:
 ms.assetid: d5684f5a-30b1-418e-ae4d-ab040db9257e
 author: VanMSFT
 ms.author: vanto
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: b006e2795a79f9a7cbaf3686113bb2f1c7ad8172
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 9655866d4fd2d6f98b38532f77f94bc12f16f9b4
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47805440"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68109482"
 ---
-# <a name="syscryptproperties-transact-sql"></a>sys.crypt_properties (Transact-SQL)
+# <a name="syscrypt_properties-transact-sql"></a>sys.crypt_properties (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  セキュリティ保護可能なリソースに関連付けられている暗号化プロパティごとに 1 行のデータを返します。  
+  関連付けられたセキュリティ保護可能な暗号化プロパティごとに 1 行を返します。  
   
 |列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
 |**class**|**tinyint**|プロパティが存在するリソースのクラスの識別子。<br /><br /> 1 = オブジェクトまたは列<br /> 5 = アセンブリ|  
-|**class_desc**|**nvarchar(60)**|プロパティが存在するリソースのクラスの説明。<br /><br /> OBJECT_OR_COLUMN<br /> ASSEMBLY|  
-|**major_id**|**int**|プロパティが存在するリソースの ID。クラスに基づいて解釈されます。|  
-|**拇印**|**varbinary(32)**|使用する証明書または非対称キーの SHA-1 ハッシュ。|  
-|**crypt_type**|**char(4)**|暗号化の種類。<br /><br /> SPVC = 証明書の秘密キーによって暗号化されます。<br /><br /> SPVA = 非対称秘密キーによって暗号化されます。<br /><br /> CPVC = 証明書の秘密キーによって副署されます。<br /><br /> CPVA = 非対称キーによって副署されます。|  
-|**crypt_type_desc**|**nvarchar(60)**|暗号化の種類の説明です。<br /><br /> SIGNATURE BY CERTIFICATE<br /><br /> SIGNATURE BY ASYMMETRIC KEY<br /><br /> COUNTER SIGNATURE BY CERTIFICATE<br /><br /> COUNTER SIGNATURE BY ASYMMETRIC KEY|  
-|**crypt_property**|**varbinary(max)**|署名された、または暗号化されたビット。|  
+|**class_desc**|**nvarchar(60)**|プロパティが存在するリソースのクラスの説明です。<br /><br /> OBJECT_OR_COLUMN<br /> ASSEMBLY|  
+|**major_id**|**int**|クラスに基づいて解釈されます、プロパティが存在するリソースの ID。|  
+|**thumbprint**|**varbinary(32)**|証明書または非対称キーの使用の sha-1 ハッシュ。|  
+|**crypt_type**|**char(4)**|暗号化の種類。<br /><br /> SPVC 証明書の秘密キーによって署名を =<br /><br /> SPVA = 非対称秘密キー署名済み<br /><br /> CPVC = 証明書の秘密キーによって副署されます。<br /><br /> CPVA = 非対称キーによって副署されます。|  
+|**crypt_type_desc**|**nvarchar(60)**|暗号化の種類の説明です。<br /><br /> SIGNATURE BY CERTIFICATE<br /><br /> SIGNATURE BY ASYMMETRIC KEY<br /><br /> 証明書で副署<br /><br /> 非対称キーによって副署|  
+|**crypt_property**|**varbinary(max)**|署名された、または暗号化されたビット。 署名付きモジュールこれらには、モジュールの署名のビットです。|  
   
 ## <a name="permissions"></a>アクセス許可  
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] 詳細については、「 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)」を参照してください。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [セキュリティ カタログ ビュー &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/security-catalog-views-transact-sql.md)   
  [暗号化階層](../../relational-databases/security/encryption/encryption-hierarchy.md)   
  [Securables](../../relational-databases/security/securables.md)   

@@ -12,15 +12,14 @@ dev_langs:
 helpviewer_keywords:
 - DTAXML element
 ms.assetid: 3d9942ed-8a27-40db-a7c9-808984d914a2
-author: stevestein
-ms.author: sstein
-manager: craigg
-ms.openlocfilehash: c4894cf7cbee04a039bf13eb07a0e05fea59c053
-ms.sourcegitcommit: bfa10c54e871700de285d7f819095d51ef70d997
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 43b6fc40e4e116777f5caef2a3c6637c8477c86c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/14/2019
-ms.locfileid: "54255397"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68132756"
 ---
 # <a name="dtaxml-element-dta"></a>DTAXML 要素 (DTA)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

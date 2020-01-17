@@ -1,9 +1,7 @@
 ---
 title: PolyBase スケールアウト グループ | Microsoft Docs
-ms.custom: ''
-ms.date: 09/24/2018
+ms.date: 04/23/2019
 ms.prod: sql
-ms.reviewer: ''
 ms.technology: polybase
 ms.topic: conceptual
 helpviewer_keywords:
@@ -11,15 +9,16 @@ helpviewer_keywords:
 - PolyBase, scale-out groups
 - scale-out PolyBase
 ms.assetid: c7810135-4d63-4161-93ab-0e75e9d10ab5
-author: rothja
-ms.author: jroth
-manager: craigg
-ms.openlocfilehash: ad890736cf0536c5f4f776d2bd4949e195dd26d6
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+author: MikeRayMSFT
+ms.author: mikeray
+ms.reviewer: ''
+monikerRange: '>= sql-server-2016 || =sqlallproducts-allversions'
+ms.openlocfilehash: 8d2e2cc75046d9da6ce3e4c8188136f6b6f03945
+ms.sourcegitcommit: 650a25eb54eeb9ddfe3c8f12b5f8804cc07bf5e5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53205421"
+ms.lasthandoff: 01/03/2020
+ms.locfileid: "75623239"
 ---
 # <a name="polybase-scale-out-groups"></a>PolyBase スケールアウト グループ
 
@@ -29,7 +28,7 @@ PolyBase を使用するスタンドアロンの SQL Server インスタンス�
   
 「 [PolyBase の概要](../../relational-databases/polybase/get-started-with-polybase.md) 」および「 [PolyBase ガイド](../../relational-databases/polybase/polybase-guide.md)」を参照してください。
   
-![PolyBase スケールアウト グループ](../../relational-databases/polybase/media/polybase-scale-out-groups.png "PolyBase スケールアウト グループ")  
+![PolyBase スケールアウト グループ](../../relational-databases/polybase/media/polybase-scale-out-groups.png "|::ref1::|")  
   
 ## <a name="head-node"></a>ヘッド ノード  
 
@@ -48,7 +47,7 @@ PolyBase を使用するスタンドアロンの SQL Server インスタンス�
 > [!NOTE]
 >  これは Hadoop を介したスケールアウト読み取りとは異なります。 
 
-![PolyBase スケールアウト グループ](../../relational-databases/polybase/media/polybase-scale-out-groups2.png "PolyBase スケールアウト グループ")
+![PolyBase スケールアウト グループ](../../relational-databases/polybase/media/polybase-scale-out-groups2.png "|::ref2::|")
   
 ## <a name="distributed-query-processing"></a>分散クエリ処理  
 
@@ -62,8 +61,15 @@ PolyBase データ移動サービスは、PolyBase エンジンから指示を�
 
 SQL Server をセットアップしたら、インスタンスをヘッド ノードとコンピューティング ノードのどちらかとして指定できます。 指定できるノードは、実行されている SQL Server PolyBase のバージョンによって異なります。 Enterprise Edition インストールでは、インスタンスをヘッド ノードとコンピューティング ノードのどちらかとして指定できます。 Standard Edition では、インスタンスをコンピューティング ノードとしてのみ指定できます。
 
-## <a name="next-steps"></a>次の手順
+## <a name="next-steps"></a>次のステップ
 
 PolyBase スケールアウト グループを構成するには、次のガイドを参照してください。
 
 [Windows で PolyBase スケールアウト グループを改善する](configure-scale-out-groups-windows.md)
+
+## <a name="see-also"></a>参照
+
+ [sys-dm-exec-compute-nodes](../../relational-databases/system-dynamic-management-views/sys-dm-exec-compute-nodes-transact-sql.md)   
+ [sys-dm-exec-compute-node-status](../../relational-databases/system-dynamic-management-views/sys-dm-exec-compute-node-status-transact-sql.md)   
+ [sys.dm_exec_compute_node_errors](../../relational-databases/system-dynamic-management-views/sys-dm-exec-compute-node-errors-transact-sql.md)   
+

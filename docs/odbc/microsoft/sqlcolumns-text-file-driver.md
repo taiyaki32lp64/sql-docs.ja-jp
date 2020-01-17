@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: c99e5f8d-4e43-48f8-9e0e-086707b411f5
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 8189a5f6a89f072988404e722a88c29af2d88ca6
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 893ffa40f346a878b4cdde87a9a0a55fbb9e1c7a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47829530"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68132522"
 ---
 # <a name="sqlcolumns-text-file-driver"></a>SQLColumns (テキスト ファイル ドライバー)
 > [!NOTE]  

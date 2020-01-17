@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: a8bf304b-eff1-447c-887c-dabdb5353a2d
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: c8be5ffca0ad28793b1b5e22bbeabca05001e361
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: cb4f4c2b1e9658e1e0199ec6d856ef21db80cf07
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47645880"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67952351"
 ---
 # <a name="implementing-desktop-database-drivers"></a>デスクトップ データベース ドライバーの実装
 手順とテクニカル ノートを実装し、Microsoft ODBC のデスクトップ データベース ドライバーを設定する方法の詳細については、ODBC データ ソース アドミニストレーターのオンライン ヘルプで確認できます。 このファイルからドライバーのセットアップ ルーチンにアクセスできる、 [Microsoft ODBC データ ソース アドミニストレーター](../../odbc/admin/odbc-data-source-administrator.md)します。  

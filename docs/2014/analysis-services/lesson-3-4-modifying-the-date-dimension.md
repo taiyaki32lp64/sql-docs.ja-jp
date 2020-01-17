@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: 4689d780-4bf6-4cf8-8fde-eb3f15dd668a
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 77d37fff5b22e15656ef2eb76f33ada44572ba4c
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 826d5b1079e9fcfd0d2ec7a9abd55937f2da1a22
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52526108"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66078799"
 ---
 # <a name="modifying-the-date-dimension"></a>Date ディメンションの変更
   このトピックの実習では、ユーザー定義階層を作成し、Date、Month、Calendar Quarter、および Calendar Semester 属性に表示されるメンバー名を変更します。 また、属性の複合キーの定義、ディメンション メンバーの並べ替え順序の制御、および属性リレーションシップの定義も行います。  
@@ -65,7 +64,7 @@ ms.locfileid: "52526108"
   
 3.  [プロパティ] ウィンドウが開いていない場合は、[プロパティ] ウィンドウを開き、タイトル バーにある **[自動的に隠す]** ボタンをクリックします。これにより、[プロパティ] ウィンドウが開いたままになります。  
   
-4.  をクリックして、 **NameColumn**プロパティは、ウィンドウの下部にあるフィールドし、参照ボタンをクリックし (**.**) ボタンをクリックする、**名前列** ダイアログ ボックス。  
+4.  をクリックして、 **NameColumn**プロパティは、ウィンドウの下部にあるフィールドし、参照ボタンをクリックし ( **.** ) ボタンをクリックする、**名前列** ダイアログ ボックス。  
   
 5.  選択`SimpleDate`の下部にある、**基になる列**ボックスの一覧をクリックして**OK**。  
   
@@ -189,15 +188,15 @@ ms.locfileid: "52526108"
   
 2.  **[属性]** ペインで、 **[English Month Name]** 属性をクリックします。  
   
-3.  **[プロパティ]** ウィンドウで **[KeyColumns]** フィールドをクリックし、参照ボタン (**[...]**) をクリックします。  
+3.  **[プロパティ]** ウィンドウで **[KeyColumns]** フィールドをクリックし、参照ボタン ( **[...]** ) をクリックします。  
   
-4.  **[キー列]** ダイアログ ボックスの **[使用できる列]** ボックスの一覧で **[CalendarYear]** 列を選択し、**[>]** をクリックします。  
+4.  **[キー列]** ダイアログ ボックスの **[使用できる列]** ボックスの一覧で **[CalendarYear]** 列を選択し、 **[>]** をクリックします。  
   
 5.  **[EnglishMonthName]** 列と **[CalendarYear]** 列が **[キー列]** ボックスの一覧に表示されるようになりました。  
   
 6.  **[OK]** をクリックします。  
   
-7.  **EnglishMonthName** 属性の **NameColumn** プロパティを設定するには、[プロパティ] ウィンドウで **[NameColumn]** フィールドをクリックし、参照ボタン (**[...]**) をクリックします。  
+7.  **EnglishMonthName** 属性の **NameColumn** プロパティを設定するには、[プロパティ] ウィンドウで **[NameColumn]** フィールドをクリックし、参照ボタン ( **[...]** ) をクリックします。  
   
 8.  **名前列**] ダイアログ ボックスで、**基になる列**一覧で、[ `MonthName`、順にクリックします **[ok]** します。  
   
@@ -207,15 +206,15 @@ ms.locfileid: "52526108"
   
 1.  **[属性]** ペインで、 **[Calendar Quarter]** 属性をクリックします。  
   
-2.  **[プロパティ]** ウィンドウで **[KeyColumns]** フィールドをクリックし、参照ボタン (**[...]**) をクリックします。  
+2.  **[プロパティ]** ウィンドウで **[KeyColumns]** フィールドをクリックし、参照ボタン ( **[...]** ) をクリックします。  
   
-3.  **[キー列]** ダイアログ ボックスの **[使用できる列]** ボックスの一覧で **[CalendarYear]** 列を選択し、**[>]** をクリックします。  
+3.  **[キー列]** ダイアログ ボックスの **[使用できる列]** ボックスの一覧で **[CalendarYear]** 列を選択し、 **[>]** をクリックします。  
   
      **[CalendarQuarter]** 列と **[CalendarYear]** 列が **[キー列]** ボックスの一覧に表示されるようになりました。  
   
 4.  **[OK]** をクリックします。  
   
-5.  **Calendar Quarter** 属性の **NameColumn** プロパティを設定するには、[プロパティ] ウィンドウで **[NameColumn]** フィールドをクリックし、参照ボタン (**[...]**) をクリックします。  
+5.  **Calendar Quarter** 属性の **NameColumn** プロパティを設定するには、[プロパティ] ウィンドウで **[NameColumn]** フィールドをクリックし、参照ボタン ( **[...]** ) をクリックします。  
   
 6.  **名前列**] ダイアログ ボックスで、**基になる列**一覧で、[ `CalendarQuarterDesc`、順にクリックします **[ok]** します。  
   
@@ -225,15 +224,15 @@ ms.locfileid: "52526108"
   
 1.  **[属性]** ペインで、 **[Calendar Semester]** 属性をクリックします。  
   
-2.  **[プロパティ]** ウィンドウで **[KeyColumns]** フィールドをクリックし、参照ボタン (**[...]**) をクリックします。  
+2.  **[プロパティ]** ウィンドウで **[KeyColumns]** フィールドをクリックし、参照ボタン ( **[...]** ) をクリックします。  
   
-3.  **[キー列]** ダイアログ ボックスの **[使用できる列]** ボックスの一覧で **[CalendarYear]** 列を選択し、**[>]** をクリックします。  
+3.  **[キー列]** ダイアログ ボックスの **[使用できる列]** ボックスの一覧で **[CalendarYear]** 列を選択し、 **[>]** をクリックします。  
   
      **[CalendarSemester]** 列と **[CalendarYear]** 列が **[キー列]** ボックスの一覧に表示されるようになりました。  
   
 4.  **[OK]** をクリックします。  
   
-5.  **Calendar Semester** 属性の **NameColumn** プロパティを設定するには、[プロパティ] ウィンドウで **[NameColumn]** フィールドをクリックし、参照ボタン (**[...]**) をクリックします。  
+5.  **Calendar Semester** 属性の **NameColumn** プロパティを設定するには、[プロパティ] ウィンドウで **[NameColumn]** フィールドをクリックし、参照ボタン ( **[...]** ) をクリックします。  
   
 6.  **名前列**] ダイアログ ボックスで、**基になる列**一覧で、[ `CalendarSemesterDesc`、順にクリックします **[ok]** します。  
   
@@ -300,7 +299,7 @@ ms.locfileid: "52526108"
 ## <a name="next-task-in-lesson"></a>このレッスンの次の作業  
  [配置したキューブの表示](lesson-3-5-browsing-the-deployed-cube.md)  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [多次元モデル内のディメンション](multidimensional-models/dimensions-in-multidimensional-models.md)  
   
   

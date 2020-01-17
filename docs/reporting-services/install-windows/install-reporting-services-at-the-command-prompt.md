@@ -7,15 +7,15 @@ ms.topic: conceptual
 helpviewer_keywords:
 - command line
 ms.assetid: 048169b3-512c-41e4-895a-0416eff41268
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 monikerRange: = sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 05519dae5377d1e58f6b8e47b91d898c0b67dc2f
-ms.sourcegitcommit: c7febcaff4a51a899bc775a86e764ac60aab22eb
-ms.translationtype: HT
+ms.openlocfilehash: 7c4597a19b3fbcde0a5b4f6a82cb2398b6776128
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "52710873"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62513674"
 ---
 # <a name="install-reporting-services-2016-at-the-command-prompt"></a>コマンド プロンプトでの Reporting Services 2016 のインストール
 

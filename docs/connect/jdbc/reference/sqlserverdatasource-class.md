@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 097434fd-2b74-411c-a5ed-eba04481dde5
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: c4dcbeb69fee36b3b38ec07de338e2624d3695c2
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a1de4bc16b37c6224c0dfbb5556f59b6e15d825a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47840780"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67971519"
 ---
 # <a name="sqlserverdatasource-class"></a>SQLServerDataSource クラス
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -35,7 +34,7 @@ public class SQLServerDataSource
 ```  
   
 ## <a name="remarks"></a>Remarks  
- このクラスは、SQLServerDataSource クラス、ISQLServerDataSource インターフェイス、および DataSource インターフェイスへのアンラッピングをサポートしています。 詳細については、次を参照してください。[ラッパーとインターフェイス](../../../connect/jdbc/wrappers-and-interfaces.md)します。  
+ このクラスは、SQLServerDataSource クラス、ISQLServerDataSource インターフェイス、および DataSource インターフェイスへのラップをサポートしています。 詳細については、「[ラッパーとインターフェイス](../../../connect/jdbc/wrappers-and-interfaces.md)」を参照してください。  
   
 ## <a name="see-also"></a>参照  
  [SQLServerDataSource のメンバー](../../../connect/jdbc/reference/sqlserverdatasource-members.md)   

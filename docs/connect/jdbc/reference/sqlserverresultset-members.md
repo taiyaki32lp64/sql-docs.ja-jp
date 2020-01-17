@@ -1,5 +1,5 @@
 ---
-title: SQLServerResultSet のメンバー |Microsoft Docs
+title: SQLServerResultSet Members |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 2a438d5d-2d6a-46a0-a2ae-f35fbae4a472
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 464b88da8c20587298e308613e733db9b3e8cd87
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: fed1b515d6e003f00cebbaf3f3a9306572e2ad2b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47623740"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67970562"
 ---
 # <a name="sqlserverresultset-members"></a>SQLServerResultSet のメンバー
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -72,7 +71,7 @@ ms.locfileid: "47623740"
 |[getConcurrency](../../../connect/jdbc/reference/getconcurrency-method-sqlserverresultset.md)|[SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) オブジェクトの同時実行モードを取得します。|  
 |[getCursorName](../../../connect/jdbc/reference/getcursorname-method-sqlserverresultset.md)|[SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) オブジェクトによって使用される SQL カーソルの名前を取得します。|  
 |[getDate](../../../connect/jdbc/reference/getdate-method-sqlserverresultset.md)|[SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) オブジェクトの現在の行にある指定された列の値が、Java プログラミング言語の java.sql.Date オブジェクトとして取得されます。|  
-|[getDateTimeOffset](../../../connect/jdbc/reference/getdatetimeoffset-sqlserverresultset.md)|指定した列の値を取得、[DateTimeOffset クラス](../../../connect/jdbc/reference/datetimeoffset-class.md)オブジェクト。|  
+|[getDateTimeOffset](../../../connect/jdbc/reference/getdatetimeoffset-sqlserverresultset.md)|指定された列の値を[DateTimeOffset クラス](../../../connect/jdbc/reference/datetimeoffset-class.md)オブジェクトとして取得します。|  
 |[getDouble](../../../connect/jdbc/reference/getdouble-method-sqlserverresultset.md)|[SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) オブジェクトの現在の行にある指定された列の値が、Java プログラミング言語の **double** として取得されます。|  
 |[getFetchDirection](../../../connect/jdbc/reference/getfetchdirection-method-sqlserverresultset.md)|[SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) オブジェクトのフェッチ方向を取得します。|  
 |[getFetchSize](../../../connect/jdbc/reference/getfetchsize-method-sqlserverresultset.md)|[SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) オブジェクトのフェッチ サイズを取得します。|  
@@ -117,7 +116,7 @@ ms.locfileid: "47623740"
 |[setFetchSize](../../../connect/jdbc/reference/setfetchsize-method-sqlserverresultset.md)|[SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) オブジェクトにさらに行が必要な場合にデータベースからフェッチする必要がある行数について、JDBC ドライバーにヒントを示します。|  
 |[updateArray](../../../connect/jdbc/reference/updatearray-method-sqlserverresultset.md)|指定された列を Array オブジェクトで更新します。|  
 |[updateAsciiStream](../../../connect/jdbc/reference/updateasciistream-method-sqlserverresultset.md)|指定された列を ASCII ストリーム値で更新します。|  
-|[updateBigDecimal](../../../connect/jdbc/reference/updatebigdecimal-method-sqlserverresultset.md)|BigDecimal オブジェクトで指定された列を更新します。|  
+|[updateBigDecimal](../../../connect/jdbc/reference/updatebigdecimal-method-sqlserverresultset.md)|指定された列を BigDecimal オブジェクトで更新します。|  
 |[updateBinaryStream](../../../connect/jdbc/reference/updatebinarystream-method-sqlserverresultset.md)|指定された列をバイナリ ストリーム値で更新します。|  
 |[updateBlob](../../../connect/jdbc/reference/updateblob-method-sqlserverresultset.md)|指定された列を java.sql.Blob 値で更新します。|  
 |[updateBoolean](../../../connect/jdbc/reference/updateboolean-method-sqlserverresultset.md)|指定された列を **boolean** 値で更新します。|  
@@ -126,7 +125,7 @@ ms.locfileid: "47623740"
 |[updateCharacterStream](../../../connect/jdbc/reference/updatecharacterstream-method-sqlserverresultset.md)|指定された列を文字ストリームの値で更新します。|  
 |[updateClob](../../../connect/jdbc/reference/updateclob-method-sqlserverresultset.md)|指定された列を java.sql.Clob 値で更新します。|  
 |[updateDate](../../../connect/jdbc/reference/updatedate-method-sqlserverresultset.md)|指定された列を日付の値で更新します。|  
-|[updateDateTimeOffset](../../../connect/jdbc/reference/updatedatetimeoffset-sqlserverresultset.md)|更新プログラム、 [DateTimeOffset クラス](../../../connect/jdbc/reference/datetimeoffset-class.md)列。|  
+|[updateDateTimeOffset](../../../connect/jdbc/reference/updatedatetimeoffset-sqlserverresultset.md)|[DateTimeOffset クラス](../../../connect/jdbc/reference/datetimeoffset-class.md)列を更新します。|  
 |[updateDouble](../../../connect/jdbc/reference/updatedouble-method-sqlserverresultset.md)|指定された列を **double** 値で更新します。|  
 |[updateFloat](../../../connect/jdbc/reference/updatefloat-method-sqlserverresultset.md)|指定された列を **float** 値で更新します。|  
 |[updateInt](../../../connect/jdbc/reference/updateint-method-sqlserverresultset.md)|指定された列を **int** 値で更新します。|  

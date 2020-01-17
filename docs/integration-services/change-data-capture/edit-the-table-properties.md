@@ -10,17 +10,20 @@ ms.topic: conceptual
 f1_keywords:
 - editTabProps
 ms.assetid: 95ea72ba-8e40-4177-a963-0fb4d10c56e3
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: 4499ba0bc52e7c0d5cd052a8999737bf53337a50
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: ae05c1015fe885c7488af0b0c9c7e340dc25d056
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47686970"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71294736"
 ---
 # <a name="edit-the-table-properties"></a>テーブルのプロパティの編集
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   変更がキャプチャされている選択したテーブルの特定の列を編集するには、このダイアログ ボックスを使用します。 **[セキュリティ ロール]** と **[キャプチャ インスタンス]** の情報を編集することもできます。  
   
 ### <a name="to-edit-the-columns-to-include-in-the-cdc-instance"></a>CDC インスタンスに含める列を編集するには  
@@ -41,11 +44,11 @@ ms.locfileid: "47686970"
   
 2.  キャプチャ インスタンスを次のいずれかとして保存します。  
   
-    -   **[新しいキャプチャ インスタンス]**: この場合、新しいキャプチャ インスタンスが保存され、古いキャプチャ インスタンスは削除されません。  
+    -   **[新しいキャプチャ インスタンス]** : この場合、新しいキャプチャ インスタンスが保存され、古いキャプチャ インスタンスは削除されません。  
   
-         **注**: テーブルごとに 2 つまでのキャプチャ インスタンスを設定できます。 既に 2 つのキャプチャ インスタンスがある場合、このオプションは利用できません。  
+         **注**:テーブルごとに 2 つまでのキャプチャ インスタンスを設定できます。 既に 2 つのキャプチャ インスタンスがある場合、このオプションは利用できません。  
   
-    -   **[既存のものを置換]**: この場合、現在のキャプチャ インスタンスが削除され、作成したキャプチャ インスタンスで置換されます。 このテーブルに 2 つのキャプチャ インスタンスが定義されている場合、置換するキャプチャ インスタンスを選択する必要があります。  
+    -   **[既存のものを置換]** : この場合、現在のキャプチャ インスタンスが削除され、作成したキャプチャ インスタンスで置換されます。 このテーブルに 2 つのキャプチャ インスタンスが定義されている場合、置換するキャプチャ インスタンスを選択する必要があります。  
   
  **注**: **[テーブル]** タブのテーブルの一覧からキャプチャ インスタンスを削除できます。  
   

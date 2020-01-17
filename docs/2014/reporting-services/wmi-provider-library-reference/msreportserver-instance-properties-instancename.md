@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 api_name:
 - InstanceName Property (WMI MSReportServer_Instance)
@@ -16,15 +15,15 @@ topic_type:
 helpviewer_keywords:
 - InstanceName property
 ms.assetid: 98ab86fd-ed94-4cda-9c68-047d589bdea6
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: e02d4074b731de6b6800bc9858d9aa6e5c766bf3
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 7b8df31e5fc0d7c0f06db477b13f1d13445e9472
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56014993"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66097122"
 ---
 # <a name="instancename-property-wmi-msreportserverinstance"></a>InstanceName プロパティ (WMI MSReportServer_Instance)
   特定のコンピューター上のレポート サーバー インスタンスの名前を返します。 読み取り専用。  

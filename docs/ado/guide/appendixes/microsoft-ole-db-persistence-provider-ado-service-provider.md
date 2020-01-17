@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: e75ef0dc-2016-4fcc-8918-23311c0d4e02
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 2550e36f977be13e10865d4bd238c8508c542091
-ms.sourcegitcommit: 96b2355d54dfad259826e88bdff91cc9344e16f2
+ms.openlocfilehash: 2bd341a3af2d1fdb076312b4c0993184fb4fae39
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51350024"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67926764"
 ---
 # <a name="microsoft-ole-db-persistence-provider-overview"></a>Microsoft OLE DB の永続化プロバイダーの概要
 Microsoft OLE DB 永続化プロバイダーでは、保存することができます、[レコード セット](../../../ado/reference/ado-api/recordset-object-ado.md)ファイルにオブジェクトし、後で復元する**Recordset**ファイルからのオブジェクト。 スキーマ情報、データ、および保留中の変更は保持されます。
@@ -51,5 +50,5 @@ Microsoft OLE DB 永続化プロバイダーでは、保存することができ
 
  ストリームを開くに使用するときに、**レコード セット、** 以外の指定されたパラメーターことはありません、*ソース*のパラメーター、**開く**メソッド。
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 [Microsoft OLE DB の永続化プロバイダー (サービス プロバイダーの ADO)](../../../ado/guide/appendixes/microsoft-ole-db-persistence-provider-ado-service-provider.md)

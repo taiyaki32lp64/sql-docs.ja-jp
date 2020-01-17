@@ -18,19 +18,18 @@ ms.assetid: 9d77af64-9084-4375-908a-d90f99535062
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-manager: craigg
-ms.openlocfilehash: 089464d0c92154a68c50f1c9d1e5c4a2156f5bed
-ms.sourcegitcommit: ef15fa253d98c62538bf9b6fe191af7f8ef8f6c8
+ms.openlocfilehash: 7bf7d199239be10760df49d586cdf5048fbc4a80
+ms.sourcegitcommit: 495913aff230b504acd7477a1a07488338e779c6
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/24/2018
-ms.locfileid: "49419417"
+ms.lasthandoff: 08/06/2019
+ms.locfileid: "67906770"
 ---
 # <a name="view-and-read-sql-server-setup-log-files"></a>SQL Server セットアップ ログ ファイルの表示と読み取り
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-SQL Server のセットアップでは、既定で、**\%programfiles%\Microsoft SQL Server\\*nnn*\Setup Bootstrap\Log** 内の日付と時刻を名前に含むフォルダーに、ログ ファイルが作成されます。*nnn* は、インストールされている SQL Server のバージョンに対応する番号です。 タイムスタンプ付きのログ フォルダーの名前形式は YYYYMMDD_hhmmss です。 セットアップを自動モードで実行した場合は、%temp%\sqlsetup*.log 内にログが作成されます。 ログ フォルダー内のログ ファイルはすべて、それぞれのログ フォルダー内で Log\*.cab ファイルにアーカイブされます。  
+SQL Server のセットアップでは、既定で、 **\%programfiles%\Microsoft SQL Server\\*nnn*\Setup Bootstrap\Log** 内の日付と時刻を名前に含むフォルダーに、ログ ファイルが作成されます。*nnn* は、インストールされている SQL Server のバージョンに対応する番号です。 タイムスタンプ付きのログ フォルダーの名前形式は YYYYMMDD_hhmmss です。 セットアップを自動モードで実行した場合は、%temp%\sqlsetup*.log 内にログが作成されます。 ログ フォルダー内のログ ファイルはすべて、それぞれのログ フォルダー内で Log\*.cab ファイルにアーカイブされます。  
 
    | ファイル           | [パス] |
    | :------        | :----------------------------- |
@@ -90,7 +89,7 @@ SQL Server のセットアップでは、既定で、**\%programfiles%\Microsoft
   
  概要テキスト ファイル内でエラーを見つけるには、"エラー" や "失敗" をキーワードにして検索できます。
   
-## <a name="summarymachinenameyyyymmddhhmmsstxt-file"></a>Summary_\<MachineName>_YYYYMMDD_HHMMss.txt ファイル
+## <a name="summary_machinename_yyyymmdd_hhmmsstxt-file"></a>Summary_\<MachineName>_YYYYMMDD_HHMMss.txt ファイル
   
 ### <a name="overview"></a>概要  
  summary_engine の基本的なファイルは概要ファイルに似ていますが、メイン ワークフロー内で生成されます。
@@ -133,7 +132,7 @@ SQL Server のセットアップでは、既定で、**\%programfiles%\Microsoft
 ### <a name="location"></a>場所  
  ConfigurationFile.ini は %programfiles%\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\\*nnn*\Setup Bootstrap\Log\\<YYYYMMDD_HHMM>\\ にあります。  
   
-## <a name="systemconfigurationcheckreporthtm-file"></a>SystemConfigurationCheck_Report.htm ファイル
+## <a name="systemconfigurationcheck_reporthtm-file"></a>SystemConfigurationCheck_Report.htm ファイル
   
 ### <a name="overview"></a>概要  
  システム構成チェッカーのレポートには、実行された各ルールの簡単な記述と、実行ステータスが含まれています。

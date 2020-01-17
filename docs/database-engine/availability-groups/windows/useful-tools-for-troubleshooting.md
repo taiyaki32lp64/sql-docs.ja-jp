@@ -1,6 +1,7 @@
 ---
-title: トラブルシューティングに役立つツール (AlwaysOn 可用性グループ - SQL Server) | Microsoft Docs
-ms.custom: ag-guide
+title: 可用性グループのトラブルシューティング ツール (コンテンツ インデックス)
+description: 可用性グループの問題の監視とトラブルシューティングに使用できるツールについて説明した記事のリファレンスです。
+ms.custom: seo-lt-2019
 ms.date: 06/14/2017
 ms.prod: sql
 ms.reviewer: ''
@@ -9,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 57801bcc-4d51-4ffc-8454-b9cb6eddbfe0
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 5264807fadf1d4cb343b737ca5bcc71c0edff70b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 73f7781503aa82b8b0692191a69dac5c2890f8d8
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47794250"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75244730"
 ---
 # <a name="useful-tools-for-troubleshooting"></a>トラブルシューティングに役立つツール
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

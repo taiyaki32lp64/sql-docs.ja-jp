@@ -19,15 +19,14 @@ helpviewer_keywords:
 - "TRUE"
 - single-column set of values [SQL Server]
 ms.assetid: ddadefd7-49ad-4be1-b34d-dcf155558d34
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: 663fec2d4d8ebb71b5357c3e8d57222295d71f31
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 5e71185e3ec9d68f6f9baedf8bcf83bda3918703
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47689650"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67927357"
 ---
 # <a name="any-transact-sql"></a>ANY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]

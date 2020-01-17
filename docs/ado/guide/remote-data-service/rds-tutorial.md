@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 6e3305a0-7bc7-40d1-9122-235c15d23ab2
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 2c9136f1fc1fdf7538744501984af50e2ca52f04
-ms.sourcegitcommit: 1a5448747ccb2e13e8f3d9f04012ba5ae04bb0a3
+ms.openlocfilehash: 541c92cd34b9cbaecdd1001be29dbab8d9b194a0
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51558629"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67922412"
 ---
 # <a name="rds-tutorial"></a>RDS チュートリアル
 このチュートリアルでは、RDS のプログラミング モデルを使用して、データ ソースの更新とクエリを示しています。 最初に、このタスクの実行に必要な手順をについて説明します。 このチュートリアルは Microsoft® Visual Basic Scripting Edition (ADO の Windows Foundation Class (ADO と WFC) を備えた) で繰り返されます。  
@@ -55,20 +54,20 @@ ms.locfileid: "51558629"
   
  このチュートリアルには、次のトピックが含まれています。  
   
--   [手順 1: サーバー プログラムを指定する (RDS チュートリアル)](../../../ado/guide/remote-data-service/step-1-specify-a-server-program-rds-tutorial.md)  
+-   [ステップ 1: サーバー プログラム (RDS チュートリアル) を指定します。](../../../ado/guide/remote-data-service/step-1-specify-a-server-program-rds-tutorial.md)  
   
--   [手順 2: サーバー プログラムを呼び出す (RDS チュートリアル)](../../../ado/guide/remote-data-service/step-2-invoke-the-server-program-rds-tutorial.md)  
+-   [手順 2:サーバーのプログラム (RDS チュートリアル) を呼び出す](../../../ado/guide/remote-data-service/step-2-invoke-the-server-program-rds-tutorial.md)  
   
--   [手順 3: サーバーがレコード セットを取得する (RDS チュートリアル)](../../../ado/guide/remote-data-service/step-3-server-obtains-a-recordset-rds-tutorial.md)  
+-   [手順 3:サーバーは、レコード セット (RDS チュートリアル) を取得します。](../../../ado/guide/remote-data-service/step-3-server-obtains-a-recordset-rds-tutorial.md)  
   
--   [手順 4: サーバーがレコード セットを返す (RDS チュートリアル)](../../../ado/guide/remote-data-service/step-4-server-returns-the-recordset-rds-tutorial.md)  
+-   [手順 4:サーバーは、レコード セット (RDS チュートリアル) を返します。](../../../ado/guide/remote-data-service/step-4-server-returns-the-recordset-rds-tutorial.md)  
   
--   [手順 5: DataControl が使用可能になる (RDS チュートリアル)](../../../ado/guide/remote-data-service/step-5-datacontrol-is-made-usable-rds-tutorial.md)  
+-   [手順 5:DataControl が使用可能に (RDS チュートリアル)](../../../ado/guide/remote-data-service/step-5-datacontrol-is-made-usable-rds-tutorial.md)  
   
--   [手順 6: 変更がサーバーに送信される (RDS チュートリアル)](../../../ado/guide/remote-data-service/step-6-changes-are-sent-to-the-server-rds-tutorial.md)  
+-   [手順 6:変更 (RDS チュートリアル) サーバーに送信されます。](../../../ado/guide/remote-data-service/step-6-changes-are-sent-to-the-server-rds-tutorial.md)  
   
 -   [RDS のチュートリアル (VBScript)](../../../ado/guide/remote-data-service/rds-tutorial-vbscript.md)  
   
-## <a name="see-also"></a>参照  
- [手順 1: サーバー プログラム (RDS チュートリアル) を指定します。](../../../ado/guide/remote-data-service/step-1-specify-a-server-program-rds-tutorial.md)   
+## <a name="see-also"></a>関連項目  
+ [ステップ 1: サーバー プログラム (RDS チュートリアル) を指定します。](../../../ado/guide/remote-data-service/step-1-specify-a-server-program-rds-tutorial.md)   
  [RDS のチュートリアル (VBScript)](../../../ado/guide/remote-data-service/rds-tutorial-vbscript.md)   

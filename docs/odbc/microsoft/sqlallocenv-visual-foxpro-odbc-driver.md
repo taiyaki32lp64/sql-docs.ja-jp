@@ -12,21 +12,20 @@ helpviewer_keywords:
 ms.assetid: a21c3782-273f-40b3-b239-47beaf8df462
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 6a69f19b7fda01194410771b8b044950545076d9
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 4705ec549fb13ba056f5128167a6f5b7a39cff41
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47782120"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68063269"
 ---
 # <a name="sqlallocenv-visual-foxpro-odbc-driver"></a>SQLAllocEnv (Visual FoxPro ODBC ドライバー)
 > [!NOTE]  
 >  このトピックでには、Visual FoxPro ODBC ドライバー固有の情報が含まれています。 この関数の詳細については、該当するトピックを参照してください。 [ODBC API リファレンス](../../odbc/reference/syntax/odbc-api-reference.md)します。  
   
- サポート: 完全な  
+ サポート:[完全]  
   
- ODBC API 準拠: コア レベル  
+ ODBC API 準拠:コア レベル  
   
  環境ハンドルのメモリを割り当てます*henv*、し、アプリケーションで使用する ODBC の呼び出しレベルのインターフェイスを初期化します。  
   

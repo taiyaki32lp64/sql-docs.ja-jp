@@ -1,7 +1,8 @@
 ---
-title: レプリケーション サブスクライバーと AlwaysOn 可用性グループ (SQL Server) | Microsoft Docs
-ms.custom: ''
-ms.date: 01/16/2019
+title: レプリケーション サブスクライバーと可用性グループ (SQL Server)
+description: SQL Server Always On 可用性グループを使用してレプリケーション サブスクライバーを構成する方法について説明します。
+ms.custom: seo-lt-2019
+ms.date: 08/08/2019
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: high-availability
@@ -13,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 0995f269-0580-43ed-b8bf-02b9ad2d7ee6
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 3148948d4ccc162a18f114ed99c36393b3b78c86
-ms.sourcegitcommit: 12911093559b4e006189d7a7d32b8d0474961cd5
+ms.openlocfilehash: eefcde46b462718cefbc7f4dc53f055f34834694
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/17/2019
-ms.locfileid: "54372662"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75235573"
 ---
 # <a name="replication-subscribers-and-always-on-availability-groups-sql-server"></a>レプリケーション サブスクライバーと AlwaysOn 可用性グループ (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -27,7 +27,7 @@ ms.locfileid: "54372662"
   レプリケーション サブスクライバーであるデータベースを含む AlwaysOn 可用性グループがフェールオーバーすると、レプリケーション サブスクリプションが失敗することがあります。 トランザクション レプリケーションのプッシュ サブスクライバーの場合、サブスクリプションが AG リスナー名を使用して作成されていれば、フェールオーバー後にディストリビューション エージェントは自動的にレプリケーションを継続します。 トランザクション レプリケーションのプル サブスクライバーの場合、サブスクリプションが AG リスナー名を使用して作成されており、元のサブスクライバー サーバーが稼働中であれば、フェールオーバー後にディストリビューション エージェントは自動的にレプリケーションを継続します。 これは、ディストリビューション エージェントのジョブは元のサブスクライバー (AG のプライマリ レプリカ) 上でのみ作成されるためです。 マージ サブスクライバーの場合、レプリケーション管理者はサブスクリプションを再作成して、手動でサブスクライバーを再構成する必要があります。  
   
 ## <a name="what-is-supported"></a>サポート対象  
- [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] レプリケーションでは、パブリッシャーの自動フェールオーバー、およびトランザクション サブスクライバーの自動フェールオーバーがサポートされます。 マージ サブスクライバーを可用性グループに含めることは可能ですが、フェールオーバー後に新しいサブスクライバーを構成するには、手動アクションが必要です。 可用性グループは、Websync および SQL Server Compact のシナリオと組み合わせることはできません。  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] レプリケーションでは、パブリッシャーの自動フェールオーバー、およびトランザクション サブスクライバーの自動フェールオーバーがサポートされます。 マージ サブスクライバーを可用性グループに含めることは可能ですが、フェールオーバー後に新しいサブスクライバーを構成するには、手動アクションが必要です。 可用性グループは、WebSync および SQL Server Compact のシナリオと組み合わせることはできません。  
   
 ## <a name="how-to-create-transactional-subscription-in-an-always-on-environment"></a>AlwaysOn 環境でトランザクション サブスクリプションを作成する方法  
  トランザクション レプリケーションの場合、サブスクライバーの可用性グループを構成およびフェールオーバーするために、次の手順を使用します。  
@@ -41,17 +41,13 @@ ms.locfileid: "54372662"
     > [!NOTE]  
     >  サブスクリプションは [!INCLUDE[tsql](../../../includes/tsql-md.md)] スクリプトを使用して作成する必要があります。 [!INCLUDE[ssManStudio](../../../includes/ssmanstudio-md.md)]を使用して作成できません。  
   
-4.  プル サブスクリプションを作成する場合:  
+4.  プル サブスクリプションを作成するには:  
   
-    1.  [!INCLUDE[ssManStudio](../../../includes/ssmanstudio-md.md)]のプライマリ サブスクライバー ノードで、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] エージェント ツリーを開きます。  
+    1.  以下の「**トランザクション レプリケーションのプル サブスクリプションの作成**」セクションのサンプル スクリプトを使用して、サブスクライバーの可用性グループ リスナーの名前を使用するサブスクリプションを作成します。 
+   
+    2.  フェールオーバー後、**sp_addpullsubscription_agent** ストアド プロシージャを使用して、新しいプライマリ レプリカ上にディストリビューション エージェント ジョブを作成します。 
   
-    2.  **プル ディストリビューション エージェント** ジョブを識別し、そのジョブを編集します。  
-  
-    3.  **[エージェントを実行します]** ジョブ ステップで、 `-Publisher` と `-Distributor` の各パラメーターを確認します。 これらのパラメーターに適切な直接サーバーと、パブリッシャーおよびディストリビューター サーバーのインスタンス名が含まれていることを確認します。  
-  
-    4.  `-Subscriber` パラメーターを、サブスクライバーの可用性グループ リスナーの名前に変更します。  
-  
- この手順に従ってサブスクリプションを作成した場合、フェールオーバー後には何もする必要がありません。  
+ 可用性グループ内のサブスクリプション データベースを使用してプル サブスクリプションを作成する場合は、フェールオーバーが発生するたびに、古いプライマリ レプリカ上のディストリビューション エージェント ジョブを無効にして、新しいプライマリ レプリカ上でジョブを有効にすることをお勧めします。  
   
 ## <a name="creating-a-transactional-replication-push-subscription"></a>トランザクション レプリケーションのプッシュ サブスクリプションの作成  
   
@@ -70,6 +66,26 @@ EXEC sp_addpushsubscription_agent @publication = N'<publication name>',
        @subscriber_db = N'<subscriber database name>',   
        @job_login = null, @job_password = null, @subscriber_security_mode = 1;  
 GO  
+```  
+
+## <a name="creating-a-transactional-replication-pull-subscription"></a>トランザクション レプリケーションのプル サブスクリプションの作成  
+  
+```  
+-- commands to execute at the subscriber, in the subscriber database:  
+use [<subscriber database name>]  
+EXEC sp_addpullsubscription @publisher= N'<publisher name>',
+        @publisher_db= N'<publisher database name>',
+        @publication= N'<publication name>',
+        @subscription_type = N'pull';
+Go
+
+EXEC sp_addpullsubscription_agent 
+        @publisher =  N'<publisher name>', 
+        @subscriber = N'<availability group listener name>',
+        @publisher_db= N'<publisher database name>',
+        @publication= N'<publication name>' ;
+        @job_login = null, @job_password = null, @subscriber_security_mode = 1;  
+GO
 ```  
   
 ## <a name="to-resume-the-merge-agents-after-the-availability-group-of-the-subscriber-fails-over"></a>サブスクライバーの可用性グループがフェールオーバーした後で、マージ エージェントを再開するには  

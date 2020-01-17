@@ -10,15 +10,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - enumeration facets
 ms.assetid: dec23a79-ddd6-4701-9721-55a2c435a34d
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: 1b70ec0552135c3fae1910e1a2417ed8619ceecd
-ms.sourcegitcommit: bfa10c54e871700de285d7f819095d51ef70d997
+author: MightyPen
+ms.author: genemi
+ms.openlocfilehash: 9fd368cdf5289d1b21818d6c7d6e51d395e340d3
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/14/2019
-ms.locfileid: "54255727"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68006836"
 ---
 # <a name="enumeration-facets"></a>列挙ファセット
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

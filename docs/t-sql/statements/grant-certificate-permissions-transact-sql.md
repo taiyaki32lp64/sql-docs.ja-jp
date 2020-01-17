@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 77270245-a24b-4a20-b481-e6a5ea05b499
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: d9cbc0842265a077d7167bdd0f613a9aed3f0e66
-ms.sourcegitcommit: c6e71ed14198da67afd7ba722823b1af9b4f4e6f
+ms.openlocfilehash: 7b7c9706f3b2943780e48ba5fe99769ddc059c94
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/16/2019
-ms.locfileid: "54326523"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68065529"
 ---
 # <a name="grant-certificate-permissions-transact-sql"></a>GRANT (証明書の権限の許可) (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -43,9 +42,9 @@ GRANT permission  [ ,...n ]
   
 ## <a name="arguments"></a>引数  
  *permission*  
- 証明書に対して許可できる権限を指定します。 下の表をご覧ください。  
+ 証明書に対して許可できる権限を指定します。 以下に一覧を示します。  
   
- ON CERTIFICATE **::**_certificate_name_  
+ ON CERTIFICATE **::** _certificate_name_  
  権限を許可する証明書を指定します。 スコープ修飾子 "::" が必要です。  
   
  *database_principal*  

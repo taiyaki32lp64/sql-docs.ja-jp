@@ -1,70 +1,76 @@
 ---
-title: Curl を使用して、SQL Server 2019 ビッグ データ クラスターで HDFS にデータを読み込む |Microsoft Docs
-description: ''
-author: rothja
-ms.author: jroth
-manager: craigg
-ms.date: 02/28/2019
+title: curl を使用して HDFS にデータを読み込む |Microsoft Docs
+titleSuffix: SQL Server big data clusters
+description: curl を使用して [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)] 上の HDFS にデータを読み込む。
+author: MikeRayMSFT
+ms.author: mikeray
+ms.reviewer: mihaelab
+ms.date: 08/21/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.custom: seodec18
-ms.openlocfilehash: 1a7c7691ec20f459f39a39270e9a78fc9d8ad96f
-ms.sourcegitcommit: 2533383a7baa03b62430018a006a339c0bd69af2
-ms.translationtype: MT
+ms.openlocfilehash: 970c4f51535395a940a9c47e77d864d00c1f403c
+ms.sourcegitcommit: b4ad3182aa99f9cbfd15f4c3f910317d6128a2e5
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57017548"
+ms.lasthandoff: 11/06/2019
+ms.locfileid: "73706631"
 ---
-# <a name="use-curl-to-load-data-into-hdfs-on-sql-server-2019-big-data-clusters"></a>Curl を使用して、SQL Server 2019 ビッグ データ クラスターで HDFS にデータを読み込む
+# <a name="use-curl-to-load-data-into-hdfs-on-includebig-data-clusters-2019includesssbigdataclusters-ss-novermd"></a>curl を使用して [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] 上の HDFS にデータを読み込む
 
-この記事は、使用する方法を説明します**curl** SQL Server 2019 ビッグ データ クラスター (プレビュー) で、HDFS にデータを読み込めません。
+[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
-## <a name="obtain-the-service-external-ip"></a>サービスの外部 ip アドレスを取得します。
+この記事では、**curl** を使用して [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)] 上の HDFS にデータを読み込む方法について説明します。
 
-配置が完了したらとそのアクセスを通過 Knox、WebHDFS が開始されます。 呼ばれる Kubernetes サービスを介して Knox エンドポイントが公開される**エンドポイント セキュリティ**します。  ファイルのアップロード/ダウンロードするために必要な WebHDFS URL を作成する必要があります、**エンドポイント セキュリティ**サービスの外部 IP アドレスとクラスターの名前。 取得することができます、**エンドポイント セキュリティ**次のコマンドを実行して外部 IP アドレスをサービスします。
+## <a id="prereqs"></a> 前提条件
+
+- [ビッグ データ クラスターにサンプル データを読み込む](tutorial-load-sample-data.md)
+
+## <a name="obtain-the-service-external-ip"></a>サービスの外部 IP を取得する
+
+WebHDFS は展開が完了すると開始され、そのアクセスは Knox を経由します。 Knox エンドポイントは、**gateway-svc-external** という Kubernetes サービスを介して公開されます。  ファイルをアップロードまたはダウンロードするために必要な WebHDFS URL を作成するには、**gateway-svc-external** サービスの外部 IP アドレスとビッグ データ クラスターの名前が必要です。 次のコマンドを実行して、**gateway-svc-external** サービスの外部 IP アドレスを取得できます。
 
 ```bash
-kubectl get service endpoint-security -n <cluster name> -o json | jq -r .status.loadBalancer.ingress[0].ip
+kubectl get service gateway-svc-external -n <big data cluster name> -o json | jq -r .status.loadBalancer.ingress[0].ip
 ```
 
 > [!NOTE]
-> `<cluster name>`を実行したときに指定したクラスターの名前を次に示します`mssqlctl cluster create --name <cluster name>`します。
+> `<big data cluster name>` は、ここでは、展開構成ファイル内に指定したクラスターの名前です。 既定の名前は `mssql-cluster` です。
 
-## <a name="construct-the-url-to-access-webhdfs"></a>WebHDFS へのアクセスに URL を構築します。
+## <a name="construct-the-url-to-access-webhdfs"></a>WebHDFS にアクセスするための URL を作成する
 
-ここで、次のように、WebHDFS へのアクセスに URL を構築できます。
+次のように、WebHDFS にアクセスするための URL を作成できます。
 
-`https://<endpoint-security service external IP address>:30443/gateway/default/webhdfs/v1/`
+`https://<gateway-svc-external service external IP address>:30443/gateway/default/webhdfs/v1/`
 
-以下に例を示します。
+例:
 
 `https://13.66.190.205:30443/gateway/default/webhdfs/v1/`
 
-## <a name="list-a-file"></a>ファイルを一覧表示します。
+## <a name="list-a-file"></a>ファイルの一覧表示
 
-一覧のファイルに**hdfs:///airlinedata**、次の curl コマンドを使用します。
-
-```bash
-curl -i -k -u root:root-password -X GET 'https://<endpoint-security IP external address>:30443/gateway/default/webhdfs/v1/airlinedata/?op=liststatus'
-```
-
-## <a name="put-a-local-file-into-hdfs"></a>ローカル ファイルを HDFS に入れる
-
-新しいファイルを配置する**test.csv** airlinedata ディレクトリにローカル ディレクトリから次の curl コマンドを使用して、(、 **Content-type**パラメーターが必要です)。
+**hdfs:///product_review_data** の下のファイルを一覧表示するには、次の curl コマンドを使用します。
 
 ```bash
-curl -i -L -k -u root:root-password -X PUT 'https://<endpoint-security IP external address>:30443/gateway/default/webhdfs/v1/airlinedata/test.csv?op=create' -H 'Content-Type: application/octet-stream' -T 'test.csv'
+curl -i -k -u root:root-password -X GET 'https://<gateway-svc-external IP external address>:30443/gateway/default/webhdfs/v1/product_review_data/?op=liststatus'
 ```
 
-## <a name="create-a-directory"></a>ディレクトリを作成します。
+## <a name="put-a-local-file-into-hdfs"></a>ローカル ファイルを HDFS に配置する
 
-ディレクトリを作成する**テスト** `hdfs:///`、次のコマンドを使用します。
+**test.csv** という新しいファイルをローカル ディレクトリから product_review_data ディレクトリに配置するには、次の curl コマンドを使用します (**Content-Type** パラメーターは必須です)。
 
 ```bash
-curl -i -L -k -u root:root-password -X PUT 'https://<endpoint-security IP external address>:30443/gateway/default/webhdfs/v1/test?op=MKDIRS'
+curl -i -L -k -u root:root-password -X PUT 'https://<gateway-svc-external IP external address>:30443/gateway/default/webhdfs/v1/product_review_data/test.csv?op=create' -H 'Content-Type: application/octet-stream' -T 'test.csv'
 ```
 
-## <a name="next-steps"></a>次のステップ
+## <a name="create-a-directory"></a>ディレクトリを作成する
 
-SQL Server のビッグ データ クラスターの詳細については、次を参照してください。[ビッグ データの SQL Server クラスターとは何ですか?](big-data-cluster-overview.md)します。
+`hdfs:///` の下に **test** というディレクトリを作成するには、次のコマンドを使用します。
+
+```bash
+curl -i -L -k -u root:root-password -X PUT 'https://<gateway-svc-external IP external address>:30443/gateway/default/webhdfs/v1/test?op=MKDIRS'
+```
+
+## <a name="next-steps"></a>次の手順
+
+SQL Server ビッグ データ クラスターの詳細については、「[SQL Server ビッグ データ クラスターとは](big-data-cluster-overview.md)」を参照してください。

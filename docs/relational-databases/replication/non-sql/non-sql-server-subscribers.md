@@ -20,13 +20,12 @@ helpviewer_keywords:
 ms.assetid: 831e7586-2949-4b9b-a2f3-7b0b699b23ff
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: fc0ce16aabdf9ea1bfdafce6f6c06cce7aa181b3
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: 26bda5e190f18469948f935302ee2cbf9ddd121c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53203151"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67940400"
 ---
 # <a name="non-sql-server-subscribers"></a>Non-SQL Server Subscribers  
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -49,10 +48,12 @@ Oracle バージョン情報:
 -   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] から[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 以外のサブスクライバーへのデータのパブリッシュ  
 
 -   Oracle に対するデータのパブリッシュには次の制限があります。  
-  | |2016 以前 |2017 以降 |
-  |-------|-------|--------|
+
+  | レプリケーション|2016 以前 |2017 以降 |
+  |:-----------|:---------------|:-------------|
   |Oracle からのレプリケーション |Oracle 10g 以前のみをサポート |Oracle 10g 以前のみをサポート |
   |Oracle へのレプリケーション |Oracle 12c まで |サポートされていません |
+  | &nbsp; | &nbsp; | &nbsp; |
 
 
  SQL Server 以外のサブスクライバーへの異種レプリケーションは非推奨とされます。 Oracle パブリッシングは非推奨とされます。 データを移動するには、変更データ キャプチャと [!INCLUDE[ssIS](../../../includes/ssis-md.md)]を使用してソリューションを作成します。  

@@ -29,11 +29,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: cc37fbade038b39d6d05cb5b51ecc3e8ba405e2a
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52816304"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62871575"
 ---
 # <a name="file-states"></a>ファイルの状態
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]では、データベース ファイルの状態はデータベースの状態とは別に管理されます。 ファイルは常に、ONLINE または OFFLINE などの特定の状態にあります。 ファイルの現在の状態を表示するには、 [sys.master_files](/sql/relational-databases/system-catalog-views/sys-master-files-transact-sql) カタログ ビューまたは [sys.database_files](/sql/relational-databases/system-catalog-views/sys-database-files-transact-sql) カタログ ビューを使用します。 データベースがオフラインになっている場合、 [sys.master_files](/sql/relational-databases/system-catalog-views/sys-master-files-transact-sql) カタログ ビューからファイルの状態を表示できます。  

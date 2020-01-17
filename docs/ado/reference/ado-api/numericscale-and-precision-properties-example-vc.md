@@ -4,7 +4,7 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
-ms.date: 01/19/2017
+ms.date: 01/20/2017
 ms.reviewer: ''
 ms.topic: conceptual
 dev_langs:
@@ -15,18 +15,17 @@ helpviewer_keywords:
 ms.assetid: 55d91ba8-4d80-4df6-af8e-060a19ddc138
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 1ac5911b551cfaae5151c17a2699f0833fec001e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 70a751db424cec07a0ac617b3620316a07936400
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47798840"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67917965"
 ---
 # <a name="numericscale-and-precision-properties-example-vc"></a>NumericScale および Precision プロパティの例 (VC++)
 この例では、 [NumericScale](../../../ado/reference/ado-api/numericscale-property-ado.md)と[精度](../../../ado/reference/ado-api/precision-property-ado.md)内のフィールドの有効桁数と小数点以下桁数を表示するプロパティ、***割引***のテーブル、 ***Pubs***データベース。  
   
-```  
+```cpp
 // BeginNumericScaleCpp.cpp  
 // compile with: /EHsc  
 #import "msado15.dll" no_namespace rename("EOF", "EndOfFile")  
@@ -134,6 +133,6 @@ void PrintComError(_com_error &e) {
 }  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [NumericScale プロパティ (ADO)](../../../ado/reference/ado-api/numericscale-property-ado.md)   
  [Precision プロパティ (ADO)](../../../ado/reference/ado-api/precision-property-ado.md)

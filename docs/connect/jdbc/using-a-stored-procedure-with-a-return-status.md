@@ -1,7 +1,7 @@
 ---
 title: 状態の戻り値があるストアド プロシージャの使用 | Microsoft Docs
 ms.custom: ''
-ms.date: 07/11/2018
+ms.date: 08/12/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 4b126e95-8458-41d6-af37-fc6662859f19
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 1f5aa998fa6e0e61bc0417aaf9703a0d0809fc4b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b5b5425dcc88a3f4a2b5bc24c85ab41beb04bb48
+ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47737100"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "69027111"
 ---
 # <a name="using-a-stored-procedure-with-a-return-status"></a>状態の戻り値があるストアド プロシージャの使用
 
@@ -29,9 +28,9 @@ JDBC ドライバーを使用してこの種類のストアド プロシージ�
 `{[?=]call procedure-name[([parameter][,[parameter]]...)]}`
 
 > [!NOTE]  
-> SQL エスケープ シーケンスの詳細については、次を参照してください。 [SQL エスケープ シーケンスを使用して](../../connect/jdbc/using-sql-escape-sequences.md)します。
+> SQL エスケープシーケンスの詳細については、「 [sql エスケープシーケンスの使用](../../connect/jdbc/using-sql-escape-sequences.md)」を参照してください。
 
-`call` エスケープ シーケンスを作成する場合、状態の戻り値パラメーターは?  (疑問符) 文字で指定します。 この文字は、ストアド プロシージャから返されるパラメーター値のプレースホルダーになります。 状態の戻り値パラメーターの値を指定するには、ストアド プロシージャを実行する前に、SQLServerCallableStatement クラスの [registerOutParameter](../../connect/jdbc/reference/registeroutparameter-method-sqlservercallablestatement.md) メソッドを使用して、各パラメーターのデータ型を指定する必要があります。
+`call` エスケープ シーケンスを作成する場合、状態の戻り値パラメーターは? (疑問符) 文字で指定します。 この文字は、ストアド プロシージャから返されるパラメーター値のプレースホルダーになります。 状態の戻り値パラメーターの値を指定するには、ストアド プロシージャを実行する前に、SQLServerCallableStatement クラスの [registerOutParameter](../../connect/jdbc/reference/registeroutparameter-method-sqlservercallablestatement.md) メソッドを使用して、各パラメーターのデータ型を指定する必要があります。
 
 > [!NOTE]  
 > SQL Server のデータベースと合わせて JDBC ドライバーを使用する場合、registerOutParameter メソッドで状態の戻り値パラメーターに対して指定した値は、常に整数になります。この値は、java.sql.Types.INTEGER データ型を使用して指定できます。

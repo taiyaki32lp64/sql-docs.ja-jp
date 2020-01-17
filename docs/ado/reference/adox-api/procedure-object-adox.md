@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 927bcf3e-32f5-4a80-98d3-600779f0732e
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 41d8e640d5b85f8adc32e0ce69801accacdc602d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 1681001dd42026c1a1fce04814b094047a475a0f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47692721"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67965486"
 ---
 # <a name="procedure-object-adox"></a>Procedure オブジェクト (ADOX)
 ストアド プロシージャを表します。 ADO と組み合わせて使用すると[コマンド](../../../ado/reference/ado-api/command-object-ado.md)オブジェクト、**プロシージャ**オブジェクトは、追加、削除、またはストアド プロシージャの変更のために使用できます。  
@@ -41,7 +40,7 @@ ms.locfileid: "47692721"
   
 -   [Procedure オブジェクトのプロパティ、メソッド、およびイベント](../../../ado/reference/adox-api/procedure-object-properties-methods-and-events.md)  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [Command プロパティおよび CommandText プロパティの例 (VB)](../../../ado/reference/adox-api/command-and-commandtext-properties-example-vb.md)   
  [Parameters コレクションおよび Command プロパティの例 (VB)](../../../ado/reference/adox-api/parameters-collection-command-property-example-vb.md)   
  [Procedures Append メソッドの例 (VB)](../../../ado/reference/adox-api/procedures-append-method-example-vb.md)   

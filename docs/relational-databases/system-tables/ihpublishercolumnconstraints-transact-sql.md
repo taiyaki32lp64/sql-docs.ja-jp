@@ -17,18 +17,17 @@ helpviewer_keywords:
 ms.assetid: d7a41da6-e067-430a-8da2-3f6745b8a4f3
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 89c6e254dfc163e75f16ccffaf97d3c2c8b222be
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 58ef9c5e68e7d209262ebf43891ba5c1bcc4174f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52779584"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67990286"
 ---
-# <a name="ihpublishercolumnconstraints-transact-sql"></a>IHpublishercolumnconstraints (Transact-SQL)
+# <a name="ihpublishercolumnconstraints-transact-sql"></a>IHpublishercolumnconstraints (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  **IHpublishercolumnconstraints**システム テーブル内の SQL Server 以外のパブリケーションの列をマップ、 [IHpublishercolumns](../../relational-databases/system-tables/ihpublishercolumns-transact-sql.md)システム テーブル内の制約、 [IHpublisherconstraints](../../relational-databases/system-tables/ihpublisherconstraints-transact-sql.md)システム テーブル。 このテーブルは、ディストリビューション データベースに保存されます。  
+  **IHpublishercolumnconstraints**システム テーブル内の SQL Server 以外のパブリケーションの列をマップ、 [IHpublishercolumns](../../relational-databases/system-tables/ihpublishercolumns-transact-sql.md)システム テーブル内の制約、 [IHpublisherconstraints](../../relational-databases/system-tables/ihpublisherconstraints-transact-sql.md)システム テーブル。 このテーブルは、ディストリビューション データベースに格納されます。  
   
 ## <a name="definition"></a>定義  
   
@@ -36,11 +35,11 @@ ms.locfileid: "52779584"
 |-----------------|---------------|-----------------|  
 |**publishercolumn_id**|**int**|列を識別する[IHpublishercolumns](../../relational-databases/system-tables/ihpublishercolumns-transact-sql.md)を関連付けられている制約。|  
 |**publisherconstraint_id**|**int**|制約[IHpublisherconstraints](../../relational-databases/system-tables/ihpublisherconstraints-transact-sql.md)列に関連付けられています。|  
-|**indid**|**int**|パブリッシュされたテーブル内での列の位置|  
+|**indid**|**int**|パブリッシュされたテーブルの列の位置を示します。|  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [異種データベース レプリケーション](../../relational-databases/replication/non-sql/heterogeneous-database-replication.md)   
- [レプリケーション テーブル &#40; です。TRANSACT-SQL と &#41; です。](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
+ [レプリケーション テーブル &#40; Transact-SQL&#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
  [レプリケーション ビュー &#40;Transact-SQL&#41;](../../relational-databases/system-views/replication-views-transact-sql.md)  
   
   

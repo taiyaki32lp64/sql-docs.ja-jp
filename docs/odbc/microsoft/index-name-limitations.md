@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: e44e5858-696e-4939-93ae-4d6572e3f49a
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 83a3ee256e49b23cf7a58f5127db7dec7242555e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 6b7b05a5a6aead6c564cb9b5c4ad9ca678abe3fc
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47605130"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68085527"
 ---
 # <a name="index-name-limitations"></a>インデックス名の制限
 Paradox ドライバーを使用する場合、プライマリ インデックスが定義されているテーブルと同じ名前必要があります。 その他のまたは非一意のインデックス定義されたテーブルと同じ名前が必要です。

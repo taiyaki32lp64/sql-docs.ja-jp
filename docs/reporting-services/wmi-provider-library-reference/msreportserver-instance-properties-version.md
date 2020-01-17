@@ -2,20 +2,20 @@
 title: Version プロパティ (WMI MSReportServer_Instance) | Microsoft Docs
 ms.date: 03/01/2017
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: wmi-provider-library-reference
 ms.topic: conceptual
 helpviewer_keywords:
 - Version property
 ms.assetid: eea6bfe9-3130-4272-b3c2-c334349a7afd
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 59c8f217c2ce52b08d5fe0fbc3c09d9fbda4722d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 059f517b3309b059f3944f04131e02e8722e7fc6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47747650"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65571066"
 ---
 # <a name="msreportserverinstance-properties---version"></a>MSReportServer_Instance プロパティ - Version
   Major.Minor.Build.Revision 形式でレポート サーバーのバージョンを返します。 読み取り専用です。  

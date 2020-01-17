@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 9f131c8d-1497-416d-8209-abb481c38f7b
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: c1b4608dde67f31067ed34f7c552ba866a2095ed
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.openlocfilehash: 8434345dcc4436865e4981a19ef1164d35a852f9
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51603478"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67964204"
 ---
 # <a name="execute21-method-rds"></a>Execute21 メソッド (RDS)
 要求を実行し、ADO 2.1 で使用する ADO レコード セットを作成します。  

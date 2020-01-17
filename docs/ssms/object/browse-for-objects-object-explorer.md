@@ -1,5 +1,5 @@
 ---
-title: '[オブジェクトの参照] - (オブジェクト エクスプローラー) | Microsoft Docs'
+title: '[オブジェクトの参照] (オブジェクト エクスプローラー) | Microsoft Docs'
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -11,17 +11,16 @@ f1_keywords:
 - sql13.swb.common.matchingobjects.f1
 - sql13.swb.common.browseobjects.f1
 ms.assetid: 6e8b5900-1990-48e9-8666-d9a20ed786be
-author: stevestein
-ms.author: sstein
-manager: craigg
-ms.openlocfilehash: d700ff1908a890a2b5b04ff595b966f012f1f1d2
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: de835a1ffe6bba4f2ca3d8a4787bff9a3feccac2
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47651200"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68264776"
 ---
-# <a name="browse-for-objects-object-explorer"></a>[オブジェクトの参照] - (オブジェクト エクスプローラー)
+# <a name="browse-for-objects-object-explorer"></a>[オブジェクトの参照] \(オブジェクト エクスプローラー)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 選択されている種類のオブジェクトを表示します。 対応するチェック ボックスをオンにすると、この一覧から 1 つまたは複数のオブジェクトを選択できます。 **[オブジェクトの参照]** ボックスには、アクションに対して適切であり、ユーザーが表示する権限を持っている項目のみが表示されます。  
   

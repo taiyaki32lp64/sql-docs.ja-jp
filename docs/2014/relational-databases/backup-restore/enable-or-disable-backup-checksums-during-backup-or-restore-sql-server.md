@@ -14,12 +14,12 @@ ms.assetid: 6786bd1e-ad97-430a-8dfb-d4ba952d6c4d
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 992b72f07b6cd2e223cb0556bd1fb32d03206122
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: d5783f393cbbe70e89e2d1ee4b7e05481fdc3ab9
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48214812"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62922113"
 ---
 # <a name="enable-or-disable-backup-checksums-during-backup-or-restore-sql-server"></a>バックアップ中または復元中にバックアップ チェックサムを有効または無効にする (SQL Server)
   このトピックでは、 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] または [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] を使用して、 [!INCLUDE[tsql](../../includes/tsql-md.md)]でデータベースをバックアップまたは復元するときにバックアップ チェックサムを有効または無効にする方法について説明します。  
@@ -36,7 +36,7 @@ ms.locfileid: "48214812"
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> 作業を開始する準備  
+##  <a name="BeforeYouBegin"></a> はじめに  
   
 ###  <a name="Security"></a> セキュリティ  
   
@@ -69,7 +69,7 @@ ms.locfileid: "48214812"
   
 3.  [BACKUP](/sql/t-sql/statements/backup-transact-sql) ステートメントでバックアップ チェックサムを有効にするのには、WITH CHECKSUM オプションを指定します。 バックアップ チェックサムを無効にするには、WITH NO_CHECKSUM オプションを指定します。 これは圧縮されたバックアップ以外の既定の動作です。 次の例では、チェックサムを実行するように指定します。  
   
-```tsql  
+```sql  
 BACKUP DATABASE AdventureWorks2012   
  TO DISK = 'Z:\SQLServerBackups\AdvWorksData.bak'  
    WITH CHECKSUM;  
@@ -84,7 +84,7 @@ GO
   
 3.  [RESTORE](/sql/t-sql/statements/restore-statements-transact-sql) ステートメントでバックアップ チェックサムを有効にするのには、WITH CHECKSUM オプションを指定します。 これは圧縮されたバックアップの既定の動作です。 バックアップ チェックサムを無効にするには、WITH NO_CHECKSUM オプションを指定します。 これは圧縮されたバックアップ以外の既定の動作です。 次の例では、バックアップ チェックサムを実行するように指定します。  
   
-```tsql  
+```sql  
 RESTORE DATABASE AdventureWorks2012   
  FROM DISK = 'Z:\SQLServerBackups\AdvWorksData.bak'  
    WITH CHECKSUM;  
@@ -94,7 +94,7 @@ GO
 > [!WARNING]  
 >  復元操作に対し CHECKSUM を明示的に要求した場合、およびバックアップにバックアップ チェックサムが含まれている場合、バックアップ チェックサムおよびページ チェックサムの両方が検証されます (既定の動作です)。 ただし、バックアップ セットにバックアップ チェックサムがない場合、復元操作は失敗し、チェックサムがないことを示すメッセージが表示されます。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [RESTORE FILELISTONLY &#40;Transact-SQL&#41;](/sql/t-sql/statements/restore-statements-filelistonly-transact-sql)   
  [RESTORE HEADERONLY &#40;Transact-SQL&#41;](/sql/t-sql/statements/restore-statements-headeronly-transact-sql)   
  [RESTORE LABELONLY &#40;Transact-SQL&#41;](/sql/t-sql/statements/restore-statements-labelonly-transact-sql)   

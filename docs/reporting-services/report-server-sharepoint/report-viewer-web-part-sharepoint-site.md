@@ -2,17 +2,17 @@
 title: SharePoint サイトのレポート ビューアー Web パーツ - SSRS | Microsoft Docs
 ms.date: 11/15/2018
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: report-server-sharepoint
 ms.topic: conceptual
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: c849ec1ee515263b54b4931be59780ab5bf8ae75
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 882dafee6997f4e0a140872847cfa2fdc1109f05
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52415749"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65580567"
 ---
 # <a name="report-viewer-web-part-on-a-sharepoint-site---reporting-services"></a>SharePoint サイトのレポート ビューアー Web パーツ - Reporting Services
 

@@ -14,22 +14,21 @@ helpviewer_keywords:
 ms.assetid: 0cb548e0-fcb4-4c49-98c8-be287911f826
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: c25cd688b5d74e4514e1af645f7917059ce4d445
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 188a95f985ac1d578bca8c7e10ac4c4054c935c0
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47602400"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67925955"
 ---
 # <a name="batch-mode"></a>バッチ モード
 バッチ モードが有効なときに、 **LockType**プロパティに設定されて**adLockBatchOptimistic**バッチ更新プロバイダーによってサポートされています。 カーソル位置に応じて特定のロックの種類の設定が利用できません。 たとえば、ペシミスティック ロックの種類場合は使用できません、 **CursorLocation**に設定されている**adUseClient**します。 逆に、プロバイダーは、サーバー カーソルの場所がある場合、バッチ オプティミスティック ロックをサポートできません。 バッチ更新を keyset または static カーソルのみを使用する必要があります。  
   
  **UpdateBatch**メソッドを使用して、送信**Recordset**変更は、データ ソースを更新するサーバーに、コピー バッファーに保持します。 次のセクションで開くが、**レコード セット**バッチ モードで、コピー バッファーに変更を加えるし、呼び出しに使用してデータ ソースに変更を送信**UpdateBatch**します。  
   
- このセクションのトピックは次のとおりです。  
+ このセクションでは、次のトピックについて説明します。  
   
--   [更新プログラムの送信: UpdateBatch メソッド](../../../ado/guide/data/sending-the-updates-updatebatch-method.md)  
+-   [更新プログラムの送信。UpdateBatch メソッド](../../../ado/guide/data/sending-the-updates-updatebatch-method.md)  
   
 -   [更新されたレコードのフィルター処理](../../../ado/guide/data/filtering-for-updated-records.md)  
   
@@ -39,4 +38,4 @@ ms.locfileid: "47602400"
   
 -   [レコードセットの切断と再接続](../../../ado/guide/data/disconnecting-and-reconnecting-the-recordset.md)  
   
--   [JOINed の結果の更新: Unique Table](../../../ado/guide/data/updating-joined-results-unique-table.md)
+-   [結合の結果を更新します。一意テーブル](../../../ado/guide/data/updating-joined-results-unique-table.md)

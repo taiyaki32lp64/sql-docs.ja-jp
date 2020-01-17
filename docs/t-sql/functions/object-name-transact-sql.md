@@ -21,16 +21,15 @@ helpviewer_keywords:
 - database objects [SQL Server]
 - names [SQL Server], database objects
 ms.assetid: 7d5b923f-0c3e-4af9-b39b-132807a6d5b3
-author: MashaMSFT
-ms.author: mathoma
-manager: craigg
+author: VanMSFT
+ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 1226ac3a530dbd4df3ce213a34f302c227fade21
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a18b99d8e4700a840fa3cdc98af492bc0193bbaa
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47782463"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67914730"
 ---
 # <a name="objectname-transact-sql"></a>OBJECT_NAME (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -47,7 +46,7 @@ OBJECT_NAME ( object_id [, database_id ] )
   
 ## <a name="arguments"></a>引数  
  *object_id*  
- 使用するオブジェクトの ID を指定します。 *object_id* のデータ型は **int** です。指定したデータベース コンテキスト、または現在のデータベース コンテキストのスキーマ スコープ オブジェクトと見なされます。  
+ 使用するオブジェクトの ID です。 *object_id* のデータ型は **int** です。指定したデータベース コンテキスト、または現在のデータベース コンテキストのスキーマ スコープ オブジェクトと見なされます。  
   
  *database_id*  
  オブジェクトを検索するデータベースの ID を指定します。 *database_id* は **int** です。  

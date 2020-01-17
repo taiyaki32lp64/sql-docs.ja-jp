@@ -20,18 +20,17 @@ helpviewer_keywords:
 ms.assetid: 5b1c858a-ca43-4e2b-9d67-8654daaf0cc5
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: d5bcb1856b9ee6206040b292ecd4642bac3066f4
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 62296eb8d1ef53969e33f3807bd81f47025a4893
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47781870"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68059280"
 ---
-# <a name="sysfntracegeteventinfo-transact-sql"></a>sys.fn_trace_geteventinfo (Transact-SQL)
+# <a name="sysfntracegeteventinfo-transact-sql"></a>sys.fn_trace_geteventinfo (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  トレースされるイベントに関する情報を返します。  
+  トレース中のイベントに関する情報を返します。  
   
 > [!IMPORTANT]  
 >  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] 代わりに拡張イベントを使用します。  
@@ -53,8 +52,8 @@ fn_trace_geteventinfo ( trace_id )
   
 |列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
-|**eventid**|**int**|トレースされるイベントの ID です。|  
-|**columnid**|**int**|各イベントに対して収集されるすべての列の ID 番号です。|  
+|**eventid**|**int**|トレースされるイベントの ID|  
+|**columnid**|**int**|すべての列の ID 番号が各イベントの収集|  
   
 ## <a name="remarks"></a>コメント  
  特定のトレースの ID が渡されたときに**fn_trace_geteventinfo**そのトレースに関する情報を返します。 無効な ID が渡された場合、空の行セットが返されます。  
@@ -71,7 +70,7 @@ GO
   
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [sp_trace_setevent &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql.md)   
  [sp_trace_setfilter &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-trace-setfilter-transact-sql.md)   
  [トレースの作成 &#40;Transact-SQL&#41;](../../relational-databases/sql-trace/create-a-trace-transact-sql.md)   

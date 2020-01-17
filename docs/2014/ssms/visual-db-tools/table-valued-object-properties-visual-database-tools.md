@@ -13,11 +13,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 0c366cca32c8d441ff25f9688a841e2f0fac77a9
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52775915"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63204565"
 ---
 # <a name="table-valued-object-properties-visual-database-tools"></a>テーブル値オブジェクトのプロパティ (Visual Database Tools)
   これらのプロパティは、 **クエリおよびビュー デザイナー**でテーブル値オブジェクトを選択したときに、[プロパティ] ウィンドウに表示されます。 テーブル値オブジェクトは、ビュー、シノニム、派生テーブル、またはテーブル値関数です。 特に指定しない限り、 **[プロパティ]** ウィンドウのこれらのプロパティは読み取り専用です。  
@@ -38,7 +38,7 @@ ms.locfileid: "52775915"
  テーブル値オブジェクトの種類を表示します。 ベース テーブル、ビュー、テーブル値関数、または派生テーブルです。  
   
  **クエリ デザイナー カテゴリ**  
- 展開すると、 **[エイリアス]**、 **[列一覧]**、 **[名前]**、および **[パラメーター リスト]** のプロパティが表示されます。  
+ 展開すると、 **[エイリアス]** 、 **[列一覧]** 、 **[名前]** 、および **[パラメーター リスト]** のプロパティが表示されます。  
   
  **[エイリアス]**  
  選択されたテーブル値オブジェクトの別名を表示します。 別名を追加または変更するには、フィールドに入力します。  

@@ -14,14 +14,14 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 0c927d68c597e64a477382a909aa6eda583d47e0
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52771374"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62676601"
 ---
 # <a name="set-the-history-retention-period-sql-server-management-studio"></a>履歴の保有期間の設定 (SQL Server Management Studio)
-  **[ディストリビューション データベースのプロパティ - \<DistributionDatabase>]** ダイアログ ボックスの **[全般]** ページで、履歴の保有期間を指定します。 この設定は、レプリケーション エージェントの履歴を保持する期間を制御します。 このページは、**[ディストリビューターのプロパティ - \<Distributor>]** ダイアログ ボックスの **[全般]** ページから使用できます。 このダイアログ ボックスへのアクセスの詳細については、「[ディストリビューターとパブリッシャーのプロパティの表示および変更](view-and-modify-distributor-and-publisher-properties.md)」を参照してください。  
+  **[ディストリビューション データベースのプロパティ - \<DistributionDatabase>]** ダイアログ ボックスの **[全般]** ページで、履歴の保有期間を指定します。 この設定は、レプリケーション エージェントの履歴を保持する期間を制御します。 このページは、 **[ディストリビューターのプロパティ - \<Distributor>]** ダイアログ ボックスの **[全般]** ページから使用できます。 このダイアログ ボックスへのアクセスの詳細については、「[ディストリビューターとパブリッシャーのプロパティの表示および変更](view-and-modify-distributor-and-publisher-properties.md)」を参照してください。  
   
 ### <a name="to-specify-the-history-retention-period"></a>履歴の保有期間を指定するには  
   
@@ -31,7 +31,7 @@ ms.locfileid: "52771374"
   
 3.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [[ディストリビューションの構成]](configure-distribution.md)  
   
   

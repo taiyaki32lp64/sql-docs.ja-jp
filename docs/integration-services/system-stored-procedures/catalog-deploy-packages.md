@@ -8,17 +8,20 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: language-reference
 ms.assetid: 8e861df6-d103-4d84-8438-e822533f6849
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: 3416d7244d89a4cfe959ec8608f77d56fb20e0a0
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 0a1828925494ca2e1e8f593e3f133a21cd10a9ee
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47769550"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71296772"
 ---
-# <a name="catalogdeploypackages"></a>catalog.deploy_packages
+# <a name="catalogdeploy_packages"></a>catalog.deploy_packages 
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] カタログ内のフォルダーにパッケージを 1 つ以上展開するか、既に展開されている既存のパッケージを更新します。  
@@ -60,7 +63,7 @@ ms.locfileid: "47769550"
 ## <a name="errors-and-warnings"></a>エラーおよび警告  
  このストアド プロシージャがエラーを発生させる可能性がある条件を以下に示します。  
   
--   パラメーターが存在しないオブジェクトを参照、パラメーターが、既に存在するオブジェクトを作成しようとしています。 または、パラメーターは他の方法では無効です。  
+-   存在しないオブジェクトをパラメーターが参照する、既に存在するオブジェクトをパラメーターが作成しようとする、または何かの方法でパラメーターが無効である。  
   
 -   ユーザーに十分な権限がない  
   

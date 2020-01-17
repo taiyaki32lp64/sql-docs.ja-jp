@@ -1,6 +1,6 @@
 ---
-title: インメモリ OLTP データベースにおける高可用性のサポート | Microsoft Docs
-ms.custom: ''
+title: 高可用性 - インメモリ OLTP データベース
+ms.custom: seo-dt-2019
 ms.date: 08/31/2016
 ms.prod: sql
 ms.prod_service: database-engine
@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 2113a916-3b1e-496c-8650-7f495e492510
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: bfa915330d869c78f79f5abed38b1123ec8fa798
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: dd467c8f6d942f53dade5ec6bb7d46ae9f39bdd9
+ms.sourcegitcommit: 384e7eeb0020e17a018ef8087970038aabdd9bb7
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47665110"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74412668"
 ---
 # <a name="high-availability-support-for-in-memory-oltp-databases"></a>インメモリ OLTP データベースにおける高可用性のサポート
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -33,7 +32,7 @@ ms.locfileid: "47665110"
 -   **同等のフェールオーバー時間**   
     持続性のあるメモリ最適化テーブルのインメモリ状態がセカンダリ レプリカで維持されます。 自動フェールオーバーまたは強制フェールオーバーが発生した場合に復旧の必要がないため、新しいプライマリへのフェールオーバーにかかる時間はディスク ベースのテーブルと変わりありません。 この構成では、SCHEMA_ONLY として作成されたメモリ最適化テーブルがサポートされます。 ただしそれらのテーブルに対する変更はログに記録されないため、セカンダリ レプリカ上の該当テーブルにはデータが不在となります。  
   
--   **[読み取り可能セカンダリ]**   
+-   **[読み取り可能セカンダリ]**    
     セカンダリ レプリカが読み取りアクセス用に構成されている場合、セカンダリ レプリカ上のメモリ最適化テーブルにアクセスしてクエリを実行することができます。 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]では、セカンダリ レプリカ上の読み取りタイムスタンプは、プライマリ レプリカ上の読み取りタイムスタンプと同期に近い状態で保たれます。そのため、プライマリ レプリカへの変更はセカンダリに瞬時に反映されます。 この同期に近い動作は、 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] のインメモリ OLTP とは異なる点です。  
   
 ## <a name="failover-clustering-instance-fci-and-in-memory-oltp-databases"></a>フェールオーバー クラスタリング インスタンス (FCI) とインメモリ OLTP データベース  
@@ -51,7 +50,7 @@ ms.locfileid: "47665110"
 ## <a name="see-also"></a>参照  
  [AlwaysOn 可用性グループ (SQL Server)](../../database-engine/availability-groups/windows/always-on-availability-groups-sql-server.md)   
  [AlwaysOn 可用性グループの概要 &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   
- [アクティブなセカンダリ: 読み取り可能なセカンダリ レプリカ (Always On 可用性グループ)](../../database-engine/availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md)   
+ [アクティブなセカンダリ:読み取り可能なセカンダリ レプリカ (AlwaysOn 可用性グループ)](../../database-engine/availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md)   
  [メモリ最適化テーブル サブスクライバーへのレプリケーション](../../relational-databases/replication/replication-to-memory-optimized-table-subscribers.md)  
   
   

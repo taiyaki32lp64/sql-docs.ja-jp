@@ -1,5 +1,5 @@
 ---
-title: getFloat メソッド (SQLServerResultSet) |Microsoft Docs
+title: getFloat メソッド (SQLServerResultSet) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: eb4efa8c-c269-457c-9acb-39b8cd6d081c
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: aeec20ad4f7fb27799462c6a5082b087be1809d8
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 42ac0a1b965eb2a8091454ec05504c4012e7dec0
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47673020"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67982973"
 ---
 # <a name="getfloat-method-sqlserverresultset"></a>getFloat メソッド (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

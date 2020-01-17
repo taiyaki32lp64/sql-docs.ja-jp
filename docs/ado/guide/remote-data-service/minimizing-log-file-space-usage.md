@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 669662a0-e20f-483e-ab28-53f66c524c98
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 061cae6b387611886943aabcfa3dfd99579a59d7
-ms.sourcegitcommit: 1a5448747ccb2e13e8f3d9f04012ba5ae04bb0a3
+ms.openlocfilehash: c8dc0799fbeba24ad4725d25647ef471edad8fb7
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51559815"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67922555"
 ---
 # <a name="minimizing-log-file-space-usage"></a>ログ ファイルの使用領域の最小化
 ログ ファイルがすぐにいっぱい (サーバーが停止するため)、SQL Server データベースでのアクティビティ量が多い場合。 ログ ファイルを設定する**チェックポイントに Truncate**データベースのログ ファイルの有効期間を大幅に拡張します。  
@@ -46,7 +45,7 @@ ms.locfileid: "51559815"
   
  詳細については、**チェックポイントに Truncate**機能、Microsoft SQL Server のマニュアルを参照してください。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [RDS の基礎](../../../ado/guide/remote-data-service/rds-fundamentals.md)
 
 

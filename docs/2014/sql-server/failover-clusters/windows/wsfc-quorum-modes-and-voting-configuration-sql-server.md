@@ -15,11 +15,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 7febab9f8ecf6cae4df08f110a16c0bdc512a948
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53349929"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62711437"
 ---
 # <a name="wsfc-quorum-modes-and-voting-configuration-sql-server"></a>WSFC クォーラム モードと投票の構成 (SQL Server)
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)][!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] と AlwaysOn フェールオーバー クラスター インスタンス (FCI) のどちらも、Windows Server フェールオーバー クラスタリング (WSFC) をプラットフォーム テクノロジとして使用します。  WSFC は、クォーラム ベースのアプローチを使用してクラスターの全体的な正常性を監視し、ノード レベルのフォールト トレランスを最大限に高めます。 WSFC クォーラム モードおよびノード投票構成の基本について理解することは、AlwaysOn 高可用性およびディザスター リカバリー ソリューションの設計、運用、トラブルシューティングのために非常に重要です。  
@@ -48,7 +48,7 @@ ms.locfileid: "53349929"
 > [!IMPORTANT]  
 >  クォーラム障害のために WSFC クラスターがオフラインに設定されると、オンラインに戻すために手動介入が必要です。  
 >   
->  詳細については、以下をご覧ください。[強制クォーラムによる災害復旧を WSFC &#40;SQL Server&#41;](wsfc-disaster-recovery-through-forced-quorum-sql-server.md)します。  
+>  詳細については、以下をご覧ください。[WSFC の強制クォーラムによる災害復旧 &#40;SQL Server&#41;](wsfc-disaster-recovery-through-forced-quorum-sql-server.md)  
   
 ##  <a name="QuorumModes"></a> クォーラム モード  
  *クォーラム モード* は、WSFC クラスター レベルで構成され、クォーラム投票の方法を指定します。  フェールオーバー クラスター マネージャー ユーティリティは、クラスター内のノード数に基づいて、クォーラム モードを推奨します。  
@@ -87,7 +87,7 @@ ms.locfileid: "53349929"
 > [!IMPORTANT]  
 >  NodeWeight 設定を使用するには、次の修正プログラムが WSFC クラスターのすべてのサーバーに適用されている必要があります。  
 >   
->  [KB2494036](https://support.microsoft.com/kb/2494036):修正プログラムが使用すると、クラスター ノードでクォーラム投票を持たないを[!INCLUDE[firstref_longhorn](../../../includes/firstref-longhorn-md.md)]し [!INCLUDE[winserver2008r2](../../../includes/winserver2008r2-md.md)]  
+>  [KB2494036](https://support.microsoft.com/kb/2494036):この修正プログラムを使用すると、[!INCLUDE[firstref_longhorn](../../../includes/firstref-longhorn-md.md)] および [!INCLUDE[winserver2008r2](../../../includes/winserver2008r2-md.md)] でクォーラムの投票のないクラスター ノードを構成することができます。  
   
 ##  <a name="RecommendedAdjustmentstoQuorumVoting"></a> クォーラム投票に推奨される調整  
  特定の WSFC ノードの投票を有効または無効にする場合は、次のガイドラインに従ってください。  
@@ -130,7 +130,7 @@ ms.locfileid: "53349929"
   
 -   [Windows Server テクノロジ:フェールオーバー クラスター](https://technet.microsoft.com/library/cc732488\(v=WS.10\).aspx)  
   
--   [フェールオーバー クラスター ステップ バイ ステップ ガイド:フェールオーバー クラスターでクォーラムを構成します。](https://technet.microsoft.com/library/cc770620\(WS.10\).aspx)  
+-   [フェールオーバー クラスターのステップ バイ ステップ ガイド:フェールオーバー クラスターのクォーラムの構成](https://technet.microsoft.com/library/cc770620\(WS.10\).aspx)  
   
 ## <a name="see-also"></a>参照  
  [WSFC の強制クォーラムによる災害復旧 &#40;SQL Server&#41;](wsfc-disaster-recovery-through-forced-quorum-sql-server.md)   

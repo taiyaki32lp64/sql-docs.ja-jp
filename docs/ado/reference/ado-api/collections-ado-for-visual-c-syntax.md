@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 6a0109a0-f2d9-4f7c-8e1e-42763f9acaea
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: d94570a337f564588b2709fd292eab5ed5396dc4
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: f18884c7a1aabe138408cca7eb529f4f21120330
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47679880"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67919916"
 ---
 # <a name="collections-ado-for-visual-c-syntax"></a>Collections (Visual C++ 構文用の ADO)
 ## <a name="parameters"></a>パラメーター  
@@ -44,7 +43,7 @@ Refresh(void);
   
 -   [Refresh メソッド (ADO)](../../../ado/reference/ado-api/refresh-method-ado.md)  
   
-### <a name="properties"></a>[プロパティ]  
+### <a name="properties"></a>Properties  
   
 ```  
 get_Count(long *c);  
@@ -75,7 +74,7 @@ Refresh(void);
   
 -   [Refresh メソッド (ADO)](../../../ado/reference/ado-api/refresh-method-ado.md)  
   
-### <a name="properties"></a>[プロパティ]  
+### <a name="properties"></a>Properties  
   
 ```  
 get_Count(long *c);  
@@ -103,7 +102,7 @@ Refresh(void);
   
 -   [Refresh メソッド (ADO)](../../../ado/reference/ado-api/refresh-method-ado.md)  
   
-### <a name="properties"></a>[プロパティ]  
+### <a name="properties"></a>Properties  
   
 ```  
 get_Count(long *c);  
@@ -116,7 +115,7 @@ get_Item(VARIANT Index, ADOError **ppvObject);
   
 -   [Item プロパティ (ADO)](../../../ado/reference/ado-api/item-property-ado.md)  
   
-## <a name="properties"></a>[プロパティ]  
+## <a name="properties"></a>Properties  
   
 ### <a name="methods"></a>メソッド  
   
@@ -128,7 +127,7 @@ Refresh(void);
   
 -   [Refresh メソッド (ADO)](../../../ado/reference/ado-api/refresh-method-ado.md)  
   
-### <a name="properties"></a>[プロパティ]  
+### <a name="properties"></a>Properties  
   
 ```  
 get_Count(long *c);  
@@ -141,7 +140,7 @@ get_Item(VARIANT Index, ADOProperty **ppvObject);
   
 -   [Item プロパティ (ADO)](../../../ado/reference/ado-api/item-property-ado.md)  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [エラーのコレクション (ADO)](../../../ado/reference/ado-api/errors-collection-ado.md)   
  [フィールド コレクション (ADO)](../../../ado/reference/ado-api/fields-collection-ado.md)   
  [Parameters コレクション (ADO)](../../../ado/reference/ado-api/parameters-collection-ado.md)   

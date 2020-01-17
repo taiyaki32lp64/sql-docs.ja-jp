@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 07/17/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - dimensions [Analysis Services], data mining
@@ -16,12 +15,12 @@ ms.assetid: d5fea90f-5f38-4639-8851-7707f6606a12
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 205c6a3e70e5edfa354681ce70b8a01d93476892
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: eb853898d91533a61ae220ff2d73c032f2c65330
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52524202"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66084739"
 ---
 # <a name="data-mining-wizard-analysis-services---data-mining"></a>データ マイニング ウィザード (Analysis Services - データ マイニング)
    [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] のデータ マイニング ウィザードは、新しいマイニング構造をデータ マイニング プロジェクトに追加するたびに起動されます。 このウィザードでは、データ ソースを選択し、分析に使用されるデータを定義するデータ ソース ビューをセットアップできます。さらに、初期モデルを作成できます。  
@@ -59,7 +58,7 @@ ms.locfileid: "52524202"
   
  各オプションの詳細のチュートリアルについては、以下のトピックを参照してください。  
   
- [リレーショナル マイニング構造の作成](create-a-relational-mining-structure.md)  
+ [Create a Relational Mining Structure](create-a-relational-mining-structure.md)  
  リレーショナル データ マイニング モデルを作成する場合の判断について説明します。  
   
  [Create an OLAP Mining Structure](create-an-olap-mining-structure.md)  

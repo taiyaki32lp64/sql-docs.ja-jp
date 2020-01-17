@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: bf80e5c6-0588-4eb7-86ff-aa7c73461335
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: bf5f584a556db9e32fcaf1f53b907adcb8d08e25
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 2a01e41c67c937a0a6d85e9f5c46427ab149b65b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52522980"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67940205"
 ---
 # <a name="sysdatabaseauditspecifications-transact-sql"></a>sys.database_audit_specifications (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -36,10 +35,10 @@ ms.locfileid: "52522980"
 |-----------------|---------------|-----------------|  
 |名前|**sysname**|監査の仕様の名前。|  
 |database_specification_id|**int**|データベース仕様の ID。|  
-|create_date|**datetime**|監査仕様が作成された日付。|  
-|modified_date|**datetime**|監査仕様が最後に変更された日付。|  
+|create_date|**datetime**|監査の仕様が作成された日付。|  
+|modified_date|**datetime**|監査の仕様が最後に変更された日付。|  
 |is_state_enabled|**bit**|監査仕様の状態。<br /><br /> 0 - 無効<br /><br /> 1 - 有効になっています。|  
-|audit_GUID|**uniqueidentifer**|この仕様を含む監査の GUID。 データベースのインポートまたは起動時に、メンバー データベース監査仕様を列挙するときに使用されます。|  
+|audit_GUID|**uniqueidentifer**|この仕様を含む監査の GUID です。 データベースのアタッチ/は起動時に、メンバー データベース監査の仕様の列挙中に使用します。|  
   
 ## <a name="remarks"></a>コメント  
  データベースが読み取り専用モードの場合、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Audit 機能ではデータベース監査仕様を追加できません。  
@@ -47,9 +46,9 @@ ms.locfileid: "52522980"
 ## <a name="permissions"></a>アクセス許可  
  持つプリンシパル、 **ALTER ANY DATABASE AUDIT**または**VIEW DEFINITION**このカタログ ビューにアクセス許可、dbo ロール、および db_owners の固定データベース ロールのメンバー アクセスします。 さらに、プリンシパル必要があります拒否されていない**VIEW DEFINITION**権限。  
   
- [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] 。 詳細については、「 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)」を参照してください。  
+ [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)]。 詳細については、「 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)」を参照してください。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [CREATE SERVER AUDIT &#40;Transact-SQL&#41;](../../t-sql/statements/create-server-audit-transact-sql.md)   
  [ALTER SERVER AUDIT &#40;Transact-SQL&#41;](../../t-sql/statements/alter-server-audit-transact-sql.md)   
  [DROP SERVER AUDIT &#40;Transact-SQL&#41;](../../t-sql/statements/drop-server-audit-transact-sql.md)   

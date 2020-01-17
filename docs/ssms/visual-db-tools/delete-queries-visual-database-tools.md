@@ -13,15 +13,14 @@ helpviewer_keywords:
 - removing queries
 - queries [SQL Server], deleting
 ms.assetid: 084e1504-3d2f-4bd9-b97c-b9c8c874751c
-author: stevestein
-ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 1fa78b6b6750ab4ffc4792a3c93d8ab2fe9e13ed
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 3d2c40cfb0125bc0610ee0bb4587db3b5eb620c0
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47688739"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68263869"
 ---
 # <a name="delete-queries-visual-database-tools"></a>クエリの削除 (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

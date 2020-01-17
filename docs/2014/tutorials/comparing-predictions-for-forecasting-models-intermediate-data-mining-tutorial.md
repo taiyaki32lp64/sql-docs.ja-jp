@@ -11,11 +11,11 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: 26cc445d3bad5c628628353d5c0c84ffa4755e97
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56025117"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63066338"
 ---
 # <a name="comparing-predictions-for-forecasting-models-intermediate-data-mining-tutorial"></a>予測モデルの予測の比較 (中級者向けデータ マイニング チュートリアル)
   このチュートリアルのこれまでの手順では、複数の時系列モデルを作成しました。  
@@ -76,7 +76,7 @@ ms.locfileid: "56025117"
   
  REPLACE_MODEL_CASES パラメーターを使用し、異なるデータ系列にモデルを適用することによって、クロス予測に使用できるモデルを作成する方法について学習しました。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [中級者向けデータ マイニング チュートリアル&#40;Analysis Services - データ マイニング&#41;](../../2014/tutorials/intermediate-data-mining-tutorial-analysis-services-data-mining.md)   
  [タイム シリーズ モデルのクエリ例](../../2014/analysis-services/data-mining/time-series-model-query-examples.md)  
   

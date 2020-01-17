@@ -10,19 +10,18 @@ ms.topic: conceptual
 ms.assetid: c56aedc9-f7f7-4641-b605-f0f98ed4400c
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: b78764e1dccb7118d43cc967f3b03838366d6eb0
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 96073b8d5e68d10caaff268aae4c5af60554ef76
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47758050"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67915543"
 ---
 # <a name="sqlasyncnotificationcallback-function"></a>SQLAsyncNotificationCallback 関数
 **準拠**  
- ODBC 3.8 にバージョンが導入されています。  
+ バージョンが導入されました。ODBC 3.8  
   
- 標準への準拠: なし  
+ 標準への準拠:なし  
   
  **概要**  
  **SQLAsyncNotificationCallback**ドライバーに SQL_STILL_EXECUTING が返された後に、現在の非同期操作のいくつかの進行状況がある場合に、ドライバー マネージャーをコールバックするためのドライバーを使用します。 **SQLAsyncNotificationCallback**だけで、ドライバーによって呼び出されることができます。  
@@ -54,10 +53,10 @@ typedef SQLRETURN (SQL_API *SQL_ASYNC_NOTIFICATION_CALLBACK)(
 ## <a name="diagnostics"></a>診断  
  **SQLAsyncNotificationCallback** SQL_ERROR を (ドライバーまたはドライバー マネージャーでの実装の問題を示します次の 2 つの状況に戻すことができます。  
   
-|[エラー]|説明|  
+|Error|説明|  
 |-----------|-----------------|  
 |接続やステートメントは、通知を要求しませんでした。||  
 |無効な*処理*|ドライバーは、内部のドライバー マネージャーの検証テストに失敗した、無効なハンドルで渡されます。|  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [非同期実行 (ポーリング メソッド)](../../../odbc/reference/develop-app/asynchronous-execution-polling-method.md)

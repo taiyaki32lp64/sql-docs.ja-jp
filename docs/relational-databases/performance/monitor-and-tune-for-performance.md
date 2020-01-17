@@ -28,14 +28,13 @@ helpviewer_keywords:
 ms.assetid: 87f23f03-0f19-4b2e-bfae-efa378f7a0d4
 author: julieMSFT
 ms.author: jrasnick
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 828e0c79d3d68cded07e3dc1204f92f409033e9c
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: fd6fdf81a74e015995f5bf9bd5500f196ccf5cc5
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53360724"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68020250"
 ---
 # <a name="monitor-and-tune-for-performance"></a>パフォーマンスの監視とチューニング
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]

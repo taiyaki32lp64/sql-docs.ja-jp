@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 api_name:
 - IsWindowsServiceEnabled
@@ -16,15 +15,15 @@ topic_type:
 helpviewer_keywords:
 - IsWindowsServiceEnabled property
 ms.assetid: b1b75d72-6220-43fe-abfb-f967f3972d00
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 98ac0b972d9833a72345df2603452de5b39abbf0
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 8014f107ca2b552bf5aef316b1aefcb283a645d6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56027663"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66097588"
 ---
 # <a name="iswindowsserviceenabled-property-wmi-msreportserverconfigurationsetting"></a>IsWindowsServiceEnabled プロパティ (WMI MSReportServer_ConfigurationSetting)
   レポート サーバー Windows サービスが有効かどうかを示します。 読み取り専用。  

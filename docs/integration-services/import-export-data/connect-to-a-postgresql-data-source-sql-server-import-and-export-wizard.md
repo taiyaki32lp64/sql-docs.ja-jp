@@ -3,22 +3,24 @@ title: PostgreSQL データ ソースに接続する (SQL Server インポート
 ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
-ms.prod_service: integration-services
 ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: b7a75a72-b267-444f-9eb8-d23eb333fc35
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: ac871f330c84187a89f27d0bbc62f69d8f24bd93
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: da1688881523723206b03d7f7dec3abc2e518370
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47826330"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71296308"
 ---
 # <a name="connect-to-a-postgresql-data-source-sql-server-import-and-export-wizard"></a>PostgreSQL データ ソースに接続する (SQL Server インポートおよびエクスポート ウィザード)
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
 このトピックでは、SQL Server インポートおよびエクスポート ウィザードの **[データ ソースの選択]** ページまたは **[変換先の選択]** ページから **PostgreSQL** データ ソースに接続する方法を説明します。 
 
 > [!IMPORTANT]
@@ -52,7 +54,7 @@ PostgreSQL ODBC ドライバーを使用して PostgreSQL に接続するには�
 > 適切な接続文字列をアセンブルするヘルプを参照してください。 または、接続文字列を提供する代わりに、既存の DSN (データ ソース名) を提供するか、新しく作成します。 これらのオプションの詳細については、「[Connect to an ODBC Data Source](../../integration-services/import-export-data/connect-to-an-odbc-data-source-sql-server-import-and-export-wizard.md)」 (ODBC データ ソースに接続する) を参照してください。
 
 **[ドライバー]**  
-ODBC ドライバーの名前 - **[PostgreSQL ODBC Driver(UNICODE)]** または **[PostgreSQL ODBC Driver(ANSI)]**。
+ODBC ドライバーの名前 - **[PostgreSQL ODBC Driver(UNICODE)]** または **[PostgreSQL ODBC Driver(ANSI)]** 。
 
 **[サーバー]**  
 PostgreSQL サーバーの名前。 
@@ -63,7 +65,7 @@ PostgreSQL サーバーに接続するためのポート。
 **[データベース]**  
 PostgreSQL データベースの名前。
 
-**[Uid]** と **[Pwd]**   
+**[Uid]** と **[Pwd]**    
 接続する **Uid** (ユーザー id) と **Pwd** (パスワード)。
 
 ### <a name="connection-string-format"></a>接続文字列の形式
@@ -74,7 +76,7 @@ PostgreSQL データベースの名前。
     ```
 
 ### <a name="enter-the-connection-string"></a>接続文字列を入力する
-**[データ ソースの選択]** ページまたは **[変換先の選択]** ページで、**[ConnectionString]** フィールドに接続文字列を入力するか、**[Dsn]** フィールドに DSN 名を入力します。 接続文字列を入力すると、ウィザードによって文字列が解析され、個々のプロパティとその値が一覧に表示されます。
+**[データ ソースの選択]** ページまたは **[変換先の選択]** ページで、 **[ConnectionString]** フィールドに接続文字列を入力するか、 **[Dsn]** フィールドに DSN 名を入力します。 接続文字列を入力すると、ウィザードによって文字列が解析され、個々のプロパティとその値が一覧に表示されます。
 
 次の例では、この接続文字列を使用しています。
 

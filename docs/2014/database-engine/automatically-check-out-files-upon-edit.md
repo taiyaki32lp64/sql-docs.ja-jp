@@ -14,11 +14,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 0cb5bacaeab817c491ae72018630cf88e62b3b7f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48147192"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62791742"
 ---
 # <a name="automatically-check-out-files-upon-edit"></a>編集するファイルの自動的なチェックアウト
   ファイルの編集を開始したときに、自動的にそのファイルがチェックアウトされるように [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] を設定することができます。  
@@ -31,7 +31,7 @@ ms.locfileid: "48147192"
   
 3.  **編集**ボックスで、**自動的にチェック アウト**、 をクリックし、 **OK**。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [ファイルをチェック アウト](../../2014/database-engine/check-out-files.md)   
  [チェックアウトの管理](../../2014/database-engine/manage-checkouts.md)  
   

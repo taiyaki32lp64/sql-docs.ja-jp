@@ -10,15 +10,14 @@ ms.topic: conceptual
 f1_keywords:
 - vdt.dlgbox.fulltextindex
 ms.assetid: ef45b585-2567-4abe-b421-9fd0994e0146
-author: stevestein
-ms.author: sstein
-manager: craigg
-ms.openlocfilehash: f9d44df32b29f2c2efaad86386690020fe19818f
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 926e3d42d21e24d9a3e76d10966e3d90381ca843
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53213511"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68254615"
 ---
 # <a name="full-text-index-dialog-box-visual-database-tools"></a>[フルテキスト インデックス] ダイアログ ボックス (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -55,7 +54,7 @@ ms.locfileid: "53213511"
 **[IDENTITY] カテゴリ**  
 展開してインデックスの名前フィールドを表示します。  
   
-**名前**  
+**[名前]**  
 システムが指定したフルテキスト インデックスの名前を表示します。  
   
 **[テーブル デザイナー] カテゴリ**  

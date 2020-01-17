@@ -11,14 +11,14 @@ helpviewer_keywords:
 - methods [Reporting Services], subscription and delivery
 - subscriptions [Reporting Services], about subscriptions
 ms.assetid: a8637501-1817-4ccc-b07d-dd9ed5608805
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: c99f34b46a6f809cee76985b3db99a88e46326f0
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 474a54a5233b8d96b060f73dc33dfd4a6f86bcda
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47785220"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63284480"
 ---
 # <a name="subscription-and-delivery-methods"></a>サブスクリプション メソッドおよび配信メソッド
   これらのメソッドを使用して、カタログ アイテムのサブスクリプションと配信を作成および管理できます。  

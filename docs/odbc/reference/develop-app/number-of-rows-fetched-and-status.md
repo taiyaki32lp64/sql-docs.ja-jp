@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: a069b979-5108-4905-932f-8ae8e7905ff2
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: ab4830ddd56335959dd7049a1dabdcc3a0354213
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: bc1f556873221faa3f86c5272120a786f6f25025
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47808770"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68086336"
 ---
 # <a name="number-of-rows-fetched-and-status"></a>フェッチされた行の数と状態
 SQL_ATTR_ROWS_FETCHED_PTR ステートメントの属性が設定されている場合、呼び出しからフェッチされた行の数を返すバッファーを指定します。 **SQLFetch**または**SQLFetchScroll**、およびエラーの行。 (この数は、状態 SQL_ROW_NO_ROWS がないすべての行の数です)。呼び出しの後に**SQLBulkOperations**または**SQLSetPos**バッファーには、関数によって実行される一括操作の影響を受けた行の数が含まれています。 SQL_ATTR_ROW_STATUS_PTR ステートメントの属性が設定されている場合**SQLFetch**または**SQLFetchScroll**を返します、*行の状態の配列、* 各の状態を提供します。返された行。 アプリケーションによって割り当てられ、ドライバーによって設定されます。 これらのフィールドによって示されるバッファーの両方が。 アプリケーションは、カーソルが閉じられるまでこれらのポインターが有効であることを確認してください。  

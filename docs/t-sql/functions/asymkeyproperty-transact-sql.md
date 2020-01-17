@@ -15,15 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - ASYMKEYPROPERTY
 ms.assetid: a30581f2-e1b1-4996-93e6-527ff96b7c42
-author: MashaMSFT
-ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: dadfaeaf4debeba4b2da3f478b31fcb9bd5d3b67
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: VanMSFT
+ms.author: vanto
+ms.openlocfilehash: de7e95ab26102c0b3bbe1e33c57ae9491a5b9a2c
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47664112"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65945890"
 ---
 # <a name="asymkeyproperty-transact-sql"></a>ASYMKEYPROPERTY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -73,11 +72,11 @@ GO
 [ALTER ASYMMETRIC KEY &#40;Transact-SQL&#41;](../../t-sql/statements/alter-asymmetric-key-transact-sql.md)  
 [DROP ASYMMETRIC KEY &#40;Transact-SQL&#41;](../../t-sql/statements/drop-asymmetric-key-transact-sql.md)  
 [SIGNBYASYMKEY &#40;Transact-SQL&#41;](../../t-sql/functions/signbyasymkey-transact-sql.md)  
-[VERIFYSIGNEDBYASYMKEY (&) #40 です。TRANSACT-SQL と #41 です。](../../t-sql/functions/verifysignedbyasymkey-transact-sql.md)  
+[VERIFYSIGNEDBYASYMKEY &#40;Transact-SQL&#41;](../../t-sql/functions/verifysignedbyasymkey-transact-sql.md)  
 [暗号化階層](../../relational-databases/security/encryption/encryption-hierarchy.md)  
-[sys.asymmetric_keys (&) #40 です。TRANSACT-SQL と #41 です。](../../relational-databases/system-catalog-views/sys-asymmetric-keys-transact-sql.md)  
+[sys.asymmetric_keys &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-asymmetric-keys-transact-sql.md)  
 [セキュリティ カタログ ビュー &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/security-catalog-views-transact-sql.md)  
-[ASYMKEY_ID (&) #40 です。TRANSACT-SQL と #41 です。](../../t-sql/functions/asymkey-id-transact-sql.md)  
-[SYMKEYPROPERTY (&) #40 です。TRANSACT-SQL と #41 です。](../../t-sql/functions/symkeyproperty-transact-sql.md)
+[ASYMKEY_ID &#40;Transact-SQL&#41;](../../t-sql/functions/asymkey-id-transact-sql.md)  
+[SYMKEYPROPERTY &#40;Transact-SQL&#41;](../../t-sql/functions/symkeyproperty-transact-sql.md)
   
   

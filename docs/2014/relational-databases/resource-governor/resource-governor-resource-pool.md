@@ -15,11 +15,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 4177d7e8ebc96e40e831a6558c7d8b5073c86bc5
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52799824"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63209876"
 ---
 # <a name="resource-governor-resource-pool"></a>リソース ガバナー リソース プール
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] リソース ガバナーのリソース プールは、 [!INCLUDE[ssDE](../../includes/ssde-md.md)]インスタンスの物理リソースのサブセットを表します。 リソース ガバナーを使用すると、受信するアプリケーション要求がリソース プール内で使用できる CPU、物理 IO、およびメモリの量に制限を指定できます。 各リソース プールは、1 つまたは複数のワークロード グループを含めることができます。 セッションの起動時に、リソース ガバナーの分類子によって、セッションは指定されたワークロード グループに割り当てられます。セッションの実行にはワークロード グループに割り当てられたリソースを使用する必要があります。  
@@ -116,7 +116,7 @@ ms.locfileid: "52799824"
 |リソース プールの設定を変更する方法について説明します。|[リソース プールの設定の変更](change-resource-pool-settings.md)|  
 |リソース プールを削除する方法について説明します。|[リソース プールの削除](delete-a-resource-pool.md)|  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [リソース ガバナー](resource-governor.md)   
  [リソース ガバナー ワークロード グループ](resource-governor-workload-group.md)   
  [リソース ガバナーの分類子関数](resource-governor-classifier-function.md)   

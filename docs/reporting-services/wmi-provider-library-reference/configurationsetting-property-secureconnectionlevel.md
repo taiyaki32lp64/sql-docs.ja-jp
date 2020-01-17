@@ -2,7 +2,7 @@
 title: SecureConnectionLevel プロパティ (WMI MSReportServer_ConfigurationSetting) | Microsoft Docs
 ms.date: 03/01/2017
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: wmi-provider-library-reference
 ms.topic: conceptual
 apiname:
@@ -13,14 +13,14 @@ apitype: MOFDef
 helpviewer_keywords:
 - SecureConnectionLevel property
 ms.assetid: fd5549e7-b874-41e2-866e-2f58caf6f733
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 42beaf5446038bfaa0faf1b8e95a4eb5fc6d16b8
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: fdb8fc97b8b2403366e19456b7c744012ee9007f
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47727900"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65570260"
 ---
 # <a name="configurationsetting-property---secureconnectionlevel"></a>ConfigurationSetting プロパティ - SecureConnectionLevel
   RSReportServer.config ファイルに指定された、セキュリティで保護された接続レベルを返します。 読み取り専用です。  

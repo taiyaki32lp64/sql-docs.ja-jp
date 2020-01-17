@@ -12,13 +12,12 @@ f1_keywords:
 ms.assetid: 7887c9fd-15ce-4cc8-b069-845c1d09088c
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 77e9a3bc2e9460981f06ed3ffb3c1d95e352b3f0
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: c4eb20f4492e3550ffdbfca5a649684e28685c1f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47712616"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68216185"
 ---
 # <a name="select-backup-device"></a>[バックアップ デバイスの選択]
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -35,7 +34,7 @@ ms.locfileid: "47712616"
   
 -   [論理バックアップ デバイスのプロパティと内容の表示 &#40;SQL Server&#41;](../../relational-databases/backup-restore/view-the-properties-and-contents-of-a-logical-backup-device-sql-server.md)  
   
-## <a name="options"></a>[変数]  
+## <a name="options"></a>オプション  
  **バックアップ デバイス**  
  復元操作で使用する論理バックアップ デバイスの名前を、このリスト ボックスから選択します。  
   

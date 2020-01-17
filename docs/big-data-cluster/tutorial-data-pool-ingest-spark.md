@@ -1,35 +1,36 @@
 ---
 title: Spark ジョブを使用してデータを取り込む
-titleSuffix: SQL Server 2019 big data clusters
-description: このチュートリアルでは、Azure Data Studio で Spark ジョブを使用して SQL Server 2019 ビッグ データ クラスター (プレビュー) のデータ プールにデータを取り込む方法を示します。
-author: rothja
-ms.author: jroth
-manager: craigg
-ms.date: 02/28/2019
+titleSuffix: SQL Server big data clusters
+description: このチュートリアルでは、Azure Data Studio で Spark ジョブを使用して、[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)] のデータ プールにデータを取り込む方法について説明します。
+author: MikeRayMSFT
+ms.author: mikeray
+ms.reviewer: shivsood
+ms.date: 08/21/2019
 ms.topic: tutorial
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.custom: seodec18
-ms.openlocfilehash: 28a151f00683455b582bb29a5d141a76f237caf1
-ms.sourcegitcommit: 2533383a7baa03b62430018a006a339c0bd69af2
-ms.translationtype: MT
+ms.openlocfilehash: c6f66b42fe280ef6612a5e9974ddcf4f1f7ccfcb
+ms.sourcegitcommit: add39e028e919df7d801e8b6bb4f8ac877e60e17
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57017738"
+ms.lasthandoff: 11/15/2019
+ms.locfileid: "74119198"
 ---
-# <a name="tutorial-ingest-data-into-a-sql-server-data-pool-with-spark-jobs"></a>チュートリアル:Spark ジョブの SQL Server のデータ プールにデータを取り込む
+# <a name="tutorial-ingest-data-into-a-sql-server-data-pool-with-spark-jobs"></a>チュートリアル:Spark ジョブを使用して SQL Server のデータ プールにデータを取り込む
 
-このチュートリアルで Spark ジョブを使用してデータを読み込む方法、[データ プール](concept-data-pool.md)の SQL Server 2019 ビッグ データ クラスター (プレビュー)。 
+[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
-このチュートリアルで確認する方法。
+このチュートリアルでは、Spark ジョブを使用して [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)] の[データ プール](concept-data-pool.md)にデータを取り込む方法について説明します。 
+
+このチュートリアルでは、次の方法を学習します。
 
 > [!div class="checklist"]
-> * データ プール内の外部テーブルを作成します。
-> * HDFS からデータを読み込み、Spark ジョブを作成します。
-> * 外部テーブルの結果をクエリします。
+> * データ プールに外部テーブルを作成する
+> * Spark ジョブを作成して HDFS からデータを読み込む
+> * 外部テーブルの結果に対してクエリを実行する
 
 > [!TIP]
-> をする場合は、ダウンロードして、このチュートリアルでは、コマンドのスクリプトを実行します。 手順については、次を参照してください。、[データ プール サンプル](https://github.com/Microsoft/sql-server-samples/tree/master/samples/features/sql-big-data-cluster/data-pool)GitHub でします。
+> 必要に応じて、このチュートリアルのコマンド用のスクリプトをダウンロードして実行できます。 手順については、GitHub の[データ プールのサンプル](https://github.com/Microsoft/sql-server-samples/tree/master/samples/features/sql-big-data-cluster/data-pool)を参照してください。
 
 ## <a id="prereqs"></a> 前提条件
 
@@ -39,17 +40,27 @@ ms.locfileid: "57017738"
    - **SQL Server 2019 の拡張機能**
 - [ビッグ データ クラスターにサンプル データを読み込む](tutorial-load-sample-data.md)
 
-## <a name="create-an-external-table-in-the-data-pool"></a>データ プール内の外部テーブルを作成します。
+## <a name="create-an-external-table-in-the-data-pool"></a>データ プールに外部テーブルを作成する
 
-次の手順では、外部テーブルを作成という名前のデータ プールに**web_clickstreams_spark_results**します。 このテーブルことができますし、場所としてのデータの取り込みに使用するビッグ データ クラスター。
+次の手順では、**web_clickstreams_spark_results** という名前のデータ プールに外部テーブルを作成します。 このテーブルは、ビッグ データ クラスターにデータを取り込むための場所として使用できます。
 
-1. Azure Data Studio では、ビッグ データ クラスターの SQL Server のマスター インスタンスに接続します。 詳細については、次を参照してください。 [master の SQL Server インスタンスへの接続](connect-to-big-data-cluster.md#master)します。
+1. Azure Data Studio で、ビッグ データ クラスターの SQL Server マスター インスタンスに接続します。 詳細については、「[SQL Server マスター インスタンスに接続する](connect-to-big-data-cluster.md#master)」を参照してください。
 
-1. 内の接続をダブルクリックして、**サーバー**ウィンドウに SQL Server のマスター インスタンスのサーバー ダッシュ ボードを表示します。 選択**新しいクエリ**します。
+1. **[サーバー]** ウィンドウで接続をダブルクリックして、SQL Server マスター インスタンスのサーバー ダッシュボードを表示します。 **[新しいクエリ]** を選択します。
 
-   ![SQL Server マスター インスタンスのクエリ](./media/tutorial-data-pool-ingest-spark/sql-server-master-instance-query.png)
+   ![SQL Server マスター インスタンス クエリ](./media/tutorial-data-pool-ingest-spark/sql-server-master-instance-query.png)
 
-1. という名前の外部テーブルを作成**web_clickstreams_spark_results**データ プールにします。 `SqlDataPool`データ ソースは、ビッグ データ クラスターのマスター インスタンスから使用できる特殊なデータ ソースの種類。
+1. まだ存在しない場合は、データ プールへの外部データ ソースを作成します。
+
+   ```sql
+   USE Sales
+   GO
+   IF NOT EXISTS(SELECT * FROM sys.external_data_sources WHERE name = 'SqlDataPool')
+     CREATE EXTERNAL DATA SOURCE SqlDataPool
+     WITH (LOCATION = 'sqldatapool://controller-svc/default');
+   ```
+
+1. データ プールで、**web_clickstreams_spark_results** という名前の外部テーブルを作成します。
 
    ```sql
    USE Sales
@@ -64,64 +75,70 @@ ms.locfileid: "57017738"
       );
    ```
   
-1. CTP 2.3 以降でのデータ プールの作成は、非同期ですがまだ完了して確認する方法はありません。 続行する前に、データのプールが作成されたかどうかを確認する 2 分間待ちます。
+1. CTP 3.1 では、データ プールの作成は非同期ですが、まだ完了しているかどうかを判断する方法がありません。 データ プールが作成されたことを確認できるまで 2 分待ってから続行してください。
 
-## <a name="start-a-spark-streaming-job"></a>Spark ストリーミングのジョブを開始します。
+## <a name="start-a-spark-streaming-job"></a>Spark ストリーミング ジョブを開始する
 
-次の手順は、データ プールで作成した外部テーブルに、Spark ストリーミング web クリック ストリーム データを読み込みます (HDFS) の記憶域プールからジョブを作成します。
+次の手順では、ストレージ プール (HDFS) から Web クリックストリーム データを、データ プールに作成した外部テーブルに読み込む Spark ストリーミング ジョブを作成します。 このデータは「[ビッグ データ クラスターにサンプル データを読み込む](tutorial-load-sample-data.md)」で /clickstream_data に追加されました。
 
-1. Azure のデータの Studio に接続、 **HDFS/Spark ゲートウェイ**ビッグ データ クラスター。 詳細については、次を参照してください。 [HDFS/Spark ゲートウェイへの接続](connect-to-big-data-cluster.md#hdfs)します。
+1. Azure Data Studio で、ビッグ データ クラスターのマスター インスタンスに接続します。 詳細については、[ビッグ データ クラスターへの接続](connect-to-big-data-cluster.md)に関するページを参照してください。
 
-1. HDFS/Spark ゲートウェイ接続をダブルクリックして、**サーバー**ウィンドウ。 選び**Spark ジョブを新しい**します。
+2. 新しいノートブックを作成し、カーネルとして Spark | Scala を選択します。
 
-   ![新しい Spark ジョブ](media/tutorial-data-pool-ingest-spark/hdfs-new-spark-job.png)
+3. Spark インジェスト ジョブを実行する
+   1. Spark-SQL コネクタ パラメーターを構成する
+      ```
+      import org.apache.spark.sql.types._
+      import org.apache.spark.sql.{SparkSession, SaveMode, Row, DataFrame}
 
-1. **新しいジョブ** ウィンドウに名前を入力、**ジョブ名**フィールド。
+      // Change per your installation
+      val user= "username"
+      val password= "****"
+      val database =  "MyTestDatabase"
+      val sourceDir = "/clickstream_data"
+      val datapool_table = "web_clickstreams_spark_results"
+      val datasource_name = "SqlDataPool"
+      val schema = StructType(Seq(
+      StructField("wcs_click_date_sk",LongType,true), StructField("wcs_click_time_sk",LongType,true), 
+      StructField("wcs_sales_sk",LongType,true), StructField("wcs_item_sk",LongType,true),
+      StructField("wcs_web_page_sk",LongType,true), StructField("wcs_user_sk",LongType,true)
+      ))
 
-1. **Jar/py ファイル**ドロップダウン リストで選択**HDFS**します。 次の jar ファイルのパスを入力します。
+      val hostname = "master-0.master-svc"
+      val port = 1433
+      val url = s"jdbc:sqlserver://${hostname}:${port};database=${database};user=${user};password=${password};"
+      ```
+   2. Spark ジョブを定義して実行する
+      * 各ジョブは、readStream と writeStream という 2 部構成になっています。 以下では、上で定義したスキーマでデータ フレームを作成し、データ プールの外部テーブルに書き込みます。
+      ```
+      import org.apache.spark.sql.{SparkSession, SaveMode, Row, DataFrame}
+      
+      val df = spark.readStream.format("csv").schema(schema).option("header", true).load(sourceDir)
+      val query = df.writeStream.outputMode("append").foreachBatch{ (batchDF: DataFrame, batchId: Long) => 
+                batchDF.write
+                 .format("com.microsoft.sqlserver.jdbc.spark")
+                 .mode("append")
+                  .option("url", url)
+                  .option("dbtable", datapool_table)
+                  .option("user", user)
+                  .option("password", password)
+                  .option("dataPoolDataSource",datasource_name).save()
+               }.start()
 
-   ```text
-   /jar/mssql-spark-lib-assembly-1.0.jar
-   ```
+      query.processAllAvailable()
+      query.awaitTermination(40000)
+      ```
+## <a name="query-the-data"></a>データにクエリを実行する
 
-1. **Main クラス**フィールドに、入力`FileStreaming`します。
+次の手順は、HDFS からデータをデータ プールに読み込む Spark ストリーミング ジョブを示しています。
 
-1. **引数**フィールドに、SQL Server のマスター インスタンス内にパスワードを指定する、次のテキストを入力、`<your_password>`プレース ホルダーです。 
+1. 取り込んだデータについて問い合わせる前に、Yarn アプリ ID、Spark UI、ドライバー ログなど、Spark の実行状態を確認します。
 
-   ```text
-   --server mssql-master-pool-0.service-master-pool --port 1433 --user sa --password <your_password> --database sales --table web_clickstreams_spark_results --source_dir hdfs:///clickstream_data --input_format csv --enable_checkpoint false --timeout 380000
-   ```
+   ![Spark 実行の詳細](./media/tutorial-data-pool-ingest-spark/Spark-Joblog-sparkui-yarn.png)
 
-   次の表では、それぞれの引数について説明します。
+1. このチュートリアルで最初に開いた SQL Server マスター インスタンス クエリ ウィンドウに戻ります。
 
-   | 引数 | 説明 |
-   |---|---|
-   | サーバー名 (server name) | テーブル スキーマを読み取るための SQL Server の使用 |
-   | ポート番号 | SQL Server のポートが (既定は 1433) でリッスンしています。 |
-   | username | SQL Server ログイン ユーザー名 |
-   | password | SQL Server ログイン パスワード |
-   | データベース名 | [対象になるデータベース] |
-   | 外部テーブルの名前 | 結果を得るのために使用するテーブル |
-   | ストリーミング用のソース ディレクトリ | 完全な URI をなどあるこの必要があります"hdfs:///clickstream_data" |
-   | 入力の形式 | これは、"csv"、"parquet"または"json" |
-   | チェックポイントを有効にします。 | true または false |
-   | timeout | 時間 (ミリ秒単位) のジョブを終了する前に実行するには |
-
-1. キーを押して**送信**ジョブを送信します。
-
-   ![Spark ジョブの送信](media/tutorial-data-pool-ingest-spark/spark-new-job-settings.png)
-
-## <a name="query-the-data"></a>データのクエリ
-
-次の手順では、Spark ストリーミング ジョブが、データ プールへの HDFS からデータを読み込まれたことを示します。
-
-1. 取り込まれたデータのクエリを実行する前に完了したジョブをタスク履歴の出力を理解することを確認します。
-
-   ![Spark ジョブの履歴](media/tutorial-data-pool-ingest-spark/spark-task-history.png)
-
-1. このチュートリアルの先頭に開かれた SQL Server のマスター インスタンス クエリ ウィンドウに戻ります。
-
-1. 取り込まれたデータを検査する次のクエリを実行します。
+1. 次のクエリを実行して、取り込まれたデータを検査します。
 
    ```sql
    USE Sales
@@ -129,17 +146,34 @@ ms.locfileid: "57017738"
    SELECT count(*) FROM [web_clickstreams_spark_results];
    SELECT TOP 10 * FROM [web_clickstreams_spark_results];
    ```
+1. データは Spark でも照会できます。 たとえば、下のコードでは、テーブルのレコード数が印刷されます。
+   ```
+   def df_read(dbtable: String,
+                url: String,
+                dataPoolDataSource: String=""): DataFrame = {
+        spark.read
+             .format("com.microsoft.sqlserver.jdbc.spark")
+             .option("url", url)
+             .option("dbtable", dbtable)
+             .option("user", user)
+             .option("password", password)
+             .option("dataPoolDataSource", dataPoolDataSource)
+             .load()
+             }
 
-## <a name="clean-up"></a>クリーンアップします。
+   val new_df = df_read(datapool_table, url, dataPoolDataSource=datasource_name)
+   println("Number of rows is " +  new_df.count)
+   ```
+## <a name="clean-up"></a>クリーンアップ
 
-このチュートリアルで作成されたデータベース オブジェクトを削除するのにには、次のコマンドを使用します。
+このチュートリアルで作成されたデータベース オブジェクトを削除するには、次のコマンドを使用します。
 
 ```sql
 DROP EXTERNAL TABLE [dbo].[web_clickstreams_spark_results];
 ```
 
-## <a name="next-steps"></a>次のステップ
+## <a name="next-steps"></a>次の手順
 
-Azure Data Studio でサンプルの notebook を実行する方法について説明します。
+Azure Data Studio でサンプル ノートブックを実行する方法について説明します。
 > [!div class="nextstepaction"]
-> [サンプルの notebook を実行します。](tutorial-notebook-spark.md)
+> [サンプル ノートブックの実行](tutorial-notebook-spark.md)

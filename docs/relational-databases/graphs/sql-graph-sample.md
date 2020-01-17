@@ -14,28 +14,29 @@ helpviewer_keywords:
 ms.assetid: ''
 author: shkale-msft
 ms.author: shkale
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: d439464e4066e395fc9e420cc0d506e5c15c1691
-ms.sourcegitcommit: ef6e3ec273b0521e7c79d5c2a4cb4dcba1744e67
+ms.openlocfilehash: 1737ae8427df8d6d9bd6dbb9dea359da09f0c657
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51512469"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68035873"
 ---
 # <a name="create-a-graph-database-and-run-some-pattern-matching-queries-using-t-sql"></a>グラフ データベースを作成し、T-SQL を使用してクエリに一致するパターンはいくつかの実行
+
 [!INCLUDE[tsql-appliesto-ss2017-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-asdb-xxxx-xxx-md.md)]
 
 このサンプルでは、[!INCLUDE[tsql-md](../../includes/tsql-md.md)]ノードとエッジのグラフ データベースを作成し、新しい MATCH 句を使用して、いくつかのパターンに一致して、グラフを走査するスクリプト。 このサンプル スクリプトは Azure SQL データベースの両方で動作し、 [!INCLUDE[sssqlv14](../../includes/sssqlv14-md.md)]  
- 
-## <a name="sample-schema"></a>サンプル スキーマ  
-このサンプルは、人、レストラン、市区町村のノードを持つ仮想的なソーシャル ネットワークの図 1 に示すように、グラフ スキーマを作成します。 これらのノードは、友人を使用して相互に接続しているいいね!、LivesIn と LocatedIn のエッジ。 
+
+## <a name="sample-schema"></a>サンプル スキーマ
+
+このサンプルは、人、レストラン、市区町村のノードを持つ仮想的なソーシャル ネットワークの図 1 に示すように、グラフ スキーマを作成します。 これらのノードは、友人を使用して相互に接続しているいいね!、LivesIn と LocatedIn のエッジ。
 
 ![人の都市のレストラン テーブル](../../relational-databases/graphs/media/person-cities-restaurants-tables.png "Sql グラフ データベースのサンプル")  
-レストラン、市区町村、person ノードおよび LivesIn LocatedIn、いいねの端を図 1: サンプルのスキーマです。
-
+図 1: レストラン、市区町村、person ノード LivesIn LocatedIn、いいねの端とサンプルのスキーマです。
 
 ## <a name="sample-script"></a>サンプル スクリプト
+
 ```
 -- Create a graph demo database
 CREATE DATABASE graphdemo;
@@ -46,19 +47,19 @@ go
 
 -- Create NODE tables
 CREATE TABLE Person (
-  ID INTEGER PRIMARY KEY, 
+  ID INTEGER PRIMARY KEY,
   name VARCHAR(100)
 ) AS NODE;
 
 CREATE TABLE Restaurant (
-  ID INTEGER NOT NULL, 
-  name VARCHAR(100), 
+  ID INTEGER NOT NULL,
+  name VARCHAR(100),
   city VARCHAR(100)
 ) AS NODE;
 
 CREATE TABLE City (
-  ID INTEGER PRIMARY KEY, 
-  name VARCHAR(100), 
+  ID INTEGER PRIMARY KEY,
+  name VARCHAR(100),
   stateName VARCHAR(100)
 ) AS NODE;
 
@@ -83,43 +84,43 @@ INSERT INTO City VALUES (1,'Bellevue','wa');
 INSERT INTO City VALUES (2,'Seattle','wa');
 INSERT INTO City VALUES (3,'Redmond','wa');
 
--- Insert into edge table. While inserting into an edge table, 
+-- Insert into edge table. While inserting into an edge table,
 -- you need to provide the $node_id from $from_id and $to_id columns.
-INSERT INTO likes VALUES ((SELECT $node_id FROM Person WHERE id = 1), 
-       (SELECT $node_id FROM Restaurant WHERE id = 1),9);
-INSERT INTO likes VALUES ((SELECT $node_id FROM Person WHERE id = 2), 
-      (SELECT $node_id FROM Restaurant WHERE id = 2),9);
-INSERT INTO likes VALUES ((SELECT $node_id FROM Person WHERE id = 3), 
-      (SELECT $node_id FROM Restaurant WHERE id = 3),9);
-INSERT INTO likes VALUES ((SELECT $node_id FROM Person WHERE id = 4), 
-      (SELECT $node_id FROM Restaurant WHERE id = 3),9);
-INSERT INTO likes VALUES ((SELECT $node_id FROM Person WHERE id = 5), 
-      (SELECT $node_id FROM Restaurant WHERE id = 3),9);
+INSERT INTO likes VALUES ((SELECT $node_id FROM Person WHERE ID = 1), 
+       (SELECT $node_id FROM Restaurant WHERE ID = 1),9);
+INSERT INTO likes VALUES ((SELECT $node_id FROM Person WHERE ID = 2), 
+      (SELECT $node_id FROM Restaurant WHERE ID = 2),9);
+INSERT INTO likes VALUES ((SELECT $node_id FROM Person WHERE ID = 3), 
+      (SELECT $node_id FROM Restaurant WHERE ID = 3),9);
+INSERT INTO likes VALUES ((SELECT $node_id FROM Person WHERE ID = 4), 
+      (SELECT $node_id FROM Restaurant WHERE ID = 3),9);
+INSERT INTO likes VALUES ((SELECT $node_id FROM Person WHERE ID = 5), 
+      (SELECT $node_id FROM Restaurant WHERE ID = 3),9);
 
-INSERT INTO livesIn VALUES ((SELECT $node_id FROM Person WHERE id = 1),
-      (SELECT $node_id FROM City WHERE id = 1));
-INSERT INTO livesIn VALUES ((SELECT $node_id FROM Person WHERE id = 2),
-      (SELECT $node_id FROM City WHERE id = 2));
-INSERT INTO livesIn VALUES ((SELECT $node_id FROM Person WHERE id = 3),
-      (SELECT $node_id FROM City WHERE id = 3));
-INSERT INTO livesIn VALUES ((SELECT $node_id FROM Person WHERE id = 4),
-      (SELECT $node_id FROM City WHERE id = 3));
-INSERT INTO livesIn VALUES ((SELECT $node_id FROM Person WHERE id = 5),
-      (SELECT $node_id FROM City WHERE id = 1));
+INSERT INTO livesIn VALUES ((SELECT $node_id FROM Person WHERE ID = 1),
+      (SELECT $node_id FROM City WHERE ID = 1));
+INSERT INTO livesIn VALUES ((SELECT $node_id FROM Person WHERE ID = 2),
+      (SELECT $node_id FROM City WHERE ID = 2));
+INSERT INTO livesIn VALUES ((SELECT $node_id FROM Person WHERE ID = 3),
+      (SELECT $node_id FROM City WHERE ID = 3));
+INSERT INTO livesIn VALUES ((SELECT $node_id FROM Person WHERE ID = 4),
+      (SELECT $node_id FROM City WHERE ID = 3));
+INSERT INTO livesIn VALUES ((SELECT $node_id FROM Person WHERE ID = 5),
+      (SELECT $node_id FROM City WHERE ID = 1));
 
-INSERT INTO locatedIn VALUES ((SELECT $node_id FROM Restaurant WHERE id = 1),
-      (SELECT $node_id FROM City WHERE id =1));
-INSERT INTO locatedIn VALUES ((SELECT $node_id FROM Restaurant WHERE id = 2),
-      (SELECT $node_id FROM City WHERE id =2));
-INSERT INTO locatedIn VALUES ((SELECT $node_id FROM Restaurant WHERE id = 3),
-      (SELECT $node_id FROM City WHERE id =3));
+INSERT INTO locatedIn VALUES ((SELECT $node_id FROM Restaurant WHERE ID = 1),
+      (SELECT $node_id FROM City WHERE ID =1));
+INSERT INTO locatedIn VALUES ((SELECT $node_id FROM Restaurant WHERE ID = 2),
+      (SELECT $node_id FROM City WHERE ID =2));
+INSERT INTO locatedIn VALUES ((SELECT $node_id FROM Restaurant WHERE ID = 3),
+      (SELECT $node_id FROM City WHERE ID =3));
 
--- Insert data into the friendof edge.
-INSERT INTO friendof VALUES ((SELECT $NODE_ID FROM person WHERE ID = 1), (SELECT $NODE_ID FROM person WHERE ID = 2));
-INSERT INTO friendof VALUES ((SELECT $NODE_ID FROM person WHERE ID = 2), (SELECT $NODE_ID FROM person WHERE ID = 3));
-INSERT INTO friendof VALUES ((SELECT $NODE_ID FROM person WHERE ID = 3), (SELECT $NODE_ID FROM person WHERE ID = 1));
-INSERT INTO friendof VALUES ((SELECT $NODE_ID FROM person WHERE ID = 4), (SELECT $NODE_ID FROM person WHERE ID = 2));
-INSERT INTO friendof VALUES ((SELECT $NODE_ID FROM person WHERE ID = 5), (SELECT $NODE_ID FROM person WHERE ID = 4));
+-- Insert data into the friendOf edge.
+INSERT INTO friendOf VALUES ((SELECT $NODE_ID FROM Person WHERE ID = 1), (SELECT $NODE_ID FROM Person WHERE ID = 2));
+INSERT INTO friendOf VALUES ((SELECT $NODE_ID FROM Person WHERE ID = 2), (SELECT $NODE_ID FROM Person WHERE ID = 3));
+INSERT INTO friendOf VALUES ((SELECT $NODE_ID FROM Person WHERE ID = 3), (SELECT $NODE_ID FROM Person WHERE ID = 1));
+INSERT INTO friendOf VALUES ((SELECT $NODE_ID FROM Person WHERE ID = 4), (SELECT $NODE_ID FROM Person WHERE ID = 2));
+INSERT INTO friendOf VALUES ((SELECT $NODE_ID FROM Person WHERE ID = 5), (SELECT $NODE_ID FROM Person WHERE ID = 4));
 
 
 -- Find Restaurants that John likes
@@ -138,11 +139,11 @@ AND person1.name='John';
 SELECT Person.name
 FROM Person, likes, Restaurant, livesIn, City, locatedIn
 WHERE MATCH (Person-(likes)->Restaurant-(locatedIn)->City AND Person-(livesIn)->City);
-
 ```
 
 ## <a name="clean-up"></a>クリーンアップします。  
 スキーマとサンプル用に作成されたデータベースをクリーンアップします。
+
 ```
 USE graphdemo;
 go
@@ -159,14 +160,12 @@ USE master;
 go
 DROP DATABASE graphdemo;
 go
-
-
 ```
 
 ## <a name="script-explanation"></a>スクリプトの説明  
 このスクリプトでは、新しい T-SQL 構文を使用して、ノードとエッジ テーブルを作成します。 使用してノードとエッジ テーブルにデータを挿入する方法を示します`INSERT`ステートメントを使用する方法も示しています`MATCH`パターン マッチングとナビゲーションの句。
 
-|コマンド    |注
+|Command    |メモ
 |---  |---  |
 |[CREATE TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-sql-graph.md)  |グラフ ノードまたはエッジ テーブルを作成します。  |
 |[INSERT &#40;Transact-SQL&#41;](../../t-sql/statements/insert-sql-graph.md)  |ノードまたはエッジ テーブルに挿入します。  |

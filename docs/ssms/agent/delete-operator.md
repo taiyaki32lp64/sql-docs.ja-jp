@@ -10,16 +10,15 @@ ms.topic: conceptual
 f1_keywords:
 - sql13.ag.operator.delete.f1
 ms.assetid: 68402a69-24c4-4304-a1db-7409c42c51dc
-author: stevestein
-ms.author: sstein
-manager: craigg
+author: markingmyname
+ms.author: maghan
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 1cb0cdd102506fe9762055057e84bf981d058a91
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 6c3b96ef7ec46fca634f95a144d6307c260a9792
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47805350"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68267120"
 ---
 # <a name="delete-operator"></a>Delete 操作
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -29,7 +28,7 @@ ms.locfileid: "47805350"
 
 このページを使用すると、オペレーターを削除できます。  
   
-## <a name="options"></a>[変数]  
+## <a name="options"></a>オプション  
 **[削除されるオブジェクト]**  
 削除されるオペレーターを表示します。  
   
@@ -40,5 +39,5 @@ ms.locfileid: "47805350"
 通知を再割り当てする対象オペレーターのプロパティを表示します。  
   
 ## <a name="see-also"></a>参照  
-[演算子](../../ssms/agent/operators.md)  
+[オペレーター](../../ssms/agent/operators.md)  
   

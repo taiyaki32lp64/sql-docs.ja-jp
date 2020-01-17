@@ -15,17 +15,20 @@ helpviewer_keywords:
 - connections [Integration Services], files
 - multiple file connections
 ms.assetid: 10bdc56e-c5cd-4ddb-b2f7-375fe57fe8b2
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: 40e285c2979b476aff34465adfbc5862aaf1171e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 1bee1c469ca7febfa114a3143d5842db74356ed9
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47840410"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71294370"
 ---
 # <a name="multiple-files-connection-manager"></a>複数ファイル接続マネージャー
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   複数ファイル接続マネージャーを使用すると、パッケージで既存のファイルやフォルダーを参照したり、実行時にファイルやフォルダーを作成したりできます。  
   
 > [!NOTE]  
@@ -36,7 +39,7 @@ ms.locfileid: "47840410"
   
  次の表に **FileUsageType**の値を示します。  
   
-|ReplTest1|[説明]|  
+|[値]|[説明]|  
 |-----------|-----------------|  
 |**0**|複数ファイル接続マネージャーは、既存のファイルを使用します。|  
 |**1**|複数ファイル接続マネージャーは、ファイルを作成します。|  

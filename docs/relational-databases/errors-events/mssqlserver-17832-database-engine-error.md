@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: bd56ffe4-0855-4ada-8aca-251fbc6ff2ce
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: c5def2cd5b24046fe41524ed26b149c335b1c1f0
-ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
+ms.openlocfilehash: c09e789738f8ca6633a56c36d626dd200ae70e78
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/18/2018
-ms.locfileid: "53590502"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68137239"
 ---
 # <a name="mssqlserver17832"></a>MSSQLSERVER_17832
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -56,13 +55,13 @@ Kerberos 環境で Windows 認証を使用する場合、クライアントは�
   
 1.  **[スタート]** メニューの **[ファイル名を指定して実行]** をクリックします。  
   
-2.  「**regedit**」と入力し、**[OK]** をクリックします  (**[ユーザー アカウント制御]** ダイアログ ボックスが表示されたら、**[続行]** をクリックします)。  
+2.  「**regedit**」と入力し、 **[OK]** をクリックします ( **[ユーザー アカウント制御]** ダイアログ ボックスが表示されたら、 **[続行]** をクリックします)。  
   
 3.  **HKEY_LOCAL_MACHINE\System\CurrentControlSet\Control\Lsa\Kerberos\Parameters** に移動します。  
   
-4.  **MaxTokenSize** パラメーターが存在しない場合は、**[Parameters]** を右クリックし、**[新規]** をポイントして、**[DWORD (32 ビット) 値]** をクリックします。 レジストリ エントリに **MaxTokenSize** という名前を付けます。  
+4.  **MaxTokenSize** パラメーターが存在しない場合は、 **[Parameters]** を右クリックし、 **[新規]** をポイントして、 **[DWORD (32 ビット) 値]** をクリックします。 レジストリ エントリに **MaxTokenSize** という名前を付けます。  
   
-5.  **[MaxTokenSize]** を右クリックし、**[修正]** をクリックします。  
+5.  **[MaxTokenSize]** を右クリックし、 **[修正]** をクリックします。  
   
 6.  **[値のデータ]** ボックスに、目的の **MaxTokenSize** 値を入力します。  
   

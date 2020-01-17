@@ -11,11 +11,11 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: b7f4f543952fd86cf6c3c66f9f4b2c51019b1869
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56039354"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63273479"
 ---
 # <a name="creating-a-sequence-clustering-mining-model-structure-intermediate-data-mining-tutorial"></a>シーケンス クラスター マイニング モデル構造の作成 (中級者向けデータ マイニング チュートリアル)
   シーケンス クラスター マイニング モデルを作成する最初の手順では、データ マイニング ウィザードを使用して新しいマイニング構造を作成し、[!INCLUDE[msCoName](../includes/msconame-md.md)] シーケンス クラスター アルゴリズムに基づくマイニング モデルを作成します。  

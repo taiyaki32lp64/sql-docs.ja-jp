@@ -12,12 +12,12 @@ ms.assetid: 14129cc4-be80-4772-9e3f-0e5da4d0696b
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 38405f6bfe2744445abe9884350a703cbb0374cd
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: db70d1757073a48ab09f31cfb3570570e54a48cd
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53377524"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62762072"
 ---
 # <a name="mssqlserver833"></a>MSSQLSERVER_833
     
@@ -54,6 +54,6 @@ ms.locfileid: "53377524"
 > [!NOTE]  
 >  ディスク アクセス速度は、ウイルス対策プログラムによって低下する場合があります。 アクセスを高速化するには、エラー メッセージに示されている [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データ ファイルをアクティブ ウイルス スキャンの対象から除外します。  
   
- I/O エラーの詳細については、「[Microsoft SQL Server I/O Basics, Chapter 2](https://go.microsoft.com/fwlink/?LinkId=69370)」と、[https://support.microsoft.com/kb/897284/en-us](https://support.microsoft.com/kb/897284/en-us) にあるサポート技術情報の資料を参照してください。  
+ I/O エラーの詳細については、「[Microsoft SQL Server I/O Basics, Chapter 2](/previous-versions/sql/sql-server-2005/administrator/cc917726(v=technet.10))」と、[https://support.microsoft.com/kb/897284](https://support.microsoft.com/kb/897284) にあるサポート技術情報の資料を参照してください。  
   
   

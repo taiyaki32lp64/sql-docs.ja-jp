@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - Analysis Services Deployment Wizard, configuration settings
@@ -17,12 +16,12 @@ ms.assetid: 953814a3-85ef-40cc-b46a-d532aa7a6569
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: e3f0f24aec895c482ba357dbc4330baaf2798ba6
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 8addba32560e136f68e538240f4fce01f826355e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52519412"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66075265"
 ---
 # <a name="specifying-configuration-settings-for-solution-deployment"></a>ソリューションの配置に関する構成設定の指定
   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]展開ウィザードから、配置スクリプトで使用する展開オプション パーティションおよびロールを読み取り、 \<*プロジェクト名*> >.configsettings ファイル。 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] は、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] プロジェクトの作成時にこのファイルを作成します。 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 現在のプロジェクトの構成設定を使用して、作成、 \<*プロジェクト名*> >.configsettings ファイル。  
@@ -52,15 +51,15 @@ ms.locfileid: "52519412"
   
 -   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 配置ウィザードを対話形式で実行し、 **[構成設定]** ページで配置するオブジェクトの構成設定を指定します。  
   
-     - または -  
+     \- または -  
   
 -   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 配置ウィザードをコマンド プロンプトで実行し、ウィザードを応答ファイル モードで実行するように設定します。 応答ファイル モードの詳細については、「 [Analysis Services 配置ウィザードの実行](running-the-analysis-services-deployment-wizard.md)」を参照してください。  
   
-     - または -  
+     \- または -  
   
 -   変更、 \<*プロジェクト名*> 任意のテキスト エディターを使用して、>.configsettings ファイル。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [インストール先の指定](deployment-script-files-specifying-the-installation-target.md)   
  [パーティションおよびロールの配置オプションの指定](deployment-script-files-partition-and-role-deployment-options.md)   
  [処理オプションの指定](deployment-script-files-specifying-processing-options.md)  

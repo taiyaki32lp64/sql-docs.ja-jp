@@ -1,5 +1,5 @@
 ---
-title: updateNString メソッド (SQLServerResultSet) |Microsoft Docs
+title: updateNString メソッド (SQLServerResultSet) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 0b6b65a1-8e62-4cd5-ab28-6231c3e20d81
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 1737004c5ded0f577e549a6009807cb74096bc32
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 068e9d4b633a7d958224e99c64001e880f847b2f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47706090"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67998535"
 ---
 # <a name="updatenstring-method-sqlserverresultset"></a>updateNString メソッド (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

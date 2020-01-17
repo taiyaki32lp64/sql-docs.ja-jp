@@ -11,17 +11,20 @@ helpviewer_keywords:
 - bitwise NOT (~)
 - ~ (bitwise NOT)
 ms.assetid: e4413ddd-0d0e-40c3-9c76-b5ce323218ec
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: 55a224b9fec672cbb240831ba2ea850a90dbe10c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: b9ac40997cd2d9962d067d181a66e9614de477d1
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47656800"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71297691"
 ---
 # <a name="-bitwise-not-ssis-expression"></a>~ (ビット演算 Not) (SSIS 式)
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   整数の否定のビット演算を実行します。 この演算子は、符号付きおよび符号なし整数データ型に適用できます。  
   
 ## <a name="syntax"></a>構文  
@@ -60,6 +63,6 @@ ms.locfileid: "47656800"
   
 ## <a name="see-also"></a>参照  
  [演算子の優先順位と結合規則](../../integration-services/expressions/operator-precedence-and-associativity.md)   
- [演算子 (SSIS 式)](../../integration-services/expressions/operators-ssis-expression.md)  
+ [演算子 &#40;SSIS 式&#41;](../../integration-services/expressions/operators-ssis-expression.md)  
   
   

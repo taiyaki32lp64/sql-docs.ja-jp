@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 11233b96-e05c-4221-9aed-5f20944b0f1c
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 232b7c739e274ba9252c14dd28e739934cbd42e6
-ms.sourcegitcommit: bfa10c54e871700de285d7f819095d51ef70d997
+ms.openlocfilehash: 1890d554367b2a21bcd46a6d2ebddf00013957e6
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/14/2019
-ms.locfileid: "54257047"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67926423"
 ---
 # <a name="visual-c-ado-programming"></a>Visual C++ での ADO プログラミング
 ADO の API リファレンスには、ADO アプリケーション プログラミング インターフェイス (API)、Microsoft Visual Basic に似た構文を使用しての機能について説明します。 ADO のプログラマが Visual Basic、Visual C などのさまざまな言語を使用する対象とするユーザーには、すべてのユーザーが、(としない場合、 **#import**ディレクティブ)、および Visual j (ADO と WFC クラス パッケージ) にします。  
@@ -65,7 +64,7 @@ objectPtr->PutProperty(value);      // set property value
 variable = objectPtr->GetProperty;  // get property value  
 ```
   
- コンパイラは、適切な生成**取得**_-_、**配置**-、または**PutRef**_プロパティ_代替構文は宣言されており、プロパティがされているかどうかに基づいて、呼び出しの読み取りまたは書き込み。  
+ コンパイラは、適切な生成**取得** _-_ 、**配置**-、または**PutRef**_プロパティ_代替構文は宣言されており、プロパティがされているかどうかに基づいて、呼び出しの読み取りまたは書き込み。  
   
  **__Declspec(property...)** コンパイラ ディレクティブでのみ宣言できます**取得**、**配置**、または**取得**と**配置**関数の代替構文。 読み取り専用操作のみがある、**取得**宣言です書き込み専用の操作のみが、**配置**宣言です。 操作はどちらも読み取りおよび書き込みの両方がある**取得**と。**配置**宣言します。  
   
@@ -85,7 +84,7 @@ variable = objectPtr->GetProperty;  // get property value
 collectionPtr->Item[index];  
 ```
   
- などのフィールドに値を割り当てる、 **Recordset**という名前のオブジェクト **_rs_** から派生した、**作成者**のテーブル**pubs**データベース。 使用して、 **Item()** 、3 番目にアクセスするプロパティ**フィールド**の**Recordset**オブジェクト**フィールド**コレクション (コレクションのインデックスはから0;3 番目のフィールドがという名前の想定 **_au\_fname_**)。 呼び出して、 **Value()** メソッドを**フィールド**文字列値を代入するオブジェクト。  
+ などのフィールドに値を割り当てる、 **Recordset**という名前のオブジェクト **_rs_** から派生した、**作成者**のテーブル**pubs**データベース。 使用して、 **Item()** 、3 番目にアクセスするプロパティ**フィールド**の**Recordset**オブジェクト**フィールド**コレクション (コレクションのインデックスはから0;3 番目のフィールドがという名前の想定 **_au\_fname_** )。 呼び出して、 **Value()** メソッドを**フィールド**文字列値を代入するオブジェクト。  
   
  これで表現できる Visual Basic では、次の 4 つの方法 (Visual Basic に最後の 2 つのフォームが固有; 他の言語には、相当するはありません)。  
   
@@ -103,7 +102,7 @@ rs->Fields->GetItem(long(2))->PutValue("value");
 rs->Fields->GetItem("au_fname")->PutValue("value");  
 ```
   
- - または - (の代替構文を**値**もプロパティが表示されます)  
+ \- または - (の代替構文を**値**もプロパティが表示されます)  
   
 ```cpp
 rs->Fields->Item[long(2)]->Value = "value";  
@@ -223,7 +222,7 @@ Dim rst As ADODB.Recordset
 Dim rst As New ADODB.Recordset  
 ```
   
- - または -  
+ \- または -  
   
 ```vb
 Dim rst As ADODB.Recordset  
@@ -242,14 +241,14 @@ _RecordsetPtr  rs;
 _RecordsetPtr  rs("ADODB.Recordset");  
 ```
   
- - または -  
+ \- または -  
   
 ```cpp
 _RecordsetPtr  rs;  
 rs.CreateInstance("ADODB.Recordset");  
 ```
   
- - または -  
+ \- または -  
   
 ```cpp
 _RecordsetPtr  rs;  
@@ -293,7 +292,7 @@ _variant_t  vtMissingYours(DISP_E_PARAMNOTFOUND, VT_ERROR); 
 Dim VariableName As Variant  
 ```
   
- Visual C での型として変数を宣言 **_variant_t**します。 いくつかの概略図 **_variant_t**宣言を以下に示します。  
+ ビジュアルでC++、型として変数を宣言 **_variant_t**します。 いくつかの概略図 **_variant_t**宣言を以下に示します。  
   
 > [!NOTE]
 >  これらの宣言は、独自のプログラムでコーディングする内容の大まかなアイデアだけを提供します。 詳細については、以下の例と Visual c ドキュメントを参照してください。  
@@ -325,7 +324,7 @@ Dim fld As ADODB.Field
 End Sub  
 ```
   
- Visual C の例を次に示しますを使用して、 **SafeArray**と併用、 **_variant_t**します。  
+ 次のビジュアルC++使用例を示します、 **SafeArray**と併用、 **_variant_t**します。  
   
 #### <a name="notes"></a>メモ  
  次のノートは、コード例ではコメント部分に対応します。  

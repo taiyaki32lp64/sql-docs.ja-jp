@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - mining structures [Analysis Services], processing
@@ -13,12 +12,12 @@ ms.assetid: 4162f33e-c23f-4293-8905-271781e45fa4
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 50882400f085d00f8e9fd13e1e1532cf62105947
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 92793adcf2fd04b1dac0c26933c1d5969a31f1a5
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48111662"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66083107"
 ---
 # <a name="process-a-mining-structure"></a>マイニング構造の処理
   マイニング構造に関連付けられているマイニング モデルを参照したり使用したりする前に、 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] プロジェクトを配置してマイニング構造とマイニング モデルを処理する必要があります。 また、マイニング構造またはマイニング モデルに変更を加えると、それらを再配置し、処理するように求められます。 **のデータ マイニング デザイナーの** [マイニング構造] [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] タブで構造を処理すると、関連するモデルもすべて処理されます。  
@@ -29,7 +28,7 @@ ms.locfileid: "48111662"
   
 -   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]  
   
--   XMLA: Process コマンド  
+-   XMLA:Process コマンド  
   
  個々のモデルを処理する方法の詳細については、「 [マイニング モデルの処理](process-a-mining-model.md)」を参照してください。  
   

@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: e0efc0b3-4da4-45fc-9e8d-5edd9da7a42d
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 6b70f122de7d13982b00b227a2cbe9b7e9d0e14c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ad7db3b5ffbbc872a093f468e7a8091c8cba58b5
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47696982"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67979046"
 ---
 # <a name="gettime-method-javalangstring-sqlserverresultset"></a>getTime (java.lang.String) メソッド (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -41,7 +40,7 @@ public java.sql.Time getTime(java.lang.String columnName)
  列名を含む**文字列**です。  
   
 ## <a name="return-value"></a>戻り値  
- 時刻のオブジェクト。  
+ 時刻オブジェクト。  
   
 ## <a name="exceptions"></a>例外  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
@@ -52,7 +51,7 @@ public java.sql.Time getTime(java.lang.String columnName)
  このメソッドでは、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] の datetime または smalldatetime データ型の有効な時間部分が返されます。日付部分は、Java のベースラインの日付である 1970/01/01 に設定されます。  
   
 ## <a name="see-also"></a>参照  
- [getTime メソッド&#40;SQLServerResultSet&#41;](../../../connect/jdbc/reference/gettime-method-sqlserverresultset.md)   
+ [getTime メソッド &#40;SQLServerResultSet&#41;](../../../connect/jdbc/reference/gettime-method-sqlserverresultset.md)   
  [SQLServerResultSet のメンバー](../../../connect/jdbc/reference/sqlserverresultset-members.md)   
  [SQLServerResultSet クラス](../../../connect/jdbc/reference/sqlserverresultset-class.md)  
   

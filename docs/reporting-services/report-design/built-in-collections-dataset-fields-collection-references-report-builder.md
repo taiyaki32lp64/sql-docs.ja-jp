@@ -2,18 +2,18 @@
 title: データセット フィールド コレクションの参照 (レポート ビルダーおよび SSRS) | Microsoft Docs
 ms.date: 03/01/2017
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: report-design
 ms.topic: conceptual
 ms.assetid: 006c6bd3-d776-4c20-9092-32e40688ac49
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 888f5e89b86d8fec157bf2f4c8c1893875ca048e
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 91550f60a7fe056a3df68ba9c4006e8359ff2c73
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56285510"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65581818"
 ---
 # <a name="built-in-collections---dataset-fields-collection-references-report-builder"></a>組み込みコレクション - データセット フィールド コレクションの参照 (レポート ビルダー)
   レポート内の各データセットには、1 つのフィールド コレクションが含まれます。 フィールド コレクションは、データセット クエリによって指定されるフィールドと、ユーザーが作成する追加の計算フィールドのセットです。 データセットを作成すると、フィールド コレクションが **[レポート データ]** ペインに表示されます。  
@@ -38,7 +38,7 @@ ms.locfileid: "56285510"
  `=IIF(IsNothing(Fields!MiddleName.Value),"No Middle Name",Fields!MiddleName.Value)`  
   
 ### <a name="detecting-missing-fields-for-dynamic-queries-at-run-time"></a>実行時の動的クエリにおける存在しないフィールドの検出  
- 既定では、Fields コレクションのアイテムには 2 つのプロパティがあります。Value と IsMissing です。 IsMissing プロパティは、デザイン時にデータセットに対して定義されているフィールドが、実行時に取得されたフィールドに存在するかどうかを示します。 たとえば、クエリには、入力パラメーターによって結果セットの異なるストアド プロシージャを呼び出すものや、テーブル定義が変更された場合に `SELECT * FROM` *\<table>* を照会するものがあります。  
+ 既定では、フィールド コレクションのアイテムには、Value および IsMissing という 2 つのプロパティがあります。 IsMissing プロパティは、デザイン時にデータセットに対して定義されているフィールドが、実行時に取得されたフィールドに存在するかどうかを示します。 たとえば、クエリには、入力パラメーターによって結果セットの異なるストアド プロシージャを呼び出すものや、テーブル定義が変更された場合に `SELECT * FROM` *\<table>* を照会するものがあります。  
   
 > [!NOTE]  
 >  IsMissing は、任意の種類のデータ ソースに関して、デザイン時と実行時の間にデータセット スキーマに加えられた変更を検出します。 IsMissing は、多次元キューブで空のメンバーを検出するために使用することはできません。また、 **EMPTY** および **NON EMPTY**という MDX クエリ言語の概念とは関連していません。  

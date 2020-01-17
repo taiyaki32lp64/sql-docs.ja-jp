@@ -10,15 +10,15 @@ helpviewer_keywords:
 - NULL function
 - null values [Integration Services]
 ms.assetid: df144237-3fbb-41ac-8624-efd92b6522b9
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 379706092613ae7fa3f53fccb493bf756d656b01
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: f4a796b0ab746468ffef3cab5b3480e73b4cf637
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52823296"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62768828"
 ---
 # <a name="null-ssis-expression"></a>NULL (SSIS 式)
   要求されたデータ型の NULL 値を返します。  
@@ -52,7 +52,7 @@ NULL(typespec)
 |DT_TEXT|*codepage*|(DT_TEXT,1252) は、1252 コード ページを使用して、値を DT_TEXT データ型にキャストします。|  
   
 ## <a name="expression-examples"></a>式の例  
- これらの例では、データ型の null 値が返されます。DT_STR、DT_DATE、および DT_BOOL します。  
+ これらの例は、DT_STR、DT_DATE、DT_BOOL データ型の NULL 値を返します。  
   
 ```  
 NULL(DT_STR,10,1252)  

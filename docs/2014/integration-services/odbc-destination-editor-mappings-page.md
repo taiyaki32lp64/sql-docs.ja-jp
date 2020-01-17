@@ -4,21 +4,20 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.ssis.designer.odbcdest.columns.f1
 ms.assetid: 8fa05dd4-316c-44ed-8383-e6e9ea1d3994
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: e39bb53ab0333f11d916f24d7dff3a00b78a6dce
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 6f5deb525654007248fbc5c97c07e3c368654ad5
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48150752"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66057226"
 ---
 # <a name="odbc-destination-editor-mappings-page"></a>[ODBC 変換先エディター]\([マッピング] ページ)
   **[ODBC 入力先エディター]** ダイアログ ボックスの **[マッピング]** ページを使用すると、入力列を変換先列にマップできます。  
@@ -40,7 +39,7 @@ ms.locfileid: "48150752"
  使用できるすべての変換先列を表示します (マップ済みの列とマップされていない列を両方とも含む)。  
   
 ## <a name="see-also"></a>参照  
- [Odbc 入力先エディター&#40;接続マネージャー ページ&#41;](../../2014/integration-services/odbc-destination-editor-connection-manager-page.md)   
- [Odbc 入力先エディター&#40;エラー出力 ページ&#41;](../../2014/integration-services/odbc-destination-editor-error-output-page.md)  
+ [ODBC 変換先エディター &#40;[接続マネージャー] ページ&#41;](../../2014/integration-services/odbc-destination-editor-connection-manager-page.md)   
+ [ODBC 変換先エディター &#40;[エラー出力] ページ&#41;](../../2014/integration-services/odbc-destination-editor-error-output-page.md)  
   
   

@@ -15,14 +15,14 @@ helpviewer_keywords:
 - locking [Reporting Services]
 - multiple Web service methods
 ms.assetid: 86435534-c9fe-4b49-b88c-7fb6d21976b0
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 110f374bb5cc557bc80cc2bf63d8582e1b85d4d6
-ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: bcafb334e32a1b98d10c57d8f31fe321d0b7f182
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51813845"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62991485"
 ---
 # <a name="batching-methods"></a>メソッドのバッチ処理
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] の SOAP ヘッダーを使用することによって、1 つの操作に複数の Web サービス メソッドを含めることができます。 メソッドは、1 つのデータベース トランザクションのスコープ内で、呼び出された順序で実行されます。  

@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 34698910-64b9-41d8-8531-9de12f2b1e32
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: b1b88a0128af77a046f7c5c2352c709da30bd623
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 1109ef6cae68fb2edb4ab3867971064637a6385f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47605900"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67949117"
 ---
 # <a name="type-property-ado-md"></a>Type プロパティ (ADO MD)
 現在の型を示す[メンバー](../../../ado/reference/ado-md-api/member-object-ado-md.md)します。  

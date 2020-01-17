@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 51aa99be-d5ca-46ac-8b3f-1b03ce4f0b2a
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 45853fc31ef6e18c3d64afacf9d5e998e6fc7855
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e68bbb558a3cc7fef9428fd63a4fecc4881c997d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47714610"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67920618"
 ---
 # <a name="appendchunk-and-getchunk-methods-example-vc"></a>AppendChunk および GetChunk メソッドの例 (VC++)
 この例では、 [AppendChunk](../../../ado/reference/ado-api/appendchunk-method-ado.md)と[GetChunk](../../../ado/reference/ado-api/getchunk-method-ado.md)メソッド別のレコードからのデータの画像フィールドを設定します。  
@@ -266,7 +265,7 @@ void PrintProviderError(_ConnectionPtr pConnection) {
 }  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [AppendChunk メソッド (ADO)](../../../ado/reference/ado-api/appendchunk-method-ado.md)   
  [Field オブジェクト](../../../ado/reference/ado-api/field-object.md)   
  [GetChunk メソッド (ADO)](../../../ado/reference/ado-api/getchunk-method-ado.md)

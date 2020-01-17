@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 30179b25-409b-4e23-bc73-2f226657098f
 author: Shamikg
 ms.author: Shamikg
-manager: craigg
-ms.openlocfilehash: 1d610ea44ff29056228d6bf788cba1f74a50db58
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: ed3ab8f05b9f809df99508163d07cb3e1bededa7
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52406089"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68083402"
 ---
 # <a name="connect-to-sql-server-sybasetosql"></a>SQL Server への接続 (SybaseToSQL)
 使用して、 **SQL サーバーへの接続** ダイアログ ボックスのインスタンスに接続する[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]に移行したいです。 アクセスする、 **SQL サーバーへの接続** ダイアログ ボックスで、**ファイル** メニューのをクリックして**SQL サーバーへの接続**します。  
@@ -24,7 +23,7 @@ ms.locfileid: "52406089"
 **サーバー名**  
 入力するかに接続する SQL Server のインスタンスを選択します。 既定では、最後に接続されているインスタンスが表示されます。  
   
--   ローカル コンピューターの既定のインスタンスに接続する場合、いずれかを入力する**localhost**またはドット (**.**)。  
+-   ローカル コンピューターの既定のインスタンスに接続する場合、いずれかを入力する**localhost**またはドット ( **.** )。  
   
 -   別のコンピューターで既定のインスタンスに接続する場合は、コンピューターの名前を入力します。  
   
@@ -36,7 +35,7 @@ ms.locfileid: "52406089"
 **[データベース]**  
 オブジェクトとデータを移行するデータベースを指定します。 このオプションに再接続する場合は使用できません[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]します。  
   
-**[認証]**  
+**\[認証]**  
 接続に使用される認証方法を選択[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]します。 現在の Windows アカウントを使用するには、Windows 認証を選択します。 指定する、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]ログインとパスワードで、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]認証します。  
   
 **ユーザー名**  

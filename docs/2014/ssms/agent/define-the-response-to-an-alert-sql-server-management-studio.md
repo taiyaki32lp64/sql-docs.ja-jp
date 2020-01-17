@@ -15,11 +15,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 6ac3e9ee443f0c10a39128fc1d6aab6813ec4f4d
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52795864"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62524072"
 ---
 # <a name="define-the-response-to-an-alert-sql-server-management-studio"></a>警告への応答の定義 (SQL Server Management Studio)
   このトピックでは、[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] または [!INCLUDE[tsql](../../includes/tsql-md.md)] を使用して、[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] で [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェントの警告に対して [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] がどのように応答するかを定義する方法について説明します。  
@@ -63,13 +63,13 @@ ms.locfileid: "52795864"
   
 3.  プラス記号をクリックして **[警告]** フォルダーを展開します。  
   
-4.  応答を定義する警告を右クリックし、**[プロパティ]** を選択します。  
+4.  応答を定義する警告を右クリックし、 **[プロパティ]** を選択します。  
   
-5.  [_alert_name_ **警告のプロパティ**] ダイアログ ボックスで、**[ページの選択]** から **[応答]** を選択します。  
+5.  [_alert_name_ **警告のプロパティ**] ダイアログ ボックスで、 **[ページの選択]** から **[応答]** を選択します。  
   
 6.  **[ジョブの実行]** チェック ボックスをオンにし、 **[ジョブの実行]** チェック ボックスの下に表示されている一覧から、警告の発生時に実行するジョブを選択します。 **[新しいジョブ]** をクリックすることで、新しいジョブを作成できます。 **[ジョブの表示]** をクリックすると、ジョブに関するより詳しい情報を表示できます。 **[新しいジョブ]** ダイアログ ボックスと [**ジョブのプロパティ** _job_name_] ダイアログ ボックスで使用できるオプションの詳細については、「[ジョブの作成](create-a-job.md)」と「[ジョブの表示](view-a-job.md)」を参照してください。  
   
-7.  警告がアクティブになったときにオペレーターに通知する場合は、 **[オペレーターに通知する]** チェック ボックスをオンにします。 **演算子一覧**、オペレーターまたはオペレーターに通知するための次の方法の 1 つ以上選択します。**電子メール**、**ポケットベル**、または**Net Send**します。 **[新しいオペレーター]** をクリックすることで、新しいオペレーターを作成できます。 **[オペレーターの表示]** をクリックすることで、オペレーターに関するより詳しい情報を表示できます。 **[新しいオペレーター]** ダイアログ ボックスと **[オペレーターのプロパティの表示]** ダイアログ ボックスで使用できるオプションの詳細については、「 [Create an Operator](create-an-operator.md) 」と「 [View Information About an Operator](view-information-about-an-operator.md)」を参照してください。  
+7.  警告がアクティブになったときにオペレーターに通知する場合は、 **[オペレーターに通知する]** チェック ボックスをオンにします。 **[オペレーター一覧]** で、次のオペレーターに通知する方法を選択します (複数選択可)。 **[電子メール]** 、 **[ポケットベル]** 、または **[Net Send]** 。 **[新しいオペレーター]** をクリックすることで、新しいオペレーターを作成できます。 **[オペレーターの表示]** をクリックすることで、オペレーターに関するより詳しい情報を表示できます。 **[新しいオペレーター]** ダイアログ ボックスと **[オペレーターのプロパティの表示]** ダイアログ ボックスで使用できるオプションの詳細については、「 [Create an Operator](create-an-operator.md) 」と「 [View Information About an Operator](view-information-about-an-operator.md)」を参照してください。  
   
 8.  完了したら、 **[OK]** をクリックします。  
   

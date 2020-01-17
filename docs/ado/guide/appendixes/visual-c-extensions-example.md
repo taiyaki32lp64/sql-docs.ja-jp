@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 9739c278-582c-402b-a158-7f68a1b2c293
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 809a6706ccf75a66ec7b6bf7eefed969221b9624
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: 6d3517f40b15081ca2ee4621d07455cc13bb577d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53214560"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67926392"
 ---
 # <a name="visual-c-extensions-example"></a>Visual C++ 拡張機能の例
 このプログラムは、値のフィールドから取得および C と C++ の変数に変換する方法を示します。  
@@ -51,7 +50,7 @@ _COM_SMARTPTR_TYPEDEF(IADORecordBinding, __uuidof(IADORecordBinding));
 IADORecordBindingPtr picRs(pRs);  
 ```  
   
- Visual C 拡張によって実装されるため、**レコード セット**オブジェクト、スマート ポインター コンス トラクター`picRs`は、_`RecordsetPtr`ポインター、`pRs`します。 コンス トラクター呼び出し`QueryInterface`を使用して`pRs`を検索する、`IADORecordBinding`インターフェイス。  
+ ため、ビジュアルC++で拡張機能の実装、**レコード セット**オブジェクト、スマート ポインター コンス トラクター`picRs`は、_`RecordsetPtr`ポインター、 `pRs`。 コンス トラクター呼び出し`QueryInterface`を使用して`pRs`を検索する、`IADORecordBinding`インターフェイス。  
   
 ```cpp
 // Visual_Cpp_Extensions_Example.cpp  

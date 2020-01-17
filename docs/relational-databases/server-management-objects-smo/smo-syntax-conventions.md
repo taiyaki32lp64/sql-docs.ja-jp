@@ -1,5 +1,5 @@
 ---
-title: SMO 構文表記規則。マイクロソフトのドキュメント
+title: SMO 構文表記規則 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -13,21 +13,20 @@ helpviewer_keywords:
 - syntax [SMO]
 - SQL Server Management Objects, syntax conventions
 ms.assetid: 27aa179a-f3ee-4c70-9e7b-e26dba28bc3c
-author: stevestein
-ms.author: sstein
-manager: craigg
+author: markingmyname
+ms.author: maghan
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 8b43cc5701adb283f44b6407a436d5066831a0aa
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e6e5c8f9d87fe511964d5657c57c70fe4379225e
+ms.sourcegitcommit: f3f83ef95399d1570851cd1360dc2f072736bef6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47810960"
+ms.lasthandoff: 08/13/2019
+ms.locfileid: "70148569"
 ---
 # <a name="smo-syntax-conventions"></a>SMO 構文表記規則
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 管理オブジェクト (SMO) の表記規則に基づいてで使用されている[!INCLUDE[msCoName](../../includes/msconame-md.md)]Visual Studio .NET の参考資料です。  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]管理オブジェクト (SMO) の表記規則は、Visual Studio .net [!INCLUDE[msCoName](../../includes/msconame-md.md)]のリファレンス資料で使用されている表記規則に基づいています。  
   
 |表記|使用目的|  
 |----------------|--------------|  

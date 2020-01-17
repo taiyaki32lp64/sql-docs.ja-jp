@@ -12,16 +12,15 @@ helpviewer_keywords:
 ms.assetid: 326dc32a-30e5-4f91-85ab-84663db41279
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 3fb73349f3d22c04d46d995ec68e828c8e6f5999
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 93e30d470e074c119517621f3bb12d8f06c942ec
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47679660"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67949743"
 ---
 # <a name="hierarchies-collection-properties-methods-and-events"></a>Hierarchies コレクションのプロパティ、メソッド、およびイベント
-## <a name="properties"></a>[プロパティ]  
+## <a name="properties"></a>Properties  
  [Count プロパティ](../../../ado/reference/ado-api/count-property-ado.md)  
   
  [項目のプロパティ](../../../ado/reference/ado-api/item-property-ado.md)  
@@ -32,5 +31,5 @@ ms.locfileid: "47679660"
 ## <a name="events"></a>イベント  
  [なし] :  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [Hierarchies コレクション (ADO MD)](../../../ado/reference/ado-md-api/hierarchies-collection-ado-md.md)

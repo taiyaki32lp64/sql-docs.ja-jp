@@ -15,13 +15,12 @@ helpviewer_keywords:
 - MSOLEDBSQL, ADO
 author: pmasl
 ms.author: pelopes
-manager: craigg
-ms.openlocfilehash: 871887e2896f2594dddda18d2ab342d4c222612a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b7e8ab700404aee32140bc935443e5911e4a56db
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47711200"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67989237"
 ---
 # <a name="using-ado-with-ole-db-driver-for-sql-server"></a>OLE DB Driver for SQL Server での ADO の使用
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -30,19 +29,19 @@ ms.locfileid: "47711200"
 
   ADO (ActiveX Data Object) を使用する既存のアプリケーションで、MARS (複数のアクティブな結果セット)、クエリ通知、UDT (ユーザー定義型)、新しい **xml** データ型など、[!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] で導入された新機能を利用するには、データ アクセス プロバイダーとして OLE DB Driver for SQL Server を使用する必要があります。  
   
- ADO から [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] の最新バージョンの新機能を使用できるように、OLE DB Driver for SQL Server を機能強化し、OLE DB の中核となる機能を拡張しました。 ADO アプリケーションはこのような機能強化により、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] の新しい機能、および [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] で導入された 2 つのデータ型 (**xml** と **udt**) を使用できるようになります。 また、この機能強化では、**varchar**、**nvarchar**、**varbinary** の各データ型に対する機能も強化されています。 OLE DB Driver for SQL Server では、ADO アプリケーションで使用するために、SSPROP_INIT_DATATYPECOMPATIBILITY 初期化プロパティが DBPROPSET_SQLSERVERDBINIT プロパティ セットに追加されています。このため、新しいデータ型は ADO との互換性を確保する方法で公開されます。 さらに、OLE DB Driver for SQL Server でもという名前の新しい接続文字列キーワードが定義**DataTypeCompatibility**接続文字列に設定されています。  
+ ADO から [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] の最新バージョンの新機能を使用できるように、OLE DB Driver for SQL Server を機能強化し、OLE DB の中核となる機能を拡張しました。 ADO アプリケーションはこのような機能強化により、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] の新しい機能、および [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] で導入された 2 つのデータ型 (**xml** と **udt**) を使用できるようになります。 また、この機能強化では、**varchar**、**nvarchar**、**varbinary** の各データ型に対する機能も強化されています。 OLE DB Driver for SQL Server では、ADO アプリケーションで使用するために、SSPROP_INIT_DATATYPECOMPATIBILITY 初期化プロパティが DBPROPSET_SQLSERVERDBINIT プロパティ セットに追加されています。このため、新しいデータ型は ADO との互換性を確保する方法で公開されます。 また、SQL Server の OLE DB ドライバーでは、接続文字列で設定された**DataTypeCompatibility**という名前の新しい接続文字列キーワードも定義されています。  
 
 > [!NOTE]  
->  既存の ADO アプリケーションは、SQLOLEDB プロバイダーを使用して、XML、UDT、および大きな値のテキストやバイナリのフィールド値にアクセスして更新できます。 サイズの大きな値をとる新しいデータ型 **varchar(max)**、**nvarchar(max)**、**varbinary(max)** はそれぞれ、**adLongVarChar**、**adLongVarWChar**、**adLongVarBinary** という ADO 型として返されます。 XML 列は **adLongVarChar** として返され、UDT 列は **adVarBinary** として返されます。 ただし、OLE DB Driver for SQL Server (MSOLEDBSQL) SQLOLEDB ではなくを使用する場合に設定することを確認、 **DataTypeCompatibility**キーワードを「80」、新しいデータ型が ADO データ型に正しく対応するようにします。  
+>  既存の ADO アプリケーションは、SQLOLEDB プロバイダーを使用して、XML、UDT、および大きな値のテキストやバイナリのフィールド値にアクセスして更新できます。 サイズの大きな値をとる新しいデータ型 **varchar(max)** 、**nvarchar(max)** 、**varbinary(max)** はそれぞれ、**adLongVarChar**、**adLongVarWChar**、**adLongVarBinary** という ADO 型として返されます。 XML 列は **adLongVarChar** として返され、UDT 列は **adVarBinary** として返されます。 ただし、SQLOLEDB の代わりに OLE DB Driver for SQL Server (MSOLEDBSQL) を使用する場合は、新しいデータ型が ADO データ型に正しくマップされるように、 **DataTypeCompatibility**キーワードを "80" に設定する必要があります。  
 
-## <a name="enabling-ole-db-driver-for-sql-server-from-ado"></a>ADO から SQL Server の OLE DB ドライバーを有効にします。  
+## <a name="enabling-ole-db-driver-for-sql-server-from-ado"></a>ADO からの SQL Server の OLE DB ドライバーの有効化  
  OLE DB Driver for SQL Server を使用できるようにするには、ADO アプリケーションで、接続文字列に次のキーワードを実装する必要があります。  
 
 -   `Provider=MSOLEDBSQL`  
 
 -   `DataTypeCompatibility=80`  
 
- 接続文字列 for SQL Server、OLE DB ドライバーでサポートされているキーワードの ADO の詳細についてを参照してください[OLE DB Driver for SQL Server での接続文字列キーワードの使用](../../oledb/applications/using-connection-string-keywords-with-oledb-driver-for-sql-server.md)します。  
+ OLE DB Driver for SQL Server でサポートされている ADO 接続文字列キーワードについて詳しくは、「[OLE DB Driver for SQL Server での接続文字列キーワードの使用](../../oledb/applications/using-connection-string-keywords-with-oledb-driver-for-sql-server.md)」をご覧ください。  
 
  次に、MARS 機能の有効化など、OLE DB Driver for SQL Server を使用した操作で利用できる ADO 接続文字列を作成する例を示します。  
 
@@ -59,7 +58,7 @@ con.Open
 ```  
 
 ## <a name="examples"></a>使用例  
- 次のセクションでは、for SQL Server OLE DB ドライバーを ADO を使用する方法の例を示します。  
+ 次のセクションでは、SQL Server の OLE DB ドライバーで ADO を使用する方法の例について説明します。  
 
 ### <a name="retrieving-xml-column-data"></a>XML 列データの取得  
  この例では、レコードセットを使用し、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] **AdventureWorks** サンプル データベースの XML 列からデータを取得および表示します。  

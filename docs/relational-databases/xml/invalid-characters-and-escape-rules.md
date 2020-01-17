@@ -11,15 +11,14 @@ helpviewer_keywords:
 - FOR XML clause, invalid characters
 - FOR XML clause, escape rules
 ms.assetid: f2e9b997-f400-4963-b225-59d46c6b93e8
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: 3203b5ce4ec033abaa008f8fca0cdc7021678e05
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: MightyPen
+ms.author: genemi
+ms.openlocfilehash: 35c3537371df1cb9fc83976605b65fdcfedd1000
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47735640"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68026650"
 ---
 # <a name="invalid-characters-and-escape-rules"></a>無効な文字とエスケープの規則
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

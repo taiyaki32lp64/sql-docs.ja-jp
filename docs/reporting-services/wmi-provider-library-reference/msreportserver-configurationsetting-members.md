@@ -2,7 +2,7 @@
 title: MSReportServer_ConfigurationSetting メンバー | Microsoft Docs
 ms.date: 03/20/2017
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: wmi-provider-library-reference
 ms.topic: conceptual
 apiname:
@@ -14,14 +14,14 @@ helpviewer_keywords:
 - WMI provider [Reporting Services], MSReportServer_ConfigurationSetting class
 - MSReportServer_ConfigurationSetting class
 ms.assetid: 5e21a53a-a2f8-4b35-a8d9-5483519e3857
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: e956eaac01b6cb301eb477c28374ff0fab57484d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 134c115e48bd578f794ecce28d770ce955622f0b
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47616150"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65569162"
 ---
 # <a name="msreportserverconfigurationsetting-members"></a>MSReportServer_ConfigurationSetting メンバー
   MSReportServer_ConfigurationSetting クラスには、次のプロパティとメソッドが含まれています。  

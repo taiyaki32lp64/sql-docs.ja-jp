@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: ee3f5c08-0583-4f3b-8354-ef71b6086a7e
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 8d75c374a7d9d57483dd56e34b51fcb6d89e1b52
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 05cf381ccbb8c0747db88259acfb4ba218d3e0ae
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52504090"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68135011"
 ---
 # <a name="level-1-interface-conformance"></a>レベル 1 インターフェイスの適合性
 レベル 1 インターフェイスの適合性レベルには、コア インターフェイスへの準拠レベルの機能に加えて、OLTP のリレーショナル DBMS で通常利用できるトランザクションなどの追加機能が含まれています。 レベル 1 インターフェイスに準拠のドライバーにより、アプリケーションは、コア インターフェイスの適合性レベルで機能に加え、次の操作します。  

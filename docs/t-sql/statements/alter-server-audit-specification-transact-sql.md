@@ -19,16 +19,15 @@ helpviewer_keywords:
 ms.assetid: 9cac288b-940e-4c16-88d6-de06aeed2b47
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: 63b42ffb940e4e456cb1b000477914abd73930fb
-ms.sourcegitcommit: c6e71ed14198da67afd7ba722823b1af9b4f4e6f
+ms.openlocfilehash: 7bc8d1e1a84ddacbffe5b830e1b5931eb94a5f14
+ms.sourcegitcommit: a97d551b252b76a33606348082068ebd6f2c4c8c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/16/2019
-ms.locfileid: "54326463"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70745330"
 ---
 # <a name="alter-server-audit-specification-transact-sql"></a>ALTER SERVER AUDIT SPECIFICATION (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
 
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Audit 機能を使用して、サーバー監査仕様オブジェクトを変更します。 詳しくは、「[SQL Server Audit &#40;データベース エンジン&#41;](../../relational-databases/security/auditing/sql-server-audit-database-engine.md)」を参照してください。  
   
@@ -66,7 +65,7 @@ ALTER SERVER AUDIT SPECIFICATION audit_specification_name
 ## <a name="permissions"></a>アクセス許可  
  ALTER ANY SERVER AUDIT 権限を持つユーザーは、サーバー監査仕様を変更し、任意の監査にバインドできます。  
   
- サーバー監査仕様の作成後は、CONTROL SERVER または ALTER ANY SERVER AUDIT 権限を持つプリンシパル、sysadmin アカウント、またはその監査への明示的なアクセス権を持つプリンシパルがその仕様を表示できます。  
+ サーバー監査仕様の作成後は、CONTROL SERVER または ALTER ANY SERVER AUDIT 権限を持つプリンシパル、sysadmin アカウント、またはその監査への明示的なアクセス権を持つプリンシパルによってその仕様を表示できます。  
   
 ## <a name="examples"></a>使用例  
  次の例では、`HIPAA_Audit_Specification` というサーバー監査仕様を作成します。 `HIPAA_Audit` という [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 監査に対して、失敗したログインの監査アクション グループを削除し、データベース オブジェクト アクセスの監査アクション グループを追加します。  

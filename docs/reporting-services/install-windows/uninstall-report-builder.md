@@ -2,17 +2,17 @@
 title: レポート ビルダーをアンインストールする | Microsoft Docs
 ms.date: 05/30/2017
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.topic: conceptual
 ms.assetid: 009538c6-4941-4393-b14b-9144cffdbdaf
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: f543e0c3a12b86eb82ad7cefcdb0dee8e868e218
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: ed8c8eb56d23d03ab77aa7bf7cc3ce3e0553e614
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56292020"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65502661"
 ---
 # <a name="uninstall-report-builder"></a>レポート ビルダーをアンインストールする
 

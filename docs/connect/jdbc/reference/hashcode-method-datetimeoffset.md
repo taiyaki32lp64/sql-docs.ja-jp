@@ -1,5 +1,5 @@
 ---
-title: hashCode (DateTimeOffset) メソッド |Microsoft Docs
+title: ハッシュコードメソッド (DateTimeOffset) |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 1c1724bf-b4ec-4ae0-a1c9-63d3f9198a4c
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: c1e51696a9a1fe0aaf299dc2d057818c0396415e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 3b212fc074d56d0b30790aef09f04a326eafa8d1
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47621480"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67977940"
 ---
 # <a name="hashcode-method-datetimeoffset"></a>hashCode (DateTimeOffset) メソッド
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

@@ -16,14 +16,13 @@ helpviewer_keywords:
 ms.assetid: c900e30d-2fd3-4d5f-98ee-7832f37e79d1
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 6f5665e97e09d8bdaad57a328aae31113f42f15b
-ms.sourcegitcommit: ddb682c0061c2a040970ea88c051859330b8ac00
+ms.openlocfilehash: 6f56e354023c869fb04d296b63ac748abec763e1
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51571141"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68126779"
 ---
 # <a name="sequence-numbers"></a>シーケンス番号
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -58,6 +57,8 @@ ms.locfileid: "51571141"
  シーケンス オブジェクトは、定義に従って番号を生成しますが、その番号がどのように使用されるかについては制御しません。 トランザクションがロールバックされたとき、シーケンス オブジェクトが複数のテーブルで共有されているとき、またはテーブルのシーケンス番号を使用することなくシーケンス番号が割り当てられたときは、非連続的なシーケンス番号がテーブルに挿入される可能性があります。 CACHE オプションを使用してシーケンス番号を作成する際に予期しないシャットダウン (電源障害など) が発生すると、キャッシュ内のシーケンス番号が失われる可能性があります。  
   
  1 つの **ステートメント内で同じシーケンス ジェネレーターを指定する** NEXT VALUE FOR [!INCLUDE[tsql](../../includes/tsql-md.md)] 関数のインスタンスが複数ある場合、これらすべてのインスタンスは、その [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントによって処理される特定の行について同じ値を返します。 この動作は、ANSI 標準と一貫性があります。  
+ 
+ シーケンス番号は、現在のトランザクションの範囲外で生成されます。 シーケンス番号を使用しているトランザクションがコミットまたはロールバックされるかどうかにかかわらず、シーケンス番号は使用されます。 重複の検証は、レコードが完全に設定された後にのみ実行されます。 このため、いくつかのケースでは作成中に同じ番号が複数のレコードに使用されますが、その後重複していると識別されることになります。 このようになったときに他の autonumber 値が後に続くレコードに適用された場合、autonumber 値の間にギャップが生じることがあります。
   
 ## <a name="typical-use"></a>一般的な使用方法  
  -2,147,483,648 ～ 2,147,483,647 まで 1 ずつ増分される整数のシーケンス番号を作成するには、次のステートメントを使用します。  
@@ -270,7 +271,7 @@ WHERE Name LIKE '%nut%' ;
 ```  
   
 ### <a name="f-resetting-the-sequence-number"></a>F. シーケンス番号をリセットする  
- 例 E では、`Samples.IDLabel` のシーケンス番号の最初の 79 個の番号が使用されました  (`AdventureWorks2012` のバージョンによっては結果の数が異なる場合があります)。次のコードを実行すると、後続の 79 個のシーケンス番号 (80 ～ 158) が使用されます。  
+ 例 E では、`Samples.IDLabel` のシーケンス番号の最初の 79 個の番号が使用されました (`AdventureWorks2012` のバージョンによっては結果の数が異なる場合があります)。次のコードを実行すると、後続の 79 個のシーケンス番号 (80 ～ 158) が使用されます。  
   
 ```  
 SELECT NEXT VALUE FOR Samples.IDLabel OVER (ORDER BY Name) AS NutID, ProductID, Name, ProductNumber FROM Production.Product  

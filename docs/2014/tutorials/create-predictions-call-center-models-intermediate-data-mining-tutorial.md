@@ -11,11 +11,11 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: 30f24ab457669f572189d2eb13deca3f672f5e18
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56025413"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63217886"
 ---
 # <a name="creating-predictions-for-the-call-center-models-intermediate-data-mining-tutorial"></a>コール センター モデルの予測の作成 (中級者向けデータ マイニング チュートリアル)
   シフト、オペレーターの数、電話、およびサービス グレードの間の相互作用について学習した後は、ビジネス分析および計画に使用できる予測クエリを作成します。 最初に、調査モデルに対していくつかの予測を作成していくつかの仮定をテストします。 次に、ロジスティック回帰モデルを使用して一括予測を作成します。  
@@ -150,7 +150,7 @@ ms.locfileid: "56025413"
   
  次の表に、各シフトのサンプルの結果を示します。  
   
-|shift キー|WageType|Predicted Service Grade|確率|  
+|Shift|WageType|Predicted Service Grade|確率|  
 |-----------|--------------|-----------------------------|-----------------|  
 |AM|holiday|0.165|0.377520666|  
 |midnight|holiday|0.105|0.364105573|  

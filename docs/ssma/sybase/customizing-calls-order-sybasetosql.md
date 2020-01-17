@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 47f160ce-f8f2-489e-9c3a-690c9fa25259
 author: Shamikg
 ms.author: Shamikg
-manager: craigg
-ms.openlocfilehash: df1608fd078aa4c95bd50249eef59d4650a4889f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 68aaaf9db4b2376a1c950bc4c2b463bd2b7b6391
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47744520"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68029335"
 ---
 # <a name="customizing-calls-order-sybasetosql"></a>呼び出し順序のカスタマイズ (SybaseToSQL)
 この手順では、テストするオブジェクトが呼び出される順序を選択します。  
@@ -28,6 +27,6 @@ ms.locfileid: "47744520"
 ## <a name="next-step"></a>次の手順  
 [テスト_ケースの準備の終了&#40;SybaseToSQL&#41;](../../ssma/sybase/finishing-test-case-preparation-sybasetosql.md)  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
 [移行されたデータベース オブジェクトのテスト&#40;SybaseToSQL&#41;](../../ssma/sybase/testing-migrated-database-objects-sybasetosql.md)  
   

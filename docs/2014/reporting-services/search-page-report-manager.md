@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 ms.assetid: 51ffdc07-e1b9-4ed7-acb3-dd98d7cce273
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 51f062efce64d7e8f29e156c51b2972624f46d5e
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 12413c103230d8c085a9701e3fb83db15135895a
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56037355"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66102256"
 ---
 # <a name="search-page-report-manager"></a>[検索] ページ (レポート マネージャー)
   レポート、リンク レポート、レポート モデル、共有データ ソース、フォルダー、またはリソースに対して指定された検索操作の結果を表示するには、[検索結果] ページを使用します。 検索結果はアルファベット順に表示されます。 型、名前、または説明で並べ替えることができます。  

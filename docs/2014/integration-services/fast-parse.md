@@ -4,21 +4,20 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords:
 - fast parse [Integration Services]
 ms.assetid: 6688707d-3c5b-404e-aa2f-e13092ac8d95
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 41e7848dff95d531db44bef2b45b11d7c3c5f85a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: b13ddc498962ca23e6bc1f5e7a10d88af47ff7d6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48054292"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66058869"
 ---
 # <a name="fast-parse"></a>高速解析
   高速解析は、データを解析するための高速で単純なルーチンのセットです。 これらのルーチンはロケール依存型ではなく、日付、時刻、および整数形式のサブセットのみをサポートします。  
@@ -30,7 +29,7 @@ ms.locfileid: "48054292"
   
  パッケージ内のデータ フローでロケール依存型の解析が必要な場合は、高速解析ではなく、標準的な解析を使用することをお勧めします。 たとえば、高速解析では、コンマなど 10 進数の記号が含まれるロケール依存型のデータ、年 - 月 - 日形式以外の日付形式、および通貨記号は認識されません。  
   
- 高速解析では、世紀、年、月など、1 つ以上の日付の部分を暗黙で表記する切り捨て表記は認識されません。 たとえば、高速解析は、世紀を暗黙で示して年月を表記する '**-YYMM**' 形式と、年を暗黙で示して月を表記する '**--MM**' 形式の、どちらも認識しません。 ただし、有効桁数を減らした表記の一部は認識されます。 たとえば、高速解析では、時間と分のみを示す 'hhmm;' 形式と、年のみを示す '**YYYY**' 形式は認識されます。  
+ 高速解析では、世紀、年、月など、1 つ以上の日付の部分を暗黙で表記する切り捨て表記は認識されません。 たとえば、高速解析は、世紀を暗黙で示して年月を表記する ' **-YYMM**' 形式と、年を暗黙で示して月を表記する ' **--MM**' 形式の、どちらも認識しません。 ただし、有効桁数を減らした表記の一部は認識されます。 たとえば、高速解析では、時間と分のみを示す 'hhmm;' 形式と、年のみを示す '**YYYY**' 形式は認識されます。  
   
  高速解析は、列レベルで指定されます。 フラット ファイル ソースおよびデータ変換の変換では、出力列で高速解析を指定できます。 入力と出力には、ロケール依存型の列およびロケール非依存型の列の、両方を含めることができます。  
   

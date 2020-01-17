@@ -4,23 +4,22 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.partprocessingtransformation.advanced.f1
 helpviewer_keywords:
 - Partition Processing Destination Editor
 ms.assetid: 2039ee0f-069d-479d-90b2-2a12481b1162
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: d9b37af7069468bff1235c713f82f0b3444d0683
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: de7c84a463d15e3260cc64c53ba1f82c6808dd93
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48062362"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66056774"
 ---
 # <a name="partition-processing-destination-editor-advanced-page"></a>[パーティション処理変換先エディター] ([詳細設定] ページ)
   **[パーティション処理変換先エディター]** ダイアログ ボックスの **[詳細設定]** ページを使用すると、エラー処理を設定できます。  
@@ -101,8 +100,8 @@ ms.locfileid: "48062362"
  **[...]**  
  エラー ログのパスを選択します。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [Integration Services のエラーおよびメッセージのリファレンス](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [パーティション処理変換先エディター&#40;マッピング ページ&#41;](../../2014/integration-services/partition-processing-destination-editor-mappings-page.md)  
+ [パーティション処理変換先エディター ([マッピング] ページ)](../../2014/integration-services/partition-processing-destination-editor-mappings-page.md)  
   
   

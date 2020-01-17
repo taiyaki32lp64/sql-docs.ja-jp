@@ -1,6 +1,7 @@
 ---
-title: ポリシー管理者にポリシー エラーを通知する警告の構成 | Microsoft Docs
-ms.custom: ''
+title: 管理者にポリシー エラーを通知する警告の構成
+description: SQL Server のポリシー評価でエラーが出たとき、ポリシー管理者に通知する警告を構成する方法について説明します。
+ms.custom: seo-lt-2019
 ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -12,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: e8e60159-d5b0-49d5-91f3-af8e9cb994c1
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: 36c9972d6e0376f344abc290bd4fa0df42245601
-ms.sourcegitcommit: ef6e3ec273b0521e7c79d5c2a4cb4dcba1744e67
+ms.openlocfilehash: 1562a1799e442292d61857d4598da69b4c11c70f
+ms.sourcegitcommit: 035ad9197cb9799852ed705432740ad52e0a256d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51512687"
+ms.lasthandoff: 12/31/2019
+ms.locfileid: "75557819"
 ---
 # <a name="configure-alerts-to-notify-policy-administrators-of-policy-failures"></a>ポリシー管理者にポリシー エラーを通知する警告の構成
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

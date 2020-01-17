@@ -11,18 +11,16 @@ helpviewer_keywords:
 ms.assetid: 5426d87a-d5d9-4984-b211-b07d69e834a2
 author: MightyPen
 ms.author: genemi
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: a9200df4bf60b0eced76bafd0755f4dd8e9a17bb
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 60c0d0b594c8526d5106dd554652dce45f945585
+ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47701890"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73759722"
 ---
-# <a name="sql-server-native-client-error-mssqlserver50000"></a>SQL Server Native Client エラー MSSQLSERVER_50000
+# <a name="sql-server-native-client-error-mssqlserver_50000"></a>SQL Server Native Client エラー MSSQLSERVER_50000
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-[!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
 
     
 ## <a name="details"></a>詳細  
@@ -30,7 +28,7 @@ ms.locfileid: "47701890"
 |||  
 |-|-|  
 |製品名|SQL Server|  
-|製品バージョン|11.0|  
+|[製品バージョン]|11.0|  
 |イベント ID|50000|  
 |イベント ソース|SETUP|  
 |コンポーネント|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client|  

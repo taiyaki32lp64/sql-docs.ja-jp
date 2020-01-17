@@ -12,15 +12,15 @@ helpviewer_keywords:
 - destinations [Integration Services], Excel
 - Excel [Integration Services]
 ms.assetid: 37c07446-1264-4814-b4f5-9c66d333bb24
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 62d9e4fa02be43f28db09228b8c9a70cccc54396
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 84647752eb549bd5d3607637d679e58356597a6b
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53375604"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62827225"
 ---
 # <a name="excel-destination"></a>Excel 変換先
   Excel 変換先は、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Excel ブックのワークシートまたは範囲にデータを読み込みます。  
@@ -89,11 +89,11 @@ ms.locfileid: "53375604"
   
  **[詳細エディター]** ダイアログ ボックスには、プログラムによって設定できるすべてのプロパティが反映されます。 **[詳細エディター]** ダイアログ ボックスまたはプログラムで設定できるプロパティの詳細については、次のトピックのいずれかを参照してください。  
   
--   [Common Properties](../common-properties.md)  
+-   [共通プロパティ](../common-properties.md)  
   
 -   [Excel のカスタム プロパティ](excel-custom-properties.md)  
   
- プロパティの設定方法の詳細については、「 [データ フロー コンポーネントのプロパティを設定する](set-the-properties-of-a-data-flow-component.md)」を参照してください。  
+ データ フロー コンポーネントのプロパティの設定方法については、「 [データ フロー コンポーネントのプロパティを設定する](set-the-properties-of-a-data-flow-component.md)」を参照してください。  
   
 ## <a name="related-tasks"></a>Related Tasks  
   
@@ -111,7 +111,7 @@ ms.locfileid: "53375604"
   
 -   ブログ エントリ「 [Integration Services における Excel、3 の第 3 部。問題と代替策](https://go.microsoft.com/fwlink/?LinkId=217676)、dougbert.com します。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [Excel ソース](excel-source.md)   
  [Integration Services &#40;SSIS&#41; の変数](../integration-services-ssis-variables.md)   
  [データ フロー](data-flow.md)   

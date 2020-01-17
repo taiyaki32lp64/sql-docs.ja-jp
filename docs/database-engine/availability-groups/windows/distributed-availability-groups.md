@@ -2,7 +2,7 @@
 title: 分散型可用性グループとは
 description: 分散型可用性グループは、2 つの異なる可用性グループにまたがるもので、特殊な種類の可用性グループです。 分散型可用性グループに参加する可用性グループは、同じ場所に存在している必要はありません。
 ms.custom: seodec18
-ms.date: 07/31/2018
+ms.date: 10/15/2019
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: high-availability
@@ -12,17 +12,16 @@ helpviewer_keywords:
 ms.assetid: ''
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 1aaf988a3b9a869aba5ef30c6aac739a6349c70e
-ms.sourcegitcommit: 0c1d552b3256e1bd995e3c49e0561589c52c21bf
+ms.openlocfilehash: ee844af9f851d1dab1d77c54dfdd04fadd4d3c06
+ms.sourcegitcommit: b4ad3182aa99f9cbfd15f4c3f910317d6128a2e5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/14/2018
-ms.locfileid: "53381033"
+ms.lasthandoff: 11/06/2019
+ms.locfileid: "73706223"
 ---
 # <a name="distributed-availability-groups"></a>分散型可用性グループ
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-分散型可用性グループは、SQL Server 2016 で導入された新しい機能であり、既存の AlwaysOn 可用性グループ機能のバリエーションです。 この記事では、分散型可用性グループのいくつかの側面を明らかにし、既存の [SQL Server ドキュメント](https://docs.microsoft.com/sql/sql-server/sql-server-technical-documentation)を補完します。
+分散型可用性グループは、SQL Server 2016 で導入された新しい機能であり、既存の AlwaysOn 可用性グループ機能のバリエーションです。 この記事では、分散型可用性グループのいくつかの側面を明らかにし、既存の [SQL Server ドキュメント](https://docs.microsoft.com/sql/sql-server/)を補完します。
 
 > [!NOTE]
 > "DAG" は、Exchange のデータベース可用性グループ機能で既に使われているため、"*分散型可用性グループ*" の正式な省略形ではありません。 Exchange のこの機能は、SQL Server の可用性グループまたは分散型可用性グループとは関係がありません。
@@ -33,7 +32,7 @@ ms.locfileid: "53381033"
 
 分散型可用性グループは、2 つの異なる可用性グループにまたがるもので、特殊な種類の可用性グループです。 分散型可用性グループに参加する可用性グループは、同じ場所に存在している必要はありません。 物理、仮想、オンプレミス、パブリック クラウド、または可用性グループの配置をサポートする任意の場所のいずれでもかまいません。 これには、Linux と Windows でホストされている可用性グループの間などの、クロス ドメインおよびクロス プラットフォームが含まれます。 2 つの可用性グループが通信できる限り、それらで分散型可用性グループを構成できます。
 
-従来の可用性グループには、WSFC クラスター内に構成されたリソースがあります。 分散型可用性グループでは、WSFC クラスター内には何も構成されません。 分散型可用性グループに関するすべてのものは、SQL Server 内に保持されます。 分散型可用性グループの情報を表示する方法については、「[Viewing distributed availability group information](#viewing-distributed-availability-group-information)」(分散可用性グループの情報を表示する) を参照してください。 
+従来の可用性グループには、WSFC クラスター内に構成されたリソースがあります。 分散型可用性グループでは、WSFC クラスター内には何も構成されません。 分散型可用性グループに関するすべてのものは、SQL Server 内に保持されます。 分散型可用性グループの情報を表示する方法については、「[Viewing distributed availability group information](#monitor-distributed-availability-group-health)」(分散可用性グループの情報を表示する) を参照してください。 
 
 分散型可用性グループでは、基になる可用性グループにリスナーが存在する必要があります。 従来の可用性グループではスタンドアロン インスタンスに対して基になるサーバー名を指定しましたが (または、SQL Server フェールオーバー クラスター インスタンス (FCI) の場合は、ネットワーク名リソースに関連付けられた値)、分散型可用性グループでは、可用性グループを作成するときに ENDPOINT_URL パラメーターで分散型可用性グループに構成されているリスナーを指定します。 分散型可用性グループの基になる各可用性グループにはリスナーがありますが、分散型可用性グループにはリスナーはありません。
 
@@ -46,7 +45,7 @@ ms.locfileid: "53381033"
 
 ![分散型可用性グループとそのデータ移動](./media/distributed-availability-group/dag-02-distributed-ag-data-movement.png)
 
-AG 2 のプライマリ レプリカが挿入、更新、削除を受け付けるようにする唯一の方法は、AG 1 から分散型可用性グループを手動でフェールオーバーすることです。 上の図で、AG 1 にはデータベースの書き込み可能なコピーが含まれるため、フェールオーバーを発行すると、AG 2 は挿入、更新、削除を処理できる可用性グループになります。 1 つの分散型可用性グループを別の分散型可用性グループにフェールオーバーする方法については、「[セカンダリ可用性グループにフェールオーバーする]( https://docs.microsoft.com/sql/database-engine/availability-groups/windows/distributed-availability-groups-always-on-availability-groups)」を参照してください。
+AG 2 のプライマリ レプリカが挿入、更新、削除を受け付けるようにする唯一の方法は、AG 1 から分散型可用性グループを手動でフェールオーバーすることです。 上の図で、AG 1 にはデータベースの書き込み可能なコピーが含まれるため、フェールオーバーを発行すると、AG 2 は挿入、更新、削除を処理できる可用性グループになります。 1 つの分散型可用性グループを別の分散型可用性グループにフェールオーバーする方法については、「[セカンダリ可用性グループにフェールオーバーする](configure-distributed-availability-groups.md#failover)」を参照してください。
 
 > [!NOTE]
 > SQL Server 2016 の分散型可用性グループは、FORCE_FAILOVER_ALLOW_DATA_LOSS オプションを使った可用性グループ間のフェールオーバーのみをサポートします。
@@ -76,7 +75,7 @@ SQL Server 2012 または 2014 には分散型可用性グループ機能が存�
 
 ### <a name="windows-server-versions-and-distributed-availability-groups"></a>Windows Server のバージョンと分散型可用性グループ
 
-分散型可用性グループには複数の可用性グループが含まれ、それぞれに独自の基になる WSFC クラスターがあり、分散型可用性グループは SQL Server 専用の構成です。  つまり、個々の可用性グループを含む WSFC クラスターは、Windows Server のメジャー バージョンが異なっていてもかまいません。 前のセクションで説明したように、SQL Server のメジャー バージョンは同じである必要があります。 次の図では AG 1 と AG 2 が分散型可用性グループに参加しており、[最初の図](#fig1)とほとんど同じですが、各 WSFC クラスターの Windows Server のバージョンは異なっています。
+分散型可用性グループには複数の可用性グループが含まれ、それぞれに独自の基になる WSFC クラスターがあり、分散型可用性グループは SQL Server 専用の構成です。  つまり、個々の可用性グループを含む WSFC クラスターは、Windows Server のメジャー バージョンが異なっていてもかまいません。 前のセクションで説明したように、SQL Server のメジャー バージョンは同じである必要があります。 次の図では AG 1 と AG 2 が分散型可用性グループに参加しており、最初の図とほとんど同じですが、各 WSFC クラスターの Windows Server のバージョンは異なっています。
 
 
 ![Windows Server のバージョンが異なる WSFC クラスターを含む分散型可用性グループ](./media/distributed-availability-group/dag-03-distributed-ags-wsfcs-different-versions-windows-server.png)
@@ -97,8 +96,8 @@ SQL Server 2012 または 2014 には分散型可用性グループ機能が存�
 分散型可用性グループには、次の 3 つの主な使用シナリオがあります。 
 
 * [ディザスター リカバリーと簡単なマルチサイト構成](#disaster-recovery-and-multi-site-scenarios)
-* [新しいハードウェアまたは構成への移行 (新しいハードウェアの使用、または基になるオペレーティング システムの変更が含まれる場合があります)](#migration-using-a-distributed-availability-group)
-* [複数の可用性グループを使うことによる、1 つの可用性グループの 8 個を超えた読み取り可能レプリカの数の拡張](#scaling-out-readable-replicas-with-distributed-accessibility-groups)
+* [新しいハードウェアまたは構成への移行 (新しいハードウェアの使用、または基になるオペレーティング システムの変更が含まれる場合があります)](#migrate-by-using-a-distributed-availability-group)
+* [複数の可用性グループを使うことによる、1 つの可用性グループの 8 個を超えた読み取り可能レプリカの数の拡張](#scale-out-readable-replicas-with-distributed-availability-groups)
 
 ### <a name="disaster-recovery-and-multi-site-scenarios"></a>ディザスター リカバリーとマルチサイトのシナリオ
 
@@ -212,7 +211,7 @@ Cluster Group                   JC                    Online
 
 ![操作できるオプションがありません](./media/distributed-availability-group/dag-09-no-options-available-action.png)
 
-次の図のように、セカンダリ レプリカの場合、分散型可用性グループに関連する情報が SQL Server Management Studio に表示されません。 これらの可用性グループ名は、前述の「[CLUSTER_A WSFC クラスター](#fig7)」図に表示されるロールにマップされます。
+次の図のように、セカンダリ レプリカの場合、分散型可用性グループに関連する情報が SQL Server Management Studio に表示されません。 これらの可用性グループ名は、前述の「CLUSTER_A WSFC クラスター」図に表示されるロールにマップされます。
 
 ![SQL Server Management Studio のセカンダリ レプリカのビュー](./media/distributed-availability-group/dag-10-view-ssms-secondary-replica.png)
 
@@ -236,7 +235,7 @@ GO
 
 ![上記のクエリの出力例](./media/distributed-availability-group/dag-11-example-output-of-query-above.png)
 
-### <a name="dmv-to-list-distribtued-ag-health"></a>分散型 AG の正常性を一覧表示する DMV
+### <a name="dmv-to-list-distributed-ag-health"></a>分散型 AG の正常性を一覧表示する DMV
 
 SQL Server Management Studio で、ダッシュボードや他の領域に表示される状態は、その可用性グループ内のローカル同期についてのみです。 分散型可用性グループの正常性を表示するには、動的管理ビューに対してクエリを実行します。 次のクエリ例では、前のクエリを拡張して改善しています。
 
@@ -412,5 +411,3 @@ GO
 * [[新しい可用性グループ] ダイアログ ボックスの使用 (SQL Server Management Studio)](use-the-new-availability-group-dialog-box-sql-server-management-studio.md)
  
 * [Transact-SQL での可用性グループの作成](create-an-availability-group-transact-sql.md)
-
- 

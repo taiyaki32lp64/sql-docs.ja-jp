@@ -1,5 +1,5 @@
 ---
-title: sp_replmonitorhelppublisher (TRANSACT-SQL) |Microsoft Docs
+title: sp_replmonitorhelppublisher (Transact-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
@@ -15,18 +15,17 @@ helpviewer_keywords:
 ms.assetid: 171501fe-4b74-4647-96c3-7691c777e01b
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 5f8a7e698fcb4eeb0f1e10c00acf4c34d233f755
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 5db934c972282609e9b2978a66034b39bb38a092
+ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52794914"
+ms.lasthandoff: 08/03/2019
+ms.locfileid: "68771188"
 ---
-# <a name="spreplmonitorhelppublisher-transact-sql"></a>sp_replmonitorhelppublisher (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+# <a name="sp_replmonitorhelppublisher-transact-sql"></a>sp_replmonitorhelppublisher (Transact-SQL)
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
-  ディストリビューターに関連付けられた 1 つ以上のパブリッシャーに関する現在の状態情報を返します。 このストアド プロシージャはレプリケーションの監視に使用し、ディストリビューター側でディストリビューション データベースについて実行されます。  
+  ディストリビューターに関連付けられている1つ以上のパブリッシャーの現在の状態情報を返します。 レプリケーションを監視するために使用されるこのストアドプロシージャは、ディストリビューター側のディストリビューションデータベースで実行されます。  
   
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -39,32 +38,30 @@ sp_replmonitorhelppublisher [ [ @publisher = ] 'publisher' ]
 ```  
   
 ## <a name="arguments"></a>引数  
- [ **@publisher** =] **'***パブリッシャー***'**  
- 状態を監視しているパブリッシャーの名前を指定します。 *パブリッシャー*は**sysname**既定値は NULL です。 NULL の場合、ディストリビューターを使用するすべてのパブリッシャーに対して情報が返されます。  
+`[ @publisher = ] 'publisher'`状態を監視するパブリッシャーの名前を指定します。 *publisher*は**sysname**で、既定値は NULL です。 NULL の場合、ディストリビューターを使用するすべてのパブリッシャーに関する情報が返されます。  
   
- [  **@refreshpolicy=** ] *refreshpolicy*  
- 内部使用のみです。  
+`[ @refreshpolicy = ] refreshpolicy`内部でのみ使用します。  
   
 ## <a name="result-sets"></a>結果セット  
   
 |列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
-|**パブリッシャー**|**sysname**|パブリッシャーの名前です。|  
-|**distribution_db**|**sysname**|指定されたパブリッシャーによって使用されるディストリビューション データベースの名前です。|  
-|**status**|**int**|このパブリッシャー側のパブリケーションに関連付けられているすべてのレプリケーション エージェントの最大の状態です。次のいずれかの値をとります。<br /><br /> **1** = 開始<br /><br /> **2** = に成功しました<br /><br /> **3** = 実行中<br /><br /> **4** = アイドル状態<br /><br /> **5** = 再試行<br /><br /> **6** = に失敗しました|  
-|**警告**|**int**|このパブリッシャー側のパブリケーションに属しているサブスクリプションによって生成される最大しきい値警告です。次の 1 つ以上の値の論理和になります。<br /><br /> **1** = 有効期限の保有期間のしきい値内で、トランザクション パブリケーションに対するサブスクリプションが同期されていません。<br /><br /> **2** = 待機時間、トランザクション パブリッシャーからサブスクライバーへのデータのレプリケートにかかった時間 (秒)、しきい値を超えています。<br /><br /> **4** = mergeexpiration 保有期間のしきい値内でマージ パブリケーションに対するサブスクリプションが同期されていません。<br /><br /> **8** = mergefastrunduration - マージ サブスクリプションの同期の完了にかかった時間、高速ネットワーク接続経由で秒単位で、しきい値を超えています。<br /><br /> **16** = mergeslowrunduration - マージ サブスクリプションの同期の完了にかかった時間、低速またはダイヤルアップ ネットワーク接続経由で秒単位で、しきい値を超えています。<br /><br /> **32** = mergefastrunspeed - 配信率マージ サブスクリプションの同期中の行が高速ネットワーク接続経由でのしきい値の割合で、1 秒あたりの行を維持するために失敗しました。<br /><br /> **64** mergeslowrunspeed - 配信率 = マージ サブスクリプションの同期中の行が低速またはダイヤルアップ ネットワーク接続経由でのしきい値の割合で、1 秒あたりの行を維持するために失敗しました。|  
+|**publisher**|**sysname**|パブリッシャーの名前です。|  
+|**distribution_db**|**sysname**|特定のパブリッシャーによって使用されるディストリビューションデータベースの名前を指定します。|  
+|**status**|**int**|このパブリッシャー側のパブリケーションに関連付けられているすべてのレプリケーション エージェントの最大の状態です。次のいずれかの値をとります。<br /><br /> **1** = 開始<br /><br /> **2** = 成功<br /><br /> **3** = 実行中<br /><br /> **4** = アイドル<br /><br /> **5** = 再試行中<br /><br /> **6** = 失敗|  
+|**warning**|**int**|このパブリッシャーのパブリケーションに属するサブスクリプションによって生成される最大しきい値警告。これらの値の1つ以上の論理和になります。<br /><br /> **1** = 有効期限-トランザクションパブリケーションに対するサブスクリプションが、保有期間のしきい値内に同期されていません。<br /><br /> **2** = 待機時間-トランザクションパブリッシャーからサブスクライバーへのデータのレプリケートにかかった時間が、秒単位のしきい値を超えています。<br /><br /> **4** = mergeexpiration-マージパブリケーションに対するサブスクリプションが、保有期間のしきい値内に同期されていません。<br /><br /> **8** = mergefastrunduration-高速ネットワーク接続経由で、マージサブスクリプションの同期の完了にかかった時間が、秒単位のしきい値を超えています。<br /><br /> **16** = mergeslowrunduration-低速またはダイヤルアップネットワーク接続を介して、マージサブスクリプションの同期の完了にかかった時間が、秒単位のしきい値を超えています。<br /><br /> **32** = mergefastrunspeed-高速ネットワーク接続上で、マージサブスクリプションの同期中の行の配信率が、1秒あたりの行数でのしきい値の比率を維持できませんでした。<br /><br /> **64** = mergeslowrunspeed-低速またはダイヤルアップネットワーク接続を介して、マージサブスクリプションの同期中の行の配信率が、1秒あたりの行数でしきい値を維持できませんでした。|  
 |**publicationcount**|**int**|パブリッシャーに属しているパブリケーションの数です。|  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  **0** (成功) または**1** (失敗)  
   
 ## <a name="remarks"></a>コメント  
- **sp_replmonitorhelppublisher**はあらゆる種類のレプリケーションで使用します。  
+ **sp_replmonitorhelppublisher**は、すべての種類のレプリケーションで使用されます。  
   
 ## <a name="permissions"></a>アクセス許可  
- メンバーのみ、 **sysadmin**のメンバー、またはディストリビューターの固定サーバー ロール、 **db_owner**または**replmonitor**ディストリビューション データベースの固定データベース ロールのことができます実行**sp_replmonitorhelppublisher**します。  
+ **Sp_replmonitorhelppublisher**を実行できるのは、ディストリビューター側の固定サーバーロール**sysadmin**のメンバー、またはディストリビューションデータベースの固定データベースロール**db_owner**または**replmonitor**のメンバーだけです。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [Programmatically Monitor Replication (プログラムによるレプリケーションの監視)](../../relational-databases/replication/monitor/programmatically-monitor-replication.md)  
   
   

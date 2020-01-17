@@ -14,15 +14,14 @@ helpviewer_keywords:
 - isolation levels [SQL Server], metadata access
 - hints [SQL Server], locking
 ms.assetid: 02bb71fa-1e92-4782-a9cf-6e256cc1f3ea
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: 0544fe096d75f4dfe64f4501b62948193abaf25a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 28a8de0654fe6e083b52e83d85653a0d9856d351
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47626850"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68072205"
 ---
 # <a name="transaction-isolation-levels"></a>トランザクション分離レベル
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -52,7 +51,7 @@ ms.locfileid: "47626850"
 |分離レベル|Supported|使用|  
 |---------------------|---------------|-------------|  
 |READ UNCOMMITTED|いいえ|保証なし|  
-|READ COMMITTED|[ユーザー アカウント制御]|[ユーザー アカウント制御]|  
+|READ COMMITTED|はい|はい|  
 |REPEATABLE READ|いいえ|いいえ|  
 |SNAPSHOT ISOLATION|いいえ|いいえ|  
 |SERIALIZABLE|いいえ|いいえ|  

@@ -1,7 +1,7 @@
 ---
-title: JDBC 4.2 準拠、JDBC ドライバーの |Microsoft Docs
+title: Jdbc driver の JDBC 4.2 への準拠 |Microsoft Docs
 ms.custom: ''
-ms.date: 01/19/2017
+ms.date: 08/12/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,15 +10,14 @@ ms.topic: conceptual
 ms.assetid: 36025ec0-3c72-4e68-8083-58b38e42d03b
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: cdb0e888276c2c9b08eb99b6972b645ac9b46607
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.openlocfilehash: fb9ab0375c1d718b9559b3c85acc0b3ba4f6993b
+ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51602053"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "69027980"
 ---
-# <a name="jdbc-42-compliance-for-the-jdbc-driver"></a>JDBC Driver の JDBC 4.2 への準拠
+# <a name="jdbc-42-compliance-for-the-jdbc-driver"></a>JDBC ドライバーの JDBC 4.2 への準拠
 
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 

@@ -9,13 +9,13 @@ ms.topic: conceptual
 ms.assetid: 160d4784-d108-4705-932d-763558912804
 author: Shamikg
 ms.author: Shamikg
-manager: v-thobro
-ms.openlocfilehash: 2acf2dca7b383d6ab579f46e33b10c10e541b88c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: shamikg
+ms.openlocfilehash: 1cd74d2e3c5825618a6c893551cc8ae7298d00d8
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47738850"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68266403"
 ---
 # <a name="user-interface-reference-oracletosql"></a>ユーザー インターフェイス リファレンス (OracleToSQL)
 このセクションには、ヘルプ トピックが含まれています。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Migration Assistant (SSMA) for Oracle です。  
@@ -48,7 +48,7 @@ SSMA のダイアログ ボックスを次の表に示します。
 |[データベースからの更新&#40;OracleToSQL&#41;](../../ssma/oracle/refresh-from-database-oracletosql.md)|使用して、**データベースからの更新** ダイアログ ボックス、Oracle データベースから更新するオブジェクトを選択します。|  
 |[メタデータの保存&#40;OracleToSQL&#41;](../../ssma/oracle/save-metadata-oracletosql.md)|**メタデータの保存**メタデータが不足しているプロジェクトを保存するときに、ダイアログ ボックスが表示されます。|  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
 [Ssma for Oracle 作業の開始&#40;OracleToSQL&#41;](../../ssma/oracle/getting-started-with-ssma-for-oracle-oracletosql.md)  
 [SQL Server にデータベースを移行する Oracle &#40;OracleToSQL&#41;](../../ssma/oracle/migrating-oracle-databases-to-sql-server-oracletosql.md)  
   

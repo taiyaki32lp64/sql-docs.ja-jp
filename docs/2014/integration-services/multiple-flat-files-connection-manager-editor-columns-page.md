@@ -4,23 +4,22 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.multifile.columns.f1
 helpviewer_keywords:
 - Multiple Flat Files Connection Manager Editor
 ms.assetid: ad0cb668-0df2-4d4e-9a20-d20692a0b67a
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 8c349dc8c445d2ac117533fde3b1c47c6761d58b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: b44fe16f89e154c1008c73400a6815e9e548bb69
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48058182"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66057496"
 ---
 # <a name="multiple-flat-files-connection-manager-editor-columns-page"></a>[複数フラット ファイル接続マネージャー エディター] ([列] ページ)
   **[複数フラット ファイル接続マネージャー エディター]** ダイアログ ボックスの **[列]** ノードを使用すると、行と列の情報を指定し、最初に選択したファイルをプレビューできます。  
@@ -109,10 +108,10 @@ ms.locfileid: "48058182"
  **[列のリセット]**  
  元の列以外のすべての列を削除するには、 **[列のリセット]** をクリックします。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [Integration Services のエラーおよびメッセージのリファレンス](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [[複数フラット ファイル接続マネージャー エディター &#40;[全般] ページ&#41;](general-page-of-integration-services-designers-options.md)   
- [[複数フラット ファイル接続マネージャー エディター &#40;[詳細] ページ&#41;](../../2014/integration-services/multiple-flat-files-connection-manager-editor-advanced-page.md)   
- [複数フラット ファイル接続マネージャー エディター&#40;ページをプレビュー&#41;](../../2014/integration-services/multiple-flat-files-connection-manager-editor-preview-page.md)  
+ [[複数フラット ファイル接続マネージャー エディター] &#40;[全般] ページ&#41;](general-page-of-integration-services-designers-options.md)   
+ [[複数フラット ファイル接続マネージャー エディター] &#40;[詳細設定] ページ&#41;](../../2014/integration-services/multiple-flat-files-connection-manager-editor-advanced-page.md)   
+ [[複数フラット ファイル接続マネージャー エディター] &#40;[プレビュー] ページ&#41;](../../2014/integration-services/multiple-flat-files-connection-manager-editor-preview-page.md)  
   
   

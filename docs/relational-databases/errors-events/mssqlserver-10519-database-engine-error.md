@@ -11,15 +11,14 @@ helpviewer_keywords:
 ms.assetid: 3be393a1-b186-41ae-afb9-a3d07ff354bb
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 3bb5075ef33ced9cac22a6c92d9068907ca2ec01
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: efe1822be148cb702e83da9685be52dbee74ff13
+ms.sourcegitcommit: 454270de64347db917ebe41c081128bd17194d73
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47790930"
+ms.lasthandoff: 10/07/2019
+ms.locfileid: "72006079"
 ---
-# <a name="mssqlserver10519"></a>MSSQLSERVER_10519
+# <a name="mssqlserver_10519"></a>MSSQLSERVER_10519
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   
 ## <a name="details"></a>詳細  
@@ -31,10 +30,10 @@ ms.locfileid: "47790930"
 |イベント ソース|MSSQLSERVER|  
 |コンポーネント|SQLEngine|  
 |シンボル名|PG_INCOMPATIBLE_STMT_AND_HINTS|  
-|メッセージ テキスト|プラン ガイド '%.\*ls' を作成できません。**@hints** で指定されたヒントを、**@stmt** または **@statement_start_offset** のいずれかで指定されたステートメントに適用できません。 ヒントがステートメントに適用可能であることを確認してください。|  
+|メッセージ テキスト|プラン ガイド '%.\*ls' を作成できません。 **\@hints** で指定されたヒントを、 **\@stmt** または **\@statement_start_offset** のいずれかで指定されたステートメントに適用できません。 ヒントがステートメントに適用可能であることを確認してください。|  
   
 ## <a name="explanation"></a>説明  
-**@hints** で指定されたヒントを、**@stmt** または **@statement_start_offset** のいずれかで指定されたステートメントに適用できません。  
+**\@hints** で指定されたヒントを、 **\@stmt** または **\@statement_start_offset** のいずれかで指定されたステートメントに適用できません。  
   
 ## <a name="user-action"></a>ユーザーの操作  
 ステートメントに適用できるヒントを指定します。  

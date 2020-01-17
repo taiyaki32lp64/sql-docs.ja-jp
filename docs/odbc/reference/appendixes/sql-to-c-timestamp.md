@@ -1,5 +1,5 @@
 ---
-title: 'SQL c: からタイムスタンプ |Microsoft Docs'
+title: 'SQL から C へ: タイムスタンプ |Microsoft Docs'
 ms.custom: ''
 ms.date: 01/19/2019
 ms.prod: sql
@@ -14,15 +14,14 @@ helpviewer_keywords:
 ms.assetid: 6a0617cf-d8c0-4316-8bb4-e6ddb45d7bf1
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 69c9f1258f35a69d6554783f5d1b4ca79be313d2
-ms.sourcegitcommit: 480961f14405dc0b096aa8009855dc5a2964f177
+ms.openlocfilehash: ee3852c688f495d54eb07ca9c2866ac17a1f5a1c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/22/2019
-ms.locfileid: "54419957"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68118843"
 ---
-# <a name="sql-to-c-timestamp"></a>SQL c: からTimestamp
+# <a name="sql-to-c-timestamp"></a>SQL から C へ: Timestamp
 
 タイムスタンプの ODBC SQL データ型の識別子を次に示します。
 
@@ -51,4 +50,4 @@ ms.locfileid: "54419957"
   
  [f] これは、対応する C データ型のサイズです。  
 
-SQL のタイムスタンプ データが文字データに変換されると、結果の文字列は、"*yyyy*-*mm*-*dd* *hh*:*mm*:*ss*[.*f.*]"形式、秒の小数部の最大で 9 桁の数字を使用できます。 この形式は、Windows® 国設定の影響を受けません。 (、小数点と秒の小数部を除く全体の書式設定する必要があります使用、タイムスタンプの SQL データ型の有効桁数に関係なく)。
+SQL のタイムスタンプ データが文字データに変換されると、結果の文字列は、"*yyyy*-*mm*-*dd* *hh*:*mm*:*ss*[.*f.* ]"形式、秒の小数部の最大で 9 桁の数字を使用できます。 この形式は、Windows® 国設定の影響を受けません。 (、小数点と秒の小数部を除く全体の書式設定する必要があります使用、タイムスタンプの SQL データ型の有効桁数に関係なく)。

@@ -15,12 +15,12 @@ author: stevestein
 ms.author: sstein
 ms.manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: fdc46b1d0addad193f5bc09a9bcd60fab9efe027
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: 132a9d08f41d29ef5b11404d7b662122abdc8516
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52418173"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72909385"
 ---
 # <a name="rename-views"></a>ビューの名前の変更
 [!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -35,7 +35,7 @@ ms.locfileid: "52418173"
   
      [前提条件](#Prerequisites)  
   
-     [Security](#Security)  
+     [セキュリティ](#Security)  
   
 -   **以下を使用してビューの名前を変更するには:**  
   
@@ -43,7 +43,7 @@ ms.locfileid: "52418173"
   
      [Transact-SQL](#TsqlProcedure)  
   
--   **Follow Up:**  [After renaming a view](#FollowUp)  
+-   **補足情報:** [ビューの名を変更した後](#FollowUp)  
   
 ##  <a name="BeforeYouBegin"></a> はじめに  
   
@@ -64,7 +64,7 @@ ms.locfileid: "52418173"
 2.  名前を変更するビューを右クリックし、 **[名前の変更]** を選択します。  
   
 3.  ビューの新しい名前を入力します。  
-  
+
 ##  <a name="TsqlProcedure"></a> Transact-SQL の使用  
  **ビューの名前を変更するには**  
   
@@ -72,7 +72,7 @@ ms.locfileid: "52418173"
   
  詳細については、「[CREATE VIEW &#40;Transact-SQL&#41;](../../t-sql/statements/create-view-transact-sql.md)」および「[DROP VIEW &#40;Transact-SQL&#41;](../../t-sql/statements/drop-view-transact-sql.md)」を参照してください。  
   
-##  <a name="FollowUp"></a> 補足情報: ビューの名前を変更した後  
+##  <a name="FollowUp"></a>補足情報: ビューの名を変更した後  
  ビューの古い名前を参照するすべてのオブジェクト、スクリプト、およびアプリケーションで新しい名前が使用されていることを確認します。  
   
   

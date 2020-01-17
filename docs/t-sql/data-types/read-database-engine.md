@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: f2b8207c-b69f-4327-a874-100b3a1f27d8
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 7aa7978fb568eafc62060130c4e8220f4d5612dd
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 9fb69a5c4e9d303ab0e3a7a3e2edeeeeed228391
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56037523"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68000607"
 ---
 # <a name="read-database-engine"></a>Read (データベース エンジン)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -46,7 +45,7 @@ void Read( BinaryReader r )
 ## <a name="remarks"></a>Remarks  
  読み取り は、入力は検証されません。 無効なバイナリの入力を指定した場合 読み取り で例外が発生します。 または、成功し、生成、無効な場合があります、 **SqlHierarchyId** オブジェクト メソッドを持つ予期しない結果が得られますか、例外が発生します。  
   
- **読み取り はのみ呼び出すことで、新しく作成された SqlHierarchyId** オブジェクトです。  
+ 読み取りは、新しく作成された **SqlHierarchyId** オブジェクトでのみ呼び出すことができます。  
   
  読み取り [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]内部で使用される 必要な場合、ようにデータを書き込む場合 **hierarchyid** 列です。 読み取り 間で変換が行われるときに内部的に呼び出されますも **varbinary** と **hierarchyid**です。  
   
@@ -61,8 +60,8 @@ hid.Read(br);
 ```  
   
 ## <a name="see-also"></a>参照  
-[書き込み (&) #40";"データベース エンジン"&"#41 です。](../../t-sql/data-types/write-database-engine.md)  
-[ToString (&) #40";"データベース エンジン"&"#41 です。](../../t-sql/data-types/tostring-database-engine.md)  
+[Write &#40;データベース エンジン&#41;](../../t-sql/data-types/write-database-engine.md)  
+[ToString &#40;データベース エンジン&#41;](../../t-sql/data-types/tostring-database-engine.md)  
 [CAST および CONVERT &#40;Transact-SQL&#41;](../../t-sql/functions/cast-and-convert-transact-sql.md)  
 [hierarchyid データ型メソッド リファレンス](https://msdn.microsoft.com/library/01a050f5-7580-4d5f-807c-7f11423cbb06)
   

@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 1275157b-f4e1-4c24-b273-c02555e261c2
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 4a4ac67e1a593cdfd7e67d789289bd1a5ece1467
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: fce38aabddfc3891314940d4b7cb21f02965c083
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52515316"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68100777"
 ---
 # <a name="oracle-software-patches"></a>Oracle ソフトウェアの修正プログラム
 > [!IMPORTANT]  

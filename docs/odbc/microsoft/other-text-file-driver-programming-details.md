@@ -14,19 +14,18 @@ helpviewer_keywords:
 ms.assetid: bfa85e91-060e-4d70-88c3-f5c48df634f1
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 586e5f26c943fdc267ad98627ada3b56cbc4013c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: f13193ba437d0da0ee15bd4072fe6f53c7db5b9c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47622180"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68043786"
 ---
 # <a name="other-text-file-driver-programming-details"></a>その他のテキスト ファイル ドライバーのプログラミングの詳細
 > [!NOTE]  
 >  このセクションでは、ODBC 関数とその他のプログラミングの詳細に関するテキスト ファイル ドライバー固有の情報を提供します。 関数の詳細については、該当するトピックを参照してください。 [ODBC API リファレンス](../../odbc/reference/syntax/odbc-api-reference.md)します。  
   
- このセクションのトピックは次のとおりです。  
+ このセクションでは、次のトピックについて説明します。  
   
 -   [テキスト形式の定義 (テキスト ファイル ドライバー)](../../odbc/microsoft/defining-text-format-text-file-driver.md)  
   

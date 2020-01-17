@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: 9ea6c534-8132-49f3-aac3-a12ec4c46df2
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 61b2b8b635df678290eb2492e068b0d6821549ea
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 5ddbb8fa811a4370db06b4992eb43e26845e1298
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47680561"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67969071"
 ---
 # <a name="supportsorderbyunrelated-method-sqlserverdatabasemetadata"></a>supportsOrderByUnrelated メソッド (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -36,13 +35,13 @@ public boolean supportsOrderByUnrelated()
 ```  
   
 ## <a name="return-value"></a>戻り値  
- **true**サポートされている場合。 それ以外の場合は、 **false**です。  
+ サポートされている場合は**true** 。 それ以外の場合は、 **false**です。  
   
 ## <a name="exceptions"></a>例外  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- この supportsOrderByUnrelated メソッドは、java.sql.DatabaseMetaData インターフェイスで supportsOrderByUnrelated メソッドによって指定されます。  
+ この supportsOrderByUnrelated メソッドは、java メタデータインターフェイスの supportsOrderByUnrelated メソッドによって指定されます。  
   
 ## <a name="see-also"></a>参照  
  [SQLServerDatabaseMetaData のメソッド](../../../connect/jdbc/reference/sqlserverdatabasemetadata-methods.md)   

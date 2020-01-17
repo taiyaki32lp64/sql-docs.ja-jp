@@ -1,5 +1,5 @@
 ---
-title: Issasynchstatus::getstatus (OLE DB) |Microsoft Docs
+title: 'ISSAsynchStatus:: GetStatus (OLE DB) |Microsoft Docs'
 description: ISSAsynchStatus::GetStatus (OLE DB)
 ms.custom: ''
 ms.date: 06/14/2018
@@ -15,13 +15,12 @@ helpviewer_keywords:
 - GetStatus method
 author: pmasl
 ms.author: pelopes
-manager: craigg
-ms.openlocfilehash: 1920ce001879baf01a337898c452493dccd430f3
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 6f05b5c7c7b03fa1b68f3da5c6fbed29ed98a3c1
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52505075"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67994377"
 ---
 # <a name="issasynchstatusgetstatus-ole-db"></a>ISSAsynchStatus::GetStatus (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -45,7 +44,7 @@ HRESULT GetStatus(
   
 ## <a name="arguments"></a>引数  
  *hChapter*[in]  
- チャプター ハンドル。 ポーリング済みのオブジェクトは、行セット オブジェクトはありません、または、操作がチャプターに適用しないは、プロバイダーでは無視される、DB_NULL_HCHAPTER に設定する必要があります。  
+ チャプター ハンドル。 ポーリングオブジェクトが行セットオブジェクトではない場合、または操作がチャプターに適用されない場合は、DB_NULL_HCHAPTER に設定する必要があります。これは、プロバイダーによって無視されます。  
   
  *eOperation*[in]  
  非同期状態が要求されている操作。 次の値を使用する必要があります。  
@@ -98,7 +97,7 @@ HRESULT GetStatus(
  また、データ ソース オブジェクトの初期化中に非同期処理が取り消されたことを示している場合もあります。 この場合、データ ソース オブジェクトは初期化されていない状態です。  
   
  E_INVALIDARG  
- *HChapter*パラメーターが正しくありません。  
+ *Hchapter*パラメーターが正しくありません。  
   
  E_UNEXPECTED  
  **IDBInitialize::Initialize** が呼び出されていないデータ ソース オブジェクトに対して **ISSAsynchStatus::GetStatus** メソッドが呼び出されたことを示します。  

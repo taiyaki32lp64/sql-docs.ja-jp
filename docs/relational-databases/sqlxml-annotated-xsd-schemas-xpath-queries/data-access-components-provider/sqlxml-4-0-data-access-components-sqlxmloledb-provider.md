@@ -1,5 +1,5 @@
 ---
-title: SQLXML 4.0 のデータ アクセス コンポーネント |Microsoft Docs
+title: SQLXML 4.0 のデータ アクセス コンポーネント
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -17,17 +17,17 @@ helpviewer_keywords:
 ms.assetid: 5001e9fd-555c-4332-a57d-4d29a537454a
 author: MightyPen
 ms.author: genemi
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: d9c20beeb3cbe189910d8f84cccae2e185b66b29
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 16e7aead128623f41076034a0fd313fb384038c6
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56037563"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75257277"
 ---
 # <a name="sqlxml-40-data-access-components---sqlxmloledb-provider"></a>SQLXML 4.0 のデータ アクセス コンポーネント - SQLXMLOLEDB プロバイダー
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+  
   [!INCLUDE[msCoName](../../../includes/msconame-md.md)] SQLXML 4.0 には、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] のデータベースに対して XML データを挿入または取得するときに使用できる、3 種類のデータ プロバイダーが用意されています。  
   
 -   SQLXMLOLEDB プロバイダー  
@@ -36,14 +36,15 @@ ms.locfileid: "56037563"
   
 -   SQLXML マネージド クラス  
   
-     [!INCLUDE[msCoName](../../../includes/msconame-md.md)] .NET Framework 内で SQLXML の機能へのアクセスを提供します。 詳細については、次を参照してください。 [SQLXML マネージ クラス](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/net-framework-classes/sqlxml-4-0-net-framework-support-managed-classes.md)します。  
+     
+  [!INCLUDE[msCoName](../../../includes/msconame-md.md)] .NET Framework 内で SQLXML の機能へのアクセスを提供します。 詳細については、「 [SQLXML マネージクラス](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/net-framework-classes/sqlxml-4-0-net-framework-support-managed-classes.md)」を参照してください。  
   
 -   SQL Server Native Client (SQLNCLI11)  
   
      現在のバージョンの Microsoft Data Access Components (MDAC) を拡張し補完する新しいデータ アクセス テクノロジを介して、SQLXML 4.0 機能へのアクセスを提供します。 SQLNCLI11 では、[!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] で導入された機能を完全にサポートしています。 詳細については、「 [SQL Server Native Client プログラミング](../../../relational-databases/native-client/sql-server-native-client-programming.md)」を参照してください。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
- [SQLXMLOLEDB プロバイダー &#40;SQLXML 4.0&#41;](https://msdn.microsoft.com/library/fc489682-690a-4bb0-b5ac-237d376dc110)  
+ [SQLXMLOLEDB Provider &#40;SQLXML 4.0&#41;](https://msdn.microsoft.com/library/fc489682-690a-4bb0-b5ac-237d376dc110)  
  SQLXMLOLEDB プロバイダーについて説明し、その使用方法を示します。  
   
   

@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: 2b16123e-07ab-4c73-9509-e0425910680b
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 6185e007abcba03524ce4d90c344694ea31e0199
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 51c00329a51bba6a1b2b94d6b3a15fd1c147c301
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47822772"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67968428"
 ---
 # <a name="typessscrollkeyset-field-sqlserverresultset"></a>TYPE_SS_SCROLL_KEYSET フィールド (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -36,7 +35,7 @@ public static final int TYPE_SS_SCROLL_KEYSET
 ```  
   
 ## <a name="field-value"></a>フィールド値  
- **Int**値 1005 です。  
+ **Int**値1005。  
   
 ## <a name="see-also"></a>参照  
  [SQLServerResultSet クラス](../../../connect/jdbc/reference/sqlserverresultset-class.md)  

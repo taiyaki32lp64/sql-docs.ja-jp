@@ -15,21 +15,20 @@ dev_langs:
 helpviewer_keywords:
 - sp_help_fulltext_catalogs_cursor
 ms.assetid: d44478d1-0cc4-415e-9d1a-6dccb64674fa
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
+author: MikeRayMSFT
+ms.author: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 53c4b27fe3907b4098f5b4ef1bcce83eec416ddd
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 280d5eaf75c8b6775222a1dbde028f74feac842f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47702250"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68055143"
 ---
-# <a name="sphelpfulltextcatalogscursor-transact-sql"></a>sp_help_fulltext_catalogs_cursor (Transact-SQL)
+# <a name="sphelpfulltextcatalogscursor-transact-sql"></a>sp_help_fulltext_catalogs_cursor (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  カーソルを使用して、指定されたフルテキスト カタログの ID、名前、ルート ディレクトリ、ステータス、およびフルテキスト インデックスが作成されたテーブルの数を返します。  
+  カーソルを使用して、ID、名、ルート ディレクトリ、ステータス、および指定したフルテキスト カタログのフルテキスト インデックス付きテーブルの数を返します。  
   
 > [!IMPORTANT]  
 >  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] 使用して、 [sys.fulltext_catalogs](../../relational-databases/system-catalog-views/sys-fulltext-catalogs-transact-sql.md)カタログ ビューを代わりにします。  
@@ -45,11 +44,9 @@ sp_help_fulltext_catalogs_cursor [ @cursor_return= ] @cursor_variable OUTPUT ,
 ```  
   
 ## <a name="arguments"></a>引数  
- [ **@cursor_return=**] *@cursor_variable* **OUTPUT**  
- 型の output 変数は、**カーソル**します。 カーソルは読み取り専用で、スクロール可能な動的カーソルです。  
+`[ @cursor_return = ] @cursor_variable OUTPUT` 型の output 変数は、**カーソル**します。 カーソルの読み取り専用で、スクロール可能な動的カーソルです。  
   
- [ **@fulltext_catalog_name=**] **'***fulltext_catalog_name***'**  
- フルテキスト カタログの名前を指定します。 *fulltext_catalog_name*は**sysname**します。 このパラメーターが省略されているか、またはパラメーターの値が NULL である場合は、現在のデータベースに関連付けられたすべてのフルテキスト カタログに関する情報が返されます。  
+`[ @fulltext_catalog_name = ] 'fulltext_catalog_name'` フルテキスト カタログの名前です。 *fulltext_catalog_name*は**sysname**します。 このパラメーターを省略するか NULL には、現在のデータベースに関連付けられているすべてのフルテキスト カタログに関する情報が返されます。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  0 (成功) または (1) の失敗  
@@ -61,8 +58,8 @@ sp_help_fulltext_catalogs_cursor [ @cursor_return= ] @cursor_variable OUTPUT ,
 |**fulltext_catalog_id**|**smallint**|フルテキスト カタログ識別子。|  
 |**NAME**|**sysname**|フルテキスト カタログの名前。|  
 |**PATH**|**nvarchar(260)**|[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 以降、この句は無効です。|  
-|**状態**|**int**|カタログのフルテキスト インデックスの作成ステータス。<br /><br /> 0 = アイドル状態<br /><br /> 1 = カタログ全体を作成中<br /><br /> 2 = 一時停止<br /><br /> 3 = 絞込み<br /><br /> 4 = 復旧<br /><br /> 5 = シャットダウン<br /><br /> 6 = 増分作成中<br /><br /> 7 = インデックス作成<br /><br /> 8 = ディスク容量不足、 一時停止<br /><br /> 9 = 変更の追跡|  
-|**NUMBER_FULLTEXT_TABLES**|**int**|カタログに関連付けられた、フルテキスト インデックスが作成されたテーブルの数。|  
+|**状態**|**int**|カタログのフルテキスト インデックス作成の状態:<br /><br /> 0 = アイドル状態<br /><br /> 1 = カタログ全体を作成中<br /><br /> 2 = 一時停止<br /><br /> 3 = 絞込み<br /><br /> 4 = 復旧<br /><br /> 5 = シャットダウン<br /><br /> 6 = 増分作成中<br /><br /> 7 = インデックス作成<br /><br /> 8 = ディスク容量不足、 一時停止<br /><br /> 9 = 変更の追跡|  
+|**NUMBER_FULLTEXT_TABLES**|**int**|フルテキストの数はインデックス、カタログに関連付けられたテーブルです。|  
   
 ## <a name="permissions"></a>アクセス許可  
  アクセス許可は既定の実行、**パブリック**ロール。  
@@ -85,7 +82,7 @@ DEALLOCATE @mycursor;
 GO   
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [FULLTEXTCATALOGPROPERTY &#40;Transact-SQL&#41;](../../t-sql/functions/fulltextcatalogproperty-transact-sql.md)   
  [sp_fulltext_catalog &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-fulltext-catalog-transact-sql.md)   
  [sp_help_fulltext_catalogs &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-fulltext-catalogs-transact-sql.md)   

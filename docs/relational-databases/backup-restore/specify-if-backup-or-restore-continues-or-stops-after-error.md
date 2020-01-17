@@ -1,7 +1,7 @@
 ---
-title: エラー後にバックアップまたは復元を続行するか中止するかを指定する | Microsoft Docs
-ms.custom: ''
-ms.date: 03/17/2017
+title: エラー後のバックアップまたは復元の設定
+ms.custom: seo-lt-2019
+ms.date: 12/17/2019
 ms.prod: sql
 ms.prod_service: backup-restore
 ms.reviewer: ''
@@ -15,15 +15,14 @@ helpviewer_keywords:
 ms.assetid: 042be17a-b9b0-4629-b6bb-b87a8bc6c316
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 0c36052ce31b2d0edede232151bb8ef21e9af772
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 61e3395939b7faf059a5376674d4f85e3d5c6677
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47825555"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75251159"
 ---
-# <a name="specify-if-backup-or-restore-continues-or-stops-after-error"></a>エラー後にバックアップまたは復元を続行するか中止するかを指定する
+# <a name="specify-backup-or-restore-to-continue-or-stop-after-error"></a>エラー後にバックアップまたは復元を続行するか中止するかを指定する
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
   このトピックでは、 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] で [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] または [!INCLUDE[tsql](../../includes/tsql-md.md)]を使用して、エラーが発生したときにバックアップ操作または復元操作を中止するか続行するかを指定する方法を説明します。  
@@ -32,7 +31,7 @@ ms.locfileid: "47825555"
   
 -   **作業を開始する準備:**  
   
-     [Security](#Security)  
+     [セキュリティ](#Security)  
   
 -   **エラーが発生したときにバックアップ操作または復元操作を続行するかどうかを指定する方法:**  
   
@@ -40,7 +39,7 @@ ms.locfileid: "47825555"
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> 作業を開始する準備  
+##  <a name="BeforeYouBegin"></a> はじめに  
   
 ###  <a name="Security"></a> セキュリティ  
   

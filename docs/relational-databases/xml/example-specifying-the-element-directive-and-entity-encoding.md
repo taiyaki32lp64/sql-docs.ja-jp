@@ -1,6 +1,5 @@
 ---
-title: '例 : ELEMENT ディレクティブとエンティティのエンコードを指定する | Microsoft Docs'
-ms.custom: ''
+title: ELEMENT ディレクティブとエンティティのエンコードを指定する | Microsoft Docs
 ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -11,17 +10,17 @@ helpviewer_keywords:
 - ELEMENT directive
 - entity encoding [XML]
 ms.assetid: 50cda5c1-7293-4080-93b3-872e3b8d484e
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: 0e943e6dfb83d21d4a0e0beac0c6acd0d62881f1
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+author: MightyPen
+ms.author: genemi
+ms.custom: seo-lt-2019
+ms.openlocfilehash: 88294326610ac44a1166897fb3256d39e9015ee5
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51667361"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75246577"
 ---
-# <a name="example-specifying-the-element-directive-and-entity-encoding"></a>例 : ELEMENT ディレクティブとエンティティのエンコードを指定する
+# <a name="example-specifying-the-element-directive-and-entity-encoding"></a>例:ELEMENT ディレクティブとエンティティのエンコードの指定
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
   この例では、 **ELEMENT** ディレクティブと **XML** ディレクティブの違いを説明します。 **ELEMENT** ディレクティブを指定した場合はデータがエンティティとしてエンコードされますが、 **XML** ディレクティブを指定した場合はその処理が行われません。 このクエリでは、\<Summary> 要素に、`<Summary>This is summary description</Summary>` のように XML が割り当てられています。  
   

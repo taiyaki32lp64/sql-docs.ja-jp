@@ -1,5 +1,5 @@
 ---
-title: オペレーターのプロパティ - [新しいオペレーター] - ([通知] ページ) | Microsoft Docs
+title: オペレーターのプロパティ - [新しいオペレーター] ([通知] ページ) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -10,18 +10,17 @@ ms.topic: conceptual
 f1_keywords:
 - sql13.ag.operator.notifications.f1
 ms.assetid: d10a381e-b567-4701-aa2d-2db09f62ad81
-author: stevestein
-ms.author: sstein
-manager: craigg
+author: markingmyname
+ms.author: maghan
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: e37f7c6aca9ab09b220e72e516d2d90681f80837
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a7eab713ea833832b46b36bbd8a7e4af17d33124
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47650790"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68260049"
 ---
-# <a name="operator-properties---new-operator-notifications-page"></a>オペレーターのプロパティ - [新しいオペレーター] - ([通知] ページ)
+# <a name="operator-properties---new-operator-notifications-page"></a>オペレーターのプロパティ - [新しいオペレーター] ([通知] ページ)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
 > [!IMPORTANT]  
@@ -54,5 +53,5 @@ ms.locfileid: "47650790"
 **net send**を使用してこのオペレーターに通知します。  
   
 ## <a name="see-also"></a>参照  
-[演算子](../../ssms/agent/operators.md)  
+[オペレーター](../../ssms/agent/operators.md)  
   

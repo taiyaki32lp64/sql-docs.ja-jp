@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: ed9851ce-44ee-4c8e-b626-1d0b52da30fe
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 744a31b805fb46302f4f9ad34a1bc2576a180694
-ms.sourcegitcommit: 98324d9803edfa52508b6d5d3554614d0350a0b9
+ms.openlocfilehash: f9ead25f93ff16d453923be437dfacd7572c09f3
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52321668"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67937979"
 ---
 # <a name="odbc-64-bit-information"></a>ODBC 64 ビットの情報
 Windows Server 2003 以降では、Microsoft オペレーティング システムは、64 ビット ODBC ライブラリをサポートが。 ODBC ヘッダーと最初に付属している MDAC 2.7 SDK ライブラリは、プログラマは新しい 64 ビット プラットフォーム用のコードを簡単に記述するための変更を含めます。 64 ビットおよび 32 ビットのプラットフォームの両方に基づいて、同じソース コードをコンパイルするコードが以下に定義されている ODBC 型を使用することを確認して、 **_WIN64**または**WIN32**マクロ。  
@@ -34,7 +33,7 @@ Windows Server 2003 以降では、Microsoft オペレーティング システ�
 ## <a name="function-declaration-changes"></a>関数宣言の変更  
  次の関数のシグネチャは、64 ビット プログラミングの変更されました。 太字のテキスト内の項目とは異なる特定のパラメーターです。  
   
-```c
+```cpp
 SQLBindCol (SQLHSTMT StatementHandle, SQLUSMALLINT ColumnNumber,  
    SQLSMALLINT TargetType, SQLPOINTER TargetValuePtr, SQLLEN BufferLength,   SQLLEN * StrLen_or_Ind);  
   
@@ -126,7 +125,7 @@ typedef SQLLEN SQLROWOFFSET;
   
  SQLSETPOSIROW の定義が 32 ビットと 64 ビットの両方のコンパイラの変更されました。  
   
-```c
+```cpp
 #ifdef _WIN64   
 typedef UINT64 SQLSETPOSIROW;   
 #else   
@@ -136,7 +135,7 @@ typedef UINT64 SQLSETPOSIROW;
   
  64 ビット コンパイラの SQLLEN と sqlulen ですの定義が変更されました。  
   
-```c
+```cpp
 #ifdef _WIN64   
 typedef INT64 SQLLEN;   
 typedef UINT64 SQLULEN;   
@@ -148,7 +147,7 @@ typedef UINT64 SQLULEN;
   
  SQL_C_BOOKMARK は ODBC 3.0、2.0 のクライアントでの 64 ビット コンパイラの非推奨ですが、この値が変更されました。  
   
-```c
+```cpp
 #ifdef _WIN64   
 #define SQL_C_BOOKMARK SQL_C_UBIGINT   
 #else   
@@ -158,7 +157,7 @@ typedef UINT64 SQLULEN;
   
  ブックマークの種類は、新しいヘッダーで異なる方法で定義されます。  
   
-```c
+```cpp
 typedef SQLULEN BOOKMARK;  
 ```  
   
@@ -497,5 +496,5 @@ typedef SQLULEN BOOKMARK;
   
  SQL_ROWSET_SIZE  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [ODBC の概要](../../odbc/reference/introduction-to-odbc.md)

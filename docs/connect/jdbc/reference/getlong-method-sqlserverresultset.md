@@ -1,5 +1,5 @@
 ---
-title: getLong メソッド (SQLServerResultSet) |Microsoft Docs
+title: getLong メソッド (SQLServerResultSet) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: 86745aeb-ea0d-42d1-b7d2-141b7b067af9
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 992353272a58bf1803c554a4680a758bd43cf7e2
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 9a00a79466bb4f53fcef10edb1dd6804542b3eae
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47630980"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67982393"
 ---
 # <a name="getlong-method-sqlserverresultset"></a>getLong メソッド (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

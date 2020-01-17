@@ -21,14 +21,13 @@ helpviewer_keywords:
 ms.assetid: 868017f3-214f-43ef-8536-cc1632a2288f
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 26d7b15318ccf171b8812449948ef0a04d17cfbd
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: dae7d1e29227484e907c45e8062f90873c10892b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56039043"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68086775"
 ---
 # <a name="datetime2-transact-sql"></a>datetime2 (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -41,21 +40,23 @@ ms.locfileid: "56039043"
 |--------------|-----------|  
 |構文|**datetime2** [ (*fractional seconds precision*) ]|  
 |使用方法|DECLARE \@MyDatetime2 **datetime2(7)**<br /><br /> CREATE TABLE Table1 ( Column1 **datetime2(7)** )|  
-|既定の文字列リテラル形式<br /><br /> (下位のクライアントに使用)|YYYY-MM-DD hh:mm:ss[.fractional seconds]<br /><br /> 詳細については、以下の「下位クライアントの下位互換性」セクションを参照してください。|  
+|既定の文字列リテラル形式<br /><br /> (下位クライアントに使用)|YYYY-MM-DD hh:mm:ss[.fractional seconds]<br /><br /> 詳細については、後述の「下位クライアントの下位互換性」セクションを参照してください。|  
 |日付範囲|0001-01-01 ～ 31.12.99<br /><br /> 1 月 1 日 1 CE ～12 月 31 日 9999 CE|  
-|時刻範囲|00:00:00 ～ 23:59:59.9999999|  
-|タイム ゾーン オフセット範囲|なし|  
-|要素範囲|YYYY は、年を表す 0001 ～ 9999 の 4 桁の数字です。<br /><br /> MM は、指定された年の 01 ～ 12 の月を表す 2 桁の数字です。<br /><br /> DD は、指定された月の (月に応じて) 01 ～ 31 の日を表す 2 桁の数字です。<br /><br /> hh は、時を表す 00 ～ 23 の 2 桁の数字です。<br /><br /> mm は、分を表す 00 ～ 59 の 2 桁の数字です。<br /><br /> ss は、秒を表す 00 ～ 59 の 2 桁の数字です。<br /><br /> n* は、秒の小数部の有効桁数を表す 0 ～ 7 桁の数字です (0 ～ 9999999)。 Informatica では、秒の小数部が 3 桁より多いときは切り捨てられます。|  
+|時間の範囲|00:00:00 から 23:59:59.9999999|  
+|タイム ゾーンのオフセット範囲|なし|  
+|要素範囲|YYYY は、年を表す 0001 から 9999 までの 4 桁の数字です。<br /><br /> MM は、指定された年の 01 ～ 12 の月を表す 2 桁の数字です。<br /><br /> DD は、指定された月の (月に応じて) 01 ～ 31 の日を表す 2 桁の数字です。<br /><br /> hh は、時を表す 00 から 23 までの 2 桁の数字です。<br /><br /> mm は、分を表す 00 から 59 までの 2 桁の数字です。<br /><br /> ss は、秒を表す 00 ～ 59 の 2 桁の数字です。<br /><br /> n* は、秒の小数部の有効桁数を表す 0 ～ 7 桁の数字です (0 ～ 9999999)。 Informatica では、秒の小数部が 3 桁より多いときは切り捨てられます。|  
 |文字長|19 文字 (YYYY-MM-DD hh:mm:ss ) 以上、27 文字 (YYYY-MM-DD hh:mm:ss.0000000) 以下|  
-|有効桁数、小数点以下桁数|0 ～ 7 桁で、精度は 100ns です。 既定の有効桁数は 7 桁です。|  
-|ストレージのサイズ|有効桁数が 3 未満の場合は 6 バイト、有効桁数が 3 および 4 の場合は 7 バイトです。 その他のすべての有効桁数には 8 バイトが必要です。|  
+|有効桁数、小数点以下桁数|0 から 7 桁で、精度は 100ns です。 既定の有効桁数は 7 桁です。|  
+|ストレージ サイズ|有効桁数が 3 より小さい場合は 6 バイトです。<br/>有効桁数が 3 または 4 の場合は 7 バイトです。<br/>その他のすべての有効桁数では 8 バイトが必要です。<sup>1</sup>|  
 |精度|100 ナノ秒|  
 |既定値|1900-01-01 00:00:00|  
 |カレンダー|グレゴリオ暦|  
-|ユーザー定義の 1 秒未満の秒の有効桁数|可|  
+|ユーザー定義の 1 秒未満の秒の有効桁数|はい|  
 |タイム ゾーン オフセットへの対応と保持|いいえ|  
 |夏時間への対応|いいえ|  
-  
+
+<sup>1</sup> **datetime2** 値の最初のバイトで、値の有効桁数が格納されます。つまり、**datetime2** 値に必要な実際のストレージは、上の表に示されているストレージ サイズに、有効桁数を格納するためにさらに 1 バイトを加算したものとなります。  これにより、**datetime2** 値の最大サイズは 9 バイトとなります。つまり、最大有効桁数でのデータ ストレージのために 8 バイトを加算した有効桁数が、1 バイトで格納されます。
+
 データ型のメタデータについては、「[sys.systypes &#40;Transact-SQL&#41;](../../relational-databases/system-compatibility-views/sys-systypes-transact-sql.md)」または「[TYPEPROPERTY &#40;Transact-SQL&#41;](../../t-sql/functions/typeproperty-transact-sql.md)」をご覧ください。 一部の日付時刻データ型では、有効桁数および小数点以下桁数が可変です。 列の有効桁数と小数点以下桁数を取得す方法については、「[COLUMNPROPERTY &#40;Transact-SQL&#41;](../../t-sql/functions/columnproperty-transact-sql.md)」、[COL_LENGTH &#40;Transact-SQL&#41;](../../t-sql/functions/col-length-transact-sql.md)」、または「[sys.columns &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-columns-transact-sql.md)」をご覧ください。
   
 ## <a name="supported-string-literal-formats-for-datetime2"></a>datetime2 でサポートされる文字列リテラル形式
@@ -67,7 +68,7 @@ ms.locfileid: "56039043"
   
 |ODBC|[説明]|  
 |---|---|
-|{ ts 'yyyy-mm-dd hh:mm:ss[.fractional seconds]' }|ODBC API 固有:<br /><br /> 1 秒未満の秒を表す小数点の右側の桁数は、0 ～ 7 (100 ナノ秒) の範囲で指定できます。|  
+|{ ts 'yyyy-mm-dd hh:mm:ss[.fractional seconds]' }|ODBC API 固有:<br /><br /> 1 秒未満の秒を表す小数点の右側の桁数は、0 から 7 (100 ナノ秒) の範囲で指定できます。|  
   
 ## <a name="ansi-and-iso-8601-compliance"></a>ANSI および ISO 8601 への準拠  
 **datetime2** の ANSI および ISO 8601 への準拠は、[date](../../t-sql/data-types/date-transact-sql.md) 型および [time](../../t-sql/data-types/time-transact-sql.md) 型と同じです。
@@ -166,16 +167,16 @@ SELECT @datetime2 AS '@datetime2', @datetime AS '@datetime';
   
 |入力文字列リテラル|**datetime2(n)**|  
 |---|---|
-|ODBC 日付|ODBC 文字列リテラルは、**datetime** データ型にマップされます。 ODBC DATETIME リテラルから **datetime2** 型への代入演算を行うと、**datetime** 型とこれらの型との間で、変換規則で定義されている暗黙的な変換が行われます。|  
-|ODBC 時刻|上記の ODBC 日付の規則を参照。|  
-|ODBC 日付時刻|上記の ODBC 日付の規則を参照。|  
+|ODBC DATE|ODBC 文字列リテラルは、**datetime** データ型にマップされます。 ODBC DATETIME リテラルから **datetime2** 型への代入演算を行うと、**datetime** 型とこれらの型との間で、変換規則で定義されている暗黙的な変換が行われます。|  
+|ODBC TIME|上記の ODBC 日付の規則を参照。|  
+|ODBC DATETIME|上記の ODBC 日付の規則を参照。|  
 |DATE のみ|時刻部分は既定値の 00:00:00 に設定される|  
-|TIME のみ|日付部分は既定値の 1900-1-1 に設定される|  
-|タイム ゾーンのみ|既定値が設定される|  
-|日付 + 時刻|単純変換|  
-|日付 + タイム ゾーン|許可されていません。|  
-|時刻 + タイム ゾーン|日付部分は既定値の 1900-1-1 に設定される タイム ゾーンの入力は無視される。|  
-|日付 + 時刻 + タイム ゾーン|ローカル datetime が使用される|  
+|TIME のみ|DATE 部分は既定で 1900-1-1 に設定されます。|  
+|タイム ゾーンのみ|既定値が指定されます。|  
+|DATE + TIME|単純変換|  
+|DATE + TIMEZONE|許可されていません。|  
+|TIME + TIMEZONE|DATE 部分は既定で 1900-1-1 に設定されます。 タイム ゾーンの入力は無視される。|  
+|DATE + TIME + TIMEZONE|ローカル DATETIME が使用されます。|  
   
 ## <a name="examples"></a>使用例  
 次の例では、文字列をそれぞれの **date** および **time** データ型にキャストした結果を比較します。

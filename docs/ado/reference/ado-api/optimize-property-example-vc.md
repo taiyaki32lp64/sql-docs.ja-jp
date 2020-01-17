@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: cb335455-b027-4f66-868d-d0d8b2175de1
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 3cb58d24675c414cefc3e2d19dc306986aa8b440
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 5000a537e068136de98e8635f348ff6aa3d9e364
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47601800"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67931838"
 ---
 # <a name="optimize-property-example-vc"></a>Optimize プロパティの例 (VC++)
 この例では、[フィールド](../../../ado/reference/ado-api/field-object.md)オブジェクト動的**最適化**プロパティ。 **Zip**のフィールド、**作成者**テーブルに、 **Pubs**データベースのインデックス付けされていません。 設定、[最適化](../../../ado/reference/ado-api/optimize-property-dynamic-ado.md)プロパティを**True**上、 **zip**フィールドのパフォーマンスを向上させるインデックスの構築に ADO の承認、 [を見つける](../../../ado/reference/ado-api/find-method-ado.md)メソッド。  
@@ -134,6 +133,6 @@ void PrintComError(_com_error &e) {
 ```  
   
  **Akiko Yokomoto 3 Silver-2-xクランベリー クリーク CA**   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [Field オブジェクト](../../../ado/reference/ado-api/field-object.md)   
  [Optimize プロパティ - 動的 (ADO)](../../../ado/reference/ado-api/optimize-property-dynamic-ado.md)

@@ -17,12 +17,12 @@ ms.assetid: 86858982-6af1-4e80-9a93-87451f0d7ee9
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 5853ef42066eca006bfc5b7229f7bd7900a8fb6d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 7c428d9141acfaca3e8ec7876e62b733c30ec161
+ms.sourcegitcommit: f912c101d2939084c4ea2e9881eb98e1afa29dad
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48108092"
+ms.lasthandoff: 10/23/2019
+ms.locfileid: "72797962"
 ---
 # <a name="suspend-an-availability-database-sql-server"></a>可用性データベースの中断 (SQL Server)
   [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] で [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]、 [!INCLUDE[tsql](../../../includes/tsql-md.md)]、または PowerShell を使用して、 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]の可用性データベースを中断できます。 中断コマンドは、中断または再開するデータベースをホストするサーバー インスタンス上で実行する必要があります。  
@@ -45,7 +45,7 @@ ms.locfileid: "48108092"
   
      [推奨事項](#Recommendations)  
   
-     [Security](#Security)  
+     [セキュリティ](#Security)  
   
 -   **データベースを中断するために使用するもの:**  
   
@@ -59,12 +59,12 @@ ms.locfileid: "48108092"
   
 -   [関連タスク](#RelatedTasks)  
   
-##  <a name="BeforeYouBegin"></a> 作業を開始する準備  
+##  <a name="BeforeYouBegin"></a> はじめに  
   
 ###  <a name="Restrictions"></a> 制限事項と制約事項  
  SUSPEND コマンドは、対象のデータベースをホストするレプリカによって受け付けられるとすぐに戻りますが、実際にはデータベースの中断が非同期に行われます。  
   
-###  <a name="Prerequisites"></a> 前提条件  
+###  <a name="Prerequisites"></a> の前提条件  
  中断するデータベースをホストするサーバー インスタンスに接続している必要があります。 プライマリ データベースとそれに対応するセカンダリ データベースを中断するには、プライマリ レプリカをホストするサーバー インスタンスに接続します。 プライマリ データベースを使用可能な状態で維持したままセカンダリ データベースを中断するには、セカンダリ レプリカに接続します。  
   
 ###  <a name="Recommendations"></a> 推奨事項  
@@ -72,7 +72,7 @@ ms.locfileid: "48108092"
   
 ###  <a name="Security"></a> セキュリティ  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> アクセス許可  
  データベースに対する ALTER 権限が必要です。  
   
  可用性グループの ALTER AVAILABILITY GROUP 権限、CONTROL AVAILABILITY GROUP 権限、ALTER ANY AVAILABILITY GROUP 権限、または CONTROL SERVER 権限が必要です。  
@@ -107,19 +107,18 @@ ms.locfileid: "48108092"
 ##  <a name="PowerShellProcedure"></a> PowerShell の使用  
  **データベースを中断するには**  
   
-1.  ディレクトリ変更コマンド (`cd`) を中断するデータベースのレプリカをホストするサーバー インスタンスにします。 詳細については、このトピックの「 [前提条件](#Prerequisites)」をご覧ください。  
+1.  ディレクトリ (`cd`) を、中断するデータベースのレプリカをホストするサーバー インスタンスに変更します。 詳細については、このトピックの「 [前提条件](#Prerequisites)」をご覧ください。  
   
-2.  使用して、`Suspend-SqlAvailabilityDatabase`コマンドレットを可用性グループを中断します。  
+2.  `Suspend-SqlAvailabilityDatabase` コマンドレットを使用して可用性グループを中断します。  
   
      たとえば、次のコマンドでは、 `MyDb3` という名前のサーバー インスタンス上の可用性グループ `MyAg` に含まれている可用性データベース `Computer\Instance`のデータの同期を中断します。  
   
-    ```  
-    Suspend-SqlAvailabilityDatabase `   
-    -Path SQLSERVER:\Sql\Computer\Instance\AvailabilityGroups\MyAg\Databases\MyDb3  
+    ```powershell
+    Suspend-SqlAvailabilityDatabase -Path SQLSERVER:\Sql\Computer\Instance\AvailabilityGroups\MyAg\Databases\MyDb3  
     ```  
   
     > [!NOTE]  
-    >  コマンドレットの構文を表示する、`Get-Help`コマンドレット、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] PowerShell 環境。 詳細については、「 [Get Help SQL Server PowerShell](../../../powershell/sql-server-powershell.md)」を参照してください。  
+    >  コマンドレットの構文を表示するには、`Get-Help` PowerShell 環境で [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] コマンドレットを使用します。 詳細については、「 [Get Help SQL Server PowerShell](../../../powershell/sql-server-powershell.md)」を参照してください。  
   
  **SQL Server PowerShell プロバイダーを設定して使用するには**  
   
@@ -145,7 +144,5 @@ ms.locfileid: "48108092"
 -   [可用性データベースの再開 &#40;SQL Server&#41;](resume-an-availability-database-sql-server.md)  
   
 ## <a name="see-also"></a>参照  
- [AlwaysOn 可用性グループの概要&#40;SQL Server&#41;](overview-of-always-on-availability-groups-sql-server.md)   
+ [AlwaysOn 可用性グループ&#40;SQL Server&#41;の概要](overview-of-always-on-availability-groups-sql-server.md)   
  [可用性データベースの再開 &#40;SQL Server&#41;](resume-an-availability-database-sql-server.md)  
-  
-  

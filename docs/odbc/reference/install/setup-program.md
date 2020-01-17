@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 9cc5d75d-b293-41e5-927c-10f4af2e7af1
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: f64eda5ad640e50afd25db111de74141e41e652d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: dc79bb5d12b53938e3e2ef1c531fd03b0002ed78
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47722150"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68093831"
 ---
 # <a name="setup-program"></a>セットアップ プログラム
 > **注:** 以降では、Windows XP および Windows Server 2003、 **ODBC が Windows オペレーティング システムに含まれる**します。 Windows の以前のバージョンで ODBC を明示的にのみインストールしてください。  

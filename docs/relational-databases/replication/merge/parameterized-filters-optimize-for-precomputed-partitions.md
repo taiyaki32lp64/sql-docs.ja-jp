@@ -1,6 +1,7 @@
 ---
-title: 事前計算済みパーティションによるパラメーター化されたフィルターのパフォーマンス最適化 | Microsoft Docs
-ms.custom: ''
+title: 事前計算済みパーティションによるパラメーター化されたフィルターの最適化 (マージ)
+description: 事前計算済みパーティションを使用して、マージ パブリケーションのパラメーター化されたフィルターのパフォーマンスを最適化する方法について説明します。
+ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -14,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 85654bf4-e25f-4f04-8e34-bbbd738d60fa
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: a7a882660203ee2c23e1cdb6cb9dbf6aa7df407d
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: 0ab9ed7c6c404f9e8f57dd658f20e9e5b8f0d34f
+ms.sourcegitcommit: 02d44167a1ee025ba925a6fefadeea966912954c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54124302"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75321467"
 ---
 # <a name="parameterized-filters---optimize-for-precomputed-partitions"></a>パラメーター化されたフィルター - 事前計算済みパーティションの最適化
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -28,9 +28,9 @@ ms.locfileid: "54124302"
   
  サブスクライバーがパブリッシャーに同期するとき、パブリッシャーはサブスクライバーのフィルターを評価して、サブスクライバーのパーティションまたはデータセットに属する行を識別する必要があります。 フィルター選択されたデータセットを受け取る各サブスクライバーに対して、パブリッシャーの変更内容のパーティション メンバーシップを決定する処理を *パーティション評価*と呼びます。 事前計算済みパーティションがない場合は、特定のサブスクライバーに対する最後のマージ エージェントの実行以降、パブリッシャーのフィルター選択された列に対して加えられた変更ごとにパーティション評価を実行する必要があります。さらに、パブリッシャーと同期するすべてのサブスクライバーについて、この処理を繰り返し行う必要があります。  
   
- ただし、 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] 以降のバージョンで実行中のパブリッシャーとサブスクライバーが事前計算済みパーティションを使用している場合は、パブリッシャーのすべての変更に対するパーティション メンバーシップは既に計算済みであり、変更が行われる時点まで有効になります。 その結果、サブスクライバーはパブリッシャーとの同期時に、パーティションに関連する変更内容のダウンロードを即座に開始できます。パーティションの評価処理が実行されることはありません。 パブリケーションに変更点、サブスクライバー、およびアーティクルが多数存在する場合は、この機能によってパフォーマンスの大幅な向上が期待できます。  
+ ただし、[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] 以降のバージョンでパブリッシャーとサブスクライバーが実行されており、かつ事前計算済みパーティションを使用している場合は、パブリッシャーのすべての変更に対するパーティション メンバーシップは既に計算済みであり、変更が行われる時点まで有効になります。 その結果、サブスクライバーはパブリッシャーとの同期時に、パーティションに関連する変更内容のダウンロードを即座に開始できます。パーティションの評価処理が実行されることはありません。 パブリケーションに変更点、サブスクライバー、およびアーティクルが多数存在する場合は、この機能によってパフォーマンスの大幅な向上が期待できます。  
   
- 事前計算済みパーティションを使用するだけでなく、スナップショットを事前に生成するか、最初の同期時にサブスクライバーからスナップショットの生成および適用を要求できるようにしてください。 これらのオプションの両方またはどちらかを使用して、パラメーター化されたフィルターを使用するパブリケーションに対するスナップショットを提供します。 これらのオプションのどちらかを指定しないと、 **bcp** ユーティリティを使用するのではなく、一連の SELECT ステートメントおよび INSERT ステートメントを使用してサブスクリプションが初期化されます。この処理は、かなり低速で実行されます。 詳細については、「 [Snapshots for Merge Publications with Parameterized Filters](../../../relational-databases/replication/create-a-snapshot-for-a-merge-publication-with-parameterized-filters.md)」を参照してください。  
+ 事前計算済みパーティションを使用するだけでなく、スナップショットを事前に生成するか、最初の同期時にサブスクライバーからスナップショットの生成および適用を要求できるようにしてください。 これらのオプションの両方またはどちらかを使用して、パラメーター化されたフィルターを使用するパブリケーションに対するスナップショットを提供します。 これらのオプションのどちらかを指定しないと、 **bcp** ユーティリティを使用するのではなく、一連の SELECT ステートメントおよび INSERT ステートメントを使用してサブスクリプションが初期化されます。この処理は、かなり低速で実行されます。 詳しくは、「 [Snapshots for Merge Publications with Parameterized Filters](../../../relational-databases/replication/create-a-snapshot-for-a-merge-publication-with-parameterized-filters.md)」をご覧ください。  
   
  **事前計算済みパーティションを使用するには**  
   

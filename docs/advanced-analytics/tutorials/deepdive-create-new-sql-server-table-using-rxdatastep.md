@@ -1,41 +1,42 @@
 ---
-title: RevoScaleR rxDataStep - SQL Server Machine Learning を使用した新しい SQL Server のテーブルを作成します。
-description: SQL Server で R 言語を使用して SQL Server テーブルを作成する方法のチュートリアル。
+title: rxDataStep を使用したテーブルの作成
+description: このチュートリアルは、SQL Server で R 言語を使用してSQL Server テーブルを作成する方法について詳しく説明しています。
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 11/27/2018
 ms.topic: tutorial
-author: HeidiSteen
-ms.author: heidist
-manager: cgronlun
-ms.openlocfilehash: 4d0eea1921a089141819c49ac78c59e57e01291a
-ms.sourcegitcommit: ee76332b6119ef89549ee9d641d002b9cabf20d2
-ms.translationtype: MT
+author: dphansen
+ms.author: davidph
+ms.custom: seo-lt-2019
+monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
+ms.openlocfilehash: f4ac51fc1affb4128abab017eb00cba4b56960fa
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/20/2018
-ms.locfileid: "53644731"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73727249"
 ---
-# <a name="create-new-sql-server-table-using-rxdatastep-sql-server-and-revoscaler-tutorial"></a>RxDataStep (SQL Server と RevoScaleR チュートリアル) を使用した新しい SQL Server のテーブルを作成します。
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+# <a name="create-new-sql-server-table-using-rxdatastep-sql-server-and-revoscaler-tutorial"></a>RxDataStep を使用して新しい SQL Server テーブルを作成する (SQL Server と RevoScaleR のチュートリアル)
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-このレッスンの一部である、 [RevoScaleR チュートリアル](deepdive-data-science-deep-dive-using-the-revoscaler-packages.md)を使用する方法の[RevoScaleR 関数](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler)と SQL Server。
+このレッスンは、SQL Server で [RevoScaleR 関数](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler)を使用する方法についての [RevoScaleR チュートリアル](deepdive-data-science-deep-dive-using-the-revoscaler-packages.md)の一部です。
 
-このレッスンで、インメモリ データ フレームの間でデータを移動する方法について説明します、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]コンテキスト、およびローカル ファイル。
+このレッスンでは、インメモリ データ フレーム、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] コンテキスト、およびローカル ファイルの間でデータを移動する方法を学習します。
 
 > [!NOTE]
-> このレッスンでは、さまざまなデータ セットを使用します。 航空会社の遅延データセットとは、機械学習実験に広く使用されている公開データセットです。 この例で使用されるデータ ファイルの他の製品サンプルと同じディレクトリで利用できます。
+> このレッスンでは、別のデータセットを使用します。 航空便遅延データセットは、機械学習実験に広く使用されている公開データセットです。 この例に使用するデータ ファイルは、その他の製品サンプルと同じディレクトリにあります。
 
-## <a name="load-data-from-a-local-xdf-file"></a>ローカル XDF ファイルからデータを読み込む
+## <a name="load-data-from-a-local-xdf-file"></a>ローカル XDF ファイルからのデータの読み込み
 
-このチュートリアルの前半で使用して、 **RxTextData**テキスト ファイルから R にデータをインポートする関数を使用して、 **RxDataStep**関数にデータを移動する[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]します。
+このチュートリアルの前半では、**RxTextData** 関数を使用してデータをテキスト ファイルから R にインポートし、**RxDataStep** 関数を使用してデータを [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] に移動しました。
 
-このレッスンでは、別のアプローチと、保存ファイルからデータを使用して、 [XDF 形式](https://en.wikipedia.org/wiki/Extensible_Data_Format)します。 XDF ファイルを使用してデータに簡単な変換を行った後、新しい変換後のデータを保存する[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]テーブル。
+このレッスンでは、別のアプローチを採用し、[XDF 形式](https://en.wikipedia.org/wiki/Extensible_Data_Format)で保存されたファイルのデータを使用します。 XDF ファイルを使用するデータに簡単な変換を実行した後に、変換後のデータを新しい [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] テーブルに保存します。
 
-**XDF は何ですか。**
+**XDF とは**
 
-XDF 形式は、高次元データ用に開発された XML 標準として、ネイティブのファイル形式が使用[Machine Learning Server](https://docs.microsoft.com/machine-learning-server/r/concept-what-is-xdf)します。 XDF は、R インターフェイスを使用したバイナリ ファイル形式です。行と列の処理と分析を最適化しています。  XDF 形式は、データの移動や、分析に有用なデータのサブセットを格納するために使用できます。
+XDF 形式は、高次元データ用に開発された XML 標準であり、[Machine Learning Server](https://docs.microsoft.com/machine-learning-server/r/concept-what-is-xdf) によって使用されるネイティブ ファイル形式です。 XDF は、R インターフェイスを使用したバイナリ ファイル形式です。行と列の処理と分析を最適化しています。  XDF 形式は、データの移動や、分析に有用なデータのサブセットを格納するために使用できます。
 
-1. 計算コンテキストをローカル ワークステーションに設定します。 **この手順では、DDL のアクセス許可が必要です。**
+1. 計算コンテキストをローカル ワークステーションに設定します。 **この手順には、DDL の権限が必要です。**
 
     ```R
     rxSetComputeContext("local")
@@ -43,7 +44,7 @@ XDF 形式は、高次元データ用に開発された XML 標準として、�
   
 2. **RxXdfData** 関数を使用して新しいデータ ソース オブジェクトを定義します。 XDF データ ソースを定義するには、データ ファイルへのパスを指定します。  
 
-    テキスト変数を使用してファイルへのパスを指定できます。 ただし、ここでは、ある便利なショートカットを使用することですが、 **rxGetOption**関数し、サンプルのデータ ディレクトリからファイル (AirlineDemoSmall.xdf) を取得します。
+    テキスト変数を使用して、ファイルへのパスを指定できます。 ただし、この場合は便利なショートカットがあります。これは、**rxGetOption** 関数を使用し、サンプル データ ディレクトリからファイル (AirlineDemoSmall.xdf) を取得するものです。
   
     ```R
     xdfAirDemo <- RxXdfData(file.path(rxGetOption("sampleDataDir"),  "AirlineDemoSmall.xdf"))
@@ -65,25 +66,25 @@ Var 3: DayOfWeek 7 factor levels: Monday Tuesday Wednesday Thursday Friday Satur
 
 > [!NOTE]
 > 
-> ご覧のように、データを XDF ファイルに読み込むために他の関数を呼び出す必要がなく、データに対して **rxGetVarInfo** をすぐに呼び出すことができます。 XDF は既定の中間ストレージ メソッドであるためにです**RevoScaleR**します。 XDF ファイルに加えて、 **rxGetVarInfo**関数が複数のソースの種類になりました。
+> ご覧のように、データを XDF ファイルに読み込むために他の関数を呼び出す必要がなく、データに対して **rxGetVarInfo** をすぐに呼び出すことができます。 これは、XDF が **RevoScaleR** の既定の中間格納方法であるためです。 XDF ファイルに加えて、**rxGetVarInfo** 関数は、複数のソースの種類をサポートするようになりました。
 
-## <a name="move-contents-to-sql-server"></a>SQL Server にコンテンツを移動します。
+## <a name="move-contents-to-sql-server"></a>コンテンツの SQL Server への移動
 
-ローカルの R セッションで作成した XDF データ ソースに移動できますこのデータをデータベース テーブルに格納する*DayOfWeek* 1 から 7 への値を持つ整数。
+ローカル R セッションで XDF データ ソースが作成されたので、このデータをデータベース テーブルに移動し、*DayOfWeek* を 1 ~ 7 の値を持つ整数として格納できるようになりました。
 
-1. データ、およびリモート サーバーへの接続を格納するテーブルを指定する、SQL Server のデータ ソース オブジェクトを定義します。
+1. データを格納するテーブルとリモート サーバーへの接続を指定して、SQL Server データ ソース オブジェクトを定義します。
   
     ```R
     sqlServerAirDemo <- RxSqlServerData(table = "AirDemoSmallTest", connectionString = sqlConnString)
     ```
   
-2. 念のため、同じ名前のテーブルが既にが存在しが存在する場合、テーブルを削除するかどうかをチェックする手順が含まれます。 同じ名前の既存のテーブルでは、新しく作成されないできないようにします。
+2. 念のため、同じ名前のテーブルが既に存在しないか確認する手順が含め、存在する場合はそのテーブルを削除します。 同じ名前のテーブルが既に存在する場合、新しいテーブルを作成できません。
   
     ```R
     if (rxSqlServerTableExists("AirDemoSmallTest",  connectionString = sqlConnString))  rxSqlServerDropTable("AirDemoSmallTest",  connectionString = sqlConnString)
     ```
   
-3. 使用してテーブルにデータを読み込む**rxDataStep**します。 この関数は、2 つのデータは既にデータ ソースを定義し、途中のデータを変換できます必要に応じて移動します。
+3. **rxDataStep** を使用して、テーブルにデータを読み込みます。 この関数は、既に定義されている 2 つのデータ ソースの間でデータを移動し、必要に応じて途中でデータを変換できます。
   
     ```R
     rxDataStep(inData = xdfAirDemo, outFile = sqlServerAirDemo,
@@ -92,13 +93,13 @@ Var 3: DayOfWeek 7 factor levels: Monday Tuesday Wednesday Thursday Friday Satur
         overwrite = TRUE )
     ```
   
-    これは非常に大きなテーブル、このような最終状態メッセージが表示されるまでまで待機します。*行の読み取り:処理された合計行は 200000、:600000*します。
+    これは非常に大きなテーブルであるため、次のような最終的なステータス メッセージが表示されるまで待ちます。*読み取られる行:200000、処理された行数の合計:600000*。
      
-## <a name="load-data-from-a-sql-table"></a>SQL テーブルからデータを読み込む
+## <a name="load-data-from-a-sql-table"></a>SQL テーブルからのデータの読み込み
 
-テーブルのデータが存在する場合は、単純な SQL クエリを使用して読み込むことができます。 
+テーブルにデータが存在する場合は、単純な SQL クエリを使用してデータを読み込むことができます。 
 
-1. 新しい SQL Server データ ソースを作成します。 入力は、先ほど作成し、データと共に読み込まれる、新しいテーブルに対するクエリです。 この定義の因子レベルを追加します、 *DayOfWeek*列を使用して、 *colInfo*引数**RxSqlServerData**します。
+1. SQL Server の新規データベースを作成します。 この入力は、先ほど作成してデータと共に読み込まれた新しいテーブルに対するクエリです。 この定義では、*colInfo* 引数を **RxSqlServerData** に使用して、*DayOfWeek* 列の因子レベルを追加します。
   
     ```R
     sqlServerAirDemo2 <- RxSqlServerData(
@@ -108,7 +109,7 @@ Var 3: DayOfWeek 7 factor levels: Monday Tuesday Wednesday Thursday Friday Satur
         colInfo = list(DayOfWeek = list(type = "factor",  levels = as.character(1:7))))
     ```
   
-2. 呼び出す**rxSummary**クエリ内のデータの概要を確認します。
+2. クエリ内のデータの概要を確認するには、再度 **rxSummary** を呼び出します。
   
     ```R
     rxSummary(~., data = sqlServerAirDemo2)

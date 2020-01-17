@@ -19,11 +19,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 7385dddea48813615a851979e526af5f03a23332
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54134392"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68206586"
 ---
 # <a name="calling-a-stored-procedure-ole-db"></a>ストアド プロシージャの呼び出し (OLE DB)
   ストアド プロシージャは、0 個以上のパラメーターを受け取ることができます。 また、値を返すこともできます。 使用する場合、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client OLE DB プロバイダーでは、ストアド プロシージャのパラメーターは、渡すことができます。  
@@ -91,7 +91,7 @@ ms.locfileid: "54134392"
   
  ODBC CALL エスケープ シーケンスを使用してプロシージャを呼び出す場合の一般的な構文は、次のとおりです。  
   
- {**[? =]****呼び出す**_procedure_name_[**(**[*パラメーター*] [**、**[*パラメーター*].**)**]}  
+ { **[? =]** **呼び出す**_procedure_name_[ **(** [*パラメーター*] [ **、** [*パラメーター*]. **)** ]}  
   
  以下に例を示します。  
   
@@ -125,7 +125,7 @@ ms.locfileid: "54134392"
 EXECUTE SalesByCategory 'Produce', '1995'  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [ストアド プロシージャ](stored-procedures.md)  
   
   

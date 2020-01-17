@@ -12,20 +12,23 @@ f1_keywords:
 helpviewer_keywords:
 - Data Viewer dialog box
 ms.assetid: 6351309a-688f-4e82-9697-1712130f10a1
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: c186241a51a0d3c282e8ae12e7ef4ff6737497d3
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: fa6129fe5e617fc9f1684644012171d3ff6836c4
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47662970"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71293024"
 ---
 # <a name="data-viewer"></a>[データ ビューアー]
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   パスがデータ ビューアーを使用するように構成されている場合、データ ビューアーはデータが 2 つのデータ フロー コンポーネントを移動するときに、バッファーによるデータ バッファーを表示します。  
   
-## <a name="options"></a>[変数]  
+## <a name="options"></a>オプション  
  **緑色の矢印**  
  クリックすると、次のバッファーのデータが表示されます。 データが 1 つのバッファーに移動される場合、このオプションは使用できません。  
   

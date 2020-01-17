@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: e10b5431-1bb0-47ca-8fd0-c04bd73a4410
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: a110059cd635e2bc89a6e794082d706da1269179
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ae1c39d5c3ddc36f4ca3007cf9e17c2543055b85
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47604960"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68099199"
 ---
 # <a name="sysdmauditclasstypemap-transact-sql"></a>sys.dm_audit_class_type_map (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-asdw-xxx-md.md)]
@@ -35,12 +34,12 @@ ms.locfileid: "47604960"
 |-----------------|---------------|-----------------|  
 |**class_type**|**char(2)**|監査されたエンティティのクラス型。 監査ログに書き込まれ、によって返される class_type にマップ、 **get_audit_file()** 関数。 NULL 値は許可されません。|  
 |**class_type_desc**|**nvarchar(120)**|監査可能なエンティティの名前。 NULL 値は許可されません。|  
-|**securable_class_desc**|**nvarchar(120)**|監査対象の class_type にマップされる、セキュリティ保護可能なオブジェクト。 class_type がセキュリティ保護可能なオブジェクトにマップされない場合は NULL です。 sys.dm_audit_actions の class_desc に関連付けることができます。|  
+|**securable_class_desc**|**nvarchar(120)**|監査対象の class_type にマップされるセキュリティ保護可能なオブジェクト。 class_type がセキュリティ保護可能なオブジェクトにマップされない場合は NULL です。 sys.dm_audit_actions の class_desc に関連付けることができます。|  
   
 ## <a name="permissions"></a>アクセス許可  
- プリンシパルが必要**選択**権限。 既定では、この権限は Public に与えられます。  
+ プリンシパルが必要**選択**権限。 既定では、これは Public に付与されています。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [CREATE SERVER AUDIT &#40;Transact-SQL&#41;](../../t-sql/statements/create-server-audit-transact-sql.md)   
  [ALTER SERVER AUDIT &#40;Transact-SQL&#41;](../../t-sql/statements/alter-server-audit-transact-sql.md)   
  [DROP SERVER AUDIT &#40;Transact-SQL&#41;](../../t-sql/statements/drop-server-audit-transact-sql.md)   

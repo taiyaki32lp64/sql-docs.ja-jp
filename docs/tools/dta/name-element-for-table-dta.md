@@ -1,5 +1,5 @@
 ---
-title: テーブル (DTA) の要素の名前を付けます |Microsoft Docs
+title: Table の Name 要素 (DTA) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -12,15 +12,14 @@ dev_langs:
 helpviewer_keywords:
 - Name element
 ms.assetid: 422a755f-ee52-4863-b1aa-f4ef1b8fd0bb
-author: stevestein
-ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 73848e88639fe158e631953670129179c717a4e2
-ms.sourcegitcommit: 0f7cf9b7ab23df15624d27c129ab3a539e8b6457
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: cde36fc8bc0ffb442d641abb49f842ead832fc57
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51290778"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68034591"
 ---
 # <a name="name-element-for-table-dta"></a>Table の Name 要素 (DTA)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

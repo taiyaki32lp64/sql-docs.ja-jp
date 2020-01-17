@@ -7,15 +7,15 @@ ms.reviewer: ''
 ms.technology: master-data-services
 ms.topic: conceptual
 ms.assetid: cdc4daca-3dff-46d8-b7f0-57f7826dd61a
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: dca11c580ea8427ce04619720af659f16d6df9ea
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 83e65825f098dbcabe9fa6cbb67513e1c9654f9f
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53357718"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65483635"
 ---
 # <a name="business-rule-actions-master-data-services"></a>ビジネス ルール アクション (マスター データ サービス)
   [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]では、ビジネス ルールのアクションはビジネス ルールの条件評価の結果です。 条件が true の場合は、アクションが開始されます。  
@@ -50,7 +50,7 @@ ms.locfileid: "53357718"
 |**が必須である**|選択した属性**は必須です**。つまり、NULL または空白にすることはできません。<br /><br /> このアクションは、文字列値、数値、データ値、およびリンク値に有効です。|  
 |**が無効である**|選択した属性**は無効です**。<br /><br /> このアクションは、文字列値、数値、データ値、およびリンク値に有効です。|  
 |**がパターンを含まなければならない**|選択した属性には、指定されている**パターンが含まれている必要があります**。 パターンの指定には、.NET Framework 正規表現を使用します。<br /><br /> 正規表現の詳細については、MSDN ライブラリの「 [正規表現言語要素](https://go.microsoft.com/fwlink/?LinkId=164401) 」を参照してください。<br /><br /> このアクションは、文字列値およびリンク値に有効です。|  
-|**が一意でなければならない**|選択した属性は、定義済みの属性と組み合わせているかどうかに関係なく、**一意である必要があります**。<br /><br /> **ベスト プラクティス:** このアクションは、サブスクライブ システムでのインデックス フィールドの有効性を確保する必須の条件と組み合わせてください。<br /><br /> このアクションは、文字列値、数値、データ値、およびリンク値に有効です。|  
+|**が一意でなければならない**|選択した属性は、定義済みの属性と組み合わせているかどうかに関係なく、**一意である必要があります**。<br /><br /> **ベスト プラクティス:** サブスクライブ システムのインデックス フィールドの有効性を確保するには、このアクションを必須の条件と組み合わせてください。<br /><br /> このアクションは、文字列値、数値、データ値、およびリンク値に有効です。|  
 |**に次のいずれかの値が含まれていなければならない**|選択した属性には、一覧で指定された**値のいずれかが含**まれている必要があります。<br /><br /> このアクションは、文字列値に有効です。|  
 |**が次の値より大きくなければならない**|選択した属性は、特定の属性または属性値**より大きいか、空白である必要があります**。<br /><br /> このアクションは、文字列値、数値、およびデータ値に有効です。|  
 |**が次の値に等しくなければならない**|選択した属性は、定義済みの属性値、その他の属性、または空白である**必要があります**。<br /><br /> このアクションは、文字列値、数値、データ値、およびリンク値に有効です。|  
@@ -68,7 +68,7 @@ ms.locfileid: "53357718"
 |-----------------|-----------------|  
 |**がワークフローで始まる**|外部ワークフローを開始します。 このアクションが実行される原因となったデータはワークフローに渡されます。 詳細については、「 [SharePoint ワークフローとマスター データ サービスとの統合](https://msdn.microsoft.com/library/gg690195.aspx)」を参照してください。<br /><br /> このアクションは、文字列値、数値、データ値、およびリンク値に有効です。|  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [ビジネス ルール条件 (マスター データ サービス)](business-rule-conditions-master-data-services.md)   
  [ビジネス ルール (マスター データ サービス)](../../2014/master-data-services/business-rules-master-data-services.md)   
  [ビジネス ルールを作成しパブリッシュする (マスター データ サービス)](../../2014/master-data-services/create-and-publish-a-business-rule-master-data-services.md)  

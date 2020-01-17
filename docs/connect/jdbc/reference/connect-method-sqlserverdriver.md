@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: 43813a4c-1cc7-4659-ba27-f1786f1371eb
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: b4c1a7853925cfe6dbc97ab8f6c4c5b4f9147ac6
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 518be09d4a4929a06866eec253a49a39d7865263
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47718340"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67955416"
 ---
 # <a name="connect-method-sqlserverdriver"></a>connect メソッド (SQLServerDriver)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -39,20 +38,20 @@ public java.sql.Connection connect(java.lang.String Url,
 #### <a name="parameters"></a>パラメーター  
  *Url*  
   
- データベースへの接続に使用される URL を含む**文字列**値です。  
+ データベースへの接続に使用される URL を含む **String** 値です。  
   
  *suppliedProperties*  
   
  接続の引数として使用される一連の文字列値の組み合わせです。  
   
 ## <a name="return-value"></a>戻り値  
- 接続オブジェクトです。  
+ Connection オブジェクトです。  
   
 ## <a name="exceptions"></a>例外  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- この接続のメソッドは、java.sql.Driver インターフェイスの connect メソッドによって指定されます。  
+ この connect メソッドは、java. .sql. Driver インターフェイスの connect メソッドによって指定されます。  
   
 ## <a name="see-also"></a>参照  
  [SQLServerDriver のメソッド](../../../connect/jdbc/reference/sqlserverdriver-methods.md)   

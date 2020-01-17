@@ -14,11 +14,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 752796caafa86ece1b471beb25a77ea381497409
-ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/18/2018
-ms.locfileid: "53588602"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62774412"
 ---
 # <a name="set-a-sql-server-alias-for-the-sql-server-agent-service-sql-server-management-studio"></a>Set a SQL Server Alias for the SQL Server Agent Service (SQL Server Management Studio)
   このトピックでは、[!INCLUDE[ssDE](../includes/ssde-md.md)] への接続時に使用する [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] エージェントに対して、[!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] を使用して [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] の別名を設定する方法について説明します。 既定では、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] エージェント サービスは、追加のクライアント構成を必要としない動的サーバー名を使用することによって、名前付きパイプを経由して [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] のインスタンスに接続します。 既定のネットワーク転送を使用しない場合、または、代替の名前付きパイプを使用して受信待ちする [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] のインスタンスに接続する場合は、サーバー接続の別名を設定する必要があります。  
@@ -62,7 +62,7 @@ ms.locfileid: "53588602"
   
 1.  **オブジェクト エクスプローラー**で、 [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] のインスタンスに接続して、そのインスタンスを展開します。  
   
-2.  **[SQL Server エージェント]** を右クリックし、**[プロパティ]** をクリックします。  
+2.  **[SQL Server エージェント]** を右クリックし、 **[プロパティ]** をクリックします。  
   
 3.  [**SQL Server エージェントのプロパティ** _server_name_] ダイアログ ボックスの **[ページの選択]** で **[接続]** を選択します。  
   

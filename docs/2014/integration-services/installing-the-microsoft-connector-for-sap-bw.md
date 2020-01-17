@@ -7,15 +7,15 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 3bfb9023-9597-4f59-9085-4b9057e7702e
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 80fef580e824fe3a668c5af990ef0955eebcad8d
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 0e43a45f9b21e631638dec43a8a126b4f007429d
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52806484"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62767754"
 ---
 # <a name="installing-the-microsoft-connector-for-11-sap-bw"></a>Microsoft Connector 1.1 for SAP BW のインストール
   インストールする、 [!INCLUDE[msCoName](../includes/msconame-md.md)] Connector 1.1 for SAP BW およびそのドキュメントをダウンロードして、SQL Server 機能パック Web ページから、Windows インストーラー パッケージを実行します。  

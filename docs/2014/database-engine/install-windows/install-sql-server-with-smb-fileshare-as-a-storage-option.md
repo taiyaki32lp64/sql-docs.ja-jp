@@ -11,11 +11,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 3242f463e24322921b16a513c1b3a6905965b390
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54136052"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62775335"
 ---
 # <a name="install-sql-server-with-smb-fileshare-as-a-storage-option"></a>SQL Server をストレージ オプションとして SMB ファイル共有にインストールする
   [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 以降では、システム データベース (Master、Model、MSDB、および TempDB) と[!INCLUDE[ssDE](../../includes/ssde-md.md)] ユーザー データベースをストレージ オプションとしてサーバー メッセージ ブロック (SMB) ファイル サーバーにインストールできます。 これは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] スタンドアロン インストールと [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] フェールオーバー クラスター インストール (FCI) の両方に当てはまります。  
@@ -32,7 +32,7 @@ ms.locfileid: "54136052"
   
 -   \\\ServerName\ShareName  
   
- 汎用名前付け規則の詳細については、次を参照してください。 [UNC](https://go.microsoft.com/fwlink/?LinkId=245534) (https://go.microsoft.com/fwlink/?LinkId=245534)します。  
+ 汎用名前付け規則の詳細については、次を参照してください。 [UNC](https://go.microsoft.com/fwlink/?LinkId=245534) (https://go.microsoft.com/fwlink/?LinkId=245534) します。  
   
  ループバック UNC パス (サーバー名が localhost、127.0.0.1、またはローカル コンピューター名である UNC パス) はサポートされません。 特別なケースとして、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] と同じノードでホストされたファイル サーバー クラスターを使用している [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] もサポートされません。 この状況を避けるため、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] とファイル サーバー クラスターは、別個の Windows クラスターに作成することをお勧めします。  
   
@@ -87,7 +87,7 @@ ms.locfileid: "54136052"
 |オペレーティング システム|SMB2 プロトコルのバージョン|に対するメリット [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|  
 |----------------------|---------------------------|-------------------------------------------|  
 |[!INCLUDE[firstref_longhorn](../../includes/firstref-longhorn-md.md)] SP 2|2.0|従来のバージョンの SMB よりもパフォーマンスに優れています。<br /><br /> 持続性が高いため、一時的なネットワーク障害もスムーズに復旧できます。|  
-|[!INCLUDE[winserver2008r2](../../includes/winserver2008r2-md.md)] SP 1 (Server Core を含む)|2.1|大きい MTU をサポートするため、SQL のバックアップや復元など、大規模なデータ転送が高速化されます。 この機能を使用するには、ユーザーが機能を有効にする必要があります。 この機能を有効にする方法の詳細については、「[What's New in SMB](https://go.microsoft.com/fwlink/?LinkID=237319)」(SMB の新機能) (https://go.microsoft.com/fwlink/?LinkID=237319)) を参照してください。<br /><br /> 大幅なパフォーマンス向上。特に、SQL OLTP スタイルのワークロードに対して効果的です。 パフォーマンスを向上するには、修正プログラムを適用する必要があります。 この修正プログラムの詳細については、[こちら](https://go.microsoft.com/fwlink/?LinkId=237320) (https://go.microsoft.com/fwlink/?LinkId=237320) を参照してください。|  
+|[!INCLUDE[winserver2008r2](../../includes/winserver2008r2-md.md)] SP 1 (Server Core を含む)|2.1|大きい MTU をサポートするため、SQL のバックアップや復元など、大規模なデータ転送が高速化されます。 この機能を使用するには、ユーザーが機能を有効にする必要があります。 この機能を有効にする方法の詳細については、「[What's New in SMB](https://go.microsoft.com/fwlink/?LinkID=237319)」(SMB の新機能) (https://go.microsoft.com/fwlink/?LinkID=237319) ) を参照してください。<br /><br /> 大幅なパフォーマンス向上。特に、SQL OLTP スタイルのワークロードに対して効果的です。 パフォーマンスを向上するには、修正プログラムを適用する必要があります。 この修正プログラムの詳細については、[こちら](https://go.microsoft.com/fwlink/?LinkId=237320) (https://go.microsoft.com/fwlink/?LinkId=237320) を参照してください。|  
 |[!INCLUDE[win8srv](../../includes/win8srv-md.md)](Server Core を含む)|3.0|ファイル サーバー クラスター構成の SQL DBA またはファイル サーバー管理者に必要な、ファイル共有の透過的フェールオーバー (管理者の操作が不要でダウンタイムが発生しないフェールオーバー) をサポートします。<br /><br /> 複数のネットワーク インターフェイスを同時使用する IO をサポートします。また、ネットワーク インターフェイスの障害に対する耐性も優れています。<br /><br /> RDMA 機能を備えたネットワーク インターフェイスをサポートします。<br /><br /> これらの機能およびサーバー メッセージ ブロックの詳細については、「[Server Message Block overview](https://go.microsoft.com/fwlink/?LinkId=253174)」(サーバー メッセージ ブロックの概要) (https://go.microsoft.com/fwlink/?LinkId=253174) を参照してください。<br /><br /> 継続的可用性機能を備えたスケールアウト ファイル サーバー (SoFS) をサポートします。|  
 |[!INCLUDE[win8srv](../../includes/win8srv-md.md)] R2 (Server Core を含む)|3.2|ファイル サーバー クラスター構成の SQL DBA またはファイル サーバー管理者に必要な、ファイル共有の透過的フェールオーバー (管理者の操作が不要でダウンタイムが発生しないフェールオーバー) をサポートします。<br /><br /> 複数のネットワーク インターフェイスを同時使用する IO をサポートします。また、ネットワーク インターフェイスの障害に対する耐性も優れています (SMB マルチチャネルを使用した場合)。<br /><br /> RDMA 機能を備えたネットワーク インターフェイスをサポートします (SMB ダイレクトを使用した場合)。<br /><br /> これらの機能およびサーバー メッセージ ブロックの詳細については、「[Server Message Block overview](https://go.microsoft.com/fwlink/?LinkId=253174)」(サーバー メッセージ ブロックの概要) (https://go.microsoft.com/fwlink/?LinkId=253174) を参照してください。<br /><br /> 継続的可用性機能を備えたスケールアウト ファイル サーバー (SoFS) をサポートします。<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] OLTP に共通する小規模なランダム読み取り/書き込み I/O 向けに最適化されます。<br /><br /> 最大転送単位 (MTU) が既定で有効になっています。これにより、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データ ウェアハウス、データベースのバックアップと復元など、大規模なシーケンシャル転送のパフォーマンスが大幅に向上します。|  
   
@@ -98,11 +98,11 @@ ms.locfileid: "54136052"
     > [!NOTE]  
     >  SMB 共有フォルダーに対するフル コントロールの共有権限と NTFS 権限は、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] サービス アカウント、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェント サービス アカウント、および管理サーバー ロールを持つ Windows ユーザーに制限する必要があります。  
   
-     ドメイン アカウントを [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] サービス アカウントとして使用することをお勧めします。 システム アカウントをサービス アカウントとして使用した場合、コンピューター アカウントのアクセス許可を _<ドメイン名>_**\\**_<コンピューター名>_**$** という形式で指定できます。  
+     ドメイン アカウントを [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] サービス アカウントとして使用することをお勧めします。 システム アカウントをサービス アカウントとして使用した場合、コンピューター アカウントのアクセス許可を _<ドメイン名>_ **\\** _<コンピューター名>_ **$** という形式で指定できます。  
   
     > [!NOTE]  
     >  -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] セットアップで、ストレージ オプションとして SMB ファイル共有を指定した場合は、ドメイン アカウントをサービス アカウントとして指定する必要があります。 SMB ファイル共有を使用する場合、システム アカウントは [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインストール後にのみサービス アカウントとして指定することができます。  
-    > -   仮想アカウントでは、リモートの場所へアクセスすることはできません。 どの仮想アカウントも、コンピューター アカウントの権限を使用します。 _<domain_name>_**\\**_<computer_name>_**$** の形式でコンピューター アカウントを準備してください。  
+    > -   仮想アカウントでは、リモートの場所へアクセスすることはできません。 どの仮想アカウントも、コンピューター アカウントの権限を使用します。 _<domain_name>_ **\\** _<computer_name>_ **$** の形式でコンピューター アカウントを準備してください。  
   
 -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインストールに使用するアカウントには、クラスター セットアップの際にデータ ディレクトリとして使用される、SMB ファイル共有フォルダーおよび他のすべてのデータ フォルダー (ユーザー データベース ディレクトリ、ユーザー データベース ログ ディレクトリ、TempDB ディレクトリ、TempDB ログ ディレクトリ、バックアップ ディレクトリ) に対して、フル コントロール権限が必要です。  
   
@@ -113,8 +113,8 @@ ms.locfileid: "54136052"
 -   ネットワークにアタッチされたストレージ上に存在する [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] データベースをデタッチした後で、その [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データベースを再アタッチしようとすると、データベース権限の問題が発生する場合があります。 この問題は、[こちらのサポート技術情報の記事](https://go.microsoft.com/fwlink/?LinkId=237321) (https://go.microsoft.com/fwlink/?LinkId=237321) で定義されています。 この問題を回避するには、このサポート技術情報の「 **詳細** 」を参照してください。  
   
 -   NetApp デバイスなど、いくつかのサード パーティは、すべての SQL Server API 呼び出しをサポートしているわけではありません。 これらは、次の取得可能性があります。   
-    2015-06-04 13:14:19.97 spid9s エラー。17053、重大度:16、状態:1.  
-    2015-06-04 13:14:19.97 spid9s DoDevIoCtlOut() GetOverlappedResult():オペレーティング システム エラー (間違った関数)。 1 が発生しました。  
+    2015-06-04 13:14:19.97 spid9s エラー。17053、重大度:16、状態: 1.  
+    2015-06-04 13:14:19.97 spid9s      DoDevIoCtlOut() GetOverlappedResult() :オペレーティング システム エラー (間違った関数)。 1 が発生しました。  
   
      Ntfs では、エラーは問題ありません。  しかし ReFS の場合、パフォーマンスが大幅に低下する可能性があります。  
   

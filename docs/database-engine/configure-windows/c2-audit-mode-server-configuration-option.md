@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 5a8d73a6-c4f6-4967-ba11-ecbcfc90b9cc
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: ff376317473875f9e6d2183f381ceba52c43bfc3
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 52e39eda53e08a4267ac97faa3b691ffcd7acaad
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47612540"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68013002"
 ---
 # <a name="c2-audit-mode-server-configuration-option"></a>c2 audit mode サーバー構成オプション
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

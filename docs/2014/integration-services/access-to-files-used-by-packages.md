@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords:
 - SSIS packages, security
@@ -17,15 +16,15 @@ helpviewer_keywords:
 - files [Integration Services], security
 - SQL Server Integration Services packages, security
 ms.assetid: 2e3ddea9-5289-4289-a70e-11c018f34977
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 6b6e78e04a64f9bddeeb4f24ba2f90919b9d228c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: c0dbc5c5c72b6c69a6d2d390ac6c2c8920a19332
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48214992"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66062188"
 ---
 # <a name="access-to-files-used-by-packages"></a>パッケージで使用されるファイルへのアクセス
   パッケージに格納されないファイルは、パッケージ保護レベルでは保護されません。 このようなファイルには、次のファイルが含まれます。  

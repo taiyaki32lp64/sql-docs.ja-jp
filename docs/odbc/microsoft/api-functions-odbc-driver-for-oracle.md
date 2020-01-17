@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: ece0034f-1ea6-4fbe-8a01-e8d2d1914d44
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 420ca2dbeec4ed3f96870aabf5a0d0647646401e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e2314aadfad1934e56f2d7caa67939818e133665
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47770320"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68006253"
 ---
 # <a name="api-functions-odbc-driver-for-oracle"></a>API 関数 (ODBC Driver for Oracle)
 > [!IMPORTANT]  

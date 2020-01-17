@@ -13,15 +13,14 @@ helpviewer_keywords:
 - XMLDATA option
 - FOR XML clause, inline XDR schema generation
 ms.assetid: 2a40d617-9724-4f7d-80a4-a85c702f14d0
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: 698f9f71e6d8bcc0926fe21e14132f4876530643
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: MightyPen
+ms.author: genemi
+ms.openlocfilehash: 2e738002850c372642413c3ffb0b829f899d4060
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47629420"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67943202"
 ---
 # <a name="generate-an-inline-xdr-schema"></a>インライン XDR スキーマの生成
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

@@ -18,22 +18,22 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: d829ef131bc8772ce2d84391513ffa52b2f2ff1a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48076004"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62873737"
 ---
 # <a name="clr-integration-code-access-security"></a>CLR 統合のコード アクセス セキュリティ
   共通言語ランタイム (CLR) では、マネージド コードに対してコード アクセス セキュリティというセキュリティ モデルがサポートされます。 このモデルでは、コードの ID に基づいてアセンブリに権限が許可されます。 詳細については、.NET Framework Software Development Kit の「コード アクセス セキュリティ」を参照してください。  
   
  アセンブリに許可される権限を決定するセキュリティ ポリシーは、次の 3 つに分類されます。  
   
--   コンピューター ポリシー : [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] がインストールされているコンピューターで実行されるすべてのマネージド コードに対して効力を持つポリシーです。  
+-   マシン ポリシー:マシンで実行されているすべてのマネージ コードについて、ポリシーを有効になってこの[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]がインストールされています。  
   
--   ユーザー ポリシー : 特定のプロセスをホストとするマネージド コードに対して効力を持つポリシーです。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]サービスが実行されています。  
+-   ユーザー ポリシー:これは、プロセスによってホストされるマネージド コードで有効なポリシーです。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]サービスが実行されています。  
   
--   ホスト ポリシー : CLR のホスト (この場合は [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]) によって設定され、そのホストで実行されるマネージド コードに対して効力を持つポリシーです。  
+-   ホスト ポリシー:これは、CLR のホストを設定するポリシー (この場合、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]) そのホストで実行されるマネージ コードは有効にします。  
   
  CLR でサポートされるコード アクセス セキュリティ メカニズムは、ランタイムが完全に信頼されるコードと部分的に信頼されるコードの両方をホストできるという前提に基づいています。 CLR コード アクセス セキュリティによって保護されているリソースは通常によってラップされたマネージ アプリケーション プログラミング インターフェイス、リソースへのアクセスを許可する前にその requirethe に対応する権限。 Demandfor、アクセス許可は、(アセンブリ レベル) で呼び出し履歴内のすべての呼び出しがある対応するリソース権限を持つ場合にのみ満たされます。  
   
@@ -58,7 +58,7 @@ ms.locfileid: "48076004"
 |権限|値/説明|  
 |----------------|-----------------------------|  
 |`SecurityPermission`|`Execution:` マネージド コードを実行する権限です。|  
-|`SqlClientPermission`|`Context connection = true`、`context connection = yes`: context-connection のみを使用できます。接続文字列に指定できる値は、"context connection=true" または "context connection=yes" だけです。<br /><br /> **AllowBlankPassword = false:** 空白のパスワードは許可されていません。|  
+|`SqlClientPermission`|`Context connection = true`, `context connection = yes`:コンテキスト接続を使用して、接続文字列は、の値を指定できますのみ専用"コンテキスト接続 = true"または"コンテキスト接続 = [はい]"。<br /><br /> **AllowBlankPassword = false。** 空のパスワードを指定することはできません。|  
   
 ### <a name="externalaccess"></a>EXTERNAL_ACCESS  
  EXTERNAL_ACCESS アセンブリと同じアクセス許可がある`SAFE`アセンブリ、追加ファイル、ネットワーク、環境変数、レジストリなどの外部システム リソースにアクセスすることができます。  
@@ -108,8 +108,8 @@ ms.locfileid: "48076004"
 ||`SAFE`|`EXTERNAL_ACCESS`|`UNSAFE`|  
 |`Code Access Security Permissions`|実行のみ|実行および外部リソースへのアクセス|無制限 (P/Invoke を含む)|  
 |`Programming model restrictions`|はい|はい|制限なし|  
-|`Verifiability requirement`|はい|はい|いいえ|  
-|`Local data access`|はい|はい|はい|  
+|`Verifiability requirement`|はい|[はい]|いいえ|  
+|`Local data access`|はい|[はい]|[はい]|  
 |`Ability to call native code`|いいえ|いいえ|はい|  
   
 ## <a name="see-also"></a>参照  

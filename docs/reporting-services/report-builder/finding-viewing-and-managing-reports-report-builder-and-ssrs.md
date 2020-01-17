@@ -1,36 +1,36 @@
 ---
 title: レポートの検索、表示、管理 (レポート ビルダーおよび SSRS) | Microsoft Docs
-ms.date: 03/14/2017
+ms.date: 05/20/2019
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: report-builder
 ms.topic: conceptual
 ms.assetid: 5599300d-6bcd-4704-aba5-fa98e01c78a9
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 8e19127cd13ddb5e71ce245b4e0a832c63ecad76
-ms.sourcegitcommit: c7febcaff4a51a899bc775a86e764ac60aab22eb
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: c2e379d463734b751770a8b9a844ea92b1f328b6
+ms.sourcegitcommit: c0e48b643385ce19c65ca6e348ce83b2d22b6514
+ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "52711013"
+ms.lasthandoff: 07/01/2019
+ms.locfileid: "67492866"
 ---
 # <a name="finding-viewing-and-managing-reports-report-builder-and-ssrs-"></a>レポートの検索、表示、管理 (レポート ビルダーおよび SSRS)
   レポート ビルダーでは、レポート サーバーまたは SharePoint サイト上のフォルダーを参照して、レポート、共有データ ソース、モデル、その他の関連レポート アイテムを検索したり、自分のコンピューターを参照して、ローカル レポートを検索したりできます。 レポートを見つけやすくするため、レポート ビルダーでは最近使用されたサーバーとサイトの一覧を管理し、コンピューターのファイル システムの "デスクトップ"、"マイ ドキュメント"、および "マイ コンピューター" フォルダーに直接アクセスできるようにしています。  
   
- レポート デザイナーでも、自分のコンピューターを参照して、ローカル レポートを検索することができます。 レポート サーバーまたは SharePoint サイトにレポートを展開した後は、レポート マネージャーを使用してレポート サーバーを参照するか、SharePoint サイトを検索することによって、レポートを見つけることができます。 レポートとそれに関連するアイテムには、それらが展開された後もローカルからアクセスすることができます。  
+ レポート デザイナーでも、自分のコンピューターを参照して、ローカル レポートを検索することができます。 レポート サーバーまたは SharePoint サイトにレポートを展開した後は、Web ポータルを使用してレポート サーバーを参照するか、SharePoint サイトを検索することによって、レポートを見つけることができます。 レポートとそれに関連するアイテムには、それらが展開された後もローカルからアクセスすることができます。  
   
 > [!NOTE]  
->  レポート ビルダーはローカル モードで使用することも、レポート サーバーに接続して使用することもできます。 レポート サーバーとの接続がアクティブではない場合は、いくつかの制限事項が適用されます。  
+> レポート ビルダーはローカル モードで使用することも、レポート サーバーに接続して使用することもできます。 レポート サーバーとの接続がアクティブではない場合は、いくつかの制限事項が適用されます。  
   
  レポート ビルダーから、レポート サーバーまたは SharePoint サイト上のレポートを見つけるには、レポート サーバーまたは SharePoint サイトの URL を指定する必要があります。 レポート ビルダーを最初にインストールするときに、使用する URL を指定できます。 これが、レポートを保存したり開いたりするときにレポート ビルダーが既定で接続するサーバーまたはサイトになります。  
   
- レポートは、レポートの作成時や更新時にレポート ビルダーやレポート デザイナーでプレビューできます。レポートの表示と管理は、レポート マネージャーを使用してレポート サーバーで行うか、レポートをパブリッシュした後、Reporting Services に統合されている SharePoint サイトで SharePoint の組み込みツールや機能を使用して行うことができます。 詳細については、「 [レポート ビルダーでのレポートのプレビュー](../../reporting-services/report-builder/previewing-reports-in-report-builder.md) 」および「 [レポートのプレビュー](../../reporting-services/reports/previewing-reports.md)」を参照してください。  
+ レポートは、レポートの作成時や更新時にレポート ビルダーやレポート デザイナーでプレビューできます。レポートの表示と管理は、Web ポータルを使用してレポート サーバー上で行うか、レポートをパブリッシュした後、Reporting Services に統合されている SharePoint サイトで SharePoint の組み込みツールや機能を使用して行うことができます。 詳細については、「 [レポート ビルダーでのレポートのプレビュー](../../reporting-services/report-builder/previewing-reports-in-report-builder.md) 」および「 [レポートのプレビュー](../../reporting-services/reports/previewing-reports.md)」を参照してください。  
   
- レポート ビルダーやレポート デザイナーでレポートをプレビューするか、レポート マネージャーまたは SharePoint サイトでレポートを表示すると、データが更新され、レポートで使用しているデータ ソースから最新のデータがレポートに表示されます。 データを更新せずにレポートを表示する場合は、パブリッシュ済みレポートでレポート履歴とキャッシュされたデータを使用できます。 これらの機能は、レポート ビルダーやレポート デザイナーでレポートをプレビューするときには使用できません。  
+ レポート ビルダーやレポート デザイナーでレポートをプレビューするか、Web ポータルまたは SharePoint サイトでレポートを表示すると、データが更新され、レポートで使用しているデータ ソースから最新のデータがレポートに表示されます。 データを更新せずにレポートを表示する場合は、パブリッシュ済みレポートでレポート履歴とキャッシュされたデータを使用できます。 これらの機能は、レポート ビルダーやレポート デザイナーでレポートをプレビューするときには使用できません。  
   
 > [!NOTE]  
->  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
+> [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
 ##  <a name="FindingAndViewingReportsRB30"></a> レポート ビルダーを使用したレポートの検索と表示  
  作業するレポートを検索したり、レポートで使用する共有データ ソース、画像、サブレポートを選択したりするには、コンピューター、レポート サーバーのフォルダー、または Reporting Services に統合されている SharePoint サイトを参照します。  
@@ -49,9 +49,9 @@ ms.locfileid: "52711013"
   
  
 ##  <a name="ViewingAndManagingReportServer"></a> レポート サーバーでのレポートの表示と管理  
- レポート マネージャーは、レポート サーバーに保存されているレポートの表示および管理に使用されます。 サーバーのフォルダーを参照してレポートを見つけ、レポートを実行してブラウザーに表示し、管理作業を実行します。  
+ Web ポータルは、レポート サーバー上のレポートの表示および管理に使用されます。 サーバー上のフォルダーを参照してレポートを見つけ、レポートを実行してブラウザーに表示し、管理作業を実行します。  
   
- レポート マネージャーは以下の管理作業に役立ちます。  
+ Web ポータルは以下の管理作業に役立ちます。  
   
 -   レポート、共有データ ソース、その他のレポート アイテムのプロパティの表示および更新  
   
@@ -67,19 +67,15 @@ ms.locfileid: "52711013"
   
  これらの作業のいくつかはレポート サーバーの管理者が行う場合があります。 レポート サーバーで行う作業の詳細については、「[Reporting Services Report Server (Native Mode)](../../reporting-services/report-server/reporting-services-report-server-native-mode.md)」をご覧ください。  
   
- レポート マネージャーには通常、フォルダー、レポート、データ ソース、およびレポート モデルと、[個人用レポート] フォルダーが含まれています。 [個人用レポート] は、所有しているレポートを保存したり操作したりできる作業領域です。 他のレポート サーバー フォルダーはパブリック フォルダーであり、通常、フォルダーのコンテンツの追加や変更を行うには高度な権限が必要になります。 [個人用レポート] 内にフォルダーを作成して、レポートをさらに細かく分類できます。  
+Web ポータルには通常、フォルダー、レポート、データ ソース、および [個人用レポート] フォルダーが含まれています。 [個人用レポート] は、所有しているレポートを保存したり操作したりできる作業領域です。 他のレポート サーバー フォルダーはパブリック フォルダーであり、通常、フォルダーのコンテンツの追加や変更を行うには高度な権限が必要になります。 [個人用レポート] 内にサブフォルダーを作成して、レポートをさらに細かく整理できます。  
   
- レポート マネージャーではレポートが Reporting Services HTML ビューアーに表示されます。 HTML ビューアーは、レポートを HTML で表示するためのフレームワークを提供し、レポートのツール バー、パラメーター セクション、資格情報セクション、ドキュメント マップなどが含まれています。 レポート ツール バーには、ページ ナビゲーション、拡大または縮小、更新、検索、エクスポート、印刷、データ フィードの機能があります。 URL を指定してレポートにアクセスした場合、[レポート] ツール バーはブラウザー ウィンドウのレポートの最上部に表示されます。 印刷機能はオプションで、管理者がオンにする必要があります。 この機能が使用可能なときは、プリンターのアイコンがレポート ツール バーに表示されます。 次の図は、[レポート マネージャー] ウィンドウのレポート ツール バーです。レポート ツール バーの機能が強調されています。  
+ Web ポータルではレポートが Reporting Services HTML ビューアーに表示されます。 HTML ビューアーは、レポートを HTML で表示するためのフレームワークを提供し、レポートのツール バー、パラメーター セクション、資格情報セクション、ドキュメント マップなどが含まれています。 レポート ツール バーには、ページ ナビゲーション、拡大または縮小、更新、検索、エクスポート、印刷、データ フィードの機能があります。 URL を指定してレポートにアクセスした場合、[レポート] ツール バーはブラウザー ウィンドウのレポートの最上部に表示されます。 印刷機能はオプションで、管理者がオンにする必要があります。 この機能が使用可能なときは、プリンターのアイコンがレポート ツール バーに表示されます。 以下に、Web ポータルのレポート ツール バーの拡大図を示します。  
   
- ![レポート マネージャーのレポート ツール バー](../../reporting-services/report-builder/media/hs-reportserver-blowout.gif "レポート マネージャーのレポート ツール バー")  
-[レポート マネージャー] ウィンドウ  
+ ![Web ポータルのレポート ツール バー](../../reporting-services/report-builder/media/finding-viewing-and-managing-reports-report-builder-and-ssrs/report-toolbar-in-the-web-portal.png)  
   
- ![レポート ツールバー](../../reporting-services/media/ssrs-htmlviewer-toolbar.png "レポート ツールバー")  
-レポート ツール バー  
+レポートを実行した後は、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Excel や PDF など、レポートを別の形式にエクスポートできます。 また、コンマ区切り値 (CSV) 表示拡張機能などのデータ表示拡張機能を使用してレポートをエクスポートしてから、別のアプリケーションの入力として CSV データ ファイルを使用することもできます。 レポートのエクスポートについて詳しくは、「[レポートのエクスポート &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-builder/export-reports-report-builder-and-ssrs.md)」をご覧ください。
   
- レポートを実行した後は、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Excel や PDF など、レポートを別の形式にエクスポートできます。 また、コンマ区切り値 (CSV) 表示拡張機能などのデータ表示拡張機能を使用してレポートをエクスポートしてから、別のアプリケーションの入力として CSV データ ファイルを使用することもできます。 レポートのエクスポートの詳細については、「[レポートのエクスポート (レポート ビルダーおよび SSRS)](../../reporting-services/report-builder/export-reports-report-builder-and-ssrs.md)」および「[別の種類のファイルとしてレポートをエクスポートする (レポート ビルダーおよび SSRS)](https://msdn.microsoft.com/library/b577568b-ecbd-44c3-be88-31dab6fc38a2)」を参照してください。  
-  
- レポートを選択して実行するには、レポート マネージャーを起動して、表示するレポートを検索または参照する方法が最も簡単です。 レポートを開く方法の手順を追った説明については、「[レポートを開閉する (レポート マネージャー)](../../reporting-services/reports/open-and-close-a-report-report-manager.md)」をご覧ください。  
+ レポートを選択して実行するには、Web ポータルを起動して、表示するレポートを検索または参照する方法が最も簡単です。  
   
  レポートを実行した後、そのレポートを更新すると新しいデータを表示できます。  
   
@@ -89,7 +85,7 @@ ms.locfileid: "52711013"
 |オプション|結果|  
 |------------|------------|  
 |ブラウザー ウィンドウの **[更新]** ボタン|セッションのキャッシュに保存されているレポートを表示します。 セッションのキャッシュは、ユーザーがレポートを開いた時点で作成されます。 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] は、ブラウザー セッションを使用して、レポートが開いている間の表示状態の整合性を保ちます。|  
-|![[レポート] ツールバーのブラウザー更新ボタン](../../reporting-services/media/htmlviewer-refresh.GIF "[レポート] ツールバーのブラウザー更新ボタン")|[レポート] ツール バーで **[更新]** ボタンをクリックすると、レポート サーバーは、クエリを再実行し、レポートが要求時に実行される場合はレポート データを更新します。 レポートがキャッシュされる場合、またはスナップショットである場合は、 **[更新]** をクリックすると、レポート サーバー データベースに保存されているレポートが表示されます。|  
+|![レポート ツール バーのブラウザー更新ボタン](../../reporting-services/report-builder/media/finding-viewing-and-managing-reports-report-builder-and-ssrs/browser-refresh-button-on-report-toolbar.png)|[レポート] ツール バーで **[更新]** ボタンをクリックすると、レポート サーバーは、クエリを再実行し、レポートが要求時に実行される場合はレポート データを更新します。 レポートがキャッシュされる場合、またはスナップショットである場合は、 **[更新]** をクリックすると、レポート サーバー データベースに保存されているレポートが表示されます。|  
 |Ctrl&lt;/localizedText&gt; + &lt;localizedText&gt;F5&lt;/localizedText&gt; キー|[レポート] ツール バーで **[更新]** ボタンをクリックした場合と同じ結果になります。|  
   
   
@@ -100,14 +96,14 @@ ms.locfileid: "52711013"
   
  アプリケーション ページにアクセスするには、SharePoint ライブラリに既に追加したレポートまたは他のレポート サーバー アイテムのドロップダウン メニューから、アイテム固有のアクションを選択します。 アイテムと権限に応じて、レポート ビルダーでレポートを作成したり、モデルを生成したり、モデル アイテムのセキュリティを設定することもできます。  
   
- Reporting Services および SharePoint テクノロジの詳細については、msdn.microsoft.com で [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [オンライン ブック](https://go.microsoft.com/fwlink/?LinkId=154888)の「[レポート サーバーの構成と管理 (Reporting Services SharePoint モード)](../../reporting-services/report-server-sharepoint/configuration-and-administration-of-a-report-server.md)」をご覧ください。  
+ Reporting Services および SharePoint テクノロジの詳細については、「[レポート サーバーの構成と管理 &#40;Reporting Services SharePoint モード&#41;](../../reporting-services/report-server-sharepoint/configuration-and-administration-of-a-report-server.md)」をご覧ください。
   
 ### <a name="finding-report-server-items-on-a-sharepoint-site"></a>SharePoint サイトでのレポート サーバー アイテムの場所  
  プロパティを設定するには、まずアイテムを探し出せることが必要です。 レポート サーバー アイテムは、常にライブラリまたはライブラリ内のフォルダーに格納されています。  
   
- SharePoint サイトにアクセスすると、[参照] ページと [ライブラリ ツール] タブが表示されます。[参照] ページには、ライブラリと、選択したライブラリのコンテンツが表示されます。 レポート、レポート モデル、およびライブラリ内のその他のアイテムの表示、フォルダーの探索、アイテムを格納するサイトの検索が可能です。  
+ SharePoint サイトにアクセスすると、[参照] ページと [ライブラリ ツール] タブが表示されます。[参照] ページには、ライブラリと、選択したライブラリのコンテンツが表示されます。 レポートおよびライブラリ内のその他のアイテムの表示、フォルダーの探索、アイテムを格納するサイトの検索が可能です。  
   
- SharePoint サイト上のアイテムの中でレポート サーバー アイテムを見分けるには、見た目の異なるアイコンを使用するか、アイテムの種類の上にマウス ポインターを合わせ、表示されるファイル拡張子を確認します。 次の図は、 **レポート** ライブラリ内のフォルダー、レポート モデル、およびレポート定義を示しています。  
+ SharePoint サイト上のアイテムの中でレポート サーバー アイテムを見分けるには、見た目の異なるアイコンを使用するか、アイテムの種類の上にマウス ポインターを合わせ、表示されるファイル拡張子を確認します。 次の図は、**レポート** ライブラリ内のフォルダーおよびレポート定義を示しています。  
   
  ![レポート サーバー アイテムを含む Sharepoint ライブラリ](../../reporting-services/report-builder/media/rs-sharepointlibrary.gif "レポート サーバー アイテムを含む Sharepoint ライブラリ")  
   
@@ -135,9 +131,9 @@ ms.locfileid: "52711013"
   
  
 ##  <a name="InThisSection"></a> トピックの内容  
- 以下のトピックでは、レポートの表示と管理について詳しく説明します。  
+ 以下の記事では、レポートの表示と管理に関する追加情報を説明します。  
   
-  [レポートの検索、表示、管理](../../reporting-services/report-builder/finding-viewing-and-managing-reports-report-builder-and-ssrs.md)
+ [レポートの検索、表示、管理](../../reporting-services/report-builder/finding-viewing-and-managing-reports-report-builder-and-ssrs.md)
   
  [ブラウザーを使用したレポートの検索と表示 (レポート ビルダーおよび SSRS)](../../reporting-services/report-builder/finding-and-viewing-reports-with-a-browser-report-builder-and-ssrs.md)  
  URL を使用してレポートを検索および表示する方法について説明します。  
@@ -148,6 +144,4 @@ ms.locfileid: "52711013"
 ## <a name="see-also"></a>参照  
  [レポートの保存 (レポート ビルダー)](../../reporting-services/report-builder/saving-reports-report-builder.md)   
  [SQL Server のレポート ビルダー](../../reporting-services/report-builder/report-builder-in-sql-server-2016.md)   
- [レポート ビルダーのインストールとアンインストール](https://msdn.microsoft.com/library/2c9a5814-17bf-4947-8fb3-6269e7caa416)  
-  
-  
+ 

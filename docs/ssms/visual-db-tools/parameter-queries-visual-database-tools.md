@@ -10,15 +10,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - parameter queries [SQL Server]
 ms.assetid: 4897c41a-324a-47b8-a30b-cbc9e9e19a8b
-author: stevestein
-ms.author: sstein
-manager: craigg
-ms.openlocfilehash: dd110c3ac8a222bb808e1ca5b084e36d4056b367
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 8c7f9d141edc20a981618b29776e8f9e7106bd19
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52505265"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68263251"
 ---
 # <a name="parameter-queries-visual-database-tools"></a>パラメーター クエリ (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

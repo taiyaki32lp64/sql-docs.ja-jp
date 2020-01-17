@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 helpviewer_keywords:
 - removing role assignments
@@ -14,15 +13,15 @@ helpviewer_keywords:
 - modifying role assignments
 - deleting role assignments
 ms.assetid: 086d0987-b43c-4834-8372-e08fb4b432f8
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 88c864b3e3243ab7cb380b4af5b092757585115d
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: eed9b1a0deb7e88c85283ea3dc7cab9bf893937f
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56023743"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66101998"
 ---
 # <a name="create-and-manage-role-assignments"></a>ロールの割り当てを作成および管理する
   *ロールの割り当て* は、ユーザーまたはグループが特定のレポート サーバー アイテムにアクセスできるか、または操作を実行できるかを決定するセキュリティ ポリシーです。 ロールの割り当ては、ユーザーまたはグループのアカウント名 1 つと、1 つ以上のロールの定義で構成されます。  

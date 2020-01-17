@@ -20,16 +20,15 @@ helpviewer_keywords:
 ms.assetid: 3c9bc120-67c3-463f-9e24-29fd623f25a0
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: c2ab77dbaf90edf1421a0d15073258c370de4c7d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e6ffd36516fecba70618c79a7bbd0415f6bb2cb3
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47643440"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68073249"
 ---
-# <a name="sysspatialreferencesystems-transact-sql"></a>sys.spatial_reference_systems (Transact-SQL)
+# <a name="sysspatialreferencesystems-transact-sql"></a>sys.spatial_reference_systems (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] でサポートされている空間参照系 (SRID) の一覧を表示します。  
@@ -40,8 +39,8 @@ ms.locfileid: "47643440"
 |spatial_reference_id|**int**|サポートされている SRID[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]します。|  
 |authority_name|**nvarchar(128)**|SRID の機関。|  
 |authorized_spatial_reference_id|**int**|指定された証明機関によって与え SRID **authority_name**します。|  
-|well_known_text|**nvarchar (4000)**|SRID の WKT 表現。|  
-|unit_of_measure|**nvarchar(128)**|メジャーの単位の名前。|  
+|well_known_text|**nvarchar (4000)**|SRID の WKT 表現です。|  
+|unit_of_measure|**nvarchar(128)**|測定単位の名前。|  
 |unit_conversion_factor|**float**|メートル単位の長さ。|  
   
 ## <a name="permissions"></a>アクセス許可  

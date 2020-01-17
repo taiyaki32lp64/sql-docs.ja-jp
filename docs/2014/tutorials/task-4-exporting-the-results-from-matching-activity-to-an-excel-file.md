@@ -7,15 +7,15 @@ ms.reviewer: ''
 ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: 644454c4-3c5a-469a-90ec-e51dc7fb99fc
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: c9424f2ba21fb4b93e359c8662974a82c62b4895
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 74164c6f6178acbcfe4784dac855c7c0485fc3b0
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56020443"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65489441"
 ---
 # <a name="task-4-exporting-the-results-from-matching-activity-to-an-excel-file"></a>タスク 4:照合アクティビティから Excel ファイルに結果をエクスポートする
   ここでは、照合アクティビティから Excel ファイルに結果をエクスポートします。  
@@ -30,11 +30,11 @@ ms.locfileid: "56020443"
   
 5.  確認します**ピボット レコード**が選択されている、**サバイバーシップ ルール**します。 このオプションを選択すると、各クラスターのピボット レコードがクラスターからの出力に選択されます。 サバイバーシップ ルールの他のオプションは次のとおりです。  
   
-    1.  **最も完全なレコード:** 設定されたフィールドの数が最も多いレコードを保持するレコード。  
+    1.  **最も完全なレコード:** 保持するレコードは、設定されたフィールドの最大数です。  
   
-    2.  **最長のレコード:** ソース フィールド内の語句の数が最も多いレコードを保持するレコード。  
+    2.  **最長のレコード:** 保持するレコードは、ソース フィールド内の語句の最大数です。  
   
-    3.  **最も完全で最長のレコード:** 設定されたフィールドの数が最も多く、各フィールド内の語句の数が最も多いレコードを保持するレコード。  
+    3.  **最も完全で最長のレコード:** 保持するレコードは、設定されたフィールドの数が 1 つであるため、各フィールドに語句の最大数があります。  
   
      ![結果の照合 ページからエクスポート](../../2014/tutorials/media/et-exportingtheresultsfrommatoanexcelfile.jpg "照合 ページからの結果のエクスポート")  
   

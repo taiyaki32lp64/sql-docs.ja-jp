@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: db0b7d94-3fa6-488f-96d6-6a9a7d6eda23
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 69381eb0ffdd3638079d824d8d4c150563375a6c
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 29e5718debadb4725bc9d9ebcd499c261ed23d54
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51656972"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67985752"
 ---
 # <a name="aggregate-functions---min"></a>集計関数 - min
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -37,20 +36,20 @@ fn:min($arg as xdt:anyAtomicType*) as xdt:anyAtomicType?
   
 ## <a name="arguments"></a>引数  
  *$arg*  
- 最小値の取得元になるアイテムのシーケンス。  
+ 最小値を取得する項目のシーケンス。  
   
 ## <a name="remarks"></a>コメント  
- すべての種類に渡されるアトミック値の**min()** 同じ基本型のサブタイプにする必要があります。 受け付けられるベースの型をサポートする型では、 **gt**操作。 この型には、3 つの組み込み数値基本データ型、date/time 基本データ型、xs:string、xs:boolean、および xdt:untypedAtomic が含まれます。 xdt:untypedAtomic 型の値は、xs:double にキャストされます。 これらの型の混在がある場合、またはその他の種類の他の値が渡された場合は、静的エラーが発生します。  
+ すべての種類に渡されるアトミック値の**min()** 同じ基本型のサブタイプにする必要があります。 受け付けられるベースの型をサポートする型では、 **gt**操作。 これらの型には、次の 3 つの組み込み数値基本データ型、日付/時刻の基本型、xs:string、xs:boolean、および xdt:untypedAtomic が含まれます。 Xdt:untypedAtomic 型の値は、xs:double にキャストされます。 これらの型の混在がある場合、またはその他の種類の他の値が渡された場合は、静的エラーが発生します。  
   
- 結果**min()** xdt:untypedAtomic の場合は xs:double など、渡された型の基本型を受け取ります。 入力が静的に空の場合は、結果が暗黙的に空になり、静的エラーが返されます。  
+ 結果**min()** xdt:untypedAtomic の場合は xs:double など、渡された型の基本型を受け取ります。 入力が静的に空の場合、結果が暗黙的し、静的エラーが返されます。  
   
- **Min()** 関数は、入力シーケンス内の他のよりも小さいをシーケンスの 1 つの値を返します。 xs:string 値の場合は、既定の Unicode コードポイント照合順序が使用されます。 Xdt:untypedAtomic 値は、xs:double にキャストできない場合で、入力シーケンスの値が無視されます。 *$arg*します。 入力が、動的に計算された空のシーケンスである場合は、空のシーケンスが返されます。  
+ **Min()** 関数は、入力シーケンス内の他のよりも小さいをシーケンスの 1 つの値を返します。 Xs:string 値の場合は、既定の Unicode コード ポイント照合順序が使用されています。 Xdt:untypedAtomic 値は、xs:double にキャストできない場合で、入力シーケンスの値が無視されます。 *$arg*します。 入力が動的に計算された空のシーケンスの場合は、空のシーケンスが返されます。  
   
 ## <a name="examples"></a>使用例  
  このトピックではさまざまなに格納されている XML インスタンスに対して XQuery の例について**xml**型の列には、AdventureWorks データベース。  
   
 ### <a name="a-using-the-min-xquery-function-to-find-the-work-center-location-that-has-the-fewest-labor-hours"></a>A. min() XQuery 関数を使用した、労働時間が最も短いワーク センター拠点の検索  
- 次のクエリでは、製品モデル (ProductModelID=7) の製造プロセスに含まれるすべてのワーク センター拠点の中から、労働時間が最も短い拠点を取得します。 通常、次に示すように 1 つの拠点が返されます。 複数の拠点の労働時間が等しく最短である場合は、これらの拠点がすべて返されます。  
+ 次のクエリは、製品モデルの製造プロセス内のすべての作業・ センターの場所を取得 (ProductModelID = 7) 最小限の労働時間があります。 通常、次に示すように 1 つの拠点が返されます。 複数の場所の最小の労働時間数が等しい場合は、それらがすべて返されます。  
   
 ```  
 select ProductModelID, Name, Instructions.query('  
@@ -73,7 +72,7 @@ WHERE ProductModelID=7
   
  XQuery の本文を持つ XML の構築、\<場所 > WCID を持つ要素と**LaborHrs**属性。  
   
--   クエリでは、ProductModelID 値と名前の値も取得されます。  
+-   クエリではまた、ProductModelID を取得し、名前の値。  
   
  結果を次に示します。  
   
@@ -92,9 +91,9 @@ ProductModelID   Name              Result
   
 -   基本データ型の境界を超えて複数の型が混在するシーケンスはサポートされません。  
   
--   照合順序を指定する構文オプションはサポートされません。  
+-   照合順序を指定する構文オプションはサポートされていません。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [xml データ型に対する XQuery 関数](../xquery/xquery-functions-against-the-xml-data-type.md)  
   
   

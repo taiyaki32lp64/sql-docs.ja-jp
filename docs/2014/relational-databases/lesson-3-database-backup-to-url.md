@@ -1,45 +1,44 @@
 ---
-title: 'レッスン 4: Windows Azure ストレージにデータベースを作成する |Microsoft Docs'
+title: レッスン 4:Azure Storage | でデータベースを作成します。Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 ms.assetid: a9ae1501-b614-49d3-b975-6569da8350b2
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 465928e8d7fc48785c5774a6bd50f457b0df58b8
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: ee331966984a12d309e71a7040edac6343e296c6
+ms.sourcegitcommit: 3b1f873f02af8f4e89facc7b25f8993f535061c9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48063012"
+ms.lasthandoff: 08/30/2019
+ms.locfileid: "70175630"
 ---
-# <a name="lesson-4-create-a-database-in-windows-azure-storage"></a>レッスン 4: Windows Azure ストレージにデータベースを作成する
-  このレッスンでは、Windows Azure 機能で SQL Server データ ファイルを使用してデータベースを作成する方法を学びます。 このレッスンの前に、レッスン 1、2、および 3 を完了する必要があることに注意してください。 レッスン 3 は非常に重要な手順です。レッスン 4 の前に、SQL Server の資格情報ストアに、Windows Azure ストレージ コンテナーと関連するポリシー名、および SAS キーに関する情報を格納する必要があるためです。  
+# <a name="lesson-4-create-a-database-in-azure-storage"></a>レッスン 4:Azure Storage でのデータベースの作成
+  このレッスンでは、Azure 機能の SQL Server データファイルを使用してデータベースを作成する方法について説明します。 このレッスンの前に、レッスン 1、2、および 3 を完了する必要があることに注意してください。 レッスン3は非常に重要な手順です。レッスン4の前に、Azure ストレージコンテナーとそれに関連付けられているポリシー名と SAS キーに関する情報を SQL Server 資格情報ストアに格納する必要があるためです。  
   
- データ ファイルまたはログ ファイルによって使用されるストレージ コンテナーごとに、名前がコンテナーのパスに一致する SQL Server 資格情報を作成する必要があります。 その後、Windows Azure ストレージに新しいデータベースを作成できます。  
+ データ ファイルまたはログ ファイルによって使用されるストレージ コンテナーごとに、名前がコンテナーのパスに一致する SQL Server 資格情報を作成する必要があります。 次に、で新しいデータベースを作成でき Azure Storage  
   
- このレッスンでは、次の手順が既に完了したことを前提としています。  
+ このレッスンでは、次の手順を既に完了していることを前提としています。  
   
--   Windows Azure ストレージ アカウントを入手しました。  
+-   Azure Storage アカウントを持っています。  
   
--   Windows Azure ストレージ アカウントにコンテナーを作成しました。  
+-   Azure Storage アカウントでコンテナーを作成しました。  
   
 -   読み取り、書き込み、一覧表示の権限のあるコンテナーに対するポリシーを作成しました。 SAS キーも生成しました。  
   
 -   ソース コンピューターで SQL Server 資格情報を作成しました。  
   
- Windows Azure 機能内の SQL Server データ ファイルを使用して Windows Azure 内でデータベースを作成するには  
+ Azure Storage 機能の SQL Server データファイルを使用して Azure にデータベースを作成するには、次の手順に従います。  
   
 1.  SQL Server Management Studio に接続します。  
   
 2.  オブジェクト エクスプローラーで、インストールしたデータベース エンジンのインスタンスに接続します。  
   
-3.  標準ツールバーには、新しいクエリをクリックします。  
+3.  標準ツールバーで、[新しいクエリ] をクリックします。  
   
 4.  次の例をコピーしてクエリ ウィンドウに貼り付け、必要に応じて変更します。 FILENAME フィールドがストレージ コンテナーにあるデータベース ファイルの URI パスを指し、先頭は https にする必要があることに注意してください。  
   
@@ -72,25 +71,25 @@ ms.locfileid: "48063012"
   
 5.  内部設置型 SQL Server の新しい TestDB1 を表示するには、オブジェクト エクスプローラーでデータベースの表示を更新します。  
   
-6.  同様に、ストレージ アカウントに新しく作成したデータベースを表示するには、SQL Server Management Studio (SSMS) 経由でストレージ アカウントに接続します。 SQL Server Management Studio を使用して Windows Azure ストレージに接続する方法については、以下の手順に従ってください。  
+6.  同様に、ストレージ アカウントに新しく作成したデータベースを表示するには、SQL Server Management Studio (SSMS) 経由でストレージ アカウントに接続します。 SQL Server Management Studio を使用して Azure storage に接続する方法については、次の手順に従います。  
   
-    1.  まず、ストレージ アカウント情報を取得します。 管理ポータルにログインします。 をクリックし、**ストレージ**ストレージ アカウントを選択します。 ストレージ アカウントを選択すると、クリックすると**アクセス キーの管理**ページの下部にあります。 次のようなダイアログ ウィンドウが開きます。  
+    1.  まず、ストレージ アカウント情報を取得します。 管理ポータルにログインします。 次に、 **[ストレージ]** をクリックし、ストレージアカウントを選択します。 ストレージアカウントを選択したら、ページの下部にある **[アクセスキーの管理]** をクリックします。 次のようなダイアログ ウィンドウが開きます。  
   
          ![SQL 14 CTP2](../tutorials/media/ss-was-tutlesson-4-6-1.gif "SQL 14 CTP2")  
   
-    2.  コピー、**ストレージ アカウント名**と**プライマリ アクセス キー**値を**Windows Azure Storage へ接続**SSMS でのダイアログ ウィンドウ。 をクリックし、 **Connect**します。 これで、次のスクリーン ショットに示すように、ストレージ アカウント コンテナーについての情報が SSMS に表示されます。  
+    2.  **ストレージアカウント名**と**プライマリアクセスキー**の値を、SSMS の **[Azure Storage への接続]** ダイアログウィンドウにコピーします。 次に、 **[接続]** をクリックします。 これで、次のスクリーン ショットに示すように、ストレージ アカウント コンテナーについての情報が SSMS に表示されます。  
   
          ![SQL 14 CTP2](../tutorials/media/ss-was-tutlesson-4-6-2.gif "SQL 14 CTP2")  
   
- 次のスクリーン ショットは、内部設置型環境と Windows Azure ストレージ環境の両方で新しく作成したデータベースを示しています。  
+ 次のスクリーンショットは、オンプレミス環境と Azure Storage 環境の両方で作成された新しいデータベースを示しています。  
   
  ![SQL 14 CTP2](../tutorials/media/ss-was-tutlesson-4-6-2b.gif "SQL 14 CTP2")  
   
- **注:** 資格情報の失敗を関連付けられている SQL サーバーを削除しようとすると、コンテナーのデータ ファイルに対するアクティブな参照がある場合。 同様に、既に BLOB の特定のデータベース ファイルにリースが設定されていて、そのデータベースを削除する場合、まず、BLOB のリースを解除する必要があります。 使用することができます、リースを解約するには、 [Lease Blob](https://msdn.microsoft.com/library/azure/ee691972.aspx)します。  
+ **注:** コンテナー内のデータファイルに対するアクティブな参照が存在する場合、関連付けられている SQL Server 資格情報を削除しようとすると失敗します。 同様に、既に BLOB の特定のデータベース ファイルにリースが設定されていて、そのデータベースを削除する場合、まず、BLOB のリースを解除する必要があります。 リースを中断するには、[リース Blob](https://msdn.microsoft.com/library/azure/ee691972.aspx)を使用します。  
   
- この新しい機能を使用して、CREATE DATABASE ステートメントの既定値がクラウド対応データベースになるように、SQL Server を構成できます。 言い換えれば、SQL Server Management Studio でサーバー インスタンスのプロパティに既定のデータとログの場所を設定して、データベースを作成すると常にすべてのデータベース ファイル (.mdf、.ldf) が Windows Azure ストレージにページ BLOB として作成されるようにすることができます。  
+ この新しい機能を使用して、CREATE DATABASE ステートメントの既定値がクラウド対応データベースになるように、SQL Server を構成できます。 つまり、データベースを作成するたびに、すべてのデータベースファイル (.mdf、.ldf) が Azure Storage のページ blob として作成されるように、SQL Server Management Studio サーバーインスタンスのプロパティで既定のデータとログの場所を設定できます。  
   
- SQL Server Management Studio を使用して Windows Azure ストレージにデータベースを作成するには、次の手順を実行します。  
+ SQL Server Management Studio ユーザーインターフェイスを使用して Azure Storage でデータベースを作成するには、次の手順を実行します。  
   
 1.  オブジェクト エクスプローラーで、SQL Server データベース エンジンのインスタンスに接続し、そのインスタンスを展開します。  
   
@@ -112,6 +111,6 @@ ms.locfileid: "48063012"
   
  **次のレッスン:**  
   
- [レッスン 5。&#40;(省略可能)&#41; TDE を使用して、データベースの暗号化](../relational-databases/lesson-4-restore-database-to-virtual-machine-from-url.md)  
+ [レッスン 5.&#40;オプション&#41; tde を使用してデータベースを暗号化する](../relational-databases/lesson-4-restore-database-to-virtual-machine-from-url.md)  
   
   

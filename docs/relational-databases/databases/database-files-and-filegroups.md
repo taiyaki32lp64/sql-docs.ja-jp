@@ -32,13 +32,12 @@ helpviewer_keywords:
 ms.assetid: 9ca11918-480d-4838-9198-cec221ef6ad0
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: a2f78e8fbff4a5fdc896810067ad2552b59336a8
-ms.sourcegitcommit: 1a5448747ccb2e13e8f3d9f04012ba5ae04bb0a3
+ms.openlocfilehash: 6ccf21bcc3e0657123aa4f0fdcfe9b2d3cb0861a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51558939"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68037595"
 ---
 # <a name="database-files-and-filegroups"></a>データベース ファイルとファイル グループ
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -60,9 +59,9 @@ ms.locfileid: "51558939"
 ### <a name="logical-and-physical-file-names"></a>論理ファイル名と物理ファイル名
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ファイルにはファイル名の種類が 2 つあります。 
 
-**logical_file_name:**  logical_file_name はすべての Transact-SQL ステートメントで物理ファイルを参照するために使用する名前です。 論理ファイル名は、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の識別子の規則に従っている必要があります。また、データベース内の論理ファイル名は互いに一意にする必要があります。 これは `ALTER DATABASE` の `NAME` 引数で設定されます。 詳細については、「[ALTER DATABASE の File および Filegroup オプション &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-file-and-filegroup-options.md)」を参照してください。
+**logical_file_name:** logical_file_name は、すべての Transact-SQL ステートメントで物理ファイルを参照するために使用する名前です。 論理ファイル名は、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の識別子の規則に従っている必要があります。また、データベース内の論理ファイル名は互いに一意にする必要があります。 これは `ALTER DATABASE` の `NAME` 引数で設定されます。 詳細については、「[ALTER DATABASE の File および Filegroup オプション &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-file-and-filegroup-options.md)」を参照してください。
 
-**os_file_name:** os_file_name はディレクトリ パスを含む物理ファイルの名前です。 この名前はオペレーティング システムのファイル名の規則に従っている必要があります。 これは `ALTER DATABASE` の `FILENAME` 引数で設定されます。 詳細については、「[ALTER DATABASE の File および Filegroup オプション &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-file-and-filegroup-options.md)」を参照してください。
+**os_file_name:** os_file_name は、ディレクトリ パスを含む物理ファイルの名前です。 この名前はオペレーティング システムのファイル名の規則に従っている必要があります。 これは `ALTER DATABASE` の `FILENAME` 引数で設定されます。 詳細については、「[ALTER DATABASE の File および Filegroup オプション &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-file-and-filegroup-options.md)」を参照してください。
 
 > [!IMPORTANT]
 > [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のデータとログ ファイルは、FAT または NTFS のいずれかのファイル システムに配置できます。 Windows システムの場合、NTFS のセキュリティの方が強力なので、NTFS ファイル システムを使用することをお勧めします。 

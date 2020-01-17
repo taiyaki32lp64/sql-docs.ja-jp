@@ -15,15 +15,14 @@ helpviewer_keywords:
 - deleting columns
 - queries [SQL Server], results
 ms.assetid: a7de7a87-4249-49bd-863d-dc0b40a49e78
-author: stevestein
-ms.author: sstein
-manager: craigg
-ms.openlocfilehash: e403f86116522f582253ad6c75556db09b0e270e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: b957fc9e20499b88e6fc116749ac49e20b7b31fa
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47774920"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68266222"
 ---
 # <a name="remove-columns-from-query-results-visual-database-tools"></a>クエリ結果からの列の削除 (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -36,7 +35,7 @@ ms.locfileid: "47774920"
   
 -   **[抽出条件ペイン]** で、削除するデータ列の **[出力]** 列にあるチェック ボックスをオフにします (クエリ出力に列を戻す場合は、 **[出力]** 列にあるチェック ボックスを再度オンにします)。  
   
-    - または -  
+    \- または -  
   
 -   [SQL ペイン](../../ssms/visual-db-tools/sql-pane-visual-database-tools.md)の出力リストから列を削除します。  
   

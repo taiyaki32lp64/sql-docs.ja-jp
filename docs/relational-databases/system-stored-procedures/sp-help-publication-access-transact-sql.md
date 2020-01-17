@@ -1,5 +1,5 @@
 ---
-title: sp_help_publication_access (TRANSACT-SQL) |Microsoft Docs
+title: sp_help_publication_access (Transact-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -15,18 +15,17 @@ helpviewer_keywords:
 ms.assetid: 9408fa13-54a0-4cb1-8fb0-845e5536ef50
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: d9c6a12ae648ab11fbdf28f04e6c29733fad8ce0
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 7c562c039b65f99f1d3d9915f0dd00b93dc95860
+ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52786371"
+ms.lasthandoff: 08/03/2019
+ms.locfileid: "68770991"
 ---
-# <a name="sphelppublicationaccess-transact-sql"></a>sp_help_publication_access (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+# <a name="sp_help_publication_access-transact-sql"></a>sp_help_publication_access (Transact-SQL)
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
-  パブリケーションに対して許可されたすべてのログインの一覧を返します。 このストアド プロシージャは、パブリッシャー側でパブリケーション データベースについて実行されます。  
+  パブリケーションに対して許可されているすべてのログインの一覧を返します。 このストアド プロシージャは、パブリッシャー側でパブリケーション データベースについて実行されます。  
   
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -41,44 +40,40 @@ sp_help_publication_access [ @publication = ] 'publication'
 ```  
   
 ## <a name="arguments"></a>引数  
- [ **@publication=**] **'***publication***'**  
- アクセスするパブリケーションの名前です。 *パブリケーション*は**sysname**、既定値はありません。  
+`[ @publication = ] 'publication'`アクセスするパブリケーションの名前を指定します。 *パブリケーション* は **sysname** 、既定値はありません。  
   
- [  **@return_granted=**] **'***return_granted***'**  
- ログイン ID です。 *return_granted*は**ビット**、既定値は 1 です。 場合**0**を指定し、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]認証を使用すると、ディストリビューターではなく、パブリッシャー側で表示されるが、使用可能なログインが返されます。 場合**0**が指定されて Windows 認証を使用しでパブリッシャー アクセスが拒否しないログインまたはディストリビューターが返されます。  
+`[ @return_granted = ] 'return_granted'`ログイン ID を示します。 *return_granted*は**ビット**,、既定値は1です。 **0**を指定し[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 、認証を使用する場合、パブリッシャーで表示され、ディストリビューターでは使用できないログインが返されます。 **0**を指定し、Windows 認証を使用する場合、パブリッシャーまたはディストリビューターでのアクセスが明示的に拒否されていないログインが返されます。  
   
- [  **@login=**] **'***ログイン***'**  
- 標準的なセキュリティ ログイン ID です。 *ログイン*は**sysname**、既定値は **%** します。  
+`[ @login = ] 'login'`標準的なセキュリティログイン ID を示します。 *login*は**sysname**,、既定値 **%** はです。  
   
- [  **@initial_list =**] *initial_list*  
- パブリケーションのアクセス権のあるすべてのメンバーを返すのか、新しいメンバーを一覧に追加する前にアクセスしたメンバーのみを返すのかを指定します。 *initial_list*は bit で、既定値は、 **0**します。  
+`[ @initial_list = ] initial_list`パブリケーションアクセス権を持つすべてのメンバーを返すか、または新しいメンバーがリストに追加される前にアクセスしたメンバーのみを返すかを指定します。 *initial_list*はビット,、既定値は**0**です。  
   
- **1**のすべてのメンバーの情報を返します、 **sysadmin**現在のログインと同様に、パブリケーションを作成したときに存在していたディストリビューターでの有効なログインの固定サーバー ロール。  
+ **1**は、 **sysadmin**固定サーバーロールのすべてのメンバーについて、パブリケーションの作成時に存在していた有効なログインと、現在のログインに関する情報を返します。  
   
- **0**のすべてのメンバーの情報を返します、 **sysadmin**しないユーザーには、パブリケーションの作成時にもすべてのユーザー、パブリケーション アクセス リストに存在していたディストリビューターでの有効なログインを固定サーバー ロール属している、 **sysadmin**固定サーバー ロール。  
+ **0**を指定すると、 **sysadmin**固定サーバーロールのすべてのメンバーについての情報が返されます。これは、パブリケーションの作成時に存在していたディストリビューターでの有効なログインと、sysadmin に属さないパブリケーションアクセスリスト内のすべてのユーザーです。固定サーバーロール。  
   
 ## <a name="result-sets"></a>結果セット  
   
 |列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
-|**Loginname**|**nvarchar (256)**|実際のログイン名です。|  
-|**isntname**|**int**|**0** = ログインは Windows ユーザーではありません。<br /><br /> **1** = ログインは Windows ユーザーです。|  
-|**isntgroup**|**int**|**0** = ログインは Windows グループではありません。<br /><br /> **1** = ログインは Windows グループ。|  
+|**Loginname**|**nvarchar (256)**|実際のログイン名。|  
+|**Isntname**|**int**|**0** = ログインは Windows ユーザーではありません。<br /><br /> **1** = ログインは Windows ユーザーです。|  
+|**Isntgroup**|**int**|**0** = ログインは Windows グループではありません。<br /><br /> **1** = ログインは Windows グループです。|  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  **0** (成功) または**1** (失敗)  
   
 ## <a name="remarks"></a>コメント  
- **sp_help_publication_access**はあらゆる種類のレプリケーションで使用します。  
+ **sp_help_publication_access**は、すべての種類のレプリケーションで使用されます。  
   
- ときに両方**Isntname**と**Isntgroup**結果セットは**0**、ログインがあると見なされます、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]ログインします。  
+ 結果セットの**Isntname**と**Isntgroup**の両方が**0**の場合は、ログインが[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]ログインであると見なされます。  
   
 ## <a name="permissions"></a>アクセス許可  
- メンバーのみ、 **sysadmin**固定サーバー ロールまたは**db_owner**固定データベース ロールが実行できる**sp_help_publication_access**します。  
+ **Sp_help_publication_access**を実行できるのは、固定サーバーロール**sysadmin**または固定データベースロール**db_owner**のメンバーだけです。  
   
-## <a name="see-also"></a>参照  
- [sp_grant_publication_access &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-grant-publication-access-transact-sql.md)   
- [sp_revoke_publication_access &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-revoke-publication-access-transact-sql.md)   
+## <a name="see-also"></a>関連項目  
+ [sp_grant_publication_access &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-grant-publication-access-transact-sql.md)   
+ [sp_revoke_publication_access &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-revoke-publication-access-transact-sql.md)   
  [システム ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

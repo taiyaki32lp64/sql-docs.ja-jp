@@ -15,15 +15,14 @@ helpviewer_keywords:
 - string concatenation operators
 - + (string concatenation)
 ms.assetid: ee4e715d-d8f1-4d0e-81b3-04573ec9f13c
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: ee6d1c5da2988123c21a6f21d507bdea7fb94b69
-ms.sourcegitcommit: 01e17c5f1710e7058bad8227c8011985a9888d36
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 345cb7d09b7b1356751eb8b8b69ecf737805f2c8
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/14/2019
-ms.locfileid: "56265310"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68121647"
 ---
 # <a name="string-operators-transact-sql"></a>文字列演算子 (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]

@@ -17,11 +17,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 52781de1cd4b6309f3ebeb9a2c59ae85b0b32dbd
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48094002"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62754593"
 ---
 # <a name="pause-or-resume-a-database-mirroring-session-sql-server"></a>データベース ミラーリング セッションの一時停止または再開 (SQL Server)
   このトピックでは、 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] または [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] を使用して、 [!INCLUDE[tsql](../../includes/tsql-md.md)]でデータベース ミラーリングを一時停止または再開する方法について説明します。  
@@ -38,9 +38,9 @@ ms.locfileid: "48094002"
   
      [Transact-SQL](#TsqlProcedure)  
   
--   **補足情報:**  [データベース ミラーリングの一時停止または再開した後](#FollowUp)  
+-   **補足情報:** [一時停止またはデータベース ミラーリングを再開した後](#FollowUp)  
   
-##  <a name="BeforeYouBegin"></a> 作業を開始する準備  
+##  <a name="BeforeYouBegin"></a> はじめに  
  データベース ミラーリング セッションをいつでも中断して、ボトルネックの発生中にパフォーマンスを向上させることができます。また、中断したセッションはいつでも再開できます。  
   
 > [!CAUTION]  
@@ -108,7 +108,7 @@ ms.locfileid: "48094002"
     ALTER DATABASE AdventureWorks2012 SET PARTNER RESUME;  
     ```  
   
-##  <a name="FollowUp"></a> 補足情報: データベース ミラーリングの一時停止または再開した後  
+##  <a name="FollowUp"></a>補足情報: 一時停止またはデータベース ミラーリングを再開した後  
   
 -   **データベース ミラーリングを一時停止した後**  
   

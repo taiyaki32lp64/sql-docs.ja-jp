@@ -16,20 +16,19 @@ helpviewer_keywords:
 - users [SQL Server], security functions
 - security [SQL Server], functions
 ms.assetid: 7773a87d-2f1b-4951-a225-baf159a7291b
-author: MashaMSFT
-ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 1d3d209f67fd2a84920d5890baf9112b88d52603
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+author: VanMSFT
+ms.author: vanto
+ms.openlocfilehash: ad3ad143a6c1f8b786f2054b1537d393afc49e13
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51696831"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68111325"
 ---
 # <a name="security-functions-transact-sql"></a>セキュリティ関数 (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
-  次の関数は、セキュリティの管理に役立つ情報を返します。 追加の関数については、「[暗号化機能と #40 です。TRANSACT-SQL と #41;](../../t-sql/functions/cryptographic-functions-transact-sql.md).  
+  次の関数は、セキュリティの管理に役立つ情報を返します。 追加となる関数[暗号化関数&#40;Transact-SQL&#41;](../../t-sql/functions/cryptographic-functions-transact-sql.md)の下にリストされています。  
   
 |||  
 |-|-|  
@@ -41,13 +40,13 @@ ms.locfileid: "51696831"
 |[sys.fn_get_audit_file &#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-get-audit-file-transact-sql.md)|[SUSER_ID &#40;Transact-SQL&#41;](../../t-sql/functions/suser-id-transact-sql.md)|  
 |[sys.fn_my_permissions &#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-my-permissions-transact-sql.md)|[SUSER_SID &#40;Transact-SQL&#41;](../../t-sql/functions/suser-sid-transact-sql.md)|  
 |[HAS_PERMS_BY_NAME &#40;Transact-SQL&#41;](../../t-sql/functions/has-perms-by-name-transact-sql.md)|[SUSER_SNAME &#40;Transact-SQL&#41;](../../t-sql/functions/suser-sname-transact-sql.md)|  
-|[IS_MEMBER &#40;Transact-SQL&#41;](../../t-sql/functions/is-member-transact-sql.md)|[SYSTEM_USER (&) #40 です。TRANSACT-SQL と #41 です。](../../t-sql/functions/system-user-transact-sql.md)|  
-|[SYSTEM_USER &#40;Transact-SQL&#41;](../../t-sql/functions/is-rolemember-transact-sql.md)|[SUSER_NAME &#40;Transact-SQL&#41;](../../t-sql/functions/suser-name-transact-sql.md)|  
+|[IS_MEMBER &#40;Transact-SQL&#41;](../../t-sql/functions/is-member-transact-sql.md)|[SYSTEM_USER &#40;Transact-SQL&#41;](../../t-sql/functions/system-user-transact-sql.md)|  
+|[IS_ROLEMEMBER &#40;Transact-SQL&#41;](../../t-sql/functions/is-rolemember-transact-sql.md)|[SUSER_NAME &#40;Transact-SQL&#41;](../../t-sql/functions/suser-name-transact-sql.md)|  
 |[IS_SRVROLEMEMBER &#40;Transact-SQL&#41;](../../t-sql/functions/is-srvrolemember-transact-sql.md)|[USER_ID &#40;Transact-SQL&#41;](../../t-sql/functions/user-id-transact-sql.md)|  
 |[ORIGINAL_LOGIN &#40;Transact-SQL&#41;](../../t-sql/functions/original-login-transact-sql.md)|[USER_NAME &#40;Transact-SQL&#41;](../../t-sql/functions/user-name-transact-sql.md)|  
 |[PERMISSIONS &#40;Transact-SQL&#41;](../../t-sql/functions/permissions-transact-sql.md)||  
   
- Windows グループのメンバーシップの詳細については、を参照してください。 [xp_logininfo (& a) #40](../../relational-databases/system-stored-procedures/xp-logininfo-transact-sql.md) です。TRANSACT-SQL と #41; と[ xp_enumgroups (& a) #40](../../relational-databases/system-stored-procedures/xp-enumgroups-transact-sql.md) です。TRANSACT-SQL と #41;.  
+ Windowsグループのメンバーシップについては、[xp_logininfo &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/xp-logininfo-transact-sql.md) および [xp_enumgroups &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/xp-enumgroups-transact-sql.md) を参照してください。  
   
 ## <a name="see-also"></a>参照  
  [セキュリティ ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md)   

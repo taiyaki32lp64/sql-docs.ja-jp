@@ -1,6 +1,6 @@
 ---
-title: srv_message_handler (拡張ストアド プロシージャ API) | Microsoft Docs
-ms.custom: ''
+title: srv_message_handler (拡張ストアド プロシージャ API)
+ms.custom: seo-dt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -19,15 +19,14 @@ helpviewer_keywords:
 ms.assetid: 41bcd057-436f-4fa8-8293-fc8057a30877
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 5d2556b358ea1689a5b2c647d62b2d116b67cff4
-ms.sourcegitcommit: edf7372cb674179f03a330de5e674824a8b4118f
-ms.translationtype: HT
+ms.openlocfilehash: 5a5aba02a9aaead76e7c9c3340de4f568160b307
+ms.sourcegitcommit: add39e028e919df7d801e8b6bb4f8ac877e60e17
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53246641"
+ms.lasthandoff: 11/15/2019
+ms.locfileid: "74119398"
 ---
-# <a name="srvmessagehandler-extended-stored-procedure-api"></a>srv_message_handler (拡張ストアド プロシージャ API)
+# <a name="srv_message_handler-extended-stored-procedure-api"></a>srv_message_handler (拡張ストアド プロシージャ API)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
     
 > [!IMPORTANT]  

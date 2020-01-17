@@ -1,6 +1,8 @@
 ---
-title: GRANT (XML スキーマ コレクションの権限の許可) (Transact-SQL) | Microsoft Docs
-ms.custom: ''
+title: GRANT (XML スキーマ コレクションのアクセス許可の許可)
+description: XML スキーマ コレクションに対する権限を許可します。
+titleSuffix: SQL Server (Transact-SQL)
+ms.custom: seo-lt-2019
 ms.date: 08/10/2017
 ms.prod: sql
 ms.prod_service: sql-database
@@ -17,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: 57e24465-cd43-45cf-bb52-eea0b49867f9
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 9af978588bddb51668acc8757eed9a6bd99e0bd9
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: a5d79f02237a380a9431e8269875d93a79bd9d04
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56018294"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75243347"
 ---
 # <a name="grant-xml-schema-collection-permissions-transact-sql"></a>GRANT (XML スキーマ コレクションの権限の許可) (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -92,7 +93,7 @@ GRANT permission  [ ,...n ] ON
  *Database_user_with_no_login*  
  対応するサーバー レベルのプリンシパルがないデータベース ユーザーを指定します。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  XML スキーマ コレクションに関する情報は、[sys.xml_schema_collections](../../relational-databases/system-catalog-views/sys-xml-schema-collections-transact-sql.md) カタログ ビューで確認できます。  
   
  XML スキーマ コレクションは、スキーマ レベルのセキュリティ保護可能なリソースで、権限の階層で親となっているスキーマに含まれています。 次の表に、XML スキーマ コレクションで許可できる権限のうち最も限定的なものを、それらを暗黙的に含む一般的な権限と共に示します。  
@@ -122,7 +123,7 @@ GRANT permission  [ ,...n ] ON
 |データベース ロール|ロールに対する ALTER 権限、db_securityadmin 固定データベース ロールのメンバーシップ、db_owner 固定データベース ロールのメンバーシップ、または sysadmin 固定サーバー ロールのメンバーシップ。|  
 |アプリケーション ロール|ロールに対する ALTER 権限、db_securityadmin 固定データベース ロールのメンバーシップ、db_owner 固定データベース ロールのメンバーシップ、または sysadmin 固定サーバー ロールのメンバーシップ。|  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
  次の例では、XML スキーマ コレクション `EXECUTE` の `Invoices4` 権限をユーザー `Wanida` に許可します。 XML スキーマ コレクション `Invoices4` は、`AdventureWorks2012` データベースの `Sales` スキーマ内にあります。  
   
  ```

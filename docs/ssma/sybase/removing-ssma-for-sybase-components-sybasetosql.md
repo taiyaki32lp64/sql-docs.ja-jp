@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: aec09593-17d9-4ec2-ac56-3cd8851406fd
 author: Shamikg
 ms.author: Shamikg
-manager: craigg
-ms.openlocfilehash: b3cebc9bb82778390716212fd3b5ae1bf800d3d3
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 0c76b6b2e4e5295bf7db2d7857a73223fc6f8c7e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47744810"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68028645"
 ---
 # <a name="removing-ssma-for-sybase-components-sybasetosql"></a>SSMA for Sybase コンポーネントの削除 (SybaseToSQL)
 終了したらデータベースを移行してから Sybase Adaptive Server Enterprise (ASE) に[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]、SSMA コンポーネントをアンインストールしたい場合があります。 いつでも、クライアント コンポーネントをアンインストールすることができますから拡張機能パックをアンインストールしないでください[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]は、移行されたデータベース内の関数を使用できなくする場合を除き、 **ssma_syb** のスキーマ**sysdb**データベース。  
@@ -54,7 +53,7 @@ SSMA をアンインストールするにを使用して**プログラム追加�
   
 をアンインストールした後、ことを確認できる、 **sysdb.ssma_syb**スキーマ、および場合によっては、全体**sysdb**データベース、を使用して削除されました[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]します。 ただし、他の SSMA 製品を使用する場合も使用、 **sysdb**データベース。 場合は、データベースが存在し、他のデータベースにこのデータベース内のオブジェクトが参照されていないことを確認したら、データベースをデタッチすることができます。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
 [SSMA for Sybase クライアントのインストール&#40;SybaseToSQL&#41;](../../ssma/sybase/installing-ssma-for-sybase-client-sybasetosql.md)  
 [SQL Server での SSMA コンポーネントのインストール&#40;SybaseToSQL&#41;](../../ssma/sybase/installing-ssma-components-on-sql-server-sybasetosql.md)  
   

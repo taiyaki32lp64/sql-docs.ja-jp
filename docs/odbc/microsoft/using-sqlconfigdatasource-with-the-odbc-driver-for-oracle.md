@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: e535d1ef-aff9-4ae7-a3ed-ef4ca2584289
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 9edd9ae15e66a39abd84a8a6d8e50a83ed4a39ba
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: fa5f1ecf9f3100480081e3744fc7d280a4da282b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47779010"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68088031"
 ---
 # <a name="using-sqlconfigdatasource-with-the-odbc-driver-for-oracle"></a>ODBC Driver for Oracle を使用した SQLConfigDatasource の使用
 > [!IMPORTANT]  
@@ -38,15 +37,15 @@ ms.locfileid: "47779010"
 |BufferSize|7|65535|1000|最小のフェッチ バッファー サイズは最大 65535 バイト|  
 |CatalogCap|2|1|0 または 1|1 の場合、nonquoted 識別子は、カタログで大文字に変換関数になります。|  
 |ConnectString|128|""|A/N|接続文字列: Msorcl10.dll ドライバーを使用したサーバー名を指定する必要なメソッドです。|  
-|説明|256|""|A/N|説明|  
+|Description|256|""|A/N|説明|  
 |DSN|33|""|A/N|データ ソースの名前。|  
 |GuessTheColDef|4|0|A/N|列は Oracle 定義のスケールを 0 以外の値を返します。|  
 |NumberFloat|2|""|0 または 1|0 の場合は、float 型の列が使用できますとして扱われます。 1 の場合、浮動小数点数の列は SQL_DOUBLE として扱われます。|  
 |PWD|30|""|A/N|パスワードです。|  
 |RDOSupport|2|""|0 または 1|RDO Oracle プロシージャを呼び出すことができます。|  
-|コメント|2|0|0 または 1|カタログ関数では、「解説」をが含まれます。|  
+|Remarks|2|0|0 または 1|カタログ関数では、「解説」をが含まれます。|  
 |RowLimit|4|""|0 ~ 99 の範囲|SELECT ステートメントによって返される行の最大数。 長さ 0 の文字列では、制限を適用しないことを示します。|  
-|[サーバー]|128|""|A/N|Oracle サーバー名。|  
+|Server|128|""|A/N|Oracle サーバー名。|  
 |SynonymColumns|2|1|0 または 1|SQLColumns、シノニムがあります。|  
 |SystemTable|2|""|0 または 1|0 の場合、システム テーブルは表示されません。 1 の場合、システム テーブルが表示されます。|  
 |TranslationDLL|33|""|A/N|翻訳 .dll の名前。|  

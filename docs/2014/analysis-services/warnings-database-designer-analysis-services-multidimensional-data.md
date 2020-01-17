@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.databasedesigner.warnings.f1
@@ -13,15 +12,15 @@ ms.assetid: 13f58b4d-f345-4fbc-ae2d-b3c8290a797d
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: d83620c0c6463bd6e752f65a97b2fb14e1d1c03f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 90eeca203c672c21551b8aff2e24feb164d8fda5
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48074382"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66065427"
 ---
 # <a name="warnings-database-designer-analysis-services---multidimensional-data"></a>[警告] (データベース デザイナー) (Analysis Services - 多次元データ)
-  **[警告]** タブを使用すると、ルールをグローバルに表示および消去したり、消去された警告の特定のインスタンスを表示して再度有効にしたりできます。 **[警告]** タブには、 **[デザイン警告ルール]** および **[消去された警告]** という 2 つのグリッドが表示されます。  
+  **[警告]** タブを使用すると、ルールをグローバルに表示および消去したり、消去された警告の特定のインスタンスを表示して再度有効にしたりできます。 **警告** タブには 2 つのグリッドが表示されます。**デザイン警告ルール**と**された警告**します。  
   
  **[警告] タブを表示するには**  
   

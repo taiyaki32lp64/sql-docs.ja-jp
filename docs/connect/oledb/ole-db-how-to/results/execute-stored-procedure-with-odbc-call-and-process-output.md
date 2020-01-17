@@ -1,6 +1,6 @@
 ---
 title: ODBC 呼び出しと処理の出力でのストアド プロシージャの実行 | Microsoft Docs
-description: プロセスのリターン コードと出力パラメーターの SQL Server 用の OLE DB ドライバーの使用
+description: OLE DB Driver for SQL Server を使用したリターンコードと出力パラメーターの処理
 ms.custom: ''
 ms.date: 06/14/2018
 ms.prod: sql
@@ -13,13 +13,12 @@ helpviewer_keywords:
 - ODBC CALL syntax
 author: pmasl
 ms.author: pelopes
-manager: craigg
-ms.openlocfilehash: 1c631311f427ee2f4d45ef968db9fb8e851f29a0
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: c8b591cf2c903bb974af613dec17269c2d9f10fe
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53210642"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68015630"
 ---
 # <a name="execute-stored-procedure-with-odbc-call-and-process-output"></a>ODBC 呼び出しと処理の出力でのストアド プロシージャの実行
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -37,13 +36,13 @@ ms.locfileid: "53210642"
   
 2.  DBBINDING 構造体の配列を使用して、各パラメーター マーカーに 1 つずつ一連のバインドを作成します。  
   
-3.  使用して、定義済みパラメーターのアクセサーを作成、 **iaccessor::createaccessor**メソッド。 **CreateAccessor** では、バインドのセットからアクセサーを作成します。  
+3.  **IAccessor:: CreateAccessor**メソッドを使用して、定義済みパラメーターのアクセサーを作成します。 **CreateAccessor** では、バインドのセットからアクセサーを作成します。  
   
 4.  DBPARAMS 構造体にデータを格納します。  
   
 5.  **Execute** コマンド (この場合はストアド プロシージャへの呼び出し) を呼び出します。  
   
-6.  行セットを処理し、リリースを使用して、 **irowset::release**メソッド。  
+6.  行セットを処理し、 **IRowset:: release**メソッドを使用して解放します。  
   
 7.  ストアド プロシージャから受信したリターン コードと出力パラメーターの値を処理します。  
   

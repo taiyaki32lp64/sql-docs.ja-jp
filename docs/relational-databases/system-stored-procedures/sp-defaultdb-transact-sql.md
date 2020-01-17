@@ -17,15 +17,14 @@ helpviewer_keywords:
 ms.assetid: 663b859f-c6da-4942-95a6-60b93d05654e
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 65b9187c5b3f0ba05301bb944ee2ddc8a78c4866
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: aec951ea8a0397c39c57619609264596aec9a648
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47625050"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68085819"
 ---
-# <a name="spdefaultdb-transact-sql"></a>sp_defaultdb (Transact-SQL)
+# <a name="spdefaultdb-transact-sql"></a>sp_defaultdb (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   既定のデータベースを変更、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]ログインします。  
@@ -43,17 +42,15 @@ sp_defaultdb [ @loginame = ] 'login', [ @defdb = ] 'database'
 ```  
   
 ## <a name="arguments"></a>引数  
- [  **@loginame=**] **'***ログイン***'**  
- ログイン名です。 *ログイン*は**sysname**、既定値はありません。 *ログイン*既存できる[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]ログインまたは Windows ユーザーまたはグループ。 Windows ユーザーまたはグループのログインが存在しない場合[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]、自動的に追加されます。  
+`[ @loginame = ] 'login'` ログイン名です。 *ログイン*は**sysname**、既定値はありません。 *ログイン*既存できる[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]ログインまたは Windows ユーザーまたはグループ。 Windows ユーザーまたはグループのログインが存在しない場合[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]、自動的に追加されます。  
   
- [  **@defdb=**] **'***データベース***'**  
- 新しい既定のデータベースの名前です。 *データベース*は**sysname**、既定値はありません。 *データベース*既に存在する必要があります。  
+`[ @defdb = ] 'database'` 新しい既定のデータベースの名前です。 *データベース*は**sysname**、既定値はありません。 *データベース*既に存在する必要があります。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  0 (成功) または 1 (失敗)  
   
 ## <a name="remarks"></a>コメント  
- **sp_defaultdb**は ALTER LOGIN を呼び出します。 このステートメントでは追加オプションがサポートされます。 既定のデータベースの変更方法の詳細については、次を参照してください。 [ALTER LOGIN &#40;TRANSACT-SQL&#41;](../../t-sql/statements/alter-login-transact-sql.md)します。  
+ **sp_defaultdb**は ALTER LOGIN を呼び出します。 このステートメントは、追加のオプションをサポートします。 既定のデータベースの変更方法の詳細については、次を参照してください。 [ALTER LOGIN &#40;TRANSACT-SQL&#41;](../../t-sql/statements/alter-login-transact-sql.md)します。  
   
  **sp_defaultdb**ユーザー定義のトランザクション内で実行することはできません。  
   

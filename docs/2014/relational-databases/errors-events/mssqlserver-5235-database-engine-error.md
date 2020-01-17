@@ -13,11 +13,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: d6cbfac91613c2374e42da5b33e75ed5cade2bcf
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48083072"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62913759"
 ---
 # <a name="mssqlserver5235"></a>MSSQLSERVER_5235
     
@@ -30,7 +30,7 @@ ms.locfileid: "48083072"
 |イベント ソース|MSSQLSERVER|  
 |コンポーネント|SQLEngine|  
 |シンボル名|DBCC4_ERRORLOG_SUMMARY_PREMATURE_TERMINATION|  
-|メッセージ テキスト|[EMERGENCY] エラー状態 ERROR_STATE により、USER_NAME から実行された DBCC DBCC_COMMAND_DETAILS が異常終了しました。 経過時間: HOURS 時間 MINUTES 分 SECONDS 秒。|  
+|メッセージ テキスト|[EMERGENCY] エラー状態 ERROR_STATE により、USER_NAME から実行された DBCC DBCC_COMMAND_DETAILS が異常終了しました。 経過時間:HOURS 時間 MINUTES 分 SECONDS 秒。|  
   
 ## <a name="explanation"></a>説明  
  これは、コマンドの実行中に予期しない異常終了が発生した場合に DBCC によって [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エラー ログに出力される概要メッセージです。 予期しない異常終了の種類は、メッセージで報告されるエラー状態で示されます。  

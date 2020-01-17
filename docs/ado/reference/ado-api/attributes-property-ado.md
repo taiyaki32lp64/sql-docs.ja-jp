@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: acc15d40-68a6-4ba9-85bd-12d331aecaa6
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: db3cb8276a4acda4c5d383252c2d92f51b57c684
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b40b71dee32608756721d84a2e13f5f54f7bcbfa
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47752780"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67920541"
 ---
 # <a name="attributes-property-ado"></a>Attributes プロパティ (ADO)
 オブジェクトの 1 つまたは複数の特性を示します。  
@@ -54,7 +53,7 @@ ms.locfileid: "47752780"
 |[Connection オブジェクト (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)|[Field オブジェクト](../../../ado/reference/ado-api/field-object.md)|  
 |[Parameter オブジェクト](../../../ado/reference/ado-api/parameter-object.md)|[Property オブジェクト (ADO)](../../../ado/reference/ado-api/property-object-ado.md)|  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [属性と Name プロパティの例 (VB)](../../../ado/reference/ado-api/attributes-and-name-properties-example-vb.md)   
  [属性と Name プロパティの例 (vc++)](../../../ado/reference/ado-api/attributes-and-name-properties-example-vc.md)   
  [AppendChunk メソッド (ADO)](../../../ado/reference/ado-api/appendchunk-method-ado.md)   

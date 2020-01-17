@@ -10,14 +10,13 @@ ms.topic: conceptual
 ms.assetid: 83acbcc4-c51e-439e-ac48-6d4048eba189
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: dddb1ee5aaeab9a741cfe0a09bea2a93b786c57e
-ms.sourcegitcommit: bfa10c54e871700de285d7f819095d51ef70d997
+ms.openlocfilehash: bc6409f7a8f5fc15568e583aa50552667f2dd874
+ms.sourcegitcommit: ffb87aa292fc9b545c4258749c28df1bd88d7342
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/14/2019
-ms.locfileid: "54255287"
+ms.lasthandoff: 10/02/2019
+ms.locfileid: "71816717"
 ---
 # <a name="columnstore-indexes---query-performance"></a>列ストア インデックス - クエリ パフォーマンス
 
@@ -57,7 +56,7 @@ ms.locfileid: "54255287"
     
 -   列ストア インデックスは圧縮されたデータをディスクから読み取るため、メモリに読み込まれるデータ量が少なくなります。    
     
--   列ストア インデックスは、データを圧縮してメモリに格納し、同じデータがメモリに読み込まれる回数を減らすことで、I/O を削減します。 たとえば、圧縮率が 10 倍であれば、圧縮せずにデータを格納した場合と比べて 10 倍のデータをメモリ内に保持できます。 メモリ内のデータが増えると、列ストア インデックスがメモリ内で必要なデータを探す際に、ディスクからの読み取りがより多く発生する可能性があります。    
+-   列ストア インデックスは、データを圧縮してメモリに格納し、同じデータがメモリに読み込まれる回数を減らすことで、I/O を削減します。 たとえば、圧縮率が 10 倍であれば、圧縮せずにデータを格納した場合と比べて 10 倍のデータをメモリ内に保持できます。 メモリ内のデータが増えると、列ストア インデックスがメモリ内で必要なデータを探す際に、ディスクからの読み取りが少なくなる可能性が高くなります。    
     
 -   列ストア インデックスは行ではなく列でデータを圧縮するので、高い圧縮率を実現し、ディスクに格納されるデータのサイズを縮小できます。 各列は個別に圧縮、格納されます。  同じ列内のデータは常に同じデータ型であり、同じような値を持つ傾向があります。 データ圧縮では、値が同等の場合に圧縮率が大幅に向上します。    
     
@@ -92,7 +91,7 @@ ms.locfileid: "54255287"
     
  すべてのクエリ実行演算子をバッチ モードで実行できるわけではありません。 たとえば、Insert、Delete、Update などの DML 操作は、一度に 1 行ずつ実行されます。 バッチ モードの演算子は、Scan、Join、Aggregate、Sort など、クエリのパフォーマンスを向上させる演算子を対象としています。 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] で列ストア インデックスが導入されてから、バッチ モードで実行できる演算子を拡充する継続的な取り組みが行われています。 次の表は、バッチ モードで実行される演算子と、対応する製品のバージョンを示します。    
     
-|バッチ モードで実行される演算子|用途|[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]|[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]|[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] と [!INCLUDE[ssSDS](../../includes/sssds-md.md)]¹|コメント|    
+|バッチ モードで実行される演算子|用途|[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]|[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]|[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] および [!INCLUDE[ssSDS](../../includes/sssds-md.md)]<sup>1</sup>|コメント|    
 |---------------------------|------------------------|---------------------|---------------------|---------------------------------------|--------------|    
 |DML 操作 (Insert、Delete、Update、Merge)||いいえ|いいえ|いいえ|DML 操作は並列ではないため、バッチ モードでは実行できません。 直列モードのバッチ処理を有効にして、DML のバッチ モードでの処理を許可したとしても、パフォーマンスの向上はほとんど認められません。|    
 |列ストア インデックス スキャン|SCAN|NA|はい|はい|列ストア インデックスの場合は、SCAN ノードに述語をプッシュできます。|    
@@ -111,7 +110,7 @@ ms.locfileid: "54255287"
 |Top Sort||いいえ|いいえ|はい||    
 |Window Aggregates||NA|NA|はい|[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] の新しいオペレーター。|    
     
- ¹[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]、[!INCLUDE[ssSDS](../../includes/sssds-md.md)] Premium 層、Standard 層 - S3 以上、およびすべての vCore 層と [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] に適用されます。    
+<sup>1</sup> [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]、[!INCLUDE[ssSDS](../../includes/sssds-md.md)] Premium 層、Standard 層 - S3 以上、およびすべての仮想コア層と [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] に適用されます。    
     
 ### <a name="aggregate-pushdown"></a>集計プッシュ ダウン    
  SCAN ノードから条件を満たす行をフェッチしてバッチ モードで値を集計する、集計計算の通常の実行パスです。 パフォーマンスは良好ですが、[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] では、次の条件を満たしていれば、集計操作を SCAN ノードにプッシュして、集計計算のパフォーマンスを大幅に (バッチ モードでの実行に加えてさらに) 向上できます。 
@@ -146,7 +145,7 @@ FROM FactResellerSalesXL_CCI
     
 たとえば、特定の地域における特定の商品の売上を表すレコードがファクトで、一連の地域や商品などを表すのがディメンションす。 ファクト テーブルとディメンション テーブルは、主キーと外部キーのリレーションシップによって接続されます。 1 つ以上のディメンション テーブルをファクト テーブルと結合する分析クエリが最もよく使用されます。    
     
-ディメンション テーブル `Products` について考えてみましょう。 一般的な主キーは `ProductCode` で、通常は文字列データ型として表されます。 クエリのパフォーマンスのためには、代理キー (通常は整数型の列) を作成して、ファクト テーブルからディメンション テーブル内の行を参照することをお勧めします。    
+ディメンション テーブル `Products` について考えてみましょう。 一般的な主キーは `ProductCode` で、通常は文字列データ型として表されます。 クエリのパフォーマンスのためには、代理キー (通常は整数型の列) を作成して、ファクト テーブルからディメンション テーブル内の行を参照することをお勧めします。 
     
 列ストア インデックスは、数値または整数ベースのキーが関与する結合/述語を持つ分析クエリを非常に効率よく実行します。 ただし、多くの顧客ワークロードでは、ファクト テーブルとディメンション テーブルをリンクする文字列ベースの列を使用した場合、列ストア インデックスを含むクエリのパフォーマンスが低くなることがわかっています。 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] では、文字列型の列を持つ述語を SCAN ノードをプッシュ ダウンすることで、文字列ベースの列を持つ分析クエリのパフォーマンスを大きく向上しています。    
     
@@ -155,6 +154,7 @@ FROM FactResellerSalesXL_CCI
 文字列述語のプッシュ ダウンでは、クエリ実行時にディクショナリの値に対して述語を計算します。そこで条件を満たしていれば、ディクショナリの値を参照するすべての行が自動的に条件を満たすことになります。 これにより、次の 2 点においてパフォーマンスが向上します。
 1.  条件を満たす行だけが返されるので、SCAN ノード外に出ていく行数が削減されます。 
 2.  文字列比較の数が大幅に削減されます。 この例では、100 万回の比較に対して、文字列の比較は 100 回で済んでいます。 なお、制限事項もいくつかあります。    
+
     -   デルタ行グループでは文字列述語のプッシュ ダウンはできません。 デルタ行グループの列には辞書がありません。    
     -   ディクショナリが 64 KB を超えている場合、文字列述語のプッシュ ダウンはできません。    
     -   NULL を評価する式はサポートされていません。    
@@ -164,7 +164,7 @@ FROM FactResellerSalesXL_CCI
  [列ストア インデックスのデータ読み込みガイダンス](../../relational-databases/indexes/columnstore-indexes-data-loading-guidance.md)   
  [列ストアを使用したリアルタイム運用分析の概要](../../relational-databases/indexes/get-started-with-columnstore-for-real-time-operational-analytics.md)     
  [データ ウェアハウスの列ストア インデックス](../../relational-databases/indexes/columnstore-indexes-data-warehouse.md)   
- [列ストア インデックスの最適化](../../relational-databases/indexes/columnstore-indexes-defragmentation.md)    
+ [インデックスの再構成と再構築](../../relational-databases/indexes/reorganize-and-rebuild-indexes.md)    
  [列ストア インデックスのアーキテクチャ](../../relational-databases/sql-server-index-design-guide.md#columnstore_index)   
  [CREATE INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-index-transact-sql.md)    
  [ALTER INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/alter-index-transact-sql.md)     

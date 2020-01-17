@@ -10,15 +10,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - timestamp data type
 ms.assetid: 4e1920e1-e7a4-4069-965e-3f6039a6099e
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: 06df3b6c3425d87275e40ab5c31bcf305349fa73
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: MightyPen
+ms.author: genemi
+ms.openlocfilehash: ecfbc108ef35928d08a36bc7a22c415cabece27e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47678520"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67943304"
 ---
 # <a name="for-xml-support-for-the-timestamp-data-type"></a>timestamp データ型に対する FOR XML サポート
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

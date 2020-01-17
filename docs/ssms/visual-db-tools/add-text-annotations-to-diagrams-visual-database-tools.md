@@ -11,15 +11,14 @@ helpviewer_keywords:
 - annotations [SQL Server]
 - database diagrams [SQL Server], annotations
 ms.assetid: 0dced59b-06cc-4600-9c27-430f501279e2
-author: stevestein
-ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 9dadc8b2aadfbf00b67a3ae697336124f53ddcdc
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 653d1ee9a9b7f7be922fda223bcd3c000d2d1b0c
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47612731"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68263721"
 ---
 # <a name="add-text-annotations-to-diagrams-visual-database-tools"></a>テキストによる注釈をダイアグラムに追加する方法 (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

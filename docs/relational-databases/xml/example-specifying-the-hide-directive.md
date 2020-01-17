@@ -10,15 +10,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - HIDE directive
 ms.assetid: 87504d87-1cbd-412a-9041-47884b6efcec
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: 68330bfbb58bb356f055ad016245e05b5d3d029d
-ms.sourcegitcommit: bfa10c54e871700de285d7f819095d51ef70d997
+author: MightyPen
+ms.author: genemi
+ms.openlocfilehash: 22ee3e41d5792683dd73520bbeacb35fdc91d83e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/14/2019
-ms.locfileid: "54254717"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68006706"
 ---
 # <a name="example-specifying-the-hide-directive"></a>例: HIDE ディレクティブの指定
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

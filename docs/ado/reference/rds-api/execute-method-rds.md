@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 2d9c30e9-ab5b-4920-91b8-48454c2fb5d8
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 618c02f2b63746c0b8e5dfe00f4a231db3dc66f5
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.openlocfilehash: d1a5fa5c9002d4a27490dfc98fb79f482539f042
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51606242"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67964318"
 ---
 # <a name="execute-method-rds"></a>Execute メソッド (RDS)
 要求を実行し、2.5 以降は、ADO で使用する ADO レコード セットを作成します。  

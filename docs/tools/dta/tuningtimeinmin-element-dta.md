@@ -12,15 +12,14 @@ dev_langs:
 helpviewer_keywords:
 - TuningTimeInMin element
 ms.assetid: 4973d9ac-20fd-4ac3-bc9f-5d60e39fdb7d
-author: stevestein
-ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 908b4b6b8f4551fd5b611997dabedc5f1cf1c474
-ms.sourcegitcommit: 0f7cf9b7ab23df15624d27c129ab3a539e8b6457
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: c19cec140b0059cad98c777613dcbe1d3ec5a7b6
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51292412"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68105847"
 ---
 # <a name="tuningtimeinmin-element-dta"></a>TuningTimeInMin 要素 (DTA)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

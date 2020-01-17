@@ -11,23 +11,23 @@ helpviewer_keywords:
 - dropping indexes
 - XML indexes [SQL Server], dropping
 ms.assetid: 7591ebea-34af-4925-8553-b2adb5b487c2
-author: douglaslMS
-ms.author: douglasl
+author: MightyPen
+ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 82fd8836bb4fda85a7fdadd6345826cf432485cf
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: c4b1706f81808d90e02df32df7e56828b054bd05
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48194152"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62638107"
 ---
 # <a name="drop-xml-indexes"></a>XML インデックスの削除
   [DROP INDEX &#40;Transact-SQL&#41;](/sql/t-sql/statements/drop-index-transact-sql)[!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントを使用すると、XML インデックスと XML 以外のインデックスの両方を含め、既存のプライマリ インデックスまたはセカンダリ インデックスを削除できます。 ただし、DROP INDEX のオプションは XML インデックスに適用されません。 プライマリ XML インデックスを削除すると、存在するセカンダリ XML インデックスもすべて削除されます。  
   
  *TableName.IndexName* を指定する DROP 構文は廃止されるので、XML インデックスではサポートされません。  
   
-## <a name="example-creating-and-dropping-a-primary-xml-index"></a>例 : プライマリ XML インデックスの作成と削除  
- XML インデックスを作成する次の例では、`xml`型の列。  
+## <a name="example-creating-and-dropping-a-primary-xml-index"></a>例: プライマリ XML インデックスの作成とドロップ  
+ 次の例では、`xml` 型の列に XML インデックスを作成します。  
   
 ```  
 DROP TABLE T  
@@ -51,7 +51,7 @@ DROP INDEX PIdx_T_XmlCol ON T
   
  テーブルを削除すると、テーブルのすべての XML インデックスも自動的に削除されます。 ただし、XML 列に XML インデックスが存在する場合、その XML 列はテーブルから削除できません。  
   
- XML インデックスを作成する次の例では、`xml`型の列。 詳細については、「 [型指定された XML と型指定されていない XML の比較](../xml/compare-typed-xml-to-untyped-xml.md)」を参照してください。  
+ 次の例では、`xml` 型の列に XML インデックスを作成します。 詳細については、「 [型指定された XML と型指定されていない XML の比較](../xml/compare-typed-xml-to-untyped-xml.md)」を参照してください。  
   
 ```  
 CREATE TABLE TestTable(  
@@ -68,7 +68,7 @@ ON TestTable(Col2)
 GO  
 ```  
   
-## <a name="example-creating-an-xml-index-by-using-the-dropexisting-index-option"></a>例 : DROP_EXISTING インデックス オプションを使用した XML インデックスの作成  
+## <a name="example-creating-an-xml-index-by-using-the-dropexisting-index-option"></a>例: DROP_EXISTING インデックス オプションを使用した XML インデックスの作成  
  次の例では、列 (`XmlColx`) に XML インデックスを作成しています。 次に、同じ名前を使用して異なる列 (`XmlColy`) に別の XML インデックスを作成します。 `DROP_EXISTING` を指定しているので、列 (`XmlColx)` の既存の XML インデックスが削除されて、列 (`XmlColy`) に新しい XML インデックスが作成されます。  
   
 ```  
@@ -96,7 +96,7 @@ AND    si.object_id=object_id('T')
   
  このクエリからは、指定した XML インデックスを作成する対象の列名が返されます。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [XML インデックス &#40;SQL Server&#41;](xml-indexes-sql-server.md)  
   
   

@@ -1,6 +1,7 @@
 ---
-title: レプリケーション トポロジの停止 (レプリケーション Transact-SQL プログラミング) | Microsoft Docs
-ms.custom: ''
+title: レプリケーション トポロジの停止 (レプリケーション SP)
+description: レプリケーション ストアド プロシージャを使用して SQL Server のレプリケーション トポロジを停止する方法について説明します。
+ms.custom: seo-lt-2019
 ms.date: 03/03/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -16,16 +17,16 @@ helpviewer_keywords:
 ms.assetid: 7626d575-9994-47be-b772-5b6f1b7ef7ca
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 98507fe8e98cf8c12abb7423d995a2e3be34f201
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
+ms.openlocfilehash: 0ad5d9595419c5d991dd1e33d15e1e7a4d1a8721
+ms.sourcegitcommit: 02d44167a1ee025ba925a6fefadeea966912954c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47846810"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75322014"
 ---
 # <a name="quiesce-a-replication-topology-replication-transact-sql-programming"></a>レプリケーション トポロジの停止 (レプリケーション Transact-SQL プログラミング)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
   システムの*停止* を実行するには、すべてのノードのパブリッシュされたテーブルで処理を停止し、他のすべてのノードからのすべての変更を各ノードが受信しているかどうかを確認します。 このトピックでは、いくつかの管理タスクで必要とされる、レプリケーション トポロジの停止方法や、他のノードからのすべての変更をノードが受け取ったことを確認する方法について説明します。  
   
 ### <a name="to-quiesce-a-transactional-replication-topology-with-read-only-subscriptions"></a>読み取り専用サブスクライバーを含むトランザクション レプリケーション トポロジを停止するには  
@@ -37,7 +38,7 @@ ms.locfileid: "47846810"
 3.  パブリッシャー側のパブリケーション データベースに対して、 [sp_helptracertokenhistory](../../../relational-databases/system-stored-procedures/sp-helptracertokenhistory-transact-sql.md)を実行します。  
   
 4.  各サブスクライバーがトレーサー トークンを受け取ったことを確認します。  
-  
+
 ### <a name="to-quiesce-a-transactional-replication-topology-with-updatable-subscriptions"></a>更新可能サブスクリプションを含むトランザクション レプリケーション トポロジを停止するには  
   
 1.  パブリッシャーおよびすべてのサブスクライバーで、すべてのパブリッシュされたテーブルの処理を停止します。  
@@ -83,6 +84,6 @@ ms.locfileid: "47846810"
   
 ## <a name="see-also"></a>参照  
  [ピア ツー ピア トポロジの管理 &#40;レプリケーション Transact-SQL プログラミング&#41;](../../../relational-databases/replication/administration/administer-a-peer-to-peer-topology-replication-transact-sql-programming.md)   
- [トランザクション レプリケーションの待機時間の計測および接続の検証](../../../relational-databases/replication/monitor/measure-latency-and-validate-connections-for-transactional-replication.md)  
+ [待機時間を計測して Connections for Transactional Replication を検証します。](../../../relational-databases/replication/monitor/measure-latency-and-validate-connections-for-transactional-replication.md)  
   
   

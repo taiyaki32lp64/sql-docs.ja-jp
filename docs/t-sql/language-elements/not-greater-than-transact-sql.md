@@ -19,15 +19,14 @@ helpviewer_keywords:
 - '!> (not greater than)'
 - not greater than operator (!>)
 ms.assetid: 71a413ed-64f1-4ab9-9c52-c5959a77d00f
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: 26baf53b4c5c3bddd768b2382f82583eae477605
-ms.sourcegitcommit: 019b6f355a69aa409e6601de8977a8c307f793cb
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: ddc661b856767c140091e662118f3d5198318266
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/16/2019
-ms.locfileid: "56331582"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68072455"
 ---
 # <a name="gt-not-greater-than-transact-sql"></a>!&gt;(より大きくない) (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -48,9 +47,9 @@ expression !> expression
  任意の有効な[式](../../t-sql/language-elements/expressions-transact-sql.md)を指定します。 両方の式とも、暗黙的に変換可能なデータ型でなければなりません。 変換は、[データ型の優先順位](../../t-sql/data-types/data-type-precedence-transact-sql.md)のルールに依存します。  
   
 ## <a name="result-types"></a>戻り値の型  
- **ブール値**  
+ **Boolean**  
   
 ## <a name="see-also"></a>参照  
  [データ型 &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)   
- [演算子 (&) #40 です。TRANSACT-SQL と #41 です。](../../t-sql/language-elements/operators-transact-sql.md)  
+ [演算子 &#40;Transact-SQL&#41;](../../t-sql/language-elements/operators-transact-sql.md)  
   

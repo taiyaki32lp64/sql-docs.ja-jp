@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: 876b6348-fb29-49e1-befc-4217979f6416
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: e9baa18550da37f0abe379b3842389fae7100287
-ms.sourcegitcommit: c6e71ed14198da67afd7ba722823b1af9b4f4e6f
+ms.openlocfilehash: b27695eba9f1092b09d147c373877a9b44789497
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/16/2019
-ms.locfileid: "54326433"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68065900"
 ---
 # <a name="alter-cryptographic-provider-transact-sql"></a>ALTER CRYPTOGRAPHIC PROVIDER (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -50,20 +49,20 @@ ALTER CRYPTOGRAPHIC PROVIDER provider_name
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 拡張キー管理インターフェイスを実装する .dll ファイルのパスを指定します。  
   
  ENABLE | DISABLE  
- プロバイダーを有効にするか無効にするかを指定します。  
+ プロバイダーを有効または無効にします。  
   
 ## <a name="remarks"></a>Remarks  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] で拡張キー管理を実装するために使用する .dll ファイルをプロバイダーから変更する場合、ALTER CRYPTOGRAPHIC PROVIDER ステートメントを使用する必要があります。  
   
  ALTER CRYPTOGRAPHIC PROVIDER ステートメントを使用して .dll ファイルのパスを更新すると、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では次の操作が実行されます。  
 -   プロバイダーを無効にします。  
--   DLL の署名が、.dll ファイルの GUID がカタログに記録されているものと同じであることを確認します。  
+-   DLL の署名を確認し、.dll ファイルの GUID が、カタログに記録されているものと確実に同じになるようにします。  
 -   カタログの DLL バージョンを更新します。  
   
 
-EKM プロバイダーを DISABLE に設定した場合、新しく接続するときに、暗号化ステートメントでそのプロバイダーを使用しようとすると失敗します。  
+EKM プロバイダーを DISABLE に設定した場合、新しい接続において、そのプロバイダーを暗号化ステートメントで使用する試みはいずれも失敗します。  
   
-プロバイダーを無効にするには、そのプロバイダーを使用するすべてのセッションを終了する必要があります。  
+プロバイダーを無効にするには、プロバイダーを使用するすべてのセッションを終了する必要があります。  
   
 EKM プロバイダーの dll で必要なメソッドの一部が実装されなかった場合は、ALTER CRYPTOGRAPHIC PROVIDER から次のエラー 33085 が返されることがあります。  
   

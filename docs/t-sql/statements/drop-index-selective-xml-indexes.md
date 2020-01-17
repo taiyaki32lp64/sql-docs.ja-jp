@@ -14,13 +14,12 @@ dev_langs:
 ms.assetid: 4779ae84-e5f4-4d04-8fc1-e24a6631b428
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 5715e1c5744450963026e990f50781321abd74ab
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: fc1a9b8b91d37359ce7dc2a4845d0d83e81f996a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56022333"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68044155"
 ---
 # <a name="drop-index-selective-xml-indexes"></a>DROP INDEX (選択的 XML インデックス)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
@@ -36,10 +35,7 @@ DROP INDEX index_name ON <object>
     [ WITH ( <drop_index_option> [ ,...n ] ) ]  
   
 <object> ::=  
-{  
-    [ database_name. [ schema_name ] . | schema_name. ]   
-        table_or_view_name  
-}  
+{ database_name.schema_name.table_or_view_name | schema_name.table_or_view_name | table_or_view_name }  
   
 <drop_index_option> ::=  
 {  
@@ -52,7 +48,7 @@ DROP INDEX index_name ON <object>
  *index_name*  
  削除する既存のインデックスの名前です。  
   
- *\< object>* インデックスが作成されている XML 列が含まれるテーブルを指定します。 次のどちらかの形式を使用します。  
+ *\< object>* インデックスが作成されている XML 列が含まれるテーブルを指定します。 次のいずれかの形式を使用します。  
   
 -   `database_name.schema_name.table_name`  
   
@@ -67,7 +63,7 @@ DROP INDEX index_name ON <object>
 ## <a name="security"></a>Security  
   
 ### <a name="permissions"></a>アクセス許可  
- DROP INDEX を実行するには、少なくともテーブルまたはビューに対する ALTER 権限が必要です。 この権限は、固定サーバー ロール sysadmin と、固定データベース ロール db_ddladmin および db_owner に既定で許可されています。  
+ DROP INDEX を実行するには、テーブルまたはビューに対する ALTER 権限が必要です。 この権限は、固定サーバー ロール sysadmin と、固定データベース ロール db_ddladmin および db_owner に既定で許可されています。  
   
 ## <a name="example"></a>例  
  DROP INDEX ステートメントの例を次に示します。  

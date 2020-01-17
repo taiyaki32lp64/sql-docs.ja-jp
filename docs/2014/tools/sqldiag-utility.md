@@ -30,11 +30,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: a024e2fc4cb7afaecdc6e84ae6dba4f3a2700d8b
-ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/18/2018
-ms.locfileid: "53590256"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63035421"
 ---
 # <a name="sqldiag-utility"></a>SQLdiag ユーティリティ
   **SQLdiag** ユーティリティは、コンソール アプリケーションまたはサービスとして実行できる汎用的な診断収集ユーティリティです。 **SQLdiag** を使用すると、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] やその他の種類のサーバーからログ ファイルやデータ ファイルを収集したり、サーバーを一定期間にわたって監視したり、サーバーに関する特定の問題をトラブルシューティングしたりすることができます。 **SQLdiag** は、 [!INCLUDE[msCoName](../includes/msconame-md.md)] カスタマー サポート サービスによる診断情報収集の高速化と簡素化も目的としています。  
@@ -111,7 +111,7 @@ ms.locfileid: "53590256"
 > [!NOTE]  
 >  **SQLdiag** は起動時に、現在の出力フォルダーに出力を追加しません。 既定の出力フォルダーを上書きするか (オプション 1)、または既定のフォルダー名を変更して (オプション 2)、SQLDIAG という名前の新しい既定の出力フォルダーに出力を書き込むかのどちらかです。  
   
- **/M** _machine1_ [ *machine2 * * machineN*] | *@machinelistfile*  
+ **/M** _machine1_ [ *machine2**machineN*] | *@machinelistfile*  
  構成ファイルで指定されたコンピューターをオーバーライドします。 既定では、構成ファイルは SQLDiag.Xml です。または **/I** パラメーターで設定されます。 複数のコンピューターを指定する場合、それぞれのコンピューター名をスペースで区切ります。  
   
  *@machinelistfile* を使用すると、構成ファイルに保存するコンピューター一覧のファイル名が指定されます。  
@@ -123,7 +123,7 @@ ms.locfileid: "53590256"
   
  1 = NTFS 圧縮を使用します。  
   
- **/B** [**+**]*start_time*  
+ **/B** [ **+** ]*start_time*  
  診断データの収集を開始する日時は、  
   
  YYYYMMDD_HH:MM:SS の形式で指定します。  
@@ -138,7 +138,7 @@ ms.locfileid: "53590256"
   
  **SQLdiag** は、ユーティリティが実行されているコンピューター上のローカル時間を使用することに注意してください。  
   
- **/E** [**+**]*stop_time*  
+ **/E** [ **+** ]*stop_time*  
  診断データの収集を停止する日時は、  
   
  YYYYMMDD_HH:MM:SS の形式で指定します。  
@@ -158,7 +158,7 @@ ms.locfileid: "53590256"
   
  *SQLdiag_application_name* を使用すると、 **SQLdiag** サービスの特定のインスタンスを開始または停止できます。  
   
- 以下に例を示します。  
+ 例 :  
   
  **SQLDIAG START /A** _SQLdiag_application_name_  
   
@@ -221,16 +221,16 @@ ms.locfileid: "53590256"
  **START** | **STOP** | **STOP_ABORT**  
  **SQLdiag** サービスを開始または停止します。 **STOP_ABORT** は、現在実行されている診断収集が終了していなくても、できるだけ早く強制的にサービスをシャットダウンします。  
   
- このサービス コントロール引数は、コマンド ラインで使用される最初の引数であることが必要です。 以下に例を示します。  
+ このサービス コントロール引数は、コマンド ラインで使用される最初の引数であることが必要です。 例 :  
   
  **SQLDIAG START**  
   
- **START** 、 **STOP**、または **STOP_ABORT**と共に使用し、 **SQLdiag**サービスの特定のインスタンスを制御できるのは、 **SQLdiag** の名前付きインスタンスを指定した **/A** 引数のみです。 以下に例を示します。  
+ **START** 、 **STOP**、または **STOP_ABORT**と共に使用し、 **SQLdiag**サービスの特定のインスタンスを制御できるのは、 **SQLdiag** の名前付きインスタンスを指定した **/A** 引数のみです。 例 :  
   
  **SQLDIAG START /A** _SQLdiag_application_name_  
   
 ## <a name="security-requirements"></a>セキュリティ要件  
-  **SQLdiag** を汎用モード ( **/G** コマンド ライン引数を指定) 以外のモードで実行する場合は、 **SQLdiag** を実行するユーザーは、Windows **Administrators** グループのメンバー、および [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] **sysadmin** 固定サーバー ロールのメンバーであることが必要です。 既定では、 **SQLdiag** は Windows 認証を使用して [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] に接続しますが、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 認証もサポートされます。  
+ **SQLdiag** を汎用モード ( **/G** コマンド ライン引数を指定) 以外のモードで実行する場合は、 **SQLdiag** を実行するユーザーは、Windows **Administrators** グループのメンバー、および [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] **sysadmin** 固定サーバー ロールのメンバーであることが必要です。 既定では、 **SQLdiag** は Windows 認証を使用して [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] に接続しますが、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 認証もサポートされます。  
   
 ## <a name="performance-considerations"></a>パフォーマンスに関する考慮事項  
  **SQLdiag** を実行した場合のパフォーマンスへの影響は、収集用に構成した診断データの種類によって異なります。 たとえば、 **のトレース情報を収集するように** SQLdiag [!INCLUDE[ssSqlProfiler](../includes/sssqlprofiler-md.md)] を構成した場合、トレースを選択したイベント クラスの数に従ってサーバー パフォーマンスも影響を受けます。  
@@ -365,7 +365,7 @@ SQLDIAG START /A Instance1
 > [!NOTE]  
 >  クラスター化された [!INCLUDE[ssSqlProfiler](../includes/sssqlprofiler-md.md)] インスタンスから [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] トレース情報を収集するには、管理共有 (ADMIN$) をクラスター上で有効にする必要があります。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [コマンド プロンプト ユーティリティ リファレンス &#40;データベース エンジン&#41;](command-prompt-utility-reference-database-engine.md)  
   
   

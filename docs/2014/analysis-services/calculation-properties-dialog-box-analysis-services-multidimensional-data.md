@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.cubeeditor.calculationsview.calculationpropertiesdialog.f1
@@ -15,12 +14,12 @@ ms.assetid: eb5e1179-b0e6-4ec8-bf4c-d67a1e329117
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 8c3f6654480635966c2e77beb73ad6adc24add6a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 2a8dfe06f3f05dead3686d0319ba0958388994ca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48209636"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66088316"
 ---
 # <a name="calculation-properties-dialog-box-analysis-services---multidimensional-data"></a>[計算プロパティ] ダイアログ ボックス (Analysis Services - 多次元データ)
   **の** [計算プロパティ] [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] ダイアログ ボックスを使用すると、選択したキューブのキューブ デザイナーの **[計算]** タブで定義された計算に関する表示フォルダーや、その計算に関連付けられたメジャー グループのプロパティを表示したり編集したりできます。 キューブ デザイナーの **[計算]** タブの **[ツール バー]** ペインにある **[計算プロパティ]** をクリックして、 **[計算プロパティ]** ダイアログ ボックスを表示できます。  

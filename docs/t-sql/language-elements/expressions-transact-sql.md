@@ -18,16 +18,15 @@ helpviewer_keywords:
 - simple expressions [SQL Server]
 - complex expressions [SQL Server]
 ms.assetid: ee53c5c8-e36c-40f9-8cd1-d933791b98fa
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
+author: rothja
+ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 55e3dda77a2b623ef50fe64ad82824b84a934f44
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: 0563510242e38e817c7fb01e4185241062feedf3
+ms.sourcegitcommit: 5a61854ddcd2c61bb6da30ccad68f0ad90da0c96
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54124102"
+ms.lasthandoff: 09/13/2019
+ms.locfileid: "70978596"
 ---
 # <a name="expressions-transact-sql"></a>式 (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -86,15 +85,15 @@ ms.locfileid: "54124102"
 |----------|----------------|  
 |*constant*|1 つの特定のデータ値を表す記号です。 詳細については、「[定数 &#40;Transact-SQL&#41;](../../t-sql/data-types/constants-transact-sql.md)」を参照してください。|  
 |*scalar_function*|特定のサービスを提供し、単一の値を返す [!INCLUDE[tsql](../../includes/tsql-md.md)] 構文の単位です。 *scalar_function* には、組み込みの SUM 関数、GETDATE 関数、または CAST 関数、スカラー ユーザー定義関数などのスカラー関数を指定できます。|  
-|[ _table_name_**.** ]|テーブルの名前または別名です。|  
-|*column*|列の名前を指定します。 式では列の名前だけが許可されます。|  
-|*variable*|変数名、またはパラメーターを指定します。 詳細については、「[DECLARE @local_variable &#40;Transact-SQL&#41;](../../t-sql/language-elements/declare-local-variable-transact-sql.md)」を参照してください。|  
+|[ _table_name_ **.** ]|テーブルの名前または別名です。|  
+|*column*|列の名前です。 式では列の名前だけが許可されます。|  
+|*variable*|変数名、またはパラメーターです。 詳細については、「[DECLARE @local_variable &#40;Transact-SQL&#41;](../../t-sql/language-elements/declare-local-variable-transact-sql.md)」を参照してください。|  
 |**(** _expression_  **)**|このトピックで定義されている有効な式を指定します。 かっこはグループ化の演算子です。かっこ内の式のすべての演算子は最初に評価され、その後で結果の式が別の式と結合されます。|  
-|**(** _scalar_subquery_ **)**|1 つの値を返すサブクエリを指定します。 例 :<br /><br /> `SELECT MAX(UnitPrice)`<br /><br /> `FROM Products`|  
+|**(** _scalar_subquery_ **)**|1 つの値を返すサブクエリを指定します。 例:<br /><br /> `SELECT MAX(UnitPrice)`<br /><br /> `FROM Products`|  
 |{ *unary_operator* }|単項演算子を適用できるのは、数値型に属するいずれかのデータ型に評価される式だけです。 1 つの数値オペランドだけを含む演算子を指定します。<br /><br /> + は正の値を示します。<br /><br /> - は負の値を示します。<br /><br /> ~ は 1 の補数演算子を示します。|  
 |{ *binary_operator* }|2 つの式を結合して 1 つの結果を生成する方法を定義する演算子を指定します。 *binary_operator* には、算術演算子、代入演算子 (=)、ビットごとの演算子、比較演算子、論理演算子、文字列の連結演算子 (+)、または単項演算子を指定できます。 演算子の詳細については、「[演算子 &#40;Transact-SQL&#41;](../../t-sql/language-elements/operators-transact-sql.md)」を参照してください。|  
 |*ranking_windowed_function*|任意の [!INCLUDE[tsql](../../includes/tsql-md.md)] 順位付け関数です。 詳細については、「[順位付け関数 &#40;Transact-SQL&#41;](../../t-sql/functions/ranking-functions-transact-sql.md)」を参照してください。|  
-|*aggregate_windowed_function*|OVER 句を含む任意の [!INCLUDE[tsql](../../includes/tsql-md.md)] 集計関数です。 詳細については、を参照してください。 [経由句 (&) #40 です。TRANSACT-SQL と #41;](../../t-sql/queries/select-over-clause-transact-sql.md).|  
+|*aggregate_windowed_function*|OVER 句を含む任意の [!INCLUDE[tsql](../../includes/tsql-md.md)] 集計関数です。 詳細については、[OVER 句 &#40;Transact-SQL&#41;](../../t-sql/queries/select-over-clause-transact-sql.md)を参照してください。|  
   
 ## <a name="expression-results"></a>式の結果  
  1 つの定数、変数、スカラー関数、または列名で構成される単純式の場合、式のデータ型、照合順序、有効桁数、小数点以下桁数、および値は、参照される要素のデータ型、照合順序、有効桁数、小数点以下桁数、および値になります。  
@@ -129,7 +128,27 @@ GO
 ```  
   
  式 `1+2` は、結果セット内の各行で `3` と評価されます。 式 `ProductID` は、結果セットの各行で一意な値をとりますが、各行に格納される `ProductID` の値は 1 つだけです。  
-  
+ 
+- Azure SQL Data Warehouse では各スレッドに固定された最大メモリ量が割り当てられるため、スレッドによってすべてのメモリが使い尽くされることはありません。  このメモリの一部は、クエリの式を格納するために使用されます。  クエリに含まれる式が多すぎて、必要なメモリが内部制限を超えた場合、そのクエリはエンジンによって実行されません。  この問題を回避するために、ユーザーはクエリを複数のクエリに変更して、それぞれのクエリに含まれる式の数を減らすことができます。 たとえば、次のように WHERE 句に式の長いリストを含むクエリがあるとします。 
+
+```sql
+DELETE FROM dbo.MyTable 
+WHERE
+(c1 = '0000001' AND c2 = 'A000001') or
+(c1 = '0000002' AND c2 = 'A000002') or
+(c1 = '0000003' AND c2 = 'A000003') or
+...
+
+```
+このクエリは次のように変更します。
+
+```sql
+DELETE FROM dbo.MyTable WHERE (c1 = '0000001' AND c2 = 'A000001');
+DELETE FROM dbo.MyTable WHERE (c1 = '0000002' AND c2 = 'A000002');
+DELETE FROM dbo.MyTable WHERE (c1 = '0000003' AND c2 = 'A000003');
+...
+```
+
 ## <a name="see-also"></a>参照  
  [AT TIME ZONE &#40;Transact-SQL&#41;](../../t-sql/queries/at-time-zone-transact-sql.md)   
  [CASE &#40;Transact-SQL&#41;](../../t-sql/language-elements/case-transact-sql.md)   

@@ -14,13 +14,12 @@ f1_keywords:
 ms.assetid: 10ac57f1-b4bd-4528-bb66-3e47ccf663e7
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: a09468a52948090561ac85293c8ef95fc173f59f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: dbc306b3ec8d23c4ddc7aec6477c407f21e345a8
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47655600"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68025483"
 ---
 # <a name="server-properties---general-page"></a>[サーバーのプロパティ] - [全般] ページ
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -29,7 +28,7 @@ ms.locfileid: "47655600"
 ## <a name="property-grid"></a>[プロパティ] グリッド  
  サーバー名、サーバーのオペレーティング システム、プロセッサ数など、選択したサーバーのプロパティを表示します。  
   
- **名前**  
+ **[名前]**  
  サーバー インスタンスの名前を表示します。  
   
  **Product**  
@@ -41,7 +40,7 @@ ms.locfileid: "47655600"
  **プラットフォーム**  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]を実行しているオペレーティング システムとハードウェアを表示します。  
   
- **[バージョン]**  
+ **バージョン**  
  現在実行中の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エディションのバージョン番号を表示します。  
   
  **言語**  

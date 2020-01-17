@@ -15,18 +15,17 @@ helpviewer_keywords:
 ms.assetid: 8abaa8c1-d99e-4788-970f-c4752246c577
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 636a0a23c70170ce625b9e462e2715c1c884bda7
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: acbbd043080b107a5d545408fabe271d62015e54
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53210121"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68105085"
 ---
 # <a name="sparticlecolumn-transact-sql"></a>sp_articlecolumn (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  パブリッシュされたテーブルで列方向にデータをフィルター選択するために、アーティクルに含まれている列を指定します。 このストアド プロシージャは、パブリッシャー側でパブリケーション データベースについて実行されます。  
+  パブリッシュされたテーブルでのデータを垂直方向にフィルター処理するアーティクルに含まれる列を指定するために使用します。 このストアド プロシージャは、パブリッシャー側でパブリケーション データベースについて実行されます。  
   
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -48,47 +47,37 @@ sp_articlecolumn [ @publication = ] 'publication'
 ```  
   
 ## <a name="arguments"></a>引数  
- [  **@publication=**] **'**_パブリケーション_**'**  
- このアーティクルを含むパブリケーションの名前を指定します。 *パブリケーション*は**sysname**、既定値はありません。  
+`[ @publication = ] 'publication'` この記事を含むパブリケーションの名前です。 *パブリケーション* は **sysname** 、既定値はありません。  
   
- [  **@article=**] **'**_記事_**'**  
- アーティクルの名前を指定します。 *記事*は**sysname**、既定値はありません。  
+`[ @article = ] 'article'` アーティクルの名前です。 *記事*は**sysname**、既定値はありません。  
   
- [  **@column=**] **'**_列_**'**  
- 追加または削除する列の名前を指定します。 *列*は**sysname**、既定値は NULL です。 NULL の場合はすべての列がパブリッシュされます。  
+`[ @column = ] 'column'` 追加または削除する列の名前です。 *列*は**sysname**、既定値は NULL です。 NULL の場合は、すべての列がパブリッシュされます。  
   
- [  **@operation=**] **'**_操作_**'**  
- アーティクルの列を追加するか削除するかを指定します。 *操作*は**nvarchar (5)**、既定値は add です。 **追加**レプリケーションする列をマークします。 **drop**列のマークを解除します。  
+`[ @operation = ] 'operation'` 追加またはアーティクルに列を削除するかどうかを指定します。 *操作*は**nvarchar (5)** 、既定値は add です。 **追加**レプリケーションする列をマークします。 **drop**列のマークを解除します。  
   
- [  **@refresh_synctran_procs=**] *refresh_synctran_procs*  
- レプリケートされた列数と一致するように、即時更新サブスクリプションをサポートするストアド プロシージャを再生成するかどうかを指定します。 *refresh_synctran_procs*は**ビット**、既定値は**1**します。 場合**1**、ストアド プロシージャが再生成します。  
+`[ @refresh_synctran_procs = ] refresh_synctran_procs` レプリケートされた列の数と一致する即時更新サブスクリプションをサポートするストアド プロシージャを再生成するかどうかを指定します。 *refresh_synctran_procs*は**ビット**、既定値は**1**します。 場合**1**、ストアド プロシージャが再生成します。  
   
- [  **@ignore_distributor =**] *ignore_distributor*  
- ディストリビューターに接続しなくてもこのストアド プロシージャが実行されるかどうかを示します。 *ignore_distributor*は**ビット**、既定値は**0**します。 場合**0**パブリッシング用のデータベースを有効にする必要があります、アーティクルによってレプリケートされた新しい列を反映するようにアーティクル キャッシュを更新する必要があります。 場合**1**アーティクルの列はパブリッシュされていないデータベースの回復の状況でのみ使用する必要がありますをアーティクルに対して削除を許可します。  
+`[ @ignore_distributor = ] ignore_distributor` ディストリビューターに接続しなくてもこのストアド プロシージャが実行されるかどうかを示します。 *ignore_distributor*は**ビット**、既定値は**0**します。 場合**0**パブリッシング用のデータベースを有効にする必要があります、アーティクルによってレプリケートされた新しい列を反映するようにアーティクル キャッシュを更新する必要があります。 場合**1**アーティクルの列はパブリッシュされていないデータベースの回復の状況でのみ使用する必要がありますをアーティクルに対して削除を許可します。  
   
- [  **@change_active =** ] *@change_active*  
- サブスクリプションを持つパブリケーションの列の変更を許可します。 *@change_active*は、 **int** 、既定値は**0**します。 場合**0**列は変更されません。 場合**1**列を追加またはサブスクリプションを持つアクティブなアーティクルから削除されることができます。  
+`[ @change_active = ] change_active` サブスクリプションを持つパブリケーション内の列を変更できます。 *@change_active*は、 **int** 、既定値は**0**します。 場合**0**列は変更されません。 場合**1**列を追加またはサブスクリプションを持つアクティブなアーティクルから削除されることができます。  
   
- [ **@force_invalidate_snapshot =** ]*更によって*  
- このストアド プロシージャが実行する操作によって既存のスナップショットが無効になることを許可します。 *更によって*は、**ビット**、既定値は**0**します。  
+`[ @force_invalidate_snapshot = ] force_invalidate_snapshot` このストアド プロシージャが実行する操作が既存のスナップショットが無効になることを確認します。 *更によって*は、**ビット**、既定値は**0**します。  
   
- **0**スナップショットが無効であることをアーティクルへの変更が発生しないことを指定します。 ストアド プロシージャで、変更に新しいスナップショットが必要であることが検出されると、エラーが発生し、変更は加えられません。  
+ **0**スナップショットが無効であることをアーティクルへの変更が発生しないことを指定します。 ストアド プロシージャは、変更は、新しいスナップショットを必要になることを検出する場合は、エラーが発生し、変更は行われません。  
   
  **1**アーティクルへの変更はスナップショットが無効であることがあり、新しいスナップショットを必要とする既存のサブスクリプションがある場合は、アクセス許可を付与 obsolete としてマーク済みである既存のスナップショットを新しいスナップショットを生成を指定します。  
   
  [ **@force_reinit_subscription =** ]*更によって*  
- このストアド プロシージャが実行する操作によって、既存のサブスクリプションの再初期化が必要になることを許可します。 *更によって*は、**ビット**、既定値は**0**します。  
+ このストアド プロシージャが実行されるアクションでは、既存のサブスクリプションの再初期化される場合がありますかを確認します。 *更によって*は、**ビット**、既定値は**0**します。  
   
  **0**アーティクルへの変更では、サブスクリプションを再初期化するのには発生しないことを指定します。 ストアド プロシージャが、変更がサブスクリプションの再初期化する必要になることを検出した場合は、エラーが発生し、変更は行われません。 **1**アーティクルへの変更が発生する既存のサブスクリプションを再初期化することを指定します。 サブスクリプションの再初期化を許可します。  
   
- [  **@publisher=** ] **'**_パブリッシャー_**'**  
- 以外を指定[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]パブリッシャーです。 *パブリッシャー*は**sysname**、既定値は NULL です。  
+`[ @publisher = ] 'publisher'` 以外を指定[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]パブリッシャーです。 *パブリッシャー*は**sysname**、既定値は NULL です。  
   
 > [!NOTE]  
 >  *パブリッシャー*では使用できません、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]パブリッシャーです。  
   
- [  **@internal=** ] **'**_内部_**'**  
- 内部使用のみです。  
+`[ @internal = ] 'internal'` 内部でのみ使用します。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  **0** (成功) または**1** (失敗)  
@@ -104,7 +93,7 @@ sp_articlecolumn [ @publication = ] 'publication'
 ## <a name="permissions"></a>アクセス許可  
  メンバーのみ、 **sysadmin**固定サーバー ロールまたは**db_owner**固定データベース ロールが実行できる**sp_articlecolumn**します。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [Define an Article](../../relational-databases/replication/publish/define-an-article.md)   
  [Define and Modify a Column Filter](../../relational-databases/replication/publish/define-and-modify-a-column-filter.md)   
  [パブリッシュされたデータのフィルター処理](../../relational-databases/replication/publish/filter-published-data.md)   

@@ -13,11 +13,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 4355245af62817b7ab675241f5df9db77500daa3
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54132362"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62705150"
 ---
 # <a name="evaluate-a-policy-based-management-policy-on-a-schedule"></a>ポリシー ベースの管理ポリシーがスケジュールに従っていることの評価
   このトピックでは、 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] を使用して、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]でポリシー ベースの管理ポリシーがスケジュールに従っていることを評価する方法について説明します。  
@@ -53,7 +53,7 @@ ms.locfileid: "54132362"
   
 5.  スケジュールを評価するポリシーを右クリックし、 **[プロパティ]** をクリックします。  
   
-6.  **ポリシーを開く -**_policy_name_ ] ダイアログ ボックスで、**評価モード**一覧で、[**スケジュールで**します。  
+6.  **[ポリシーを開く - <_ポリシー名_>]** ダイアログ ボックスで、 **[評価モード]** ボックスの一覧の **[スケジュールで実行]** をクリックします。  
   
 7.  **[スケジュール]** で、 **[選択]** をクリックして既存のスケジュールを指定するか、 **[新規作成]** をクリックして新しいスケジュールを作成します。  
   

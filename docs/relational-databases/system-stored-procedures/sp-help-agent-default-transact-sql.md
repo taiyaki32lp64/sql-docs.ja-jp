@@ -1,5 +1,5 @@
 ---
-title: sp_help_agent_default (TRANSACT-SQL) |Microsoft Docs
+title: sp_help_agent_default (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
@@ -15,16 +15,15 @@ helpviewer_keywords:
 ms.assetid: 7ba55e39-05dd-43c7-b5da-b268ed8426dd
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 9ee9596b578396786da8562f2ecf73c3b85f0241
-ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
+ms.openlocfilehash: c0797b8fe4a2ba496b28f0c347eb5349e77e91e0
+ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/18/2018
-ms.locfileid: "53588036"
+ms.lasthandoff: 08/03/2019
+ms.locfileid: "68762760"
 ---
-# <a name="sphelpagentdefault-transact-sql"></a>sp_help_agent_default (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+# <a name="sphelpagentdefault-transact-sql"></a>sp_help_agent_default (Transact-sql)
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
   パラメーターとして渡されたエージェント タイプについて、既定の構成の ID を取得します。 このストアド プロシージャは、任意のデータベース上のディストリビューター側で実行されます。  
   
@@ -39,30 +38,28 @@ sp_help_agent_default [ @profile_id= ] profile_id OUTPUT
 ```  
   
 ## <a name="arguments"></a>引数  
- [  **@profile_id=**] _profile_id_**出力**  
- エージェントの種類の既定の構成の ID を指定します。 *profile_id*は**int**、既定値はありません *。profile_id*は出力パラメーターでも、エージェントの種類の既定の構成の ID を返します。  
+`[ @profile_id = ] _profile_idOUTPUT`エージェントの種類の既定の構成の ID を設定します。 *profile_id*は**int**,、既定値はありません。*profile_id*は出力パラメーターでもあり、エージェントの種類の既定の構成の id を返します。  
   
- [  **@agent_type=**] **'**_agent_type_**'**  
- エージェントの種類を指定します。 *agent_type*は**int**, で、既定値はありませんはこれらの値のいずれかを指定します。  
+`[ @agent_type = ] 'agent_type'`エージェントの種類を示します。 *agent_type*は**int**,、既定値はありませんが、これらの値のいずれかを指定することができます。  
   
 |値|説明|  
 |-----------|-----------------|  
-|**1**|スナップショット エージェント。|  
+|**1**|スナップショットエージェント。|  
 |**2**|ログ リーダー エージェント|  
-|**3**|ディストリビューション エージェント。|  
-|**4**|マージ エージェントです。|  
+|**3**|ディストリビューションエージェント。|  
+|**4**|マージエージェント。|  
 |**9**|キュー リーダー エージェント (Queue Reader Agent)|  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  **0** (成功) または**1** (失敗)  
   
 ## <a name="remarks"></a>コメント  
- **sp_help_agent_default**はあらゆる種類のレプリケーションで使用します。  
+ **sp_help_agent_default**は、すべての種類のレプリケーションで使用されます。  
   
 ## <a name="permissions"></a>アクセス許可  
- メンバーのみ、 **sysadmin**固定サーバー ロールまたは**replmonitor**固定データベース ロールが実行できる**sp_help_agent_default**します。  
+ **Sp_help_agent_default**を実行できるのは、固定サーバーロール**sysadmin**または固定データベースロール**replmonitor**のメンバーだけです。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [システム ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

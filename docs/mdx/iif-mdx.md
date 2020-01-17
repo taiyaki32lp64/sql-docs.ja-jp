@@ -8,13 +8,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-manager: kfile
-ms.openlocfilehash: 0b05929d24533e0bdcdbcac59820307a373428ff
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: 87b7b030776c1c18bb13307bf97db721fe472bd3
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51700780"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68105335"
 ---
 # <a name="iif-mdx"></a>IIf (MDX)
 

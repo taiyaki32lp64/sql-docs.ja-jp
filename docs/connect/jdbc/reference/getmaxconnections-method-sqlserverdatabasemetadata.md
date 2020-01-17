@@ -1,5 +1,5 @@
 ---
-title: getMaxConnections メソッド (SQLServerDatabaseMetaData) |Microsoft Docs
+title: getMaxConnections メソッド (SQLServerDatabaseMetaData) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: 745410f7-e59b-4423-9728-c903adedc399
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 2bda30a06bd2d6325dbbce4f06c7f8e50bbc93c3
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 02aa3fcb7feed842a2da7b13c5609ea516ef40b0
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47838951"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67982169"
 ---
 # <a name="getmaxconnections-method-sqlserverdatabasemetadata"></a>getMaxConnections メソッド (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -42,7 +41,7 @@ public int getMaxConnections()
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- この getMaxConnections メソッドは、java.sql.DatabaseMetaData インターフェイスで getMaxConnections メソッドによって指定されます。  
+ この getMaxConnections メソッドは、getMaxConnections メソッドによって、java メタデータインターフェイスで指定されます。  
   
 ## <a name="see-also"></a>参照  
  [SQLServerDatabaseMetaData のメソッド](../../../connect/jdbc/reference/sqlserverdatabasemetadata-methods.md)   

@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: ce5c8798-c039-4ab2-81e7-90a8d688b893
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: d54c9880353ef8352624dcdd59cf187283fdd2e2
-ms.sourcegitcommit: 1a5448747ccb2e13e8f3d9f04012ba5ae04bb0a3
+ms.openlocfilehash: 3adf38c1908e17dbac530cab0cc47658e9241559
+ms.sourcegitcommit: 5d9ce5c98c23301c5914f142671516b2195f9018
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51558689"
+ms.lasthandoff: 10/04/2019
+ms.locfileid: "71961930"
 ---
 # <a name="shrink-a-file"></a>ファイルの圧縮
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -41,7 +40,7 @@ ms.locfileid: "51558689"
   
      [推奨事項](#Recommendations)  
   
-     [Security](#Security)  
+     [セキュリティ](#Security)  
   
 -   **以下を使用してデータ ファイルまたはログ ファイルを圧縮するには:**  
   
@@ -72,7 +71,7 @@ ms.locfileid: "51558689"
   
 2.  **[データベース]** を展開し、圧縮するデータベースを右クリックします。  
   
-3.  **[タスク]**、 **[圧縮]** の順にポイントし、 **[ファイル]** をクリックします。  
+3.  **[タスク]** 、 **[圧縮]** の順にポイントし、 **[ファイル]** をクリックします。  
   
      **[データベース]**  
      選択しているデータベースの名前が表示されます。  

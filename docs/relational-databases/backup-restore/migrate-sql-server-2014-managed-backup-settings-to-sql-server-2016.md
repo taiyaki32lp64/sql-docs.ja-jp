@@ -1,7 +1,7 @@
 ---
-title: SQL Server 2014 マネージド バックアップの設定を SQL Server 2016 に移行する | Microsoft Docs
-ms.custom: ''
-ms.date: 03/14/2017
+title: マネージド バックアップの設定を移行する
+ms.custom: seo-lt-2019
+ms.date: 12/17/2019
 ms.prod: sql
 ms.prod_service: backup-restore
 ms.reviewer: ''
@@ -10,15 +10,14 @@ ms.topic: conceptual
 ms.assetid: ae937ebb-24ff-4a33-be3c-8f85328dfc75
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: c52205e56d6040cc4a240d32bbf33a0dc8994c16
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 79cbc0a2fcd020cc1e4b59de6d4fc0a2c3320059
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47718320"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75258674"
 ---
-# <a name="migrate-sql-server-2014-managed-backup-settings-to-sql-server-2016"></a>SQL Server 2014 マネージド バックアップの設定を SQL Server 2016 に移行する
+# <a name="migrate-managed-backup-settings"></a>マネージド バックアップの設定を移行する
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   このトピックでは、 [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] から [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] にアップグレードする際の [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]の移行に関する考慮事項について説明します。  
   
@@ -34,7 +33,7 @@ ms.locfileid: "47718320"
 |**セキュリティ:**|Microsoft Azure ストレージ アカウントとアクセス キーを使用した SQL 資格情報。|Microsoft Azure Shared Access Signature (SAS) トークンを使用した SQL 資格情報。|  
 |**基になるストレージ:**|ページ BLOB を使用した Microsoft Azure Storage。|ブロック BLOB を使用した Microsoft Azure Storage。|  
   
-## <a name="benefits"></a>利点  
+## <a name="benefits"></a>メリット  
  [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]の新機能の使用には、いくつかの利点があります。  
   
 -   ブロック BLOB により、格納のコストを抑えることができます。  

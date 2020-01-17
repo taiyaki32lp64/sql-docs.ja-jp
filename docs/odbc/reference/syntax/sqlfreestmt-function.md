@@ -1,7 +1,7 @@
 ---
 title: SQLFreeStmt 関数 |Microsoft Docs
 ms.custom: ''
-ms.date: 01/19/2017
+ms.date: 07/18/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -11,6 +11,7 @@ apiname:
 - SQLFreeStmt
 apilocation:
 - sqlsrv32.dll
+- odbc32.dll
 apitype: dllExport
 f1_keywords:
 - SQLFreeStmt
@@ -19,24 +20,23 @@ helpviewer_keywords:
 ms.assetid: 03408162-8b63-4470-90c4-e6c7d8d33892
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: f3cca214aeb63720e193f57f06a22481ae7d369f
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: 6141f3efe357bfb3f14c04aa2f6760e9470649a6
+ms.sourcegitcommit: c1382268152585aa77688162d2286798fd8a06bb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53213441"
+ms.lasthandoff: 07/19/2019
+ms.locfileid: "68345149"
 ---
 # <a name="sqlfreestmt-function"></a>SQLFreeStmt 関数
-**準拠**  
- バージョンが導入されました。ODBC 1.0 規格に準拠します。ISO 92  
+**互換性**  
+ 導入されたバージョン:ODBC 1.0 標準準拠:ISO 92  
   
  **まとめ**  
- **SQLFreeStmt**特定のステートメントに関連付けられている処理を停止する、保留中の結果、破棄、ステートメントに関連付けられた開いているカーソルを閉じるまたは、必要に応じて、ステートメント ハンドルに関連付けられたすべてのリソースを解放します。  
+ **SQLFreeStmt**は、特定のステートメントに関連付けられている処理を停止し、ステートメントに関連付けられている開いているカーソルを閉じるか、保留中の結果を破棄します  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
   
 SQLRETURN SQLFreeStmt(  
      SQLHSTMT       StatementHandle,  
@@ -45,45 +45,45 @@ SQLRETURN SQLFreeStmt(
   
 ## <a name="arguments"></a>引数  
  *StatementHandle*  
- [入力]ステートメント ハンドル  
+ 代入ステートメントハンドル  
   
  *Option*  
- [入力]次のオプションのいずれか:  
+ 代入次のいずれかのオプションを選択します。  
   
- SQL _ 閉じる:関連付けられているカーソルをクローズ*StatementHandle* (定義されている) 場合と、保留中のすべての結果を破棄します。 アプリケーションが実行することによってこのカーソルを後で再度ことができます、**選択**同じまたは別のパラメーター値を使用してステートメントです。 カーソルが開いていない場合、このオプションは、アプリケーションに影響を与えません。 **SQLCloseCursor**カーソルを閉じるには呼び出すこともできます。 詳細については、次を参照してください。[カーソルを閉じる](../../../odbc/reference/develop-app/closing-the-cursor.md)します。  
+ SQL_ CLOSE:*StatementHandle*に関連付けられているカーソルを閉じ (定義されている場合)、保留中のすべての結果を破棄します。 アプリケーションでは、同じまたは異なるパラメーター値を使用して**SELECT**ステートメントを再実行することにより、後でこのカーソルを再度開くことができます。 カーソルが開いていない場合、このオプションはアプリケーションには影響しません。 カーソルを閉じるには、 **Sqlcloセキュリティー**を呼び出すこともできます。 詳細については、「[カーソルを閉じる](../../../odbc/reference/develop-app/closing-the-cursor.md)」を参照してください。  
   
- SQL_DROP:このオプションは非推奨とされます。 呼び出し**SQLFreeStmt**で、*オプション*SQL_DROP のマップをドライバー マネージャーで[SQLFreeHandle](../../../odbc/reference/syntax/sqlfreehandle-function.md)します。  
+ SQL_DROP:このオプションは非推奨とされます。 SQL_DROP の*オプション*を指定して**SQLFreeStmt**を呼び出すと、ドライバーマネージャーで[sqlfreehandle](../../../odbc/reference/syntax/sqlfreehandle-function.md)にマップされます。  
   
- SQL_UNBIND:によってバインドされるすべての列バッファーを解放する 0 に ARD の SQL_DESC_COUNT フィールド セット**SQLBindCol**の指定された*StatementHandle*します。 これは、バインドは解除されません。 ブックマーク列そのためには、ブックマーク列 ARD の SQL_DESC_DATA_PTR フィールドが NULL に設定されます。 1 つ以上のステートメントによって共有されている、明示的に割り当てられた記述子でこの操作を実行すると、操作に影響する記述子を共有するすべてのステートメントのバインドに注目してください。 詳細については、次を参照してください。[の概要を取得する結果の (Basic)](../../../odbc/reference/develop-app/retrieving-results-basic.md)します。  
+ SQL_UNBIND:の SQL_DESC_COUNT フィールドを0に設定し、指定した*StatementHandle*の**SQLBindCol**によってバインドされているすべての列バッファーを解放します。 この場合、ブックマーク列はバインド解除されません。これを行うには、[ブックマーク] 列の SQL_DESC_DATA_PTR フィールドを NULL に設定します。 この操作は、複数のステートメントによって共有される明示的に割り当てられた記述子に対して実行される場合、この操作は、記述子を共有するすべてのステートメントのバインドに影響します。 詳細については、「[結果の取得の概要 (基本)](../../../odbc/reference/develop-app/retrieving-results-basic.md)」を参照してください。  
   
- SQL_RESET_PARAMS:0 に設定すべてのパラメーター バッファーを解放する、APD の SQL_DESC_COUNT フィールドを設定します**SQLBindParameter**の指定された*StatementHandle*します。 1 つ以上のステートメントによって共有されている、明示的に割り当てられた記述子でこの操作を実行すると、この操作は、記述子を共有するすべてのステートメントのバインディングに反映されます。 詳細については、次を参照してください。[パラメーターのバインド](../../../odbc/reference/develop-app/binding-parameters-odbc.md)します。  
+ SQL_RESET_PARAMS:APD の SQL_DESC_COUNT フィールドを0に設定し、指定した*StatementHandle*の**SQLBindParameter**によって設定されたすべてのパラメーターバッファーを解放します。 複数のステートメントによって共有される明示的に割り当てられた記述子に対してこの操作を実行すると、この操作は、記述子を共有するすべてのステートメントのバインドに影響します。 詳細については、「[バインドパラメーター](../../../odbc/reference/develop-app/binding-parameters-odbc.md)」を参照してください。  
   
 ## <a name="returns"></a>戻り値  
- SQL_SUCCESS、SQL_SUCCESS_WITH_INFO、SQL_ERROR、または SQL_INVALID_HANDLE します。  
+ SQL_SUCCESS、SQL_SUCCESS_WITH_INFO、SQL_ERROR、または SQL_INVALID_HANDLE。  
   
 ## <a name="diagnostics"></a>診断  
- ときに**SQLFreeStmt** SQL_ERROR または SQL_SUCCESS_WITH_INFO、関連付けられている SQLSTATE 値を返しますを呼び出すことによって取得できる**SQLGetDiagRec**で、 *HandleType* sql _ のHANDLE_STMT と*処理*の*StatementHandle*します。 次の表に、によって返される通常の SQLSTATE 値**SQLFreeStmt** ; この関数のコンテキストでそれぞれについて説明しますと表記"(DM)"の前にドライバー マネージャーによって返されるについての説明。 SQLSTATE 値ごとに関連付けられているリターン コードは明記しない限り、SQL_ERROR です。  
+ **SQLFreeStmt**が SQL_ERROR または SQL_SUCCESS_WITH_INFO を返す場合は、 *handletype* SQL_HANDLE_STMT と*StatementHandle*の*ハンドル*を指定して**SQLGetDiagRec**を呼び出すことによって、関連付けられた SQLSTATE 値を取得できます。 次の表に、 **SQLFreeStmt**によって通常返される SQLSTATE 値と、この関数のコンテキストでのそれぞれについて説明します。"(DM)" という表記は、ドライバーマネージャーによって返される SQLSTATEs の説明の前にあります。 特に記載がない限り、各 SQLSTATE 値に関連付けられているリターンコードは SQL_ERROR です。  
   
 |SQLSTATE|[エラー]|説明|  
 |--------------|-----------|-----------------|  
-|01000|一般的な警告|ドライバー固有の情報メッセージです。 (関数は、SQL_SUCCESS_WITH_INFO を返します)。|  
-|HY000|一般的なエラー|これがなかった固有の SQLSTATE とする実装に固有の SQLSTATE が定義されていない、エラーが発生しました。 によって返されるエラー メッセージ**SQLGetDiagRec**で、  *\*MessageText*バッファーは、エラーとその原因について説明します。|  
-|HY001|メモリの割り当てエラー|ドライバーは、実行または関数の完了をサポートするために必要なメモリを割り当てることができませんでした。|  
-|HY010|関数のシーケンス エラー|(DM) を非同期的に実行中の関数が呼び出された接続ハンドルに関連付けられているため、 *StatementHandle*します。 この非同期関数ではときに実行されている**SQLFreeStmt**が呼び出されました。<br /><br /> (DM) **SQLExecute**、 **SQLExecDirect**、または**SQLMoreResults**に対して呼び出された、 *StatementHandle* SQL_PARAM_DATA_ を返されます。ご利用いただけます。 この関数が呼び出すと*オプション*ストリームのすべてのパラメーターのデータが取得される前に SQL_RESET_PARAMS に設定します。<br /><br /> (DM) を非同期的に実行中の関数が呼び出された、 *StatementHandle*この関数が呼び出されたときに実行されているとします。<br /><br /> (DM) **SQLExecute**、 **SQLExecDirect**、 **SQLBulkOperations**、または**SQLSetPos**に対して呼び出された、 *StatementHandle* SQL_NEED_DATA が返されます。 すべての実行時データ パラメーターまたは列のデータが送信される前に、この関数が呼び出されました。|  
-|HY013|メモリ管理エラー|基になるメモリ オブジェクトにアクセスできませんでした、場合によってメモリ不足が原因であるために、関数呼び出しを処理できませんでした。|  
-|HY092|範囲外のオプションの種類|引数に指定された値 (DM)*オプション*でした。<br /><br /> SQL_CLOSE SQL_DROP SQL_UNBIND SQL_RESET_PARAMS|  
-|HYT01|接続がタイムアウトしました|データ ソースが要求に応答する前に、接続のタイムアウト期間が終了しました。 によって、接続タイムアウト期間が設定されます**SQLSetConnectAttr**、SQL_ATTR_CONNECTION_TIMEOUT します。|  
-|IM001|ドライバーでは、この関数はサポートされていません|(DM) に、ドライバーが関連付けられている、 *StatementHandle*関数をサポートしていません。|  
+|01000|一般警告|ドライバー固有の情報メッセージ。 (関数は SQL_SUCCESS_WITH_INFO を返します)。|  
+|HY000|一般エラー|特定の SQLSTATE がなく、実装固有の SQLSTATE が定義されていないエラーが発生しました。 Messagetext バッファーの**SQLGetDiagRec によっ**て返されるエラーメッセージには、エラーとその原因が記述されています。  *\**|  
+|HY001|メモリ割り当てエラー|ドライバーは、関数の実行または完了をサポートするために必要なメモリを割り当てることができませんでした。|  
+|HY010|関数のシーケンスエラー|(DM) 非同期的に実行する関数が、 *StatementHandle*に関連付けられている接続ハンドルに対して呼び出されました。 この非同期関数は、 **SQLFreeStmt**が呼び出されたときにまだ実行されていました。<br /><br /> (DM) **Sqlexecute**、 **SQLExecDirect**、または**Sqlmoreresults**が*STATEMENTHANDLE*に対して呼び出され、SQL_PARAM_DATA_AVAILABLE が返されました。 この関数は、ストリーミングされたすべてのパラメーターのデータを取得する前に、*オプション*を SQL_RESET_PARAMS に設定して呼び出されました。<br /><br /> (DM) 非同期的に実行する関数が*StatementHandle*に対して呼び出されましたが、この関数が呼び出されたときにまだ実行されていました。<br /><br /> (DM) **Sqlexecute**、 **SQLExecDirect**、 **sqlbulkoperations**、または**SQLSetPos**が*StatementHandle*に対して呼び出され、SQL_NEED_DATA が返されました。 この関数は、実行時データのすべてのパラメーターまたは列に対してデータが送信される前に呼び出されました。|  
+|HY013|メモリ管理エラー|基になるメモリオブジェクトにアクセスできなかったため、関数呼び出しを処理できませんでした。メモリ不足の状態が原因である可能性があります。|  
+|HY092|オプションの型が有効範囲にありません|(DM) 引数*オプション*に指定された値が次の値ではありませんでした:<br /><br /> SQL_CLOSE SQL_DROP SQL_UNBIND SQL_RESET_PARAMS|  
+|HYT01|接続タイムアウトの期限が切れました|データソースが要求に応答する前に、接続のタイムアウト期間が経過しました。 接続タイムアウト期間は、 **SQLSetConnectAttr**、SQL_ATTR_CONNECTION_TIMEOUT によって設定されます。|  
+|IM001|ドライバーはこの機能をサポートしていません|(DM) *StatementHandle*に関連付けられているドライバーでは、関数はサポートされていません。|  
   
 ## <a name="comments"></a>コメント  
- 呼び出す**SQLFreeStmt** 、SQL_CLOSE オプションは呼び出しに相当**SQLCloseCursor**ことを除いて、 **SQLFreeStmt** SQL_CLOSE ではアプリケーションに影響せず、カーソルがない場合は、ステートメントで開きます。 カーソルがない場合を開くへの呼び出し**SQLCloseCursor** SQLSTATE 24000 (無効なカーソル状態) を返します。  
+ SQL_CLOSE オプションを指定して**SQLFreeStmt**を呼び出すことは、 **sqlcloを**呼び出すことと同じです。ただし、ステートメントでカーソルが開かれていない場合、 **SQLFreeStmt** with SQL_CLOSE はアプリケーションに影響しません。 カーソルが開いていない場合は、 **Sqlcloを**呼び出すと SQLSTATE 24000 (無効なカーソル状態) が返されます。  
   
- 解放するとします。 アプリケーションが、ステートメント ハンドルを使用しないでください。ドライバー マネージャーでは、関数呼び出しでハンドルの有効性はチェックされません。  
+ アプリケーションが解放された後に、ステートメントハンドルを使用することはできません。ドライバーマネージャーは、関数呼び出しのハンドルの有効性を確認しません。  
   
 ## <a name="example"></a>例  
- ハンドルを解放する場合は、適切なプログラミング手法を勧めします。 ただし、わかりやすくするために、次の例はハンドルの割り当てを解放するコードを含まれません。 ハンドルを解放する方法の例は、次を参照してください。 [SQLFreeHandle 関数](../../../odbc/reference/syntax/sqlfreehandle-function.md)します。  
+ ハンドルを解放するのに適したプログラミング手法です。 ただし、わかりやすくするために、次のサンプルには、割り当てられたハンドルを解放するコードは含まれていません。 ハンドルを解放する方法の例については、「 [Sqlfreehandle 関数](../../../odbc/reference/syntax/sqlfreehandle-function.md)」を参照してください。  
   
-```  
+```cpp  
 // SQLFreeStmt.cpp  
 // compile with: user32.lib odbc32.lib  
 #include <windows.h>  
@@ -116,11 +116,11 @@ int main() {
   
 |詳細|参照先|  
 |---------------------------|---------|  
-|ハンドルの割り当てください。|[SQLAllocHandle 関数](../../../odbc/reference/syntax/sqlallochandle-function.md)|  
-|ステートメントの処理をキャンセル|[SQLCancel 関数](../../../odbc/reference/syntax/sqlcancel-function.md)|  
-|カーソルを終了します。|[SQLCloseCursor 関数](../../../odbc/reference/syntax/sqlclosecursor-function.md)|  
+|ハンドルの割り当て|[SQLAllocHandle 関数](../../../odbc/reference/syntax/sqlallochandle-function.md)|  
+|ステートメント処理の取り消し|[SQLCancel 関数](../../../odbc/reference/syntax/sqlcancel-function.md)|  
+|カーソルを閉じる|[SQLCloseCursor 関数](../../../odbc/reference/syntax/sqlclosecursor-function.md)|  
 |ハンドルの解放|[SQLFreeHandle 関数](../../../odbc/reference/syntax/sqlfreehandle-function.md)|  
-|カーソル名を設定します。|[SQLSetCursorName 関数](../../../odbc/reference/syntax/sqlsetcursorname-function.md)|  
+|カーソル名の設定|[SQLSetCursorName 関数](../../../odbc/reference/syntax/sqlsetcursorname-function.md)|  
   
 ## <a name="see-also"></a>参照  
  [ODBC API リファレンス](../../../odbc/reference/syntax/odbc-api-reference.md)   

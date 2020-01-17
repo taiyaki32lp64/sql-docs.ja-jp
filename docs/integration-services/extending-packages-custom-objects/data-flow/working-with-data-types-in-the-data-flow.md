@@ -12,17 +12,20 @@ helpviewer_keywords:
 - data flow components [Integration Services], mapping data types
 - data types [Integration Services], converting
 ms.assetid: 941260d0-4ec3-4bf0-ab48-2b26733e6b24
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: 3560a83c6e292a5e3a46e97b5e34c3bac9eac894
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 2100176fa0bb6f02deff6cdf2a210ea81e04f9a6
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47641800"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71287441"
 ---
 # <a name="working-with-data-types-in-the-data-flow"></a>データ フロー内のデータ型の処理
+
+[!INCLUDE[ssis-appliesto](../../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   Integration Services のカスタム データ フロー コンポーネント開発には、データ フロー バッファーにデータをコピーしたり、データ フロー バッファーからデータを取得したり、値を変換したりするなど、常にデータ型の処理が伴います。 このトピックでは、[!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] データ型の正しい選択と、それを扱うための適切なメソッドの使用について説明します。  
   
 ## <a name="inserting-data-into-the-data-flow"></a>データ フローへのデータの挿入  

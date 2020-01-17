@@ -4,21 +4,20 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords:
 - logs [Integration Services], enabling
 ms.assetid: b69a8593-5bb0-4f04-87d2-f8e7bd7eb4fc
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 2a93245b97bf7c6c382f533c6d6e317b399f9e54
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 8ef64ee84a90a74d2206fa8cc766e45b1a691566
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48172502"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66059282"
 ---
 # <a name="enable-package-logging-in-sql-server-data-tools"></a>SQL Server Data Tools でパッケージのログ記録を有効にする
   この手順では、パッケージにログを追加し、パッケージ レベルのログ記録を構成し、ログ構成を XML ファイルに保存する方法について説明します。 ログはパッケージ レベルでのみ追加できますが、パッケージに含まれるコンテナーでのログを有効にするためにパッケージでログ記録を実行する必要はありません。  
@@ -44,7 +43,7 @@ ms.locfileid: "48172502"
   
     -   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]用には、OLE DB 接続マネージャーを使用します。 詳細については、「 [OLE DB 接続マネージャー](connection-manager/ole-db-connection-manager.md)」をご覧ください。  
   
-    -   Windows イベント ログ用には何も指定しません。 [!INCLUDE[ssIS](../includes/ssis-md.md)] ログを自動的に作成されます。  
+    -   Windows イベント ログ用には何も指定しません。 [!INCLUDE[ssIS](../includes/ssis-md.md)] によってログが自動的に作成されます。  
   
     -   XML ファイル用には、ファイル接続マネージャーを使用します。  
   
@@ -64,12 +63,12 @@ ms.locfileid: "48172502"
   
 9. **[詳細]** タブで、 **[保存]** をクリックします。 **[名前を付けて保存]** ダイアログ ボックスが表示されます。 ログ構成を保存するフォルダーに移動し、新しいログ構成のファイル名を入力し、 **[保存]** をクリックします。  
   
-10. **[OK]** をクリックします。  
+10. [**OK**] をクリックします。  
   
 11. 更新したパッケージを保存するには、 **[ファイル]** メニューの **[選択されたファイルを上書き保存]** をクリックします。  
   
 ## <a name="see-also"></a>参照  
- [Integration Services &#40;SSIS&#41;ログ記録](performance/integration-services-ssis-logging.md)   
+ [Integration Services &#40;SSIS&#41; のログ記録](performance/integration-services-ssis-logging.md)   
  [Integration Services &#40;SSIS&#41; のログ記録](performance/integration-services-ssis-logging.md)  
   
   

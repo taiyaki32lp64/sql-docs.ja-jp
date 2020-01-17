@@ -16,15 +16,14 @@ helpviewer_keywords:
 - XML data islands [SQL Server]
 - data islands [SQL Server]
 ms.assetid: 41ae67bd-ece9-49ea-8062-c8d658ab4154
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: d9252d2161fcca10b3ccd686d7f33de525cfe239
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+author: MightyPen
+ms.author: genemi
+ms.openlocfilehash: 754b7a4baaff71cf0abe7193e5ba9c9cbd0a943a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51670467"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68039184"
 ---
 # <a name="use-for-xml-results-in-application-code"></a>アプリケーション コードでの FOR XML の結果の使用
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

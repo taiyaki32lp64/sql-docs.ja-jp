@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: ec1da65f-c69d-415d-bf75-8fda8aa2b39f
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 003cd318d6db54c7547375219805c63cfc4ce249
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 7faab41bd52397ac0d352e04a9ec153571e93f1e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47668380"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67948760"
 ---
 # <a name="string-limitations"></a>文字列の制限事項
 SQL ステートメントの文字列の最大長は、65,000 文字です。  

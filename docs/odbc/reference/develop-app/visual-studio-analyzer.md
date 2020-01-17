@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 673b1aad-ad38-4693-91f2-f4515f476d9b
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: ba8ec656bf5cd2bfb479c6268705149ece207d2e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 94f7e944c53c2b4930a3c77b2866cea7b892a6ec
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47797311"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68078987"
 ---
 # <a name="visual-studio-analyzer"></a>Visual Studio Analyzer
 > [!IMPORTANT]  

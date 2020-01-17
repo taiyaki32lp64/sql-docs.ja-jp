@@ -10,24 +10,27 @@ ms.topic: language-reference
 helpviewer_keywords:
 - stored procedures [Integration Services]
 ms.assetid: a6ccd884-108f-4fb6-95ad-00b9cb65d5d6
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: d5afc269f3f0d2fb3226cfb563e42eb2bbdba854
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: e1eea2f9e83069b18b47b1563e60a0c31c0bfcb0
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47793790"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71296687"
 ---
 # <a name="stored-procedures-integration-services-catalog"></a>ストアド プロシージャ (Integration Services カタログ)
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
   このセクションでは、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスに配置されている [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] プロジェクトを管理できる [!INCLUDE[tsql](../../includes/tsql-md.md)] ストアド プロシージャについて説明します。  
   
  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] ストアド プロシージャを呼び出して、**SSISDB** カタログに格納されているオブジェクトを追加、削除、変更、または実行します。  
   
- カタログの既定の名前は、SSISDB です。 カタログに格納されているオブジェクトには、プロジェクト、パッケージ、パラメーター、環境、および操作履歴があります。  
+ カタログの既定の名前は、SSISDB です。 カタログに格納されているオブジェクトには、プロジェクト、パッケージ、パラメーター、環境、操作履歴があります。  
   
  データベース ビューとストアド プロシージャを直接使用することも、マネージド API を呼び出すカスタム コードを記述することもできます。 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] およびマネージド API では、ビューに対してクエリを実行し、多くのタスクを実行するストアド プロシージャ (このセクションで説明) を呼び出します。  
   

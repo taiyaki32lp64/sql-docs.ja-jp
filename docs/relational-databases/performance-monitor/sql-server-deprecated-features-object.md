@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: e95de9d6-c950-41cd-8aaa-be529c6de198
 author: julieMSFT
 ms.author: jrasnick
-manager: craigg
-ms.openlocfilehash: 9fcb107c5ae7a22fa2705fda0580e0284940f694
-ms.sourcegitcommit: 0c1d552b3256e1bd995e3c49e0561589c52c21bf
+ms.openlocfilehash: 2dd802097e083adb633549174dbc420b5967fb10
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/14/2018
-ms.locfileid: "53380693"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68093590"
 ---
 # <a name="sql-server-deprecated-features-object"></a>SQL Server:Deprecated Features オブジェクト
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -46,7 +45,7 @@ WHERE object_name = 'SQLServer:Deprecated Features';
 |SQL Server Deprecated Features カウンター インスタンス|Description|  
 |------------------------------------------------------|-----------------|  
 |'#' および ' ##' 一時テーブルおよびストアド プロシージャの名前として|# 以外の文字を含んでいない識別子が見つかりました。 別の文字を少なくとも 1 文字は使用してください。 コンパイルごとに 1 回発生します。|  
-|'::' 関数呼び出し構文|テーブル値関数で :: 関数呼び出し構文が見つかりました。 `SELECT column_list FROM`*< function_name>*`()` に置き換えてください。 たとえば、`SELECT * FROM ::fn_virtualfilestats(2,1)` は `SELECT * FROM sys.fn_virtualfilestats(2,1)` に置き換わります。 コンパイルごとに 1 回発生します。|  
+|'::' 関数呼び出し構文|テーブル値関数で :: 関数呼び出し構文が見つかりました。 `SELECT column_list FROM` *< function_name>* `()` に置き換えてください。 たとえば、`SELECT * FROM ::fn_virtualfilestats(2,1)` は `SELECT * FROM sys.fn_virtualfilestats(2,1)` に置き換わります。 コンパイルごとに 1 回発生します。|  
 |[!INCLUDE[tsql](../../includes/tsql-md.md)] 識別子としての '\@' と '\@\@' で始まる名前|\@ または \@\@ で始まる識別子が見つかりました。 \@、\@v@、または \@\@ で始まる名前を識別子として使用しないでください。 コンパイルごとに 1 回発生します。|  
 |ADDING TAPE DEVICE|非推奨の機能 sp_addumpdevice'**tape**' が見つかりました。 代わりに、sp_addumpdevice'**disk**' を使用してください。 使用するごとに 1 回発生します。|  
 |ALL 権限|GRANT ALL、DENY ALL、または REVOKE ALL 構文が見つかった合計回数。 特定の権限を拒否するように構文を変更してください。 クエリごとに 1 回発生します。|  
@@ -74,7 +73,7 @@ WHERE object_name = 'SQLServer:Deprecated Features';
 |DBCC INDEXDEFRAG|DBCC INDEXDEFRAG ステートメントが見つかりました。 ALTER INDEX の REORGANIZE オプションを使用してステートメントを書き直してください。 クエリごとに 1 回発生します。|  
 |DBCC SHOWCONTIG|DBCC SHOWCONTIG ステートメントが見つかりました。 この情報については、sys.dm_db_index_physical_stats をクエリしてください。 クエリごとに 1 回発生します。|  
 |既定値としての DEFAULT キーワード|既定値として DEFAULT キーワードを使用する構文が見つかりました。 使用しないでください。 コンパイルごとに 1 回発生します。|  
-|非推奨の暗号化アルゴリズム|非推奨の暗号化アルゴリズム rc4 は、SQL Server の次のバージョンで削除されます。 新しい開発作業ではこの機能の使用を避け、現在この機能を使用しているアプリケーションでは変更を検討してください。 RC4 アルゴリズムは弱いアルゴリズムで、旧バージョンとの互換性のためにのみサポートされています。 データベース互換性レベルが 90 または 100 の場合、新しい素材は RC4 または RC4_128 を使用してのみ暗号化できます  (非推奨)。AES アルゴリズムのいずれかなど、新しいアルゴリズムを使用してください。 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 以降では、どの互換性レベルでも、RC4 または RC4_128 を使用して暗号化された素材を暗号化解除できます。|  
+|非推奨の暗号化アルゴリズム|非推奨の暗号化アルゴリズム rc4 は、SQL Server の次のバージョンで削除されます。 新しい開発作業ではこの機能の使用を避け、現在この機能を使用しているアプリケーションでは変更を検討してください。 RC4 アルゴリズムは弱いアルゴリズムで、旧バージョンとの互換性のためにのみサポートされています。 データベース互換性レベルが 90 または 100 の場合、新しい素材は RC4 または RC4_128 を使用してのみ暗号化できます (非推奨)。AES アルゴリズムのいずれかなど、新しいアルゴリズムを使用してください。 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 以降では、どの互換性レベルでも、RC4 または RC4_128 を使用して暗号化された素材を暗号化解除できます。|  
 |非推奨のハッシュ アルゴリズム|MD2、MD4、MD5、SHA、SHA1 アルゴリズムの使用。|  
 |DESX アルゴリズム|DESX 暗号化アルゴリズムを使用する構文が見つかりました。 別の暗号化アルゴリズムを使用してください。 コンパイルごとに 1 回発生します。|  
 |dm_fts_active_catalogs|sys.dm_fts_active_catalogs ビューの列の中には非推奨ではないものもあるので、dm_fts_active_catalogs カウンターは常に 0 のままです。 非推奨の列を監視するには、dm_fts_active_catalogs.is_paused などの列固有のカウンターを使用してください。|  
@@ -285,7 +284,7 @@ WHERE object_name = 'SQLServer:Deprecated Features';
  [Deprecation Announcement イベント クラス](../../relational-databases/event-classes/deprecation-announcement-event-class.md)   
  [Deprecation Final Support イベント クラス](../../relational-databases/event-classes/deprecation-final-support-event-class.md)   
  [SQL Server 2016 で廃止されたデータベース エンジンの機能](../../database-engine/discontinued-database-engine-functionality-in-sql-server-2016.md)   
- [SQL Server 2016 で廃止されたフルテキスト検索機能](https://msdn.microsoft.com/library/70587b3c-cc77-4681-924d-a1df7cdf1517)   
+ [SQL Server 2016 で廃止されたフルテキスト検索機能](../../database-engine/discontinued-database-engine-functionality-in-sql-server-2016.md)   
  [SQL Server オブジェクトの使用](../../relational-databases/performance-monitor/use-sql-server-objects.md)  
   
   

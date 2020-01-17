@@ -1,5 +1,5 @@
 ---
-title: テーブルおよびインデックスのパーティション分割の使用 |Microsoft Docs
+title: テーブルとインデックスのパーティション分割を使用する |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,12 +15,12 @@ ms.assetid: 0e682d7e-86c3-4d73-950d-aa692d46cb62
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 73a106a4e17ea770517c7662dfecd98fe58e36b8
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 936f037852f39f24690e1cb9af3f63a2cfa2a613
+ms.sourcegitcommit: a165052c789a327a3a7202872669ce039bd9e495
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52787164"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72781831"
 ---
 # <a name="using-table-and-index-partitioning"></a>テーブルおよびインデックスのパーティション分割の使用
   データは、 [Partitioned Tables and Indexes](../../partitions/partitioned-tables-and-indexes.md)によって提供される格納アルゴリズムを使用して格納することができます。 パーティション分割により、大規模なテーブルとインデックスの管理の可能性と拡張性が向上します。  
@@ -33,7 +33,7 @@ ms.locfileid: "52787164"
  各 <xref:Microsoft.SqlServer.Management.Smo.Table> オブジェクトおよび <xref:Microsoft.SqlServer.Management.Smo.Index> オブジェクトは、どのパーティション構成を使用するかを <xref:Microsoft.SqlServer.Management.Smo.PartitionScheme> プロパティで指定し、列を <xref:Microsoft.SqlServer.Management.Smo.PartitionSchemeParameterCollection> で指定します。  
   
 ## <a name="example"></a>例  
- 次のコード例では、アプリケーションを作成するプログラミング環境、プログラミング テンプレート、およびプログラミング言語を選択する必要があります。 詳細については、次を参照してください。 [Visual Studio .NET で Visual Basic SMO プロジェクトを作成](../../../database-engine/dev-guide/create-a-visual-basic-smo-project-in-visual-studio-net.md)と[Visual C の作成&#35;Visual Studio .NET での SMO プロジェクト](../how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md)します。  
+ 次のコード例では、アプリケーションを作成するプログラミング環境、プログラミング テンプレート、およびプログラミング言語を選択する必要があります。 詳細については、「 [Visual studio .net での VISUAL BASIC SMO プロジェクトの作成](../../../database-engine/dev-guide/create-a-visual-basic-smo-project-in-visual-studio-net.md)」および「visual [studio .Net での Visual C&#35; SMO プロジェクトの作成](../how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md)」を参照してください。  
   
 ## <a name="setting-up-a-partition-scheme-for-a-table-in-visual-basic"></a>Visual Basic でのテーブルのパーティション構成の設定  
  コード例では、 `TransactionHistory` サンプル データベース内の [!INCLUDE[ssSampleDBnormal](../../../includes/sssampledbnormal-md.md)] テーブルに対してパーティション関数およびパーティション構成を作成する方法を示します。 これらのパーティションは、古いレコードを `TransactionHistoryArchive` テーブルに分割する目的で、日付によって分割されます。  
@@ -43,7 +43,7 @@ ms.locfileid: "52787164"
 ## <a name="setting-up-a-partition-scheme-for-a-table-in-visual-c"></a>Visual C# でのテーブルのパーティション構成の設定  
  コード例では、 `TransactionHistory` サンプル データベース内の [!INCLUDE[ssSampleDBnormal](../../../includes/sssampledbnormal-md.md)] テーブルに対してパーティション関数およびパーティション構成を作成する方法を示します。 これらのパーティションは、古いレコードを `TransactionHistoryArchive` テーブルに分割する目的で、日付によって分割されます。  
   
-```  
+```csharp
 {   
 //Connect to the local, default instance of SQL Server.   
 Server srv;   
@@ -112,7 +112,7 @@ $T.GetType()
 #Add a partition function parameter that specifies the function uses a DateTime range type.  
 $pfp =  New-Object -TypeName Microsoft.SqlServer.Management.SMO.PartitionFunctionParameter -argumentlist $pf, $T  
   
-#Specify the three dates that divide the data into four partitions.   
+#Specify the three dates that divide the data into four partitions.
 #Create an array of type object to hold the partition data  
 $val = "1/1/2003"."1/1/2004","1/1/2005"  
 $pf.RangeValues = $val  
@@ -124,7 +124,7 @@ $pf.Create()
 $ps = New-Object -TypeName Microsoft.SqlServer.Management.SMO.PartitionScheme -argumentlist $db, "TransHistPS"  
 $ps.PartitionFunction = "TransHistPF"  
   
-#add the filegroups to the scheme   
+#add the filegroups to the scheme
 $ps.FileGroups.Add("PRIMARY")  
 $ps.FileGroups.Add("Second")  
 $ps.FileGroups.Add("Third")  
@@ -134,7 +134,5 @@ $ps.FileGroups.Add("Fourth")
 $ps.Create()  
 ```  
   
-## <a name="see-also"></a>参照  
- [パーティション テーブルとパーティション インデックス](../../partitions/partitioned-tables-and-indexes.md)  
-  
-  
+## <a name="see-also"></a>「  
+ [Partitioned Tables and Indexes](../../partitions/partitioned-tables-and-indexes.md)  

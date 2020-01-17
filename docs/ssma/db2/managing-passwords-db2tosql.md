@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 56d546e3-8747-4169-aace-693302667e94
 author: Shamikg
 ms.author: Shamikg
-manager: craigg
-ms.openlocfilehash: 92cff6191f9b606a5394edaac36706328ab52bc3
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 413fad6c982622eddb2a1341c63804da089dd8a4
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52510160"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68141023"
 ---
 # <a name="managing-passwords-db2tosql"></a>パスワードの管理 (DB2ToSQL)
 このセクションでは、データベースのパスワードとサーバー間でのエクスポートをインポートまたはプロシージャのセキュリティ保護の詳細については。  
@@ -31,9 +30,9 @@ SSMA では、データベースのパスワードをセキュリティで保護
   
 次の 3 つのメソッドのいずれかを使用して有効なパスワードを指定します。  
   
-1.  **テキストを消去します。**'Password' ノードの値の属性には、データベースのパスワードを入力します。 これはスクリプト ファイルまたはサーバー接続ファイルの [サーバー] セクションで、サーバーの定義のノードの下にあります。  
+1.  **テキストを消去します。** 'Password' ノードの値の属性には、データベースのパスワードを入力します。 これはスクリプト ファイルまたはサーバー接続ファイルの [サーバー] セクションで、サーバーの定義のノードの下にあります。  
   
-    パスワードがクリア テキストでは、安全ではありません。 そのため、コンソール出力には、次の警告メッセージになります。*"Server&lt;サーバー id&gt;パスワードはクリア テキストの安全でないフォームでは、SSMA コンソールのアプリケーションには、暗号化を使用してパスワードを保護する - securepassword オプションの詳細は SSMA ヘルプ ファイルを参照してくださいオプションが提供されます情報。"*  
+    パスワードがクリア テキストでは、安全ではありません。 そのため、コンソール出力には、次の警告メッセージになります。 *"Server&lt;サーバー id&gt;パスワードはクリア テキストの安全でないフォームでは、SSMA コンソールのアプリケーションには、暗号化を使用してパスワードを保護する - securepassword オプションの詳細は SSMA ヘルプ ファイルを参照してくださいオプションが提供されます情報。"*  
   
     **暗号化されたパスワード:** この場合、指定したパスワードは、ProtectedStorage.ssma でローカル コンピューターの暗号化された形式で格納されます。  
   
@@ -45,7 +44,7 @@ SSMA では、データベースのパスワードをセキュリティで保護
   
             サーバーの定義 id とその対応する暗号化されたパスワードがローカル コンピューター上のファイルに格納されています。  
             
-            例 1 : 
+            例 1 :
             
                 Specify password
                 C:\SSMA\SSMAforDB2Console.EXE -securepassword -add all -s "D:\Program Files\Microsoft SQL Server Migration Assistant for DB2\Sample Console Scripts\AssessmentReportGenerationSample.xml" -v "D:\Program Files\Microsoft SQL Server Migration Assistant for DB2\Sample Console Scripts\ VariableValueFileSample.xml"
@@ -128,6 +127,6 @@ SSMA コンソール アプリケーションをセキュリティで保護さ�
     Please confirm password: xxxxxxxx
 
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
 [SSMA コンソールの実行](https://msdn.microsoft.com/ce63f633-067d-4f04-b8e9-e1abd7ec740b)  
   

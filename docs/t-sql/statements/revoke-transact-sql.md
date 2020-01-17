@@ -28,14 +28,13 @@ helpviewer_keywords:
 ms.assetid: 9d31d3e7-0883-45cd-bf0e-f0361bbb0956
 author: VanMSFT
 ms.author: vanto
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 2993baa2608c4d5852bd691dcc45667de736edc8
-ms.sourcegitcommit: c6e71ed14198da67afd7ba722823b1af9b4f4e6f
+ms.openlocfilehash: 84271c14e5768728c877b78b63b599d5ef352ecd
+ms.sourcegitcommit: 9b8b11961b33e66fc9f433d094fc5c0f9b473772
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/16/2019
-ms.locfileid: "54326513"
+ms.lasthandoff: 12/07/2019
+ms.locfileid: "74909028"
 ---
 # <a name="revoke-transact-sql"></a>REVOKE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -87,17 +86,17 @@ REVOKE
   
 ## <a name="arguments"></a>引数  
  GRANT OPTION FOR  
- 指定した権限を与える許可を取り消します。 CASCADE 引数を使用する場合、この引数は必須です。  
+ 指定した権限を与える許可を取り消すことを示します。 CASCADE 引数を使用する場合、これは必須です。  
   
 > [!IMPORTANT]  
 >  指定した権限が GRANT オプションなしでプリンシパルに許可されている場合は、その権限自体が取り消されます。  
   
  ALL  
-**適用対象**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
+**適用対象**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 以降
   
  このオプションでは、可能な権限がすべて取り消されるわけではありません。 ALL を指定すると、次の権限が取り消されます。  
   
--   セキュリティ保護可能なリソースがデータベースの場合、BACKUP DATABASE、BACKUP LOG、CREATE DATABASE、CREATE DEFAULT、CREATE FUNCTION、CREATE PROCEDURE、CREATE RULE、CREATE TABLE、および CREATE VIEW。  
+-   セキュリティ保護可能なリソースがデータベースの場合、ALL は BACKUP DATABASE、BACKUP LOG、CREATE DATABASE、CREATE DEFAULT、CREATE FUNCTION、CREATE PROCEDURE、CREATE RULE、CREATE TABLE、および CREATE VIEW を意味します。  
   
 -   セキュリティ保護可能なリソースがスカラー関数の場合、EXECUTE および REFERENCES。  
   
@@ -105,12 +104,12 @@ REVOKE
   
 -   セキュリティ保護可能なリソースがストアド プロシージャの場合、EXECUTE。  
   
--   セキュリティ保護可能なリソースがテーブルの場合、DELETE、INSERT、REFERENCES、SELECT、UPDATE。  
+-   セキュリティ保護可能なリソースがテーブルの場合、ALL は DELETE、INSERT、REFERENCES、SELECT、および UPDATE を意味します。  
   
--   セキュリティ保護可能なリソースがビューの場合、DELETE、INSERT、REFERENCES、SELECT、UPDATE。  
+-   セキュリティ保護可能なリソースがビューの場合、ALL は DELETE、INSERT、REFERENCES、SELECT、および UPDATE を意味します。  
   
 > [!NOTE]  
->  REVOKE ALL 構文は非推奨とされます。 [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]代わりに特定の権限を取り消してください。  
+>  REVOKE ALL 構文は非推奨です。 [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]代わりに特定の権限を取り消してください。  
   
  PRIVILEGES  
  ISO 準拠のために用意されています。 ALL の動作は変更されません。  
@@ -119,7 +118,7 @@ REVOKE
  権限の名前を指定します。 セキュリティ保護可能なリソースと権限の有効な組み合わせについては、後の「[セキュリティ保護可能なリソース別の構文](#securable)」の一覧を参照してください。  
   
  *column*  
- 権限を取り消すテーブルの列の名前を指定します。 かっこで囲む必要があります。  
+ 権限を取り消すテーブルの列の名前を指定します。 かっこが必要です。  
   
  *class*  
  権限を取り消すセキュリティ保護可能なリソースのクラスを指定します。 スコープ修飾子 **::** が必要です。  
@@ -128,7 +127,7 @@ REVOKE
  権限を取り消すセキュリティ保護可能なリソースを指定します。  
   
  TO | FROM *principal*  
- プリンシパルの名前を指定します。 セキュリティ保護可能なリソースに対する権限を取り消すことのできるプリンシパルは、そのリソースによって異なります。 有効な組み合わせの詳細については、後の「[セキュリティ保護可能なリソース別の構文](#securable)」の一覧を参照してください。  
+ プリンシパルの名前です。 セキュリティ保護可能なリソースに対する権限を取り消すことのできるプリンシパルは、そのリソースによって異なります。 有効な組み合わせの詳細については、後の「[セキュリティ保護可能なリソース別の構文](#securable)」の一覧を参照してください。  
   
  CASCADE  
  このプリンシパルによって権限が許可されている他のプリンシパルからも、同じ権限が取り消されることを示します。 CASCADE 引数を使用する場合は、GRANT OPTION FOR 引数も指定する必要があります。  
@@ -137,31 +136,31 @@ REVOKE
 >  WITH GRANT OPTION で許可されている権限を CASCADE で取り消すと、その権限の GRANT および DENY の両方が取り消されます。  
   
  AS *principal*  
- 自分以外のプリンシパルによって付与された権限を取り消すことを示すには、AS <principal> 句を使用します。 たとえば、ユーザー Mary の principal_id は 12、ユーザー Raul の principal_id は 15 であるものとします。 Mary と Raul はどちらも、Steven という名前のユーザーに同じ権限を付与します。 sys.database_permissions テーブルでは、同じ権限が 2 回表示されますが、grantor_prinicpal_id の値は異なります。 Mary は、`AS RAUL` 句を使って、Raul の権限付与を取り消すことができます。
+ 自分以外のプリンシパルによって付与された権限を取り消すことを示すには、AS <principal> 句を使用します。 たとえば、ユーザー Mary の principal_id が 12、ユーザー Raul の principal_id が 15 であるとします。 Mary と Raul はどちらも、Steven という名前のユーザーに同じ権限を付与します。 sys.database_permissions テーブルでは、同じ権限が 2 回表示されますが、grantor_prinicpal_id の値は異なります。 Mary は、`AS RAUL` 句を使って、Raul の権限付与を取り消すことができます。
  
 このステートメントで AS を使っても、別のユーザーを偽装できることは意味しません。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  REVOKE ステートメントの完全な構文は複雑です。 前の構文ダイアグラムは、構造をわかりやすくするために簡略化されています。 特定のセキュリティ保護可能なリソースに対する権限を取り消すための完全な構文については、後の「[セキュリティ保護可能なリソース別の構文](#securable)」の一覧を参照してください。  
   
- 許可された権限を取り消す場合は REVOKE ステートメントを使用します。また、GRANT ステートメントによってプリンシパルに特定の権限が許可されないようにするには DENY ステートメントを使用します。  
+ 許可された権限を取り消す場合は REVOKE ステートメントを使用します。また、GRANT によってプリンシパルに特定の権限が許可されないようにするには DENY ステートメントを使用します。  
   
  権限を許可すると、指定したセキュリティ保護可能なリソースに対する権限の DENY または REVOKE は削除されます。 対象のセキュリティ保護可能なリソースの上位スコープで同じ権限が拒否されている場合は、その DENY ステートメントが優先されますが、 ただし、上位スコープで許可されている権限を取り消そうとしても、その REVOKE ステートメントは優先されません。  
   
 > [!CAUTION]  
->  テーブル レベルの DENY ステートメントは列レベルの GRANT ステートメントよりも優先されません。 この動作は権限の階層内で一貫していませんが、旧バージョンとの互換性のために保持されています。 将来のリリースでは削除される予定です。  
+>  テーブル レベルの DENY は列レベルの GRANT ステートメントよりも優先されません。 この動作は権限の階層内で一貫していませんが、旧バージョンとの互換性のために保持されています。 将来のリリースでは削除される予定です。  
   
  システム ストアド プロシージャ sp_helprotect では、データベース レベルのセキュリティ保護可能なリソースに対する権限がレポートされます  
   
  GRANT OPTION で権限が許可されたプリンシパルから権限を取り消すときに CASCADE を指定しない場合、REVOKE ステートメントは失敗します。  
   
 ## <a name="permissions"></a>アクセス許可  
- セキュリティ保護可能なリソースに対して CONTROL 権限があるプリンシパルは、そのリソースの権限を取り消すことができます。 オブジェクトの所有者は、所有するオブジェクトに対する権限を取り消すことができます。  
+ セキュリティ保護可能なリソースに対して CONTROL 権限があるプリンシパルは、そのセキュリティ保護可能なリソースの権限を取り消すことができます。 オブジェクトの所有者は、所有するオブジェクトに対する権限を取り消すことができます。  
   
  sysadmin 固定サーバー ロールのメンバーなど、CONTROL SERVER 権限が許可されているユーザーは、サーバー内のセキュリティ保護可能なリソースに対する権限を取り消すことができます。 db_owner 固定データベース ロールのメンバーなど、データベースに対する CONTROL 権限が許可されているユーザーは、データベース内のセキュリティ保護可能なリソースに対する権限を取り消すことができます。 スキーマに対する CONTROL 権限が許可されているユーザーは、スキーマ内のオブジェクトに対する権限を取り消すことができます。  
   
 ##  <a name="securable"></a> セキュリティ保護可能なリソース別の構文  
- 次の表は、セキュリティ保護可能なリソースと、その構文について説明しているトピックの一覧です。  
+ 次の表は、セキュリティ保護可能なリソースと、セキュリティ保護可能なリソース固有の構文について説明しているトピックの一覧です。  
   
 |セキュリティ保護可能|トピック|  
 |---------------|-----------|  
@@ -176,25 +175,25 @@ REVOKE
 |データベース スコープ資格情報|[REVOKE (データベース スコープの資格情報の取り消し) (Transact-SQL)](../../t-sql/statements/revoke-database-scoped-credential-transact-sql.md)|  
 |フルテキスト カタログ|[REVOKE (フルテキストの権限の取り消し) &#40;Transact-SQL&#41;](../../t-sql/statements/revoke-full-text-permissions-transact-sql.md)|  
 |フルテキスト ストップリスト|[REVOKE (フルテキストの権限の取り消し) &#40;Transact-SQL&#41;](../../t-sql/statements/revoke-full-text-permissions-transact-sql.md)|  
-|機能|[REVOKE (オブジェクトの権限の取り消し) &#40;Transact-SQL&#41;](../../t-sql/statements/revoke-object-permissions-transact-sql.md)|  
-|Login|[REVOKE (サーバー プリンシパルの権限の取り消し) &#40;Transact-SQL&#41;](../../t-sql/statements/revoke-server-principal-permissions-transact-sql.md)|  
+|Function|[REVOKE (オブジェクトの権限の取り消し) &#40;Transact-SQL&#41;](../../t-sql/statements/revoke-object-permissions-transact-sql.md)|  
+|ログイン|[REVOKE (サーバー プリンシパルの権限の取り消し) &#40;Transact-SQL&#41;](../../t-sql/statements/revoke-server-principal-permissions-transact-sql.md)|  
 |メッセージ型|[REVOKE (Service Broker の権限の取り消し) &#40;Transact-SQL&#41;](../../t-sql/statements/revoke-service-broker-permissions-transact-sql.md)|  
 |Object|[REVOKE (オブジェクトの権限の取り消し) &#40;Transact-SQL&#41;](../../t-sql/statements/revoke-object-permissions-transact-sql.md)|  
 |キュー|[REVOKE (オブジェクトの権限の取り消し) &#40;Transact-SQL&#41;](../../t-sql/statements/revoke-object-permissions-transact-sql.md)|  
 |リモート サービス バインド|[REVOKE (Service Broker の権限の取り消し) &#40;Transact-SQL&#41;](../../t-sql/statements/revoke-service-broker-permissions-transact-sql.md)|  
-|ロール|[REVOKE (データベース プリンシパルの権限の取り消し) &#40;Transact-SQL&#41;](../../t-sql/statements/revoke-database-principal-permissions-transact-sql.md)|  
-|Route|[REVOKE (Service Broker の権限の取り消し) &#40;Transact-SQL&#41;](../../t-sql/statements/revoke-service-broker-permissions-transact-sql.md)|  
+|Role|[REVOKE (データベース プリンシパルの権限の取り消し) &#40;Transact-SQL&#41;](../../t-sql/statements/revoke-database-principal-permissions-transact-sql.md)|  
+|ルート|[REVOKE (Service Broker の権限の取り消し) &#40;Transact-SQL&#41;](../../t-sql/statements/revoke-service-broker-permissions-transact-sql.md)|  
 |スキーマ|[REVOKE (スキーマ権限の取り消し) &#40;Transact-SQL&#41;](../../t-sql/statements/revoke-schema-permissions-transact-sql.md)|  
 |検索プロパティ リスト|[REVOKE (検索プロパティ リスト権限の取り消し) &#40;Transact-SQL&#41;](../../t-sql/statements/revoke-search-property-list-permissions-transact-sql.md)|  
-|[サーバー]|[REVOKE (サーバーの権限の取り消し) &#40;Transact-SQL&#41;](../../t-sql/statements/revoke-server-permissions-transact-sql.md)|  
+|サーバー|[REVOKE (サーバーの権限の取り消し) &#40;Transact-SQL&#41;](../../t-sql/statements/revoke-server-permissions-transact-sql.md)|  
 |サービス|[REVOKE (Service Broker の権限の取り消し) &#40;Transact-SQL&#41;](../../t-sql/statements/revoke-service-broker-permissions-transact-sql.md)|  
 |ストアド プロシージャ|[REVOKE (オブジェクトの権限の取り消し) &#40;Transact-SQL&#41;](../../t-sql/statements/revoke-object-permissions-transact-sql.md)|  
 |対称キー|[REVOKE (対称キーの権限の取り消し) &#40;Transact-SQL&#41;](../../t-sql/statements/revoke-symmetric-key-permissions-transact-sql.md)|  
 |シノニム|[REVOKE (オブジェクトの権限の取り消し) &#40;Transact-SQL&#41;](../../t-sql/statements/revoke-object-permissions-transact-sql.md)|  
 |システム オブジェクト|[REVOKE (システム オブジェクトの権限の取り消し) &#40;Transact-SQL&#41;](../../t-sql/statements/revoke-system-object-permissions-transact-sql.md)|  
 |テーブル|[REVOKE (オブジェクトの権限の取り消し) &#40;Transact-SQL&#41;](../../t-sql/statements/revoke-object-permissions-transact-sql.md)|  
-|型|[REVOKE (型の権限の取り消し) &#40;Transact-SQL&#41;](../../t-sql/statements/revoke-type-permissions-transact-sql.md)|  
-|ユーザー|[REVOKE (データベース プリンシパルの権限の取り消し) &#40;Transact-SQL&#41;](../../t-sql/statements/revoke-database-principal-permissions-transact-sql.md)|  
+|種類|[REVOKE (型の権限の取り消し) &#40;Transact-SQL&#41;](../../t-sql/statements/revoke-type-permissions-transact-sql.md)|  
+|User|[REVOKE (データベース プリンシパルの権限の取り消し) &#40;Transact-SQL&#41;](../../t-sql/statements/revoke-database-principal-permissions-transact-sql.md)|  
 |表示|[REVOKE (オブジェクトの権限の取り消し) &#40;Transact-SQL&#41;](../../t-sql/statements/revoke-object-permissions-transact-sql.md)|  
 |XML スキーマ コレクション|[REVOKE (XML スキーマ コレクションの権限の取り消し) &#40;Transact-SQL&#41;](../../t-sql/statements/revoke-xml-schema-collection-permissions-transact-sql.md)|  
   

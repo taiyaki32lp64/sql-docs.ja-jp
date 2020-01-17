@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 12a978c0-b8a0-4ef0-87f0-a43c13659272
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 6b66b87b0c741bf943cc2558862a0e1853c386b5
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 93436a5180f1a01269f1612f7e608b71b4c073e9
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52510735"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67923806"
 ---
 # <a name="types-of-locks"></a>ロックの種類
 ## <a name="adlockbatchoptimistic"></a>adLockBatchOptimistic  

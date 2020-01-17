@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 981d49c3-3531-4543-aa75-5bd9e4f67000
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 75ff7e83aa87bca9f33a3a8f44447af2eb60c581
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 7e709c74062e31483b042c3930572fb63ca8c786
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52504021"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67996219"
 ---
 # <a name="appendix-d-data-types"></a>付録 D:データ型
 ODBC では、2 つのデータ型のセットを定義します。SQL データ型と C データ型。 SQL データ型は、データ ソースに格納されているデータのデータ型を示します。 C データ型は、アプリケーションのバッファーに格納されたデータのデータ型を示します。  

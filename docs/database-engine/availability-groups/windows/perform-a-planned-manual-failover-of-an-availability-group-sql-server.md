@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 419f655d-3f9a-4e7d-90b9-f0bab47b3178
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: d632a45f81658612c7c6f37e4de6dc535551fee4
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: 2346c770c5fec742d7c5805f028bd87bebaf71b1
+ms.sourcegitcommit: f8cf8cc6650a22e0b61779c20ca7428cdb23c850
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53212161"
+ms.lasthandoff: 12/04/2019
+ms.locfileid: "74822496"
 ---
 # <a name="perform-a-planned-manual-failover-of-an-always-on-availability-group-sql-server"></a>Always On 可用性グループの計画的な手動フェールオーバーの実行 (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -51,7 +50,7 @@ ms.locfileid: "53212161"
 -   現在、ターゲットのセカンダリ レプリカはプライマリ レプリカと同期されている必要があります。 このセカンダリ レプリカのすべてのセカンダリ データベースが可用性グループに参加している必要があります。 これらは対応するプライマリ データベースとも同期されている必要があります (つまり、ローカルのセカンダリ データベースが同期されている必要があります)。 
   
     > [!TIP] 
-    >  セカンダリ レプリカのフェールオーバーの準備状態を調べるには、[sys.dm_hadr_database_cluster_states](../../../relational-databases/system-dynamic-management-views/sys-dm-hadr-database-replica-cluster-states-transact-sql.md) 動的管理ビューで **is_failover_ready** 列をクエリします。 または、[AlwaysOn グループ ダッシュボード](../../../database-engine/availability-groups/windows/use-the-always-on-dashboard-sql-server-management-studio.md)の **[フェールオーバーの準備]** 列を確認します。 
+    >  セカンダリ レプリカのフェールオーバーの準備状態を調べるには、[sys.dm_hadr_database_replica_cluster_states](../../../relational-databases/system-dynamic-management-views/sys-dm-hadr-database-replica-cluster-states-transact-sql.md) 動的管理ビューで **is_failover_ready** 列をクエリします。 または、[AlwaysOn グループ ダッシュボード](../../../database-engine/availability-groups/windows/use-the-always-on-dashboard-sql-server-management-studio.md)の **[フェールオーバーの準備]** 列を確認します。 
 -   このタスクは、ターゲット セカンダリ レプリカ上でのみサポートされます。 ターゲット セカンダリ レプリカをホストするサーバー インスタンスに接続されている必要があります。 
   
 ###  <a name="Security"></a> セキュリティ 

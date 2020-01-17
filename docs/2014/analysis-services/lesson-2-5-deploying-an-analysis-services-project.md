@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: 5d98bab3-3577-4143-b737-5196444a36ac
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: d7f04f586511140b9e21c8eca80ec19b43fa90eb
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: ed38e8f28894143fd32b233870bc3aab2b24c464
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52510383"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66078986"
 ---
 # <a name="deploying-an-analysis-services-project"></a>Analysis Services プロジェクトの配置
   [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Tutorial プロジェクトの [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Tutorial キューブに含まれるオブジェクトのキューブ データおよびディメンション データを表示するには、[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] の指定のインスタンスにプロジェクトを配置し、キューブおよびそのディメンションを処理します。 *プロジェクトを* 配置 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] すると、 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]のインスタンスに定義済みオブジェクトが作成されます。 *のインスタンス内のオブジェクトを* 処理 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] すると、基となるデータ ソースのデータがキューブ オブジェクトにコピーされます。 詳細については、「[Analysis Services プロジェクトの配置 (SSDT)](multidimensional-models/deploy-analysis-services-projects-ssdt.md)」および「[Analysis Services プロジェクトのプロパティの構成 (SSDT)](multidimensional-models/configure-analysis-services-project-properties-ssdt.md)」を参照してください。  
@@ -33,10 +32,10 @@ ms.locfileid: "52510383"
   
 2.  左側ペインの **[構成プロパティ]** ノードで、 **[配置]** をクリックします。  
   
-     プロジェクトの配置プロパティを確認します。 既定では、" [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] プロジェクト" テンプレートにより、次のように [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] プロジェクトが構成されます。まず、ローカル コンピューターの既定の [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] インスタンスに、すべてのプロジェクトが順次配置されます。プロジェクトと同じ名前の [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] データベースが作成され、配置の完了後は既定の処理オプションに基づいてプロジェクトが処理されます。 詳細については、「 [Analysis Services プロジェクトのプロパティの構成 &#40;SSDT&#41;](multidimensional-models/configure-analysis-services-project-properties-ssdt.md)のインスタンスに定義済みオブジェクトが作成されます。  
+     プロジェクトの配置プロパティを確認します。 既定では、" [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] プロジェクト" テンプレートにより、次のように [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] プロジェクトが構成されます。まず、ローカル コンピューターの既定の [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] インスタンスに、すべてのプロジェクトが順次配置されます。プロジェクトと同じ名前の [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] データベースが作成され、配置の完了後は既定の処理オプションに基づいてプロジェクトが処理されます。 詳細については、「[Configure Analysis Services Project Properties (SSDT)](multidimensional-models/configure-analysis-services-project-properties-ssdt.md)」(Analysis Services プロジェクトのプロパティの構成 (SSDT)) を参照してください。  
   
     > [!NOTE]  
-    >  プロジェクトの名前付きインスタンスをデプロイする[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]ローカル コンピューターまたはリモート サーバー上のインスタンスには、変更、 **Server**プロパティを適切なインスタンス名など、 \< *ServerName**>\\<** InstanceName * * >* します。  
+    >  プロジェクトの名前付きインスタンスをデプロイする[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]ローカル コンピューターまたはリモート サーバー上のインスタンスには、変更、 **Server**プロパティを適切なインスタンス名など、 \< *ServerName **>\\<** InstanceName * * >* します。  
   
 3.  **[OK]** をクリックします。  
   

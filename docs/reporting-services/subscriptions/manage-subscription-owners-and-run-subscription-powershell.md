@@ -1,121 +1,122 @@
 ---
 title: サブスクリプション所有者の管理とサブスクリプションの実行 - PowerShell | Microsoft Docs
-ms.date: 03/24/2017
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: subscriptions
 ms.topic: conceptual
-ms.assetid: 0fa6cb36-68fc-4fb8-b1dc-ae4f12bf6ff0
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: c81da7beaedbb7374154db2c35985b8c9955a376
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.reviewer: ''
+ms.custom: ''
+ms.date: 04/26/2019
+ms.openlocfilehash: 2a0972f5cd644ed06718791ee20b2c5dfd9a1660
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52396855"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68893436"
 ---
 # <a name="manage-subscription-owners-and-run-subscription---powershell"></a>サブスクリプション所有者の管理とサブスクリプションの実行 - PowerShell
-[!INCLUDE[feedback_stackoverflow_msdn_connect_md](../../includes/feedback-stackoverflow-msdn-connect-md.md)]
 
-  [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)][!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 以降では、 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] サブスクリプションの所有権をプログラムによってユーザー間で譲渡できます。 このトピックでは、サブスクリプションの所有権を変更または単純に一覧表示するために使用可能な、いくつかの Windows PowerShell スクリプトを説明します。 各サンプルには、ネイティブ モードと SharePoint モードの両方のサンプル構文が含まれています。 サブスクリプションの所有者を変更した後で、サブスクリプションは新しい所有者のセキュリティ コンテキストで実行され、レポート内の User!UserID フィールドには新しい所有者の値が表示されます。 PowerShell のサンプルが呼び出すオブジェクト モデルの詳細については、「 <xref:ReportService2010.ReportingService2010.ChangeSubscriptionOwner%2A>  
+[!INCLUDE [ssrs-appliesto](../../includes/ssrs-appliesto.md)] [!INCLUDE[ssrs-appliesto-2016-and-later](../../includes/ssrs-appliesto-2016-and-later.md)] [!INCLUDE[ssrs-appliesto-sharepoint-2013-2016i](../../includes/ssrs-appliesto-sharepoint-2013-2016.md)]
+
+[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)][!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 以降では、 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] サブスクリプションの所有権をプログラムによってユーザー間で譲渡できます。 このトピックでは、サブスクリプションの所有権を変更または単純に一覧表示するために使用可能な、いくつかの Windows PowerShell スクリプトを説明します。 各サンプルには、ネイティブ モードと SharePoint モードの両方のサンプル構文が含まれています。 サブスクリプションの所有者を変更した後で、サブスクリプションは新しい所有者のセキュリティ コンテキストで実行され、レポート内の User!UserID フィールドには新しい所有者の値が表示されます。 PowerShell のサンプルが呼び出すオブジェクト モデルの詳細については、「 <xref:ReportService2010.ReportingService2010.ChangeSubscriptionOwner%2A>  
+
+![PowerShell 関連コンテンツ](https://docs.microsoft.com/analysis-services/analysis-services/instances/install-windows/media/rs-powershellicon.jpg "PowerShell 関連コンテンツ")
+
+##  <a name="bkmk_top"></a> このトピックの内容:
   
- ![PowerShell 関連コンテンツ](../../analysis-services/instances/install-windows/media/rs-powershellicon.jpg "PowerShell 関連コンテンツ")  
+- [スクリプトの使用方法](#bkmk_how_to)  
   
-||  
-|-|  
-|**[!INCLUDE[applies](../../includes/applies-md.md)]**  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] ネイティブ モード &#124; [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePoint モード|  
+- [スクリプト: すべてのサブスクリプションの所有権の一覧表示](#bkmk_list_ownership_all)  
   
-##  <a name="bkmk_top"></a> このトピックの内容:  
+- [スクリプト: 特定のユーザーが所有するすべてのサブスクリプションの一覧表示](#bkmk_list_all_one_user)  
   
--   [スクリプトの使用方法](#bkmk_how_to)  
+- [スクリプト: 特定のユーザーが所有するすべてのサブスクリプションの所有権変更](#bkmk_change_all)  
   
--   [スクリプト: すべてのサブスクリプションの所有権の一覧表示](#bkmk_list_ownership_all)  
+- [スクリプト: 特定のレポートに関連付けられたすべてのサブスクリプションの一覧表示](#bkmk_list_for_1_report)  
   
--   [スクリプト: 特定のユーザーが所有するすべてのサブスクリプションの一覧表示](#bkmk_list_all_one_user)  
+- [スクリプト: 特定のサブスクリプションの所有権変更](#bkmk_change_all_1_subscription)  
   
--   [スクリプト: 特定のユーザーが所有するすべてのサブスクリプションの所有権変更](#bkmk_change_all)  
+- [スクリプト： 単一のサブスクリプションの実行 (起動)](#bkmk_run_1_subscription)  
   
--   [スクリプト: 特定のレポートに関連付けられたすべてのサブスクリプションの一覧表示](#bkmk_list_for_1_report)  
+## <a name="bkmk_how_to"></a> スクリプトの使用方法
   
--   [スクリプト: 特定のサブスクリプションの所有権変更](#bkmk_change_all_1_subscription)  
+### <a name="permissions"></a>アクセス許可
+
+このセクションでは、ネイティブ モードと SharePoint モードの [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]向けの各メソッドを使用するのに必要な権限レベルを要約します。 このトピック内のスクリプトは次の [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] メソッドを使用します。  
   
--   [スクリプト： 単一のサブスクリプションの実行 (起動)](#bkmk_run_1_subscription)  
+- [ReportingService2010.ListSubscriptions メソッド](https://msdn.microsoft.com/library/reportservice2010.reportingservice2010.listsubscriptions.aspx)  
   
-##  <a name="bkmk_how_to"></a> スクリプトの使用方法  
+- [ReportingService2010.ChangeSubscriptionOwner メソッド](https://msdn.microsoft.com/library/reportservice2010.reportingservice2010.changesubscriptionowner.aspx)  
   
-### <a name="permissions"></a>アクセス許可  
- このセクションでは、ネイティブ モードと SharePoint モードの [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]向けの各メソッドを使用するのに必要な権限レベルを要約します。 このトピック内のスクリプトは次の [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] メソッドを使用します。  
+- [ReportingService2010.ListChildren](https://msdn.microsoft.com/library/reportservice2010.reportingservice2010.listchildren.aspx)  
   
--   [ReportingService2010.ListSubscriptions メソッド](https://msdn.microsoft.com/library/reportservice2010.reportingservice2010.listsubscriptions.aspx)  
+- [ReportingService2010.FireEvent](https://msdn.microsoft.com/library/reportservice2010.reportingservice2010.fireevent.aspx) メソッドは、特定のサブスクリプションをトリガーして実行するために、最後のスクリプトでのみ使用されます。 そのスクリプトを使用する計画がない場合、FireEvent メソッドの権限要件を無視できます。  
   
--   [ReportingService2010.ChangeSubscriptionOwner メソッド](https://msdn.microsoft.com/library/reportservice2010.reportingservice2010.changesubscriptionowner.aspx)  
+**ネイティブ モード:**
   
--   [ReportingService2010.ListChildren](https://msdn.microsoft.com/library/reportservice2010.reportingservice2010.listchildren.aspx)  
+- サブスクリプションの一覧表示: レポートに対する [ReportOperation](https://msdn.microsoft.com/library/microsoft.reportingservices.interfaces.reportoperation.aspx) 列挙値かつユーザーがサブスクリプションの所有者であること、または ReadAnySubscription。  
   
--   [ReportingService2010.FireEvent](https://msdn.microsoft.com/library/reportservice2010.reportingservice2010.fireevent.aspx) メソッドは、特定のサブスクリプションをトリガーして実行するために、最後のスクリプトでのみ使用されます。 そのスクリプトを使用する計画がない場合、FireEvent メソッドの権限要件を無視できます。  
+- サブスクリプションの変更: ユーザーは、BUILTIN\Administrators グループのメンバーである必要があります。  
   
- **ネイティブ モード:**  
+- 子の一覧表示: アイテムの ReadProperties  
   
--   サブスクリプションの一覧表示: レポートに対する [ReportOperation](https://msdn.microsoft.com/library/microsoft.reportingservices.interfaces.reportoperation.aspx) 列挙値かつユーザーがサブスクリプションの所有者であること、または ReadAnySubscription。  
+- イベントの開始: GenerateEvents (システム)  
   
--   サブスクリプションの変更: ユーザーは、BUILTIN\Administrators グループのメンバーである必要があります。  
+ **SharePoint モード:**
   
--   子の一覧表示: アイテムの ReadProperties  
+- サブスクリプションの一覧表示: ManageAlerts、 またはレポートに対する [CreateAlerts](https://msdn.microsoft.com/library/microsoft.sharepoint.spbasepermissions.aspx) ユーザーがサブスクリプションの所有者であり、サブスクリプションが時刻指定のサブスクリプションであること。  
   
--   イベントの開始: GenerateEvents (システム)  
+- サブスクリプションの変更: ManageWeb  
   
- **SharePoint モード:**  
+- 子の一覧表示: ViewListItems  
   
--   サブスクリプションの一覧表示: ManageAlerts、 またはレポートに対する [CreateAlerts](https://msdn.microsoft.com/library/microsoft.sharepoint.spbasepermissions.aspx) ユーザーがサブスクリプションの所有者であり、サブスクリプションが時刻指定のサブスクリプションであること。  
-  
--   サブスクリプションの変更: ManageWeb  
-  
--   子の一覧表示: ViewListItems  
-  
--   イベントの起動: ManageWeb  
+- イベントの起動: ManageWeb  
   
  詳しくは、「 [Reporting Services のロールおよびタスクと SharePoint のグループおよび権限の比較](../../reporting-services/security/reporting-services-roles-tasks-vs-sharepoint-groups-permissions.md)」をご覧ください。  
   
-### <a name="script-usage"></a>スクリプトの使用法  
- **スクリプトファイル (.ps1) の作成**  
+### <a name="script-usage"></a>スクリプトの使用法
+
+**スクリプトファイル (.ps1) の作成**
   
-1.  **c:\scripts**という名前のフォルダーを作成します。 異なるフォルダーを選択する場合、例のコマンド ライン構文ステートメントで使用されているフォルダー名を変更します。  
+1. **c:\scripts**という名前のフォルダーを作成します。 異なるフォルダーを選択する場合、例のコマンド ライン構文ステートメントで使用されているフォルダー名を変更します。  
   
-2.  各スクリプトに対してテキスト ファイルを作成し、ファイルを c:\scripts フォルダーに保存します。 .ps1 ファイルを作成する際、各例のコマンド ライン構文の名前を使用します。  
+2. 各スクリプトに対してテキスト ファイルを作成し、ファイルを c:\scripts フォルダーに保存します。 .ps1 ファイルを作成する際、各例のコマンド ライン構文の名前を使用します。  
   
-3.  管理者特権を使用してコマンド プロンプトを開きます。  
+3. 管理者特権を使用してコマンド プロンプトを開きます。  
   
-4.  各例に示されているサンプルのコマンド ライン構文を使用して、各スクリプト ファイルを実行します。  
+4. 各例に示されているサンプルのコマンド ライン構文を使用して、各スクリプト ファイルを実行します。  
   
- **テスト済みの環境**  
+**テスト済みの環境**
   
  このトピックのスクリプトは PowerShell バージョン 3 および以下のバージョンの [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]を使用してテスト済みです。  
   
--   [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]  
+- [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]  
   
--   [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]  
+- [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]  
   
--   [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]  
+- [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]  
   
-##  <a name="bkmk_list_ownership_all"></a> スクリプト: すべてのサブスクリプションの所有権の一覧表示  
- このスクリプトはサイト上のすべてのサブスクリプションを一覧表示します。 このスクリプトを使用して、接続のテストまたは他のスクリプトで使用するためのレポート パスとサブスクリプション ID の検証を実施できます。 これは存在するサブスクリプションの内容と所有者を単に監査するのにも役立つスクリプトです。  
+## <a name="bkmk_list_ownership_all"></a> スクリプト: すべてのサブスクリプションの所有権の一覧表示
+
+このスクリプトはサイト上のすべてのサブスクリプションを一覧表示します。 このスクリプトを使用して、接続のテストまたは他のスクリプトで使用するためのレポート パスとサブスクリプション ID の検証を実施できます。 これは存在するサブスクリプションの内容と所有者を単に監査するのにも役立つスクリプトです。  
   
- **ネイティブ モードの構文:**  
+ **ネイティブ モードの構文:**
   
-```  
+```powershell
 powershell c:\scripts\ListAll_SSRS_Subscriptions.ps1 "[server]/reportserver" "/"  
 ```  
   
- **SharePoint モードの構文:**  
+ **SharePoint モードの構文:**
   
-```  
+```powershell
 powershell c:\scripts\ListAll_SSRS_Subscriptions.ps1 "[server]/_vti_bin/reportserver" "https://[server]"  
 ```  
   
- **スクリプト:**  
+ **スクリプト:**
   
-```  
+```
 # Parameters  
 #    server   - server and instance name (e.g. myserver/reportserver or myserver/reportserver_db2)  
   
@@ -133,26 +134,27 @@ $subscriptions | select Path, report, Description, Owner, SubscriptionID, lastex
 ```  
   
 > [!TIP]  
->  SharePoint モードのサイト URLS を検証するには、SharePoint コマンドレット **Get-SPSite**を使用します。 詳細については、「 [Get-SPSite](https://msdn.microsoft.com/library/ff607950\(v=office.15\).aspx)」を参照してください。  
+> SharePoint モードのサイト URLS を検証するには、SharePoint コマンドレット **Get-SPSite**を使用します。 詳細については、「 [Get-SPSite](https://msdn.microsoft.com/library/ff607950\(v=office.15\).aspx)」を参照してください。  
   
-##  <a name="bkmk_list_all_one_user"></a> スクリプト: 特定のユーザーが所有するすべてのサブスクリプションの一覧表示  
- このスクリプトは特定のユーザーが所有するすべてのサブスクリプションを一覧表示します。 このスクリプトを使用して、接続のテストまたは他のスクリプトで使用するためのレポート パスとサブスクリプション ID の検証を実施できます。 このスクリプトは、組織内のだれかが離任したときに、所有していたサブスクリプションを検証して、所有者を変更したり、サブスクリプションを削除したりする場合に役立ちます。  
+##  <a name="bkmk_list_all_one_user"></a> スクリプト: 特定のユーザーが所有するすべてのサブスクリプションの一覧表示
+
+このスクリプトは特定のユーザーが所有するすべてのサブスクリプションを一覧表示します。 このスクリプトを使用して、接続のテストまたは他のスクリプトで使用するためのレポート パスとサブスクリプション ID の検証を実施できます。 このスクリプトは、組織内のだれかが退職したときに、所有していたサブスクリプションを検証して、所有者を変更したり、サブスクリプションを削除したりする場合に役立ちます。  
   
- **ネイティブ モードの構文:**  
+ **ネイティブ モードの構文:**
   
-```  
+```powershell
 powershell c:\scripts\ListAll_SSRS_Subscriptions4User.ps1 "[Domain]\[user]" "[server]/reportserver" "/"  
 ```  
   
- **SharePoint モードの構文:**  
+**SharePoint モードの構文:**
   
-```  
+```powershell
 powershell c:\scripts\ListAll_SSRS_Subscriptions4User.ps1 "[Domain]\[user]"  "[server]/_vti_bin/reportserver" "https://[server]"  
 ```  
   
- **スクリプト:**  
+**スクリプト:**
   
-```  
+```
 # Parameters:  
 #    currentOwner - DOMAIN\USER that owns the subscriptions you wish to change  
 #    server        - server and instance name (e.g. myserver/reportserver or myserver/reportserver_db2)  
@@ -172,28 +174,29 @@ Write-Host "----- $currentOwner's Subscriptions: "
 $subscriptions | select Path, report, Description, Owner, SubscriptionID, lastexecuted,Status | where {$_.owner -eq $currentOwner}  
 ```  
   
-##  <a name="bkmk_change_all"></a> スクリプト: 特定のユーザーが所有するすべてのサブスクリプションの所有権変更  
- このスクリプトは、特定のユーザーが所有するすべてのサブスクリプションの所有権を新しい所有者のパラメーターに変更します。  
+## <a name="bkmk_change_all"></a> スクリプト: 特定のユーザーが所有するすべてのサブスクリプションの所有権変更
+
+このスクリプトは、特定のユーザーが所有するすべてのサブスクリプションの所有権を新しい所有者のパラメーターに変更します。  
   
- **ネイティブ モードの構文:**  
+**ネイティブ モードの構文:**  
   
-```  
+```powershell
 powershell c:\scripts\ChangeALL_SSRS_SubscriptionOwner.ps1 "[Domain]\current owner]" "[Domain]\[new owner]" "[server]/reportserver"  
 ```  
   
- **SharePoint モードの構文:**  
+**SharePoint モードの構文:**  
   
-```  
+```powershell
 powershell c:\scripts\ChangeALL_SSRS_SubscriptionOwner.ps1 "[Domain]\{current owner]" "[Domain]\[new owner]" "[server]/_vti_bin/reportserver"  
 ```  
   
- **スクリプト:**  
+**スクリプト:**  
   
-```  
+```
 # Parameters:  
 #    currentOwner - DOMAIN\USER that owns the subscriptions you wish to change  
 #    newOwner      - DOMAIN\USER that will own the subscriptions you wish to change  
-#    server        - server and instance name (e.g. myserver/reportserver, myserver/reportserver_db2, myserver/_vti_bin/reportserver)  
+#    server        - server and instance name (e.g. myserver/reportserver, myserver/reportserver_db2, myserver/_vti_bin/reportserver)
   
 Param(  
     [string]$currentOwner,  
@@ -242,24 +245,25 @@ ForEach ($item in $items)
 }  
 ```  
   
-##  <a name="bkmk_list_for_1_report"></a> スクリプト: 特定のレポートに関連付けられたすべてのサブスクリプションの一覧表示  
- このスクリプトは特定のレポートに関連付けられたすべてのサブスクリプションを一覧表示します。 レポート パス構文は、完全な URL を必要とする、異なる SharePoint モードです。 構文例で使用されているレポート名 "title only" には空白が含まれているため、レポート名を単一引用符で囲む必要があります。  
+## <a name="bkmk_list_for_1_report"></a> スクリプト: 特定のレポートに関連付けられたすべてのサブスクリプションの一覧表示  
+
+このスクリプトは特定のレポートに関連付けられたすべてのサブスクリプションを一覧表示します。 レポート パス構文は、完全な URL を必要とする、異なる SharePoint モードです。 構文例で使用されているレポート名 "title only" には空白が含まれているため、レポート名を単一引用符で囲む必要があります。  
   
- **ネイティブ モードの構文:**  
+**ネイティブ モードの構文:**  
   
-```  
+```powershell
 powershell c:\scripts\List_SSRS_One_Reports_Subscriptions.ps1 "[server]/reportserver" "'/reports/title only'" "/"  
 ```  
   
- **SharePoint モードの構文:**  
+**SharePoint モードの構文:**  
   
-```  
+```powershell
 powershell c:\scripts\List_SSRS_One_Reports_Subscriptions.ps1 "[server]/_vti_bin/reportserver"  "'https://[server]/shared documents/title only.rdl'" "https://[server]"  
 ```  
   
- **スクリプト:**  
+**スクリプト:**  
   
-```  
+```
 # Parameters:  
 #    server      - server and instance name (e.g. myserver/reportserver or myserver/reportserver_db2)  
 #    reportpath  - path to report in the report server, including report name e.g. /reports/test report >> pass in  "'/reports/title only'"  
@@ -280,24 +284,24 @@ Write-Host "----- $reportpath 's Subscriptions: "
 $subscriptions | select Path, report, Description, Owner, SubscriptionID, lastexecuted,Status | where {$_.path -eq $reportpath}  
 ```  
   
-##  <a name="bkmk_change_all_1_subscription"></a> スクリプト: 特定のサブスクリプションの所有権変更  
+## <a name="bkmk_change_all_1_subscription"></a> スクリプト: 特定のサブスクリプションの所有権変更  
  このスクリプトは特定のサブスクリプションの所有権を変更します。 サブスクリプションは、スクリプトに渡す SubscriptionID によって識別されます。 サブスクリプションを一覧表示するスクリプトのいずれかを使用して、正しい SubscriptionID を判別できます。  
   
  **ネイティブ モードの構文:**  
   
-```  
+```powershell
 powershell c:\scripts\Change_SSRS_Owner_One_Subscription.ps1 "[Domain]\[new owner]" "[server]/reportserver" "/" "ac5637a1-9982-4d89-9d69-a72a9c3b3150"  
 ```  
   
  **SharePoint モードの構文:**  
   
-```  
+```powershell
 powershell c:\scripts\Change_SSRS_Owner_One_Subscription.ps1 "[Domain]\[new owner]" "[server]/_vti_bin/reportserver" "https://[server]" "9660674b-f020-453f-b1e3-d9ba37624519"  
 ```  
   
  **スクリプト:**  
   
-```  
+```
 # Parameters:  
 #    newOwner       - DOMAIN\USER that will own the subscriptions you wish to change  
 #    server         - server and instance name (e.g. myserver/reportserver or myserver/reportserver_db2)  
@@ -326,8 +330,9 @@ Write-Host "----- $subscriptionid's Subscription properties: "
 $subscription | select Path, report, Description, SubscriptionID, Owner, Status  
 ```  
   
-##  <a name="bkmk_run_1_subscription"></a> スクリプト： 単一のサブスクリプションの実行 (起動)  
- このスクリプトは、FireEvent メソッドを使用して特定のサブスクリプションを実行します。 このスクリプトは、サブスクリプションに対して構成されたスケジュールに関係なく、すぐにサブスクリプションを実行します。 EventType は、レポート サーバー構成ファイル **rsreportserver.config** で定義されている既知のイベントのセットと照合されます。スクリプトは標準サブスクリプションに対する以下のイベントの種類を使用します。  
+## <a name="bkmk_run_1_subscription"></a> スクリプト： 単一のサブスクリプションの実行 (起動)  
+
+このスクリプトは、FireEvent メソッドを使用して特定のサブスクリプションを実行します。 このスクリプトは、サブスクリプションに対して構成されたスケジュールに関係なく、すぐにサブスクリプションを実行します。 EventType は、レポート サーバー構成ファイル **rsreportserver.config** で定義されている既知のイベントのセットと照合されます。スクリプトは標準サブスクリプションに対する以下のイベントの種類を使用します。  
   
  `<Event>`  
   
@@ -341,19 +346,19 @@ $subscription | select Path, report, Description, SubscriptionID, Owner, Status
   
  **ネイティブ モードの構文:**  
   
-```  
+```powershell
 powershell c:\scripts\FireSubscription.ps1 "[server]/reportserver" $null "70366e82-2d3c-4edd-a216-b97e51e26de9"  
 ```  
   
  **SharePoint モードの構文:**  
   
-```  
+```powershell
 powershell c:\scripts\FireSubscription.ps1 "[server]/_vti_bin/reportserver" "https://[server]" "c3425c72-580d-423e-805a-41cf9799fd25"  
 ```  
   
  **スクリプト:**  
   
-```  
+```
   
 # Parameters  
 #    server         - server and instance name (e.g. myserver/reportserver or myserver/reportserver_db2)  
@@ -378,15 +383,13 @@ $subscriptions = $rs2010.ListSubscriptions($site);
 $subscriptions | select Status, Path, report, Description, Owner, SubscriptionID, EventType, lastexecuted | where {$_.SubscriptionID -eq $subscriptionid}  
   
 ```  
-  
+
 ## <a name="see-also"></a>参照  
- 
-[ReportingService2010.ListSubscriptions メソッド](https://msdn.microsoft.com/library/reportservice2010.reportingservice2010.listsubscriptions.aspx)  
 
-[ReportingService2010.ChangeSubscriptionOwner メソッド](https://msdn.microsoft.com/library/reportservice2010.reportingservice2010.changesubscriptionowner.aspx)   
+- [ReportingService2010.ListSubscriptions メソッド](https://msdn.microsoft.com/library/reportservice2010.reportingservice2010.listsubscriptions.aspx)  
 
-[ReportingService2010.ListChildren](https://msdn.microsoft.com/library/reportservice2010.reportingservice2010.listchildren.aspx)  
+- [ReportingService2010.ChangeSubscriptionOwner メソッド](https://msdn.microsoft.com/library/reportservice2010.reportingservice2010.changesubscriptionowner.aspx)   
 
-[ReportingService2010.FireEvent](https://msdn.microsoft.com/library/reportservice2010.reportingservice2010.fireevent.aspx)
-  
-  
+- [ReportingService2010.ListChildren](https://msdn.microsoft.com/library/reportservice2010.reportingservice2010.listchildren.aspx)  
+
+- [ReportingService2010.FireEvent](https://msdn.microsoft.com/library/reportservice2010.reportingservice2010.fireevent.aspx)

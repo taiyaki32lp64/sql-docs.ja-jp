@@ -18,35 +18,34 @@ helpviewer_keywords:
 ms.assetid: 9389f48d-0de5-47bd-9821-4db8f04504e4
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: de6169af7c10972307a154e9830bc8e206854ab5
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 755b5f836b833512a122ad92e5cedbd7e938a4e8
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47725000"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68090071"
 ---
 # <a name="sysdmxtptransactionstats-transact-sql"></a>sys.dm_xtp_transaction_stats (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
-  サーバーが開始されてから実行されたトランザクションに関する統計を報告します。  
+  サーバーの起動後に実行されたトランザクションに関する統計を報告します。  
   
  詳細については、「[インメモリ OLTP &#40;インメモリ最適化&#41;](../../relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md)」を参照してください。  
   
 |列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
-|total_count|**bigint**|インメモリ OLTP データベース エンジンで実行されたトランザクションの総数。|  
+|total_count|**bigint**|インメモリ OLTP データベース エンジンで実行されたトランザクションの合計数。|  
 |read_only_count|**bigint**|読み取り専用トランザクションの数。|  
 |total_aborts|**bigint**|ユーザーまたはシステムの中止によって中止されたトランザクションの総数。|  
-|user_aborts|**bigint**|システムによって行われた中止の数。 中止の原因には書き込みの競合、検証の失敗、依存関係の失敗などがあります。|  
-|validation_failures|**bigint**|検証エラーによるトランザクションの中止の回数。|  
+|user_aborts|**bigint**|システムによって行われた中止の数。 などによる書き込みの競合、検証の失敗、または依存関係エラー。|  
+|validation_failures|**bigint**|検証エラーのため、トランザクションは中止回数。|  
 |dependencies_taken|**bigint**|内部使用のみです。|  
-|dependencies_failed|**bigint**|依存対象のトランザクションが中止されたことによるトランザクションの中止の回数。|  
+|dependencies_failed|**bigint**|依存トランザクションが中止されたために、トランザクション回数の合計が中止されます。|  
 |savepoint_create|**bigint**|作成されたセーブポイントの数。 ATOMIC ブロックごとに新しいセーブポイントが作成されます。|  
 |savepoint_rollbacks|**bigint**|前のセーブポイントへのロールバックの数。|  
 |savepoint_refreshes|**bigint**|内部使用のみです。|  
-|log_bytes_written|**bigint**|インメモリ OLTP ログ レコードに書き込まれたバイト数の合計。|  
-|log_IO_count|**bigint**|ログ IO を必要とするトランザクションの総数。 持続性のあるテーブルに対するトランザクションのみが考慮されます。|  
+|log_bytes_written|**bigint**|インメモリ OLTP ログ レコードに書き込まれたバイトの合計数。|  
+|log_IO_count|**bigint**|ログ IO を必要とするトランザクションの総数。 持続性のあるテーブルに対するトランザクションのみを考慮します。|  
 |phantom_scans_started|**bigint**|内部使用のみです。|  
 |phatom_scans_retries|**bigint**|内部使用のみです。|  
 |phantom_rows_touched|**bigint**|内部使用のみです。|  
@@ -69,7 +68,7 @@ ms.locfileid: "47725000"
 ## <a name="permissions"></a>アクセス許可  
  サーバーに対する VIEW SERVER STATE 権限が必要です。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [メモリ最適化テーブルの動的管理ビュー &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/memory-optimized-table-dynamic-management-views-transact-sql.md)  
   
   

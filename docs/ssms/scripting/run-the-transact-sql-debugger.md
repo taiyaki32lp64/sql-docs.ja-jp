@@ -1,10 +1,7 @@
 ---
-title: Transact-SQL デバッガーの実行 | Microsoft Docs
-ms.custom: ''
-ms.date: 03/14/2017
+title: Transact-SQL デバッガーの実行
 ms.prod: sql
 ms.technology: scripting
-ms.reviewer: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Transact-SQL debugger, sysadmin requirement
@@ -19,62 +16,70 @@ helpviewer_keywords:
 - Transact-SQL debugger, keyboard shortcuts
 - Transact-SQL debugger, starting
 ms.assetid: 386f6d09-dbec-4dc7-9e8a-cd9a4a50168c
-author: stevestein
-ms.author: sstein
-manager: craigg
+author: markingmyname
+ms.author: maghan
+ms.reviewer: ''
+ms.custom: ''
+ms.date: 03/14/2017
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: cec08abfaa72ee51abc707b958205573533f6992
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: 01ac569b82d382850343af0a35b16c676720097c
+ms.sourcegitcommit: 0c40843c13f67ba7d975f4fedb9d20d70747f66d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51643925"
+ms.lasthandoff: 11/15/2019
+ms.locfileid: "74097896"
 ---
 # <a name="run-the-transact-sql-debugger"></a>Transact-SQL デバッガーの実行
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-  [!INCLUDE[tsql](../../includes/tsql-md.md)] デバッガーは、 [!INCLUDE[ssDE](../../includes/ssde-md.md)] クエリ エディター ウィンドウを開いた後に起動できます。 次に、デバッガーを停止するまで、 [!INCLUDE[tsql](../../includes/tsql-md.md)] コードをデバッグ モードで実行できます。 オプションを設定して、デバッガーの実行方法をカスタマイズできます。  
+
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+
+[!INCLUDE[tsql](../../includes/tsql-md.md)] デバッガーは、 [!INCLUDE[ssDE](../../includes/ssde-md.md)] クエリ エディター ウィンドウを開いた後に起動できます。 次に、デバッガーを停止するまで、 [!INCLUDE[tsql](../../includes/tsql-md.md)] コードをデバッグ モードで実行できます。 オプションを設定して、デバッガーの実行方法をカスタマイズできます。
+
+[!INCLUDE[ssms-old-versions](../../includes/ssms-old-versions.md)]
+
+## <a name="starting-and-stopping-the-debugger"></a>デバッガーの起動と停止
+
+[!INCLUDE[tsql](../../includes/tsql-md.md)] デバッガーを起動するための要件は次のとおりです。
+
+- [!INCLUDE[ssDE](../../includes/ssde-md.md)] クエリ エディターが別のコンピューターの [!INCLUDE[ssDE](../../includes/ssde-md.md)] のインスタンスに接続されている場合、デバッガーはリモート デバッグ用に構成されています。 詳細については、「 [Transact-SQL デバッガーの構成](../../relational-databases/scripting/configure-firewall-rules-before-running-the-tsql-debugger.md)」を参照してください。
   
-## <a name="starting-and-stopping-the-debugger"></a>デバッガーの起動と停止  
- [!INCLUDE[tsql](../../includes/tsql-md.md)] デバッガーを起動するための要件は次のとおりです。  
+- [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] が、sysadmin 固定サーバー ロールのメンバーである Windows アカウントで実行されている必要があります。
+
+- [!INCLUDE[ssDE](../../includes/ssde-md.md)] クエリ エディター ウィンドウが、sysadmin 固定サーバー ロールのメンバーである Windows 認証または [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 認証ログインを使用して接続されている必要があります。
   
--   [!INCLUDE[ssDE](../../includes/ssde-md.md)] クエリ エディターが別のコンピューターの [!INCLUDE[ssDE](../../includes/ssde-md.md)] のインスタンスに接続されている場合、デバッガーはリモート デバッグ用に構成されています。 詳細については、「 [Transact-SQL デバッガーの構成](../../relational-databases/scripting/configure-firewall-rules-before-running-the-tsql-debugger.md)」を参照してください。  
+- [!INCLUDE[ssDE](../../includes/ssde-md.md)] クエリ エディター ウィンドウが、 [!INCLUDE[ssDE](../../includes/ssde-md.md)] Service Pack 2 (SP2) 以降の [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] のインスタンスに接続されている必要があります。 クエリ エディター ウィンドウがシングル ユーザー モードのインスタンスに接続されているときは、デバッガーを実行できません。  
   
--   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] が、sysadmin 固定サーバー ロールのメンバーである Windows アカウントで実行されている必要があります。  
+ [!INCLUDE[tsql](../../includes/tsql-md.md)] コードのデバッグは、次の理由により、実稼働サーバーではなくテスト サーバーで行うことをお勧めします。
   
--   [!INCLUDE[ssDE](../../includes/ssde-md.md)] クエリ エディター ウィンドウが、sysadmin 固定サーバー ロールのメンバーである Windows 認証または [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 認証ログインを使用して接続されている必要があります。  
+- デバッグは高度な権限を必要とする操作です。 このため、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]でデバッグを行うことができるのは、sysadmin 固定サーバー ロールのメンバーのみです。
   
--   [!INCLUDE[ssDE](../../includes/ssde-md.md)] クエリ エディター ウィンドウが、 [!INCLUDE[ssDE](../../includes/ssde-md.md)] Service Pack 2 (SP2) 以降の [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] のインスタンスに接続されている必要があります。 クエリ エディター ウィンドウがシングル ユーザー モードのインスタンスに接続されているときは、デバッガーを実行できません。  
-  
- [!INCLUDE[tsql](../../includes/tsql-md.md)] コードのデバッグは、次の理由により、実稼働サーバーではなくテスト サーバーで行うことをお勧めします。  
-  
--   デバッグは高度な権限を必要とする操作です。 このため、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]でデバッグを行うことができるのは、sysadmin 固定サーバー ロールのメンバーのみです。  
-  
--   いくつかの [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントの処理を調査するときに、デバッグ セッションが長時間に及ぶことがあります。 セッションによって取得されたロック (たとえば更新ロック) が、セッションが終了するかトランザクションがコミットまたはロールバックされるまで、長時間保持される場合があります。  
+- いくつかの [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントの処理を調査するときに、デバッグ セッションが長時間に及ぶことがあります。 セッションによって取得されたロック (たとえば更新ロック) が、セッションが終了するかトランザクションがコミットまたはロールバックされるまで、長時間保持される場合があります。  
   
  [!INCLUDE[tsql](../../includes/tsql-md.md)] デバッガーを起動すると、クエリ エディター ウィンドウがデバッグ モードになります。 クエリ エディター ウィンドウがデバッグ モードになると、デバッガーは最初のコード行で一時停止します。 この段階で、コードをステップ実行することも、特定の [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントで実行を一時停止することもできます。デバッガー ウィンドウを使用して現在の実行状態を表示することもできます。 デバッガーは、 **[クエリ]** ツール バーの **[デバッグ]** ボタンをクリックするか、または **[デバッグ]** メニューの **[デバッグ開始]** をクリックすることで開始できます。  
   
  クエリ エディター ウィンドウは、クエリ エディター ウィンドウ内の最後のステートメントが完了するか、またはデバッグ モードを自分で終了するまで、デバッグ モードに保たれます。 デバッグ モードとステートメントの実行を停止するには、次のいずれかの操作を行います。  
   
--   **[デバッグ]** メニューの **[デバッグの停止]** をクリックします。  
+- **[デバッグ]** メニューの **[デバッグの停止]** をクリックします。  
   
--   **[デバッグ]** ツール バーの **[デバッグの停止]** ボタンをクリックする。  
+- **[デバッグ]** ツール バーの **[デバッグの停止]** ボタンをクリックする。  
   
--   **[クエリ]** メニューの **[クエリ実行のキャンセル]** をクリックする。  
+- **[クエリ]** メニューの **[クエリ実行のキャンセル]** をクリックする。  
   
--   **[クエリ]** ツール バーの **[クエリ実行のキャンセル]** ボタンをクリックする。  
+- **[クエリ]** ツール バーの **[クエリ実行のキャンセル]** ボタンをクリックする。  
   
  また、 [!INCLUDE[tsql](../../includes/tsql-md.md)] [デバッグ] **メニューの** [すべてデタッチ] **をクリックすると、デバッグ モードを停止し、残りの** ステートメントを実行できます。  
   
-## <a name="controlling-the-debugger"></a>デバッガーの制御  
+## <a name="controlling-the-debugger"></a>デバッガーの制御
+
  次のメニュー コマンド、ツール バー、およびショートカットを使用して、 [!INCLUDE[tsql](../../includes/tsql-md.md)] デバッガーの動作を制御できます。  
   
--   **[デバッグ]** メニューおよび **[デバッグ]** ツール バー。 **[デバッグ]** メニューと **[デバッグ]** ツール バーは、開いているクエリ エディター ウィンドウにフォーカスが設定されるまで、どちらも非アクティブ状態です。 現在のプロジェクトが閉じられるまで、アクティブ状態に保たれます。  
+- **[デバッグ]** メニューおよび **[デバッグ]** ツール バー。 **[デバッグ]** メニューと **[デバッグ]** ツール バーは、開いているクエリ エディター ウィンドウにフォーカスが設定されるまで、どちらも非アクティブ状態です。 現在のプロジェクトが閉じられるまで、アクティブ状態に保たれます。  
   
--   デバッガーのキーボード ショートカット。  
+- デバッガーのキーボード ショートカット。  
   
--   クエリ エディターのショートカット メニュー。 ショートカット メニューは、クエリ エディター ウィンドウ内の行を右クリックすると表示されます。 クエリ エディター ウィンドウがデバッグ モードのとき、ショートカット メニューには、選択された行または文字列に適用できるデバッガー コマンドが表示されます。  
+- クエリ エディターのショートカット メニュー。 ショートカット メニューは、クエリ エディター ウィンドウ内の行を右クリックすると表示されます。 クエリ エディター ウィンドウがデバッグ モードのとき、ショートカット メニューには、選択された行または文字列に適用できるデバッガー コマンドが表示されます。  
   
--   デバッガーによって開かれたウィンドウ (たとえば **[ウォッチ]** ウィンドウや **[ブレークポイント]** ウィンドウ) のメニュー項目およびコンテキスト コマンド。  
+- デバッガーによって開かれたウィンドウ (たとえば **[ウォッチ]** ウィンドウや **[ブレークポイント]** ウィンドウ) のメニュー項目およびコンテキスト コマンド。  
   
  デバッガーのメニュー コマンド、ツール バー ボタン、およびキーボード ショートカットを次の表に示します。  
   
@@ -106,11 +111,10 @@ ms.locfileid: "51643925"
 |**[すべてのブレークポイントを無効にする]**|使用不可|使用不可|使用不可|すべてのブレークポイントを無効にします。|  
 |使用不可|**[ウォッチ式の追加]**|使用不可|使用不可|選択されている式を **[ウォッチ]** ウィンドウに追加します。|  
   
-## <a name="see-also"></a>参照  
- [Transact-SQL デバッガー](../../relational-databases/scripting/transact-sql-debugger.md)   
- [Transact-SQL コードのステップ実行](../../relational-databases/scripting/step-through-transact-sql-code.md)   
- [Transact-SQL デバッガー情報](../../relational-databases/scripting/transact-sql-debugger-information.md)   
- [データベース エンジン クエリ エディター &#40;SQL Server Management Studio&#41;](../../relational-databases/scripting/database-engine-query-editor-sql-server-management-studio.md)   
- [ライブ クエリ統計](../../relational-databases/performance/live-query-statistics.md)  
-  
-  
+## <a name="see-also"></a>参照
+
+- [Transact-SQL デバッガー](../../relational-databases/scripting/transact-sql-debugger.md)
+- [Transact-SQL コードのステップ実行](../../relational-databases/scripting/step-through-transact-sql-code.md)
+- [Transact-SQL デバッガー情報](../../relational-databases/scripting/transact-sql-debugger-information.md)
+- [データベース エンジン クエリ エディター &#40;SQL Server Management Studio&#41;](../../relational-databases/scripting/database-engine-query-editor-sql-server-management-studio.md)
+- [ライブ クエリ統計](../../relational-databases/performance/live-query-statistics.md)

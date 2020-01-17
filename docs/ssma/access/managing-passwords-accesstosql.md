@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: b099d0f9-dd37-4c87-8b6f-ed0177881ea4
 author: Shamikg
 ms.author: Shamikg
-manager: craigg
-ms.openlocfilehash: bfa7b7481589ccb636147b3842a15b92f1a59d43
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 5d8886f28a30f264e0357af82724567e42e3bd5a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52540609"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67907184"
 ---
 # <a name="managing-passwords-accesstosql"></a>パスワードの管理 (AccessToSQL)
 このセクションでは、データベースのパスワードとサーバー間でのエクスポートをインポートまたはプロシージャのセキュリティ保護の詳細については。  
@@ -31,9 +30,9 @@ SSMA では、データベースのパスワードをセキュリティで保護
   
 次の 3 つのメソッドのいずれかを使用して有効なパスワードを指定します。  
   
-1.  **テキストを消去します。**'Password' ノードの値の属性には、データベースのパスワードを入力します。 これはスクリプト ファイルまたはサーバー接続ファイルの [サーバー] セクションで、サーバーの定義のノードの下にあります。  
+1.  **テキストを消去します。** 'Password' ノードの値の属性には、データベースのパスワードを入力します。 これはスクリプト ファイルまたはサーバー接続ファイルの [サーバー] セクションで、サーバーの定義のノードの下にあります。  
   
-    パスワードがクリア テキストでは、安全ではありません。 そのため、コンソール出力には、次の警告メッセージになります。*"Server&lt;サーバー id&gt;パスワードはクリア テキストの安全でないフォームでは、SSMA コンソールのアプリケーションには、暗号化を使用してパスワードを保護する - securepassword オプションの詳細は SSMA ヘルプ ファイルを参照してくださいオプションが提供されます情報。"*  
+    パスワードがクリア テキストでは、安全ではありません。 そのため、コンソール出力には、次の警告メッセージになります。 *"Server&lt;サーバー id&gt;パスワードはクリア テキストの安全でないフォームでは、SSMA コンソールのアプリケーションには、暗号化を使用してパスワードを保護する - securepassword オプションの詳細は SSMA ヘルプ ファイルを参照してくださいオプションが提供されます情報。"*  
   
     **暗号化されたパスワード:** この場合、指定したパスワードは、ProtectedStorage.ssma でローカル コンピューターの暗号化された形式で格納されます。  
   
@@ -45,7 +44,7 @@ SSMA では、データベースのパスワードをセキュリティで保護
   
             サーバーの定義 id とその対応する暗号化されたパスワードがローカル コンピューター上のファイルに格納されています。  
   
-            例 1 : 
+            例 1 :
             
                 Specify password
                 
@@ -121,6 +120,6 @@ SSMA コンソール アプリケーションをセキュリティで保護さ�
     
     Please confirm password: xxxxxxxx  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
 [SSMA コンソール (アクセス) の実行](https://msdn.microsoft.com/aa1bf665-8dc0-4259-b36f-46ae67197a43)  
   

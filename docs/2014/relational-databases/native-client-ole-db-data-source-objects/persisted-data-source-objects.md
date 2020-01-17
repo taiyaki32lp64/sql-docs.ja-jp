@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 7a5d50163f439ec3fabd219761f0749c88745c58
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48180962"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63231450"
 ---
 # <a name="persisted-data-source-objects"></a>保存されるデータ ソース オブジェクト
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB プロバイダーは永続化されたデータ ソース オブジェクトをサポート、 **IPersistFile**インターフェイス。  
@@ -227,7 +227,7 @@ HRESULT InitFromPersistedDS
   
  **IPersistFile::Save** メソッドは、**IDBInitialize::Initialize** の呼び出しの前または後に呼び出すことができます。 **IDBInitialize::Initialize** から正常に制御が戻った後にこのメソッドを呼び出すと、有効なデータ ソース指定が確実に保存されます。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [データ ソース オブジェクト&#40;OLE DB&#41;](data-source-objects-ole-db.md)  
   
   

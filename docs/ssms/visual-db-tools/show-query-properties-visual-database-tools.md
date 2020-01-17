@@ -13,15 +13,14 @@ helpviewer_keywords:
 - showing query properties
 - queries [SQL Server], properties
 ms.assetid: 4a7a8fa9-2e25-40a0-a7b6-377d04a03e5e
-author: stevestein
-ms.author: sstein
-manager: craigg
-ms.openlocfilehash: d4de1238fb42f9c875c35c6f426a05f19dd92f61
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 0bdda3fbe3da2f5abda7c1d808b0366ab8ff70d5
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47825350"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68266838"
 ---
 # <a name="show-query-properties-visual-database-tools"></a>クエリのプロパティの表示 (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

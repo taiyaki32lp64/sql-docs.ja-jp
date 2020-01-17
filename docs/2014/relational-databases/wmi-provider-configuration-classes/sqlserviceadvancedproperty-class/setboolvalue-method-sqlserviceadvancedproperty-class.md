@@ -15,17 +15,17 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: 0c2c543343bd602be75d600a489edfd84663790b
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52776104"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62911404"
 ---
 # <a name="set-breakpoints"></a>[ブレークポイントの設定]
   **[ブレークポイントの設定]** ダイアログ ボックスを使用すると、ブレークポイントを有効にしてブレークポイントの動作を制御するためのイベントを指定できます。  
   
 ## <a name="options"></a>および  
- **Enabled**  
+ **有効**  
  選択すると、イベントのブレークポイントが有効になります。  
   
  **[ブレークの条件]**  

@@ -14,14 +14,14 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 6eb81944ae4c3abab1d20fb203ee400cb8c01245
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48092772"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62755248"
 ---
 # <a name="connect-to-server-connection-properties-page-integration-services"></a>[サーバーへの接続] ([接続プロパティ] ページ) (Integration Services)
-  このタブを使用すると、[!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] に接続するとき、または [!INCLUDE[ssIS](../includes/ssis-md.md)] を**登録済みサーバー**に登録するときに、オプションを表示または指定できます。 接続時には、**[接続]** および **[オプション]** のみがこのダイアログ ボックスに表示されます。 **を登録するときには、** [テスト] **および** [保存] [!INCLUDE[ssIS](../includes/ssis-md.md)]のみがこのダイアログ ボックスに表示されます。  
+  このタブを使用すると、 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] に接続するとき、または [!INCLUDE[ssIS](../includes/ssis-md.md)] を **登録済みサーバー**に登録するときに、オプションを表示または指定できます。 接続時には、 **[接続]** および **[オプション]** のみがこのダイアログ ボックスに表示されます。 **を登録するときには、** [テスト] **および** [保存] [!INCLUDE[ssIS](../includes/ssis-md.md)]のみがこのダイアログ ボックスに表示されます。  
   
 ## <a name="options"></a>および  
  **[ポート番号]**  

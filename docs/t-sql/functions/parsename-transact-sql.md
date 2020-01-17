@@ -19,24 +19,23 @@ helpviewer_keywords:
 - objects [SQL Server], names
 - part of object names [SQL Server]
 ms.assetid: abf34f99-9ee9-460b-85b2-930ca5c4b5ae
-author: MashaMSFT
-ms.author: mathoma
-manager: craigg
+author: MikeRayMSFT
+ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: e0198c648cdbf312c4285ce9b758b6ce7fca835e
-ms.sourcegitcommit: 15b780aa5abe3f42cd70b6edf7d5a645e990b618
+ms.openlocfilehash: 9b36e31e163999a6af70b498fef9d65c2ce0ae55
+ms.sourcegitcommit: f688a37bb6deac2e5b7730344165bbe2c57f9b9c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/07/2019
-ms.locfileid: "54069072"
+ms.lasthandoff: 11/08/2019
+ms.locfileid: "73843617"
 ---
 # <a name="parsename-transact-sql"></a>PARSENAME (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-all-md](../../includes/tsql-appliesto-ss2012-all-md.md)]
 
-  オブジェクト名の指定した部分を返します。 取得できるオブジェクト名の部分は、オブジェクト名、所有者名、データベース名、およびサーバー名です。  
+  オブジェクト名の指定した部分を返します。 取得できるオブジェクトの部分は、オブジェクト名、所有者名、データベース名、およびサーバー名です。  
   
 > [!NOTE]  
->  PARSENAME 関数では、指定した名前のオブジェクトが存在するかどうかは示されず、 指定したオブジェクト名の指定した部分が返されるだけです。  
+>  PARSENAME 関数では、指定した名前のオブジェクトが存在するかどうかは示されず、 PARSENAME は、指定したオブジェクト名の指定した部分だけを返します。  
   
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -48,7 +47,7 @@ PARSENAME ( 'object_name' , object_piece )
   
 ## <a name="arguments"></a>引数  
  '*object_name*'  
- 取得対象となるオブジェクトの名前を指定します。 *object_name* は **sysname** です。 このパラメーターには、オブジェクトの部分的な修飾名を指定します (省略可能)。 オブジェクト名のすべての部分が修飾される場合、この名前には、サーバー名、データベース名、所有者名、オブジェクト名の 4 つの部分を指定可能です。  
+ 取得対象となるオブジェクトの名前を指定します。 *object_name* は **sysname** です。 このパラメーターは、必要に応じて修飾されたオブジェクト名です。 オブジェクト名のすべての部分が修飾される場合、この名前には、サーバー名、データベース名、所有者名、オブジェクト名の 4 つの部分を指定可能です。  
   
  *object_piece*  
  返すオブジェクトの部分を指定します。 *object_piece* のデータ型は **int**, 、これらの値を持つことができます。  
@@ -65,13 +64,13 @@ PARSENAME ( 'object_name' , object_piece )
  **sysname**  
   
 ## <a name="remarks"></a>Remarks  
- PARSENAME では、次のいずれかの条件が真の場合に NULL が返されます。  
+ 次のいずれかの条件に該当する場合、PARSENAME は NULL を返します。  
   
 -   いずれか *object_name* または *object_piece* は NULL です。  
   
--   構文エラーがある。  
+-   構文エラーが発生した。  
   
- 要求したオブジェクトの部分の長さが 0 で、有効な [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 識別子ではない。 オブジェクト名の長さが 0 の場合、修飾名全体が無効になります。  
+ 要求したオブジェクトの部分の長さが 0 で、有効な [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 識別子ではない。 長さ 0 のオブジェクト名は完全修飾名を無効とします。  
   
 ## <a name="examples"></a>使用例  
  次の例では使用 `PARSENAME` 情報を返す、 `Person` テーブルに、 `AdventureWorks2012` データベース。  
@@ -117,7 +116,7 @@ Server Name
  [QUOTENAME &#40;Transact-SQL&#41;](../../t-sql/functions/quotename-transact-sql.md)  
  [ALTER TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md)   
  [CREATE TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql.md)   
- [システム関数 &#40;Transact-SQL&#41;](../../relational-databases/system-functions/system-functions-for-transact-sql.md)  
+ [システム関数 &#40;Transact-SQL&#41;](../../relational-databases/system-functions/system-functions-category-transact-sql.md)  
   
   
 

@@ -4,19 +4,17 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: analysis-services
 ms.topic: reference
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: c0bbb1126a870834c4bf70dcfba0039139eb0830
-ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
+ms.openlocfilehash: 8674346aa876cb0e94adfcfefc34569a01005008
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50147099"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62731965"
 ---
 # <a name="analysis-services-developers-guide"></a>Analysis Services 開発者ガイド
     

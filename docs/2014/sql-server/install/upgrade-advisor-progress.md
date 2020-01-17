@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 helpviewer_keywords:
 - Upgrade Advisor [SQL Server], analysis progress status
@@ -18,12 +17,12 @@ ms.assetid: a9e3d1c8-d492-4beb-93c7-f1bc40d4a910
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: f7efb9258203efcffeb98bf4404faee5f80aff9a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 697f70d4435213a991e55adecb51a98120d8df1b
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48160362"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66091560"
 ---
 # <a name="upgrade-advisor-progress"></a>アップグレード アドバイザーの進行状況
   アップグレード アドバイザー分析では、選択した各 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] コンポーネントの分析を実行する専用アナライザーから開始します。 進捗状況が報告されるようにコンポーネントが分析される、**進行状況** ダイアログ ボックス。  
@@ -47,8 +46,8 @@ ms.locfileid: "48160362"
 >  以前のレポートはサーバーを分析するたびに保存されています。 保存されるレポートのファイル名には、タイムスタンプが使用されます。 レポート ビューアーでは、保存されている最近 5 件のレポートを表示できます。  
   
 ## <a name="see-also"></a>参照  
- [方法: アップグレード アドバイザーの起動](../../../2014/sql-server/install/how-to-launch-upgrade-advisor.md)   
- [方法: アップグレード アドバイザー分析ウィザードを実行](../../../2014/sql-server/install/how-to-run-the-upgrade-advisor-analysis-wizard.md)   
+ [方法:アップグレード アドバイザーを起動します。](../../../2014/sql-server/install/how-to-launch-upgrade-advisor.md)   
+ [方法:アップグレード アドバイザー分析ウィザードを実行します。](../../../2014/sql-server/install/how-to-run-the-upgrade-advisor-analysis-wizard.md)   
  [SQL Server コンポーネント](../../../2014/sql-server/install/sql-server-components.md)   
  [アップグレード アドバイザーのユーザー インターフェイス リファレンス](../../../2014/sql-server/install/upgrade-advisor-user-interface-reference.md)   
  [アップグレード アドバイザーの使用](../../../2014/sql-server/install/working-with-upgrade-advisor.md)  

@@ -1,5 +1,5 @@
 ---
-title: インポートのトレース テンプレート (SQL Server Profiler) |Microsoft Docs
+title: トレーステンプレートのインポート (SQL Server プロファイラー) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -12,15 +12,14 @@ helpviewer_keywords:
 - trace templates [SQL Server]
 - importing trace templates
 ms.assetid: 1dd5391e-dcd5-4ac2-b8dd-0e40922758a8
-author: stevestein
-ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 8b1c6198b525ed5dbf10aa9b3bb085737aef754f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 03a029abbf9468bbf2164be9e6a09644a2363428
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47716772"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68074949"
 ---
 # <a name="import-a-trace-template-sql-server-profiler"></a>トレース テンプレートのインポート (SQL Server Profiler)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

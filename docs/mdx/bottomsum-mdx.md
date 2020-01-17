@@ -1,5 +1,5 @@
 ---
-title: BottomSum (MDX) |Microsoft ドキュメント
+title: BottomSum (MDX) |Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -8,18 +8,17 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-manager: kfile
-ms.openlocfilehash: 0f923761144389a97962f7269cc5164d0dbdbf51
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.openlocfilehash: 2e49fc5a7ffd4c0adff38628a143ded695785e29
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34739611"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68016894"
 ---
 # <a name="bottomsum-mdx"></a>BottomSum (MDX)
 
 
-  指定されたセットを昇順で並べ替え、合計が指定された値以下になるように、値の小さい方から組のセットを作成して返します。  
+  指定したセットを昇順で並べ替え、最も低い値の合計が同じか、または指定した値よりも小さい組のセットを返します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -32,20 +31,20 @@ BottomSum(Set_Expression, Value, Numeric_Expression)
  *Set_Expression*  
  セットを返す有効な多次元式 (MDX) です。  
   
- *Value*  
- 各組の比較の基準値を指定する有効な数値式です。  
+ *[値]*  
+ 各組の比較対象となる値を指定する有効な数値式です。  
   
  *Numeric_Expression*  
- 有効な数値式です。通常は、数値を返すセル座標の多次元式 (MDX) 式です。  
+ 有効な数値式は、通常、数値を返すセル座標の多次元式 (MDX) 式です。  
   
 ## <a name="remarks"></a>コメント  
- **BottomSum**関数セットを昇順で並べ替え、指定されたセットに対して評価される指定メジャーの合計を計算します。 次に、値の小さい方から、指定された数値式の合計が指定値以上になるように要素のセットを作成して返します。 この関数は、累積合計が指定値以上になるセットの最小サブセットを返します。 要素は小さい方から順に返されます。  
+ **BottomSum**関数セットを昇順を並べ替え、指定されたセットに対して評価される指定メジャーの合計を計算します。 関数は、指定された数値式の合計は、(sum) の指定した値では少なくとも最小値を持つ要素を返します。 この関数は、累積合計が指定値以上になるセットの最小サブセットを返します。 返される要素は小さい方から順します。  
   
 > [!IMPORTANT]  
->  **BottomSum**関数は、like、 [TopSum](../mdx/topsum-mdx.md)関数を常に階層を解除します。  
+>  **BottomSum**関数は、このような[TopSum](../mdx/topsum-mdx.md)関数を常に階層を解除します。  
   
 ## <a name="examples"></a>使用例  
- 次の例では、Bike カテゴリについて、Reseller Sales Amount メジャーを使用して累積合計が 50,000 以上になるような、2003 会計年度の Geography ディメンションの Geography 階層にある City レベルの最小のメンバーのセットを返します (最も売上が少ないメンバーを 1 番目に返します)。  
+ 次の例を返します、Bike カテゴリについて、最小設定市区町村のメンバーの Geography ディメンションの Geography 階層のレベル、2003 会計年度のされ、Reseller Sales Amount メジャーを使用して、累積合計が、少なくともの合計50,000 (販売数の最小セットのメンバーで始まる)。  
   
  `SELECT`  
   
@@ -65,7 +64,7 @@ BottomSum(Set_Expression, Value, Numeric_Expression)
   
  `WHERE([Measures].[Reseller Sales Amount],[Date].[Fiscal].[Fiscal Year].[FY 2003])`  
   
-## <a name="see-also"></a>参照  
- [MDX 関数リファレンス&#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
+## <a name="see-also"></a>関連項目  
+ [MDX 関数リファレンス &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
   
   

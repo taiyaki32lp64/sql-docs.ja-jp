@@ -1,8 +1,8 @@
 ---
-title: SQL Server のアップグレード アシスタントで実験をデータベース内分析レポートの表示
-description: データベース実験アシスタント分析レポートの表示
-ms.custom: ''
-ms.date: 10/22/2018
+title: SQL Server アップグレードの分析レポートの表示
+description: Database Experimentation Assistant で分析レポートを表示する
+ms.custom: seo-lt-2019
+ms.date: 11/22/2019
 ms.prod: sql
 ms.prod_service: dea
 ms.suite: sql
@@ -10,85 +10,81 @@ ms.technology: dea
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 author: HJToland3
-ms.author: ajaykar
-ms.reviewer: douglasl
-manager: craigg
-ms.openlocfilehash: 49758d367f5ec22ffe3893896ab607917f28bf31
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
+ms.author: jtoland
+ms.reviewer: mathoma
+ms.openlocfilehash: b72d49e691311104481637ff49d6c1e09ae0c230
+ms.sourcegitcommit: 9e026cfd9f2300f106af929d88a9b43301f5edc2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "56987768"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74317740"
 ---
-# <a name="view-analysis-reports-in-database-experimentation-assistant"></a>データベース実験アシスタント分析レポートの表示
+# <a name="view-analysis-reports-in-database-experimentation-assistant"></a>Database Experimentation Assistant で分析レポートを表示する
 
-したら[分析レポートを作成](database-experimentation-assistant-create-report.md)でデータベース実験アシスタント (DEA)、レポートを表示し、A によって提供されるパフォーマンスの洞察を得るには、この記事で説明されている手順を完了する/B テストします。
+Database Experimentation Assistant (DEA) を使用して[分析レポートを作成](database-experimentation-assistant-create-report.md)した後、次の手順を使用して、A/B テストに基づいてパフォーマンスの洞察に関するレポートを確認します。
 
 ## <a name="select-a-server"></a>サーバーを選択します。
 
-DEA では、メニュー アイコンを選択します。 展開されたメニューで、次のように選択します。**分析レポート**分析レポート ウィンドウを開いてチェックリストのアイコンの横にあります。
+DEA で、メニューアイコンを選択します。 展開されたメニューで、チェックリストアイコンの横にある [**分析レポート**] を選択し、[分析レポート] ウィンドウを開きます。
 
-**分析レポート**、分析データベースが SQL Server を実行しているコンピューターの名前を入力します。 **[接続]** を選択します。 
+[**分析レポート**] で、分析データベースを持つ SQL Server を実行しているコンピューターの名前を入力し、[**接続**] を選択します。
 
-![既存のレポートへの接続します。](./media/database-experimentation-assistant-view-report/dea-view-report-connect.png)
+![既存のレポートへの接続](./media/database-experimentation-assistant-view-report/dea-view-report-connect.png)
 
-すべての依存関係が不足している場合、**の前提条件**ページによってインストールへのリンクを求められます。 前提条件をインストールし、**もう一度お試し**します。
+依存関係が不足している場合は、[**必須コンポーネント**] ページに、インストールするためのリンクが表示されます。 必要に応じて、前提条件をインストールし**て**から、[再試行] を選択します。
 
-![前提条件 ページ](./media/database-experimentation-assistant-view-report/dea-view-report-prereq.png)
+![[前提条件] ページ](./media/database-experimentation-assistant-view-report/dea-view-report-prereq.png)
 
-## <a name="select-an-analysis-report-to-view"></a>表示する分析レポートを選択します。
+## <a name="select-an-analysis-report-to-view"></a>表示する分析レポートの選択
 
-分析レポートの一覧で、レポートを開きますをダブルクリックします。
+分析レポートの一覧で、レポートをダブルクリックして開きます。
 
-![既存のレポートを表示します。](./media/database-experimentation-assistant-view-report/dea-view-report-view-existing.png)
+![既存のレポートの表示](./media/database-experimentation-assistant-view-report/dea-view-report-view-existing.png)
 
-このグラフの例で示すように、どの程度、ワークロードが表される、洞察を取得できます。
+次のグラフの例に示すように、ワークロードがどの程度適切に表されているかを調べることができます。
 
-![ワークロード Rep グラフ](./media/database-experimentation-assistant-view-report/dea-view-report-workload-compare.png)
+![ワークロードの担当グラフ](./media/database-experimentation-assistant-view-report/dea-view-report-workload-compare.png)
 
-## <a name="view-and-understand-the-analysis-report"></a>表示し、分析レポートを理解します。
+## <a name="view-and-understand-the-analysis-report"></a>分析レポートを表示して理解する
 
 このセクションでは、分析レポートについて説明します。
 
-### <a name="query-categories"></a>クエリのカテゴリ
+### <a name="query-categories"></a>クエリカテゴリ
 
-そのカテゴリに分類するクエリのみを表示する左の円グラフの各種のスライスを選択します。
+左側の円グラフの別のスライスを選択すると、そのカテゴリに該当するクエリのみが表示されます。
 
-![レポートの円スライス](./media/database-experimentation-assistant-view-report/dea-view-report-pie-slices.png)
+![円スライスのレポート](./media/database-experimentation-assistant-view-report/dea-view-report-pie-slices.png)
 
-- **クエリを低下**:も A から b の方がクエリ  
-- **エラー**:インスタンス A ではなくインスタンス B には、エラーを表示するクエリ  
-- **クエリの改善**:インスタンス A に向上よりも、インスタンス B でを実行したクエリ  
-- **中間クエリ**:中間のパフォーマンスを持つクエリを変更します。  
-- **同じ**:これでパフォーマンスままで、A と B のインスタンス間でのクエリ
+- **低下**したクエリ: B よりもでは、より適切に実行されたクエリ。  
+- **エラー**: インスタンス B にエラーを表示するが、インスタンス a には存在しないクエリ。  
+- **改善**されたクエリ: インスタンス a よりもインスタンス B でパフォーマンスが向上したクエリ。  
+- **不確定クエリ**: パフォーマンスが不確定な状態のクエリ。  
+- **同じ**: パフォーマンスがインスタンス A とインスタンス B で同じままであるクエリ。
 
-### <a name="individual-query-drill-down"></a>個々 のクエリのドリルダウン
+### <a name="individual-query-drill-down"></a>個々のクエリのドリルダウン
 
-特定のクエリに関する詳細な情報を表示するクエリ テンプレートへのリンクを選択することができます。
+クエリテンプレートのリンクを選択すると、特定のクエリに関する詳細情報を表示できます。
 
 ![クエリのドリルダウン](./media/database-experimentation-assistant-view-report/dea-view-report-drilldown.png)
 
-クエリの概要の比較を開くには特定のクエリを選択します。
+特定のクエリを選択すると、クエリの比較の概要が表示されます。
 
 ![比較の概要](./media/database-experimentation-assistant-view-report/dea-view-report-comparison-summary.png)
 
-クエリが実行された A と B のインスタンスを確認できます。 クエリのテンプレートを確認することもできます。 テーブルには、A と B のインスタンスに固有のクエリ情報が表示されます。
+クエリが実行された A と B のインスタンスを確認できます。 クエリがどのように表示されるかのテンプレートを表示することもできます。 テーブルには、インスタンス A とインスタンス B に固有のクエリ情報が表示されます。
 
-### <a name="error-queries"></a>エラーのクエリ
+### <a name="error-queries"></a>エラークエリ
 
-比較の概要レポートが展開可能な**エラー情報**と**クエリ計画情報**セクション。 セクションでは、エラーを表示する両方のインスタンスの情報を検討してください。
+比較概要レポートには、展開可能な**エラー情報**と**クエリプラン情報**のセクションが含まれています。 これらのセクションでは、両方のインスタンスのエラーと計画に関する情報を示します。
 
-この種のエラーを表示するエラー (赤) 円を選択します。
-- **既存のエラー**:A. に含まれていたエラー
-- **新しいエラー**:B. に含まれていたエラー
-- **エラーを解決**:A が B でないエラー
+エラー (赤) の円グラフを選択して、次の種類のエラーを表示します。
 
-![エラー グラフ](./media/database-experimentation-assistant-view-report/dea-view-report-error-charts.png)
+- **既存のエラー**: 内にあったエラー。
+- **新しいエラー**: B で発生したエラー。
+- **解決済みのエラー**: 内にあって B にはないエラー。
 
-## <a name="next-steps"></a>次のステップ
+![エラーグラフ](./media/database-experimentation-assistant-view-report/dea-view-report-error-charts.png)
 
-- コマンド プロンプトで、分析レポートを生成する方法については、次を参照してください。[コマンド プロンプトで実行](database-experimentation-assistant-run-command-prompt.md)します。
+## <a name="see-also"></a>参照
 
-- DEA とデモンストレーションを 19 分については、次のビデオをご覧ください。
-
-  > [!VIDEO https://channel9.msdn.com/Shows/Data-Exposed/Introducing-the-Database-Experimentation-Assistant/player]
+- コマンドプロンプトで分析レポートを生成する方法については、「[コマンドプロンプトでの実行](database-experimentation-assistant-run-command-prompt.md)」を参照してください。

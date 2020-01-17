@@ -10,16 +10,15 @@ ms.topic: language-reference
 dev_langs:
 - TSQL
 ms.assetid: 95a79b33-98f2-4929-a1a5-93b522a9e152
-author: MashaMSFT
-ms.author: mathoma
-manager: craigg
+author: MikeRayMSFT
+ms.author: mikeray
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: d337359e439eb089cd13b3f2ef7a87e0986e4cee
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ed3eab701a8edbbf118e228bd90080a61a214b32
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47658246"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67927439"
 ---
 # <a name="version---transact-sql-metadata-functions"></a>Version - Transact SQL メタデータ関数
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
@@ -48,7 +47,7 @@ SELECT VERSION();
 ```  
   
 ## <a name="see-also"></a>参照 
-[SESSION_ID (Transact-SQL)](../../t-sql/functions/session-id-transact-sql.md)  
-[DB_NAME (&) #40 です。TRANSACT-SQL と #41 です。](../../t-sql/functions/db-name-transact-sql.md)  
+[SESSION_ID &amp;#40;Transact-SQL&amp;#41;](../../t-sql/functions/session-id-transact-sql.md)  
+[DB_NAME &#40;Transact-SQL&#41;](../../t-sql/functions/db-name-transact-sql.md)  
   
   

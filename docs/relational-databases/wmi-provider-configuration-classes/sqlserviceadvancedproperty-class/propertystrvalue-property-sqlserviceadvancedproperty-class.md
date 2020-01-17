@@ -1,6 +1,6 @@
 ---
-title: PropertyStrValue プロパティ (SqlServiceAdvancedProperty クラス) |Microsoft Docs
-ms.custom: ''
+title: PropertyStrValue プロパティ (Sqlserviceadvanced プロパティ)
+ms.custom: seo-lt-2019
 ms.date: 03/03/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 637dd734-c294-4bfd-892d-882bac4708f5
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: 8a246a8eb014301cf7308f8b5dc523a345546303
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: e538a7cfb9b922bd7960fa5833f5a3c3d14da918
+ms.sourcegitcommit: baa40306cada09e480b4c5ddb44ee8524307a2ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51662251"
+ms.lasthandoff: 11/06/2019
+ms.locfileid: "73660025"
 ---
 # <a name="propertystrvalue-property-sqlserviceadvancedproperty-class"></a>PropertyStrValue プロパティ (SqlServiceAdvancedProperty クラス)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -38,14 +37,14 @@ object.PropertyStrValue [= value]
   
 ## <a name="parts"></a>要素  
  *object*  
- A [SqlServiceAdvancedProperty クラス](../../../relational-databases/wmi-provider-configuration-classes/sqlserviceadvancedproperty-class/sqlserviceadvancedproperty-class.md)高度なプロパティを表すオブジェクト。  
+ 詳細プロパティを表す[Sqlserviceadvanced プロパティクラス](../../../relational-databases/wmi-provider-configuration-classes/sqlserviceadvancedproperty-class/sqlserviceadvancedproperty-class.md)オブジェクト。  
   
 ## <a name="property-valuereturn-value"></a>プロパティ値/戻り値  
  詳細プロパティの値を指定する文字列値  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>解説  
   
 ## <a name="see-also"></a>参照  
- [開始とサービスの停止](https://technet.microsoft.com/library/ms174886\(v=sql.105\).aspx)  
+ [サービスの開始と停止](https://technet.microsoft.com/library/ms174886\(v=sql.105\).aspx)  
   
   

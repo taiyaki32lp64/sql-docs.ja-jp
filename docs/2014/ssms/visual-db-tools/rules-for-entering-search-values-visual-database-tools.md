@@ -21,11 +21,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: fc11acccd25dafd811379384bf9975e74e8986b6
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52812844"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63070986"
 ---
 # <a name="rules-for-entering-search-values-visual-database-tools"></a>検索値を入力するときの規則 (Visual Database Tools)
   このトピックでは、検索条件に対して次の種類のリテラル値を入力するときに従う規則について説明します。  

@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: 14b84409-5510-4642-a83b-732d8511c5b1
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: d12305261e72bcd903b852e83504fd1e5e6f6344
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 9d07f5026ccc4ee5a614f1f3fa5020502f9dcadd
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47724950"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67973317"
 ---
 # <a name="setobject-method-javalangstring-javalangobject"></a>setObject (java.lang.String, java.lang.Object) メソッド
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -53,9 +52,9 @@ public void setObject(java.lang.String sCol,
   
  null が指定されている場合、このメソッドは、指定したパラメーターを CHAR に変換してからデータベースに送信します。 パラメーターが binary、varbinary または image SQL 型として宣言されている場合、ステートメントが実行される際、例外がスローされます。  
   
- 以降で[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]JDBC Driver 3.0 では、このメソッドの動作は変更、**で sendTimeAsDatetime**接続プロパティ ([接続プロパティの設定](../../../connect/jdbc/setting-the-connection-properties.md)) と[SQLServerDataSource.setSendTimeAsDatetime](../../../connect/jdbc/reference/setsendtimeasdatetime-method-sqlserverdatasource.md)します。  
+ JDBC Driver 3.0 以降では、このメソッドの動作は **sendTimeAsDatetime** 接続プロパティ ([接続プロパティの設定](../../../connect/jdbc/setting-the-connection-properties.md)) によって変更されます。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [SQLServerDataSource Sqlserverdatasource.setsendtimeasdatetime](../../../connect/jdbc/reference/setsendtimeasdatetime-method-sqlserverdatasource.md)。  
   
- 詳細については、次を参照してください。[を構成する方法の java.sql.Time 値は、サーバーに送信される](../../../connect/jdbc/configuring-how-java-sql-time-values-are-sent-to-the-server.md)します。  
+ 詳細については、「 [java .sql の時刻値をサーバーに送信する方法の構成](../../../connect/jdbc/configuring-how-java-sql-time-values-are-sent-to-the-server.md)」を参照してください。  
   
 ## <a name="see-also"></a>参照  
  [setObject メソッド &#40;SQLServerCallableStatement&#41;](../../../connect/jdbc/reference/setobject-method-sqlservercallablestatement.md)   

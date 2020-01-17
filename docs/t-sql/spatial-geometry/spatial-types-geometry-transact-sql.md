@@ -15,15 +15,14 @@ helpviewer_keywords:
 - spatial data types [SQL Server]
 - geometry data type [SQL Server], Transact-SQL
 ms.assetid: 3fefdf7b-f931-404c-821c-82c0375eaf51
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: 3b95642661a9e2fe7792413e2119978a76af5d53
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: MladjoA
+ms.author: mlandzic
+ms.openlocfilehash: a2b65decea6d737801ef1b0b37e44b0c8ae028af
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47605540"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68101016"
 ---
 # <a name="spatial-types---geometry-transact-sql"></a>空間型 - geometry (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]

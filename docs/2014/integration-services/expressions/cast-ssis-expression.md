@@ -13,15 +13,15 @@ helpviewer_keywords:
 - data types [Integration Services], expressions
 - data types [Integration Services], converting
 ms.assetid: d4e915cc-1c7b-4b2e-93b0-13a8b0cb9242
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 6068ef0fea56681048b8a31a9e87b6b01d4f8c96
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 6549e2ad8faca23e32621e1cc871a62870c9effb
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52819324"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62899040"
 ---
 # <a name="cast-ssis-expression"></a>Cast (SSIS 式)
   式のあるデータ型を別のデータ型に明示的に変換します。 キャスト演算子は、切り捨て演算子としても機能できます。  

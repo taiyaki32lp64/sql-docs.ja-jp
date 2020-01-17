@@ -19,11 +19,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 0ca9186b93e96c60e1c5128e385b5b77d5f2b94e
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53354923"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62754101"
 ---
 # <a name="deployed-data-tier-application-details-sql-server-utility"></a>配置済みのデータ層アプリケーションの詳細 (SQL Server ユーティリティ)
   ユーティリティ エクスプローラーの [配置済みのデータ層アプリケーション] ビュー内の情報では、個々のデータ層アプリケーションの使用率に関するデータ、CPU 使用率の履歴、ファイル レベルでの記憶域使用率の詳細を確認できるほか、ポリシーのしきい値を表示および更新できます。 ポリシーのしきい値は、データ層アプリケーション レベルで CPU 使用率やデータベース データ ファイルおよびログ ファイルを対象に制御できます。 個々のデータ層アプリケーションについて、プロパティの詳細を表示することもできます。  
@@ -48,11 +48,11 @@ ms.locfileid: "53354923"
   
 -   [アプリケーションの CPU] - このデータ層アプリケーションのプロセッサ使用率の正常性状態が表示されます。 このパラメーターの正常性状態は、データ層アプリケーション用に設定された CPU 使用率ポリシーと、変動の多いリソースの評価ポリシーの構成設定に従って決定されます。 詳細については、「[CPU 使用率のポリシーにおけるノイズの軽減 &#40;SQL Server ユーティリティ&#41;](../relational-databases/manage/reduce-noise-in-cpu-utilization-policies-sql-server-utility.md)」を参照してください。  
   
-     このデータ層アプリケーションのプロセッサ使用率の履歴を表示するか、またはポリシーの制限を表示または変更するには、**[CPU 使用率]** タブをクリックします。  
+     このデータ層アプリケーションのプロセッサ使用率の履歴を表示するか、またはポリシーの制限を表示または変更するには、 **[CPU 使用率]** タブをクリックします。  
   
 -   [コンピューターの CPU] - コンピューターのプロセッサ使用率の正常性状態が表示されます。 このパラメーターの正常性状態は、コンピューター用に設定された CPU 使用率ポリシーと、変動の多いリソースの評価ポリシーの構成設定に従って決定されます。 詳細については、「[CPU 使用率のポリシーにおけるノイズの軽減 &#40;SQL Server ユーティリティ&#41;](../relational-databases/manage/reduce-noise-in-cpu-utilization-policies-sql-server-utility.md)」を参照してください。  
   
-     このデータ層アプリケーションのプロセッサ使用率の履歴を表示するか、またはポリシーの制限を表示または変更するには、**[CPU 使用率]** タブをクリックします。  
+     このデータ層アプリケーションのプロセッサ使用率の履歴を表示するか、またはポリシーの制限を表示または変更するには、 **[CPU 使用率]** タブをクリックします。  
   
 -   [ファイル領域] - 各データ層アプリケーションに関するファイル領域使用率の正常性状態の概要が表示されます。  
   
@@ -142,7 +142,7 @@ ms.locfileid: "53354923"
   
  データ ファイル用およびログ ファイル用に、記憶域使用率のポリシーを構成できます。 ファイルの記憶域使用率ポリシーのしきい値を表示または変更するには、[ストレージの使用率] ペインの下部にある **[ファイル ポリシー]** リンクをクリックします。 記憶域ボリュームの記憶域使用率ポリシーのしきい値を表示または変更するには、[ストレージの使用率] ペインの下部にある **[ボリューム ポリシー]** リンクをクリックします。  
   
- 既定のポリシーのしきい値をオーバーライドするには、**[既定のポリシーをオーバーライド]** のオプション ボタンをクリックして上限と下限の値を指定し、**[OK]** をクリックします。  
+ 既定のポリシーのしきい値をオーバーライドするには、 **[既定のポリシーをオーバーライド]** のオプション ボタンをクリックして上限と下限の値を指定し、 **[OK]** をクリックします。  
   
  ポリシー違反の許容範囲変更の詳細については、「[CPU 使用率のポリシーにおけるノイズの軽減 &#40;SQL Server ユーティリティ&#41;](../relational-databases/manage/reduce-noise-in-cpu-utilization-policies-sql-server-utility.md)」を参照してください。  
   
@@ -166,7 +166,7 @@ ms.locfileid: "53354923"
 -   最終報告日時:この列は、UCP のローカル日付と時刻の datetime データ型を使用して表示されます。 詳細については、SQL Server オンライン ブックの「 [datetime (Transact-SQL)](https://go.microsoft.com/fwlink/?LinkId=164071) 」を参照してください。 ユーティリティ オブジェクト モデルを使用する場合は、SSMS で datetimeoffset データ型が使用されることに注意してください。 詳細については、SQL Server オンライン ブックの「 [datetimeoffset (Transact-SQL)](https://go.microsoft.com/fwlink/?LinkId=141713) 」を参照してください。  
   
 ## <a name="see-also"></a>参照  
- [マネージド インスタンスの詳細 &amp;amp;#40;SQL Server ユーティリティ&amp;amp;#41;](../../2014/database-engine/managed-instance-details-sql-server-utility.md)   
+ [マネージド インスタンスの詳細 &#40;SQL Server ユーティリティ&#41;](../../2014/database-engine/managed-instance-details-sql-server-utility.md)   
  [ユーティリティ ダッシュ ボード&#40;SQL Server ユーティリティ&#41;](../../2014/database-engine/utility-dashboard-sql-server-utility.md)   
  [SQL Server ユーティリティでの SQL Server のインスタンスの監視](../relational-databases/manage/monitor-instances-of-sql-server-in-the-sql-server-utility.md)   
  [SQL Server ユーティリティの機能とタスク](../relational-databases/manage/sql-server-utility-features-and-tasks.md)  

@@ -13,15 +13,14 @@ helpviewer_keywords:
 - Query Designer [SQL Server], navigating
 - keyboard shortcuts [Visual Database Tools]
 ms.assetid: 1c65acef-6dfa-463a-bf37-5a5335fe3865
-author: stevestein
-ms.author: sstein
-manager: craigg
-ms.openlocfilehash: d75895acbe90fb396751a6218df0311e1f03f20f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: f9581eca3d6abbefcd897ccc4ce627ca180649b3
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47678096"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68262300"
 ---
 # <a name="navigate-in-the-query-and-view-designer-visual-database-tools"></a>クエリおよびビュー デザイナーでの移動 (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -44,7 +43,7 @@ ms.locfileid: "47678096"
 |テーブルまたはテーブル構造オブジェクト内の列間で移動する|方向キー|移動先の列|  
 |出力するデータ列を選択する|Space または +|列の名前の横にあるチェック ボックス|  
 |選択したデータ列をクエリ出力から削除する|Space または -|列の名前の横にあるチェック ボックス|  
-|選択したテーブル、テーブル構造オブジェクト、または結合線をクエリから削除する|Del|右クリックしてから **[削除]** をクリック|  
+|選択したテーブル、テーブル構造オブジェクト、または結合線をクエリから削除する|DELETE|右クリックしてから **[削除]** をクリック|  
   
 > [!NOTE]  
 > 複数の項目を選択している場合は、このキーを押すと、選択されているすべての項目が影響を受けます。 複数の項目を選択するには、Ctrl キーを押しながら各項目をクリックします。  
@@ -68,8 +67,8 @@ ms.locfileid: "47678096"
 |クリップボードからテキストを貼り付ける (編集モードの場合)|Ctrl + V||  
 |セルでの編集中に挿入モードと上書きモードを切り替える|Ins||  
 |[出力] 列のチェック ボックスのオンとオフを切り替える|Space キー|チェック ボックス|  
-|セルの選択した内容を削除する|Del||  
-|選択したグリッド列の値をすべて削除する|Del||  
+|セルの選択した内容を削除する|DELETE||  
+|選択したグリッド列の値をすべて削除する|DELETE||  
 |既存の行の間に行を挿入する|グリッド線を選択した後で Ins||  
 |[または...] 列を追加する|いずれかの [または...] 列を選択した後で Ins||  
   
@@ -79,7 +78,7 @@ ms.locfileid: "47678096"
 詳細については、「[抽出条件ペイン (Visual Database Tools)](../../ssms/visual-db-tools/criteria-pane-visual-database-tools.md)」を参照してください。  
   
 ## <a name="sql-pane"></a>SQL ペイン  
-SQL ペインでの作業時には、標準の Windows 編集キーを使用できます。たとえば、Ctrl + 方向キーで単語間を移動したり、 **[編集]** メニューの **[切り取り]**、 **[コピー]** 、および **[貼り付け]** コマンドを使用したりできます。  
+SQL ペインでの作業時には、標準の Windows 編集キーを使用できます。たとえば、Ctrl + 方向キーで単語間を移動したり、 **[編集]** メニューの **[切り取り]** 、 **[コピー]** 、および **[貼り付け]** コマンドを使用したりできます。  
   
 > [!NOTE]  
 > テキストの挿入だけができます。上書きモードはありません。  
@@ -99,7 +98,7 @@ SQL ペインでの作業時には、標準の Windows 編集キーを使用で�
 |セル内の最後の文字を選択する|Shift</localizedText> + <localizedText>End||  
 |編集モードとセル選択モードを切り替える|F2||  
 |セルでの編集中に挿入モードと上書きモードを切り替える|Ins||  
-|テーブルから行を削除する|Del||  
+|テーブルから行を削除する|DELETE||  
 |現在のセルに対する変更を元に戻す|変更したセル内で Esc||  
 |現在の行に対する変更を元に戻す|変更していないいずれかのセル内で Esc||  
 |セルに NULL を入力する|Ctrl + 0||  

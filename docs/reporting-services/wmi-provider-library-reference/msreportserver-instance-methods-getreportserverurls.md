@@ -2,20 +2,20 @@
 title: GetReportServerUrls メソッド (WMI MSReportServer_Instance) | Microsoft Docs
 ms.date: 06/09/2016
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: wmi-provider-library-reference
 ms.topic: conceptual
 helpviewer_keywords:
 - GetReportServerUrls method
 ms.assetid: 4865e32c-0114-465a-be8c-be223a7bc09e
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: f8749f8b10855154efd7e676f5ee57fae2dd042e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: bc04865c9dcbdf16627c1ab4598610426e4a8d5a
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47620071"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65571947"
 ---
 # <a name="msreportserverinstance-methods---getreportserverurls"></a>MSReportServer_Instance メソッド - GetReportServerUrls
   ユーザーがレポート サーバーと [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)]へのアクセスに使用できる URL の一覧を返します。  

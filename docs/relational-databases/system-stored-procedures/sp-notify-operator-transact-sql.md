@@ -17,18 +17,17 @@ helpviewer_keywords:
 ms.assetid: c440f5c9-9884-4196-b07c-55d87afb17c3
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 4d45252f16703cb52a3e78c1b236dd9d4cbfbde4
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 74558320df59414a756e1655bb073e9bf0d7d73c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47846400"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68107979"
 ---
 # <a name="spnotifyoperator-transact-sql"></a>sp_notify_operator (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  データベース メールを使用して、オペレーターに電子メール メッセージを送信します。  
+  データベース メールを使用してオペレーターに電子メール メッセージを送信します。  
   
  
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
@@ -48,28 +47,21 @@ sp_notify_operator
 ```  
   
 ## <a name="arguments"></a>引数  
- [ **@profile_name=** ] **'***profilename***'**  
- メッセージの送信に使用するデータベース メール プロファイルの名前を指定します。 *profilename*は**nvarchar (128)** します。 場合*profilename*が指定されていない、既定のデータベース メール プロファイルを使用します。  
+`[ @profile_name = ] 'profilename'` メッセージの送信に使用するデータベース メール プロファイルの名前。 *profilename*は**nvarchar (128)** します。 場合*profilename*が指定されていない、既定のデータベース メール プロファイルを使用します。  
   
- [ **@id=** ] *id*  
- メッセージ送信先のオペレーターの ID を指定します。 *id*は**int**、既定値は NULL です。 いずれかの*id*または*名前*指定する必要があります。  
+`[ @id = ] id` メッセージを送信するオペレーターの識別子。 *id*は**int**、既定値は NULL です。 いずれかの*id*または*名前*指定する必要があります。  
   
- [ **@name=** ] **'***name***'**  
- メッセージ送信先のオペレーターの名前を指定します。 *名前*は**nvarchar (128)**、既定値は NULL です。 いずれかの*id*または*名前*指定する必要があります。  
+`[ @name = ] 'name'` メッセージを送信するオペレーターの名前。 *名前*は**nvarchar (128)** 、既定値は NULL です。 いずれかの*id*または*名前*指定する必要があります。  
   
 > **注:** メッセージを受信する前に、オペレーターの電子メール アドレスを定義する必要があります。  
   
- [  **@subject=** ] **'***サブジェクト***'**  
- 電子メール メッセージの件名。 *サブジェクト*は**nvarchar (256)** 既定値はありません。  
+`[ @subject = ] 'subject'` 電子メール メッセージの件名。 *サブジェクト*は**nvarchar (256)** 既定値はありません。  
   
- [  **@body=** ] **'***メッセージ***'**  
- 電子メール メッセージの本文です。 *メッセージ*は**nvarchar (max)** 既定値はありません。  
+`[ @body = ] 'message'` 電子メール メッセージの本文。 *メッセージ*は**nvarchar (max)** 既定値はありません。  
   
- [  **@file_attachments=** ] **'***添付***'**  
- 電子メール メッセージに添付するファイルの名前を指定します。 *添付ファイル*は**nvarchar (512)**、既定値はありません。  
+`[ @file_attachments = ] 'attachment'` 電子メール メッセージに添付するファイルの名前。 *添付ファイル*は**nvarchar (512)** 、既定値はありません。  
   
- [ **@mail_database=** ] **'***mail_host_database***'**  
- メール ホスト データベースの名前を指定します。 *mail_host_database* is **nvarchar(128)**. ない場合は*mail_host_database*が指定されている、 **msdb**データベースが既定で使用されます。  
+`[ @mail_database = ] 'mail_host_database'` メール ホスト データベースの名前を指定します。 *mail_host_database* is **nvarchar(128)** . ない場合は*mail_host_database*が指定されている、 **msdb**データベースが既定で使用されます。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  **0** (成功) または**1** (失敗)  
@@ -77,7 +69,7 @@ sp_notify_operator
 ## <a name="remarks"></a>コメント  
  ここでは、指定したメッセージが、指定したオペレーターの電子メール アドレスに送信されます。 オペレーターに電子メール アドレスが構成されていない場合、エラーが返されます。  
   
- 通知をオペレーターに送信するには、データベース メールとメール ホスト データベースを構成する必要があります。  
+ オペレーターに通知を送信できる前に、データベース メールとメール ホスト データベースを構成する必要があります。  
   
 ## <a name="permissions"></a>アクセス許可  
  既定では、このストアド プロシージャを実行できるのは、 **sysadmin** 固定サーバー ロールのメンバーです。 他のユーザーには、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] msdb **データベースの次のいずれかの** エージェント固定データベース ロールが許可されている必要があります。  

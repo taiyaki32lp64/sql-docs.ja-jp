@@ -11,17 +11,20 @@ f1_keywords:
 - sql13.ssis.designer.parameter.f1
 - sql13.dts.designer.parameterwindow.f1
 ms.assetid: 9ed9ca8e-8b1e-48d9-907d-285516d6562b
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: 27af358d3d6fb5feb1bd5d10fb194beb52df011e
-ms.sourcegitcommit: 1f10e9df1c523571a8ccaf3e3cb36a26ea59a232
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: b595c8e2c09260e6874fc3cbaab8cc06d2a0c9df
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2018
-ms.locfileid: "51858702"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71296169"
 ---
 # <a name="integration-services-ssis-package-and-project-parameters"></a>Integration Services (SSIS) パッケージおよびプロジェクト パラメーター
+
+[!INCLUDE[ssis-appliesto](../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] (SSIS) パラメーターを使用すると、パッケージの実行時にパッケージ内のプロパティに値を割り当てることができます。 " *プロジェクト パラメーター* " はプロジェクト レベル、" *パッケージ パラメーター* " はパッケージ レベルで作成できます。 プロジェクト パラメーターは、プロジェクトが受け取る外部入力をプロジェクト内の 1 つまたは複数のパッケージに指定するために使用します。 パッケージ パラメーターを使用すると、パッケージを編集したり再配置したりせずにパッケージ実行を変更できます。  
   
  [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)] で、 **[Project.params]** ウィンドウを使用して、プロジェクト パラメーターを作成、変更、または削除します。 **デザイナーの** [パラメーター] [!INCLUDE[ssIS](../includes/ssis-md.md)] タブを使用して、パッケージ パラメーターを作成、変更、および削除します。 **[パラメーター化]** ダイアログ ボックスを使用して、新規または既存のパラメーターをタスクのプロパティと関連付けます。 **[Project.params]** ウィンドウと **[パラメーター]** タブの使用の詳細については「 [Create Parameters](https://msdn.microsoft.com/library/cd5d675b-dd5d-49cc-8b1f-dc717a973f99)」を参照してください。 **[パラメーター化]** ダイアログ ボックスの詳細については、「 [Parameterize Dialog Box](https://msdn.microsoft.com/library/fac02b6d-d247-447a-8940-e8700c7ac350)」を参照してください。  
@@ -115,7 +118,7 @@ ms.locfileid: "51858702"
   
      ![ツール バーの [追加] ボタン](../integration-services/media/denali-parameter-add.gif "ツール バーの [追加] ボタン")  
   
-3.  一覧で直接、または **[プロパティ]** ウィンドウを使用して、**[名前]**、**[データ型]**、**[値]**、**[区別する]**、**[必須]** の各プロパティに値を入力します。 次の表では、これらのプロパティについて説明します。  
+3.  一覧で直接、または **[プロパティ]** ウィンドウを使用して、 **[名前]** 、 **[データ型]** 、 **[値]** 、 **[区別する]** 、 **[必須]** の各プロパティに値を入力します。 次の表では、これらのプロパティについて説明します。  
   
     |プロパティ|[説明]|  
     |--------------|-----------------|  
@@ -130,9 +133,9 @@ ms.locfileid: "51858702"
   
 4.  プロジェクトを保存して、変更をパラメーターに保存します。 パラメーターの値はプロジェクト ファイルに格納されます。  
   
-    > **警告!!** リストで直接編集することも、**[プロパティ]** ウィンドウを使用してパラメーターのプロパティの値を変更することもできます。 **[削除] \(X)** ツール バー ボタンを使用して、パラメーターを削除できます。 ツール バーの最後のボタンを使用すると、[!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)] でパッケージを実行するときにのみ使用されるパラメーターの値を指定できます。  
+    > **警告!!** リストで直接編集することも、 **[プロパティ]** ウィンドウを使用してパラメーターのプロパティの値を変更することもできます。 **[削除] \(X)** ツール バー ボタンを使用して、パラメーターを削除できます。 ツール バーの最後のボタンを使用すると、[!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)] でパッケージを実行するときにのみ使用されるパラメーターの値を指定できます。  
   
-    > **注:** プロジェクトを [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)] で開かずにパッケージ ファイルを再度開くと、**[パラメーター]** タブは空になり、無効になります。  
+    > **注:** プロジェクトを [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)] で開かずにパッケージ ファイルを再度開くと、 **[パラメーター]** タブは空になり、無効になります。  
   
 ### <a name="create-project-parameters"></a>プロジェクト パラメーターを作成する  
   
@@ -146,7 +149,7 @@ ms.locfileid: "51858702"
   
      ![ツール バーの [追加] ボタン](../integration-services/media/denali-parameter-add.gif "ツール バーの [追加] ボタン")  
   
-4.  **[名前]**、**[データ型]**、**[値]**、**[区別する]**、**[必須]** の各プロパティに値を入力します。  
+4.  **[名前]** 、 **[データ型]** 、 **[値]** 、 **[区別する]** 、 **[必須]** の各プロパティに値を入力します。  
   
     |プロパティ|[説明]|  
     |--------------|-----------------|  
@@ -159,12 +162,12 @@ ms.locfileid: "51858702"
   
 5.  プロジェクトを保存して、変更をパラメーターに保存します。 パラメーター値はプロジェクト ファイルの構成に格納されます。 プロジェクト ファイルを保存して、パラメーター値の変更をディスクにコミットしてください。  
   
-    > **警告!!!** リストで直接編集することも、**[プロパティ]** ウィンドウを使用してパラメーターのプロパティの値を変更することもできます。 **[削除] \(X)** ツール バー ボタンを使用して、パラメーターを削除できます。 ツール バーの最後のボタンを使用すると、**[パラメーター値の管理]** ダイアログ ボックスを開いて、[!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)] でパッケージを実行するときにのみ使用されるパラメーターの値を指定できます。  
+    > **警告!!!** リストで直接編集することも、 **[プロパティ]** ウィンドウを使用してパラメーターのプロパティの値を変更することもできます。 **[削除] \(X)** ツール バー ボタンを使用して、パラメーターを削除できます。 ツール バーの最後のボタンを使用すると、 **[パラメーター値の管理]** ダイアログ ボックスを開いて、[!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)] でパッケージを実行するときにのみ使用されるパラメーターの値を指定できます。  
     
 ## <a name="parameterize-dialog-box"></a>Parameterize Dialog Box
-**[パラメーター化]** ダイアログ ボックスでは、新規または既存のパラメーターをタスクのプロパティと関連付けることができます。 このダイアログ ボックスを開くには、[!INCLUDE[ssIS](../includes/ssis-md.md)] デザイナーでタスクまたは [制御フロー] タブを右クリックし、**[パラメーター化]** をクリックします。 次の一覧では、このダイアログ ボックスの UI 要素について説明します。 パラメーターの詳細については、「 [Integration Services (SSIS) パラメーター](https://msdn.microsoft.com/library/hh213214.aspx)」を参照してください。
+**[パラメーター化]** ダイアログ ボックスでは、新規または既存のパラメーターをタスクのプロパティと関連付けることができます。 このダイアログ ボックスを開くには、[!INCLUDE[ssIS](../includes/ssis-md.md)] デザイナーでタスクまたは [制御フロー] タブを右クリックし、 **[パラメーター化]** をクリックします。 次の一覧では、このダイアログ ボックスの UI 要素について説明します。 パラメーターの詳細については、「 [Integration Services (SSIS) パラメーター](https://msdn.microsoft.com/library/hh213214.aspx)」を参照してください。
   
-### <a name="options"></a>[変数]  
+### <a name="options"></a>オプション  
  **プロパティ**  
  パラメーターと関連付けるタスクのプロパティを選択します。 この一覧には、パラメーター化できるすべてのプロパティが表示されます。  
   
@@ -177,7 +180,7 @@ ms.locfileid: "51858702"
  **新しいパラメーターを作成する**  
  タスクのプロパティと関連付ける新しいパラメーターを作成するには、このオプションを選択します。  
   
- **名前**  
+ **[名前]**  
  作成するパラメーターの名前を指定します。  
   
  **[説明]**  
@@ -187,7 +190,7 @@ ms.locfileid: "51858702"
  パラメーターの既定値を指定します。 これは設計上の既定値とも呼ばれ、後で配置時にオーバーライドできます。  
   
  **スコープ**  
- パラメーターのスコープとして、**[プロジェクト]** または **[パッケージ]** オプションを指定します。 プロジェクト パラメーターは、プロジェクトが受け取る外部入力をプロジェクト内の 1 つまたは複数のパッケージに指定するために使用します。 パッケージ パラメーターを使用すると、パッケージを編集したり再配置したりせずにパッケージ実行を変更できます。  
+ パラメーターのスコープとして、 **[プロジェクト]** または **[パッケージ]** オプションを指定します。 プロジェクト パラメーターは、プロジェクトが受け取る外部入力をプロジェクト内の 1 つまたは複数のパッケージに指定するために使用します。 パッケージ パラメーターを使用すると、パッケージを編集したり再配置したりせずにパッケージ実行を変更できます。  
   
  **機密**  
  チェック ボックスをオンまたはオフにして、パラメーターが機密かどうかを指定します。 機密性の高いパラメーター値はカタログ内で暗号化され、Transact-SQL または SQL Server Management Studio で表示する際は NULL 値として表示されます。  
@@ -214,6 +217,6 @@ ms.locfileid: "51858702"
  Transact-SQL を使用してサーバーの既定値を設定するには、[catalog.set_object_parameter_value &#40;SSISDB Database&#41;](../integration-services/system-stored-procedures/catalog-set-object-parameter-value-ssisdb-database.md) ストアド プロシージャを使用します。 現在のサーバーの既定値を表示するには、[catalog.object_parameters &#40;SSISDB Database&#41;](../integration-services/system-views/catalog-object-parameters-ssisdb-database.md) ビューをクエリします。 サーバーの既定値をクリアするには、[catalog.clear_object_parameter_value &#40;SSISDB Database&#41;](../integration-services/system-stored-procedures/catalog-clear-object-parameter-value-ssisdb-database.md) ストアド プロシージャを使用します。  
   
 ## <a name="related-content"></a>関連コンテンツ  
- mattmasson.com のブログ「 [SSIS 簡単なヒント: 必要なパラメーター](https://go.microsoft.com/fwlink/?LinkId=239781)」  
+ mattmasson.com のブログ記事、「[SSIS 簡単なヒント: 必要なパラメーター](https://go.microsoft.com/fwlink/?LinkId=239781)」  
   
   

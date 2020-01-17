@@ -11,17 +11,20 @@ helpviewer_keywords:
 - replacing string expression
 - REPLACE function
 ms.assetid: a6837043-ea70-4c6a-9c7a-6868b02b2adc
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: 3bbd6d11d5958bf2ee388f940ca153b2ad845b5c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 891e0fa855ec422efbdfd93abe9905f4ee7bffc0
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47767290"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71297417"
 ---
 # <a name="replace-ssis-expression"></a>REPLACE (SSIS 式)
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   式に含まれている文字列を別の文字列または空の文字列で置き換えた文字式を返します。  
   
 > [!NOTE]  

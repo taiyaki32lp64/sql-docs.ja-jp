@@ -1,5 +1,5 @@
 ---
-title: MSarticles (TRANSACT-SQL) |Microsoft Docs
+title: MSarticles (Transact-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: sql
@@ -17,18 +17,17 @@ helpviewer_keywords:
 ms.assetid: 1acd79a5-b3e2-4161-9592-7acc2a41ba38
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 5d04b79bb2d7cb70e2e36261547e462e1a7f2742
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 81598b65daf5fa7370004c890ab775e5b29b518f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52750065"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68132096"
 ---
 # <a name="msarticles-transact-sql"></a>MSarticles (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  **MSarticles**テーブルには、パブリッシャーによってレプリケートされる各アーティクルに対して 1 つの行が含まれています。 このテーブルは、ディストリビューション データベースに保存されます。  
+  **MSarticles**テーブルには、パブリッシャーによってレプリケートされる各アーティクルに対して 1 つの行が含まれています。 このテーブルは、ディストリビューション データベースに格納されます。  
   
 |列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
@@ -39,12 +38,12 @@ ms.locfileid: "52750065"
 |**article_id**|**int**|アーティクルの ID。|  
 |**destination_object**|**sysname**|サブスクライバーで作成されるテーブルの名前。|  
 |**source_owner**|**sysname**|パブリッシャー上の元のテーブルのスキーマの名前です。|  
-|**source_object**|**sysname**|追加するアーティクルのソース オブジェクトの名前です。|  
-|**description**|**nvarchar (255)**|アーティクルの説明です。|  
-|**destination_owner**|**sysname**|サブスクライバーで作成されるテーブルのスキーマの名前です。|  
+|**source_object**|**sysname**|追加するアーティクルのソース オブジェクトの名前。|  
+|**description**|**nvarchar (255)**|この記事の説明です。|  
+|**destination_owner**|**sysname**|サブスクライバーで作成されたテーブルのスキーマの名前。|  
   
-## <a name="see-also"></a>参照  
- [レプリケーション テーブル &#40; です。TRANSACT-SQL と &#41; です。](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
+## <a name="see-also"></a>関連項目  
+ [レプリケーション テーブル &#40;Transact-SQL&#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
  [レプリケーション ビュー &#40;Transact-SQL&#41;](../../relational-databases/system-views/replication-views-transact-sql.md)  
   
   

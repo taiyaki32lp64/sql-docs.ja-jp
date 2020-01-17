@@ -1,52 +1,50 @@
 ---
-title: SQL Server on Linux のログ配布の構成 |Microsoft Docs
-description: このチュートリアルでは、ログ配布を使用して、セカンダリ インスタンスを Linux 上の SQL Server インスタンスをレプリケートする方法の基本的な例を示します。
-author: meet-bhagdev
-ms.author: meetb
-manager: craigg
+title: SQL Server on Linux 用にログ配布を構成する
+description: このチュートリアルでは、ログ配布を使用して Linux 上の SQL Server インスタンスをセカンダリ インスタンスにレプリケートする方法の基本的な例を示します。
+author: VanMSFT
+ms.author: vanto
 ms.date: 04/19/2017
 ms.topic: conceptual
 ms.prod: sql
-ms.custom: sql-linux
 ms.technology: linux
-ms.openlocfilehash: f4acb72fe8ac0a5f8a85427fbcec5e1a657a1788
-ms.sourcegitcommit: af1d9fc4a50baf3df60488b4c630ce68f7e75ed1
-ms.translationtype: MT
+ms.openlocfilehash: 8bc7fa51eeb5d02400b15556a3bec06ce721c1de
+ms.sourcegitcommit: 27c267bf2a3cfaf2abcb5f3777534803bf4cffe5
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/06/2018
-ms.locfileid: "51032329"
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73240706"
 ---
-# <a name="get-started-with-log-shipping-on-linux"></a>Linux 上のログ配布の概要します。
+# <a name="get-started-with-log-shipping-on-linux"></a>Linux でのログ配布の概要
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
-SQL Server ログ配布は、1 つまたは複数のセカンダリ サーバー上にプライマリ サーバーからのデータベースがレプリケートされる HA 構成です。 簡単に言うと、セカンダリ サーバー上にソース データベースのバックアップが復元されます。 トランザクション ログ バックアップを作成、プライマリ サーバー、定期的にし、セカンダリ サーバー、復元するデータベースのセカンダリ コピーを更新します。 
+SQL Server のログ配布は、プライマリ サーバーのデータベースが 1 つ以上のセカンダリ サーバーにレプリケートされる HA 構成です。 簡単に言うと、ソース データベースのバックアップがセカンダリ サーバーに復元されます。 その後、プライマリ サーバーではトランザクション ログのバックアップが定期的に作成され、セカンダリ サーバーでそれらが復元されて、データベースのセカンダリ コピーが更新されます。 
 
   ![ログ配布](https://preview.ibb.co/hr5Ri5/logshipping.png)
 
 
-この」の説明に従って画像、ログ配布セッションを次の手順が含まれます。
+この図で説明されているように、ログ配布セッションには次のステップが含まれます。
 
-- プライマリ SQL Server インスタンスでトランザクション ログ ファイルのバックアップ
-- 1 つまたは複数のセカンダリ SQL Server インスタンスに、ネットワーク経由でのトランザクション ログ バックアップ ファイルをコピー
-- セカンダリ SQL Server インスタンスでトランザクション ログ バックアップ ファイルを復元します。
+- プライマリ SQL Server インスタンスでのトランザクション ログ ファイルのバックアップ
+- ネットワーク経由での、1 つまたは複数のセカンダリ SQL Server インスタンスへの、トランザクション ログ バックアップ ファイルのコピー
+- セカンダリ SQL Server インスタンスでのトランザクション ログ バックアップ ファイルの復元
 
-## <a name="prerequisites"></a>前提条件
-- [Linux 上の SQL Server エージェントをインストールします。](https://docs.microsoft.com/sql/linux/sql-server-linux-setup-sql-agent)
+## <a name="prerequisites"></a>Prerequisites
+- [Linux 上に SQL Server エージェントをインストールします](https://docs.microsoft.com/sql/linux/sql-server-linux-setup-sql-agent)
 
-## <a name="setup-a-network-share-for-log-shipping-using-cifs"></a>CIFS を使用してログの配布用のネットワーク共有をセットアップします。 
+## <a name="setup-a-network-share-for-log-shipping-using-cifs"></a>CIFS を使用したログ配布用にネットワーク共有をセットアップする 
 
 > [!NOTE] 
-> このチュートリアルでは、CIFS + Samba を使用して、ネットワーク共有を設定します。 NFS を使用する場合は、コメントを残すし、ドキュメントに追加していきます。       
+> このチュートリアルでは、CIFS + Samba を使ってネットワーク共有をセットアップします。 NFS を使いたい場合は、コメントを残していただければ、ドキュメントに追加します。       
 
-### <a name="configure-primary-server"></a>プライマリ サーバーを構成します。
--   Samba をインストールするには、次を実行します。
+### <a name="configure-primary-server"></a>プライマリ サーバーを構成する
+-   次を実行して Samba をインストールします
 
     ```bash
     sudo apt-get install samba #For Ubuntu
     sudo yum -y install samba #For RHEL/CentOS
     ```
--   ログ配布のログを保存し、mssql の必要なアクセス許可を付与するディレクトリを作成します。
+-   ログ配布用のログを格納するディレクトリを作成し、必要なアクセス許可を mssql に付与します
 
     ```bash
     mkdir /var/opt/mssql/tlogs
@@ -54,7 +52,7 @@ SQL Server ログ配布は、1 つまたは複数のセカンダリ サーバー
     chmod 0700 /var/opt/mssql/tlogs
     ```
 
--   (必要なルートのアクセス許可を)、/etc/samba/smb.conf ファイルを編集し、次のセクションを追加します。
+-   /etc/samba/smb.conf ファイルを編集し (そのためにはルート アクセス許可が必要です)、次のセクションを追加します。
 
     ```bash
     [tlogs]
@@ -66,26 +64,26 @@ SQL Server ログ配布は、1 つまたは複数のセカンダリ サーバー
     writable=no
     ```
 
--   Samba を mssql ユーザーを作成します。
+-   Samba 用の mssql ユーザーを作成します
 
     ```bash
     sudo smbpasswd -a mssql
     ```
 
--   Samba のサービスを再起動します。
+-   Samba サービスを再起動します
     ```bash
     sudo systemctl restart smbd.service nmbd.service
     ```
  
-### <a name="configure-secondary-server"></a>セカンダリ サーバーを構成します。
+### <a name="configure-secondary-server"></a>セカンダリ サーバーを構成する
 
--   CIFS クライアントをインストールするのには、次を実行します。
+-   次を実行して CIFS クライアントをインストールします
     ```bash   
     sudo apt-get install cifs-utils #For Ubuntu
     sudo yum -y install cifs-utils #For RHEL/CentOS
     ```
 
--   資格情報を格納するファイルを作成します。 最近、mssql Samba アカウントを設定したパスワードを使用して、 
+-   資格情報を格納するためのファイルを作成します。 mssql Samba アカウントに対して前に設定したパスワードを使用します 
 
         vim /var/opt/mssql/.tlogcreds
         #Paste the following in .tlogcreds
@@ -93,7 +91,7 @@ SQL Server ログ配布は、1 つまたは複数のセカンダリ サーバー
         domain=<domain>
         password=<password>
 
--   マウントの空のディレクトリを作成し、アクセス許可と所有権を正しく設定するには、次のコマンドを実行します。
+-   次のコマンドを実行して、マウント用の空のディレクトリを作成し、アクセス許可と所有権を正しく設定します
     ```bash   
     mkdir /var/opt/mssql/tlogs
     sudo chown root:root /var/opt/mssql/tlogs
@@ -102,25 +100,25 @@ SQL Server ログ配布は、1 つまたは複数のセカンダリ サーバー
     sudo chmod 0660 /var/opt/mssql/.tlogcreds
     ```
 
--   共有を保持するなど/fstab に行を追加します。 
+-   etc/fstab に行を追加して、共有を保持します 
 
         //<ip_address_of_primary_server>/tlogs /var/opt/mssql/tlogs cifs credentials=/var/opt/mssql/.tlogcreds,ro,uid=mssql,gid=mssql 0 0
         
--   共有をマウントします。
+-   共有をマウントします
     ```bash   
     sudo mount -a
     ```
        
-## <a name="setup-log-shipping-via-t-sql"></a>ログ配布の T-SQL でのセットアップします。
+## <a name="setup-log-shipping-via-t-sql"></a>T-SQL を使用してログ配布をセットアップする
 
-- プライマリ サーバーからこのスクリプトを実行します。
+- プライマリ サーバーから次のスクリプトを実行します
 
-    ```tsql
+    ```sql
     BACKUP DATABASE SampleDB
     TO DISK = '/var/opt/mssql/tlogs/SampleDB.bak'
     GO
     ```
-    ```tsql
+    ```sql
     DECLARE @LS_BackupJobId AS uniqueidentifier 
     DECLARE @LS_PrimaryId   AS uniqueidentifier 
     DECLARE @SP_Add_RetCode As int 
@@ -179,14 +177,14 @@ SQL Server ログ配布は、1 つまたは複数のセカンダリ サーバー
     ```
 
 
-- セカンダリ サーバーからこのスクリプトを実行します。
+- セカンダリ サーバーから次のスクリプトを実行します
 
-    ```tsql
+    ```sql
     RESTORE DATABASE SampleDB FROM DISK = '/var/opt/mssql/tlogs/SampleDB.bak'
     WITH NORECOVERY;
     ```
     
-    ```tsql
+    ```sql
     DECLARE @LS_Secondary__CopyJobId    AS uniqueidentifier 
     DECLARE @LS_Secondary__RestoreJobId AS uniqueidentifier 
     DECLARE @LS_Secondary__SecondaryId  AS uniqueidentifier 
@@ -285,11 +283,11 @@ SQL Server ログ配布は、1 つまたは複数のセカンダリ サーバー
     END 
     ```
 
-## <a name="verify-log-shipping-works"></a>ログ配布の動作を確認します
+## <a name="verify-log-shipping-works"></a>ログ配布の動作を確認する
 
-- プライマリ サーバーで次のジョブを開始してログ配布が機能することを確認します。
+- プライマリ サーバーで次のジョブを開始して、ログ配布が機能することを確認します
 
-    ```tsql
+    ```sql
     USE msdb ;  
     GO  
 
@@ -297,9 +295,9 @@ SQL Server ログ配布は、1 つまたは複数のセカンダリ サーバー
     GO  
     ```
 
-- セカンダリ サーバーで次のジョブを開始してログ配布が機能することを確認します。
+- セカンダリ サーバーで次のジョブを開始して、ログ配布が機能することを確認します
  
-    ```tsql
+    ```sql
     USE msdb ;  
     GO  
 
@@ -307,6 +305,13 @@ SQL Server ログ配布は、1 つまたは複数のセカンダリ サーバー
     GO  
     EXEC dbo.sp_start_job N'LSRestore_SampleDB' ;  
     GO  
+    ```
+ - 次のコマンドを実行して、ログ配布フェールオーバーが機能することを確認します
+ 
+    > [!WARNING]
+    > このコマンドを実行すると、セカンダリ データベースがオンラインになり、ログ配布構成が中断されます。 このコマンドを実行した後、ログ配布を再構成する必要があります。
+ 
+    ```sql
     RESTORE DATABASE SampleDB WITH RECOVERY;
     ```
 

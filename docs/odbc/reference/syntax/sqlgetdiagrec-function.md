@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: ebdbac93-3d68-438f-8416-ef1f08e04269
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: ab81694fb0234a896a7e9fd09d338e8db43360eb
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: c404cbb1f29adbdcb49ef6bed8bb57a047f64f3b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53207511"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67911315"
 ---
 # <a name="sqlgetdiagrec-function"></a>SQLGetDiagRec 関数
 **準拠**  
@@ -36,7 +35,7 @@ ms.locfileid: "53207511"
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
   
 SQLRETURN SQLGetDiagRec(  
      SQLSMALLINT     HandleType,  

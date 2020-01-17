@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: af24f2c4-5e86-4135-a4f3-a24faaeeefe7
 author: Shamikg
 ms.author: Shamikg
-manager: craigg
-ms.openlocfilehash: aae49bb6eb8ecf067911b2cb64017af0f3143aa0
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: c6d83e81253430f243fcaed55b66f6d0de6299ca
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47805070"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68083499"
 ---
 # <a name="assessment-report-sybasetosql"></a>評価レポート (SybaseToSQL)
 評価レポート ウィンドウには、データベース オブジェクトの変換の結果が表示されます。[!INCLUDE[tsql](../../includes/tsql-md.md)]構文、およびヘルプの複雑さと、移行プロジェクトのコストを見積もることができます。  

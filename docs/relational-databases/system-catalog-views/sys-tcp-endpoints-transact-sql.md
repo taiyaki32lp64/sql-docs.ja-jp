@@ -19,29 +19,28 @@ helpviewer_keywords:
 ms.assetid: 43cc3afa-cced-4463-8e97-fbfdaf2e4fa8
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: ad6a7f9e9c727f88015b9b815a37a5825e3b2f47
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 7e4b711a7d36e7677f6f32b87ff4c696db231730
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47805510"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68116731"
 ---
-# <a name="systcpendpoints-transact-sql"></a>sys.tcp_endpoints (Transact-SQL)
+# <a name="systcp_endpoints-transact-sql"></a>sys.tcp_endpoints (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  システム内の各 TCP エンドポイントごとに 1 行のデータを保持します。 によって記述されるエンドポイント**sys.tcp_endpoints**許可し、接続権限を取り消すオブジェクトを提供します。 ポートおよび IP アドレスに関して表示される情報は、プロトコルの構成に使用されるものではなく、実際のプロトコルの構成と一致しない場合もあります。 表示し、プロトコルの構成を使用して、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Configuration Manager。  
+  各 TCP エンドポイントには、システム内の 1 つの行が含まれています。 によって記述されるエンドポイント**sys.tcp_endpoints**許可し、接続権限を取り消すオブジェクトを提供します。 情報を表示する関連ポートと IP アドレスは、プロトコルを構成するには使用されませんし、実際のプロトコルの構成が一致しません。 表示し、プロトコルの構成を使用して、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Configuration Manager。  
   
   
 |列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
 |**< 継承された列 >**||列を継承[sys.endpoints](../../relational-databases/system-catalog-views/sys-endpoints-transact-sql.md)します。|  
-|**port**|ssNoversion|エンドポイントがリッスンするポート番号です。 NULL 値は許可されません。|  
-|**is_dynamic_port**|bit|1 = ポート番号が動的に割り当てられました。<br /><br /> NULL 値は許可されません。|  
-|**ip_address**|**nvarchar(45)**|LISTENER_IP 句で指定されたリスナーの IP アドレスです。 NULL 値が許可されます。|  
+|**port**|int|エンドポイントがリッスンするポート番号です。 NULL 値は許可されません。|  
+|**is_dynamic_port**|bit|1 = ポート番号が動的に割り当てられます。<br /><br /> NULL 値は許可されません。|  
+|**ip_address**|**nvarchar(45)**|LISTENER_IP 句で指定されたリスナーの IP アドレス。 NULL 値が許可されます。|  
   
 ## <a name="remarks"></a>コメント  
- 次のクエリを実行して、エンドポイントおよび接続に関する情報を収集します。 現在の接続または TCP 接続を使用しないエンドポイントは、NULL 値と共に表示されます。 追加、**場所**句`WHERE des.session_id = @@SPID`現在の接続に関する情報を返します。  
+ エンドポイントと接続に関する情報を収集するためには、次のクエリを実行します。 エンドポイントまたは TCP 接続を使用せず、現在の接続には、NULL 値が表示されます。 追加、**WHERE**句`WHERE des.session_id = @@SPID`現在の接続に関する情報を返します。  
   
 ```  
 SELECT des.login_name, des.host_name, program_name,  dec.net_transport, des.login_time,   

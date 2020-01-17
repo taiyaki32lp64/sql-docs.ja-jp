@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 12/29/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - data preparation
@@ -15,12 +14,12 @@ ms.assetid: 714845a9-4c27-461a-9ba3-149e1e818386
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: ae3ac89f40c67a8097db676ba0628a25d260fbeb
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 0bad2a2e65a65bbafa8218a3e0afbedd4b9f13b6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48082672"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66081304"
 ---
 # <a name="explore-data-sql-server-data-mining-add-ins"></a>データの探索 (SQL Server データ マイニング アドイン)
   ![探索データ ウィザード](media/dmc-explore.gif "データの探索ウィザード")  
@@ -49,7 +48,7 @@ ms.locfileid: "48082672"
   
 5.  オプションで、新しい列をデータに追加したり、データを分割する方法を変更したり、グラフを Excel にコピーしたりできます。  
   
-### <a name="requirements"></a>要件  
+### <a name="requirements"></a>必要条件  
  使用する、**データの探索**ウィザード、データは、Excel データ テーブルである必要があります。   
   
 ## <a name="see-also"></a>参照  

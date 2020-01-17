@@ -1,21 +1,20 @@
 ---
 title: Reporting Services の REST API による開発 | Microsoft Docs
 ms.description: The REST API provides programmatic access to the objects in a SQL Server 2017 Reporting Services report server catalog.
-author: markingmyname
-ms.author: maghan
-manager: kfile
+author: maggiesMSFT
+ms.author: maggies
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: developer
 ms.topic: conceptual
 ms.custom: seodec18
 ms.date: 12/12/2018
-ms.openlocfilehash: c3ea066f93f2848ed822fdac24f37b2c5f179ac9
-ms.sourcegitcommit: bfa10c54e871700de285d7f819095d51ef70d997
-ms.translationtype: HT
+ms.openlocfilehash: ba424fa0c79249a8870962d0df4cdaf383c9aa39
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/14/2019
-ms.locfileid: "54254697"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68263030"
 ---
 # <a name="develop-with-the-rest-apis-for-reporting-services"></a>Reporting Services の REST API による開発
 
@@ -33,10 +32,10 @@ REST API の要求/応答ペアは、次の 5 つのコンポーネントに分�
 
 * **要求 URI**。`{URI-scheme} :// {URI-host} / {resource-path} ? {query-string}` で構成されます。 要求 URI は要求メッセージ ヘッダーに含まれていますが、ほとんどの言語やフレームワークでは要求メッセージとは別に渡す必要があるため、ここでは独立した項目にしてあります。
 
-    * URI スキーム:要求の送信に使用されるプロトコルを示します。 たとえば、`http` や `https` などです。
-    * URI ホスト:`myserver.contoso.com` など、REST サービス エンドポイントがホストされているサーバーのドメイン名または IP アドレスを指定します。
-    * リソース パス:リソースまたはリソース コレクションを指定します。リソースの選択を決定するときにサービスによって使用される複数のセグメントを含むことができます。 たとえば、`CatalogItems(01234567-89ab-cdef-0123-456789abcdef)/Properties` を使用して、CatalogItem の指定したプロパティを取得できます。
-    * クエリ文字列 (省略可能):API のバージョンやリソースの選択条件など、簡単な追加パラメーターを提供します。
+    * URI スキーム: 要求の送信に使用されるプロトコルを示します。 たとえば、`http` や `https` などです。
+    * URI ホスト: `myserver.contoso.com` など、REST サービス エンドポイントがホストされているサーバーのドメイン名または IP アドレスを指定します。
+    * リソース パス: リソースまたはリソース コレクションを指定します。リソースの選択を決定するときにサービスによって使用される複数のセグメントを含むことができます。 たとえば、`CatalogItems(01234567-89ab-cdef-0123-456789abcdef)/Properties` を使用して、CatalogItem の指定したプロパティを取得できます。
+    * クエリ文字列 (省略可能): API のバージョンやリソースの選択条件など、簡単な追加パラメーターを提供します。
 
 * HTTP 要求メッセージ ヘッダーのフィールド:
 
@@ -56,7 +55,7 @@ REST API の要求/応答ペアは、次の 5 つのコンポーネントに分�
 
 ## <a name="api-documentation"></a>API のドキュメント
 
-最新の REST API には最新の API ドキュメントが必要です。 REST API は OpenAPI 仕様 ( Swagger 仕様ともいう) に基づいてビルドされており、ドキュメントは [SwaggerHub](https://app.swaggerhub.com/api/microsoft-rs/SSRS/2.0) で入手できます。 SwaggerHub は、API の文書化だけでなく、任意の言語 (JavaScript、TypeScript、C#、Java、Python、Ruby など) でのクライアント ライブラリの作成にも役立ちます。
+最新の REST API には最新の API ドキュメントが必要です。 REST API は OpenAPI 仕様 (Swagger 仕様ともいう) に基づいてビルドされており、ドキュメントは [SwaggerHub](https://app.swaggerhub.com/api/microsoft-rs/SSRS/2.0) で入手できます。 SwaggerHub は、API の文書化だけでなく、任意の言語 (JavaScript、TypeScript、C#、Java、Python、Ruby など) でのクライアント ライブラリの作成にも役立ちます。
 
 ## <a name="testing-api-calls"></a>API 呼び出しのテスト
 

@@ -19,14 +19,13 @@ helpviewer_keywords:
 ms.assetid: c768b67c-82a4-47f5-850b-0ea282358d50
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: dec718bfea5748db1baa4bb5d9be8c01b85ace26
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b2b6f88e857ab7fc6300698174914126fb0881f6
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47643490"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68265733"
 ---
 # <a name="sysdmosnodes-transact-sql"></a>sys.dm_os_nodes (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -44,7 +43,7 @@ SQLOS という内部コンポーネントは、ハードウェア プロセッ�
 |列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
 |node_id|**smallint**|ノードの ID。|  
-|node_state_desc|**nvarchar (256)**|ノード状態の説明。 相互排他的な値から先に表示され、続けて、組み合わせ可能な値が表示されます。 以下に例を示します。<br /> Online、Thread Resources Low、Lazy Preemptive<br /><br />次の 4 つの相互に排他的な node_state_desc 値があります。 以下の説明が表示されます。<br /><ul><li>ノードがオンラインでオンラインにします。<li>ノードがオフライン オフラインです。<li>アイドル状態: ノードは、保留中の作業の要求がなくがアイドル状態の状態になった。<li>IDLE_READY: ノードは、保留中の作業の要求がないとがアイドル状態になります。</li></ul><br />その説明を以下に示す 3 つの組み合わせ可能な node_state_desc 値があります。<br /><ul><li>DAC: このノードが用に予約された[専用管理者接続](../../database-engine/configure-windows/diagnostic-connection-for-database-administrators.md)します。<li>THREAD_RESOURCES_LOW: 新しいスレッドを作成できませんこのノードでメモリ不足状態が原因です。<li>ホット追加されました。 は、ノードが応答に追加されたことを示します、ホット アド CPU イベントです。</li></ul>|  
+|node_state_desc|**nvarchar (256)**|ノード状態の説明。 相互排他的な値から先に表示され、続けて、組み合わせ可能な値が表示されます。 以下に例を示します。<br /> Online、Thread Resources Low、Lazy Preemptive<br /><br />次の 4 つの相互に排他的な node_state_desc 値があります。 以下の説明が表示されます。<br /><ul><li>ONLINE: ノードがオンライン<li>OFFLINE: ノードがオフライン<li>IDLE: ノードは、保留中の作業要求がないがアイドル状態の状態になった。<li>IDLE_READY:ノードは、保留中の作業の要求がないがアイドル状態になります。</li></ul><br />その説明を以下に示す 3 つの組み合わせ可能な node_state_desc 値があります。<br /><ul><li>DAC:このノード用に予約された、[専用管理者接続](../../database-engine/configure-windows/diagnostic-connection-for-database-administrators.md)します。<li>THREAD_RESOURCES_LOW:新しいスレッドを作成できませんこのノードでメモリ不足状態が原因です。<li>ホット追加されます。ノードが応答に追加されたことを示します。 ホット アド CPU イベントです。</li></ul>|  
 |memory_object_address|**varbinary(8)**|このノードに関連付けられているメモリ オブジェクトのアドレス。 一対一の関係に[sys.dm_os_memory_objects](../../relational-databases/system-dynamic-management-views/sys-dm-os-memory-objects-transact-sql.md).memory_object_address します。|  
 |memory_clerk_address|**varbinary(8)**|このノードに関連付けられているメモリ クラークのアドレス。 一対一の関係に[sys.dm_os_memory_clerks](../../relational-databases/system-dynamic-management-views/sys-dm-os-memory-clerks-transact-sql.md).memory_clerk_address します。|  
 |io_completion_worker_address|**varbinary(8)**|このノードの IO 完了に割り当てられているワーカーのアドレス。 一対一の関係に[sys.dm_os_workers](../../relational-databases/system-dynamic-management-views/sys-dm-os-workers-transact-sql.md).worker_address します。|  
@@ -65,9 +64,9 @@ SQLOS という内部コンポーネントは、ハードウェア プロセッ�
 ## <a name="permissions"></a>アクセス許可
 
 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]、必要があります`VIEW SERVER STATE`権限。   
-[!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]が必要です、`VIEW DATABASE STATE`データベースの権限。   
+[!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] Premium レベルでは、必要があります、`VIEW DATABASE STATE`データベースの権限。 [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] Standard および Basic 階層は、必要があります、**サーバー管理者**または**Azure Active Directory 管理者**アカウント。   
 
-## <a name="see-also"></a>参照    
+## <a name="see-also"></a>関連項目    
  [SQL Server オペレーティング システム関連の動的管理ビュー &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sql-server-operating-system-related-dynamic-management-views-transact-sql.md)   
  [ソフト NUMA &#40;SQL Server&#41;](../../database-engine/configure-windows/soft-numa-sql-server.md)  
   

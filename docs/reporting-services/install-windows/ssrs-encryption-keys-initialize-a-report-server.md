@@ -12,14 +12,14 @@ helpviewer_keywords:
 - initializing report servers [Reporting Services]
 - verifying report server initializations
 ms.assetid: 861d4ec4-1085-412c-9a82-68869a77bd55
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: ec32fcd9a05fe0123e25570d47f1d613a6c00502
-ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 8fdb68c0e61d5b48db3a997af0315e7cabf302f6
+ms.sourcegitcommit: 312b961cfe3a540d8f304962909cd93d0a9c330b
+ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51813322"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73593545"
 ---
 # <a name="ssrs-encryption-keys---initialize-a-report-server"></a>SSRS の暗号化キー - レポート サーバーの初期化
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]では、初期化されたサーバーとは、レポート サーバー データベース内のデータの暗号化および暗号化解除を実行できるサーバーのことです。 レポート サーバーを操作するには、初期化が必要です。 初期化は、レポート サーバー サービスを最初に開始するときに行われます。 また、既存の配置にレポート サーバーを追加するときや、復旧処理の一環としてキーを手動で再作成するときにも、初期化が行われます。 暗号化キーを使用する方法と理由の詳細については、「[暗号化キーの構成と管理 (構成マネージャー)](../../reporting-services/install-windows/ssrs-encryption-keys-manage-encryption-keys.md)」および「[暗号化されたレポート サーバー データの格納 (SSRS 構成マネージャー)](../../reporting-services/install-windows/ssrs-encryption-keys-store-encrypted-report-server-data.md)」を参照してください。  
@@ -62,7 +62,7 @@ ms.locfileid: "51813322"
  レポート サーバーは、インストール識別子と公開キーが一致する場合のみ初期化されます。 正しく一致すると、暗号化の解除を許可する対称キーが作成されます。 一致しないと、レポート サーバーが無効になります。このとき、バックアップ キーの適用、またはバックアップ キーが利用できない場合や有効でない場合に暗号化データの削除が必要になることがあります。 レポート サーバーによる暗号化キーの使用の詳細については、「[暗号化キーの構成と管理 (SSRS 構成マネージャー)](../../reporting-services/install-windows/ssrs-encryption-keys-manage-encryption-keys.md)」を参照してください。  
   
 > [!NOTE]  
->  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] の Windows Management Instrumentation (WMI) プロバイダーを使用して、レポート サーバーをプログラムで初期化することもできます。 詳細については、 [オンライン ブックの「](../../reporting-services/tools/access-the-reporting-services-wmi-provider.md) Reporting Service WMI プロバイダーへのアクセス [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 」を参照してください。  
+>  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] の Windows Management Instrumentation (WMI) プロバイダーを使用して、レポート サーバーをプログラムで初期化することもできます。 詳細については、「 [Reporting Service WMI プロバイダーへのアクセス](../../reporting-services/tools/access-the-reporting-services-wmi-provider.md)」を参照してください。  
   
 ## <a name="how-to-confirm-a-report-server-initialization"></a>レポート サーバーの初期化の確認方法  
  レポート サーバーの初期化を確認するには、コマンド ウィンドウで「**https://\<サーバー名>/reportserver**」と入力し、レポート サーバー Web サービスに対して ping を実行します。 **RSReportServerNotActivated** エラーが発生した場合は、初期化が失敗しています。  

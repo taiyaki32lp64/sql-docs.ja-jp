@@ -15,12 +15,12 @@ ms.assetid: 042be17a-b9b0-4629-b6bb-b87a8bc6c316
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 5586e7f4ff8ebdfbb7f2db44dc79155eca60b8fe
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 79ab28861fb4ad1eb3fb166e0cccb6b30ff89f86
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48203682"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62877051"
 ---
 # <a name="specify-whether-a-backup-or-restore-operation-continues-or-stops-after-encountering-an-error-sql-server"></a>バックアップまたは復元の操作をエラー発生後に続行するか停止するかを指定する (SQL Server)
   このトピックでは、 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] で [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] または [!INCLUDE[tsql](../../includes/tsql-md.md)]を使用して、エラーが発生したときにバックアップ操作または復元操作を中止するか続行するかを指定する方法を説明します。  
@@ -37,7 +37,7 @@ ms.locfileid: "48203682"
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> 作業を開始する準備  
+##  <a name="BeforeYouBegin"></a> はじめに  
   
 ###  <a name="Security"></a> セキュリティ  
   
@@ -70,7 +70,7 @@ ms.locfileid: "48203682"
   
 3.  [BACKUP](/sql/t-sql/statements/backup-transact-sql) ステートメントに、続行する場合は CONTINUE_AFTER ERROR オプションを、停止する場合は STOP_ON_ERROR オプションを指定します。 既定の動作は、エラーが発生した場合は停止することです。 次の例では、エラーが発生してもバックアップ操作を続行するように命令します。  
   
-```tsql  
+```sql  
 BACKUP DATABASE AdventureWorks2012   
  TO DISK = 'Z:\SQLServerBackups\AdvWorksData.bak'  
    WITH CHECKSUM, CONTINUE_AFTER_ERROR;  
@@ -85,7 +85,7 @@ GO
   
 3.  [RESTORE](/sql/t-sql/statements/restore-statements-transact-sql) ステートメントに、続行する場合は CONTINUE_AFTER ERROR オプションを、停止する場合は STOP_ON_ERROR オプションを指定します。 既定の動作は、エラーが発生した場合は停止することです。 次の例では、エラーが発生しても復元操作を続行するように命令します。  
   
-```tsql  
+```sql  
 RESTORE DATABASE AdventureWorks2012   
  FROM DISK = 'Z:\SQLServerBackups\AdvWorksData.bak'   
    WITH CHECKSUM, CONTINUE_AFTER_ERROR;  

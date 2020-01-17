@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: f0077c9b-8eb2-4b5f-8c4c-7436fdef37ab
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: ec1d8f0a79f9bcd08fc74bc9d5e7fd52da4a2709
-ms.sourcegitcommit: cebfa2610ea36e3c5ad510c214590035ecb499c2
+ms.openlocfilehash: 748f2452d20b618ae0011e2e1ac4e24af098ac06
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/04/2019
-ms.locfileid: "55689895"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68019048"
 ---
 # <a name="data-type-identifiers-and-descriptors"></a>データ型識別子と記述子
 データの種類の一覧を[SQL データ型](../../../odbc/reference/appendixes/sql-data-types.md)と[C データ型](../../../odbc/reference/appendixes/c-data-types.md)前のセクションでは「簡潔な」のデータ型。各識別子は、1 つのデータ型を参照します。 Id とデータ型の間、一対一で対応します。 すべてのケースでは、1 つの値を使用して、データ型を識別するために、記述子がではなく行うただし。 場合によっては、"verbose"のデータ型と型サブコード使用します。 Datetime と間隔のデータ型を除くすべてのデータ型の詳細な型の識別子は、簡潔なタイプ識別子と同じと SQL_DESC_DATETIME_INTERVAL_CODE の値は 0 にします。 Datetime と間隔のデータ型のただし、(SQL_DATETIME または SQL_INTERVAL) の詳細な型に格納 SQL_DESC_TYPE、SQL_DESC_CONCISE_TYPE で簡潔な型が格納されているされ SQL_DESC_DATETIME_INTERVAL_CODE に簡潔な各種のサブコードが格納されています。 これらのフィールドのいずれかを設定すると、他に影響します。 これらのフィールドの詳細については、次を参照してください。、 [SQLSetDescField](../../../odbc/reference/syntax/sqlsetdescfield-function.md)関数の説明。  

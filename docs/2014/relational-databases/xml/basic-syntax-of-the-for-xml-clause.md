@@ -13,15 +13,15 @@ helpviewer_keywords:
 - FOR XML clause, syntax
 - FOR XML clause, ROOT directive
 ms.assetid: df19ecbf-d28e-4e9c-aaa3-700f8bbd3be4
-author: douglaslMS
-ms.author: douglasl
+author: MightyPen
+ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 9216eca73e0251b20f28793020a3d05e9bd20310
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 0bb04374ede05406fdf6d273a76a246bb35f5dac
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48053962"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62637872"
 ---
 # <a name="basic-syntax-of-the-for-xml-clause"></a>FOR XML 句の基本構文
   FOR XML モードには、RAW、AUTO、EXPLICIT、または PATH を使用できます。 このモードにより、結果の XML の構造が決まります。  

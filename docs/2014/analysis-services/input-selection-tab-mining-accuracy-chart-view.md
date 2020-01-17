@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dm.miningmodeleditor.accuracychart.columnmapping.f1
@@ -13,20 +12,20 @@ ms.assetid: f8b1193c-5c86-4c7e-8e35-158d293184fa
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: c1027310bdf012f00e7b70981521088d69d08598
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 3fb4771c7345eb270e91a377d2755a25606f9a93
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48120872"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66080421"
 ---
 # <a name="input-selection-tab-mining-accuracy-chart-view"></a>[入力の選択] タブ ([マイニング精度チャート] ビュー)
   **[マイニング精度チャート]** デザイナーの **[入力の選択]** タブを使用すると、モデルのテストや精度チャートの作成に使用するデータのソースを指定できます。  
   
- **詳細情報:** 「[テストおよび検証 &#40;データ マイニング&#41;](data-mining/testing-and-validation-data-mining.md)」  
+ **詳細:** [テストおよび検証 (データ マイニング)](data-mining/testing-and-validation-data-mining.md)  
   
 ## <a name="options"></a>および  
- **[予測列と****値の同期]**  
+ **予測列と** **値の同期**  
  グリッドの予測可能な属性を調整する場合にオンにします。属性が異なる名前を持っていても、モデル トレーニング中に同じ予測可能なマイニング構造列から属性が派生されるように調整します。  
   
  **注** 既定では、このオプションはオンになっています。 2 つのマイニング構造列の基になるリレーショナル ソースまたは多次元ソースが同じで、列の状態が同じであるかまたは不連続性が同じであることがわかっている場合にのみ、オフにしてください。  
@@ -36,7 +35,7 @@ ms.locfileid: "48120872"
   
 |値|説明|  
 |-----------|-----------------|  
-|**[表示]**|グラフに表示するマイニング モデル内の各予測可能列の名前の横にあるボックスをオンにします。<br /><br /> グラフが複雑で見づらい場合は、1 つまたは複数の列の横にあるボックスをオフにすると、見やすくなります。<br /><br /> 注: 1 つ以上の列が選択されていないと精度チャートを作成できません。|  
+|**[表示]**|グラフに表示するマイニング モデル内の各予測可能列の名前の横にあるボックスをオンにします。<br /><br /> グラフが複雑で見づらい場合は、1 つまたは複数の列の横にあるボックスをオフにすると、見やすくなります。<br /><br /> 注:少なくとも 1 つの列が選択されていないと精度チャートを作成できません。|  
 |**[マイニング モデル]**|マイニング構造に含まれるマイニング モデルを一覧表示します。|  
 |**予測可能列名**|リフト チャートの作成に使用される、マイニング モデル内に含まれた予測可能列を選択します。|  
 |**値を予測します。**|予測可能列の値を選択します。 この値を空白にすると、リフト チャートは、予測可能列のすべての状態に対してモデルがどのように実行されるかを予測します。|  
@@ -68,10 +67,10 @@ ms.locfileid: "48120872"
  **開いているフィルター エディター**  
  **[データセット フィルター]** ダイアログ ボックスを開きます。このダイアログ ボックスでは、外部テーブルの選択やケース テーブル列への条件の設定を行うことができます。さらに、 **[フィルター]** ダイアログ ボックスを使用して、選択されているテーブルの個々の列または入れ子になったテーブルの列に適用する条件を作成できます。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [テスト、検証タスク、および操作方法&#40;データ マイニング&#41;](data-mining/testing-and-validation-tasks-and-how-tos-data-mining.md)   
  [マイニング精度チャート デザイナー&#40;データ マイニング&#41;](mining-accuracy-chart-designer-data-mining.md)   
  [マイニング モデルにフィルターを適用します。](data-mining/apply-a-filter-to-a-mining-model.md)   
- [マイニング モデルのフィルター選択&#40;Analysis Services - データ マイニング&#41;](data-mining/mining-models-analysis-services-data-mining.md)  
+ [マイニング モデルのフィルター &#40;Analysis Services - データ マイニング&#41;](data-mining/mining-models-analysis-services-data-mining.md)  
   
   

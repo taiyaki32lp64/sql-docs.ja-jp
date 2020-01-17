@@ -1,6 +1,5 @@
 ---
-title: XPath クエリ (SQLXMLOLEDB プロバイダー) の実行 |Microsoft Docs
-ms.custom: ''
+title: XPath クエリの実行 (SQLXMLOLEDB プロバイダー)
 ms.date: 03/16/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -16,18 +15,17 @@ helpviewer_keywords:
 ms.assetid: 19063222-dc9c-48ae-a55f-778103674a9e
 author: MightyPen
 ms.author: genemi
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 32c641afad155955f5b6aaba890c29a05b6ae3d7
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: cbed0ee01fbe2f2a632f81265e0722eb1ad32727
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56009604"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75246629"
 ---
 # <a name="executing-xpath-queries-sqlxmloledb-provider"></a>XPath クエリの実行 (SQLXMLOLEDB プロバイダー)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-  この例では、次の SQLXMLOLEDB プロバイダー固有のプロパティの使用を示します。  
+  この例では、次の SQLXMLOLEDB プロバイダー固有のプロパティの使用方法を示します。  
   
 -   **ClientSideXML**  
   
@@ -35,7 +33,7 @@ ms.locfileid: "56009604"
   
 -   **マッピング スキーマ**  
   
- このサンプル ADO アプリケーションでは、XPath クエリ (root) を XSD マッピング スキーマ (MySchema.xml) に対して指定します。 スキーマには、 **\<連絡先 >** を持つ要素**ContactID**、 **FirstName**、および**LastName**属性。 このスキーマでは、既定のマッピングにより、要素名は同じ名前のテーブルに、単純型の属性は同じ名前の列にマップされます。  
+ このサンプル ADO アプリケーションでは、XPath クエリ (root) を XSD マッピング スキーマ (MySchema.xml) に対して指定します。 スキーマには、 **ContactID**、 **FirstName**、および**LastName**属性を持つ** \<Contacts>** 要素があります。 このスキーマでは、既定のマッピングにより、要素名は同じ名前のテーブルに、単純型の属性は同じ名前の列にマップされます。  
   
 ```  
 <xsd:schema xmlns:xsd='http://www.w3.org/2001/XMLSchema'  
@@ -57,14 +55,14 @@ ms.locfileid: "56009604"
 </xsd:schema>  
 ```  
   
- マッピング スキーマ プロパティには、XPath クエリの実行対象となるマッピング スキーマが用意されています。 このマッピング スキーマには XSD または XDR スキーマを指定できます。 Base Path プロパティは、マッピング スキーマへのファイル パスを提供します。  
+ マッピングスキーマプロパティは、XPath クエリの実行対象となるマッピングスキーマを提供します。 このマッピング スキーマには XSD または XDR スキーマを指定できます。 Base Path プロパティは、マッピングスキーマへのファイルパスを提供します。  
   
- ClientSideXML プロパティが True に設定します。 つまり、XML ドキュメントはクライアントで生成されます。  
+ ClientSideXML プロパティは True に設定されています。 つまり、XML ドキュメントはクライアントで生成されます。  
   
  このアプリケーションでは、XPath クエリを直接指定します。 したがって、XPath 言語 {ec2a4293-e898-11d2-b1b7-00c04f680c56} を含める必要があります。  
   
 > [!NOTE]  
->  コードでは、接続文字列に [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] インスタンス名を含める必要があります。 また、この例で指定の使用、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client (SQLNCLI11) データ プロバイダー追加ネットワーク クライアント ソフトウェアをインストールする必要があります。 詳細については、次を参照してください。 [SQL Server Native Client のシステム要件](../../../relational-databases/native-client/system-requirements-for-sql-server-native-client.md)します。  
+>  コードでは、接続文字列に [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] インスタンス名を含める必要があります。 また、この例では、追加の[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]ネットワーククライアントソフトウェアをインストールする必要があるデータプロバイダーに対して Native CLIENT (SQLNCLI11) を使用するように指定しています。 詳細については、「 [SQL Server Native Client のシステム要件](../../../relational-databases/native-client/system-requirements-for-sql-server-native-client.md)」を参照してください。  
   
 ```  
 Option Explicit  

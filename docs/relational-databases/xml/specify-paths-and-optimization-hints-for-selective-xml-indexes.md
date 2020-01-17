@@ -1,6 +1,5 @@
 ---
-title: 選択的 XML インデックスのパスと最適化ヒントの指定 | Microsoft Docs
-ms.custom: ''
+title: 選択的 XML インデックスのパスと最適化ヒント | Microsoft Docs
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -8,15 +7,15 @@ ms.reviewer: ''
 ms.technology: xml
 ms.topic: conceptual
 ms.assetid: 486ee339-165b-4aeb-b760-d2ba023d7d0a
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: 289fd23355fabab6ddbbbde34b2bbdfaeb57753f
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+author: MightyPen
+ms.author: genemi
+ms.custom: seo-lt-2019
+ms.openlocfilehash: e4ffb1cc9a2b63047c6ade58d82001a2e0ebea4c
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52505884"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75257611"
 ---
 # <a name="specify-paths-and-optimization-hints-for-selective-xml-indexes"></a>選択的 XML インデックスのパスと最適化ヒントの指定
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -216,7 +215,7 @@ node1223 = '/a/b/d' as SQL NVARCHAR(200) SINGLETON
 ### <a name="choosing-the-nodes-to-index"></a>インデックスを設定するノードの選択  
  次の 2 つの単純な原則を使用して、選択的 XML インデックスに追加する適切なノードのサブセットを識別できます。  
   
-1.  **原則 1**: 特定の XQuery 式を評価するには、調べる必要があるすべてのノードにインデックスを設定する。  
+1.  **原則 1**: 特定の XQuery 式を評価するには、調べる必要があるすべてのノードにインデックスを設定します。  
   
     -   その存在または値が XQuery 式で使用されるすべてのノードにインデックスを設定します。  
   
@@ -236,7 +235,7 @@ node1223 = '/a/b/d' as SQL NVARCHAR(200) SINGLETON
     -   ノード `b`。述語が、XQuery 式の中でノード`b` に適用されるため。  
   
 2.  **原則 2**: 最大限のパフォーマンスを得るには、特定の XQuery 式を評価するために必要なすべてのノードにインデックスを設定します。 ノードの一部にのみインデックスを設定した場合、選択的 XML インデックスは、インデックス付きノードのみを含むサブ式の評価を向上させます。  
-  
+
  上に示した SELECT ステートメントのパフォーマンスを向上させるには、次に示す選択的 XML インデックスを作成します。  
   
 ```sql  
@@ -272,7 +271,7 @@ FOR
 )  
 ```  
   
-### <a name="examples"></a>使用例  
+### <a name="examples"></a>例  
  異なる XQuery 型用のインデックスを設定するために適切なノードを選択するいくつかの例を次に示します。  
   
  **例 1**  
@@ -358,27 +357,27 @@ WHERE T.xmldata.exist('
   
 |最適化ヒント|より効率的なストレージ|パフォーマンスの向上|  
 |-----------------------|----------------------------|--------------------------|  
-|**node()**|[ユーザー アカウント制御]|いいえ|  
-|**SINGLETON**|いいえ|[ユーザー アカウント制御]|  
-|**DATA TYPE**|[ユーザー アカウント制御]|[ユーザー アカウント制御]|  
-|**MAXLENGTH**|[ユーザー アカウント制御]|[ユーザー アカウント制御]|  
+|**node()**|はい|いいえ|  
+|**SINGLETON**|いいえ|はい|  
+|**DATA TYPE**|はい|はい|  
+|**MAXLENGTH**|はい|はい|  
   
 ### <a name="optimization-hints-and-data-types"></a>最適化ヒントとデータ型  
  ノードに XQuery データ型または [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データ型としてインデックスを設定できます。 次の表に、各データ型でサポートされる最適化ヒントを示します。  
   
 |最適化ヒント|XQuery のデータ型|SQL データ型|  
 |-----------------------|-----------------------|--------------------|  
-|**node()**|[ユーザー アカウント制御]|いいえ|  
-|**SINGLETON**|[ユーザー アカウント制御]|[ユーザー アカウント制御]|  
-|**DATA TYPE**|[ユーザー アカウント制御]|いいえ|  
-|**MAXLENGTH**|[ユーザー アカウント制御]|いいえ|  
+|**node()**|はい|いいえ|  
+|**SINGLETON**|はい|はい|  
+|**DATA TYPE**|はい|いいえ|  
+|**MAXLENGTH**|はい|いいえ|  
   
 ### <a name="node-optimization-hint"></a>node() 最適化ヒント  
- 適用先: XQuery データ型  
+ 適用対象:XQuery のデータ型  
   
  node() 最適化ヒントを使用して、一般的なクエリではその値を評価する必要がないノードを指定できます。 このヒントは、通常のクエリがノードの存在のみを評価する必要があるときに必要なメモリ量が減少します (既定では、選択的 XML インデックスは、complex ノード型以外の昇格されたすべてのノードの値を格納します)。  
   
- 次の例を参照してください。  
+ 次の例を確認してください。  
   
 ```sql  
 SELECT T.record FROM myXMLTable T  
@@ -392,7 +391,7 @@ WHERE T.xmldata.exist('/a/b[./c=5]') = 1
  node() ヒントでインデックス設定されているノードの値がクエリで必要な場合、選択的 XML インデックスは使用できません。  
   
 ### <a name="singleton-optimization-hint"></a>SINGLETON 最適化ヒント  
- 適用先: XQuery データ型または [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データ型  
+ 適用対象:XQuery データ型または [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データ型  
   
  SINGLETON 最適化ヒントは、ノードのカーディナリティを指定します。 このヒントは、ノードが親または先祖の中で最大で 1 回出現することを事前に通知するため、クエリのパフォーマンスが向上します。  
   
@@ -403,14 +402,14 @@ WHERE T.xmldata.exist('/a/b[./c=5]') = 1
  SINGLETON ヒントは指定されているが、ノードがその親または先祖の中で複数回出現した場合は、インデックスの作成時 (既存のデータの場合) またはクエリの実行時 (新規データの場合) にエラーが発生します。  
   
 ### <a name="data-type-optimization-hint"></a>DATA TYPE 最適化ヒント  
- 適用先: XQuery データ型  
+ 適用対象:XQuery のデータ型  
   
  DATA TYPE 最適化ヒントを使用して、インデックス付きノードに対して XQuery データ型または [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データ型を指定できます。 このデータ型は、選択的 XML インデックスのデータ テーブル内のインデックス付きノードに対応する列で使用されます。  
   
  既存の値の指定されたデータ型へのキャストが失敗した場合でも、インデックスへの挿入操作は失敗しません。ただし、インデックスのデータ テーブルには NULL 値が挿入されます。  
   
 ### <a name="maxlength-optimization-hint"></a>MAXLENGTH 最適化ヒント  
- 適用先: XQuery データ型  
+ 適用対象:XQuery のデータ型  
   
  MAXLENGTH 最適化ヒントを使用して、xs:string データの長さを制限できます。 VARCHAR データ型または NVARCHAR データ型を指定するときに長さを指定するため、MAXLENGTH は [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データ型には関連しません。  
   

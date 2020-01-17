@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: bffd20a6-1310-44b0-9602-974500481fa6
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 24f33cb80947497c6a9f7d44cd898516496aded4
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a188d5d98aca0418a2452f29912f62604f3ffa90
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47823080"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67972173"
 ---
 # <a name="settypemap-method-sqlserverconnection"></a>setTypeMap メソッド (SQLServerConnection)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -47,7 +46,7 @@ public void setTypeMap(java.util.Map map)
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- この setTypeMap メソッドは、java.sql.Connection インターフェイスの setTypeMap メソッドによって指定されます。  
+ この setTypeMap 方法は、java. .sql. 接続インターフェイスの setTypeMap メソッドによって指定されます。  
   
 ## <a name="see-also"></a>参照  
  [SQLServerConnection のメンバー](../../../connect/jdbc/reference/sqlserverconnection-members.md)   

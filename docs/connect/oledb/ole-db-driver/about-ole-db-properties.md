@@ -1,5 +1,5 @@
 ---
-title: OLE DB プロパティについて |Microsoft Docs
+title: OLE DB のプロパティについて |Microsoft Docs
 description: OLE DB プロパティについて
 ms.custom: ''
 ms.date: 06/14/2018
@@ -15,13 +15,12 @@ helpviewer_keywords:
 - property values [OLE DB Driver for SQL Server]
 author: pmasl
 ms.author: pelopes
-manager: craigg
-ms.openlocfilehash: 903ce31cec6ce738fb478661da651f73a072e39d
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.openlocfilehash: 53d34483d8af029dd147b82da7611ddec616d641
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51601532"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67995055"
 ---
 # <a name="about-ole-db-properties"></a>OLE DB プロパティについて
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

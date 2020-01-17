@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 76fc4d00-0c9f-422b-af5c-af6ed8fb29d8
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: fda0fb6446609a04178b533173a82bacc34c8cb8
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 6b322dacbf85ec24b58e315ecbbf9d547d1481f9
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47600390"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67926488"
 ---
 # <a name="using-ado-with-scripting-languages"></a>スクリプト言語で ADO を使用する
 ADO では、スクリプトの環境では、サーバー側のスクリプトを使用してデータを公開できます。 このシナリオでは、ADO では、基になる OLE DB プロバイダーを使用して、特定のデータ ストアを参照するために必要なその他のコンポーネントは、インターネット インフォメーション サービス (IIS) を実行しているサーバーにインストールされています。 Active Server Pages (ASP) を使用して、ADO は、たとえば、HTML を生成するスクリプトで参照されているコンポーネントです。 この HTML コンテンツは、クライアント Web ブラウザーに HTTP 経由で渡されることができます。 スクリプトを使用して、Web ページはサーバー側スクリプトは、更新、移動、および特定のデータを表示することができますに戻すアクションを送信できます。  
@@ -31,13 +30,13 @@ ADO では、スクリプトの環境では、サーバー側のスクリプト�
 |ADO 接続|はい|  
 |ADO コマンド|いいえ|  
 |ADO パラメーター|いいえ|  
-|ADO レコード セット|はい|  
-|ADO レコード|はい|  
-|ADO Stream|はい|  
+|ADO レコード セット|[はい]|  
+|ADO レコード|[はい]|  
+|ADO Stream|[はい]|  
 |ADO エラーです。|いいえ|  
 |ADOX のカタログ|いいえ|  
 |ADOX のセル セット|いいえ|  
-|RDS DataControl|はい|  
+|RDS DataControl|[はい]|  
 |RDS DataSpace|はい|  
 |RDS DataFactory|いいえ|  
   
@@ -46,7 +45,7 @@ ADO では、スクリプトの環境では、サーバー側のスクリプト�
 |プロバイダー|安全なスクリプトでしょうか。|  
 |--------------|-------------------------|  
 |図形|はい|  
-|永続化します。|はい|  
+|永続化します。|[はい]|  
 |Remote|はい|  
 |OLE DB Provider for SQL Server (SQLOLEDB)|いいえ|  
 |OLE DB Provider for ODBC (MSDASQL)|いいえ|  
@@ -66,7 +65,7 @@ ADO では、スクリプトの環境では、サーバー側のスクリプト�
   
 -   [JScript での ADO プログラミング](../../../ado/guide/appendixes/jscript-ado-programming.md)  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [Microsoft ActiveX Data Objects (ADO)](../../../ado/microsoft-activex-data-objects-ado.md)   
  [Microsoft Visual Basic で ADO を使用します。](../../../ado/guide/appendixes/using-ado-with-microsoft-visual-basic.md)   
  [Microsoft Visual C++ での ADO の使用](../../../ado/guide/appendixes/using-ado-with-microsoft-visual-c.md)   

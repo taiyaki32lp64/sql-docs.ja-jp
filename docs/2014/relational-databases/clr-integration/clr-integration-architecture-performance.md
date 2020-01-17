@@ -15,11 +15,11 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: eced622903a0d68369f28d19ff521d99bcedbdc3
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53368184"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62874521"
 ---
 # <a name="performance-of-clr-integration"></a>CLR 統合のパフォーマンス
   このトピックではいくつかのパフォーマンスを強化する設計上の選択肢の[!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]との統合、 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] .NET Framework 共通言語ランタイム (CLR)。  
@@ -48,13 +48,13 @@ ms.locfileid: "53368184"
   
  STVF は、`IEnumerable` インターフェイスを返すマネージド関数です。 `IEnumerable` には STVF が返した結果セットの中を移動するメソッドがあります。 STVF を呼び出して返される `IEnumerable` は、クエリ プランに直接接続されます。 クエリ プランで行のフェッチが必要になると、`IEnumerable` のメソッドが呼び出されます。 このような反復的なモデルにより、テーブル全体に値が格納されるまで待たなくても、最初の行が生成された直後から結果を使用できます。 関数の呼び出しに伴うメモリの消費を大幅に抑えることもできます。  
   
-### <a name="arrays-vs-cursors"></a>配列とカーソル  
+### <a name="arrays-vs-cursors"></a>配列とします。カーソル  
  配列として簡単に表現できるデータを [!INCLUDE[tsql](../../../includes/tsql-md.md)] カーソルでスキャンする必要がある場合、マネージド コードを使用するとパフォーマンスが大幅に向上します。  
   
 ### <a name="string-data"></a>文字列データ  
  `varchar` などの [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 文字データは、マネージド関数では SqlString 型または SqlChars 型にすることができます。 SqlString 変数は値全体のインスタンスをメモリに作成します。 SqlChars 変数には、ストリーミング インターフェイスが用意されており、これを使用すると、値全体のインスタンスをメモリに作成しないことでパフォーマンスおよびスケーラビリティを高めることができます。 このことは、特に LOB (ラージ オブジェクト) データにとって重要です。 また、`SqlXml.CreateReader()` が返すストリーミング インターフェイスを経由すると、サーバーの XML データにアクセスできます。  
   
-### <a name="clr-vs-extended-stored-procedures"></a>CLR と拡張ストアド プロシージャ  
+### <a name="clr-vs-extended-stored-procedures"></a>CLR とします。拡張ストアド プロシージャ  
  マネージド プロシージャから結果セットをクライアントに返す Microsoft.SqlServer.Server API (アプリケーション プログラミング インターフェイス) は、拡張ストアド プロシージャにより使用される ODS (オープン データ サービス) API に比べパフォーマンスに優れています。 また、System.Data.SqlServer API は [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] で導入された `xml`、`varchar(max)`、`nvarchar(max)`、`varbinary(max)` などのデータ型をサポートしていますが、ODS API ではこれらの新しいデータ型をサポートするための拡張が行われていません。  
   
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ではマネージド コードによってメモリ、スレッド、同期などのリソースの使用状況が管理されます。 これらのリソースを公開するマネージド API が、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] リソース マネージャーの上位に実装されるためです。 逆に、拡張ストアド プロシージャは [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] によってリソースの使用状況が監視または制御されることがありません。 たとえば、拡張ストアド プロシージャで大量の CPU リソースまたはメモリ リソースが消費されていても、それを [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] で検出したり制御することはできません。 一方、マネージド コードでは、特定のスレッドが長期間リソースを占有していることを [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] で検出して、タスクからリソースを解放し、他の作業のスケジュールを設定できるようになります。 つまり、マネージド コードを使用すると、スケーラビリティやシステム リソースの使用状況が改善されます。  
@@ -77,7 +77,7 @@ ms.locfileid: "53368184"
 ### <a name="scalable-memory-usage"></a>スケーラビリティを確保するメモリの使用方法  
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] のマネージド ガベージ コレクションのパフォーマンスやスケーラビリティを高めるには、大量のメモリを 1 単位として割り当てないようにしてください。 88 KB を超える割り当てはラージ オブジェクト ヒープに配置されます。その結果、小規模の割り当てをいくつも行った場合に比べて、ガベージ コレクションのパフォーマンスやスケーラビリティが低下します。 たとえば、大きな多次元配列を割り当てる場合、ジャグ (散在した) 配列を割り当てることをお勧めします。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [CLR ユーザー定義型](../clr-integration-database-objects-user-defined-types/clr-user-defined-types.md)  
   
   

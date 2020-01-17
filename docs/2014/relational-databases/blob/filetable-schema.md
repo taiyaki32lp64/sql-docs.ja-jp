@@ -9,28 +9,28 @@ ms.topic: conceptual
 helpviewer_keywords:
 - FileTables [SQL Server], table schema
 ms.assetid: e1cb3880-cfda-40ac-91fc-d08998287f44
-author: douglaslMS
-ms.author: douglasl
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: a5c2c2993b4c6ee002c2be0f8bbae28abaa2d87c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 7341919e54a4f669c5251d578ae929f1f4f3e22f
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48088512"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66010119"
 ---
 # <a name="filetable-schema"></a>FileTable スキーマ
   FileTable の定義済みスキーマおよび固定スキーマについて説明します。  
   
 |ファイル属性の名前|type|サイズ|既定|説明|ファイル システムのアクセシビリティ|  
 |-------------------------|----------|----------|-------------|-----------------|-------------------------------|  
-|**path_locator**|`hierarchyid`|変数 (variable)|A`hierarchyid`この項目の位置を識別します。|階層 FileNamespace 内でのこのノードの位置。<br /><br /> テーブルの主キーです。|Windows パス値を設定することによって作成および変更できます。|  
-|**stream_id**|**[一意の ID] rowguidcol**||によって返される値、`NEWID()`関数。|FILESTREAM データの一意の ID。|該当なし。|  
+|**path_locator**|`hierarchyid`|変数 (variable)|このアイテムの位置を識別する `hierarchyid`|階層 FileNamespace 内でのこのノードの位置。<br /><br /> テーブルの主キーです。|Windows パス値を設定することによって作成および変更できます。|  
+|**stream_id**|**[一意の ID] rowguidcol**||`NEWID()` 関数によって返される値|FILESTREAM データの一意の ID。|該当なし。|  
 |**file_stream**|`varbinary(max)`<br /><br /> `filestream`|変数 (variable)|NULL|FILESTREAM データが含まれています。|該当なし。|  
 |**file_type**|`nvarchar(255)`|変数 (variable)|NULL。<br /><br /> ファイル システムの作成操作または名前変更操作によって、名前から取得されたファイル拡張子の値が格納されます。|ファイルの種類を表します。<br /><br /> この列は、フルテキスト インデックスの作成時に `TYPE COLUMN` として使用できます。<br /><br /> **file_type** は、保存される計算列です。|自動的に計算されます。 設定することはできません。|  
 |**名前**|`nvarchar(255)`|変数 (variable)|GUID 値。|ファイルまたはディレクトリの名前。|Windows API を使用して作成または変更できます。|  
-|**parent_path_locator**|`hierarchyid`|変数 (variable)|このアイテムが格納されているディレクトリを識別する `hierarchyid`|`hierarchyid`の格納されているディレクトリ。<br /><br /> **parent_path_locator** は、保存される計算列です。|自動的に計算されます。 設定することはできません。|  
-|**cached_file_size**|`bigint`|||FILESTREAM データのサイズ (バイト単位)。<br /><br /> **cached_file_size** は、保存される計算列です。|キャッシュされたファイル サイズは自動的に最新の状態に維持されますが、特殊な状況で同期がとれなくなる場合があります。 正確なサイズを計算するには、使用、`DATALENGTH()`関数。|  
+|**parent_path_locator**|`hierarchyid`|変数 (variable)|このアイテムが格納されているディレクトリを識別する `hierarchyid`|格納されているディレクトリの `hierarchyid`。<br /><br /> **parent_path_locator** は、保存される計算列です。|自動的に計算されます。 設定することはできません。|  
+|**cached_file_size**|`bigint`|||FILESTREAM データのサイズ (バイト単位)。<br /><br /> **cached_file_size** は、保存される計算列です。|キャッシュされたファイル サイズは自動的に最新の状態に維持されますが、特殊な状況で同期がとれなくなる場合があります。 正確なサイズを計算するには、`DATALENGTH()` 関数を使用します。|  
 |**creation_time**|`datetime2(4)`<br /><br /> `not null`|8 バイト|現在の時刻|ファイルが作成された日付と時刻。|自動的に計算されます。 Windows API を使用して設定することもできます。|  
 |**last_write_time**|`datetime2(4)`<br /><br /> `not null`|8 バイト|現在の時刻|ファイルが最後に更新された日付と時刻。|自動的に計算されます。 Windows API を使用して設定することもできます。|  
 |**last_access_time**|`datetime2(4)`<br /><br /> `not null`|8 バイト|現在の時刻|ファイルが最後にアクセスされた日付と時刻。|自動的に計算されます。 Windows API を使用して設定することもできます。|  
@@ -42,7 +42,7 @@ ms.locfileid: "48088512"
 |**is_system**|`bit`<br /><br /> `not null`|1 バイト|FALSE|システム ファイル属性。|自動的に計算されます。 Windows API を使用して設定することもできます。|  
 |**is_temporary**|`bit`<br /><br /> `not null`|1 バイト|FALSE|一時ファイル属性。|自動的に計算されます。 Windows API を使用して設定することもできます。|  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [FileTable の作成、変更、および削除](create-alter-and-drop-filetables.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: 例 :PATH モードの使用 |Microsoft Docs
+title: '例 : PATH モードの使用 | Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -9,15 +9,15 @@ ms.topic: conceptual
 helpviewer_keywords:
 - PATH FOR XML mode, examples
 ms.assetid: 3564e13b-9b97-49ef-8cf9-6a78677b09a3
-author: douglaslMS
-ms.author: douglasl
+author: MightyPen
+ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 1384c2cd84505df59bc458274d0b33071e926f18
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: c5a566d9684341b7aa20342147aab950ebd4047c
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53365734"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63287781"
 ---
 # <a name="examples-using-path-mode"></a>例 :PATH モードの使用
   次の例では、PATH モードで SELECT クエリから XML を生成する方法を示します。 これらのクエリの多くは、ProductModel テーブルの Instructions 列に格納されている、自転車製造手順の XML ドキュメントに対して指定されています。  
@@ -111,7 +111,7 @@ FOR XML PATH ('');
 GO  
 ```  
   
- これは、結果です。  
+ 結果を次に示します。  
   
  `<ProductModelID>122</ProductModelID>`  
   
@@ -135,7 +135,7 @@ FOR XML PATH ('ProductModelData');
 GO  
 ```  
   
- これは、結果です。  
+ 結果を次に示します。  
   
  `< ProductModelData id="122">`  
   
@@ -200,7 +200,7 @@ FOR XML PATH ('ProductModelData'), root ('Root');
 GO  
 ```  
   
- 次に結果の一部を示します。 列名として ManuInstr が指定されているので、`query()` メソッドが返す XML は次に示すように <`ManuInstr`> タグで囲まれています。  
+ 次に結果の一部を示します。 XML がによって返される列名として ManuInstr が指定、ため、`query()`にメソッドがラップされて、<`ManuInstr`> タグを次に示すように。  
   
  `<Root>`  
   
@@ -244,7 +244,7 @@ FOR XML PATH ('ns2:ProductInfo'), root('ns1:root');
 GO  
 ```  
   
- `MI` では `WITH XMLNAMESPACES`プレフィックスも定義されています。 したがって、指定された `query()` 型の `xml` メソッドにおいて、クエリ プロローグでこのプレフィックスは定義されていません。 これは、結果です。  
+ `MI` では `WITH XMLNAMESPACES`プレフィックスも定義されています。 したがって、指定された `query()` 型の `xml` メソッドにおいて、クエリ プロローグでこのプレフィックスは定義されていません。 結果を次に示します。  
   
  `<ns1:root xmlns:MI="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions" xmlns="uri2" xmlns:ns2="uri2" xmlns:ns1="uri1">`  
   
@@ -395,7 +395,7 @@ GO
   
  <`English`> 要素に追加されている `@xml:lang` 属性は、定義済みの XML 名前空間で定義されています。  
   
- これは、結果です。  
+ 結果を次に示します。  
   
  `<Translation>`  
   
@@ -432,7 +432,7 @@ WHERE ProductModelID= 7 OR ProductModelID=9
 FOR XML PATH('ProductModelData'), root('root');  
 ```  
   
- これは、結果です。  
+ 結果を次に示します。  
   
  `<root xmlns="uri2" xmlns:ns1="uri1">`  
   

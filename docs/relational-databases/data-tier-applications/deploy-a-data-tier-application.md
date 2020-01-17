@@ -21,13 +21,12 @@ helpviewer_keywords:
 ms.assetid: c117af35-aa53-44a5-8034-fa8715dc735f
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 204aa0ea696e45fa756360df790cdf983066260f
-ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
+ms.openlocfilehash: 842a6519c1493162d06c853f11a9494d8dc3ca5b
+ms.sourcegitcommit: ba44730f5cc33295ae2ed1f281186dd266bad4ef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/18/2018
-ms.locfileid: "53590976"
+ms.lasthandoff: 11/19/2019
+ms.locfileid: "74190118"
 ---
 # <a name="deploy-a-data-tier-application"></a>データ層アプリケーションの配置
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -39,7 +38,7 @@ ms.locfileid: "53590976"
 ## <a name="deploy-the-same-dac-package-multiple-times"></a>同じ DAC パッケージを複数回配置する 
  同じ DAC パッケージを [!INCLUDE[ssDE](../../includes/ssde-md.md)] の単一のインスタンスに複数回配置することはできますが、配置は一度に 1 つずつ実行する必要があります。 各配置に指定される DAC インスタンス名は、 [!INCLUDE[ssDE](../../includes/ssde-md.md)]のインスタンス内で一意である必要があります。  
   
- データベース エンジンのインスタンスに DAC を配置した場合、その配置した DAC は、次回ユーティリティ コレクション セットがインスタンスからユーティリティ コントロール ポイントへと送信されるときに **SQL Server ユーティリティ**に組み込まれます。 その後、DAC は [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] **ユーティリティ エクスプローラー** の **配置されたデータ層アプリケーション** ノードに現れるようになり、**配置されたデータ層アプリケーション** の詳細ページで報告されます。  
+ データベース エンジンのインスタンスに DAC を配置した場合、その配置した DAC は、次回ユーティリティ コレクション セットがインスタンスからユーティリティ コントロール ポイントへと送信されるときに **SQL Server ユーティリティ**に組み込まれます。 その後、DAC は [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] の**ユーティリティ エクスプローラー**の **[配置済みのデータ層アプリケーション]** ノードに現れるようになり、 **[配置済みのデータ層アプリケーション]** の詳細ページで報告されます。  
   
 ###  <a name="database-options-and-settings"></a>データベースのオプションと設定  
  既定では、配置中に作成されたデータベースには、CREATE DATABASE ステートメントによる既定の設定すべてが適用されます。ただし、次の設定は除きます。  
@@ -53,7 +52,7 @@ ms.locfileid: "53590976"
 ## <a name="limitations-and-restrictions"></a>制限事項と制約事項  
  DAC を配置できるのは、 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]、または [!INCLUDE[ssDE](../../includes/ssde-md.md)] Service Pack 4 (SP4) 以降を実行している [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] インスタンスです。 新しいバージョンを使用して DAC を作成した場合、 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]ではサポートされないオブジェクトが DAC に含まれている可能性があります。 このような DAC を [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]のインスタンスに配置することはできません。  
     
-## <a name="security-and-permissions"></a>セキュリティおよび権限
+## <a name="security-and-permissions"></a>セキュリティとアクセス許可
 認証のログインは、パスワードなしで DAC パッケージに格納されます。 パッケージが配置またはアップグレードされると、ログインは、生成されたパスワードを伴う無効なログインとして作成されます。 ログインを有効にするには、ALTER ANY LOGIN 権限のあるログインでログインし、ALTER LOGIN を使用してログインを有効にします。さらに、新しいパスワードを割り当て、そのパスワードを該当ユーザーに通知します。 Windows 認証ログインの場合、ログインのパスワードは SQL Server で管理されていないため、この操作は必要ありません。  
   
  DAC を配置できるのは、**sysadmin** または **serveradmin** 固定サーバー ロールのメンバーか、**dbcreator** 固定サーバー ロールに存在する ALTER ANY LOGIN 権限を持つログインのみです。 あらかじめ登録された [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] システム管理者アカウント ( **sa** ) でも DAC を配置できます。 
@@ -64,9 +63,10 @@ ms.locfileid: "53590976"
   
 1.  **オブジェクト エクスプローラー**で、DAC を配置するインスタンスのノードを展開します。  
   
-2.  **[データベース]** ノードを右クリックし、**[データ層アプリケーションの配置]** をクリックします。  
+2.  **[データベース]** ノードを右クリックし、 **[データ層アプリケーションの配置]** をクリックします。  
   
 3.  ウィザードのダイアログを完了し、[完了] をクリックします。
+
 以下は、ウィザード ページの詳細の一部です。 
      
 ### <a name="select-dac-package-page"></a>[DAC パッケージの選択] ページ  
@@ -127,7 +127,7 @@ ms.locfileid: "53590976"
  **[レポートの保存]** : 配置レポートを HTML ファイルに保存します。 ファイルには、アクションで発生したすべてのエラーを含む、各アクションのステータスが報告されます。 既定のフォルダーは、Windows アカウントの Documents フォルダーにある SQL Server Management Studio\DAC Packages フォルダーです。  
   
   
-##  <a name="deploy-a-dac-using-powershell"></a>PowerShell による DAC の配置  
+##  <a name="using-powershell"></a>PowerShell の使用  
   
 1.  SMO サーバー オブジェクトを作成し、DAC を配置するインスタンスに設定します。  
   
@@ -142,19 +142,22 @@ ms.locfileid: "53590976"
 6.  **DacStore.Install** メソッドを使用して、DAC を配置します。  
   
 7.  DAC パッケージ ファイルの読み取りに使用するファイル ストリームを閉じます。  
+
+次の例では、MyApplication.dacpac パッケージから DAC 定義を使用して、MyApplication という名前の DAC を [!INCLUDE[ssDE](../../includes/ssde-md.md)]の既定のインスタンスに配置します。  
   
 ## <a name="powershell-examples"></a>PowerShell の例  
- 次の例では、MyApplication.dacpac パッケージから DAC 定義を使用して、MyApplication という名前の DAC を [!INCLUDE[ssDE](../../includes/ssde-md.md)]の既定のインスタンスに配置します。  
-  
-```  
+
+次の例では、MyApplication.dacpac パッケージから DAC 定義を使用して、MyApplication という名前の DAC を [!INCLUDE[ssDE](../../includes/ssde-md.md)]の既定のインスタンスに配置します。  
+
+```powershell
 ## Set a SMO Server object to the default instance on the local computer.  
 CD SQLSERVER:\SQL\localhost\DEFAULT  
-$srv = get-item .  
+$server = Get-Item .  
   
 ## Open a Common.ServerConnection to the same instance.  
-$serverconnection = New-Object Microsoft.SqlServer.Management.Common.ServerConnection($srv.ConnectionContext.SqlConnectionObject)  
-$serverconnection.Connect()  
-$dacstore = New-Object Microsoft.SqlServer.Management.Dac.DacStore($serverconnection)  
+$serverConnection = New-Object Microsoft.SqlServer.Management.Common.ServerConnection($server.ConnectionContext.SqlConnectionObject)  
+$serverConnection.Connect()  
+$dacStore = New-Object Microsoft.SqlServer.Management.Dac.DacStore($serverConnection)  
   
 ## Load the DAC package file.  
 $dacpacPath = "C:\MyDACs\MyApplication.dacpac"  
@@ -162,14 +165,14 @@ $fileStream = [System.IO.File]::Open($dacpacPath,[System.IO.FileMode]::OpenOrCre
 $dacType = [Microsoft.SqlServer.Management.Dac.DacType]::Load($fileStream)  
   
 ## Subscribe to the DAC deployment events.  
-$dacstore.add_DacActionStarted({Write-Host `n`nStarting at $(get-date) :: $_.Description})  
-$dacstore.add_DacActionFinished({Write-Host Completed at $(get-date) :: $_.Description})  
+$dacStore.add_DacActionStarted({Write-Host `n`nStarting at $(Get-Date) :: $_.Description})  
+$dacStore.add_DacActionFinished({Write-Host Completed at $(Get-Date) :: $_.Description})  
   
 ## Deploy the DAC and create the database.  
 $dacName  = "MyApplication"  
 $evaluateTSPolicy = $true  
-$deployProperties = New-Object Microsoft.SqlServer.Management.Dac.DatabaseDeploymentProperties($serverconnection,$dacName)  
-$dacstore.Install($dacType, $deployProperties, $evaluateTSPolicy)  
+$deployProperties = New-Object Microsoft.SqlServer.Management.Dac.DatabaseDeploymentProperties($serverConnection,$dacName)  
+$dacStore.Install($dacType, $deployProperties, $evaluateTSPolicy)  
 $fileStream.Close()  
 ```  
   

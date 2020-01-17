@@ -14,11 +14,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 48d0e96f2cd7b37683399c599f336f78e1ede3fa
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52755444"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63195040"
 ---
 # <a name="open-queries-visual-database-tools"></a>クエリを開く方法 (Visual Database Tools)
   クエリおよびビュー デザイナーで **[開く]** コマンドを使用すると、既存のクエリを開くことができます。  

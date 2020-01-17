@@ -13,11 +13,11 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: c1668c2b4c96f23283f0eca87fdbac591f52b75f
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52770274"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68211600"
 ---
 # <a name="wmi-error-0x8007052f"></a>WMI エラー 0x8007052f
     

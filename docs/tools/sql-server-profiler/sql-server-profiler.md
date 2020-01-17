@@ -1,5 +1,5 @@
 ---
-title: SQL Server Profiler |Microsoft Docs
+title: SQL Server プロファイラー |Microsoft Docs
 ms.custom: ''
 ms.date: 11/27/2018
 ms.prod: sql
@@ -23,27 +23,26 @@ helpviewer_keywords:
 - database performance [SQL Server], SQL Server Profiler
 - trace [SQL Server]
 ms.assetid: 3ad5f33d-559e-41a4-bde6-bb98792f7f1a
-author: stevestein
-ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 549b08a7237492064cc6cf50470521ce3be804ee
-ms.sourcegitcommit: 60739bcb48ccce17bca4e11a85df443e93ca23e3
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 928901caae5ed500913f59f138499a03f73f5439
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52439894"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68059735"
 ---
-# <a name="sql-server-profiler"></a>SQL Server Profiler
+# <a name="sql-server-profiler"></a>SQL Server プロファイラー
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-[!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] は、トレースを作成および管理し、トレースの結果を分析および再生するために使用するインターフェイスです。 イベントはトレース ファイルに保存され、後で分析したり、問題の発生したステップを厳密に再現して診断する際に利用できます。  
+[!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] は、トレースを作成および管理し、トレースの結果を分析および再生するためのインターフェイスです。 イベントはトレース ファイルに保存され、後で分析したり、問題の発生したステップを厳密に再現して診断する際に利用できます。  
   
 > [!IMPORTANT]
-> SQL トレースと[!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]は非推奨とされます。 Microsoft SQL Server の Trace や Replay オブジェクトを含む *Microsoft.SqlServer.Management.Trace* 名前空間も非推奨とされます。 
+> SQL トレースと [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] は、非推奨です。 Microsoft SQL Server の Trace や Replay オブジェクトを含む *Microsoft.SqlServer.Management.Trace* 名前空間も非推奨とされます。 
 > [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] 
-> 代わりに拡張イベントを使用します。 詳細については[拡張イベント](../../relational-databases/extended-events/extended-events.md)を参照してください[クイック スタート: SQL Server の拡張イベント](../../relational-databases/extended-events/quick-start-extended-events-in-sql-server.md)と[SSMS XEvent Profiler](../../relational-databases/extended-events/use-the-ssms-xe-profiler.md)します。
+> 代わりに拡張イベントを使用します。 [拡張イベント](../../relational-databases/extended-events/extended-events.md)の詳細については、「[クイック スタート: SQL Server 拡張イベント](../../relational-databases/extended-events/quick-start-extended-events-in-sql-server.md)」および [SSMS XEvent Profiler](../../relational-databases/extended-events/use-the-ssms-xe-profiler.md) に関するページを参照してください。
 
 > [!NOTE]
-> [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] Analysis Services のワークロードには非推奨しないとは引き続きサポートされます。
+> Analysis Services のワークロード用の [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] は非推奨とされず、引き続きサポートされます。
 
  ## <a name="where-is-the-profiler"></a>プロファイラーはどこにありますか?
  
@@ -55,10 +54,10 @@ ms.locfileid: "52439894"
 ||||  
 |-|-|-|  
 |**機能\対象のワークロード**|**リレーショナル エンジン**|**Analysis Services**|  
-|**トレースのキャプチャ**|[拡張イベント](../../relational-databases/extended-events/extended-events.md)でグラフィカル ユーザー インターフェイス [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]|[!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]|  
+|**トレースのキャプチャ**|[拡張イベント](../../relational-databases/extended-events/extended-events.md)のグラフィカルユーザーインターフェイス[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]|[!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]|  
 |**トレースの再生**|[分散再生](../distributed-replay/sql-server-distributed-replay.md)|[!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]|  
   
-## <a name="sql-server-profiler"></a>SQL Server Profiler  
+## <a name="sql-server-profiler"></a>SQL Server プロファイラー  
 Microsoft [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] は、 [!INCLUDE[ssDE](../../includes/ssde-md.md)] または Analysis Services のインスタンスを監視するための SQL トレースのグラフィカル ユーザー インターフェイスです。 各イベントに関するデータをキャプチャし、ファイルやテーブルに保存して、後で分析できます。 たとえば、稼動環境を監視して、どのストアド プロシージャの実行が遅く、パフォーマンスに影響を与えているかを確認できます。 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] は、次のようなアクティビティに使用します。  
   
 -   問題の原因を特定するため、問題の発生したクエリを順次実行する。  
@@ -77,7 +76,7 @@ Microsoft [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] は、 [
 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]を使用するには、ツールがどのように機能するのかを説明する用語を理解しておく必要があります。  
   
 > [!NOTE]
-> SQL Trace の知識は、実際に使用する場合に役立ちます[!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]します。 詳細については、「 [SQL Trace](../../relational-databases/sql-trace/sql-trace.md)」を参照してください。  
+> を使用する場合は、SQL トレース[!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]を理解することが非常に役立ちます。 詳細については、「 [SQL Trace](../../relational-databases/sql-trace/sql-trace.md)」を参照してください。  
   
  **イベント**  
  イベントとは、 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]のインスタンス内で発生するアクションです。 次に例を示します。  
@@ -128,7 +127,7 @@ Microsoft [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] は、 [
 |タスクの説明|トピック|  
 |----------------------|-----------|  
 |特定の種類のイベントを監視することを目的として SQL Server に備わっている定義済みのテンプレートと、トレースを再生するために必要な権限を紹介します。|[SQL Server プロファイラーのテンプレートとアクセス許可](../../tools/sql-server-profiler/sql-server-profiler-templates-and-permissions.md)|  
-|実行する方法について説明します[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Profiler します。|[SQL Server Profiler の実行に必要なアクセス許可](../../tools/sql-server-profiler/permissions-required-to-run-sql-server-profiler.md)|  
+|プロファイラーを実行[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]する方法について説明します。|[SQL Server Profiler の実行に必要なアクセス許可](../../tools/sql-server-profiler/permissions-required-to-run-sql-server-profiler.md)|  
 |トレースの作成方法について説明します。|[トレースの作成 &#40;SQL Server Profiler&#41;](../../tools/sql-server-profiler/create-a-trace-sql-server-profiler.md)|  
 |トレース ファイルに含めるイベントおよびデータ列を指定する方法について説明します。|[トレース ファイルに含めるイベントとデータ列の指定 &#40;SQL Server Profiler&#41;](../../tools/sql-server-profiler/specify-events-and-data-columns-for-a-trace-file-sql-server-profiler.md)|  
 |トレース結果をファイルに保存する方法について説明します。|[トレース結果のファイルへの保存 &#40;SQL Server Profiler&#41;](../../tools/sql-server-profiler/save-trace-results-to-a-file-sql-server-profiler.md)|  
@@ -157,29 +156,29 @@ Microsoft [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] は、 [
 |一度に単一のイベントを再生する方法について説明します。|[一度に単一のイベントの再生 &#40;SQL Server Profiler&#41;](../../tools/sql-server-profiler/replay-a-single-event-at-a-time-sql-server-profiler.md)|  
 |ブレークポイントまで再生する方法について説明します。|[ブレークポイントまでの再生 &#40;SQL Server Profiler&#41;](../../tools/sql-server-profiler/replay-to-a-breakpoint-sql-server-profiler.md)|  
 |カーソルまで再生する方法について説明します。|[カーソルまでの再生 &#40;SQL Server Profiler&#41;](../../tools/sql-server-profiler/replay-to-a-cursor-sql-server-profiler.md)|  
-|再生する方法について説明します、[!INCLUDE[tsql](../../includes/tsql-md.md)]スクリプト。|[Transact-SQL スクリプトの再生 &#40;SQL Server Profiler&#41;](../../tools/sql-server-profiler/replay-a-transact-sql-script-sql-server-profiler.md)|  
+|スクリプトを[!INCLUDE[tsql](../../includes/tsql-md.md)]再生する方法について説明します。|[Transact-SQL スクリプトの再生 &#40;SQL Server Profiler&#41;](../../tools/sql-server-profiler/replay-a-transact-sql-script-sql-server-profiler.md)|  
 |トレース テンプレートの作成方法について説明します。|[トレース テンプレートの作成 &#40;SQL Server Profiler&#41;](../../tools/sql-server-profiler/create-a-trace-template-sql-server-profiler.md)|  
 |トレース テンプレートの変更方法について説明します。|[トレース テンプレートの変更 &#40;SQL Server Profiler&#41;](../../tools/sql-server-profiler/modify-a-trace-template-sql-server-profiler.md)|  
 |グローバル トレース オプションを設定する方法について説明します。|[グローバル トレース オプションの設定 &#40;SQL Server Profiler&#41;](../../tools/sql-server-profiler/set-global-trace-options-sql-server-profiler.md)|  
 |トレース中に値列またはデータ列を検索する方法について説明します。|[トレース中の値列またはデータ列の検索 &#40;SQL Server Profiler&#41;](../../tools/sql-server-profiler/find-a-value-or-data-column-while-tracing-sql-server-profiler.md)|  
 |実行中のトレースからテンプレートを作成する方法について説明します。|[実行中のトレースからのテンプレートの作成 &#40;SQL Server Profiler&#41;](../../tools/sql-server-profiler/derive-a-template-from-a-running-trace-sql-server-profiler.md)|  
 |トレース ファイルまたはトレース テーブルからテンプレートを作成する方法について説明します。|[トレース ファイルまたはトレース テーブルからのテンプレートの作成 &#40;SQL Server Profiler&#41;](../../tools/sql-server-profiler/derive-a-template-from-a-trace-file-or-trace-table-sql-server-profiler.md)|  
-|作成する方法について説明します、[!INCLUDE[tsql](../../includes/tsql-md.md)]トレースを実行するためのスクリプト。|[トレースを実行するための Transact-SQL スクリプトの作成 &#40;SQL Server Profiler&#41;](../../tools/sql-server-profiler/create-a-transact-sql-script-for-running-a-trace-sql-server-profiler.md)|  
+|トレースを実行するため[!INCLUDE[tsql](../../includes/tsql-md.md)]のスクリプトを作成する方法について説明します。|[トレースを実行するための Transact-SQL スクリプトの作成 &#40;SQL Server Profiler&#41;](../../tools/sql-server-profiler/create-a-transact-sql-script-for-running-a-trace-sql-server-profiler.md)|  
 |トレース テンプレートをエクスポートする方法について説明します。|[トレース テンプレートのエクスポート &#40;SQL Server Profiler&#41;](../../tools/sql-server-profiler/export-a-trace-template-sql-server-profiler.md)|  
 |トレース テンプレートをインポートする方法について説明します。|[トレース テンプレートのインポート &#40;SQL Server Profiler&#41;](../../tools/sql-server-profiler/import-a-trace-template-sql-server-profiler.md)|  
 |スクリプトをトレースから抽出する方法について説明します。|[トレースからのスクリプトの抽出 &#40;SQL Server Profiler&#41;](../../tools/sql-server-profiler/extract-a-script-from-a-trace-sql-server-profiler.md)|  
 |トレースと Windows パフォーマンス ログ データを相互に関連付ける方法について説明します。|[トレースと Windows パフォーマンス ログ データの関連付け &#40;SQL Server Profiler&#41;](../../tools/sql-server-profiler/correlate-a-trace-with-windows-performance-log-data-sql-server-profiler.md)|  
 |トレースに表示される列を構成する方法について説明します。|[トレースに表示される列の構成 &#40;SQL Server Profiler&#41;](../../tools/sql-server-profiler/organize-columns-displayed-in-a-trace-sql-server-profiler.md)|  
-|開始する方法について説明します[!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]します。|[SQL Server Profiler の起動](../../tools/sql-server-profiler/start-sql-server-profiler.md)|  
+|を開始[!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]する方法について説明します。|[SQL Server Profiler の起動](../../tools/sql-server-profiler/start-sql-server-profiler.md)|  
 |トレースとトレース テンプレートを保存する方法について説明します。|[トレースとトレース テンプレートの保存](../../tools/sql-server-profiler/save-traces-and-trace-templates.md)|  
 |トレース テンプレートの変更方法について説明します。|[トレース テンプレートを変更する](../../tools/sql-server-profiler/modify-trace-templates.md)|  
 |トレースと Windows パフォーマンス ログ データを相互に関連付ける方法について説明します。|[トレースと Windows パフォーマンス ログ データの関連付け](../../tools/sql-server-profiler/correlate-a-trace-with-windows-performance-log-data.md)|  
-|表示して使用したトレースを分析する方法について説明します[!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]します。|[SQL Server Profiler を使用したトレースの表示と分析](../../tools/sql-server-profiler/view-and-analyze-traces-with-sql-server-profiler.md)|  
-|使用したデッドロックを分析する方法について説明します[!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]します。|[SQL Server Profiler を使用したデッドロックの分析](../../tools/sql-server-profiler/analyze-deadlocks-with-sql-server-profiler.md)|  
+|を使用[!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]してトレースを表示および分析する方法について説明します。|[SQL Server Profiler を使用したトレースの表示と分析](../../tools/sql-server-profiler/view-and-analyze-traces-with-sql-server-profiler.md)|  
+|を使用[!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]してデッドロックを分析する方法について説明します。|[SQL Server Profiler を使用したデッドロックの分析](../../tools/sql-server-profiler/analyze-deadlocks-with-sql-server-profiler.md)|  
 |SQL Server Profiler での SHOWPLAN 結果を使用してクエリを分析する方法について説明します。|[SQL Server Profiler での Showplan 結果を使用したクエリの分析](../../tools/sql-server-profiler/analyze-queries-with-showplan-results-in-sql-server-profiler.md)|  
-|使用したトレースをフィルター処理する方法について説明します[!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]します。|[SQL Server Profiler でのトレースへのフィルターの適用](../../tools/sql-server-profiler/filter-traces-with-sql-server-profiler.md)|  
+|で[!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]トレースをフィルター処理する方法について説明します。|[SQL Server Profiler でのトレースへのフィルターの適用](../../tools/sql-server-profiler/filter-traces-with-sql-server-profiler.md)|  
 |[!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] の再生機能の使用方法について説明します。|[トレースの再生](../../tools/sql-server-profiler/replay-traces.md)|  
-|状況依存ヘルプ トピックを一覧表示[!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]します。|[SQL Server Profiler の F1 ヘルプ](../../tools/sql-server-profiler/sql-server-profiler-f1-help.md)|  
+|の状況依存の[!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]ヘルプトピックの一覧を示します。|[SQL Server Profiler の F1 ヘルプ](../../tools/sql-server-profiler/sql-server-profiler-f1-help.md)|  
 |[!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] でパフォーマンスと利用状況を監視する際に使用される一連のシステム ストアド プロシージャを紹介します。|[SQL Server Profiler のストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sql-server-profiler-stored-procedures-transact-sql.md)|  
   
 ## <a name="see-also"></a>参照  

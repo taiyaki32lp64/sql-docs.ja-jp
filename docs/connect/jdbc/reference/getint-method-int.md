@@ -1,5 +1,5 @@
 ---
-title: getInt (int) メソッド |Microsoft Docs
+title: getInt メソッド (int) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: c86792bb-096e-4c58-8b9e-74491ccf83a6
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: e4b3d0f708418dcc6c90b556eb6ff503d4a80b6f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 13d8d89a950f57b29c235d823424357dfa8f7bb8
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47851670"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67982749"
 ---
 # <a name="getint-method-int"></a>getInt (int) メソッド
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

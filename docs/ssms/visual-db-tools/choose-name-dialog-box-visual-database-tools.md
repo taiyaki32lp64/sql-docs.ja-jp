@@ -12,19 +12,18 @@ f1_keywords:
 - vdt.dlgbox.newdatabaseview
 - vdt.dlgbox.newtablename
 ms.assetid: cd6b5527-c032-473e-b954-1a549e1cdf4a
-author: stevestein
-ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 6730d4a94075aca04e2001890fe35beaa2adb1b8
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: a655754e516f496fdbcfc0bed497493ef4c7a7af
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47682260"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68263653"
 ---
 # <a name="choose-name-dialog-box-visual-database-tools"></a>[名前の選択] ダイアログ ボックス (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-このダイアログ ボックスは、**[ファイル]** メニューの **[\<テーブル名**> を保存]、**[<DiagramName> を保存]**、または **[<ViewName> を保存]** を選択したときに表示されます。  
+このダイアログ ボックスは、 **[ファイル]** メニューの **[\<テーブル名**> を保存]、 **[<DiagramName> を保存]** 、または **[<ViewName> を保存]** を選択したときに表示されます。  
   
 **[テーブルの名前を入力してください]、[ダイアグラムの名前を入力してください]、または [ビュー名を入力してください]**  
 テーブル、ダイアグラム、またはビューの名前を入力するためのテキスト ボックスが用意されています。  

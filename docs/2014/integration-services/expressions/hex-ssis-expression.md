@@ -10,15 +10,15 @@ helpviewer_keywords:
 - hexadecimal data
 - HEX function
 ms.assetid: f5d471ee-aeef-421c-b6e1-55b9676c3842
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 0f0db458cb94993d36f0d565a7fae64f18f7876e
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 4dfd342647f6d355ee34e1e815db9431a212dbc9
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52805164"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62897857"
 ---
 # <a name="hex-ssis-expression"></a>HEX (SSIS 式)
   整数の 16 進値を表す文字列を返します。  

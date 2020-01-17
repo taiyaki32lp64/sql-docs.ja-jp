@@ -17,34 +17,33 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_fts_memory_pools dynamic management view
 ms.assetid: 24747239-cd78-4d55-a00a-19233a457f42
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
+author: pmasl
+ms.author: pelopes
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: b35b163b8c0da00b571e330a9244403e80d40322
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d45436070618e446921c610a9e82b0cc35271c8d
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47820370"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68265913"
 ---
-# <a name="sysdmftsmemorypools-transact-sql"></a>sys.dm_fts_memory_pools (Transact-SQL)
+# <a name="sysdmftsmemorypools-transact-sql"></a>sys.dm_fts_memory_pools (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  フルテキスト クロールまたはフルテキスト クロール範囲でフルテキスト Gatherer コンポーネントに使用できる共有メモリ プールに関する情報を返します。  
+  フルテキスト クロールまたはフルテキスト クロール範囲でフルテキスト Gatherer コンポーネントには、使用できる共有メモリ プールに関する情報を返します。  
    
 |列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
 |**pool_id**|**int**|割り当てられたメモリ プールの ID。<br /><br /> 0 = 小さいバッファー<br /><br /> 1 = 大きいバッファー|  
 |**buffer_size**|**int**|メモリ プール内に割り当てられた各バッファーのサイズ。|  
-|**min_buffer_limit**|**int**|メモリ プール内で許可されるバッファーの最小数。|  
-|**max_buffer_limit**|**int**|メモリ プール内で許可されるバッファーの最大数。|  
+|**min_buffer_limit**|**int**|メモリ プールで許可されるバッファーの最小数。|  
+|**max_buffer_limit**|**int**|メモリ プールで許可されるバッファーの最大数。|  
 |**buffer_count**|**int**|メモリ プール内の共有メモリ バッファーの現在の数。|  
   
 ## <a name="permissions"></a>アクセス許可  
 
 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]、必要があります`VIEW SERVER STATE`権限。   
-[!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]が必要です、`VIEW DATABASE STATE`データベースの権限。   
+[!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] Premium レベルでは、必要があります、`VIEW DATABASE STATE`データベースの権限。 [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] Standard および Basic 階層は、必要があります、**サーバー管理者**または**Azure Active Directory 管理者**アカウント。   
  
 ## <a name="physical-joins"></a>物理結合  
  ![この動的管理ビューの重要な結合](../../relational-databases/system-dynamic-management-views/media/join-dm-fts-memory-pools-1.gif "この動的管理ビューの重要な結合")  
@@ -63,7 +62,7 @@ SELECT SUM(buffer_size * buffer_count) AS "total memory"
     FROM sys.dm_fts_memory_pools;  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [フルテキスト検索とセマンティック検索の動的管理ビューおよび関数&#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/full-text-and-semantic-search-dynamic-management-views-functions.md)  
   
   

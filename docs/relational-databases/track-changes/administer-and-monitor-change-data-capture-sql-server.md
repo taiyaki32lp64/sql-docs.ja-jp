@@ -1,5 +1,5 @@
 ---
-title: 変更データ キャプチャの管理と監視 (SQL Server) | Microsoft Docs
+title: 変更データ キャプチャの管理と監視
 ms.date: 01/02/2019
 ms.prod: sql
 ms.prod_service: database-engine
@@ -13,13 +13,13 @@ helpviewer_keywords:
 ms.assetid: 23bda497-67b2-4e7b-8e4d-f1f9a2236685
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 6d460fcffef089e77825feb19b13602b3a118d20
-ms.sourcegitcommit: a11e733bd417905150567dfebc46a137df85a2fa
+ms.custom: seo-dt-2019
+ms.openlocfilehash: 00fd02afb8cfd140124a9f476aa4ae0bfb4e1514
+ms.sourcegitcommit: 15fe0bbba963d011472cfbbc06d954d9dbf2d655
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/03/2019
-ms.locfileid: "53991905"
+ms.lasthandoff: 11/14/2019
+ms.locfileid: "74095316"
 ---
 # <a name="administer-and-monitor-change-data-capture-sql-server"></a>変更データ キャプチャの管理と監視 (SQL Server)
 
@@ -172,10 +172,15 @@ SELECT command_count/duration AS [Throughput] FROM sys.dm_cdc_log_scan_sessions 
     GO  
     ```  
   
-3. [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]で、 **[管理]**、 **[データ コレクション]** の順に展開します。 **[CDC パフォーマンス データ コレクター]** を右クリックし、**[データ コレクション セットの開始]** をクリックします。  
+3. [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]で、 **[管理]** 、 **[データ コレクション]** の順に展開します。 **[CDC パフォーマンス データ コレクター]** を右クリックし、 **[データ コレクション セットの開始]** をクリックします。  
   
 4. 手順 1. で構成したデータ ウェアハウスで、custom_snapshots.cdc_log_scan_data テーブルを検索します。 このテーブルには、ログ スキャン セッションのデータの履歴スナップショットが格納されています。 このデータを使用すると、待機時間やスループットなどのパフォーマンス指標を時系列で分析できます。  
-  
+
+## <a name="ScriptUpgrade"></a> スクリプト アップグレード モード
+
+累積更新プログラムまたはサービス パックをインスタンスに適用する場合、再起動時に、インスタンスがスクリプト アップグレード モードになることがあります。 このモードでは、SQL Server が内部 CDC テーブルを分析し、アップグレードする手順を行うため、キャプチャ テーブルのインデックスなどのオブジェクトが再作成されることがあります。 関連するデータの量によっては、この手順にいくらかの時間がかかったり、または有効にされている CDC データベースのトランザクション ログの使用率が高くなったりする可能性があります。
+
+
 ## <a name="see-also"></a>参照
 
 - [データ変更の追跡 &#40;SQL Server&#41;](../../relational-databases/track-changes/track-data-changes-sql-server.md)

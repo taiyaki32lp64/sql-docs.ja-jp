@@ -18,22 +18,21 @@ helpviewer_keywords:
 ms.assetid: decc0760-029e-4baf-96c9-4a64073df1c2
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: a482767c416e1adf4de30d6493c4c79ca07d2398
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: 337b2ee6d7edffeb49c2cee6291d30100b4c1df0
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52420377"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68070329"
 ---
-# <a name="alter-sequence-transact-sql"></a>ALTER シーケンス (TRANSACT-SQL)
+# <a name="alter-sequence-transact-sql"></a>ALTER SEQUENCE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
 
   既存のシーケンス オブジェクトの引数を変更します。 **CACHE** オプションを使用してシーケンスが作成されている場合、シーケンスを変更するとキャッシュが再作成されます。  
   
- シーケンス オブジェクトは、[CREATE SEQUENCE](../../t-sql/statements/create-sequence-transact-sql.md) ステートメントを使用して作成されます。 シーケンスは整数値で、整数を返す任意のデータ型を指定できます。 このデータ型は、ALTER SEQUENCE ステートメントでは変更できません。 データ型を変更するには、シーケンス オブジェクトを削除して再作成します。  
+ シーケンス オブジェクトは、[CREATE SEQUENCE](../../t-sql/statements/create-sequence-transact-sql.md) ステートメントを使用して作成されます。 シーケンスは整数値であり、整数を返す任意のデータ型を指定できます。 このデータ型は、ALTER SEQUENCE ステートメントでは変更できません。 データ型を変更するには、シーケンス オブジェクトを削除して再作成します。  
   
- シーケンスはユーザー定義のスキーマ バインド オブジェクトで、仕様に従って数値のシーケンスを生成します。 NEXT VALUE FOR 関数を呼び出すことにより、シーケンスから新しい値が生成されます。 一度に複数のシーケンス番号を取得するには、 **sp_sequence_get_range** を使用します。 CREATE SEQUENCE、および **sp_sequence_get_range** と NEXT VALUE FOR 関数の両方を使用する場合の詳細およびシナリオについては、「[シーケンス番号](../../relational-databases/sequence-numbers/sequence-numbers.md)」を参照してください。  
+ シーケンスはユーザー定義のスキーマ バインド オブジェクトであり、仕様に従って数値のシーケンスを生成します。 NEXT VALUE FOR 関数を呼び出すことにより、シーケンスから新しい値が生成されます。 一度に複数のシーケンス番号を取得するには、 **sp_sequence_get_range** を使用します。 CREATE SEQUENCE、および **sp_sequence_get_range** と NEXT VALUE FOR 関数の両方を使用する場合の詳細およびシナリオについては、「[シーケンス番号](../../relational-databases/sequence-numbers/sequence-numbers.md)」を参照してください。  
   
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -65,13 +64,13 @@ ALTER SEQUENCE [schema_name. ] sequence_name
  シーケンスのオブジェクトの境界を指定します。 NO MINVALUE を指定すると、シーケンスのデータ型の最小値が使用されます。  
   
  [ MAXVALUE \<constant> | NO MAXVALUE  
- シーケンスのオブジェクトの境界を指定します。 NO MAXVALUE を指定すると、シーケンスのデータ型の最大値が使用されます。  
+ シーケンスのオブジェクトの境界を指定します。 NO MAXVALUE を指定すると、シーケンスのデータ型の最大許容値が使用されます。  
   
  [ CYCLE | NO CYCLE ]  
  このプロパティは、最小値または最大値を超過した場合に、シーケンス オブジェクトを最小値 (降順シーケンス オブジェクトの場合は最大値) から再開するか、例外をスローするかを指定します。  
   
 > [!NOTE]  
->  循環後の次の値は最小値または最大値で、シーケンスの START VALUE ではありません。  
+>  循環後の次の値は最小値または最大値であり、シーケンスの START VALUE ではありません。  
   
  [ CACHE [\<constant> ] | NO CACHE ]  
  生成された値をシステム テーブルに保存するのに必要な IO の数を最小限に抑えることで、シーケンス オブジェクトを使用するアプリケーションのパフォーマンスが向上します。  
@@ -104,7 +103,7 @@ GRANT ALTER ON OBJECT::Test.TinySeq TO [AdventureWorks\Larry]
  シーケンスの作成と、**NEXT VALUE FOR** 関数を使用したシーケンス番号の生成の両方の使用例については、「[シーケンス番号](../../relational-databases/sequence-numbers/sequence-numbers.md)」を参照してください。  
   
 ### <a name="a-altering-a-sequence"></a>A. シーケンスを変更する  
- 次の例では、0 ～ 255 の範囲の **int** データ型を使って、Test という名前のスキーマと TestSeq という名前のシーケンスを作成します。 シーケンスは 125 で始まり、数値が生成されるたびに 25 ずつ増加します。 シーケンスは循環するように設定されているため、値が最大値の 200 を超えると、最小値の 100 で再開します。  
+ 次の例では、100 から 200 の範囲の **int** データ型を使って、Test という名前のスキーマと TestSeq という名前のシーケンスを作成します。 シーケンスは 125 で始まり、数値が生成されるたびに 25 ずつ増加します。 シーケンスは循環するように設定されているため、値が最大値の 200 を超えると、最小値の 100 で再開します。  
   
 ```  
 CREATE SCHEMA Test ;  
@@ -122,7 +121,7 @@ CREATE SEQUENCE Test.TestSeq
 GO  
 ```  
   
- 次の例では、0 ～ 255 の範囲を指定して TestSeq シーケンスを変更します。 シーケンスの番号が 100 から再開し、数値が生成されるたびに 50 ずつ増加します。  
+ 次の例では、50 から 200 の範囲を指定して TestSeq シーケンスを変更します。 シーケンスの番号が 100 から再開し、数値が生成されるたびに 50 ずつ増加します。  
   
 ```  
 ALTER SEQUENCE Test. TestSeq  
@@ -139,7 +138,7 @@ GO
  シーケンスが循環しないため、シーケンスが 200 を超えると **NEXT VALUE FOR** 関数はエラーになります。  
   
 ### <a name="b-restarting-a-sequence"></a>B. シーケンスを再開する  
- 次の例では、CountBy1 をという名前のシーケンスを作成します。 このシーケンスは既定値を使用します。  
+ 次の例では、CountBy1 という名前のシーケンスを作成します。 このシーケンスでは既定値が使用されます。  
   
 ```  
 CREATE SEQUENCE Test.CountBy1 ;  
@@ -165,7 +164,7 @@ SELECT NEXT VALUE FOR Test.CountBy1;
   
  今度は、想定どおりに番号が 1 になります。  
   
- CountBy1 シーケンスは、9,223,372,036,854,775,807 の数を生成すると操作を中止するために、既定値の NO CYCLE を使用して作成されました。 この後にシーケンス オブジェクトを呼び出すと、エラー 11728 が返されます。 次のステートメントは、シーケンス オブジェクトが循環するように変更し、キャッシュを 20 に設定します。  
+ CountBy1 シーケンスは、9,223,372,036,854,775,807 の数を生成すると操作を中止するようにするために、既定値の NO CYCLE を使用して作成されました。 この後にシーケンス オブジェクトを呼び出すと、エラー 11728 が返されます。 次のステートメントでは、シーケンス オブジェクトが循環するように変更され、キャッシュが 20 に設定されます。  
   
 ```  
 ALTER SEQUENCE Test.CountBy1  

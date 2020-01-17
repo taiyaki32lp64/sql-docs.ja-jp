@@ -1,6 +1,5 @@
 ---
-title: DQS でのデータ プロファイルと通知 | Microsoft Docs
-ms.custom: ''
+title: DQS のデータ プロファイルと通知
 ms.date: 10/01/2012
 ms.prod: sql
 ms.prod_service: data-quality-services
@@ -8,20 +7,20 @@ ms.reviewer: ''
 ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: a778bb5b-8e35-4a7b-b04a-ae2b46dec21b
-author: leolimsft
-ms.author: lle
-manager: craigg
-ms.openlocfilehash: 0d0561d83081a782a893591dfc3cd4972eb6b97c
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
-ms.translationtype: HT
+author: swinarko
+ms.author: sawinark
+ms.openlocfilehash: bb763d2212bd8dcb09b6088467e97aa702d15012
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56039323"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75251748"
 ---
 # <a name="data-profiling-and-notifications-in-dqs"></a>DQS のデータ プロファイルと通知
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
+  
   [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) のデータ プロファイルは、既存のデータ ソースのデータを分析し、DQS のアクティビティでデータに関する統計情報を表示するプロセスです。 このプロセスでは、データ品質が自動的に測定されます。 DQS のプロファイルは、DQS のナレッジ マネージメントおよびデータ品質プロジェクトに統合されており、 動的に調整が可能です。 プロファイルの主な目的は、一連のデータ品質プロセスを通じて意思決定を支援すること、およびプロセスの有効性を評価することの 2 つです。 DQS のプロファイル プロセスには次の利点があります。  
   
 -   ソース データの品質について調べることができ、データ品質の問題を特定するのに役立ちます。  
@@ -34,7 +33,7 @@ ms.locfileid: "56039323"
   
  プロファイルを行うと、Data Quality Services をナレッジ検出、クレンジング、および照合に使用するだけでなく、分析ツールとしても使用することができます。 分析用のナレッジ ベースを 1 つ作成し、そのナレッジ ベースを使用してナレッジ検出を実行することで、ナレッジ ベースが検出、クレンジング、および照合のニーズを満たすかどうかをプロファイル統計情報から判断することができます。  
   
-##  <a name="How"></a> プロファイルのしくみ  
+##  <a name="How"></a>プロファイルのしくみ  
  プロファイルは、ナレッジ ベースの品質を測定するものではなく、 ソース データの品質を測定するためのものです。 プロファイルにより、ナレッジ マネージメントまたはデータ品質プロジェクトで実行している特定の操作について、その操作によるソース データに対する効果を示す統計情報が提供されます。 プロファイルは常に、実行中の特定のアクティビティのコンテキストで実行されます。 画面に表示されるプロファイルのタブをクリックすることで、実行中のアクティビティのステージを終了せずにプロファイル データを表示できます。 プロファイル テーブルの値はプロセスの実行と同時にリアルタイムで設定されるため、データ品質タスクを実行しながら評価することが可能です。 クレンジングや重複除去の実行後にソース データが向上するかどうか、およびどの程度向上するかを確認することができます。  
   
  プロファイルの数値は、値の出現回数を示し、多くの場合は全体に占める割合も示します。ただし、一意性の基準は例外で、 値の出現回数に関係なく、値の絶対数を示します。  
@@ -51,7 +50,7 @@ ms.locfileid: "56039323"
   
  ドメイン管理アクティビティに対してはプロファイル統計情報は提供されません。  
   
-##  <a name="Activity"></a> アクティビティ別のプロファイル データ  
+##  <a name="Activity"></a>アクティビティ別のプロファイルデータ  
  DQS のプロファイルでは、完全性 (データがどの程度存在するか)、正確性 (データがどの程度意図されたとおりに使用できるか)、および一意性 (異なるエンティティを異なる値でどの程度表すか) という、標準のデータ品質ディメンションを使用してデータの品質を表します。 既定では、存在しないと見なされるのは NULL 値と空の値で、これらの値があると完全性の割合が下がります。ただし、他の値も NULL に相当する値として定義すると、存在しないものと見なされるようになります。  
   
  プロファイルによってプロセスの評価に必要な統計情報が提供されますが、実際に評価するにはその統計情報を解釈する必要があります。 プロファイルの内容について理解するには、統計情報を列ごとに確認するようにしてください。  
@@ -68,35 +67,35 @@ ms.locfileid: "56039323"
   
  アクティビティに関連する特定のプロファイル統計情報の詳細については、以下のトピックのプロファイルに関するセクションを参照してください。  
   
--   [ナレッジ検出を実行する](../data-quality-services/perform-knowledge-discovery.md)  
+-   [ナレッジ検出の実行](../data-quality-services/perform-knowledge-discovery.md)  
   
--   [DQS &#40;内部&#41; ナレッジを使用したデータのクレンジング](../data-quality-services/cleanse-data-using-dqs-internal-knowledge.md)  
+-   [DQS &#40;内部&#41; ナレッジを使用してデータをクレンジングする](../data-quality-services/cleanse-data-using-dqs-internal-knowledge.md)  
   
--   [照合ポリシーを作成する](../data-quality-services/create-a-matching-policy.md)  
+-   [照合ポリシーの作成](../data-quality-services/create-a-matching-policy.md)  
   
--   [照合プロジェクトを実行する](../data-quality-services/run-a-matching-project.md)  
+-   [照合プロジェクトの実行](../data-quality-services/run-a-matching-project.md)  
   
-##  <a name="Monitoring"></a> アクティビティ監視のプロファイル データ  
+##  <a name="Monitoring"></a>アクティビティ監視のプロファイルデータ  
  ナレッジ検出、照合ポリシー、照合、およびクレンジングのアクティビティに対するプロファイル情報は、Data Quality Client のアクティビティのページだけでなく、アクティビティ監視でも確認できます。 アクティビティ監視には、現在と過去のアクティビティの概要が表示されます。 アクティビティのプロパティおよび関連する計算プロセスに加え、各アクティビティに対して生成されるプロファイル情報を 1 か所で確認することができます。 アクティビティのテーブルでアクティビティを選択すると、下のテーブルにプロファイル結果が表示されます。 プロファイル結果はエクスポートすることもできます。 詳細については、「 [DQS Administration](../data-quality-services/dqs-administration.md)」をご参照ください。  
   
-##  <a name="Notifications"></a> 通知  
+##  <a name="Notifications"></a>警告  
  DQS では、プロファイルによって重要な統計情報や基準を収集して表示することに加え、表示されるプロファイル統計情報に基づいて推奨される操作がある場合に、そのことを示す通知が生成されます (有効にしている場合)。 通知は、データ ソースについての重要な情報を強調すると共に、現在のアクティビティの実行された目的に対する有効性を示すために使用されます。 通知で提供されるヒントや推奨事項には、現在の状況を示す情報と、ナレッジ検出、データ クレンジング、またはデータ照合のアクティビティを改善するための推奨される方法が示されます。  
   
  DQS の通知は、ユーザーに関連すると思われる問題を提起したり、潜在的な問題に対処したりすることを目的としたものです。 通知が示されたときにそれに対処するかどうかは、目的に関連するかどうかに応じて選択できます。 たとえば、データ クレンジングで修正された値や提案された値がなく、完全性と正確性がどちらも 100% である場合に DQS で通知が生成されたとします。 この通知はアクティビティを実行する必要がないことを示していると考えられますが、 アクティビティを実行するかどうかはユーザーが選択できます。  
   
- 通知は、 **[プロファイル]** タブに感嘆符付きのツールヒントで示されます。通知に関連付けられた統計情報は、その通知の根拠となる統計情報であることがわかるように赤色で表示されます。  
+ 通知は、ツールヒントによって [**プロファイル**] タブに感嘆符付きで示されます。通知に関連付けられている統計は、通知の統計的根拠を示すために赤で表示されます。  
   
  通知の有効 (既定) と無効の切り替えは、Data Quality Client のホーム ページの **[全般設定]** タブにある **[管理]** セクションで行えます。 通知を無効にすると、ツールヒントは表示されず、統計情報も赤色になりません。 通知を無効にすることでパフォーマンスが大幅に向上することはありません。 通知を無効にしてもプロファイルは実行されます。  
   
  アクティビティの通知に関連付けられている特定の条件については、以下を参照してください。  
   
--   [ナレッジ検出を実行する](../data-quality-services/perform-knowledge-discovery.md)  
+-   [ナレッジ検出の実行](../data-quality-services/perform-knowledge-discovery.md)  
   
--   [DQS &#40;内部&#41; ナレッジを使用したデータのクレンジング](../data-quality-services/cleanse-data-using-dqs-internal-knowledge.md)  
+-   [DQS &#40;内部&#41; ナレッジを使用してデータをクレンジングする](../data-quality-services/cleanse-data-using-dqs-internal-knowledge.md)  
   
--   [照合ポリシーを作成する](../data-quality-services/create-a-matching-policy.md)  
+-   [照合ポリシーの作成](../data-quality-services/create-a-matching-policy.md)  
   
--   [照合プロジェクトを実行する](../data-quality-services/run-a-matching-project.md)  
+-   [照合プロジェクトの実行](../data-quality-services/run-a-matching-project.md)  
   
 ## <a name="related-tasks"></a>Related Tasks  
   

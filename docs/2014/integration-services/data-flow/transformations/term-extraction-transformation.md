@@ -22,15 +22,15 @@ helpviewer_keywords:
 - term extractions [Integration Services]
 - stemming words [Integration Services]
 ms.assetid: d0821526-1603-4ea6-8322-2d901568fbeb
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: f6d63836dbc6827eb47daaf4110bc678357012d3
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: d0caed882338b4ac1ce2f3e1e225693017ff1605
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52762442"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62899935"
 ---
 # <a name="term-extraction-transformation"></a>用語抽出変換
   用語抽出変換は、変換入力列内のテキストから用語を抽出し、変換出力列に書き込みます。 この変換で処理されるテキストは英語テキストのみで、独自の英語辞書および英語に関する言語情報を使用します。  
@@ -146,7 +146,7 @@ ms.locfileid: "52762442"
   
 -   数字、句読点、および英文字の組み合わせ。 たとえば、 *A23B#99* は、用語 *A23B*を返します。  
   
--   %、@、&、$、#、\*、:、;、.、**,**、!、?、\<、>、+、=、^、~、|、\\、/、(、)、[、]、{、}、"、' 文字。  
+-   %、@、&、$、#、\*、:、;、.、 **,** 、!、?、\<、>、+、=、^、~、|、\\、/、(、)、[、]、{、}、"、' 文字。  
   
     > [!NOTE]  
     >  1 つ以上のピリオド (.) が含まれる頭字語は、複数の文に分割されません。  

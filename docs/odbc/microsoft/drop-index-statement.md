@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: cd0ff767-9254-413b-bd1a-bed26c6774f5
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: b00f15f6a660025930ac401278a571f5cb617697
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 23823e53e516324832c79706e6171b48a9c5297c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47636750"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68071858"
 ---
 # <a name="drop-index-statement"></a>DROP INDEX ステートメント
 Microsoft Access、dBASE、または Paradox ドライバーを使用する場合、DROP INDEX ステートメントの構文は、"DROP INDEX on a b"、インデックスの名前は、"a"と"b"は、テーブルの名前 (DROP INDEX いない*インデックス名*)。  

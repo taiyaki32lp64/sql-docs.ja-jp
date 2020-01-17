@@ -2,18 +2,18 @@
 title: データ領域でのグループの追加または削除 (レポート ビルダーおよび SSRS) | Microsoft Docs
 ms.date: 03/01/2017
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: report-design
 ms.topic: conceptual
 ms.assetid: 4de53c3c-c6fc-49ce-b692-3609fc0b3ec5
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 6f23da8e4304f549183977d0962eebafaa7b9d05
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 004cb81902d921380eee21532626f141ca35b646
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56286250"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65581926"
 ---
 # <a name="add-or-delete-a-group-in-a-data-region-report-builder-and-ssrs"></a>データ領域でのグループの追加または削除 (レポート ビルダーおよび SSRS)
 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 改ページ調整されたレポートで、計算や表示の対象として、特定の値または式のセットによってデータを整理する場合は、グループをデータ領域に追加します。 グループには、データセットのどのデータがそのグループに含まれるかを示す名前と式を割り当てます。 グループの詳細については、「 [グループについて (レポート ビルダーおよび SSRS)](../../reporting-services/report-design/understanding-groups-report-builder-and-ssrs.md)」を参照してください。  
@@ -44,7 +44,7 @@ ms.locfileid: "56286250"
   
 2.  **[名前]** に、グループの名前を入力します。  
   
-3.  **[グループ式]** で、式を入力するか式ボタン (**[fx]**) をクリックして、式を作成します。  
+3.  **[グループ式]** で、式を入力するか式ボタン ( **[fx]** ) をクリックして、式を作成します。  
   
 4.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
@@ -70,7 +70,7 @@ ms.locfileid: "56286250"
   
 3.  **[名前]** ボックスに、グループの名前を入力します。  
   
-4.  **[グループ式]** で、単純な式を入力または選択するか、式ボタン (**[fx]**) をクリックして、グループ式を作成します。  
+4.  **[グループ式]** で、単純な式を入力または選択するか、式ボタン ( **[fx]** ) をクリックして、グループ式を作成します。  
   
 5.  **[追加]** をクリックして追加の式を作成します。 指定するすべての式が論理 AND を使用して結合され、このグループのデータを指定します。  
   

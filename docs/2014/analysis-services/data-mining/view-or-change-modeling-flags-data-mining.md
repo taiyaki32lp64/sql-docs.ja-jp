@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: d1169735-fb18-417b-b8d6-9a161e444020
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 53299289e4daf504eef9cb382469225d14efd698
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 7657e7502d3b215cd87326c51cc9416ba0707235
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48050142"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66082679"
 ---
 # <a name="view-or-change-modeling-flags-data-mining"></a>モデリング フラグの表示または変更 (データ マイニング)
   モデリング フラグは、マイニング構造列またはマイニング モデル列に設定して、分析時にアルゴリズムがデータを処理する方法を制御するためのプロパティです。  
@@ -53,6 +52,6 @@ ms.locfileid: "48050142"
   
 ## <a name="see-also"></a>参照  
  [マイニング モデル タスクと操作方法](mining-model-tasks-and-how-tos.md)   
- [モデリング フラグ&#40;データ マイニング&#41;](modeling-flags-data-mining.md)  
+ [モデリング フラグ &#40;データ マイニング&#41;](modeling-flags-data-mining.md)  
   
   

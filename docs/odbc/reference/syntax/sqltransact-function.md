@@ -19,20 +19,19 @@ helpviewer_keywords:
 ms.assetid: 496249e0-8eff-4c60-8358-5543bc3ead9c
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: b76b7a550211522c2b2100776b88f311abb2b932
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 6c96c903b68dee2d1d215804d318d47b4c39a7a5
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47646860"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68039499"
 ---
 # <a name="sqltransact-function"></a>SQLTransact 関数
 **準拠**  
- バージョンで導入されました ODBC 1.0 標準準拠: 非推奨とされます。  
+ バージョンが導入されました。ODBC 1.0 規格に準拠します。非推奨  
   
  **概要**  
- ODBC 3。*x*、ODBC 2 *.x*関数**SQLTransact**置き換わりました**SQLEndTran**します。 詳細については、次を参照してください。 [SQLEndTran](../../../odbc/reference/syntax/sqlendtran-function.md)します。  
+ ODBC で*3.x*、ODBC *2.x*関数**SQLTransact**置き換わりました**SQLEndTran**します。 詳細については、次を参照してください。 [SQLEndTran](../../../odbc/reference/syntax/sqlendtran-function.md)します。  
   
 > [!NOTE]  
 >  ODBC 3.8 にで導入された、SQL_ASYNC_DBC_FUNCTION_ENABLE 属性がサポートされていない**SQLTransact**します。 接続ハンドルでの非同期操作を使用してアプリケーションを使用する必要があります**SQLEndTran**します。  

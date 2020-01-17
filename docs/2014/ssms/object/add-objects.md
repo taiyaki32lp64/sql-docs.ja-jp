@@ -13,11 +13,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 15011717f0f2d5ece6666c30aef72eade0faabb3
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54127182"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63276958"
 ---
 # <a name="add-objects"></a>[オブジェクトの追加]
   オブジェクトを選択するダイアログ ボックスで表示されるオブジェクトの種類を限定します。  

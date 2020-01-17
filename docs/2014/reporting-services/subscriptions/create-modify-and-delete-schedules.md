@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 helpviewer_keywords:
 - report-specific schedules [Reporting Services]
@@ -20,15 +19,15 @@ helpviewer_keywords:
 - schedules [Reporting Services], modifying
 - shared schedules [Reporting Services], deleting
 ms.assetid: 05da5f3d-9222-43a9-893b-aa10f0f690f8
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 231fbf5211654d126f09ceb048501c7b2eacf0c3
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 4e04f3f9a89fef9c00312ae1622f74fc0a279314
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56039583"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66100879"
 ---
 # <a name="create-modify-and-delete-schedules"></a>Create, Modify, and Delete Schedules
   このトピックでは、スケジュールを作成、変更、および削除する方法について説明します。  
@@ -139,7 +138,7 @@ ms.locfileid: "56039583"
   
 5.  わかりやすいスケジュール名を入力します。  
   
-6.  **[時間]**、 **[日]**、 **[週]**、または **[月]** をクリックします。 一度だけ実行するスケジュールを作成するには、 **[一度だけ]** をクリックします。 スケジュールの基準を指定すると、新たなオプションが表示されます。  
+6.  **[時間]** 、 **[日]** 、 **[週]** 、または **[月]** をクリックします。 一度だけ実行するスケジュールを作成するには、 **[一度だけ]** をクリックします。 スケジュールの基準を指定すると、新たなオプションが表示されます。  
   
 7.  必要に応じて、スケジュールの開始日を選択します。 既定値は、現在の日付です。 明日以降の日付を入力して、スケジュールの開始日を延期できます。  
   
@@ -183,7 +182,7 @@ ms.locfileid: "56039583"
   
 6.  必要に応じて、スケジュールの終了日を選択します。 スケジュールの実行は設定日に停止されますが、スケジュールは削除されません。  
   
-7.  定期的なスケジュールを構成するには、 **[時間]**、 **[日]**、 **[週]**、または **[月]** を選択します。 追加のオプションが表示されます。 これらの追加のオプションを使用して、必要に応じた時間、日、週、または月に基づいて、スケジュールの頻度を構成します。  
+7.  定期的なスケジュールを構成するには、 **[時間]** 、 **[日]** 、 **[週]** 、または **[月]** を選択します。 追加のオプションが表示されます。 これらの追加のオプションを使用して、必要に応じた時間、日、週、または月に基づいて、スケジュールの頻度を構成します。  
   
      また、1 回のみの (定期的ではない) スケジュールを指定するには、 **[一度だけ]** を選択し、 **[開始時刻]** を指定します。  
   

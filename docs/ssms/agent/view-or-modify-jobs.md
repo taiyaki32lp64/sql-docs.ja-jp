@@ -16,16 +16,15 @@ helpviewer_keywords:
 - SQL Server Agent jobs, modifying
 - displaying jobs
 ms.assetid: 57f649b8-190c-4304-abd7-7ca5297deab7
-author: stevestein
-ms.author: sstein
-manager: craigg
+author: markingmyname
+ms.author: maghan
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 02aa7c66d720746d6472059f5a3597d15ef642f0
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: bc2f23fd57fe1580e830c08f86aef38cf2a3ecb3
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51703700"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68267431"
 ---
 # <a name="view-or-modify-jobs"></a>ジョブの表示または変更
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -42,7 +41,7 @@ ms.locfileid: "51703700"
   
 -   応答オプション  
   
--   Schedules  
+-   スケジュール  
   
 -   ジョブ ステップ  
   
@@ -50,9 +49,9 @@ ms.locfileid: "51703700"
   
 -   ジョブ カテゴリ  
   
--   対象サーバー (マルチサーバー ジョブの場合のみ)  
+-   ターゲット サーバー (マルチサーバー ジョブの場合のみ)  
   
-マルチサーバー ジョブに対する変更を確実に有効にするには、対象サーバーが更新されたジョブをダウンロードできるように、変更をダウンロード一覧に適用する必要があります。 対象サーバーが最新のジョブ定義を保持するようにするには、マルチサーバー ジョブの更新後に、次のような INSERT 命令を通知します。  
+マルチサーバー ジョブに対する変更を確実に有効にするには、ターゲット サーバーが更新されたジョブをダウンロードできるように、変更をダウンロード一覧に適用する必要があります。 ターゲット サーバーが最新のジョブ定義を保持するようにするには、マルチサーバー ジョブの更新後に、次のような INSERT 命令を通知します。  
   
 ```  
 EXECUTE sp_post_msx_operation 'INSERT', 'JOB', '<job id>'  

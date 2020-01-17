@@ -15,15 +15,15 @@ helpviewer_keywords:
 - validation [Integration Services], design-time tasks
 - SSIS custom tasks, validating
 ms.assetid: dc224f4f-b339-4eb6-a008-1b4fe0ea4fd2
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 968e7eb3f614fa284222a67715e6415220f002e5
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: ee6c3325364e6b695b288e1a5b43e7d2470f6e34
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53350349"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62896108"
 ---
 # <a name="coding-a-custom-task"></a>カスタム タスクのコーディング
   <xref:Microsoft.SqlServer.Dts.Runtime.Task> 基本クラスを継承するクラスを作成し、<xref:Microsoft.SqlServer.Dts.Runtime.DtsTaskAttribute> 属性をそのクラスに適用したら、基本クラスのプロパティとメソッドの実装をオーバーライドして、カスタム機能を提供する必要があります。  

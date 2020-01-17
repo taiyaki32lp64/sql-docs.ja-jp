@@ -1,7 +1,7 @@
 ---
-title: Microsoft Azure BLOB ストレージ サービスを使用した SQL Server のバックアップと復元 | Microsoft Docs
-ms.custom: ''
-ms.date: 07/25/2016
+title: Azure BLOB ストレージを使用したバックアップと復元
+ms.custom: seo-lt-2019
+ms.date: 12/17/2019
 ms.prod: sql
 ms.prod_service: backup-restore
 ms.reviewer: ''
@@ -10,18 +10,17 @@ ms.topic: conceptual
 ms.assetid: 6a0c9b6a-cf71-4311-82f2-12c445f63935
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: fcaee46bd8a7b84d72fda23d3bf7e5ffcb99050d
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: ba2574b4468742414d60c1f4e7db4a93380fba0e
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51660123"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75251135"
 ---
 # <a name="sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service"></a>Windows Azure BLOB ストレージ サービスを使用した SQL Server のバックアップと復元
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
-  ![Azure BLOB へのバックアップのグラフィック](../../relational-databases/backup-restore/media/backup-to-azure-blob-graphic.png "Azure BLOB へのバックアップのグラフィック")  
+  ![Azure BLOB へのバックアップのグラフィック](../../relational-databases/backup-restore/media/backup-to-azure-blob-graphic.png "Azre BLOB へのバックアップのグラフィック")  
   
  このトピックでは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Microsoft Azure Blob ストレージ サービス [への](https://www.windowsazure.com/develop/net/how-to-guides/blob-storage/)のバックアップと Microsoft Azure Blob ストレージ サービスからの復元について説明します。 また、Microsoft Azure BLOB Service を使用して [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] バックアップを格納する利点の概要についても説明します。  
   
@@ -34,16 +33,16 @@ ms.locfileid: "51660123"
   
 -   **Azure BLOB Storage 内のデータベース ファイルのファイル スナップショット バックアップ** : [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ファイル スナップショット バックアップでは、Azure のスナップショットを利用することで、Azure BLOB Storage サービスで格納されているデータベース ファイルのバックアップと復元をほぼ即時に実行できます。 この機能を利用すると、バックアップと復元のポリシーを簡素化し、ポイントインタイム リストアをサポートできます。 詳細については、「 [Azure でのデータベース ファイルのファイル スナップショット バックアップ](../../relational-databases/backup-restore/file-snapshot-backups-for-database-files-in-azure.md)」を参照してください。 この機能は、SQL Server 2016 以降で使用できます。  
   
--   **SQL Server で Microsoft Azure にバックアップする方法:** SQL Server を構成することにより、単一データベースまたは複数データベースのバックアップ方法やスケジュールを管理することも、インスタンス レベルでの既定値を設定することもできます。 この機能は、 **[!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]** と呼ばれるものです。 詳細については、「[Microsoft Azure への SQL Server マネージド バックアップ](../../relational-databases/backup-restore/sql-server-managed-backup-to-microsoft-azure.md)」を参照してください。 この機能は、SQL Server 2014 以降で使用できます。  
+-   **SQL Server で Microsoft Azure へのバックアップを管理する方法:** SQL Server を構成することにより、単一データベースまたは複数データベースのバックアップ方法やスケジュールを管理することも、インスタンス レベルでの既定値を設定することもできます。 この機能は、 **[!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]** と呼ばれるものです。 詳細については、「[Microsoft Azure への SQL Server マネージド バックアップ](../../relational-databases/backup-restore/sql-server-managed-backup-to-microsoft-azure.md)」を参照してください。 この機能は、SQL Server 2014 以降で使用できます。  
   
 ## <a name="benefits-of-using-the-microsoft-azure-blob-service-for-includessnoversionincludesssnoversion-mdmd-backups"></a>[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] バックアップに Microsoft Azure BLOB Service を使用する利点  
   
--   柔軟で信頼性が高く、制限のないオフサイト ストレージ: Microsoft Azure BLOB Service へのバックアップの格納は、アクセスしやすく便利で柔軟なオフサイトのオプションです。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] バックアップ用にオフサイト ストレージを作成するのは、既存のスクリプトやジョブを変更するのと同様に簡単です。 オフサイト ストレージは、通常、災害発生時にオフサイトと運用データベース両方の場所に影響しないように、運用データベースの場所から十分に離れた場所に設置する必要があります。 BLOB ストレージを地理的に離れた場所にレプリケートすることによって、地域全体に影響する可能性がある災害が発生した場合の保護レベルが強化されます。 また、バックアップは場所や時間を問わず使用でき、復元のために簡単にアクセスできます。  
+-   柔軟で信頼性が高く、制限のないオフサイト ストレージ:Microsoft Azure Blob service へのバックアップの保存は、アクセスしやすく便利で柔軟なオフサイトのオプションです。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] バックアップ用にオフサイト ストレージを作成するのは、既存のスクリプトやジョブを変更するのと同様に簡単です。 オフサイト ストレージは、通常、災害発生時にオフサイトと運用データベース両方の場所に影響しないように、運用データベースの場所から十分に離れた場所に設置する必要があります。 BLOB ストレージを地理的に離れた場所にレプリケートすることによって、地域全体に影響する可能性がある災害が発生した場合の保護レベルが強化されます。 また、バックアップは場所や時間を問わず使用でき、復元のために簡単にアクセスできます。  
   
     > [!IMPORTANT]  
     >  [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]でブロック BLOB を使用すると、バックアップ セットをストライプし、最大 12.8 TB のバックアップ ファイル サイズに対応できます。  
   
--   バックアップ アーカイブ: Microsoft Azure BLOB ストレージ サービスは、バックアップのアーカイブ手段として、よく使用されるテープ オプションより優れています。 テープ ストレージでは、オフサイトの施設への物理的な輸送手段とメディアを保護する手段が必要になります。 Microsoft Azure BLOB ストレージへのバックアップの格納は、すぐに使用でき、可用性が高く、持続性を備えたアーカイブ オプションです。  
+-   バックアップ アーカイブ:Microsoft Azure Blob Storage サービスは、バックアップのアーカイブ手段として、よく使用されるテープ オプションより優れています。 テープ ストレージでは、オフサイトの施設への物理的な輸送手段とメディアを保護する手段が必要になります。 Microsoft Azure BLOB ストレージへのバックアップの格納は、すぐに使用でき、可用性が高く、持続性を備えたアーカイブ オプションです。  
   
 -   ハードウェア管理のオーバーヘッドなし: Microsoft Azure サービスを使用したハードウェア管理にはオーバーヘッドが生じません。 Microsoft Azure サービスでは、ハードウェアが管理され、ハードウェア障害に対する冗長性と保護を目的として地理的に離れた場所へのレプリケーションが提供されます。  
   
@@ -51,7 +50,7 @@ ms.locfileid: "51660123"
   
      また、Microsoft Azure BLOB ストレージ サービスに格納されているバックアップ ファイルは、オンプレミスの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 、または Microsoft Azure 仮想マシンで実行している別の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] で直接使用できます。その際、データベースのアタッチ/デタッチや、VHD のダウンロードとアタッチは必要ありません。  
   
--   コスト面での利点: 使用するサービスにのみ料金がかかります。 オフサイトのバックアップ アーカイブ オプションとして、優れたコスト効果を得ることができます。 詳細とリンクについては、「 [Microsoft Azure の課金に関する注意点](#Billing) 」を参照してください。  
+-   コスト面での利点:使用するサービスにのみ料金がかかります。 オフサイトのバックアップ アーカイブ オプションとして、優れたコスト効果を得ることができます。 詳細とリンクについては、「 [Microsoft Azure の課金に関する注意点](#Billing) 」を参照してください。  
   
 ##  <a name="Billing"></a> Microsoft Azure の課金に関する注意点:  
  Microsoft Azure ストレージのコストを把握しておくと、Microsoft Azure でバックアップを作成および格納するコストを予測できます。  
@@ -68,7 +67,7 @@ ms.locfileid: "51660123"
 
 [システム データベースのバックアップと復元 &#40;SQL Server&#41;](../../relational-databases/backup-restore/back-up-and-restore-of-system-databases-sql-server.md)   
 
-[チュートリアル: Microsoft Azure BLOB Storage サービスと SQL Server 2016 データベースの使用](../tutorial-use-azure-blob-storage-service-with-sql-server-2016.md)
+[チュートリアル:Azure Blob Storage サービスと SQL Server 2016 データベースの使用](../tutorial-use-azure-blob-storage-service-with-sql-server-2016.md)
 
 [SQL Server Backup to URL](../../relational-databases/backup-restore/sql-server-backup-to-url.md)  
   

@@ -13,15 +13,15 @@ helpviewer_keywords:
 - CSV files [SQL Server]
 - quoted fields in CSV files [SQL Server]
 ms.assetid: 783fd581-2e5f-496b-b79c-d4de1e09ea30
-author: douglaslMS
-ms.author: douglasl
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: d0836d835b77241a27dfccc65528e8cda440559c
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 7c1c423bad8742b0a9760945e3823d6ef159c1e0
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53358134"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "67046704"
 ---
 # <a name="prepare-data-for-bulk-export-or-import-sql-server"></a>一括エクスポートまたは一括インポートのデータの準備 (SQL Server)
   ここでは、一括エクスポート操作の計画に関する考慮事項と一括インポート操作の要件について説明します。  
@@ -67,7 +67,7 @@ ms.locfileid: "53358134"
   
      データを [!INCLUDE[msCoName](../../includes/msconame-md.md)] FoxPro や Visual FoxPro テーブル (.dbf) ファイル、または [!INCLUDE[ofprexcel](../../includes/ofprexcel-md.md)] ワークシート (.xls) ファイルから一括インポートするには、前述の制限に準拠した CSV ファイルにデータを変換する必要があります。 通常、ファイル拡張子は .csv です。 そうすると、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 一括インポート操作で .csv ファイルをデータ ファイルとして使用できます。  
   
-     32 ビット システムでは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] OPENROWSET [を OLE DB Provider for Jet と共に使用することにより、一括インポートの最適化を使用せずに CSV データを](/sql/t-sql/functions/openrowset-transact-sql) テーブルにインポートできます。 Jet は、データ ソースと同じディレクトリ内にある schema.ini ファイルで定義されたスキーマを使用して、テキスト ファイルをテーブルとして扱います。  CSV データの場合、schema.ini ファイル内のパラメーターの 1 つが "FORMAT=CSVDelimited" となります。 この解決方法を使用するには、Jet Test IISAMm 操作、その接続文字列の構文、schema.ini の使用法、レジストリ設定オプションなどについて理解する必要があります。  この情報については、Microsoft Access ヘルプとサポート技術情報 (KB) の資料を参照することをお勧めします。 詳細については、次を参照してください[テキスト データ ソースのドライバーの初期化](https://go.microsoft.com/fwlink/?LinkId=128503)、[セキュリティで保護された Access データベースへのリンク サーバーで SQL Server 7.0 分散クエリを使用する方法](https://go.microsoft.com/fwlink/?LinkId=128504)、 [HOW TO:。Jet OLE DB プロバイダー 4.0 を使用して ISAM データベースに接続](https://go.microsoft.com/fwlink/?LinkId=128505)、および[Jet プロバイダーの Text IIsam を使用して区切られたテキスト ファイルを開く方法](https://go.microsoft.com/fwlink/?LinkId=128501)します。  
+     32 ビット システムでは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] OPENROWSET [を OLE DB Provider for Jet と共に使用することにより、一括インポートの最適化を使用せずに CSV データを](/sql/t-sql/functions/openrowset-transact-sql) テーブルにインポートできます。 Jet は、データ ソースと同じディレクトリ内にある schema.ini ファイルで定義されたスキーマを使用して、テキスト ファイルをテーブルとして扱います。  CSV データの場合、schema.ini ファイル内のパラメーターの 1 つが "FORMAT=CSVDelimited" となります。 この解決方法を使用するには、Jet Test IISAMm 操作、その接続文字列の構文、schema.ini の使用法、レジストリ設定オプションなどについて理解する必要があります。  この情報については、Microsoft Access ヘルプとサポート技術情報 (KB) の資料を参照することをお勧めします。 詳細については、「[Initializing the Text Data Source Driver](https://docs.microsoft.com/office/client-developer/access/desktop-database-reference/initializing-the-text-data-source-driver)」 (テキスト データ ソースのドライバーを初期化する)、「[How To Use a SQL Server 7.0 Distributed Query with a Linked Server to Secured Access Databases](https://go.microsoft.com/fwlink/?LinkId=128504)」 (セキュリティ設定された Access データベースにリンクされたサーバーで SQL Server 7.0 分散クエリを使用する方法)、「[HOW TO:Use Jet OLE DB Provider 4.0 to Connect to ISAM Databases](https://go.microsoft.com/fwlink/?LinkId=128505)」 (ISAM データベースへの接続に Jet OLE DB プロバイダー 4.0 を使用する方法)、「[How To Open Delimited Text Files Using the Jet Provider's Text IIsam](https://go.microsoft.com/fwlink/?LinkId=128501)」 (Jet プロバイダーの Text IIsam を使用して区切り記号付きテキスト ファイルを開く方法) を参照してください。  
   
  また、データ ファイルのデータをテーブルに一括インポートするには、以下の要件も満たしている必要があります。  
   
@@ -87,7 +87,7 @@ ms.locfileid: "53358134"
 |---------------------|  
 |OLE DB Provider for Jet を使用した CSV データのインポートについての情報を追加しました。|  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [bcp Utility](../../tools/bcp-utility.md)   
  [BULK INSERT &#40;Transact-SQL&#41;](/sql/t-sql/statements/bulk-insert-transact-sql)   
  [データ型 &#40;Transact-SQL&#41;](/sql/t-sql/data-types/data-types-transact-sql)   

@@ -13,11 +13,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 2445b0c62347d84beb4690541871bfdec8d1ca3a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48214112"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62869567"
 ---
 # <a name="mssqlserver18264"></a>MSSQLSERVER_18264
     
@@ -40,7 +40,7 @@ ms.locfileid: "48214112"
   
  トレース フラグの使用方法の詳細については、SQL Server オンライン ブックを参照してください。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [トレース フラグ &#40;Transact-SQL&#41;](/sql/t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql)  
   
   

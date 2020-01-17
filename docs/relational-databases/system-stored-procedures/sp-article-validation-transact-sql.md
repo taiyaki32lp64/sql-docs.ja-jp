@@ -1,5 +1,5 @@
 ---
-title: sp_article_validation (TRANSACT-SQL) |Microsoft Docs
+title: sp_article_validation (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
@@ -15,18 +15,17 @@ helpviewer_keywords:
 ms.assetid: 44e7abcd-778c-4728-a03e-7e7e78d3ce22
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 849564fcda37c022413d9e0758abe50279497a0b
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: 6f5ee076163ff3cf0f69daab7ceff115bf5876a6
+ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54125112"
+ms.lasthandoff: 08/03/2019
+ms.locfileid: "68769020"
 ---
-# <a name="sparticlevalidation-transact-sql"></a>sp_article_validation (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+# <a name="sparticlevalidation-transact-sql"></a>sp_article_validation (Transact-sql)
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
-  指定されたアーティクルに対する検証の要求を開始します。 このストアド プロシージャは、パブリッシャー側でパブリケーション データベースについて、およびサブスクライバー側でサブスクリプション データベースについて実行されます。  
+  指定されたアーティクルに対する検証の要求を開始します。 このストアドプロシージャは、パブリッシャー側でパブリケーションデータベースに対して実行され、サブスクライバー側でサブスクリプションデータベースに対して実行されます。  
   
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -45,61 +44,53 @@ sp_article_validation [ @publication = ] 'publication'
 ```  
   
 ## <a name="arguments"></a>引数  
- [  **@publication=**] **'**_パブリケーション_**'**  
- アーティクルが存在するパブリケーションの名前を指定します。 *パブリケーション*は**sysname**、既定値はありません。  
+`[ @publication = ] 'publication'`アーティクルが存在するパブリケーションの名前を指定します。 *パブリケーション* は **sysname** 、既定値はありません。  
   
- [  **@article=**] **'**_記事_**'**  
- 検証するアーティクルの名前を指定します。 *記事*は**sysname**、既定値はありません。  
+`[ @article = ] 'article'`検証するアーティクルの名前を指定します。 *アーティクル*は**sysname**で、既定値はありません。  
   
- [  **@rowcount_only=**] *type_of_check_requested*  
- テーブルの行数のみを返す場合に指定します。 *type_of_check_requested*は**smallint**、既定値は**1**します。  
+`[ @rowcount_only = ] type_of_check_requested`テーブルの行数のみを返すかどうかを指定します。 *type_of_check_requested*は**smallint**,、既定値は**1**です。  
   
- 場合**0**、行数を実行し、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 7.0 互換のチェックサム。  
+ **0**の場合は、rowcount と互換性[!INCLUDE[msCoName](../../includes/msconame-md.md)]の[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]ある7.0 のチェックサムを実行します。  
   
- 場合**1**、行数チェックのみを実行します。  
+ **1**の場合は、行数チェックのみを実行します。  
   
- 場合**2**行数とバイナリ チェックサムを実行します。  
+ **2**の場合は、行数とバイナリチェックサムを実行します。  
   
- [  **@full_or_fast=**] *full_or_fast*  
- 行数の計算で使用する方法を指定します。 *full_or_fast*は**tinyint**、これらの値のいずれかを指定できます。  
+`[ @full_or_fast = ] full_or_fast`行数を計算するために使用されるメソッドです。 *full_or_fast*は**tinyint**,、これらの値のいずれかを指定できます。  
   
 |**[値]**|**[説明]**|  
 |---------------|---------------------|  
 |**0**|COUNT(*) を使用してフル カウントを実行します。|  
-|**1**|高速カウントを実行します。 **sysindexes.rows**します。 行のカウント**sysindexes**は実際のテーブル内の行のカウントよりも高速です。 ただし、 **sysindexes**の更新は時間、および行カウントが正しくない可能性があります。|  
-|**2** (既定値)|最初に高速カウントを試み、条件高速カウントを実行します。 高速カウントに違いが見られる場合、フル カウントに戻されます。 場合*expected_rowcount*ストアド プロシージャの中を NULL 値を取得する、フル カウント(\*) が常に使用します。|  
+|**1**|Sysindexes から高速カウントを実行し**ます**。 **Sysindexes**内の行のカウントは、実際のテーブルの行をカウントするよりも高速です。 ただし、 **sysindexes**は遅延して更新され、行数が正確ではない可能性があります。|  
+|**2** (既定値)|最初に fast メソッドを試行して、条件付き高速カウントを実行します。 Fast メソッドが相違点を示している場合、は完全なメソッドに戻ります。 場合*expected_rowcount*ストアド プロシージャの中を NULL 値を取得する、フル カウント(\*) が常に使用します。|  
   
- [  **@shutdown_agent=**] *shutdown_agent*  
- 検証の完了後、ディストリビューション エージェント、直ちにシャットかどうかを指定します。 *shutdown_agent*は**ビット**、既定値は**0**します。 場合**0**、ディストリビューション エージェントがシャット ダウンされません。 場合**1**アーティクルの検証後にディストリビューション エージェントがシャット ダウンします。  
+`[ @shutdown_agent = ] shutdown_agent`検証の完了後すぐにディストリビューションエージェントをシャットダウンするかどうかを指定します。 *shutdown_agent*は**ビット**,、既定値は**0**です。 **0**の場合、ディストリビューションエージェントはシャットダウンされません。 **1**の場合、アーティクルの検証後にディストリビューションエージェントがシャットダウンされます。  
   
- [  **@subscription_level=**] *subscription_level*  
- 一部のサブスクライバーだけに検証を適用するかどうかを指定します。 *subscription_level*は**ビット**、既定値は**0**します。 場合**0**、すべてのサブスクライバーに検証が適用されます。 場合**1**、検証は、サブスクライバーへの呼び出しで指定されたサブセットにのみ適用**sp_marksubscriptionvalidation**で現在開いているトランザクションです。  
+`[ @subscription_level = ] subscription_level`一連のサブスクライバーによって検証が選択されるかどうかを指定します。 *subscription_level*は**ビット**,、既定値は**0**です。 **0**の場合、すべてのサブスクライバーに検証が適用されます。 **1**の場合、現在開いているトランザクションで**sp_marksubscriptionvalidation**を呼び出すことによって指定されたサブスクライバーのサブセットにのみ検証が適用されます。  
   
- [  **@reserved=**]*予約済み*  
- [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
+`[ @reserved = ] reserved` [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
   
- [ **@publisher**=] **'**_パブリッシャー_**'**  
- 以外を指定[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]パブリッシャーです。 *パブリッシャー*は**sysname**、既定値は NULL です。  
+`[ @publisher = ] 'publisher'`[!INCLUDE[msCoName](../../includes/msconame-md.md)] 以外[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のパブリッシャーを指定します。 *publisher*は**sysname**で、既定値は NULL です。  
   
 > [!NOTE]  
->  *パブリッシャー*で検証を要求するときに使用されません、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]パブリッシャーです。  
+>  パブリッシャーの検証を要求するときは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]パブリッシャーを使用しないでください。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  **0** (成功) または**1** (失敗)  
   
 ## <a name="remarks"></a>コメント  
- **sp_article_validation**はトランザクション レプリケーションで使用します。  
+ **sp_article_validation**は、トランザクションレプリケーションで使用します。  
   
- **sp_article_validation**検証の情報を指定したアーティクルで収集して、トランザクション ログへの検証要求を投稿します。 ディストリビューション エージェントは、この要求を受け取ると、要求に含まれている検証の情報をサブスクライバー テーブルと比較します。 検証の結果は、レプリケーション モニターおよび [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェントの警告に表示されます。  
+ **sp_article_validation**により、指定されたアーティクルで検証情報が収集され、トランザクションログに検証要求が送信されます。 ディストリビューション エージェントは、この要求を受け取ると、要求に含まれている検証の情報をサブスクライバー テーブルと比較します。 検証の結果は、レプリケーション モニターおよび [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェントの警告に表示されます。  
   
 ## <a name="permissions"></a>アクセス許可  
- 検証するアーティクルが実行できる、ソース テーブルですべてのアクセス許可を選択を持つユーザーのみ**sp_article_validation**します。  
+ **Sp_article_validation**を実行できるのは、検証されるアーティクルのソーステーブルに対する SELECT ALL 権限を持つユーザーだけです。  
   
-## <a name="see-also"></a>参照  
- [レプリケートされたデータを検証します。](../../relational-databases/replication/validate-data-at-the-subscriber.md)   
- [sp_marksubscriptionvalidation &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-marksubscriptionvalidation-transact-sql.md)   
- [sp_publication_validation &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-publication-validation-transact-sql.md)   
- [sp_table_validation &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-table-validation-transact-sql.md)   
+## <a name="see-also"></a>関連項目  
+ [レプリケートされたデータの検証](../../relational-databases/replication/validate-data-at-the-subscriber.md)   
+ [sp_marksubscriptionvalidation &#40;transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-marksubscriptionvalidation-transact-sql.md)   
+ [sp_publication_validation &#40;transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-publication-validation-transact-sql.md)   
+ [sp_table_validation &#40;transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-table-validation-transact-sql.md)   
  [システム ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

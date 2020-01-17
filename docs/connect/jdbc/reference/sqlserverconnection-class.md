@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 937292a6-1525-423e-a2b2-a18fd34c2893
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: c6f83ca445468c0d230d0c2fd1660d58b2b75469
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 7e09c80081dc4e3c9230cfba51b1b477420146fb
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47645210"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67971743"
 ---
 # <a name="sqlserverconnection-class"></a>SQLServerConnection クラス
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -37,12 +36,12 @@ public class SQLServerConnection
 ## <a name="remarks"></a>Remarks  
  SQLServerConnection では、JDBC 接続プールがサポートされており、JDBC の物理接続または JDBC の論理接続のいずれかを使用できます。 SQLServerConnection は、それから作成されたすべてのステートメントのトランザクション制御を管理し、XAResource アダプター経由で管理される XA の分散トランザクションに参加できます。  
   
- SQLServerConnection では、準備されたステートメント ハンドルのプールを管理します。 ステートメントは 1 回だけ準備され、通常はパラメーターに対して異なるデータ値を指定し、何度も実行されます。 準備されたステートメントは、論理 (プール) 接続の終了後も維持されます。  
+ SQLServerConnection は、準備されたステートメントハンドルのプールを管理します。 ステートメントは 1 回だけ準備され、通常はパラメーターに対して異なるデータ値を指定し、何度も実行されます。 準備されたステートメントは、論理 (プール) 接続の終了後も維持されます。  
   
 > [!NOTE]  
->  SQLServerConnection はスレッド セーフではありません。 ただし、単一の接続から作成された複数のステートメントは、同時スレッドで同時に処理することができます。  
+>  SQLServerConnection はスレッドセーフではありません。 ただし、単一の接続から作成された複数のステートメントは、同時スレッドで同時に処理することができます。  
   
- このクラスは、SQLServerConnection クラス、java.sql.connection インターフェイス、および ISQLServerConnection インターフェイスへのアンラッピングをサポートしています。 詳細については、次を参照してください。[ラッパーとインターフェイス](../../../connect/jdbc/wrappers-and-interfaces.md)します。  
+ このクラスは、SQLServerConnection クラス、ISQLServerConnection インターフェイス、およびインターフェイスへのラップをサポートしています。 詳細については、「[ラッパーとインターフェイス](../../../connect/jdbc/wrappers-and-interfaces.md)」を参照してください。  
   
 ## <a name="see-also"></a>参照  
  [SQLServerConnection のメンバー](../../../connect/jdbc/reference/sqlserverconnection-members.md)   

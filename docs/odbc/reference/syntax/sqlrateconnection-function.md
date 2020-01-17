@@ -12,24 +12,24 @@ helpviewer_keywords:
 ms.assetid: e8da2ffb-d6ef-4ca7-824f-57afd29585d8
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 3d36224329fa29a54f7163cb4e1ce6228f460875
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: 74d7e2c52167682f0993006db3a1125ca741cf35
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52414999"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68053640"
 ---
 # <a name="sqlrateconnection-function"></a>SQLRateConnection 関数
 **準拠**  
  バージョンが導入されました。ODBC 3.81 規格に準拠します。ODBC  
   
- **まとめ**  
+ **概要**  
  **SQLRateConnection**ドライバーが接続プール内の既存の接続を再利用できるかどうかを決定します。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp
+  
 SQLRETURN  SQLRateConnection(  
                 SQLHDBC_INFO_TOKEN   hRequest,  
                 SQLHDBC              hCandidateConnection,  

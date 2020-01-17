@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.bidtoolset.managereldb.f1
@@ -14,15 +13,15 @@ ms.assetid: 052d77b7-7922-408a-a200-786016ee4d15
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 28e28e6b2e7d65d5b66d95d626fbbbde2cbb94a1
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 98bd7f6c904207aa6d38f2ae756a207f128707a4
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48087742"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66067534"
 ---
 # <a name="create-a-relationship-between-two-tables-ssas-tabular"></a>2 つのテーブル間のリレーションシップの作成 (SSAS テーブル)
-  データ ソース内のテーブルに既存のリレーションシップがない場合、または新しいテーブルを追加する場合は、モデル デザイナーのツールを使用して新しいリレーションシップを作成できます。 表形式モデルでリレーションシップを使用する方法については、次を参照してください。[リレーションシップ&#40;SSAS 表形式&#41;](relationships-ssas-tabular.md)します。  
+  データ ソース内のテーブルに既存のリレーションシップがない場合、または新しいテーブルを追加する場合は、モデル デザイナーのツールを使用して新しいリレーションシップを作成できます。 テーブル モデルでリレーションシップがどのように使用されるかについては、「 [リレーションシップ (SSAS テーブル)](relationships-ssas-tabular.md)」を参照してください。  
   
 ## <a name="create-a-relationship-between-two-tables"></a>2 つのテーブル間のリレーションシップの作成  
   
@@ -71,7 +70,7 @@ ms.locfileid: "48087742"
 6.  **[作成]** をクリックします。  
   
 ## <a name="see-also"></a>参照  
- [リレーションシップの削除&#40;SSAS 表形式&#41;](delete-relationships-ssas-tabular.md)   
- [リレーションシップ&#40;SSAS 表形式&#41;](relationships-ssas-tabular.md)  
+ [リレーションシップの削除 (SSAS テーブル)](delete-relationships-ssas-tabular.md)   
+ [リレーションシップ (SSAS テーブル)](relationships-ssas-tabular.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: Irow::getcolumns を使用して |Microsoft Docs
+title: 'IRow:: GetColumns | の使用Microsoft Docs'
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -17,18 +17,16 @@ helpviewer_keywords:
 ms.assetid: 1f5d2e03-e6fe-4ea1-b71d-55d02b5d59ae
 author: MightyPen
 ms.author: genemi
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 682dc4df928caeefbeff16ea326125bb30d72cdf
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 50608f4bb72f982ca5e4651ab5da3cb17cd35cf9
+ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47611392"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73761672"
 ---
 # <a name="using-irowgetcolumns"></a>IRow::GetColumns の使用
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-[!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
 
   **IRow** の実装では、列に対して順方向専用の順次アクセスを実行できます。 **IRow::GetColumns** を 1 回だけ呼び出して、行内のすべての列にアクセスすることができます。また、行内の複数の列にアクセスするたびに、毎回 **IRow::GetColumns** を呼び出すこともできます。  
   

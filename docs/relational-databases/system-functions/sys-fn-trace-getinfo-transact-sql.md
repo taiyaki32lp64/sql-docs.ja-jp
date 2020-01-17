@@ -20,13 +20,12 @@ helpviewer_keywords:
 ms.assetid: 04b140fe-110a-47b8-98b5-e4c161beb6c9
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 6f43b362b0386b20103f139c2726bf19c41408df
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 041f651fb34c486cebc589f119f3e5f220314dd2
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47846450"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68059231"
 ---
 # <a name="sysfntracegetinfo-transact-sql"></a>sys.fn_trace_getinfo (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -53,7 +52,7 @@ sys.fn_trace_getinfo ( { trace_id | NULL | 0 | DEFAULT } )
 |列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
 |traceid|**int**|トレースの ID。|  
-|property|**int**|トレースのプロパティ。<br /><br /> 1 = トレース オプション。 詳細については、次を参照してください。@options で [sp_trace_create &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-trace-create-transact-sql.md)です。<br /><br /> 2 = ファイル名。<br /><br /> 3 = 最大サイズ。<br /><br /> 4 = 停止時刻。<br /><br /> 5 = 現在のトレースの状態。 0 = 停止。 1 = 実行中。|  
+|property|**int**|トレースのプロパティ。<br /><br /> 1 = トレース オプション。 詳細については、@options で [sp_trace_create &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-trace-create-transact-sql.md)を参照してください。<br /><br /> 2 = ファイル名。<br /><br /> 3 = 最大サイズ。<br /><br /> 4 = 停止時刻。<br /><br /> 5 = 現在のトレースの状態。 0 = 停止。 1 = 実行中。|  
 |value|**sql_variant**|指定したトレースのプロパティに関する情報。|  
   
 ## <a name="remarks"></a>コメント  

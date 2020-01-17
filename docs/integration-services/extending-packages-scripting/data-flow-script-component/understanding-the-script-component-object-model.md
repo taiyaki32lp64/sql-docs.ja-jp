@@ -12,17 +12,20 @@ dev_langs:
 helpviewer_keywords:
 - Script component [Integration Services], object model
 ms.assetid: 2a0aae82-39cc-4423-b09a-72d2f61033bd
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: 54f8ff03802ca6efb96f986b0783efe793d604d5
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: aa6235337aab70ed826a5507e7bd8ff2a45c4636
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47847370"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71286588"
 ---
 # <a name="understanding-the-script-component-object-model"></a>スクリプト コンポーネントのオブジェクト モデルについて
+
+[!INCLUDE[ssis-appliesto](../../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   「[スクリプト コンポーネントのコーディングおよびデバッグ](../../../integration-services/extending-packages-scripting/data-flow-script-component/coding-and-debugging-the-script-component.md)」で説明したように、スクリプト コンポーネント プロジェクトには、次の 3 つのプロジェクト アイテムがあります。  
   
 1.  **ScriptMain** アイテム。**ScriptMain** クラスを含み、ここにカスタム コードを記述します。 **ScriptMain** クラスは **UserComponent** クラスから継承されます。  
@@ -114,7 +117,7 @@ public override void PreExecute()
 #### <a name="what-the-bufferwrapper-project-item-provides"></a>プロジェクト アイテム BufferWrapper が提供する機能  
  構成したコンポーネントの入力ごとに、プロジェクト アイテム **BufferWrapper** には、<xref:Microsoft.SqlServer.Dts.Pipeline.ScriptBuffer> から派生した、入力と同じ名前のクラスがあります。 各入力バッファー クラスには、次のプロパティ、関数、およびメソッドが含まれています。  
   
--   選択された各入力列の、型指定された名前付きのアクセサー プロパティ。 これらのプロパティが読み取り専用か読み取り/書き込み可能かどうかは、**[スクリプト変換エディター]** の **[入力列]** ページで、列に対して指定され **[使用法の種類]** によって決まります。  
+-   選択された各入力列の、型指定された名前付きのアクセサー プロパティ。 これらのプロパティが読み取り専用か読み取り/書き込み可能かどうかは、 **[スクリプト変換エディター]** の **[入力列]** ページで、列に対して指定され **[使用法の種類]** によって決まります。  
   
 -   選択された各入力列の **\<column>_IsNull** プロパティ。 このプロパティが読み取り専用か読み取り/書き込み可能かどうかも、列に対して指定された **[使用法の種類]** によって決まります。  
   
@@ -127,16 +130,16 @@ public override void PreExecute()
   
 -   **ProcessInput** メソッドをオーバーライドして実装したメソッド。 これは、データ フロー エンジンが実行時に **PreExecute** メソッドの次に呼び出すメソッドで、繰り返し呼び出される場合があります。 **ProcessInput** は **\<inputbuffer>_ProcessInput** メソッドに処理を渡します。 次に **ProcessInput** メソッドは入力バッファーが末尾に達しているかどうかを確認し、達している場合は、オーバーライド可能な **FinishOutputs** メソッドとプライベート メソッド **MarkOutputsAsFinished** を呼び出します。 **MarkOutputsAsFinished** メソッドは、次に最後の出力バッファーの **SetEndOfRowset** を呼び出します。  
   
--   **\<inputbuffer>_ProcessInput** メソッドのオーバーライド可能な実装。 この既定の実装では、単に各入力行の間をループし、**\<inputbuffer>_ProcessInputRow** を呼び出します。  
+-   **\<inputbuffer>_ProcessInput** メソッドのオーバーライド可能な実装。 この既定の実装では、単に各入力行の間をループし、 **\<inputbuffer>_ProcessInputRow** を呼び出します。  
   
 -   **\<inputbuffer>_ProcessInputRow** メソッドのオーバーライド可能な実装。 既定の実装では、空のままです。 このメソッドは、カスタム データ処理コードを記述するために、通常はオーバーライドして使用します。  
   
 #### <a name="what-your-custom-code-should-do"></a>カスタム コードとして組み込むべき機能  
  **ScriptMain** クラスの入力を処理するには、次のメソッドを使用できます。  
   
--   入力行が渡されるたびにそのデータを処理するには、**\<inputbuffer>_ProcessInputRow** をオーバーライドします。  
+-   入力行が渡されるたびにそのデータを処理するには、 **\<inputbuffer>_ProcessInputRow** をオーバーライドします。  
   
--   入力行をループするときに追加の処理を行う必要がある場合にのみ、**\<inputbuffer>_ProcessInput** をオーバーライドします  (たとえば、すべての行が処理された後に他のアクションを実行するために **EndOfRowset** をテストする必要がある場合)。行の処理を実行するには、**\<inputbuffer>_ProcessInputRow** を呼び出します。  
+-   入力行をループするときに追加の処理を行う必要がある場合にのみ、 **\<inputbuffer>_ProcessInput** をオーバーライドします (たとえば、すべての行が処理された後に他のアクションを実行するために **EndOfRowset** をテストする必要がある場合)。行の処理を実行するには、 **\<inputbuffer>_ProcessInputRow** を呼び出します。  
   
 -   出力を閉じる前に、出力に対して何らかの処理を行う場合は、**FinishOutputs** をオーバーライドします。  
   

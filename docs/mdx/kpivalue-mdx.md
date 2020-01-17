@@ -1,5 +1,5 @@
 ---
-title: KPIValue (MDX) |Microsoft ドキュメント
+title: KPIValue (MDX) |Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -8,13 +8,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-manager: kfile
-ms.openlocfilehash: baa1b95e9eda32bc20e08b61ddd38c130a373050
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.openlocfilehash: c34e5b345ee0e4d780de66449473237cc413ace6
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34740401"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67905852"
 ---
 # <a name="kpivalue-mdx"></a>KPIValue (MDX)
 
@@ -30,12 +29,12 @@ KPIValue(KPI_Name)
   
 ## <a name="arguments"></a>引数  
  *Kpi 名*  
- KPI の名前を指定する有効な文字列式です。  
+ KPI の名前を指定する有効な文字列式。  
   
 ## <a name="remarks"></a>コメント  
   
 ## <a name="example"></a>例  
- 次の例では、Fiscal Year 属性階層の 3 つのメンバーの子孫について、Channel Revenue メジャーの KPI の値、KPI の目標、KPI の状態、および KPI の傾向を返しています。  
+ 次の例は、KPI の値、KPI 目標、KPI の状態、および KPI の傾向、Fiscal Year 属性階層の 3 つのメンバーの子孫に対する、channel revenue メジャーを返します。  
   
 ```  
 SELECT  
@@ -53,7 +52,7 @@ Descendants
 FROM [Adventure Works]  
 ```  
   
-## <a name="see-also"></a>参照  
- [MDX 関数リファレンス&#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
+## <a name="see-also"></a>関連項目  
+ [MDX 関数リファレンス &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
   
   

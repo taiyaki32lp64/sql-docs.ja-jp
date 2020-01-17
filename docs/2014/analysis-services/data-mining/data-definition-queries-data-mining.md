@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: 49e02de1-4ffa-401c-8eee-471a9c25b86a
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: bf9674f348541e0c4d8fe4f8c6c35740124b91d2
-ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
+ms.openlocfilehash: 9a67cadab4ee67bb3f81776ccb658c66fe6a67d9
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50147520"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66085163"
 ---
 # <a name="data-definition-queries-data-mining"></a>データ定義クエリ (データ マイニング)
   データ マイニングの *データ定義クエリ* というカテゴリは、次の処理を実行する DMX ステートメントまたは XMLA コマンドを意味します。  

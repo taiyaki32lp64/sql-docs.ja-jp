@@ -10,16 +10,15 @@ ms.topic: conceptual
 f1_keywords:
 - sql13.ag.job.categoriesproperties
 ms.assetid: d0f4d53a-cc13-48cf-ae90-a2937b548c45
-author: stevestein
-ms.author: sstein
-manager: craigg
+author: markingmyname
+ms.author: maghan
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 7b574de14749a7317a4da64c850dbf4d2103c7d5
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: f4ea9999349fc8f0ddee243e99d43f79df2345f1
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47763920"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68262389"
 ---
 # <a name="job-categories-properties---new-job-category"></a>ジョブ カテゴリのプロパティ - [新しいジョブ カテゴリ]
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -29,8 +28,8 @@ ms.locfileid: "47763920"
 
 1 つのジョブ カテゴリまたはすべてのジョブ カテゴリのジョブを一覧表示し、新しいジョブ カテゴリを追加できます。  
   
-## <a name="options"></a>[変数]  
-**名前**  
+## <a name="options"></a>オプション  
+**[名前]**  
 新しいジョブ カテゴリの名前を入力します。 ジョブ カテゴリの [プロパティ] ダイアログの場合は、表示されるカテゴリがここに示されます。  
   
 **[カテゴリ内のジョブ]**  

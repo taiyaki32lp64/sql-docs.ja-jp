@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - LowMemoryLimit property
@@ -24,19 +23,19 @@ ms.assetid: 085f5195-7b2c-411a-9813-0ff5c6066d13
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: ea5ccba5686c9f3716fd6931909ec28a79e00b8a
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: a88e2c1508ec849437d90b3de7c66705299dafc1
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53362824"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66068892"
 ---
 # <a name="memory-properties"></a>メモリのプロパティ
   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] では、次の表に示すサーバー メモリ プロパティがサポートされています。 これらのプロパティの設定方法については、「 [SQL Server 2008 R2 Analysis Services 操作ガイド](https://go.microsoft.com/fwlink/?LinkID=225539)」を参照してください。  
   
  1 ～ 100 の値は、 **[物理メモリの合計]** または **[仮想アドレス領域]** のどちらか少ない方に対する割合を示します。 100 を超える値はメモリ制限を示します (単位: バイト)。  
   
- **適用対象:** 特に記載のない限り、多次元サーバー モードおよびテーブル サーバー モードが対象となります。  
+ **適用対象:** 多次元および表形式サーバー モードでは、それ以外の場合に記載されていない場合。  
   
 ## <a name="properties"></a>プロパティ  
  `LowMemoryLimit`  

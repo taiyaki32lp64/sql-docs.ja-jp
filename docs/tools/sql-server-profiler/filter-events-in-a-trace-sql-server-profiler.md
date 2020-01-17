@@ -1,5 +1,5 @@
 ---
-title: トレース (SQL Server Profiler) 内のイベントをフィルター処理 |Microsoft Docs
+title: トレース内のイベントをフィルター処理する (SQL Server プロファイラー) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -12,15 +12,14 @@ helpviewer_keywords:
 - traces [SQL Server], filters
 - traces [SQL Server], events
 ms.assetid: 0fd63573-3b35-4f67-9e1e-ed9aabee11a8
-author: stevestein
-ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 2b4273d1af6f4f740c7b6527359957abf447cc2a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 8dc3d0c27b1fae754c4a6fb5f38984f4c8c4a324
+ms.sourcegitcommit: 71b9ebb511c68e0c9cb32a860a443803d2cb58f5
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47765400"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69979489"
 ---
 # <a name="filter-events-in-a-trace-sql-server-profiler"></a>トレース内のイベントへのフィルターの適用 (SQL Server Profiler)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -32,11 +31,11 @@ ms.locfileid: "47765400"
   
 1.  **[トレースのプロパティ]** ダイアログ ボックスまたは **[トレース テンプレートのプロパティ]** ダイアログ ボックスで、 **[イベントの選択]** タブをクリックします。  
   
-     **[イベントの選択]** タブにはグリッド コントロールがあります。 グリッド コントロールは、トレース可能な各イベント クラスを含んでいるテーブルです。 このテーブルには、各イベント クラスが 1 行で表示されます。 イベント クラスは、接続先のサーバーの種類やバージョンによって多少異なる場合があります。 イベント クラスは、グリッドの **[イベント]** 列で識別され、イベント カテゴリ別に分類されています。 残りの列には、各イベント クラスに対応するデータ列が表示されます。  
+     **[イベントの選択]** タブにはグリッド コントロールがあります。 グリッド コントロールは、トレース可能な各イベント クラスを含んでいるテーブルです。 このテーブルには、各イベント クラスが 1 行で表示されます。 イベント クラスは、接続先のサーバーの種類やバージョンによって多少異なる場合があります。 イベント クラスは、グリッドの **[イベント]** 列で識別され、イベント カテゴリ別にグループ化されます。 残りの列には、各イベント クラスに対応するデータ列が表示されます。  
   
 2.  **[列フィルター]** をクリックします。  
   
-     **[フィルターの編集]** ダイアログ ボックスが表示されます。 **[フィルターの編集]** ダイアログ ボックスには、トレース内のイベントにフィルターを適用するための比較演算子が一覧表示されます。  
+     **[フィルターの編集]** ダイアログ ボックスが表示されます。 **[フィルターの編集]** ダイアログ ボックスには、トレース内のイベントをフィルター処理するために使用できる比較演算子の一覧が表示されます。  
   
 3.  フィルターを適用するには、比較演算子をクリックして、フィルターに対して使用する値を入力します。  
   

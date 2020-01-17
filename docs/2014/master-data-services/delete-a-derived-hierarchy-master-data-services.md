@@ -10,15 +10,15 @@ helpviewer_keywords:
 - deleting derived hierarchies [Master Data Services]
 - derived hierarchies, deleting
 ms.assetid: f46d660e-47f2-47ca-9372-1b5931540beb
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: f6a4ae05aecf7d4a25a88efa61ec42fe098f1d63
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: bcf52745a984d049db92e8255ba7984b6b52a71a
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52792962"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65483127"
 ---
 # <a name="delete-a-derived-hierarchy-master-data-services"></a>派生階層を削除する (マスター データ サービス)
   [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]で、不要になった派生階層を削除します。  

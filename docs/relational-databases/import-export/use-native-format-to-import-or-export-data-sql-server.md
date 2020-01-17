@@ -1,6 +1,5 @@
 ---
-title: ネイティブ形式を使用したデータのインポートまたはエクスポート (SQL Server) | Microsoft Docs
-ms.custom: ''
+title: ネイティブ形式を使用したデータのインポートまたはエクスポート
 ms.date: 09/30/2016
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
@@ -11,16 +10,16 @@ helpviewer_keywords:
 - native data format [SQL Server]
 - data formats [SQL Server], native
 ms.assetid: eb279b2f-0f1f-428f-9b8f-2a7fc495b79f
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
+author: MashaMSFT
+ms.author: mathoma
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 3e8598624186ebd2c1af9901facaae9429504fc0
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.custom: seo-lt-2019
+ms.openlocfilehash: f6e1eaa9670a5cea38bbf617675d42737b13f796
+ms.sourcegitcommit: d00ba0b4696ef7dee31cd0b293a3f54a1beaf458
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47717572"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "74055916"
 ---
 # <a name="use-native-format-to-import-or-export-data-sql-server"></a>ネイティブ形式を使用したデータのインポートまたはエクスポート (SQL Server)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -34,7 +33,7 @@ ms.locfileid: "47717572"
 1.  転送元テーブルからデータ ファイルへのデータの一括エクスポート  
   
 2.  データ ファイルから転送先テーブルへのデータの一括インポート  
-  
+
 同一のテーブル間でネイティブ形式を使用すると、文字形式との間でデータ型の不必要な変換を防ぐことができ、時間と領域を節約できます。 ただし、最適な転送速度を実現するために、データの形式設定に関するチェックはほとんど行われません。 読み込まれたデータに関する問題を回避するには、次の制限事項の一覧を参照してください。  
 
 |このトピックの内容|
@@ -94,7 +93,7 @@ ms.locfileid: "47717572"
 |OPENROWSET|なし|フォーマット ファイルを使用する必要があります|
 
   
- \** ネイティブ (**-n**) データを、以前のバージョンの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] クライアントと互換性のある形式のテーブルに読み込むには、 **-V** スイッチを使用します。 詳細については、「 [以前のバージョンの SQL Server からのネイティブ形式データおよび文字形式データのインポート](../../relational-databases/import-export/import-native-and-character-format-data-from-earlier-versions-of-sql-server.md)」をご覧ください。  
+ \* ネイティブ ( **-n**) データを、以前のバージョンの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] クライアントと互換性のある形式のテーブルに読み込むには、 **-V** スイッチを使用します。 詳細については、「 [以前のバージョンの SQL Server からのネイティブ形式データおよび文字形式データのインポート](../../relational-databases/import-export/import-native-and-character-format-data-from-earlier-versions-of-sql-server.md)」をご覧ください。  
   
 > [!NOTE]
 >  また、フォーマット ファイルでフィールドごとに形式を指定することもできます。 詳細については、「 [データのインポートまたはエクスポート用のフォーマット ファイル &#40;SQL Server&#41;](../../relational-databases/import-export/format-files-for-importing-or-exporting-data-sql-server.md)」を参照してください。

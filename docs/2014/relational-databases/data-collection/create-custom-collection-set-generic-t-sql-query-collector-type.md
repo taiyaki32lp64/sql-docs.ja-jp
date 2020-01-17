@@ -13,12 +13,12 @@ ms.assetid: 6b06db5b-cfdc-4ce0-addd-ec643460605b
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 0b0575c3be5e0a5ce30267f32934ff073c5c3d86
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 5c131f413c8b7be0dad8432c5711b19e74253aab
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52748884"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62873341"
 ---
 # <a name="create-a-custom-collection-set-that-uses-the-generic-t-sql-query-collector-type-transact-sql"></a>ジェネリック T-SQL Query コレクター型を使用するカスタム コレクション セットの作成 (Transact-SQL)
   データ コレクターで用意されているストアド プロシージャを使用して、ジェネリック T-SQL Query コレクター型を使用するコレクション アイテムを含むカスタム コレクション セットを作成できます。 この作業には、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] のクエリ エディターを使用した次の手順の実行も含まれます。  
@@ -78,7 +78,7 @@ ms.locfileid: "52748884"
   
 1.  新しいコレクション アイテムはインストール済みのジェネリックコレクター型に基づいているため、次のコードを実行して、ジェネリック T-SQL Query コレクター型に対応するように GUID を設定できます。  
   
-    ```tsql  
+    ```sql  
     DECLARE @collector_type_uid uniqueidentifier;  
     SELECT @collector_type_uid = collector_type_uid FROM [msdb].[dbo].[syscollector_collector_types]   
     WHERE name = N'Generic T-SQL Query Collector Type';  
@@ -87,7 +87,7 @@ ms.locfileid: "52748884"
   
 2.  sp_syscollector_create_collection_item ストアド プロシージャを使用してコレクション アイテムを作成します。 コレクション アイテムがジェネリック T-SQL Query コレクター型に必要なスキーマにマップされるように、コレクション アイテムのスキーマを宣言します。  
   
-    ```tsql  
+    ```sql  
     EXEC sp_syscollector_create_collection_item   
         @name=N'Query Stats - Test 1',   
         @parameters=N'  
@@ -108,7 +108,7 @@ ms.locfileid: "52748884"
   
 1.  新しいコレクション セットを開始する前に、次のクエリを実行して新しいコレクション セットとそのコレクション アイテムが作成されていることを確認します。  
   
-    ```tsql  
+    ```sql  
     USE msdb;  
     SELECT * FROM syscollector_collection_sets;  
     SELECT * FROM syscollector_collection_items;  
@@ -120,7 +120,7 @@ ms.locfileid: "52748884"
 ## <a name="example"></a>例  
  次のコード サンプルは、上記の手順で説明されている例を組み合わせたものです。 コレクション セットのコレクション モードはキャッシュ モード (0) に設定されているため、コレクション アイテムに設定された収集頻度 (5 秒) は無視されます。 詳細については、「 [Data Collection](data-collection.md)」を参照してください。  
   
-```tsql  
+```sql  
 USE msdb;  
   
 DECLARE @collection_set_id int;  

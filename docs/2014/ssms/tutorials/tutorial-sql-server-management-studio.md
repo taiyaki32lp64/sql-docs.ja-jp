@@ -1,5 +1,5 @@
 ---
-title: 'チュートリアル : SQL Server Management Studio | Microsoft Docs'
+title: チュートリアル:SQL Server Management Studio |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -23,13 +23,13 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: b6cd02b0679990e7781faf2195b17444cadb53e6
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48167312"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62753464"
 ---
-# <a name="tutorial-sql-server-management-studio"></a>チュートリアル: SQL Server Management Studio
+# <a name="tutorial-sql-server-management-studio"></a>チュートリアル:SQL Server Management Studio
   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] のチュートリアルでは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インフラストラクチャを管理するための統合環境について説明します。 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] は、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のインスタンスを構成、監視、および管理するためのグラフィカル インターフェイスを提供します。 さらに、データベースやデータ ウェアハウスなどの、アプリケーションで使用されるデータ層コンポーネントを配置、監視、およびアップグレードすることもできます。 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] は、スクリプトを編集およびデバッグするための [!INCLUDE[tsql](../../includes/tsql-md.md)]、MDX、DMX、XML の各言語エディターも提供します。  
   
 ## <a name="what-you-will-learn"></a>学習する内容  
@@ -39,16 +39,16 @@ ms.locfileid: "48167312"
   
  このチュートリアルは、次の 3 つのレッスンで構成されています。  
   
- [レッスン 1 : SQL Server Management Studio での基本操作](lesson-1-basic-navigation-in-sql-server-management-studio.md)  
+ [レッスン 1:SQL Server Management Studio での基本操作](lesson-1-basic-navigation-in-sql-server-management-studio.md)  
  このレッスンでは、 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]のコンポーネントを使用する方法、環境レイアウトを再構成する方法、および既定のレイアウトを復元する方法を学習します。  
   
- [レッスン 2 : Transact-SQL の記述](lesson-2-writing-transact-sql.md)  
+ [レッスン 2:書き込み TRANSACT-SQL](lesson-2-writing-transact-sql.md)  
  このレッスンでは、クエリ エディターを開く方法、コードの管理方法、クエリ エディターのその他の新機能を使用する方法を学習します。  
   
- [レッスン 3: テンプレート、ソリューション、およびスクリプト プロジェクトの操作](lesson-3-working-with-templates-solutions-and-script-projects.md)  
+ [レッスン 3:テンプレート、ソリューション、およびスクリプト プロジェクトの操作](lesson-3-working-with-templates-solutions-and-script-projects.md)  
  このレッスンでは、テンプレートを使用して、スクリプトをソリューションやプロジェクトにまとめる方法を学習します。  
   
-## <a name="requirements"></a>要件  
+## <a name="requirements"></a>必要条件  
  このチュートリアルは、 [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)]には慣れていないが、データベースの概念と [!INCLUDE[tsql](../../includes/tsql-md.md)] 言語を理解している、熟練のデータベース管理者およびデータベース開発者を対象としています。  
   
  このチュートリアルを使用するには、システムに以下のコンポーネントがインストールされている必要があります。  
@@ -57,7 +57,7 @@ ms.locfileid: "48167312"
   
 -   Internet Explorer 9.0 以降  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [データベース エンジンのチュートリアル](../../relational-databases/database-engine-tutorials.md)  
   
   

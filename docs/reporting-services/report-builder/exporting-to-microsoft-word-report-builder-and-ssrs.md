@@ -2,20 +2,20 @@
 title: Microsoft Word へのエクスポート (レポート ビルダーおよび SSRS) | Microsoft Docs
 ms.date: 12/06/2018
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: report-builder
 description: Word 表示拡張機能は、改ページ調整されたレポートを  [!INCLUDE[ofprword](../../includes/ofprword-md.md)] 形式 (.docx) で表示します。 形式は、Office Open XML です。
 ms.custom: seodec18
 ms.topic: conceptual
 ms.assetid: 0cd8ae26-4682-4473-8f15-af084951defd
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 0ed7b5a6081171f7f7271573cd83f029ad672a34
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 9efad50aeb778c4cae01145fb39dd10a71c42ca0
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56296600"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66413567"
 ---
 # <a name="exporting-to-microsoft-word-report-builder-and-ssrs"></a>Exporting to Microsoft Word (Report Builder and SSRS)
 
@@ -72,9 +72,9 @@ ms.locfileid: "56296600"
   
  この問題は、Word レンダラーがレポートの **PageNumber** や **TotalPages** などの改ページに関連するフィールドを解析して単純な参照のみを処理し、関数の呼び出しが行われないために生じます。 この場合、式は **ToString** 関数を呼び出します。 次の 2 つの式は同等であり、レポート ビルダーやレポート デザイナーでレポートをプレビューするか、 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Web ポータルや SharePoint ライブラリでパブリッシュされたレポートを表示した場合は、両方とも正しく表示されます。 ただし、Word レンダラーでは 2 番目の式のみが正しく解析され、正しいページ番号が表示されます。  
   
--   **複合式:** 式は `="Average Sales " & Avg(Fields!YTDPurchase.Value, "Sales") & " Page Number " & Globals!PageNumber` です  
+-   **複合式:**  式は以下のとおりです: `="Average Sales " & Avg(Fields!YTDPurchase.Value, "Sales") & " Page Number " & Globals!PageNumber`  
   
--   **テキスト ランを使用した式:** テキスト、**Average Sales**、式、`=Avg(Fields!YTDPurchase.Value, "Sales)`、テキスト、**Page Number**、式 `=Globals!PageNumber`  
+-   **テキスト ランを使用した式:** テキスト、 **Average Sales**、および式、  `=Avg(Fields!YTDPurchase.Value, "Sales)`、およびテキスト、 **ページ番号**、および式 `=Globals!PageNumber`  
   
  この問題を回避するには、フッターおよびヘッダーで式を使用するときに 1 つの複合式ではなく複数のテキスト ランを使用します。 次の 2 つの式は等価です。 最初の式は複合式で、2 番目の式はテキスト ランを使用しています。 Word レンダラーでは、2 番目の式のみが正しく解析されます。  
   
@@ -151,7 +151,7 @@ ms.locfileid: "56296600"
 > [!IMPORTANT]  
 >  [!INCLUDE[ofprword](../../includes/ofprword-md.md)] 2003 (.doc) 表示拡張機能の使用は非推奨とされます。 詳細については、「 [SQL Server 2016 における SQL Server Reporting Services の非推奨の機能](~/reporting-services/deprecated-features-in-sql-server-reporting-services-ssrs.md)」を参照してください。  
   
- Word レンダラーはインストールされている Word/Excel/PowerPoint 用 [!INCLUDE[ofprword](../../includes/ofprword-md.md)] Office 互換機能パックにより、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 2003 との互換性が維持されます。 詳細については、「 [Word、Excel、および PowerPoint 2007 用ファイル形式互換機能パック](https://go.microsoft.com/fwlink/?LinkID=205622)」を参照してください。  
+ Word レンダラーはインストールされている Word/Excel/PowerPoint 用 [!INCLUDE[ofprword](../../includes/ofprword-md.md)] Office 互換機能パックにより、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 2003 との互換性が維持されます。 詳細については、「 [Word、Excel、および PowerPoint 2007 用ファイル形式互換機能パック](https://www.microsoft.com/download/details.aspx?id=12439)」を参照してください。  
   
  [!INCLUDE[ofprword](../../includes/ofprword-md.md)] 2003 と互換性のある Word 表示拡張機能の以前のバージョンは、名前が Word 2003 に変更されます。 既定では、Word 表示拡張機能のみを使用できます。 Word 2003 表示拡張機能を使用できるようにするには、Reporting Services の構成ファイルを更新する必要があります。 Word 2003 レンダラーで生成されるファイルのコンテンツ タイプは **application/vnd.ms-word** で、ファイル名拡張子は .doc です。  
   

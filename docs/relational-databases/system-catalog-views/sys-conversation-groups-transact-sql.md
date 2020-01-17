@@ -19,15 +19,14 @@ helpviewer_keywords:
 ms.assetid: 3f35815e-2de4-42a2-a972-8f0141dad0b3
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 01e6e1d47061f445d7aa7d53fb548a2ebfcaefd6
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 7c822d5f405b353a9c07902fc1ef8f9272ad4353
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47763016"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68109492"
 ---
-# <a name="sysconversationgroups-transact-sql"></a>sys.conversation_groups (Transact-SQL)
+# <a name="sysconversationgroups-transact-sql"></a>sys.conversation_groups (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   メッセージ交換グループごとに 1 行のデータを格納するカタログ ビューです。  
@@ -36,7 +35,7 @@ ms.locfileid: "47763016"
 |-----------------|---------------|-----------------|  
 |**conversation_group_id**|**uniqueidentifier**|メッセージ交換グループの識別子。 Null を許容しません。|  
 |**service_id**|**int**|このグループのメッセージ交換で使用されるサービスの識別子。 Null を許容しません。|  
-|**is_system**|**bit**|システム インスタンスであるかどうかを示します。 NULL 値は許可されます。|  
+|**is_system**|**bit**|システム インスタンスであるかどうかを示します。 NULL 値を許容します。|  
   
 ## <a name="permissions"></a>アクセス許可  
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] 詳細については、「 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)」を参照してください。  

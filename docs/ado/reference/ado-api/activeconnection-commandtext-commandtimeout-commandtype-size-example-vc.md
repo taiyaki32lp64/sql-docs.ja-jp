@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: 0d9917c4-9ef0-4d7a-b4ce-4f1fa6ce1817
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 5d45fb7f918cef8dab18422fa30267a757f7bd1c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 8ff30099e951ec5b461b9f0e22c21164e7258ccc
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47741560"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67921627"
 ---
 # <a name="activeconnection-commandtext-commandtimeout-commandtype-size-and-direction-properties-example-vc"></a>ActiveConnection、CommandText、CommandTimeout、CommandType、サイズ、および方向プロパティの例 (vc++)
 この例では、 [ActiveConnection](../../../ado/reference/ado-api/activeconnection-property-ado.md)、 [CommandText](../../../ado/reference/ado-api/commandtext-property-ado.md)、 [CommandTimeout](../../../ado/reference/ado-api/commandtimeout-property-ado.md)、 [CommandType](../../../ado/reference/ado-api/commandtype-property-ado.md)、 [サイズ](../../../ado/reference/ado-api/size-property-ado-parameter.md)、および[方向](../../../ado/reference/ado-api/direction-property.md)プロパティをストアド プロシージャを実行します。  
@@ -203,7 +202,7 @@ void PrintProviderError(_ConnectionPtr pConnection) {
 25  
 ```  
   
-## <a name="sample-output"></a>サンプル出力  
+## <a name="sample-output"></a>出力例  
   
 ```  
 Authors With  25  Percent Royalty  
@@ -211,7 +210,7 @@ Authors With  25  Percent Royalty
         899-46-2035, Anne Ringer  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [ActiveConnection プロパティ (ADO)](../../../ado/reference/ado-api/activeconnection-property-ado.md)   
  [CommandText プロパティ (ADO)](../../../ado/reference/ado-api/commandtext-property-ado.md)   
  [CommandTimeout プロパティ (ADO)](../../../ado/reference/ado-api/commandtimeout-property-ado.md)   

@@ -1,5 +1,5 @@
 ---
-title: getShort (java.lang.String) メソッド |Microsoft Docs
+title: getShort メソッド (java.lang.String) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: cd39ed03-b3e8-443d-9c7a-e8cf2581e581
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 0e590544295a7e3af7454d0a654fac7b78a9d2ff
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: f303d05d7ff38f7f410868103c486e44df84b36b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47743610"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67979806"
 ---
 # <a name="getshort-method-javalangstring"></a>getShort (java.lang.String) メソッド
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -41,7 +40,7 @@ public short getShort(java.lang.String sCol)
  パラメーターの名前を含む**文字列**です。  
   
 ## <a name="return-value"></a>戻り値  
- A**短い**値。  
+ **short** 値です。  
   
 ## <a name="exceptions"></a>例外  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  

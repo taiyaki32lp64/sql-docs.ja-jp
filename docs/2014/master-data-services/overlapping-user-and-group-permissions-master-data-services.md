@@ -11,15 +11,15 @@ helpviewer_keywords:
 - permissions [Master Data Services], user and group overlaps
 - groups [Master Data Services], resolving permissions
 ms.assetid: 31c3cf7d-17d4-4474-b6a7-ffcb9fc45b37
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 3f68f367f782a28f062ea807fb0b7680df15c69d
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 6c3bdb745d836959f563d19dc9897b718a2c9b16
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52799264"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65478882"
 ---
 # <a name="overlapping-user-and-group-permissions-master-data-services"></a>ユーザー権限とグループ権限の重複 (Master Data Services)
   ユーザーの権限は、次の権限に基づきます。  
@@ -50,7 +50,7 @@ ms.locfileid: "52799264"
   
  グループ 2 に**読み取り専用**Product エンティティにアクセスを許可します。  
   
- 結果:ユーザーの有効な権限は**Update** Product エンティティにします。  
+ 結果:ユーザーの有効な権限は、Product エンティティに対する **更新** 権限となります。  
   
 ## <a name="example-2"></a>例 2  
  ![mds_conc_user_group_ex_2](../../2014/master-data-services/media/mds-conc-user-group-ex-2.gif "mds_conc_user_group_ex_2")  
@@ -63,7 +63,7 @@ ms.locfileid: "52799264"
   
  グループ 2 には、Product エンティティに対する **拒否** 権限が与えられています。  
   
- 結果:ユーザーの有効な権限は**Deny** Product エンティティにします。  
+ 結果:ユーザーの有効な権限は、Product エンティティに対する **拒否** 権限となります。  
   
 ## <a name="example-3"></a>例 3  
  ![mds_conc_user_group_ex_3](../../2014/master-data-services/media/mds-conc-user-group-ex-3.gif "mds_conc_user_group_ex_3")  
@@ -76,10 +76,10 @@ ms.locfileid: "52799264"
   
  グループ 2 に**読み取り専用**階層ノードのメンバーのグループにアクセスを許可します。  
   
- 結果:ユーザーの有効な権限は**Update**メンバーにします。  
+ 結果:ユーザーの有効な権限は、メンバーに対する **更新** 権限となります。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [権限の決定方法 (マスター データ サービス)](how-permissions-are-determined-master-data-services.md)   
- [モデル アクセス許可とメンバー アクセス許可の重複 (マスター データ サービス)](../../2014/master-data-services/overlapping-model-and-member-permissions-master-data-services.md)  
+ [モデル権限とメンバー権限の重複 (マスター データ サービス)](../../2014/master-data-services/overlapping-model-and-member-permissions-master-data-services.md)  
   
   

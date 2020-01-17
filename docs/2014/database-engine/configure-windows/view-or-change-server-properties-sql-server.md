@@ -15,12 +15,12 @@ ms.assetid: 55f3ac04-5626-4ad2-96bd-a1f1b079659d
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 83fc6db21fd2892ebbc42b329515a94b371cb1ce
-ms.sourcegitcommit: 04dd0620202287869b23cc2fde998a18d3200c66
+ms.openlocfilehash: 5c5ff985b62e39287b696e96f10142daf90ae0a3
+ms.sourcegitcommit: a165052c789a327a3a7202872669ce039bd9e495
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "52641543"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72783126"
 ---
 # <a name="view-or-change-server-properties-sql-server"></a>サーバー プロパティの表示または変更 (SQL Server)
   このトピックでは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]、または SQL Server 構成マネージャーを使用して [!INCLUDE[tsql](../../includes/tsql-md.md)]のインスタンスのプロパティを表示または変更する方法について説明します。  
@@ -31,7 +31,7 @@ ms.locfileid: "52641543"
   
      [制限事項と制約事項](#Restrictions)  
   
-     [Security](#Security)  
+     [セキュリティ](#Security)  
   
 -   **サーバーのプロパティを表示または変更するために使用するもの:**  
   
@@ -41,7 +41,7 @@ ms.locfileid: "52641543"
   
      [SQL Server 構成マネージャー](#PowerShellProcedure)  
   
--   **補足情報:**[サーバーのプロパティを変更した後](#FollowUp)  
+-   **フォロー アップ:**  [サーバーのプロパティを変更した後](#FollowUp)  
   
 ##  <a name="BeforeYouBegin"></a> はじめに  
   
@@ -56,10 +56,10 @@ ms.locfileid: "52641543"
   
 ###  <a name="Security"></a> セキュリティ  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> アクセス許可  
  詳細については、「 [サーバー レベルのロール](../../relational-databases/security/authentication-access/server-level-roles.md)」を参照してください。  
   
- に対する execute 権限`sp_configure`パラメーターなしで、または最初のパラメーターのみが既定ですべてのユーザーに付与されます。 実行する`sp_configure`構成オプションを変更したり RECONFIGURE ステートメントを実行する両方のパラメーターを持つユーザー与える必要があります、ALTER SETTINGS サーバー レベル権限。 ALTER SETTINGS 権限は、 **sysadmin** 固定サーバー ロールと **serveradmin** 固定サーバー ロールでは暗黙のうちに付与されています。  
+ パラメーターのない、または最初のパラメーターだけを持つ `sp_configure` に対する実行権限は、既定ですべてのユーザーに付与されます。 両方のパラメーターを使用して `sp_configure` を実行し、構成オプションを変更するか、または再構成ステートメントを実行するには、ALTER SETTINGS サーバーレベルのアクセス許可がユーザーに付与されている必要があります。 ALTER SETTINGS 権限は、 **sysadmin** 固定サーバー ロールと **serveradmin** 固定サーバー ロールでは暗黙のうちに付与されています。  
   
 ##  <a name="SSMSProcedure"></a> SQL Server Management Studio の使用  
   
@@ -79,7 +79,7 @@ ms.locfileid: "52641543"
   
 3.  次の例をコピーしてクエリ ウィンドウに貼り付け、 **[実行]** をクリックします。 次の例では、 [ステートメント内で](/sql/t-sql/functions/serverproperty-transact-sql) SERVERPROPERTY `SELECT` 組み込み関数を使用することによって、現在のサーバーに関する情報を返します。 このシナリオは、Windows ベースのサーバー上に複数の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスがインストールされており、クライアントの現在の接続で使用しているインスタンスと同じインスタンスに対して別の接続を開く必要がある場合に効果的です。  
   
-    ```tsql  
+    ```sql  
     SELECT CONVERT( sysname, SERVERPROPERTY('servername'));  
     GO  
     ```  
@@ -92,13 +92,12 @@ ms.locfileid: "52641543"
   
 3.  次の例をコピーしてクエリ ウィンドウに貼り付け、 **[実行]** をクリックします。 この例では、 [sys.servers](/sql/relational-databases/system-catalog-views/sys-servers-transact-sql) カタログ ビューをクエリして現在のサーバーの名前 (`name`) と ID (`server_id`)、およびリンク サーバーに接続するための OLE DB プロバイダーの名前 (`provider`) が返されます。  
   
-    ```tsql  
+    ```sql  
     USE AdventureWorks2012;   
     GO  
     SELECT name, server_id, provider  
     FROM sys.servers ;   
-    GO  
-  
+    GO
     ```  
   
 #### <a name="to-view-server-properties-by-using-the-sysconfigurations-catalog-view"></a>sys.configurations カタログ ビューを使用してサーバーのプロパティを表示するには  
@@ -109,16 +108,15 @@ ms.locfileid: "52641543"
   
 3.  次の例をコピーしてクエリ ウィンドウに貼り付け、 **[実行]** をクリックします。 この例では、 [sys.configurations](/sql/relational-databases/system-catalog-views/sys-configurations-transact-sql) カタログ ビューをクエリして、現在のサーバー上の各サーバーの構成オプションに関する情報を返します。 この例では、オプションの名前 (`name`) と説明 (`description`)、およびこのオプションが詳細オプションに含まれているかどうか (`is_advanced`) が返されます。  
   
-    ```wmimof  
-    USE AdventureWorks2012;   
+    ```sql
+    USE AdventureWorks2012;
     GO  
     SELECT name, description, is_advanced  
-    FROM sys.configurations ;   
-    GO  
-  
+    FROM sys.configurations ;
+    GO
     ```  
   
-#### <a name="to-change-a-server-property-by-using-spconfigure"></a>sp_configure を使用して、サーバーのプロパティを変更するには  
+#### <a name="to-change-a-server-property-by-using-sp_configure"></a>sp_configure を使用して、サーバーのプロパティを変更するには  
   
 1.  [!INCLUDE[ssDE](../../includes/ssde-md.md)]に接続します。  
   
@@ -126,7 +124,7 @@ ms.locfileid: "52641543"
   
 3.  次の例をコピーしてクエリ ウィンドウに貼り付け、 **[実行]** をクリックします。 この例では、 [sp_configure](/sql/relational-databases/system-stored-procedures/sp-configure-transact-sql) を使用して、サーバーのプロパティを変更する方法を示します。 この例では、 `fill factor` オプションの値を `100`に変更します。 変更を有効にするには、サーバーを再起動する必要があります。  
   
-```tsql  
+```sql  
 Use AdventureWorks2012;  
 GO  
 sp_configure 'show advanced options', 1;  
@@ -139,27 +137,27 @@ RECONFIGURE;
 GO  
 ```  
   
- 詳細については、「 [サーバー構成オプション &#40;SQL Server&#41;](server-configuration-options-sql-server.md)を実行しているコンピューターに WMI をインストールする必要があります。  
+ 詳細については、「 [Server Configuration Options &#40;SQL Server&#41;](server-configuration-options-sql-server.md)サーバー構成オプションを構成する方法について説明します。  
   
 ##  <a name="PowerShellProcedure"></a> SQL Server 構成マネージャーの使用  
  いくつかのサーバー プロパティは、SQL Server 構成マネージャーを使用して表示または変更できます。 たとえば、SQL Server のインスタンスのバージョンおよびエディションを表示したり、エラー ログ ファイルの格納場所を変更したりできます。 これらのプロパティは、 [サーバー関連の動的管理ビューおよび関数](/sql/relational-databases/system-dynamic-management-views/server-related-dynamic-management-views-and-functions-transact-sql)をクエリして表示することもできます。  
   
 #### <a name="to-view-or-change-server-properties"></a>サーバーのプロパティを表示または変更するには  
   
-1.  **[スタート]** ボタンをクリックし、 **[すべてのプログラム]**、[ [!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)]]、 **[構成ツール]** の順にポイントして、 **[SQL Server 構成マネージャー]** をクリックします。  
+1.  **[スタート]** メニューで、 **[すべてのプログラム]** 、[ [!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)]]、 **[構成ツール]** の順にポイントして、 **[SQL Server 構成マネージャー]** をクリックします。  
   
 2.  **SQL Server 構成マネージャー**で **[SQL Server のサービス]** をクリックします。  
   
-3.  詳細ウィンドウで **[SQL Server (\<***instancename***>)]** を右クリックし、**[プロパティ]** をクリックします。  
+3.  詳細ウィンドウで **[SQL Server (\<***instancename***>)]** を右クリックし、 **[プロパティ]** をクリックします。  
   
-4.  **[SQL Server (\<***instancename***>) のプロパティ]** ダイアログ ボックスの **[サービス]** タブまたは **[詳細設定]** タブで、サーバーのプロパティを変更し、**[OK]** をクリックします。  
+4.  **[SQL Server (\<***instancename***>) のプロパティ]** ダイアログ ボックスの **[サービス]** タブまたは **[詳細設定]** タブで、サーバーのプロパティを変更し、 **[OK]** をクリックします。  
   
-##  <a name="FollowUp"></a> フォローしてください：サーバーのプロパティを変更した後  
+##  <a name="FollowUp"></a> フォロー アップ: サーバーのプロパティを変更した後  
  いくつかのプロパティでは、変更を有効にするためにサーバーを再起動する必要があります。  
   
 ## <a name="see-also"></a>参照  
  [サーバー構成オプション &#40;SQL Server&#41;](server-configuration-options-sql-server.md)   
- [SET ステートメント &#40;Transact-SQL&#41;](/sql/t-sql/statements/set-statements-transact-sql)   
+ [SET Statements &#40;Transact-SQL&#41;](/sql/t-sql/statements/set-statements-transact-sql)   
  [SERVERPROPERTY &#40;Transact-SQL&#41;](/sql/t-sql/functions/serverproperty-transact-sql)   
  [sp_configure &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-configure-transact-sql)   
  [RECONFIGURE &#40;Transact-SQL&#41;](/sql/t-sql/language-elements/reconfigure-transact-sql)   
@@ -168,5 +166,3 @@ GO
  [SQL Server 構成マネージャー](../../relational-databases/sql-server-configuration-manager.md)   
  [構成関数 &#40;Transact-SQL&#41;](/sql/t-sql/functions/configuration-functions-transact-sql)   
  [サーバー関連の動的管理ビューおよび関数 &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/server-related-dynamic-management-views-and-functions-transact-sql)  
-  
-  

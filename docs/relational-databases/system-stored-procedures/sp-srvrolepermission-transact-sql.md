@@ -17,18 +17,17 @@ helpviewer_keywords:
 ms.assetid: 5709667f-e3e4-48a2-93ec-af5e22a2ac58
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: c025f6f1e7652e9b60ad8f8e9aea65aca112af81
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 6613c4e94ce8c802e45fe003ac73e51b3f38072b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47821840"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68032811"
 ---
-# <a name="spsrvrolepermission-transact-sql"></a>sp_srvrolepermission (Transact-SQL)
+# <a name="spsrvrolepermission-transact-sql"></a>sp_srvrolepermission (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  固定サーバー ロールの権限を表示します。  
+  固定サーバー ロールのアクセス許可を表示します。  
   
 > [!IMPORTANT]  
 >  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]  
@@ -43,13 +42,12 @@ sp_srvrolepermission [ [ @srvrolename = ] 'role']
 ```  
   
 ## <a name="arguments"></a>引数  
- [  **@srvrolename =** ] **'***ロール***'**  
- 権限を返す固定サーバー ロールの名前を指定します。 *ロール*は**sysname**、既定値は NULL です。 ロールを指定しない場合、すべての固定サーバー ロールの権限が返されます。 *ロール*値は次のいずれかであることができます。  
+`[ @srvrolename = ] 'role'` 権限を返す固定サーバー ロールの名前です。 *ロール*は**sysname**、既定値は NULL です。 ロールが指定されていない場合は、すべての固定サーバー ロールの権限が返されます。 *ロール*値は次のいずれかであることができます。  
   
 |値|説明|  
 |-----------|-----------------|  
-|**sysadmin**|システム管理者。|  
-|**securityadmin**|セキュリティ管理者。|  
+|**sysadmin**|システム管理者|  
+|**securityadmin**|セキュリティ管理者|  
 |**serveradmin**|サーバー管理者。|  
 |**setupadmin**|セットアップ管理者。|  
 |**processadmin**|プロセス管理者。|  
@@ -64,7 +62,7 @@ sp_srvrolepermission [ [ @srvrolename = ] 'role']
   
 |列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
-|**ServerRole**|**sysname**|固定サーバー ロールの名前。|  
+|**ServerRole**|**sysname**|固定サーバー ロールの名前|  
 |**権限**|**sysname**|アクセス許可に関連付けられている**ServerRole**|  
   
 ## <a name="remarks"></a>コメント  
@@ -83,7 +81,7 @@ EXEC sp_srvrolepermission 'sysadmin';
 GO  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [セキュリティ ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md)   
  [sp_addsrvrolemember &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addsrvrolemember-transact-sql.md)   
  [sp_dropsrvrolemember &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropsrvrolemember-transact-sql.md)   

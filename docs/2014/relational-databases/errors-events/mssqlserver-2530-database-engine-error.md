@@ -11,11 +11,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 8058c7c31c49935d244726bf9e8ea0ac6cfbe750
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48215492"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62914573"
 ---
 # <a name="mssqlserver2530"></a>MSSQLSERVER_2530
     
@@ -46,7 +46,7 @@ ms.locfileid: "48215492"
 2.  DBCC ステートメントを再実行します。  
   
 ## <a name="see-also"></a>参照  
- [インデックスと制約を有効にします。](../indexes/enable-indexes-and-constraints.md)   
+ [インデックスと制約の有効化](../indexes/enable-indexes-and-constraints.md)   
  [ALTER INDEX &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-index-transact-sql)   
  [CREATE INDEX &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-index-transact-sql)   
  [DBCC DBREINDEX &#40;Transact-SQL&#41;](/sql/t-sql/database-console-commands/dbcc-dbreindex-transact-sql)  

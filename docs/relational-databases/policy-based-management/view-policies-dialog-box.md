@@ -12,19 +12,18 @@ f1_keywords:
 ms.assetid: 06b9b092-fceb-4be5-b712-5aff89b5ba92
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: fb48663423df8f53db139a36dcddb9b4718c7cfd
-ms.sourcegitcommit: ef6e3ec273b0521e7c79d5c2a4cb4dcba1744e67
+ms.openlocfilehash: 6c63b9efc61e18c5b5bc52dcdcbd93af0d9fbbfa
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51512153"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68009372"
 ---
 # <a name="view-policies-dialog-box"></a>[ポリシーの表示] ダイアログ ボックス
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   このダイアログ ボックスを使用すると、この対象に対して有効なポリシーを表示できます。 このダイアログ ボックスには、関連するポリシー、それらのポリシー カテゴリ、およびポリシーに関する情報が表示されます。  
   
-## <a name="options"></a>[変数]  
+## <a name="options"></a>オプション  
  **[ポリシー正常性状態]**  
  この対象に対するポリシーの状態を示します。 状態が不明な場合は空白になります。  
   

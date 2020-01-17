@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: bf39dd36-fc7a-4f6e-86c0-fa71430c0d86
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 9021ce8b3ad4f7442650731cb60b70cd4376d78a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: f1175d2a70c376e3da1e079e4a3eb93a39235758
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47828210"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67938467"
 ---
 # <a name="drilleddown-property-ado-md"></a>DrilledDown プロパティ (ADO MD)
 子の直後にあるかどうかを示す、[メンバー](../../../ado/reference/ado-md-api/member-object-ado-md.md)軸にします。  
@@ -38,5 +37,5 @@ ms.locfileid: "47828210"
 ## <a name="applies-to"></a>適用対象  
  [Member オブジェクト (ADO MD)](../../../ado/reference/ado-md-api/member-object-ado-md.md)  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [ParentSameAsPrev プロパティ (ADO MD)](../../../ado/reference/ado-md-api/parentsameasprev-property-ado-md.md)

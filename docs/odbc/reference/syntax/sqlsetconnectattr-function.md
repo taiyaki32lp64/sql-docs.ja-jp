@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: 97fc7445-5a66-4eb9-8e77-10990b5fd685
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: aad8baf55dc8960c533e1694309083952dece3d3
-ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
+ms.openlocfilehash: fd4acd7ce6a33665ce3d32e42328c906aaec3049
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/18/2018
-ms.locfileid: "53591246"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67910382"
 ---
 # <a name="sqlsetconnectattr-function"></a>SQLSetConnectAttr 関数
 **準拠**  
@@ -39,7 +38,7 @@ ms.locfileid: "53591246"
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
   
 SQLRETURN SQLSetConnectAttr(  
      SQLHDBC       ConnectionHandle,  
@@ -50,7 +49,7 @@ SQLRETURN SQLSetConnectAttr(
   
 ## <a name="arguments"></a>引数  
  *ConnectionHandle*  
- [入力]接続ハンドルです。  
+ [入力] 接続ハンドル。  
   
  *属性*  
  [入力]属性を設定すると、「コメントです」記載されています。  

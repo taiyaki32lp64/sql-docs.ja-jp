@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - algorithms [data mining]
@@ -16,12 +15,12 @@ ms.assetid: 50a4abb8-c0b0-4380-ba5e-c49b305b9d22
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 84a7ae52cf3556d7c79e3b9ca8d6027f8a5f14db
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: df1b3616a85d93b4c5fa814ee759880077c03b8f
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48180412"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66084038"
 ---
 # <a name="microsoft-linear-regression-algorithm"></a>Microsoft 線形回帰アルゴリズム
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] 線形回帰アルゴリズムは、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] デシジョン ツリー アルゴリズムの一種であり、従属変数と独立変数の間の線形の関係を計算し、その関係を予測に使用するのに役立ちます。  
@@ -58,7 +57,7 @@ ms.locfileid: "48180412"
   
  式の詳細を調べる場合は、 [Microsoft 汎用コンテンツ ツリー ビューアー](browse-a-model-using-the-microsoft-generic-content-tree-viewer.md)で係数およびその他の詳細を参照することもできます。  
   
- 線形回帰モデルの場合、モデル コンテンツには、メタデータ、回帰式、および入力値の分布に関する統計が含まれます。 詳細については、次を参照してください。[線形回帰モデルのマイニング モデル コンテンツ&#40;Analysis Services - データ マイニング&#41;](mining-model-content-for-linear-regression-models-analysis-services-data-mining.md)します。  
+ 線形回帰モデルの場合、モデル コンテンツには、メタデータ、回帰式、および入力値の分布に関する統計が含まれます。 詳細については、 [線形回帰モデルのマイニング モデル コンテンツ (Analysis Services - データ マイニング)](mining-model-content-for-linear-regression-models-analysis-services-data-mining.md)」の「必要条件」を参照してください。  
   
 ## <a name="creating-predictions"></a>予測の作成  
  モデルの処理後、結果が統計のセットとして線形回帰式と共に保存されます。これを使用して、将来の傾向を計算することができます。 線形回帰モデルで使用するクエリの例については、「 [線形回帰モデルのクエリ例](linear-regression-model-query-examples.md)」を参照してください。  
@@ -78,9 +77,9 @@ ms.locfileid: "48180412"
 -   OLAP マイニング モデルの使用がサポートされています。  
   
 ## <a name="see-also"></a>参照  
- [データ マイニング アルゴリズム&#40;Analysis Services - データ マイニング&#41;](data-mining-algorithms-analysis-services-data-mining.md)   
+ [データ マイニング アルゴリズム &#40;Analysis Services - データ マイニング&#41;](data-mining-algorithms-analysis-services-data-mining.md)   
  [Microsoft 線形回帰アルゴリズム テクニカル リファレンス](microsoft-linear-regression-algorithm-technical-reference.md)   
  [線形回帰モデルのクエリ例](linear-regression-model-query-examples.md)   
- [線形回帰モデルのマイニング モデル コンテンツ&#40;Analysis Services - データ マイニング&#41;](mining-model-content-for-linear-regression-models-analysis-services-data-mining.md)  
+ [線形回帰モデルのマイニング モデル コンテンツ (Analysis Services - データ マイニング)](mining-model-content-for-linear-regression-models-analysis-services-data-mining.md)  
   
   

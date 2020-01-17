@@ -11,11 +11,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 686eb039660efb6e3596b9dac88fc0d24deacaee
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52771834"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63150527"
 ---
 # <a name="unknown-service-log-on-tab"></a>[不明なサービス] ダイアログ ボックス ([ログオン] タブ)
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 構成マネージャーは、このサービスを識別できません。  
@@ -42,7 +42,7 @@ ms.locfileid: "52771834"
  **[パスワードの確認入力]**  
  アカウントのパスワードを再度入力します。  
   
- **コントロール パネルの  ◆セグ : 文が分断されているため、訳の位置が入れ替わっています◇**  
+ **[開始]**  
  サービスを開始します。  
   
  **[停止]**  

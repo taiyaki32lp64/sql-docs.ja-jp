@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: a2fa727e-51f2-4123-ae25-0ee28e611231
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 9e0e10a6b8c15b6522e6b34ab008295fc411fcd3
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: a241ea92af6c1273039cc45daab232a1fbe763a3
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52542665"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68081839"
 ---
 # <a name="standard-programming-interface"></a>標準のプログラミング インターフェイス
 プログラミング インターフェイスが標準化のための最も明らかな候補ではおそらくです。 実際には、ODBC の開発中、時に ANSI および ISO 既に提供されている標準 embedded SQL および SQL モジュール。 SQL アクセス グループのデータベース ベンダーの業界コンソーシアム - が; を作成するかどうかを考えていたが、データベースの CLI の標準がなかったODBC の後の部分では、作業の基礎となりました。  

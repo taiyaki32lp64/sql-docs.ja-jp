@@ -14,11 +14,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 89dd59aeff7a02f57ac0d34d347496cc97174e2e
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52760594"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63298628"
 ---
 # <a name="use-column-sets"></a>列セットの使用
   スパース列を使用するテーブルでは、テーブル内のすべてのスパース列を返すための列セットを指定できます。 列セットは、型指定されていない XML 表記であり、テーブルのすべてのスパース列を 1 つにまとめて構造化した出力です。 列セットは、テーブルに物理的に保存されないという点で計算列に似ています。 計算列と異なるのは、列セットが直接更新できる点です。  

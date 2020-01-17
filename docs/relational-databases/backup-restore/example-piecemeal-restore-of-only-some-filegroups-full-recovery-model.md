@@ -1,7 +1,7 @@
 ---
-title: 一部のファイル グループのみを復元する段階的な部分復元 (完全復旧モデル) の例 | Microsoft Docs
-ms.custom: ''
-ms.date: 03/14/2017
+title: '段階的な部分復元: 一部のファイル グループ (完全復旧モデル)'
+ms.custom: seo-lt-2019
+ms.date: 12/17/2019
 ms.prod: sql
 ms.prod_service: backup-restore
 ms.reviewer: ''
@@ -14,15 +14,14 @@ helpviewer_keywords:
 ms.assetid: bced4b54-e819-472b-b784-c72e14e72a0b
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 97b35efa82821e38e1b74edc3c8a343a34530214
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 3794c2453bdd541aa9bdbabe5c5d79c20a243f31
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47622600"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75243713"
 ---
-# <a name="example-piecemeal-restore-of-only-some-filegroups-full-recovery-model"></a>一部のファイル グループのみを復元する段階的な部分復元 (完全復旧モデル) の例
+# <a name="example-piecemeal-restore-of-only-some-filegroups-full-recovery-model"></a>例:一部のファイル グループのみを復元する段階的な部分復元 (完全復旧モデル)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
   このトピックは、複数のファイルやファイル グループを含む、完全復旧モデルの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データベースに関連しています。  
@@ -51,9 +50,9 @@ ms.locfileid: "47622600"
     ```  
     RESTORE DATABASE adb FILEGROUP='Primary' FROM backup   
     WITH PARTIAL, NORECOVERY  
-    RESTORE LOG adb FROM backup1 WITH NORECOVERY  
-    RESTORE LOG adb FROM backup2 WITH NORECOVERY  
-    RESTORE LOG adb FROM backup3 WITH NORECOVERY  
+    RESTORE LOG adb FROM log_backup1 WITH NORECOVERY  
+    RESTORE LOG adb FROM log_backup2 WITH NORECOVERY  
+    RESTORE LOG adb FROM log_backup3 WITH NORECOVERY  
     RESTORE LOG adb FROM tailLogBackup WITH RECOVERY  
     ```  
   
@@ -72,25 +71,25 @@ ms.locfileid: "47622600"
      この時点で、プライマリ ファイル グループ、ファイル グループ `A` 、およびファイル グループ `C` はオンラインです。 ファイル グループ `B` はオフラインで、このファイル グループのファイルは復旧待ち状態のままです。  
   
 4.  ファイル グループ `B`をオンライン復元します。  
+
+   ファイル グループ `B` のファイルは、これ以降の任意の時点で復元します。  
   
-     ファイル グループ `B` のファイルは、これ以降の任意の時点で復元します。  
+   > [!NOTE]  
+   >  ファイル グループ `B` のバックアップは、ファイルをロールフォワードする必要がないように、ファイル グループ B が読み取り専用になってから行います。  
   
-    > [!NOTE]  
-    >  ファイル グループ `B` のバックアップは、ファイルをロールフォワードする必要がないように、ファイル グループ B が読み取り専用になってから行います。  
+   ```sql  
+   RESTORE DATABASE adb FILEGROUP='B' FROM backup WITH RECOVERY  
+   ```  
   
-    ```  
-    RESTORE DATABASE adb FILEGROUP='B' FROM backup WITH RECOVERY  
-    ```  
-  
-     すべてのファイル グループがオンラインになります。  
+   すべてのファイル グループがオンラインになります。  
   
 ## <a name="additional-examples"></a>その他の例  
   
--   [例: データベースの段階的な部分復元 &#40;Simple Recovery Model&#41;](../../relational-databases/backup-restore/example-piecemeal-restore-of-database-simple-recovery-model.md)  
+-   [例: データベースの段階的な部分復元 &#40;単純復旧モデル&#41;](../../relational-databases/backup-restore/example-piecemeal-restore-of-database-simple-recovery-model.md)  
   
--   [例: 一部のファイル グループのみを復元する段階的な部分復元 &#40;Simple Recovery Model&#41;](../../relational-databases/backup-restore/example-piecemeal-restore-of-only-some-filegroups-simple-recovery-model.md)  
+-   [例: 一部のファイル グループのみを復元する段階的な部分復元 &#40;単純復旧モデル&#41;](../../relational-databases/backup-restore/example-piecemeal-restore-of-only-some-filegroups-simple-recovery-model.md)  
   
--   [例: 読み取り専用ファイルのオンライン復元 &#40;Simple Recovery Model&#41;](../../relational-databases/backup-restore/example-online-restore-of-a-read-only-file-simple-recovery-model.md)  
+-   [例: 読み取り専用ファイルのオンライン復元 &#40;単純復旧モデル&#41;](../../relational-databases/backup-restore/example-online-restore-of-a-read-only-file-simple-recovery-model.md)  
   
 -   [例: データベースの段階的な部分復元 &#40;完全復旧モデル&#41;](../../relational-databases/backup-restore/example-piecemeal-restore-of-database-full-recovery-model.md)  
   

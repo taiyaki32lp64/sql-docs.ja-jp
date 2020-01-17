@@ -11,11 +11,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 7cf597a459f12ccebc449de684fa05ac6dce39b6
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48072232"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63200285"
 ---
 # <a name="profiling-odbc-driver-performance-how-to-topics-odbc"></a>ODBC ドライバーのパフォーマンスをプロファイルする方法に関するトピック (ODBC)
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ODBC ドライバーには、ドライバーのパフォーマンスをプロファイルするための、ドライバー固有の 2 つのオプションが用意されています。  
@@ -30,7 +30,7 @@ ms.locfileid: "48072232"
   
 -   [ログ クエリの実行時間の長い&#40;ODBC&#41;](profiling-odbc-driver-performance-data-log-long-running-queries.md)  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [ODBC の使用法に関するトピック](odbc-how-to-topics.md)  
   
   

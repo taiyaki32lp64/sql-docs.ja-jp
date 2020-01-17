@@ -14,12 +14,12 @@ ms.assetid: 2a54eef8-9e8e-4e04-909c-6970112d55cc
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 69d148f9ef780e28300a6d3e233f2b680f0d37d5
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: dda5ac5b2f569c8438439ec77da33fde3a385fa0
+ms.sourcegitcommit: a165052c789a327a3a7202872669ce039bd9e495
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48157852"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72782898"
 ---
 # <a name="add-a-database-to-an-availability-group-sql-server"></a>可用性グループへのデータベースの追加 (SQL Server)
   このトピックでは、 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]で [!INCLUDE[tsql](../../../includes/tsql-md.md)]、 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]、または PowerShell を使用して、AlwaysOn 可用性グループにデータベースを追加する方法について説明します。  
@@ -28,7 +28,7 @@ ms.locfileid: "48157852"
   
      [前提条件と制限](#Prerequisites)  
   
-     [権限](#Permissions)  
+     [Permissions](#Permissions)  
   
 -   **可用性グループにデータベースを追加する方法:**  
   
@@ -38,7 +38,7 @@ ms.locfileid: "48157852"
   
      [PowerShell](#PowerShellProcedure)  
   
-##  <a name="BeforeYouBegin"></a> 作業を開始する準備  
+##  <a name="BeforeYouBegin"></a> はじめに  
   
 ###  <a name="Prerequisites"></a> 前提条件と制限  
   
@@ -48,7 +48,7 @@ ms.locfileid: "48157852"
   
 ###  <a name="Security"></a> セキュリティ  
   
-###  <a name="Permissions"></a> Permissions  
+###  <a name="Permissions"></a> アクセス許可  
  可用性グループの ALTER AVAILABILITY GROUP 権限、CONTROL AVAILABILITY GROUP 権限、ALTER ANY AVAILABILITY GROUP 権限、または CONTROL SERVER 権限が必要です。  
   
 ##  <a name="SSMSProcedure"></a> SQL Server Management Studio の使用  
@@ -81,7 +81,7 @@ ms.locfileid: "48157852"
   
      ALTER AVAILABILITY GROUP *group_name* ADD DATABASE *database_name* [,...*n*]  
   
-     ここで、 *group_name* は可用性グループの名前、 *database_name* はグループに追加するデータベースの名前です。  
+     *group_name* は可用性グループの名前、 *database_name* はグループに追加するデータベースの名前です。  
   
      次の例では、 *MyDb3* データベースを *MyAG* 可用性グループに追加します。  
   
@@ -99,34 +99,28 @@ ms.locfileid: "48157852"
   
 1.  プライマリ レプリカをホストするサーバー インスタンスにディレクトリを変更 (`cd`) します。  
   
-2.  使用して、`Add-SqlAvailabilityDatabase`コマンドレット。  
+2.  `Add-SqlAvailabilityDatabase` コマンドレットを使用します。  
   
      たとえば、次のコマンドは、そのプライマリ レプリカが `MyDd` によってホストされるセカンダリ データベース `MyAG` を `PrimaryServer\InstanceName`可用性グループに追加します。  
   
-    ```  
-  
+    ```powershell
     Add-SqlAvailabilityDatabase `   
-    -Path SQLSERVER:\SQL\PrimaryServer\InstanceName\AvailabilityGroups\MyAG `   
-    -Database "MyDb"  
+     -Path SQLSERVER:\SQL\PrimaryServer\InstanceName\AvailabilityGroups\MyAG `   
+     -Database "MyDb"  
     ```  
   
     > [!NOTE]  
-    >  コマンドレットの構文を表示する、`Get-Help`コマンドレット、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] PowerShell 環境。 詳細については、「 [Get Help SQL Server PowerShell](../../../powershell/sql-server-powershell.md)」を参照してください。  
+    >  コマンドレットの構文を表示するには、`Get-Help` PowerShell 環境で [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] コマンドレットを使用します。 詳細については、「 [Get Help SQL Server PowerShell](../../../powershell/sql-server-powershell.md)」を参照してください。  
   
 3.  可用性グループにデータベースを追加した後、セカンダリ データベースをホストする各サーバー インスタンスで、対応するセカンダリ データベースを構成する必要があります。 詳細については、「[AlwaysOn セカンダリ データベース上のデータ移動の開始 &#40;SQL Server&#41;](start-data-movement-on-an-always-on-secondary-database-sql-server.md)」を参照してください。  
   
- **SQL Server PowerShell プロバイダーを設定して使用するには**  
-  
--   [SQL Server PowerShell プロバイダー](../../../powershell/sql-server-powershell-provider.md)  
-  
- 完全な例については、次の「 [例 (PowerShell)](#PSExample)」を参照してください。  
-  
-###  <a name="PSExample"></a> 例 (PowerShell)  
+ SQL Server PowerShell プロバイダーを設定して使用する方法については、「 [SQL Server PowerShell プロバイダー](../../../powershell/sql-server-powershell-provider.md)」を参照してください。
+
  次の例では、可用性グループのプライマリ レプリカをホストするサーバー インスタンス上のデータベースからセカンダリ データベースを準備し、そのデータベースを (プライマリ データベースとして) 可用性グループに追加した後、セカンダリ データベースを可用性グループに参加させるすべての処理を示しています。 最初に、データベースとトランザクション ログをバックアップします。 次に、セカンダリ レプリカをホストするサーバー インスタンスにデータベースとログのバックアップを復元します。  
   
  この例では、`Add-SqlAvailabilityDatabase` を 2 回呼び出します。1 回目はデータベースを可用性グループに追加するためにプライマリ レプリカで呼び出し、2 回目はセカンダリ レプリカ上のセカンダリ データベースを可用性グループに参加させるためにセカンダリ レプリカで呼び出します。 セカンダリ レプリカが複数ある場合は、それぞれのセカンダリ データベースを復元して参加させます。  
   
-```  
+```powershell
 $DatabaseBackupFile = "\\share\backups\MyDatabase.bak"  
 $LogBackupFile = "\\share\backups\MyDatabase.trn"  
 $MyAgPrimaryPath = "SQLSERVER:\SQL\PrimaryServer\InstanceName\AvailabilityGroups\MyAg"  
@@ -139,14 +133,11 @@ Restore-SqlDatabase -Database "MyDatabase" -BackupFile $DatabaseBackupFile -Serv
 Restore-SqlDatabase -Database "MyDatabase" -BackupFile $LogBackupFile -ServerInstance "SecondaryServer\InstanceName" -RestoreAction 'Log' -NoRecovery  
   
 Add-SqlAvailabilityDatabase -Path $MyAgPrimaryPath -Database "MyDatabase"  
-Add-SqlAvailabilityDatabase -Path $MyAgSecondaryPath -Database "MyDatabase"  
-  
+Add-SqlAvailabilityDatabase -Path $MyAgSecondaryPath -Database "MyDatabase"
 ```  
   
 ## <a name="see-also"></a>参照  
- [AlwaysOn 可用性グループの概要&#40;SQL Server&#41;](overview-of-always-on-availability-groups-sql-server.md)   
+ [AlwaysOn 可用性グループ&#40;SQL Server&#41;の概要](overview-of-always-on-availability-groups-sql-server.md)   
  [可用性グループの作成と構成 &#40;SQL Server&#41;](creation-and-configuration-of-availability-groups-sql-server.md)   
- [AlwaysOn ダッシュ ボードを使用して、 &#40;SQL Server Management Studio&#41;](use-the-always-on-dashboard-sql-server-management-studio.md)   
+ [AlwaysOn ダッシュボード&#40;SQL Server Management Studio&#41;を使用する](use-the-always-on-dashboard-sql-server-management-studio.md)   
  [可用性グループの監視 &#40;Transact-SQL&#41;](monitor-availability-groups-transact-sql.md)  
-  
-  

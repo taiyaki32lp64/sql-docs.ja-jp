@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 helpviewer_keywords:
 - invalid named pipes [SQL Server]
@@ -14,12 +13,12 @@ ms.assetid: 58c2199c-4fdf-4d43-ac1c-842703344b75
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: d800001d2bf5ec663ad2c3651aae59baccca445b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: dddd5da66f09226579a6366baa1a16a6ab00d6bf
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48057852"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66094190"
 ---
 # <a name="invalid-named-pipe-name-can-block-upgrade"></a>無効な名前付きパイプ名によってアップグレードがブロックされる
   アップグレードは、名前付きパイプのプロトコルの構成が正しくない場合は失敗します。  
@@ -35,6 +34,6 @@ ms.locfileid: "48057852"
   
 ## <a name="see-also"></a>参照  
  [データベース エンジンのアップグレードに関する問題](../../../2014/sql-server/install/database-engine-upgrade-issues.md)   
- [SQL Server 2014 アップグレード アドバイザー&#91;新規&#93;](/sql/2014/sql-server/install/sql-server-2014-upgrade-advisor)  
+ [SQL Server 2014 アップグレード アドバイザー&#91;新規&#93;](sql-server-2014-upgrade-advisor.md)  
   
   

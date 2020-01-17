@@ -16,15 +16,14 @@ helpviewer_keywords:
 - '@@SERVERNAME function'
 - local servers [SQL Server]
 ms.assetid: b0ef33fb-954a-4294-b05b-a87c14ce25a3
-author: MashaMSFT
-ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: ec10604a95db5577a279d1a9735a1384ff0feaef
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: VanMSFT
+ms.author: vanto
+ms.openlocfilehash: 09a7e9d6199b3227b51cb67a0687c2b812bd21d2
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47843116"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68031579"
 ---
 # <a name="x40x40servername-transact-sql"></a>&#x40;&#x40;SERVERNAME (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]

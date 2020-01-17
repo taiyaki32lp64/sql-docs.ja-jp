@@ -1,5 +1,5 @@
 ---
-title: updateFloat (int, float) メソッド |Microsoft Docs
+title: updateFloat (int, float) メソッドMicrosoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: c9ddcd7d-1dd4-491a-99ff-6cce7f67a73b
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 3be5fd03283c4a98d81f7bd10a4968fdaf022f7d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: c1257ced0c69a461913d9c3a9ae147fffcf72cea
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47597991"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67998959"
 ---
 # <a name="updatefloat-method-int-float"></a>updateFloat (int, float) メソッド
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -43,13 +42,13 @@ public void updateFloat(int index,
   
  *x*  
   
- A **float**値。  
+ **浮動小数点**値です。  
   
 ## <a name="exceptions"></a>例外  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- この updateFloat メソッドは、java.sql.ResultSet インターフェイスの updateFloat メソッドによって指定されます。  
+ この updateFloat メソッドは、java.sql.ResultSet インターフェイスの updateFloat メソッドで規定されています。  
   
 ## <a name="see-also"></a>参照  
  [updateFloat メソッド &#40;SQLServerResultSet&#41;](../../../connect/jdbc/reference/updatefloat-method-sqlserverresultset.md)   

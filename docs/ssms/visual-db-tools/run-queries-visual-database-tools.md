@@ -11,15 +11,14 @@ helpviewer_keywords:
 - queries [SQL Server], executing
 - executing queries [SQL Server]
 ms.assetid: 6c175c0e-55de-4bff-a53f-505c306abe25
-author: stevestein
-ms.author: sstein
-manager: craigg
-ms.openlocfilehash: d6e8d6912eef4722bb862946f93d00362db0bc0c
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 28eaf23631d9f9331ede00394485d1cdc41b9fbd
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52526089"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68255652"
 ---
 # <a name="run-queries-visual-database-tools"></a>クエリの実行 (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -31,7 +30,7 @@ ms.locfileid: "52526089"
   
 2.  クエリ ウィンドウの中を右クリックし、ショートカット メニューの **[SQL の実行]** をクリックします。  
   
-    - または -  
+    \- または -  
   
     Ctrl キーを押しながら R キーを押します。  
   

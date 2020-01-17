@@ -1,5 +1,5 @@
 ---
-title: '手順 4 b: 行数のフェッチ |Microsoft Docs'
+title: '手順 4b: 行数のフェッチ |Microsoft Docs'
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -14,15 +14,14 @@ helpviewer_keywords:
 ms.assetid: 3af481b1-d694-446e-948d-e3a5edcad050
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 3091d379bca6c061437e7767fdf6f99d69dc9861
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 9455c6589ed93a51e404f3e50d1cb86a0c0c8476
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47763890"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68114157"
 ---
-# <a name="step-4b-fetch-the-row-count"></a>ステップ 4b: 行数のフェッチ
+# <a name="step-4b-fetch-the-row-count"></a>手順 4b: 行数をフェッチする
 次の手順は、次の図に示すように、行の数を取得するは。  
   
  ![行の数のフェッチ](../../../odbc/reference/develop-app/media/pr15.gif "pr15")  

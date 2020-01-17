@@ -1,5 +1,5 @@
 ---
-title: メンバーまたはコレクションを削除する (マスター データ サービス) | Microsoft Docs
+title: メンバーまたはコレクションを削除する
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -14,15 +14,14 @@ helpviewer_keywords:
 - members [Master Data Services], deleting
 - consolidated members [Master Data Services], deleting
 ms.assetid: 519130a7-4226-4d71-9124-d2ee0ce7e5bd
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: c521887ed483f03507d0270242a80c70fa202f43
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
-ms.translationtype: HT
+ms.openlocfilehash: 789b372660e7df5282c700f57654162288dabb78
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52819163"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73729380"
 ---
 # <a name="delete-a-member-or-collection-master-data-services"></a>メンバーまたはコレクションを削除する (マスター データ サービス)
 
@@ -60,7 +59,7 @@ ms.locfileid: "52819163"
   
 5.  グリッドで、削除するメンバーまたはコレクションの行をクリックします。  
   
-6.  **[メンバーの削除]**、 **[削除]**、または **[コレクションの削除]** をクリックします。  
+6.  **[メンバーの削除]** 、 **[削除]** 、または **[コレクションの削除]** をクリックします。  
   
 7.  エンティティ管理者には、エンティティ バージョンで論理削除されたすべてのメンバーを消去 (物理削除) するメニュー オプションも表示されます。  
   

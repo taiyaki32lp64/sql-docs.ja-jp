@@ -19,18 +19,17 @@ helpviewer_keywords:
 - number of group items
 - COUNT_BIG function
 ms.assetid: f2e3601f-487e-4917-bb01-47b1047908cd
-author: MashaMSFT
-ms.author: mathoma
-manager: craigg
+author: MikeRayMSFT
+ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: e4e1fef3fdaad1b7c8a1bd2b82f8ee1f1da8f76d
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: 23a3dd70b96aef4c24f3aa405ce428db5c7b2321
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54130842"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68026509"
 ---
-# <a name="countbig--sql"></a>COUNT_BIG (-SQL)
+# <a name="countbig-transact-sql"></a>COUNT_BIG (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
 この関数は、グループ内で見つかった項目数を返します。 `COUNT_BIG` は [COUNT](../../t-sql/functions/count-transact-sql.md) 関数と同じように動作します。 これらの関数の違いは、戻り値のデータ型のみです。 `COUNT_BIG` は常に **bigint** データ型の値を返します。 `COUNT` は常に **int** データ型の値を返します。
@@ -68,19 +67,19 @@ OVER **(** [ *partition_by_clause* ] [ *order_by_clause* ] **)**
 **bigint**
   
 ## <a name="remarks"></a>Remarks  
-COUNT_BIG(\*) は、グループ内の項目数を返します。 これには NULL 値と重複値も含まれます。
+COUNT_BIG(\*) は、グループ内の項目数を返します。 これには NULL 値と重複値が含まれます。
   
 COUNT_BIG (ALL *expression*) はグループ内の各行に対して *expression* を評価し、非 NULL 値の数を返します。
   
 COUNT_BIG (DISTINCT *expression*) はグループ内の各行に対して *expression* を評価し、一意の非 NULL 値の数を返します。
   
-COUNT_BIG は、OVER 句や ORDER BY 句**_なし_** で使用される場合は決定的関数です。 COUNT_BIG が OVER 句や ORDER BY 句と**_共に_** 使用される場合は、非決定的関数です。 詳細については、「[決定的関数と非決定的関数](../../relational-databases/user-defined-functions/deterministic-and-nondeterministic-functions.md)」を参照してください。
+COUNT_BIG は、OVER 句や ORDER BY 句 **_なし_** で使用される場合は決定的関数です。 COUNT_BIG が OVER 句や ORDER BY 句と **_共に_** 使用される場合は、非決定的関数です。 詳細については、「[決定的関数と非決定的関数](../../relational-databases/user-defined-functions/deterministic-and-nondeterministic-functions.md)」を参照してください。
   
 ## <a name="examples"></a>使用例  
 例については、「[COUNT &#40;Transact-SQL&#41;](../../t-sql/functions/count-transact-sql.md)」を参照してください。
   
 ## <a name="see-also"></a>参照
-[集計関数 (&) #40 です。TRANSACT-SQL と #41 です。](../../t-sql/functions/aggregate-functions-transact-sql.md)  
+[集計関数 &#40;Transact-SQL&#41;](../../t-sql/functions/aggregate-functions-transact-sql.md)  
 [COUNT &#40;Transact-SQL&#41;](../../t-sql/functions/count-transact-sql.md)  
 [int、bigint、smallint、および tinyint &#40;Transact-SQL&#41;](../../t-sql/data-types/int-bigint-smallint-and-tinyint-transact-sql.md)  
 [OVER 句 &#40;Transact-SQL&#41;](../../t-sql/queries/select-over-clause-transact-sql.md)

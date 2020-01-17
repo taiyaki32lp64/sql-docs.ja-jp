@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: 4d9db847-df22-40ab-8a5c-ec9158c576ca
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 0daf79ac0b27e2f281ff5ef8d0aa86ae284ab4b8
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a1f83c94559eeedba5ab01e2ffa1835215d40af9
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47667430"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67953662"
 ---
 # <a name="getboolean-method-int"></a>getBoolean (int) メソッド
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

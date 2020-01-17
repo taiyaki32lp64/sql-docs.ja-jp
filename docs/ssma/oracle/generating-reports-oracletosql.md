@@ -13,20 +13,20 @@ helpviewer_keywords:
 ms.assetid: ccad6262-01e1-447a-bd2b-c105154c80ce
 author: Shamikg
 ms.author: Shamikg
-manager: v-thobro
-ms.openlocfilehash: a1f175de4b205b6af98ea9bcc29e7679711b0943
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+manager: shamikg
+ms.openlocfilehash: 971d7e8dde2ae56da02205b50b2f6576a875bd70
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52405487"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68264456"
 ---
 # <a name="generating-reports-oracletosql"></a>レポートの生成 (OracleToSQL)
 オブジェクト ツリーのレベルでの SSMA コンソールのコマンドを使用して実行される特定のアクティビティ レポートが生成されます。  
   
 レポートを生成するのにには、次の手順を使用します。  
   
-1.  指定、**書き込みで概要レポート-を**パラメーター。 (指定した) 場合に、ファイル名として、関連するレポートが格納されているまたはでフォルダーを指定します。 ファイル名は、where、次の表で説明したようにシステム定義済み**&lt;n&gt;** は、同じコマンドを実行するたびに 1 桁の数字をインクリメントする一意のファイル数です。  
+1.  指定、**書き込みで概要レポート-を**パラメーター。 (指定した) 場合に、ファイル名として、関連するレポートが格納されているまたはでフォルダーを指定します。 ファイル名は、where、次の表で説明したようにシステム定義済み **&lt;n&gt;** は、同じコマンドを実行するたびに 1 桁の数字をインクリメントする一意のファイル数です。  
   
     レポートの vis-比べて-vis コマンドは次のとおりです。  
   
@@ -62,7 +62,7 @@ ms.locfileid: "52405487"
     |-|-|-|  
     |**Sl.No.**|**コマンドとパラメーター**|**出力の説明**|  
     |1|レポート エラー ="false"|エラーの詳細はありません/警告/情報メッセージ。|  
-    |2|レポート エラー ="true"|エラーの詳細/警告/情報メッセージ。|  
+    |2|report-errors="true"|エラーの詳細/警告/情報メッセージ。|  
   
     > [!NOTE]  
     > 上記で指定したエラー報告の設定は生成評価レポート、convert スキーマ、データの移行、sql ステートメントの変換コマンド。  
@@ -141,6 +141,6 @@ ms.locfileid: "52405487"
   
 -   フェールオーバー スクリプト  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
 [SSMA コンソール (Oracle) の実行](https://msdn.microsoft.com/7228ccba-c69f-4b4c-8664-01a2750183c5)  
   

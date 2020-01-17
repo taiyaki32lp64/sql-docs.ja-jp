@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 4d2b367f-8ac7-4534-b66f-10300ef64ebc
 author: Shamikg
 ms.author: Shamikg
-manager: craigg
-ms.openlocfilehash: a44e3882121347235141aacf879beea8127e3133
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d65cac7c857e8b6357dc31ca130dcdbdaa43b58f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47736588"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67910698"
 ---
 # <a name="advanced-object-selection--accesstosql"></a>高度なオブジェクトの選択 (AccessToSQL)
 **オブジェクト セクションの高度な** ダイアログ ボックスでは、オブジェクト名の文字列と部分文字列を使用してデータベース オブジェクトをフィルター処理し選択するか、オブジェクトの選択を解除することができます。 SSMA は、選択したオブジェクトで変換と移行操作を実行します。  
@@ -42,7 +41,7 @@ ms.locfileid: "47736588"
 **だけに読み込まれた項目の表示**  
 カテゴリまたは項目の表示を切り替えます。 このボタンを選択すると、SSMA では、フィルター条件と以前に読み込まれたものと一致するすべての項目が表示されます。 このボタンが選択されていないときに SSMA はカテゴリ フォルダーを示しています。  
   
-**Assert**  
+**[フィルター]**  
 項目をフィルター処理に使用する文字列を入力します。 たとえば、項目名に、"ID"という文字列を含む使用可能なすべての項目を検索に"ID"という文字列を入力、**フィルター**ボックス。  
   
 項目がフィルター条件に一致する場合は、文字列を入力すると、カテゴリまたは項目は表示されます。 クリックすることお勧めを一致する項目を表示する、**読み込まれる項目のみを表示**ボタンをクリックします。  

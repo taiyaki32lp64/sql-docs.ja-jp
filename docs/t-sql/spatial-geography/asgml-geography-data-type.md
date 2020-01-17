@@ -17,22 +17,21 @@ dev_langs:
 helpviewer_keywords:
 - AsGml method
 ms.assetid: 67795c64-d8d3-48dc-93ef-3c8a9274deb6
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: d6620beb8537a05f766f1f68eb07c0b1cd07d1a6
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+author: MladjoA
+ms.author: mlandzic
+ms.openlocfilehash: 4264aabaca1fe1b13427fc11cf3cd1b7ccc59e99
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51701990"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68066609"
 ---
 #  <a name="asgml---geography-data-type"></a>AsGml - geography データ型
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   **geography** インスタンスの Geography Markup Language (GML) 表現を返します。  
   
- GML (Geography Markup Language) の詳細については、Open Geospatial Consortium (OGC) の仕様書「[OGC の仕様、Geography Markup Language](https://go.microsoft.com/fwlink/?LinkId=93629)」を参照してください。  
+ Geography Markup Language の詳細については、Open Geospatial Consortium の仕様を参照してください。[「OGC Specification」の「Geography Markup Language」](https://go.microsoft.com/fwlink/?LinkId=93629)を参照してください。  
   
 ## <a name="syntax"></a>構文  
   
@@ -44,7 +43,7 @@ ms.locfileid: "51701990"
 ## <a name="return-types"></a>戻り値の型  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 戻り値の型: **xml**  
   
- CLR 戻り値の型: **SqlXml**  
+ CLR の戻り値の型:**SqlXml**  
   
 ## <a name="remarks"></a>Remarks  
   

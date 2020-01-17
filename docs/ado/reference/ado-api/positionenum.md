@@ -15,18 +15,17 @@ helpviewer_keywords:
 ms.assetid: e69af0a5-3405-4b72-9c6e-6b188ff746fd
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 21a2ea98ea4592d9900cd9623502a8d918b34c9b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d5f7ca47177a953313ff983bb25f9178b73b4930
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47774190"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67917602"
 ---
 # <a name="positionenum"></a>PositionEnum
 内のレコード ポインターの現在位置を示す、 [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md)します。  
   
-|定数|値|説明|  
+|定数|Value|説明|  
 |--------------|-----------|-----------------|  
 |**adPosBOF**|-2|BOF に現在のレコード ポインターがあることを示します (つまり、 [BOF](../../../ado/reference/ado-api/bof-eof-properties-ado.md)プロパティは**True**)。|  
 |**adPosEOF**|-3|EOF に現在のレコード ポインターがあることを示します (つまり、 [EOF](../../../ado/reference/ado-api/bof-eof-properties-ado.md)プロパティは**True**)。|  

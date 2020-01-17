@@ -1,5 +1,5 @@
 ---
-title: updateTime メソッド (SQLServerResultSet) |Microsoft Docs
+title: updateTime メソッド (SQLServerResultSet) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: 74570541-a041-413b-8abd-73ced9bf8900
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: a3db06d00c03561fe05f5ea10b11f5eee4e8986e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: f361f4c7f6435682414f27040a3f28c31c097f82
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47746820"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67998166"
 ---
 # <a name="updatetime-method-sqlserverresultset"></a>updateTime メソッド (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

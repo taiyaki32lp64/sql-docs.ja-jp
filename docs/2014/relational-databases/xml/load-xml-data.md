@@ -10,18 +10,18 @@ helpviewer_keywords:
 - XML data [SQL Server], loading
 - loading XML data
 ms.assetid: d1741e8d-f44e-49ec-9f14-10208b5468a7
-author: douglaslMS
-ms.author: douglasl
+author: MightyPen
+ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 50063c63ce7e541e997f23a4995620dc6d003823
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: eb3365195e3a64353fb0cbd45e832cd0206f678e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52517119"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63241288"
 ---
 # <a name="load-xml-data"></a>XML データの読み込み
-  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] へは、いくつかの方法で XML データを転送できます。 以下に例を示します。  
+  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] へは、いくつかの方法で XML データを転送できます。 例 :  
   
 -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データベースの [n]text 型または image 型の列にデータが含まれている場合、 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]を使用してテーブルをインポートできます。 ALTER TABLE ステートメントを使用して列の型を XML に変更します。  
   
@@ -32,7 +32,7 @@ ms.locfileid: "52517119"
 ## <a name="bulk-loading-xml-data"></a>XML データの一括読み込み  
  bcp など、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]の一括読み込み機能によって XML データをサーバーに一括で読み込むことができます。 OPENROWSET を使用すると、ファイルから XML 列にデータを読み込むことができます。 この点について、次の例で説明します。  
   
-##### <a name="example-loading-xml-from-files"></a>例:ファイルから XML の読み込み  
+##### <a name="example-loading-xml-from-files"></a>例: ファイルからの XML の読み込み  
  この例では、テーブル T に行を挿入する方法を示します。C:\MyFile\xmlfile.xml から CLOB として XML 列の値を読み込み、整数型の列に値 10 を保存します。  
   
 ```  
@@ -52,7 +52,7 @@ FROM    (SELECT *
   
 -   明示的なエンコードを使用するには、コード ページに連動しない `varbinary()` 型を使用するか、適切なコード ページの文字列型を使用します。 次に、データを XML の列、変数、またはパラメーターに割り当てます。  
   
-### <a name="example-explicitly-specifying-an-encoding"></a>例:エンコーディングを明示的に指定します。  
+### <a name="example-explicitly-specifying-an-encoding"></a>例: エンコードの明示的な指定  
  明示的な XML 宣言が行われていない XML ドキュメント vcdoc を `varchar(max)` として保存しているとします。 次のステートメントは、エンコード "iso8859-1" を指定した XML 宣言を追加し、この XML ドキュメントを宣言に連結します。バイト表現を保持するために結果を `varbinary(max)` にキャストし、最終的にその結果を XML にキャストします。 その結果、XML プロセッサで、指定したエンコード "iso8859-1" に従ってデータを解析し、対応する文字列値の UTF-16 表現を生成できます。  
   
 ```  
@@ -62,14 +62,14 @@ CAST (('<?xml version="1.0" encoding="iso8859-1"?>'+ vcdoc) AS VARBINARY (MAX))
 ```  
   
 ### <a name="string-encoding-incompatibilities"></a>文字列エンコードの非互換性  
- XML をコピーし、文字列リテラルとして [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]のクエリ エディター ウィンドウに貼り付けると、[N]VARCHAR 文字列エンコードの非互換性の問題が発生する可能性があります。 この問題が発生するかどうかは、XML インスタンスのエンコードによって決まります。 多くの場合、XML 宣言の削除が必要になります。 以下に例を示します。  
+ XML をコピーし、文字列リテラルとして [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]のクエリ エディター ウィンドウに貼り付けると、[N]VARCHAR 文字列エンコードの非互換性の問題が発生する可能性があります。 この問題が発生するかどうかは、XML インスタンスのエンコードによって決まります。 多くの場合、XML 宣言の削除が必要になります。 例 :  
   
 ```  
 <?xml version="1.0" encoding="UTF-8"?>  
   <xsd:schema ...  
 ```  
   
- 続いて、N を指定し、XML インスタンスを Unicode 形式のインスタンスにします。 以下に例を示します。  
+ 続いて、N を指定し、XML インスタンスを Unicode 形式のインスタンスにします。 例 :  
   
 ```  
 -- Assign XML instance to a variable.  
@@ -81,7 +81,7 @@ INSERT INTO T VALUES (N'...')
 CREATE XML SCHEMA COLLECTION XMLCOLL1 AS N'<xsd:schema ... '  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [XML データ &#40;SQL Server&#41;](xml-data-sql-server.md)  
   
   

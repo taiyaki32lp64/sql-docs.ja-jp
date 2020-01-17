@@ -20,18 +20,17 @@ helpviewer_keywords:
 ms.assetid: 30f97f00-03d8-443a-9de9-9ec420b7699b
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 244e8935a580a8febc483673d6d747b6cc4b7b1c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 0a64db42ba04e864752559bb2d2b895625f2c9f5
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47659250"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68122634"
 ---
 # <a name="sysfnmypermissions-transact-sql"></a>sys.fn_my_permissions (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  セキュリティ保護可能なリソースについて、プリンシパルに許可されている有効な権限の一覧を返します。 関連する関数は[HAS_PERMS_BY_NAME](../../t-sql/functions/has-perms-by-name-transact-sql.md)します。  
+  可能なプリンシパルに効果的に付与されるアクセス許可の一覧を返します。 関連する関数は[HAS_PERMS_BY_NAME](../../t-sql/functions/has-perms-by-name-transact-sql.md)します。  
   
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -47,19 +46,19 @@ fn_my_permissions ( securable , 'securable_class' )
  セキュリティ保護可能なリソースの名前を指定します。 セキュリティ保護可能なリソースがサーバーまたはデータベースの場合、この値は NULL に設定する必要があります。 *securable* には **sysname** 型のスカラー式を指定します。 *セキュリティ保護可能な*マルチパート名を指定できます。  
   
  '*securable_class*'  
- 権限を一覧表示する、セキュリティ保護可能なリソースのクラスの名前を指定します。 *securable_class*は、 **sysname**します。 *securable_class*次のいずれかを指定する必要がありますアプリケーション ロール、アセンブリ、非対称キー、証明書、コントラクト、データベース、ENDPOINT、FULLTEXT CATALOG、ログイン、メッセージの種類、オブジェクト、REMOTE SERVICE BINDING、ロール、ルート、スキーマ、サーバー、サービス。、対称キー、型、ユーザー、XML スキーマ コレクションです。  
+ 権限を一覧表示する、セキュリティ保護可能なリソースのクラスの名前を指定します。 *securable_class*は、 **sysname**します。 *securable_class*次のいずれかを指定する必要があります。アプリケーション ロール、アセンブリ、非対称キー、証明書、コントラクト、データベース、ENDPOINT、FULLTEXT CATALOG、ログイン、メッセージの種類、オブジェクト、リモート サービス バインド、ロール、ルート、スキーマ、サーバー、サービス、対称キー、型、ユーザー、XML スキーマ コレクションです。  
   
 ## <a name="columns-returned"></a>返される列  
  次の表に、列を**fn_my_permissions**を返します。 返される各行によって、セキュリティ保護可能なリソースについて、現在のセキュリティ コンテキストで保持されている権限の詳細が示されます。 クエリが失敗した場合は、NULL を返します。  
   
 |列名|型|説明|  
 |-----------------|----------|-----------------|  
-|entity_name へのアイテムの追加|**sysname**|表示される有効な権限の対象となる、セキュリティ保護可能なリソースの名前。|  
-|subentity_name|**sysname**|セキュリティ保護可能なリソースに列がある場合は列名、それ以外の場合は NULL。|  
+|entity_name へのアイテムの追加|**sysname**|一覧表示されているアクセス許可が効果的に付与可能なリソースの名前。|  
+|subentity_name|**sysname**|それ以外の場合、セキュリティ保護可能な列がある場合、列名が NULL です。|  
 |permission_name|**nvarchar**|アクセス許可の名前。|  
   
 ## <a name="remarks"></a>コメント  
- このテーブル値関数では、指定したセキュリティ保護可能なリソースについて、呼び出し元のプリンシパルが保持している有効な権限の一覧が返されます。 有効な権限とは、次のような権限です。  
+ このテーブル値関数では、セキュリティ保護可能なに、指定した呼び出し元のプリンシパルで保持されている有効なアクセス許可の一覧を返します。 有効な権限は、次のいずれかです。  
   
 -   プリンシパルに直接許可されており、拒否されていない権限。  
   
@@ -93,7 +92,7 @@ SELECT * FROM fn_my_permissions(NULL, 'SERVER');
 GO  
 ```  
   
-### <a name="b-listing-effective-permissions-on-the-database"></a>B. データベースの有効な権限を一覧表示する  
+### <a name="b-listing-effective-permissions-on-the-database"></a>B. データベースの有効な権限を一覧表示します。  
  次の例では、呼び出し元の有効なアクセス許可の一覧を返します上、[!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)]データベース。  
   
 ```  
@@ -102,7 +101,7 @@ SELECT * FROM fn_my_permissions (NULL, 'DATABASE');
 GO  
 ```  
   
-### <a name="c-listing-effective-permissions-on-a-view"></a>C. ビューの有効な権限を一覧表示する  
+### <a name="c-listing-effective-permissions-on-a-view"></a>C. ビューの有効な権限を一覧表示します。  
  次の例では、[!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] データベースの `vIndividualCustomer` スキーマにある `Sales` ビューについて、呼び出し元が保持している有効な権限の一覧を返します。  
   
 ```  
@@ -112,7 +111,7 @@ SELECT * FROM fn_my_permissions('Sales.vIndividualCustomer', 'OBJECT')
 GO   
 ```  
   
-### <a name="d-listing-effective-permissions-of-another-user"></a>D. 別のユーザーの有効な権限を一覧表示する  
+### <a name="d-listing-effective-permissions-of-another-user"></a>D. 別のユーザーの有効なアクセス許可を一覧表示します。  
  次の例は、データベース ユーザーの有効なアクセス許可の一覧を返します`Wanida`上、`Employee`テーブルに、`HumanResources`のスキーマ、[!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)]データベース。 呼び出し元には、ユーザーに対する IMPERSONATE 権限が必要があります`Wanida`します。  
   
 ```  
@@ -123,7 +122,7 @@ REVERT;
 GO  
 ```  
   
-### <a name="e-listing-effective-permissions-on-a-certificate"></a>E. 証明書の有効な権限を一覧表示する  
+### <a name="e-listing-effective-permissions-on-a-certificate"></a>E. 証明書の有効な権限を一覧表示します。  
  次の例では、呼び出し元の有効なアクセス許可の一覧を返しますという証明書で`Shipping47`現在のデータベースでします。  
   
 ```  
@@ -131,7 +130,7 @@ SELECT * FROM fn_my_permissions('Shipping47', 'CERTIFICATE');
 GO  
 ```  
   
-### <a name="f-listing-effective-permissions-on-an-xml-schema-collection"></a>F. XML スキーマ コレクションの有効な権限を一覧表示する  
+### <a name="f-listing-effective-permissions-on-an-xml-schema-collection"></a>F. XML スキーマ コレクションの有効な権限を一覧表示します。  
  次の例では、呼び出し元の有効なアクセス許可の一覧を返しますという名前の XML スキーマ コレクションに対する`ProductDescriptionSchemaCollection`で、[!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)]データベース。  
   
 ```  
@@ -160,7 +159,7 @@ REVERT;
 GO  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [セキュリティ関数 &#40;Transact-SQL&#41;](../../t-sql/functions/security-functions-transact-sql.md)   
  [アクセス許可 &#40;データベース エンジン&#41;](../../relational-databases/security/permissions-database-engine.md)   
  [Securables](../../relational-databases/security/securables.md)   

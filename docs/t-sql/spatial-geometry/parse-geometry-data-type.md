@@ -12,15 +12,14 @@ dev_langs:
 helpviewer_keywords:
 - Parse (geometry Data Type)
 ms.assetid: 6e080919-4b64-46cd-8dd2-254a9c232e53
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: 92046c52474c538411c42e3509e96d6ef221fde7
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: MladjoA
+ms.author: mlandzic
+ms.openlocfilehash: 91bcf58df4f8dd9651f077c200d69eea2c1f7660
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47607840"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68101054"
 ---
 # <a name="parse-geometry-data-type"></a>Parse (geometry データ型)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -41,7 +40,7 @@ Parse ( 'geometry_tagged_text' )
 ## <a name="return-types"></a>戻り値の型  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の戻り値の型: **geometry**  
   
- CLR 戻り値の型: **SqlGeometry**  
+ CLR の戻り値の型:**SqlGeometry**  
   
 ## <a name="remarks"></a>Remarks  
  `Parse()` によって返された **geometry** インスタンスの OGC 型は、対応する WKT 入力に設定されます。  

@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: ef5d773b-4f8f-4005-b985-84b53d8e9f9b
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 17425e76814a8397b9d2e6167248f35e52ac6cfa
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 39f9d2e7ba40ba067659a86f45d2006c83594f3e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47697440"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67988042"
 ---
 # <a name="read-only-status-excel-driver"></a>読み取り専用の状態 (Excel ドライバー)
 Microsoft Excel のドライバーを使用すると、データ ソースのテーブルは既定では、読み取り専用として開かれているし、一度に 1 つだけのユーザーが開くことが。 テーブルが読み取り専用の状態を持っていなくてただし、アプリケーション実行できます挿入と更新プログラムの Microsoft Excel のテーブル。  

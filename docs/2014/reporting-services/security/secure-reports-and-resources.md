@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 helpviewer_keywords:
 - security [Reporting Services], reports
@@ -14,15 +13,15 @@ helpviewer_keywords:
 - confidential reports [Reporting Services]
 - resources [Reporting Services], security
 ms.assetid: 63cd55c7-fd2a-49e3-a3f8-59eb1a1c6e83
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: a12d538f034f4a3d96726ced32b74f02ec6e73c3
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: ff0bd8ce8d5024d0d6e2e624c03bcc675af8fbb8
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56023523"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66101664"
 ---
 # <a name="secure-reports-and-resources"></a>レポートとリソースの保護
   各レポートおよびリソースのセキュリティを設定して、これらのアイテムへのユーザーのアクセスのレベルを制御できます。 既定では、組み込みの **Administrators** グループのメンバーであるユーザーのみ、レポートの実行、リソースの表示、プロパティの変更、およびアイテムの削除を行うことができます。 他のすべてのユーザーについては、レポートまたはリソースへのアクセスを許可するロール割り当てを作成する必要があります。  

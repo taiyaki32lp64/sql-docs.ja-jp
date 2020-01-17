@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 5032cb2d-65a0-40dd-b569-4dcecdd58ceb
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: ecbe9589a1219920847adf9af9aa99c24672d94d
-ms.sourcegitcommit: 1a5448747ccb2e13e8f3d9f04012ba5ae04bb0a3
+ms.openlocfilehash: 2551ad6702eea03fc440b52437faef8cea8dc75f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51560200"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68100446"
 ---
 # <a name="msdb-database"></a>msdb データベース
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -51,34 +50,34 @@ ms.locfileid: "51560200"
 |データベース オプション|既定値|変更可否|  
 |---------------------|-------------------|---------------------|  
 |ALLOW_SNAPSHOT_ISOLATION|ON|いいえ|  
-|ANSI_NULL_DEFAULT|OFF|[ユーザー アカウント制御]|  
-|ANSI_NULLS|OFF|[ユーザー アカウント制御]|  
-|ANSI_PADDING|OFF|[ユーザー アカウント制御]|  
-|ANSI_WARNINGS|OFF|[ユーザー アカウント制御]|  
-|ARITHABORT|OFF|[ユーザー アカウント制御]|  
-|AUTO_CLOSE|OFF|[ユーザー アカウント制御]|  
-|AUTO_CREATE_STATISTICS|ON|[ユーザー アカウント制御]|  
-|AUTO_SHRINK|OFF|[ユーザー アカウント制御]|  
-|AUTO_UPDATE_STATISTICS|ON|[ユーザー アカウント制御]|  
-|AUTO_UPDATE_STATISTICS_ASYNC|OFF|[ユーザー アカウント制御]|  
+|ANSI_NULL_DEFAULT|OFF|はい|  
+|ANSI_NULLS|OFF|はい|  
+|ANSI_PADDING|OFF|はい|  
+|ANSI_WARNINGS|OFF|はい|  
+|ARITHABORT|OFF|はい|  
+|AUTO_CLOSE|OFF|はい|  
+|AUTO_CREATE_STATISTICS|ON|はい|  
+|AUTO_SHRINK|OFF|はい|  
+|AUTO_UPDATE_STATISTICS|ON|はい|  
+|AUTO_UPDATE_STATISTICS_ASYNC|OFF|はい|  
 |CHANGE_TRACKING|OFF|いいえ|  
-|CONCAT_NULL_YIELDS_NULL|OFF|[ユーザー アカウント制御]|  
-|CURSOR_CLOSE_ON_COMMIT|OFF|[ユーザー アカウント制御]|  
-|CURSOR_DEFAULT|GLOBAL|[ユーザー アカウント制御]|  
-|データベース可用性オプション|ONLINE<br /><br /> MULTI_USER<br /><br /> READ_WRITE|いいえ<br /><br /> はい<br /><br /> [ユーザー アカウント制御]|  
-|DATE_CORRELATION_OPTIMIZATION|OFF|[ユーザー アカウント制御]|  
-|DB_CHAINING|ON|[ユーザー アカウント制御]|  
+|CONCAT_NULL_YIELDS_NULL|OFF|はい|  
+|CURSOR_CLOSE_ON_COMMIT|OFF|はい|  
+|CURSOR_DEFAULT|GLOBAL|はい|  
+|データベース可用性オプション|ONLINE<br /><br /> MULTI_USER<br /><br /> READ_WRITE|いいえ<br /><br /> はい<br /><br /> はい|  
+|DATE_CORRELATION_OPTIMIZATION|OFF|はい|  
+|DB_CHAINING|ON|はい|  
 |ENCRYPTION|OFF|いいえ|  
 |MIXED_PAGE_ALLOCATION|ON|いいえ|  
-|NUMERIC_ROUNDABORT|OFF|[ユーザー アカウント制御]|  
-|PAGE_VERIFY|CHECKSUM|[ユーザー アカウント制御]|  
-|PARAMETERIZATION|SIMPLE|[ユーザー アカウント制御]|  
-|QUOTED_IDENTIFIER|OFF|[ユーザー アカウント制御]|  
+|NUMERIC_ROUNDABORT|OFF|はい|  
+|PAGE_VERIFY|CHECKSUM|はい|  
+|PARAMETERIZATION|SIMPLE|はい|  
+|QUOTED_IDENTIFIER|OFF|はい|  
 |READ_COMMITTED_SNAPSHOT|OFF|いいえ|  
-|RECOVERY|SIMPLE|[ユーザー アカウント制御]|  
-|RECURSIVE_TRIGGERS|OFF|[ユーザー アカウント制御]|  
-|Service Broker のオプション|ENABLE_BROKER|[ユーザー アカウント制御]|  
-|TRUSTWORTHY|ON|[ユーザー アカウント制御]|  
+|RECOVERY|SIMPLE|はい|  
+|RECURSIVE_TRIGGERS|OFF|はい|  
+|Service Broker のオプション|ENABLE_BROKER|はい|  
+|TRUSTWORTHY|ON|はい|  
   
  これらのデータベース オプションの説明は、「[ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md)」を参照してください。  
   

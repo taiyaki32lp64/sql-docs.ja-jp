@@ -17,14 +17,13 @@ helpviewer_keywords:
 ms.assetid: 0bb6495f-258a-47ec-9f74-fd16671d23b8
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 4bed4614f3d38ca7700d40b73347430f27e9d82b
-ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
+ms.openlocfilehash: b4e3e25dbab53f31e354dcff537b6bfb9a6b433d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/18/2018
-ms.locfileid: "53591706"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68032737"
 ---
 # <a name="spstatistics-transact-sql"></a>sp_statistics (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -47,45 +46,39 @@ sp_statistics [ @table_name = ] 'table_name'
 ```  
   
 ## <a name="arguments"></a>引数  
- [  **@table_name=** ] **'**_table_name_**'**  
- カタログ情報を返すために使用するテーブルを指定します。 *table_name*は**sysname**、既定値はありません。 ワイルドカードによるパターン照合はサポートされていません。  
+`[ @table_name = ] 'table_name'` カタログ情報を返すために使用するテーブルを指定します。 *table_name*は**sysname**、既定値はありません。 ワイルドカードによるパターン照合はサポートされていません。  
   
- [  **@table_owner=** ] **'**_所有者_**'**  
- カタログ情報を返すために使用するテーブルのテーブル所有者の名前です。 *table_owner*は**sysname**、既定値は NULL です。 ワイルドカードによるパターン照合はサポートされていません。 場合*所有者*が指定されていない、基になる DBMS の既定のテーブル可視性規則が適用されます。  
+`[ @table_owner = ] 'owner'` カタログ情報を返すために使用するテーブルのテーブルの所有者の名前です。 *table_owner*は**sysname**、既定値は NULL です。 ワイルドカードによるパターン照合はサポートされていません。 場合*所有者*が指定されていない、基になる DBMS の既定のテーブル可視性規則が適用されます。  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、指定された名前のテーブルを現在のユーザーが所有している場合、そのテーブルのインデックスが返されます。 場合*所有者*が指定されていない、現在のユーザーが、指定したテーブルを所有していない*名前*、この手順は、指定したテーブルを探します*名前*によって所有されている、データベース所有者です。 テーブルが存在する場合は、そのテーブルのインデックスが返されます。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]、現在のユーザーが指定した名前のテーブルを所有している場合、そのテーブルのインデックスが返されます。 場合*所有者*が指定されていない、現在のユーザーが、指定したテーブルを所有していない*名前*、この手順は、指定したテーブルを探します*名前*によって所有されている、データベース所有者です。 1 つが存在する場合は、そのテーブルのインデックスが返されます。  
   
- [  **@table_qualifier=** ] **'**_修飾子_**'**  
- テーブル識別子の名前です。 *修飾子*は**sysname**、既定値は NULL です。 さまざまな DBMS 製品は、3 つの部分がテーブルの名前付けをサポート (_修飾子_**.**_所有者_**.**_名前_)。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、このパラメーターはデータベース名を表します。 一部の製品で、テーブルのデータベース環境のサーバー名を表します。  
+`[ @table_qualifier = ] 'qualifier'` テーブル修飾子の名前です。 *修飾子*は**sysname**、既定値は NULL です。 さまざまな DBMS 製品は、3 つの部分がテーブルの名前付けをサポート (_修飾子_ **.** _所有者_ **.** _名前_)。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]、このパラメーターは、データベース名を表します。 一部の製品で、テーブルのデータベース環境のサーバー名を表します。  
   
- [  **@index_name=** ] **'**_index_name_**'**  
- インデックス名を指定します。 *index_name*は**sysname**、既定値は % です。 ワイルドカードによるパターン照合がサポートされています。  
+`[ @index_name = ] 'index_name'` インデックスの名前です。 *index_name*は**sysname**、既定値は % です。 ワイルドカードによるパターン照合はサポートされています。  
   
- [  **@is_unique=** ] **'**_is_unique_**'**  
- あるかどうか一意インデックスのみ (場合**Y**) を返します。 *is_unique*は**char (1)**、既定値は**N**します。  
+`[ @is_unique = ] 'is_unique'` あるかどうか一意インデックスのみ (場合**Y**) を返します。 *is_unique*は**char (1)** 、既定値は**N**します。  
   
- [  **@accuracy=** ] **'**_精度_**'**  
- 統計のカーディナリティおよび統計のページの精度を指定します。 *精度*は**char (1)**、既定値は**Q**します。指定**E**カーディナリティおよびページが正確になるように、統計が更新されるかどうかを確認します。  
+`[ @accuracy = ] 'accuracy'` カーディナリティおよび統計情報のページの精度のレベルです。 *精度*は**char (1)** 、既定値は**Q**します。指定**E**カーディナリティおよびページが正確になるように、統計が更新されるかどうかを確認します。  
   
  値**E** (sql_ensure) ドライバーを無条件に統計を取得します。  
   
- 値**Q** (SQL_QUICK) は、カーディナリティを取得するドライバーを要求し、ページのサーバーからすぐに使用できる場合。 この場合、ドライバーで取得される値が最新であるかどうかは保証されません。 Open Group 標準に従って記述されているアプリケーションは常に、ODBC 3.x 準拠のドライバーから SQL_QUICK 動作を取得します。  
+ 値**Q** (SQL_QUICK) は、カーディナリティを取得するドライバーを要求し、ページのサーバーからすぐに使用できる場合。 この場合、ドライバーで取得される値が最新であるかどうかは保証されません。 Open Group 標準に記述されているアプリケーションは、ODBC 3.x 準拠のドライバーから SQL_QUICK 動作を取得するが常にします。  
   
 ## <a name="result-sets"></a>結果セット  
   
 |列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
-|**TABLE_QUALIFIER**|**sysname**|テーブル修飾子の名前。 この列は、NULL の場合もあります。|  
+|**TABLE_QUALIFIER**|**sysname**|テーブル修飾子の名前。 この列は NULL を指定できます。|  
 |**TABLE_OWNER**|**sysname**|テーブルの所有者名です。 この列は常に値が返されます。|  
 |**TABLE_NAME**|**sysname**|テーブル名です。 この列は常に値が返されます。|  
-|**NON_UNIQUE**|**smallint**|NULL 以外です。<br /><br /> 0 = 一意<br /><br /> 1 = 一意ではない|  
-|**INDEX_QUALIFIER**|**sysname**|インデックス所有者の名前。 DBMS 製品の中には、テーブル所有者以外のユーザーでもインデックスを作成できるものがあります。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]、この列は常に同じ**TABLE_NAME**します。|  
-|**INDEX_NAME**|**sysname**|インデックスの名前。 この列は常に値が返されます。|  
-|**TYPE**|**smallint**|この列は常に値を返します。<br /><br /> 0 = テーブルの統計<br /><br /> 1 = クラスター化<br /><br /> 2 = ハッシュ化<br /><br /> 3 = 非クラスター化|  
+|**NON_UNIQUE**|**smallint**|NULL 以外です。<br /><br /> 0 = 一意<br /><br /> 1 = not unique|  
+|**INDEX_QUALIFIER**|**sysname**|インデックス所有者の名前。 一部の DBMS 製品は、インデックスを作成するテーブルの所有者以外のユーザーの許可します。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]、この列は常に同じ**TABLE_NAME**します。|  
+|**INDEX_NAME**|**sysname**|インデックスの名前です。 この列は常に値が返されます。|  
+|**TYPE**|**smallint**|この列は、常に値を返します。<br /><br /> 0 = テーブルの統計<br /><br /> 1 = クラスター化<br /><br /> 2 = Hashed<br /><br /> 3 = 非クラスター化インデックス|  
 |**SEQ_IN_INDEX**|**smallint**|インデックス内での列の位置。|  
 |**COLUMN_NAME**|**sysname**|各列の列名、 **TABLE_NAME**が返されます。 この列は常に値が返されます。|  
 |**COLLATION**|**char(1)**|照合順序で使用されている並べ替え順。 次の値をとります。<br /><br /> A = 昇順<br /><br /> D = 降順<br /><br /> NULL = 適用なし|  
-|**カーディナリティ**|**int**|テーブル内の行数またはインデックス内の一意な値の個数。|  
+|**カーディナリティ**|**int**|テーブル内の行またはインデックスの一意の値の数。|  
 |**ページ**|**int**|インデックスまたはテーブルを格納するページ数。|  
 |**FILTER_CONDITION**|**varchar(128)**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では値は返されません。|  
   

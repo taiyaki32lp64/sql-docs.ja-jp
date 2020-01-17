@@ -13,18 +13,17 @@ helpviewer_keywords:
 ms.assetid: ad5bf52c-fd10-4cfa-bf7d-fcedcaa41eea
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 80f81dcff4f6220257e1210f5bc9dad7baca0b03
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: 22fbf503196c467a7816bf4e9c76151276cc6d4a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53207231"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67924028"
 ---
 # <a name="streams-and-persistence"></a>ストリームと永続性
 [レコード セット](../../../ado/reference/ado-api/recordset-object-ado.md)オブジェクト[保存](../../../ado/reference/ado-api/save-method.md)メソッド ストア、または*が解決しない*、**レコード セット**ファイルでは、および[を開く](../../../ado/reference/ado-api/open-method-ado-recordset.md)メソッドの復元、 **Recordset**そのファイルから。  
   
- 2.7 以降、ADO を使用した、**保存**と**オープン**メソッドを永続化できる、**レコード セット**を[Stream](../../../ado/reference/ado-api/stream-object-ado.md)もオブジェクトです。 この機能は、リモート データ サービス (RDS) や Active Server Pages (ASP) を使用する場合に便利です。  
+ 2\.7 以降、ADO を使用した、**保存**と**オープン**メソッドを永続化できる、**レコード セット**を[Stream](../../../ado/reference/ado-api/stream-object-ado.md)もオブジェクトです。 この機能は、リモート データ サービス (RDS) や Active Server Pages (ASP) を使用する場合に便利です。  
   
  ASP ページで永続化を単独で使用する方法の詳細については、ASP の現在のドキュメントを参照してください。  
   
@@ -161,7 +160,7 @@ function GetRs()
 ...  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [Open メソッド (ADO Recordset)](../../../ado/reference/ado-api/open-method-ado-recordset.md)   
  [Record オブジェクト (ADO)](../../../ado/reference/ado-api/record-object-ado.md)   
  [Save メソッド](../../../ado/reference/ado-api/save-method.md)

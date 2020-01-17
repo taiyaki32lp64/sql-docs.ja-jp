@@ -11,15 +11,14 @@ f1_keywords:
 - VS.ToolsOptionsPages.ObjectExplorerScripting
 - VS.ToolsOptionsPages.Sql_Server_Object_Explorer.ObjectExplorerScripting
 ms.assetid: 6105aec9-1b72-4cb2-bd24-fc35f6d95240
-author: stevestein
-ms.author: sstein
-manager: craigg
-ms.openlocfilehash: a78a5b477fd92610ba4685cac96cb398d590634d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 0f2d5a92fb3359f1c6d63d9ca1dee0f265a8aee1
+ms.sourcegitcommit: f688a37bb6deac2e5b7730344165bbe2c57f9b9c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47662500"
+ms.lasthandoff: 11/08/2019
+ms.locfileid: "73844531"
 ---
 # <a name="options-sql-server-object-explorer---scripting-page"></a>オプション (SQL Server オブジェクト エクスプローラー - [スクリプト作成] ページ)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -36,15 +35,18 @@ ms.locfileid: "47662500"
 ## <a name="remarks"></a>Remarks  
 **[編集]** コマンドおよび **[変更]** コマンドを実行した場合は、同じオプション設定に対して **[<object> をスクリプト化]** コマンドを実行した場合と異なる結果になることがあります。 **[編集]** コマンドおよび **[変更]** コマンドは、クエリ エディター セッション中に現在のデータベースでオブジェクトを変更するために設計されています。 **[<object> をスクリプト化]** コマンドは、後でオブジェクトの作成に使用できるスクリプトを生成するために設計されています。  
   
-## <a name="options"></a>[変数]  
-スクリプト オプションを指定するには、各オプションの右にあるリストから、いずれかの設定を選択します。  
+## <a name="options"></a>オプション  
+スクリプト オプションを指定するには、各オプションの右にあるリストから、いずれかの設定を選択します。
+
+> [!NOTE]
+> 一覧表示される既定の設定は、 **[データベース全体とすべてのデータベース オブジェクトのスクリプトを作成]** オプションにのみ適用されます。 **[特定のデータベース オブジェクトの選択]** オプションを使用すると、異なる場合があります。
   
 ### <a name="general-scripting-options"></a>全般スクリプト作成オプション  
 **[各ステートメントを区切る]**  
-バッチ区切り記号を使用して、個々の [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントを区切ります。 **クエリ エディター**の既定のバッチ区切り記号を変更するには、 **[ツール]**/**[オプション]**/**[クエリ実行]**/**[SQL Server]**/**[全般]**/**[バッチ区切り記号]** の順に選択します。 既定値は False です。 詳細については、「 [GO (Transact-SQL)](https://msdn.microsoft.com/b2ca6791-3a07-4209-ba8e-2248a92dd738)」を参照してください。  
+バッチ区切り記号を使用して、個々の [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントを区切ります。 **クエリ エディター**の既定のバッチ区切り記号を変更するには、 **[ツール]** / **[オプション]** / **[クエリ実行]** / **[SQL Server]** / **[全般]** / **[バッチ区切り記号]** の順に選択します。 既定値は False です。 詳細については、「 [GO (Transact-SQL)](https://msdn.microsoft.com/b2ca6791-3a07-4209-ba8e-2248a92dd738)」を参照してください。  
   
 **[説明用ヘッダーを含める]**  
-スクリプトをオブジェクトごとのセクションに分割し、説明用のコメントを追加します。 既定値は True です。 詳細については、「 [/*...*/ (コメント) (Transact-SQL)](https://msdn.microsoft.com/4d9ab1b2-4bbb-4c16-beb1-cafc1af7417c)」を参照してください。  
+スクリプトをオブジェクトごとのセクションに分割し、説明用のコメントを追加します。 既定値は True です。 詳細については、「 [/ *...* / (コメント) (Transact-SQL)](https://msdn.microsoft.com/4d9ab1b2-4bbb-4c16-beb1-cafc1af7417c)」を参照してください。  
   
 **[Include enabling vardecimal compression]\(vardecimal 圧縮の有効化を含める\)**  
 vardecimal ストレージ オプションを含めます。 既定値は False です。 詳細については、「[sp_db_vardecimal_storage_format (Transact-SQL)](https://msdn.microsoft.com/9920b2f7-b802-4003-913c-978c17ae4542)」を参照してください。  

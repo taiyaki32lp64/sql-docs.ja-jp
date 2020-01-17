@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: ''
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 7024f4214388f77edc2f97e402db8da71e9c857c
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: 4c77d87f1ffe0083662f9f4fcfe643de3359ea59
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53205262"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68012973"
 ---
 # <a name="clr-strict-security"></a>CLR の厳密なセキュリティ   
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

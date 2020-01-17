@@ -12,17 +12,16 @@ helpviewer_keywords:
 ms.assetid: d742fd30-347a-452f-b5fc-b03232360c6b
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: f24cf20be07ac4b632f4daa6f7f7e35278452f19
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 8158aed0298afe295e82a1b240a3f24ec05b1647
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47840950"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68100023"
 ---
 # <a name="script-to-grant-oracle-permissions"></a>Oracle の権限を許可するためのスクリプト
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] のレプリケーションを使用してデータをパブリッシュする Oracle データベースを構成する際には、このトピックに示すスクリプトを使用します。 このスクリプトは、インストール後に、*\<drive>*:\\\Program Files\Microsoft SQL Server\\*\<InstanceName>* \MSSQL\Install\oracleadmin.sql ディレクトリで使用することもできます。 Oracle データベースの構成の詳細については、「[Oracle パブリッシャーの構成](../../../relational-databases/replication/non-sql/configure-an-oracle-publisher.md)」を参照してください。  
+  [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] のレプリケーションを使用してデータをパブリッシュする Oracle データベースを構成する際には、このトピックに示すスクリプトを使用します。 このスクリプトは、インストール後に、 *\<drive>* :\\\Program Files\Microsoft SQL Server\\ *\<InstanceName>* \MSSQL\Install\oracleadmin.sql ディレクトリで使用することもできます。 Oracle データベースの構成の詳細については、「[Oracle パブリッシャーの構成](../../../relational-databases/replication/non-sql/configure-an-oracle-publisher.md)」を参照してください。  
   
 > [!NOTE]  
 >  このスクリプトには、ステートメント `GRANT CREATE ANY TRIGGER TO &&AdminLogin;`が含まれています。これは、トランザクション レプリケーションで使用するトリガーで必要です。 スナップショット レプリケーションしか使用しない場合は、スクリプトからこの行を削除してください。  

@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: cfe0e5dc-5be3-4222-b721-fe83665edd94
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 3df60e0708ae86cf1aa5bde48e8a734140c38789
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: f59ed0eee86f17fdda568caa5c1a1dc7252c6d9c
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53366424"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66055349"
 ---
 # <a name="ssis-package-format"></a>SSIS パッケージの形式
   最新のリリースの [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]では、形式の読み取りとパッケージの比較を容易にするために、パッケージの形式 (.dtsx file) に大幅な変更が加えられました。 変更の競合またはバイナリ形式で格納されている変更が含まれていないパッケージをより確実にマージできます。  

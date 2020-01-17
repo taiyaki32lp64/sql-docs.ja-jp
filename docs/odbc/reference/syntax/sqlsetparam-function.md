@@ -19,17 +19,16 @@ helpviewer_keywords:
 ms.assetid: 2ebdc303-3802-443a-8895-69c93dff5618
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: f216d5406a649862ff35cd64508f93b97e31b310
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b3f8a0217492cd5f2ce22cfe7d5823f2fe08caae
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47682800"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68039712"
 ---
 # <a name="sqlsetparam-function"></a>SQLSetParam 関数
 **準拠**  
- バージョンで導入されました ODBC 1.0 標準準拠: 非推奨とされます。  
+ バージョンが導入されました。ODBC 1.0 規格に準拠します。非推奨  
   
  **概要**  
  ODBC 2.0 では、ODBC 1.0 関数で**SQLSetParam**置き換わりました**SQLBindParameter**します。 詳細については、次を参照してください。 [SQLBindParameter 関数](../../../odbc/reference/syntax/sqlbindparameter-function.md)します。  

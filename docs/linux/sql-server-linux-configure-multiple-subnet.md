@@ -1,46 +1,46 @@
 ---
-title: Linux 上の複数のサブネット Always On 可用性グループおよびフェールオーバー クラスター インスタンスの構成 |Microsoft Docs
-description: ''
+title: 複数サブネットの可用性グループと FCI の構成 (Linux)
+description: 複数サブネットの Always On 可用性グループとフェールオーバー クラスター インスタンス (FCI) を SQL Server on Linux に構成する方法について説明します。
+ms.custom: seo-lt-2019
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
+ms.reviewer: vanto
 ms.date: 12/01/2017
 ms.topic: conceptual
 ms.prod: sql
-ms.custom: sql-linux
 ms.technology: linux
-ms.openlocfilehash: 4d142c1b97d6e0643a44c200db032babbef30412
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
-ms.translationtype: MT
+ms.openlocfilehash: f35f1916107e8ede0e7bf7cc3df483a0c33f3355
+ms.sourcegitcommit: 035ad9197cb9799852ed705432740ad52e0a256d
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56020553"
+ms.lasthandoff: 12/31/2019
+ms.locfileid: "75558612"
 ---
-# <a name="configure-multiple-subnet-always-on-availability-groups-and-failover-cluster-instances"></a>複数のサブネット Always On 可用性グループおよびフェールオーバー クラスター インスタンスを構成します。
+# <a name="configure-multiple-subnet-always-on-availability-groups-and-failover-cluster-instances"></a>複数サブネットの Always On 可用性グループとフェールオーバー クラスター インスタンスを構成する
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
-Always On 可用性グループ (AG で) またはフェールオーバー クラスター インスタンス (FCI) にまたがる場合は、複数のサイトの各サイトは、通常が、独自のネットワークです。 多くの場合、つまり、各サイトでは、独自の IP アドレス指定します。 たとえば、サイト A のアドレスは 192. 168.1 で開始します。*x* 192.168.2 始めるサイト B のアドレス *。x*ここで、 *x*は、サーバーに一意の IP アドレスの一部です。 ネットワーク レイヤーでルーティングを使わず、これらのサーバーは互いに通信できません。 このシナリオを処理する 2 つの方法はあります。 2 つの異なるサブネット、VLAN と呼ばれるブリッジ ネットワークをセットアップまたは、サブネット間のルーティングを構成します。
+Always On 可用性グループ (AG) またはフェールオーバー クラスター インスタンス (FCI) が複数のサイトにまたがっている場合、通常、各サイトには独自のネットワークがあります。 つまり、多くの場合、各サイトに独自の IP アドレス指定があります。 たとえば、サイト A のアドレスが 192.168.1.*x* から開始し、サイト B のアドレスが 192.168.2.*x* から開始します (*x* はサーバー固有の IP アドレスの一部)。 ネットワーク層で何らかのルーティングが行われていない場合、これらのサーバーは相互に通信できません。 このシナリオに対処する方法は 2 つあります。2 つの異なるサブネットをブリッジするネットワーク (VLAN) をセットアップするか、サブネット間のルーティングを構成します。
 
 ## <a name="vlan-based-solution"></a>VLAN ベースのソリューション
  
-**前提条件となる**:VLAN ベースのソリューションでは、各サーバー、AG または FCI に参加している必要があります (デュアル ポート NIC は、1 つの物理サーバーに障害点になります) 適切な可用性のための 2 つのネットワーク カード (Nic)、ネイティブのサブネットと 1 つ上の IP アドレスが割り当てられますことができます。VLAN です。 これは、iSCSI も、独自のネットワークを必要とするなどの他のネットワーク ニーズです。
+**前提条件**:VLAN ベースのソリューションの場合、適切な可用性を確保するには、AG または FCI に参加する各サーバーに 2 枚のネットワーク カード (NIC) が必要です (デュアル ポート NIC は物理サーバー上の単一障害点になります)。これにより、IP アドレスをネイティブ サブネットだけでなく、VLAN 上のサブネットにも割り当てられるようになります。 これに加えて、他のネットワーク ニーズもあります (同じく独自のネットワークを必要とする iSCSI など)。
 
-AG または FCI の IP アドレスの作成は、VLAN で行われます。 次の例では、VLAN は 192.168.3 のサブネットが。*x*ので、AG または FCI 用に作成された IP アドレスは 192.168.3.104 します。 何も追加は、AG または FCI に割り当てられている単一の IP アドレスがあるため、構成する必要があります。
+AG または FCI 用の IP アドレスの作成は、VLAN で実行されます。 次の例では、VLAN のサブネットは 192.168.3.*x* であるため、AG または FCI に作成される IP アドレスは 192.168.3.104 です。 1 つの IP アドレスが AG または FCI に割り当てられているため、その他の構成は必要ありません。
 
 ![](./media/sql-server-linux-configure-multiple-subnet/image1.png)
 
-## <a name="configuration-with-pacemaker"></a>Pacemaker と構成
+## <a name="configuration-with-pacemaker"></a>Pacemaker を使用した構成
 
-Windows の世界で Windows Server フェールオーバー クラスター (WSFC) はネイティブ複数のサブネットをサポートし、IP アドレスで、OR 依存関係を使用して複数の IP アドレスを処理します。 Linux では、OR 依存関係はありませんが、次に示すように、Pacemaker でネイティブに適切なマルチ サブネットを実現する方法があります。 これは、単にリソースを変更する通常の Pacemaker のコマンドラインを使用して行うことはできません。 クラスター情報ベース (CIB) を変更する必要があります。 CIB は、Pacemaker 構成 XML ファイルです。
+Windows の世界では、Windows Server フェールオーバー クラスター (WSFC) が複数のサブネットをネイティブでサポートし、IP アドレスに対して OR 依存関係を使用して複数の IP アドレスを処理します。 Linux には OR 依存関係はありませんが、次に示すように、適切な複数のサブネットを Pacemaker でネイティブに実現する方法があります。 通常の Pacemaker コマンドラインを使用してリソースを変更しただけでは、これを行うことはできません。 クラスター情報ベース (CIB) を変更する必要があります。 CIB は、Pacemaker 構成の XML ファイルです。
 
 ![](./media/sql-server-linux-configure-multiple-subnet/image2.png)
 
-### <a name="update-the-cib"></a>CIB を更新します。
+### <a name="update-the-cib"></a>CIB を更新する
 
 1.  CIB をエクスポートします。
 
-    **Red Hat Enterprise Linux (RHEL) および Ubuntu**
+    **Red Hat Enterprise Linux (RHEL) と Ubuntu**
 
     ```bash
     sudo pcs cluster cib <filename>
@@ -52,9 +52,9 @@ Windows の世界で Windows Server フェールオーバー クラスター (WS
     sudo cibadmin -Q > <filename>
     ```
 
-    場所*filename* CIB を呼び出そうとする名前を指定します。
+    ここで、*filename* は CIB に付ける名前です。
 
-2.  生成されたファイルを編集します。 探して、`<resources>`セクション。 AG または FCI に対して作成されたさまざまなリソースが表示されます。 関連付けられた IP アドレスを見つけます。 追加、`<instance attributes>`上または既存のものでは、下の 2 つ目の IP アドレスの情報を使用する前にセクション`<operations>`します。 次の構文に似ています。
+2.  生成されたファイルを編集します。 `<resources>` セクションを探します。 AG または FCI に対して作成されたさまざまなリソースが表示されます。 IP アドレスに関連付けられたものを探します。 2 番目の IP アドレスの情報を含む `<instance attributes>` セクションを、既存のセクションの前後いずれか、ただし `<operations>` の前に追加します。 構文は次のようになります。
 
     ```xml
     <instance attributes id="<NameForAttribute>" score="<Score>">
@@ -66,9 +66,9 @@ Windows の世界で Windows Server フェールオーバー クラスター (WS
     </instance attributes>
     ```
     
-    場所*NameForAttribute* 、この属性の一意の名前は、*スコア*プライマリ サブネットのより大きい必要があります、属性に割り当てられた番号*RuleName*、ルールの名前を指定*ExpressionName* 、式の名前は、 *NodeNameInSubnet2* 、他のサブネット内のノードの名前を指定します*NameForSecondIP* 2 番目の IP アドレスに関連付けられた名前を指定します*IPAddress* 2 番目のサブネットの IP アドレスは、 *NameForSecondIPNetmask*ネットマスクに関連付けられている名前を指定します、*ネットマスク*が 2 番目のサブネットのネットマスク。
+    ここで、*NameForAttribute* はこの属性の一意名、*Score* は属性に割り当てられる数 (プライマリ サブネットの数よりも大きくする必要がある)、*RuleName* はルールの名前、*ExpressionName* は式の名前、*NodeNameInSubnet2* は他のサブネットのノードの名前、*NameForSecondIP* は 2 番目の IP アドレスに関連付けられる名前、*IPAddress* は 2 番目のサブネットの IP アドレス、*NameForSecondIPNetmask* はネットマスクに関連付けられた名前、*Netmask* は 2 番目のサブネットのネットマスクです。
     
-    例を次に示します。
+    次に例を示します。
     
     ```xml
     <instance attributes id="Node3-2nd-IP" score="2">
@@ -80,7 +80,7 @@ Windows の世界で Windows Server フェールオーバー クラスター (WS
     </instance attributes>
     ```
 
-3.  変更された CIB をインポートし、Pacemaker を再構成します。
+3.  変更した CIB をインポートし、Pacemaker を再構成します。
 
     **RHEL/Ubuntu**
     
@@ -94,11 +94,11 @@ Windows の世界で Windows Server フェールオーバー クラスター (WS
     sudo cibadmin -R -x <filename>
     ```
 
-    場所*filename* CIB ファイルに変更された IP アドレス情報の名前を指定します。
+    ここで、*filename* は 変更した IP アドレス情報を含む CIB ファイルの名前です。
 
-### <a name="check-and-verify-failover"></a>フェールオーバーを確認し、
+### <a name="check-and-verify-failover"></a>フェールオーバーを確認して検証する
 
-1.  CIB が更新された構成と正常に適用されると、Pacemaker で IP アドレス リソースに関連付けられた DNS 名に対して ping を実行します。 現在、AG または FCI をホストするサブネットに関連付けられている IP アドレスを反映したものにする必要があります。
-2.  AG または FCI を他のサブネットに失敗します。
-3.  AG または FCI が完全にオンライン、IP アドレスに関連付けられた DNS 名に対して ping を実行します。 2 つ目のサブネットの IP アドレスを反映したものにする必要があります。
-4.  必要な場合、AG または FCI を元のサブネットに失敗します。
+1.  CIB が更新済みの構成に正常に適用されたら、Pacemaker で IP アドレス リソースに関連付けられている DNS 名に対して ping を実行します。 これは、現在 AG または FCI をホストしているサブネットに関連付けられた IP アドレスを反映する必要があります。
+2.  AG または FCI を他のサブネットにフェールオーバーします。
+3.  AG または FCI が完全にオンラインになったら、IP アドレスに関連付けられている DNS 名に対して ping を実行します。 これは、2 番目のサブネットの IP アドレスを反映する必要があります。
+4.  必要であれば、AG または FCI を元のサブネットにフェールオーバーします。

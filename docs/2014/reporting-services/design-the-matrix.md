@@ -4,28 +4,27 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 f1_keywords:
 - sql12.rtp.rptwizard.designmatrix.f1
 ms.assetid: ecd8cae0-3f19-4f3e-90d9-4ddfe1d0eec8
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 82e6ab018b367459c9f75a54e863a49243f36acd
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: 1572e9fba00672b32a104cf8b8c9f5cfab66d97a
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56297820"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66109296"
 ---
 # <a name="design-the-matrix"></a>マトリックスのデザイン
   レポート ウィザードのこのページでは、レポートのフィールドを選択します。  
   
 ## <a name="options"></a>および  
  **使用可能なフィールド**  
- マトリックスの上のページに、行グループ、列グループ、または詳細として表示されるフィールドを選択します。 **[フィールド]** から **[ページ]**、 **[列]**、 **[行]**、または **[詳細]** にフィールドを移動するには、フィールドを選択してから、 **[ページ]**、 **[列]**、 **[行]**、または **[詳細]** ボタンをクリックします。 または、適切なボックスにフィールドをドラッグします。  
+ マトリックスの上のページに、行グループ、列グループ、または詳細として表示されるフィールドを選択します。 **[フィールド]** から **[ページ]** 、 **[列]** 、 **[行]** 、または **[詳細]** にフィールドを移動するには、フィールドを選択してから、 **[ページ]** 、 **[列]** 、 **[行]** 、または **[詳細]** ボタンをクリックします。 または、適切なボックスにフィールドをドラッグします。  
   
  **表示されるフィールド**  
  ページ、グループ、または詳細に割り当てられたフィールドを表示します。 一覧からフィールドを削除するには、 **[削除]** をクリックします。  

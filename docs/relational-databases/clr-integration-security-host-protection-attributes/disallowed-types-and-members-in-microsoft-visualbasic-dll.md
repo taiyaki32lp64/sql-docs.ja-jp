@@ -1,6 +1,7 @@
 ---
-title: Microsoft.VisualBasic.dll の型およびメンバーが許可されていません |Microsoft Docs
-ms.custom: ''
+title: Microsoft... .dll の型とメンバー
+description: ホスト保護属性 (HPA) の値が許可されていない、Microsoft のすべての .dll アセンブリのメンバーおよび型を一覧表示します。
+ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.reviewer: ''
@@ -12,20 +13,19 @@ helpviewer_keywords:
 ms.assetid: 45f55646-4bf1-4493-9f72-d1363c9a9ac6
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 76f71a4920e2980161032c519eb1fb3dacd12da3
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b717c350bae35606dcf0aae09610c085ccff1767
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47844420"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75240157"
 ---
 # <a name="disallowed-types-and-members-in-microsoftvisualbasicdll"></a>Microsoft.VisualBasic.dll の許可されない型およびメンバー
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 共通言語統合 (CLR) のプログラミングには、型またはメンバーを持つの使用が許可されない、 **HostProtectionAttribute**を指定する、 **System.Security.Permissions.HostProtectionResource**列挙体の値を持つ**ExternalProcessMgmt**、 **ExternalThreading**、 **MayLeakOnAbort**、 **SecurityInfrastructure**、 **SelfAffectingProcessMgmnt**、 **SelfAffectingThreading**、 **SharedState**、**同期**、または**UI**します。 次の表は、メンバーよぶ型の**Microsoft.VisualBasic.dll**アセンブリがホスト保護属性 (HPA) の値は許可されません。  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]共通言語統合 (CLR) プログラミングでは、 **Hostprotectionattribute**が指定されている型またはメンバーの使用を禁止しています。これは**externalprocessmgmt**、 **externalスレッディング**、 **MayLeakOnAbort**、 **securityinfrastructure**、 **SelfAffectingProcessMgmnt**、 **SelfAffectingThreading**、 **Sharedstate**、 **Synchronization**、または**UI**の値を持つ、 **hostprotectionattribute**列挙体を指定します。 次の表は、ホスト保護属性 (HPA) の値が許可されていない、 **Microsoft**のアセンブリのメンバーおよび型を示しています。  
   
 > [!NOTE]  
->  この一覧は、サポートされているアセンブリから作成されたものです。 詳細については、次を参照してください。[サポートされている .NET Framework ライブラリ](../../relational-databases/clr-integration/database-objects/supported-net-framework-libraries.md)します。  
+>  この一覧は、サポートされているアセンブリから作成されたものです。 詳細については、「[サポートされている .NET Framework ライブラリ](../../relational-databases/clr-integration/database-objects/supported-net-framework-libraries.md)」を参照してください。  
   
 |**型またはメンバー**|**HPA 値**|  
 |------------------------|------------------------|  
@@ -65,14 +65,14 @@ ms.locfileid: "47844420"
 |Microsoft.VisualBasic.Interaction.MsgBox()|UI|  
 |Microsoft.VisualBasic.Logging.AspLog|ExternalProcessMgmt|  
 |Microsoft.VisualBasic.Logging.FileLogTraceListener..ctor()|ExternalProcessMgmt|  
-|Microsoft.VisualBasic.Logging.FileLogTraceListener.Close()|Synchronization|  
-|Microsoft.VisualBasic.Logging.FileLogTraceListener.Dispose()|Synchronization|  
-|Microsoft.VisualBasic.Logging.FileLogTraceListener.Flush()|Synchronization|  
-|Microsoft.VisualBasic.Logging.FileLogTraceListener.GetSupportedAttributes()|Synchronization|  
-|Microsoft.VisualBasic.Logging.FileLogTraceListener.TraceData()|Synchronization|  
-|Microsoft.VisualBasic.Logging.FileLogTraceListener.TraceEvent()|Synchronization|  
-|Microsoft.VisualBasic.Logging.FileLogTraceListener.Write()|Synchronization|  
-|Microsoft.VisualBasic.Logging.FileLogTraceListener.WriteLine()|Synchronization|  
+|Microsoft.VisualBasic.Logging.FileLogTraceListener.Close()|同期|  
+|Microsoft.VisualBasic.Logging.FileLogTraceListener.Dispose()|同期|  
+|Microsoft.VisualBasic.Logging.FileLogTraceListener.Flush()|同期|  
+|Microsoft.VisualBasic.Logging.FileLogTraceListener.GetSupportedAttributes()|同期|  
+|Microsoft.VisualBasic.Logging.FileLogTraceListener.TraceData()|同期|  
+|Microsoft.VisualBasic.Logging.FileLogTraceListener.TraceEvent()|同期|  
+|Microsoft.VisualBasic.Logging.FileLogTraceListener.Write()|同期|  
+|Microsoft.VisualBasic.Logging.FileLogTraceListener.WriteLine()|同期|  
 |Microsoft.VisualBasic.Logging.Log|ExternalProcessMgmt|  
 |Microsoft.VisualBasic.MyServices.ClipboardProxy|ExternalProcessMgmt|  
 |Microsoft.VisualBasic.MyServices.FileSystemProxy|ExternalProcessMgmt|  
@@ -81,9 +81,9 @@ ms.locfileid: "47844420"
   
 ## <a name="see-also"></a>参照  
  [ホスト保護属性と CLR 統合プログラミング](../../relational-databases/clr-integration-security-host-protection-attributes/host-protection-attributes-and-clr-integration-programming.md)   
- [Mscorlib.dll の許可されない型およびメンバー](../../relational-databases/clr-integration-security-host-protection-attributes/disallowed-types-and-members-in-mscorlib-dll.md)   
- [System.dll の許可されない型およびメンバー](../../relational-databases/clr-integration-security-host-protection-attributes/disallowed-types-and-members-in-system-dll.md)   
- [System.Data.dll の許可されない型およびメンバー](../../relational-databases/clr-integration-security-host-protection-attributes/disallowed-types-and-members-in-system-data-dll.md)   
+ [Mscorlib.dll に許可されていない型とメンバー](../../relational-databases/clr-integration-security-host-protection-attributes/disallowed-types-and-members-in-mscorlib-dll.md)   
+ [System .dll で許可されていない型とメンバー](../../relational-databases/clr-integration-security-host-protection-attributes/disallowed-types-and-members-in-system-dll.md)   
+ [System.object で許可されていない型とメンバー](../../relational-databases/clr-integration-security-host-protection-attributes/disallowed-types-and-members-in-system-data-dll.md)   
  [System.Core.dll の許可されない型およびメンバー](../../relational-databases/clr-integration-security-host-protection-attributes/disallowed-types-and-members-in-system-core-dll.md)  
   
   

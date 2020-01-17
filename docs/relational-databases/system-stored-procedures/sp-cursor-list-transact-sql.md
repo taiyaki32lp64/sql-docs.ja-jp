@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 7187cfbe-d4d9-4cfa-a3bb-96a544c7c883
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 8c6cef14177e871f35ccd5c84af4a2b28e35aff5
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 5adcaab96bfe9af3945b479e4bff5180ca8140d8
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47757820"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68108579"
 ---
 # <a name="spcursorlist-transact-sql"></a>sp_cursor_list (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -42,10 +41,10 @@ sp_cursor_list [ @cursor_return = ] cursor_variable_name OUTPUT
 ```  
   
 ## <a name="arguments"></a>引数  
- [ @cursor_return=] *cursor_variable_name*出力  
+ [ @cursor_return= ] *cursor_variable_name*OUTPUT  
  宣言されているカーソル変数の名前を指定します。 *cursor_variable_name*は**カーソル**、既定値はありません。 カーソルはスクロール可能、動的、読み取り専用カーソルのいずれかです。  
   
- [ @cursor_scope=] *cursor_scope*  
+ [ @cursor_scope= ] *cursor_scope*  
  レポートするカーソルのレベルを指定します。 *cursor_scope*は**int**, で、既定値はありませんはこれらの値のいずれかを指定します。  
   
 |値|説明|  
@@ -76,7 +75,7 @@ sp_cursor_list [ @cursor_return = ] cursor_variable_name OUTPUT
 |fetch_status|**smallint**|このカーソル上での最後のフェッチの状態です。 詳細については、次を参照してください[@@FETCH_STATUS](../../t-sql/functions/fetch-status-transact-sql.md):。<br /><br /> 0 = フェッチが成功しました。<br /><br /> -1 = フェッチが失敗したか、またはカーソルの境界を越えています。<br /><br /> -2 = 要求された行がありません。<br /><br /> -9 = カーソル上でフェッチは行われていません。|  
 |column_count|**smallint**|カーソル結果セットの列数です。|  
 |row_count|**smallint**|カーソルで実行された最後の操作で処理された行数です。 詳細については、次を参照してください。 [@@ROWCOUNT](../../t-sql/functions/rowcount-transact-sql.md)します。|  
-|last_operation|**smallint**|カーソル上で実行された最後の操作:<br /><br /> 0 = カーソル上で操作は実行されていません。<br /><br /> 1 = OPEN <br /><br /> 2 = FETCH <br /><br /> 3 = 挿入<br /><br /> 4 = UPDATE <br /><br /> 5 = DELETE<br /><br /> 6 = CLOSE <br /><br /> 7 = DEALLOCATE|  
+|last_operation|**smallint**|カーソル上で実行された最後の操作:<br /><br /> 0 = カーソル上で操作は実行されていません。<br /><br /> 1 = OPEN<br /><br /> 2 = FETCH<br /><br /> 3 = 挿入<br /><br /> 4 = UPDATE<br /><br /> 5 = DELETE<br /><br /> 6 = CLOSE<br /><br /> 7 = DEALLOCATE|  
 |cursor_handle|**int**|サーバーのスコープ内でカーソルを識別する一意の値です。|  
   
 ## <a name="remarks"></a>コメント  

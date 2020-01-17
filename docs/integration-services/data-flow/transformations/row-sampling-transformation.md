@@ -20,17 +20,20 @@ helpviewer_keywords:
 - packages [Integration Services], samples
 - datasets [Integration Services], sample
 ms.assetid: b6caafd3-30b2-4368-82af-a44611d4cd39
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: 60c2615cf141f145f2353df5309105b0ed535fc1
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 432c461f90f89eb625e923af342f7c96f323709c
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51641269"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71297828"
 ---
 # <a name="row-sampling-transformation"></a>行サンプリング変換
+
+[!INCLUDE[ssis-appliesto](../../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   行サンプリング変換を使用すると、入力データセットからランダムに選択されたサブセットを取得できます。 出力サンプルの正確なサイズを指定したり、乱数ジェネレーターのシード値を指定できます。  
   
  ランダム サンプリング用のアプリケーションには、多くの種類があります。 たとえば、ある会社がくじ引きを行って、ランダムに選択された 50 人の社員を当選者とする場合、社員データベースに対して行サンプリング変換を行い、正確な数の当選者を生成できます。  
@@ -61,7 +64,7 @@ ms.locfileid: "51641269"
 ## <a name="row-sampling-transformation-editor-sampling-page"></a>行サンプリング変換エディター ([サンプリング] ページ)
   **[行サンプリング変換エディター]** ダイアログ ボックスを使用すると、指定された行数を使用して、入力の一部をサンプルに分割できます。 この変換は、入力を 2 つの別個の出力に分割します。  
   
-### <a name="options"></a>[変数]  
+### <a name="options"></a>オプション  
  **[行数]**  
  サンプルとして使用する入力における行数を指定します。  
   

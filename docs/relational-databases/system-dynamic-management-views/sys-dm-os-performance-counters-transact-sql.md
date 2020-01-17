@@ -19,14 +19,13 @@ helpviewer_keywords:
 ms.assetid: a1c3e892-cd48-40d4-b6be-2a9246e8fbff
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 002003864c61dae1b55f7fdfab10ff18ec97f68f
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 5c7b4d78f73af003e93bc662f10f1f95acda2b6a
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51669681"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68265711"
 ---
 # <a name="sysdmosperformancecounters-transact-sql"></a>sys.dm_os_performance_counters (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -38,11 +37,11 @@ ms.locfileid: "51669681"
   
 |列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
-|**object_name**|**nchar(128)**|カウンターが属するカテゴリ。|  
+|**object_name**|**nchar(128)**|このカウンターが属するカテゴリ。|  
 |**counter_name**|**nchar(128)**|カウンターの名前。 これでカウンターの一覧から選択するトピックの名前は、カウンターの詳細を取得する[SQL Server オブジェクトを使用して](../../relational-databases/performance-monitor/use-sql-server-objects.md)します。 |  
-|**instance_name**|**nchar(128)**|カウンターの特定インスタンスの名前。 多くの場合、データベース名が格納されます。|  
-|**cntr_value**|**bigint**|カウンターの現在の値。<br /><br /> **注:** 1 秒あたりのカウンターでは、この値は累積されます。 レート値は、連続しない間隔で値をサンプリングして算出する必要があります。 2 つの連続するサンプル値の間隔は、使用される間隔のレートと同じです。|  
-|**cntr_type**|**int**|Windows パフォーマンス アーキテクチャによって定義されるカウンターの種類。 参照してください[WMI パフォーマンス カウンターの種類](https://msdn2.microsoft.com/library/aa394569.aspx)MSDN またはパフォーマンス カウンターの種類の詳細については、Windows Server のドキュメント。|  
+|**instance_name**|**nchar(128)**|カウンターの特定のインスタンスの名前です。 多くの場合、データベース名が含まれています。|  
+|**cntr_value**|**bigint**|カウンターの現在の値。<br /><br /> **注:** 1 秒あたりのカウンターでは、この値は累積的なです。 レートの値は、連続しない間隔で値をサンプリングして算出する必要があります。 2 つの連続するサンプル値の違いは、使用される時間間隔のレートと同じです。|  
+|**cntr_type**|**int**|Windows パフォーマンス アーキテクチャによって定義されているカウンターのタイプします。 参照してください[WMI パフォーマンス カウンターの種類](https://docs.microsoft.com/windows/desktop/WmiSdk/wmi-performance-counter-types)Docs 上でパフォーマンス カウンターの種類の詳細については、Windows Server のドキュメント。|  
 |**pdw_node_id**|**int**|**適用対象**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]、 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> この配布であるノードの識別子。|  
   
 ## <a name="remarks"></a>コメント  
@@ -52,15 +51,15 @@ ms.locfileid: "51669681"
 SELECT COUNT(*) FROM sys.dm_os_performance_counters;  
 ```  
   
- 戻り値が 0 行の場合、パフォーマンス カウンターが無効であることを意味します。 その場合は、セットアップ ログを参照して、エラー 3409 "このインスタンスの sqlctr.ini を再インストールし、インスタンス ログイン アカウントに適切なレジストリ権限が許可されていることを確認してください" を探す必要があります。  これは、パフォーマンス カウンターが無効であったことを示します。 3409 エラーの直前に示されるエラーは、パフォーマンス カウンターの有効化に失敗した根本の原因を示しています。 セットアップ ログ ファイルの詳細については、次を参照してください。[ビューと読み取り SQL Server セットアップ ログ ファイル](../../database-engine/install-windows/view-and-read-sql-server-setup-log-files.md)します。  
+ 戻り値が 0 行の場合、パフォーマンス カウンターが無効であることを意味します。 その場合は、セットアップ ログを参照して、エラー 3409 "このインスタンスの sqlctr.ini を再インストールし、インスタンス ログイン アカウントに適切なレジストリ権限が許可されていることを確認してください" を探す必要があります。  これは、パフォーマンス カウンターが無効であったことを示します。 3409 エラーの直前のエラーは、パフォーマンス カウンターを有効にする障害の根本原因を示す必要があります。 セットアップ ログ ファイルの詳細については、次を参照してください。[ビューと読み取り SQL Server セットアップ ログ ファイル](../../database-engine/install-windows/view-and-read-sql-server-setup-log-files.md)します。  
   
 ## <a name="permission"></a>権限
 
 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]、必要があります`VIEW SERVER STATE`権限。   
-[!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]が必要です、`VIEW DATABASE STATE`データベースの権限。   
+[!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] Premium レベルでは、必要があります、`VIEW DATABASE STATE`データベースの権限。 [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] Standard および Basic 階層は、必要があります、**サーバー管理者**または**Azure Active Directory 管理者**アカウント。   
  
 ## <a name="examples"></a>使用例  
- 次の例では、パフォーマンス カウンターの値を返します。  
+ 次の例は、パフォーマンス カウンターの値を返します。  
   
 ```  
 SELECT object_name, counter_name, instance_name, cntr_value, cntr_type  

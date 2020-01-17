@@ -1,5 +1,5 @@
 ---
-title: 単項演算子 |Microsoft ドキュメント
+title: 単項演算子 |Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -8,13 +8,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-manager: kfile
-ms.openlocfilehash: 6704d9a2fad8b1b19d7757c0e6de40bfccdcc1f8
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.openlocfilehash: 9ec9ac3eef28c4deae08d577487599575852c132
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34743321"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68893554"
 ---
 # <a name="unary-operators"></a>単項演算子
 
@@ -28,7 +27,7 @@ ms.locfileid: "34743321"
 |[- (負号)](../mdx/negative-mdx.md)|数値式の負の値を返します。|  
 |[+ (正号)](../mdx/positive-mdx.md)|数値式の正の値を返します。|  
   
- 次の例では、単項演算子を使用してメジャーの負の値を返します。  
+ 次の例は、単項演算子を使用してメジャーの負の値を返す方法を示しています。  
   
 ```  
 WITH   
@@ -41,9 +40,9 @@ FROM [Adventure Works]
 WHERE [Product].[Category].[Bikes]  
 ```  
   
- によって実行される集計操作を決定するさらに、MDX が特別な単項演算子を使用して、 [RollupChildren](../mdx/rollupchildren-mdx.md)関数。 これらの特別な単項演算子の詳細については、次を参照してください。[ディメンションへのカスタム集計の追加](../analysis-services/multidimensional-models/bi-wizard-add-a-custom-aggregation-to-a-dimension.md)です。  
+ さらに、MDX では、特別な単項演算子を使用して、 [Rollupchildren](../mdx/rollupchildren-mdx.md)関数によって実行される集計操作を決定します。 これらの特別な単項演算子の詳細については、「[ディメンションへのカスタム集計の追加](https://docs.microsoft.com/analysis-services/multidimensional-models/bi-wizard-add-a-custom-aggregation-to-a-dimension)」を参照してください。  
   
-## <a name="see-also"></a>参照  
- [演算子&#40;MDX 構文&#41;](../mdx/operators-mdx-syntax.md)  
+## <a name="see-also"></a>関連項目  
+ [Operators &#40;MDX 構文&#41;](../mdx/operators-mdx-syntax.md)  
   
   

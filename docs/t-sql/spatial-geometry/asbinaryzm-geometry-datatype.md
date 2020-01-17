@@ -12,15 +12,14 @@ dev_langs:
 helpviewer_keywords:
 - AsBinaryZM geometry
 ms.assetid: 5eae2872-adca-4b8f-8b04-4ee91ced98f1
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: 94d1ee63cf5150dc38351c80543173870018d6d2
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: MladjoA
+ms.author: mlandzic
+ms.openlocfilehash: 83d300b006055a83e823ff509d18ce40e63708c0
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47855800"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68120650"
 ---
 # <a name="asbinaryzm-geometry-datatype"></a>AsBinaryZM (geometry データ型)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
@@ -37,7 +36,7 @@ ms.locfileid: "47855800"
 ## <a name="return-types"></a>戻り値の型  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 戻り値の型: **varbinary(max)**  
   
- CLR 戻り値の型: **SqlBytes**  
+ CLR の戻り値の型:**SqlBytes**  
   
 ## <a name="remarks"></a>Remarks  
   

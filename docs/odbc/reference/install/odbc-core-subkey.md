@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 055b31fc-f96c-450b-a596-d4570079fbf2
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 5c95c4e28a5f32131307daeaa61e214af887b577
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 98c9380083eb5a0ad796f436af271564676b757d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47848140"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68094009"
 ---
 # <a name="odbc-core-subkey"></a>ODBC Core サブキー
 ODBC Core サブキーの値では、コア コンポーネント (ドライバー マネージャー、カーソル ライブラリ、インストーラー DLL、およびなど) の使用率カウントを示します。 この値の形式は、次の表に示します。  

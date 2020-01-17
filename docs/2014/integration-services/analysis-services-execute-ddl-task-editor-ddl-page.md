@@ -4,23 +4,22 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.asexecuteddltask.ddl.f1
 helpviewer_keywords:
 - Analysis Services Execute DDL Task Editor
 ms.assetid: f21bf8d0-ec5f-4c18-9de0-8875addb927b
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: a4ebac7cac4a62dde5c89aa3e37146c78eb79d19
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 2b57ad76be3811352bbfb8774fb56c748efa1ac8
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52535433"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66061604"
 ---
 # <a name="analysis-services-execute-ddl-task-editor-ddl-page"></a>[Analysis Services DDL 実行タスク エディター] ([DDL] ページ)
   **[Analysis Services DDL 実行タスク エディター]** ダイアログ ボックスの **[DDL]** ページを使用すると、[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] プロジェクトまたは [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] データベースへの接続を指定でき、データ定義言語 (DDL) ステートメントのソースについての情報を表示できます。  
@@ -28,10 +27,10 @@ ms.locfileid: "52535433"
  このタスクの詳細については、「 [Analysis Services Execute DDL Task](control-flow/analysis-services-execute-ddl-task.md)」(Analysis Services DDL 実行タスク) を参照してください。  
   
 ## <a name="static-options"></a>静的オプション  
- **[接続]**  
- [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] プロジェクトまたは [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 接続マネージャーを一覧で選択するか、\<**[新しい接続...]**> をクリックして **[Analysis Services 接続マネージャーの追加]** ダイアログ ボックスを使用して新しい接続を作成します。  
+ **Connection**  
+ [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] プロジェクトまたは [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 接続マネージャーを一覧で選択するか、\< **[新しい接続...]** > をクリックして **[Analysis Services 接続マネージャーの追加]** ダイアログ ボックスを使用して新しい接続を作成します。  
   
- **関連項目:**[[Analysis Services 接続マネージャー] ダイアログ ボックスの UI リファレンス追加](connection-manager/add-analysis-services-connection-manager-dialog-box-ui-reference.md)、 [Analysis Services 接続マネージャー](connection-manager/analysis-services-connection-manager.md)  
+ **関連トピック:** [[Analysis Services 接続マネージャーの追加] ダイアログ ボックスの UI リファレンス](connection-manager/add-analysis-services-connection-manager-dialog-box-ui-reference.md)、[Analysis Services 接続マネージャー](connection-manager/analysis-services-connection-manager.md)  
   
  **[SourceType]**  
  DDL ステートメントのソースの種類を指定します。 このプロパティには、次の表に示すオプションがあります。  
@@ -50,15 +49,15 @@ ms.locfileid: "52535433"
   
 ### <a name="sourcetype--file-connection"></a>[SourceType] = [ファイル接続]  
  **Source**  
- 一覧でファイル接続を選択するか、\<**[新しい接続...]**> をクリックし、**[ファイル接続マネージャー]** ダイアログ ボックスを使用して新しい接続を作成します。  
+ 一覧でファイル接続を選択するか、\< **[新しい接続...]** > をクリックし、 **[ファイル接続マネージャー]** ダイアログ ボックスを使用して新しい接続を作成します。  
   
- **関連項目:**[ファイル接続マネージャー](connection-manager/file-connection-manager.md)  
+ **関連トピック:** [ファイル接続マネージャー](connection-manager/file-connection-manager.md)  
   
 ### <a name="sourcetype--variable"></a>[SourceType] = [変数]  
  **Source**  
- 一覧で変数を選択するか、\<**[新しい変数...]**> をクリックし、**[変数の追加]** ダイアログ ボックスを使用して新しい接続を作成します。  
+ 一覧で変数を選択するか、\< **[新しい変数...]** > をクリックし、 **[変数の追加]** ダイアログ ボックスを使用して新しい接続を作成します。  
   
- **関連項目:**[Integration Services &#40;SSIS&#41; の変数](integration-services-ssis-variables.md)  
+ **関連トピック:** [Integration Services &#40;SSIS&#41; の変数](integration-services-ssis-variables.md)  
   
 ## <a name="see-also"></a>参照  
  [Integration Services のエラーおよびメッセージのリファレンス](../../2014/integration-services/integration-services-error-and-message-reference.md)   

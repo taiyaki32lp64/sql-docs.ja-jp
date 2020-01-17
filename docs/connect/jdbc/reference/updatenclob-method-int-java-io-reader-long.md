@@ -1,5 +1,5 @@
 ---
-title: updateNClob (int, java.io.Reader, long) メソッド |Microsoft Docs
+title: updateNClob メソッド (int, java. io. Reader, long) |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 2bdbb539-0cb9-4047-98e3-7d6906af68f8
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 5f92c3dff2a80d312de89b28614370a8f549e96c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 93b6fca31afd24a8992e442096117d9479b52b48
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47851680"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67998645"
 ---
 # <a name="updatenclob-method-int-javaioreader-long"></a>updateNClob (int, java.io.Reader, long) メソッド
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -39,7 +38,7 @@ public void updateNClob(int columnIndex,
   
  *reader*  
   
- リーダー オブジェクト。  
+ リーダーオブジェクト。  
   
  *length*  
   
@@ -49,9 +48,9 @@ public void updateNClob(int columnIndex,
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- この updateNClob メソッドは、java.sql.ResultSet インターフェイスの updateNClob メソッドによって指定されます。  
+ この updateNClob メソッドは、java.sql.ResultSet インターフェイスの updateNClob メソッドで規定されています。  
   
- このメソッドでのみサポートされます**nvarchar (max)**、 **ntext**、および**xml**列。 このメソッドを他のデータ型で使用すると、例外がスローされます。  
+ このメソッドは、 **nvarchar (max)** 、 **ntext**、および**xml**列でのみサポートされています。 このメソッドを他のデータ型で使用すると、例外がスローされます。  
   
 ## <a name="see-also"></a>参照  
  [updateNClob メソッド &#40;SQLServerResultSet&#41;](../../../connect/jdbc/reference/updatenclob-method-sqlserverresultset.md)   

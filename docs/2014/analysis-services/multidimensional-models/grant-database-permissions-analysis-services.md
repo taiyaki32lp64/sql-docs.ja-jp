@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - permissions [Analysis Services], full control
@@ -14,17 +13,17 @@ ms.assetid: be7e5f64-af43-47d6-84a5-c5c1c277d644
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 6bac9958c7b906a52b5b0d9d28a37c31d280b836
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 335fe6deeb3d89483f5f5adb040b0788891053cd
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48149012"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66074947"
 ---
 # <a name="grant-database-permissions-analysis-services"></a>データベース権限の付与 (Analysis Services)
   リレーショナル データベースのバックグラウンドを持つ方が Analysis Services データベース管理を始める場合に、まず理解する必要があることは、データ アクセスの観点で、データベースは Analysis Services の主要なセキュリティ保護可能なオブジェクトではないということです。  
   
- Analysis Services の主要なクエリ構造はキューブ (または表形式モデル) であり、それらの特定のオブジェクトにユーザー権限が設定されます。 リレーショナル データベース エンジンではデータベース ログインおよびユーザー権限 (多くの場合 `db_datareader`) がデータベース自体に対して設定されるのとは対照的に、Analysis Services データベースは大部分がデータ モデルの主要なクエリ オブジェクトのコンテナーとなります。 当面の目的がキューブまたは表形式モデルに対するデータ アクセスを有効にすることである場合、ここではデータベース権限をバイパスし、すぐに次のトピックに進むことができます: [キューブ権限またはモデル権限の付与 &#40;Analysis Services&#41;](grant-cube-or-model-permissions-analysis-services.md)。  
+ Analysis Services の主要なクエリ構造はキューブ (または表形式モデル) であり、それらの特定のオブジェクトにユーザー権限が設定されます。 リレーショナル データベース エンジンではデータベース ログインおよびユーザー権限 (多くの場合 `db_datareader`) がデータベース自体に対して設定されるのとは対照的に、Analysis Services データベースは大部分がデータ モデルの主要なクエリ オブジェクトのコンテナーとなります。 キューブまたは表形式モデルに対するデータ アクセスを有効にすることがある場合は、ここでは、データベースの権限をバイパスし、このトピックに直接移動します。[キューブまたはモデル アクセス許可を付与&#40;Analysis Services&#41;](grant-cube-or-model-permissions-analysis-services.md)します。  
   
  Analysis Services のデータベース権限によって、管理機能が使用できるようになります。フル コントロール データベース権限と概要は同じですが、処理操作を委任する場合の粒度が高くなるという特性があります。 Analysis Services データベースの権限レベルは、次の図と説明に示すように、 **[ロールの作成]** ダイアログ ボックスの **[全般]** ペインに指定されています。  
   
@@ -39,9 +38,9 @@ ms.locfileid: "48149012"
 > [!NOTE]  
 >  サーバー管理者 (サーバー管理者ロールのメンバー) も、サーバー上のすべてのデータベースに対して、暗黙的にフル コントロールがあります。  
   
- `Process Database` それぞれがこのアクセス許可は、データベース レベルで処理を委任するために使用します。 管理者は、別のユーザーまたはサービスにデータベース内の任意のオブジェクトに対する処理操作の呼び出しを許可するロールを作成して、このタスクの負担を軽減できます。 また、特定のオブジェクトに対する処理を可能にするロールも作成できます。 詳細については、「[権限の付与 &#40;Analysis Services&#41;](grant-process-permissions-analysis-services.md)」を参照してください。  
+ `Process Database` それぞれがこのアクセス許可は、データベース レベルで処理を委任するために使用します。 管理者は、別のユーザーまたはサービスにデータベース内の任意のオブジェクトに対する処理操作の呼び出しを許可するロールを作成して、このタスクの負担を軽減できます。 また、特定のオブジェクトに対する処理を可能にするロールも作成できます。 詳細については、「 [処理権限の付与 &#40;Analysis Services&#41;](grant-process-permissions-analysis-services.md) 」を参照してください。  
   
- `Read Definition` このアクセス許可には、オブジェクトのメタデータを読み取る権限が付与されます。 それぞれ-関連付けられているデータを表示する機能。 通常、この権限は専用の処理用に作成されたロールで使用され、[!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] や [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] などのツールを使用してデータベースを対話的に処理できるようにします。 `Read Definition`がない場合、`Process Database`権限はスクリプト化されたシナリオでのみ有効になります。 持つロールを作成する目的で SSIS や他のスケジューラに処理を自動化する予定の場合おそらく`Process Database`せず`Read Definition`します。 それ以外の場合は、2 つのプロパティを同じロールに結合することで、ユーザー インターフェイスにデータ モデルを視覚化する SQL Server ツールを使用して自動処理と対話型処理の両方をサポートすることを検討してください。  
+ `Read Definition` このアクセス許可には、オブジェクトのメタデータを読み取る権限が付与されます。 それぞれ-関連付けられているデータを表示する機能。 通常、この権限は専用の処理用に作成されたロールで使用され、 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] や [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] などのツールを使用してデータベースを対話的に処理できるようにします。 `Read Definition`がない場合、`Process Database`権限はスクリプト化されたシナリオでのみ有効になります。 SSIS や他のスケジューラなどで処理を自動化する場合は、`Process Database`があって`Read Definition`がないロールを作成することをお勧めします。 それ以外の場合は、2 つのプロパティを同じロールに結合することで、ユーザー インターフェイスにデータ モデルを視覚化する SQL Server ツールを使用して自動処理と対話型処理の両方をサポートすることを検討してください。  
   
 ## <a name="full-control-administrator-permissions"></a>フル コントロール (管理者) 権限  
  [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] では、データベース管理者はフル コントロール (管理者) 権限が含まれているロールに割り当てられた Windows ユーザー ID です。 データベース管理者は、データベース内で次のようなタスクを実行できます。  
@@ -66,7 +65,7 @@ ms.locfileid: "48149012"
   
 2.  **[全般]** ペインで、DBAdmin などのような名前を入力します。  
   
-3.  キューブの **[フル コントロール (管理者)]** チェック ボックスをオンにします。 `Process Database`および`Read Definition`は、自動的にオンになります。 含むロールに含まれるこれらのアクセス許可の両方が常に`Full Control`します。  
+3.  キューブの **[フル コントロール (管理者)]** チェック ボックスをオンにします。 `Process Database`および`Read Definition`は、自動的にオンになります。 どちらの権限も、`Full Control`が含まれているロールに常に含まれています。  
   
 4.  **[メンバーシップ]** ペインで、このロールを使用して Analysis Services に接続する Windows ユーザー アカウントおよびグループ アカウントを追加します。  
   
@@ -80,6 +79,6 @@ ms.locfileid: "48149012"
   
 ## <a name="see-also"></a>参照  
  [サーバーの管理者アクセス許可の付与&#40;Analysis Services&#41;](../instances/grant-server-admin-rights-to-an-analysis-services-instance.md)   
- [プロセスのアクセス許可を付与&#40;Analysis Services&#41;](grant-process-permissions-analysis-services.md)  
+ [処理権限の付与 &#40;Analysis Services&#41;](grant-process-permissions-analysis-services.md)  
   
   

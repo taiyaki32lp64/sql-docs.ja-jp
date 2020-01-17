@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 ms.assetid: 8b830ba5-4d64-4348-a2b1-76b9338a1462
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 28ccbab8475a2227dbd4dedfb0eb17bcd69dce03
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: ec051870966a3a8cf9d2d028d80a2fc36708ba28
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56288210"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66106136"
 ---
 # <a name="create-a-recursive-hierarchy-group-report-builder-and-ssrs"></a>再帰型階層グループの作成 (レポート ビルダーおよび SSRS)
   再帰型階層グループは、組織階層内のマネージャーと従業員のリレーションシップを表す上司/部下構造など、複数の階層レベルから成る単一のレポート データセットのデータを編成します。  
@@ -51,7 +50,7 @@ ms.locfileid: "56288210"
     > [!NOTE]  
     >  プロパティ ペインが表示されない場合は、 **[表示]** タブの **[プロパティ]** をクリックします。  
   
-2.  [プロパティ] ウィンドウで、展開、`Padding`ノード、をクリックして**左**、ドロップダウン リストから選択し、 **\<式… >**。  
+2.  [プロパティ] ウィンドウで、展開、`Padding`ノード、をクリックして**左**、ドロップダウン リストから選択し、 **\<式… >** 。  
   
 3.  式ペインで次の式を入力します。  
   

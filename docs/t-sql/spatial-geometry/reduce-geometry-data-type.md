@@ -15,15 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - Reduce method
 ms.assetid: 132184bf-c4d2-4a27-900d-8373445dce2a
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: e3177340b6944da812c93075f6b2fd5561192f33
-ms.sourcegitcommit: f8ad5af0f05b6b175cd6d592e869b28edd3c8e2c
+author: MladjoA
+ms.author: mlandzic
+ms.openlocfilehash: 5725b95df233f46e9e003f6c2af155ae943ba2b1
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/07/2019
-ms.locfileid: "55807422"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68101041"
 ---
 # <a name="reduce-geometry-data-type"></a>Reduce (geometry データ型)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -101,7 +100,7 @@ SELECT @g.Reduce(.75).ToString();
   
  この例では、2 番目の **SELECT** ステートメントによって **LineString** インスタンス (`LineString(0 0, 16 0)`) が返されます。  
   
-### <a name="showing-an-example-where-the-original-start-and-end-points-are-lost"></a>元の始点と終点が失われる例  
+### <a name="showing-an-example-where-the-original-start-and-end-points-are-lost"></a>元の始点と終点が失われる例を示す  
  次の例では、元の始点と終点が結果のインスタンスで保持されない状況を示します。 このような動作は、元の始点と終点を保持した結果、**LineString** インスタンスが無効となった場合に発生します。  
   
 ```  

@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: e851a22d-01bc-4eb0-bc42-92b8f65d1c63
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 21c4eae0608e433ed3ca7888091a7c658726192d
-ms.sourcegitcommit: 1a5448747ccb2e13e8f3d9f04012ba5ae04bb0a3
+ms.openlocfilehash: bddf6ce0bbfb78435118ef3d87303a94c792c96d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51557829"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67922643"
 ---
 # <a name="granting-guest-privileges-to-a-web-server-computer"></a>Web サーバー コンピューターへのゲスト特権の付与
 匿名の Web サーバーのアカウント (iusr _*ComputerName*) RDS を使用して、ゲストをローカル Web サーバー コンピューターのグループに追加する必要があります  

@@ -14,14 +14,13 @@ helpviewer_keywords:
 ms.assetid: ea7ddb87-f50b-46b6-9f5a-acab222a2ede
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: fa1e912b6a0ec2cce562e6ed6506acfb74a3a17e
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 12bcff24be2bf0a722375fa6f7c06444ba818e9d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52520966"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68140355"
 ---
 # <a name="use-sparse-columns"></a>スパース列の使用
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -114,7 +113,7 @@ ms.locfileid: "52520966"
 |**xml**|2*|4*|60%|  
 |**hierarchyid**|2*|4*|60%|  
   
- * 長さは、型に含まれているデータの平均に 2 バイトまたは 4 バイトを加えた長さに等しくなります。  
+ \* 長さは、型に含まれているデータの平均に 2 バイトまたは 4 バイトを加えた長さに等しくなります。  
   
 ## <a name="in-memory-overhead-required-for-updates-to-sparse-columns"></a>スパース列の更新に必要なインメモリ オーバーヘッド  
  スパース列を含むテーブルをデザインする場合は、行を更新するときにテーブル内の NULL 以外のスパース列ごとに追加の 2 バイトが必要になることに注意してください。 この追加のメモリ要件により、(このメモリ オーバーヘッドを含む) 合計行サイズが 8019 を超え、列を行外に出すことができないと、更新がエラー 576 で予期せずに失敗する可能性があります。  

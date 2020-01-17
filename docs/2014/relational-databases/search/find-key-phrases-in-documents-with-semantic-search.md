@@ -9,22 +9,22 @@ ms.topic: conceptual
 helpviewer_keywords:
 - semantic search [SQL Server], key phrase queries
 ms.assetid: 6ee3676e-ed5d-43ec-aeca-1eed78967111
-author: douglaslMS
-ms.author: douglasl
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 7ead6e45099ef16f8ee7d4935c5f02b528bd5750
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: cfb769db0de0e962c52d042e19134b849b3c1c3d
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52406999"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66011344"
 ---
 # <a name="find-key-phrases-in-documents-with-semantic-search"></a>セマンティック検索を使用したドキュメント内のキー フレーズの検索
   統計的セマンティック インデックス作成用に構成されたドキュメントまたはテキスト列内のキー フレーズのクエリを実行する方法について説明します。  
   
 ##  <a name="BasicsQueryKey"></a> ドキュメント内のキー フレーズの検索  
   
-###  <a name="howtofind"></a> 操作方法：SEMANTICKEYPHRASETABLE を使用したドキュメント内のキー フレーズを検索します。  
+###  <a name="howtofind"></a> 方法:SEMANTICKEYPHRASETABLE を使用したドキュメント内のキー フレーズを検索します。  
  特定のドキュメントに含まれるキー フレーズや特定のキー フレーズを含むドキュメントを識別するには、[semantickeyphrasetable &#40;Transact-SQL&#41;](/sql/relational-databases/system-functions/semantickeyphrasetable-transact-sql) 関数を使用してクエリを実行します。  
   
  SEMANTICKEYPHRASETABLE は、指定されたテーブル内の列に関連付けられているこれらのキー フレーズに対し、0 行以上の行を含むテーブルを返します。 この行セット関数は、標準のテーブル名のように、SELECT ステートメントの FROM 句で参照できます。  
@@ -37,10 +37,10 @@ ms.locfileid: "52406999"
 > [!IMPORTANT]  
 >  対象の列では、フルテキスト インデックスとセマンティック インデックスが有効になっている必要があります。  
   
-###  <a name="HowToTopPhrases"></a> 例 1:特定のドキュメント内の最上位のキー フレーズを検索します。  
+###  <a name="HowToTopPhrases"></a> 例 1: 特定のドキュメント内の最上位のキー フレーズを検索します。  
  次の例では、AdventureWorks サンプル データベースの Production.Document テーブルの Document 列にある、@DocumentId 変数で指定されたドキュメントから、上位 10 個のキー フレーズを取得します。 @DocumentId 変数は、フルテキスト インデックスのキー列の値を表します。  
   
-```tsql  
+```sql  
 SELECT TOP(10) KEYP_TBL.keyphrase  
 FROM SEMANTICKEYPHRASETABLE  
     (  
@@ -54,10 +54,10 @@ GO
   
  **SEMANTICKEYPHRASETABLE** 関数は、テーブル スキャンではなくインデックス シークを使用してこれらの結果を効率的に取得します。  
   
-###  <a name="HowToTopDocuments"></a> 例 2:特定のキー フレーズを含む上位のドキュメントを検索します。  
+###  <a name="HowToTopDocuments"></a> 例 2: 特定のキー フレーズを含む上位のドキュメントを検索します。  
  次の例では、AdventureWorks サンプル データベースの Production.Document テーブルの Document 列から、キー フレーズ "Bracket" を含む上位 25 個のドキュメントを取得します。  
   
-```tsql  
+```sql  
 SELECT TOP (25) DOC_TBL.DocumentID, DOC_TBL.DocumentSummary  
 FROM Production.Document AS DOC_TBL  
     INNER JOIN SEMANTICKEYPHRASETABLE  

@@ -18,15 +18,14 @@ helpviewer_keywords:
 - Database Engine Tuning Advisor [SQL Server], command prompt
 - optimizing databases [SQL Server]
 ms.assetid: a0b210ce-9b58-4709-80cb-9363b68a1f5a
-author: stevestein
-ms.author: sstein
-manager: craigg
-ms.openlocfilehash: b40e9c05d81f7fb868884ab25e0f317804d162e0
-ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 23cd3f3b29db6d6c791b97b40401781fa3a3bbfc
+ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/18/2018
-ms.locfileid: "53590196"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "73981802"
 ---
 # <a name="dta-utility"></a>dta ユーティリティ
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -130,7 +129,7 @@ dta -D db_name1, db_name2 -d db_name1
 ```  
   
  **-d** _database_name_  
- ワークロードをチューニングするときに、 **dta** が最初に接続するデータベースを指定します。 この引数で指定できるデータベースは 1 つだけです。 例 :  
+ ワークロードをチューニングするときに、 **dta** が最初に接続するデータベースを指定します。 この引数で指定できるデータベースは 1 つだけです。 例:  
   
 ```  
 dta -d AdventureWorks2012 ...  
@@ -178,11 +177,11 @@ dta -d AdventureWorks2012 ...
  フィルター選択されたインデックスが新しい推奨設定用と見なされるように指定します。 詳細については、「 [Create Filtered Indexes](../../relational-databases/indexes/create-filtered-indexes.md)」を参照してください。  
   
 **-fc**  
- 列ストア インデックスが新しい推奨設定用と見なされるように指定します。 DTA では、両方のクラスター化と非クラスター化列ストア インデックスを検討します。 詳細については、「    
+ 列ストア インデックスが新しい推奨設定用と見なされるように指定します。 DTA では、クラスター化列ストア インデックスと非クラスター化列ストア インデックスの両方が考慮されます。 詳細については、「    
 「[データベース エンジン チューニング アドバイザー (DTA) での列ストア インデックスの推奨事項](../../relational-databases/performance/columnstore-index-recommendations-in-database-engine-tuning-advisor-dta.md)」を参照してください。
  ||  
 |-|  
-|**適用対象**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]|  
+|**適用対象**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 以降。|  
 
   
  **-fk** _keep_existing_option_  
@@ -190,7 +189,7 @@ dta -d AdventureWorks2012 ...
   
 |[値]|[説明]|  
 |-----------|-----------------|  
-|なし|既存の構造なし|  
+|NONE|既存の構造なし|  
 |ALL|既存のすべての構造|  
 |ALIGNED|パーティションで固定された構造をすべて保持します。|  
 |CL_IDX|テーブル上にあるクラスター化されたすべてのインデックス|  
@@ -217,17 +216,17 @@ dta -d AdventureWorks2012 ...
  プラン キャッシュをワークロードとして使用することを指定します。 明示的に選択したデータベースの上位 1,000 個のプラン キャッシュ イベントが分析されます。 この値は **-n** オプションを使用して変更できます。  
  
 **-iq**  
- クエリ ストアをワークロードとして使用することを指定します。 明示的に選択したデータベースのクエリ ストアから上位 1,000 個のイベントが分析されます。 この値は **-n** オプションを使用して変更できます。  詳細については、[クエリ ストア](../../relational-databases/performance/how-query-store-collects-data.md)に関するページと、「[クエリ ストアのワークロードを使用してデータベースをチューニングする](../../relational-databases/performance/tuning-database-using-workload-from-query-store.md)」を参照してください。
+ クエリストアワークロードとして使用することを指定します。 明示的に選択されたデータベースのクエリストアから上位の1000イベントが分析されます。 この値は **-n** オプションを使用して変更できます。  詳細については、[クエリ ストア](../../relational-databases/performance/how-query-store-collects-data.md)に関するページと、「[クエリ ストアのワークロードを使用してデータベースをチューニングする](../../relational-databases/performance/tuning-database-using-workload-from-query-store.md)」を参照してください。
  ||  
 |-|  
-|**適用対象**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]|  
+|**適用対象**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 以降。|  
      
   
  **-if** _workload_file_  
  チューニングの入力として使用するワークロード ファイルのパスとファイルの名前を指定します。 ファイルは、.trc (SQL Server Profiler トレース ファイル)、.sql (SQL ファイル)、.log ([!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] トレース ファイル) のいずれかの形式になっている必要があります。 ワークロード ファイル、またはワークロード テーブルを 1 つ指定する必要があります。  
   
  **-it** _workload_trace_table_name_  
- チューニングのワークロード トレースを含むテーブルの名前を指定します。 名前は *[database_name*]**.**[*owner_name*]**.**_table_name_ の形式で指定します。  
+ チューニングのワークロード トレースを含むテーブルの名前を指定します。 名前は *[database_name*] **.** [*owner_name*] **.** _table_name_ の形式で指定します。  
   
  次の表は、各パラメーターの既定値を示しています。  
   
@@ -267,14 +266,14 @@ dta -n number_of_events -A 0
  この場合、チューニング時間を無制限 (`-A 0`) に指定することが重要です。 無制限に指定しない場合、データベース エンジン チューニング アドバイザーでは、既定の 8 時間のチューニング時間が前提となります。
  
  **-I** _time_window_in_hours_   
-   時間枠 (時間) を指定するときに、DTA チューニングを使用する場合の考慮のクエリを実行する必要がありますが **-iq**オプション (クエリ ストアからワークロード)。 
+   **-Iq**オプション (ワークロードクエリストア) を使用する場合に、クエリを実行して、DTA によってチューニングする必要がある時間枠 (時間単位) を指定します。 
 ```  
 dta -iq -I 48  
 ```  
-ここでは、DTA はクエリ ストアのワークロードのソースとして使用し、過去 48 時間で実行したクエリのみが考慮されます。  
+この場合、DTA はクエリストアをワークロードのソースとして使用し、過去48時間に実行されたクエリのみを検討します。  
   ||  
 |-|  
-|**適用対象**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]|  
+|**適用対象**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 以降。|  
 
 
   
@@ -344,14 +343,14 @@ dta -iq -I 48
   
  *database_name*.[*schema_name*].*table_name* [*number_of_rows*]  
   
- この引数は、コマンド プロンプトでテーブルの一覧 (**-Tl**) を入力する代わりに使用します。 **-Tl**を使用する場合は、テーブルの一覧ファイル ( **-Tf**) を使用しないでください。 両方の引数を使用すると、 **dta** は失敗し、エラーを返します。  
+ この引数は、コマンド プロンプトでテーブルの一覧 ( **-Tl**) を入力する代わりに使用します。 **-Tl**を使用する場合は、テーブルの一覧ファイル ( **-Tf**) を使用しないでください。 両方の引数を使用すると、 **dta** は失敗し、エラーを返します。  
   
  **-Tf** 引数および **-Tl** 引数を省略した場合、指定されたデータベース内のすべてのユーザー テーブルをチューニングするものと見なされます。  
   
  **-Tl** _table_list_  
  コマンド プロンプトでチューニングするテーブルの一覧を指定します。 テーブル名の間にコンマを挿入して区切ります。 **-D** 引数で 1 つのデータベースのみを指定する場合、テーブル名をデータベース名で修飾する必要はありません。 それ以外の場合、各テーブルには *database_name.schema_name.table_name* の形式で、完全修飾名が必要となります。  
   
- この引数は、テーブルの一覧ファイル (**-Tf**) の代わりに使用します。 **-Tl** と **-Tf** の両方を使用すると、 **dta** は失敗し、エラーを返します。  
+ この引数は、テーブルの一覧ファイル ( **-Tf**) の代わりに使用します。 **-Tl** と **-Tf** の両方を使用すると、 **dta** は失敗し、エラーを返します。  
   
  **-U** _login_id_  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]への接続に使用されるログイン ID を指定します。  

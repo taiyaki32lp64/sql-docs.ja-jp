@@ -1,5 +1,5 @@
 ---
-title: SQLGetConnectAttr |Microsoft Docs
+title: SQLGetConnectAttr | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 818c136814062c94491cfa02b84d2fff443a1f0a
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53375644"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63128665"
 ---
 # <a name="sqlgetconnectattr"></a>SQLGetConnectAttr
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC ドライバーでは、ドライバー固有の接続属性が定義されます。 属性の一部が利用する`SQLGetConnectAttr`関数は、現在の設定をレポートに使用するとします。 これらの属性とは限りませんまで接続が確立されているかを使用して、属性が設定されている後に報告される値[SQLSetConnectAttr](sqlsetconnectattr.md)します。  

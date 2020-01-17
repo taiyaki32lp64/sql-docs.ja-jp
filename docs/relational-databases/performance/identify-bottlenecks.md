@@ -21,14 +21,13 @@ helpviewer_keywords:
 ms.assetid: db079e65-ee80-4105-aec9-f8230d0d6635
 author: julieMSFT
 ms.author: jrasnick
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 213df75d1883de730a0231c009f1d178814ed463
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: bbabafa1f5b367343f02c3a0bf3e122bc827ce66
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53370644"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67946750"
 ---
 # <a name="identify-bottlenecks"></a>ボトルネックの特定
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -47,7 +46,7 @@ ms.locfileid: "53370644"
 ## <a name="analyzing-bottlenecks"></a>ボトルネックの分析  
  さまざまなイベントに対して過剰な要求が行われている期間は、ボトルネックをチューニングできる指標になります。  
   
- 例 :  
+ 例:  
   
 -   他のいくつかのコンポーネントにより、このコンポーネントの負荷が低下しているため、負荷を完了するまでの時間がかかっている可能性があります。  
   

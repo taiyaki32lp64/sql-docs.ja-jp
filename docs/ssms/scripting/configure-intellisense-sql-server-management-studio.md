@@ -12,16 +12,15 @@ helpviewer_keywords:
 - modifying IntelliSense options
 - IntelliSense [SQL Server], modifying options
 ms.assetid: 3ffc9f31-4efa-4c1a-a033-ed1dc48b065f
-author: stevestein
-ms.author: sstein
-manager: craigg
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: f12e159b75f9d9629de078ec71427eef91097f29
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: e148cd3dc64ce93b46a990580be24ace757a87af
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51643845"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68263506"
 ---
 # <a name="configure-intellisense-sql-server-management-studio"></a>IntelliSense の構成 (SQL Server Management Studio)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -39,7 +38,7 @@ ms.locfileid: "51643845"
   
 1.  **[ツール]** メニューの **[オプション]** をクリックします。  
   
-2.  **[テキスト エディター]** を展開し、 **[すべての言語]**、 **[Transact-SQL]**、 **[XML]** のいずれかを展開して、 **[全般]** をクリックします。  
+2.  **[テキスト エディター]** を展開し、 **[すべての言語]** 、 **[Transact-SQL]** 、 **[XML]** のいずれかを展開して、 **[全般]** をクリックします。  
   
 3.  入力候補オプションのうち、使用しないオプションのチェック ボックスをオフにし、 **[OK]** をクリックします。  
   

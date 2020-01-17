@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.partitionpropertiesdialog.f1
@@ -13,12 +12,12 @@ ms.assetid: dfb5b7a0-7543-4e5e-8a30-4b734606e157
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: d70903f580d55d674b099312c04a24632ac1d701
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: bfc0de04be668ea3d1ab5633049e6f81d971b4cd
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48113202"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66072157"
 ---
 # <a name="partition-properties-dialog-box-ssms"></a>[パーティションのプロパティ] (SSMS)
   SQL Server Management Studio の **[パーティションのプロパティ]** ダイアログ ボックスを使用すると、 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] データベースのキューブに対してパーティションのプロパティを設定できます。  
@@ -27,7 +26,7 @@ ms.locfileid: "48113202"
   
  **[パーティションのプロパティ]** ダイアログ ボックスには、次のページがあります。  
   
-## <a name="pages"></a>ページ  
+## <a name="pages"></a>ページ数  
   
 |ページ|説明|  
 |----------|-----------------|  
@@ -37,7 +36,7 @@ ms.locfileid: "48113202"
 |**エラーの構成**|**[エラーの構成]** ページを使用して、 **[選択項目]** ページで選択したパーティションを処理するためのエラー構成設定の表示と変更を行います。 このページの詳細については、「[キューブ、パーティション、およびディメンションに関する処理のエラー構成 &#40;SSAS - 多次元&#41;](multidimensional-models/error-configuration-for-cube-partition-and-dimension-processing.md)」を参照してください。|  
   
 ## <a name="see-also"></a>参照  
- [パーティション&#40;Analysis Services - 多次元データ&#41;](multidimensional-models-olap-logical-cube-objects/partitions-analysis-services-multidimensional-data.md)   
+ [パーティション &#40;Analysis Services - 多次元データ&#41;](multidimensional-models-olap-logical-cube-objects/partitions-analysis-services-multidimensional-data.md)   
  [リモート パーティション](multidimensional-models-olap-logical-cube-objects/partitions-remote-partitions.md)   
  [Analysis Services のデザイナーおよびダイアログ ボックス&#40;多次元データ&#41;](analysis-services-designers-and-dialog-boxes-multidimensional-data.md)  
   

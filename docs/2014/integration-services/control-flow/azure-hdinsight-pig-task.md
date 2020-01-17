@@ -10,15 +10,15 @@ f1_keywords:
 - sql12.dts.designer.afppigtask.f1
 - sql11.dts.designer.afppigtask.f1
 ms.assetid: 26f34f64-f344-486e-9190-acf71aef29a8
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 30340a873846e20911a7f14694f9602c17d960e8
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 3da6ce80cc9e7bff25614e8589b4bf85dfc68e81
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52749414"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62832710"
 ---
 # <a name="azure-hdinsight-pig-task"></a>Azure HDInsight Pig Task
 Azure HDInsight クラスターで Pig スクリプトを実行するには、 **Azure HDInsight Pig Task** を使用します。
@@ -37,8 +37,8 @@ Azure HDInsight クラスターで Pig スクリプトを実行するには、 *
   
 5.  実行する Pig スクリプトを指定するには、次の 2 つの方法があります。
   
-    1.  **インライン スクリプト**:指定、**スクリプト**」と入力してのフィールドでスクリプトをインラインで実行する、**入力スクリプト** ダイアログ ボックス。
+    1.  **インライン スクリプト**: **[スクリプトの入力]** ダイアログ ボックスに実行するスクリプトをインラインで入力して、 **[Script]** フィールドを指定します。
   
-    2.  **スクリプト ファイル**:スクリプト ファイルを Azure Blob Storage にアップロードし、指定、 **BlobName**フィールド。 BLOB が HDInsight クラスターに関連付けられている既定のストレージ アカウントまたはコンテナーにない場合は、**[ExternalStorageAccountName]** と **[ExternalBlobContainer]** フィールドを指定する必要があります。 外部 BLOB の場合は、パブリックにアクセス可能として構成されていることを確認します。  
+    2.  **スクリプト ファイル**: Azure Blob Storage にスクリプト ファイルをアップロードして、 **[BlobName]** フィールドを指定します。 BLOB が HDInsight クラスターに関連付けられている既定のストレージ アカウントまたはコンテナーにない場合は、 **[ExternalStorageAccountName]** と **[ExternalBlobContainer]** フィールドを指定する必要があります。 外部 BLOB の場合は、パブリックにアクセス可能として構成されていることを確認します。  
   
      両方が指定されている場合、スクリプト ファイルが使用され、インライン スクリプトは無視されます。

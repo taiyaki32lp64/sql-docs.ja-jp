@@ -11,15 +11,15 @@ helpviewer_keywords:
 - thesaurus [full-text search], configuring
 - thesaurus [full-text search]
 ms.assetid: 3ef96a63-8a52-45be-9a1f-265bff400e54
-author: douglaslMS
-ms.author: douglasl
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 5089aaa229f77c6f0012f4ceae0d5d1b17a9c11a
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: e52399dc77fce220bf33939b7c7921e32cd2438c
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52792264"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66011476"
 ---
 # <a name="configure-and-manage-thesaurus-files-for-full-text-search"></a>フルテキスト検索に使用する類義語辞典ファイルの構成と管理
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ではフルテキスト クエリで類義語辞典を使用し、指定した用語のシノニムを検索できます。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の*類義語辞典*では、特定の言語の一連のシノニムを定義します。 システム管理者は、拡張セットと置換セットという 2 つの形式のシノニムを定義できます。 フルテキスト データに合わせた類義語辞典を作成すると、そのデータのフルテキスト クエリのスコープを効果的に拡張できます。 類義語辞典の照合は、FORMSOF THESAURUS 句を指定する [CONTAINS](/sql/t-sql/queries/freetext-transact-sql) クエリと [CONTAINSTABLE](/sql/relational-databases/system-functions/freetexttable-transact-sql) クエリの場合、およびすべての [FREETEXT](/sql/t-sql/queries/contains-transact-sql) クエリと [FREETEXTABLE](/sql/relational-databases/system-functions/containstable-transact-sql) クエリの場合に行われます。  
@@ -29,7 +29,7 @@ ms.locfileid: "52792264"
   
 -   分音文字の設定  
   
-     すべての検索パターンは機密性の高いまたはチルダなどの分音記号の区別に関する特定の類義語辞典の (**~**)、アキュート アクセント記号 (**??**)、またはウムラウト (**??**) (つまり、*アクセントの区別*または*アクセントを区別しない*)。 たとえば、「カフェ??」というパターンを指定します。 フルテキスト クエリでは、他のパターンによって置き換えられます。 類義語辞典は、アクセントを区別しない場合、フルテキスト検索では、パターン「カフェ??」が置き換えられます 「カフェ」。 類義語辞典がアクセントを区別する場合は、フルテキスト検索にのみ、パターン「カフェ??」が置き換えられます。 既定では、類義語辞典でアクセントは区別されません。  
+     すべての検索パターンは機密性の高いまたはチルダなどの分音記号の区別に関する特定の類義語辞典の ( **~** )、アキュート アクセント記号 ( **??** )、またはウムラウト ( **??** ) (つまり、*アクセントの区別*または*アクセントを区別しない*)。 たとえば、「カフェ??」というパターンを指定します。 フルテキスト クエリでは、他のパターンによって置き換えられます。 類義語辞典は、アクセントを区別しない場合、フルテキスト検索では、パターン「カフェ??」が置き換えられます 「カフェ」。 類義語辞典がアクセントを区別する場合は、フルテキスト検索にのみ、パターン「カフェ??」が置き換えられます。 既定では、類義語辞典でアクセントは区別されません。  
   
 -   拡張セット  
   
@@ -77,7 +77,7 @@ ms.locfileid: "52792264"
 ##  <a name="location"></a> 類義語辞典ファイルの場所  
  類義語辞典ファイルの既定の場所は次のとおりです。  
   
- *< SQL_Server_data_files_path >* \mssql12. します。MSSQLSERVER\MSSQL\FTDATA\  
+ *<SQL_Server_data_files_path>* \MSSQL12.MSSQLSERVER\MSSQL\FTDATA\  
   
  この既定の場所には、次のファイルが格納されています。  
   
@@ -87,7 +87,7 @@ ms.locfileid: "52792264"
   
      類義語辞典ファイルの既定のファイル名には、次の形式が使用されます。  
   
-     'ts' + \<3 文字の言語の省略形 > + '.xml'  
+     'ts' + \<three-letter language-abbreviation> + '.xml'  
   
      特定の言語の類義語辞典ファイルの名前は、レジストリで HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\\<instance-name>\MSSearch\\<language-abbrev> と指定されています。  
   
@@ -162,7 +162,7 @@ ms.locfileid: "52792264"
     </replacement>  
     ```  
   
-     クエリと  
+     、  
   
     ```  
     <replacement>  

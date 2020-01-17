@@ -14,14 +14,13 @@ helpviewer_keywords:
 ms.assetid: 579867ec-57cb-4cb8-af35-9688c1e9e15d
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 0b0544c995039c2dda6f20ea86b5893e2938708d
-ms.sourcegitcommit: 1a5448747ccb2e13e8f3d9f04012ba5ae04bb0a3
+ms.openlocfilehash: e86955f75593c27e18de12bbcaf5bb6b7cf88b6a
+ms.sourcegitcommit: f688a37bb6deac2e5b7730344165bbe2c57f9b9c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51559919"
+ms.lasthandoff: 11/08/2019
+ms.locfileid: "73843536"
 ---
 # <a name="view-or-change-the-compatibility-level-of-a-database"></a>データベースの互換性レベルの表示または変更
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -31,7 +30,7 @@ ms.locfileid: "51559919"
   
 -   **作業を開始する準備:**  
   
-     [Security](#Security)  
+     [セキュリティ](#Security)  
   
 -   **以下を使用してデータベースの互換性レベルを表示または変更するには:**  
   
@@ -62,8 +61,8 @@ ms.locfileid: "51559919"
   
      **[互換性レベル]** ボックスの一覧に現在の互換性レベルが表示されます。  
   
-5.  互換性レベルを変更するには、一覧から別のオプションを選択します。 **SQL Server 2008 (100)**、**SQL Server 2012 (110)**、**SQL Server 2014 (120)**、**SQL Server 2016 (130)**、**SQL Server 2017 (140)** を選択できます。  
-  
+5.  互換性レベルを変更するには、一覧から別のオプションを選択します。 さまざまな [!INCLUDE[ssde_md](../../includes/ssde_md.md)] バージョンに使用できるオプションは、[ALTER DATABASE 互換性レベル (Transact-SQL)](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md#supported-dbcompats) ページに記載されています。  
+
 ##  <a name="TsqlProcedure"></a> Transact-SQL の使用  
   
 #### <a name="to-view-the-compatibility-level-of-a-database"></a>データベースの互換性レベルを表示するには  

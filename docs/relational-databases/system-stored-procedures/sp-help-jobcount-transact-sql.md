@@ -17,18 +17,17 @@ helpviewer_keywords:
 ms.assetid: ae8ef851-646c-4889-bc11-c8ec78762572
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 0274c825b18e1377e337b614068db7fc75c7a917
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 1f874aa26001b7d595f319a59d5c116907aa096e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47732030"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68054963"
 ---
 # <a name="sphelpjobcount-transact-sql"></a>sp_help_jobcount (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  スケジュールがアタッチされているジョブの数を表示します。  
+  関連付けられているスケジュールをジョブの数を提供します。  
   
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -42,11 +41,9 @@ sp_help_jobcount
 ```  
   
 ## <a name="arguments"></a>引数  
- [ **@schedule_id=** ] *schedule_id*  
- 一覧表示するスケジュールの識別子を指定します。 *schedule_id*は**int**、既定値はありません。 いずれか*schedule_id*または*schedule_name*指定することがあります。  
+`[ @schedule_id = ] schedule_id` 一覧表示するスケジュールの識別子。 *schedule_id*は**int**、既定値はありません。 いずれか*schedule_id*または*schedule_name*指定することがあります。  
   
- [ **@schedule_name=** ]  **'***schedule_name***'**  
- 一覧表示するスケジュールの名前を指定します。 *schedule_name*は**sysname**、既定値はありません。 いずれか*schedule_id*または*schedule_name*指定することがあります。  
+`[ @schedule_name = ] 'schedule_name'` 一覧表示するスケジュールの名前。 *schedule_name*は**sysname**、既定値はありません。 いずれか*schedule_id*または*schedule_name*指定することがあります。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  **0** (成功) または**1** (失敗)  
@@ -59,7 +56,7 @@ sp_help_jobcount
 |**JobCount**|**int**|指定されたスケジュールに対するジョブの数。|  
   
 ## <a name="remarks"></a>コメント  
- このプロシージャでは、指定されたスケジュールにアタッチされたジョブの数が一覧表示されます。  
+ この手順では、指定されたスケジュールにアタッチされたジョブの数が一覧表示します。  
   
 ## <a name="permissions"></a>アクセス許可  
  既定では、このストアド プロシージャを実行できるのは、 **sysadmin** 固定サーバー ロールのメンバーです。 他のユーザーには、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] msdb **データベースの次のいずれかの** エージェント固定データベース ロールが許可されている必要があります。  
@@ -86,7 +83,7 @@ EXEC sp_help_jobcount
 GO  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [SQL Server エージェント ストアド プロシージャ&#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sql-server-agent-stored-procedures-transact-sql.md)   
  [sp_add_schedule &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-schedule-transact-sql.md)   
  [sp_attach_schedule &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-attach-schedule-transact-sql.md)   

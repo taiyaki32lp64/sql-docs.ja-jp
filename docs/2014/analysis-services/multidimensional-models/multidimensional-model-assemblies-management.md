@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - permissions [Analysis Services], assemblies
@@ -22,12 +21,12 @@ ms.assetid: b2645d10-6d17-444e-9289-f111ec48bbfb
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 4f5109e604c65d8a525e5c65127ca287c8e3b049
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 6c4f57e12754fc8e32fba8f483a2dfc360d7edc0
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48172112"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66073526"
 ---
 # <a name="multidimensional-model-assemblies-management"></a>多次元モデルのアセンブリの管理
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] では、標準偏差計算から階層内でのメンバーのスキャンまで、あらゆる動作を実現するためにデザインされた、多次元式 (MDX) 言語およびデータ マイニング拡張機能 (DMX) 言語で使用するための多数の組み込み関数が提供されています。 ただし、他のすべての複雑で強力な製品がそうであるように、この製品も常に機能の拡張を求められています。  
@@ -41,7 +40,7 @@ ms.locfileid: "48172112"
   
  新しいプロシージャや関数を使用したアセンブリをサーバーに追加できます。 アセンブリを使用して、サーバーによって提供されていない独自の機能を拡張または追加できます。 アセンブリを使用することにより、多次元式 (MDX)、データ マイニング拡張機能 (DMX)、またはストアド プロシージャに新しい関数を追加できます。 カスタム アプリケーションの実行場所からアセンブリが読み込まれ、アセンブリ バイナリ ファイルのコピーは、データベースのデータと共にサーバーに保存されます。 アセンブリを削除すると、そのアセンブリのコピーもサーバーから削除されます。  
   
- アセンブリには、COM と CLR の 2 種類があります。 CLR アセンブリとは、C#、Visual Basic .NET、マネージド C++ など、.NET Framework プログラミング言語で開発されたアセンブリです。 COM アセンブリとは、サーバーに登録する必要がある COM ライブラリです。  
+ 2 つのさまざまな種類のアセンブリができます。COM と CLR です。 CLR アセンブリとは、C#、Visual Basic .NET、マネージド C++ など、.NET Framework プログラミング言語で開発されたアセンブリです。 COM アセンブリとは、サーバーに登録する必要がある COM ライブラリです。  
   
  アセンブリは、 <xref:Microsoft.AnalysisServices.Server> オブジェクトまたは <xref:Microsoft.AnalysisServices.Database> オブジェクトに追加できます。 サーバー アセンブリは、サーバーまたはサーバー内の任意のオブジェクトに接続している任意のユーザーが呼び出すことができます。 データベース アセンブリは、 <xref:Microsoft.AnalysisServices.Database> オブジェクトまたはデータベースに接続しているユーザーのみが呼び出すことができます。  
   
@@ -92,21 +91,21 @@ Call MyAssembly.MyClass.MyVoidProcedure(a, b, c)
 |設定する権限|説明|  
 |------------------------|-----------------|  
 |`Safe`|内部的な計算権限を提供します。 この権限バケットでは、.NET Framework 内の保護されたリソースにアクセスする権限は許可されません。 これは、`PermissionSet` プロパティで何も指定されていない場合に、アセンブリに既定の権限バケットです。|  
-|`ExternalAccess`|同じアクセスを提供します、`Safe`外部システム リソースにアクセスする追加機能と共に、設定します。 この権限バケットはセキュリティの保証を提供するものではありませんが、信頼性の保証は提供されます (このシナリオを保証するのは可能です)。|  
+|`ExternalAccess`|外部システム リソースにアクセスする追加機能と共に、`Safe` 設定と同じアクセスを提供します。 この権限バケットはセキュリティの保証を提供するものではありませんが、信頼性の保証は提供されます (このシナリオを保証するのは可能です)。|  
 |`Unsafe`|制限はありません。 この権限セットで実行されるマネージド コードに対する、セキュリティあるいは信頼性の保証はありません。 管理者によって指定されたカスタム権限であっても、すべての権限が、この信頼性のレベルで実行されるコードに与えられます。|  
   
  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]によって CLR がホストされるとき、スタックウォーク ベースの権限チェックはネイティブの [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] コードとの境界で停止されます。 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] アセンブリ内のすべてのマネージド コードは常に、上記の 3 つの権限カテゴリのいずれかに分類されます。  
   
  COM (またはアンマネージ) アセンブリ ルーチンは、CLR セキュリティ モデルをサポートしません。  
   
-### <a name="impersonation"></a>権限借用  
- マネージド コードが [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 外部のリソースにアクセスする場合、必ず適切な Windows セキュリティ コンテキスト内でアクセスが行われるようにするため、[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] はアセンブリの `ImpersonationMode` プロパティ設定に関連付けられているルールに従います。 ため、アセンブリを使用して、`Safe`アクセス許可の設定が外部リソースにアクセスできない[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]、これらの規則を使用してアセンブリにのみ適用できます、`ExternalAccess`と`Unsafe`アクセス許可の設定。  
+### <a name="impersonation"></a>偽装  
+ マネージド コードが [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 外部のリソースにアクセスする場合、必ず適切な Windows セキュリティ コンテキスト内でアクセスが行われるようにするため、[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] はアセンブリの `ImpersonationMode` プロパティ設定に関連付けられているルールに従います。 `Safe` 権限設定を使用するアセンブリは [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 外部のリソースにアクセスできないため、これらのルールは `ExternalAccess` 権限設定および `Unsafe` 権限設定を使用するアセンブリにのみ適用可能です。  
   
 -   現在の実行コンテキストが Windows 認証ログインに対応しており、元の呼び出し側のコンテキストと同じ場合 (つまり、途中に EXECUTE AS が存在しない場合)、 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] は Windows 認証ログインの権限を借用してからリソースにアクセスします。  
   
 -   元の呼び出し側のコンテキストを変更した中間の EXECUTE AS が存在する場合、外部リソースへのアクセスは失敗します。  
   
- `ImpersonationMode`にプロパティを設定することができます`ImpersonateCurrentUser`または`ImpersonateAnonymous`します。 既定の設定、 `ImpersonateCurrentUser`、現在のユーザーのネットワーク ログイン アカウントでアセンブリを実行します。 場合、`ImpersonateAnonymous`設定を使用すると、実行コンテキストは、Windows ログインのユーザー アカウント iuser _ 対応*servername*サーバー。 これは、制限されたサーバー権限を持つ、インターネット ゲスト アカウントです。 このコンテキストで実行するアセンブリは、ローカル サーバーの制限されたリソースにのみアクセスできます。  
+ `ImpersonationMode` プロパティは、`ImpersonateCurrentUser` または `ImpersonateAnonymous` に設定できます。 既定の設定、`ImpersonateCurrentUser` は、現在のユーザーのネットワーク ログイン アカウントでアセンブリを実行します。 場合、`ImpersonateAnonymous`設定を使用すると、実行コンテキストは、Windows ログインのユーザー アカウント iuser _ 対応*servername*サーバー。 これは、制限されたサーバー権限を持つ、インターネット ゲスト アカウントです。 このコンテキストで実行するアセンブリは、ローカル サーバーの制限されたリソースにのみアクセスできます。  
   
 ### <a name="application-domains"></a>アプリケーション ドメイン  
  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] はアプリケーション ドメインを直接公開しません。 各アプリケーション ドメインは、同じアプリケーション ドメイン内で実行される一連のアセンブリにより、.NET Framework の `System.Reflection` 名前空間または他の方法を使用して実行時に互いを検出し、遅延バインドで互いの呼び出しを行うことができます。 このような呼び出しは、 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 認証ベース セキュリティによって使用される権限のチェック対象になります。  

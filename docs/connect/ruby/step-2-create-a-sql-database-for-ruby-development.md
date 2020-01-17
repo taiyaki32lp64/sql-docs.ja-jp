@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: bffa9c3d-cf88-4cf4-8110-d11f7948980d
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: e44bf1d173f3088c71713d6ddc276676f2b18411
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ca5a6ca1709dd588dcf337262bea76f9f00f0319
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47662260"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67935640"
 ---
 # <a name="step-2-create-a-sql-database-for-ruby-development"></a>ステップ 2: Ruby 開発用の SQL データベースを作成する
 

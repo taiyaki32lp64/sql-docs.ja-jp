@@ -21,11 +21,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 2cbc3571aa26728fa94957bb0c2f207ff769f4c4
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54129572"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62721794"
 ---
 # <a name="replication-management-objects-concepts"></a>Replication Management Objects Concepts
   レプリケーション管理オブジェクト (RMO) は、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] のレプリケーション機能をカプセル化するマネージド コード アセンブリです。 RMO は <xref:Microsoft.SqlServer.Replication> 名前空間により実装されます。  
@@ -84,7 +84,7 @@ ms.locfileid: "54129572"
     > [!NOTE]  
     >  複数のファイルを選択するには、&lt;localizedText&gt;Ctrl&lt;/localizedText&gt; キーを押しながら各ファイルをクリックします。  
   
-8.  (省略可) 手順 6. を繰り返します。 **[参照]** タブをクリックして [!INCLUDE[ssInstallPath](../../../includes/ssinstallpath-md.md)]COM に移動し、Microsoft.SqlServer.Replication.BusinessLogicSupport.dll を選択した後、**[OK]** をクリックします。  
+8.  (省略可) 手順 6. を繰り返します。 **[参照]** タブをクリックして [!INCLUDE[ssInstallPath](../../../includes/ssinstallpath-md.md)]COM に移動し、Microsoft.SqlServer.Replication.BusinessLogicSupport.dll を選択した後、 **[OK]** をクリックします。  
   
 9. **[表示]** メニューの **[コード]** をクリックします。  
   
@@ -124,7 +124,7 @@ ms.locfileid: "54129572"
     > [!NOTE]  
     >  複数のファイルを選択するには、&lt;localizedText&gt;Ctrl&lt;/localizedText&gt; キーを押しながら各ファイルをクリックします。  
   
-8.  (省略可) 手順 6. を繰り返します。 **[参照]** タブをクリックして [!INCLUDE[ssInstallPath](../../../includes/ssinstallpath-md.md)]COM に移動し、Microsoft.SqlServer.Replication.BusinessLogicSupport.dll を選択した後、**[OK]** をクリックします。  
+8.  (省略可) 手順 6. を繰り返します。 **[参照]** タブをクリックして [!INCLUDE[ssInstallPath](../../../includes/ssinstallpath-md.md)]COM に移動し、Microsoft.SqlServer.Replication.BusinessLogicSupport.dll を選択した後、 **[OK]** をクリックします。  
   
 9. **[表示]** メニューの **[コード]** をクリックします。  
   

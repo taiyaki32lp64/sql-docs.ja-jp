@@ -9,16 +9,19 @@ ms.custom: ''
 ms.technology: integration-services
 author: swinarko
 ms.author: sawinark
-ms.reviewer: douglasl
-manager: craigg
-ms.openlocfilehash: 2276b2d769128be1d8ce5cbd44c992f08ddf625b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.reviewer: maghan
+ms.openlocfilehash: c553e650dcbcfabc8ad2d18ce490221c0d2439ee
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47786240"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68054604"
 ---
 # <a name="schedule-the-execution-of-ssis-packages-deployed-in-azure-with-sql-server-management-studio-ssms"></a>SQL Server Management Studio (SSMS) を利用し、Azure でデプロイされた SSIS パッケージの実行スケジュールを設定します
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
 
 SQL Server Management Studio (SSMS) を使用して、Azure SQL Database にデプロイされた SSIS パッケージのスケジュールを設定することができます。 オンプレミス SQL Server と SQL Database Managed Instance にはファースト クラス SSIS ジョブ スケジューラーとしてそれぞれ、SQL Server エージェントと Managed Instance Agent があります。 一方、SQL Database には、ファースト クラス SSIS ジョブ スケジューラーが組み込まれていません。 この記事で説明する SSMS 機能は SQL Server エージェントに似た、おなじみのインターフェイスを備えており、SQL Database にデプロイされているパッケージをそのインターフェイスでスケジュール設定できます。
 
@@ -39,7 +42,7 @@ SSMS を使用してパッケージのスケジュールを設定するとき、
 
 ## <a name="schedule-a-package-in-ssms"></a>SSMS でパッケージのスケジュールを設定する
 
-1. SSMS のオブジェクト エクスプローラーで、SSISDB データベースを選択し、フォルダーを選択し、プロジェクトを選択し、パッケージを選択します。 パッケージを右クリックし、**[スケジュール]** を選択します。
+1. SSMS のオブジェクト エクスプローラーで、SSISDB データベースを選択し、フォルダーを選択し、プロジェクトを選択し、パッケージを選択します。 パッケージを右クリックし、 **[スケジュール]** を選択します。
 
     ![スケジュールを設定するパッケージを選択します。](media/ssis-azure-schedule-packages-ssms/schedule-ssms-image1-schedule.png)
 
@@ -59,7 +62,7 @@ SSMS を使用してパッケージのスケジュールを設定するとき、
 
     ![新しいスケジュールの確認](media/ssis-azure-schedule-packages-ssms/schedule-ssms-image5-confirmation.png)
 
-6. スケジュールのトリガーをカスタマイズするには、**[トリガー]** メニューから **[New/Edit]\(新規/編集\)** を選択します。
+6. スケジュールのトリガーをカスタマイズするには、 **[トリガー]** メニューから **[New/Edit]\(新規/編集\)** を選択します。
 
     ![新しいパイプラインを任意で編集する](media/ssis-azure-schedule-packages-ssms/schedule-ssms-image6-edit.png)
 

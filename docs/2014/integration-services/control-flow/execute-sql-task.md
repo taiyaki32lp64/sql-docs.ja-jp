@@ -14,15 +14,15 @@ helpviewer_keywords:
 - batches [Integration Services]
 - Execute SQL task [Integration Services]
 ms.assetid: bebb2e8c-0410-43b2-ac2f-6fc80c8f2e9e
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 64e3a60d767c100ad66a293f1e588369a140d1e8
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 6be23e1a45f2b2ed0cc055c5032a72ffe2387399
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53367314"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62831770"
 ---
 # <a name="execute-sql-task"></a>SQL 実行タスク
   SQL 実行タスクは、パッケージ内の SQL ステートメントやストアド プロシージャを実行します。 このタスクには、1 つの SQL ステートメントまたは順に実行される複数の SQL ステートメントを含めることができます。 SQL 実行タスクは、次の目的で使用できます。  
@@ -56,7 +56,7 @@ ms.locfileid: "53367314"
   
  SQL ステートメントがファイルに格納されている場合、タスクはファイル接続マネージャーを使用してそのファイルに接続します。 詳しくは「 [File Connection Manager](../connection-manager/file-connection-manager.md)」をご覧ください。  
   
- [!INCLUDE[ssIS](../../includes/ssis-md.md)] デザイナーでは、**[SQL 実行タスク エディター]** ダイアログ ボックスを使用して SQL ステートメントを入力できます。また、SQL クエリを作成するためのグラフィカル ユーザー インターフェイスである**クエリ ビルダー**を使用することもできます。 詳細については、「[SQL 実行タスク エディター &#40;[全般] タブ&#41;](../execute-sql-task-editor-general-page.md)」と「[クエリ ](../query-builder.md)」を参照してください。  
+ [!INCLUDE[ssIS](../../includes/ssis-md.md)] デザイナーでは、 **[SQL 実行タスク エディター]** ダイアログ ボックスを使用して SQL ステートメントを入力できます。また、SQL クエリを作成するためのグラフィカル ユーザー インターフェイスである**クエリ ビルダー**を使用することもできます。 詳細については、「[SQL 実行タスク エディター &#40;[全般] タブ&#41;](../execute-sql-task-editor-general-page.md)」と「[クエリ ](../query-builder.md)」を参照してください。  
   
 > [!NOTE]  
 >  有効な SQL ステートメントが SQL 実行タスクの外部に記述されている場合、SQL 実行タスクは解析に失敗することがあります。  

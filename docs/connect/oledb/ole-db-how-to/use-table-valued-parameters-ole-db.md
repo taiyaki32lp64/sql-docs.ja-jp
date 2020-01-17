@@ -1,5 +1,5 @@
 ---
-title: テーブル値パラメーター (OLE DB) の使用 |Microsoft Docs
+title: テーブル値パラメーターを使用する (OLE DB) |Microsoft Docs
 description: テーブル値パラメーターの使用 (OLE DB)
 ms.custom: ''
 ms.date: 06/14/2018
@@ -10,13 +10,12 @@ ms.technology: connectivity
 ms.topic: reference
 author: pmasl
 ms.author: pelopes
-manager: craigg
-ms.openlocfilehash: 9696baae9c0eaf2d4e4f918e08ea66f653e33ff8
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: 7ec89b3fdafaba7fe81849ab2ae5b2baf926ef83
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53211981"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67994595"
 ---
 # <a name="use-table-valued-parameters-ole-db"></a>テーブル値パラメーターの使用 (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -33,9 +32,9 @@ ms.locfileid: "53211981"
   
 -   ISSCommandWithParameters を使ったカスタム パラメーター プロパティを使用します。  
   
--   MSOLEDBSQL エラーのエラー処理を示しています。  
+-   MSOLEDBSQL エラーのエラー処理を表示します。  
   
- テーブル値パラメーターの詳細については、次を参照してください。[テーブル値パラメーター &#40;OLE DB Driver for SQL Server&#41;](../../oledb/features/table-valued-parameters-oledb-driver-for-sql-server.md)します。  
+ テーブル値パラメーターの詳細については、「[テーブル値パラメーター &#40;OLE DB Driver for SQL Server&#41;](../../oledb/features/table-valued-parameters-oledb-driver-for-sql-server.md)」を参照してください。  
   
 ## <a name="example"></a>例  
  最初の ([!INCLUDE[tsql](../../../includes/tsql-md.md)]) コード リストは、このサンプルで使用するデータベースを作成します。  

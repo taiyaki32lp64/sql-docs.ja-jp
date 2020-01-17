@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: b01cbc62-fbd7-4068-b16c-8b0f80a05887
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 6db04be0a40a71528e325ca314a9224d1d7c6817
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.openlocfilehash: 9f6a1a532b092acb6c23faf4282d40100cc579c6
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51606962"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67963843"
 ---
 # <a name="onerror-event-rds"></a>onError イベント (RDS)
 **OnError**操作中にエラーが発生するたびにイベントが呼び出されます。  
@@ -41,7 +40,7 @@ onError SCode, Description, Source, CancelDisplay
  *[説明]*  
  A**文字列**エラーの説明を示します。  
   
- *Source*  
+ *ソース*  
  A**文字列**クエリまたはエラーの原因となったコマンドを示します。  
   
  *CancelDisplay*  
@@ -50,7 +49,7 @@ onError SCode, Description, Source, CancelDisplay
 ## <a name="applies-to"></a>適用対象  
  [DataControl オブジェクト (RDS)](../../../ado/reference/rds-api/datacontrol-object-rds.md)  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [ADO イベント モデルの例 (vc++)](../../../ado/reference/ado-api/ado-events-model-example-vc.md)   
  [ADO イベント ハンドラーの概要](../../../ado/guide/data/ado-event-handler-summary.md)
 

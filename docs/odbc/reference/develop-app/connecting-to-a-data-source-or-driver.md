@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: e93027ab-9e60-47b7-ba96-8289dae32a22
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: a8c468b71b4c4126386d75c02b368cba9965fe1e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d51d92ae02084ea46c2a8bd2d73a27f0154e1a95
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47754610"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68083141"
 ---
 # <a name="connecting-to-a-data-source-or-driver"></a>データ ソースまたはドライバーへの接続
 アプリケーションは、任意の数のドライバーとデータ ソースに接続できます。 さまざまなドライバーとデータ ソース、同じドライバーとのさまざまなデータ ソース、または同じドライバーとデータ ソースに複数の接続もできます。  

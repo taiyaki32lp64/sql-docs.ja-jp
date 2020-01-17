@@ -12,16 +12,15 @@ helpviewer_keywords:
 ms.assetid: eeb3746d-1c75-4bb0-97b5-2c2d073c8c0e
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 63ed2ae07b4180daba40a5333ddc8f3321f876dd
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 516a26466a4e817fc2fdabffadf8f19dc9593781
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47666556"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67965808"
 ---
 # <a name="keys-collection-properties-methods-and-events"></a>Keys コレクションのプロパティ、メソッド、およびイベント
-## <a name="properties"></a>[プロパティ]  
+## <a name="properties"></a>Properties  
  [Count プロパティ](../../../ado/reference/ado-api/count-property-ado.md)  
   
  [項目のプロパティ](../../../ado/reference/ado-api/item-property-ado.md)  
@@ -36,5 +35,5 @@ ms.locfileid: "47666556"
 ## <a name="events"></a>イベント  
  [なし] :  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [Keys コレクション (ADOX)](../../../ado/reference/adox-api/keys-collection-adox.md)

@@ -1,5 +1,5 @@
 ---
-title: PDOStatement::columnCount |Microsoft Docs
+title: 'PDOStatement:: columnCount |Microsoft Docs'
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 8d89a568-0c7c-40dd-9f54-db7313600df3
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: eae5c8a8074cfbda6c1f3eb57e3f65b1ef0e4b67
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.openlocfilehash: 13b7df0010236103da8d5311ee37ea237e14bf2c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51604152"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67936098"
 ---
 # <a name="pdostatementcolumncount"></a>PDOStatement::columnCount
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]

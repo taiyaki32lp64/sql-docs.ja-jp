@@ -19,16 +19,15 @@ helpviewer_keywords:
 - monitoring [SQL Server], events
 - responding to events automatically
 ms.assetid: f7fbe155-5b68-4777-bc71-a47637471f32
-author: stevestein
-ms.author: sstein
-manager: craigg
+author: markingmyname
+ms.author: maghan
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 47f88b65cb7ad746f3e3ab1ab7b0c7ad95de1196
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: fae6e419838ef4de06e778665c98df023e7eb707
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47715066"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68267508"
 ---
 # <a name="monitor-and-respond-to-events"></a>イベントの監視と応答
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -45,7 +44,7 @@ ms.locfileid: "47715066"
 [ユーザー定義イベントの作成](../../ssms/agent/create-a-user-defined-event.md)  
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]によってあらかじめ定義されているイベント以外のイベントを作成する方法について説明します。  
   
-[演算子](../../ssms/agent/operators.md)  
+[オペレーター](../../ssms/agent/operators.md)  
 ジョブが失敗または成功したときに通知を送信するために [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェントで使用できる、管理者の別名の作成について説明します。  
   
 ## <a name="about-monitoring-and-responding-to-events"></a>イベントの監視と応答について  

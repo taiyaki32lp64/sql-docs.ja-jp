@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 4295a6e5-112d-4595-b18a-57728893ac2d
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 038797e8376b8bff6b0e521ef8b2753d41706fd8
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: f84faca18ad1f4f4bf7e036fa4ccbe0335154a63
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47691320"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67917328"
 ---
 # <a name="recordset-object-properties-methods-and-events"></a>レコード セット オブジェクトのプロパティ、メソッド、およびイベント
 ## <a name="propertiescollections"></a>プロパティ/コレクション  
@@ -136,5 +135,5 @@ ms.locfileid: "47691320"
   
  [WillMove および MoveComplete イベント](../../../ado/reference/ado-api/willmove-and-movecomplete-events-ado.md)  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [Recordset オブジェクト (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)

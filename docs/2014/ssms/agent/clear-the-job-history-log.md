@@ -16,12 +16,12 @@ ms.assetid: 34b9398a-c409-4040-8ea1-0deceb18f961
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 5c9bc55a6a5af15d6d21c4d3e7d74e2dc8296e84
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: d6d4943bf3884933cd60e1c0ef51a54771ee00af
+ms.sourcegitcommit: a165052c789a327a3a7202872669ce039bd9e495
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53363994"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72782772"
 ---
 # <a name="clear-the-job-history-log"></a>Clear the Job History Log
   このトピックでは、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 、または SQL Server 管理オブジェクトを使用して、 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] で [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] [!INCLUDE[tsql](../../includes/tsql-md.md)] or SQL Server Management Objects.  
@@ -42,7 +42,7 @@ ms.locfileid: "53363994"
   
 ##  <a name="BeforeYouBegin"></a> はじめに  
   
-###  <a name="Security"></a> セキュリティ  
+###  <a name="Security"></a> Security  
  詳細については、「 [SQL Server エージェントのセキュリティの実装](implement-sql-server-agent-security.md)」をご覧ください。  
   
 ##  <a name="SSMS"></a> SQL Server Management Studio の使用  
@@ -73,7 +73,7 @@ ms.locfileid: "53363994"
   
 3.  次の例をコピーしてクエリ ウィンドウに貼り付け、 **[実行]** をクリックします。  
   
-    ```  
+    ```sql
     -- example removes the history for a job named NightlyBackups.  
     USE msdb ;  
     GO  
@@ -83,9 +83,9 @@ ms.locfileid: "53363994"
     GO  
     ```  
   
-##  <a name="SMO"></a> SQL Server 管理オブジェクトの使用  
+##  <a name="SMO"></a>SQL Server 管理オブジェクトの使用  
  **ジョブ履歴ログを消去するには**  
   
- 使用して、`PurgeJobHistory`のメソッド、 `JobServer` Visual Basic、Visual c#、PowerShell など、選択したプログラミング言語を使用してクラス。 詳細については、「 [SQL Server 管理オブジェクト (SMO) プログラミング ガイド](https://msdn.microsoft.com/library/ms162169.aspx)」を参照してください。  
+ Visual Basic、ビジュアルC#、PowerShell などのプログラミング言語を使用して、`JobServer` クラスの `PurgeJobHistory` メソッドを使用します。 詳細については、「 [SQL Server 管理オブジェクト (SMO) プログラミング ガイド](https://msdn.microsoft.com/library/ms162169.aspx)」を参照してください。  
   
   

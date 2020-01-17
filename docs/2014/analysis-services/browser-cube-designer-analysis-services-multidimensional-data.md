@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.cubeeditor.browsecube.view.f1
@@ -13,17 +12,17 @@ ms.assetid: efb5ee1c-de50-4bfc-83ff-08a4f03c3ece
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: b15f077132fcc50c89dd93a38525316bf112f0a7
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 4415fedb492eb32c2929c50999cad1542b41ca78
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48093174"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66064619"
 ---
 # <a name="browser-cube-designer-analysis-services---multidimensional-data"></a>[ブラウザー] (キューブ デザイナー) (Analysis Services - 多次元データ)
   キューブ内のディメンション、メジャー、および KPI を探索するには、キューブ デザイナーの **[ブラウザー]** タブを使用します。 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]では、 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] キューブ ブラウザーが MDX クエリ デザイナーに統合され、MDX クエリの作成、キューブのフィルター処理とスライス、階層のドリル ダウンをグラフィカル ユーザー インターフェイスによって行うことができます。  
   
- **[ブラウザー]** タブには、 **デザイン モード** と **クエリ モード**の 2 つのモードがあります。 どちらのモードも、 **[メタデータ]** ペインのオブジェクトを使用してキューブを探索することができ、 **[メタデータ]** ペインからクエリ領域にメンバーをドラッグすることによって、必要なデータを取得するための MDX クエリを構築することができます。  
+ **ブラウザー**タブには 2 つのモード。**デザイン モード**と**クエリ モード**します。 どちらのモードも、 **[メタデータ]** ペインのオブジェクトを使用してキューブを探索することができ、 **[メタデータ]** ペインからクエリ領域にメンバーをドラッグすることによって、必要なデータを取得するための MDX クエリを構築することができます。  
   
  **参照し、グラフィック デザイン モードを使用したクエリ**  
   
@@ -54,15 +53,15 @@ ms.locfileid: "48093174"
  ツール バーには、デザイン ビューまたはクエリ ビューで使用できるツールが表示されます。 ツール バーとその機能の使用方法の詳細については、「[ツール バー &#40;キューブ デザイナーの [アクション] タブ&#41; &#40;Analysis Services - 多次元データ&#41;](toolbar-browser-tab-cube-designer-analysis-services-multidimensional-data.md)」を参照してください。  
   
  **Excel で分析**  
- **[Excel で分析]** 機能を使用すると、現在選択されているキューブ データを Excel に送り、ピボットテーブルでデータをプレビューすることができます。 "現在選択されているデータ" は、**[メタデータ]** ペインから追加した項目と、フィルターとクエリ作成機能を使用して定義したフィルターとに基づいて決まります。 詳細については、「[[Excel で分析] (キューブ デザイナーの [ブラウザー] タブ) (Analysis Services - 多次元データ)](analyze-in-excel-browser-cube-designer-analysis-services-multidimensional-data.md)」を参照してください。  
+ **[Excel で分析]** 機能を使用すると、現在選択されているキューブ データを Excel に送り、ピボットテーブルでデータをプレビューすることができます。 "現在選択されているデータ" は、 **[メタデータ]** ペインから追加した項目と、フィルターとクエリ作成機能を使用して定義したフィルターとに基づいて決まります。 詳細については、「[[Excel で分析] (キューブ デザイナーの [ブラウザー] タブ) (Analysis Services - 多次元データ)](analyze-in-excel-browser-cube-designer-analysis-services-multidimensional-data.md)」を参照してください。  
   
  **メタデータ**  
  キューブに含まれるオブジェクトを表示したり、階層をドリル ダウンしたり、メジャーを探索して使用したりするには、 **[メタデータ]** ペインを使用します。 それらを選択した後で、関連したデータを **[レポート]** ペインで閲覧します。 このペインの詳細については、「[[メタデータ] &#40;キューブ デザイナーの [ブラウザー] タブ&#41; &#40;Analysis Services - 多次元データ&#41;](metadata-browser-tab-cube-designer-analysis-services-multidimensional-data.md)」を参照してください。  
   
  **フィルターとクエリ**  
- デザイン画面のこの領域を使用して、**[メタデータ]** ペインからオブジェクトをドラッグ アンド ドロップしたり、ソース キューブやディメンションに対してフィルターの条件を指定したりすることによって MDX クエリを作成します。 詳細については、「[クエリとフィルター &#40;キューブ デザイナーの [ブラウザー] タブ&#41; &#40;Analysis Services - 多次元データ&#41;](query-filter-browser-cube-designer-analysis-services-multidimensional-data.md)」を参照してください。  
+ デザイン画面のこの領域を使用して、 **[メタデータ]** ペインからオブジェクトをドラッグ アンド ドロップしたり、ソース キューブやディメンションに対してフィルターの条件を指定したりすることによって MDX クエリを作成します。 詳細については、「[クエリとフィルター &#40;キューブ デザイナーの [ブラウザー] タブ&#41; &#40;Analysis Services - 多次元データ&#41;](query-filter-browser-cube-designer-analysis-services-multidimensional-data.md)」を参照してください。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [キューブ オブジェクト&#40;Analysis Services - 多次元データ&#41;](multidimensional-models-olap-logical-cube-objects/cube-objects-analysis-services-multidimensional-data.md)   
  [多次元モデルのキューブ](multidimensional-models/cubes-in-multidimensional-models.md)   
  [キューブ デザイナー &#40;Analysis Services - 多次元データ&#41;](cube-designer-analysis-services-multidimensional-data.md)  

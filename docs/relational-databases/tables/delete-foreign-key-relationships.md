@@ -14,14 +14,13 @@ helpviewer_keywords:
 ms.assetid: 9c9e9ae4-9e03-4137-acb6-b18928a0c4ca
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 1ebe7fa94a66482be35026b2049bdc57e357d9b9
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b35c409389fa657e45ed3fcee57b28c3229dbbd9
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47801980"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72907896"
 ---
 # <a name="delete-foreign-key-relationships"></a>外部キーのリレーションシップの削除
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -32,7 +31,7 @@ ms.locfileid: "47801980"
   
 -   **作業を開始する準備:**  
   
-     [Security](#Security)  
+     [セキュリティ](#Security)  
   
 -   **以下を使用して外部キーの制約を削除するには:**  
   
@@ -40,7 +39,7 @@ ms.locfileid: "47801980"
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> 作業を開始する準備  
+##  <a name="BeforeYouBegin"></a> はじめに  
   
 ###  <a name="Security"></a> セキュリティ  
   
@@ -56,7 +55,7 @@ ms.locfileid: "47801980"
 2.  制約を右クリックし、 **[削除]** をクリックします。  
   
 3.  **[オブジェクトの削除]** ダイアログ ボックスで **[OK]** をクリックします。  
-  
+
 ##  <a name="TsqlProcedure"></a> Transact-SQL の使用  
   
 #### <a name="to-delete-a-foreign-key-constraint"></a>外部キーの制約を削除するには  

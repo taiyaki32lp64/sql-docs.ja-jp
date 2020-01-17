@@ -12,17 +12,20 @@ helpviewer_keywords:
 - SSIS control flow elements
 - SQL Server Integration Services control flow elements
 ms.assetid: 0cc042a9-1a7f-49ed-9f47-091653d5ef6e
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: f8119069b08b2f84bcdf71fa50894eb2e743b88b
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 1b1e6e2278e20cf9ae7b3d31edaebd44ee4d3956
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51640669"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71298386"
 ---
 # <a name="control-flow"></a>[制御フロー]
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   パッケージは、制御フローと、オプションで含まれる 1 つ以上のデータ フローから構成されます。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] に用意されている制御フロー要素は、パッケージ内の構造を提供するコンテナー、機能を提供するタスク、および優先順位制約の 3 種類です。優先順位制約は、実行ファイル、コンテナー、タスクを連結して正しく順序付けされた制御フローを作成するために使用されます。  
   
  詳細については、「 [優先順位制約](../../integration-services/control-flow/precedence-constraints.md)」、「 [Integration Services コンテナー](../../integration-services/control-flow/integration-services-containers.md)」、および「 [Integration Services タスク](../../integration-services/control-flow/integration-services-tasks.md)」を参照してください。  

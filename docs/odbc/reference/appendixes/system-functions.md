@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 36614b4c-e037-43ef-8692-67f4861b144d
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 5870cb445d7afd098aba32ffd9be7a88c048bae5
-ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
+ms.openlocfilehash: e0c7817d37e14ad07b9cc64f59691c27cf665177
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/18/2018
-ms.locfileid: "53591516"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68070092"
 ---
 # <a name="system-functions"></a>システム関数
 次の表は、ODBC スカラー関数のセットに含まれるシステム関数を一覧表示します。 呼び出して**SQLGetInfo**で、*情報の種類*アプリケーションの SQL_SYSTEM_FUNCTIONS、ドライバーがサポートするシステム関数を判断できます。  
@@ -33,5 +32,5 @@ ms.locfileid: "53591516"
 |関数|説明|  
 |--------------|-----------------|  
 |**データベース ()** (ODBC 1.0)|接続ハンドルに対応するデータベースの名前を返します。 (データベースの名前は、呼び出すことによっても使用可能な**SQLGetConnectOption** SQL_CURRENT_QUALIFIER 接続オプションを使用します)。|  
-|**見つかれば (** _exp_、_値_**)** (ODBC 1.0)|場合*exp*が null、*値*が返されます。 場合*exp*が null でない*exp*が返されます。 データ型または型の*値*のデータ型と互換性があります*exp*します。|  
+|**見つかれば (** _exp_、_値_ **)** (ODBC 1.0)|場合*exp*が null、*値*が返されます。 場合*exp*が null でない*exp*が返されます。 データ型または型の*値*のデータ型と互換性があります*exp*します。|  
 |**ユーザー ()** (ODBC 1.0)|DBMS のユーザー名を返します。 (ユーザー名も使用での**SQLGetInfo**情報の種類を指定することで。SQL_USER_NAME。)これは、ログイン名と異なることができます。|

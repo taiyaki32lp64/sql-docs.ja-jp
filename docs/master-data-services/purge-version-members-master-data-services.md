@@ -1,5 +1,5 @@
 ---
-title: バージョン メンバーのパージ (マスター データ サービス) | Microsoft Docs
+title: バージョン メンバーのパージ
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -8,15 +8,14 @@ ms.reviewer: ''
 ms.technology: master-data-services
 ms.topic: conceptual
 ms.assetid: adecce2d-46bb-49ff-8be9-0b31b8dd3cb6
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: b681d06ab2ebb7c26d57fcef3bc34b070d30269e
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
-ms.translationtype: HT
+ms.openlocfilehash: 94543ada58c5af829da6a7650e21f5f4e2deb9bb
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52753204"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73729012"
 ---
 # <a name="purge-version-members-master-data-services"></a>バージョン メンバーのパージ (マスター データ サービス)
 
@@ -24,12 +23,12 @@ ms.locfileid: "52753204"
 
   [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]では、メンバーを削除してもメンバーは非アクティブ化 (論理削除) されるだけです。 データはデータベースに残ります。 このトピックでは、モデル バージョンで論理削除されたすべてのメンバーをパージ (永続的に削除) する方法について説明します。  
   
-## <a name="prerequisites"></a>Prerequisites  
+## <a name="prerequisites"></a>前提条件  
  この手順を実行するには  
   
 -   [バージョン管理] 機能領域にアクセスする権限が必要です。  
   
--   モデル管理者である必要があります。 詳細については、「 [管理者 (マスター データ サービス)](../master-data-services/administrators-master-data-services.md)にアクセスすることなくグループに対してユーザーの追加または削除を行うことができます。  
+-   モデル管理者である必要があります。 詳細については、「[Administrators &#40;Master Data Services&#41; (管理者 &#40;マスター データ サービス&#41;)](../master-data-services/administrators-master-data-services.md)」を参照してください。  
   
 ## <a name="to-purge-soft-deleted-members"></a>論理削除されたメンバーをパージするには  
   
@@ -39,7 +38,7 @@ ms.locfileid: "52753204"
   
 3.  パージするバージョンの行を選択します。  
   
-4.  **[Purge Members]**(メンバーのパージ) をクリックします。  
+4.  **[Purge Members]** (メンバーのパージ) をクリックします。  
   
 5.  確認プロンプトで [OK] をクリックします。  
   

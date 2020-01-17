@@ -15,15 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - STGeomFromText (geometry Data Type)
 ms.assetid: 20cace39-02e5-46c1-a9a5-841d04d0da16
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: 1a3e5ac533e7f207b9f7d1079a37baa3ef351104
-ms.sourcegitcommit: 467b2c708651a3a2be2c45e36d0006a5bbe87b79
+author: MladjoA
+ms.author: mlandzic
+ms.openlocfilehash: 7850a3fec40dcdd6606086d44e626e2e5f57ea93
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53979231"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67950173"
 ---
 # <a name="stgeomfromtext-geometry-data-type"></a>STGeomFromText (geometry データ型)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]

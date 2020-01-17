@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: 7058f4f7-ef3e-4d62-90d1-79299708b1eb
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: dd30a7f645aa4e8513056ed53c97587a45ccaae1
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 7a539ef893788be9e0200b9f412f8c3ed7652b26
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47722920"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67971802"
 ---
 # <a name="sqlserverclob-constructor-sqlserverconnection-javalangstring"></a>SQLServerClob (SQLServerConnection, java.lang.String) コンストラクター
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

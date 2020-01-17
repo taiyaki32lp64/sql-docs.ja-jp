@@ -1,28 +1,34 @@
 ---
-title: SQL Server 2019 CTP 2.0 で外部データを仮想化する | Microsoft Docs
+title: 外部データを仮想化する
 description: このページでは、リレーショナル データ ソースに対して外部テーブルの作成ウィザードを使用する詳細な手順を説明します
-author: Abiola
-ms.author: aboke
-manager: craigg
-ms.date: 12/11/2018
+author: MikeRayMSFT
+ms.author: mikeray
+ms.reviewer: mikeray
+ms.date: 12/13/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: polybase
 monikerRange: '>= sql-server-ver15 || = sqlallproducts-allversions'
-ms.openlocfilehash: a8f5f55dfa0a569ec88542f819e30d21889997e3
-ms.sourcegitcommit: 33712a0587c1cdc90de6dada88d727f8623efd11
+ms.metadata: seo-lt-2019
+ms.openlocfilehash: f4bd7eec24be747fe6c0933d31467410bfecf2a9
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53596673"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75227512"
 ---
 # <a name="use-the-external-table-wizard-with-relational-data-sources"></a>リレーショナル データ ソースで外部テーブル ウィザードを使用する
 
-SQL Server 2019 CTP 2.0 の主なシナリオの 1 つは、データを仮想化する機能です。 このプロセスにより、データを元の場所に置いたままにすることができます。 SQL Server インスタンスでデータを*仮想化*して、SQL Server 内の他のテーブルと同じようにクエリを行うことができます。 このプロセスにより、ETL プロセスの必要性が最小になります。 このプロセスは、PolyBase コネクタを使用することによって可能です。 データ仮想化の詳細については、「[PolyBase 入門](polybase-guide.md)」を参照してください。
+SQL Server 2019 の主なシナリオの 1 つは、データを仮想化する機能です。 このプロセスにより、データを元の場所に置いたままにすることができます。 SQL Server インスタンスでデータを*仮想化*して、SQL Server 内の他のテーブルと同じようにクエリを行うことができます。 このプロセスにより、ETL プロセスの必要性が最小になります。 このプロセスは、PolyBase コネクタを使用することによって可能です。 データ仮想化の詳細については、「[PolyBase 入門](polybase-guide.md)」を参照してください。
+
+このビデオでは、データの仮想化の概要を説明します。
+
+> [!VIDEO https://channel9.msdn.com/Shows/Data-Exposed/Introducing-Data-Virtualization/player?WT.mc_id=dataexposed-c9-niner]
+
 
 ## <a name="start-the-external-table-wizard"></a>外部テーブル ウィザードを起動する
 
-配置スクリプトの最後で取得される IP アドレス/ポート番号 (31433) を使用して、マスター インスタンスに接続します。 オブジェクト エクスプローラーで **[データベース]** ノードを展開します。 次に、既存の SQL Server インスタンスからデータを仮想化するデータベースのいずれかを選択します。 データベースを右クリックして **[外部テーブルを作成する]** を選択し、データ仮想化ウィザードを起動します。 データ仮想化ウィザードは、コマンド パレットから起動することもできます。 Windows では Ctrl + Shift + P キー、Mac では Cmd + Shift + P キーを使用します。
+[**azdata cluster endpoints list**](../../big-data-cluster/deployment-guidance.md#endpoints) コマンドを使用して取得した **sql-server-master** エンドポイントの IP アドレスまたはポート番号を使用して、マスター インスタンスに接続できます。 オブジェクト エクスプローラーで **[データベース]** ノードを展開します。 次に、既存の SQL Server インスタンスからデータを仮想化するデータベースのいずれかを選択します。 データベースを右クリックして **[外部テーブルを作成する]** を選択し、データ仮想化ウィザードを起動します。 データ仮想化ウィザードは、コマンド パレットから起動することもできます。 Windows では Ctrl + Shift + P キー、Mac では Cmd + Shift + P キーを使用します。
 
 ![データ仮想化ウィザード](media/data-virtualization/virtualize-data-wizard.png)
 ## <a name="select-a-data-source"></a>データ ソースを選択する
@@ -44,10 +50,7 @@ SQL Server 2019 CTP 2.0 の主なシナリオの 1 つは、データを仮想�
 ![データベースのマスター キーを作成する](media/data-virtualization/virtualize-data-master-key.png)
 
 > [!IMPORTANT]
-> データベースのマスター キーを既にお持ちの場合は、入力フィールドは制限され、この手順をスキップすることができます。 **[次へ]** をクリックして続行します。
-
-> [!NOTE]
-> 強力なパスワードを選択しない場合、ウィザードの最後のステップで行われます。 これは既知の問題です。
+> データベースのマスター キーを既にお持ちの場合は、この手順は自動的に省略されます。
 
 ## <a name="enter-external-data-source-credentials"></a>外部データ ソースの資格情報を入力する
 
@@ -69,7 +72,7 @@ SQL Server 2019 CTP 2.0 の主なシナリオの 1 つは、データを仮想�
 > [!IMPORTANT]
 >外部テーブル ツールでは、写真型はサポートされていません。 写真型を持つ外部ビューを作成すると、テーブルの作成後にエラーが表示されます。 ただし、テーブルは作成されます。
 
-## <a name="summary"></a>[概要]
+## <a name="summary"></a>まとめ
 
 このステップでは、選択内容の概要が表示されます。 データベース スコープの資格情報の名前と、出力先データベースに作成される外部データ ソース オブジェクトが提供されます。 **[スクリプトの生成]** を選択して、外部データ ソースを作成するために使用される構文を T-SQL でスクリプト化します。 **[作成]** を選択して、外部データ ソース オブジェクトを作成します。
 
@@ -86,6 +89,6 @@ SQL Server 2019 CTP 2.0 の主なシナリオの 1 つは、データを仮想�
 > [!NOTE]
 > **[スクリプトの生成]** は、ウィザードの最後のページにのみ表示されるべきです。 現在は、すべてのページに表示されます。
 
-## <a name="next-steps"></a>次の手順
+## <a name="next-steps"></a>次のステップ
 
 SQL Server のビッグ データ クラスターおよび関連するシナリオについて詳しくは、「[SQL Server ビッグ データ クラスターとは](../../big-data-cluster/big-data-cluster-overview.md)」をご覧ください。

@@ -10,15 +10,15 @@ helpviewer_keywords:
 - XML indexes [SQL Server], modifying
 - modifying indexes
 ms.assetid: 24d50fe1-c6ec-49e6-91a3-9791851ba53d
-author: douglaslMS
-ms.author: douglasl
+author: MightyPen
+ms.author: genemi
 manager: craigg
-ms.openlocfilehash: b41139bf7d2261f884ea078b6e3b8bafcb8c0197
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 67767ae7ec3bda62783281385333fef89481f45d
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48088752"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68195597"
 ---
 # <a name="modify-xml-indexes"></a>XML インデックスの変更
   [ALTER INDEX &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-index-transact-sql)[!INCLUDE[tsql](../../includes/tsql-md.md)] DDL ステートメントを使用すると、既存の XML インデックスや XML 以外のインデックスを変更できます。 ただし、一部の ALTER INDEX オプションは XML インデックスに使用できません。 次のオプションは、XML インデックスの変更時には無効です。  
@@ -29,7 +29,7 @@ ms.locfileid: "48088752"
   
 -   ALTER INDEX ALL を指定すると、このオプションは XML 以外のインデックスと XML インデックスの両方に適用されます。 一方の種類のインデックスでは無効なインデックス オプションが指定される場合があります。 その場合、ステートメント全体が失敗します。  
   
-## <a name="example-modifying-an-xml-index"></a>例 : XML インデックスの変更  
+## <a name="example-modifying-an-xml-index"></a>例: XML インデックスの変更  
  次の例では、XML インデックスを作成後、 `ALLOW_ROW_LOCKS` オプションを `OFF`に設定してインデックスを変更します。 `ALLOW_ROW_LOCKS` が `OFF`の場合、行はロックされないので、ページレベルおよびテーブルレベルのロックを使用して、指定したインデックスにアクセスできます。  
   
 ```  
@@ -50,7 +50,7 @@ ALTER INDEX PIdx_T_XmlCol on T
 SET (ALLOW_ROW_LOCKS = OFF)  
 ```  
   
-## <a name="example-disabling-and-enabling-an-xml-index"></a>例 : XML インデックスの無効化と有効化  
+## <a name="example-disabling-and-enabling-an-xml-index"></a>例: XML インデックスの無効化と有効化  
  既定では、XML インデックスは有効です。 XML インデックスが無効になっている場合、その XML 列に実行されるクエリでは XML インデックスが使用されません。 XML インデックスを有効にするには、 `ALTER INDEX` オプションを指定した `REBUILD` を使用します。  
   
 ```  
@@ -70,7 +70,7 @@ ALTER INDEX PIdx_T_XmlCol on T REBUILD
 Go  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [XML インデックス &#40;SQL Server&#41;](xml-indexes-sql-server.md)  
   
   

@@ -25,13 +25,12 @@ helpviewer_keywords:
 ms.assetid: 70866dac-0a8f-4235-8108-51547949ada4
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: a7790e54a3418a7771f2355a071db9b8aab7a1d9
-ms.sourcegitcommit: 7c052fc969d0f2c99ad574f99076dc1200d118c3
+ms.openlocfilehash: c2418bedb172464002fd640a50c8b57f3daca712
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/01/2019
-ms.locfileid: "55570775"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68071253"
 ---
 # <a name="alter-partition-function-transact-sql"></a>ALTER PARTITION FUNCTION (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -39,7 +38,7 @@ ms.locfileid: "55570775"
 境界値の分割または結合によって、パーティション関数を変更します。 ALTER PARTITION FUNCTION ステートメントを実行すると、1 つのテーブル パーティションやパーティション関数を使用するインデックスを、2 つのパーティションに分割できます。 また、そのステートメントは 2 つのパーティションを 1 つのパーティションにマージすることもできます。  
   
 > [!CAUTION]  
->  複数のテーブルやインデックスで同じパーティション関数を使用できます。 ALTER PARTITION FUNCTION は、1 回のトランザクションでこれらすべてを操作できます。  
+>  複数のテーブルやインデックスで同じパーティション関数を使用できます。 ALTER PARTITION FUNCTION では、1 回のトランザクションでこれらすべてを操作できます。  
   
 ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -80,7 +79,7 @@ MERGE [ RANGE ( *boundary_value*) ]
 空のパーティションは、常にパーティションの範囲の両端に保持します。 パーティションの分割やパーティションのマージによりデータ移動が発生しないように、パーティションを両端に保持します。 パーティションの分割は最初に発生し、パーティションのマージは最後に発生します。 設定されたパーティションが分割またはマージされないようにします。 データが入力されているパーティションの分割やマージは効率的でなくなることがあります。 非効率になる理由は、分割やマージによりログの生成が最大で 4 倍になり、大量のロックが発生する場合があるためです。  
   
 ## <a name="limitations-and-restrictions"></a>制限事項と制約事項  
-ALTER PARTITION FUNCTION は、1 回のアトミックな操作で、その関数を使用するすべてのテーブルおよびインデックスのパーティションを分割し直します。 しかし、この操作はオフラインで実行され、分割し直すエクステントによってはリソースを大きく消費します。  
+ALTER PARTITION FUNCTION は、1 回のアトミックな操作で、その関数を使用するすべてのテーブルおよびインデックスのパーティションを分割し直します。 しかし、この操作はオフラインで実行され、分割し直すエクステントによってはリソースを大きく消費する場合があります。  
   
 ALTER PARTITION FUNCTION は、1 つのパーティションを 2 つに分割する、または 2 つのパーティションを 1 つにマージするときにのみ使用します。 他のパーティション分割方法でテーブルを変更する (たとえば、10 のパーティションを 5 つにする) には、次のいずれかを実行します。 システムの構成に応じて、これらの方法のリソース消費量は異なる場合があります。  
   
@@ -99,7 +98,7 @@ ALTER PARTITION FUNCTION の影響を受けるすべてのファイル グルー
   
 ALTER PARTITION FUNCTION は、そのパーティション関数を使用するテーブル上に無効化されたクラスター化インデックスが存在すると失敗します。  
   
-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、パーティション関数の変更に関するレプリケーションはサポートされていません。 パブリケーション データベース内のパーティション関数への変更は、手動でサブスクリプション データベースに適用させる必要があります。  
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、パーティション関数の変更に関するレプリケーションはサポートされていません。 パブリケーション データベース内のパーティション関数への変更は、手動でサブスクリプション データベースに適用する必要があります。  
   
 ## <a name="permissions"></a>アクセス許可  
 次の権限のいずれかを使用すると、ALTER PARTITION FUNCTION を実行できます。  

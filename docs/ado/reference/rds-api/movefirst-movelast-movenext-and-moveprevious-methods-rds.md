@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 45c80bb5-136f-4204-9df2-78740fa55574
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 3afc55ca26a8462eb5662287288ee885f9104a8c
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.openlocfilehash: 8e99ff17cad2bebcfaed509788ea3721ddfeb0ce
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51606686"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67963884"
 ---
 # <a name="movefirst-movelast-movenext-and-moveprevious-methods-rds"></a>MoveFirst、MoveLast、MoveNext、MovePrevious メソッド (RDS)
 First、last に移動します。 次に、または前のレコードを、指定した[レコード セット](../../../ado/reference/ado-api/recordset-object-ado.md)オブジェクト。  
@@ -47,7 +46,7 @@ DataControl.Recordset.{MoveFirst | MoveLast | MoveNext | MovePrevious}
 ## <a name="applies-to"></a>適用対象  
  [DataControl オブジェクト (RDS)](../../../ado/reference/rds-api/datacontrol-object-rds.md)  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [Move メソッド (ADO)](../../../ado/reference/ado-api/move-method-ado.md)   
  [MoveFirst、MoveLast、MoveNext、MovePrevious メソッド (ADO)](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)   
  [MoveRecord メソッド (ADO)](../../../ado/reference/ado-api/moverecord-method-ado.md)

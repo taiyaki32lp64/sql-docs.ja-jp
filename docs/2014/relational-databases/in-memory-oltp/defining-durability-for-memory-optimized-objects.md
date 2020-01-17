@@ -11,11 +11,11 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: ecf171c8c50e1f7ce1e7cdc9e86cd27ac6fe558b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48169552"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63161994"
 ---
 # <a name="defining-durability-for-memory-optimized-objects"></a>メモリ最適化オブジェクトの持続性の定義
   インメモリ OLTP では、完全な原子性、一貫性、分離性、および完全な持続性 (ACID) の各プロパティが保証されます。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] およびメモリ最適化テーブルのコンテキストにおける持続性では、次の事項が保証されます。  
@@ -34,7 +34,7 @@ ms.locfileid: "48169552"
  メモリ最適化テーブルには持続性のオプションが 2 つあります。  
   
  SCHEMA_ONLY (持続性のないテーブル)  
- このオプションは、インデックスを含むテーブル スキーマの持続性を確認します。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] を再起動すると、持続性のないテーブルが再作成されますが、最初はデータがありません  (これは tempdb のテーブルとは異なり、テーブルとテーブルのデータはどちらも再起動時に失われます)。持続性のないテーブルを作成するための一般的なシナリオは、ETL プロセスのステージング テーブルなどの一時的なデータを格納することです。 SCHEMA_ONLY の持続性により、トランザクションのログ記録とチェックポイントの両方が回避されるため、I/O 操作が大幅に減少します。  
+ このオプションは、インデックスを含むテーブル スキーマの持続性を確認します。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] を再起動すると、持続性のないテーブルが再作成されますが、最初はデータがありません (これは tempdb のテーブルとは異なり、テーブルとテーブルのデータはどちらも再起動時に失われます)。持続性のないテーブルを作成するための一般的なシナリオは、ETL プロセスのステージング テーブルなどの一時的なデータを格納することです。 SCHEMA_ONLY の持続性により、トランザクションのログ記録とチェックポイントの両方が回避されるため、I/O 操作が大幅に減少します。  
   
  SCHEMA_AND_DATA (持続性のあるテーブル)  
  このオプションは、スキーマとデータの両方の持続性を提供します。 データ持続性のレベルは、完全に持続性があるトランザクションと持続性に遅延が生じているトランザクションのどちらとしてコミットするかによって異なります。 完全に持続性があるトランザクションでは、ディスク ベース テーブルの場合と同様に、データとスキーマに対して同じ持続性が保証されます。 遅延した持続性ではパフォーマンスが向上しますが、サーバー クラッシュまたはフェールオーバー時にデータが失われる場合があります。 (遅延持続性の詳細については、「 [コントロールのトランザクションの持続性](../logs/control-transaction-durability.md)」を参照してください。)  

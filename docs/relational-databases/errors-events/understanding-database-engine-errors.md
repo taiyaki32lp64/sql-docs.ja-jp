@@ -15,14 +15,13 @@ helpviewer_keywords:
 ms.assetid: ddaca9d3-956f-46a5-8cd3-a7a15ec75878
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: aaf30ad3a99c8ffbe469413a315db26ad2e3b79e
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 91ef40f0c1b5250cde244130b146479cf14fa9fc
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52532778"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67903752"
 ---
 # <a name="understanding-database-engine-errors"></a>データベース エンジン エラーについて
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -39,7 +38,7 @@ ms.locfileid: "52532778"
   
  [!INCLUDE[ssDE](../../includes/ssde-md.md)] のインスタンス内のすべてのシステム エラー メッセージおよびユーザー定義のエラー メッセージは、 **sys.messages** カタログ ビューに含まれています。 RAISERROR ステートメントを使用すると、アプリケーションにユーザー定義エラーを返すことができます。  
   
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] **SQLClient** 名前空間、ActiveX Data Objects (ADO)、OLE DB、Open Database Connectivity (ODBC) などのデータベース API はすべて、基本的なエラー属性を報告します。 この情報には、エラー番号およびメッセージ文字列が含まれています。 ただし、すべての API で他のすべてのエラー属性が報告されるわけではありません。  
+ [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] **SQLClient** 名前空間、ActiveX Data Objects (ADO)、OLE DB、Open Database Connectivity (ODBC) などのデータベース API はすべて、基本的なエラー属性を報告します。 この情報には、エラー番号およびメッセージ文字列が含まれています。 ただし、すべての API で他のすべてのエラー属性が報告されるわけではありません。  
   
  TRY...CATCH 構造の TRY ブロックの適用範囲内で発生したエラーの詳細は、関連付けられた CATCH ブロックの適用範囲内で ERROR_LINE、ERROR_MESSAGE、ERROR_NUMBER、ERROR_PROCEDURE、ERROR_SEVERITY、ERROR_STATE などの関数を使用して [!INCLUDE[tsql](../../includes/tsql-md.md)] コードで取得することができます。 詳細については、「 [TRY...CATCH &#40;Transact-SQL&#41;](../../t-sql/language-elements/try-catch-transact-sql.md)」を参照してください。  
   

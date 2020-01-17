@@ -1,7 +1,7 @@
 ---
 title: table_constraint (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 09/11/2018
+ms.date: 03/01/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -16,15 +16,14 @@ helpviewer_keywords:
 ms.assetid: ac2a11e0-cc77-4e27-b107-4fe5bc6f5195
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: ef0833709d409e7393d71a402b823375b895fb2a
-ms.sourcegitcommit: c6e71ed14198da67afd7ba722823b1af9b4f4e6f
+ms.openlocfilehash: 92e12a2991d03c125e3247d1dd681b0a5754e2f9
+ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/16/2019
-ms.locfileid: "54327394"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "73981991"
 ---
-# <a name="alter-table-tableconstraint-transact-sql"></a>ALTER TABLE table_constraint (Transact-SQL)
+# <a name="alter-table-table_constraint-transact-sql"></a>ALTER TABLE table_constraint (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   [ALTER TABLE](../../t-sql/statements/alter-table-transact-sql.md) を使用してテーブルに追加される PRIMARY KEY、UNIQUE、FOREIGN KEY、CHECK 制約、または DEFAULT 定義のプロパティを指定します。  
@@ -54,7 +53,7 @@ ms.locfileid: "54327394"
           [ , {node_table TO node_table }]
           [ , ...n ]
         )
-        [ ON DELETE NO ACTION]
+        [ ON DELETE { NO ACTION | CASCADE } ]
     | DEFAULT constant_expression FOR column [ WITH VALUES ]   
     | CHECK [ NOT FOR REPLICATION ] ( logical_expression )  
 }  
@@ -78,7 +77,7 @@ ms.locfileid: "54327394"
   
  テーブルに既存のクラスター化制約またはクラスター化インデックスがある場合、CLUSTERED は指定できません。 テーブルにクラスター化制約またはクラスター化インデックスが既に存在する場合、PRIMARY KEY 制約には既定で NONCLUSTERED が適用されます。  
   
- **ntext**、**text**、**varchar(max)**、**nvarchar(max)**、**varbinary(max)**、**xml**、**image** データ型の列を、インデックスの列として指定することはできません。  
+ **ntext**、**text**、**varchar(max)** 、**nvarchar(max)** 、**varbinary(max)** 、**xml**、**image** データ型の列を、インデックスの列として指定することはできません。  
   
  *column*  
  新しい制約で使用される列または列の一覧を指定します。一覧の場合はかっこで囲みます。  
@@ -86,14 +85,14 @@ ms.locfileid: "54327394"
  [ **ASC** | DESC ]  
  テーブル制約に参加している 1 つ以上の列が並べ替えられる順序を指定します。 既定値は ASC です。  
   
- WITH FILLFACTOR **=**_fillfactor_  
+ WITH FILLFACTOR **=** _fillfactor_  
  インデックス データの格納に使用される個々のインデックス ページを [!INCLUDE[ssDE](../../includes/ssde-md.md)] がどの程度埋めるかを指定します。 ユーザーが指定できる *fillfactor* の値は、1 ～ 100 です。 値を指定しない場合の既定値は 0 です。  
   
 > [!IMPORTANT]  
 >  マニュアルには、WITH FILLFACTOR = *fillfactor* が PRIMARY KEY 制約または UNIQUE 制約に適用される唯一のインデックス オプションとして記述されていますが、これは旧バージョンとの互換性を維持するために記載されており、将来のリリースではこのような記述はなくなります。 ALTER TABLE の [index_option](../../t-sql/statements/alter-table-index-option-transact-sql.md) 句で他のインデックス オプションも指定できます。  
   
- ON { _partition\_scheme\_name_**(**_partition\_column\_name_**)** | _filegroup_| **"** default **"** }  
- **適用対象**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]  
+ ON { _partition\_scheme\_name_ **(** _partition\_column\_name_ **)**  | _filegroup_|  **"** default **"** }  
+ **適用対象**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 以降。  
   
  制約に対して作成されるインデックスの格納場所を指定します。 *partition_scheme_name* を指定した場合、インデックスがパーティション分割され、分割後のパーティションは *partition_scheme_name* で指定したファイル グループにマップされます。 *filegroup* を指定すると、インデックスは指定されたファイル グループに作成されます。 **"** default **"** を指定するか、ON を指定しなかった場合、インデックスはテーブルと同じファイル グループに作成されます。 PRIMARY KEY 制約または UNIQUE 制約のクラスター化インデックスを追加する場合に ON を指定すると、クラスター化インデックスの作成時に、指定したファイル グループにテーブル全体が移動します。  
   
@@ -159,11 +158,11 @@ ms.locfileid: "54327394"
  これに対して、NO ACTION を指定した場合は、**ProductVendor** テーブルに Vendor テーブルの行を参照する行が 1 つでもあると、[!INCLUDE[ssDE](../../includes/ssde-md.md)] ではエラーが発生し、**Vendor** テーブルの行に対する更新操作はロールバックされます。  
   
  NOT FOR REPLICATION  
- **適用対象**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]  
+ **適用対象**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 以降。  
   
  FOREIGN KEY 制約と CHECK 制約に対して指定できます。 制約でこの句を指定すると、レプリケーション エージェントが挿入、更新、削除操作を行う際に制約が適用されません。  
 
- CONNECTION 特定のエッジ制約が接続を許可されるノード テーブルのペアを指定します。  
+ CONNECTION 特定のエッジ制約が接続を許可されるノード テーブルのペアを指定します。 ON DELETE では、エッジ テーブルのエッジ経由で接続されたノードが削除されたとき、そのエッジ テーブルの行に対して行われる動作が指定されます。 
  
  DEFAULT  
  列の既定値を指定します。 DEFAULT 定義を使用すると、既存のデータ行に新しい列の値を設定できます。 DEFAULT 定義は、**timestamp** データ型、IDENTITY プロパティ、既存の DEFAULT 定義、またはバインドされている既定値が指定されている列には追加できません。 列に既定値が既に存在する場合、新しい既定値を追加するには既存の既定値をあらかじめ削除する必要があります。 ユーザー定義型の列に既定値を指定する場合は、その型で *constant_expression* 型からユーザー定義型への暗黙的な変換がサポートされている必要があります。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の旧バージョンとの互換性を保つため、DEFAULT に制約名を割り当てることができます。  

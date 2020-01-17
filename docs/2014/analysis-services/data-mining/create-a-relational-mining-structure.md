@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - dimensions [Analysis Services], data mining
@@ -17,12 +16,12 @@ ms.assetid: 5547d639-377d-4ca7-88fc-ce1f9e2babc5
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 2e77a72246854ef990e0aea9bde80bbc33ce5994
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: d5dbf64a128cb21c7ac0e3d956a3dbdc6b320317
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52505346"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66085379"
 ---
 # <a name="create-a-relational-mining-structure"></a>Create a Relational Mining Structure
   ほとんどのデータ マイニング モデルは、リレーショナル データ ソースに基づいています。 リレーショナル データ マイニング モデルを作成する利点は、キューブの作成という複雑な作業をせずに、アドホック データをまとめ、モデルをトレーニングおよび更新できることです。  
@@ -63,7 +62,7 @@ ms.locfileid: "52505346"
   
      一意のレコードを識別する方法をアルゴリズムで認識できるように、各テーブルにキーを指定する必要があります。入れ子になったテーブルを追加した場合は、関連レコードも指定します。  
   
-     詳細については、「 [マイニング構造列](mining-structure-columns.md)」をご覧ください。  
+     詳細については、「[マイニング構造列](mining-structure-columns.md)」をご覧ください。  
   
 5.  **トレーニング データの指定**:として選択したこのページで、*ケース テーブル*、これは最も重要なデータ分析を含むテーブルです。  
   
@@ -123,7 +122,7 @@ ms.locfileid: "52505346"
  なぜこれが役に立つのでしょうか。 たとえば、クラスター モデルの結果を表示し、特定のクラスターに配置された顧客を確認する必要がある場合、 ドリルスルーを使用すると、連絡先情報などの詳細を表示できます。  
   
 > [!WARNING]  
->  ドリルスルーを使用するには、マイニング構造の作成時にドリルスルーを有効にする必要があります。 モデルのドリルスルーはモデルのプロパティを設定することで後から有効にできますが、マイニング構造のこのオプションは最初に設定する必要があります。 詳細については、「 [ドリルスルー クエリ (データ マイニング)](drillthrough-queries-data-mining.md)」をご覧ください。  
+>  ドリルスルーを使用するには、マイニング構造の作成時にドリルスルーを有効にする必要があります。 モデルのドリルスルーはモデルのプロパティを設定することで後から有効にできますが、マイニング構造のこのオプションは最初に設定する必要があります。 詳細については、「[ドリルスルー クエリ (データ マイニング)](drillthrough-queries-data-mining.md)」をご覧ください。  
   
 ## <a name="see-also"></a>参照  
  [データ マイニング デザイナー](data-mining-designer.md)   

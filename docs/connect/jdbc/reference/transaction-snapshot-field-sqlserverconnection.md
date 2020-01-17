@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: 21c55c0b-76f0-411d-aa13-f606d3524b0e
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 1f7de99cf203eac08c89ec460e7393e0d48d30de
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 05727dfbf345af478afd2c23771c0c8a3f26dc23
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47713060"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67968503"
 ---
 # <a name="transactionsnapshot-field-sqlserverconnection"></a>TRANSACTION_SNAPSHOT フィールド (SQLServerConnection)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

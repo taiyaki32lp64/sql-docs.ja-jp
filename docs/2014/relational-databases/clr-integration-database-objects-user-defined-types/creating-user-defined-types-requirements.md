@@ -21,11 +21,11 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 63f297f1a2a3ae738e00e37acf381b830ced9e7b
-ms.sourcegitcommit: 08b3de02475314c07a82a88c77926d226098e23f
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49120099"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62919660"
 ---
 # <a name="user-defined-type-requirements"></a>ユーザー定義型の要件
   ユーザー定義型 (UDT) をインストールを作成するときに、いくつかの重要な設計上の決定を行う必要があります[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]します。 ほとんどの場合は、UDT を構造体として作成することをお勧めしますが、クラスとして作成することもできます。 UDT の定義は、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] に登録する UDT を作成するための仕様に準拠している必要があります。  
@@ -112,7 +112,7 @@ ms.locfileid: "49120099"
  この UDT のすべてのインスタンスの長さが同じであるかどうかを示します。  
   
  `MaxByteSize`  
- インスタンスのバイト単位の最大サイズ。 `MaxByteSize` は、`UserDefined` シリアル化形式では指定する必要があります。 UDT にユーザー定義のシリアル化を指定した場合、`MaxByteSize` は、ユーザーが定義した形式でシリアル化された UDT の合計サイズを表します。 `MaxByteSize` には、1 ～ 8000 の値を指定するか、UDT が 8000 バイトより大きいことを示す -1 (合計サイズが LOB の最大サイズを超えることはできません) に設定する必要があります。 たとえば、10 文字 (`System.Char`) の文字列プロパティを持つ UDT について考えてみましょう。 BinaryWriter を使用して UDT をシリアル化すると、シリアル化された文字列の合計サイズは 22 バイトになります。このサイズは、2 バイト (Unicode UTF-16 の文字 1 文字) に最大文字数を掛け、さらにバイナリ ストリームのシリアル化から生じるオーバーヘッドの制御バイト 2 バイトを加えたものです。 したがって、`MaxByteSize` の値を確認する場合、シリアル化された UDT の合計サイズは、バイナリ形式にシリアル化されたデータのサイズに、シリアル化によるオーバーヘッドを加えた値と考える必要があります。  
+ インスタンスのバイト単位の最大サイズ。 `MaxByteSize` は、`UserDefined` シリアル化形式では指定する必要があります。 UDT にユーザー定義のシリアル化を指定した場合、`MaxByteSize` は、ユーザーが定義した形式でシリアル化された UDT の合計サイズを表します。 `MaxByteSize` には、1 ～ 8000 の値を指定するか、UDT が 8000 バイトより大きいことを示す -1 (合計サイズが LOB の最大サイズを超えることはできません) に設定する必要があります。 たとえば、10 文字 (`System.Char`) の文字列プロパティを持つ UDT について考えてみましょう。 BinaryWriter を使用して UDT をシリアル化されるとき、シリアル化された文字列の合計サイズは 22 バイト数を示します。Unicode utf-16 の文字ごとに 2 バイトでは、バイトのバイナリ ストリームにシリアル化から生じるオーバーヘッド文字および 2 のコントロールの最大数を掛けます。 したがって、`MaxByteSize` の値を確認する場合、シリアル化された UDT の合計サイズは、バイナリ形式にシリアル化されたデータのサイズに、シリアル化によるオーバーヘッドを加えた値と考える必要があります。  
   
  `ValidationMethodName`  
  UDT のインスタンスの検証に使用するメソッドの名前。  

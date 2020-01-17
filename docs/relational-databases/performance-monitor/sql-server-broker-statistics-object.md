@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: e9e36f01-93f6-4e6e-90c6-c7f3fd121737
 author: julieMSFT
 ms.author: jrasnick
-manager: craigg
-ms.openlocfilehash: ee2c8523751222c17d993360e2a7be08889f708e
-ms.sourcegitcommit: 0c1d552b3256e1bd995e3c49e0561589c52c21bf
+ms.openlocfilehash: 77a6174931924c30b8d482c0bd5d3f4a358f4a10
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/14/2018
-ms.locfileid: "53380523"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67987013"
 ---
 # <a name="sql-server-broker-statistics-object"></a>SQL Server: Broker Statistics オブジェクト
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

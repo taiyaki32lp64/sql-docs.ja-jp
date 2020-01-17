@@ -10,15 +10,15 @@ helpviewer_keywords:
 - users [Master Data Services], adding
 - adding users [Master Data Services]
 ms.assetid: 44262bdd-430c-4337-ac92-9333f54c7039
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: f9b60c47fd7cf05202a5203c1b908c9240cb5a22
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: dacfbba3ea17a46f68745850f2d51b3e016a2e08
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52814194"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65483772"
 ---
 # <a name="add-a-user-master-data-services"></a>ユーザーを追加する (マスター データ サービス)
   ユーザーを **の** [ユーザー] [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] の一覧に追加して、Web アプリケーションに権限を割り当てるプロセスを開始します。 一覧に含まれるユーザーが [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]にアクセスするには、ユーザーの権限を 1 つまたは複数の機能領域およびモデル オブジェクトに付与する必要があります。  

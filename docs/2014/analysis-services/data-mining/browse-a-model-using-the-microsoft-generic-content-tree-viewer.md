@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - mining model content, viewing
@@ -13,12 +12,12 @@ ms.assetid: 4a5f7c51-c704-4214-b05d-21cf735e6d96
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 6e0d945e1fe95fe95d8ed655a0bd6b94e132f3c9
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: bb080721ccb3e5b5aef190eda3d1088df09762c0
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48176288"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66086069"
 ---
 # <a name="browse-a-model-using-the-microsoft-generic-content-tree-viewer"></a>Microsoft 汎用コンテンツ ツリー ビューアーを使用したモデルの参照
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] 汎用マイニング モデル コンテンツ ビューアーは、マイニング アルゴリズムによって発見されたパターンについての詳細情報を提供します。また、分析処理中に生成されたさまざまな統計情報へのアクセスも提供します。 情報の量と種類は、使用されたアルゴリズムによって異なりますが、次のカテゴリを含んでいます。  
@@ -47,10 +46,10 @@ ms.locfileid: "48176288"
 SELECT * FROM [<mining model name>].CONTENT  
 ```  
   
- 詳細については、「 [データ マイニング クエリ](data-mining-queries.md)」をご覧ください。  
+ 詳細については、「 [データ マイニング クエリ](data-mining-queries.md)」を参照してください。  
   
 ## <a name="see-also"></a>関連項目  
- [Microsoft 汎用コンテンツ ツリー ビューアー&#40;データ マイニング&#41;](../microsoft-generic-content-tree-viewer-data-mining.md)   
- [データ マイニング アルゴリズム&#40;Analysis Services - データ マイニング&#41;](data-mining-algorithms-analysis-services-data-mining.md)  
+ [Microsoft 汎用コンテンツ ツリー ビューアー &#40;データ マイニング&#41;](../microsoft-generic-content-tree-viewer-data-mining.md)   
+ [データ マイニング アルゴリズム &#40;Analysis Services - データ マイニング&#41;](data-mining-algorithms-analysis-services-data-mining.md)  
   
   

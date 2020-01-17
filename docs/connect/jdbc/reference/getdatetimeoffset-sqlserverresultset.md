@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 60ec0499-1c2a-4476-9e32-03b9d698fe54
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 67d1f492ab25fec963042bea2195e209fcd988ab
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 305c178c066edead818f58c3e7cdbc9229588e2f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47631420"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67983779"
 ---
 # <a name="getdatetimeoffset-sqlserverresultset"></a>getDateTimeOffset (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -31,6 +30,6 @@ ms.locfileid: "47631420"
 |[getDateTimeOffset (java.lang.string)](../../../connect/jdbc/reference/getdatetimeoffset-java-lang-string-sqlserverresultset.md)|パラメーターに渡されたインデックスを使用して、指定された列の値が Java プログラミング言語の [DateTimeOffset Class](../../../connect/jdbc/reference/datetimeoffset-class.md) オブジェクトとして取得されます。|  
   
 ## <a name="see-also"></a>参照  
- [setDateTimeOffset&#40;int、java.sql.DateTimeOffset&#41; &#40;SQLServerStatement&#41;](../../../connect/jdbc/reference/setdatetimeoffset-int-java-sql-datetimeoffset-sqlserverstatement.md)  
+ [setdatetimeoffset&#40;int、&#41; &#40;SQLServerStatement。&#41;](../../../connect/jdbc/reference/setdatetimeoffset-int-java-sql-datetimeoffset-sqlserverstatement.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: sp_changedistributor_property (TRANSACT-SQL) |Microsoft Docs
+title: sp_changedistributor_property (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -15,18 +15,17 @@ helpviewer_keywords:
 ms.assetid: 04f503a1-307c-4de0-bac6-e6e97d5b6940
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 12ba78e62b0441a76cea2b10ebaf13caec767443
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: 18921fa57cfa203b0d8e5274caeb1e17c385405c
+ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54133902"
+ms.lasthandoff: 08/03/2019
+ms.locfileid: "68771298"
 ---
 # <a name="spchangedistributorproperty-transact-sql"></a>sp_changedistributor_property (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
-  ディストリビューターのプロパティを変更します。 このストアド プロシージャは、ディストリビューター側で任意のデータベースについて実行されます。  
+  ディストリビューターのプロパティを変更します。 このストアドプロシージャは、ディストリビューター側で任意のデータベースに対して実行されます。  
   
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -39,33 +38,31 @@ sp_changedistributor_property [ [ @property= ] 'property' ]
 ```  
   
 ## <a name="arguments"></a>引数  
- [  **@property=**] **'**_プロパティ_**'**  
- 対象となるディストリビューターのプロパティを指定します。 *プロパティ*は**sysname**、これらの値のいずれかを指定できます。  
+`[ @property = ] 'property'`特定のディストリビューターのプロパティを指定します。 *プロパティ*は**sysname**で、次のいずれかの値を指定できます。  
   
-|値|説明|  
+|[値]|説明|  
 |-----------|-----------------|  
 |**heartbeat_interval**|エージェントが進行状況のメッセージをログに記録せずに実行を継続できる最大時間 (分) です。|  
-|NULL (既定値)|使用可能なすべて*プロパティ*値が出力されます。|  
+|NULL (既定値)|使用可能なすべての*プロパティ*値が出力されます。|  
   
- [  **@value=**] **'**_値_**'**  
- 対象となるディストリビューター プロパティの値を指定します。 *値*は**varchar (255)**、既定値は NULL です。  
+`[ @value = ] 'value'`指定されたディストリビュータープロパティの値です。 *値*は**varchar (255)** ,、既定値は NULL です。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  **0** (成功) または**1** (失敗)  
   
 ## <a name="remarks"></a>コメント  
- **sp_changedistributor_property**はあらゆる種類のレプリケーションで使用します。  
+ **sp_changedistributor_property**は、すべての種類のレプリケーションで使用されます。  
   
 ## <a name="example"></a>例  
  [!code-sql[HowTo#sp_changedistributor_property](../../relational-databases/replication/codesnippet/tsql/sp-changedistributor-pro_1.sql)]  
   
 ## <a name="permissions"></a>アクセス許可  
- メンバーのみ、 **sysadmin**固定サーバー ロールが実行できる**sp_changedistributor_property**します。  
+ **Sp_changedistributor_property**を実行できるのは、 **sysadmin**固定サーバーロールのメンバーだけです。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [View and Modify Distributor and Publisher Properties (ディストリビューターとパブリッシャーのプロパティの表示および変更)](../../relational-databases/replication/view-and-modify-distributor-and-publisher-properties.md)   
- [sp_adddistributor &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-adddistributor-transact-sql.md)   
- [sp_dropdistributor &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropdistributor-transact-sql.md)   
+ [sp_adddistributor &#40;transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-adddistributor-transact-sql.md)   
+ [sp_dropdistributor &#40;transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-dropdistributor-transact-sql.md)   
  [sp_helpdistributor &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpdistributor-transact-sql.md)   
  [レプリケーション ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)  
   

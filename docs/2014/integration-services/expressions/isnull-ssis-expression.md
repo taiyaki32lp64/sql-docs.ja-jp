@@ -10,15 +10,15 @@ helpviewer_keywords:
 - null values [Integration Services]
 - ISNULL function
 ms.assetid: 88dbf49e-1307-4dda-b9db-ff1632053550
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 133162f206819fa3dae00ff6e91072ffc8b7140c
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: df3612392859a8b7ed6301587cf4d630b2fecf4a
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52805124"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62769148"
 ---
 # <a name="isnull-ssis-expression"></a>ISNULL (SSIS 式)
   式が NULL かどうかに基づいてブール型の結果を返します。  

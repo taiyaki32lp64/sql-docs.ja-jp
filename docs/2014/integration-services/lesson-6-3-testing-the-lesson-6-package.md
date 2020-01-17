@@ -7,17 +7,17 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: c184c92d-948f-4037-a502-5fabd909c84c
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 027cea0f06d9a673c7c5216c548e907b6326544d
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: c69c75c9dff4bf8d0542dae71cddcf1a431ab063
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52767457"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62890858"
 ---
-# <a name="step-3-testing-the-lesson-6-package"></a>手順 3:レッスン 6 パッケージのテスト
+# <a name="step-3-testing-the-lesson-6-package"></a>手順 3:レッスン 6 のパッケージのコピー
   パッケージを実行すると、VarFolderName パラメーターから Directory プロパティの値が取得されます。  
   
  パッケージの実行時に、Directory プロパティが新しい値に更新されているかどうかを確認するには、パッケージを実行してみます。 3 つのサンプル データ ファイルのみが新しいディレクトリにコピーされるため、データ フローは 3 回だけ実行されます。元のフォルダーの 14 ファイルには反復処理は実行されません。  

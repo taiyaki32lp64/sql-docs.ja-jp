@@ -19,16 +19,15 @@ helpviewer_keywords:
 ms.assetid: ed557fd5-12b0-4cef-9e4f-440b02e99d1f
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 1e200b3bc2cd20ef54b9cd0385a93b876fae1945
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 18d8a456673088f63f6733e9837e81deeec1d224
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47809130"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68125355"
 ---
-# <a name="syspartitionschemes-transact-sql"></a>sys.partition_schemes (Transact-SQL)
+# <a name="syspartitionschemes-transact-sql"></a>sys.partition_schemes (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-pdw-md.md)]
 
   パーティション構成は、各データ領域の行を含む**型**PS. を =  

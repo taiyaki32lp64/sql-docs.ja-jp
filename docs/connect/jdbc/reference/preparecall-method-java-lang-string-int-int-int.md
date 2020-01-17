@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: 81104fd5-75b0-4540-9f48-c3dbf59a8564
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 6691a88bf3012d05893c705c8ee6330d101e18fb
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 0839fb735431adcdc4d1e3d0e7820ca2253cc121
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47830701"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67976239"
 ---
 # <a name="preparecall-method-javalangstring-int-int-int"></a>prepareCall (java.lang.String, int, int, int) メソッド
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -41,9 +40,9 @@ public java.sql.CallableStatement prepareCall(java.lang.String sql,
 #### <a name="parameters"></a>パラメーター  
  *sql*  
   
- SQL ステートメントを含む **String**。  
+ SQL ステートメントを含む**文字列**です。  
   
- *%n タイプ*  
+ *nType*  
   
  結果セットの種類を示す **int** です。  
   
@@ -62,7 +61,7 @@ public java.sql.CallableStatement prepareCall(java.lang.String sql,
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- この prepareCall メソッドは、java.sql.Connection インターフェイスの prepareCall メソッドによって指定されます。  
+ この prepareCall メソッドは、prepareCall インターフェイスのメソッドによって指定されます。  
   
 ## <a name="see-also"></a>参照  
  [prepareCall メソッド &#40;SQLServerConnection&#41;](../../../connect/jdbc/reference/preparecall-method-sqlserverconnection.md)   

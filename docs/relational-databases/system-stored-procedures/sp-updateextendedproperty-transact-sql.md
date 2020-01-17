@@ -17,16 +17,15 @@ helpviewer_keywords:
 ms.assetid: 7f02360f-cb9e-48b4-b75f-29b4bc9ea304
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 347e8d170006cb289b421171851140b18e64f14b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 2f1c1c856cadbb4f005a99d5a5d49dc0c1280a8e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47843850"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67898413"
 ---
-# <a name="spupdateextendedproperty-transact-sql"></a>sp_updateextendedproperty (Transact-SQL)
+# <a name="spupdateextendedproperty-transact-sql"></a>sp_updateextendedproperty (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   既存の拡張プロパティの値を更新します。  
@@ -57,10 +56,10 @@ sp_updateextendedproperty
  更新するプロパティの名前です。 *property_name*は**sysname**NULL にすることはできません。  
   
  [ @value=] {'*値*'}  
- プロパティに関連付ける値です。 *値*は**sql_variant**、既定値は NULL です。 サイズ*値*7,500 バイト以下ができない可能性があります。  
+ プロパティに関連付けられている値です。 *値*は**sql_variant**、既定値は NULL です。 サイズ*値*7,500 バイト以下ができない可能性があります。  
   
  [ @level0type=] {'*level0_object_type*'}  
- ユーザーまたはユーザーが定義した種類です。 *level0_object_type*は**varchar (128)**、既定値は NULL です。 有効な入力値は、アセンブリ、コントラクト、イベント通知、ファイル グループ、メッセージの種類、パーティション関数、パーティション構成、PLAN GUIDE、REMOTE SERVICE BINDING、ROUTE、スキーマ、サービス、ユーザー、トリガー、型、および NULL です。  
+ ユーザーまたはユーザー定義型です。 *level0_object_type*は**varchar (128)** 、既定値は NULL です。 有効な入力値は、アセンブリ、コントラクト、イベント通知、ファイル グループ、メッセージの種類、パーティション関数、パーティション構成、PLAN GUIDE、REMOTE SERVICE BINDING、ROUTE、スキーマ、サービス、ユーザー、トリガー、型、および NULL です。  
   
 > [!IMPORTANT]  
 >  USER および TYPE はレベル 0 の種類は、の将来のバージョンで削除される予定[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]します。 新しい開発作業では、これらの機能の使用を避け、現在これらの機能を使用しているアプリケーションは修正するようにしてください。 USER の代わりに、レベル 0 の種類として SCHEMA を使用してください。 TYPE については、レベル 0 の種類として SCHEMA、レベル 1 の種類として TYPE を使用してください。  
@@ -69,7 +68,7 @@ sp_updateextendedproperty
  指定したレベル 1 のオブジェクトの種類の名前です。 *level0_object_name*は**sysname**既定値は NULL です。  
   
  [ @level1type=] {'*level1_object_type*'}  
- レベル 1 のオブジェクトの種類です。 *level1_object_type*は**varchar (128)** 既定値は NULL です。 有効な値は、AGGREGATE、DEFAULT、FUNCTION、LOGICAL FILE NAME、PROCEDURE、QUEUE、RULE、SYNONYM、TABLE、TABLE_TYPE、TYPE、VIEW、XML SCHEMA COLLECTION、および NULL です。  
+ レベル 1 のオブジェクトの種類です。 *level1_object_type*は**varchar (128)** 既定値は NULL です。 有効な入力値は、集計、既定値、関数、論理ファイル名、プロシージャ、キュー、ルール、シノニム、テーブル、TABLE_TYPE、タイプ、ビュー、XML スキーマ コレクション、および NULL です。  
   
  [ @level1name=] {'*level1_object_name*'}  
  指定したレベル 1 のオブジェクトの種類の名前です。 *level1_object_name*は**sysname**既定値は NULL です。  
@@ -91,11 +90,11 @@ sp_updateextendedproperty
 ## <a name="permissions"></a>アクセス許可  
  固定データベース ロール db_owner および db_ddladmin のメンバーは、任意のオブジェクトの拡張プロパティを更新できます。ただし、例外として、db_ddladmin はデータベース自体、ユーザー、およびロールに対しては、プロパティを追加できません。  
   
- ユーザーは、自身が所有するオブジェクト、および ALTER 権限または CONTROL 権限を持つオブジェクトの拡張プロパティを更新できます。  
+ ユーザーは、拡張プロパティを更新できます所有するオブジェクトをおよび ALTER または CONTROL 権限を持ちます。  
   
 ## <a name="examples"></a>使用例  
   
-### <a name="a-updating-an-extended-property-on-a-column"></a>A. 列の拡張プロパティを更新する  
+### <a name="a-updating-an-extended-property-on-a-column"></a>A. 列の拡張プロパティを更新しています  
  次の例では、プロパティの値を更新する`Caption`列`ID`テーブルで`T1`します。  
   
 ```  
@@ -120,7 +119,7 @@ EXEC sp_updateextendedproperty
 GO  
 ```  
   
-### <a name="b-updating-an-extended-property-on-a-database"></a>B. データベースの拡張プロパティを更新する  
+### <a name="b-updating-an-extended-property-on-a-database"></a>B. データベースでの拡張プロパティを更新しています  
  次の例は最初に、拡張プロパティを作成、[!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)]サンプル データベースし、そのプロパティの値を更新します。  
   
 ```  
@@ -136,7 +135,7 @@ EXEC sp_updateextendedproperty
 GO  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [データベース エンジン ストアド プロシージャ&#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
  [sys.fn_listextendedproperty &#40;TRANSACT-SQL&#41;](../../relational-databases/system-functions/sys-fn-listextendedproperty-transact-sql.md)   
  [sp_addextendedproperty &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addextendedproperty-transact-sql.md)   

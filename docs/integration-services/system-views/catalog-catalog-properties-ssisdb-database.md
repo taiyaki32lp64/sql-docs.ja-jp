@@ -8,17 +8,20 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: language-reference
 ms.assetid: e604a382-95c8-4764-b268-742eb5c6d4cf
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: 0fa4d428ad10adf53118e901befcb10cede7f421
-ms.sourcegitcommit: 40c3b86793d91531a919f598dd312f7e572171ec
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 9b5f7628f0284cb4662f0cf88bff1fd80cb2014e
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53328922"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71295229"
 ---
-# <a name="catalogcatalogproperties-ssisdb-database"></a>catalog.catalog_properties (SSISDB データベース)
+# <a name="catalogcatalog_properties-ssisdb-database"></a>catalog.catalog_properties (SSISDB データベース)
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] カタログのプロパティを表示します。  

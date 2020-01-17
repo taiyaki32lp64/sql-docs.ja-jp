@@ -2,7 +2,7 @@
 title: MSReportServer_Instance クラス | Microsoft Docs
 ms.date: 03/01/2017
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: wmi-provider-library-reference
 ms.topic: conceptual
 apiname:
@@ -14,14 +14,14 @@ helpviewer_keywords:
 - WMI provider [Reporting Services], MSReportServer_Instance class
 - MSReportServer_Instance class
 ms.assetid: 0c2e8587-1dda-4e7b-8ef8-646fcda051fc
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 96869c5e7ee2e6af76da2cdfe69fb185133bb7bb
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 92b678e0b9cc07cacfc6501b75b3e9d5c2889e12
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47633390"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65572255"
 ---
 # <a name="msreportserverinstance-class"></a>MSReportServer_Instance クラス
   MSReportServer_Instance クラスは、インストールされているレポート サーバーにクライアントが接続するために必要な基本情報を提供します。  

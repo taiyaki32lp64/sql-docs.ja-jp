@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: f45fcf45-b9e7-4d14-a90a-ebc542ac7755
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 6a4af59cca3484e110c2abb4b098eb272a63c71b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 205b939a870ede1a5a4a02fec81d73ea8dba073d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47805552"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67981986"
 ---
 # <a name="getmaxstatementlength-method-sqlserverdatabasemetadata"></a>getMaxStatementLength メソッド (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -36,13 +35,13 @@ public int getMaxStatementLength()
 ```  
   
 ## <a name="return-value"></a>戻り値  
- 許容される最大文字数を示す**int** 。  
+ 許容される最大文字数を示す **int** です。  
   
 ## <a name="exceptions"></a>例外  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- この getMaxStatementLength メソッドは、java.sql.DatabaseMetaData インターフェイスで getMaxStatementLength メソッドによって指定されます。  
+ この getMaxStatementLength メソッドは、getMaxStatementLength メソッドによって、java メタデータインターフェイスで指定されます。  
   
 ## <a name="see-also"></a>参照  
  [SQLServerDatabaseMetaData のメソッド](../../../connect/jdbc/reference/sqlserverdatabasemetadata-methods.md)   

@@ -18,15 +18,14 @@ helpviewer_keywords:
 - displaying source text
 - OBJECT_DEFINITION function
 ms.assetid: 2ac837c7-eca9-4d29-b06e-72e30450c68d
-author: MashaMSFT
-ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 5cf2cd082156f5f4a889a2912efcceaa9d5f7692
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: VanMSFT
+ms.author: vanto
+ms.openlocfilehash: 0ec1dc88832c4a44b3f019bb0e63369ab2d3587a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47640080"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67914893"
 ---
 # <a name="objectdefinition-transact-sql"></a>OBJECT_DEFINITION (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -44,7 +43,7 @@ OBJECT_DEFINITION ( object_id )
   
 ## <a name="arguments"></a>引数  
  *object_id*  
- 使用するオブジェクトの ID を指定します。 *object_id* は **int**, 、現在のデータベース コンテキスト内のオブジェクトが想定されます。  
+ 使用するオブジェクトの ID です。 *object_id* は **int**, 、現在のデータベース コンテキスト内のオブジェクトが想定されます。  
   
 ## <a name="return-types"></a>戻り値の型  
  **nvarchar(max)**  
@@ -55,13 +54,13 @@ OBJECT_DEFINITION ( object_id )
  ユーザーが所有しているか、または権限を与えられている、セキュリティ保護可能なリソースのメタデータのみを表示できます。 つまり、オブジェクトに対する権限がユーザーに与えられていない場合、メタデータを生成する組み込み関数 (OBJECT_DEFINITION など) が NULL を返す可能性があります。 詳細については、「 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)」を参照してください。  
   
 ## <a name="remarks"></a>Remarks  
- [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]  を前提としています *object_id* が現在のデータベース コンテキストでします。 オブジェクト定義の照合順序は、常に呼び出し元のデータベース コンテキストの照合順序と一致しています。  
+ [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]  を前提としています *object_id* が現在のデータベース コンテキストでします。 オブジェクト定義の照合順序は、呼び出し元のデータベース コンテキストのそれと常に一致します。  
   
  OBJECT_DEFINITION は、次の種類のオブジェクトに適用されます。  
   
 -   C = CHECK 制約  
   
--   D = 既定 (制約またはスタンドアロン)  
+-   D = 既定値 (制約またはスタンドアロン)  
   
 -   P = SQL ストアド プロシージャ  
   
@@ -71,7 +70,7 @@ OBJECT_DEFINITION ( object_id )
   
 -   RF = レプリケーション フィルター プロシージャ  
   
--   TR = SQL トリガー (スキーマ スコープ DML トリガー、またはデータベースあるいはサーバー スコープの DDL トリガー)  
+-   TR = SQL トリガー (スキーマ スコープ DML トリガー、またはデータベースまたはサーバー スコープの DDL トリガー)  
   
 -   IF = SQL インライン テーブル値関数  
   
@@ -80,7 +79,7 @@ OBJECT_DEFINITION ( object_id )
 -   V = ビュー  
   
 ## <a name="permissions"></a>アクセス許可  
- システム オブジェクトの定義は、公開されます。 ユーザー オブジェクトの定義は、オブジェクトの所有者、または ALTER、CONTROL、TAKE OWNERSHIP、VIEW DEFINITION のいずれかの権限を許可された人が表示できます。 これらの権限は **db_owner**、 **db_ddladmin**、および **db_securityadmin** 固定データベース ロールのメンバーが暗黙的に保有します。  
+ システム オブジェクトの定義は、公開されます。 ユーザー オブジェクトの定義は、オブジェクトの所有者、または次のいずれかの権限を許可された人が表示できます。ALTER、CONTROL、TAKE OWNERSHIP、VIEW DEFINITION。 これらの権限は **db_owner**、 **db_ddladmin**、および **db_securityadmin** 固定データベース ロールのメンバーが暗黙的に保有します。  
   
 ## <a name="examples"></a>使用例  
   

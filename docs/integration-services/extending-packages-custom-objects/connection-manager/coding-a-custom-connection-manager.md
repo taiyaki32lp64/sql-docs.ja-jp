@@ -10,17 +10,20 @@ ms.topic: reference
 helpviewer_keywords:
 - custom connection managers [Integration Services], coding
 ms.assetid: b12b6778-1f01-4a7d-984d-73f2f7630aa5
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: 21212d035c8f2c047d6d3bef48900d2b3c66a58d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: c3f0545a3c72627bc45ab40003522d4f3ac1da5c
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47597261"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71287788"
 ---
 # <a name="coding-a-custom-connection-manager"></a>カスタム接続マネージャーのコーディング
+
+[!INCLUDE[ssis-appliesto](../../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManagerBase> 基本クラスを継承するクラスを作成し、<xref:Microsoft.SqlServer.Dts.Runtime.DtsConnectionAttribute> 属性をそのクラスに適用したら、基本クラスのプロパティとメソッドの実装をオーバーライドして、カスタム機能を提供する必要があります。  
   
  カスタム接続マネージャーのサンプルについては、「[カスタム接続マネージャー用ユーザー インターフェイスの開発](../../../integration-services/extending-packages-custom-objects/connection-manager/developing-a-user-interface-for-a-custom-connection-manager.md)」を参照してください。 このトピック内のコード例は、SQL Server カスタム接続マネージャーのサンプルに含まれています。  

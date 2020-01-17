@@ -18,20 +18,19 @@ helpviewer_keywords:
 - workstation IDs [SQL Server]
 - identification numbers [SQL Server], workstations
 ms.assetid: 36ba56d4-20d7-4cd1-aa2a-e40a6c0a4e39
-author: MashaMSFT
-ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: c957a80753bb8f1be758a9af9f247e325de63490
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: VanMSFT
+ms.author: vanto
+ms.openlocfilehash: cce09ec0e34aec88755eaeac0449bd5f75138d6f
+ms.sourcegitcommit: f688a37bb6deac2e5b7730344165bbe2c57f9b9c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47728580"
+ms.lasthandoff: 11/08/2019
+ms.locfileid: "73843727"
 ---
-# <a name="hostid-transact-sql"></a>HOST_ID (Transact-SQL)
+# <a name="host_id-transact-sql"></a>HOST_ID (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  ワークステーションの ID 番号を返します。 ワークステーションの ID 番号とは、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] に接続しているクライアント コンピューター上のアプリケーションのプロセス ID (PID) です。  
+  ワークステーション ID 番号を返します。 ワークステーションの ID 番号とは、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] に接続しているクライアント コンピューター上のアプリケーションのプロセス ID (PID) です。  
   
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -46,7 +45,7 @@ HOST_ID ()
  **char(10)**  
   
 ## <a name="remarks"></a>Remarks  
- システム関数のパラメーターを指定しない場合は、現在のデータベース、ホスト コンピューター、サーバー ユーザー、またはデータベース ユーザーを指定したと見なされます。 組み込み関数の後には、必ずかっこが必要です。  
+ システム関数へのパラメーターが省略可能の場合は、現在のデータベース、ホスト コンピューター、サーバー ユーザー、またはデータベース ユーザーが推測されます。 組み込み関数の後には常にかっこが必要です。  
   
  システム関数は、選択リストの中、WHERE 句の中、また、式を使える所ならどこにでも使用できます。  
   
@@ -66,6 +65,6 @@ GO
   
 ## <a name="see-also"></a>参照  
  [式 &#40;Transact-SQL&#41;](../../t-sql/language-elements/expressions-transact-sql.md)   
- [システム関数 &#40;Transact-SQL&#41;](../../relational-databases/system-functions/system-functions-for-transact-sql.md)  
+ [システム関数 &#40;Transact-SQL&#41;](../../relational-databases/system-functions/system-functions-category-transact-sql.md)  
   
   

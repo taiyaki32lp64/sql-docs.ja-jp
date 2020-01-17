@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: ac6d186f-b394-406c-94c4-c6331d1ca468
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: f22fc952f0394f9e59ca8d67c76d0b00594b0759
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: 819856a584c6133e28e222a704b720337f99cd9c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53212429"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68018964"
 ---
 # <a name="sqlmanagedatasources"></a>SQLManageDataSources
 **準拠**  
@@ -36,7 +35,7 @@ ms.locfileid: "53212429"
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
   
 BOOL SQLManageDataSources(  
      HWND     hwnd);  
@@ -111,14 +110,14 @@ BOOL SQLManageDataSources(
   
  ![ODBC データ ソース アドミニストレーターのトレース タブ](../../../odbc/reference/syntax/media/ch23h.gif "Ch23h")  
   
- ユーザーがクリックした場合**トレースの開始**し、クリック **[ok]**、 **SQLManageDataSources**マシンで現在実行されているすべてのアプリケーションを手動でトレースを有効にします。  
+ ユーザーがクリックした場合**トレースの開始**し、クリック **[ok]** 、 **SQLManageDataSources**マシンで現在実行されているすべてのアプリケーションを手動でトレースを有効にします。  
   
  ユーザーが内のトレース ファイルの名前を指定するかどうか、**ログ ファイルのパス**テキスト ボックスと、数回のクリック**OK**、 **SQLManageDataSources**設定、 **TraceFile**の指定した名前に、システム情報 [ODBC] セクションではキーワードです。  
   
 > [!IMPORTANT]  
 >  Visual Studio Analyzer のサポートは、以降 (Visual Studio Analyzer のみ含まれていた以前のバージョンの Visual Studio でします。) Windows 8 では削除されました。 トラブルシューティング メカニズムの代わりに、BID のトレースを使用します。  
   
- ユーザーがクリックした場合**Visual Studio Analyzer の開始**し、クリック **[ok]**、Visual Studio Analyzer を有効にします。 これまでは有効のままに**Visual Studio Analyzer の停止**をクリックします。  
+ ユーザーがクリックした場合**Visual Studio Analyzer の開始**し、クリック **[ok]** 、Visual Studio Analyzer を有効にします。 これまでは有効のままに**Visual Studio Analyzer の停止**をクリックします。  
   
  トレースの詳細については、次を参照してください。[トレース](../../../odbc/reference/develop-app/tracing.md)します。 詳細については、**トレース**と**TraceFile**キーワードを参照してください[ODBC サブキー](../../../odbc/reference/install/odbc-subkey.md)します。  
   

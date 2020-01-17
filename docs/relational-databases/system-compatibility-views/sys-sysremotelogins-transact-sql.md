@@ -20,15 +20,14 @@ helpviewer_keywords:
 ms.assetid: b7ffcfa6-aed8-41d4-8b70-845439ab813d
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 599747887f48586509c35c635f3349fce5e215f5
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 1c51ccd657c8a7c5f07bdaf836ba3e279e81c590
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47754570"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68018135"
 ---
-# <a name="syssysremotelogins-transact-sql"></a>sys.sysremotelogins (Transact-SQL)
+# <a name="syssysremotelogins-transact-sql"></a>sys.sysremotelogins (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   インスタンス上のリモート ストアド プロシージャの呼び出しを許可するリモート ユーザーごとに 1 つの行を含む[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]します。  
@@ -38,13 +37,13 @@ ms.locfileid: "47754570"
   
 |列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
-|**remoteserverid**|**smallint**|リモート サーバーの ID。|  
+|**remoteserverid**|**smallint**|リモート サーバーの id。|  
 |**remoteusername**|**sysname**|リモート サーバー上のユーザーのログイン名。|  
 |**status**|**smallint**|0 を返します。|  
 |**sid**|**varbinary(85)**|[!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows ユーザー セキュリティ id です。|  
-|**changedate**|**datetime**|リモート ユーザーが追加された日付と時刻。|  
+|**changedate**|**datetime**|日付と時刻が、リモート ユーザーが追加されました。|  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [システム ビューへのシステム テーブルのマッピング&#40;TRANSACT-SQL&#41;](../../relational-databases/system-tables/mapping-system-tables-to-system-views-transact-sql.md)   
  [互換性ビュー &#40;Transact-SQL&#41;](~/relational-databases/system-compatibility-views/system-compatibility-views-transact-sql.md)  
   

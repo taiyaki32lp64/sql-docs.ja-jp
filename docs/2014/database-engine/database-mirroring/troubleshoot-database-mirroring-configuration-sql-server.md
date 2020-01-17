@@ -16,11 +16,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: b99fb881fc6bf09aa848bd41a42f8254e5f3acd6
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48085512"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62754210"
 ---
 # <a name="troubleshoot-database-mirroring-configuration-sql-server"></a>データベース ミラーリング構成のトラブルシューティング (SQL Server)
   ここでは、データベース ミラーリング セッションの設定時に発生する問題のトラブルシューティングに役立つ情報を提供します。  
@@ -49,7 +49,7 @@ ms.locfileid: "48085512"
   
     2.  アカウントが別のドメインで実行されているか、またはドメイン アカウントではない場合、もう一方のコンピューターの **master** データベースにアカウントのログインを作成する必要があります。また、そのログインには、エンドポイントに対して CONNECT 権限を与える必要があります。 詳細については、「 [データベースを別のサーバー インスタンスで使用できるようにするときのメタデータの管理 &#40;SQL Server&#41;](../../relational-databases/databases/manage-metadata-when-making-a-database-available-on-another-server.md)」を参照してください。 これには、ネットワーク サービス アカウントも含まれます。  
   
-2.  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] がローカル システム アカウントを使用しているサービスとして実行されている場合、認証には証明書を使用する必要があります。 詳細については、この後の「 [データベース ミラーリング エンドポイントでの証明書の使用 &#40;Transact-SQL&#41;](use-certificates-for-a-database-mirroring-endpoint-transact-sql.md)」を参照してください。  
+2.  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] がローカル システム アカウントを使用しているサービスとして実行されている場合、認証には証明書を使用する必要があります。 詳細については、「[データベース ミラーリング エンドポイントでの証明書の使用 &#40;Transact-SQL&#41;](use-certificates-for-a-database-mirroring-endpoint-transact-sql.md)」を参照してください。  
   
 ##  <a name="Endpoints"></a> エンドポイント  
  エンドポイントが正しく構成されている必要があります。  
@@ -109,7 +109,7 @@ ms.locfileid: "48085512"
     ```  
   
 ##  <a name="SystemAddress"></a> システム アドレス  
- データベース ミラーリング構成におけるサーバー インスタンスのシステム名には、システムを明確に識別できる任意の名前を使用できます。 サーバー アドレスには、システム名 (システムが同じドメインに存在する場合)、完全修飾ドメイン名、または IP アドレス (可能であれば静的 IP アドレス) を使用できます。 完全修飾ドメイン名を使用すると動作が保証されます。 詳細については、「 [サーバー ネットワーク アドレスの指定 &#40;データベース ミラーリング&#41;](specify-a-server-network-address-database-mirroring.md)を使用します。  
+ データベース ミラーリング構成におけるサーバー インスタンスのシステム名には、システムを明確に識別できる任意の名前を使用できます。 サーバー アドレスには、システム名 (システムが同じドメインに存在する場合)、完全修飾ドメイン名、または IP アドレス (可能であれば静的 IP アドレス) を使用できます。 完全修飾ドメイン名を使用すると動作が保証されます。 詳細については、「[サーバー ネットワーク アドレスの指定 &#40;データベース ミラーリング&#41;](specify-a-server-network-address-database-mirroring.md)」を参照してください。  
   
 ##  <a name="NetworkAccess"></a> Network Access  
  各サーバー インスタンスは、他のサーバー インスタンスのポートに TCP 経由でアクセスできる必要があります。 これは、サーバー インスタンスが相互に信頼関係を持たない別のドメイン (信頼されていないドメイン) に存在する場合に特に重要になります。 このような状況では、サーバー インスタンス間の通信の大半が制限されます。  
@@ -126,7 +126,7 @@ ms.locfileid: "48085512"
   
  データベース ミラーリングが停止している場合にミラーリングを再開するには、停止後にプリンシパル データベースで作成されたすべてのログ バックアップをミラー データベースに適用する必要があります。  
   
- 詳細については、「 [ミラーリングのためのミラー データベースの準備 &#40;SQL Server&#41;](prepare-a-mirror-database-for-mirroring-sql-server.md)を使用します。  
+ 詳細については、「 [ミラーリングのためのミラー データベースの準備 &#40;SQL Server&#41;](prepare-a-mirror-database-for-mirroring-sql-server.md)」を参照してください。  
   
 ##  <a name="FailedCreateFileOp"></a> Failed Create-File Operation  
  ミラーリング セッションに影響を与えずにファイルを追加するには、追加するファイルのパスが両方のサーバーに存在する必要があります。 したがって、ミラー データベースの作成時にデータベース ファイルを移動し、その後でミラー データベースにファイルを追加しようとした場合、ファイルの追加操作が失敗し、ミラーリングが中断されることがあります。  

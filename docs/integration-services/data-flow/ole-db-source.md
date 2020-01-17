@@ -16,17 +16,20 @@ helpviewer_keywords:
 - sources [Integration Services], OLE DB
 - OLE DB source [Integration Services]
 ms.assetid: f87cc5f6-b078-40f3-9d87-7a65e13e4c86
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: 37c720096cb27f19617744512c212c415373612b
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: b0793c48a6ea531dbca499b07ca28be9601e5843
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51639619"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71292233"
 ---
 # <a name="ole-db-source"></a>OLE DB ソース
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   OLE DB ソースは、データベース テーブル、ビュー、または SQL コマンドを使用して、OLE DB に準拠するさまざまなリレーショナル データベースからデータを抽出します。 たとえば、OLE DB ソースにより、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Office Access または [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データベースのテーブルからデータを抽出できます。  
   
 > [!NOTE]  
@@ -123,7 +126,7 @@ ms.locfileid: "51639619"
 >  [!INCLUDE[msCoName](../../includes/msconame-md.md)] Office Excel 2003 以前のバージョンを使用するデータ ソースからデータを読み込むには、Excel ソースを使用します。 詳細については、「[[Excel ソース エディター] ([接続マネージャー] ページ)](../../integration-services/data-flow/excel-source-editor-connection-manager-page.md)」を参照してください。  
   
 > [!NOTE]  
->  OLE DB ソースの **CommandTimeout** プロパティは、**[OLE DB ソース エディター]** ではアクセスできませんが、**[詳細エディター]** を使用して設定できます。 このプロパティの詳細については、「 [OLE DB Custom Properties](../../integration-services/data-flow/ole-db-custom-properties.md)」(OLE DB のカスタム プロパティ) の Excel ソースのセクションを参照してください。  
+>  OLE DB ソースの **CommandTimeout** プロパティは、 **[OLE DB ソース エディター]** ではアクセスできませんが、 **[詳細エディター]** を使用して設定できます。 このプロパティの詳細については、「 [OLE DB Custom Properties](../../integration-services/data-flow/ole-db-custom-properties.md)」(OLE DB のカスタム プロパティ) の Excel ソースのセクションを参照してください。  
   
 ### <a name="open-the-ole-db-source-editor-connection-manager-page"></a>OLE DB ソース エディターを開く ([接続マネージャー] ページ)  
   
@@ -189,7 +192,7 @@ ms.locfileid: "51639619"
 ## <a name="ole-db-source-editor-columns-page"></a>[OLE DB ソース エディター] ([列] ページ)
   **[OLE DB ソース エディター]** ダイアログ ボックスの **[列]** ページを使用すると、出力列をそれぞれの外部 (変換元) 列にマップできます。  
   
-### <a name="options"></a>[変数]  
+### <a name="options"></a>オプション  
  **使用できる外部列**  
  データ ソース内の使用できる外部列の一覧を表示します。 このテーブルを使用して列を追加または削除することはできません。  
   
@@ -202,7 +205,7 @@ ms.locfileid: "51639619"
 ## <a name="ole-db-source-editor-error-output-page"></a>[OLE DB ソース エディター] ([エラー出力] ページ)
   **[OLE DB ソース エディター]** ダイアログ ボックスの **[エラー出力]** ページを使用すると、エラー処理オプションを選択したり、エラー出力列のプロパティを設定したりできます。  
   
-### <a name="options"></a>[変数]  
+### <a name="options"></a>オプション  
  **[入力または出力]**  
  データ ソースの名前を表示します。  
   

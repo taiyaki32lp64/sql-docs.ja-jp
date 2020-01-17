@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: ed7bbcb8-660b-4e9b-8241-e216c42826f9
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: de123b3c6c8f0105a7280c87a4983fadc657ad93
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 9a1700cc8bb2bfb54dd9ddee52da54899f764650
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47795610"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67982106"
 ---
 # <a name="getmaxfieldsize-method-sqlserverstatement"></a>getMaxFieldSize メソッド (SQLServerStatement)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -42,7 +41,7 @@ public final int getMaxFieldSize()
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- この getMaxFieldSize メソッドは、java.sql.Statement インターフェイスの getMaxFieldSize メソッドによって指定されます。  
+ この getMaxFieldSize メソッドは、java. .sql. ステートメントインターフェイスの getMaxFieldSize メソッドによって指定されます。  
   
 ## <a name="see-also"></a>参照  
  [SQLServerStatement のメソッド](../../../connect/jdbc/reference/sqlserverstatement-methods.md)   

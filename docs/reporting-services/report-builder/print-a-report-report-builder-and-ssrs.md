@@ -2,23 +2,23 @@
 title: レポートの印刷 (レポート ビルダーおよび SSRS) | Microsoft Docs
 ms.date: 03/30/2017
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: report-builder
 ms.topic: conceptual
 ms.assetid: b96936c9-c387-41a9-8c19-6eb325769ffd
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 3904d1498207bbd1384639613457257fbc75647d
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 67d9e057b7ed307377e59172948d56d92c45e7f3
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56292910"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65581177"
 ---
 # <a name="print-a-report-report-builder-and-ssrs"></a>レポートの印刷 (レポート ビルダーおよび SSRS)
   レポートをレポート サーバーに保存した後は、ブラウザー、Reporting Services Web ポータル、またはエクスポートされたレポートの表示に使用する任意のアプリケーションで、レポートを表示および印刷できます。 レポートを保存する前にプレビューする場合は、印刷することができます。  
   
- レポートを印刷するときには、使用する用紙のサイズを指定できます。 用紙のサイズによって、レポート内のページ数や各ページに収まるレポート データが決定されます。 用紙のサイズが影響するのは、ハード改ページ レンダラーを使用してレンダリングされるレポートのみです(PDF、画像、または印刷のハード改ページレンダラー)。 用紙サイズの設定はその他のレンダラーには影響しません。 詳しくは、「[レンダリングの動作 &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/rendering-behaviors-report-builder-and-ssrs.md)」をご覧ください。  
+ レポートを印刷するときには、使用する用紙のサイズを指定できます。 用紙のサイズによって、レポート内のページ数や各ページに収まるレポート データが決定されます。 用紙のサイズは、PDF、画像、および印刷などのハード改ページ レンダラーを使用して表示されるレポートのみに影響します。 用紙サイズの設定はその他のレンダラーには影響しません。 詳しくは、「[レンダリングの動作 &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/rendering-behaviors-report-builder-and-ssrs.md)」をご覧ください。  
   
  Reporting Services Web ポータルのレポート ビューアー ツール バー、またはレポート ビルダーのプレビューでは、レポートを強制改ページ レンダラーにエクスポートしたり、[印刷] ボタンをクリックしてレポートのコピーを印刷したりすることができます。 用紙のサイズやその他のページ設定プロパティの設定が必要になる場合もあります。 **[レポートのプロパティ]** ダイアログ ボックスを使用すると、用紙のサイズを含むページ設定プロパティを変更できます。  
   

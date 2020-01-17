@@ -8,17 +8,20 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: language-reference
 ms.assetid: 336ab467-c32f-4d2e-a79c-174dc6fab75e
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: a51dd95b42e462c10335e00d9c3b67545d9d07fa
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 90778ec067d914a9f8fc3663ea00a5ff609247ab
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47595430"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71295372"
 ---
-# <a name="catalogrenamefolder-ssisdb-database"></a>catalog.rename_folder (SSISDB データベース)
+# <a name="catalogrename_folder-ssisdb-database"></a>catalog.rename_folder (SSISDB データベース)
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] カタログのフォルダー名を変更します。  

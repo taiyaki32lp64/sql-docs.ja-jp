@@ -14,17 +14,20 @@ f1_keywords:
 helpviewer_keywords:
 - Transfer Error Messages task [Integration Services]
 ms.assetid: da702289-035a-4d14-bd74-04461fbfee1b
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: c189be4aa134ee15314571008ed29a3f53c467d2
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 363a2761472f544e2c995fba25f4650ee6242b36
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52518784"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71293881"
 ---
 # <a name="transfer-error-messages-task"></a>エラー メッセージ転送タスク
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   エラー メッセージ転送タスクは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンス間で 1 つ以上の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]ユーザー定義エラー メッセージを転送します。 ユーザー定義メッセージとは、ID の値が 50000 以上のメッセージのことです。 ID の値が 50000 未満のメッセージはシステム エラー メッセージなので、エラー メッセージ転送タスクを使用して転送することはできません。  
   
  エラー メッセージ転送タスクは、すべてのエラー メッセージを転送するか、指定したエラー メッセージだけを転送できるように、構成することができます。 ユーザー定義エラー メッセージはさまざまな言語で利用できます。このタスクでは、選択した言語のメッセージだけを転送するように構成できます。 他言語バージョンのメッセージを転送先サーバーに転送するには、コード ページ 1033 を使用した us_english バージョンのメッセージが転送先サーバーにあらかじめ存在している必要があります。  
@@ -82,8 +85,8 @@ ms.locfileid: "52518784"
 ## <a name="transfer-error-messages-task-editor-general-page"></a>[エラー メッセージ転送タスク エディター] ([全般] ページ)
   **[エラー メッセージ転送タスク エディター]** ダイアログ ボックスの **[全般]** ページを使用すると、エラー メッセージ転送タスクに名前を付けて説明を記述することができます。 エラー メッセージ転送タスクは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンス間で 1 つ以上の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]ユーザー定義エラー メッセージを転送します。   
   
-### <a name="options"></a>[変数]  
- **名前**  
+### <a name="options"></a>オプション  
+ **[名前]**  
  エラー メッセージ転送タスクの一意の名前を入力します。 この名前は、タスク アイコンのラベルとして使用されます。  
   
 > [!NOTE]  
@@ -95,12 +98,12 @@ ms.locfileid: "52518784"
 ## <a name="transfer-error-messages-task-editor-messages-page"></a>[エラー メッセージ転送タスク エディター] ([メッセージ] ページ)
   **[エラー メッセージ転送タスク エディター]** ダイアログ ボックスの **[メッセージ]** ページを使用すると、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスからインスタンスへ、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ユーザー定義エラー メッセージをコピーする際のプロパティを指定できます。 
   
-### <a name="options"></a>[変数]  
+### <a name="options"></a>オプション  
  **SourceConnection**  
- SMO 接続マネージャーを一覧から選択するか、**\<[新しい接続...]>** をクリックしてコピー元のサーバーへの新しい接続を作成します。  
+ SMO 接続マネージャーを一覧から選択するか、 **\<[新しい接続...]>** をクリックしてコピー元のサーバーへの新しい接続を作成します。  
   
  **DestinationConnection**  
- SMO 接続マネージャーを一覧から選択するか、**\<[新しい接続...]>** をクリックしてコピー先のサーバーへの新しい接続を作成します。  
+ SMO 接続マネージャーを一覧から選択するか、 **\<[新しい接続...]>** をクリックしてコピー先のサーバーへの新しい接続を作成します。  
   
  **[IfObjectExists]**  
  転送先サーバーに同じ名前のエラー メッセージが既に存在していた場合に、既存のユーザー定義エラー メッセージを上書きするか、既存のメッセージをスキップするか、タスクを失敗させるかを選択します。  
@@ -110,7 +113,7 @@ ms.locfileid: "52518784"
   
  このプロパティには、次の表に示すオプションがあります。  
   
-|ReplTest1|Description|  
+|[値]|Description|  
 |-----------|-----------------|  
 |**True**|すべてのユーザー定義メッセージをコピーします。|  
 |**False**|指定されたユーザー定義メッセージのみをコピーします。|  

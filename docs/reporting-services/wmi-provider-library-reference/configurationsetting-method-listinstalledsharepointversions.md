@@ -2,20 +2,20 @@
 title: ListInstalledSharePointVersions メソッド (WMI) | Microsoft Docs
 ms.date: 03/01/2017
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: wmi-provider-library-reference
 ms.topic: conceptual
 helpviewer_keywords:
 - ListInstalledSharePointVersions method
 ms.assetid: 8f0a5e9f-23f1-41e5-9a90-dfec19ef1df7
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 88118ef5eb405d23a9b8dc23461ca797228a6d0c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 88bc977ae684351227017e81793cb48749b454e4
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47783560"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65579944"
 ---
 # <a name="configurationsetting-method---listinstalledsharepointversions"></a>ConfigurationSetting メソッド - ListInstalledSharePointVersions
   レポート サーバーと同じコンピューターにインストールされた Microsoft [!INCLUDE[winSPServ](../../includes/winspserv-md.md)]、 [!INCLUDE[offSPServ](../../includes/offspserv-md.md)]、 [!INCLUDE[SPF2010](../../includes/spf2010-md.md)]、または [!INCLUDE[SPS2010](../../includes/sps2010-md.md)] のバージョンを表すトークンのセットを返します。  

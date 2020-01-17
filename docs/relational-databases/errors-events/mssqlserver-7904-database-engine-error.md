@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: d047920c-f864-4338-b15f-49820886fbc5
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: fae8f6de4479ae2f4d2675ab92c75e030304fd63
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: bfc9cfccbad7d41997199f25d3d69ef0fff55e8e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47846110"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67951488"
 ---
 # <a name="mssqlserver7904"></a>MSSQLSERVER_7904
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -31,7 +30,7 @@ ms.locfileid: "47846110"
 |イベント ソース|MSSQLSERVER|  
 |コンポーネント|SQLEngine|  
 |シンボル名|DBCC2_FS_MISSING_FILE|  
-|メッセージ テキスト|テーブル エラー : オブジェクト ID O_ID、インデックス ID I_ID、パーティション ID PN_ID の列 ID C_ID、ROWGUID RG_ID に対する FileStream ファイルが見つかりませんでした。|  
+|メッセージ テキスト|テーブル エラー:オブジェクト ID O_ID、インデックス ID I_ID、パーティション ID PN_ID の列 ID C_ID、ROWGUID RG_ID に対する FileStream ファイルが見つかりませんでした。|  
   
 ## <a name="explanation"></a>説明  
 対応する FILESTREAM 列ディレクトリに、パーティションの列値に一致する FILESTREAM ファイルがありません。  

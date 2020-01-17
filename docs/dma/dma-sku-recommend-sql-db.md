@@ -1,8 +1,8 @@
 ---
-title: (Data Migration Assistant)、オンプレミス データベースの適切な Azure SQL データベース SKU の識別 |Microsoft Docs
-description: Data Migration Assistant を使用して、オンプレミス データベースの右側の Azure SQL データベースの SKU を特定する方法について説明します
+title: オンプレミスデータベースの適切な Azure SQL Database SKU を特定します (Data Migration Assistant) |Microsoft Docs
+description: Data Migration Assistant を使用して、オンプレミスデータベースの適切な Azure SQL Database SKU を識別する方法について説明します。
 ms.custom: ''
-ms.date: 01/11/2019
+ms.date: 05/06/2019
 ms.prod: sql
 ms.prod_service: dma
 ms.reviewer: ''
@@ -12,51 +12,56 @@ keywords: ''
 helpviewer_keywords:
 - Data Migration Assistant, Assess
 ms.assetid: ''
-author: pochiraju
-ms.author: rajpo
-manager: craigg
-ms.openlocfilehash: 002a9fc587d742c235aedb0f773864296bdf645b
-ms.sourcegitcommit: 170c275ece5969ff0c8c413987c4f2062459db21
+author: HJToland3
+ms.author: jtoland
+ms.openlocfilehash: d6d329b97946d9d8042641653ed0167510a19b17
+ms.sourcegitcommit: ac90f8510c1dd38d3a44a45a55d0b0449c2405f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/11/2019
-ms.locfileid: "54226499"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72586735"
 ---
-# <a name="identify-the-right-azure-sql-database-sku-for-your-on-premises-database"></a>オンプレミス データベースの適切な Azure SQL データベース SKU の識別します。
+# <a name="identify-the-right-azure-sql-databasemanaged-instance-sku-for-your-on-premises-database"></a>オンプレミスデータベースの適切な Azure SQL Database/Managed Instance SKU を特定する
 
-クラウドへのデータベースの移行のタスクは、複雑で時間がかかり、多数の変数です。 データベースの適切な Azure のデータベース ターゲットと SKU を選択すると、困難なことができます。 目標に、Database Migration Assistant (DMA) はこれらの質問に対処し、簡単で効果的なデータベースの移行が発生することです。
+データベースをクラウドに移行することは、特にデータベースに最適な Azure データベースターゲットと SKU を選択する場合には複雑になることがあります。 データベース Migration Assistant (DMA) の目標は、これらの質問に対処し、ユーザーにわかりやすい出力でこれらの SKU の推奨事項を提供することで、データベースの移行を容易にすることです。
 
-この記事では、主に、データベースをホストしているコンピューターから収集されたパフォーマンス カウンターに基づいて、Azure SQL データベース SKU の推奨最小値を識別するためには、DMA の Azure SQL データベースの SKU の推奨事項機能に重点を置いています。 この機能は、1 か月あたりの推定コストに加え、レベル、コンピューティング レベル、および最大データ サイズ、価格に関連する推奨事項を提供します。 一括で Azure にすべてのデータベースをプロビジョニングする機能も提供します。
+この記事では、DMA の Azure SQL Database SKU に関する推奨事項について説明します。 Azure SQL Database には、次のようないくつかの展開オプションがあります。
 
-> [!NOTE] 
-> この機能は現在使用可能なのみを使用して、コマンド ライン インターフェイス (CLI) です。 DMA のユーザー インターフェイスを使用してこの機能のサポートは、今後のリリースで追加されます。
+- 1つのデータベース
+- エラスティックプール
+- マネージド インスタンス
 
-次の手順では、Azure SQL データベースの SKU の推奨事項を特定し、Data Migration Assistant を使用して azure に関連付けられているデータベースをプロビジョニングできます。
+SKU の推奨事項機能を使用すると、データベースをホストしているコンピューターから収集されたパフォーマンスカウンターに基づいて、最小推奨 Azure SQL Database 単一データベースまたはマネージインスタンス SKU の両方を識別できます。 この機能は、価格レベル、コンピューティングレベル、最大データサイズに関連する推奨事項と、1か月あたりの推定コストを提供します。 また、推奨されるすべてのデータベースに対して、単一データベースとマネージインスタンスを Azure に一括でプロビジョニングする機能も用意されています。
 
-## <a name="prerequisites"></a>前提条件
+> [!NOTE]
+> 現在、この機能は、コマンドラインインターフェイス (CLI) を介してのみ使用できます。
 
-V4.0 の Database Migration Assistant をダウンロードまたはそれ以降、し、インストールします。 既にある場合、ツールがインストール、閉じると、もう一度開き、ツールのアップグレードを求められます。
+次に示すのは、Azure SQL Database SKU の推奨事項を特定し、対応する単一データベースまたは Azure のマネージインスタンスを DMA を使用してプロビジョニングするための手順です。
 
-## <a name="collect-performance-counters"></a>パフォーマンス カウンターを収集します。
+## <a name="prerequisites"></a>[前提条件]
 
-プロセスの最初の手順では、データベースのパフォーマンス カウンターを収集します。 データベースをホストするコンピューターで PowerShell コマンドを実行して、パフォーマンス カウンターを収集できます。 DMA を使うと、この PowerShell のファイルのコピーがコンピューターからパフォーマンス カウンターをキャプチャする、独自のメソッドを使用することもできます。
+- 最新バージョンの[DMA](https://aka.ms/get-dma)をダウンロードしてインストールします。 以前のバージョンのツールが既にある場合は、それを開くと、DMA をアップグレードするように求められます。
+- すべてのスクリプトを実行するために必要な[PowerShell バージョン 5.1](https://www.microsoft.com/download/details.aspx?id=54616)以降がコンピューターにインストールされていることを確認します。 コンピューターにインストールされている PowerShell のバージョンを findoug する方法については、「 [Windows powershell 5.1 のダウンロードとインストール](https://docs.microsoft.com/skypeforbusiness/set-up-your-computer-for-windows-powershell/download-and-install-windows-powershell-5-1)」を参照してください。
+- コンピューターに Azure Powershell モジュールがインストールされていることを確認します。 詳細については、「 [Install the Azure PowerShell module](https://docs.microsoft.com/powershell/azure/install-az-ps?view=azps-1.8.0)」を参照してください。
+- パフォーマンスカウンターを収集するために必要な PowerShell ファイル**SkuRecommendationDataCollectionScript**が、DMA フォルダーにインストールされていることを確認します。
+- このプロセスを実行するコンピューターに、データベースをホストしているコンピューターに対する管理者権限があることを確認します。
 
-このタスクを個別に各データベースに対して実行する必要はありません。 コンピューターでホストされているすべてのデータベースの SKU を推奨するコンピューターから収集されたパフォーマンス カウンターを使用できます。
+## <a name="collect-performance-counters"></a>パフォーマンスカウンターの収集
 
-> [!IMPORTANT]
-> このコマンドを実行するコンピューターには、データベースをホストするコンピューターに管理者のアクセス許可が必要です。
+プロセスの最初の手順では、データベースのパフォーマンスカウンターを収集します。 パフォーマンスカウンターを収集するには、データベースをホストするコンピューターで PowerShell コマンドを実行します。 DMA はこの PowerShell ファイルのコピーを提供しますが、独自の方法を使用してコンピューターからパフォーマンスカウンターをキャプチャすることもできます。
 
-1. DMA フォルダー内のパフォーマンス カウンターを収集するために必要な PowerShell ファイルがインストールされていることを確認します。
+各データベースに対してこのタスクを個別に実行する必要はありません。 コンピューターから収集されたパフォーマンスカウンターは、コンピューターでホストされているすべてのデータベースの SKU を推奨するために使用できます。
 
-    ![DMA フォルダーに示すように PowerShell ファイル](../dma/media/dma-sku-recommend-data-collection-file.png)
+1. DMA フォルダーで、PowerShell ファイル SkuRecommendationDataCollectionScript を見つけます。 このファイルは、パフォーマンスカウンターを収集するために必要です。
 
-2. 次の引数には、PowerShell スクリプトを実行します。
-    - **ComputerName**:データベースをホストするコンピューターの名前。
-    - **OutputFilePath**:収集したカウンターを保存する出力ファイルのパス。
-    - **CollectionTimeInSeconds**:この中にパフォーマンス カウンター データを収集する時間数。
-      意味のある推奨事項を取得するには少なくとも 40 分のパフォーマンス カウンターをキャプチャします。 がキャプチャ期間を長く、より正確な推奨事項になります。
-    - **DbConnectionString**:元のパフォーマンス カウンター データを収集しているコンピューターでホストされている master データベースを指す接続文字列。
-     
+    ![PowerShell ファイルが DMA フォルダーに表示される](../dma/media/dma-sku-recommend-data-collection-file.png)
+
+2. 次の引数を指定して PowerShell スクリプトを実行します。
+    - **ComputerName**: データベースをホストするコンピューターの名前。
+    - **Outputfilepath**: 収集されたカウンターを保存する出力ファイルのパス。
+    - **CollectionTimeInSeconds**: パフォーマンスカウンターデータを収集する時間の長さ。 パフォーマンスカウンターを少なくとも40分間キャプチャして、意味のある推奨事項を取得します。 キャプチャの実行時間が長いほど、推奨事項が正確になります。 また、必要なデータベースに対してワークロードが実行されていることを確認し、より正確な推奨事項を有効にします。
+    - **Dbconnectionstring**: パフォーマンスカウンターデータを収集しているコンピューターでホストされている master データベースを指す接続文字列。
+
     呼び出しの例を次に示します。
 
     ```
@@ -66,41 +71,66 @@ V4.0 の Database Migration Assistant をダウンロードまたはそれ以降
      -CollectionTimeInSeconds 2400
      -DbConnectionString "Server=localhost;Initial Catalog=master;Integrated Security=SSPI;"
     ```
-    
-    コマンドを実行した後、プロセスは指定した場所でのパフォーマンス カウンターを持つファイルを出力します。 このファイルは、次のセクションでは、SKU の推奨事項のコマンドの入力として使用できます。
 
-## <a name="use-the-dma-cli-to-get-sku-recommendations"></a>DMA CLI を使用して、SKU の推奨事項の取得
+    コマンドの実行後、プロセスは、指定した場所にパフォーマンスカウンターを含むファイルを出力します。 このファイルは、プロセスの次の部分の入力として使用できます。これにより、単一データベースとマネージインスタンスの両方のオプションについて SKU の推奨事項が提供されます。
 
-この手順の入力として前の手順からパフォーマンス カウンターの出力ファイルを使用します。 DMA は提供する、Azure SQL Database の推奨事項の価格レベル、コンピューティング レベル、および各データベースの最大データ サイズのコンピューターにします。 DMA も月額料金の見積もりでの提供の各データベース。
+## <a name="use-the-dma-cli-to-get-sku-recommendations"></a>DMA CLI を使用して SKU の推奨事項を取得する
 
-次の引数、dmacmd.exe を実行します。
+このプロセスの入力として作成したパフォーマンスカウンターの出力ファイルを使用します。
 
-- **/Action = SkuRecommendation**:SKU の評価を実行するには、この引数を入力します。
-- **/SkuRecommendationInputDataFilePath**:前のセクションで収集されたカウンター ファイルへのパス。
-- **/SkuRecommendationTsvOutputResultsFilePath**:TSV 形式で出力結果を書き込むパス。
-- **/SkuRecommendationJsonOutputResultsFilePath**:JSON 形式で出力結果を書き込むパス。
-- **/SkuRecommendationHtmlResultsFilePath**:HTML 形式で出力結果を書き込むパス。
+シングルデータベースオプションの場合、DMA は、Azure SQL Database 単一データベースの価格レベル、コンピューティングレベル、およびコンピューター上の各データベースの最大データサイズに関する推奨事項を提供します。 コンピューターに複数のデータベースがある場合は、推奨されるデータベースを指定することもできます。 DMA では、各データベースの月額料金を見積もることもできます。
 
-さらに、次の引数のいずれかを選択する必要があります。
-- 価格の更新されないようにします。
-    - **/SkuRecommendationPreventPriceRefresh**:価格の更新が発生するを防ぎます。 オフライン モードで実行されている場合に使用します。
-- 最新の価格を取得します。 
-    - **/SkuRecommendationCurrencyCode**:(例: 価格を表示する通貨"USD")。
-    - **/SkuRecommendationOfferName**:プランの名前 (例。"MS-解決しない場合、0003 P")。 詳細については、次を参照してください。、 [Microsoft Azure プランの詳細](https://azure.microsoft.com/support/legal/offer-details/)ページ。
-    - **/SkuRecommendationRegionName**:領域の名前 (例。「米国西部」)。
-    - **/SkuRecommendationSubscriptionId**:サブスクリプション ID です。
-    - **/AzureAuthenticationTenantId**:認証のテナント。
-    - **/AzureAuthenticationClientId**:認証に使用される AAD アプリのクライアント ID。
-    - 次の認証オプションのいずれか:
-        - Interactive
-            - **AzureAuthenticationInteractiveAuthentication**:認証のポップアップ ウィンドウに対して true に設定します。
-        - 証明書ベース
-            - **AzureAuthenticationCertificateStoreLocation**:(例: 証明書ストアの場所に設定します。"CurrentUser")。
-            - **AzureAuthenticationCertificateThumbprint**:証明書のサムプリントに設定します。
-        - トークン ベース
-            - **AzureAuthenticationToken**:証明書トークンに設定します。
+マネージインスタンスの場合、推奨事項でリフトアンドシフトのシナリオがサポートされます。 その結果、DMA によって、Azure SQL Database マネージインスタンスの価格レベル、コンピューティングレベル、およびコンピューター上のデータベースセットの最大データサイズに関する推奨事項が提供されます。 ここでも、コンピューターに複数のデータベースがある場合は、推奨設定を行うデータベースを指定することもできます。 また、DMA を使用すると、マネージインスタンスの月額料金を見積もることができます。
 
-いくつかのサンプル呼び出しを次に示します。
+DMA CLI を使用して SKU の推奨事項を取得するには、コマンドプロンプトで次の引数を指定して dmacmd を実行します。
+
+- **/Action = SkuRecommendation**: SKU 評価を実行するには、この引数を入力します。
+- **/SkuRecommendationInputDataFilePath**: 前のセクションで収集したカウンターファイルへのパスです。
+- **/SkuRecommendationTsvOutputResultsFilePath**: 出力を書き込むパスは、TSV 形式になります。
+- **/SkuRecommendationJsonOutputResultsFilePath**: 出力を書き込むパスは JSON 形式になります。
+- **/SkuRecommendationHtmlResultsFilePath**: 出力結果を HTML 形式で書き込むためのパス。
+
+さらに、次のいずれかの引数を選択します。
+
+- 価格更新を禁止する
+  - **/SkuRecommendationPreventPriceRefresh**: True に設定すると、価格更新が発生しなくなり、既定の価格が想定されます。 オフラインモードで実行している場合は、を使用します。 このパラメーターを使用しない場合は、以下のパラメーターを指定して、指定した領域に基づいて最新の価格を取得する必要があります。
+- 最新の価格を取得する
+  - **/SkuRecommendationCurrencyCode**: 価格を表示する通貨 (例: "USD")。
+  - **/SkuRecommendationOfferName**: プラン名 (例: "MS-azr-0003P")。 詳細については、 [Microsoft Azure プランの詳細](https://azure.microsoft.com/support/legal/offer-details/)に関するページを参照してください。
+    - **/SkuRecommendationRegionName**: リージョン名 (たとえば、"WestUS")。
+    - **/SkuRecommendationSubscriptionId**: サブスクリプション ID。
+    - **/Azureauthenticationtenantid**: 認証テナント。
+    - **/Azureauthenticationclientid**: 認証に使用される AAD アプリのクライアント ID。
+    - 次のいずれかの認証オプション。
+      - Interactive
+        - **Azureauthenticationinteractiveauthentication**: 認証ポップアップウィンドウの場合は true に設定されます。
+      - 証明書ベース
+        - **AzureAuthenticationCertificateStoreLocation**: 証明書ストアの場所 (例: "CurrentUser") に設定します。
+        - **Azureauthenticationcertificatethumbprint**: 証明書の拇印に設定します。
+      - トークンベース
+        - **Azureauthenticationtoken**: 証明書トークンに設定されます。
+
+> [!NOTE]
+> 対話型認証のために ClientId と TenantId を取得するには、新しい AAD アプリケーションを構成する必要があります。 認証とこれらの資格情報の取得の詳細については、「 [Microsoft Azure BILLING api のサンプル: RATECARD API](https://github.com/Azure-Samples/billing-dotnet-ratecard-api)」の記事で、「**手順 1: AAD テナントでのネイティブクライアントアプリケーションの構成**」に記載されている手順に従います。
+
+最後に、推奨設定が必要なデータベースを指定するために使用できるオプションの引数があります。 
+
+- **/SkuRecommendationDatabasesToRecommend**: 推奨設定を行うデータベースの一覧。 データベース名は大文字と小文字が区別されます。 (1) は、それぞれ二重引用符で囲んで (2)、二重引用符で囲み、(3) それぞれの名前の間に1つのスペースで区切られます (例:/SkuRecommendationDatabasesToRecommend = "Database1" "Database2" "Database3"). このパラメーターを省略すると、入力 .csv ファイルで識別されるすべてのユーザーデータベースに対して推奨設定が提供されます。  
+
+呼び出しの例を次に示します。
+
+**サンプル 1: 既定の価格で推奨事項を取得する。オフラインモードで実行する場合、または認証資格情報がない場合は、を使用します。**
+
+```
+.\DmaCmd.exe /Action=SkuRecommendation
+/SkuRecommendationInputDataFilePath="C:\TestOut\out.csv"
+/SkuRecommendationTsvOutputResultsFilePath="C:\TestOut\prices.tsv"
+/SkuRecommendationJsonOutputResultsFilePath="C:\TestOut\prices.json"
+/SkuRecommendationOutputResultsFilePath="C:\TestOut\prices.html"
+/SkuRecommendationPreventPriceRefresh=true
+```
+
+**サンプル 2: 指定された地域 (例: "UKWest") の最新価格で推奨事項を取得する。**
 
 ```
 .\DmaCmd.exe /Action=SkuRecommendation
@@ -117,52 +147,94 @@ V4.0 の Database Migration Assistant をダウンロードまたはそれ以降
 /AzureAuthenticationTenantId=<Your AzureAuthenticationTenantId>
 ```
 
+**サンプル 3: 特定のデータベース (例: "TPCDS1G, EDW_3G, TPCDS10G") の推奨事項を取得する。**
+
 ```
-.\DmaCmd.exe /Action=SkuRecommendation
-/SkuRecommendationInputDataFilePath="C:\TestOut\out.csv"
-/SkuRecommendationTsvOutputResultsFilePath="C:\TestOut\prices.tsv"
-/SkuRecommendationJsonOutputResultsFilePath="C:\TestOut\prices.json"
-/SkuRecommendationOutputResultsFilePath="C:\TestOut\prices.html"
-/SkuRecommendationPreventPriceRefresh=true
+.\DmaCmd.exe /Action=SkuRecommendation 
+/SkuRecommendationInputDataFilePath="C:\TestOut\out.csv" 
+/SkuRecommendationTsvOutputResultsFilePath="C:\TestOut\prices.tsv" 
+/SkuRecommendationJsonOutputResultsFilePath="C:\TestOut\prices.json" 
+/SkuRecommendationOutputResultsFilePath="C:\TestOut\prices.html" 
+/SkuRecommendationCurrencyCode=USD 
+/SkuRecommendationOfferName=MS-AZR-0044p 
+/SkuRecommendationRegionName=UKWest 
+/SkuRecommendationSubscriptionId=<Your Subscription Id> 
+/SkuRecommendationDatabasesToRecommend=“TPCDS1G” “EDW_3G” “TPCDS10G” 
+/AzureAuthenticationInteractiveAuthentication=true 
+/AzureAuthenticationClientId=<Your AzureAuthenticationClientId> 
+/AzureAuthenticationTenantId=<Your AzureAuthenticationTenantId>
 ```
 
-TSV の出力ファイルには次の図に表示される列が含まれます。
+単一データベースの推奨事項の場合、TSV 出力ファイルは次のようになります。
 
-   ![DMA フォルダーに示すように PowerShell ファイル](../dma/media/dma-tsv-file-column.png)
+![PowerShell の単一 db ファイルが DMA フォルダーに表示される](../dma/media/dma-sku-recommend-single-db-recommendations.png)
 
-各列の説明に従います。
+マネージインスタンスの推奨事項については、TSV 出力ファイルは次のようになります。
+
+![PowerShell マネージインスタンスファイルが DMA フォルダーに表示される](../dma/media/dma-sku-recommend-mi-recommendations.png)
+
+出力ファイルの各列の説明は次のとおりです。
 
 - **DatabaseName** -データベースの名前。
-- **MetricName** - メトリックが実行されたかどうか。
-- **MetricType** -Azure SQL Database の推奨レベルです。
-- **MetricValue** -Azure SQL Database の SKU をお勧めします。
-- **SQLMiEquivalentCores** -Azure SQL Database マネージ インスタンスに移動する場合は、コア数のこの値を使用できます。
-- **IsTierRecommended**の各レベルの最小 SKU の推奨事項をいたします。 データベースの適切なレベルを決定するためのヒューリスティックを適用します。 
-- **ExclusionReasons** -この値は、階層が推奨される場合は空白です。 各層はお勧めしませんが、理由が選択されなかった理由を提供されています。
-- **AppliedRules** -適用された規則の短い表記します。
+- **Metrictype** -単一データベース/マネージインスタンス層 Azure SQL Database 推奨されます。
+- **Metricvalue** -単一データベース/マネージインスタンス SKU の Azure SQL Database をお勧めします。
+- **PricePerMonth** –対応する SKU の月あたりの推定料金です。
+- **Regionname** –対応する SKU のリージョン名。 
+- **I(推奨**)-各レベルに対して SKU の最小推奨事項を作成します。 次に、ヒューリスティックを適用して、データベースの適切なレベルを決定します。 これは、データベースに推奨されるレベルを表します。 
+- **ExclusionReasons** -この値は、レベルが推奨されている場合は空白です。 推奨されていない階層ごとに、選択されなかった理由が示されます。
+- 適用された規則-適用され**た規則の**短い表記。
 
-推奨値は、Azure、オンプレミス データベースのような成功率で実行するようにクエリに必要な最小の SKU。 たとえば、S3 を選択し、または以下の推奨される SKU の最小の standard レベルの S4 場合をにより、クエリがタイムアウトまたは実行に失敗します。
+最終的に推奨されるレベル ( **Metrictype**) と値 (つまり**metrictype**) は、 **Iの推奨**列が TRUE である場所で見つかりました。 Azure でクエリを実行するために必要な最小 SKU を反映します。オンプレミスのデータベース。 マネージインスタンスの場合、現在のところ、DMA では、最も一般的に使用される8vcore から 40vcore Sku への推奨事項がサポートされています。 たとえば、standard レベルでは、推奨される最小 SKU が S4 の場合、S3 以下を選択すると、クエリがタイムアウトになるか、実行に失敗します。
 
-HTML ファイルには、グラフィカルな形式では、この情報が含まれています。 HTML ファイルを使用して、Azure サブスクリプションの情報を入力、価格レベルの選択、データベース、レベルとデータの最大サイズを計算し、データベースをプロビジョニングするスクリプトを生成することができます。 このスクリプトは、PowerShell を使用して実行できます。
+HTML ファイルには、この情報がグラフィック形式で含まれています。 最終的な推奨事項を表示し、プロセスの次の部分をプロビジョニングするためのわかりやすい手段を提供します。 HTML 出力の詳細については、次のセクションを参照してください。
 
-## <a name="provision-your-databases-to-azure"></a>Azure へのデータベースをプロビジョニングします。
-ほんの数回のクリックで、データベースを移行する Azure でターゲット データベースの準備には、前の手順からの推奨事項を使用できます。 次のように HTML ファイルを更新することで推奨事項は、変更を行うこともできます。
+## <a name="provision-recommended-skus-to-azure"></a>推奨される Sku を Azure にプロビジョニングする
+
+わずか数回のクリックで、特定された推奨事項を使用して、データベースを移行できる Azure のターゲット Sku をプロビジョニングできます。 HTML ファイルを使用して Azure サブスクリプションを入力できます。データベースの価格レベル、コンピューティングレベル、最大データサイズを選択します。とは、データベースをプロビジョニングするためのスクリプトを生成します。 このスクリプトは、PowerShell を使用して実行できます。
+
+このプロセスは、1台のコンピューターで実行することも、複数のコンピューターで実行して、大規模な SKU の推奨事項を確認することもできます。 現在、DMA では、コマンドラインインターフェイスを使用してプロセス全体をサポートすることで、シンプルでスケーラブルなエクスペリエンスを実現しています。
+
+プロビジョニング情報を入力して推奨設定を変更するには、次のように HTML ファイルを更新します。
+
+**単一データベースの推奨事項**
+
+![Azure SQL DB SKU の推奨事項画面](../dma/media/dma-sku-recommend-single-db-recommendations1.png)
 
 1. HTML ファイルを開き、次の情報を入力します。
-    - **サブスクリプション ID** -データベースをプロビジョニングする Azure サブスクリプションのサブスクリプション ID。
-    - **リージョン**-データベースをプロビジョニングするリージョン。 サブスクリプションが選択領域をサポートしていることを確認します。
-    - **リソース グループ**-データベースをデプロイするリソース グループ。 存在するリソース グループを入力します。
-    - **サーバー名**-Azure SQL Database サーバーのデータベースをデプロイします。 存在しないサーバー名を入力すると、それが作成されます。
-    - **管理者ユーザー名とパスワード**-サーバー管理者ユーザー名とパスワード。
+    - **サブスクリプション id** -データベースのプロビジョニング先となる Azure サブスクリプションのサブスクリプション id。
+    - [**リソースグループ]** -データベースをデプロイするリソースグループ。 存在するリソースグループを入力してください。
+    - **Region** -データベースをプロビジョニングするリージョン。 サブスクリプションで選択したリージョンがサポートされていることを確認します。
+    - **サーバー名**-データベースを配置する Azure SQL Database サーバー。 存在しないサーバー名を入力すると、サーバー名が作成されます。
+    - **管理者のユーザー**名-サーバー管理者のユーザー名。
+    - **管理者パスワード**-サーバー管理者パスワード。 パスワードは8文字以上、長さが128文字以下でなければなりません。 パスワードには、英大文字、英小文字、数字 (0-9)、英数字以外の文字 (!、$、#、% など) の3つのカテゴリの文字を含める必要があります。 パスワードには、ユーザー名のすべてまたは一部 (3 + 連続する文字) を含めることはできません。
 
-2. データベースごとの推奨事項を確認し、価格レベルを変更、レベル、および必要に応じて、最大データ サイズを計算します。 現在しないプロビジョニングするすべてのデータベースの選択を解除してください。
+2. 各データベースの推奨事項を確認し、必要に応じて価格レベル、コンピューティングレベル、最大データサイズを変更します。 現在プロビジョニングしないデータベースは、必ず選択解除してください。
 
-3. 選択**プロビジョニング スクリプトの生成**スクリプトを保存および PowerShell でこれを実行します。
+3. **[プロビジョニングスクリプトの生成]** を選択し、スクリプトを保存して、PowerShell で実行します。
 
-    このプロセスは、HTML ページで選択したすべてのデータベースを作成する必要があります。
+    このプロセスでは、HTML ページで選択したすべてのデータベースが作成されます。
 
-すべての手順を実行するには 1 台のコンピューター上でこのプロセスでまたは大規模の SKU の推奨事項を決定する複数のコンピューター上で実行することができます。 DMA によって、コマンド ライン インターフェイスを使用してこれらすべての手順をサポートすることで、シンプルかつスケーラブルなエクスペリエンスがなります。 ここでも、DMA のユーザー インターフェイスを使用してこの機能のサポートは、今年の後半で使用してになります。
+**マネージインスタンスの推奨事項について**
 
-## <a name="next-steps"></a>次の手順
-- 最新バージョンのダウンロード[Data Migration Assistant](https://aka.ms/get-dma)します。
-- 記事をご覧ください[実行 Data Migration Assistant、コマンドラインから](https://docs.microsoft.com/sql/dma/dma-commandline?view=sql-server-2017)CLI から DMA を実行するためのコマンドの完全な一覧についてはします。
+![Azure SQL MI SKU の推奨事項画面](../dma/media/dma-sku-recommend-mi-recommendations1.png)
+
+1. HTML ファイルを開き、次の情報を入力します。
+    - **サブスクリプション id** -データベースのプロビジョニング先となる Azure サブスクリプションのサブスクリプション id。
+    - [**リソースグループ]** -データベースをデプロイするリソースグループ。 存在するリソースグループを入力してください。
+    - **Region** -データベースをプロビジョニングするリージョン。 サブスクリプションで選択したリージョンがサポートされていることを確認します。
+    - **[インスタンス名]** –データベースの移行先となる Azure SQL Managed Instance のインスタンス。 インスタンス名には、小文字、数字、および '-' のみを使用できますが、先頭または末尾を '-' にしたり、63文字を超えたりすることはできません。
+    - **インスタンス管理者のユーザー名**–インスタンス管理者のユーザー名。 ログイン名が次の要件を満たしていることを確認してください。これは、一般的なシステム名 (admin、administrator、sa、root、dbmanager、loginmanager など)、または組み込みのデータベースユーザーまたはロール (dbo、guest、public など) ではなく、SQL 識別子です。 名前に空白文字、Unicode 文字、またはアルファベット以外の文字が含まれていないこと、および数字や記号で始まらないことを確認します。 
+    - **インスタンス管理者パスワード**-インスタンス管理者パスワード。 パスワードは16文字以上、長さが128文字以下でなければなりません。 パスワードには、英大文字、英小文字、数字 (0-9)、英数字以外の文字 (!、$、#、% など) の3つのカテゴリの文字を含める必要があります。 パスワードには、ユーザー名のすべてまたは一部 (3 + 連続する文字) を含めることはできません。
+    - **[Vnet 名]** –マネージインスタンスをプロビジョニングする必要がある vnet の名前。 既存の VNet 名を入力します。
+    - **[サブネット名]** –マネージインスタンスをプロビジョニングするサブネットの名前。 既存のサブネット名を入力します。
+
+2. 各インスタンスの推奨事項を確認し、必要に応じて価格レベル、コンピューティングレベル、最大データサイズを変更します。 現在、推奨事項は8vcore から 40vcore Sku に制限されていますが、必要に応じて、64vcore と 80vcore Sku をプロビジョニングするオプションもあります。 現在プロビジョニングしていないすべてのインスタンスの選択を解除してください。
+
+    このプロセスでは、HTML ページで選択したすべてのデータベースが作成されます。
+
+    > [!NOTE]
+    > サブネット (特に初めて) でマネージインスタンスを作成するには、完了までに数時間かかることがあります。 PowerShell を使用してプロビジョニングスクリプトを実行した後、Azure Portal でデプロイの状態を確認できます。
+
+## <a name="next-step"></a>次の手順
+
+- CLI から DMA を実行するためのコマンドの完全な一覧については、「[コマンドラインから Data Migration Assistant を実行](https://docs.microsoft.com/sql/dma/dma-commandline?view=sql-server-2017)する」を参照してください。

@@ -1,7 +1,7 @@
 ---
-title: sys.dm_exec_query_optimizer_memory_gateways (TRANSACT-SQL) |Microsoft Docs
-description: 同時実行クエリの最適化を抑制するために使用するリソース セマフォの現在の状態を返します
-ms.custom: ''
+title: dm_exec_query_optimizer_memory_gateways (Transact-sql)
+description: 同時クエリの最適化を調整するために使用されるリソースセマフォの現在の状態を返します。
+ms.custom: seo-dt-2019
 ms.date: 04/06/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -19,47 +19,46 @@ helpviewer_keywords:
 - sys.dm_exec_query_optimizer_memory_gateways dynamic management view
 author: josack
 ms.author: josack
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 6e5c54d116f4d4d8a71ba3660a31b324d9952970
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: 5720617f6652a8acb1ab8b6daf0e5e8919a86f8b
+ms.sourcegitcommit: f018eb3caedabfcde553f9a5fc9c3e381c563f1a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52405539"
+ms.lasthandoff: 11/18/2019
+ms.locfileid: "74165003"
 ---
-# <a name="sysdmexecqueryoptimizermemorygateways-transact-sql"></a>sys.dm_exec_query_optimizer_memory_gateways (TRANSACT-SQL)
+# <a name="sysdm_exec_query_optimizer_memory_gateways-transact-sql"></a>dm_exec_query_optimizer_memory_gateways (Transact-sql)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
-同時実行クエリの最適化を抑制するために使用するリソース セマフォの現在の状態を返します。
+同時クエリの最適化を調整するために使用されるリソースセマフォの現在の状態を返します。
 
-|[列]|型|説明|  
+|列|[型]|[説明]|  
 |----------|---------------|-----------------|  
-|**pool_id**|**int**|リソース ガバナーの下のリソース プール ID|  
-|**name**|**sysname**|ゲート名 (中規模ゲートウェイの場合は、小規模のゲートウェイ大規模ゲートウェイ) のコンパイルします。|
-|**max_count**|**int**|最大同時コンパイルの数を構成します。|
-|**active_count**|**int**|現在アクティブなこのゲートのコンパイル数|
-|**waiter_count**|**int**|このゲートの待機処理の数|
-|**threshold_factor**|**bigint**|クエリの最適化で使用されるメモリの最大部分を定義するしきい値の係数。  小規模のゲートウェイの threshold_factor では、小規模のゲートウェイにアクセスする必要があります前に 1 つのクエリのバイト単位で最大オプティマイザー メモリ使用量を示します。  中規模および大規模なゲートウェイの場合は、threshold_factor は、このゲートの使用できる合計サーバー メモリの一部を示しています。 ゲートのメモリ使用率のしきい値を計算するときに、除数として使用されます。|
-|**threshold**|**bigint**|(バイト単位) [次へ] のしきい値のメモリ。  そのメモリ消費量がこのしきい値に達した場合、このゲートウェイへのアクセスを取得するクエリが必要です。  「-1」場合は、クエリは、このゲートウェイに、アクセスする必要はありません。|
-|**is_active**|**bit**|かどうかを現在のゲートを渡すか、クエリが必要です。|
+|**pool_id**|**int**|Resource Governor の下のリソースプール ID|  
+|**name**|**sysname**|コンパイルゲート名 (小規模ゲートウェイ、中規模ゲートウェイ、ビッグゲートウェイ)|
+|**max_count**|**int**|同時コンパイルの最大構成数|
+|**active_count**|**int**|このゲートで現在アクティブなコンパイルの数|
+|**waiter_count**|**int**|このゲート内の待機処理の数|
+|**threshold_factor**|**bigint**|クエリの最適化で使用される最大メモリ部分を定義するしきい値係数。  小さいゲートウェイの場合、threshold_factor は、小さいゲートウェイでのアクセスを取得するために1つのクエリに対して最大オプティマイザーメモリ使用量 (バイト単位) を示します。  M とビッグゲートウェイの場合、threshold_factor は、このゲートで使用可能な合計サーバーメモリの部分を示します。 ゲートのメモリ使用量のしきい値を計算するときに除数として使用されます。|
+|**threshold**|**bigint**|次のしきい値メモリ (バイト単位)。  このクエリは、メモリ消費量がこのしきい値に達した場合に、このゲートウェイへのアクセスを取得するために必要です。  クエリがこのゲートウェイへのアクセスを取得する必要がない場合は、"-1" になります。|
+|**is_active**|**bit**|クエリが現在のゲートを渡す必要があるかどうかを示します。|
 
 
 ## <a name="permissions"></a>アクセス許可  
-SQL Server では、サーバーに対する VIEW SERVER STATE 権限が必要です。
+SQL Server には、サーバーに対する VIEW SERVER STATE 権限が必要です。
 
-Azure SQL Database には、データベースで VIEW DATABASE STATE 権限が必要です。
+Azure SQL Database には、データベースに対する VIEW DATABASE STATE 権限が必要です。
 
 
-## <a name="remarks"></a>コメント  
-SQL Server では、ゲートウェイの階層型アプローチを使用して許可される同時コンパイルの数を調整します。  S、m など、大規模な 3 つのゲートウェイが使用されます。 ゲートウェイは、大規模なコンパイルのメモリが必要なコンシューマーによって全体的なメモリ リソースの枯渇を防ぐのに役立ちます。
+## <a name="remarks"></a>Remarks  
+SQL Server では、階層化されたゲートウェイアプローチを使用して、許可される同時コンパイルの数を調整します。  小規模、中、大など、3つのゲートウェイが使用されます。 ゲートウェイを使用すると、より大きなコンパイルメモリを必要とするコンシューマーによって、全体的なメモリリソースが枯渇するのを防ぐことができます。
 
-遅延コンパイルでゲートウェイの結果を待機します。 スロットルされた要求はコンパイルが遅延、に加えて、待機の種類が蓄積される関連付けの RESOURCE_SEMAPHORE_QUERY_COMPILE があります。 クエリは、コンパイルの大量のメモリを使用していることと、そのメモリが不足している、またはまたは十分なメモリが全体的に見て、RESOURCE_SEMAPHORE_QUERY_COMPILE 待機の種類を示す場合がありますにある特定のただし使用可能なユニットゲートウェイが使用されています。 出力**sys.dm_exec_query_optimizer_memory_gateways**シナリオのトラブルシューティングに使用できますが、クエリ実行プランをコンパイルする十分なメモリ。  
+ゲートウェイの結果を遅延コンパイルで待機します。 調整された要求には、コンパイル時の遅延に加えて、RESOURCE_SEMAPHORE_QUERY_COMPILE の待機の種類の累積が関連付けられます。 RESOURCE_SEMAPHORE_QUERY_COMPILE の待機の種類は、クエリがコンパイルに大量のメモリを使用していて、メモリが不足していること、または、十分なメモリがあることを示している可能性があります。ただし、特定のゲートウェイが使い果たされました。 **Dm_exec_query_optimizer_memory_gateways**の出力を使用して、クエリ実行プランをコンパイルするためのメモリが不足しているシナリオのトラブルシューティングを行うことができます。  
 
 ## <a name="examples"></a>使用例  
 
-### <a name="a-viewing-statistics-on-resource-semaphores"></a>A. リソース セマフォの統計情報の表示  
-SQL Server のこのインスタンスの現在のオプティマイザー メモリ ゲートウェイの統計情報とは
+### <a name="a-viewing-statistics-on-resource-semaphores"></a>A. リソースセマフォの統計の表示  
+この SQL Server インスタンスの現在のオプティマイザーメモリゲートウェイの統計はどのようなものですか?
 
 ```  
 SELECT [pool_id], [name], [max_count], [active_count],
@@ -72,5 +71,5 @@ FROM sys.dm_exec_query_optimizer_memory_gateways;
 ## <a name="see-also"></a>参照  
  [動的管理ビューと動的管理関数 &#40;Transact-SQL&#41;](./system-dynamic-management-views.md)   
  [実行関連の動的管理ビューおよび関数 &#40;Transact-SQL&#41;](./execution-related-dynamic-management-views-and-functions-transact-sql.md)  
-[DBCC MEMORYSTATUS コマンドを使用して、SQL Server 2005 のメモリ使用量を監視する方法](https://support.microsoft.com/help/907877/how-to-use-the-dbcc-memorystatus-command-to-monitor-memory-usage-on-sql-server-2005)
-[大きなクエリ コンパイルが SQL Server 2014 で RESOURCE_SEMAPHORE_QUERY_COMPILE で待機](https://support.microsoft.com/help/3024815/large-query-compilation-waits-on-resource-semaphore-query-compile-in-sql-server-2014)
+[DBCC MEMORYSTATUS コマンドを使用して SQL Server 2005 のメモリ使用量を監視する方法](https://support.microsoft.com/help/907877/how-to-use-the-dbcc-memorystatus-command-to-monitor-memory-usage-on-sql-server-2005) [SQL Server 2014 で RESOURCE_SEMAPHORE_QUERY_COMPILE での大きなクエリのコンパイル待機](https://support.microsoft.com/help/3024815/large-query-compilation-waits-on-resource-semaphore-query-compile-in-sql-server-2014)
+

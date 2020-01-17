@@ -14,14 +14,18 @@ ms.assetid: 68dbdf81-032c-4a73-99f6-41420e053980
 author: MikeRayMSFT
 ms.author: mikeray
 manager: erikre
-ms.openlocfilehash: 02ac3c6522dd97cf0ac2e752894f0c2ba1fc91c0
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: 3d458e7696719c383b03a5cc3f259de08e4b8c37
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53209951"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68262780"
 ---
 # <a name="upgrade-integration-services-packages"></a>Integration Services パッケージのアップグレード
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] のインスタンスを [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]の現在のリリースにアップグレードするとき、既存の [!INCLUDE[ssISversion10](../../includes/ssisversion10-md.md)] パッケージは、現在のリリースの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] で使用されるパッケージ形式に自動的にアップグレードされません。 アップグレード方法を選択して、パッケージを手動でアップグレードする必要があります。  
   
  プロジェクトをプロジェクトの配置モデルに変換するときのパッケージのアップグレードについては、「[Integration Services (SSIS) プロジェクトとパッケージの配置](../../integration-services/packages/deploy-integration-services-ssis-projects-and-packages.md)」をご覧ください。

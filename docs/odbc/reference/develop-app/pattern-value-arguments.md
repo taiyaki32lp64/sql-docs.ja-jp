@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 1d3f0ea6-87af-4836-807f-955e7df2b5df
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 8f4a32d9ab637de5b52466cfcb628a57ff6c044b
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: 53c091fd0b7a6cfdf390997fb5163fbc9d98e18c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53208332"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68023341"
 ---
 # <a name="pattern-value-arguments"></a>パターン値の引数
 などのいくつかの引数で、カタログ関数、 *TableName*引数**SQLTables**、検索パターンをそのまま使用します。 これらの引数は、検索パターンをそのまま使用する sql_false になります SQL_ATTR_METADATA_ID ステートメントの属性が設定されている場合。この属性が SQL_TRUE に設定されている場合、検索パターンを受け入れない識別子引数です。  

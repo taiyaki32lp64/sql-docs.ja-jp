@@ -17,11 +17,11 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: 3cf9a0c9e6059330c0b8edbd8228f617ba093564
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56025253"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63140551"
 ---
 # <a name="bike-buyer-dmx-tutorial"></a>Bike Buyer DMX のチュートリアル
   このチュートリアルでは、データ マイニング拡張機能 (DMX) クエリ言語を使用して、マイニング モデルを作成、トレーニング、および調査する方法を学習します。 その後、これらのマイニング モデルを使用して、顧客が自転車を購入するかどうかを判断する予測を作成します。  
@@ -49,7 +49,7 @@ ms.locfileid: "56025253"
   
  [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] で提供されるデータ マイニング拡張機能 (DMX) は、マイニング モデルの作成と作業に使用できるクエリ言語です。 [!INCLUDE[msCoName](../includes/msconame-md.md)] デシジョン ツリー アルゴリズムを使用すると、顧客が自転車を購入するかどうかの予測に使用できるモデルを作成できます。 作成したモデルには、個別の顧客または複数の顧客のテーブルを入力できます。 [!INCLUDE[msCoName](../includes/msconame-md.md)] クラスタリング アルゴリズムを使用すると、共通の特性に基づいて顧客のグループを作成できます。 このチュートリアルの目標は、カスタム アプリケーションで使用する DMX スクリプトを設定することです。  
   
- **詳細:**[データ マイニング ソリューション](../../2014/analysis-services/data-mining/data-mining-solutions.md)  
+ **詳細:** [データ マイニング ソリューション](../../2014/analysis-services/data-mining/data-mining-solutions.md)  
   
 ## <a name="mining-structure-and-mining-models"></a>マイニング構造とマイニング モデル  
  DMX ステートメントを作成するにあたっては、[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] がマイニング モデルの作成に使用する主なオブジェクトを理解しておくことが重要です。 マイニング構造は、マイニング モデルの作成元のデータ ドメインを定義するデータ構造です。 1 つのマイニング構造には、同じドメインを共有する複数のマイニング モデルを含めることができます。 マイニング モデルは、マイニング構造によって表されるデータにマイニング モデル アルゴリズムを適用します。  

@@ -13,20 +13,19 @@ helpviewer_keywords:
 - metadata [SQL Server], functions
 - functions [SQL Server], metadata
 ms.assetid: a18c12a9-59ad-4711-a862-39d8f28476b0
-author: MashaMSFT
-ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 34a892ade297bacc380cb536d42d54ead7b10d1e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: MikeRayMSFT
+ms.author: mikeray
+ms.openlocfilehash: dde95a91f78c8e22bb6452421e41b10750f5c5fc
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47765220"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68130275"
 ---
 # <a name="metadata-functions-transact-sql"></a>メタデータ関数 (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
-  次のスカラー関数は、データベースおよびデータベース オブジェクトについての情報を返します。  
+  次のスカラー関数では、データベースとデータベースオブジェクトに関する情報が返されます。  
   
 |||  
 |-|-|  
@@ -52,7 +51,7 @@ ms.locfileid: "47765220"
 |[FULLTEXTCATALOGPROPERTY](../../t-sql/functions/fulltextcatalogproperty-transact-sql.md)|[TYPEPROPERTY](../../t-sql/functions/typeproperty-transact-sql.md)|  
 |[FULLTEXTSERVICEPROPERTY](../../t-sql/functions/fulltextserviceproperty-transact-sql.md)|[VERSION](../../t-sql/functions/version-transact-sql-metadata-functions.md)|  
   
- メタデータ関数によって返される値は非決定的です。 つまり、これらの関数は、同じ一連の入力値を使用しても、呼び出されるたびに常に同じ結果を返すわけではありません。  
+ すべてのメタデータ関数は非決定的です。 つまり、同じ一連の入力値を使用してこれらの関数を呼び出しても、毎回、常に同じ結果が返されるわけではありません。  
   
 ## <a name="see-also"></a>参照  
  [組み込み関数 &#40;Transact-SQL&#41;](~/t-sql/functions/functions.md)  

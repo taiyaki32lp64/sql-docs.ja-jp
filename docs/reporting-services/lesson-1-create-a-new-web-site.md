@@ -6,14 +6,14 @@ ms.prod_service: reporting-services-native
 ms.technology: reporting-services
 ms.topic: conceptual
 ms.assetid: 3f226bc8-614e-4dac-9078-3448a83342b5
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 14d0cb8c5b4f5c11ee979724a7ebe519abfdf3f0
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: ac670743ba36e3e1d880f152317956115ccf8c78
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52396446"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62651567"
 ---
 # <a name="lesson-1-create-a-new-web-site"></a>レッスン 1: 新しい Web サイトを作成する
 このレッスンでは、Visual C# 向けの ASP.NET Web サイト テンプレートを使用して新しい Web サイト プロジェクトを作成する方法について説明します。  

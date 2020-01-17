@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 ms.assetid: 89197b9b-7502-4fe2-bea3-ed7943eebf3b
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 54fd143d2b3af2596ff44a313b2d35b29fc1604a
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: ee51a19d1dc169d2ae784d8a44403e021ff8b665
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56015542"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66108504"
 ---
 # <a name="lesson-3-defining-a-data-driven-subscription"></a>レッスン 3: データ ドリブン サブスクリプションの定義
   このレッスンでは、データ ドリブン サブスクリプションを使用し、サブスクリプション データ ソースへの接続、サブスクリプション データを取得するクエリの作成、および結果セットとレポート、配信オプションのマッピングを行います。  
@@ -108,11 +107,11 @@ ms.locfileid: "56015542"
   
 7.  **[パスワード]** で、 **[静的な値を指定]** を選択します。 パスワードを入力します。 パスワードは正確に入力してください。 このウィザードでは、パスワードは検証されません。  
   
-8.   **[次へ].**  
+8.  **[次へ].**  
   
 ##  <a name="bkmk_configure_parameter"></a> 手順 5 - レポート出力を変化させるパラメーター値を構成します。  
   
-1.  **[OrderNumber]** には、 **[データベースから値を取得]** を選択します。 [値] で、 **[Order]** をクリックします。  **[次へ].**  
+1.  **[OrderNumber]** には、 **[データベースから値を取得]** を選択します。 [値] で、 **[Order]** をクリックします。 **[次へ].**  
   
 ##  <a name="bkmk_schedule_subscription"></a> 手順 6 - サブスクリプションのスケジュール設定するには  
   
@@ -141,7 +140,7 @@ ms.locfileid: "56015542"
 ## <a name="see-also"></a>参照  
  [データ ドリブン サブスクリプションの作成 &#40;SSRS チュートリアル&#41;](../reporting-services/create-a-data-driven-subscription-ssrs-tutorial.md)   
  [サブスクリプションと配信 &#40;Reporting Services&#41;](subscriptions/subscriptions-and-delivery-reporting-services.md)   
- [Data-Driven Subscriptions](subscriptions/data-driven-subscriptions.md)   
+ [データ ドリブン サブスクリプション](subscriptions/data-driven-subscriptions.md)   
  [作成、変更、およびデータ ドリブン サブスクリプションの削除](subscriptions/create-modify-and-delete-data-driven-subscriptions.md)   
  [サブスクライバー データに対して外部データ ソースを使用する &#40;データ ドリブン サブスクリプション&#41;](subscriptions/use-an-external-data-source-for-subscriber-data-data-driven-subscription.md)  
   

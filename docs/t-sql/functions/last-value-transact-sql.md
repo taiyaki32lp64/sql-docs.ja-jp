@@ -16,16 +16,15 @@ helpviewer_keywords:
 - analytic functions, LAST_VALUE
 - LAST_VALUE function
 ms.assetid: fd833e34-8092-42b7-80fc-95ca6b0eab6b
-author: MashaMSFT
-ms.author: mathoma
-manager: craigg
+author: MikeRayMSFT
+ms.author: mikeray
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: f145386e82132316484beb6757c47007d8144f11
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: 53053b4f2176a01970f433072634a49ec0d21eb3
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52391927"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68109192"
 ---
 # <a name="lastvalue-transact-sql"></a>LAST_VALUE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-asdw-xxx-md.md)]
@@ -49,7 +48,7 @@ LAST_VALUE ( [ scalar_expression ] )
  OVER **(** [ *partition_by_clause* ] *order_by_clause* [ *rows_range_clause* ] **)**  
  *partition_by_clause* は、FROM 句で生成された結果セットをパーティションに分割します。このパーティションに関数が適用されます。 指定しない場合、関数ではクエリ結果セットのすべての行を 1 つのグループとして扱います。  
   
- *order_by_clause* は、関数を適用する前にデータの順序を決定します。 *order_by_clause* が必要です。 *rows_range_clause* は始点と終点を指定することによって、パーティション内の行をさらに制限します。 詳細については、を参照してください。 [経由句 (&) #40 です。TRANSACT-SQL と #41;](../../t-sql/queries/select-over-clause-transact-sql.md).  
+ *order_by_clause* は、関数を適用する前にデータの順序を決定します。 *order_by_clause* が必要です。 *rows_range_clause* は始点と終点を指定することによって、パーティション内の行をさらに制限します。 詳細については、「[OVER 句 &#40;Transact-SQL&#41;](../../t-sql/queries/select-over-clause-transact-sql.md)」を参照してください。  
   
 ## <a name="return-types"></a>戻り値の型  
  同じ型には *scalar_expression*です。  
@@ -60,7 +59,7 @@ LAST_VALUE ( [ scalar_expression ] )
 ## <a name="examples"></a>使用例  
   
 ### <a name="a-using-lastvalue-over-partitions"></a>A. パーティションで LAST_VALUE を使用する  
- 次の例では、特定の給与 (等級) について各部門の最後の従業員の採用日を返します。  PARTITION BY 句によって部門ごとに従業員がパーティションに分割され、各パーティションに個別に LAST_VALUE 関数が適用されます。 OVER 句に指定された ORDER BY 句は、各パーティション内の行に LAST_VALUE 関数が適用される論理的な順序を決定します。  
+ 次の例では、特定の給与 (等級) について各部門の最後の従業員の採用日を返します。 PARTITION BY 句によって部門ごとに従業員がパーティションに分割され、各パーティションに個別に LAST_VALUE 関数が適用されます。 OVER 句に指定された ORDER BY 句は、各パーティション内の行に LAST_VALUE 関数が適用される論理的な順序を決定します。  
   
 ```  
 USE AdventureWorks2012;  
@@ -101,9 +100,9 @@ Information Services        Trenary                 50.4808      2003-01-12   20
 ```  
   
 ### <a name="b-using-firstvalue-and-lastvalue-in-a-computed-expression"></a>B. 計算された式で FIRST_VALUE と LAST_VALUE を使用する  
- 次の例では、計算された式で FIRST_VALUE 関数と LAST_VALUE 関数を使用して、指定された人数の従業員について、その年の現在の四半期の販売ノルマの値と第 1 四半期および第 4 四半期の販売ノルマの値の差をそれぞれ示します。 FIRST_VALUE 関数は、その年の第 1 四半期の販売ノルマの値を返し、その値を現在の四半期の販売ノルマの値から引きます。 そして、その結果を DifferenceFromFirstQuarter という派生列に返します。 その年の第 1 四半期については、DifferenceFromFirstQuarter 列の値は 0 です。 LAST_VALUE 関数は、その年の最終四半期の販売ノルマの値を返し、その値を現在の四半期の販売ノルマの値から引きます。 そして、その結果を DifferenceFromLastQuarter という派生列に返します。  その年の最終四半期については、DifferenceFromLastQuarter 列の値は 0 です。  
+ 次の例では、計算された式で FIRST_VALUE 関数と LAST_VALUE 関数を使用して、指定された人数の従業員について、その年の現在の四半期の販売ノルマの値と第 1 四半期および第 4 四半期の販売ノルマの値の差をそれぞれ示します。 FIRST_VALUE 関数は、その年の第 1 四半期の販売ノルマの値を返し、その値を現在の四半期の販売ノルマの値から引きます。 そして、その結果を DifferenceFromFirstQuarter という派生列に返します。 その年の第 1 四半期については、DifferenceFromFirstQuarter 列の値は 0 です。 LAST_VALUE 関数は、その年の最終四半期の販売ノルマの値を返し、その値を現在の四半期の販売ノルマの値から引きます。 そして、その結果を DifferenceFromLastQuarter という派生列に返します。 その年の最終四半期については、DifferenceFromLastQuarter 列の値は 0 です。  
   
- 以下に示すように、この例の場合、DifferenceFromLastQuarter 列でゼロ以外の値を返すには、"RANGE BETWEEN CURRENT ROW AND UNBOUNDED FOLLOWING" 句が必要です。 既定の範囲は "RANGE BETWEEN UNBOUNDED PRECEDING AND CURRENT ROW" です。 この例では、この既定の範囲を使用した場合 (または、範囲を含めない結果、既定値が使用される場合)、DifferenceFromLastQuarter 列にゼロが返されます。 詳細については、を参照してください。 [経由句 (&) #40 です。TRANSACT-SQL と #41;](../../t-sql/queries/select-over-clause-transact-sql.md).  
+ 以下に示すように、この例の場合、DifferenceFromLastQuarter 列でゼロ以外の値を返すには、"RANGE BETWEEN CURRENT ROW AND UNBOUNDED FOLLOWING" 句が必要です。 既定の範囲は "RANGE BETWEEN UNBOUNDED PRECEDING AND CURRENT ROW" です。 この例では、この既定の範囲を使用した場合 (または、範囲を含めない結果、既定値が使用される場合)、DifferenceFromLastQuarter 列にゼロが返されます。 詳細については、「[OVER 句 &#40;Transact-SQL&#41;](../../t-sql/queries/select-over-clause-transact-sql.md)」を参照してください。  
   
 ```  
 USE AdventureWorks2012;  

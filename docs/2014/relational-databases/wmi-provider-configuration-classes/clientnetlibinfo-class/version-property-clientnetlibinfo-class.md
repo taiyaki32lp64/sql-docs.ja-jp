@@ -19,11 +19,11 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: e7016b056c404d1e60f53bd0d0afd1270fdbb73a
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53373194"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63191093"
 ---
 # <a name="version-property-clientnetlibinfo-class"></a>Version プロパティ (ClientNetLibInfo クラス)
   クライアント ネットワーク ライブラリ ファイルのバージョンを取得します。  

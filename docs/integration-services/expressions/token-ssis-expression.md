@@ -8,17 +8,20 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 9fdd06bf-5bc9-445c-95bf-709e0ca5989b
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: 19e2499bddf07720bdeba3ba49dd4a07258dd31b
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: c025eac60079e601d755439573b35257038d9275
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52396958"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71297354"
 ---
 # <a name="token--ssis-expression"></a>TOKEN (SSIS 式)
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   文字列内のトークンを区切る指定された区切り記号、および返されるトークンを表すトークン数に基づいて、文字列からトークン (サブストリング) を返します。  
   
 ## <a name="syntax"></a>構文  

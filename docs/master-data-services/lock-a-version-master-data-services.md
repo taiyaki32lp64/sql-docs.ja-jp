@@ -1,5 +1,5 @@
 ---
-title: バージョンをロックする (マスター データ サービス) | Microsoft Docs
+title: バージョンをロックする
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -11,21 +11,20 @@ helpviewer_keywords:
 - versions [Master Data Services], locking
 - locking versions [Master Data Services]
 ms.assetid: 7bb62a84-12d8-4b29-9b6e-6aa25410618e
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: dce19cfa521bcf14c2d42ef932083de8deea72fa
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
-ms.translationtype: HT
+ms.openlocfilehash: 693eeda37e65dbf1d83fdf59eaf546e711827b7e
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52757764"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73728059"
 ---
 # <a name="lock-a-version-master-data-services"></a>バージョンをロックする (マスター データ サービス)
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-  [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]でモデルのバージョンをロックして、モデルのメンバーおよびメンバーの属性に対する変更を防止します。  
+  [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] でモデルのバージョンをロックして、モデルのメンバーおよびメンバーの属性に対する変更を防止します。  
   
 > [!NOTE]  
 >  バージョンをロックしても、スーパー ユーザーおよびモデル管理者は、引き続きメンバーの追加、編集、および削除を行うことができます。 モデルに対する権限を持つその他のユーザーは、メンバーの表示のみを行うことができます。  
@@ -33,7 +32,7 @@ ms.locfileid: "52757764"
 ## <a name="prerequisites"></a>Prerequisites  
  この手順を実行するには  
   
--   モデル管理者である必要があります。 詳細については、「 [管理者 (マスター データ サービス)](../master-data-services/administrators-master-data-services.md)にアクセスすることなくグループに対してユーザーの追加または削除を行うことができます。  
+-   モデル管理者である必要があります。 詳細については、「[Administrators &#40;Master Data Services&#41; (管理者 &#40;マスター データ サービス&#41;)](../master-data-services/administrators-master-data-services.md)」を参照してください。  
   
 -   バージョンのステータスは、 **[未処理]** である必要があります。  
   

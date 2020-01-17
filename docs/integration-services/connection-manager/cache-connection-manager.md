@@ -12,17 +12,20 @@ f1_keywords:
 helpviewer_keywords:
 - Cache connection manager
 ms.assetid: bdc92038-3720-4795-8a5c-79b963f2c952
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: 81c0f330803b5e073425ff4540f20bdd08caf8c4
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: ac44546e0f74e8cdee7e004f33a515b94e16aeb2
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47837780"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71294453"
 ---
 # <a name="cache-connection-manager"></a>キャッシュ接続マネージャー
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   キャッシュ接続マネージャーでは、キャッシュ変換またはキャッシュ ファイル (.caw) からデータを読み取り、そのデータをキャッシュ ファイルに保存できます。 キャッシュ ファイルを使用するようにキャッシュ接続マネージャーを構成したかどうかに関係なく、データは常にメモリに格納されます。  
   
  キャッシュ変換を使用して、データ フロー内の接続されているデータ ソースのデータをキャッシュ接続マネージャーに書き込みます。 パッケージ内の参照変換は、データに対する参照を実行します。  
@@ -67,7 +70,7 @@ ms.locfileid: "47837780"
 ###  <a name="generaltab"></a> [全般] タブ  
  **[キャッシュ接続マネージャー エディター]** ダイアログ ボックスの **[全般]** タブを使用すると、ファイルからキャッシュを読み取るか、キャッシュをファイルに保存するかを指定できます。  
   
-#### <a name="options"></a>[変数]  
+#### <a name="options"></a>オプション  
  **接続マネージャー名**  
  ワークフローにおけるキャッシュ接続マネージャーの一意な名前を指定します。 指定された名前は、 [!INCLUDE[ssIS](../../includes/ssis-md.md)] デザイナーに表示されます。  
   
@@ -98,7 +101,7 @@ ms.locfileid: "47837780"
 ###  <a name="columnstab"></a> [列] タブ  
  **[キャッシュ接続マネージャー エディター]** ダイアログ ボックスの **[列]** タブを使用すると、キャッシュ内の各列のプロパティを構成できます。  
   
-#### <a name="options"></a>[変数]  
+#### <a name="options"></a>オプション  
  **列**  
  列名を指定します。  
   
@@ -112,7 +115,7 @@ ms.locfileid: "47837780"
 > [!NOTE]  
 >  参照変換がキャッシュ接続マネージャーを使用するように構成されている場合、参照データセット内のインデックス列のみ入力列にマップできます。 また、すべてのインデックス列をマップする必要があります。  
   
- **型**  
+ **Type**  
  列のデータ型を指定します。  
   
  **[データ型]**  
@@ -128,6 +131,6 @@ ms.locfileid: "47837780"
  列の型のコード ページを指定します。 **[コード ページ]** は、そのデータ型で使用できる範囲内であれば更新できます。  
   
 ## <a name="related-tasks"></a>Related Tasks  
- [キャッシュ接続マネージャーの変換を使用してフル キャッシュ モードの参照変換を実装する](lookup-transformation-full-cache-mode-cache-connection-manager.md)  
+ [キャッシュ接続マネージャーを使用してフル キャッシュ モードの参照変換を実装する](lookup-transformation-full-cache-mode-cache-connection-manager.md)  
   
   

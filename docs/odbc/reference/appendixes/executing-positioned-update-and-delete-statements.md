@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 1d64f309-2a6e-4ad1-a6b5-e81145549c56
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 2391c01d93c876562ab9d870ab0dba22bf74cea5
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 2c69f784c2ce7c29cb49c81bf23f34a9cad12089
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47772050"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67913627"
 ---
 # <a name="executing-positioned-update-and-delete-statements"></a>位置指定更新と Delete ステートメントの実行
 > [!IMPORTANT]  
@@ -35,9 +34,9 @@ ms.locfileid: "47772050"
   
      **UPDATE** *table-name*  
   
-     **設定***列識別子* **=** {*式*&#124; です。**NULL**}  
+     **設定** *列識別子* **=** {*式*&#124; です。**NULL**}  
   
-     [**、** *列識別子* **=** {*式*&#124; です。**NULL**}]  
+     [ **、** *列識別子* **=** {*式*&#124; です。**NULL**}]  
   
      **WHERE CURRENT OF** *カーソル名*  
   

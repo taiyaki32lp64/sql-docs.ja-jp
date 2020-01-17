@@ -1,20 +1,21 @@
 ---
 title: 拡張機能
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
 ms.reviewer: ''
-ms.prod: reporting-services-2014, sql-server-2014
+ms.prod: sql-server-2014
+ms.technology: reporting-services
 ms.prod_service: reporting-services-native, reporting-services-sharepoint
 ms.topic: conceptual
 ms.custom: seodec18
 ms.date: 12/14/2018
-ms.openlocfilehash: 13c3ac54ba2c9713789c131a2bc1cee4ebe4c809
-ms.sourcegitcommit: 2f5773f4bc02bfff4f2924226ac5651eb0c00924
+ms.openlocfilehash: 2e1f0dadca7a7bdb98f828ce33e617a0cce0e8cf
+ms.sourcegitcommit: 0a4879dad09c6c42ad1ff717e4512cfea46820e9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/18/2018
-ms.locfileid: "53553104"
+ms.lasthandoff: 06/27/2019
+ms.locfileid: "67413125"
 ---
 # <a name="extensions-for-sql-server-reporting-services-ssrs"></a>SQL Server Reporting Services (SSRS) の拡張機能
 
@@ -56,7 +57,7 @@ ms.locfileid: "53553104"
   
 ## <a name="rendering-extensions"></a>表示拡張機能
 
- 表示拡張機能は、レポート プロセッサのデータとレイアウト情報をデバイス固有の形式に変換します。 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 7 つの表示拡張機能が含まれています。HTML、Excel、CSV、XML、Image、PDF、および[!INCLUDE[msCoName](../includes/msconame-md.md)]単語。  
+ 表示拡張機能は、レポート プロセッサのデータとレイアウト情報をデバイス固有の形式に変換します。 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] は、次の 7 種類の表示拡張機能を備えています:HTML、Excel、CSV、XML、Image、PDF、[!INCLUDE[msCoName](../includes/msconame-md.md)] Word。  
   
 - **HTML 表示拡張機能** Web ブラウザーを使用してレポート サーバーのレポートを要求すると、レポート サーバーは HTML 表示拡張機能を使用してレポートを表示します。 HTML 表示拡張機能では、すべての HTML が UTF-8 エンコードを使用して生成されます。 詳細については、次を参照してください[HTML にレンダリング&#40;レポート ビルダーおよび SSRS&#41; ](report-builder/rendering-to-html-report-builder-and-ssrs.md)と[Reporting Services と Power View のブラウザー サポートの計画&#40;Reporting Services 2014&#41; ](../../2014/reporting-services/browser-support-for-reporting-services-and-power-view.md).  
   

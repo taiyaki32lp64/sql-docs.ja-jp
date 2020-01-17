@@ -4,21 +4,20 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.lookuptransformation.erroroutput.f1
 ms.assetid: 15d53bb0-8be1-46fb-b459-04a397e75fac
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: d788fd54caf4bddfedb0dc8cfdf2946ba9f4a8db
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 12f1a73c1d21986d2089878bfe9d29dd4450f222
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48229432"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66057854"
 ---
 # <a name="lookup-transformation-editor-error-output-page"></a>[参照変換エディター] ([エラー出力] ページ)
   **[参照変換エディター]** ダイアログ ボックスの **[エラー出力]** ページを使用すると、エラー処理オプションを指定できます。  
@@ -43,7 +42,7 @@ ms.locfileid: "48229432"
   
  このオプションは、 **[エントリが一致しない行の処理方法を指定する]** ボックスの一覧で **[一致なしの出力に行をリダイレクトする]** を選択した場合には使用できません。 この一覧は、 **[参照変換エディター]** ダイアログ ボックスの **[全般]** ページにあります。  
   
- **関連項目:** [データのエラー処理](data-flow/error-handling-in-data.md)  
+ **関連トピック:** [データのエラー処理](data-flow/error-handling-in-data.md)  
   
  **切り捨て**  
  データの切り捨てが発生したときの動作を指定します。  
@@ -69,7 +68,7 @@ ms.locfileid: "48229432"
  **[適用]**  
  選択したセルにエラー処理オプションを適用します。  
   
-## <a name="see-also"></a>参照  
- [Integration Services のエラーとメッセージのリファレンス](../../2014/integration-services/integration-services-error-and-message-reference.md)  
+## <a name="see-also"></a>関連項目  
+ [Integration Services のエラーおよびメッセージのリファレンス](../../2014/integration-services/integration-services-error-and-message-reference.md)  
   
   

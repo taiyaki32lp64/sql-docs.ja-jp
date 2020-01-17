@@ -13,11 +13,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: f97e8fec31f6011b7a2769753bed35e4ab62b47b
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52777724"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62650223"
 ---
 # <a name="proxy-account-properties-and-new-proxy-account-principals-tab"></a>[プロキシ アカウントのプロパティ] および [新しいプロキシ アカウント] ([プリンシパル] タブ)
   このページを使用すると、ジョブ ステップで [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェントのプロキシ アカウントを使用できるプリンシパルを、表示または変更できます。  

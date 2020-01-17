@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: 5c48eb09-9e9b-45dd-b151-ca39b026ece5
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: beda27214f6ef805b84e9897e7f0dd48f424a79f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: bda45d55505356594f23a8bb1ece2e95153206a7
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47835480"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68022656"
 ---
 # <a name="systracecolumns-transact-sql"></a>sys.trace_columns (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -39,10 +38,10 @@ ms.locfileid: "47835480"
   
 |列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
-|**trace_column_id**|**smallint**|この列の一意な ID。|  
-|**name**|**nvarchar(128)**|この列の一意な名前。 このパラメーターはローカライズされません。|  
-|**type_name**|**nvarchar(128)**|この列のデータ型名。|  
-|**max_size**|**int**|この列の最大データ サイズ (バイト単位)。|  
+|**trace_column_id**|**smallint**|この列の一意の ID。|  
+|**name**|**nvarchar(128)**|この列の一意の名前。 このパラメーターはローカライズされません。|  
+|**type_name**|**nvarchar(128)**|データは、この列の名前を入力します。|  
+|**max_size**|**int**|この列のバイト単位の最大データ サイズ。|  
 |**is_filterable**|**bit**|フィルターの指定に列を使用できるかどうか。<br /><br /> 0 = false<br /><br /> 1 = true|  
 |**is_repeatable**|**bit**|"繰り返し列" のデータで列を参照できるかどうか。<br /><br /> 0 = false<br /><br /> 1 = true|  
 |**is_repeated_base**|**bit**|繰り返しデータを参照する一意のキーとして、この列を使用できるかどうか。<br /><br /> 0 = false<br /><br /> 1 = true|  

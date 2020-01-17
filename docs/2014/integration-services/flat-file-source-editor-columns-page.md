@@ -4,23 +4,22 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.flatfilesourceadapter.columns.f1
 helpviewer_keywords:
 - Flat File Source Editor
 ms.assetid: b5af5f65-c087-44fd-b5ae-d0441245fef2
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: f65e6e5dd0561960c36eea953b39b71906981fa9
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: f8fda95b51f568098b0ac9fc13b8a204adb71c51
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48118732"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66058612"
 ---
 # <a name="flat-file-source-editor-columns-page"></a>[フラット ファイル ソース エディター]\ ([列] ページ)
   **[フラット ファイル ソース エディター]** ダイアログ ボックスの **[列]** ノードを使用すると、出力列を各外部 (変換元) 列にマップできます。  
@@ -42,8 +41,8 @@ ms.locfileid: "48118732"
   
 ## <a name="see-also"></a>参照  
  [Integration Services のエラーおよびメッセージのリファレンス](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [[フラット ファイル ソース エディター&#40;接続マネージャー] ページ&#41;](../../2014/integration-services/flat-file-source-editor-connection-manager-page.md)   
- [[フラット ファイル ソース エディター&#40;エラー出力] ページ&#41;](../../2014/integration-services/flat-file-source-editor-error-output-page.md)   
+ [フラット ファイル ソース エディター &#40;[接続マネージャー] ページ&#41;](../../2014/integration-services/flat-file-source-editor-connection-manager-page.md)   
+ [フラット ファイル ソース エディター &#40;[エラー出力] ページ&#41;](../../2014/integration-services/flat-file-source-editor-error-output-page.md)   
  [フラット ファイル接続マネージャー](connection-manager/file-connection-manager.md)  
   
   

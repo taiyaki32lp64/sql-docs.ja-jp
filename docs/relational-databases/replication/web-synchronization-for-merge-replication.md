@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 84785aba-b2c1-4821-9e9d-a363c73dcb37
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: c7be0bb2b8864fc7720753e2af8a372c57a4ec3e
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: db49332ec2710586e9cae23c3e41ee4aff42b486
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54124962"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68136966"
 ---
 # <a name="web-synchronization-for-merge-replication"></a>マージ レプリケーションの Web 同期
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

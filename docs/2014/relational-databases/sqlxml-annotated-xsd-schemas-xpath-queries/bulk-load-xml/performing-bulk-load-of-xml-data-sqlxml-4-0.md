@@ -15,15 +15,15 @@ helpviewer_keywords:
 - XDR schemas [SQLXML], XML Bulk Load
 - inserting data
 ms.assetid: 3708b493-322e-4f3c-9b27-441d0c0ee346
-author: douglaslMS
-ms.author: douglasl
+author: MightyPen
+ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 27b24a6e7686c136cf79fa882136a362c7560e42
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 09f8c1cf3b6c9226dc87a0a95c57f4c5719f0d03
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52807554"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66013371"
 ---
 # <a name="performing-bulk-load-of-xml-data-sqlxml-40"></a>XML データの一括読み込みの実行 (SQLXML 4.0)
   XML 一括読み込みはスタンドアロン COM オブジェクトであり、これを使用すると、半構造化された XML データを Microsoft [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] テーブルに読み込むことができます。  

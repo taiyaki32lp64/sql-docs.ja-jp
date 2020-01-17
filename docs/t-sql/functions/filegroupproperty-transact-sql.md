@@ -18,15 +18,14 @@ helpviewer_keywords:
 - viewing filegroup properties
 - displaying filegroup properties
 ms.assetid: b3a930e6-df05-4034-929c-f681f5f6fc6e
-author: MashaMSFT
-ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: ffe6718eca0e385941e102801e218acc8680711f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: MikeRayMSFT
+ms.author: mikeray
+ms.openlocfilehash: 5563c65352713f3557e4c412607d1944f28f3a3f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47695700"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68071434"
 ---
 # <a name="filegroupproperty-transact-sql"></a>FILEGROUPPROPERTY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -48,11 +47,11 @@ FILEGROUPPROPERTY ( filegroup_name, property )
  *property*  
 ファイル グループのプロパティの名前を返す **varchar(128)** 型の式を指定します。 *property* によって返される値は次のいずれかです。  
   
-|ReplTest1|[説明]|返される値|  
+|[値]|[説明]|返される値|  
 |-----------|-----------------|--------------------|  
 |**IsReadOnly**|ファイル グループが読み取り専用であるかどうかを示します。|1 = TRUE<br /><br /> 0 = FALSE<br /><br /> NULL = 無効な入力です。|  
 |**IsUserDefinedFG**|ファイル グループはユーザー定義のファイル グループです。|1 = TRUE<br /><br /> 0 = FALSE<br /><br /> NULL = 無効な入力です。|  
-|**IsDefault**|ファイル グループは既定のファイル グループです。|1 = TRUE<br /><br /> 0 = FALSE<br /><br /> NULL = 無効な入力です。|  
+|**IsDefault**|ファイルは既定のファイル グループです。|1 = TRUE<br /><br /> 0 = FALSE<br /><br /> NULL = 無効な入力です。|  
   
 ## <a name="return-types"></a>戻り値の型  
 **int**  
@@ -78,7 +77,7 @@ Default Filegroup
 ```  
   
 ## <a name="see-also"></a>参照  
- [FILEGROUP_ID (&) #40 です。TRANSACT-SQL と #41 です。](../../t-sql/functions/filegroup-id-transact-sql.md)   
+ [FILEGROUP_ID &#40;Transact-SQL&#41;](../../t-sql/functions/filegroup-id-transact-sql.md)   
  [FILEGROUP_NAME &#40;Transact-SQL&#41;](../../t-sql/functions/filegroup-name-transact-sql.md)   
  [メタデータ関数 &#40;Transact-SQL&#41;](../../t-sql/functions/metadata-functions-transact-sql.md)   
  [SELECT &#40;Transact-SQL&#41;](../../t-sql/queries/select-transact-sql.md)   

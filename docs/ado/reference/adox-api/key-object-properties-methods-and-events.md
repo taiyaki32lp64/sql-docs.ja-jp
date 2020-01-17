@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: fba47748-53dd-4a5c-8c00-72e48bbc5bb0
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 8627f933ea2d9de89c5c93252589fb3d7162abc3
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 5b6f683685c4d961ccf63cecde71b6f37e7675d9
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47828491"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67965853"
 ---
 # <a name="key-object-properties-methods-and-events"></a>Key オブジェクトのプロパティ、メソッド、およびイベント
 ## <a name="propertiescollections"></a>プロパティ/コレクション  
@@ -40,5 +39,5 @@ ms.locfileid: "47828491"
 ## <a name="events"></a>イベント  
  [なし] :  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [Key オブジェクト (ADOX)](../../../ado/reference/adox-api/key-object-adox.md)

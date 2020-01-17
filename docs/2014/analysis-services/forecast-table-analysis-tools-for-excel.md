@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - Table Analysis tools
@@ -16,12 +15,12 @@ ms.assetid: 22bb0b5e-78f5-484e-883d-2b5985a12749
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 623f3a4724de84dbb1e355ffbd64a6868ea0f12a
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: dc620811209d854af5a9c874956847236819f462
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52518115"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66081048"
 ---
 # <a name="forecast-table-analysis-tools-for-excel"></a>予測 (Excel 用のテーブル分析ツール)
   ![ツール リボンのテーブル分析で予測ボタン](media/tat-forecast.gif "テーブル分析ツール リボンの予測 ボタン")  
@@ -42,11 +41,11 @@ ms.locfileid: "52518115"
   
 3.  予測する列を指定します。 ツールは、予測可能なデータ型を持つデータの列を自動的に選択します-つまり、連続する数値データ。 列に多数の NULL 値または 0 値が含まれる場合は、データが不足して結果に影響を及ぼす可能性があるため、連続数値データの列でも選択されない場合があります。 使用して、データを修正するには、これが発生した場合、[ラベルの変更&#40;SQL Server データ マイニング アドイン&#41;](relabel-sql-server-data-mining-add-ins.md)ツール。  
   
-4.  日付、時刻、またはその他の系列の識別子を含んでいる列を指定します。 オプションを選択した場合**\<タイムスタンプなし >** ツール、ソース データ内の行の順番に基づいて系列が作成されます。  
+4.  日付、時刻、またはその他の系列の識別子を含んでいる列を指定します。 オプションを選択した場合 **\<タイムスタンプなし >** ツール、ソース データ内の行の順番に基づいて系列が作成されます。  
   
 5.  取得する予測の数を指定します。  
   
-6.  必要に応じて、データの繰り返し間隔 (週単位や月単位など) に関するヒントをアルゴリズムに提供します。 データが特定のパターンのいずれかに収まらない場合、または何らかのパターンを認識していない場合は、選択**\<を自動的に検出 >** 繰り返し期間が検出されます。  
+6.  必要に応じて、データの繰り返し間隔 (週単位や月単位など) に関するヒントをアルゴリズムに提供します。 データが特定のパターンのいずれかに収まらない場合、または何らかのパターンを認識していない場合は、選択 **\<を自動的に検出 >** 繰り返し期間が検出されます。  
   
 7.  ソース テーブルに予測が追加され、新しいワークシートに予測レポートが作成されます。  
   
@@ -67,7 +66,7 @@ ms.locfileid: "52518115"
  予測数を指定する場合は、ステップ数を示す整数を入力します。 これらのステップの単位は、データの時刻および日付系列で使用されている単位に依存します。 データが月別の販売実績の一覧である場合、予測は月単位になります。 ソース データを変更しない限り、時間の単位は変更できません。  
   
 ### <a name="understanding-periodicity"></a>周期性について  
- 予測は、ある期間にわたって繰り返されるパターンに基づいています。 このため、Microsoft タイム シリーズ アルゴリズムでは、最も有力なパターンが発生する期間を特定するための計算が実行されます。 *周期性*ような期間を指します。  
+ 予測は、ある期間にわたって繰り返されるパターンに基づいています。 このため、Microsoft Time Series アルゴリズムでは、最も有力なパターンが発生する期間を特定するための計算が実行されます。 *周期性*ような期間を指します。  
   
  時系列には、数多くの潜在的なパターンが含まれている可能性があります。 データに一定のパターンがあることが確実であれば、アルゴリズムにヒントを与えることで予測の精度を高められる場合があります。  
   
@@ -90,7 +89,7 @@ ms.locfileid: "52518115"
   
 -   **予測**Excel がパラメーターをカスタマイズする機能を提供するためのデータ マイニング クライアントのウィザード。  
   
- 詳細については、**予測**ウィザードを参照してください[予測ウィザード&#40;Excel 用データ マイニング アドインで&#41;](forecast-wizard-data-mining-add-ins-for-excel.md)します。 予測に使用されるアルゴリズムの詳細については、[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] オンライン ブックの「Microsoft タイム シリーズ アルゴリズム」を参照してください。  
+ 詳細については、**予測**ウィザードを参照してください[予測ウィザード&#40;Excel 用データ マイニング アドインで&#41;](forecast-wizard-data-mining-add-ins-for-excel.md)します。 予測に使用されるアルゴリズムの詳細については、[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] オンライン ブックの「Microsoft Time Series アルゴリズム」を参照してください。  
   
 ## <a name="see-also"></a>参照  
  [Excel 用テーブル分析ツール](table-analysis-tools-for-excel.md)  

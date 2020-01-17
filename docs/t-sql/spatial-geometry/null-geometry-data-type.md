@@ -14,15 +14,14 @@ dev_langs:
 helpviewer_keywords:
 - Null (geometry Data Type)
 ms.assetid: 67a4b019-9091-4443-85cc-f4836d0cb509
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: 5559bc5736b5370f361796607e95e45ebbccea35
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: MladjoA
+ms.author: mlandzic
+ms.openlocfilehash: a5f6a00225549c32d95be58bd3987b42494e28a0
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47766786"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68101182"
 ---
 # <a name="null-geometry-data-type"></a>Null (geometry データ型)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -41,7 +40,7 @@ Null
 ## <a name="return-types"></a>戻り値の型  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 型: **geometry**  
   
- CLR 型: **SqlGeometry**  
+ CLR の型:**SqlGeometry**  
   
 ## <a name="remarks"></a>Remarks  
   

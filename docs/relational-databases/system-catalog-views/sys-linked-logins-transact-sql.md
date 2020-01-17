@@ -19,26 +19,25 @@ helpviewer_keywords:
 ms.assetid: af57bf0c-a265-410f-9bab-63b78569b4a6
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: 712d5286036aa8fbf375d16abfbe3a3c2257ab91
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: dfde20205de71a302c7ba8151fc6171cecc05a08
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47683352"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68140680"
 ---
-# <a name="syslinkedlogins-transact-sql"></a>sys.linked_logins (Transact-SQL)
+# <a name="syslinkedlogins-transact-sql"></a>sys.linked_logins (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  リンク サーバー ログイン マッピングごとに 1 行のデータを返します。この情報は、ローカル サーバーから対応するリンク サーバーへの、RPC と分散クエリで使用されます。  
+  RPC と対応するリンク サーバーにローカル サーバーからの分散クエリで使用するためのリンク サーバー ログイン マッピングごとに 1 行を返します。  
   
 |列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
 |**server_id**|**int**|内のサーバーの ID **sys.servers**します。|  
 |**local_principal_id**|**int**|マッピングが適用されるサーバー プリンシパル。<br /><br /> 0 = ワイルドカードまたは public。|  
-|**uses_self_credential**|**bit**|1 の場合、セッションで固有の資格情報を使用。0 の場合、セッションで与えられた名前とパスワードを使用。|  
-|**remote_name**|**sysname**|接続時に使用するリモート ユーザー名。 パスワードも格納されますが、カタログ ビューのインターフェイスには表示されません。|  
-|**modify_date**|**datetime**|リンク ログインが前回変更された日付。|  
+|**uses_self_credential**|**bit**|1 の場合、マッピングはセッションは独自の資格情報を使用する必要がありますを示しますそれ以外の場合、0 では、セッションで提供される名前とパスワードを使用することを示します。|  
+|**remote_name**|**sysname**|接続時に使用するリモート ユーザー名。 パスワードも格納されているがカタログ ビューのインターフェイスでは公開されません。|  
+|**modify_date**|**datetime**|リンク ログインが最後に変更された日付。|  
   
 ## <a name="permissions"></a>アクセス許可  
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] 詳細については、「 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)」を参照してください。  

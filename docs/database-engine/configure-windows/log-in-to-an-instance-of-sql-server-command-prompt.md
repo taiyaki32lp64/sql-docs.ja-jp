@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: f67c11e3-c519-40c9-82c1-07efa9d9985e
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 3436c35fc7f8c11fc15beaf4891582296750d8ee
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: c49b11c2385058cd4523d003c404d27fdfff1dda
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47646770"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68212755"
 ---
 # <a name="log-in-to-an-instance-of-sql-server-command-prompt"></a>SQL Server インスタンスへのログイン (コマンド プロンプト)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

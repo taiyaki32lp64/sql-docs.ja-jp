@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 helpviewer_keywords:
 - syslockinfo
@@ -14,12 +13,12 @@ ms.assetid: b9892ae3-ac15-48be-8b52-78dbed6467ed
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: a6dfe3901cb23cff65dd96fa084232310ef91ede
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: e8c6534449ffc4e89efcd49c943726bf6ecd9f26
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48104572"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66096647"
 ---
 # <a name="changes-to-behavior-in-syslockinfo-and-splock"></a>syslockinfo および sp_lock の動作に対する変更
   **syslockinfo**と**sp_lock**予期しない値を返す可能性があります。 返される追加の行が以前のバージョンの**syslockinfo**と**sp_lock**ロック リソースごとに 2 つの行の最大値が返されます。  
@@ -39,6 +38,6 @@ ms.locfileid: "48104572"
   
 ## <a name="see-also"></a>参照  
  [データベース エンジンのアップグレードに関する問題](../../../2014/sql-server/install/database-engine-upgrade-issues.md)   
- [SQL Server 2014 アップグレード アドバイザー&#91;新規&#93;](/sql/2014/sql-server/install/sql-server-2014-upgrade-advisor)  
+ [SQL Server 2014 アップグレード アドバイザー&#91;新規&#93;](sql-server-2014-upgrade-advisor.md)  
   
   

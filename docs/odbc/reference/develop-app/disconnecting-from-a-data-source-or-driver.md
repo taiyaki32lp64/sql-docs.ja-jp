@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 83dbf0bf-b400-41fb-8537-9b016050dc3c
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 2189c0fcc65fd4192e94da140e2d55ac86826137
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a01220b6a4f15ee3770b844f41e7ddc5399f5f86
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47706420"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68039764"
 ---
 # <a name="disconnecting-from-a-data-source-or-driver"></a>データ ソースまたはドライバーからの切断
 アプリケーションは、データ ソースの使用が完了したら、それを呼び出す**SQLDisconnect**します。 **SQLDisconnect**接続に割り当てられているすべてのステートメントを解放し、データ ソースからドライバーを切断します。 トランザクションがプロセスの場合は、エラーを返します。  

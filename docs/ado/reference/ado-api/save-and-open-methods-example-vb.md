@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: ddccdf58-9c57-4c9b-8b7f-0cf193f955fb
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 313ebe2cee8fdae430401eb5443604a84b057a83
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 6d42488f8f167cc7c98f663478c742963d24253c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47828850"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67931194"
 ---
 # <a name="save-and-open-methods-example-vb"></a>Save および Open メソッドの例 (VB)
 これら 3 つの例を示す方法、[保存](../../../ado/reference/ado-api/save-method.md)と[オープン](../../../ado/reference/ado-api/open-method-ado-recordset.md)メソッドを併用することができます。  
@@ -97,7 +96,7 @@ Attribute VB_Name = "Save"
 Attribute VB_Name = "Save"  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [Open メソッド (ADO Recordset)](../../../ado/reference/ado-api/open-method-ado-recordset.md)   
  [RecordSet オブジェクト (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)   
  [詳細については、レコード セットの保持](../../../ado/guide/data/more-about-recordset-persistence.md)   

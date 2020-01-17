@@ -23,36 +23,35 @@ helpviewer_keywords:
 ms.assetid: 57861137-89ea-4b89-b361-390597d7bccc
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 7b02876a6962d3536200d543e2b64e7210c59f00
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 7ad26acc2f1e23b61e9692dcf2720d7ee6dd8639
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56034503"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68077812"
 ---
-# <a name="money-and-smallmoney-transact-sql"></a>money および smallmoney (Transact-SQL)
+# <a name="money-and-smallmoney-transact-sql"></a>money と smallmoney (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-金銭や通貨の値を表す金額データ型です。
+金額値または通貨値を表すデータ型。
   
 ## <a name="remarks"></a>Remarks  
   
 |データ型|範囲|ストレージ|  
 |---|---|---|
-|**money**|-922,337,203,685,477.5808 ～ 922,337,203,685,477.5807 (Informatica では -922,337,203,685,477.58 <br />～ 922,337,203,685,477.58。  Informatica では、小数点以下 4 桁ではなく、小数点以下 2 桁 のみをサポートします。)|8 バイト|  
+|**money**|-922,337,203,685,477.5808 ～ 922,337,203,685,477.5807 (Informatica では -922,337,203,685,477.58<br />～ 922,337,203,685,477.58。  Informatica では、小数点以下 4 桁ではなく、小数点以下 2 桁 のみをサポートします。)|8 バイト|  
 |**smallmoney**|- 214,748.3648 ～ 214,748.3647|4 バイト|  
   
 **Money** と **smallmoney** データ型を表している通貨単位の 10,000 の精度はします。 Informatica では、**money** データ型と **smallmoney** データ型の精度は、それらが表している通貨単位の 1/100 です。
   
-すべての通貨単位からセントなどの部分通貨単位を区切るには、ピリオドを使用します。 たとえば、2.15 は 2 ドル 15 セントを表します。
+全体の通貨単位からセントなどの部分的な通貨単位を分離するには、ピリオドを使用します。 たとえば、2.15 は 2 ドル 15 セントを表します。
   
-これらのデータ型は次の通貨記号を使用できます。
+これらのデータ型では、次の通貨記号のいずれかを使用できます。
   
 ![通貨記号と 16 進値の表](../../t-sql/data-types/media/money01.gif "通貨記号と 16 進値の表")
   
-通貨データまたは金額データは単一引用符 (') で囲む必要はありません。 通貨記号が前に付いた金額値を指定することはできますが、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] はその記号に関連付けられた通貨情報を格納せず、数値のみを格納することに注意してください。
+通貨データまたは金額データは、単一引用符 (') で囲む必要はありません。 通貨記号が前に付いた金額値を指定することはできますが、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] はその記号に関連付けられた通貨情報を格納せず、数値のみを格納することに注意してください。
   
 ## <a name="converting-money-data"></a>money 型データの変換
 変換すると **money** から整数データ型は、単位は金額であると仮定します。 4 の整数値を変換するなど、 **money** 4 通貨単位に相当します。

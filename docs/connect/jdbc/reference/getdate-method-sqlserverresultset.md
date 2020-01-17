@@ -1,5 +1,5 @@
 ---
-title: getDate メソッド (SQLServerResultSet) |Microsoft Docs
+title: getDate メソッド (SQLServerResultSet) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: efb17208-4cd3-4aa8-a39b-e169b414758c
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 4ef9d98b440b2de52c8fbdf89afde80868114fe0
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: f284c3287527a94b859414f67ac02a1097da9e7f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47742910"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67983877"
 ---
 # <a name="getdate-method-sqlserverresultset"></a>getDate メソッド (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

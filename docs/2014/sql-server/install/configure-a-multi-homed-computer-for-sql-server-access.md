@@ -15,11 +15,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 92c67289441ab0b6baed4509bdce8dcc0b082395
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52785624"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68211500"
 ---
 # <a name="configure-a-multi-homed-computer-for-sql-server-access"></a>SQL Server アクセス用のマルチホーム コンピューターの構成
   サーバーが複数のネットワークまたはネットワーク サブネットへの接続を提供する必要がある場合、一般的なシナリオではマルチホーム コンピューターを使用します。 通常、このコンピューターは、境界ネットワーク (DMZ、非武装地帯、またはスクリーン サブネットとも呼ばれます) にあります。 このトピックでは、マルチホーム環境内の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスへのネットワーク接続用に [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] とセキュリティが強化された Windows ファイアウォールを構成する方法について説明します。  
@@ -66,9 +66,9 @@ ms.locfileid: "52785624"
   
 #### <a name="to-determine-the-ip-addresses-and-ports-used-by-includessnoversionincludesssnoversion-mdmd"></a>使用される IP アドレスおよびポートを特定するには [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
   
-1.  **[スタート]** ボタンをクリックし、 **[すべてのプログラム]**、[ [!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)]]、 **[構成ツール]** の順にポイントして、 **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [構成マネージャー]** をクリックします。  
+1.  **[スタート]** ボタンをクリックし、 **[すべてのプログラム]** 、[ [!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)]]、 **[構成ツール]** の順にポイントして、 **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [構成マネージャー]** をクリックします。  
   
-2.  **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]構成マネージャー**のコンソール ペインで、**[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][ネットワークの構成]**、**[\<instance name> のプロトコル]** を順に展開し、**[TCP/IP]** をダブルクリックします。  
+2.  **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]構成マネージャー**のコンソール ペインで、 **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][ネットワークの構成]** 、 **[\<instance name> のプロトコル]** を順に展開し、 **[TCP/IP]** をダブルクリックします。  
   
 3.  **[TCP/IP のプロパティ]** ダイアログ ボックスの **[IP アドレス]** タブに、 **IP1**、 **IP2**という形式で **IPAll**まで IP アドレスが表示されます。 このうちいずれかが、ループバック アダプターの IP アドレス 127.0.0.1 です。 追加の IP アドレスがコンピューターで構成される各 IP アドレスとして表示されます。  
   
@@ -101,7 +101,7 @@ ms.locfileid: "52785624"
   
 9. **[指定したローカル ポート]** を選択します。 コンマで区切ったポート番号を入力して、 **[次へ]** をクリックします。 この例では、既定のポートを構成するので、「`1433`」と入力します。  
   
-10. **[アクション]** ページで、オプションを確認します。 この例では、セキュリティで保護された接続を指定するためにファイアウォールを使用しません。 したがって、 **[接続を許可する]**、 **[次へ]** を順にクリックします。  
+10. **[アクション]** ページで、オプションを確認します。 この例では、セキュリティで保護された接続を指定するためにファイアウォールを使用しません。 したがって、 **[接続を許可する]** 、 **[次へ]** を順にクリックします。  
   
     > [!NOTE]  
     >  環境で、セキュリティで保護された接続が必要な場合があります。 セキュリティで保護された接続のオプションのいずれかを選択すると、証明書および **[強制的に暗号化]** オプションの構成が必要な場合があります。 セキュリティで保護された接続の詳細については、「[データベース エンジンへの暗号化接続の有効化 &#40;SQL Server 構成マネージャー&#41;](../../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md)」および「[データベース エンジンへの暗号化接続の有効化 &#40;SQL Server 構成マネージャー&#41;](../../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md)」を参照してください。  
@@ -138,7 +138,7 @@ ms.locfileid: "52785624"
   
 9. マルチホーム コンピューターで他の IP アドレスを構成するには、別の IP アドレスと別のルールを使用して、この手順を繰り返します。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [SQL Server Browser サービス &#40;データベース エンジンと SSAS&#41;](../../database-engine/configure-windows/sql-server-browser-service-database-engine-and-ssas.md)   
  [プロキシ サーバーを介して SQL Server に接続する方法 &#40;SQL Server 構成マネージャー&#41;](../../relational-databases/sql-server-configuration-manager.md)  
   

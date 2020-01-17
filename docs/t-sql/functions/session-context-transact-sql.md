@@ -1,9 +1,9 @@
 ---
 title: SESSION_CONTEXT (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 06/22/2016
+ms.date: 05/14/2019
 ms.prod: sql
-ms.prod_service: database-engine, sql-database
+ms.prod_service: database-engine, sql-database, sql-data-warehouse
 ms.reviewer: ''
 ms.technology: t-sql
 ms.topic: language-reference
@@ -15,20 +15,19 @@ f1_keywords:
 helpviewer_keywords:
 - SESSION_CONTEXT function
 ms.assetid: b6bdbc54-331a-43cc-ab3d-3872d6a12100
-author: MashaMSFT
-ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: de4b1ac25cfefe1df9e8e3a0db8d8019d63763bb
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+author: VanMSFT
+ms.author: vanto
+ms.openlocfilehash: 2949c4bbf5e72fad99f6698287880ec2a2f97f7b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52404437"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68067559"
 ---
-# <a name="sessioncontext-transact-sql"></a>SESSION_CONTEXT (TRANSACT-SQL)
-[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
+# <a name="sessioncontext-transact-sql"></a>SESSION_CONTEXT (Transact-SQL)
+[!INCLUDE[tsql-appliesto-ss2016-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-asdw-xxx-md.md)]
 
-  現在のセッションのコンテキストでは、指定したキーの値を返します。 値が、を使用して設定 [sp_set_session_context (& a) #40 です。TRANSACT-SQL と #41; ](../../relational-databases/system-stored-procedures/sp-set-session-context-transact-sql.md)プロシージャです。  
+  現在のセッションのコンテキストで指定されたキーの値を返します。 値が、を使用して設定 [sp_set_session_context &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-set-session-context-transact-sql.md)プロシージャです。  
   
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -39,14 +38,14 @@ SESSION_CONTEXT(N'key')
 ```  
   
 ## <a name="arguments"></a>引数  
- ' key'  
+ 'key'  
  取得される値のキー (sysname 型)。  
   
 ## <a name="return-type"></a>戻り値の型  
  **sql_variant**  
   
 ## <a name="return-value"></a>戻り値  
- そのキーの値が設定されていない場合は、セッションのコンテキスト、または NULL で指定されたキーに関連付けられている値です。  
+ セッションのコンテキストで指定されたキーに関連付けられている値か、そのキーの値が設定されていない場合は NULL です。  
   
 ## <a name="permissions"></a>アクセス許可  
  すべてのユーザーは、そのセッションのセッションのコンテキストを読み取ることができます。  

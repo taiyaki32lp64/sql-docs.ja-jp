@@ -21,11 +21,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 0cde9ff4e640948c953bc0488517749fd776e438
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54135432"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62670696"
 ---
 # <a name="dta-utility"></a>dta ユーティリティ
   **dta** ユーティリティは、データベース エンジン チューニング アドバイザーのコマンド プロンプト バージョンです。 **dta** ユーティリティは、データベース エンジン チューニング アドバイザーの機能をアプリケーションとスクリプトで使用するために作成されました。  
@@ -211,7 +211,7 @@ dta -d AdventureWorks2012 ...
  チューニングの入力として使用するワークロード ファイルのパスとファイルの名前を指定します。 ファイルは、.trc (SQL Server Profiler トレース ファイル)、.sql (SQL ファイル)、.log ([!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] トレース ファイル) のいずれかの形式になっている必要があります。 ワークロード ファイル、またはワークロード テーブルを 1 つ指定する必要があります。  
   
  **-it** _workload_trace_table_name_  
- チューニングのワークロード トレースを含むテーブルの名前を指定します。 名前は *[database_name*]**.**[*owner_name*]**.**_table_name_ の形式で指定します。  
+ チューニングのワークロード トレースを含むテーブルの名前を指定します。 名前は *[database_name*] **.** [*owner_name*] **.** _table_name_ の形式で指定します。  
   
  次の表は、各パラメーターの既定値を示しています。  
   
@@ -316,14 +316,14 @@ dta -n number_of_events -A 0
   
  *database_name*.[*schema_name*].*table_name* [*number_of_rows*]  
   
- この引数は、コマンド プロンプトでテーブルの一覧 (**-Tl**) を入力する代わりに使用します。 **-Tl**を使用する場合は、テーブルの一覧ファイル ( **-Tf**) を使用しないでください。 両方の引数を使用すると、 **dta** は失敗し、エラーを返します。  
+ この引数は、コマンド プロンプトでテーブルの一覧 ( **-Tl**) を入力する代わりに使用します。 **-Tl**を使用する場合は、テーブルの一覧ファイル ( **-Tf**) を使用しないでください。 両方の引数を使用すると、 **dta** は失敗し、エラーを返します。  
   
  **-Tf** 引数および **-Tl** 引数を省略した場合、指定されたデータベース内のすべてのユーザー テーブルをチューニングするものと見なされます。  
   
  **-Tl** _table_list_  
  コマンド プロンプトでチューニングするテーブルの一覧を指定します。 テーブル名の間にコンマを挿入して区切ります。 **-D** 引数で 1 つのデータベースのみを指定する場合、テーブル名をデータベース名で修飾する必要はありません。 それ以外の場合、各テーブルには *database_name.schema_name.table_name* の形式で、完全修飾名が必要となります。  
   
- この引数は、テーブルの一覧ファイル (**-Tf**) の代わりに使用します。 **-Tl** と **-Tf** の両方を使用すると、 **dta** は失敗し、エラーを返します。  
+ この引数は、テーブルの一覧ファイル ( **-Tf**) の代わりに使用します。 **-Tl** と **-Tf** の両方を使用すると、 **dta** は失敗し、エラーを返します。  
   
  **-U** _login_id_  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]への接続に使用されるログイン ID を指定します。  

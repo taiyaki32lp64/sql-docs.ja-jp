@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: e2b7c1b2-3679-4206-9b25-6bd55ef96a2c
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: e250985c9f1dc2ed043c55d9182b932e00dc1365
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a25f3809221476c2cc4f80bae42d1e0b38a83429
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47832810"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68043587"
 ---
 # <a name="mssqlserver360"></a>MSSQLSERVER_360
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

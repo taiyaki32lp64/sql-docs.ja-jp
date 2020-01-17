@@ -4,23 +4,22 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.transferloginstask.general.f1
 helpviewer_keywords:
 - Transfer Logins Task Edito
 ms.assetid: 738989b6-7ec0-432c-9cc1-714486124d20
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 54a2f38cee150a545562ca976ff83a2806b0b60a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 4574053bacafe97a9c6242246a48e2e65599b6a3
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48084472"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66054959"
 ---
 # <a name="transfer-logins-task-editor-general-page"></a>[ログイン転送タスク エディター] ([全般] ページ)
   **[ログイン転送タスク エディター]** ダイアログ ボックスの **[全般]** ページを使用すると、ログイン転送タスクの名前と説明を入力します。 このタスクの詳細については、「 [ログイン転送タスク](control-flow/transfer-logins-task.md)」を参照してください。  
@@ -38,7 +37,7 @@ ms.locfileid: "48084472"
 ## <a name="see-also"></a>参照  
  [Integration Services のエラーおよびメッセージのリファレンス](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [Integration Services タスク](control-flow/integration-services-tasks.md)   
- [[ログイン転送タスク エディター] &#40;[ログイン] ページ&#41;](../../2014/integration-services/transfer-logins-task-editor-logins-page.md)   
+ [[ログイン転送タスク エディター] ([ログイン] ページ)](../../2014/integration-services/transfer-logins-task-editor-logins-page.md)   
  [[式] ページ](expressions/expressions-page.md)  
   
   

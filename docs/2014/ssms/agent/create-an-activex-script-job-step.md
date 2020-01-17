@@ -13,12 +13,12 @@ ms.assetid: e6c46c6b-2d61-4571-bc8e-a831cd6e6302
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: ca659230443301ed816dfb8adeffdd3b361cd5fc
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 6f065793a86eb5c4c6ebb55883e2e206ccff9b9c
+ms.sourcegitcommit: f912c101d2939084c4ea2e9881eb98e1afa29dad
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52786664"
+ms.lasthandoff: 10/23/2019
+ms.locfileid: "72798266"
 ---
 # <a name="create-an-activex-script-job-step"></a>Create an ActiveX Script Job Step
   このトピックでは、[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] で [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]、[!INCLUDE[tsql](../../includes/tsql-md.md)]、または SQL Server 管理オブジェクトを使用して、ActiveX スクリプトを実行する [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェント ジョブ ステップを作成および定義する方法について説明します。  
@@ -37,12 +37,12 @@ ms.locfileid: "52786664"
   
      [SQL Server 管理オブジェクト](#SMO)  
   
-## <a name="before-you-begin"></a>はじめに  
+## <a name="before-you-begin"></a>作業を開始する準備  
   
 ###  <a name="Restrictions"></a> 制限事項と制約事項  
  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]  
   
-###  <a name="Security"></a> セキュリティ  
+###  <a name="Security"></a> Security  
  詳細については、「 [SQL Server エージェントのセキュリティの実装](implement-sql-server-agent-security.md)」をご覧ください。  
   
 ##  <a name="SSMS"></a> SQL Server Management Studio の使用  
@@ -75,11 +75,10 @@ ms.locfileid: "52786664"
   
 2.  [標準] ツール バーの **[新しいクエリ]** をクリックします。  
   
-3.  次の例をコピーしてクエリ ウィンドウに貼り付け、 **[実行]** をクリックします。  
+3.  次の例をコピーしてクエリ ウィンドウに貼り付け、**[実行]** をクリックします。  
   
-    ```  
-  
-              -- create an ActiveX Script job step written in VBScript that creates a restore point  
+    ```sql
+    -- create an ActiveX Script job step written in VBScript that creates a restore point  
     USE msdb;  
     GO  
     EXEC sp_add_jobstep  
@@ -99,11 +98,9 @@ ms.locfileid: "52786664"
     GO  
     ```  
   
- 詳細については、次を参照してください。 [sp_add_jobstep &#40;TRANSACT-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-add-jobstep-transact-sql)します。  
+ 詳細については、「 [sp_add_jobstep &#40;transact-sql&#41;](/sql/relational-databases/system-stored-procedures/sp-add-jobstep-transact-sql)」を参照してください。  
   
-##  <a name="SMO"></a> SQL Server 管理オブジェクトの使用  
+##  <a name="SMO"></a>SQL Server 管理オブジェクトの使用  
  **ActiveX スクリプト ジョブ ステップを作成するには**  
   
- 使用して、 `JobStep` Visual Basic、Visual c#、PowerShell など、選択したプログラミング言語を使用してクラス。  
-  
-  
+ Visual Basic、ビジュアルC#、PowerShell などのプログラミング言語で `JobStep` クラスを使用します。  

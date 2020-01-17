@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: b34f4472-5e04-4a2c-ab64-38d6eca31a69
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 93790b3df8cb1d78ab2e0988cdc43cbd9af0718c
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: d4fef63ff610ad85e353c2ef1dc0f8e5987c74ee
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52540450"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67926198"
 ---
 # <a name="ado-connection-and-recordset-events"></a>ADO 接続とレコード セットのイベント
 ADO の 2 つのオブジェクトは、イベントを発生させることができます。[接続](../../../ado/reference/ado-api/connection-object-ado.md)オブジェクトと[Recordset](../../../ado/reference/ado-api/recordset-object-ado.md)オブジェクト。 **ConnectionEvent**ファミリに関連で操作する、**接続**オブジェクト、および**RecordsetEvent**ファミリが上の操作に関連、 **レコード セット**オブジェクト。
@@ -45,5 +44,5 @@ ADO の 2 つのオブジェクトは、イベントを発生させることが�
 |[WillChangeRecord、RecordChangeComplete](../../../ado/reference/ado-api/willchangerecord-and-recordchangecomplete-events-ado.md)|**行の変更管理**-の現在の行で何かを通知、 **Recordset** 、変更、または変更しました。|
 |[WillChangeRecordset、RecordsetChangeComplete](../../../ado/reference/ado-api/willchangerecordset-and-recordsetchangecomplete-events-ado.md)|**レコード セットの変更管理**-現在のものを通知**Recordset** 、変更、または変更しました。|
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
  [ADO イベントのインスタンス化言語で](../../../ado/guide/data/ado-event-instantiation-by-language.md) [ADO イベント](../../../ado/reference/ado-api/ado-events.md)[イベント パラメーター](../../../ado/guide/data/event-parameters.md) [イベント ハンドラーがどのように連携](../../../ado/guide/data/how-event-handlers-work-together.md)[イベントの種類](../../../ado/guide/data/types-of-events.md)

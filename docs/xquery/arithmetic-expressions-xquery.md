@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 90d675bf-56da-459a-9771-8cd13920a9fc
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 372ed2a1eb3ecba8f84125ae0231d2110e3966dc
-ms.sourcegitcommit: 0f7cf9b7ab23df15624d27c129ab3a539e8b6457
+ms.openlocfilehash: ccbeda01726a3473f8e955676c3ebd62a93fd630
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51292098"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67985738"
 ---
 # <a name="arithmetic-expressions-xquery"></a>算術式 (XQuery)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]

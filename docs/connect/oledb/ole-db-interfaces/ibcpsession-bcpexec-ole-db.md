@@ -1,5 +1,5 @@
 ---
-title: :Bcpexec (OLE DB) |Microsoft Docs
+title: 'IBCPSession:: BCPExec (OLE DB) |Microsoft Docs'
 description: IBCPSession::BCPExec (OLE DB)
 ms.custom: ''
 ms.date: 06/14/2018
@@ -15,13 +15,12 @@ helpviewer_keywords:
 - BCPExec method
 author: pmasl
 ms.author: pelopes
-manager: craigg
-ms.openlocfilehash: 905f22f3a4d33104db517d10c34292df653ada00
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.openlocfilehash: 6ace2ccd8fbba9c8c3566ad706754ed314152d4a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51602462"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68015494"
 ---
 # <a name="ibcpsessionbcpexec-ole-db"></a>IBCPSession::BCPExec (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 ms.assetid: ccd65867-d4c0-43b2-8361-7fd41c6f79ac
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 8dda4ea693774fabcc88e261ccd61f71350a6a79
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 34b51b26454766498ee601baae3ccc52cd1c5768
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53367774"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66096531"
 ---
 # <a name="check-files-in-use"></a>使用中のファイルの確認
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 更新プログラムのインストール後に Windows が再起動されないようにするには、[使用中のファイルの確認] ページを使用して、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 更新プログラムのセットアップ プログラムで必要とされるファイルをロックしているプロセスを特定します。  
@@ -47,7 +46,7 @@ ms.locfileid: "53367774"
   
 |名前|説明|  
 |----------|-----------------|  
-|Process|更新対象のファイルを使用しているプロセスの完全な名前を表示します。|  
+|[処理]|更新対象のファイルを使用しているプロセスの完全な名前を表示します。|  
 |型|プロセスの種類を表示します。|  
 |アカウント|プロセスが実行されているアカウントを表示します。|  
 |プロセス ID|プロセス ID を表示します。|  

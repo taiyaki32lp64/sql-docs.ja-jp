@@ -1,5 +1,5 @@
 ---
-title: IPv6 を使用して接続する |Microsoft Docs
+title: IPv6 を使用した接続 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -12,16 +12,15 @@ helpviewer_keywords:
 - IPv4
 - IPv6
 ms.assetid: 2669098c-f5f1-43da-aec6-e91003ac89f6
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-manager: craigg
-ms.openlocfilehash: b4b62361e131658f7bab48a8367ea8cd3b9c336f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 52a2fff098698c945cde23fac13eec7ad78b63c8
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47839670"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68010189"
 ---
 # <a name="connecting-using-ipv6"></a>IPv6 を使用した接続
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]

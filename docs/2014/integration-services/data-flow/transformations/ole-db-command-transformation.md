@@ -12,15 +12,15 @@ helpviewer_keywords:
 - statements [Integration Services]
 - OLE DB Command transformation
 ms.assetid: baa6735c-5acf-4759-b077-1216aca16c6c
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 6596785f3dd6ac7f89788b7741845602e1aeea54
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 3a8ffc33de161c71c6f72eebf8616d1e814fb994
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52817874"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62770392"
 ---
 # <a name="ole-db-command-transformation"></a>OLE DB コマンド変換
   OLE DB コマンド変換は、データ フローの各行に対して SQL ステートメントを実行します。 たとえば、データベース テーブル内に行を挿入したり、行を更新または削除する SQL ステートメントを実行できます。  
@@ -49,7 +49,7 @@ ms.locfileid: "52817874"
 ## <a name="related-tasks"></a>Related Tasks  
  変換は、 [!INCLUDE[ssIS](../../../includes/ssis-md.md)] デザイナーまたはオブジェクト モデルを使用して構成できます。 [!INCLUDE[ssIS](../../../includes/ssis-md.md)] デザイナーを使用して変換を構成する方法については、「  [OLE DB コマンド変換を構成する](../../configure-the-ole-db-command-transformation.md)」を参照してください。 プログラムによってこの変換を構成する方法の詳細については、開発者ガイドを参照してください。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [データ フロー](../data-flow.md)   
  [Integration Services の変換](integration-services-transformations.md)  
   

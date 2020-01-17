@@ -1,8 +1,8 @@
 ---
 title: ネイティブ モードのレポート サーバーに対するアクセス許可の許可 | Microsoft Docs
-ms.date: 03/01/2017
+ms.date: 05/14/2019
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: security
 ms.topic: conceptual
 helpviewer_keywords:
@@ -18,14 +18,14 @@ helpviewer_keywords:
 - role-based security [Reporting Services], about role-based security
 - security [Reporting Services], role-based
 ms.assetid: 260dc2e9-546c-4f04-9fa1-977e23c9d68c
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: d5208bdb0924be66e392b0559547b0f65ed5bfa2
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 26175cfea8af6686f8c15840c7e44a5bde191df5
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47620240"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66175633"
 ---
 # <a name="granting-permissions-on-a-native-mode-report-server"></a>ネイティブ モードのレポート サーバーに対する権限の許可
   SQL Server [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] では、ロールベースの承認および認証サブシステムを使用して、操作の実行およびレポート サーバーのアイテムへのアクセスを行えるユーザーを決定します。 ロールベースの承認では、ユーザーまたはグループが実行できる一連のアクションがロールに分類されます。 認証は、組み込みの Windows 認証、または指定したカスタム認証モジュールに基づいて行われます。 どちらの種類の認証でも、定義済みロールまたはカスタム ロールを使用できます。  
@@ -41,9 +41,9 @@ ms.locfileid: "47620240"
   
 2.  レポート サーバーへのアクセス権を必要とするユーザーやグループ、およびそのレベルを特定します。 **閲覧者** ロールまたは **レポート ビルダー** ロールには、大半のユーザーを割り当てる必要があります。 **パブリッシャー** ロールには、少数のユーザーしか割り当てる必要はありません。 また、 **コンテンツ マネージャー**に割り当てる必要があるのは、ごく限られたユーザーです。  
   
-3.  レポート マネージャーを使用して、[ホーム] フォルダー (レポート サーバーのフォルダー階層の最上位フォルダー) で、アクセス権を必要とする各ユーザーまたはグループにロールを割り当てます。  
+3.  Web ポータルを使用して、[ホーム] フォルダー (レポート サーバーのフォルダー階層の最上位フォルダー) で、アクセス権を必要とする各ユーザーまたはグループにロールを割り当てます。  
   
-4.  サイト レベルでは、レポート マネージャーの [サイトの設定] ページで、 **システム ユーザー** および **システム管理者**という定義済みロールを使用して、各ユーザーまたはグループにシステムレベルのロールの割り当てを作成します。  
+4.  サイト レベルでは、Web ポータルの [サイトの設定] ページで、 **[システム ユーザー]** および **[システム管理者]** という定義済みロールを使用して、各ユーザーまたはグループにシステムレベルのロールの割り当てを作成します。  
   
 5.  特定のフォルダー、レポートなどのアイテムに対し、必要に応じて、追加のロールの割り当てを作成します。 ロールの割り当てを作成しすぎないようにします。 作成したロールの割り当てが多すぎると、各ユーザーの権限レベルが多岐にわたり、追跡が困難になります。  
   
@@ -66,7 +66,7 @@ ms.locfileid: "47620240"
 |ツール|処理手順|  
 |----------|-----------|  
 |Management Studio - ロールの定義を表示、変更、作成、および削除する場合に使用します。|[ロールを作成、削除、または変更する (Management Studio)](../../reporting-services/security/role-definitions-create-delete-or-modify.md)|  
-|レポート マネージャー - ユーザーおよびグループをロールに割り当てる場合に使用します。|[レポート サーバーへのユーザー アクセスを許可する (レポート マネージャー)](../../reporting-services/security/grant-user-access-to-a-report-server-report-manager.md)<br /><br /> [ロールの割り当てを変更または削除する (レポート マネージャー)](../../reporting-services/security/role-assignments-modify-or-delete.md)|  
+|Web ポータル - ユーザーおよびグループをロールに割り当てる場合に使用します。|[レポート サーバーへのユーザー アクセスを許可する](../../reporting-services/security/grant-user-access-to-a-report-server.md)<br /><br /> [ロールの割り当てを変更または削除する](../../reporting-services/security/role-assignments-modify-or-delete.md)|  
   
 ## <a name="see-also"></a>参照  
  [定義済みロール](../../reporting-services/security/role-definitions-predefined-roles.md)   
@@ -74,6 +74,6 @@ ms.locfileid: "47620240"
  [レポート サーバーでの認証](../../reporting-services/security/authentication-with-the-report-server.md)   
  [ロールの割り当てを作成および管理する](../../reporting-services/security/create-and-manage-role-assignments.md)   
  [Reporting Services のセキュリティと保護](../../reporting-services/security/reporting-services-security-and-protection.md)   
- [レポート サーバー コンテンツの管理 &#40;SSRS ネイティブ モード&#41;](../../reporting-services/report-server/report-server-content-management-ssrs-native-mode.md)  
+ [レポート サーバー コンテンツの管理 (SSRS ネイティブ モード)](../../reporting-services/report-server/report-server-content-management-ssrs-native-mode.md)  
   
   

@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: fedb1d75-0c3d-4eb3-ae65-da0e153265cc
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: f1b12914f42835c1260aefa16828713aafb25583
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 6d831ff519f72fb5b68cec3c7dc359f1d54106c0
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47596820"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67983789"
 ---
 # <a name="getdatetimeoffset-method-string"></a>getDateTimeOffset (String) メソッド
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -38,13 +37,13 @@ public microsoft.sql.DateTimeOffset getDateTimeOffset(String sCol)
  パラメーターの名前です。  
   
 ## <a name="return-value"></a>戻り値  
- A [DateTimeOffset クラス](../../../connect/jdbc/reference/datetimeoffset-class.md)オブジェクト。  
+ [DateTimeOffset クラス](../../../connect/jdbc/reference/datetimeoffset-class.md)オブジェクト。  
   
 ## <a name="exceptions"></a>例外  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- 設定することができます、 [DateTimeOffset クラス](../../../connect/jdbc/reference/datetimeoffset-class.md)のパラメーター値[SQLServerCallableStatement.setDateTimeOffset](../../../connect/jdbc/reference/setdatetimeoffset-method-sqlservercallablestatement.md)します。  
+ [Datetimeoffset クラス](../../../connect/jdbc/reference/datetimeoffset-class.md)のパラメーター値は、 [SQLServerCallableStatement](../../../connect/jdbc/reference/setdatetimeoffset-method-sqlservercallablestatement.md)を使用して設定できます。  
   
 ## <a name="see-also"></a>参照  
  [getDateTimeOffset メソッド &#40;SQLServerCallableStatement&#41;](../../../connect/jdbc/reference/getdatetimeoffset-method-sqlservercallablestatement.md)   

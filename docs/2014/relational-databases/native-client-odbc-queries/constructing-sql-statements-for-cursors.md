@@ -18,11 +18,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 3dc86f27ab9e111c5d93c91de65c51da9008ba33
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48228762"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68207077"
 ---
 # <a name="constructing-sql-statements-for-cursors"></a>カーソル用の SQL ステートメントの作成
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]ネイティブ クライアントの ODBC ドライバーは、ODBC の仕様で定義されているカーソル機能を実装するためにサーバー カーソルを使用します。 ODBC アプリケーションを使用して、カーソルの動作を制御する[SQLSetStmtAttr](../native-client-odbc-api/sqlsetstmtattr.md)別のステートメントの属性を設定します。 次に、属性とその既定値を示します。  
@@ -99,7 +99,7 @@ szErrorMsgString: [Microsoft][SQL Server Native Client][SQL Server]
   
  ODBC アプリケーションで上記のエラーが発生した場合、カーソルのすべてのステートメント属性を既定値に戻してからステートメントを実行する必要があります。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [クエリの実行&#40;ODBC&#41;](executing-queries-odbc.md)  
   
   

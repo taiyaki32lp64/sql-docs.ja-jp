@@ -10,17 +10,20 @@ ms.topic: conceptual
 f1_keywords:
 - sql13.ssis.ssms.browseprincipals.f1
 ms.assetid: f11d2c5e-ee05-45f3-8dc2-0feb99b2f76f
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: 2e764f1cfd8cca7d8504a5389475e770cf934f8f
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 71ad8a6d52367cf4b3288fa8bdd4bdbaa6863cf5
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52396675"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71299016"
 ---
 # <a name="browse-all-principals-dialog-box"></a>[すべてのプリンシパルを参照] ダイアログ ボックス
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   **[すべてのプリンシパルを参照]** ダイアログ ボックスを使用して、データベースのプリンシパルを選択し、選択したプロジェクトに対する、または選択したフォルダーに格納されたすべてのプロジェクトに対するプリンシパルの権限を変更できます。  
   
  **目的に合ったトピックをクリックしてください**  
@@ -39,9 +42,9 @@ ms.locfileid: "52396675"
   
 3.  **[SSISDB]** ノードを展開します。  
   
-4.  選択したフォルダーに格納されたすべてのプロジェクトに対するプリンシパルの権限を変更するには、フォルダーを右クリックし、**[プロパティ]** をクリックします。  
+4.  選択したフォルダーに格納されたすべてのプロジェクトに対するプリンシパルの権限を変更するには、フォルダーを右クリックし、 **[プロパティ]** をクリックします。  
   
-     選択したプロジェクトに対するプリンシパルの権限を変更するには、プロジェクトが格納されているフォルダーを展開し、プロジェクトを右クリックして、**[プロパティ]** をクリックします。  
+     選択したプロジェクトに対するプリンシパルの権限を変更するには、プロジェクトが格納されているフォルダーを展開し、プロジェクトを右クリックして、 **[プロパティ]** をクリックします。  
   
 5.  **[権限]** ページを選択し、 **[参照]** をクリックします。  
   
@@ -56,10 +59,10 @@ ms.locfileid: "52396675"
  **[アイコン列]**  
  プリンシパルの **[種類]** に対応したアイコンです。  
   
- **名前**  
+ **[名前]**  
  プリンシパルの名前です。  
   
- **型**  
+ **Type**  
  プリンシパルの種類。 一般的な種類を次に示します。  
   
 -   SQL ユーザー  

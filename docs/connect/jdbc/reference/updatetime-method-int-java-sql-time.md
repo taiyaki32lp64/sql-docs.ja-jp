@@ -1,5 +1,5 @@
 ---
-title: updateTime (int, java.sql.Time) メソッド |Microsoft Docs
+title: updateTime メソッド (int, java .sql. Time) |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: fa7a3ca5-1111-4480-97ca-65b632aa1e5b
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 43256aa2725a56286ce083b613092421bdd15274
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 6a4b48fc5d573f8b91c0538956b83ecd15e3d9c4
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47809950"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68000269"
 ---
 # <a name="updatetime-method-int-javasqltime"></a>updateTime (int, java.sql.Time) メソッド
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -49,10 +48,10 @@ public void updateTime(int index,
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- この updateTime メソッドは、java.sql.ResultSet インターフェイスの updateTime メソッドによって指定されます。  
+ この updateTime メソッドは、java.sql.ResultSet インターフェイスの updateTime メソッドで規定されています。  
   
 ## <a name="see-also"></a>参照  
- [updateTime メソッド&#40;SQLServerResultSet&#41;](../../../connect/jdbc/reference/updatetime-method-sqlserverresultset.md)   
+ [updateTime メソッド &#40;SQLServerResultSet&#41;](../../../connect/jdbc/reference/updatetime-method-sqlserverresultset.md)   
  [SQLServerResultSet のメンバー](../../../connect/jdbc/reference/sqlserverresultset-members.md)   
  [SQLServerResultSet クラス](../../../connect/jdbc/reference/sqlserverresultset-class.md)  
   

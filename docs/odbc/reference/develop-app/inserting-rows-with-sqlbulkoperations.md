@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: ed585ea7-4d56-4df9-8dc3-53ca82382450
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 2b5dac8ae14f01dd464aab42eaed42480f1e715c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 05b8f71d6f4c885c7dc64887dd92b1f600005ca7
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47618840"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68138923"
 ---
 # <a name="inserting-rows-with-sqlbulkoperations"></a>SQLBulkOperations による行の挿入
 データを挿入する**SQLBulkOperations**でデータを更新するような**SQLBulkOperations**バインドされたアプリケーション バッファーからデータを使用しているためです。  

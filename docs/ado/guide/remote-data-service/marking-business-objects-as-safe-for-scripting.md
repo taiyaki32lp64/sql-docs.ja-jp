@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 0be98d1a-ab3d-4dce-a166-dacda10d154a
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 729daea7fe719f33ec8931424143c3fedc5ac86f
-ms.sourcegitcommit: 1a5448747ccb2e13e8f3d9f04012ba5ae04bb0a3
+ms.openlocfilehash: 55ae560f35a06e77803bfb011f4d430d5079ea05
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51558329"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67922602"
 ---
 # <a name="marking-business-objects-as-safe-for-scripting"></a>スクリプト用にビジネス オブジェクトを安全とマークする
 > [!IMPORTANT]

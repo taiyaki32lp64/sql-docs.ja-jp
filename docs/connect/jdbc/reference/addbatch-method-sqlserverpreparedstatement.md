@@ -1,5 +1,5 @@
 ---
-title: addBatch メソッド (SQLServerPreparedStatement) |Microsoft Docs
+title: addBatch メソッド (SQLServerPreparedStatement) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: 134f1455-c98c-4112-ab2d-9205a0db73df
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 63c5c2b49e0ac600f5bccd27f241b9f1a2186d65
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 21664ab5f612689949f65ffb237a50c8747d1cd4
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47694043"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67956007"
 ---
 # <a name="addbatch-method-sqlserverpreparedstatement"></a>addBatch メソッド (SQLServerPreparedStatement)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

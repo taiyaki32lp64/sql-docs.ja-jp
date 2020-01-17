@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: c359c25c-db2a-4a20-afa9-62d87a62df72
 author: Shamikg
 ms.author: Shamikg
-manager: craigg
-ms.openlocfilehash: 939342a85ed657faa645c593018cbf39042031c2
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: a94bd053dac04c4d595e4f2077c02d1d79858e56
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52505235"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68020840"
 ---
 # <a name="using-test-repositories-sybasetosql"></a>テスト リポジトリの使用 (SybaseToSQL)
 SSMA テスト リポジトリ ストア SSMA テスター テスト_ケースとテストの結果を後で使用します。 リポジトリのデータは、SQL Server テーブルに保存されます**TestCaseRepository**と**RunTestCaseResultRepository**スキーマ**ssma_sybase_utilities** の**ssmatesterdb_syb**データベース。  
@@ -29,11 +28,11 @@ SSMA テスト リポジトリ ストア SSMA テスター テスト_ケース�
 -   をクリックして、**閉じます**リポジトリのテスト ケース ダイアログ ボックスを閉じるボタンをクリックします。  
   
 ## <a name="test-cases-repository"></a>テスト_ケースのリポジトリ  
-クリックして、テスト_ケースのリポジトリを表示する**テスト_ケース.** から、**テスター**メニュー。 SSMA は、表示、**テスト_ケース リポジトリ**ダイアログ ウィンドウに保存されているテスト_ケースの一覧で、**テスト_ケース**ページ。  
+クリックして、テスト_ケースのリポジトリを表示する **テスト\_ケース.** から、 **テスター** メニュー。 SSMA は、表示、 **テスト\_ケース リポジトリ** ダイアログ ウィンドウに保存されているテスト\_ケースの一覧で、 **テスト\_ケース** ページ。  
   
 グリッドには、各テスト・ケースに関する次の情報が表示されます。  
   
--   名前 :テスト_ケース名。  
+-   名前:テスト_ケース名。  
   
 -   作成されます。テスト_ケースの作成日。  
   
@@ -62,7 +61,7 @@ SSMA テスト リポジトリ ストア SSMA テスター テスト_ケース�
   
 テスト結果の詳細については、次の情報がグリッドに表示されます。  
   
--   名前 :テスト_ケース名。  
+-   名前:テスト_ケース名。  
   
 -   開始。実行中のテスト ケースの日付。  
   
@@ -74,7 +73,7 @@ SSMA テスト リポジトリ ストア SSMA テスター テスト_ケース�
   
 -   をクリックして、**削除** ボタンを選択したテスト結果を削除するには  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
 [テスト_ケースを実行している&#40;SybaseToSQL&#41;](../../ssma/sybase/running-test-cases-sybasetosql.md)  
 [移行されたデータベース オブジェクトのテスト&#40;SybaseToSQL&#41;](../../ssma/sybase/testing-migrated-database-objects-sybasetosql.md)  
   

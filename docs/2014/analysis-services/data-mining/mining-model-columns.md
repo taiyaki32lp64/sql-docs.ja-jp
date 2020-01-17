@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - columns [data mining], mining model columns
@@ -19,12 +18,12 @@ ms.assetid: fab47643-5bfd-424e-a0f7-69e665db6bab
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 92cee93affaedab7c36517c730e09914ba842041
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: f99a2dc218543faa4d862fa7520c1618ec307ba7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48167992"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66083704"
 ---
 # <a name="mining-model-columns"></a>マイニング モデル列
   データ マイニング モデルは、マイニング構造によって表されるデータにマイニング モデル アルゴリズムを適用します。 マイニング構造と同様に、マイニング モデルには列が含まれています。 マイニング モデルはマイニング構造内に含まれ、マイニング構造によって定義されるプロパティのすべての値を継承します。 マイニング モデルは、マイニング構造に含まれているすべての列またはその一部を使用することができます。  
@@ -46,10 +45,10 @@ ms.locfileid: "48167992"
  使用法プロパティの設定と、DMX を使用したプログラムによるモデリング フラグの定義について詳しくは、「[CREATE MINING MODEL &#40;DMX&#41;](/sql/dmx/create-mining-model-dmx)」をご覧ください。 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] での使用法プロパティの設定およびモデリング フラグの定義について詳しくは、「[データ マイニング オブジェクトの移動](moving-data-mining-objects.md)」をご覧ください。  
   
 ## <a name="see-also"></a>参照  
- [データ マイニング アルゴリズム&#40;Analysis Services - データ マイニング&#41;](data-mining-algorithms-analysis-services-data-mining.md)   
- [マイニング構造&#40;Analysis Services - データ マイニング&#41;](mining-structures-analysis-services-data-mining.md)   
+ [データ マイニング アルゴリズム &#40;Analysis Services - データ マイニング&#41;](data-mining-algorithms-analysis-services-data-mining.md)   
+ [マイニング構造 &#40;Analysis Services - データ マイニング&#41;](mining-structures-analysis-services-data-mining.md)   
  [マイニング モデルのプロパティの変更](change-the-properties-of-a-mining-model.md)   
- [マイニング モデルから列を除外します。](exclude-a-column-from-a-mining-model.md)   
+ [マイニング モデルからの列の除外](exclude-a-column-from-a-mining-model.md)   
  [マイニング構造列](mining-structure-columns.md)  
   
   

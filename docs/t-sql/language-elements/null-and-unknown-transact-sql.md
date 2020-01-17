@@ -11,31 +11,30 @@ dev_langs:
 ms.assetid: 9d491846-4730-4740-a680-77c69fae4a58
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 7418d7fcfd1fce53a1a95ebaed80c3b306a16b33
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 3dba918d0993426111a71785223d0fedd0aba0be
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47745160"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68091781"
 ---
 # <a name="null-and-unknown-transact-sql"></a>NULL と UNKNOWN (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-pdw-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-pdw-md.md)]
 
-  NULL では、値が不明であることを示します。 Null 値では、空または 0 の値と異なるです。 2 つの NULL 値は等しいとは限りません。 各 NULL の値が不明であるために、2 つの null 値または null 値とその他の値の間の比較は不明な返します。  
+  NULL は、値が認識できないことを示します。 null 値は、空値または値 0 とは異なります。 2 つの null 値は等しいとは限りません。 2 つの null 値、または null 値と他の値を比較する場合、どの NULL も認識できないので、認識できないことを示す値が返されます。  
   
- Null 値は、通常、不明な適用できないデータを示すか、後で追加します。 たとえば、受注時には顧客のミドル名イニシャルはわかりません。  
+ null 値は、通常、認識されないデータ、適用できないデータ、または後から追加されるデータを示します。 たとえば、受注時には顧客のミドル名イニシャルはわかりません。  
   
- Null 値については、次に注意してください。  
+ null 値については、次の点に注意してください。  
   
--   クエリ内で NULL 値を調べるには、WHERE 句で IS NULL または IS NOT NULL を使用します。  
+-   クエリ内で null 値を調べるには、WHERE 句で IS NULL または IS NOT NULL を使用します。  
   
--   INSERT または UPDATE ステートメントで NULL を明示的に記述、または INSERT ステートメントからの列にすることで、null 値を列に挿入できます。  
+-   INSERT または UPDATE ステートメントに NULL を明示的に記述、または INSERT ステートメントの外に列を置くことで、null 値を列に挿入できます。  
   
--   Null 値は、主キーなど、またはディストリビューション キーなどの行の配信に使用される情報のテーブル内の別の行から、テーブル内の 1 つの行を区別するために必要な情報として使用できません。  
+-   null 値は、主キーなど、テーブル内のある行と別の行を区別するのに必要な情報として、または、ディストリビューション キーなど、行のディストリビュートに使用される情報に使用することはできません。  
   
- データに NULL 値がある場合、論理演算子と比較演算子は、TRUE や FALSE ではなく UNKNOWN を返すことがあります。 このように 3 つの値を生成する論理は、アプリケーション エラーの原因になります。 UNKNOWN を含むブール式の論理演算子は、演算子の結果が UNKNOWN 式に依存しない限り、UNKNOWN を返します。 この動作の例をまとめたものが次の表です。  
+ データに null 値がある場合、論理演算子と比較演算子で、TRUE や FALSE の代わりに第 3 の値として UNKNOWN を返すこともできます。 このような 3 値論理が必要な場合、多くのアプリケーション エラーの原因になります。 UNKNOWN を含むブール式の論理演算子は、演算子の結果が UNKNOWN 式に依存しない限り、UNKNOWN を返します。 この動作の例をまとめたものが次の表です。  
   
  次の表では、1 つの式が UNKNOWN を返す 2 つのブール式に AND 演算子を適用した結果を確認できます。  
   

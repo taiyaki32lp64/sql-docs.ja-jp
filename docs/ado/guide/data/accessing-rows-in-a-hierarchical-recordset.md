@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 25f1d2a1-6d5e-4457-aa07-5db5c75dee18
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 83b8334b4891d0b12cac59030ebf7fced871c5dd
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e73b2ca96cc5e7eb7683b72aa19fd59a318b8596
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47773380"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67926355"
 ---
 # <a name="accessing-rows-in-a-hierarchical-recordset-example"></a>階層レコード セット (例) 内の行へのアクセス
 次の例を示しています手順では、アクセス許可の行に必要な階層構造で[Recordset](../../../ado/reference/ado-api/recordset-object-ado.md):
@@ -68,5 +67,5 @@ Sub datashape()
 End Sub
 ```
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
  [データ シェイプの概要](../../../ado/guide/data/data-shaping-overview.md)[オブジェクトをフィールド](../../../ado/reference/ado-api/field-object.md) [Fields コレクション (ADO)](../../../ado/reference/ado-api/fields-collection-ado.md) [Shape の正式文法](../../../ado/guide/data/formal-shape-grammar.md) [Microsoft のデータ シェイプの OLE DB のサービス(サービス プロバイダーの ADO)](../../../ado/guide/appendixes/microsoft-data-shaping-service-for-ole-db-ado-service-provider.md) [レコード セット オブジェクト (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md) [プロバイダーに必要なデータの整形](../../../ado/guide/data/required-providers-for-data-shaping.md)[図形の APPEND 句](../../../ado/guide/data/shape-append-clause.md)[図形内のコマンド一般的な](../../../ado/guide/data/shape-commands-in-general.md) [Shape COMPUTE 句](../../../ado/guide/data/shape-compute-clause.md) [Visual Basic for Applications の関数](../../../ado/guide/data/visual-basic-for-applications-functions.md)

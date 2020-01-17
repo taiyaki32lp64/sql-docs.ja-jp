@@ -1,5 +1,5 @@
 ---
-title: ビジネス ルールを除外する (マスター データ サービス) | Microsoft Docs
+title: ビジネス ルールを除外する
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -10,15 +10,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - business rules [Master Data Services], excluding
 ms.assetid: bdbc9df0-23f7-40b9-8aba-4445c1482580
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: c7f93c1aeb0cfd4de81f95d728d0bc075e9de751
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
-ms.translationtype: HT
+ms.openlocfilehash: 30088b6964ae8120bc5aa3c1cb401ec3d9bd1149
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52749334"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73728167"
 ---
 # <a name="exclude-a-business-rule-master-data-services"></a>ビジネス ルールを除外する (マスター データ サービス)
 
@@ -31,7 +30,7 @@ ms.locfileid: "52749334"
   
 -   **[システム管理]** 機能領域にアクセスする権限が必要です。  
   
--   モデル管理者である必要があります。 詳細については、「 [管理者 (マスター データ サービス)](../master-data-services/administrators-master-data-services.md)にアクセスすることなくグループに対してユーザーの追加または削除を行うことができます。  
+-   モデル管理者である必要があります。 詳細については、「[Administrators &#40;Master Data Services&#41; (管理者 &#40;マスター データ サービス&#41;)](../master-data-services/administrators-master-data-services.md)」を参照してください。  
   
 ### <a name="to-exclude-a-business-rule"></a>ビジネス ルールを除外するには  
   

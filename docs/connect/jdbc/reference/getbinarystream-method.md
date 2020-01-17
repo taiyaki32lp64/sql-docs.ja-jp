@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: 0c8f7741-daba-4c04-adc0-8d76345a899a
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 6c1b921785c75247880eb4f536df8699c16abf40
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 486958cb6df51accc3446d1545b734efe9a6fc66
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47744140"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67953620"
 ---
 # <a name="getbinarystream-method-"></a>getBinaryStream () メソッド
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -42,7 +41,7 @@ public java.io.InputStream getBinaryStream()
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- この getBinaryStream メソッドは、java.sql.Blob インターフェイスで getBinaryStream メソッドによって指定されます。  
+ この getBinaryStream メソッドは、java.sql.Blob インターフェイスの getBinaryStream メソッドで規定されています。  
   
 ## <a name="see-also"></a>参照  
  [SQLServerBlob のメソッド](../../../connect/jdbc/reference/sqlserverblob-methods.md)   

@@ -1,6 +1,7 @@
 ---
 title: Reporting Services の開発者向けドキュメント | Microsoft Docs
-ms.date: 03/17/2017
+author: maggiesMSFT
+ms.author: maggies
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: reporting-services
@@ -9,15 +10,13 @@ helpviewer_keywords:
 - developer's guide [Reporting Services]
 - Reporting Services, programming
 - programming [Reporting Services]
-ms.assetid: d8afa405-1012-4349-a72d-e10d94f8453d
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 89a5bcc19baead2f0ba8413635fe330048963cfd
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
-ms.translationtype: HT
+ms.date: 03/17/2017
+ms.openlocfilehash: e2db4a113ebdb53756200879e3797ccbbeec8a52
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47835500"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68259613"
 ---
 # <a name="reporting-services-developer-documentation"></a>Reporting Services の開発者向けのドキュメント
   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)][!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] には、独自のアプリケーションで活用できるいくつかのプログラミング インターフェイスが用意されています。 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] の既存機能を使用して、カスタム レポート ツールと管理ツールを Web サイトや Windows アプリケーションに組み込むことができます。また、[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] のプラットフォームを拡張することもできます。  

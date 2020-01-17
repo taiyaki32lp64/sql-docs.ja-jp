@@ -14,18 +14,18 @@ helpviewer_keywords:
 ms.assetid: 99bc40c4-9181-4ca1-a06f-9a1a914a0b7b
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: f8b5759c0ede8ea6579da11563849df191ad84b1
-ms.sourcegitcommit: 96b2355d54dfad259826e88bdff91cc9344e16f2
+ms.openlocfilehash: bd28ece0e82c4551409920c876d54fbd7dc501ff
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51350476"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67926612"
 ---
 # <a name="microsoft-ole-db-provider-for-sql-server-overview"></a>Microsoft OLE DB Provider for SQL Server の概要
 Microsoft OLE DB Provider for SQL Server、SQLOLEDB には、Microsoft SQL Server にアクセスする ADO ができます。
 
-**注:** このドライバーを使用して、新規の開発をお勧めできません。 新しい OLE DB プロバイダーが呼び出される、 [Microsoft OLE DB Driver for SQL Server](../../../connect/oledb/oledb-driver-for-sql-server.md) (MSOLEDBSQL) 今後、最新のサーバー機能と更新されます。
+> [!IMPORTANT]
+> Microsoft OLE DB Provider for SQL Server (SQLOLEDB) は非推奨と、新しい開発作業で使用するには使用しないでいます。 代わりに、新しい使用[Microsoft OLE DB Driver for SQL Server](../../../connect/oledb/oledb-driver-for-sql-server.md) (MSOLEDBSQL) server の最新の機能と更新されます。
 
 ## <a name="connection-string-parameters"></a>接続文字列パラメーター
  このプロバイダーに接続するには、設定、*プロバイダー*への引数、 [ConnectionString](../../../ado/reference/ado-api/connectionstring-property-ado.md)プロパティ。
@@ -121,7 +121,7 @@ EXECUTE SalesByCategory 'Produce', '1995'
 
 -   複数のデータ型の強制変換は、一致しない型になります。 たとえば、強制型変換を**sql_variant**のサブタイプで**GUID**を**DBTYPE_VARIANT**のサブタイプになります**safearray**(バイト). この種類の変換を**sql_variant**の新しいサブタイプになります**配列**(バイト単位)。
 
--   **レコード セット**フィールドが含まれている**sql_variant**データは、リモート処理ができる (マーシャ リング) または永続化された場合にのみ、 **sql_variant**特定のサブタイプが含まれています。 リモートしようとしてまたはサポートされていない次のデータを永続化のサブタイプと実行時エラー (サポートされていない変換) が Microsoft の永続化プロバイダー (MSPersist) から: **VT_VARIANT**、 **VT_RECORD**、 **VT_ILLEGAL**、 **VT_UNKNOWN**、 **VT_BSTR**、および**VT_DISPATCH します。**
+-   **レコード セット**フィールドが含まれている**sql_variant**データは、リモート処理ができる (マーシャ リング) または永続化された場合にのみ、 **sql_variant**特定のサブタイプが含まれています。 リモートしようとしてまたはサポートされていない次のデータを永続化のサブタイプには、Microsoft の永続化プロバイダー (MSPersist) から、実行時エラー (サポートされていない変換) が発生します。**VT_VARIANT**、 **VT_RECORD**、 **VT_ILLEGAL**、 **VT_UNKNOWN**、 **VT_BSTR**、および**VT_DISPATCH します。**
 
 -   MDAC 2.7、MDAC 2.8、および Windows DAC 6.0 での SQL サーバーの OLE DB プロバイダーがという名前の動的プロパティ**ネイティブ バリアントを許可する**、名前が示すように、開発が可能にアクセスする、 **sql_variant**でネイティブ形式ではなく、 **DBTYPE_VARIANT**します。 このプロパティを設定して、 **Recordset**は、クライアント カーソル エンジンによって開かれます (**adUseClient**)、 **Recordset.Open**呼び出しは失敗します。 このプロパティが設定されている場合、 **Recordset**サーバー カーソルを開くと (**adUseServer**)、 **Recordset.Open**呼び出しが成功すると、型の列へのアクセスが、**sql_variant**エラーが発生します。
 
@@ -135,7 +135,7 @@ EXECUTE SalesByCategory 'Produce', '1995'
 ## <a name="dynamic-properties"></a>動的プロパティ
  Microsoft OLE DB Provider for SQL Server にいくつかの動的プロパティの挿入、**プロパティ**、開かれていないのコレクション[接続](../../../ado/reference/ado-api/connection-object-ado.md)、 [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md)、および[コマンド](../../../ado/reference/ado-api/command-object-ado.md)オブジェクト。
 
- 次の表は、ADO および OLE DB 名の各動的プロパティの相互です。 「説明です」という用語 ADO プロパティ名を参照して OLE DB プログラマーズ リファレンス これらのプロパティの詳細については、OLE DB プログラマーズ リファレンスに見つかります。 インデックスの OLE DB プロパティの名前を検索または参照してください[付録 c: OLE DB プロパティ](https://msdn.microsoft.com/deded3ff-f508-4e1b-b2b1-fd9afd3bd292)します。
+ 次の表は、ADO および OLE DB 名の各動的プロパティの相互です。 「説明です」という用語 ADO プロパティ名を参照して OLE DB プログラマーズ リファレンス これらのプロパティの詳細については、OLE DB プログラマーズ リファレンスに見つかります。 インデックスの OLE DB プロパティの名前を検索または参照してください[付録 c:OLE DB プロパティ](https://msdn.microsoft.com/deded3ff-f508-4e1b-b2b1-fd9afd3bd292)します。
 
 ## <a name="connection-dynamic-properties"></a>接続の動的プロパティ
  次のプロパティに追加されます、**プロパティ**のコレクション、**接続**オブジェクト。

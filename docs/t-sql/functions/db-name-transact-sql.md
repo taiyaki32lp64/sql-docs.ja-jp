@@ -19,16 +19,15 @@ helpviewer_keywords:
 - displaying database names
 - DB_NAME function
 ms.assetid: e21fb33a-a3ea-49b0-bb6b-8f789a675a0e
-author: MashaMSFT
-ms.author: mathoma
-manager: craigg
+author: VanMSFT
+ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: cb1479d186e2ad4118c40e6d3982c50acd02c213
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 5aa5e2a60189a82fb60cd416b7f87b35824e236f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47839010"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68118977"
 ---
 # <a name="dbname-transact-sql"></a>DB_NAME (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -95,8 +94,8 @@ FROM sys.databases;
 ```  
   
 ## <a name="see-also"></a>参照
-[DB_ID と #40 です。TRANSACT-SQL と #41 です。](../../t-sql/functions/db-id-transact-sql.md)  
-[メタデータ関数 (&) #40 です。TRANSACT-SQL と #41 です。](../../t-sql/functions/metadata-functions-transact-sql.md)  
+[DB_ID &#40;Transact-SQL&#41;](../../t-sql/functions/db-id-transact-sql.md)  
+[メタデータ関数 &#40;Transact-SQL&#41;](../../t-sql/functions/metadata-functions-transact-sql.md)  
 [sys.databases &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md)
   
   

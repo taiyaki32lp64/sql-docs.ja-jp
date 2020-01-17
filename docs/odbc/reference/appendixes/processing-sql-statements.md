@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 54dad6a3-e86c-477b-ba7c-4e95e0385ec1
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 5d5aa94062f90154126fb18c3658adb39bb1d5c0
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d9452ade90f6967dff6d72d5692efcf91b93154d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47689750"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68057244"
 ---
 # <a name="processing-sql-statements"></a>SQL ステートメントの処理
 > [!IMPORTANT]  

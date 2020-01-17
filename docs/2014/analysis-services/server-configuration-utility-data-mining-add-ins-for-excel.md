@@ -4,26 +4,25 @@ ms.custom: ''
 ms.date: 04/27/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: 28435f86-5cec-4a1e-9b7d-b2069c1ddddb
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 8e7a40b0cbcab787b6aa29abaa828aedcce8f5c6
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: bdc8434673d9220f22d31f1736bd67012653dc88
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48069634"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66069070"
 ---
 # <a name="server-configuration-utility-data-mining-add-ins-for-excel"></a>サーバー構成ユーティリティ (Excel 用のデータ マイニング アドイン)
-  Excel 用のデータ マイニング アドインをインストールするときに、サーバー構成ユーティリティもインストールされ、アドインを最初に開くときにこのユーティリティが実行されます。このトピックでは、このユーティリティを利用して [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] のインスタンスに接続し、データ マイニング モデルを操作できるようにデータベースを設定する方法を説明します。  
+  Excel 用データ マイニング アドインをインストールするときにサーバー構成ユーティリティもインストールされているし、アドインでは、最初に開いた際を実行します。このトピックでは、ユーティリティを使用してのインスタンスに接続する方法を説明します。[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]し、データ マイニング モデルを操作するためのデータベースを設定します。  
   
 
   
-##  <a name="bkmk_step1"></a> 手順 1: Analysis Services に接続します。  
+##  <a name="bkmk_step1"></a> ステップ 1:Analysis Services への接続  
  データ マイニング アルゴリズムを提供し、データ マイニング モデルを格納する [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] サーバーを選択します。  
   
  データ マイニング用の接続を作成する場合、データ マイニング モデルをテストできるサーバーを選択します。 サーバー上に新しいデータベースを作成し、その新しいデータベースをデータ マイニング専用にすることをお勧めします。または、自分用のデータ マイニング サーバーを準備するように管理者に依頼します。 この方法で、他のサービスのパフォーマンスに影響を与えずに、モデルを作成できます。  
@@ -36,7 +35,7 @@ ms.locfileid: "48069634"
  **[認証]**  
  認証方法を指定します。 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]への接続に、管理者が HTTPPump を使用してサーバーへのアクセスを構成した場合以外は、Windows 認証が必要です。  
   
-##  <a name="bkmk_step2"></a> 手順 2: 一時的なモデルを許可します。  
+##  <a name="bkmk_step2"></a> ステップ 2:一時的なモデルを許可します。  
  アドインを使用する前に、一時的なマイニング モデルの作成を許可するように [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] のサーバー プロパティを変更する必要があります。  
   
  一時的なマイニング モデルとも呼ばれます*セッション モデル*します。 これは、現在のセッションが開いている間だけモデルを格納できるためです。 サーバーへの接続を閉じると、セッションが終了し、セッション中に使用されたモデルはすべて削除されます。  
@@ -45,7 +44,7 @@ ms.locfileid: "48069634"
   
  最初、ウィザードは、指定したサーバーの設定を検出します。 一時的なマイニング モデルは、サーバーによって既に許可されている場合は、クリックして**次**を続行します。 ウィザードでは、指定した [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] サーバーで一時的なマイニング モデルを有効にする方法や、[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 管理者に対して要求を行う方法に関する説明も表示されます。  
   
-##  <a name="bkmk_step3"></a> 手順 3: アドイン ユーザー用のデータベースを作成します。  
+##  <a name="bkmk_step3"></a> ステップ 3:アドイン ユーザー用のデータベースを作成します。  
  セットアップおよび構成ウィザードのこのページでは、データ マイニング専用の新しいデータベースを作成すること、または既存の [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] データベースを選択することができます。  
   
 > [!WARNING]  
@@ -67,7 +66,7 @@ ms.locfileid: "48069634"
  **[データベース]**  
  既存のデータベースを使用するためにこのオプションを選択した場合は、一覧からデータベース名を選択する必要があります。  
   
-##  <a name="bkmk_step4"></a> 手順 4: アドイン ユーザーに適切なアクセス許可を付与します。  
+##  <a name="bkmk_step4"></a> 手順 4:アドイン ユーザーに適切なアクセス許可を付与します。  
  データ マイニング構造およびモデルを参照、編集、処理、または作成するために必要な権限を、自分 (またはアドインの他のユーザー) に設定する必要があります。  
   
  既定では、アドインを使用するには統合 Windows 認証が必要です。  

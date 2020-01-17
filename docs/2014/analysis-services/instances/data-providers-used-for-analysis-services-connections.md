@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: 128f6dde-409d-4c12-9820-3305bab57b75
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 739723a42580c404d0529a6d84d907cf665f8270
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 16e691ab6c6a6fcff4cb59fe54884fbb1b52268e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53368514"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66080098"
 ---
 # <a name="data-providers-used-for-analysis-services-connections"></a>Analysis Services 接続に使用するデータ プロバイダー
   Analysis Services では、サーバーとデータにアクセスするために 3 種類のデータ プロバイダーを用意しています。 Analysis Services に接続するすべてのアプリケーションでは、これらのプロバイダーのいずれかを使用します。 これらのプロバイダーのうち、ADOMD.NET および Analysis Services 管理オブジェクト (AMO) の 2 つは、マネージド データ プロバイダーです。 Analysis Services OLE DB Provider (MSOLAP DLL) は、ネイティブ データ プロバイダーです。  

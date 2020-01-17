@@ -1,7 +1,7 @@
 ---
-title: 中断された復元操作の再開 (Transact-SQL) | Microsoft Docs
-ms.custom: ''
-ms.date: 03/06/2017
+title: 中断された復元の再開 (Transact-SQL)
+ms.custom: seo-lt-2019
+ms.date: 12/17/2019
 ms.prod: sql
 ms.prod_service: backup-restore
 ms.reviewer: ''
@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 6413a07d-fd90-448d-8f29-12c5a1972618
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: b2d842c42a811ad82bf53cc7ce33bd2d4c34a126
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 49b2cd932ea40e2f45010785edcd033b8530d6bd
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47792390"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75244364"
 ---
 # <a name="restart-an-interrupted-restore-operation-transact-sql"></a>中断された復元操作の再開 (Transact-SQL)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

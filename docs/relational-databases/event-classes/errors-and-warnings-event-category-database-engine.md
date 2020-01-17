@@ -1,6 +1,6 @@
 ---
-title: Errors and Warnings イベント カテゴリ (データベース エンジン) | Microsoft Docs
-ms.custom: ''
+title: エラーと警告イベント カテゴリ
+ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.reviewer: ''
@@ -13,14 +13,13 @@ helpviewer_keywords:
 ms.assetid: 249c19b5-af68-4433-80f6-337395176641
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 33a4894f1b76c86f635360101b280e6220d2dc21
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 4832910f00322875c334e16df77975a33106d214
+ms.sourcegitcommit: d00ba0b4696ef7dee31cd0b293a3f54a1beaf458
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47763820"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "74056426"
 ---
 # <a name="errors-and-warnings-event-category-database-engine"></a>Errors and Warnings イベント カテゴリ (データベース エンジン)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]

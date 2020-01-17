@@ -14,17 +14,17 @@ ms.assetid: 2ded5e9c-4251-4fb1-a047-99f13d150b61
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: f22d153d55674d5dd615ab50848e4a7fd85a6dcb
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 20bd8904f8dfabd81f3f16ef7bed4c6bf1084c0d
+ms.sourcegitcommit: f912c101d2939084c4ea2e9881eb98e1afa29dad
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52800234"
+ms.lasthandoff: 10/23/2019
+ms.locfileid: "72798233"
 ---
 # <a name="give-others-ownership-of-a-job"></a>Give Others Ownership of a Job
   このトピックでは、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェントのジョブの所有権を他のユーザーに割り当てる方法を説明します。  
   
--   **作業を開始する準備:**[制限事項と制約](#Restrictions)、[セキュリティ](#Security)  
+-   **作業を開始する準備:** [制限事項と制約事項](#Restrictions)、[セキュリティ](#Security)  
   
 -   **ジョブの所有権を他のユーザーに割り当てる方法:**  
   
@@ -47,9 +47,9 @@ ms.locfileid: "52800234"
  セキュリティを確保するため、ジョブの所有者または **sysadmin** ロールのメンバーだけがジョブの定義を変更できます。 **sysadmin** 固定サーバー ロールのメンバーのみが別のユーザーにジョブの所有権を割り当てることができ、ジョブの所有者とは無関係にジョブを実行できます。  
   
 > [!NOTE]  
->  ジョブの所有権を **sysadmin** 固定サーバー ロールのメンバーでないユーザーに変更し、そのジョブがプロキシ アカウントを必要とするジョブ ステップを実行する ( [!INCLUDE[ssIS](../../includes/ssis-md.md)] パッケージの実行など) 場合は、ユーザーがそのプロキシ アカウントにアクセスできることを確認してください。アクセスできない場合、ジョブは失敗します。  
+>  ジョブの所有権を **sysadmin** 固定サーバー ロールのメンバーでないユーザーに変更し、そのジョブがプロキシ アカウントを必要とするジョブ ステップを実行する ([!INCLUDE[ssIS](../../includes/ssis-md.md)] パッケージの実行など) 場合は、ユーザーがそのプロキシ アカウントにアクセスできることを確認してください。アクセスできない場合、ジョブは失敗します。  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> アクセス許可  
  詳細については、「 [SQL Server エージェントのセキュリティの実装](implement-sql-server-agent-security.md)」をご覧ください。  
   
 ##  <a name="SSMSProc2"></a> SQL Server Management Studio の使用  
@@ -57,7 +57,7 @@ ms.locfileid: "52800234"
   
 1.  **オブジェクト エクスプローラー** で、 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]のインスタンスに接続し、そのインスタンスを展開します。  
   
-2.  **[SQL Server エージェント]**、 **[ジョブ]** の順に展開し、ジョブを右クリックして **[プロパティ]** をクリックします。  
+2.  **[SQL Server エージェント]** 、 **[ジョブ]** の順に展開し、ジョブを右クリックして **[プロパティ]** をクリックします。  
   
 3.  **[所有者]** ボックスの一覧で、ログインを選択します。 ジョブの所有者を変更するには、システム管理者でなければなりません。  
   
@@ -70,9 +70,9 @@ ms.locfileid: "52800234"
   
 2.  ツール バーの **[新しいクエリ]** をクリックします。  
   
-3.  クエリ ウィンドウで入力を使用して、次のステートメント、 [sp_manage_jobs_by_login &#40;TRANSACT-SQL&#41; ](/sql/relational-databases/system-stored-procedures/sp-manage-jobs-by-login-transact-sql)システム ストアド プロシージャ。 次の例では、 `danw` からのすべてのジョブを `fran??oisa`に再割り当てします。  
+3.  クエリウィンドウで、 [sp_manage_jobs_by_login &#40;transact-sql&#41; ](/sql/relational-databases/system-stored-procedures/sp-manage-jobs-by-login-transact-sql)システムストアドプロシージャを使用する次のステートメントを入力します。 次の例では、 `danw` からのすべてのジョブを `fran??oisa`に再割り当てします。  
   
-    ```  
+    ```sql
     USE msdb ;  
     GO  
   
@@ -83,13 +83,12 @@ ms.locfileid: "52800234"
     GO  
     ```  
   
-##  <a name="SMOProc2"></a> SQL Server 管理オブジェクトの使用  
- **ジョブの所有権を他のユーザーに割り当てるには**  
+##  <a name="SMOProc2"></a>SQL Server 管理オブジェクトの使用  
+
+### <a name="to-give-others-ownership-of-a-job"></a>ジョブの所有権を他のユーザーに割り当てるには
   
 1.  Visual Basic、Visual C#、PowerShell などのプログラミング言語で `Job` クラスを呼び出します。 コード例については、「 [SQL Server エージェントでの自動管理タスクのスケジュール設定](sql-server-agent.md)」を参照してください。  
   
 ## <a name="see-also"></a>参照  
  [ジョブの実装](implement-jobs.md)   
  [ジョブの作成](create-jobs.md)  
-  
-  

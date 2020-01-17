@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 8c56b233-1be8-442c-8d0e-a4c96465bc99
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 9d4093321edfca7d1176c4b5be18ee876888b1a2
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.openlocfilehash: c88b8029ee5d96986cf9b366bd8faee53ca1393b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51600037"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67963224"
 ---
 # <a name="url-property-rds"></a>URL プロパティ (RDS)
 相対パスまたは絶対 URL を含む文字列を示します。  
@@ -52,7 +51,7 @@ Run time: DataControl.URL="Server"
 ## <a name="applies-to"></a>適用対象  
  [DataControl オブジェクト (RDS)](../../../ado/reference/rds-api/datacontrol-object-rds.md)  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [URL プロパティの例 (VBScript)](../../../ado/reference/rds-api/url-property-example-vbscript.md)
 
 

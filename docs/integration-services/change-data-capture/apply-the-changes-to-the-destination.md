@@ -10,17 +10,20 @@ ms.topic: conceptual
 helpviewer_keywords:
 - incremental load [Integration Services],applying changes
 ms.assetid: 338a56db-cb14-4784-a692-468eabd30f41
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: 9ad66356462da72c3b1fe2f9ee05fd226d00c52e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: a4df2ce8bc53694c74142f843c4656e254e748d4
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47651930"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71298990"
 ---
 # <a name="apply-the-changes-to-the-destination"></a>変換先に変更を適用する
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   変更データの増分読み込みを実行する [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] パッケージのデータ フローにおいて、3 番目に行う最後のタスクは、変更を変換先に適用することです。 挿入を適用するコンポーネント、更新を適用するコンポーネント、および削除を適用するコンポーネントが必要です。  
   
 > [!NOTE]  

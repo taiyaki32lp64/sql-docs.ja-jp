@@ -13,14 +13,13 @@ helpviewer_keywords:
 ms.assetid: 78c83277-1dbb-4e07-95bd-47b14d2b5cd4
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 9256ecdba8aa898cc0eb927f90a2f4f6e6a6a6e1
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 43086213ec4c13e6849a40a4013a99ffc9df3903
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52516761"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72907088"
 ---
 # <a name="page-compression-implementation"></a>ページの圧縮の実装
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -36,7 +35,7 @@ ms.locfileid: "52516761"
 2.  プレフィックスの圧縮  
   
 3.  ディクショナリの圧縮  
-  
+
  ページの圧縮を使用する場合、行の圧縮のみを使用して、リーフ レベル以外のページのインデックスが圧縮されます。 行の圧縮の詳細については、 [「行の圧縮の実装」](../../relational-databases/data-compression/row-compression-implementation.md)を参照してください。  
   
 ## <a name="prefix-compression"></a>プレフィックスの圧縮  
@@ -72,6 +71,6 @@ ms.locfileid: "52516761"
   
 ## <a name="see-also"></a>参照  
  [データの圧縮](../../relational-databases/data-compression/data-compression.md)   
- [「行の圧縮の実装」](../../relational-databases/data-compression/row-compression-implementation.md)  
+ [行の圧縮の実装](../../relational-databases/data-compression/row-compression-implementation.md)  
   
   

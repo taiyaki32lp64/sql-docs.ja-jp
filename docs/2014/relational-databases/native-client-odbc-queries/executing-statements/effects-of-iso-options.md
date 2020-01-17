@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: ebef85cf1deb2327122edfd536991f689b14c747
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48180362"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68206763"
 ---
 # <a name="effects-of-iso-options"></a>ISO オプションの効果
   ODBC 標準は、ISO 標準と密接に対応しています。ODBC アプリケーションは、ODBC ドライバーの動作が標準に準拠していることを前提としています。 ODBC 標準では、定義するとより厳密に準拠している動作を実現する、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client ODBC ドライバーは常に、接続先の SQL Server のバージョンで使用可能な ISO オプションを使用します。  
@@ -40,7 +40,7 @@ ms.locfileid: "48180362"
   
  ドライバーが SET オプションの現在の状態を確認できるようにするために、ODBC アプリケーションでは、[!INCLUDE[tsql](../../../includes/tsql-md.md)] SET ステートメントを使用して SET オプションを設定しないようにします。 これらのオプションを設定する場合は、データ ソースまたは接続オプションのみを使用するようにします。 アプリケーションが SET ステートメントを実行した場合、ドライバーは不正な SQL ステートメントを生成する可能性があります。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [ステートメントを実行する&#40;ODBC&#41;](executing-statements-odbc.md)   
  [SQLDriverConnect](../../native-client-odbc-api/sqldriverconnect.md)   
  [SQLBrowseConnect](../../native-client-odbc-api/sqlbrowseconnect.md)  

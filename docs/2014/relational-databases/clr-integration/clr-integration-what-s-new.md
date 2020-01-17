@@ -11,11 +11,11 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 45e4f0578d06eeafc545bea2b6374a37b8ef7cbc
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53350983"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62874067"
 ---
 # <a name="what39s-new-in-clr-integration"></a>どのような&#39;s CLR 統合の新機能
   [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] の CLR 統合で新しくなった点は次のとおりです。  

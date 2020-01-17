@@ -7,15 +7,15 @@ ms.reviewer: ''
 ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: 0b749c71-dfb6-493a-804f-600290d46eef
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: a43ac39754a5f5e83e664a2e21be904c2525bd53
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 209659609c2cf19196cc35050fb32e39e079d1c7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56015663"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65488943"
 ---
 # <a name="task-7-adding-dqs-cleansing-transform-to-the-data-flow"></a>タスク 7:DQS クレンジング変換をデータ フローに追加する
   ここでは、DQS クレンジング変換をデータ フローに追加して、入力済みの仕入先データを DQS を使用してクレンジングします。 参照してください **[DQS クレンジング変換](https://msdn.microsoft.com/library/ee677619.aspx)** 変換の詳細についてはします。  

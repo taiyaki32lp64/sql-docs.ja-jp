@@ -12,17 +12,20 @@ helpviewer_keywords:
 - remainder of division operation
 - modulo operator (%)
 ms.assetid: e2920821-2f5b-4c76-8db8-8b9eddf4606f
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: 343645c5fbf7e3757a255fd460ec481994b96d08
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: c6b663a99e8e0e5dd7d9d91a81fe39fecef6802b
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47599645"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71288804"
 ---
 # <a name="modulo-ssis-expression"></a>(剰余) (SSIS 式)
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   最初の数値式を 2 番目の数値式で割った剰余を整数値で返します。  
   
 ## <a name="syntax"></a>構文  
@@ -77,6 +80,6 @@ SalesQuota % 12
   
 ## <a name="see-also"></a>参照  
  [演算子の優先順位と結合規則](../../integration-services/expressions/operator-precedence-and-associativity.md)   
- [演算子 (SSIS 式)](../../integration-services/expressions/operators-ssis-expression.md)  
+ [演算子 &#40;SSIS 式&#41;](../../integration-services/expressions/operators-ssis-expression.md)  
   
   

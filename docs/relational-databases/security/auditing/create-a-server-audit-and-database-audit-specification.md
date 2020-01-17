@@ -1,6 +1,7 @@
 ---
-title: サーバー監査とデータベース監査の仕様を作成する方法 | Microsoft Docs
-ms.custom: ''
+title: サーバー監査およびデータベース監査の仕様を作成する
+description: SQL Server Management Studio または Transact-SQL (T-SQL) を使用し、SQL Server の監査とデータベース監査の仕様を作成する方法について説明します。
+ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: security
@@ -15,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 26ee85de-6e97-4318-b526-900924d96e62
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: a2213a6f87aa11db9201dc052efa5a5513e185a7
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: d9ab1fa97653513d18c43b916ca5bfbc2105e8e7
+ms.sourcegitcommit: 035ad9197cb9799852ed705432740ad52e0a256d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52539164"
+ms.lasthandoff: 12/31/2019
+ms.locfileid: "75557877"
 ---
 # <a name="create-a-server-audit-and-database-audit-specification"></a>サーバー監査の仕様およびデータベース監査の仕様を作成する方法
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -35,7 +35,7 @@ ms.locfileid: "52539164"
   
      [制限事項と制約事項](#Restrictions)  
   
-     [Security](#Security)  
+     [セキュリティ](#Security)  
   
 -   **サーバー監査とデータベース監査の仕様を作成する方法:**  
   
@@ -66,25 +66,25 @@ ms.locfileid: "52539164"
   
 1.  オブジェクト エクスプローラーで、 **[セキュリティ]** フォルダーを展開します。  
   
-2.  **[監査]** フォルダーを右クリックし、**[新しい監査...]** を選択します。詳しくは、「 [サーバー監査およびサーバー監査の仕様を作成する方法](../../../relational-databases/security/auditing/create-a-server-audit-and-server-audit-specification.md)」をご覧ください。  
+2.  **[監査]** フォルダーを右クリックし、 **[新しい監査]** を選択します。詳しくは、「 [サーバー監査およびサーバー監査の仕様を作成する方法](../../../relational-databases/security/auditing/create-a-server-audit-and-server-audit-specification.md)」をご覧ください。  
   
 3.  オプションの選択が完了したら、 **[OK]** をクリックします。  
-  
+
 #### <a name="to-create-a-database-level-audit-specification"></a>データベース レベルの監査仕様を作成するには  
   
 1.  オブジェクト エクスプローラーで、監査仕様を作成するデータベースを展開します。  
   
 2.  **[セキュリティ]** フォルダーを展開します。  
   
-3.  **[データベース監査の仕様]** フォルダーを右クリックし、**[新しいデータベース監査の仕様...]** を選択します。  
+3.  **[データベース監査の仕様]** フォルダーを右クリックし、 **[新しいデータベース監査の仕様...]** を選択します。  
   
      **[データベース監査の仕様の作成]** ダイアログ ボックスでは、次のオプションを使用できます。  
   
-     **名前**  
+     **Name**  
      データベース監査の仕様の名前。 この名前は、新しいサーバー監査の仕様を作成すると自動的に生成されますが、編集可能です。  
   
      **監査**  
-     既存のデータベース監査の名前。 監査の名前を入力するか、一覧から選択します。  
+     既存のサーバー監査オブジェクトの名前。 監査の名前を入力するか、一覧から選択します。  
   
      **[監査アクションの種類]**  
      キャプチャするデータベース レベルの監査アクション グループと監査アクションを指定します。 データベース レベルの監査アクション グループと監査アクションの一覧、およびそれらに含まれるイベントの説明については、「 [SQL Server 監査のアクション グループとアクション](../../../relational-databases/security/auditing/sql-server-audit-action-groups-and-actions.md)」をご覧ください。  
@@ -135,7 +135,7 @@ ms.locfileid: "52539164"
   
 2.  [標準] ツール バーの **[新しいクエリ]** をクリックします。  
   
-3.  次の例をコピーしてクエリ ウィンドウに貼り付け、 **[実行]** をクリックします。 この例では、`Audit_Pay_Tables` テーブルに対する `dbo` ユーザーによる SELECT ステートメントと INSERT ステートメントを、定義済みのサーバー監査に基づいて監査する `HumanResources.EmployeePayHistory` という名前のデータベース監査仕様を作成します。  
+3.  次の例をコピーしてクエリ ウィンドウに貼り付け、 **[実行]** をクリックします。 この例では、 `Audit_Pay_Tables` テーブルに対する `dbo` ユーザーによる SELECT ステートメントと INSERT ステートメントを、定義済みのサーバー監査に基づいて監査する `HumanResources.EmployeePayHistory` という名前のデータベース監査仕様を作成します。  
   
     ```  
     USE AdventureWorks2012 ;   

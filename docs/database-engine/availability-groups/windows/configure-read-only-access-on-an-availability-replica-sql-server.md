@@ -1,7 +1,7 @@
 ---
-title: 可用性グループのセカンダリ レプリカへの読み取り専用アクセスの構成
+title: セカンダリ可用性グループ レプリカへの読み取り専用アクセスの構成
 description: 'Always On 可用性グループでセカンダリ レプリカに読み取りアクセスのみが許可されるように構成します。 '
-ms.custom: seodec18
+ms.custom: seo-lt-2019
 ms.date: 05/17/2016
 ms.prod: sql
 ms.reviewer: ''
@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 22387419-22c4-43fa-851c-5fecec4b049b
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: c7dfd6c8dc39e2653a2ddeca3bec07a1270f5cd8
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: aaeef70fe81699d0cbb00ba3d7e5a6dfcf1b6aa7
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54135822"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75241731"
 ---
 # <a name="configure-read-only-access-to-a-secondary-replica-of-an-always-on-availability-group"></a>Always On 可用性グループのセカンダリ レプリカへの読み取り専用アクセスの構成
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -30,35 +29,12 @@ ms.locfileid: "54135822"
   
  セカンダリ レプリカに対して読み取り専用アクセスを有効にすることによる影響と、接続アクセスの概要については、「[可用性レプリカに対するクライアント接続アクセスについて &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/about-client-connection-access-to-availability-replicas-sql-server.md)」および「[アクティブなセカンダリ:読み取り可能なセカンダリ レプリカ &#40;Always On 可用性グループ&#41;](../../../database-engine/availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md)」を参照してください。  
   
--   **作業を開始する準備:**  
-  
-     [前提条件と制限](#Prerequisites)  
-  
-     [セキュリティ](#Security)  
-  
--   **可用性レプリカに対してアクセスを構成するために使用するもの:**  
-  
-     [SQL Server Management Studio](#SSMSProcedure)  
-  
-     [Transact-SQL](#TsqlProcedure)  
-  
-     [PowerShell](#PowerShellProcedure)  
-  
--   **補足情報:**[可用性レプリカに対する読み取り専用アクセスの構成後](#FollowUp)  
-  
--   [関連タスク](#RelatedTasks)  
-  
--   [関連コンテンツ](#RelatedContent)  
-  
-##  <a name="BeforeYouBegin"></a> はじめに  
-  
-###  <a name="Prerequisites"></a> 前提条件と制限  
+ 
+##  <a name="Prerequisites"></a> 前提条件と制限  
   
 -   別の接続アクセスを構成するには、プライマリ レプリカをホストするサーバー インスタンスに接続している必要があります。  
   
-###  <a name="Security"></a> セキュリティ  
-  
-####  <a name="Permissions"></a> Permissions  
+##  <a name="Permissions"></a> Permissions  
   
 |タスク|アクセス許可|  
 |----------|-----------------|  
@@ -113,7 +89,7 @@ ms.locfileid: "54135822"
   
          パラメーターの説明  
   
-         いいえ  
+         NO  
          このレプリカのセカンダリ データベースに対する直接接続は禁止されます。 読み取りアクセスで利用することはできません。 これが既定の設定です。  
   
          READ_ONLY  
@@ -198,17 +174,17 @@ Set-SqlAvailabilityReplica -ConnectionModeInPrimaryRole "AllowAllConnections" `
   
 ```  
   
-##  <a name="FollowUp"></a> 補足情報:可用性レプリカに対する読み取り専用アクセスの構成後  
+##  <a name="FollowUp"></a>補足情報: 可用性レプリカに対する読み取り専用アクセスの構成後  
  **読み取り可能なセカンダリ レプリカに対する読み取り専用アクセス**  
   
 -   [bcp ユーティリティ](../../../tools/bcp-utility.md) または [sqlcmd ユーティリティ](../../../tools/sqlcmd-utility.md)を使用する場合、 **-K ReadOnly** スイッチを指定することによって、読み取り専用アクセスが有効になっている任意のセカンダリ レプリカへの読み取り専用アクセスを指定できます。  
   
 -   読み取り可能なセカンダリ レプリカに接続するクライアント アプリケーションを有効にするには:  
   
-    ||前提条件|リンク|  
+    ||前提条件|Link|  
     |-|------------------|----------|  
-    |![チェック ボックス](../../../database-engine/availability-groups/windows/media/checkboxemptycenterxtraspacetopandright.gif "チェック ボックス")|可用性グループにリスナーがあることを確認する。|[可用性グループ リスナーの作成または構成 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/create-or-configure-an-availability-group-listener-sql-server.md)|  
-    |![チェック ボックス](../../../database-engine/availability-groups/windows/media/checkboxemptycenterxtraspacetopandright.gif "チェック ボックス")|可用性グループの読み取り専用ルーティングを構成する。|[可用性グループの読み取り専用ルーティングの構成 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/configure-read-only-routing-for-an-availability-group-sql-server.md)|  
+    |![Checkbox](../../../database-engine/availability-groups/windows/media/checkboxemptycenterxtraspacetopandright.gif "Checkbox")|可用性グループにリスナーがあることを確認する。|[可用性グループ リスナーの作成または構成 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/create-or-configure-an-availability-group-listener-sql-server.md)|  
+    |![Checkbox](../../../database-engine/availability-groups/windows/media/checkboxemptycenterxtraspacetopandright.gif "Checkbox")|可用性グループの読み取り専用ルーティングを構成する。|[可用性グループの読み取り専用ルーティングの構成 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/configure-read-only-routing-for-an-availability-group-sql-server.md)|  
   
  **フェールオーバー後にトリガーとジョブに影響する可能性がある要因**  
   

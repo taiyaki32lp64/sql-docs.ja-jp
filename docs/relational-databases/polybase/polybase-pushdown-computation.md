@@ -1,23 +1,21 @@
 ---
 title: PolyBase でのプッシュダウン計算 | Microsoft Docs
-ms.custom: ''
-ms.date: 09/24/2018
+ms.date: 04/23/2019
 ms.prod: sql
-ms.reviewer: ''
 ms.technology: polybase
 ms.topic: conceptual
-author: rothja
-ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 24320f6f60d336df54093dd761d2b8bc872e3cc9
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+author: MikeRayMSFT
+ms.author: mikeray
+ms.reviewer: ''
+monikerRange: '>= sql-server-2016 || =sqlallproducts-allversions'
+ms.openlocfilehash: 94e360c19c4f734b891701a4ec40c82cdb57927d
+ms.sourcegitcommit: 8732161f26a93de3aa1fb13495e8a6a71519c155
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53211461"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71710483"
 ---
 # <a name="pushdown-computations-in-polybase"></a>PolyBase でのプッシュダウン計算
-
 
 ## <a name="dmv"></a>DMV (DMV)
 

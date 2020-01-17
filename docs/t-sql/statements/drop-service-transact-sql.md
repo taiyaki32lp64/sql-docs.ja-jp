@@ -21,16 +21,15 @@ helpviewer_keywords:
 ms.assetid: 2351bba7-0f2a-4cda-b3b2-6a88b8747c53
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: fe420a2f1a39165a94500f52d016b111bf43be20
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: c23b3895afaae2e474898a617c2fbabee4df2abe
+ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47632606"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73791311"
 ---
 # <a name="drop-service-transact-sql"></a>DROP SERVICE (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
 
   既存のサービスを削除します。  
   
@@ -46,7 +45,7 @@ DROP SERVICE service_name
   
 ## <a name="arguments"></a>引数  
  *service_name*  
- 削除するサービスの名前を指定します。 サーバー名、データベース名、スキーマ名は指定できません。  
+ 削除するサービスの名前です。 サーバー名、データベース名、スキーマ名は指定できません。  
   
 ## <a name="remarks"></a>Remarks  
  サービスがメッセージ交換の優先度で参照されている場合、そのサービスは削除できません。  

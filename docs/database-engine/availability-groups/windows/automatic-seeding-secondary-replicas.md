@@ -1,8 +1,7 @@
 ---
-title: 自動シード処理を使用して、可用性グループのセカンダリ レプリカを初期化する
-description: 自動シード処理を使用して、SQL 2016 以降で Always On 可用性グループの一部としてセカンダリ レプリカを初期化します。
-services: data-lake-analytics
-ms.custom: seodec18
+title: セカンダリ レプリカの自動シード処理
+description: 自動シード処理を使用して、SQL 2016 以降で Always On 可用性グループの一部としてセカンダリ レプリカを初期化する自動シード処理の方法について説明します。
+ms.custom: seo-lt-2019
 ms.date: 11/27/2018
 ms.prod: sql
 ms.reviewer: ''
@@ -13,29 +12,27 @@ helpviewer_keywords:
 ms.assetid: ''
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: b903c4e55940f4c941564f4f0d180f4f94d1ad58
-ms.sourcegitcommit: c9d33ce831723ece69f282896955539d49aee7f8
+ms.openlocfilehash: d76d91b2a083f06ea02951957bdd7e43b9092dea
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/12/2018
-ms.locfileid: "53306169"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75254101"
 ---
 # <a name="use-automatic-seeding-to-initialize-a-secondary-replica-for-an-always-on-availability-group"></a>自動シード処理を使用して、Always On 可用性グループのセカンダリ レプリカを初期化する
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 SQL Server 2012 および 2014 では、SQL Server Always On 可用性グループでセカンダリ レプリカを初期化する唯一の方法はバックアップ、コピー、および復元を使用することです。 SQL Server 2016 では、セカンダリ レプリカを初期化するための*自動シード処理*という新機能が導入されています。 自動シード処理ではログ ストリーム トランスポートを使用して、VDI を使用するバックアップを、構成済みのエンドポイントを使用する可用性グループの各データベースのセカンダリ レプリカにストリーミングします。 この新機能は、可用性グループの最初の作成時やデータベースの追加時に使用できます。 自動シード処理は、Always On 可用性グループをサポートする SQL Server のすべてのエディションで、従来の可用性グループと[分散型可用性グループ](distributed-availability-groups.md)の両方で使用できます。
 
-## <a name="considerations"></a>考慮事項
+## <a name="security"></a>Security
 
-自動シード処理を使用する場合の考慮事項は次のとおりです。
+セキュリティのアクセス許可は、初期化されるレプリカの種類によって異なります。
 
-* [プライマリ レプリカへのパフォーマンスおよびトランザクション ログの影響](#performance-and-transaction-log-impact-on-the-primary-replica)
-* [ディスク レイアウト](#disklayout)
-* [セキュリティ](#security)
+* 従来の可用性グループの場合、セカンダリ レプリカは可用性グループに結合されているため、その可用性グループにアクセス許可を与える必要があります。 Transact-SQL では、コマンド `ALTER AVAILABILITY GROUP [<AGName>] GRANT CREATE ANY DATABASE` を使用します。
+* 作成されるレプリカのデータベースが 2 番目の可用性グループのプライマリ レプリカにある分散型可用性グループの場合、既にそれはプライマリであるため、余分なアクセス許可は必要ありません。
+* 分散型可用性グループの 2 番目の可用性グループのセカンダリ レプリカの場合は、コマンド `ALTER AVAILABILITY GROUP [<2ndAGName>] GRANT CREATE ANY DATABASE` を使用する必要があります。 このセカンダリ レプリカは 2 番目の可用性グループのプライマリからシード処理されます。
 
-
-### <a name="performance-and-transaction-log-impact-on-the-primary-replica"></a>プライマリ レプリカへのパフォーマンスおよびトランザクション ログの影響
+## <a name="performance-and-transaction-log-impact-on-the-primary-replica"></a>プライマリ レプリカへのパフォーマンスおよびトランザクション ログの影響
 
 自動シード処理は、データベースのサイズ、ネットワーク速度、およびプライマリ レプリカとセカンダリ レプリカの間の距離に応じて、セカンダリ レプリカを初期化するのに実用的である場合とそうでない場合があります。 以下に例を示します。
 
@@ -49,7 +46,7 @@ SQL Server 2012 および 2014 では、SQL Server Always On 可用性グルー�
 
 自動シード処理では圧縮を使用できますが、既定では使用不可になっています。 圧縮を有効にすると、ネットワーク帯域幅が減り、プロセス速度が上がる可能性はありますが、その代りにプロセッサのオーバーヘッドが増えます。 自動シード処理中に圧縮を使用するには、トレース フラグ 9567 を有効にします (「[可用性グループの圧縮の調整](tune-compression-for-availability-group.md)」を参照)。
 
-### <a name = "disklayout"></a> ディスク レイアウト
+## <a name = "disklayout"></a> ディスク レイアウト
 
 SQL Server 2016 以前では、自動シード処理でデータベースが作成されるフォルダーが既に存在しており、プライマリ レプリカのパスと同じである必要があります。 
 
@@ -81,13 +78,6 @@ SQL Server 2017 では、可用性グループに参加するすべてのレプ�
 
 SQL Server 2016 以前の動作に戻すには、トレース フラグ 9571 を有効にします。 トレース フラグを有効にする方法については、「[DBCC TRACEON (Transact-SQL)](../../../t-sql/database-console-commands/dbcc-traceon-transact-sql.md)」を参照してください。
 
-### <a name="security"></a>Security
-
-セキュリティのアクセス許可は、初期化されるレプリカの種類によって異なります。
-
-* 従来の可用性グループの場合、セカンダリ レプリカは可用性グループに結合されているため、その可用性グループにアクセス許可を与える必要があります。 Transact-SQL では、コマンド `ALTER AVAILABILITY GROUP [<AGName>] GRANT CREATE ANY DATABASE` を使用します。
-* 作成されるレプリカのデータベースが 2 番目の可用性グループのプライマリ レプリカにある分散型可用性グループの場合、既にそれはプライマリであるため、余分なアクセス許可は必要ありません。
-* 分散型可用性グループの 2 番目の可用性グループのセカンダリ レプリカの場合は、コマンド `ALTER AVAILABILITY GROUP [<2ndAGName>] GRANT CREATE ANY DATABASE` を使用する必要があります。 このセカンダリ レプリカは 2 番目の可用性グループのプライマリからシード処理されます。
 
 ## <a name="create-an-availability-group-with-automatic-seeding"></a>自動シード処理で可用性グループを作成する
 
@@ -160,7 +150,7 @@ Transact-SQL または SQL Server Management Studio (SSMS、バージョン 17 �
 
 ## <a name="change-the-seeding-mode-of-a-replica"></a>レプリカのシード処理モードを変更する
 
-可用性グループの作成後にレプリカのシード処理モードを変更できます。したがって、自動シード処理を有効または無効にすることができます。 作成後に自動シード処理を有効にすれば、バックアップ、コピー、および復元で作成する場合と同じように、自動シード処理を使用して可用性グループにデータベースを追加できます。 例 :
+可用性グループの作成後にレプリカのシード処理モードを変更できます。したがって、自動シード処理を有効または無効にすることができます。 作成後に自動シード処理を有効にすれば、バックアップ、コピー、および復元で作成する場合と同じように、自動シード処理を使用して可用性グループにデータベースを追加できます。 次に例を示します。
 
 ```sql
 ALTER AVAILABILITY GROUP [AGName]
@@ -240,7 +230,7 @@ GO
 
 次の表に、自動シード処理に関連する拡張イベントを示します。
 
-|[オブジェクト名]|[説明]|
+|Name|[説明]|
 |----|-----------|
 |hadr_db_manager_seeding_request_msg|シード処理要求メッセージ。|
 |hadr_physical_seeding_backup_state_change|物理シード処理のバックアップ側の状態変更。|

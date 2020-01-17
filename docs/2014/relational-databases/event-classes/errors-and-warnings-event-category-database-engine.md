@@ -17,11 +17,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: b86b68b0e7273a275c8dd1bd00fe99a7c462a27d
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52778404"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62662628"
 ---
 # <a name="errors-and-warnings-event-category-database-engine"></a>Errors and Warnings イベント カテゴリ (データベース エンジン)
   **Errors and Warnings** イベント カテゴリには、一般的なエラーおよび警告のイベントが含まれています。  

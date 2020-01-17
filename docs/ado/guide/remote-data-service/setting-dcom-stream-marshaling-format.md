@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 46664ac5-d6e6-4457-8bae-3a98300f2a41
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: b6b68071c379d61af64c71f5507281c127d9158a
-ms.sourcegitcommit: 1a5448747ccb2e13e8f3d9f04012ba5ae04bb0a3
+ms.openlocfilehash: 29bf8d19b9e3c9ec9b4072edd9575add9947c8f3
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51558339"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67922217"
 ---
 # <a name="setting-dcom-stream-marshaling-format"></a>DCOM のストリームのマーシャリング形式の設定
 RDS 1.5 以前のコンポーネントを使用してクライアント コンピューターは、RDS 2.0 またはそれ以降のコンポーネントを使用するサーバーと互換性がありません。 RDS 2.0 またはそれ以降のサポートはより効率的に転送を基になるプロトコルとして DCOM を使用する場合[Recordset](../../../ado/reference/ado-api/recordset-object-ado.md)オブジェクト。 RDS 1.5 以前のコンポーネント、クライアントを実行する場合は、(RDS 1.0 と呼ばれます) 前の RDS サポートや新しい RDS サポート (2.0 以降と呼ばれる RDS) を使用するようにサーバーを設定できます。 次のレジストリ エントリのいずれかを設定します。  
@@ -31,7 +30,7 @@ RDS 1.5 以前のコンポーネントを使用してクライアント コン�
 \CLSID\[58ECEE30-E715-11CF-B0E3-00AA003F000F}\ADTGOptions]"MarshalFormat"="RDS10"  
 ```  
   
- - または -  
+ \- または -  
   
 ```console
 [HKEY_CLASSES_ROOT]  

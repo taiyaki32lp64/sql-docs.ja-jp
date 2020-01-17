@@ -1,5 +1,5 @@
 ---
-title: sys.dm_db_xtp_gc_cycle_stats (TRANSACT-SQL) |Microsoft Docs
+title: sys.dm_db_xtp_gc_cycle_stats (Transact-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 08/29/2016
 ms.prod: sql
@@ -19,23 +19,22 @@ helpviewer_keywords:
 ms.assetid: bbc9704e-158e-4d32-b693-f00dce31cd2f
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: =azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: b59b0bdfb2852c20c2f13641682a1adff3547662
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 95e173cd20bd04c3b5a5a6cd7ad7299ef13971d3
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52540781"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68026852"
 ---
-# <a name="sysdmdbxtpgccyclestats-transact-sql"></a>sys.dm_db_xtp_gc_cycle_stats (Transact-SQL)
+# <a name="sysdm_db_xtp_gc_cycle_stats-transact-sql"></a>sys.dm_db_xtp_gc_cycle_stats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2014-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2014-asdb-xxxx-xxx-md.md)]
 
-  1 つ以上の行を削除したコミット済みトランザクションの現在の状態を出力します。 ガベージ コレクションのアイドル スレッドは、1 分ごとに、または前回のガベージ コレクション サイクル以降にコミット済み DML トランザクションの数が内部しきい値を超えたときに起動されます。 ガベージ コレクション サイクルの一環として、コミット済みトランザクションは、generation と関連付けられている 1 つ以上のキューに移動されます。 古いバージョンを生成したトランザクションは、次のようにして、16 の generation にわたり 16 トランザクションごとの単位にグループ化されます。  
+  1 つ以上の行を削除したコミット済みトランザクションの現在の状態を出力します。 アイドル状態のガベージ コレクション スレッドは、毎分または最後のガベージ コレクション サイクル以降にコミット済み DML トランザクションの数が内部しきい値を超えたときを解除します。 ガベージ コレクション サイクルの一環として、コミット済みトランザクションは、generation と関連付けられている 1 つ以上のキューに移動されます。 古いバージョンを生成したトランザクションは、次のようにして、16 の generation にわたり 16 トランザクションごとの単位にグループ化されます。  
   
--   generation 0:これは、最も古いアクティブなトランザクションより前にコミットされたすべてのトランザクションを格納します。 これらのトランザクションによって生成された行バージョンは、直ちにガベージ コレクションの対象となります。  
+-   Generation 0:これは、最も古いアクティブなトランザクションより前にコミットされたすべてのトランザクションを格納します。 これらのトランザクションによって生成される行バージョンがすぐにガベージ コレクションで使用します。  
   
--   generation 1 ～ 14:最も古いアクティブなトランザクションより後のタイムスタンプを持つトランザクションを格納します。 行バージョンに対してガベージ コレクションを実行することはできません。 各 generation には最大 16 のトランザクションを保持できます。 これらの generation に存在できるトランザクション数は、合計 224 (14 * 16) になります。  
+-   Generation 1 ~ 14:最も古いアクティブなトランザクションより後のタイムスタンプを持つトランザクションを格納します。 行バージョンに対してガベージ コレクションを実行することはできません。 各ジェネレーションには、最大 16 個のトランザクションを保持できます。 合計 224 (14 * 16) のトランザクションがこれらのジェネレーションで存在できます。  
   
 -   Generation 15:タイムスタンプが最も古いアクティブなトランザクションより後の残りのトランザクションは generation 15 に移動します。 generation 0 と同様、generation 15 にもトランザクション数の制限はありません。  
   
@@ -46,18 +45,18 @@ ms.locfileid: "52540781"
   
 |列名|型|説明|  
 |-----------------|----------|-----------------|  
-|cycle_id|**bigint**|ガベージ コレクション サイクルの一意の識別子|  
-|ticks_at_cycle_start|**bigint**|サイクルが開始した時点におけるティック|  
-|ticks_at_cycle_end|**bigint**|サイクルが終了した時点におけるティック|  
-|base_generation|**bigint**|データベースの現在のベース generation 値 ガベージ コレクションのトランザクションを識別するために使用される、最も古いアクティブなトランザクションのタイムスタンプを表します。 最も古いアクティブなトランザクションの ID は、16 ごとに更新されます。 たとえば、トランザクション id として 124、125、126 がある.139、値は 124 になります。 また、たとえばトランザクション 140 を追加した場合、この値は 140 になります。|  
+|cycle_id|**bigint**|ガベージ コレクション サイクルの一意の識別子。|  
+|ticks_at_cycle_start|**bigint**|サイクルが開始した時点におけるティックします。|  
+|ticks_at_cycle_end|**bigint**|サイクルが終了した時点におけるティックします。|  
+|base_generation|**bigint**|データベースの現在のベース generation 値です。 これは、ガベージ コレクションのトランザクションを識別するために使用される最も古いアクティブなトランザクションのタイムスタンプを表します。 最も古いアクティブなトランザクション id は 16 の増分値で更新されます。 たとえば、トランザクション id として 124、125、126 がある.139、値は 124 になります。 また、たとえばトランザクション 140 を追加した場合、この値は 140 になります。|  
 |xacts_copied_to_local|**bigint**|トランザクションのパイプラインからデータベースの generation 配列にコピーされたトランザクションの数|  
-|xacts_in_gen_0- xacts_in_gen_15|**bigint**|generation ごとのトランザクションの数|  
+|xacts_in_gen_0 xacts_in_gen_15|**bigint**|generation ごとのトランザクションの数|  
   
 ## <a name="permissions"></a>アクセス許可  
  サーバーに対する VIEW DATABASE STATE 権限が必要です。  
   
 ## <a name="usage-scenario"></a>使用シナリオ  
- 列の一部のサンプル出力を次に示します。27 generation が表示されています。  
+ 27 generation が表示されている列のサブセットの出力例を次に示します。  
   
 ```  
 cycle_id   ticks_at_cycle_start ticks_at_cycle_end   base_generation  xacts_in_gen_0    xacts_in_gen_1  
@@ -92,7 +91,7 @@ cycle_id   ticks_at_cycle_start ticks_at_cycle_end   base_generation  xacts_in_g
   
 ```  
   
-## <a name="see-also"></a>参照  
- [メモリ最適化テーブルの動的管理ビュー &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/memory-optimized-table-dynamic-management-views-transact-sql.md)  
+## <a name="see-also"></a>関連項目  
+ [メモリ最適化テーブルの動的管理ビュー &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/memory-optimized-table-dynamic-management-views-transact-sql.md)  
   
   

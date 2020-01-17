@@ -10,20 +10,19 @@ ms.topic: conceptual
 ms.assetid: 40d7fced-cce1-4534-b794-71bc735e53e0
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 91bc0dfccf175b2d6bc4f1e19bf32de2b0e5c012
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ad3e197fb7e2e26a7652cf6a5aa9e6c3d0366cc1
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47698370"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67999068"
 ---
 # <a name="updatedatetimeoffset-sqlserverresultset"></a>updateDateTimeOffset (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
   このメソッドは [!INCLUDE[msCoName](../../../includes/msconame_md.md)][!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] JDBC Driver 3.0 で追加されました。  
   
- 指定した列の値を更新、 [DateTimeOffset クラス](../../../connect/jdbc/reference/datetimeoffset-class.md)値。  
+ 指定された列の値を[DateTimeOffset クラス](../../../connect/jdbc/reference/datetimeoffset-class.md)の値に更新します。  
   
 ## <a name="overload-list"></a>オーバーロードの一覧  
   

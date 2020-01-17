@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - dimensions [Analysis Services], Business Intelligence enhancements
@@ -15,12 +14,12 @@ ms.assetid: 36f454ae-a9f2-4a59-b19d-40310af9f901
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 069611d1466f2810b958a7ad825f5abb0895f63f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 111948911c0fe7bdc0e7ce260a15b8efee50e9db
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48183442"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66076901"
 ---
 # <a name="add-account-intelligence-to-a-dimension"></a>ディメンションへの勘定科目インテリジェンスの追加
   勘定科目インテリジェンス拡張機能をキューブまたはディメンションに追加して、収益や費用などの標準の勘定科目の分類を勘定科目属性のメンバーに割り当てます。 この拡張機能により、勘定科目の種類 (資産や負債など) の特定および各勘定科目の種類への適切な集計の割り当ても行われます。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 分類を使用することによって、一定の期間にわたって勘定科目を集計できます。  
@@ -51,7 +50,7 @@ ms.locfileid: "48183442"
     |**[Liability]**|`LastNonEmpty`|特定の時期に負っている負債の金額または値。 この勘定科目の種類は時間の経過と共に累積しないので、自動的に集計されることはありません。 たとえば、年の値は、データを含む最後の月の値になります。 この種類の勘定科目では、期末レートを使用して通貨が換算されます。|  
     |**[Asset]**|`LastNonEmpty`|特定の時期に保持しているものの金額または値。 この勘定科目の種類は時間の経過と共に累積するので、自然に集計されることはありません。 たとえば、年の値は、データを含む最後の月の値になります。 この種類の勘定科目では、期末レートを使用して通貨が換算されます。|  
     |**バランス**|`LastNonEmpty`|指定された時期におけるものの数。 この勘定科目の種類は累積されますが、自然に集計されることはありません。 たとえば、年の値は、データを含む最後の月の値になります。|  
-    |**[Flow]**|`Sum`|集計されたものの増分数。 このアカウントの種類の集計として、`Sum`時間の経過と共に通貨変換規則では変換されません。|  
+    |**[Flow]**|`Sum`|集計されたものの増分数。 この勘定科目の種類は、時間の経過と共に `Sum` として集計されますが、通貨変換規則を使用した変換は行われません。|  
     |**[Expense]**|`Sum`|消費されたものの金額または値。 この勘定科目の種類は、時間の経過と共に `Sum` として集計され、平均レートを使用して通貨が換算されます。|  
     |**Income**|`Sum`|受け取ったものの金額または値。 この勘定科目の種類は、時間の経過と共に `Sum` として集計され、平均レートを使用して通貨が換算されます。|  
   

@@ -15,18 +15,17 @@ helpviewer_keywords:
 ms.assetid: 7d4a5496-ec2d-4936-b36a-7049a82be4b4
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 743e36e379760cb2c148c5484bb7b49b08d1d27e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: c37a7385cc3aabb725f86261203d22b5b10c3be6
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47644645"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67918872"
 ---
 # <a name="eventreasonenum"></a>EventReasonEnum
 イベントの発生の原因となった理由を指定します。  
   
-|定数|値|説明|  
+|定数|Value|説明|  
 |--------------|-----------|-----------------|  
 |**adRsnAddNew**|1|操作は、新しいレコードを追加します。|  
 |**adRsnClose**|9|操作の終了、 **Recordset**します。|  

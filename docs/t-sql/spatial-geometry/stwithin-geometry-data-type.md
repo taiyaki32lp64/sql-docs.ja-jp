@@ -15,15 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - STWithin (geometry Data Type)
 ms.assetid: f845d28c-8029-4e2b-bcf0-71c52a592501
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: f06651b5f1da33a9756e46cd438e39541b212ad6
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: MladjoA
+ms.author: mlandzic
+ms.openlocfilehash: 1ca7e74743773fb42a85300a37cc6b8aaa9d8f39
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47660250"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68066261"
 ---
 # <a name="stwithin-geometry-data-type"></a>STWithin (geometry データ型)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -44,7 +43,7 @@ ms.locfileid: "47660250"
 ## <a name="return-types"></a>戻り値の型  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 戻り値の型: **bit**  
   
- CLR の戻り値の型: **SqlBoolean**  
+ CLR の戻り値の型:**SqlBoolean**  
   
 ## <a name="remarks"></a>Remarks  
  **geometry** インスタンスの SRID (spatial reference ID) が一致しない場合、このメソッドは常に null を返します。

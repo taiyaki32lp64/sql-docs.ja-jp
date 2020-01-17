@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 10817e5e-75fa-42dd-baa2-359bea3ad051
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 01ba0d2a58a54cba2d509df407d11d8c5d0ebdee
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.openlocfilehash: 0fa4abf575c847bae10342a3870fc2c3785d16a0
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51606512"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68014231"
 ---
 # <a name="secondary-database-is-not-joined"></a>セカンダリ データベースが参加していない
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

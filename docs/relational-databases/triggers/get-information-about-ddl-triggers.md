@@ -13,14 +13,13 @@ helpviewer_keywords:
 ms.assetid: 462becea-292a-4b9e-bb98-533e89733911
 author: rothja
 ms.author: jroth
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: bba4c7959a7e4e67a9297c9e35a8acd52d1de189
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 42c4a2e8ccf9a3ac91aef0d38b64637cb37c95d6
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47780510"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68056093"
 ---
 # <a name="get-information-about-ddl-triggers"></a>DDL トリガーに関する情報の取得
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]

@@ -15,11 +15,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 0fb65d55d2b6b135c562f9dd4b02170de6b7df3c
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52787874"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63297869"
 ---
 # <a name="arrange-tables-in-diagrams-visual-database-tools"></a>ダイアグラム内のテーブルの並べ替え (Visual Database Tools)
   各テーブルとリレーションシップがわかりやすいように、データベース ダイアグラム内のテーブルを容易に並べ替えることができます。  
@@ -30,7 +30,7 @@ ms.locfileid: "52787874"
   
 2.  ショートカット メニューの **[テーブルの整列]** をクリックします。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [データベース ダイアグラムの使用 (Visual Database Tools)](visual-database-tools.md)  
   
   

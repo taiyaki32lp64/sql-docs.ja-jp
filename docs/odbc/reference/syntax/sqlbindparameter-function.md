@@ -11,6 +11,7 @@ apiname:
 - SQLBindParameter
 apilocation:
 - sqlsrv32.dll
+- odbc32.dll
 apitype: dllExport
 f1_keywords:
 - SQLBindParameter
@@ -19,20 +20,19 @@ helpviewer_keywords:
 ms.assetid: 38349d4b-be03-46f9-9d6a-e50dd144e225
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 79f340d95cf1cd15b176069458347b2bea97055c
-ms.sourcegitcommit: 480961f14405dc0b096aa8009855dc5a2964f177
+ms.openlocfilehash: 65f6145f0cbfbd59fffb71e030f6427ea1f551c0
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/22/2019
-ms.locfileid: "54420217"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68036210"
 ---
 # <a name="sqlbindparameter-function"></a>SQLBindParameter 関数
 
 **準拠**  
  バージョンが導入されました。ODBC 2.0 の規格に準拠します。ODBC  
   
- **まとめ**  
+ **概要**  
  **SQLBindParameter**バッファーを SQL ステートメントでパラメーター マーカーにバインドします。 **SQLBindParameter**基になるドライバーが Unicode データをサポートしていない場合でも、Unicode の C データ型へのバインドをサポートしています。  
   
 > [!NOTE]  
@@ -40,7 +40,8 @@ ms.locfileid: "54420217"
   
 ## <a name="syntax"></a>構文  
   
-```cpp  
+```cpp
+  
 SQLRETURN SQLBindParameter(  
       SQLHSTMT        StatementHandle,  
       SQLUSMALLINT    ParameterNumber,  
@@ -152,7 +153,7 @@ SQLRETURN SQLBindParameter(
   
 -   SQL_PARAM_INPUT_OUTPUT_STREAM します。 入力/出力パラメーターをストリーミングすることを示します。 **SQLGetData**部分のパラメーター値を読み取ることができます。 *BufferLength*バッファーの長さは、の呼び出しで判断するために無視**SQLGetData**します。 値、 *StrLen_or_IndPtr*バッファーが SQL_NULL_DATA、SQL_DEFAULT_PARAM、生成される場合、または SQL_LEN_DATA_AT_EXEC マクロの結果に含める必要があります。 出力にストリーミングされる場合、入力データで実行 (DAE) パラメーターとしてパラメーターをバインドする必要があります。 *ParameterValuePtr*によって返される null 以外のポインター値を指定できます**SQLParamData**トークンの値を持つユーザー定義としてで渡された*ParameterValuePtr*の両方の入力と出力します。 詳細については、次を参照してください。 [SQLGetData を使用して出力パラメーターを取得する](../../../odbc/reference/develop-app/retrieving-output-parameters-using-sqlgetdata.md)します。  
   
--   SQL_PARAM_OUTPUT_STREAM します。 SQL_PARAM_INPUT_OUTPUT_STREAM、出力パラメーターのと同じです。 **StrLen_or_IndPtr*入力は無視されます。  
+-   SQL_PARAM_OUTPUT_STREAM します。 SQL_PARAM_INPUT_OUTPUT_STREAM、出力パラメーターのと同じです。 * *StrLen_or_IndPtr*入力は無視されます。  
   
  次の表に、さまざまな組み合わせの*InputOutputType*と **StrLen_or_IndPtr*:  
   
@@ -291,7 +292,7 @@ SQLRETURN SQLBindParameter(
 4.  呼び出し**SQLParamData**で指定されたアプリケーション定義の値を取得する、 *ParameterValuePtr*の引数**SQLBindParameter**最初の処理する実行時データ パラメーター。 **SQLParamData** SQL_NEED_DATA を返します。  
   
     > [!NOTE]  
-    >  値がによって返される実行時データ パラメーターには、実行時データ列が似ています、 **SQLParamData**はそれぞれ異なります。 実行時データ パラメーターは、SQL ステートメントでデータを送信でパラメーター **SQLPutData**でステートメントを実行すると**SQLExecDirect**または**SQLExecute**. バインドされている**SQLBindParameter**します。 によって返される値**SQLParamData**にポインター値が渡される**SQLBindParameter**で、 *ParameterValuePtr*引数。 実行時データ列は列のデータを送信行セットで**SQLPutData**行が更新または追加**SQLBulkOperations**またはで更新された**SQLSetPos**. バインドされている**SQLBindCol**します。 によって返される値**SQLParamData**内の行のアドレスは、**TargetValuePtr*バッファー (への呼び出しで設定**SQLBindCol**) が処理されています。  
+    >  値がによって返される実行時データ パラメーターには、実行時データ列が似ています、 **SQLParamData**はそれぞれ異なります。 実行時データ パラメーターは、SQL ステートメントでデータを送信でパラメーター **SQLPutData**でステートメントを実行すると**SQLExecDirect**または**SQLExecute**. バインドされている**SQLBindParameter**します。 によって返される値**SQLParamData**にポインター値が渡される**SQLBindParameter**で、 *ParameterValuePtr*引数。 実行時データ列は列のデータを送信行セットで**SQLPutData**行が更新または追加**SQLBulkOperations**またはで更新された**SQLSetPos**. バインドされている**SQLBindCol**します。 によって返される値**SQLParamData**内の行のアドレスは、**TargetValuePtr*バッファー (への呼び出しで設定 **SQLBindCol** ) が処理されています。  
   
 5.  呼び出し**SQLPutData**パラメーターのデータを送信する 1 つ以上の時間。 データ値がより大きい場合は、複数の呼び出しが必要な\* *ParameterValuePtr*で指定されたバッファー **SQLPutData**; を複数回呼び出す**SQLPutData**文字、バイナリ、またはデータのソースに固有のデータ型の列に文字データを送信するときにのみ、または列が文字、バイナリ、C のバイナリ データを送信するときに、同じパラメーターは許可されているか、データ ソースに固有のデータ型します。  
   
@@ -597,7 +598,7 @@ int main() {
   
 ## <a name="related-functions"></a>関連する関数  
   
-|詳細|参照先|  
+|詳細|解決方法|  
 |---------------------------|---------|  
 |ステートメント内のパラメーターに関する情報を返す|[SQLDescribeParam 関数](../../../odbc/reference/syntax/sqldescribeparam-function.md)|  
 |SQL ステートメントを実行します。|[SQLExecDirect 関数](../../../odbc/reference/syntax/sqlexecdirect-function.md)|  

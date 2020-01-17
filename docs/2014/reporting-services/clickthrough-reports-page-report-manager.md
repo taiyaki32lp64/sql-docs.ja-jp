@@ -4,21 +4,20 @@ ms.custom: ''
 ms.date: 05/24/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 f1_keywords:
 - sql12.swb.reportserver.modelproperties.drilthroughreports.f1
 ms.assetid: e96cdeba-452b-45a8-9bcf-b75d76261e31
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: eb1c984abec2667a09587eda673ed02176aa8e8e
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: d996463baaed3095b6866fa2da88ed811745878d
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56010575"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66109796"
 ---
 # <a name="clickthrough-reports-page-report-manager"></a>[クリックスルー レポート] ページ (レポート マネージャー)
   クリックスルー レポートは、レポート内に含まれている対話的なデータをユーザーがクリックしたときに、関連するデータのテーブルを表示するレポートです。 これらのレポートは、レポートの作成に使用したモデルに含まれている情報に基づいて、レポート サーバーによって生成されます。 レポート サーバーによって生成されるクリックスルー レポートを使用しない場合は、カスタム レポートを作成し、レポート サーバーにパブリッシュして、そのモデルで定義されている対話的なデータ ポイントにマップすることができます。 カスタム レポートは、レポート ビルダーで同じモデルを使用して作成し、レポート サーバーにパブリッシュする必要があります。 カスタム レポートをモデル内のアイテムにマップするには、レポート マネージャーの [クリックスルー レポート] ページを使用します。  
@@ -57,7 +56,7 @@ ms.locfileid: "56010575"
  **複数インスタンスのレポート**  
  ユーザーの移動によって複数インスタンス データのビューが必要な場合は、使用するカスタム レポートを指定します。 参照ボタンをクリックして、使用するレポートを選択します。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [レポートのパブリッシュ](../../2014/reporting-services/publish-reports.md)  
   
   

@@ -9,15 +9,15 @@ ms.topic: conceptual
 f1_keywords:
 - SQL12.DTS.DESIGNER.EXPRESSIONTASK.F1
 ms.assetid: 1d7f042d-508d-4e1a-b83a-86a18e23b85f
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 5fa6ade04fac0c4a00ca344554f72d7f1b8aad30
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: ef46b33beeb57267ad5a06d1d3b1c5788439c027
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53359304"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62831426"
 ---
 # <a name="expression-task"></a>式タスク
   式タスクでは、式ビルダーを使用して、実行時に変数値を設定する式を作成して評価します。 タスクを編集するときは、 [Expression Builder](../expressions/expression-builder.md) が起動します。  
@@ -33,6 +33,6 @@ ms.locfileid: "53359304"
  [データ フロー コンポーネントで式を使用する](../use-an-expression-in-a-data-flow-component.md)  
   
 ## <a name="related-content"></a>関連コンテンツ  
- pragmaticworks.com の技術記事「 [SSIS 式チート シート](https://go.microsoft.com/fwlink/?LinkId=217683)」  
+ pragmaticworks.com の技術記事「 [SSIS 式チート シート](https://pragmaticworks.com/Resources/Cheat-Sheets/SSIS-Expression-Cheat-Sheet)」  
   
   

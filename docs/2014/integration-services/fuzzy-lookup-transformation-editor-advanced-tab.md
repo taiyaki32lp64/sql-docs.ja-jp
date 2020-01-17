@@ -4,23 +4,22 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.fuzzylookuptransformation.advanced.f1
 helpviewer_keywords:
 - Fuzzy Lookup Transformation Editor
 ms.assetid: 0a2919be-2ea7-4c06-82b8-0ffad5f0dd83
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 118b164b0200aad0185313ccc1bf68946c177ee6
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 26a7efa42215f1bc456cf4a4c47b3a71c62b94e7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48216322"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66058353"
 ---
 # <a name="fuzzy-lookup-transformation-editor-advanced-tab"></a>[あいまい参照変換エディター] ([詳細設定] タブ)
   **[あいまい参照変換エディター]** ダイアログ ボックスの **[詳細設定]** タブを使用すると、あいまい参照のパラメーターを設定できます。  
@@ -39,7 +38,7 @@ ms.locfileid: "48216322"
   
 ## <a name="see-also"></a>参照  
  [Integration Services のエラーおよびメッセージのリファレンス](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [あいまい参照変換エディター&#40;参照テーブル タブ&#41;](../../2014/integration-services/fuzzy-lookup-transformation-editor-reference-table-tab.md)   
- [あいまい参照変換エディター&#40;列 タブ&#41;](../../2014/integration-services/fuzzy-lookup-transformation-editor-columns-tab.md)  
+ [あいまい参照変換エディター ([参照テーブル] タブ)](../../2014/integration-services/fuzzy-lookup-transformation-editor-reference-table-tab.md)   
+ [あいまい参照変換エディター ([列] タブ)](../../2014/integration-services/fuzzy-lookup-transformation-editor-columns-tab.md)  
   
   

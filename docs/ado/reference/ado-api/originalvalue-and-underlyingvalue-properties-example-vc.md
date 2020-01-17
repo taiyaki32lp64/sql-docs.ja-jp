@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: c5762ad2-f43b-453d-b44a-9c70210eb00f
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: e6b2f13f84f8776756253592f9b293a2a3764da9
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 6b4950634f473ca70c26b7b2b2c8159fb9a75fb0
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47623730"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67931825"
 ---
 # <a name="originalvalue-and-underlyingvalue-properties-example-vc"></a>OriginalValue および UnderlyingValue プロパティの例 (vc++)
 この例では、 [OriginalValue](../../../ado/reference/ado-api/originalvalue-property-ado.md)と[UnderlyingValue](../../../ado/reference/ado-api/underlyingvalue-property.md)にレコードのデータを基になる場合は、メッセージを表示することでプロパティが変更された、 [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md)バッチ更新します。  
@@ -196,31 +195,31 @@ void PrintComError(_com_error &e) {
 ```  
   
  **データが変更されました。**  
-**ID のタイトル: PS1372**  
+**タイトルの ID。PS1372**  
 **現在の値: self_help**   
 **元の値: 心理学**   
 **基になる値: 社会学**   
 **データが変更されました。**  
-**ID のタイトル: PS2091**  
+**タイトルの ID。PS2091**  
 **現在の値: self_help**   
 **元の値: 心理学**   
 **基になる値: 社会学**   
 **データが変更されました。**  
-**ID のタイトル: PS2106**  
+**タイトルの ID。PS2106**  
 **現在の値: self_help**   
 **元の値: 心理学**   
 **基になる値: 社会学**   
 **データが変更されました。**  
-**ID のタイトル: PS3333**  
+**タイトルの ID。PS3333**  
 **現在の値: self_help**   
 **元の値: 心理学**   
 **基になる値: 社会学**   
 **データが変更されました。**  
-**ID のタイトル: PS7777**  
+**タイトルの ID。PS7777**  
 **現在の値: self_help**   
 **元の値: 心理学**   
 **基になる値: 社会学**    
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [OriginalValue プロパティ (ADO)](../../../ado/reference/ado-api/originalvalue-property-ado.md)   
  [RecordSet オブジェクト (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)   
  [UnderlyingValue プロパティ](../../../ado/reference/ado-api/underlyingvalue-property.md)

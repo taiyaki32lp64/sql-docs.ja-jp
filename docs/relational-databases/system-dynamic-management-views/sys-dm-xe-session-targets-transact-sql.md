@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: 76fbc3e1-ad88-4a47-8bf1-471c3bee5ad8
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: f9964e16fa543c6e5d4e4670af846992314f0818
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 977a5e0428f59a45a823dd82e30b3f4c63520c0c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47649480"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68090209"
 ---
 # <a name="sysdmxesessiontargets-transact-sql"></a>sys.dm_xe_session_targets (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -55,10 +54,10 @@ ms.locfileid: "47649480"
 |変更内容|  
 |---------------------|  
 |target_data 列のデータ型を修正しました。|  
-|target_data 列の説明を、NULL 値が許可されることを示す記述に修正しました。|  
-|「リレーションシップの基数」の表を修正しました。|  
+|値が null 許容であることを示す target_data 列の説明を修正しました。|  
+|「リレーションシップの基数」表を修正しました。|  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [動的管理ビューおよび関数 &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)  
   
   

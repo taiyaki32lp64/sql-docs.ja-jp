@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 0f691b3d-a8fd-4459-ad21-2cfc8574a8c0
 author: julieMSFT
 ms.author: jrasnick
-manager: craigg
-ms.openlocfilehash: df34bbcfee578a36fc10e18a47ad4861aae4d8ff
-ms.sourcegitcommit: 0c1d552b3256e1bd995e3c49e0561589c52c21bf
+ms.openlocfilehash: f9f7f51b2d0ede3bb49bb152ab08cbb2a7eb2732
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/14/2018
-ms.locfileid: "53380273"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68114028"
 ---
 # <a name="sql-server-xtp-phantom-processor"></a>SQL Server XTP Phantom Processor
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

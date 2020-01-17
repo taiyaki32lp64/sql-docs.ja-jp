@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: e7e362d1-6b5f-4e8c-8862-2001102cf4f9
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: d6e481f35c9a853f457ed22b437b0360e2495506
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 94ccd1eb15972992e46d58aeaa9547d58f0b9bcb
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47746680"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67970724"
 ---
 # <a name="sqlserverresource-class"></a>SQLServerResource クラス
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

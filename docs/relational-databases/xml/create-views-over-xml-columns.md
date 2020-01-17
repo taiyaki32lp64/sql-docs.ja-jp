@@ -9,15 +9,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - views [XML in SQL Server]
 ms.assetid: eb5f0439-1f69-49c2-8759-e59bda1633b7
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: 5e78c2bc024395d90a33d38c1edeba79c3635448
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: MightyPen
+ms.author: genemi
+ms.openlocfilehash: 64b11563f05347e772d7979c3cb07c9a31f306e0
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47783336"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68112877"
 ---
 # <a name="create-views-over-xml-columns"></a>XML 列でのビューの作成
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

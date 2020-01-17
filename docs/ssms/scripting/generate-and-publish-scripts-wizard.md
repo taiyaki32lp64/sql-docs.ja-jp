@@ -40,22 +40,21 @@ helpviewer_keywords:
 - databases [SQL Server], generating scripts
 - Publish Database Wizard
 ms.assetid: 5ee520ba-ec7e-4199-a441-189e9e264b37
-author: stevestein
-ms.author: sstein
-manager: craigg
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 846769ff6330edf5576e4342a3c145829a18196a
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 0671a283261a6c0867e4349f8cd0f2baadf0cbd7
+ms.sourcegitcommit: a1ddeabe94cd9555f3afdc210aec5728f0315b14
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52530569"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70123000"
 ---
 # <a name="generate-and-publish-scripts-wizard"></a>スクリプトの生成とパブリッシュ ウィザード
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
   **スクリプトの生成とパブリッシュ ウィザード** を使用すると、 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] または [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)]のインスタンス間でデータベースを転送するスクリプトを作成できます。 データベース用のスクリプトは、ローカル ネットワーク上のデータベース エンジンのインスタンスまたは [!INCLUDE[ssSDS](../../includes/sssds-md.md)]から生成できます。 生成したスクリプトは、データベース エンジンの別のインスタンスまたは [!INCLUDE[ssSDS](../../includes/sssds-md.md)]で実行できます。 また、ウィザードを使用して、Database Publishing Services を使用して作成された Web サービスに、データベースの内容を直接パブリッシュすることもできます。 スクリプトの作成は、データベース全体または特定のオブジェクトに限定して行うことができます。  
 
-スクリプトの生成とパブリッシュ ウィザードの使用に関する詳細なチュートリアルについては、[チュートリアル: スクリプト生成ウィザード](https://docs.microsoft.com/sql/ssms/tutorials/scripting-ssms#script-database-using-generate-scripts-option)に関するページを参照してください。
+スクリプトの生成とパブリッシュ ウィザードの使用に関する詳細なチュートリアルについては、[チュートリアル:スクリプト生成ウィザード](https://docs.microsoft.com/sql/ssms/tutorials/scripting-ssms#script-databases)に関するページをご覧ください。
 
 
   
@@ -122,11 +121,11 @@ ms.locfileid: "52530569"
   
  **[オプション]** : スクリプトを指定した場所に保存する場合は、 **[スクリプトを指定した場所に保存]** をクリックします。 その後、データベース エンジンのインスタンスまたは [!INCLUDE[ssSDS](../../includes/sssds-md.md)]に対して、保存したスクリプトを実行できます。 リモートの Web ホスティング プロバイダーにデータベース オブジェクトをパブリッシュする場合は、 **[Web サービスにパブリッシュ]** をクリックします。  
   
- **[スクリプトを指定した場所に保存]**: 1 つまたは複数の Transact-SQL スクリプト ファイルを指定した場所に保存します。  
+ **[スクリプトを指定した場所に保存]** : 1 つまたは複数の Transact-SQL スクリプト ファイルを指定した場所に保存します。  
 
   ![保存](media/generate-and-publish-scripts-wizard/save.png)   
   
--   **[ファイルに保存]** : スクリプトを 1 つ以上の .sql ファイルに保存します。 参照ボタン (**…**) をクリックしてファイルの名前と場所を指定します。 同じ名前のファイルが既に存在する場合にそのファイルを置き換えるには、 **[既存のファイルの上書き]** チェック ボックスをオンにします。 スクリプトを生成する方法を指定するには、 **[単一ファイル]** または **[オブジェクトごとに 1 つのファイル]** をクリックします。 スクリプトに使用するテキストの種類を指定するには、 **[Unicode テキスト]** または **[ANSI テキスト]** をクリックします。  
+-   **[ファイルに保存]** : スクリプトを 1 つ以上の .sql ファイルに保存します。 参照ボタン ( **…** ) をクリックしてファイルの名前と場所を指定します。 同じ名前のファイルが既に存在する場合にそのファイルを置き換えるには、 **[既存のファイルの上書き]** チェック ボックスをオンにします。 スクリプトを生成する方法を指定するには、 **[単一ファイル]** または **[オブジェクトごとに 1 つのファイル]** をクリックします。 スクリプトに使用するテキストの種類を指定するには、 **[Unicode テキスト]** または **[ANSI テキスト]** をクリックします。  
   
 -   **[クリップボードに保存]** : Transact-SQL スクリプトをクリップボードに保存します。  
   
@@ -143,19 +142,19 @@ ms.locfileid: "52530569"
 -   **[対象になるデータベース]** : 選択したオブジェクトのパブリッシュ先のデータベースを選択します。 対象になるデータベースを選択する前に、プロバイダーを選択する必要があります。  
   
 ###  <a name="AdvScriptOpt"></a> [スクリプト作成の詳細オプション] ページ  
- このページでは、このウィザードでスクリプトを生成する方法を指定できます。 さまざまなオプションを使用できます。 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] [データベース エンジンの種類] **で指定した SQL Server または**のバージョンによってオプションがサポートされていない場合、それらのオプションはグレーで表示されます。  
+ このページでは、このウィザードでスクリプトを生成する方法を指定できます。 さまざまなオプションを使用できます。 オプションが [データベース エンジンの種類] **で指定したバージョンの SQL Server または** [!INCLUDE[ssSDS](../../includes/sssds-md.md)] によってサポートされていない場合、グレーで表示されます。  
 
 ![[詳細設定オプション]](media/generate-and-publish-scripts-wizard/advanced.png)
   
  **[オプション]** : 詳細オプションを指定するには、各オプションの右にある使用可能な設定の一覧から値を選択します。  
   
- **[全般]**: 次のオプションは、スクリプト全体に適用されます。  
+ **[全般]** : 次のオプションは、スクリプト全体に適用されます。  
   
 -   **[ANSI Padding]** : **ANSI PADDING ON** をスクリプトに含めます。 既定値は **True**です。  
   
 -   **[ファイルに追加]** : **True**の場合、 **[スクリプト作成オプションの設定]** ページで指定した既存のスクリプトの末尾に、このスクリプトを追加します。 **False**の場合、以前のスクリプトが新しいスクリプトで上書きされます。 既定値は **False**です。  
   
--   **[エラー発生時にスクリプトを続行]** : **True**の場合、エラーが発生した時点でスクリプトの生成を停止します。 **False**の場合は、スクリプトの生成を続行します。 既定値は **False**です。  
+-   **[エラー発生時にスクリプトを続行]** : **False** の場合、エラーが発生した時点でスクリプトの生成を停止します。 **True** の場合は、スクリプトの生成を続行します。 既定値は **False**です。  
   
 -   **[UDDT を基本型に変換]** : **True**の場合、ユーザー定義データ型 (UDDT) を、その UDDT の作成に使用された基本データ型に変換します。 スクリプトを実行するデータベースに UDDT が存在しない場合は、 **True** を使用します。 **False**の場合は、UDDT が使用されます。 既定値は **False**です。  
   
@@ -165,7 +164,7 @@ ms.locfileid: "52530569"
   
 -   **[If NOT EXISTS を含める]** : **True**の場合は、オブジェクトが既にデータベースに存在するかどうかを確認するステートメントが追加されます。オブジェクトが既に存在する場合は、新しいオブジェクトは作成されません。 既定値は **False**です。  
   
--   **[システム制約名を含める]**: **False** の場合、元のデータベースで自動的に名前を付けられた制約の既定値は、対象のデータベースで自動的に名前が変更されます。 **True**の場合、制約は元のデータベースと対象のデータベースで同じ名前になります。  
+-   **[システム制約名を含める]** : **False** の場合、元のデータベースで自動的に名前を付けられた制約の既定値は、対象のデータベースで自動的に名前が変更されます。 **True**の場合、制約は元のデータベースと対象のデータベースで同じ名前になります。  
   
 -   **[サポートされていないステートメントを含める]** : **False**の場合は、選択したサーバーのバージョンまたはエンジンの種類でサポートされていないオブジェクトのステートメントをスクリプトに含めません。 **True**の場合は、サポートされていないオブジェクトをスクリプトに含めます。 サポートされていないオブジェクトの各ステートメントには、選択した SQL Server バージョンまたはエンジンの種類に対してスクリプトを実行する前にステートメントを編集する必要があるというコメントが付加されます。 既定値は **False**です。  
   
@@ -173,11 +172,11 @@ ms.locfileid: "52530569"
   
 -   **[バインドのスクリプトを作成]** : 既定のオブジェクトとルール オブジェクトのバインドのスクリプトを生成します。 既定値は **False**です。 詳細については、「[CREATE DEFAULT &#40;Transact-SQL&#41;](../../t-sql/statements/create-default-transact-sql.md) 」と「[CREATE RULE &#40;Transact-SQL&#41;](../../t-sql/statements/create-rule-transact-sql.md)」を参照してください。  
   
--   **[スクリプトの照合順序]**: 照合順序に関する情報をスクリプトに追加します。 既定値は **False**です。 詳細については、「 [Collation and Unicode Support](../../relational-databases/collations/collation-and-unicode-support.md)」を参照してください。  
+-   **[スクリプトの照合順序]** : 照合順序に関する情報をスクリプトに追加します。 既定値は **False**です。 詳細については、「 [Collation and Unicode Support](../../relational-databases/collations/collation-and-unicode-support.md)」を参照してください。  
   
 -   **[既定のスクリプトを作成]** : テーブル列の既定値を設定するために使用される既定のオブジェクトを含めます。 既定値は **True**です。 詳細については、「[CREATE DEFAULT &#40;Transact-SQL&#41;](../../t-sql/statements/create-default-transact-sql.md)」を参照してください。  
   
--   **[DROP および CREATE のスクリプトを作成]**: **[CREATE のスクリプトを作成]** の場合、オブジェクトを作成する [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントを追加します。 **[DROP のスクリプトを作成]** の場合、オブジェクトを削除する [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントを追加します。 **[DROP および CREATE のスクリプトを作成]** の場合、スクリプトを作成するオブジェクトごとに [!INCLUDE[tsql](../../includes/tsql-md.md)] の DROP ステートメントとその後に CREATE ステートメントをスクリプトに追加します。 既定値は **[CREATE のスクリプトを作成]** です。  
+-   **[DROP および CREATE のスクリプトを作成]** : **[CREATE のスクリプトを作成]** の場合、オブジェクトを作成する [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントを追加します。 **[DROP のスクリプトを作成]** の場合、オブジェクトを削除する [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントを追加します。 **[DROP および CREATE のスクリプトを作成]** の場合、スクリプトを作成するオブジェクトごとに [!INCLUDE[tsql](../../includes/tsql-md.md)] の DROP ステートメントとその後に CREATE ステートメントをスクリプトに追加します。 既定値は **[CREATE のスクリプトを作成]** です。  
   
 -   **[拡張プロパティのスクリプトを作成]** : オブジェクトに拡張プロパティが含まれている場合、それらの拡張プロパティをスクリプトに追加します。 既定値は **True**です。  
   
@@ -191,15 +190,15 @@ ms.locfileid: "52530569"
   
 -   **[統計のスクリプトを作成]** : **[統計のスクリプトを作成]** に設定すると、オブジェクトの統計を再作成する **CREATE STATISTICS** ステートメントが追加されます。 **[統計とヒストグラムのスクリプトを作成します]** オプションを選択すると、ヒストグラムの情報も作成されます。 既定では、 **[統計のスクリプトを作成しません]** が設定されています。 詳細については、「[CREATE STATISTICS &#40;Transact-SQL&#41;](../../t-sql/statements/create-statistics-transact-sql.md)」を参照してください。  
   
--   **[USE DATABASE のスクリプトを作成]**: スクリプトに **USE DATABASE** ステートメントを追加します。 データベース オブジェクトが適切なデータベースに作成されるようにするには、 **USE DATABASE** ステートメントを含めます。 スクリプトが別のデータベースで使用される可能性がある場合は、 **False** を選択して **USE DATABASE** ステートメントを除外します。 既定値は **True**です。 詳細については、「[USE &#40;Transact-SQL&#41;](../../t-sql/language-elements/use-transact-sql.md)」を参照してください。  
+-   **[USE DATABASE のスクリプトを作成]** : スクリプトに **USE DATABASE** ステートメントを追加します。 データベース オブジェクトが適切なデータベースに作成されるようにするには、 **USE DATABASE** ステートメントを含めます。 スクリプトが別のデータベースで使用される可能性がある場合は、 **False** を選択して **USE DATABASE** ステートメントを除外します。 既定値は **True**です。 詳細については、「[USE &#40;Transact-SQL&#41;](../../t-sql/language-elements/use-transact-sql.md)」を参照してください。  
   
--   **[スクリプトを作成するデータの種類]**: スクリプトを作成する対象を **[データのみ]**、**[スキーマのみ]**、またはその両方から選択します。 既定値は **[スキーマのみ]** です。  
+-   **[スクリプトを作成するデータの種類]** - スクリプトを作成する対象を選択します: **[データのみ]** 、 **[スキーマのみ]** 、またはその両方。 既定値は **[スキーマのみ]** です。  
   
  **[テーブル/ビュー オプション]** : 次のオプションは、テーブルまたはビューのスクリプトのみに適用されます。  
   
 -   **[変更の追跡のスクリプトを作成]** : 変更の追跡が元のデータベースまたは元のデータベースのテーブルで有効になっている場合に、変更の追跡のスクリプトを作成します。 既定値は **False**です。 詳細については、「[変更の追跡について &#40;SQL Server&#41;](../../relational-databases/track-changes/about-change-tracking-sql-server.md)」を参照してください。  
   
--   **[CHECK 制約のスクリプトを作成]**: **CHECK** 制約をスクリプトに追加します。 既定値は **True**です。 **CHECK** 制約を追加すると、指定した条件を満たすデータのみがテーブルに入力されます。 詳しくは、「 [Unique Constraints and Check Constraints](../../relational-databases/tables/unique-constraints-and-check-constraints.md)」をご覧ください。  
+-   **[CHECK 制約のスクリプトを作成]** : **CHECK** 制約をスクリプトに追加します。 既定値は **True**です。 **CHECK** 制約を追加すると、指定した条件を満たすデータのみがテーブルに入力されます。 詳しくは、「 [Unique Constraints and Check Constraints](../../relational-databases/tables/unique-constraints-and-check-constraints.md)」をご覧ください。  
   
 -   **[データ圧縮オプションのスクリプトを作成]** : データ圧縮オプションが元のデータベースまたは元のデータベースのテーブルで構成されている場合に、データ圧縮オプションのスクリプトを作成します。 詳細については、「 [Data Compression](../../relational-databases/data-compression/data-compression.md)」を参照してください。 既定値は **False**です。  
   
@@ -233,13 +232,13 @@ ms.locfileid: "52530569"
  **[キャンセル]** : **[ホスティング プロバイダー]** ダイアログ ボックスで行ったすべての変更を取り消します。  
   
 ###  <a name="AdvPubOpts"></a> [パブリッシングの詳細オプション] ページ  
- このページでは、このウィザードでデータベースをパブリッシュする方法を指定できます。 さまざまなオプションを使用できます。 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] [データベース エンジンの種類] **で指定した SQL Server または**のバージョンによってオプションがサポートされていない場合、それらのオプションはグレーで表示されます。  
+ このページでは、このウィザードでデータベースをパブリッシュする方法を指定できます。 さまざまなオプションを使用できます。 オプションが [データベース エンジンの種類] **で指定したバージョンの SQL Server または** [!INCLUDE[ssSDS](../../includes/sssds-md.md)] によってサポートされていない場合、グレーで表示されます。  
 
   ![パブリッシングの詳細](media/generate-and-publish-scripts-wizard/advancedpublish.png)
   
  **[オプション]** : 詳細オプションを指定するには、各オプションの右にある使用可能な設定の一覧から値を選択します。  
   
- **[全般]**: 次のオプションは、パブリケーション全体に適用されます。  
+ **[全般]** : 次のオプションは、パブリケーション全体に適用されます。  
   
 1.  **[UDDT を基本型に変換]** : **True**の場合、ユーザー定義データ型 (UDDT) を、その UDDT の作成に使用された基本データ型に変換します。 スクリプトを実行するデータベースに UDDT が存在しない場合は、 **True** を使用します。 **False**の場合は、UDDT が使用されます。 既定値は **False**です。  
   
@@ -263,9 +262,9 @@ ms.locfileid: "52530569"
   
 11. **[バインドのスクリプトを作成]** - 既定のオブジェクトとルール オブジェクトのバインドを、パブリッシング用のプロバイダーに送信するスクリプトに追加します。 既定値は **True**です。 詳細については、「[CREATE DEFAULT &#40;Transact-SQL&#41;](../../t-sql/statements/create-default-transact-sql.md) 」と「[CREATE RULE &#40;Transact-SQL&#41;](../../t-sql/statements/create-rule-transact-sql.md)」を参照してください。  
   
-12. **[パブリッシュするデータの型]** - スクリプトを作成する対象を **[データのみ]**、**[スキーマのみ]**、またはその両方から選択します。 既定値は **[スキーマとデータ]** です。  
+12. **[パブリッシュするデータの型]** - スクリプトを作成する対象を選択します: **[データのみ]** 、 **[スキーマのみ]** 、またはその両方。 既定値は **[スキーマとデータ]** です。  
   
- **[パブリッシング オプション]**: Web ホスト プロバイダーをパブリッシュするときにトランザクションを使用するかどうかを指定します。  
+ **[パブリッシング オプション]** : Web ホスト プロバイダーをパブリッシュするときにトランザクションを使用するかどうかを指定します。  
   
 1.  **[トランザクションを使用してパブリッシュ]** - 選択したオブジェクトをリモートの Web ホスティング プロバイダーにパブリッシュします。 対象データベースでパブリッシュが完了できない場合、トランザクションはロールバックされます。 既定値は **True**です。  
   
@@ -348,8 +347,8 @@ ms.locfileid: "52530569"
 
 1. **[ツール]** をクリックし、次に **[オプション]** をクリックします。  
 2. **[全般スクリプト作成オプション]** で、次のように設定します。  
-    1. データベース エンジンの種類に対応したスクリプト: **Microsoft Azure SQL Database**。  
-    2. データベース エンジン エディションのスクリプト: **Microsoft Azure SQL Data Warehouse Edition**。  
+    1. データベース エンジンの種類に対応したスクリプト:**Microsoft Azure SQL Database**。  
+    2. データベース エンジン エディションのスクリプト:**Microsoft Azure SQL Data Warehouse Edition**。  
 3. **[OK]** をクリックします。
 
 ### <a name="how-to-generate-scripts-for-sql-data-warehouse-when-it-is-not-the-default-scripting-option"></a>SQL Data Warehouse が既定のスクリプト作成オプションになっていないときに SQL Data Warehouse のスクリプトを生成する方法  
@@ -360,8 +359,8 @@ ms.locfileid: "52530569"
 2. **[スクリプトの生成...]** を選択します。  
 3. スクリプトを作成するオブジェクトを選択します。  
 4. **[スクリプト作成オプション]** で、 **[詳細設定]** をクリックします。 **[全般]** で、次のように設定します。  
-    1. データベース エンジンの種類に対応したスクリプト: **Microsoft Azure SQL Database**。  
-    2. データベース エンジン エディションのスクリプト: **Microsoft Azure SQL Data Warehouse Edition**。  
+    1. データベース エンジンの種類に対応したスクリプト:**Microsoft Azure SQL Database**。  
+    2. データベース エンジン エディションのスクリプト:**Microsoft Azure SQL Data Warehouse Edition**。  
 5. **[スクリプトの保存またはパブリッシュ]** をクリックし、次に **[完了]** をクリックします。  
 
 手順 4 で設定したオプションは保存されません。 これらのオプションを保存する場合は、「 **既定のスクリプト作成オプションを SQL Data Warehouse に設定する方法**」の手順に従ってください。  

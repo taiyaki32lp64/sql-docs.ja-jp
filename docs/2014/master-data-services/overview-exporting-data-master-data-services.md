@@ -1,5 +1,5 @@
 ---
-title: エクスポートのデータ (Master Data Services) |Microsoft Docs
+title: データのエクスポート (Master Data Services) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,15 +11,15 @@ helpviewer_keywords:
 - subscription views [Master Data Services]
 - subscription views [Master Data Services], about subscription views
 ms.assetid: 8b74409a-ea70-45f8-84c7-da6905e4901a
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 76a9133a013087d96f9acc102232b2340212d19f
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: f92a74caa74c5cf15e917cd6c15aef9506a60180
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52758934"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65482840"
 ---
 # <a name="exporting-data-master-data-services"></a>データのエクスポート (Master Data Services)
   サブスクリプション ビューを作成して、 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] データをサブスクライブ システムにエクスポートできます。 これにより、 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] データベースにパブリッシュされたデータを任意のサブスクライブ システムで表示できます。 ビューの詳細については、「 [ビュー](../relational-databases/views/views.md)」を参照してください。  

@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: d7b06d72-f792-4328-93a2-5006b9e2c581
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: c940fbdc48d900da77d03dfb3b806080cff0c04e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 71396a071a42d7dd40a6537a2834541aab2b6bad
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47726600"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67921092"
 ---
 # <a name="ado-dynamic-properties"></a>ADO の動的プロパティ
 動的プロパティに追加できる、[プロパティ](../../../ado/reference/ado-api/properties-collection-ado.md)のコレクション、[接続](../../../ado/reference/ado-api/connection-object-ado.md)、[コマンド](../../../ado/reference/ado-api/command-object-ado.md)、または[Recordset](../../../ado/reference/ado-api/recordset-object-ado.md)オブジェクト。 これらのプロパティのソースは、いずれかのデータ プロバイダーをなどが、 [OLE DB Provider for SQL Server](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-sql-server.md)、またはサービス プロバイダーの場合など、 [OLE DB 用の Microsoft カーソル サービス](../../../ado/guide/appendixes/microsoft-cursor-service-for-ole-db-ado-service-component.md)します。 適切なデータ プロバイダーまたは特定の動的プロパティの詳細についてはサービス プロバイダーのマニュアルを参照してください。  
@@ -37,11 +36,11 @@ ms.locfileid: "47726600"
 |[Unique Table、Unique Schema、Unique Catalog](../../../ado/reference/ado-api/unique-table-unique-schema-unique-catalog-properties-dynamic-ado.md)|**一意テーブル**更新、挿入、および削除を許可するとなるベース テーブルの名前を指定します。<br /><br /> **一意のスキーマ**スキーマ、またはテーブルの所有者の名前を指定します。<br /><br /> **Unique Catalog**カタログ、またはテーブルを含むデータベースの名前を指定します。|  
 |[更新プログラムの再同期](../../../ado/reference/ado-api/update-resync-property-dynamic-ado.md)|指定するかどうか、 **UpdateBatch**メソッドの後に、暗黙的な**再同期**メソッドの操作であれば、その操作のスコープ。|  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [ADO の API リファレンス](../../../ado/reference/ado-api/ado-api-reference.md)   
  [ADO のコレクション](../../../ado/reference/ado-api/ado-collections.md)   
  [ADO の列挙定数](../../../ado/reference/ado-api/ado-enumerated-constants.md)   
- [付録 b: ADO エラー](../../../ado/guide/appendixes/appendix-b-ado-errors.md)   
+ [付録 B: ADO エラー](../../../ado/guide/appendixes/appendix-b-ado-errors.md)   
  [ADO イベント](../../../ado/reference/ado-api/ado-events.md)   
  [ADO メソッド](../../../ado/reference/ado-api/ado-methods.md)   
  [ADO オブジェクト モデル](../../../ado/reference/ado-api/ado-object-model.md)   

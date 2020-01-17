@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: 1a3d1042-4f30-4526-a0c7-853c242496db
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 47040adf2ce7be17d0540755f7fa972d7a76266f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: c91f3166b493ac1e2fada3e759cb107e34c7ca81
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47772562"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67945913"
 ---
 # <a name="willmove-and-movecomplete-events-ado"></a>WillMove および MoveComplete イベント (ADO)
 **WillMove**保留中の操作の現在の位置を変更する前に、イベントが呼び出される、 [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md)します。 **MoveComplete**内の現在位置の後にイベントが呼び出される、 **Recordset**変更します。  
@@ -60,11 +59,11 @@ MoveComplete adReason, pError, adStatus, pRecordset
  A [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md)オブジェクト。 **Recordset**のこのイベントが発生しました。  
   
 ## <a name="remarks"></a>コメント  
- A **WillMove**または**MoveComplete**イベントは、以下の理由により発生する可能性があります**Recordset**操作:[オープン](../../../ado/reference/ado-api/open-method-ado-recordset.md)、 [の移動](../../../ado/reference/ado-api/move-method-ado.md)、 [MoveFirst](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)、 [MoveLast](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)、 [MoveNext](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)、 [MovePrevious](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)、 [AddNew](../../../ado/reference/ado-api/addnew-method-ado.md)、および[Requery](../../../ado/reference/ado-api/requery-method.md)します。 次のプロパティによりこれらのイベントが発生する:[フィルター](../../../ado/reference/ado-api/filter-property.md)、[インデックス](../../../ado/reference/ado-api/index-property.md)、[ブックマーク](../../../ado/reference/ado-api/bookmark-property-ado.md)、 [AbsolutePage](../../../ado/reference/ado-api/absolutepage-property-ado.md)、および[AbsolutePosition](../../../ado/reference/ado-api/absoluteposition-property-ado.md)します。 これらのイベントは、子の場合にも発生**レコード セット**が**レコード セット**接続されているイベントとその親**レコード セット**が移動します。  
+ A **WillMove**または**MoveComplete**イベントは、以下の理由により発生する可能性があります**Recordset**操作。[開いている](../../../ado/reference/ado-api/open-method-ado-recordset.md)、[移動](../../../ado/reference/ado-api/move-method-ado.md)、 [MoveFirst](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)、 [MoveLast](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)、 [MoveNext](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)、 [MovePrevious](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)、[AddNew](../../../ado/reference/ado-api/addnew-method-ado.md)、および[Requery](../../../ado/reference/ado-api/requery-method.md)します。 これらのイベントは、次のプロパティのため発生します。[フィルター](../../../ado/reference/ado-api/filter-property.md)、[インデックス](../../../ado/reference/ado-api/index-property.md)、[ブックマーク](../../../ado/reference/ado-api/bookmark-property-ado.md)、 [AbsolutePage](../../../ado/reference/ado-api/absolutepage-property-ado.md)、および[AbsolutePosition](../../../ado/reference/ado-api/absoluteposition-property-ado.md)します。 これらのイベントは、子の場合にも発生**レコード セット**が**レコード セット**接続されているイベントとその親**レコード セット**が移動します。  
   
  設定する必要があります、 *adStatus*パラメーターを**adStatusUnwantedEvent**の可能性のある各*adReason*任意のイベントのイベント通知を完全に停止するには値を含まれています、 *adReason*パラメーター。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [ADO イベント モデルの例 (vc++)](../../../ado/reference/ado-api/ado-events-model-example-vc.md)   
  [ADO イベント ハンドラーの概要](../../../ado/guide/data/ado-event-handler-summary.md)   
  [Recordset オブジェクト (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)

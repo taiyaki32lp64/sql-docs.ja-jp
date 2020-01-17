@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: e8982e05-4984-4406-9760-285e8c028ddf
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 0f0a1b71fe0bb25cfbe41ea285ca883b2df057a8
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: cb13d9b50c78ff3d067d97b2d5dd1b763e024608
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47672430"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67997953"
 ---
 # <a name="ole-automation-procedures-server-configuration-option"></a>Ole Automation Procedures サーバー構成オプション
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -61,7 +60,7 @@ GO
 ## <a name="see-also"></a>参照  
  [sp_configure &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md)   
  [RECONFIGURE &#40;Transact-SQL&#41;](../../t-sql/language-elements/reconfigure-transact-sql.md)   
- [セキュリティ構成](../../relational-databases/security/surface-area-configuration.md)   
+ [Surface Area Configuration](../../relational-databases/security/surface-area-configuration.md)   
  [サーバー構成オプション &#40;SQL Server&#41;](../../database-engine/configure-windows/server-configuration-options-sql-server.md)  
   
   

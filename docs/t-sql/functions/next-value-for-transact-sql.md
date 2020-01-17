@@ -20,15 +20,14 @@ helpviewer_keywords:
 - NEXT VALUE FOR function
 - sequence number object, NEXT VALUE FOR function
 ms.assetid: 92632ed5-9f32-48eb-be28-a5e477ef9076
-author: MashaMSFT
-ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: efc8631d234fae86010d7f94028fc962947561ac
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+author: MikeRayMSFT
+ms.author: mikeray
+ms.openlocfilehash: e37586d17a7b99d3dd191f63ed858805ef497a03
+ms.sourcegitcommit: c70a0e2c053c2583311fcfede6ab5f25df364de0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52525732"
+ms.lasthandoff: 07/31/2019
+ms.locfileid: "68670536"
 ---
 # <a name="next-value-for-transact-sql"></a>NEXT VALUE FOR (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
@@ -58,7 +57,7 @@ NEXT VALUE FOR [ database_name . ] [ schema_name . ]  sequence_name
  番号を生成するシーケンス オブジェクトの名前を指定します。  
   
  *over_order_by_clause*  
- シーケンス値がパーティション内の行に割り当てられる順序を決定します。 詳細については、を参照してください。 [経由句 (&) #40 です。TRANSACT-SQL と #41;](../../t-sql/queries/select-over-clause-transact-sql.md).  
+ シーケンス値がパーティション内の行に割り当てられる順序を決定します。 詳細については、「[OVER 句 &#40;Transact-SQL&#41;](../../t-sql/queries/select-over-clause-transact-sql.md)」を参照してください。  
   
 ## <a name="return-types"></a>戻り値の型  
  シーケンスの型を使用して数値を返します。  
@@ -68,7 +67,7 @@ NEXT VALUE FOR [ database_name . ] [ schema_name . ]  sequence_name
   
  ときに、 **NEXT VALUE FOR** 関数を使用するクエリや既定の制約で同じシーケンス オブジェクトが 2 回以上使用するかどうか、同じシーケンス オブジェクトは、または両方で使用される、値を提供するステートメントでと、結果セット内の行で同じシーケンスを参照するすべての列に対して実行されている既定の制約で同じ値が返されます。  
   
-  **NEXT VALUE FOR** 関数は、非決定的であり、生成されるシーケンス値の数が定義されているコンテキストでのみ使用します。 特定のステートメントにおいて、参照されている各シーケンス オブジェクトに使用される値の数の定義を以下に示します。  
+ **NEXT VALUE FOR** 関数は、非決定的であり、生成されるシーケンス値の数が定義されているコンテキストでのみ使用します。 特定のステートメントにおいて、参照されている各シーケンス オブジェクトに使用される値の数の定義を以下に示します。  
   
 -   **SELECT** -参照されているシーケンス オブジェクトごとに、新しい値が 1 回生成、ステートメントの結果内の行ごとです。  
   
@@ -79,7 +78,7 @@ NEXT VALUE FOR [ database_name . ] [ schema_name . ]  sequence_name
 -   手続き型ステートメント (**DECLARE**、**SET** など) - 参照されている各シーケンス オブジェクトに対して、ステートメントごとに新しい値が生成されます。  
   
 ## <a name="limitations-and-restrictions"></a>制限事項と制約事項  
-  **NEXT VALUE FOR** 関数は、次のような状況では使用できません。  
+ **NEXT VALUE FOR** 関数は、次のような状況では使用できません。  
   
 -   データベースが読み取り専用モードの場合。  
   
@@ -95,23 +94,23 @@ NEXT VALUE FOR [ database_name . ] [ schema_name . ]  sequence_name
   
 -   **ORDER BY** 句を使用するステートメン内で使用する場合。ただし、**NEXT VALUE FOR** ...**OVER** (**ORDER BY** ...) が使用されている場合を除く。  
   
--   次の句で: **FETCH**, **OVER**, **OUTPUT**, **ON**, **PIVOT**, **UNPIVOT**, **GROUP BY**, **HAVING**, **COMPUTE**, **COMPUTE BY**, or **FOR XML**です。  
+-   次の各句で使用する場合。**FETCH**、**OVER**、**OUTPUT**、**ON**、**PIVOT**、**UNPIVOT**、**GROUP BY**、**HAVING**、**COMPUTE**、**COMPUTE BY**、**FOR XML**。  
   
 -   使用して条件付きの式で **CASE**, **CHOOSE**, **COALESCE**, **IIF**, **ISNULL**, or **NULLIF**です。  
   
--    **VALUES** 句がない場合の一部では、 **INSERT** ステートメントです。  
+-   **VALUES** 句がない場合の一部では、 **INSERT** ステートメントです。  
   
 -   CHECK 制約の定義で使用する場合。  
   
--   ルールまたは既存のオブジェクトの定義で使用する場合  (既定の制約では使用できます)。  
+-   ルールまたは既存のオブジェクトの定義で使用する場合 (既定の制約では使用できます)。  
   
 -   既定では、ユーザー定義テーブル型で使用します。  
   
 -   ステートメントを使用して、 **TOP**, 、**OFFSET**, 、または、 **ROWCOUNT** オプションを設定します。  
   
--    **WHERE** 、ステートメントの句。  
+-   **WHERE** 、ステートメントの句。  
   
--    **MERGE** ステートメントです。 (する場合を除く、 **NEXT VALUE FOR** 関数は、対象のテーブルの既定の制約で使用してで既定値が使用される、 **作成** のステートメント、 **マージ** ステートメントです)。  
+-   **MERGE** ステートメントです。 (する場合を除く、 **NEXT VALUE FOR** 関数は、対象のテーブルの既定の制約で使用してで既定値が使用される、 **CREATE** のステートメント、 **MERGE** ステートメントです)。  
   
 ## <a name="using-a-sequence-object-in-a-default-constraint"></a>既定の制約でのシーケンス オブジェクトの使用  
  使用する場合、 **NEXT VALUE FOR** 関数既定の制約では、次の規則が適用されます。  
@@ -122,26 +121,26 @@ NEXT VALUE FOR [ database_name . ] [ schema_name . ]  sequence_name
   
 -   既定の制約を追加するユーザーには、シーケンス オブジェクトに対する REFERENCES 権限が必要です。  
   
--   既定の制約を削除する前に、既定の制約から参照されているシーケンス オブジェクトを削除できません。  
+-   既定の制約を削除する前に、既定の制約から参照されているシーケンス オブジェクトを削除することはできません。  
   
 -   複数の既定の制約で同じシーケンス オブジェクトを使用する場合、または値を提供するステートメントと実行中の既定の制約の両方で同じシーケンス オブジェクトを使用する場合、行内のすべての列に対して同じシーケンス番号が返されます。  
   
--   参照、 **NEXT VALUE FOR** 既定の制約で関数が指定することはできません、 **経由** 句。  
+-   参照、 **NEXT VALUE FOR** 既定の制約で関数が指定することはできません、 **OVER** 句。  
   
 -   既定の制約で参照されているシーケンス オブジェクトは変更できます。  
   
 -   `INSERT ... SELECT` ステートメントまたは `INSERT ... EXEC` ステートメントで、挿入されるデータを **ORDER BY** 句を使用してクエリから取得する場合、**NEXT VALUE FOR** 関数によって返される値は、**ORDER BY** 句で指定された順序で生成されます。  
   
 ## <a name="using-a-sequence-object-with-an-over-order-by-clause"></a>OVER ORDER BY 句でのシーケンス オブジェクトの使用  
-  **NEXT VALUE FOR** 関数は、適用することで並べ替えられたシーケンス値の生成をサポートしています、 **経由** 句を **NEXT VALUE FOR** 呼び出します。 使用して、**OVER** 句では、ユーザーはことが保証の順序で返される値が生成されること、 **OVER** 句の **順序 B**Y のサブ句。 次の追加のルールの適用を使用する場合、 **NEXT VALUE FOR** で動作、 **経由**で 句。  
+ **NEXT VALUE FOR** 関数は、適用することで並べ替えられたシーケンス値の生成をサポートしています、 **OVER** 句を **NEXT VALUE FOR** 呼び出します。 **OVER** 句を使用することにより、返される値が **OVER** 句の **ORDER BY** サブ句の順序で生成されることが保証されます。 次の追加のルールの適用を使用する場合、 **NEXT VALUE FOR** で動作、 **OVER**で 句。  
   
--   複数回呼び出す、 **NEXT VALUE FOR** 関数の 1 つのステートメントで同じシーケンス ジェネレーター必要がありますすべてを使用してください、同じ **経由** 句の定義。  
+-   複数回呼び出す、 **NEXT VALUE FOR** 関数の 1 つのステートメントで同じシーケンス ジェネレーター必要がありますすべてを使用してください、同じ **OVER** 句の定義。  
   
--   複数回呼び出す、 **NEXT VALUE FOR** 関数の 1 つのステートメントで異なるシーケンス ジェネレーターの参照を別に持つことができる **経由** 句の定義。  
+-   複数回呼び出す、 **NEXT VALUE FOR** 関数の 1 つのステートメントで異なるシーケンス ジェネレーターの参照を別に持つことができる **OVER** 句の定義。  
   
--    **経由** 句に適用される、 **NEXT VALUE FOR** 関数がサポートされていません、 **PARTITION BY** サブ句。  
+-   **OVER** 句に適用される、 **NEXT VALUE FOR** 関数がサポートされていません、 **PARTITION BY** サブ句。  
   
--   呼び出しはすべての場合、 **NEXT VALUE FOR** で機能、 を**選択** ステートメントを指定、 **経由**で 句、 **ORDER BY** 句で使用できる、 を**選択** ステートメントです。  
+-   呼び出しはすべての場合、 **NEXT VALUE FOR** で機能、 を**SELECT** ステートメントを指定、 **OVER**で 句、 **ORDER BY** 句で使用できる、 を**SELECT** ステートメントです。  
   
 -   **SELECT** ステートメントまたは `INSERT ... SELECT ...` ステートメントでは、**NEXT VALUE FOR** 関数と共に **OVER** 句を使用できます。 **UPDATE** ステートメントまたは **MERGE** ステートメントでは、**NEXT VALUE FOR** 関数で **OVER** 句は使用できません。  
   
@@ -156,9 +155,9 @@ NEXT VALUE FOR [ database_name . ] [ schema_name . ]  sequence_name
  必要があります **更新** シーケンス オブジェクトまたはシーケンスのスキーマに対するアクセスを許可します。 権限を付与する例については、後の例 F を参照してください。  
   
 ### <a name="ownership-chaining"></a>所有権の継承  
- シーケンス オブジェクトでは、組み合わせ所有権をサポートしています。 シーケンス オブジェクトの所有者が、(既定の制約としてシーケンス オブジェクトを所有する) 呼び出し元のストアド プロシージャ、トリガー、またはテーブルと同じ場合、シーケンス オブジェクトに対する権限チェックは必要ありません。 シーケンス オブジェクトの所有者が、呼び出し元のストアド プロシージャ、トリガー、またはテーブルと異なる場合、シーケンス オブジェクトに対する権限チェックが必要です。  
+ シーケンス オブジェクトでは、所有権の継承をサポートしています。 シーケンス オブジェクトの所有者が、(既定の制約としてシーケンス オブジェクトを所有する) 呼び出し元のストアド プロシージャ、トリガー、またはテーブルと同じ場合、シーケンス オブジェクトに対する権限チェックは必要ありません。 シーケンス オブジェクトの所有者が、呼び出し元のストアド プロシージャ、トリガー、またはテーブルと異なる場合、シーケンス オブジェクトに対する権限チェックが必要です。  
   
- ときに、 **NEXT VALUE FOR** テーブル内の既定値として関数を使用すると、ユーザーには、両方が必要とする **挿入** 、テーブルに対する権限と **更新** を既定値を使用してデータを挿入する、シーケンスのオブジェクトに対するアクセスを許可します。  
+ ときに、 **NEXT VALUE FOR** テーブル内の既定値として関数を使用すると、ユーザーには、両方が必要とする **INSERT** 、テーブルに対する権限と **UPDATE** を既定値を使用してデータを挿入する、シーケンスのオブジェクトに対するアクセスを許可します。  
   
 -   既定の制約の所有者がシーケンス オブジェクトと同じ場合、既定の制約を呼び出す際に、シーケンス オブジェクトに対する権限は必要ありません。  
   

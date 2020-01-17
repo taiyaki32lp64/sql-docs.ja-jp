@@ -14,15 +14,15 @@ helpviewer_keywords:
 - string comparisons
 - data flow [Integration Services], data options
 ms.assetid: 8a9d6186-eb52-48e3-997e-021f24d458a3
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 9f7fe3638861d45e589f72871c10d6046436cb96
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 225b6010e5d5a6c45a84d7e22272c4e5242906fd
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52781314"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62827898"
 ---
 # <a name="data-in-data-flows"></a>データ フロー内のデータ
   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] には、データ フローで使用するデータ型のセットが用意されています。  

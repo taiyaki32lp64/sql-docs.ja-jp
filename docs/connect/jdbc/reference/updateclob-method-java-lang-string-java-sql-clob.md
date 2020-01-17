@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: 5da64915-1c13-44fd-90c0-52168889bae0
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 78a894683ec3d85012e96ac8e8378b17a9baceac
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 892506e004bbf5bf6bd711d2fdc32aabf268f764
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47735060"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67999276"
 ---
 # <a name="updateclob-method-javalangstring-javasqlclob"></a>updateClob (java.lang.String, java.sql.Clob) メソッド
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -49,7 +48,7 @@ public void updateClob(java.lang.String columnName,
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- この updateClob メソッドは、java.sql.ResultSet インターフェイスの updateClob メソッドによって指定されます。  
+ この updateClob メソッドは、java.sql.ResultSet インターフェイスの updateClob メソッドで規定されています。  
   
 ## <a name="see-also"></a>参照  
  [updateClob メソッド &#40;SQLServerResultSet&#41;](../../../connect/jdbc/reference/updateclob-method-sqlserverresultset.md)   

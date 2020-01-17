@@ -17,17 +17,16 @@ helpviewer_keywords:
 - IS_SRVROLEMEMBER function
 - members [SQL Server], verifying
 ms.assetid: 3241a44a-6958-415b-b8b7-2a1207c36ab3
-author: MashaMSFT
-ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 43087fe361e611d3cca013bdbe9aa222a5fc99d0
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: VanMSFT
+ms.author: vanto
+ms.openlocfilehash: 478641bed0931fc78db3c7df166b860374034f90
+ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47748080"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "73983260"
 ---
-# <a name="issrvrolemember-transact-sql"></a>IS_SRVROLEMEMBER (Transact-SQL)
+# <a name="is_srvrolemember-transact-sql"></a>IS_SRVROLEMEMBER (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ログインが、指定したサーバー ロールのメンバーであるかどうかを示します。  
@@ -52,7 +51,7 @@ IS_SRVROLEMEMBER ( 'role' [ , 'login' ] )
 |sysadmin|serveradmin|  
 |dbcreator|setupadmin|  
 |bulkadmin|securityadmin|  
-|diskadmin|**適用対象**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]<br /><br /> public|  
+|diskadmin|**適用対象**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 以降。<br /><br /> public|  
 |processadmin||  
   
  **'** *login* **'**  
@@ -68,7 +67,7 @@ IS_SRVROLEMEMBER ( 'role' [ , 'login' ] )
 |NULL|*role* または *login* が有効でないか、ロールのメンバーシップを表示する権限がありません。|  
   
 ## <a name="remarks"></a>Remarks  
- 現在のユーザーがサーバー ロールの権限を必要とするアクションを実行できるかどうかを判断する UseIS_SRVROLEMEMBER です。  
+ 現在のユーザーがサーバー ロールの権限を必要とするアクションを実行できるかどうかを判断するには IS_SRVROLEMEMBER を使用します。  
   
  Contoso\Mary5 などの Windows ログインを *login* に指定した場合、**IS_SRVROLEMEMBER** は、そのログインに [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] への直接アクセスが許可または拒否されている場合を除き、**NULL** を返します。  
   
@@ -87,7 +86,7 @@ IS_SRVROLEMEMBER ( 'role' [ , 'login' ] )
  この関数で評価されるのはロールのメンバーシップであって、基になる権限ではありません。 たとえば、**sysadmin** 固定サーバー ロールには **CONTROL SERVER** 権限があります。 **CONTROL SERVER** 権限を持っていても、**sysadmin** ロールに所属していなければ、そのユーザーはロールのメンバーではないと、この関数によって正確に報告されます。そのロールと同じ権限をユーザーが持っているとしても結果は変わりません。  
   
 ## <a name="related-functions"></a>関連する関数  
- 現在のユーザーが指定された Windows グループのメンバーであるかどうかを判断するまたは  を使用して[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]データベース ロールを [IS_MEMBER (& a) #40 です。TRANSACT-SQL と #41;](../../t-sql/functions/is-member-transact-sql.md). [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ログインがデータベース ロールのメンバーであるかどうかを判断するには、[IS_ROLEMEMBER &#40;Transact-SQL&#41;](../../t-sql/functions/is-rolemember-transact-sql.md) を使用します。  
+ 現在のユーザーが指定された Windows グループまたは [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データベース ロールのメンバーであるかどうかを判断するには、[IS_MEMBER &#40;Transact-SQL&#41;](../../t-sql/functions/is-member-transact-sql.md) を使用します。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ログインがデータベース ロールのメンバーであるかどうかを判断するには、[IS_ROLEMEMBER &#40;Transact-SQL&#41;](../../t-sql/functions/is-rolemember-transact-sql.md) を使用します。  
   
 ## <a name="permissions"></a>アクセス許可  
  サーバー ロールに対する VIEW DEFINITION 権限が必要です。  

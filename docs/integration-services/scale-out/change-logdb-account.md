@@ -5,21 +5,24 @@ ms.custom: performance
 ms.date: 12/13/2017
 ms.prod: sql
 ms.prod_service: integration-services
-ms.reviewer: douglasl
+ms.reviewer: maghan
 ms.technology: integration-services
 ms.topic: conceptual
 author: haoqian
 ms.author: haoqian
-manager: craigg
-ms.openlocfilehash: 4bbb7d1fff70060ec0d3cf5878710177a231896e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 92cf3e13f1e386a77ba4621b817567af95b42884
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47727860"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67896982"
 ---
 # <a name="change-the-account-for-scale-out-logging"></a>Scale Out ログのアカウントの変更
-Scale Out で SSIS パッケージを実行すると、イベント メッセージが、**##MS_SSISLogDBWorkerAgentLogin##** という名前の自動作成ユーザー アカウントで SSISDB データベースにログ記録されます。 このユーザーのログインでは、SQL Server 認証が使用されます。
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
+Scale Out で SSIS パッケージを実行すると、イベント メッセージが、 **##MS_SSISLogDBWorkerAgentLogin##** という名前の自動作成ユーザー アカウントで SSISDB データベースにログ記録されます。 このユーザーのログインでは、SQL Server 認証が使用されます。
 
 Scale Out ログ記録で使用されるアカウントを変更する場合は、以下の操作を行います。
 

@@ -15,18 +15,17 @@ helpviewer_keywords:
 ms.assetid: 45d54b6e-db2c-4553-9fd0-528147d6da2f
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 34583128e3da1bec00003fe194d3387783815275
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 0a8c4ddb27bbc6831095062af5491fb501b6d5b7
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47788780"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67933044"
 ---
 # <a name="editmodeenum"></a>EditModeEnum
 レコードの編集状態を指定します。  
   
-|定数|値|説明|  
+|定数|Value|説明|  
 |--------------|-----------|-----------------|  
 |**adEditNone**|0|進行中の編集操作がないことを示します。|  
 |**adEditInProgress**|1|現在のレコード内のデータが変更されたが、保存されないことを示します。|  

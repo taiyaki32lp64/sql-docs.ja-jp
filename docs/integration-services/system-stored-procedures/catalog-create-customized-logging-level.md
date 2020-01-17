@@ -8,17 +8,20 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: language-reference
 ms.assetid: 20b3ba0a-126f-49bf-b70f-61b2a0fcb750
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: 504c4b5f8ecd8a98379d726dbd53117d39c4db19
-ms.sourcegitcommit: 4c053cd2f15968492a3d9e82f7570dc2781da325
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 87acb8f9b15fa2b22f4a7f1dbe01669eff08b92e
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/15/2018
-ms.locfileid: "49336201"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71281016"
 ---
-# <a name="catalogcreatecustomizedlogginglevel"></a>catalog.create_customized_logging_level
+# <a name="catalogcreate_customized_logging_level"></a>catalog.create_customized_logging_level 
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
   新しいカスタマイズされたログ記録レベルを作成します。 カスタマイズされたログ記録レベルの詳細については、「[Integration Services &#40;SSIS&#41; のログ記録](../../integration-services/performance/integration-services-ssis-logging.md)」を参照してください。  
@@ -47,7 +50,7 @@ catalog.create_customized_logging_level [ @level_name = ] level_name
  [ @profile_value = ] *profile_value*  
  新しいする統計情報は、ログに記録するログ記録レベルをカスタマイズできます。  
   
- 統計情報の有効な値には、次の項目が含まれます。 これらの値は、**[カスタマイズされたログ記録レベルの管理]** ダイアログ ボックスの **[統計]** タブの値に対応しています。  
+ 統計情報の有効な値には、次の項目が含まれます。 これらの値は、 **[カスタマイズされたログ記録レベルの管理]** ダイアログ ボックスの **[統計]** タブの値に対応しています。  
   
 -   実行 = 0  
   
@@ -60,16 +63,16 @@ catalog.create_customized_logging_level [ @level_name = ] level_name
  [ @events_value = ] *events_value*  
  新しいイベントは、ログに記録するログ記録レベルをカスタマイズできます。  
   
- イベントの有効な値には、次の項目が含まれます。 これらの値は、**[カスタマイズされたログ記録レベルの管理]** ダイアログ ボックスの **[イベント]** タブの値に対応しています。  
+ イベントの有効な値には、次の項目が含まれます。 これらの値は、 **[カスタマイズされたログ記録レベルの管理]** ダイアログ ボックスの **[イベント]** タブの値に対応しています。  
   
 |イベントをイベントのコンテキスト|イベントのコンテキストを持つイベント|  
 |----------------------------------|-------------------------------|  
-|OnVariableValueChanged = 0<br /><br /> OnExecutionStatusChanged = 1<br /><br /> OnPreExecute = 2<br /><br /> OnPostExecute = 3<br /><br /> OnPreValidate = 4<br /><br /> OnPostValidate = 5<br /><br /> OnWarning = 6<br /><br /> OnInformation = 7<br /><br /> OnError = 8<br /><br /> OnTaskFailed = 9<br /><br /> OnProgress = 10<br /><br /> OnQueryCancel = 11<br /><br /> OnBreakpointHit = 12<br /><br /> OnCustomEvent = 13<br /><br /> 診断 = 14<br /><br /> DiagnosticEx = 15<br /><br /> NonDiagnostic = 16|OnVariableValueChanged_IncludeContext = 32<br /><br /> OnExecutionStatusChanged_IncludeContext = 33<br /><br /> OnPreExecute_IncludeContext = 34<br /><br /> OnPostExecute_IncludeContext 35 を =<br /><br /> OnPreValidate_IncludeContext 36 を =<br /><br /> OnPostValidate_IncludeContext 37 を =<br /><br /> OnWarning_IncludeContext = 38<br /><br /> OnInformation_IncludeContext = 39<br /><br /> OnError_IncludeContext = 40<br /><br /> OnTaskFailed_IncludeContext = 41<br /><br /> OnProgress_IncludeContext 42 を =<br /><br /> OnQueryCancel_IncludeContext 43 を =<br /><br /> OnBreakpointHit_IncludeContext = 44<br /><br /> OnCustomEvent_IncludeContext = 45<br /><br /> Diagnostic_IncludeContext 46 を =<br /><br /> DiagnosticEx_IncludeContext = 47<br /><br /> NonDiagnostic_IncludeContext 48 を =|  
+|OnVariableValueChanged = 0<br /><br /> OnExecutionStatusChanged = 1<br /><br /> OnPreExecute = 2<br /><br /> OnPostExecute = 3<br /><br /> OnPreValidate = 4<br /><br /> OnPostValidate = 5<br /><br /> OnWarning = 6<br /><br /> OnInformation = 7<br /><br /> OnError = 8<br /><br /> OnTaskFailed = 9<br /><br /> OnProgress = 10<br /><br /> OnQueryCancel = 11<br /><br /> OnBreakpointHit = 12<br /><br /> OnCustomEvent = 13<br /><br /> Diagnostic = 14<br /><br /> DiagnosticEx = 15<br /><br /> NonDiagnostic = 16|OnVariableValueChanged_IncludeContext = 32<br /><br /> OnExecutionStatusChanged_IncludeContext = 33<br /><br /> OnPreExecute_IncludeContext = 34<br /><br /> OnPostExecute_IncludeContext = 35<br /><br /> OnPreValidate_IncludeContext = 36<br /><br /> OnPostValidate_IncludeContext = 37<br /><br /> OnWarning_IncludeContext = 38<br /><br /> OnInformation_IncludeContext = 39<br /><br /> OnError_IncludeContext = 40<br /><br /> OnTaskFailed_IncludeContext = 41<br /><br /> OnProgress_IncludeContext = 42<br /><br /> OnQueryCancel_IncludeContext= 43<br /><br /> OnBreakpointHit_IncludeContext = 44<br /><br /> OnCustomEvent_IncludeContext = 45<br /><br /> Diagnostic_IncludeContext = 46<br /><br /> DiagnosticEx_IncludeContext = 47<br /><br /> NonDiagnostic_IncludeContext = 48|  
   
  *events_value* は **bigint** です。  
   
  [ @level_id = ] *level_id* OUT  
- 新しい id では、ログ記録レベルをカスタマイズします。  
+ 新しい ID では、ログ記録レベルをカスタマイズします。  
   
  *level_id* は **bigint** です。  
   

@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: e893b719-4392-476f-911a-5ed6da6f7e94
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: aee8914493c66ff451d7bca7f56fc8723d2a7ca0
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e5f780f9abc47a367a1825d51b12159292ace5da
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47639730"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68020421"
 ---
 # <a name="return-codes-odbc"></a>リターン コード (ODBC)
 ODBC の各関数と呼ばれる、コードを返します、*リターン コード、* 全体的な成功または関数の失敗を示します。 一般的に、プログラミング ロジックはリターン コードを基に組み立てます。  
@@ -51,6 +50,6 @@ while ((rc=SQLFetch(hstmt)) != SQL_NO_DATA) {
 |SQL_SUCCESS_WITH_INFO|関数は可能性がある重大なエラー (警告) を正常に完了します。 アプリケーション呼び出し**SQLGetDiagRec**または**SQLGetDiagField**追加情報を取得します。|  
 |SQL_ERROR|関数が失敗しました。 アプリケーション呼び出し**SQLGetDiagRec**または**SQLGetDiagField**追加情報を取得します。 関数の出力引数の内容は未定義です。|  
 |SQL_INVALID_HANDLE|関数は、無効な環境、接続、ステートメント、または記述子ハンドルのため失敗しました。 これは、プログラミング エラーを示します。 追加情報が利用できない**SQLGetDiagRec**または**SQLGetDiagField**します。 ハンドルが null ポインターまたは接続ハンドルを必要とする引数のステートメント ハンドルが渡された場合など、間違った種類である場合にのみ、このコードが返されます。|  
-|SQL_NO_DATA|以上のデータは、利用できるでした。 アプリケーション呼び出し**SQLGetDiagRec**または**SQLGetDiagField**追加情報を取得します。 クラス 02xxx 内の 1 つまたは複数のドライバーの定義済みの状態レコードが返される可能性があります。 **注:** Odbc 2 *。x*、これは、コードが SQL_NO_DATA_FOUND という名前が返されます。|  
+|SQL_NO_DATA|以上のデータは、利用できるでした。 アプリケーション呼び出し**SQLGetDiagRec**または**SQLGetDiagField**追加情報を取得します。 クラス 02xxx 内の 1 つまたは複数のドライバーの定義済みの状態レコードが返される可能性があります。 **注:** ODBC 2。*x*、これは、コードが SQL_NO_DATA_FOUND という名前が返されます。|  
 |SQL_NEED_DATA|実行時にパラメーターのデータが送信されたときより多くのデータが必要なまたは追加の接続情報が必要です。 アプリケーション呼び出し**SQLGetDiagRec**または**SQLGetDiagField**に存在する場合は、追加の情報を取得します。|  
 |SQL_STILL_EXECUTING|非同期的に開始された関数が実行中です。 アプリケーション呼び出し**SQLGetDiagRec**または**SQLGetDiagField**に存在する場合は、追加の情報を取得します。|

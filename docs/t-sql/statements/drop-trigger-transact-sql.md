@@ -24,13 +24,12 @@ helpviewer_keywords:
 ms.assetid: 092d0d71-9f1e-4e38-a1c4-2487adfa5b4e
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: 541bdcde5841394c3a28428a9e21ae4797e75fd4
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: 810367b817aec0688a2bc5168be10c7ff073affc
+ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53202961"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "73980993"
 ---
 # <a name="drop-trigger-transact-sql"></a>DROP TRIGGER (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -75,7 +74,7 @@ ON ALL SERVER
  DDL トリガーのスコープが現在のデータベースに適用されることを示します。 トリガーを作成または変更したときに DATABASE を指定した場合は、同じく DATABASE を指定する必要があります。  
   
  ALL SERVER  
- **適用対象**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]  
+ **適用対象**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 以降。  
   
  DDL トリガーのスコープが現在のサーバーに適用されることを示します。 トリガーを作成または変更したときに ALL SERVER を指定した場合は、同じく ALL SERVER を指定する必要があります。 ALL SERVER はログオン トリガーにも適用されます。  
   

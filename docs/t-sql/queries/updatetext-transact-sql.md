@@ -18,15 +18,14 @@ helpviewer_keywords:
 - data updates [SQL Server], UPDATETEXT statement
 - UPDATETEXT statement
 ms.assetid: d73c28ee-3972-4afd-af8d-ebbbd9e50793
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: c41ca4147e9722edac021c746833ac0e010952c8
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+author: VanMSFT
+ms.author: vanto
+ms.openlocfilehash: b858cc4930cdfe9792e08c991c3ebdf8f319d0f0
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53211451"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67948222"
 ---
 # <a name="updatetext-transact-sql"></a>UPDATETEXT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

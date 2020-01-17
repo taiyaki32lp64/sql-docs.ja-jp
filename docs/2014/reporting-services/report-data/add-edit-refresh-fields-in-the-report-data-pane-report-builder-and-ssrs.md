@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 ms.assetid: 2e36f0fe-8100-4513-b169-14d611646f81
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 87ee0ab32e605214674c2ee2a933f63cc4b66268
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: d5d243ef273badd182066fcc42484fa95fa13461
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56032383"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66107485"
 ---
 # <a name="add-edit-refresh-fields-in-the-report-data-pane-report-builder-and-ssrs"></a>レポート データ ペインでのフィールドの追加、編集、更新 (レポート ビルダーおよび SSRS)
   データセット フィールドは、外部データ ソースにデータセット クエリを実行するときに返されるデータを表すフィールド名の組み込みのコレクションです。  
@@ -59,7 +58,7 @@ ms.locfileid: "56032383"
     > [!NOTE]  
     >  名前は、データセット内で一意でなければなりません。  
   
-4.  **[フィールド ソース]** ボックスに、フィールドの式を入力します。 式を作成するには、式 (**[fx]**) ボタンをクリックします。  
+4.  **[フィールド ソース]** ボックスに、フィールドの式を入力します。 式を作成するには、式 ( **[fx]** ) ボタンをクリックします。  
   
     > [!NOTE]  
     >  計算フィールドの式に、レポート アイテムに対する集計または参照を含めることはできません。  

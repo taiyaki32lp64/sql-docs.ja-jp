@@ -1,31 +1,31 @@
 ---
 title: レポート履歴ページ (レポート マネージャー) |Microsoft Docs
+ms.prod: sql-server-2014
+ms.technology: reporting-services-native
+ms.topic: conceptual
+author: maggiesMSFT
+ms.author: maggies
+manager: kfile
+ms.reviewer: ''
 ms.custom: ''
 ms.date: 06/13/2017
-ms.prod: sql-server-2014
-ms.reviewer: ''
-ms.technology:
-- reporting-services-native
-ms.topic: conceptual
-ms.assetid: 4c64e58a-ed83-4e29-a422-9baaac2be4b8
-author: markingmyname
-ms.author: maghan
-manager: kfile
-ms.openlocfilehash: cb6d9de69656d40b3a5fd87c5353c6d0b8f0ef5f
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 0b0841e031ee1a98f4f678406f790996a709e90f
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56033863"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66104480"
 ---
 # <a name="report-history-page-report-manager"></a>[レポート履歴] ページ (レポート マネージャー)
-  [レポート履歴] ページには、一定期間に生成および保存したレポート スナップショットが表示されます。 レポート サーバーで設定されているオプションによっては、新しいスナップショットのみがレポート ヒストリに保存されます。  
+
+[レポート履歴] ページには、一定期間に生成および保存したレポート スナップショットが表示されます。 レポート サーバーで設定されているオプションによっては、新しいスナップショットのみがレポート ヒストリに保存されます。  
   
- レポート ヒストリは、常に元のレポートのコンテキスト内で表示されます。 すべてのレポートのヒストリをレポート サーバーの 1 か所に表示することはできません。  
+
+レポート ヒストリは、常に元のレポートのコンテキスト内で表示されます。 すべてのレポートのヒストリをレポート サーバーの 1 か所に表示することはできません。  
   
- レポート ヒストリを生成するには、レポートが自動的に実行されるようにする必要があります (つまり、保存されている資格情報を使用する必要があります。また、パラメーター化されたレポートには、すべてのパラメーターのパラメーター値を含める必要があります)。 レポート ヒストリの生成は、手動またはスケジュールに設定した操作によって行うことができます。 レポート ヒストリの作成方法は、レポートのヒストリ プロパティによって決まります。  
+レポート ヒストリを生成するには、レポートが自動的に実行されるようにする必要があります (つまり、保存されている資格情報を使用する必要があります。また、パラメーター化されたレポートには、すべてのパラメーターのパラメーター値を含める必要があります)。 レポート ヒストリの生成は、手動またはスケジュールに設定した操作によって行うことができます。 レポート ヒストリの作成方法は、レポートのヒストリ プロパティによって決まります。  
   
- レポート ヒストリ スナップショットをクリックすると、そのスナップショットが表示されます。 レポート ヒストリに表示されるスナップショットは、作成日時だけで識別されます。 スナップショットがスケジュールの設定を受けて生成されたのか、手動で生成されたのかを識別する表示はありません。  
+レポート ヒストリ スナップショットをクリックすると、そのスナップショットが表示されます。 レポート ヒストリに表示されるスナップショットは、作成日時だけで識別されます。 スナップショットがスケジュールの設定を受けて生成されたのか、手動で生成されたのかを識別する表示はありません。  
   
 > [!NOTE]  
 >  この機能は、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]のすべてのエディションで使用できるわけではありません。 エディションでサポートされている機能の一覧については[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]を参照してください[機能は、SQL Server 2014 の各エディションでサポートされている](../../2014/getting-started/features-supported-by-the-editions-of-sql-server-2014.md)します。  
@@ -59,6 +59,4 @@ ms.locfileid: "56033863"
  [レポート履歴へのスナップショットの追加 &#40;レポート マネージャー&#41;](report-server/add-a-snapshot-to-report-history-report-manager.md)   
  [全般プロパティ ページ、レポート &#40;レポート マネージャー&#41;](../../2014/reporting-services/general-properties-page-reports-report-manager.md)   
  [レポート マネージャー F1 ヘルプ](../../2014/reporting-services/report-manager-f1-help.md)   
- [スナップショット オプション プロパティ ページ&#40;レポート マネージャー&#41;](../../2014/reporting-services/snapshot-options-properties-page-report-manager.md)  
-  
-  
+ [スナップショット オプション プロパティ ページ&#40;レポート マネージャー&#41;](../../2014/reporting-services/snapshot-options-properties-page-report-manager.md)

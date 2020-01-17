@@ -1,7 +1,7 @@
 ---
 title: 緩やかに変化するディメンション変換 | Microsoft Docs
 ms.custom: ''
-ms.date: 03/14/2017
+ms.date: 08/31/2019
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: ''
@@ -15,17 +15,20 @@ helpviewer_keywords:
 - SCD transformation
 - updating slowly changing dimensions
 ms.assetid: f8849151-c171-4725-bd25-f2c33a40f4fe
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: 9aeb16eff9632fe5a6859985f70e8aefddd0fea4
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 1fd5584a5c43762c4d732c677de225436e191a7e
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52414539"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71297811"
 ---
 # <a name="slowly-changing-dimension-transformation"></a>緩やかに変化するディメンション変換
+
+[!INCLUDE[ssis-appliesto](../../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   緩やかに変化するディメンション変換は、データ ウェアハウスのディメンション テーブル内にある、レコードの更新および挿入を調整します。 たとえば、この変換を使用すると、AdventureWorks OLTP データベースの Production.Products テーブルにあるデータを使って [!INCLUDE[ssSampleDBDWobject](../../../includes/sssampledbdwobject-md.md)] データベースの DimProduct テーブルに挿入や更新を行う変換出力を構成できます。  
   
 > [!IMPORTANT]  
@@ -47,7 +50,7 @@ ms.locfileid: "52414539"
   
 -   変化する属性の変更は、既存のレコードを上書きします。 この変更の種類は、種類 1 の変更に相当します。 緩やかに変化するディメンション変換は、これらの行を **[変化する属性更新の出力]** という名前の出力に送信します。  
   
--   履歴属性の変更は、既存のレコードを更新するのではなく、新しいレコードを作成します。 既存のレコードに許可されている変更は、そのレコードが現在のレコードか、または有効期限が切れているかを示す列の更新のみです。 この変更の種類は、種類 2 の変更に相当します。 緩やかに変化するディメンション変換は、これらの列を、 **[履歴属性挿入の出力]** および **[新しい出力]** の 2 つの出力に送信します。  
+-   履歴属性の変更は、既存のレコードを更新するのではなく、新しいレコードを作成します。 既存のレコードに許可されている変更は、そのレコードが現在のレコードか、または有効期限が切れているかを示す列の更新のみです。 この変更の種類は、種類 2 の変更に相当します。 緩やかに変化するディメンション変換は、これらの列を **[履歴属性挿入の出力]** および **[新しい出力]** の 2 つの出力に送信します。  
   
 -   固定属性の変更は、列の値が変更できないことを示します。 緩やかに変化するディメンション変換は、変更を検出し、変更のあった行を **[固定属性の出力]** という名前の出力に送信します。  
   
@@ -58,7 +61,7 @@ ms.locfileid: "52414539"
   
  緩やかに変化するディメンション変換は、実行時、まず受信行を参照テーブル内のレコードと照合します。 一致するものがない場合、受信行が新しいレコードになります。つまり、緩やかに変化するディメンション変換は追加の作業を実行せず、その行を **[新しい出力]** に出力します。  
   
- 一致するものがある場合、緩やかに変化するディメンション変換は、行に変更が含まれているかどうかを検出します。 行に変更が含まれる場合、緩やかに変化するディメンション変換は各列の更新の種類を識別し、その行を **[変化する属性更新の出力]**、 **[固定属性の出力]**、 **[履歴属性挿入の出力]**、または **[推定メンバー更新の出力]** に出力します。 行が変更されていない場合、緩やかに変化するディメンション変換は、その行を **[変更されていない出力]** に出力します。  
+ 一致するものがある場合、緩やかに変化するディメンション変換は、行に変更が含まれているかどうかを検出します。 行に変更が含まれる場合、緩やかに変化するディメンション変換は各列の更新の種類を識別し、その行を **[変化する属性更新の出力]** 、 **[固定属性の出力]** 、 **[履歴属性挿入の出力]** 、または **[推定メンバー更新の出力]** に出力します。 行が変更されていない場合、緩やかに変化するディメンション変換は、その行を **[変更されていない出力]** に出力します。  
   
 ## <a name="slowly-changing-dimension-transformation-outputs"></a>緩やかに変化するディメンション変換の出力  
  緩やかに変化するディメンション変換は、1 つの入力と、最大 6 つの出力をとります。 出力は、行の更新および挿入の要件に対応するデータ フローのサブセットに行を出力します。 この変換では、エラー出力はサポートされていません。  
@@ -108,6 +111,7 @@ ms.locfileid: "52414539"
   
 ## <a name="related-content"></a>関連コンテンツ  
   
--   blogs.msdn.com のブログ「 [Optimizing the Slowly Changing Dimension Wizard](https://go.microsoft.com/fwlink/?LinkId=199481)(緩やかに変化するディメンション ウィザードの最適化)」  
+-   [SSIS で緩やかに変化するディメンションを処理する](https://techcommunity.microsoft.com/t5/SQL-Server-Integration-Services/Handling-Slowly-Changing-Dimensions-in-SSIS/ba-p/387599)
+-   [緩やかに変化するディメンション ウィザードを最適化する](https://techcommunity.microsoft.com/t5/SQL-Server-Integration-Services/Optimizing-the-Slowly-Changing-Dimension-Wizard/ba-p/387702)
   
   

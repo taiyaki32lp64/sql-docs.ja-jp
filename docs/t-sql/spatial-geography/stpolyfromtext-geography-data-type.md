@@ -15,15 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - STPolyFromText method
 ms.assetid: d7e6a2bb-d301-49fb-9202-c70a9d169b4d
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: 02232606ccfba5c03793dd6a3bff515efd0c8e6f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: MladjoA
+ms.author: mlandzic
+ms.openlocfilehash: 00d5f282b209c4e705fc07e056f7014c0eaf47bf
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47744510"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68120809"
 ---
 # <a name="stpolyfromtext-geography-data-type"></a>STPolyFromText (geography データ型)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -47,9 +46,9 @@ STPolyFromText ( 'polygon_tagged_text' , SRID )
 ## <a name="return-types"></a>戻り値の型  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 戻り値の型: **geography**  
   
- CLR 戻り値の型: **SqlGeography**  
+ CLR の戻り値の型:**SqlGeography**  
   
- OGC の型: **Polygon**  
+ OGC の型:**多角形**  
   
 ## <a name="remarks"></a>Remarks  
  このメソッドでは、入力が整形式でない場合に、**FormatException** がスローされます。  

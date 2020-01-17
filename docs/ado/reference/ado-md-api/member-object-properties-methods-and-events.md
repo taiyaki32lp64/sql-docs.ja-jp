@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: dadd6e7e-b5b4-4ede-8747-ae67ec917d90
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 67faee86f0b5a333e406ccc2fead8b002b525e36
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: fb8efcb41ea0a82f11351e5a439ee8b9cf7a053e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47688060"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67949484"
 ---
 # <a name="member-object-properties-methods-and-events"></a>Member オブジェクトのプロパティ、メソッド、およびイベント
 ## <a name="propertiescollections"></a>プロパティ/コレクション  
@@ -54,5 +53,5 @@ ms.locfileid: "47688060"
 ## <a name="events"></a>イベント  
  [なし] :  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [Member オブジェクト (ADO MD)](../../../ado/reference/ado-md-api/member-object-ado-md.md)

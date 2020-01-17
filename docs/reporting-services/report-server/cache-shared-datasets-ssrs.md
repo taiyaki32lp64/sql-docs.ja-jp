@@ -1,19 +1,19 @@
 ---
 title: 複数の共有データセットのキャッシュ (SSRS) | Microsoft Docs
-ms.date: 03/01/2017
+ms.date: 05/14/2019
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: report-server
 ms.topic: conceptual
 ms.assetid: 4acb1bbe-1c04-4979-b893-dc1b1c5039b6
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: fd9d5095b2d0361ec1da121b987d2a7d84944ad0
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 097955ece70dfa411c12d1ee5d69af0de14831e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50021497"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66175601"
 ---
 # <a name="cache-shared-datasets-ssrs"></a>複数の共有データセットのキャッシュ (SSRS)
   共有データセットのクエリ結果をキャッシュにコピーしておくと、複数のレポートに一貫性のあるデータを提供し、データセット クエリの応答時間を短縮できます。 レポートと同様に、初回使用時または指定されたスケジュールによってキャッシュされるように共有データセットを構成できます。  
@@ -51,7 +51,7 @@ ms.locfileid: "50021497"
   
  パラメーターの特定の組み合わせに対するクエリ結果がキャッシュ内にある間、それらのパラメーター値を持つ共有データセットを参照するレポートが起動されて処理されると、キャッシュされたデータが使用されます。  
   
- キャッシュ内にデータを保持する有効期限が切れるまでの期間を指定できます。 詳細については、「[共有データセットの [キャッシュ] ページ &#40;レポート マネージャー&#41;](https://msdn.microsoft.com/library/eac372e9-d2a1-48a8-bbe5-09d101df16ea)」を参照してください。  
+ キャッシュ内にデータを保持する有効期限が切れるまでの期間を指定できます。 詳細については、[共有データセットの操作](../../reporting-services/work-with-shared-datasets-web-portal.md)に関するページをご覧ください。  
   
 ## <a name="preloading-the-cache"></a>キャッシュを事前に読み込む  
  キャッシュ更新計画を作成することによって、キャッシュを事前に読み込むことができます。 更新計画を使用すると、アイテム固有のスケジュールまたは共有スケジュールを使用して、キャッシュを更新する頻度を指定できます。 同一アイテムに対して複数のキャッシュ エントリが作成されることを防ぐため、スケジュールでは、外部データ ソースに対するクエリ処理が実行されるのに十分な時間を指定する必要があります。 たとえば、クエリの実行に 20 分かかる場合は、更新スケジュール間隔も 20 分より長くする必要があります。 詳細については、「 [Schedules](../../reporting-services/subscriptions/schedules.md)」を参照してください。  
@@ -68,7 +68,7 @@ ms.locfileid: "50021497"
   
 -   共有データセットに対して ReadPolicy 権限および UpdatePolicy 権限が必要です。  
   
- キャッシュ更新計画は、共有データセットおよびレポートの両方に適用されます。 詳細については、「[キャッシュ更新オプション &#40;レポート マネージャー&#41;](https://msdn.microsoft.com/library/227da40c-6bd2-48ec-aa9c-50ce6c1ca3a6)」を参照してください。  
+ キャッシュ更新計画は、共有データセットおよびレポートの両方に適用されます。 詳細については、「 [レポートのキャッシュ (SSRS)](../../reporting-services/report-server/caching-reports-ssrs.md)でキャッシュを事前に読み込む唯一の方法でした。  
   
 ## <a name="conditions-that-cause-cache-expiration"></a>キャッシュが有効期限切れとなる条件  
  次の状況においては、共有データセット キャッシュが無効になる可能性があります。  
@@ -93,7 +93,7 @@ ms.locfileid: "50021497"
   
  共有データセットのキャッシュ更新計画を更新しても、既に処理中のレポートには影響がありません。 キャッシュ更新計画の更新は、共有データセットを参照する、これから起動されるレポートにのみ影響があります。  
   
-## <a name="see-also"></a>参照  
- [共有データセットを管理する](../../reporting-services/report-data/manage-shared-datasets.md)  
+## <a name="see-also"></a>参照
   
+ [共有データセットを管理する](../../reporting-services/report-data/manage-shared-datasets.md)  
   

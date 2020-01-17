@@ -1,5 +1,5 @@
 ---
-title: SQL Server Native Client によるアプリケーションの構築 |マイクロソフトのドキュメント
+title: SQL Server Native Client | を使用したアプリケーションの構築Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,12 +15,12 @@ ms.assetid: 254a2b48-f0e3-43b5-a48d-3d666c2a779f
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 8c6f7333b9a0fea3ef0408ed1eea4c8c84287222
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: a040993001a60c410cc1da83f8efae2a4d163162
+ms.sourcegitcommit: 3b1f873f02af8f4e89facc7b25f8993f535061c9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48070032"
+ms.lasthandoff: 08/30/2019
+ms.locfileid: "70175416"
 ---
 # <a name="building-applications-with-sql-server-native-client"></a>SQL Server Native Client を使用したアプリケーションのビルド
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client ライブラリを使用するアプリケーションを開発する際には、いくつかの課題があります。 このセクションのトピックでは、MDAC から [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client へのアップグレード、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client ヘッダー ファイルやライブラリ ファイルの使用など、これらの課題の多くについて説明します。また、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client と併用できるさまざまな接続文字列の概要についても説明します。  
@@ -50,7 +50,7 @@ ms.locfileid: "48070032"
  [SQL Server Native Client のサポート ポリシー](support-policies-for-sql-server-native-client.md)  
  さまざまなデータ アクセス コンポーネントを、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client の各バージョンで使用する方法について説明します。  
   
- [SQL Server Native Client を使用した Azure SQL データベースへの接続](connecting-to-a-windows-azure-sql-database-using-sql-server-native-client.md)  
+ [SQL Server Native Client を使用した Azure SQL Database への接続](connecting-to-a-windows-azure-sql-database-using-sql-server-native-client.md)  
  [!INCLUDE[ssSDS](../../../includes/sssds-md.md)] Native Client を使用して [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] に接続する方法について説明します。  
   
 ## <a name="see-also"></a>参照  

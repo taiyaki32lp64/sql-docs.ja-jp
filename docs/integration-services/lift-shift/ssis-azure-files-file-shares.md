@@ -7,16 +7,19 @@ ms.prod: sql
 ms.technology: integration-services
 author: swinarko
 ms.author: sawinark
-ms.reviewer: douglasl
-manager: craigg
-ms.openlocfilehash: c77d072067799df660ab1c0989eda410480de816
-ms.sourcegitcommit: c582de20c96242f551846fdc5982f41ded8ae9f4
+ms.reviewer: maghan
+ms.openlocfilehash: 696b7bbd19ed41aeedaf0cbba683870c04de1b13
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/28/2018
-ms.locfileid: "37065992"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67896203"
 ---
 # <a name="open-and-save-files-on-premises-and-in-azure-with-ssis-packages-deployed-in-azure"></a>Azure でデプロイされた SSIS パッケージを使用して、オンプレミスおよび Azure のファイルを開いて保存する
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
 
 この記事では、ローカル ファイル システムを使う SSIS パッケージを Azure の SSIS にリフト アンド シフトするときに、オンプレミスおよび Azure のファイルを開いて保存する方法について説明します。
 

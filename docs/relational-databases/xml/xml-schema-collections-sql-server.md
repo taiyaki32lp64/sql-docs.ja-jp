@@ -1,7 +1,7 @@
 ---
 title: XML スキーマ コレクション (SQL Server) | Microsoft Docs
 ms.custom: ''
-ms.date: 03/14/2017
+ms.date: 03/15/2017
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
@@ -19,15 +19,14 @@ helpviewer_keywords:
 - XML schema collections [SQL Server]
 - schema collections [SQL Server], about XML schema collections
 ms.assetid: 659d41aa-ccec-4554-804a-722a96ef25c2
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: c8a69b903fefb85b30ee6cd0a0019466c279fd0e
-ms.sourcegitcommit: bfa10c54e871700de285d7f819095d51ef70d997
+author: MightyPen
+ms.author: genemi
+ms.openlocfilehash: 4a334b4a02126023b94e5623b45050b067b48ce6
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/14/2019
-ms.locfileid: "54255717"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68096818"
 ---
 # <a name="xml-schema-collections-sql-server"></a>XML スキーマ コレクション (SQL Server)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -69,7 +68,7 @@ ms.locfileid: "54255717"
   
  たとえば、次のスキーマを考えてみます。  
   
-```  
+```xml
 <?xml version="1.0"?>  
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"  
             targetNamespace="uri:Cust_Orders2"  
@@ -113,7 +112,7 @@ ms.locfileid: "54255717"
   
 -   MODELGROUP  
   
- 例 :  
+ 例:  
   
 -   **SomeAttribute** は、ATTRIBUTE コンポーネントです。  
   
@@ -130,6 +129,7 @@ ms.locfileid: "54255717"
 |**blockDefault**|**block** 属性が存在しないすべての要素の宣言と型定義に適用され、値は **blockDefault** 属性の値に設定されます。|  
 |**finalDefault**|**final** 属性が存在しないすべての要素の宣言と型定義に適用され、値は **finalDefault** 属性の値に設定されます。|  
 |**targetNamespace**|対象の名前空間に属するコンポーネントに関する情報がメタデータに格納されます。|  
+| &nbsp; | &nbsp; |
   
 ##  <a name="perms"></a> XML スキーマ コレクションに対する権限  
  次の操作を行うためには必要な権限を持っている必要があります。  
@@ -163,7 +163,7 @@ ms.locfileid: "54255717"
 ##  <a name="info"></a> XML スキーマおよびスキーマ コレクションに関する情報の取得  
  カタログ ビュー sys.xml_schema_collections には XML スキーマ コレクションが列挙されます。 XML スキーマ コレクション "sys" がシステムにより定義されています。 このコレクションには、すべてのユーザー定義 XML スキーマ コレクションで明示的に読み込むことなく使用できる定義済みの名前空間が含まれています。 一覧には xml、xs、xsi、fn、および xdt 用の名前空間が含まれています。 この他に、各 XML スキーマ コレクションのすべての名前空間を列挙する sys.xml_schema_namespaces、および各 XML スキーマのすべての XML スキーマ コンポーネントを列挙する sys.xml_components の 2 つのカタログ ビューがあります。  
   
- 組み込み関数 **XML_SCHEMA_NAMESPACE**、 *schemaName, XmlSchemacollectionName, namespace-uri*により **xml** データ型のインスタンスが生成されます。 このインスタンスには、XML スキーマ コレクションに含まれるスキーマ (定義済みの XML スキーマを除く) の XML スキーマ フラグメントが含まれます。  
+ 組み込み関数 **XML_SCHEMA_NAMESPACE**, *schemaName, XmlSchemacollectionName, namespace-uri* により、**xml** データ型のインスタンスが生成されます。 このインスタンスには、XML スキーマ コレクションに含まれるスキーマ (定義済みの XML スキーマを除く) の XML スキーマ フラグメントが含まれます。  
   
  XML スキーマ コレクションのコンテンツは、次のようにして列挙できます。  
   
@@ -176,7 +176,7 @@ ms.locfileid: "54255717"
 ### <a name="example-enumerate-the-xml-namespaces-in-an-xml-schema-collection"></a>例:XML スキーマ コレクションでの XML 名前空間の列挙  
  XML スキーマ コレクション "myCollection" に次のクエリを実行します。  
   
-```  
+```sql
 SELECT XSN.name  
 FROM    sys.xml_schema_collections XSC JOIN sys.xml_schema_namespaces XSN  
     ON (XSC.xml_collection_id = XSN.xml_collection_id)  
@@ -186,18 +186,18 @@ WHERE    XSC.name = 'myCollection'
 ### <a name="example-enumerate-the-contents-of-an-xml-schema-collection"></a>例:XML スキーマ コレクションのコンテンツの列挙  
  次のステートメントは、リレーショナル スキーマ dbo 内の XML スキーマ コレクション "myCollection" のコンテンツを列挙します。  
   
-```  
+```sql
 SELECT XML_SCHEMA_NAMESPACE (N'dbo', N'myCollection')  
 ```  
   
  **XML_SCHEMA_NAMESPACE()** の 3 番目の引数として対象になる名前空間を指定することで、コレクション内の個別の XML スキーマを **xml**データ型のインスタンスとして取得できます。 次の例を参照してください。  
   
 ### <a name="example-output-a-specified-schema-from-an-xml-schema-collection"></a>例:XML スキーマ コレクションからの指定したスキーマの出力  
- 次のステートメントを実行すると、リレーショナル スキーマ dbo の XML スキーマ コレクション "myCollection" から、対象になる名前空間が "<https://www.microsoft.com/books>" である XML スキーマが出力されます。  
+ 次のステートメントを実行すると、リレーショナル スキーマ dbo の XML スキーマ コレクション "myCollection" から、"_架空の_" ターゲット名前空間 https/\/www.microsoft.com/was-books で XML スキーマが出力されます。  
   
-```  
+```sql
 SELECT XML_SCHEMA_NAMESPACE (N'dbo', N'myCollection',   
-N'https://www.microsoft.com/books')  
+N'https://www.microsoft.com/was-books')  
 ```  
   
 ### <a name="querying-xml-schemas"></a>XML スキーマへのクエリ  

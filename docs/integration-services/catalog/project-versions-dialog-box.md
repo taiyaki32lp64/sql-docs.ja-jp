@@ -10,17 +10,20 @@ ms.topic: conceptual
 f1_keywords:
 - sql13.ssis.ssms.isprojectprop.versions.f1
 ms.assetid: a48a387c-2e70-45bc-be2e-26e57a9bb2c4
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: 30ab66c12e38aeb6bb1ec355583570d4cbb52c8c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 9b1715b517f6933a9f904b17ff268fdf7162464d
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47840390"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71294896"
 ---
 # <a name="project-versions-dialog-box"></a>[プロジェクトのバージョン] ダイアログ ボックス
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   **[プロジェクトのバージョン]** ダイアログ ボックスを使用して、プロジェクトのバージョンの表示および以前のバージョンへの復元を行うことができます。  
   
  また、[catalog.object_versions &#40;SSISDB Database&#41;](../../integration-services/system-views/catalog-object-versions-ssisdb-database.md) ビューで以前のバージョンを表示し、[catalog.restore_project &#40;SSISDB Database&#41;](../../integration-services/system-stored-procedures/catalog-restore-project-ssisdb-database.md) ストアド プロシージャを使用して以前のバージョンを復元することもできます。  

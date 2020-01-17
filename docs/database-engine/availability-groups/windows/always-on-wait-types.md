@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: afa8caff-f325-48d9-a8ef-a30beab60389
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 841da77e4aa71247e8b65b1a8534bca75ff25272
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: a62145645a965d46c8da076eca14cd8a3dd85857
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53201851"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67934968"
 ---
 # <a name="identify-waits-associated-with-availability-groups"></a>可用性グループに関連付けられている待機を識別する
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

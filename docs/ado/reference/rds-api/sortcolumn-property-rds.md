@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: f6f80f67-f0fb-4e63-a5f5-8fdf312aac63
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: e11588900c963576d4fec31545b27c6fdb480ab8
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.openlocfilehash: b5a9c3f9f50968f3b5e8085052917397bcd90226
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51602482"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67963390"
 ---
 # <a name="sortcolumn-property-rds"></a>SortColumn プロパティ (RDS)
 レコードの並べ替え列を示します。  
@@ -49,7 +48,7 @@ DataControl.SortColumn = String
 ## <a name="applies-to"></a>適用対象  
  [DataControl オブジェクト (RDS)](../../../ado/reference/rds-api/datacontrol-object-rds.md)  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [FilterColumn、FilterCriterion、FilterValue、SortColumn、SortDirection プロパティおよび Reset メソッドの例 (VBScript)](../../../ado/reference/rds-api/filter-column-criterion-value-sortcolumn-sortdirection-example-vbscript.md)   
  [Sort プロパティ](../../../ado/reference/ado-api/sort-property.md)   
  [SortDirection プロパティ (RDS)](../../../ado/reference/rds-api/sortdirection-property-rds.md)

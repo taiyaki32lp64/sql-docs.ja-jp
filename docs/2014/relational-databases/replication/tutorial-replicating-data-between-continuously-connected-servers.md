@@ -15,11 +15,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 32b97d456c42eab89511d8f5a9d1924914ea81ca
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52753924"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62655393"
 ---
 # <a name="tutorial-replicating-data-between-continuously-connected-servers"></a>チュートリアル:常時接続サーバー間でのデータのレプリケーション
   レプリケーションは、常時接続サーバー間でデータを移動する際の問題を解決する有効なソリューションです。 レプリケーション ウィザードを使用すると、レプリケーション トポロジを簡単に設定し、管理できます。 このチュートリアルでは、常時接続サーバー間にレプリケーション トポロジを設定する方法を学習します。  
@@ -48,7 +48,7 @@ ms.locfileid: "52753924"
 > [!NOTE]  
 >  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]で、固定サーバー ロール **sysadmin** のメンバーとしてログインし、パブリッシャーとサブスクライバーに接続する必要があります。  
   
- **このチュートリアルを完了するまでに時間を推定するには。30 分。**  
+ **このチュートリアルの推定所要時間: 30 分。**  
   
 ## <a name="lessons-in-this-tutorial"></a>このチュートリアルで行うレッスン  
   

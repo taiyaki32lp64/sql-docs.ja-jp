@@ -13,11 +13,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: a7140e3b4511417952246093e5ed82da9f2c099b
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52806364"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63184306"
 ---
 # <a name="create-queries-visual-database-tools"></a>クエリの作成 (Visual Database Tools)
   クエリを使用すると、データベース内のテーブルおよびビューからデータを取得できます。 クエリの作成と処理には、 **クエリおよびビュー デザイナー**を使用します。クエリおよびビュー デザイナーは、 [ダイアグラム ペイン](visual-database-tools.md)、 [SQL ペイン](sql-pane-visual-database-tools.md)、 [抽出条件ペイン](criteria-pane-visual-database-tools.md)、および [結果ペイン](results-pane-visual-database-tools.md)の 4 つのペインで構成されています。  

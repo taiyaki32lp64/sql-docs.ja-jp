@@ -15,14 +15,13 @@ helpviewer_keywords:
 ms.assetid: c001c2e7-d092-43d4-8fa6-693b3ec4c3ea
 author: VanMSFT
 ms.author: vanto
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: ed580cb28c65eab7f0abd7702cab623bcf9fcd2e
-ms.sourcegitcommit: c6e71ed14198da67afd7ba722823b1af9b4f4e6f
+ms.openlocfilehash: a90add62cdda0e127d84a60fadf7f1f1578c7a0f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/16/2019
-ms.locfileid: "54326323"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68050820"
 ---
 # <a name="grant-object-permissions-transact-sql"></a>GRANT (オブジェクトの権限の許可) (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -63,20 +62,20 @@ GRANT <permission> [ ,...n ] ON
  ALL  
  ALL を指定しても、可能な権限がすべて許可されるわけではありません。 ALL を指定すると、指定したオブジェクトに適用されるすべての [!INCLUDE[vcpransi](../../includes/vcpransi-md.md)]-92 権限を許可することになります。 ALL の意味は、状況に応じて次のようになります。  
   
-- スカラー関数の権限:EXECUTE、REFERENCES。  
-- テーブル値関数の権限:DELETE、INSERT、REFERENCES、SELECT、UPDATE。  
-- ストアド プロシージャの権限:EXECUTE。  
-- テーブルの権限:DELETE、INSERT、REFERENCES、SELECT、UPDATE。  
-- ビューの権限:DELETE、INSERT、REFERENCES、SELECT、UPDATE。  
+- スカラー関数の権限: EXECUTE、REFERENCES。  
+- テーブル値関数の権限: DELETE、INSERT、REFERENCES、SELECT、UPDATE。  
+- ストアド プロシージャの権限: EXECUTE。  
+- テーブルの権限: DELETE、INSERT、REFERENCES、SELECT、UPDATE。  
+- ビューの権限: DELETE、INSERT、REFERENCES、SELECT、UPDATE。  
   
 PRIVILEGES  
  [!INCLUDE[vcpransi](../../includes/vcpransi-md.md)]-92 準拠のために用意されています。 ALL の動作は変更されません。  
   
 *column*  
- 権限を許可するテーブル、ビュー、またはテーブル値関数内の列の名前を指定します。 かっこ () は、必要があります。 列で許可できるのは、SELECT、REFERENCES、および UPDATE の各権限だけです。 *column* は permission 句内、またはセキュリティ保護可能なリソースの名前の後に指定できます。  
+ 権限を許可するテーブル、ビュー、またはテーブル値関数内の列の名前を指定します。 かっこ () が必要です。 列で許可できるのは、SELECT、REFERENCES、および UPDATE の各権限だけです。 *column* は permission 句内、またはセキュリティ保護可能なリソースの名前の後に指定できます。  
   
 > [!CAUTION]  
->  テーブル レベルの DENY ステートメントは列レベルの GRANT ステートメントよりも優先されません。 この動作は権限の階層内で一貫していませんが、旧バージョンとの互換性のために保持されています。  
+>  テーブル レベルの DENY は列レベルの GRANT ステートメントよりも優先されません。 この動作は権限の階層内で一貫していませんが、旧バージョンとの互換性のために保持されています。  
   
  ON [ OBJECT :: ] [ *schema_name* ] . *object_name*  
  権限を許可するオブジェクトを指定します。 OBJECT 句は、*schema_name* を指定する場合は省略可能です。 OBJECT 句を使用する場合は、スコープ修飾子 (::) が必要です。 *schema_name* が指定されていない場合、既定のスキーマが使用されます。 *schema_name* が指定されている場合、スキーマのスコープ修飾子 (.) が必要です。  
@@ -116,7 +115,7 @@ PRIVILEGES
 ## <a name="remarks"></a>Remarks  
   
 > [!IMPORTANT]  
->  権限許可対象ユーザーは、ALTER 権限と REFERENCE 権限を組み合わせて使用することで、データを表示したり、許可されていない関数を実行できる場合があります。 例 :テーブルの ALTER 権限と関数の REFERENCE 権限を持つユーザーは、関数を介した計算列を作成して実行できます。 この場合、ユーザーには計算列の SELECT 権限も必要です。  
+>  権限許可対象ユーザーは、ALTER 権限と REFERENCE 権限を組み合わせて使用することで、データを表示したり、許可されていない関数を実行できる場合があります。 例:テーブルの ALTER 権限と関数の REFERENCE 権限を持つユーザーは、関数を介した計算列を作成して実行できます。 この場合、ユーザーには計算列の SELECT 権限も必要です。  
   
  オブジェクトに関する情報は、各種カタログ ビューに表示されます。 詳しくは、「[オブジェクト カタログ ビュー &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/object-catalog-views-transact-sql.md)」をご覧ください。  
   
@@ -126,7 +125,7 @@ PRIVILEGES
 |-----------------------|----------------------------------|----------------------------------|  
 |ALTER|CONTROL|ALTER|  
 |CONTROL|CONTROL|CONTROL|  
-|Del|CONTROL|Del|  
+|DELETE|CONTROL|DELETE|  
 |EXECUTE|CONTROL|EXECUTE|  
 |INSERT|CONTROL|INSERT|  
 |RECEIVE|CONTROL|CONTROL|  

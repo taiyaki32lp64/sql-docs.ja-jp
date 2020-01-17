@@ -2,21 +2,21 @@
 title: Reporting Services の機能とタスク (SSRS) | Microsoft Docs
 ms.date: 12/18/2015
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: reporting-services
 ms.topic: conceptual
 helpviewer_keywords:
 - Reporting Services, programming
 - development [Reporting Services]
 ms.assetid: 0cc20225-5784-479c-bfb0-445854111367
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 2dcdb2dff46534f52cd8fb115edd8d29072c98a0
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 8e0b79b8a76b36071f8d5f0767ac313a6ed5489b
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47623381"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65580054"
 ---
 # <a name="reporting-services-features-and-tasks-ssrs"></a>Reporting Services の機能とタスク (SSRS)
   [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] の基本コンテンツは、レポートとレポート機能、レポート サーバー機能、および [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 製品の機能別に編成されています。  

@@ -8,17 +8,20 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: language-reference
 ms.assetid: 2e3439b4-7226-4b61-a993-7a1d161eac7e
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: 09020a1e7bbbe7de48415fa7b20d260ae27784f9
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: f85e27484378d1074564a320aea7f8ed1766e1ce
+ms.sourcegitcommit: c426c7ef99ffaa9e91a93ef653cd6bf3bfd42132
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47607200"
+ms.lasthandoff: 10/10/2019
+ms.locfileid: "72251328"
 ---
-# <a name="catalogdeployproject-ssisdb-database"></a>catalog.deploy_project (SSISDB データベース)
+# <a name="catalogdeploy_project-ssisdb-database"></a>catalog.deploy_project (SSISDB データベース)
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] カタログのフォルダーにプロジェクトを配置するか、以前に配置した既存のプロジェクトを更新します。  
@@ -69,7 +72,7 @@ catalog.deploy_project [@folder_name =] folder_name
   
 -   存在しないオブジェクトを参照するパラメーター、既に存在するオブジェクトを作成しようとするパラメーター、または何かの方法で無効になるパラメーター  
   
--   パラメーター *@project_name* の値が、配置ファイルのプロジェクトの名前に一致しない  
+-   パラメーター *\@project_name* の値が、配置ファイルのプロジェクトの名前に一致しない  
   
 -   ユーザーに十分な権限がない  
   

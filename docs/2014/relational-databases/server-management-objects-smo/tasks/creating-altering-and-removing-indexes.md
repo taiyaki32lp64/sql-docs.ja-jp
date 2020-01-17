@@ -1,5 +1,5 @@
 ---
-title: 作成、変更、およびインデックスを削除します。マイクロソフトのドキュメント
+title: インデックスの作成、変更、および削除 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -12,12 +12,12 @@ ms.assetid: ad1befa5-46e0-4895-b9d3-42852e07607b
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 7e2bf2f470c7605f5535f66d19531e6a8e34cd39
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 7f7f71e75d2afd12de9ff381bdc61b739eb192db
+ms.sourcegitcommit: a165052c789a327a3a7202872669ce039bd9e495
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52814114"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72782467"
 ---
 # <a name="creating-altering-and-removing-indexes"></a>インデックスの作成、変更、および削除
   SMO ([!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 管理オブジェクト) 階層では、インデックスは <xref:Microsoft.SqlServer.Management.Smo.Index> オブジェクトで表現します。 インデックス付き列は、<xref:Microsoft.SqlServer.Management.Smo.IndexedColumn> プロパティによって表される <xref:Microsoft.SqlServer.Management.Smo.Index.IndexedColumns%2A> オブジェクトのコレクションで表現します。  
@@ -25,12 +25,12 @@ ms.locfileid: "52814114"
  <xref:Microsoft.SqlServer.Management.Smo.Index.IsXmlIndex%2A> オブジェクトの <xref:Microsoft.SqlServer.Management.Smo.Index> プロパティを指定すると、XML 列のインデックスを作成できます。  
   
 ## <a name="examples"></a>使用例  
- 提供されているコード例を使用するには、アプリケーションを作成するプログラミング環境、プログラミング テンプレート、およびプログラミング言語を選択する必要があります。 詳細については、次を参照してください。 [Visual Studio .NET で Visual Basic SMO プロジェクトを作成](../../../database-engine/dev-guide/create-a-visual-basic-smo-project-in-visual-studio-net.md)または[Visual C の作成&#35;Visual Studio .NET での SMO プロジェクト](../how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md)します。  
+ 提供されているコード例を使用するには、アプリケーションを作成するプログラミング環境、プログラミング テンプレート、およびプログラミング言語を選択する必要があります。 詳細については、「 [Visual studio .net での VISUAL BASIC SMO プロジェクトの作成](../../../database-engine/dev-guide/create-a-visual-basic-smo-project-in-visual-studio-net.md)」または「visual [studio .Net での Visual C&#35; SMO プロジェクトの作成](../how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md)」を参照してください。  
   
 ## <a name="creating-a-non-clustered-composite-index-in-visual-basic"></a>Visual Basic での非クラスター化複合インデックスの作成  
- このコード例では、非クラスター化複合インデックスを作成する方法を示します。 複合インデックスの場合、2 つ以上の列をインデックスに追加します。 非クラスター化インデックスを作成するために、<xref:Microsoft.SqlServer.Management.Smo.Index.IsClustered%2A> プロパティは `False` に設定します。  
+ このコード例では、複合の非クラスター化インデックスを作成する方法を示します。 複合インデックスの場合、2 つ以上の列をインデックスに追加します。 非クラスター化インデックスを作成するために、<xref:Microsoft.SqlServer.Management.Smo.Index.IsClustered%2A> プロパティは `False` に設定します。  
   
-```  
+```vb
 ' /r:Microsoft.SqlServer.Smo.dll  
 ' /r:Microsoft.SqlServer.ConnectionInfo.dll  
 ' /r:Microsoft.SqlServer.SqlEnum.dll  
@@ -80,14 +80,13 @@ Public Class A
         ' Remove the index from the table.   
         idx.Drop()  
     End Sub  
-End Class  
-  
+End Class
 ```  
   
 ## <a name="creating-a-non-clustered-composite-index-in-visual-c"></a>Visual C# での非クラスター化複合インデックスの作成  
- このコード例では、非クラスター化複合インデックスを作成する方法を示します。 複合インデックスの場合、2 つ以上の列をインデックスに追加します。 非クラスター化インデックスを作成するために、<xref:Microsoft.SqlServer.Management.Smo.Index.IsClustered%2A> プロパティは `False` に設定します。  
+ このコード例では、複合の非クラスター化インデックスを作成する方法を示します。 複合インデックスの場合、2 つ以上の列をインデックスに追加します。 非クラスター化インデックスを作成するために、<xref:Microsoft.SqlServer.Management.Smo.Index.IsClustered%2A> プロパティは `False` に設定します。  
   
-```  
+```csharp
 // /r:Microsoft.SqlServer.Smo.dll  
 // /r:Microsoft.SqlServer.ConnectionInfo.dll  
 // /r:Microsoft.SqlServer.SqlEnum.dll  
@@ -138,25 +137,24 @@ public class A {
       // Remove the index from the table.   
       idx.Drop();  
    }  
-}  
-  
+}
 ```  
   
 ## <a name="creating-a-non-clustered-composite-index-in-powershell"></a>PowerShell での非クラスター化複合インデックスの作成  
- このコード例では、非クラスター化複合インデックスを作成する方法を示します。 複合インデックスの場合、2 つ以上の列をインデックスに追加します。 非クラスター化インデックスを作成するために、<xref:Microsoft.SqlServer.Management.Smo.Index.IsClustered%2A> プロパティは `False` に設定します。  
+ このコード例では、複合の非クラスター化インデックスを作成する方法を示します。 複合インデックスの場合、2 つ以上の列をインデックスに追加します。 非クラスター化インデックスを作成するために、<xref:Microsoft.SqlServer.Management.Smo.Index.IsClustered%2A> プロパティは `False` に設定します。  
   
-```  
+```powershell
 # Set the path context to the local, default instance of SQL Server and to the  
 #database tables in Adventureworks2012  
 CD \sql\localhost\default\databases\AdventureWorks2012\Tables\  
   
 #Get a reference to the table  
-$tb = get-item HumanResources.Employee  
+$tb = Get-Item HumanResources.Employee  
   
-#Define an Index object variable by providing the parent table and index name in the constructor.   
+#Define an Index object variable by providing the parent table and index name in the constructor.
 $idx = New-Object -TypeName Microsoft.SqlServer.Management.SMO.Index -argumentlist $tb, "TestIndex"  
   
-#Add indexed columns to the index.   
+#Add indexed columns to the index.
 $icol1 = New-Object -TypeName Microsoft.SqlServer.Management.SMO.IndexedColumn `  
 -argumentlist $idx, "BusinessEntityId", $true  
 $idx.IndexedColumns.Add($icol1)  
@@ -165,28 +163,28 @@ $icol2 = New-Object -TypeName Microsoft.SqlServer.Management.SMO.IndexedColumn `
 -argumentlist $idx, "HireDate", $true  
 $idx.IndexedColumns.Add($icol2)  
   
-#Set the index properties.   
-$idx.IndexKeyType = [Microsoft.SqlServer.Management.SMO.IndexKeyType]::DriUniqueKey   
+#Set the index properties.
+$idx.IndexKeyType = [Microsoft.SqlServer.Management.SMO.IndexKeyType]::DriUniqueKey
 $idx.IsClustered = $false  
 $idx.FillFactor = 50  
   
-#Create the index on the instance of SQL Server.   
+#Create the index on the instance of SQL Server.
 $idx.Create()  
   
-#Modify the page locks property.   
-$idx.DisallowPageLocks = $true  
+#Modify the page locks property.
+$idx.DisallowPageLocks = $true
   
-#Run the Alter method to make the change on the instance of SQL Server.   
+#Run the Alter method to make the change on the instance of SQL Server.
 $idx.Alter()  
   
-#Remove the index from the table.   
+#Remove the index from the table.
 $idx.Drop();  
 ```  
   
 ## <a name="creating-an-xml-index-in-visual-basic"></a>Visual Basic での XML インデックスの作成  
- このコード例では、XML データ型に対して XML インデックスを作成する方法を示します。 作成された、MySampleCollection と呼ばれる XML スキーマ コレクションを XML データ型では[を使用して XML スキーマ](using-xml-schemas.md)です。 XML インデックスにはいくつかの制限事項がありますが、その 1 つは、XML インデックスはクラスター化主キーを既に持っているテーブルに作成する必要があるという点です。  
+ このコード例では、XML データ型に対して XML インデックスを作成する方法を示します。 XML データ型は MySampleCollection という名前の XML スキーマコレクションで、XML スキーマ[を使用して](using-xml-schemas.md)作成されます。 XML インデックスにはいくつかの制限事項がありますが、その 1 つは、XML インデックスはクラスター化主キーを既に持っているテーブルに作成する必要があるという点です。  
   
-```  
+```vb
 ' /r:Microsoft.SqlServer.Smo.dll  
 ' /r:Microsoft.SqlServer.ConnectionInfo.dll  
 ' /r:Microsoft.SqlServer.SqlEnum.dll  
@@ -242,14 +240,13 @@ Public Class A
         ' Create the XML index on the instance of SQL Server.   
         i.Create()  
     End Sub  
-End Class  
-  
+End Class
 ```  
   
 ## <a name="creating-an-xml-index-in-visual-c"></a>Visual C# での XML インデックスの作成  
- このコード例では、XML データ型に対して XML インデックスを作成する方法を示します。 作成された、MySampleCollection と呼ばれる XML スキーマ コレクションを XML データ型では[を使用して XML スキーマ](using-xml-schemas.md)です。 XML インデックスにはいくつかの制限事項がありますが、その 1 つは、XML インデックスはクラスター化主キーを既に持っているテーブルに作成する必要があるという点です。  
+ このコード例では、XML データ型に対して XML インデックスを作成する方法を示します。 XML データ型は MySampleCollection という名前の XML スキーマコレクションで、XML スキーマ[を使用して](using-xml-schemas.md)作成されます。 XML インデックスにはいくつかの制限事項がありますが、その 1 つは、XML インデックスはクラスター化主キーを既に持っているテーブルに作成する必要があるという点です。  
   
-```  
+```csharp
 // /r:Microsoft.SqlServer.Smo.dll  
 // /r:Microsoft.SqlServer.ConnectionInfo.dll  
 // /r:Microsoft.SqlServer.SqlEnum.dll  
@@ -305,61 +302,56 @@ public class A {
       // Create the XML index on the instance of SQL Server.   
       i.Create();  
    }  
-}  
-  
+}
 ```  
   
 ## <a name="creating-an-xml-index-in-powershell"></a>PowerShell での XML インデックスの作成  
- このコード例では、XML データ型に対して XML インデックスを作成する方法を示します。 作成された、MySampleCollection と呼ばれる XML スキーマ コレクションを XML データ型では[を使用して XML スキーマ](using-xml-schemas.md)です。 XML インデックスにはいくつかの制限事項がありますが、その 1 つは、XML インデックスはクラスター化主キーを既に持っているテーブルに作成する必要があるという点です。  
+ このコード例では、XML データ型に対して XML インデックスを作成する方法を示します。 XML データ型は MySampleCollection という名前の XML スキーマコレクションで、XML スキーマ[を使用して](using-xml-schemas.md)作成されます。 XML インデックスにはいくつかの制限事項がありますが、その 1 つは、XML インデックスはクラスター化主キーを既に持っているテーブルに作成する必要があるという点です。  
   
-```  
+```powershell
 # Set the path context to the local, default instance of SQL Server and get a reference to adventureworks2012  
 CD \sql\localhost\default\databases  
-$db = get-item Adventureworks2012  
+$db = Get-Item Adventureworks2012  
   
-#Define a Table object variable and add an XML type column.   
-#This sample requires that an XML schema type called MySampleCollection exists on the database.   
+#Define a Table object variable and add an XML type column.
+#This sample requires that an XML schema type called MySampleCollection exists on the database.
 #See sample on Creating an XML schema to do this  
 $tb = New-Object -TypeName Microsoft.SqlServer.Management.SMO.Table -argumentlist $db, "XmlTable"  
 $Type = [Microsoft.SqlServer.Management.SMO.DataType]::Xml("MySampleCollection")  
 $col1 =  New-Object -TypeName Microsoft.SqlServer.Management.SMO.Column -argumentlist $tb,"XMLValue", $Type  
 $tb.Columns.Add($col1)  
   
-#Add another integer column that can be made into a unique, primary key.   
+#Add another integer column that can be made into a unique, primary key.
 $Type = [Microsoft.SqlServer.Management.SMO.DataType]::Int  
 $col2 =  New-Object -TypeName Microsoft.SqlServer.Management.SMO.Column -argumentlist $tb,"Number", $Type  
 $col2.Nullable = $false  
 $tb.Columns.Add($col2)  
   
-#Create the table of the instance of SQL Server.   
+#Create the table of the instance of SQL Server.
 $tb.Create()  
   
-#Create a unique, clustered, primary key index on the integer column. This is required for an XML index.   
-#Define an Index object variable by providing the parent table and index name in the constructor.   
-$cp = New-Object -TypeName Microsoft.SqlServer.Management.SMO.Index -argumentlist $tb, "clusprimindex"          
+#Create a unique, clustered, primary key index on the integer column. This is required for an XML index.
+#Define an Index object variable by providing the parent table and index name in the constructor.
+$cp = New-Object -TypeName Microsoft.SqlServer.Management.SMO.Index -argumentlist $tb, "clusprimindex"
 $cp.IsClustered = $true;  
 $cp.IndexKeyType = [Microsoft.SqlServer.Management.SMO.IndexKeyType]::DriPrimaryKey;  
   
-#Create and add an indexed column to the index.   
-$cpcol = New-Object -TypeName Microsoft.SqlServer.Management.SMO.IndexedColumn `  
--argumentlist $cp, "Number", $true  
+#Create and add an indexed column to the index.
+$cpcol = New-Object -TypeName Microsoft.SqlServer.Management.SMO.IndexedColumn -argumentlist $cp, "Number", $true  
 $cp.IndexedColumns.Add($cpcol)  
 $cp.Create()  
   
 #Define and XML Index object variable by supplying the parent table and  
-# the XML index name arguments in the constructor.   
-$i = New-Object -TypeName Microsoft.SqlServer.Management.SMO.Index -argumentlist $tb, "xmlindex"   
+# the XML index name arguments in the constructor.
+$i = New-Object -TypeName Microsoft.SqlServer.Management.SMO.Index -argumentlist $tb, "xmlindex"
   
-#Create and add an indexed column to the index.   
-$ic = New-Object -TypeName Microsoft.SqlServer.Management.SMO.IndexedColumn `  
--argumentlist $i, "XMLValue", $true    
+#Create and add an indexed column to the index.
+$ic = New-Object -TypeName Microsoft.SqlServer.Management.SMO.IndexedColumn -argumentlist $i, "XMLValue", $true
 $i.IndexedColumns.Add($ic)  
   
 #Create the XML index on the instance of SQL Server  
 $i.Create()  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>「  
  <xref:Microsoft.SqlServer.Management.Smo.Index>  
-  
-  

@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 0e93d79b-b12e-4e98-889e-c2dfcca20fd0
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 641a08567e990134d49d32ae7ebecaf7d2b8de5a
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 0c7fbce544cac188db7ed3b3d40478aa63809405
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52533082"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67949622"
 ---
 # <a name="item-property-ado-md-cellset"></a>Item プロパティ (ADO MD セルセット)
 セルを取得します、[セルセット](../../../ado/reference/ado-md-api/cellset-object-ado-md.md)の座標を使用します。  
@@ -68,6 +67,6 @@ Cellset.Item ( Positions )Cellset ( Positions )
 ## <a name="applies-to"></a>適用対象  
  [CellSet オブジェクト (ADO MD)](../../../ado/reference/ado-md-api/cellset-object-ado-md.md)  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [Cell オブジェクト (ADO MD)](../../../ado/reference/ado-md-api/cell-object-ado-md.md)   
  [CellSet オブジェクト (ADO MD)](../../../ado/reference/ado-md-api/cellset-object-ado-md.md)

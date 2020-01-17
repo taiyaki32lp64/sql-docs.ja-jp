@@ -14,11 +14,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 4b65f5a5d337877010c4704b6ac067ced655e99f
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52764244"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62662073"
 ---
 # <a name="options-environment-keyboard-page"></a>オプション (環境-[キーボード] ページ)
   **[オプション]** ダイアログ ボックスを使用すると、[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] のキーボード スキームをカスタマイズできます。 このオプションを使用して、キーボード スキームを選択します。 このページにアクセスするには、 **[ツール]** メニューの **[オプション]** をクリックし、 **[環境]** フォルダーを選択して、 **[キーボード]** をクリックします。  

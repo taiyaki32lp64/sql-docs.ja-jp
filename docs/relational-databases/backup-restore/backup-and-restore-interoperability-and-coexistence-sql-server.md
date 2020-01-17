@@ -1,7 +1,7 @@
 ---
-title: 'バックアップと復元: 相互運用性と共存 (SQL Server) | Microsoft Docs'
-ms.custom: ''
-ms.date: 08/05/2016
+title: 'バックアップと復元: 機能の相互運用性'
+ms.custom: seo-lt-2019
+ms.date: 12/17/2019
 ms.prod: sql
 ms.prod_service: backup-restore
 ms.reviewer: ''
@@ -16,18 +16,17 @@ helpviewer_keywords:
 ms.assetid: 69f212b8-edcd-4c5d-8a8a-679ced33c128
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 0ba345be62ae0efdcb13fe35103c472a17bef952
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 5af79e93104530b3027133ba68026cfd914f5fe5
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47723790"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75247449"
 ---
 # <a name="backup-and-restore-interoperability-and-coexistence-sql-server"></a>バックアップと復元: 相互運用性と共存 (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-  このトピックでは、[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] のいくつかの機能のバックアップと復元に関する考慮事項について説明します。 このような機能には、ファイル復元とデータベースの起動、オンライン復元と無効化されたインデックス、データベース ミラーリング、段階的な部分復元、およびフルテキスト インデックスが含まれます。  
+  このトピックでは、 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]のいくつかの機能のバックアップと復元に関する考慮事項について説明します。 このような機能には、ファイル復元とデータベースの起動、オンライン復元と無効化されたインデックス、データベース ミラーリング、段階的な部分復元、およびフルテキスト インデックスが含まれます。  
   
  **このトピックの内容**  
   
@@ -51,7 +50,7 @@ ms.locfileid: "47723790"
   
  データベースの起動中に問題が発生した場合、復旧は失敗し、データベースは SUSPECT に設定されます。 問題のファイルを特定できる場合、データベース管理者は、それらのファイルをオフラインにし、データベースの再起動を試行できます。 ファイルをオフラインにするには、次の [ALTER DATABASE](../../t-sql/statements/alter-database-transact-sql.md) ステートメントを使用します。  
   
- ALTER DATABASE *database_name* MODIFY FILE (NAME **='***filename***'**, OFFLINE)  
+ ALTER DATABASE *database_name* MODIFY FILE (NAME **='***filename***'** , OFFLINE)  
   
  起動に成功した場合、オフライン ファイルが含まれるファイル グループはすべてオフライン状態で維持されます。  
   
@@ -66,7 +65,7 @@ ms.locfileid: "47723790"
  ここで説明する内容は、複数のファイル グループを含む完全復旧モデルのデータベースだけに関連しています。  
   
 > [!NOTE]  
->  データベース ミラーリング機能は、将来のバージョンの Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]では削除される予定です。 新規の開発作業ではこの機能を使用しないようにし、現在この機能を使用しているアプリケーションは修正することを検討してください。 代わりに [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] を使用します。  
+>  データベース ミラーリング機能は、将来のバージョンの Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]では削除される予定です。 新規の開発作業ではこの機能を使用しないようにし、現在この機能を使用しているアプリケーションは修正することを検討してください。 代わりに [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] を使用してください  
   
  データベース ミラーリングは、データベースの可用性を高めるためのソリューションです。 ミラーリングはデータベースごとに実装され、完全復旧モデルを使用するデータベースでのみ機能します。 詳細については、「[データベース ミラーリング &#40;SQL Server&#41;](../../database-engine/database-mirroring/database-mirroring-sql-server.md)」を参照してください。  
   
@@ -74,9 +73,9 @@ ms.locfileid: "47723790"
 >  データベースのファイル グループのサブセットのコピーを配布するには、レプリケーションを使用します。ファイル グループ内のオブジェクトのうち、他のサーバーにコピーしたいものだけをレプリケートします。 レプリケーションの詳細については、「 [SQL Server のレプリケーション](../../relational-databases/replication/sql-server-replication.md)」を参照してください。  
   
 ### <a name="creating-the-mirror-database"></a>ミラー データベースの作成  
- WITH NORECOVERY を指定してプリンシパル データベースのバックアップをミラー サーバーに復元すると、ミラー データベースが作成されます。 この復元したデータベースの名前は、元のデータベースと同じ名前のままにする必要があります。 詳細については、「 [ミラーリングのためのミラー データベースの準備 &#40;SQL Server&#41;](../../database-engine/database-mirroring/prepare-a-mirror-database-for-mirroring-sql-server.md)のいくつかの機能のバックアップと復元に関する考慮事項について説明します。  
+ WITH NORECOVERY を指定してプリンシパル データベースのバックアップをミラー サーバーに復元すると、ミラー データベースが作成されます。 この復元したデータベースの名前は、元のデータベースと同じ名前のままにする必要があります。 詳細については、「 [ミラーリングのためのミラー データベースの準備 &#40;SQL Server&#41;](../../database-engine/database-mirroring/prepare-a-mirror-database-for-mirroring-sql-server.md)を使用します。  
   
- 段階的な部分復元シーケンスの使用がサポートされている場合は、これを使用してミラー データベースを作成できます。 ただし、ミラーリングを開始できるのは、すべてのファイル グループを復元し、通常はログ バックアップを復元して、ミラー データベースの状態をプリンシパル データベースの状態に十分近づけてからです。 詳細については、「[段階的な部分復元の実行 &#40;SQL Server&#41;](../../relational-databases/backup-restore/piecemeal-restores-sql-server.md)」を参照してください。  
+ 段階的な部分復元シーケンスの使用がサポートされている場合は、これを使用してミラー データベースを作成できます。 ただし、ミラーリングを開始できるのは、すべてのファイル グループを復元し、通常はログ バックアップを復元して、ミラー データベースの状態をプリンシパル データベースの状態に十分近づけてからです。 詳細については、「[段階的な部分復元 &#40;SQL Server&#41;](../../relational-databases/backup-restore/piecemeal-restores-sql-server.md)」を参照してください。  
   
 ### <a name="restrictions-on-backup-and-restore-during-mirroring"></a>ミラーリング中のバックアップおよび復元の制限  
  データベース ミラーリング セッションがアクティブの場合は、次の制限があります。  
@@ -135,6 +134,6 @@ ms.locfileid: "47723790"
 ## <a name="see-also"></a>参照  
  [SQL Server データベースのバックアップと復元](../../relational-databases/backup-restore/back-up-and-restore-of-sql-server-databases.md)   
  [レプリケートされたデータベースのバックアップと復元](../../relational-databases/replication/administration/back-up-and-restore-replicated-databases.md)   
-[アクティブなセカンダリ: セカンダリ レプリカでのバックアップ \(AlwaysOn 可用性グループ\)](../../database-engine/availability-groups/windows/active-secondaries-backup-on-secondary-replicas-always-on-availability-groups.md)  
+[アクティブなセカンダリ:セカンダリ レプリカでのバックアップ \(Always On 可用性グループ\)](../../database-engine/availability-groups/windows/active-secondaries-backup-on-secondary-replicas-always-on-availability-groups.md)  
   
   

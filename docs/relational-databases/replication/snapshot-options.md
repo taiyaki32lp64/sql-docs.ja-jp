@@ -1,6 +1,7 @@
 ---
-title: SQL レプリケーションのスナップショットの初期化オプションを変更する | Microsoft Docs
-ms.custom: ''
+title: スナップショットの初期化オプションを変更する
+description: スナップショットの形式や SQL Server Management Studio のスナップショット フォルダーの場所など、レプリケーション スナップショットのさまざまな初期化オプションを変更します。
+ms.custom: seo-lt-2019
 ms.date: 11/20/2018
 ms.prod: sql
 ms.prod_service: database-engine
@@ -13,25 +14,25 @@ helpviewer_keywords:
 ms.assetid: 759fab42-66c7-4541-a7a3-bb6fb868493c
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 1aa12d4c61f8dae99a948cde69e2370665977227
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
+ms.openlocfilehash: 81816333d8933e91d78c811a43293b5ca2452106
+ms.sourcegitcommit: 02d44167a1ee025ba925a6fefadeea966912954c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54124672"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75321694"
 ---
 # <a name="modify-snapshot-initialization-options-for-sql-replication"></a>SQL レプリケーションのスナップショットの初期化オプションを変更する 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
 [ スナップショットを使用してサブスクリプションを初期化する](initialize-a-subscription-with-a-snapshot.md)際には、いくつかのオプションを指定できます。
 
 ## <a name="specify-snapshot-format-sql-server-management-studio"></a>スナップショットの形式の指定 (SQL Server Management Studio)
-  スナップショットの形式は、**[パブリケーションのプロパティ - \<Publication>]** ダイアログ ボックスの **[スナップショット]** ページで指定します。 このダイアログ ボックスへのアクセス方法の詳細については、「[パブリケーション プロパティの表示および変更](../../relational-databases/replication/publish/view-and-modify-publication-properties.md)」を参照してください。  
+  スナップショットの形式は、 **[パブリケーションのプロパティ - \<Publication>]** ダイアログ ボックスの **[スナップショット]** ページで指定します。 このダイアログ ボックスへのアクセス方法の詳細については、「[パブリケーション プロパティの表示および変更](../../relational-databases/replication/publish/view-and-modify-publication-properties.md)」を参照してください。  
   
 ### <a name="to-specify-snapshot-format"></a>スナップショットの形式を指定するには  
   
-1.  **[パブリケーションのプロパティ - \<Publication>]** ダイアログ ボックスの **[スナップショット]** ページで、**[ネイティブ SQL Server - サブスクライバーはすべて SQL Server を実行しているサーバーである必要があります]** または **[文字 - パブリッシャーまたはサブスクライバーで SQL Server が実行されていない場合は必須]** を選択します。  
+1.  **[パブリケーションのプロパティ - \<Publication>]** ダイアログ ボックスの **[スナップショット]** ページで、 **[ネイティブ SQL Server - サブスクライバーはすべて SQL Server を実行しているサーバーである必要があります]** または **[文字 - パブリッシャーまたはサブスクライバーで SQL Server が実行されていない場合は必須]** を選択します。  
   
     > [!NOTE]  
     >  このパブリケーションで SQL Server Compact データベースまたは SQL Server 以外のデータベースへのサブスクリプションをサポートする必要がある場合を除き、ネイティブ形式を選択することをお勧めします。  
@@ -47,8 +48,8 @@ ms.locfileid: "54124672"
   
 ### <a name="to-modify-the-default-snapshot-location"></a>既定のスナップショットの場所を変更するには  
   
-1.  **[ディストリビューターのプロパティ - \<Distributor>]** ダイアログ ボックスの **[パブリッシャー]** ページで、既定のスナップショットの場所を変更するパブリッシャーのプロパティ ボタン (**[...]**) をクリックします。    
-2.  **[パブリッシャーのプロパティ - \<Publisher>]** ダイアログ ボックスで、**[既定のスナップショット フォルダー]** プロパティの値を入力します。  
+1.  **[ディストリビューターのプロパティ - \<Distributor>]** ダイアログ ボックスの **[パブリッシャー]** ページで、既定のスナップショットの場所を変更するパブリッシャーのプロパティ ボタン ( **[...]** ) をクリックします。    
+2.  **[パブリッシャーのプロパティ - \<Publisher>]** ダイアログ ボックスで、 **[既定のスナップショット フォルダー]** プロパティの値を入力します。  
   
     > [!NOTE]  
     >  スナップショット エージェントには、指定したディレクトリに対する書き込み権限が必要です。また、ディストリビューション エージェントまたはマージ エージェントには、読み取り権限が必要です。 プル サブスクリプションを使用する場合は、共有ディレクトリを UNC (汎用名前付け規則) パス (\\\computername\snapshot など) で指定する必要があります。 詳細については、「[Secure the Snapshot Folder](../../relational-databases/replication/security/secure-the-snapshot-folder.md)」(スナップショット フォルダーのセキュリティ保護) をご覧ください。    
@@ -63,7 +64,7 @@ ms.locfileid: "54124672"
 代替スナップショット フォルダーを指定する必要がある場合、またはスナップショット ファイルを圧縮する必要がある場合には、パブリケーションの作成時に即座に初期スナップショットを作成せず、スナップショットの場所に関するパブリケーションのプロパティを設定してから、そのパブリケーションにスナップショット エージェントを実行してください。 初期スナップショットの作成後に代替位置を変更した場合、パブリケーションに対して生成されたすべてのスナップショットは、新しい代替位置には再配置されません。 この場合、パブリケーションの設定に応じて、マージ エージェントとディストリビューション エージェントが新しい代替位置でスナップショット ファイルを見つけることができなくなる可能性があります。  
   
 > [!NOTE]  
->  (**[パブリケーション プロパティ]** ダイアログ ボックスまたは [sp_changepublication (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-changepublication-transact-sql.md) を使用して、) 既定のスナップショット フォルダーと同じ場所に代替位置を指定しないでください。  
+>  ( **[パブリケーション プロパティ]** ダイアログ ボックスまたは [sp_changepublication (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-changepublication-transact-sql.md) を使用して、) 既定のスナップショット フォルダーと同じ場所に代替位置を指定しないでください。  
   
 > [!CAUTION]  
 >  WebSync と代替スナップショット フォルダーの場所を同時に使用しないでください。  

@@ -9,25 +9,24 @@ ms.topic: conceptual
 ms.assetid: 68074bd5-be9d-4487-a320-5b51ef8e2b2d
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 8979e3457250cbce7fe3dbe5992c84e786d3f7c0
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 0932181110c5c4ec34e3d4bdf6b1395bffc65cca
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47709700"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67904990"
 ---
 # <a name="view-and-read-failover-cluster-instance-diagnostics-log"></a>フェールオーバー クラスター インスタンスの診断ログを表示して読む方法
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   SQL Server Resource DLL のすべての重大なエラーと警告イベントが、Windows イベント ログに書き込まれます。 [sp_server_diagnostics &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-server-diagnostics-transact-sql.md) システム ストアド プロシージャによってキャプチャされる SQL Server に固有の診断情報の実行ログは、SQL Server フェールオーバー クラスター診断ログ ファイル (*SQLDIAG* ログとも呼ばれます) に書き込まれます。  
   
--   **作業を開始する準備:**  [推奨事項](#Recommendations)、[セキュリティ](#Security)  
+-   **作業を開始する準備:** [推奨事項](#Recommendations)、[セキュリティ](#Security)  
   
--   **診断ログの表示:**  [SQL Server Management Studio の使用](#SSMSProcedure)、 [Transact-SQL の使用](#TsqlProcedure)  
+-   **診断ログを表示するには、次を使用:** [SQL Server Management Studio](#SSMSProcedure)、[Transact-SQL](#TsqlProcedure)  
   
--   **診断ログ設定の構成:** [Transact-SQL の使用](#TsqlConfigure)  
+-   **診断ログ設定を構成するには、次を使用:** [Transact-SQL](#TsqlConfigure)  
   
-##  <a name="BeforeYouBegin"></a> 作業を開始する準備  
+##  <a name="BeforeYouBegin"></a> はじめに  
   
 ###  <a name="Recommendations"></a> 推奨事項  
  既定では、SQLDIAG は、SQL Server インスタンス ディレクトリのローカル ログ フォルダーに保存されます。たとえば、AlwaysOn フェールオーバー クラスター インスタンス (FCI) の所有元ノードの "C\Program Files\Microsoft SQL Server\MSSQL13.\<InstanceName>\MSSQL\LOG" です。 各 SQLDIAG ログ ファイルのサイズは 100 MB に固定されています。 10 個のログ ファイルがコンピューターに格納された後、新しいログとして再利用されます。  
@@ -44,7 +43,7 @@ ms.locfileid: "47709700"
 ##  <a name="SSMSProcedure"></a> SQL Server Management Studio の使用  
  **診断ログ ファイルを表示するには**  
   
-1.  **[ファイル]** メニューから、 **[開く]**、 **[ファイル]** を選択し、表示する診断ログ ファイルを選択します。  
+1.  **[ファイル]** メニューから、 **[開く]** 、 **[ファイル]** を選択し、表示する診断ログ ファイルを選択します。  
   
 2.  イベントは、右ペインに行として表示されます。既定では、 **名前**と **タイムスタンプ** の 2 つの列だけが表示されます。  
   

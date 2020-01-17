@@ -11,17 +11,20 @@ helpviewer_keywords:
 - packages view [Integration Services]
 - catalog.packages view [Integration Services]
 ms.assetid: a634e94d-f492-4dfd-9611-a35f545106a1
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: 1558aeed5266d573fcf7b99ced456a4d2de09940
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: aea0d3c07482c7c54dc5adb8956b290791f29111
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47818960"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71295165"
 ---
 # <a name="catalogpackages-ssisdb-database"></a>catalog.packages (SSISDB データベース)
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
   **SSISDB** カタログに表示されるすべてのパッケージの詳細を表示します。  

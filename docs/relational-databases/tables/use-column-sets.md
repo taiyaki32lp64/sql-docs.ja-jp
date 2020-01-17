@@ -13,14 +13,13 @@ helpviewer_keywords:
 ms.assetid: a4f9de95-dc8f-4ad8-b957-137e32bfa500
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: f8cd068e23315edcef7df3a677a52530a767c685
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 1877f653244100126226b85b29a24ca458c1cf74
+ms.sourcegitcommit: 4c7151f9f3f341f8eae70cb2945f3732ddba54af
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47714460"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71326137"
 ---
 # <a name="use-column-sets"></a>列セットの使用
 [!INCLUDE[tsql-appliesto-ss2016-all-md](../../includes/tsql-appliesto-ss2016-all-md.md)]
@@ -92,14 +91,14 @@ ms.locfileid: "47714460"
 -   NULL 値が格納されたスパース列は、列セットの XML 表記で省略されます。  
   
 > [!WARNING]  
->  列セットを追加すると、SELECT * クエリの動作が変わります。 クエリから列セットが XML 列として返されるようになり、個々のスパース列は返されなくなります。 スキーマ設計者とソフトウェア開発者は、既存のアプリケーションが動作不能とならないように注意する必要があります。  
+>  列セットを追加すると、`SELECT *` クエリの動作が変わります。 クエリから列セットが XML 列として返されるようになり、個々のスパース列は返されなくなります。 スキーマ設計者とソフトウェア開発者は、既存のアプリケーションが動作不能とならないように注意する必要があります。  
   
 ## <a name="inserting-or-modifying-data-in-a-column-set"></a>列セットのデータの挿入または変更  
  スパース列のデータ操作を実行するには、個々の列の名前を使用するか、または列セットの名前を参照し、列セットの XML 形式を使用して列セットの値を指定します。 XML 列では、スパース列を任意の順序で配置できます。  
   
  XML 列セットを使用してスパース列の値を挿入または更新すると、基になるスパース列に挿入された値が **xml** データ型から暗黙的に変換されます。 数値列の場合、数値列の XML に含まれる空白値は空白の文字列に変換されます。 これにより、次の例のように、数値列にゼロが挿入されます。  
   
-```  
+```sql  
 CREATE TABLE t (i int SPARSE, cs xml column_set FOR ALL_SPARSE_COLUMNS);  
 GO  
 INSERT t(cs) VALUES ('<i/>');  
@@ -110,7 +109,7 @@ GO
   
  この例では、 `i`列に値が指定されていませんが、値 `0` が挿入されています。  
   
-## <a name="using-the-sqlvariant-data-type"></a>sql_variant データ型の使用  
+## <a name="using-the-sql_variant-data-type"></a>sql_variant データ型の使用  
  **sql_variant** データ型には、 **int**、 **char**、 **date**などの種類の異なる複数のデータ型を格納できます。 列セットは、 **sql_variant** 値に関連付けられている小数点以下桁数、有効桁数、ロケール情報などのデータ型情報を、生成された XML 列に属性として出力します。 これらの属性を、列セットでの挿入または更新操作の入力としてカスタム生成 XML ステートメントで指定しようとすると、一部の属性が必須となり、一部の属性に既定値が割り当てられます。 値が指定されなかったときにサーバーで生成されるデータ型と既定値の一覧を次の表に示します。  
   
 |データ型|localeID*|sqlCompareOptions|sqlCollationVersion|SqlSortId|最大の長さ|有効桁数|Scale|  
@@ -149,7 +148,7 @@ GO
 > [!NOTE]  
 >  このテーブルは、簡単に表示して確認できるように、5 つの列のみで構成されています。  
   
-```  
+```sql  
 USE AdventureWorks2012;  
 GO  
   
@@ -167,7 +166,7 @@ GO
 ### <a name="b-inserting-data-to-a-table-by-using-the-names-of-the-sparse-columns"></a>B. スパース列の名前を使用してテーブルにデータを挿入する  
  次の例では、例 A で作成したテーブルに 2 つの行を挿入します。列セットは参照せず、スパース列の名前を使用します。  
   
-```  
+```sql  
 INSERT DocumentStoreWithColumnSet (DocID, Title, ProductionSpecification, ProductionLocation)  
 VALUES (1, 'Tire Spec 1', 'AXZZ217', 27);  
 GO  
@@ -180,7 +179,7 @@ GO
 ### <a name="c-inserting-data-to-a-table-by-using-the-name-of-the-column-set"></a>C. 列セットの名前を使用してテーブルにデータを挿入する  
  次の例では、例 A で作成したテーブルに 3 つ目の行を挿入します。今回はスパース列の名前を使用しません。 代わりに、列セットの名前を使用し、挿入操作によって 4 つのスパース列の 2 つに XML 形式で値を挿入します。  
   
-```  
+```sql  
 INSERT DocumentStoreWithColumnSet (DocID, Title, SpecialPurposeColumns)  
 VALUES (3, 'Tire Spec 2', '<ProductionSpecification>AXW9R411</ProductionSpecification><ProductionLocation>38</ProductionLocation>');  
 GO  
@@ -189,24 +188,23 @@ GO
 ### <a name="d-observing-the-results-of-a-column-set-when-select--is-used"></a>D. SELECT * を使用したときの列セットの結果を確認する  
  次の例では、列セットを含むテーブルからすべての列を選択します。 この操作で、スパース列の値の組み合わせを含んだ XML 列が返されます。 スパース列が個別に返されることはありません。  
   
-```  
+```sql  
 SELECT DocID, Title, SpecialPurposeColumns FROM DocumentStoreWithColumnSet ;  
 ```  
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
- `DocID Title        SpecialPurposeColumns`  
-  
- `1      Tire Spec 1  <ProductionSpecification>AXZZ217</ProductionSpecification><ProductionLocation>27</ProductionLocation>`  
-  
- `2      Survey 2142  <MarketingSurveyGroup>Men 25 - 35</MarketingSurveyGroup>`  
-  
- `3      Tire Spec 2  <ProductionSpecification>AXW9R411</ProductionSpecification><ProductionLocation>38</ProductionLocation>`  
+ ```
+ DocID  Title        SpecialPurposeColumns  
+ 1      Tire Spec 1  <ProductionSpecification>AXZZ217</ProductionSpecification><ProductionLocation>27</ProductionLocation>  
+ 2      Survey 2142  <MarketingSurveyGroup>Men 25 - 35</MarketingSurveyGroup>  
+ 3      Tire Spec 2  <ProductionSpecification>AXW9R411</ProductionSpecification><ProductionLocation>38</ProductionLocation> 
+ ```
   
 ### <a name="e-observing-the-results-of-selecting-the-column-set-by-name"></a>E. 列セットを名前で選択した場合の結果を確認する  
  製造部門にマーケティング データは必要ないため、この例では `WHERE` 句を追加して出力を制限します。 例では、列セットの名前が使用されています。  
   
-```  
+```sql  
 SELECT DocID, Title, SpecialPurposeColumns  
 FROM DocumentStoreWithColumnSet  
 WHERE ProductionSpecification IS NOT NULL ;  
@@ -214,16 +212,16 @@ WHERE ProductionSpecification IS NOT NULL ;
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
- `DocID Title        SpecialPurposeColumns`  
-  
- `1     Tire Spec 1  <ProductionSpecification>AXZZ217</ProductionSpecification><ProductionLocation>27</ProductionLocation>`  
-  
- `3     Tire Spec 2  <ProductionSpecification>AXW9R411</ProductionSpecification><ProductionLocation>38</ProductionLocation>`  
-  
+ ```
+ DocID  Title        SpecialPurposeColumns  
+ 1      Tire Spec 1  <ProductionSpecification>AXZZ217</ProductionSpecification><ProductionLocation>27</ProductionLocation>  
+ 3      Tire Spec 2  <ProductionSpecification>AXW9R411</ProductionSpecification><ProductionLocation>38</ProductionLocation>  
+ ```
+ 
 ### <a name="f-observing-the-results-of-selecting-sparse-columns-by-name"></a>F. スパース列を名前で選択した場合の結果を確認する  
  テーブルに列セットが含まれている場合でも、次の例のように個々の列名を使用してテーブルに対してクエリを実行できます。  
   
-```  
+```sql  
 SELECT DocID, Title, ProductionSpecification, ProductionLocation   
 FROM DocumentStoreWithColumnSet  
 WHERE ProductionSpecification IS NOT NULL ;  
@@ -231,16 +229,16 @@ WHERE ProductionSpecification IS NOT NULL ;
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
- `DocID Title        ProductionSpecification ProductionLocation`  
-  
- `1     Tire Spec 1  AXZZ217                 27`  
-  
- `3     Tire Spec 2  AXW9R411                38`  
-  
+ ```
+ DocID  Title        ProductionSpecification ProductionLocation`  
+ 1      Tire Spec 1  AXZZ217                 27`  
+ 3      Tire Spec 2  AXW9R411                38`  
+ ```
+ 
 ### <a name="g-updating-a-table-by-using-a-column-set"></a>G. 列セットを使用してテーブルを更新する  
  次の例では、3 番目のレコードを、その行で使用されている 2 つのスパース列の新しい値で更新します。  
   
-```  
+```sql  
 UPDATE DocumentStoreWithColumnSet  
 SET SpecialPurposeColumns = '<ProductionSpecification>ZZ285W</ProductionSpecification><ProductionLocation>38</ProductionLocation>'  
 WHERE DocID = 3 ;  
@@ -252,7 +250,7 @@ GO
   
  次の例では、3 番目のレコードを更新しますが、作成された 2 つの列の 1 つにのみ値を指定します。 2 番目の列である `ProductionLocation` は `UPDATE` ステートメントに含まれず、NULL に更新されます。  
   
-```  
+```sql  
 UPDATE DocumentStoreWithColumnSet  
 SET SpecialPurposeColumns = '<ProductionSpecification>ZZ285W</ProductionSpecification>'  
 WHERE DocID = 3 ;  

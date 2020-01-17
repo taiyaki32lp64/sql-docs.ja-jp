@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 59a6db8f-2db6-4071-9005-928a7231de92
 author: Shamikg
 ms.author: Shamikg
-manager: craigg
-ms.openlocfilehash: 690d12a2f5f397256760c1c0cf5e2ee954d90843
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 5acc3153d7305f404c5fc6a0478b83cc0c98bad6
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47746440"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68066702"
 ---
 # <a name="refresh-from-database-mysqltosql"></a>データベースからの更新 (MySQLToSQL)
 **データベースからの更新** ダイアログ ボックスを使用して MySQL データベースから更新するには、どのオブジェクトを選択できます。 ダイアログ ボックス内の行は色分け、メタデータの状態に基づいて。  

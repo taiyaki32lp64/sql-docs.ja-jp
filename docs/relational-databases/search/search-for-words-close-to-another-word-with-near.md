@@ -1,10 +1,8 @@
 ---
 title: NEAR による他の単語の近くにある単語の検索 | Microsoft Docs
-ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: search, sql-database
-ms.reviewer: ''
 ms.technology: search
 ms.topic: conceptual
 dev_langs:
@@ -18,16 +16,16 @@ helpviewer_keywords:
 - full-text queries [SQL Server], proximity
 - queries [full-text search], proximity
 ms.assetid: 87520646-4865-49ae-8790-f766b80a41f3
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
+author: pmasl
+ms.author: pelopes
+ms.reviewer: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: e26e17abccd023172dee0d42d06d519ef72f87e4
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 0e94bdcf4770190d3d84986b511996213fac17f9
+ms.sourcegitcommit: e821cd8e5daf95721caa1e64c2815a4523227aa4
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52538355"
+ms.lasthandoff: 08/01/2019
+ms.locfileid: "68702830"
 ---
 # <a name="search-for-words-close-to-another-word-with-near"></a>NEAR による他の単語の近くにある単語の検索
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -111,7 +109,7 @@ GO
  "`Cats` `enjoy` `hunting mice``, but usually avoid` `dogs``.`"  
   
 ## <a name="combine-near-with-other-terms"></a>NEAR と他の語句を組み合わせる  
- NEAR と他のいくつかの語句を組み合わせることができます。 AND (&)、OR (|)、または AND NOT (&!) を使用して、カスタム近接語句と他のカスタム近接語句、単純語句、またはプレフィックス語句を組み合わせることができます。 例 :  
+ NEAR と他のいくつかの語句を組み合わせることができます。 AND (&)、OR (|)、または AND NOT (&!) を使用して、カスタム近接語句と他のカスタム近接語句、単純語句、またはプレフィックス語句を組み合わせることができます。 例:  
   
 -   CONTAINS('NEAR((*term1*, *term2*),5) AND *term3*')  
   
@@ -138,7 +136,7 @@ CONTAINS(column_name, 'NEAR((term1, term2), 5, TRUE) AND term3')
      すべての近接検索は、重複しない語句だけを常に検索します。 検索語句で重複する語句は、一致とは認識されません。 たとえば、最大距離が 2 語で`A`および`AA`をこの順序で検索する次の近接語句について検討してみます。  
   
     ```  
-    CONTAINS(column_name, 'NEAR((A,AA),2, TRUE')  
+    CONTAINS(column_name, 'NEAR((A,AA), 2, TRUE)')
     ```  
   
      一致する語句としては、`AAA`、`A.AA`、および`A..AA`が考えられます。 `AA`だけを含む行は一致しません。  

@@ -1,7 +1,7 @@
 ---
-title: Always On 可用性グループの監視とトラブルシューティングの参照
-description: このガイドは、Always On 可用性グループのいくつかの一般的な問題の監視とトラブルシューティング作業を開始するための参照ページとして役立ちます。
-ms.custom: ag-guide, seodec18
+title: 可用性グループの監視とトラブルシューティングのガイド
+description: Always On 可用性グループのいくつかの一般的な問題の監視とトラブルシューティング作業を開始するために役立つコンテンツのインデックス。
+ms.custom: seo-lt-2019
 ms.date: 05/10/2016
 ms.prod: sql
 ms.reviewer: ''
@@ -10,15 +10,14 @@ ms.topic: conceptual
 ms.assetid: 8d6d9954-ff6b-4e58-882e-eff0174f0d07
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 59ca941e6588f00140b4b57fa3a73904b6ad8f35
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: fa4b3ae0ef918b0d7706a7f4e47eceb50d380c0b
+ms.sourcegitcommit: f8cf8cc6650a22e0b61779c20ca7428cdb23c850
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53215621"
+ms.lasthandoff: 12/04/2019
+ms.locfileid: "74822048"
 ---
-# <a name="always-on-availability-groups-troubleshooting-and-monitoring-guide"></a>Always On 可用性グループのトラブルシューティングと監視のガイド
+# <a name="monitor-and-troubleshoot-availability-groups"></a>可用性グループの監視とトラブルシューティング
  このガイドは、Always On 可用性グループの監視と可用性グループのいくつかの一般的な問題のトラブルシューティング作業を開始するために役立ちます。 オリジナルのコンテンツに加えて、他の場所で公開されている役に立つ情報のランディング ページを提供します。 このガイドでは、可用性グループの大きな領域で発生する可能性があるすべての問題を完全に説明することはできませんが、根本原因の分析と問題の解決に関して正しい方向を示すことができます。 
  
  可用性グループは、統合テクノロジーであるため、発生する多くの問題は、データベース システムの他の問題の兆候である可能性があります。 いくつかの問題は、中断された可用性データベースなど、可用性グループ内の設定が原因です。 その他の問題には、SQL Server の設定、データベース ファイルの配置、可用性に関連しない体系的なパフォーマンスの問題など、SQL Server の他の側面に関する問題が含まれます。 他の問題は、ネットワーク I/O、TCP/IP、Active Directory、Windows Server フェールオーバー クラスタリング (WSFC) の問題など、SQL Server の外部にも存在する可能性があります。 多くの場合、可用性グループ、レプリカ、またはデータベースで発生する問題の根本原因を特定するには、複数のテクノロジーをトラブルシューティングする必要があります。  
@@ -33,7 +32,7 @@ ms.locfileid: "53215621"
 |[失敗したファイルの追加操作のトラブルシューティング &#40;AlwaysOn 可用性グループ&#41;](troubleshoot-a-failed-add-file-operation-always-on-availability-groups.md)|構成|ファイルの追加操作によってセカンダリ データベースが中断され、NOT SYNCHRONIZING 状態になっています。|  
 |[マルチ サブネット環境で可用性グループ リスナーに接続できない](https://support.microsoft.com/kb/2792139/en-us)|クライアント接続|可用性グループ リスナーを構成した後で、リスナーへの ping が失敗するか、アプリケーションから接続できません。|  
 |[失敗した自動フェールオーバーのトラブルシューティング](https://support.microsoft.com/kb/2833707)|[フェールオーバー]|自動フェールオーバーが正常に完了しませんでした。|  
-|[トラブルシューティング:可用性グループ接続の超過 RTO ](troubleshoot-availability-group-exceeded-rto.md)|パフォーマンス|データ損失のない自動フェールオーバーまたは計画的な手動フェールオーバーの後で、フェールオーバー時間が RTO を超過します。 または、同期コミット セカンダリ レプリカのフェールオーバー時間を推定したとき (自動フェールオーバー パートナーなど)、RTO を超過していることが判明します。|  
+|[トラブルシューティング:可用性グループ接続の超過 RTO](troubleshoot-availability-group-exceeded-rto.md)|パフォーマンス|データ損失のない自動フェールオーバーまたは計画的な手動フェールオーバーの後で、フェールオーバー時間が RTO を超過します。 または、同期コミット セカンダリ レプリカのフェールオーバー時間を推定したとき (自動フェールオーバー パートナーなど)、RTO を超過していることが判明します。|  
 |[トラブルシューティング:可用性グループ接続の超過 RPO](troubleshoot-availability-group-exceeded-rpo.md)|パフォーマンス|強制的な手動フェールオーバーを実行した後で、データ損失が RPO より大きくなります。 または、非同期コミット セカンダリ レプリカのデータ損失の可能性を計算したとき、計算結果が RPO を超過していることが判明します。|  
 |[トラブルシューティング:プライマリ上の変更がセカンダリ レプリカに反映されない](troubleshoot-primary-changes-not-reflected-on-secondary.md)|パフォーマンス|クライアント アプリケーションは、プライマリ レプリカの更新を正常に完了しますが、セカンダリ レプリカのクエリを実行すると、変更が反映されていないことが示されます。|  
 |[トラブルシューティング:Always On 可用性グループでの長い HADR_SYNC_COMMIT 待機の種類](https://blogs.msdn.microsoft.com/sql_server_team/troubleshooting-high-hadr_sync_commit-wait-type-with-always-on-availability-groups/)|パフォーマンス|HADR_SYNC_COMMIT が異常に長い場合は、データの移動フローまたはセカンダリ レプリカのログの書き込みにパフォーマンスの問題があります。|  
@@ -47,7 +46,7 @@ ms.locfileid: "53215621"
 |[Always On ポリシー](always-on-policies.md)|AlwaysOn ダッシュボードの使用|  
 |[SQL Server エラー ログ&#40;Always On 可用性グループ&#41;](sql-server-error-log-always-on-availability-groups.md)|可用性グループ、レプリカ、データベースのログ状態遷移イベント、他の Always On コンポーネントのステータス、Always On エラー|  
 |[CLUSTER.LOG &#40;Always On 可用性グループ&#41;](cluster-log-always-on-availability-groups.md)|可用性グループ リソースの状態遷移を含むログ クラスター イベント、および SQL Server リソース DLL からのイベントとエラー。|  
-|[Always On 正常性診断ログ](always-on-health-diagnostics-log.md)|[sp_server_diagnostics &#40;TRANSACT-SQL&#41;](~/relational-databases/system-stored-procedures/sp-server-diagnostics-transact-sql.md) によって WSFC クラスター (SQL Server リソース DLL) に報告された SQL Server の正常性診断をログに記録します。|  
+|[Always On 正常性診断ログ](always-on-health-diagnostics-log.md)|[sp_server_diagnostics &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-server-diagnostics-transact-sql.md) によって WSFC クラスター (SQL Server リソース DLL) に報告された SQL Server の正常性診断をログに記録します。|  
 |[動的管理ビューおよびシステム カタログ ビュー&#40;Always On 可用性グループ&#41;](dynamic-management-views-and-system-catalog-views-always-on-availability-groups.md)|構成、正常性状態、パフォーマンス メトリックなどの可用性グループに関する情報を報告します。|  
 |[Always On 拡張イベント](always-on-extended-events.md)|可用性グループの詳細な診断をおよび役に立つ根本原因の分析を提供します。|  
 |[Always On の待機の種類](always-on-wait-types.md)|可用性グループに固有の待機の統計情報および役に立つパフォーマンス調整を提供します。|  
@@ -72,7 +71,7 @@ ms.locfileid: "53215621"
 |[PowerShell を使用した Always On 正常性状態の監視: パート 3:シンプルな監視アプリケーション](https://blogs.msdn.com/b/sqlalwayson/archive/2012/02/15/monitoring-alwayson-health-with-powershell-part-3.aspx)|アプリケーションで可用性グループを自動的に監視する方法を示します。|  
 |[PowerShell を使用した Always On 正常性状態の監視: パート 4:SQL Server エージェントとの統合](https://blogs.msdn.com/b/sqlalwayson/archive/2012/02/15/the-always-on-health-model-part-4.aspx)|SQL Server エージェントと可用性グループの監視を統合し、問題が発生したときの適切なユーザーへの通知を構成する方法について説明します。|  
 
-## <a name="next-steps"></a>次の手順  
+## <a name="next-steps"></a>次のステップ  
  [SQL Server AlwaysOn チーム ブログ](https://blogs.msdn.com/b/sqlalwayson/)   
  [CSS SQL Server エンジニアのブログ](https://blogs.msdn.com/b/psssql/)  
   

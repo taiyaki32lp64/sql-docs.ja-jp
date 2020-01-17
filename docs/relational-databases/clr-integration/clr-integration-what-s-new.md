@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 871fcccd-b726-4b13-9f95-d02b4b39d8ab
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 09cce119f74bcdf858887078c0a78046dedde7d2
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 8d37d476808f80cf132037542d17cb3de61eeccc
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51677981"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68134874"
 ---
 # <a name="clr-integration---what39s-new"></a>CLR 統合 - 何&#39;s New
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

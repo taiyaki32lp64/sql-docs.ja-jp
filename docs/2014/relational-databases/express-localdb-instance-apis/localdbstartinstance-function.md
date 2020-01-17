@@ -17,11 +17,11 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: ad86f5989fe9ff90132637d062b708423f23eef1
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52799644"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63131488"
 ---
 # <a name="localdbstartinstance-function"></a>LocalDBStartInstance 関数
   指定した名前の SQL Server Express LocalDB インスタンスを起動します。  
@@ -110,7 +110,7 @@ HRESULT LocalDBStartInstance(
 |バッファー|バッファー サイズ|理論的根拠|アクション|  
 |------------|-----------------|---------------|------------|  
 |NULL|NULL|ユーザーがインスタンスを起動する必要があるあり、パイプ必要としない名前。|インスタンスを起動します (パイプの戻り値と必要なバッファー サイズの戻り値なし)。|  
-|NULL|存在|ユーザーが出力バッファー サイズを要求します  (次の呼び出しで、ユーザーはおそらく実際の起動を要求します)。|必要なバッファー サイズを返します (起動とパイプの戻り値なし)。 結果は S_OK です。|  
+|NULL|存在|ユーザーが出力バッファー サイズを要求します (次の呼び出しで、ユーザーはおそらく実際の起動を要求します)。|必要なバッファー サイズを返します (起動とパイプの戻り値なし)。 結果は S_OK です。|  
 |存在|NULL|許可されていません。入力に誤りがあります。|返される結果は、LOCALDB_ERROR_INVALID_PARAMETER です。|  
 |存在|存在|ユーザーはインスタンスを起動する必要があり、起動後に接続するパイプ名が必要です。|バッファー サイズを確認し、インスタンスを起動し、バッファーにあるパイプ名を返します。 <br />バッファー サイズ引数の長さを返します、"server ="文字列の末尾の null は含まれません。|  
   

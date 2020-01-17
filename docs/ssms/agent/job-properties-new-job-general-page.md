@@ -1,5 +1,5 @@
 ---
-title: ジョブのプロパティ - [新しいジョブ] - ([全般] ページ) | Microsoft Docs
+title: ジョブのプロパティ - [新しいジョブ] ([全般] ページ) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -10,18 +10,17 @@ ms.topic: conceptual
 f1_keywords:
 - sql13.ag.job.general.f1
 ms.assetid: b6832840-1c18-4db8-94fc-080db880ae9f
-author: stevestein
-ms.author: sstein
-manager: craigg
+author: markingmyname
+ms.author: maghan
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 1ba6b2700ca49b1b649dae2b1c05320d8cf4a001
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: f945cb8cc98e9656d36a6b9178b16f7dcbf04a59
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47676130"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68252611"
 ---
-# <a name="job-properties---new-job-general-page"></a>ジョブのプロパティ - [新しいジョブ] - ([全般] ページ)
+# <a name="job-properties---new-job-general-page"></a>ジョブのプロパティ - [新しいジョブ] ([全般] ページ)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
 > [!IMPORTANT]  

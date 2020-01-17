@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dm.miningmodeleditor.structure.addnestedtable.f1
@@ -15,12 +14,12 @@ ms.assetid: f68b89a7-17df-45f8-ba7f-b458cd9b1ec3
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: f7eaccd916ee401ad1b6b82a155e50688b2ff57a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 8edfea95968bee0dc1103f8069ecfe9e0d08e3ed
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48227539"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66069769"
 ---
 # <a name="select-a-nested-table-key-column-dialog-box-mining-structure-view"></a>[入れ子になったテーブル キー列の選択] ダイアログ ボックス ([マイニング構造] ビュー)
   **[入れ子になったテーブル キー列の選択]** ダイアログ ボックスを使用すると、新しい入れ子になったテーブルのキーとして動作する列を指定できます。 ダイアログ ボックスを閉じると、指定したキー列を含む新しいテーブルがマイニング構造に追加されます。 入れ子になったテーブルに新たに列を追加するには、構造を右クリックして **[列の追加]** をクリックします。 このダイアログ ボックスに含まれているオプションは、OLAP マイニング モデルを使用するか、リレーショナル マイニング モデルを使用するかによって異なります。  

@@ -15,11 +15,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: d5e85a3685804fa834c9a92887a46c72b7cb69a7
-ms.sourcegitcommit: 04dd0620202287869b23cc2fde998a18d3200c66
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "52641423"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62811316"
 ---
 # <a name="default-trace-enabled-server-configuration-option"></a>default trace enabled サーバー構成オプション
   **default trace enabled** オプションは、既定のトレース ログ ファイルを有効または無効にする場合に使用します。 既定のトレース機能では、主に構成オプションに関連する操作および変更の詳しい永続的なログが提供されます。  
@@ -51,7 +51,7 @@ GO
   
  **default trace enabled** オプションは拡張オプションです。 **sp_configure** システム ストアド プロシージャを使用して **default trace enabled** オプションの設定を変更するには、 **show advanced options** を 1 に設定する必要があります。 新しい設定は、サーバーを再起動しなくてもすぐに有効になります。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [RECONFIGURE &#40;Transact-SQL&#41;](/sql/t-sql/language-elements/reconfigure-transact-sql)   
  [サーバー構成オプション &#40;SQL Server&#41;](server-configuration-options-sql-server.md)   
  [sp_configure &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-configure-transact-sql)  

@@ -1,12 +1,11 @@
 ---
-title: 拡張イベントへの PowerShell プロバイダーの使用 | Microsoft Docs
-ms.custom: ''
+title: 拡張イベントへの PowerShell プロバイダーの使用
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
 ms.technology: xevents
-ms.topic: conceptual
+ms.topic: tutorial
 helpviewer_keywords:
 - PowerShell [SQL Server], xevent
 - extended events [SQL Server], PowerShell
@@ -14,16 +13,16 @@ helpviewer_keywords:
 ms.assetid: 0b10016f-a479-4444-a484-46cb4677cf64
 author: MightyPen
 ms.author: genemi
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: f42135fed23af4dc65266bdb1393546e0c1d62ef
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: c7fba3c0ad9ab6f004d001b1a8e04d86e27d1818
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47777850"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75242888"
 ---
 # <a name="use-the-powershell-provider-for-extended-events"></a>拡張イベントへの PowerShell プロバイダーの使用
+
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] PowerShell プロバイダーを使用して、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 拡張イベントを管理できます。 XEvent サブフォルダーは、SQLSERVER ドライブで利用可能です。 このフォルダーには、次のいずれかの方法でアクセスできます。  
@@ -43,12 +42,12 @@ ms.locfileid: "47777850"
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] PowerShell プロバイダーは、拡張イベント セッションの作成、変更、および管理に使用できる強力なツールです。 次のセクションでは、拡張イベントに PowerShell スクリプトを使用する基本的な例をいくつか紹介します。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
  以下の例では、次の点に注意してください。  
   
 -   スクリプトは、PS SQLSERVER:\\> プロンプト (コマンド プロンプトで「**sqlps**」と入力すると利用可能になります) から実行する必要があります。  
   
--   スクリプトでは、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の既定のインスタンスを使用します。  
+-   スクリプトでは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]の既定のインスタンスを使用します。  
   
 -   スクリプトは、.ps1 拡張子を付けて保存してください。  
   

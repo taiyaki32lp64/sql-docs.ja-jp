@@ -19,14 +19,13 @@ helpviewer_keywords:
 ms.assetid: 50d2e015-05ae-4014-a1cd-4de7866ad651
 author: VanMSFT
 ms.author: vanto
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 4c1e6878b4b6e1e0f77bba31b3bce57c79e531b3
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: eba613c3736024de71a67e7cdb749960e91e89ff
+ms.sourcegitcommit: 97e94b76f9f48d161798afcf89a8c2ac0f09c584
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47856542"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68661215"
 ---
 # <a name="metadata-visibility-configuration"></a>メタデータ表示の構成
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -35,7 +34,7 @@ ms.locfileid: "47856542"
 ```  
 SELECT name, object_id  
 FROM sys.tables  
-WHERE name = 'myTable';  
+WHERE name = N'myTable';  
 GO  
 ```  
   
@@ -73,9 +72,9 @@ GO
 ```  
 CREATE PROCEDURE assumes_caller_can_access_metadata  
 BEGIN  
-SELECT name, id   
-FROM sysobjects   
-WHERE name = 'myTable';  
+SELECT name, object_id   
+FROM sys.objects   
+WHERE name = N'myTable';  
 END;  
 GO  
 ```  
@@ -92,9 +91,9 @@ CREATE PROCEDURE does_not_assume_caller_can_access_metadata
 WITH EXECUTE AS OWNER  
 AS  
 BEGIN  
-SELECT name, id  
+SELECT name, object_id  
 FROM sys.objects   
-WHERE name = 'myTable'   
+WHERE name = N'myTable'   
 END;  
 GO  
 ```  

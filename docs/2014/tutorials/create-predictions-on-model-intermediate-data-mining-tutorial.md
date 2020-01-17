@@ -11,11 +11,11 @@ author: minewiskan
 ms.author: owend
 manager: kfilee
 ms.openlocfilehash: 893067e234d868ae6dde2f93d93bfd50458bfeb2
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56041303"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63217742"
 ---
 # <a name="creating-predictions-on-a-sequence-clustering-model-intermediate-data-mining-tutorial"></a>シーケンス クラスター モデルでの予測の作成 (中級者向けデータ マイニング チュートリアル)
   予測クエリ ビルダーを使用して予測クエリを作成するには、シーケンス クラスター モデルの改善をビューアーで順を理解したら、**マイニング モデル予測**データ マイニング デザイナーのタブ。 予測を作成するには、まずシーケンス クラスター モデルを選択し、次に入力データを選択します。 入力については、外部データ ソースを使用するか、単一クエリを作成してダイアログ ボックスで値を指定することができます。  

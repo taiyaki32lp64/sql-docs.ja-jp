@@ -1,5 +1,5 @@
 ---
-title: 'Issasynchstatus: (OLE DB) |Microsoft Docs'
+title: 'ISSAsynchStatus:: Abort (OLE DB) |Microsoft Docs'
 description: ISSAsynchStatus::Abort (OLE DB)
 ms.custom: ''
 ms.date: 06/14/2018
@@ -15,13 +15,12 @@ helpviewer_keywords:
 - Abort method
 author: pmasl
 ms.author: pelopes
-manager: craigg
-ms.openlocfilehash: 662aa55260c2fe4f09eaab3e91eb7c8e70a61aa6
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 4cb57bfac5af957bd9f2f539b025f32b5f481d66
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52505118"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68015428"
 ---
 # <a name="issasynchstatusabort-ole-db"></a>ISSAsynchStatus::Abort (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -46,7 +45,7 @@ HRESULT Abort(
  *eOperation*[in]  
  中止する操作。 次の値を使用する必要があります。  
   
- DBASYNCHOP_OPEN を設定する必要があります。キャンセル要求は、非同期に行セットを開いたり、非同期に行セットのデータを設定する場合、または非同期にデータ ソース オブジェクトを初期化する場合に適用されます。  
+ DBASYNCHOP_OPEN。キャンセル要求が適用されるのは、行セットを非同期で開くか設定する場合、またはデータ ソース オブジェクトを非同期で初期化する場合です。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  S_OK  
@@ -62,12 +61,12 @@ HRESULT Abort(
  プロバイダー固有のエラーが発生しました。  
   
  E_INVALIDARG  
- *HChapter*パラメーターのない DB_NULL_HCHAPTER または*eOperation* DBASYNCH_OPEN はありません。  
+ *Hchapter*パラメーターが DB_NULL_HCHAPTER ではないか、 *EOPERATION*が DBASYNCH_OPEN ではありません。  
   
  E_UNEXPECTED  
  **IDBInitialize::Initialize** が呼び出されていないか、完了していないデータ ソース オブジェクトに対して **ISSAsynchStatus::Abort** が呼び出されました。  
   
- または、**IDBInitialize::Initialize** が呼び出されたものの、その後初期化前に取り消されたか、タイムアウトになったデータ ソース オブジェクトに対して **ISSAsynchStatus::Abort** が呼び出されました。データ ソース オブジェクトはまだ初期化されていないことになります。  
+ または、**IDBInitialize::Initialize** が呼び出されたものの、その後初期化前に取り消されたか、タイムアウトになったデータ ソース オブジェクトに対して **ISSAsynchStatus::Abort** が呼び出されました。データ ソース オブジェクトはまだ初期化されていません。  
   
  以前に **ITransaction::Commit** または **ITransaction::Abort** が呼び出された行セットに対して **ISSAsynchStatus::Abort** が呼び出された場合もこの値が返されます。この行セットはコミットまたはアボートの後に保持されず、ゾンビ状態になります。  
   

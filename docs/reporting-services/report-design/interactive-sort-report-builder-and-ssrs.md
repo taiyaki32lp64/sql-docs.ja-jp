@@ -2,18 +2,18 @@
 title: 対話的な並べ替え (レポート ビルダーおよび SSRS) | Microsoft Docs
 ms.date: 03/01/2017
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: report-design
 ms.topic: conceptual
 ms.assetid: 00cafed5-1a3c-4ce0-a1fb-ff1e2613f495
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 4124b909cf35ea071aef5f57672ff8a3701a44ca
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: d3f379c104b5b957fba197f9ed9317b2d5b23f16
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56286370"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65580188"
 ---
 # <a name="interactive-sort-report-builder-and-ssrs"></a>対話的な並べ替え (レポート ビルダーおよび SSRS)
   対話的な並べ替えボタンを追加すると、ユーザーがテーブルの行またはマトリックスの行と列を昇順および降順で並べ替えることができるようになります。 対話的な並べ替えの最も一般的な使用方法は、各列ヘッダーに並べ替えボタンを追加することです。 これにより、ユーザーは並べ替えの基準となる列を選択できます。  
@@ -25,9 +25,9 @@ ms.locfileid: "56286370"
   
  対話的な並べ替えを追加する場合、次の項目を指定する必要があります。  
   
--   **並べ替え対象**:行または列。  
+-   **並べ替え対象:** 行または列。  
   
--   **並べ替え基準**:テーブル列に表示されるフィールドですか? または表示されないフィールド。  
+-   **並べ替えの基準:** テーブル列に表示されるフィールド、 または表示されないフィールド。  
   
 -   **並べ替えを行うコンテキスト:** たとえば、行グループに関連付けられた行、列グループに関連付けられた列、詳細行、親グループ内の子グループ、親グループと子グループの両方などを並べ替えることができます。  
   

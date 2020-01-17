@@ -28,11 +28,11 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: dbbc884a32f892830ec4b7b66e3a67c45fc37416
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48129161"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62922566"
 ---
 # <a name="clr-hosted-environment"></a>CLR ホスト環境
   [!INCLUDE[msCoName](../../../includes/msconame-md.md)] .NET Framework CLR (共通言語ランタイム) は、[!INCLUDE[msCoName](../../../includes/msconame-md.md)] Visual C#、[!INCLUDE[msCoName](../../../includes/msconame-md.md)] Visual Basic、[!INCLUDE[msCoName](../../../includes/msconame-md.md)] Visual C++ など、多くの最新のプログラミング言語を実行する環境です。 CLR の特色には、ガベージ コレクションが行われるメモリ、プリエンプティブなスレッド処理、メタデータ サービス (型リフレクション)、コードの検証可能性、コード アクセス セキュリティなどがあります。 CLR では、クラスの検索と読み込み、メモリ内でのインスタンスのレイアウト、メソッド呼び出しの解決、ネイティブ コードの生成、セキュリティの設定、およびランタイム コンテキスト境界の設定にメタデータが使用されます。  
@@ -65,7 +65,7 @@ ms.locfileid: "48129161"
 ###### <a name="security"></a>セキュリティ  
  データベースで実行されるユーザー コードがテーブルや列などのデータベース オブジェクトにアクセスする際には、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] の認証規則と承認規則に従う必要があります。 また、データベース管理者は、データベースで実行しているユーザー コードからファイルやネットワーク アクセスなどのオペレーティング システム リソースへのアクセスを制御できる必要があります。 (Transact-SQL などの非マネージド言語とは異なり) このようなリソースにアクセスする API が用意されているマネージド プログラミング言語ではこのことが重要になります。 [!INCLUDE[ssDE](../../../includes/ssde-md.md)] プロセス外のコンピューター リソースにアクセスするユーザー コードには、システムによりセキュリティで保護された方法が提供される必要があります。 詳細については、「 [CLR 統合のセキュリティ](security/clr-integration-security.md)」を参照してください。  
   
-###### <a name="performance"></a>[パフォーマンス]  
+###### <a name="performance"></a>パフォーマンス  
  [!INCLUDE[ssDE](../../../includes/ssde-md.md)]で実行されるマネージド ユーザー コードと、サーバーの外部で実行されるマネージド ユーザー コードのコンピューター処理パフォーマンスは同程度になる必要があります。 マネージド ユーザー コードからのデータ アクセスは、ネイティブ [!INCLUDE[tsql](../../../includes/tsql-md.md)] ほど高速ではありません。 詳細については、次を参照してください。 [CLR 統合のパフォーマンス](clr-integration-architecture-performance.md)します。  
   
 ## <a name="clr-services"></a>CLR サービス  
@@ -100,7 +100,7 @@ ms.locfileid: "48129161"
 ## <a name="how-sql-server-and-the-clr-work-together"></a>SQL Server と CLR の連携方法  
  ここでは、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] と CLR のスレッド処理、スケジュール設定、同期、およびメモリ管理のモデルが [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] に統合されている様式について説明します。 特に、スケーラビリティ、信頼性、およびセキュリティの目標に照らし合わせて、この統合について解説します。 基本的には、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] は、CLR が [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] の内部でホストされているときに CLR のオペレーティング システムとして機能します。 CLR は、スレッド処理、スケジュール設定、同期、およびメモリ管理用に [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] によって実装される低レベルのルーチンを呼び出します。 このようなルーチンは、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] エンジンの残りの部分で使用されるプリミティブと同じです。 このアプローチを使用すると、スケーラビリティ、信頼性、およびセキュリティに関するいくつかの利点が得られます。  
   
-###### <a name="scalability-common-threading-scheduling-and-synchronization"></a>スケーラビリティ : 一般的なスレッド処理、スケジュール設定、および同期  
+###### <a name="scalability-common-threading-scheduling-and-synchronization"></a>スケーラビリティ:一般的なスレッド処理、スケジュール、および同期  
  CLR は、ユーザー コードを実行するため、および CLR 自体の内部で使用するために、スレッドを作成する [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] API を呼び出します。 複数のスレッド間で同期するために、CLR は [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 同期オブジェクトを呼び出します。 これにより、スレッドが同期オブジェクトを待機しているときに、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] スケジューラは他のタスクのスケジュールを設定できます。 たとえば、CLR からガベージ コレクションが開始されると、CLR のすべてのスレッドがガベージ コレクションの終了を待機します。 CLR スレッドと CLR スレッドが待機している同期オブジェクトは [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] スケジューラに認識されるので、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] では、CLR に関連しない他のデータベース タスクを実行しているスレッドにスケジュールを設定できます。 また、これにより、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] が CLR 同期オブジェクトによって取得されるロックに関連するデッドロックを検出し、デッドロックを除去する従来の技法を使用することもできます。  
   
  マネージド コードは、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] でプリエンプティブに実行されます。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] スケジューラには、非常に長い間実行が明け渡されていないスレッドを検出して停止する機能が備わっています。 CLR スレッドを [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] スレッドにフックする機能は、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] スケジューラが CLR の "ランナウェイ" スレッドを識別し、それらのスレッドの優先度を管理できることを意味します。 このようなランナウェイ スレッドは中断され、キューに戻されます。 繰り返しランナウェイ スレッドとして識別されたスレッドは、実行中の他のワーカーを実行できるように、一定期間実行が許可されません。  
@@ -108,23 +108,23 @@ ms.locfileid: "48129161"
 > [!NOTE]  
 >  データにアクセスしたり、ガベージ コレクションを起動するのに十分なメモリを割り当てる実行時間の長いマネージド コードは、自動的に処理が明け渡されます。 データにアクセスしない、またはガベージ コレクションを起動するのに十分なマネージド メモリを割り当てない、実行時間の長いマネージド コードは、.NET Framework の System.Thread.Sleep() 関数を呼び出して、明示的に実行を明け渡す必要があります。  
   
-###### <a name="scalability-common-memory-management"></a>スケーラビリティ : 一般的なメモリ管理  
+###### <a name="scalability-common-memory-management"></a>スケーラビリティ:一般的なメモリ管理  
  CLR は、CLR のメモリの割り当ておよび割り当て解除を行うために [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] プリミティブを呼び出します。 CLR で使用されるメモリはシステムの総メモリ使用量の一部を占有するので、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] はメモリの使用量を構成済みのメモリ制限内に抑えることができ、CLR と [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] が競い合ってメモリを確保することはありません。 また、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] では、システムのメモリが制約されているときに CLR からのメモリ要求を拒否し、他のタスクでメモリが必要なときにメモリ使用量を抑えるように CLR に要求することもできます。  
   
-###### <a name="reliability-application-domains-and-unrecoverable-exceptions"></a>信頼性 : アプリケーション ドメインと回復できない例外  
+###### <a name="reliability-application-domains-and-unrecoverable-exceptions"></a>信頼性:アプリケーション ドメインと回復不能な例外  
  .NET Framework API のマネージド コードで、メモリ不足やスタック オーバーフローなどの重大な例外が発生した場合、必ずそのようなエラーから回復し、API の実装に対して一貫性のある正しいセマンティクスを保証できるとは限りません。 これらの API により、このようなエラーへの応答でスレッドを中断する例外が発生します。  
   
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] でホストされているときは、CLR がスレッドの中断が発生したアプリケーション ドメインのすべての共有状態を検出することで、このようなスレッドの中断が処理されます。 CLR では、同期オブジェクトが存在するかどうかを確認することで、この処理を行います。 アプリケーション ドメインに共有状態が存在する場合は、アプリケーション ドメイン自体がアンロードされます。 アプリケーション ドメインをアンロードすると、そのアプリケーション ドメインで現在実行されているデータベース トランザクションが停止します。 共有状態が存在すると、例外が発生したユーザー セッション以外のユーザー セッションに、このような重大な例外の影響が拡大する可能性があるので、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] と CLR では、共有状態が存在する可能性を減少させる手順が実行されます。 詳細については、.NET Framework のドキュメントを参照してください。  
   
-###### <a name="security-permission-sets"></a>セキュリティ : 権限セット  
- [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] では、データベースに配置されるコードの信頼性とセキュリティに関する要件をユーザーが指定できます。 データベースにアセンブリをアップロードするとき、アセンブリの作成者は SAFE、EXTERNAL_ACCESS、および UNSAFE の 3 つの権限セットのうちのいずれかをアセンブリに指定できます。  
+###### <a name="security-permission-sets"></a>セキュリティ:アクセス許可セット  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] では、データベースに配置されるコードの信頼性とセキュリティに関する要件をユーザーが指定できます。 アセンブリがデータベースにアップロードされると、アセンブリの作成者を指定できます 3 つのアクセス許可セットのいずれかのアセンブリ。SAFE、EXTERNAL_ACCESS および UNSAFE です。  
   
 |||||  
 |-|-|-|-|  
 |権限セット|SAFE|EXTERNAL_ACCESS|UNSAFE|  
 |コード アクセス セキュリティ|実行のみ|実行および外部リソースへのアクセス|[無制限]|  
 |プログラミング モデルの制限事項|はい|はい|制限なし|  
-|検証可能性の要件|はい|はい|いいえ|  
+|検証可能性の要件|はい|[はい]|いいえ|  
 |ネイティブ コードを呼び出す機能|いいえ|いいえ|はい|  
   
  SAFE は、許可されているプログラミング モデルの中でも多くの制限事項が関連付けられており、最も信頼性が高く、セキュリティで保護されたモードです。 SAFE アセンブリには、実行、計算の実行、およびローカル データベースへのアクセスを行うには十分な権限が許可されます。 SAFE アセンブリは検証可能なタイプ セーフである必要があり、アンマネージ コードを呼び出すことはできません。  

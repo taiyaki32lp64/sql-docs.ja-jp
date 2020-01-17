@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: c2ba486e-5e01-4e67-adb1-68511f5f0206
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: bae4a842729c8d302731ebf5fec22abb817f4c75
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e17ca12e0c8745dcad30a3e5ce2c9689b041e7d2
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47654760"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67967483"
 ---
 # <a name="sqldriverconnect-paradox-driver"></a>SQLDriverConnect (Paradox ドライバー)
 > [!NOTE]  
@@ -27,7 +26,7 @@ ms.locfileid: "47654760"
   
  **SQLDriverConnect**データ ソース (DSN) を作成することがなく、ドライバーに接続することができます。  
   
- すべてのドライバーの接続文字列では、次のキーワードがサポートされて: **DSN**、 **DBQ**、および**FIL**します。  
+ すべてのドライバーの接続文字列では、次のキーワードがサポートされています。**DSN**、 **DBQ**、および**FIL**します。  
   
  **PWD**キーワードもサポートされます。 PWD キーワードの特殊文字含める必要がありますいない (SQL_SPECIAL_CHARACTERS でを参照してください。 **SQLGetInfo**に返される値)。  
   

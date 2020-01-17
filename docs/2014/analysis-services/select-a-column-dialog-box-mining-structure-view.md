@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dm.miningmodeleditor.structure.addacolumn.f1
@@ -15,12 +14,12 @@ ms.assetid: 6f73a7dc-5401-40c3-8f1d-b41fc1dd91c2
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: de9045d445142428810679fc5452e7627760145b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 7ee69724fbcacad78c6053c1bbdf9c3465482665
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48170692"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66069914"
 ---
 # <a name="select-a-column-dialog-box-mining-structure-view"></a>[列の選択] ダイアログ ボックス ([マイニング構造] ビュー)
   **[列の選択]** ダイアログ ボックスを使用すると、列をマイニング構造に追加できます。 このダイアログに含まれているオプションは、OLAP マイニング モデルを使用するか、リレーショナル マイニング モデルを使用するかによって異なります。  
@@ -46,7 +45,7 @@ ms.locfileid: "48170692"
   
  このオプションは、OLAP マイニング モデルにのみ使用されます。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [マイニング構造 ビュー&#40;データ マイニング モデル デザイナー&#41;](mining-structure-view-data-mining-model-designer.md)   
  [マイニング構造への列の追加](data-mining/add-columns-to-a-mining-structure.md)  
   

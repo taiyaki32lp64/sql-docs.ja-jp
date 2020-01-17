@@ -1,9 +1,8 @@
-items:
 - name: SQL Server エージェント
   href: sql-server-agent.md
 - name: SQL Server エージェントの構成
   href: configure-sql-server-agent.md
-- name: Set the SQL Server Connection for the SQL Server Agent Service (SQL Server Management Studio)
+- name: SQL Server エージェント サービスの SQL Server 接続の設定 (SQL Server Management Studio)
   href: set-sql-server-connection-for-sql-server-agent-service-ssms.md
 - name: SQL Server エージェント サービスのアカウントの選択
   href: select-an-account-for-the-sql-server-agent-service.md
@@ -13,332 +12,326 @@ items:
   href: autostart-sql-server-agent-sql-server-management-studio.md
 - name: Set a SQL Server Alias for the SQL Server Agent Service (SQL Server Management Studio)
   href: set-sql-server-alias-for-sql-server-agent-service-ssms.md
-- name: Start, Stop, or Pause the SQL Server Agent Service
+- name: 'Start, Stop, or Pause the SQL Server Agent Service'
   href: start-stop-or-pause-the-sql-server-agent-service.md
 - name: SQL Server エージェント エラー ログ
   href: sql-server-agent-error-log.md
   items:
-  - name: View SQL Server Agent Error Log (SQL Server Management Studio)
-    href: view-sql-server-agent-error-log-sql-server-management-studio.md
-  - name: Rename a SQL Server Agent Error Log (SQL Server Management Studio)
-    href: rename-a-sql-server-agent-error-log-sql-server-management-studio.md
-  - name: Write Execution Trace Messages to the SQL Server Agent Error Log (SQL Server Management Studio)
-    href: write-execution-trace-messages-to-sql-server-agent-log-ssms.md
+    - name: View SQL Server Agent Error Log (SQL Server Management Studio)
+      href: view-sql-server-agent-error-log-sql-server-management-studio.md
+    - name: Rename a SQL Server Agent Error Log (SQL Server Management Studio)
+      href: rename-a-sql-server-agent-error-log-sql-server-management-studio.md
+    - name: Write Execution Trace Messages to the SQL Server Agent Error Log (SQL Server Management Studio)
+      href: write-execution-trace-messages-to-sql-server-agent-log-ssms.md
 - name: パフォーマンス オブジェクトの使用
   href: use-performance-objects.md
 - name: 管理タスクの自動化 (SQL Server エージェント)
   href: automated-administration-tasks-sql-server-agent.md
   items:
-  - name: SQL Server エージェントのセキュリティの実装
-    href: implement-sql-server-agent-security.md
-    items:
-    - name: SQL Server エージェントの固定データベース ロール
-      href: sql-server-agent-fixed-database-roles.md
-    - name: Configure a User to Create and Manage SQL Server Agent Jobs
-      href: configure-a-user-to-create-and-manage-sql-server-agent-jobs.md
-    - name: Create a SQL Server Agent Proxy
-      href: create-a-sql-server-agent-proxy.md
-    - name: Modify a SQL Server Agent Proxy
-      href: modify-a-sql-server-agent-proxy.md
-    - name: Delete a SQL Server Agent Proxy
-      href: delete-a-sql-server-agent-proxy.md
-  - name: ジョブの実装
-    href: implement-jobs.md
-    items:
-    - name: ジョブの作成
-      href: create-jobs.md
+    - name: SQL Server エージェントのセキュリティの実装
+      href: implement-sql-server-agent-security.md
       items:
-      - name: ジョブの作成
-        href: create-a-job.md
-      - name: Give Others Ownership of a Job
-        href: give-others-ownership-of-a-job.md
-      - name: Set Up the Job History Log
-        href: set-up-the-job-history-log.md
-    - name: ジョブの整理
-      href: organize-jobs.md
+        - name: SQL Server エージェントの固定データベース ロール
+          href: sql-server-agent-fixed-database-roles.md
+        - name: Configure a User to Create and Manage SQL Server Agent Jobs
+          href: configure-a-user-to-create-and-manage-sql-server-agent-jobs.md
+        - name: Create a SQL Server Agent Proxy
+          href: create-a-sql-server-agent-proxy.md
+        - name: Modify a SQL Server Agent Proxy
+          href: modify-a-sql-server-agent-proxy.md
+        - name: Delete a SQL Server Agent Proxy
+          href: delete-a-sql-server-agent-proxy.md
+    - name: ジョブの実装
+      href: implement-jobs.md
       items:
-      - name: ジョブ カテゴリの作成
-        href: create-a-job-category.md
-      - name: ジョブ カテゴリの削除
-        href: delete-a-job-category.md
-      - name: ジョブ カテゴリへのジョブの割り当て
-        href: assign-a-job-to-a-job-category.md
-      - name: Change the Membership of a Job Category
-        href: change-the-membership-of-a-job-category.md
-      - name: ジョブ カテゴリ情報の一覧の表示
-        href: list-job-category-information.md
-    - name: ジョブ ステップの管理
-      href: manage-job-steps.md
+        - name: ジョブの作成
+          href: create-jobs.md
+          items:
+            - name: ジョブの作成
+              href: create-a-job.md
+            - name: Give Others Ownership of a Job
+              href: give-others-ownership-of-a-job.md
+            - name: Set Up the Job History Log
+              href: set-up-the-job-history-log.md
+        - name: ジョブの整理
+          href: organize-jobs.md
+          items:
+            - name: ジョブ カテゴリの作成
+              href: create-a-job-category.md
+            - name: ジョブ カテゴリの削除
+              href: delete-a-job-category.md
+            - name: ジョブ カテゴリへのジョブの割り当て
+              href: assign-a-job-to-a-job-category.md
+            - name: Change the Membership of a Job Category
+              href: change-the-membership-of-a-job-category.md
+            - name: ジョブ カテゴリ情報の一覧の表示
+              href: list-job-category-information.md
+        - name: ジョブ ステップの管理
+          href: manage-job-steps.md
+          items:
+            - name: ジョブ ステップでのトークンの使用
+              href: use-tokens-in-job-steps.md
+            - name: 複数のジョブ ステップの処理
+              href: handle-multiple-job-steps.md
+            - name: CmdExec ジョブ ステップの作成
+              href: create-a-cmdexec-job-step.md
+            - name: Create a Transact-SQL Job Step
+              href: create-a-transact-sql-job-step.md
+            - name: Define Transact-SQL Job Step Options
+              href: define-transact-sql-job-step-options.md
+            - name: Create a PowerShell Script Job Step
+              href: create-a-powershell-script-job-step.md
+            - name: Create an ActiveX Script Job Step
+              href: create-an-activex-script-job-step.md
+            - name: Create an Analysis Services Job Step
+              href: create-an-analysis-services-job-step.md
+            - name: Set Job Step Success or Failure Flow
+              href: set-job-step-success-or-failure-flow.md
+            - name: View Job Step Information
+              href: view-job-step-information.md
+            - name: Delete a Job Step Log
+              href: delete-a-job-step-log.md
+        - name: スケジュールの作成とジョブへのアタッチ
+          href: create-and-attach-schedules-to-jobs.md
+          items:
+            - name: Create a Schedule
+              href: create-a-schedule.md
+            - name: Schedule a Job
+              href: schedule-a-job.md
+            - name: CPU のアイドル時間と期間の設定 (SQL Server Management Studio)
+              href: set-cpu-idle-time-and-duration-sql-server-management-studio.md
+        - name: ジョブの実行
+          href: run-jobs.md
+          items:
+            - name: Start a Job
+              href: start-a-job.md
+            - name: Stop a Job
+              href: stop-a-job.md
+            - name: Disable or Enable a Job
+              href: disable-or-enable-a-job.md
+        - name: ジョブ応答の指定
+          href: specify-job-responses.md
+          items:
+            - name: Notify an Operator of Job Status
+              href: notify-an-operator-of-job-status.md
+            - name: Write the Job Status to the Windows Application Log
+              href: write-the-job-status-to-the-windows-application-log.md
+        - name: ジョブの表示または変更
+          href: view-or-modify-jobs.md
+          items:
+            - name: View a Job
+              href: view-a-job.md
+            - name: View the Job History
+              href: view-the-job-history.md
+            - name: Clear the Job History Log
+              href: clear-the-job-history-log.md
+            - name: Resize the Job History Log
+              href: resize-the-job-history-log.md
+            - name: Modify a Job
+              href: modify-a-job.md
+        - name: ジョブの削除
+          href: delete-jobs.md
+          items:
+            - name: 1 つまたは複数のジョブの削除
+              href: delete-one-or-more-jobs.md
+            - name: Automatically Delete a Job
+              href: automatically-delete-a-job.md
+        - name: ジョブの利用状況の監視
+          href: monitor-job-activity.md
+          items:
+            - name: '[ジョブの利用状況の表示]'
+              href: view-job-activity.md
+        - name: Set Job Execution Shutdown (SQL Server Management Studio)
+          href: set-job-execution-shutdown-sql-server-management-studio.md
+    - name: イベントの監視と応答
+      href: monitor-and-respond-to-events.md
       items:
-      - name: ジョブ ステップでのトークンの使用
-        href: use-tokens-in-job-steps.md
-      - name: 複数のジョブ ステップの処理
-        href: handle-multiple-job-steps.md
-      - name: CmdExec ジョブ ステップの作成
-        href: create-a-cmdexec-job-step.md
-      - name: Create a Transact-SQL Job Step
-        href: create-a-transact-sql-job-step.md
-      - name: Define Transact-SQL Job Step Options
-        href: define-transact-sql-job-step-options.md
-      - name: Create a PowerShell Script Job Step
-        href: create-a-powershell-script-job-step.md
-      - name: Create an ActiveX Script Job Step
-        href: create-an-activex-script-job-step.md
-      - name: Create an Analysis Services Job Step
-        href: create-an-analysis-services-job-step.md
-      - name: Set Job Step Success or Failure Flow
-        href: set-job-step-success-or-failure-flow.md
-      - name: View Job Step Information
-        href: view-job-step-information.md
-      - name: Delete a Job Step Log
-        href: delete-a-job-step-log.md
-    - name: スケジュールの作成とジョブへのアタッチ
-      href: create-and-attach-schedules-to-jobs.md
+        - name: 警告
+          href: alerts.md
+          items:
+            - name: Create a WMI Event Alert
+              href: create-a-wmi-event-alert.md
+            - name: Format Pager Addresses for Alerts
+              href: format-pager-addresses-for-alerts.md
+            - name: Edit an Alert
+              href: edit-an-alert.md
+            - name: Delete an Alert
+              href: delete-an-alert.md
+            - name: View Information About an Alert
+              href: view-information-about-an-alert.md
+        - name: ユーザー定義イベントの作成
+          href: create-a-user-defined-event.md
+          items:
+            - name: エラー番号を使用して警告を作成する
+              href: create-an-alert-using-an-error-number.md
+            - name: Create an Alert Using Severity Level
+              href: create-an-alert-using-severity-level.md
+            - name: Send SQL Server Agent Error Messages
+              href: send-sql-server-agent-error-messages.md
+            - name: Disable or Reactivate an Alert
+              href: disable-or-reactivate-an-alert.md
+        - name: オペレーター
+          href: operators.md
+          items:
+            - name: オペレーターの作成
+              href: create-an-operator.md
+            - name: オペレーターへの警告の割り当て
+              href: assign-alerts-to-an-operator.md
+            - name: Delete an Operator
+              href: delete-an-operator.md
+            - name: オペレーターの受信可能性の変更
+              href: change-an-operator-s-availability.md
+            - name: Edit an Operator
+              href: edit-an-operator.md
+            - name: View Information About an Operator
+              href: view-information-about-an-operator.md
+            - name: Designate a Fail-Safe Operator
+              href: designate-a-fail-safe-operator.md
+    - name: エンタープライズ全体の管理の自動化
+      href: automated-administration-across-an-enterprise.md
       items:
-      - name: Create a Schedule
-        href: create-a-schedule.md
-      - name: Schedule a Job
-        href: schedule-a-job.md
-      - name: CPU のアイドル時間と期間の設定 (SQL Server Management Studio)
-        href: set-cpu-idle-time-and-duration-sql-server-management-studio.md
-    - name: ジョブの実行
-      href: run-jobs.md
-      items:
-      - name: Start a Job
-        href: start-a-job.md
-      - name: Stop a Job
-        href: stop-a-job.md
-      - name: Disable or Enable a Job
-        href: disable-or-enable-a-job.md
-    - name: ジョブ応答の指定
-      href: specify-job-responses.md
-      items:
-      - name: Notify an Operator of Job Status
-        href: notify-an-operator-of-job-status.md
-      - name: Write the Job Status to the Windows Application Log
-        href: write-the-job-status-to-the-windows-application-log.md
-    - name: ジョブの表示または変更
-      href: view-or-modify-jobs.md
-      items:
-      - name: View a Job
-        href: view-a-job.md
-      - name: View the Job History
-        href: view-the-job-history.md
-      - name: Clear the Job History Log
-        href: clear-the-job-history-log.md
-      - name: Resize the Job History Log
-        href: resize-the-job-history-log.md
-      - name: Modify a Job
-        href: modify-a-job.md
-    - name: ジョブの削除
-      href: delete-jobs.md
-      items:
-      - name: 1 つまたは複数のジョブの削除
-        href: delete-one-or-more-jobs.md
-      - name: Automatically Delete a Job
-        href: automatically-delete-a-job.md
-    - name: ジョブの利用状況の監視
-      href: monitor-job-activity.md
-      items:
-      - name: '[ジョブの利用状況の表示]'
-        href: view-job-activity.md
-    - name: Set Job Execution Shutdown (SQL Server Management Studio)
-      href: set-job-execution-shutdown-sql-server-management-studio.md
-  - name: イベントの監視と応答
-    href: monitor-and-respond-to-events.md
-    items:
-    - name: オブジェクト エクスプローラーには
-      href: alerts.md
-      items:
-      - name: Create a WMI Event Alert
-        href: create-a-wmi-event-alert.md
-      - name: Format Pager Addresses for Alerts
-        href: format-pager-addresses-for-alerts.md
-      - name: Edit an Alert
-        href: edit-an-alert.md
-      - name: Delete an Alert
-        href: delete-an-alert.md
-      - name: View Information About an Alert
-        href: view-information-about-an-alert.md
-    - name: ユーザー定義イベントの作成
-      href: create-a-user-defined-event.md
-      items:
-      - name: エラー番号を使用して警告を作成する
-        href: create-an-alert-using-an-error-number.md
-      - name: Create an Alert Using Severity Level
-        href: create-an-alert-using-severity-level.md
-      - name: Send SQL Server Agent Error Messages
-        href: send-sql-server-agent-error-messages.md
-      - name: Disable or Reactivate an Alert
-        href: disable-or-reactivate-an-alert.md
-    - name: 演算子
-      href: operators.md
-      items:
-      - name: オペレーターの作成
-        href: create-an-operator.md
-      - name: オペレーターへの警告の割り当て
-        href: assign-alerts-to-an-operator.md
-      - name: Delete an Operator
-        href: delete-an-operator.md
-      - name: オペレーターの受信可能性の変更
-        href: change-an-operator-s-availability.md
-      - name: Edit an Operator
-        href: edit-an-operator.md
-      - name: View Information About an Operator
-        href: view-information-about-an-operator.md
-      - name: Designate a Fail-Safe Operator
-        href: designate-a-fail-safe-operator.md
-  - name: エンタープライズ全体の管理の自動化
-    href: automated-administration-across-an-enterprise.md
-    items:
-    - name: マルチサーバー環境の作成
-      href: create-a-multiserver-environment.md
-      items:
-      - name: Make a Master Server
-        href: make-a-master-server.md
-      - name: ターゲット サーバーの作成
-        href: make-a-target-server.md
-      - name: マスター サーバーへのターゲット サーバーの参加
-        href: enlist-a-target-server-to-a-master-server.md
-      - name: マスター サーバーからのターゲット サーバーの参加の解除
-        href: defect-a-target-server-from-a-master-server.md
-      - name: Defect Multiple Target Servers from a Master Server
-        href: defect-multiple-target-servers-from-a-master-server.md
-      - name: SQL Server エージェントのマスター ジョブの作成
-        href: create-a-sql-server-agent-master-job.md
-      - name: SQL Server エージェントのマスター ジョブの変更
-        href: modify-a-sql-server-agent-master-job.md
-    - name: Change the Scheduling Details for a SQL Server Agent Master Job
-      href: change-the-scheduling-details-for-a-sql-server-agent-master-job.md
-    - name: Add Steps to a SQL Server Agent Master Job
-      href: ../object/add-steps-to-a-sql-server-agent-master-job.md
-    - name: Change Steps of a SQL Server Agent Master Job
-      href: change-steps-of-a-sql-server-agent-master-job.md
-    - name: Remove Steps from a SQL Server Agent Master Job
-      href: remove-steps-from-a-sql-server-agent-master-job.md
-    - name: SQL Server エージェントのマスター ジョブに関連付けられているターゲット サーバーの変更
-      href: modify-the-target-server-s-associated-with-a-sql-server-agent-master-job.md
-    - name: マルチサーバー環境に適した SQL Server エージェント サービス アカウントの選択
-      href: choose-the-right-sql-server-agent-service-account-for-multiserver-environments.md
-    - name: 対象サーバーでの暗号化オプションの設定
-      href: set-encryption-options-on-target-servers.md
-    - name: エンタープライズ全体におけるジョブの管理
-      href: manage-jobs-across-an-enterprise.md
-      items:
-      - name: Modify the Target Servers for a Job
-        href: modify-the-target-servers-for-a-job.md
-      - name: ターゲット サーバーのクロックの同期 (SQL Server Management Studio)
-        href: synchronize-target-server-clocks-sql-server-management-studio.md
-      - name: ターゲット サーバーの場所の指定 (SQL Server Management Studio)
-        href: specify-a-target-server-s-location-sql-server-management-studio.md
-    - name: プロキシを使用するマルチサーバー ジョブのトラブルシューティング
-      href: troubleshoot-multiserver-jobs-that-use-proxies.md
-    - name: サーバーのポーリング
-      href: poll-servers.md
-      items:
-      - name: Set the Polling Interval for Target Servers
-        href: set-the-polling-interval-for-target-servers.md
-      - name: ターゲット サーバーからのマスター サーバーのポーリングの強制
-        href: force-a-target-server-to-poll-the-master-server.md
-    - name: イベントの管理
-      href: manage-events.md
-      items:
-      - name: Designate an Events Forwarding Server (SQL Server Management Studio)
-        href: designate-an-events-forwarding-server-sql-server-management-studio.md
-      - name: Define the Response to an Alert (SQL Server Management Studio)
-        href: define-the-response-to-an-alert-sql-server-management-studio.md
-    - name: 企業全体の自動管理のチューニング
-      href: tune-automated-administration-across-an-enterprise.md
+        - name: マルチサーバー環境の作成
+          href: create-a-multiserver-environment.md
+          items:
+            - name: Make a Master Server
+              href: make-a-master-server.md
+            - name: ターゲット サーバーの作成
+              href: make-a-target-server.md
+            - name: マスター サーバーへのターゲット サーバーの参加
+              href: enlist-a-target-server-to-a-master-server.md
+            - name: マスター サーバーからのターゲット サーバーの参加の解除
+              href: defect-a-target-server-from-a-master-server.md
+            - name: マスター サーバーからの複数のターゲット サーバーの参加の解除
+              href: defect-multiple-target-servers-from-a-master-server.md
+            - name: SQL Server エージェントのマスター ジョブの作成
+              href: create-a-sql-server-agent-master-job.md
+            - name: SQL Server エージェントのマスター ジョブの変更
+              href: modify-a-sql-server-agent-master-job.md
+        - name: Change the Scheduling Details for a SQL Server Agent Master Job
+          href: change-the-scheduling-details-for-a-sql-server-agent-master-job.md
+        - name: Add Steps to a SQL Server Agent Master Job
+          href: ../object/add-steps-to-a-sql-server-agent-master-job.md
+        - name: Change Steps of a SQL Server Agent Master Job
+          href: change-steps-of-a-sql-server-agent-master-job.md
+        - name: Remove Steps from a SQL Server Agent Master Job
+          href: remove-steps-from-a-sql-server-agent-master-job.md
+        - name: SQL Server エージェントのマスター ジョブに関連付けられているターゲット サーバーの変更
+          href: modify-the-target-server-s-associated-with-a-sql-server-agent-master-job.md
+        - name: マルチサーバー環境に適した SQL Server エージェント サービス アカウントの選択
+          href: choose-the-right-sql-server-agent-service-account-for-multiserver-environments.md
+        - name: ターゲット サーバーでの暗号化オプションの設定
+          href: set-encryption-options-on-target-servers.md
+        - name: エンタープライズ全体におけるジョブの管理
+          href: manage-jobs-across-an-enterprise.md
+          items:
+            - name: Modify the Target Servers for a Job
+              href: modify-the-target-servers-for-a-job.md
+            - name: ターゲット サーバーのクロックの同期 (SQL Server Management Studio)
+              href: synchronize-target-server-clocks-sql-server-management-studio.md
+            - name: ターゲット サーバーの場所の指定 (SQL Server Management Studio)
+              href: specify-a-target-server-s-location-sql-server-management-studio.md
+        - name: プロキシを使用するマルチサーバー ジョブのトラブルシューティング
+          href: troubleshoot-multiserver-jobs-that-use-proxies.md
+        - name: サーバーのポーリング
+          href: poll-servers.md
+          items:
+            - name: ターゲット サーバーのポーリング間隔の設定
+              href: set-the-polling-interval-for-target-servers.md
+            - name: ターゲット サーバーからのマスター サーバーのポーリングの強制
+              href: force-a-target-server-to-poll-the-master-server.md
+        - name: イベントの管理
+          href: manage-events.md
+          items:
+            - name: Designate an Events Forwarding Server (SQL Server Management Studio)
+              href: designate-an-events-forwarding-server-sql-server-management-studio.md
+            - name: Define the Response to an Alert (SQL Server Management Studio)
+              href: define-the-response-to-an-alert-sql-server-management-studio.md
+        - name: 企業全体の自動管理のチューニング
+          href: tune-automated-administration-across-an-enterprise.md
 - name: SQL Server エージェントの F1 ヘルプ
   href: sql-server-agent-f1-help.md
   items:
-  - name: '[ジョブ] ノード (SQL Server エージェントの F1 ヘルプ)'
-    href: jobs-node-sql-server-agent-f1-help.md
-  - name: ジョブのプロパティと新しいジョブ ([全般] ページ)
-    href: job-properties-new-job-general-page.md
-  - name: 'ジョブのプロパティ: [新しいジョブ] ([ステップ] ページ)'
-    href: job-properties-new-job-steps-page.md
-  - name: 'ジョブのプロパティ: [新しいジョブ] ([スケジュール] ページ)'
-    href: job-properties-new-job-schedules-page.md
-  - name: 'ジョブのプロパティ: [新しいジョブ] ([警告] ページ)'
-    href: job-properties-new-job-alerts-page.md
-  - name: '[ジョブのプロパティ]: [新しいジョブ] ([通知] ページ)'
-    href: job-properties-new-job-notifications-page.md
-  - name: 'ジョブのプロパティ: [新しいジョブ] ([対象サーバー] ページ)'
-    href: job-properties-new-job-targets-page.md
-  - name: 'ジョブ カテゴリのプロパティ: [新しいジョブ カテゴリ]'
-    href: job-categories-properties-new-job-category.md
-  - name: '[ジョブ カテゴリ] : [ジョブ カテゴリの管理]'
-    href: job-categories-manage-job-categories.md
-  - name: 'ジョブ ステップのプロパティ: [新しいジョブ ステップ] ([全般] ページ)'
-    href: job-step-properties-new-job-step-general-page.md
-  - name: '[ジョブ ステップのプロパティ]: [新しいジョブ ステップ] ([詳細設定] ページ)'
-    href: job-step-properties-new-job-step-advanced-page.md
-  - name: '[ジョブのスケジュール選択]'
-    href: pick-schedule-for-job.md
-  - name: '[新しいジョブ スケジュール]: [ジョブ スケジュールのプロパティ]'
-    href: new-job-schedule-job-schedule-properties.md
-  - name: '[スケジュールの管理]'
-    href: manage-schedules.md
-  - name: スケジュールを参照するジョブ
-    href: jobs-that-reference-a-schedule.md
-  - name: '[ジョブの利用状況モニター]'
-    href: job-activity-monitor.md
-  - name: '[警告] ノード (SQL Server エージェント F1 ヘルプ)'
-    href: alerts-node-sql-server-agent-f1-help.md
-  - name: '[警告のプロパティ]/[新しい警告] ([全般] ページ)'
-    href: alert-properties-new-alert-general-page.md
-  - name: '[警告のプロパティ]/[新しい警告] ([応答] ページ)'
-    href: alert-properties-new-alert-response-page.md
-  - name: '[警告のプロパティ]: [新しい警告] ([オプション] ページ)'
-    href: alert-properties-new-alert-options-page.md
-  - name: '[警告のプロパティ] ([履歴] ページ)'
-    href: alert-properties-history-page.md
-  - name: '[プロキシ] ノード (SQL Server エージェントの F1 ヘルプ)'
-    href: proxies-node-sql-server-agent-f1-help.md
-  - name: '[プロキシ アカウントのプロパティ] および [新しいプロキシ アカウント] ([全般] ページ)'
-    href: proxy-account-properties-new-proxy-account-general-page.md
-  - name: '[プロキシ アカウントのプロパティ] および [新しいプロキシ アカウント] ([プリンシパル] タブ)'
-    href: proxy-account-properties-new-proxy-account-principals-tab.md
-  - name: プロキシ エディターおよび [プリンシパルの追加]
-    href: proxy-editor-add-principal.md
-  - name: '[プロキシ アカウントのプロパティ] \([参照設定] タブ)'
-    href: proxy-account-properties-references-tab.md
-  - name: '[オペレーター] ノード (SQL Server エージェントの F1 ヘルプ)'
-    href: operators-node-sql-server-agent-f1-help.md
-  - name: '[オペレーターのプロパティ] および [新しいオペレーター] ([全般] ページ)'
-    href: operator-properties-new-operator-general-page.md
-  - name: 'オペレーターのプロパティ: [新しいオペレーター] ([通知] ページ)'
-    href: operator-properties-new-operator-notifications-page.md
-  - name: '[<OperatorName> のプロパティ] \([履歴] ページ)'
-    href: operator-properties-history-page.md
-  - name: Delete 操作
-    href: delete-operator.md
-  - name: '[SQL Server エージェント エラー ログの構成] \([全般] ページ)'
-    href: configure-sql-server-agent-error-logs-general-page.md
-  - name: '[SQL Server エージェント エラー ログの再利用]'
-    href: recycle-sql-server-agent-error-logs.md
-  - name: '[SQL Server エージェントのプロパティ]\([全般] ページ)'
-    href: sql-server-agent-properties-general-page.md
-  - name: SQL Server エージェントのプロパティ ([詳細設定] ページ)
-    href: sql-server-agent-properties-advanced-page.md
-  - name: SQL Server エージェントのプロパティ ([警告システム] ページ)
-    href: sql-server-agent-properties-alert-system-page.md
-  - name: '[SQL Server エージェントのプロパティ] ダイアログ ボックス ([ジョブ システム] ページ)'
-    href: sql-server-agent-properties-job-system-page.md
-  - name: '[SQL Server エージェントのプロパティ]\([接続] ページ)'
-    href: sql-server-agent-properties-connection-page.md
-  - name: SQL Server エージェントのプロパティ ([履歴] ページ)
-    href: sql-server-agent-properties-history-page.md
-  - name: '[ターゲット サーバー] ([ターゲット サーバーの状態] タブ)'
-    href: target-servers-target-server-status-tab.md
-  - name: '[対象サーバー] ダイアログ ボックス ([ダウンロード命令] タブ)'
-    href: target-servers-download-instructions-tab.md
-  - name: ダウンロード命令の通知
-    href: post-download-instructions.md
-ms.openlocfilehash: 34694b9a8d0d4f18490c2d3431265898dc2aed6c
-ms.sourcegitcommit: 9def1e583e012316367c7812c31505f34af7f714
-ms.translationtype: HT
-ms.contentlocale: ja-JP
-ms.lasthandoff: 07/27/2018
-ms.locfileid: "39314690"
+    - name: '[ジョブ] ノード (SQL Server エージェントの F1 ヘルプ)'
+      href: jobs-node-sql-server-agent-f1-help.md
+    - name: 'ジョブのプロパティと新しいジョブ ([全般] ページ)'
+      href: job-properties-new-job-general-page.md
+    - name: 'ジョブのプロパティ: [新しいジョブ] ([ステップ] ページ)'
+      href: job-properties-new-job-steps-page.md
+    - name: '[ジョブのプロパティ]:[新しいジョブ] ([スケジュール] ページ)'
+      href: job-properties-new-job-schedules-page.md
+    - name: '[ジョブのプロパティ]:[新しいジョブ] ([警告] ページ)'
+      href: job-properties-new-job-alerts-page.md
+    - name: '[ジョブのプロパティ]:[新しいジョブ] ([通知] ページ)'
+      href: job-properties-new-job-notifications-page.md
+    - name: '[ジョブのプロパティ]:[新しいジョブ] ([対象サーバー] ページ)'
+      href: job-properties-new-job-targets-page.md
+    - name: 'ジョブ カテゴリのプロパティ: [新しいジョブ カテゴリ]'
+      href: job-categories-properties-new-job-category.md
+    - name: '[ジョブ カテゴリ]:ジョブ カテゴリの管理'
+      href: job-categories-manage-job-categories.md
+    - name: '[ジョブ ステップのプロパティ]:[新しいジョブ ステップ] ([全般] ページ)'
+      href: job-step-properties-new-job-step-general-page.md
+    - name: '[ジョブ ステップのプロパティ]:[新しいジョブ ステップ] ([詳細] ページ)'
+      href: job-step-properties-new-job-step-advanced-page.md
+    - name: '[ジョブのスケジュール選択]'
+      href: pick-schedule-for-job.md
+    - name: '[新しいジョブ スケジュール]:[ジョブ スケジュールのプロパティ]'
+      href: new-job-schedule-job-schedule-properties.md
+    - name: '[スケジュールの管理]'
+      href: manage-schedules.md
+    - name: スケジュールを参照するジョブ
+      href: jobs-that-reference-a-schedule.md
+    - name: '[ジョブの利用状況モニター]'
+      href: job-activity-monitor.md
+    - name: '[警告] ノード (SQL Server エージェント F1 ヘルプ)'
+      href: alerts-node-sql-server-agent-f1-help.md
+    - name: '[警告のプロパティ]/[新しい警告] ([全般] ページ)'
+      href: alert-properties-new-alert-general-page.md
+    - name: '[警告のプロパティ]/[新しい警告] ([応答] ページ)'
+      href: alert-properties-new-alert-response-page.md
+    - name: '[警告のプロパティ]:[新しい警告] ([オプション] ページ)'
+      href: alert-properties-new-alert-options-page.md
+    - name: '[警告のプロパティ] ([履歴] ページ)'
+      href: alert-properties-history-page.md
+    - name: '[プロキシ] ノード (SQL Server エージェントの F1 ヘルプ)'
+      href: proxies-node-sql-server-agent-f1-help.md
+    - name: '[プロキシ アカウントのプロパティ] および [新しいプロキシ アカウント] ([全般] ページ)'
+      href: proxy-account-properties-new-proxy-account-general-page.md
+    - name: '[プロキシ アカウントのプロパティ] および [新しいプロキシ アカウント] ([プリンシパル] タブ)'
+      href: proxy-account-properties-new-proxy-account-principals-tab.md
+    - name: 'プロキシ エディターおよび [プリンシパルの追加]'
+      href: proxy-editor-add-principal.md
+    - name: '[プロキシ アカウントのプロパティ] \([参照設定] タブ)'
+      href: proxy-account-properties-references-tab.md
+    - name: '[オペレーター] ノード (SQL Server エージェントの F1 ヘルプ)'
+      href: operators-node-sql-server-agent-f1-help.md
+    - name: '[オペレーターのプロパティ] および [新しいオペレーター] ([全般] ページ)'
+      href: operator-properties-new-operator-general-page.md
+    - name: '[オペレーターのプロパティ]:[新しいオペレーター] ([通知] ページ)'
+      href: operator-properties-new-operator-notifications-page.md
+    - name: '[<OperatorName> のプロパティ] ([履歴] ページ)'
+      href: operator-properties-history-page.md
+    - name: Delete 操作
+      href: delete-operator.md
+    - name: '[SQL Server エージェント エラー ログの構成] \([全般] ページ)'
+      href: configure-sql-server-agent-error-logs-general-page.md
+    - name: '[SQL Server エージェント エラー ログの再利用]'
+      href: recycle-sql-server-agent-error-logs.md
+    - name: '[SQL Server エージェントのプロパティ]\([全般] ページ)'
+      href: sql-server-agent-properties-general-page.md
+    - name: 'SQL Server エージェントのプロパティ ([詳細設定] ページ)'
+      href: sql-server-agent-properties-advanced-page.md
+    - name: 'SQL Server エージェントのプロパティ ([警告システム] ページ)'
+      href: sql-server-agent-properties-alert-system-page.md
+    - name: '[SQL Server エージェントのプロパティ] ダイアログ ボックス ([ジョブ システム] ページ)'
+      href: sql-server-agent-properties-job-system-page.md
+    - name: '[SQL Server エージェントのプロパティ] ([接続] ページ)'
+      href: sql-server-agent-properties-connection-page.md
+    - name: 'SQL Server エージェントのプロパティ ([履歴] ページ)'
+      href: sql-server-agent-properties-history-page.md
+    - name: '[ターゲット サーバー] ([ターゲット サーバーの状態] タブ)'
+      href: target-servers-target-server-status-tab.md
+    - name: '[ターゲット サーバー] ダイアログ ボックス ([ダウンロード命令] タブ)'
+      href: target-servers-download-instructions-tab.md
+    - name: ダウンロード命令の通知
+      href: post-download-instructions.md

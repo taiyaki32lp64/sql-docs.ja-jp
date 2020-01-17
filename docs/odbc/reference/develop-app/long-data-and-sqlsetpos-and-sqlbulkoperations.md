@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: e2fdf842-5e4c-46ca-bb21-4625c3324f28
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: b1d1a55d3b417ff7a0a673bda8d289a72d7c1cb1
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 578c85331a65c15cb25b5d9b75b7156ab509e910
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47658430"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68036411"
 ---
 # <a name="long-data-and-sqlsetpos-and-sqlbulkoperations"></a>長い形式のデータ、SQLSetPos および SQLBulkOperations
 行の更新時に長いデータを送信できるように SQL ステートメントのパラメーターを持つ場合は、 **SQLBulkOperations**または**SQLSetPos**を持つ行を挿入するときに、または**SQLBulkOperations**. 複数回呼び出すと、パーツ内のデータが送信される**SQLPutData**します。 実行時にデータを送信する列と呼ばれる*実行時データ列*します。  
@@ -46,4 +45,4 @@ ms.locfileid: "47658430"
   
 6.  呼び出し**SQLParamData**をすべての列のデータ、送信されたことを示すためにもう一度です。 ドライバーが SQL_NEED_DATA と、次の実行時データ列の一意の値を返しますのデータが送信されていないすべての実行時データ列がある場合アプリケーションは、手順 5 を返します。 すべての実行時データ列のデータが送信された場合は、行のデータがデータ ソースに送信されます。 **SQLParamData** SQL_SUCCESS、SQL_SUCCESS_WITH_INFO やことができますを返します。 返す任意の SQLSTATE を**SQLBulkOperations**または**SQLSetPos**返すことができます。  
   
- 後**SQLBulkOperations**または**SQLSetPos** SQL_NEED_DATA を返しますと、データが最後の実行時データ列を完全に送信される前にステートメントが必要なデータの状態。 この状態で、アプリケーションはのみ呼び出すことができます**SQLPutData**、 **SQLParamData**、 **SQLCancel**、 **SQLGetDiagField**、または**SQLGetDiagRec**; その他のすべての関数は、SQLSTATE HY010 を返す (関数のシーケンス エラーです)。 呼び出す**SQLCancel**ステートメントの実行をキャンセルし、前の状態に戻ります。 詳細については、次を参照してください。[付録 b: ODBC の状態遷移テーブル](../../../odbc/reference/appendixes/appendix-b-odbc-state-transition-tables.md)します。
+ 後**SQLBulkOperations**または**SQLSetPos** SQL_NEED_DATA を返しますと、データが最後の実行時データ列を完全に送信される前にステートメントが必要なデータの状態。 この状態で、アプリケーションはのみ呼び出すことができます**SQLPutData**、 **SQLParamData**、 **SQLCancel**、 **SQLGetDiagField**、または**SQLGetDiagRec**; その他のすべての関数は、SQLSTATE HY010 を返す (関数のシーケンス エラーです)。 呼び出す**SQLCancel**ステートメントの実行をキャンセルし、前の状態に戻ります。 詳細については、次を参照してください[付録 b:。ODBC の状態遷移テーブル](../../../odbc/reference/appendixes/appendix-b-odbc-state-transition-tables.md)します。

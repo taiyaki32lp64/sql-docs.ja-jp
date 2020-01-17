@@ -22,13 +22,12 @@ helpviewer_keywords:
 ms.assetid: 4688b17a-dfd1-4f03-8db4-273a401f879f
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: b2106d2683a47e31c2f9c76535ee059a7f151883
-ms.sourcegitcommit: c6e71ed14198da67afd7ba722823b1af9b4f4e6f
+ms.openlocfilehash: 2105b03f64ecc2e0357e5a06f0d7cb2c18fb69b0
+ms.sourcegitcommit: c426c7ef99ffaa9e91a93ef653cd6bf3bfd42132
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/16/2019
-ms.locfileid: "54326158"
+ms.lasthandoff: 10/10/2019
+ms.locfileid: "72252177"
 ---
 # <a name="revert-transact-sql"></a>REVERT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -47,10 +46,10 @@ REVERT
   
 ## <a name="arguments"></a>引数  
  WITH COOKIE = @*varbinary_variable*  
- 対応するスタンドアロンの [EXECUTE AS](../../t-sql/statements/execute-as-transact-sql.md) ステートメントで作成されたクッキーを指定します。 *@varbinary_variable* は **varbinary(100)** です。  
+ 対応するスタンドアロンの [EXECUTE AS](../../t-sql/statements/execute-as-transact-sql.md) ステートメントで作成されたクッキーを指定します。 *\@varbinary_variable* は **varbinary(100)** です。  
   
 ## <a name="remarks"></a>Remarks  
- REVERT は、ストアド プロシージャまたはユーザー定義関数などのモジュール内、またはスタンドアロンのステートメントとして指定できます。 モジュール内で指定した場合、REVERT はモジュール内で定義された EXECUTE AS ステートメントにのみ適用されます。 たとえば、次のストアド プロシージャでは、`EXECUTE AS` ステートメントの後に `REVERT` ステートメントが実行されます。  
+ REVERT は、ストアド プロシージャまたはユーザー定義関数などのモジュール内で、またはスタンドアロンのステートメントとして指定できます。 モジュール内で指定した場合、REVERT はモジュール内で定義された EXECUTE AS ステートメントにのみ適用されます。 たとえば、次のストアド プロシージャでは、`EXECUTE AS` ステートメントの後に `REVERT` ステートメントが実行されます。  
   
 ```  
 CREATE PROCEDURE dbo.usp_myproc   
@@ -78,9 +77,9 @@ EXECUTE dbo.usp_myproc;
  スタンドアロンのステートメントとして指定した場合、REVERT はバッチまたはセッション内で定義された EXECUTE AS に適用されます。 対応する EXECUTE AS ステートメントに WITH NO REVERT 句が含まれている場合、REVERT は無効です。 この場合、実行コンテキストはセッションが削除されるまで有効です。  
   
 ## <a name="using-revert-with-cookie"></a>REVERT WITH COOKIE の使用  
- セッションの実行コンテキストの設定に使われる EXECUTE AS ステートメントには、WITH NO REVERT COOKIE = @*varbinary_variable* 句を指定できます。 このステートメントを実行すると、[!INCLUDE[ssDE](../../includes/ssde-md.md)]ではクッキーが @*varbinary_variable* に渡されます。 そのステートメントで設定された実行コンテキストを以前のコンテキストに戻すことができるのは、REVERT WITH COOKIE = @*varbinary_variable* ステートメントの呼び出し時に、適切な *@varbinary_variable* 値が含まれている場合だけです。  
+ セッションの実行コンテキストの設定に使われる EXECUTE AS ステートメントには、WITH NO REVERT COOKIE = @*varbinary_variable* 句を指定できます。 このステートメントを実行すると、[!INCLUDE[ssDE](../../includes/ssde-md.md)]ではクッキーが @*varbinary_variable* に渡されます。 そのステートメントで設定された実行コンテキストを以前のコンテキストに戻すことができるのは、REVERT WITH COOKIE = @*varbinary_variable* ステートメントの呼び出し時に、適切な *\@varbinary_variable* 値が含まれている場合だけです。  
   
- このメカニズムは、接続プールが使用される環境で役立ちます。 接続プールには、複数のエンド ユーザーがアプリケーションで再利用するデータベース接続のグループが管理されています。 *@varbinary_variable* に渡される値は、EXECUTE AS ステートメントの呼び出し元 (この場合はアプリケーション) だけが認識できるため、呼び出し元が確立した実行コンテキストは、アプリケーションを呼び出すエンド ユーザーによって変更されることはありません。 実行コンテキストが戻された後、アプリケーションではコンテキストを他のプリンシパルに切り替えることができます。  
+ このメカニズムは、接続プールが使用される環境で役立ちます。 接続プールには、複数のエンド ユーザーがアプリケーションで再利用するデータベース接続のグループが管理されています。 *\@varbinary_variable* に渡される値は、EXECUTE AS ステートメントの呼び出し元 (この場合はアプリケーション) だけが認識できるため、呼び出し元が確立した実行コンテキストは、アプリケーションを呼び出すエンド ユーザーによって変更されることはありません。 実行コンテキストが戻された後、アプリケーションではコンテキストを他のプリンシパルに切り替えることができます。  
   
 ## <a name="permissions"></a>アクセス許可  
  権限は必要ありません。  
@@ -154,7 +153,7 @@ GO
 ```  
   
 ## <a name="see-also"></a>参照  
- [実行 AS (& a) #40 です。TRANSACT-SQL と #41 です。](../../t-sql/statements/execute-as-transact-sql.md)   
+ [EXECUTE AS &#40;Transact-SQL&#41;](../../t-sql/statements/execute-as-transact-sql.md)   
  [EXECUTE AS 句 &#40;Transact-SQL&#41;](../../t-sql/statements/execute-as-clause-transact-sql.md)   
  [EXECUTE &#40;Transact-SQL&#41;](../../t-sql/language-elements/execute-transact-sql.md)   
  [SUSER_NAME &#40;Transact-SQL&#41;](../../t-sql/functions/suser-name-transact-sql.md)   

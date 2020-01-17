@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: bc53253c93f5f52c6bbe00941eadbf14b65d5f64
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48084042"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68206822"
 ---
 # <a name="using-cursors-odbc"></a>カーソルの使用 (ODBC)
   ODBC では、次のことを可能にするカーソル モデルがサポートされます。  
@@ -64,7 +64,7 @@ ms.locfileid: "48084042"
   
 -   [位置指定更新&#40;ODBC&#41;](positioned-updates-odbc.md)  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [SQL Server Native Client &#40;ODBC&#41;](../native-client/odbc/sql-server-native-client-odbc.md)   
  [CLOSE &#40;Transact-SQL&#41;](/sql/t-sql/language-elements/close-transact-sql)   
  [カーソル](../../relational-databases/cursors.md)   

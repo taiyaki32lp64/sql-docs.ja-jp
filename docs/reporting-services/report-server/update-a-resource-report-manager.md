@@ -1,50 +1,45 @@
 ---
-title: リソースの更新 (レポート マネージャー) | Microsoft Docs
-ms.date: 03/01/2017
+title: 更新リソース (web ポータル) |Microsoft Docs
+ms.date: 06/14/2019
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: report-server
 ms.topic: conceptual
 helpviewer_keywords:
 - updating resources
 - resources [Reporting Services], updating
 ms.assetid: d21f7493-bcf7-4e9e-9886-55ebdc1f1037
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: d82159a1d93e51715888fc405a94d91a4ffbb925
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 2f101df8f160e7d6bab50dd96e7a156622c7699a
+ms.sourcegitcommit: 1bbbbb8686745a520543ac26c4d4f6abe1b167ea
+ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50031564"
+ms.lasthandoff: 06/18/2019
+ms.locfileid: "67228582"
 ---
-# <a name="update-a-resource-report-manager"></a>リソースの更新 (レポート マネージャー)
+# <a name="update-a-resource-web-portal"></a>リソース (web ポータル) の更新します。
   リソースを新しいバージョンに置換すると、リソースを更新することができます。 リソースは、レポート サーバーに格納されたアイテムです。このアイテムには、アップロードするファイルのコンテンツが含まれます。 新しいコンテンツまたは異なるコンテンツをインポートすると、既存のリソースを置換できます。 リソースの更新は、既存のプロパティやリソース上のセキュリティ設定を保持しながらコンテンツを更新する方法を提供します。  
   
-### <a name="to-update-a-resource"></a>リソースを更新するには  
+## <a name="to-update-a-resource"></a>リソースを更新するには  
   
-1.  [レポート マネージャー &#40;SSRS ネイティブ モード&#41;](https://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896) を開始します。  
+1.  「[レポート サーバーの Web ポータル (SSRS ネイティブ モード)](../../reporting-services/web-portal-ssrs-native-mode.md)」から始めます。  
   
-2.  レポート マネージャーで、更新するリソースへの移動またはリソースの検索を行います。  
+2.  更新したいリソースを参照または検索してください。  
   
-3.  **[表示]** ページでリソースをクリックして、そのリソースを開きます。  
+3.  リソースを右クリックして**管理**ドロップダウン メニューから。  
   
-4.  **[プロパティ]** をクリックすると、 **[全般]** プロパティ ページが開きます。  
+4.  選択、**プロパティ**ページし、**置換**します。  
   
-5.  **[置換]** をクリックすると、 **[リソースのインポート]** ページが開きます。  
+5.  **オープン** ダイアログ ボックスで、新しいリソースとして使用ファイルを含むディレクトリに移動します。  
   
-6.  **[参照]** をクリックします。  
+6.  使用するファイルを選択して、現在のリソースを置換します。 更新されたバージョンのリソース ファイルを使用したり、名前やファイル タイプの異なるファイルを指定することができます。  
   
-7.  使用するファイルを選択して、現在のリソースを置換します。 更新されたバージョンのリソース ファイルを使用したり、名前やファイル タイプの異なるファイルを指定することができます。  
-  
-8.  **[OK]** をクリックして、リソース ファイルをアップロードします。次に、 **[リソースのインポート]** ページを閉じ、レポート サーバーに変更を保存します。  
+7.  選択**オープン**をリソース ファイルをアップロードし、変更、レポート サーバーに保存します。  
   
  更新するリソースにレポートで使用する画像が含まれる場合、更新された画像を表示するにはレポートを更新する必要があります。  
   
 ## <a name="see-also"></a>参照  
- [[コンテンツ] ページ (レポート マネージャー)](https://msdn.microsoft.com/library/6b16869b-158a-4934-9c85-bee934b35378)   
- [[ファイルのアップロード] ページ &#40;レポート マネージャー&#41;](https://msdn.microsoft.com/library/7bb3166f-9374-4449-b66a-ffb77298507d)   
+ [レポート サーバー コンテンツの管理 (SSRS ネイティブ モード)](../../reporting-services/report-server/report-server-content-management-ssrs-native-mode.md)   
  [フォルダーへのファイルのアップロード](../../reporting-services/report-server/upload-files-to-a-folder.md)   
- [レポート マネージャー F1 ヘルプ](https://msdn.microsoft.com/library/e0137273-85b8-45f0-83e5-38a50481768f)  
-  
   

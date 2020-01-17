@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 240c8416-c8e5-4346-8433-07e0f779099f
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 0489d3d1486cb447a16b9658a17c0e6f4d9f41f9
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d6c0aa05f095907b39cacf39f65dfc3b09d9786e
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47825190"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72907188"
 ---
 # <a name="configure-an-oracle-publisher"></a>Oracle パブリッシャーの構成
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -37,6 +36,7 @@ ms.locfileid: "47825190"
 -   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] から[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 以外のサブスクライバーへのデータのパブリッシュ  
 
 -   Oracle に対するデータのパブリッシュには次の制限があります。  
+
   | |2016 以前 |2017 以降 |
   |-------|-------|--------|
   |Oracle からのレプリケーション |Oracle 10g 以前のみをサポート |Oracle 10g 以前のみをサポート |
@@ -56,7 +56,7 @@ ms.locfileid: "47825190"
 > [!NOTE]  
 >  **MSSQLSERVERDISTRIBUTOR** パブリック シノニムと、 **CASCADE** オプションで構成した Oracle レプリケーション ユーザーを削除すると、Oracle パブリッシャーからすべてのレプリケーション オブジェクトが削除されます。  
   
- Oracle レプリケーション ユーザー スキーマのセットアップに役立つサンプル スクリプトが提供されています。 このスクリプトは、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] のインストール後、*\<drive>*:\\\Program Files\Microsoft SQL Server\\*\<InstanceName>* \MSSQL\Install\oracleadmin.sql ディレクトリで使用できます。 このスクリプトについては、「 [Script to Grant Oracle Permissions](../../../relational-databases/replication/non-sql/script-to-grant-oracle-permissions.md)」でも説明します。  
+ Oracle レプリケーション ユーザー スキーマのセットアップに役立つサンプル スクリプトが提供されています。 このスクリプトは、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] のインストール後、 *\<drive>* :\\\Program Files\Microsoft SQL Server\\ *\<InstanceName>* \MSSQL\Install\oracleadmin.sql ディレクトリで使用できます。 このスクリプトについては、「 [Script to Grant Oracle Permissions](../../../relational-databases/replication/non-sql/script-to-grant-oracle-permissions.md)」でも説明します。  
   
  DBA 特権を持つアカウントを使用して Oracle データベースに接続し、スクリプトを実行します。 このスクリプトでは、レプリケーション管理ユーザー スキーマのユーザーとパスワード、およびオブジェクトを作成するときに使用する既定のテーブルスペースの入力が要求されます (このテーブルスペースは Oracle データベース内に存在していることが必要です)。 オブジェクトに他のテーブルスペースを指定する方法の詳細については、「[Manage Oracle Tablespaces (Oracle テーブルスペースの管理)](../../../relational-databases/replication/non-sql/manage-oracle-tablespaces.md)」を参照してください。 ユーザー名と複雑なパスワードを選択しますが、後で Oracle データベースをパブリッシャーとして構成するときにこの情報を提供する必要があるため、どちらもメモしておいてください。 スキーマはレプリケーションに必要なオブジェクトでのみ使用し、このスキーマではパブリッシュするテーブルを作成しないでください。  
   
@@ -137,7 +137,7 @@ ms.locfileid: "47825190"
 > [!NOTE]  
 >  Oracle パブリッシャーの名前を、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ディストリビューターと同じ名前、または同じディストリビューターを使用する [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] パブリッシャーと同じ名前にすることはできません。  
   
- Oracle データベースをパブリッシャーとして識別する場合は、Oracle パブリッシング オプションの [Complete] または [Oracle (ゲートウェイ)] を選択する必要があります。 パブリッシャーを識別した後は、パブリッシャーをいったん削除して再構成しない限り、このオプションは変更できません。 [Complete] オプションでは、スナップショット パブリケーションとトランザクション パブリケーションに、Oracle パブリッシングでサポートされるすべての機能セットが提供されます。 [Oracle (ゲートウェイ)] オプションでは、システム間のゲートウェイとしてレプリケーションが機能する場合にパフォーマンスを向上させるための最適化が行われます。  
+ Oracle データベースをパブリッシャーとして識別する場合は、次の Oracle パブリッシング オプションを選択する必要があります: [Complete] または [Oracle (ゲートウェイ)] パブリッシャーを識別した後は、パブリッシャーをいったん削除して再構成しない限り、このオプションは変更できません。 [Complete] オプションでは、スナップショット パブリケーションとトランザクション パブリケーションに、Oracle パブリッシングでサポートされるすべての機能セットが提供されます。 [Oracle (ゲートウェイ)] オプションでは、システム間のゲートウェイとしてレプリケーションが機能する場合にパフォーマンスを向上させるための最適化が行われます。  
   
  Oracle パブリッシャーを [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ディストリビューターで識別した後、レプリケーションによって Oracle データベースの TNS サービス名と同じ名前のリンク サーバーが作成されます。 このリンク サーバーはレプリケーションでのみ使用できます。 リンク サーバー接続で Oracle パブリッシャーに接続する必要がある場合は、別の TNS サービス名を作成してから、[sp_addlinkedserver &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md) を呼び出すときにこの名前を使用します。  
   

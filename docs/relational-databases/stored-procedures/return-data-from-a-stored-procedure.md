@@ -12,22 +12,21 @@ helpviewer_keywords:
 ms.assetid: 7a428ffe-cd87-4f42-b3f1-d26aa8312bf7
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 2cccd8e2237b09e438ce19ff4bc2e4874e927334
-ms.sourcegitcommit: bbdf51f0d56acfa6bcc4a5c4fe2c9f3cd4225edc
+ms.openlocfilehash: 4f9ee8851ce00c429ba277dd6e0be3286284f548
+ms.sourcegitcommit: aaa42f26c68abc2de10eb58444fe6b490c174eab
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56079428"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74307980"
 ---
 # <a name="return-data-from-a-stored-procedure"></a>ストアド プロシージャからデータを返す
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
   プロシージャからのデータを呼び出し元のプログラムに返す手段には、結果セット、出力パラメーター、リターン コードの 3 つがあります。 このトピックでは、3 つのアプローチについて説明します。  
   
-  ## <a name="returning-data-using-result-sets"></a>結果セットを使用してデータを返す処理
- ストアド プロシージャの本体に SELECT ステートメントを含める場合 (ただし、SELECT ...INTO でも、INSERT ...SELECT でもない)、SELECT ステートメントによって指定される行がクライアントに直接送信されます。  大規模な結果セットの場合、結果セットがクライアントに完全に送信されるまで、ストアド プロシージャ実行は次のステートメントに進みません。  小規模な結果セットの場合、クライアントに返すために結果がスプールされ、実行は続けられます。  ストアド プロシージャの実行中、このような SELECT ステートメントが複数実行された場合、複数の結果セットがクライアントに送信されます。  この動作は、入れ子になっている TSQL バッチ、入れ子になっているストアド プロシージャ、最上位の TSQL バッチにも当てはまります。
+## <a name="returning-data-using-result-sets"></a>結果セットを使用してデータを返す処理
+ストアド プロシージャの本体に SELECT ステートメントを含める場合 (ただし、SELECT ...INTO でも、INSERT ...SELECT でもない)、SELECT ステートメントによって指定される行がクライアントに直接送信されます。  大規模な結果セットの場合、結果セットがクライアントに完全に送信されるまで、ストアド プロシージャ実行は次のステートメントに進みません。  小規模な結果セットの場合、クライアントに返すために結果がスプールされ、実行は続けられます。  ストアド プロシージャの実行中、このような SELECT ステートメントが複数実行された場合、複数の結果セットがクライアントに送信されます。  この動作は、入れ子になっている TSQL バッチ、入れ子になっているストアド プロシージャ、最上位の TSQL バッチにも当てはまります。
  
  
  ### <a name="examples-of-returning-data-using-a-result-set"></a>結果セットを使用してデータを返す例 

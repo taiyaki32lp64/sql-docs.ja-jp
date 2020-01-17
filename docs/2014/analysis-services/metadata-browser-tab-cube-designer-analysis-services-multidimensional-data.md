@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.cubeeditor.browsecube.metadatapane.f1
@@ -13,12 +12,12 @@ ms.assetid: a1ace545-488d-4645-8330-56408a5e8abd
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 31c14a039d22238450023c4a7f9b7b099e9a2a53
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 3e4aade575cdcb8260865d4a1fe9ab6f4b7941fe
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48171152"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66077851"
 ---
 # <a name="metadata-browser-tab-cube-designer-analysis-services---multidimensional-data"></a>[メタデータ] (キューブ デザイナーの [ブラウザー] タブ) (Analysis Services - 多次元データ)
   キューブ構造の参照、関連するメジャーの確認、ディメンションの閲覧と作成には、キューブ デザイナーの **[ブラウザー]** タブの **[メタデータ]** ペインを使用します。 階層のドリル ダウン、使用できるメジャーと KPI の一覧表示、オブジェクトの完全修飾名のコピーなどを実行できます。  
@@ -39,7 +38,7 @@ ms.locfileid: "48171152"
   
  テーブル モデルで作業している場合は、関数の一覧に MDX 関数と DAX 関数の両方が含まれます。 そうでない場合は、一覧に MDX だけが含まれます。 多次元モデルは、オブジェクトの定義の一部として DAX 式を組み込むことはできますが、直接 DAX 関数を使用することはできません。  
   
- ヒント: DAX 関数が格納されているフォルダーは、全大文字で表示されます。 その他すべてのフォルダーには、MDX 関数が格納されています。 たとえば、統計関数には 2 つのフォルダーがあり、関連する DAX 関数は **STATISTICAL** に格納されています。  
+ ヒント:DAX 関数が含まれているフォルダーは、すべて大文字で表示されます。 その他すべてのフォルダーには、MDX 関数が格納されています。 たとえば、これには統計関数の 2 つのフォルダーがあります。**統計**関連する DAX 関数が含まれています。  
   
 ## <a name="context-menu"></a>コンテキスト メニュー  
  **[メタデータ]** ペインで表示される要素を右クリックして表示されるショートカット メニューでは、次のオプションを使用できます。  
@@ -47,8 +46,8 @@ ms.locfileid: "48171152"
 |オプション|説明|  
 |------------|-----------------|  
 |**クエリに追加します。**|選択したオブジェクトをクエリ作成領域の下のペインに追加します。|  
-|**フィルターに追加します。**|選択したディメンション、属性、階層、またはレベルを **[ブラウザー]** のフィルター領域に追加します。<br /><br /> 注: このオプションは、ディメンション、属性、階層、またはレベルが選択されている場合にのみ有効です。|  
-|**[コピー]**|選択した項目をクリップボードに追加します。<br /><br /> 注: このオプションでは、オブジェクトの完全修飾名がコピーされます。|  
+|**フィルターに追加します。**|選択したディメンション、属性、階層、またはレベルを **[ブラウザー]** のフィルター領域に追加します。<br /><br /> 注:レベルが選択されているまたはディメンション、属性、階層場合にのみ、このオプションは有効です。|  
+|**コピー**|選択した項目をクリップボードに追加します。<br /><br /> 注:このオプションは、オブジェクトの完全修飾名をコピーします。|  
   
 ## <a name="see-also"></a>参照  
  [ツールバー&#40;ブラウザー タブ、キューブ デザイナー&#41; &#40;Analysis Services - 多次元データ&#41;](toolbar-browser-tab-cube-designer-analysis-services-multidimensional-data.md)   

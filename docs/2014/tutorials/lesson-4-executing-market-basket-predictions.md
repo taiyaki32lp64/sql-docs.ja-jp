@@ -11,11 +11,11 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: 3b49fc242eb8b2242269c5af33cc094937bbe0de
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56041433"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63312108"
 ---
 # <a name="lesson-4-executing-market-basket-predictions"></a>レッスン 4:マーケット バスケット予測の実行
   このレッスンでは、DMX を使用して`SELECT`関連付けに基づく予測を作成するステートメントをモデル化で作成した[レッスン 2。Market Basket マイニング構造にマイニング モデルの追加](../../2014/tutorials/lesson-2-adding-mining-models-to-the-market-basket-mining-structure.md)します。 DMX の `SELECT` ステートメントを使用して、`PREDICTION JOIN` 句を追加することにより、予測クエリを作成します。 予測結合の構文の詳細については、次を参照してください。 [SELECT FROM&#60;モデル&#62;予測結合&#40;DMX&#41;](/sql/dmx/select-from-model-cases-dmx)します。  
@@ -78,7 +78,7 @@ SELECT <select list> FROM [<mining model>]
   
 #### <a name="to-create-an-association-query"></a>アソシエーション クエリを作成するには  
   
-1.  **オブジェクト エクスプ ローラー**のインスタンスを右クリックして[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]、 をポイント**新しいクエリ**、 をクリックし、 **DMX**クエリ エディターを開きます。  
+1.  **オブジェクト エクスプ ローラー**のインスタンスを右クリックして[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]、] をポイント**新しいクエリ**、] をクリックし、 **DMX**クエリ エディターを開きます。  
   
 2.  `PREDICTION JOIN` ステートメントの汎用例を空のクエリにコピーします。  
   
@@ -152,7 +152,7 @@ SELECT <select list> FROM [<mining model>]
   
 #### <a name="to-create-an-association-query"></a>アソシエーション クエリを作成するには  
   
-1.  **オブジェクト エクスプ ローラー**のインスタンスを右クリックして[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]、 をポイント**新しいクエリ**、 をクリックし、 **DMX**クエリ エディターを開きます。  
+1.  **オブジェクト エクスプ ローラー**のインスタンスを右クリックして[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]、] をポイント**新しいクエリ**、] をクリックし、 **DMX**クエリ エディターを開きます。  
   
 2.  `PREDICTION JOIN` ステートメントの汎用例を空のクエリにコピーします。  
   

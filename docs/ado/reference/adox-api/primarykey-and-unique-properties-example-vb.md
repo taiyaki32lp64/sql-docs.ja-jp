@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: f536acac-06ea-4b39-bfba-ee9902b01615
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 10f5a1a5c1436181a75329bfb0371c8836d7ac6e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 43ee83f0c08e5ea686758c5fe913d0afc9be572d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47730080"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67965550"
 ---
 # <a name="primarykey-and-unique-properties-example-vb"></a>PrimaryKey および Unique プロパティの例 (VB)
 この例では、 [PrimaryKey](../../../ado/reference/adox-api/primarykey-property-adox.md)と[Unique](../../../ado/reference/adox-api/unique-property-adox.md)のプロパティ、[インデックス](../../../ado/reference/adox-api/index-object-adox.md)します。 コードでは、2 つの列を含む新しいテーブルを作成します。 **PrimaryKey**と**Unique**プロパティを使用して 1 つの列、主キーが重複する値が許可されていません。  
@@ -113,7 +112,7 @@ End Sub
 ' EndPrimaryKeyVB  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [Index オブジェクト (ADOX)](../../../ado/reference/adox-api/index-object-adox.md)   
  [PrimaryKey プロパティ (ADOX)](../../../ado/reference/adox-api/primarykey-property-adox.md)   
  [Unique プロパティ (ADOX)](../../../ado/reference/adox-api/unique-property-adox.md)

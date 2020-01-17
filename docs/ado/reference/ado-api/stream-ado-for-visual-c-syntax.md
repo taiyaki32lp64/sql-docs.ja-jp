@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: dddcceef-9296-4fb3-8eca-94b17d0148de
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 77da08e1d6ead2ad5777f41113a1ed164a7fb5da
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ec7e5ac51718bd703586b0c60f77dad0c77cb938
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47715750"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67930693"
 ---
 # <a name="stream-ado-for-visual-c-syntax"></a>Stream (Visual C++ 構文用の ADO)
 ## <a name="methods"></a>メソッド  
@@ -42,7 +41,7 @@ Write(VARIANT Buffer)
 WriteText(BSTR Data, StreamWriteEnum Options = adWriteChar)  
 ```  
   
-## <a name="properties"></a>[プロパティ]  
+## <a name="properties"></a>Properties  
   
 ```  
 get_Charset(BSTR *pbstrCharset)  
@@ -60,5 +59,5 @@ get_Type(StreamTypeEnum *pType)
 put_Type(StreamTypeEnum Type)  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [Stream オブジェクト (ADO)](../../../ado/reference/ado-api/stream-object-ado.md)

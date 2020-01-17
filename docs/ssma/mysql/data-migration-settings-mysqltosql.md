@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 9c396df4-5676-4f32-9c57-70d4f15f9b7a
 author: Shamikg
 ms.author: Shamikg
-manager: craigg
-ms.openlocfilehash: 90f76ef4d52fd5a1b7ed04d268954d0fed756324
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: c2c903ef29ab1a103bc9aa4f7b061e83ee7f2a95
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51681150"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67896369"
 ---
 # <a name="data-migration-settings-mysqltosql"></a>データ移行の設定 (MySQLToSQL)
   
@@ -48,10 +47,10 @@ ms.locfileid: "51681150"
   
 存在する 2 つのボタンを viz。  
   
--   **適用:** クリックして**適用**変更されている設定を適用します。  
+-   **適用されます。** クリックして**適用**変更されている設定を適用します。  
   
--   **[キャンセル]:** クリックして**キャンセル**変更が行われた前に、現在の設定を復元します。  
+-   **キャンセル：** クリックして**キャンセル**変更が行われた前に、現在の設定を復元します。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
 [SQL Server または SQL Azure への MySQL データの移行](https://msdn.microsoft.com/a6a7f4d6-68aa-4a38-93bf-53eba0d7dc82)  
   

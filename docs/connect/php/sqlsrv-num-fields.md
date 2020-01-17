@@ -16,18 +16,17 @@ helpviewer_keywords:
 ms.assetid: 03ca1860-01ed-408c-862a-57a7355de4bf
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: a61e2f3884b88f364e87b13b79e5514c674a19ec
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b5c095b74f8f299a1d5f2b15daaf95e3d5086ebd
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47798790"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67992666"
 ---
 # <a name="sqlsrvnumfields"></a>sqlsrv_num_fields
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
-アクティブな結果セット内のフィールド数を取得します。 この関数は、準備したステートメント、または実行後にする前に呼び出すことができます。  
+アクティブな結果セット内のフィールド数を取得します。 この関数は、実行前または実行後に、任意の準備されたステートメントで呼び出すことができます。  
   
 ## <a name="syntax"></a>構文  
   

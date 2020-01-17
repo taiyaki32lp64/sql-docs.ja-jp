@@ -1,6 +1,8 @@
 ---
-title: += (文字列連結代入) (Transact-SQL) | Microsoft Docs
-ms.custom: ''
+title: += 文字列連結
+description: 2 つの文字列を連結し、その結果の文字列を演算の結果に設定します。
+titleSuffix: SQL Server (Transact-SQL)
+ms.custom: seo-lt-2019
 ms.date: 12/07/2016
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
@@ -14,16 +16,15 @@ helpviewer_keywords:
 - string concatenation
 - += (concatenate operator)
 ms.assetid: 4aaeaab7-9b2b-48e0-8487-04ed672ebcb1
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
+author: rothja
+ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: bf5cdcfbfe46db3a53df7a4333b7685cc77d0bc5
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: dd21fb221076470d0c39194ea4c38d96af0f1056
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47669550"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75257055"
 ---
 # <a name="-string-concatenation-assignment-transact-sql"></a>+= (文字列連結代入) (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -46,7 +47,7 @@ expression += expression
 ## <a name="result-types"></a>戻り値の型  
  変数に対して定義されているデータ型を返します。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  SET @v1 += 'expression' は SET @v1 = @v1 + ('expression') と同じです。 また、SET @v1 = @v2 + @v3 + @v4 は SET @v1 = (@v2 + @v3) + @v4 と同じです。  
   
  += 演算子を変数なしで使用することはできません。 たとえば、次のコードはエラーになります。  
@@ -55,7 +56,7 @@ expression += expression
 SELECT 'Adventure' += 'Works'  
 ```  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
 ### <a name="a-concatenation-using--operator"></a>A. += 演算子を使用した連結
  次の例では、`+=` 演算子を使用して文字列を連結しています。  
   

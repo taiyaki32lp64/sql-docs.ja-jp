@@ -17,24 +17,23 @@ helpviewer_keywords:
 ms.assetid: 506682b1-b6c9-45e2-aa54-7abd5844c3f1
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 685c5a6290f9f6b51321c8d730b60614dc0f5fa7
-ms.sourcegitcommit: bfa10c54e871700de285d7f819095d51ef70d997
+ms.openlocfilehash: 4eb94e51896e08f60389edde0c2a6cd0461e8538
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/14/2019
-ms.locfileid: "54256887"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67929958"
 ---
 # <a name="effective-boolean-value-xquery"></a>有効なブール値 (XQuery)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
-  次に有効なブール値を示します。  
+  有効なブール値を次に示します。  
   
--   オペランドが空のシーケンスまたはブール型の false である場合、false になります。  
+-   オペランドが空のシーケンスまたはブール値 false の場合は false。  
   
--   それ以外の場合、値は true になります。  
+-   それ以外の場合、値は true です。  
   
- 有効なブール値は、1 つのブール値、ノード シーケンス、または空のシーケンスを返す式で計算できます。 次の型の式が処理されるとき、ブール値が暗黙的に計算されます。  
+ 単一のブール値、ノード シーケンス、または空のシーケンスを返す式では、有効なブール値を計算できます。 ブール値が次の種類の式が処理されるときに暗黙的に計算されることに注意してください。  
   
 -   論理式  
   
@@ -46,7 +45,7 @@ ms.locfileid: "54256887"
   
 -   [QuantifiedeExpressions](../xquery/quantified-expressions-xquery.md)  
   
- 次に、有効なブール値の例を示します。 ときに、**場合**式が処理される場合、条件の有効なブール値が決定されます。 `/a[1]` は空のシーケンスを返すので、有効なブール値は false になります。 1 つのテキスト ノード (false) を含む XML として結果が返されます。  
+ 次に、有効なブール値の例を示します。 ときに、**場合**式が処理される場合、条件の有効なブール値が決定されます。 `/a[1]`が空のシーケンスを返す有効なブール値は false。 結果は、1 つのテキスト ノード (false) を XML として返されます。  
   
 ```  
 value is false  
@@ -71,7 +70,7 @@ go
   
 -   型指定された**xml**変数が作成され、クエリを実行します。  
   
--   式 `data(/b[1])` は、ブール型値 true を返します。 したがって、この場合の有効なブール値は true になります。  
+-   式`data(/b[1])`ブール値 true を返します。 そのため、有効なブール値でこの場合は true です。  
   
 -   式`data(/b[2])`ブール値 false を返します。 したがって、この場合の有効なブール値は false になります。  
   
@@ -89,7 +88,7 @@ SELECT @x.query('if (data(/b[2])) then "true" else "false"')
 go  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [XQuery の基礎](../xquery/xquery-basics.md)   
  [FLWOR ステートメントおよびイテレーション&#40;XQuery&#41;](../xquery/flwor-statement-and-iteration-xquery.md)  
   

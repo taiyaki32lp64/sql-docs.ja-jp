@@ -16,27 +16,27 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: efba2e73c3043ddbf25fef06b57ef039f6eacea5
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52764234"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63183472"
 ---
 # <a name="jobs-that-reference-a-schedule"></a>スケジュールを参照するジョブ
   このダイアログ ボックスでは、特定のスケジュールを参照するジョブに関する情報を表示できます。  
   
 ## <a name="options"></a>および  
- **[スケジュール]**  
+ **スケジュール**  
  表示しているスケジュールの名前が表示されます。  
   
  **選択**  
- 読み取り専用です。  
+ 読み取り専用。  
   
  **名前**  
  このスケジュールを使用するジョブの名前です。  
   
- **Enabled**  
- 読み取り専用です。 このジョブが現在有効になっているかどうかを示します。  
+ **有効**  
+ 読み取り専用。 このジョブが現在有効になっているかどうかを示します。  
   
  **カテゴリ**  
  ジョブ カテゴリ。  

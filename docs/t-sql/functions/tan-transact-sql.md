@@ -16,16 +16,15 @@ helpviewer_keywords:
 - TAN function
 - tangent
 ms.assetid: f679fa6a-5739-484b-9450-fb3400d4f30c
-author: MashaMSFT
-ms.author: mathoma
-manager: craigg
+author: MikeRayMSFT
+ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 95853c489299e2141ebee150f2e1ec141f53df90
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: c451192a96dc2fdf4e8e5e619237527139b4f2f6
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47681870"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68117451"
 ---
 # <a name="tan-transact-sql"></a>TAN (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]

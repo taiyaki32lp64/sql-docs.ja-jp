@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: f31dd938-e992-436b-b613-145c23973064
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 1ff13d2e46377b0d29c9bbc8e8ad1705dedc048b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 2f8eaebca02ef3987e3613b5dd896e0f7c130086
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47633410"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67938034"
 ---
 # <a name="network-database-access"></a>ネットワーク データベース アクセス
 ネットワーク経由でデータベースにアクセスするには、さまざまなコンポーネントをそれぞれから独立しており、下に、プログラミング インターフェイスが存在する必要があります。 次の図は、これらのコンポーネントについて示しています。  

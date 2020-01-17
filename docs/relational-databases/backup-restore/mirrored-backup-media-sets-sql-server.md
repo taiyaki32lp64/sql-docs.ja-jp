@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: 05a0b8d1-3585-4f77-972f-69d1c0d4aa9b
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 4ce1303c580bb8eabca7fa3fcdb15ed821ff827a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 33875074e9c6975e187baceaff18ad49c057a8e8
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47626300"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68033731"
 ---
 # <a name="mirrored-backup-media-sets-sql-server"></a>ミラー化バックアップ メディア セット (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

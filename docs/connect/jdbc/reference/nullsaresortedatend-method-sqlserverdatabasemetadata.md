@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: 713cf636-40f2-474a-8a5d-5aba4a310a9c
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 871f7896f0f0053e8b45bd93dedd5153a58b8b25
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 0b81926e3e0e6b57f752391b3f6bac68b5ad7aee
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47673280"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67976682"
 ---
 # <a name="nullsaresortedatend-method-sqlserverdatabasemetadata"></a>nullsAreSortedAtEnd メソッド (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -42,7 +41,7 @@ public boolean nullsAreSortedAtEnd()
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- この nullsAreSortedAtEnd メソッドは、java.sql.DatabaseMetaData インターフェイスで nullsAreSortedAtEnd メソッドによって指定されます。  
+ この nullsAreSortedAtEnd メソッドは、nullsAreSortedAtEnd メソッドによって、java メタデータインターフェイスで指定されます。  
   
 ## <a name="see-also"></a>参照  
  [SQLServerDatabaseMetaData のメソッド](../../../connect/jdbc/reference/sqlserverdatabasemetadata-methods.md)   

@@ -1,5 +1,5 @@
 ---
-title: SQL Server Profiler テンプレート |Microsoft Docs
+title: SQL Server プロファイラーテンプレート |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -15,15 +15,14 @@ helpviewer_keywords:
 - predefined templates [SQL Server Profiler]
 - SQL Server Profiler, templates
 ms.assetid: b674e491-dc58-47a1-acdd-7028e9a201fc
-author: stevestein
-ms.author: sstein
-manager: craigg
-ms.openlocfilehash: c69319c2962dc8158e1c2565faee65e982812f92
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 9d73ecd7342f870e9645c86e714bd0420200b61c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47689530"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68059677"
 ---
 # <a name="sql-server-profiler-templates"></a>SQL Server Profiler のテンプレート
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -56,7 +55,7 @@ ms.locfileid: "47689530"
 ## <a name="default-template"></a>既定のテンプレート  
  [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] では、すべての新しいトレースに適用される既定のテンプレートとして **Standard** テンプレートが自動的に指定されます。 ただし、他の定義済みテンプレートまたはユーザー定義テンプレートを既定のテンプレートにすることもできます。 既定のテンプレートを変更するには、 **[トレース テンプレートのプロパティ]** ダイアログ ボックスの **[全般]** タブを使用してテンプレートを作成または編集するときに、 **[選択したサーバーの種類に対する既定のテンプレートとして使用する]** チェック ボックスをオンにします。  
   
- **[トレース テンプレートのプロパティ]** ダイアログ ボックスに移動するには、[!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] で、**[ファイル]** メニューの **[テンプレート]** を選択して、**[新しいテンプレート]** または **[テンプレートの編集]** をクリックします。  
+ **[トレース テンプレートのプロパティ]** ダイアログ ボックスに移動するには、[!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] で、 **[ファイル]** メニューの **[テンプレート]** を選択して、 **[新しいテンプレート]** または **[テンプレートの編集]** をクリックします。  
   
 > [!NOTE]  
 >  既定のテンプレートは、サーバーの特定の種類固有のテンプレートです。 あるサーバーの種類の既定のテンプレートを変更しても、他のサーバーの種類の既定のテンプレートには影響しません。 特定のサーバーの既定のテンプレートを設定する方法の詳細については、「[トレース定義の既定値の設定 &#40;SQL Server Profiler&#41;](../../tools/sql-server-profiler/set-trace-definition-defaults-sql-server-profiler.md)」を参照してください。  

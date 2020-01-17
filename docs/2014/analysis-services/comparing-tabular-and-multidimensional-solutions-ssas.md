@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: 76ee5e96-6a04-49af-a88e-cb5fe29f2e9a
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 498cba5d7ccb4e97de13d9cb46e58351547d9b75
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 1da4224387e70ccc76e069aa3ce411dddb79b805
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53365844"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66087769"
 ---
 # <a name="comparing-tabular-and-multidimensional-solutions-ssas"></a>Comparing Tabular and Multidimensional Solutions (SSAS)
   [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] では、多次元と表形式の 2 つの方法でデータ モデリングを行えます。 それらの間にはかなり重複している部分がありますが、前進する方法について決定を通知するうえで重要な相違点もあります。 このトピックでは、機能比較を提供し、それぞれのアプローチで一般的なプロジェクト要件にどのように対処しているかを説明します。 たとえば、特定のデータ ソースのサポートが最も重要な考慮事項である場合、データ ソースに関するセクションが、使用するモデリング アプローチを決定するうえで役立ちます。  
@@ -117,7 +116,7 @@ ms.locfileid: "53365844"
 |ユーザー定義階層|[はい](multidimensional-models/user-defined-hierarchies-create.md)|はい|  
 |[書き戻し]|[はい](multidimensional-models/set-partition-writeback.md)|いいえ|  
   
- * 場合は、ソリューションが、非常に多数の個別のカウント (何百万顧客 Id) などをサポートする必要がありますまず Tabular してみてください。 このシナリオでは、パフォーマンスが向上する傾向があります。 ホワイト ペーパーでは、個別のカウントについてのセクションを参照して[Analysis Services ケース スタディ。大規模な商用ソリューションにおける表形式モデルを使用して](https://msdn.microsoft.com/library/dn751533.aspx)します。  
+ \* 場合は、ソリューションが、非常に多数の個別のカウント (何百万顧客 Id) などをサポートする必要がありますまず Tabular してみてください。 このシナリオでは、パフォーマンスが向上する傾向があります。 ホワイト ペーパーでは、個別のカウントについてのセクションを参照して[Analysis Services ケース スタディ。大規模な商用ソリューションにおける表形式モデルを使用して](https://msdn.microsoft.com/library/dn751533.aspx)します。  
   
 ##  <a name="bkmk_modelsize"></a> モデルのサイズ  
  モデルのサイズ (オブジェクトの総数) は、ソリューションの種類によって変わりません。 ただし、各ソリューションを作成するためのデザイン ツールで、大量のオブジェクトの処理に対応する程度は異なります。 大規模なモデルは、 [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)] で作成すると比較的簡単です。オブジェクト エクスプローラーやソリューション エクスプローラーでオブジェクトを種類別にダイアグラム化したり一覧表示したりするための機能が豊富に揃っているからです。  

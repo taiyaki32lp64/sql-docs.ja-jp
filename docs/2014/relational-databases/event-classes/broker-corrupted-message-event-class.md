@@ -15,11 +15,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: a49f10826496e9e8fea46b1846b74535a173f821
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52761344"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62664087"
 ---
 # <a name="brokercorrupted-message-event-class"></a>Broker:Corrupted Message イベント クラス
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、Service Broker が破損したメッセージを受信すると、 **Broker:Corrupted Message** イベントが作成されます。  
@@ -39,13 +39,13 @@ ms.locfileid: "52761344"
 |**FileName**|**nvarchar**|リモート エンドポイントのネットワーク アドレス。|36|いいえ|  
 |**GUID**|**uniqueidentifier**|破損したメッセージが所属するメッセージ交換のメッセージ交換 ID。 この ID はメッセージの一部として転送され、メッセージ交換の両側で共有されます。|54|いいえ|  
 |**Host Name**|**nvarchar**|クライアントが実行しているコンピューターの名前。 このデータ列には、クライアントがホスト名を指定している場合にデータが格納されます。 ホスト名を指定するには、HOST_NAME 関数を使用します。|8|はい|  
-|**IntegerData**|**int**|このメッセージのフラグメント番号。|25|はい|  
+|**IntegerData**|**int**|このメッセージのフラグメント番号。|25|[はい]|  
 |**IsSystem**|**int**|イベントがシステム プロセスとユーザー プロセスのどちらで発生したか。 1 はシステム、0 はユーザーです。|60|いいえ|  
-|**LoginSid**|**image**|ログイン ユーザーのセキュリティ ID 番号 (SID)。 各 SID はサーバーのログインごとに一意です。|41|はい|  
+|**LoginSid**|**image**|ログイン ユーザーのセキュリティ ID 番号 (SID)。 各 SID はサーバーのログインごとに一意です。|41|[はい]|  
 |**NTDomainName**|**nvarchar**|ユーザーが属している Windows ドメイン。|7|はい|  
 |**NTUserName**|**nvarchar**|このイベントが生成された接続を所有するユーザーの名前。|6|はい|  
 |**ObjectName**|**nvarchar**|メッセージ交換の相手側のサービス名、およびこのデータベースに接続するためにリモート データベースで使用される接続文字列。|34|いいえ|  
-|**RoleName**|**nvarchar**|このメッセージを受信するエンドポイントのロール。 次の値のうちの 1 つです。<br /><br /> **イニシエーター**:<br />                  受信エンドポイントはメッセージ交換の発信側です。<br /><br /> **ターゲット**:<br />                  受信エンドポイントはメッセージ交換の対象となる側です。|38|いいえ|  
+|**RoleName**|**nvarchar**|このメッセージを受信するエンドポイントのロール。 次の値のうちの 1 つです。<br /><br /> **initiator**:<br />                  受信エンドポイントはメッセージ交換の発信側です。<br /><br /> **target**:<br />                  受信エンドポイントはメッセージ交換の対象となる側です。|38|いいえ|  
 |**ServerName**|**nvarchar**|トレースされる [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスの名前。|26|いいえ|  
 |**Severity**|**int**|エラーが原因で [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] でメッセージが削除される場合の、エラーの重要度。|29|いいえ|  
 |**SPID**|**int**|クライアントに関連付けられているプロセスに、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] によって割り当てられているサーバー プロセス ID。|12|はい|  

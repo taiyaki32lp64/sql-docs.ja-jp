@@ -1,5 +1,5 @@
 ---
-title: position (byte, long) メソッド |Microsoft Docs
+title: position メソッド (byte, long) |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: 787412c2-4342-49c8-9ca2-7a9ddcd3277c
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 3844d294c72539e752f944b604409b4967a8c166
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: cf8cfa3bb6aed74c7689639698715dc24803d46d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47603934"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67976474"
 ---
 # <a name="position-method-byte-long"></a>position (byte, long) メソッド
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -52,7 +51,7 @@ public long position(byte[] bPattern,
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- この位置のメソッドは、java.sql.Blob インターフェイスでの位置のメソッドによって指定されます。  
+ この位置メソッドは、java. Blob インターフェイスの position メソッドによって指定されます。  
   
 ## <a name="see-also"></a>参照  
  [position メソッド&#40;SQLServerBlob&#41;](../../../connect/jdbc/reference/position-method-sqlserverblob.md)   

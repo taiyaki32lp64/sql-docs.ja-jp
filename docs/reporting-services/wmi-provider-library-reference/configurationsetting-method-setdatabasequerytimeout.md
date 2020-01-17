@@ -2,7 +2,7 @@
 title: SetDatabaseQueryTimeout メソッド (WMI MSReportServer_ConfigurationSetting) | Microsoft Docs
 ms.date: 03/01/2017
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: wmi-provider-library-reference
 ms.topic: conceptual
 apiname:
@@ -13,14 +13,14 @@ apitype: MOFDef
 helpviewer_keywords:
 - SetDatabaseQueryTimeout method
 ms.assetid: bd2809e5-7848-45b3-a502-b04fc698b646
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 8887dcc89911963c2bdfb1b4d61af2fd5a224566
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 59c7b026884244d37aaa59722abf2e07b3e4cc6f
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47816970"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65580045"
 ---
 # <a name="configurationsetting-method---setdatabasequerytimeout"></a>ConfigurationSetting メソッド - SetDatabaseQueryTimeout
   レポート サーバー データベース クエリの既定のタイムアウト値を指定します。  

@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: fd3f9f0f-7c38-4cfd-a0c5-ee93dd52d9a5
 author: julieMSFT
 ms.author: jrasnick
-manager: craigg
-ms.openlocfilehash: 18ee9b0fdc614d2a6c6f224cddf02b527106c8f9
-ms.sourcegitcommit: 0c1d552b3256e1bd995e3c49e0561589c52c21bf
+ms.openlocfilehash: 9011394dccf472499c1c8a8bd1023b7c23009883
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/14/2018
-ms.locfileid: "53380083"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67987210"
 ---
 # <a name="sql-serverbuffer-node"></a>SQL Server: Buffer Node
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

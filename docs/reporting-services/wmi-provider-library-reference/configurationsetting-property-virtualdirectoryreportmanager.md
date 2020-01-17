@@ -2,20 +2,20 @@
 title: ConfigurationSetting プロパティ - VirtualDirectoryReportManager | Microsoft Docs
 ms.date: 03/01/2017
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: wmi-provider-library-reference
 ms.topic: conceptual
 helpviewer_keywords:
 - VirtualDirectoryReportManager property
 ms.assetid: fe5ac055-26e3-4c3d-843c-c12eb7e6e4db
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: b54b7c0e75010e63435f07b9c39a0ce5350c0569
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: fcc2b7df077fb99985ea019130408a875f214d81
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47850500"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65569186"
 ---
 # <a name="configurationsetting-property---virtualdirectoryreportmanager"></a>ConfigurationSetting プロパティ - VirtualDirectoryReportManager
   レポート マネージャー アプリケーションの仮想ディレクトリを返します。 読み取り専用です。  

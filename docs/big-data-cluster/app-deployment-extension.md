@@ -1,123 +1,147 @@
 ---
 title: アプリ展開の拡張機能
-titleSuffix: SQL Server 2019 big data clusters
-description: SQL Server 2019 ビッグ データ クラスター (プレビュー) でアプリケーションとしては、Python または R スクリプトを展開します。
-author: TheBharath
-ms.author: bharaths
-manager: craigg
-ms.date: 02/28/2019
+titleSuffix: SQL Server big data clusters
+description: SQL Server ビッグ データ クラスターに、Python または R スクリプトをアプリケーションとして展開します。
+author: jeroenterheerdt
+ms.author: jterh
+ms.reviewer: mikeray
+ms.date: 08/21/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 8f45817510cb63937544fa4f0f7af5bb42a0c883
-ms.sourcegitcommit: 2533383a7baa03b62430018a006a339c0bd69af2
-ms.translationtype: MT
+ms.openlocfilehash: e05fa19c8453418c22829862801c5044e6c25d2b
+ms.sourcegitcommit: b4ad3182aa99f9cbfd15f4c3f910317d6128a2e5
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57018468"
+ms.lasthandoff: 11/06/2019
+ms.locfileid: "73707140"
 ---
-# <a name="how-to-use-vs-code-to-deploy-applications-to-sql-server-big-data-clusters"></a>VS Code を使用してビッグ データの SQL Server クラスターにアプリケーションを展開する方法
+# <a name="how-to-use-visual-studio-code-to-deploy-applications-to-includebig-data-clusters-2019includesssbigdataclusters-ss-novermd"></a>Visual Studio Code を使用して [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]にアプリケーションを展開する方法
 
-この記事では、Visual Studio Code を使用して、アプリのデプロイの拡張機能で SQL Server のビッグ データ クラスターにアプリケーションを展開する方法について説明します。 この機能は、CTP 2.3 で導入されました。 
+[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
-## <a name="prerequisites"></a>前提条件
+この記事では、Microsoft Visual Studio Code とアプリ展開拡張機能を使用して SQL Server ビッグ データ クラスターにアプリケーションを展開する方法について説明します。
 
-- [Visual Studio Code](https://code.visualstudio.com/)します。
-- [SQL Server のビッグ データ クラスター](big-data-cluster-overview.md) CTP 2.3 以降。
+## <a name="prerequisites"></a>Prerequisites
+
+- [Visual Studio Code](https://code.visualstudio.com/)
+- [SQL Server ビッグ データ クラスター](big-data-cluster-overview.md)
 
 ## <a name="capabilities"></a>Capabilities
 
-この拡張機能は、Visual Studio Code で、次のタスクをサポートします。
+この拡張機能では、Visual Studio Code での次のタスクがサポートされます。
 
-- SQL Server のビッグ データ クラスターで認証します。
-- サポートされているランタイムの環境のデプロイの GitHub リポジトリからのアプリケーション テンプレートを取得します。
-- ユーザーのワークスペースで現在開いているアプリケーション テンプレートを管理します。
-- YAML 形式の仕様を使用してアプリケーションをデプロイします。
-- SQL Server のビッグ データ クラスター内で展開されたアプリを管理します。
-- 追加情報を含む、サイド バーで、展開されているすべてのアプリを表示します。
-- アプリを使用またはクラスターから、アプリを削除する実行の仕様を生成します。
-- デプロイ済みのアプリ実行の仕様の YAML を使用します。
+- SQL Server ビッグ データ クラスターを使用して認証する。
+- サポートされているランタイムの展開用に、GitHub リポジトリからアプリケーション テンプレートを取得する。
+- ユーザーのワークスペースで現在開かれているアプリケーション テンプレートを管理する。
+- YAML 形式の仕様を使用してアプリケーションを展開する。
+- 展開したアプリを SQL Server ビッグ データ クラスター内で管理する。
+- 展開したすべてのアプリと追加情報をサイド バーに表示する。
+- 実行仕様を生成してアプリを使用するか、クラスターからアプリを削除する。
+- 展開したアプリを YAML の実行仕様を通じて使用する。
 
-次のセクションでは、ただし、インストール プロセスを説明し、拡張機能のしくみの概要を説明します。 
+以下のセクションでは、インストール プロセスについて説明し、拡張機能の動作の概要を示します。 
 
 ### <a name="install"></a>インストール
 
-まず VS Code でアプリのデプロイの拡張機能をインストールします。
+まず、Visual Studio Code にアプリ展開の拡張機能をインストールします。
 
-1. ダウンロード[アプリのデプロイの拡張機能](https://aka.ms/app-deploy-vscode)VS コードの一部として、拡張機能をインストールします。
+1. [アプリ展開の拡張機能](https://aka.ms/app-deploy-vscode)をダウンロードし、Visual Studio Code の一部として拡張機能をインストールします。
 
-1. VS Code を起動し、拡張機能のサイド バーに移動します。
+1. Visual Studio Code を起動し、[拡張機能] サイド バーに移動します。
 
-1. をクリックして、`…`クリックし、サイド バーの上部にあるコンテキスト メニュー`Install from vsix`します。
+1. サイド バーの上部にある [`…`] コンテキスト メニューをクリックし、[`Install from vsix`]\(vsix からのインストール\) を選択します。
 
-   ![VSIX をインストールします。](media/vs-extension/install_vsix.png)
+   ![VSIX のインストール](media/vs-extension/install_vsix.png)
 
-1. 検索、`sqlservbdc-app-deploy.vsix`ファイルをダウンロードおよびインストールを選択します。
+1. ダウンロードした `sqlservbdc-app-deploy.vsix` ファイルを検索し、それを選択してインストールします。
 
-SQL Server のビッグ データ クラスター アプリが展開した後は、拡張機能がインストールされている、VS Code の再読み込みするよう求められます。 VS Code のサイドバーで SQL Server の BDC アプリ エクスプ ローラーが表示されます。
+SQL Server ビッグ データ クラスターのアプリ展開拡張機能がインストールされると、Visual Studio Code の再読み込みを求めるメッセージが表示されます。 Visual Studio Code サイド バーに SQL Server BDC アプリ エクスプローラーが表示されます。
 
-### <a name="app-explorer"></a>アプリのエクスプ ローラー
+### <a name="app-explorer"></a>アプリ エクスプローラー
 
-アプリのエクスプ ローラーを示すサイド パネルの読み込みにサイドバーで、拡張機能をクリックします。 アプリのエクスプ ローラーの次のサンプルのスクリーン ショットには、アプリまたはアプリの仕様が利用可能な表示なし。
+サイド バーの拡張機能をクリックして、アプリ エクスプローラーが表示されているサイド パネルを読み込みます。 次のアプリ エクスプローラーのサンプル スクリーンショットは、利用できるアプリやアプリの仕様がないことを示しています。
 
-<img src="media/vs-extension/app_explorer.png" width=350px></img>
-<!--![App Explorer](media/vs-extension/app_explorer.png)-->
+![アプリ エクスプローラー](media/vs-extension/app_explorer.png)
 
-#### <a name="new-connection"></a>新しい接続
+#### <a name="connect-to-cluster"></a>クラスターに接続する
 
-クラスター エンドポイントに接続するには、次のメソッドのいずれかを使用します。
+クラスター エンドポイントに接続するには、次のいずれかの方法を使用します。
 
-- 示す下部にあるステータス バーをクリック`SQL Server BDC Disconnected`します。
-- をクリックしてまたは、`New Connection`戸口を指す矢印の付いた上部にあるボタンをクリックします。
+- 下部にある、[`SQL Server BDC Disconnected`]\(SQL Server BDC が切断されました\) と示されているステータス バーをクリックします。
+- または、上部にある、出口をさす矢印の付いた `Connect to Cluster` [新しい接続] ボタンをクリックします。
 
-   ![新しい接続](media/vs-extension/connect_to_cluster.png)
+Visual Studio Code、適切なエンドポイント、ユーザー名、およびパスワードの入力を求められます。
 
-VS Code は、適切なエンドポイント、username、およびパスワードを要求します。 正しい資格情報とアプリ エンドポイントを指定した場合、VS Code は、クラスターに接続したことと、サイドバーに設定される展開済みのアプリが表示されますを通知します。 正常に接続する場合、エンドポイントとユーザー名に保存されます`./sqldbc`ユーザー プロファイルの一部として。 パスワードまたはトークンが保存されません。 ログをもう一度記録するには、ときに、プロンプトが事前入力、保存されているホストとユーザー名が、常にパスワードを入力する必要があります。 別のクラスター エンドポイントに接続する場合は、クリックして、`New Connection`もう一度です。 VS Code を閉じる場合や、別のワークスペースを開き、再接続する必要があります、接続を自動的に閉じます。
+接続するエンドポイントは、ポート 30080 の `Cluster Management Service` エンドポイントです。
+
+このエンドポイントは、次のようにコマンド ラインで見つけることもできます。 
+
+```
+azdata bdc endpoint list
+```
+
+この情報を取得する他の方法の 1 つとして、Azure Data Studio でサーバー上の **[管理]** を右クリックする方法があります。ここで、一覧表示されているサービスのエンドポイントを確認できます。
+
+![ADS エンドポイント](media/vs-extension/ads_end_point.png)
+
+使用するエンドポイントが見つかったら、クラスターに接続します。
+
+![新しい接続](media/vs-extension/connect_to_cluster.png)
+
+ 正しい資格情報とアプリ エンドポイントが指定された場合、クラスターに接続されたことが Visual Studio Code によって通知され、展開されたアプリがサイド バーに表示されます。 正常に接続すると、エンドポイントとユーザー名がユーザー プロファイルの一部として `./sqldbc` に保存されます。 パスワードやトークンは保存されません。 もう一度ログインすると、保存されているホストとユーザー名がプロンプトに事前に入力されますが、パスワードは常に入力する必要があります。 別のクラスター エンドポイントに接続する場合は、`New Connection` [新しい接続] をもう一度クリックします。 Visual Studio Code を閉じた場合、または別のワークスペースを開いた場合、接続は自動的に閉じられるので、再接続する必要があります。
 
 ### <a name="app-template"></a>アプリ テンプレート
 
-テンプレートのいずれかの新しいアプリを展開するには、をクリックして、`New App Template`のボタンでは、`App Specifications`を求められます名前、ランタイム、およびどのようなウィンドウに、ローカル コンピューター上で新しいアプリを配置する場所。 配置することが VS Code の現在のワークスペースで、拡張機能のすべての機能を使用できますが、ローカル ファイル システムにどこでも配置できるようにすることをお勧めします。
+Visual Studio Code 内で、アプリの成果物を保存する*ワークスペースを開く*必要があります。
+
+いずれかのテンプレートから新しいアプリを展開するには、[`App Specifications`]\(アプリの仕様\) ウィンドウの [`New App Template`]\(新しいアプリ テンプレート\) ボタンをクリックします。このボタンをクリックすると、名前、ランタイム、およびローカル コンピューターで新しいアプリを配置する場所を入力するように求められます。 指定する名前とバージョンは、DNS-1035 ラベルとする必要があります。また、小文字の英数字または '-' で構成され、アルファベット文字で始まり、英数字で終わる必要があります。
+
+拡張機能のすべての機能を使用できるように、現在の Visual Studio Code ワークスペースに配置することをお勧めしますが、ローカル ファイル システムの任意の場所に配置できます。
 
 ![新しいアプリ テンプレート](media/vs-extension/new_app_template.png)
 
-指定した場所と、展開での新しいアプリ テンプレートがスキャフォールディングされる完了後、`spec.yaml`ワークスペースが開きます。 ワークスペースが選択したディレクトリにある場合も表示が下に表示されること、`App Specifications`ウィンドウ。
+完了すると、指定した場所に新しいアプリケーションテンプレートがスキャフォールディングされ、ワークスペースに `spec.yaml` の展開が開きます。 選択したディレクトリがワークスペース内にある場合は、それが [`App Specifications`]\(アプリの仕様\) ウィンドウにも表示されます。
 
 ![読み込まれたアプリ テンプレート](media/vs-extension/loading_app_template.png)
 
-テンプレートは、単純な`Hello World`次のように配置されるアプリ。
+このテンプレートは、[App Specifications]\(アプリの仕様\) ウィンドウで次のようにレイアウトされるシンプルな `helloworld` アプリです。
 
-- **spec.yaml**
-   - クラスターにアプリをデプロイする方法を示します
+- **spec. yaml**
+   - アプリの展開方法をクラスターに指示します
 - **run-spec.yaml**
-   - クラスターの通知、アプリを呼び出してください。
-- **handler.py**
-   - これは、ソース コード ファイルで指定された`src`で `spec.yaml`
-   - 呼ばれる 1 つの関数が`handler`と見なされますが、`entrypoint`ように、アプリの`spec.yaml`します。 という文字列入力にかかる`msg`と呼ばれる文字列の出力を返しますと`out`します。 指定されて`inputs`と`outputs`の`spec.yaml`します。
+   - アプリの呼び出し方法をクラスターに指示します
 
-スキャフォールディング テンプレートを作成したくないと、希望したかどうか、`spec.yaml`を既に作成したアプリのデプロイをクリックして、`New Deploy Spec`横に、`New App Template`ボタンと同じプロセスが説明は、を受け取るだけ`spec.yaml`、選択した方法を変更できます。
+アプリのソース コードは、[Workspace] フォルダーにあります。
 
-### <a name="deploy-app"></a>アプリをデプロイします。
+- **ソース ファイル名**
+   - これは、`spec.yaml` で `src` に指定されているソース コード ファイルです。
+   - `spec.yaml` に示されているように、アプリの `entrypoint` と見なされる `handler` という 1 つの関数があります。 `msg` という文字列の入力を受け取り、`out` という文字列の出力を返します。 これらは `spec.yaml` の `inputs` と `outputs` で指定されます。
 
-コード レンズからこのアプリを展開する場合はすぐに`Deploy App`で、`spec.yaml`稲妻フォルダー ボタンを横にキーを押すか、`spec.yaml`アプリ仕様メニュー内のファイル。 拡張機能は、ディレクトリ内のすべてのファイルを zip 圧縮場所、`spec.yaml`が配置されていると、クラスターにアプリをデプロイします。 
+スキャフォールディング テンプレートが不要で、既に作成済みのアプリの展開用に `spec.yaml` を優先する場合は、[`New App Template`]\(新しいアプリ テンプレート\) ボタンの横にある [`New Deploy Spec`]\(新しい展開の仕様\) ボタンをクリックして同じプロセスを実行しますが、`spec.yaml` が表示されるだけです。それにより選択方法を変更できます。
+
+### <a name="deploy-app"></a>アプリを展開
+
+このアプリは、`spec.yaml` 内の [`Deploy App`]\(アプリの展開\) の CodeLens によってすぐに展開することも、[App Specifications]\(アプリの仕様\) メニューで `spec.yaml` ファイルの横にある稲妻フォルダーのボタンを押すこともできます。 拡張機能により、`spec.yaml` を配置したディレクトリ内のすべてのファイルが zip 圧縮され、アプリがクラスターに展開されます。 
 
 >[!NOTE]
->同じディレクトリにあるすべてのアプリ ファイルを確認してください、`spec.yaml`します。 `spec.yaml`アプリのソース コード ディレクトリのルート レベルである必要があります。 
+>すべてのアプリ ファイルが確実に `spec.yaml` と同じディレクトリにあるようにします。 `spec.yaml` は、アプリのソース コード ディレクトリのルート レベルにある必要があります。 
 
-![アプリのボタンを配置します。](media/vs-extension/deploy_app_lightning.png)
+![アプリの展開のボタン](media/vs-extension/deploy_app_lightning.png)
 
-![Codelens のアプリをデプロイします。](media/vs-extension/deploy_app_codelens.png)
+![アプリの展開の CodeLens](media/vs-extension/deploy_app_codelens.png)
 
-アプリは、サイドバーで、アプリの状態に基づいて使用可能な状態が通知されます。
+サイド バーのアプリの状態に基づいてアプリの使用準備が整うと、通知が表示されます。
 
-![デプロイされたアプリ](media/vs-extension/app_deploy.png)
+![展開済みアプリ](media/vs-extension/app_deploy.png)
 
-![アプリの準備完了のサイド バー](media/vs-extension/app_ready_side_bar.png)
+![アプリ準備完了のサイド バー](media/vs-extension/app_ready_side_bar.png)
 
-![アプリの準備完了の通知](media/vs-extension/app_ready_notification.png)
+![アプリ準備完了通知](media/vs-extension/app_ready_notification.png)
 
-作業ウィンドウに使用できる、次を参照することになります。
+サイド ウィンドウでは、次のものが使用可能なことを確認できます。
 
-サイド バーに次の情報で展開したすべてのアプリを表示することがあります。
+展開したすべてのアプリを次の情報と共にサイド バーで確認できます。
 
 - 状態
 - version
@@ -125,35 +149,37 @@ VS Code は、適切なエンドポイント、username、およびパスワー�
 - 出力パラメーター
 - リンク
   - Swagger
-  - 詳細情報
+  - 詳細
 
-クリックすると`Links`にアクセスできることが表示されます、`swagger.json`デプロイされているアプリのためを作成するアプリを呼び出す独自のクライアント。
+`Links` をクリックすると、展開されたアプリの `swagger.json` にアクセスできることがわかります。これにより、アプリを呼び出す独自のクライアントを作成できます。
 
 ![Swagger](media/vs-extension/swagger.png)
 
-### <a name="app-run"></a>アプリの実行
+詳細については、「[ビッグ データ クラスターでアプリケーションを使用する](big-data-cluster-consume-apps.md)」を参照してください。
 
-使用してアプリを呼び出すアプリ準備ができたら、`run-spec.yaml`アプリ テンプレートの一部として指定するされました。
+### <a name="app-run"></a>アプリ実行
 
-![仕様を実行します。](media/vs-extension/run_spec.png)
+アプリの準備ができたら、アプリ テンプレートの一部として指定された `run-spec.yaml` を使用して、アプリを呼び出します。
 
-代わりにたい任意の文字列を指定`hello`し、もう一度横に実行、コード レンズのリンクまたはサイド バーの [超] ボタン、`run-spec.yaml`します。 なんらかの理由により実行仕様がない場合、は、クラスター内から、デプロイされたアプリを生成します。
+![実行仕様](media/vs-extension/run_spec.png)
 
-![実行の仕様の取得](media/vs-extension/get_run_spec.png)
+`hello` の代わりに任意の文字列を指定してから、CodeLens リンクまたは `run-spec.yaml` の横にあるサイド バーの稲妻ボタンを使用して、もう一度実行します。 何らかの理由で実行仕様がない場合は、クラスター内の展開済みアプリから生成します。
 
-いずれかであるし、満足のいくように編集が、これを実行します。 VS Code では、アプリが実行を完了すると、適切なフィードバックが返されます。
+![実行仕様の取得](media/vs-extension/get_run_spec.png)
+
+それを手に入れて満足するまで編集したら、実行します。 アプリの実行が完了すると、Visual Studio Code によって適切なフィードバックが返されます。
 
 ![アプリの出力](media/vs-extension/app_output.png)
 
-一時領域に、出力が得られる上記からわかる、`.json`ワークスペース内のファイル。 この出力は、自由に保存する場合は、それ以外の場合、削除されますで終了します。 出力ファイルに出力をアプリがない場合は、のみが表示されます、`Successful App Run`下部に通知します。 正常に実行されなかった場合、問題の特定に役立つ適切なエラー メッセージが表示されます。
+上記からわかるように、出力はワークスペース内の一時的な `.json` ファイルで提供されます。 この出力を保持する場合は、保存してください。そうしないと、終了時に削除されます。 アプリにファイルに書き込む出力がない場合、[`Successful App Run`]\(アプリの正常な実行\) 通知のみが下部に表示されます。 正常に実行されなかった場合は、問題を特定するのに役立つ適切なエラー メッセージが表示されます。
 
-アプリを実行するときに、さまざまなパラメーターを渡す方法があります。
+アプリを実行するときは、さまざまな方法でパラメーターを渡すことができます。
 
-必要なすべての入力を指定することも、`.json`は。
+`.json` を使用して、要求されるすべての入力を指定できます。これは次のとおりです。
 
 - `inputs: ./example.json`
 
-すべての入力パラメーターが指定されたユーザー、アプリに組み込み機能と、指定された入力パラメーターが、配列、ベクトル、データ フレームなどのプリミティブ以外のものなど、複雑な JSON を指定する場合は、展開されたアプリを呼び出すときに、パラメーターの型直接内の行します。つまり、アプリの呼び出し。
+展開されたアプリを呼び出すときに、入力パラメーターがアプリに本来備わっているかユーザーが指定したものである場合、または入力パラメーターがプリミティブ以外のもの (配列、ベクター、データフレーム、複雑な JSON など) である場合、アプリを呼び出すときにパラメーターの型を行に直接指定します。次のようになります。
 
 - ベクター
     - `inputs:`
@@ -161,21 +187,21 @@ VS Code は、適切なエンドポイント、username、およびパスワー�
 - マトリックス
     - `inputs:`
         - `x: [[A,B,C],[1,2,3]]`
-- オブジェクト
+- Object
     - `inputs:`
         - `x: {A: 1, B: 2, C: 3}`
 
-相対パスまたは絶対ファイル パスとして、文字列を指定または、 `.txt`、 `.json`、または`.csv`アプリに必要な形式で必須の入力を提供します。 ファイルの解析がに基づいて`Node.js Path library`としてファイル パスが定義されている場所、`string that contains a / or \ character`します。
+または、必須の入力をアプリに必要な形式で指定した `.txt`、`.json`、`.csv` に対する相対ファイル パスまたは絶対ファイル パスとして文字列を指定します。 ファイルの解析は、`Node.js Path library` に基づきます。ここでは、ファイル パスは`string that contains a / or \ character` / または \ 文字を含む文字列として定義されています。
 
-必要に応じて、入力パラメーターを指定しない場合、適切なエラー メッセージが表示されます正しくないファイル パスで指定した文字列のファイル パスか、そのパラメーターが無効です。 責任は、それらを定義するパラメーターを理解していることを確認して、アプリの作成者に付与されます。
+必要に応じた入力パラメーターが指定されていない場合、正しくないファイル パス (文字列ファイルのパスが指定されていた場合) またはパラメーターが無効であったことを示す適切なエラー メッセージが表示されます。 アプリの作成者には、定義しているパラメーターを確実に理解する責任があります。
 
-アプリを削除するには、ごみ箱をクリックするだけで、アプリの横にあるボタンことができます、`Deployed Apps`作業ウィンドウ。
+アプリを削除するには、[`Deployed Apps`]\(展開済みアプリ\) サイド ウィンドウでアプリの横にあるごみ箱ボタンをクリックするだけです。
 
-## <a name="next-steps"></a>次のステップ
+## <a name="next-steps"></a>次の手順
 
-その他のサンプルを参照することもできます。[アプリの展開サンプル](https://aka.ms/sql-app-deploy)に拡張機能でお試しください。
+[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]に展開されているアプリを独自のアプリケーションに統合する方法の詳細については、[ビッグ データ クラスター上でのアプリケーションの使用](big-data-cluster-consume-apps.md)に関するページを参照してください。 「[アプリ展開のサンプル](https://aka.ms/sql-app-deploy)」にある追加のサンプルを参照して、拡張機能を試してみることもできます。
 
-ビッグ データの SQL Server クラスターの詳細については、次を参照してください。 [SQL Server 2019 ビッグ データ クラスターには何ですか?](big-data-cluster-overview.md)します。
+[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]の詳細については、「[[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]の概要](big-data-cluster-overview.md)」を参照してください。
 
 
-当社の目標は、のこの拡張機能を有効に活用するしてフィードバックをいただければさいわいです。 お知らせください[[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]チーム](https://aka.ms/sqlfeedback)します。
+私たちの目標は、この拡張機能をお客様にとって有益なものにすることです。フィードバックをお待ちしております。 [[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] チーム](https://aka.ms/sqlfeedback)までお送りください。

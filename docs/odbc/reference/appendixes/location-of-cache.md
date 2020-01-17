@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 240d6162-4da6-4b1f-96c7-f379f4ecb16f
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 4b1ffd8c56a6727a892cb518222c961bbb6c794c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 2a925b66b0d09a9beb32e4441d62bc4fa9296313
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47649090"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67990739"
 ---
 # <a name="location-of-cache"></a>キャッシュの場所
 > [!IMPORTANT]  

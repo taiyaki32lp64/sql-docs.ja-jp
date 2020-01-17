@@ -10,15 +10,14 @@ ms.topic: conceptual
 f1_keywords:
 - vs.getdirectoryname
 ms.assetid: b7f94269-d28a-4f30-9e50-2ee1a6e82178
-author: stevestein
-ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 2ba7be37ee1052a6a14ccfcc1199d141ec1641de
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: cd2e40972e790068b6ce0c19f8d85bcc0e4fa805
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47600010"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68265232"
 ---
 # <a name="location-dialog-box-visual-database-tools"></a>場所ダイアログ ボックス (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

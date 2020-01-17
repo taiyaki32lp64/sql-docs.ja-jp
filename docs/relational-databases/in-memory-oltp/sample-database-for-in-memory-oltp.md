@@ -10,14 +10,13 @@ ms.topic: conceptual
 ms.assetid: df347f9b-b950-4e3a-85f4-b9f21735eae3
 author: MightyPen
 ms.author: genemi
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: ddbafb58662497dc2ee9c513aa206d826d5db8c1
-ms.sourcegitcommit: 170c275ece5969ff0c8c413987c4f2062459db21
+ms.openlocfilehash: 2806522e0dcc0c9aa7badd099be28e11072b396e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/11/2019
-ms.locfileid: "54226699"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68111805"
 ---
 # <a name="sample-database-for-in-memory-oltp"></a>インメモリ OLTP のサンプル データベース
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -148,7 +147,7 @@ ms.locfileid: "54226699"
   
 -   *計算列* - [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] のメモリ最適化テーブルでは計算列がサポートされていないため、計算列である SalesOrderNumber および TotalDue は省略されます。 新しい Sales.vSalesOrderHeader_extended_inmem ビューには、SalesOrderNumber 列と TotalDue 列が反映されています。 したがって、これらの列が必要な場合は、このビューを使用します。  
 
-    - **適用対象:**[!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1.  
+    - **適用対象:** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1.  
 [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1 以降、メモリ最適化テーブルとインデックスで計算列がサポートされています。
 
   
@@ -436,11 +435,11 @@ ostress.exe -S. -E -dAdventureWorks2016CTP3 -Q"EXEC Demo.usp_DemoReset"
   
 -   同時実行トランザクション数:1 つのスレッドでワークロードを実行すると、インメモリ OLTP によるパフォーマンス向上が 2 倍に満たない場合があります。 高レベルのコンカレンシーがある場合、唯一大きな問題になるのがラッチ競合です。  
   
--   SQL Server で使用できるコアが少ない: つまり、システムのコンカレンシー レベルが低いことになります。これは、SQL で使用できるコアの数しか、トランザクションをコンカレンシーできないからです。  
+-   SQL Server で使用できるコアが少ない: つまり、低レベルの同時実行がシステムに存在することになります。これは、SQL で使用できるコアの数しか、トランザクションを同時実行できないからです。  
   
     -   現象: ディスク ベース テーブルでワークロードを実行しているときに CPU 使用率が高い場合、競合の数はそれほど多くありません。これは、コンカレンシーが不足していることを示します。  
   
--   ログ ドライブの速度:ログ ドライブの速度が、システムのトランザクション スループットのレベルに追いつかない場合、ログ IO がワークロードのボトルネックになります。 インメモリ OLTP でのログ記録は効率的ですが、ログ IO がボトルネックになっていると、パフォーマンス向上の可能性は限られます。  
+-   ログ ドライブの速度:ログ ドライブが、システム内のトランザクション スループット レベルに対応できない場合、ワークロードはログ IO でボトルネックになります。 インメモリ OLTP でのログ記録は効率的ですが、ログ IO がボトルネックになっていると、パフォーマンス向上の可能性は限られます。  
   
     -   現象: メモリ最適化テーブルでワークロードを実行しているとき、CPU 使用率が 100% からかけ離れている場合、または、その変動が激しい場合は、ログ IO ボトルネックが存在する可能性があります。 これを確認するには、リソース モニターを開き、ログ ドライブのキュー長を確認します。  
   
@@ -496,7 +495,7 @@ WHERE t.type='U'
 |SalesOrderHeader_inmem|7168|147456|  
 |Product_inmem|124|12352|  
   
- ご覧のとおり、これらは非常に小さいテーブルです。SalesOrderHeader_inmem のサイズは約 7 MB、SalesOrderDetail_inmem は約 15 MB です。  
+ テーブルがかなり小さいことがわかります。SalesOrderHeader_inmem は約 7 MB、SalesOrderDetail_inmem は約 15 MB です。  
   
  ここで印象的なのは、インデックスに割り当てられているメモリのサイズです (テーブル データのサイズと比較)。 このサイズになるのは、サンプルのハッシュ インデックスが、大きなデータ サイズに合わせて事前にサイズ調整されているためです。 ハッシュ インデックスのサイズは固定されているため、テーブルのデータのサイズに合わせて大きくなることはありません。  
   

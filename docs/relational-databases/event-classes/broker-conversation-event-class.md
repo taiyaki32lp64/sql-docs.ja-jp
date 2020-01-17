@@ -1,7 +1,7 @@
 ---
 title: Broker:Conversation イベント クラス | Microsoft Docs
 ms.custom: ''
-ms.date: 03/14/2017
+ms.date: 05/24/2019
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: supportability
@@ -11,44 +11,45 @@ helpviewer_keywords:
 ms.assetid: 784707b5-cc67-46a3-8ae6-8f8ecf4b27c0
 author: stevestein
 ms.author: sstein
-manager: craigg
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 39e0ca2394c76d955fa480d17ed5369217ac8f69
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+monikerRange: '>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 3330b9b44f2794daf8e9cd45e9806991a6a815de
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47636216"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67999771"
 ---
 # <a name="brokerconversation-event-class"></a>Broker:Conversation イベント クラス
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、 **Service Broker** メッセージ交換の進行状況を報告するために、Broker:Conversation イベントが生成されます。  
+
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、 **Service Broker** メッセージ交換の進行状況を報告するために、Broker:Conversation イベントが生成されます。  
   
 ## <a name="brokerconversation-event-class-data-columns"></a>Broker:Conversation イベント クラスのデータ列  
   
 |データ列|型|[説明]|列番号|フィルターの適用|  
 |-----------------|----------|-----------------|-------------------|----------------|  
-|**ApplicationName**|**nvarchar**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のインスタンスへの接続を作成したクライアント アプリケーションの名前。 この列には、プログラムの表示名ではなく、アプリケーションによって渡された値が格納されます。|10|[ユーザー アカウント制御]|  
-|**ClientProcessID**|**int**|クライアント アプリケーションが実行されているプロセスに対し、ホスト コンピューターによって割り当てられた ID。 クライアントでクライアント プロセス ID が指定されると、このデータ列が作成されます。|9|[ユーザー アカウント制御]|  
-|**DatabaseID**|**int**|USE *database* ステートメントで指定されているデータベースの ID。 特定のインスタンスについて USE *database*ステートメントが実行されていない場合は既定のデータベースの ID となります。 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] では、 **ServerName** データ列がトレースにキャプチャされ、そのサーバーが利用可能な場合、データベースの名前が表示されます。 データベースに対応する値は、 **DB_ID** 関数を使用して特定します。|3|[ユーザー アカウント制御]|  
+|**ApplicationName**|**nvarchar**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のインスタンスへの接続を作成したクライアント アプリケーションの名前。 この列には、プログラムの表示名ではなく、アプリケーションによって渡された値が格納されます。|10|はい|  
+|**ClientProcessID**|**int**|クライアント アプリケーションが実行されているプロセスに対し、ホスト コンピューターによって割り当てられた ID。 クライアントでクライアント プロセス ID が指定されると、このデータ列が作成されます。|9|はい|  
+|**DatabaseID**|**int**|USE *database* ステートメントで指定されているデータベースの ID。 特定のインスタンスについて USE *database*ステートメントが実行されていない場合は既定のデータベースの ID となります。 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] では、 **ServerName** データ列がトレースにキャプチャされ、そのサーバーが利用可能な場合、データベースの名前が表示されます。 データベースに対応する値は、 **DB_ID** 関数を使用して特定します。|3|はい|  
 |**EventClass**|**int**|キャプチャされたイベント クラスの種類。 **Broker:Conversation** の場合は、常に **124**です。|27|いいえ|  
 |**EventSequence**|**int**|このイベントのシーケンス番号。|51|いいえ|  
-|**EventSubClass**|**nvarchar**|イベント サブクラスの種類。 各イベント クラスについての詳細情報を提供します。|21|[ユーザー アカウント制御]|  
+|**EventSubClass**|**nvarchar**|イベント サブクラスの種類。 各イベント クラスについての詳細情報を提供します。|21|はい|  
 |**GUID**|**uniqueidentifier**|ダイアログのメッセージ交換 ID。 この ID はメッセージの一部として転送され、メッセージ交換の両側で共有されます。|54|いいえ|  
-|**HostName**|**nvarchar**|クライアントが実行しているコンピューターの名前。 このデータ列には、クライアントがホスト名を指定している場合にデータが格納されます。 ホスト名を指定するには、 **HOST_NAME** 関数を使用します。|8|[ユーザー アカウント制御]|  
+|**HostName**|**nvarchar**|クライアントが実行しているコンピューターの名前。 このデータ列には、クライアントがホスト名を指定している場合にデータが格納されます。 ホスト名を指定するには、 **HOST_NAME** 関数を使用します。|8|はい|  
 |**IsSystem**|**int**|イベントがシステム プロセスとユーザー プロセスのどちらで発生したか。<br /><br /> 0 = ユーザー<br /><br /> 1 = システム|60|いいえ|  
-|**LoginSid**|**image**|ログイン ユーザーのセキュリティ ID 番号 (SID)。 各 SID はサーバーのログインごとに一意です。|41|[ユーザー アカウント制御]|  
+|**LoginSid**|**image**|ログイン ユーザーのセキュリティ ID 番号 (SID)。 各 SID はサーバーのログインごとに一意です。|41|はい|  
 |**MethodName**|**nvarchar**|このメッセージ交換が属しているメッセージ交換グループ。|47|いいえ|  
-|**NTDomainName**|**nvarchar**|ユーザーが属している Windows ドメイン。|7|[ユーザー アカウント制御]|  
-|**NTUserName**|**nvarchar**|このイベントが生成された接続を所有するユーザーの名前。|6|[ユーザー アカウント制御]|  
+|**NTDomainName**|**nvarchar**|ユーザーが属している Windows ドメイン。|7|はい|  
+|**NTUserName**|**nvarchar**|このイベントが生成された接続を所有するユーザーの名前。|6|はい|  
 |**ObjectName**|**nvarchar**|ダイアログのメッセージ交換ハンドル。|34|いいえ|  
-|**[Priority]**|**int**|メッセージ交換の優先度レベル。|5|[ユーザー アカウント制御]|  
+|**[Priority]**|**int**|メッセージ交換の優先度レベル。|5|はい|  
 |**RoleName**|**nvarchar**|メッセージ交換ハンドルのロール。 **initiator** または **target**のいずれかです。|38|いいえ|  
 |**ServerName**|**nvarchar**|トレースしている [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスの名前。|26|いいえ|  
 |**Severity**|**int**|(このイベントによってエラーが報告された場合) [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エラーの重大度。|29|いいえ|  
-|**SPID**|**int**|クライアントに関連付けられているプロセスに、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] によって割り当てられているサーバー プロセス ID。|12|[ユーザー アカウント制御]|  
-|**StartTime**|**datetime**|イベントの開始時刻 (取得できた場合)。|14|[ユーザー アカウント制御]|  
-|**TextData**|**ntext**|メッセージ交換の現在の状態。 次のいずれかの値になります。|1|[ユーザー アカウント制御]|  
+|**SPID**|**int**|クライアントに関連付けられているプロセスに、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] によって割り当てられているサーバー プロセス ID。|12|はい|  
+|**StartTime**|**datetime**|イベントの開始時刻 (取得できた場合)。|14|はい|  
+|**TextData**|**ntext**|メッセージ交換の現在の状態。 次のいずれかの値になります。|1|はい|  
 |||**SO**。 送信開始状態。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] でこのメッセージ交換に対して BEGIN CONVERSATION が処理されましたが、メッセージはまだ送信されていません。|||  
 |||**SI**。 受信開始状態。 [!INCLUDE[ssDE](../../includes/ssde-md.md)] の別のインスタンスで現在のインスタンスとの新しいメッセージ交換が開始されましたが、現在のインスタンスが最初のメッセージの受信を完了していません。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、最初のメッセージが分割されたものであるか、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] で順序どおりにメッセージが受け取られなかった場合は、この状態のメッセージ交換が作成されます。 ただし、メッセージ交換で受信された最初の転送データに最初のメッセージ全体が含まれている場合は、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] で CO 状態のメッセージ交換が作成されることがあります。|||  
 |||**CO**。 メッセージ交換中状態。 メッセージ交換が確立され、メッセージ交換の両側からメッセージを送信できます。 通常のサービスに関する通信の大部分は、メッセージ交換がこの状態のときに行われます。|||  

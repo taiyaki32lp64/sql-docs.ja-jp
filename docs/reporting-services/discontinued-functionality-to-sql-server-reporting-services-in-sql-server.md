@@ -1,21 +1,20 @@
 ---
 title: 廃止された機能
-author: markingmyname
-ms.author: maghan
-manager: kfile
-ms.reviewer: ''
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: reporting-services
 ms.topic: conceptual
+author: maggiesMSFT
+ms.author: maggies
+ms.reviewer: ''
 ms.custom: seodec18
-ms.date: 12/14/2018
-ms.openlocfilehash: a40674afa51e52d3e84731711fc9edc013f69a46
-ms.sourcegitcommit: 2f5773f4bc02bfff4f2924226ac5651eb0c00924
-ms.translationtype: HT
+ms.date: 04/26/2019
+ms.openlocfilehash: 80ebf7b4857d5814f33f62d3f7d5d61be63a7e10
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/18/2018
-ms.locfileid: "53552934"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68262948"
 ---
 # <a name="discontinued-functionality-in-sql-server-reporting-services-ssrs"></a>SQL Server Reporting Services (SSRS) で廃止された機能
 
@@ -29,14 +28,12 @@ ms.locfileid: "53552934"
 
 |機能|置換または回避策|
 |-|-|
-|Web ポータルを介したレポート モデルのアップロード|SOAP API を介して引き続き実行できます。|
-|Web ポータルを介したレポート モデルの管理|SOAP API を介して引き続き実行できます。|
 |HTML ビューアーおよびレポート マネージャーのスタイル シートをカスタマイズする|[Web ポータルをブランド化](branding-the-web-portal.md)することもできます。|
 
 ## <a name="next-steps"></a>次の手順
 
-[Reporting Services の新機能](../reporting-services/what-s-new-in-sql-server-reporting-services-ssrs.md)  
-[SQL Server 2016 における SQL Server Reporting Services の動作変更](../reporting-services/behavior-changes-to-sql-server-reporting-services-in-sql-server-2016.md)  
-[SQL Server 2016 における SQL Server Reporting Services の非推奨の機能](../reporting-services/deprecated-features-in-sql-server-reporting-services-ssrs.md)  
+* [Reporting Services の新機能](../reporting-services/what-s-new-in-sql-server-reporting-services-ssrs.md)  
+* [SQL Server 2016 における SQL Server Reporting Services の動作変更](../reporting-services/behavior-changes-to-sql-server-reporting-services-in-sql-server-2016.md)  
+* [SQL Server 2016 における SQL Server Reporting Services の非推奨の機能](../reporting-services/deprecated-features-in-sql-server-reporting-services-ssrs.md)  
 
 その他の質問 [Reporting Services のフォーラムに質問してみてください](https://go.microsoft.com/fwlink/?LinkId=620231)

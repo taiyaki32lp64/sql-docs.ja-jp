@@ -1,2 +1,0 @@
-> [!NOTE]
-> SQL Server のビッグ データ クラスターは、SQL Server 2019 Early Adoption Program を通じて限定パブリック プレビューとして利用可能なは first です。 アクセス権を要求するには、登録[ここ](https://aka.ms/eapsignup)、ビッグ データの SQL Server クラスターに関心を指定します。 Microsoft はすべての要求をトリアージし、できるだけ早く対応します。

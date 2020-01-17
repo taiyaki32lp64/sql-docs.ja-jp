@@ -2,18 +2,18 @@
 title: 式で使用される演算子 (レポート ビルダーおよび SSRS) | Microsoft Docs
 ms.date: 03/01/2017
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: report-design
 ms.topic: conceptual
 ms.assetid: d22dc8b6-4353-40e7-91a1-65e8dae6325d
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: f933ea46def5dff7c6fb9cb5bc51b3c2f310d53a
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: b3edfb8c885fbb8f7436f21271fc73d89599adfc
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56292280"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65582236"
 ---
 # <a name="operators-in-expressions-report-builder-and-ssrs"></a>式で使用される演算子 (レポート ビルダーおよび SSRS)
   演算子は、式に含まれる 1 つ以上の項に適用される操作を表す記号です。 式でサポートされている演算子のカテゴリには、算術、比較、連結、論理 (ビット)、およびビット シフトがあります。  
@@ -45,7 +45,7 @@ ms.locfileid: "56292280"
 |>=|以上。|  
 |=|等しい。|  
 |<>|等しくない。|  
-|Like|指定された文字列が指定されたパターンと一致するかどうかを判断します。 パターンは、標準の文字とワイルドカード文字を含むことができます。 パターン検索時に、標準の文字は文字列に指定された文字と正確に一致する必要があります。 しかし、ワイルドカード文字は文字列の任意の部分と一致することができます。 = や != などの文字列比較演算子を使用する場合と比べて、ワイルドカード文字を使用する方がより柔軟に LIKE 演算子を使用できます。<br /><br /> 次の表に、ワイルドカードとして使用できる文字を示します。<br /><br /> %:0 個以上の文字で構成される任意の文字列です。<br /><br /> _:任意の 1 文字です。<br /><br /> [ ]:指定した範囲 (たとえば [a-f]) またはセット (たとえば [aeiou]) 内の任意の 1 文字です。<br /><br /> [^]:指定した範囲 (たとえば [^a-f]) またはセット (たとえば [^aeiou]) 内にない任意の 1 文字です。|  
+|Like|指定された文字列が指定されたパターンと一致するかどうかを判断します。 パターンは、標準の文字とワイルドカード文字を含むことができます。 パターン検索時に、標準の文字は文字列に指定された文字と正確に一致する必要があります。 しかし、ワイルドカード文字は文字列の任意の部分と一致することができます。 = や != などの文字列比較演算子を使用する場合と比べて、ワイルドカード文字を使用する方がより柔軟に LIKE 演算子を使用できます。<br /><br /> 次の表に、ワイルドカードとして使用できる文字を示します。<br /><br /> %: 0 個以上の文字で構成される任意の文字列です。<br /><br /> _: 任意の 1 文字です。<br /><br /> [ ]: 指定した範囲 (たとえば [a-f]) またはセット (たとえば [aeiou]) 内の任意の 1 文字です。<br /><br /> [^]: 指定した範囲 (たとえば [^a-f]) またはセット (たとえば [^aeiou]) 内にない任意の 1 文字です。|  
 |Is|2 つのオブジェクト参照を比較します。|  
   
 ### <a name="string-concatenation"></a>文字列連結  

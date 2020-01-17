@@ -19,15 +19,15 @@ helpviewer_keywords:
 - annotated XSD schemas, IDREF type attribute
 - ID relationships [SQLXML]
 ms.assetid: 1c7f77d3-81f3-4820-bb63-c4aaa4ea9aa1
-author: douglaslMS
-ms.author: douglasl
+author: MightyPen
+ms.author: genemi
 manager: craigg
-ms.openlocfilehash: ba60e3b8c871f885c2cd7d4115c0ae7dc2c40433
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 48ae7034ec0c133c1140e4c581794302ca8bad77
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52793441"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66013921"
 ---
 # <a name="creating-valid-id-idref-and-idrefs-type-attributes-using-sqlprefix-sqlxml-40"></a>sql:prefix を使用した、有効な ID 型、IDREF 型、IDREFS 型の属性の作成 (SQLXML 4.0)
   属性を ID 型属性として指定することができます。 ID 型属性を指定すると、IDREF または IDREFS として指定した属性から ID 型属性を参照でき、ドキュメント間をリンクできるようになります。  
@@ -54,7 +54,7 @@ ms.locfileid: "52793441"
 ### <a name="a-specifying-id-and-idrefs-types"></a>A. ID 型と IDREFS 型を指定する  
  次のスキーマで、 **\<顧客 >** 要素から成る、 **\<順序 >** 子要素。 **\<順序 >** 要素が子要素にも、  **\<OrderDetail >** 要素。  
   
- **OrderIDList**属性の**\<顧客 >** IDREFS 型の属性を参照するには、 **OrderID**の属性、  **\<順序 >** 要素。  
+ **OrderIDList**属性の **\<顧客 >** IDREFS 型の属性を参照するには、 **OrderID**の属性、 **\<順序 >** 要素。  
   
 ```  
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"  

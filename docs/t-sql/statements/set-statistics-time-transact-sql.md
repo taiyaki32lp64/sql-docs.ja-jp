@@ -24,13 +24,12 @@ helpviewer_keywords:
 ms.assetid: eec2e1cd-a29d-4cf3-a271-be9d61506f15
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: 2be43a9ed439d3f4fb72c26683973ca4c18b263f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 90eb59652bf64e6e3be4edaa3cce2f0bf3c02df7
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47619857"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67897997"
 ---
 # <a name="set-statistics-time-transact-sql"></a>SET STATISTICS TIME (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -61,7 +60,7 @@ SET STATISTICS TIME { ON | OFF }
  SET STATISTICS TIME を使用するには、[!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントを実行するための適切な権限が必要です。 SHOWPLAN 権限は必要ありません。  
   
 ## <a name="examples"></a>使用例  
- 次の例では、サーバーの実行、解析、コンパイルの時間を表示します。  
+ この例では、サーバーの実行、解析、コンパイルの時間を表示します。  
   
 ```  
 USE AdventureWorks2012;  
@@ -76,7 +75,7 @@ SET STATISTICS TIME OFF;
 GO  
 ```  
   
- Here is the result set:  
+ 結果セットは次のようになります。  
   
 ```  
 SQL Server parse and compile time:   

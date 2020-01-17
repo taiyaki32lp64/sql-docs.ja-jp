@@ -1,69 +1,66 @@
 ---
-title: Linux 上の SQL Server レプリケーション |Microsoft Docs
-description: この記事では、Linux に SQL Server レプリケーションについて説明します。
+title: Linux 上の SQL Server レプリケーション
+description: この記事では、Linux 上の SQL Server レプリケーションについて説明します。
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.date: 10/17/2018
+ms.reviewer: vanto
+ms.date: 12/09/2019
 ms.topic: article
 ms.prod: sql
 ms.prod_service: database-engine
-ms.custom: sql-linux
 ms.technology: linux
-monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: ccba701efd1b74076c0eccb083a66382e8ac74b1
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
-ms.translationtype: MT
+monikerRange: '>=sql-server-2017||>=sql-server-linux-2017||=sqlallproducts-allversions'
+ms.openlocfilehash: f0e1acd5af76f5b0b075879fc1c5122713caed55
+ms.sourcegitcommit: 56fb0b7750ad5967f5d8e43d87922dfa67b2deac
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52805474"
+ms.lasthandoff: 12/11/2019
+ms.locfileid: "75002042"
 ---
 # <a name="sql-server-replication-on-linux"></a>Linux 上の SQL Server レプリケーション
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
-[!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] 紹介用の SQL Server レプリケーション Linux 上の SQL Server のインスタンス。
+[!INCLUDE[SQL Server 2017](../includes/sssqlv14-md.md)] ([CU18](https://support.microsoft.com/help/4527377)) 以降では、SQL Server on Linux のインスタンス用の SQL Server レプリケーションがサポートされています。
 
-Linux SQL Server Management Studio (SSMS) でのレプリケーションを構成[レプリケーション ストアド プロシージャ](../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)します。
+SQL Server Management Studio (SSMS) の[レプリケーション ストアド プロシージャ](../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)を使用して、Linux 上でレプリケーションを構成します。
 
-SQL Server のインスタンスは、任意のレプリケーション ロールに参加できます。
+SQL Server インスタンスは、任意のレプリケーション ロールに参加できます。
 
-* パブリッシャー
+* Publisher
 * ディストリビューター
 * サブスクライバー (Subscriber)
 
-レプリケーション スキーマがオペレーティング システム プラットフォームを一致し、混在させることができます。 たとえば、レプリケーション スキーマがパブリッシャーおよびディストリビューターには、Linux 上の SQL Server のインスタンスを含めることができ、サブスクライバーは、Windows と Linux 上の SQL Server のインスタンスを含みます。
+レプリケーション スキーマでは、オペレーティング システムのプラットフォームを混在させて一致させることができます。 たとえば、レプリケーション スキーマにパブリッシャーとディストリビューターの SQL Server on Linux インスタンスを含めることができ、サブスクライバーに Windows 上と Linux 上の SQL Server インスタンスを含めることができます。
 
 Linux 上の SQL Server インスタンスは、任意の種類のレプリケーションに参加できます。
 
 * トランザクション
-* Merge
 * スナップショット
 
-レプリケーションの詳細については、次を参照してください。 [SQL Server レプリケーションのドキュメント](../relational-databases/replication/sql-server-replication.md)します。
+レプリケーションの詳細については、[SQL Server レプリケーションのドキュメント](../relational-databases/replication/sql-server-replication.md)を参照してください。
 
-## <a name="supported-features"></a>サポートされる機能
+## <a name="supported-features"></a>サポートされている機能
 
-[!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)]次のレプリケーション機能がサポートされています。
+次のレプリケーション機能がサポートされています。
 
 * スナップショット レプリケーション
 * トランザクション レプリケーション
-* マージ レプリケーション
-* ピア ツー ピア レプリケーション
-* 既定以外のポートを使用したレプリケーション <!--Add link to explanation-->
-* AD 認証を使用したレプリケーション
-* Windows および Linux 全体でのレプリケーションの構成
-* 即時更新トランザクション レプリケーション
+* 既定以外のポートを使用するレプリケーション <!--Add link to explanation-->
+* AD 認証を使用するレプリケーション
+* Windows と Linux 間でのレプリケーションの構成
+* トランザクション レプリケーションの即時更新
 
 ## <a name="limitations"></a>制限事項
 
-[!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] 次の機能をサポートしません。
+次の機能はサポートされていません。
 
-* 即時更新サブスクライバー
+* マージ レプリケーション
+* ピア ツー ピア レプリケーション
 * Oracle パブリッシュ
 
-## <a name="next-steps"></a>次の手順
+## <a name="next-steps"></a>次のステップ
 
-[Linux 上の SQL Server レプリケーションを構成します。](sql-server-linux-replication-tutorial-tsql.md)
+[Linux 上で SQL Server レプリケーションを構成する](sql-server-linux-replication-tutorial-tsql.md)
 
-[サンプル:Linux 上の SQL Server レプリケーションを構成します。](sql-server-linux-replication-configure.md)
+[サンプル:Linux 上で SQL Server レプリケーションを構成する](sql-server-linux-replication-configure.md)

@@ -1,5 +1,5 @@
 ---
-title: カーソル (SQL Server Profiler) を再生する |Microsoft Docs
+title: カーソルまで再生する (SQL Server プロファイラー) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -12,15 +12,14 @@ helpviewer_keywords:
 - traces [SQL Server], replaying
 - replaying traces
 ms.assetid: 89eadc41-4424-4a1c-ba61-0b52c851cdb1
-author: stevestein
-ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 5956e4872695f796ac0367ad45f90cbc20a91e1e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: c4a6a02576ac5c58c88cf1b2b489106d6cf8013e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47732150"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67928857"
 ---
 # <a name="replay-to-a-cursor-sql-server-profiler"></a>カーソルまでの再生 (SQL Server Profiler)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

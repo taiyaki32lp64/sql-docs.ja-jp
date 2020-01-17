@@ -10,15 +10,15 @@ helpviewer_keywords:
 - database [Master Data Services], object security
 - security [Master Data Services], database objects
 ms.assetid: dd5ba503-7607-45d9-ad0d-909faaade179
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: f5d485aec6d3056022ea55f1cb2bc8ee29a4e314
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 3eafc9720197ffc32cdca2ef58f91725befaaec1
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52822236"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65483150"
 ---
 # <a name="database-object-security-master-data-services"></a>データベース オブジェクト セキュリティ (マスター データ サービス)
   [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] データベースでは、データは複数のデータベース テーブルに格納されており、ビューで表示できます。 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] Web アプリケーションで保護されている可能性がある情報は、 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] データベースにアクセスできるユーザーであれば参照できます。  
@@ -46,11 +46,11 @@ ms.locfileid: "52822236"
   
 |アクション|[セキュリティ保護可能なリソース]|アクセス許可|  
 |------------|----------------|-----------------|  
-|リーフ メンバーとその属性をステージング テーブルに読み込む|stg.name_Leaf|必須：INSERT<br /><br /> 省略可能:SELECT および UPDATE|  
+|リーフ メンバーとその属性をステージング テーブルに読み込む|stg.name_Leaf|必須:INSERT<br /><br /> 省略可能:SELECT と UPDATE|  
 |リーフ ステージング テーブルから MDS データベースの適切なテーブルにデータを読み込む|stg.udp_name_Leaf|EXECUTE|  
-|統合メンバーとその属性をステージング テーブルに読み込む|stg.name_Consolidated|必須：INSERT<br /><br /> 省略可能:SELECT および UPDATE|  
+|統合メンバーとその属性をステージング テーブルに読み込む|stg.name_Consolidated|必須:INSERT<br /><br /> 省略可能:SELECT と UPDATE|  
 |統合ステージング テーブルから MDS データベースの適切なテーブルにデータを読み込む|stg.udp_name_Consolidated|EXECUTE|  
-|リーフ メンバーと相互に明示的階層内の統合メンバーのリレーションシップをステージング テーブルに読み込みます。|stg.name_Relationship|必須：INSERT<br /><br /> 省略可能:SELECT および UPDATE|  
+|リーフ メンバーと相互に明示的階層内の統合メンバーのリレーションシップをステージング テーブルに読み込みます。|stg.name_Relationship|必須:INSERT<br /><br /> 省略可能:SELECT と UPDATE|  
 |リレーションシップ ステージング テーブルから MDS の適切なテーブルにデータを読み込む|stg.udp_name_Relationship|EXECUTE|  
 |ステージング テーブルのデータが MDS データベース テーブルに挿入されたときに発生したエラーを表示する|stg.udp_name_Relationship|SELECT|  
   

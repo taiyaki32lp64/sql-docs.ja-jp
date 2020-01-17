@@ -11,11 +11,11 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: 207d82f740b7b5ff174e220e647d67d5bac7f9ea
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56019453"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63190830"
 ---
 # <a name="creating-a-market-basket-structure-and-model-intermediate-data-mining-tutorial"></a>Market Basket 構造およびモデルの作成 (中級者向けデータ マイニング チュートリアル)
   前の作業では、データ ソース ビューを作成しました。次の作業では、データ マイニング ウィザードを使用して、新しいマイニング構造を作成します。 この作業では、[!INCLUDE[msCoName](../includes/msconame-md.md)] アソシエーション アルゴリズムに基づくマイニング構造とマイニング モデルを作成します。  
@@ -33,7 +33,7 @@ ms.locfileid: "56019453"
   
 4.  **データ マイニング構造の作成** ページ **を使用するデータ マイニング技法を指定しますか?** を選択します**Microsoft アソシエーション ルール** をクリックし、一覧から**次**します。 **データ ソース ビューの選択**ページが表示されます。  
   
-5.  選択**注文****使用可能なデータ ソース ビュー**、順にクリックします**次**。  
+5.  選択**注文** **使用可能なデータ ソース ビュー**、順にクリックします**次**。  
   
 6.  **テーブルの種類の指定**ページで、vAssocSeqLineItems テーブルの行で、選択、**入れ子になった**チェック ボックスをオンし、入れ子になったテーブル vAssocSeqOrders の行をクリックし、**ケース**チェック ボックスをオンします。 **[次へ]** をクリックします。  
   

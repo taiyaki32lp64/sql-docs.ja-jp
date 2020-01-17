@@ -1,7 +1,7 @@
 ---
 title: 段階的な部分復元 (SQL Server) | Microsoft Docs
 ms.custom: ''
-ms.date: 03/14/2017
+ms.date: 10/23/2019
 ms.prod: sql
 ms.prod_service: backup-restore
 ms.reviewer: ''
@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 208f55e0-0762-4cfb-85c4-d36a76ea0f5b
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 481146623145c2abc6e3e9c8ed5b971f614979e6
-ms.sourcegitcommit: 202ef5b24ed6765c7aaada9c2f4443372064bd60
+ms.openlocfilehash: 7d818eb992ae95527281de6f53a2e17007490b3b
+ms.sourcegitcommit: e7c3c4877798c264a98ae8d51d51cb678baf5ee9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/12/2019
-ms.locfileid: "54242053"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72915999"
 ---
 # <a name="piecemeal-restores-sql-server"></a>段階的な部分復元 (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -121,7 +120,7 @@ ms.locfileid: "54242053"
   
 ### <a name="examples"></a>使用例  
   
--   [例:データベースの段階的な部分復元 &#40;単純復旧モデル&#41;](../../relational-databases/backup-restore/example-piecemeal-restore-of-database-simple-recovery-model.md)  
+-   [例: データベースの段階的な部分復元 &#40;単純復旧モデル&#41;](../../relational-databases/backup-restore/example-piecemeal-restore-of-database-simple-recovery-model.md)  
   
 -   [例: 一部のファイル グループのみを復元する段階的な部分復元 &#40;単純復旧モデル&#41;](../../relational-databases/backup-restore/example-piecemeal-restore-of-only-some-filegroups-simple-recovery-model.md)  
   
@@ -145,7 +144,7 @@ ms.locfileid: "54242053"
      Enterprise エディションでは、データベースをオンラインにしたまま、オフラインのセカンダリ ファイル グループを復元および復旧できます。 特定の読み取り専用ファイルに損傷がなく、データベースと一貫性があれば、そのファイルを復元する必要はありません。 詳細については、「[データを復元しないデータベースの復旧 &#40;Transact-SQL&#41;](../../relational-databases/backup-restore/recover-a-database-without-restoring-data-transact-sql.md)」を参照してください。  
   
 ### <a name="applying-log-backups"></a>ログ バックアップの適用  
- 読み取り専用ファイル グループがバックアップの作成前から読み取り専用だった場合は、ログ バックアップをファイル グループに適用する必要はないので、ファイルの復元の際にスキップされます。 読み取り/書き込みファイル グループの場合は、最新の完全復元または差分復元にチェーンが途切れていないログ バックアップを適用し、ファイル グループに現在のログ ファイルの状態を反映する必要があります。  
+ 読み取り専用ファイル グループがバックアップの作成前から読み取り専用だった場合は、ログ バックアップをファイル グループに適用する必要はないので、ファイルの復元の際にスキップされます。 読み取り/書き込みファイル グループの場合は、最新の完全復元または差分復元にチェーンが途切れていないログ バックアップを適用し、ファイル グループに現在のログ ファイルの状態を反映する必要があります。 復旧プロセスの詳細については、「[復元と復旧の概要 (SQL Server)](../../relational-databases/backup-restore/restore-and-recovery-overview-sql-server.md#TlogAndRecovery)」を参照してください。
   
 ### <a name="examples"></a>使用例  
   
@@ -173,12 +172,12 @@ ms.locfileid: "54242053"
 3.  後で、WITH NORECOVERY を指定して backup_1 部分バックアップから読み取り/書き込みセカンダリ ファイル グループを復元する。  
   
 4.  差分バックアップの後、元の段階的な部分復元でその他の復元を実行して、元の復旧ポイントまでデータを復元する。  
-  
+
 ## <a name="see-also"></a>参照  
  [トランザクション ログ バックアップの適用 &#40;SQL Server&#41;](../../relational-databases/backup-restore/apply-transaction-log-backups-sql-server.md)   
  [RESTORE &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-transact-sql.md)   
  [SQL Server データベースを特定の時点に復元する方法 &#40;完全復旧モデル&#41;](../../relational-databases/backup-restore/restore-a-sql-server-database-to-a-point-in-time-full-recovery-model.md)   
  [復元と復旧の概要 &#40;SQL Server&#41;](../../relational-databases/backup-restore/restore-and-recovery-overview-sql-server.md)   
- [復元シーケンスの計画と実行 &#40;完全復旧モデル&#41;](../../relational-databases/backup-restore/plan-and-perform-restore-sequences-full-recovery-model.md)  
-  
+ [復元シーケンスの計画と実行 &#40;完全復旧モデル&#41;](../../relational-databases/backup-restore/plan-and-perform-restore-sequences-full-recovery-model.md)    
+ [復元と復旧の概要 (SQL Server)](../../relational-databases/backup-restore/restore-and-recovery-overview-sql-server.md)     
   

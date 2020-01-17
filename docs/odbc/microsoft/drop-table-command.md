@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: bc50459b-8861-4889-84a9-129ae9065aa8
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 0865502928e98329764ae6085ab2b67aa26f0517
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 278950bac7589b8a6b02d894c8133a699c3bd1ef
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47852300"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68071804"
 ---
 # <a name="drop-table-command"></a>DROP TABLE コマンド
 データ ソースで指定されたデータベースからテーブルを削除し、ディスクから削除されます。  
@@ -32,7 +31,7 @@ ms.locfileid: "47852300"
 DROP TABLE TableName | FileName | ?  
 ```  
   
-## <a name="settings"></a>[設定]  
+## <a name="settings"></a>設定  
  *TableName*  
  データ ソースで指定されたデータベースから削除して、ディスクから削除するテーブルを指定します。  
   

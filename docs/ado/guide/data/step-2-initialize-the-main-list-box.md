@@ -10,15 +10,14 @@ ms.topic: conceptual
 ms.assetid: a1454493-1c86-46c2-ada8-d3c6fcdaf3c1
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 90b7d50d6cb0a6fd8c0814d1b4bcbb631e5e8376
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: 8ad89d806f8a6774cb0fe2de056e30fd274a517c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53206421"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67924083"
 ---
-# <a name="step-2-initialize-the-main-list-box"></a>手順 2:メイン リスト ボックスを初期化します。
+# <a name="step-2-initialize-the-main-list-box"></a>手順 2:Main リスト ボックスを初期化する
 グローバルのレコードとレコード セット オブジェクトを宣言するには、([全般]) (宣言) Form1 に、次のコードを挿入します。  
   
 ```  
@@ -50,7 +49,7 @@ End Sub
   
  Recordset オブジェクトを`grs`、レコードの子で開かれた`grec`します。 `lstMain`は URL に公開されているリソースのファイル名が格納されます。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [インターネットのシナリオへの発行](../../../ado/guide/data/internet-publishing-scenario.md)   
  [ステップ 1: Visual Basic プロジェクトを設定します。](../../../ado/guide/data/step-1-set-up-the-visual-basic-project.md)   
  [手順 3:フィールド リスト ボックスを設定します。](../../../ado/guide/data/step-3-populate-the-fields-list-box.md)

@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: f9df1e66-dd23-41b4-95eb-af110d10eda4
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: b247bd63087003b1c9205719a6d1cb0563390cc3
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 1eb0b6349eac28bbd2abc22b9483ef74edf1bf33
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48161547"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66088189"
 ---
 # <a name="change-the-directquery-partition-ssas-tabular"></a>DirectQuery パーティションの変更 (SSAS テーブル)
   テーブル内で DirectQuery パーティションとして指定できるパーティションは 1 つだけであるため、Analysis Services ではテーブルに作成された最初のパーティションが既定で使用されます。 モデル プロジェクトの作成時に、 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]の [パーティション マネージャー] ダイアログ ボックスを使用して DirectQuery パーティションを変更できます。 配置済みのモデルでは、 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]を使用して DirectQuery パーティションを変更できます  
@@ -45,7 +44,7 @@ ms.locfileid: "48161547"
   
 4.  **[パーティション名]** ボックスの一覧から別のパーティションを選択し、必要に応じてパーティションの処理オプションを変更します。  
   
-## <a name="see-also"></a>参照  
- [パーティション&#40;SSAS 表形式&#41;](tabular-models/partitions-ssas-tabular.md)  
+## <a name="see-also"></a>関連項目  
+ [パーティション (SSAS テーブル)](tabular-models/partitions-ssas-tabular.md)  
   
   

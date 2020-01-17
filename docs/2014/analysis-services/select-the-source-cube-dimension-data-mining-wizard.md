@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dm.dmwizard.selectsourcecube.f1
@@ -13,12 +12,12 @@ ms.assetid: 556e216b-5e21-4160-967d-4c57591fbab4
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 0f61dea4488e67c8b8c7ebd30920df2ef1774acd
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: bdb61763a49bad7eae1a49a01633ec8f45e27642
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48087921"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66069233"
 ---
 # <a name="select-the-source-cube-dimension-data-mining-wizard"></a>[ソース キューブ ディメンションの選択] (データ マイニング ウィザード)
   **[ソース キューブ ディメンションの選択]** ページを使用すると、分析する対象のケースを含んでいるキューブからディメンションを選択できます。 たとえば、人口統計に基づいて顧客の購入行動を分析するモデルを構築する場合は、Customer ディメンションを選択します。一般に、このディメンションには、顧客ごとに固有のレコードが含まれているほか、性別、居住地、所得など、人口統計の内訳を表す各種の属性が含まれます。 ウィザードの後半では、このケース テーブルに関連したテーブルを追加できます。たとえば、顧客が購入した製品を表す、入れ子になったテーブルを追加することも可能です。  

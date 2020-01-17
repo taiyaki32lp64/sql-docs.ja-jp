@@ -21,13 +21,12 @@ helpviewer_keywords:
 ms.assetid: 4cbed281-5e1e-4d8b-b410-4c18a6cd0205
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: 11caad507a8d8af50bae6c3d2b51807287ee694c
-ms.sourcegitcommit: c6e71ed14198da67afd7ba722823b1af9b4f4e6f
+ms.openlocfilehash: 81a8422cbab7eb10d0c74ad5cd758817a665eaa6
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/16/2019
-ms.locfileid: "54326603"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68050777"
 ---
 # <a name="grant-server-principal-permissions-transact-sql"></a>GRANT (サーバー プリンシパルの権限の許可) (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -60,11 +59,11 @@ GRANT permission [ ,...n ] }
  *permission*  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ログインで許可できる権限を指定します。 権限の一覧については、後の「解説」を参照してください。  
   
- LOGIN **::***SQL_Server_login*  
- 許可される権限の対象となる [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ログインを指定します。 スコープ修飾子 (**::**) が必要です。  
+ LOGIN **::** *SQL_Server_login*  
+ 許可される権限の対象となる [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ログインを指定します。 スコープ修飾子 ( **::** ) が必要です。  
   
  SERVER ROLE **::** *server_role*  
- 権限を許可するユーザー定義のサーバー ロールを指定します。 スコープ修飾子 (**::**) が必要です。  
+ 権限を許可するユーザー定義のサーバー ロールを指定します。 スコープ修飾子 ( **::** ) が必要です。  
   
  TO \<server_principal> 権限を許可する [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ログインまたはサーバー ロールを指定します。  
   

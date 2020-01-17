@@ -1,5 +1,5 @@
 ---
-title: 変更セットの適用および更新 (マスター データ サービス) | Microsoft Docs
+title: 変更セットの適用および更新
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -8,15 +8,14 @@ ms.reviewer: ''
 ms.technology: master-data-services
 ms.topic: conceptual
 ms.assetid: 3a6a3cf2-1e77-43d3-a64a-855ae51258e7
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 6bf9a3e4d2b3d1c6c3dd7ea146f24665c00c7313
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
-ms.translationtype: HT
+ms.openlocfilehash: b0e937ff9222553c42eacefc173dfec90bb6ebc6
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52777154"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73728783"
 ---
 # <a name="apply-and-update-a-changeset-master-data-services"></a>変更セットの適用および更新 (マスター データ サービス)
 

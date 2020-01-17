@@ -15,15 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - STX (geometry Data Type)
 ms.assetid: 2aef77e8-0460-43f9-bad6-2aae6d8c36f9
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: 85bff3199c30a05cc5f3677f9dfabc9ceac84539
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: MladjoA
+ms.author: mlandzic
+ms.openlocfilehash: 8a6b8896dadf8abc17d2fb3b3836d53815b7d3f8
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47821720"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68066157"
 ---
 # <a name="stx-geometry-data-type"></a>STX (geometry データ型)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -40,7 +39,7 @@ ms.locfileid: "47821720"
 ## <a name="return-types"></a>戻り値の型  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の型: **float**  
   
- CLR の型: **SqlDouble**  
+ CLR の型:**SqlDouble**  
   
 ## <a name="remarks"></a>Remarks  
  **geometry** インスタンスが地点ではない場合、このプロパティの値は NULL になります。  

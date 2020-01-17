@@ -4,20 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: analysis-services
 ms.topic: reference
 ms.assetid: e1ce2d2d-f994-4318-801a-ee0385aecd84
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 9a60cce6d752dd6f44c3d94d209557a80cdca863
-ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
+ms.openlocfilehash: 826389eafb4fdf6a32e8d3b62ebfc1f333b62d4d
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50147487"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62731914"
 ---
 # <a name="discoverxeventtracedefinition-rowset"></a>DISCOVER_XEVENT_TRACE_DEFINITION 行セット
   サーバー上で現在アクティブになっている XEvent トレースに関する情報を提供します。  

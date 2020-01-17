@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 8fc14700-e17a-4073-9a96-7fc23e775c69
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: c292ba89a3b79dc19ca038672cf5cc587a55ed4f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 86f9566ce86423939aff22fc37331c5c9db89904
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47673180"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67909210"
 ---
 # <a name="sysmaildeleteprincipalprofilesp-transact-sql"></a>sysmail_delete_principalprofile_sp (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -41,17 +40,13 @@ sysmail_delete_principalprofile_sp  { [ @principal_id = ] principal_id | [ @prin
 ```  
   
 ## <a name="arguments"></a>引数  
- [ **@principal_id** =] *principal_id*  
- データベース ユーザーまたはロールの id、 **msdb**の関連付けを削除するデータベース。 *principal_id*は**int**、既定値は NULL です。 パブリック プロファイルをプライベート プロファイルにするために、プリンシパル ID を提供**0**またはプリンシパル名の **'public'** します。 いずれか*principal_id*または*principal_name*指定する必要があります。  
+`[ @principal_id = ] principal_id` データベース ユーザーまたはロールの id、 **msdb**の関連付けを削除するデータベース。 *principal_id*は**int**、既定値は NULL です。 パブリック プロファイルをプライベート プロファイルにするために、プリンシパル ID を提供**0**またはプリンシパル名の **'public'** します。 いずれか*principal_id*または*principal_name*指定する必要があります。  
   
- [ **@principal_name** =] **'***principal_name***'**  
- データベース ユーザーまたはロールの名前を指定します、 **msdb**の関連付けを削除するデータベース。 *principal_name*は**sysname**、既定値は NULL です。 パブリック プロファイルをプライベート プロファイルにするために、プリンシパル ID を提供**0**またはプリンシパル名の **'public'** します。 いずれか*principal_id*または*principal_name*指定する必要があります。  
+`[ @principal_name = ] 'principal_name'` データベース ユーザーまたはロールの名前を指定します、 **msdb**の関連付けを削除するデータベース。 *principal_name*は**sysname**、既定値は NULL です。 パブリック プロファイルをプライベート プロファイルにするために、プリンシパル ID を提供**0**またはプリンシパル名の **'public'** します。 いずれか*principal_id*または*principal_name*指定する必要があります。  
   
- [ **@profile_id** = ] *profile_id*  
- 関連付けを削除するプロファイルの ID を指定します。 *profile_id*は**int**、既定値は NULL です。 いずれか*profile_id*または*profile_name*指定する必要があります。  
+`[ @profile_id = ] profile_id` 関連付けを削除するプロファイルの ID です。 *profile_id*は**int**、既定値は NULL です。 いずれか*profile_id*または*profile_name*指定する必要があります。  
   
- [ **@profile_name** =] **'***profile_name***'**  
- 関連付けを削除するプロファイルの名前を指定します。 *profile_name*は**sysname**、既定値は NULL です。 いずれか*profile_id*または*profile_name*指定する必要があります。  
+`[ @profile_name = ] 'profile_name'` 関連付けを削除するプロファイルの名前です。 *profile_name*は**sysname**、既定値は NULL です。 いずれか*profile_id*または*profile_name*指定する必要があります。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  **0** (成功) または**1** (失敗)  

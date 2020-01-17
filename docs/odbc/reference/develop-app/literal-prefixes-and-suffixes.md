@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 29f468f2-f557-4a92-b31d-569c63cc6272
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: f4eabc3e0c354e02ad8df790d896dc43ae49c9bd
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 56ee50071f622c114bd6d8d04444e78c0fb69d67
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47680860"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67915561"
 ---
 # <a name="literal-prefixes-and-suffixes"></a>リテラル プレフィックスおよびサフィックス
 SQL ステートメントで、*リテラル*は文字の実際のデータ値を表したものです。 たとえば、次のステートメントで ABC、FFFF、および 10 はリテラルです。  

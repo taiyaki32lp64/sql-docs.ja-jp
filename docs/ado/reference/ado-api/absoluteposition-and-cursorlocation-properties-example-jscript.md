@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: bff98617-a6ba-4f41-9c5f-915161e3ea31
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: f252bf8a7c4fb7ecac2b226f669f5bd114b90574
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 9f80cd4683928bcb1be74af9f80c00f4324ebfac
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47647970"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67921792"
 ---
 # <a name="absoluteposition-and-cursorlocation-properties-example-jscript"></a>AbsolutePosition および CursorLocation プロパティの例 (JScript)
 この例では、どのように[AbsolutePosition](../../../ado/reference/ado-api/absoluteposition-property-ado.md)プロパティのすべてのレコードを列挙するループの進行状況を追跡できます、[レコード セット](../../../ado/reference/ado-api/recordset-object-ado.md)します。 使用して、 [CursorLocation](../../../ado/reference/ado-api/cursorlocation-property-ado.md)プロパティを有効にする、 **AbsolutePosition**クライアント カーソルをカーソルを設定するプロパティ。 切り取り、メモ帳または別のテキスト エディターに次のコードを貼り付けてととして保存**AbsolutePositionJS.asp**します。  
@@ -128,7 +127,7 @@ BODY {
 <!-- EndAbsolutePositionJS -->  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [AbsolutePosition プロパティ (ADO)](../../../ado/reference/ado-api/absoluteposition-property-ado.md)   
  [CursorLocation プロパティ (ADO)](../../../ado/reference/ado-api/cursorlocation-property-ado.md)   
  [Recordset オブジェクト (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)

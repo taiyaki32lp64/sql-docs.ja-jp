@@ -2,21 +2,21 @@
 title: テーブルまたはマトリックスへの対話的な並べ替えの追加 (レポート ビルダーおよび SSRS) | Microsoft Docs
 ms.date: 03/01/2017
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: report-design
 ms.topic: conceptual
 f1_keywords:
 - "10121"
 - sql13.rtp.rptdesigner.textboxproperties.intrctvsort.f1
 ms.assetid: 05819637-729b-4cf6-82de-91a99f184ec6
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: b0a742ce22f6d5683cacd84ffc6701c577b0966b
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 962f07f5e5f6ce00bc21c362ce905bec2773c28c
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56294380"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68893803"
 ---
 # <a name="add-interactive-sort-to-a-table-or-matrix-report-builder-and-ssrs"></a>テーブルまたはマトリックスへの対話的な並べ替えの追加 (レポート ビルダーおよび SSRS)
   ユーザーがテーブルやマトリックス内で行と列の並べ替え順序を変更できるようにするには、対話的な並べ替えボタンを追加します。 この機能は、ユーザーとの対話が可能な、HTML などの表示形式でのみサポートされています。  
@@ -60,7 +60,7 @@ ms.locfileid: "56294380"
   
  並べ替えアクションを確認するには、 **[実行]** をクリックしてレポートをプレビューし、対話的な並べ替えボタンをクリックします。  
   
- ![[トップに戻る] リンクで使用される矢印アイコン](../../analysis-services/instances/media/uparrow16x16.gif "[トップに戻る] リンクで使用される矢印アイコン") [トップに戻る](#BackToTop)  
+ ![[トップに戻る] リンクで使用される矢印アイコン](https://docs.microsoft.com/analysis-services/analysis-services/instances/media/uparrow16x16.gif "[トップに戻る] リンクで使用される矢印アイコン") [トップに戻る](#BackToTop)  
   
 ##  <a name="SortingTopLevelParent"></a> テーブルまたはマトリックスの最上位レベル親行グループの並べ替え  
  ユーザーが列見出しをクリックすることにより、その列に表示されている値に基づいてテーブルまたはマトリックス内の親グループ行を並べ替えられるようにするには、対話的な並べ替えボタンを列見出しに追加します。 子グループの順序は変更されません。  
@@ -84,7 +84,7 @@ ms.locfileid: "56294380"
   
  並べ替えアクションを確認するには、 **[実行]** をクリックしてレポートをプレビューし、対話的な並べ替えボタンをクリックします。  
   
- ![[トップに戻る] リンクで使用される矢印アイコン](../../analysis-services/instances/media/uparrow16x16.gif "[トップに戻る] リンクで使用される矢印アイコン") [トップに戻る](#BackToTop)  
+ ![[トップに戻る] リンクで使用される矢印アイコン](https://docs.microsoft.com/analysis-services/analysis-services/instances/media/uparrow16x16.gif "[トップに戻る] リンクで使用される矢印アイコン") [トップに戻る](#BackToTop)  
   
 ##  <a name="SortingChildGroups"></a> グループの子グループまたは詳細行の並べ替え  
  ユーザーが親グループ内の子グループの値を並べ替えたり、最も内側にある子グループの詳細行を並べ替えたりできるようにするには、対話的な並べ替えボタンをグループ ヘッダー行に追加します。  
@@ -107,7 +107,7 @@ ms.locfileid: "56294380"
   
  並べ替えアクションを確認するには、 **[実行]** をクリックしてレポートをプレビューし、対話的な並べ替えボタンをクリックします。  
   
- ![[トップに戻る] リンクで使用される矢印アイコン](../../analysis-services/instances/media/uparrow16x16.gif "[トップに戻る] リンクで使用される矢印アイコン") [トップに戻る](#BackToTop)  
+ ![[トップに戻る] リンクで使用される矢印アイコン](https://docs.microsoft.com/analysis-services/analysis-services/instances/media/uparrow16x16.gif "[トップに戻る] リンクで使用される矢印アイコン") [トップに戻る](#BackToTop)  
   
 ##  <a name="SortingMultipleRowGroups"></a> 複雑なグループ式に基づく行の並べ替え  
  ユーザーが列見出しをクリックすることにより、親グループと子グループの組み合わせを並べ替えられるようにするには、対話的な並べ替えボタンを列見出しに追加します。 この機能を実現するには、両方のグループを複合したものにグループ式を変更する必要があります。 たとえば、ある店舗の在庫合計を表示するマトリックスがあり、色とサイズの両方でアイテムがグループ化されているとします。 この場合に、色とサイズの組み合わせに基づいて行を並べ替えるには、色とサイズのグループを別々に定義するのではなく、色とサイズの組み合わせに基づいたグループを 1 つ定義します。 グループ式の定義の詳細については、「[グループ式の例 &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/group-expression-examples-report-builder-and-ssrs.md)」を参照してください。  
@@ -130,7 +130,7 @@ ms.locfileid: "56294380"
   
 5.  **[名前]** で、グループ化する複数のグループを指定する名前で、既定の名前を置換します。  
   
-6.  **[グループ式]** の **[グループ化の条件]** で、式 (**[fx]**) ボタンをクリックして **[式]** ダイアログ ボックスを開きます。  
+6.  **[グループ式]** の **[グループ化の条件]** で、式 ( **[fx]** ) ボタンをクリックして **[式]** ダイアログ ボックスを開きます。  
   
 7.  グループ化するすべてのフィールドを指定する式を入力します。 たとえば、グループ式 `=Fields!Color.Value & Fields!Size.Value`では、Color というフィールドと Size というフィールドが組み合わされます。  
   
@@ -164,7 +164,7 @@ ms.locfileid: "56294380"
   
  並べ替えアクションを確認するには、 **[実行]** をクリックしてレポートをプレビューし、対話的な並べ替えボタンをクリックします。 グループ式の値の組み合わせによってマトリックスが並べ替えられます。ただし、個々の値はそれぞれの列に表示されます。  
   
- ![[トップに戻る] リンクで使用される矢印アイコン](../../analysis-services/instances/media/uparrow16x16.gif "[トップに戻る] リンクで使用される矢印アイコン") [トップに戻る](#BackToTop)  
+ ![[トップに戻る] リンクで使用される矢印アイコン](https://docs.microsoft.com/analysis-services/analysis-services/instances/media/uparrow16x16.gif "[トップに戻る] リンクで使用される矢印アイコン") [トップに戻る](#BackToTop)  
   
 ##  <a name="SynchronizingSortOrder"></a> 複数のデータ領域の並べ替え順序の同期  
  ユーザーが 1 つの並べ替えボタンをクリックすることによって、複数のデータ領域を並べ替えられるようにする、対話的な並べ替えボタンを追加します。 対話的な並べ替えボタンを作成する場合は、複数のデータ領域の並べ替えを同じレポート データセットに基づいて同期するかどうかを指定できます。 たとえば、マトリックスおよびデータをグラフィカルに表示するグラフが含まれたレポートがあるとします。 ユーザーがこのマトリックス内の行の並べ替え順序を変更すると、それと同じ並べ替え順序がグラフに自動的に表示されます。  
@@ -213,7 +213,7 @@ ms.locfileid: "56294380"
   
  並べ替えアクションを確認するには、 **[実行]** をクリックしてレポートをプレビューし、対話的な並べ替えボタンをクリックします。 グループ式の値の組み合わせによってマトリックスが並べ替えられます。ただし、個々の値はそれぞれの列に表示されます。  
   
- ![[トップに戻る] リンクで使用される矢印アイコン](../../analysis-services/instances/media/uparrow16x16.gif "[トップに戻る] リンクで使用される矢印アイコン") [トップに戻る](#BackToTop)  
+ ![[トップに戻る] リンクで使用される矢印アイコン](https://docs.microsoft.com/analysis-services/analysis-services/instances/media/uparrow16x16.gif "[トップに戻る] リンクで使用される矢印アイコン") [トップに戻る](#BackToTop)  
   
 ## <a name="see-also"></a>参照  
  [データのフィルター、グループ化、および並べ替え (レポート ビルダーおよび SSRS)](../../reporting-services/report-design/filter-group-and-sort-data-report-builder-and-ssrs.md)   

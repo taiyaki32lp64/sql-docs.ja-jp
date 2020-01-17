@@ -2,17 +2,18 @@
 title: ネイティブ モードから SharePoint モードへの移行 (SSRS) | Microsoft Docs
 ms.date: 08/17/2017
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.topic: conceptual
 ms.assetid: c5b15bec-6fde-4174-bcde-d043307244dd
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 620b936f976bca27ba1bb0c95e8b882d589e77d7
-ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+monikerRange: = sql-server-2016 || = sqlallproducts-allversions
+ms.openlocfilehash: 9a13b2a72e66d069d0a3161bab4af8ce4d430157
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51814035"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65570702"
 ---
 # <a name="native-to-sharepoint-migration-ssrs"></a>ネイティブ モードから SharePoint モードへの移行 (SSRS)
 

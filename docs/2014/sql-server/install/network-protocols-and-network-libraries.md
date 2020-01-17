@@ -22,11 +22,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: f4649f6a5abd9726a1b01e3ed30d6cabf88aef9e
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53371824"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63067699"
 ---
 # <a name="network-protocols-and-network-libraries"></a>ネットワーク プロトコルとネットワーク ライブラリ
   サーバーは、一度に複数のネットワーク プロトコルでリッスンまたは監視することができます。 ただし、これには各プロトコルを構成する必要があります。 特定のプロトコルが構成されていない場合、サーバーはそのプロトコルでリッスンできません。 インストール後、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 構成マネージャーを使用して、プロトコルの構成を変更できます。  
@@ -85,7 +85,7 @@ ms.locfileid: "53371824"
   
 -   [サーバー ネットワークの構成](../../database-engine/configure-windows/server-network-configuration.md)  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [セキュリティ構成](../../relational-databases/security/surface-area-configuration.md)   
  [SQL Server インストールにおけるセキュリティの考慮事項](../../../2014/sql-server/install/security-considerations-for-a-sql-server-installation.md)   
  [SQL Server のインストール計画](../../../2014/sql-server/install/planning-a-sql-server-installation.md)  

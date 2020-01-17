@@ -3,7 +3,7 @@ title: CONCAT (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 07/24/2017
 ms.prod: sql
-ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
 ms.technology: t-sql
 ms.topic: language-reference
@@ -15,22 +15,18 @@ dev_langs:
 helpviewer_keywords:
 - CONCAT function
 ms.assetid: fce5a8d4-283b-4c47-95e5-4946402550d5
-author: MashaMSFT
-ms.author: mathoma
-manager: craigg
+author: MikeRayMSFT
+ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 6a1c1624965ad311bb7df039957da8fd25a3321c
-ms.sourcegitcommit: 96032813f6bf1cba680b5e46d82ae1f0f2da3d11
+ms.openlocfilehash: 6968766b2d7d447f21fccc6425935017a6943778
+ms.sourcegitcommit: a1ddeabe94cd9555f3afdc210aec5728f0315b14
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/15/2019
-ms.locfileid: "54299019"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70122956"
 ---
 # <a name="concat-transact-sql"></a>CONCAT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-all-md](../../includes/tsql-appliesto-ss2012-all-md.md)]
-
-> [!div class="nextstepaction"]
-> [SQL ドキュメントの目次に関するご意見を共有してください。](https://aka.ms/sqldocsurvey)
 
 この関数は、連結の結果、またはエンド ツー エンドの方法で 2 つ以上の文字列値の結合の結果の文字列を返します。 (連結時に区切り値を追加するには、「[CONCAT_WS](../../t-sql/functions/concat-ws-transact-sql.md)」をご覧ください。)
   
@@ -58,7 +54,7 @@ CONCAT ( string_value1, string_value2 [, string_valueN ] )
 |入力型|出力型と長さ|  
 |---|---|
 |1.次の任意の引数<br><br />SQL-CLR システム型<br><br />SQL CLR UDT<br><br />内の複数の<br><br />`nvarchar(max)`|**nvarchar(max)**|  
-|2.それ以外の場合、次の型の任意の引数<br><br />**varbinary(max)**<br><br />内の複数の<br><br />**varchar(max)**|**varchar(max)**。ただし、いずれかのパラメーターが任意の長さの **nvarchar** である場合を除きます。 この場合、`CONCAT` は **nvarchar(max)** 型の結果を返します。|  
+|2.それ以外の場合、次の型の任意の引数<br><br />**varbinary(max)**<br><br />内の複数の<br><br />**varchar(max)**|**varchar(max)** 。ただし、いずれかのパラメーターが任意の長さの **nvarchar** である場合を除きます。 この場合、`CONCAT` は **nvarchar(max)** 型の結果を返します。|  
 |3.それ以外の場合、最大 4,000 文字の **nvarchar** 型の任意の引数<br><br />( **nvarchar**(<= 4000) )|**nvarchar**(<= 4000)|  
 |4.その他のすべての場合|**varchar**(<= 8000) (最大 8,000 文字の **varchar**)。ただし、いずれかのパラメーターが任意の長さの nvarchar である場合を除きます。 その場合、`CONCAT` は **nvarchar(max)** 型の結果を返します。|  
   

@@ -2,20 +2,20 @@
 title: SQL Server データ ツールの Reporting Services (SSDT) | Microsoft Docs
 ms.date: 05/30/2017
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: tools
 ms.topic: conceptual
 helpviewer_keywords:
 - Business Intelligence Development Studio, Reporting Services in
 ms.assetid: 0903c7b2-ac59-45f1-b7d0-922ecd9d76f8
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: b57f42345b487867b5362e24963790e5f525f973
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: c1f327b42dd3cdc18be769ef4b4b6fac571578e0
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56292330"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68889839"
 ---
 # <a name="reporting-services-in-sql-server-data-tools-ssdt"></a>SQL Server データ ツールの Reporting Services (SSDT)
 
@@ -39,11 +39,11 @@ ms.locfileid: "56292330"
   
 -   **レポート サーバー プロジェクト ウィザード。** レポート サーバー プロジェクト ウィザードを選択すると、レポート サーバー プロジェクトが自動的に作成され、レポート ウィザードが開きます。 このウィザードでは、各ページの手順に従ってレポートを作成し、データ ソースへの接続文字列の作成、データ ソースの資格情報の設定、クエリのデザイン、テーブルまたはマトリックス データ領域の追加、レポート データやグループの指定、フォントや色のスタイルの選択、レポート サーバーへのレポートのパブリッシュ、およびローカルでのレポートのプレビューを行うことができます。 ウィザードを使用してレポートを作成した後で、レポート サーバー プロジェクトでレポート デザイナーを使用して、レポート データおよびレポート デザイナーを変更できます。  
   
- ![SSDT の新しいプロジェクト テンプレート](../../analysis-services/media/ssdt-biprojects.png "SSDT の新しいプロジェクト テンプレート")  
+ ![SSDT の新しいプロジェクト テンプレート](https://docs.microsoft.com/analysis-services/analysis-services/media/ssdt-biprojects.png "SSDT の新しいプロジェクト テンプレート")  
   
   
 ##  <a name="bkmk_ReportDesignerWindowsandPanes"></a> レポート デザイナーのウィンドウとペイン  
- レポート デザイナーは 2 つのビューをサポートしています。レポート データとレポート レイアウトを定義するための **[デザイン]** ビューと、描画されたレポートのビューを表示するための **[プレビュー]** ビューです。 それぞれのビューでは、表示レポートをデザインまたは表示できるように複数のウィンドウを表示できます。  
+ レポート デザイナーでは、レポート データとレポート レイアウトを定義するための **[デザイン]** ビューと、描画されたレポートのビューを表示するための **[プレビュー]** ビューがサポートされています。 それぞれのビューでは、表示レポートをデザインまたは表示できるように複数のウィンドウを表示できます。  
   
 ###  <a name="bkmk_ReportDataPane"></a> レポート データ ペイン  
  [レポート データ] ペインには、組み込みフィールド、データ ソース、データセット、フィールド コレクション、レポート パラメーター、および画像が表示されます。  
@@ -175,7 +175,7 @@ ms.locfileid: "56292330"
   
 -   **[レポートのプロパティ]** **[レポートのプロパティ]** ダイアログ ボックスを開きます。 このダイアログ ボックスでは、一般的なレポートのプロパティ (作成者の名前やグリッドの間隔など) を割り当てたり、レポート レイアウトのプロパティ (列数やページ サイズなど) を指定したりできます。 また、カスタム コード、アセンブリやクラスへの参照、データ出力要素の名前、データ変換の名前、およびデータ スキーマの名前も含めることができます。  
   
--   **[表示]** レポート デザイナーのタブ[デザイン] と [プレビュー] を切り替えます。  
+-   **[表示]** レポート デザイナーの [デザイン] タブと [プレビュー] タブを切り替えます。  
   
 -   **[ページ ヘッダー]** レポートのページ ヘッダーを追加または削除します。 ページ ヘッダーを削除すると、ページ ヘッダー内のすべてのアイテムが削除されます。  
   
@@ -237,7 +237,7 @@ ms.locfileid: "56292330"
   
 
 ##  <a name="bkmk_SourceControl"></a> ソース管理  
- [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] はソース プラグインと統合できます。**[オプション]** ダイアログ ボックスの [プロジェクトおよびソリューション] ページを使用して、プラグインを指定し、プロパティを構成します。  
+ [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] はソース プラグインと統合できます。 **[オプション]** ダイアログ ボックスの [プロジェクトおよびソリューション] ページを使用して、プラグインを指定し、プロパティを構成します。  
   
 ##  <a name="bkmk_CustomReportTemplates"></a> カスタム レポート テンプレート  
  新しいレポートのテンプレートとしてカスタム レポートを使用するには、 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] がインストールされているコンピューターの ReportProject フォルダーにそれらのレポートをコピーするだけです。 既定では、このフォルダーは次の場所にあります: `<drive>:\Program Files\Microsoft Visual Studio 14.0\Common7\IDE\Private Assemblies\ProjectItems\ReportProject`。 レポート プロジェクトに新しいアイテムを追加すると、カスタム レポートが [テンプレート] ペインに表示されます。  

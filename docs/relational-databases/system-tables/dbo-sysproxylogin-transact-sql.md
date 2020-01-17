@@ -19,15 +19,14 @@ helpviewer_keywords:
 ms.assetid: 433d33cb-bdf2-47bb-af78-2a40b7c8dfce
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 00a3b3b53bcede7f43aad556465358b957331f45
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 2fb62d70c1b0a41edf684a8216205fb43e070eea
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47770250"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67984883"
 ---
-# <a name="dbosysproxylogin-transact-sql"></a>dbo.sysproxylogin (Transact-SQL)
+# <a name="dbosysproxylogin-transact-sql"></a>dbo.sysproxylogin (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   各 SQL Server エージェント プロキシ アカウントに関連付けられている、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のログインを記録します。 このテーブルに格納されます、 **msdb**データベース。  
@@ -36,13 +35,13 @@ ms.locfileid: "47770250"
 |-----------------|---------------|-----------------|  
 |**proxy_id**|**int**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェント プロキシ アカウントの ID。 この値に対応、 **proxy_id**内の列、 **sysproxies**テーブル。|  
 |**sid**|**varbinary(85)**|Microsoft Windows *security_identifier*の SQL Server ログインします。|  
-|**principal_id**|**int**|指定したサブシステム ステップのプロキシ アカウントを使用する権限を持つユーザーまたはグループの ID。|  
+|**principal_id**|**int**|ユーザーまたは指定したサブシステム ステップのプロキシ アカウントを使用する権限を持つグループの ID。|  
 |**flags**|**int**|ログインの種類:<br /><br /> **0** = Windows ユーザーまたはグループ、および[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]ログインします。<br /><br /> **1**  =  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]固定システム ロール<br /><br /> **2** = **msdb**データベース ロール|  
   
 ## <a name="remarks"></a>コメント  
  メンバーのみ、 **sysadmin**固定サーバー ロールがこのテーブルにアクセスできます。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [dbo.sysproxies &#40;TRANSACT-SQL&#41;](../../relational-databases/system-tables/dbo-sysproxies-transact-sql.md)  
   
   

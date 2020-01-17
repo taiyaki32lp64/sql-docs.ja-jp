@@ -11,11 +11,11 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: 42893ce0b921f47a86e6a52f3262786ca8b82bb9
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56013653"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62931503"
 ---
 # <a name="lesson-2-building-a-targeted-mailing-structure-basic-data-mining-tutorial"></a>レッスン 2:絞り込み構造 (基本的なデータ マイニング チュートリアル) の作成
   [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)] のマーケティング部門は、売上増大を図るため、対象顧客を絞り込んでメーリング キャンペーンを実施することにしました。 同社のデータベースには、以前に製品を購入した顧客のリストと、新しい見込み顧客のリストが保存されています。 以前の顧客の属性を調査して、同社の潜在顧客に適用できますし、パターンを検出します。 たとえば、潜在的な顧客がから自転車を購入する可能性を予測する過去の傾向使用可能性があります[!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)]、または将来のマーケティング キャンペーンの顧客セグメントを作成します。  

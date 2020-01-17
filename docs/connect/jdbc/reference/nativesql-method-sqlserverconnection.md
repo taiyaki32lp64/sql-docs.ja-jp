@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: 2188a6e1-792f-47bd-b207-1d01741231b2
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 994a15cd8ac69c49306612582cb69413e035a1fa
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b4e5d97f3b4b47e111da7c4a9efd9edeb87f168c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47778490"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67976790"
 ---
 # <a name="nativesql-method-sqlserverconnection"></a>nativeSQL メソッド (SQLServerConnection)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -50,7 +49,7 @@ public java.lang.String nativeSQL(java.lang.String sql)
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- この nativeSQL メソッドは、java.sql.Connection インターフェイスの nativeSQL メソッドによって指定されます。  
+ この nativeSQL メソッドは、java. .sql. 接続インターフェイスの nativeSQL メソッドによって指定されます。  
   
 ## <a name="see-also"></a>参照  
  [SQLServerConnection のメンバー](../../../connect/jdbc/reference/sqlserverconnection-members.md)   

@@ -15,17 +15,16 @@ dev_langs:
 helpviewer_keywords:
 - IS_OBJECTSIGNED function
 ms.assetid: afbc4f7f-8266-4ee6-9802-14a2dbe69ef6
-author: MashaMSFT
-ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 2e1c26b6e934a929fc04316c4640825ab2f1ec46
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: VanMSFT
+ms.author: vanto
+ms.openlocfilehash: 274e6128ba57a92f6f2e1e84e160424571742787
+ms.sourcegitcommit: a24f6e12357979f1134a54a036ebc58049484a4f
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47804590"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71314611"
 ---
-# <a name="isobjectsigned-transact-sql"></a>IS_OBJECTSIGNED (Transact-SQL)
+# <a name="is_objectsigned-transact-sql"></a>IS_OBJECTSIGNED (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   オブジェクトが、指定した証明書または非対称キーで署名されているかどうかを示します。  
@@ -45,26 +44,26 @@ IS_OBJECTSIGNED (
  **'OBJECT'**  
  セキュリティ保護可能なクラスの型。  
   
- *@object_id*  
- テストされるオブジェクトの object_id。 *@object_id* のデータ型は **int** 型です。  
+ *\@object_id*  
+ テストされるオブジェクトの object_id。 *\@object_id* は **int** 型です。  
   
- *@class*  
+ *\@class*  
  オブジェクトのクラス :  
   
 -   'certificate'  
   
 -   'asymmetric key'  
   
- *@class* のデータ型は **sysname** です。  
+ *\@class* は **sysname** です。  
   
- *@thumbprint*  
- オブジェクトの SHA 拇印。 *@thumbprint* は **varbinary(32)** 型です。  
+ *\@thumbprint*  
+ オブジェクトの SHA 拇印。 *\@thumbprint* は **varbinary(32)** 型です。  
   
 ## <a name="returned-types"></a>返される型  
  **int**  
   
 ## <a name="remarks"></a>Remarks  
- IS_OBJECTSIGNED は、次の値を返します。  
+ IS_OBJECTSIGNED は次の値を返します。  
   
 |戻り値|[説明]|  
 |------------------|-----------------|  
@@ -73,7 +72,7 @@ IS_OBJECTSIGNED (
 |1|オブジェクトは署名されています。|  
   
 ## <a name="permissions"></a>アクセス許可  
- 証明書または非対称キーに対する VIEW DEFINITION 権限が必要です。  
+ 証明書または非対称キーに対する VIEW DEFINITION が必要です。  
   
 ## <a name="examples"></a>使用例  
   
@@ -102,6 +101,6 @@ IS_OBJECTSIGNED(
 ```  
   
 ## <a name="see-also"></a>参照  
- [sys.fn_check_object_signatures (&) #40 です。TRANSACT-SQL と #41 です。](../../relational-databases/system-functions/sys-fn-check-object-signatures-transact-sql.md)  
+ [sys.fn_check_object_signatures &#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-check-object-signatures-transact-sql.md)  
   
   

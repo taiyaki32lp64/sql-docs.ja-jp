@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 ms.assetid: cb51e96e-a828-42f0-b67c-cee3f4d221e7
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: e3546922305c1d062c103baa8998ffe2734f91a7
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: 1763b417f381293eb9f9535cc5ef317cff268588
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56298600"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66105145"
 ---
 # <a name="stdev-function-report-builder-and-ssrs"></a>StDev 関数 (レポート ビルダーおよび SSRS)
   式で指定された NULL 以外のすべての数値の標準偏差を、指定されたスコープで評価して返します。  

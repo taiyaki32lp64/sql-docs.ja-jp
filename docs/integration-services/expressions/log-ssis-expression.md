@@ -11,17 +11,20 @@ helpviewer_keywords:
 - base-10 logarithms
 - LOG function
 ms.assetid: f7fccace-c178-4e13-bde9-7dc4ef1d98fa
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: 6d73dc9a08caea470837ef23c419f03567bcbfde
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: a2a44d6e7245108c16442e30a67aaea13aae8293
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47612100"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71297506"
 ---
 # <a name="log-ssis-expression"></a>LOG (SSIS 式)
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   数値式の常用対数を返します。  
   
 ## <a name="syntax"></a>構文  

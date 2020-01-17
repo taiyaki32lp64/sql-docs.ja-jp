@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 helpviewer_keywords:
 - reports [Reporting Services], data
@@ -15,15 +14,15 @@ helpviewer_keywords:
 - data retrieval [Reporting Services]
 - Reporting Services, data sources
 ms.assetid: d92add64-e93c-4598-8508-55d1bc46acf6
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 2f433d2896aab3e6faaffe14e6e0be497d1710fa
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 208b1363de6b1c6892ba8f265365b1d304b6ceab
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56024863"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66107157"
 ---
 # <a name="register-a-standard-net-framework-data-provider-ssrs"></a>標準 .NET Framework データ プロバイダーを登録する (SSRS)
   サード パーティの [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] データ プロバイダーを使用して [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] レポート データセット用のデータを取得するには、レポート作成クライアントとレポート サーバーの 2 か所に [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] データ プロバイダー アセンブリを配置し、登録する必要があります。 レポート作成クライアントでは、データ プロバイダーをデータ ソースの種類として登録し、それをクエリ デザイナーに関連付ける必要があります。 これにより、レポート データセットを作成する際に、データ ソースの種類としてこのデータ プロバイダーを選択できるようになります。 関連付けられているクエリ デザイナーが開き、それを利用してこのデータ ソースの種類に対するクエリを作成することができます。 レポート サーバーでは、データ プロバイダーをデータ ソースの種類として登録する必要があります。 そうすることで、このデータ プロバイダーを使用してデータ ソースからデータを取得するパブリッシュ済みレポートを処理することができます。  
@@ -37,7 +36,7 @@ ms.locfileid: "56024863"
   
 #### <a name="to-install-a-data-provider-assembly-on-the-report-server"></a>レポート サーバーにデータ プロバイダー アセンブリをインストールするには  
   
-1.  [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] データ プロバイダーを使用するレポート サーバーの bin ディレクトリの既定の場所に移動します。 レポート サーバーの bin ディレクトリの既定の場所は、*\<drive>*:\Program Files\Microsoft SQL Server\MSRS10_50.MSSQLSERVER\Reporting Services\ReportServer\bin です。  
+1.  [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] データ プロバイダーを使用するレポート サーバーの bin ディレクトリの既定の場所に移動します。 レポート サーバーの bin ディレクトリの既定の場所は、 *\<drive>* :\Program Files\Microsoft SQL Server\MSRS10_50.MSSQLSERVER\Reporting Services\ReportServer\bin です。  
   
 2.  ステージング場所からレポート サーバーの bin ディレクトリに、アセンブリをコピーします。 または、グローバル アセンブリ キャッシュ (GAC) にアセンブリを読み込みます。 詳細については、MSDN の [SDK ドキュメントの「](https://go.microsoft.com/fwlink/?linkid=63912) アセンブリとグローバル アセンブリ キャッシュの使用 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 」をご覧ください。  
   
@@ -70,7 +69,7 @@ ms.locfileid: "56024863"
     <Extension Name="MyNETDataProvider" Type="CompanyName.ExtensionName.DataProviderConnectionClass, DataProviderAssembly" />   
     ```  
   
-     アセンブリをグローバル アセンブリ キャッシュ (GAC) に読み込む場合、厳密な名前のプロパティを指定する必要があります。 以下に例を示します。  
+     アセンブリをグローバル アセンブリ キャッシュ (GAC) に読み込む場合、厳密な名前のプロパティを指定する必要があります。 例 :  
   
     ```  
     <Extension Name="MyNETDataProvider" Type="CompanyName.ExtensionName.DataProviderConnectionClass, DataProviderAssembly,Version=1.0.0.0, Culture=neutral, PublicKeyToken=MyPublicToken"/>  
@@ -110,7 +109,7 @@ ms.locfileid: "56024863"
   
 #### <a name="to-install-a-data-provider-assembly-on-the-report-designer-client"></a>レポート デザイナー クライアントにデータ プロバイダー アセンブリをインストールするには  
   
-1.  [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] データ プロバイダーを使用するレポート デザイナー クライアントの PrivateAssemblies ディレクトリの既定の場所に移動します。 PrivateAssemblies ディレクトリの既定の場所は、*\<drive>*:\Program Files\Microsoft Visual Studio 9.0\Common7\IDE\PrivateAssemblies です。  
+1.  [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] データ プロバイダーを使用するレポート デザイナー クライアントの PrivateAssemblies ディレクトリの既定の場所に移動します。 PrivateAssemblies ディレクトリの既定の場所は、 *\<drive>* :\Program Files\Microsoft Visual Studio 9.0\Common7\IDE\PrivateAssemblies です。  
   
 2.  ステージング場所からレポート デザイナー クライアントの PrivateAssemblies ディレクトリに、アセンブリをコピーします。 または、グローバル アセンブリ キャッシュ (GAC) にアセンブリを読み込みます。 詳細については、MSDN の [SDK ドキュメントの「](https://go.microsoft.com/fwlink/?linkid=63912) アセンブリとグローバル アセンブリ キャッシュの使用 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 」をご覧ください。  
   

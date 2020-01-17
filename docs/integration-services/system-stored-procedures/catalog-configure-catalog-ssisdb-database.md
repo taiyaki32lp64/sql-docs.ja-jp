@@ -8,17 +8,20 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: language-reference
 ms.assetid: 72690c61-f462-4c25-9fce-08a687b0bd41
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: a594b214153c838b1b6f50ca29a3a478b94cf96f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 4e8da4de862bf67a552da61a5d921e7c6c4c51fa
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47689400"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71281347"
 ---
-# <a name="catalogconfigurecatalog-ssisdb-database"></a>catalog.configure_catalog (SSISDB データベース)
+# <a name="catalogconfigure_catalog-ssisdb-database"></a>catalog.configure_catalog (SSISDB データベース)
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
   カタログ プロパティを特定の値に設定することによって [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] カタログを構成します。  

@@ -14,11 +14,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 48299e2cf318071624c8a7649c52dd9b2f932a77
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54134582"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62668988"
 ---
 # <a name="overview-of-the-replication-monitor-interface"></a>レプリケーション モニターのインターフェイスの概要
   [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] レプリケーション モニターでは、レプリケーションのすべての利用状況について、パブリッシャー関連の情報またはディストリビューター関連の情報が 2 つのペインで表示されます。 左ペインにパブリッシャーを追加すると、パブリッシャーとそのパブリケーション、パブリケーションのサブスクリプション、およびさまざまなレプリケーション エージェントに関する情報が右ペインに表示されます。 レプリケーション モニターでは、レプリケーション トポロジに関する情報の表示に加えて、エージェントの開始や停止、データの検証などさまざまなタスクを実行できます。  
@@ -104,7 +104,7 @@ ms.locfileid: "54134582"
   
      このタブには、すべての種類のレプリケーションで使用されるエージェントおよびジョブに関する詳細情報が表示されます。 また、各エージェントとジョブを開始および停止することもできます。  
   
- 詳細については、次を参照してください。[情報を表示し、レプリケーション モニターを使用してタスクを実行する](view-information-and-perform-tasks-replication-monitor.md)します。  
+ 詳細については、「[レプリケーション モニターを使用して情報を表示し、タスクを実行する](view-information-and-perform-tasks-replication-monitor.md)」を参照してください。  
   
  レプリケーション モニターでは、パブリッシャー ノードのコンテキスト メニューも使用できます。 左ペインのパブリッシャーを右クリックすると、以下の操作を行うことができます。  
   
@@ -177,7 +177,7 @@ ms.locfileid: "54134582"
   
          エラー メッセージに、エージェントが実行されない理由についての詳細情報が表示され、パブリケーションに関連するエージェントに対するトラブルシューティングを開始できます。  
   
- 詳細については、次を参照してください。[情報を表示し、レプリケーション モニターを使用してタスクを実行する](view-information-and-perform-tasks-replication-monitor.md)します。  
+ 詳細については、「[レプリケーション モニターを使用して情報を表示し、タスクを実行する](view-information-and-perform-tasks-replication-monitor.md)」を参照してください。  
   
  レプリケーション モニターでは、パブリケーション ノードのコンテキスト メニューも使用できます。 左ペインのパブリケーションを右クリックすると、以下の操作を行うことができます。  
   
@@ -216,7 +216,7 @@ ms.locfileid: "54134582"
   
          このタブには、同期中に処理される各アーティクルの詳細な統計が表示されます。この統計には、各処理フェーズ (変更のアップロードやダウンロードなど) にかかる時間などが含まれます。 このタブによって、速度低下の原因となっているテーブルを特定することができます。また、マージ サブスクリプションのパフォーマンスに関するトラブルシューティングを開始するのにも最適です。  
   
- 詳細については、次を参照してください。[情報を表示し、レプリケーション モニターを使用してタスクを実行する](view-information-and-perform-tasks-replication-monitor.md)します。
+ 詳細については、「[レプリケーション モニターを使用して情報を表示し、タスクを実行する](view-information-and-perform-tasks-replication-monitor.md)」を参照してください。
   
 ## <a name="viewing-information-and-performing-tasks-related-to-agent-profiles"></a>情報の表示とエージェント プロファイル関連のタスクの実行  
  レプリケーション モニターには、エージェント プロファイルを管理するためのさまざまなダイアログ ボックスが用意されています。 エージェント プロファイルとは、エージェントのパラメーターのセットであり、これらのパラメーターによってエージェントの動作が決定されます。 詳しくは、「 [レプリケーション エージェント プロファイル](../agents/replication-agent-profiles.md)」をご覧ください。 これらのダイアログ ボックスには以下のものがあります。  

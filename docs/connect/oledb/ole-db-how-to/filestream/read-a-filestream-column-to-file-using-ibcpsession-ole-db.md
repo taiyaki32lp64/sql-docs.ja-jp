@@ -10,13 +10,12 @@ ms.technology: connectivity
 ms.topic: reference
 author: pmasl
 ms.author: pelopes
-manager: craigg
-ms.openlocfilehash: 9ce2029f4d110c74b608438a3f945ebc0e078241
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a6ed79b08fb4d20e184206185c991336636fe570
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47786880"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68015599"
 ---
 # <a name="read-a-filestream-column-to-file-using-ibcpsession-ole-db"></a>IBCPSession を使用した FILESTREAM 列のファイルへの読み取り (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -25,7 +24,7 @@ ms.locfileid: "47786880"
 
   このサンプルでは、IBCPSession インターフェイスを使用して filestream 列をファイルに読み取り、フォーマット ファイルを作成します。  
   
- Filestream 機能の詳細については、次を参照してください。 [FILESTREAM のサポート](../../../oledb/features/filestream-support.md)します。  
+ Filestream 機能の詳細については、「 [filestream のサポート](../../../oledb/features/filestream-support.md)」を参照してください。  
   
 ## <a name="example"></a>例  
  INCLUDE 環境変数に、msoledbsql.h が保存されているディレクトリが含まれていることを確認します。  

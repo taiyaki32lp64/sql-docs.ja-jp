@@ -2,20 +2,20 @@
 title: カタログ アイテムの削除 (Management Studio) | Microsoft Docs
 ms.date: 03/01/2017
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: tools
 ms.topic: conceptual
 f1_keywords:
 - sql13.swb.reportserver.deleteitems.f1
 ms.assetid: b0599e01-6dc3-4484-80d4-022a412e0ebd
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: fc1cdce9ed2e26874eaa19cff7ad9634880fd1db
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: b8576a1946368c7adc1a32aa66ce44e28603616a
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47792120"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65573936"
 ---
 # <a name="delete-catalog-items-management-studio"></a>カタログ アイテムの削除 (Management Studio)
   このページを使用すると、共有スケジュールとロール定義を削除できます。  
@@ -26,8 +26,8 @@ ms.locfileid: "47792120"
   
  削除操作は元に戻せません。 削除したアイテムを復旧するには、そのアイテムを再作成するか、レポート サーバー データベースのバックアップ コピーを復元する必要があります。  
   
-## <a name="options"></a>[変数]  
- **名前**  
+## <a name="options"></a>オプション  
+ **[名前]**  
  削除するアイテムの名前を指定します。  
   
  **型**  
@@ -45,6 +45,6 @@ ms.locfileid: "47792120"
 ## <a name="see-also"></a>参照  
  [アイテムの削除 &#40;Management Studio&#41;](../../reporting-services/tools/delete-an-item-management-studio.md)   
  [Management Studio のレポート サーバーの F1 ヘルプ](../../reporting-services/tools/report-server-in-management-studio-f1-help.md)   
- [スケジュールの作成、変更、および削除](../../reporting-services/subscriptions/create-modify-and-delete-schedules.md)  
+ [Create, Modify, and Delete Schedules](../../reporting-services/subscriptions/create-modify-and-delete-schedules.md)  
   
   

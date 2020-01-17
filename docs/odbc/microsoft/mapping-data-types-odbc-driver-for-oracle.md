@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: a5d9ce12-19da-4943-8493-e3d56fa08348
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: ecdd7d7d4b597c4cae218e18b40b0f78e27a6bd5
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 47646fd6fdf1e8fd16165af1bcfc5e741c6e610f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47775810"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68080735"
 ---
 # <a name="mapping-data-types-odbc-driver-for-oracle"></a>データ型のマッピング (ODBC Driver for Oracle)
 > [!IMPORTANT]  
@@ -33,8 +32,8 @@ ms.locfileid: "47775810"
 |Oracle サーバーのデータ型|ODBC SQL データ型|  
 |-----------------------------|------------------------|  
 |CHAR|SQL_CHAR|  
-|[DATE]|SQL_TIMESTAMP|  
-|[FLOAT]|SQL_DOUBLE|  
+|DATE|SQL_TIMESTAMP|  
+|FLOAT|SQL_DOUBLE|  
 |INTEGER|SQL_DECIMAL|  
 |LONG|SQL_LONGVARCHAR|  
 |LONG RAW|SQL_LONGVARBINARY|  

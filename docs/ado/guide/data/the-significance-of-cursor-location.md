@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 70ef5b1c-0459-41a1-b796-031f61a29a8a
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 7be2574e700e15373d57bf4132ee2c3dd955112b
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: e663ac5cdcf85fc1d050e0f066b597d29141ebfd
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52543457"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67923898"
 ---
 # <a name="the-significance-of-cursor-location"></a>カーソル位置の有意性
 すべてのカーソルでは、そのデータを保持するために一時的なリソースを使用します。 これらのリソースには、メモリ、ディスク ページング ファイル、一時ディスク ファイル、またはデータベースにも一時ストレージができます。 カーソルと呼びます、*クライアント側*これらのリソースがクライアント コンピューター上にあるときのカーソル。 カーソルと呼ばれる、*サーバー側*これらのリソースがサーバー上にあるときのカーソル。  

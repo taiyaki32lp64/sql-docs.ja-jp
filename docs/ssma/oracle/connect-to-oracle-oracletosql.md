@@ -9,13 +9,13 @@ ms.topic: conceptual
 ms.assetid: 23a48cb6-ff30-49bb-b4a7-603ebcab336f
 author: Shamikg
 ms.author: Shamikg
-manager: v-thobro
-ms.openlocfilehash: da846d4afb4ce8fe745b98c8503901fe804520e0
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+manager: shamikg
+ms.openlocfilehash: 42ab1e77dbdb7cee237a9ec22c49a725a64390c0
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51681110"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68264480"
 ---
 # <a name="connect-to-oracle-oracletosql"></a>Oracle への接続 (OracleToSQL)
 使用して、 **Connect to Oracle**を移行する Oracle データベースに接続するためのダイアログ ボックス。  

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.cubeeditor.calculationsview.f1
@@ -13,12 +12,12 @@ ms.assetid: 46e2fbe2-bb41-4eaa-91f8-eb2bd3b8d00d
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: fdd640d2772773e2acc634fed261b72389f971b9
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 07138beba90f3f863d81a24c7c92b2d9fd4a4276
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48103912"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66088290"
 ---
 # <a name="calculations-cube-designer-analysis-services---multidimensional-data"></a>[計算] (キューブ デザイナー) (Analysis Services - 多次元データ)
   キューブ デザイナーの **[計算]** タブを使用すると、選択されているキューブの、計算されるメンバー、名前付きセット、および多次元式 (MDX) スクリプト コマンドなどの計算を表示したり編集したりできます。  
@@ -56,7 +55,7 @@ ms.locfileid: "48103912"
 ## <a name="see-also"></a>参照  
  [キューブ オブジェクト&#40;Analysis Services - 多次元データ&#41;](multidimensional-models-olap-logical-cube-objects/cube-objects-analysis-services-multidimensional-data.md)   
  [計算](multidimensional-models-olap-logical-cube-objects/calculations.md)   
- [MDX スクリプティングの基礎&#40;Analysis Services&#41;](multidimensional-models/mdx/mdx-scripting-fundamentals-analysis-services.md)   
+ [MDX スクリプティングの基礎 &#40;Analysis Services&#41;](multidimensional-models/mdx/mdx-scripting-fundamentals-analysis-services.md)   
  [キューブ デザイナー &#40;Analysis Services - 多次元データ&#41;](cube-designer-analysis-services-multidimensional-data.md)   
  [名前付きセットの作成](multidimensional-models/create-named-sets.md)  
   

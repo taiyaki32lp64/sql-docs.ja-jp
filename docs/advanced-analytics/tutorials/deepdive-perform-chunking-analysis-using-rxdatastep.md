@@ -1,35 +1,36 @@
 ---
-title: RevoScaleR rxDataStep - SQL Server Machine Learning を使用したチャンク分析を実行します。
-description: SQL Server で R 言語を使用して、分散分析用のデータをチャンクする方法のチュートリアル。
+title: RevoScaleR でのチャンク分析
+description: このチュートリアルは、SQL Server で R 言語を使用して分散された分析のデータをチャックに分割する方法について詳しく説明しています。
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 11/27/2018
 ms.topic: tutorial
-author: HeidiSteen
-ms.author: heidist
-manager: cgronlun
-ms.openlocfilehash: c5d3b50af1f7db3a39dec0e475aa00582bc77e0a
-ms.sourcegitcommit: 33712a0587c1cdc90de6dada88d727f8623efd11
-ms.translationtype: MT
+author: dphansen
+ms.author: davidph
+ms.custom: seo-lt-2019
+monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
+ms.openlocfilehash: 8c7aa853f44a04e55802012e81e59a15d2b5282b
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53596033"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73727237"
 ---
-# <a name="perform-chunking-analysis-using-rxdatastep-sql-server-and-revoscaler-tutorial"></a>RxDataStep (SQL Server と RevoScaleR チュートリアル) を使用したチャンク分析を実行します。
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+# <a name="perform-chunking-analysis-using-rxdatastep-sql-server-and-revoscaler-tutorial"></a>RxDataStep を使用したチャンク分析の実行 (SQL Server と RevoScaleR のチュートリアル)
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-このレッスンの一部である、 [RevoScaleR チュートリアル](deepdive-data-science-deep-dive-using-the-revoscaler-packages.md)を使用する方法の[RevoScaleR 関数](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler)と SQL Server。
+このレッスンは、SQL Server で [RevoScaleR 関数](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler)を使用する方法についての [RevoScaleR チュートリアル](deepdive-data-science-deep-dive-using-the-revoscaler-packages.md)の一部です。
 
-このレッスンでは使用して、 **rxDataStep**データセット全体がメモリに読み込まれ、従来の R のように、一度に処理が必要とするのではなく、チャンク単位でデータを処理する関数**RxDataStep**関数を読み取り、チャンク内のデータがデータの各チャンクをさらに、R 関数を適用し、各チャンクの集計結果を共通に保存[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]データ ソース。 すべてのデータが読み取られると、結果を結合します。
+このレッスンでは、**rxDataStep** 関数を利用して、従来の R のように、データセット全体をメモリに読み込み、一度に処理することを要求せず、データをチャンク単位で処理します。**rxDataStep** 関数は、データをチャンク単位で読み込み、データの各チャンクに R 関数を順々に適用し、各チャンクをまとめた結果を共通の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データ ソースに書き込みます。 すべてのデータが読み込まれると、結果が結合されます。
 
 > [!TIP]
-> このレッスンを使用して予備のテーブルを計算する、**テーブル**r. 関数この例は説明のみを目的のもの。 
+> このレッスンでは、R で **table** 関数を使用して、コンティンジェンシー テーブルを計算します。この例は、説明のみを目的としています。 
 > 
-> 使用することをお勧め実際のデータ セットを集計する必要がある場合、 **rxCrossTabs**または**rxCube**関数**RevoScaleR**、この種の最適化操作です。
+> 実世界のデータセットを表にする場合、**RevoScaleR** の **rxCrossTabs** 関数または **rxCube** 関数の使用が推奨されます。この種類の操作のために最適です。
 
-## <a name="partition-data-by-values"></a>値によるデータのパーティション
+## <a name="partition-data-by-values"></a>値によるデータのパーティション分割
 
-1. R を呼び出すカスタム R 関数を作成**テーブル**、データの各チャンクに対して関数を新しい関数の名前と**ProcessChunk**します。
+1. 最初に、データの格チャンクで R **table** 関数を呼び出すカスタム R 関数を作成し、新しい関数に **ProcessChunk** という名前を付けます。
   
     ```R
     ProcessChunk <- function( dataList) {
@@ -54,7 +55,7 @@ ms.locfileid: "53596033"
     rxSetComputeContext(sqlCompute)
     ```
   
-3. 処理するデータを保持する SQL Server データ ソースを定義します。 最初に SQL クエリを変数に代入します。 その変数を使用して、 *sqlQuery*新しい SQL Server データ ソースの引数。
+3. 処理しているデータを保持する SQL Server データ ソースを定義します。 最初に SQL クエリを変数に代入します。 次に、新しい SQL Server データ ソースの *sqlQuery* 引数でその変数を使用します。
   
     ```R
     dayQuery <-  "SELECT DayOfWeek FROM AirDemoSmallTest"
@@ -65,9 +66,9 @@ ms.locfileid: "53596033"
             levels = as.character(1:7))))
     ```
 
-4. 必要に応じて、実行**rxGetVarInfo**でこのデータ ソース。 この時点では、1 つの列が含まれています。*Var 1:DayOfWeek, Type: factor、ファクター レベルはありません。*
+4. 必要に応じて、このデータ ソースで **rxGetVarInfo** を実行できます。 この時点で、1 つの列が含まれます。*Var 1:DayOfWeek, Type: factor, no factor levels available*
      
-5. この因子変数をソース データに適用する前に、中間結果を保持するための別のテーブルを作成します。 だけを使用する、もう一度、 **RxSqlServerData**同じ名前の既存のテーブルを削除するように、データを定義する関数。
+5. この因子変数をソース データに適用する前に、中間結果を保持するための別のテーブルを作成します。 もう一度 **RxSqlServerData** 関数を使用してデータを定義し、同じ名前の既存テーブルを削除したことを確認します。
   
     ```R
     iroDataSource = RxSqlServerData(table = "iroResults",   connectionString = sqlConnString)
@@ -75,13 +76,13 @@ ms.locfileid: "53596033"
     if (rxSqlServerTableExists(table = "iroResults",  connectionString = sqlConnString))  { rxSqlServerDropTable( table = "iroResults", connectionString = sqlConnString) }
     ```
   
-7.  カスタム関数を呼び出す**ProcessChunk**としてを使用して、読み取られると、データを変換する、 *transformFunc*への引数、 **rxDataStep**関数。
+7.  カスタム関数の **ProcessChunk** を呼び出し、読み込まれると同時にデータを変換します。そのとき、データを *rxDataStep* 関数の **transformFunc** 引数として使用します。
   
     ```R
     rxDataStep( inData = inDataSource, outFile = iroDataSource, transformFunc = ProcessChunk, overwrite = TRUE)
     ```
   
-8.  中間結果を表示する**ProcessChunk**の結果を割り当てる**rxImport**の変数とし、コンソールに結果を出力します。
+8.  **ProcessChunk** の中間結果を表示するには、**rxImport** の結果を変数に代入し、結果をコンソールに出力します。
   
     ```R
     iroResults <- rxImport(iroDataSource)
@@ -108,7 +109,7 @@ ms.locfileid: "53596033"
     ---  |   ---  |   ---  |   ---  |   ---  |   ---  |   ---
     97975 | 77725 | 78875 | 81304 | 82987 | 86159 | 94975 
 
-10. 中間結果テーブルを削除するへの呼び出しを行い**rxSqlServerDropTable**します。
+10. 中間結果テーブルを削除するには、**rxSqlServerDropTable** を呼び出します。
   
     ```R
     rxSqlServerDropTable( table = "iroResults", connectionString = sqlConnString)

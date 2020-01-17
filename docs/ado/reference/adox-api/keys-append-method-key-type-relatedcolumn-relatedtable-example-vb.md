@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: 13b5b1c3-6af6-439e-bb65-976578ba6bc2
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: b0fa2c7b7b7b2ad58042f46f8a1cffb0a3706f26
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 6873b964adfcfc5bffed5d093bed48f4fbd29a20
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47602041"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67965862"
 ---
 # <a name="keys-append-method-key-type-relatedcolumn-relatedtable-and-updaterule-properties-example-vb"></a>Keys Append メソッド、Key Type、RelatedColumn、RelatedTable、UpdateRule プロパティの例 (VB)
 次のコードは、という名前の 2 つの既存のテーブル間に新しい外部キー リレーションシップを作成する方法を示します**顧客**と**注文**します。  
@@ -73,7 +72,7 @@ End Sub
 ' EndCreateKeyVB  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [Append メソッド (ADOX Columns)](../../../ado/reference/adox-api/append-method-adox-columns.md)   
  [Append メソッド (ADOX Keys)](../../../ado/reference/adox-api/append-method-adox-keys.md)   
  [Catalog オブジェクト (ADOX)](../../../ado/reference/adox-api/catalog-object-adox.md)   

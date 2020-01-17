@@ -11,11 +11,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 4439f96d79dd9ea2124009af300fa87af365e84c
-ms.sourcegitcommit: 40c3b86793d91531a919f598dd312f7e572171ec
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53328762"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63028339"
 ---
 # <a name="go-to-line-dialog-box"></a>[指定行へのジャンプ] ダイアログ ボックス
-  コード エディター ウィンドウで特定の場所に移動するには、行番号を入力して、**[OK]** をクリックします。  
+  コード エディター ウィンドウで特定の場所に移動するには、行番号を入力して、 **[OK]** をクリックします。  

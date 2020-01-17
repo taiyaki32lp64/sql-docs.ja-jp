@@ -1,5 +1,5 @@
 ---
-title: Windows に接続する Azure Storage (復元) |Microsoft Docs
+title: Azure Storage への接続 (復元) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -12,25 +12,25 @@ ms.assetid: c0b7d7c8-b878-4b7f-8120-d0c6917b583f
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 506f074a8693e54bdc51882ab08b19e9ea3e1994
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 6fbb57fe629797e34cc7c61f224d65d46d4e66cd
+ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52517871"
+ms.lasthandoff: 08/29/2019
+ms.locfileid: "70154771"
 ---
-# <a name="connect-to-windows-azure-storage-restore"></a>Windows Azure ストレージへの接続 (復元)
-  このダイアログ ボックスを使用すると、Windows Azure ストレージ アカウントのファイル ストレージを取得するために、Windows Azure ストレージ アカウント情報への接続を指定できます。 必要な情報を指定した後、 **[接続]** をクリックして Windows Azure ストレージへの接続を確立します。  
+# <a name="connect-to-azure-storage-restore"></a>Azure Storage への接続 (復元)
+  このダイアログボックスでは、azure ストレージアカウントのファイルストレージを取得するために、Azure storage アカウント情報への接続を指定できます。 必要な情報を指定したら、 **[接続]** をクリックして Azure storage への接続を確立します。  
   
-## <a name="windows-azure-storage-account"></a>Windows Azure ストレージ アカウント  
+## <a name="azure-storage-account"></a>Azure ストレージ アカウント  
  **[ストレージ アカウント]**  
- 使用する Windows Azure ストレージ アカウントの名前を選択、入力、または貼り付けます。 ドロップダウン リストに、以前に使用したアカウントが表示されます。  
+ 使用する Azure ストレージアカウントの名前を選択、入力、または貼り付けます。 ドロップダウン リストに、以前に使用したアカウントが表示されます。  
   
  **アカウント キー**  
- Windows Azure ストレージ アカウントのアクセス キーを指定します。  
+ Azure ストレージアカウントのアクセスキーを指定します。  
   
  **[安全なエンドポイントを使用する (HTTPS)]** チェック ボックス  
- Windows Azure ストレージへのセキュリティで保護された接続を確立するには、チェック ボックスをオンにします (推奨)。  
+ Azure storage へのセキュリティで保護された接続を行うには、このオプションを選択します。  
   
  **[アカウント キーを保存する]** チェック ボックス  
  このストレージ アカウントのアクセス キーを SQL Server に記憶させる場合は、このチェック ボックスをオンにします。  

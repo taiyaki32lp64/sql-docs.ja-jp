@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 676da17b-daea-487f-b2d8-e579db6547cc
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: da4b443244edaeb7107d1d808d7e8ded46254620
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d7eb0c477d3aaf74583a4cf140f8fca9b3bd62f3
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47697830"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68002292"
 ---
 # <a name="sqlmoreresults-desktop-database-drivers"></a>SQLMoreResults (デスクトップ データベース ドライバー)
 この関数は、SQL_NO_DATA_FOUND を常に返します。

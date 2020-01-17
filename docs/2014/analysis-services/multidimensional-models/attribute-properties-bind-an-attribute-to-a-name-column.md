@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - binding attributes [Analysis Services]
@@ -15,15 +14,15 @@ ms.assetid: 467f0cf3-8691-476d-a7fb-a5df4e374eaf
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 4e4c55a1f55dc4a6a0e9e1c4844ffcc07e003804
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: d0a08c191bfd8ec00a4e0181ad3960bf7644f93e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48171782"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66077403"
 ---
 # <a name="bind-an-attribute-to-a-name-column"></a>名前列への属性のバインド
-  この手順では、ディメンション デザイナーの **[属性]** ペインと、**[オブジェクトのバインド]** ダイアログ ボックスを使用して、手動で名前列に属性をバインドする方法について説明します。  
+  この手順では、ディメンション デザイナーの **[属性]** ペインと、 **[オブジェクトのバインド]** ダイアログ ボックスを使用して、手動で名前列に属性をバインドする方法について説明します。  
   
 ### <a name="to-bind-an-attribute-to-a-name-column"></a>名前列に属性をバインドするには  
   

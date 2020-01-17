@@ -4,21 +4,20 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords:
 - transactions [Integration Services], configuring packages to use
 ms.assetid: 8bf14957-27b4-456b-81d9-e1a0e0ca94b7
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 8594114b48f14ac9573ee06efab6b931ca334114
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 16d1f0f4c24f18327ee31da1fb85a74d19588384
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48098982"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66060858"
 ---
 # <a name="configure-a-package-to-use-transactions"></a>トランザクションを使用するようにパッケージを構成する
   トランザクションを使用するようにパッケージを構成する場合、次の 2 つのオプションがあります。  

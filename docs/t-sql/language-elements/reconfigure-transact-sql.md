@@ -20,15 +20,14 @@ helpviewer_keywords:
 - RECONFIGURE
 - RECONFIGURE, WITH OVERRIDE statement
 ms.assetid: 2e6e4eeb-b70b-4f45-a253-28ac4e595d75
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: 9bbc09590943948d27ebd989b38b6ea9f2c94559
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 6ee52f585af8930afcba301a5aba12df4eb47173
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47844950"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68072379"
 ---
 # <a name="reconfigure-transact-sql"></a>RECONFIGURE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -64,10 +63,10 @@ RECONFIGURE [ WITH OVERRIDE ]
  RECONFIGURE 権限は、既定では ALTER SETTINGS 権限が与えられているユーザーに与えられます。 **sysadmin** および **serveradmin** 固定サーバー ロールでは、この権限が暗黙的に保持されます。    
     
 ## <a name="examples"></a>使用例    
- 次の例では、`recovery interval` 構成オプションの上限を `75` 分に設定し、`RECONFIGURE WITH OVERRIDE` を使用してインストールします。 60 分より長い復旧間隔は推奨されず、既定では許可されせんが、 `WITH OVERRIDE` オプションが指定されているので、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では指定の値 (`90`) が `recovery interval` 構成オプションに対して有効かどうかはチェックされません。    
+ 次の例では、`recovery interval` 構成オプションの上限を `75` 分に設定し、`RECONFIGURE WITH OVERRIDE` を使用してインストールします。 60 分より長い復旧間隔は推奨されず、既定では許可されせんが、 `WITH OVERRIDE` オプションが指定されているので、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では指定の値 (`75`) が `recovery interval` 構成オプションに対して有効かどうかはチェックされません。    
     
 ```    
-EXEC sp_configure 'recovery interval', 75'    
+EXEC sp_configure 'recovery interval', 75    
 RECONFIGURE WITH OVERRIDE;    
 GO    
 ```    

@@ -12,16 +12,15 @@ helpviewer_keywords:
 - jobs [SQL Server Agent], master jobs
 - master SQL Server Agent job [SQL Server]
 ms.assetid: 4fd5e734-1a57-47d7-b3af-03a726b619a4
-author: stevestein
-ms.author: sstein
-manager: craigg
+author: markingmyname
+ms.author: maghan
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 0ef65f70b631a2f3200e670ac2bc6389d57a0900
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ef8ca56120197c6f21908b60eccba25043c75596
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47718410"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68267554"
 ---
 # <a name="modify-a-sql-server-agent-master-job"></a>SQL Server エージェントのマスター ジョブの変更
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -39,5 +38,5 @@ ms.locfileid: "47718410"
   
 [Remove Steps from a SQL Server Agent Master Job](../../ssms/agent/remove-steps-from-a-sql-server-agent-master-job.md)  
   
-[SQL Server エージェントのマスター ジョブに関連付けられている対象サーバーの変更](../../ssms/agent/modify-the-target-server-s-associated-with-a-sql-server-agent-master-job.md)  
+[SQL Server エージェントのマスター ジョブに関連付けられているターゲット サーバーの変更](../../ssms/agent/modify-the-target-server-s-associated-with-a-sql-server-agent-master-job.md)  
   

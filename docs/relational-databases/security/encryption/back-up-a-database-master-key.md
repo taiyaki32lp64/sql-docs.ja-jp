@@ -9,15 +9,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - database master key [SQL Server], exporting
 ms.assetid: 7ad9a0a0-6e4f-4f7b-8801-8c1b9d49c4d8
-author: aliceku
-ms.author: aliceku
-manager: craigg
-ms.openlocfilehash: 337646527cfaabfb3b803f37088f398cfd63808e
-ms.sourcegitcommit: fa2f85b6deeceadc0f32aa7f5f4e2b6e4d99541c
+author: jaszymas
+ms.author: jaszymas
+ms.openlocfilehash: 55db3923f26acaad667e444afb13ae0d86bcc59e
+ms.sourcegitcommit: 39ea690996a7390e3d13d6fb8f39d8641cd5f710
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/03/2019
-ms.locfileid: "53997514"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "74957506"
 ---
 # <a name="back-up-a-database-master-key"></a>データベース マスター キーのバックアップ
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

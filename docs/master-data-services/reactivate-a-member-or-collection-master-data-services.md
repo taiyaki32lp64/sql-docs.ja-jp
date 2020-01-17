@@ -15,15 +15,14 @@ helpviewer_keywords:
 - reactivating collections [Master Data Services]
 - leaf members [Master Data Services], reactivating
 ms.assetid: bb4884c0-3658-4763-92d1-636804278b1c
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 85653036f4e5348e7bb9d53959b0d6957564f18a
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
-ms.translationtype: HT
+ms.openlocfilehash: b07555b2c770cb1a4c9a6ad81348baac8f75114c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52783054"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68093113"
 ---
 # <a name="reactivate-a-member-or-collection-master-data-services"></a>メンバーまたはコレクションを再アクティブ化する (マスター データ サービス)
 
@@ -43,12 +42,12 @@ ms.locfileid: "52783054"
   
  メンバーまたはコレクションを再アクティブ化すると、以前のトランザクションがすべて復元されます。  
   
-## <a name="prerequisites"></a>Prerequisites  
+## <a name="prerequisites"></a>必須コンポーネント  
  この手順を実行するには  
   
 -   [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]の **[バージョン管理]** 機能領域に対する権限が必要です。  
   
--   モデル管理者である必要があります。 詳細については、「 [管理者 (マスター データ サービス)](../master-data-services/administrators-master-data-services.md)にアクセスすることなくグループに対してユーザーの追加または削除を行うことができます。  
+-   モデル管理者である必要があります。 詳細については、「 [管理者 &#40;マスター データ サービス&#41;](../master-data-services/administrators-master-data-services.md)にアクセスすることなくグループに対してユーザーの追加または削除を行うことができます。  
   
 ### <a name="to-reactivate-a-member-or-collection"></a>メンバーまたはコレクションを再アクティブ化するには  
   
@@ -66,7 +65,7 @@ ms.locfileid: "52783054"
   
 7.  確認のダイアログ ボックスで **[OK]** をクリックします。 **[新しい値]** 列に **[アクティブ]** と表示され、新しいトランザクションが追加されます。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [メンバーまたはコレクションを削除する (マスター データ サービス)](../master-data-services/delete-a-member-or-collection-master-data-services.md)   
  [メンバー (マスター データ サービス)](../master-data-services/members-master-data-services.md)   
  [コレクション (マスター データ サービス)](../master-data-services/collections-master-data-services.md)  

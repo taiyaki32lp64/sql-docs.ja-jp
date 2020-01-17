@@ -9,14 +9,14 @@ helpviewer_keywords:
 - deploying [Reporting Services], extensions
 - rendering extensions [Reporting Services], deploying
 ms.assetid: 9fb8c887-5cb2-476e-895a-7b0e2dd11398
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 2fdcc4d932d32177797f6f3944b59e70d9ca607f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 10c822b8cd292c975309443f9196fb7ceb66cbc5
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47621741"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63193699"
 ---
 # <a name="deploying-a-rendering-extension"></a>表示拡張機能の配置
   [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] のレポート表示拡張機能は、作成して [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] ライブラリにコンパイルした後、レポート サーバーおよびレポート デザイナーで検出できるようにする必要があります。 それには、拡張機能を適切なディレクトリにコピーし、適切な [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 構成ファイルにエントリを追加します。  
@@ -28,7 +28,7 @@ ms.locfileid: "47621741"
   
 |属性|[説明]|  
 |---------------|-----------------|  
-|**名前**|拡張機能の一意の名前。 **Name** 属性の最大文字数は 255 文字です。 名前は、構成ファイルの **Extensions** 要素内のすべてのエントリの中で一意にする必要があります。 重複する名前がある場合には、レポート サーバーによってエラーが返されます。|  
+|**[名前]**|拡張機能の一意の名前。 **Name** 属性の最大文字数は 255 文字です。 名前は、構成ファイルの **Extensions** 要素内のすべてのエントリの中で一意にする必要があります。 重複する名前がある場合には、レポート サーバーによってエラーが返されます。|  
 |**型**|アセンブリの名前と共に完全修飾名前空間を含むコンマ区切りの一覧。|  
 |**[表示]**|値が **false** の場合、表示拡張機能がユーザー インターフェイスに表示されないことを示します。 この属性が指定されない場合、既定値は **true**になります。|  
 |**LogAllExecutionRequests**|値が **false** の場合、エントリがログに記録されるのは、セッションでレポートが最初に実行されるときのみであることを示します。 この属性が指定されない場合、既定値は **true**になります。<br /><br /> この設定によって、レポートに最初に表示されるページについてのみエントリをログに記録するか ( **false**の場合)、レポートに表示されるページごとにエントリをログに記録するか ( **true**の場合) が決まります。|  

@@ -19,27 +19,26 @@ helpviewer_keywords:
 ms.assetid: 5b6d6498-bac6-4266-94b9-d16ef5089cf0
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 926fc5a64e165360eac5e43704826ed4de816ff3
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 1d0fa4c5ef671d643f85fa2a1a2d0caa62d00d86
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47843766"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68102299"
 ---
 # <a name="sysnumberedprocedures-transact-sql"></a>sys.numbered_procedures (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-pdw-md.md)]
 
-  番号付きプロシージャとして作成された SQL Server ストアド プロシージャごとに 1 行のデータを保持します。 ベース ストアド プロシージャ (番号が 1 のもの) に対する行は表示されません。 ベース ストアド プロシージャのエントリで見つかるビューなど**sys.objects**と**sys.procedures**します。  
+  番号付きプロシージャとして作成された各 SQL Server のストアド プロシージャの行を格納します。 1 行ベースのデータは表示されません (番号 = 1) ストアド プロシージャ。 ベース ストアド プロシージャのエントリで見つかるビューなど**sys.objects**と**sys.procedures**します。  
   
 > [!IMPORTANT]  
->  番号付きプロシージャは非推奨とされました。 番号付きプロシージャの使用はお勧めしません。 このカタログ ビューを使用するクエリをコンパイルすると、DEPRECATION_ANNOUNCEMENT イベントが発生します。  
+>  番号付きプロシージャは非推奨とされます。 番号付きプロシージャの使用はお勧めします。 このカタログ ビューを使用するクエリをコンパイルすると、DEPRECATION_ANNOUNCEMENT イベントが発生します。  
   
 |列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
-|**object_id**|**int**|ストアド プロシージャのオブジェクト ID です。|  
-|**procedure_number**|**smallint**|オブジェクト内のプロシージャの番号 (2 以降)。|  
+|**object_id**|**int**|ストアド プロシージャのオブジェクトの ID。|  
+|**procedure_number**|**smallint**|2 以上、オブジェクト内でこの手順の数。|  
 |**definition**|**nvarchar(max)**|このプロシージャを定義する SQL Server のテキストです。<br /><br /> NULL は、暗号化されていることを示します。|  
   
 > [!NOTE]  

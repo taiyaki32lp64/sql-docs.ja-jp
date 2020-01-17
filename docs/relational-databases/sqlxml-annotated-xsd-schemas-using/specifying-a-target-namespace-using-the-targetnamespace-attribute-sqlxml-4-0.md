@@ -1,10 +1,8 @@
 ---
-title: TargetNamespace 属性 (SQLXML 4.0) を使用してターゲット Namespace を指定します。マイクロソフトのドキュメント
-ms.custom: ''
+title: TargetNamespace (SQLXML) を使用してターゲットの名前空間を指定する
 ms.date: 03/16/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.reviewer: ''
 ms.technology: xml
 ms.topic: reference
 helpviewer_keywords:
@@ -18,27 +16,28 @@ helpviewer_keywords:
 - target namespaces [SQLXML]
 ms.assetid: f3df9877-6672-4444-8245-2670063c9310
 author: MightyPen
-ms.author: douglasl
-manager: craigg
+ms.author: genemi
+ms.reviewer: ''
+ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: edd09af43e980c897a558ddd485ff710143b27e9
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 39469073a8affe82ee5231a71676d7046f712f9f
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56034289"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75257360"
 ---
 # <a name="specifying-a-target-namespace-using-the-targetnamespace-attribute-sqlxml-40"></a>targetNamespace 属性を使用した、対象名前空間の指定 (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-  XSD スキーマを作成するには、XSD を使用することができます**targetNamespace**ターゲット名前空間を指定する属性です。 このトピックで説明する方法、XSD **targetNamespace**、**よ**、および**されていません**属性を使用する XML インスタンスをどのように影響生成されると、名前空間と XPath クエリを指定する方法とします。  
+  XSD スキーマの記述では、XSD **targetNamespace**属性を使用して、ターゲットの名前空間を指定できます。 このトピックでは、XSD **targetNamespace**、 **ElementFormDefault**、および**attributeFormDefault**属性の動作、生成される XML インスタンスへの影響、および名前空間での XPath クエリの指定方法について説明します。  
   
- 使用することができます、 **xsd:targetNamespace**属性を別の名前空間に要素と属性の既定の名前空間に配置します。 また、スキーマでローカルに宣言された要素と属性を、名前空間で修飾して表示するかどうかも指定できます。名前空間は、プレフィックスを使って明示的に、または既定により暗黙的に指定できます。 使用することができます、**よ**と**されていません**属性を **\<xsd:schema >** 要素をグローバルに指定するのには、ローカル要素と属性の修飾に使用できる、**フォーム**の個々 の要素と属性を個別に指定する属性です。  
+ **Xsd: targetNamespace**属性を使用して、既定の名前空間の要素と属性を別の名前空間に配置できます。 また、スキーマでローカルに宣言された要素と属性を、名前空間で修飾して表示するかどうかも指定できます。名前空間は、プレフィックスを使って明示的に、または既定により暗黙的に指定できます。 **** **Xsd: schema>要素の elementFormDefault 属性と attributeFormDefault 属性を使用して、ローカル要素と属性の修飾をグローバルに指定することも、form 属性を使用して個々の要素と属性を個別に指定することもでき\<** ます。 **** ****  
   
-## <a name="examples"></a>使用例  
- 次の例を使用した実際のサンプルを作成するには、特定の条件を満たす必要があります。 詳細については、次を参照してください。 [SQLXML の例を実行するための要件](../../relational-databases/sqlxml/requirements-for-running-sqlxml-examples.md)します。  
+## <a name="examples"></a>例  
+ 次の例を使用した実際のサンプルを作成するには、特定の条件を満たす必要があります。 詳細については、「 [SQLXML の例を実行するための要件](../../relational-databases/sqlxml/requirements-for-running-sqlxml-examples.md)」を参照してください。  
   
 ### <a name="a-specifying-a-target-namespace"></a>A. 対象名前空間を指定する  
- 次の XSD スキーマを使用して、ターゲット名前空間を指定する、 **xsd:targetNamespace**属性です。 また、スキーマ、設定、**よ**と**されていません**属性に値を **「不適切な」** (これらの属性の既定値)。 これはグローバル宣言であり、すべてのローカル要素に影響を与えます (**\<注文 >** スキーマで) と属性 (**[得意先コード]**、 **[担当者名]**、および **[受注コード]** スキーマで)。  
+ 次の XSD スキーマでは、 **xsd: targetNamespace**属性を使用してターゲットの名前空間を指定しています。 また、このスキーマでは、 **elementFormDefault**属性と**attributeFormDefault**属性の値が **"非修飾"** (これらの属性の既定値) に設定されます。 これはグローバルな宣言であり、すべてのローカル**** 要素 ( **** ******\<スキーマの順序>** ) と属性 (スキーマ内の CustomerID、得意先、および OrderID) に影響します。  
   
 ```  
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"  
@@ -78,9 +77,9 @@ ms.locfileid: "56034289"
   
  このスキーマの内容は次のとおりです。  
   
--   **顧客タイプ**と**OrderType**型の宣言は、グローバルし、したがって、スキーマのターゲット名前空間に含まれますが。 宣言でこれらの種類は参照されているとその結果、 **\<お客様 >** 要素とその**\<注文 >** 子要素では、関連付けられているプレフィックスを指定ターゲット名前空間の。  
+-   **顧客型**と**ordertype**型の宣言はグローバルであるため、スキーマのターゲット名前空間に含まれています。 結果として、これらの型が** \<Customer>** 要素と** \<Order>** 子要素の宣言で参照されている場合は、ターゲットの名前空間に関連付けられているプレフィックスが指定されます。  
   
--   **\<お客様 >** スキーマのグローバル要素であるため、スキーマのターゲット名前空間に要素が含まれるもします。  
+-   Customer>要素はスキーマのグローバル要素であるため、スキーマのターゲット名前空間にも含まれます。 ** \<**  
   
  このスキーマに対して次の XPath クエリを実行します。  
   
@@ -101,9 +100,9 @@ ms.locfileid: "56034289"
   </ROOT>  
 ```  
   
- このインスタンス ドキュメントでは、urn: マークアップの名前空間を定義しには、プレフィックス (y0) を関連付けます。 プレフィックスが適用されるだけに、 **\<お客様 >** 大域要素です。 (要素は、の子として宣言されているために、グローバル **\<xsd:schema >** スキーマ内の要素です)。  
+ このインスタンスドキュメントでは、urn: MyNamespace 名前空間を定義し、プレフィックス (y0) をそれに関連付けます。 プレフィックスは、 ** \<Customer>** global 要素にのみ適用されます。 (要素は、スキーマの** \<xsd: schema>** 要素の子として宣言されているため、グローバルです)。  
   
- のローカル要素と属性にプレフィックスは適用されませんの値**よ**と**されていません**に属性が設定されて **「不適切な」** スキーマにします。 注意して、 **\<注文 >** 要素は、ローカルの子としてその宣言が表示されますので、 **\<複合型 >** を定義する要素、  **\<顧客タイプ >** 要素です。 同様に、属性 (**[得意先コード]**、 **[受注コード]** と **[担当者名]**) は、ローカル、グローバルにできません。  
+ スキーマで**elementFormDefault**属性と**attributeFormDefault**属性の値が **"非修飾"** に設定されているため、プレフィックスはローカルの要素および属性には適用されません。 ** \<Order>** 要素は、その宣言が、 ** \<顧客の型>** 要素を定義する** \<complexType>** 要素の子として表示されるため、ローカルになっていることに注意してください。 同様に、属性 (**CustomerID**、 **OrderID** **、および**CustomerID) はグローバルではなくローカルになります。  
   
 ##### <a name="to-create-a-working-sample-of-this-schema"></a>このスキーマの実際のサンプルを作成するには  
   
@@ -120,7 +119,7 @@ ms.locfileid: "56034289"
     </ROOT>  
     ```  
   
-     テンプレートの XPath クエリを取得、 **\<お客様 >** 1 の [得意先コード] を持つ顧客の要素です。 この XPath クエリでは、属性ではなく、クエリ内の要素の名前空間プレフィックスが指定されることに注意してください。 ローカル属性は、スキーマ内の指定と同様、修飾されません。  
+     このテンプレートの XPath クエリでは、CustomerID が1の顧客の** \<>** 要素が返されます。 この XPath クエリでは、属性ではなく、クエリ内の要素の名前空間プレフィックスが指定されることに注意してください。 ローカル属性は、スキーマ内の指定と同様、修飾されません。  
   
      マッピング スキーマ (targetNamespace.xml) に指定するディレクトリ パスは、テンプレートを保存するディレクトリに対する相対パスです。 次のように、絶対パスを指定することもできます。  
   
@@ -130,9 +129,9 @@ ms.locfileid: "56034289"
   
 3.  SQLXML 4.0 テスト スクリプト (sqlxml4test.vbs) を作成し、それを使用してテンプレートを実行します。  
   
-     詳細については、次を参照してください。 [SQLXML クエリの実行に ADO を使用する](../../relational-databases/sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md)します。  
+     詳細については、「ADO を使用した[SQLXML クエリの実行](../../relational-databases/sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md)」を参照してください。  
   
- スキーマが指定されている場合**よ**と**されていません**属性の値を持つ **「修飾」**、すべてのローカル インスタンス ドキュメントには要素および属性で修飾します。 これらの属性を含めるには、前のスキーマを変更することができます、  **\<xsd:schema >** 要素テンプレートを再度実行するとします。 この場合は、インスタンスで属性も修飾されるので、名前空間プレフィックスを含むよう XPath クエリを変更します。  
+ スキーマで**elementFormDefault**属性と**attributeFormDefault**属性が値 **"qualified"** で指定されている場合、インスタンスドキュメントには、すべてのローカル要素と属性が修飾されます。 前のスキーマを変更して、 ** \<これらの属性を xsd: schema>** 要素に含め、テンプレートを再度実行することができます。 この場合は、インスタンスで属性も修飾されるので、名前空間プレフィックスを含むよう XPath クエリを変更します。  
   
  次は変更した XPath クエリです。  
   

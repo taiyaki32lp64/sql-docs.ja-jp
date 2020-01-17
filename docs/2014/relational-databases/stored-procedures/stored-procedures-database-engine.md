@@ -14,11 +14,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: fdbca3ed012e082c899a5015faabc5c0019fcd75
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48130622"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68197110"
 ---
 # <a name="stored-procedures-database-engine"></a>ストアド プロシージャ (データベース エンジン)
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のストアド プロシージャは、1 つ以上の [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメント、または [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 共通言語ランタイム (CLR) メソッドの参照のグループです。 プロシージャは、以下ができるために、他のプログラミング言語の構造に似ています。  
@@ -64,7 +64,7 @@ ms.locfileid: "48130622"
  一時  
  一時プロシージャは、ユーザー定義プロシージャの 1 形式です。 一時プロシージャは永続的なプロシージャと同様ですが、一時プロシージャは **tempdb**に格納されることが異なります。 一時プロシージャには、ローカル一時プロシージャとグローバル一時プロシージャの 2 種類があります。 この 2 種類の一時テーブルでは、名前、表示設定、および可用性が異なります。 ローカル一時プロシージャ名の先頭には、番号記号 (#) が 1 つ付いています。このプロシージャは、作成したユーザーの現在の接続でのみ表示され、この接続が閉じられたときに削除されます。 グローバル一時プロシージャ名の先頭には、番号記号が 2 つ (##) 付いています。このプロシージャは、作成されるとすべてのユーザーに表示され、このプロシージャを使用する最後のセッションの終了時に削除されます。  
   
- システム  
+ System  
  システム プロシージャは [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]に含まれています。 物理的には内部の非表示 **リソース** データベースに格納されますが、論理的には各システム データベースとユーザー定義データベースの **sys** スキーマに表示されます。 さらに、 **msdb** データベースには、警告とジョブのスケジュール設定に使用される **dbo** スキーマ内にシステム ストアド プロシージャも含まれます。 システム プロシージャ名には **sp_** というプレフィックスが付くため、ユーザー定義プロシージャ名を付けるときにこのプレフィックスを使用しないようにすることをお勧めします。 すべてのシステム プロシージャの一覧については、「[システム ストアド プロシージャ &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/system-stored-procedures-transact-sql)」を参照してください。  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] から外部プログラムへの、さまざまなメンテナンス作業に使用するためのインターフェイスになるシステム プロシージャがサポートされます。 そのような拡張プロシージャには xp_ プレフィックスが付きます。 すべての拡張プロシージャの一覧については、「[汎用拡張ストアド プロシージャ &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/general-extended-stored-procedures-transact-sql)」を参照してください。  

@@ -1,5 +1,5 @@
 ---
-title: updateByte メソッド (SQLServerResultSet) |Microsoft Docs
+title: updateByte メソッド (SQLServerResultSet) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: 240983e8-bd59-4bb1-a37a-5ba71f85fb72
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 29f5c2b41598fa1afbce0fe41913837696ed4c31
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ae69ea0bcbd77d509e541d34594560863af0475e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47627880"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67996931"
 ---
 # <a name="updatebyte-method-sqlserverresultset"></a>updateByte メソッド (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

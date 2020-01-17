@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 9e4394e9-f177-41d9-839e-5d53a9c9b840
 author: Shamikg
 ms.author: Shamikg
-manager: craigg
-ms.openlocfilehash: 518f899118d5a7d2dce4f56d185fce9d5b1e47df
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 37a763c0acca891d8bbbc1a310edcb6f8b987436
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51661671"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67904901"
 ---
 # <a name="working-with-ssma-projects-mysqltosql"></a>SSMA プロジェクトでの作業 (MySQLToSQL)
 SQL Server または SQL Azure に MySQL データベースを移行するには、最初に SSMA プロジェクトを作成する必要があります。 プロジェクトは、次の情報を含むファイルです。  

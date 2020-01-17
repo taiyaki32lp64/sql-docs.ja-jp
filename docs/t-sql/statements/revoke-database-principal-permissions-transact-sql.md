@@ -1,6 +1,8 @@
 ---
-title: REVOKE (データベース プリンシパルの権限の取り消し) (Transact-SQL) | Microsoft Docs
-ms.custom: ''
+title: REVOKE (データベース プリンシパルのアクセス許可の取り消し)
+description: データベース ユーザー、データベース ロール、またはアプリケーション ロールに対する権限を取り消します。
+titleSuffix: SQL Server (Transact-SQL)
+ms.custom: seo-lt-2019
 ms.date: 08/10/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -18,13 +20,12 @@ helpviewer_keywords:
 ms.assetid: c45e1086-c25b-48bb-a764-4a893e983db2
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: afb12785dd744ddfd938fd2ddfd02e058f2e4034
-ms.sourcegitcommit: c6e71ed14198da67afd7ba722823b1af9b4f4e6f
+ms.openlocfilehash: 0353ff7b9e0778a7ef59107f5ba2876e72bbdd69
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/16/2019
-ms.locfileid: "54327403"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75243339"
 ---
 # <a name="revoke-database-principal-permissions-transact-sql"></a>REVOKE (データベース プリンシパルの権限の取り消し) (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -63,18 +64,18 @@ REVOKE [ GRANT OPTION FOR ] permission [ ,...n ]
  データベース プリンシパルで取り消すことのできる権限を指定します。 権限の一覧については、後の「解説」を参照してください。  
   
  USER ::*database_user*  
- 権限を取り消すユーザーのクラスと名前を指定します。 スコープ修飾子 (**::**) が必要です。  
+ 権限を取り消すユーザーのクラスと名前を指定します。 スコープ修飾子 ( **::** ) が必要です。  
   
  ROLE ::*database_role*  
- 権限を取り消すロールのクラスと名前を指定します。 スコープ修飾子 (**::**) が必要です。  
+ 権限を取り消すロールのクラスと名前を指定します。 スコープ修飾子 ( **::** ) が必要です。  
   
  APPLICATION ROLE ::*application_role*  
-**適用対象**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]、[!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]
+**適用対象**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 以降、[!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]
   
- 権限を取り消すアプリケーション ロールのクラスと名前を指定します。 スコープ修飾子 (**::**) が必要です。  
+ 権限を取り消すアプリケーション ロールのクラスと名前を指定します。 スコープ修飾子 ( **::** ) が必要です。  
   
  GRANT OPTION  
- 指定した権限を他のプリンシパルに許可するための権利が、取り消されます。 権限自体は取り消されません。  
+ 指定した権限を他のプリンシパルに許可するための権利が、取り消されることを示します。 権限自体は取り消されません。  
   
 > [!IMPORTANT]  
 >  指定した権限が GRANT オプションなしでプリンシパルに許可されている場合は、その権限自体が取り消されます。  
@@ -94,34 +95,34 @@ REVOKE [ GRANT OPTION FOR ] permission [ ,...n ]
  データベース ロールを指定します。  
   
  *Application_role*  
-**適用対象**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]、[!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]
+**適用対象**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 以降、[!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]
   
  アプリケーション ロールを指定します。  
   
  *Database_user_mapped_to_Windows_User*  
-**適用対象**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
+**適用対象**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 以降
   
  Windows ユーザーにマップされているデータベース ユーザーを指定します。  
   
  *Database_user_mapped_to_Windows_Group*  
-**適用対象**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
+**適用対象**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 以降
   
  Windows グループにマップされているデータベース ユーザーを指定します。  
   
  *Database_user_mapped_to_certificate*  
-**適用対象**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
+**適用対象**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 以降
   
  証明書にマップされているデータベース ユーザーを指定します。  
   
  *Database_user_mapped_to_asymmetric_key*  
-**適用対象**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
+**適用対象**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 以降
   
  非対称キーにマップされているデータベース ユーザーを指定します。  
   
  *Database_user_with_no_login*  
  対応するサーバー レベルのプリンシパルがないデータベース ユーザーを指定します。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
   
 ## <a name="database-user-permissions"></a>データベース ユーザー権限  
  データベース ユーザーは、データベース レベルのセキュリティ保護可能なリソースで、権限の階層で親となっているデータベースに含まれています。 次の表に、データベース ユーザーで取り消すことができる権限のうち最も限定的なものを、それらを暗黙的に含む一般的な権限と共に示します。  
@@ -157,7 +158,7 @@ REVOKE [ GRANT OPTION FOR ] permission [ ,...n ]
   
  **db_owner** 固定データベース ロールのメンバーなど、データベースに対する CONTROL 権限が許可されているユーザーは、データベース内のセキュリティ保護可能なリソースに対する権限を許可できます。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
   
 ### <a name="a-revoking-control-permission-on-a-user-from-another-user"></a>A. ユーザーに対する CONTROL 権限を別のユーザーから取り消す  
  次の例では、[!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] ユーザー `Wanida` に対する `CONTROL` 権限を、ユーザー `RolandX` から取り消します。  
@@ -181,7 +182,7 @@ GO
 ### <a name="c-revoking-impersonate-permission-on-a-user-from-an-application-role"></a>C. ユーザーに対する IMPERSONATE 権限をアプリケーション ロールから取り消す  
  次の例では、ユーザー `HamithaL` に対する `IMPERSONATE` 権限を、[!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] アプリケーション ロール `AccountsPayable17` から取り消します。  
   
-**適用対象**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]、[!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]
+**適用対象**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 以降、[!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]
   
 ```  
 USE AdventureWorks2012;  

@@ -9,14 +9,13 @@ ms.topic: conceptual
 ms.assetid: 9fb8656b-0e4e-4ada-b404-4db4d3eea995
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 874bedd5e6f8eec03941fa3d3fc957351166500b
-ms.sourcegitcommit: a13256f484eee2f52c812646cc989eb0ce6cf6aa
+ms.openlocfilehash: c6e19142ab4d447678aedf6c841a74ed435eccea
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/25/2019
-ms.locfileid: "56801146"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75257025"
 ---
 # <a name="lesson-1-create-and-query-database-objects"></a>レッスン 1: データベース オブジェクトの作成とクエリ
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -25,7 +24,7 @@ ms.locfileid: "56801146"
   
 [!INCLUDE[tsql](../includes/tsql-md.md)] ステートメントは次の方法で作成して [!INCLUDE[ssDE](../includes/ssde-md.md)] に送信できます。  
   
--   [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]を使用する。 このチュートリアルでは、 [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)]を使用することを前提としていますが、 [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] Express も使用できます。これは [Microsoft ダウンロード センター](https://go.microsoft.com/fwlink/?linkid=67359)から無料でダウンロードできます。  
+-   [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]を使用する。 このチュートリアルでは、 [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)]を使用することを前提としていますが、 [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] Express も使用できます。これは [Microsoft ダウンロード センター](https://www.microsoft.com/download/details.aspx?id=7593)から無料でダウンロードできます。  
   
 -   [sqlcmd ユーティリティ](../tools/sqlcmd-utility.md)を使用する。  
   
@@ -35,16 +34,16 @@ ms.locfileid: "56801146"
   
 [!INCLUDE[tsql](../includes/tsql-md.md)] で [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)]ステートメントを実行するには、 [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] を開き、 [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]のインスタンスに接続します。  
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>前提条件
 このチュートリアルを実行するには、SQL Server Management Studio と SQL Server インスタンスへのアクセスが必要です。 
 
-- [SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms) をインストールする。
+- [SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms) をインストールします。
 
 SQL Server インスタンスへのアクセス権を持っていない場合は、次のリンクからプラットフォームを選択します。 SQL 認証を選択する場合は、SQL Server のログイン資格情報を使用します。
 - **Windows**:[SQL Server 2017 Developer Edition をダウンロードする](https://www.microsoft.com/sql-server/sql-server-downloads)。
 - **macOS**:[Docker で SQL Server 2017 をダウンロードする](https://docs.microsoft.com/sql/linux/quickstart-install-connect-docker)。
 
-## <a name="create-a-database"></a>データベースの作成
+## <a name="create-a-database"></a>データベースを作成する
 多くの [!INCLUDE[tsql](../includes/tsql-md.md)] ステートメント同様、CREATE DATABASE ステートメントには、必須パラメーターがあります。必須パラメーターはデータベースの名前です。 また、CREATE DATABASE には、データベース ファイルを配置するディスクの場所など、多くのオプションのパラメーターがあります。 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] でオプション パラメーターを指定せずに CREATE DATABASE を実行すると、これらの多くのパラメーターでは既定の値が使用されます。 このチュートリアルでは、オプションの構文パラメーターをほとんど使用しません。   
 
 1.  クエリ エディターのウィンドウで、次のコードを入力します。ただし実行しないでください。  
@@ -68,12 +67,12 @@ SQL Server インスタンスへのアクセス権を持っていない場合は
 
 テーブルを作成するには、テーブルの名前と、テーブル内の各列の名前とデータ型を入力する必要があります。 また、各列でヌル値を許可するかどうかを指定することも推奨されます。 テーブルを作成するには、テーブルを追加するスキーマに対して `CREATE TABLE` アクセス許可と `ALTER SCHEMA` アクセス許可を持っている必要があります。 [`db_ddladmin`](../relational-databases/security/authentication-access/database-level-roles.md) 固定データベース ロールには、これらのアクセス許可があります。  
   
-ほとんどのテーブルに、テーブルの 1 つ以上の列で構成された主キーがあります。 主キーは常に一意です。 [!INCLUDE[ssDE](../includes/ssde-md.md)]によって、主キーの値がテーブルで重複しないように制限されます。  
+ほとんどのテーブルに、テーブルの 1 つ以上の列で構成された主キーがあります。 主キーは常に一意です。 [!INCLUDE[ssDE](../includes/ssde-md.md)] によって、主キーの値がテーブルで重複しないように制限されます。  
   
 データ型のリストと、それぞれの説明のリンクについては、「[データ型 (Transact-SQL)](../t-sql/data-types/data-types-transact-sql.md)」を参照してください。  
   
 > [!NOTE]  
-> [!INCLUDE[ssDE](../includes/ssde-md.md)]は、大文字と小文字を区別するか区別しないかを設定してインストールできます。 大文字と小文字を区別するように設定して [!INCLUDE[ssDE](../includes/ssde-md.md)] をインストールした場合は、オブジェクト名を常に大文字か小文字に統一する必要があります。 たとえば、OrderData という名前のテーブルと、ORDERDATA という名前のテーブルは別のテーブルです。 大文字と小文字を区別しないように設定して [!INCLUDE[ssDE](../includes/ssde-md.md)] をインストールした場合、この 2 つのテーブル名は同じテーブルと見なされるため、その名前は一度しか使用できません。  
+> [!INCLUDE[ssDE](../includes/ssde-md.md)] は、大文字と小文字を区別するか区別しないかを設定してインストールできます。 大文字と小文字を区別するように設定して [!INCLUDE[ssDE](../includes/ssde-md.md)] をインストールした場合は、オブジェクト名を常に大文字か小文字に統一する必要があります。 たとえば、OrderData という名前のテーブルと、ORDERDATA という名前のテーブルは別のテーブルです。 大文字と小文字を区別しないように設定して [!INCLUDE[ssDE](../includes/ssde-md.md)] をインストールした場合、この 2 つのテーブル名は同じテーブルと見なされるため、その名前は一度しか使用できません。  
   
   
 ### <a name="switch-the-query-editor-connection-to-the-testdata-database"></a>クエリ エディター接続から TestData データベースへの切り替え  
@@ -85,14 +84,14 @@ SQL Server インスタンスへのアクセス権を持っていない場合は
   ```  
   
 ### <a name="create-the-table"></a>テーブルの作成
-クエリ エディターのウィンドウで、次のコードを入力して実行し、 `Products`という名前の単純なテーブルを作成します。 テーブルの列は `ProductID`、 `ProductName`、 `Price`、 `ProductDescription`という名前です。 `ProductID` 列がテーブルの主キーです。 `int`、 `varchar(25)`、 `money`、 `text` は、すべてデータ型です。 行を挿入または変更するときにデータを入力しなくてもよい列は、 `Price` と `ProductionDescription` のみです。 このステートメントには、スキーマというオプションの要素 (`dbo.`) が含まれています。 スキーマは、テーブルを所有するデータベース オブジェクトです。 管理者の場合は、 `dbo` が既定のスキーマです。 `dbo` はデータベース所有者を表します。  
+クエリ エディターのウィンドウで、次のコードを入力して実行し、 `Products`という名前の単純なテーブルを作成します。 テーブルの列は `ProductID`、 `ProductName`、 `Price`、 `ProductDescription`という名前です。 `ProductID` 列がテーブルの主キーです。 `int`、 `varchar(25)`、 `money`、 `varchar(max)` は、すべてデータ型です。 行を挿入または変更するときにデータを入力しなくてもよい列は、 `Price` と `ProductionDescription` のみです。 このステートメントには、スキーマというオプションの要素 (`dbo.`) が含まれています。 スキーマは、テーブルを所有するデータベース オブジェクトです。 管理者の場合は、 `dbo` が既定のスキーマです。 `dbo` はデータベース所有者を表します。  
   
   ```sql  
   CREATE TABLE dbo.Products  
      (ProductID int PRIMARY KEY NOT NULL,  
      ProductName varchar(25) NOT NULL,  
      Price money NULL,  
-     ProductDescription text NULL)  
+     ProductDescription varchar(max) NULL)  
   GO  
  ```  
 
@@ -106,7 +105,7 @@ SQL Server インスタンスへのアクセス権を持っていない場合は
 |75|Tire Bar||Tool for changing tires|  
 |3000|3mm Bracket|.52||  
   
-基本構文は次のとおりです。INSERT、テーブル名、列一覧、VALUES、および挿入する値の一覧。 行の先頭にある 2 つのハイフンは、その行がコメントであることを示します。この行のテキストはコンパイラによって無視されます。 この場合、コメントは構文に許可されているバリエーションを記述します。  
+基本構文は次のとおりです。INSERT、テーブル名、列一覧、VALUES、挿入する値の一覧。 行の先頭にある 2 つのハイフンは、その行がコメントであることを示します。この行のテキストはコンパイラによって無視されます。 この場合、コメントは構文に許可されているバリエーションを記述します。  
   
 ### <a name="insert-data-into-a-table"></a>データをテーブルに挿入  
   
@@ -213,8 +212,8 @@ SELECT ステートメント内のデータの操作に使用できる関数の�
   
 |||  
 |-|-|  
-|[文字列関数 (Transact-SQL)](../t-sql/functions/string-functions-transact-sql.md)|[日付と時刻のデータ型および関数 (Transact-SQL)](../t-sql/functions/date-and-time-data-types-and-functions-transact-sql.md)|  
-|[数学関数 (Transact-SQL)](../t-sql/functions/mathematical-functions-transact-sql.md)|[テキスト関数とイメージ関数 (Transact-SQL)](https://msdn.microsoft.com/library/b9c70488-1bf5-4068-a003-e548ccbc5199)|  
+|[文字列関数 &#40;Transact-SQL&#41;](../t-sql/functions/string-functions-transact-sql.md)|[日付と時刻のデータ型および関数 &#40;Transact-SQL&#41;](../t-sql/functions/date-and-time-data-types-and-functions-transact-sql.md)|  
+|[数学関数 &#40;Transact-SQL&#41;](../t-sql/functions/mathematical-functions-transact-sql.md)|[テキスト関数とイメージ関数 (Transact-SQL)](https://msdn.microsoft.com/library/b9c70488-1bf5-4068-a003-e548ccbc5199)|  
 
 ## <a name="create-views-and-stored-procedures"></a>ビューとストアド プロシージャの作成
 ビューは、格納された SELECT ステートメントで、ストアド プロシージャは、バッチとして実行される 1 つ以上の [!INCLUDE[tsql](../includes/tsql-md.md)] ステートメントです。  
@@ -269,7 +268,7 @@ SELECT ステートメント内のデータの操作に使用できる関数の�
   GO  
   ```  
 
-## <a name="next-steps"></a>次の手順
+## <a name="next-steps"></a>次のステップ
 次の記事では、データベース オブジェクトに対してアクセス許可を構成する方法について説明します。 レッスン 1 で作成したオブジェクトは、レッスン 2 でも使用されます。 
 
 詳細については、次の記事に進んでください

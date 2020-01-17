@@ -1,5 +1,5 @@
 ---
-title: IMPORT (DMX) |Microsoft Docs
+title: インポート (DMX) |Microsoft Docs
 ms.date: 06/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -8,18 +8,17 @@ ms.topic: conceptual
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-manager: kfile
-ms.openlocfilehash: 4987701deb466148253c8418c88683d2dbfbc16b
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 2141a4f8ccc6e34ec3010ad3ce8e8e3789d09132
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38061026"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68892754"
 ---
 # <a name="import-dmx"></a>IMPORT (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
-  Analysis Services Backup File (.abf) ファイルからサーバー上にマイニング モデルまたはマイニング構造を読み込みます。  
+  Analysis Services バックアップファイル (abf) ファイルからサーバーにマイニングモデルまたはマイニング構造を読み込みます。  
   
 ## <a name="syntax"></a>構文  
   
@@ -33,22 +32,22 @@ IMPORT FROM <filename>
  インポートするファイルの名前と場所を表す文字列。  
   
 ## <a name="remarks"></a>コメント  
- オブジェクトが指定されない場合、.dmb ファイルのすべてのコンテンツが読み込まれます。 .dmb ファイルに、サーバー上に存在しないデータベースが含まれている場合、そのデータベースが作成されます。  
+ オブジェクトが指定されていない場合は、.dmb ファイルの内容全体が読み込まれます。 .dmb ファイルに、サーバー上に存在しないデータベースが含まれている場合、そのデータベースが作成されます。  
   
  オブジェクトをエクスポートまたはインポートするには、データベースまたはサーバーの管理者である必要があります。  
   
 ## <a name="import-from-file-example"></a>ファイルからインポートする例  
- 次の例では、アソシエーションのモデルおよび構造を含んでいるファイルのコンテンツ全体を現在のサーバーにインポートします。  
+ 次の例では、アソシエーションモデルと構造を含むファイルの内容全体を現在のサーバーにインポートします。  
   
 ```  
 IMPORT FROM 'C:\TEMP\Association_NEW.dmb'  
 ```  
   
-## <a name="see-also"></a>参照  
- [データ マイニング拡張機能&#40;DMX&#41;データ定義ステートメント](../dmx/dmx-statements-data-definition.md)   
- [データ マイニング拡張機能&#40;DMX&#41;データ操作ステートメント](../dmx/dmx-statements-data-manipulation.md)   
- [データ マイニング拡張機能&#40;DMX&#41;ステートメント リファレンス](../dmx/data-mining-extensions-dmx-statements.md)   
- [エクスポート&AMP;#40;DMX&AMP;#41;](../dmx/export-dmx.md)   
- [データ マイニング オブジェクトのエクスポートおよびインポート](../analysis-services/data-mining/export-and-import-data-mining-objects.md)  
+## <a name="see-also"></a>関連項目  
+ [データマイニング拡張&#40;機能&#41; DMX データ定義ステートメント](../dmx/dmx-statements-data-definition.md)   
+ [データマイニング拡張&#40;機能&#41; DMX データ操作ステートメント](../dmx/dmx-statements-data-manipulation.md)   
+ [データマイニング拡張&#40;機能&#41; DMX ステートメントリファレンス](../dmx/data-mining-extensions-dmx-statements.md)   
+ [DMX &#40;のエクスポート&#41;](../dmx/export-dmx.md)   
+ [データ マイニング オブジェクトのエクスポートおよびインポート](https://docs.microsoft.com/analysis-services/data-mining/export-and-import-data-mining-objects)  
   
   

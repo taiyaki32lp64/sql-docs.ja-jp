@@ -12,21 +12,20 @@ helpviewer_keywords:
 ms.assetid: 69e2a038-5def-423f-91aa-8756e069dd2a
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: e134b2870c4506e725f2900b83d1118e42b55d15
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 22e5f34a6accac3a2bb0d1ecefe7c1d5431cb562
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47829000"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67949006"
 ---
 # <a name="sqltables-visual-foxpro-odbc-driver"></a>SQLTables (Visual FoxPro ODBC ドライバー)
 > [!NOTE]  
 >  このトピックでには、Visual FoxPro ODBC ドライバー固有の情報が含まれています。 この関数の詳細については、該当するトピックを参照してください。 [ODBC API リファレンス](../../odbc/reference/syntax/odbc-api-reference.md)します。  
   
- サポート: 完全な  
+ サポート:[完全]  
   
- レベル 1 の ODBC API 準拠:  
+ ODBC API 準拠:レベル 1  
   
  内のパラメーターで指定されたテーブル名の一覧を返します、 **SQLTables**ステートメント。 パラメーターが指定されていない場合は、現在のデータ ソースに格納されているテーブル名を返します。 ドライバーは、その結果、情報を設定を返します。  
   

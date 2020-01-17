@@ -2,7 +2,7 @@
 title: InitializeReportServer メソッド (WMI MSReportServer_ConfigurationSetting) | Microsoft Docs
 ms.date: 03/01/2017
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: wmi-provider-library-reference
 ms.topic: conceptual
 apiname:
@@ -13,14 +13,14 @@ apitype: MOFDef
 helpviewer_keywords:
 - InitializeReportServer method
 ms.assetid: 0304acc2-1fd7-437b-94d9-1c1073dd3ca4
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 4084310c0c01b7a06a752783db74615a92aa83ff
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: e5612bc9326a359a287501aedc5227436cc576eb
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52405548"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65570865"
 ---
 # <a name="configurationsetting-method---initializereportserver"></a>ConfigurationSetting メソッド - InitializeReportServer
   指定されたレポート サービス インスタンスを初期化します。  

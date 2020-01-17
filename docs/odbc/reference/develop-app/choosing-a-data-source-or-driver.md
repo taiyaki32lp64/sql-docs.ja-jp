@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 10aaf570-01ab-4478-8339-bdde2a5e3dd1
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: c238b89f6fefbb158c50531d28d2c234c64f64bf
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 9aac31af80ff5774d464f76f130d2d113002e60a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52507629"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68001395"
 ---
 # <a name="choosing-a-data-source-or-driver"></a>データ ソースまたはドライバーの選択
 データ ソースまたはドライバー、アプリケーションで使用される場合があります、アプリケーションにハードコーディングします。 名が含まれますが 1 つのデータ ソースからデータには転送する、MIS 部門によって書き込まれたカスタム アプリケーションなど、データのソースのアプリケーションだけで動作しない他のデータ ソース。 別の例は、1 つのエントリの順序の使用などの垂直方向のアプリケーションです。 このようなアプリケーションは常には、アプリケーションによって認識されている定義済みのスキーマが同じデータ ソースを使用します。  

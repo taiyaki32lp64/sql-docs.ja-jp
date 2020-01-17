@@ -10,13 +10,12 @@ ms.technology: connectivity
 ms.topic: reference
 author: pmasl
 ms.author: pelopes
-manager: craigg
-ms.openlocfilehash: e0c76b7a62150fe4ee53fd83b63d7b9ebe1fd737
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 0ae8a83de24341b7f9672296a9bfe713ae882dfe
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47641723"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67988762"
 ---
 # <a name="utf-16-support-in-ole-db-driver-for-sql-server"></a>OLE DB Driver for SQL Server の UTF-16 のサポート
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

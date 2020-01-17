@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - CREATE MEMBER statement
@@ -14,12 +13,12 @@ ms.assetid: 2875ed89-2c26-4645-8ed9-8848479d110f
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 53d6cc069e316bc399235aafbf59c7586bbdc6c3
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 701d7a49f7ddda60983a03723506442eac17866b
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48136502"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66074549"
 ---
 # <a name="creating-session-scoped-calculated-members-mdx"></a>セッション スコープの計算されるメンバーの作成 (MDX)
   多次元式 (MDX) セッション全体で使用できる計算されるメンバーを作成するには、[CREATE MEMBER](/sql/mdx/mdx-data-definition-create-member) ステートメントを使用します。 CREATE MEMBER ステートメントを使用して作成された計算されるメンバーは、MDX セッションが閉じるまで削除されません。  
@@ -53,6 +52,6 @@ sum(([Stores].[ByLocation].Lag(3) :
 ```  
   
 ## <a name="see-also"></a>参照  
- [計算されるメンバーのクエリ スコープを作成する&#40;MDX&#41;](mdx-calculated-members-query-scoped-calculated-members.md)  
+ [クエリ スコープの計算されるメンバーの作成 (MDX)](mdx-calculated-members-query-scoped-calculated-members.md)  
   
   

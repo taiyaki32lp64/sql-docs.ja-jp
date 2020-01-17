@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: eb73bd77-2e7e-4498-a266-4d7c990a0d56
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: a8df4339ae30b9058e5a5864c37807c6b02e4fdd
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 3424c58d25be69d2ddc42a3088aa457ebddf1d4b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52532121"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67947603"
 ---
 # <a name="interval-data-type-precision"></a>Interval データ型の精度
 間隔のデータ型の有効桁数には、有効桁数、間隔の有効桁数、および秒の有効桁数を先頭の間隔が含まれています。  

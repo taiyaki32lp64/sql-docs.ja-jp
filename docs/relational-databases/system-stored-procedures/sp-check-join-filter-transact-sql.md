@@ -1,5 +1,5 @@
 ---
-title: sp_check_join_filter (TRANSACT-SQL) |Microsoft Docs
+title: sp_check_join_filter (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -21,16 +21,15 @@ helpviewer_keywords:
 ms.assetid: e9699d59-c8c9-45f6-a561-f7f95084a540
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: c86699a87a04762162ce527d9f66c9fda55a1bb1
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: 28589be83c62f705457e990b328be98e88905568
+ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54129332"
+ms.lasthandoff: 08/03/2019
+ms.locfileid: "68771271"
 ---
-# <a name="spcheckjoinfilter-transact-sql"></a>sp_check_join_filter (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+# <a name="spcheckjoinfilter-transact-sql"></a>sp_check_join_filter (Transact-sql)
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
   2 つのテーブル間の結合フィルターを検証し、結合フィルター句が有効かどうかを判別する場合に使用します。 このストアド プロシージャは、指定したテーブルの事前計算されたパーティションで、指定した結合フィルターを使用できるかどうかなど、指定した結合フィルターに関する情報を返します。 このストアド プロシージャは、パブリケーション上のパブリッシャー側で実行されます。 詳細については、「[事前計算済みパーティションによるパラメーター化されたフィルターのパフォーマンス最適化](../../relational-databases/replication/merge/parameterized-filters-optimize-for-precomputed-partitions.md)」を参照してください。  
   
@@ -46,37 +45,34 @@ sp_check_join_filter [ @filtered_table = ] 'filtered_table'
 ```  
   
 ## <a name="arguments"></a>引数  
- [ **@filtered_table**=] **'**_filtered_table_**'**  
- フィルター済みテーブルの名前を指定します。 *filtered_table*は**nvarchar (400)**、既定値はありません。  
+`[ @filtered_table = ] 'filtered_table'`フィルター選択されたテーブルの名前を指定します。 *filtered_table*は**nvarchar (400)** ,、既定値はありません。  
   
- [ **@join_table**=] **'**_join_table_**'**  
- 結合するテーブルの名前を指定*filtered_table*します。 *join_table*は**nvarchar (400)**、既定値はありません。  
+`[ @join_table = ] 'join_table'`*Filtered_table*に結合されているテーブルの名前を指定します。 *join_table*は**nvarchar (400)** ,、既定値はありません。  
   
- [ **@join_filterclause** =] **'**_join_filterclause_**'**  
- テストする結合フィルター句を指定します。 *join_filterclause*は**nvarchar (1000)**、既定値はありません。  
+`[ @join_filterclause = ] 'join_filterclause'`テストする結合フィルター句を選択します。 *join_filterclause*は**nvarchar (1000)** ,、既定値はありません。  
   
 ## <a name="result-sets"></a>結果セット  
   
 |列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
-|**can_use_partition_groups**|**bit**|パブリケーションで事前計算済みパーティション; は、します。場所**1**示しパーティションを使用できることを意味し、 **0**が使用できないことを意味します。|  
-|**has_dynamic_filters**|**bit**|指定したフィルター句に少なくとも 1 つのパラメーター化されたフィルター関数が含まれるかどうか場所**1**パラメーター化されたフィルター関数を使用することを意味し、 **0**ような関数が使用されないことを意味します。|  
-|**dynamic_filters_function_list**|**nvarchar(500)**|アーティクルのパラメーター化されたフィルターを定義する、フィルター句内の関数の一覧。各関数はセミコロンで区切られます。|  
-|**uses_host_name**|**bit**|場合、 [HOST_NAME()](../../t-sql/functions/host-name-transact-sql.md)フィルター句で使用される関数を**1**この関数が存在することを意味します。|  
-|**uses_suser_sname**|**bit**|場合、 [SUSER_SNAME()](../../t-sql/functions/suser-sname-transact-sql.md)フィルター句で使用される関数を**1**この関数が存在することを意味します。|  
+|**can_use_partition_groups**|**bit**|パブリケーションが事前計算済みパーティションに対して限定される場合はです。**1**はたパーティションを使用できることを示し、 **0**は使用できないことを示します。|  
+|**has_dynamic_filters**|**bit**|指定したフィルター句にパラメーター化されたフィルター関数が少なくとも1つ含まれているかどうかを示します。**1**は、パラメーター化されたフィルター関数が使用されることを示します。 **0**は、このような関数が使用されないことを示します。|  
+|**dynamic_filters_function_list**|**nvarchar(500)**|アーティクルのパラメーター化されたフィルターを定義するフィルター句内の関数の一覧。各関数はセミコロンで区切られます。|  
+|**uses_host_name**|**bit**|[HOST_NAME ()](../../t-sql/functions/host-name-transact-sql.md)関数がフィルター句で使用されている場合は、 **1**はこの関数が存在することを意味します。|  
+|**uses_suser_sname**|**bit**|[SUSER_SNAME ()](../../t-sql/functions/suser-sname-transact-sql.md)関数がフィルター句で使用されている場合は、 **1**はこの関数が存在することを意味します。|  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  **0** (成功) または**1** (失敗)  
   
 ## <a name="remarks"></a>コメント  
- **sp_check_join_filter**はマージ レプリケーションで使用します。  
+ **sp_check_join_filter**は、マージレプリケーションで使用します。  
   
- **sp_check_join_filter**公開されない場合でも、関連するテーブルに対して実行できます。 このストアド プロシージャは、2 つのアーティクル間の結合フィルターを定義する前に、結合フィルター句を検証するときに使用できます。  
+ **sp_check_join_filter**は、パブリッシュされていない場合でも、関連するテーブルに対して実行できます。 このストアド プロシージャは、2 つのアーティクル間の結合フィルターを定義する前に、結合フィルター句を検証するときに使用できます。  
   
 ## <a name="permissions"></a>アクセス許可  
- メンバーのみ、 **sysadmin**固定サーバー ロールまたは**db_owner**固定データベース ロールが実行できる**sp_check_join_filter**します。  
+ **Sp_check_join_filter**を実行できるのは、固定サーバーロール**sysadmin**または固定データベースロール**db_owner**のメンバーだけです。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [レプリケーション ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)  
   
   

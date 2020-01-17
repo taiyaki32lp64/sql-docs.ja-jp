@@ -1,7 +1,9 @@
 ---
-title: CREATE DATABASE AUDIT SPECIFICATION (Transact-SQL) | Microsoft Docs
-ms.custom: ''
-ms.date: 04/04/2017
+title: CREATE DATABASE AUDIT SPECIFICATION
+description: SQL Server Audit 機能を使用して、データベース監査仕様オブジェクトを作成します。
+titleSuffix: SQL Server (Transact-SQL)
+ms.custom: seo-lt-2019
+ms.date: 01/03/2020
 ms.prod: sql
 ms.prod_service: sql-database
 ms.reviewer: ''
@@ -22,13 +24,12 @@ helpviewer_keywords:
 ms.assetid: 0544da48-0ca3-4a01-ba4c-940e23dc315b
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: f691bd99036ea6b27f9f20cd53e8d6bc72312224
-ms.sourcegitcommit: c6e71ed14198da67afd7ba722823b1af9b4f4e6f
+ms.openlocfilehash: 98dce9206326c51f5ae721903b93ea287afa992a
+ms.sourcegitcommit: 34d28d49e8d0910cf06efda686e2d73059569bf8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/16/2019
-ms.locfileid: "54326303"
+ms.lasthandoff: 01/04/2020
+ms.locfileid: "75656649"
 ---
 # <a name="create-database-audit-specification-transact-sql"></a>CREATE DATABASE AUDIT SPECIFICATION (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -66,13 +67,13 @@ CREATE DATABASE AUDIT SPECIFICATION audit_specification_name
  監査で記録する、セキュリティ保護可能なリソースに対するプリンシパルによるアクションの仕様を指定します。  
   
  *action*  
- データベース レベルの 1 つ以上の監査可能なアクションの名前を指定します。 監査アクションの一覧については、「[SQL Server 監査のアクション グループとアクション](../../relational-databases/security/auditing/sql-server-audit-action-groups-and-actions.md)」をご覧ください。  
+ データベース レベルの 1 つまたは複数の監査可能なアクションの名前を指定します。 監査アクションの一覧については、「[SQL Server 監査のアクション グループとアクション](../../relational-databases/security/auditing/sql-server-audit-action-groups-and-actions.md)」をご覧ください。  
   
  *audit_action_group_name*  
  データベース レベルの 1 つ以上の監査可能なアクション グループの名前を指定します。 監査アクション グループの一覧については、「[SQL Server 監査のアクション グループとアクション](../../relational-databases/security/auditing/sql-server-audit-action-groups-and-actions.md)」をご覧ください。  
   
  *class*  
- セキュリティ保護可能なリソースのクラス名 (該当する場合) を指定します。  
+ セキュリティ保護可能なリソースのクラス名 (該当する場合) です。  
   
  *securable*  
  監査アクションまたは監査アクション グループを適用するデータベース内のテーブル、ビュー、またはその他のセキュリティ保護可能なオブジェクトを指定します。 詳細については、「 [セキュリティ保護可能](../../relational-databases/security/securables.md)」を参照してください。  
@@ -83,7 +84,7 @@ CREATE DATABASE AUDIT SPECIFICATION audit_specification_name
  WITH ( STATE = { ON | OFF } )  
  監査による、この監査仕様についてのレコードの収集を有効または無効にします。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  データベース監査仕様は、セキュリティ保護できないオブジェクトであり、特定のデータベースに保存されます。 作成されたデータベース監査仕様は無効な状態です。  
   
 ## <a name="permissions"></a>アクセス許可  
@@ -91,10 +92,10 @@ CREATE DATABASE AUDIT SPECIFICATION audit_specification_name
   
  データベース監査仕様の作成後は、`CONTROL SERVER` 権限、`ALTER ANY DATABASE AUDIT` 権限を持つプリンシパル、または `sysadmin` アカウントがその仕様を表示できます。  
   
-## <a name="examples"></a>使用例
+## <a name="examples"></a>例
 
 ### <a name="a-audit-select-and-insert-on-a-table-for-any-database-principal"></a>A. 任意のデータベース プリンシパルについてテーブルで SELECT と INSERT を監査する 
- 次の例では、`Payrole_Security_Audit` というサーバー監査を作成した後、`AdventureWorks2012` データベースの `HumanResources.EmployeePayHistory` テーブルでユーザー (`public`) による `SELECT` ステートメントと `INSERT` ステートメントを監査する、`Payrole_Security_Audit` というデータベース監査仕様を作成します。  
+ 次の例では、`Payrole_Security_Audit` というサーバー監査を作成した後、`AdventureWorks2012` データベースの `HumanResources.EmployeePayHistory` テーブルで `dbo` ユーザーによる `SELECT` ステートメントと `INSERT` ステートメントを監査する、`Payrole_Security_Audit` というデータベース監査仕様を作成します。  
   
 ```  
 USE master ;  
@@ -120,7 +121,7 @@ WITH (STATE = ON) ;
 GO  
 ``` 
 
-### <a name="b-audit-any-dml-insert-update-or-delete-on-all-objects-in-the-sales-schema-for-a-specific-database-role"></a>B. 特定のデータベース ロールについて _sales_ スキーマの_すべて_のオブジェクトで任意の DML (INSERT、UPDATE、または DELETE) を監査する  
+### <a name="b-audit-any-dml-insert-update-or-delete-on-_all_-objects-in-the-_sales_-schema-for-a-specific-database-role"></a>B. 特定のデータベース ロールについて _sales_ スキーマの_すべて_のオブジェクトで任意の DML (INSERT、UPDATE、または DELETE) を監査する  
  次の例では、`DataModification_Security_Audit` というサーバー監査を作成した後、`AdventureWorks2012` データベースでの `Sales` スキーマのすべてのオブジェクトについて、新しいデータベース ロール `SalesUK` のユーザーによる `INSERT`、`UPDATE` および `DELETE` ステートメントを監査する、`Audit_Data_Modification_On_All_Sales_Tables` というデータベース監査仕様を作成します。  
   
 ```  

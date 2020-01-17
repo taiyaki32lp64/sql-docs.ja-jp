@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: ba369e5b-7d1f-4544-b7f1-9b098a1e75bc
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 3e20ed69a9fdff95914dd0d5086e3c0774421d44
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 4a024707b5fa7ab70394a068ed47110898ae0518
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47599950"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68126220"
 ---
 # <a name="configure-a-multi-homed-computer-for-sql-server-access"></a>SQL Server アクセス用のマルチホーム コンピューターの構成
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -68,9 +67,9 @@ ms.locfileid: "47599950"
   
 #### <a name="to-determine-the-ip-addresses-and-ports-used-by-includessnoversionincludesssnoversion-mdmd"></a>使用される IP アドレスおよびポートを特定するには [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
   
-1.  **[スタート]** ボタンをクリックし、 **[すべてのプログラム]**、[ [!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)]]、 **[構成ツール]** の順にポイントして、 **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [構成マネージャー]** をクリックします。  
+1.  **[スタート]** ボタンをクリックし、 **[すべてのプログラム]** 、[ [!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)]]、 **[構成ツール]** の順にポイントして、 **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [構成マネージャー]** をクリックします。  
   
-2.  **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]構成マネージャー**のコンソール ペインで、**[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][ネットワークの構成]**、**[\<instance name> のプロトコル]** を順に展開し、**[TCP/IP]** をダブルクリックします。  
+2.  **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]構成マネージャー**のコンソール ペインで、 **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][ネットワークの構成]** 、 **[\<instance name> のプロトコル]** を順に展開し、 **[TCP/IP]** をダブルクリックします。  
   
 3.  **[TCP/IP のプロパティ]** ダイアログ ボックスの **[IP アドレス]** タブに、 **IP1**、 **IP2**という形式で **IPAll**まで IP アドレスが表示されます。 このうちいずれかが、ループバック アダプターの IP アドレス 127.0.0.1 です。 追加の IP アドレスがコンピューターで構成される各 IP アドレスとして表示されます。  
   
@@ -103,7 +102,7 @@ ms.locfileid: "47599950"
   
 9. **[指定したローカル ポート]** を選択します。 コンマで区切ったポート番号を入力して、 **[次へ]** をクリックします。 この例では、既定のポートを構成するので、「 **1433**」と入力します。  
   
-10. **[アクション]** ページで、オプションを確認します。 この例では、セキュリティで保護された接続を指定するためにファイアウォールを使用しません。 したがって、 **[接続を許可する]**、 **[次へ]** を順にクリックします。  
+10. **[アクション]** ページで、オプションを確認します。 この例では、セキュリティで保護された接続を指定するためにファイアウォールを使用しません。 したがって、 **[接続を許可する]** 、 **[次へ]** を順にクリックします。  
   
     > [!NOTE]  
     >  環境で、セキュリティで保護された接続が必要な場合があります。 セキュリティで保護された接続のオプションのいずれかを選択すると、証明書および **[強制的に暗号化]** オプションの構成が必要な場合があります。 セキュリティで保護された接続の詳細については、「[データベース エンジンへの暗号化接続の有効化 &#40;SQL Server 構成マネージャー&#41;](../../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md)」および「[データベース エンジンへの暗号化接続の有効化 &#40;SQL Server 構成マネージャー&#41;](../../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md)」を参照してください。  

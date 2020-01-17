@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - data sources [Analysis Services], dimensions without data source
@@ -16,12 +15,12 @@ ms.assetid: a37f7a46-7451-4582-ba19-2595196d97bc
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 3c3a3bdf67c23669f4d8f80ad03c122f1e987164
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 962df497e804011e69e2a350c24ce41f4c273b6d
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48080549"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66076436"
 ---
 # <a name="create-a-dimension-by-generating-a-non-time-table-in-the-data-source"></a>データ ソースに時間テーブル以外のテーブルを生成することによるディメンションの作成
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]では、 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] のディメンション ウィザードを使用して、既存のデータ ソースを使用せずにディメンションを作成できます。 この操作を行うには、ウィザードの **[作成方法の選択]** ページで **[データ ソースに時間テーブル以外のテーブルを生成]** オプションを選択します。 基になるデータ ソースに新しいディメンション テーブルを作成するには、基になるデータ ソースにオブジェクトを作成する権限が必要です。 定義済みのデータ ソース ビューを使用せずにディメンションを定義する場合、ディメンションを最初から定義することも、ディメンション テンプレートを使用することもできます。  
@@ -46,7 +45,7 @@ ms.locfileid: "48080549"
   
 -   Organization  
   
--   Product  
+-   製品  
   
 -   Promotion  
   
@@ -105,7 +104,7 @@ ms.locfileid: "48080549"
  **[ウィザードの完了]** ページで、新しいディメンションの名前を入力し、ディメンション構造を表示します。 **[完了]** をクリックした後にスキーマ生成ウィザードを開始するには、 **[今すぐスキーマを生成する]** チェック ボックスをオンにします。 追加オブジェクトを作成する計画がある場合は、このチェック ボックスはオンにしないでください。 このチェック ボックスを選択しない場合は、ディメンション デザイナーを使用して後でスキーマを作成できます。  
   
 ## <a name="see-also"></a>参照  
- [時間テーブルの生成による時間ディメンションを作成します。](create-a-time-dimension-by-generating-a-time-table.md)   
- [時間テーブルの生成による時間ディメンションの作成](create-a-time-dimension-by-generating-a-time-table.md)  
+ [Create a Time Dimension by Generating a Time Table](create-a-time-dimension-by-generating-a-time-table.md)   
+ [Create a Time Dimension by Generating a Time Table](create-a-time-dimension-by-generating-a-time-table.md)  
   
   

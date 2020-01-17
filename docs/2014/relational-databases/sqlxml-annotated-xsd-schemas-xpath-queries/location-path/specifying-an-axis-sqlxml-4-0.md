@@ -17,15 +17,15 @@ helpviewer_keywords:
 - location path for XPath query
 - axes [SQLXML]
 ms.assetid: 65631795-3389-40cf-90ea-85e9438956c5
-author: douglaslMS
-ms.author: douglasl
+author: MightyPen
+ms.author: genemi
 manager: craigg
-ms.openlocfilehash: afb5b6e03ae96aa6022eff74c66bdff6ef1beed6
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 8da239fd8a6bbf559f89ba5fd1b0fa0ab10ec190
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52794114"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66012650"
 ---
 # <a name="specifying-an-axis-sqlxml-40"></a>軸の指定 (SQLXML 4.0)
     

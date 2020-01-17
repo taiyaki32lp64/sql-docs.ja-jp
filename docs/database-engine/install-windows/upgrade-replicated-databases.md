@@ -1,5 +1,5 @@
 ---
-title: レプリケートされたデータベースのアップグレード | Microsoft Docs
+title: レプリケートされたデータベースのアップグレードまたは修正プログラム | Microsoft Docs
 ms.custom: ''
 ms.date: 07/24/2016
 ms.prod: sql
@@ -16,15 +16,14 @@ ms.assetid: 9926a4f7-bcd8-4b9b-9dcf-5426a5857116
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-manager: craigg
-ms.openlocfilehash: 279a5c55ddc305d62e3e09f1f8073057b4ff226b
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: 46156a9e7b1180d5ed70f0dbcb6b25d2f608f0fc
+ms.sourcegitcommit: 84e6922a57845a629391067ca4803e8d03e0ab90
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54124612"
+ms.lasthandoff: 10/07/2019
+ms.locfileid: "72008455"
 ---
-# <a name="upgrade-replicated-databases"></a>レプリケートされたデータベースのアップグレード
+# <a name="upgrade-or-patch-replicated-databases"></a>レプリケートされたデータベースのアップグレードまたは修正プログラム
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
   
@@ -42,9 +41,7 @@ SQL Server へのアップグレード パスは、配置のパターンによ�
 
 レプリケーション トポロジのサイド バイ サイド アップグレードに対して採用されてきた一般的なアプローチは、トポロジ全体を移動するのではなく、パブリッシャーとサブスクライバーのペアを個別に新しいサイド バイ サイド環境に移動するというものです。 この段階的アプローチは、ダウンタイムを管理し、レプリケーションに依存するビジネスの特定の範囲に影響を最小限に抑えるのに役立ちます。  
 
-
-> [!NOTE]  
-> **SQL 2016 へのレプリケーション トポロジについて詳しくは、ブログ投稿「[Upgrading a Replication Topology to SQL Server 2016](https://blogs.msdn.microsoft.com/sql_server_team/upgrading-a-replication-topology-to-sql-server-2016/)」(SQL Server 2016 へのレプリケーション トポロジのアップグレード) をご覧ください**。 
+この記事の多くは、SQL Server のバージョンのアップグレードを対象としています。 ただし、Service Pack または累積更新プログラムで SQL Server を修正するときには、インプレース アップグレード プロセスも同様に使用する必要があります。 
 
  >[!WARNING]
  > レプリケーション トポロジのアップグレードは、複数のステップから成るプロセスです。 テスト環境でレプリケーション トポロジのレプリカをアップグレードしてみてから、実際の運用環境でアップグレードを実行することをお勧めします。 これは、実際のアップグレード プロセス中に高価で長いダウンタイムを発生させずに、アップグレードを円滑に処理するために必要な運用ドキュメントの問題を解決するのに役立ちます。 レプリケーション トポロジをアップグレードするときに、運用環境で Always On 可用性グループや SQL Server フェールオーバー クラスター インスタンスを使用することで、ダウンタイムが大幅に減った事例があります。 また、アップグレードを試みる前に、MSDB、マスター、ディストリビューション データベースと、レプリケーションに参加しているユーザー データベースを含む、すべてのデータベースのバックアップを行うことをお勧めします。
@@ -91,7 +88,7 @@ SQL Server へのアップグレード パスは、配置のパターンによ�
 ## <a name="steps-to-upgrade-a-replication-topology"></a>レプリケーション トポロジをアップグレードする手順
 以下の手順では、レプリケーション トポロジ内のサーバーをアップグレードする順序の概要を示します。 トランザクション レプリケーションまたはマージ レプリケーションのどちらを実行している場合でも、同じ手順が適用されます。 ただし、以下の手順は、ピア ツー ピア レプリケーション、キュー更新サブスクリプション、または即時更新サブスクリプションには適用されません。 
 
-### <a name="in-place-upgrade"></a>インプレース アップグレード 
+### <a name="in-place-upgrade"></a>一括アップグレード 
 1. ディストリビューターを更新します。 
 2. パブリッシャーとサブスクライバーを更新します。 これらは、任意の順序でアップグレードできます。 
 
@@ -107,7 +104,7 @@ SQL Server へのアップグレード パスは、配置のパターンによ�
 
 
 ## <a name="steps-for-side-by-side-migration-of-the-distributor-to-windows-server-2012-r2"></a>Windows Server 2012 R2 へのディストリビューターのサイド バイ サイド移行の手順
-SQL Server インスタンスを SQL 2016 (またはそれ以降) にアップグレードしようとしていて、現在の OS が Windows 2008 (または 2008 R2) である場合は、Windows Server 2012 R2 以降への OS のサイド バイ サイド アップグレードを実行する必要があります。 この中間 OS アップグレードの理由は、SQL Server 2016 は Windows Server 2008/2008 R2 にインストールできず、Windows Server 2008/20008 R2 ではフェールオーバー クラスターをインプレース アップグレードできないためです。 以下の手順は、スタンドアロン SQL Server インスタンス上、または Always On フェールオーバー クラスター インスタンス (FCI) 内のいずれかで実行できます。
+SQL Server インスタンスを SQL Server 2016 (またはそれ以降) にアップグレードしようとしていて、現在の OS が Windows 2008 (または 2008 R2) である場合は、Windows Server R2 以降への OS のサイド バイ サイド アップグレードを実行する必要があります。 この中間 OS アップグレードの理由は、SQL Server 2016 は Windows Server 2008/2008 R2 にインストールできず、Windows Server 2008/20008 R2 では Windows Server 2016 に直接インプレース アップグレードできないためです。 Windows Server 2008/2008 R2 から Windows server 2012 へのインプレース アップグレードを実行してから、Windows Server 2016 にアップグレードすることは可能ですが、ダウンタイムが発生し、複雑さが増してロールバック パスが容易にならないため、通常は推奨されません。 フェールオーバー クラスターに参加している SQL Server インスタンスで使用できるアップグレード パスは、サイド バイ サイド アップグレードだけです。  以下の手順は、スタンドアロン SQL Server インスタンス上、または Always On フェールオーバー クラスター インスタンス (FCI) 内のいずれかで実行できます。
 
 1. Windows Server 2012 R2/2016 上のディストリビューターとして、新しい SQL Server インスタンス (スタンドアロンまたは Always On フェールオーバー クラスター)、エディション、およびバージョンを、異なる Windows クラスターと SQL Server FCI 名またはスタンドアロン ホスト名で設定します。 レプリケーション エージェントの実行可能ファイル、レプリケーション フォルダー、およびデータベース ファイルのパスが、新しい環境でも同じパスで見つかるように、ディレクトリ構造を古いディストリビューターと同じにする必要があります。 これにより、移行/アップグレード後に必要な手順が減ります。
 1. レプリケーションが同期されていることを確認した後、すべてのレプリケーション エージェントをシャットダウンします。 

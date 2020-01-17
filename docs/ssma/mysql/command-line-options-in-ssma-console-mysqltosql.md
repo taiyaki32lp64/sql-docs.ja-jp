@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: a2310b10-68ad-4285-a08b-c8694cf84416
 author: Shamikg
 ms.author: Shamikg
-manager: craigg
-ms.openlocfilehash: 42f731f93f0344d5b96a8e3cba41f28dd7fadada
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 017136669bd6478bb4e08ed0ff5c2adc01786d20
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52504664"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68103249"
 ---
 # <a name="command-line-options-in-ssma-console-mysqltosql"></a>SSMA コンソールのコマンド ライン オプション (MySQLToSQL)
 Microsoft を実行し、SSMA アクティビティを制御する信頼性の高い一連のコマンド ライン オプションを提供します。 次のセクションでは、同じについて説明します。  
@@ -35,7 +34,7 @@ Microsoft を実行し、SSMA アクティビティを制御する信頼性の�
   
 ここでは、用語 'option' と呼ばれるもを 'switch'。  
   
-オプションは、小文字は区別されず、いずれかで始めることは '**-**'、'**/**' 文字。  
+オプションは、小文字は区別されず、いずれかで始めることは ' **-** '、' **/** ' 文字。  
   
 オプションを指定する場合、対応するオプションのパラメーターの指定が必須になります。  
   

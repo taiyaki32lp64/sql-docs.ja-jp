@@ -14,11 +14,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 865e8d720e9977f582ac5ae8a0e75d995fc82629
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53364394"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62789557"
 ---
 # <a name="prerequisites-for-migrating-from-log-shipping-to-alwayson-availability-groups-sql-server"></a>ログ配布から AlwaysOn 可用性グループへの移行の前提条件 (SQL Server)
   このトピックでは、ログ配布プライマリ データベースと 1 つまたは複数のセカンダリ データベースを、AlwaysOn プライマリ データベースとセカンダリ データベースに変換するための前提条件について説明します。  
@@ -103,13 +103,13 @@ ms.locfileid: "53364394"
   
 -   **ホワイト ペーパー:**  
   
-     [移行ガイド:AlwaysOn 可用性グループへの移行前の配置の結合データベース ミラーリングとログ配布から](https://msdn.microsoft.com/library/jj635217)  
+     [移行ガイド: AlwaysOn 可用性グループへの移行前の配置の結合データベース ミラーリングとログ配布から](https://msdn.microsoft.com/library/jj635217)  
   
      [SQL Server 2012 に関する Microsoft ホワイト ペーパー](https://msdn.microsoft.com/library/hh403491.aspx)  
   
      [SQL Server ユーザー諮問チームのホワイト ペーパー](http://sqlcat.com/)  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [ログ配布について &#40;SQL Server&#41;](../../log-shipping/about-log-shipping-sql-server.md)   
  [AlwaysOn 可用性グループの概要&#40;SQL Server&#41;](overview-of-always-on-availability-groups-sql-server.md)   
  [可用性グループの監視 &#40;SQL Server&#41;](monitoring-of-availability-groups-sql-server.md)  

@@ -15,11 +15,11 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: d23a16fab200c3c6ef55a1cac8f1838a2f51468d
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52812754"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68211727"
 ---
 # <a name="ddl-event-groups"></a>DDL イベント グループ
   次の表に、DDL トリガーまたはイベント通知の実行に使用できる DDL イベント グループ、およびそれらのグループで処理される [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントの一覧を示します。 イベント グループは入れ子になっていることに注意してください。 たとえば、FOR DDL_TABLE_EVENTS (10018) を指定した DDL トリガー、またはイベント通知の対象になるのは、CREATE TABLE ステートメント、ALTER TABLE ステートメント、および DROP TABLE [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントです。 FOR DDL_TABLE_VIEW_EVENTS (10017) を指定した DDL トリガーまたはイベント通知の対象になるのは、DDL_TABLE_EVENTS、DDL_VIEW_EVENTS、DDL_INDEX_EVENTS、および DDL_STATISTICS_EVENTS という型の下のすべての [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントです。  
@@ -315,7 +315,7 @@ FROM DirectReports
 ORDER BY sort;  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [イベント通知](../service-broker/event-notifications.md)   
  [DDL トリガー](ddl-triggers.md)   
  [DDL イベント](ddl-events.md)  

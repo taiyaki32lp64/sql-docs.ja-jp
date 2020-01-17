@@ -8,13 +8,12 @@ ms.topic: conceptual
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-manager: kfile
-ms.openlocfilehash: 5202662b1bd41671905379272b2a52ba87510ecc
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: a7c7751f317d4a56fb4aafb7085509d175f32255
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38037360"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68074682"
 ---
 # <a name="predictnodeid-dmx"></a>PredictNodeId (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -51,7 +50,7 @@ NATURAL PREDICTION JOIN
   0 AS [Number Children At Home]) AS t  
 ```  
   
- さらに、次のステートメントを使用して、何がノード内に含まれているかを判断します。  
+ ノード内に含まれているかを判断するのに、次のステートメントを使用できます。  
   
 ```  
 SELECT   
@@ -61,7 +60,7 @@ FROM
 WHERE NODE_UNIQUE_NAME= '00000000100'   
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [データ マイニング拡張機能&#40;DMX&#41;関数リファレンス](../dmx/data-mining-extensions-dmx-function-reference.md)   
  [関数&#40;DMX&#41;](../dmx/functions-dmx.md)   
  [一般的な予測関数&#40;DMX&#41;](../dmx/general-prediction-functions-dmx.md)  

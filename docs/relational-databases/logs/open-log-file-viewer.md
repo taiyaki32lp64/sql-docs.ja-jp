@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: a86b89cb-0432-4648-895a-05ecc5450e45
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 6fa028e20cfb0355fc14cc28a4b2ee08fbf9dcb2
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 9e76c7eb85306f63e9be230c76159efbab25444a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47659490"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68083984"
 ---
 # <a name="open-log-file-viewer"></a>[ログ ファイルの表示] を開く
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -42,7 +41,7 @@ ms.locfileid: "47659490"
   
  [ログ ファイルの表示] は、表示する情報に応じていくつかの方法で開くことができます。  
   
-##  <a name="BeforeYouBegin"></a> 権限  
+##  <a name="BeforeYouBegin"></a> Permissions  
  オンラインの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスのログ ファイルにアクセスするには、securityadmin 固定サーバー ロールのメンバーシップが必要です。  
   
  オフラインの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスのログ ファイルにアクセスするには、 **Root\Microsoft\SqlServer\ComputerManagement10** WMI 名前空間、およびログ ファイルの保存されているフォルダーの両方に対する読み取りアクセス権が必要です。 詳細については、「 [オフライン ログ ファイルの表示](../../relational-databases/logs/view-offline-log-files.md)」トピックの「セキュリティ」セクションを参照してください。  
@@ -90,19 +89,19 @@ ms.locfileid: "47659490"
   
 ##### <a name="to-view-logs-that-are-related-to-audits-collections"></a>監査コレクションに関連するログを表示するには  
   
--   オブジェクト エクスプローラーで、 **[セキュリティ]**、 **[監査]** の順に展開し、監査を右クリックして **[監査ログの表示]** をクリックします。  
+-   オブジェクト エクスプローラーで、 **[セキュリティ]** 、 **[監査]** の順に展開し、監査を右クリックして **[監査ログの表示]** をクリックします。  
   
      ログには、 **監査コレクション** と **Windows NT**が含まれます。  
   
 ##### <a name="to-view-logs-that-are-related-to-audits-collections"></a>監査コレクションに関連するログを表示するには  
   
--   オブジェクト エクスプローラーで、 **[セキュリティ]**、 **[監査]** の順に展開し、監査を右クリックして **[監査ログの表示]** をクリックします。  
+-   オブジェクト エクスプローラーで、 **[セキュリティ]** 、 **[監査]** の順に展開し、監査を右クリックして **[監査ログの表示]** をクリックします。  
   
      ログには、 **監査コレクション** と **Windows NT**が含まれます。  
   
 ## <a name="see-also"></a>参照  
  [ログ ファイルの表示](../../relational-databases/logs/log-file-viewer.md)   
- [SQL Server Audit &#40;Database Engine&#41;](../../relational-databases/security/auditing/sql-server-audit-database-engine.md)   
+ [SQL Server Audit &#40;データベース エンジン&#41;](../../relational-databases/security/auditing/sql-server-audit-database-engine.md)   
  [オフライン ログ ファイルの表示](../../relational-databases/logs/view-offline-log-files.md)  
   
   

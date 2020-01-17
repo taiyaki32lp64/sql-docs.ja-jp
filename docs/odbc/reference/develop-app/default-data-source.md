@@ -21,13 +21,12 @@ helpviewer_keywords:
 ms.assetid: dd473cc6-f051-4aa0-ab14-3dd1b37fe99e
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 909f9b3e7c8087add8eb66ca2f5c15253026304c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 8fb016ac7597617b119834e20ffd9e12bd648dc0
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47619570"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68076847"
 ---
 # <a name="default-data-source"></a>既定のデータ ソース
 ドライバーは、特定のケースで、アプリケーションで明示的に指定されない 1 つで、既定のデータ ソースと呼ばれる、データ ソースを選択できます。  

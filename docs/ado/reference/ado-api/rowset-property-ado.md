@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: 7d359294-4ff2-47e0-8111-0c221b24d80e
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 4bb98bb7c23d20baf696c553a088cd03f2aa76e1
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 922f6690679d86bdb6cdafb721e3a5ed6bb674ba
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47701660"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67917120"
 ---
 # <a name="rowset-property-ado"></a>Rowset プロパティ (ADO)
 OLE DB の設定を取得または**行セット**オブジェクトとの間で、 **ADORecordsetConstruction**オブジェクト。 行セットは ADO を変える put_Rowset を使用して、 **Recordset**オブジェクト。  

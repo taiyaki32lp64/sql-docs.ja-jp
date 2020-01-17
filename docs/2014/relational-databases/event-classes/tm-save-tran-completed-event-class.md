@@ -1,5 +1,5 @@
 ---
-title: TM:保存 Tran Completed イベント クラス |Microsoft Docs
+title: 'TM: 保存 Tran Completed イベント クラス |Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,16 +15,16 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: b50f4026daa390000a1a46377446abc3cee709e5
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52774364"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63061284"
 ---
-# <a name="tm-save-tran-completed-event-class"></a>TM:保存 Tran Completed イベント クラス
+# <a name="tm-save-tran-completed-event-class"></a>TM: Save Tran Completed イベント クラス
   TM:Save Tran Completed イベント クラスは、SAVE TRANSACTION 要求が完了したことを示します。 要求は、トランザクション管理のインターフェイスを使用してクライアントから送信されます。  
   
-## <a name="tm-save-tran-completed-event-class-data-columns"></a>TM:保存 Tran Completed イベント クラスのデータの列  
+## <a name="tm-save-tran-completed-event-class-data-columns"></a>TM: 保存 Tran Completed イベント クラスのデータの列  
   
 |データ列名|データ型|説明|列 ID|フィルターの適用|  
 |----------------------|---------------|-----------------|---------------|----------------|  
@@ -41,12 +41,12 @@ ms.locfileid: "52774364"
 |LoginName|`nvarchar`|ユーザーのログイン名 ( [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] セキュリティ ログインまたは DOMAIN\username という形式の [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows ログイン資格情報)。|11|はい|  
 |LoginSid|`image`|ログインしたユーザーのセキュリティ識別子 (SID)。 この情報は、sys.server_principals カタログ ビューで参照できます。 各 SID はサーバーのログインごとに一意です。|41|はい|  
 |NTDomainName|`nvarchar`|ユーザーが所属する Windows ドメイン。|7|はい|  
-|NTUserName|`nvarchar`|Windows のユーザー名。|6|はい|  
+|NTUserName|`nvarchar`|Windows のユーザー名。|6|[はい]|  
 |RequestID|`int`|ステートメントが含まれている要求の ID。|49|はい|  
 |ServerName|`nvarchar`|トレースされている [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスの名前。|26|いいえ|  
 |SessionLoginName|`nvarchar`|セッションを開始したユーザーのログイン名。 たとえば、Login1 を使用して [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] に接続し、Login2 でステートメントを実行すると、SessionLoginName には Login1 が表示され、LoginName には Login2 が表示されます。 この列には、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ログインと Windows ログインの両方が表示されます。|64|はい|  
 |SPID|`int`|イベントが発生したセッションの ID。|12|はい|  
-|StartTime|`datetime`|イベントの開始時刻 (取得できた場合)。|14|はい|  
+|StartTime|`datetime`|イベントの開始時刻 (取得できた場合)。|14|[はい]|  
 |成功|`int`|1 = 成功。 0 = 失敗 (たとえば、値が 1 の場合は権限チェックの成功を表し、値が 0 の場合は失敗を表します)。|23|はい|  
 |TextData|`ntext`|トレースでキャプチャされたイベント クラスに依存するテキスト値。|1|はい|  
 |TransactionID|`bigint`|システムによって割り当てられたトランザクション ID。|4|はい|  

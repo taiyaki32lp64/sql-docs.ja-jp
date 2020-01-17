@@ -16,11 +16,11 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: ac064258da9ae55039c350f50d153d0c60323621
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52778582"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68211615"
 ---
 # <a name="wmi-provider-for-configuration-management-concepts"></a>構成管理用の WMI プロバイダーの概念
   WMI プロバイダーは、パブリッシュされたレイヤーで使用される、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]構成マネージャー スナップインの[!INCLUDE[msCoName](../../includes/msconame-md.md)]管理コンソール (MMC) および[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Configuration Manager。 これにより、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 構成マネージャーから要求されたレジストリ操作を処理する API 呼び出しは、統一されたインターフェイスで操作できます。また、選択された [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] サービスに対して高度な制御および操作を行えます。  

@@ -2,18 +2,18 @@
 title: Reporting Services の概念 (SSRS) | Microsoft Docs
 ms.date: 10/25/2016
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: reporting-services
 ms.topic: conceptual
 ms.assetid: 934b199c-9918-4e6b-83f4-5862b94fc904
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 7bad528f4c644ee4de7339eacdd1e0a0e74c9abc
-ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 126819d9adb85fa4cf17af0c6308d56696136988
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51814305"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65570844"
 ---
 # <a name="reporting-services-concepts-ssrs"></a>Reporting Services の概念 (SSRS)
   このトピックでは、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] の概念を簡単に説明します。  
@@ -42,7 +42,7 @@ ms.locfileid: "51814305"
   
  SharePoint サイトでは、SharePoint サイト管理者ページを使用して、レポートおよびレポート関連のサイト コンテンツに対する権限を管理します。  
   
-### <a name="schedules"></a>Schedules
+### <a name="schedules"></a>スケジュール
  ネイティブのレポート サーバーで、特定の時間またはピーク タイム以外の時間にデータを取得してレポートとデータセット クエリを配信するように、改ページ調整されたレポート、共有データセット、およびサブスクリプションのスケジュールを設定できます。 スケジュールは、一度だけ実行することも、時間、日、週、月間隔で継続して実行することもできます。 詳細については、「 [Schedules](../reporting-services/subscriptions/schedules.md)」を参照してください。  
   
 ### <a name="subscriptions-and-delivery"></a>サブスクリプションと配信  

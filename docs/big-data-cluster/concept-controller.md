@@ -1,72 +1,67 @@
 ---
-title: コント ローラーとは何ですか。
-titleSuffix: SQL Server 2019 big data clusters
-description: この記事では、SQL Server 2019 ビッグ データ クラスター (プレビュー) のコント ローラーについて説明します。
+title: コントローラーとは
+titleSuffix: SQL Server big data clusters
+description: この記事では、[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)] のコントローラーについて説明します。
 author: mihaelablendea
 ms.author: mihaelab
-manager: craigg
-ms.date: 02/28/2019
+ms.reviewer: mikeray
+ms.date: 11/04/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.custom: seodec18
-ms.openlocfilehash: e9fc73e9e95e2a69871d55e6ce00d14b8f29f0e6
-ms.sourcegitcommit: 2533383a7baa03b62430018a006a339c0bd69af2
-ms.translationtype: MT
+ms.openlocfilehash: 96a652a562ea5b38df593dc9642a46cd32c41f8b
+ms.sourcegitcommit: 830149bdd6419b2299aec3f60d59e80ce4f3eb80
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57017868"
+ms.lasthandoff: 11/04/2019
+ms.locfileid: "73532408"
 ---
-# <a name="what-is-the-controller-on-a-sql-server-2019-big-data-cluster"></a>SQL Server 2019 のビッグ データ クラスター上のコント ローラーとは何ですか。
+# <a name="what-is-the-controller-on-a-sql-server-big-data-cluster"></a>SQL Server ビッグ データ クラスターのコントローラーとは
 
-コント ローラーは、展開、およびビッグ データ クラスターを管理するためのコア ロジックをホストします。 Kubernetes では、クラスターおよび Spark、HDFS などの他のコンポーネントの一部である SQL Server インスタンスのすべての通信が処理されます。 
+[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
-コント ローラー サービスは、次のコア機能を提供します。
+このコントローラーでは、ビッグ データ クラスターを展開および管理するコア ロジックがホストされます。 Kubernetes、クラスターの一部である SQL Server インスタンス、および HDFS や Spark などのその他のコンポーネントとのすべてのやり取りがここで処理されます。
 
-- クラスターのライフ サイクル管理: 構成を更新、削除 (&)、クラスターのブートス トラップ
-- Master の SQL Server インスタンスを管理します。
-- コンピューティング、データ、および記憶域プールを管理します。
-- クラスターの状態を監視する監視ツールを公開します。
-- トラブルシューティング ツールを検出し、予期しない問題の修復の公開します。
-- クラスターのセキュリティの管理: セキュリティで保護されたクラスター エンドポイントを確認、ユーザーとロールの管理、クラスター内通信の資格情報構成
-- 安全に実装されているため、アップグレードのワークフローの管理 (CTP 2.3 では使用できません)
-- (CTP 2.3 では使用できません)、クラスター内のステートフル サービスの高可用性と災害復旧を管理します。
+コントローラー サービスには、次のコア機能があります。
 
-## <a name="deploying-the-controller-service"></a>コント ローラー サービスのデプロイ
+- クラスターのライフサイクルの管理: クラスターのブートストラップと削除、構成の更新
+- マスター SQL Server インスタンスを管理する
+- コンピューティング、データ、および記憶域プールを管理する
+- クラスターの状態を観察する監視ツールを公開する
+- 予期しない問題を検出して修復するトラブルシューティング ツールを公開する
+- クラスターのセキュリティを管理する:
+  - クラスター エンドポイントを確実にセキュリティで保護する
+  - ユーザーとロールを管理する
+  - クラスター内通信用の資格情報を構成する
 
-コント ローラーが展開され、ビッグ データ クラスターを構築するためのユーザーが同じの Kubernetes 名前空間でホストされています。 このサービスは、mssqlctl コマンド ライン ユーティリティを使用して、クラスターのブートス トラップ中には、Kubernetes には、管理者がインストールされています。
+## <a name="deploying-the-controller-service"></a>コントローラー サービスを展開する
 
-```bash
-mssqlctl cluster create --name <name of your cluster>
-```
+このコントローラーは、お客様がビッグ データ クラスターを構築する場合と同じ Kubernetes 名前空間で展開およびホストされます。 このサービスは、クラスターのブートストラップ中に、Kubernetes 管理者によって **azdata** コマンドライン ユーティリティを使用してインストールされます。 詳細については、「[[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]の使用を開始する](deploy-get-started.md)」を参照してください。
 
-年間のワークフローは Kubernetes の上にレイアウトで説明されているすべてのコンポーネントを含む完全に機能の SQL Server ビッグ データ クラスター、[概要](big-data-cluster-overview.md)記事。 ブートス トラップのワークフローが最初に、コント ローラー サービスを作成し、コント ローラー サービスでのインストールとマスター、コンピューティング、データ、および記憶域プールのサービスの一部の残りの部分の構成を調整はこれが配置されるとします。
+ビルドアウト ワークフローは、「[概要](big-data-cluster-overview.md)」の記事で説明されているすべてのコンポーネントを含む Kubernetes の完全に機能する SQL Server ビッグ データ クラスター上にレイアウトします。 ブートストラップ ワークフローでは、まずコントローラー サービスが作成されます。これが展開されると、コントローラー サービスによって、マスター、コンピューティング、データ、および記憶域プールの残りのサービス部分のインストールと構成が調整されます。
 
-## <a name="managing-the-cluster-through-the-controller-service"></a>コント ローラー サービスを使用してクラスターを管理します。
+## <a name="managing-the-cluster-through-the-controller-service"></a>コントローラー サービスを使用してクラスターを管理する
 
-いずれかを使用してコント ローラー サービスを使用するだけで、クラスターを管理する`mssqlctl`Api や、クラスター内でホストされているクラスターの管理ポータル。 同じ名前空間にポッドのような追加の Kubernetes オブジェクトを展開する場合管理またはコント ローラー サービスの監視対象ができません。
+いずれかの **azdata** コマンドを使用して、コントローラー サービスを介してクラスターを管理できます。 ポッドのような追加の Kubernetes オブジェクトを同じ名前空間に展開しても、コントローラー サービスによって管理または監視されません。 **kubectl** コマンドを使用して、Kubernetes レベルでクラスターを管理することもできます。 詳細については「[[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]の監視とトラブルシューティング](cluster-troubleshooting-commands.md)」を参照してください。
 
-コント ローラーとビッグ データ クラスター用に作成された、Kubernetes のオブジェクト (ステートフルのセット、ポッド、シークレットなど) は、専用の Kubernetes 名前空間に存在します。 コント ローラー サービスをその名前空間内のすべてのリソースを管理する Kubernetes クラスターの管理者によってアクセス権付与されます。  このシナリオでは、RBAC ポリシーが展開を使用して初期クラスターの一部として自動的に構成されている`mssqlctl`します。 
+ビッグ データ クラスター用に作成されたコントローラーと Kubernetes オブジェクト (ステートフル セット、ポッド、シークレットなど) は、専用の Kubernetes 名前空間に存在します。 コントローラー サービスには、その名前空間内のすべてのリソースを管理するために、Kubernetes クラスター管理者によってアクセス許可が付与されます。  このシナリオの RBAC ポリシーは、**azdata** を使用して初期クラスター展開の一部として自動的に構成されます。
 
-### <a name="mssqlctl"></a>mssqlctl
+### <a name="azdata"></a>azdata
 
-`mssqlctl` コマンド ライン ユーティリティは、クラスター管理者は、ブートス トラップし、コント ローラー サービスによって公開される REST Api を使用してビッグ データ クラスターを管理できるようにする Python で記述されます。
+**azdata** は Python で記述されたコマンドライン ユーティリティです。これを使用すると、クラスター管理者は、コントローラー サービスによって公開されている REST API を使用して、ビッグ データ クラスターをブートストラップして管理することができます。
 
-### <a name="cluster-administration-portal"></a>クラスターの管理ポータル
+## <a name="controller-service-security"></a>コントローラー サービスのセキュリティ
 
-コント ローラー サービスが稼働するいると、クラスター アドミニストレーターを使用できます、[クラスター管理ポータル](cluster-admin-portal.md)デプロイの進行状況を監視するには、検出、およびクラスター内のサービスに関する問題のトラブルシューティングします。
+コントローラー サービスへのすべての通信は、HTTPS 経由の REST API を介して行われます。 自己署名証明書は、ブートストラップ時に自動的に生成されます。 
 
-## <a name="controller-service-security"></a>コント ローラー サービスのセキュリティ
-
-コント ローラー サービスへのすべての通信は、HTTPS 経由で REST API 経由で行われます。 自己署名証明書は、するので自動的にブートス トラップ時に生成されます。 
-
-コント ローラーのサービス エンドポイントへの認証は、ユーザー名とパスワードに基づきます。 これらの資格情報は、環境変数の入力を使用して、クラスターのブートス トラップ時にプロビジョニングされて`CONTROLLER_USERNAME`と`CONTROLLER_PASSWORD`します。
+コントローラー サービス エンドポイントに対する認証は、Active Directory ID を使用するか、ユーザー名とパスワードに基づいています。 これらの資格情報は、環境変数 `AZDATA_USERNAME` および `AZDATA_PASSWORD` の入力を使用して、クラスターのブートストラップ時にプロビジョニングされます。
 
 > [!NOTE]
-> 準拠しているパスワードを指定する必要があります[SQL Server パスワードの複雑さの要件](https://docs.microsoft.com/sql/relational-databases/security/password-policy?view=sql-server-2017)します。
+> [SQL Server パスワードの複雑さの要件](https://docs.microsoft.com/sql/relational-databases/security/password-policy?view=sql-server-2017)に準拠したパスワードを指定する必要があります。
 
-## <a name="next-steps"></a>次のステップ
+## <a name="next-steps"></a>次の手順
 
-SQL Server のビッグ データ クラスターに関する詳細については、次の概要を参照してください。
+[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] の詳細については、次のリソースを参照してください。
 
-- [SQL Server 2019 ビッグ データ クラスターとは](big-data-cluster-overview.md)
+- [[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]とは](big-data-cluster-overview.md)
+- [ワークショップ: Microsoft [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] アーキテクチャ](https://github.com/Microsoft/sqlworkshops/tree/master/sqlserver2019bigdataclusters)

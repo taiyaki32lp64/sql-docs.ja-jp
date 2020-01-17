@@ -10,18 +10,18 @@ f1_keywords:
 - sql12.dts.designer.afpsubscrconn.f1
 - sql11.dts.designer.afpsubscrconn.f1
 ms.assetid: e1225327-c308-4c50-8f44-c411f52ef378
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 991b65c5a0b9ef78811bd1dbc543ffb9c4ad0e31
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 6ea90d10a0228321d33a4c55076e9ed46a14c80c
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52774144"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62833488"
 ---
 # <a name="azure-subscription-connection-manager"></a>Azure サブスクリプション接続マネージャー
-  Azure HDInsight 接続マネージャーは、SSIS パッケージのプロパティを指定する値を使用して、Azure サブスクリプションへの接続を有効にします。Azure サブスクリプション ID と管理証明書。  
+  Azure HDInsight 接続マネージャーは、SSIS パッケージのプロパティを指定する値を使用して、Azure サブスクリプションへの接続を有効にします。SSIS パッケージを Azure サブスクリプションに接続できます。  
   
 1.  上記の **[SSIS 接続マネージャーの追加]** ダイアログ ボックスで **[Azure サブスクリプション]** を選択し、 **[追加]** をクリックします。  次の **[Azure Subscription Connection Manager Editor]** (Azure サブスクリプション接続マネージャー エディター) ダイアログ ボックスが表示されます。  
   
@@ -33,7 +33,7 @@ ms.locfileid: "52774144"
   
 3.  ドロップダウン リストから **[Management certificate store location (管理証明書ストアの場所)]** と **[Management certificate store name (管理証明書ストアの名前)]** を選択します。  
   
-4.  **管理証明書の拇印**を入力するか、**[参照]** をクリックして、選択したストアから証明書を選択します。 証明書は、サブスクリプションの管理証明書としてアップロードする必要があります。 これを行うには、Azure ポータルの次のページで **[アップロード]** をクリックします (詳細については、こちらの [MSDN の投稿](https://msdn.microsoft.com/library/azure/gg551722.aspx) を参照)。  
+4.  **管理証明書の拇印**を入力するか、 **[参照]** をクリックして、選択したストアから証明書を選択します。 証明書は、サブスクリプションの管理証明書としてアップロードする必要があります。 これを行うには、Azure ポータルの次のページで **[アップロード]** をクリックします (詳細については、こちらの [MSDN の投稿](https://msdn.microsoft.com/library/azure/gg551722.aspx) を参照)。  
   
      ![SSIS-AzureSettings-ManagementCertificate](../media/ssis-azuresettings-managementcertificate.png "SSIS-AzureSettings-ManagementCertificate")  
   

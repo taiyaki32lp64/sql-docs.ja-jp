@@ -12,13 +12,12 @@ f1_keywords:
 ms.assetid: 33be8ac5-12dd-4b8a-99e0-68261c219dd2
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: fd6e2883714c538bff1e2ff2a93ace7b71fd5d02
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.openlocfilehash: 15ab408465890a13fc6e87efd2f2e15e8f8a7fad
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51604192"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68025490"
 ---
 # <a name="server-properties---connections-page"></a>サーバーのプロパティ - [接続] ページ
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -73,7 +72,7 @@ ms.locfileid: "51604192"
  このペイン上のオプションの、現在実行中の値を表示します。 これらの値は読み取り専用です。  
   
 ## <a name="see-also"></a>参照  
- [[オプション] &#40;[クエリ実行]:[SQL Server]:[詳細設定] ページ&#41;](https://msdn.microsoft.com/library/3ec788c7-22c3-4216-9ad0-81a168d17074)   
+ [オプション &#40;クエリ実行:SQL Server:[詳細設定] ページ&#41;](https://msdn.microsoft.com/library/3ec788c7-22c3-4216-9ad0-81a168d17074)   
  [サーバー構成オプション &#40;SQL Server&#41;](../../database-engine/configure-windows/server-configuration-options-sql-server.md)  
   
   

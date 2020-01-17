@@ -10,19 +10,19 @@ ms.assetid: f31d8e2c-8d59-4fee-ac2a-324668e54262
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 01542ee3219a7fda68330d19b88161de25f14329
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 5ca7d915b940296e6de6689e666401b0c3534c9d
+ms.sourcegitcommit: a165052c789a327a3a7202872669ce039bd9e495
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52783894"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72782729"
 ---
 # <a name="work-with-sql-server-powershell-paths"></a>SQL Server PowerShell パスの操作
   [!INCLUDE[ssDE](../includes/ssde-md.md)] プロバイダーのパスでノードに移動した後、ノードに関連付けられている [!INCLUDE[ssDE](../includes/ssde-md.md)] 管理オブジェクトのメソッドとプロパティを使用して、作業を実行したり、情報を取得したりできます。  
   
 1.  [はじめに](#BeforeYouBegin)  
   
-2.  **パス ノードに関する作業。**[メソッドとプロパティを一覧表示する](#ListPropMeth)、[メソッドとプロパティの使用](#UsePropMeth)  
+2.  **パス ノードに関する作業:**  [メソッドとプロパティの一覧表示](#ListPropMeth)、 [メソッドとプロパティの使用](#UsePropMeth)  
   
 ##  <a name="BeforeYouBegin"></a> はじめに  
  [!INCLUDE[ssDE](../includes/ssde-md.md)] プロバイダーのパスでノードに移動した後、2 種類の操作を実行できます。  
@@ -33,15 +33,14 @@ ms.locfileid: "52783894"
   
  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] プロバイダーは、 [!INCLUDE[ssDE](../includes/ssde-md.md)]のインスタンスのオブジェクトを管理するために使用されます。 データベース内のデータの処理には使用されません。 テーブルまたはビューに移動した場合に、プロバイダーを使用してデータの選択、挿入、更新、または削除を行うことはできません。 テーブルおよびビューのデータを Windows PowerShell 環境からクエリまたは変更するには、 **Invoke-Sqlcmd** コマンドレットを使用します。 詳細については、「 [Invoke-Sqlcmd コマンドレット](../database-engine/invoke-sqlcmd-cmdlet.md)」を参照してください。  
   
-##  <a name="ListPropMeth"></a> メソッドとプロパティの一覧表示  
- **メソッドとプロパティの一覧表示**  
+##  <a name="ListPropMeth"></a> メソッドとプロパティの一覧表示
   
  特定のオブジェクトまたはオブジェクト クラスで使用できるメソッドとプロパティを表示するには、 **Get-Member** コマンドレットを使用します。  
   
-### <a name="examples-listing-methods-and-properties"></a>例 :メソッドとプロパティの一覧表示  
+### <a name="examples-listing-methods-and-properties"></a>例: メソッドとプロパティの一覧表示  
  次の例では、Windows PowerShell 変数に SMO <xref:Microsoft.SqlServer.Management.Smo.Database> クラスを設定し、メソッドとプロパティを一覧表示します。  
   
-```  
+```powershell
 $MyDBVar = New-Object Microsoft.SqlServer.Management.SMO.Database  
 $MyDBVar | Get-Member -Type Methods  
 $MyDBVar | Get-Member -Type Properties  
@@ -51,34 +50,33 @@ $MyDBVar | Get-Member -Type Properties
   
  次の例では、SQLSERVER: パスで Databases ノードに移動し、コレクションのプロパティを一覧表示します。  
   
-```  
+```powershell
 Set-Location SQLSERVER:\SQL\localhost\DEFAULT\Databases  
 Get-Item . | Get-Member -Type Properties  
 ```  
   
  次の例では、SQLSERVER: パスで AdventureWorks2012 ノードに移動し、オブジェクトのプロパティを一覧表示します。  
   
-```  
+```powershell
 Set-Location SQLSERVER:\SQL\localhost\DEFAULT\Databases\AdventureWorks2012  
 Get-Item . | Get-Member -Type Properties  
 ```  
   
-##  <a name="UsePropMeth"></a> メソッドとプロパティの使用  
- **SMO メソッドとプロパティの使用**  
+##  <a name="UsePropMeth"></a>SMO のメソッドとプロパティの使用  
   
  [!INCLUDE[ssDE](../includes/ssde-md.md)] プロバイダー パスからオブジェクトの操作を実行するには、SMO メソッドとプロパティを使用します。  
   
-### <a name="examples-using-methods-and-properties"></a>例 :メソッドとプロパティの使用  
+### <a name="examples-using-methods-and-properties"></a>例: メソッドとプロパティの使用  
  次の例では、SMO の **Schema** プロパティを使用して、AdventureWorks2012 の Sales スキーマからテーブルの一覧を取得します。  
   
-```  
+```powershell
 Set-Location SQLSERVER:\SQL\localhost\DEFAULT\Databases\AdventureWorks2012\Tables  
-Get-ChildItem | where {$_.Schema -eq "Sales"}  
+Get-ChildItem | Where {$_.Schema -eq "Sales"}  
 ```  
   
- この例は、SMO を使用して**スクリプト**を含むスクリプトを生成するメソッドを`CREATE VIEW`ステートメント AdventureWorks2012 でビューを再作成する必要があります。  
+ この例では、SMO の**script**メソッドを使用して、AdventureWorks2012 でビューを再作成するために必要な `CREATE VIEW` ステートメントを含むスクリプトを生成します。  
   
-```  
+```powershell
 Remove-Item C:\PowerShell\CreateViews.sql  
 Set-Location SQLSERVER:\SQL\localhost\DEFAULT\Databases\AdventureWorks2012\Views  
 foreach ($Item in Get-ChildItem) { $Item.Script() | Out-File -Filepath C:\PowerShell\CreateViews.sql -append }  
@@ -86,7 +84,7 @@ foreach ($Item in Get-ChildItem) { $Item.Script() | Out-File -Filepath C:\PowerS
   
  次の例では、SMO の **Create** メソッドを使用してデータベースを作成し、 **State** プロパティを使用してデータベースが存在するかどうかを確認します。  
   
-```  
+```powershell
 Set-Location SQLSERVER:\SQL\localhost\DEFAULT\Databases  
 $MyDBVar = New-Object Microsoft.SqlServer.Management.SMO.Database  
 $MyDBVar.Parent = (Get-Item ..)  
@@ -96,7 +94,7 @@ $MyDBVar.State
 ```  
   
 ## <a name="see-also"></a>参照  
- [SQL Server PowerShell プロバイダー](sql-server-powershell-provider.md)   
+ [SQL Server PowerShell Provider](sql-server-powershell-provider.md)   
  [SQL Server PowerShell パスの移動](navigate-sql-server-powershell-paths.md)   
  [URN から SQL Server プロバイダー パスへの変換](../database-engine/convert-urns-to-sql-server-provider-paths.md)   
  [SQL Server PowerShell](sql-server-powershell.md)  

@@ -14,11 +14,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 5547d5fb1c2b083a51837df5d9cacb1be393f555
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52818265"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63144598"
 ---
 # <a name="view-offline-log-files"></a>オフライン ログ ファイルの表示
   [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]以降では、対象となるインスタンスがオフラインの場合または開始できない場合に、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ログ ファイルを [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のローカルまたはリモート インスタンスから表示できます。  
@@ -31,7 +31,7 @@ ms.locfileid: "52818265"
 ## <a name="before-you-begin"></a>作業を開始する準備  
  オフライン ログ ファイルに接続するには、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスが、オフライン ログ ファイルの表示に使用するコンピューターと、表示するログ ファイルが置かれているコンピューターにインストールされている必要があります。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスが両方のコンピューターにインストールされている場合は、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のインスタンス、およびどちらかのコンピューター上の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の以前のバージョンを実行しているインスタンスのオフライン ファイルを表示できます。  
   
- 登録済みサーバーを使用している場合は、接続するインスタンスが **[ローカル サーバー グループ]** または **[中央管理サーバー]** で登録されている必要があります。  (インスタンスは自身に登録するか、またはサーバー グループのメンバーにすることができます)。[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスを登録済みサーバーに追加する方法の詳細については、次のトピックを参照してください。  
+ 登録済みサーバーを使用している場合は、接続するインスタンスが **[ローカル サーバー グループ]** または **[中央管理サーバー]** で登録されている必要があります。 (インスタンスは自身に登録するか、またはサーバー グループのメンバーにすることができます)。[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスを登録済みサーバーに追加する方法の詳細については、次のトピックを参照してください。  
   
 -   [サーバー グループの作成または編集 &#40;SQL Server Management Studio&#41;](../../ssms/register-servers/create-or-edit-a-server-group-sql-server-management-studio.md)  
   
@@ -52,7 +52,7 @@ ms.locfileid: "52818265"
   
 -   エラー ログ ファイルを含むフォルダーへの読み取り権限。 既定では、エラー ログ ファイルは、次のパスにあります (\<*Drive>* は [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインストール先ドライブ、\<*InstanceName*> は [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンス名です)。  
   
-     **\<ドライブ >: \Program Files\Microsoft SQL Server\MSSQL12 します。\<InstanceName > \MSSQL\Log**  
+     **\<Drive>:\Program Files\Microsoft SQL Server\MSSQL12.\<InstanceName>\MSSQL\Log**  
   
  WMI 名前空間のセキュリティ設定を確認するには、WMI コントロール スナップインを使用します。  
   
@@ -74,7 +74,7 @@ ms.locfileid: "52818265"
   
     3.  リモート コンピューター名を入力し、 **[OK]** をクリックします。  
   
-3.  **[WMI コントロール (ローカル)]** または **[WMI コントロール (***RemoteComputerName***)]** を右クリックして、**[プロパティ]** をクリックします。  
+3.  **[WMI コントロール (ローカル)]** または **[WMI コントロール (***RemoteComputerName***)]** を右クリックして、 **[プロパティ]** をクリックします。  
   
 4.  **[WMI コントロールのプロパティ]** ダイアログ ボックスで、 **[セキュリティ]** タブをクリックします。  
   
@@ -118,7 +118,7 @@ ms.locfileid: "52818265"
     > [!NOTE]  
     >  ログ ファイルの読み込みに時間がかかりすぎる場合は、[ログ ファイルの表示] ツール バーの **[停止]** をクリックできます。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [ログ ファイルの表示](log-file-viewer.md)  
   
   

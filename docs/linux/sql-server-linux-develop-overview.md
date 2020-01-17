@@ -1,72 +1,70 @@
 ---
-title: SQL Server on Linux 用アプリケーションの開発 |Microsoft Docs
+title: SQL Server on Linux 用のアプリケーションを開発する
 description: ''
-author: rothja
-ms.author: jroth
-manager: craigg
+author: VanMSFT
+ms.author: vanto
 ms.date: 11/17/2017
 ms.topic: conceptual
 ms.prod: sql
-ms.custom: sql-linux
 ms.technology: linux
 ms.assetid: 758cb738-b018-465b-9ab0-59a24b892e66
-ms.openlocfilehash: 9f9175d82102e5c0dbbae2fbc7054459a0710e6e
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
-ms.translationtype: MT
+ms.openlocfilehash: 584bf33201cab5d0f57205de0fed181725187d52
+ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51670882"
+ms.lasthandoff: 07/25/2019
+ms.locfileid: "68077412"
 ---
-# <a name="how-to-get-started-developing-applications-for-sql-server-on-linux"></a>SQL Server on Linux 向けのアプリケーションの開発を開始する方法
+# <a name="how-to-get-started-developing-applications-for-sql-server-on-linux"></a>SQL Server on Linux 用のアプリケーションの開発を開始する方法
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
-接続して、c#、Java、Node.js、PHP、Python、Ruby、および C++ などのプログラミング言語のさまざまな Linux 上の SQL Server を使用するアプリケーションを作成することができます。 一般的な web フレームワークやオブジェクト リレーショナル マッピング (ORM) フレームワークを使用することもできます。
+SQL Server on Linux に接続して使用するアプリケーションは、さまざまなプログラミング言語 (C#、Java、Node.js、PHP、Python、Ruby、C++ など) で作成できます。 一般的な Web フレームワークやオブジェクト リレーショナル マッピング (ORM) フレームワークを使用することもできます。
 
 > [!VIDEO https://channel9.msdn.com/events/Connect/2017/T153/player]
 
 > [!TIP]
-> これらと同じ開発オプションでは、他のプラットフォームでは、SQL Server を対象することもできます。 アプリケーションがオンプレミスで実行されている SQL Server を対象または macOS でクラウド、Linux、Windows、Docker でします。 または、Azure SQL Database と Azure SQL Data Warehouse を対象にできます。
+> これらと同じ開発オプションを使用して、他のプラットフォームの SQL Server を対象にすることもできます。 アプリケーションは、オンプレミスまたはクラウドの、Linux、Windows、または macOS の Docker 上で実行されている SQL Server を対象にできます。 または、Azure SQL Database および Azure SQL Data Warehouse を対象にすることもできます。
 
-## <a name="try-the-tutorials"></a>チュートリアルをお試しください。
+## <a name="try-the-tutorials"></a>チュートリアルを試す
 
-開始して、SQL Server でアプリケーションを構築する最善の方法では、自分でやってみてください。
+SQL Server に対するアプリケーションの構築を始める最適な方法は、自分で試してみることです。
 
-- 参照する[入門チュートリアル](https://aka.ms/sqldev)します。
-- 言語および開発プラットフォームを選択します。
-- コード サンプルを実行してください。
+- [開始用のチュートリアル](https://aka.ms/sqldev)を参照します。
+- 言語と開発プラットフォームを選択します。
+- コード サンプルを試します。
 
 > [!TIP]
-> SQL Server on Docker 用の開発する場合を見て、 **macOS**チュートリアル。
+> Docker 上の SQL Server 向けに開発する場合は、**macOS** のチュートリアルを参照してください。
 
 ## <a name="create-new-applications"></a>新しいアプリケーションを作成する
 
-新しいアプリケーションを作成する場合の実行の一覧を見て、[接続ライブラリ](sql-server-linux-develop-connectivity-libraries.md)コネクタとさまざまなプログラミング言語の使用可能な一般的なフレームワークの概要についてはします。
+新しいアプリケーションを作成している場合は、さまざまなプログラミング言語で使用できるコネクタや一般的なフレームワークの概要を、[接続ライブラリ](sql-server-linux-develop-connectivity-libraries.md)の一覧でご確認ください。
 
-## <a name="use-existing-applications"></a>既存のアプリケーションを使用します。
+## <a name="use-existing-applications"></a>既存のアプリケーションを使用する
 
-既存のデータベース アプリケーションがあれば、SQL Server on Linux をターゲットに単にその接続文字列を変更できます。 詳細を閲覧することを確認、[既知の問題](sql-server-linux-release-notes.md)SQL Server on Linux でします。
+既存のデータベース アプリケーションがある場合は、接続文字列を変更するだけで SQL Server on Linux を対象にすることができます。 SQL Server on Linux に関する[既知の問題](sql-server-linux-release-notes.md)について必ずお読みください。
 
-## <a name="use-existing-sql-tools-on-windows-with-sql-server-on-linux"></a>SQL Server on Linux での Windows で既存の SQL ツールを使用します。
+## <a name="use-existing-sql-tools-on-windows-with-sql-server-on-linux"></a>Windows の既存の SQL ツールを SQL Server on Linux で使用する
 
-SSMS、SSDT では、PowerShell などの Windows で現在実行しているツールは、SQL Server on Linux でも動作します。 実行していないネイティブ Linux 上では、Linux 上のリモートの SQL Server インスタンスを管理できます。 
+現在 Windows で実行されているツール (SSMS、SSDT、PowerShell など) は SQL Server on Linux でも動作します。 これらは Linux 上でネイティブに実行されませんが、Linux 上のリモート SQL Server インスタンスを管理することはできます。 
 
-詳細については、次のトピックを参照してください。
+詳細については、次の各トピックを参照してください。
 
 - [SQL Server Management Studio (SSMS)](sql-server-linux-manage-ssms.md)
 - [SQL Server Data Tools (SSDT)](sql-server-linux-develop-use-ssdt.md)
 - [SQL PowerShell](sql-server-linux-manage-powershell.md)
 
 > [!Note]
-> 最適なエクスペリエンスでこれらのツールの最新バージョンを使用していることを確認します。
+> 最適なエクスペリエンスを得るには、これらのツールの最新バージョンを使用してください。
 
-## <a name="use-new-sql-tools-for-linux"></a>新しい SQL ツールを使用して、Linux 用
+## <a name="use-new-sql-tools-for-linux"></a>Linux 用の新しい SQL ツールを使用する
 
-新たに使用することができます[mssql 拡張機能](https://aka.ms/mssql-marketplace)の[Visual Studio Code](https://code.visualstudio.com)で Linux、macOS、および Windows。 ステップ バイ ステップ チュートリアルでは、次のチュートリアルを参照してください。
+[Visual Studio Code](https://code.visualstudio.com) の新しい [mssql 拡張機能](https://aka.ms/mssql-marketplace)が Linux、macOS、および Windows で使用できるようになりました。 手順ごとの説明については、次のチュートリアルをご覧ください。
 
 - [Visual Studio Code の使用](sql-server-linux-develop-use-vscode.md)
 
-Linux のネイティブな新しいコマンド ライン ツールを使用することもできます。 これらのツールを以下に示します。
+また、Linux のネイティブの新しいコマンドライン ツールを使用することもできます。 以下のツールが含まれています。
 
 - [sqlcmd](../tools/sqlcmd-utility.md)
 - [bcp](sql-server-linux-migrate-bcp.md)
@@ -74,9 +72,9 @@ Linux のネイティブな新しいコマンド ライン ツールを使用す
 
 ## <a name="next-steps"></a>次の手順
 
-開始するには、次のクイック スタートのいずれかを使用して Linux に SQL Server をインストールします。
+開始するには、次のクイックスタートのいずれかを使用して SQL Server on Linux をインストールします。
 
-- [Red Hat Enterprise Linux をインストールします。](quickstart-install-connect-red-hat.md)
-- [SUSE Linux Enterprise Server にインストールします](quickstart-install-connect-suse.md)
-- [Ubuntu にインストールします](quickstart-install-connect-ubuntu.md)
-- [Docker で実行します。](quickstart-install-connect-ubuntu.md)
+- [Red Hat Enterprise Linux へのインストール](quickstart-install-connect-red-hat.md)
+- [SUSE Linux Enterprise Server へのインストール](quickstart-install-connect-suse.md)
+- [Ubuntu へのインストール](quickstart-install-connect-ubuntu.md)
+- [Docker 上での実行](quickstart-install-connect-ubuntu.md)

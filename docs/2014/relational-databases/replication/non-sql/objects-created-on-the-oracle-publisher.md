@@ -13,11 +13,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 99e1d1f0692e5460e2c7003b0ab8dca860deca4f
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52754784"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63022145"
 ---
 # <a name="objects-created-on-the-oracle-publisher"></a>Oracle パブリッシャー上で作成されたオブジェクト
   [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] レプリケーションでは、変更の追跡と転送を行えるように、Oracle パブリッシャーにデータベース オブジェクトがインストールされます ([!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] によって Oracle パブリッシャーにバイナリ ファイルがインストールされることはありません)。 次の表に、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ディストリビューターで Oracle パブリッシャーがパブリッシャーとして認識されたときに、Oracle パブリッシャーで作成されるオブジェクトの一覧を示します。 オブジェクトの説明は、情報の提供のみを目的としています。 これらのオブジェクトは変更しないでください。  
@@ -49,7 +49,7 @@ ms.locfileid: "52754784"
 |HREPL_Log_I_J_K|表示|パブリッシュされたテーブルごとに作成されるビューで、変更追跡テーブルにクエリを実行するために使用されます。|  
   
 ## <a name="see-also"></a>参照  
- [Configure an Oracle Publisher (Oracle パブリッシャーの構成)](configure-an-oracle-publisher.md)   
+ [Oracle パブリッシャーの構成](configure-an-oracle-publisher.md)   
  [Oracle パブリッシングの用語](glossary-of-terms-for-oracle-publishing.md)   
  [Oracle パブリッシングの概要](oracle-publishing-overview.md)  
   

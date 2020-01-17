@@ -8,17 +8,20 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: language-reference
 ms.assetid: d7b04903-2d61-4159-9456-475942d1f732
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: 0afd8f494474c54eaf911f6cd7b8f74c9ec1a287
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: c462eb1957f1c8014dd9220f86cb9ae3e32ea65f
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47729560"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71295192"
 ---
-# <a name="catalogobjectparameters-ssisdb-database"></a>catalog.object_parameters (SSISDB データベース)
+# <a name="catalogobject_parameters-ssisdb-database"></a>catalog.object_parameters (SSISDB データベース)
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] カタログのすべてのパッケージおよびプロジェクトのパラメーターを表示します。  

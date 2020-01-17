@@ -13,11 +13,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: a1ca87fc977ee97900be9e821cab4918064c7a44
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48097272"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62788008"
 ---
 # <a name="view-availability-replica-properties-sql-server"></a>可用性レプリカのプロパティの表示 (SQL Server)
   このトピックでは、[!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] で [!INCLUDE[tsql](../../../includes/tsql-md.md)] または [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] を使用して、AlwaysOn 可用性グループの可用性レプリカのプロパティを表示する方法について説明します。  
@@ -30,11 +30,11 @@ ms.locfileid: "48097272"
   
 2.  **[AlwaysOn 高可用性]** ノードと **[可用性グループ]** ノードを展開します。  
   
-3.  可用性レプリカが属する可用性グループを展開し、**[可用性レプリカ]** ノードを展開します。  
+3.  可用性レプリカが属する可用性グループを展開し、 **[可用性レプリカ]** ノードを展開します。  
   
-4.  プロパティを表示する可用性レプリカを右クリックし、**[プロパティ]** をクリックします。  
+4.  プロパティを表示する可用性レプリカを右クリックし、 **[プロパティ]** をクリックします。  
   
-5.  **[可用性レプリカ プロパティ]** ダイアログ ボックスで、**[全般]** ページを使用して、このレプリカのプロパティを表示します。 プライマリ レプリカに接続している場合に変更できるプロパティは、可用性モード、フェールオーバー モード、プライマリ ロールの接続アクセス、セカンダリ ロールの読み取りアクセス (読み取り可能なセカンダリ)、およびセッション タイムアウトの値です。 詳細については、次を参照してください。[可用性レプリカ プロパティ&#40;[全般] ページ&#41;](availability-replica-properties-general-page.md)します。  
+5.  **[可用性レプリカ プロパティ]** ダイアログ ボックスで、 **[全般]** ページを使用して、このレプリカのプロパティを表示します。 プライマリ レプリカに接続している場合に変更できるプロパティは、可用性モード、フェールオーバー モード、プライマリ ロールの接続アクセス、セカンダリ ロールの読み取りアクセス (読み取り可能なセカンダリ)、およびセッション タイムアウトの値です。 詳細については、次を参照してください。[可用性レプリカ プロパティ&#40;[全般] ページ&#41;](availability-replica-properties-general-page.md)します。  
   
   
 ##  <a name="TsqlProcedure"></a> Transact-SQL の使用  

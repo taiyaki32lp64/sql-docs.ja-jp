@@ -19,17 +19,20 @@ helpviewer_keywords:
 - messages [Integration Services]
 - sending messages
 ms.assetid: ae1d8fad-6649-4e93-b589-14a32d07da33
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: d100819807cd669803ef698d4614373b0b997905
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 486339cc1c5ef550dbf4eee227bec3ad67ce0e3a
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52503993"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71294099"
 ---
 # <a name="message-queue-task"></a>Message Queue Task
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   メッセージ キュー タスクでは、Message Queuing (MSMQ) を使用して、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] パッケージ間でメッセージを送受信したり、カスタム アプリケーションによって処理されるアプリケーションのキューにメッセージを送信したりすることができます。 これらのメッセージは、簡単なテキスト形式、ファイル、変数、またはそれらの値です。  
   
  メッセージ キュー タスクを使用することにより、企業の組織全体の操作を調整できます。 送信先が使用できない場合やビジーの場合、メッセージをキューに入れ、後で配信できます。たとえば、送信先が販売担当者のオフラインのラップトップ コンピューターの場合、キューにメッセージが入れられ、販売担当者はネットワークに接続したときに受信できます。 メッセージ キュー タスクは、次の目的で使用できます。  
@@ -103,8 +106,8 @@ ms.locfileid: "52503993"
 ## <a name="message-queue-task-editor-general-page"></a>[メッセージ キュー タスク エディター] ([全般] ページ)
   **[メッセージ キュー タスク エディター]** の **[全般]** ページを使用すると、メッセージ キュー タスクの名前と説明を設定したり、メッセージの形式を指定したり、タスクでメッセージを送受信できるかどうかを指定したりできます。  
   
-### <a name="options"></a>[変数]  
- **名前**  
+### <a name="options"></a>オプション  
+ **[名前]**  
  メッセージ キュー タスクの固有の名前を指定します。 この名前は、タスク アイコンのラベルとして使用されます。  
   
 > [!NOTE]  
@@ -117,9 +120,9 @@ ms.locfileid: "52503993"
  Message Queuing (MSMQ) の 2000 形式を使用するかどうかを指定します。 既定値は **False**です。  
   
  **[MSMQConnection]**  
- 既存の MSMQ 接続マネージャーを選択するか、[\<**新しい接続...**>] をクリックして、新しい接続マネージャーを作成します。  
+ 既存の MSMQ 接続マネージャーを選択するか、[\<**新しい接続...** >] をクリックして、新しい接続マネージャーを作成します。  
   
- **関連トピック**: [MSMQ 接続マネージャー](../../integration-services/connection-manager/msmq-connection-manager.md)、 [MSMQ 接続マネージャー エディター](../../integration-services/connection-manager/msmq-connection-manager-editor.md)  
+ **関連トピック:** [MSMQ 接続マネージャー](../../integration-services/connection-manager/msmq-connection-manager.md)、[MSMQ 接続マネージャー エディター](../../integration-services/connection-manager/msmq-connection-manager-editor.md)  
   
  **メッセージ**  
  メッセージ キュー タスクでメッセージを送信するのか、受信するのかを指定します。 **[メッセージの送信]** を選択すると、ダイアログ ボックスの左側のペインに [送信] ページが表示されます。 **[メッセージの受信]** を選択すると、[受信] ページが表示されます。 既定では、 **[メッセージの送信]** に設定されています。  
@@ -127,7 +130,7 @@ ms.locfileid: "52503993"
 ## <a name="message-queue-task-editor-send-page"></a>[メッセージ キュー タスク エディター] ([送信] ページ)
   **[メッセージ キュー タスク エディター]** ダイアログ ボックスの **[送信]** ページを使用すると、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] パッケージからメッセージを送信するメッセージ キュー タスクを構成できます。  
   
-### <a name="options"></a>[変数]  
+### <a name="options"></a>オプション  
  **[UseEncryption]**  
  メッセージを暗号化するかどうかを示します。 既定値は **False**です。  
   
@@ -135,7 +138,7 @@ ms.locfileid: "52503993"
  暗号化を使用する場合は、使用する暗号化アルゴリズムを指定します。 メッセージ キュー タスクでは、RC2 と RC4 のアルゴリズムを使用できます。 既定値は **[RC2]** です。  
   
 > [!NOTE]  
->  RC4 アルゴリズムは、旧バージョンとの互換性のためにのみサポートされています。 データベース互換性レベルが 90 または 100 の場合、新しい素材は RC4 または RC4_128 を使用してのみ暗号化できます  (非推奨)。AES アルゴリズムのいずれかなど、新しいアルゴリズムを使用してください。 現在のリリースの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、どの互換性レベルでも、RC4 または RC4_128 を使用して暗号化された素材を暗号化解除できます。  
+>  RC4 アルゴリズムは、旧バージョンとの互換性のためにのみサポートされています。 データベース互換性レベルが 90 または 100 の場合、新しい素材は RC4 または RC4_128 を使用してのみ暗号化できます (非推奨)。AES アルゴリズムのいずれかなど、新しいアルゴリズムを使用してください。 現在のリリースの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、どの互換性レベルでも、RC4 または RC4_128 を使用して暗号化された素材を暗号化解除できます。  
   
 > [!IMPORTANT]  
 >  これらは、メッセージ キュー (MSMQ) テクノロジでサポートされる暗号化アルゴリズムです。 現在、いずれの暗号化アルゴリズムも、メッセージ キューでまだサポートされていない最新のアルゴリズムと比較して、暗号強度の弱さが指摘されています。 そのため、メッセージ キュー タスクを使ってメッセージを送信する場合は、必要な暗号強度を満たすことができるかどうかを十分に検討する必要があります。  
@@ -159,7 +162,7 @@ ms.locfileid: "52503993"
  **[VariableMessage]**  
  変数名を入力します。または、参照ボタン ( **[...]** ) をクリックし、変数を指定します。 変数はコンマで区切って指定します。  
   
- **関連項目 :** 「変数の選択」  
+ **関連トピック:** [変数の選択]  
   
 #### <a name="messagetype--string-message"></a>[MessageType] = [文字列メッセージ]  
  **[StringMessage]**  
@@ -168,7 +171,7 @@ ms.locfileid: "52503993"
 ## <a name="message-queue-task-editor-receive-page"></a>[メッセージ キュー タスク エディター] ([受信] ページ)
   **[メッセージ キュー タスク エディター]** ダイアログ ボックスの **[受信]** ページを使用して、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Message Queuing (MSMQ) メッセージを受信するためのメッセージ キュー タスクを構成します。  
   
-### <a name="options"></a>[変数]  
+### <a name="options"></a>オプション  
  **[RemoveFromMessageQueue]**  
  メッセージが受信された後にキューからメッセージを削除するかどうかを示します。 既定では、この値は **False**に設定されます。  
   
@@ -215,7 +218,7 @@ ms.locfileid: "52503993"
  **[Identifier]**  
  フィルターの適用を選択した場合、メッセージの受信元のパッケージを表す固有の識別子を入力するか、省略記号ボタン ( **[...]** ) をクリックしてパッケージを指定します。  
   
- **関連項目:** [パッケージの選択](../../integration-services/control-flow/select-a-package.md)  
+ **関連トピック:** [パッケージの選択](../../integration-services/control-flow/select-a-package.md)  
   
 #### <a name="messagetype--variable-message"></a>[MessageType] = [変数メッセージ]  
  **Assert**  
@@ -227,9 +230,9 @@ ms.locfileid: "52503993"
 |**[パッケージから]**|指定したパッケージからのメッセージのみが受信されます。 この値を選択すると、動的オプションの **[Identifier]** が表示されます。|  
   
  **変数**  
- 変数の名前を入力するか、[\<**新しい変数...**>] をクリックして新しい変数を設定します。  
+ 変数の名前を入力するか、[\<**新しい変数...** >] をクリックして新しい変数を設定します。  
   
- **関連項目:** [変数の追加](https://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5)  
+ **関連トピック:** [変数の追加](https://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5)  
   
 #### <a name="filter-dynamic-options"></a>[Filter] の動的オプション  
   
@@ -241,7 +244,7 @@ ms.locfileid: "52503993"
  **[Identifier]**  
  フィルターの適用を選択した場合、メッセージの受信元のパッケージを表す固有の識別子を入力するか、省略記号ボタン ( **[...]** ) をクリックしてパッケージを指定します。  
   
- **関連項目:** [パッケージの選択](../../integration-services/control-flow/select-a-package.md)  
+ **関連トピック:** [パッケージの選択](../../integration-services/control-flow/select-a-package.md)  
   
 #### <a name="messagetype--string-message"></a>[MessageType] = [文字列メッセージ]  
  **[Compare]**  
@@ -274,12 +277,12 @@ ms.locfileid: "52503993"
  **変数**  
  受信したメッセージを格納する変数の名前を入力するか、\<[**新しい変数...>]** をクリックして新しい変数を設定します。  
   
- **関連項目:** [変数の追加](https://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5)  
+ **関連トピック:** [変数の追加](https://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5)  
   
 ## <a name="select-variables"></a>[変数の選択]
   **[変数の選択]** ダイアログ ボックスを使用すると、メッセージ キュー タスクの 2 番目のメッセージ操作で使用する変数を指定できます。 **[利用可能な変数]** の一覧には、メッセージ キュー タスクまたは親コンテナーのスコープのシステム変数とユーザー定義変数が含まれます。 タスクは、 **[選択された変数]** の一覧の変数を使用します。  
   
-### <a name="options"></a>[変数]  
+### <a name="options"></a>オプション  
  **[利用可能な変数]**  
  1 つ以上の変数を選択します。  
   
@@ -295,7 +298,7 @@ ms.locfileid: "52503993"
  **[新しい変数]**  
  新しい変数を作成します。  
   
- **関連項目:** [変数の追加](https://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5)  
+ **関連トピック:** [変数の追加](https://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5)  
 ## <a name="see-also"></a>参照  
  [Integration Services タスク](../../integration-services/control-flow/integration-services-tasks.md)   
  [制御フロー](../../integration-services/control-flow/control-flow.md)  

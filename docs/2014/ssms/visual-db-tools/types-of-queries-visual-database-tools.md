@@ -17,11 +17,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: afcc330c2b87573f766a7b0728662af9de841962
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52807114"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63204594"
 ---
 # <a name="types-of-queries-visual-database-tools"></a>クエリの種類 (Visual Database Tools)
   クエリおよびビュー デザイナーは、選択、結果の挿入、値の挿入、更新、削除、テーブルの作成など、いくつかのクエリに対応した組み込み機能を用意しています。また、UNION、フルテキスト検索、CASE 式によるクエリもサポートしています。  
@@ -51,7 +51,7 @@ ms.locfileid: "52807114"
  [更新クエリの作成 (Visual Database Tools)](create-update-queries-visual-database-tools.md)  
  テーブルを更新するクエリの作成方法を説明します。  
   
-## <a name="reference"></a>参照  
+## <a name="reference"></a>リファレンス  
  [クエリのプロパティ (Visual Database Tools)](query-properties-visual-database-tools.md)  
  クエリを設計する場合に使用できるプロパティについて説明します。  
   

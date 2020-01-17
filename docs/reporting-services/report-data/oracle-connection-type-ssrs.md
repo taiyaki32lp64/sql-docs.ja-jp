@@ -1,46 +1,56 @@
 ---
-title: Oracle の接続の種類 (SSRS) | Microsoft Docs
-ms.date: 01/11/2017
+title: Oracle の接続の種類 (SSRS、Power BI Report Server、レポートビルダー) |Microsoft Docs
+ms.date: 07/26/2019
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: report-data
 ms.topic: conceptual
 ms.assetid: 9db86dd2-beda-42d8-8af7-2629d58a8e3d
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 74eb23f2f294995222bcb90a7791f1133179462d
-ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 2942ad1432b2674ab0b9906b5ab6e2f07be83ae7
+ms.sourcegitcommit: a154b3050b6e1993f8c3165ff5011ff5fbd30a7e
+ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51813422"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68632077"
 ---
-# <a name="oracle-connection-type-ssrs"></a>Oracle の接続の種類 (SSRS)
-Oracle データベースのデータをレポートで使用するには、種類が Oracle のレポート データ ソースに基づいたデータセットが必要です。 このビルトイン データ ソースの種類は、Oracle Data Provider を直接使用し、Oracle クライアント ソフトウェア コンポーネントが必要です。
+# <a name="oracle-connection-type-ssrs-power-bi-report-server-and-report-builder"></a>Oracle の接続の種類 (SSRS、Power BI Report Server、レポートビルダー)
 
-Oracle クライアント ツールをインストールするには、次の操作を実行します。
- 
-1.  [Oracle のダウンロード サイト](https://www.oracle.com/us/products/tools/index-090165.html)に移動します
-2.  Windows 用 ODAC 12c リリース 4 (12.1.0.2.4) をダウンロードします (サーバー用の 64 ビット、ツール用の 32 ビット)。
-3.  Data Provider for .NET 4 をインストールします
-  
+Oracle データベースのデータをレポート内で使用するには、種類が Oracle のレポート データ ソースに基づいたデータセットが必要です。 このビルトイン データ ソースの種類は、Oracle Data Provider を直接使用し、Oracle クライアント ソフトウェア コンポーネントが必要です。 この記事では、Reporting Services、Power BI Report Server、およびレポートビルダー用のドライバーをダウンロードしてインストールする方法について説明します。
+
+## <a name="64-bit-drivers-for-the-report-servers"></a>レポートサーバーの64ビットドライバー
+
+Power BI Report Server と SQL Server Reporting Services 2016 および2017では、すべてマネージ ODP.NET が使用されます。 次の手順は、最新の18x ドライバーを使用する場合にのみ必要です。 これらのファイルは c:\oracle64. にインストールされていることを前提としています。
+
+1. Oracle ダウンロードサイトで、 [oracle 64-BIT ODAC Oracle Universal Installer (OUI)](https://www.oracle.com/technetwork/topics/dotnet/downloads/odacdeploy-4242173.html)をインストールします。 
+2. ODP.NET マネージクライアントを GAC に登録する: C:\oracle64\product\18.0.0\client_1\odp.net\bin\4\OraProvCfg.exe/action: gac/providerpath: C:\oracle64\product\18.0.0\client_1\odp.net\managed\common\Oracle.ManagedDataAccess.dll
+3. ODP.NET マネージクライアントエントリを machine.config: C:\oracle64\product\18.0.0\client_1\odp.net\bin\4\OraProvCfg.exe/action: config/force/product: odpm/frameworkversion: v v4.0.30319/productversion: 4.122.18.3 に追加します。
+
+## <a name="32-bit-drivers-for-report-builder"></a>レポートビルダー用の32ビットドライバー
+次の手順は、最新の18x ドライバーを使用する場合にのみ必要です。 これらのファイルは c:\oracle32. にインストールされていることを前提としています。
+
+1. Oracle ダウンロードサイトで、 [oracle 32-BIT ODAC Oracle Universal Installer (OUI)](https://www.oracle.com/technetwork/topics/dotnet/downloads/odacdev-4242174.html)をインストールします。
+2. ODP.NET マネージクライアントを GAC に登録する: C:\oracle32\product\18.0.0\client_1\odp.net\bin\4\OraProvCfg.exe/action: gac/providerpath: C:\oracle32\product\18.0.0\client_1\odp.net\managed\common\Oracle.ManagedDataAccess.dll
+3. ODP.NET マネージクライアントエントリを machine.config: C:\oracle32\product\18.0.0\client_1\odp.net\bin\4\OraProvCfg.exe/action: config/force/product: odpm/frameworkversion: v v4.0.30319/productversion: 4.122.18.3 に追加します。
+
  このトピックの情報を使用して、データ ソースを構築してください。 手順については、「 [データ接続を追加および確認する (レポート ビルダーおよび SSRS)](../../reporting-services/report-data/add-and-verify-a-data-connection-report-builder-and-ssrs.md)」を参照してください。  
   
 ##  <a name="Connection"></a> 接続文字列  
- データ ソースへの接続に使用する接続情報および資格情報については、データベース管理者に問い合わせてください。 次に示す接続文字列の例では、Unicode を使用して "Oracle9" というサーバー上の Oracle データベースを指定しています。 サーバー名は、Tnsnames.ora 構成ファイルで Oracle サーバー インスタンス名として定義されたものと一致する必要があります。  
+ データ ソースへの接続に使用する接続情報および資格情報については、データベース管理者に問い合わせてください。 次に示す接続文字列の例では、Unicode を使用して "Oracle18" というサーバー上の Oracle データベースを指定しています。 サーバー名は、Tnsnames.ora 構成ファイルで Oracle サーバー インスタンス名として定義されたものと一致する必要があります。  
   
 ```  
 Data Source="Oracle"; Unicode="True"  
 ```  
   
- 接続文字列の例の詳細については、「 [レポート ビルダーでのデータ接続、データ ソース、および接続文字列](https://msdn.microsoft.com/library/7e103637-4371-43d7-821c-d269c2cc1b34)」を参照してください。  
+ 接続文字列の例について詳しくは、「 [レポート ビルダーでのデータ接続、データ ソース、および接続文字列](data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)」をご覧ください。  
   
 ##  <a name="Credentials"></a> [資格情報]  
  クエリの実行、ローカルでのレポートのプレビュー、およびレポート サーバーからのレポートのプレビューには、資格情報が必要です。  
   
  レポートをパブリッシュした後、レポートをレポート サーバーで実行するときに、データを取得するための権限が有効な状態になるように、データ ソースの資格情報を変更する必要が生じる場合があります。  
   
- 詳しくは、「[データ接続、データ ソース、および接続文字列 &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)」または「[レポート ビルダーでの資格情報の指定](https://msdn.microsoft.com/library/7412ce68-aece-41c0-8c37-76a0e54b6b53)」を参照してください。  
+ 詳細については、「 [レポート データ ソースに関する資格情報と接続情報を指定する](specify-credential-and-connection-information-for-report-data-sources.md)」をご覧ください。  
   
   
 ##  <a name="Query"></a> クエリ  
@@ -59,52 +69,26 @@ Data Source="Oracle"; Unicode="True"
   
  詳細については、以下を参照してください。  
   
--   msdn.microsoft.com の「[.NET Framework Data Provider for Oracle の使用](https://go.microsoft.com/fwlink/?LinkId=112314) 」  
-  
 -   [Reporting Services を使用して Oracle データ ソースの構成およびアクセスを行う方法](https://support.microsoft.com/kb/834305)  
-  
 -   [NETWORK SERVICE セキュリティ プリンシパルに権限を追加する方法](https://support.microsoft.com/kb/870668)  
   
-###### <a name="alternate-data-extensions"></a>代替データ拡張機能  
+### <a name="alternate-data-extensions"></a>代替データ拡張機能 
+ 
  Oracle データベースからのデータの取得は、OLE DB のデータ ソースの種類を使用して行うこともできます。 詳細については、「[OLE DB の接続の種類 &#40;SSRS&#41;](../../reporting-services/report-data/ole-db-connection-type-ssrs.md)」を参照してください。  
-  
-###### <a name="report-models"></a>レポート モデル  
+
+::: moniker range=">=sql-server-2017||=sqlallproducts-allversions" 
+### <a name="report-models"></a>レポート モデル  
+
  Oracle データベースに基づくモデルを作成することもできます。  
+::: moniker-end
+   
+### <a name="platform-and-version-information"></a>プラットフォームおよびバージョン情報  
+
+ プラットフォームとバージョンのサポートについて詳しくは、「[Reporting Services でサポートされるデータ ソース &#40;SSRS&#41;](../../reporting-services/report-data/data-sources-supported-by-reporting-services-ssrs.md)」をご覧ください。  
+
   
-###### <a name="platform-and-version-information"></a>プラットフォームおよびバージョン情報  
- プラットフォームおよびバージョン サポートの詳細については、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [オンライン ブック](https://go.microsoft.com/fwlink/?linkid=121312)にある [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] ドキュメントの「[Reporting Services でサポートされるデータ ソース (SSRS)](../../reporting-services/report-data/data-sources-supported-by-reporting-services-ssrs.md)」を参照してください。  
-  
-  
-##  <a name="HowTo"></a> 操作方法に関するトピック  
- データ接続、データ ソース、およびデータセットを操作する手順について説明します。  
-  
- [データ接続を追加および確認する (レポート ビルダーおよび SSRS)](../../reporting-services/report-data/add-and-verify-a-data-connection-report-builder-and-ssrs.md)  
-  
- [共有データセットまたは埋め込みデータセットの作成 (レポート ビルダーおよび SSRS)](../../reporting-services/report-data/create-a-shared-dataset-or-embedded-dataset-report-builder-and-ssrs.md)  
-  
- [データセットへのフィルターの追加 (レポート ビルダーおよび SSRS)](../../reporting-services/report-data/add-a-filter-to-a-dataset-report-builder-and-ssrs.md)  
-  
-  
-##  <a name="Related"></a> 関連項目  
- 次に示すセクションでは、レポート データの概念が詳細に説明されているほか、データに関連するレポートのパーツを定義し、カスタマイズし、使用する方法が説明されています。  
-  
- [レポート データセット (SSRS)](../../reporting-services/report-data/report-datasets-ssrs.md)  
- レポートのデータへのアクセスの概要について説明します。  
-  
- [レポート ビルダーでのデータ接続、データ ソース、および接続文字列](https://msdn.microsoft.com/library/7e103637-4371-43d7-821c-d269c2cc1b34)  
- データ接続とデータ ソースについて説明します。  
-  
- [レポート埋め込みデータセットと共有データセット (レポート ビルダーおよび SSRS)](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)  
- 埋め込みデータセットと共有データセットについて説明します。  
-  
- [データセット フィールド コレクション (レポート ビルダーおよび SSRS)](../../reporting-services/report-data/dataset-fields-collection-report-builder-and-ssrs.md)  
- クエリによって生成されるデータセット フィールド コレクションについて説明します。  
-  
- [Reporting Services でサポートされるデータ ソース &#40;SSRS&#41;](../../reporting-services/report-data/data-sources-supported-by-reporting-services-ssrs.md) ([!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [オンライン ブックの [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] ドキュメント](https://go.microsoft.com/fwlink/?linkid=121312))。  
- 各データ拡張機能のプラットフォームおよびバージョン サポートに関する詳細な情報です。  
-  
-  
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>参照
+
  [レポート パラメーター (レポート ビルダーおよびレポート デザイナー)](../../reporting-services/report-design/report-parameters-report-builder-and-report-designer.md)   
  [データのフィルター、グループ化、および並べ替え (レポート ビルダーおよび SSRS)](../../reporting-services/report-design/filter-group-and-sort-data-report-builder-and-ssrs.md)   
  [式 &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/expressions-report-builder-and-ssrs.md)  

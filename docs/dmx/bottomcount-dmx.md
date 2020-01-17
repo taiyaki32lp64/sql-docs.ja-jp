@@ -1,5 +1,5 @@
 ---
-title: BottomCount (DMX) |Microsoft Docs
+title: 下端のカウント (DMX) |Microsoft Docs
 ms.date: 06/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -8,13 +8,12 @@ ms.topic: conceptual
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-manager: kfile
-ms.openlocfilehash: 382cfe7e7ce77fec66d2b9e5b370f397abd14dce
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.openlocfilehash: 0bbd80998f7a6fd74f76f641cc16fe81ba715dde
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51602912"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68889848"
 ---
 # <a name="bottomcount-dmx"></a>BottomCount (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -29,18 +28,18 @@ BottomCount(<table expression>, <rank expression>, <count>)
 ```  
   
 ## <a name="applies-to"></a>適用対象  
- など、テーブルを返す式、\<テーブルの列参照 >、またはテーブルを返す関数。  
+ テーブル列参照 > などのテーブルを返す\<式、またはテーブルを返す関数。  
   
 ## <a name="return-type"></a>戻り値の型  
- \<テーブル式 >  
+ \<テーブル式の >  
   
 ## <a name="remarks"></a>コメント  
- によって指定された値、\<式をランク付け > 引数で指定される行のランクの増加順を決定、\<テーブル式 > 引数とで指定されている最下位行の数、\<count > 引数が返されます。  
+ \<Rank expression > 引数によって指定された値によって、 \<テーブル式 > 引数に指定された行のランクの増加順序と、に指定されている最下位行の数が決定されます。\<カウント > 引数が返されます。  
   
 ## <a name="examples"></a>使用例  
- 次の例を使用して作成した Association モデルに対する予測クエリの作成、 [Basic Data Mining Tutorial](https://msdn.microsoft.com/library/6602edb6-d160-43fb-83c8-9df5dddfeb9c)します。  
+ 次の例では、「[基本的なデータマイニングチュートリアル](https://msdn.microsoft.com/library/6602edb6-d160-43fb-83c8-9df5dddfeb9c)」を使用して作成したアソシエーションモデルに対して予測クエリを作成します。  
   
- BottomCount のしくみを理解するのには、最初に、入れ子になったテーブルのみを返す予測クエリを実行に役立つ場合があります。  
+ 下位カウントのしくみを理解するために、入れ子になったテーブルのみを返す予測クエリを最初に実行すると便利な場合があります。  
   
 ```  
 SELECT Predict ([Association].[v Assoc Seq Line Items], INCLUDE_STATISTICS, 10)  
@@ -51,7 +50,7 @@ SELECT (SELECT 'Women''s Mountain Shorts' as [Model]) AS [v Assoc Seq Line Items
 ```  
   
 > [!NOTE]  
->  この例では、入力値として指定された値には単一引用符が含まれているため、この単一引用符の前にもう 1 つ単一引用符に追加してエスケープする必要があります。 エスケープ文字を挿入するための構文がわからない場合は、予測クエリ ビルダーを使用してクエリを作成できます。 ドロップダウン リストから値を選択すると、必要なエスケープ文字が挿入されます。 詳細については、次を参照してください。[データ マイニング デザイナーで単一クエリの作成](../analysis-services/data-mining/create-a-singleton-query-in-the-data-mining-designer.md)です。  
+>  この例では、入力値として指定された値には単一引用符が含まれているため、この単一引用符の前にもう 1 つ単一引用符に追加してエスケープする必要があります。 エスケープ文字を挿入するための構文がわからない場合は、予測クエリ ビルダーを使用してクエリを作成できます。 ドロップダウン リストから値を選択すると、必要なエスケープ文字が挿入されます。 詳細については、「[データマイニングデザイナーでの単一クエリの作成](https://docs.microsoft.com/analysis-services/data-mining/create-a-singleton-query-in-the-data-mining-designer)」を参照してください。  
   
  例の結果を次に示します。  
   
@@ -68,7 +67,7 @@ SELECT (SELECT 'Women''s Mountain Shorts' as [Model]) AS [v Assoc Seq Line Items
 |Mountain Bottle Cage|1367|0.091874454|0.087780332|  
 |Road Bottle Cage|1195|0.080314537|0.077173962|  
   
- BottomCount 関数は、このクエリの結果を受け取り、その合計の最小値を持つ行を指定した割合を返します。  
+ 下端のカウント関数は、このクエリの結果を取得し、指定した割合に合計する最小値の行を返します。  
   
 ```  
 SELECT   
@@ -83,11 +82,11 @@ NATURAL PREDICTION JOIN
 (SELECT (SELECT 'Women''s Mountain Shorts' as [Model]) AS [v Assoc Seq Line Items]) AS t  
 ```  
   
- BottomCount 関数の最初の引数は、テーブルの列の名前です。 この例では、Predict 関数を呼び出すと、INCLUDE_STATISTICS 引数を使用して入れ子になったテーブルが返されます。  
+ 最優先カウント関数の最初の引数は、テーブル列の名前です。 この例では、Predict 関数を呼び出し、INCLUDE_STATISTICS 引数を使用して、入れ子になったテーブルが返されます。  
   
- BottomCount 関数は、2 番目の引数は、結果の順序を使用する入れ子になったテーブル列です。 この例では、INCLUDE_STATISTICS オプションによって $SUPPORT 列、$PROBABILTY 列、および $ADJUSTED PROBABILITY 列が返されます。 この例では、$SUPPORT を使用しています。サポート値は小数ではないため、検証しやすいからです。  
+ 下方向カウント関数の2番目の引数は、結果の並べ替えに使用する入れ子になったテーブルの列です。 この例では、INCLUDE_STATISTICS オプションによって $SUPPORT 列、$PROBABILTY 列、および $ADJUSTED PROBABILITY 列が返されます。 この例では、$SUPPORT を使用しています。サポート値は小数ではないため、検証しやすいからです。  
   
- BottomCount 関数の 3 番目の引数には、行の数を指定します。 $SUPPORT で順位が付けられた、最下位 3 つの行を取得するには、「3」と入力します。  
+ 下の3番目の引数は、行の数を指定します。 $SUPPORT で順位が付けられた、最下位 3 つの行を取得するには、「3」と入力します。  
   
  例の結果を次に示します。  
   
@@ -97,12 +96,12 @@ NATURAL PREDICTION JOIN
 |Mountain Bottle Cage|1367|0.091874454|0.087780332|  
 |Fender Set - Mountain|1415|0.095100477|0.090718432|  
   
- **注**BottomCount の使用を示すためにのみこの例が提供されます。 データセットのサイズに応じて、このクエリの実行には長い時間がかかる場合があります。  
+ **メモ**この例は、下端の使用方法を示すためだけに提供されています。 データセットのサイズに応じて、このクエリの実行には長い時間がかかる場合があります。  
   
 ## <a name="see-also"></a>参照  
- [関数&#40;DMX&#41;](../dmx/functions-dmx.md)   
- [一般的な予測関数&#40;DMX&#41;](../dmx/general-prediction-functions-dmx.md)   
- [BottomPercent &#40;DMX&#41;](../dmx/bottompercent-dmx.md)   
+ [DMX &#40;関数&#41;](../dmx/functions-dmx.md)   
+ [一般的な予測&#40;関数 DMX&#41;](../dmx/general-prediction-functions-dmx.md)   
+ [DMX の&#40;割合&#41;](../dmx/bottompercent-dmx.md)   
  [BottomSum &#40;DMX&#41;](../dmx/bottomsum-dmx.md)   
  [TopCount &#40;DMX&#41;](../dmx/topcount-dmx.md)  
   

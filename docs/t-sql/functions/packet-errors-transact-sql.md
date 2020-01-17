@@ -19,15 +19,14 @@ helpviewer_keywords:
 - networking [SQL Server], packet errors
 - connections [SQL Server], packets
 ms.assetid: f7da1b80-5cbe-42fa-be71-40c6af16383a
-author: MashaMSFT
-ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 70ca00e7a75016db53ee5277034fb09f8a8e9ea1
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: VanMSFT
+ms.author: vanto
+ms.openlocfilehash: a71d0fd96519550d52016bf8e951e18755b3c341
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47804230"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67914442"
 ---
 # <a name="x40x40packeterrors-transact-sql"></a>&#x40;&#x40;PACKET_ERRORS (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

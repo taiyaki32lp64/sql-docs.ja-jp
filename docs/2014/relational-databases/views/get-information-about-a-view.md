@@ -22,11 +22,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: f439a52c1f2d13ed3d3d7fc96030df9c6e020b2e
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52528440"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68211644"
 ---
 # <a name="get-information-about-a-view"></a>ビューに関する情報の取得
   [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] のビューの定義またはプロパティに関する情報は、[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] または [!INCLUDE[tsql](../../includes/tsql-md.md)] を使用して取得できます。 ビューのデータが元のテーブルからどのように抽出されているのかを理解したり、ビューで定義されているデータを確認するために、ビューの定義を調べたい場合があります。  
@@ -69,7 +69,7 @@ ms.locfileid: "52528440"
      **[サーバー]**  
      現在のサーバー インスタンスの名前です。  
   
-     **ユーザー**  
+     **User**  
      この接続のユーザーの名前です。  
   
      **[作成日]**  
@@ -140,7 +140,7 @@ ms.locfileid: "52528440"
      SQL ステートメントの説明を表示します。 説明全体を表示したり、説明を編集したりするには、説明をクリックして、プロパティの右側にある省略記号 ( **[...]** ) をクリックします。 ビューの使用者やビューをいつ使用するかなどの情報をコメントに含めることもできます。  
   
      **[TOP の指定]**  
-     展開すると、 **[TOP]**、 **[式]**、 **[パーセント]**、および **[With Ties]** の各プロパティのプロパティが表示されます。  
+     展開すると、 **[TOP]** 、 **[式]** 、 **[パーセント]** 、および **[With Ties]** の各プロパティのプロパティが表示されます。  
   
      **[(Top)]**  
      ビューに TOP 句が含まれるように指定します。この場合、最初の n 行または最初の n% の行だけが結果セットに返されます。 既定では、ビューは最初の 10 行を結果セットに返します。 返される行数を変更するか、異なるパーセントを指定する場合に使用します。  

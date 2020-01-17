@@ -2,18 +2,18 @@
 title: Multilookup 関数 (レポート ビルダーおよび SSRS) | Microsoft Docs
 ms.date: 03/07/2017
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: report-design
 ms.topic: conceptual
 ms.assetid: 1fec079e-33b3-4e4d-92b3-6b4d06a49a77
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: c0425be1f799a078a22965150e10525780e5b687
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 1631f5f07c26e8b57cf8bc977ef6d6ccf4b3ae48
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56287450"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65577143"
 ---
 # <a name="report-builder-functions---multilookup-function"></a>レポート ビルダー関数 - Multilookup 関数
   名前と値のペアを含むデータセットから、指定された名前のセットに最初に一致した値のセットを返します。  
@@ -36,7 +36,7 @@ Multilookup(source_expression, destination_expression, result_expression, datase
  (**Variant**) データセット内の各行に対して評価される式。照合する名前またはキーを指定します。 たとえば、 `=Fields!ID.Value`のようにします。  
   
  *result_expression*  
- (**Variant**) *source_expression* = *destination_expression*であるデータセットの行で評価され、取得する値を指定する式。 たとえば、`=Fields!Name.Value` のようにします。  
+ (**Variant**) *source_expression* = *destination_expression*であるデータセットの行で評価され、取得する値を指定する式。 たとえば、`=Fields!Name.Value` のようになります。  
   
  *データセット (dataset)*  
  レポート内のデータセットの名前を指定する定数。 たとえば、"Colors" と指定します。  

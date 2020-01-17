@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 ms.assetid: 5ddc97a7-7ee5-475d-bc49-3b814dce7e19
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 44b196d9c8ff508e6a878d51000bea95d8011907
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: df796e2dd4e132164f00716a9cb12f7b498d8984
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56293921"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66108078"
 ---
 # <a name="plan-for-map-report-support"></a>マップ レポートのサポートを計画する
   [!INCLUDE[ssRSCurrent](../includes/ssrscurrent-md.md)] 空間データ ソースを使用するマップ レポートをサポートしています。 空間データは、SQL Server データベース、ESRI シェープファイル、または Reporting Services かレポート ビルダーを使用してインストールされたマップ ギャラリーから取得できます。 また、マップには Bing のマップ タイルの背景も表示できます。 レポート作成者には、動的と実行時に取得した、または静的と、レポート定義に埋め込まれたとして空間データまたは Bing のマップ タイルを示すレポートを作成できます。  
@@ -51,6 +50,6 @@ ms.locfileid: "56293921"
  詳細については、[マップ&#40;レポート ビルダーおよび SSRS&#41;](report-design/maps-report-builder-and-ssrs.md)します。  
   
 ## <a name="see-also"></a>参照  
- [レポートのトラブルシューティング: マップ レポート&#40;レポート ビルダーおよび SSRS&#41;](report-design/troubleshoot-reports-map-reports-report-builder-and-ssrs.md)  
+ [レポートのトラブルシューティング: マップ レポート &#40;レポート ビルダーおよび SSRS&#41;](report-design/troubleshoot-reports-map-reports-report-builder-and-ssrs.md)  
   
   

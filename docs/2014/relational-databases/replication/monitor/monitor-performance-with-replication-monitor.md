@@ -20,11 +20,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: e69b1d6ca838334c36ff94037473e5fda45cce43
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54126422"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62667218"
 ---
 # <a name="monitor-performance-with-replication-monitor"></a>レプリケーション モニターを使用したパフォーマンスの監視
   [!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] &#xA0;レプリケーション モニターを使用すると、トランザクション レプリケーションとマージ レプリケーションのパフォーマンスを次の方法で監視できます。  
@@ -85,16 +85,16 @@ ms.locfileid: "54126422"
     |---------------|----------|----------|----------|  
     |151+%|76 - 150%|26 - 75%|0 - 25%|  
   
- サブスクリプション情報を表示する方法についての詳細については、次を参照してください。[情報を表示し、レプリケーション モニターを使用してタスクを実行する](view-information-and-perform-tasks-replication-monitor.md)します。  
+ サブスクリプション情報の表示に関する詳細については、「[レプリケーション モニターを使用して情報を表示し、タスクを実行する](view-information-and-perform-tasks-replication-monitor.md)」を参照してください。  
   
 ## <a name="determine-latency-with-tracer-tokens"></a>トレーサー トークンによる待機時間の判断  
  トランザクション レプリケーションでは、パブリケーション データベースのトランザクション ログにトークン (少量のデータ) を挿入し、それがディストリビューターおよびサブスクライバーに到達するまでにかかった時間を記録することにより、システムの待機時間を計測できます。 このトークンを使用すると、データがディストリビューターまたはサブスクライバーに到達しているかどうかを識別することもできます。 詳細については、「 [トランザクション レプリケーションの待機時間の計測および接続の検証](measure-latency-and-validate-connections-for-transactional-replication.md)」を参照してください。  
   
 ## <a name="view-detailed-synchronization-performance-for-merge-replication"></a>マージ レプリケーションの詳細な同期パフォーマンスの表示  
- マージ レプリケーションの場合、レプリケーション モニターには、同期中に処理される各アーティクルの詳細な統計情報が表示されます。この統計には、各処理フェーズ (変更のアップロードやダウンロードなど) にかかる時間などが含まれます。 この情報によって、速度低下の原因となっているテーブルを特定することができます。マージ サブスクリプションのパフォーマンスに関するトラブルシューティングを、この情報から開始することをお勧めします。 詳細な統計情報を表示する方法の詳細については、次を参照してください。[情報を表示し、レプリケーション モニターを使用してタスクを実行する](view-information-and-perform-tasks-replication-monitor.md)します。  
+ マージ レプリケーションの場合、レプリケーション モニターには、同期中に処理される各アーティクルの詳細な統計情報が表示されます。この統計には、各処理フェーズ (変更のアップロードやダウンロードなど) にかかる時間などが含まれます。 この情報によって、速度低下の原因となっているテーブルを特定することができます。マージ サブスクリプションのパフォーマンスに関するトラブルシューティングを、この情報から開始することをお勧めします。 詳細な統計情報を表示する方法について詳しくは、「[レプリケーション モニターを使用して情報を表示し、タスクを実行する](view-information-and-perform-tasks-replication-monitor.md)」を参照してください。  
   
 ## <a name="view-transactions-and-delivery-time-for-transactional-replication"></a>トランザクション レプリケーションのトランザクションおよび配信時間の表示  
- トランザクション レプリケーションの場合、レプリケーション モニターには、サブスクライバーにまだ配布されていないディストリビューション データベース内のトランザクションの数と、これらのトランザクションの予測配布時間が表示されます。 詳細については、次を参照してください。[情報を表示し、レプリケーション モニターを使用してタスクを実行する](view-information-and-perform-tasks-replication-monitor.md)します。  
+ トランザクション レプリケーションの場合、レプリケーション モニターには、サブスクライバーにまだ配布されていないディストリビューション データベース内のトランザクションの数と、これらのトランザクションの予測配布時間が表示されます。 詳細については、「[レプリケーション モニターを使用して情報を表示し、タスクを実行する](view-information-and-perform-tasks-replication-monitor.md)」を参照してください。  
   
 ## <a name="see-also"></a>参照  
  [レプリケーションの監視](../monitoring-replication.md)   

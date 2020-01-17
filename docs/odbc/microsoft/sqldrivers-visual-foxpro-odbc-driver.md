@@ -12,21 +12,20 @@ helpviewer_keywords:
 ms.assetid: 179b11e0-665f-45a2-b926-c3d870a0dab8
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 211f51b076789209d14e79d3f357ff632f58e61f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 809ea368225809fa88e6902dd6f437ee81cb39d2
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47695047"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68053869"
 ---
 # <a name="sqldrivers-visual-foxpro-odbc-driver"></a>SQLDrivers (Visual FoxPro ODBC ドライバー)
 > [!NOTE]  
 >  このトピックでには、Visual FoxPro ODBC ドライバー固有の情報が含まれています。 この関数の詳細については、該当するトピックを参照してください。 [ODBC API リファレンス](../../odbc/reference/syntax/odbc-api-reference.md)します。  
   
- サポート: 完全な  
+ サポート:[完全]  
   
- ODBC API 準拠: レベル 2  
+ ODBC API 準拠:レベル 2  
   
  ドライバーの説明とドライバー属性のキーワードの一覧を表示します。  
   

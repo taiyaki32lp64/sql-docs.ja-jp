@@ -13,11 +13,11 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: 19e6683baeb0a82c77a858b04f18695ba7120b15
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48217637"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63250131"
 ---
 # <a name="inserting-and-updating-data-in-a-table-tutorial"></a>テーブルのデータの挿入と更新 (チュートリアル)
   **Products** テーブルを作成したので、INSERT ステートメントを使用してデータをテーブルに挿入する準備ができました。 データを挿入した後は、UPDATE ステートメントを使用して行の内容を変更します。 更新を 1 つの行に制限するには、UPDATE ステートメントの WHERE 句を使用します。 4 つのステートメントによって、次のデータが入力されます。  
@@ -29,7 +29,7 @@ ms.locfileid: "48217637"
 |75|Tire Bar||Tool for changing tires|  
 |3000|3mm Bracket|.52||  
   
- 基本的な構文は、INSERT、テーブル名、列一覧、VALUES、および挿入する値の一覧です。 行の先頭にある 2 つのハイフンは、その行がコメントであることを示します。この行のテキストはコンパイラによって無視されます。 この場合、コメントは構文に許可されているバリエーションを記述します。  
+ 基本構文は次のとおりです。INSERT、テーブル名、列リスト、値、およびし、値のリストを挿入します。 行の先頭にある 2 つのハイフンは、その行がコメントであることを示します。この行のテキストはコンパイラによって無視されます。 この場合、コメントは構文に許可されているバリエーションを記述します。  
   
 ### <a name="to-insert-data-into-a-table"></a>データをテーブルに挿入するには  
   
@@ -84,9 +84,9 @@ ms.locfileid: "48217637"
     ```  
   
 ## <a name="next-task-in-lesson"></a>このレッスンの次の作業  
- [テーブル内のデータの読み取り&#40;チュートリアル&#41;](lesson-1-4-reading-the-data-in-a-table.md)  
+ [テーブルのデータの読み取り (チュートリアル)](lesson-1-4-reading-the-data-in-a-table.md)  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [INSERT &#40;Transact-SQL&#41;](/sql/t-sql/statements/insert-transact-sql)   
  [UPDATE &#40;Transact-SQL&#41;](/sql/t-sql/queries/update-transact-sql)  
   

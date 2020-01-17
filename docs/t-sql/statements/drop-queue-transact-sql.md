@@ -21,16 +21,15 @@ helpviewer_keywords:
 ms.assetid: fd866520-ca00-477d-b2e9-0110e9610ed4
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: b9c8d95cec73c09b59a1d2045961fb1707f0d92c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 2854cca3e231c479675a06857e24c3e09cfd8762
+ms.sourcegitcommit: a97d551b252b76a33606348082068ebd6f2c4c8c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47698640"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70745336"
 ---
 # <a name="drop-queue-transact-sql"></a>DROP QUEUE (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
 
   既存のキューを削除します。  
   
@@ -44,21 +43,18 @@ DROP QUEUE <object>
 [ ; ]  
   
 <object> ::=  
-{  
-    [ database_name . [ schema_name ] . | schema_name . ]  
-        queue_name  
-}  
+{ database_name.schema_name.queue_name | schema_name.queue_name | queue_name }
 ```  
   
 ## <a name="arguments"></a>引数  
  *database_name*  
- 削除するキューを含むデータベースの名前を指定します。 *database_name* を指定しない場合、既定では現在のデータベースが使用されます。  
+ 削除するキューを含むデータベースの名前。 *database_name* を指定しない場合、既定では現在のデータベースが使用されます。  
   
  *schema_name (object)*  
  削除するキューを所有するスキーマの名前を指定します。 *schema_name* を指定しない場合、既定では現在のユーザーに関する既定のスキーマが使用されます。  
   
  *queue_name*  
- 削除するキューの名前を指定します。  
+ 削除するキューの名前。  
   
 ## <a name="remarks"></a>Remarks  
  サービスでキューが参照されている場合は、キューを削除できません。  

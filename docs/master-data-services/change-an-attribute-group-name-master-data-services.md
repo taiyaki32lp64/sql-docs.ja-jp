@@ -1,5 +1,5 @@
 ---
-title: 属性グループ名を変更する (マスター データ サービス) | Microsoft Docs
+title: 属性グループ名を変更する
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -10,15 +10,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - attribute groups [Master Data Services], changing name
 ms.assetid: 79510fcf-4c83-4426-bdd4-15b4170ecfbd
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 14d5a145bcf98c606bfebbc872c84a3b76a8d74b
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
-ms.translationtype: HT
+ms.openlocfilehash: 115cb0011be22e482e6d8d8e032d8db21246bbd9
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52785384"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73729704"
 ---
 # <a name="change-an-attribute-group-name-master-data-services"></a>属性グループ名を変更する (マスター データ サービス)
 
@@ -31,7 +30,7 @@ ms.locfileid: "52785384"
   
 -   **[システム管理]** 機能領域にアクセスする権限が必要です。  
   
--   モデル管理者である必要があります。 詳細については、「 [管理者 (マスター データ サービス)](../master-data-services/administrators-master-data-services.md)にアクセスすることなくグループに対してユーザーの追加または削除を行うことができます。  
+-   モデル管理者である必要があります。 詳細については、「[Administrators &#40;Master Data Services&#41; (管理者 &#40;マスター データ サービス&#41;)](../master-data-services/administrators-master-data-services.md)」を参照してください。  
   
 ### <a name="to-change-an-attribute-group-name"></a>属性グループ名を変更するには  
   
@@ -43,7 +42,7 @@ ms.locfileid: "52785384"
   
 4.  **[属性グループ]** をクリックします。  
   
-5.  **[属性グループの管理]** ページで、 **[メンバーの種類]** ドロップダウン リストからメンバーの種類を選択し、更新するグループの種類に応じて **[リーフ]**、 **[統合]**、 **[コレクション]** を展開します。  
+5.  **[属性グループの管理]** ページで、 **[メンバーの種類]** ドロップダウン リストからメンバーの種類を選択し、更新するグループの種類に応じて **[リーフ]** 、 **[統合]** 、 **[コレクション]** を展開します。  
   
 6.  更新する属性グループの名前をクリックし、 **[編集]** をクリックします。  
   

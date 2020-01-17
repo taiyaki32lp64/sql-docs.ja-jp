@@ -11,17 +11,20 @@ helpviewer_keywords:
 - hexadecimal data
 - HEX function
 ms.assetid: f5d471ee-aeef-421c-b6e1-55b9676c3842
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: 7b17dbcb21362a60ed9076134256ec99f3c264a8
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: c28f8dbaa649e0755c6f18f7cc0f1485f022e4a6
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52517988"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71289558"
 ---
 # <a name="hex-ssis-expression"></a>HEX (SSIS 式)
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   整数の 16 進値を表す文字列を返します。  
   
 ## <a name="syntax"></a>構文  

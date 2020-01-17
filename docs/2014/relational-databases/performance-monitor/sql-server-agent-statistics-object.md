@@ -14,11 +14,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 34539c79bc0e2d90841837abef895bdceb2eb20d
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52801454"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63250851"
 ---
 # <a name="sql-server-agent-statistics-object"></a>SQL Server エージェントの Statistics オブジェクト
   SQL Server エージェントの **Statistics** パフォーマンス オブジェクトには、SQL Server エージェントに関する情報を報告するパフォーマンス カウンターが含まれています。  

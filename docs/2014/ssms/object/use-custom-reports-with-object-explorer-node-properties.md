@@ -12,18 +12,16 @@ ms.assetid: c7b84355-71ba-402d-85af-23826f18b7da
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 09f3cf66d28a70eecd82adde490d02b521fd80ed
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 5941b15c0aea7319d132e05b902133d3d8b986fa
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53374404"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62823699"
 ---
 # <a name="use-custom-reports-with-object-explorer-node-properties"></a>カスタム レポートでのオブジェクト エクスプローラー ノード プロパティの使用
   オブジェクト エクスプローラーで選択されているノードのレポート パラメーターがカスタム レポートで参照されていれば、そのノードのコンテキストでカスタム レポートを実行できます。 これにより、カスタム レポートで現在のコンテキスト (現在のデータベースなど)、またはデータベース オブジェクトやサーバー オブジェクトを使用できるようになります。  
   
-## <a name="report-samples"></a>サンプル レポート  
- [サンプル レポート](https://go.microsoft.com/fwlink/?LinkId=81792)( [!INCLUDE[msCoName](../../includes/msconame-md.md)]で作成された標準レポートを含む) をダウンロードできます。 サンプルは [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]を使用して変更することができます。  
   
 ## <a name="object-explorer-node-report-parameters"></a>オブジェクト エクスプローラー ノードのレポート パラメーター  
   

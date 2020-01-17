@@ -10,14 +10,14 @@ helpviewer_keywords:
 - historical data [Reporting Services]
 - methods [Reporting Services], report history
 ms.assetid: ebfb4834-5445-480c-9a51-6868c60308af
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 7e6e1f0b01e02c714aa4311e45bcbe6667b3af79
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: a7690e7d703ad5d7973d276741b40c7765d39b3d
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47848070"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63284439"
 ---
 # <a name="report-history-methods"></a>レポート履歴メソッド
   以下のメソッドを使用してアイテム履歴スナップショットを作成し、管理できます。  

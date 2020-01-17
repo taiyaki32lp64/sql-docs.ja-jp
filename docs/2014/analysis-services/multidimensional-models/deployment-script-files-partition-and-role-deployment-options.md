@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - input files [Analysis Services]
@@ -23,12 +22,12 @@ ms.assetid: e9b9ca57-a5cc-4fc0-87b5-305257038d56
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 66c2683bd383ebd3d0a9278cb008b6909dc80007
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: b9b36013f13360a2afcf9546cd1e286b35ae4acd
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52527118"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66075352"
 ---
 # <a name="specifying-partition-and-role-deployment-options"></a>パーティションおよびロールの配置オプションの指定
   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]展開ウィザードからのパーティションおよびロールの配置オプションを読み取り、 \<*プロジェクト名*> >.deploymentoptions ファイル。 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] は、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] プロジェクトの作成時にこのファイルを作成します。 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 使用して、現在のパーティションおよびロールの配置オプション時にプロジェクト、 \<*プロジェクト名*> >.deploymentoptions ファイルを作成します。 構成設定の詳細については、「 [配置スクリプトを作成するための入力ファイルについて](deployment-script-files-input-used-to-create-deployment-script.md)」を参照してください。  
@@ -62,15 +61,15 @@ ms.locfileid: "52527118"
   
 -   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 配置ウィザードを対話形式で実行し、 **[パーティションとロールのオプションの指定]** ページで、パーティションおよびロールの新しい配置オプションを指定します。  
   
-     - または -  
+     \- または -  
   
 -   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 配置ウィザードをコマンド プロンプトで実行し、ウィザードを応答ファイル モードで実行するように設定します。 (応答ファイル モードの詳細については、「 [Analysis Services 配置ウィザードの実行](running-the-analysis-services-deployment-wizard.md)」を参照してください。)  
   
-     - または -  
+     \- または -  
   
 -   開く、 \<*プロジェクト名*> >.deploymentoptions 任意のテキスト エディターを手動でオプションを変更します。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [インストール先の指定](deployment-script-files-specifying-the-installation-target.md)   
  [ソリューションの配置に関する構成設定の指定](deployment-script-files-solution-deployment-config-settings.md)   
  [処理オプションの指定](deployment-script-files-specifying-processing-options.md)  

@@ -1,5 +1,5 @@
 ---
-title: マスター データ サービスの機能とタスク | Microsoft Docs
+title: 機能とタスク
 ms.custom: ''
 ms.date: 04/01/2016
 ms.prod: sql
@@ -8,15 +8,14 @@ ms.reviewer: ''
 ms.technology: master-data-services
 ms.topic: conceptual
 ms.assetid: 19519697-c219-44a8-9339-ee1b02545445
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: d78afd9c3206a5b2b8cd04482ac891f9aae87f0c
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
-ms.translationtype: HT
+ms.openlocfilehash: 95c29509d9b08390a21598c94cdb64ccdd92cf36
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52794744"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73728030"
 ---
 # <a name="master-data-services-features-and-tasks"></a>マスター データ サービスの機能とタスク
 
@@ -64,9 +63,9 @@ ms.locfileid: "52794744"
   
 ## <a name="move-data"></a>データの移動  
   
--   [概要:テーブルからデータをインポートする (マスター データ サービス)](../master-data-services/overview-importing-data-from-tables-master-data-services.md)  
+-   [概要: テーブルからデータをインポートする (マスター データ サービス)](../master-data-services/overview-importing-data-from-tables-master-data-services.md)  
   
--   [概要:データのエクスポート (マスター データ サービス)](../master-data-services/overview-exporting-data-master-data-services.md)  
+-   [概要: データのエクスポート (マスター データ サービス)](../master-data-services/overview-exporting-data-master-data-services.md)  
   
 -   [モデルの配置 (マスター データ サービス)](../master-data-services/deploying-models-master-data-services.md)  
   

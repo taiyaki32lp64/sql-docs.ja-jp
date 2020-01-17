@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 481dcc93-487b-490e-ac58-a1e9b2ebfd43
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 61fa4619bd70b170f13dbc879748364f019f8bdd
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 48b1c90b59b220841aa45f618fdfda5ff2db82da
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47716300"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67920346"
 ---
 # <a name="bookmark-property-ado"></a>Bookmark プロパティ (ADO)
 ブックマークの現在のレコードを一意に識別することを示します、[レコード セット](../../../ado/reference/ado-api/recordset-object-ado.md)オブジェクトまたは現在のレコードを設定、**レコード セット**オブジェクトを有効なブックマークで識別されるレコード。  
@@ -44,7 +43,7 @@ ms.locfileid: "47716300"
 ## <a name="applies-to"></a>適用対象  
  [Recordset オブジェクト (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [BOF、EOF、および Bookmark プロパティの例 (VB)](../../../ado/reference/ado-api/bof-eof-and-bookmark-properties-example-vb.md)   
  [BOF、EOF、および Bookmark プロパティの例 (vc++)](../../../ado/reference/ado-api/bof-eof-and-bookmark-properties-example-vc.md)   
  [Supports メソッド](../../../ado/reference/ado-api/supports-method.md)

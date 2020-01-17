@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: a9f54be9-5763-45d0-a6eb-09981b03bc08
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 911509c62c5ae93bc73ca94469ac776195d2a8b1
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a2f9efa8f5042fab603c794edada5aacab001936
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47605880"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67921324"
 ---
 # <a name="addnew-method-ado"></a>AddNew メソッド (ADO)
 更新可能なに対して新しいレコードを作成します。 [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md)オブジェクト。  
@@ -86,7 +85,7 @@ rs.Update
 ## <a name="applies-to"></a>適用対象  
  [Recordset オブジェクト (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [AddNew メソッドの例 (VB)](../../../ado/reference/ado-api/addnew-method-example-vb.md)   
  [AddNew メソッドの例 (VBScript)](../../../ado/reference/ado-api/addnew-method-example-vbscript.md)   
  [AddNew メソッドの例 (vc++)](../../../ado/reference/ado-api/addnew-method-example-vc.md)   

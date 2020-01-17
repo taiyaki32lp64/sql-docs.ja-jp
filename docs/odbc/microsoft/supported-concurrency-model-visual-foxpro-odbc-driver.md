@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: c39ed963-3af1-4888-8631-6083692ddcd7
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: f8528ecb2f34d3f0ef7120c7047865ab5f6c1a72
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 597d1022fa6946e0ae768cb9600a3f4534c67a25
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47612670"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68080689"
 ---
 # <a name="supported-concurrency-model-visual-foxpro-odbc-driver"></a>サポートされているコンカレンシー モデル (Visual FoxPro ODBC ドライバー)
 Visual FoxPro ODBC ドライバーをサポートしています*読み取り専用の同時実行*します。 アプリケーションが呼び出すことができます[SQLSetStmtOption](../../odbc/microsoft/sqlsetstmtoption-visual-foxpro-odbc-driver.md) SQL_CONCUR_READ_ONLY の SQL_CONCURRENCY オプションを使用します。  

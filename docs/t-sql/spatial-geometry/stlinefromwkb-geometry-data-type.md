@@ -15,16 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - STLineFromWKB (geometry Data Type)
 ms.assetid: e674c8c4-c67f-4fc1-9873-d9c2ed46c659
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
+author: MladjoA
+ms.author: mlandzic
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: abf2f040a75a014dce3ab85291277171bca6554d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: fe1d58d14e6cb4e3ee5c8136cc8e71fb504fe3c9
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47815140"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67894876"
 ---
 # <a name="stlinefromwkb-geometry-data-type"></a>STLineFromWKB (geometry データ型)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-pdw-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-pdw-md.md)]
@@ -48,9 +47,9 @@ STLineFromWKB ( 'WKB_linestring' , SRID )
 ## <a name="return-types"></a>戻り値の型  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の戻り値の型: **geometry**  
   
- CLR の戻り値の型: **SqlGeometry**  
+ CLR の戻り値の型:**SqlGeometry**  
   
- OGC の型: **LineString**  
+ OGC の型:**LineString**  
   
 ## <a name="remarks"></a>Remarks  
  このメソッドでは、入力が正しい形式でない場合に、**FormatException** をスローします。  

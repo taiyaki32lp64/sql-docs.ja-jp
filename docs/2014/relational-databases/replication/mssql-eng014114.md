@@ -12,14 +12,14 @@ ms.assetid: f5f04590-e1c6-40d8-ab2b-98c791a0fc44
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: b9f8c468a3de4ce2d0e7e602e9244c23b6c06b8d
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 0afebe3d8e974ac4920a6f75bf544a13027b360e
+ms.sourcegitcommit: 495913aff230b504acd7477a1a07488338e779c6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52784884"
+ms.lasthandoff: 08/06/2019
+ms.locfileid: "68811003"
 ---
-# <a name="mssqleng014114"></a>MSSQL_ENG014114
+# <a name="mssql_eng014114"></a>MSSQL_ENG014114
     
 ## <a name="message-details"></a>メッセージの詳細  
   
@@ -50,7 +50,7 @@ ms.locfileid: "52784884"
   
      10.193.17.129 inst1  
   
--   ディストリビューションを無効化し、インスタンスを登録して、ディストリビューションを再設定してください。 @@SERVERNAME の値が、クラスター化されていないインスタンスに対して適切でない場合は、次の手順を実行してください。  
+-   ディストリビューションを無効化し、インスタンスを登録して、ディストリビューションを再設定してください。 クラスター化されて@SERVERNAMEいないインスタンスに対して @ の値が正しくない場合は、次の手順を実行します。  
   
     ```  
     sp_dropserver '<old_name>', 'droplogins'  
@@ -61,9 +61,9 @@ ms.locfileid: "52784884"
   
      [sp_addserver &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addserver-transact-sql) ストアド プロシージャを実行したら、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] サービスを再起動し、@@SERVERNAME への変更を有効にする必要があります。  
   
-     @@SERVERNAME の値がクラスター化されたインスタンスに対して適切でない場合は、クラスター アドミニストレーターを使用して名前を変更する必要があります。 詳細については、次を参照してください。 [ AlwaysOn フェールオーバー クラスター インスタンス (SQL Server)](../../sql-server/failover-clusters/windows/always-on-failover-cluster-instances-sql-server.md)します。  
+     @@SERVERNAME の値がクラスター化されたインスタンスに対して適切でない場合は、クラスター アドミニストレーターを使用して名前を変更する必要があります。 詳細については、「[Always On フェールオーバー クラスター インスタンス (SQL Server)](../../sql-server/failover-clusters/windows/always-on-failover-cluster-instances-sql-server.md)」を参照してください。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [エラーとイベントのリファレンス &#40;レプリケーション&#41;](errors-and-events-reference-replication.md)  
   
   

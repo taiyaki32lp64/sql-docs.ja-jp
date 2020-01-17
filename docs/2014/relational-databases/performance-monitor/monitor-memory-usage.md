@@ -24,24 +24,24 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: c8d7dc9fdf5a6cd6e52261c0d2327676db79508c
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52801564"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63239142"
 ---
 # <a name="monitor-memory-usage"></a>メモリ使用率の監視
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスを定期的に監視し、メモリ使用率が通常の範囲内であることを確認します。  
   
  メモリの少ない状況を監視するには、次のオブジェクト カウンターを使用します。  
   
--   **メモリ:Available Bytes**  
+-   **Memory:Available Bytes**  
   
--   **メモリ:ページ/秒**  
+-   **Memory:Pages/sec**  
   
  **Available Bytes** カウンターは、プロセスで現在使用できるメモリのバイト数を示します。 **Pages/sec** カウンターは、ハード ページ フォールトのためにディスクから取り出されたページ数や、ページ フォールトによって作業セット内の領域を解放するためにディスクに書き込まれたページ数を示します。  
   
- **Available Bytes** カウンターの値が低い場合、コンピューターのメモリが全体的に不足しているか、アプリケーションがメモリを解放していないことが考えられます。 **Pages/sec** カウンターの値が高い場合、ページングが過剰であることが考えられます。 モニター、**メモリ。Page faults/sec**カウンターは、ディスク利用状況がページングによるものかどうかを確認します。  
+ **Available Bytes** カウンターの値が低い場合、コンピューターのメモリが全体的に不足しているか、アプリケーションがメモリを解放していないことが考えられます。 **Pages/sec** カウンターの値が高い場合、ページングが過剰であることが考えられます。 ディスク利用状況がページングによるものかどうかを確認するには、**Memory:Page Faults/sec** カウンターを監視します。  
   
  コンピューターに十分なメモリがある場合でも、ページングとページ フォールトが低い率で発生することは問題ではありません。 Microsoft Windows Virtual Memory Manager (VMM) では、プロセスの作業セットのサイズを小さくするときに、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] と他のプロセスからページを取得します。 この VMM の動作が、ページ フォールトの原因になる場合があります。 確認するかどうか[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]または別のプロセスが過剰なページング、モニターの原因、**プロセス。Page faults/sec**カウンターを[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]プロセスのインスタンス。  
   
@@ -52,13 +52,13 @@ ms.locfileid: "52801564"
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] で使用されるメモリの量を監視するには、次のパフォーマンス カウンターを調べます。  
   
--   **プロセス:ワーキング セット**  
+-   **Process:Working Set**  
   
--   **SQL Server:Buffer Manager:バッファー キャッシュ ヒット率**  
+-   **SQL Server:バッファー マネージャー:Buffer Cache Hit Ratio**  
   
--   **SQL Server:Buffer Manager:データベース ページ**  
+-   **SQL Server:バッファー マネージャー:Database Pages**  
   
--   **SQL Server:Memory Manager:合計サーバー メモリ (KB)**  
+-   **SQL Server:メモリ マネージャー:Total Server Memory (KB)**  
   
  **WorkingSet** カウンターは、プロセスが使用しているメモリの量を示します。 この数値が **min server memory** および **max server memory** サーバー オプションで設定したメモリの量を常に下回っている場合、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] は過剰なメモリを使用するように構成されています。  
   

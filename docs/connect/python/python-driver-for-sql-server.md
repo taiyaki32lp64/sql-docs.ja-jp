@@ -1,5 +1,5 @@
 ---
-title: Python Driver for SQL Server |Microsoft Docs
+title: Python Driver for SQL Server | Microsoft Docs
 ms.custom: ''
 ms.date: 08/08/2017
 ms.prod: sql
@@ -10,36 +10,35 @@ ms.topic: conceptual
 ms.assetid: 3a1568d1-917b-46d3-b5cb-facdc740408f
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 280667787916beade901c704c4679a14f689db6b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ccd2ce331f6e88933ff546c18446b5edbc956511
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47784800"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67935675"
 ---
 # <a name="python-sql-driver"></a>Python SQL ドライバー
 
-![ダウンロード下方向丸](../../ssdt/media/download.png)[for Python SQL ドライバーをインストールするには](../sql-connection-libraries.md#anchor-20-drivers-relational-access)
+![ダウンロード-DownArrow-](../../ssdt/media/download.png)[SQL driver For Python をインストールするための](../sql-connection-libraries.md#anchor-20-drivers-relational-access)丸
 
-Windows、Linux、またはファルダに Python を使用して SQL Database に接続することができます。   
+Windows、Linux、または Mac で Python を使用して、SQL Database に接続できます。   
   
 ## <a name="getting-started"></a>作業の開始  
-いくつかの python SQL ドライバーは使用できます。 Microsoft がそのテストの作業とで自信の強化を配置するただし、 **pyodbc**ドライバー。 ドライバーを選択し、それに応じて、開発環境を構成します。
+使用できる python SQL ドライバーはいくつかあります。 ただし、マイクロソフトは、 **pyodbc**ドライバーにテスト作業とその信頼を置きます。 ドライバーを選択し、それに応じて開発環境を構成します。
 * [Python SQL ドライバー - pyodbc](pyodbc/python-sql-driver-pyodbc.md)
 * [Python SQL ドライバー - pymssql](pymssql/python-sql-driver-pymssql.md)
   
 ## <a name="documentation"></a>ドキュメント  
-* [Python.org で Python のドキュメント](https://www.python.org/doc/)  
+* [Python.org の Python ドキュメント](https://www.python.org/doc/)  
   
 ## <a name="community"></a>コミュニティ  
-* [Azure Python デベロッパー センター](https://azure.microsoft.com/develop/python/)  
+* [Azure Python デベロッパーセンター](https://azure.microsoft.com/develop/python/)  
 * [python.org コミュニティ](https://www.python.org/community/)  
   
 ## <a name="more-samples"></a>その他のサンプル  
-* [DJango と Azure の web サイトで SQL Database を使用して Python web アプリを作成します。](https://github.com/Microsoft/PTVS/wiki/Django-and-SQL-Database-on-Azure)
-* [Windows 上の Python の概要](https://www.microsoft.com/sql-server/developer-get-started/python/windows/)
-* [MacOS での Python の概要](https://www.microsoft.com/sql-server/developer-get-started/python/mac/)
-* [Ubuntu での Python の概要](https://www.microsoft.com/sql-server/developer-get-started/python/ubuntu/)
-* [Red Hat Enterprise Linux (RHEL) での Python の概要](https://www.microsoft.com/sql-server/developer-get-started/python/rhel/)
-* [SUSE Linux Enterprise Server (SLES) での Python の概要](https://www.microsoft.com/sql-server/developer-get-started/python/sles/)
+* [Azure Web サイトで DJango と SQL Database を使用して Python web アプリを作成する](https://github.com/Microsoft/PTVS/wiki/Django-and-SQL-Database-on-Azure)
+* [Windows での Python のはじめに](https://www.microsoft.com/sql-server/developer-get-started/python/windows/)
+* [MacOS での Python のはじめに](https://www.microsoft.com/sql-server/developer-get-started/python/mac/)
+* [Ubuntu での Python のはじめに](https://www.microsoft.com/sql-server/developer-get-started/python/ubuntu/)
+* [Red Hat Enterprise Linux (RHEL) での Python のはじめに](https://www.microsoft.com/sql-server/developer-get-started/python/rhel/)
+* [SUSE Linux Enterprise Server での Python のはじめに (SLES)](https://www.microsoft.com/sql-server/developer-get-started/python/sles/)

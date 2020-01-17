@@ -10,20 +10,19 @@ ms.technology: connectivity
 ms.topic: reference
 author: pmasl
 ms.author: pelopes
-manager: craigg
-ms.openlocfilehash: 5b3695970308605ebe01f01cbd0fb59c981c9d0e
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: 0b5172339873ba90b12f65b5334a9014563cd3f3
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52418123"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67989044"
 ---
 # <a name="ole-db-driver-for-sql-server-support-for-high-availability-disaster-recovery"></a>OLE DB Driver for SQL Server の高可用性、ディザスター リカバリーに関するサポート
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
-  この記事で*OLE DB Driver for SQL Server*サポート[!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]します。 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] の詳細については、「[可用性グループ リスナー、クライアント接続、およびアプリケーションのフェールオーバー &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/listeners-client-connectivity-application-failover.md)」、「[可用性グループの作成と構成 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/creation-and-configuration-of-availability-groups-sql-server.md)」、「[フェールオーバー クラスタリングと AlwaysOn 可用性グループ &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/failover-clustering-and-always-on-availability-groups-sql-server.md)」、および「[アクティブなセカンダリ: 読み取り可能なセカンダリ レプリカ &#40;AlwaysOn 可用性グループ&#41;](../../../database-engine/availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md)」を参照してください。  
+  この記事では、の[!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] *SQL Server サポート用の OLE DB ドライバーに*ついて説明します。 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] の詳細については、「[可用性グループ リスナー、クライアント接続、およびアプリケーションのフェールオーバー &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/listeners-client-connectivity-application-failover.md)」、「[可用性グループの作成と構成 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/creation-and-configuration-of-availability-groups-sql-server.md)」、「[フェールオーバー クラスタリングと AlwaysOn 可用性グループ &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/failover-clustering-and-always-on-availability-groups-sql-server.md)」、および「[アクティブなセカンダリ: 読み取り可能なセカンダリ レプリカ &#40;AlwaysOn 可用性グループ&#41;](../../../database-engine/availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md)」を参照してください。  
   
  接続文字列で、特定の可用性グループの可用性グループ リスナーを指定できます。 フェールオーバーする可用性グループ内のデータベースに OLE DB Driver for SQL Server アプリケーションが接続されている場合、元の接続が切断されるため、フェールオーバー後にアプリケーションが動作を継続するには新しい接続を開く必要があります。  
   
@@ -33,7 +32,7 @@ ms.locfileid: "52418123"
 > 接続タイムアウト値を大きくし、接続再試行ロジックを実装することにより、アプリケーションが可用性グループに接続する確立が高まります。 また、可用性グループのフェールオーバーにより接続が失敗する可能性があるため、接続再試行ロジックを実装して、再接続されるまで、失敗した接続の再接続を試行する必要があります。  
   
 ## <a name="connecting-with-multisubnetfailover"></a>MultiSubnetFailover を使用した接続  
- SQL Server Always On 可用性グループ リスナーまたは [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] フェールオーバー クラスター インスタンスに接続する際には、必ず **MultiSubnetFailover=Yes** を指定してください。 **MultiSubnetFailover** を使用することで、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] のすべての Always On 可用性グループおよびフェールオーバー クラスター インスタンスに対して高速フェールオーバーが有効化され、単一サブネットおよびマルチサブネットの AlwaysOn トポロジにおけるフェールオーバー時間が大幅に短縮されます。 マルチサブネット フェールオーバーの際には、クライアントは複数の接続を並列で試行します。 サブネットのフェールオーバー中に OLE DB Driver for SQL Server は TCP 接続を再試行します。  
+ SQL Server Always On 可用性グループ リスナーまたは [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] フェールオーバー クラスター インスタンスに接続する際には、必ず **MultiSubnetFailover=Yes** を指定してください。 **MultiSubnetFailover** を使用することで、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] のすべての Always On 可用性グループおよびフェールオーバー クラスター インスタンスに対して高速フェールオーバーが有効化され、単一サブネットおよびマルチサブネットの AlwaysOn トポロジにおけるフェールオーバー時間が大幅に短縮されます。 マルチサブネット フェールオーバーの際には、クライアントは複数の接続を並列で試行します。 サブネットのフェールオーバー中、SQL Server 用の OLE DB ドライバーは TCP 接続を再試行します。  
   
  **MultiSubnetFailover** 接続プロパティを指定すると、アプリケーションが可用性グループまたはフェールオーバー クラスター インスタンスに配置され、OLE DB Driver for SQL Server ではすべての IP アドレスに対して接続を試行することで、プライマリ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] インスタンス上のデータベースに接続が試行されます。 接続に対して **MultiSubnetFailover=Yes** を指定した場合、オペレーティング システムの既定の TCP 再送信間隔より短い間隔で、クライアントにより TCP 接続が再試行されます。 これにより、Always On 可用性グループまたはフェールオーバー クラスター インスタンスのフェールオーバー後、再接続されるまでの時間を短縮することができます。単一サブネットとマルチサブネットの可用性グループ インスタンスおよびフェールオーバー クラスター インスタンスに適用することができます。  
   
@@ -75,9 +74,9 @@ ms.locfileid: "52418123"
 
 
 ## <a name="ole-db"></a>OLE DB (OLE DB)  
-両方をサポートする、OLE DB Driver for SQL Server、 **ApplicationIntent**と**MultiSubnetFailover**キーワード。   
+SQL Server の OLE DB Driver は、 **Applicationintent**と**MultiSubnetFailover**キーワードの両方をサポートしています。   
   
-2 つの OLE DB 接続文字列キーワードがサポートするために追加された[!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]OLE DB driver for SQL Server:  
+SQL Server の OLE DB ドライバーでをサポート[!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]するために、2つの OLE DB 接続文字列キーワードが追加されました。  
   
 -   **ApplicationIntent** 
 -   **MultiSubnetFailover**  
@@ -92,7 +91,7 @@ ms.locfileid: "52418123"
   
 -   **DBPROP_INIT_PROVIDERSTRING**  
   
-OLE DB Driver for SQL Server アプリケーションは、アプリケーションの目的を指定するのに方法のいずれかを使用できます。  
+SQL Server アプリケーションの OLE DB ドライバーでは、次のいずれかの方法を使用してアプリケーションの目的を指定できます。  
   
  -   **IDBInitialize::Initialize**  
  **IDBInitialize::Initialize** は、あらかじめ構成された一連のプロパティを使用して、データ ソースを初期化し、データ ソース オブジェクトを作成します。 アプリケーション インテントは、プロバイダーのプロパティとして指定するか、拡張プロパティ文字列の一部として指定します。  
@@ -103,7 +102,7 @@ OLE DB Driver for SQL Server アプリケーションは、アプリケーショ
  -   **IDBProperties::SetProperties**  
  **ApplicationIntent** プロパティ値を設定するには、**IDBProperties::SetProperties** を呼び出して、"**ReadWrite**" または "**ReadOnly**" の値で **SSPROP_INIT_APPLICATIONINTENT** プロパティを渡すか、または "**ApplicationIntent=ReadOnly**" または "**ApplicationIntent=ReadWrite**" を含む値で **DBPROP_INIT_PROVIDERSTRING** プロパティを渡します。  
   
-アプリケーション インテントは、**[データ リンク プロパティ]** ダイアログ ボックスの [すべて] タブの [アプリケーション インテントのプロパティ] フィールドで指定できます。  
+アプリケーション インテントは、 **[データ リンク プロパティ]** ダイアログ ボックスの [すべて] タブの [アプリケーション インテントのプロパティ] フィールドで指定できます。  
   
 暗黙的な接続が確立された場合、その接続には、親の接続のアプリケーション インテント設定が使用されます。 同様に、同じデータ ソースから作成されたセッションはいずれも、そのデータ ソースのアプリケーション インテント設定を継承します。  
   
@@ -115,7 +114,7 @@ OLE DB Driver for SQL Server アプリケーションは、アプリケーショ
   
 -   **DBPROP_INIT_PROVIDERSTRING**  
 
-OLE DB Driver for SQL Server アプリケーションは、MultiSubnetFailover オプションを設定するのに、次のメソッドのいずれかを使用できます。  
+SQL Server アプリケーションの OLE DB ドライバーでは、次のいずれかの方法を使用して MultiSubnetFailover オプションを設定できます。  
 
  -   **IDBInitialize::Initialize**  
  **IDBInitialize::Initialize** は、あらかじめ構成された一連のプロパティを使用して、データ ソースを初期化し、データ ソース オブジェクトを作成します。 アプリケーション インテントは、プロバイダーのプロパティとして指定するか、拡張プロパティ文字列の一部として指定します。  
@@ -124,7 +123,7 @@ OLE DB Driver for SQL Server アプリケーションは、MultiSubnetFailover �
  **IDataInitialize::GetDataSource** は **MultiSubnetFailover** キーワードを格納できる入力接続文字列を受け取ります。  
 
 -   **IDBProperties::SetProperties**  
-設定する、 **MultiSubnetFailover**プロパティ値、呼び出し**idbproperties::setproperties**を渡して、 **SSPROP_INIT_MULTISUBNETFAILOVER** の値を持つプロパティ**VARIANT_TRUE**または**VARIANT_FALSE**または**DBPROP_INIT_PROVIDERSTRING**プロパティ値が含まれている"**MultiSubnetFailover = Yes**「または」**MultiSubnetFailover = No**"。
+**MultiSubnetFailover** プロパティの値を設定するには、**IDBProperties:: SetProperties** を呼び出して、**SSPROP_INIT_MULTISUBNETFAILOVER** プロパティに値を渡します。 **VARIANT_TRUE** 、 **VARIANT_FALSE**、または**DBPROP_INIT_PROVIDERSTRING**プロパティに "**MultiSubnetFailover = Yes**" を含む値"または" **MultiSubnetFailover =No**"。
 
 #### <a name="example"></a>例
 

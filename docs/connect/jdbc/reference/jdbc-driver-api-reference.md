@@ -1,5 +1,5 @@
 ---
-title: JDBC ドライバー API リファレンス |Microsoft Docs
+title: JDBC Driver API リファレンス |Microsoft Docs
 ms.custom: ''
 ms.date: 07/19/2018
 ms.prod: sql
@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: e4e1ae9d-18a6-41db-8bd2-9cf0eee4cccb
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: f311458a8fb6b58f22a1ca4c23fa8d1f36dddc51
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 04cbe39698a99fbde43043b70bb9b1f0e5887f58
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47773793"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67977003"
 ---
 # <a name="jdbc-driver-api-reference"></a>JDBC Driver API リファレンス
 
@@ -26,26 +25,26 @@ ms.locfileid: "47773793"
 
 
 
-### <a name="javadocio-website-is-primary"></a>JavaDoc.io web サイトがプライマリ
+### <a name="javadocio-website-is-primary"></a>JavaDoc.io Web サイトがプライマリ
 
-JavaDoc.io web サイトに、表示する場合、Microsoft JDBC API のリファレンス ドキュメントがホストされています。 JavaDoc.io は JDBC リファレンス ドキュメントについては、プライマリ web サイトではようになりました。 JavaDoc.io で JDBC リファレンスのドキュメントは次の直接リンクでご利用いただけます。
+Microsoft JDBC API リファレンスドキュメントは、JavaDoc.io web サイトで表示するためにホストされています。 JavaDoc.io は、JDBC リファレンスドキュメントの主要な web サイトになりました。 JavaDoc.io に関する JDBC リファレンスドキュメントは、次のダイレクトリンクから入手できます。
 
 - [https://javadoc.io/doc/com.microsoft.sqlserver/mssql-jdbc/](https://javadoc.io/doc/com.microsoft.sqlserver/mssql-jdbc/)
 
-JavaDoc.io がバージョン 6.0 以降の JDBC リファレンス ドキュメントです。
+JavaDoc.io には、バージョン6.0 以降の JDBC リファレンスドキュメントが含まれています。
 
-#### <a name="only-legacy-jdbc-documentation-is-here-on-docs"></a>Docs でレガシ JDBC ドキュメントのみがここでは
+#### <a name="only-legacy-jdbc-documentation-is-here-on-docs"></a>ドキュメントには、従来の JDBC ドキュメントのみが記載されています
 
-JDBC API のリファレンス ドキュメントの記事では、ここ**https://docs.microsoft.com/sql/connect/jdbc/reference/** JDBC クラスの新しいリリースの更新時に不要になった更新中です。 ただし、こちらの記事は、JDBC バージョン 4.1 と 4.2 のすべての参照を含めることが操作を行います。
+新しいリリースに対して jdbc クラスを **https://docs.microsoft.com/sql/connect/jdbc/reference/** 更新しても、ここにある jdbc API リファレンスドキュメントの記事は更新されなくなりました。 ただし、この記事には、JDBC バージョン4.1 および4.2 のすべてのリファレンスが含まれています。
 
-JDBC バージョン 6.0、およびいくつかの以降のバージョンのドキュメントがここではもします。 6.0 以降のバージョン、JavaDoc.io web サイトを使用します。
+JDBC バージョン6.0 のドキュメント、およびそれ以降のバージョンについては、こちらも参照してください。 ただし、6.0 以降のバージョンでは、JavaDoc.io web サイトを使用します。
 
 
 
 ### <a name="important-notes"></a>重要な注意点
 
 > [!NOTE]  
->  JDBC ドライバーを使用して概念については、次を参照してください。 [JDBC ドライバーの概要](../../../connect/jdbc/overview-of-the-jdbc-driver.md)します。  
+>  JDBC ドライバーの使用に関する概念的な情報については、「 [Jdbc ドライバーの概要](../../../connect/jdbc/overview-of-the-jdbc-driver.md)」を参照してください。  
   
 > [!IMPORTANT]  
 >  JDBC 4.1 と 4.2 のコンプライアンス サポートについては、Microsoft JDBC Driver 4.2 for SQL Server (以降) を使用します。 以前の Microsoft JDBC ドライバーの 4.1 リリースと 4.0 リリースの場合、JDBC 4.1 や 4.2 で導入された新しいメソッドに対応していません。  
@@ -58,7 +57,7 @@ JDBC バージョン 6.0、およびいくつかの以降のバージョンの�
 >   
 >  Microsoft JDBC Driver 6.0 for SQL Server より利用できる Always Encrypted の API 詳細についてはこのセクションでは扱いません。 「[JDBC ドライバーの Always Encrypted API のリファレンス](../../../connect/jdbc/always-encrypted-api-reference-for-the-jdbc-driver.md)」を参照してください。  
 >   
->  このセクションでは、SQL Server 用 Microsoft JDBC Driver 6.0 以降使用可能な Using Table-Valued パラメーターの API 詳細については見つかりませんでした。 「[テーブル値パラメーターの使用](../../../connect/jdbc/using-table-valued-parameters.md)」を参照してください。  
+>  SQL Server の Microsoft JDBC Driver 6.0 以降で使用できるテーブル値パラメーターを使用するための API の詳細については、このセクションでは説明されていません。 「[テーブル値パラメーターの使用](../../../connect/jdbc/using-table-valued-parameters.md)」を参照してください。  
 >   
 >  Microsoft JDBC ドライバー 6.4 は JDK 7.0、8.0、および 9.0 によるコンパイルに対応しています。  
 >   
@@ -66,7 +65,7 @@ JDBC バージョン 6.0、およびいくつかの以降のバージョンの�
 >   
 >  Microsoft JDBC ドライバー 6.0 と 4.2 は JDK 5.0、6.0、7.0、および 8.0 によるコンパイルに対応しています。  
 >   
->  Microsoft JDBC ドライバー 4.1 は JDK 5.0、6.0、7.0 によるコンパイルに対応しています。  
+>  Microsoft JDBC Driver 4.1 は、JDK 5.0、6.0、および 7.0 を使用したコンパイルをサポートしています。  
 
 
 

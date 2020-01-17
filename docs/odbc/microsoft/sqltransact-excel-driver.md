@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 821b4535-cec3-4e59-b681-87faf9d51575
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 221007de9707d982dfd273825318a9f1f3c2bc14
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b5362c8da9edca2b35c9049c12be0f44e4fa30fc
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47607721"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67948937"
 ---
 # <a name="sqltransact-excel-driver"></a>SQLTransact (Excel ドライバー)
 > [!NOTE]  

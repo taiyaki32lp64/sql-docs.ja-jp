@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: analysis-services
 ms.topic: reference
 helpviewer_keywords:
 - objects [Analysis Services], naming
@@ -14,17 +12,17 @@ ms.assetid: b338a60d-4802-4b68-862a-6dc6a3f75e48
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 4c8bcf9fc52ef26837d32fa765472e0056469a2a
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: f45ccaa0caab2e1dcc7e96e80e217d82d4f1f805
+ms.sourcegitcommit: 187f6d327421e64f1802a3085f88bbdb0c79b707
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52511321"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69530893"
 ---
 # <a name="object-naming-rules-analysis-services"></a>オブジェクトの名前付け規則 (Analysis Services)
   このトピックでは、[!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] のコードまたはスクリプトにおけるオブジェクトの名前付け規則、および、オブジェクト名で使用できない予約語と文字について説明します。  
   
-##  <a name="bkmk_Names"></a> 名前付け規則  
+##  <a name="bkmk_Names"></a>名前付け規則  
  あらゆるオブジェクトは `Name` プロパティと `ID` プロパティを持ち、これらは親コレクションのスコープ内で一意にする必要があります。 たとえば、所属するデータベースが異なっていれば、2 つのディメンションが同じ名前であってもかまいません。  
   
  手動で指定することもできますが、`ID` は一般にオブジェクトの作成時に自動生成されます。 モデルの構築を開始した後は、`ID` を変更しないでください。 モデル内のオブジェクト参照はすべて `ID` に基づいて実行されます。 したがって、`ID` を変更すると簡単にモデルが壊れます。  
@@ -33,20 +31,20 @@ ms.locfileid: "52511321"
   
  `Name` プロパティと `ID` プロパティには、次のルールが適用されます。  
   
--   名前では大文字と小文字は区別されません。 "Sales"という名前のキューブを持つことはできませんし、同じデータベースに"Sales"という名前です。  
+-   名前では大文字と小文字は区別されません。 同じデータベース内に "sales" という名前のキューブと "Sales" という名前のキューブを含めることはできません。  
   
 -   オブジェクト名の先頭または末尾にスペースを付けることは許されません。ただし名前の途中にスペースを入れることはできます。 先頭および末尾にあるスペースは暗黙的に切り捨てられます。 この規則はオブジェクトの `Name` と `ID` の両方に適用されます。  
   
 -   最大文字数は 100 文字です。  
   
--   識別子の最初の文字に関する特別な要件はありません。 最初の文字は、任意の有効な文字である可能性があります。  
+-   識別子の最初の文字に関する特別な要件はありません。 最初の文字には、任意の有効な文字を使用できます。  
   
-##  <a name="bkmk_reserved"></a> 予約語と文字  
+##  <a name="bkmk_reserved"></a>予約語と文字  
  予約語は英語で、オブジェクト名に適用されます。キャプションには適用されません。 不注意で予約語をオブジェクト名に使用すると、検証エラーが発生します。 多次元モデルとデータ マイニング モデルでは、どのような場合でも、以下で説明する予約語をオブジェクト名で使用することはできません。  
   
  テーブル モデルでは、データベース互換性が 1103 に設定されている場合、一部のオブジェクトで検証ルールが緩められており、一部のクライアント アプリケーションの拡張文字要件と名前付け規則のためにルールに準拠していません。 これらの条件を満たすデータベースは、厳格でない検証ルールに従います。 この場合、制限された文字がオブジェクト名に使用されていても、検証に合格することがあります。  
   
- **予約語**  
+ **予約済みキーワード**  
   
 -   AUX  
   
@@ -62,7 +60,7 @@ ms.locfileid: "52511321"
   
 -   PRN  
   
--   NULL は XML 内の文字列の文字として許容されません。   
+-   NULL は XML 内の文字列の文字として許容されません。  
   
  **予約文字**  
   
@@ -70,28 +68,28 @@ ms.locfileid: "52511321"
   
 |オブジェクト|無効な文字|  
 |------------|------------------------|  
-|`Server`|サーバー オブジェクトに名前を付けるときは、Windows サーバーの名前付け規則に従います。 参照してください[名前付け規則 (Windows)](/windows/desktop/DNS/naming-conventions)詳細についてはします。|  
-|`DataSource`|: / \ * &#124; ? "() {} <>|  
-|`Level` または `Attribute`|. , ; ' ` : / \ * &#124; ? " & % $ ! + = [] {} \< >|  
-|`Dimension` または `Hierarchy`|. , ; ' ` : / \ * &#124; ? " & % $ ! + = () {} \<、>|  
-|他のすべてのオブジェクト|. , ; ' ` : / \ * &#124; ? " & % $ ! + = () [] {} \< >|  
+|`Server`|サーバー オブジェクトに名前を付けるときは、Windows サーバーの名前付け規則に従います。 詳細については、「[名前付け規則 (Windows)](/windows/desktop/DNS/naming-conventions) 」を参照してください。|  
+|`DataSource`| `: / \ * \| ? " () [] {} <>` |  
+|`Level` または `Attribute`|````. , ; ' ` : / \ * & \| ? " & % $ ! + = [] {} < >````|  
+|`Dimension` または `Hierarchy`|````. , ; ' ` : / \ * \| ? " & % $ ! + = () [] {} <,>````|  
+|他のすべてのオブジェクト|````. , ; ' ` : / \ * \| ? " & % $ ! + = () [] {} < >````|  
   
- **例外処理:予約済みの文字を使用する場合**  
+ **例外予約文字を使用できる場合**  
   
  先に述べたように、特定のモダリティと互換性レベルを持つデータベースでは、予約文字を含むオブジェクト名を使用できます。 拡張文字を使用できる表形式データベース (1103 以上) の場合、ディメンション属性、階層、レベル、メジャー、および KPI オブジェクト名で予約文字を使用できます。  
   
 |サーバー モードとデータベース互換性レベル|予約文字を使用できるか|  
 |--------------------------------------------------|----------------------------------|  
 |MOLAP (すべてのバージョン)|いいえ|  
-|表形式の 1050|いいえ|  
+|表形式-1050|いいえ|  
 |表形式 - 1100|いいえ|  
-|表形式の 1130 以上|はい|  
+|表形式-1130 以降|はい|  
   
  データベースは既定の ModelType を持つことができます。 既定値は多次元モデルと同等です。そのため、列名での予約文字の使用はサポートされません。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [MDX の予約語](/sql/mdx/mdx-reserved-words)   
- [翻訳&#40;Analysis Services&#41;](../../../analysis-services/translations-analysis-services.md)   
- [XML for Analysis への準拠&#40;XMLA&#41;](https://docs.microsoft.com/bi-reference/xmla/xml-for-analysis-compliance-xmla)  
+ [翻訳&#40;Analysis Services&#41;](/analysis-services/translation-support-in-analysis-services)   
+ [XML for Analysis コンプライアンス&#40;XMLA&#41;](https://docs.microsoft.com/bi-reference/xmla/xml-for-analysis-compliance-xmla)  
   
   

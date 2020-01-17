@@ -9,13 +9,13 @@ ms.topic: conceptual
 ms.assetid: 32f38713-7ae4-48d3-980d-74cadc8545a0
 author: Shamikg
 ms.author: Shamikg
-manager: v-thobro
-ms.openlocfilehash: 1bdbe8616f5f2c3252f813e6e2636966ff16ec16
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+manager: shamikg
+ms.openlocfilehash: bc5693c71ac6061f12ee90386b3c135a45a14e09
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51662281"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68266075"
 ---
 # <a name="finishing-test-case-preparation-oracletosql"></a>テスト ケースの準備の終了 (OracleToSQL)
 ウィザードの最後のページには、テスト_ケースの説明と、テストに含まれるオブジェクトに関する情報が表示されます。 さらに、このページで設定できますテストの実行オプション。  
@@ -56,7 +56,7 @@ ms.locfileid: "51662281"
   
 をクリックして、**完了**に準備されたテスト_ケースを保存するボタン[を使用してテスト リポジトリ (OracleToSQL)](https://msdn.microsoft.com/f941cce4-d3e3-4aeb-a88a-4f101a97a9f4)します。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
 [テスト リポジトリの使用&#40;OracleToSQL&#41;](../../ssma/oracle/using-test-repositories-oracletosql.md)  
 [テスト_ケースを実行している&#40;OracleToSQL&#41;](../../ssma/oracle/running-test-cases-oracletosql.md)  
 [移行されたデータベース オブジェクトのテスト&#40;OracleToSQL&#41;](../../ssma/oracle/testing-migrated-database-objects-oracletosql.md)  

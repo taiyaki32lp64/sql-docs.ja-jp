@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 8b2a49b0-4296-4f3f-9e56-323aa6a6fa8e
 author: Shamikg
 ms.author: Shamikg
-manager: craigg
-ms.openlocfilehash: b31739bb4db23ccd2159ec8146ef857d7a5d66e5
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: c3085d17804866015a78e93556dd5373d3a1b8cd
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47837367"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68029141"
 ---
 # <a name="finishing-test-case-preparation-sybasetosql"></a>テスト ケースの準備の終了 (SybaseToSQL)
 ウィザードの最後のページには、テスト_ケースの説明と、テストに含まれるオブジェクトに関する情報が表示されます。 さらに、このページで設定できますテストの実行オプション。  
@@ -58,7 +57,7 @@ ms.locfileid: "47837367"
   
 をクリックして、**完了**に準備されたテスト_ケースを保存するボタン[を使用してテスト リポジトリ&#40;SybaseToSQL&#41;](../../ssma/sybase/using-test-repositories-sybasetosql.md)。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
 [テスト リポジトリの使用&#40;SybaseToSQL&#41;](../../ssma/sybase/using-test-repositories-sybasetosql.md)  
 [テスト_ケースを実行している&#40;SybaseToSQL&#41;](../../ssma/sybase/running-test-cases-sybasetosql.md)  
 [移行されたデータベース オブジェクトのテスト&#40;SybaseToSQL&#41;](../../ssma/sybase/testing-migrated-database-objects-sybasetosql.md)  

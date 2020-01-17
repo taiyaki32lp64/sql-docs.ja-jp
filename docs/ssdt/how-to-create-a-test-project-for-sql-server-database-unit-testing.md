@@ -1,5 +1,5 @@
 ---
-title: SQL Server データベース単体テストのテスト プロジェクトを作成する方法 | Microsoft Docs
+title: 方法:SQL Server データベース単体テストのテスト プロジェクトを作成する | Microsoft Docs
 ms.custom:
 - SSDT
 ms.date: 02/09/2017
@@ -8,17 +8,16 @@ ms.technology: ssdt
 ms.reviewer: ''
 ms.topic: conceptual
 ms.assetid: 4b3e7ba8-b565-4689-af1a-34cc255b7c60
-author: stevestein
-ms.author: sstein
-manager: craigg
-ms.openlocfilehash: ec74cb8ed16fa7e49f5a941a903341a514d13932
-ms.sourcegitcommit: 4c053cd2f15968492a3d9e82f7570dc2781da325
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: cff6d8342ea1fe4d40616bf07e1189e0ffba030e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/15/2018
-ms.locfileid: "49336101"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67897141"
 ---
-# <a name="how-to-create-a-test-project-for-sql-server-database-unit-testing"></a>SQL Server の単体テストのテスト プロジェクトを作成する方法
+# <a name="how-to-create-a-test-project-for-sql-server-database-unit-testing"></a>方法:SQL Server の単体テストのテスト プロジェクトを作成する
 データベース オブジェクトを評価する単体テストの作成を開始する前に、まずはテスト プロジェクトを作成する必要があります。 このプロジェクトには SQL Server の単体テストが含まれていますが、他の種類のテストが含まれることもあります。  
   
 特定のデータベース プロジェクトに対するすべての SQL Server の単体テストを 1 つのテスト プロジェクト内に配置することができます。 ただし、次の質問に対する回答に基づいて、追加のテスト プロジェクトの作成が必要になる場合もあります。  
@@ -47,13 +46,13 @@ ms.locfileid: "49336101"
   
     **[新しいプロジェクト]** ダイアログ ボックスが表示されます。  
   
-2.  **[インストールされたテンプレート]** で、**[SQL Server]** ノードを展開し、**[SQL Server データベース プロジェクト]** を選択します。  
+2.  **[インストールされたテンプレート]** で、 **[SQL Server]** ノードを展開し、 **[SQL Server データベース プロジェクト]** を選択します。  
   
 3.  **[名前]** ボックスにプロジェクトの名前を入力します。  
   
 ### <a name="to-create-a-test-project-with-a-sql-server-unit-test-class"></a>SQL Server の単体テスト クラスを使用してテスト プロジェクトを作成するには  
   
--   「[空の SQL Server の単体テストを作成する方法](../ssdt/how-to-create-an-empty-sql-server-unit-test.md)」または「[関数、トリガー、およびストアド プロシージャに対する SQL Server の単体テストを作成する方法](../ssdt/how-to-create-unit-tests-for-functions-triggers-stored-procedures.md)」で説明されている手順に従ってください。  
+-   「[空の SQL Server の単体テストを作成する方法](../ssdt/how-to-create-an-empty-sql-server-unit-test.md)」または「[関数、トリガー、ストアド プロシージャに対する SQL Server の単体テストを作成する方法](../ssdt/how-to-create-unit-tests-for-functions-triggers-stored-procedures.md)」で説明されている手順に従ってください。  
   
 ## <a name="see-also"></a>参照  
 [SQL Server の単体テストの作成と定義](../ssdt/creating-and-defining-sql-server-unit-tests.md)  

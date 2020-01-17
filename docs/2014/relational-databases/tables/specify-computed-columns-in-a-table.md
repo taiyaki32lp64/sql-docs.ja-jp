@@ -13,11 +13,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 3ca62d8d45ab5a116ab657646abf2393c69e73c4
-ms.sourcegitcommit: 78e32562f9c1fbf2e50d3be645941d4aa457e31f
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/08/2019
-ms.locfileid: "54100367"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68211802"
 ---
 # <a name="specify-computed-columns-in-a-table"></a>テーブルの計算列の指定
   計算列は、PERSISTED とマークされていない限り、テーブルに物理的に保存されない仮想列です。 計算列の式は、他の列のデータを使用して値を計算し、それを自身の列に格納します。 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 上では、[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] または [!INCLUDE[tsql](../../includes/tsql-md.md)]を使用して計算列に式を指定できます。  
@@ -66,7 +66,7 @@ ms.locfileid: "54100367"
   
 5.  **[Is Persisted]** 子プロパティのドロップダウンの **[はい]** または **[いいえ]** をクリックし、データを永続化するかどうかを指定します。  
   
-6.  **ファイル** メニューの **table name**_の保存_をクリックします。  
+6.  **[ファイル]** メニューの **[<_テーブル名_> を保存]** をクリックします。  
   
 #### <a name="to-add-a-computed-column-definition-to-an-existing-column"></a>既存の列に計算列の定義を追加するには  
   

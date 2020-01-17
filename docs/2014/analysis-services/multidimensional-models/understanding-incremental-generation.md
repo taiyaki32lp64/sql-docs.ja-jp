@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - incremental generation [Analysis Services]
@@ -15,12 +14,12 @@ ms.assetid: 3ca0aa63-3eb5-4fe9-934f-8e96dee84eaa
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: fb2c032fc95738550aa92cc8905ebee7279dcc2f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: ace9bbbbbc023d14dbce91a176f7d05ad19d699b
+ms.sourcegitcommit: 495913aff230b504acd7477a1a07488338e779c6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48049292"
+ms.lasthandoff: 08/06/2019
+ms.locfileid: "68811060"
 ---
 # <a name="understanding-incremental-generation"></a>増分生成の理解
   スキーマを初めて生成した後は、 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]を使用してキューブやディメンションの定義を変更し、その後スキーマ生成ウィザードを再実行できます。 ウィザードは、サブジェクト領域データベースおよび関連するデータ ソース ビュー内のスキーマを更新して変更を反映し、再生成するテーブル内の既存のデータを可能な限り保持します。 最初の生成後にテーブルを変更した場合、スキーマ生成ウィザードは、可能な限り以下のルールに従ってそれらの変更を保持します。  
@@ -63,7 +62,7 @@ ms.locfileid: "48049292"
  ディメンション、キューブ、属性などの新しいオブジェクトの追加  
  スキーマ生成ウィザードは、新しいオブジェクトのマップ先となる、基になるオブジェクトを追加します。  
   
- ユーザー オブジェクトがサブジェクト領域データベースに存在し、データベース エンジンによってエラーが返されるために、スキーマ生成ウィザードで必要な変更を行うことができない場合、スキーマ生成ウィザードは実行に失敗し、データベース エンジンによって返されたエラーを表示します。 たとえば、ウィザードによって生成されたテーブルに、主キー制約または非クラスター化インデックスを作成した場合、スキーマ生成ウィザードはそのテーブルを破棄しません。この制約やインデックスはスキーマ生成ウィザードによって作成されたものではないためです。  
+ ユーザー オブジェクトがサブジェクト領域データベースに存在し、データベース エンジンによってエラーが返されるために、スキーマ生成ウィザードで必要な変更を行うことができない場合、スキーマ生成ウィザードは実行に失敗し、データベース エンジンによって返されたエラーを表示します。 たとえば、テーブルを生成した後にテーブルに primary key 制約または非クラスター化インデックスを作成した場合、スキーマ生成ウィザードでは、制約またはインデックスを作成しなかったため、そのテーブルは削除されません。  
   
 ## <a name="supporting-schema-changes"></a>スキーマの変更のサポート  
  サブジェクト領域データベースまたは関連するデータ ソース ビュー内のテーブルまたは列のプロパティを変更すると、スキーマ生成ウィザードは、次の表に説明する方法で、これらの変更を取り扱います。  
@@ -84,8 +83,8 @@ ms.locfileid: "48049292"
   
  一方、データ ソース接続文字列を以前の生成後に別のデータベースに変更した場合は、エラーは発生しません。 この場合は新しいデータベースが使用され、以前のデータベースには変更は行われません。  
   
-## <a name="see-also"></a>参照  
- [データ ソース ビューおよびデータ ソースへの変更を管理します。](manage-changes-to-data-source-views-and-data-sources.md)   
- [スキーマ生成ウィザード&#40;Analysis Services&#41;](schema-generation-wizard-analysis-services.md)  
+## <a name="see-also"></a>関連項目  
+ [データ ソース ビューおよびデータ ソースへの変更の管理](manage-changes-to-data-source-views-and-data-sources.md)   
+ [スキーマ生成ウィザード (Analysis Services)](schema-generation-wizard-analysis-services.md)  
   
   

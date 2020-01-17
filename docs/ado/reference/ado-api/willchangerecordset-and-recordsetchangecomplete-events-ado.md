@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: d5d44659-e0d9-46d9-a297-99c43555082f
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 9ed1c7a9f1ed86359eef75fdaf13c9e40d838f3f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: dd4e2f1485c18ce1fecc76d4eb23aa4132d85329
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47718870"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67938682"
 ---
 # <a name="willchangerecordset-and-recordsetchangecomplete-events-ado"></a>WillChangeRecordset および RecordsetChangeComplete イベント (ADO)
 **WillChangeRecordset**保留中の操作を変更する前に、イベントが呼び出される、 [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md)します。 **RecordsetChangeComplete**イベントが呼び出された後、 **Recordset**が変更されました。  
@@ -66,6 +65,6 @@ RecordsetChangeComplete adReason, pError, adStatus, pRecordset
   
  設定する必要があります、 **adStatus**パラメーターを**adStatusUnwantedEvent**の可能性のある各**adReason**値が含まれるすべてのイベントのイベント通知を完全に停止するには**adReason**パラメーター。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [ADO イベント モデルの例 (vc++)](../../../ado/reference/ado-api/ado-events-model-example-vc.md)   
  [ADO イベント ハンドラーの概要](../../../ado/guide/data/ado-event-handler-summary.md)

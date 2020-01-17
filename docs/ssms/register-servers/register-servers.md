@@ -16,15 +16,14 @@ helpviewer_keywords:
 - server management [SQL Server], registering servers
 - server registration [SQL Server]
 ms.assetid: c2a2513e-fa09-419c-99e7-a12d57c5a0db
-author: stevestein
-ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 9ae686101049c554a10813da69d8f3d4382110ea
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 34452ed824b8aa5bec4efcc9a926718481614e09
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47805950"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68266213"
 ---
 # <a name="register-servers"></a>サーバーの登録
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

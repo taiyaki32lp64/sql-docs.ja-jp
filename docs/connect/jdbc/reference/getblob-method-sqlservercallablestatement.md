@@ -1,5 +1,5 @@
 ---
-title: getBlob メソッド (SQLServerCallableStatement) |Microsoft Docs
+title: getBlob メソッド (SQLServerCallableStatement) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: e609b336-d40e-4d89-9130-6db7e6853541
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 8d3fedefd3f5ee935b4a7593b0b285a7cc9dfc26
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 61a6eeb405018c2b9eebc01039b0b49a14e6d910
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47637330"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67953582"
 ---
 # <a name="getblob-method-sqlservercallablestatement"></a>getBlob メソッド (SQLServerCallableStatement)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

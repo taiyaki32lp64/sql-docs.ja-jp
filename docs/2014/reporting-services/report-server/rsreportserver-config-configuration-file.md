@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 ms.assetid: 60e0a0b2-8a47-4eda-a5df-3e5e403dbdbc
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 3b532758e9a8631adeacd00a4fce8d9029cfcd1b
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 1939e3b1f09e6afbc63ba0565e244e66a7cff26f
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56015603"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66103228"
 ---
 # <a name="rsreportserver-configuration-file"></a>RSReportServer Configuration File
   **RsReportServer.config** ファイルには、レポート マネージャー、レポート サーバー Web サービス、およびバックグラウンド処理で使用される設定が格納されます。 すべての [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] アプリケーションは、RSReportServer.config ファイルに格納された構成設定を読み取る単一のプロセス内で実行されます。 ネイティブ モードのレポート サーバーと SharePoint モードのレポート サーバーはどちらも RSReportServer.config を使用しますが、両方のモードで構成ファイル内のまったく同じ設定が使用されるわけではありません。 SharePoint モードの設定の多くは、ファイルではなく SharePoint 構成データベースに格納されるため、SharePoint モード バージョンのファイルは、より小さくなります。 このトピックでは、ネイティブ モードおよび SharePoint モード用にインストールされる既定の構成ファイル、いくつかの重要な設定、および構成ファイルによって制御される動作について説明します。  
@@ -289,7 +288,7 @@ ms.locfileid: "56015603"
 |**SMTPUseSSL**|ネットワークを介した SMTP メッセージの送信時に SSL (Secure Sockets Layer) を使用するよう設定できる、ブール値を指定します。 既定値は 0 (または False) です。 この設定は、 **SendUsing** 要素が 2 に設定されている場合に使用できます。|  
 |**SendUsing**|メッセージの送信に使用する方法を指定します。 有効な値は、<br /><br /> 1 = ローカル SMTP サービスのピックアップ ディレクトリからメッセージを送信します。<br /><br /> 2 = ネットワークの SMTP サービスからメッセージを送信します。|  
 |**SMTPAuthenticate**|TCP/IP 接続経由での SMTP サービスへのメッセージ送信に使用する認証の種類を示す整数値を指定します。 有効な値は、<br /><br /> 0 = 認証を行いません。<br /><br /> 1 = (サポートされていません)。<br /><br /> 2 = NTLM (NT LanMan) 認証を行います。 ネットワーク SMTP サーバーへの接続には、レポート サーバー Windows サービスのセキュリティ コンテキストが使用されます。|  
-|**From**|レポートの送信元の電子メール アドレスを、 *abc@host.xyz*」を参照してください。 アドレスは、送信する電子メール メッセージの **[差出人]** 行に表示されます。 リモート SMTP サーバーを使用している場合に、この値が必要です。 メールを送信する権限を持つ有効な電子メール アカウントを指定する必要があります。|  
+|**From**|レポートの送信元の電子メール アドレスを、 *abc@host.xyz* 」を参照してください。 アドレスは、送信する電子メール メッセージの **[差出人]** 行に表示されます。 リモート SMTP サーバーを使用している場合に、この値が必要です。 メールを送信する権限を持つ有効な電子メール アカウントを指定する必要があります。|  
 |**EmbeddedRenderFormats、RenderingExtension**|電子メール メッセージ本文内のレポートのカプセル化に使用する表示形式を指定します。 続いて、レポート内の画像がレポートに埋め込まれます。 有効な値は、MHTML および HTML4.0 です。|  
 |**PrivilegedUserRenderFormats**|"すべてのサブスクリプションを管理" タスクを使用してサブスクライブが有効になっている場合に、ユーザーがレポートのサブスクリプション用に選択できる表示形式を指定します。 この値が設定されていない場合は、意図的に除外されたものを除く、すべての表示形式を使用できます。|  
 |**ExcludedRenderFormats、RenderingExtension**|指定の配信拡張機能で適切に処理されない形式を意図的に除外します。 同じ表示拡張機能の複数のインスタンスは除外できません。 複数のインスタンスを除外すると、レポート サーバーが構成ファイルを読み取るときにエラーが発生します。 既定では、電子メール配信に対し、次の拡張機能は除外されます。<br /><br /> **HTMLOWC**<br /><br /> **Null**<br /><br /> **RGDI**|  

@@ -1,6 +1,5 @@
 ---
 title: 構成ファイルを使用した SQL Server のインストール | Microsoft Docs
-ms.custom: ''
 ms.date: 09/07/2017
 ms.prod: sql
 ms.reviewer: ''
@@ -10,13 +9,12 @@ ms.assetid: a832153a-6775-4bed-83f0-55790766d885
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-manager: craigg
-ms.openlocfilehash: 1c52536b52fa63b61b24247f9df3854b712d86c3
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 790d756479f4111d6c3b40d05643ec788527473c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47672260"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68054781"
 ---
 # <a name="install-sql-server-using-a-configuration-file"></a>構成ファイルを使用した SQL Server のインストール
 
@@ -24,7 +22,7 @@ ms.locfileid: "47672260"
  
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] セットアップには、システムの既定値および実行時入力に基づいて構成ファイルを生成する機能が用意されています。 構成ファイルを使用すると、同じ構成の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] を企業全体に配置できます。 また、Setup.exe を起動するバッチ ファイルを作成して、企業全体で手動によるインストールを標準化することもできます。 
  
-この記事は、特に SQL Server 2016 および SQL Server 2017 に関して更新されています。 古いバージョンの SQL Server については、「[構成ファイルを使用した SQL Server 2014 のインストール](install-sql-server-2016-using-a-configuration-file.md)」をご覧ください。
+この記事は SQL Server バージョン 2016 以降に対して維持されます。 古いバージョンの SQL Server については、「[構成ファイルを使用した SQL Server 2014 のインストール](https://docs.microsoft.com/sql/database-engine/install-windows/install-sql-server-using-a-configuration-file?view=sql-server-2014)」をご覧ください。
  
 セットアップでは、コマンド プロンプトからのみ構成ファイルを使用できます。 以下に、構成ファイルを使用する際のパラメーターの処理順序について説明します。  
   
@@ -84,17 +82,17 @@ FEATURES=SQL,Tools
   
 1. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の 1 つまたは複数のインスタンスを準備し、同じコンピューター上で構成するには、次の操作を行います。 
   
-    - [インストール センター] の **[詳細設定]** ページで、**[[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のスタンドアロン インスタンスのイメージの準備]** を実行し、イメージ準備用構成ファイルをキャプチャします。 
+    - [インストール センター] の **[詳細設定]** ページで、 **[[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のスタンドアロン インスタンスのイメージの準備]** を実行し、イメージ準備用構成ファイルをキャプチャします。 
   
     - さらに [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスを準備するには、同じイメージ準備用構成ファイルをテンプレートとして使用します。 
   
-    - [インストール センター] の **[詳細設定]** ページで、**[[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の準備済みスタンドアロン インスタンスのイメージの完了]** を実行し、コンピューター上で準備済みのインスタンスを構成します。 
+    - [インストール センター] の **[詳細設定]** ページで、 **[[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の準備済みスタンドアロン インスタンスのイメージの完了]** を実行し、コンピューター上で準備済みのインスタンスを構成します。 
   
 2. Windows SysPrep ツールを使用して、未構成の準備済み [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスを含むオペレーティング システムのイメージを準備するには、次の操作を行います。 
   
-    -   [インストール センター] の [詳細設定] ページで、**[[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のスタンドアロン インスタンスのイメージの準備]** を実行し、イメージ準備用構成ファイルをキャプチャします。 
+    -   [インストール センター] の [詳細設定] ページで、 **[[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のスタンドアロン インスタンスのイメージの準備]** を実行し、イメージ準備用構成ファイルをキャプチャします。 
   
-    -   [インストール センター] の **[詳細設定]** ページで、**[[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の準備済みスタンドアロン インスタンスのイメージの完了]** を実行します。ただし、完了用構成ファイルをキャプチャしたら、**[イメージの完了の準備]** ページで処理をキャンセルしてください。 
+    -   [インストール センター] の **[詳細設定]** ページで、 **[[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の準備済みスタンドアロン インスタンスのイメージの完了]** を実行します。ただし、完了用構成ファイルをキャプチャしたら、 **[イメージの完了の準備]** ページで処理をキャンセルしてください。 
   
     -   イメージ完了用構成ファイルは、準備済みのインスタンスの構成を自動化するために、Windows イメージと共に保存できます。 
   

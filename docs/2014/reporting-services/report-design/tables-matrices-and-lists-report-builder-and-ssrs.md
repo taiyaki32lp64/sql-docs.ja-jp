@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 f1_keywords:
 - sql12.rtp.rptdesigner.tablix.visibility.f1
@@ -33,15 +32,15 @@ f1_keywords:
 - "10043"
 - sql12.rtp.rptdesigner.tablix.filter.f1
 ms.assetid: 9dcf3fc8-bf9c-4a14-a03d-e78254aa4098
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 6625e159d7992a8bb8a3f6b28c9f4e5dd0ac567b
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: ff294adb9108156e08c1d0053d301c0f4cafb0fd
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56287130"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66104749"
 ---
 # <a name="tables-matrices-and-lists-report-builder-and-ssrs"></a>テーブル、マトリックス、および一覧 (レポート ビルダーおよび SSRS)
   テーブル、マトリックス、および一覧は、行と列で構成されたセルにレポート データを表示するデータ領域です。 セルには通常、テキスト、日付、数字などのテキスト データが含まれていますが、ゲージ、グラフ、または画像などのレポート アイテムも含めることができます。 テーブル、マトリックス、および一覧をまとめて Tablix データ領域と呼ぶことがあります。  
@@ -56,7 +55,7 @@ ms.locfileid: "56287130"
   
  ![RS_TableMatrixList](../media/rs-tablematrixlist.gif "RS_TableMatrixList")  
   
- すぐにするテーブル、マトリックス、および一覧で、次を参照してください。[チュートリアル。基本的なテーブル レポートを作成する&#40;レポート ビルダー&#41;](../tutorial-creating-a-basic-table-report-report-builder.md)、[チュートリアル。マトリックス レポートの作成&#40;レポート ビルダー&#41;](../tutorial-creating-a-matrix-report-report-builder.md)、および[チュートリアル。自由形式レポートを作成する&#40;レポート ビルダー&#41;](../tutorial-creating-a-free-form-report-report-builder.md)します。  
+ テーブル、マトリックス、および一覧をすぐに使用するには、「[チュートリアル:基本的な表レポートの作成 &#40;レポート ビルダー&#41;](../tutorial-creating-a-basic-table-report-report-builder.md)」、「[チュートリアル:マトリックス レポートの作成 &#40;レポート ビルダー&#41;](../tutorial-creating-a-matrix-report-report-builder.md)」、「[チュートリアル:自由形式のレポートの作成 &#40;レポート ビルダー&#41;](../tutorial-creating-a-free-form-report-report-builder.md)」を参照してください。  
   
 > [!NOTE]  
 >  テーブル、マトリックス、および一覧は、レポート パーツとしてレポートとは別にパブリッシュできます。 [!INCLUDE[ssRBrptparts](../../includes/ssrbrptparts-md.md)]  
@@ -82,7 +81,7 @@ ms.locfileid: "56287130"
   
  ![ツールボックスから追加された新しいマトリックス、選択](../media/rs-matrixtemplatenewselected.gif "ツールボックスから追加された新しいマトリックス、選択")  
   
- データは、複数のフィールドまたは式によって、行グループと列グループにグループ化できます。 実行時にレポート データとデータ領域が組み合わされると、列グループに列、行グループに行がそれぞれ追加され、マトリックスはページ上で縦横に拡大されます。 マトリックス セルには、そのセルが所属する行グループと列グループの交差部分にスコープを設定した集計値が表示されます。 たとえば、マトリックスに行グループ (Category) と売上の合計を表示する 2 つの列グループ (Territory および Year) がある場合、レポートには Category グループ内の各値に対して売上の合計を含む 2 つのセルが表示されます。 セルのスコープは、2 つの交差部分には。カテゴリと販売区域、カテゴリ、および年です。 マトリックスには、入れ子になったグループと隣接するグループを含めることができます。 入れ子になったグループには親子リレーションシップ、隣接するグループにはピア リレーションシップがあります。 マトリックス内には、入れ子になった行および列グループの任意のレベルの小計や、すべてのレベルの小計が追加できます。  
+ データは、複数のフィールドまたは式によって、行グループと列グループにグループ化できます。 実行時にレポート データとデータ領域が組み合わされると、列グループに列、行グループに行がそれぞれ追加され、マトリックスはページ上で縦横に拡大されます。 マトリックス セルには、そのセルが所属する行グループと列グループの交差部分にスコープを設定した集計値が表示されます。 たとえば、マトリックスに行グループ (Category) と売上の合計を表示する 2 つの列グループ (Territory および Year) がある場合、レポートには Category グループ内の各値に対して売上の合計を含む 2 つのセルが表示されます。 セルのスコープは 2 つの交差部分です。つまり、Category および Territory と Category および Year です。 マトリックスには、入れ子になったグループと隣接するグループを含めることができます。 入れ子になったグループには親子リレーションシップ、隣接するグループにはピア リレーションシップがあります。 マトリックス内には、入れ子になった行および列グループの任意のレベルの小計や、すべてのレベルの小計が追加できます。  
   
  マトリックス データを読みやすくし、強調するデータを強調表示するには、セルを結合するか、水平方向および垂直方向に分割し、書式をデータとグループの見出しに適用します。  
   

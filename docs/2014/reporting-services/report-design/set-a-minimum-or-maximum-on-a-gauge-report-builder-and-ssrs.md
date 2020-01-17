@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 ms.assetid: b4c260c0-5a88-4f30-8977-eb5cc78fc146
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 9fa55d99ba407c8a95d6c195cdf898068b41949c
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: 2c7a9ad23124105443349720d2d5769fb9227db2
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56292051"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66105024"
 ---
 # <a name="set-a-minimum-or-maximum-on-a-gauge-report-builder-and-ssrs"></a>ゲージへの最小値または最大値の設定 (レポート ビルダーおよび SSRS)
   複数のグループが定義されるグラフとは異なり、ゲージには 1 つの値しか表示されません。 レポート ビルダーおよびレポート デザイナーは、ゲージに表示される値のコンテキストや相対的な有意性を判断することができないため、スケールの最小値と最大値は独自に定義する必要があります。 たとえば、データの値が 0 ～ 10 のランキングを表している場合は、最小値を 0 に、最大値を 10 に設定します。 間隔の数は、最小値と最大値として指定された値に基づいて自動的に計算されます。 既定では、最小値と最大値はそれぞれ 0 および 100 に設定されますが、これらは恣意的な値であり、必要に応じて変更する必要があります。 アプリケーションによって値がパーセンテージとして計算されることはありません。  
@@ -38,7 +37,7 @@ ms.locfileid: "56292051"
   
 4.  (省略可) 最小と最大の値が大きい場合は、 **[スケール ラベルの乗数値]** オプションに値を指定します。 尺度を小さくするための乗数は、小数値を使って指定します。 たとえば、0 ～ 1000 の尺度が存在する場合は、乗数値を「0.01」とすることで 0 ～ 10 の尺度に変更できます。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [ゲージのスケールの書式設定 &#40;レポート ビルダーおよび SSRS&#41;](formatting-scales-on-a-gauge-report-builder-and-ssrs.md)   
  [ゲージのポインターの書式設定 &#40;レポート ビルダーおよび SSRS&#41;](formatting-pointers-on-a-gauge-report-builder-and-ssrs.md)   
  [ゲージ (レポート ビルダーおよび SSRS)](gauges-report-builder-and-ssrs.md)  

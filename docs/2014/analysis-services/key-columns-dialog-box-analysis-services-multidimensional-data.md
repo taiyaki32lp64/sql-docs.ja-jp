@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 f1_keywords:
 - sql.asvs.dimensiondesigner.dbv.dataitemCollection.f1
@@ -15,15 +14,15 @@ ms.assetid: 585f27f2-d5eb-4516-b29a-2084010b7d51
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 6c67966895699c34d58a0527ea27c06e7cc05ed5
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 26eb85c97c970f9fe1cfaf63ca9861c2be0b4695
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48049058"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66079473"
 ---
 # <a name="key-columns-dialog-box-analysis-services---multidimensional-data"></a>[キー列] ダイアログ ボックス (Analysis Services - 多次元データ)
-  属性の **KeyColumns** プロパティを変更するには、**[キー列]** ダイアログ ボックスを使用します。 詳細については、「 [属性の KeyColumn プロパティの変更](multidimensional-models/attribute-properties-modify-the-keycolumn-property.md)」を参照してください。  
+  属性の **KeyColumns** プロパティを変更するには、 **[キー列]** ダイアログ ボックスを使用します。 詳細については、「 [属性の KeyColumn プロパティの変更](multidimensional-models/attribute-properties-modify-the-keycolumn-property.md)」を参照してください。  
   
  **キー列 ダイアログ ボックスを表示するには**  
   
@@ -36,12 +35,12 @@ ms.locfileid: "48049058"
  **使用可能な列**  
  キー列として使用する列を選択します。 指定した **[基になるテーブル]** 内の列の一覧から、まだキー列として選択されていない列を選択できます。  
   
- 選択した列を **[キー列]** の一覧に追加するには、**[>]** ボタンをクリックします。  
+ 選択した列を **[キー列]** の一覧に追加するには、 **[>]** ボタンをクリックします。  
   
  **[キー列]**  
- 選択したキー列の順序を定義します。 キー列の順序は、適切な複合キーを定義する際に重要です。 キー列の一覧の順序を設定または変更するには、列を選択し、**[上へ]** または **[下へ]** ボタンをクリックします。  
+ 選択したキー列の順序を定義します。 キー列の順序は、適切な複合キーを定義する際に重要です。 キー列の一覧の順序を設定または変更するには、列を選択し、 **[上へ]** または **[下へ]** ボタンをクリックします。  
   
- **[キー列]** の一覧から列を削除するには、列を選択し、**[\<]** ボタンをクリックします。  
+ **[キー列]** の一覧から列を削除するには、列を選択し、 **[\<]** ボタンをクリックします。  
   
  **[上へ]**  
  **[キー列]** で選択した列を 1 つ上の位置に移動する場合にクリックします。  

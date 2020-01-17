@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: 545634d8-f06b-429a-9293-0087d758f359
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: fcbcac8f48c47f2144127ecd2aa41a5402bf6f38
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e0c5018dc2058af72028a4114dcc896d06d212d5
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47818166"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67981013"
 ---
 # <a name="getparameterclassname-method-sqlserverparametermetadata"></a>getParameterClassName メソッド (SQLServerParameterMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -47,11 +46,11 @@ public java.lang.String getParameterClassName(int param)
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- この getParameterClassName メソッドは、java.sql.ParameterMetaData インターフェイスで getParameterClassName メソッドによって指定されます。  
+ この getParameterClassName メソッドは、java. .sql. ParameterMetaData インターフェイスの getParameterClassName メソッドによって指定されます。  
   
 ## <a name="see-also"></a>参照  
  [SQLServerParameterMetaData のメソッド](../../../connect/jdbc/reference/sqlserverparametermetadata-methods.md)   
- ph id="ph1" xmlns="urn:oasis:names:tc:xliff:document:1.2"> </ph>[SQLServerParameterMetaData のメンバー](../../../connect/jdbc/reference/sqlserverparametermetadata-members.md)  
+ [SQLServerParameterMetaData のメンバー](../../../connect/jdbc/reference/sqlserverparametermetadata-members.md)   
  [SQLServerParameterMetaData クラス](../../../connect/jdbc/reference/sqlserverparametermetadata-class.md)  
   
   

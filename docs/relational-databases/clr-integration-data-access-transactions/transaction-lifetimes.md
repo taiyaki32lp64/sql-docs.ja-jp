@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: cb076fda-6488-4959-a6a4-7adaccf3f25c
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 12efdc644c950cecdbd676f53fe582b1d7d20ca6
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: fa57b82d0e3f18e4ee1c3d0147935fa00cd5c06a
+ms.sourcegitcommit: f76b4e96c03ce78d94520e898faa9170463fdf4f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47774180"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70874853"
 ---
 # <a name="transaction-lifetimes"></a>トランザクションの有効期間
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -30,9 +29,9 @@ ms.locfileid: "47774180"
   
 -   同じプロシージャ内で開始されていないトランザクションをコミットしようとすると、実行時エラーが発生します。  
   
--   同じプロシージャ内で開始されていないトランザクションをロールバックしようとすると、そのトランザクションが応答を停止します (ロールバックに伴う他の二次的な動作が行われません)。 トランザクションは、CLR コードがスコープ外になるまで再開されません。 この動作は、プロシージャ内部でエラーを検出したときに、トランザクション全体を終了することが望ましい場合に役立つことがあります。  
+-   同じプロシージャ内で開始されていないトランザクションをロールバックしようとすると、トランザクションが応答を停止します (他の副作用操作が発生するのを防ぐことができます)。 トランザクションは、CLR コードがスコープ外になるまで再開されません。 この動作は、プロシージャ内部でエラーを検出したときに、トランザクション全体を終了することが望ましい場合に役立つことがあります。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [CLR 統合とトランザクション](../../relational-databases/clr-integration-data-access-transactions/clr-integration-and-transactions.md)  
   
   

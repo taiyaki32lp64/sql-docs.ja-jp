@@ -12,14 +12,13 @@ helpviewer_keywords:
 ms.assetid: fd201921-7c96-4fcc-85fe-61d91396429b
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 425b1bd523a3dd0c6ff1c67e130aa2fc44212473
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+monikerRange: =azuresqldb-current||>=sql-server-2014||=sqlallproducts-allversions
+ms.openlocfilehash: 35cd84e1ffbdc3251565d99d05b2a9aef7ab66f5
+ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54131623"
+ms.lasthandoff: 08/03/2019
+ms.locfileid: "68770037"
 ---
 # <a name="new-subscription-wizard-ui-reference"></a>サブスクリプションの新規作成ウィザード (UI リファレンス)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]

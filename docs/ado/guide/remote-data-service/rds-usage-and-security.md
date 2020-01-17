@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: b8ac3739-05d3-4818-8201-a763795fb8b4
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 2abbebbf03984e3950ae9fadac1b574db64990ef
-ms.sourcegitcommit: 1a5448747ccb2e13e8f3d9f04012ba5ae04bb0a3
+ms.openlocfilehash: 26d3a5d785db3ae138e26225ea5b37b182f6b076
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51559559"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67922400"
 ---
 # <a name="rds-usage-and-security"></a>RDS の使用方法とセキュリティ
 このセクションの情報を使用して、サーバーに設定して、すばやく RDS を使用します。 このセクションには、RDS とその他のテクノロジの間でキーのリレーションシップの一部について説明します、RDS を実装するときに実行する必要がある特定の構成手順が含まれていて、設定するときに発生する問題の解決策を識別するのに役立ちます、RDS ソリューションです。  
@@ -37,7 +36,7 @@ ms.locfileid: "51559559"
   
 -   [RDS のトラブルシューティング](../../../ado/guide/remote-data-service/troubleshooting-rds.md)  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [RDS の基礎](../../../ado/guide/remote-data-service/rds-fundamentals.md)   
  [RDS のシナリオ](../../../ado/guide/remote-data-service/rds-scenario.md)   
  [RDS チュートリアル](../../../ado/guide/remote-data-service/rds-tutorial.md)

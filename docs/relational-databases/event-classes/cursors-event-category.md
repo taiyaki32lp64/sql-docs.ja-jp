@@ -13,14 +13,13 @@ helpviewer_keywords:
 ms.assetid: 752e0695-b464-4720-93be-5b9b53b7ab21
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: c746a02b57e548735e534960a1ca63c075e8a00d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b6263035a0094f07264774d7acc29da144c4f419
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47791117"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68093650"
 ---
 # <a name="cursors-event-category"></a>Cursors イベント カテゴリ
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]

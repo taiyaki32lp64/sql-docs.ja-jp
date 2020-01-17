@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: f855e931-7502-44bd-8a8b-b8543645c7f4
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: dfd06b590ba54efc935bab1bbe8c898101e827ae
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 8171a91d18650285c7bcaf4eb780083e958a8789
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52518608"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72908452"
 ---
 # <a name="resolve-out-of-memory-issues"></a>メモリ不足の問題の解決
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -27,13 +26,13 @@ ms.locfileid: "52518608"
   
 |トピック|概要|  
 |-----------|--------------|  
-|[OOM によるデータベース復元の障害を解決する](#bkmk_resolveRecoveryFailures)|"リソース プール '*\<resourcePoolName>*' 内のメモリ不足が原因で、データベース '*\<databaseName>*' の復元操作に失敗しました" というエラー メッセージが表示された場合の対処方法。|  
+|[OOM によるデータベース復元の障害を解決する](#bkmk_resolveRecoveryFailures)|"リソース プール ' *\<resourcePoolName>* ' 内のメモリ不足が原因で、データベース ' *\<databaseName>* ' の復元操作に失敗しました" というエラー メッセージが表示された場合の対処方法。|  
 |[低メモリまたは OOM 状態によるワークロードへの影響を解決する](#bkmk_recoverFromOOM)|低メモリの問題によるパフォーマンス低下が見つかった場合の対処方法。|  
-|[十分なメモリがある状況でのメモリ不足によるページの割り当てエラーを解決する](#bkmk_PageAllocFailure)|"リソース プール '*\<resourcePoolName>*' のメモリが不足しているため、データベース '*\<databaseName>*' のページ割り当ては禁止されています" というエラー メッセージが表示された場合の対処方法。 ..." というエラー メッセージが発生した場合の対処方法。|
+|[十分なメモリがある状況でのメモリ不足によるページの割り当てエラーを解決する](#bkmk_PageAllocFailure)|"リソース プール ' *\<resourcePoolName>* ' のメモリが不足しているため、データベース ' *\<databaseName>* ' のページ割り当ては禁止されています" というエラー メッセージが表示された場合の対処方法。 ..." というエラー メッセージが発生した場合の対処方法。|
 |[VM 環境でのインメモリ OLTP の使用のベスト プラクティス](#bkmk_VMs)|仮想化環境でインメモリ OLTP を使用するときの留意事項。|
   
 ##  <a name="bkmk_resolveRecoveryFailures"></a> OOM によるデータベース復元の障害を解決する  
- データベースを復元しようとすると、"リソース プール '*\<resourcePoolName>*' 内のメモリ不足が原因で、データベース '*\<databaseName>*' の復元操作に失敗しました" というエラー メッセージが表示されることがあります。これは、データベースを復元するのに十分なメモリがサーバーにないことを示します。 
+ データベースを復元しようとすると次のエラー メッセージが表示されることがあります。"リソース プール ' *\<resourcePoolName>* ' 内のメモリが不足しているため、データベース ' *\<databaseName>* ' の復元操作に失敗しました。"これは、データベースを復元するのに十分なメモリがサーバーにないことを示します。 
    
 データベースの復元先であるサーバーでは、データベース バックアップのメモリ最適化テーブル用に十分なメモリが確保されている必要があります。メモリが十分でない場合、データベースはオンラインにならず、問題ありの印が付きます。  
   
@@ -77,7 +76,7 @@ ms.locfileid: "52518608"
 1.  [DAC (専用管理者接続) を開く](#bkmk_openDAC)  
   
 2.  [修正措置を行う](#bkmk_takeCorrectiveAction)  
-  
+
 ###  <a name="bkmk_openDAC"></a> DAC (専用管理者接続) を開く  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] には専用管理者接続 (DAC) があります。 DAC を使用すると、サーバーが他のクライアント接続に応答しない場合でも、SQL Server データベース エンジンの実行中のインスタンスにアクセスして、サーバーの問題をトラブルシューティングすることができます。 DAC は、`sqlcmd` ユーティリティと [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] で使用できます。  
   
@@ -100,7 +99,7 @@ ms.locfileid: "52518608"
   
 #### <a name="increase-available-memory"></a>使用可能なメモリを増やす  
   
-##### <a name="increase-value-of-maxmemorypercent-on-the-resource-pool"></a>リソース プールの MAX_MEMORY_PERCENT 値を増やす  
+##### <a name="increase-value-of-max_memory_percent-on-the-resource-pool"></a>リソース プールの MAX_MEMORY_PERCENT 値を増やす  
  インメモリ テーブル用に名前付きリソース プールを作成していない場合は、作成して [!INCLUDE[hek_2](../../includes/hek-2-md.md)] データベースをバインドします。 [データベースを作成してリソース プールにバインドする方法については、「](../../relational-databases/in-memory-oltp/bind-a-database-with-memory-optimized-tables-to-a-resource-pool.md) メモリ最適化テーブルを持つデータベースのリソース プールへのバインド [!INCLUDE[hek_2](../../includes/hek-2-md.md)] 」を参照してください。  
   
  [!INCLUDE[hek_2](../../includes/hek-2-md.md)] データベースがリソース プールにバインドされている場合は、プールがアクセスできるメモリのパーセントを増やせることがあります。 リソース プールの MIN_MEMORY_PERCENT および MAX_MEMORY_PERCENT の値を変更する方法については、サブトピック「 [既存のプール内での MIN_MEMORY_PERCENT と MAX_MEMORY_PERCENT の変更](../../relational-databases/in-memory-oltp/bind-a-database-with-memory-optimized-tables-to-a-resource-pool.md#bkmk_ChangeAllocation) 」をご覧ください。  

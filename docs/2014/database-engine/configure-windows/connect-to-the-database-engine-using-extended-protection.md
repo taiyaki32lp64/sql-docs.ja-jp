@@ -17,12 +17,12 @@ ms.assetid: ecfd783e-7dbb-4a6c-b5ab-c6c27d5dd57f
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 0df4e17291e03e23cb68e984c8473064b0208a9c
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 5b1317bc41be836cfad5159339a4e7c90fcfbc83
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53366324"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62811286"
 ---
 # <a name="connect-to-the-database-engine-using-extended-protection"></a>拡張保護を使用したデータベース エンジンへの接続
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では **で始まる** 拡張保護 [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]がサポートされています。 **認証の拡張保護** とは、オペレーティング システムで実装されているネットワーク コンポーネントの機能です。 **拡張保護** は、Windows 7 および Windows Server 2008 R2 でサポートされており、 **以前のオペレーティング システムでは、** 拡張保護 [!INCLUDE[msCoName](../../includes/msconame-md.md)] がサービス パックに含まれています。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の接続を **拡張保護**を使用して確立することで、安全性を高めることができます。  
@@ -55,9 +55,9 @@ ms.locfileid: "53366324"
   
 -   [拡張保護付き統合 Windows 認証](https://msdn.microsoft.com/library/dd639324.aspx)  
   
--   [マイクロソフト セキュリティ アドバイザリ (973811)、認証の拡張保護](https://www.microsoft.com/technet/security/advisory/973811.mspx)  
+-   [マイクロソフト セキュリティ アドバイザリ (973811)、認証の拡張保護](https://support.microsoft.com//help/973811/microsoft-security-advisory-extended-protection-for-authentication)  
   
-## <a name="settings"></a>[設定]  
+## <a name="settings"></a>設定  
  サービス バインドとチャネル バインドに影響する [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の接続設定は 3 つあります。 これらの設定を構成するには、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 構成マネージャーまたは WMI を使用します。これらの設定を表示するには、ポリシー ベースの管理の **[サーバー プロトコル設定]** ファセットを使用します。  
   
 -   **[強制的に暗号化]**  
@@ -66,7 +66,7 @@ ms.locfileid: "53366324"
   
 -   **拡張保護**  
   
-     選択できる値は、 **[オフ]**、 **[許可]**、および **[必須]** です。 **拡張保護** 変数を使用すると、各 **インスタンスの** 拡張保護 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] レベルを構成できます。 **[拡張保護]** は、 **構成マネージャーの** [MSSQLSERVER のプロトコルのプロパティ] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([詳細設定] タブ) にあります。  
+     選択できる値は、 **[オフ]** 、 **[許可]** 、および **[必須]** です。 **拡張保護** 変数を使用すると、各 **インスタンスの** 拡張保護 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] レベルを構成できます。 **[拡張保護]** は、 **構成マネージャーの** [MSSQLSERVER のプロトコルのプロパティ] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([詳細設定] タブ) にあります。  
   
     -   **[オフ]** に設定すると、 **[拡張保護]** は無効になります。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスは、クライアントが保護されているかどうかに関係なく、任意のクライアントからの接続を許可します。 **[オフ]** は、古いオペレーティング システムや修正プログラムの適用が解除されたオペレーティング システムと互換性がありますが、安全性は低くなります。 この設定は、クライアント オペレーティング システムで拡張保護がサポートされていないことがわかっている場合に使用してください。  
   
@@ -83,9 +83,9 @@ ms.locfileid: "53366324"
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では **で始まる** 拡張保護 [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]がサポートされています。 以前のバージョンの**については、今後の更新によって一部で** 拡張保護 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] を使用できるようになります。 サーバー コンピューターで **拡張保護** を有効にした後、次の手順に従って **拡張保護**を有効にします。  
   
-1.  **[スタート]** ボタンをクリックし、 **[すべてのプログラム]**、 **[Microsoft SQL Server]** の順にポイントして、 **[SQL Server 構成マネージャー]** をクリックします。  
+1.  **[スタート]** ボタンをクリックし、 **[すべてのプログラム]** 、 **[Microsoft SQL Server]** の順にポイントして、 **[SQL Server 構成マネージャー]** をクリックします。  
   
-2.  **[SQL Server ネットワークの構成]** を展開し、**[*\<* InstanceName*>* のプロトコル]** を右クリックして、**[プロパティ]** をクリックします。  
+2.  **[SQL Server ネットワークの構成]** を展開し、 **[ *\<* InstanceName *>* のプロトコル]** を右クリックして、 **[プロパティ]** をクリックします。  
   
 3.  チャネル バインドとサービス バインドの両方について、 **[詳細設定]** タブで **[拡張保護]** を適切な値に設定します。  
   
@@ -100,7 +100,7 @@ ms.locfileid: "53366324"
   
  IIS を使用して HTTP 接続または HTTPS 接続経由で [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] データにアクセスする場合は、 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] で IIS によって提供される拡張保護を利用できます。 拡張保護を使用するように IIS を構成する方法の詳細については、「 [IIS 7.5 における拡張保護の構成](https://go.microsoft.com/fwlink/?LinkId=181105)」を参照してください。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [サーバー ネットワークの構成](server-network-configuration.md)   
  [クライアント ネットワーク構成](client-network-configuration.md)   
  [認証の拡張保護の概要](https://go.microsoft.com/fwlink/?LinkID=177943)   

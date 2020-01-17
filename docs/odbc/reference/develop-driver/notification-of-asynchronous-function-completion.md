@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 336565da-4203-4745-bce2-4f011c08e357
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: c54e545bdbd1ae137c24f79c71b53502480cbca9
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: de3496661f2ab329e5bf662a9cb8fa749cb81bfc
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52391285"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68129319"
 ---
 # <a name="notification-of-asynchronous-function-completion"></a>非同期関数の完了の通知
 Windows 8 SDK とでは、ODBC は、非同期操作が完了したら、完了時に通知する"として参照するアプリケーションに通知するためのメカニズムを追加します。 (を参照してください[非同期実行 (通知方法)](../../../odbc/reference/develop-app/asynchronous-execution-notification-method.md)詳細についてはします)。このトピックでは、ドライバー開発者向けの問題の一部を説明します。  
@@ -36,5 +35,5 @@ Windows 8 SDK とでは、ODBC は、非同期操作が完了したら、完了�
   
  ドライバー マネージャーは、ドライバーはコールバックの後に、元の関数をもう一度呼び出します。 ドライバー マネージャーは、アプリケーション スレッドもドライバーのスレッドにあるスレッドを使用できます。 ドライバーが初期の非同期呼び出しに必要な情報を保存し、全体の非同期操作の前に保存されている値を使用してドライバー (たとえば、セキュリティ トークンまたはユーザー識別子) のスレッドに関連付けられている一部の情報を使用する場合完了します。 通常、のみ**SQLDriverConnect**、 **SQLConnect**、または**SQLBrowseConnect**その種の情報を使用する必要があります。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [ODBC ドライバーの開発](../../../odbc/reference/develop-driver/developing-an-odbc-driver.md)

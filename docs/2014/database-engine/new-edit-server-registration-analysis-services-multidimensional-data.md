@@ -13,11 +13,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 9d3d13ac64edbdbec4f131a09949e5724ab2932b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48101142"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62774916"
 ---
 # <a name="new-or-edit-server-registration-general-tab-analysis-services---multidimensional-data"></a>[新規サーバーの登録] または [サーバー登録プロパティの編集] ([全般] タブ) (Analysis Services - 多次元データ)
   このタブを使用すると、[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] のインスタンスを登録するときのオプションを指定できます。  

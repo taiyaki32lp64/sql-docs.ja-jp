@@ -18,15 +18,15 @@ helpviewer_keywords:
 - hierarchical relationships [SQLXML]
 - key-fields annotation
 ms.assetid: 1a5ad868-8602-45c4-913d-6fbb837eebb0
-author: douglaslMS
-ms.author: douglasl
+author: MightyPen
+ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 1d1db0287c0876c80d5353657c525f4e0597c5f0
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: bc3c063da7bb9133f8687a908c4bd7e0e13bae8f
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52795644"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66013818"
 ---
 # <a name="identifying-key-columns-using-sqlkey-fields-sqlxml-40"></a>sql:key-fields を使用した、キー列の指定 (SQLXML 4.0)
   XSD スキーマに対して XPath クエリを指定する場合、結果内に適切な入れ子を生成するには、多くの場合キー情報が必要です。 `sql:key-fields` 注釈の指定は、適切な階層を確実に生成するための 1 つの方法です。  
@@ -44,11 +44,11 @@ ms.locfileid: "52795644"
 ### <a name="a-producing-the-appropriate-nesting-when-sqlrelationship-does-not-provide-sufficient-information"></a>A. ときに適切な入れ子を生成\<sql:relationship > 十分な情報は提供されません  
  この例では、`sql:key-fields` をどこに指定すればよいかを示します。  
   
- 次のスキーマを検討してください。 スキーマ間の階層の指定、 **\<順序 >** と**\<顧客 >** いる要素、 **\<順序 >** 要素は親と**\<顧客 >** 要素は、子。  
+ 次のスキーマを検討してください。 スキーマ間の階層の指定、 **\<順序 >** と **\<顧客 >** いる要素、 **\<順序 >** 要素は親と **\<顧客 >** 要素は、子。  
   
-  **\<Sql:relationship >** 親子リレーションシップを指定するタグを使用します。 このタグでは、Sales.SalesOrderHeader テーブルの CustomerID を親キーとして識別し、Sales.Customer テーブルの子キー CustomerID を参照します。 提供される情報 **\<sql:relationship >** 親テーブル (Sales.SalesOrderHeader) 内の行を一意に識別するには不十分です。 `sql:key-fields` 注釈を指定しないと、不正確な階層が生成されます。  
+ **\<Sql:relationship >** 親子リレーションシップを指定するタグを使用します。 このタグでは、Sales.SalesOrderHeader テーブルの CustomerID を親キーとして識別し、Sales.Customer テーブルの子キー CustomerID を参照します。 提供される情報 **\<sql:relationship >** 親テーブル (Sales.SalesOrderHeader) 内の行を一意に識別するには不十分です。 `sql:key-fields` 注釈を指定しないと、不正確な階層が生成されます。  
   
- `sql:key-fields`で指定した**\<順序 >** 注釈は、親 (Sales.SalesOrderHeader テーブル) 内の行を一意に識別して、その子要素がその親の下に表示します。  
+ `sql:key-fields`で指定した **\<順序 >** 注釈は、親 (Sales.SalesOrderHeader テーブル) 内の行を一意に識別して、その子要素がその親の下に表示します。  
   
  スキーマは次のようになります。  
   

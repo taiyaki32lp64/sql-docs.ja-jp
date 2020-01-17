@@ -10,17 +10,20 @@ ms.topic: conceptual
 f1_keywords:
 - manSer
 ms.assetid: 645ae53f-f352-4d6a-9eb0-264e53a93a18
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: c9437ede8627ee8fb162995cb4e02a454d42a3a6
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: b6838ae985c16f4188ed43e3442b4f86c4a3557b
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47727230"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71298675"
 ---
 # <a name="manage-a-cdc-service"></a>CDC サービスの管理
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   CDC デザイナー コンソールを使用して、CDC Service 構成コンソールで作成したサービスを表示し、Oracle CDC Service 内のすべてのインスタンスを管理することができます。  
   
  サービスに関する情報の表示およびサービスの管理を行うには、左ペインでサービスの名前をクリックします。  
@@ -46,6 +49,6 @@ ms.locfileid: "47727230"
 ## <a name="see-also"></a>参照  
  [SQL Server 変更データベース インスタンスを作成する方法](../../integration-services/change-data-capture/how-to-create-the-sql-server-change-database-instance.md)   
  [CDC デザイナー コンソールから CDC サービスを管理する方法](../../integration-services/change-data-capture/how-to-manage-a-cdc-service-from-the-cdc-designer-console.md)   
- [新しいインスタンス ウィザードを使用する](../../integration-services/change-data-capture/use-the-new-instance-wizard.md)  
+ [Use the New Instance Wizard](../../integration-services/change-data-capture/use-the-new-instance-wizard.md)  
   
   

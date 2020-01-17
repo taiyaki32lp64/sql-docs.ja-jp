@@ -23,11 +23,11 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 1b87e497c6610a2d75daa9432246e4f4b4690bab
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48153432"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62874446"
 ---
 # <a name="defining-udt-tables-and-columns"></a>UDT テーブルと UDT 列の定義
   ユーザー定義型 (UDT) を含むアセンブリの定義に登録されていると、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]データベース、列定義で使用できます。  
@@ -47,7 +47,7 @@ CREATE TABLE dbo.Points
   
 -   UDT 式のインデックスを作成します。 保存される計算列のインデックスを UDT 式を使用して作成できます。 UDT のフィールド、メソッド、またはプロパティを UDT 式にできます。 この式は決定的である必要があり、この式でデータ アクセスを実行しないでください。  
   
- 詳細については、次を参照してください。 [clr ユーザー定義型](clr-user-defined-types.md)と[CREATE INDEX & #40 です。TRANSACT-SQL と #41 です](/sql/t-sql/statements/create-index-transact-sql)。  
+ 詳細については、[clr ユーザー定義型](clr-user-defined-types.md)と[CREATE INDEX & #40 を参照してください。TRANSACT-SQL と #41 です](/sql/t-sql/statements/create-index-transact-sql)。  
   
 ## <a name="see-also"></a>参照  
  [SQL Server でのユーザー定義型の使用](working-with-user-defined-types-in-sql-server.md)  

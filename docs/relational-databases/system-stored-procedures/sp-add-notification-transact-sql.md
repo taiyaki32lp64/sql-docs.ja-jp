@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 0525e0a2-ed0b-4e69-8a4c-a9e3e3622fbd
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: bb19049185ab79178213b1dc042a1c23f8978374
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 60bb289f0fd6d7b7dd1034630929998d32cc59d0
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47704600"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68115063"
 ---
 # <a name="spaddnotification-transact-sql"></a>sp_add_notification (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -41,16 +40,13 @@ sp_add_notification [ @alert_name = ] 'alert' ,
 ```  
   
 ## <a name="arguments"></a>引数  
- [ **@alert_name=** ] **'***alert***'**  
- この通知で示される警告を指定します。 *アラート*は**sysname**、既定値はありません。  
+`[ @alert_name = ] 'alert'` この通知のアラート。 *アラート*は**sysname**、既定値はありません。  
   
- [ **@operator_name=** ] **'***operator***'**  
- 警告が発生したときに通知を受け取るオペレーターを指定します。 *演算子*は**sysname**、既定値はありません。  
+`[ @operator_name = ] 'operator'` 警告が発生したときに通知する演算子です。 *演算子*は**sysname**、既定値はありません。  
   
- [  **@notification_method=** ] *notification_method*  
- オペレーターが通知を受ける方法を指定します。 *notification_method*は**tinyint**、既定値はありません。 *notification_method*と組み合わせてこれらの値の 1 つ以上を指定することができます、 **OR**論理演算子です。  
+`[ @notification_method = ] notification_method` オペレーターに通知するメソッド。 *notification_method*は**tinyint**、既定値はありません。 *notification_method*と組み合わせてこれらの値の 1 つ以上を指定することができます、 **OR**論理演算子です。  
   
-|値|説明|  
+|[値]|説明|  
 |-----------|-----------------|  
 |**1**|[電子メール]|  
 |**2**|[ポケットベル]|  

@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 7f54f9c61bb78a3c0e52adc491b95e03ad85ecd2
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48102088"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63207271"
 ---
 # <a name="bookmarking-rows-in-odbc"></a>ODBC での行のブックマーク
   ブックマークは、データ行の識別に使われる値です。 ブックマーク値の意味を解釈できるのは、ドライバーまたはデータ ソースのみです。 たとえば、ブックマークは、行番号のような単純な値の場合も、ディスク アドレスのような複雑な値の場合もあります。 ODBC では、アプリケーションが特定の行のブックマークを要求し、これを保存し、カーソルに戻して行に返します。  
@@ -30,7 +30,7 @@ ms.locfileid: "48102088"
   
  ブックマークはでも使用できます、 **SQLBulkOperations**ブックマークで始まる行のセットに対して操作を実行する関数。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [行のスクロールとフェッチ](../native-client-ole-db-rowsets/fetching-rows.md)  
   
   

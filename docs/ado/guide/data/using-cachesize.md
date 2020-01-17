@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: ca1c3422-b6a4-4ba6-af55-54f975b698b1
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 1c29fb18431d1f02d82db76605a8a53752ea0357
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a2e3a67e9ad0f1f26f804ecb38e960041863fad9
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47633437"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67923576"
 ---
 # <a name="using-cachesize"></a>CacheSize を使用する
 使用して、 **CacheSize**プロバイダーからのローカル メモリに一度に取得するレコードの数を制御するプロパティ。 たとえば場合、 **CacheSize** 10 が、最初に開く、**レコード セット**オブジェクト、プロバイダーがローカル メモリに最初の 10 個のレコードを取得します。 間を移動し、 **Recordset**オブジェクト、プロバイダーがローカル メモリ バッファーからデータを返します。 過去のキャッシュの最後のレコードを移動するとすぐに、プロバイダーは、キャッシュにデータ ソースから、次の 10 個のレコードを取得します。  

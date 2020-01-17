@@ -1,67 +1,67 @@
 ---
-title: SQLRUserGroup - SQL Server Machine Learning サービスのログインを作成します。
-description: ループバック接続は暗黙の認証を使用して、ログイン作成 SQL Server の SQLRUserGroup のワーカー アカウントは id の変換、呼び出し元のユーザーに、サーバーにログインできるようにします。
+title: SQLRUserGroup のログインｎ作成
+description: 暗黙の認証を使用したループ バック接続の場合は、SQLRUserGroup に対して SQL Server でログインを作成し、ID 変換が呼び出し元のユーザーへ返るようにするため、ワーカー アカウントがサーバーにログインできるようにします。
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 01/25/2019
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
-manager: cgronlun
-ms.openlocfilehash: 62dd1ddf61c3cc2e1340619566ad9f4dcce062b7
-ms.sourcegitcommit: 32a55df1275ad169bb1457243dc8caa8b48b206f
-ms.translationtype: MT
+monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
+ms.openlocfilehash: a5194f251b7ea47e0d9485446b8957e96037ded0
+ms.sourcegitcommit: 321497065ecd7ecde9bff378464db8da426e9e14
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/28/2019
-ms.locfileid: "55147043"
+ms.lasthandoff: 08/01/2019
+ms.locfileid: "68714960"
 ---
-# <a name="create-a-login-for-sqlrusergroup"></a>SQLRUserGroup のログインを作成します。
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+# <a name="create-a-login-for-sqlrusergroup"></a>SQLRUserGroup のログインｎ作成
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-作成、 [SQL Server のログイン](https://docs.microsoft.com/sql/relational-databases/security/authentication-access/create-a-login)の[SQLRUserGroup](../concepts/security.md#sqlrusergroup)ときに、[ループバック接続をループ](../../advanced-analytics/concepts/security.md#implied-authentication)、スクリプトを指定します、*信頼関係接続*、オブジェクトの実行に使用される id に、コードが含まれている Windows ユーザー アカウントです。
+スクリプト内の[ループ バック接続](../../advanced-analytics/concepts/security.md#implied-authentication)が*信頼関係接続*を指定するとき、[SQLRUserGroup](../concepts/security.md#sqlrusergroup) のための [SQL Server へのログイン](https://docs.microsoft.com/sql/relational-databases/security/authentication-access/create-a-login)を作成すると、あなたのコードを含むオブジェクトの実行に使用される ID は Windows のユーザー アカウントです。
 
-接続がある信頼された`Trusted_Connection=True`接続文字列にします。 SQL Server では、信頼関係接続を指定する要求を受信したときに、現在の Windows ユーザーの id が、ログインを持つかどうかをチェックします。 ワーカー アカウントとして実行すると、外部プロセス用 (から MSSQLSERVER01 など**SQLRUserGroup**)、それらのアカウントでは、既定では、ログインはありませんので、要求は失敗します。
+信頼関係接続とは、接続文字列に `Trusted_Connection=True` を持つ接続のことです。 SQL Server が信頼関係接続を指定する要求を受信すると、現在の Windows ユーザーの ID にログインがあるかどうかを確認します。 ワーカー アカウント (**SQLRUserGroup** からの MSSQLSERVER01 など) として実行されている外部プロセスの場合、既定ではこれらのアカウントにはログインがないため、要求は失敗します。
 
-接続エラーを回避するには、ログインを作成して**SQLServerRUserGroup**します。 Id と外部プロセスの詳細については、次を参照してください。[機能拡張フレームワークのセキュリティの概要](../concepts/security.md)します。
+**SQLServerRUserGroup** のログインを作成することによって、接続エラーを回避できます。 ID と外部プロセスの詳細については、「[機能拡張フレームワークのセキュリティの概要](../concepts/security.md)」を参照してください。
 
 > [!Note]
-> 必ず**SQLRUserGroup** 「ローカル ログオンを許可」権限します。 既定では、すべての新しいローカル ユーザーにこの権限が与えられますが、一部の組織の厳しいグループ ポリシーには、この権限が無効にする場合があります。
+> **SQLRUserGroup** に "ローカル ログオンを許可する" アクセス許可があることを確認します。 既定では、この権限はすべての新しいローカル ユーザーに与えられますが、グループ ポリシー付きの組織の一部では、この権限が無効になる場合があります。
 
 ## <a name="create-a-login"></a>ログインを作成します
 
 1. [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]のオブジェクト エクスプローラーで、 **[セキュリティ]** を展開し、 **[ログイン]** を右クリックして、 **[新しいログイン]** を選択します。
 
-2. **ログイン - 新規**ダイアログ ボックスで、**検索**します。 (何も入力しないでボックスで、まだ。)
+2. **[ログイン - 新規作成]** ダイアログ ボックスで、 **[検索]** をクリックします。 (まだボックスに何も入力しないでください)。
     
-     ![Machine learning の新しいログインの追加の検索 をクリックして](media/implied-auth-login1.png "machine learning の新しいログインを追加する検索をクリックします。")
+     ![[検索] をクリックして Machine Learning の新しいログインを追加する](media/implied-auth-login1.png "[検索] をクリックして Machine Learning の新しいログインを追加する")
 
-3. **ユーザーまたはグループ**ボックスで、、**オブジェクトの種類**ボタンをクリックします。
+3. **[ユーザーまたはグループの選択]** ボックスで、 **[オブジェクトの種類]** ボタンをクリックします。
 
-     ![Machine learning の新しいログインを追加するオブジェクトの種類を検索](media/implied-auth-login2.png "machine learning の新しいログインを追加するオブジェクトの種類の検索")
+     ![オブジェクトの種類を検索して Machine Learning の新しいログインを追加する](media/implied-auth-login2.png "オブジェクトの種類を検索して Machine Learning の新しいログインを追加する")
 
-4. **オブジェクトの種類**ダイアログ ボックスで、**グループ**します。 その他のすべてのチェック ボックスをオフにします。
+4. **[オブジェクトの種類]** ダイアログ ボックスで、 **[グループ]** を選択します。 他のチェック ボックスはすべてオフにします。
 
-     ![オブジェクトの種類 ダイアログ ボックスでグループを選択します](media/implied-auth-login3.png "オブジェクトの種類] ダイアログ ボックスで [グループの選択。")
+     ![[オブジェクトの種類] ダイアログ ボックスで [グループ] を選択する](media/implied-auth-login3.png "[オブジェクトの種類] ダイアログ ボックスで [グループ] を選択する")
 
-4. クリックして**詳細**を検索する場所がクリックして、現在のコンピューターであることを確認**検索開始**します。
+4. **[詳細]** をクリックして、検索する場所が現在のコンピューターであることを確認し、 **[検索開始]** をクリックします。
 
-     ![グループの一覧を取得するには、今すぐ検索](media/implied-auth-login4.png "クリックして検索開始のグループの一覧を取得するには")
+     ![[検索開始] をクリックしてグループの一覧を取得する](media/implied-auth-login4.png "[検索開始] をクリックしてグループの一覧を取得する")
 
-5. 以降の 1 つが表示されるまで、サーバー上のグループ アカウントの一覧をスクロール`SQLRUserGroup`します。
+5. サーバー上のグループ アカウントの一覧を、`SQLRUserGroup` で始まるものが見つかるまでスクロールします。
     
-    + スタート パッド サービスに関連付けられているグループの名前、_既定のインスタンス_は常に**SQLRUserGroup**R または Python をインストールするかどうかに関係なく、します。 このアカウントの既定のインスタンスのみを選択します。
-    + 使用する場合、_名前付きインスタンス_、インスタンス名の既定の worker グループの名前、名前に追加されます`SQLRUserGroup`します。 たとえば場合は、インスタンスは、"MLTEST"という名前は、このインスタンスの既定のユーザー グループ名は**SQLRUserGroupMLTest**します。
+    + Launchpad サービスの_既定のインスタンス_に関連付けられているグループの名前は、R または Python もしくはその両方のどれをインストールしたかにかかわらず、常に **SQLRUserGroup** です。 既定のインスタンスに対してのみ、このアカウントを選択します。
+    + _名前付きインスタンス_を使用している場合、インスタンス名は、既定のワーカー グループ名である `SQLRUserGroup` に追加されます。 たとえば、インスタンスの名前が "MLTEST" の場合、このインスタンスの既定のユーザー グループ名は **SQLRUserGroupMLTest** となります。
  
-    ![サーバーのグループの例](media/implied-auth-login5.png "サーバー上のグループの例")
+    ![サーバー上のグループの例](media/implied-auth-login5.png "サーバー上のグループの例")
    
-5. クリックして**OK**高度な検索 ダイアログ ボックスを閉じます。
+5. **[OK]** をクリックして [詳細設定] ダイアログ ボックスを閉じます。
 
     > [!IMPORTANT]
-    > インスタンスの正しいアカウントを選択したことを確認します。 各インスタンスには、独自のスタート パッド サービスだけとそのサービスに対して作成されたグループを使用できます。 インスタンスは、スタート パッド サービスまたはワーカー アカウントを共有できません。
+    > インスタンスに適切なアカウントを選択していることを確認してください。 各インスタンスは、独自の Launchpad サービスと、そのサービス用に作成されたグループのみを使用できます。 インスタンスは、Launchpad サービスまたはワーカー アカウントを共有できません。
 
-6. をクリックして**OK**を閉じるにはもう一度、 **[ユーザーまたはグループ**] ダイアログ ボックス。
+6. **[OK]** をもう一度クリックして、 **[ユーザーまたはグループの選択]** ダイアログ ボックスを閉じます。
 
-7. **ログイン - 新規**ダイアログ ボックスで、をクリックして**OK**。 既定では、ログインは **Public** ロールに割り当てられ、データベース エンジンに接続するためのアクセス許可を与えられます。
+7. **[ログイン - 新規作成]** ダイアログ ボックスで、 **[OK]** をクリックします。 既定では、ログインは **Public** ロールに割り当てられ、データベース エンジンに接続するためのアクセス許可を与えられます。
 
 ## <a name="next-steps"></a>次の手順
 

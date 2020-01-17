@@ -1,10 +1,8 @@
 ---
 title: フルテキスト インデックスのパフォーマンスの向上 | Microsoft Docs
-ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: search, sql-database
-ms.reviewer: ''
 ms.technology: search
 ms.topic: conceptual
 helpviewer_keywords:
@@ -15,16 +13,16 @@ helpviewer_keywords:
 - full-text search [SQL Server], performance
 - batches [SQL Server], full-text search
 ms.assetid: ef39ef1f-f0b7-4582-8e9c-31d4bd0ad35d
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
+author: pmasl
+ms.author: pelopes
+ms.reviewer: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: d79d404e72f13ade55f6bd64f261741d86b78347
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: a755ba9aa8915734768c56c096ea917a6e0c5564
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52532550"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68021221"
 ---
 # <a name="improve-the-performance-of-full-text-indexes"></a>フルテキスト インデックスのパフォーマンスの向上
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -83,8 +81,8 @@ ms.locfileid: "52532550"
 `SQLFT<DatabaseID\><FullTextCatalogID\>.LOG[<n\>]`
   
 クロール ログ ファイルの可変部分は次のようになります。
--   <**DatabaseID**> - データベースの ID。 <**dbid**> は、ゼロで始まる 5 桁の数字です。  
--   <**FullTextCatalogID**> - フルテキスト カタログ ID。 <**catid**> は、ゼロで始まる 5 桁の数字です。  
+-   \<**DatabaseID**> - データベースの ID。 <**dbid**> は、ゼロで始まる 5 桁の数字です。  
+-   <**FullTextCatalogID**> - フルテキスト カタログ ID。 \<**catid**> は、ゼロで始まる 5 桁の数字です。  
 -   <**n**> - 同じフルテキスト カタログに 1 つ以上のクロール ログが存在することを示す整数です。  
   
  たとえば、`SQLFT0000500008.2` はデータベース ID が 5 で、フルテキスト カタログ ID が 8 のクロール ログ ファイルです。 ファイル名の最後の 2 は、このデータベースとカタログのペアに 2 つのクロール ログ ファイルが存在することを示しています。  
@@ -134,15 +132,15 @@ ms.locfileid: "52532550"
   
 |プラットフォーム|fdhost.exe のメモリ要件の推定 (MB 単位) - *F*^1|max server memory の計算式 - *M*^2|  
 |--------------|-----------------------------------------------------------|-----------------------------------------------------|  
-|x86|*F* = *クロール範囲の数* * 50|*M* =minimum(*T*, 2000) - F - 500|  
-|x64|*F* = *クロール範囲の数* * 10 * 8|*M* = *T* - *F* - 500|  
+|x86|*F* = *クロール範囲の数* \* 50|*M* =minimum(*T*, 2000) - F - 500|  
+|x64|*F* = *クロール範囲の数* \* 10 \* 8|*M* = *T* - *F* - 500|  
 
 **式に関する注意事項**
-1.  複数の完全作成を実行中の場合は、それぞれの fdhost.exe のメモリ要件を、*F1*、*F2* などのように個別に計算してください。 その後、*M* as _T_**-** sigma **(**_F_i **)** で計算します。  
+1.  複数の完全作成を実行中の場合は、それぞれの fdhost.exe のメモリ要件を、*F1*、*F2* などのように個別に計算してください。 その後、*M* as _T_ **-** sigma **(** _F_i **)** で計算します。  
 2.  500 MB は、システムの他のプロセスに必要なメモリの推定値です。 システムで追加の作業を実行している場合、適宜この値を大きくします。  
 3.  」を参照してください。*ism_size* は 8 MB と見なされます (x64 プラットフォームの場合)。  
   
- #### <a name="example-estimate-the-memory-requirements-of-fdhostexe"></a>例: fdhost.exe のメモリ要件を推定する  
+ #### <a name="example-estimate-the-memory-requirements-of-fdhostexe"></a>例:fdhost.exe のメモリ要件を推定する  
   
  この例は、8 GM の RAM と 4 つのデュアル コア プロセッサを搭載した 64 ビット コンピューターを対象としています。 最初の計算では、fdhost.exe に必要なメモリ (*F*) を推定します。 クロール範囲の数は `8`です。  
   
@@ -152,7 +150,7 @@ ms.locfileid: "52532550"
   
  `M = 8192-640-500=7052`  
   
- #### <a name="example-setting-max-server-memory"></a>例 : max server memory の設定  
+ #### <a name="example-setting-max-server-memory"></a>例:max server memory の設定  
   
  この例では、 [sp_configure](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md) ステートメントおよび [RECONFIGURE](../../t-sql/language-elements/reconfigure-transact-sql.md) [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントを使用して、前の例で計算した **M** の値 *を* max server memory `7052`として設定します:  
   
@@ -175,7 +173,7 @@ GO
      ページ待機時間が長いかどうかを調べるには、次の [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントを実行します。  
   
     ```  
-    Execute SELECT TOP 10 * FROM sys.dm_os_wait_stats ORDER BY wait_time_ms DESC;  
+    SELECT TOP 10 * FROM sys.dm_os_wait_stats ORDER BY wait_time_ms DESC;  
     ```  
   
      次の表で、主な待機の種類について説明します。  

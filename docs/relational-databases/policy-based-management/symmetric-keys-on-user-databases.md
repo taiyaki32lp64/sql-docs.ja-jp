@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 3333ab5b-2518-4753-a0a8-57df5e5af74f
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: e8d11021d3e88aa62696d5cf1743359884fa672a
-ms.sourcegitcommit: ef6e3ec273b0521e7c79d5c2a4cb4dcba1744e67
+ms.openlocfilehash: 71e52cf9d65eb21df0553f5601bd4aefb3727175
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51512497"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68021507"
 ---
 # <a name="symmetric-keys-on-user-databases"></a>ユーザー データベースの対称キー
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

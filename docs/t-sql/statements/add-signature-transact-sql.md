@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 64d8b682-6ec1-4e5b-8aee-3ba11e72d21f
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: c86a8bf325bc12ce9fc4843038898a579c2308be
-ms.sourcegitcommit: c6e71ed14198da67afd7ba722823b1af9b4f4e6f
+ms.openlocfilehash: eb6a57ae483b36aba960a2b10423d38e72d32c5d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/16/2019
-ms.locfileid: "54327913"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68066099"
 ---
 # <a name="add-signature-transact-sql"></a>ADD SIGNATURE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -56,16 +55,16 @@ ADD [ COUNTER ] SIGNATURE TO module_class::module_name
  署名または副署名の対象となるストアド プロシージャ、関数、アセンブリ、またはトリガーの名前を指定します。  
   
  CERTIFICATE *cert_name*  
- ストアド プロシージャ、関数、アセンブリ、またはトリガーの署名または副署名に使用する証明書の名前を指定します。  
+ ストアド プロシージャ、関数、アセンブリ、またはトリガーの署名または副署名に使用する証明書の名前です。  
   
  WITH PASSWORD ='*password*'  
- 証明書または非対称キーの秘密キーの暗号化解除に必要なパスワードです。 この句は、秘密キーがデータベースのマスター キーで保護されていない場合にのみ必要です。  
+ 証明書または非対称キーの秘密キーの暗号化の解除に必要なパスワードです。 この句は、秘密キーがデータベースのマスター キーで保護されていない場合にのみ必要です。  
   
  SIGNATURE =*signed_blob*  
- モジュールの署名付きバイナリ ラージ オブジェクト (BLOB) を指定します。 この句を使用すると、秘密キーを配布せずにモジュールを配布する場合に便利です。 この句を使用する場合、署名付きバイナリ ラージ オブジェクトをデータベースに追加するときに必要となるのは、モジュール、署名、公開キーだけです。 *signed_blob* はそれ自体 16 進数形式の BLOB です。  
+ モジュールの署名付きバイナリ ラージ オブジェクト (BLOB) を指定します。 この句は、秘密キーを配布せずにモジュールを配布する場合に便利です。 この句を使用する場合、署名付きバイナリ ラージ オブジェクトをデータベースに追加するときに必要となるのは、モジュール、署名、公開キーだけです。 *signed_blob* はそれ自体 16 進数形式の BLOB です。  
   
  ASYMMETRIC KEY *Asym_Key_Name*  
- ストアド プロシージャ、関数、アセンブリ、またはトリガーの署名または副署名に使用する非対称キーの名前を指定します。  
+ ストアド プロシージャ、関数、アセンブリ、またはトリガーの署名または副署名に使用する非対称キーの名前です。  
   
 ## <a name="remarks"></a>Remarks  
  署名または副署名されるモジュールと、署名に使用する証明書または非対称キーは、あらかじめ存在している必要があります。 署名の確認で、モジュールのすべての文字が確認されます。 これには、先頭のキャリッジ リターンとライン フィードも含まれます。  

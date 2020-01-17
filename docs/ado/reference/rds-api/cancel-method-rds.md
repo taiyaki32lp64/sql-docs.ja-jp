@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 560b5b3d-fba9-4275-8920-9c3e186134f7
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 391287674153beffc82716995fa5f49443f77239
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.openlocfilehash: 90d3e60a77df15d1b2db302df8a3c1d4a39de245
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51605962"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67964615"
 ---
 # <a name="cancel-method-rds"></a>Cancel メソッド (RDS)
 実行をキャンセルする保留中、非同期メソッド呼び出し。  
@@ -40,7 +39,7 @@ RDS.DataControl.Cancel
 ## <a name="applies-to"></a>適用対象  
  [DataControl オブジェクト (RDS)](../../../ado/reference/rds-api/datacontrol-object-rds.md)  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [Cancel メソッドの例 (VBScript)](../../../ado/reference/rds-api/cancel-method-example-vbscript.md)   
  [Cancel メソッド (ADO)](../../../ado/reference/ado-api/cancel-method-ado.md)   
  [CancelBatch メソッド (ADO)](../../../ado/reference/ado-api/cancelbatch-method-ado.md)   

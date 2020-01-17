@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: 4e055946-12d4-4589-9891-41617a50f34e
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 2606f7ec05df6422135220605087b81ac7ec4f50
-ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
+ms.openlocfilehash: 842d21bc36b9360826b4b85aa7da2798782995c6
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/18/2018
-ms.locfileid: "53588976"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68092989"
 ---
 # <a name="sqlsetcursorname-function"></a>SQLSetCursorName 関数
 **準拠**  
@@ -36,7 +35,7 @@ ms.locfileid: "53588976"
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
   
 SQLRETURN SQLSetCursorName(  
      SQLHSTMT      StatementHandle,  
@@ -89,7 +88,7 @@ SQLRETURN SQLSetCursorName(
   
  別のコード例では、次を参照してください。 [SQLSetPos](../../../odbc/reference/syntax/sqlsetpos-function.md)します。  
   
-```  
+```cpp  
 #define NAME_LEN 50  
 #define PHONE_LEN 10  
   

@@ -14,11 +14,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 52365cbe64a50b9622ded5587f0baf2ed46cce98
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52770794"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62753159"
 ---
 # <a name="getting-started-in-smo"></a>SMO の概要
   このトピックでは、使用を開始に関する情報を格納[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]管理オブジェクト (SMO)。 SMO セクションは開発者を対象としています。 次のリストは、SMO オブジェクト階層、SMO でプログラムを作成するための準備方法、異なるプログラミング言語で SMO プログラムを作成する方法、一般的および特定のプログラミング タスクについての情報の記載場所を知るために役立ちます。  

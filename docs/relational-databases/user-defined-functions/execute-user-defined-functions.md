@@ -13,24 +13,23 @@ helpviewer_keywords:
 ms.assetid: 0de7744d-9b73-463f-ae80-e31a020004b5
 author: rothja
 ms.author: jroth
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 74a14c0f28b7353a4d09eb531678450f0b26f3fa
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b028b6ab4da678444427682a635f679acce576ab
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47774776"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68123589"
 ---
 # <a name="execute-user-defined-functions"></a>ユーザー定義関数の実行
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
   Transact-SQL を使用してユーザー定義関数を実行する
   
 
-> **注:** ユーザー定義関数の詳細については、「  [ユーザー定義関数](user-defined-functions.md) 」および「 [CREATE FUNCTION (Transact SQL)](../../t-sql/statements/create-function-transact-sql.md) 」を参照してください。 
+> **注:** ユーザー定義関数の詳細については、「[ユーザー定義関数](user-defined-functions.md)」および「[CREATE FUNCTION (Transact SQL)](../../t-sql/statements/create-function-transact-sql.md)」を参照してください。 
   
  
-##  <a name="BeforeYouBegin"></a> アンインストールの準備  
+##  <a name="BeforeYouBegin"></a> はじめる前に  
   
 ###  <a name="Restrictions"></a> 制限事項と制約事項  
  Transact-SQL では、 *値* を使用するか、@*parameter_name*=*値.* を使用し、パラメーターを指定できます。 パラメーターは、トランザクションの一部ではないです。そのため、トランザクションが後でロールバックの値にパラメーターが変更された場合、パラメーター戻すことはできません前の値にします。 呼び出し元に返される値は常に、モジュールから戻る時点での値になります。  

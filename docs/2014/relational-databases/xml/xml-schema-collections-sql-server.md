@@ -18,15 +18,15 @@ helpviewer_keywords:
 - XML schema collections [SQL Server]
 - schema collections [SQL Server], about XML schema collections
 ms.assetid: 659d41aa-ccec-4554-804a-722a96ef25c2
-author: douglaslMS
-ms.author: douglasl
+author: MightyPen
+ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 3a86a39aa3473495b5eed6bc2eff92376a5a68cc
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 45f3dfbf7a4caa2744ef57a352b0434e7eb1bf37
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53362784"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63193031"
 ---
 # <a name="xml-schema-collections-sql-server"></a>XML スキーマ コレクション (SQL Server)
   」の説明に従って[xml &#40;TRANSACT-SQL&#41;](/sql/t-sql/xml/xml-transact-sql)、SQL Server が使用して XML データのネイティブ ストレージが提供、`xml`データ型。 変数や列と XSD スキーマを関連付けることができます必要に応じて`xml`XML スキーマ コレクションによって型。 XML スキーマ コレクションにはインポートした XML スキーマが格納され、その後このコレクションを次の操作に使用します。  
@@ -111,7 +111,7 @@ ms.locfileid: "53362784"
   
 -   MODELGROUP  
   
- 以下に例を示します。  
+ 例 :  
   
 -   **SomeAttribute** は、ATTRIBUTE コンポーネントです。  
   
@@ -171,7 +171,7 @@ ms.locfileid: "53362784"
   
  このことを次の例で説明します。  
   
-### <a name="example-enumerate-the-xml-namespaces-in-an-xml-schema-collection"></a>例:XML スキーマ コレクションで XML 名前空間を列挙します。  
+### <a name="example-enumerate-the-xml-namespaces-in-an-xml-schema-collection"></a>例:XML スキーマ コレクションでの XML 名前空間の列挙  
  XML スキーマ コレクション "myCollection" に次のクエリを実行します。  
   
 ```  
@@ -181,7 +181,7 @@ FROM    sys.xml_schema_collections XSC JOIN sys.xml_schema_namespaces XSN
 WHERE    XSC.name = 'myCollection'     
 ```  
   
-### <a name="example-enumerate-the-contents-of-an-xml-schema-collection"></a>例:XML スキーマ コレクションの内容を列挙します。  
+### <a name="example-enumerate-the-contents-of-an-xml-schema-collection"></a>例:XML スキーマ コレクションのコンテンツの列挙  
  次のステートメントは、リレーショナル スキーマ dbo 内の XML スキーマ コレクション "myCollection" のコンテンツを列挙します。  
   
 ```  
@@ -190,7 +190,7 @@ SELECT XML_SCHEMA_NAMESPACE (N'dbo', N'myCollection')
   
  コレクション内の個別の XML スキーマとして取得できます`xml`データ型の 3 番目の引数として対象名前空間を指定することによってインスタンス**XML_SCHEMA_NAMESPACE()** します。 次の例を参照してください。  
   
-### <a name="example-output-a-specified-schema-from-an-xml-schema-collection"></a>例:XML スキーマ コレクションから指定したスキーマを出力します。  
+### <a name="example-output-a-specified-schema-from-an-xml-schema-collection"></a>例:XML スキーマ コレクションからの指定したスキーマの出力  
  次のステートメントを実行すると、リレーショナル スキーマ dbo の XML スキーマ コレクション "myCollection" から、対象になる名前空間が "<https://www.microsoft.com/books>" である XML スキーマが出力されます。  
   
 ```  

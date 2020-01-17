@@ -12,20 +12,19 @@ f1_keywords:
 ms.assetid: 0b4f98a1-0151-4301-a675-a6db9ff20c87
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: eaab4bc0ab4f41be3f80f39c6fa787a5d595296e
-ms.sourcegitcommit: ef6e3ec273b0521e7c79d5c2a4cb4dcba1744e67
+ms.openlocfilehash: d977fe6650ea6d2f28b1762cfb44aaa89164d772
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51512527"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68087372"
 ---
 # <a name="facet-properties-dialog-box-dependent-conditions-page"></a>[ファセットのプロパティ] ダイアログ ボックスの [依存条件] ページ
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   このダイアログ ボックスを使用すると、このポリシー ベースの管理ファセットを現在参照している条件の一覧を表示できます。  
   
-## <a name="options"></a>[変数]  
- **名前**  
+## <a name="options"></a>オプション  
+ **[名前]**  
  現在のファセットを参照している各条件の名前を一覧表示します。  
   
 ## <a name="see-also"></a>参照  

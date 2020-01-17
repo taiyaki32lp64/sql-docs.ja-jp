@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 6b5e0086-156d-471d-8e7f-6c5fa9686cd5
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 5efbd7e98b430128e52634f5c7d71597afc89ace
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 54900f00e03e1f236baf0b6eef152081b1f384a1
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47806070"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67997734"
 ---
 # <a name="set-deleted-command"></a>SET DELETED コマンド
 削除対象としてマークするレコードを処理するかどうかおよびその他のコマンドで使用されるかどうかを指定します。  
@@ -43,5 +42,5 @@ SET DELETED ON | OFF
 > [!IMPORTANT]  
 >  コマンドの既定のスコープが現在のレコードの場合、または 1 つのレコードのスコープを含める場合は、削除の設定は無視されます。 常に、インデックスは削除設定を無視し、テーブル内のすべてのレコードのインデックスを作成します。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [DELETE - SQL コマンド](../../odbc/microsoft/delete-sql-command.md)

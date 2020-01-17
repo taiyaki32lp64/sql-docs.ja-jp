@@ -1,7 +1,7 @@
 ---
 title: 自動シード処理を使用して、可用性グループを初期化する
-description: 自動シード処理を使用し、Always On 可用性グループのすべてのデータベースに対してセカンダリ レプリカを自動的に作成します。
-ms.custom: seodec18
+description: 自動シード処理を使用して、手動でバックアップおよび復元を行うことなく、Always On 可用性グループ内のすべてのデータベースに対してセカンダリ レプリカを自動的に作成します。
+ms.custom: seo-lt-2019
 ms.date: 03/26/2018
 ms.prod: sql
 ms.reviewer: ''
@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 67c6a601-677a-402b-b3d1-8c65494e9e96
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: b6197649ed7548919a8659977c3b3550429840f9
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: 38bbab7ea9ae6aa7ddd70ede2161988c01431573
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53207531"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75254088"
 ---
 # <a name="use-automatic-seeding-to-initialize-an-always-on-availability-group"></a>自動シード処理を使用して、Always On 可用性グループを初期化する
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -25,7 +24,7 @@ SQL Server 2016 には、可用性グループの自動シード処理が導入�
 
 背景情報については、「[セカンダリ レプリカの自動シード処理](automatic-seeding-secondary-replicas.md)」を参照してください。
  
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>前提条件
 
 SQL Server 2016 の自動シード処理では、データとログ ファイルのパスが、可用性グループに参加しているすべての SQL Server インスタンスで同じである必要があります。 SQL Server 2017 では、異なるパスを使用できますが、すべてのレプリカを同じプラットフォーム (Windows または Linux など) でホストする場合、同じパスを使用することが推奨されます。 クロスプラットフォームの可用性グループのレプリカは、パスが異なります。 詳細については、「[ディスク レイアウト](automatic-seeding-secondary-replicas.md#disklayout)」を参照してください。
 
@@ -146,7 +145,7 @@ GO
 
 **sys.dm_hadr_automatic_seeding** 
 
-プライマリ レプリカでクエリ `sys.dm_hadr_automatic_seeding` を実行して、自動シード処理プロセスの状態を確認します。 このビューは、シード処理プロセスごとに 1 つの行を返します。 例 :
+プライマリ レプリカでクエリ `sys.dm_hadr_automatic_seeding` を実行して、自動シード処理プロセスの状態を確認します。 このビューは、シード処理プロセスごとに 1 つの行を返します。 次に例を示します。
 
 ```sql
 SELECT start_time, 
@@ -217,7 +216,7 @@ GO
 
 次の表に、自動シード処理に関連する拡張イベントを示します。 
 
-| [オブジェクト名] | [説明]|
+| Name | [説明]|
 |------------ |---------------| 
 |hadr_db_manager_seeding_request_msg |  シード処理要求メッセージ。
 |hadr_physical_seeding_backup_state_change |    物理シード処理のバックアップ側の状態変更。
@@ -238,7 +237,7 @@ GO
 
 **自動シード処理時の監視**
 
-`sys.dm_hadr_physical_seeding_stats` のクエリを実行して、現在実行中の自動シード処理プロセスを問い合わせます。 このビューは、データベースごとに 1 つの行を返します。 例 :
+`sys.dm_hadr_physical_seeding_stats` のクエリを実行して、現在実行中の自動シード処理プロセスを問い合わせます。 このビューは、データベースごとに 1 つの行を返します。 次に例を示します。
 
 ```sql
 SELECT local_database_name, 

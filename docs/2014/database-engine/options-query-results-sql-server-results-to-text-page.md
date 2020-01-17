@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 f1_keywords:
 - VS.ToolsOptionsPages.QueryResults.SqlServer.SQLResultsToText
@@ -13,22 +12,22 @@ ms.assetid: 2ccbdf17-e14f-42f1-a836-ca999a3432c9
 author: craigg-msft
 ms.author: craigg
 manager: craigg
-ms.openlocfilehash: 2810a8738368f87651bc90d6cb15ae34195258ab
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 43e35c5de15aeeab5351b4d262db846840e5f6a0
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48105528"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66090018"
 ---
 # <a name="options-query-results-sql-server-results-to-text-page"></a>オプション (クエリ結果-SQL Server の結果をテキスト ページ)
-  このページを使用すると、クエリ結果セットをテキスト形式で表示するオプションを指定できます。 このオプションに加えた変更は、新規の [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] クエリにのみ適用されます。 現在のクエリのオプションを変更するには、**[クエリ]** メニューの **[クエリ オプション]** をクリックするか、[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] のクエリ ウィンドウを右クリックして **[クエリ オプション]** をクリックします。 **[クエリ オプション]** ダイアログ ボックスの **[結果]** で、**[テキスト]** をクリックします。  
+  このページを使用すると、クエリ結果セットをテキスト形式で表示するオプションを指定できます。 このオプションに加えた変更は、新規の [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] クエリにのみ適用されます。 現在のクエリのオプションを変更するには、 **[クエリ]** メニューの **[クエリ オプション]** をクリックするか、[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] のクエリ ウィンドウを右クリックして **[クエリ オプション]** をクリックします。 **[クエリ オプション]** ダイアログ ボックスの **[結果]** で、 **[テキスト]** をクリックします。  
   
 ## <a name="uielement-list"></a>UI 要素の一覧  
  **出力形式**  
- 既定では、スペースを埋め込んで作成された結果が列に表示されます。 他のオプションは、コンマ、タブ、またはスペースを使用して列を区切るオプションです。 このドロップダウン リストから **[独自の区切り記号]** を選択し、**[独自の区切り記号]** テキスト ボックスで別の区切り記号を指定します。  
+ 既定では、スペースを埋め込んで作成された結果が列に表示されます。 他のオプションは、コンマ、タブ、またはスペースを使用して列を区切るオプションです。 このドロップダウン リストから **[独自の区切り記号]** を選択し、 **[独自の区切り記号]** テキスト ボックスで別の区切り記号を指定します。  
   
  **独自の区切り記号**  
- 列を区切るために使用する文字を指定します。 このテキスト ボックスは、**[出力形式]** ドロップダウン リスト ボックスで [独自の区切り記号] を選択した場合にのみ表示されます。  
+ 列を区切るために使用する文字を指定します。 このテキスト ボックスは、 **[出力形式]** ドロップダウン リスト ボックスで [独自の区切り記号] を選択した場合にのみ表示されます。  
   
  **列のヘッダーを結果セットに含める**  
  各列に列タイトルのラベルを付けない場合は、このチェック ボックスをオフにします。  

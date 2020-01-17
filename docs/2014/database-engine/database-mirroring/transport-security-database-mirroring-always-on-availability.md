@@ -20,11 +20,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 18b52163cb1e8c6be0cf7fdea37861662d6e4830
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48075862"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62754297"
 ---
 # <a name="transport-security-for-database-mirroring-and-alwayson-availability-groups-sql-server"></a>データベース ミラーリングと AlwaysOn 可用性グループのトランスポート セキュリティ (SQL Server)
   トランスポート セキュリティには認証が必要です。状況によっては、複数のデータベース間で交換されるメッセージの暗号化も必要になります。 データベース ミラーリングおよび [!INCLUDE[ssHADR](../../includes/sshadr-md.md)]では、認証と暗号化はデータベース ミラーリング エンドポイントで構成します。 データベース ミラーリング エンドポイントの概要については、「 [データベース ミラーリング エンドポイント &#40;SQL Server&#41;](the-database-mirroring-endpoint-sql-server.md)」を参照してください。  
@@ -34,7 +34,7 @@ ms.locfileid: "48075862"
 ##  <a name="Authentication"></a> [認証]  
  認証とは、ユーザーが本人であるかどうかを検査するプロセスです。 データベース ミラーリング エンドポイント間の接続には、認証が必要になります。 パートナーまたはミラーリング監視サーバーから接続を要求された場合は、その接続要求を認証する必要があります。  
   
- サーバー インスタンスによりデータベース ミラーリングまたは [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] に使用される認証の種類は、データベース ミラーリング エンドポイントのプロパティで指定します。 データベース ミラーリング エンドポイントに使用できるトランスポート セキュリティには、Windows 認証 (セキュリティ サポート プロバイダー インターフェイス (SSPI)) と証明書ベース認証の 2 種類があります。  
+ サーバー インスタンスによりデータベース ミラーリングまたは [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] に使用される認証の種類は、データベース ミラーリング エンドポイントのプロパティで指定します。 データベース ミラーリング エンドポイントに使用できるトランスポート セキュリティには、次の 2 種類があります:Windows 認証 (セキュリティ サポート プロバイダー インターフェイス (SSPI)) と証明書ベース認証。  
   
 ### <a name="windows-authentication"></a>[Windows 認証]  
  Windows 認証では、各サーバー インスタンスが相手側のインスタンスにログインする際には、プロセスを実行している Windows ユーザー アカウントの Windows 資格情報が使用されます。 Windows 認証では、次のように、ログイン アカウントの手動による構成が必要になる場合があります。  
@@ -65,7 +65,7 @@ ms.locfileid: "48075862"
   
 |ALGORITHM の値|説明|  
 |---------------------|-----------------|  
-|RC4|エンドポイントで RC4 アルゴリズムを使用する必要があることを指定します。 既定値です。<br /><br /> メモ: RC4 アルゴリズムは推奨されません。 [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)] AES を使用することをお勧めします。|  
+|RC4|エンドポイントで RC4 アルゴリズムを使用する必要があることを指定します。 既定値です。<br /><br /> 注:RC4 アルゴリズムは非推奨とされます。 [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)] AES を使用することをお勧めします。|  
 |AES|エンドポイントで AES アルゴリズムを使用する必要があることを指定します。|  
 |AES RC4|2 つのエンドポイントが、AES アルゴリズムを優先するこのエンドポイントと暗号化アルゴリズムについてネゴシエートすることを指定します。|  
 |RC4 AES|2 つのエンドポイントで暗号化アルゴリズムをネゴシエートし、このエンドポイントでは RC4 アルゴリズムを優先することを示します。|  

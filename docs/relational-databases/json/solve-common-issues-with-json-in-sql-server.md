@@ -1,6 +1,5 @@
 ---
-title: SQL Server での JSON に関する一般的な問題を解決する | Microsoft Docs
-ms.custom: ''
+title: SQL Server での JSON に関する一般的な問題を解決する
 ms.date: 07/07/2016
 ms.prod: sql
 ms.reviewer: genemi
@@ -11,14 +10,14 @@ helpviewer_keywords:
 ms.assetid: feae120b-55cc-4601-a811-278ef1c551f9
 author: jovanpop-msft
 ms.author: jovanpop
-manager: craigg
+ms.custom: seo-dt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 868ff90f894413c111fd863573ac8c24323aa2a9
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 8dd50c08035690fd932dc717ae08d179b89b4ed2
+ms.sourcegitcommit: a92fa97e7d3132ea201e4d86c76ac39cd564cd3c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56038903"
+ms.lasthandoff: 12/21/2019
+ms.locfileid: "75325419"
 ---
 # <a name="solve-common-issues-with-json-in-sql-server"></a>SQL Server での JSON に関する一般的な問題を解決する
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -42,7 +41,7 @@ SELECT col1, col2, col3,
      (SELECT col11, col12, col13 FROM t11 WHERE t11.FK = t1.PK FOR JSON PATH) as t11,  
      (SELECT col21, col22, col23 FROM t21 WHERE t21.FK = t1.PK FOR JSON PATH) as t21,  
      (SELECT col31, col32, col33 FROM t31 WHERE t31.FK = t1.PK FOR JSON PATH) as t31,  
-     JSON_QUERY('{"'+col4'":"'+col5+'"}' as t41  
+     JSON_QUERY('{"'+col4'":"'+col5+'"}') as t41  
 FROM t1  
 FOR JSON PATH  
 ```  
@@ -75,7 +74,7 @@ FOR JSON PATH
   
  省略可能な 2 番目のパラメーターのない JSON_QUERY は、結果として 1 番目の引数のみを返します。 JSON_QUERY は有効な JSON を常に返すため、FOR JSON は、この結果をエスケープする必要がないと認識します。
 
-### <a name="json-generated-with-the-withoutarraywrapper-clause-is-escaped-in-for-json-output"></a>WITHOUT_ARRAY_WRAPPER 句を使用して生成された JSON は、FOR JSON の出力でエスケープされます。  
+### <a name="json-generated-with-the-without_array_wrapper-clause-is-escaped-in-for-json-output"></a>WITHOUT_ARRAY_WRAPPER 句を使用して生成された JSON は、FOR JSON の出力でエスケープされます。  
  **質問** FOR JSON と WITHOUT_ARRAY_WRAPPER オプションを使用して、列式の書式設定を行おうとしています。  
   
 ```sql  
@@ -86,7 +85,7 @@ FOR JSON PATH
   
  FOR JSON クエリによって返された文字列は、プレーン テキストとしてエスケープされているようです。 これは、WITHOUT_ARRAY_WRAPPER が指定されている場合にのみ発生します。 どうして JSON オブジェクトとして扱われず、エスケープされないで結果に含まれないのですか?  
   
- **回答** 内側の `FOR JSON` で `WITHOUT_ARRAY_WRAPPER` オプションを指定すると、結果の JSON テキストは必ずしも有効な JSON ではなくなります。 そのため、外側の `FOR JSON` では、これをプレーン テキストと見なし、文字列をエスケープします。 JSON の出力が有効であることが確実な場合は、次の例のように、`JSON_QUERY` 関数を使用してそれを囲み、正しく書式設定された JSON に昇格させます。  
+ **回答** 内側の `FOR JSON` で `WITHOUT_ARRAY_WRAPPER` オプションを指定すると、結果の JSON テキストは必ずしも有効な JSON ではなくなります。 そのため、外側の `FOR JSON` では、これをプレーン テキストと見なし、文字列をエスケープします。 JSON の出力が有効であることが確実な場合は、次の例のように、`JSON_QUERY` 関数を使用してそれをラップし、正しく書式設定された JSON に昇格させます。  
   
 ```sql  
 SELECT 'Text' as myText,  
@@ -111,7 +110,7 @@ FROM OPENJSON(@json)
         arr1 NVARCHAR(MAX) AS JSON)  
 ```  
 
-### <a name="return-long-text-value-with-openjson-instead-of-jsonvalue"></a>JSON_VALUE ではなく OPENJSON を使って長いテキスト値を返す
+### <a name="return-long-text-value-with-openjson-instead-of-json_value"></a>JSON_VALUE ではなく OPENJSON を使って長いテキスト値を返す
  **質問** 長いテキストを含む JSON テキストに説明キーがあります。 `JSON_VALUE(@json, '$.description')` が、値の代わりに NULL を返します。  
   
  **回答** JSON_VALUE は小さいスカラー値を返すように設計されています。 一般的に、この関数はオーバーフロー エラーの代わりに NULL を返します。 より長い値を返す場合は、次の例のように、NVARCHAR(MAX) 値をサポートする OPENJSON を使用します。  
@@ -120,7 +119,7 @@ FROM OPENJSON(@json)
 SELECT myText FROM OPENJSON(@json) WITH (myText NVARCHAR(MAX) '$.description')  
 ```  
 
-### <a name="handle-duplicate-keys-with-openjson-instead-of-jsonvalue"></a>JSON_VALUE ではなく OPENJSON を使って重複キーを処理する
+### <a name="handle-duplicate-keys-with-openjson-instead-of-json_value"></a>JSON_VALUE ではなく OPENJSON を使って重複キーを処理する
  **質問** JSON テキストに重複するキーがあります。 JSON_VALUE は、パス上で見つかる最初のキーのみを返します。 同じ名前を持つすべてのキーを取得する方法はありますか。  
   
  **回答** 組み込みの JSON スカラー関数は、最初に出現する参照先のオブジェクトのみを返します。 複数のキーが必要な場合は、次の例で示すように、OPENJSON テーブル値関数を使用します。  
@@ -142,7 +141,7 @@ WHERE [key] = 'color'
 ### <a name="reference-keys-that-contain-non-alphanumeric-characters-in-json-text"></a>JSON テキストに英数字以外の文字を含む参照キー  
  **質問** JSON テキストのキーに英数字以外の文字があります。 これらのプロパティを参照する方法はありますか。  
   
- **回答** JSON パスでその文字を引用符で囲む必要があります。 たとえば、`JSON_VALUE(@json, '$."$info"."First Name".value')` のようにします。
+ **回答** JSON パスでその文字を引用符で囲む必要があります。 たとえば、「 `JSON_VALUE(@json, '$."$info"."First Name".value')` 」のように入力します。
  
 ## <a name="learn-more-about-json-in-sql-server-and-azure-sql-database"></a>SQL Server と Azure SQL Database の JSON の詳細情報  
   

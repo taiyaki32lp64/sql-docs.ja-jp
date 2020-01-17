@@ -16,15 +16,14 @@ dev_langs:
 helpviewer_keywords:
 - Filter method
 ms.assetid: 3d629a39-157e-4159-a3ca-a3c2e0ed4160
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: b38318d9ca38f5774f15cdac66b9407f2ce4a968
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: MladjoA
+ms.author: mlandzic
+ms.openlocfilehash: 701110865f4cda286c647ef887dba2e29cc5fb42
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47832608"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68081165"
 ---
 # <a name="filter-geometry-data-type"></a>Filter (geometry データ型)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -49,7 +48,7 @@ ms.locfileid: "47832608"
 ## <a name="return-types"></a>戻り値の型  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 戻り値の型: **bit**  
   
- CLR の戻り値の型: **SqlBoolean**  
+ CLR の戻り値の型:**SqlBoolean**  
   
 ## <a name="remarks"></a>Remarks  
  このメソッドは決定的でなく、正確ではありません。  

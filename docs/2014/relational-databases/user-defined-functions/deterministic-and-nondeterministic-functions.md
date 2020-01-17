@@ -17,11 +17,11 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 5463ac19caf9a82e48dd59c4ba05873587b74324
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48214712"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62714729"
 ---
 # <a name="deterministic-and-nondeterministic-functions"></a>決定的関数と非決定的関数
   決定的関数は、一連の特定の入力値で呼び出され、かつデータベースの状態が同じ場合は、必ず同じ結果を返します。 非決定的関数は、アクセスするデータベースの状態が同じ場合でも、一連の特定の入力値で呼び出すたびに、異なる結果を返すことがあります。 たとえば、AVG 関数は、上記の制限を前提として常に同じ結果を返しますが、現在の datetime 値を返す GETDATE 関数によって返される結果は常に異なります。  
@@ -53,11 +53,11 @@ ms.locfileid: "48214712"
   
  次の関数は必ず決定的関数になるとは限りませんが、決定的な方法で指定されている場合は、インデックス付きビューまたは計算列のインデックスで使用できます。  
   
-|機能|コメント|  
+|関数|コメント|  
 |--------------|--------------|  
 |すべての集計関数|OVER 句および ORDER BY 句で指定されていない限り、集計関数はすべて決定的です。 集計関数の一覧については、「[集計関数 &#40;Transact-SQL&#41;](/sql/t-sql/functions/aggregate-functions-transact-sql)」を参照してください。|  
 |CAST|`datetime` 型、`smalldatetime` 型、または `sql_variant` 型と併用しない場合は決定的関数になります。|  
-|CONVERT|以下の条件に該当しない場合は決定的関数になります。<br /><br /> 変換元の型が `sql_variant` であること。<br /><br /> 対象の型は`sql_variant`ソースの型が非決定的であるとします。<br /><br /> 変換元または変換先の型が `datetime` または `smalldatetime` であり、他の変換元または変換先の型が文字列で、非決定的スタイルが指定されていること。 決定的にするには、スタイル パラメーターを定数にする必要があります。 また、スタイルが 20 および 21 以外で 100 以下の場合は非決定的です。 スタイルが 101 以上で、106、107、109、113 以外の場合は決定的です。|  
+|CONVERT|以下の条件に該当しない場合は決定的関数になります。<br /><br /> 変換元の型が `sql_variant` であること。<br /><br /> 変換先の型が `sql_variant` であり、変換元の型が非決定的であること。<br /><br /> 変換元または変換先の型が `datetime` または `smalldatetime` であり、他の変換元または変換先の型が文字列で、非決定的スタイルが指定されていること。 決定的にするには、スタイル パラメーターを定数にする必要があります。 また、スタイルが 20 および 21 以外で 100 以下の場合は非決定的です。 スタイルが 101 以上で、106、107、109、113 以外の場合は決定的です。|  
 |CHECKSUM|CHECKSUM(*) を除き、決定的関数になります。|  
 |ISDATE|CONVERT 関数と共に使用され、CONVERT スタイル パラメーターが指定されており、スタイルが 0、100、9、または 109 と等しくない場合にのみ決定的関数になります。|  
 |RAND|RAND は、 *seed* パラメーターが指定されている場合にのみ決定的です。|  

@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: fc2fd40b-65d6-4023-90a3-90c9a88ef6cf
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: ac218d0f95e16931f359bd183d4fe8a032f8c6cf
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 7dec17461f44c9e461a010e8a0bf5cf3fe3bbbd9
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47770090"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67931023"
 ---
 # <a name="sort-property-example-vb"></a>Sort プロパティの例 (VB)
 この例では、[レコード セット](../../../ado/reference/ado-api/recordset-object-ado.md)オブジェクトの[並べ替え](../../../ado/reference/ado-api/sort-property.md)の行の順序を変更するプロパティを**Recordset**から派生した、***作成者***のテーブル***Pubs***データベース。 セカンダリ ユーティリティ ルーチンは、各行を出力します。  
@@ -110,6 +109,6 @@ End Sub
 Attribute VB_Name = "Sort"  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [RecordSet オブジェクト (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)   
  [Sort プロパティ](../../../ado/reference/ado-api/sort-property.md)

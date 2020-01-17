@@ -1,5 +1,5 @@
 ---
-title: 行のフェッチ |マイクロソフトのドキュメント
+title: 行をフェッチしています |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -16,18 +16,16 @@ helpviewer_keywords:
 ms.assetid: 5e6dbe36-b682-464d-adfa-8e886f9bd452
 author: MightyPen
 ms.author: genemi
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 374ebcdb22f8e3efa04a8fc5be4134130f9e4663
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ab6242348f3020b5b9719c41c7cb7563b0c30729
+ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47785642"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73761704"
 ---
 # <a name="fetching-rows"></a>行のフェッチ
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-[!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
 
   **IRowset** インターフェイスは、行セットの基本インターフェイスです。 **IRowset** インターフェイスには、行を順番にフェッチするメソッド、フェッチした行からデータを取得するメソッド、行を管理するメソッドが用意されています。 コンシューマーは、すべての基本的な行セット操作に **IRowset** のメソッドを使用します。 基本的な操作には、行のフェッチと解放、列値の取得などがあります。  
   

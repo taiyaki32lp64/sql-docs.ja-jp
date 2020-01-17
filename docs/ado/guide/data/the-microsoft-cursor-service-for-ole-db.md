@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 1ac3bd9b-2d45-4cc8-88ec-bd8a218cfb49
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: e85d6f482b9d206b2ec705a8d890a4e34e5f2252
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: aeac8c848f01f01e8969f94c571ad15f5e7f615a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47747330"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67923918"
 ---
 # <a name="the-microsoft-cursor-service-for-ole-db"></a>OLE DB 向けの Microsoft カーソル サービス
 クライアント側のカーソルを選択またはに設定した場合、 **CursorLocation**プロパティを**adUseClient**、OLE DB の Microsoft カーソル サービスを呼び出すことができます。 「クライアント カーソル エンジン」、ADO のコンテキストでは基本的に同じであるへの参照も表示があります。 このサービスは、データ プロバイダーのカーソル サポート機能を補完します。 その結果、すべてのデータ プロバイダーから機能の統一感を得ることができます。  
@@ -28,5 +27,5 @@ ms.locfileid: "47747330"
   
  カーソル サービスを使用すると、常にバッチを更新するためのサポート。 データ プロバイダーが劣るカーソル、静的カーソルなどを指定できますのみときも、dynamic カーソルより高機能な種類のカーソルをシミュレートします。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [OLE DB (ADO サービス コンポーネント) の Microsoft カーソル サービス](../../../ado/guide/appendixes/microsoft-cursor-service-for-ole-db-ado-service-component.md)

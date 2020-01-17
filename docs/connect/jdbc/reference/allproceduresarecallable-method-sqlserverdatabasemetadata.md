@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: 8886137d-455e-497c-afea-4b326eda52f1
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 43ae9cc9bc9634131c197f634c713125f23ddd86
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 559c025a5fcb7d27f4520cea0868761b449107a9
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47790330"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67955927"
 ---
 # <a name="allproceduresarecallable-method-sqlserverdatabasemetadata"></a>allProceduresAreCallable メソッド (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -42,7 +41,7 @@ public boolean allProceduresAreCallable()
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- この allProceduresAreCallable メソッドは、java.sql.DatabaseMetaData インターフェイスで allProceduresAreCallable メソッドによって指定されます。  
+ この allProceduresAreCallable メソッドは、allProceduresAreCallable メソッドによって、java メタデータインターフェイスで指定されます。  
   
 ## <a name="see-also"></a>参照  
  [SQLServerDatabaseMetaData のメソッド](../../../connect/jdbc/reference/sqlserverdatabasemetadata-methods.md)   

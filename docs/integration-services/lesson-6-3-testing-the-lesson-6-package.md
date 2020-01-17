@@ -8,17 +8,20 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: tutorial
 ms.assetid: c184c92d-948f-4037-a502-5fabd909c84c
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: 9342c312de10700e0af8224496ad526c6a930591
-ms.sourcegitcommit: 5ca813d045e339ef9bebe0991164a5d39c8c742b
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: a0c50372c199d80dc0e6d3d7e3326918011f8a28
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/24/2019
-ms.locfileid: "54880475"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71283063"
 ---
 # <a name="lesson-6-3-test-the-lesson-6-package"></a>レッスン 6-3:レッスン 6 のパッケージをテストする
+
+[!INCLUDE[ssis-appliesto](../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
 パッケージを実行すると、**VarFolderName** パラメーターから **Directory** プロパティの値が取得されます。  
   
 パッケージによって **Directory** プロパティが更新されることを確認するには、パッケージを実行します。 新しいディレクトリにはサンプル データ ファイルを 3 つコピーしたため、データ フローは 3 回実行されます。
@@ -38,7 +41,7 @@ ms.locfileid: "54880475"
   
 1.  **[デバッグ]** メニューの **[デバッグの開始]** を選択します。  
   
-2.  パッケージの実行が完了したら、**[デバッグ]** メニューの **[デバッグの停止]** を選択します。  
+2.  パッケージの実行が完了したら、 **[デバッグ]** メニューの **[デバッグの停止]** を選択します。  
   
 ## <a name="go-to-next-task"></a>次のタスクに進む
 [手順 4:レッスン 6 のパッケージを配置する](../integration-services/lesson-6-4-deploying-the-lesson-6-package.md)  

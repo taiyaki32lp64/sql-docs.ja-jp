@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 ms.assetid: 958ef51f-2699-4cb2-a92e-3b4322e36a30
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 9ca7b2b7ed4cc66a3c47b2f2ad8044775d69c6ed
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 2c77ae94a7b8c5760d14dcb3fed2af40573549d4
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56015003"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66103760"
 ---
 # <a name="modify-a-reporting-services-configuration-file-rsreportserverconfig"></a>Modify a Reporting Services Configuration File (RSreportserver.config)
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] では、一連の構成ファイルにアプリケーション設定を格納します。 構成ファイルはセットアップ時に作成され、インストールしたレポート サーバー インスタンスごとに存在します。 各ファイル内の値は、インストール中に設定されるか、ツールやアプリケーションを使用してサーバーの動作を構成したときに設定されます。 場合によっては、高度な設定を追加したり構成したりするために、ファイルを直接変更する必要があります。 構成設定は、XML 要素または XML 属性のいずれかとして指定されます。 XML ファイルおよび構成ファイルを理解している場合は、テキスト エディターまたはコード エディターを使用して、ユーザーが定義可能な設定を変更できます。  
@@ -91,14 +90,14 @@ ms.locfileid: "56015003"
   
 6.  トレース ログ ファイルを見て、エラーが発生していないことを確認します。 エラー状態が記録されていた場合は、設定またはその値が正しく指定されていません。 「 [RSReportServer Configuration File](rsreportserver-config-configuration-file.md) 」を参照し、エラーの原因となっている設定について有効な値を確認してください。 トレース ログの表示方法の詳細については、「[レポート サーバー サービスのトレース ログ](report-server-service-trace-log.md)」を参照してください。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [RSReportServer 構成ファイル](rsreportserver-config-configuration-file.md)   
  [ReportingServicesService 構成ファイル](reportingservicesservice-configuration-file.md)   
  [RSReportDesigner 構成ファイル](rsreportdesigner-configuration-file.md)   
  [データ処理拡張機能の配置](../extensions/data-processing/deploying-a-data-processing-extension.md)   
  [配信拡張機能の配置](../extensions/delivery-extension/deploying-a-delivery-extension.md)   
  [表示拡張機能の配置](../extensions/rendering-extension/deploying-a-rendering-extension.md)   
- [方法: カスタム レポート アイテムを配置します。](../custom-report-items/how-to-deploy-a-custom-report-item.md)   
+ [方法:カスタム レポート アイテムを配置します。](../custom-report-items/how-to-deploy-a-custom-report-item.md)   
  [Reporting Services 構成ファイル](reporting-services-configuration-files.md)  
   
   

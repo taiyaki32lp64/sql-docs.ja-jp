@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 04/27/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: analysis-services
 ms.topic: reference
 helpviewer_keywords:
 - restoring databases [XML for Analysis]
@@ -18,12 +16,12 @@ ms.assetid: 6c021b2e-6ad0-444e-b23f-4b5f72ce084b
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 0f3b9c0ce529927e088e9f2153fadc3470dc36b7
-ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
+ms.openlocfilehash: 6163a538c4e8872016f7ec572e4c177cfe92de94
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50146087"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62702276"
 ---
 # <a name="backing-up-restoring-and-synchronizing-databases-xmla"></a>データベースのバックアップ、復元、および同期 (XMLA)
   XML for Analysis には、データベースのバックアップ、復元、および同期を行う 3 つのコマンドがあります。  

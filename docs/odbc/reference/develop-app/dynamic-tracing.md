@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: ebe58a83-a7b0-4747-86c8-2af2940471ef
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 63dbfda01d96cad53e5830e598b5812ed79d8f04
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 8420589761a1f8cb1f9cf8a3022842863fd30758
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47661748"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68046891"
 ---
 # <a name="dynamic-tracing"></a>動的トレース
 トレースを有効になっているまたは実行するアプリケーションでいつでも無効になっていることができます。 これにより、任意の数の関数呼び出しをトレースするアプリケーションです。  

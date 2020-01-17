@@ -13,17 +13,20 @@ helpviewer_keywords:
 - transformations [Integration Services], components
 - Script component [Integration Services], examples
 ms.assetid: 1fda034d-09e4-4647-9a9f-e8d508c2cc8f
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: 46b020f7ad63e38d283de993606109dadd3f6a5f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 733c3a909629514b55042d21f02cfca563d3c531
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47645850"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71297064"
 ---
 # <a name="parsing-non-standard-text-file-formats-with-the-script-component"></a>スクリプト コンポーネントを使用した標準以外のテキスト ファイル形式の解析
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   ソース データが標準以外の形式の場合、複数の [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 変換を連結するより、すべての解析ロジックを単一のスクリプトに統合する方がより便利で、同じ結果が得られる場合があります。  
   
  [例 1: 行区切りのレコードの解析](#example1)  
@@ -91,7 +94,7 @@ ms.locfileid: "47645850"
   
 9. スクリプト コンポーネントをデータ フローに追加し、変換として構成します。 フラット ファイル ソースの出力をスクリプト コンポーネントに接続します。  
   
-10. スクリプト コンポーネントをダブルクリックし、**[スクリプト変換エディター]** を表示します。  
+10. スクリプト コンポーネントをダブルクリックし、 **[スクリプト変換エディター]** を表示します。  
   
 11. **[スクリプト変換エディター]** の **[入力列]** ページで、単一の使用可能な入力列を選択します。  
   
@@ -107,7 +110,7 @@ ms.locfileid: "47645850"
   
     -   StateProvince  
   
-13. **[スクリプト変換エディター]** の **[スクリプト]** ページで、**[スクリプトの編集]** をクリックし、例の **ScriptMain** クラスに示すコードを入力します。 スクリプト開発環境と **[スクリプト変換エディター]** を閉じます。  
+13. **[スクリプト変換エディター]** の **[スクリプト]** ページで、 **[スクリプトの編集]** をクリックし、例の **ScriptMain** クラスに示すコードを入力します。 スクリプト開発環境と **[スクリプト変換エディター]** を閉じます。  
   
 14. SQL Server 変換先をデータ フローに追加します。 OLE DB 接続マネージャーと RowDelimitedData テーブルを使用するように構成します。 スクリプト コンポーネントの出力をこの変換先に接続します。  
   
@@ -250,7 +253,7 @@ public override void Input0_ProcessInputRow(Input0Buffer Row)
   
 9. スクリプト コンポーネントをデータ フローに追加し、変換として構成します。 フラット ファイル ソースの出力をスクリプト コンポーネントに接続します。  
   
-10. スクリプト コンポーネントをダブルクリックし、**[スクリプト変換エディター]** を表示します。  
+10. スクリプト コンポーネントをダブルクリックし、 **[スクリプト変換エディター]** を表示します。  
   
 11. **[スクリプト変換エディター]** の **[入力列]** ページで、単一の使用可能な入力列を選択します。  
   
@@ -268,7 +271,7 @@ public override void Input0_ProcessInputRow(Input0Buffer Row)
   
     -   ChildRecord、文字列型 [DT_STR]、長さ 50  
   
-14. **[スクリプト変換エディター]** の **[スクリプト]** ページで、**[スクリプトの編集]** をクリックします。 **ScriptMain** クラスに、例に示すコードを入力します。 スクリプト開発環境と **[スクリプト変換エディター]** を閉じます。  
+14. **[スクリプト変換エディター]** の **[スクリプト]** ページで、 **[スクリプトの編集]** をクリックします。 **ScriptMain** クラスに、例に示すコードを入力します。 スクリプト開発環境と **[スクリプト変換エディター]** を閉じます。  
   
 15. SQL Server 変換先をデータ フローに追加します。 スクリプト コンポーネントの ParentRecords 出力をこの変換先に接続します。OLE DB 接続マネージャーと Parents テーブルを使用するように構成します。  
   

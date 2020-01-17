@@ -7,15 +7,15 @@ ms.reviewer: ''
 ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: 598deb57-e0cc-4e0a-aeb1-94432c094c67
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 1cbaacd23fcaa1e28d6cce6d64a168d0fab4befc
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 57a5044ccee040ef1eba95925c689f48739c259f
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56025663"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65484660"
 ---
 # <a name="task-2-uploading-supplier-data-to-mds-using-mds-add-in-for-excel"></a>タスク 2:Excel 用 MDS アドインを使用して仕入先データを MDS にアップロードする
   このタスクで、クレンジングされた仕入先データを発行する**MDS**を使用して、 **MDS アドインの Excel**します。 という名前のエンティティを作成する**Supplier**で、 **Suppliers**前のレッスンで作成したモデル。 エンティティは、Excel ファイルの各列に属性を持ちます。 Supplier エンティティの Code および Name 属性に対応して、 **SupplierID**と**Supplier Name** Excel の列。  
@@ -34,9 +34,9 @@ ms.locfileid: "56025663"
   
     1.  選択**新しい接続を作成**、 をクリック**新規**ボタンをクリックします。  
   
-    2.  **新しい接続の追加**ダイアログ ボックスに「**ローカル MDS サーバー**の**説明**と**http://localhost/MDS**の**MDS サーバー アドレス**、 をクリック**OK**ダイアログ ボックスを閉じます。  
+    2.  **新しい接続の追加**ダイアログ ボックスに「**ローカル MDS サーバー**の**説明**と **http://localhost/MDS** の**MDS サーバー アドレス**、 をクリック**OK**ダイアログ ボックスを閉じます。  
   
-6.  **接続の管理**ダイアログ ボックスで、**ローカル MDS サーバー** (http://localhost/MDS)、 をクリックして**テスト**接続をテストします。 クリックして**OK**メッセージ ボックス。  
+6.  **接続の管理**ダイアログ ボックスで、**ローカル MDS サーバー** (http://localhost/MDS) 、 をクリックして**テスト**接続をテストします。 クリックして**OK**メッセージ ボックス。  
   
 7.  クリックして**Connect** MDS サーバーに接続します。  
   
@@ -63,6 +63,6 @@ ms.locfileid: "56025663"
 15. 保持**Excel**を開きます。  
   
 ## <a name="next-task"></a>次の作業  
- [タスク 3:マスター データ マネージャーでデータを検証します。](../../2014/tutorials/task-3-verifying-the-data-in-master-data-manager.md)  
+ [タスク 3: マスター データ マネージャーでデータを検証します。](../../2014/tutorials/task-3-verifying-the-data-in-master-data-manager.md)  
   
   

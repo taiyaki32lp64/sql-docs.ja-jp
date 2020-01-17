@@ -13,11 +13,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 628e9cb70e17271f34ce9b2c7573e918bd9009bc
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52762374"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63186954"
 ---
 # <a name="administrative-password"></a>管理パスワード
   このウィザードの **[ディストリビューター]** ページで、このパブリッシャーに対してリモート ディストリビューターを選択した場合、レプリケーションがパブリッシャーとディストリビューターの間に作成した接続に対するパスワードを、 **distributor_admin** ログインを使用して入力する必要があります。 入力するパスワードは、ディストリビューションの構成ウィザードの **[ディストリビューター パスワード]** ページまたは **[ディストリビューターのプロパティ]** ダイアログ ボックスの **[パブリッシャー]** ページで指定されたパスワードと一致する必要があります。  

@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 409b3f8b-0ced-4867-acbe-b245dcdf6702
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 6c77bece1b2ab67cc361f7445240e1a2b1190587
-ms.sourcegitcommit: 1a5448747ccb2e13e8f3d9f04012ba5ae04bb0a3
+ms.openlocfilehash: 5adc631a3c3f7a66c02f9ebfe541fa5e923deb0a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51557799"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67922237"
 ---
 # <a name="running-the-address-book-sql-script"></a>アドレス帳の SQL スクリプトの実行
 > [!IMPORTANT]
@@ -69,7 +68,7 @@ ms.locfileid: "51557799"
   
 7.  を実行すると、閉じる、**クエリ**、**クエリ アナライザー**、および**Enterprise Manager** windows。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [アドレス帳のサンプル アプリケーションの実行](../../../ado/guide/remote-data-service/running-the-address-book-sample-application.md)
 
 

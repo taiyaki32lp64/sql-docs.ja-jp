@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 22f23c30-7c21-4fe3-8e76-36cea6448819
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 73d316eaedaaa8eab1b68fba6edd04772d935e4b
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.openlocfilehash: 27ece72a3d9db6398dd8120941f95de2b8276b9c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51606432"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67963796"
 ---
 # <a name="rds-code-examples-in-vbscript"></a>VBScript での RDS のコード例
 > [!IMPORTANT]
@@ -60,7 +59,7 @@ ms.locfileid: "51606432"
   
 -   [SubmitChanges メソッドの例](../../../ado/reference/rds-api/submitchanges-method-example-vbscript.md)  
   
-## <a name="properties"></a>[プロパティ]  
+## <a name="properties"></a>Properties  
   
 -   [接続プロパティの例](../../../ado/reference/rds-api/connect-property-example-vbscript.md)  
   

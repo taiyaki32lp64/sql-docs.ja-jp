@@ -12,15 +12,14 @@ helpviewer_keywords:
 - diagnosticinformation element
 - ssbdiagnose
 ms.assetid: 0cfda544-542c-4cf4-86d2-8031c91b10f6
-author: stevestein
-ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 39c1b90b368470f4a5ef2cd5fd2d90309aea3dda
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 0d20ef070a390eb942b29498381da9e2479d0218
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51668391"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67986182"
 ---
 # <a name="diagnosticinformation-element-ssbdiagnose"></a>DiagnosticInformation 要素 (ssbdiagnose)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 264dc1a2-c8a0-4c89-b5f6-951baf950299
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 795923370e39fa44b6ddf22321255d9480388925
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 48df93c2976ee7b75bf064ca0443420f0a2ce70d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47677317"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68068250"
 ---
 # <a name="mssqlserver102"></a>MSSQLSERVER_102
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -41,5 +40,5 @@ ms.locfileid: "47677317"
 ## <a name="user-action"></a>ユーザーの操作  
 [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントに構文エラーがないか調べてください。  
   
-RC4 または RC4_128 を使用して対称キーを作成する場合、AES アルゴリズムのいずれかなど、新しい暗号化を選択します  (推奨)。RC4 を使用する必要がある場合、ALTER DATABASE SET COMPATIBILITY_LEVEL を使用して、データベースの互換性レベルを 90 または 100 に設定します  (非推奨)。  
+RC4 または RC4_128 を使用して対称キーを作成する場合、AES アルゴリズムのいずれかなど、新しい暗号化を選択します (推奨)。RC4 を使用する必要がある場合、ALTER DATABASE SET COMPATIBILITY_LEVEL を使用して、データベースの互換性レベルを 90 または 100 に設定します (非推奨)。  
   

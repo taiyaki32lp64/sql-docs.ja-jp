@@ -4,21 +4,20 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 ms.assetid: f02dee0c-85ad-45d4-b707-10e9e8541db9
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 0a19f5fd51cf4e1b24e898ef3016c46edc152920
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 987e6924fe3fbffb416e4266861ae7cfede16596
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56022881"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66108496"
 ---
-# <a name="lesson-2-define-a-data-connection-and-data-table-for-parent-report"></a>レッスン 2:親レポートのデータ接続とデータ テーブルを定義します。
+# <a name="lesson-2-define-a-data-connection-and-data-table-for-parent-report"></a>レッスン 2:親レポートのデータ接続とデータ テーブルを定義する
   Visual C# 用の ASP.NET Web サイト テンプレートを使用して新しい Web サイト プロジェクトを作成した後は、親レポートのデータ接続とデータ テーブルを作成します。 このチュートリアルでは、データ接続先として AdventureWorks2008 データベースを使用しますが、 AdventureWorks2012 データベースに接続することもできます。  
   
 ### <a name="to-define-a-data-connection-and-data-table-by-adding-a-dataset-for-parent-report"></a>DataSet を追加してデータ接続とデータ テーブルを定義するには (親レポート用)  
@@ -33,7 +32,7 @@ ms.locfileid: "56022881"
   
 4.  **データ接続の選択**] ページで [**新しい接続**します。  
   
-5.  Visual Studio で初めてデータ ソースを作成する場合は、**[データ ソースの選択]** ページが表示されます。 **[データ ソース]** ボックスで、 **[Microsoft SQL Server]** を選択します。  
+5.  Visual Studio で初めてデータ ソースを作成する場合は、 **[データ ソースの選択]** ページが表示されます。 **[データ ソース]** ボックスで、 **[Microsoft SQL Server]** を選択します。  
   
 6.  **[接続の追加]** ダイアログ ボックスで、次の手順を実行します。  
   
@@ -53,7 +52,7 @@ ms.locfileid: "56022881"
   
 9. **コマンドの種類を選択**] ページで、[ **SQL ステートメントを使用**、順にクリックします**次**します。  
   
-10. **SQL ステートメントを入力します**ページで、データを取得する次の TRANSACT-SQL クエリを入力、 **AdventureWorks2008**データベースをクリックして **[次へ]**。  
+10. **SQL ステートメントを入力します**ページで、データを取得する次の TRANSACT-SQL クエリを入力、 **AdventureWorks2008**データベースをクリックして **[次へ]** 。  
   
     ```  
     SELECT ProductID, Name, ProductNumber, SafetyStockLevel, ReorderPoint FROM  Production.Product Order By ProductID  

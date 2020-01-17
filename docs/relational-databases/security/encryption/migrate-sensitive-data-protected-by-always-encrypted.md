@@ -1,5 +1,5 @@
 ---
-title: Always Encrypted で保護された機微なデータの移行 | Microsoft Docs
+title: Always Encrypted を使用した暗号化データの列への一括読み込み | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2015
 ms.prod: sql
@@ -10,23 +10,22 @@ ms.topic: conceptual
 helpviewer_keywords:
 - Always Encrypted, bulk import
 ms.assetid: b2ca08ed-a927-40fb-9059-09496752595e
-author: aliceku
-ms.author: aliceku
-manager: craigg
+author: jaszymas
+ms.author: jaszymas
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 45a3b887688186aaedfc66423b4982629914f159
-ms.sourcegitcommit: 5ca813d045e339ef9bebe0991164a5d39c8c742b
+ms.openlocfilehash: 9faa58382c1916d6691c790e955e1dbc409bb119
+ms.sourcegitcommit: 312b961cfe3a540d8f304962909cd93d0a9c330b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/24/2019
-ms.locfileid: "54880535"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73594166"
 ---
-# <a name="migrate-sensitive-data-protected-by-always-encrypted"></a>Always Encrypted で保護された機微なデータの移行
+# <a name="bulk-load-encrypted-data-to-columns-using-always-encrypted"></a>Always Encrypted を使用した暗号化データの列への一括読み込み
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
-一括コピー操作中にサーバーでメタデータ チェックを実行せずに暗号化されたデータを読み込むには、 **ALLOW_ENCRYPTED_VALUE_MODIFICATIONS** オプションを指定してユーザーを作成します。 このオプションは、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] より古いバージョンの [!INCLUDE[ssSQL15](../../../includes/sssql15-md.md)] から従来のツールで使用するためのものです。Always Encrypted を使用できないサードパーティの ETL (Extract-Transform-Load) ワークフローで使用する場合もあります。 これにより、ユーザーは、暗号化された列を含むあるテーブル セットから、(同じデータベースまたは別のデータベース内の) 暗号化された列を含む別のテーブル セットに暗号化されたデータを安全に移動することができます。  
+一括コピー操作中にサーバーでメタデータ チェックを実行せずに暗号化されたデータを読み込むには、 **ALLOW_ENCRYPTED_VALUE_MODIFICATIONS** オプションを指定してユーザーを作成します。 このオプションは、Always Encrypted を使用できないレガシ ツールまたはサードパーティの ETL (Extract-Transform-Load) ワークフローで使用するためのものです。 これにより、ユーザーは、暗号化された列を含むあるテーブル セットから、(同じデータベースまたは別のデータベース内の) 暗号化された列を含む別のテーブル セットに暗号化されたデータを安全に移動することができます。  
 
- ## <a name="the-allowencryptedvaluemodifications-option"></a>ALLOW_ENCRYPTED_VALUE_MODIFICATIONS オプション  
+ ## <a name="the-allow_encrypted_value_modifications-option"></a>ALLOW_ENCRYPTED_VALUE_MODIFICATIONS オプション  
  [CREATE USER](../../../t-sql/statements/create-user-transact-sql.md) と [ALTER USER](../../../t-sql/statements/alter-user-transact-sql.md) の両方に ALLOW_ENCRYPTED_VALUE_MODIFICATIONS オプションがあります。 このオプションを ON に設定すると (既定値は OFF)、一括コピー操作でサーバーに対する暗号化メタデータ チェックが抑制されます。これにより、ユーザーはデータの暗号化を解除せずにテーブルまたはデータベース間で暗号化されたデータの一括コピーを行うことができます。  
   
 ## <a name="data-migration-scenarios"></a>データの移行シナリオ  
@@ -37,15 +36,15 @@ ms.locfileid: "54880535"
 ## <a name="bulk-loading-of-encrypted-data"></a>暗号化されたデータの一括読み込み  
 次のプロセスを使用して、暗号化されたデータを読み込みます。  
 
-1.  一括コピー操作の対象となるデータベース内のユーザーに対して、オプションを ON に設定します。 例 :  
+1.  一括コピー操作の対象となるデータベース内のユーザーに対して、オプションを ON に設定します。 例:  
  
    ```  
     ALTER USER Bob WITH ALLOW_ENCRYPTED_VALUE_MODIFICATIONS = ON;  
    ```  
 
-2.  そのユーザーとして接続して、一括コピー アプリケーションまたはツールを実行します。 (アプリケーションで Always Encrypted が有効なクライアント ドライバーを使用する場合は、暗号化された列から取得されたデータが暗号化された状態のままになるように、データ ソースの接続文字列に **column encryption setting=enabled** が含まれていないことを確認します。 詳細については、「 [Always Encrypted &#40;クライアント開発&#41;](../../../relational-databases/security/encryption/always-encrypted-client-development.md)」(Always Encrypted &#40;クライアント開発&#41;) を参照してください。  
+2.  そのユーザーとして接続して、一括コピー アプリケーションまたはツールを実行します。 (アプリケーションで Always Encrypted が有効なクライアント ドライバーを使用する場合は、暗号化された列から取得されたデータが暗号化された状態のままになるように、データ ソースの接続文字列に **column encryption setting=enabled** が含まれていないことを確認します。 詳しくは、「[Always Encrypted を使用したアプリケーションの開発](always-encrypted-client-development.md)」をご覧ください。)  
   
-3.  ALLOW_ENCRYPTED_VALUE_MODIFICATIONS オプションを OFF に戻します。 例 :  
+3.  ALLOW_ENCRYPTED_VALUE_MODIFICATIONS オプションを OFF に戻します。 例:  
 
     ```  
     ALTER USER Bob WITH ALLOW_ENCRYPTED_VALUE_MODIFICATIONS = OFF;  
@@ -70,11 +69,15 @@ ms.locfileid: "54880535"
  
 暗号化されたデータの暗号化を解除せずに移動する必要がある、短時間実行の一括コピー アプリケーションまたはツールの場合は、アプリケーションを実行する直前にオプションを ON に設定し、操作の実行直後に OFF に戻します。  
  
-新しいアプリケーションの開発には、このオプションを使用しないでください。 代わりに、クライアント ドライバー (ADO 4.6.1 など) を使用してください。このドライバーでは、1 つのセッションの暗号化メタデータ チェックを抑制するための API が提供されます。  
+新しいアプリケーションの開発には、このオプションを使用しないでください。 代わりに、単一セッションに対して暗号化メタデータ チェックを抑制するための API が提供されているクライアント ドライバーを使用します (たとえば、SQL Server 用の .NET Framework Data Provider での AllowEncryptedValueModifications オプションなど)。「[SqlBulkCopy を使用して暗号化されたデータをコピーする](develop-using-always-encrypted-with-net-framework-data-provider.md#copying-encrypted-data-using-sqlbulkcopy)」を参照してください。 
+
+## <a name="next-steps"></a>Next Steps
+- [SQL Server Management Studio で Always Encrypted を使用した列のクエリを実行する](always-encrypted-query-columns-ssms.md)
+- [Always Encrypted を使用したアプリケーションの開発](always-encrypted-client-development.md)
 
 ## <a name="see-also"></a>参照  
-[CREATE USER &#40;Transact-SQL&#41;](../../../t-sql/statements/create-user-transact-sql.md)   
-[ALTER USER &#40;Transact-SQL&#41;](../../../t-sql/statements/alter-user-transact-sql.md)   
-[Always Encrypted &#40;データベース エンジン&#41;](../../../relational-databases/security/encryption/always-encrypted-database-engine.md)   
-[Always Encrypted ウイザード](../../../relational-databases/security/encryption/always-encrypted-wizard.md)   
-[Always Encrypted &#40;クライアント開発&#41;](../../../relational-databases/security/encryption/always-encrypted-client-development.md)  
+- [Always Encrypted](../../../relational-databases/security/encryption/always-encrypted-database-engine.md)
+- [SQL Server インポートおよびエクスポート ウィザードで Always Encrypted を使用して列間でデータを移行する](always-encrypted-migrate-using-import-export-wizard.md)
+- [CREATE USER &#40;Transact-SQL&#41;](../../../t-sql/statements/create-user-transact-sql.md)   
+- [ALTER USER &#40;Transact-SQL&#41;](../../../t-sql/statements/alter-user-transact-sql.md)   
+

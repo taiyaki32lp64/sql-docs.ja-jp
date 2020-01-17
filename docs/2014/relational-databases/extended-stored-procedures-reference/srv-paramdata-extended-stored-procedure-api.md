@@ -21,11 +21,11 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 0825b86cabf57df552063335a0870461cb8a5658
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53357566"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63127410"
 ---
 # <a name="srvparamdata-extended-stored-procedure-api"></a>srv_paramdata (拡張ストアド プロシージャ API)
     
@@ -62,14 +62,14 @@ n
   
 |新しいデータ型|入力データ長|  
 |--------------------|-----------------------|  
-|BITN|**NULL:** VP、NULL<br /><br /> **0:** VP、NULL<br /><br /> **> = 255。** なし<br /><br /> **< 255。** なし|  
-|BIGVARCHAR|**NULL:** NULL の場合、該当なし<br /><br /> **0:** VP、NULL<br /><br /> **> = 255。** VP、255 文字<br /><br /> **< 255。** VP、実際のデータ|  
-|BIGCHAR|**NULL:** NULL の場合、該当なし<br /><br /> **0:** VP、255 個のスペース<br /><br /> **> = 255。** VP、255 文字<br /><br /> **< 255。** VP、実際のデータ + パディング (最大 255 文字)|  
-|BIGBINARY|**NULL:** NULL の場合、該当なし<br /><br /> **0:** VP、255 0X00<br /><br /> **> = 255。** VP、255 バイト<br /><br /> **< 255。** VP、実際のデータ + パディング (最大 255 文字)|  
-|BIGVARBINARY|**NULL:** NULL の場合、該当なし<br /><br /> **0:** VP、0X00<br /><br /> **> = 255。** VP、255 バイト<br /><br /> **< 255。** VP、実際のデータ|  
-|NCHAR|**NULL:** NULL の場合、該当なし<br /><br /> **0:** VP、255 個のスペース<br /><br /> **> = 255。** VP、255 文字<br /><br /> **< 255。** VP、実際のデータ + パディング (最大 255 文字)|  
-|NVARCHAR|**NULL:** NULL の場合、該当なし<br /><br /> **0:** VP、NULL<br /><br /> **> = 255。** VP、255 文字<br /><br /> **< 255。** VP、実際のデータ|  
-|NTEXT|**NULL:** なし<br /><br /> **0:** なし<br /><br /> **> = 255。** なし<br /><br /> **\<255:** なし|  
+|BITN|**NULL:** VP、NULL<br /><br /> **ZERO:** VP、NULL<br /><br /> **>=255:** なし<br /><br /> **<255:** なし|  
+|BIGVARCHAR|**NULL:** NULL、該当なし<br /><br /> **ZERO:** VP、NULL<br /><br /> **>=255:** VP、255 文字<br /><br /> **<255:** VP、実際のデータ|  
+|BIGCHAR|**NULL:** NULL、該当なし<br /><br /> **ZERO:** VP、255 個のスペース<br /><br /> **>=255:** VP、255 文字<br /><br /> **<255:** VP、実際のデータ + パディング (最大 255)|  
+|BIGBINARY|**NULL:** NULL、該当なし<br /><br /> **ZERO:** VP、255 0x00<br /><br /> **>=255:** VP、255 バイト<br /><br /> **<255:** VP、実際のデータ + パディング (最大 255)|  
+|BIGVARBINARY|**NULL:** NULL、該当なし<br /><br /> **ZERO:** VP、0x00<br /><br /> **>=255:** VP、255 バイト<br /><br /> **<255:** VP、実際のデータ|  
+|NCHAR|**NULL:** NULL、該当なし<br /><br /> **ZERO:** VP、255 個のスペース<br /><br /> **>=255:** VP、255 文字<br /><br /> **<255:** VP、実際のデータ + パディング (最大 255)|  
+|NVARCHAR|**NULL:** NULL、該当なし<br /><br /> **ZERO:** VP、NULL<br /><br /> **>=255:** VP、255 文字<br /><br /> **<255:** VP、実際のデータ|  
+|NTEXT|**NULL:** なし<br /><br /> **ZERO:** なし<br /><br /> **>=255:** なし<br /><br /> **\<255:** なし|  
   
  \*   データが NULL 終端ではないため、255 文字を超えるデータが切り捨てられても警告は発生しません。  
   

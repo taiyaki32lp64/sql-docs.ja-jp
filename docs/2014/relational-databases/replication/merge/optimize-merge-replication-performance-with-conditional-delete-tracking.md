@@ -15,11 +15,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: a93eed388f494b7d0aeaac127b95bc0d87c76963
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54128978"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68210692"
 ---
 # <a name="optimize-merge-replication-performance-with-conditional-delete-tracking"></a>条件付き削除の追跡によるマージ レプリケーション パフォーマンスの最適化
     
@@ -46,7 +46,7 @@ ms.locfileid: "54128978"
   
  **削除が追跡されないように指定するには**  
   
--   レプリケーション[!INCLUDE[tsql](../../../includes/tsql-md.md)]プログラミングします。[マージ アーティクルに対して削除を追跡しないように指定する (レプリケーション Transact-SQL プログラミング)](..//publish/specify-merge-replication-properties.md#tracking-deletes)  
+-   レプリケーション [!INCLUDE[tsql](../../../includes/tsql-md.md)] プログラミング: [マージ アーティクルに対して削除を追跡しないように指定する (レプリケーション Transact-SQL プログラミング)](..//publish/specify-merge-replication-properties.md#tracking-deletes)  
   
 ## <a name="see-also"></a>参照  
  [マージ レプリケーションのアーティクルのオプション](article-options-for-merge-replication.md)   

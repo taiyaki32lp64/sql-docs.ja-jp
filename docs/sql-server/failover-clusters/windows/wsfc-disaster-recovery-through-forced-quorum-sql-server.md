@@ -13,19 +13,18 @@ helpviewer_keywords:
 ms.assetid: 6cefdc18-899e-410c-9ae4-d6080f724046
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: d1d5b272edba906e829b44ae4e23e9ddd8d4eaa0
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: 2453c994ca274d4fd584d04026e3f4e0eb0cecf6
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51699730"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67904952"
 ---
 # <a name="wsfc-disaster-recovery-through-forced-quorum-sql-server"></a>WSFC の強制クォーラムによる災害復旧 (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   クォーラム障害は、通常、システム障害、永続的な通信障害、または WSFC クラスター内の複数のノードにおける不適切な構成が原因で発生します。  クォーラム障害からの復旧には、手動による介入が必要になります。  
   
--   **Before you start:**  [Prerequisites](#Prerequisites), [Security](#Security)  
+-   **開始前の準備:** [前提条件](#Prerequisites)、[セキュリティ](#Security)  
   
 -   **WSFC の強制クォーラムの手順による災害復旧** [WSFC の強制クォーラムの手順による災害復旧](#Main)  
   
@@ -41,7 +40,7 @@ ms.locfileid: "51699730"
 > [!WARNING]  
 >  ユーザーは、Windows Server フェールオーバー クラスタリング、WSFC クォーラム モデル、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]、および環境に固有の配置構成の概念および操作に関する十分な知識を持っている必要があります。  
 >   
->  詳細については、「  [Windows Server フェールオーバー クラスタリング (WSFC) と SQL Server](https://msdn.microsoft.com/library/hh270278\(v=SQL.110\).aspx), [WSFC クォーラム モードと投票の構成 (SQL Server)](https://msdn.microsoft.com/library/hh270280\(v=SQL.110\).aspx)」を参照してください。  
+>  詳細については、以下をご覧ください。「[Windows Server フェールオーバー クラスタリング (WSFC) と SQL Server](https://msdn.microsoft.com/library/hh270278\(v=SQL.110\).aspx)」、「[WSFC クォーラム モードと投票の構成 (SQL Server)](https://msdn.microsoft.com/library/hh270280\(v=SQL.110\).aspx)」  
   
 ###  <a name="Security"></a> セキュリティ  
  ユーザーは、WSFC クラスターの各ノードのローカル Administrators グループのメンバーであるドメイン アカウントを使用する必要があります。  
@@ -66,7 +65,7 @@ ms.locfileid: "51699730"
   
      このノードで、強制クォーラムの手順に従って、クラスターを手動で強制的にオンラインにします。  データ損失の可能性を最小限に抑えるには、可用性グループのプライマリ レプリカを最後にホストしていたノードを選択します。  
   
-     詳細については、「  [クォーラムを使用せずに WSFC クラスターを強制的に起動する](https://msdn.microsoft.com/library/hh270275\(v=SQL.110\).aspx)」を参照してください。  
+     詳細については、以下をご覧ください。[クォーラムを使用せずに WSFC クラスターを強制的に起動する](https://msdn.microsoft.com/library/hh270275\(v=SQL.110\).aspx)  
   
     > [!NOTE]  
     >  強制クォーラムの設定はクラスター全体に影響します。論理的 WSFC クラスターの投票が過半数に達し、通常のクォーラム モードの動作に自動的に切り替わるまで、クラスター全体のクォーラムのチェックがブロックされます。  

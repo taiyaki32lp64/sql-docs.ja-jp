@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 31fc53d0-97de-4315-a87b-3bf5cdd1f432
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 2ff8782287f5a6cbeb3f22ca58eaa3bd061c6c89
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 3952ef502bf79d6704cbaea80b9a825a3c70981b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47657670"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67925014"
 ---
 # <a name="immediate-mode"></a>イミディエイト モード
 イミディ エイト モードが有効なときに、 **LockType**プロパティに設定されて**adLockOptimistic**または**adLockPessimistic**します。 操作を宣言する行に完全な呼び出してとすぐには、レコードへの変更をデータ ソースに反映するようイミディ エイト モードで、 **Update**メソッド。  

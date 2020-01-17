@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 helpviewer_keywords:
 - automatic report server tasks
@@ -16,15 +15,15 @@ helpviewer_keywords:
 - scripts [Reporting Services], command prompt
 - deploying reports [Reporting Services]
 ms.assetid: bd6f958f-cce6-4e79-8a0f-9475da2919ce
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 859c7d2cb6545c6a15e1e3e40aff28720921fb27
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: a6c4bf8f67f787214d38148db40ea8122a064a42
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56023123"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66099824"
 ---
 # <a name="rsexe-utility-ssrs"></a>RS.exe Utility (SSRS)
   rs.exe ユーティリティは入力ファイル内に指定したスクリプトを処理します。 このユーティリティを使用して、レポート サーバーの配置と管理タスクを自動化します。  
@@ -103,9 +102,9 @@ ms.locfileid: "56023123"
   
  `rs.exe -i myScriptFile.rss -s http://myServer/reportserver -v parentFolder="Financial Reports"`  
   
- 指定した値に設定された名前を使用して、グローバル変数を作成します。 たとえば、 **-v を =**"`1`" **-v b =**"`2`"という名前の変数に結果`a`の値を持つ"`1`"変数と、 **b**の値を持つ"`2`"。  
+ 指定した値に設定された名前を使用して、グローバル変数を作成します。 たとえば、 **-v を =** "`1`" **-v b =** "`2`"という名前の変数に結果`a`の値を持つ"`1`"変数と、 **b**の値を持つ"`2`"。  
   
- グローバル変数は、スクリプト内のすべての関数で使用できます。 円記号と引用符 (**\\"**) は、二重引用符と解釈されます。 引用符は、文字列にスペースが含まれている場合のみ必要です。 変数名は、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]で有効な名前であることが必要です。また変数名は、アルファベットやアンダースコアで始まり、アルファベット文字、数字、およびアンダースコアを含めることができます。 予約語は、変数名として使用できません。 グローバル変数の使用の詳細については、「[式で使用される組み込みコレクション &#40;レポート ビルダーおよび SSRS&#41;](../report-design/built-in-collections-in-expressions-report-builder.md)」を参照してください。  
+ グローバル変数は、スクリプト内のすべての関数で使用できます。 円記号と引用符 ( **\\"** ) は、二重引用符と解釈されます。 引用符は、文字列にスペースが含まれている場合のみ必要です。 変数名は、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]で有効な名前であることが必要です。また変数名は、アルファベットやアンダースコアで始まり、アルファベット文字、数字、およびアンダースコアを含めることができます。 予約語は、変数名として使用できません。 グローバル変数の使用の詳細については、「[式で使用される組み込みコレクション &#40;レポート ビルダーおよび SSRS&#41;](../report-design/built-in-collections-in-expressions-report-builder.md)」を参照してください。  
   
  **-t**  
  (省略可) エラー メッセージをトレース ログに出力します。 この引数は値を取りません。 詳細については、「 [Report Server Service Trace Log](../report-server/report-server-service-trace-log.md)」を参照してください。  

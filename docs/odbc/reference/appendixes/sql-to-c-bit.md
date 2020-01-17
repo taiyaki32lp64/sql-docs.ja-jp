@@ -1,5 +1,5 @@
 ---
-title: 'SQL c: ビットから |Microsoft Docs'
+title: 'SQL から C へ: ビット |Microsoft Docs'
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 0eeaab8b-ad82-4a36-b464-9a1211d5f72c
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: f7ff0bd2988460596623eb47ded276392dc3d443
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 8d00a3c26d842b196e20861da6d8ae3e818d4cbe
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47767590"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68056903"
 ---
 # <a name="sql-to-c-bit"></a>SQL から C へ: ビット
 ODBC SQL データ型がビットの識別子。  

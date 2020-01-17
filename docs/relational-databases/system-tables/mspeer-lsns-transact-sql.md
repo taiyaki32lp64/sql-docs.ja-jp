@@ -1,5 +1,5 @@
 ---
-title: MSpeer_lsns (TRANSACT-SQL) |Microsoft Docs
+title: MSpeer_lsns (Transact-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -17,15 +17,14 @@ helpviewer_keywords:
 ms.assetid: 0ba33907-601b-4c3d-8099-2663f680a161
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 08926758b2d217bde6f858405ebde1c2b38b4d66
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: c0d31de11ed7d41ecca409589f3daa25c85f1146
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52796174"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68085773"
 ---
-# <a name="mspeerlsns-transact-sql"></a>MSpeer_lsns (Transact-SQL)
+# <a name="mspeer_lsns-transact-sql"></a>MSpeer_lsns (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   **Mspeer_lsns**各トランザクションをピア ツー ピア レプリケーション トポロジ内のサブスクリプションにマップするテーブルを使用します。 このテーブルは、ピアツーピア レプリケーション トポロジ内にあるすべてのパブリケーション データベースと、ピアツーピア パブリケーションに対するすべてのサブスクライバーのサブスクリプション データベースに格納されます。 この種類のトランザクション レプリケーション トポロジの詳細については、次を参照してください。[ピア ツー ピア トランザクション レプリケーション](../../relational-databases/replication/transactional/peer-to-peer-transactional-replication.md)します。 このテーブルは、パブリケーション データベース内に保存されます。  
@@ -46,7 +45,7 @@ ms.locfileid: "52796174"
 |**originator_id**|**smallint**|競合検出のためにトポロジの各ノードを識別します。 詳細については、「 [Conflict Detection in Peer-to-Peer Replication](../../relational-databases/replication/transactional/peer-to-peer-conflict-detection-in-peer-to-peer-replication.md)」を参照してください。|  
   
 ## <a name="see-also"></a>参照  
- [レプリケーション テーブル &#40; です。TRANSACT-SQL と &#41; です。](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
+ [レプリケーション テーブル &#40;Transact-SQL&#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
  [レプリケーション ビュー &#40;Transact-SQL&#41;](../../relational-databases/system-views/replication-views-transact-sql.md)  
   
   

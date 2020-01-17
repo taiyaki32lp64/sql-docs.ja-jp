@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: f8910aae-2013-4645-880c-134577cbcbe0
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: b7c52b665dcf8ec7c7a945a4e75f3b44564ddee2
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: f36b2f6f52b87fb844bbe9ccb5604f2c4056b15d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47670540"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68095736"
 ---
 # <a name="log-shipping-tables-transact-sql"></a>ログ配布テーブル (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -30,7 +29,7 @@ ms.locfileid: "47670540"
   
 ## <a name="in-this-section"></a>このセクションの内容  
  [log_shipping_monitor_alert](../../relational-databases/system-tables/log-shipping-monitor-alert-transact-sql.md)  
- ログ配布の警告ジョブ ID を格納します。  
+ 警告のログ配布ジョブの Id を格納します。  
   
  [log_shipping_monitor_error_detail](../../relational-databases/system-tables/log-shipping-monitor-error-detail-transact-sql.md)  
  ログ配布ジョブのエラーの詳細を格納します。  
@@ -42,18 +41,18 @@ ms.locfileid: "47670540"
  各ログ配布構成内のプライマリ データベースごとに、1 つの監視レコードを格納します。  
   
  [log_shipping_monitor_secondary](../../relational-databases/system-tables/log-shipping-monitor-secondary-transact-sql.md)  
- 各ログ配布構成内のセカンダリ データベースごとに、1 つの監視レコードを格納します。  
+ ログ配布構成におけるセカンダリ データベースごとに 1 つの監視レコードを格納します。  
   
  [log_shipping_primary_databases](../../relational-databases/system-tables/log-shipping-primary-databases-transact-sql.md)  
- ログ配布構成内のプライマリ データベースに対して 1 つのレコードを格納します。  
+ ログ配布構成で、プライマリ データベースの 1 つのレコードを格納します。  
   
  [log_shipping_primary_secondaries](../../relational-databases/system-tables/log-shipping-primary-secondaries-transact-sql.md)  
- 各プライマリ データベースを、セカンダリ データベースにマップします。  
+ 各プライマリ データベースをそのセカンダリ データベースにマップします。  
   
  [log_shipping_secondary](../../relational-databases/system-tables/log-shipping-secondary-transact-sql.md)  
- セカンダリ ID ごとに 1 つのレコードを格納します。  
+ セカンダリ ID ごとの 1 つのレコードを格納します。  
   
  [log_shipping_secondary_databases](../../relational-databases/system-tables/log-shipping-secondary-databases-transact-sql.md)  
- 各ログ配布構成内のセカンダリ データベースごとに、1 つのレコードを格納します。  
+ ログ配布構成のセカンダリ データベースごとに 1 つのレコードを格納します。  
   
   

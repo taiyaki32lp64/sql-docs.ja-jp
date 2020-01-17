@@ -19,16 +19,16 @@ helpviewer_keywords:
 ms.assetid: d06ed24f-82d7-4b9e-9e40-cc9780476a71
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 192627d1050d7c8c87d99231770ba6bb957ac8c0
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
+ms.openlocfilehash: aa72ae36463f191ef8f127562d231b2e58480039
+ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54124003"
+ms.lasthandoff: 08/03/2019
+ms.locfileid: "68767719"
 ---
 # <a name="monitor-replication-agents"></a>レプリケーション エージェントの監視
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
   [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] レプリケーション モニターを使用すると、レプリケーションの利用状況を体系的に表示でき、特定のエージェントに関する情報を簡単に見つけることもできます。 次の一覧に、各エージェント、各エージェントを利用できるレプリケーション モニターのタブ、およびそれらのタブへのアクセス方法について説明しているトピックへのリンクを示します。  
   
 -   以下のエージェントは、レプリケーション モニターでパブリケーションと関連付けられています。  
@@ -39,7 +39,7 @@ ms.locfileid: "54124003"
   
     -   キュー リーダー エージェント (Queue Reader Agent)  
   
-     これらのエージェントに関連付けられている情報およびタスクにアクセスするには、次のタブを使用します。**[エージェント]** (各パブリッシャーとパブリケーションで使用可能) と **[警告]** (各パブリケーションで使用可能)。 詳細については、「[レプリケーション モニターを使用して情報を表示し、タスクを実行する](../../../relational-databases/replication/monitor/view-information-and-perform-tasks-replication-monitor.md)」を参照してください。  
+     これらのエージェントに関連付けられている情報およびタスクにアクセスするには、次のタブを使用します。 **[エージェント]** (各パブリッシャーとパブリケーションで使用可能) と **[警告]** (各パブリケーションで使用可能)。 詳細については、「[レプリケーション モニターを使用して情報を表示し、タスクを実行する](../../../relational-databases/replication/monitor/view-information-and-perform-tasks-replication-monitor.md)」を参照してください。  
   
 -   以下のエージェントは、レプリケーション モニターでサブスクリプションと関連付けられています。  
   
@@ -47,7 +47,7 @@ ms.locfileid: "54124003"
   
     -   [マージ エージェント]  
   
-     これらのエージェントに関連付けられている情報およびタスクにアクセスするには、次のタブを使用します。**[サブスクリプション ウォッチ リスト]** (各パブリッシャーで使用可能)、または **[すべてのサブスクリプション]** タブ (各パブリケーションで使用可能)。 詳細については、「[レプリケーション モニターを使用して情報を表示し、タスクを実行する](../../../relational-databases/replication/monitor/view-information-and-perform-tasks-replication-monitor.md)」を参照してください。  
+     これらのエージェントに関連付けられている情報およびタスクにアクセスするには、次のタブを使用します。 **[サブスクリプション ウォッチ リスト]** (各パブリッシャーで使用可能)、または **[すべてのサブスクリプション]** タブ (各パブリケーションで使用可能)。 詳細については、「[レプリケーション モニターを使用して情報を表示し、タスクを実行する](../../../relational-databases/replication/monitor/view-information-and-perform-tasks-replication-monitor.md)」を参照してください。  
   
 ## <a name="using-sql-server-management-studio-to-monitor-replication-agents"></a>SQL Server Management Studio を使用してレプリケーション エージェントを監視する  
  [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] には、レプリケーション エージェントの監視用に以下のダイアログ ボックスが用意されています。  

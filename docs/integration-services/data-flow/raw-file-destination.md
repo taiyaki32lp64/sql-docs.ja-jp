@@ -18,17 +18,20 @@ helpviewer_keywords:
 - writing raw data
 - Raw File destination
 ms.assetid: d311b458-aefc-4b4d-b1a1-4c0ebbb34214
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: 15fbcd91b9b2604b0ce7faef4d129101c0fb6f40
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 4919a5df6c7036cce13a2d0218af1727f3ec9d0b
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52393615"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71292177"
 ---
 # <a name="raw-file-destination"></a>RAW ファイル変換先 (Raw File destination)
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   RAW ファイル変換先は、生データをファイルに書き込みます。 データは変換先に固有の形式であるため、データは変換の必要がなく、解析もほとんど必要ありません。 したがって、RAW ファイル変換先は、フラット ファイルや OLE DB 変換先などの他の変換先よりも、高速にデータを書き込むことができます。  
   
  RAW ファイル変換先を使用すると、RAW データをファイルに書き込むことに加え、パッケージを実行せずに、列のみを含む空の RAW ファイル (メタデータのみのファイル) を生成することができます。 以前に変換先によって書き込まれた RAW データを取得するには、RAW ファイル ソースを使用します。 RAW ファイル ソースの参照先を、メタデータのみのファイルにすることもできます。  

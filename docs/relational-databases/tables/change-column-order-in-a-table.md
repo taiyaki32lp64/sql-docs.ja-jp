@@ -13,14 +13,13 @@ helpviewer_keywords:
 ms.assetid: cd99ef56-9085-431a-a0fc-58e7add5399f
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 038075269ccaabfa7c27ef946f1cff2704c164e9
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d59f36bc315f6adf62d2ce8f09be4a1bb57bf428
+ms.sourcegitcommit: 9c993112842dfffe7176decd79a885dbb192a927
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47753763"
+ms.lasthandoff: 10/16/2019
+ms.locfileid: "72452892"
 ---
 # <a name="change-column-order-in-a-table"></a>テーブル内の列の順序の変更
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -51,6 +50,6 @@ ms.locfileid: "47753763"
 ##  <a name="TsqlProcedure"></a> Transact-SQL の使用  
  **列の順序を変更するには**  
   
- Transact-SQL ステートメントを使用して、このタスクを実行することはできません。  
+ このタスクは、Transact-SQL ステートメントを使用した場合はサポートされません。  
   
 ###  <a name="TsqlExample"></a>  

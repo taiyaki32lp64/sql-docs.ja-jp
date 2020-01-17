@@ -18,27 +18,26 @@ helpviewer_keywords:
 ms.assetid: 17e6f87f-8f56-489d-9aed-216afc8ef310
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: bf3910b432d803ce74e0bf24d83a974072028f33
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: f80ec78e37707058a354a03bb2605a38abdfa803
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47704888"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68099189"
 ---
 # <a name="sysdmbrokeractivatedtasks-transact-sql"></a>sys.dm_broker_activated_tasks (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Service Broker によってアクティブにされたストアド プロシージャごとに 1 行のデータを返します。  
+  Service Broker によってアクティブ化ストアド プロシージャの行を返します。  
  
 
 |列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
-|**spid**|**int**|アクティブにされたストアド プロシージャのセッションの ID。 NULL 値は許可されます。|  
-|**database_id**|**smallint**|キューが定義されているデータベースの ID。 NULL 値は許可されます。|  
-|**queue_id**|**int**|ストアド プロシージャをアクティブにしたキューのオブジェクトの ID。 NULL 値は許可されます。|  
-|**procedure_name**|**nvarchar(650)**|アクティブにされたストアド プロシージャの名前。 NULL 値は許可されます。|  
-|**execute_as**|**int**|ストアド プロシージャを実行するユーザーの ID。 NULL 値は許可されます。|  
+|**spid**|**int**|アクティブ化されたストアド プロシージャのセッションの ID。 NULL 値を許容します。|  
+|**database_id**|**smallint**|キューが定義されているデータベースの ID。 NULL 値を許容します。|  
+|**queue_id**|**int**|ストアド プロシージャがアクティブ化されたキューのオブジェクトの ID。 NULL 値を許容します。|  
+|**procedure_name**|**nvarchar(650)**|アクティブ化されたストアド プロシージャの名前です。 NULL 値を許容します。|  
+|**execute_as**|**int**|ストアド プロシージャを実行するユーザーの ID。 NULL 値を許容します。|  
   
 ## <a name="permissions"></a>アクセス許可  
  サーバーに対する VIEW SERVER STATE 権限が必要です。  

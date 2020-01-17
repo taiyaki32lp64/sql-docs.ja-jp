@@ -17,38 +17,37 @@ helpviewer_keywords:
 ms.assetid: 5f629a29-1a62-40e6-ae33-6f6b7dd09a36
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 650fb8c3b043940658bcc50720c0e5dd1da822db
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d39ea859f1fd2cc3064d8d8c71c91ba6324f162c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47690030"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67989977"
 ---
-# <a name="logshippingmonitorprimary-transact-sql"></a>log_shipping_monitor_primary (Transact-SQL)
+# <a name="logshippingmonitorprimary-transact-sql"></a>log_shipping_monitor_primary (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   各ログ配布構成内のプライマリ データベースごとに、1 つの監視レコードを格納します。 このテーブルに格納されます、 **msdb**データベース。  
   
- 履歴や監視に関するテーブルは、プライマリ サーバーとセカンダリ サーバーでも使用されます。   
+ 履歴や監視に関連するテーブルは、プライマリ サーバーとセカンダリ サーバーにも使用されます。   
   
 |列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
 |**primary_id**|**uniqueidentifier**|ログ配布構成におけるプライマリ データベースの ID。|  
 |**primary_server**|**sysname**|プライマリ インスタンスの名前、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]ログ配布構成にします。|  
 |**primary_database**|**sysname**|ログ配布構成におけるプライマリ データベースの名前。|  
-|**backup_threshold**|**int**|バックアップ操作が始まってから警告が生成されるまでの許容経過時間 (分単位)。|  
+|**backup_threshold**|**int**|分単位の許容経過時間を通知する前にバックアップ操作の数が生成されます。|  
 |**threshold_alert**|**int**|バックアップのしきい値を超えたときに発生する警告。|  
-|**threshold_alert_enabled**|**bit**|バックアップのしきい値の警告が有効かどうか。 1 = 有効にします。<br /><br /> 0 = 無効。|  
+|**threshold_alert_enabled**|**bit**|バックアップのしきい値のアラートが有効になっているかどうかを決定します。 1 = 有効にします。<br /><br /> 0 = 無効になっています。|  
 |**last_backup_file**|**nvarchar(500)**|最新のトランザクション ログ バックアップの絶対パス。|  
-|**last_backup_date**|**datetime**|プライマリ データベースに対して最後にトランザクション ログのバックアップ操作を行った日時。|  
-|**last_backup_date_utc**|**datetime**|プライマリ データベースに対して最後にトランザクション ログのバックアップ操作を行った日時。協定世界時 (UTC) で表されます。|  
+|**last_backup_date**|**datetime**|最後のトランザクションの日付と時刻は、プライマリ データベースでバックアップ操作にログインします。|  
+|**last_backup_date_utc**|**datetime**|最後のトランザクションの日付と時刻は、世界協定時刻で表される、プライマリ データベースでバックアップ操作にログインします。|  
 |**history_retention_period**|**int**|指定したプライマリ データベースでログ配布履歴レコードが保持される時間 (分単位)。この時間を過ぎるとレコードは削除されます。|  
   
 ## <a name="remarks"></a>コメント  
  内のプライマリ サーバーでリモート監視サーバーに格納されるだけでなく、プライマリ サーバーに関連する情報が格納されているその**log_shipping_monitor_primary**テーブル。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [ログ配布について &#40;SQL Server&#41;](../../database-engine/log-shipping/about-log-shipping-sql-server.md)   
  [sp_add_log_shipping_primary_database &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-log-shipping-primary-database-transact-sql.md)   
  [sp_change_log_shipping_primary_database &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-change-log-shipping-primary-database-transact-sql.md)   

@@ -16,12 +16,12 @@ ms.assetid: 3bbd1556-abdb-48a3-b249-546eace76343
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: ec79de6769f8059819ebe4e6eacaa3aff6d2dbec
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 1ba38b6a3c425972ef0b893d302df78e3d835f85
+ms.sourcegitcommit: a165052c789a327a3a7202872669ce039bd9e495
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53364284"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72783389"
 ---
 # <a name="view-the-job-history"></a>View the Job History
   このトピックでは、[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]、[!INCLUDE[tsql](../../includes/tsql-md.md)]、または SQL Server 管理オブジェクトを使用して、[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] で [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェントのジョブ履歴ログを表示する方法について説明します。  
@@ -40,7 +40,7 @@ ms.locfileid: "53364284"
   
 ##  <a name="BeforeYouBegin"></a> はじめに  
   
-###  <a name="Security"></a> セキュリティ  
+###  <a name="Security"></a> Security  
  詳細については、「 [SQL Server エージェントのセキュリティの実装](implement-sql-server-agent-security.md)」をご覧ください。  
   
 ##  <a name="SSMS"></a> SQL Server Management Studio の使用  
@@ -67,7 +67,7 @@ ms.locfileid: "53364284"
   
 3.  次の例をコピーしてクエリ ウィンドウに貼り付け、 **[実行]** をクリックします。  
   
-    ```  
+    ```sql
     -- lists all job information for the NightlyBackups job.  
     USE msdb ;  
     GO  
@@ -77,11 +77,9 @@ ms.locfileid: "53364284"
     GO  
     ```  
   
- 詳細については、次を参照してください。 [sp_help_jobhistory &#40;TRANSACT-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-help-jobhistory-transact-sql)します。  
+ 詳細については、「 [sp_help_jobhistory &#40;transact-sql&#41;](/sql/relational-databases/system-stored-procedures/sp-help-jobhistory-transact-sql)」を参照してください。  
   
-##  <a name="SMO"></a> SQL Server 管理オブジェクトの使用  
+##  <a name="SMO"></a>SQL Server 管理オブジェクトの使用  
  **ジョブ履歴ログを表示するには**  
   
  Visual Basic、Visual C#、PowerShell などのプログラミング言語で `EnumHistory` クラスの `Job` メソッドを呼び出します。 詳細については、「 [SQL Server 管理オブジェクト (SMO) プログラミング ガイド](https://msdn.microsoft.com/library/ms162169.aspx)」を参照してください。  
-  
-  

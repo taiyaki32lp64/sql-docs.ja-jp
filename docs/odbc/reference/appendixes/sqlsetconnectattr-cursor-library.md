@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 6f70bbd0-a057-49ef-8b05-4c80b58fc6e6
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 1d4023c513ffda04a3cf499110185d3746ca40d9
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 73d1369a2bce0327ac3367d33f0894bdcfab8205
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47713460"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68125579"
 ---
 # <a name="sqlsetconnectattr-cursor-library"></a>SQLSetConnectAttr (カーソル ライブラリ)
 > [!IMPORTANT]  

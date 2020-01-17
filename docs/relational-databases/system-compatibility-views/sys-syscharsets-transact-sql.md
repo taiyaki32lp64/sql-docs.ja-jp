@@ -20,14 +20,13 @@ helpviewer_keywords:
 ms.assetid: f16d987c-bd19-4668-9ef7-785b8fb9ff5b
 author: rothja
 ms.author: jroth
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: d44a600f2bdbb2022b75c9a4d603faca6fc864c1
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 4332159765791addfdfcc32a9d19d29836f2460c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47810180"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68053545"
 ---
 # <a name="syssyscharsets-transact-sql"></a>sys.syscharsets (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -36,16 +35,16 @@ ms.locfileid: "47810180"
   
 |列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
-|**type**|**smallint**|この行で表されるエンティティの種類。<br /><br /> 1001 = 文字セット<br /><br /> 2001 = 並べ替え順|  
-|**id**|**tinyint**|文字セットまたは並べ替え順を表す一意な ID。 並べ替え順と文字セットで同じ ID を使用することはできません。 1 ～ 240 の ID は、[!INCLUDE[ssDE](../../includes/ssde-md.md)]が使用するために予約されています。|  
-|**csid**|**tinyint**|文字セットを表す行の場合、このフィールドは使用されません。 並べ替え順を表す行の場合は、その並べ替え順が適用される文字セットの ID になります。 この ID の文字セットの行が、このテーブルに存在していることが前提となります。|  
+|**type**|**smallint**|この行で表されるエンティティの種類。<br /><br /> 1001 = 文字セット。<br /><br /> 2001 = 並べ替え順|  
+|**id**|**tinyint**|文字セットまたは並べ替え順を表す一意な ID。 並べ替え順と文字セットは、同じ ID 番号を共有できません。 1 ～ 240 の ID は、[!INCLUDE[ssDE](../../includes/ssde-md.md)]が使用するために予約されています。|  
+|**csid**|**tinyint**|文字セットを表す行の場合、このフィールドは使用されません。 並べ替え順を表す行の場合は、その並べ替え順が適用される文字セットの ID になります。 この ID を持つ文字セットの行がこのテーブルに存在すると見なされます。|  
 |**status**|**smallint**|内部システム状態の情報ビット。|  
-|**name**|**sysname**|文字セットまたは並べ替え順を表す一意な名前。 このフィールドには、A ～ Z および a ～ z の文字、0 ～ 9 の数字、アンダースコア (_) のみが格納されます。名前は必ず文字で始まる必要があります。|  
-|**description**|**nvarchar (255)**|文字セットまたは並べ替え順の特徴を表す任意の説明。|  
+|**name**|**sysname**|文字の一意の名前は、セットまたは並べ替え順。 このフィールドは文字 A ~ Z または a ~ z、数字 0 - 9、およびアンダーのみを含める必要があります。文字で始まる必要があります。|  
+|**description**|**nvarchar (255)**|文字の機能の説明 (オプション) は、セットまたは並べ替え順。|  
 |**binarydefinition**|**varbinary(6000)**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
-|**definition**|**image**|文字セットまたは並べ替え順の内部定義。 このフィールドのデータ構造は、この行が文字セットまたは並べ替え順のどちらを表すかによって異なります。|  
+|**definition**|**image**|文字の内部の定義は、セットまたは並べ替え順。 このフィールドのデータの構造は、種類によって異なります。|  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [システム ビューへのシステム テーブルのマッピング&#40;TRANSACT-SQL&#41;](../../relational-databases/system-tables/mapping-system-tables-to-system-views-transact-sql.md)   
  [互換性ビュー &#40;Transact-SQL&#41;](~/relational-databases/system-compatibility-views/system-compatibility-views-transact-sql.md)  
   

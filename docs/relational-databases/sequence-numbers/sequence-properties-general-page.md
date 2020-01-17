@@ -12,14 +12,13 @@ f1_keywords:
 ms.assetid: 0187f413-cdf0-48a2-b2e6-9b3578cd5811
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 16d971d8a8512d10ee20d02d29f3c27b981693eb
-ms.sourcegitcommit: ddb682c0061c2a040970ea88c051859330b8ac00
+ms.openlocfilehash: b221a39ea46c0bb853aacfbeaa020d67b53ebbca
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51571501"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68126986"
 ---
 # <a name="sequence-properties-general-page"></a>[順序のプロパティ]\([全般] ページ)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -31,7 +30,7 @@ ms.locfileid: "51571501"
   
  このページには 2 とおりの方法でアクセスできます。オブジェクト エクスプローラーで **[シーケンス]** を右クリックして **[新しいシーケンス]** をクリックするか、既存のシーケンスを右クリックして **[プロパティ]** をクリックします。 既存のシーケンスを右クリックして **[プロパティ]** をクリックした場合は、オプションは編集不可能です。 シーケンス オプションを変更するには、[ALTER SEQUENCE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-sequence-transact-sql.md) ステートメントを使用するか、シーケンス オブジェクトを削除してから再作成してください。  
   
-## <a name="options"></a>[変数]  
+## <a name="options"></a>オプション  
  **[シーケンス名]**  
  ここにシーケンス名を入力します。  
   

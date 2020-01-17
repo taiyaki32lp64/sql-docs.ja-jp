@@ -11,13 +11,13 @@ author: markingmyname
 ms.author: maghan
 manager: kfile
 ms.openlocfilehash: c9c561657767c1b1e593fa9dcd9702b72193004d
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56033623"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63272868"
 ---
-# <a name="lesson-5-publish-the-report-definition-to-the-report-server"></a>レッスン 5: レポート サーバーにレポート定義をパブリッシュします。
+# <a name="lesson-5-publish-the-report-definition-to-the-report-server"></a>レッスン 5: レポート サーバーへのレポート定義のパブリッシュ
   レポート定義を更新する最後の作業として、レポート定義をレポート サーバーにパブリッシュします。  
   
 ### <a name="to-publish-the-report-to-the-report-catalog"></a>レポートをレポート カタログにパブリッシュするには  
@@ -77,7 +77,7 @@ ms.locfileid: "56033623"
     ```  
   
 ## <a name="next-lesson"></a>次のレッスン  
- 次のレッスンでは、コンパイルし、実行、`SampleRDLSchema`アプリケーション。 参照してください[レッスン 6。RDL スキーマ アプリケーションの実行&#40;VB C&#35;&#41;](../../2014/tutorials/lesson-6-run-the-rdl-schema-application-vb-csharp.md)します。  
+ 次のレッスンでは、コンパイルし、実行、`SampleRDLSchema`アプリケーション。 「[レッスン 6:RDL スキーマ アプリケーションの実行&#40;VB C&#35;&#41;](../../2014/tutorials/lesson-6-run-the-rdl-schema-application-vb-csharp.md)します。  
   
 ## <a name="see-also"></a>参照  
  [RDL スキーマから生成されたクラスを使用してレポートを更新&#40;SSRS チュートリアル&#41;](../../2014/tutorials/updating-reports-using-classes-generated-from-the-rdl-schema-ssrs-tutorial.md)   

@@ -15,15 +15,15 @@ helpviewer_keywords:
 - constant elements [SQLXML]
 - annotated XSD schemas, constant elements
 ms.assetid: 940eea1b-54f5-445f-b844-c894d9f3941b
-author: douglaslMS
-ms.author: douglasl
+author: MightyPen
+ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 03e2d3d672d0bfa407a3fb553a1139d30696971e
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: bc100446eb6dff17125b0df7a60b8c2c82e46277
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52793474"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66013943"
 ---
 # <a name="creating-constant-elements-using-sqlis-constant-sqlxml-40"></a>sql:is-constant を使用した、定数要素の作成 (SQLXML 4.0)
   定数要素を指定する、データベース テーブルまたは列にマップされない XSD スキーマ内の要素は、-使用することができます、`sql:is-constant`注釈。 この注釈はブール値 (0 = false、1 = true) をとります。 指定できる値は 0、1、true、false です。 `sql:is-constant` 注釈は、属性のない要素に指定できます。 この注釈を値 true (または 1) と共に要素に指定した場合、その要素は XML ドキュメント内に表示されますが、データベースにはマップされなくなります。  
@@ -42,7 +42,7 @@ ms.locfileid: "52793474"
 ### <a name="a-specifying-sqlis-constant-to-add-a-container-element"></a>A. sql:is-constant を指定してコンテナー要素を追加する  
  この注釈付き XSD スキーマ、  **\<CustomerOrders >** 指定することで、定数要素として定義されているが、`sql:is-constant`属性値は 1 です。 そのため、  **\<CustomerOrders >** はデータベース テーブルまたは列にマップされていません。 この定数要素から成る、 **\<順序 >** 子要素。  
   
-  **\<CustomerOrders >** マップされないデータベースのテーブルまたは列を結果の XML を含むコンテナー要素として表示されます、 **\<順序 >** 子要素。  
+ **\<CustomerOrders >** マップされないデータベースのテーブルまたは列を結果の XML を含むコンテナー要素として表示されます、 **\<順序 >** 子要素。  
   
 ```  
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"  

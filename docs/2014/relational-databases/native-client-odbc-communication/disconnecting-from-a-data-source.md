@@ -24,11 +24,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 43ccc784d0d8759c559e705cbbb65861040f6e8a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48144732"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63205675"
 ---
 # <a name="disconnecting-from-a-data-source"></a>データ ソースからの切断
   アプリケーションは、データ ソースの使用が完了したら、それを呼び出す**SQLDisconnect**します。 **SQLDisconnect**接続に割り当てられているすべてのステートメントを解放し、データ ソースからドライバーを切断します。 アプリケーションを呼び出して、その後、 [SQLFreeHandle](../native-client-odbc-api/sqlfreehandle.md)接続ハンドルを解放します。 アプリケーションを終了する前に呼び出すも**SQLFreeHandle**環境ハンドルを解放します。  

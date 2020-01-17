@@ -1,31 +1,30 @@
 ---
-title: 'レッスン 8: Windows Azure ストレージにデータベースを復元 |Microsoft Docs'
+title: 'レッスン 8: データベースを Azure Storage に復元する |Microsoft Docs'
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 ms.assetid: a9f99670-e1de-441e-972c-69faffcac17a
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 12a6d8fdaf0bf1c09c5de706d7dad811c09def2c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 5b30a9f60f52b8b19875f5fb3c15242ce2c632fd
+ms.sourcegitcommit: 3b1f873f02af8f4e89facc7b25f8993f535061c9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48056662"
+ms.lasthandoff: 08/30/2019
+ms.locfileid: "70175430"
 ---
-# <a name="lesson-8-restore-a-database-to-windows-azure-storage"></a>レッスン 8: Windows Azure ストレージにデータベースを復元する
-  このレッスンでは、バックアップ ファイルをローカルで作成して、それを Windows Azure ストレージに復元する方法を学習します。 データベースの場所は、内部設置でも、Windows Azure の仮想マシンでもかまいません。 このレッスンを続行するには、レッスン 4、5、6 および 7 を実行する必要はありません。  
+# <a name="lesson-8-restore-a-database-to-azure-storage"></a>レッスン 8: Azure Storage にデータベースを復元する
+  このレッスンでは、バックアップファイルをローカルに作成し、Azure Storage に復元する方法について説明します。 データベースは、オンプレミスまたは Azure の仮想マシンのいずれかにあることに注意してください。 このレッスンを続行するには、レッスン 4、5、6 および 7 を実行する必要はありません。  
   
- このレッスンでは、次の手順が既に完了したことを前提としています。  
+ このレッスンでは、次の手順を既に完了していることを前提としています。  
   
--   Windows Azure ストレージ アカウントを入手しました。  
+-   Azure Storage アカウントを持っています。  
   
--   Windows Azure ストレージ アカウントにコンテナーを作成しました。  
+-   Azure Storage アカウントでコンテナーを作成しました。  
   
 -   読み取り、書き込み、一覧表示の権限のあるコンテナーに対するポリシーを作成しました。 SAS キーも生成しました。  
   
@@ -33,13 +32,13 @@ ms.locfileid: "48056662"
   
 -   ソース コンピューターにデータベースを作成しました。  
   
- Windows Azure ストレージにデータベースを復元するには、次の手順を実行します。  
+ データベースを Azure Storage に復元するには、次の手順を実行します。  
   
 1.  ソース コンピューターで、SQL Server Management Studio を起動します。  
   
 2.  新しく作成したデータベースに接続すると、クエリ ウィンドウが開きます。 次のステートメントを実行します。  
   
-    ```tsql  
+    ```sql  
   
     USE TestDB3Restore;   
     GO   
@@ -53,7 +52,7 @@ ms.locfileid: "48056662"
   
 3.  次に、クエリ ウィンドウに次のステートメントをコピーして実行します。  
   
-    ```tsql  
+    ```sql  
   
     USE master;   
     GO   
@@ -68,25 +67,25 @@ ms.locfileid: "48056662"
   
      この手順が終了すると、管理ポータルにコンテナーのデータ ファイル (.mdf) とログ ファイル (.ldf) が表示されます。  
   
- SQL Server Management Studio を使用して、Windows Azure ストレージを指すデータ ファイルとログ ファイルを持つデータベースを復元するには、次の手順を実行します。  
+ SQL Server Management Studio ユーザーインターフェイスを使用して Azure Storage を指すデータファイルとログファイルを含むデータベースを復元するには、次の手順を実行します。  
   
-1.  **オブジェクト エクスプ ローラー**、サーバー ツリーを展開するサーバー名をクリックします。  
+1.  **オブジェクトエクスプローラー**で、サーバー名をクリックしてサーバーツリーを展開します。  
   
-2.  展開**データベース**、し、データベースを選択します。  
+2.  **[データベース]** を展開し、データベースを選択します。  
   
 3.  データベースを右クリックして **[タスク]** をポイントし、 **[復元]** をクリックします。  
   
-4.  **全般**ページで、**復元**ソース セクションをクリックします**ソース**デバイス。  
+4.  **[全般]** ページの **[復元]** 元 セクションで、 **[ソース]** デバイス をクリックします。  
   
-5.  参照 ボタンをクリックして、**ソース**デバイス ボックスが開き、 **バックアップ デバイスの** ダイアログ ボックス。  
+5.  **[ソース]** デバイス ボックスの参照ボタンをクリックして、 **[バックアップデバイスの選択]** ダイアログボックスを開きます。  
   
-6.  バックアップ メディアのテキスト ボックスで、次のように選択します。**ファイル**、 をクリックし、**追加**バックアップ (.bak) ファイルを検索するボタンをクリックします。 **[OK]** をクリックします。  
+6.  バックアップメディア ボックスで、**ファイル** を選択し、**追加** ボタンをクリックしてバックアップ (.bak) ファイルを指定します。 **[OK]** をクリックします。  
   
-7.  クリックして**ファイル**最初のページでします。  
+7.  最初のページの **[ファイル]** をクリックします。  
   
-8.  **データベース ファイルに復元**セクション**復元**フィールドを次の手順を入力します。  
+8.  **[データベースファイルの復元]** セクションの **[復元元]** フィールドに、次のように入力します。  
   
-     データ ファイル、入力:`https://teststorageaccnt.blob.core.windows.net/testrestoressms/TestRESSMS.mdf`します。 ログ ファイルの入力:`https://teststorageaccnt.blob.core.windows.net/testrestoressms/TestRESSMS_log.ldf`します。  
+     データファイルの場合は、 `https://teststorageaccnt.blob.core.windows.net/testrestoressms/TestRESSMS.mdf`「」と入力します。 ログファイルの場合は、 `https://teststorageaccnt.blob.core.windows.net/testrestoressms/TestRESSMS_log.ldf`「」と入力します。  
   
      ![SQL 14 CTP2](../tutorials/media/ss-was-tutlesson-8-8.gif "SQL 14 CTP2")  
   
@@ -98,6 +97,6 @@ ms.locfileid: "48056662"
   
  **次のレッスン:**  
   
- [レッスン 9:Windows Azure ストレージからデータベースを復元する](../relational-databases/lesson-8-restore-as-new-database-from-log-backup.md)  
+ [レッスン 9:Azure Storage からデータベースを復元する](../relational-databases/lesson-8-restore-as-new-database-from-log-backup.md)  
   
   

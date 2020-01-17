@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 7b2e254a-9354-4541-bc98-bb185276388f
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 19b266474c348af50db26fddafeea79d4cf33ade
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.openlocfilehash: 4e4e0943a675ef7cf3684ccddd2699fba02dac9e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51602562"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67964120"
 ---
 # <a name="fetchoptions-property-rds"></a>FetchOptions プロパティ (RDS)
 非同期のフェッチの種類を示します。  
@@ -45,7 +44,7 @@ ms.locfileid: "51602562"
 ## <a name="applies-to"></a>適用対象  
  [DataControl オブジェクト (RDS)](../../../ado/reference/rds-api/datacontrol-object-rds.md)  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [ExecuteOptions と FetchOptions プロパティの例 (VBScript)](../../../ado/reference/rds-api/executeoptions-and-fetchoptions-properties-example-vbscript.md)   
  [Cancel メソッド (RDS)](../../../ado/reference/rds-api/cancel-method-rds.md)
 

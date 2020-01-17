@@ -2,21 +2,21 @@
 title: レポートの計画 (レポート ビルダー) | Microsoft Docs
 ms.date: 03/03/2017
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: report-design
 ms.topic: conceptual
 helpviewer_keywords:
 - getting started
 - report design
 ms.assetid: 79113505-1ce8-4f8c-9260-d861838f7813
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 48011d4f815df916236a60f2471c7ce45fe1f2f8
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 9c65d1db987f5d317b0719ff101012b4db0a5873
+ms.sourcegitcommit: c40f663d4486e574fd749f2c8e84c98d41970352
+ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56297330"
+ms.lasthandoff: 06/12/2019
+ms.locfileid: "67038024"
 ---
 # <a name="planning-a-report-report-builder"></a>レポートの計画 (レポート ビルダー)
   レポート ビルダーでは、さまざまな種類のページ分割されたレポートを作成できます。 たとえば、売上データの概要または詳細、マーケティングと売上の傾向、経営報告、またはダッシュボードを示すレポートを作成できます。 また、販売注文、製品カタログ、定型書簡などの高度な書式付きテキストを利用したレポートも作成できます。 これらのレポートはすべて、レポート ビルダーの同じ基本的な構成要素をさまざまに組み合わせて作成されます。 便利でわかりやすいレポートを作成するには、まず計画を立てることが役立ちます。 開始する前に検討すると役立ついくつかの事項を次に示します。  
@@ -51,7 +51,6 @@ ms.locfileid: "56297330"
   
 ## <a name="see-also"></a>参照  
  [SQL Server のレポート ビルダー](../../reporting-services/report-builder/report-builder-in-sql-server-2016.md)   
- [レポート作成の概念 &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/report-authoring-concepts-report-builder-and-ssrs.md)   
- [レポート ビルダー チュートリアル](../../reporting-services/report-builder-tutorials.md)  
+ [Reporting Services の概念 (SSRS)](../reporting-services-concepts-ssrs.md) [レポート ビルダー チュートリアル](../../reporting-services/report-builder-tutorials.md)  
   
   

@@ -1,24 +1,23 @@
 ---
-title: レッスン 8:アクションの定義 |Microsoft Docs
+title: 'レッスン 8: アクションの定義 |Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: 15459396-83c9-48a0-b10a-99ae38768c79
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 92abf8eb92301af8dd3bf32d5ac5f6a38b1b5481
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 8293bb8d1f0465d09b296cbd18702b569f073766
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53351266"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66078227"
 ---
-# <a name="lesson-8-defining-actions"></a>レッスン 8:アクションを定義します。
+# <a name="lesson-8-defining-actions"></a>レッスン 8: アクションの定義
   このレッスンでは、 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] プロジェクトでアクションを定義する方法を学習します。 アクションは [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] に格納される多次元式 (MDX) ステートメントです。アクションはクライアント アプリケーションに統合することができ、ユーザーによって開始可能です。  
   
 > [!NOTE]  

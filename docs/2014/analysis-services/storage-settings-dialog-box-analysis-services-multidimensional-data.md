@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.cubeeditor.partitiondesigner.partitionstoragesettings.f1
@@ -14,17 +13,17 @@ ms.assetid: 80c41c71-226c-45fe-b9cf-af824b592fe1
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 8e93c341a73d55094624f3930934076f10674bce
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: ecd796d2fb2bc37c4c2ad6d9fac00ef4258ec038
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48063452"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66068029"
 ---
 # <a name="storage-settings-dialog-box-analysis-services---multidimensional-data"></a>[ストレージ設定] ダイアログ ボックス (Analysis Services - 多次元データ)
-  [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] の **[ストレージ設定]** ダイアログ ボックスを使用すると、ディメンション、キューブ、メジャー グループ、およびパーティションのプロアクティブ キャッシュ、ストレージ、および通知設定を指定できます。 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] で **[ストレージ設定]** ダイアログ ボックスを表示するには、次の手順に従います。  
+  **の** [ストレージ設定] [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] ダイアログ ボックスを使用すると、ディメンション、キューブ、メジャー グループ、およびパーティションのプロアクティブ キャッシュ、ストレージ、および通知設定を指定できます。 **で** [ストレージ設定] [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] ダイアログ ボックスを表示するには、次の手順に従います。  
   
--   省略記号ボタンをクリックすると (**.**) の`ProactiveCaching`ディメンション、キューブ、メジャー グループ、またはパーティションのプロパティの値、**プロパティ**のウィンドウ[!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]します。  
+-   省略記号ボタンをクリックすると ( **.** ) の`ProactiveCaching`ディメンション、キューブ、メジャー グループ、またはパーティションのプロパティの値、**プロパティ**のウィンドウ[!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]します。  
   
 -   **キューブ デザイナー** の **[パーティション]** タブでメジャー グループを展開し、 **[ストレージ設定]** をクリックします。  
   

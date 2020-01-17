@@ -20,13 +20,12 @@ helpviewer_keywords:
 ms.assetid: eef24670-059b-4f10-91d4-a67bc1ed12ab
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: 83d1ad7e793e7072345ad0b4ada34162d039ed45
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 86afd9bb2036edb77934f6ae622fafe93bd2d5a4
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56033033"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68111330"
 ---
 # <a name="scopeidentity-transact-sql"></a>SCOPE_IDENTITY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -47,7 +46,7 @@ SCOPE_IDENTITY()
 ## <a name="remarks"></a>Remarks  
  SCOPE_IDENTITY、IDENT_CURRENT、および @@IDENTITY は、ID 列に挿入された値を返すという点で似ています。  
   
- IDENT_CURRENT はスコープとセッションには限定されませんが、特定のテーブルに限定されます。 IDENT_CURRENT では、任意のセッションとスコープ内の特定のテーブルに対して生成された値が返されます。 詳細については、を参照してください。 [IDENT_CURRENT (& a) #40 です。TRANSACT-SQL と #41;](../../t-sql/functions/ident-current-transact-sql.md).  
+ IDENT_CURRENT はスコープとセッションには限定されませんが、特定のテーブルに限定されます。 IDENT_CURRENT では、任意のセッションとスコープ内の特定のテーブルに対して生成された値が返されます。 詳しくは、「[IDENT_CURRENT &#40;Transact-SQL&#41;](../../t-sql/functions/ident-current-transact-sql.md)」をご覧ください。  
   
  SCOPE_IDENTITY と @@IDENTITY では、現在のセッション内の任意のテーブルで生成された最後の ID 値が返されます。 ただし、SCOPE_IDENTITY で返される値は、現在のスコープ内で挿入された値に限られます。@@IDENTITY の場合は、特定のスコープに限定されません。  
   

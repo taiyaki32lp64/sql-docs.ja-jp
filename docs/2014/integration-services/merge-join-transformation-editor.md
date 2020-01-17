@@ -4,23 +4,22 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.mergejointransformation.f1
 helpviewer_keywords:
 - Merge Join Transformation Editor
 ms.assetid: ac06f419-30b3-42aa-8b34-42000bec4285
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 6f6f584d49bfa238a5eda76b18f0dccb59db303f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 118d68d1cacd5035535c6f1ac578542909356c7b
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48186832"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66057707"
 ---
 # <a name="merge-join-transformation-editor"></a>マージ結合変換エディター
   **[マージ結合変換エディター]** ダイアログ ボックスを使用すると、結合の種類、結合列、および結合によって組み合わされた 2 つの入力をマージするための出力列を指定できます。  
@@ -48,10 +47,10 @@ ms.locfileid: "48186832"
  **[出力の別名]**  
  各出力列の別名を入力します。 既定は入力列の名前です。一意のわかりやすい名前を付けることもできます。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [Integration Services のエラーおよびメッセージのリファレンス](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [マージ変換およびマージ結合変換用のデータの並べ替え](data-flow/transformations/sort-data-for-the-merge-and-merge-join-transformations.md)   
- [マージ結合変換を使用してデータセットを拡張します。](data-flow/transformations/extend-a-dataset-by-using-the-merge-join-transformation.md)   
+ [マージ変換およびマージ結合変換用にデータを並べ替える](data-flow/transformations/sort-data-for-the-merge-and-merge-join-transformations.md)   
+ [マージ結合変換を使用してデータセットを拡張する](data-flow/transformations/extend-a-dataset-by-using-the-merge-join-transformation.md)   
  [マージ変換](data-flow/transformations/merge-transformation.md)   
  [全体結合変換](data-flow/transformations/union-all-transformation.md)  
   

@@ -25,13 +25,12 @@ helpviewer_keywords:
 ms.assetid: f2993a28-0b81-46f2-aec0-6877fe990387
 author: julieMSFT
 ms.author: jrasnick
-manager: craigg
-ms.openlocfilehash: 8de6f5ade289780d5f0929af2f5a62e7facfe39b
-ms.sourcegitcommit: 0c1d552b3256e1bd995e3c49e0561589c52c21bf
+ms.openlocfilehash: 02d42e48116e893c6bf7d04c2027762555be06f2
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/14/2018
-ms.locfileid: "53380243"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68091004"
 ---
 # <a name="monitor-resource-usage-system-monitor"></a>リソースの利用状況の監視 (システム モニター)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

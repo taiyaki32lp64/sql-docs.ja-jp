@@ -19,12 +19,12 @@ ms.assetid: 1de2b888-78a6-4fb2-a647-ba4bf097caf3
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: ac8f9e32aac94d7e565b9166102702ba4b747a88
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: a0cfc68f78ae9ca4022abfb59a33d756e82a6f2f
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48189262"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62875670"
 ---
 # <a name="restore-a-transaction-log-backup-sql-server"></a>トランザクション ログ バックアップの復元 (SQL Server)
   このトピックでは、 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] で [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] または [!INCLUDE[tsql](../../includes/tsql-md.md)]を使用して、トランザクション ログ バックアップを復元する方法について説明します。  
@@ -45,7 +45,7 @@ ms.locfileid: "48189262"
   
 -   [関連タスク](#RelatedTasks)  
   
-##  <a name="BeforeYouBegin"></a> 作業を開始する準備  
+##  <a name="BeforeYouBegin"></a> はじめに  
   
 ###  <a name="Prerequisites"></a> 前提条件  
   
@@ -88,7 +88,7 @@ ms.locfileid: "48189262"
   
     -   **[ファイルまたはテープから]**  
   
-         参照ボタン (**[...]**) をクリックし、 **[バックアップ デバイスの選択]** ダイアログ ボックスを開きます。 **[バックアップ メディアの種類]** ボックスから、デバイスの種類を 1 つ選択します。 **[バックアップ メディア]** ボックスにデバイスを追加するには、 **[追加]** をクリックします。  
+         参照ボタン ( **[...]** ) をクリックし、 **[バックアップ デバイスの選択]** ダイアログ ボックスを開きます。 **[バックアップ メディアの種類]** ボックスから、デバイスの種類を 1 つ選択します。 **[バックアップ メディア]** ボックスにデバイスを追加するには、 **[追加]** をクリックします。  
   
          **[バックアップ メディア]** ボックスに目的のデバイスを追加したら、 **[OK]** をクリックして、 **[全般]** ページに戻ります。  
   
@@ -96,11 +96,11 @@ ms.locfileid: "48189262"
   
      次の表は、グリッドの列ヘッダーとその値を示しています。  
   
-    |Header|値|  
+    |[ヘッダー]|値|  
     |------------|-----------|  
-    |**復元**|チェック ボックスをオンにしたバックアップ セットが復元されます。|  
+    |**[復元]**|チェック ボックスをオンにしたバックアップ セットが復元されます。|  
     |**名前**|バックアップ セットの名前。|  
-    |**コンポーネント**|バックアップされるコンポーネント。**[データベース]**、**[ファイル]**、[\<空白>]\(トランザクション ログ用) のいずれかを指定します。|  
+    |**コンポーネント**|バックアップされるコンポーネント:**データベース**、**ファイル**、または\<空白 > (トランザクション ログ用)。|  
     |**[データベース]**|バックアップ操作に関係するデータベース名。|  
     |**[開始日]**|バックアップ操作の開始日時 (クライアントの地域設定に準拠)。|  
     |**完了日**|バックアップ操作の完了日時 (クライアントの地域設定に準拠)。|  
@@ -118,7 +118,7 @@ ms.locfileid: "48189262"
   
     -   **[特定の時点]**  
   
-         既定値 (**[最新の候補]**) をそのまま使用するか、または参照ボタンをクリックして **[特定の時点に復元]** ダイアログ ボックスを開き、特定の日付と時刻を選択します。  
+         既定値 ( **[最新の候補]** ) をそのまま使用するか、または参照ボタンをクリックして **[特定の時点に復元]** ダイアログ ボックスを開き、特定の日付と時刻を選択します。  
   
     -   **[マークされたトランザクション]**  
   
@@ -128,11 +128,11 @@ ms.locfileid: "48189262"
   
          次の表は、グリッドの列ヘッダーとその値を示しています。  
   
-        |Header|値|  
+        |[ヘッダー]|値|  
         |------------|-----------|  
         |\<空白>|マークを選択するためのチェック ボックスを表示します。|  
         |**トランザクション マーク**|トランザクションがコミットされたときにユーザーによって指定された、マークされたトランザクションの名前。|  
-        |**日付**|トランザクションがコミットされた日時。 トランザクションの日付と時刻は、クライアント コンピューターの日付と時刻ではなく、 **msdbgmarkhistory** テーブルに記録されたとおりに表示されます。|  
+        |**Date**|トランザクションがコミットされた日時。 トランザクションの日付と時刻は、クライアント コンピューターの日付と時刻ではなく、 **msdbgmarkhistory** テーブルに記録されたとおりに表示されます。|  
         |**[説明]**|トランザクションがコミットされたときにユーザーが指定したマークされたトランザクションの説明 (該当する場合)。|  
         |**LSN (LSN)**|マークされたトランザクションのログ シーケンス番号。|  
         |**[データベース]**|マークされたトランザクションがコミットされたデータベースの名前。|  
@@ -237,14 +237,14 @@ ms.locfileid: "48189262"
 ###  <a name="TsqlExample"></a> 例 (Transact-SQL)  
  既定では、 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] データベースは単純復旧モデルを使用します。 以下の例では、次に示すように、完全復旧モデルが使用されるようにデータベースを変更する必要があります。  
   
-```tsql  
+```sql  
 ALTER DATABASE AdventureWorks2012 SET RECOVERY FULL;  
 ```  
   
 #### <a name="a-applying-a-single-transaction-log-backup"></a>A. 1 つのトランザクション ログ バックアップの適用  
  次の例では、まず [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] というバックアップ デバイスに存在するデータベースの完全バックアップを使用して `AdventureWorks2012_1`データベースを復元します。 次に、 `AdventureWorks2012_log`というバックアップ デバイスにある最初のトランザクション ログ バックアップを適用します。 最後に、データベースを復旧します。  
   
-```tsql  
+```sql  
 RESTORE DATABASE AdventureWorks2012  
    FROM AdventureWorks2012_1  
    WITH NORECOVERY;  
@@ -262,7 +262,7 @@ GO
 #### <a name="b-applying-multiple-transaction-log-backups"></a>B. 複数のトランザクション ログ バックアップの適用  
  次の例では、まず [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] というバックアップ デバイスに存在するデータベースの完全バックアップを使用して `AdventureWorks2012_1`データベースを復元します。 次に、 `AdventureWorks2012_log`という名前のバックアップ デバイスにある最初の 3 つのトランザクション ログ バックアップを、1 つずつ適用します。 最後に、データベースを復旧します。  
   
-```tsql  
+```sql  
 RESTORE DATABASE AdventureWorks2012  
    FROM AdventureWorks2012_1  
    WITH NORECOVERY;  

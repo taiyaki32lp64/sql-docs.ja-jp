@@ -13,11 +13,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 27748ee6f4c70ebbcb4d1d28738130ddea07232b
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54134402"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68211660"
 ---
 # <a name="create-views"></a>ビューの作成
   [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] では、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] または [!INCLUDE[tsql](../../includes/tsql-md.md)]を使用して、ビューを作成できます。 ビューは、次の目的で使用できます。  
@@ -60,9 +60,9 @@ ms.locfileid: "54134402"
   
 1.  **オブジェクト エクスプローラー**で、新しいビューを作成するデータベースを展開します。  
   
-2.  **[ビュー]** フォルダーを右クリックし、**[新しいビュー]** をクリックします。  
+2.  **[ビュー]** フォルダーを右クリックし、 **[新しいビュー]** をクリックします。  
   
-3.  **テーブルの追加** ダイアログ ボックスで、または、次のタブのいずれかから、新しいビューに含める複数の要素を選択します。テーブル、ビュー、関数、およびシノニム。  
+3.  **[テーブルの追加]** ダイアログ ボックスで、新しいビューに含める 1 つまたは複数の要素を、[テーブル]、[ビュー]、[関数]、および [シノニム] のいずれかのタブから選択します。  
   
 4.  **[追加]** をクリックし、 **[閉じる]** をクリックします。  
   

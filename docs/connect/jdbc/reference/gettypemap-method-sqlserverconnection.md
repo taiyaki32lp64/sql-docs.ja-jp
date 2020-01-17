@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: c81bcf9a-2e24-4dfc-8c04-d612e9b7baca
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: f019041b6e13ea547619645223e6a5d3a3824403
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 9733494af58ef9fe12655281224be5081c72e205
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47834740"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67978502"
 ---
 # <a name="gettypemap-method-sqlserverconnection"></a>getTypeMap メソッド (SQLServerConnection)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -39,13 +38,13 @@ public java.util.Map getTypeMap()
 ```  
   
 ## <a name="return-value"></a>戻り値  
- マップ オブジェクト。  
+ マップオブジェクト。  
   
 ## <a name="exceptions"></a>例外  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- この getTypeMap メソッドは、java.sql.Connection インターフェイスの getTypeMap メソッドによって指定されます。  
+ この getTypeMap メソッドは、java. .sql. 接続インターフェイスの getTypeMap メソッドによって指定されます。  
   
 ## <a name="see-also"></a>参照  
  [SQLServerConnection のメンバー](../../../connect/jdbc/reference/sqlserverconnection-members.md)   

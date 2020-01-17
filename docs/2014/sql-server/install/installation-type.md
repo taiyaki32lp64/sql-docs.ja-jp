@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 ms.assetid: 0420c555-7a3b-42b9-8651-0b4f5bcb0008
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: a2d849a4ce57397e2031b9d347c3e9f7577035fa
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: b8812bba6d87e29ed8a4533bb87e645f42120015
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52539085"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66094290"
 ---
 # <a name="installation-type"></a>インストールの種類
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インストール ウィザードの [インストールの種類] ページを使用して、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]の新しいインスタンスをインストールするか既存のインスタンスに機能を追加するかを指定します。  

@@ -15,11 +15,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 59650edbef55b7bb433c6003c9ddc0f203ca7c5e
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52780694"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63229003"
 ---
 # <a name="index-element-dta"></a>Index 要素 (DTA)
   ユーザー指定の構成のために作成したり削除したりするインデックスの情報が含まれます。  
@@ -45,7 +45,7 @@ ms.locfileid: "52780694"
 |`Online`|`boolean`|任意。 サーバーがオンラインのときに操作を実行できるインデックスを指定します (そのためには、一時ディスク領域が必要になります)。 「true」か「false」のいずれかに設定します。以下はその例です。<br /><br /> `<Index Online="true">`<br /><br /> 既定では、この属性は「false」に設定されます。<br /><br /> 詳しくは、「 [Perform Index Operations Online](../../relational-databases/indexes/perform-index-operations-online.md)」をご覧ください。|  
 |`IndexSizeInMB`|`double`|任意。 インデックスの最大サイズを MB 単位で指定します。以下はその例です。<br /><br /> `<Index IndexSizeInMB="873.75">`<br /><br /> 既定の設定はありません。|  
 |`NumberOfRows`|`integer`|任意。 インデックス サイズを変更した場合のシミュレーションを行います。これにより、異なるテーブル サイズの有効なシミュレーションを行えます。以下はその例です。<br /><br /> `<Index NumberOfRows="3000">`<br /><br /> 既定の設定はありません。|  
-|`QUOTED_IDENTIFIER`|`boolean`|任意。  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] に対して、識別子とリテラル文字列を区切る引用符に関して、ISO 規格に従うことを指定します。 計算列またはビューを対象とするインデックスの場合は、この属性をオンにする必要があります。 たとえば、以下の構文では、この属性をオンに設定しています。<br /><br /> `<Index QUOTED_IDENTIFIER [...]>`<br /><br /> 既定では、この属性はオフに設定されます。<br /><br /> 詳細については、「[SET QUOTED_IDENTIFIER &#40;Transact-SQL&#41;](/sql/t-sql/statements/set-quoted-identifier-transact-sql)」をご覧ください。|  
+|`QUOTED_IDENTIFIER`|`boolean`|任意。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] に対して、識別子とリテラル文字列を区切る引用符に関して、ISO 規格に従うことを指定します。 計算列またはビューを対象とするインデックスの場合は、この属性をオンにする必要があります。 たとえば、以下の構文では、この属性をオンに設定しています。<br /><br /> `<Index QUOTED_IDENTIFIER [...]>`<br /><br /> 既定では、この属性はオフに設定されます。<br /><br /> 詳細については、「[SET QUOTED_IDENTIFIER &#40;Transact-SQL&#41;](/sql/t-sql/statements/set-quoted-identifier-transact-sql)」をご覧ください。|  
 |`ARITHABORT`|`boolean`|任意。 クエリ実行中にオーバーフローまたは 0 除算エラーが発生した場合に、クエリを終了します。 計算列またはビューを対象とするインデックスの場合は、この属性をオンにする必要があります。 たとえば、以下の構文では、この属性をオンに設定しています。<br /><br /> `<Index ARITHABORT [...]>`<br /><br /> 既定では、この属性はオフに設定されます。<br /><br /> 詳細については、「[SET ARITHABORT &#40;Transact-SQL&#41;](/sql/t-sql/statements/set-arithabort-transact-sql)」をご覧ください。|  
 |`CONCAT_NULL_YIELDS_`<br /><br /> `NULL`|`boolean`|任意。 連結の結果を NULL として取り扱うのか、空文字列として取り扱うのかを制御します。 計算列またはビューを対象とするインデックスの場合は、この属性をオンにする必要があります。 たとえば、以下の構文では、この属性をオンに設定しています。<br /><br /> `<Index CONCAT_NULL_YIELDS_NULL [...]>`<br /><br /> 既定では、この属性はオフに設定されます。<br /><br /> 詳細については、「[SET CONCAT_NULL_YIELDS_NULL &#40;Transact-SQL&#41;](/sql/t-sql/statements/set-concat-null-yields-null-transact-sql)」をご覧ください。|  
 |`ANSI_NULLS`|`boolean`|任意。 等号 (=) 比較演算子と不等号 (<>) 比較演算子を NULL 値に対して使用した場合に ISO に準拠した動作をすることを指定します。 計算列またはビューを対象とするインデックスの場合は、この属性をオンにする必要があります。 たとえば、以下の構文では、この属性をオンに設定しています。<br /><br /> `<Index ANSI_NULLS [...]>`<br /><br /> 既定では、この属性はオフに設定されます。<br /><br /> 詳細については、「[SET ANSI_NULLS &#40;Transact-SQL&#41;](/sql/t-sql/statements/set-ansi-nulls-transact-sql)」をご覧ください。|  
@@ -71,7 +71,7 @@ ms.locfileid: "52780694"
 ## <a name="example"></a>例  
  この要素の使用例については、「[ユーザー指定の構成を指定した XML 入力ファイルのサンプル &#40;DTA&#41;](xml-input-file-sample-with-user-specified-configuration-dta.md)」を参照してください。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [XML 入力ファイル リファレンス &#40;データベース エンジン チューニング アドバイザー&#41;](../../relational-databases/performance/database-engine-tuning-advisor.md)  
   
   

@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 ms.assetid: e2358653-35bc-4496-810a-d3ccf02f229f
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: f14a144bcdfbfd65d7ea3e99d9ac03d7b2ee0f1d
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: df28762c61f548b47c4da4a31fe1d1fd42fbf65a
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56294430"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66105507"
 ---
 # <a name="page-layout-and-rendering-report-builder-and-ssrs"></a>ページ レイアウトとレンダリング (レポート ビルダーおよび SSRS)
   ページ レイアウトや改ページなど、表示レポートに思いどおりの体裁を実現するには、 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] レンダラーの動作をよく理解したうえでレポートを作成することが大切です。 また、レンダリングされたレポートが、普段自分や組織が使用している用紙サイズに収まるかどうかを確認することも必要です。  

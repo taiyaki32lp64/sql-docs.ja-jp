@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: 5a3e83c9-8788-431e-85b0-a68c79377ff3
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 7b070366c278576dc976c32305ab542aa92d7708
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: a9b2b248207d19f99aae3b07837d624fb9bb9cf6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48195892"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66079335"
 ---
 # <a name="defining-a-data-source"></a>データ ソースの定義
   [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] プロジェクトを作成した後は、通常、そのプロジェクトで使用するデータ ソースを 1 つ以上定義します。 データ ソースを定義するときは、データ ソースへの接続に使用する接続文字列情報を定義します。 詳細については、「[データ ソースの作成 (SSAS 多次元)](multidimensional-models/create-a-data-source-ssas-multidimensional.md)」を参照してください。  
@@ -43,7 +42,7 @@ ms.locfileid: "48195892"
   
 7.  **[接続テスト]** をクリックして、データベースへの接続をテストします。  
   
-8.  **[OK]** をクリックし、**[次へ]** をクリックします。  
+8.  **[OK]** をクリックし、 **[次へ]** をクリックします。  
   
 9. ウィザードの **[権限借用情報]** ページでは、データ ソースへの接続時に使用する [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] のセキュリティ資格情報を定義します。 権限借用は、Windows 認証が選択されている場合に、データ ソースへの接続に使用される Windows アカウントに関連する機能です。 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] では、OLAP オブジェクトを処理するための権限借用はサポートされていません。 **[サービス アカウントを使用する]** をクリックし、 **[次へ]** をクリックします。  
   
@@ -56,6 +55,6 @@ ms.locfileid: "48195892"
  [データ ソース ビューの定義](lesson-1-3-defining-a-data-source-view.md)  
   
 ## <a name="see-also"></a>参照  
- [データ ソースを作成する&#40;SSAS 多次元&#41;](multidimensional-models/create-a-data-source-ssas-multidimensional.md)  
+ [データ ソースの作成 &#40;SSAS 多次元&#41;](multidimensional-models/create-a-data-source-ssas-multidimensional.md)  
   
   

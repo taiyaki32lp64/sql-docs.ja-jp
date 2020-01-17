@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 95d367efc0bf3fb3e3a74bd0ba9d48b9d8f25be2
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53369844"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63067769"
 ---
 # <a name="sqldescribecol"></a>SQLDescribeCol
   実行されるステートメントを[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native Client ODBC ドライバーは結果セット内の列を示すサーバー クエリを実行する必要はありません。 この場合、`SQLDescribeCol`サーバーとのやり取りは行われません。 ような[SQLColAttribute](sqlnumresultcols.md)を呼び出すと、`SQLDescribeCol`準備されていても実行されていないステートメントには、サーバーとのやり取りが生成されます。  

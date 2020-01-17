@@ -9,13 +9,12 @@ ms.topic: reference
 ms.assetid: f2a04023-ed42-4516-b59c-7a1b8a5395d4
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 38ffe7cf24d202bb78f54af5f1f6f3dab361a0ac
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: cebad908d9177c7dd432c56f8dfa3c15c4e95f66
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47647210"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68127019"
 ---
 # <a name="localdberrorunknownversion"></a>LOCALDB_ERROR_UNKNOWN_VERSION
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

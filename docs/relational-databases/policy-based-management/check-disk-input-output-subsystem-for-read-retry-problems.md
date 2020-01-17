@@ -1,6 +1,7 @@
 ---
-title: ディスク I/O サブシステムの読み取り再試行の問題の確認 | Microsoft Docs
-ms.custom: ''
+title: ディスク IO サブシステムの読み取り再試行問題を確認する - ポリシー ベースの管理
+description: このルールでは、SQL Server エラー メッセージ 825 がないか、イベント ログが確認されます。このメッセージでは、SQL Server では最初の試行でディスクからデータを読み取れなかったことが示されます。
+ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -12,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: cedf4097-5b73-4964-9935-74a101847019
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: 0e673bcd872548214dac72467e27fa6849e8c355
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 0f894452dd056cf0e613100a5d1a7ee2d5e9ae0c
+ms.sourcegitcommit: 035ad9197cb9799852ed705432740ad52e0a256d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51672341"
+ms.lasthandoff: 12/31/2019
+ms.locfileid: "75558193"
 ---
 # <a name="check-disk-input-output-subsystem-for-read-retry-problems"></a>ディスク I/O サブシステムの読み取り再試行の問題の確認
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -38,6 +38,6 @@ ms.locfileid: "51672341"
 ## <a name="for-more-information"></a>詳細情報  
  [MSSQLSERVER_825](../errors-events/mssqlserver-825-database-engine-error.md)  
   
- [SQL Server I/O Basics, Chapter 2](https://go.microsoft.com/fwlink/?linkid=69370)  
+ [SQL Server I/O Basics, Chapter 2](/previous-versions/sql/sql-server-2005/administrator/cc917726(v=technet.10))  
   
   

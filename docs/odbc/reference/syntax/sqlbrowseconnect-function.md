@@ -11,6 +11,7 @@ apiname:
 - SQLBrowseConnect
 apilocation:
 - sqlsrv32.dll
+- odbc32.dll
 apitype: dllExport
 f1_keywords:
 - SQLBrowseConnect
@@ -19,24 +20,23 @@ helpviewer_keywords:
 ms.assetid: b7f1be66-e6c7-4790-88ec-62b7662103c0
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: fe1b9c7d3d93604e2f19de754ff25517ef23cb07
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: 2960c42690a9528763321bc882bb788b437cb66a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53211712"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68036201"
 ---
 # <a name="sqlbrowseconnect-function"></a>SQLBrowseConnect 関数
 **準拠**  
  バージョンが導入されました。ODBC 1.0 規格に準拠します。ODBC  
   
- **まとめ**  
+ **概要**  
  **SQLBrowseConnect**反復的なメソッドを検出して、属性とデータ ソースに接続するために必要な属性の値を列挙するをサポートしています。 呼び出しごとに**SQLBrowseConnect**連続するレベルの属性と属性値を返します。 すべてのレベルが列挙された、データ ソースへの接続が完了し完全な接続文字列が返されます**SQLBrowseConnect**します。 SQL_SUCCESS または SQL_SUCCESS_WITH_INFO リターン コードは、すべての接続情報が指定されており、アプリケーションがデータ ソースに接続されているようになりましたことを示します。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
   
 SQLRETURN SQLBrowseConnect(  
      SQLHDBC         ConnectionHandle,  
@@ -49,7 +49,7 @@ SQLRETURN SQLBrowseConnect(
   
 ## <a name="arguments"></a>引数  
  *ConnectionHandle*  
- [入力]接続ハンドルです。  
+ [入力] 接続ハンドル。  
   
  *InConnectionString*  
  [入力]要求の接続文字列の参照 (を参照してください"*InConnectionString*引数"「コメント」)。  
@@ -222,7 +222,7 @@ SQLRETURN SQLBrowseConnect(
   
  これは、ドライバーは、データ ソースへの接続が必要な情報の最後の部分**SQLBrowseConnect** SQL_SUCCESS を返します、**OutConnectionString*完全な接続文字列が含まれています。  
   
-```  
+```cpp  
 // SQLBrowseConnect_Function.cpp  
 // compile with: odbc32.lib  
 #include <windows.h>  
@@ -284,7 +284,7 @@ int main() {
   
 ## <a name="related-functions"></a>関連する関数  
   
-|詳細|参照先|  
+|詳細|解決方法|  
 |---------------------------|---------|  
 |接続ハンドルの割り当てください。|[SQLAllocHandle 関数](../../../odbc/reference/syntax/sqlallochandle-function.md)|  
 |データ ソースへの接続|[SQLConnect 関数](../../../odbc/reference/syntax/sqlconnect-function.md)|  

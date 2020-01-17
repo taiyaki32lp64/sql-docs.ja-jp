@@ -10,20 +10,23 @@ ms.topic: conceptual
 f1_keywords:
 - sql13.dts.designer.dataminingquery.f1
 ms.assetid: 948e358a-6245-429f-82c7-4cedc5e048fd
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: c0d4295ba75c18ea6b3331317bb38a6fadf26256
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 6ab9374312051ab22aa90c48bfed40713fe4e318
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47811670"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71298317"
 ---
 # <a name="data-mining-query"></a>データ マイニング クエリ
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   デザイン ペインには、データ マイニング予測クエリ ビルダーがあり、これを利用してデータ マイニング予測クエリを作成できます。 予測クエリは、入力テーブルまたはシングルトン予測クエリに基づいてデザインできます。 クエリを実行して結果を表示するには、結果ビューに切り替えます。 クエリ ビューには、予測クエリ ビルダーによって作成されたデータ マイニング拡張機能 (DMX) のクエリが表示されます。  
   
-## <a name="options"></a>[変数]  
+## <a name="options"></a>オプション  
  ビュー切り替えボタン  
  デザイン ペインとクエリ ペインを切り替える場合は、アイコンをクリックします。 既定では、デザイン ペインが開きます。  
   
@@ -64,7 +67,7 @@ ms.locfileid: "47811670"
  列に適用する条件またはユーザー式を指定します。 マイニング モデルを含むテーブルや入力列から列をセルにドラッグできます。  
   
 ## <a name="see-also"></a>参照  
- [データ マイニング クエリ ツール](../../analysis-services/data-mining/data-mining-query-tools.md)   
+ [データ マイニング クエリ ツール](https://docs.microsoft.com/analysis-services/data-mining/data-mining-query-tools)   
  [データ マイニング拡張機能 &#40;DMX&#41; ステートメント リファレンス](../../dmx/data-mining-extensions-dmx-statements.md)  
   
   

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.bidtoolset.datarefreshprogressdb.f1
@@ -13,12 +12,12 @@ ms.assetid: 0918c04c-c1e6-45b4-acfa-96fa578e684b
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 6f87cda5fb38fad586e5272d7d7c3ea255a478b7
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 5de1215bd9646e115c6b2730c4e8a750a3f4040f
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48189771"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66077970"
 ---
 # <a name="manually-process-data-ssas-tabular"></a>データの手動処理 (SSAS テーブル)
   このトピックでは、 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]のワークスペースのデータを手動で処理する方法について説明します。  
@@ -62,7 +61,7 @@ ms.locfileid: "48189771"
 3.  [パーティション] リストで処理するパーティションを選択し、 **[OK]** をクリックします。  
   
 ##  <a name="bkmk_data_process_progress"></a> データ処理の進行状況  
- **[データ処理の進行状況]** ダイアログ ボックスを使用すると、外部ソースからモデルにインポートしたデータの処理を監視できます。 このダイアログ ボックスにアクセスするには、 **[モデル]** メニューの **[パーティションの処理]**、 **[テーブルの処理]** 、または **[すべて処理]** をクリックします。  
+ **[データ処理の進行状況]** ダイアログ ボックスを使用すると、外部ソースからモデルにインポートしたデータの処理を監視できます。 このダイアログ ボックスにアクセスするには、 **[モデル]** メニューの **[パーティションの処理]** 、 **[テーブルの処理]** 、または **[すべて処理]** をクリックします。  
   
  **ステータス**  
  処理の操作が正常に行われたかどうかを示します。  
@@ -74,7 +73,7 @@ ms.locfileid: "48189771"
  処理の操作を停止します。 このオプションは、操作に時間がかかりすぎる場合や、エラーが多すぎる場合に有効です。  
   
 ## <a name="see-also"></a>参照  
- [データ処理&#40;SSAS 表形式&#41;](process-data-ssas-tabular.md)   
- [データの処理のトラブルシューティングを行う&#40;SSAS 表形式&#41;](troubleshoot-process-data-ssas-tabular.md)  
+ [データの処理 (SSAS テーブル)](process-data-ssas-tabular.md)   
+ [データの処理のトラブルシューティング (SSAS テーブル)](troubleshoot-process-data-ssas-tabular.md)  
   
   

@@ -1,110 +1,107 @@
 ---
-title: デプロイ クイック スタート
-titleSuffix: SQL Server 2019 big data clusters
-description: SQL Server 2019 ビッグ データ クラスター (プレビュー) Azure Kubernetes Service (AKS) でのデプロイのチュートリアルです。
-author: rothja
-ms.author: jroth
-manager: craigg
-ms.date: 02/28/2019
-ms.topic: quickstart
+title: Python スクリプトを使用した展開
+titleSuffix: SQL Server Big Data Clusters
+description: 展開スクリプトを使用して SQL Server ビッグ データ クラスターを Azure Kubernetes Service (AKS) に展開する方法について説明します。
+author: MikeRayMSFT
+ms.author: mikeray
+ms.reviewer: mihaelab
+ms.date: 11/04/2019
+ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.custom: seodec18
-ms.openlocfilehash: d3567b3bc82a97c831abac252bebd0c523ed3fac
-ms.sourcegitcommit: 56fb7b648adae2c7b81bd969de067af1a2b54180
-ms.translationtype: MT
+ms.openlocfilehash: 1b2a838f8ad386b8a236304401308d5be0f63ff1
+ms.sourcegitcommit: b4ad3182aa99f9cbfd15f4c3f910317d6128a2e5
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/02/2019
-ms.locfileid: "57227115"
+ms.lasthandoff: 11/06/2019
+ms.locfileid: "73706348"
 ---
-# <a name="quickstart-deploy-sql-server-big-data-cluster-on-azure-kubernetes-service-aks"></a>クイック スタート: SQL Server のビッグ データ クラスター Azure Kubernetes Service (AKS) でのデプロイします。
+# <a name="use-a-python-script-to-deploy-a-sql-server-big-data-cluster-on-azure-kubernetes-service-aks"></a>Python スクリプトを使用して SQL Server ビッグ データ クラスターを Azure Kubernetes Service (AKS) に展開する
 
-このクイック スタートでは、サンプル デプロイ スクリプトを使用して Azure Kubernetes Service (AKS) を SQL Server 2019 ビッグ データ クラスター (プレビュー) をデプロイします。 
+[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
+
+このチュートリアルでは、サンプルの python 展開スクリプトを使用して、[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]を Azure Kubernetes Service (AKS) に展開します。
 
 > [!TIP]
-> AKS は、ビッグ データ クラスターの Kubernetes をホストするためのオプションを 1 つだけです。 オプションの展開をカスタマイズする方法についても、その他の展開オプションについては、次を参照してください。[ビッグ データの SQL Server をデプロイする方法を Kubernetes クラスターの](deployment-guidance.md)します。
+> AKS は、ビッグ データ クラスター用の Kubernetes をホストするための選択肢の 1 つにすぎません。 その他の展開オプションと、展開オプションをカスタマイズする方法の詳細については、「[Kubernetes に [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]を展開する方法](deployment-guidance.md)」を参照してください。
 
-ここで使用する既定のビッグ データ クラスター展開は、SQL のマスター インスタンス、プールのインスタンスを 1 つのコンピューティング、2 つのデータ プール インスタンス、および記憶域プールの 2 つのインスタンスで構成されます。 AKS の既定のストレージ クラスを使用する Kubernetes 永続ボリュームを使用してデータが保持されます。 このクイック スタートで使用される既定の構成は、開発/テスト環境に適しています。
+ここで使用される既定のビッグ データ クラスターの展開は、1 つの SQL マスター インスタンス、1 つのコンピューティング プール インスタンス、2 つのデータ プール インスタンス、2 つの記憶域プール インスタンスで構成されています。 データは、AKS の既定の記憶域クラスを使用する Kubernetes 永続ボリュームを使用して永続化されます。 このチュートリアルで使用する既定の構成は、開発/テスト環境に適しています。
 
-[!INCLUDE [Limited public preview note](../includes/big-data-cluster-preview-note.md)]
-
-## <a name="prerequisites"></a>前提条件
+## <a name="prerequisites"></a>Prerequisites
 
 - Azure サブスクリプション。
 - [ビッグ データ ツール](deploy-big-data-tools.md):
-   - **mssqlctl**
+   - **azdata**
    - **kubectl**
    - **Azure Data Studio**
    - **SQL Server 2019 の拡張機能**
    - **Azure CLI**
 
-## <a name="log-in-to-your-azure-account"></a>Azure アカウントにログインします。
+## <a name="log-in-to-your-azure-account"></a>Azure アカウントにログインする
 
-スクリプトでは、Azure CLI を使用して AKS クラスターの作成を自動化します。 スクリプトを実行する前にログインして Azure CLI を使用した Azure アカウントに少なくとも 1 回。 コマンド プロンプトから次のコマンドを実行します。
+このスクリプトでは、AKS クラスターの作成を自動化するために Azure CLI を使用します。 スクリプトを実行する前に、少なくとも 1 回は Azure CLI を使用して Azure アカウントにログインする必要があります。 コマンド プロンプトで次のコマンドを実行します。
 
 ```
 az login
 ```
 
-## <a name="download-the-deployment-script"></a>配置スクリプトをダウンロードします。
+## <a name="download-the-deployment-script"></a>展開スクリプトをダウンロードする
 
-このクイック スタートは、python スクリプトを使用して AKS でのビッグ データ クラスターの作成を自動化**展開-sql-ビッグ-データ-aks.py**します。 用の python が既にインストールされている場合**mssqlctl**、このクイック スタートでは、スクリプトが正常に実行できる必要があります。 
+このチュートリアルでは、python スクリプト **deploy-sql-big-data-aks.py** を使用して AKS 上のビッグ データ クラスターの作成を自動化します。 **azdata** 用に python を既にインストールしている場合は、このチュートリアルのスクリプトを正常に実行できます。 
 
-Windows PowerShell または Linux の bash プロンプトには、GitHub からデプロイ スクリプトをダウンロードするには、次のコマンドを実行します。
+Windows PowerShell または Linux bash プロンプトで、次のコマンドを実行して、GitHub から展開スクリプトをダウンロードします。
 
 ```
 curl -o deploy-sql-big-data-aks.py "https://raw.githubusercontent.com/Microsoft/sql-server-samples/master/samples/features/sql-big-data-cluster/deployment/aks/deploy-sql-big-data-aks.py"
 ```
 
-## <a name="run-the-deployment-script"></a>デプロイメント スクリプトを実行します。
+## <a name="run-the-deployment-script"></a>展開スクリプトを実行する
 
-次の手順を使用して、デプロイ スクリプトを実行します。 このスクリプトは Azure での AKS サービスを作成し、AKS の SQL Server 2019 のビッグ データ クラスターをデプロイします。 他のスクリプトを変更することもできます。[環境変数](deployment-guidance.md#env)カスタムの展開を作成します。
+展開スクリプトを実行するには、次の手順を実行します。 このスクリプトによって、Azure に AKS サービスを作成され、AKS に SQL Server 2019 ビッグ データ クラスターが展開されます。 他の[環境変数](deployment-guidance.md#configfile)を使用してスクリプトを変更して、カスタムの展開を作成することもできます。
 
-1. 次のコマンドを使用して、スクリプトを実行します。
+1. 次のコマンドを使用してこのスクリプトを実行します。
 
    ```
    python deploy-sql-big-data-aks.py
    ```
 
    > [!NOTE]
-   > Python3 を使用してコマンドを実行する必要がある場合 python3 と python2 パスとクライアント コンピューターで、:`python3 deploy-sql-big-data-aks.py`します。
+   > クライアント マシンとパスに python3 と python2 の両方がある場合は、python3 を使用してコマンド `python3 deploy-sql-big-data-aks.py` を実行する必要があります。
 
-1. 入力を求められたら、次の情報を入力します。
+1. プロンプトが表示されたら、次の情報を入力します。
 
-   | 値 | 説明 |
+   | [値] | [説明] |
    |---|---|
-   | **Azure サブスクリプション ID** | AKS を使用する Azure サブスクリプション ID。 実行して、すべてのサブスクリプションとその Id を一覧表示できます`az account list`から別のコマンドライン。 |
-   | **Azure リソース グループ** | AKS クラスターを作成する Azure リソース グループ名。 |
-   | **Docker のユーザー名** | 限定パブリック プレビューの一部として提供されている Docker のユーザー名。 |
-   | **Docker のパスワード** | 限定パブリック プレビューの一部として提供されている Docker のパスワードです。 |
-   | **Azure リージョン** | 新しい AKS クラスターの Azure リージョン (既定**westus**)。 |
-   | **マシンのサイズ** | [マシンのサイズ](https://docs.microsoft.com/azure/virtual-machines/windows/sizes)AKS クラスター内のノードを使用する (既定**Standard_L4s**)。 |
-   | **ワーカー ノード** | AKS クラスター内の worker ノードの数 (既定**3**)。 |
-   | **クラスター名** | AKS クラスターとビッグ データ クラスターの両方の名前。 クラスターの名前は、小文字の英数字文字のみとスペースなしである必要があります。 (既定**sqlbigdata**)。 |
-   | **Password** | コント ローラー、HDFS/Spark ゲートウェイ、およびマスター インスタンスのパスワード (デフォルト**MySQLBigData2019**)。 |
-   | **コント ローラーのユーザー** | コント ローラーのユーザーのユーザー名 (既定:**管理者**)。 |
+   | **[Azure subscription ID]\(Azure サブスクリプション ID\)** | AKS に使用する Azure サブスクリプション ID。 別のコマンド ラインから `az account list` を実行して、すべてのサブスクリプションとその ID を一覧表示できます。 |
+   | **[Azure resource group]\(Azure リソース グループ\)** | AKS クラスター用に作成する Azure リソース グループの名前。 |
+   | **[Azure region]\(Azure リージョン\)** | 新しい AKS クラスター用の Azure リージョン (既定値は **westus**)。 |
+   | **[Machine size]\(マシン サイズ\)** | AKS クラスター内のノードに使用する[マシン サイズ](https://docs.microsoft.com/azure/virtual-machines/windows/sizes) (既定値は **Standard_L8s**)。 |
+   | **[Worker nodes]\(ワーカー ノード\)** | AKS クラスター内のワーカー ノードの数 (既定値は **1**)。 |
+   | **[Cluster name]\(クラスター名\)** | AKS クラスターとビッグ データ クラスターの両方の名前。 ビッグ データ クラスターの名前は、小文字の英数字のみを使用し、スペースを含めない必要があります (既定値は **sqlbigdata**)。 |
+   | **パスワード** | コントローラー、HDFS/Spark ゲートウェイ、およびマスター インスタンスのパスワード (既定値は **MySQLBigData2019**)。 |
+   | **ユーザー名** | コントローラー ユーザーのユーザー名 (既定値: **admin**)。 |
 
    > [!IMPORTANT]
-   > 既定の**Standard_L4s**マシンのサイズはすべての Azure リージョンでは使用できません。 別のマシン サイズを選択した場合、クラスター内のノード間で接続できるディスクの合計数が 24 以上であることを確認します。 クラスター内各永続ボリューム要求は、接続されたディスクが必要です。 現時点では、ビッグ データ クラスターには、24 の永続ボリューム要求が必要です。 たとえば、 [Standard_L4s](https://docs.microsoft.com/azure/virtual-machines/windows/sizes-storage#ls-series)マシンのサイズは、3 つのノードでは、48 のディスクを接続できることを意味するため、16 の接続されたディスクをサポートしています。
+   > 既定の **Standard_L8s** マシン サイズは、すべての Azure リージョンで使用できるとは限りません。 別のマシン サイズを選択する場合は、クラスター内のノード間で接続できるディスクの合計数が 24 以上であることを確認します。 クラスター内の各永続ボリューム要求には、接続されたディスクが必要です。 現在、ビッグ データ クラスターには 24 個の永続的なボリューム要求が必要です。 たとえば、[Standard_L8s](https://docs.microsoft.com/azure/virtual-machines/windows/sizes-storage#lsv2-series) マシン サイズでは、32 個の接続ディスクがサポートされているため、このマシン サイズの 1 つのノードでビッグ データ クラスターを評価することができます。
 
    > [!NOTE]
-   > `sa`アカウントは、システム管理者は、セットアップ時に作成される SQL Server のマスター インスタンス。 展開を作成した後、`MSSQL_SA_PASSWORD`を実行して環境変数が探索可能な`echo $MSSQL_SA_PASSWORD`マスター インスタンス コンテナーにします。 セキュリティのため、変更、`sa`デプロイ後に、マスター インスタンス上のパスワード。 詳細については、次を参照してください。 [SA パスワードの変更](../linux/quickstart-install-connect-docker.md#sapassword)します。
+   > SQL Server の `sa` アカウントは、ビッグ データ クラスターの展開の間に無効になります。 SQL Server のマスター インスタンスに、 **[ユーザー名]** 入力で指定したものと同じ名前と **[パスワード]** 入力に対応するパスワードで、新しい sysadmin ログインがプロビジョニングされます。 コントローラー管理者ユーザーのプロビジョニングにも、同じ**ユーザー名**と**パスワード**の値が使用されます。 ゲートウェイ (Knox) に対してサポートされているユーザーのみが**ルート**であり、パスワードは上記と同じです。
 
-1. 指定したパラメーターを使用して AKS クラスターを作成して、スクリプトが開始されます。 この手順では、数分をかかります。
+1. スクリプトを開始するには、指定したパラメーターを使用して AKS クラスターを作成します。 この手順には数分かかります。
 
    <img src="./media/quickstart-big-data-cluster-deploy/script-parameters.png" width="800px" alt="Script parameters and AKS cluster creation"/>
 
-## <a name="monitor-the-status"></a>状態を監視します
+## <a name="monitor-the-status"></a>状態を監視する
 
-スクリプトでは、AKS クラスターを作成する前に指定した設定で必要な環境変数の設定に進みます。 呼び出して**mssqlctl** AKS でのビッグ データ クラスターをデプロイします。
+スクリプトによって AKS クラスターが作成されると、前に指定した設定で必要な環境変数の設定に進みます。 次に、**azdata** が呼び出され、AKS にビッグ データ クラスターが展開されます。
 
-クライアントのコマンド ウィンドウでは、デプロイの状態を出力します。 展開プロセス中には、コント ローラーのポッドの待機中は、一連のメッセージ表示されます。
+クライアント コマンド ウィンドウに、展開の状態が出力されます。 展開プロセス中に、コントローラー ポッドを待機している一連のメッセージが表示されます。
 
 ```output
 2018-11-15 15:42:02.0209 UTC | INFO | Waiting for controller pod to be up...
 ```
 
-10 ~ 20 分後に、コント ローラーのポッドが実行されていることが通知する必要があります。
+10 から 20 分後に、コントローラー ポッドが実行中になっていることが通知されるはずです。
 
 ```output
 2018-11-15 15:50:50.0300 UTC | INFO | Controller pod is running.
@@ -112,85 +109,75 @@ curl -o deploy-sql-big-data-aks.py "https://raw.githubusercontent.com/Microsoft/
 ```
 
 > [!IMPORTANT]
-> デプロイ全体のビッグ データ クラスター コンポーネントのコンテナー イメージをダウンロードするために必要な時間のため時間がかかることができます。 ただし、いくつかの時間はなりません。 デプロイに関する問題が発生する場合を参照してください、[展開のトラブルシューティング](deployment-guidance.md#troubleshoot)展開ガイダンスの記事のセクション。
+> ビッグ データ クラスターのコンポーネントに対応するコンテナー イメージのダウンロードに必要な時間によって、展開全体に時間がかかる場合があります。 ただし、数時間もかかることはありません。 展開時に問題が発生した場合は、「[[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]の監視とトラブルシューティング](cluster-troubleshooting-commands.md)」を参照してください。
 
-## <a name="inspect-the-cluster"></a>クラスターを検査します。
+## <a name="inspect-the-cluster"></a>クラスターを検査する
 
-デプロイ中にいつでも状態と、実行されているビッグ データ クラスターに関する詳細を検査するのにには、kubectl またはクラスターの管理ポータルを使用できます。
+展開中はいつでも、**kubectl** または **azdata** を使用して、実行中のビッグ データ クラスターの状態と詳細を調べることができます。
 
-### <a name="use-kubectl"></a>Kubectl を使用します。
+### <a name="use-kubectl"></a>kubectl を使用する
 
-使用して、新しいコマンド ウィンドウを開いて**kubectl**展開プロセス中にします。
+新しいコマンド ウィンドウを開いて、展開プロセス中に **kubectl** を使用します。
 
-1. クラスター全体の状態の概要を取得する次のコマンドを実行します。
-
-   ```
-   kubectl get all -n <your-cluster-name>
-   ```
-
-1. Kubernetes サービスと、次に、内部および外部エンドポイントを検査**kubectl**コマンド。
+1. 次のコマンドを実行して、クラスター全体の状態の概要を取得します。
 
    ```
-   kubectl get svc -n <your-cluster-name>
+   kubectl get all -n <your-big-data-cluster-name>
    ```
 
-1. 次のコマンドを使用して kubernetes ポッドの状態を調べることもできます。
+   > [!TIP]
+   > ビッグ データ クラスター名を変更しなかった場合、スクリプトにより、既定で **sqlbigdata** に設定されます。
+
+1. 次の **kubectl** コマンドを使用して、kubernetes サービスとその内部および外部エンドポイントを調べます。
 
    ```
-   kubectl get pods -n <your-cluster-name>
+   kubectl get svc -n <your-big-data-cluster-name>
    ```
 
-1. 次のコマンドで特定のポッドの詳細を確認します。
+1. 次のコマンドを使用して、kubernetes ポッドの状態を調べることもできます。
 
    ```
-   kubectl describe pod <pod name> -n <your-cluster-name>
+   kubectl get pods -n <your-big-data-cluster-name>
+   ```
+
+1. 次のコマンドを使用して、特定のポッドに関する詳細情報を確認します。
+
+   ```
+   kubectl describe pod <pod name> -n <your-big-data-cluster-name>
    ```
 
 > [!TIP]
-> 監視し、デプロイのトラブルシューティング方法の詳細については、次を参照してください。、[展開のトラブルシューティング](deployment-guidance.md#troubleshoot)展開ガイダンスの記事のセクション。
+> 展開の監視とトラブルシューティングの方法の詳細については、「[[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]の監視とトラブルシューティング](cluster-troubleshooting-commands.md)」を参照してください。
 
-### <a name="use-the-cluster-administration-portal"></a>クラスターの管理ポータルを使用してください。
+## <a name="connect-to-the-cluster"></a>クラスターに接続する
 
-コント ローラーのポッドが実行されている場合は、展開の監視、クラスターの管理ポータルを使用することもできます。 外部 IP アドレスとポート番号を使用してポータルにアクセスすることができます、 `endpoint-service-proxy` (例: **https://\<ip アドレス\>: 30777/ポータル**)。 ポータルにログインするために使用する資格情報の値と一致する**コント ローラーのユーザー**と**パスワード**配置スクリプトで指定されています。
-
-IP アドレスを取得することができます、**エンドポイント サービスのプロキシ**bash または cmd ウィンドウでこのコマンドを実行してサービス。
-
-```bash
-kubectl get svc endpoint-service-proxy -n <your-cluster-name>
-```
-
-> [!NOTE]
-> CTP 2.3 以降で表示されますセキュリティの警告を web ページにアクセスするときにビッグ データ クラスターが現在自動生成された SSL 証明書を使用しているためです。
-
-## <a name="connect-to-the-cluster"></a>クラスターに接続します。
-
-配置スクリプトが完了したらは、成功の出力が通知されます。
+展開スクリプトが完了すると、出力に成功したことが通知されます。
 
 ```output
 2018-11-15 16:10:25.0583 UTC | INFO | Cluster state: Ready
 2018-11-15 16:10:25.0583 UTC | INFO | Cluster deployed successfully.
 ```
 
-SQL Server は、ビッグ データ クラスターが AKS にデプロイします。 クラスターに接続する Azure Data Studio を使用できます。 詳細については、次を参照してください。 [Azure データ Studio を使用した SQL Server クラスターのビッグ データへの接続](connect-to-big-data-cluster.md)します。
+SQL Server ビッグ データ クラスターが AKS に展開されるようになりました。 これで、Azure Data Studio を使用してクラスターに接続できるようになりました。 詳細については、「[Azure Data Studio を使用して SQL Server ビッグ データ クラスターに接続する](connect-to-big-data-cluster.md)」を参照してください。
 
-## <a name="clean-up"></a>クリーンアップします。
+## <a name="clean-up"></a>クリーンアップ
 
-ビッグ データの SQL Server クラスターを Azure でテストする場合は、予期しない課金を回避するために完了すると、AKS クラスターを削除する必要があります。 使用を継続する場合は、クラスターを削除しないでください。
+Azure で [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]をテストしている場合は、予期しない料金が発生しないように、完了時に AKS クラスターを削除するようにします。 クラスターを引き続き使用する場合は、削除しないでください。
 
 > [!WARNING]
-> 次の手順も、SQL Server ビッグ データ クラスターが削除され、AKS クラスターを廃棄します。 任意のデータベースまたは保持する HDFS データがある場合は、クラスターを削除する前にそのデータをバックアップします。
+> 次の手順では、AKS クラスターを破棄します。これにより、SQL Server ビッグ データ クラスターも削除されます。 保持するデータベースまたは HDFS データがある場合は、そのデータをバックアップしてからクラスターを削除してください。
 
-Azure でビッグ データ クラスターおよび AKS サービスを削除する次の Azure CLI コマンドを実行します (置換`<resource group name>`で、 **Azure リソース グループ**配置スクリプトで指定した)。
+次の Azure CLI コマンドを実行して、Azure のビッグ データ クラスターと AKS サービスを削除します (`<resource group name>` は、展開スクリプトで指定した **Azure リソース グループ**に置き換えます)。
 
 ```azurecli
 az group delete -n <resource group name>
 ```
 
-## <a name="next-steps"></a>次のステップ
+## <a name="next-steps"></a>次の手順
 
-配置スクリプトでは、Azure Kubernetes サービスが構成されているし、SQL Server 2019 のビッグ データ クラスターをデプロイすることもできます。 手動によるインストールを将来のデプロイをカスタマイズすることもできます。 どのビッグ データについてクラスターは、デプロイおよびデプロイをカスタマイズする方法については、次を参照してください。[ビッグ データの SQL Server をデプロイする方法を Kubernetes クラスターの](deployment-guidance.md)します。
+展開スクリプトで Azure Kubernetes サービスを構成し、SQL Server 2019 ビッグ データ クラスターも展開しました。 また、手動インストールを使用して、今後の展開をカスタマイズすることもできます。 ビッグ データ クラスターの展開方法と展開をカスタマイズする方法の詳細については、「[Kubernetes に [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]を展開する方法](deployment-guidance.md)」を参照してください。
 
-これで、SQL Server のビッグ データ クラスターをデプロイすると、サンプル データを読み込むし、チュートリアルの確認できます。
+SQL Server ビッグ データ クラスターが展開されたので、サンプル データを読み込んでチュートリアルを調べることができます。
 
 > [!div class="nextstepaction"]
-> [チュートリアル: SQL Server 2019 のビッグ データ クラスターにサンプル データを読み込む](tutorial-load-sample-data.md)
+> [チュートリアル: SQL Server 2019 ビッグ データ クラスターにサンプル データを読み込む](tutorial-load-sample-data.md)

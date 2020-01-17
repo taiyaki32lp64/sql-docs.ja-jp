@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - AggregationPerfLog property
@@ -96,12 +95,12 @@ ms.assetid: 06eb0d78-96c0-42ff-b759-f4c794597c8d
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: e89743de546afbc331259dbe3ff18a0344a4e420
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 4b26323f99d0b31cdb31e12b64eabdd2a855d907
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48122142"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66068870"
 ---
 # <a name="olap-properties"></a>OLAP のプロパティ
   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] では、次の表に示す OLAP サーバー プロパティがサポートされています。 その他のサーバー プロパティとその設定方法の詳細については、「 [Configure Server Properties in Analysis Services](server-properties-in-analysis-services.md)」を参照してください。  
@@ -130,7 +129,7 @@ ms.locfileid: "48122142"
  `DefaultPageSizeForProp`  
  詳細プロパティです。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] サポートの指示がない限り、変更しないでください。  
   
-## <a name="lazyprocessing"></a>レイジー処理  
+## <a name="lazyprocessing"></a>LazyProcessing  
  `Enabled`  
  レイジー集計処理が有効かどうかを示すブール型プロパティです。  
   
@@ -187,7 +186,7 @@ ms.locfileid: "48122142"
  `OptimizeSchema`  
  詳細プロパティです。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] サポートの指示がない限り、変更しないでください。  
   
-## <a name="proactivecaching"></a>プロアクティブ キャッシュ  
+## <a name="proactivecaching"></a>ProactiveCaching  
  `DefaultRefreshInterval`  
  詳細プロパティです。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] サポートの指示がない限り、変更しないでください。  
   
@@ -197,7 +196,7 @@ ms.locfileid: "48122142"
  `PartitionLatencyAccuracy`  
  詳細プロパティです。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] サポートの指示がない限り、変更しないでください。  
   
-## <a name="process"></a>Process  
+## <a name="process"></a>[処理]  
  `AggregationMemoryLimitMax`  
  集計処理に充てることができるメモリの最大量を定義する、符号付き 64 ビット倍精度浮動小数点数のプロパティです。物理メモリの比率として表されます。  
   

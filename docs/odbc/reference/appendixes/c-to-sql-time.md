@@ -14,15 +14,14 @@ helpviewer_keywords:
 ms.assetid: a8da43c9-d9a5-45e5-bd9a-1dd633db2ee0
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 7ea11803847505698ea42d13727b6177f3a24bda
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: c4a3734ff8d9f0cb120e1d33433ee3a301bb59ae
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47606180"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68019303"
 ---
-# <a name="c-to-sql-time"></a>C から SQL へ: 時刻
+# <a name="c-to-sql-time"></a>C から SQL へ: Time
 時間の ODBC C データ型の識別子を示します。  
   
  SQL_C_TYPE_TIME  

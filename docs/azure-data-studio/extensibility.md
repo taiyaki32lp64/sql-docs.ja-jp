@@ -1,64 +1,63 @@
 ---
-title: 拡張機能を通じて追加の機能を追加します。
+title: 拡張性によるさらなる機能の追加
 titleSuffix: Azure Data Studio
-description: 機能拡張モデルと Azure Data Studio の機能を拡張するための重要な拡張機能領域について説明します
-ms.custom: seodec18
-ms.date: 09/24/2018
-ms.reviewer: alayu; sstein
+description: Azure Data Studio の機能を拡張するための拡張性モデルと主要な拡張性の領域について説明します
 ms.prod: sql
 ms.technology: azure-data-studio
 ms.topic: conceptual
-author: stevestein
-ms.author: sstein
-manager: craigg
-ms.openlocfilehash: b595a353859ed7d69ccb6ad61ef6e5dc2a7073f3
-ms.sourcegitcommit: 189a28785075cd7018c98e9625c69225a7ae0777
-ms.translationtype: MT
+author: markingmyname
+ms.author: maghan
+ms.reviewer: alayu; sstein
+ms.custom: seodec18
+ms.date: 09/24/2018
+ms.openlocfilehash: 20158894567c1452a8d605f5cec84354654c5e96
+ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53030016"
+ms.lasthandoff: 07/25/2019
+ms.locfileid: "67959596"
 ---
-# <a name="getting-started-with-includename-sosincludesname-sos-shortmd-extensibility"></a>概要[!INCLUDE[name-sos](../includes/name-sos-short.md)]機能拡張
+# <a name="getting-started-with-includename-sosincludesname-sos-shortmd-extensibility"></a>[!INCLUDE[name-sos](../includes/name-sos-short.md)] の拡張性の概要
 
-[!INCLUDE[name-sos](../includes/name-sos.md)] ユーザー エクスペリエンスをカスタマイズし、これらのカスタマイズを全体のユーザー コミュニティを利用できるようにするいくつかの機能拡張メカニズムがあります。 コア[!INCLUDE[name-sos](../includes/name-sos.md)]プラットフォームの作成対象 Visual Studio Code、Visual Studio Code 拡張 Api のほとんどが使用できるようにします。 さらに、データの管理に固有のアクティビティの追加の機能拡張ポイントを用意されていますしました。
+[!INCLUDE[name-sos](../includes/name-sos.md)] には、ユーザー エクスペリエンスをカスタマイズし、それらのカスタマイズ結果をユーザー コミュニティ全体で利用できるようにするいくつかの拡張性メカニズムがあります。 [!INCLUDE[name-sos](../includes/name-sos.md)] のコア プラットフォームは Visual Studio Code 上に構築されているため、Visual Studio Code の拡張 API のほとんどが利用できます。 さらに、データ管理に固有のアクティビティに対して追加の拡張性ポイントを提供しました。
 
-主要な拡張ポイントを次に示します。
+主要な拡張性のポイントを次に示します。
 
-- Visual Studio Code 拡張 Api
-- Azure の Data Studio 拡張機能作成ツール
-- 管理ダッシュ ボード タブのパネルの投稿
-- アクションのエクスペリエンスを備えた insights
-- Azure Data Studio 機能拡張 Api
-- カスタム データ プロバイダーの Api
+- Visual Studio Code の拡張 API
+- Azure Data Studio 拡張機能作成ツール
+- [ダッシュボード] タブ パネルのコントリビューションを管理する
+- アクション エクスペリエンスでの分析情報
+- Azure Data Studio 拡張 API
+- カスタム データ プロバイダー API
 
-## <a name="visual-studio-code-extensibility-apis"></a>Visual Studio Code 拡張 Api
+## <a name="visual-studio-code-extensibility-apis"></a>Visual Studio Code の拡張 API
 
-コア[!INCLUDE[name-sos](../includes/name-sos.md)]プラットフォームが Visual Studio Code に基づいて構築されていますが、Visual Studio Code 拡張機能 Api に関する詳細が記載、[拡張機能作成](https://code.visualstudio.com/docs/extensions/overview)と[拡張機能 API](https://code.visualstudio.com/docs/extensionAPI/overview)Visual Studio Code の web サイトに関するドキュメントです。
+[!INCLUDE[name-sos](../includes/name-sos.md)] のコア プラットフォームは Visual Studio Code に基づいて構築されているため、Visual Studio Code 拡張 API の詳細については、Visual Studio Code の Web サイトにある[拡張機能の作成](https://code.visualstudio.com/docs/extensions/overview)と[拡張 API](https://code.visualstudio.com/docs/extensionAPI/overview) に関するドキュメントを参照してください。
 
-## <a name="manage-dashboard-tab-panel-contributions"></a>管理ダッシュ ボード タブのパネルの投稿
+## <a name="manage-dashboard-tab-panel-contributions"></a>[ダッシュボード] タブ パネルのコントリビューションを管理する
 
-詳細については、次を参照してください。[貢献ポイント](#contribution-points)と[コンテキスト変数](#context-variables)します。
+詳細については、「[貢献ポイント](#contribution-points)」と「[コンテキスト変数](#context-variables)」を参照してください。
 
-## <a name="azure-data-studio-extensibility-apis"></a>Azure Data Studio 機能拡張 Api
+## <a name="azure-data-studio-extensibility-apis"></a>Azure Data Studio 拡張 API
 
-詳細については、次を参照してください。[拡張性 Api](extensibility-apis.md)します。
+詳細については、[拡張 API](extensibility-apis.md) に関するページを参照してください。
 
 
-## <a name="contribution-points"></a>貢献ポイント
+## <a name="contribution-points"></a>コントリビューション ポイント
 
-このセクションでは、package.json の拡張機能マニフェストで定義されているさまざまなコントリビューション ポイントについて説明します。
+このセクションでは、package.json 拡張機能マニフェストで定義されているさまざまなコントリビューション ポイントについて説明します。
 
-IntelliSense は azuredatastudio 内でサポートされています。
+IntelliSense は、azuredatastudio 内でサポートされています。
 
-## <a name="contributes-dashboard"></a>ダッシュ ボードを貢献します。
+## <a name="contributes-dashboard"></a>ダッシュボードへの提供
 
-タブ、コンテナー、ダッシュ ボードに insight ウィジェットを投稿します。
+タブ、コンテナー、分析情報ウィジェットをダッシュボードに提供します。
 
 ![ダッシュボード](media/extensibility/dashboard-page.png)
 
 `dashboard.tabs`
 
-Dashboard.tabs では、タブ セクションでは、ダッシュ ボード ページ内で作成します。 オブジェクトまたはオブジェクトの配列が期待しています。  
+Dashboard.tabs では、ダッシュボード ページ内にタブ セクションが作成されます。 これには、オブジェクトまたはオブジェクトの配列が必要です。  
 
 ```json
 "dashboard.tabs": [
@@ -77,7 +76,7 @@ Dashboard.tabs では、タブ セクションでは、ダッシュ ボード �
 
 `dashboard.containers`
 
-代わりに、(dashboard.tab) 内のダッシュ ボードのコンテナーのインラインを指定します。 Dashboard.containers を使用してコンテナーを登録することができます。 オブジェクトまたはオブジェクトの配列を受け入れます。
+ダッシュボード コンテナーをインラインで (dashboard.tab 内に) 指定するのではなく、 dashboard.containers を使用して、コンテナーを登録することができます。 これは、オブジェクトまたはオブジェクトの配列を受け入れます。
 
 ```json
 "dashboard.containers": [
@@ -96,7 +95,7 @@ Dashboard.tabs では、タブ セクションでは、ダッシュ ボード �
 ]
 ```
 
-登録済みコンテナーを参照するには、コンテナーの id を指定します。
+登録済みコンテナーを参照するには、コンテナーの ID を指定します。
 
 ```json
 "dashboard.tabs": [
@@ -113,7 +112,7 @@ Dashboard.tabs では、タブ セクションでは、ダッシュ ボード �
 
 `dashboard.insights`
 
-Dashboard.insights を使用してインサイトを登録することができます。 これはのような[チュートリアル。カスタム インサイト ウィジェットをビルドします。](https://docs.microsoft.com/sql/sql-operations-studio/tutorial-build-custom-insight-sql-server)
+dashboard.insights を使用すれば、分析情報を登録できます。 これは、[チュートリアル: カスタム分析情報ウィジェットのビルド](https://docs.microsoft.com/sql/sql-operations-studio/tutorial-build-custom-insight-sql-server)によく似ています
 
 ```json
 "dashboard.insights": {
@@ -132,15 +131,15 @@ Dashboard.insights を使用してインサイトを登録することができ�
 ```
 
 
-### <a name="dashboard-container-types"></a>ダッシュ ボードの種類のコンテナー
+### <a name="dashboard-container-types"></a>ダッシュボード コンテナーの種類
 
-現在はサポートされているコンテナーの 4 種類があります。
+現在、次の 4 種類のコンテナーがサポートされています。
 
 1. `widgets-container`
 
-    ![ウィジェットのコンテナー](media/extensibility/widgets-container.png)
+    ![ウィジェット コンテナー](media/extensibility/widgets-container.png)
 
-    コンテナーに表示されるウィジェットの一覧。 フロー レイアウトになります。 ウィジェットの一覧を受け入れます。
+    コンテナーに表示されるウィジェットの一覧。 これはフロー レイアウトです。 これはウィジェットの一覧を受け入れます。
 
     ```json
     "container": {
@@ -163,9 +162,9 @@ Dashboard.insights を使用してインサイトを登録することができ�
 
 2. `webview-container`
 
-    ![webview コンテナー](media/extensibility/webview-container.png)
+    ![Web ビュー コンテナー](media/extensibility/webview-container.png)
 
-    全体のコンテナーでは、web ビューが表示されます。 Webview id タブの ID が同じにする必要があります。
+    Web ビューがコンテナー全体に表示されます。 Web ビュー ID がタブ ID と同じである必要があります
 
     ```json
     "container": {
@@ -177,7 +176,7 @@ Dashboard.insights を使用してインサイトを登録することができ�
 
    ![グリッド コンテナー](media/extensibility/grid-container.png)
 
-   ウィジェットまたはグリッド レイアウトで表示される web 表示の一覧
+   グリッド レイアウトに表示されるウィジェットまたは Web ビューの一覧
 
     ```json
     "container": {
@@ -229,7 +228,7 @@ Dashboard.insights を使用してインサイトを登録することができ�
 
     ![nav セクション](media/extensibility/nav-section.png)
 
-    コンテナー内のナビゲーション セクションが表示されます。
+    コンテナーにはナビゲーション セクションが表示されます
 
     ```json
     "container": {
@@ -264,18 +263,18 @@ Dashboard.insights を使用してインサイトを登録することができ�
 
 ## <a name="context-variables"></a>コンテキスト変数
 
-Visual Studio Code とその後に Azure Data Studio でのコンテキストについては、次を参照してください。 [Extensibility](https://code.visualstudio.com/docs/extensionAPI/extension-points#_example)します。
+Visual Studio Code およびその後の Azure Data Studio のコンテキスト変数に関する一般的な情報については、[拡張性](https://code.visualstudio.com/docs/extensionAPI/extension-points#_example)に関するページを参照してください。
 
-Azure データ studio では、拡張機能の使用可能なデータベース接続に関する特定のコンテキストがあります。
+Azure Data Studio には、拡張機能で使用できるデータベース接続に関する特定のコンテキストがあります。
 
 ### <a name="dashboard"></a>ダッシュボード
 
-ダッシュ ボードで、次のコンテキスト変数を提供します。
+ダッシュボードでは、次のコンテキスト変数が用意されています。
 
 |コンテキスト変数| description|
 |:---|:---|
-|`connectionProvider` | 現在の接続のプロバイダーの識別子の文字列。 例: `connectionProvider == 'MSSQL'` 。|
-|`serverName`|現在の接続のサーバー名の文字列。 例: `serverName == 'localhost'` 。|
-|`databaseName` | 現在の接続のデータベース名の文字列。 例: `databaseName == 'master'` 。|
-|`connection` | 現在の接続 (IConnectionProfile) の完全な接続プロファイル オブジェクト|
-|`dashboardContext` | ダッシュ ボードのページのコンテキストの文字列は現在のです。 'Database' または 'server'。 例: `dashboardContext == 'database'`|
+|`connectionProvider` | 現在の接続のプロバイダーの識別子の文字列。 例: `connectionProvider == 'MSSQL'`|
+|`serverName`|現在の接続のサーバー名の文字列。 例: `serverName == 'localhost'`|
+|`databaseName` | 現在の接続のデータベース名の文字列。 例: `databaseName == 'master'`|
+|`connection` | 現在の接続の完全な接続プロファイル オブジェクト (IConnectionProfile)|
+|`dashboardContext` | 現在オンになっているダッシュボードのページのコンテキストの文字列。 'database' または 'server' のいずれかです。 例: `dashboardContext == 'database'`|

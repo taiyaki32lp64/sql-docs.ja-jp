@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: fe20dca9-a4c1-4d32-813d-42f1782dfdd3
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 00a845104de324dfc4bee50e6feba035d1592f98
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 95d92e72baa3d1f36eb76649a46bb1dcdf35cd4f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52510890"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68035241"
 ---
 # <a name="add-or-remove-nodes-in-a-sql-server-failover-cluster-setup"></a>SQL Server フェールオーバー クラスターでのノードの追加または削除 (セットアップ)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -50,7 +49,7 @@ ms.locfileid: "52510890"
   
 1.  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] インストール メディアを挿入し、ルート フォルダーの Setup.exe をダブルクリックします。 ネットワーク共有からインストールするには、ネットワーク共有上のルート フォルダーに移動し、Setup.exe をダブルクリックします。  
   
-2.  インストール ウィザードによって [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] インストール センターが起動されます。 既存のフェールオーバー クラスター インスタンスにノードを追加するには、左側のペインで **[インストール]** をクリックします。 次に、**[[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] フェールオーバー クラスターにノードを追加します]** を選択します。  
+2.  インストール ウィザードによって [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] インストール センターが起動されます。 既存のフェールオーバー クラスター インスタンスにノードを追加するには、左側のペインで **[インストール]** をクリックします。 次に、 **[[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] フェールオーバー クラスターにノードを追加します]** を選択します。  
   
 3.  システム構成チェッカーにより、コンピューターで検出処理が実行されます。 続行するには、 [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
@@ -90,7 +89,7 @@ ms.locfileid: "52510890"
   
 1.  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] のインストール メディアを挿入します。 ルート フォルダーの setup.exe をダブルクリックします。 ネットワーク共有からインストールするには、ネットワーク共有上のルート フォルダーに移動し、Setup.exe をダブルクリックします。  
   
-2.  インストール ウィザードによって、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] インストール センターが起動されます。 既存のフェールオーバー クラスター インスタンスからノードを削除するには、左側のペインで **[メンテナンス]** をクリックし、**[[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] フェールオーバー クラスターからノードを削除します]** をクリックします。  
+2.  インストール ウィザードによって、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] インストール センターが起動されます。 既存のフェールオーバー クラスター インスタンスからノードを削除するには、左側のペインで **[メンテナンス]** をクリックし、 **[[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] フェールオーバー クラスターからノードを削除します]** をクリックします。  
   
 3.  システム構成チェッカーにより、コンピューターで検出処理が実行されます。 続行するには、 [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   

@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: c02f6942-0484-4567-a78e-fe8aa2053536
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: c030a6a3d2ba5caad755abfd92a5cf1adb01cc25
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 2f378c080472ed9004311d0cc73724e2a8c5e263
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47748510"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67992715"
 ---
 # <a name="sqlsrvfieldmetadata"></a>sqlsrv_field_metadata
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -59,14 +58,14 @@ sqlsrv_field_metadata( resource $stmt)
 |binary|SQL_BINARY (-2)|||0 < *n* < 8000 <sup>1</sup>|  
 |bit|SQL_BIT (-7)||||  
 |char|SQL_CHAR (1)|||0 < *n* < 8000 <sup>1</sup>|  
-|日付|SQL_TYPE_DATE (91)|10/10|0/0||  
+|date|SQL_TYPE_DATE (91)|10/10|0/0||  
 |DATETIME|SQL_TYPE_TIMESTAMP (93)|23/23|3/3||  
 |datetime2|SQL_TYPE_TIMESTAMP (93)|19/27|0/7||  
 |datetimeoffset|SQL_SS_TIMESTAMPOFFSET (-155)|26/34|0/7||  
 |Decimal|SQL_DECIMAL (3)|1/38|0/有効桁数の値||  
 |FLOAT|SQL_FLOAT (6)|4/8|||  
 |image|SQL_LONGVARBINARY (-4)|||2 GB|  
-|ssNoversion|SQL_INTEGER (4)||||  
+|INT|SQL_INTEGER (4)||||  
 |money|SQL_DECIMAL (3)|19/19|4/4||  
 |NCHAR|SQL_WCHAR (-8)|||0 < *n* < 4000 <sup>1</sup>|  
 |ntext|SQL_WLONGVARCHAR (-10)|||1 GB|  

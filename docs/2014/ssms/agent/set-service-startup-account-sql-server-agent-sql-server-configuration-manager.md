@@ -15,11 +15,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 30c50d1f6efc44c17eac76e0e03432c2461da296
-ms.sourcegitcommit: 78e32562f9c1fbf2e50d3be645941d4aa457e31f
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/08/2019
-ms.locfileid: "54100622"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63033671"
 ---
 # <a name="set-the-service-startup-account-for-sql-server-agent-sql-server-configuration-manager"></a>Set the Service Startup Account for SQL Server Agent (SQL Server Configuration Manager)
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェントのサービス開始アカウントでは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェントを実行する Windows アカウントとそのネットワーク権限を定義します。 このトピックでは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] を使用して、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] で [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 構成マネージャーを使用して [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]エージェント サービス アカウントを設定する方法について説明します。  
@@ -65,22 +65,22 @@ ms.locfileid: "54100622"
   
 2.  プラス記号をクリックして、 **[ローカル サーバー グループ]** フォルダーを展開します。  
   
-3.  サービス開始カウントを設定するサーバー インスタンスを右クリックし、**[SQL Server 構成マネージャー]** をクリックします。  
+3.  サービス開始カウントを設定するサーバー インスタンスを右クリックし、 **[SQL Server 構成マネージャー]** をクリックします。  
   
 4.  **[ユーザー アカウント制御]** ダイアログ ボックスで、 **[はい]** をクリックします。  
   
 5.  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 構成マネージャーのコンソール ペインで、 **[SQL Server のサービス]** をクリックします。  
   
-6.  詳細ペインで、サービス開始アカウントを変更する **[SQL Server エージェント _(server_name)_]** (*server_name* は [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェント インスタンスの名前) を右クリックし、**[プロパティ]** をクリックします。  
+6.  詳細ペインで、サービス開始アカウントを変更する **[SQL Server エージェント _(server_name)_ ]** (*server_name* は [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェント インスタンスの名前) を右クリックし、 **[プロパティ]** をクリックします。  
   
-7.  **[SQL Server エージェント** _(server_name)_ **のプロパティ]** ダイアログ ボックスの **[ログオン]** タブで、**[次のアカウントでログオン]** から以下のいずれかのオプションを選択します。  
+7.  **[SQL Server エージェント** _(server_name)_ **のプロパティ]** ダイアログ ボックスの **[ログオン]** タブで、 **[次のアカウントでログオン]** から以下のいずれかのオプションを選択します。  
   
-    -   **[ビルトイン アカウント]**: ジョブがローカル サーバーのリソースだけを必要とする場合はこのオプションを選択します。 Windows ビルトイン アカウントの選択方法については、「 [SQL Server エージェント サービスのアカウントの選択](https://msdn.microsoft.com/library/ms191543.aspx)」をご覧ください。  
+    -   **[ビルトイン アカウント]** : ジョブがローカル サーバーのリソースだけを必要とする場合はこのオプションを選択します。 Windows ビルトイン アカウントの選択方法については、「 [SQL Server エージェント サービスのアカウントの選択](https://msdn.microsoft.com/library/ms191543.aspx)」をご覧ください。  
   
         > [!IMPORTANT]  
         >  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェント サービスは、 **では** Local Service [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]アカウントはサポートしません。  
   
-    -   **[このアカウント]**: ジョブがネットワーク経由のリソース (アプリケーション リソースを含む) を必要とする場合、他の Windows アプリケーション ログにイベントを転送する場合、またはメールやポケットベルを使用してオペレーターに通知する場合は、このオプションを選択します。  
+    -   **[このアカウント]** : ジョブがネットワーク経由のリソース (アプリケーション リソースを含む) を必要とする場合、他の Windows アプリケーション ログにイベントを転送する場合、またはメールやポケットベルを使用してオペレーターに通知する場合は、このオプションを選択します。  
   
          このオプションを選択する場合:  
   

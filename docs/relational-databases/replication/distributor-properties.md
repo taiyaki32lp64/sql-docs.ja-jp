@@ -1,6 +1,7 @@
 ---
-title: SQL Server レプリケーションの 'ディストリビューターのプロパティ' ダイアログ ボックス | Microsoft Docs
-ms.custom: ''
+title: '[ディストリビューターのプロパティ] ダイアログ ボックス'
+description: SQL Server Management Studio (SSMS) の [ディストリビューターのプロパティ] ダイアログ ボックス内にあるさまざまなページについて説明します。
+ms.custom: seo-lt-2019
 ms.date: 11/20/2018
 ms.prod: sql
 ms.prod_service: database-engine
@@ -14,16 +15,16 @@ f1_keywords:
 ms.assetid: f643c7c3-f238-4835-b81e-2c2b3b53b23f
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 2e58ef266f992911dc8360925649959b1aedd13f
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
+ms.openlocfilehash: 4ab407b34e86cc95f12467230c9bc9e5d7ef4e20
+ms.sourcegitcommit: 02d44167a1ee025ba925a6fefadeea966912954c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54126624"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75321763"
 ---
 # <a name="sql-server-replication-distributor-properties-dialog-box"></a>SQL Server レプリケーションの 'ディストリビューターのプロパティ' ダイアログ ボックス 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
 このページでは、[ディストリビューターのプロパティ] ダイアログ ボックス内にあるページについて説明します。 
 
@@ -41,7 +42,7 @@ ms.locfileid: "54126624"
  新しいディストリビューション データベースを作成します。  
   
  **削除**  
- **[データベース]** プロパティ グリッドで既存のディストリビューション データベースを選択し、 **[削除]** をクリックしてデータベースを削除します。 ディストリビューターは少なくとも 1 つのディストリビューション データベースを持つ必要があるため、データベースが 1 つだけの場合はディストリビューション データベースを削除することはできません。 すべてのディストリビューション データベースを削除するには、コンピューターでディストリビューションを無効にする必要があります。 詳細については、「[Disable Publishing and Distribution](../../relational-databases/replication/disable-publishing-and-distribution.md)」 (パブリッシングおよびディストリビューションの無効化) を参照してください。  
+ **[データベース]** プロパティ グリッドで既存のディストリビューション データベースを選択し、 **[削除]** をクリックしてデータベースを削除します。 ディストリビューターは少なくとも 1 つのディストリビューション データベースを持つ必要があるため、データベースが 1 つだけの場合はディストリビューション データベースを削除することはできません。 すべてのディストリビューション データベースを削除するには、コンピューターでディストリビューションを無効にする必要があります。 詳細については、「[パブリッシングの無効化と配布](../../relational-databases/replication/disable-publishing-and-distribution.md)」を参照してください。  
   
  **[プロファイルの既定値]**  
  **[エージェント プロファイル]** ダイアログ ボックスのレプリケーション エージェント プロファイルにアクセスします。 プロファイルの詳細については、「 [Replication Agent Profiles](../../relational-databases/replication/agents/replication-agent-profiles.md)」を参照してください。  
@@ -52,7 +53,7 @@ ms.locfileid: "54126624"
  **[パブリッシャー]**  
  このディストリビューターの使用を許可するサーバーを選択します。 その他のプロパティを表示し、設定するには、[パブリッシャー] の横にあるプロパティ ボタン ( **[...]** ) をクリックします。  
   
- **[追加]**  
+ **追加**  
  許可するサーバーが一覧に表示されていない場合には、 **[追加]** をクリックして、使用できるパブリッシャーの一覧に [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] パブリッシャーまたは Oracle パブリッシャーを追加します。 追加したサーバーが、最初にこのディストリビューターをリモート ディストリビューターとして使用するサーバーである場合、管理用リンク パスワードを入力するように求められます。  
   
  **[管理用リンク パスワード]**  
@@ -65,7 +66,7 @@ ms.locfileid: "54126624"
 ## <a name="distribution-database"></a>ディストリビューション データベース 
  **[ディストリビューション データベースのプロパティ]** ダイアログ ボックスを使用すると、多数のプロパティを表示でき、データベースにおけるトランザクションの保有期間と履歴の保有期間を設定できます。  
   
- **名前**  
+ **Name**  
  ディストリビューション データベースの名前です。既定の名前は "distribution" です (読み取り専用)。  
   
  **[ファイルの場所]**  

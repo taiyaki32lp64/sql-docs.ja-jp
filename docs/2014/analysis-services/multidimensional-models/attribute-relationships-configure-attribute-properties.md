@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - flexible relationships (Analysis Services)
@@ -17,12 +16,12 @@ ms.assetid: fce511af-66d7-42fc-bb3a-6c516f16b10e
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 80f77e780f881c6c403b9cd27c3e378b3f9049a2
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 9a7cea5d2a08b31042ae3e2a07696cf63410d583
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48225292"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66077123"
 ---
 # <a name="configure-attribute-relationship-properties"></a>属性リレーションシップのプロパティの構成
   次の表で、属性リレーションシップのプロパティの一覧およびその説明を示します。  

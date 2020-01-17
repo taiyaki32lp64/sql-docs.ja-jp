@@ -26,16 +26,15 @@ helpviewer_keywords:
 - clauses [SQL Server], INTO
 - row additions [SQL Server], INTO clause
 ms.assetid: b48d69e8-5a00-48bf-b2f3-19278a72dd88
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
+author: VanMSFT
+ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 8f8d40fed1b2183bc82b85b5d82ac1895ca118f2
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: d88b0c8e36b69bbc2a341917ec96e12ed8bfdc17
+ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52509009"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "73981728"
 ---
 # <a name="select---into-clause-transact-sql"></a>SELECT - INTO 句 (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -55,7 +54,7 @@ SELECT...INTO は、既定のファイル グループに新しいテーブル�
  *new_table*   
  新しいテーブルの名前を指定します。このテーブルは選択リストで指定した列とデータ ソースから選択された行を基に作成されます。  
  
- *new_table* の形式は、選択リスト内の式を評価することによって決まります。 *new_table* 内の列は、選択リストの指定順に作成されます。 *new_table* 内の各列の名前、データ型、NULL 値の許容属性、値は、選択リスト内の対応する式と同じになります。 列の IDENTITY プロパティは、「解説」の「ID 列の使用」に示されている条件に当てはまる場合を除いて転送されます。  
+ *new_table* の形式は、選択リスト内の式を評価することによって決まります。 *new_table* 内の列は、選択リストの指定順に作成されます。 *new_table* 内の各列の名前、データ型、NULL 値の許容属性、値は、選択リスト内の対応する式と同じになります。 列の IDENTITY プロパティは、[解説] の "ID 列の使用" に示されている条件に当てはまる場合を除いて転送されます。  
   
  同じ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスの別のデータベースにテーブルを作成するには、*new_table* を *database.schema.table_name* の形式で完全修飾名として指定します。  
   
@@ -64,7 +63,7 @@ SELECT...INTO は、既定のファイル グループに新しいテーブル�
  *filegroup*    
  新しいテーブルを作成するファイル グループの名前を指定します。 指定されたファイル グループがデータベースに存在する必要があります。存在しない場合は、SQL Server エンジンからエラーがスローされます。   
  
- **適用対象**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。
+ **適用対象:** [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 以降。
   
 ## <a name="data-types"></a>データ型  
  FILESTREAM 属性は新しいテーブルに転送されません。 FILESTREAM BLOB がコピーされ、**varbinary(max)** BLOB として新しいテーブルに格納されます。 FILESTREAM 属性がない場合、**varbinary(max)** データ型は 2 GB までに制限されます。 FILESTREAM BLOB がこの値を超えると、エラー 7119 が発生して、ステートメントが中止されます。  
@@ -82,6 +81,9 @@ SELECT...INTO は、既定のファイル グループに新しいテーブル�
 -   ID 列がリモート データ ソースから取得されている。  
   
 これらの条件が 1 つでも満たされている場合は、列に IDENTITY プロパティは継承されず、代わりに NOT NULL として作成されます。 新しいテーブルに ID 列が必要であるものの使用できる列がない場合や、ソースの ID 列とは異なるシード値や増分値が必要な場合は、選択リストで IDENTITY 関数を使用してその列を定義します。 以下の「例」の「IDENTITY 関数を使用して ID 列を作成する」を参照してください。  
+
+## <a name="remarks"></a>Remarks  
+`SELECT...INTO` ステートメントによる操作は 2 つの部分からなります。新しいテーブルが作成され、それから行が挿入されます。  つまり、挿入できない場合、すべてロールバックされますが、新しい (空の) テーブルは残ります。  操作が全体として成功または失敗した場合、[明示的なトランザクション](../language-elements/begin-transaction-transact-sql.md)を使用します。
   
 ## <a name="limitations-and-restrictions"></a>制限事項と制約事項  
  テーブル変数やテーブル値パラメーターを新しいテーブルとして指定することはできません。  
@@ -169,7 +171,7 @@ WHERE name = 'AddressID';
 ### <a name="d-creating-a-table-by-specifying-columns-from-a-remote-data-source"></a>D. リモート データ ソースの列を指定してテーブルを作成する  
  次の例は、ローカル サーバーで新しいテーブルをリモート データ ソースから作成するための 3 つの方法を示しています。 最初にリモート データ ソースへのリンクを作成した後、 リンク サーバー名の `MyLinkServer,` を、1 つ目の SELECT...INTO ステートメントの FROM 句と、2 つ目の SELECT...INTO ステートメントの OPENQUERY 関数に指定しています。 3 つ目の SELECT...INTO ステートメントでは、OPENDATASOURCE 関数を使用して、リンク サーバー名を使用する代わりに直接リモート データ ソースを指定しています。  
   
- **適用対象**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]  
+ **適用対象**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 以降。  
   
 ```sql
 USE master;  
@@ -210,7 +212,7 @@ GO
 ```  
   
 ### <a name="e-import-from-an-external-table-created-with-polybase"></a>E. PolyBase で作成された外部テーブルをインポートする  
- Hadoop または Azure ストレージからデータを永続的なストレージの SQL Server にインポートします。 使用して `SELECT INTO` を SQL Server で永続的なストレージの外部のテーブルで参照されるデータをインポートします。 リレーショナル テーブルにその場を作成し、2 番目の手順で、テーブルの上に列ストア インデックスを作成します。  
+ Hadoop または Azure ストレージからデータを永続的なストレージの SQL Server にインポートします。 `SELECT INTO` を使用して、SQL Server の永続記憶装置に、外部テーブルで参照されるデータをインポートします。 リレーショナル テーブルにその場を作成し、2 番目の手順で、テーブルの上に列ストア インデックスを作成します。  
   
  **適用対象:** [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]」を参照してください。  
   
@@ -229,7 +231,7 @@ ORDER BY YearlyIncome;
 ### <a name="f-creating-a-new-table-as-a-copy-of-another-table-and-loading-it-a-specified-filegroup"></a>F. 新しいテーブルを別のテーブルのコピーとして作成し、指定したファイル グループに読み込む
 次の例は、新しいテーブルを別のテーブルのコピーとして作成し、ユーザーの既定のファイル グループとは異なる、指定したファイル グループに読み込む方法を示しています。
 
- **適用対象**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。
+ **適用対象:** [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 以降。
 
 ```sql
 ALTER DATABASE [AdventureWorksDW2016] ADD FILEGROUP FG2;
@@ -248,6 +250,6 @@ SELECT * INTO [dbo].[FactResellerSalesXL] ON FG2 FROM [dbo].[FactResellerSales]
  [SELECT &#40;Transact-SQL&#41;](../../t-sql/queries/select-transact-sql.md)   
  [SELECT の例 &#40;Transact-SQL&#41;](../../t-sql/queries/select-examples-transact-sql.md)   
  [INSERT &#40;Transact-SQL&#41;](../../t-sql/statements/insert-transact-sql.md)   
- [ID および #40 です。関数と #41 です。(& a) #40 です。TRANSACT-SQL と #41 です。](../../t-sql/functions/identity-function-transact-sql.md)  
+ [IDENTITY &#40;関数&#41; &#40;Transact-SQL&#41;](../../t-sql/functions/identity-function-transact-sql.md)  
   
   

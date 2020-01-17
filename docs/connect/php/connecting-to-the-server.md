@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: c251a239-e0bd-4f45-9207-b76651072dd0
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 58357c0316f5b439d3dbac00a79547bd799e27bb
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 789fec0bd9299f4d436c664306d380bb9a7da153
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47601960"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68015138"
 ---
 # <a name="connecting-to-the-server"></a>サーバーへの接続
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -39,9 +38,9 @@ ms.locfileid: "47601960"
 |[LocalDB のサポート](../../connect/php/php-driver-for-sql-server-support-for-localdb.md)|[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] で追加された LocalDB 機能の [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] によるサポートについて説明します。|  
 |[高可用性およびディザスター リカバリーのサポート](../../connect/php/php-driver-for-sql-server-support-for-high-availability-disaster-recovery.md)|[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] に追加された高可用性のディザスター リカバリー機能をアプリケーションで利用するための構成方法について説明します。|  
 |[Microsoft Azure SQL Database への接続](../../connect/php/connecting-to-microsoft-azure-sql-database.md)|Azure SQL Database に接続する方法について説明します。|  
-|[接続の復元性](../../connect/php/connection-resiliency.md)|切断された接続を再確立する接続の回復性機能について説明します。|  
+|[接続の復元性](../../connect/php/connection-resiliency.md)|切断された接続を再度確立する接続の回復性機能について説明します。|  
 
 ## <a name="see-also"></a>参照  
-[For PHP for SQL Server のプログラミング、Microsoft ドライバーのガイド](../../connect/php/programming-guide-for-php-sql-driver.md)
+[SQL Server 用 Microsoft Drivers for PHP のためのプログラミング ガイド](../../connect/php/programming-guide-for-php-sql-driver.md)
 
 [サンプル アプリケーション &#40;SQLSRV ドライバー&#41;](../../connect/php/example-application-sqlsrv-driver.md)  

@@ -15,11 +15,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: cf8f57f65281ad0c7ee2b603e5e35d0f22fb6783
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52783814"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63065520"
 ---
 # <a name="work-with-diagram-layout-visual-database-tools"></a>ダイアグラムのレイアウトの操作 (Visual Database Tools)
   データベース ダイアグラムの外観は任意にカスタマイズできます。  
@@ -35,7 +35,7 @@ ms.locfileid: "52783814"
   
  [ダイアグラムのフォントの色、サイズ、およびスタイルを変更する (Visual Database Tools)](change-the-font-color-size-and-style-in-diagrams-visual-database-tools.md)  
   
-## <a name="reference"></a>参照  
+## <a name="reference"></a>リファレンス  
   
 ## <a name="related-sections"></a>関連項目  
  [データベース ダイアグラムの使用 (Visual Database Tools)](work-with-database-diagrams-visual-database-tools.md)  

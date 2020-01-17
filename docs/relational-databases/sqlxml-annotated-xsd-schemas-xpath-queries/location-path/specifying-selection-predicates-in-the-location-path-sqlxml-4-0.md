@@ -1,6 +1,5 @@
 ---
-title: 選択述語の指定 (SQLXML 4.0) の場所のパスに |Microsoft Docs
-ms.custom: ''
+title: ロケーションパスでの選択述語の設定 (SQLXML)
 ms.date: 03/16/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -17,14 +16,14 @@ helpviewer_keywords:
 ms.assetid: dbef4cf4-a89b-4d7e-b72b-4062f7b29a80
 author: MightyPen
 ms.author: genemi
-manager: craigg
+ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 4ace1b9a52853ed96ccc9cf74099760c30332dfd
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 84a3eade8a706e95b3ddba72d96e37d8fabf1fd3
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56015237"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75255996"
 ---
 # <a name="specifying-selection-predicates-in-the-location-path-sqlxml-40"></a>ロケーション パスでの選択述語の指定 (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -33,16 +32,17 @@ ms.locfileid: "56015237"
  XPath では、位置に基づくフィルター選択を行うこともできます。 数値として評価される述語式を使用すると、その序数に対応するノードが選択されます。 たとえば、ロケーション パス `Customer[3]` では、3 番目の顧客が返されますが、 このような数値述語はサポートされていません。 サポートされているのは、ブール値の結果を返す述語式のみです。  
   
 > [!NOTE]  
->  XPath の場合は、この XPath 実装の制限についての情報とそのと W3C 仕様の違いは、次を参照してください。[を使用して XPath クエリの概要&#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/introduction-to-using-xpath-queries-sqlxml-4-0.md)します。  
+>  Xpath のこの XPath 実装と W3C 仕様の違いについては、「 [Xpath クエリの使用の概要 &#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/introduction-to-using-xpath-queries-sqlxml-4-0.md)」を参照してください。  
   
-## <a name="selection-predicate-example-1"></a>選択述語。例 1  
- すべての現在のコンテキスト ノードから次の XPath 式 (ロケーション パス) を選択、 **\<顧客 >** 子要素が、 **CustomerID** ALFKI の値を持つ属性。  
+## <a name="selection-predicate-example-1"></a>選択述語: 例1  
+ 次の XPath 式 (ロケーションパス) では、現在のコンテキストノードから、 **CustomerID**属性が ALFKI という値が指定されているすべての** \<顧客>** 子要素が選択されます。  
   
 ```  
 /child::Customer[attribute::CustomerID="ALFKI"]  
 ```  
   
- この XPath クエリでは、`child` と `attribute` は軸名で、 `Customer` ノード テストです (場合は TRUE`Customer`は、 **\<要素ノード >** ため、 **\<要素 >** のプリンシパル ノード型には、`child`軸) です。 `attribute::CustomerID="ALFKI"` は述語です。 述語では、`attribute`は、軸と`CustomerID`はノード テストです (TRUE の場合**CustomerID**ため、コンテキスト ノードの属性は、 **\<属性 >** プリンシパルは、ノード タイプの**属性**軸) です。  
+ この XPath クエリでは、`child` と `attribute` は軸名で、 `Customer`はノードテストです。は、 `Customer`が** \<要素ノード>** である場合は TRUE になります。これは、 `child` ** \<要素>** が軸の主ノード型であるためです。 
+  `attribute::CustomerID="ALFKI"` は述語です。 述語`attribute`では、は軸で、 `CustomerID`はノードテストです ( **CustomerID**がコンテキストノードの属性である場合は TRUE になります。これは、 ** \<属性>** が**属性**軸の主ノード型であるためです)。  
   
  省略構文を使用した場合、XPath クエリは次のように指定できます。  
   
@@ -50,14 +50,16 @@ ms.locfileid: "56015237"
 /Customer[@CustomerID="ALFKI"]  
 ```  
   
-## <a name="selection-predicate-example-2"></a>選択述語。例 2  
- すべての現在のコンテキスト ノードから次の XPath 式 (ロケーション パス) を選択、 **\<順序 >** 孫要素が、 **SalesOrderID**値 1 を持つ属性。  
+## <a name="selection-predicate-example-2"></a>選択述語: 例2  
+ 次の XPath 式 (ロケーションパス) は、現在のコンテキストノードから、 **salesorderid**属性が値1であるすべての** \<順序>** 孫を選択します。  
   
 ```  
 /child::Customer/child::Order[attribute::SalesOrderID="1"]  
 ```  
   
- この XPath 式では、`child` と `attribute` は軸名で、 `Customer`、`Order`、および `SalesOrderID` はノード テストです。 `attribute::OrderID="1"` は述語です。  
+ この XPath 式では、`child` と `attribute` は軸名で、 
+  `Customer`、`Order`、および `SalesOrderID` はノード テストです。 
+  `attribute::OrderID="1"` は述語です。  
   
  省略構文を使用した場合、XPath クエリは次のように指定できます。  
   
@@ -65,18 +67,19 @@ ms.locfileid: "56015237"
 /Customer/Order[@SalesOrderID="1"]  
 ```  
   
-## <a name="selection-predicate-example-3"></a>選択述語。例 3  
- すべての現在のコンテキスト ノードから次の XPath 式 (ロケーション パス) を選択、 **\<顧客 >** 子が 1 つまたは複数 **\<ContactName >** 子:  
+## <a name="selection-predicate-example-3"></a>選択述語: 例3  
+ 次の XPath 式 (ロケーションパス) は、現在のコンテキストノードから、すべての** \<顧客>** 子** \<>** 1 人以上のユーザーを持つ子を選択します。  
   
 ```  
 child::Customer[child::ContactName]  
 ```  
   
- この例では、  **\<ContactName >** の子要素には、 **\<顧客 >** と呼ばれる XML ドキュメント内の要素*要素中心のマッピング*注釈付き XSD スキーマです。  
+ この例では、担当の** \<>** が、XML ドキュメント内** \<の Customer>** 要素の子要素であることを前提としています。これは、注釈付き XSD スキーマでは*要素中心のマッピング*と呼ばれています。  
   
- この XPath 式では、`child` が軸名で、 `Customer` ノード テストです (場合に TRUE を`Customer`は、 **\<要素 >** ノード、ため**\<要素 >** のプリンシパル ノード型は、`child`軸) です。 `child::ContactName` は述語です。 述語では、`child`は、軸と`ContactName`はノード テストです (TRUE の場合`ContactName`は、 **\<要素 >** ノード)。  
+ この XPath 式では、`child` が軸名で、 `Customer`ノードテストを示します。が`Customer` ** \<要素>** ノードの場合は TRUE になります。これは、 ** \<要素>** が軸の`child`主ノード型であるためです。 
+  `child::ContactName` は述語です。 述語では、 `child`は軸`ContactName`で、はノードテストです。が`ContactName` ** \<要素>** ノードの場合は TRUE になります。  
   
- この式だけを返す、 **\<顧客 >** を持つコンテキスト ノードの要素の子 **\<ContactName >** 子要素。  
+ この式で返されるのは、 ** \<Customer>** 子要素** \<>** 子を持つコンテキストノードの子要素だけです。  
   
  省略構文を使用した場合、XPath クエリは次のように指定できます。  
   
@@ -84,16 +87,17 @@ child::Customer[child::ContactName]
 Customer[ContactName]  
 ```  
   
-## <a name="selection-predicate-example-4"></a>選択述語。例 4  
- 次の XPath 式を選択します**\<顧客 >** がない、コンテキスト ノードの要素の子 **\<ContactName >** 子要素。  
+## <a name="selection-predicate-example-4"></a>選択述語: 例4  
+ 次の XPath 式は、 ** \<Customer>** 要素の子要素** \<>** 子を持たないコンテキストノードの子要素を選択します。  
   
 ```  
 child::Customer[not(child::ContactName)]  
 ```  
   
- この例では、  **\<ContactName >** の子要素には、 **\<顧客 >** 内の要素、XML ドキュメント、および、ContactName フィールドは必須でない、データベース。  
+ この例では、 ** \<>** の** \<ユーザー**が XML ドキュメント内の Customer>要素の子要素であり、データベースでは [担当側] フィールドが必須ではないことを前提としています。  
   
- この例では、`child` は軸で、 `Customer` ノード テストです (場合に TRUE を`Customer`は、\<要素 > ノード)。 `not(child::ContactName)` は述語です。 述語では、`child`は、軸と`ContactName`はノード テストです (TRUE の場合`ContactName`は、\<要素 > ノード)。  
+ この例では、`child` は軸で、 `Customer`はノードテストです。が`Customer` \<要素> ノードの場合は TRUE です。 
+  `not(child::ContactName)` は述語です。 述語では、 `child`は軸`ContactName`で、はノードテストです。が`ContactName` \<要素> ノードの場合は TRUE になります。  
   
  省略構文を使用した場合、XPath クエリは次のように指定できます。  
   
@@ -101,14 +105,15 @@ child::Customer[not(child::ContactName)]
 Customer[not(ContactName)]  
 ```  
   
-## <a name="selection-predicate-example-5"></a>選択述語。例 5  
- すべての現在のコンテキスト ノードから次の XPath 式を選択、 **\<顧客 >** 子を持つ、 **CustomerID**属性。  
+## <a name="selection-predicate-example-5"></a>選択述語: 例5  
+ 次の XPath 式は、現在のコンテキストノードから、 **CustomerID**属性が指定されているすべての** \<顧客>** 子を選択します。  
   
 ```  
 child::Customer[attribute::CustomerID]  
 ```  
   
- この例で`child`は、軸と`Customer`はノード テストです (場合は TRUE`Customer`は、\<要素 > ノード)。 `attribute::CustomerID` は述語です。 述語では、`attribute`軸と`CustomerID`述語である (TRUE の場合`CustomerID`は、 **\<属性 >** ノード)。  
+ この例では`child` 、は軸で`Customer` 、はノードテストです ( `Customer`が\<要素> ノードの場合は TRUE)。 
+  `attribute::CustomerID` は述語です。 述語では、 `attribute`は軸で、 `CustomerID`は述語です (が`CustomerID` ** \<属性>** ノードの場合は TRUE)。  
   
  省略構文を使用した場合、XPath クエリは次のように指定できます。  
   
@@ -116,8 +121,9 @@ child::Customer[attribute::CustomerID]
 Customer[@CustomerID]  
 ```  
   
-## <a name="selection-predicate-example-6"></a>選択述語。例 6  
- [!INCLUDE[msCoName](../../../includes/msconame-md.md)] SQLXML 4.0 では、次の例に示すように、述語にクロス積を含む XPath クエリがサポートされています。  
+## <a name="selection-predicate-example-6"></a>選択述語 : 例 6  
+ 
+  [!INCLUDE[msCoName](../../../includes/msconame-md.md)] SQLXML 4.0 では、次の例に示すように、述語にクロス積を含む XPath クエリがサポートされています。  
   
 ```  
 Customer[Order/@OrderDate=Order/@ShipDate]  
@@ -126,7 +132,7 @@ Customer[Order/@OrderDate=Order/@ShipDate]
  このクエリでは、`Order` の `OrderDate` が任意の `ShipDate` の `Order` と等しいすべての顧客が選択されます。  
   
 ## <a name="see-also"></a>参照  
- [注釈付き XSD スキーマの概要&#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml/annotated-xsd-schemas/introduction-to-annotated-xsd-schemas-sqlxml-4-0.md)   
- [クライアント側の XML 書式設定&#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml/formatting/client-side-xml-formatting-sqlxml-4-0.md)  
+ [注釈付き XSD スキーマの概要 &#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml/annotated-xsd-schemas/introduction-to-annotated-xsd-schemas-sqlxml-4-0.md)   
+ [クライアント側の XML 書式設定 &#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml/formatting/client-side-xml-formatting-sqlxml-4-0.md)  
   
   

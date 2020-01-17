@@ -19,11 +19,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 5473d741f5144338c99627e1057c51ce116093d6
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54130292"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68206841"
 ---
 # <a name="bulk-copying-from-program-variables"></a>プログラム変数からの一括コピー
   プログラム変数から直接一括コピーできます。 行のデータを保持する変数を割り当てた後[bcp_init](../native-client-odbc-extensions-bulk-copy-functions/bcp-init.md)一括コピーを開始するには、呼び出す[bcp_bind](../native-client-odbc-extensions-bulk-copy-functions/bcp-bind.md)の各列に関連付けられているプログラム変数の形式と場所を指定するには列。 各変数のデータを呼び出すし[bcp_sendrow](../native-client-odbc-extensions-bulk-copy-functions/bcp-sendrow.md)サーバーに 1 行のデータを送信します。 変数を入力し、呼び出す手順を繰り返す**bcp_sendrow**のすべての行は、サーバーに送信された、まで呼び出して[bcp_done](../native-client-odbc-extensions-bulk-copy-functions/bcp-done.md)操作が完了したかを指定します。  
@@ -110,7 +110,7 @@ GO
   
  "bcp_readrow" のような関数は用意されていないため、一括コピーを使用してデータを [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] からプログラム変数に読み取ることはできません。 実行できるのは、アプリケーションからサーバーへのデータの送信だけです。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [一括コピー操作を実行する&#40;ODBC&#41;](performing-bulk-copy-operations-odbc.md)  
   
   

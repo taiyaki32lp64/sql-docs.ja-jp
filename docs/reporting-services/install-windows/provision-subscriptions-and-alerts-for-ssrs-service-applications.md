@@ -11,15 +11,15 @@ helpviewer_keywords:
 - Reporting Services Service Application
 - SSRS service application
 ms.assetid: d0de3f1f-4887-47fb-bacf-46aaad74c4be
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 8ba0ec37bed5b47f0a78d78905f390eafda52ff9
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
-ms.translationtype: HT
+ms.openlocfilehash: ef70b3430cc1028b7486bf663280cfcf740d9290
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52530413"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62651951"
 ---
 # <a name="provision-subscriptions-and-alerts-for-ssrs-service-applications"></a>SSRS サービス アプリケーションを使用するためのサブスクリプションと警告の準備
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] のサブスクリプションとデータ警告を利用するには、SQL Server エージェントが必要です。また、SQL Server エージェントに対する権限を構成する必要もあります。 SQL Server エージェントが実行中であるにもかかわらず、SQL Server エージェントが必要であることを示すエラー メッセージが表示された場合は、権限を更新または確認してください。 このトピックでは、SharePoint モードの [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] を対象とし、 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] サブスクリプションを使用して SQL Server エージェントの権限を更新する 3 つの方法について説明します。 このトピックの手順で使用する資格情報には、サービス アプリケーション データベース、msdb データベース、および master データベースのオブジェクトに対する実行権限を RSExecRole に許可するための十分な権限が必要です。  
@@ -67,7 +67,7 @@ ms.locfileid: "52530413"
   
 4.  **[状態の表示]** 領域で、SQL Server エージェントが実行中であることを確認します。  
   
-5.  **[スクリプトのダウンロード]** をクリックして、SQL Server Management Studio 内で実行することにより権限を構成できる Transact-SQL スクリプトをダウンロードします。 作成されるスクリプト ファイル名には、Reporting Services サービス アプリケーションの名前が使用されます (例: **[サービス アプリケーションの名前]**-GrantRights.sql)。  
+5.  **[スクリプトのダウンロード]** をクリックして、SQL Server Management Studio 内で実行することにより権限を構成できる Transact-SQL スクリプトをダウンロードします。 作成されるスクリプト ファイル名には、Reporting Services サービス アプリケーションの名前が使用されます (例: **[サービス アプリケーションの名前]** -GrantRights.sql)。  
   
 ### <a name="to-generate-the-transact-sql-statement-with-powershell"></a>PowerShell を使用して Transact-SQL ステートメントを生成するには  
   
@@ -92,7 +92,7 @@ ms.locfileid: "52530413"
   
 2.  **[サーバーへの接続]** ダイアログ ボックスで、次のオプションを設定します。  
   
-    -    **[サーバーの種類]** ボックスの一覧で、 **[データベース エンジン]** をクリックします。  
+    -   **[サーバーの種類]** ボックスの一覧で、 **[データベース エンジン]** をクリックします。  
   
     -   **[サーバー名]** で、SQL Server エージェントの構成対象となる SQL Server インスタンスの名前を入力します。  
   

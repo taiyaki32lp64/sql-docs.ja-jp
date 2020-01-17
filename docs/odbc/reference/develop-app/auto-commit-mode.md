@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: c8de5b60-d147-492d-b601-2eeae8511d00
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 491fb8db9e37cfb3bfa07881958fe7828e6bb911
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: a8a02d58309f123e6cc8b29d41188ba5bebb26f7
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52514591"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67909888"
 ---
 # <a name="auto-commit-mode"></a>自動コミット モード
 *自動コミット モードで*すべてのデータベース操作が実行時にコミットされたトランザクション。 このモードは、1 つの SQL ステートメントで構成される多くの実際のトランザクションに適しています。 場合によっては、区切るか、これらのトランザクションの完了を指定する必要はありません。 トランザクションをサポートしていないデータベースでは、自動コミット モードは、唯一サポートされているモードです。 このようなデータベースでは、ステートメントがコミットされたときが実行され、それらをロールバックして; する方法はありません。それらは常に自動コミット モードで。  

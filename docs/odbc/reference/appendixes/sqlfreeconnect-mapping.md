@@ -13,16 +13,15 @@ helpviewer_keywords:
 ms.assetid: 8a844538-93c0-4709-bab6-35c45e771d80
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: ef90025a129bc624377bfe7891f122a838180a51
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 062894547aca57ca01ca105f4060f2dcd39e942f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47695660"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68086439"
 ---
 # <a name="sqlfreeconnect-mapping"></a>SQLFreeConnect のマッピング
-アプリケーションを呼び出すと**SQLFreeConnect**を通じて、ODBC 3 *.x*ドライバーへの呼び出し  
+アプリケーションを呼び出すと**SQLFreeConnect** ODBC を通じて*3.x*ドライバーへの呼び出し  
   
 ```  
 SQLFreeConnect(hdbc)   

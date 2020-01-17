@@ -8,17 +8,20 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: tutorial
 ms.assetid: cd0b18dc-66c3-4d88-86ef-8e40cb660fae
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: d81ac7d0a5c7a42a2292bab7ca5beffa464d02d7
-ms.sourcegitcommit: e2fa721b6f46c18f1825dd1b0d56c0a6da1b2be1
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: cd9266512675c4127a99903e6de0d1da5ccaec70
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/11/2019
-ms.locfileid: "54211013"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71295960"
 ---
 # <a name="lesson-4-2-create-a-corrupted-file"></a>レッスン 4-2:破損したファイルを作成する
+
+[!INCLUDE[ssis-appliesto](../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
 
 変換エラーの構成と処理を体験するには、コンポーネントの処理が失敗するサンプル フラット ファイルが必要です。  
   
@@ -45,7 +48,7 @@ ms.locfileid: "54211013"
   
 2.  **[デバッグ]** メニューの **[デバッグの停止]** を選択します。  
   
-3.  デザイン画面で、**[実行結果]** タブを選択します。  
+3.  デザイン画面で、 **[実行結果]** タブを選択します。  
   
 4.  ログの内容を参照し、次の処理不能エラーが発生していることを確認します。  
   

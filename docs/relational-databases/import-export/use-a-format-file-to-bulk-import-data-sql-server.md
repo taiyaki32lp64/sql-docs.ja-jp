@@ -1,6 +1,5 @@
 ---
-title: データの一括インポートでのフォーマット ファイルの使用 (SQL Server) | Microsoft Docs
-ms.custom: ''
+title: データの一括インポートでのフォーマット ファイルの使用
 ms.date: 09/20/2016
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
@@ -11,16 +10,16 @@ helpviewer_keywords:
 - bulk importing [SQL Server], format files
 - format files [SQL Server], importing data using
 ms.assetid: 2956df78-833f-45fa-8a10-41d6522562b9
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
+author: MashaMSFT
+ms.author: mathoma
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 683e96bff8f9067c32c861582c949df0d3e531c0
-ms.sourcegitcommit: bfa10c54e871700de285d7f819095d51ef70d997
+ms.custom: seo-lt-2019
+ms.openlocfilehash: e81bf59912499310fc95afd29758d5be5f691118
+ms.sourcegitcommit: d00ba0b4696ef7dee31cd0b293a3f54a1beaf458
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/14/2019
-ms.locfileid: "54257167"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "74056365"
 ---
 # <a name="use-a-format-file-to-bulk-import-data-sql-server"></a>データの一括インポートでのフォーマット ファイルの使用 (SQL Server)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -70,7 +69,7 @@ CREATE TABLE dbo.MyFirstImport (
 
 また、次の PowerShell スクリプトを実行して、データ ファイルを作成および設定することもできます。
 ```powershell
-cls
+Clear-Host
 # revise directory as desired
 $dir = 'D:\BCP\';
 
@@ -93,7 +92,7 @@ Add-Content -Path $bcpFile -Value '3,Stella,Rosenhain,1992-03-02';
 
 #Review content
 Get-Content -Path $bcpFile;
-Invoke-Item $bcpFile;
+Notepad.exe $bcpfile;
 ```
 
 ## フォーマット ファイルの作成<a name="create_format_file"></a>

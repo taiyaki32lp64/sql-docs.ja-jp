@@ -1,11 +1,10 @@
 ---
-title: アクティブ ドキュメントのインクリメンタル検索 | Microsoft Docs
-ms.custom: ''
+title: アクティブ ドキュメントのインクリメンタル検索
+ms.custom: seo-lt-2019
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 helpviewer_keywords:
 - searches [SQL Server Management Studio], incremental
@@ -15,12 +14,12 @@ ms.assetid: 490bb36c-dd43-4219-9e2a-ff27046b9395
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 927558fc5da39f612acd7f8a3270d8810569258a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 9334e4d44663f5d0637d6933eb7a72eae74d4a84
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48184152"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75243648"
 ---
 # <a name="search-an-active-document-incrementally"></a>アクティブ ドキュメントのインクリメンタル検索
   テキストを入力して、1 つのドキュメント内またはウィンドウ内のインクリメンタル検索を実行できます。 検索操作では、ドキュメント内またはウィンドウ内のインクリメンタル検索の対象として入力した文字の最初の一致項目のセットが強調表示されます。 インクリメンタル検索では、ドキュメント内またはウィンドウ内のテキストのうち、非表示になっているテキストが検索対象から自動的に除外されます。  
@@ -31,7 +30,8 @@ ms.locfileid: "48184152"
   
 1.  検索するファイルまたはウィンドウを開きます。  
   
-2.  **[編集]** メニューの **[詳細設定]** をポイントし、 **[インクリメンタル検索]** をクリックします。  
+2.  
+  **[編集]** メニューの **[詳細設定]** をポイントし、 **[インクリメンタル検索]** をクリックします。  
   
      カーソルのアイコンが、検索方向を示す矢印の付いた双眼鏡に変わり、ステータス バーに [インクリメンタル検索] と表示されます。  
   
@@ -50,9 +50,9 @@ ms.locfileid: "48184152"
   
 ## <a name="see-also"></a>参照  
  [検索と置換](search-and-replace.md)   
- [ドキュメントの対話形式の検索](search-documents-interactively.md)   
- [結果一覧を使用してドキュメントを検索する方法](search-documents-using-results-lists.md)   
- [ワイルドカードを使用したテキスト検索](search-text-with-wildcards.md)   
+ [ドキュメントを対話形式で検索する](search-documents-interactively.md)   
+ [結果一覧を使用してドキュメントを検索する](search-documents-using-results-lists.md)   
+ [ワイルドカードを使用してテキストを検索する](search-text-with-wildcards.md)   
  [正規表現によるテキストの検索](search-text-with-regular-expressions.md)  
   
   

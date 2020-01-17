@@ -1,5 +1,5 @@
 ---
-title: 手順 4:データ フロー タスクをパッケージに追加します |。Microsoft Docs
+title: 手順 4:パッケージへのデータ フロー タスクの追加 | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -7,17 +7,17 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 96af3073-8f11-4444-b934-fe8613a2d084
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 06c80bc188937ef66f72fef003a5f8c27830ad10
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 542b7e3ffcc4a1db5b2053c840b785f775384fe1
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52793944"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62891803"
 ---
-# <a name="step-4-adding-a-data-flow-task-to-the-package"></a>手順 4:データ フロー タスクをパッケージに追加します。
+# <a name="step-4-adding-a-data-flow-task-to-the-package"></a>手順 4:パッケージへのデータ フロー タスクの追加
   前の実習では、データ ソースおよび変換先データに接続するための接続マネージャーを作成しました。次の実習では、パッケージにデータ フロー タスクを追加します。 データ フロー タスクには、変換元と変換先の間でデータを移動させるデータ フロー エンジンがカプセル化されており、データを移動する際に、変換、クリーン、修正を行うことができます。 抽出、変換、読み込み (ETL) プロセスのほとんどが、このデータ フロー タスクで実行されます。  
   
 > [!NOTE]  
@@ -39,9 +39,9 @@ ms.locfileid: "52793944"
 4.  データ フロー タスクを右クリックし、をクリックして**プロパティ**、[プロパティ] ウィンドウであることを確認し、`LocaleID`プロパティに設定されて**英語 (米国)** します。  
   
 ## <a name="next-task-in-lesson"></a>このレッスンの次の作業  
- [手順 5:追加して、フラット ファイル ソースを構成します。](lesson-1-5-adding-and-configuring-the-flat-file-source.md)  
+ [手順 5: フラット ファイル ソースの追加と構成](lesson-1-5-adding-and-configuring-the-flat-file-source.md)  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [[データ フロー タスク]](control-flow/data-flow-task.md)  
   
   

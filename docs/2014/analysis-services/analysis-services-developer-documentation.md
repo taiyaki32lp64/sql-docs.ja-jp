@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: analysis-services
 ms.topic: reference
 helpviewer_keywords:
 - multidimensional data [Analysis Services], developer's guide
@@ -15,12 +13,12 @@ ms.assetid: 0a6eda76-1c5e-487e-9c8b-1feb09f1a34c
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 9296e5270fc3cb6114595dd1709b1a90e69a12ba
-ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
+ms.openlocfilehash: 1beb0a644edb25537b85c559192ece9288c2de6f
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50147137"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62638782"
 ---
 # <a name="developer39s-guide-analysis-services"></a>開発者&#39;ガイド (Analysis Services)
     

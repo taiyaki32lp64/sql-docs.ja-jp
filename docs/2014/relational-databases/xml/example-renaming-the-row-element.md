@@ -1,5 +1,5 @@
 ---
-title: '例 : &lt;row&gt; 要素の名前を変更する | Microsoft Docs'
+title: '例: &lt;row&gt; 要素の名前を変更する | Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -9,17 +9,17 @@ ms.topic: conceptual
 helpviewer_keywords:
 - RAW mode, renaming <row> example
 ms.assetid: b042292a-0b6e-40a3-b254-71c06e626706
-author: douglaslMS
-ms.author: douglasl
+author: MightyPen
+ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 92308ee94df30ad14b752b6cd55877dc784ab22b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 01b835696c5e64182cffb72aea80d53b3c3bb776
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48057112"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62704903"
 ---
-# <a name="example-renaming-the-ltrowgt-element"></a>例 : &lt;row&gt; 要素の名前を変更する
+# <a name="example-renaming-the-ltrowgt-element"></a>例: &lt;row&gt; 要素の名前を変更する
   結果セットの各行では、RAW モードによって `<row>`要素が生成されます。 次のクエリに示すように、必要に応じて、RAW モードへの省略可能な引数を指定することにより、この要素に別の名前を指定できます。 クエリでは、行セットの行ごとに <`ProductModel`> 要素が返されます。  
   
 ## <a name="example"></a>例  
@@ -41,7 +41,7 @@ GO
 </ProductModel>   
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [FOR XML での RAW モードの使用](use-raw-mode-with-for-xml.md)  
   
   

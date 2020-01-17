@@ -13,11 +13,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 3b43bbae1dfec9b7d97677b033c50d21635e6537
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48086192"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62754827"
 ---
 # <a name="database-mirroring-history"></a>[データベース ミラーリングの履歴]
   このダイアログ ボックスは、指定したサーバー インスタンスでミラー化されたデータベースについて、ミラーリング状態の履歴を表示するために使用します。  
@@ -56,7 +56,7 @@ ms.locfileid: "48086192"
   
 -   [すべてのレコード]  
   
- **[更新]**  
+ **更新**  
  履歴一覧を更新する場合にクリックします。  
   
 > [!NOTE]  

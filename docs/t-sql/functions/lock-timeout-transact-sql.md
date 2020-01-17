@@ -18,15 +18,14 @@ helpviewer_keywords:
 - current lock time-out setting
 - locking [SQL Server], time-outs
 ms.assetid: 6bf8bf97-60b8-40c1-b89d-8f5a00bcae2e
-author: MashaMSFT
-ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 08822357b12dba17e39493929db8841f5803f484
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: MikeRayMSFT
+ms.author: mikeray
+ms.openlocfilehash: 767ccc61139886a1e81bbeb390b89676267b0d79
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47677990"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68059899"
 ---
 # <a name="x40x40locktimeout-transact-sql"></a>&#x40;&#x40;LOCK_TIMEOUT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -45,19 +44,19 @@ ms.locfileid: "47677990"
  **整数 (integer)**  
   
 ## <a name="remarks"></a>Remarks  
- SET LOCK_TIMEOUT を使用して、使用されないようにブロックされているリソースが使用できるようになるまでのステートメントの最大待ち時間を設定できます。 待ち時間が LOCK_TIMEOUT の設定を超える場合、ブロックされているステートメントは自動的に取り消され、エラー メッセージがアプリケーションに返されます。  
+ SET LOCK_TIMEOUT を使用して、使用されないようにブロックされているリソースが使用できるようになるまでのステートメントの最大待ち時間を設定できます。 ステートメントの待機時間が LOCK_TIMEOUT の設定を超えると、ブロックされているステートメントが自動的に取り消され、エラー メッセージがアプリケーションに返されます。  
   
  現在のセッションで SET LOCK_TIMEOUT がまだ実行されていない場合、@@LOCK_TIMEOUT は値 -1 を返します。  
   
 ## <a name="examples"></a>使用例  
- この例では、LOCK_TIMEOUT 値が設定されていない場合の結果セットを表示します。  
+ この例では、LOCK_TIMEOUT 値が設定されていない場合の結果セットを示します。  
   
 ```  
 SELECT @@LOCK_TIMEOUT AS [Lock Timeout];  
 GO  
 ```  
   
- Here is the result set:  
+ 結果セットは次のようになります。  
   
 ```  
 Lock Timeout  
@@ -73,7 +72,7 @@ SELECT @@LOCK_TIMEOUT AS [Lock Timeout];
 GO  
 ```  
   
- Here is the result set:  
+ 結果セットは次のようになります。  
   
 ```  
 Lock Timeout  

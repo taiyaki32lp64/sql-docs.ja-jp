@@ -7,15 +7,15 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 030b10c2-6b88-4c2c-bf67-22994be25a60
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 0b7c3b34f60f69a788c67022151dd90ddc9235e8
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: acb755f8cc1e425e38714013511948f7b5b4c580
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52779954"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62836862"
 ---
 # <a name="connection-to-sql-server-for-delete"></a>削除用の SQLServer への接続
   MSXDBCDC データベースに対する書き込み権限を含むデータベース ロール (**db_owner** ロールなど) を持たないログインが Oracle CDC インスタンスの削除を試みると、[SQL Server への接続] ダイアログ ボックスが表示されます。  
@@ -32,16 +32,16 @@ ms.locfileid: "52779954"
   
 -   **[Windows 認証]**  
   
--   **SQL Server 認証**:このオプションを選択する場合は入力、**ログイン**と**パスワード**内のユーザーに対して、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]に接続しています。  
+-   **[SQL Server 認証]**: このオプションを選択する場合、接続先の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のユーザーの **[ログイン]** と **[パスワード]** を入力する必要があります。  
   
  **[オプション]**  
  矢印をクリックして、構成するオプションを表示します。 これらのオプションを既定値のままにすることもできます。 使用可能なオプションは次のとおりです。  
   
--   **接続タイムアウト**:プログラムが待機する時間 (秒) を入力、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]接続がタイムアウト エラーを生成する前に確立されています。 既定値は **15**です。  
+-   **[接続タイムアウト]**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] への接続が確立されるまでプログラムが待機する時間 (秒単位) を入力します。この時間を超過するとタイムアウト エラーが発生します。 既定値は **15**です。  
   
--   **実行タイムアウト**:プログラムが SQL コマンドの実行がタイムアウト エラーを生成する前に完了するを待機する秒単位で時間を入力します。 既定値は、 **30**です。  
+-   **[実行タイムアウト]**: SQL コマンドの実行が完了するまでプログラムが待機する時間 (秒単位) を入力します。この時間を超過するとタイムアウト エラーが発生します。 既定値は、 **30**です。  
   
--   **接続を暗号化**:選択**暗号化接続**ことを確認する、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]確立されているプライバシーを保証するために暗号化された接続。  
+-   **[暗号化接続]**: 確立する [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] への接続を暗号化してプライバシーを確保するには、**[暗号化接続]** を選択します。  
   
 -   **[詳細設定]**:必要に応じて、 **[詳細設定]** をクリックし、[高度な接続プロパティ] ダイアログ ボックスに追加の接続プロパティを入力します。  
   

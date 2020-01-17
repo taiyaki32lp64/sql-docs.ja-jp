@@ -7,12 +7,12 @@ ms.topic: include
 ms.date: 02/05/2018
 ms.author: mikeray
 ms.custom: include file
-ms.openlocfilehash: 87fce17db46dc590fbffe0bae0b27c17bd54320e
-ms.sourcegitcommit: ef78cc196329a10fc5c731556afceaac5fd4cb13
+ms.openlocfilehash: 6b00c445f75c4cdc36e34d471b01d4fa56f81f9e
+ms.sourcegitcommit: 77293fb1f303ccfd236db9c9041d2fb2f64bce42
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/19/2018
-ms.locfileid: "49476288"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70963581"
 ---
 各可用性グループにはプライマリ レプリカが 1 つだけあります。 プライマリ レプリカは読み書きができます。 プライマリになっているレプリカの変更は、フェールオーバーで行うことができます。 高可用性の可用性グループでは、クラスター マネージャーによってフェールオーバー プロセスが自動化されます。 クラスターの種類が NONE の可用性グループでは、フェールオーバー プロセスは手動です。 
 
@@ -72,7 +72,7 @@ ALTER AVAILABILITY GROUP [ag1]  SET (ROLE = SECONDARY);
 
    ```SQL
    ALTER AVAILABILITY GROUP [ag1] 
-        SET REQUIRED_SYNCHRONIZED_SECONDARIES_TO_COMMIT = 1;
+        SET (REQUIRED_SYNCHRONIZED_SECONDARIES_TO_COMMIT = 1);
    ```
 
    この設定により、すべてのアクティブなトランザクションが、プライマリ レプリカと少なくとも 1 つの同期セカンダリ レプリカにコミットされます。 

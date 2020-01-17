@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - mining models, browsing
@@ -17,12 +16,12 @@ ms.assetid: ad35a528-1949-4048-8678-3b9760c1c88c
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 5176d4e40f0f99810a14ad5ce4298e3a7167d770
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 830aea002e8000feeda061f42af9084696ed6fe8
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48223202"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66088489"
 ---
 # <a name="browsing-a-forecasting-model"></a>予測モデルの参照
   使用して予測モデルを開く**参照**では、タイム シリーズ モデル ビューアーに似たの対話型ビューアーにモデルが表示されます[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]します。 ビューアーは、傾向の調査、系列の比較、予測の作成、およびモデルと基になるデータに関する情報の取得に役立ちます。  
@@ -87,7 +86,7 @@ ms.locfileid: "48223202"
   
  [モデルを調査します。](#bkmk_Top)  
   
-###  <a name="bkmk_Model"></a> モデル  
+###  <a name="bkmk_Model"></a> [モデル]  
  予測モデルはデシジョン ツリーとして表すこともできます。また、系列がほぼ直線状の場合は、回帰モデルとして表すことができます。  
   
  たとえば、このモデルでは、特定の条件に基づく回帰式に違いがあるため、ツリーは、それぞれ回帰式が異なる 2 つの分岐に分かれます。  
@@ -110,7 +109,7 @@ ms.locfileid: "48223202"
   
  [モデルを調査します。](#bkmk_Top)  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [Excel におけるモデルの参照&#40;SQL Server データ マイニング アドイン&#41;](browsing-models-in-excel-sql-server-data-mining-add-ins.md)  
   
   

@@ -1,10 +1,8 @@
 ---
-title: 登録済みのフィルターおよびワード ブレーカーの表示または変更 | Microsoft Docs
-ms.custom: ''
+title: 登録済みのフィルターおよびワード ブレーカーの表示または変更
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: search, sql-database
-ms.reviewer: ''
 ms.technology: search
 ms.topic: conceptual
 helpviewer_keywords:
@@ -13,16 +11,17 @@ helpviewer_keywords:
 - filters [full-text search]
 - word breakers [full-text search]
 ms.assetid: f88c54df-b1aa-4701-807f-dc92c32363fd
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
+author: pmasl
+ms.author: pelopes
+ms.reviewer: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 8c0c8624187fe53a34056f75eae056c189541e95
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.custom: seo-lt-2019
+ms.openlocfilehash: 4b1679674ba3ae46dd988ef25703acd291fc6bfa
+ms.sourcegitcommit: d00ba0b4696ef7dee31cd0b293a3f54a1beaf458
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51660851"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "74056083"
 ---
 # <a name="view-or-change-registered-filters-and-word-breakers"></a>登録済みのフィルターおよびワード ブレーカーの表示または変更
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]

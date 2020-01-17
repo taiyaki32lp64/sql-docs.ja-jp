@@ -11,15 +11,15 @@ helpviewer_keywords:
 - hierarchies [Master Data Services], explicit hierarchies
 - explicit hierarchies
 ms.assetid: e6f44e37-e1f0-4c38-a816-1935a856d5a4
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 90153c2ed0524a486fe7014890e7e1a30d987d84
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: db039658fa292976062426268234d3978c1b32ef
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52809274"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65483002"
 ---
 # <a name="explicit-hierarchies-master-data-services"></a>明示的階層 (Master Data Services)
   [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]の明示的階層は、1 つのエンティティからのメンバーを指定した任意の方法で整理します。 構造は不規則にすることができます。派生階層とは異なり、明示的階層はドメイン ベースの属性のリレーションシップに基づいていません。  
@@ -69,7 +69,7 @@ ms.locfileid: "52809274"
 |不規則になる場合がある|常に一定のレベル数を含む|  
   
 ## <a name="explicit-hierarchy-example"></a>明示的階層の例  
- 次の例では、Product エンティティに以下のリーフ メンバーが含まれています。Bk-m101 {mountain-100}、bk-m201 {mountain-200}、BK M301 {Mountain 300}、bk-r150 {road-150}、bk-r450 {{road-450}、および BK R650 {road-650}。  
+ 次の例では、Product エンティティに以下のリーフ メンバーが含まれています。BK-M101 {Mountain-100}、BK-M201 {Mountain-200}、BK-M301 {Mountain-300}、BK-R150 {Road-150}、BK-R450 {Road-450}、BK-R650 {Road-650}。  
   
  これらのリーフ メンバーを特定の統合ポイントで集計するには、Product エンティティに統合メンバーを作成します。 リーフ メンバーを集計する階層ツリー内のレベルに、統合メンバーを挿入します。 統合メンバーを挿入するレベルについての制限はありませんが、各メンバー (リーフまたは統合) を使用できるのは 1 回のみです。  
   

@@ -15,15 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - STMLineFromWKB method
 ms.assetid: 05ca6d65-4799-4b9a-9672-cfebae95f23e
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: 723e8f173b36b3b62cf7eece71940affc780da9d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: MladjoA
+ms.author: mlandzic
+ms.openlocfilehash: 59842dc6ee0fa2d0438aeed0620cf7ac04094c59
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47804857"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67896407"
 ---
 # <a name="stmlinefromwkb-geography-data-type"></a>STMLineFromWKB (geography データ型)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -47,9 +46,9 @@ STMLineFromWKB ( 'WKB_multilinestring' , SRID )
 ## <a name="return-types"></a>戻り値の型  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 戻り値の型: **geography**  
   
- CLR の戻り値の型: **SqlGeography**  
+ CLR の戻り値の型:**SqlGeography**  
   
- OGC の型: **MultiLineString**  
+ OGC の型:**MultiLineString**  
   
 ## <a name="remarks"></a>Remarks  
  このメソッドでは、入力が整形式でない場合に、**FormatException** がスローされます。  

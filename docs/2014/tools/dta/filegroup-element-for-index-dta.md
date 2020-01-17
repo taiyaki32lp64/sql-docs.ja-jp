@@ -15,11 +15,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: d88acb23573afbd38e24836e254e8f54921806c0
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52782974"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63154599"
 ---
 # <a name="filegroup-element-for-index-dta"></a>Index の Filegroup 要素 (DTA)
   ユーザー指定の構成で、インデックスを作成するファイル グループを指定します。  
@@ -41,7 +41,7 @@ ms.locfileid: "52782974"
 |--------------------|-----------------|  
 |**データ型と長さ**|`string`、長さは無制限です。|  
 |**既定値**|[なし] :|  
-|**個数**|任意。 `Index` 要素につき 1 回使用できます。 この要素は、`PartitionScheme` 要素に `PartitionColumn` および `Index` 要素が指定されている場合には使用できません。 |  
+|**個数**|任意。 `Index` 要素につき 1 回使用できます。 この要素は、`PartitionScheme` 要素に `PartitionColumn` および `Index` 要素が指定されている場合には使用できません。|  
   
 ## <a name="element-relationships"></a>要素の関係  
   

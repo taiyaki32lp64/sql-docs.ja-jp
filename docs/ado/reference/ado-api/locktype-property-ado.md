@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 9920c14e-033a-4de1-8149-0ce9737a3246
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 05670439a8f14018a999557dd135912e0c2e0159
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 7b50ab4a6fa31ec74371b86129f30abf11a1ba6c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47736020"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67932250"
 ---
 # <a name="locktype-property-ado"></a>LockType プロパティ (ADO)
 編集中に、レコードに置かれたロックの種類を示します。  
@@ -44,7 +43,7 @@ ms.locfileid: "47736020"
 ## <a name="applies-to"></a>適用対象  
  [Recordset オブジェクト (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [CursorType、LockType、EditMode プロパティの例 (VB)](../../../ado/reference/ado-api/cursortype-locktype-and-editmode-properties-example-vb.md)   
  [CursorType、LockType、EditMode プロパティの例 (vc++)](../../../ado/reference/ado-api/cursortype-locktype-and-editmode-properties-example-vc.md)   
  [CancelBatch メソッド (ADO)](../../../ado/reference/ado-api/cancelbatch-method-ado.md)   

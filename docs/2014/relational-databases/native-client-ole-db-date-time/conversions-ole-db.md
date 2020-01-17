@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: b35583f18cbe590773c6661091186f669e012555
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52763159"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62638209"
 ---
 # <a name="bindings-and-conversions-ole-db"></a>バインドと変換 (OLE DB)
   ここでは、`datetime` 値と `datetimeoffset` 値との間で変換を行う方法について説明します。 ここで説明する変換は、OLE DB によって既に提供されているか、OLE DB の一貫性がある拡張機能です。  
@@ -28,7 +28,7 @@ ms.locfileid: "52763159"
   
 -   `datetime` 型の文字列と `datetimeoffset` 型の文字列の形式は次のとおりです。  
   
-     *yyyy*-*mm*-*dd*[ *hh*:*mm*:*ss*[.*9999999*] [概要] タブ *hh*:*mm*]  
+     *yyyy*-*mm*-*dd*[ *hh*:*mm*:*ss*[.*9999999*][ ?? *hh*:*mm*]]  
   
 -   `time` 型の文字列の形式は次のとおりです。  
   

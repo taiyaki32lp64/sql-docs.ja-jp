@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 022b679c-6799-4c13-9185-814224a20412
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 5e54371d1877bbebfe566692aa02f7237593b43b
-ms.sourcegitcommit: c61c7b598aa61faa34cd802697adf3a224aa7dc4
+ms.openlocfilehash: bd0f58fc45889bfef8701538bebc4ec94af85944
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56154747"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68115750"
 ---
 # <a name="maintenance-cleanup-task-maintenance-plan"></a>[メンテナンス クリーンアップ タスク] \(メンテナンス プラン)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -55,7 +54,7 @@ ms.locfileid: "56154747"
  削除するファイルが格納されているフォルダーのパスと名前を指定します。  
   
  **[ファイル拡張子]**  
- 削除するファイルのファイル拡張子を指定します。 拡張子の前後にその他の文字を含めないでください (たとえば、BAK や TRN を含めないでください)。 
+ 削除するファイルのファイル拡張子を指定します。 拡張子の前後にその他の文字を含めないでください (たとえば、BAK や TRN)。 
   
  **[直下のサブフォルダーを含める]**  
  **[ファイル拡張子]** に指定された拡張子を持つファイルを、 **[フォルダー]** の直下のサブフォルダーから削除します。  

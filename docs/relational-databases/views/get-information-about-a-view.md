@@ -21,14 +21,13 @@ helpviewer_keywords:
 ms.assetid: 05a73e33-8f85-4fb6-80c1-1b659e753403
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: d22570e6be56297a3428b5c9a89c04829379aa39
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: f5e660301620a98e7ea6b93b4242da1a0d852ce9
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52505732"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72909891"
 ---
 # <a name="get-information-about-a-view"></a>ビューに関する情報の取得
 [!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -41,7 +40,7 @@ ms.locfileid: "52505732"
   
 -   **作業を開始する準備:**  
   
-     [Security](#Security)  
+     [セキュリティ](#Security)  
   
 -   **以下を使用してビューに関する情報を取得するには:**  
   
@@ -63,7 +62,7 @@ ms.locfileid: "52505732"
 1.  **オブジェクト エクスプローラー**で、プロパティを表示するビューを含むデータベースの横にあるプラス記号をクリックします。次に、プラス記号をクリックして **[ビュー]** フォルダーを展開します。  
   
 2.  プロパティを表示するビューを右クリックし、 **[プロパティ]** を選択します。  
-  
+
      **[ビューのプロパティ]** ダイアログ ボックスに次のプロパティが表示されます。  
   
      **[データベース]**  
@@ -78,7 +77,7 @@ ms.locfileid: "52505732"
      **[作成日]**  
      ビューが作成された日付を表示します。  
   
-     **名前**  
+     **[名前]**  
      現在のビューの名前です。  
   
      **[スキーマ]**  
@@ -143,7 +142,7 @@ ms.locfileid: "52505732"
      SQL ステートメントの説明を表示します。 説明全体を表示したり、説明を編集したりするには、説明をクリックして、プロパティの右側にある省略記号 ( **[...]** ) をクリックします。 ビューの使用者やビューをいつ使用するかなどの情報をコメントに含めることもできます。  
   
      **[TOP の指定]**  
-     展開すると、 **[TOP]**、 **[式]**、 **[パーセント]**、および **[With Ties]** の各プロパティのプロパティが表示されます。  
+     展開すると、 **[TOP]** 、 **[式]** 、 **[パーセント]** 、および **[With Ties]** の各プロパティのプロパティが表示されます。  
   
      **[(Top)]**  
      ビューに TOP 句が含まれるように指定します。この場合、最初の n 行または最初の n% の行だけが結果セットに返されます。 既定では、ビューは最初の 10 行を結果セットに返します。 返される行数を変更するか、異なるパーセントを指定する場合に使用します。  

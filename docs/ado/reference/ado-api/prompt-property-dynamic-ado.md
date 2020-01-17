@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: c4f001b5-8d16-4d39-a42e-c0e2faaaceaf
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: fc11f2691613848865219f80b82a7d082803fa04
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: cde7a5ad0324bc7d5cde5e1a794eeb9e2cb3381a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47752351"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67931570"
 ---
 # <a name="prompt-property-dynamic-ado"></a>Prompt プロパティ - 動的 (ADO)
 OLE DB プロバイダーが初期化情報をユーザーのメッセージを表示するかどうかを指定します。  

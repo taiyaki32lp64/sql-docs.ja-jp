@@ -1,5 +1,5 @@
 ---
-title: '[ユーザー/グループのアクセス許可] 機能領域 (マスター データ マネージャー) | Microsoft Docs'
+title: '[ユーザー/グループの権限] 機能領域'
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -8,15 +8,14 @@ ms.reviewer: ''
 ms.technology: master-data-services
 ms.topic: conceptual
 ms.assetid: 320d417e-a370-48fc-a05b-444d85fd24c0
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 5d9f97f58747ecde143a1c2244a68d8bdaf7d91c
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
-ms.translationtype: HT
+ms.openlocfilehash: e651a31bc37de8f90ecf18615c761100dbdfff2d
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52769675"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73727816"
 ---
 # <a name="user-and-group-permissions-functional-area-master-data-manager"></a>[ユーザー/グループの権限] 機能領域 (マスター データ マネージャー)
 

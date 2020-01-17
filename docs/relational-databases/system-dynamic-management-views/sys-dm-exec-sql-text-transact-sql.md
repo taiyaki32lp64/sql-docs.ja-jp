@@ -19,14 +19,13 @@ helpviewer_keywords:
 ms.assetid: 61b8ad6a-bf80-490c-92db-58dfdff22a24
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 386a582e2d685b30a58f21a2b8938e1ae1698938
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 4ff8d99bd31e2638aa63393fb5ba052f442bf75f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47812210"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67936890"
 ---
 # <a name="sysdmexecsqltext-transact-sql"></a>sys.dm_exec_sql_text (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -42,7 +41,9 @@ sys.dm_exec_sql_text(sql_handle | plan_handle)
   
 ## <a name="arguments"></a>引数  
 *sql_handle*  
-検索するバッチの SQL ハンドルを指定します。 *sql_handle*は**varbinary (64)** します。 *sql_handle*次の動的管理オブジェクトから取得できます。  
+実行された内または現在実行中のバッチを一意に識別するトークンです。 *sql_handle*は**varbinary (64)** します。 
+
+*Sql_handle*次の動的管理オブジェクトから取得できます。  
   
 -   [sys.dm_exec_query_stats](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-stats-transact-sql.md)  
   
@@ -57,22 +58,28 @@ sys.dm_exec_sql_text(sql_handle | plan_handle)
 -   [sys.dm_exec_connections](../../relational-databases/system-dynamic-management-views/sys-dm-exec-connections-transact-sql.md)  
   
 *plan_handle*  
-キャッシュ内または現在実行中のバッチのクエリ プランを一意に識別します。 *plan_handle*は**varbinary (64)** します。 *plan_handle*次の動的管理オブジェクトから取得できます。  
+実行されるバッチのクエリ実行プランを一意に識別するトークンと、そのプランがプラン キャッシュ内に存在または現在実行しています。 *plan_handle*は**varbinary (64)** します。   
+
+*Plan_handle*次の動的管理オブジェクトから取得できます。    
   
--   [sys.dm_exec_cached_plans](../../relational-databases/system-dynamic-management-views/sys-dm-exec-cached-plans-transact-sql.md)  
+-   [sys.dm_exec_cached_plans &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-cached-plans-transact-sql.md)  
   
--   [sys.dm_exec_query_stats](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-stats-transact-sql.md)  
+-   [sys.dm_exec_query_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-stats-transact-sql.md)  
   
--   [sys.dm_exec_requests](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md)   
+-   [sys.dm_exec_requests &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md)  
+
+-   [sys.dm_exec_procedure_stats &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-procedure-stats-transact-sql.md)  
+
+-   [sys.dm_exec_trigger_stats &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-trigger-stats-transact-sql.md)   
   
 ## <a name="table-returned"></a>返されるテーブル  
   
 |列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
 |**dbid**|**smallint**|データベースの ID。<br /><br /> アドホック SQL ステートメントおよび準備された SQL ステートメントの場合、ステートメントがコンパイルされたデータベースの ID。|  
-|**objectid**|**int**|オブジェクトの ID。<br /><br /> アドホック SQL ステートメントおよび準備された SQL ステートメントの場合は NULL になります。|  
-|**number**|**smallint**|番号付きストアド プロシージャの場合、ストアド プロシージャの番号。 詳細については、次を参照してください。 [sys.numbered_procedures &#40;TRANSACT-SQL&#41;](../../relational-databases/system-catalog-views/sys-numbered-procedures-transact-sql.md)します。<br /><br /> アドホック SQL ステートメントおよび準備された SQL ステートメントの場合は NULL になります。|  
-|**encrypted**|**bit**|1 = SQL テキストは暗号化されています。<br /><br /> 0 = SQL テキストは暗号化されていません。|  
+|**objectid**|**int**|オブジェクトの ID。<br /><br /> アドホックおよび準備された SQL ステートメントに NULL です。|  
+|**number**|**smallint**|番号付きストアド プロシージャでは、この列は、ストアド プロシージャの数を返します。 詳細については、次を参照してください。 [sys.numbered_procedures &#40;TRANSACT-SQL&#41;](../../relational-databases/system-catalog-views/sys-numbered-procedures-transact-sql.md)します。<br /><br /> アドホックおよび準備された SQL ステートメントに NULL です。|  
+|**encrypted**|**bit**|1 = SQL テキストは暗号化されています。<br /><br /> 0 = SQL テキストは暗号化されません。|  
 |**text**|**nvarchar(max** **)**|SQL クエリのテキスト。<br /><br /> 暗号化されているオブジェクトの場合は NULL になります。|  
   
 ## <a name="permissions"></a>アクセス許可  
@@ -81,7 +88,7 @@ sys.dm_exec_sql_text(sql_handle | plan_handle)
 ## <a name="remarks"></a>コメント  
 アドホック クエリでは、SQL ハンドルは、サーバーに送信されている SQL テキストに基づくハッシュ値と、任意のデータベースから取得できます。 
 
-ストアド プロシージャ、トリガー、関数などのデータベース オブジェクトでは、SQL ハンドルはデータベース ID、オブジェクト ID、オブジェクト番号から取得します。 
+ストアド プロシージャ、トリガー、関数など、データベース オブジェクトに対して、SQL ハンドルはデータベース ID、オブジェクト ID、およびオブジェクト番号から派生します。 
 
 プラン ハンドルは、バッチ全体のコンパイル済みプランから取得したハッシュ値です。 
 
@@ -141,7 +148,7 @@ ORDER BY total_worker_time/execution_count DESC;
 ```  
   
 ### <a name="c-provide-batch-execution-statistics"></a>C. バッチ実行の統計情報を提供します。  
- 次の例では、バッチで実行されている SQL クエリのテキストを返し、クエリに関する統計情報を提供します。  
+ 次の例では、バッチで実行されている SQL クエリのテキストを返すし、それらに関する統計情報を提供します。  
   
 ```sql  
 SELECT s2.dbid,   
@@ -179,6 +186,5 @@ ORDER BY s1.sql_handle, s1.statement_start_offset, s1.statement_end_offset;
  [sys.dm_exec_cursors &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-cursors-transact-sql.md)   
  [sys.dm_exec_xml_handles &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-xml-handles-transact-sql.md)   
  [sys.dm_exec_query_memory_grants &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-memory-grants-transact-sql.md)   
- [使用します。](../../t-sql/queries/from-transact-sql.md#using-apply)   
- [sys.dm_exec_text_query_plan &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-text-query-plan-transact-sql.md)  
+ [使用する](../../t-sql/queries/from-transact-sql.md#using-apply)   [sys.dm_exec_text_query_plan &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-text-query-plan-transact-sql.md)  
 

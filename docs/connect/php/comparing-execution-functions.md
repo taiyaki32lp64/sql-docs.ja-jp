@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 130fc0fd-87dd-46b2-918f-de9dc572c769
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 46a1f3e53c4953f08400d5d5599bec348fb6b15c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: f2b4d6c85c399589aae4eedbaade4bbdc4f70609
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47749441"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67993741"
 ---
 # <a name="comparing-execution-functions"></a>実行関数の比較
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -42,5 +41,5 @@ PDO_SQLSRV ドライバーを使用している場合は、次のいずれかで
 
 [PDO_SQLSRV ドライバー リファレンス](../../connect/php/pdo-sqlsrv-driver-reference.md)
 
-[For PHP for SQL Server のプログラミング、Microsoft ドライバーのガイド](../../connect/php/programming-guide-for-php-sql-driver.md)
+[SQL Server 用 Microsoft Drivers for PHP のためのプログラミング ガイド](../../connect/php/programming-guide-for-php-sql-driver.md)
   

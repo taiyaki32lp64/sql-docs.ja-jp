@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 0ded5ad9-8f83-4224-95af-38512783b972
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 50bdb3117b01d68f03208d6db501d44f05a849ce
-ms.sourcegitcommit: 1e28f923cda9436a4395a405ebda5149202f8204
+ms.openlocfilehash: 35169313ae487514403f62c8e6d1ba2c262cb8a7
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/25/2019
-ms.locfileid: "55044885"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67921005"
 ---
 # <a name="ado-events"></a>ADO のイベント
 
@@ -46,12 +45,12 @@ ms.locfileid: "55044885"
 |[WillExecute](../../../ado/reference/ado-api/willexecute-event-ado.md)|保留中のコマンドは、この接続上で実行し、ユーザーに確認し、保留中の実行のパラメーターを変更する機会を提供する直前に呼び出されます。|  
 |[WillMove](../../../ado/reference/ado-api/willmove-and-movecomplete-events-ado.md)|**WillMove**イベントが呼び出される*する前に*保留中の操作の現在の位置を変更する、 **Recordset**します。|  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [ADO の API リファレンス](../../../ado/reference/ado-api/ado-api-reference.md)   
  [ADO のコレクション](../../../ado/reference/ado-api/ado-collections.md)   
  [ADO の動的プロパティ](../../../ado/reference/ado-api/ado-dynamic-properties.md)   
  [ADO の列挙定数](../../../ado/reference/ado-api/ado-enumerated-constants.md)   
- [付録 b:ADO エラー](../../../ado/guide/appendixes/appendix-b-ado-errors.md)   
+ [付録 B: ADO エラー](../../../ado/guide/appendixes/appendix-b-ado-errors.md)   
  [ADO イベントの処理](../../../ado/guide/data/handling-ado-events.md)   
  [ADO メソッド](../../../ado/reference/ado-api/ado-methods.md)   
  [ADO オブジェクト モデル](../../../ado/reference/ado-api/ado-object-model.md)   

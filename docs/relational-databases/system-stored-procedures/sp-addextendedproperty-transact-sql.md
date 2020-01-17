@@ -17,14 +17,13 @@ helpviewer_keywords:
 ms.assetid: 565483ea-875b-4133-b327-d0006d2d7b4c
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 40437cd27af345aff91314f07888c66e2bdff2d0
-ms.sourcegitcommit: 98324d9803edfa52508b6d5d3554614d0350a0b9
+ms.openlocfilehash: 2600543715bffaba36e29305b0893a9f17cca59c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52321748"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68072690"
 ---
 # <a name="spaddextendedproperty-transact-sql"></a>sp_addextendedproperty (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -61,7 +60,7 @@ sp_addextendedproperty
  プロパティに関連する値です。 *値*は**sql_variant**、既定値は NULL です。 *value* のサイズは、7,500 バイト以下にする必要があります。  
   
  [ @level0type=] {'*level0_object_type*'}  
- レベル 0 のオブジェクトの型です。 *level0_object_type*は**varchar (128)**、既定値は NULL です。  
+ レベル 0 のオブジェクトの型です。 *level0_object_type*は**varchar (128)** 、既定値は NULL です。  
   
  有効な値は、ASSEMBLY、CONTRACT、EVENT NOTIFICATION、FILEGROUP、MESSAGE TYPE、PARTITION FUNCTION、PARTITION SCHEME、REMOTE SERVICE BINDING、ROUTE、SCHEMA、SERVICE、USER、TRIGGER、TYPE、PLAN GUIDE、および NULL です。  
   
@@ -72,12 +71,12 @@ sp_addextendedproperty
  指定したレベル 0 のオブジェクトの種類の名前です。 *level0_object_name*は**sysname**既定値は NULL です。  
   
  [ @level1type=] {'*level1_object_type*'}  
- レベル 1 のオブジェクトの種類です。 *level1_object_type*は**varchar (128)**、既定値は NULL です。 有効な入力値は、集計、既定値、関数、論理ファイル名、プロシージャ、キュー、ルール、シーケンス、シノニム、テーブル、TABLE_TYPE、型、ビュー、XML スキーマ コレクション、および NULL です。    
+ レベル 1 のオブジェクトの種類です。 *level1_object_type*は**varchar (128)** 、既定値は NULL です。 有効な入力値は、集計、既定値、関数、論理ファイル名、プロシージャ、キュー、ルール、シーケンス、シノニム、テーブル、TABLE_TYPE、型、ビュー、XML スキーマ コレクション、および NULL です。    
  [ @level1name=] {'*level1_object_name*'}  
  指定したレベル 1 のオブジェクトの種類の名前です。 *level1_object_name*は**sysname**、既定値は NULL です。  
   
  [ @level2type=] {'*level2_object_type*'}  
- レベル 2 のオブジェクトの型です。 *level2_object_type*は**varchar (128)**、既定値は NULL です。 有効な値は、COLUMN、CONSTRAINT、EVENT NOTIFICATION、INDEX、PARAMETER、TRIGGER、および NULL です。  
+ レベル 2 のオブジェクトの型です。 *level2_object_type*は**varchar (128)** 、既定値は NULL です。 有効な値は、COLUMN、CONSTRAINT、EVENT NOTIFICATION、INDEX、PARAMETER、TRIGGER、および NULL です。  
   
  [ @level2name=] {'*level2_object_name*'}  
  指定したレベル 2 のオブジェクトの種類の名前です。 *level2_object_name*は**sysname**、既定値は NULL です。  
@@ -100,7 +99,7 @@ sp_addextendedproperty
  拡張プロパティは、パブリッシャーとサブスクライバー間で初期同期を実行するときにのみレプリケートされます。 初期同期の完了後に拡張プロパティを追加または変更した場合、その変更はレプリケートされません。 データベース オブジェクトをレプリケートする方法の詳細については、次を参照してください。[発行データおよびデータベース オブジェクト](../../relational-databases/replication/publish/publish-data-and-database-objects.md)します。  
   
 ## <a name="schema-vs-user"></a>スキーマとユーザー  
- 名前解決にあいまいさが発生する可能性があるため、拡張プロパティをデータベース オブジェクトに適用するときに USER をレベル 0 の種類として指定することをお勧めしません。 たとえば、ユーザー Mary が 2 つのスキーマ (Mary と MySchema) を所有し、これらのスキーマの両方に MyTable という名前のテーブルがある場合を考えます。 Mary が拡張プロパティをテーブル MyTable に追加しを指定するかどうか **@level0type = N'USER'**、  **@level0name = Mary**、拡張プロパティを適用するテーブルのチェック ボックスをオフにではなくなります。 旧バージョンとの互換性を維持するために、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では Mary という名前のスキーマに含まれているテーブルにプロパティが適用されます。  
+ 名前解決にあいまいさが発生する可能性があるため、拡張プロパティをデータベース オブジェクトに適用するときに USER をレベル 0 の種類として指定することをお勧めしません。 たとえば、ユーザー Mary が 2 つのスキーマ (Mary と MySchema) を所有し、これらのスキーマの両方に MyTable という名前のテーブルがある場合を考えます。 Mary が拡張プロパティをテーブル MyTable に追加しを指定するかどうか **@level0type = N'USER'** 、  **@level0name = Mary**、拡張プロパティを適用するテーブルのチェック ボックスをオフにではなくなります。 旧バージョンとの互換性を維持するために、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では Mary という名前のスキーマに含まれているテーブルにプロパティが適用されます。  
   
 ## <a name="permissions"></a>アクセス許可  
  固定サーバー ロール db_owner および db_ddladmin のメンバーは、任意のオブジェクトに拡張プロパティを追加できます。ただし、例外として、db_ddladmin はデータベース自体、ユーザー、またはロールにプロパティを追加できません。  

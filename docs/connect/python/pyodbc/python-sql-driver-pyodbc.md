@@ -1,5 +1,5 @@
 ---
-title: Python SQL ドライバー - pyodbc |Microsoft Docs
+title: Python SQL ドライバー-pyodbc |Microsoft Docs
 ms.custom: ''
 ms.date: 08/09/2017
 ms.prod: sql
@@ -10,17 +10,16 @@ ms.topic: conceptual
 ms.assetid: fdb60557-006c-4eb5-9cef-2eb392e862de
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 1de13581ce371ed843e9290274dfcfd1a13c53c2
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.openlocfilehash: ca5946eb5c6450d55168f64dddbd0ca82d986be9
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51604972"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67935744"
 ---
 # <a name="python-sql-driver---pyodbc"></a>Python SQL ドライバー - pyodbc
 
-![ダウンロード下方向丸](../../../ssdt/media/download.png)[for Python SQL ドライバーをインストールするには](../../sql-connection-libraries.md#anchor-20-drivers-relational-access)
+![ダウンロード-DownArrow-](../../../ssdt/media/download.png)[SQL driver For Python をインストールするための](../../sql-connection-libraries.md#anchor-20-drivers-relational-access)丸
 
 ## <a name="getting-started"></a>作業の開始
 

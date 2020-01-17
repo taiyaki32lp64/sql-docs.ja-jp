@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 84ed9e77-991f-4fa5-a21f-7c6bfec1b3e3
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: 3e2a52ca65288fa6dc00160ab36be5faf1f4aed6
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 2724a62f6bf55941edbaa206728f9352e8fce5c1
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52808404"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67941720"
 ---
 # <a name="sprevokepublicationaccess-transact-sql"></a>sp_revoke_publication_access (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -38,11 +37,9 @@ sp_revoke_publication_access [ @publication = ] 'publication' , [ @login = ] 'lo
 ```  
   
 ## <a name="arguments"></a>引数  
- [ **@publication=**] **'***publication***'**  
- アクセスするパブリケーションの名前です。 *パブリケーション*は**sysname**、既定値はありません。  
+`[ @publication = ] 'publication'` アクセスするパブリケーションの名前です。 *パブリケーション* は **sysname** 、既定値はありません。  
   
- [  **@login=**] **'***ログイン***'**  
- ログイン ID です。 *ログイン*は**sysname**、既定値はありません。  
+`[ @login = ] 'login'` ログイン ID です。 *ログイン*は**sysname**、既定値はありません。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  **0** (成功) または**1** (失敗)  
@@ -55,7 +52,7 @@ sp_revoke_publication_access [ @publication = ] 'publication' , [ @login = ] 'lo
 ## <a name="permissions"></a>アクセス許可  
  メンバーのみ、 **sysadmin**固定サーバー ロールまたは**db_owner**固定データベース ロールが実行できる**sp_revoke_publication_access**します。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [sp_grant_publication_access &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-grant-publication-access-transact-sql.md)   
  [sp_help_publication_access &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-publication-access-transact-sql.md)   
  [パブリッシャーのセキュリティ保護](../../relational-databases/replication/security/secure-the-publisher.md)   

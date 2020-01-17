@@ -20,15 +20,14 @@ helpviewer_keywords:
 - signatures [SQL Server]
 - digital signatures [SQL Server]
 ms.assetid: 9f7c6e0b-5ba4-4dbb-994d-5bd59f4908de
-author: MashaMSFT
-ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 0b932435b65d7c3638e575b9ee3a86fd709f2985
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: VanMSFT
+ms.author: vanto
+ms.openlocfilehash: 414c5df86e58472bc1aa3f5df9ee25a54f8bc590
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47799450"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67927547"
 ---
 # <a name="verifysignedbyasymkey-transact-sql"></a>VERIFYSIGNEDBYASYMKEY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -68,7 +67,7 @@ VerifySignedByAsymKey( Asym_Key_ID , clear_text , signature )
 ## <a name="examples"></a>使用例  
   
 ### <a name="a-testing-for-data-with-a-valid-signature"></a>A. データの署名が有効かどうかをテストする  
- 次の例では、選択したデータが非対称キー `WillisKey74` で署名された後に変更されていない場合は 1 が返されます。 データが変更されている場合は 0 が返されます。  
+ 次の例では、選択したデータが非対称キー `WillisKey74` で署名された後に変更されていない場合は 1 が返されます。 この例では、データが変更されている場合は 0 が返されます。  
   
 ```  
 SELECT Data,  
@@ -93,7 +92,7 @@ GO
 ```  
   
 ## <a name="see-also"></a>参照  
- [ASYMKEY_ID (&) #40 です。TRANSACT-SQL と #41 です。](../../t-sql/functions/asymkey-id-transact-sql.md)   
+ [ASYMKEY_ID &#40;Transact-SQL&#41;](../../t-sql/functions/asymkey-id-transact-sql.md)   
  [SIGNBYASYMKEY &#40;Transact-SQL&#41;](../../t-sql/functions/signbyasymkey-transact-sql.md)   
  [CREATE ASYMMETRIC KEY &#40;Transact-SQL&#41;](../../t-sql/statements/create-asymmetric-key-transact-sql.md)   
  [ALTER ASYMMETRIC KEY &#40;Transact-SQL&#41;](../../t-sql/statements/alter-asymmetric-key-transact-sql.md)   

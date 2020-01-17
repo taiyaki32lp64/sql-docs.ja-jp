@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 ms.assetid: 80f9fdde-1f13-4292-a4fc-55da826be3b4
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: f8b790bfcc57341e9ad13d29df9e982a524526aa
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 072a3220ba5c6997c463031733bbbe0ce2587fe1
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48150052"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66088907"
 ---
 # <a name="script-an-extended-event-session"></a>拡張イベント セッションのスクリプト化
   このトピックでは、イベント セッションをスクリプト化する方法について説明します。 イベント セッションはエクスポート、変更、または削除できるほか、イベント セッションを削除してから新たに作成し、次のような形式で出力することができます。  

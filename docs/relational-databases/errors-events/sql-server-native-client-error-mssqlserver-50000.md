@@ -12,18 +12,16 @@ helpviewer_keywords:
 ms.assetid: 5426d87a-d5d9-4984-b211-b07d69e834a2
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: aaf143c4a02c0faca0d61104dd8cbaf9eaf6e0e0
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 5a8335493cad5325d8433305a8a5d7968765cc39
+ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47825780"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73757543"
 ---
-# <a name="sql-server-native-client-error-mssqlserver50000"></a>SQL Server Native Client エラー MSSQLSERVER_50000
+# <a name="sql-server-native-client-error-mssqlserver_50000"></a>SQL Server Native Client エラー MSSQLSERVER_50000
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-[!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
 
     
 ## <a name="details"></a>詳細  

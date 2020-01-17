@@ -4,22 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 helpviewer_keywords:
 - HTML Viewer [Reporting Services]
 - report toolbar [Reporting Services]
 ms.assetid: cd86b319-babd-45af-a6a4-f659fdcc40c3
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 8d3abef04fd707681499d13246f050bc75eeda98
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: b8043bb8f95ea67dbc3dceedc9cfd0154b033d51
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56015983"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66109047"
 ---
 # <a name="html-viewer-and-the-report-toolbar"></a>HTML ビューアーとレポート ツール バー
   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] には、レポート サーバーからの要求に応じてレポートを表示するために使用される HTML ビューアーが用意されています。 HTML ビューアーには、HTML でレポートを表示するためのフレームワークが提供されます。 これには、レポート ツール バー、パラメーター セクション、資格情報セクション、およびドキュメント マップが含まれます。 HTML ビューアーのレポート ツール バーには、HTML 以外の形式でレポートを表示できるエクスポート オプションなど、レポートに関する作業に使用できる機能が用意されています。 パラメーター セクションとドキュメント マップは、パラメーターまたはドキュメント マップ コントロールを使用するように構成されているレポートを開いた場合のみ表示されます。  
@@ -72,7 +71,7 @@ ms.locfileid: "56015983"
 ## <a name="credentials"></a>[資格情報]  
  資格情報は、データ ソースにアクセスできるユーザー名とパスワードの値です。 資格情報を指定した後、 **[レポートの表示]** をクリックしてデータを取得します。 ユーザーのログオンが必要なレポートの場合、ユーザーが参照することを許可されたデータは、別のユーザーが参照するデータとは異なる場合があります。 つまり、2 人のユーザーが同じレポートを実行しても、異なる結果が得られる場合があります。 さらに、レポートによっては非表示の内容が含まれている場合があり、その内容はユーザーのログオン資格情報またはレポートで選択された内容に基づいて開示されます。 レポートで非表示になっている領域は検索操作の対象から除外されるため、すべての情報が表示された状態のレポートに検索を行った場合とは異なる検索結果が返されます。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [レポート データ ソースに関する資格情報と接続情報を指定する](report-data/specify-credential-and-connection-information-for-report-data-sources.md)   
  [レポートの検索、表示、管理 (レポート ビルダーおよび SSRS)](report-builder/finding-viewing-and-managing-reports-report-builder-and-ssrs.md)   
  [レポートのエクスポート&#40;レポート ビルダーおよび SSRS&#41;](report-builder/export-reports-report-builder-and-ssrs.md)  

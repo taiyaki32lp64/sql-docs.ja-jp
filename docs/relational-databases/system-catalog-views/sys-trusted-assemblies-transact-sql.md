@@ -17,16 +17,15 @@ helpviewer_keywords:
 ms.assetid: ''
 author: VanMSFT
 ms.author: vanto
-manager: craigg
 monikerRange: '>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 5830d394330778fae6aab795286c7fbc9e211072
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 9682535c82f8a579259993e82560dfe6bc930f93
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47710720"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68061363"
 ---
-# <a name="systrustedassemblies-transact-sql"></a>sys.trusted_assemblies (TRANSACT-SQL)  
+# <a name="systrustedassemblies-transact-sql"></a>sys.trusted_assemblies (Transact-SQL)  
 [!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]
 
 サーバーの各信頼されたアセンブリの行が含まれています。
@@ -36,10 +35,10 @@ ms.locfileid: "47710720"
 
 |列名 |データ型 |説明 |
 |--- |--- |--- |
-|ハッシュ |varbinary (8000) |アセンブリ コンテンツの SHA2_512 のハッシュです。 |
+|hash |varbinary (8000) |アセンブリ コンテンツの SHA2_512 のハッシュです。 |
 |description |nvarchar (4000) |省略可能なユーザー定義アセンブリの説明。 簡易名、バージョン番号、カルチャ、公開キー、および信頼するアセンブリのアーキテクチャをエンコードする正規名を使用することをお勧めします。 この値は一意に共通言語ランタイム (CLR) 側でアセンブリを識別し、sys.assemblies clr_name 値と同じです。 |
 |create_date |datetime2 |アセンブリが信頼されたアセンブリの一覧に追加された日付。 |
-|created_by |nvarchar (128) |アセンブリが一覧に追加したプリンシパルのログイン名。 |
+|created_by |nvarchar(128) |アセンブリが一覧に追加したプリンシパルのログイン名。 |
 | | | |
 
 
@@ -47,7 +46,7 @@ ms.locfileid: "47710720"
 
 使用**sp_add_trusted_assembly を追加する必要があります**と**sys.trusted_assemblies を追加する必要があります**を追加または削除からのアセンブリ`sys.trusted_assemblies`します。
 
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
   [sys.sp_add_trusted_assembly](../../relational-databases/system-stored-procedures/sys-sp-add-trusted-assembly-transact-sql.md) [sys.sp_drop_trusted_assembly](../../relational-databases/system-stored-procedures/sys-sp-drop-trusted-assembly-transact-sql.md) [DROP ASSEMBLY &#40;Transact-SQL&#41;](../../t-sql/statements/drop-assembly-transact-sql.md)  
   [sys.assemblies](../../relational-databases/system-catalog-views/sys-assemblies-transact-sql.md)  
   [sys.dm_clr_loaded_assemblies](../../relational-databases/system-dynamic-management-views/sys-dm-clr-loaded-assemblies-transact-sql.md)  

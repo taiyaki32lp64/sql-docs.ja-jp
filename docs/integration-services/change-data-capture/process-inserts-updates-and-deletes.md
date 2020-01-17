@@ -10,17 +10,20 @@ ms.topic: conceptual
 helpviewer_keywords:
 - incremental load [Integration Services],processing data
 ms.assetid: 13a84d21-2623-4efe-b442-4125a7a2d690
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: 485618b3e013d1abff0c52d2625357c2ed9951ca
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 035c31286e0594763c1063b606ad56473c41fbf5
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47722540"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71294610"
 ---
 # <a name="process-inserts-updates-and-deletes"></a>挿入、更新、および削除を処理する
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   変更データの増分読み込みを実行する Integration Services パッケージのデータ フローにおいて、2 番目のタスクは、挿入、更新、および削除を分割することです。 その後、適切なコマンドを使用してそれらの変更を変換先に適用できるようになります。  
   
 > [!NOTE]  

@@ -12,14 +12,14 @@ ms.assetid: 67208b7c-bd8d-48a1-9f70-a6488e0f5f9b
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 6bd85b72fc786d4aa807d73e57a69193b515067d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 6f69e72bda33f361f168c3964411c969adffaa0e
+ms.sourcegitcommit: f76b4e96c03ce78d94520e898faa9170463fdf4f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48135922"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70874545"
 ---
-# <a name="mssqlserver847"></a>MSSQLSERVER_847
+# <a name="mssqlserver_847"></a>MSSQLSERVER_847
     
 ## <a name="details"></a>詳細  
   
@@ -33,7 +33,7 @@ ms.locfileid: "48135922"
 |メッセージ テキスト|ラッチを待機中にタイムアウトが発生しました。クラス '%ls'、ID %p、型 %d、タスク 0x%p : %d、待機時間 %d、フラグ 0x%I64x、所有しているタスク 0x%p。 待機を続行します。|  
   
 ## <a name="explanation"></a>説明  
- コンピューターが応答を停止 (ハング) するか、タイムアウトなどにより通常の操作が中断されますが、これと同時に、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] によってバッファー ラッチ エラーが [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エラー ログに書き込まれています。  
+ コンピューターが応答を停止したか、タイムアウトまたは通常の操作の中断が発生した[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]ときに、バッファーラッチエラーが[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]エラーログに書き込まれます。  
   
  メッセージの状態フィールドの値 0x04 がオンの場合、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] は I/O 操作を待機しています。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エラー ログにメッセージ [MSSQLSERVER_833](mssqlserver-833-database-engine-error.md) を受信する場合もあります。  
   

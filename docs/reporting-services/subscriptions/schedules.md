@@ -2,7 +2,7 @@
 title: スケジュール | Microsoft Docs
 ms.date: 07/01/2016
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: subscriptions
 ms.topic: conceptual
 helpviewer_keywords:
@@ -13,23 +13,23 @@ helpviewer_keywords:
 - subscriptions [Reporting Services], scheduling
 - automatic report processing
 ms.assetid: ecccd16b-eba9-4e95-b55d-f15c621e003f
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 10bdfa7e45324e845019e6b670321e56839a79bd
-ms.sourcegitcommit: c7febcaff4a51a899bc775a86e764ac60aab22eb
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: e73ce189b38f3610468993999df172d778f30026
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "52711473"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65578092"
 ---
-# <a name="schedules"></a>Schedules
+# <a name="schedules"></a>スケジュール
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] には、レポートの処理および配信の制御を支援する **共有スケジュール** と **レポート固有スケジュール** が用意されています。 これら 2 種類のスケジュールでは、定義、格納、管理の方法が異なります。 2 種類のスケジュールの内部の構成は同じです。 すべてのスケジュールでは、毎月、毎週、または毎日という定期実行の種類を指定します。 定期実行の種類では、イベントが発生する頻度を表す間隔と範囲を設定します。 定期的な実行パターンの種類とパターンの指定方法は、共有スケジュールとレポート固有スケジュールのいずれを作成する場合でも同じです。
   
   -   共有スケジュールは、個別のアイテムとして作成されます。 共有スケジュールは、作成後、サブスクリプションまたは他のスケジュール操作を定義するときに参照します。  
   
 -   レポート固有スケジュールは、サブスクリプションを定義するとき、またはレポート実行プロパティを設定するときに作成されます。スケジュール情報の入力は、サブスクリプションの定義またはプロパティの設定の一部です。 レポート固有スケジュールを定義するには、そのスケジュールを使用するレポートまたはサブスクリプションを開きます。  
   
- 共有スケジュールには、[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] レポート サーバー上で実行され、パブリッシュされた任意の数のレポートおよびサブスクリプションが使用できるスケジュールや定期実行情報が含まれています。 同時に実行されるレポートおよびサブスクリプションが多数存在する場合は、それらのジョブに対する共有スケジュールを作成できます。 後で定期実行パターンや終了日を変更する必要性が生じた場合でも、それらを一度に変更できます。  
+ 共有スケジュールには、 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] レポート サーバー上で実行され、パブリッシュされた任意の数のレポートおよびサブスクリプションが使用できるスケジュールや定期実行情報が含まれています。 同時に実行されるレポートおよびサブスクリプションが多数存在する場合は、それらのジョブに対する共有スケジュールを作成できます。 後で定期実行パターンや終了日を変更する必要性が生じた場合でも、それらを一度に変更できます。  
   
  共有スケジュールは管理が容易であり、スケジュールされている操作をより柔軟に管理できます。 たとえば、共有スケジュールを一時停止したり再開したりできます。 また、同時に実行される操作が多数スケジュールされていることに気付いた場合は、異なるタイミングで実行される複数の共有スケジュールを作成して、スケジュール情報を調整し、処理負荷をレポート サーバーに対して均等に配分することも可能です。  
   

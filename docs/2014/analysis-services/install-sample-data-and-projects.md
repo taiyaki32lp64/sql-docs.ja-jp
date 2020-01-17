@@ -1,34 +1,33 @@
 ---
-title: Analysis Services 多次元モデリング チュートリアル用サンプル データおよびプロジェクトのインストール |Microsoft Docs
+title: Analysis Services 多次元モデリングチュートリアルのサンプルデータとプロジェクトをインストールする |Microsoft Docs
 ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: fc475b25-cbb2-408a-901f-9299299538c5
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: b325a96c096f0e49f3bbfb2961d0de6cac387a3e
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 0be986ee50599c6e95222bca2eae217b088e2de3
+ms.sourcegitcommit: 187f6d327421e64f1802a3085f88bbdb0c79b707
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53355071"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69530821"
 ---
 # <a name="install-sample-data-and-projects-for-the-analysis-services-multidimensional-modeling-tutorial"></a>Analysis Services 多次元モデリング チュートリアル用のサンプル データおよびプロジェクトのインストール
   このトピックに示す手順とリンクを使用して、Analysis Services チュートリアルで使用するすべてのデータとプロジェクト ファイルをインストールします。  
   
-## <a name="step-1-install-sql-server-software"></a>手順 1:SQL Server ソフトウェアをインストールします。  
- このチュートリアルのレッスンでは、次のソフトウェアをインストール済みであることを前提としています。 次のソフトウェアはすべて、SQL Server のインストール メディアを使用してインストールされます。 配置を簡単にするために、すべての機能を 1 台のコンピューターにインストールできます。 これらの機能をインストールするには、SQL Server セットアップを実行して [機能の選択] ページから機能を選択します。 詳細については、次を参照してください。[インストール ウィザードからの SQL Server 2014 のインストール&#40;セットアップ&#41;](../database-engine/install-windows/install-sql-server-from-the-installation-wizard-setup.md)します。  
+## <a name="step-1-install-sql-server-software"></a>手順 1:SQL Server ソフトウェアのインストール  
+ このチュートリアルのレッスンでは、次のソフトウェアをインストール済みであることを前提としています。 次のソフトウェアはすべて、SQL Server のインストール メディアを使用してインストールされます。 配置を簡単にするために、すべての機能を 1 台のコンピューターにインストールできます。 これらの機能をインストールするには、SQL Server セットアップを実行して [機能の選択] ページから機能を選択します。 詳細については、[インストールウィザード&#40;のセットアップ&#41;から SQL Server 2014 をインストールする](../database-engine/install-windows/install-sql-server-from-the-installation-wizard-setup.md)」を参照してください。  
   
 -   データベース エンジン  
   
 -   Analysis Services  
   
-     Analysis Services は、各エディションでのみ入手できます。Evaluation、Enterprise、Business Intelligence、Standard。  
+     Analysis Services は、次のエディションでのみ使用できます。評価、エンタープライズ、ビジネスインテリジェンス、標準。  
   
      SQL Server Express エディションには、Analysis Services は含まれないことに注意してください。 無料でのソフトウェアの試用を希望する場合は、[Evaluation Edition をダウンロード](https://go.microsoft.com/fwlink/?LinkId=392824)してください。  
   
@@ -40,17 +39,17 @@ ms.locfileid: "53355071"
   
  また、 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]に組み込まれている MDX クエリ デザイナーを使用してデータを参照することもできます。 クエリ デザイナーでも同じデータが返されますが、データがフラットな行セットとして表示される点が異なります。  
   
-## <a name="step-2-download-sql-server-data-tools---business-intelligence-for-visual-studio-2012"></a>手順 2:SQL Server Data Tools - Business Intelligence for Visual Studio 2012 のダウンロードします。  
+## <a name="step-2-download-sql-server-data-tools---business-intelligence-for-visual-studio-2012"></a>手順 2:SQL Server Data Tools のダウンロード-Visual Studio 2012 用ビジネスインテリジェンス  
  このリリースでは、SQL Server Data Tools を他の SQL Server 機能とは別にダウンロードしてインストールします。 BI レポートおよび BI モデルの作成に使用するデザイナーとプロジェクト テンプレートは、現在、Web から無償でダウンロードできます。  
   
 -   [ビジネス インテリジェンス バージョンの SQL Server Data Tools をダウンロードしてください](https://go.microsoft.com/fwlink/p/?LinkID=322038)。 ファイルはダウンロード フォルダーに保存されます。 セットアップを実行してツールをインストールします。  
   
      コンピューターを再起動してインストールを完了します。  
   
-## <a name="step-3-install-databases"></a>手順 3:データベースをインストールします。  
+## <a name="step-3-install-databases"></a>手順 3:データベースのインストール  
  Analysis Services 多次元モデルでは、リレーショナル データベース管理システムからインポートしたトランザクション データを使用します。 このチュートリアルでは、次のリレーショナル データベースをデータ ソースとして使用します。  
   
--   **AdventureWorksDW2012** -これは、データベース エンジンのインスタンスで実行されているリレーショナル データ ウェアハウスです。 このチュートリアルで構築して配置する Analysis Services データベースおよびプロジェクトで使用される元のデータを提供します。  
+-   **AdventureWorksDW2012** -これは、データベースエンジンインスタンスで実行されるリレーショナルデータウェアハウスです。 このチュートリアルで構築して配置する Analysis Services データベースおよびプロジェクトで使用される元のデータを提供します。  
   
      このサンプル データベースは、 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] に加えて [!INCLUDE[ssSQL11](../includes/sssql11-md.md)]でも使用できます。  
   
@@ -72,7 +71,7 @@ ms.locfileid: "53355071"
   
 7.  データベースの詳細で、ログ ファイルのエントリを削除します。 このセットアップ プログラムでは、ログ ファイルが存在することが前提とされていますが、サンプルにログ ファイルは含まれていません。 データベースをアタッチすると、新しいログ ファイルが自動的に作成されます。 ログ ファイルを選択して **[削除]** をクリックし、 **[OK]** をクリックして、プライマリ データベース ファイルだけをアタッチします。  
   
-## <a name="step-4-grant-database-permissions"></a>手順 4:データベース権限の許可  
+## <a name="step-4-grant-database-permissions"></a>手順 4:データベースアクセス許可の付与  
  サンプル プロジェクトでは、データがインポートまたは処理されるときのセキュリティ コンテキストを指定する、データ ソースの権限借用設定を使用します。 既定の権限借用設定では、データにアクセスするための Analysis Services サービス アカウントを指定します。 この既定の設定を使用するには、Analysis Services サービスを実行するサービス アカウントに、 **AdventureWorksDW2012** データベースに対するデータ リーダー権限を与える必要があります。  
   
 > [!NOTE]  
@@ -90,7 +89,7 @@ ms.locfileid: "53355071"
   
 6.  **AdventureWorksDW2012** データベースの横にあるチェック ボックスをオンにします。 ロールのメンバーシップには、 **db_datareader** および **public**が自動的に含まれます。 **[OK]** をクリックして、既定値をそのまま使用します。  
   
-## <a name="step-5-install-projects"></a>手順 5:プロジェクトをインストールします。  
+## <a name="step-5-install-projects"></a>手順 5:プロジェクトのインストール  
  このチュートリアルには、完了した状態のプロジェクトと結果を比較したり、さらに後続のレッスンを開始したりできるように、サンプル プロジェクトが含まれています。  
   
  レッスン 4 のプロジェクト ファイルは、レッスン 4 だけでなく後続のすべてのレッスンの基盤となるため、特に重要です。 チュートリアルの手順を実行すると完了した状態のプロジェクト ファイルの正確なコピーが作成された、それ以前のプロジェクト ファイルと異なり、レッスン 4 のサンプル プロジェクトは、レッスン 1 ～ 3 で作成したモデルに含まれない新しいモデル情報を含んでいます。 レッスン 4 は、次のダウンロードで入手できるサンプル プロジェクト ファイルを使用して作業を開始することを前提としています。  
@@ -99,9 +98,9 @@ ms.locfileid: "53355071"
   
      2012 のチュートリアルは [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] リリースで有効です。  
   
-     Analysis Services Tutorial SQL Server 2012.zip ファイルは、コンピューターにダウンロード フォルダーに保存されます。  
+     "Analysis Services チュートリアル SQL Server 2012 .zip" ファイルは、コンピューターのダウンロードフォルダーに保存されます。  
   
-2.  .zip ファイルをルート ドライブ直下のフォルダー (たとえば、C:\Tutorial) に移動します。 この手順では、ダウンロード フォルダーにファイルを解凍しようとした場合にも発生する「パスが長すぎます」エラーを軽減します。  
+2.  .zip ファイルをルート ドライブ直下のフォルダー (たとえば、C:\Tutorial) に移動します。 この手順では、ダウンロードフォルダー内のファイルを解凍しようとした場合に発生することがある "パスが長すぎる" というエラーが軽減されます。  
   
 3.  ファイルを右クリックし、 **[すべて展開]** をクリックして、サンプル プロジェクトを解凍します。 ファイルを抽出すると、次のプロジェクトがコンピューターにインストールされます。  
   
@@ -146,10 +145,10 @@ ms.locfileid: "53355071"
 8.  [SQL Server Management Studio] を起動します。 SQL Server Management Studio で、Analysis Services に接続します。 **Analysis Services Tutorial** という名前のデータベースがサーバーで実行されていることを確認します。  
   
 ## <a name="next-step"></a>次の手順  
- 以上の操作で、チュートリアルを使用する準備が整いました。 開始方法の詳細については、「[多次元モデリング (Adventure Works チュートリアル)](../analysis-services/multidimensional-modeling-adventure-works-tutorial.md)」を参照してください。  
+ 以上の操作で、チュートリアルを使用する準備が整いました。 開始方法の詳細については、「[多次元モデリング (Adventure Works チュートリアル)](multidimensional-modeling-adventure-works-tutorial.md)」を参照してください。  
   
 ## <a name="see-also"></a>参照  
- [SQL Server 2014 インストール ウィザードからインストール&#40;セットアップ&#41;](../database-engine/install-windows/install-sql-server-from-the-installation-wizard-setup.md)   
+ [インストールウィザード&#40;から SQL Server 2014 をインストールする (セットアップ)&#41;](../database-engine/install-windows/install-sql-server-from-the-installation-wizard-setup.md)   
  [Configure the Windows Firewall to Allow Analysis Services Access](instances/configure-the-windows-firewall-to-allow-analysis-services-access.md)   
  [SQL Server のアクセスを許可するための Windows ファイアウォールの構成](../../2014/sql-server/install/configure-the-windows-firewall-to-allow-sql-server-access.md)  
   

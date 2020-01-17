@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: e79b5b53-16b0-42a3-be4e-542a77a21e12
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: bbd0e8ce34d14f0ef9fa77f3c2f64cc4e5804fb5
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: fe4d41448fdd65d3cb4a56f873432e747f564ef6
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47718330"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67977707"
 ---
 # <a name="isclosed-method-sqlserverstatement"></a>isClosed メソッド (SQLServerStatement)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -37,7 +36,7 @@ public boolean isClosed()
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- この isClosed メソッドは、java.sql.Statement インターフェイスの isClosed メソッドによって指定されます。  
+ この isClosed メソッドは、java. .sql. ステートメントインターフェイスの isClosed メソッドによって指定されます。  
   
 ## <a name="see-also"></a>参照  
  [SQLServerStatement のメンバー](../../../connect/jdbc/reference/sqlserverstatement-members.md)   

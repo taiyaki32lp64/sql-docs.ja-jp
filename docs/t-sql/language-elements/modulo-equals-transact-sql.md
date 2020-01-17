@@ -19,16 +19,15 @@ helpviewer_keywords:
 - assignment operators, %=
 - augmented operators, %=
 ms.assetid: 45e35516-1f4c-406b-a580-70a14b087847
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
+author: rothja
+ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 3cba71f83b5d4fe4e56c49eff42db4e6e69e330b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 04a0b0881475bb47ca87dba03c207f3ceac9149e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47850393"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68122117"
 ---
 # <a name="-modulus-assignment-transact-sql"></a>%= (剰余代入) (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]

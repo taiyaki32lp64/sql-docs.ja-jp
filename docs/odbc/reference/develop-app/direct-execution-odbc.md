@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: dd00a535-b136-494f-913b-410838e3de7e
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 73c061718dc326e43f72be369a28ad12726a3cab
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 72d9222be541a8d41b5b9935ac7cbbcfde4da19c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47603050"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68039797"
 ---
 # <a name="direct-execution-odbc"></a>直接実行 (ODBC)
 直接実行は、ステートメントを実行する最も簡単な方法です。 実行するため、ステートメントが送信されると、データ ソース アクセス プランにコンパイルし、しアクセス計画を実行します。  

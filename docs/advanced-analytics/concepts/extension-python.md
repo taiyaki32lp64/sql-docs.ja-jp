@@ -1,100 +1,104 @@
 ---
-title: Python プログラミング言語の拡張機能 - SQL Server Machine Learning
-description: Python コードが実行され、SQL Server 2017 Machine Learning Services での組み込みの Python ライブラリについて説明します。
+title: Python 言語拡張機能
+description: SQL Server Machine Learning Services での Python コードの実行と組み込み Python ライブラリについて学習します。
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 09/05/2018
+ms.date: 11/04/2019
 ms.topic: conceptual
-author: HeidiSteen
-ms.author: heidist
-manager: cgronlun
-ms.openlocfilehash: 6bbce3d58f016b26618413ef0647995d0914a237
-ms.sourcegitcommit: 85bfaa5bac737253a6740f1f402be87788d691ef
-ms.translationtype: MT
+author: dphansen
+ms.author: davidph
+ms.custom: seo-lt-2019
+monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions'
+ms.openlocfilehash: 0445fb83a1ee4c4e2a991df8e698f24988454d19
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/15/2018
-ms.locfileid: "53432326"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73727675"
 ---
-# <a name="python-language-extension-in-sql-server"></a>SQL Server での Python 言語の拡張機能
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+# <a name="python-language-extension-in-sql-server"></a>SQL Server の Python 言語拡張機能
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-Python 拡張機能は、SQL Server Machine Learning サービスにアドオンをリレーショナル データベース エンジンの一部です。 Python 実行環境、python、Python 3.5 ランタイムとインタープリター、標準ライブラリとツール、および Microsoft 製品のライブラリでの Anaconda ディストリビューションを追加します: [revoscalepy](../python/ref-py-revoscalepy.md)スケールと分析[microsoftml](../python/ref-py-microsoftml.md)マシン学習アルゴリズムです。 
+Python 拡張機能は、リレーショナル データベース エンジンに対する SQL Server Machine Learning Services アドオンの一部です。 これによって追加されるのは、Python の実行環境、Python 3.5 ランタイムとインタープリターを含む Anaconda ディストリビューション、標準ライブラリとツール、および Python 用の Microsoft 製品ライブラリ (大規模な分析用の [revoscalepy](../python/ref-py-revoscalepy.md) と機械学習アルゴリズム用の [microsoftml](../python/ref-py-microsoftml.md)) です。 
 
-として Python 統合がインストールされている[SQL Server Machine Learning Services](../what-is-sql-server-machine-learning.md)します。
+Python 統合は [SQL Server Machine Learning Services](../what-is-sql-server-machine-learning.md) としてインストールされます。
 
-Python 3.5 ランタイムおよびインタープリターのインストールでは、標準の Python ソリューションとのほぼ完全な互換性を確保します。 Python は、データベース操作が損なわれないことを保証するために、SQL Server から別のプロセスで実行されます。
+Python 3.5 ランタイムとインタープリターのインストールにより、標準的な Python ソリューションとのほぼ完全な互換性が確保されます。 Python は SQL Server とは別のプロセスで実行されるので、データベース操作に支障はありません。
 
 ## <a name="python-components"></a>Python コンポーネント
 
-SQL Server には、オープン ソースの独自のパッケージが含まれています。 セットアップによってインストールされている Python ランタイムでは、Python 3.5 では、Anaconda 4.2 です。 Python ランタイムでは、SQL ツールとは別にインストールされているし、機能拡張フレームワークのコア エンジン プロセスの外部で実行されます。 Python を使用した Machine Learning サービスのインストールの一環として、GNU Public License の条項に同意する必要があります。 
+SQL Server には、オープンソース パッケージと専用パッケージの両方が含まれています。 セットアップによってインストールされる Python ランタイムは、Python 3.5 を含む Anaconda 4.2 です。 Python ランタイムは、SQL ツールとは別にインストールされ、機能拡張フレームワークのコア エンジン プロセスの外部で実行されます。 Machine Learning Services と Python のインストールの一環として、GNU Public License の条項に同意する必要があります。 
 
-SQL Server では、Python の実行可能ファイルは変更しませんが、そのバージョンが独自のパッケージをビルドしてテストする 1 つであるために、セットアップによってインストールされている Python のバージョンを使用する必要があります。 Anaconda ディストリビューションでサポートされているパッケージの一覧は、Continuum analytics サイトを参照してください。[パッケージ一覧の anaconda](https://docs.continuum.io/anaconda/packages/pkg-docs)します。
+SQL Server では、Python 実行可能ファイルは変更されませんが、セットアップによってインストールされたバージョンの Python を使用する必要があります。これは、専用パッケージがビルドおよびテストされているバージョンであるためです。 Anaconda ディストリビューションでサポートされているパッケージの一覧については、Continuum 分析サイト「[Anaconda package list](https://docs.continuum.io/anaconda/packages/pkg-docs)」(Anaconda パッケージ リスト) を参照してください。
 
-特定のデータベース エンジンのインスタンスに関連付けられた Anaconda ディストリビューションは、インスタンスに関連付けられたフォルダーにあります。 Machine Learning サービスと Python の既定のインスタンスに SQL Server 2017 データベース エンジンをインストールした場合の検索など、`C:\Program Files\Microsoft SQL Server\MSSQL14.MSSQLSERVER\PYTHON_SERVICES`します。
+特定のデータベース エンジン インスタンスに関連付けられている Anaconda ディストリビューションは、そのインスタンスに関連付けられているフォルダーで見つけることができます。 たとえば、SQL Server 2017 データベース エンジンと共に Machine Learning Services および Python を既定のインスタンスにインストールした場合は、`C:\Program Files\Microsoft SQL Server\MSSQL14.MSSQLSERVER\PYTHON_SERVICES` を確認します。
 
-並列および分散ワークロード用に Microsoft によって追加された Python パッケージには、次のライブラリが含まれます。
+Microsoft が並列ワークロードと分散ワークロード用に追加した Python パッケージには、次のライブラリが含まれます。
 
-| ライブラリ | 説明 |
+| ライブラリ | [説明] |
 |---------|-------------|
-| [**revoscalepy**](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/revoscalepy-package) | データ ソース オブジェクトとデータの探索、操作、変換、および視覚エフェクトをサポートしています。 など、さまざまなスケーラブルな機械学習モデルと同様に、リモート計算コンテキストの作成をサポート**rxLinMod**します。 詳細については、次を参照してください。 [revoscalepy モジュールは、SQL Server と](../python/ref-py-revoscalepy.md)します。  |
-| [**microsoftml**](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/microsoftml-package) | 場合の速度と精度、最適化されているだけでなく行のテキストとイメージを操作するための変換を機械学習アルゴリズムが含まれています。 詳細については、次を参照してください。 [microsoftml モジュールは、SQL Server と](../python/ref-py-microsoftml.md)します。 |
+| [**revoscalepy**](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/revoscalepy-package) | データ ソース オブジェクトとデータの探索、操作、変換、視覚化をサポートします。 リモート コンピューティング コンテキスト、およびさまざまなスケーラブルな機械学習モデル (**rxLinMod** など) の作成をサポートします。 詳細については、[SQL Server での revoscalepy モジュール](../python/ref-py-revoscalepy.md)に関するページをご覧ください。  |
+| [**microsoftml**](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/microsoftml-package) | 速度と精度のために最適化された機械学習アルゴリズムに加え、テキストとイメージを操作するためのインライン変換も含まれています。 詳細については、[SQL Server での microsoftml モジュール](../python/ref-py-microsoftml.md)に関するページを参照してください。 |
 
-Microsoftml と revoscalepy を密に結合します。microsoftml で使用されるデータ ソースは、revoscalepy オブジェクトとして定義されます。 Microsoftml の revoscalepy 転送コンテキストの制限事項を計算します。 つまり、すべての機能はローカルの操作に使用できるが、RxInSqlServer リモート コンピューティング コンテキストへの切り替えが必要です。
+microsoftml と revoscalepy は密結合されています。microsoftml で使用されるデータ ソースは、revoscalepy オブジェクトとして定義されています。 revoscalepy でコンピューティング コンテキストの制限は microsoftml に転送されます。 つまり、ローカル操作ではすべての機能を使用できますが、リモート コンピューティング コンテキストに切り替えるには RxInSqlServer が必要です。
 
 ## <a name="using-python-in-sql-server"></a>SQL Server での Python の使用
 
-インポートする、 **revoscalepy** 、Python コードとし、モジュールからの関数の呼び出しにモジュールなどの他の Python 関数。
+ご利用の Python コードに **revoscalepy** モジュールをインポートしてから、他の Python 関数と同様に、モジュールから関数を呼び出します。
 
-サポートされているデータ ソースには、他のソースまたは R ソリューションのデータを交換するには、ODBC データベース、SQL Server、および XDF ファイル形式が含まれます。 Python 用の入力データを表形式にする必要があります。 形式ですべての Python の結果を返す必要がある、 **pandas**データ フレーム。
+サポートされているデータ ソースには、ODBC データベース、SQL Server、他のソースまたは R ソリューションとデータを交換するための XDF ファイル形式があります。 Python に対する入力データは表形式とする必要があります。 Python の結果はすべて、**Pandas** データ フレームの形式で返される必要があります。
 
-サポートされているコンピューティング コンテキストには、ローカルまたはリモートの SQL Server 計算コンテキストが含まれます。 1 台のコンピューター、ワークステーションなどで始まるコードが実行するリモート コンピューティング コンテキストがスクリプトのリモート コンピューターに実行し、スイッチです。 コンピューティング コンテキストを切り替えるには、両方のシステムは、同じ revoscalepy ライブラリである必要があります。
+サポートされているコンピューティング コンテキストには、ローカルまたはリモートの SQL Server コンピューティング コンテキストが含まれます。 リモート コンピューティング コンテキストとは、ワークステーションなどの 1 台のコンピューターで起動するコード実行を指しますが、その後、スクリプトの実行はリモート コンピューターに切り替えられます。 コンピューティング コンテキストを切り替えるには、両方のシステムに同じ revoscalepy ライブラリが用意されている必要があります。
 
-ローカル計算コンテキストは、T-SQL 内のコードで、データベース エンジンのインスタンスと同じサーバー上の Python コードの実行が含まれていますご想像のとおり、またはストアド プロシージャに埋め込まれています。 ローカルの Python IDE からコードを実行し、スクリプトが SQL Server コンピューターで実行される、リモートを定義することによって計算コンテキストもできます。
+ご想像のとおり、ローカルのコンピューティング コンテキストには、データベース エンジン インスタンスと同じサーバー上での Python コードの実行に加え、T-SQL 内のコードまたはストアド プロシージャに埋め込まれたコードの実行も含まれます。 また、リモートのコンピューティング コンテキストを定義することにより、ローカルの Python IDE からコードを実行し、SQL Server コンピューター上でスクリプトを実行することもできます。
 
-## <a name="execution-architecture"></a>実行のアーキテクチャ
+## <a name="execution-architecture"></a>アーキテクチャの実行
 
-次の図は、SQL Server コンポーネントのサポートされているシナリオでの Python のランタイムとの対話を示しています。 SQL Server のコンピューティング コンテキストを使用して、Python のターミナルからスクリプトでデータベースとリモートの実行を実行します。
+以下の図は、サポートされている各シナリオでの SQL Server コンポーネントと Python ランタイムとのやりとりを示しています。そのシナリオとは、SQL Server コンピューティング コンテキストを使用したデータベース内のスクリプトの実行と Python ターミナルからのリモート実行です。
 
-### <a name="python-scripts-executed-in-database"></a>Python スクリプトの実行 (データベース内)
+### <a name="python-scripts-executed-in-database"></a>データベース内で実行される Python スクリプト
 
-SQL Server の「内部」Python を実行すると、特殊なストアド プロシージャ内部での Python スクリプトをカプセル化する必要があります[sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md)します。
+SQL Server の "内部で" Python を実行する場合は、Python スクリプトを特殊なストアド プロシージャである [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md) にカプセル化する必要があります。
 
-スクリプトは、ストアド プロシージャに埋め込まれたが、ストアド プロシージャを呼び出すと、任意のアプリケーションは、Python コードの実行を開始できます。  その後 SQL Server は、次の図に示すコードが実行を管理します。
+ストアド プロシージャにスクリプトが埋め込まれたら、ストアド プロシージャを呼び出すことができる任意のアプリケーションで、Python コードの実行を開始できます。  その後は、SQL Server により、次の図にまとめたように、コードの実行が管理されます。
 
 ![script-in-db-python](../../advanced-analytics/python/media/script-in-db-python2.png)
 
-1. Python ランタイムの要求が、パラメーターで示される`@language='Python'`ストアド プロシージャに渡されます。 SQL Server では、この要求をスタート パッド サービスに送信します。
-2. スタート パッド サービスが適切なランチャー; を開始します。この場合、PythonLauncher です。
-3. PythonLauncher 外部 Python35 プロセスを開始します。
-4. BxlServer は、Python ランタイム、データの交換と作業結果のストレージの管理を調整します。
-5. SQL サテライトは、関連するタスクとプロセスを SQL Server の通信を管理します。
-6. BxlServer は、SQL サテライトを使用して、状態と SQL Server に結果を通信します。
-7. SQL Server では、結果を取得し、関連するタスクとプロセスを閉じます。
+1. ストアド プロシージャに渡されたパラメーター `@language='Python'` によって、Python ランタイムに対する要求が示されます。 この要求は SQL Server からスタート パッド サービスに送信されます。
+Linux の場合、SQL では**スタート パッド** サービスを使用して、ユーザーごとに個別のスタート パッド プロセスとの通信が行われます。 詳細については、[機能拡張アーキテクチャの図](extensibility-framework.md#architecture-diagram)を参照してください。
+2. スタート パッド サービスによって適切なランチャーが起動されます (この場合は PythonLauncher)。
+3. PythonLauncher によって外部の Python35 プロセスが開始されます。
+4. BxlServer と Python ランタイムとの連携により、データ交換や、作業結果の保存が管理されます。
+5. SQL サテライトでは、関連するタスクやプロセスについての SQL Server との通信が管理されます。
+6. BxlServer では、SQL サテライトを使用して、状態と結果が SQL Server に通知されます。
+7. SQL Server では、結果が取得され、関連するタスクとプロセスが終了されます。
 
 ### <a name="python-scripts-executed-from-a-remote-client"></a>リモート クライアントから実行される Python スクリプト
 
-ラップトップなどのリモート コンピューターから Python スクリプトを実行し、これらの条件が満たされる場合がある、SQl Server コンピューターのコンテキストで実行できます。
+次の条件が満たされている場合は、ラップトップなどのリモート コンピューターから Python スクリプトを実行し、SQl Server コンピューターのコンテキストでそれらを実行することができます。
 
-+ スクリプトを適切に設計します。
-+ リモート コンピューターには、Machine Learning サービスで使用される拡張機能ライブラリがインストールされているがします。 [Revoscalepy](../python/ref-py-revoscalepy.md)パッケージは、リモート計算コンテキストを使用するために必要です。
++ スクリプトが適切に設計されています。
++ リモート コンピューターには、Machine Learning Services で使用される機能拡張ライブラリがインストールされています。 リモート コンピューティング コンテキストを使用するには、[revoscalepy](../python/ref-py-revoscalepy.md) パッケージが必要です。
 
-次の図は、スクリプトがリモート コンピューターから送信されたときに、全体的なワークフローをまとめたものです。
+次の図は、リモート コンピューターからスクリプトが送信される場合の全体的なワークフローをまとめたものです。
 
 ![remote-sqlcc-from-python](../../advanced-analytics/python/media/remote-sqlcc-from-python3.png)
 
-1. サポートされている関数の**revoscalepy**、Python ランタイムが呼び出すリンク関数が含まれ、よって BxlServer を呼び出します。
-2. BxlServer は、Machine Learning サービス (In-database) に含まれているし、Python ランタイムから別のプロセスで実行されます。
-3. BxlServer は接続先を決定し、Python スクリプトで接続文字列の一部として提供された資格情報を渡して、ODBC を使用して接続を開始します。
-4. BxlServer は、SQL Server インスタンスへの接続を開きます。
-5. 外部スクリプトの実行時が呼び出されると、さらに、適切なランチャーを開始するスタート パッド サービスが呼び出されます。: この場合、PythonLauncher.dll します。 その後、Python コードの処理は、Python コードは T-SQL のストアド プロシージャから呼び出されたときにするときと同様のワークフローで処理されます。
-6. PythonLauncher では、SQL Server コンピューターにインストールされている Python のインスタンスへの呼び出しを実行します。
+1. **revoscalepy** でサポートされている関数の場合、Python ランタイムによってリンク関数が呼び出され、続いてこの関数によって BxlServer が呼び出されます。
+2. BxlServer は Machine Learning Services (データベース内) に含まれており、Python ランタイムとは別のプロセスで実行されます。
+3. BxlServer では接続のターゲットが決定され、ODBC を使用して接続が開始され、Python スクリプト内の接続文字列の一部として提供された資格情報が渡されます。
+4. BxlServer によって、SQL Server インスタンスへの接続が開かれます。
+5. 外部スクリプト ランタイムが呼び出されると、スタート パッド サービスが呼び出され、続いて適切なランチャー (この場合は、PythonLauncher.dll) が起動されます。 その後、Python コードの処理は、T-SQL のストアド プロシージャから Python コードが呼び出される場合と同様のワークフローで処理されます。
+6. PythonLauncher では、SQL Server コンピューターにインストールされている Python のインスタンスへの呼び出しが行われます。
 7. 結果が BxlServer に返されます。
-8. SQL サテライトは、SQL Server と関連するジョブ オブジェクトのクリーンアップとの通信を管理します。
-9. SQL Server は、クライアントに結果を渡します。
+8. SQL サテライトでは、SQL Server との通信と、関連するジョブ オブジェクトのクリーンアップが管理されます。
+9. SQL Server からクライアントに結果が返されます。
 
-## <a name="see-also"></a>関連項目
+## <a name="next-steps"></a>次の手順
 
-+ [SQL Server で revoscalepy モジュール](../python/ref-py-revoscalepy.md)
++ [SQL Server の revoscalepy モジュール](../python/ref-py-revoscalepy.md)
 + [revoscalepy 関数リファレンス](https://docs.microsoft.com/r-server/python-reference/revoscalepy/revoscalepy-package) 
 + [SQL Server の機能拡張フレームワーク](extensibility-framework.md)
-+ [R と SQL Server の拡張機能の学習](extension-r.md)
++ [SQL Server の R および機械学習拡張機能](extension-r.md)
++ [Python パッケージ情報の取得](../package-management/python-package-information.md)
++ [sqlmlutils を使用して Python パッケージをインストールする](../package-management/install-additional-python-packages-on-sql-server.md)

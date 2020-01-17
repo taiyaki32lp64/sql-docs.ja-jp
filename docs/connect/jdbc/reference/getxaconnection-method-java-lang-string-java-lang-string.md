@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: 276e0093-3d42-4f73-acc4-2b5b98245b40
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: b75d79c0cb211a2d0da7b5e0f026d9ec2171d75d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 23ba6bc636e5bc714a606c29a46f7b52ce1bbea4
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47694430"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67977996"
 ---
 # <a name="getxaconnection-method-javalangstring-javalangstring"></a>getXAConnection (java.lang.String, java.lang.String) メソッド
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -46,13 +45,13 @@ public javax.sql.XAConnection getXAConnection(java.lang.String user,
  パスワードを含む**文字列**です。  
   
 ## <a name="return-value"></a>戻り値  
- XAConnection オブジェクト。  
+ Javax.sql.xaconnection オブジェクトです。  
   
 ## <a name="exceptions"></a>例外  
  java.sql.SQLException  
   
 ## <a name="remarks"></a>Remarks  
- この getXAConnection メソッドは、javax.sql.XADataSource インターフェイスで getXAConnection メソッドによって指定されます。  
+ この getXAConnection メソッドは、javax.mail インターフェイスの getXAConnection メソッドによって指定されます。  
   
 > [!NOTE]  
 >  このメソッドは、通常 XA 接続プール実装によって呼び出され、標準の JDBC アプリケーション コードからは呼び出されません。  

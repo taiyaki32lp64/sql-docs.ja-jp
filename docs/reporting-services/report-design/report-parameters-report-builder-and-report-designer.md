@@ -1,92 +1,98 @@
 ---
 title: レポート パラメーター (レポート ビルダーおよびレポート デザイナー) | Microsoft Docs
-ms.date: 12/06/2018
-ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.technology: report-design
 description: このトピックでは、Reporting Services レポート パラメーターの一般的な使用方法、設定できるプロパティ、その他について説明します。
-ms.custom: seodec18
+ms.prod: reporting-services
+ms.prod_service: reporting-services-native
+ms.technology: report-design
+ms.custom: ''
 ms.topic: conceptual
-f1_keywords:
-- sql13.rtp.rptdesigner.reportparameters.general.f1
-- sql13.rtp.rptdesigner.subreportproperties.parameters.f1
-- "10091"
-- sql13.rtp.rptdesigner.reportparameters.advanced.f1
-- "10073"
-- "10070"
-ms.assetid: 58b96555-d876-4f61-bff8-db5764b9f5f9
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 4572edcb9fc87da74b18d91e73338b6f3879cd25
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.reviewer: ''
+ms.date: 12/06/2018
+ms.openlocfilehash: 494b682853425b40699ff698117d2941805ab7da
+ms.sourcegitcommit: c2052b2bf7261b3294a3a40e8fed8b9e9c588c37
+ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56287710"
+ms.lasthandoff: 08/10/2019
+ms.locfileid: "68941148"
 ---
 # <a name="report-parameters-report-builder-and-report-designer"></a>レポート パラメーター (レポート ビルダーおよびレポート デザイナー)
 
-[!INCLUDE[ssrs-appliesto](../../includes/ssrs-appliesto.md)] [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)]、[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePoint モードおよびネイティブ モード
+::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
 
-  このトピックでは、 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] レポート パラメーターの一般的な使用方法、設定できるプロパティ、その他について説明します。 レポート パラメーターを使用すると、レポート データの制御、他のレポートとの関連付け、およびレポートの表示方法の変更が可能になります。 レポート パラメーターは、 [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] やレポート デザイナーで作成する改ページ調整されたレポートのほか、 [!INCLUDE[SS_MobileReptPub_Long](../../includes/ss-mobilereptpub-long.md)]で作成するモバイル レポートで使用できます。 詳細については、「 [レポート パラメーターの概念](../../reporting-services/report-design/report-parameters-concepts-report-builder-and-ssrs.md)」を参照してください。  
- 
-ご自分でレポートにパラメーターを追加してみる場合には、「[チュートリアル:レポートへのパラメーターの追加 (レポート ビルダー)](../../reporting-services/tutorial-add-a-parameter-to-your-report-report-builder.md)」を参照してください。  
-    
-##  <a name="bkmk_Common_Uses_for_Parameters"></a> パラメーターの一般的な使用方法  
+[!INCLUDE[ssrs-appliesto](../../includes/ssrs-appliesto.md)] [!INCLUDE[ssrs-appliesto-2016-and-later](../../includes/ssrs-appliesto-2016-and-later.md)] [!INCLUDE[ssrs-appliesto-sharepoint-2013-2016](../../includes/ssrs-appliesto-sharepoint-2013-2016.md)]
+
+::: moniker-end
+
+::: moniker range=">=sql-server-2017||=sqlallproducts-allversions"
+
+[!INCLUDE[ssrs-appliesto](../../includes/ssrs-appliesto.md)] [!INCLUDE[ssrs-appliesto-2016-and-later](../../includes/ssrs-appliesto-2016-and-later.md)]
+
+::: moniker-end
+
+このトピックでは、 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] レポート パラメーターの一般的な使用方法、設定できるプロパティ、その他について説明します。 レポート パラメーターを使用すると、レポート データの制御、他のレポートとの関連付け、およびレポートの表示方法の変更が可能になります。 レポート パラメーターは、 [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] やレポート デザイナーで作成する改ページ調整されたレポートのほか、 [!INCLUDE[SS_MobileReptPub_Long](../../includes/ss-mobilereptpub-long.md)]で作成するモバイル レポートで使用できます。 詳細については、「 [レポート パラメーターの概念](../../reporting-services/report-design/report-parameters-concepts-report-builder-and-ssrs.md)」を参照してください。  
+
+ご自分でレポートにパラメーターを追加してみる場合には、「 [チュートリアル: レポートへのパラメーターの追加 (レポート ビルダー)](../../reporting-services/tutorial-add-a-parameter-to-your-report-report-builder.md)で作成するモバイル レポートで使用できます。  
+
+## <a name="bkmk_Common_Uses_for_Parameters"></a> パラメーターの一般的な使用方法
+
  パラメーターの一般的な使用方法を以下に示します。  
   
-**改ページ調整されたレポート データおよびモバイル レポート データの制御**  
+**改ページ調整されたレポート データおよびモバイル レポート データの制御**
   
--   変数が含まれるデータセット クエリを記述して、データ ソース側で改ページ調整されたレポート データをフィルター処理する。  
+- 変数が含まれるデータセット クエリを記述して、データ ソース側で改ページ調整されたレポート データをフィルター処理する。  
   
--   共有データセットのデータをフィルター処理する。 改ページ調整されたレポートに共有データセットを追加する場合、クエリを変更することはできませんが、 レポート パラメーターを作成して、そのパラメーターへの参照を含むデータセット フィルターをレポートに追加することができます。  
+- 共有データセットのデータをフィルター処理する。 改ページ調整されたレポートに共有データセットを追加する場合、クエリを変更することはできませんが、 レポート パラメーターを作成して、そのパラメーターへの参照を含むデータセット フィルターをレポートに追加することができます。  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] モバイル レポート内で共有データセットのデータをフィルター処理する。 詳細については、「 [Create mobile reports with SQL Server Mobile Report Publisher](../../reporting-services/mobile-reports/create-mobile-reports-with-sql-server-mobile-report-publisher.md) 」をご覧ください。  
+- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] モバイル レポート内で共有データセットのデータをフィルター処理する。 詳細については、「 [Create mobile reports with SQL Server Mobile Report Publisher](../../reporting-services/mobile-reports/create-mobile-reports-with-sql-server-mobile-report-publisher.md) 」をご覧ください。  
   
--   ユーザーが値を指定して改ページ調整されたレポートのデータをカスタマイズできるようにする (2 つのパラメーターを用意して売上データの開始日と終了日を指定できるようにするなど)。  
+- ユーザーが値を指定して改ページ調整されたレポートのデータをカスタマイズできるようにする (2 つのパラメーターを用意して売上データの開始日と終了日を指定できるようにするなど)。  
   
-**他のレポートとの関連付け**  
+**他のレポートとの関連付け**
   
--   パラメーターを使用してメイン レポートを詳細レポート、サブレポート、およびリンク レポートに関連付ける。 一連のレポートをデザインするときは、特定の情報を得るために各レポートをデザインできます。 各レポートでは、関連する情報について、さまざまな表示形式や詳細レベルで情報を示すことができます。 相互に関連する一連のレポートを提供するには、対象となる各レポート上のデータのうち、関連性を持つデータに対して、パラメーターを作成します。  
+- パラメーターを使用してメイン レポートを詳細レポート、サブレポート、およびリンク レポートに関連付ける。 一連のレポートをデザインするときは、特定の情報を得るために各レポートをデザインできます。 各レポートでは、関連する情報について、さまざまな表示形式や詳細レベルで情報を示すことができます。 相互に関連する一連のレポートを提供するには、対象となる各レポート上のデータのうち、関連性を持つデータに対して、パラメーターを作成します。  
   
-     詳細については、「[詳細レポート (レポート ビルダーおよび SSRS)](../../reporting-services/report-design/drillthrough-reports-report-builder-and-ssrs.md)」、「[サブレポート (レポート ビルダーおよび SSRS)](../../reporting-services/report-design/subreports-report-builder-and-ssrs.md)」、および「[リンク レポートを作成する](../../reporting-services/reports/create-a-linked-report.md)」を参照してください。  
+    詳細については、「[詳細レポート (レポート ビルダーおよび SSRS)](../../reporting-services/report-design/drillthrough-reports-report-builder-and-ssrs.md)」、「[サブレポート (レポート ビルダーおよび SSRS)](../../reporting-services/report-design/subreports-report-builder-and-ssrs.md)」、および「[リンク レポートを作成する](../../reporting-services/reports/create-a-linked-report.md)」を参照してください。  
+
+- 複数のユーザー向けにパラメーター セットをカスタマイズする。 たとえば、売上レポートに基づく 2 つのリンク レポートをレポート サーバーに作成して、 一方のリンク レポートでは販売員用の定義済みパラメーター値を使用し、もう一方のリンク レポートでは販売責任者用の定義済みパラメーター値を使用することができます。 どちらのレポートも同じレポート定義を使用します。  
   
--   複数のユーザー向けにパラメーター セットをカスタマイズする。 たとえば、売上レポートに基づく 2 つのリンク レポートをレポート サーバーに作成して、 一方のリンク レポートでは販売員用の定義済みパラメーター値を使用し、もう一方のリンク レポートでは販売責任者用の定義済みパラメーター値を使用することができます。 どちらのレポートも同じレポート定義を使用します。  
+**レポートの表示方法の変更**
   
-**レポートの表示方法の変更**  
+- URL 要求を使用してレポート サーバーにコマンドを送信し、レポートの表示をカスタマイズする。 詳細については、「[URL アクセス (SSRS)](../../reporting-services/url-access-ssrs.md)」および「[URL 内でレポート パラメーターを渡す](../../reporting-services/pass-a-report-parameter-within-a-url.md)」を参照してください。  
   
--   URL 要求を使用してレポート サーバーにコマンドを送信し、レポートの表示をカスタマイズする。 詳細については、「[URL アクセス (SSRS)](../../reporting-services/url-access-ssrs.md)」および「[URL 内でレポート パラメーターを渡す](../../reporting-services/pass-a-report-parameter-within-a-url.md)」を参照してください。  
+- ユーザーが値を指定してレポートの外観をカスタマイズできるようにする (ブール型のパラメーターを用意して、テーブルの入れ子になった行グループを展開するか折りたたむかを指定できるようにするなど)。  
   
--   ユーザーが値を指定してレポートの外観をカスタマイズできるようにする (ブール型のパラメーターを用意して、テーブルの入れ子になった行グループを展開するか折りたたむかを指定できるようにするなど)。  
+- 式にパラメーターを含めることで、ユーザーがレポート データおよび外観をカスタマイズできるようにする。  
   
--   式にパラメーターを含めることで、ユーザーがレポート データおよび外観をカスタマイズできるようにする。  
+    詳細については、「[Parameters コレクションの参照 (レポート ビルダーおよび SSRS)](../../reporting-services/report-design/built-in-collections-parameters-collection-references-report-builder.md)」を参照してください。  
   
-     詳細については、「[Parameters コレクションの参照 (レポート ビルダーおよび SSRS)](../../reporting-services/report-design/built-in-collections-parameters-collection-references-report-builder.md)」を参照してください。  
+## <a name="UserInterface"></a> パラメーターを持つレポートの表示
+
+パラメーターを持つレポートを表示する場合、各パラメーターは、ユーザーが値を対話的に指定できるように、レポート ビューアー ツール バーに示されます。 次の図は、@ReportMonth、@ReportYear、@EmployeeID、@ShowAll、@ExpandTableRows、@CategoryQuota、および @SalesDate というパラメーターを持つレポートのパラメーター領域を示しています。  
+
+![パラメーターを持つレポートの表示](../../reporting-services/report-design/media/ssrb-rptparamviewrpt.png "パラメーターを持つレポートの表示")  
   
-##  <a name="UserInterface"></a> パラメーターを持つレポートの表示  
- パラメーターを持つレポートを表示する場合、各パラメーターは、ユーザーが値を対話的に指定できるように、レポート ビューアー ツール バーに示されます。 次の図は、@ReportMonth、@ReportYear、@EmployeeID、@ShowAll、@ExpandTableRows、@CategoryQuota、および @SalesDate というパラメーターを持つレポートのパラメーター領域を示しています。  
+1. **パラメーター ペイン** 各パラメーターのプロンプトと既定値がレポート ビューアー ツール バーに表示されます。 パラメーター ペインのパラメーターのレイアウトをカスタマイズすることができます。 詳細については、「 [レポートのパラメーター ペインをカスタマイズする (レポート ビルダー)](../../reporting-services/report-design/customize-the-parameters-pane-in-a-report-report-builder.md)で作成するモバイル レポートで使用できます。  
   
- ![パラメーターを持つレポートの表示](../../reporting-services/report-design/media/ssrb-rptparamviewrpt.png "パラメーターを持つレポートの表示")  
+2. **\@SalesDate パラメーター** @SalesDate パラメーターのデータ型は **DateTime** です。 テキスト ボックスの横に [日付を選択] というプロンプトが表示されます。 日付を変更するには、テキスト ボックスに新しい日付を入力するか、カレンダー コントロールを使用します。  
   
-1.  **パラメーター ペイン** 各パラメーターのプロンプトと既定値がレポート ビューアー ツール バーに表示されます。 パラメーター ペインのパラメーターのレイアウトをカスタマイズすることができます。 詳細については、「 [レポートのパラメーター ペインをカスタマイズする (レポート ビルダー)](../../reporting-services/report-design/customize-the-parameters-pane-in-a-report-report-builder.md)で作成するモバイル レポートで使用できます。  
+3. **\@ShowAll パラメーター** @ShowAll パラメーターのデータ型は **Boolean** です。 オプション ボタンを使用して、 **True** または **False**を指定します。  
   
-2.  **@SalesDate パラメーター** @SalesDate パラメーターのデータ型は **DateTime** です。 テキスト ボックスの横に [日付を選択] というプロンプトが表示されます。 日付を変更するには、テキスト ボックスに新しい日付を入力するか、カレンダー コントロールを使用します。  
+4. **[パラメーター エリアの表示/非表示の切り替え] ハンドル** レポート ビューアー ツール バーでこの矢印をクリックすると、パラメーター ペインの表示/非表示を切り替えることができます。  
   
-3.  **@ShowAll パラメーター** @ShowAll パラメーターのデータ型は **Boolean** です。 オプション ボタンを使用して、 **True** または **False**を指定します。  
+5. **\@CategoryQuota パラメーター** @CategoryQuota パラメーターのデータ型は、 **Float** であるため、数値を指定します。  @CategoryQuota には、複数の値を設定できます。  
   
-4.  **[パラメーター エリアの表示/非表示の切り替え] ハンドル** レポート ビューアー ツール バーでこの矢印をクリックすると、パラメーター ペインの表示/非表示を切り替えることができます。  
+6. **レポートの表示**  パラメーター値を入力した後にレポートを実行するには、 **[レポートの表示]** をクリックします。 すべてのパラメーターに既定値が定義されている場合、レポートは最初に表示するときに自動的に実行されます。  
   
-5.  **@CategoryQuota パラメーター** @CategoryQuota パラメーターのデータ型は、 **Float** であるため、数値を指定します。  @CategoryQuota には、複数の値を設定できます。  
+## <a name="bkmk_Create_Parameters"></a> パラメーターの作成
+
+レポート パラメーターは、いくつかの異なる方法で作成できます。
   
-6.  **レポートの表示**  パラメーター値を入力した後にレポートを実行するには、 **[レポートの表示]** をクリックします。 すべてのパラメーターに既定値が定義されている場合、レポートは最初に表示するときに自動的に実行されます。  
+> [!NOTE]
+>  一部のデータ ソースでは、パラメーターがサポートされていません。
   
-##  <a name="bkmk_Create_Parameters"></a> パラメーターの作成  
- レポート パラメーターは、いくつかの異なる方法で作成できます。  
-  
-> [!NOTE]  
->  一部のデータ ソースでは、パラメーターがサポートされていません。  
-  
- **パラメーターを持つデータセット クエリまたはストアド プロシージャ**  
+**パラメーターを持つデータセット クエリまたはストアド プロシージャ**
   
  変数を含むデータセット クエリまたは入力パラメーターを含むデータセットのストアド プロシージャを追加する。 データセット パラメーターは変数または入力パラメーターごとに作成され、レポート パラメーターはデータセット パラメーターごとに作成されます。  
   
@@ -106,14 +112,14 @@ ms.locfileid: "56287710"
   
  詳細については、このトピックの「 [データセット クエリ](#bkmk_Dataset_Parameters) 」をご覧ください。  
   
-**パラメーターを手動で作成する**  
+**パラメーターを手動で作成する**
   
 パラメーターを手動でレポート データ ペインから作成する。 レポート パラメーターを構成すると、ユーザーが値を対話的に入力してレポートの内容や外観をカスタマイズできるようにすることができます。 構成済みの値をユーザーが変更できないようにすることもできます。  
   
 > [!NOTE]  
 >  パラメーターはサーバーで個別に管理されるため、新しいパラメーター設定でメイン レポートを再パブリッシュしても、レポートの既存のパラメーター設定は上書きされません。  
   
- **パラメーターを持つレポート パーツ**  
+ **パラメーターを持つレポート パーツ**
   
  パラメーターへの参照、または変数を含む共有データセットへの参照を含むレポート パーツを追加する。  
   
@@ -122,27 +128,29 @@ ms.locfileid: "56287710"
 > [!NOTE]  
 >  パラメーターは、依存データセットとパラメーターを持つデータ領域の別個のレポート パーツとしてパブリッシュできます。 パラメーターはレポート パーツとして表示されますが、レポート パーツ パラメーターをレポートに直接追加することはできません。 代わりに、レポート パーツを追加します。レポート パーツに含まれているか、レポート パーツによって参照されているデータセット クエリから、必要なレポート パラメーターが自動的に生成されます。 レポート パーツの詳細については、「[レポート パーツ (レポート ビルダーおよび SSRS)](../../reporting-services/report-design/report-parts-report-builder-and-ssrs.md)」および「[レポート デザイナーでのレポート パーツ (SSRS)](../../reporting-services/report-design/report-parts-in-report-designer-ssrs.md)」を参照してください。  
   
-### <a name="parameter-values"></a>パラメーター値  
+### <a name="parameter-values"></a>パラメーター値
+
  レポートのパラメーター値を選択するときに使用できるオプションを次に示します。  
   
--   ドロップダウン リストから 1 つのパラメーター値を選択する。  
+- ドロップダウン リストから 1 つのパラメーター値を選択する。  
   
--   ドロップダウン リストから複数のパラメーター値を選択する。  
+- ドロップダウン リストから複数のパラメーター値を選択する。  
   
--   1 つのパラメーターのドロップダウン リストから値を選択する。この値は、別のパラメーターのドロップダウン リストで使用できる値を決定します。 これらはカスケード型パラメーターです。 カスケード型パラメーターを使用すると、何千ものパラメーター値を管理しやすい数まで連続的にフィルター処理することができます。  
+- 1 つのパラメーターのドロップダウン リストから値を選択する。この値は、別のパラメーターのドロップダウン リストで使用できる値を決定します。 これらはカスケード型パラメーターです。 カスケード型パラメーターを使用すると、何千ものパラメーター値を管理しやすい数まで連続的にフィルター処理することができます。  
   
      詳細については、「 [カスケード型パラメーターのレポートへの追加 (レポート ビルダーおよび SSRS)](../../reporting-services/report-design/add-cascading-parameters-to-a-report-report-builder-and-ssrs.md)で作成するモバイル レポートで使用できます。  
   
--   パラメーターの既定値は作成済みなので、パラメーター値を最初に選択しないでレポートを実行する。  
+- パラメーターの既定値は作成済みなので、パラメーター値を最初に選択しないでレポートを実行する。  
   
-##  <a name="bkmk_Report_Parameters"></a> レポート パラメーター プロパティ  
+## <a name="bkmk_Report_Parameters"></a> レポート パラメーター プロパティ
+
  [レポートのプロパティ] ダイアログ ボックスを使用して、レポート パラメーター プロパティを変更できます。 次の表に、各パラメーターに設定できるプロパティの概要を示します。  
   
 |プロパティ|[説明]|  
 |--------------|-----------------|  
 |[オブジェクト名]|パラメーターの名前を入力します (大文字と小文字が区別されます)。 名前は文字で始まる必要があります。また、名前には、文字、数字、アンダースコア (_) を使用できます。 空白は使用しないでください。 自動的に生成されたパラメーターの名前は、データセット クエリのパラメーターと同じ名前になります。 既定では、手動で作成されたパラメーターの名前は、ReportParameter1 のようになります。|  
 |[プロンプト]|レポート ビューアー ツール バーでパラメーターの横に表示されるテキストです。|  
-|データ型|レポート パラメーターのデータ型は、次のいずれかである必要があります。<br /><br /> **[Boolean]**。 オプション ボタンから True または False を選択します。<br /><br /> **[DateTime]**。 カレンダー コントロールから日付を選択します。<br /><br /> **[Integer]**。 テキスト ボックスに値を入力します。<br /><br /> **[Float]**。 テキスト ボックスに値を入力します。<br /><br /> **[Text]**。 テキスト ボックスに値を入力します。<br /><br /> パラメーターに有効な値を定義した場合は、データ型が **DateTime**であっても、ユーザーはドロップダウン リストから値を選択することになります。<br /><br /> レポートのデータ型の詳細については、「 [RDL Data Types](../../reporting-services/reports/report-definition-language-ssrs.md#bkmk_RDL_Data_Types)」をご覧ください。|  
+|データ型|レポート パラメーターのデータ型は、次のいずれかである必要があります。<br /><br /> **[Boolean]** 。 オプション ボタンから True または False を選択します。<br /><br /> **[DateTime]** 。 カレンダー コントロールから日付を選択します。<br /><br /> **[Integer]** 。 テキスト ボックスに値を入力します。<br /><br /> **[Float]** 。 テキスト ボックスに値を入力します。<br /><br /> **[Text]** 。 テキスト ボックスに値を入力します。<br /><br /> パラメーターに有効な値を定義した場合は、データ型が **DateTime**であっても、ユーザーはドロップダウン リストから値を選択することになります。<br /><br /> レポートのデータ型の詳細については、「 [RDL Data Types](../../reporting-services/reports/report-definition-language-ssrs.md#bkmk_RDL_Data_Types)」をご覧ください。|  
 |[空白の値を許可]|パラメーターの値に空の文字列 (空白) を許可する場合に選択します。<br /><br /> パラメーターの有効な値の一覧を指定する場合に空白を有効な値にするには、指定する値の中に含める必要があります。 このオプションを選択すると自動的に空白が有効な値に含まれるわけではありません。|  
 |[NULL 値を許可]|パラメーターの値に NULL 値を許可する場合に選択します。<br /><br /> パラメーターの有効な値の一覧を指定する場合に NULL を有効な値にするには、指定する値の中に含める必要があります。 このオプションを選択すると自動的に NULL が有効な値に含まれるわけではありません。|  
 |[複数の値を許可]|使用可能な値を指定して、ユーザーがドロップダウン リストから値を選択できるようにすると、 データセット クエリで有効な値のみが送信されるようにすることができます。<br /><br /> パラメーターの値に、ドロップダウン リストに表示される複数の値を指定できる場合に選択します。 NULL 値は許容されません。 このチェック ボックスがオンの場合、パラメーターのドロップダウン リストで、使用可能な値の一覧にチェック ボックスが追加されます。 一覧の一番上には、 **[すべて選択]** チェック ボックスが表示されます。 ユーザーは、必要な値のチェック ボックスをオンにすることができます。<br /><br /> 値を提供するデータが急速に変化する場合は、ユーザーに最新の一覧が表示されるとは限りません。|  
@@ -160,7 +168,7 @@ ms.locfileid: "56287710"
   
 -   [!INCLUDE[tsql](../../includes/tsql-md.md)] クエリの場合、データ ソースごとに異なるパラメーター構文がサポートされています。 サポートは、位置または名前によってクエリ内で識別されるパラメーターに応じて異なります。 詳細については、「[レポート データセット (SSRS)](../../reporting-services/report-data/report-datasets-ssrs.md)」で特定の外部データ ソースのトピックを参照してください。 リレーショナル クエリ デザイナーで、フィルターのパラメーター オプションを選択してパラメーター化クエリを作成する必要があります。 詳細については、「[リレーショナル クエリ デザイナーのユーザー インターフェイス &#40;レポート ビルダー&#41;](../../reporting-services/report-data/relational-query-designer-user-interface-report-builder.md)」を参照してください。  
   
--   Microsoft SQL Server Analysis Services、SAP NetWeaver BI、Hyperion Essbase などの多次元データ ソースに基づくクエリの場合は、クエリ デザイナーで指定したフィルターに基づくパラメーターを作成するかどうかを指定できます。 詳細については、「[クエリ デザイナー (レポート ビルダー)](https://msdn.microsoft.com/library/553f0d4e-8b1d-4148-9321-8b41a1e8e1b9)」で、データ拡張機能に対応するクエリ デザイナーのトピックを参照してください。  
+-   Microsoft SQL Server Analysis Services、SAP NetWeaver BI、Hyperion Essbase などの多次元データ ソースに基づくクエリの場合は、クエリ デザイナーで指定したフィルターに基づくパラメーターを作成するかどうかを指定できます。 詳細については、「[クエリ デザイン ツール &#40;SSRS&#41;](../report-data/query-design-tools-ssrs.md)」に記載されている、データ拡張機能に対応するクエリ デザイナーのトピックをご覧ください。  
   
 ##  <a name="bkmk_Manage_Parameters"></a> パブリッシュ済みレポートのパラメーターの管理  
  レポートをデザインするときは、レポート パラメーターはレポート定義に保存されます。 レポートをパブリッシュするときは、レポート パラメーターはレポート定義とは別に保存され管理されます。  
@@ -179,7 +187,7 @@ ms.locfileid: "56287710"
   
 -   **URL アクセス。** レポートへの URL でパラメーター値を指定できます。 URL アクセスを使用して、レポートを実行したりパラメーター値を指定したりすることもできます。 詳細については、「[URL アクセス (SSRS)](../../reporting-services/url-access-ssrs.md)」を参照してください。  
   
- レポート定義を再パブリッシュした場合には、通常、パブリッシュ済みレポートのパラメーター プロパティは保持されます。 レポート定義が同じレポートとして再パブリッシュされ、パラメーター名およびデータ型が同じである場合、プロパティ設定は保持されます。 レポート定義のパラメーターの追加や削除、または既存のパラメーターのデータ型やデータ名の変更を行った場合、パブリッシュ済みレポートのパラメーター プロパティの変更が必要になることがあります。  
+ レポート定義を再パブリッシュした場合には、パブリッシュ済みレポートのパラメーター プロパティは保持されます。 レポート定義が同じレポートとして再パブリッシュされ、パラメーター名およびデータ型が同じである場合、プロパティ設定は保持されます。 レポート定義のパラメーターの追加や削除、または既存のパラメーターのデータ型やデータ名の変更を行った場合、パブリッシュ済みレポートのパラメーター プロパティの変更が必要になることがあります。  
   
  パラメーターは変更できない場合もあります。 レポート パラメーターがデータセット クエリから既定値を取得した場合、パブリッシュ済みレポートでその値を変更することも、レポート サーバーで変更することもできません。 実行時に使用される値は、クエリが実行されるとき (式ベースのパラメーターの場合は式が評価されるとき) に決定されます。  
   
@@ -215,7 +223,7 @@ ms.locfileid: "56287710"
 
 ##  <a name="bkmk_Related_Topics"></a> 関連項目  
 
- [チュートリアル:レポートへのパラメーターの追加 &#40;レポート ビルダー&#41;](../../reporting-services/tutorial-add-a-parameter-to-your-report-report-builder.md)  
+ [チュートリアル: レポートへのパラメーターの追加 &#40;レポート ビルダー&#41;](../../reporting-services/tutorial-add-a-parameter-to-your-report-report-builder.md)  
   
 [レポート パラメーターの概念](../../reporting-services/report-design/report-parameters-concepts-report-builder-and-ssrs.md)  
   

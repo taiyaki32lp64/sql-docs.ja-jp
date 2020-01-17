@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: fc65c988-b31f-4cc9-851f-30d2119604fd
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 8540983b84d4d39fe5a02b92a1e3a3606350d36d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 941c821d7622b2364ec1cd417dd9b50302540b95
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47714450"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68088171"
 ---
 # <a name="using-16-bit-and-32-bit-applications-with-32-bit-drivers"></a>32 ビット ドライバーで 16 ビットおよび 32 ビット アプリケーションを使用
 > [!IMPORTANT]  

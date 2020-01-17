@@ -1,10 +1,10 @@
 - name: SQL Server データベースのバックアップと復元
   href: back-up-and-restore-of-sql-server-databases.md
   items:
-    - name: Windows Azure BLOB ストレージ サービスを使用した SQL Server のバックアップと復元
+    - name: Azure Blob Storage サービスを使った SQL Server のバックアップと復元
       href: sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md
       items:
-        - name: PowerShell の使用による Windows Azure BLOB ストレージ サービスへの複数データベースのバックアップ
+        - name: PowerShell を使った Azure Blob Storage サービスへの複数データベースのバックアップ
           href: back-up-multiple-databases-to-azure-blob-storage-powershell.md
     - name: SQL Server Backup to URL
       href: sql-server-backup-to-url.md
@@ -13,24 +13,24 @@
           href: sql-server-backup-to-url-best-practices-and-troubleshooting.md
     - name: アクティブなリースを保持しているバックアップ BLOB ファイルの削除
       href: deleting-backup-blob-files-with-active-leases.md
-- name: Windows Azure への SQL Server マネージド バックアップ
+- name: Azure への SQL Server マネージド バックアップ
   href: sql-server-managed-backup-to-microsoft-azure.md
   items:
-    - name: Windows Azure への SQL Server マネージド バックアップの設定
+    - name: Azure への SQL Server マネージド バックアップの設定
       href: enable-sql-server-managed-backup-to-microsoft-azure.md
-    - name: 'Windows Azure への SQL Server マネージド バックアップ: 相互運用性と共存'
+    - name: 'Azure への SQL Server マネージド バックアップ:相互運用性と共存'
       href: ../../database-engine/sql-server-managed-backup-to-windows-azure-interoperability-and-coexistence.md
-    - name: Windows Azure への SQL Server マネージド バックアップ - 保有期間とストレージの設定
+    - name: Azure への SQL Server マネージド バックアップ - 保有期間とストレージの設定
       href: ../../database-engine/sql-server-managed-backup-to-windows-azure-retention-and-storage-settings.md
-    - name: 可用性グループに対する Windows Azure への SQL Server マネージド バックアップの設定
+    - name: 可用性グループに対する Azure への SQL Server マネージド バックアップの設定
       href: ../../database-engine/setting-up-sql-server-managed-backup-to-windows-azure-for-availability-groups.md
-    - name: Windows Azure への SQL Server マネージド バックアップの監視
+    - name: Azure への SQL Server マネージド バックアップの監視
       href: ../../database-engine/monitor-sql-server-managed-backup-to-windows-azure.md
-    - name: Windows Azure への SQL Server マネージド バックアップのトラブルシューティング
+    - name: Azure への SQL Server マネージド バックアップのトラブルシューティング
       href: ../../database-engine/troubleshooting-sql-server-managed-backup-to-windows-azure.md
     - name: マネージド バックアップの構成 (SQL Server Management Studio)
       href: ../../database-engine/configure-managed-backup-sql-server-management-studio.md
-    - name: Windows Azure に格納されたバックアップからの復元
+    - name: Azure に格納されたバックアップからの復元
       href: restoring-from-backups-stored-in-microsoft-azure.md
 - name: 復旧モデル
   href: recovery-models-sql-server.md
@@ -160,7 +160,7 @@
       href: dbengine-continue-with-restore.md
     - name: '[バックアップ デバイスの選択]'
       href: select-backup-device.md
-    - name: Windows Azure ストレージへの接続 (復元)
+    - name: Azure Storage への接続 (復元)
       href: connect-to-microsoft-azure-storage-restore.md
     - name: データベースを新しい場所に復元する
       href: restore-a-database-to-a-new-location-sql-server.md
@@ -202,13 +202,13 @@
       href: deferred-transactions-sql-server.md
     - name: 機能していないファイル グループの削除 (SQL Server)
       href: remove-defunct-filegroups-sql-server.md
-    - name: '例: 読み取り/書き込みファイルのオンライン復元 (完全復旧モデル)'
+    - name: '例:読み取り/書き込みファイルのオンライン復元 (完全復旧モデル)'
       href: example-online-restore-of-a-read-write-file-full-recovery-model.md
-    - name: 読み取り専用ファイルのオンライン復元の例 (完全復旧モデル)
+    - name: '例:読み取り専用ファイルのオンライン復元 (完全復旧モデル)'
       href: example-online-restore-of-a-read-only-file-full-recovery-model.md
-    - name: '例 : 読み取り専用ファイルのオンライン復元 (単純復旧モデル)'
+    - name: '例:読み取り専用ファイルのオンライン復元 (単純復旧モデル)'
       href: example-online-restore-of-a-read-only-file-simple-recovery-model.md
-    - name: プライマリ ファイル グループと他のファイル グループを 1 つオフラインで復元する例 (完全復旧モデル)
+    - name: '例:プライマリ ファイル グループと他のファイル グループを 1 つオフラインで復元する (完全復旧モデル)'
       href: example-offline-restore-of-primary-and-one-other-filegroup-full-recovery-model.md
 - name: ページ復元
   href: restore-pages-sql-server.md
@@ -218,13 +218,13 @@
 - name: 段階的な部分復元
   href: piecemeal-restores-sql-server.md
   items:
-    - name: '例 : データベースの部分復元 (完全復旧モデル)'
+    - name: '例:データベースの部分復元 (完全復旧モデル)'
       href: example-piecemeal-restore-of-database-full-recovery-model.md
-    - name: データベースの段階的な部分復元 (単純復旧モデル) の例
+    - name: '例:データベースの部分復元 (単純復旧モデル)'
       href: example-piecemeal-restore-of-database-simple-recovery-model.md
-    - name: 一部のファイル グループのみを復元する段階的な部分復元 (完全復旧モデル) の例
+    - name: '例:一部のファイル グループのみを復元する段階的な部分復元 (完全復旧モデル)'
       href: example-piecemeal-restore-of-only-some-filegroups-full-recovery-model.md
-    - name: 一部のファイル グループのみを復元する段階的な部分復元 (単純復旧モデル) の例
+    - name: '例:一部のファイル グループのみを復元する段階的な部分復元 (単純復旧モデル)'
       href: example-piecemeal-restore-of-only-some-filegroups-simple-recovery-model.md
 - name: データを復元しないデータベースの復旧 (Transact-SQL)
   href: recover-a-database-without-restoring-data-transact-sql.md

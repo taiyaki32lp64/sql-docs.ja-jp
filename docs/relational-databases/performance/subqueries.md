@@ -15,14 +15,13 @@ helpviewer_keywords:
 ms.assetid: bfc97432-c14c-4768-9dc5-a9c512f6b2bd
 author: julieMSFT
 ms.author: jrasnick
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: a2ac6f2a1692d72eecbcd97dbc3536dcebd6f2ec
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: c2d4bb708142d4471381a1579baa943d11357823
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53356022"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68113285"
 ---
 # <a name="subqueries-sql-server"></a>サブクエリ (SQL Server)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -106,7 +105,7 @@ GO
 -   `EXISTS` で導かれたサブクエリの選択リストには、通例、単一の列名ではなくアスタリスク (\*) が使用されます。 `EXISTS` で導かれるサブクエリの規則は、標準の選択リストの規則と同じです。これは、`EXISTS` で導かれるサブクエリは存在検査を行うもので、データではなく TRUE または FALSE を返すためです。   
 
 ## <a name="qualifying"></a> サブクエリで使用する列名の修飾
-次の例で、外側のクエリの `WHERE` 句内の *CustomerID* 列は、外側のクエリの `FROM` 句内のテーブル名 *Sales.Store* で暗黙的に修飾されています。 サブクエリの選択リスト内の *CustomerID* への参照は、サブクエリの `FROM` 句、つまり *Sales.Customer* テーブルで修飾されています。
+次の例で、外側のクエリの `WHERE` 句内の *BusinessEntityID* 列は、外側のクエリの `FROM` 句内のテーブル名 (*Sales.Store*) で暗黙的に修飾されています。 サブクエリの選択リスト内の *CustomerID* への参照は、サブクエリの `FROM` 句、つまり *Sales.Customer* テーブルで修飾されています。
 
 ```sql
 USE AdventureWorks2016;
@@ -490,7 +489,7 @@ GO
 このステートメントは結合に変換できません。 非等価結合はこれとよく似ていますが、意味は異なります。つまり、自転車 (完成品) 以外のサブカテゴリに属する製品名が検索されます。      
 
 ### <a name="upsert"></a> UPDATE、DELETE、および INSERT ステートメントでのサブクエリ
-サブクエリは、`UPDATE`、`DELETE`、`INSERT`、`SELECT ` の各データ操作言語 (DML) ステートメントで入れ子にできます。    
+サブクエリは、`UPDATE`、`DELETE`、`INSERT`、`SELECT` の各データ操作言語 (DML) ステートメントで入れ子にできます。    
 
 次の例では、*ListPrice* テーブルの *Production.Product* 列の値が 2 倍になります。 `WHERE` 句のサブクエリでは *Purchasing.ProductVendor* テーブルを参照して、*Product* テーブルで更新される行を *BusinessEntity* 1540 の行だけに制限しています。
 
@@ -520,7 +519,7 @@ GO
 ```
 
 ### <a name="comparison"></a> 比較演算子によるサブクエリ
-サブクエリは、次の比較演算子のいずれかで導くことができます (=、< >、>、> =、<、!  >、!  <、< =)。   
+サブクエリは、次の比較演算子のいずれかで導くことができます (=、< >、>、> =、<、! >、! <、< =)。   
 
 修飾されていない比較演算子 (後ろに `ANY` や `ALL` がない比較演算子) で導かれるサブクエリでは、`IN` によって導かれるサブクエリと同様に、値のリストでなく単一の値を返す必要があります。 このようなサブクエリから複数の値が返された場合は、SQL Server によりエラー メッセージが表示されます。    
 

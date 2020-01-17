@@ -1,6 +1,6 @@
 ---
-title: ユーザー定義型の使用 |Microsoft Docs
-description: OLE DB Driver for SQL Server のユーザー定義型の使用
+title: ユーザー定義型を使用する |Microsoft Docs
+description: OLE DB Driver for SQL Server でのユーザー定義型の使用
 ms.custom: ''
 ms.date: 06/12/2018
 ms.prod: sql
@@ -21,13 +21,12 @@ helpviewer_keywords:
 - ISSCommandWithParameters interface
 author: pmasl
 ms.author: pelopes
-manager: craigg
-ms.openlocfilehash: 1cab9f8d7810216fff9e56fc9bab99cf1b58c92e
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: 731e00fdf4c9f073348389f537fa812e10bcbab5
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52396356"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67988797"
 ---
 # <a name="using-user-defined-types"></a>ユーザー定義型の使用
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -45,20 +44,20 @@ ms.locfileid: "52396356"
 >  **IRowsetFind::FindNextRow** メソッドでは、UDT データ型を処理できません。 UDT が検索列の型として使用されると、DB_E_BADCOMPAREOP が返されます。  
   
 ### <a name="data-bindings-and-coercions"></a>データ バインドと強制型変換  
- 次の表に、特定のデータ型を [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] の UDT と共に使用した場合に行われるバインドおよび強制型変換を示します。 UDT 列は、dbtype_udt 型として SQL Server の OLE DB ドライバーを通じて公開されます。 この列のメタデータは、適切なスキーマ行セットを使用して取得できるので、独自に定義した型をオブジェクトとして管理できます。  
+ 次の表に、特定のデータ型を [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] の UDT と共に使用した場合に行われるバインドおよび強制型変換を示します。 UDT 列は、DBTYPE_UDT として SQL Server ために OLE DB ドライバーを介して公開されます。 この列のメタデータは、適切なスキーマ行セットを使用して取得できるので、独自に定義した型をオブジェクトとして管理できます。  
   
 |データ型|SQL Server の<br /><br /> **UDT**|SQL Server の<br /><br /> **UDT 以外から**|サーバーから<br /><br /> **UDT**|サーバーから<br /><br /> **UDT 以外から**|  
 |---------------|---------------------------|--------------------------------|-----------------------------|----------------------------------|  
-|DBTYPE_UDT|サポートされている<sup>6</sup>|エラー<sup>1</sup>|サポートされている<sup>6</sup>|エラー<sup>5</sup>|  
-|DBTYPE_BYTES|サポートされている<sup>6</sup>|該当なし<sup>2</sup>|サポートされている<sup>6</sup>|該当なし<sup>2</sup>|  
-|DBTYPE_WSTR|サポートされている<sup>3、6</sup>|該当なし<sup>2</sup>|サポートされている<sup>4、6</sup>|該当なし<sup>2</sup>|  
-|DBTYPE_BSTR|サポートされている<sup>3、6</sup>|該当なし<sup>2</sup>|サポートされている<sup>4</sup>|該当なし<sup>2</sup>|  
-|DBTYPE_STR|サポートされている<sup>3、6</sup>|該当なし<sup>2</sup>|サポートされている<sup>4、6</sup>|該当なし<sup>2</sup>|  
-|DBTYPE_IUNKNOWN|サポートされていません|該当なし<sup>2</sup>|サポートされていません|該当なし<sup>2</sup>|  
-|DBTYPE_VARIANT (VT_UI1 &#124; VT_ARRAY)|サポートされている<sup>6</sup>|該当なし<sup>2</sup>|サポートされている<sup>4</sup>|該当なし<sup>2</sup>|  
-|DBTYPE_VARIANT (VT_BSTR)|サポートされている<sup>3、6</sup>|該当なし<sup>2</sup>|なし|該当なし<sup>2</sup>|  
+|DBTYPE_UDT|サポートされて<sup>6</sup>|エラー<sup>1</sup>|サポートされて<sup>6</sup>|エラー<sup>5</sup>|  
+|DBTYPE_BYTES|サポートされて<sup>6</sup>|N/A<sup>2</sup>|サポートされて<sup>6</sup>|N/A<sup>2</sup>|  
+|DBTYPE_WSTR|サポートされている<sup>3、6</sup>|N/A<sup>2</sup>|サポートされている<sup>4、6</sup>|N/A<sup>2</sup>|  
+|DBTYPE_BSTR|サポートされている<sup>3、6</sup>|N/A<sup>2</sup>|サポートされている<sup>4</sup>|N/A<sup>2</sup>|  
+|DBTYPE_STR|サポートされている<sup>3、6</sup>|N/A<sup>2</sup>|サポートされている<sup>4、6</sup>|N/A<sup>2</sup>|  
+|DBTYPE_IUNKNOWN|サポートされていません|N/A<sup>2</sup>|サポートされていません|N/A<sup>2</sup>|  
+|DBTYPE_VARIANT (VT_UI1 &#124; VT_ARRAY)|サポートされて<sup>6</sup>|N/A<sup>2</sup>|サポートされている<sup>4</sup>|N/A<sup>2</sup>|  
+|DBTYPE_VARIANT (VT_BSTR)|サポートされている<sup>3、6</sup>|N/A<sup>2</sup>|なし|N/A<sup>2</sup>|  
   
- <sup>1</sup>**ICommandWithParameters::SetParameterInfo** で DBTYPE_UDT 以外のサーバーの型が指定され、アクセサーの型が DBTYPE_UDT の場合、ステートメントの実行時にエラー (DB_E_ERRORSOCCURRED) が発生します (パラメーターの状態は DBSTATUS_E_BADACCESSOR になります)。 それ以外の場合、データはサーバーに送信されますが、サーバーからは、UDT がパラメーターのデータ型に暗黙的に変換されないことを示すエラーが返されます。  
+ <sup>1</sup>**ICommandWithParameters::SetParameterInfo** で DBTYPE_UDT 以外のサーバーの型が指定され、アクセサーの型が DBTYPE_UDT の場合、ステートメントの実行時にエラー (DB_E_ERRORSOCCURRED) が発生します (パラメーターの状態は DBSTATUS_E_BADACCESSOR になります)。 それ以外の場合、データはサーバーに送信されますが、サーバーからは、UDT からパラメーターのデータ型への暗黙的な変換がないことを示すエラーが返されます。  
   
  <sup>2</sup>この記事での説明の対象外です。  
   
@@ -82,7 +81,7 @@ ms.locfileid: "52396356"
  OLE DB Core Services で提供されるデータ変換 (**IDataConvert**) は、DBTYPE_UDT 型には適用できません。 また、その他のバインドもサポートされません。  
   
 ### <a name="ole-db-rowset-additions-and-changes"></a>OLE DB 行セットに関する追加事項と変更事項  
- OLE DB Driver for SQL Server では、新しい値を追加します。 または、多くの主要な OLE DB スキーマ行セットを変更します。  
+ OLE DB Driver for SQL Server では、新しい値またはコア OLE DB スキーマ行セットの多くに対する変更が追加されます。  
   
 #### <a name="the-procedureparameters-schema-rowset"></a>PROCEDURE_PARAMETERS スキーマ行セット  
  PROCEDURE_PARAMETERS スキーマ行セットには、次の列が追加されました。  
@@ -137,7 +136,7 @@ ms.locfileid: "52396356"
 |SS_UDT_ASSEMBLY_TYPENAME|DBTYPE_WSTR|型名の前に名前空間を付けた完全な型名 (AQN) (該当する場合)。|  
   
 ### <a name="ole-db-property-set-additions-and-changes"></a>OLE DB プロパティ セットに関する追加事項と変更事項  
- OLE DB Driver for SQL Server では、新しい値を追加します。 またはに多くの主要な OLE DB プロパティ セットを変更します。  
+ OLE DB Driver for SQL Server では、多くのコア OLE DB プロパティセットに新しい値または変更が追加されます。  
   
 #### <a name="the-dbpropsetsqlserverparameter-property-set"></a>DBPROPSET_SQLSERVERPARAMETER プロパティ セット  
  OLE DB で UDT をサポートするため、OLE DB Driver for SQL Server では、次の値を含む新しい DBPROPSET_SQLSERVERPARAMETER プロパティ セットが実装されました。  
@@ -173,7 +172,7 @@ ms.locfileid: "52396356"
  UDT の定義がテーブルと異なるデータベースにある場合、SSPROP_COL_UDT_CATALOGNAME プロパティと SSPROP_COL_UDT_SCHEMANAME プロパティの両方を指定する必要があります。  
   
 ### <a name="ole-db-interface-additions-and-changes"></a>OLE DB インターフェイスに関する追加事項と変更事項  
- OLE DB Driver for SQL Server では、新しい値を追加します。 または、多くの主要な OLE DB インターフェイスを変更します。  
+ OLE DB Driver for SQL Server は、コア OLE DB インターフェイスの多くに新しい値または変更を追加します。  
   
 #### <a name="the-isscommandwithparameters-interface"></a>ISSCommandWithParameters インターフェイス  
  OLE DB で UDT をサポートするため、OLE DB Driver for SQL Server では、**ISSCommandWithParameters** インターフェイスの追加など、多くの変更が加えられました。 この新しいインターフェイスは、主要な OLE DB インターフェイス **ICommandWithParameters** から継承されます。 **ICommandWithParameters** インターフェイスから継承される 3 つのメソッド (**GetParameterInfo**、**MapParameterNames**、および **SetParameterInfo**) に加えて、**ISSCommandWithParameters** では、サーバー固有のデータ型を処理するために使用される **GetParameterProperties** メソッドと **SetParameterProperties** メソッドが提供されます。  

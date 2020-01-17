@@ -2,21 +2,21 @@
 title: レポート サーバーでカスタム認証またはフォーム認証を構成する | Microsoft Docs
 ms.date: 04/18/2017
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: security
 ms.topic: conceptual
 helpviewer_keywords:
 - Forms authentication, configuring
 - custom authentication [Reporting Services]
 ms.assetid: e8601a8f-e66d-4649-8e4d-a46ca20ec7d0
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 4ef775e1474c38e95491388465d1010c23d64526
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 8c77e0f066c6342fb0b5bc58130cb20c80e40de3
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50027481"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65571168"
 ---
 # <a name="configure-custom-or-forms-authentication-on-the-report-server"></a>レポート サーバーでカスタム認証またはフォーム認証を構成する
 

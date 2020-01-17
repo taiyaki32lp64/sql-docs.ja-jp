@@ -7,15 +7,14 @@ ms.reviewer: ''
 ms.technology: scripting
 ms.topic: conceptual
 ms.assetid: ab9212a6-6628-4f08-a38c-d3156e05ddea
-author: stevestein
-ms.author: sstein
-manager: craigg
-ms.openlocfilehash: a589502fd502b49e82d6458f163bccac45345b64
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: c246a68216d6de4b1a21d2d2c5c0999703362c36
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52502467"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68049145"
 ---
 # <a name="manage-authentication-in-database-engine-powershell"></a>データベース エンジン PowerShell での認証の管理
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -74,7 +73,7 @@ cd SQLAuth
 ##  <a name="SQLAuthInvSqlCmd"></a> Invoke-Sqlcmd を使用する SQL Server 認証  
  **SQL Server 認証で Invoke-Sqlcmd を使用するには**  
   
-1.  **-Username** パラメーターでログイン ID を指定し、**-Password** パラメーターで関連付けられているパスワードを指定します。  
+1.  **-Username** パラメーターでログイン ID を指定し、 **-Password** パラメーターで関連付けられているパスワードを指定します。  
   
 ### <a name="example-invoke-sqlcmd"></a>例 (Invoke-Sqlcmd)  
  この例では、read-host コマンドレットを使用してユーザーにパスワードの入力を求め、SQL Server 認証を使用して接続します。  

@@ -11,15 +11,14 @@ helpviewer_keywords:
 - PATH FOR XML mode, namespace support
 - namespaces [XML in SQL Server]
 ms.assetid: 5f128ea2-0ceb-4b23-bce7-c8b3fd615466
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: 19c932a3927e71208e4b1c82c8c3bce4cbadfd8b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: MightyPen
+ms.author: genemi
+ms.openlocfilehash: 72449f54a5256987b7336c82fb5119235ab302b2
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47747040"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68137466"
 ---
 # <a name="namespace-support-in-path-mode"></a>PATH モードでの名前空間のサポート
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

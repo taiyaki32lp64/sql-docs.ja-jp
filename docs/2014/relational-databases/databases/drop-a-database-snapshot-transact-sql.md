@@ -15,11 +15,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: d1387b6321ace59ec8a0c13ed03444553f4adf85
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52774304"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62871919"
 ---
 # <a name="drop-a-database-snapshot-transact-sql"></a>データベース スナップショットの削除 (Transact-SQL)
   データベース スナップショットを削除すると、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] からデータベース スナップショットが削除され、そのスナップショットで使用されていたスパース ファイルが削除されます。 データベース スナップショットを削除すると、そのデータベース スナップショットに対するすべてのユーザー接続が終了します。  
@@ -36,7 +36,7 @@ ms.locfileid: "52774304"
   
 2.  削除するデータベース スナップショットの名前を指定して [DROP DATABASE](/sql/t-sql/statements/drop-database-audit-specification-transact-sql) ステートメントを実行します。 構文は次のとおりです。  
   
-     DROP DATABASE *database_snapshot_name* [ **,**...*n* ]  
+     DROP DATABASE *database_snapshot_name* [ **,** ...*n* ]  
   
      ここで、 *database_snapshot_name* は、削除するデータベース スナップショットの名前です。  
   

@@ -2,23 +2,23 @@
 title: Parameters コレクションの参照 (レポート ビルダーおよび SSRS) | Microsoft Docs
 ms.date: 03/07/2017
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: report-design
 ms.topic: conceptual
 ms.assetid: c4b47e15-0484-4c13-9182-898db825f01f
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: d88a76bcba0350b39fed6b4e41d3b5ae80b2738f
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 137eb9b9cf7a5a64843e163ece3b4767dd8e1852
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56290140"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65581798"
 ---
 # <a name="built-in-collections---parameters-collection-references-report-builder"></a>組み込みコレクション - Parameters コレクションの参照 (レポート ビルダー)
   レポート パラメーターは、式から参照できる組み込みコレクションの 1 つです。 パラメーターを式に含めると、レポートのデータと外観をユーザーの選択に基づいてカスタマイズできます。 式は、(*Fx*) オプションまたは [\<**式**>] オプションを利用できる、すべてのレポート アイテム プロパティやテキスト ボックス プロパティで使用できます。 式は、他の方法でレポートの内容と外観を制御する場合にも使用されます。 詳細については、「[式の例 &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/expression-examples-report-builder-and-ssrs.md)」を参照してください。  
   
- 実行時にパラメーター値をデータセットのフィールド値と比較する場合は、比較する 2 つのアイテムのデータ型が同じである必要があります。 レポート パラメーターに使用できるデータ型は次のいずれかです:Boolean、DateTime、Integer、Float、または Text (これは基になるデータ型 String を表します)。 必要に応じて、パラメーター値のデータ型をデータセットの値に一致するように変換することが必要になる場合もあります。 詳細については、「 [式で使用されるデータ型 (レポート ビルダーおよび SSRS)](../../reporting-services/report-design/data-types-in-expressions-report-builder-and-ssrs.md)など、先頭に &amp; (アンパサンド) が付いた状態で表示されます。  
+ 実行時にパラメーター値をデータセットのフィールド値と比較する場合は、比較する 2 つのアイテムのデータ型が同じである必要があります。 レポート パラメーターには、Boolean、DateTime、Integer、Float、または Text のいずれかを使用できます。Text は基になるデータ型 String を表します。 必要に応じて、パラメーター値のデータ型をデータセットの値に一致するように変換することが必要になる場合もあります。 詳細については、「 [式で使用されるデータ型 (レポート ビルダーおよび SSRS)](../../reporting-services/report-design/data-types-in-expressions-report-builder-and-ssrs.md)など、先頭に &amp; (アンパサンド) が付いた状態で表示されます。  
   
  パラメーター参照を式に含めるには、パラメーター参照に適切な構文を指定する方法を理解する必要があります。これは、パラメーターが単独値パラメーターと複数の値を持つパラメーターのどちらであるかによって異なります。  
   
@@ -57,7 +57,7 @@ ms.locfileid: "56290140"
  [式 &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/expressions-report-builder-and-ssrs.md)   
  [一般的に使用されるフィルター &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/commonly-used-filters-report-builder-and-ssrs.md)   
  [レポート パラメーターの追加、変更、または削除 &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/add-change-or-delete-a-report-parameter-report-builder-and-ssrs.md)   
- [チュートリアル: レポートへのパラメーターの追加 &#40;レポート ビルダー&#41;](../../reporting-services/tutorial-add-a-parameter-to-your-report-report-builder.md)   
+ [チュートリアル: レポートへのパラメーターの追加 &#40;レポート ビルダー#41;](../../reporting-services/tutorial-add-a-parameter-to-your-report-report-builder.md)   
  [レポート ビルダー チュートリアル](../../reporting-services/report-builder-tutorials.md)   
  [式で使用される組み込みコレクション &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/built-in-collections-in-expressions-report-builder.md)  
   

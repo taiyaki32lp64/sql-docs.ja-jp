@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.restoredbdialog.f1
@@ -13,12 +12,12 @@ ms.assetid: 319e7ef5-c9c7-4e50-8690-02a90aed006f
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: b63beac3d5034d041488b44202c4173b759a1884
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 2ebc1bc72a15545412adcc71d10feb08f3f05b16
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48099312"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66080953"
 ---
 # <a name="general-restore-database-dialog-box-analysis-services---multidimensional-data"></a>[全般] ([データベースの復元] ダイアログ ボックス) (Analysis Services - 多次元データ)
   [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] の **[データベースの復元]** ダイアログ ボックスの **[全般]** ページを使用すると、[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] データベースの復元に使用するバックアップ ファイルおよび全般設定を指定できます。  
@@ -56,7 +55,7 @@ ms.locfileid: "48099312"
  選択された [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] データベースの復元元のバックアップ ファイルを選択します。  
   
  **[参照]**  
- クリックすると、**[データベース ファイルの検索]** ダイアログ ボックスが表示され、使用するバックアップ ファイルのパスおよびファイル名を選択できます。 **[データベース ファイルの検索]** ダイアログ ボックスの詳細については、「[[データベース ファイルの検索] ダイアログ ボックス (Analysis Services - 多次元データ)](locate-database-files-dialog-box-analysis-services-multidimensional-data.md)」を参照してください。  
+ クリックすると、 **[データベース ファイルの検索]** ダイアログ ボックスが表示され、使用するバックアップ ファイルのパスおよびファイル名を選択できます。 **[データベース ファイルの検索]** ダイアログ ボックスの詳細については、「[[データベース ファイルの検索] ダイアログ ボックス (Analysis Services - 多次元データ)](locate-database-files-dialog-box-analysis-services-multidimensional-data.md)」を参照してください。  
   
  **データベースの上書きを許可します。**  
  [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] でこのオプションを選択すると、指定した [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] データベース内の既存のオブジェクトを、指定のバックアップ ファイルの内容に戻すことができます。  
@@ -74,8 +73,8 @@ ms.locfileid: "48099312"
  **Password**  
  バックアップ ファイルが暗号化されている場合は、バックアップ ファイルの暗号化に使用されたパスワードを入力します。  
   
-## <a name="see-also"></a>参照  
- [データベースの復元 ダイアログ ボックス&#40;Analysis Services - 多次元データ&#41;](restore-database-dialog-box-analysis-services-multidimensional-data.md)   
+## <a name="see-also"></a>関連項目  
+ [[データベースの復元] ダイアログ ボックス (Analysis Services - 多次元データ)](restore-database-dialog-box-analysis-services-multidimensional-data.md)   
  [パーティション&#40;データベースの復元 ダイアログ ボックス&#41; &#40;Analysis Services - 多次元データ&#41;](partitions-restore-database-dialog-box-analysis-services-multidimensional-data.md)   
  [Analysis Services データベースのバックアップと復元](multidimensional-models/backup-and-restore-of-analysis-services-databases.md)  
   

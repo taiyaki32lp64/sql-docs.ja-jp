@@ -2,20 +2,20 @@
 title: レポートへの HTML のインポート (レポート ビルダーおよび SSRS) | Microsoft Docs
 ms.date: 12/06/2018
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: report-design
 description: テキスト ボックスを使用して、データセットのフィールドから取得した HTML 形式のテキストをレポートに挿入する方法を説明します。
 ms.custom: seodec18
 ms.topic: conceptual
 ms.assetid: dd0410ea-8839-4e8c-9944-8cdfe5465591
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: ff0e5bffdc0704894029a223c5d3c47d18d8ac80
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 54bd3d5acaf487909a4965c1f73a2e8c00aef82a
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56289480"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65580231"
 ---
 # <a name="importing-html-into-a-report-report-builder-and-ssrs"></a>レポートへの HTML のインポート (レポート ビルダーおよび SSRS)
   テキスト ボックスを使用すると、データセットのフィールドから取得した HTML 形式のテキストをレポートに挿入できます。 正しい形式の HTML に評価される単純型または複合型の式のテキストを使用できます。 書式付きのテキストは、PDF などのサポートされている出力形式すべてにレンダリングできます。  
@@ -27,20 +27,20 @@ ms.locfileid: "56289480"
 > [!NOTE]  
 >  HTML マークアップが含まれたテキストをインポートする場合、データは必ず最初にテキスト ボックスによって解析される必要があります。 サポートされているのは HTML タグのサブセットのみなので、レンダリングされたレポートに表示される HTML が元の HTML と異なる場合もあります。  
   
- すぐに使用するには、「[チュートリアル:テキストの書式設定 &#40;レポート ビルダー&#41;](../../reporting-services/tutorial-format-text-report-builder.md)」をご覧ください。  
+ すぐに使用するには、「[チュートリアル: テキストの書式設定 &#40;レポート ビルダー&#41;](../../reporting-services/tutorial-format-text-report-builder.md)」をご覧ください。  
   
 ## <a name="supported-html-tags"></a>サポートされる HTML タグ  
  以下は、プレースホルダー テキストとして定義された場合に HTML として表示されるタグの全リストです。  
   
--   ハイパーリンク:\<A HREF>  
+-   ハイパーリンク: \<A HREF>  
   
--   フォント :\<FONT>  
+-   フォント: \<FONT>  
   
 -   ヘッダー、スタイル、およびブロック要素: \<H{n}>、\<DIV>、\<SPAN>、\<P>、\<DIV>、\<LI>、\<HN>  
   
--   テキスト形式:\<B>、\<I>、\<U>、\<S>  
+-   テキスト形式: \<B>、\<I>、\<U>、\<S>  
   
--   リストの処理:\<OL>、\<UL>、\<LI>  
+-   リストの処理: \<OL>、\<UL>、\<LI>  
   
  レポートの処理中、その他の HTML マークアップ タグはすべて無視されます。 プレースホルダー テキスト内の式で表される HTML が整形式でない場合、プレースホルダーはプレーン テキストに変換されます。 HTML タグの大文字と小文字は区別されません。  
   

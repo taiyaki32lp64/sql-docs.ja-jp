@@ -23,11 +23,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: fcdbfe9f9289ab9cc529d4d37eb27d877dfff3ee
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48151628"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63150489"
 ---
 # <a name="use-sql-server-profiler-to-create-and-test-plan-guides"></a>SQL Server Profiler を使用したプラン ガイドの作成とテスト
   プラン ガイドを作成するとき、 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] sp_create_plan_guide *ストアド プロシージャの* statement_text **引数に使用するために、** を使用して正確なクエリ テキストをキャプチャできます。 これにより、コンパイル時にプラン ガイドをクエリに一致させることができます。 プラン ガイドを作成した後、プラン ガイドが実際にクエリに一致することをテストするためにも [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] を使用できます。 通常、クエリがプラン ガイドに一致することを確認するには、 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] を使用してプラン ガイドをテストする必要があります。  
@@ -96,7 +96,7 @@ EXEC sp_create_plan_guide
   
 5.  プラン ガイドが OBJECT 型または SQL 型の場合は、 **Showplan XML** イベントに、クエリと一致させるプラン ガイドの **PlanGuideDB** 属性と **PlanGuideName** 属性が含まれていることを確認します。 または、TEMPLATE プラン ガイドの場合は、 **Showplan XML** イベントに、クエリと一致させるプラン ガイドの **TemplatePlanGuideDB** 属性と **TemplatePlanGuideName** 属性が含まれていることを確認します。 これにより、プラン ガイドが機能していることを確認できます。 これらの属性は、プランの **\<StmtSimple>** 要素に含まれます。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [sp_create_plan_guide &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-create-plan-guide-transact-sql)  
   
   

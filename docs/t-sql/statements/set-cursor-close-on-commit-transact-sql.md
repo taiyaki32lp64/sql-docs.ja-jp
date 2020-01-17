@@ -23,13 +23,12 @@ helpviewer_keywords:
 ms.assetid: 7b976154-98ce-4a06-bbae-7e59c34211f7
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: 5fff3b17c2594c48653b7ad24ec988e40b6b1d4e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 392a50a23bd33235bb5a89eb95d585ebd5531527
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47650820"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67929115"
 ---
 # <a name="set-cursorcloseoncommit-transact-sql"></a>SET CURSOR_CLOSE_ON_COMMIT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -46,18 +45,18 @@ SET CURSOR_CLOSE_ON_COMMIT { ON | OFF }
 ```  
   
 ## <a name="remarks"></a>Remarks  
- SET CURSOR_CLOSE_ON_COMMIT が ON の場合、この設定では ISO に従い、コミット時またはロールバック時にオープン カーソルがすべてクローズされます。 SET CURSOR_CLOSE_ON_COMMIT が OFF の場合、トランザクションのコミット時にカーソルはクローズされません。  
+ SET CURSOR_CLOSE_ON_COMMIT が ON の場合、この設定では ISO に準拠し、コミット時またはロールバック時にオープン カーソルがすべてクローズされます。 SET CURSOR_CLOSE_ON_COMMIT が OFF の場合、トランザクションのコミット時にカーソルはクローズされません。  
   
 > [!NOTE]  
 >  SAVE TRANSACTION ステートメントの savepoint_name にロールバックを適用した場合、SET CURSOR_CLOSE_ON_COMMIT を ON にすると、ロールバック時にオープンされているカーソルはクローズされます。  
   
- SET CURSOR_CLOSE_ON_COMMIT が OFF の場合には、ROLLBACK ステートメントによってクローズされるカーソルは完全には作成されていない非同期カーソルだけです。 変更が加えられた後でオープンされた STATIC カーソルまたは INSENSITIVE カーソルは、変更がロールバックされた場合、データの状態を反映していません。  
+ SET CURSOR_CLOSE_ON_COMMIT が OFF の場合には、ROLLBACK ステートメントによってクローズされるカーソルは完全には作成されていない非同期オープン カーソルだけです。 変更が加えられた後でオープンされた STATIC カーソルまたは INSENSITIVE カーソルは、変更がロールバックされた場合、データの状態を反映しなくなります。  
   
  SET CURSOR_CLOSE_ON_COMMIT は、CURSOR_CLOSE_ON_COMMIT データベース オプションと同じ動作を制御します。 CURSOR_CLOSE_ON_COMMIT が ON または OFF に設定されている場合、その設定は接続で使用されます。 SET CURSOR_CLOSE_ON_COMMIT が指定されていない場合は、**sys.databases** カタログ ビューにある **is_cursor_close_on_commit_on** 列の値が適用されます。  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB Provider for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] と [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC ドライバーはどちらも、接続時に CURSOR_CLOSE_ON_COMMIT を OFF に設定します。 DB-Library は CURSOR_CLOSE_ON_COMMIT の値を自動的に設定しません。  
   
- SET ANSI_DEFAULTS が ON の場合には、SET CURSOR_CLOSE_ON_COMMIT は有効 (ON) になります。  
+ SET ANSI_DEFAULTS が ON の場合には、SET CURSOR_CLOSE_ON_COMMIT は有効になります。  
   
  SET CURSOR_CLOSE_ON_COMMIT は、解析時ではなく実行時に設定されます。  
   

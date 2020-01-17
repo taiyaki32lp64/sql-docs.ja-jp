@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 f1_keywords:
 - VS.ToolsOptionsPages.QueryResults.SqlServer.SQLResultsToGrid
@@ -13,15 +12,15 @@ ms.assetid: f88a0f5c-e800-473b-ae23-c3943de5ed63
 author: craigg-msft
 ms.author: craigg
 manager: craigg
-ms.openlocfilehash: d8719a91fada156d74003231abea67f2ae55f35c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: b67926706674abb116b4f3075089853e6fbb665e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48224922"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66089313"
 ---
 # <a name="options-query-results-sql-server-results-to-grid-page"></a>オプション (クエリ結果-SQL Server の結果をグリッド ページ)
-  このページを使用すると、クエリ結果セットをグリッド形式で表示するためのオプションを指定できます。 このオプションに加えた変更は、新規の [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] クエリにのみ適用されます。 現在のクエリのオプションを変更するには、**[クエリ]** メニューの **[クエリ オプション]** をクリックするか、[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] のクエリ ウィンドウを右クリックして **[クエリ オプション]** をクリックします。 **[クエリ オプション]** ダイアログ ボックスの左ペインで、**[結果]** の **[グリッド]** をクリックします。  
+  このページを使用すると、クエリ結果セットをグリッド形式で表示するためのオプションを指定できます。 このオプションに加えた変更は、新規の [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] クエリにのみ適用されます。 現在のクエリのオプションを変更するには、 **[クエリ]** メニューの **[クエリ オプション]** をクリックするか、[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] のクエリ ウィンドウを右クリックして **[クエリ オプション]** をクリックします。 **[クエリ オプション]** ダイアログ ボックスの左ペインで、 **[結果]** の **[グリッド]** をクリックします。  
   
 ## <a name="uielement-list"></a>UI 要素の一覧  
  **結果セットにクエリを含める**  
@@ -49,7 +48,7 @@ ms.locfileid: "48224922"
   
  **[XML データ]**  
   
- **[1 MB]**、 **[2 MB]**、または **[5 MB]** を選択します。 すべての文字を取得する場合は、 **[無制限]** を選択します。  
+ **[1 MB]** 、 **[2 MB]** 、または **[5 MB]** を選択します。 すべての文字を取得する場合は、 **[無制限]** を選択します。  
   
  **既定値にリセット**  
  このページ上のすべての値を元の既定値にリセットします。  

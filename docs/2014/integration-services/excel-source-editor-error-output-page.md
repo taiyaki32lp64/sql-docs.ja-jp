@@ -4,23 +4,22 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.excelsourceadapter.erroroutput.f1
 helpviewer_keywords:
 - Excel Source Editor
 ms.assetid: 8d14019e-cb60-4bc1-b71e-7f2326de8317
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 43218f87bb8a19fc35b3191603e9324e94145a64
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 38181aca8a2946a9268f77560bdadcbc96e617bb
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48106412"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66059230"
 ---
 # <a name="excel-source-editor-error-output-page"></a>[Excel ソース エディター] ([エラー出力] ページ)
   **[Excel ソース エディター]** ダイアログ ボックスの **[エラー出力]** ページを使用すると、エラー処理オプションを選択したり、エラー出力列のプロパティを設定したりできます。  
@@ -51,10 +50,10 @@ ms.locfileid: "48106412"
  **[適用]**  
  選択したセルにエラー処理オプションを適用します。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [Integration Services のエラーおよびメッセージのリファレンス](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [[Excel ソース エディター&#40;接続マネージャー] ページ&#41;](../../2014/integration-services/excel-source-editor-connection-manager-page.md)   
- [[Excel ソース エディター&#40;列] ページ&#41;](../../2014/integration-services/excel-source-editor-columns-page.md)   
+ [[Excel ソース エディター] &#40;[接続マネージャー] ページ&#41;](../../2014/integration-services/excel-source-editor-connection-manager-page.md)   
+ [[Excel ソース エディター] &#40;[列] ページ&#41;](../../2014/integration-services/excel-source-editor-columns-page.md)   
  [Excel 接続マネージャー](connection-manager/excel-connection-manager.md)   
  [Foreach ループ コンテナーを使用して Excel のファイルおよびテーブルをループ処理する](control-flow/foreach-loop-container.md)  
   

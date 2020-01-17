@@ -13,11 +13,11 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: 6968331bc7699334f61997ec6a16e521c158078a
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54123973"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62721052"
 ---
 # <a name="lesson-3-validating-the-subscription-and-measuring-latency"></a>レッスン 3: サブスクリプションの検証と待機時間の計測
   このレッスンでは、トレーサー トークンを使用して、変更がサブスクライバーにレプリケートされているかどうかを検証し、待機時間を計測します。待機時間とは、パブリッシャーで加えられた変更がサブスクライバーに反映されるまでの所用時間です。 このレッスンでは、前のレッスンを完了している必要があります[レッスン 2。トランザクション パブリケーションに対するサブスクリプションを作成する](lesson-2-creating-a-subscription-to-the-transactional-publication.md)します。  
@@ -34,7 +34,7 @@ ms.locfileid: "54123973"
   
 4.  **[トレーサーの挿入]** をクリックします。  
   
-5.  次の列にトレーサー トークンの経過時間を表示:**パブリッシャー ディストリビューターまでから**、**ディストリビューター サブスクライバーからまで**、**合計待機時間**します。 **[保留中]** と表示された場合は、トークンが特定のポイントに到達していないことを示します。  
+5.  次の列にトレーサー トークンの経過時間を表示します。 **[Publisher to Distributor]\(パブリッシャーからディストリビューターまで\)** 、 **[Distributor to Subscriber]\(ディストリビューターからサブスクライバーまで\)** 、 **[合計待機時間]** 。 **[保留中]** と表示された場合は、トークンが特定のポイントに到達していないことを示します。  
   
 ## <a name="next-steps"></a>次の手順  
  このレッスンでは、トレーサー トークンを使用して、データの変更がパブリッシャーからスクライバへレプリケートされているかどうかを検証しました。 パブリッシャー側の **Product** テーブルに対してデータの挿入、更新、または削除を行い、レプリケーション後、サブスクライバー側の **Product** テーブルをクエリすることもできます。  

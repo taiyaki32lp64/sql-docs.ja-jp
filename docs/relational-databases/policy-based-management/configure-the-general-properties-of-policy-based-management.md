@@ -1,6 +1,7 @@
 ---
-title: ポリシー ベースの管理の全般プロパティの構成 | Microsoft Docs
-ms.custom: ''
+title: ポリシーベースの管理の全般プロパティの構成
+description: SQL Server Management Studio (SSMS) または Transact-SQL (T-SQL) を使用し、ポリシーベースの管理のプロパティを構成する方法について説明します。
+ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -14,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 6d1e0e37-29ea-408a-a055-384984d884be
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: afd93dd5543d515c6dc77548f5a9f70542af9ea1
-ms.sourcegitcommit: ef6e3ec273b0521e7c79d5c2a4cb4dcba1744e67
+ms.openlocfilehash: c2d431fd1b04f046fb00f131a1a77a146570b50f
+ms.sourcegitcommit: 035ad9197cb9799852ed705432740ad52e0a256d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51512477"
+ms.lasthandoff: 12/31/2019
+ms.locfileid: "75558155"
 ---
 # <a name="configure-the-general-properties-of-policy-based-management"></a>ポリシー ベースの管理の全般プロパティの構成
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -30,7 +30,7 @@ ms.locfileid: "51512477"
   
 -   **作業を開始する準備:**  
   
-     [Security](#Security)  
+     [セキュリティ](#Security)  
   
 -   **ポリシー ベースの管理を構成するために使用するもの:**  
   
@@ -71,7 +71,7 @@ ms.locfileid: "51512477"
     -   この値が true の場合、成功したポリシー評価と失敗したポリシー評価の両方が記録されます。  
   
 4.  完了したら、 **[OK]** をクリックします。  
-  
+
 ##  <a name="TsqlProcedure"></a> Transact-SQL の使用  
   
 #### <a name="to-configure-policy-based-management"></a>ポリシー ベースの管理を構成するには  

@@ -18,16 +18,15 @@ helpviewer_keywords:
 - equals operator (=)
 - = (equals operator)
 ms.assetid: 18885245-5f55-4831-8f0b-7f2a3e82e246
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
+author: rothja
+ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 2dae1a0f557829392a65ffac317333a85b4f9004
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a08dbc63f765b436d9f6bb56be6456f197217db8
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47811140"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68075267"
 ---
 # <a name="-equals-transact-sql"></a>= (等しい) (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -47,7 +46,7 @@ expression = expression
  任意の有効な[式](../../t-sql/language-elements/expressions-transact-sql.md)を指定します。 2 つの式のデータ型が異なる場合、1 つの式のデータ型がもう一方の式のデータ型に暗黙的に変換可能である必要があります。 変換は、[データ型の優先順位](../../t-sql/data-types/data-type-precedence-transact-sql.md)のルールに基づいています。  
   
 ## <a name="result-types"></a>戻り値の型  
- ブール値  
+ Boolean  
   
 ## <a name="remarks"></a>Remarks  
  NULL 式を使用して比較した場合、結果は `ANSI_NULLS` の設定に応じて以下のように異なります。  

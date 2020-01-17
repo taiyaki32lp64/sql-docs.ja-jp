@@ -1,5 +1,5 @@
 ---
-title: sp_deletetracertokenhistory (TRANSACT-SQL) |Microsoft Docs
+title: sp_deletetracertokenhistory (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -15,19 +15,18 @@ helpviewer_keywords:
 ms.assetid: 9ae1be14-0d2f-40b1-9d6e-22d79726abf4
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: f84cd1cbb9a49f0c13a93fdff721f430983088ca
-ms.sourcegitcommit: 2ab79765e51913f1df6410f0cd56bf2a13221f37
+ms.openlocfilehash: cf591964e5dfef0536c79b0b35e5918d4f46d972
+ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/27/2019
-ms.locfileid: "56955973"
+ms.lasthandoff: 08/03/2019
+ms.locfileid: "68771141"
 ---
 # <a name="spdeletetracertokenhistory-transact-sql"></a>sp_deletetracertokenhistory (Transact-SQL)
 
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
-トレーサー トークン レコードを削除、 [MStracer_tokens &#40;TRANSACT-SQL&#41; ](../../relational-databases/system-tables/mstracer-tokens-transact-sql.md)と[MStracer_history &#40;TRANSACT-SQL&#41; ](../../relational-databases/system-tables/mstracer-history-transact-sql.md)システム テーブル。 このストアド プロシージャは、パブリケーション データベースに対して、パブリッシャーまたはディストリビューターのディストリビューション データベースで実行されます。
+[MStracer_tokens &#40;&#41; transact-sql](../../relational-databases/system-tables/mstracer-tokens-transact-sql.md)および[MStracer_history &#40;transact-sql&#41; ](../../relational-databases/system-tables/mstracer-history-transact-sql.md)システムテーブルからトレーサートークンレコードを削除します。 このストアドプロシージャは、パブリッシャー側でパブリケーションデータベースに対して、またはディストリビューター側でディストリビューションデータベースに対して実行されます。
 
 ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
 
@@ -44,25 +43,25 @@ sp_deletetracertokenhistory [ @publication = ] 'publication'
 ## <a name="arguments"></a>引数
 
 `@publication= 'publication'`  
-トレーサー トークンが挿入されたパブリケーションの名前です。 データ型は**sysname**します。 このパラメーターが必要です。
+トレーサートークンが挿入されたパブリケーションの名前を指定します。 データ型は**sysname**です。 このパラメーターは必須です。
 
 `[ @tracer_id= ] tracer_id`  
-削除するトレーサー トークンの ID です。 データ型は**int**します。既定値は、*null* です。 場合*null*パブリケーションに属するすべてのトレーサー トークンが削除されます。
+削除するトレーサートークンの ID を示します。 データ型は**int**です。既定値は、*null* です。 *Null*の場合、パブリケーションに属するすべてのトレーサートークンが削除されます。
 
 `[ @cutoff_date= ] cutoff_date`  
-この日付が削除されるまでに、パブリケーションに挿入されたトレーサー トークンです。 データ型は**datetime**します。 既定値は、*null* です。
+この日付が削除される前に、パブリケーションに挿入されたトレーサートークン。 データ型は**datetime**です。 既定値は、*null* です。
 
 `[ @publisher= ] 'publisher'`  
-パブリッシャーの名前です。 データ型は**sysname**します。 既定値は、*null* です。
+パブリッシャーの名前です。 データ型は**sysname**です。 既定値は、*null* です。
 
 > [!NOTE]
-> このパラメーターは、に対してのみ指定する必要があります以外[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]パブリッシャーまたはディストリビューターからストアド プロシージャを実行する場合。
+> このパラメーターは、以外[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のパブリッシャー、またはディストリビューターからストアドプロシージャを実行する場合にのみ指定する必要があります。
 
 `[ @publisher_db= ] 'publisher_db'`  
-パブリケーション データベースの名前です。 データ型は**sysname**します。 既定値は、NULL です。 ストアド プロシージャがパブリッシャーで実行される場合、このパラメーターは無視されます。
+パブリケーション データベースの名前です。 データ型は**sysname**です。 既定値は NULL です。 ストアドプロシージャがパブリッシャーで実行される場合、このパラメーターは無視されます。
 
 > [!NOTE]
-> ディストリビューターからストアド プロシージャを実行するときに、このパラメーターを指定する必要があります。
+> このパラメーターは、ディストリビューターからストアドプロシージャを実行するときに指定する必要があります。
 
 ## <a name="return-code-values"></a>リターン コードの値
 
@@ -70,25 +69,25 @@ sp_deletetracertokenhistory [ @publication = ] 'publication'
 
 ## <a name="remarks"></a>コメント
 
-**sp_deletetracertokenhistory**はトランザクション レプリケーションで使用します。  
+**sp_deletetracertokenhistory**は、トランザクションレプリケーションで使用します。  
 
-両方のパラメーターを指定する場合にエラーが発生した*tracer_id*と*cutoff_date*します。
+*Tracer_id*と*cutoff_date*の両方のパラメーターを指定すると、エラーが発生します。
 
-実行されなかった場合**sp_deletetracertokenhistory**トレーサー トークン メタデータを削除するには、定期的にスケジュールされた履歴のクリーンアップが発生した場合、情報は削除されます。
+**Sp_deletetracertokenhistory**を実行してトレーサートークンメタデータを削除しない場合、定期的にスケジュールされた履歴のクリーンアップが行われるときに、情報が削除されます。
 
-実行することによって、トレーサー トークン Id を決定できます[sp_helptracertokens &#40;TRANSACT-SQL&#41; ](../../relational-databases/system-stored-procedures/sp-helptracertokens-transact-sql.md)またはクエリを実行して、 [MStracer_tokens &#40;TRANSACT-SQL&#41; ](../../relational-databases/system-tables/mstracer-tokens-transact-sql.md)システム テーブル。
+トレーサートークン id を確認するには[、 &#40;sp_helptracertokens transact-sql&#41; ](../../relational-databases/system-stored-procedures/sp-helptracertokens-transact-sql.md)を実行するか、 [MStracer_tokens &#40;transact-sql&#41; ](../../relational-databases/system-tables/mstracer-tokens-transact-sql.md)システムテーブルに対してクエリを実行します。
 
 ## <a name="permissions"></a>アクセス許可
 
-以下のスタッフを実行する権限を持つだけ**sp_deletetracertokenhistory**:
+**Sp_deletetracertokenhistory**を実行する権限は、次の担当者にのみ与えられます。
 
-- メンバー、 **replmonitor**ディストリビューション データベース内のロール
-- メンバー、 **sysadmin**固定サーバー ロール。
-- メンバー、 **db_owner**でパブリケーション データベースの固定データベース ロール。
-- **Db_owner**の固定データベース。
+- ディストリビューションデータベース内の**replmonitor**ロールのメンバー
+- **Sysadmin**固定サーバーロールのメンバー。
+- パブリケーションデータベースの**db_owner**固定データベースロールのメンバー。
+- 固定データベースの**db_owner**です。
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 [トランザクション レプリケーションの待機時間の計測および接続の検証](../../relational-databases/replication/monitor/measure-latency-and-validate-connections-for-transactional-replication.md)
 
-[sp_helptracertokenhistory &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helptracertokenhistory-transact-sql.md)
+[sp_helptracertokenhistory &#40;transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-helptracertokenhistory-transact-sql.md)

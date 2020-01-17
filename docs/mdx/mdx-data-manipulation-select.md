@@ -8,13 +8,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-manager: kfile
-ms.openlocfilehash: f803ea892166819cee846a7dc97ef435802e9ae3
-ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
+ms.openlocfilehash: 83a381e36a31542d6ad39ed9d26864350004af5c
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50148417"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68891151"
 ---
 # <a name="mdx-data-manipulation---select"></a>MDX データ操作 - SELECT
 
@@ -93,7 +92,7 @@ FROM
  0 ～ 127 の整数値です。  
   
  *Cube_Name*  
- 有効な文字列キューブ名を提供します。  
+ キューブ名を提供する有効な文字列です。  
   
  *Tuple_Expression*  
  組を返す有効な多次元式 (MDX) 式です。  
@@ -117,7 +116,7 @@ FROM
   
  サブセレクト ステートメントで NON VISUAL オプションを使用すると、フィルター選択された合計ではなく、実際の合計を維持しながら、メンバーを除外することができます。 これにより、上位 10 件の売上 (販売員、製品、地域) のクエリを実行するときに、返された上位 10 件の売上の合計額ではなく、クエリ対象となるすべてのメンバーに対する実際の売上合計を取得することができます。 詳細については、以下の例を参照してください。  
   
- 計算されるメンバーに含まれる\<SELECT クエリ軸句 > たびに、接続が開かれた接続文字列パラメーターを使用して*サブクエリ = 1*; を参照してください[サポートされる XMLA プロパティ&#40;XMLA&#41; ](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/propertylist-element-supported-xmla-properties)と<xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection.ConnectionString%2A>パラメーターの使用法。 サブセレクトで計算されるメンバーの例を以下に示します。  
+ 計算されるメンバーは、 \<接続文字列パラメーター (*サブクエリ = 1*) を使用して接続を開いたときに > 選択クエリ軸句に含めることができます。[サポートされている xmla プロパティ&#40;xmla&#41; ](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/propertylist-element-supported-xmla-properties)と<xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection.ConnectionString%2A>パラメーターの使用法。 サブセレクトで計算されるメンバーの例を以下に示します。  
   
 ## <a name="autoexists"></a>Autoexists  
  SELECT ステートメントに特定のディメンションの属性を複数使用した場合、こうした属性のメンバーは、Analysis Services が属性の式を評価する際、それ以外のすべての属性の条件を満たすよう、適切に絞り込まれます。 たとえば、Geography ディメンションの属性を指定したとします。 一方の式で City 属性のすべてのメンバーを返し、もう一方の式で Country 属性のメンバーを、欧州内の国のみに限定した場合、結果として得られる City メンバーは、欧州の国に属する市区町村に限定されます。 Analysis Services が備えているこの特性は Autoexists と呼ばれ、同じディメンション内の属性にのみ適用されます。 Autoexists が同じディメンションの属性にのみ適用されるのは、一方の属性式で排除されたディメンション レコードが、もう一方の属性式で含められるのを防ぐように機能するためです。 ディメンション レコードに複数の属性式を適用した結果の共通集合と考えることもできます。 次の例を考えてみてください。  
@@ -340,10 +339,10 @@ FROM
 |**Mountain-100**|**$8,568,958.27**|**$139,393.27**|**1.63%**|  
 |**HL Mountain Frame**|**$3,365,069.27**|**$174.11**|**0.01%**|  
   
- Autoexists の動作は、AUTOEXISTS を使用して変更できます = [1 | 2 | 3] パラメーター、接続文字列。参照してください[サポートされる XMLA プロパティ&#40;XMLA&#41; ](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/propertylist-element-supported-xmla-properties)と<xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection.ConnectionString%2A>パラメーターの使用法。  
+ Autoexists の動作は、接続文字列の AUTOEXISTS = [1 | 2 | 3] パラメーターを使用して変更できます。パラメーターの使用法につい<xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection.ConnectionString%2A>ては、「[サポートされる xmla &#40;プロパティ xmla&#41; ](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/propertylist-element-supported-xmla-properties) 」を参照してください。  
   
 ## <a name="examples"></a>使用例  
- 次の例の合計を返して、`Measures.[Order Quantity]`に含まれている 2003 年の最初の 8 月にわたり、メンバー、`Date`ディメンションから、 **Adventure Works**キューブ。  
+ 次の例では、 `Measures.[Order Quantity]` **Adventure works**キューブから、 `Date`ディメンションに含まれる2003年の最初の8か月間に集計された、メンバーの合計を返します。  
   
 ```  
 WITH MEMBER [Date].[Calendar].[First8Months2003] AS  
@@ -362,7 +361,7 @@ WHERE
     [Measures].[Order Quantity]  
 ```  
   
- 理解する**NON VISUAL**次の例では、[Adventure Works] のクエリを製品カテゴリが列、再販業者の業種が行あるテーブルで [Reseller Sales Amount] の数値を取得します。 合計は製品と再販業者の両方について示されます。  
+ **非ビジュアルを**理解するために、次の例は、製品カテゴリが列、再販業者のビジネスタイプが行であるテーブルの [再販業者の売上金] の数値を取得するための [Adventure Works] のクエリです。 合計は製品と再販業者の両方について示されます。  
   
  次の SELECT ステートメントを実行します。  
   
@@ -436,7 +435,7 @@ WHERE
   
  前の結果と比較すると、[All Resellers] 行は [Value Added Reseller] と [Warehouse] の表示値の合計を示していますが、[All Products] 列は表示されていない製品も含むすべての製品の合計額を示していることがわかります。  
   
- 次の例は、サブセレクト内で計算されるメンバーを使用してフィルター選択する方法を示しています。 このサンプルを再現できるようにするには、接続する必要がありますが確立されている接続文字列パラメーターを使用して*サブクエリ = 1*します。  
+ 次の例は、サブセレクト内で計算されるメンバーを使用してフィルター選択する方法を示しています。 このサンプルを再現するには、接続文字列パラメーターの*サブクエリ = 1*を使用して接続を確立する必要があります。  
   
  `select Measures.allmembers on 0`  
   
@@ -460,11 +459,11 @@ WHERE
   
 |||||  
 |-|-|-|-|  
-|Reseller Sales Amount|Reseller Total Product Cost|Reseller Gross Profit|Reseller Gross Profit Margin|  
-|$80,450,596.98|$79,980,114.38|$470,482.60|0.58%|  
+|Reseller Sales Amount|Reseller Total Product Cost|Reseller Gross Profit|再販業者の売上総利益率|  
+|$80,450,596.98|$79980114.38|$470482.60|0.58%|  
   
-## <a name="see-also"></a>参照  
- [MDX の主な概念 &#40;Analysis Services&#41;](../analysis-services/multidimensional-models/mdx/key-concepts-in-mdx-analysis-services.md)   
+## <a name="see-also"></a>関連項目  
+ [MDX の主な概念 &#40;Analysis Services&#41;](https://docs.microsoft.com/analysis-services/multidimensional-models/mdx/key-concepts-in-mdx-analysis-services)   
  [MDX データ操作ステートメント &#40;MDX&#41;](../mdx/mdx-data-manipulation-statements-mdx.md)   
  [クエリ軸とスライサー軸によるクエリの制限 &#40;MDX&#41;](~/analysis-services/multidimensional-models/mdx/mdx-query-and-slicer-axes-restricting-the-query.md)  
   

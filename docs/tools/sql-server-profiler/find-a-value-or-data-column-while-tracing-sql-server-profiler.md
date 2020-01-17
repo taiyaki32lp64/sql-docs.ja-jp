@@ -12,15 +12,14 @@ helpviewer_keywords:
 - traces [SQL Server], running
 - traces [SQL Server], searching while trace running
 ms.assetid: fa5212af-1f49-4227-9d80-58003062146f
-author: stevestein
-ms.author: sstein
-manager: craigg
-ms.openlocfilehash: d88810885e1ab3447c561a1aad2f7be049cb7fff
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 515853eedcee1659a344845405663ad3c7e1c5dc
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47819450"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68074990"
 ---
 # <a name="find-a-value-or-data-column-while-tracing-sql-server-profiler"></a>トレース中の値列またはデータ列の検索 (SQL Server Profiler)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -42,6 +41,6 @@ ms.locfileid: "47819450"
   
 ## <a name="see-also"></a>参照  
  [[SQL Server Profiler]](../../tools/sql-server-profiler/sql-server-profiler.md)   
- [SQL Server プロファイラーのテンプレートとアクセス許可](../../tools/sql-server-profiler/sql-server-profiler-templates-and-permissions.md)  
+ [SQL Server プロファイラーのテンプレートと権限](../../tools/sql-server-profiler/sql-server-profiler-templates-and-permissions.md)  
   
   

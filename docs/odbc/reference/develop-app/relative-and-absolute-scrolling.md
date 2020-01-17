@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 3d0ff48d-fef5-4c01-bb1d-a583e6269b66
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 5ba05cb9079514750cf087149bae476efe0d8d41
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: e2034a3922dcd3db77113e08a6c48fe7ac39457f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52510758"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68138057"
 ---
 # <a name="relative-and-absolute-scrolling"></a>相対と絶対のスクロール
 スクロール オプションのほとんど**SQLFetchScroll**絶対位置または現在位置を基準にカーソルを配置します。 **SQLFetchScroll** 、次のフェッチをサポートしています前に、最初と最後の行セットとしても相対パスとしてをフェッチしています (行セットをフェッチ*n*現在の行セットの先頭からの行) と絶対フェッチ (フェッチ、行セットの開始。行の*n*)。 場合*n*は行が結果セットの最後から数えられます絶対フェッチで負の値。 そのため、行-1 の絶対フェッチは、結果セットの最後の行で始まる行セットをフェッチすることです。  

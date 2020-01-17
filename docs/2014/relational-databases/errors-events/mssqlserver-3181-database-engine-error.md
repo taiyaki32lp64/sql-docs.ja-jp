@@ -13,11 +13,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: a9f7332460d3dc25c756e6bd031b1a4b3a1f6743
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48140978"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62868767"
 ---
 # <a name="mssqlserver3181"></a>MSSQLSERVER_3181
     
@@ -41,7 +41,7 @@ ms.locfileid: "48140978"
 ## <a name="user-action"></a>ユーザーの操作  
  十分なディスク領域があるドライブにバックアップを復元するか、ディスク領域を増やします。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [データベースを新しい場所に復元する &#40;SQL Server&#41;](../backup-restore/restore-a-database-to-a-new-location-sql-server.md)   
  [新しい場所にファイルを復元&#40;SQL Server&#41;](../backup-restore/restore-files-to-a-new-location-sql-server.md)   
  [RESTORE &#40;Transact-SQL&#41;](/sql/t-sql/statements/restore-statements-transact-sql)   

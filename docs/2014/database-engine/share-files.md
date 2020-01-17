@@ -15,11 +15,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 9e779a0c0da9920b2efda5f52135e85f31959d10
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48224712"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62843558"
 ---
 # <a name="share-files"></a>ファイル共有
   [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] を使用して、ソース管理プロジェクト間で項目を共有できます。 項目を共有すると、1 つの項目に対する変更は、その項目を共有するすべてのプロジェクトに反映されます。  
@@ -40,7 +40,7 @@ ms.locfileid: "48224712"
   
 4.  クリックして**共有**します。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [ソース管理の基礎](../../2014/database-engine/source-control-basics.md)  
   
   

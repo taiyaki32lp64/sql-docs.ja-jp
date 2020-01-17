@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 030f19c3-a5e3-4b53-bfc4-de4bfca0fddc
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: 7d6981879f08b65c334eae9cd81e73223bc353bf
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 5868120af1e98c4b2f3be78f2cf7927df53b42d1
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47724576"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68072665"
 ---
 # <a name="spaddlogin-transact-sql"></a>sp_addlogin (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -52,11 +51,11 @@ sp_addlogin [ @loginame = ] 'login'
 ```  
   
 ## <a name="arguments"></a>引数  
- [ @loginame=] '*ログイン*'  
+ [ @loginame= ] '*login*'  
  ログインの名前を指定します。 *ログイン*は**sysname**、既定値はありません。  
   
  [ @passwd= ] '*password*'  
- ログイン パスワードを指定します。 *パスワード*は**sysname**、既定値は NULL です。  
+ ログインのパスワードです。 *パスワード*は**sysname**、既定値は NULL です。  
   
 > [!IMPORTANT]  
 >  [!INCLUDE[ssNoteStrongPass](../../includes/ssnotestrongpass-md.md)]  
@@ -65,19 +64,19 @@ sp_addlogin [ @loginame = ] 'login'
  ログインの既定のデータベースを指定します (そのログインがログインした後に最初に接続されるデータベース)。 *データベース*は**sysname**、既定値は**マスター**します。  
   
  [ @deflanguage=] '*言語*'  
- ログインの既定の言語を指定します。 *言語*は**sysname**、既定値は NULL です。 場合*言語*が指定されていない既定*言語*新しいログインのサーバーの現在の既定の言語に設定されています。  
+ ログインの既定の言語です。 *言語*は**sysname**、既定値は NULL です。 場合*言語*が指定されていない既定*言語*新しいログインのサーバーの現在の既定の言語に設定されています。  
   
  [ @sid=] '*sid*'  
- セキュリティ ID 番号 (SID) を指定します。 *sid*は**varbinary (16)**、既定値は NULL です。 場合*sid*が null の場合、システムには、新しいログインの SID が生成されます。 使用に関係なく、 **varbinary**データ型、NULL 以外の値は 16 バイトの長さにする必要があり、既に存在する必要があります。 指定する*sid*役に立ちます、たとえば、スクリプトをまたは移動するときに[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]を別に 1 つのサーバーからログインする同じ SID を別のサーバー上にログインします。  
+ セキュリティ ID 番号 (SID) を指定します。 *sid*は**varbinary (16)** 、既定値は NULL です。 場合*sid*が null の場合、システムには、新しいログインの SID が生成されます。 使用に関係なく、 **varbinary**データ型、NULL 以外の値は 16 バイトの長さにする必要があり、既に存在する必要があります。 指定する*sid*役に立ちます、たとえば、スクリプトをまたは移動するときに[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]を別に 1 つのサーバーからログインする同じ SID を別のサーバー上にログインします。  
   
  [ @encryptopt=] '*encryption_option*'  
- パスワードを、クリア テキストとして渡すか、またはクリア テキスト パスワードのハッシュとして渡すかを指定します。 暗号化は行われないことに注意してください。 ここでは、"暗号化" という用語を旧バージョンとの互換性のために使用しています。 クリア テキスト パスワードが渡される場合、そのパスワードはハッシュされます。 ハッシュは保存されます。 *encryption_option*は**varchar (20)** 値は次のいずれかを指定できます。  
+ パスワードを、クリア テキストとして渡すか、またはクリア テキスト パスワードのハッシュとして渡すかを指定します。 暗号化は行われないことに注意してください。 ここでは、"暗号化" という用語を旧バージョンとの互換性のために使用しています。 クリア テキスト パスワードが渡された場合はハッシュされています。 ハッシュは保存されます。 *encryption_option*は**varchar (20)** 値は次のいずれかを指定できます。  
   
-|値|説明|  
+|[値]|説明|  
 |-----------|-----------------|  
 |NULL|パスワードがクリア テキストで渡されます。 既定値です。|  
 |**skip_encryption**|パスワードは既にハッシュされています。 [!INCLUDE[ssDE](../../includes/ssde-md.md)]再ハッシュせず、値を格納する必要があります。|  
-|**skip_encryption_old**|指定されたパスワードは、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の以前のバージョンでハッシュされています。 [!INCLUDE[ssDE](../../includes/ssde-md.md)]再ハッシュせず、値を格納する必要があります。 このオプションはアップグレードのために提供されています。|  
+|**skip_encryption_old**|指定されたパスワードは、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の以前のバージョンでハッシュされています。 [!INCLUDE[ssDE](../../includes/ssde-md.md)]再ハッシュせず、値を格納する必要があります。 このオプションは、アップグレードのために提供されます。|  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  0 (成功) または 1 (失敗)  
@@ -85,9 +84,9 @@ sp_addlogin [ @loginame = ] 'login'
 ## <a name="remarks"></a>コメント  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ログインの長さは 1 ～ 128 文字で、英字、記号、および数字を含めることができます。 ログインは、円記号を含めることはできません (\\); sa や public などの予約済みログイン名を指定するまたは既に存在; か、NULL または空の文字列にする (`''`)。  
   
- 既定のデータベース名を把握していれば、USE ステートメントを実行しなくても指定されたデータベースに接続できます。 データベース所有者がそのデータベースへのアクセス権を付与はまでに、既定のデータベースを使用することはできませんただし、(を使用して[sp_adduser](../../relational-databases/system-stored-procedures/sp-adduser-transact-sql.md)または[sp_addrolemember](../../relational-databases/system-stored-procedures/sp-addrolemember-transact-sql.md)) または[sp_addrole](../../relational-databases/system-stored-procedures/sp-addrole-transact-sql.md).  
+ 既定のデータベースの名前は、指定した場合、USE ステートメントを実行することがなく、指定されたデータベースに接続できます。 データベース所有者がそのデータベースへのアクセス権を付与はまでに、既定のデータベースを使用することはできませんただし、(を使用して[sp_adduser](../../relational-databases/system-stored-procedures/sp-adduser-transact-sql.md)または[sp_addrolemember](../../relational-databases/system-stored-procedures/sp-addrolemember-transact-sql.md)) または[sp_addrole](../../relational-databases/system-stored-procedures/sp-addrole-transact-sql.md).  
   
- SID 番号は、サーバーでログインを一意に識別する GUID です。  
+ SID 番号は、サーバーのログインが一意に識別する GUID です。  
   
  サーバーの既定の言語を変更しても、既存のログインに関する既定の言語は変更されません。 サーバーの既定の言語を変更する[sp_configure](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md)します。  
   
@@ -117,7 +116,7 @@ EXEC sp_addlogin 'Victoria', 'B1r12-36';
 GO  
 ```  
   
-### <a name="b-creating-a-sql-server-login-that-has-a-default-database"></a>B. 既定のデータベースを持つ SQL Server ログインを作成する  
+### <a name="b-creating-a-sql-server-login-that-has-a-default-database"></a>B. 既定のデータベースを持つ SQL Server ログインを作成します。  
  次の例では、作成、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]ユーザーのログイン`Albert`、パスワードを使用して`B5432-3M6`と、既定のデータベース`corporate`します。  
   
 ```  
@@ -125,7 +124,7 @@ EXEC sp_addlogin 'Albert', 'B5432-3M6', 'corporate';
 GO  
 ```  
   
-### <a name="c-creating-a-sql-server-login-that-has-a-different-default-language"></a>C. 既定の言語が異なる SQL Server ログインを作成する  
+### <a name="c-creating-a-sql-server-login-that-has-a-different-default-language"></a>C. 別の既定の言語には、SQL Server ログインを作成します。  
  次の例では、パスワード `TzTodorov`、既定のデータベース `709hLKH7chjfwv`、および既定の言語 `AdventureWorks2012` を指定して、ユーザー `Bulgarian` の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ログインを作成します。  
   
 ```  
@@ -139,7 +138,7 @@ EXEC sp_addlogin 'TzTodorov', '709hLKH7chjfwv', 'AdventureWorks2012', N'бълг
 EXEC sp_addlogin 'Michael', 'B548bmM%f6', 'AdventureWorks2012', 'us_english', 0x0123456789ABCDEF0123456789ABCDEF  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [CREATE LOGIN &#40;Transact-SQL&#41;](../../t-sql/statements/create-login-transact-sql.md)   
  [sp_droplogin &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-droplogin-transact-sql.md)   
  [sp_helpuser &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpuser-transact-sql.md)   

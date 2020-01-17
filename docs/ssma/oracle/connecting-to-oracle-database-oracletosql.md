@@ -11,13 +11,13 @@ helpviewer_keywords:
 ms.assetid: e276cdbf-3ebc-4ba8-b40d-a7a42befa2b6
 author: Shamikg
 ms.author: Shamikg
-manager: v-thobro
-ms.openlocfilehash: 4ad868122fd8986c642bace1b2c9cf419bb89182
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: shamikg
+ms.openlocfilehash: fc25c36a0d0133975414f4c7270da2974b552f40
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47634333"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68266186"
 ---
 # <a name="connecting-to-oracle-database-oracletosql"></a>Oracle データベースへの接続 (OracleToSQL)
 Oracle データベースを移行する[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]、移行する Oracle データベースに接続する必要があります。 接続すると、SSMA は、すべての Oracle スキーマに関するメタデータを取得し、Oracle メタデータ エクスプ ローラー ペインに表示します。 SSMA は、データベース サーバーに関する情報を格納しますが、パスワードは保存されません。  

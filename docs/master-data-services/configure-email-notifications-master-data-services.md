@@ -1,5 +1,5 @@
 ---
-title: 電子メール通知を構成する (Master Data Services) | Microsoft Docs
+title: 電子メール通知を構成する
 ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: sql
@@ -11,15 +11,14 @@ helpviewer_keywords:
 - e-mail [Master Data Services], configuring
 - notifications [Master Data Services], configuring notifications
 ms.assetid: 4241a6ab-7465-471b-9890-57c6b572037e
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 9bbad65583c79cc5ac1a3184f0ef6f83a5b7a73a
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
-ms.translationtype: HT
+ms.openlocfilehash: 2b49a2a9b52df3cf5364f0e4f86b4181439ff61b
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52806707"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73729644"
 ---
 # <a name="configure-email-notifications-master-data-services"></a>電子メール通知を構成する (Master Data Services)
 
@@ -35,7 +34,7 @@ ms.locfileid: "52806707"
   
 3.  すべての必須フィールドを入力します。 詳細については、「[[データベース メール プロファイルとアカウントの作成] ダイアログ ボックス (マスター データ サービス構成マネージャー)](../master-data-services/create-database-mail-profile-and-account-dialog-box.md)」を参照してください。  
   
-4.  **[OK]** をクリックします。  
+4.  クリックして **OK**です。  
   
     > [!NOTE]  
     >  通知を構成した後に [!INCLUDE[ssMDScfgmgr](../includes/ssmdscfgmgr-md.md)] を使用して変更を加えることはできません。 変更は [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] データベースで直接行う必要があります。 詳細については、「 [データベース メール構成オブジェクト](../relational-databases/database-mail/database-mail-configuration-objects.md)」を参照してください。  

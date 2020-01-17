@@ -12,16 +12,15 @@ helpviewer_keywords:
 ms.assetid: 557890e5-9a45-405d-a8d3-4f7c2b899c08
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 2959246a575934af427d3ec790b7934197656e93
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 76b345a61754b491e74a8f8962c0e8e8f06d68f5
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47605839"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67965414"
 ---
 # <a name="procedures-collection-properties-methods-and-events"></a>Procedures コレクションのプロパティ、メソッド、およびイベント
-## <a name="properties"></a>[プロパティ]  
+## <a name="properties"></a>Properties  
  [Count プロパティ](../../../ado/reference/ado-api/count-property-ado.md)  
   
  [項目のプロパティ](../../../ado/reference/ado-api/item-property-ado.md)  
@@ -36,5 +35,5 @@ ms.locfileid: "47605839"
 ## <a name="events"></a>イベント  
  [なし] :  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [Procedures コレクション (ADOX)](../../../ado/reference/adox-api/procedures-collection-adox.md)

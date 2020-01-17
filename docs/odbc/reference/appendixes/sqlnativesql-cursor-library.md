@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: c4459092-1177-4b2a-b7f5-e0083d3bf2b2
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: c5b87f64963e7b0ad45fbec33e410165cd0c9723
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 0a8c42efbd87296cf7157d75d1848e4655247818
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47656712"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68125708"
 ---
 # <a name="sqlnativesql-cursor-library"></a>SQLNativeSql (カーソル ライブラリ)
 > [!IMPORTANT]  

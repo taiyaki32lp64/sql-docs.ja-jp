@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - intrinsic cell properties [MDX]
@@ -16,12 +15,12 @@ ms.assetid: a593c74d-8c5e-485e-bd92-08f9d22451d4
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 1a8b302391eb4e7384a54181b102f4ae8f3de522
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: 3c2c3d4838d0e21a1520197612dd08c679df843a
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52417753"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66074336"
 ---
 # <a name="using-cell-properties-mdx"></a>セル プロパティの使用 (MDX)
   多次元式 (MDX) でのセル プロパティには、キューブなどの多次元データ  ソース内のセルの内容や書式に関する情報が含まれます。  
@@ -50,7 +49,7 @@ SELECT [<axis_specification>
   
 |プロパティ|説明|  
 |--------------|-----------------|  
-|`ACTION_TYPE`|セルに対するアクションの種類を示すビットマスク。 このプロパティの値は、次のいずれか 1 つです。<br /><br /> **MDACTION_TYPE_URL**<br /><br /> **MDACTION_TYPE_HTML**<br /><br /> **MDACTION_TYPE_STATEMENT**<br /><br /> **MDACTION_TYPE_DATASET**<br /><br /> **MDACTION_TYPE_ROWSET**<br /><br /> **MDACTION_TYPE_COMMANDLINE**<br /><br /> **MDACTION_TYPE_PROPRIETARY**<br /><br /> **MDACTION_TYPE_REPORT**<br /><br /> **MDACTION_TYPE_DRILLTHROUGH**<br /><br /> <br /><br /> 注:WHERE 句内にセットを含むクエリの場合、ドリルスルー アクションは含まれません。|  
+|`ACTION_TYPE`|セルに対するアクションの種類を示すビットマスク。 このプロパティの値は、次のいずれか 1 つです。<br /><br /> **MDACTION_TYPE_URL**<br /><br /> **MDACTION_TYPE_HTML**<br /><br /> **MDACTION_TYPE_STATEMENT**<br /><br /> **MDACTION_TYPE_DATASET**<br /><br /> **MDACTION_TYPE_ROWSET**<br /><br /> **MDACTION_TYPE_COMMANDLINE**<br /><br /> **MDACTION_TYPE_PROPRIETARY**<br /><br /> **MDACTION_TYPE_REPORT**<br /><br /> **MDACTION_TYPE_DRILLTHROUGH**<br /><br /> <br /><br /> 注:ドリルスルー アクションは、where、セットを含むクエリの場合に含まれていない句。|  
 |**BACK_COLOR**|`VALUE` または `FORMATTED_VALUE` プロパティを表示するときの背景色。 詳しくは、「[FORE_COLOR および BACK_COLOR の内容 &#40;MDX&#41;](mdx-cell-properties-fore-color-and-back-color-contents.md)」をご覧ください。|  
 |`CELL_ORDINAL`|データセット内のセルの序数。|  
 |**FONT_FLAGS**|フォントの詳細な文字飾りを示すビットマスク。 たとえば、値 5 は、太字の (`MDFF_BOLD`) フォントと下線付きの (`MDFF_UNDERLINE`) フォントの文字飾りの組み合わせを表します。 この値は、次の 1 つ以上の定数に対するビットごとの OR 演算の結果です。<br /><br /> `MDFF_BOLD` = 1<br /><br /> `MDFF_ITALIC` = 2<br /><br /> `MDFF_UNDERLINE` = 4<br /><br /> `MDFF_STRIKEOUT` = 8|  

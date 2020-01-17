@@ -1,7 +1,7 @@
 ---
-title: セットのデータ サンプルの結果をキャッシュ |Microsoft Docs
+title: 結果セットデータサンプル | をキャッシュするMicrosoft Docs
 ms.custom: ''
-ms.date: 07/31/2018
+ms.date: 08/12/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 13a95ebb-996c-4713-a1bd-5834fe22a334
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 4ed4174dcd164163307259100e752d277f9b200c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 33998300281a274067a0879775dc33c9d7635471
+ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47823980"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "69028411"
 ---
 # <a name="caching-result-set-data-sample"></a>結果セットのデータ サンプルのキャッシング
 
@@ -30,7 +29,7 @@ ms.locfileid: "47823980"
 クライアント上でキャッシュされる行数に制限を設定するには、Statement オブジェクトの作成に使用するカーソルの種類を指定することで、いずれかの Statement オブジェクトを作成するときに、最初にサーバー側のカーソルを使用する必要があります。 たとえば、JDBC ドライバーでは TYPE_SS_SERVER_CURSOR_FORWARD_ONLY というカーソルの種類が提供されます。これは、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] データベースで使用する高速順方向専用、読み取り専用のサーバー側カーソルです。  
   
 > [!NOTE]  
-> SQL Server 固有のカーソルの種類を使用する代わりに、selectMethod 接続文字列プロパティの値を "cursor" に設定して使用する方法もあります。 JDBC ドライバーでサポートされるカーソルの種類の詳細については、次を参照してください。[カーソルの種類について](../../../connect/jdbc/understanding-cursor-types.md)します。  
+> SQL Server 固有のカーソルの種類を使用する代わりに、selectMethod 接続文字列プロパティの値を "cursor" に設定して使用する方法もあります。 JDBC ドライバーでサポートされているカーソルの種類の詳細については、「[カーソルの種類](../../../connect/jdbc/understanding-cursor-types.md)について」を参照してください。  
   
 Statement オブジェクト内のクエリを実行し、データが結果セットとしてクライアントに返されたら、setFetchSize メソッドを呼び出して、データベースから一度に取得されるデータの量を制御できます。 たとえば、100 行のデータを含むテーブルがあり、フェッチ サイズを 10 に設定した場合、任意の時点でクライアント上では 10 行のデータのみがキャッシュされます。 これにより、データが処理される速度は遅くなりますが、クライアント上で使用されるメモリが少なくなるという利点があります。これは、大量のデータを処理する必要があるときに特に役立ちます。  
   
@@ -42,10 +41,10 @@ Statement オブジェクト内のクエリを実行し、データが結果セ�
 
 ## <a name="requirements"></a>必要条件  
 
-このサンプル アプリケーションを実行するには、クラスパスを設定して mssql-jdbc jar ファイルを含める必要があります。 また、[!INCLUDE[ssSampleDBnormal](../../../includes/sssampledbnormal_md.md)] サンプル データベースへのアクセス権限も必要です。 クラスパスを設定する方法の詳細については、次を参照してください。 [JDBC ドライバーを使用して](../../../connect/jdbc/using-the-jdbc-driver.md)します。  
+このサンプル アプリケーションを実行するには、クラスパスを設定して mssql-jdbc jar ファイルを含める必要があります。 また、[!INCLUDE[ssSampleDBnormal](../../../includes/sssampledbnormal_md.md)] サンプル データベースへのアクセス権限も必要です。 クラスパスの設定方法の詳細については、「 [JDBC ドライバーの使用](../../../connect/jdbc/using-the-jdbc-driver.md)」を参照してください。  
   
 > [!NOTE]  
-> [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)] には、必要な Java ランタイム環境 (JRE) 設定に応じて使用される mssql-jdbc クラス ライブラリ ファイルが用意されています。 選択する JAR ファイルの詳細については、次を参照してください。 [JDBC Driver のシステム要件](../../../connect/jdbc/system-requirements-for-the-jdbc-driver.md)します。  
+> [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)] には、必要な Java ランタイム環境 (JRE) 設定に応じて使用される mssql-jdbc クラス ライブラリ ファイルが用意されています。 選択する JAR ファイルの詳細については、「[JDBC Driver のシステム要件](../../../connect/jdbc/system-requirements-for-the-jdbc-driver.md)」を参照してください。  
 
 ## <a name="example"></a>例  
 

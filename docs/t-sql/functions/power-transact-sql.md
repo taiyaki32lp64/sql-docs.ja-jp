@@ -15,16 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - POWER function
 ms.assetid: 0fd34494-90b9-4559-8011-a8c1b9f40239
-author: MashaMSFT
-ms.author: mathoma
-manager: craigg
+author: MikeRayMSFT
+ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 00186d12bd33b5ca808f1265acc1940f3c40706f
-ms.sourcegitcommit: c2322c1a1dca33b47601eb06c4b2331b603829f1
+ms.openlocfilehash: ec722f337e24bd08b3b41ffe7d7e8e1539e2ff58
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/01/2018
-ms.locfileid: "50743177"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67914320"
 ---
 # <a name="power-transact-sql"></a>POWER (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -49,7 +48,7 @@ POWER ( float_expression , y )
 ## <a name="return-types"></a>戻り値の型  
  戻り値の型は、*float_expression* の入力型によって異なります。
  
-|入力型|の戻り値の型 : |  
+|入力型|の戻り値の型 :|  
 |----------|-----------|  
 |**float**、**real**|**float**|
 |**decimal(*p*, *s*)**|**decimal(38, *s*)**|
@@ -149,7 +148,7 @@ GO
   
 ## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>例: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] および [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
-### <a name="d-using-power-to-return-the-cube-of-a-number"></a>D: POWER を使用して数値の 3 乗を返す  
+### <a name="d-using-power-to-return-the-cube-of-a-number"></a>D:POWER を使用して数値の 3 乗を返す  
  次の例は、`2.0` の 3 乗の `POWER` 結果を示しています。  
   
 ```  
@@ -164,11 +163,11 @@ SELECT POWER(2.0, 3);
 ```  
   
 ## <a name="see-also"></a>参照  
- [10 進数の数値と #40 です。TRANSACT-SQL と #41 です。](../../t-sql/data-types/decimal-and-numeric-transact-sql.md)   
- [float、real および #40 です。TRANSACT-SQL と #41 です。](../../t-sql/data-types/float-and-real-transact-sql.md)   
- [int、bigint、smallint 型、および tinyint と #40 です。TRANSACT-SQL と #41 です。](../../t-sql/data-types/int-bigint-smallint-and-tinyint-transact-sql.md)   
+ [decimal 型と numeric 型 &#40;Transact-SQL&#41;](../../t-sql/data-types/decimal-and-numeric-transact-sql.md)   
+ [float と real &#40;Transact-SQL&#41;](../../t-sql/data-types/float-and-real-transact-sql.md)   
+ [int、bigint、smallint、tinyint &#40;Transact-SQL&#41;](../../t-sql/data-types/int-bigint-smallint-and-tinyint-transact-sql.md)   
  [数学関数 &#40;Transact-SQL&#41;](../../t-sql/functions/mathematical-functions-transact-sql.md)   
- [money および smallmoney & #40 です。TRANSACT-SQL と #41 です。](../../t-sql/data-types/money-and-smallmoney-transact-sql.md)  
+ [money および smallmoney &#40;Transact-SQL&#41;](../../t-sql/data-types/money-and-smallmoney-transact-sql.md)  
   
   
 

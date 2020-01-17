@@ -4,22 +4,21 @@ ms.custom: ''
 ms.date: 08/10/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 helpviewer_keywords:
 - firewall systems [Reporting Services]
 - configuring servers [Reporting Services]
 ms.assetid: 04dae07a-a3a4-424c-9bcb-a8000e20dc93
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 0f7016d47d060fa5f6708f907da848d7329482d4
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 00590faa3ef5fb63338465d85202f4010cd3b72d
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56024713"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66104160"
 ---
 # <a name="configure-a-firewall-for-report-server-access"></a>レポート サーバー アクセスに対するファイアウォールの構成
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] レポート サーバー アプリケーションとパブリッシュされたレポートには、IP アドレス、ポート、および仮想ディレクトリを指定した URL を通じてアクセスします。 Windows ファイアウォールが有効になっている場合、レポート サーバーで使用するように構成されているポートは閉じられる可能性が高くなります。 ポートが閉じていると、レポートの要求後に空白の Web ページが表示されたり、リモートのクライアント コンピューターからレポート マネージャーを開こうとしたときに空白のページが表示されたりします。  
@@ -40,15 +39,15 @@ ms.locfileid: "56024713"
   
 #### <a name="to-open-port-80-on-windows-7-windows-server-2008-r2-windows-server-2012-and-2012-r2"></a>Windows 7、Windows Server 2008 R2、Windows Server 2012 および 2012 R2 でポート 80 を開くには  
   
-1.  **[スタート]** メニューの **[コントロール パネル]** をクリックし、 **[システムとセキュリティ]**、 **[Windows ファイアウォール]** の順にクリックします。 コントロール パネルの表示方法が [カテゴリ] 以外の場合は、単に **[Windows ファイアウォール]** を選択するだけでかまいません。  
+1.  **[スタート]** メニューの **[コントロール パネル]** をクリックし、 **[システムとセキュリティ]** 、 **[Windows ファイアウォール]** の順にクリックします。 コントロール パネルの表示方法が [カテゴリ] 以外の場合は、単に **[Windows ファイアウォール]** を選択するだけでかまいません。  
   
 2.  **[詳細な設定]** をクリックします。  
   
-3.   **[受信の規則]** をクリックします。  
+3.  **[受信の規則]** をクリックします。  
   
 4.  **[操作]** ウィンドウで **[新しい規則]** をクリックします **。**  
   
-5.   **[ポート]** の **[規則の種類]** をクリックします。  
+5.  **[ポート]** の **[規則の種類]** をクリックします。  
   
 6.  **[次へ]** をクリックします。  
   
@@ -66,7 +65,7 @@ ms.locfileid: "56024713"
   
 13. **[次へ]** をクリックします。  
   
-14.  **[名前]** ページで、「**ReportServer (TCP on port 80)**」という名前を入力します。  
+14. **[名前]** ページで、「**ReportServer (TCP on port 80)** 」という名前を入力します。  
   
 15. **[完了]** をクリックします。  
   

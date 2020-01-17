@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: dbc8f17b-2913-4bdf-841c-d79213993cd8
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: c99c251fe90eb90d546b59ae9e53f908a2965e4d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 62d91d6e5493665af55e440dcdd8594e03241978
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47852560"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67996344"
 ---
 # <a name="sqlprepare-desktop-database-drivers"></a>SQLPrepare (デスクトップ データベース ドライバー)
 列の数が不適切で準備されたステートメントには、ステートメントの準備時にない、実行時にエラーが返されます。

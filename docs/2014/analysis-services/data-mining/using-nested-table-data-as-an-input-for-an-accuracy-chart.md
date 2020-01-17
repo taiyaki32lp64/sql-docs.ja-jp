@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - Mining Accuracy Chart [Analysis Services], nested tables
@@ -16,12 +15,12 @@ ms.assetid: 162e0686-ada3-4dd3-9151-9589926e6613
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 2cd9c01ada73773f826c8ff45c55687158480841
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 3a6e6d0ade60dbb42fca9bda9ee78f4dbb50064a
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52518278"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66082729"
 ---
 # <a name="using-nested-table-data-as-an-input-for-an-accuracy-chart"></a>入れ子になったテーブルのデータを精度チャートの入力として使用する方法
   外部データを使用してマイニング モデルの精度をテストする際、マイニング モデルに入れ子になったテーブルが含まれている場合は、外部データにもケース テーブルと関連する入れ子になったテーブルが格納されている必要があります。  

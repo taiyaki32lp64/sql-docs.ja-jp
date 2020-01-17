@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 4de7336a-b5ea-43f1-b750-5fa302b5b756
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: e4490edc175b14beb51b26edb205a0ace57f4ff0
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 1d0cd34b13889ed44e32e29a058ca01d48aea1b3
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47695170"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67933473"
 ---
 # <a name="connectionstring-connectiontimeout-and-state-properties-example-vb"></a>ConnectionString、ConnectionTimeout、および状態のプロパティの例 (VB)
 この例を使用してさまざまな方法を示しています、 [ConnectionString](../../../ado/reference/ado-api/connectionstring-property-ado.md)プロパティを開き、[接続](../../../ado/reference/ado-api/connection-object-ado.md)オブジェクト。 またを使用して、 [ConnectionTimeout](../../../ado/reference/ado-api/connectiontimeout-property-ado.md)接続タイムアウトを設定するプロパティと[状態](../../../ado/reference/ado-api/state-property-ado.md)接続の状態を確認するプロパティ。 GetState 関数は、この手順を実行する必要があります。  
@@ -127,7 +126,7 @@ End Function
 'EndConnectionStringVB  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [接続オブジェクト (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)   
  [ConnectionString プロパティ (ADO)](../../../ado/reference/ado-api/connectionstring-property-ado.md)   
  [ConnectionTimeout プロパティ (ADO)](../../../ado/reference/ado-api/connectiontimeout-property-ado.md)   

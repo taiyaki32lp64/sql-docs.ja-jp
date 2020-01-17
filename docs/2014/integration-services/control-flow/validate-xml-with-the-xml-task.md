@@ -10,15 +10,15 @@ helpviewer_keywords:
 - XML validation
 - XML, validating
 ms.assetid: 224fc025-c21f-4d43-aa9d-5ffac337f9b0
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 4c095e939472c4c0bea37ff27da10dd47c9ca3de
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 76d84c3ea8da6d564db01fba3d02ac15a72fffc3
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53360454"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62829599"
 ---
 # <a name="validate-xml-with-the-xml-task"></a>Validate XML with the XML Task
   XML タスクの `ValidationDetails` プロパティを有効にして、XML ドキュメントを検証し、詳細なエラー出力を取得します。  
@@ -80,7 +80,7 @@ ms.locfileid: "53360454"
 ## <a name="analyze-xml-validation-output-with-a-transact-sql-query"></a>XML 検証の出力を Transact-SQL クエリで分析する  
  XML 検証の出力に大量のエラーが含まれている場合、 [!INCLUDE[tsql](../../../includes/tsql-md.md)] クエリを使用して [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]に出力を読み込むことができます。 そのうえで、WHERE、GROUP BY、ORDER BY、JOINなどの T-SQL 言語の機能をフル活用して、エラー一覧を分析できます。  
   
-```tsql  
+```sql  
 DECLARE @xml XML;  
   
 SELECT @xml = XmlDoc     

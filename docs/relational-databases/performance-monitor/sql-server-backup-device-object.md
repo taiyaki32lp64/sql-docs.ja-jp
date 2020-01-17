@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 52e7febf-d5e0-4674-945b-aacc40a9ad6e
 author: julieMSFT
 ms.author: jrasnick
-manager: craigg
-ms.openlocfilehash: 1cd5ee037eb7a513e54239ec825af7cced6c4a8f
-ms.sourcegitcommit: 0c1d552b3256e1bd995e3c49e0561589c52c21bf
+ms.openlocfilehash: 93302a5b9645784b3b326229545f92de0dce56f8
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/14/2018
-ms.locfileid: "53379664"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67987204"
 ---
 # <a name="sql-server-backup-device-object"></a>SQL Server: Backup Device オブジェクト
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

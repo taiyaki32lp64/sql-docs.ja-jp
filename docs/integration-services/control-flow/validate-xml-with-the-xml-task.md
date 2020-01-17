@@ -11,17 +11,20 @@ helpviewer_keywords:
 - XML validation
 - XML, validating
 ms.assetid: 224fc025-c21f-4d43-aa9d-5ffac337f9b0
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: 2617ab51ffdde7bd8986c0a7d508067ac2686e1e
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 7e15a268219a6b5d50c1de7e135b4c16bf999445
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53203261"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71293828"
 ---
 # <a name="validate-xml-with-the-xml-task"></a>Validate XML with the XML Task
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   XML タスクの **ValidationDetails** プロパティを有効にして、XML ドキュメントを検証し、詳細なエラー出力を取得します。  
   
  次のスクリーン ショットは、 **XML タスク エディター** と、XML 検証で詳細なエラー出力を取得するのに必要な設定を示しています。  

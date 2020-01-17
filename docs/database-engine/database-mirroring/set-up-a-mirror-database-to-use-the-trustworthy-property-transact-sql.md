@@ -1,6 +1,7 @@
 ---
-title: TRUSTWORTHY プロパティを使用するようにミラー データベースを設定する方法 (Transact-SQL) | Microsoft Docs
-ms.custom: ''
+title: ミラー化されたデータベースの信頼可能プロパティを有効にする
+description: 新しくミラー化されたデータベースで信頼可能プロパティを有効にするために必要な手順について説明します。
+ms.custom: seo-lt-2019
 ms.date: 03/09/2017
 ms.prod: sql
 ms.prod_service: high-availability
@@ -14,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 6993b076-78ef-453e-b0ea-e341b8e5ee3e
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: ee6ecf05e0ecff96b60f8ffd586461989cb9e151
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 20ee7631b1fd4ca8613191ac67a0e13ee1cb028c
+ms.sourcegitcommit: f8cf8cc6650a22e0b61779c20ca7428cdb23c850
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47743130"
+ms.lasthandoff: 12/04/2019
+ms.locfileid: "74822381"
 ---
 # <a name="set-up-a-mirror-database-to-use-the-trustworthy-property-transact-sql"></a>TRUSTWORTHY プロパティを使用するようにミラー データベースを設定する方法 (Transact-SQL)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

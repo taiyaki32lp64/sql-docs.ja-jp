@@ -11,17 +11,20 @@ f1_keywords:
 - SQL13.DTS.DESIGNER.AFPADLSSRC.F1
 - sql14.dts.designer.afpadlssrc.f1
 ms.assetid: f9c3311f-7316-48d6-bf10-d810e70b4304
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: a5ec780327f12a4d81063c155aa5d3666b004ea6
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 2699b5d76f15ea81875256cddcd63af1b6451f04
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53210148"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71293385"
 ---
 # <a name="azure-data-lake-store-source"></a>Azure Data Lake Store Source
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   **Azure Data Lake Store Source** コンポーネントは、SSIS パッケージが Azure Data Lake Store からデータを読み取れるようにします。 サポートされるファイル形式は、Text と Avro です。
   
  **Azure Data Lake Store Source** は、[SQL Server Integration Services (SSIS) Feature Pack for Azure](../../integration-services/azure-feature-pack-for-integration-services-ssis.md) のコンポーネントです。  

@@ -11,15 +11,14 @@ helpviewer_keywords:
 - solutions [SQL Server Management Studio], closing
 - closing solutions
 ms.assetid: 2370b267-5d0a-46da-ba3a-b2bd04127e78
-author: stevestein
-ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 139c5d1f8d74136b66777cd1f04bba0e62c971cf
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: b7b994b3b738595a78e2ffd2d97a3bf9b562c2e3
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47850550"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68258420"
 ---
 # <a name="close-a-solution"></a>ソリューションを閉じる
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

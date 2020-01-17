@@ -14,11 +14,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 9a6099a43713ebbcfdc65aec43aabcca95fe5e0b
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54127682"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62655429"
 ---
 # <a name="transactional-replication"></a>トランザクション レプリケーション
   一般にトランザクション レプリケーションは、パブリケーションのデータベース オブジェクトとデータのスナップショットで開始されます。 最初のスナップショットが取得されるとすぐ、それ以後パブリッシャーでデータやスキーマが変更されると、通常はその都度 (ほぼリアルタイムで) サブスクライバーに配信されるようになります。 データの変更は、パブリッシャーで発生したのと同じ順序で、同じトランザクションの中で、サブスクライバーに適用されます。したがって、パブリケーション内では、トランザクションの一貫性が保証されます。  
@@ -70,13 +70,13 @@ ms.locfileid: "54127682"
 ## <a name="publication-types"></a>パブリケーションの種類
 
   
-トランザクション レプリケーションには、次の 4 つのパブリケーションの種類があります。  
+トランザクション レプリケーションでは、以下の 4 種類のパブリケーションが提供されます。  
   
 |[パブリケーションの種類]|説明|  
 |----------------------|-----------------|  
 |標準トランザクション パブリケーション|サブスクライバーのデータがすべて読み取り専用であるトポロジに適したパブリケーションです (トランザクション レプリケーションでは、このパブリケーションがサブスクライバーで強制されるわけではありません)。<br /><br /> Transact-SQL またはレプリケーション管理オブジェクト (RMO) を使用する場合、標準トランザクション パブリケーションが既定で作成されます。 パブリケーションの新規作成ウィザードを使用する場合、 **[パブリケーションの種類]** ページで **[トランザクション パブリケーション]** を選択すると、標準トランザクション パブリケーションが作成されます。<br /><br /> パブリケーションの作成の詳細については、「 [データとデータベース オブジェクトのパブリッシュ](../../../relational-databases/replication/publish/publish-data-and-database-objects.md)」を参照してください。|  
-|更新可能なサブスクリプションを含むトランザクション パブリケーション|このパブリケーションの特徴として以下が挙げられます。<br /><br /> -各場所では、1 つのパブリッシャーとサブスクライバーが 1 つの同一のデータがあります。 <br /> サブスクライバーで行を更新することは-<br /> -このトポロジは高可用性を必要とするサーバー環境に最適で、読み取りのスケーラビリティ。<br /><br />詳細については、次を参照してください。[更新可能なサブスクリプション](../../../relational-databases/replication/transactional/updatable-subscriptions-for-transactional-replication.md)します。|  
-|ピア ツー ピア トポロジ|このパブリケーションの特徴として以下が挙げられます。<br /> -各場所は、同一のデータを備え、パブリッシャーとサブスクライバーの両方として機能します。<br /> -同じ行は、一度に 1 つの場所でのみ変更できます。<br /> -サポート[競合検出](../../../relational-databases/replication/transactional/peer-to-peer-conflict-detection-in-peer-to-peer-replication.md)  <br />-このトポロジは高可用性を必要とするサーバー環境に最適で、読み取りのスケーラビリティ。<br /><br />詳細については、「 [Peer-to-Peer Transactional Replication](../../../relational-databases/replication/transactional/peer-to-peer-transactional-replication.md)」を参照してください。|  
-|双方向トランザクション レプリケーション|このパブリケーションの特徴として以下が挙げられます。<br />双方向レプリケーションは、ピア ツー ピア レプリケーションに似ています、ただし、競合の解決は提供がありません。 さらに、双方向レプリケーションは、2 台のサーバーに制限されます。 <br /><br /> 詳細については、次を参照してください[双方向トランザクション レプリケーション。](../../../relational-databases/replication/transactional/bidirectional-transactional-replication.md) |  
+|更新可能なサブスクリプションを含むトランザクション パブリケーション|このパブリケーションの特徴として以下が挙げられます。<br /><br /> -各場所では、1 つのパブリッシャーとサブスクライバーが 1 つの同一のデータがあります。 <br /> サブスクライバーで行を更新することは-<br /> -これは、高可用性および読み取りのスケーラビリティが求められるサーバー環境に最適なトポロジです。<br /><br />詳細については、「[更新可能なサブスクリプション](../../../relational-databases/replication/transactional/updatable-subscriptions-for-transactional-replication.md)」を参照してください。|  
+|ピア ツー ピア トポロジ|このパブリケーションの特徴として以下が挙げられます。<br /> -各場所には同一のデータが格納され、パブリッシャーおよびサブスクライバーの両方の役割を果たします。<br /> -同一の行は一度に 1 つの場所でのみ変更できます。<br /> -[競合検出](../../../relational-databases/replication/transactional/peer-to-peer-conflict-detection-in-peer-to-peer-replication.md)をサポートします。  <br />-これは、高可用性および読み取りのスケーラビリティが求められるサーバー環境に最適なトポロジです。<br /><br />詳細については、「 [Peer-to-Peer Transactional Replication](../../../relational-databases/replication/transactional/peer-to-peer-transactional-replication.md)」を参照してください。|  
+|双方向トランザクション レプリケーション|このパブリケーションの特徴として以下が挙げられます。<br />双方向レプリケーションは、ピア ツー ピア レプリケーションに似ています、ただし、競合の解決は提供されません。 また、双方向レプリケーションは、2 台のサーバーに制限されます。 <br /><br /> 詳細については、「[双方向トランザクション レプリケーション](../../../relational-databases/replication/transactional/bidirectional-transactional-replication.md)」を参照してください。 |  
   
   

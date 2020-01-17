@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 02c9a75c-2103-4f68-a1db-e31f7e0f1f03
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: b071494697d21a37f4420889a8f60cc35fe3d8b2
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 1f7c90dacc375877b4e449b8d59533ce75ff8a4e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47797200"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68076831"
 ---
 # <a name="deferred-buffers"></a>遅延バッファー
 A*遅延バッファー*はいくつかの時点で使用される値の 1 つ*後*関数呼び出しで指定されています。 たとえば、 **SQLBindParameter**に関連付けるには、使用または*バインド、* SQL ステートメント内のパラメーターを使用して、データ バッファー。 アプリケーションは、パラメーターの数を指定し、アドレス、バイトの長さ、およびバッファーの型を渡します。 ドライバーは、この情報を保存しますが、バッファーの内容を確認できません。 後で、アプリケーションでは、ステートメントを実行するときにドライバーが情報を取得し、パラメーター データを取得して、データ ソースに送信するには。 そのため、バッファー内のデータの入力は遅延されます。 遅延バッファーは 1 つの関数で指定された、他で使用されるため、これは、プログラミング エラー アプリケーション、ドライバーがまだ期待した; が存在するときに、遅延のバッファーを解放するには詳細については、次を参照してください。[割り当ておよび解放バッファー](../../../odbc/reference/develop-app/allocating-and-freeing-buffers.md)、このセクションで後述します。  

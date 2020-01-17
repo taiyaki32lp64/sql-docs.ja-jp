@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 12/29/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - manage
@@ -13,12 +12,12 @@ ms.assetid: 4c617375-6b01-4a71-9680-de0cbf2cff05
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: cedf0226f4386be5b822a06dc85f384044e94f0f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 4f32d0adb196fbe23e90ae2bc28d8f65ad1326c3
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48103882"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66081927"
 ---
 # <a name="deploying-and-scaling-mining-models-data-mining-add-ins-for-excel"></a>マイニング モデルの配置とスケーリング (Excel 用データ マイニング アドイン)
   含まれるツール、**モデルの使用法**と**管理**グループは、管理、および既存のマイニング モデルを参照するために提供されます。 これらのツールを使用して、アドインを使用して作成したモデルに加え、[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] インスタンスに格納されているモデルを表示することができます。  

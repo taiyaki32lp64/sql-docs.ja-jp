@@ -9,14 +9,14 @@ helpviewer_keywords:
 - configuration options [Reporting Services]
 - report servers [Reporting Services], configuring
 - components [Reporting Services], Reporting Services Configuration tool
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: fec3d74b5b6d4d4387249ba3e4d5254aebfa1bed
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 3df5a4c27e5c916d5a2c803d7bd4d40110aabb27
+ms.sourcegitcommit: 312b961cfe3a540d8f304962909cd93d0a9c330b
+ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50029021"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73593780"
 ---
 # <a name="reporting-services-configuration-manager-native-mode"></a>Reporting Services 構成マネージャー (ネイティブ モード)
 
@@ -27,7 +27,7 @@ ms.locfileid: "50029021"
 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] のネイティブ モード インストールを構成するには、 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 構成マネージャーを使用します。 ファイルのみのインストール オプションを使用してレポート サーバーをインストールした場合は、構成マネージャーを使用して、サーバーを使用するための構成を行う必要があります。 既定の構成のインストール オプションを使用してレポート サーバーをインストールした場合は、構成マネージャーを使用して、セットアップ時に指定した設定の確認や変更を行うことができます。 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 構成マネージャーでは、ローカルまたはリモートのレポート サーバー インスタンスを構成できます。
 
 > [!NOTE]
-> [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] リリース以降の [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 構成マネージャーは、SharePoint モードのレポート サーバーを管理できるように設計されていません。 SharePoint モードの管理や構成は、SharePoint サーバーの全体管理および PowerShell スクリプトを使用して行います。  
+> SharePoint と Reporting Services の統合は、SQL Server 2016 以降では使用できません。 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] リリース以降の [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 構成マネージャーは、SharePoint モードのレポート サーバーを管理できるように設計されていません。 SharePoint モードの管理や構成は、SharePoint サーバーの全体管理および PowerShell スクリプトを使用して行います。  
   
 ##  <a name="bkmk_scenarios"></a> Reporting Services 構成マネージャーを使用するシナリオ  
  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 構成マネージャーを使用すると、次のタスクを実行できます。  
@@ -60,7 +60,7 @@ ms.locfileid: "50029021"
 
 - 構成対象のレポート サーバー上で、Windows Management Instrumentation (WMI) サービスが有効化および実行されている必要があります。 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 構成マネージャーは、レポート サーバーの WMI プロバイダーを使用して、ローカルおよびリモートのレポート サーバーに接続します。 リモートのレポート サーバーを構成する場合は、そのコンピューターでリモートの WMI アクセスが許可されている必要があります。 詳細については、「 [リモート管理用のレポート サーバーの構成](../../reporting-services/report-server/configure-a-report-server-for-remote-administration.md)」を参照してください。  
 
-- リモートのレポート サーバー インスタンスに接続して構成するには、リモートの WMI (Windows Management Instrumentation) 呼び出しを有効にして Windows ファイアウォールを通過できるようにしておく必要があります。 詳細については、 [オンライン ブックの「](../../reporting-services/report-server/configure-a-report-server-for-remote-administration.md) リモート管理用のレポート サーバーの構成 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 」を参照してください。
+- リモートのレポート サーバー インスタンスに接続して構成するには、リモートの WMI (Windows Management Instrumentation) 呼び出しを有効にして Windows ファイアウォールを通過できるようにしておく必要があります。 詳細については、「 [リモート管理用のレポート サーバーの構成](../../reporting-services/report-server/configure-a-report-server-for-remote-administration.md)」を参照してください。
 
 Reporting Services 構成マネージャーは、SQL Server Reporting Services をインストールするときに自動的にインストールされます。
 
@@ -70,7 +70,7 @@ Reporting Services 構成マネージャーは、SQL Server Reporting Services �
 
     - Windows のスタート画面から「 **Reporting** 」と入力し、検索結果から " **Reporting Services 構成マネージャー** " を選択します。
 
-    - **[スタート]** を選択し、 **[すべてのプログラム]**、 [!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)]、 **[構成ツール]** の順にポイントします。
+    - **[スタート]** を選択し、 **[すべてのプログラム]** 、 [!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)]、 **[構成ツール]** の順にポイントします。
 
          以前のバージョンの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]からレポート サーバー インスタンスを構成する場合は、そのバージョンのプログラム フォルダーを開きます。 たとえば、 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] サーバー コンポーネントの構成ツールを開くには、[ [!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)] ] ではなく [ [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] ] をポイントします。
 

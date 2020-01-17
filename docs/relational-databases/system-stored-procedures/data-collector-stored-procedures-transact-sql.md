@@ -16,15 +16,14 @@ helpviewer_keywords:
 ms.assetid: 9dd2824f-ea55-439b-8cd5-3a81fedb1432
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: dfd5f07cafacf5817f6fbef90b140b01c00e622f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 522efa96e554a7b6eecb6e36c0771cbe95163a37
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47741890"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67942400"
 ---
-# <a name="data-collector-stored-procedures-transact-sql"></a>データ コレクター ストアド プロシージャ (Transact-SQL)
+# <a name="data-collector-stored-procedures-transact-sql"></a>データ コレクター ストアド プロシージャ (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   SQL Server データ コレクターと、次のコンポーネントを操作するために使用する次のシステム ストアド プロシージャをサポートしています。 コレクション セット、コレクション アイテム、およびコレクション型。  
@@ -45,7 +44,7 @@ ms.locfileid: "47741890"
 |[sp_syscollector_enable_collector](../../relational-databases/system-stored-procedures/sp-syscollector-enable-collector-transact-sql.md)|[sp_syscollector_update_collector_type](../../relational-databases/system-stored-procedures/sp-syscollector-update-collector-type-transact-sql.md)|  
 |[sp_syscollector_set_cache_directory](../../relational-databases/system-stored-procedures/sp-syscollector-set-cache-directory-transact-sql.md)|[sp_syscollector_upload_collection_set](../../relational-databases/system-stored-procedures/sp-syscollector-upload-collection-set-transact-sql.md)|  
   
- 次のストアド プロシージャは、内部的にしか使用できません。  
+ 次のストアド プロシージャは内部でのみ使用されます。  
   
 -   sp_syscollector_get_warehouse_connection_string  
   
@@ -67,7 +66,7 @@ ms.locfileid: "47741890"
   
 -   sp_syscollector_event_onstatsupdate  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [システム ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

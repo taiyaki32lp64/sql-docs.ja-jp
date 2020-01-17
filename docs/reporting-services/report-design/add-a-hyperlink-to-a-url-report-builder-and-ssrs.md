@@ -2,18 +2,18 @@
 title: URL へのハイパーリンクの追加 (レポート ビルダーおよび SSRS) | Microsoft Docs
 ms.date: 09/07/2016
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: report-design
 ms.topic: conceptual
 ms.assetid: d3392c0b-7b62-4d27-bc04-2bd0c5487d08
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 7dcd5d57b3b5452a9d14b8951cc8f8d6572f452d
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 84f7ebd295cb64ca4d6f77427a727c1d0182b142
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56288950"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65574827"
 ---
 # <a name="add-a-hyperlink-to-a-url-report-builder-and-ssrs"></a>URL へのハイパーリンクの追加 (レポート ビルダーおよび SSRS)
 [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)]  のページ分割されたレポートでテキスト ボックス、画像、グラフ、ゲージにハイパーリンク アクションを追加する方法について説明します。 リンクで他のレポート、レポート内のブックマーク、静的または動的な URL に移動できます。 
@@ -26,7 +26,7 @@ ms.locfileid: "56288950"
  
  *  また、同じレポートの **特定の場所にブックマークを追加** できます。 
   
-サンプル データを利用し、ハイパーリンクの追加をお試しください。詳細については「[チュートリアル:テキストの書式設定 &#40;レポート ビルダー&#41;](../../reporting-services/tutorial-format-text-report-builder.md)」をご覧ください。  
+「[チュートリアル: テキストの書式設定 &#40;レポート ビルダー&#41;](../../reporting-services/tutorial-format-text-report-builder.md)」で、サンプル データを利用し、ハイパーリンクの追加をお試しください。  
   
 > [!NOTE]  
 >  データセット フィールドにバインドされているリンクは、悪意的な改ざんに対して脆弱である可能性があります。 詳細については、「 [レポートとリソースの保護](../../reporting-services/security/secure-reports-and-resources.md)」を参照してください。  

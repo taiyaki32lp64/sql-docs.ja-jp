@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 42061ff7-e6e7-497b-a0d9-440b9cf5986c
 author: Shamikg
 ms.author: Shamikg
-manager: craigg
-ms.openlocfilehash: e82fa9d02fdbfe876f4097c54c6877c3a3a81fee
-ms.sourcegitcommit: 5d6e1c827752c3aa2d02c4c7653aefb2736fffc3
+ms.openlocfilehash: c4437f76a926e84ffe3592042f9d29b50f3eabf9
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/10/2018
-ms.locfileid: "49072086"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67908841"
 ---
 # <a name="project-settings-synchronization-mysqltosql"></a>プロジェクトの設定 (同期) (MySQLToSQL)
 同期**プロジェクト設定**MySQL データベースのオブジェクトを SQL Server データベース オブジェクトと同期する方法を構成することができます。  

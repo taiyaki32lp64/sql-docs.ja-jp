@@ -26,14 +26,13 @@ helpviewer_keywords:
 ms.assetid: 704b1ad3-3534-4cf3-aff4-9fb70064b6cc
 author: rothja
 ms.author: jroth
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 460e620f9b91b3b616b487f6324e640dbaf4f83a
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 730508fca6b6f9d3e9515e9ec496971a4b758279
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51660751"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68046525"
 ---
 # <a name="sysfnbuiltinpermissions-transact-sql"></a>sys.fn_builtin_permissions (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -68,7 +67,7 @@ sys.fn_builtin_permissions ( [ DEFAULT | NULL ]
  *empty_string*  
  DEFAULT と同じです。  
   
- **'**<securable_class>**'**  
+ **'** <securable_class> **'**  
  1 つのセキュリティ保護可能なクラスの名前が呼び出されると、sys.fn_builtin_permissions は、クラスに適用されるすべてのアクセス許可を返します。 < securable_class > は、引用符を必要とする文字列リテラルです。 **nvarchar(60)**  
   
 ## <a name="tables-returned"></a>返されるテーブル  

@@ -1,5 +1,5 @@
 ---
-title: getBytes メソッド (SQLServerResultSet) |Microsoft Docs
+title: getBytes メソッド (SQLServerResultSet) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: d16a0aea-6144-4fcb-bcbc-5d7daa36d327
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: cc51a4cb3680952c294f03718232b9571108a469
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 64eb652fe7e5aa7e4d034fd2fa837ff9cca38a9b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47741990"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67953352"
 ---
 # <a name="getbytes-method-sqlserverresultset"></a>getBytes メソッド (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

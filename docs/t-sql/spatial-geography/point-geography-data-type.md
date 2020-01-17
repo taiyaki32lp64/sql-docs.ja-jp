@@ -1,7 +1,7 @@
 ---
 title: Point (geography データ型) | Microsoft Docs
 ms.custom: ''
-ms.date: 07/30/2017
+ms.date: 10/10/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -16,15 +16,14 @@ helpviewer_keywords:
 - Point method
 - Point (geography Data Type)
 ms.assetid: 0dc6f422-7aae-4016-b7f4-3289fa8f989c
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: 4de164536b75684d8c019a9f93db4a9b21415650
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: MladjoA
+ms.author: mlandzic
+ms.openlocfilehash: 665497328238fbaa88d666fb214af336531e93c7
+ms.sourcegitcommit: aece9f7db367098fcc0c508209ba243e05547fe1
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47759810"
+ms.lasthandoff: 10/11/2019
+ms.locfileid: "72260162"
 ---
 # <a name="point-geography-data-type"></a>Point (geography データ型)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -46,12 +45,12 @@ Point ( Lat, Long, SRID )
  生成される **Point** の y 座標を表す **float** 式です。 有効な経度と緯度の値の詳細については、「[Point](../../relational-databases/spatial/point.md)」をご覧ください。  
   
  *SRID*  
- 返される **geography** インスタンスの SRID を表す **int** 式です。  
+ 返される **geography** インスタンスの [Spatial Reference Identifier](https://docs.microsoft.com/sql/relational-databases/spatial/spatial-reference-identifiers-srids) を表す **int** 式です。  
   
 ## <a name="return-types"></a>戻り値の型  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 戻り値の型: **geography**  
   
- CLR の戻り値の型: **SqlGeography**  
+ CLR の戻り値の型:**SqlGeography**  
   
 > [!NOTE]  
 >  Point (geography データ型) メソッドの引数は、WKT と比較して元に戻された座標を持ちます。  

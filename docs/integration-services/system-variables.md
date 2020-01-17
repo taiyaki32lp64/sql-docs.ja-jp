@@ -14,17 +14,20 @@ helpviewer_keywords:
 - event handlers [Integration Services], variables
 - variables [Integration Services], system
 ms.assetid: efecd0d4-1489-4eba-a8fe-275d647058b8
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: 6cd923a8c89336d009633ef3a33b1d56048c345c
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: c0b29d0e74d25739b72e712080d2f379ae3be437
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52523768"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71296724"
 ---
 # <a name="system-variables"></a>システム変数
+
+[!INCLUDE[ssis-appliesto](../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] では、実行中のパッケージとそのオブジェクトに関する情報を格納する、システム変数のセットが用意されています。 これらの変数は、式およびプロパティ式の内部で使用でき、パッケージ、コンテナー、タスク、およびイベント ハンドラーをカスタマイズできます。  
   
  すべての変数 (システム変数とユーザー定義変数) を SQL 実行タスクが使用するパラメーター バインドで使用して、パラメーターに変数をマップできます。  
@@ -41,11 +44,11 @@ ms.locfileid: "52523768"
 |**CreatorName**|String|パッケージの構築者の名前です。|  
 |**ExecutionInstanceGUID**|String|実行中のパッケージのインスタンスの一意識別子です。|  
 |**FailedConfigurations**|String|失敗したパッケージ構成の名前。|  
-|**IgnoreConfigurationsOnLoad**|ブール値|パッケージを読み込むときにパッケージ構成を無視するかどうかを示します。|  
-|**InteractiveMode**|ブール値|パッケージが対話モードで実行されているかどうかを示します。 [!INCLUDE[ssIS](../includes/ssis-md.md)] デザイナーでパッケージを実行中の場合、このプロパティは **True**に設定されます。 **DTExec** コマンド プロンプト ユーティリティを使用してパッケージを実行中の場合、プロパティは **False**に設定されます。|  
+|**IgnoreConfigurationsOnLoad**|Boolean|パッケージを読み込むときにパッケージ構成を無視するかどうかを示します。|  
+|**InteractiveMode**|Boolean|パッケージが対話モードで実行されているかどうかを示します。 [!INCLUDE[ssIS](../includes/ssis-md.md)] デザイナーでパッケージを実行中の場合、このプロパティは **True**に設定されます。 **DTExec** コマンド プロンプト ユーティリティを使用してパッケージを実行中の場合、プロパティは **False**に設定されます。|  
 |**LocaleId**|Int32|パッケージで使用するロケールです。|  
 |**MachineName**|String|パッケージが実行されているコンピューターの名前です。|  
-|**OfflineMode**|ブール値|パッケージがオフライン モードかどうかを示します。 オフライン モードでは、データ ソースへの接続は取得されません。|  
+|**OfflineMode**|Boolean|パッケージがオフライン モードかどうかを示します。 オフライン モードでは、データ ソースへの接続は取得されません。|  
 |**PackageID**|String|パッケージの一意識別子です。|  
 |**PackageName**|String|パッケージの名前です。|  
 |**StartTime**|DateTime|パッケージの実行を開始した時刻です。|  
@@ -80,17 +83,17 @@ ms.locfileid: "52523768"
   
 |システム変数|データ型|[説明]|イベント ハンドラー|  
 |---------------------|---------------|-----------------|-------------------|  
-|**キャンセル**|ブール値|エラー、警告、またはクエリのキャンセルが発生したときに、イベント ハンドラーが実行を停止するかどうかを示します。|OnError イベント ハンドラー<br /><br /> OnWarning イベント ハンドラー<br /><br /> OnQueryCancel イベント ハンドラー|  
+|**キャンセル**|Boolean|エラー、警告、またはクエリのキャンセルが発生したときに、イベント ハンドラーが実行を停止するかどうかを示します。|OnError イベント ハンドラー<br /><br /> OnWarning イベント ハンドラー<br /><br /> OnQueryCancel イベント ハンドラー|  
 |**ErrorCode**|Int32|エラー識別子です。|OnError イベント ハンドラー<br /><br /> OnInformation イベント ハンドラー<br /><br /> OnWarning イベント ハンドラー|  
 |**ErrorDescription**|String|エラーの説明。|OnError イベント ハンドラー<br /><br /> OnInformation イベント ハンドラー<br /><br /> OnWarning イベント ハンドラー|  
-|**ExecutionStatus**|ブール値|現在の実行ステータスです。|OnExecStatusChanged イベント ハンドラー|  
+|**ExecutionStatus**|Boolean|現在の実行ステータスです。|OnExecStatusChanged イベント ハンドラー|  
 |**ExecutionValue**|DBNull|実行値です。|OnTaskFailed イベント ハンドラー|  
 |**LocaleId**|Int32|イベント ハンドラーが使用するロケールです。|すべてのイベント ハンドラー|  
 |**PercentComplete**|Int32|完了済みの作業の割合です。|OnProgress イベント ハンドラー|  
 |**ProgressCountHigh**|Int32|OnProgress イベントによって処理される操作の総数を示す、64 ビット値の上位部分です。|OnProgress イベント ハンドラー|  
 |**ProgressCountLow**|Int32|OnProgress イベントによって処理される操作の総数を示す、64 ビット値の下位部分です。|OnProgress イベント ハンドラー|  
 |**ProgressDescription**|String|進行状況の説明です。|OnProgress イベント ハンドラー|  
-|**Propagate**|ブール値|イベントが、上位レベルのイベント ハンドラーに反映されるかどうかを示します。<br /><br /> 注: 変数 **Propagate** の値は、パッケージの検証中は無視されます。 子パッケージ内で **Propagate** を **False** に設定しても、イベントは親パッケージに反映されます。|すべてのイベント ハンドラー|  
+|**Propagate**|Boolean|イベントが、上位レベルのイベント ハンドラーに反映されるかどうかを示します。<br /><br /> 注:変数 **Propagate** の値は、パッケージの検証中は無視されます。 子パッケージ内で **Propagate** を **False** に設定しても、イベントは親パッケージに反映されます。|すべてのイベント ハンドラー|  
 |**SourceDescription**|String|イベントを発生させたイベント ハンドラー内の実行可能ファイルの説明です。|すべてのイベント ハンドラー|  
 |**[SourceID]**|String|イベントを発生させたイベント ハンドラー内の実行可能ファイルの一意識別子です。|すべてのイベント ハンドラー|  
 |**[SourceName]**|String|イベントを発生させたイベント ハンドラー内の実行可能ファイルの名前です。|すべてのイベント ハンドラー|  

@@ -14,23 +14,22 @@ helpviewer_keywords:
 ms.assetid: 25dbb751-139b-4c8e-ac62-3ec23110611f
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 9bc785f03f6e7630cca5c2e66e0334e9f1688cc5
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: dfaad71ac357ed261643267c7eab019b91548fa4
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47746410"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68063823"
 ---
 # <a name="add-dependencies-to-a-sql-server-resource"></a>SQL Server リソースへの依存関係の追加
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   このトピックでは、フェールオーバー クラスター マネージャー スナップインを使用して、AlwaysOn フェールオーバー クラスター インスタンス (FCI) リソースに依存関係を追加する方法について説明します。 フェールオーバー クラスター マネージャー スナップインは、Windows Server フェールオーバー クラスタリング (WSFC) サービスのクラスター管理アプリケーションです。  
   
--   **作業を開始する準備:**  [制限事項と制約事項](#Restrictions)、 [前提条件](#Prerequisites)  
+-   **作業を開始する準備:** [制限事項と制約事項](#Restrictions)、[前提条件](#Prerequisites)  
   
--   **SQL Server リソースに依存関係を追加するために使用するもの:** [Windows フェールオーバー クラスター マネージャー](#WinClusManager)  
+-   **SQL Server リソースに依存関係を追加するには、次のものを使用します:** [Windows フェールオーバー クラスター マネージャー](#WinClusManager)  
   
-##  <a name="BeforeYouBegin"></a> 作業を開始する準備  
+##  <a name="BeforeYouBegin"></a> はじめに  
   
 ###  <a name="Restrictions"></a> 制限事項と制約事項  
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] グループに他のリソースを追加する場合、そのリソースには必ず独自の固有の SQL ネットワーク名リソースと独自の SQL IP アドレス リソースが必要であることに注意してください。  
@@ -45,11 +44,11 @@ ms.locfileid: "47746410"
   
  さらに次の問題も考慮してください。  
   
--   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] レプリケーションでの FTP : [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] レプリケーションで FTP を使用する [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] のインスタンスでは、FTP サービスを使用するようにセットアップされた [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] のインストールと同じ物理ディスクのいずれかを FTP サービスで使用する必要があります。  
+-   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] レプリケーションを使用した FTP: [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] レプリケーションで FTP を使用する [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] のインスタンスでは、FTP サービスを使用するように設定された [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] のインストールと同じ物理ディスクのいずれかを、ご利用の FTP サービスで使用する必要があります。  
   
--   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] リソースの依存関係 : [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] グループにリソースを追加し、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] を使用できるようにするために [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] リソースに依存している場合は、 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] エージェント リソースに依存関係を追加することを [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] はお勧めしています。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] リソースに依存関係を追加しないでください。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] を実行しているコンピューターで高い可用性を維持するには、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] エージェント リソースに障害が発生した場合に [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] グループが影響を受けないように [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] エージェント リソースを構成します。  
+-   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] リソースの依存関係: [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] グループにリソースを追加し、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] を使用できるようにするために [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] リソースに依存している場合は、[!INCLUDE[msCoName](../../../includes/msconame-md.md)] エージェント リソースに依存関係を追加することを [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] はお勧めしています。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] リソースに依存関係を追加しないでください。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] を実行しているコンピューターで高い可用性を維持するには、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] エージェント リソースに障害が発生した場合に [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] グループが影響を受けないように [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] エージェント リソースを構成します。  
   
--   ファイル共有とプリンター リソース : ファイル共有リソースやプリンター クラスター リソースをインストールするときは、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]を実行しているコンピューターと同じ物理ディスク リソースに配置しないでください。 同じ物理ディスク リソースにインストールすると、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]を実行しているコンピューターのパフォーマンスが低下したり、サービスが失われたりする場合があります。  
+-   ファイル共有とプリンター リソース: ファイル共有リソースやプリンター クラスター リソースをインストールするときは、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] を実行しているコンピューターと同じ物理ディスク リソースに配置しないでください。 同じ物理ディスク リソースにインストールすると、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]を実行しているコンピューターのパフォーマンスが低下したり、サービスが失われたりする場合があります。  
   
 -   MS DTC の考慮事項: オペレーティング システムをインストールし FCI を構成してから、フェールオーバー クラスター マネージャー スナップインを使用して、クラスター内で機能するように [!INCLUDE[msCoName](../../../includes/msconame-md.md)] 分散トランザクション コーディネーター (MS DTC) を構成する必要があります。 MS DTC のクラスター化に失敗しても [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] セットアップは中断しませんが、MS DTC が適切に構成されていない場合は [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] のアプリケーション機能に影響が生じる可能性があります。  
   

@@ -11,11 +11,11 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: c96b70775105ea9446810ac3b064ae7cb07d4337
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56010234"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63312880"
 ---
 # <a name="time-series-predictions-using-replacement-data-intermediate-data-mining-tutorial"></a>時系列予測での置き換え後のデータの使用 (中級者向けデータ マイニング チュートリアル)
   ここでは、全世界の売上データに基づく新しいモデルを作成します。 その後、全世界の売上モデルを個々の地域のいずれかに適用する予測クエリを作成します。  

@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: eb996b7c-1eef-4f73-b5e6-2fa6faf7336c
 author: Shamikg
 ms.author: Shamikg
-manager: craigg
-ms.openlocfilehash: e7d1b0b68835fe8b909369a87814a3d1c41e07d1
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: c65c19ee3b95303afb0e1ae0a950efe548c8f0af
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47841060"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68083529"
 ---
 # <a name="assessing-sap-ase-database-objects-for-conversion-sybasetosql"></a>評価の SAP ASE データベース オブジェクトの変換 (SybaseToSQL)
 オブジェクトを読み込むし、データを移行する前に[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]判断した Azure SQL、または方法、移行の複雑さとどれだけ時間かかります。 SSMA は、オブジェクトとを正常に変換されるプロシージャの割合を示す評価レポートを作成できます[!INCLUDE[tsql](../../includes/tsql-md.md)]します。 SSMA では、変換エラーを引き起こす可能性のある特定の問題を表示することもできます。  
@@ -35,7 +34,7 @@ ms.locfileid: "47841060"
   
     SSMA では、ウィンドウの下部にあるステータス バーで進行状況を示しています。 [出力] ペインが表示されている場合は、関連するメッセージも表示されます。  
   
-    評価が完了すると、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Migration Assistant for Sybase: 評価レポート ウィンドウが表示されます。  
+    評価が完了すると、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Migration Assistant for Sybase:評価レポート ウィンドウが表示されます。  
   
 ## <a name="use-assessment-reports"></a>評価レポートの使用  
 評価レポート ウィンドウには、3 つのペインが含まれています。  

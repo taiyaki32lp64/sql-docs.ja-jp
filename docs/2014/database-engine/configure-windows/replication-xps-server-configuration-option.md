@@ -13,16 +13,16 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: e9850652965b44e68d7996ce28386aef2803f546
-ms.sourcegitcommit: 04dd0620202287869b23cc2fde998a18d3200c66
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "52640720"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62809665"
 ---
 # <a name="replication-xps-server-configuration-option"></a>Replication XPs サーバー構成オプション
   このオプションは、内部でのみ使用されます。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [サーバー構成オプション &#40;SQL Server&#41;](server-configuration-options-sql-server.md)  
   
   

@@ -9,15 +9,15 @@ ms.topic: conceptual
 helpviewer_keywords:
 - FileTables [SQL Server], using with other features
 ms.assetid: f12a17e4-bd3d-42b0-b253-efc36876db37
-author: douglaslMS
-ms.author: douglasl
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 8ab7963d83937c3572363ea921724cefb8b4adff
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: c8ea6a5fcfe99926c264fc2116a637f8d30c05df
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52507688"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66010151"
 ---
 # <a name="filetable-compatibility-with-other-sql-server-features"></a>FileTable と他の SQL Server 機能の互換性
   FileTable と他の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]機能との連携について説明します。  
@@ -87,7 +87,7 @@ ms.locfileid: "52507688"
   
 -   ビューは、"更新可能なビュー" セマンティクスに基づいて更新できますが、基になるテーブルの制約により、テーブル内の場合と同様に更新が拒否されることがあります。  
   
--   ビューの明示的な列にファイル パスを追加することにより、ファイルのファイル パスをビューに視覚化することができます。 以下に例を示します。  
+-   ビューの明示的な列にファイル パスを追加することにより、ファイルのファイル パスをビューに視覚化することができます。 例 :  
   
      `CREATE VIEW MP3FILES AS SELECT column1, column2, ..., GetFileNamespacePath() AS PATH, column3,...  FROM Documents`  
   

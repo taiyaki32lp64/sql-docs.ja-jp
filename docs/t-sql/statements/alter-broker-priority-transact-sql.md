@@ -20,13 +20,12 @@ helpviewer_keywords:
 ms.assetid: 15fda1b2-e4dd-4f9d-935a-2e38926075b2
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: cff00447a3a3bb76c5766fc8799a9f85c3d23144
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 06ab8c327709fa6bfb504217bdd083aaed98f870
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47689770"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68066001"
 ---
 # <a name="alter-broker-priority-transact-sql"></a>ALTER BROKER PRIORITY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -56,7 +55,7 @@ FOR CONVERSATION
  変更するメッセージ交換の優先度の名前を指定します。 名前は、現在のデータベース内のメッセージ交換の優先度を参照する必要があります。  
   
  SET  
- 指定したメッセージ交換の優先度をメッセージ交換に適用するかどうかを決定するための条件を指定します。 SET は必須で、CONTRACT_NAME、LOCAL_SERVICE_NAME、REMOTE_SERVICE_NAME、または PRIORITY_LEVEL の各条件のうち、少なくとも 1 つを指定する必要があります。  
+ 指定したメッセージ交換の優先度をメッセージ交換に適用するかどうかを決定するための条件を指定します。 SET は必須であり、これには次の条件のうち、少なくとも 1 つを指定する必要があります: CONTRACT_NAME、LOCAL_SERVICE_NAME、REMOTE_SERVICE_NAME、または PRIORITY_LEVEL。  
   
  CONTRACT_NAME = {*ContractName* | **ANY**}  
  メッセージ交換の優先度をメッセージ交換に適用するかどうかを決定するための条件として使用するコントラクトの名前を指定します。 *ContractName* は [!INCLUDE[ssDE](../../includes/ssde-md.md)] 識別子であり、現在のデータベース内のコントラクトの名前を指定する必要があります。  
@@ -104,7 +103,7 @@ FOR CONVERSATION
  REMOTE_SERVICE_NAME を指定しない場合、メッセージ交換の優先度のリモート サービス プロパティは変更されません。  
   
  PRIORITY_LEVEL = { *PriorityValue* | **DEFAULT** }  
- メッセージ交換の優先度で指定されているコントラクトおよびサービスを使用するすべてのメッセージ交換のエンドポイントに割り当てる優先度レベルを指定します。 *PriorityValue* には、1 (最も低い優先度) ～ 10 (最も高い優先度) の整数リテラルを指定する必要があります。  
+ メッセージ交換の優先度で指定されているコントラクトおよびサービスを使用する任意のメッセージ交換のエンドポイントに割り当てる優先度レベルを指定します。 *PriorityValue* には、1 (最も低い優先度) ～ 10 (最も高い優先度) の整数リテラルを指定する必要があります。  
   
  PRIORITY_LEVEL を指定しない場合、メッセージ交換の優先度の優先度レベル プロパティは変更されません。  
   
@@ -128,7 +127,7 @@ ALTER BROKER PRIORITY SimpleContractDefaultPriority
 ```  
   
 ### <a name="b-changing-all-of-the-properties-of-an-existing-conversation-priority"></a>B. 既存のメッセージ交換の優先度のプロパティをすべて変更する  
- 優先度レベル、コントラクト、ローカル サービス、およびリモート サービスの各プロパティを変更します。  
+ 優先度レベル、コントラクト、ローカル サービス、リモート サービスの各プロパティを変更します。  
   
 ```  
 ALTER BROKER PRIORITY SimpleContractPriority  

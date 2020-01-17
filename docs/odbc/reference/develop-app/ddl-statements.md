@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 96ac9859-5976-4b06-ae1f-2fec3231e266
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 9100405c91387faa66b714a94b8259167ae31899
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 97541c9d594b282b871cb7869d0e8c2d2224205d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52542681"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68076865"
 ---
 # <a name="ddl-statements"></a>DDL ステートメント
 データ定義言語 (DDL) ステートメントは、Dbms によって大幅に異なります。 ODBC SQL ステートメントの最も一般的なデータ定義操作を定義します作成すると、テーブル、インデックス、およびビューを削除する。テーブルの変更許可と権限の取り消し。 その他のすべての DDL ステートメントは、データ ソースに固有です。 そのため、相互運用可能なアプリケーションでは、一部のデータ定義操作を実行できません。 一般に、これは問題ではありません、このような操作が高 DBMS 固有にする傾向があり、最適なため、ほとんどの Dbms に専用のデータベース管理ソフトウェアに左が付属またはセットアップ プログラムは、ドライバーに付属します。  

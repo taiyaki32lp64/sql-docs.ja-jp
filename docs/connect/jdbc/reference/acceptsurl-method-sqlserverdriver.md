@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: fc744566-7191-4b15-9f76-b4b8087fb14a
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 4bffa24786e4f86d170c4065b11f3fc9ff8ec49b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 7c51da69e7218f91630543fe7bee5ec0d7fd6b0e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47630930"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67956025"
 ---
 # <a name="acceptsurl-method-sqlserverdriver"></a>acceptsURL メソッド (SQLServerDriver)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -38,7 +37,7 @@ public boolean acceptsURL(java.lang.String url)
 #### <a name="parameters"></a>パラメーター  
  *url*  
   
- A**文字列**値の URL を含むデータベースに接続するために使用します。  
+ データベースへの接続に使用する URL を表す**文字列**値です。  
   
 ## <a name="return-value"></a>戻り値  
  渡された URL が有効である場合は **true** です。 それ以外の場合は、 **false**です。  
@@ -47,7 +46,7 @@ public boolean acceptsURL(java.lang.String url)
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- この acceptsURL メソッドは、java.sql.Driver インターフェイスで acceptsURL メソッドによって指定されます。  
+ この acceptsURL メソッドは、acceptsURL インターフェイスのメソッドによって指定されます。  
   
 ## <a name="see-also"></a>参照  
  [SQLServerDriver のメソッド](../../../connect/jdbc/reference/sqlserverdriver-methods.md)   

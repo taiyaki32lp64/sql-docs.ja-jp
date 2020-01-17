@@ -16,18 +16,18 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 517db08c37a0952a25a66828a37b11fd6ffa96ec
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52812539"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63280671"
 ---
 # <a name="use-the-toolbox"></a>ツールボックスの使用
   ツールボックスから、アイテム、テキスト、およびコントロールを選択してフォーム、ページ、およびデザイナーにドラッグできます。また、アイテムを後で再利用するために、ドラッグ先からツールボックスに戻すことができます。 たとえば、 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] では、タスクをメンテナンス プラン上にドラッグできます。  
   
  ツールボックス内のアイテムは、タブと呼ばれるセクションにグループ分けされています。 よく使用されるツールボックスのタスクとその実行方法について、参照用一覧を次に示します。  
   
-|変換先|方法|  
+|目的|方法|  
 |--------|-------------|  
 |ツールボックスを開く|**[表示]** メニューの **[ツールボックス]** をクリックします。|  
 |ツールボックスを自動的に閉じる|ツールボックスを開きます。 **[ウィンドウ]** メニューの **[自動的に隠す]** をオンにします。|  

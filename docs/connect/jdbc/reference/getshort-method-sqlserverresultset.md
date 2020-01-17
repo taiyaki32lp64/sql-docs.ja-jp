@@ -1,5 +1,5 @@
 ---
-title: getShort メソッド (SQLServerResultSet) |Microsoft Docs
+title: getShort メソッド (SQLServerResultSet) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: 5dd39c40-e7cc-4ff9-8491-7e20e25a9d17
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 1ed57ebf79932f2be4f08f3ce63bb4fdd8cc57fc
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 9136c379793f4f66fcc4c69b11da9a0ea49d294d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47759200"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67979763"
 ---
 # <a name="getshort-method-sqlserverresultset"></a>getShort メソッド (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

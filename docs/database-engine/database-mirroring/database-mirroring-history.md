@@ -12,13 +12,12 @@ f1_keywords:
 ms.assetid: 1d6e4b10-4a23-47d7-9918-c417992f09d3
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 3f1fe2b0079d761a0fc599377ee82714227cdb73
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 329eda4ba3c0bdabc355242d626a3d0ac89e6033
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47724320"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68006426"
 ---
 # <a name="database-mirroring-history"></a>[データベース ミラーリングの履歴]
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -28,7 +27,7 @@ ms.locfileid: "47724320"
   
 -   [データベース ミラーリング モニターの起動 &#40;SQL Server Management Studio&#41;](../../database-engine/database-mirroring/start-database-mirroring-monitor-sql-server-management-studio.md)  
   
-## <a name="options"></a>[変数]  
+## <a name="options"></a>オプション  
  **サーバー インスタンス**  
  履歴レポートの対象となるサーバー インスタンスの名前です。  
   

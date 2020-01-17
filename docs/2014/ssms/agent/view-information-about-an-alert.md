@@ -17,11 +17,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: c5567abc0893bd183c2468f82278a014e2005113
-ms.sourcegitcommit: 78e32562f9c1fbf2e50d3be645941d4aa457e31f
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/08/2019
-ms.locfileid: "54100237"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68211296"
 ---
 # <a name="view-information-about-an-alert"></a>View Information About an Alert
   このトピックでは、[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] で [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] または [!INCLUDE[tsql](../../includes/tsql-md.md)] を使用して、[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェントの警告に関する情報を表示する方法について説明します。  
@@ -55,11 +55,11 @@ ms.locfileid: "54100237"
   
 3.  プラス記号をクリックして **[警告]** フォルダーを展開します。  
   
-4.  表示する情報がある警告を右クリックし、**[プロパティ]** を選択します。  
+4.  表示する情報がある警告を右クリックし、 **[プロパティ]** を選択します。  
   
      [_alert_name_ **警告のプロパティ**] ダイアログ ボックスに表示される使用可能なオプションの詳細については、以下を参照してください。  
   
-    -   [アラートのプロパティ-新しい警告&#40;[全般] ページ&#41;](../../integration-services/general-page-of-integration-services-designers-options.md)  
+    -   [アラートのプロパティ-[新しい警告&#40;全般] ページ&#41;](../../integration-services/general-page-of-integration-services-designers-options.md)  
   
     -   [アラートのプロパティ-[新しい警告&#40;応答] ページ&#41;](alert-properties-new-alert-response-page.md)  
   

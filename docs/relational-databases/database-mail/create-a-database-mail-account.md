@@ -13,23 +13,22 @@ helpviewer_keywords:
 ms.assetid: c07abbc6-fc6a-470b-8fa3-532f2e06b16a
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: a682f0d3c8373ea7fc96dd82796108d5d71f26ef
-ms.sourcegitcommit: 1a5448747ccb2e13e8f3d9f04012ba5ae04bb0a3
+ms.openlocfilehash: 640a24917c1bcb8b7b707308693f658de8dd33e6
+ms.sourcegitcommit: 3de1fb410de2515e5a00a5dbf6dd442d888713ba
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51558289"
+ms.lasthandoff: 09/02/2019
+ms.locfileid: "70211371"
 ---
 # <a name="create-a-database-mail-account"></a>データベース メール アカウントの作成
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
   データベース メール アカウントの作成には、 **データベース メール構成ウィザード** または [!INCLUDE[tsql](../../includes/tsql-md.md)] を使用します。  
   
--   **作業を開始する準備:**  [前提条件](#Prerequisites)  
+-   **作業を開始する準備:**[前提条件](#Prerequisites)  
   
--   **データベース メール アカウントの作成:**  [データベース メール構成ウィザード](#SSMSProcedure)、 [Transact-SQL の使用](#TsqlProcedure)  
+-   **データベース メール アカウントを作成するには、** を使用[データベース メール構成ウィザード](#SSMSProcedure)、[Transact-SQL](#TsqlProcedure)  
   
--   **補足情報:**  [データベース メールを構成する次の手順](#FollowUp)  
+-   **補足情報:**[データベース メールを構成する次の手順](#FollowUp)  
   
 ##  <a name="BeforeYouBegin"></a> はじめに  
   
@@ -52,7 +51,7 @@ ms.locfileid: "51558289"
   
 -   **[プロファイルとアカウントの管理]** ページで、 **[新しいアカウントを作成する]** を選択し、 **[次へ]** をクリックします。  
   
--   **[新しいアカウント]** ページで、アカウント名、説明、メール サーバー情報、および認証の種類を指定します。 **[次へ]** をクリックします。  
+-   **[新しいアカウント]** ページで、アカウント名、説明、メール サーバー情報、および認証の種類を指定します。  **[次へ]** をクリックします。  
   
 -   **[ウィザードの完了]** ページで、実行される動作を確認し、 **[完了]** をクリックして、新しいアカウントの作成を完了します。  
   
@@ -86,7 +85,7 @@ EXECUTE msdb.dbo.sysmail_add_account_sp
     @mailserver_name = 'smtp.Adventure-Works.com' ;  
 ```  
   
-##  <a name="FollowUp"></a> 補足情報: データベース メールを構成する次の手順  
+##  <a name="FollowUp"></a>補足情報: データベース メールを構成する次の手順  
   
 -   [データベース メール プロファイルの作成](../../relational-databases/database-mail/create-a-database-mail-profile.md)  
   

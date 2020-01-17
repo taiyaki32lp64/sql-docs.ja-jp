@@ -12,18 +12,17 @@ helpviewer_keywords:
 ms.assetid: 59760114-508e-46c5-81d2-8f2498c0d778
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: b92eeb64b95d666b15c03c70d656d2309a63eabf
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 3a945eef43a1fc12689853c3fa209f6126df4f0d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47693440"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67951877"
 ---
 # <a name="considering-database-features-to-use"></a>使用するデータベース機能の検討
-基本レベルの相互運用性がわかったら、アプリケーションが使用するデータベース機能を考慮する必要があります。 たとえば、どのような SQL ステートメントは、アプリケーションを実行しますか。 アプリケーションは、スクロール可能なカーソルを使用しますか。 トランザクションでしょうか。 プロシージャでしょうか。 長い形式のデータでしょうか。 どのような機能のアイデアは、すべての Dbms でサポートされていない可能性があります、参照してください、 [SQLGetInfo](../../../odbc/reference/syntax/sqlgetinfo-function.md)、 [SQLSetConnectAttr](../../../odbc/reference/syntax/sqlsetconnectattr-function.md)、および[SQLSetStmtAttr](../../../odbc/reference/syntax/sqlsetstmtattr-function.md)関数の説明、および[付録 c: SQL の文法](../../../odbc/reference/appendixes/appendix-c-sql-grammar.md)します。 アプリケーションで必要な機能は、ターゲットの Dbms の一覧から一部の Dbms を排除可能性があります。 アプリケーションの場合、多くの Dbms 簡単にターゲットも表示可能性があります。  
+基本レベルの相互運用性がわかったら、アプリケーションが使用するデータベース機能を考慮する必要があります。 たとえば、どのような SQL ステートメントは、アプリケーションを実行しますか。 アプリケーションは、スクロール可能なカーソルを使用しますか。 トランザクションでしょうか。 プロシージャでしょうか。 長い形式のデータでしょうか。 どのような機能のアイデアは、すべての Dbms でサポートされていない可能性があります、参照してください、 [SQLGetInfo](../../../odbc/reference/syntax/sqlgetinfo-function.md)、 [SQLSetConnectAttr](../../../odbc/reference/syntax/sqlsetconnectattr-function.md)、および[SQLSetStmtAttr](../../../odbc/reference/syntax/sqlsetstmtattr-function.md)関数の説明、および[付録 c:SQL 文法](../../../odbc/reference/appendixes/appendix-c-sql-grammar.md)します。 アプリケーションで必要な機能は、ターゲットの Dbms の一覧から一部の Dbms を排除可能性があります。 アプリケーションの場合、多くの Dbms 簡単にターゲットも表示可能性があります。  
   
- たとえば、必要な機能が単純な場合が通常実装できますと相互運用性、高度な。 単純なを実行するアプリケーション**選択**順方向専用カーソルでステートメントを取得しますの結果はその単純さにより高い相互運用する可能性があります: ほとんどすべてのドライバーと Dbms 機能をサポートして、必要があります。  
+ たとえば、必要な機能が単純な場合が通常実装できますと相互運用性、高度な。 単純なを実行するアプリケーション**選択**順方向専用カーソルでステートメントを取得しますの結果はその単純さにより高い相互運用する可能性があります。ほぼすべてのドライバーと Dbms は、必要な機能をサポートします。  
   
  ただし、必要な機能がスクロール可能なカーソル、位置指定更新と delete ステートメント、プロシージャなどのより複雑な場合、上のトレードオフが行う多くの場合、必要があります。 これにはいくつかの可能性があります。  
   

@@ -1,5 +1,5 @@
 ---
-title: 例:データベース ミラーリング (TRANSACT-SQL) を使用して証明書を設定する |Microsoft Docs
+title: 例:証明書を使用したデータベース ミラーリングの設定 (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -16,13 +16,13 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 2eb63756a6ddf5e8a47f27f9f3d2f349c0bdf339
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52512179"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62806753"
 ---
-# <a name="example-setting-up-database-mirroring-using-certificates-transact-sql"></a>例:データベース ミラーリング (TRANSACT-SQL) の証明書を使用して設定
+# <a name="example-setting-up-database-mirroring-using-certificates-transact-sql"></a>例:証明書を使用したデータベース ミラーリングの設定 (Transact-SQL)
   この例では、証明書ベースの認証を使用してデータベース ミラーリング セッションを作成するために必要なすべての段階について説明します。 このトピックの例では、 [!INCLUDE[tsql](../../includes/tsql-md.md)]を使用します。 ネットワークがセキュリティで保護されていることを保証できる場合を除いて、データベース ミラーリング接続に対して暗号化を使用することをお勧めします。  
   
  証明書を別のシステムにコピーする場合は、セキュリティで保護されたコピー方法を使用してください。 すべての証明書をセキュリティで保護された状態で保管するよう十分に注意してください。  
@@ -257,7 +257,7 @@ ms.locfileid: "52512179"
     ```  
   
     > [!NOTE]  
-    >  自動フェールオーバーを伴う高い安全性モードで実行する場合は、FULL (既定の設定) にトランザクションの安全性設定をそのまま使用し、2 番目の SET PARTNER を実行した後、できるだけ早く、ミラーリング監視サーバーを追加 **'*`partner_server`*'** ステートメント。 ただし、まずミラーリング監視サーバーが発信接続と着信接続用に構成されている必要があります。  
+    >  自動フェールオーバーを伴う高い安全性モードで実行する場合は、FULL (既定の設定) にトランザクションの安全性設定をそのまま使用し、2 番目の SET PARTNER を実行した後、できるだけ早く、ミラーリング監視サーバーを追加 **' *`partner_server`* '** ステートメント。 ただし、まずミラーリング監視サーバーが発信接続と着信接続用に構成されている必要があります。  
   
 ##  <a name="RelatedTasks"></a> 関連タスク  
   

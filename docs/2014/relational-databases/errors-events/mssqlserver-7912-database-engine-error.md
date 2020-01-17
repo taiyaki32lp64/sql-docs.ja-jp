@@ -13,11 +13,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: b46cd9ea4d461b4b6f5755e8fb9bb9199d1bdbbb
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48133544"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62913154"
 ---
 # <a name="mssqlserver7912"></a>MSSQLSERVER_7912
     
@@ -30,7 +30,7 @@ ms.locfileid: "48133544"
 |イベント ソース|MSSQLSERVER|  
 |コンポーネント|SQLEngine|  
 |シンボル名|DBCC2_REPAIR_EXTENT_ALLOCATED|  
-|メッセージ テキスト|修復: エクステント P_ID が、オブジェクト ID O_ID、インデックス ID I_ID、パーティション ID PN_ID、アロケーション ユニット ID A_ID (型 TYPE) に割り当てられました。|  
+|メッセージ テキスト|修復:エクステント P_ID が、オブジェクト ID O_ID、インデックス ID I_ID、パーティション ID PN_ID、アロケーション ユニット ID A_ID (型 TYPE) に割り当てられました。|  
   
 ## <a name="explanation"></a>説明  
  これは、REPAIR からの情報メッセージであり、指定のオブジェクトにエクステントが割り当てられたことを示しています。  

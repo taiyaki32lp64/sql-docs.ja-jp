@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: 86223cb5-3bf4-489a-8c82-669a91764f2b
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: abb599adfe93935bd329d174b685ce71c2f64864
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 4fdf49c68acd2ef1b1544ad02efcb4079ceeac67
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47615130"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67981872"
 ---
 # <a name="getmetadata-method-sqlserverconnection"></a>getMetaData メソッド (SQLServerConnection)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -42,7 +41,7 @@ public java.sql.DatabaseMetaData getMetaData()
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- この getMetaData メソッドは、java.sql.Connection インターフェイスの getMetaData メソッドによって指定されます。  
+ この getMetaData メソッドは、java.sql.Connection インターフェイスの getMetaData メソッドで規定されています。  
   
 ## <a name="see-also"></a>参照  
  [SQLServerConnection のメンバー](../../../connect/jdbc/reference/sqlserverconnection-members.md)   

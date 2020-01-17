@@ -16,22 +16,18 @@ helpviewer_keywords:
 - rounding expressions
 - ROUND function [Transact-SQL]
 ms.assetid: 23921ed6-dd6a-4c9e-8c32-91c0d44fe4b7
-author: MashaMSFT
-ms.author: mathoma
-manager: craigg
+author: MikeRayMSFT
+ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 002b2036c1d0c78d67b3278cd3932338ba4f4c9d
-ms.sourcegitcommit: 96032813f6bf1cba680b5e46d82ae1f0f2da3d11
+ms.openlocfilehash: 6c1f1fe588447ba4fdbac3cdc66fcc17ea5a6508
+ms.sourcegitcommit: 512acc178ec33b1f0403b5b3fd90e44dbf234327
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/15/2019
-ms.locfileid: "54299639"
+ms.lasthandoff: 10/08/2019
+ms.locfileid: "72041228"
 ---
 # <a name="round-transact-sql"></a>ROUND (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
-
-> [!div class="nextstepaction"]
-> [SQL ドキュメントの目次に関するご意見を共有してください。](https://aka.ms/sqldocsurvey)
 
 指定された長さまたは有効桁数に丸めた数値を返します。  
   
@@ -57,11 +53,11 @@ ROUND ( numeric_expression , length [ ,function ] )
 ## <a name="return-types"></a>戻り値の型  
  次のデータ型を返します。  
   
-|式の結果|の戻り値の型 : |  
+|式の結果|の戻り値の型 :|  
 |-----------------------|-----------------|  
 |**tinyint**|**int**|  
 |**smallint**|**int**|  
-|**ssNoversion**|**int**|  
+|**int**|**int**|  
 |**bigint**|**bigint**|  
 |**decimal** および **numeric** カテゴリ (p, s)|**decimal(p, s)**|  
 |**money** および **smallmoney** カテゴリ|**money**|  
@@ -72,16 +68,16 @@ ROUND ( numeric_expression , length [ ,function ] )
   
 |例|結果|  
 |-------------|------------|  
-|ROUND (748.58、-4)|0|  
+|ROUND (748.58, -4)|0|  
   
  ROUND は、*length* が負の値であるときは、データ型に関係なく、*numeric_expression* を丸めて返します。  
   
 |使用例|結果|  
 |--------------|------------|  
-|ROUND (748.58,-1)|750.00|  
-|ROUND (748.58、-2)|700.00|  
+|ROUND (748.58, -1)|750.00|  
+|ROUND (748.58, -2)|700.00|  
 |ROUND(748.58, -3)|748.58 の既定値は decimal(5,2) となり、1000.00 を返すことができないため、結果は算術オーバーフローになります。|  
-|4 桁までに丸めるには、入力のデータ型を変更します。 例 :<br /><br /> `SELECT ROUND(CAST (748.58 AS decimal (6,2)),-3);`|1000.00|  
+|4 桁までに丸めるには、入力のデータ型を変更します。 例:<br /><br /> `SELECT ROUND(CAST (748.58 AS decimal (6,2)),-3);`|1000.00|  
   
 ## <a name="examples"></a>使用例  
   
@@ -110,8 +106,8 @@ SELECT ROUND(123.4545, 2), ROUND(123.45, -2);
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
 
  ```
---------  ----------
-123.45    100.00
+----------  ----------
+123.4500    100.00
 ```
   
 ### <a name="c-using-round-to-truncate"></a>C. ROUND を使用して切り捨てを行う  

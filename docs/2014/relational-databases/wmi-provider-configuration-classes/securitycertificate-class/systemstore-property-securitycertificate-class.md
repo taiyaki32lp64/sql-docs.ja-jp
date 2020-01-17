@@ -19,11 +19,11 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: b9dd83baa9139af4ea46940852e0b357f51e5a12
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53377584"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63209339"
 ---
 # <a name="systemstore-property-securitycertificate-class"></a>SystemStore プロパティ (SecurityCertificate クラス)
   セキュリティ証明書に対応するシステム ストアを取得します。  
@@ -45,7 +45,7 @@ object
   
 ## <a name="remarks"></a>コメント  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [サーバー ネットワーク プロトコルとネットワーク ライブラリの構成](https://msdn.microsoft.com/library/ms177485\(v=sql.100\).aspx)  
   
   

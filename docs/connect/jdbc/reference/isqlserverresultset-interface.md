@@ -1,5 +1,5 @@
 ---
-title: ISQLServerResultSet インターフェイス |Microsoft Docs
+title: ISQLServerResultSet Interface |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 002496f7-8ec0-4267-b4e6-ba095e2ef306
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 60fe47067c02edab3d115aa7848a83cb82f3fb42
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: edbf5a7feb65d39cb5158c42a218f077a3332236
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47849560"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67977410"
 ---
 # <a name="isqlserverresultset-interface"></a>ISQLServerResultSet インターフェイス
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -35,9 +34,9 @@ public interface ISQLServerResultSet
 ```  
   
 ## <a name="remarks"></a>Remarks  
- このインターフェイスによって実装されます[SQLServerResultSet クラス](../../../connect/jdbc/reference/sqlserverresultset-class.md)します。  
+ このインターフェイスは、 [SQLServerResultSet クラス](../../../connect/jdbc/reference/sqlserverresultset-class.md)によって実装されます。  
   
- このインターフェイスを公開、 [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)]-特定のメソッド。  
+ このインターフェイスは、 [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)]固有のメソッドを公開します。  
   
 |方法|詳細については、「|  
 |------------|-------------------------------|  

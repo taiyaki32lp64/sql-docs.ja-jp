@@ -1,5 +1,5 @@
 ---
-title: PDOStatement::fetchAll |Microsoft Docs
+title: 'PDOStatement:: fetchAll |Microsoft Docs'
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: be74188a-77cd-4d19-b16e-77278373c979
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: af0449f10bb83ac55fe89809e7f62162d011d3c8
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.openlocfilehash: 5bd53aedf65bd1e7935c7e51eb90fb78d65d2bed
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51601222"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67936030"
 ---
 # <a name="pdostatementfetchall"></a>PDOStatement::fetchAll
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]

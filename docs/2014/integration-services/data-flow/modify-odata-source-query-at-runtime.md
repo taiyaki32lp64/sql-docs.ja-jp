@@ -7,15 +7,15 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: bcbba7f4-6e5d-46e6-a73a-3f17d3ff376a
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 0700d2893028efea5486221906636d6c749b66bd
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: f1fac598789c53f460ed5239f304de2a39acff81
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52804851"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62901189"
 ---
 # <a name="modify-odata-source-query-at-runtime"></a>実行時の OData ソース クエリの変更
   データ フロー タスクの **[OData ソース].[クエリ]** プロパティに式を追加すると、OData ソースのクエリを実行時に変更できます。  
@@ -60,7 +60,7 @@ ms.locfileid: "52804851"
   
 6.  **[式]** を入力します。  
   
-7.  **[OK]** をクリックします。  
+7.  [**OK**] をクリックします。  
   
 > [!WARNING]  
 >  この方法を使用する場合、値が、正しくエンコードされた URL であることを確認する必要があります。 ユーザー入力から値を受け取る (たとえば、パラメーターに基づいて個々のクエリ オプションの値を設定する) 場合は、SQL インジェクション型の攻撃の可能性を防止するために、値を検証する必要があります。  

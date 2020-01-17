@@ -13,13 +13,13 @@ helpviewer_keywords:
 ms.assetid: 7228ccba-c69f-4b4c-8664-01a2750183c5
 author: Shamikg
 ms.author: Shamikg
-manager: v-thobro
-ms.openlocfilehash: 210f25b55c2cc2536d4c6f00f215b27eac5f7be0
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+manager: shamikg
+ms.openlocfilehash: 5cb3ff58156d35a348a432e6d7edb7f794e59e6f
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52409229"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68266093"
 ---
 # <a name="executing-the-ssma-console-oracletosql"></a>SSMA コンソールの実行 (OracleToSQL)
 Microsoft は、ファイルのコマンドを実行し、SSMA アクティビティを制御する堅牢なスクリプトのセットを提供します。 コンソール アプリケーションは、このセクションでは、列挙型として標準的なスクリプト ファイルの特定のコマンドを使用します。  

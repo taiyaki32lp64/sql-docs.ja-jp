@@ -10,18 +10,17 @@ ms.topic: conceptual
 ms.assetid: 20bbeacd-ccca-4a46-8184-ff941ae2ec5f
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 007ec645c6a460919498af1a75518dc3ba391170
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 1d697554d246d9bcc1720455137287029880d90a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47850856"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67955169"
 ---
 # <a name="datetimeoffset-class"></a>DateTimeOffset クラス
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  この型は、microsoft.sql.DateTimeOffset 型のオブジェクトを表しますあり、Java の型に対応する、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] **datetimeoffset**データ型。  
+  この型は、datetimeoffset 型のオブジェクトを表し、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] **datetimeoffset**データ型に対応する Java 型です。  
   
  **パッケージ:** microsoft.sql  
   
@@ -37,7 +36,7 @@ public final class DateTimeOffset
 ```  
   
 ## <a name="remarks"></a>Remarks  
- データの種類の詳細については、次を参照してください。 [JDBC ドライバーのデータ型について](../../../connect/jdbc/understanding-the-jdbc-driver-data-types.md)します。  
+ データ型の詳細については、「 [JDBC ドライバーのデータ型](../../../connect/jdbc/understanding-the-jdbc-driver-data-types.md)について」を参照してください。  
   
 ## <a name="see-also"></a>参照  
  [JDBC Driver API リファレンス](../../../connect/jdbc/reference/jdbc-driver-api-reference.md)   

@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 3dedf755-0741-4c3f-8b4e-bff8ff8809c8
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 4b1f11919ab6dcc89da188601867f8a49a1aa48f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 44d6b5f06bffb1cea786ba34d3d2aa8a3efb45ee
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47633550"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67949494"
 ---
 # <a name="member-object-ado-md"></a>Member オブジェクト (ADO MD)
 キューブでは、レベルのメンバー、レベルのメンバーまたはセル セットの軸に沿った位置のメンバーの子を表します。  
@@ -29,7 +28,7 @@ ms.locfileid: "47633550"
 ## <a name="remarks"></a>コメント  
  プロパティを**メンバー**が使用されているコンテキストによって異なります。 A**メンバー**の[レベル](../../../ado/reference/ado-md-api/level-object-ado-md.md)で、 [CubeDef](../../../ado/reference/ado-md-api/cubedef-object-ado-md.md)が、[子](../../../ado/reference/ado-md-api/children-property-ado-md.md)プロパティを返す、**メンバー**で現在の階層内の次の下位レベル**メンバー**します。 **メンバー**の[位置](../../../ado/reference/ado-md-api/position-object-ado-md.md)、**子**コレクションが空では常にします。 また、[型](../../../ado/reference/ado-md-api/type-property-ado-md.md)プロパティにのみ適用されます**メンバー**の**レベル**します。  
   
- A**メンバー**の**位置**が 2 つのプロパティを表示するときに利用できる、[セルセット](../../../ado/reference/ado-md-api/cellset-object-ado-md.md): [DrilledDown](../../../ado/reference/ado-md-api/drilleddown-property-ado-md.md)と[ParentSameAsPrev](../../../ado/reference/ado-md-api/parentsameasprev-property-ado-md.md)します。 これらのプロパティにアクセスする場合、エラーが発生する**メンバー**の**レベル**します。  
+ A**メンバー**の**位置**が 2 つのプロパティを表示するときに利用できる、[セルセット](../../../ado/reference/ado-md-api/cellset-object-ado-md.md):[DrilledDown](../../../ado/reference/ado-md-api/drilleddown-property-ado-md.md)と[ParentSameAsPrev](../../../ado/reference/ado-md-api/parentsameasprev-property-ado-md.md)します。 これらのプロパティにアクセスする場合、エラーが発生する**メンバー**の**レベル**します。  
   
  コレクションのプロパティと、**メンバー**のオブジェクトを**レベル**次を行うことができます。  
   
@@ -81,7 +80,7 @@ ms.locfileid: "47633550"
 |LevelUniqueName|明確なレベルの名前。|  
 |MemberCaption|メンバーに関連付けられたラベルまたはキャプション。|  
 |MemberGUID|メンバーの GUID。|  
-|MemberName|メンバーの名前。|  
+|メンバー名|メンバーの名前。|  
 |MemberOrdinal|メンバーの序数。|  
 |MemberType|メンバーの種類。|  
 |MemberUniqueName|メンバーの明確な名前。|  
@@ -94,7 +93,7 @@ ms.locfileid: "47633550"
   
 -   [プロパティ、メソッド、およびイベント](../../../ado/reference/ado-md-api/member-object-properties-methods-and-events.md)  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [カタログの例 (VB)](../../../ado/reference/ado-md-api/catalog-example-vb.md)   
  [Members コレクション (ADO MD)](../../../ado/reference/ado-md-api/members-collection-ado-md.md)   
  [Properties コレクション (ADO)](../../../ado/reference/ado-api/properties-collection-ado.md)

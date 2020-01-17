@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 8636fa08-b3db-4e9a-a918-585e76dd59c8
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 361d29ca1051fd045e36fb1f23f9a5c08abef925
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 5197f81ed9363a1df128281bd2ae6020bdb6bf14
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47811881"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67965602"
 ---
 # <a name="parameters-collection-command-property-example-vc"></a>Parameters コレクションおよび Command プロパティの例 (VC++)
 次のコードを使用する方法を示します、[コマンド](../../../ado/reference/adox-api/command-property-adox.md)プロパティを[コマンド](../../../ado/reference/ado-api/command-object-ado.md)プロシージャのパラメーター情報を取得するオブジェクト。  

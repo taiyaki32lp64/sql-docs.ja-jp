@@ -17,11 +17,11 @@ author: markingmyname
 ms.author: maghan
 manager: kfile
 ms.openlocfilehash: 9f8c549bef9d07f7b206f4dd8a9a652c8c72896f
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56015623"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62824538"
 ---
 # <a name="accessing-the-report-server-web-service-using-visual-basic-or-visual-c-ssrs-tutorial"></a>Visual Basic または Visual C# を使用したレポート サーバー Web サービスへのアクセス (SSRS チュートリアル)
   次のチュートリアルで作成されたアプリケーションからレポート サーバー Web サービスにアクセスする方法を示します[!INCLUDE[msCoName](../includes/msconame-md.md)][!INCLUDE[vbprvb](../includes/vbprvb-md.md)]または[!INCLUDE[msCoName](../includes/msconame-md.md)][!INCLUDE[csprcs](../includes/csprcs-md.md)]します。  

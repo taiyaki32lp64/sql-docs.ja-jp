@@ -19,11 +19,11 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: dc183a6bde5dc56454804472ee2e74042ed415ad
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53355457"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63242900"
 ---
 # <a name="context-property-securitycertificate-class"></a>Context プロパティ (SecurityCertificate クラス)
   セキュリティ証明書のコンテキストを取得します。  

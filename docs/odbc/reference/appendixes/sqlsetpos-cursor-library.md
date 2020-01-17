@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 574399c3-2bb2-4d19-829c-7c77bd82858d
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: b41fad0f609b16640bfa28ab36f29f364e067b73
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 87ff006e7bead36c2aa6476b99552d1524c213b1
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47622100"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68091711"
 ---
 # <a name="sqlsetpos-cursor-library"></a>SQLSetPos (カーソル ライブラリ)
 > [!IMPORTANT]  

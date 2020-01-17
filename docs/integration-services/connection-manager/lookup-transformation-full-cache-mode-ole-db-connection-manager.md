@@ -10,17 +10,20 @@ ms.topic: conceptual
 helpviewer_keywords:
 - Lookup transformation [Integration Services]
 ms.assetid: c4150e1b-bdff-4f7a-af4c-3401c34def83
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: 43edd7fbdaf744ae9c5ea401e28ccef930d91f2d
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: f9e3a8be595188b0eef11a78826c7447af40bec4
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52506980"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71294390"
 ---
 # <a name="lookup-transformation-full-cache-mode---ole-db-connection-manager"></a>フル キャッシュ モードの参照変換 - OLE DB 接続マネージャー
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   フル キャッシュ モードおよび OLE DB 接続マネージャーを使用するように参照変換を構成できます。 フル キャッシュ モードでは、参照変換の実行前に参照データセットがキャッシュに読み込まれます。  
   
  参照変換は、接続されているデータ ソースの入力列のデータを参照データセットの列と結合することにより参照を実行します。 詳細については、「 [Lookup Transformation](../../integration-services/data-flow/transformations/lookup-transformation.md)」を参照してください。  
@@ -52,11 +55,11 @@ ms.locfileid: "52506980"
   
     -   **[テーブルまたはビューを使用する]** をクリックし、テーブルまたはビューを選択するか、 **[新規作成]** をクリックしてテーブルまたはビューを作成します。  
   
-         - または -  
+         \- または -  
   
     -   **[SQL クエリの結果を使用する]** をクリックし、 **[SQL コマンド]** ウィンドウでクエリを作成するか、 **[クエリの作成]** をクリックし、 **[クエリ ビルダー]** に用意されているグラフィック ツールを使用してクエリを作成します。  
   
-         - または -  
+         \- または -  
   
     -   **[参照]** をクリックして、ファイルから SQL ステートメントをインポートします。  
   

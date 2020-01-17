@@ -12,17 +12,16 @@ helpviewer_keywords:
 ms.assetid: a3bed7b7-3dc5-4b33-b1c6-67c27f573764
 author: julieMSFT
 ms.author: jrasnick
-manager: craigg
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 38062676a3ddd4eb7daa6db06b71cd41bf59efad
-ms.sourcegitcommit: 0c1d552b3256e1bd995e3c49e0561589c52c21bf
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: d9311ffde7323b11cd041e3fbc28eb249d019cd2
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/14/2018
-ms.locfileid: "53380853"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67934184"
 ---
 # <a name="rename-statistics"></a>統計名の変更
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   を使用して、 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] で統計オブジェクトの名前を変更できます。 [!INCLUDE[tsql](../../includes/tsql-md.md)]  
   
  **このトピックの内容**  

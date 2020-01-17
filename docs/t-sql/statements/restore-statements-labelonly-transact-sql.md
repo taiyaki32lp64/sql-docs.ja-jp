@@ -18,20 +18,19 @@ helpviewer_keywords:
 - RESTORE LABELONLY statement
 - backup media [SQL Server], content information
 ms.assetid: 7cf0641e-0d55-4ffb-9500-ecd6ede85ae5
-author: mashamsft
-ms.author: mathoma
-manager: craigg
+author: MikeRayMSFT
+ms.author: mikeray
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: 9b6b7ba063a25df92335b5727c7c29fcb69a7221
-ms.sourcegitcommit: 202ef5b24ed6765c7aaada9c2f4443372064bd60
+ms.openlocfilehash: 4d763ccf2799ea72a1882a576e4b17ef839e3f1e
+ms.sourcegitcommit: c5e2aa3e4c3f7fd51140727277243cd05e249f78
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/12/2019
-ms.locfileid: "54241563"
+ms.lasthandoff: 08/02/2019
+ms.locfileid: "68742950"
 ---
 # <a name="restore-statements---labelonly-transact-sql"></a>RESTORE ステートメント - LABELONLY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md )]
-  バックアップ メディアについての情報が含まれている結果セットを返します。このバックアップ メディアは、指定したバックアップ デバイスで識別されるメディアです。  
+  指定のバックアップ デバイスによって識別されたバックアップ メディアについての情報が含まれている結果セットを返します。  
   
 > [!NOTE]  
 >  引数の説明については、「[RESTORE の引数 &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-arguments-transact-sql.md)」を参照してください。  
@@ -65,11 +64,13 @@ FROM <backup_device>
 {   
    { logical_backup_device_name |  
       @logical_backup_device_name_var }  
-   | { DISK | TAPE } = { 'physical_backup_device_name' |  
+   | { DISK | TAPE | URL } = { 'physical_backup_device_name' |  
        @physical_backup_device_name_var }   
 }  
   
 ```  
+> [!NOTE] 
+> URL は、Microsoft Azure Blob Storage の場所とファイル名を指定するために使用される形式であり、[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] SP1 CU2 以降でサポートされています。 Microsoft Azure ストレージはサービスですが、実装はディスクやテープと似ており、3 つのデバイスすべてで一貫したシームレスな復元エクスペリエンスを実現できます。
   
 ## <a name="arguments"></a>引数  
  RESTORE LABELONLY 引数の説明については、「[RESTORE の引数 &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-arguments-transact-sql.md)」を参照してください。  
@@ -80,27 +81,27 @@ FROM <backup_device>
 |列名|データ型|[説明]|  
 |-----------------|---------------|-----------------|  
 |**MediaName**|**nvarchar(128)**|メディアの名前|  
-|**MediaSetId**|**uniqueidentifier**|メディア セットの一意な識別番号|  
+|**MediaSetId**|**uniqueidentifier**|メディア セットの一意な識別番号。|  
 |**FamilyCount**|**int**|メディア セット内のメディア ファミリの数。|  
 |**FamilySequenceNumber**|**int**|メディア ファミリのシーケンス番号|  
-|**MediaFamilyId**|**uniqueidentifier**|メディア ファミリの一意な識別番号|  
-|**MediaSequenceNumber**|**int**|メディア ファミリ内にあるメディアのシーケンス番号|  
+|**MediaFamilyId**|**uniqueidentifier**|メディア ファミリの一意な識別番号。|  
+|**MediaSequenceNumber**|**int**|メディア ファミリ内にあるこのメディアのシーケンス番号。|  
 |**MediaLabelPresent**|**tinyint**|メディアの説明に含まれる内容<br /><br /> **1** = [!INCLUDE[msCoName](../../includes/msconame-md.md)] Tape Format メディア ラベル<br /><br /> **0** = メディアの説明|  
-|**MediaDescription**|**nvarchar (255)**|自由形式のテキスト、または Tape Format メディア ラベルのメディアの説明|  
-|**SoftwareName**|**nvarchar(128)**|ラベルを作成したバックアップ ソフトウェアの名前|  
-|**SoftwareVendorId**|**int**|バックアップを作成したソフトウェア ベンダーの一意なベンダー識別番号|  
-|**MediaDate**|**datetime**|ラベルが作成された日時|  
-|**Mirror_Count**|**int**|セットにあるミラーの数 (1 ～ 4)<br /><br /> 注:セット内の各ミラーに対して作成されたラベルは同一のものです。|  
+|**MediaDescription**|**nvarchar (255)**|自由形式のテキストによるメディアの説明、または Tape Format メディアラベル。|  
+|**SoftwareName**|**nvarchar(128)**|ラベルを作成したバックアップ ソフトウェアの名前。|  
+|**SoftwareVendorId**|**int**|バックアップを作成したソフトウェア ベンダーの一意なベンダー識別番号。|  
+|**MediaDate**|**datetime**|ラベルが作成された日時。|  
+|**Mirror_Count**|**int**|セットにあるミラーの数 (1 ～ 4)<br /><br /> 注: セット内の各種ミラーに対して作成されたラベルは同一のものです。|  
 |**IsCompressed**|**bit**|バックアップが圧縮されているかどうか。<br /><br /> 0 = 非圧縮<br /><br /> 1 = 圧縮|  
   
 > [!NOTE]  
->  目的のメディア セットにパスワードが定義されているとき、RESTORE LABELONLY では、MEDIAPASSWORD オプションに正しいメディア パスワードが指定された場合にのみ情報を返します。  
+>  目的のメディア セットにパスワードが定義されているとき、RESTORE LABELONLY からは、MEDIAPASSWORD オプションに正しいメディア パスワードが指定された場合にのみ情報が返されます。  
   
 ## <a name="general-remarks"></a>全般的な解説  
  RESTORE LABELONLY を実行すると、バックアップ メディアに含まれている内容をすばやく確認できます。 RESTORE LABELONLY ステートメントはメディア ヘッダーだけを読み取っているので、大容量のテープ デバイスを使用しているときでも処理が短時間で終了します。  
   
 ## <a name="security"></a>Security  
- バックアップ操作では、メディア セットのパスワードを指定することもできます。 メディア セットにパスワードが設定されている場合は、RESTORE ステートメントで正しいパスワードを指定する必要があります。 パスワードを設定しておくと、[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ツールを使って不正に復元操作が行われたり、メディアにバックアップ セットが不正に追加されたりするのを防ぐことができます。 ただし、BACKUP ステートメントで FORMAT オプションが使用された場合、メディアの上書きを防ぐことはできません。  
+ バックアップ操作では、メディア セットのパスワードを指定することもできます。 メディア セットにパスワードが設定されている場合は、RESTORE ステートメントで正しいパスワードを指定する必要があります。 パスワードを設定しておくと、[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ツールを使って不正に復元操作が行われたり、メディアにバックアップ セットが不正に追加されたりするのを防ぐことができます。 ただし、BACKUP ステートメントで FORMAT オプションが使用された場合、パスワードでメディアの上書きを防ぐことはできません。  
   
 > [!IMPORTANT]  
 >  パスワードによる保護は強力なものではありません。 権限の有無にかかわらず、ユーザーが [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ツールを使用して不適切な復元を行わないようにすることを目的としています。 その他の手段によるバックアップ データの読み取りやパスワードの置き換えを防ぐわけではありません。 [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]バックアップ保護に最適な方法は、バックアップ テープを安全な場所に保管するか、バックアップしたディスク ファイルを適切なアクセス制御リスト (ACL) で保護することです。 ACL は、バックアップを作成するディレクトリのルートに設定する必要があります。  

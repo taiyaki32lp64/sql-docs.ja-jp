@@ -21,13 +21,12 @@ helpviewer_keywords:
 ms.assetid: f01d6880-9800-4cfb-8d11-d4be21efc8ca
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: b184b04c2f1535aed86d0eb2dc1fd33a840f0e0c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 593c2d8bf9cff3e10aaafc339aa82ef16c4bc09f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47611526"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68071237"
 ---
 # <a name="alter-partition-scheme-transact-sql"></a>ALTER PARTITION SCHEME (Transact-SQL)
 
@@ -50,10 +49,10 @@ NEXT USED [ filegroup_name ] [ ; ]
   
 ## <a name="arguments"></a>引数  
  *partition_scheme_name*  
- 変更するパーティション構成の名前を指定します。  
+ 変更するパーティション構成の名前です。  
   
  *filegroup_name*  
- パーティション構成により、NEXT USED とマークされるファイル グループを指定します。 これは、このファイル グループに、[ALTER PARTITION FUNCTION](../../t-sql/statements/alter-partition-function-transact-sql.md) ステートメントによって作成される新しいパーティションが受け入れられることを表します。  
+ NEXT USED としてパーティション構成によってマークされるファイルグループを指定します。 これは、このファイル グループに、[ALTER PARTITION FUNCTION](../../t-sql/statements/alter-partition-function-transact-sql.md) ステートメントによって作成される新しいパーティションが受け入れられることを表します。  
   
  パーティション構成では、1 つのファイル グループのみを NEXT USED として指定できます。 これには空でないファイル グループを指定できます。 *filegroup_name* を指定した場合に、現在 NEXT USED とマークされているファイル グループがなければ、*filegroup_name* が NEXT USED としてマークされます。 *filegroup_name* を指定した場合に、NEXT USED プロパティの指定されているファイル グループが既にあれば、NEXT USED プロパティは既存のファイル グループから *filegroup_name* に移動します。  
   

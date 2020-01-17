@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: f8d6e342-c010-434e-b1cd-f5371fb50a14
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 1ef74d98102c424a71ac1728d664fddbeac2296c
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: e7706d3a7dd05273b4608d49211a6eaab8927f2a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53215601"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68118605"
 ---
 # <a name="sqlconfigdatasource-function"></a>SQLConfigDataSource 関数
 **準拠**  
@@ -38,7 +37,7 @@ ms.locfileid: "53215601"
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
   
 BOOL SQLConfigDataSource(  
      HWND     hwndParent,  

@@ -1,5 +1,5 @@
 ---
-title: 管理者 (Master Data Services) | Microsoft Docs
+title: 管理者
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -12,24 +12,23 @@ helpviewer_keywords:
 - administrators [Master Data Services]
 - models [Master Data Services], administrators
 ms.assetid: d330aa4e-6ade-4b09-b376-1b15d6c78f7d
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 85ad4589ef25042498b132475af39cb36fd1b2bc
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
-ms.translationtype: HT
+ms.openlocfilehash: 056975a05f697851d1fc0eac773c917c1f22b738
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52783194"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73729793"
 ---
 # <a name="administrators-master-data-services"></a>管理者 (Master Data Services)
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-  この記事では、 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]の管理者の種類 (モデル管理者、エンティティ管理者、およびスーパー ユーザー) について説明します。  
+  この記事では、[!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] の管理者の種類 (モデル管理者、エンティティ管理者、およびスーパー ユーザー) について説明します。  
   
 ## <a name="model-administrators"></a>モデル管理者  
- [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]では、モデル管理者は、 **[モデル オブジェクト]** タブの最上位のモデル オブジェクトに割り当てられた **管理者** 権限を持っているユーザーです。ユーザーが特定のモデルに対する管理者権限を持っている場合、モデルの子オブジェクトに対する他のすべての権限 (モデル オブジェクトとメンバーの両方の権限) よりもモデルの**管理者**権限が優先され、前者は実質的に無視されます。  
+ [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]では、モデル管理者は、 **[モデルオブジェクト]** タブの最上位のモデルオブジェクトに割り当てられた**管理**者権限を持つユーザーです。ユーザーが特定のモデルに対する管理者権限を持っている場合、モデルの子オブジェクト (モデルオブジェクトとメンバーの両方の権限) に対する他の権限は、モデルの**管理者**権限によってより前者され、実質的に無視されます。  
   
 -   ユーザーに **[エクスプローラー]** 機能領域へのアクセス権がある場合、ユーザーはこのデータ領域のすべてのマスター データを追加、削除、および更新できます。  
   
@@ -37,10 +36,10 @@ ms.locfileid: "52783194"
   
  各モデルには複数の管理者を含めることができます。 各ユーザーは、1 つまたは複数のモデルのモデル管理者になることができ、 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] の配置内のすべてのモデルのモデル管理者になることもできます。  
   
- ユーザーをモデル管理者として構成するには、 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] を使用するかプログラムで構成します。 詳細については、「 [モデル管理者を作成する (マスター データ サービス)](../master-data-services/create-a-model-administrator-master-data-services.md)」を参照してください。  
+ ユーザーをモデル管理者として構成するには、 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] を使用するかプログラムで構成します。 詳細については、「[モデル管理者を作成する (マスター データ サービス)](../master-data-services/create-a-model-administrator-master-data-services.md)」を参照してください。  
   
 ## <a name="entity-administrators"></a>エンティティ管理者  
- [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]では、エンティティ管理者は、[モデル オブジェクト] タブのエンティティ オブジェクトに割り当てられた管理者権限を持っているユーザーです。ユーザーがエンティティに対する管理者権限を持っている場合、エンティティの子オブジェクトに対する他のすべての権限 (モデル オブジェクトとメンバーの両方の権限) よりも管理者権限が優先され、前者は無視されます。  
+ [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]では、エンティティ管理者は、[モデルオブジェクト] タブのエンティティオブジェクトに割り当てられた管理者権限を持つユーザーです。ユーザーがエンティティに対する管理者権限を持っている場合、そのエンティティの子オブジェクトに対する他の権限 (モデルオブジェクトとメンバーの両方の権限) は、管理者権限によって置き換えられ、無視されます。  
   
 -   ユーザーに **[エクスプローラー]** 機能領域へのアクセス権がある場合、ユーザーはこのデータ領域のすべてのマスター データを追加、削除、および更新できます。  
   
@@ -53,7 +52,7 @@ ms.locfileid: "52783194"
 ## <a name="master-data-services-super-user"></a>マスター データ サービスのスーパー ユーザー  
  [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]では、スーパー ユーザー機能領域にユーザー権限を割り当てることができます。 スーパー ユーザー機能領域に対する権限を持つユーザーは、実質的にすべてのモデルに対する管理者権限を持ち、その他のすべての機能領域に対する権限を持ちます。 機能領域に対する権限については、「[機能領域権限について (マスター データ サービス)](../master-data-services/functional-area-permissions-master-data-services.md)」を参照してください。  
   
- 既定のスーパー ユーザーは、[データベースの作成ウィザード (マスター データ サービス構成マネージャー)](../master-data-services/create-database-wizard-master-data-services-configuration-manager.md) を使用して [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] データベースを作成するときに、**[管理者アカウント]** に指定されます。  
+ 既定のスーパー ユーザーは、**データベースの作成ウィザード (マスター データ サービス構成マネージャー)** を使用して [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] データベースを作成するときに、[[管理者アカウント]](../master-data-services/create-database-wizard-master-data-services-configuration-manager.md) に指定されます。  
   
  スーパー ユーザーは、次の操作を行うことができます。  
   

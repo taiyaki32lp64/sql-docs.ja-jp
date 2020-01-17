@@ -17,18 +17,17 @@ helpviewer_keywords:
 ms.assetid: e711b01c-ef29-4eb6-a016-0e647e337818
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 85d45de0ec858766bea51e983e80087d93d94ec2
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 9559a882da12c3e2a7a48a0aaa656a554633aa6f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47826630"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67937913"
 ---
-# <a name="sphelplogshippingprimarydatabase-transact-sql"></a>sp_help_log_shipping_primary_database (Transact-SQL)
+# <a name="sphelplogshippingprimarydatabase-transact-sql"></a>sp_help_log_shipping_primary_database (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  プライマリ データベース設定を取得します。  
+  プライマリ データベースの設定を取得します。  
   
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -42,11 +41,9 @@ sp_help_log_shipping_primary_database
 ```  
   
 ## <a name="arguments"></a>引数  
- [  **@database =** ] '*データベース*'  
- ログ配布プライマリ データベースの名前を指定します。 *データベース*は**sysname**、既定値はありません、NULL にすることはできません。  
+`[ @database = ] 'database'` ログ配布プライマリ データベースの名前です。 *データベース*は**sysname**、既定値はありません、NULL にすることはできません。  
   
- [  **@primary_id =** ] '*primary_id*'  
- ログ配布構成におけるプライマリ データベースの ID。 *primary_id*は**uniqueidentifier** NULL にすることはできません。  
+`[ @primary_id = ] 'primary_id'` ログ配布構成におけるプライマリ データベースの ID。 *primary_id*は**uniqueidentifier** NULL にすることはできません。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  0 (成功) または 1 (失敗)  
@@ -57,19 +54,19 @@ sp_help_log_shipping_primary_database
 |-----------------|-----------------|  
 |**primary_id**|ログ配布構成におけるプライマリ データベースの ID。|  
 |**primary_database**|ログ配布構成におけるプライマリ データベースの名前。|  
-|**backup_directory**|プライマリ サーバーのトランザクション ログ バックアップ ファイルが格納されているディレクトリ。|  
-|**backup_share**|バックアップ ディレクトリへのネットワーク パスまたは UNC パス。|  
+|**backup_directory**|プライマリ サーバーからのトランザクション ログ バックアップ ファイルの保存先ディレクトリ。|  
+|**backup_share**|ネットワークまたはバックアップ ディレクトリへの UNC パス。|  
 |**backup_retention_period**|バックアップ ディレクトリでログ バックアップ ファイルが保持される時間 (分単位)。この時間を過ぎるとファイルは削除されます。|  
-|**backup_compression**|ログ配布構成を使用するかどうかを示す[バックアップの圧縮](../../relational-databases/backup-restore/backup-compression-sql-server.md)します。<br /><br /> **0** = 無効になっています。 ログ バックアップは圧縮されません。<br /><br /> **1** = 有効にします。 ログ バックアップを常に圧縮します。<br /><br /> **2** = の設定を使用して、 [backup compression default サーバー構成オプションの構成を表示または](../../database-engine/configure-windows/view-or-configure-the-backup-compression-default-server-configuration-option.md)します。 これが既定値です。<br /><br /> バックアップの圧縮がでのみサポートされている[!INCLUDE[ssEnterpriseEd10](../../includes/ssenterpriseed10-md.md)](またはそれ以降のバージョン)。 その他のエディションでは、値は常に 2 です。|  
+|**backup_compression**|ログ配布構成を使用するかどうかを示す[バックアップの圧縮](../../relational-databases/backup-restore/backup-compression-sql-server.md)します。<br /><br /> **0** = 無効になっています。 ログ バックアップは圧縮されません。<br /><br /> **1** = 有効にします。 常にログ バックアップを圧縮します。<br /><br /> **2** = の設定を使用して、 [backup compression default サーバー構成オプションの構成を表示または](../../database-engine/configure-windows/view-or-configure-the-backup-compression-default-server-configuration-option.md)します。 これは既定値です。<br /><br /> バックアップの圧縮がでのみサポートされている[!INCLUDE[ssEnterpriseEd10](../../includes/ssenterpriseed10-md.md)](またはそれ以降のバージョン)。 その他のエディションでは、値は常に 2 です。|  
 |**backup_job_id**|[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]プライマリ サーバー上のバックアップ ジョブに関連付けられているエージェント ジョブの ID。|  
 |**monitor_server**|インスタンスの名前、[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]ログ配布構成で監視サーバーとして使用されています。|  
 |**monitor_server_security_mode**|監視サーバーへの接続に使用されるセキュリティ モード。<br /><br /> 1 = [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 認証。<br /><br /> 0 =[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]認証します。|  
-|**backup_threshold**|バックアップ操作が始まってから警告が生成されるまでの許容経過時間 (分単位)。|  
+|**backup_threshold**|分単位の許容経過時間を通知する前にバックアップ操作の数が生成されます。|  
 |**threshold_alert**|バックアップのしきい値を超えたときに発生する警告。|  
-|**threshold_alert_enabled**|バックアップのしきい値の警告が有効かどうか。<br /><br /> **1** = 有効にします。<br /><br /> **0** = 無効になっています。|  
+|**threshold_alert_enabled**|バックアップのしきい値のアラートが有効になっているかどうかを決定します。<br /><br /> **1** = 有効にします。<br /><br /> **0** = 無効になっています。|  
 |**last_backup_file**|最新のトランザクション ログ バックアップの絶対パス。|  
 |**last_backup_date**|最後のログ バックアップ操作の日時。|  
-|**last_backup_date_utc**|プライマリ データベースに対して最後にトランザクション ログのバックアップ操作を行った日時。協定世界時 (UTC) で表されます。|  
+|**last_backup_date_utc**|最後のトランザクションの日付と時刻は、世界協定時刻で表される、プライマリ データベースでバックアップ操作にログインします。|  
 |**history_retention_period**|指定したプライマリ データベースでログ配布履歴レコードが保持される時間 (分単位)。この時間を過ぎるとレコードは削除されます。|  
   
 ## <a name="remarks"></a>コメント  
@@ -86,7 +83,7 @@ EXEC master.dbo.sp_help_log_shipping_primary_database @database=N'AdventureWorks
 GO  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [ログ配布について &#40;SQL Server&#41;](../../database-engine/log-shipping/about-log-shipping-sql-server.md)   
  [システム ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   

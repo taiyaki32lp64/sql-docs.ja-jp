@@ -1,8 +1,8 @@
 ---
-title: Data Migration Assistant (SQL Server) のベスト プラクティス |Microsoft Docs
-description: Data Migration Assistant で SQL Server データベースを移行するためのベスト プラクティスについて説明します
-ms.custom: ''
-ms.date: 10/20/2018
+title: Data Migration Assistant のベスト プラクティス
+description: Data Migration Assistant を使用して SQL Server データベースを移行するためのベストプラクティスについて説明します
+ms.custom: seo-lt-2019
+ms.date: 03/12/2019
 ms.prod: sql
 ms.prod_service: dma
 ms.reviewer: ''
@@ -12,33 +12,32 @@ keywords: ''
 helpviewer_keywords:
 - Data Migration Assistant, Best Practices
 ms.assetid: ''
-author: pochiraju
+author: HJToland3
 ms.author: rajpo
-manager: craigg
-ms.openlocfilehash: 79eade425e87da3784221686b7ccdc99e85b96bc
-ms.sourcegitcommit: 38f35b2f7a226ded447edc6a36665eaa0376e06e
+ms.openlocfilehash: ef953aa369e831e47d38db403b982919bd4bd830
+ms.sourcegitcommit: d00ba0b4696ef7dee31cd0b293a3f54a1beaf458
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49643830"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "74056556"
 ---
-# <a name="best-practices-for-running-data-migration-assistant"></a>Data Migration Assistant を実行するためのベスト プラクティス
-この記事では、インストール、評価、および移行のベスト プラクティスについてはいくつか提供します。
+# <a name="best-practices-for-running-data-migration-assistant"></a>Data Migration Assistant を実行するためのベストプラクティス
+この記事では、のインストール、評価、移行に関するベストプラクティスについて説明します。
 
 ## <a name="installation"></a>インストール
-インストールして、SQL Server のホスト コンピューターで直接 Data Migration Assistant を実行しないでください。
+Data Migration Assistant を SQL Server ホストコンピューターに直接インストールして実行しないでください。
 
-## <a name="assessment"></a>評価
-- 実稼働データベースで非ピーク時の評価を実行します。
-- 実行、**互換性の問題**と**新機能のお勧め**評価期間を短縮するには、個別に評価します。
+## <a name="assessment"></a>調査
+- 運用データベースに対して、ピーク時以外の時間帯に評価を実行します。
+- 評価期間を短縮するために、**互換性の問題**と**新機能の推奨事項**の評価を個別に実行します。
 
 ## <a name="migration"></a>移行
-- 非ピーク時にサーバーを移行します。
+- ピーク時以外の時間帯にサーバーを移行します。
 
-- データベースを移行する場合は、移行元サーバーとターゲット サーバーからアクセスできる 1 つの共有場所を提供し、可能であればコピー操作を回避します。 コピー操作は、バックアップ ファイルのサイズに基づいての遅延を生じる可能性があります。 コピー操作では、余分な手順のため、移行が失敗する可能性も高くなります。 1 つの場所を指定すると、バイパス、Data Migration Assistant、コピー操作でします。
+- データベースを移行する場合は、移行元サーバーと移行先サーバーがアクセスできる1つの共有場所を提供し、可能であればコピー操作を回避します。 コピー操作では、バックアップファイルのサイズに基づいて遅延が発生する場合があります。 また、コピー操作により、追加の手順が原因で移行が失敗する可能性も高くなります。 1つの場所が指定されている場合、Data Migration Assistant はコピー操作をバイパスします。
  
-    さらに、必ず移行の失敗を回避するために共有フォルダーに正しいアクセス許可を提供します。 適切なアクセス許可は、このツールで指定されます。 SQL Server インスタンスは、ネットワーク サービスの資格情報で実行する場合、共有フォルダーの SQL Server インスタンスのマシン アカウントへの適切な権限を付与します。
+    また、移行の失敗を回避するために、共有フォルダーに正しいアクセス許可を与えるようにしてください。 このツールでは、正しいアクセス許可が指定されています。 SQL Server インスタンスがネットワークサービスの資格情報で実行されている場合は、共有フォルダーに対する適切なアクセス許可を SQL Server インスタンスのコンピューターアカウントに付与します。
 
-- 有効にするは、ソースとターゲット サーバーに接続するときに、接続を暗号化します。 SSL を使用して暗号化は、Data Migration Assistant と SQL ログインを移行する場合に特に有益である SQL Server インスタンスの間のネットワークを介して転送されるデータのセキュリティを向上します。 SSL 暗号化が使用されていないネットワークが攻撃者によって侵害された場合は、SQL ログインの移行中でしたインターセプトを取得または変更その場で、攻撃者によってを。
+- ソースサーバーと対象サーバーへの接続時に、暗号化接続を有効にします。 SSL 暗号化を使用すると、Data Migration Assistant と SQL Server インスタンス間のネットワーク経由で転送されるデータのセキュリティが向上します。これは、特に SQL ログインを移行する場合に便利です。 SSL 暗号化を使用せず、攻撃者によってネットワークが侵害された場合、移行される SQL ログインは攻撃者によってすぐに傍受または変更される可能性があります。
 
-    一方、すべてのアクセスにセキュリティで保護されたイントラネット構成が使用される場合には、暗号化は必ずしも必要ありません。 暗号化を有効にすると、余分なオーバーヘッドは暗号化し、パケットを暗号化解除に必要なために、パフォーマンスが低下します。 詳細についてを参照してください[SQL Server への接続の暗号化](https://go.microsoft.com/fwlink/?linkid=832513)します。
+    一方、すべてのアクセスにセキュリティで保護されたイントラネット構成が使用される場合には、暗号化は必ずしも必要ありません。 暗号化を有効にすると、パケットの暗号化と暗号化解除に必要な追加のオーバーヘッドが発生するため、パフォーマンスが低下します。 詳細については、「 [SQL Server への接続の暗号化](https://go.microsoft.com/fwlink/?linkid=832513)」を参照してください。

@@ -22,17 +22,20 @@ helpviewer_keywords:
 - SSIS events, runtime
 - IDTSEvents interface
 ms.assetid: e0898aa1-e90c-4c4e-99d4-708a76efddfd
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: f454417b4def127a21888a42f1670cb3606a852a
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 461750eee78c631adef9b012b971c9bab60bf29f
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51640540"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71286893"
 ---
 # <a name="raising-and-defining-events-in-a-custom-task"></a>カスタム タスクでのイベントの発生と定義
+
+[!INCLUDE[ssis-appliesto](../../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] ランタイム エンジンには、タスクを検証および実行する際の進行状況の状態を示す、イベントのコレクションが用意されています。 <xref:Microsoft.SqlServer.Dts.Runtime.IDTSComponentEvents> インターフェイスはこれらのイベントを定義し、<xref:Microsoft.SqlServer.Dts.Runtime.Executable.Validate%2A> および <xref:Microsoft.SqlServer.Dts.Runtime.Executable.Execute%2A> メソッドに対するパラメーターとして、タスクに渡されます。  
   
  <xref:Microsoft.SqlServer.Dts.Runtime.IDTSEvents> インターフェイスでは、<xref:Microsoft.SqlServer.Dts.Runtime.TaskHost> によってタスクの代わりに発生するイベントのセットが別に定義されています。 <xref:Microsoft.SqlServer.Dts.Runtime.TaskHost> は、検証および実行の前後にイベントを発生させます。これに対してタスクは、実行および検証中にイベントを発生させます。  

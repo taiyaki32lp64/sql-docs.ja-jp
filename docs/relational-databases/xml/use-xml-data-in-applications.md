@@ -23,15 +23,14 @@ helpviewer_keywords:
 - xml data type [SQL Server], ADO.NET
 - XML [SQL Server], SQL Server Native Client
 ms.assetid: 5dabf7e0-c6df-451d-a070-4661f84607fd
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: 0e2071cc26983cfac340eba145bc029dc2f846ad
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+author: MightyPen
+ms.author: genemi
+ms.openlocfilehash: 998504b936681c5e20d185ab17b787630a6ae2f1
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51666061"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68039156"
 ---
 # <a name="use-xml-data-in-applications"></a>アプリケーションでの XML データの使用
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

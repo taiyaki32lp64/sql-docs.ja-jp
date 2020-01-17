@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: 8115ca58-8ae9-46ce-8515-7905d7bb25fe
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: cc43780fc7864614c550a0192f363219823376c9
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 22ba06688fb402fdbcd5e9afd951a668ef9c440d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47776260"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67983217"
 ---
 # <a name="getfetchsize-method-sqlserverstatement"></a>getFetchSize メソッド (SQLServerStatement)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -42,7 +41,7 @@ public final int getFetchSize()
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- この getFetchSize メソッドは、java.sql.Statement インターフェイスの getFetchSize メソッドによって指定されます。  
+ この getFetchSize メソッドは、java. .sql. ステートメントインターフェイスの getFetchSize メソッドによって指定されます。  
   
 ## <a name="see-also"></a>参照  
  [SQLServerStatement のメンバー](../../../connect/jdbc/reference/sqlserverstatement-members.md)   

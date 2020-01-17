@@ -16,11 +16,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 9bfbb62c58efea29df26cb9fc6e632bc4e2b3642
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52788680"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62630804"
 ---
 # <a name="specify-synchronization-schedules"></a>同期スケジュールの指定
   このトピックでは、 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] で [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]、 [!INCLUDE[tsql](../../includes/tsql-md.md)]、またはレプリケーション管理オブジェクト (RMO) を使用して、同期スケジュールを指定する方法について説明します。 サブスクリプションを作成するときに、サブスクリプションのレプリケーション エージェントをいつ実行するかを制御する同期スケジュールを定義できます。 スケジュール設定のパラメーターを指定しなかった場合、サブスクリプションは既定のスケジュールを使用します。  
@@ -52,13 +52,13 @@ ms.locfileid: "52788680"
 |プル サブスクリプションに対するディストリビューション エージェント|**\<パブリッシャー>-\<PublicationDatabase>-\<パブリケーション>-\<サブスクライバー>-\<サブスクリプション データベース>-\<GUID>** <sup>2</sup>|  
 |SQL Server 以外のサブスクライバーへのプッシュ サブスクリプションに対するディストリビューション エージェント|**\<パブリッシャー>-\<パブリケーション データベース>-\<パブリケーション>-\<サブスクライバー>-\<整数>**|  
   
- <sup>1</sup> Oracle パブリケーションに対するプッシュ サブスクリプションの場合は、"**\<パブリッシャー>-\<パブリケーション データベース>**" ではなく "**\<パブリッシャー>-\<パブリッシャー>**" になります  
+ <sup>1</sup> Oracle パブリケーションに対するプッシュ サブスクリプションの場合は、" **\<パブリッシャー>-\<パブリケーション データベース>** " ではなく " **\<パブリッシャー>-\<パブリッシャー>** " になります  
   
- <sup>2</sup> Oracle パブリケーションに対するプル サブスクリプションの場合は、"**\<パブリッシャー>-\<パブリケーション データベース>**" ではなく "**\<パブリッシャー>-\<ディストリビューション データベース>**" になります  
+ <sup>2</sup> Oracle パブリケーションに対するプル サブスクリプションの場合は、" **\<パブリッシャー>-\<パブリケーション データベース>** " ではなく " **\<パブリッシャー>-\<ディストリビューション データベース>** " になります  
   
 #### <a name="to-specify-synchronization-schedules"></a>同期スケジュールを指定するには  
   
-1.  サブスクリプションの新規作成ウィザードの **[同期スケジュール]** ページで、作成する各サブスクリプションについて、**[エージェント スケジュール]** ボックスの一覧から以下のいずれかの値を選択します。  
+1.  サブスクリプションの新規作成ウィザードの **[同期スケジュール]** ページで、作成する各サブスクリプションについて、 **[エージェント スケジュール]** ボックスの一覧から以下のいずれかの値を選択します。  
   
     -   **[連続実行する]**  
   
@@ -66,7 +66,7 @@ ms.locfileid: "52788680"
   
     -   **[\<スケジュールの定義...>]**  
   
-2.  **[\<スケジュールの定義...>]** を選択した場合は、**[ジョブ スケジュールのプロパティ]** ダイアログ ボックスでスケジュールを指定し、**[OK]** をクリックします。  
+2.  **[\<スケジュールの定義...>]** を選択した場合は、 **[ジョブ スケジュールのプロパティ]** ダイアログ ボックスでスケジュールを指定し、 **[OK]** をクリックします。  
   
 3.  ウィザードを完了します。  
   
@@ -80,7 +80,7 @@ ms.locfileid: "52788680"
   
 4.  **サブスクリプション\<SubscriptionName >** ウィンドウで、をクリックして**アクション**、 をクリックし、  **\<AgentName > ジョブのプロパティ**。  
   
-5.  **[ジョブのプロパティ - \<JobName>]** ダイアログ ボックスの **[スケジュール]** ページで、**[編集]** をクリックします。  
+5.  **[ジョブのプロパティ - \<JobName>]** ダイアログ ボックスの **[スケジュール]** ページで、 **[編集]** をクリックします。  
   
 6.  **[ジョブ スケジュールのプロパティ]** ダイアログ ボックスで、 **[スケジュールの種類]** ボックスの一覧の値を選択します。  
   
@@ -102,7 +102,7 @@ ms.locfileid: "52788680"
   
 3.  サブスクリプションに関連付けられているディストリビューション エージェントまたはマージ エージェントのジョブを右クリックし、 **[プロパティ]** をクリックします。  
   
-4.  **[ジョブのプロパティ - \<JobName>]** ダイアログ ボックスの **[スケジュール]** ページで、**[編集]** をクリックします。  
+4.  **[ジョブのプロパティ - \<JobName>]** ダイアログ ボックスの **[スケジュール]** ページで、 **[編集]** をクリックします。  
   
 5.  **[ジョブ スケジュールのプロパティ]** ダイアログ ボックスで、 **[スケジュールの種類]** ボックスの一覧の値を選択します。  
   
@@ -124,7 +124,7 @@ ms.locfileid: "52788680"
   
 3.  サブスクリプションに関連付けられているディストリビューション エージェントまたはマージ エージェントのジョブを右クリックし、 **[プロパティ]** をクリックします。  
   
-4.  **[ジョブのプロパティ - \<JobName>]** ダイアログ ボックスの **[スケジュール]** ページで、**[編集]** をクリックします。  
+4.  **[ジョブのプロパティ - \<JobName>]** ダイアログ ボックスの **[スケジュール]** ページで、 **[編集]** をクリックします。  
   
 5.  **[ジョブ スケジュールのプロパティ]** ダイアログ ボックスで、 **[スケジュールの種類]** ボックスの一覧の値を選択します。  
   
@@ -165,27 +165,27 @@ ms.locfileid: "52788680"
   
 #### <a name="to-define-the-synchronization-schedule-for-a-pull-subscription-to-a-transactional-publication"></a>トランザクション パブリケーションに対するプル サブスクリプションの同期スケジュールを定義するには  
   
-1.  トランザクション パブリケーションに対して新しいプル サブスクリプションを作成します。 詳細については、「 [プル サブスクリプションの作成](create-a-pull-subscription.md)」をご覧ください。  
+1.  トランザクション パブリケーションに対して新しいプル サブスクリプションを作成します。 詳細については、「 [Create a Pull Subscription](create-a-pull-subscription.md)」を参照してください。  
   
-2.  サブスクライバーで、[sp_addpullsubscription_agent &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addpullsubscription-agent-transact-sql) を実行します。 **@publisher**、**@publisher_db**、**@publication**、およびサブスクライバーのディストリビューション エージェントが **@job_name** と **@password** で実行するときの [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 資格情報を指定します。 サブスクリプションを同期するディストリビューション エージェント ジョブのスケジュールを定義する、上述の同期のパラメーターを指定します。  
+2.  サブスクライバーで、[sp_addpullsubscription_agent &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addpullsubscription-agent-transact-sql) を実行します。 **@publisher** 、 **@publisher_db** 、 **@publication** 、およびサブスクライバーのディストリビューション エージェントが **@job_name** と **@password** で実行するときの [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 資格情報を指定します。 サブスクリプションを同期するディストリビューション エージェント ジョブのスケジュールを定義する、上述の同期のパラメーターを指定します。  
   
 #### <a name="to-define-the-synchronization-schedule-for-a-push-subscription-to-a-transactional-publication"></a>トランザクション パブリケーションに対するプッシュ サブスクリプションの同期スケジュールを定義するには  
   
 1.  トランザクション パブリケーションに対して新しいプッシュ サブスクリプションを作成します。 詳細については、「 [プッシュ サブスクリプションの作成](create-a-push-subscription.md)」をご覧ください。  
   
-2.  サブスクライバーで、[sp_addpushsubscription_agent &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addpushsubscription-agent-transact-sql) を実行します。 **@subscriber**、**@subscriber_db**、**@publication**、およびサブスクライバーのディストリビューション エージェントが **@job_name** と **@password** で実行するときの Windows 資格情報を指定します。 サブスクリプションを同期するディストリビューション エージェント ジョブのスケジュールを定義する、上述の同期のパラメーターを指定します。  
+2.  サブスクライバーで、[sp_addpushsubscription_agent &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addpushsubscription-agent-transact-sql) を実行します。 **@subscriber** 、 **@subscriber_db** 、 **@publication** 、およびサブスクライバーのディストリビューション エージェントが **@job_name** と **@password** で実行するときの Windows 資格情報を指定します。 サブスクリプションを同期するディストリビューション エージェント ジョブのスケジュールを定義する、上述の同期のパラメーターを指定します。  
   
 #### <a name="to-define-the-synchronization-schedule-for-a-pull-subscription-to-a-merge-publication"></a>マージ パブリケーションに対するプル サブスクリプションの同期スケジュールを定義するには  
   
-1.  マージ パブリケーションに対して新しいプル サブスクリプションを作成します。 詳細については、「 [プル サブスクリプションの作成](create-a-pull-subscription.md)」をご覧ください。  
+1.  マージ パブリケーションに対して新しいプル サブスクリプションを作成します。 詳細については、「 [Create a Pull Subscription](create-a-pull-subscription.md)」を参照してください。  
   
-2.  サブスクライバーで、 [sp_addmergepullsubscription_agent](/sql/relational-databases/system-stored-procedures/sp-addpullsubscription-agent-transact-sql)を実行します。 **@publisher**、**@publisher_db**、**@publication**、およびサブスクライバーのマージ エージェントが **@job_name** と **@password** で実行するときの Windows 資格情報を指定します。 サブスクリプションを同期するマージ エージェント ジョブのスケジュールを定義する、上述の同期のパラメーターを指定します。  
+2.  サブスクライバーで、 [sp_addmergepullsubscription_agent](/sql/relational-databases/system-stored-procedures/sp-addpullsubscription-agent-transact-sql)を実行します。 **@publisher** 、 **@publisher_db** 、 **@publication** 、およびサブスクライバーのマージ エージェントが **@job_name** と **@password** で実行するときの Windows 資格情報を指定します。 サブスクリプションを同期するマージ エージェント ジョブのスケジュールを定義する、上述の同期のパラメーターを指定します。  
   
 #### <a name="to-define-the-synchronization-schedule-for-a-push-subscription-to-a-merge-publication"></a>マージ パブリケーションに対するプッシュ サブスクリプションの同期スケジュールを定義するには  
   
 1.  マージ パブリケーションに対して新しいプッシュ サブスクリプションを作成します。 詳細については、「 [Create a Push Subscription](create-a-push-subscription.md)」を参照してください。  
   
-2.  サブスクライバーで、 [sp_addmergepushsubscription_agent](/sql/relational-databases/system-stored-procedures/sp-addmergepushsubscription-agent-transact-sql)を実行します。 **@subscriber**、**@subscriber_db**、**@publication**、およびサブスクライバーのマージ エージェントが **@job_name** と **@password** で実行するときの Windows 資格情報を指定します。 サブスクリプションを同期するマージ エージェント ジョブのスケジュールを定義する、上述の同期のパラメーターを指定します。  
+2.  サブスクライバーで、 [sp_addmergepushsubscription_agent](/sql/relational-databases/system-stored-procedures/sp-addmergepushsubscription-agent-transact-sql)を実行します。 **@subscriber** 、 **@subscriber_db** 、 **@publication** 、およびサブスクライバーのマージ エージェントが **@job_name** と **@password** で実行するときの Windows 資格情報を指定します。 サブスクリプションを同期するマージ エージェント ジョブのスケジュールを定義する、上述の同期のパラメーターを指定します。  
   
 ##  <a name="RMOProcedure"></a> レプリケーション管理オブジェクト (RMO) の使用  
  レプリケーションは、SQL&#xA0;Server エージェントを使用して、スナップショットの生成やサブスクリプションの同期など、定期的に発生する動作のジョブをスケジュール設定します。 レプリケーション管理オブジェクト (RMO) をプログラムで使用して、レプリケーション エージェント ジョブのスケジュールを指定できます。  
@@ -226,7 +226,7 @@ ms.locfileid: "52788680"
   
 #### <a name="to-define-a-replication-agent-schedule-when-you-create-a-pull-subscription-to-a-transactional-publication"></a>トランザクション パブリケーションに対するプル サブスクリプションを作成するレプリケーション エージェント スケジュールを定義するには  
   
-1.  作成するサブスクリプションに対して <xref:Microsoft.SqlServer.Replication.TransPullSubscription> クラスのインスタンスを作成します。 詳細については、「 [プル サブスクリプションの作成](create-a-pull-subscription.md)」をご覧ください。  
+1.  作成するサブスクリプションに対して <xref:Microsoft.SqlServer.Replication.TransPullSubscription> クラスのインスタンスを作成します。 詳細については、「 [Create a Pull Subscription](create-a-pull-subscription.md)」を参照してください。  
   
 2.  <xref:Microsoft.SqlServer.Replication.PullSubscription.Create%2A>を呼び出す前に、 <xref:Microsoft.SqlServer.Replication.PullSubscription.AgentSchedule%2A> プロパティの次のフィールドを 1 つ以上設定します。  
   
@@ -257,7 +257,7 @@ ms.locfileid: "52788680"
   
 #### <a name="to-define-a-replication-agent-schedule-when-you-create-a-pull-subscription-to-a-merge-publication"></a>マージ パブリケーションに対するプル サブスクリプションを作成するレプリケーション エージェント スケジュールを定義するには  
   
-1.  作成するサブスクリプションに対して <xref:Microsoft.SqlServer.Replication.MergePullSubscription> クラスのインスタンスを作成します。 詳細については、「 [プル サブスクリプションの作成](create-a-pull-subscription.md)」をご覧ください。  
+1.  作成するサブスクリプションに対して <xref:Microsoft.SqlServer.Replication.MergePullSubscription> クラスのインスタンスを作成します。 詳細については、「 [Create a Pull Subscription](create-a-pull-subscription.md)」を参照してください。  
   
 2.  <xref:Microsoft.SqlServer.Replication.PullSubscription.Create%2A>を呼び出す前に、 <xref:Microsoft.SqlServer.Replication.PullSubscription.AgentSchedule%2A> プロパティの次のフィールドを 1 つ以上設定します。  
   
@@ -324,9 +324,9 @@ ms.locfileid: "52788680"
   
  [!code-vb[HowTo#rmo_vb_CreateMergePushSub](../../snippets/visualbasic/SQL15/replication/howto/vb/rmotestenv.vb#rmo_vb_createmergepushsub)]  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [Replication Security Best Practices](security/replication-security-best-practices.md)   
- [Subscribe to Publications](subscribe-to-publications.md)   
+ [パブリケーションのサブスクライブ](subscribe-to-publications.md)   
  [プッシュ サブスクリプションの同期](synchronize-a-push-subscription.md)   
  [プル サブスクリプションの同期](synchronize-a-pull-subscription.md)   
  [データの同期](synchronize-data.md)  

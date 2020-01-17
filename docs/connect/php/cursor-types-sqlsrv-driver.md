@@ -1,5 +1,5 @@
 ---
-title: カーソルの種類 (SQLSRV ドライバー) |Microsoft Docs
+title: カーソルの種類 (SQLSRV ドライバー) | Microsoft Docs
 ms.custom: ''
 ms.date: 02/11/2019
 ms.prod: sql
@@ -10,50 +10,49 @@ ms.topic: conceptual
 ms.assetid: 8472d839-8124-4a62-a83c-7e771b0d4962
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 0f435b3f2308557654259395e296c07956a2c337
-ms.sourcegitcommit: c1105ce638078d2c941cd656b34f78486e6b2d89
+ms.openlocfilehash: ac090ad8831397bf31c0911ab8a8db21486528db
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/22/2019
-ms.locfileid: "56676140"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68015113"
 ---
 # <a name="cursor-types-sqlsrv-driver"></a>カーソルの種類 (SQLSRV ドライバー)
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
-SQLSRV ドライバーでは、カーソルの種類に基づき、任意の順番で行にアクセスできる結果セットを作成できます。  このトピックではクライアント側 (バッファー) とサーバー側 (バッファーなし) について説明しますカーソル。  
+SQLSRV ドライバーでは、カーソルの種類に基づき、任意の順番で行にアクセスできる結果セットを作成できます。  このトピックでは、クライアント側 (バッファー) とサーバー側 (バッファーなし) カーソルについて説明します。  
   
 ## <a name="cursor-types"></a>カーソルの種類  
-結果セットを作成すると[sqlsrv_query](../../connect/php/sqlsrv-query.md)または[sqlsrv_prepare](../../connect/php/sqlsrv-prepare.md)カーソルの種類を指定することができます。 既定では、順方向専用カーソルが使用になり、結果セットの末尾に到達するまで、結果セットの最初の行から一度に 1 つの行を移動することができます。  
+[Sqlsrv_query](../../connect/php/sqlsrv-query.md)または with [sqlsrv_prepare](../../connect/php/sqlsrv-prepare.md)を使用して結果セットを作成する場合は、カーソルの種類を指定できます。 既定では、順方向専用カーソルが使用されます。これにより、結果セットの末尾に達するまで、結果セットの最初の行から開始して一度に1行ずつ移動できます。  
   
 スクロール可能なカーソルを使用して結果セットを作成すると、結果セット内の任意の行に任意の順序でアクセスできます。 次の表は、sqlsrv_query または sqlsrv_prepare において **Scrollable** オプションに渡すことができる値を示しています。  
   
 |オプション|[説明]|  
 |----------|---------------|  
-|SQLSRV_CURSOR_FORWARD|結果セットの末尾に到達するまで、結果セットの最初の行から一度に 1 つの行を移動できます。<br /><br />これは、既定のカーソルの種類です。<br /><br />[sqlsrv_num_rows](../../connect/php/sqlsrv-num-rows.md)このカーソルの種類で作成した結果セットのエラーが返されます。<br /><br />**フォワード**SQLSRV_CURSOR_FORWARD の省略形式です。|  
-|SQLSRV_CURSOR_STATIC|により、任意の順序で行にアクセスするが、データベースの変更は反映されません。<br /><br />**静的**SQLSRV_CURSOR_STATIC の省略形式です。|  
-|SQLSRV_CURSOR_DYNAMIC|により、任意の順序で行にアクセスして、データベースの変更が反映されます。<br /><br />[sqlsrv_num_rows](../../connect/php/sqlsrv-num-rows.md)このカーソルの種類で作成した結果セットのエラーが返されます。<br /><br />**動的**SQLSRV_CURSOR_DYNAMIC の省略形式です。|  
-|SQLSRV_CURSOR_KEYSET|により、任意の順序で行にアクセスします。 ただし、行がテーブルから削除される場合 (削除された行は、値なしで返されます)、キーセット カーソルは行の数を更新しません。<br /><br />**キーセット**SQLSRV_CURSOR_KEYSET の省略形式です。|  
-|SQLSRV_CURSOR_CLIENT_BUFFERED|により、任意の順序で行にアクセスします。 クライアント側カーソル クエリを作成します。<br /><br />**バッファー** SQLSRV_CURSOR_CLIENT_BUFFERED の省略形式です。|  
+|SQLSRV_CURSOR_FORWARD|を使用すると、結果セットの最初の行から開始するまで、一度に1行ずつ移動できます。<br /><br />これは、既定のカーソルの種類です。<br /><br />[sqlsrv_num_rows](../../connect/php/sqlsrv-num-rows.md)は、このカーソルの種類で作成された結果セットに対してエラーを返します。<br /><br />**forward**は SQLSRV_CURSOR_FORWARD の省略形です。|  
+|SQLSRV_CURSOR_STATIC|では、任意の順序で行にアクセスできますが、データベースの変更は反映されません。<br /><br />**static**は、SQLSRV_CURSOR_STATIC の省略形です。|  
+|SQLSRV_CURSOR_DYNAMIC|では、任意の順序で行にアクセスでき、データベースの変更が反映されます。<br /><br />[sqlsrv_num_rows](../../connect/php/sqlsrv-num-rows.md)は、このカーソルの種類で作成された結果セットに対してエラーを返します。<br /><br />**dynamic**は、SQLSRV_CURSOR_DYNAMIC の省略形です。|  
+|SQLSRV_CURSOR_KEYSET|では、任意の順序で行にアクセスできます。 ただし、行がテーブルから削除される場合 (削除された行は、値なしで返されます)、キーセット カーソルは行の数を更新しません。<br /><br />**keyset**は、SQLSRV_CURSOR_KEYSET の省略形です。|  
+|SQLSRV_CURSOR_CLIENT_BUFFERED|では、任意の順序で行にアクセスできます。 クライアント側のカーソルクエリを作成します。<br /><br />**バッファー**は SQLSRV_CURSOR_CLIENT_BUFFERED の省略形です。|  
   
-クエリが複数の結果セットを生成する場合、 **Scrollable**オプションは、すべての結果セットに適用されます。  
+クエリで複数の結果セットが生成される場合、**スクロール**可能なオプションはすべての結果セットに適用されます。  
   
-## <a name="selecting-rows-in-a-result-set"></a>結果セット内の行を選択します。  
-使用することができます、結果セットを作成したら、 [sqlsrv_fetch](../../connect/php/sqlsrv-fetch.md)、 [sqlsrv_fetch_array](../../connect/php/sqlsrv-fetch-array.md)、または[sqlsrv_fetch_object](../../connect/php/sqlsrv-fetch-object.md)行を指定します。  
+## <a name="selecting-rows-in-a-result-set"></a>結果セット内の行の選択  
+結果セットを作成したら、 [sqlsrv_fetch](../../connect/php/sqlsrv-fetch.md)、 [sqlsrv_fetch_array](../../connect/php/sqlsrv-fetch-array.md)、または[sqlsrv_fetch_object](../../connect/php/sqlsrv-fetch-object.md)を使用して行を指定できます。  
   
-次の表で指定できる値、*行*パラメーター。  
+次の表では、 *row*パラメーターで指定できる値について説明します。  
   
 |パラメーター|[説明]|  
 |-------------|---------------|  
-|SQLSRV_SCROLL_NEXT|次の行を指定します。 これは、指定しない場合の既定値は、*行*スクロール可能な結果セットのパラメーター。|  
-|SQLSRV_SCROLL_PRIOR|現在の行の前に、の行を指定します。|  
+|SQLSRV_SCROLL_NEXT|次の行を指定します。 これは、スクロール可能な結果セットの*行*パラメーターを指定しない場合の既定値です。|  
+|SQLSRV_SCROLL_PRIOR|現在の行の前に行を指定します。|  
 |SQLSRV_SCROLL_FIRST|結果セットの最初の行を指定します。|  
 |SQLSRV_SCROLL_LAST|結果セットの最後の行を指定します。|  
-|SQLSRV_SCROLL_ABSOLUTE|指定された行を指定します、*オフセット*パラメーター。|  
-|SQLSRV_SCROLL_RELATIVE|指定された行を指定します、*オフセット*現在の行からのパラメーター。|  
+|SQLSRV_SCROLL_ABSOLUTE|*Offset*パラメーターで指定された行を指定します。|  
+|SQLSRV_SCROLL_RELATIVE|現在の行から*オフセット*パラメーターを使用して指定された行を指定します。|  
   
-## <a name="server-side-cursors-and-the-sqlsrv-driver"></a>サーバー側のカーソルと SQLSRV ドライバー  
-次の例では、さまざまなカーソルの効果を示します。 例の 33 の行を別のカーソルを指定する 3 つのクエリ ステートメントの最初の数値が表示されます。  2 つのクエリ ステートメントがコメントされています。 プログラムを実行するたびにでは、異なるカーソルの種類を使用して、47 行目のデータベース更新の影響を参照してください。  
+## <a name="server-side-cursors-and-the-sqlsrv-driver"></a>サーバー側カーソルと SQLSRV ドライバー  
+次の例は、さまざまなカーソルの効果を示しています。 例の33行目では、異なるカーソルを指定する3つのクエリステートメントのうち、最初のステートメントが表示されます。  2つのクエリステートメントがコメント化されます。 プログラムを実行するたびに、別の種類のカーソルを使用して、47行目のデータベースの更新の効果を確認します。  
   
 ```  
 <?php  
@@ -119,20 +118,20 @@ sqlsrv_close( $conn );
 ?>  
 ```  
   
-## <a name="client-side-cursors-and-the-sqlsrv-driver"></a>クライアント側のカーソルと SQLSRV ドライバー  
-クライアント側のカーソルは、のバージョン 3.0 で追加された機能、[!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]メモリ セット全体の結果をキャッシュすることができます。 行の数は、クライアント側カーソルを使用する場合、クエリの実行後に使用できます。  
+## <a name="client-side-cursors-and-the-sqlsrv-driver"></a>クライアント側カーソルと SQLSRV ドライバー  
+クライアント側カーソルは、のバージョン3.0 で追加された[!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]機能で、結果セット全体をメモリにキャッシュすることができます。 クライアント側カーソルを使用すると、クエリが実行された後に、行数を使用できます。  
   
-クライアント側のカーソルは、小規模から中規模の結果セットに対して使用する必要があります。 大きな結果セットのサーバー側カーソルを使用します。  
+クライアント側のカーソルは、小規模から中規模の結果セットに対して使用する必要があります。 大きな結果セットには、サーバー側のカーソルを使用します。  
   
-クエリは、バッファーが結果セット全体を保持するために十分な大きさでない場合は false を返します。 PHP メモリの上限に達するまでバッファー サイズを増やすことができます。  
+クエリは、バッファーが結果セット全体を格納するのに十分な大きさでない場合、false を返します。 バッファーのサイズは PHP メモリの上限まで増やすことができます。  
   
-SQLSRV ドライバーを使用して、ClientBufferMaxKBSize の設定を使用して結果セットを保持するバッファーのサイズを構成することができます[sqlsrv_configure](../../connect/php/sqlsrv-configure.md)します。 [sqlsrv_get_config](../../connect/php/sqlsrv-get-config.md) ClientBufferMaxKBSize の値を返します。 Sqlsrv で php.ini ファイルの最大バッファー サイズを設定することもできます。ClientBufferMaxKBSize (sqlsrv など。ClientBufferMaxKBSize = 1024)。  
+SQLSRV ドライバーを使用すると、 [sqlsrv_configure](../../connect/php/sqlsrv-configure.md)の ClientBufferMaxKBSize 設定を使用して、結果セットを保持するバッファーのサイズを構成できます。 [sqlsrv_get_config](../../connect/php/sqlsrv-get-config.md)は、ClientBufferMaxKBSize の値を返します。 Php.ini ファイルの最大バッファーサイズを sqlsrv で設定することもできます。ClientBufferMaxKBSize (例、sqlsrv)。ClientBufferMaxKBSize = 1024)。  
   
-次の例を示しています。  
+次の例は、を示しています。  
   
--   行の数では、クライアント側のカーソルで使用可能な常にします。  
+-   クライアント側カーソルでは、常に行数が使用できます。  
   
--   クライアント側のカーソルとバッチのステートメントを使用します。  
+-   クライアント側のカーソルとバッチステートメントの使用。  
   
 ```  
 <?php  
@@ -190,7 +189,7 @@ echo "Employee ID = $EmployeeID \n";
 ?>  
 ```  
   
-次の例を使用して、クライアント側カーソル[sqlsrv_prepare](../../connect/php/sqlsrv-prepare.md)と別のクライアントのバッファー サイズ。
+次のサンプルは、 [sqlsrv_prepare](../../connect/php/sqlsrv-prepare.md)を使用したクライアント側のカーソルと、別のクライアントバッファーサイズを示しています。
   
 ```  
 <?php  

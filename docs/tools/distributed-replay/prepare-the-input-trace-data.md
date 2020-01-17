@@ -1,5 +1,5 @@
 ---
-title: 入力トレース データの準備 |Microsoft Docs
+title: 入力トレースデータを準備する |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -8,21 +8,20 @@ ms.reviewer: ''
 ms.technology: tools-other
 ms.topic: conceptual
 ms.assetid: c14fd3d2-5770-47c2-a851-cc13ddbc9bf5
-author: stevestein
-ms.author: sstein
-manager: craigg
-ms.openlocfilehash: b175f8142aeaac61dd2dddd66be0c6c648665187
-ms.sourcegitcommit: 0f7cf9b7ab23df15624d27c129ab3a539e8b6457
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 3fbf4e9b2607638d37217dc5862a36446d592b5e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51291488"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67949995"
 ---
 # <a name="prepare-the-input-trace-data"></a>入力トレース データの準備
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributed Replay 機能を使用して分散再生を開始する前に、分散再生管理ツールから前処理段階を開始することで、入力トレース データを準備する必要があります。 前処理段階で、Distributed Replay Controller がトレース データを処理し、中間ファイルを生成します。  
   
- ![分散再生の前処理段階](../../tools/distributed-replay/media/preprocess.gif "分散再生の前処理段階")  
+ ![分散再生前処理ステージ](../../tools/distributed-replay/media/preprocess.gif "分散再生前処理ステージ")  
   
  前処理段階の詳細については、「 [SQL Server Distributed Replay](../../tools/distributed-replay/sql-server-distributed-replay.md)」を参照してください。  
   

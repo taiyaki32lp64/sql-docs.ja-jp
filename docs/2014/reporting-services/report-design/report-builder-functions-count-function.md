@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 ms.assetid: 7b50b101-daf8-4fb0-ae04-57384755779f
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 2e90a3d1e7b5e00c61be2ed4d1d50db501474e35
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: 3009eb9a341cb0881cdade4f927955d953c6fcfb
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56292430"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66105285"
 ---
 # <a name="count-function-report-builder-and-ssrs"></a>Count 関数 (レポート ビルダーおよび SSRS)
   式で指定された NULL 以外の値の数を、指定されたスコープのコンテキストで評価して返します。  
@@ -76,7 +75,7 @@ Count(expression, scope, recursive)
 "Count (Category): " & Count(Fields!Size.Value,"GroupbyCategory")  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [レポートでの式の使用 (レポート ビルダーおよび SSRS)](expression-uses-in-reports-report-builder-and-ssrs.md)   
  [式の例 (レポート ビルダーおよび SSRS)](expression-examples-report-builder-and-ssrs.md)   
  [式で使用されるデータ型 &#40;レポート ビルダーおよび SSRS&#41;](expressions-report-builder-and-ssrs.md)   

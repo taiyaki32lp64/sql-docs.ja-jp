@@ -1,6 +1,7 @@
 ---
-title: ログイン アカウントの設定 - データベース ミラーリングの AlwaysOn 可用性 | Microsoft Docs
-ms.custom: ''
+title: ログイン アカウントの設定 (ミラーリングと可用性グループ)
+description: データベース ミラーまたは Always On 可用性グループのデータベース ミラーリング エンドポイントにアクセスするためのログイン アカウントを構成します。
+ms.custom: seo-lt-2019
 ms.date: 05/17/2016
 ms.prod: sql
 ms.prod_service: high-availability
@@ -13,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: e9f5287b-1325-4cda-88a6-19eaaa52a652
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 3431e537fa305733a974d8b5d2aac4e934f74771
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 851b2aa7dfb7a3c492182840d7d57045a5a72e8a
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47609201"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75252779"
 ---
 # <a name="set-up-login-accounts---database-mirroring-always-on-availability"></a>ログイン アカウントの設定 - データベース ミラーリングの AlwaysOn 可用性
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

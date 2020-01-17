@@ -10,15 +10,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - multiuser environments [Visual Database Tools]
 ms.assetid: c09a6bb7-efc3-4471-819e-c60f11de96f0
-author: stevestein
-ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 788dcb0a847b7fe9fb70285da44d793d5a35a886
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 139f0966c08e4ceafdb4ccf76d656d9462ab7b59
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47636146"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68266391"
 ---
 # <a name="permissions-and-visual-database-tools-visual-database-tools"></a>アクセス許可と Visual Database Tools (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

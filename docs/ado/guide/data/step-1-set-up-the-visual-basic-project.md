@@ -1,5 +1,5 @@
 ---
-title: '手順 1: Visual Basic プロジェクトを設定する |Microsoft Docs'
+title: 手順 1:Visual Basic プロジェクトを設定する |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -10,15 +10,14 @@ ms.topic: conceptual
 ms.assetid: 77d3bfa5-fc9f-4a72-93b4-790c7d227988
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: ce9e337a1ea45db851bafd32e0af476ae33fd3c0
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: bd44990c38a30f26e682fbb7f1f6aef642043215
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47798800"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67924070"
 ---
-# <a name="step-1-set-up-the-visual-basic-project"></a>手順 1: Visual Basic プロジェクトを設定する
+# <a name="step-1-set-up-the-visual-basic-project"></a>手順 1:Visual Basic プロジェクトを設定する
 このシナリオである Microsoft Visual Basic 6.0、ADO 2.5 またはそれ以降、および Microsoft OLE DB Provider for Internet Publishing がシステムにインストールされていると見なされます。 まず、新しいプロジェクトを作成して、プロジェクトで既定のフォームをいくつかのコントロールを追加します。  
   
 ### <a name="to-create-an-ado-project"></a>ADO プロジェクトを作成します。  
@@ -37,6 +36,6 @@ ms.locfileid: "47798800"
   
 3.  Form1 に TextBox コントロールを追加します。 その名前のプロパティを設定**txtDetails**します。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [インターネットのシナリオへの発行](../../../ado/guide/data/internet-publishing-scenario.md)   
- [手順 2: Main リスト ボックスを初期化する](../../../ado/guide/data/step-2-initialize-the-main-list-box.md)
+ [手順 2:メイン リスト ボックスを初期化します。](../../../ado/guide/data/step-2-initialize-the-main-list-box.md)

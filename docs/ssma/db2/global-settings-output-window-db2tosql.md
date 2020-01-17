@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: f21f80f4-9a2a-448d-9fe8-b6926595389e
 author: Shamikg
 ms.author: Shamikg
-manager: craigg
-ms.openlocfilehash: dff9c41c13b37c223bdbf127eb44b1c83cda88ae
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 1e7880d0bd7bc6de821e4a7ac8bef68ec1e7e7fb
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47620001"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67989522"
 ---
 # <a name="global-settings-output-window-db2tosql"></a>グローバル設定 (出力ウィンドウ) (DB2ToSQL)
 使用して、**グローバル設定**SSMA の設定を指定 ダイアログ ボックス。  

@@ -15,11 +15,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 637c60fd6d7ba53087a145135d7152066983b644
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52808594"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63130612"
 ---
 # <a name="smo-object-model"></a>SMO オブジェクト モデル
   SMO オブジェクト モデルは、オブジェクトの階層で構成されています。 <xref:Microsoft.SqlServer.Management.Smo.Server> オブジェクトはトップ レベル オブジェクトであるため、すべてのインスタンス クラス オブジェクトは <xref:Microsoft.SqlServer.Management.Smo.Server> オブジェクトの下位に位置します。  
@@ -30,7 +30,7 @@ ms.locfileid: "52808594"
   
  SMO オブジェクト モデルは、複数の名前空間で構成されています。 詳細については、「[SMO 名前空間](smo-object-model-namespaces.md)」を参照してください。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [SMO オブジェクト モデル ダイアグラム](smo-object-model-diagram.md)   
  [SMO 名前空間](smo-object-model-namespaces.md)   
  [構成管理用の WMI プロバイダーの概念](../wmi-provider-configuration/wmi-provider-for-configuration-management.md)  

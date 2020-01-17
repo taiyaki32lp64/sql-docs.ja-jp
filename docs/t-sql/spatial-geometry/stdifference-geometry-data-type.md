@@ -15,15 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - STDifference (geometry Data Type)
 ms.assetid: 737f39bb-8750-4ffb-8594-23febc2f1075
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: 61ec54be92e833efc133a75f8ad3d83a69b30e51
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: MladjoA
+ms.author: mlandzic
+ms.openlocfilehash: f511c6fa7a0d41b0f072981898216fde050d1742
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47796100"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68127367"
 ---
 # <a name="stdifference-geometry-data-type"></a>STDifference (geometry データ型)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -44,7 +43,7 @@ ms.locfileid: "47796100"
 ## <a name="return-types"></a>戻り値の型  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の戻り値の型: **geometry**  
   
- CLR 戻り値の型: **SqlGeometry**  
+ CLR の戻り値の型:**SqlGeometry**  
   
 ## <a name="remarks"></a>Remarks  
  **geometry** インスタンスの SRID (spatial reference ID) が一致しない場合、このメソッドは常に null を返します。   結果に円弧が含まれるのは、入力インスタンスに円弧が含まれる場合のみです。  

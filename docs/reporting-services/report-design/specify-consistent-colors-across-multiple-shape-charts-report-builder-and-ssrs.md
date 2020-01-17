@@ -2,18 +2,18 @@
 title: 複数の図形グラフでの色の統一 (レポート ビルダーおよび SSRS) | Microsoft Docs
 ms.date: 03/01/2017
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: report-design
 ms.topic: conceptual
 ms.assetid: d52f68e9-2ba7-4bff-9053-4089e5164ab4
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 38ff22fcfdb291c2ac3924985949142006eff812
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: d9e7b846d17fd6ad86edc45ff7dd4251c098ae1a
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56292190"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65578458"
 ---
 # <a name="specify-consistent-colors-across-multiple-shape-charts-report-builder-and-ssrs"></a>複数の図形グラフでの色の統一 (レポート ビルダーおよび SSRS)
   改ページ調整されたレポートの図形以外のグラフの場合、 [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] によって、グラフの系列のインデックスに基づいてパレットから新しい色が選択されます。 たとえば、グラフの最初の系列は、パレット内の最初の色にマップされます。 しかし、この動作は図形グラフでは異なります。 図形グラフの場合、パレットの各色は、データセット内のデータ ポイントにマップされます。 たとえば、データ ポイント 1 はパレットの最初の色にマップされ、データ ポイント 2 は 2 番目の色にマップされます。  
@@ -63,7 +63,7 @@ ms.locfileid: "56292190"
   
 4.  図形グラフ上を右クリックし、 **[系列のプロパティ]** を選択します。  
   
-5.  **[塗りつぶし]** の **式** (*[fx]*) ボタンをクリックして、 **Color** プロパティの式を編集します。  
+5.  **[塗りつぶし]** の **式** ( *[fx]* ) ボタンをクリックして、 **Color** プロパティの式を編集します。  
   
 6.  次の式を入力します。ここで、"MyCategoryField" は、 **[カテゴリ グループ]** 領域に表示されるフィールドです。  
   

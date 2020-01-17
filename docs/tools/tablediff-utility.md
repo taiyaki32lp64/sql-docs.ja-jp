@@ -16,16 +16,15 @@ helpviewer_keywords:
 - troubleshooting [SQL Server replication], non-convergence
 - non-convergence [SQL Server]
 ms.assetid: 3c3cb865-7a4d-4d66-98f2-5935e28929fc
-author: stevestein
-ms.author: sstein
-manager: craigg
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
-ms.openlocfilehash: f0c4bec0b0ef0181a62ac8c8183830716a604490
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: 48fc2d25bc65e76156da80c6b6117a62fa39e2a3
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54128512"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67986038"
 ---
 # <a name="tablediff-utility"></a>tablediff ユーティリティ
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -81,8 +80,8 @@ tablediff
  [ **-?** ]  
  サポートされているパラメーターのリストを返します。  
   
- **-sourceserver** _source_server_name_[**\\**_instance\_name_]  
- ソース サーバー名を指定します。 *の既定のインスタンスの場合は、* source_server_name [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]を指定します。 _の名前付きインスタンスの_**\\**_source_server_name_ instance_name [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]を指定します。  
+ **-sourceserver** _source_server_name_[ **\\** _instance\_name_]  
+ ソース サーバー名を指定します。 *の既定のインスタンスの場合は、* source_server_name [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]を指定します。 _の名前付きインスタンスの_ **\\** _source_server_name_ instance_name [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]を指定します。  
   
  **-sourcedatabase** _source_database_  
  ソース データベース名を指定します。  
@@ -105,8 +104,8 @@ tablediff
  **-sourcelocked**  
  比較中は、TABLOCK および HOLDLOCK テーブル ヒントを使用して、ソース テーブルがロックされます。  
   
- **-destinationserver** _destination_server_name_[**\\**_instance_name_]  
- 対象サーバー名を指定します。 *の既定のインスタンスの場合は、* destination_server_name [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]を指定します。 _の名前付きインスタンスの_**\\**_destination_server_name_ instance_name [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]を指定します。  
+ **-destinationserver** _destination_server_name_[ **\\** _instance_name_]  
+ 対象サーバー名を指定します。 *の既定のインスタンスの場合は、* destination_server_name [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]を指定します。 _の名前付きインスタンスの_ **\\** _destination_server_name_ instance_name [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]を指定します。  
   
  **-destinationdatabase** _subscription_database_  
  対象データベース名を指定します。  
@@ -130,7 +129,7 @@ tablediff
  比較中は、TABLOCK および HOLDLOCK テーブル ヒントを使用して、対象テーブルがロックされます。  
   
  **-b** _large_object_bytes_  
- ラージ オブジェクト データ型の列に対して比較するバイト数を指定します。列の型は、 **text**、 **ntext**、 **image**、 **varchar(max)**、 **nvarchar(max)** 、 **varbinary(max)** です。 *large_object_bytes* の既定値は、列のサイズです。 *large_object_bytes* を超えるデータは比較されません。  
+ ラージ オブジェクト データ型の列に対して比較するバイト数を指定します。列の型は、 **text**、 **ntext**、 **image**、 **varchar(max)** 、 **nvarchar(max)** 、 **varbinary(max)** です。 *large_object_bytes* の既定値は、列のサイズです。 *large_object_bytes* を超えるデータは比較されません。  
   
  **-bf**  _number_of_statements_  
  [!INCLUDE[tsql](../includes/tsql-md.md)] -f [!INCLUDE[tsql](../includes/tsql-md.md)] オプションを使用する場合に、現在の **スクリプト ファイルに書き込む** ステートメントの数を指定します。 [!INCLUDE[tsql](../includes/tsql-md.md)] ステートメントの数が *number_of_statements*で指定した値を超えると、新しい [!INCLUDE[tsql](../includes/tsql-md.md)] スクリプト ファイルが作成されます。  

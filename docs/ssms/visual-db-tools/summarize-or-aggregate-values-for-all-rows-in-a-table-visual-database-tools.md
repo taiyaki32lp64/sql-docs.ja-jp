@@ -11,15 +11,14 @@ helpviewer_keywords:
 - summarizing query results
 - aggregate functions [SQL Server], summarizing query results
 ms.assetid: f5af876e-f937-4110-ba09-07999c35a699
-author: stevestein
-ms.author: sstein
-manager: craigg
-ms.openlocfilehash: d49a3b4de2edfb3dc0c027ce54b5f6677d00abb6
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 9cfcb42df5c29fc0477e0a8575c6cfe299d3883b
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52535513"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68263190"
 ---
 # <a name="summarize-or-aggregate-values-for-all-rows-in-a-table-visual-database-tools"></a>テーブルにあるすべての行の値の要約または集計 (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -59,7 +58,7 @@ FROM titles
   
     集計する列に別名が自動的に割り当てられます。 この別名は、わかりやすい名前に変更することができます。 詳しくは、「[列の別名の作成 (Visual Database Tools)](../../ssms/visual-db-tools/create-column-aliases-visual-database-tools.md)」をご覧ください。  
   
-4.  **[グループ化]** グリッド列で、**[合計]**、**[平均]**、**[最小]**、**[最大]**、**[カウント]** などの該当する集計関数を選択します。 結果セットの一意の行だけを集計する場合は、 **[個別の最小値]** など、DISTINCT オプションのある集計関数を選択します。 **[グループ化]**、 **[式]**、または **[Where 条件]** は、すべての行を集計するときには適用されないため、これらのオプションはクリックしないでください。  
+4.  **[グループ化]** グリッド列で、次のような該当する集計関数を選択します: **[合計]** 、 **[平均]** 、 **[最小]** 、 **[最大]** 、 **[カウント]** 。 結果セットの一意の行だけを集計する場合は、 **[個別の最小値]** など、DISTINCT オプションのある集計関数を選択します。 **[グループ化]** 、 **[式]** 、または **[Where 条件]** は、すべての行を集計するときには適用されないため、これらのオプションはクリックしないでください。  
   
     クエリおよびビュー デザイナーにより、 [SQL ペイン](../../ssms/visual-db-tools/sql-pane-visual-database-tools.md) のステートメントの列名は、指定した集計関数に置き換えられます。 たとえば、SQL ステートメントは次のようになります。  
   

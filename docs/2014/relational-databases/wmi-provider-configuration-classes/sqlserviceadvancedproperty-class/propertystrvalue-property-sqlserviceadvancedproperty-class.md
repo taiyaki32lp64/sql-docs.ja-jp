@@ -19,11 +19,11 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: d2d4c40b3dc4fada31a7e09b080ed9b3f29236ef
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53357779"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62911584"
 ---
 # <a name="propertystrvalue-property-sqlserviceadvancedproperty-class"></a>PropertyStrValue プロパティ (SqlServiceAdvancedProperty クラス)
   詳細プロパティの文字列値を取得します。  

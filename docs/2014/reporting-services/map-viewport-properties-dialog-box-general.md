@@ -4,22 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 f1_keywords:
 - sql12.rtp.rptdesigner.mapviewport.general.f1
 - "10505"
 ms.assetid: 6c9c773e-5c56-4571-95ed-8a157cfdfe52
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 0a610ef918bc0a4ef76a6be2fa0b9ae132621ddb
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: 8ec0aaa051ba317cd05a9784c80fb997f5fa19e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56292180"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66108242"
 ---
 # <a name="map-viewport-properties-dialog-box-general"></a>[全般] ([マップ ビューポートのプロパティ] ダイアログ ボックス)
   **[マップ ビューポートのプロパティ]** ダイアログ ボックスの **[全般]** を選択すると、座標系、投影法、および境界に関するオプションを変更できます。  

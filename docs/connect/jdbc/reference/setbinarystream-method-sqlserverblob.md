@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: abcec31f-1a60-4765-9725-8cf7e9f1f8ab
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: f56200ca5df9e0eca7cafc6c7a99ed9bf7ca019d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 4555dfb9256f3ffe2ba61e82fe90307991a5a580
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47773670"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67975097"
 ---
 # <a name="setbinarystream-method-sqlserverblob"></a>setBinaryStream メソッド (SQLServerBlob)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -36,7 +35,7 @@ public java.io.OutputStream setBinaryStream(long pos)
 ```  
   
 #### <a name="parameters"></a>パラメーター  
- *pos*  
+ *Po*  
   
  書き込みを開始する BLOB 値内の位置です。  
   
@@ -47,7 +46,7 @@ public java.io.OutputStream setBinaryStream(long pos)
  java.sql.SQLException  
   
 ## <a name="remarks"></a>Remarks  
- この setBinaryStream メソッドは、java.sql.Blob インターフェイスの setBinaryStream メソッドによって指定されます。  
+ この setBinaryStream メソッドは、java. Blob インターフェイスの setBinaryStream メソッドによって指定されます。  
   
  BLOB のデータは、指定された開始位置から出力ストリームによって上書きされ、BLOB の初期データの長さをオーバーランすることができます。 開始位置に BLOB の長さ + 1 の値を指定すると、バイトが追加されます。 開始位置に BLOB の長さ + 2 以上 (または 0 以下) の値を渡すと、位置のエラーがスローされます。  
   

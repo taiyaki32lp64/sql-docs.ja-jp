@@ -10,15 +10,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - strings [SQL Server], XML
 ms.assetid: bf069da8-de1e-44d2-a1fb-ade383076ac1
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: ac660e14fa26c9254072bd2a027d2f8055f671f6
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: MightyPen
+ms.author: genemi
+ms.openlocfilehash: e0ad8310f5938d757c30732cf6b1a78a9770254e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47838630"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67943324"
 ---
 # <a name="for-xml-support-for-string-data-types"></a>文字列データ型の FOR XML のサポート
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

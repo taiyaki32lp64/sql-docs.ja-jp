@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 0b68ff48-12e4-41aa-b9e2-b39ed5023ea7
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: bcf7d34f8faf70f57373ad1a5dae55261799145b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 248a9e31b176444ad51cb3a62c7c5f12f1b7bde3
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47606470"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68068584"
 ---
 # <a name="configuration-components"></a>構成コンポーネント
 > [!NOTE]  
@@ -36,5 +35,5 @@ ms.locfileid: "47606470"
   
 -   [ドライバーのセットアップ DLL](../../../odbc/reference/install/driver-setup-dll.md)  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [インストール コンポーネント](../../../odbc/reference/install/installation-components.md)

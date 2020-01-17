@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 6e9402f4-4d50-49ff-820d-65a77829c4a5
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 2f3f982eeee9abc016575b8acd068b8ef2e7450f
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: 4e260825532f66205e301628f60d68d93f8e7c04
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52408179"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66059577"
 ---
 # <a name="deploy-projects-to-integration-services-server"></a>Integration Services サーバーへのプロジェクトの配置
   現在のリリースの [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] では、[!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] サーバーにプロジェクトを配置できます。 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] サーバーを使用すると、さまざまな環境を利用して、パッケージの管理、パッケージの実行、およびパッケージに合わせたランタイム値の構成を行うことができます。  
@@ -30,7 +29,7 @@ ms.locfileid: "52408179"
   
 1.  SSISDB カタログをまだ作成していない場合は、作成します。 詳細については、「 [SSIS カタログの作成](catalog/ssis-catalog.md)」を参照してください。  
   
-2.  **Integration Services プロジェクト変換ウィザード** を実行して、プロジェクトをプロジェクト配置モデルに変換します。 詳細については、以下の手順を参照してください。[プロジェクトをプロジェクト配置モデルに変換するには](#convert)  
+2.  **Integration Services プロジェクト変換ウィザード** を実行して、プロジェクトをプロジェクト配置モデルに変換します。 詳細については、後の手順を参照してください。[プロジェクトをプロジェクトの配置モデルに変換するには](#convert)  
   
     -   [!INCLUDE[ssISCurrent](../includes/ssiscurrent-md.md)]でプロジェクトを作成した場合、既定では、プロジェクトでプロジェクト配置モデルが使用されます。  
   
@@ -51,7 +50,7 @@ ms.locfileid: "52408179"
   
      パッケージのアップグレードの詳細については、「 [Integration Services パッケージのアップグレード](install-windows/upgrade-integration-services-packages.md) 」および「 [SSIS パッケージ アップグレード ウィザードを使用した Integration Services パッケージのアップグレード](install-windows/upgrade-integration-services-packages-using-the-ssis-package-upgrade-wizard.md)」を参照してください。  
   
-3.  プロジェクトを [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] サーバーに配置します。 詳細については、以下の手順を参照してください。[Integration Services サーバーにプロジェクトを配置する](#deploy)します。  
+3.  プロジェクトを [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] サーバーに配置します。 詳細については、後の手順を参照してください。[Integration Services サーバーにプロジェクトを配置するには](#deploy)。  
   
 4.  (省略可能) 配置されたプロジェクト用の環境を作成します。 詳細については、「 [サーバー環境の作成とマップ](../../2014/integration-services/create-and-map-a-server-environment.md)」を参照してください。  
   
@@ -59,7 +58,7 @@ ms.locfileid: "52408179"
   
 1.  [!INCLUDE[vsprvs](../includes/vsprvs-md.md)]でプロジェクトを開き、ソリューション エクスプローラーでプロジェクトを右クリックし、 **[プロジェクト配置モデルに変換]** をクリックします。  
   
-     - または -  
+     \- または -  
   
      オブジェクト エクスプローラーの [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)]で、 **[プロジェクト]** ノードを右クリックし、 **[パッケージのインポート]** を選択します。  
   
@@ -73,7 +72,7 @@ ms.locfileid: "52408179"
   
      [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]のオブジェクト エクスプローラーで、 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] > **SSISDB** ノードの順に展開し、配置するプロジェクトの [プロジェクト] フォルダーを探します。 **[プロジェクト]** フォルダーを右クリックして **[プロジェクトの配置]** をクリックします。  
   
-     - または -  
+     \- または -  
   
      コマンド プロンプトで、 **%ProgramFiles%\Microsoft SQL Server\110\DTS\Binn** にある **isdeploymentwizard.exe**を実行します。 64 ビット コンピューターの場合、 **%ProgramFiles(x86)%\Microsoft SQL Server\100\DTS\Binn**に 32 ビット バージョンのツールもあります。  
   

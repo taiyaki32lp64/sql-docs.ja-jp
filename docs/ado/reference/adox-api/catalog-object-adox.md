@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: bb651639-a488-4e38-b6de-0ed99fa4dd92
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 5547090443e2f22a135234853b76480fb8295e14
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: f9843ad9ac0a456f7e38e741e08ce9b66f862fd9
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47634420"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67967055"
 ---
 # <a name="catalog-object-adox"></a>Catalog オブジェクト (ADOX)
 コレクションが含まれています ([テーブル](../../../ado/reference/adox-api/tables-collection-adox.md)、[ビュー](../../../ado/reference/adox-api/views-collection-adox.md)、[ユーザー](../../../ado/reference/adox-api/users-collection-adox.md)、[グループ](../../../ado/reference/adox-api/groups-collection-adox.md)、および[プロシージャ](../../../ado/reference/adox-api/procedures-collection-adox.md)) します。データ ソースのスキーマ カタログをについて説明します。  
@@ -41,7 +40,7 @@ ms.locfileid: "47634420"
   
 -   [Catalog オブジェクトのプロパティ、メソッド、およびイベント](../../../ado/reference/adox-api/catalog-object-properties-methods-and-events.md)  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [カタログ ActiveConnection プロパティの例 (VB)](../../../ado/reference/adox-api/catalog-activeconnection-property-example-vb.md)   
  [Command プロパティおよび CommandText プロパティの例 (VB)](../../../ado/reference/adox-api/command-and-commandtext-properties-example-vb.md)   
  [Connection Close メソッド、Table Type プロパティの例 (VB)](../../../ado/reference/adox-api/connection-close-method-table-type-property-example-vb.md)   

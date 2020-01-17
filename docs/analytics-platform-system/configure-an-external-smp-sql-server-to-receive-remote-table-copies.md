@@ -1,62 +1,62 @@
 ---
-title: リモート テーブルのコピー - Parallel Data Warehouse を受信する SQL Server の構成 |Microsoft ドキュメント
-description: 並列データ ウェアハウスからリモート テーブルのコピーを受信する外部 SMP SQL Server インスタンスを構成する方法について説明します。
+title: リモートテーブルコピーを受信するように SQL Server を構成する
+description: 並列データウェアハウスからリモートテーブルのコピーを受信するように外部 SMP SQL Server インスタンスを構成する方法について説明します。
 author: mzaman1
-manager: craigg
 ms.prod: sql
 ms.technology: data-warehouse
 ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: ae6799d468d57dec04046b443c613823c0a8cb8c
-ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
+ms.custom: seo-dt-2019
+ms.openlocfilehash: 3e5475e86582ede2e6fa7ca5a302bba7ee74faa3
+ms.sourcegitcommit: d587a141351e59782c31229bccaa0bff2e869580
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/19/2018
-ms.locfileid: "31538952"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74401324"
 ---
-# <a name="configure-an-external-smp-sql-server-to-receive-remote-table-copies---parallel-data-warehouse"></a>外部の SMP SQL Server を受け取りますが、リモート テーブルの並列データ ウェアハウスを構成します。
-並列データ ウェアハウスからリモート テーブルのコピーを受信する外部の SQL Server インスタンスを構成する方法について説明します。  
+# <a name="configure-an-external-smp-sql-server-to-receive-remote-table-copies---parallel-data-warehouse"></a>リモートテーブルコピーを受信するための外部 SMP SQL Server の構成-並列データウェアハウス
+並列データウェアハウスからリモートテーブルのコピーを受信するように外部 SQL Server インスタンスを構成する方法について説明します。  
 
-このトピックでは、リモート テーブルのコピーを構成するための構成手順のいずれかについて説明します。 すべての構成手順の一覧は、次を参照してください。[リモート テーブルのコピー](remote-table-copy.md)です。  
+このトピックでは、リモートテーブルのコピーを構成するための構成手順の1つについて説明します。 すべての構成手順の一覧については、「[リモートテーブルのコピー](remote-table-copy.md)」を参照してください。  
   
-## <a name="before-you-begin"></a>はじめに  
-外部の SQL Server を構成することができます、前に次の操作を行う必要があります。  
+## <a name="before-you-begin"></a>開始する前に  
+外部 SQL Server を構成する前に、次のことを行う必要があります。  
   
--   ある Windows システムで SQL Server 2008 Enterprise Edition、またはそれ以降のバージョンをインストールまたは既にインストールされている準備ができています。 説明に従って、Windows システムが構成されている必要があります[構成、外部 Windows システムに表示されるリモート テーブルのコピーを使用して InfiniBand](configure-an-external-windows-system-to-receive-remote-table-copies-using-infiniband.md)です。  
+-   SQL Server 2008 Enterprise Edition またはそれ以降のバージョンの Windows システムがインストールされているか、インストール済みであることが必要です。 [「InfiniBand を使用してリモートテーブルのコピーを受信するように外部 Windows システムを構成](configure-an-external-windows-system-to-receive-remote-table-copies-using-infiniband.md)する」の手順に従って、windows システムを構成する必要があります。  
   
--   SQL Server インスタンスと、Windows システムを構成する機能を持つ Windows 管理者アカウントです。  
+-   SQL Server インスタンスと Windows システムを構成する機能を持つ Windows 管理者アカウント。  
   
--   SQL Server ログイン アカウント (SQL Server が既にインストールされている) 場合ログインを作成し、移行先のデータベースに対する権限を許可する機能を使用します。  
+-   SQL Server ログインアカウント (SQL Server が既にインストールされている場合)。ログインを作成し、転送先データベースに対する権限を付与する機能があります。  
   
-## <a name="HowToSQLServer"></a>リモート テーブルのコピーを受信する外部の SMP SQL サーバーを構成します。  
-リモート テーブルのコピー機能では、Windows システムで実行されている外部 SMP SQL Server データベースに SQL Server PDW アプライアンスからテーブルをコピーします。 リモート テーブルのコピーを受信する外部の Windows システムを構成した後は、次の手順は、インストールして、Windows システム上に SQL Server を構成するのには。  
+## <a name="HowToSQLServer"></a>リモートテーブルコピーを受信するための外部 SMP SQL Server の構成  
+リモートテーブルのコピー機能では、SQL Server PDW アプライアンスから、Windows システムで実行されている外部 SMP SQL Server データベースにテーブルをコピーします。 リモートテーブルのコピーを受信するように外部 Windows システムを構成した後、次の手順では SQL Server を Windows システムにインストールして構成します。  
   
-SQL Server を構成するのには、次の手順を使用します。  
+SQL Server を構成するには、次の手順に従います。  
   
-1.  Windows システムでは、SQL Server 2008 Enterprise Edition またはそれ以降のバージョンをインストールします。 これは、SMP SQL Server と呼ばれます。  
+1.  Windows システムに SQL Server 2008 Enterprise Edition 以降のバージョンをインストールします。 これを SMP SQL Server と呼びます。  
   
-2.  固定の TCP ポートで TCP/IP 接続を受け入れるように SQL Server を構成します。 この構成は、既定では無効し、SQL Server PDW SMP SQL Server への接続に使用できるように有効にする必要があります。  
+2.  固定 TCP ポートで TCP/IP 接続を受け入れるように SQL Server を構成します。 この構成は既定で無効になっており、SQL Server PDW が SMP SQL Server に接続できるようにするには、この構成を有効にする必要があります。  
   
-3.  Windows ファイアウォールを無効にするか、Windows ファイアウォールが有効では動作できるように、SMP SQL Server の TCP ポートを構成します。  
+3.  Windows ファイアウォールを無効にするか、SMP SQL Server TCP ポートを構成して、Windows ファイアウォールが有効になっていることをご利用ください。  
   
-4.  SQL Server 認証モードを許可する SQL Server を構成します。 並列データを SQL Server のアカウントを使用して認証を常にエクスポートします。  
+4.  SQL Server 認証モードを許可するように SQL Server を構成します。 並列データエクスポートでは、常に認証に SQL Server アカウントが使用されます。  
   
-5.  認証に使用される SMP SQL サーバー上の SQL Server アカウントを決定します。 そのアカウントの作成、削除、および並列のデータのエクスポート操作の転送先データベース内のテーブルにデータを挿入するための権限を付与します。  
+5.  認証に使用される SMP SQL Server の SQL Server アカウントを決定します。 並列データエクスポート操作のために、対象のデータベースのテーブルにデータを作成、削除、および挿入する権限をそのアカウントに付与します。  
   
-## <a name="BPSQLConfig"></a>リモート テーブルのコピーの SMP SQL Server の構成のベスト プラクティス  
-リモート テーブルのコピーを受け取る SMP SQL Server を構成する場合は、パフォーマンスを向上させるために、次のベスト プラクティスを使用します。  
+## <a name="BPSQLConfig"></a>リモートテーブルコピー用の SMP SQL Server 構成のベストプラクティス  
+リモートテーブルのコピーを受信するように SMP SQL Server を構成する場合は、次のベストプラクティスに従ってパフォーマンスを向上させてください。  
   
-1.  SQL Server の製品マニュアルに記載されたベスト プラクティスに従います。 たとえば、データの暗号化を有効にします。 SQL Server の保護の詳細については、次を参照してください。 [SQL Server のセキュリティで保護する](../relational-databases/security/securing-sql-server.md)msdn です。  
+1.  SQL Server の製品ドキュメントに記載されているベストプラクティスに従ってください。 たとえば、データの暗号化を有効にします。 SQL Server のセキュリティ保護の詳細については、MSDN の「 [SQL Server のセキュリティ保護](../relational-databases/security/securing-sql-server.md)」を参照してください。  
   
-2.  一括ログまたは単純復旧モデルを使用します。  
+2.  一括ログ復旧モデルまたは単純復旧モデルを使用します。  
   
-    エクスポート操作の並列のデータの中に、データを一括新しく作成されたコピー先のテーブルに挿入します。 一括挿入中にパフォーマンスを高めるためには、一括ログ記録を使用する移行先のデータベースまたは単純復旧モデルを設定します。  
+    並列データのエクスポート操作中に、新しく作成された変換先テーブルにデータが一括挿入されます。 一括挿入時のパフォーマンスを最大にするには、一括ログ復旧モデルまたは単純復旧モデルを使用するように転送先データベースを設定します。  
   
-3.  Batch_size オプションを使用すると、ログ領域を再利用できます。  
+3.  Batch_size オプションを使用して、ログ領域を解放します。  
   
-    ただし、一括ログまたは単純復旧モデルの最小一括挿入データのログ記録を使用して、いくつかのログ記録が引き続き発生します。 ログ ファイルが大きくなりすぎることを防ぐためには、定期的にログ領域を解放するのに SQL Server batch_size オプションを使用します。  
+    一括ログ復旧モデルまたは単純復旧モデルでは、一括挿入されたデータに対して最小ログ記録が使用されますが、一部のログ記録は引き続き実行されます。 ログファイルが大きくなりすぎないようにするには、SQL Server batch_size オプションを使用して、ログ領域を定期的に再利用します。  
   
 <!-- MISSING LINKS 
 ## See Also  

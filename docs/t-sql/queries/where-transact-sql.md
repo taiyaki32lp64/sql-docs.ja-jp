@@ -19,16 +19,15 @@ helpviewer_keywords:
 - row retrieval [SQL Server], WHERE clause
 - WHERE clause
 ms.assetid: a8430421-7bce-4fab-a2d2-56c00a3c6fa4
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
+author: VanMSFT
+ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 7bf298a651ce2568f3cbc3036d5a73317ec096e0
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a5ca209108c9f462368ef6fe5bbc38d9557b3599
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47836500"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67948214"
 ---
 # <a name="where-transact-sql"></a>WHERE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]

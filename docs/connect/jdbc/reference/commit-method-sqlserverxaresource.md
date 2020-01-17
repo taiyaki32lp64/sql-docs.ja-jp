@@ -15,18 +15,17 @@ apitype: Assembly
 ms.assetid: 1d0f8612-fb4a-4eca-bc37-8342e1419fd4
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: a292014314ac5864857f7aa02ead90ffd9f2b238
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 85bc4f123dd29025e906d57d64f21746df5f2e07
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47692310"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67955555"
 ---
 # <a name="commit-method-sqlserverxaresource"></a>commit メソッド (SQLServerXAResource)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  指定した Xid オブジェクトで指定されているグローバル トランザクションをコミットします。  
+  渡された Xid オブジェクトによって指定されるグローバル トランザクションをコミットします。  
   
 ## <a name="syntax"></a>構文  
   
@@ -37,7 +36,7 @@ public void commit(javax.transaction.xa.Xid xid,
 ```  
   
 #### <a name="parameters"></a>パラメーター  
- *xid*  
+ *type*  
   
  Xid オブジェクト。  
   

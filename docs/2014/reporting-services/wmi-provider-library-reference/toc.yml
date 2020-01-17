@@ -17,7 +17,7 @@
       href: msreportserver-instance-properties-instancename.md
     - name: IsSharePointIntegrated
       href: msreportserver-instance-properties-issharepointintegrated.md
-    - name: '[バージョンのオプション]'
+    - name: バージョン
       href: msreportserver-instance-properties-version.md
     - name: MSReportServer_Instance メソッド
       href: msreportserver-instance-methods.md
@@ -70,7 +70,7 @@
       href: configurationsetting-property-smtpserver.md
     - name: UnattendedExecutionAccount
       href: configurationsetting-property-unattendedexecutionaccount.md
-    - name: '[バージョンのオプション]'
+    - name: バージョン
       href: configurationsetting-property-version.md
     - name: VirtualDirectoryReportManager
       href: configurationsetting-property-virtualdirectoryreportmanager.md

@@ -10,15 +10,15 @@ helpviewer_keywords:
 - full-text catalogs [SQL Server], creating
 - full-text search [SQL Server], using SQL Server Management Studio
 ms.assetid: 824b7131-44a6-4815-89e6-62b7bab060e3
-author: douglaslMS
-ms.author: douglasl
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: d2347c97b41852b44ec651ee10300e607755757f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: d90ba7f8e183beeeeefe25ea20834b07d7a1bf80
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48145997"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66011470"
 ---
 # <a name="create-and-manage-full-text-catalogs"></a>フルテキスト カタログの作成と管理
   フルテキスト カタログが、ファイル グループに属さない仮想オブジェクトとなりました。これは、フルテキスト インデックスのグループを指す論理的概念です。  
@@ -43,11 +43,11 @@ ms.locfileid: "48145997"
   
   
 ##  <a name="props"></a> フルテキスト カタログのプロパティを表示します。  
- [!INCLUDE[tsql](../../includes/tsql-md.md)] FULLTEXTCATALOGPROPERTY などの関数は、フルテキスト インデックスに関連するさまざまなプロパティの値を取得できます。 この情報は、フルテキスト検索の管理およびトラブルシューティングに役立ちます。  
+ FULLTEXTCATALOGPROPERTY などの [!INCLUDE[tsql](../../includes/tsql-md.md)] 関数は、フルテキスト インデックスに関連するさまざまなプロパティの値を取得するために使用できます。 この情報は、フルテキスト検索の管理およびトラブルシューティングに役立ちます。  
   
  次の表は、フルテキスト カタログに関連しているプロパティを示しています。  
   
-|プロパティ|説明|機能|  
+|プロパティ|説明|関数|  
 |--------------|-----------------|--------------|  
 |`AccentSensitivity`|アクセントの区別の設定。|[FULLTEXTCATALOGPROPERTY](/sql/t-sql/functions/fulltextcatalogproperty-transact-sql)|  
 |`ImportStatus`|フルテキスト カタログがインポートされているかどうかを示します。|FULLTEXTCATALOGPROPERTY|  

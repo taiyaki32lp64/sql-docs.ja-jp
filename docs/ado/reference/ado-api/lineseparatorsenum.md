@@ -15,18 +15,17 @@ helpviewer_keywords:
 ms.assetid: 0440b793-99c7-49a2-b3e2-ec5b1a7e3e60
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 6aaf41bcc3759fe52cc1d15abb980227055f2de5
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: c966e2ac972fbc613c3938e95e458786c399bc08
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47691230"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67932327"
 ---
 # <a name="lineseparatorsenum"></a>LineSeparatorsEnum
 テキストの行区切り記号として使用される文字を指定します[Stream](../../../ado/reference/ado-api/stream-object-ado.md)オブジェクト。  
   
-|定数|値|説明|  
+|定数|Value|説明|  
 |--------------|-----------|-----------------|  
 |**adCR**|13|キャリッジ リターンを示します。|  
 |**adCRLF**|-1|既定値です。 復帰と改行を示します。|  

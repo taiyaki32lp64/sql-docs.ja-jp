@@ -16,23 +16,22 @@ helpviewer_keywords:
 ms.assetid: 542b63da-4d3d-4ad5-acea-f577730688f1
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: d9ad01fb0aa73dc34739c5584a510dbe1bc854da
-ms.sourcegitcommit: bfa10c54e871700de285d7f819095d51ef70d997
+ms.openlocfilehash: 07158d4131c60cf46f49a860721333c78213c982
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/14/2019
-ms.locfileid: "54254827"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68004534"
 ---
 # <a name="handling-namespaces-in-xquery"></a>XQuery での名前空間の処理
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
-  このトピックでは、クエリ内での名前空間の処理のサンプルを提供します。  
+  このトピックでは、クエリで名前空間の処理のサンプルを提供します。  
   
 ## <a name="examples"></a>使用例  
   
 ### <a name="a-declaring-a-namespace"></a>A. 名前空間の宣言  
- 次のクエリは、特定の製品モデルの製造工程を取得します。  
+ 次のクエリでは、特定の製品モデルの製造ステップを取得します。  
   
 ```  
 SELECT Instructions.query('  
@@ -50,10 +49,10 @@ WHERE ProductModelID=7
 ...  
 ```  
   
- なお、**名前空間**キーワードを使用して、新しい名前空間プレフィックスの定義を"AWMI:"です。 このクエリでは、該当する名前空間のスコープ内にあるすべての要素に、このプレフィックスを使用する必要があります。  
+ なお、**名前空間**キーワードを使用して、新しい名前空間プレフィックスの定義を"AWMI:"です。 このプレフィックスしする必要があるため、クエリでその名前空間のスコープ内にあるすべての要素。  
   
 ### <a name="b-declaring-a-default-namespace"></a>B. 既定の名前空間を宣言します。  
- 前のクエリでは、新しい名前空間プレフィックスが宣言されていました。 また、クエリでは目的の XML 構造を選択する場合、そのプレフィックスを使用する必要がありました。 代わりに、次のようにクエリを変更して、任意の名前空間を既定の名前空間として宣言できます。  
+ 前のクエリでは、新しい名前空間プレフィックスが定義されました。 そのプレフィックスは、目的の XML 構造を選択するクエリで使用する必要があります。 または、次の変更のクエリで示すように、既定の名前空間と名前空間を宣言できます。  
   
 ```  
 SELECT Instructions.query('  
@@ -71,10 +70,10 @@ where ProductModelID=7
 ...  
 ```  
   
- この例で、定義されている名前空間、`"https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions"` は、既定または空の名前空間をオーバーライドするように作成されています。 このため、クエリに使用するパス式内では名前空間プレフィックスが指定されていません。 また、結果に表示される要素名にも、名前空間プレフィックスはありません。 既定の名前空間は、すべての要素に適用されますが、属性には適用されません。  
+ この例で、定義されている名前空間、`"https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions"` は、既定または空の名前空間をオーバーライドするように作成されています。 このため、不要になったがある名前空間プレフィックスを使用するパス式でのクエリにします。 また、結果に表示される要素名にも、名前空間プレフィックスはありません。 既定の名前空間は、すべての要素に適用されますが、属性には適用されません。  
   
 ### <a name="c-using-namespaces-in-xml-construction"></a>C. XML 構築時の名前空間の使用  
- 新しい名前空間を定義すると、クエリだけではなく、XML の構築でも定義された名前空間が使用されます。 たとえば、XML を構築する場合、"`declare namespace ...`" 宣言を使用して新しい名前空間を定義し、クエリの結果に表示する要素や属性でこの名前空間が使用されるようにできます。  
+ 新しい名前空間を定義するときに、スコープだけでなく、クエリが構築するために起動するようにします。 たとえば、XML の構築に定義できます、新しい名前空間を使用して、"`declare namespace ...`"宣言し、その名前空間を使用して、任意の要素と属性をクエリ結果内に表示されるように構築することで。  
   
 ```  
 SELECT CatalogDescription.query('  
@@ -88,7 +87,7 @@ FROM Production.ProductModel
 where ProductModelID=19  
 ```  
   
- これは、結果です。  
+ 結果を次に示します。  
   
 ```  
   
@@ -130,7 +129,7 @@ FROM Production.ProductModel
 where ProductModelID=19  
 ```  
   
- これは、結果です。  
+ 結果を次に示します。  
   
 ```  
   
@@ -144,9 +143,9 @@ where ProductModelID=19
 </Result>  
 ```  
   
- 要素の既定の名前空間または空の名前空間をオーバーライドすることで、構築された XML 内のすべてのローカル名付きの要素が、オーバーライド後の既定の名前空間にバインドされます。 したがって、空の名前空間を利用して XML を柔軟に構築する必要がある場合は、要素の既定の名前空間をオーバーライドしないようにします。  
+ 既定の要素の名前空間または空の名前空間をオーバーライドして、構築される XML 内のすべてのローカルの名前付き要素は、その後にバインドされているオーバーライドする側の既定の名前空間に注意してください。 したがって、空の名前空間を利用して XML を柔軟に構築する必要がある場合は、要素の既定の名前空間をオーバーライドしないようにします。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [WITH XMLNAMESPACES を使用したクエリへの名前空間の追加](../relational-databases/xml/add-namespaces-to-queries-with-with-xmlnamespaces.md)   
  [XML データ &#40;SQL Server&#41;](../relational-databases/xml/xml-data-sql-server.md)   
  [XQuery 言語リファレンス &#40;SQL Server&#41;](../xquery/xquery-language-reference-sql-server.md)  

@@ -9,15 +9,18 @@ ms.technology: integration-services
 ms.topic: conceptual
 author: haoqian
 ms.author: haoqian
-manager: craigg
-ms.openlocfilehash: 53235c3c95c6c943ac340aecfaa8a62ff347a753
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 06708cc6770779f22bea45eddacba5a5d29f9092
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47659760"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68082135"
 ---
 # <a name="integration-services-scale-out-manager"></a>Integration Services Scale Out Manager
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
 
 Scale Out Manager は、1 つのアプリから SSIS Scale Out トポロジ全体を管理できる管理ツールです。 管理タスクを減らし、複数のコンピューターで Transact-SQL コマンドを実行するという負担をなくします。
 
@@ -28,7 +31,7 @@ Scale Out Manager は 2 つの方法で開くことができます。
 ### <a name="1-open-scale-out-manager-from-sql-server-management-studio"></a>1.SQL Server Management Studio から Scale Out Manager を開く
 SQL Server Management Studio (SSMS) を開き、Scale Out Master の SQL Server インスタンスに接続します。
 
-オブジェクト エクスプローラーで、**[SSISDB]** を右クリックして、**[スケール アウトの管理]** を選択します。
+オブジェクト エクスプローラーで、 **[SSISDB]** を右クリックして、 **[スケール アウトの管理]** を選択します。
 
 ![スケール アウトの管理](media/manage-scale-out.PNG)
 
@@ -37,7 +40,7 @@ SQL Server Management Studio (SSMS) を開き、Scale Out Master の SQL Server 
 
 ### <a name="2-open-scale-out-manager-by-running-managementtoolexe"></a>2.ManagementTool.exe を実行して Scale Out Manager を開く
 
-`%SystemDrive%\Program Files (x86)\Microsoft SQL Server\150\DTS\Binn\Management` の下で `ManagementTool.exe` を見つけます。 **ManagementTool.exe** を右クリックし、**[管理者として実行]** を選択します。 
+`%SystemDrive%\Program Files (x86)\Microsoft SQL Server\150\DTS\Binn\Management` の下で `ManagementTool.exe` を見つけます。 **ManagementTool.exe** を右クリックし、 **[管理者として実行]** を選択します。 
 
 Scale Out Manager を開いたら、Scale Out Master の SQL Server インスタンス名を入力し、それに接続し、スケール アウト環境を管理します。
 
@@ -47,24 +50,24 @@ Scale Out Manager を開いたら、Scale Out Master の SQL Server インスタ
 Scale Out Manager で、次の操作を実行できます。
 
 ### <a name="enable-scale-out"></a>スケール アウトの有効化
-SQL Server に接続した後で、Scale Out が有効になっていない場合、**[有効]** を選択して有効にできます。
+SQL Server に接続した後で、Scale Out が有効になっていない場合、 **[有効]** を選択して有効にできます。
 
 ![ポータルで Scale Out を有効にする](media/portal-enable-scale-out-new.PNG) 
 
 ### <a name="view-scale-out-master-status"></a>Scale Out Master の状態を表示する
-Scale Out Master の状態は、**[ダッシュボード]** ページに表示されます。
+Scale Out Master の状態は、 **[ダッシュボード]** ページに表示されます。
 
 ![ポータルのダッシュボード](media/portal-dashboard-new.PNG)
 
 ### <a name="view-scale-out-worker-status"></a>Scale Out Worker の状態を表示する
-Scale Out Worker の状態は、**[ワーカー マネージャー]** ページに表示されます。 各ワーカーを選択すると、個別の状態を表示できます。
+Scale Out Worker の状態は、 **[ワーカー マネージャー]** ページに表示されます。 各ワーカーを選択すると、個別の状態を表示できます。
 
 ![ポータルのワーカー マネージャー](media/portal-worker-manager-new.PNG)
 
 ### <a name="add-a-scale-out-worker"></a>Scale Out Worker を追加する
 Scale Out Worker を追加するには、Scale Out Worker リストの下部にある **[+]** を選択します。 
 
-追加する Scale Out Worker のコンピューター名を入力し、**[検証]** をクリックします。 Scale Out Manager によって、現在のユーザーが Scale Out Master と Scale Out Worker のコンピューター上の証明書ストアにアクセスできるかどうかがチェックされます。
+追加する Scale Out Worker のコンピューター名を入力し、 **[検証]** をクリックします。 Scale Out Manager によって、現在のユーザーが Scale Out Master と Scale Out Worker のコンピューター上の証明書ストアにアクセスできるかどうかがチェックされます。
 
 ![ワーカーの接続](media/connect-worker-new.PNG)
 
@@ -86,16 +89,16 @@ Scale Out Worker を追加するには、Scale Out Worker リストの下部に�
 
 ![ポータルの追加の確認 2](media/portal-add-confirm2-new.PNG)
 
-**[確認]** チェックボックスを選択し、**[OK]** を選択し、Scale Out Worker の追加を開始します。
+**[確認]** チェックボックスを選択し、 **[OK]** を選択し、Scale Out Worker の追加を開始します。
 
 ### <a name="delete-a-scale-out-worker"></a>Scale Out Worker を削除する
 Scale Out Worker を削除するには、Scale Out Worker を選択し、Scale Out Worker リストの下部にある **[-]** を選択します。
 
 ### <a name="enable-or-disable-a-scale-out-worker"></a>Scale Out Worker を有効または無効にする
-Scale Out Worker を有効または無効にするには、Scale Out Worker を選択し、**[ワーカーの有効化]** または **[ワーカーの無効化]** を選択します。 ワーカーがオフラインではない場合、Scale Out Manager に表示されるワーカーの状態が適宜変更されます。
+Scale Out Worker を有効または無効にするには、Scale Out Worker を選択し、 **[ワーカーの有効化]** または **[ワーカーの無効化]** を選択します。 ワーカーがオフラインではない場合、Scale Out Manager に表示されるワーカーの状態が適宜変更されます。
 
 ## <a name="edit-a-scale-out-worker-description"></a>Scale Out Worker の説明を編集する
-Scale Out Worker の説明を編集するには、Scale Out Worker を選択し、**[編集]** を選択します。 説明の編集が終わったら、**[保存]** を選択します。
+Scale Out Worker の説明を編集するには、Scale Out Worker を選択し、 **[編集]** を選択します。 説明の編集が終わったら、 **[保存]** を選択します。
 
 ![ポータルのワーカーの保存](media/portal-save-worker-new.PNG)
 

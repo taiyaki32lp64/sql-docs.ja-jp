@@ -1,5 +1,5 @@
 ---
-title: '手順 5: トランザクションのコミット |Microsoft Docs'
+title: 手順 5:トランザクションをコミット |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -14,15 +14,14 @@ helpviewer_keywords:
 ms.assetid: 311685e2-f7b5-4ddc-8020-59380cd2f035
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 341f34afa1dbe65f4b83a46f461bb93f4fb4f4c8
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: bde493edbc6d677b27ef72a24736b504959a7b59
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47844297"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68114129"
 ---
-# <a name="step-5-commit-the-transaction"></a>ステップ 5: トランザクションのコミット
+# <a name="step-5-commit-the-transaction"></a>手順 5:トランザクションをコミットする
 次の手順は、次の図に示すように、トランザクションをコミットするは。  
   
  ![トランザクションをコミットする方法を示します](../../../odbc/reference/develop-app/media/pr16.gif "pr16")  

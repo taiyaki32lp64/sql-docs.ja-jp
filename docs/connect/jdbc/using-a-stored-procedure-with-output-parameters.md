@@ -1,7 +1,7 @@
 ---
 title: 出力パラメーターがあるストアド プロシージャの使用 | Microsoft Docs
 ms.custom: ''
-ms.date: 07/11/2018
+ms.date: 08/12/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 1c006f27-7e99-43d5-974c-7b782659290c
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: ea98438694963986c31f0dbb7dddecfb5caa9da6
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: efafaa709666620e7237f2481c392aba25dfd5f8
+ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47610830"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "69026832"
 ---
 # <a name="using-a-stored-procedure-with-output-parameters"></a>出力パラメーターがあるストアド プロシージャの使用
 
@@ -29,11 +28,11 @@ JDBC ドライバーを使用してこの種類のストアド プロシージ�
 `{call procedure-name[([parameter][,[parameter]]...)]}`
 
 > [!NOTE]  
-> SQL エスケープ シーケンスの詳細については、次を参照してください。 [SQL エスケープ シーケンスを使用して](../../connect/jdbc/using-sql-escape-sequences.md)します。
+> SQL エスケープシーケンスの詳細については、「 [sql エスケープシーケンスの使用](../../connect/jdbc/using-sql-escape-sequences.md)」を参照してください。
 
-`call` エスケープ シーケンスを作成する場合、OUT パラメーターは ?  (疑問符) 文字で指定します。 この文字は、ストアド プロシージャから返されるパラメーター値のプレースホルダーになります。 OUT パラメーターの値を指定するには、ストアド プロシージャを実行する前に、SQLServerCallableStatement クラスの [registerOutParameter](../../connect/jdbc/reference/registeroutparameter-method-sqlservercallablestatement.md) メソッドを使用して、各パラメーターのデータ型を指定する必要があります。
+`call` エスケープ シーケンスを作成する場合、OUT パラメーターは ? (疑問符) 文字で指定します。 この文字は、ストアド プロシージャから返されるパラメーター値のプレースホルダーになります。 OUT パラメーターの値を指定するには、ストアド プロシージャを実行する前に、SQLServerCallableStatement クラスの [registerOutParameter](../../connect/jdbc/reference/registeroutparameter-method-sqlservercallablestatement.md) メソッドを使用して、各パラメーターのデータ型を指定する必要があります。
 
-registerOutParameter メソッドで OUT パラメーターに指定する値は、java.sql.Types に含まれる JDBC データ型のいずれかである必要があります。この値は、ネイティブの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データ型の 1 つに順にマップされます。 JDBC の詳細については、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 、データ型を参照してください[JDBC ドライバーのデータ型について](../../connect/jdbc/understanding-the-jdbc-driver-data-types.md)します。
+registerOutParameter メソッドで OUT パラメーターに指定する値は、java.sql.Types に含まれる JDBC データ型のいずれかである必要があります。この値は、ネイティブの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データ型の 1 つに順にマップされます。 Jdbc と[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]データ型の詳細については、「 [jdbc ドライバーのデータ型](../../connect/jdbc/understanding-the-jdbc-driver-data-types.md)について」を参照してください。
 
 registerOutParameter メソッドに OUT パラメーターの値を渡す場合は、パラメーターに使用するデータ型だけでなく、ストアド プロシージャ内のパラメーターの順序またはパラメーター名も指定する必要があります。 たとえば、ストアド プロシージャに 1 つの OUT パラメーターがある場合、その序数値は 1 です。ストアド プロシージャに 2 つのパラメーターがある場合、最初の序数値は 1 で、2 番目の序数値は 2 になります。
 
@@ -83,9 +82,9 @@ public static void executeStoredProcedure(Connection con) throws SQLException {
 ```
 
 > [!NOTE]  
-> これらの例では、SQLServerCallableStatement クラスの execute メソッドを使用して、ストアド プロシージャを実行します。 このメソッドを使用しているのは、ストアド プロシージャによって結果セットが返されないためです。 結果セットが返される場合は、[executeQuery](../../connect/jdbc/reference/executequery-method-sqlserverstatement.md) メソッドを使用します。
+> これらの例では、SQLServerCallableStatement クラスの execute メソッドを使用してストアドプロシージャを実行します。 このメソッドを使用しているのは、ストアド プロシージャによって結果セットが返されないためです。 結果セットが返される場合は、[executeQuery](../../connect/jdbc/reference/executequery-method-sqlserverstatement.md) メソッドを使用します。
 
-ストアド プロシージャは、更新数および複数の結果セットを返すことができます。 [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] が準拠している JDBC 3.0 仕様は、複数の結果セットと更新数が、OUT パラメーターの取得前に取得されなければならない旨が規定されています。 アプリケーションで必要があります、すべての結果セット オブジェクトを取得し、CallableStatement.getter メソッドを使用して、OUT パラメーターを取得する前に数を更新します。 そうしないと、OUT パラメーターの取得時に、未取得の ResultSet オブジェクトおよび更新数が失われます。 複数の結果セットと更新数の詳細については、次を参照してください。[更新数は、ストアド プロシージャを使用して](../../connect/jdbc/using-a-stored-procedure-with-an-update-count.md)と[複数の結果セットを使用して](../../connect/jdbc/using-multiple-result-sets.md)します。
+ストアド プロシージャは、更新数および複数の結果セットを返すことができます。 [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] が準拠している JDBC 3.0 仕様は、複数の結果セットと更新数が、OUT パラメーターの取得前に取得されなければならない旨が規定されています。 つまり、アプリケーションは、すべての ResultSet オブジェクトと更新数を取得してから、CallableStatement. getter メソッドを使用して OUT パラメーターを取得する必要があります。 そうしないと、OUT パラメーターの取得時に、未取得の ResultSet オブジェクトおよび更新数が失われます。 更新数および複数の結果セットの詳細については、「update count を使用し[たストアドプロシージャの使用](../../connect/jdbc/using-a-stored-procedure-with-an-update-count.md)」および「[複数の結果セットの使用](../../connect/jdbc/using-multiple-result-sets.md)」を参照してください。
 
 ## <a name="see-also"></a>参照
 

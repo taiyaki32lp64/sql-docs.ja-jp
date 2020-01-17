@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 663defab-5545-4973-9036-24d5882c9737
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 008ff3dacaa4bf3256429984973608c10a73d43e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 15115313613ea8f86dd2267c6be3c231cab92503
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47606491"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67931937"
 ---
 # <a name="open-method-ado-connection"></a>Open メソッド (ADO Connection)
 データ ソースへの接続を開きます。  

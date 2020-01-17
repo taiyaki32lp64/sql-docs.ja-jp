@@ -1,5 +1,5 @@
 ---
-title: 可用性グループのプロパティ:新しい可用性グループ ([バックアップの設定] ページ)
+title: 可用性グループのプロパティ:[バックアップの設定] ページ
 description: SQL Server Management Studio の [新しい可用性グループ] ウィザードの [バックアップの設定] ページにあるさまざまなプロパティの説明。
 ms.custom: seodec18
 ms.date: 05/17/2016
@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 65fff22d-5963-4a8c-8b31-fe9ab247a03e
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 49288df6eb302dd3991e9b69b50de14a030a86b6
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: cebacaf07ca7e678095a661267b02fe04d8513d9
+ms.sourcegitcommit: f8cf8cc6650a22e0b61779c20ca7428cdb23c850
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53207339"
+ms.lasthandoff: 12/04/2019
+ms.locfileid: "74822474"
 ---
 # <a name="availability-group-properties-new-availability-group-backup-preferences-page"></a>可用性グループのプロパティ:新しい可用性グループ ([バックアップの設定] ページ)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -30,7 +29,7 @@ ms.locfileid: "53207339"
   
 -   [可用性グループのプロパティの表示 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/view-availability-group-properties-sql-server.md)  
   
--   [Always On ダッシュボードの使用 &#40;SQL Server Management Studio&#41;](~/database-engine/availability-groups/windows/use-the-always-on-dashboard-sql-server-management-studio.md)  
+-   [AlwaysOn ダッシュボードの使用 &#40;SQL Server Management Studio&#41;](~/database-engine/availability-groups/windows/use-the-always-on-dashboard-sql-server-management-studio.md)  
   
 ## <a name="where-should-backups-occur"></a>バックアップを実行する場所  
  **[セカンダリを優先]**  
@@ -46,7 +45,7 @@ ms.locfileid: "53207339"
  バックアップを実行するレプリカを選択するときにバックアップ ジョブが可用性レプリカのロールを無視するように指定します。 バックアップ ジョブは、動作状態および接続状態と組み合わせて、各可用性レプリカのバックアップ優先順位などの他の要素を評価する場合があります。  
   
 > [!IMPORTANT]  
->  バックアップに関するユーザー設定は適用されません。 この優先設定の解釈は、特定の可用性グループのデータベースに対するバックアップ ジョブのスクリプトでのロジックに依存します (ある場合)。 詳細については、「[アクティブなセカンダリ: セカンダリ レプリカでのバックアップ &#40;Always On 可用性グループ&#41;](active-secondaries-backup-on-secondary-replicas-always-on-availability-groups.md)」を参照してください。  
+>  バックアップに関するユーザー設定は適用されません。 この優先設定の解釈は、特定の可用性グループのデータベースに対するバックアップ ジョブのスクリプトでのロジックに依存します (ある場合)。 詳細については、「[アクティブなセカンダリ:セカンダリ レプリカでのバックアップ &#40;Always On 可用性グループ&#41;](active-secondaries-backup-on-secondary-replicas-always-on-availability-groups.md)」を参照してください。  
   
 ## <a name="replica-backup-priorities"></a>レプリカのバックアップの優先順位  
  このグリッドには、可用性グループのレプリカをホストする各サーバー インスタンスの現在のバックアップの優先順位が表示されます。 このグリッドを使用して、1 つまたは複数の可用性レプリカのバックアップの優先順位を変更します。  

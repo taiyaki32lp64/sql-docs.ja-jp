@@ -1,5 +1,5 @@
 ---
-title: 'SQL から c: GUID |Microsoft Docs'
+title: 'SQL から C へ: GUID |Microsoft Docs'
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: cf56c684-c261-4b89-994a-db14ab2241d6
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 21054bdb3f869a0f06349b32e481144b3582de4e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 1a2ed3cffcb196cb09841df3b54fbfab53e22477
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47849000"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68056875"
 ---
 # <a name="sql-to-c-guid"></a>SQL から C へ: GUID
 GUID の ODBC SQL データ型の識別子です。  

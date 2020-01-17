@@ -1,5 +1,5 @@
 ---
-title: レッスン 1:データベース エンジンへの接続 |Microsoft Docs
+title: 'レッスン 1: データベース エンジンへの接続 | Microsoft Docs'
 ms.custom: ''
 ms.date: 04/27/2017
 ms.prod: sql-server-2014
@@ -11,11 +11,11 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 32b78c210647ab5b3722f01f334e9cb2e8bbfc13
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53375304"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63145493"
 ---
 # <a name="lesson-1-connecting-to-the-database-engine"></a>レッスン 1:データベース エンジンへの接続
   [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]のインストール時に一緒にインストールされるツールは、エディションとセットアップによって異なります。 このレッスンでは、主要なツールについて確認し、接続して基本機能を実行する方法について学習します。これで、さらに多くのユーザーを認証することができます。  
@@ -40,7 +40,7 @@ ms.locfileid: "53375304"
   
 ##### <a name="to-start-sql-server-configuration-manager"></a>SQL Server 構成マネージャーを起動するには  
   
--   **[スタート]** メニューで、 **[すべてのプログラム]**、[ [!INCLUDE[ssCurrentUI](../includes/sscurrentui-md.md)]]、 **[構成ツール]** の順にポイントして、 **[SQL Server 構成マネージャー]** をクリックします。  
+-   **[スタート]** メニューで、 **[すべてのプログラム]** 、[ [!INCLUDE[ssCurrentUI](../includes/sscurrentui-md.md)]]、 **[構成ツール]** の順にポイントして、 **[SQL Server 構成マネージャー]** をクリックします。  
   
 ##  <a name="connect"></a> Management Studio との接続  
  接続するは簡単、[!INCLUDE[ssDE](../includes/ssde-md.md)]コンピューターの Administrators グループのメンバーとして接続している場合、インスタンスの名前がわかっている場合と同じコンピューターで実行されているツールから。 次の手順は、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]をホストしている同じコンピューター上で実行する必要があります。  
@@ -101,6 +101,6 @@ ms.locfileid: "53375304"
 >  上記は開始するための基本的な情報です。 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] では優れたセキュリティ環境が提供されます。セキュリティはデータベース操作において明らかに重要な要素です。  
   
 ## <a name="next-lesson"></a>次のレッスン  
- [レッスン 2:別のコンピューターから接続します。](lesson-2-connecting-from-another-computer.md)  
+ [レッスン 2:別のコンピューターからの接続](lesson-2-connecting-from-another-computer.md)  
   
   

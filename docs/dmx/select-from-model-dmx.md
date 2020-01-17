@@ -8,18 +8,17 @@ ms.topic: conceptual
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-manager: kfile
-ms.openlocfilehash: aac800e225eb5323b1bffeafda77d059f0a837e2
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 5611ce3da4f12bca5cb271cabe8af3e149dcbf35
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37989904"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67928323"
 ---
 # <a name="select-from-ltmodelgt-dmx"></a>SELECT FROM&lt;モデル&gt;(DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
-  空の予測結合を実行し、指定された列の最も可能性の高い値を返します。 マイニング モデルのコンテンツのみが予測の作成に使用できます。  
+  最も可能性の高い値または指定された列の値を返す、空の予測結合を実行します。 マイニング モデルのコンテンツのみが予測の作成に使用できます。  
   
 ## <a name="syntax"></a>構文  
   
@@ -64,8 +63,8 @@ SELECT [Model Region], PredictTimeSeries(Amount, 4)
 FROM Forecasting  
 ```  
   
-## <a name="see-also"></a>参照  
- [選択&AMP;#40;DMX&AMP;#41;](../dmx/select-dmx.md)   
+## <a name="see-also"></a>関連項目  
+ [選択&#40;DMX&#41;](../dmx/select-dmx.md)   
  [データ マイニング拡張機能&#40;DMX&#41;データ定義ステートメント](../dmx/dmx-statements-data-definition.md)   
  [データ マイニング拡張機能&#40;DMX&#41;データ操作ステートメント](../dmx/dmx-statements-data-manipulation.md)   
  [データ マイニング拡張機能 &#40;DMX&#41; ステートメント リファレンス](../dmx/data-mining-extensions-dmx-statements.md)  

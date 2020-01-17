@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: 49198d63-76cb-4843-8d04-e49b1fbb6916
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: b630f2bbe44f4484364aa1b99ea987c8888554c1
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: fe32325caccebd0e85204bbbc11b7a0cbe4eefca
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47637820"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67972996"
 ---
 # <a name="setsendstringparametersasunicode-method-sqlserverdatasource"></a>setSendStringParametersAsUnicode メソッド (SQLServerDataSource)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

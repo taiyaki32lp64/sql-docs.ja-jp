@@ -1,73 +1,74 @@
 ---
-title: RevoScaleR 関数に関する詳しいチュートリアル-SQL Server Machine Learning
-description: このチュートリアルでは、SQL Server Machine Learning の R 統合を使用して、RevoScaleR 関数を呼び出す方法を説明します。
+title: RevoScaleR の詳細なチュートリアル
+description: このチュートリアルでは、SQL Server Machine Learning R 統合を使用して RevoScaleR 関数を呼び出す方法について説明します。
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 11/27/2018
 ms.topic: tutorial
-author: HeidiSteen
-ms.author: heidist
-manager: cgronlun
-ms.openlocfilehash: 4ce2eea1638c301f85741dc22f7541af0cf7e5d6
-ms.sourcegitcommit: 33712a0587c1cdc90de6dada88d727f8623efd11
-ms.translationtype: MT
+author: dphansen
+ms.author: davidph
+ms.custom: seo-lt-2019
+monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
+ms.openlocfilehash: 853f2e33ff4f801c3668a9f79bcec247dc13963e
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53596623"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73727216"
 ---
-# <a name="tutorial-use-revoscaler-r-functions-with-sql-server-data"></a>チュートリアル:SQL Server データで RevoScaleR R 関数を使用します。
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+# <a name="tutorial-use-revoscaler-r-functions-with-sql-server-data"></a>チュートリアル:SQL Server データでの RevoScaleR R 関数の使用
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-[RevoScaleR](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler)並列データ サイエンスと機械学習のワークロードの処理および Microsoft R パッケージの分散を提供します。 SQL Server での R 開発用**RevoScaleR**コアのいずれかの組み込みパッケージ、パッケージの管理、コンピューティング コンテキストの設定、データ ソース オブジェクトを作成するための関数は、そして最も重要: データ エンド ツー エンドでの操作視覚エフェクトと分析にインポートします。 SQL Server で機械学習アルゴリズム依存している**RevoScaleR**データ ソース。 重要である**RevoScaleR**場面で、その関数を呼び出す方法は、不可欠なスキルです。 
+[RevoScaleR](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler) は、データ サイエンスと機械学習のワークロードの分散および並列処理を提供する Microsoft R パッケージです。 SQL Server での R 開発の場合、**RevoScaleR** は最も重要な組み込みパッケージの 1 つで、データ ソース オブジェクトを作成するための機能、コンピューティング コンテキストの設定、パッケージの管理、および最も重要なこととして、インポートから視覚化および分析まで、データをエンドツーエンドで操作する機能を備えています。 SQL Server の Machine Learning アルゴリズムは、**RevoScaleR** データ ソースに依存しています。 **RevoScaleR** の重要性を考えると、その関数を呼び出すタイミングと方法を把握することは、重要なスキルと言えます。 
 
-このマルチパート チュートリアルでは、範囲に導入された**RevoScaleR**データ サイエンスに関連付けられているタスクの関数。 プロセスで、ローカルおよびリモート計算コンテキストの間でデータを移動、リモート コンピューティング コンテキストを作成する方法を学習およびリモートの SQL Server で R コードを実行します。 作成してモデルをデプロイする方法と分析して、ローカルとリモートのサーバーの両方にデータをプロットする方法も学習します。
+このマルチパート チュートリアルでは、データ サイエンスに関連するタスク用のさまざまな **RevoScaleR** 関数について紹介します。 このプロセスでは、リモートのコンピューティング コンテキストを作成する方法、ローカルとリモートのコンピューティング コンテキストの間でデータを移動する方法、およびリモート SQL Server で R コードを実行する方法について説明します。 また、ローカルとリモート サーバーの両方でデータを分析してプロットする方法と、モデルを作成して配置する方法についても説明します。
 
-## <a name="prerequisites"></a>前提条件
+## <a name="prerequisites"></a>Prerequisites
 
-+ [SQL Server 2017 Machine Learning Services](../install/sql-machine-learning-services-windows-install.md) R 機能を使用または[SQL Server 2016 R Services (In-database)](../install/sql-r-services-windows-install.md)
++ R 機能付きの [SQL Server Machine Learning Services](../install/sql-machine-learning-services-windows-install.md)、または [SQL Server R Services (データベース内)](../install/sql-r-services-windows-install.md)
   
-+ [データベース権限](../security/user-permission.md)と SQL Server データベースのユーザー ログイン
++ [データベース権限](../security/user-permission.md)と SQL Server データベース ユーザー ログイン
 
 + [SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms)
 
-+ RStudio や R に付属する組み込み RGUI ツールなど、IDE
++ R に付属する RStudio や組み込みの RGUI ツールなどの IDE
 
-ローカルおよびリモート計算コンテキストの間で交互に切り替えるには、2 つのシステム必要があります。 ローカルは、通常、データ サイエンスのワークロード用の十分な能力の開発ワークステーションです。 リモートここでは、SQL Server 2017 または SQL Server 2016 R 機能を有効にします。 
+ローカルとリモートの両方のコンピューティング コンテキストを切り替えるには、2 つのシステムが必要です。 ローカルは、通常、データ サイエンス ワークロードのための十分なパワーを備えた開発ワークステーションです。 この場合、リモートは R 機能が有効になっている SQL Server です。 
 
-コンピューティング コンテキストの切り替えが、同じバージョンに基づいて**RevoScaleR**ローカルとリモートの両方のシステムでします。 ローカルのワークステーションで取得できます、 **RevoScaleR**パッケージおよび Microsoft R Client をインストールすることによって、関連するプロバイダー。
+コンピューティング コンテキストの切り替えは、ローカルとリモートの両方のシステムに同じバージョン **RevoScaleR** があることを前提としています。 ローカル ワークステーションでは、Microsoft R Client のインストールによって、**RevoScaleR** パッケージと関連するプロバイダーを取得できます。
 
-同じコンピューターにクライアントとサーバーを配置する必要がある場合は、「リモート」のクライアントから R スクリプトを送信するための Microsoft R ライブラリの 2 番目のセットをインストールすることを確認します。 SQL Server インスタンスのプログラム ファイルにインストールされている R ライブラリを使用しません。 具体的には、1 台のコンピューターを使用している場合、 **RevoScaleR**クライアントとサーバーの操作をサポートするためにこれらの場所の両方でのライブラリです。
+クライアントとサーバーを同じコンピューターに配置する必要がある場合は、"リモート" クライアントから R スクリプトを送信するために、Microsoft R ライブラリの 2 つ目のセットを必ずインストールしてください。 SQL Server インスタンスのプログラム ファイルにインストールされている R ライブラリは使用しないでください。 具体的には、1 台のコンピューターを使用している場合は、クライアントとサーバーの操作をサポートするために、次の両方の場所に **RevoScaleR** ライブラリが必要です。
 
 + C:\Program Files\Microsoft\R Client\R_SERVER\library\RevoScaleR 
-+ C:\Program files \microsoft SQL Server\MSSQL14 します。MSSQLSERVER\R_SERVICES\library\RevoScaleR
++ C:\Program Files\Microsoft SQL Server\MSSQL14.MSSQLSERVER\R_SERVICES\library\RevoScaleR
 
-クライアントの構成については、次を参照してください。 [R 開発用のデータ サイエンス クライアント セットアップ](../r/set-up-a-data-science-client.md)します。
+クライアントの構成手順については、[R 開発用にデータ サイエンス クライアントを設定する](../r/set-up-a-data-science-client.md)に関するページを参照してください。
 
 
 ## <a name="r-development-tools"></a>R 開発ツール
 
-R 開発者は、通常記述および R コードをデバッグするための Ide を使用します。 推奨事項をいくつか以下に示します。
+R 開発者は、R コードの作成およびデバッグに、通常 IDE を使用します。 推奨事項をいくつか以下に示します。
 
-- **R Tools for Visual Studio** (RTVS) は、無料プラグインを Intellisense、デバッグを提供し、Microsoft R 向けサポートR Server と SQL Server Machine Learning サービスの両方で使用できます。 ダウンロードするには、「 [R Tools for Visual Studio](https://www.visualstudio.com/vs/rtvs/)」を参照してください。
+- **R Tools for Visual Studio** (RTVS) は、Microsoft R に対して Intellisense、デバッグ、およびサポートを提供する無料プラグインです。それを使用して、Microsoft R Server と SQL Server Machine Learning Services の両方で使用できます。 ダウンロードするには、「 [R Tools for Visual Studio](https://www.visualstudio.com/vs/rtvs/)」を参照してください。
 
-- **RStudio** は R 開発用の最も一般的な環境の 1 つです。 詳細については、次を参照してください。 [ https://www.rstudio.com/products/RStudio/](https://www.rstudio.com/products/RStudio/)します。
+- **RStudio** は R 開発用の最も一般的な環境の 1 つです。 詳細については、[https://www.rstudio.com/products/RStudio/](https://www.rstudio.com/products/RStudio/) を参照してください。
 
-- 基本 R ツール (R.exe、RTerm.exe、RScripts.exe) は、SQL Server または R Client に R をインストールするときにも既定でインストールされます。 IDE をインストールしたくない場合は、このチュートリアルでは、コードを実行する組み込みの R ツールを使用できます。
+- R を SQL Server または R クライアントにインストールするとき、既定では、基本の R ツール (R.exe、RTerm.exe、RScripts.exe) もインストールされます。 IDE をインストールしない場合は、組み込みの R ツールを使用して、このチュートリアルでコードを実行できます。
 
-いることを思い出してください**RevoScaleR**ローカルとリモートの両方のコンピューターが必要です。 RStudio または他の Microsoft R ライブラリが不足している環境の一般的なインストールを使用して、このチュートリアルを完了できません。 詳しくは、「 [データ サイエンス クライアントのセットアップ](../r/set-up-a-data-science-client.md)」を参照してください。
+ローカル コンピューターとリモート コンピューターの両方で **RevoScaleR** が必要であることを思い起こしてください。 Microsoft R ライブラリがない RStudio の汎用インストールまたは他の環境を使用するこのチュートリアルを完了することはできません。 詳しくは、「 [データ サイエンス クライアントのセットアップ](../r/set-up-a-data-science-client.md)」を参照してください。
 
 ## <a name="summary-of-tasks"></a>タスクの概要
 
-+ 最初に、CSV ファイルまたは XDF ファイルからデータを取得します。 データをインポートする[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]で関数を使用して、 **RevoScaleR**パッケージ。
-+ モデルのトレーニングとスコア付けを使用して、実行、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]コンピューティング コンテキスト。 
-+ 使用**RevoScaleR**新しいを作成する関数[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]スコア付けの結果を保存するテーブル。
-+ サーバーの両方のプロットを作成し、ローカル コンピューティング コンテキスト。
-+ 内のデータに対してモデルのトレーニング[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]で R を実行して、データベース、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]インスタンス。
-+ データのサブセットを抽出し、分析に再利用できる、ローカル ワークステーション上の XDF ファイルとして保存します。
-+ スコアリングには、ODBC 接続を開くことで新しいデータの取得、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]データベース。 スコア付けは、ローカル ワークステーションで行われます。
-+ カスタム R 関数を作成し、コンピューティング コンテキストをシミュレーションを実行するサーバーで実行します。
++ 最初に、CSV ファイルまたは XDF ファイルからデータを取得します。 **RevoScaleR** パッケージの関数を使用して、データを [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] にインポートします。
++ モデルのトレーニングとスコアリングは、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のコンピューティング コンテキストを使用して実行されます。 
++ スコアリングの結果を保存するために、**RevoScaleR** 関数を使用して新しい [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] テーブルを作成します。
++ サーバーとローカル両方のコンピューティング コンテキストで、プロットを作成します。
++ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスで R を実行して、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データベースのデータでモデルをトレーニングします。
++ データのサブセットを抽出し、ローカル ワークステーションでの分析で再利用できるように、それを XDF ファイルとして保存します。
++ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データベースへの ODBC 接続を開くことで、スコアリング用の新しいデータを取得します。 スコアリングはローカル ワークステーションで実行されます。
++ カスタム R 関数を作成し、それをサーバー コンピューティング コンテキストで実行してシミュレーションを実行します。
 
 ## <a name="next-steps"></a>次の手順
 
 > [!div class="nextstepaction"]
-> [レッスン 1:データベースとアクセス許可を作成します。](deepdive-work-with-sql-server-data-using-r.md)
+> [レッスン 1:データベースとアクセス許可を作成する](deepdive-work-with-sql-server-data-using-r.md)

@@ -1,5 +1,5 @@
 ---
-title: getInt (java.lang.String) メソッド |Microsoft Docs
+title: getInt メソッド (java.lang.String) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: 1705812f-1f04-4e84-b6c8-d164dded47b3
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: dc6a60f860138bc34376ab2dddb04ee3a1885b8f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a5d3e6fc2abd8ab7ccd7c4a27622108ac3d79f18
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47830692"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67982743"
 ---
 # <a name="getint-method-javalangstring"></a>getInt (java.lang.String) メソッド
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

@@ -15,13 +15,12 @@ apitype: DLLExport
 ms.assetid: cb325f5d-10ee-4a56-ba28-db0074ab3926
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: dc464988d46d5896b4a925253c8c42916897bcd2
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: b06364adefd62b4267d43bac50d79f8f1d37958a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52418786"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68022093"
 ---
 # <a name="localdbstartinstance-function"></a>LocalDBStartInstance 関数
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -111,7 +110,7 @@ HRESULT LocalDBStartInstance(
 |バッファー|バッファー サイズ|理論的根拠|アクション|  
 |------------|-----------------|---------------|------------|  
 |NULL|NULL|ユーザーがインスタンスを起動する必要があるあり、パイプ必要としない名前。|インスタンスを起動します (パイプの戻り値と必要なバッファー サイズの戻り値なし)。|  
-|NULL|存在|ユーザーが出力バッファー サイズを要求します  (次の呼び出しで、ユーザーはおそらく実際の起動を要求します)。|必要なバッファー サイズを返します (起動とパイプの戻り値なし)。 結果は S_OK です。|  
+|NULL|存在|ユーザーが出力バッファー サイズを要求します (次の呼び出しで、ユーザーはおそらく実際の起動を要求します)。|必要なバッファー サイズを返します (起動とパイプの戻り値なし)。 結果は S_OK です。|  
 |存在|NULL|許可されていません。入力に誤りがあります。|返される結果は、LOCALDB_ERROR_INVALID_PARAMETER です。|  
 |存在|存在|ユーザーはインスタンスを起動する必要があり、起動後に接続するパイプ名が必要です。|バッファー サイズを確認し、インスタンスを起動し、バッファーにあるパイプ名を返します。 <br />バッファー サイズ引数の長さを返します、"server ="文字列の末尾の null は含まれません。|  
   

@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 1750804b-d7ef-47d6-8d73-1f51fa1cbe4a
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 95e09a0b3618d88929a0474e7a611d4ea1680793
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 7d424fb1033ff30044dd34134ac31991d8561c40
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47688380"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67917798"
 ---
 # <a name="originalvalue-and-underlyingvalue-properties-example-vb"></a>OriginalValue および UnderlyingValue プロパティの例 (VB)
 この例では、 [OriginalValue](../../../ado/reference/ado-api/originalvalue-property-ado.md)と[UnderlyingValue](../../../ado/reference/ado-api/underlyingvalue-property.md)にレコードのデータを基になる場合は、メッセージを表示することでプロパティが変更された、 [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md)バッチ更新します。  
@@ -120,7 +119,7 @@ End Sub
 'EndOriginalValueVB  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [OriginalValue プロパティ (ADO)](../../../ado/reference/ado-api/originalvalue-property-ado.md)   
  [RecordSet オブジェクト (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)   
  [UnderlyingValue プロパティ](../../../ado/reference/ado-api/underlyingvalue-property.md)

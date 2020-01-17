@@ -15,12 +15,12 @@ ms.assetid: b1dd8413-0cd0-411b-a79b-1bb043ccc62d
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 85eebaa5abbf97b5b7787a788b4294b504a30e10
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: b073e6025bc1483db2482a03d525b758d39efea4
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52768824"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62917446"
 ---
 # <a name="create-a-user-defined-data-type-alias"></a>ユーザー定義データ型の別名の作成
   このトピックでは、 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] または [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] を使用して、 [!INCLUDE[tsql](../../includes/tsql-md.md)]にユーザー定義データ型の別名を新しく作成する方法について説明します。  
@@ -54,7 +54,7 @@ ms.locfileid: "52768824"
   
 #### <a name="to-create-a-user-defined-data-type"></a>ユーザー定義データ型を作成するには  
   
-1.  オブジェクト エクスプローラーで、 **[データベース]** を展開し、データベースを展開します。次に、 **[プログラミング]**、 **[種類]** を順に展開し、 **[ユーザー定義データ型]** を右クリックして、 **[新しいユーザー定義データ型]** をクリックします。  
+1.  オブジェクト エクスプローラーで、 **[データベース]** を展開し、データベースを展開します。次に、 **[プログラミング]** 、 **[種類]** を順に展開し、 **[ユーザー定義データ型]** を右クリックして、 **[新しいユーザー定義データ型]** をクリックします。  
   
      **[NULL を許容]**  
      ユーザー定義データ型が NULL 値を受け入れるかどうかを指定します。 既存のユーザー定義データ型に対する NULL 値の許容/非許容は編集できません。  
@@ -102,7 +102,7 @@ ms.locfileid: "52768824"
   
 4.  **[データ型]** ボックスで、新しいデータ型の別名の基になるデータ型を選択します。  
   
-5.  選択したデータ型に該当する場合は、 **[長さ]**、 **[有効桁数]**、および **[小数点以下桁数]** ボックスへの設定を完了します。  
+5.  選択したデータ型に該当する場合は、 **[長さ]** 、 **[有効桁数]** 、および **[小数点以下桁数]** ボックスへの設定を完了します。  
   
 6.  新しいデータ型の別名で NULL 値を許可する場合は、 **[NULL を許容]** チェック ボックスをオンにします。  
   
@@ -118,7 +118,7 @@ ms.locfileid: "52768824"
   
 3.  次の例をコピーしてクエリ ウィンドウに貼り付け、 **[実行]** をクリックします。 この例では、システムから提供されている `varchar` データ型に基づいて、データ型の別名を作成します。 データ型の別名 `ssn` 型は、11 桁の社会保障番号 (999-99-9999) を格納する列で使用されます。 この列で NULL 値は許容されません。  
   
-```tsql  
+```sql  
 CREATE TYPE ssn  
 FROM varchar(11) NOT NULL ;  
 ```  

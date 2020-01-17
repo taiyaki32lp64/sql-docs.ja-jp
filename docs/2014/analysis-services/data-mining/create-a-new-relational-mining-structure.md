@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - mining structures [Analysis Services], relational
@@ -15,12 +14,12 @@ ms.assetid: 55bac3bd-700e-4f91-bcc6-f3cd8c026da1
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 5b38ae218dbe1f5f2cc1f0f1090ed2d82e52a96e
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: b4ec4bc871723b829d9ce9ec805d4b52b1c649e8
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48133092"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66085389"
 ---
 # <a name="create-a-new-relational-mining-structure"></a>新しいリレーショナル マイニング構造の作成
   データ マイニング ウィザードを使用すると、リレーショナル データベースなどのソースのデータを使用して新しいマイニング構造を作成し、その構造とすべての関連モデルを [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] データベースに保存できます。  
@@ -49,18 +48,18 @@ ms.locfileid: "48133092"
   
      予測可能列を選択した後、 **[候補検索]** ボタンをクリックすると **[関連列の提示]** ダイアログ ボックスが開きます。 このダイアログ ボックスで **[OK]** をクリックして、提示された列を受け入れると、選択された列をマイニング構造に含めることができます。また、 **[入力]** 列で選択内容を変更してから、 **[OK]** をクリックしてもかまいません。 提示された内容を無視するには、 **[キャンセル]** をクリックします。  
   
-8.  **[次へ]** をクリックします。  
+8.  [**次へ**] をクリックします。  
   
 9. **[列のコンテンツおよびデータ型の指定]** ページの **[マイニング モデル構造]** では、各列のコンテンツの種類とデータ型を調整できます。  
   
     > [!NOTE]  
     >  **[検出]** をクリックすると、連続データまたは不連続なデータを含む列を自動的に検出できます。 このボタンをクリックすると、**[コンテンツの種類]** と **[データ型]** 列で、列の内容とデータ型が更新されます。 コンテンツの種類とデータ型の詳細については、「[コンテンツの種類 (データ マイニング)](content-types-data-mining.md)」および「[データ型 (データ マイニング)](data-types-data-mining.md)」をご覧ください。  
   
-10. **[次へ]** をクリックします。  
+10. [**次へ**] をクリックします。  
   
 11. **[ウィザードの完了]** ページで、作成するマイニング構造とそれに関連した初期マイニング モデルの名前を指定し、 **[完了]** をクリックします。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [マイニング構造のタスクと操作方法](mining-structure-tasks-and-how-tos.md)  
   
   

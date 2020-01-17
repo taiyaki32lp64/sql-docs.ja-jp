@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: f800c966-3fae-41b3-963a-464988f80da3
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 5a16d143266823b9455c306cefa37c9a7618524d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 4ae595ee4912251fc6e97d272202812e3d51dda5
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47743650"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67976318"
 ---
 # <a name="prepare-method-sqlserverxaresource"></a>prepare メソッド (SQLServerXAResource)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -36,7 +35,7 @@ public int prepare(javax.transaction.xa.Xid xid)
 ```  
   
 #### <a name="parameters"></a>パラメーター  
- *xid*  
+ *type*  
   
  Xid オブジェクト。  
   

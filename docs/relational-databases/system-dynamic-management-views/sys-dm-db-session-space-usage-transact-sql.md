@@ -19,19 +19,18 @@ helpviewer_keywords:
 ms.assetid: a67a6045-8e14-460a-9fe3-912b846c08c1
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: dfc87e6acf454b57467c3c8746ba492bd57b0102
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 5e4febf0882f57f7d1545f86cbe4c65e322226dc
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47596830"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68263969"
 ---
-# <a name="sysdmdbsessionspaceusage-transact-sql"></a>sys.dm_db_session_space_usage (Transact-SQL)
+# <a name="sysdm_db_session_space_usage-transact-sql"></a>sys.dm_db_session_space_usage (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-  データベースの各セッションで割り当てられた、または割り当て解除されたページの数を返します。  
+  ページ割り当てし、解放は、データベースの各セッションでの数を返します。  
   
 > [!NOTE]  
 >  このビューはのみに適用できる、 [tempdb データベース](../../relational-databases/databases/tempdb-database.md)します。  
@@ -43,26 +42,26 @@ ms.locfileid: "47596830"
 |-----------------|---------------|-----------------|  
 |**session_id**|**smallint**|セッション ID。<br /><br /> **session_id**マップ**session_id**で[sys.dm_exec_sessions](../../relational-databases/system-dynamic-management-views/sys-dm-exec-sessions-transact-sql.md)します。|  
 |**database_id**|**smallint**|データベース ID。|  
-|**user_objects_alloc_page_count**|**bigint**|セッションで、ユーザー オブジェクトに予約された、または割り当てられたページの数。|  
+|**user_objects_alloc_page_count**|**bigint**|予約された、またはこのセッションでユーザー オブジェクトに割り当てられたページ数。|  
 |**user_objects_dealloc_page_count**|**bigint**|セッションで、ユーザー オブジェクトへの割り当てが解除され、予約されなくなったページの数。|  
 |**internal_objects_alloc_page_count**|**bigint**|セッションで、内部オブジェクトに予約された、または割り当てられたページの数。|  
-|**internal_objects_dealloc_page_count**|**bigint**|セッションで、内部オブジェクトへの割り当てが解除され、予約されなくなったページの数。|  
-|**user_objects_deferred_dealloc_page_count**|**bigint**|遅延割り当て解除のマークされているページ数。<br /><br /> **注:** のサービス パックで導入された[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]と[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]します。|  
+|**internal_objects_dealloc_page_count**|**bigint**|割り当てを解除し、内部オブジェクト用にこのセッションで不要になった予約ページ数。|  
+|**user_objects_deferred_dealloc_page_count**|**bigint**|遅延割り当て解除のマークされているページ数。<br /><br /> **注:** サービス パックで導入された[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]と[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]します。|  
 |**pdw_node_id**|**int**|**適用対象**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]、 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> この配布であるノードの識別子。|  
   
 ## <a name="permissions"></a>アクセス許可  
 
 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]、必要があります`VIEW SERVER STATE`権限。   
-[!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]が必要です、`VIEW DATABASE STATE`データベースの権限。   
+[!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] Premium レベルでは、必要があります、`VIEW DATABASE STATE`データベースの権限。 [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] Standard および Basic 階層は、必要があります、**サーバー管理者**または**Azure Active Directory 管理者**アカウント。   
 
 ## <a name="remarks"></a>コメント  
- このビューでレポートされる割り当てまたは割り当て解除の数に、IAM ページは含まれません。  
+ IAM ページは、このビューでレポートされる割り当てや割り当て解除の数には含まれません。  
   
  ページ カウンターはセッションの開始時に 0 に初期化されます。 このカウンターによって、セッションで完了したタスクに割り当てられた、または割り当て解除されたページの合計数が記録されます。 カウンターはタスクが終了したときにだけ更新され、実行中のタスクは反映されません。  
   
- 1 つのセッションでは同時に複数の要求をアクティブにできます。 要求が並列クエリの場合、複数のスレッドやタスクを開始できます。  
+ セッションは、複数の要求を同時にアクティブに持つことができます。 要求が並列クエリの場合、複数のスレッドやタスクを開始できます。  
   
- セッション、要求、およびタスクの詳細については、次を参照してください[sys.dm_exec_sessions &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-sessions-transact-sql.md)、 [sys.dm_exec_requests &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md)、および。[sys.dm_os_tasks と組み合わせます&#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-tasks-transact-sql.md)します。  
+ セッション、要求、およびタスクの詳細については、[sys.dm_exec_sessions &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-sessions-transact-sql.md)、 [sys.dm_exec_requests &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md)、および [sys.dm_os_tasks と組み合わせます&#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-tasks-transact-sql.md) を参照してください。  
   
 ## <a name="user-objects"></a>ユーザー オブジェクト  
  次のオブジェクトは、ユーザー オブジェクト ページ カウンターに含まれます。  

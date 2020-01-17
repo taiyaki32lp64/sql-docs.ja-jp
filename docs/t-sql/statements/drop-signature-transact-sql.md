@@ -22,13 +22,12 @@ helpviewer_keywords:
 ms.assetid: 8a1fd8c5-0e75-4b2f-9d3c-c296bed56cc7
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: a7def68fb093f056569836a3cbdad5f71b3fbd2f
-ms.sourcegitcommit: c6e71ed14198da67afd7ba722823b1af9b4f4e6f
+ms.openlocfilehash: f36f0bc8b70a371e61f309ac61b7b0d769135429
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/16/2019
-ms.locfileid: "54327693"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67929204"
 ---
 # <a name="drop-signature-transact-sql"></a>DROP SIGNATURE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -51,13 +50,13 @@ DROP [ COUNTER ] SIGNATURE FROM module_name
   
 ## <a name="arguments"></a>引数  
  *module_name*  
- ストアド プロシージャ、関数、トリガー、アセンブリ、またはイベント通知の名前を指定します。  
+ ストアド プロシージャ、関数、アセンブリ、またはトリガーの名前です。  
   
  CERTIFICATE *cert_name*  
  ストアド プロシージャ、関数、トリガー、アセンブリ、またはイベント通知の署名に使用されている証明書の名前を指定します。  
   
  ASYMMETRIC KEY *Asym_key_name*  
- ストアド プロシージャ、関数、アセンブリ、またはトリガーの署名に使用されている非対称キーの名前を指定します。  
+ ストアド プロシージャ、関数、アセンブリ、またはトリガーの署名に使用されている非対称キーの名前です。  
   
 ## <a name="remarks"></a>Remarks  
  署名に関する情報は、sys.crypt_properties カタログ ビューで確認できます。  

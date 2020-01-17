@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 86cbd39f-6dac-409a-9ce1-7dd54403f84b
 author: Shamikg
 ms.author: Shamikg
-manager: craigg
-ms.openlocfilehash: c64b1ea3ecc283cdea92a5722c7a1dad120ecb50
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: 9cc7b3dd309dfac9e35021ca3234ca66483181e9
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52395185"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68074099"
 ---
 # <a name="migrating-db2-data-into-sql-server-db2tosql"></a>SQL Server (DB2ToSQL) への DB2 データの移行
 変換されたオブジェクトが正常に同期後[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]、DB2 からデータを移行する[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]します。  
@@ -56,7 +55,7 @@ ms.locfileid: "52395185"
   
 **データを移行するには**  
   
-1.  次を確認します。  
+1.  次のことを検証します。  
   
     -   DB2 プロバイダーは、SSMA を実行しているコンピューターにインストールされます。  
   

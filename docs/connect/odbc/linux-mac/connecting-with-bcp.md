@@ -1,5 +1,5 @@
 ---
-title: Bcp による接続 |Microsoft Docs
+title: Bcp | を使用した接続Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -12,18 +12,17 @@ helpviewer_keywords:
 ms.assetid: 3eca5717-e50f-40db-be16-a1cebbdfee70
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 903106b5dfc17b98aae0614bd7b168d9b3acdf11
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 1dd80df3a0f7fabec7ae9ddc51b16cb4456c7970
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52527535"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67996620"
 ---
 # <a name="connecting-with-bcp"></a>bcp による接続
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
 
-[bcp](https://go.microsoft.com/fwlink/?LinkID=190626) ユーティリティは、Linux および macOS では [!INCLUDE[msCoName](../../../includes/msconame_md.md)] ODBC Driver for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] にあります。 このページの Windows バージョンとの相違点について説明`bcp`します。
+[bcp](https://go.microsoft.com/fwlink/?LinkID=190626) ユーティリティは、Linux および macOS では [!INCLUDE[msCoName](../../../includes/msconame_md.md)] ODBC Driver for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] にあります。 このページでは、の Windows バージョンとの`bcp`違いについて説明します。
   
 - フィールド ターミネータはタブ ("\t") です。  
   
@@ -47,7 +46,7 @@ bcp AdventureWorks2008R2.Person.Address out test.dat -Usa -Pxxxx -Sxxx.xxx.xxx.x
 ## <a name="available-options"></a>利用可能なオプション
 現在のリリースでは、次の構文およびオプションを使用できます。  
 
-[_データベース_**.**]_スキーマ_**.**_テーブル_**で**_データ\_ファイル_ | **アウト**_データ\_ファイル_
+[_データベース_ **.** ] _スキーマ_ **.** _テーブル_**in**_データ\_ファイル_ | **の出力** _データ\_ファイル_
 
 - -a *packet_size*  
 サーバーとの間で送信されるネットワーク パケットごとのバイト数を指定します。  
@@ -79,7 +78,7 @@ ID 列に、インポートされたデータ ファイルの ID 値を使用し
 一括コピー操作時、空の列には、挿入される列の既定値ではなく、NULL 値が保持されます。  
   
 - -l  
-ログインのタイムアウトを指定します。 - l オプションでは、サーバーへの接続の試行時に、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] へのログインがタイムアウトするまでの秒数を指定します。 既定のログイン タイムアウトは、15 秒です。 ログイン タイムアウトは、0 から 65,534 の数値にする必要があります。 指定した値が数値以外の場合、または範囲外の場合、`bcp` はエラー メッセージを生成します。 値 0 は、無限のタイムアウトを指定します。
+ログインのタイムアウトを指定します。 \- l オプションでは、サーバーへの接続の試行時に、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] へのログインがタイムアウトするまでの秒数を指定します。 既定のログインタイムアウトは15秒です。 ログイン タイムアウトは、0 から 65,534 の数値にする必要があります。 指定した値が数値以外の場合、または範囲外の場合、`bcp` はエラー メッセージを生成します。 値が0の場合は、タイムアウトが無制限であることを示します。
   
 - -L *last_row*  
 テーブルからエクスポートする最後の行、またはデータ ファイルからインポートする最後の行の番号を指定します。  
@@ -103,7 +102,7 @@ ID 列に、インポートされたデータ ファイルの ID 値を使用し
 通貨、日付、時刻のデータを [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] に一括コピーする場合に、クライアント コンピューターのロケール設定に定義された地域別設定が使用されます。  
   
 - -S *server*  
-名前を指定します、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]接続先のインスタンスまたは-d が使用される、DSN。  
+接続先の[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]インスタンスの名前を指定します。または、-D が使用されている場合は、DSN を指定します。  
   
 - -t *field_terminator*  
 フィールド ターミネータを指定します。  

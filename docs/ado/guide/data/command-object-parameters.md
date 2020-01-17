@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 10e7ef4a-78bf-4e91-931e-cbc6c065dd4c
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: f4fb4128333f1fdc5865186a202188fc64b6109f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 29ad7f3aa9347af77080b04fb309f8b50b95dbe4
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47701740"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67925874"
 ---
 # <a name="command-object-parameters"></a>Command オブジェクトのパラメーター
 前のトピックで説明した[を作成して、単純なコマンドを実行する](../../../ado/guide/data/creating-and-executing-a-simple-command.md)します。 使用して、興味深い、[コマンド](../../../ado/reference/ado-api/command-object-ado.md)で次の例では、SQL コマンドのパラメーター化するオブジェクトを表示します。 この変更により、パラメーターのたびに別の値を渡して、コマンドを再利用することです。 [プロパティの準備](../../../ado/reference/ado-api/prepared-property-ado.md)プロパティを**コマンド**にオブジェクトが設定されている**true**、ADO で指定されたコマンドをコンパイルするプロバイダーが必要になります[CommandText](../../../ado/reference/ado-api/commandtext-property-ado.md)を初めて実行する前にします。 メモリ内のコンパイル済みのコマンドも保持されます。 少しそれがパフォーマンスの向上、コマンドがその後呼び出されるたびに結果を準備するために必要なオーバーヘッドが原因で実行される初めてのコマンドの実行はこの低下します。 そのため、1 つ以上の時間を使用する場合にのみ、コマンドを準備する必要があります。  

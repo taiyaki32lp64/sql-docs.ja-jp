@@ -9,16 +9,19 @@ ms.custom: ''
 ms.technology: integration-services
 author: swinarko
 ms.author: sawinark
-ms.reviewer: douglasl
-manager: craigg
-ms.openlocfilehash: c498f71be24d3f9e26aa1f6854dc048e0c9d6b89
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.reviewer: maghan
+ms.openlocfilehash: 436d65965fa0fa114f1891293972141f1373a696
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47698120"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68037170"
 ---
 # <a name="connect-to-the-ssis-catalog-ssisdb-in-azure"></a>Azure の SSIS カタログ (SSISDB) に接続する
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
 
 Azure SQL Database サーバーでホストされている SSIS カタログ (SSISDB) に接続するために必要な接続情報を確認します。 接続するには、次の項目が必要です。
 - 完全修飾サーバー名
@@ -33,7 +36,7 @@ Azure SQL Database サーバーでホストされている SSIS カタログ (SS
 
 ## <a name="get-the-connection-info-from-the-azure-portal"></a>Azure Portal から接続情報を取得する
 1. [Azure ポータル](https://portal.azure.com/)にログインします。
-2. Azure Portal で、左側のメニューから **[SQL Databases]** を選択し、**[SQL データベース]** ページで [`SSISDB` データベース] を選択します。 
+2. Azure Portal で、左側のメニューから **[SQL Databases]** を選択し、 **[SQL データベース]** ページで [`SSISDB` データベース] を選択します。 
 3. `SSISDB` データベースの **[概要]** ページで、次の図のように、完全修飾サーバー名を確認します。 **[クリックしてコピー]** オプションを呼び出すには、サーバー名にマウス ポインターを移動します。
 
     ![サーバー接続情報](media/ssis-azure-connect-to-catalog-database/server-name.png) 
@@ -51,11 +54,11 @@ Azure SQL Database サーバーでホストされている SSIS カタログ (SS
    | **サーバー名** | 完全修飾サーバー名 | 名前は **mysqldbserver.database.windows.net** の形式である必要があります。 |
    | **[認証]** | SQL Server 認証 (SQL Server Authentication) | |
    | **Login** | サーバー管理者アカウント | これはサーバーを作成したときに指定したアカウントです。 |
-   | **Password** | サーバー管理者アカウントのパスワード | これはサーバーを作成したときに指定したパスワードです。 |
+   | **パスワード** | サーバー管理者アカウントのパスワード | これはサーバーを作成したときに指定したパスワードです。 |
 
     ![SSMS を使用してサーバーに接続する](media/ssis-azure-connect-to-catalog-database/ssisdb-connect-1.png)
 
-3. **SSISDB データベースに接続します**。 **[オプション]** を選択して、**[サーバーへの接続]** ダイアログ ボックスを展開します。 展開した **[サーバーへの接続]** ダイアログ ボックスで、**[接続プロパティ]** タブを選択します。**[データベースへの接続]** フィールドで、`SSISDB` を選択または入力します。
+3. **SSISDB データベースに接続します**。 **[オプション]** を選択して、 **[サーバーへの接続]** ダイアログ ボックスを展開します。 展開した **[サーバーへの接続]** ダイアログ ボックスで、 **[接続プロパティ]** タブを選択します。 **[データベースへの接続]** フィールドで、`SSISDB` を選択または入力します。
 
     > [!IMPORTANT]
     > 接続時に `SSISDB` を選択しないと、オブジェクト エクスプローラーで SSIS カタログが表示されない場合があります。
@@ -64,7 +67,7 @@ Azure SQL Database サーバーでホストされている SSIS カタログ (SS
 
 4. **[接続]** を選択します。
 
-5. オブジェクト エクスプローラーで、**[Integration Services カタログ]**、**[SSISDB]** の順に展開し、SSIS カタログ データベース内のオブジェクトを表示します。
+5. オブジェクト エクスプローラーで、 **[Integration Services カタログ]** 、 **[SSISDB]** の順に展開し、SSIS カタログ データベース内のオブジェクトを表示します。
 
     ![SSMS のオブジェクト エクスプローラーで SSISDB データベースを探す](media/ssis-azure-connect-to-catalog-database/ssisdb-connect-3.png)
 

@@ -7,15 +7,15 @@ ms.reviewer: ''
 ms.technology: master-data-services
 ms.topic: conceptual
 ms.assetid: 3f2ae84c-6666-460b-befe-bd72405c0778
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: f5a7e0907732b1d944ce0425b55133ba915d3575
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: d6256ad8ee35b17336940d92ee7b0c917cb591ac
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52792094"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65480095"
 ---
 # <a name="backward-compatibility-master-data-services"></a>旧バージョンとの互換性 (マスター データ サービス)
   ここでは、 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]のバージョン間の変更について説明します。 使用できなくなる機能や、将来のリリースで削除される予定の機能の情報を提供します。 また、Integration Services 機能を含む既存のアプリケーションが使用できなくなったり動作が変わったりするような、製品の変更についても説明します。  

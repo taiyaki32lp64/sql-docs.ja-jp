@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: bdedb044-8924-4ca4-85f3-8b37578e0257
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 9f83b8ce83c1433ce7e20f00580100b65be84961
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: 1c597cd4ca51ca578ca90c4e95db584dec4bcd6d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53209251"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68030593"
 ---
 # <a name="sqlgettypeinfo-function"></a>SQLGetTypeInfo 関数
 **準拠**  
@@ -39,7 +38,7 @@ ms.locfileid: "53209251"
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
   
 SQLRETURN SQLGetTypeInfo(  
      SQLHSTMT      StatementHandle,  
@@ -122,7 +121,7 @@ SQLRETURN SQLGetTypeInfo(
 |CREATE_PARAMS (ODBC 2.0)|6|Varchar|キーワード、TYPE_NAME フィールドで返される名前を使用する場合、アプリケーションがかっこ内に指定できる各パラメーターに対応する、コンマ区切りの一覧。 リストのキーワードは、次のいずれかを指定できます。 長さ、有効桁数または小数点。 構文が使用することが必要である順序で表示されます。 たとえば、CREATE_PARAMS は 10 進数には「有効桁数、小数点」;VARCHAR の CREATE_PARAMS「の長さ」になります データ型を定義します。 パラメーターがない場合、NULL が返されますたとえば、整数です。<br /><br /> ドライバーが使用されている国/地域の言語で CREATE_PARAMS テキストを提供します。|  
 |NULL 許容型 (ODBC 2.0)|7|Smallint (NULL 以外)|かどうか、データ型は NULL 値を受け取ります。<br /><br /> データ型が NULL 値を受け付けない場合 SQL_NO_NULLS します。<br /><br /> データ型が NULL 値を受け取る場合 SQL_NULLABLE します。<br /><br /> SQL_NULLABLE_UNKNOWN 列が NULL 値を受け入れるかどうかが不明である場合。|  
 |CASE_SENSITIVE (ODBC 2.0)|8|Smallint (NULL 以外)|文字データを入力するかどうかは、照合順序との比較で大文字小文字が区別は。<br /><br /> SQL_TRUE 場合は、データ型は文字データ型であり、小文字が区別されます。<br /><br /> データ型が文字データ型ではない、または小文字は区別されません sql_false になります。|  
-|検索可能な (ODBC 2.0)|9|Smallint (NULL 以外)|データ型の使用方法、**場所**句。<br /><br /> SQL_PRED_NONE で列を使用できない場合、**場所**句。 (これは ODBC 2 で SQL_UNSEARCHABLE 値と同じです。*x*)。<br /><br /> SQL_PRED_CHAR 列で使用できる場合は、**場所**句でのみ、**など**述語。 (これは ODBC 2 で SQL_LIKE_ONLY 値と同じです。*x*)。<br /><br /> SQL_PRED_BASIC 列で使用できる場合は、**場所**を除くすべての比較演算子を含む句**など**(比較、定量化された比較は、 **BETWEEN**、 **DISTINCT**、 **IN**、**一致**、および**UNIQUE**)。 (これは ODBC 2 で SQL_ALL_EXCEPT_LIKE 値と同じです。*x*)。<br /><br /> SQL_SEARCHABLE 列で使用できる場合は、**場所**任意の比較演算子を含む句。|  
+|検索可能な (ODBC 2.0)|9|Smallint (NULL 以外)|データ型の使用方法、**WHERE**句。<br /><br /> SQL_PRED_NONE で列を使用できない場合、**WHERE**句。 (これは ODBC 2.*x* の SQL_UNSEARCHABLE 値と同じです。)。<br /><br /> SQL_PRED_CHAR 列で使用できる場合は、**WHERE**句でのみ、**LIKE**述語。 (これは ODBC 2.*x* の SQL_LIKE_ONLY 値と同じです。)。<br /><br /> SQL_PRED_BASIC 列で使用できる場合は、**WHERE**を除くすべての比較演算子を含む句**など**(比較、定量化された比較は、 **BETWEEN**、 **DISTINCT**、 **IN**、**MATCH**、および**UNIQUE**)。 (これは ODBC 2.*x* の SQL_ALL_EXCEPT_LIKE 値と同じです。)。<br /><br /> SQL_SEARCHABLE 列で使用できる場合は、**WHERE**任意の比較演算子を含む句。|  
 |UNSIGNED_ATTRIBUTE (ODBC 2.0)|10|Smallint|かどうか、データ型が符号なしです。<br /><br /> データ型が署名されていない場合は SQL_TRUE にします。<br /><br /> データ型が符号付き場合は sql_false になります。<br /><br /> 属性は、データ型に適用可能でないまたはデータ型が数値でない場合は、NULL が返されます。|  
 |FIXED_PREC_SCALE (ODBC 2.0)|11|Smallint (NULL 以外)|データ型が定義済みかどうか、有効桁数と小数点 (これは、データ ソースに固有)、money データ型などが修正済み。<br /><br /> SQL_TRUE に事前定義された場合は、有効桁数と小数点を修正しました。<br /><br /> 定義済みの固定有効桁数と小数点がない場合は sql_false になります。|  
 |AUTO_UNIQUE_VALUE (ODBC 2.0)|12|Smallint|データ型が自動増分されるかどうか。<br /><br /> データ型が自動増分される場合は SQL_TRUE にします。<br /><br /> データ型でない自動増分される場合は sql_false になります。<br /><br /> 属性は、データ型に適用可能でないまたはデータ型が数値でない場合は、NULL が返されます。<br /><br /> アプリケーションは、この属性を持つ列に値を挿入することができますが、通常、列の値を更新することはできません。<br /><br /> 自動インクリメント列に挿入が行われる挿入時に、一意の値が列に挿入されます。 増分値は定義されていませんがデータ ソースに固有です。 アプリケーションでは、特定の値によって、特定の時点またはインクリメントで、自動インクリメント列が開始されるは想定しないでください。|  

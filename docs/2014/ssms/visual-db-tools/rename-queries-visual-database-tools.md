@@ -14,11 +14,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: ab0a4af42a6137a78d1d884d7f00dd37911f9ff4
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52817014"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63316839"
 ---
 # <a name="rename-queries-visual-database-tools"></a>クエリの名前の変更 (Visual Database Tools)
   現在開いていないクエリの名前を変更できます。 次のクエリの名前変更の手順は、対象のクエリが閉じられている場合にのみ使用できます。  
@@ -31,7 +31,7 @@ ms.locfileid: "52817014"
   
 3.  クエリの新しい名前を入力し、Enter キーを押します。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [クエリおよびビューの操作方法に関するトピックを設計&#40;Visual Database Tools&#41;](visual-database-tools.md)   
  [クエリに関する基本操作の実行 (Visual Database Tools)](perform-basic-operations-with-queries-visual-database-tools.md)  
   

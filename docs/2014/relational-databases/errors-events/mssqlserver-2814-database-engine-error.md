@@ -12,12 +12,12 @@ ms.assetid: 22800748-9be9-4511-9428-6b8b40e5bef9
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: b896aa1221f3da636d6754e829f00f0b4b5c24fe
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 4c8def0fad1ae7eddb9de2e7206923b872c41ed2
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53357433"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "67046771"
 ---
 # <a name="mssqlserver2814"></a>MSSQLSERVER_2814
     
@@ -71,11 +71,11 @@ ms.locfileid: "53357433"
   
      AND qs.plan_handle = *plan_handle*;  
   
-2.  理由コードの説明に基づいて、再コンパイルを回避するようにステートメント、バッチ、またはプロシージャを修正します。 たとえば、ストアド プロシージャに 1 つ以上の SET ステートメントが含まれていることがあります。 これらのステートメントはプロシージャから削除する必要があります。 再コンパイルの理由と解決策のその他の例については、「[SQL Server 2005 のバッチのコンパイル、再コンパイル、およびプランのキャッシュに関する問題](https://go.microsoft.com/fwlink/?LinkId=69175)」を参照してください。  
+2.  理由コードの説明に基づいて、再コンパイルを回避するようにステートメント、バッチ、またはプロシージャを修正します。 たとえば、ストアド プロシージャに 1 つ以上の SET ステートメントが含まれていることがあります。 これらのステートメントはプロシージャから削除する必要があります。 再コンパイルの理由と解決策のその他の例については、「[SQL Server 2005 のバッチのコンパイル、再コンパイル、およびプランのキャッシュに関する問題](https://docs.microsoft.com/previous-versions/sql/sql-server-2005/administrator/cc966425(v=technet.10))」を参照してください。  
   
 3.  問題が継続して発生する場合は、マイクロソフト カスタマー サポート サービスに問い合わせてください。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [SQL:StmtRecompile イベント クラス](../event-classes/sql-stmtrecompile-event-class.md)  
   
   

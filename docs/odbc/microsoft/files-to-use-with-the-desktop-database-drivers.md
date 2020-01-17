@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: c936b9e9-e965-4437-a205-833413320940
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 42f22cc0214929f283209fa12542e9620dbdcc08
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 98df4ed5de9cc38f017c2fb9c577d12c067c5ebf
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47726620"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68063684"
 ---
 # <a name="files-to-use-with-the-desktop-database-drivers"></a>デスクトップ データベース ドライバーで使用するファイル
 ODBC のデスクトップ データベース ドライバーは、Microsoft Jet データベース エンジン、インストール可能な ISAM ファイル、および Microsoft ODBC ファイルで使用されます。 製品の再配布に必要なすべてと、すべてはコア コンポーネント。  

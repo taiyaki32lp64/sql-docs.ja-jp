@@ -14,11 +14,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 0e48619daa350fd5b7a7dc47a9762459fbddc7d7
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48111140"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68206588"
 ---
 # <a name="filestream-support-odbc"></a>FILESTREAM のサポート (ODBC)
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client の ODBC では、強化された FILESTREAM 機能がサポートされています。 この機能の詳細については、次を参照してください。 [FILESTREAM のサポート](../features/filestream-support.md)します。 FILESTREAM の ODB サポートを示すサンプルについては、次を参照してください。[送信し、FILESTREAM のときは、データの受信増分&#40;ODBC&#41;](../../native-client-odbc-how-to/send-and-receive-data-incrementally-with-filestream-odbc.md)します。  

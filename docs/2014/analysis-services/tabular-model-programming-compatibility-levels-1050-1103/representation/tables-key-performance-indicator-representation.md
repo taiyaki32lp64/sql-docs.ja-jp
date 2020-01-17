@@ -4,20 +4,18 @@ ms.custom: ''
 ms.date: 04/27/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: analysis-services
 ms.topic: reference
 ms.assetid: 8d3d949e-5d43-4d2e-9dc8-48d182a7a935
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 1af16003b73b76ea0d899ecacb19dda42aa867d9
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: d0981b473ef29ac709213c1e9eee1cea01f47e2b
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52538691"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62795442"
 ---
 # <a name="key-performance-indicator-representation-tabular"></a>主要業績評価指標表現 (テーブル)
   KPI は、対象の値に対するベース メジャーによって定義される値のパフォーマンスを測定に使用されます。  

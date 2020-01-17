@@ -10,17 +10,20 @@ ms.topic: conceptual
 helpviewer_keywords:
 - Data Profiling task [Integration Services], configuring
 ms.assetid: fe050ca4-fe45-43d7-afa9-99478041f9a8
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: a03718844ee86f275664e83776ef9e75cff95bd4
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 0230354bfe53de8c362bcdb70caa597652706ee2
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52535033"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71293981"
 ---
 # <a name="setup-of-the-data-profiling-task"></a>データ プロファイル タスクのセットアップ
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   ソース データのプロファイルを確認する前に、まずデータ プロファイル タスクを設定して実行します。 このタスクは、 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] パッケージ内に作成します。 データ プロファイル タスクを構成するには、[データ プロファイル タスク エディター] を使用します。 このエディターを使用すると、プロファイルの出力先と計算するプロファイルを選択できます。 タスクを設定したら、パッケージを実行してデータ プロファイルを計算します。  
   
 ## <a name="requirements-and-limitations"></a>要件と制限  
@@ -57,7 +60,7 @@ ms.locfileid: "52535033"
 |選択された列に含まれる文字列値の長さごとの、その長さと、テーブル内におけるその長さの行の比率。|**無効な文字列値** - たとえば、米国州コードとして 2 文字を使用する列をプロファイルし、3 文字以上の値を検出できます。|**列長分布プロファイル** - 次のいずれかの文字データ型の列に対して有効です。<br /><br /> **char**<br /><br /> **nchar**<br /><br /> **varchar**<br /><br /> **nvarchar**|  
 |文字列型の列に含まれる指定された比率の値に対応する一連の正規表現。<br /><br /> また、新しい値を検証するために将来使用できる正規表現も見つけます。|**無効な文字列値または形式が正しくない文字列値** - たとえば、米国郵便番号列のパターン プロファイルでは、\d{5}-\d{4}、\d{5}、\d{9} という正規表現が生成されます。 出力にその他の正規表現が示された場合、データに無効な値または形式が正しくない値が含まれています。|**列パターン プロファイル** - 次のいずれかの文字データ型の列に対して有効です。<br /><br /> **char**<br /><br /> **nchar**<br /><br /> **varchar**<br /><br /> **nvarchar**|  
 |選択した列の NULL 値の比率。|**予想外に高い、列の NULL 値の比率** - たとえば、米国郵便番号を想定している列をプロファイルし、許容範囲を超える欠落した郵便番号の比率を検出できます。|**列の NULL 比プロファイル** - 次のいずれかのデータ型の列に対して有効です。<br /><br /> **image**<br /><br /> **text**<br /><br /> **xml**<br /><br /> ユーザー定義型<br /><br /> variant 型|  
-|数値型列の最小値、最大値、平均値、標準偏差や、 **datetime** 列の最小値、最大値などの統計。|**無効な数値および日付** - たとえば、履歴の日付の列をプロファイルし、将来の日付の最大値を検出できます。|**列統計プロファイル** - 次のいずれかのデータ型の列に対して有効です。<br /><br /> 数値データ型:<br /><br /> 整数型 ( **bit**以外<br /><br /> **money**<br /><br /> **smallmoney**<br /><br /> **decimal**<br /><br /> **float**<br /><br /> **real**<br /><br /> **numeric**<br /><br /> 日付および時刻データ型:<br /><br /> **datetime**<br /><br /> **smalldatetime**<br /><br /> **timestamp**<br /><br /> **date**<br /><br /> **time**<br /><br /> **datetime2**<br /><br /> **datetimeoffset**<br /><br /> 注: 日付および時刻データ型を使用する列の場合、プロファイルでは最小値と最大値だけが計算されます。|  
+|数値型列の最小値、最大値、平均値、標準偏差や、 **datetime** 列の最小値、最大値などの統計。|**無効な数値および日付** - たとえば、履歴の日付の列をプロファイルし、将来の日付の最大値を検出できます。|**列統計プロファイル** - 次のいずれかのデータ型の列に対して有効です。<br /><br /> 数値データ型:<br /><br /> 整数型 ( **bit**以外<br /><br /> **money**<br /><br /> **smallmoney**<br /><br /> **decimal**<br /><br /> **float**<br /><br /> **real**<br /><br /> **numeric**<br /><br /> 日付および時刻データ型:<br /><br /> **datetime**<br /><br /> **smalldatetime**<br /><br /> **timestamp**<br /><br /> **date**<br /><br /> **time**<br /><br /> **datetime2**<br /><br /> **datetimeoffset**<br /><br /> 注:日付と時刻データ型を使用する列の場合、プロファイルでは最小値と最大値だけが計算されます。|  
 |選択された列に含まれる値ごとの、その値と、テーブル内におけるその値の行の比率。 または、テーブル内の指定された比率を超えている値。|**列に含まれる個別の値の数が正しくない** - たとえば、米国の州を含む列をプロファイルし、50 個を超える個別の値を検出できます。|**列の値分布プロファイル** - 次のいずれかのデータ型の列に対して有効です。<br /><br /> 数値データ型:<br /><br /> 整数型 ( **bit**以外<br /><br /> **money**<br /><br /> **smallmoney**<br /><br /> **decimal**<br /><br /> **float**<br /><br /> **real**<br /><br /> **numeric**<br /><br /> 文字データ型:<br /><br /> **char**<br /><br /> **nchar**<br /><br /> **varchar**<br /><br /> **nvarchar**<br /><br /> 日付および時刻データ型:<br /><br /> **datetime**<br /><br /> **smalldatetime**<br /><br /> **timestamp**<br /><br /> **date**<br /><br /> **time**<br /><br /> **datetime2**<br /><br /> **datetimeoffset**|  
 |列または列のセットが、選択したテーブルのキーまたは近似キーであるかどうか。|**キーとなる可能性がある列の重複値** - たとえば、Customers テーブルの名前列と住所列をプロファイルし、名前と住所の組み合わせは一意である必要があるにもかかわらず重複している値を検出できます。|**候補キー プロファイル** - 列または列のセットが、選択したテーブルのキーとして適しているかどうかを報告する複数列のプロファイルです。 次のいずれかのデータ型の列に対して有効です。<br /><br /> 整数データ型:<br /><br /> **bit**<br /><br /> **tinyint**<br /><br /> **smallint**<br /><br /> **int**<br /><br /> **bigint**<br /><br /> 文字データ型:<br /><br /> **char**<br /><br /> **nchar**<br /><br /> **varchar**<br /><br /> **nvarchar**<br /><br /> 日付および時刻データ型:<br /><br /> **datetime**<br /><br /> **smalldatetime**<br /><br /> **timestamp**<br /><br /> **date**<br /><br /> **time**<br /><br /> **datetime2**<br /><br /> **datetimeoffset**|  
 |ある列 (依存列) の値が別の列または列のセット (決定列) の値にどの程度依存しているか。|**依存列に含まれる無効な値** - たとえば、米国郵便番号を含む列と米国の州を含む列の間の依存関係をプロファイルできます。 郵便番号によって州が一意に決定されますが、 このプロファイルでは、この依存関係の違反を検出できます。|**機能依存プロファイル** - 次のいずれかのデータ型の列に対して有効です。<br /><br /> 整数データ型:<br /><br /> **bit**<br /><br /> **tinyint**<br /><br /> **smallint**<br /><br /> **int**<br /><br /> **bigint**<br /><br /> 文字データ型:<br /><br /> **char**<br /><br /> **nchar**<br /><br /> **varchar**<br /><br /> **nvarchar**<br /><br /> 日付および時刻データ型:<br /><br /> **datetime**<br /><br /> **smalldatetime**<br /><br /> **timestamp**<br /><br /> **date**<br /><br /> **time**<br /><br /> **datetime2**<br /><br /> **datetimeoffset**|  

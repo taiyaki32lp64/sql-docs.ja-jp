@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: cfed8f86-6bcf-4b90-88eb-9656e22d5dc5
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 73c5f451036360acdbf2b986b84d5631af75386d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d06cb92287537293739fa9bd7b1a86ea7ffd767a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47670170"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68012165"
 ---
 # <a name="configure-the-user-options-server-configuration-option"></a>user options サーバー構成オプションの構成
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -35,7 +34,7 @@ ms.locfileid: "47670170"
   
      [推奨事項](#Recommendations)  
   
-     [Security](#Security)  
+     [セキュリティ](#Security)  
   
 -   **user connections 構成オプションを構成する方法:**  
   
@@ -43,15 +42,15 @@ ms.locfileid: "47670170"
   
      [Transact-SQL](#TsqlProcedure)  
   
--   **補足情報:**  [user connections 構成オプションを構成した後](#FollowUp)  
+-   **補足情報:** [user options 構成オプションを構成した後](#FollowUp)  
   
-##  <a name="BeforeYouBegin"></a> 作業を開始する準備  
+##  <a name="BeforeYouBegin"></a> はじめに  
   
 ###  <a name="Recommendations"></a> 推奨事項  
   
 -   次の表は、 **user options**の構成値と説明の一覧です。 すべての構成値が他の構成値と両立するわけではありません。 たとえば、ANSI_NULL_DFLT_ON と ANSI_NULL_DFLT_OFF を同時に設定することはできません。  
   
-    |ReplTest1|構成|[説明]|  
+    |[値]|構成|[説明]|  
     |-----------|-------------------|-----------------|  
     |1|DISABLE_DEF_CNST_CHK|中間制約チェックまたは遅延制約チェックを制御します。|  
     |2|IMPLICIT_TRANSACTIONS|dblib ネットワーク ライブラリ接続の場合、ステートメントの実行時にトランザクションを暗黙的に開始するかどうかを制御します。 IMPLICIT_TRANSACTIONS の設定は、ODBC または OLEDB 接続には影響を与えません。|  
@@ -108,7 +107,7 @@ GO
   
 ```  
   
-##  <a name="FollowUp"></a> 補足情報: user connections 構成オプションを構成した後  
+##  <a name="FollowUp"></a>補足情報: user options 構成オプションを構成した後  
  新しい設定は、サーバーを再起動しなくてもすぐに有効になります。  
   
 ## <a name="see-also"></a>参照  

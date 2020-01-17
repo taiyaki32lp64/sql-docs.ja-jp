@@ -13,11 +13,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: ab36ebfefbfd3d8cee8e6da7caadf86eb4a10032
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52781624"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63184278"
 ---
 # <a name="create-relationships-between-tables-on-a-diagram-visual-database-tools"></a>ダイアグラムでテーブル間のリレーションシップを作成する方法 (Visual Database Tools)
   ダイアグラム デザイナーでは、テーブル間で列をドラッグすることにより、異なるテーブルの列の間にリレーションシップを作成できます。  
@@ -28,7 +28,7 @@ ms.locfileid: "52781624"
   
 2.  選択した列を関連テーブルにドラッグします。  
   
-3.  2 つのダイアログ ボックスが表示されます。**外部キー リレーションシップ**と**テーブルと列**、フォア グラウンドに後者表示されます。  
+3.  2 つのダイアログ ボックス、 **[外部キーのリレーションシップ]** と **[テーブルと列]** が表示されます。後者のダイアログ ボックスが手前に表示されます。  
   
 4.  **[リレーションシップ名]** には、FK_*localtable*_*foreigntable*という形式の名前が表示されます。 この値は変更できます。  
   
@@ -46,7 +46,7 @@ ms.locfileid: "52781624"
   
      データベース デザイナーでは、選択した列間のリレーションシップが表示されます。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [テーブルと列 ダイアログ ボックス&#40;Visual Database Tools&#41;](visual-database-tools.md)   
  [Unique 制約と Check 制約](../../relational-databases/tables/unique-constraints-and-check-constraints.md)   
  [データベース ダイアグラムでのテーブルの使用 (Visual Database Tools)](work-with-tables-in-database-diagram-visual-database-tools.md)  

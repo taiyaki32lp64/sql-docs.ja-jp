@@ -9,16 +9,15 @@ ms.technology: t-sql
 ms.topic: language-reference
 dev_langs:
 - TSQL
-author: MashaMSFT
-ms.author: mathoma
-manager: craigg
+author: VanMSFT
+ms.author: vanto
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 9feb899a0a46a04ad52ef15fb801e2eb4866e478
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 3b63cbd1498021fdf9ed8418c3ff36ddec9143f0
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47698570"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68022230"
 ---
 # <a name="sessionid-transact-sql"></a>SESSION_ID (Transact-SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
@@ -40,7 +39,7 @@ SESSION_ID ( )
 ## <a name="general-remarks"></a>全般的な解説  
  セッション ID は、接続が行われたときに、各ユーザー接続に割り当てられます。 これは、接続の間の永続化します。 接続の終了時に、セッション ID は解放されます。  
   
- セッション ID は、アルファベット文字 'SID' を開始します。 これらは大文字と小文字の区別があり、セッション ID が [!INCLUDE[DWsql](../../includes/dwsql-md.md)] コマンドで使われるときは大文字にする必要があります。  
+ セッション ID は、アルファベット文字 'SID' で開始します。 これらは大文字と小文字の区別があり、セッション ID が [!INCLUDE[DWsql](../../includes/dwsql-md.md)] コマンドで使われるときは大文字にする必要があります。  
   
  ビュー [sys.dm_pdw_exec_sessions](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-exec-sessions-transact-sql.md) をクエリして、この関数と同じ情報を取得できます。  
   

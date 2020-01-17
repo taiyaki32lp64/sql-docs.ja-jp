@@ -2,7 +2,7 @@
 title: SharePoint モード レポート サーバーのサブスクリプションの作成と管理 | Microsoft Docs
 ms.date: 03/07/2017
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: subscriptions
 ms.topic: conceptual
 helpviewer_keywords:
@@ -10,14 +10,14 @@ helpviewer_keywords:
 - subscriptions [Reporting Services], deleting
 - subscriptions [Reporting Services], managing
 ms.assetid: 44be7ee2-33ce-46e4-9d1a-a20aaf43a227
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 44f4ba6f43d0c1d83aee358e018bc6aa51a12abe
-ms.sourcegitcommit: 9f2edcdf958e6afce9a09fb2e572ae36dfe9edb0
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 5d4ffc3930003a4035211a4a63a54bc4f8196948
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50100093"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65578346"
 ---
 # <a name="create-and-manage-subscriptions-for-sharepoint-mode-report-servers"></a>SharePoint モード レポート サーバーのサブスクリプションの作成と管理
   SharePoint モードのレポート サーバーと統合されている SharePoint Web アプリケーションから、レポートを配信する [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] サブスクリプションを作成することができます。 サブスクリプションは、ドキュメント ライブラリやファイル フォルダーに対して、または電子メールとしてレポートを配信できます。 このトピックでは、 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] サブスクリプションを作成するための要件と手順についてまとめます。  
@@ -104,7 +104,7 @@ ms.locfileid: "50100093"
   
 7.  **[表示形式]** では、レポートのアプリケーション形式を選択します。  
   
-8.  **[書き込みモード]** では、 **[なし]**、 **[自動増分]**、 **[上書き]** の中から選択します。 これらのオプションは、後続の配信でファイルを上書きするかどうかを決定します。 以前に配信したファイルを保持する場合、 **[自動増分]** を選択できます。 一意なファイル名を作成するために、新しいファイルには番号が付加されます。 **[なし]** を選択した場合は、配信先の場所に同じ名前のファイルが既に存在すると配信が行われません。  
+8.  **[書き込みモード]** では、 **[なし]** 、 **[自動増分]** 、 **[上書き]** の中から選択します。 これらのオプションは、後続の配信でファイルを上書きするかどうかを決定します。 以前に配信したファイルを保持する場合、 **[自動増分]** を選択できます。 一意なファイル名を作成するために、新しいファイルには番号が付加されます。 **[なし]** を選択した場合は、配信先の場所に同じ名前のファイルが既に存在すると配信が行われません。  
   
 9. **[ファイル拡張子]** で、アプリケーションのファイル形式に対応するファイル名拡張子を追加する場合は **[True]** 、拡張子を付けずにファイルを作成する場合は [False] を選択します。  
   

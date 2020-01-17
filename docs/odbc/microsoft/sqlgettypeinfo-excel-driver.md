@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 708845be-e6a1-4677-8113-c52819a43fa4
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: ac7fe52ffdbb090e0b63a972e77c1a7f7a756446
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 227fef1ecd28e5099b599e86c82c3cc42fbacd0c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47788240"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67898707"
 ---
 # <a name="sqlgettypeinfo-excel-driver"></a>SQLGetTypeInfo (Excel ドライバー)
 > [!NOTE]  

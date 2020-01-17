@@ -11,15 +11,14 @@ helpviewer_keywords:
 - unique resource names
 - URN
 ms.assetid: e0d30dbe-7daf-47eb-8412-1b96792b6fb9
-author: stevestein
-ms.author: sstein
-manager: craigg
-ms.openlocfilehash: aaf8d8f1410295439f5083fa8c33067d61b0ffa1
-ms.sourcegitcommit: bfa10c54e871700de285d7f819095d51ef70d997
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 0eca650c1e499c54715204637306485280938707
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/14/2019
-ms.locfileid: "54256477"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68049113"
 ---
 # <a name="query-expressions-and-uniform-resource-names"></a>クエリ式と Uniform Resource Name
 

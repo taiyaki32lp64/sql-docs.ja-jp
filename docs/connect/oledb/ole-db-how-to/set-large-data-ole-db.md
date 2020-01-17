@@ -1,5 +1,5 @@
 ---
-title: 大きなデータ (OLE DB) の設定 |Microsoft Docs
+title: 大きなデータの設定 (OLE DB) |Microsoft Docs
 description: 大きなデータの設定 (OLE DB)
 ms.custom: ''
 ms.date: 06/14/2018
@@ -12,13 +12,12 @@ helpviewer_keywords:
 - large data
 author: pmasl
 ms.author: pelopes
-manager: craigg
-ms.openlocfilehash: e54a622178d583d53149658d29253d5ba604ae68
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.openlocfilehash: 72827ffa7866b624c50a83c0d3695f0f011cfe5c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51605602"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67994679"
 ---
 # <a name="set-large-data-ole-db"></a>大きなデータの設定 (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

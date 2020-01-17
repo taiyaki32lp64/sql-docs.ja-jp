@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: 0f6fd52d-ac72-43e3-aa08-05a2d2bb873d
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 7904e42d9ffd82d2c8a5ec7f5c9226d01c5059ef
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 81e99fc17cb8f369967ff4c26699e67f0ed91d33
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53371004"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66070942"
 ---
 # <a name="unable-to-refresh-data-for-a-data-connection-in-the-workbook-try-again-or-contact-your-system-administrator-the-following-connections-failed-to-refresh-powerpivot-data"></a>ブック内のデータ接続に関するデータを更新できません。 再試行するか、システム管理者に問い合わせてください。 次の接続の更新に失敗しました:[PowerPivot データ]
   PowerPivot データを含む Excel ブックで、Excel Services は、PowerPivot サーバーに送信した接続要求が失敗した場合にこのエラーを返します。  
@@ -33,7 +32,7 @@ ms.locfileid: "53371004"
 ## <a name="explanation-and-resolution"></a>説明および解決方法  
  Excel Services が PowerPivot データに接続できないか、PowerPivot データを読み込むことができません。 このエラーは、次のような状況で発生します。  
   
- **シナリオ 1:サービスが開始されていません。**  
+ **シナリオ 1: サービスが開始されていません。**  
   
  SQL Server Analysis Services (PowerPivot) インスタンスが開始されていません。 パスワードの期限が切れると、サービスの実行が停止します。 パスワードを変更する方法についての詳細については、次を参照してください。 [PowerPivot サービス アカウントの構成](configure-power-pivot-service-accounts.md)と[開始または PowerPivot を SharePoint サーバーの停止](start-or-stop-a-power-pivot-for-sharepoint-server.md)します。  
   
@@ -55,7 +54,7 @@ ms.locfileid: "53371004"
   
  PowerPivot for SharePoint を実行するサーバーは、更新された OLE DB データ プロバイダーを自動的に取得します。 同じコンピューター上の PowerPivot for SharePoint を使用しない、スタンドアロン インスタンスの Excel Services など、その他のサーバーは、新しいクライアント ライブラリを使用するために、更新プログラムを適用する必要があります。 「 [SharePoint サーバーへの Analysis Services OLE DB プロバイダーのインストール](../../sql-server/install/install-the-analysis-services-ole-db-provider-on-sharepoint-servers.md)」を参照してください。  
   
- **シナリオ 3:ドメイン コント ローラーは使用できません。**  
+ **シナリオ 3: ドメイン コント ローラーは使用できません。**  
   
  ユーザー ID の検証にドメイン コントローラーを使用できないことが原因である場合があります。 Windows トークン サービスに対するクレームにより各接続で SharePoint ユーザーを認証するには、ドメイン コントローラーが必要です。 Windows トークン サービスに対するクレームでは、キャッシュされた資格情報は使用されません。 接続ごとにユーザー ID が検証されます。  
   
@@ -65,7 +64,7 @@ ms.locfileid: "53371004"
   
  PowerPivot for SharePoint をオフライン状態で使用することを目的とする場合は、コンピューターにドメイン コントローラーをインストールすると便利です。 PowerPivot をオフラインで使用する方法の詳細については、ブログ エントリを参照してください「"PowerPivot サーバーをネットワークから切断を取り入れること」 [ http://www.powerpivotgeek.com](https://go.microsoft.com/fwlink/?LinkId=184241)します。  
   
- **シナリオ 4:不安定なサーバー**  
+ **シナリオ 4: 不安定なサーバー**  
   
  1 つ以上のサービスが一貫性のない状態にある可能性があります。 IISRESET を実行すると問題が解決することがあります。  
   

@@ -13,11 +13,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 3f577f7798da2ba7b7ee4259ecc98994f713cfc5
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52768334"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62762340"
 ---
 # <a name="create-a-database-snapshot-transact-sql"></a>データベース スナップショットの作成 (Transact-SQL)
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データベース スナップショットを作成する唯一の方法は、 [!INCLUDE[tsql](../../includes/tsql-md.md)]を使用することです。 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] では、データベース スナップショットの作成はサポートされません。  
@@ -30,7 +30,7 @@ ms.locfileid: "52768334"
   
      [ベスト プラクティス:データベース スナップショットの名前付け](#Naming)  
   
--   **データベースのスナップショットを作成します。**[Transact-SQL](#TsqlProcedure)  
+-   **データベースのスナップショットを作成します。** [Transact-SQL](#TsqlProcedure)  
   
 ##  <a name="BeforeYouBegin"></a> はじめに  
   
@@ -53,7 +53,7 @@ ms.locfileid: "52768334"
   
 -   [ベスト プラクティス:データベース スナップショットの名前付け](#Naming)  
   
--   [ベスト プラクティス:データベース スナップショットの数を制限します。](#Limiting_Number)  
+-   [ベスト プラクティス:データベース スナップショット数の制限](#Limiting_Number)  
   
 -   [ベスト プラクティス:データベース スナップショットへのクライアント接続](#Client_Connections)  
   
@@ -82,7 +82,7 @@ AdventureWorks_snapshot_noon
 AdventureWorks_snapshot_evening  
 ```  
   
-####  <a name="Limiting_Number"></a> ベスト プラクティス:データベース スナップショット数の制限  
+####  <a name="Limiting_Number"></a> ベスト プラクティス:データベース スナップショットの数を制限します。  
  一連のスナップショットを長期にわたって作成することで、ソース データベースのシーケンシャルなスナップショットがキャプチャされます。 各スナップショットは、明示的に削除されるまで保持されます。 元のページが更新されるにつれて、各スナップショットが継続的に拡張されるので、新しいスナップショットの作成後に古いスナップショットを削除するとディスク領域を節約できます。  
   
 > [!NOTE]  

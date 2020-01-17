@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 helpviewer_keywords:
 - extended events [SQL Server], ADD TARGET argument
@@ -14,12 +13,12 @@ ms.assetid: 08454543-c5c8-4ca3-9af9-f1d82264471c
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 368f019453fe0c8f5fcbef245db3f4b50769a210
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: a66a4e77b3858b769aef287e68cac18b8b8514ea
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48223152"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66064802"
 ---
 # <a name="get-the-configurable-parameters-for-the-add-target-argument"></a>ADD TARGET 引数の構成可能パラメーターの取得
   この作業には、[!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] のクエリ エディターを使用した次の手順の実行も含まれます。  
@@ -36,7 +35,7 @@ ms.locfileid: "48223152"
   
 -   required  
   
-##  <a name="BeforeYouBegin"></a> 作業を開始する準備  
+##  <a name="BeforeYouBegin"></a> はじめに  
  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 拡張イベント セッションを作成する前に、CREATE EVENT SESSION または ALTER EVENT SESSION で ADD TARGET 引数を使用する際に設定できるパラメーターを確認すると役立つことがあります。  
   
 ### <a name="to-get-the-configurable-parameters-for-the-add-target-argument-using-query-editor"></a>クエリ エディターで ADD TARGET 引数の構成可能パラメーターを取得するには  

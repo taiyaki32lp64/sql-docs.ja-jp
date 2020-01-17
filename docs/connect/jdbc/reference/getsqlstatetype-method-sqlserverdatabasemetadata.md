@@ -1,5 +1,5 @@
 ---
-title: getSQLStateType メソッド (SQLServerDatabaseMetaData) |Microsoft Docs
+title: getSQLStateType メソッド (SQLServerDatabaseMetaData) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: ee4d6751-68a3-4d04-831c-e6d704c59e63
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: a4a01e2bb8ef76af91c4dede71ae7457351d430b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 76faa3bcaccac4f75d95dc49276c669a5631b5a8
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47733200"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67979731"
 ---
 # <a name="getsqlstatetype-method-sqlserverdatabasemetadata"></a>getSQLStateType メソッド (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -38,15 +37,15 @@ public int getSQLStateType()
 ## <a name="return-value"></a>戻り値  
  SQLSTATE の種類を示す **int** です。次のいずれかの値になります。  
   
--   Java ランタイム環境バージョン 5.0: 場合、 **xopenStates**接続プロパティに設定されて**true**DatabaseMetaData.sqlStateXOpen を返します。 それ以外の場合、DatabaseMetaData.sqlStateSQL99 します。  
+-   Java Runtime Environment バージョン5.0 の場合: **xopenStates**接続プロパティが**true**に設定されている場合、このメソッドは Databasemetadata. sqlstatexopen を返します。 それ以外の場合は、sqlStateSQL99 です。  
   
--   Java ランタイム環境バージョン 6.0: 場合、 **xopenStates**接続プロパティに設定されて**true**DatabaseMetaData.sqlStateXOpen を返します。 それ以外の場合、DatabaseMetaData.sqlStateSQL します。  
+-   Java Runtime Environment バージョン6.0 の場合: **xopenStates**接続プロパティが**true**に設定されている場合、このメソッドは Databasemetadata. sqlstatexopen を返します。 それ以外の場合、DatabaseMetaData。 sqlStateSQL。  
   
 ## <a name="exceptions"></a>例外  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- この getSQLStateType メソッドは、java.sql.DatabaseMetaData インターフェイスで getSQLStateType メソッドによって指定されます。  
+ この getSQLStateType メソッドは、java メタデータインターフェイスの getSQLStateType メソッドによって指定されます。  
   
 ## <a name="see-also"></a>参照  
  [SQLServerDatabaseMetaData のメソッド](../../../connect/jdbc/reference/sqlserverdatabasemetadata-methods.md)   

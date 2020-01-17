@@ -1,5 +1,5 @@
 ---
-title: sp_addpullsubscription (TRANSACT-SQL) |Microsoft Docs
+title: sp_addpullsubscription (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -15,16 +15,15 @@ helpviewer_keywords:
 ms.assetid: 0f4bbedc-0c1c-414a-b82a-6fd47f0a6a7f
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 26ced1d422c1f47ebd88404b7cf3996df8b9c649
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: 7f65d868f7560f1e413b8c28308afac495233102
+ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54126057"
+ms.lasthandoff: 08/03/2019
+ms.locfileid: "68769081"
 ---
-# <a name="spaddpullsubscription-transact-sql"></a>sp_addpullsubscription (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+# <a name="sp_addpullsubscription-transact-sql"></a>sp_addpullsubscription (Transact-SQL)
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
   スナップショット パブリケーションまたはトランザクション パブリケーションにプル サブスクリプションを追加します。 このストアド プロシージャは、プル サブスクリプションが作成されるデータベース上のサブスクライバー側で実行されます。  
   
@@ -45,63 +44,55 @@ sp_addpullsubscription [ @publisher= ] 'publisher'
 ```  
   
 ## <a name="arguments"></a>引数  
- [ **@publisher=**] **'***publisher***'**  
- パブリッシャーの名前です。 *パブリッシャー*は**sysname**、既定値はありません。  
+`[ @publisher = ] 'publisher'`パブリッシャーの名前を指定します。 *パブリッシャー* は **sysname** 、既定値はありません。  
   
- [ **@publisher_db=**] **'***publisher_db***'**  
- パブリッシャー データベースの名前です。 *publisher_db*は**sysname**、既定値は NULL です。 *publisher_db* Oracle パブリッシャーでは無視されます。  
+`[ @publisher_db = ] 'publisher_db'`パブリッシャーデータベースの名前を指定します。 *publisher_db*は**sysname**,、既定値は NULL です。 *publisher_db*は、Oracle パブリッシャーでは無視されます。  
   
- [ **@publication=**] **'***publication***'**  
- パブリケーションの名前です。 *パブリケーション*は**sysname**、既定値はありません。  
+`[ @publication = ] 'publication'`パブリケーションの名前を指定します。 *パブリケーション* は **sysname** 、既定値はありません。  
   
- [  **@independent_agent=**] **'***independent_agent***'**  
- このパブリケーションに対して、スタンドアロン ディストリビューション エージェントが存在するかどうかを指定します。 *independent_agent*は**nvarchar (5)**、既定値は TRUE。 場合**true**、このパブリケーション用のスタンドアロン ディストリビューション エージェントが存在します。 場合**false**、パブリッシャー データベース/サブスクライバー データベースの各ペアの 1 つのディストリビューション エージェントが存在します。 *independent_agent*パブリケーションのプロパティは、値が同じである必要がありますが、パブリッシャーであるためここでします。  
+`[ @independent_agent = ] 'independent_agent'`このパブリケーションに対してスタンドアロンのディストリビューションエージェントがあるかどうかを指定します。 *independent_agent*は**nvarchar (5)** ,、既定値は TRUE です。 **True**の場合、このパブリケーションにはスタンドアロンのディストリビューションエージェントがあります。 **False**の場合、パブリッシャーデータベース/サブスクライバーデータベースのペアごとに1つのディストリビューションエージェントが存在します。 *independent_agent*はパブリケーションのプロパティであり、ここではパブリッシャー側と同じ値である必要があります。  
   
- [  **@subscription_type=**] **'***subscription_type***'**  
- サブスクリプションの種類を指定します。 *subscription_type*は**nvarchar (9)**、既定値は**匿名**します。 値を指定する必要があります**プル**の*subscription_type*パブリッシャー側でサブスクリプションを登録せずにサブスクリプションを作成する場合を除き、します。 ここでは、値を指定する必要があります**匿名**します。 これは、サブスクリプションの構成時にパブリッシャーに [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 接続を確立できない場合に必要です。  
+`[ @subscription_type = ] 'subscription_type'`サブスクリプションの種類を示します。 *subscription_type*は**nvarchar (9)** ,、既定値は**anonymous**です。 パブリッシャーでサブスクリプションを登録せずにサブスクリプションを作成する場合を除き、 *subscription_type*には**pull**の値を指定する必要があります。 この場合、**匿名**の値を指定する必要があります。 これは、サブスクリプションの構成時にパブリッシャーに [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 接続を確立できない場合に必要です。  
   
- [  **@description=**] **'***説明***'**  
- パブリケーションの説明です。 *説明*は**nvarchar (100)**、既定値は NULL です。  
+`[ @description = ] 'description'`パブリケーションの説明を示します。 *説明*は**nvarchar (100)** ,、既定値は NULL です。  
   
- [  **@update_mode=**] **'***update_mode***'**  
- 更新の種類を指定します。 *update_mode*は**nvarchar (30)** 値は次のいずれかを指定できます。  
+`[ @update_mode = ] 'update_mode'`更新の種類を示します。 *update_mode*は**nvarchar (30)** ,、値は次のいずれかを指定することができます。  
   
 |値|説明|  
 |-----------|-----------------|  
-|**読み取り専用**(既定値)|サブスクリプションは読み取り専用です。 サブスクライバーで加えられた変更はパブリッシャーには送り返されません。 サブスクライバーで更新を行わない場合に使用します。|  
+|**読み取り**専用標準|サブスクリプションは読み取り専用です。 サブスクライバーでの変更は、パブリッシャーに送り返されません。 サブスクライバーで更新が行われない場合は、を使用する必要があります。|  
 |**synctran**|即時更新サブスクリプションのサポートを有効にします。|  
-|**キューに置かれた tran**|サブスクリプションのキュー更新を有効にします。 サブスクライバーでデータを変更し、キューに格納し、それをパブリッシャーに配信することができます。|  
-|**フェールオーバー**|キュー更新をフェールオーバーとするサブスクリプションの即時更新を有効にします。 サブスクライバーでデータを変更し、それを直ちにパブリッシャーに配信することができます。 パブリッシャーとサブスクライバーが接続されていない場合は、サブスクライバーとパブリッシャーが接続されるまで、サブスクライバーで加えられたデータの変更をキューに格納することができます。|  
-|**キューに置かれたフェールオーバー**|即時更新モードへの変更が可能なキュー更新サブスクリプションとしてサブスクリプションを有効にします。 サブスクライバーでデータを変更し、サブスクライバーとパブリッシャーの間の接続が確立されるまで、その変更をキューに格納することができます。 継続的な接続が確立されると、更新モードを即時更新に変更できます。 *Oracle パブリッシャーに対してはサポートされていません*します。|  
+|**キューに登録されたトランザクション**|サブスクリプションのキュー更新を有効にします。 サブスクライバーでデータ変更を行い、キューに格納して、パブリッシャーに反映することができます。|  
+|**用**|キュー更新をフェールオーバーとするサブスクリプションの即時更新を有効にします。 サブスクライバーでデータを変更し、それを直ちにパブリッシャーに配信することができます。 パブリッシャーとサブスクライバーが接続されていない場合は、サブスクライバーとパブリッシャーが接続されるまで、サブスクライバーで加えられたデータの変更をキューに格納することができます。|  
+|**キューに置かれたフェールオーバー**|即時更新モードへの変更が可能なキュー更新サブスクリプションとしてサブスクリプションを有効にします。 サブスクライバーでデータを変更し、サブスクライバーとパブリッシャーの間に接続が確立されるまで、キューに格納することができます。 連続接続が確立されると、更新モードを即時更新に変更できます。 *Oracle パブリッシャーではサポートされていません*。|  
   
- [  **@immediate_sync =**] *immediate_sync*  
- スナップショット エージェントを実行するたびに同期ファイルを作成または再作成するかどうかを指定します。 *immediate_sync*は**ビット**は 1 で、既定値と同じ値に設定する必要があります*immediate_sync*で**sp_addpublication**.*immediate_sync*パブリケーションのプロパティは、値が同じである必要がありますが、パブリッシャーであるためここでします。  
+`[ @immediate_sync = ] immediate_sync`スナップショットエージェントを実行するたびに同期ファイルを作成または再作成するかどうかを指定します。 *immediate_sync*は**ビット**既定値は1で、 **sp_addpublication**の*immediate_sync*と同じ値に設定する必要があります。*immediate_sync*はパブリケーションのプロパティであり、ここではパブリッシャー側と同じ値である必要があります。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  **0** (成功) または**1** (失敗)  
   
 ## <a name="remarks"></a>コメント  
- **sp_addpullsubscription**スナップショット レプリケーションおよびトランザクション レプリケーションで使用されます。  
+ **sp_addpullsubscription**は、スナップショットレプリケーションおよびトランザクションレプリケーションで使用します。  
   
 > [!IMPORTANT]  
->  キュー更新サブスクリプションの場合、サブスクライバーへの接続には [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 認証を使用し、各サブスクライバーへの接続にはそれぞれ異なるアカウントを指定してください。 キュー更新をサポートするプル サブスクリプションを作成する場合は、レプリケーションによって、常に Windows 認証を使用するように接続が設定されます (プル サブスクリプションでは、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 認証を使用するために必要な、サブスクライバー側のメタデータにレプリケーションからアクセスすることはできません)。 この場合は、実行する必要があります[sp_changesubscription](../../relational-databases/system-stored-procedures/sp-changesubscription-transact-sql.md)を使用する接続を変更する[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]認証の後、サブスクリプションを構成します。  
+>  キュー更新サブスクリプションの場合、サブスクライバーへの接続には [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 認証を使用し、各サブスクライバーへの接続にはそれぞれ異なるアカウントを指定してください。 キュー更新をサポートするプル サブスクリプションを作成する場合は、レプリケーションによって、常に Windows 認証を使用するように接続が設定されます (プル サブスクリプションでは、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 認証を使用するために必要な、サブスクライバー側のメタデータにレプリケーションからアクセスすることはできません)。 この場合、サブスクリプションの構成後に [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 認証を使用するように接続を変更するには、[sp_changesubscription](../../relational-databases/system-stored-procedures/sp-changesubscription-transact-sql.md) を実行する必要があります。  
   
- 場合、 [MSreplication_subscriptions &#40;TRANSACT-SQL&#41; ](../../relational-databases/system-tables/msreplication-subscriptions-transact-sql.md)テーブルがサブスクライバーで、存在しない**sp_addpullsubscription**によって作成されます。 行が追加されます、 [MSreplication_subscriptions &#40;TRANSACT-SQL&#41; ](../../relational-databases/system-tables/msreplication-subscriptions-transact-sql.md)テーブル。 プル サブスクリプションで[sp_addsubscription &#40;TRANSACT-SQL&#41; ](../../relational-databases/system-stored-procedures/sp-addsubscription-transact-sql.md) 、パブリッシャー側で最初に呼び出す必要があります。  
+ [ &#40;MSreplication_subscriptions transact-sql&#41; ](../../relational-databases/system-tables/msreplication-subscriptions-transact-sql.md)テーブルがサブスクライバーに存在しない場合は、 **sp_addpullsubscription**によって作成されます。 また、 [MSreplication_subscriptions &#40;transact-sql&#41; ](../../relational-databases/system-tables/msreplication-subscriptions-transact-sql.md)テーブルに行を追加します。 プルサブスクリプションの場合は、最初にパブリッシャーで[sp_addsubscription &#40;&#41; ](../../relational-databases/system-stored-procedures/sp-addsubscription-transact-sql.md)を呼び出す必要があります。  
   
 ## <a name="example"></a>例  
  [!code-sql[HowTo#sp_addtranpullsubscriptionagent](../../relational-databases/replication/codesnippet/tsql/sp-addpullsubscription-t_1.sql)]  
   
 ## <a name="permissions"></a>アクセス許可  
- メンバーのみ、 **sysadmin**固定サーバー ロールまたは**db_owner**固定データベース ロールが実行できる**sp_addpullsubscription**します。  
+ **Sp_addpullsubscription**を実行できるのは、固定サーバーロール**sysadmin**または固定データベースロール**db_owner**のメンバーだけです。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [Create a Pull Subscription](../../relational-databases/replication/create-a-pull-subscription.md)   
- [Create an Updatable Subscription to a Transactional Publication](../../relational-databases/replication/publish/create-an-updatable-subscription-to-a-transactional-publication.md) [パブリケーションのサブスクライブ](../../relational-databases/replication/subscribe-to-publications.md)   
- [sp_addpullsubscription_agent &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addpullsubscription-agent-transact-sql.md)   
- [sp_change_subscription_properties &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-change-subscription-properties-transact-sql.md)   
- [sp_droppullsubscription &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-droppullsubscription-transact-sql.md)   
- [sp_helppullsubscription &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helppullsubscription-transact-sql.md)   
- [sp_helpsubscription_properties &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpsubscription-properties-transact-sql.md)   
+ [トランザクションパブリケーションに対する更新可能なサブスクリプションの作成](../../relational-databases/replication/publish/create-an-updatable-subscription-to-a-transactional-publication.md)[パブリケーションをサブスクライブする](../../relational-databases/replication/subscribe-to-publications.md)   
+ [sp_addpullsubscription_agent &#40;transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-addpullsubscription-agent-transact-sql.md)   
+ [sp_change_subscription_properties &#40;transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-change-subscription-properties-transact-sql.md)   
+ [sp_droppullsubscription &#40;transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-droppullsubscription-transact-sql.md)   
+ [sp_helppullsubscription &#40;transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-helppullsubscription-transact-sql.md)   
+ [sp_helpsubscription_properties &#40;transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-helpsubscription-properties-transact-sql.md)   
  [システム ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 ms.assetid: a49c4af4-e243-4926-be97-74da1f9d54eb
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 3ed3fc8546ef7bd85934d8b127ff124acc095e29
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 57fe740bdd02c96eb21994f5996c734620793616
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53373947"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66079838"
 ---
 # <a name="upgrade-workbooks-and-scheduled-data-refresh-sharepoint-2013"></a>ブックのアップグレードと定期データ更新 (SharePoint 2013)
   このトピックでは、以前の PowerPivot 環境で作成されたブックのユーザー エクスペリエンスについて、およびこのリリースで導入された新機能を利用できるよう、PowerPivot ブックをアップグレードする方法について説明します。 新しい機能の詳細については、次を参照してください。 [PowerPivot で新](https://go.microsoft.com/fwlink/?LinkID=203917)します。  

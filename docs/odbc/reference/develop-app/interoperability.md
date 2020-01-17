@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 43b7c849-9d59-4002-9977-9e2c8730b859
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 8d5e4fbee458bec88461d3e2945a466c848d3345
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 434b27bffe3b32aa9fa0c5c6fd3a7100e8c7ea8d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47794124"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68138862"
 ---
 # <a name="interoperability"></a>相互運用性
 *相互運用性*は多くのさまざまな Dbms で動作する単一のアプリケーションの機能です。 ジェネリック、相互運用可能なアプリケーションを記述する必要は、ODBC の開発につながる大きな要因の 1 つでした。 ただし、相互運用性はありません「いない相互運用性」の後に、単純なパスを「完全に相互運用可能な」。 パスは多数の分岐を備え、各機能、速度、コードの複雑さ、および開発にかかる時間の間でトレードオフが必要です。  

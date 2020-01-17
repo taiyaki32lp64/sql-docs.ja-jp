@@ -8,17 +8,20 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 3895097e-28fa-4808-a3a8-ba821b4ba4d4
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: c7283e4c894c4e68a698d803ad0c65ff6634903a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 0e71c9a5c8dcb45346c3111a924770321c1008cb
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47807970"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71298725"
 ---
 # <a name="how-to-create-the-sql-server-change-database-instance"></a>SQL Server 変更データベース インスタンスを作成する方法
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   この手順では、CDC デザイナー コンソールを使用して CDC インスタンスを作成する方法について説明します。  
   
 ### <a name="to-create-cdc-instances"></a>CDC インスタンスを作成するには  

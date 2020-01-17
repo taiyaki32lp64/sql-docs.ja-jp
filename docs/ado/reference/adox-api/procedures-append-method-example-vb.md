@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: ce83b966-474b-4f57-8eb9-370996dfc5c0
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 14de33e27d184c4474aeb6eb601f7d34969c47a3
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 8bacc5dc2d55fb335358ab9ca34248f8e322811a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47811606"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67965423"
 ---
 # <a name="procedures-append-method-example-vb"></a>Procedures Append メソッドの例 (VB)
 次のコードを使用する方法を示します、[コマンド](../../../ado/reference/ado-api/command-object-ado.md)オブジェクトと[プロシージャ](../../../ado/reference/adox-api/procedures-collection-adox.md)コレクション[Append](../../../ado/reference/adox-api/append-method-adox-procedures.md)メソッドを基になるデータ ソースに新しいプロシージャを作成します。  
@@ -74,7 +73,7 @@ End Sub
 ' EndCreateProcedureVB  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [ActiveConnection プロパティ (ADOX)](../../../ado/reference/adox-api/activeconnection-property-adox.md)   
  [Append メソッド (ADOX Procedures)](../../../ado/reference/adox-api/append-method-adox-procedures.md)   
  [Catalog オブジェクト (ADOX)](../../../ado/reference/adox-api/catalog-object-adox.md)   

@@ -15,16 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - TIMEFROMPARTS function
 ms.assetid: 786c65a1-2b3f-4e4b-82b6-4940d62f3801
-author: MashaMSFT
-ms.author: mathoma
-manager: craigg
+author: MikeRayMSFT
+ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: b02eadce149db42ffcf6229ae2cbbc47bc641f1b
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: aab429b0d3705d6ba7867f146fa43aca486cbb02
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53202581"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68099000"
 ---
 # <a name="timefromparts-transact-sql"></a>TIMEFROMPARTS (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-all-md](../../includes/tsql-appliesto-ss2012-all-md.md)]
@@ -59,7 +58,7 @@ TIMEFROMPARTS ( hour, minute, seconds, fractions, precision )
  **time(** *precision* **)**  
   
 ## <a name="remarks"></a>Remarks  
- TIMEROMPARTS は、完全に初期化された time 値を返します。 引数が無効な場合は、エラーが発生します。 パラメーターのいずれかが NULL の場合、NULL が返されます。 ただし場合、 *有効桁数* 引数が null の場合、エラーが発生します。  
+ TIMEROMPARTS では、完全に初期化された time 値が返されます。 引数が無効な場合は、エラーが発生します。 パラメーターのいずれかが NULL の場合、NULL が返されます。 ただし場合、 *有効桁数* 引数が null の場合、エラーが発生します。  
   
  *分数* 引数によって異なります、 *有効桁数* 引数。 たとえば、*precision* が 7 の場合、小数部分はそれぞれ 100 ナノ秒を表します。*precision* が 3 の場合、小数部分はそれぞれ 1 ミリ秒を表します。 *precision* の値が 0 の場合、*fractions* の値も 0 にする必要があります。そうしないと、エラーが発生します。  
   

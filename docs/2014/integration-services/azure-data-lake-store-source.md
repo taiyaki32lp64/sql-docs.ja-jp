@@ -4,25 +4,24 @@ ms.custom: ''
 ms.date: 06/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - SQL12.DTS.DESIGNER.AFPADLSSRC.F1
 - SQL11.DTS.DESIGNER.AFPADLSSRC.F1
 ms.assetid: 7d9e8457-62aa-4aea-98ee-7d1121dfae4f
 author: yualan
-ms.author: douglasl
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 2037890618a4977135d6366d8d84bb84a9c67744
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 07ca2a75fa3f7e6329443bb4f71a23f52662f0f8
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48129438"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66061348"
 ---
 # <a name="azure-data-lake-store-source"></a>Azure Data Lake Store Source
-  **Azure Data Lake Store Source** コンポーネントは、SSIS パッケージが Azure Data Lake Store からデータを読み取れるようにします。 サポートされるファイル形式は、テキストと Avro です。
+  **Azure Data Lake Store Source** コンポーネントは、SSIS パッケージが Azure Data Lake Store からデータを読み取れるようにします。 サポートされるファイル形式は、Text と Avro です。
   
 ## <a name="configure-the-azure-data-lake-store-source"></a>Azure Data Lake Store Source を構成する 
   

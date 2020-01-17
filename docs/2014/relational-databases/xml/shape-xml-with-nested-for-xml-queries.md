@@ -11,15 +11,15 @@ helpviewer_keywords:
 - queries [XML in SQL Server], nested FOR XML
 - XML [SQL Server], FOR XML queries
 ms.assetid: 8dc42c05-16e8-4b7b-a5d3-550b55acae26
-author: douglaslMS
-ms.author: douglasl
+author: MightyPen
+ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 49978eaceed27e2cfd363cc6a4654d581a91e4c4
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: e0a5fded413944c304dfe02675b3577b699adfc0
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53372694"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63231234"
 ---
 # <a name="shape-xml-with-nested-for-xml-queries"></a>入れ子になった FOR XML クエリを使用した XML の構造化
   次の例では、`Production.Product` テーブルにクエリを実行し、特定の製品の `ListPrice` 値と `StandardCost` 値を取得します。 ここでは、例示を目的として、両方の価格を <`Price`> 要素に返します。各 <`Price`> 要素には、`PriceType` 属性があります。  
@@ -88,7 +88,7 @@ FOR XML AUTO, TYPE
   
  上の例では `query()` データ型の `xml` メソッドを使用し、内側の FOR XML クエリで返される XML に対してクエリを実行し、必要な結果を構築しています。  
   
- これは、結果です。  
+ 結果を次に示します。  
   
 ```  
 <Production.Product ProductID="520">  
@@ -97,7 +97,7 @@ FOR XML AUTO, TYPE
 </Production.Product>  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [入れ子になった FOR XML クエリの使用](use-nested-for-xml-queries.md)  
   
   

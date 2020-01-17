@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords:
 - return codes [Integration Services]
@@ -13,15 +12,15 @@ helpviewer_keywords:
 - parameterized SQL statements [Integration Services]
 - Execute SQL task [Integration Services]
 ms.assetid: a3ca65e8-65cf-4272-9a81-765a706b8663
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: f0899922eb2cdec88e73901f14ebeb6dfe953622
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 49ac4661e533b4c4e56a750f208c3ded09f72d27
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53367215"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66056789"
 ---
 # <a name="parameters-and-return-codes-in-the-execute-sql-task"></a>SQL 実行タスクのパラメーターとリターン コード
   SQL ステートメントとストアド プロシージャでは多くの場合、`input` パラメーター、`output` パラメーター、およびリターン コードを使用します。 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] の SQL 実行タスクでは、`Input`、`Output`、および `ReturnValue` という、パラメーターの型がサポートされています。 入力パラメーターには `Input` 型、出力パラメーターには `Output` 型、およびリターン コードには `ReturnValue` 型を使用します。  
@@ -124,7 +123,7 @@ ms.locfileid: "53367215"
     |-------------------------------|--------------------|  
     |SQL_DATE|`date`|  
     |SQL_SS_TIME2|`time`|  
-    |SQL_TYPE_TIMESTAMP<br /><br /> - または -<br /><br /> SQL_TIMESTAMP|`datetime`, `datetime2`|  
+    |SQL_TYPE_TIMESTAMP<br /><br /> \- または -<br /><br /> SQL_TIMESTAMP|`datetime`, `datetime2`|  
     |SQL_SS_TIMESTAMPOFFSET|`datetimeoffset`|  
   
  データが適切な入力パラメーターまたは出力パラメーターに格納されないと、パッケージは失敗します。  

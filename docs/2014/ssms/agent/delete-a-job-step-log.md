@@ -15,12 +15,12 @@ ms.assetid: ee20c6cd-0258-4550-bdb0-71e86a0fb330
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 945c403a44f2b0c2cf2d691a1bcfda6cc96d422b
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: cd6cefd41ea223b91445042ff3cee9090074feeb
+ms.sourcegitcommit: a165052c789a327a3a7202872669ce039bd9e495
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53377554"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72783193"
 ---
 # <a name="delete-a-job-step-log"></a>Delete a Job Step Log
   このトピックでは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェントのジョブ ステップのログを削除する方法について説明します。  
@@ -44,9 +44,9 @@ ms.locfileid: "53377554"
 ###  <a name="Restrictions"></a> 制限事項と制約事項  
  ジョブ ステップが削除されるときに、そのジョブ ステップの出力ログは自動的に削除されます。  
   
-###  <a name="Security"></a> セキュリティ  
+###  <a name="Security"></a> Security  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> アクセス許可  
  **sysadmin** 固定サーバー ロールのメンバー以外は、所有しているジョブしか変更できません。  
   
 ##  <a name="SSMS"></a> SQL Server Management Studio の使用  
@@ -55,7 +55,7 @@ ms.locfileid: "53377554"
   
 1.  **オブジェクト エクスプローラー** で、 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]のインスタンスに接続し、そのインスタンスを展開します。  
   
-2.  **[SQL Server エージェント]**、 **[ジョブ]** の順に展開し、変更するジョブを右クリックします。次に、 **[プロパティ]** をクリックします。  
+2.  **[SQL Server エージェント]** 、 **[ジョブ]** の順に展開し、変更するジョブを右クリックします。次に、 **[プロパティ]** をクリックします。  
   
 3.  **[ジョブのプロパティ]** ダイアログ ボックスで、選択したジョブ ステップを削除します。  
   
@@ -69,7 +69,7 @@ ms.locfileid: "53377554"
   
 3.  次の例をコピーしてクエリ ウィンドウに貼り付け、 **[実行]** をクリックします。  
   
-    ```  
+    ```sql
     -- removes the job step log for step 2 in the job Weekly Sales Data Backup  
     USE msdb ;  
     GO  
@@ -80,16 +80,14 @@ ms.locfileid: "53377554"
     GO  
     ```  
   
- 詳細については、次を参照してください。 [sp_delete_jobsteplog &#40;TRANSACT-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-delete-jobsteplog-transact-sql)します。  
+ 詳細については、「 [sp_delete_jobsteplog &#40;transact-sql&#41;](/sql/relational-databases/system-stored-procedures/sp-delete-jobsteplog-transact-sql)」を参照してください。  
   
-##  <a name="SMO"></a> SQL Server 管理オブジェクトの使用  
+##  <a name="SMO"></a>SQL Server 管理オブジェクトの使用  
  Visual Basic、Visual C#、PowerShell などのプログラミング言語で `DeleteJobStepLogs` クラスの `Job` メソッドを使用します。 詳細については、「[SQL Server 管理オブジェクト (SMO) プログラミング ガイド](https://msdn.microsoft.com/library/ms162169.aspx)」を参照してください。  
   
-```  
--- Uses PowerShell to delete all job step log files that have ID values larger than 5.  
-$srv = new-object Microsoft.SqlServer.Management.Smo.Server("(local)")  
+```powershell
+# Delete all job step log files that have ID values larger than 5.  
+$srv = New-Object Microsoft.SqlServer.Management.Smo.Server("(local)")  
 $jb = $srv.JobServer.Jobs["Test Job"]  
 $jb.DeleteJobStepLogs(5)  
-```  
-  
-  
+```

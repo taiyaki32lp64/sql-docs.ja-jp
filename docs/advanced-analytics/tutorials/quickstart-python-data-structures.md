@@ -1,203 +1,218 @@
 ---
-title: Python、SQL Server Machine Learning でのデータ構造を操作するためのクイック スタート
-description: このクイック スタートでは、SQL Server での Python スクリプトの学習の使用方法データ構造 sp_execute_external_script のシステム ストアド プロシージャで。
+title: 'クイック スタート: Python のデータ型'
+titleSuffix: SQL Server Machine Learning Services
+description: このクイックスタートでは、Python および SQL Server Machine Learning Services を備えた SQL Server で、データ型とデータ オブジェクトを取り扱う方法について説明します。
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 01/04/2019
+ms.date: 10/04/2019
 ms.topic: quickstart
-author: dphansen
-ms.author: davidph
-manager: cgronlun
-ms.openlocfilehash: 0105cf099bbee30d167c498646778520fcdbd805
-ms.sourcegitcommit: baca29731a1be4f8fa47567888278394966e2af7
-ms.translationtype: MT
+author: garyericson
+ms.author: garye
+ms.reviewer: davidph
+ms.custom: seo-lt-2019
+monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions'
+ms.openlocfilehash: 1bac339105acdb7318b29426cd0bb4afdc2481e7
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/04/2019
-ms.locfileid: "54046875"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73727016"
 ---
-# <a name="quickstart-python-data-structures-in-sql-server"></a>クイック スタート:SQL Server での Python データ構造
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+# <a name="quickstart-handle-data-types-and-objects-using-python-in-sql-server-machine-learning-services"></a>クイック スタート: SQL Server Machine Learning Services での Python を使用したデータ型とオブジェクトの処理
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-このクイック スタートでは、SQL Server Machine Learning Services での Python を使用する場合は、データ構造を使用する方法を示します。
+このクイックスタートでは、SQL Server Machine Learning Services で Python を使用するときのデータ構造の使用方法を示します。
 
-SQL Server が、Python 依存**pandas**パッケージで、表形式のデータの操作に適しています。 ただし、Python から SQL Server にはスカラーを渡すし、「とにかく動作する」を想定できません。 このクイック スタートでは、Python と SQL Server の間で表形式のデータを渡すときに間で実行する可能性のあるその他の問題についての準備に、一部の基本的なデータ型定義を確認します。
+SQL Server は Python **pandas** パッケージに依存しており、それは表形式データの操作に最適です。 ただし、Python から SQL Server にスカラーを渡して、「ただ動作する」ことを期待することはできません。 このクイックスタートでは、いくつかの基本的なデータ型の定義を確認して、Python と SQL Server 間で表形式のデータを渡すときに出会う可能性のある、他の問題に備えます。
 
-+ データ フレームを持つテーブルは、_複数_列。
-+ 1 つの列、データ フレームは、系列と呼ばれるリストのようなオブジェクトです。
-+ 1 つの値は、データ フレームのセルし、インデックスを使用して呼び出す必要があります。
+前もって理解しておくべき概念は次のとおりです。
 
-Data.frame には、表形式の構造が必要な場合、データ フレームとして、計算の 1 つの結果をどのようには公開しますか。 1 つの答えでは、データ フレームに変換が簡単にデータ系列として単一のスカラー値を表すためです。 
+- データ フレームとは_複数の_列を含むテーブルです。
+- データ フレームの単一の列は、シリーズと呼ばれるリスト ライクのオブジェクトです。
+- データ フレームの単一の値はセルと呼ばれ、インデックスによってアクセスされます。
 
-## <a name="prerequisites"></a>前提条件
+data.frame に表形式構造が必要な場合、計算の単一の結果をデータ フレームとして公開するにはどうすればよいでしょうか。 1 つの答えは、単一のスカラー値をシリーズとして表すことです。これは、データ フレームに簡単に変換できます。 
 
-前のクイック スタート[SQL server が存在することを確認する Python](quickstart-python-verify.md)情報を提供し、このクイック スタートに必要な Python 環境を設定するためにリンクします。
+> [!NOTE]
+> 日付を返す場合、SQL の Python では DATETIME が使用され、日付の範囲は 1753-01-01 (-53690) ~ 9999-12-31 (2958463) に制限されています。 
 
-## <a name="scalar-value-as-a-series"></a>一連のスカラー値
+## <a name="prerequisites"></a>Prerequisites
 
-この例では、単純な算術計算には、系列をスカラーに変換します。
+- このクイックスタートでは、Python 言語がインストールされた [SQL Server Machine Learning Services](../install/sql-machine-learning-services-windows-install.md) をもつ SQL Server のインスタンスへのアクセスが必要となります。
 
-1. 系列には、インデックスは、次に示すように、手動またはプログラムによって割り当てることができますが必要です。
+- また、Python スクリプトを含む SQL クエリを実行するためのツールも必要です。 これらのスクリプトは、SQL Server インスタンスに接続して T-SQL クエリまたはストアド プロシージャを実行可能な、任意のデータベース管理ツールまたはクエリ ツールを使用して実行できます。 このクイックスタートでは、[SQL Server Management Studio (SSMS)](https://docs.microsoft.com/sql/ssms/sql-server-management-studio-ssms) を使用します。
 
-    ```sql
-    execute sp_execute_external_script 
-    @language = N'Python', 
-    @script = N'
-    a = 1
-    b = 2
-    c = a/b
-    print(c)
-    s = pandas.Series(c, index =["simple math example 1"])
-    print(s)
-    '
-    ```
+## <a name="scalar-value-as-a-series"></a>シリーズとしてのスカラー値
 
-2. 系列は、data.frame に変換されていない、ためメッセージ ウィンドウで、値が返されますが、結果がより表形式であることを確認できます。
+この例では、単純な数値演算を行い、スカラーをシリーズに変換します。
 
-    **結果**
+1. シリーズにはインデックスが必要です。このインデックスは、次に示すように手動で割り当てることも、プログラムで割り当てることもできます。
 
-    ```text
-    STDOUT message(s) from external script: 
-    0.5
-    simple math example 1    0.5
-    dtype: float64
-    ```
+   ```sql
+   EXECUTE sp_execute_external_script @language = N'Python'
+       , @script = N'
+   a = 1
+   b = 2
+   c = a/b
+   print(c)
+   s = pandas.Series(c, index =["simple math example 1"])
+   print(s)
+   '
+   ```
 
-3. 系列の長さを増やすには配列を使用して新しい値を追加できます。 
+   シリーズは data.frame に変換されていないため、[メッセージ] ウィンドウには値が返されます。しかし、結果をより表に近い形式で表示することができます。
 
-    ```sql
-    execute sp_execute_external_script 
-    @language = N'Python', 
-    @script = N'
-    a = 1
-    b = 2
-    c = a/b
-    d = a*b
-    s = pandas.Series([c,d])
-    print(s)
-    '
-    ```
+   **結果**
 
-    インデックスを指定しない場合は、0 から始まる配列の長さで終わる値を持つインデックスが生成されます。
+   ```text
+   STDOUT message(s) from external script: 
+   0.5
+   simple math example 1    0.5
+   dtype: float64
+   ```
 
-    **結果**
+1. シリーズの長さを増やすには、配列を使用して新しい値を追加します。 
 
-    ```text
-    STDOUT message(s) from external script: 
-    0    0.5
-    1    2.0
-    dtype: float64
-    ```
+   ```sql
+   EXECUTE sp_execute_external_script @language = N'Python'
+       , @script = N'
+   a = 1
+   b = 2
+   c = a/b
+   d = a*b
+   s = pandas.Series([c,d])
+   print(s)
+   '
+   ```
 
-4. 数を増やす場合**インデックス**値、新規に追加しないで**データ**値、連続データを作成するデータ値が繰り返されます。
+   インデックスを指定しない場合は、0 から始まり配列の長さで終わる値を持つインデックスが生成されます。
 
-    ```sql
-    execute sp_execute_external_script 
-    @language = N'Python', 
-    @script = N'
-    a = 1
-    b = 2
-    c = a/b
-    s = pandas.Series(c, index =["simple math example 1", "simple math example 2"])
-    print(s)
-    '
-    ```
+   **結果**
 
-    **結果**
+   ```text
+   STDOUT message(s) from external script: 
+   0    0.5
+   1    2.0
+   dtype: float64
+   ```
 
-    ```text
-    STDOUT message(s) from external script: 
-    0.5
-    simple math example 1    0.5
-    simple math example 2    0.5
-    dtype: float64
-    ```
+1. **index** 値の数を増やしても、新しい **data** 値を追加していない場合、データ値はシリーズを埋めるように繰り返し格納されます。
 
-## <a name="convert-series-to-data-frame"></a>系列をデータ フレームに変換します。
+   ```sql
+   EXECUTE sp_execute_external_script @language = N'Python'
+       , @script = N'
+   a = 1
+   b = 2
+   c = a/b
+   s = pandas.Series(c, index =["simple math example 1", "simple math example 2"])
+   print(s)
+   '
+   ```
 
-表形式の構造体に、数学のスカラー結果を変換すること、SQL Server が処理できる形式に変換する必要います。 
+   **結果**
 
-1. 一連を data.frame に変換する、pandas を呼び出す[データ フレーム](https://pandas.pydata.org/pandas-docs/stable/dsintro.html#dataframe)メソッド。
+   ```text
+   STDOUT message(s) from external script: 
+   0.5
+   simple math example 1    0.5
+   simple math example 2    0.5
+   dtype: float64
+   ```
 
-    ```sql
-    execute sp_execute_external_script 
-    @language = N'Python', 
-    @script = N'
-    import pandas as pd
-    a = 1
-    b = 2
-    c = a/b
-    d = a*b
-    s = pandas.Series([c,d])
-    print(s)
-    df = pd.DataFrame(s)
-    OutputDataSet = df
-    '
-    WITH RESULT SETS (( ResultValue float ))
-    ```
+## <a name="convert-series-to-data-frame"></a>シリーズをデータ フレームに変換する
 
-2. 結果は、以下に示します。 Data.frame から特定の値を取得するインデックスを使用する場合でも、出力の一部ではないインデックス値。
+スカラー数値演算の結果を表形式構造に変換した後、それらを SQL Server で処理できる形式に変換する必要があります。
 
-    **結果**
+1. シリーズを data.frame に変換するには、pandas [DataFrame](https://pandas.pydata.org/pandas-docs/stable/dsintro.html#dataframe) メソッドを呼び出します。
 
-    |ResultValue|
-    |------|
-    |0.5|
-    |2|
+   ```sql
+   EXECUTE sp_execute_external_script @language = N'Python'
+       , @script = N'
+   import pandas as pd
+   a = 1
+   b = 2
+   c = a/b
+   d = a*b
+   s = pandas.Series([c,d])
+   print(s)
+   df = pd.DataFrame(s)
+   OutputDataSet = df
+   '
+   WITH RESULT SETS((ResultValue FLOAT))
+   ```
 
-## <a name="output-values-into-dataframe"></a>Data.frame に出力値
+   結果は次のようになります。 インデックスを使用して data.frame から特定の値を取得する場合でも、インデックス値は出力の一部とはなりません。
 
-単純な算術演算の結果を含む、2 つの系列を data.frame への変換のしくみを見てみましょう。 最初には、Python によって生成される連続した値のインデックスがあります。 2 つ目は、文字列値の任意のインデックスを使用します。
+   **結果**
 
-1. この例では、整数インデックスを使用する系列の値を取得します。
+   |ResultValue|
+   |------|
+   |0.5|
+   |2|
 
-    ```sql
-    EXECUTE sp_execute_external_script 
-    @language = N'Python', 
-    @script = N'
-    import pandas as pd
-    a = 1
-    b = 2
-    c = a/b
-    d = a*b
-    s = pandas.Series([c,d])
-    print(s)
-    df = pd.DataFrame(s, index=[1])
-    OutputDataSet = df
-    '
-    WITH RESULT SETS (( ResultValue float ))
-    ```
+## <a name="output-values-into-dataframe"></a>値を data.frame に出力する
 
-    自動生成されたインデックスは 0 から始まることに注意してください。 範囲のインデックス値を使用してお試しくださいし、動作を確認します。
+次に、2 つの計算結果のシリーズから特定の値を data.frame に出力します。 最初のものは、Python によって生成される連続値のインデックスをもちます。 2 番目のものは、任意の文字列値のインデックスを使用します。
 
-2. これで、文字列のインデックスを持つその他のデータ フレームから 1 つの値を取得しましょう。 
+1. 次の例では、整数インデックスを使用してシリーズから値を取得します。
 
-    ```sql
-    EXECUTE sp_execute_external_script 
-    @language = N'Python', 
-    @script = N'
-    import pandas as pd
-    a = 1
-    b = 2
-    c = a/b
-    s = pandas.Series(c, index =["simple math example 1", "simple math example 2"])
-    print(s)
-    df = pd.DataFrame(s, index=["simple math example 1"])
-    OutputDataSet = df
-    '
-    WITH RESULT SETS (( ResultValue float ))
-    ```
+   ```sql
+   EXECUTE sp_execute_external_script @language = N'Python'
+       , @script = N'
+   import pandas as pd
+   a = 1
+   b = 2
+   c = a/b
+   d = a*b
+   s = pandas.Series([c,d])
+   print(s)
+   df = pd.DataFrame(s, index=[1])
+   OutputDataSet = df
+   '
+   WITH RESULT SETS((ResultValue FLOAT))
+   ```
 
-    **結果**
+   **結果**
 
-    |ResultValue|
-    |------|
-    |0.5|
+   |ResultValue|
+   |------|
+   |2.0|
 
-    数値インデックスを使用して、このシリーズから値を取得しようとすると、エラーが表示されます。
+   自動生成されたインデックスは 0 から始まることに注意してください。 範囲外のインデックス値を使用して、何が起こるかを確認してください。
+
+1. 次に、文字列インデックスを使用して、他のデータ フレームから 1 つの値を取得します。
+
+   ```sql
+   EXECUTE sp_execute_external_script @language = N'Python'
+       , @script = N'
+   import pandas as pd
+   a = 1
+   b = 2
+   c = a/b
+   s = pandas.Series(c, index =["simple math example 1", "simple math example 2"])
+   print(s)
+   df = pd.DataFrame(s, index=["simple math example 1"])
+   OutputDataSet = df
+   '
+   WITH RESULT SETS((ResultValue FLOAT))
+   ```
+
+   **結果**
+
+   |ResultValue|
+   |------|
+   |0.5|
+
+   数値インデックスを使用してこのシリーズから値を取得しようとすると、エラーが発生します。
 
 ## <a name="next-steps"></a>次の手順
 
-次に、SQL Server で Python を使用して、予測モデルを構築します。
+SQL Server で高度な Python 関数を記述する方法については、次のクイックスタートを参照してください。
 
 > [!div class="nextstepaction"]
-> [作成、トレーニング、および SQL Server でのストアド プロシージャで Python モデルを使用](quickstart-python-train-score-in-tsql.md)
+> [SQL Server Machine Learning Services を使用した高度な Python 関数の作成](quickstart-python-functions.md)
+
+SQL Server Machine Learning Services での Python の使用に関する詳細については、次の記事を参照してください。
+
+- [Python での予測モデルの作成とスコア付け](quickstart-python-train-score-model.md)
+- [SQL Server Machine Learning Services (Python と R) とは](../what-is-sql-server-machine-learning.md)

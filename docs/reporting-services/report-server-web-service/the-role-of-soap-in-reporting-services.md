@@ -11,14 +11,14 @@ helpviewer_keywords:
 - Report Server Web service, SOAP
 - XML Web service [Reporting Services], SOAP
 ms.assetid: f229c3ef-f2ca-448f-98f1-b8df350b9992
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 592481ca8d2bf75c5a02d16b8955f9085a09a3f6
-ms.sourcegitcommit: bfa10c54e871700de285d7f819095d51ef70d997
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 4f03388971728750866480a5b0a6ec9626f92a1c
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/14/2019
-ms.locfileid: "54255767"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63069890"
 ---
 # <a name="the-role-of-soap-in-reporting-services"></a>Reporting Services における SOAP の役割
   レポート サーバー Web サービスでは、Simple Object Access Protocol (SOAP) メッセージングを使用し、ネットワーク経由でテキストベースのコマンドを送信します。 これらのコマンドは XML テキスト形式であり、HTTP を使用して World Wide Web 経由で送信されます。 レポート サーバー Web サービスでは、通信プロトコルとして SOAP を使用することで、アプリケーションとコンポーネントが開放型で広く普及しているインフラストラクチャを使用してレポート サーバーとデータを交換できるようにしています。 SOAP 標準は www.w3.org/TR/SOAP で定義されています。  

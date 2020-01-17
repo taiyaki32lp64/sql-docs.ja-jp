@@ -1,7 +1,7 @@
 ---
-title: データベース ミラーリング (JDBC) の使用 |Microsoft Docs
+title: データベースミラーリング (JDBC) を使用する |Microsoft Docs
 ms.custom: ''
-ms.date: 07/11/2018
+ms.date: 08/12/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 4ff59218-0d3b-4274-b647-9839c4955865
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 4478c2799ddc23ce647c607466e0206f72ccf7b3
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e0de521e6ef913d27a020cc76f1dc6de00d0f409
+ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47638646"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "69026434"
 ---
 # <a name="using-database-mirroring-jdbc"></a>データベース ミラーリングの使用 (JDBC)
 
@@ -41,7 +40,7 @@ Partner_A サーバーが破損して修復不可能な場合は、Partner_C サ
 接続が最初に確立されると、プリンシパル サーバーはフェールオーバー パートナーの ID を、フェールオーバー発生時に使用されるクライアントに送信します。 アプリケーションが障害の発生したプリンシパル サーバーと最初の接続を確立しようとするとき、フェールオーバー パートナーの ID はクライアントに通知されていません。 クライアントがこのシナリオに対処できるように、failoverPartner 接続文字列プロパティ、およびオプションで [setFailoverPartner](../../connect/jdbc/reference/setfailoverpartner-method-sqlserverdatasource.md) データ ソース メソッドを使用することで、クライアントはフェールオーバー パートナーの ID を独自に指定できます。 クライアント プロパティはこのシナリオでのみ使用されます。プリンシパル サーバーが利用可能な場合は使用されません。
 
 > [!NOTE]  
-> 接続文字列またはデータ ソース オブジェクトで failoverPartner が指定されている場合は、databaseName プロパティも設定する必要があります。これが設定されていないと、例外がスローされます。 failoverPartner および databaseName が明示的に指定されていないと、プリンシパル データベース サーバーに障害が発生した場合に、アプリケーションがフェールオーバーを実行しません。 つまり、透過的なリダイレクトは、failoverPartner および databaseName が明示的に指定された接続に対してのみ機能します。 FailoverPartner およびその他の接続文字列プロパティの詳細については、次を参照してください。[接続プロパティの設定](../../connect/jdbc/setting-the-connection-properties.md)します。
+> 接続文字列またはデータ ソース オブジェクトで failoverPartner が指定されている場合は、databaseName プロパティも設定する必要があります。これが設定されていないと、例外がスローされます。 failoverPartner および databaseName が明示的に指定されていないと、プリンシパル データベース サーバーに障害が発生した場合に、アプリケーションがフェールオーバーを実行しません。 つまり、透過的なリダイレクトは、failoverPartner および databaseName が明示的に指定された接続に対してのみ機能します。 FailoverPartner およびその他の接続文字列プロパティの詳細については、「[接続プロパティの設定](../../connect/jdbc/setting-the-connection-properties.md)」を参照してください。
 
 クライアントで指定されたフェールオーバー パートナー サーバーが、指定されたデータベースのフェールオーバー パートナーの役割を担うサーバーを参照しておらず、かつ参照先のサーバー/データベースがミラーリング機構に属している場合、接続はサーバーによって拒否されます。 [SQLServerDataSource](../../connect/jdbc/reference/sqlserverdatasource-class.md) クラスは [getFailoverPartner](../../connect/jdbc/reference/getfailoverpartner-method-sqlserverdatasource.md) メソッドを提供しますが、このメソッドは接続文字列または setFailoverPartner メソッドで指定されたフェールオーバー パートナーの名前のみを返します。 現在使用されている実際のフェールオーバー パートナーの名前を取得するには、次の [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントを使用します。
 

@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 299c37bd-19ff-4261-8571-b9665687e075
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 9930e76c902080cb7df22bf2a28afc1ae18b3cfd
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: d442a9c397ad184658f9101343e139697c9b3756
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53202221"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67925634"
 ---
 # <a name="dealing-with-failed-updates"></a>失敗した更新の処理
 更新プログラムは、エラーの終了時に、種類と、エラーの重大度、およびアプリケーションのロジックに依存、エラーを解決する方法。 ただし、データベースは、他のユーザーと共有される場合、一般的なエラーは実行する前に、フィールドを変更他のユーザー。 この種のエラーは、競合と呼ばれます。 ADO では、このような状況を検出し、エラーを報告します。  
@@ -37,5 +36,5 @@ Do While Not objRst.EOF
 Loop  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [バッチ モード](../../../ado/guide/data/batch-mode.md)

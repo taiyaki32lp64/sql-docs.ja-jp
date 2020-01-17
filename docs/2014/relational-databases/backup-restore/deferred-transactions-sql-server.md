@@ -16,11 +16,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: e36b6c114e7e5f2f95c0747d6e36e4dabc118daa
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48074192"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62876219"
 ---
 # <a name="deferred-transactions-sql-server"></a>遅延トランザクション (SQL Server)
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Enterprise では、ロールバック (元に戻す) に必要なデータがデータベースの起動時にオフラインになっている場合、損傷したトランザクションが遅延することがあります。 *遅延トランザクション* は、ロールフォワード フェーズの完了時にコミットされておらず、ロールバックを妨げるエラーが発生しているトランザクションです。 トランザクションはロールバックできないので、遅延します。  
@@ -84,14 +84,14 @@ ms.locfileid: "48074192"
   
          緊急モードの詳細については、「 [データベースの状態](../databases/database-states.md)」を参照してください。  
   
-    -   次に、 [DBCC CHECKDB](/sql/t-sql/database-console-commands/dbcc-checkdb-transact-sql)、 [DBCC CHECKALLOC](/sql/t-sql/database-console-commands/dbcc-checkalloc-transact-sql)、または [DBCC CHECKTABLE](/sql/t-sql/database-console-commands/dbcc-checktable-transact-sql)のいずれかの DBCC ステートメントで DBCC REPAIR_ALLOW_DATA_LOSS オプションを使用して、データベースを修復します。  
+    -   次に、次の DBCC ステートメントのいずれかで DBCC REPAIR_ALLOW_DATA_LOSS オプションを使用して、データベースを修復します。[DBCC CHECKDB](/sql/t-sql/database-console-commands/dbcc-checkdb-transact-sql)、 [DBCC CHECKALLOC](/sql/t-sql/database-console-commands/dbcc-checkalloc-transact-sql)、または[DBCC CHECKTABLE](/sql/t-sql/database-console-commands/dbcc-checktable-transact-sql)します。  
   
          DBCC では、不適切なページが検出されると、そのページの割り当てが解除され、関連するすべてのエラーが修復されます。 この方法を使用すると、物理的に一貫性のある状態でデータベースをオンラインに戻すことができます。 ただし、追加されたデータが失われる場合もあるため、この方法は最後の手段として使用してください。  
   
 ## <a name="see-also"></a>参照  
  [復元と復旧の概要 &#40;SQL Server&#41;](restore-and-recovery-overview-sql-server.md)   
  [機能していないファイル グループの削除 &#40;SQL Server&#41;](remove-defunct-filegroups-sql-server.md)   
- [ファイル復元 &#40;完全復旧モデル&#41;](file-restores-full-recovery-model.md)   
+ [ファイルの復元 &#40;完全復旧モデル&#41;](file-restores-full-recovery-model.md)   
  [ファイルの復元 &#40;単純復旧モデル&#41;](file-restores-simple-recovery-model.md)   
  [ページ復元 &#40;SQL Server&#41;](restore-pages-sql-server.md)   
  [段階的な部分復元 &#40;SQL Server&#41;](piecemeal-restores-sql-server.md)   

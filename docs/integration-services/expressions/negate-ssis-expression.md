@@ -11,17 +11,20 @@ helpviewer_keywords:
 - '- (negative)'
 - negative operator (-)
 ms.assetid: f0118dfc-aced-4de2-953e-5ebf9c962b8d
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: 9b91bd3dabde220ef8f31981e6a3df71e4b85bd3
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 25f4ee4514e56bc581b2b7c9f7f843f7aaf32baf
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47829708"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71297462"
 ---
 # <a name="--negate-ssis-expression"></a>- (負数化) (SSIS 式)
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   数値式を負数化します。  
   
 ## <a name="syntax"></a>構文  
@@ -48,6 +51,6 @@ ms.locfileid: "47829708"
   
 ## <a name="see-also"></a>参照  
  [演算子の優先順位と結合規則](../../integration-services/expressions/operator-precedence-and-associativity.md)   
- [演算子 (SSIS 式)](../../integration-services/expressions/operators-ssis-expression.md)  
+ [演算子 &#40;SSIS 式&#41;](../../integration-services/expressions/operators-ssis-expression.md)  
   
   

@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 23ed7f5e-e945-4c36-9dbc-e0f93b6d23c5
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 8f4e6d2b82fedca6f36536a2ea06db5ea8614319
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e31d9f93423db572d2759857b11d3f79af56583b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47598080"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68077078"
 ---
 # <a name="application-and-driver-compatibility"></a>アプリケーションとドライバーの互換性
 ODBC アプリケーションとドライバーは、多数のバージョンだけでなくカテゴリに分類されます。 これらのアプリケーションの一部は一部のドライバーと互換性がありません。それ以外の場合、アプリケーションまたはドライバーの種類は、それらの間の下位互換性の問題に関係があります。  

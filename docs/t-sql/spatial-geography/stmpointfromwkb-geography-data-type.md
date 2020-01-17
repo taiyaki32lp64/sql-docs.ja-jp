@@ -15,15 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - STPointFromWKB method
 ms.assetid: eeb7d806-3cbb-405d-8199-8b82282c53df
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: f5dc6b841fd0f19f418a6c1b479231fe2cbc3539
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: MladjoA
+ms.author: mlandzic
+ms.openlocfilehash: 2e13735c1782c4b2ced2751cbc59d53859516fcb
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47661100"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68117387"
 ---
 # <a name="stmpointfromwkb-geography-data-type"></a>STMPointFromWKB (geography データ型)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -47,9 +46,9 @@ STMPointFromWKB ( 'WKB_multipoint' , SRID )
 ## <a name="return-types"></a>戻り値の型  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 戻り値の型: **geography**  
   
- CLR の戻り値の型: **SqlGeography**  
+ CLR の戻り値の型:**SqlGeography**  
   
- OGC の型: **MultiPoint**  
+ OGC の型:**MultiPoint**  
   
 ## <a name="remarks"></a>Remarks  
  このメソッドでは、入力が整形式でない場合に、**FormatException** がスローされます。  

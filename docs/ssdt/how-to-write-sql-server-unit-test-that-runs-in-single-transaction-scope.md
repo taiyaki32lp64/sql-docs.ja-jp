@@ -1,5 +1,5 @@
 ---
-title: 単一のトランザクションのスコープ内で実行する SQL Server の単体テストを作成する方法 | Microsoft Docs
+title: 方法:単一のトランザクションのスコープ内で実行する SQL Server の単体テストを作成する | Microsoft Docs
 ms.custom:
 - SSDT
 ms.date: 02/09/2017
@@ -8,17 +8,16 @@ ms.technology: ssdt
 ms.reviewer: ''
 ms.topic: conceptual
 ms.assetid: cb241e94-d81c-40e9-a7ae-127762a6b855
-author: stevestein
-ms.author: sstein
-manager: craigg
-ms.openlocfilehash: b96ff3e9775e38a7eb61449d6a2ed5e9bc4d6db4
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 8c1a9bf666ac79b76d94cfbd04c88bde6eafd85b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51681290"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68119879"
 ---
-# <a name="how-to-write-a-sql-server-unit-test-that-runs-within-the-scope-of-a-single-transaction"></a>単一のトランザクションのスコープ内で実行する SQL Server の単体テストを作成する方法
+# <a name="how-to-write-a-sql-server-unit-test-that-runs-within-the-scope-of-a-single-transaction"></a>方法:単一のトランザクションのスコープ内で実行する SQL Server の単体テストを作成する
 単体テストは、単一のトランザクションのスコープ内で実行されるように変更できます。 この方法を使用すると、テストの終了後、テストによって行われた変更をロールバックできます。 次の手順では、以下の操作方法について説明します。  
   
 -   **BEGIN TRANSACTION** と **ROLLBACK TRANSACTION** を使用する Transact\-SQL テスト スクリプト内にトランザクションを作成します。  
@@ -61,13 +60,13 @@ ms.locfileid: "51681290"
   
 #### <a name="to-create-a-transaction-for-a-single-test-method"></a>単一のテスト メソッドのトランザクションを作成するには  
   
-1.  **ソリューション エクスプローラー**で、テスト プロジェクトの **[参照設定]** ノードを右クリックし、**[参照の追加]** をクリックします。  
+1.  **ソリューション エクスプローラー**で、テスト プロジェクトの **[参照設定]** ノードを右クリックし、 **[参照の追加]** をクリックします。  
   
     **[参照の追加]** ダイアログ ボックスが表示されます。  
   
 2.  **[.NET]** タブをクリックします。  
   
-3.  アセンブリの一覧で、**[System.Transactions]** をクリックし、**[OK]** をクリックします。  
+3.  アセンブリの一覧で、 **[System.Transactions]** をクリックし、 **[OK]** をクリックします。  
   
 4.  単体テストの Visual Basic ファイルまたは C# ファイルを開きます。  
   
@@ -156,7 +155,7 @@ ms.locfileid: "51681290"
     ```  
   
 ## <a name="to-start-the-distributed-transaction-coordinator-service"></a>分散トランザクション コーディネーター サービスを開始するには  
-このトピックの一部の手順では、System.Transactions アセンブリ内の型を使用します。 これらの手順を実行する前に、単体テストを実行するコンピューターで、分散トランザクション コーディネーター サービスが実行されていることを確認する必要があります。 サービスが実行されていない場合は、テストが失敗し、"テスト メソッド *ProjectName*.*TestName*.*MethodName* が例外をスローしました: System.Data.SqlClient.SqlException: サーバー '*ComputerName*' の MSDTC は使用できません" というエラー メッセージが表示されます。  
+このトピックの一部の手順では、System.Transactions アセンブリ内の型を使用します。 これらの手順を実行する前に、単体テストを実行するコンピューターで、分散トランザクション コーディネーター サービスが実行されていることを確認する必要があります。 そうでない場合は、テストが失敗し、次のエラー メッセージが表示されます。"テスト メソッド *ProjectName*.*TestName*.*MethodName* が例外をスローしました:System.Data.SqlClient.SqlException: サーバー '*ComputerName*' の MSDTC は使用できません"。  
   
 #### <a name="to-start-the-distributed-transaction-coordinator-service"></a>分散トランザクション コーディネーター サービスを開始するには  
   
@@ -166,7 +165,7 @@ ms.locfileid: "51681290"
   
 3.  **[管理ツール]** の **[サービス]** を開きます。  
   
-4.  **[サービス]** ウィンドウで、**[分散トランザクション コントローラー]** サービスを右クリックし、**[開始]** をクリックします。  
+4.  **[サービス]** ウィンドウで、 **[分散トランザクション コントローラー]** サービスを右クリックし、 **[開始]** をクリックします。  
   
     サービスの状態が **[開始]** に更新されます。 これで、System.Transactions を使用する単体テストを実行できるようになります。  
   

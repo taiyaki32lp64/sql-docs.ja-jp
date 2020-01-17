@@ -1,6 +1,8 @@
 ---
-title: GRANT (データベース プリンシパルの権限の許可) (Transact-SQL) | Microsoft Docs
-ms.custom: ''
+title: GRANT (データベース プリンシパルのアクセス許可の許可)
+description: データベース ユーザー、データベース ロール、またはアプリケーション ロールに対する権限を許可します。
+titleSuffix: SQL Server (Transact-SQL)
+ms.custom: seo-lt-2019
 ms.date: 03/12/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
@@ -24,14 +26,13 @@ helpviewer_keywords:
 ms.assetid: 012588a2-cbe1-48f0-a731-b4a2b83203d5
 author: VanMSFT
 ms.author: vanto
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: c95e031051e15af24ac854e4cf42cadcdb2431e0
-ms.sourcegitcommit: c6e71ed14198da67afd7ba722823b1af9b4f4e6f
+ms.openlocfilehash: f67acd0d94ed59a45c8e8d2cbeff0b8cfd9bd68d
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/16/2019
-ms.locfileid: "54326783"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75246160"
 ---
 # <a name="grant-database-principal-permissions-transact-sql"></a>GRANT (データベース プリンシパルの権限の許可) (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -92,7 +93,7 @@ GRANT permission [ ,...n ]
  データベース ロールを指定します。  
   
  *Application_role*  
- **適用対象**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]、[!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]。  
+ **適用対象**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 以降、[!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]。  
   
  アプリケーション ロールを指定します。  
   
@@ -114,7 +115,7 @@ GRANT permission [ ,...n ]
  *Database_user_with_no_login*  
  対応するサーバー レベルのプリンシパルがないデータベース ユーザーを指定します。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  データベース プリンシパルに関する情報は、[sys.database_principals](../../relational-databases/system-catalog-views/sys-database-principals-transact-sql.md) カタログ ビューで確認できます。 データベース レベルの権限に関する情報は、[sys.database_permissions](../../relational-databases/system-catalog-views/sys-database-permissions-transact-sql.md) カタログ ビューで確認できます。  
   
 ## <a name="database-user-permissions"></a>データベース ユーザー権限  
@@ -166,7 +167,7 @@ GRANT permission [ ,...n ]
   
  db_owner 固定データベース ロールのメンバーなど、データベースに対する CONTROL 権限が許可されているユーザーは、データベース内のセキュリティ保護可能なリソースに対する権限を許可できます。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
   
 ### <a name="a-granting-control-permission-on-a-user-to-another-user"></a>A. ユーザーに対する CONTROL 権限を別のユーザーに許可する  
  次の例では、`AdventureWorks2012` のユーザー `Wanida` に対する `CONTROL` 権限を、ユーザー `RolandX` に許可します。  
@@ -188,7 +189,7 @@ GO
 ### <a name="c-granting-impersonate-permission-on-a-user-to-an-application-role"></a>C. ユーザーに対する IMPERSONATE 権限をアプリケーション ロールに許可する  
  次の例では、ユーザー `HamithaL` に対する `IMPERSONATE` 権限を、`AdventureWorks2012` のアプリケーション ロール `AccountsPayable17` に許可します。  
   
-**適用対象**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]、[!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]。  
+**適用対象**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 以降、[!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]。  
   
 ```  
 GRANT IMPERSONATE ON USER::HamithaL TO AccountsPayable17;  

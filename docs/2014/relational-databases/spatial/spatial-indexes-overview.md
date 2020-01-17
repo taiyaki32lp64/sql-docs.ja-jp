@@ -8,15 +8,15 @@ ms.topic: conceptual
 helpviewer_keywords:
 - spatial indexes [SQL Server]
 ms.assetid: b1ae7b78-182a-459e-ab28-f743e43f8293
-author: douglaslMS
-ms.author: douglasl
+author: MladjoA
+ms.author: mlandzic
 manager: craigg
-ms.openlocfilehash: 229674b624913c08b35637a106d9ced7e88e855d
-ms.sourcegitcommit: 78e32562f9c1fbf2e50d3be645941d4aa457e31f
+ms.openlocfilehash: 67f7ac024c2a2b779518a0a775705f17b423ecf5
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/08/2019
-ms.locfileid: "54100887"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66014019"
 ---
 # <a name="spatial-indexes-overview"></a>空間インデックスの概要
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] では、空間データと空間インデックスがサポートされています。 *空間インデックス* は拡張インデックスの一種で、空間列にインデックスを設定することができます。 空間列とは、空間データ型 (`geometry` や `geography` など) のデータを含むテーブル列です。  
@@ -106,7 +106,7 @@ ms.locfileid: "54100887"
 #### <a name="deepest-cell-rule"></a>最下位のセルのルール  
  最下位のセルのルールでは、下位レベルのセルはすべてその上のセルに属しているという事実が利用されています。レベル 4 のセルはレベル 3 のセルに、レベル 3 のセルはレベル 2 のセルに、レベル 2 のセルはレベル 1 のセルにそれぞれ属しています。 たとえば、セル 1.1.1.1 に属しているオブジェクトは、セル 1.1.1、セル 1.1、およびセル 1 にも属しています。 こうしたセルの階層関係の情報はクエリ プロセッサに組み込まれているため、 インデックスに記録するのは最下位レベルのセルだけで済みます。これにより、インデックスに格納する情報を最小限に抑えられます。  
   
- 次の図では、比較的小さな菱形の多角形がテセレーションされています。 このインデックスで使用されているオブジェクトごとのセル数の制限は既定の 16 で、この小さなオブジェクトではその制限に達しないため、 テセレーションはレベル 4 まで続けられます。 多角形は、レベル 3 のセルを次のレベル 1 に存在します。4、4.4、および 4.4.10 と 4.4.14 にも存在していますが、 テセレーションは、最下位のセルのルールを使用して、12 個のレベル 4 のセルのみをカウントします。(4.4.10.13 ～ 15 と 4.4.14.1 ～ 3、4.4.14.5 ～ 7、および 4.4.14.9 ～ 11) のみです。  
+ 次の図では、比較的小さな菱形の多角形がテセレーションされています。 このインデックスで使用されているオブジェクトごとのセル数の制限は既定の 16 で、この小さなオブジェクトではその制限に達しないため、 テセレーションはレベル 4 まで続けられます。 この多角形は、次のレベル 1 から 3 のセルにも存在しています。4、4.4、および 4.4.10 と 4.4.14。 しかし、最下位のセルのルールが使用されるため、テセレーションでカウントされるのは次のレベル 4 の 12 個のセルだけです。4.4.10.13 から 15 と 4.4.14.1 から 3、4.4.14.5 から 7、および 4.4.14.9 から 11。  
   
  ![最下位のセルの最適化](../../database-engine/media/spndx-opt-deepest-cell.gif "最下位のセルの最適化")  
   
@@ -127,7 +127,7 @@ ms.locfileid: "54100887"
 >  このテセレーション スキームを明示的に指定するには、[CREATE SPATIAL INDEX](/sql/t-sql/statements/create-spatial-index-transact-sql) [!INCLUDE[tsql](../../../includes/tsql-md.md)] ステートメントの USING (GEOMETRY_AUTO_GRID/GEOMETRY_GRID) 句を使用します。  
   
 ##### <a name="the-bounding-box"></a>境界ボックス  
- 幾何データで用いられる平面は無限に広がっていますが、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]の空間インデックスは有限の空間を必要とします。 ジオメトリ グリッド テセレーション スキームでは、分解のための有限の空間を確立するために、四角形の *境界ボックス*が必要になります。 境界ボックスは 4 つの座標によって定義されます`(` _x min_**、**_y min_ `)`と`(` _x 最大_**、**_y の最大_`)`、空間インデックスのプロパティとして格納されます。 各座標の意味は次のとおりです。  
+ 幾何データで用いられる平面は無限に広がっていますが、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]の空間インデックスは有限の空間を必要とします。 ジオメトリ グリッド テセレーション スキームでは、分解のための有限の空間を確立するために、四角形の *境界ボックス*が必要になります。 境界ボックスは 4 つの座標によって定義されます`(` _x min_ **、** _y min_ `)`と`(` _x 最大_ **、** _y の最大_`)`、空間インデックスのプロパティとして格納されます。 各座標の意味は次のとおりです。  
   
 -   *x-min* は、境界ボックスの左下隅の x 座標です。  
   
@@ -140,11 +140,11 @@ ms.locfileid: "54100887"
 > [!NOTE]  
 >  これらの座標は、[CREATE SPATIAL INDEX](/sql/t-sql/statements/create-spatial-index-transact-sql) [!INCLUDE[tsql](../../../includes/tsql-md.md)] ステートメントの BOUNDING_BOX 句で指定します。  
   
- `(` _X-min_**、**_y-min_ `)`と`(` _x-max_**、** _y の最大_`)`座標位置と、境界ボックスのサイズを決定します。 境界ボックスの外側の空間は、番号 0 の 1 つのセルとして扱われます。  
+ `(` _X-min_ **、** _y-min_ `)`と`(` _x-max_ **、** _y の最大_`)`座標位置と、境界ボックスのサイズを決定します。 境界ボックスの外側の空間は、番号 0 の 1 つのセルとして扱われます。  
   
  空間インデックスは、境界ボックスの内側の空間を分解します。 境界ボックスがグリッド階層のレベル 1 のグリッドで満たされ、 幾何オブジェクトをグリッド階層に配置するためにオブジェクトの座標が境界ボックスの座標と比較されます。  
   
- 次の図は、によって定義される点、 `(` _x min_**、**_y min_ `)`と`(` _x の最大_ **、**_y の最大_`)`境界ボックスの座標。 また、グリッド階層の最上位レベルが 4 × 4 のグリッドとして示されています。 下位のレベルはわかりやすくするために省略されています。 境界ボックスの外側の空間はゼロ (0) によって示されています。 オブジェクト A はボックスから一部はみ出しており、オブジェクト B は完全にボックスの外側 (セル 0) にあります。  
+ 次の図は、によって定義される点、 `(` _x min_ **、** _y min_ `)`と`(` _x の最大_ **、** _y の最大_`)`境界ボックスの座標。 また、グリッド階層の最上位レベルが 4 × 4 のグリッドとして示されています。 下位のレベルはわかりやすくするために省略されています。 境界ボックスの外側の空間はゼロ (0) によって示されています。 オブジェクト A はボックスから一部はみ出しており、オブジェクト B は完全にボックスの外側 (セル 0) にあります。  
   
  ![座標とセル 0 が表示されている境界ボックス。](../../database-engine/media/spndx-bb-4x4-objects.gif "座標とセル 0 が表示されている境界ボックス。")  
   
@@ -179,7 +179,7 @@ ms.locfileid: "54100887"
 ##  <a name="methods"></a> 空間インデックスでサポートされるメソッド  
   
 ###  <a name="geometry"></a> 空間インデックスでサポートされるジオメトリ メソッド  
- 空間インデックスでは、特定の条件下で、次のセット指向のジオメトリ メソッドをサポートします。STContains()、STDistance()、STEquals()、STIntersects()、STOverlaps()、STTouches()、および STWithin() します。 空間インデックスでサポートされるために、これらのメソッドは、クエリの WHERE 句または JOIN ON 句内で、次の一般的な述語の形式で使用する必要があります。  
+ 空間インデックスは、特定の条件下で次のセット指向のジオメトリ メソッドをサポートします。STContains()、STDistance()、STEquals()、STIntersects()、STOverlaps()、STTouches()、STWithin()。 空間インデックスでサポートされるために、これらのメソッドは、クエリの WHERE 句または JOIN ON 句内で、次の一般的な述語の形式で使用する必要があります。  
   
  *geometry1*.*method_name*(*geometry2*)*comparison_operator**valid_number*  
   
@@ -204,7 +204,7 @@ ms.locfileid: "54100887"
 -   *geometry1*.[STWithin](/sql/t-sql/spatial-geometry/stwithin-geometry-data-type)(*geometry2*)= 1  
   
 ###  <a name="geography"></a> 空間インデックスでサポートされる地理メソッド  
- 特定の条件下では、空間インデックスは、次のセット指向の地理メソッドをサポートします。Stintersects()、Stequals()、STDistance(). 空間インデックスでサポートされるために、これらのメソッドは、クエリの WHERE 句内で、次の一般的な述語の形式で使用する必要があります。  
+ 空間インデックスは、特定の条件下で、次のセット指向の地理メソッドをサポートします。STIntersects()、STEquals()、STDistance()。 空間インデックスでサポートされるために、これらのメソッドは、クエリの WHERE 句内で、次の一般的な述語の形式で使用する必要があります。  
   
  *geography1*.*method_name*(*geography2*)*comparison_operator**valid_number*  
   
@@ -240,7 +240,7 @@ WHERE <SpatialColumn>.STDistance(@reference_object) IS NOT NULL
 ORDER BY <SpatialColumn>.STDistance(@reference_object) [;]  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [空間データ &#40;SQL Server&#41;](../spatial/spatial-data-sql-server.md)  
   
   

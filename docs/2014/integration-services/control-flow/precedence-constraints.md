@@ -14,15 +14,15 @@ helpviewer_keywords:
 - sequence execution options [Integration Services]
 - containers [Integration Services], precedence constraints
 ms.assetid: c5ce5435-fd89-4156-a11f-68470a69aa9f
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: d4376967ea1d21e1022a21b9df836e1be3d66858
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: da27e10af2a5483583976a13e54bf9087c20e9b2
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53349661"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62831708"
 ---
 # <a name="precedence-constraints"></a>優先順位制約
   優先順位制約は、パッケージ内の実行可能ファイル、コンテナー、およびタスクをリンクして制御フローを作成し、実行可能ファイルを実行するかどうかを決定する条件を指定します。 実行可能ファイルには、For ループ コンテナー、Foreach ループ コンテナー、シーケンス コンテナー、タスク、またはイベント ハンドラーを設定できます。 また、イベント ハンドラーは優先順位制約を使用して実行可能ファイルをリンクし、制御フローを作成します。  
@@ -81,7 +81,7 @@ ms.locfileid: "53349661"
   
  [!INCLUDE[ssIS](../../../includes/ssis-md.md)] デザイナーで設定できるプロパティについては、「 [優先順位制約エディター](../precedence-constraint-editor.md)」を参照してください。  
   
- プログラムによってこれらのプロパティを設定する方法については、 <xref:Microsoft.SqlServer.Dts.Runtime.PrecedenceConstraint>」を参照してください。  
+ これらのプロパティのプログラムでの設定については、「 <xref:Microsoft.SqlServer.Dts.Runtime.PrecedenceConstraint>」を参照してください。  
   
 ## <a name="related-tasks"></a>Related Tasks  
  [!INCLUDE[ssIS](../../../includes/ssis-md.md)] デザイナーでこれらのプロパティを設定する方法の詳細については、次のトピックのいずれかを参照してください。  

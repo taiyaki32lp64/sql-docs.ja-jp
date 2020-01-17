@@ -12,15 +12,14 @@ dev_langs:
 helpviewer_keywords:
 - HasZ geometry
 ms.assetid: aa378943-252a-4079-848b-6c59344fcfce
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: 6ca656d9e1d041864c80328dcad2b9fa19de27c5
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: MladjoA
+ms.author: mlandzic
+ms.openlocfilehash: cba3487b17828ffaf4f7bd092b83542de639fcfa
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47839500"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68101251"
 ---
 # <a name="hasz-geometry-datatype"></a>HasZ (geometry データ型)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
@@ -37,7 +36,7 @@ ms.locfileid: "47839500"
 ## <a name="return-types"></a>戻り値の型  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 戻り値の型: **bit**  
   
- CLR 戻り値の型: **Boolean**  
+ CLR の戻り値の型:**Boolean**  
   
 ## <a name="remarks"></a>Remarks  
   

@@ -1,6 +1,6 @@
 - name: ツール
   href: reporting-services-tools.md
-- name: 'チュートリアル : Reporting Services ツールを検索および開始する方法'
+- name: 'チュートリアル:Reporting Services ツールを検索および開始する方法'
   href: tutorial-how-to-locate-and-start-reporting-services-tools-ssrs.md
 - name: SQL Server データ ツールの Reporting Services
   href: reporting-services-in-sql-server-data-tools-ssdt.md
@@ -109,9 +109,9 @@
           href: report-server-properties-general-page.md
         - name: '[サーバーのプロパティ] [実行] ページ)'
           href: server-properties-execution-page.md
-        - name: '[サーバーのプロパティ] ([履歴] ページ)'
+        - name: '[サーバーのプロパティ]\([履歴] ページ)'
           href: server-properties-history-page.md
-        - name: '[サーバーのプロパティ] ([ログ記録] ページ)'
+        - name: '[サーバーのプロパティ]\([ログ記録] ページ)'
           href: server-properties-logging-page.md
         - name: '[サーバーのプロパティ] ([セキュリティ] ページ)'
           href: server-properties-security-page-reporting-services.md
@@ -183,13 +183,13 @@
           href: ../new-linked-report-page-report-manager.md
         - name: '[新しいモデル] ページ'
           href: ../new-model-page-report-manager.md
-        - name: '[新しいロールの割り当て] : [ロールの割り当てを編集] ページ'
+        - name: '[新しいロールの割り当て]:[ロールの割り当ての編集] ページ'
           href: ../new-role-assignment-edit-role-assignment-page-report-manager.md
-        - name: '[新しいスケジュール] : [スケジュールの編集] ページ'
+        - name: '[新しいスケジュール]:[スケジュールの編集] ページ'
           href: ../new-schedule-edit-schedule-page-report-manager.md
         - name: '[新しいサブスクリプション] ページまたは [サブスクリプションの編集] ページ'
           href: ../new-subscription-or-edit-subscription-page-report-manager.md
-        - name: '[新しいシステム ロールの割り当て]: [システム ロールの割り当てを編集] ページ'
+        - name: '[新しいシステム ロールの割り当て]:[システム ロールの割り当てを編集] ページ'
           href: ../new-system-role-assignments-edit-system-role-assignments-page-report-manager.md
         - name: '[パラメーター] プロパティ ページ'
           href: ../parameters-properties-page-report-manager.md

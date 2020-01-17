@@ -17,30 +17,29 @@ helpviewer_keywords:
 ms.assetid: 5c1becc5-f34e-4869-bf69-dfafab684540
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 515f9de1c1b3856758b9e0cd2892e059667cfbb7
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 0674bf993087b349d4e8b6f9947c65167e94df8e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47647530"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68001804"
 ---
 # <a name="logmarkhistory-transact-sql"></a>logmarkhistory (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  コミットされたマーク付きのトランザクションごとに 1 行のデータを格納します。 このテーブルに格納されます、 **msdb**データベース。  
+  コミットされているマークされたトランザクションごとに 1 つの行が含まれています。 このテーブルに格納されます、 **msdb**データベース。  
   
 
 |列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
-|**database_name**|**nvarchar(128)**|マーク付きのトランザクションが発生したローカル データベース。|  
-|**mark_name**|**nvarchar(128)**|マーク付きのトランザクションに指定されたユーザー定義の名前。|  
+|**database_name**|**nvarchar(128)**|ローカル データベースがマークされたトランザクションが発生しました。|  
+|**mark_name**|**nvarchar(128)**|マークされたトランザクションのユーザーの名前。|  
 |**description**|**nvarchar (255)**|マーク付きのトランザクションに指定されたユーザー定義の説明。 NULL にすることができます。|  
 |**user_name**|**nvarchar(128)**|マーク付きのトランザクションを実行したデータベース ユーザー名。 NULL にすることができます。|  
-|**lsn**|**numeric(25,0)**|マークが発生したトランザクション レコードのログ シーケンス番号。|  
-|**mark_time**|**datetime**|マーク付きトランザクションのコミット時間 (ローカル時間)。|  
+|**lsn**|**numeric(25,0)**|Mark が発生したトランザクション レコードのログ シーケンス番号。|  
+|**mark_time**|**datetime**|マークされたトランザクション (ローカル時刻) の時間をコミットします。|  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [マークされたトランザクションへのデータベースの復元 &#40;SQL Server Management Studio&#41;](../../relational-databases/backup-restore/restore-a-database-to-a-marked-transaction-sql-server-management-studio.md)   
  [マークされたトランザクションを使用して関連するデータベースを一貫した状態に復元する方法 &#40;完全復旧モデル&#41;](../../relational-databases/backup-restore/use-marked-transactions-to-recover-related-databases-consistently.md)   
  [システム テーブル &#40;TRANSACT-SQL&#41;](../../relational-databases/system-tables/system-tables-transact-sql.md)  

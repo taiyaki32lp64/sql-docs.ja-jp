@@ -13,16 +13,16 @@ helpviewer_keywords:
 ms.assetid: 742727a1-5189-44ec-b3ae-6fd7aa1f5347
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 8d537dedf9cf84cafd0b61cfac6605f1b0457fb8
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
+ms.openlocfilehash: 11628e5b490c30ef64329f6b9d06aee1b6c10fa9
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54135612"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72908290"
 ---
 # <a name="create-and-apply-the-initial-snapshot"></a>初期スナップショットの作成および適用
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 このトピックでは、 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] で [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]、 [!INCLUDE[tsql](../../includes/tsql-md.md)]、またはレプリケーション管理オブジェクト (RMO) を使用して、初期スナップショットを作成および適用する方法について説明します。 パラメーター化されたフィルターを使用するマージ パブリケーションでは、2 つの部分から成るスナップショットが必要です。 詳しくは、「 [パラメーター化されたフィルターを使用したパブリケーションのスナップショットの作成](../../relational-databases/replication/create-a-snapshot-for-a-merge-publication-with-parameterized-filters.md)」をご覧ください。  
   スナップショットは、パブリケーションの作成後に、スナップショット エージェントによって生成されます。 スナップショットは、以下の方法で生成できます。  
   
@@ -42,7 +42,7 @@ ms.locfileid: "54135612"
 
 スナップショット フォルダーの既定の場所を表示または変更するには、「  
   
--   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)][ ] :[スナップショット オプションの変更](../../relational-databases/replication/snapshot-options.md)  
+-   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]:[スナップショット オプションの変更](../../relational-databases/replication/snapshot-options.md)  
   
 -   レプリケーション プログラミングおよび RMO プログラミング:[パブリッシングおよびディストリビューションの構成](../../relational-databases/replication/configure-publishing-and-distribution.md)  
 
@@ -54,9 +54,9 @@ ms.locfileid: "54135612"
   
 ### <a name="modify-the-default-snapshot-location"></a>既定のスナップショットの場所の変更  
   
-1.  **[ディストリビューターのプロパティ - \<Distributor>]** ダイアログ ボックスの **[パブリッシャー]** ページで、既定のスナップショットの場所を変更するパブリッシャーのプロパティ ボタン (**[...]**) をクリックします。  
+1.  **[ディストリビューターのプロパティ - \<Distributor>]** ダイアログ ボックスの **[パブリッシャー]** ページで、既定のスナップショットの場所を変更するパブリッシャーのプロパティ ボタン ( **[...]** ) をクリックします。  
   
-2.  **[パブリッシャーのプロパティ - \<Publisher>]** ダイアログ ボックスで、**[既定のスナップショット フォルダー]** プロパティの値を入力します。  
+2.  **[パブリッシャーのプロパティ - \<Publisher>]** ダイアログ ボックスで、 **[既定のスナップショット フォルダー]** プロパティの値を入力します。  
   
     > [!NOTE]  
     >  スナップショット エージェントには、指定したディレクトリに対する書き込み権限が必要です。また、ディストリビューション エージェントまたはマージ エージェントには、読み取り権限が必要です。 プル サブスクリプションを使用する場合は、共有ディレクトリを UNC (汎用名前付け規則) パス (\\\computername\snapshot など) で指定する必要があります。 詳細については、「[Secure the Snapshot Folder](../../relational-databases/replication/security/secure-the-snapshot-folder.md)」(スナップショット フォルダーのセキュリティ保護) をご覧ください。  
@@ -88,13 +88,13 @@ SQL Server エージェントが実行されている場合、既定でパブリ
 
 1.  スナップショット パブリケーション、トランザクション パブリケーション、またはマージ パブリケーションを作成します。 詳細については、「 [Create a Publication](../../relational-databases/replication/publish/create-a-publication.md)」を参照してください。  
   
-2.  [sp_addpublication_snapshot &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addpublication-snapshot-transact-sql.md) を実行します。 このとき、 **@publication** パラメーターを指定したうえで、次のパラメーターを指定します。  
+2.  [sp_addpublication_snapshot &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addpublication-snapshot-transact-sql.md) を実行します。 このとき、 **\@publication** パラメーターを指定したうえで、次のパラメーターを指定します。  
   
-    -   **ディストリビューターで実行するスナップショット エージェントが使用するための Windows 認証の資格情報を @job_login に指定します。**  
+    -   **\@job_login**。これにより指定される Windows 認証の資格情報の下、ディストリビューターでスナップショット エージェントが実行されます。  
   
-    -   **Windows 資格情報に対応するパスワードを @job_password** に指定します。  
+    -   **\@job_password**。これは指定された Windows 資格情報のパスワードです。  
   
-    -   (省略可) エージェントからパブリッシャーへの接続に SQL Server 認証を使用する場合は、 **@publisher_security_mode** の値に **@publisher_security_mode** を指定します。 この場合は、さらに、 **@publisher_login** 」および「 **@publisher_password**」をご覧ください。  
+    -   (省略可能) エージェントからパブリッシャーへの接続に SQL Server 認証を使用する場合は、 **\@publisher_security_mode** の値に **0** を指定します。 この場合は、さらに、 **\@publisher_login** と **\@publisher_password** に対して、SQL Server 認証のログイン情報を指定する必要があります。  
   
     -   (省略可) スナップショット エージェント ジョブの同期スケジュールを指定します。 詳しくは、「 [Specify Synchronization Schedules](../../relational-databases/replication/specify-synchronization-schedules.md)」をご覧ください。  
   
@@ -103,7 +103,7 @@ SQL Server エージェントが実行されている場合、既定でパブリ
   
 3.  パブリケーションにアーティクルを追加します。 詳しくは、「 [アーティクルを定義](../../relational-databases/replication/publish/define-an-article.md)」をご覧ください。  
   
-4.  パブリケーション データベースのパブリッシャーで [sp_startpublication_snapshot &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-startpublication-snapshot-transact-sql.md) を実行し、手順 1 の **@publication** の値を指定します。  
+4.  パブリケーション データベースのパブリッシャーで [sp_startpublication_snapshot &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-startpublication-snapshot-transact-sql.md) を実行し、手順 1 の **\@publication** の値を指定します。  
   
 ## <a name="apply-a-snapshot"></a>スナップショットの適用  
 
@@ -134,10 +134,10 @@ SQL Server エージェントが実行されている場合、既定でパブリ
   
     -   **-DistributorLogin**    
     -   **-DistributorPassword**   
-    -   **-DistributorSecurityMode** = **@publisher_security_mode**    
+    -   **-DistributorSecurityMode** =  **\@publisher_security_mode**    
     -   **-PublisherLogin**    
     -   **-PublisherPassword**    
-    -   **-PublisherSecurityMode** = **@publisher_security_mode**  
+    -   **-PublisherSecurityMode** =  **\@publisher_security_mode**  
   
 ###  <a name="TsqlExample"></a> 例 (Transact-SQL)  
  次の例では、トランザクション パブリケーションを作成し、 **sqlcmd** スクリプト変数を使用して、新しいパブリケーション用にスナップショット エージェント ジョブを追加します。 ジョブを開始するコードも含まれています。  

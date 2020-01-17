@@ -20,11 +20,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: e9db5352c80cfc45fd6856339e2aaf680b631a47
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54129122"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62805890"
 ---
 # <a name="enhance-merge-replication-performance"></a>マージ レプリケーション パフォーマンスの向上
   「 [レプリケーションの全般的パフォーマンスの向上](enhance-general-replication-performance.md)」で説明した全般的なパフォーマンスのヒントを検討した後、マージ レプリケーションに固有なこれらの項目を併せて検討してください。  
@@ -140,10 +140,10 @@ ms.locfileid: "54129122"
   
 -   必要な場合、マージ レプリケーションのシステム テーブルのインデックスを再度作成する。  
   
-     マージ レプリケーションのメンテナンスの一環として、マージ レプリケーションに関連付けられているシステム テーブルの増加を必要に応じて確認します。**MSmerge_contents**、 **MSmerge_genhistory**、および**MSmerge_tombstone**、 **MSmerge_current_partition_mappings**、および**MSmerge_past_partition_mappings**します。 定期的にこれらのテーブルのインデックスを再設定します。 詳細については、「 [インデックスの再編成と再構築](../../indexes/reorganize-and-rebuild-indexes.md)」を参照してください。  
+     マージ レプリケーションのメンテナンスの一環として、マージ レプリケーションと関連するシステム テーブルが拡大しているかを時々確認してください(**MSmerge_contents**、**MSmerge_genhistory**、**MSmerge_tombstone**、**MSmerge_current_partition_mappings**、および **MSmerge_past_partition_mappings**)。 定期的にこれらのテーブルのインデックスを再設定します。 詳細については、「 [インデックスの再編成と再構築](../../indexes/reorganize-and-rebuild-indexes.md)」を参照してください。  
   
 -   レプリケーション モニターの **[同期の履歴]** タブを使用して、同期のパフォーマンスを監視する。  
   
-     マージ レプリケーションの場合、レプリケーション モニターの **[同期の履歴]** タブには、同期中に処理される各アーティクルの詳細な統計情報が表示されます。この統計には、各処理フェーズ (変更のアップロードやダウンロードなど) にかかる時間などが含まれます。 この情報によって、速度低下の原因となっているテーブルを特定することができます。マージ サブスクリプションのパフォーマンスに関するトラブルシューティングを、この情報から開始することをお勧めします。 詳細な統計情報を表示する方法の詳細については、次を参照してください。[情報を表示し、レプリケーション モニターを使用してタスクを実行する](../monitor/view-information-and-perform-tasks-replication-monitor.md)します。  
+     マージ レプリケーションの場合、レプリケーション モニターの **[同期の履歴]** タブには、同期中に処理される各アーティクルの詳細な統計情報が表示されます。この統計には、各処理フェーズ (変更のアップロードやダウンロードなど) にかかる時間などが含まれます。 この情報によって、速度低下の原因となっているテーブルを特定することができます。マージ サブスクリプションのパフォーマンスに関するトラブルシューティングを、この情報から開始することをお勧めします。 詳細な統計情報を表示する方法について詳しくは、「[レプリケーション モニターを使用して情報を表示し、タスクを実行する](../monitor/view-information-and-perform-tasks-replication-monitor.md)」を参照してください。  
   
   

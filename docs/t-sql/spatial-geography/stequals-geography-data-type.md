@@ -15,15 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - STEquals method
 ms.assetid: 0766ff37-0b9e-49bf-83c0-019f4354fe44
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: dceff73f5af775f6785db8b922d719e005d65a21
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: MladjoA
+ms.author: mlandzic
+ms.openlocfilehash: caa274b1571a9c0506acbe3f6d5d5d004588fede
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47605530"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68042268"
 ---
 # <a name="stequals-geography-data-type"></a>STEquals (geography データ型)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
@@ -44,7 +43,7 @@ ms.locfileid: "47605530"
 ## <a name="return-types"></a>戻り値の型  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 戻り値の型: **bit**  
   
- CLR の戻り値の型: **SqlBoolean**  
+ CLR の戻り値の型:**SqlBoolean**  
   
 ## <a name="remarks"></a>Remarks  
  2 つの **geography** インスタンスの SRID (spatial reference ID) が一致しない場合、このメソッドは常に null を返します。  

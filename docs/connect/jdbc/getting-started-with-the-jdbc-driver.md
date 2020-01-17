@@ -1,7 +1,7 @@
 ---
-title: JDBC ドライバーの概要 |Microsoft Docs
+title: JDBC driver の概要 |Microsoft Docs
 ms.custom: ''
-ms.date: 01/19/2017
+ms.date: 08/12/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 5f4c5d0d-c8d9-48e6-b0a5-56d308140c51
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: efdb01e4488688a4709df36383145c60c4687667
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: c9e116ad3a3804642a32c1d2d0e19fb2777da946
+ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47805740"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "69028048"
 ---
 # <a name="getting-started-with-the-jdbc-driver"></a>JDBC ドライバーの概要
 

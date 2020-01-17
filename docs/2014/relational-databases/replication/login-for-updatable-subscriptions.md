@@ -13,17 +13,17 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: d8162c7654d99cd2ebab41d290c0a39c6c686686
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54135372"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63058098"
 ---
 # <a name="login-for-updatable-subscriptions"></a>[更新可能なサブスクリプション] のログイン
   このウィザードの **[更新可能なサブスクリプション]** ページで **[レプリケート]** を選択した場合は、サブスクリプションを即時更新するためにパブリッシャーに接続する際に使用する、サブスクライバーでのアカウントを指定する必要があります。 接続はサブスクライバーで起動されるトリガーによって使用され、サブスクライバーに変更を反映します。 このアカウントは、 **[更新可能なサブスクリプション]** ページで **[変更をキューに登録し、可能な場合はコミット]** を選択している場合でも必要です。サブスクリプションの新規作成ウィザードでは、必要に応じて即時更新に切り替えることができるキュー更新が、既定で構成されるためです。  
   
 > [!IMPORTANT]  
->  接続用に指定するアカウントには、レプリケーションによってパブリケーション データベース内に作成されるビューのデータの挿入、更新、および削除だけを実行できる権限を与える必要があります。それ以外の権限は与えないでください。 各サブスクライバーで構成したアカウントに、**syncobj_**_\<HexadecimalNumber>_ の形式で名前が指定されたパブリケーション データベース内のビューに対する権限を与えます。  
+>  接続用に指定するアカウントには、レプリケーションによってパブリケーション データベース内に作成されるビューのデータの挿入、更新、および削除だけを実行できる権限を与える必要があります。それ以外の権限は与えないでください。 各サブスクライバーで構成したアカウントに、**syncobj_** _\<HexadecimalNumber>_ の形式で名前が指定されたパブリケーション データベース内のビューに対する権限を与えます。  
   
  接続の種類として、3 つのオプションがあります。  
   
@@ -33,7 +33,7 @@ ms.locfileid: "54135372"
   
 -   レプリケーションによって作成されるリンク サーバー。サブスクライバーで変更を行うユーザーの資格情報を使用して接続を行います。  
   
- 最初の 2 つのオプションは、このウィザードで指定できます。 最後のオプションは、[sp_link_publication &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-link-publication-transact-sql) を使用した場合にだけ指定できます。**@security_mode** パラメーターに値 **1** を指定します。  
+ 最初の 2 つのオプションは、このウィザードで指定できます。 最後のオプションは、[sp_link_publication &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-link-publication-transact-sql) を使用した場合にだけ指定できます。 **@security_mode** パラメーターに値 **1** を指定します。  
   
 ## <a name="options"></a>および  
  **[SQL Server 認証を使用して接続するリンク サーバーを作成する]**  

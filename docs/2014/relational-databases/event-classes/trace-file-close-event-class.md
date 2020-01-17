@@ -15,11 +15,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: dc317474384c59d396d5a0f1d5ee4f71883509d4
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52765374"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63061197"
 ---
 # <a name="trace-file-close-event-class"></a>Trace File Close イベント クラス
   **Trace File Close** イベント クラスは、トレース ファイルのロールオーバー中にトレース ファイルが閉じられたことを示します。  
@@ -30,7 +30,7 @@ ms.locfileid: "52765374"
 |----------------------|---------------|-----------------|---------------|----------------|  
 |**EventClass**|**int**|イベントの種類 = 150。|27|いいえ|  
 |**EventSequence**|**int**|このトレースで起動されたこのイベントの固有のタイムスタンプ。 この数字は、イベントが起動されるたびに単調に増加します。|51|いいえ|  
-|**FileName**|**nvarchar**|閉じられているトレース ファイルの論理名。|36|はい|  
+|**FileName**|**nvarchar**|閉じられているトレース ファイルの論理名。|36|[はい]|  
 |**IsSystem**|**int**|イベントがシステム プロセスとユーザー プロセスのどちらで発生したか。 1 = システム、NULL = ユーザーです。 このイベント クラスでは、この値は常に 1 です。|60|はい|  
 |**LoginName**|**nvarchar**|ユーザーのログイン名 ( [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] セキュリティ ログインまたは DOMAIN\username という形式の [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows ログイン資格情報)。 このイベント クラスでは、この値は常に "sa" です。|11|はい|  
 |**Exchange Spill**|**int**|システムによって割り当てられたトレースの ID です。|22|はい|  

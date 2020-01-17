@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 150bde1d-adb6-4e77-90e9-4dc93499a746
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 4425c814fb8814ec1ef7822d4642ccf6fcc0dd70
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: bb2fc54692a77441bb2516ad72c0c44951152f56
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47719670"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68045179"
 ---
 # <a name="messages-returned-by-the-odbc-driver-for-oracle"></a>Oracle ODBC ドライバーによって返されたメッセージ
 > [!IMPORTANT]  

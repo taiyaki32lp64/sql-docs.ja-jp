@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 4dda2239-7ab5-4729-9c63-eb530803f7d9
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 11d57cc1e5d880acebb4a44678ec147d24a5582d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d188ba801112a94d1ac09c6e1bae7fbbe5bccfee
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47679620"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67966455"
 ---
 # <a name="definedsize-property-example-vb"></a>DefinedSize プロパティの例 (VB)
 この例では、 [DefinedSize](../../../ado/reference/adox-api/definedsize-property-adox.md)のプロパティを[列](../../../ado/reference/adox-api/column-object-adox.md)します。 コードが FirstName 列のサイズを再定義、**従業員**のテーブル、 *Northwind*データベース。 FirstName の値に変更し、[フィールド](../../../ado/reference/ado-api/field-object.md)の[Recordset](../../../ado/reference/ado-api/recordset-object-ado.md)に基づいて、**従業員**テーブルが表示されます。 既定では、FirstName フィールドが空白で埋められます再定義した後に注意してください、 **DefinedSize**プロパティ。  
@@ -150,6 +149,6 @@ End Sub
 ' EndDefinedSizeVB  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [列オブジェクト (ADOX)](../../../ado/reference/adox-api/column-object-adox.md)   
  [DefinedSize プロパティ (ADOX)](../../../ado/reference/adox-api/definedsize-property-adox.md)

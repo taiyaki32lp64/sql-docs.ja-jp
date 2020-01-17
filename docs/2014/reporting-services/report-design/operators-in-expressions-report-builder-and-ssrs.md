@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 ms.assetid: d22dc8b6-4353-40e7-91a1-65e8dae6325d
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: b89f965fd85a45419741a3d18552d9e1323196cf
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: cb4ea26e646453b3acd85a4f5e13ab9557f950fa
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56293760"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66105498"
 ---
 # <a name="operators-in-expressions-report-builder-and-ssrs"></a>式で使用される演算子 (レポート ビルダーおよび SSRS)
   演算子は、式に含まれる 1 つ以上の項に適用される操作を表す記号です。 式でサポートされている演算子のカテゴリには、算術、比較、連結、論理 (ビット)、およびビット シフトがあります。  
@@ -48,7 +47,7 @@ ms.locfileid: "56293760"
 |>=|以上。|  
 |=|等しい。|  
 |<>|等しくない。|  
-|Like|指定された文字列が指定されたパターンと一致するかどうかを判断します。 パターンは、標準の文字とワイルドカード文字を含むことができます。 パターン検索時に、標準の文字は文字列に指定された文字と正確に一致する必要があります。 しかし、ワイルドカード文字は文字列の任意の部分と一致することができます。 = や != などの文字列比較演算子を使用する場合と比べて、ワイルドカード文字を使用する方がより柔軟に LIKE 演算子を使用できます。<br /><br /> ワイルドカードとして使用できる次のリスト文字:<br /><br /> **%**:0 個以上の文字で構成される任意の文字列です。<br /><br /> **_**:任意の 1 文字です。<br /><br /> **[ ]**:指定した範囲 (たとえば [a-f]) またはセット (たとえば [aeiou]) 内の任意の 1 文字です。<br /><br /> **[^]**:指定した範囲 (たとえば [^a-f]) またはセット (たとえば [^aeiou]) 内にない任意の 1 文字です。|  
+|Like|指定された文字列が指定されたパターンと一致するかどうかを判断します。 パターンは、標準の文字とワイルドカード文字を含むことができます。 パターン検索時に、標準の文字は文字列に指定された文字と正確に一致する必要があります。 しかし、ワイルドカード文字は文字列の任意の部分と一致することができます。 = や != などの文字列比較演算子を使用する場合と比べて、ワイルドカード文字を使用する方がより柔軟に LIKE 演算子を使用できます。<br /><br /> ワイルドカードとして使用できる次のリスト文字:<br /><br /> **%**:0 個以上の文字で構成される任意の文字列です。<br /><br /> **_**:任意の 1 文字です。<br /><br /> **[ ]**:任意の 1 文字を指定した範囲内 (たとえば、[a ~ f]) またはセット (たとえば [aeiou])。<br /><br /> **[^]**:任意の 1 文字を指定した範囲内ではなく (たとえば、[^ a ~ f]) 設定または (たとえば、[^ aeiou])。|  
 |Is|2 つのオブジェクト参照を比較します。|  
   
 ### <a name="string-concatenation"></a>文字列連結  

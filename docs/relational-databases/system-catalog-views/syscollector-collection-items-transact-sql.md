@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: a279ecd1-a59c-4315-9f08-bf221f00a465
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 53f978bf7914776e8596a89b0ee9b62770cd6866
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 78e8211c10d019c3b2a8c2435c5ddde8f8182a14
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47714365"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68060412"
 ---
 # <a name="syscollectorcollectionitems-transact-sql"></a>syscollector_collection_items (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 2243845c-4880-4aa0-9ee8-0a97a128996b
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 7bbb2bda32081afff414f33a107381bfa46bc571
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a507bd5425686e7a33a8bbf49e6c8669effed031
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47595092"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68084093"
 ---
 # <a name="log-file-viewer-f1-help"></a>[ログ ファイルの表示] の F1 ヘルプ
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -28,9 +27,9 @@ ms.locfileid: "47595092"
   
  表示できるログ ファイルは、[ログ ファイルの表示] を開いたときの状況に応じて変わります。 詳細については、「 [[ログ ファイルの表示] を開く](../../relational-databases/logs/open-log-file-viewer.md)」を参照してください。  
   
- 監査ログの表示行数は、**[ツール] メニューから開く [オプション]** ダイアログ ボックスの **[SQL Server オブジェクト エクスプローラー]/[コマンド]** ページで構成できます。 監査ログの表示列の詳細については、「[sys.fn_get_audit_file &#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-get-audit-file-transact-sql.md)」を参照してください。  
+ 監査ログの表示行数は、 **[ツール] メニューから開く [オプション]** ダイアログ ボックスの **[SQL Server オブジェクト エクスプローラー]/[コマンド]** ページで構成できます。 監査ログの表示列の詳細については、「[sys.fn_get_audit_file &#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-get-audit-file-transact-sql.md)」を参照してください。  
   
-## <a name="options"></a>[変数]  
+## <a name="options"></a>オプション  
  **[ログの読み込み]**  
  読み込むログ ファイルを指定できるダイアログ ボックスが開きます。  
   
@@ -38,7 +37,7 @@ ms.locfileid: "47595092"
  **[ログ ファイルの概要]** グリッドに表示されている情報をテキスト ファイルとしてエクスポートするためのダイアログ ボックスが開きます。  
   
  **[更新]**  
- 選択されたログの表示を更新します。 **[更新]** ボタンをクリックすると、選択したログが対象サーバーから再度読み込まれ、それと同時にすべてのフィルター設定が適用されます。  
+ 選択されたログの表示を更新します。 **[更新]** ボタンをクリックすると、選択したログがターゲット サーバーから再度読み込まれ、それと同時にすべてのフィルター設定が適用されます。  
   
  **[フィルター]**  
  **[接続]** や **[日付]** などの **[全般]** フィルター基準を含め、ログ ファイルのフィルター選択に使用する設定を指定できるダイアログ ボックスが開きます。  

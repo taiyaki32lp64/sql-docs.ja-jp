@@ -22,13 +22,12 @@ helpviewer_keywords:
 ms.assetid: ba56fba1-af9b-4459-b6e4-5d7e71a7630b
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: 4c131cfa111b31f857d3403ed23f2836da237fd8
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 7c74a19dc498e3551b1e8bdc2018c10392e803f6
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47661200"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68034942"
 ---
 # <a name="set-noexec-transact-sql"></a>SET NOEXEC (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -45,7 +44,7 @@ SET NOEXEC { ON | OFF }
 ```  
   
 ## <a name="remarks"></a>Remarks  
- SET NOEXEC が ON のとき、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントの各バッチがコンパイルされますが、実行されません。 SET NOEXEC が OFF の場合は、すべてのバッチがコンパイル後に実行されます。  
+ SET NOEXEC が ON のとき、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントの各バッチがコンパイルされますが、実行されません。 SET NOEXEC が OFF の場合は、すべてのバッチはコンパイル後に実行されます。  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のステートメントの実行には、コンパイルと実行の 2 つのフェーズがあります。 この設定は、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] で実行時に [!INCLUDE[tsql](../../includes/tsql-md.md)] コード内の構文とオブジェクト名を検証する場合に便利です。 また、多数のステートメントで構成されたより大きなバッチ内のステートメントを部分的にデバッグする際にも利用できます。  
   

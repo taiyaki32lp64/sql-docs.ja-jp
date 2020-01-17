@@ -17,11 +17,11 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 1a6a226ae76f75a07b483b74a09ecafc0191eee2
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48215192"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62919959"
 ---
 # <a name="working-with-user-defined-types-in-sql-server"></a>SQL Server でのユーザー定義型の使用
   ユーザー定義型 (UDT) の機能にアクセスできます[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]から、[!INCLUDE[tsql](../../includes/tsql-md.md)]標準のクエリ構文を使用して言語。 UDT は、データベース オブジェクトの定義、[!INCLUDE[tsql](../../includes/tsql-md.md)] バッチの変数、関数とストアド プロシージャ、および関数とストアド プロシージャの引数に使用できます。  

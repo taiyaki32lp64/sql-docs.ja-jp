@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: b0ded929-d5f5-4573-bf75-ce5bd32328a5
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 49c15164836f268010076de8526cfb71888de984
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 985dbed5d9144fab86e934f81b0300c61469165e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47835270"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67953843"
 ---
 # <a name="getbigdecimal-method-javalangstring-sqlserverresultset"></a>getBigDecimal (java.lang.String) メソッド (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -47,7 +46,7 @@ public java.math.BigDecimal getBigDecimal(java.lang.String columnName)
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- この getBigDecimal メソッドは、java.sql.ResultSet インターフェイスに、getBigDecimal メソッドによって指定されます。  
+ この getBigDecimal メソッドは、java. ResultSet インターフェイスの getBigDecimal メソッドによって指定されます。  
   
 ## <a name="see-also"></a>参照  
  [getBigDecimal メソッド &#40;SQLServerResultSet&#41;](../../../connect/jdbc/reference/getbigdecimal-method-sqlserverresultset.md)   

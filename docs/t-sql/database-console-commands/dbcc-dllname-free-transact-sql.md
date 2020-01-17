@@ -24,15 +24,14 @@ helpviewer_keywords:
 - freeing DLLs
 - unloading DLLs
 ms.assetid: 1eb71c17-fe15-430b-8916-e4e312dcf9c0
-author: uc-msft
+author: pmasl
 ms.author: umajay
-manager: craigg
-ms.openlocfilehash: a7c52da362443dabaf6e9ee4782cdabe82e20fb8
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: cc9716cbd1e27c6589b964c3c3d6208105f4863c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47840078"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68101947"
 ---
 # <a name="dbcc-dllname-free-transact-sql"></a>DBCC dllname (FREE) (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

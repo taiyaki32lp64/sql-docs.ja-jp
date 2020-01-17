@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.biwizard.currencyconversion.localcurrency.f1
@@ -13,12 +12,12 @@ ms.assetid: 74993b0d-dfca-476b-acba-d66c593680a5
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 6d6616f5f09ce39682a24c74808ca90084ee775f
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 558e2c7d62edcb9fb314b49d41fd7bd15413218d
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52507894"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66082176"
 ---
 # <a name="define-local-currency-reference-business-intelligence-wizard"></a>現地の通貨参照の定義 (ビジネス インテリジェンス ウィザード)
   **[現地の通貨参照の定義]** ページを使用すると、 **[換算の種類の選択]** ページで指定された多対多または多対一の変換を実行する通貨の換算機能のための現地通貨を定義できます。 現地通貨とは、 **[メジャーの選択]** ページで選択されたメジャーのトランザクションが保存される通貨です。  

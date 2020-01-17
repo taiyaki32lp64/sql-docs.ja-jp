@@ -28,22 +28,18 @@ helpviewer_keywords:
 - CURRENT_TIMESTAMP function [SQL Server]
 - time [SQL Server], system
 ms.assetid: c724d9cc-7b1f-4c71-bdf5-08bc52b33afc
-author: MashaMSFT
-ms.author: mathoma
-manager: craigg
+author: MikeRayMSFT
+ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 7bf523ed04740005d2e901f95f510dc29599696a
-ms.sourcegitcommit: 96032813f6bf1cba680b5e46d82ae1f0f2da3d11
+ms.openlocfilehash: 15d684788ee14713c0a6fb2e8d742d7a81a6eed7
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/15/2019
-ms.locfileid: "54299569"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68026412"
 ---
 # <a name="currenttimestamp-transact-sql"></a>CURRENT_TIMESTAMP (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
-
-> [!div class="nextstepaction"]
-> [SQL ドキュメントの目次に関するご意見を共有してください。](https://aka.ms/sqldocsurvey)
 
 この関数は、現在のデータベース システム タイムスタンプを **datetime** 値として、データベースのタイム ゾーン オフセットなしで返します。 `CURRENT_TIMESTAMP` は、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスが実行されているコンピューターのオペレーティング システムからこの値を派生します。
   
@@ -63,7 +59,7 @@ CURRENT_TIMESTAMP
 ```  
   
 ## <a name="arguments"></a>引数  
-この関数は引数をとりません。
+この関数は引数を取りません。
   
 ## <a name="return-type"></a>戻り値の型  
 **datetime**

@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 0feb8b08-4062-467b-8433-e88e4e302738
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 4222e8a63a29fe8c41d0e1715d2569bc9863068c
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 3f08067c55110b801cd989e0be1c9fbc6955cb61
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51661265"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68028272"
 ---
 # <a name="creating-user-defined-types"></a>ユーザー定義型の作成
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

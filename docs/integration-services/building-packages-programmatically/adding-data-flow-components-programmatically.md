@@ -15,17 +15,20 @@ helpviewer_keywords:
 - components [Integration Services], data flow
 - data flow [Integration Services], components
 ms.assetid: c06065cf-43e5-4b6b-9824-7309d7f5e35e
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: aa96f8071ba6331dbfab8b708cd023f40f8a52cb
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 4e4c68d5c85f8e31837d24e9cd5e3074620bd303
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52506180"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71294969"
 ---
 # <a name="adding-data-flow-components-programmatically"></a>プログラムによるデータ フロー コンポーネントの追加
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   データ フローを作成するには、最初にコンポーネントを追加します。 次に、追加したコンポーネントを構成して相互に接続し、実行時のデータ フローを確立します。 このセクションでは、データ フロー タスクへのコンポーネントの追加、コンポーネントのデザイン時インスタンスの作成、およびコンポーネントの構成について説明します。 コンポーネントの接続方法については、「[プログラムによるデータ フロー コンポーネントの接続](../../integration-services/building-packages-programmatically/connecting-data-flow-components-programmatically.md)」を参照してください。  
   
 ## <a name="adding-a-component"></a>コンポーネントの追加  
@@ -36,7 +39,7 @@ ms.locfileid: "52506180"
 ## <a name="adding-a-managed-component"></a>マネージド コンポーネントの追加  
  CLSID または PROGID を使用して、いずれかのマネージド データ フロー コンポーネントをデータ フローに追加することはできません。これらの値はコンポーネント自体ではなく、ラッパーを指しているためです。 代わりに、次のサンプルに示すように、**CreationName** プロパティまたは **AssemblyQualifiedName** プロパティを使用できます。  
   
- **AssemblyQualifiedName** プロパティを使用する場合は、[!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] プロジェクトで、マネージド コンポーネントを含んでいるアセンブリに参照を追加する必要があります。 これらのアセンブリは、**[参照の追加]** ダイアログ ボックスの [.NET] タブに一覧表示されません。 通常は、**C:\Program Files\Microsoft SQL Server\100\DTS\PipelineComponents** フォルダーを参照してアセンブリを見つける必要があります。  
+ **AssemblyQualifiedName** プロパティを使用する場合は、[!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] プロジェクトで、マネージド コンポーネントを含んでいるアセンブリに参照を追加する必要があります。 これらのアセンブリは、 **[参照の追加]** ダイアログ ボックスの [.NET] タブに一覧表示されません。 通常は、**C:\Program Files\Microsoft SQL Server\100\DTS\PipelineComponents** フォルダーを参照してアセンブリを見つける必要があります。  
   
  組み込みマネージド データ フロー コンポーネントの要素は次のとおりです。  
   

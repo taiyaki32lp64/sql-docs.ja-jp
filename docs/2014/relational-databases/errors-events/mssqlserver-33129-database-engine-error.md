@@ -12,12 +12,12 @@ ms.assetid: 83b5f368-f1a1-4a40-9bb6-c77e2dec690f
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 60be94308520f93c76f28ef5e0d1bbbf474dfdbd
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 991757d1bfeae8ecc0dec3a69d82c3dcab6415b1
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48063739"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62914649"
 ---
 # <a name="mssqlserver33129"></a>MSSQLSERVER_33129
     
@@ -38,7 +38,7 @@ ms.locfileid: "48063739"
 ## <a name="user-action"></a>ユーザーの操作  
  Windows グループのログインを無効にすることはできません。 Windows グループに許可されているアクセス権限を一時的に削除するには、Windows グループのログインの CONNECT 権限を REVOKE (取り消し) します。 この場合、Windows ユーザーは個人のログインまたは別の Windows グループを介してアクセスできる可能性があります。 次の例では、WESTCOAST ドメインの Accounting グループに対する CONNECT 権限を取り消します。  
   
-```tsql  
+```sql  
 REVOKE CONNECT TO [WESTCOAST\Accounting];  
 ```  
   

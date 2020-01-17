@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: f93c4b7d-74fc-4856-bf42-035289918e83
 author: Shamikg
 ms.author: Shamikg
-manager: craigg
-ms.openlocfilehash: 47e1321802b237f02a63535572b1850dbb4c74f6
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 29669535f3544dafea58e7064e6d2c5281f6102f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47833230"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67989700"
 ---
 # <a name="edit-type-mapping-db2tosql"></a>型のマッピング (DB2ToSQL) の編集します。
 **型マッピングの編集** ダイアログ ボックスでは、ソースと変換先のデータベース オブジェクトの間で型をマップする方法を指定することができます。  

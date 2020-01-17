@@ -20,13 +20,12 @@ helpviewer_keywords:
 ms.assetid: 44bee7d9-7517-4071-99be-8b36f979c7cc
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: cb13b8e57b69c814f18c414dbc345e307d80085c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 53f7abe7603430950f14ecad039419f8435cba28
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47645250"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68076553"
 ---
 # <a name="syssysmessages-transact-sql"></a>sys.sysmessages (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -38,13 +37,13 @@ ms.locfileid: "47645250"
   
 |列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
-|**error**|**int**|一意なエラー番号です。|  
-|**severity**|**tinyint**|そのエラーの重大度レベルです。|  
+|**error**|**int**|一意のエラーの数。|  
+|**severity**|**tinyint**|エラーの重大度レベル。|  
 |**dlevel**|**smallint**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**description**|**nvarchar (255)**|代入変数を含んだエラーの説明です。|  
 |**msglangid**|**smallint**|システム メッセージ グループ ID です。|  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [システム ビューへのシステム テーブルのマッピング&#40;TRANSACT-SQL&#41;](../../relational-databases/system-tables/mapping-system-tables-to-system-views-transact-sql.md)   
  [互換性ビュー &#40;Transact-SQL&#41;](~/relational-databases/system-compatibility-views/system-compatibility-views-transact-sql.md)  
   

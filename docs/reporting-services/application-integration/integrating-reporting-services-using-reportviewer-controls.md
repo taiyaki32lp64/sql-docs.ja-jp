@@ -9,14 +9,14 @@ helpviewer_keywords:
 - Report Viewer controls
 - integrating reports [Reporting Services]
 ms.assetid: 3ba47fb4-73a9-4059-89fd-329adebe94a8
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: b4b7eb42e3254e92b1b9778ac3866178f68e72f2
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 8ffaeb12bc961256959571d18808e2869a1d7485
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47786640"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62741885"
 ---
 # <a name="integrating-reporting-services-using-report-viewer-controls"></a>レポート ビューアー コントロールを使用した Reporting Services の統合
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual Studio 2015 には、レポート表示機能をアプリケーションに統合するための 2 つのレポート ビューアー コントロールが用意されています。 Windows フォームベース アプリケーション用のバージョンと Web フォーム アプリケーション用のバージョンがあります。 それぞれのコントロールは同様の機能を持っていますが、別々の環境を対象にして設計されています。 どちらのコントロールも、レポート サーバーに配置されたレポートの処理 (リモート処理モード) または [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] がインストールされていないコンピューターにコピーされたレポートの処理 (ローカル処理モード) を行うことができます。  

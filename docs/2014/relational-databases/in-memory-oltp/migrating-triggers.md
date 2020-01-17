@@ -10,12 +10,12 @@ ms.assetid: ad5385c5-5a50-40ca-a319-97d5606b8511
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 2abd6a00944e862644b1d62019c24677e6c95d51
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: b7df393f26523991abafded74ded242390cb0e3b
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48124472"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63071470"
 ---
 # <a name="migrating-triggers"></a>トリガーの移行
   このトピックでは、DDL トリガーと DML トリガー、およびメモリ最適化テーブルについて説明します。  
@@ -40,7 +40,7 @@ ms.locfileid: "48124472"
   
  このデータベースには、CREATE TABLE、CREATE TRIGGER、および CREATE PROCEDURE の各ステートメントを使用してスクリプト化した次のオブジェクトが含まれています。  
   
-```tsql  
+```sql  
 CREATE TABLE OrderDetails  
 (  
    OrderId int not null primary key,  
@@ -98,7 +98,7 @@ GO
   
  次の各オブジェクトは、移行前の状態と機能的に等価です。  
   
-```tsql  
+```sql  
 CREATE TABLE OrderDetails  
 (  
    OrderId int not null PRIMARY KEY NONCLUSTERED HASH WITH (BUCKET_COUNT = 1048576),  
@@ -154,7 +154,7 @@ END
 GO  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [インメモリ OLTP への移行](migrating-to-in-memory-oltp.md)  
   
   

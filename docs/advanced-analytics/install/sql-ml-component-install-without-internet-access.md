@@ -1,158 +1,220 @@
 ---
-title: R 言語とインターネットにアクセスできない - SQL Server Machine Learning の Python コンポーネントをインストールします。
-description: オフラインまたは未接続 Machine Learning R と Python でセットアップ ネットワーク ファイアウォールの背後にある SQL Server インスタンスを分離します。
+title: インターネットへのアクセスなしでのインストール
+description: ネットワーク ファイアウォールの背後に隔離されたコンピューターに SQL Server Machine Learning R および Python をインストールします。
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 10/01/2018
+ms.date: 11/04/2019
 ms.topic: conceptual
-author: HeidiSteen
-ms.author: heidist
-manager: cgronlun
-ms.openlocfilehash: 01f871b6f6a96c053daca13060cac1223415eb20
-ms.sourcegitcommit: 33712a0587c1cdc90de6dada88d727f8623efd11
-ms.translationtype: MT
+author: dphansen
+ms.author: davidph
+ms.custom: seo-lt-2019
+monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
+ms.openlocfilehash: e966406a20df723c453a5c8083f00f2e4989d9d0
+ms.sourcegitcommit: 385a907ed1de8fa7ada76260ea3f92583eb09238
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53596993"
+ms.lasthandoff: 11/14/2019
+ms.locfileid: "74064129"
 ---
-# <a name="install-sql-server-machine-learning-r-and-python-on-computers-with-no-internet-access"></a>SQL Server マシンがインターネットにアクセスできないコンピューターでの R と Python の学習のインストールします。
+# <a name="install-sql-server-machine-learning-r-and-python-on-computers-with-no-internet-access"></a>インターネットにアクセスできないコンピューターに SQL Server Machine Learning R および Python をインストールする
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-既定では、インストーラーが必要なを取得する、Microsoft ダウンロード サイトに接続しての更新されたコンポーネントでの機械学習 SQL Server。 ファイアウォールの制約は、これらのサイトからインストーラーを防ぐため場合、は、ファイルをダウンロード、サーバーがオフラインにファイルを転送し、セットアップを実行して、インターネットに接続されたデバイスを使用できます。
+既定では、インストーラーは Microsoft ダウンロード サイトに接続して、SQL Server 上での機械学習に必要なコンポーネントおよび更新されたコンポーネントを取得します。 ファイアウォールの制約によって、インストーラーがこれらのサイトにアクセスできない場合は、インターネットに接続されたデバイスを使ってファイルをダウンロードし、オフラインのサーバーにファイルを転送してから、セットアップを実行できます。
 
-データベース内分析は、データベース エンジンのインスタンスと SQL Server のバージョンに応じて、R と Python の統合のための追加のコンポーネントで構成されます。 
+データベース内分析は、データベース エンジンのインスタンスに加え、SQL Server のバージョンに応じて、R および Python 統合用の追加コンポーネントで構成されます。 
 
-+ SQL Server 2017 には、R と Python が含まれています。 
-+ SQL Server 2016 は R のみです。 
++ SQL Server 2019 には、R、Python、Java が含まれます
++ SQL Server 2017 には、R と Python が含まれます
++ SQL Server 2016 は R のみです
 
-分離されたサーバーで、CAB ファイルを machine learning と R および Python 言語固有の機能が追加されます。 
+分離されたサーバーの場合、機械学習と R/Python 言語固有の機能は、CAB ファイルを通じて追加されます。 
 
-## <a name="sql-server-2017-offline-install"></a>SQL Server 2017 のオフライン インストール
+::: moniker range="=sql-server-ver15||=sqlallproducts-allversions"
+## <a name="sql-server-2019-offline-install"></a>SQL Server 2019 のオフライン インストール
 
-独立したサーバー上の SQL Server 2017 Machine Learning サービス (R および Python) をインストールするには、SQL Server の最初のリリースをダウンロードして起動し、R と Python の対応する CAB ファイルのサポートします。 最新の累積的な更新プログラムを使用するようにサーバーをすぐに更新する場合でも、最初のリリースが最初にインストールする必要があります。
+分離されたサーバーに SQL Server Machine Learning Services (R および Python) をインストールするには、まず、SQL Server の初回リリースと、R および Python サポート用の対応する CAB ファイルをダウンロードします。 サーバーをすぐに更新して、最新の累積的な更新プログラムを使用する予定の場合も、最初に初回リリースをインストールする必要があります。
 
 > [!Note]
-> SQL Server 2017 には、サービス パックがありません。 累積的更新プログラムのみをサービスで、唯一のベース ラインとして初期リリースを使用する SQL Server の最初のリリースになります。 
+> SQL Server 2019 には Service Pack がありません。 初回リリースが唯一のベースラインであり、累積的な更新プログラムを通じてのみサービスが提供されます。
 
-### <a name="1---download-2017-cabs"></a>1-2017 の cab ファイルをダウンロードします。
+### <a name="1---download-2019-cabs"></a>1 - 2019 用の CAB をダウンロードする
 
-コンピューターでインターネット接続には、SQL Server 2017 の最初のリリースと、インストール メディアの R と Python の機能を提供する CAB ファイルをダウンロードします。 
+インターネットに接続されているコンピューター上で、SQL Server 2019 の初回リリースおよびインストール メディア用の R および Python 機能を提供する CAB ファイルをダウンロードします。
+
+リリース  |ダウンロード リンク  |
+---------|---------------|
+Microsoft R Open        | [SRO_3.5.2.125_1033.cab](https://go.microsoft.com/fwlink/?linkid=2085686) |
+Microsoft R Server      | [SRS_9.4.7.25_1033.cab](https://go.microsoft.com/fwlink/?linkid=2085792) |
+Microsoft Python Open   | [SPO_4.5.12.120_1033.cab](https://go.microsoft.com/fwlink/?linkid=2085793) |
+Microsoft Python Server | [SPS_9.4.7.25_1033.cab](https://go.microsoft.com/fwlink/?linkid=2085685) |
+
+> [!NOTE]
+> Java 機能は SQL Server のインストール メディアに含まれているため、個別の CAB ファイルは必要ありません。
+
+###  <a name="2---get-sql-server-2019-installation-media"></a>2 - SQL Server 2019 のインストール メディアを入手する
+
+1. インターネットに接続されているコンピューター上で、[SQL Server 2019 のセットアップ プログラム](https://www.microsoft.com/sql-server/sql-server-downloads)をダウンロードします。 
+
+2. セットアップをダブルクリックして、インストールの種類に **[メディアのダウンロード]** を選択します。 このオプションを使用すると、セットアップによって、インストール メディアを含む .iso (または .cab) ファイルが作成されます。
+
+   ![インストールの種類に [メディアのダウンロード] を選択する](media/2019offline-download-tile.png "メディアのダウンロード")
+
+::: moniker-end
+
+::: moniker range="=sql-server-2017||=sqlallproducts-allversions"
+## <a name="sql-server-2017-offline-install"></a>SQL Server 2017 のオフライン インストール
+
+分離されたサーバーに SQL Server Machine Learning Services (R および Python) をインストールするには、まず、SQL Server の初回リリースと、R および Python サポート用の対応する CAB ファイルをダウンロードします。 サーバーをすぐに更新して、最新の累積的な更新プログラムを使用する予定の場合も、最初に初回リリースをインストールする必要があります。
+
+> [!Note]
+> SQL Server 2017 には Service Pack がありません。 初回リリースを唯一のベースラインとして使用するのが SQL Server の最初のリリースであり、累積的な更新プログラムを通じてのみサービスが提供されます。 
+
+### <a name="1---download-2017-cabs"></a>1 - 2017 用の CAB をダウンロードする
+
+インターネットに接続されているコンピューター上で、SQL Server 2017 の初回リリースおよびインストール メディア用の R および Python 機能を提供する CAB ファイルをダウンロードします。 
 
 リリース  |ダウンロード リンク  |
 ---------|---------------|
 Microsoft R Open     |[SRO_3.3.3.24_1033.cab](https://go.microsoft.com/fwlink/?LinkId=851496)|
 Microsoft R Server      |[SRS_9.2.0.24_1033.cab](https://go.microsoft.com/fwlink/?LinkId=851507)|
-Microsoft Python のオープン     |[SPO_9.2.0.24_1033.cab](https://go.microsoft.com/fwlink/?LinkId=851502) |
-Microsoft Python サーバー    |[SPS_9.2.0.24_1033.cab](https://go.microsoft.com/fwlink/?LinkId=851508) |
+Microsoft Python Open     |[SPO_9.2.0.24_1033.cab](https://go.microsoft.com/fwlink/?LinkId=851502) |
+Microsoft Python Server    |[SPS_9.2.0.24_1033.cab](https://go.microsoft.com/fwlink/?LinkId=851508) |
 
-###  <a name="2---get-sql-server-2017-installation-media"></a>2-SQL Server 2017 インストール メディアを取得します。
+###  <a name="2---get-sql-server-2017-installation-media"></a>2 - SQL Server 2017 のインストール メディアを入手する
 
-1. インターネット接続を持つコンピューターで、ダウンロード、 [SQL Server 2017 セットアップ プログラム](https://www.microsoft.com/sql-server/sql-server-downloads)します。 
+1. インターネットに接続されているコンピューター上で、[SQL Server 2017 のセットアップ プログラム](https://www.microsoft.com/sql-server/sql-server-downloads)をダウンロードします。 
 
-2. セットアップをダブルクリックし、選択、**ダウンロード メディア**インストールの種類。 このオプションでは、セットアップには、インストール メディアを含むローカル .iso (または .cab) ファイルが作成されます。
+2. セットアップをダブルクリックして、インストールの種類に **[メディアのダウンロード]** を選択します。 このオプションを使用すると、セットアップによって、インストール メディアを含む .iso (または .cab) ファイルが作成されます。
 
-   ![ダウンロードのメディアのインストールの種類を選択](media/offline-download-tile.png "メディアのダウンロード")
+   ![インストールの種類に [メディアのダウンロード] を選択する](media/offline-download-tile.png "メディアのダウンロード")
+
+::: moniker-end
+
+::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
 
 ## <a name="sql-server-2016-offline-install"></a>SQL Server 2016 のオフライン インストール
 
-SQL Server 2016 データベース内分析は CAB が製品のパッケージと、オープン ソース R の Microsoft のディストリビューションのそれぞれファイル R 専用で、2 つだけです。 これらのリリースのいずれかをインストールして開始します。RTM、SP 1、SP 2。 適切な基本のインストールを行った後は、次の手順として累積的更新プログラムを適用できます。
+SQL Server 2016 のデータベース内分析は R のみです。これには、製品パッケージ用の CAB ファイル 2 つと、Microsoft によるオープンソースの R のディストリビューションのみが、それぞれ使用されます。 まず、次のリリースのいずれかをインストールします:RTM、SP 1、SP 2。 基本インストールが完了したら、次の手順として累積的な更新プログラムを適用できます。
 
-コンピューターでインターネット接続には、データベース内分析を SQL Server 2016 をインストールするセットアップで使用される CAB ファイルをダウンロードします。 
+インターネットに接続しているコンピューター上で、SQL Server 2016 上にデータベース内分析をインストールするためのセットアップで使用される CAB ファイルをダウンロードします。 
 
-### <a name="1---download-2016-cabs"></a>1-2016 cab ファイルをダウンロードします。
+### <a name="1---download-2016-cabs"></a>1 - 2016 用の CAB をダウンロードする
 
 リリース  | Microsoft R Open | Microsoft R Server |
 ---------|-----------------|---------------------|
 **SQL Server 2016 RTM**     | [SRO_3.2.2.803_1033.cab](https://go.microsoft.com/fwlink/?LinkId=761266) |[SRS_8.0.3.0_1033.cab](https://go.microsoft.com/fwlink/?LinkId=735051) |
 **SQL Server 2016 SP 1**     | [SRO_3.2.2.15000_1033.cab](https://go.microsoft.com/fwlink/?LinkId=824879) |[SRS_8.0.3.15000_1033.cab](https://go.microsoft.com/fwlink/?LinkId=824881) | 
-**SQL Server 2016 SP 2**  |[SRO_3.2.2.20000_1033.cab](https://go.microsoft.com/fwlink/?LinkId=866039) |[SRS_8.0.3.20000_1033.cab](https://go.microsoft.com/fwlink/?LinkId=866038) |
+**SQL Server 2016 SP 2**  |[SRO_3.2.2.16000_1033.cab](https://go.microsoft.com/fwlink/?LinkId=866039) |[SRS_8.0.3.17000_1033.cab](https://go.microsoft.com/fwlink/?LinkId=850317) |
 
-### <a name="2---get-sql-server-2016-installation-media"></a>2-SQL Server 2016 のインストール メディアを取得します。
+### <a name="2---get-sql-server-2016-installation-media"></a>2 - SQL Server 2016 のインストール メディアを入手する
 
-SQL Server 2016 RTM、SP 1、または SP 2 は、ターゲット コンピューターで、最初のインストールとしてインストールできます。 これらのバージョンのいずれかには、累積的な更新が可能です。
+ターゲット コンピューターへの最初のインストールとして、SQL Server 2016 RTM、SP 1、または SP 2 をインストールすることができます。 これらのバージョンはいずれも、累積的な更新プログラムを受け入れることができます。
 
-.Iso ファイルを移動する方法の 1 つでは、インストール メディアを格納している[Visual Studio Dev Essentials](https://visualstudio.microsoft.com/dev-essentials/)します。 サインインしてから、**ダウンロード**をインストールする SQL Server 2016 のリリースを検索するリンク。 ダウンロードは、オフライン インストール用のターゲット コンピューターにコピーすることができる .iso ファイルの形式です。
+インストール メディアを含んだ .iso ファイルを入手する方法の 1 つは、[Visual Studio Dev Essentials](https://visualstudio.microsoft.com/dev-essentials/) を使用することです。 サインインした後、 **[ダウンロード]** リンクを使用して、インストールする SQL Server 2016 リリースを見つけます。 ダウンロードは .iso ファイルの形式で行われ、これをオフライン インストール用のターゲット コンピューターにコピーできます。
 
-## <a name="transfer-files"></a>ファイルを転送します。
+::: moniker-end
 
-対象のコンピュータに SQL Server インストール メディア (.iso または .cab) とデータベース内分析 CAB ファイルをコピーします。 など、ターゲット マシン上の同じフォルダーに CAB ファイルとインストール メディアのファイルを配置**ダウンロード**またはセットアップのユーザーの temp * フォルダー。
+## <a name="transfer-files"></a>ファイルの転送
 
-次のスクリーン ショットでは、SQL Server 2017 の cab ファイルと ISO ファイルが表示されます。 SQL Server 2016 のダウンロードが異なって: ファイルの数を減らして (なしの Python) と、インストール メディアのファイル名は、2016年の。
+SQL Server のインストール メディア (.iso または .cab) とデータベース内分析の CAB ファイルを、ターゲット コンピューターにコピーします。 CAB ファイルとインストール メディアのファイルを、ターゲット コンピューター上の同じフォルダーに配置します (セットアップ ユーザーの %TEMP% フォルダーなど)。
 
-![転送するファイルの一覧](media/offline-file-list.png "ファイルの一覧")
+Python の CAB ファイル用には %TEMP% フォルダーが必要です。 R 用には、%TEMP% を使用するか、`myrcachedirectory` パラメーターを CAB のパスに設定することができます。
 
 ## <a name="run-setup"></a>セットアップの実行
 
-セットアップを追加、インターネットから切断されているコンピューターで SQL Server セットアップを実行すると、**オフライン インストール**前の手順でコピーして CAB ファイルの場所を指定できるように、ウィザードのページします。
+インターネットに接続されていないコンピューター上で SQL Server セットアップを実行すると、セットアップによってウィザードに **[オフライン インストール]** ページが追加され、前の手順でコピーした CAB ファイルの場所を指定できるようになります。
 
-1. インストールを開始するには、インストール メディアにアクセスする .iso または .cab ファイルをダブルクリックします。 表示する必要があります、 **setup.exe**ファイル。
+1. インストールを開始するには、.iso または .cab ファイルをダブルクリックして、インストール メディアにアクセスします。 **setup.exe** ファイルが表示されます。
 
-2. 右クリックして**setup.exe**管理者として実行します。
+2. **setup.exe** を右クリックし、管理者として実行します。
 
-3. セットアップ ウィザードでは、オープン ソース R または Python コンポーネントのライセンス ページが表示されたら、クリックして**Accept**します。 ライセンス条項への同意を使用すると、次の手順に進むことができます。
+3. セットアップ ウィザードで、オープンソースの R または Python コンポーネントに対するライセンスのページが表示されたら、 **[同意する]** をクリックします。 ライセンス条項に同意すると、次の手順に進むことができます。
 
-4. 取得するときに、**オフライン インストール**] ページの [**インストール パス**、先ほどコピーした CAB ファイルを含むフォルダーを指定します。
+4. **[オフライン インストール]** ページが表示されたら、 **[インストール パス]** に、以前にコピーした CAB ファイルが格納されているフォルダーを指定します。
 
-   ![Cab フォルダーの選択ウィザード ページ](media/screenshot-sql-offline-cab-page.png "CAB フォルダー")
-
-5. 引き続き次の画面に表示されるインストールを完了するように求められます。
+5. 画面の指示に従って続行し、インストールを完了します。
 
 <a name="apply-cu"></a>
 
-## <a name="apply-cumulative-updates"></a>累積的更新プログラムを適用します。
+## <a name="apply-cumulative-updates"></a>累積的な更新プログラムの適用
 
-データベース エンジンと machine learning のコンポーネントの両方に、最新の累積的な更新プログラムを適用することをお勧めします。 累積的更新プログラムは、セットアップ プログラムを通じてインストールされます。 
+最新の累積的な更新プログラムをデータベース エンジンと機械学習コンポーネントの両方に適用することをお勧めします。 累積的な更新プログラムは、セットアップ プログラムによってインストールされます。 
 
-1. ベースラインのインスタンスを起動します。 累積的更新プログラムは、SQL Server の既存のインストールにのみ適用できます。
+::: moniker range="=sql-server-ver15||=sqlallproducts-allversions"
+1. ベースライン インスタンスを使用して開始します。 累積的な更新プログラムは、SQL Server の初回リリースの既存のインストールにのみ適用できます。
 
-  + SQL Server 2017 の最初のリリース
-  + 最初のリリースの SQL Server 2016、SQL Server 2016 SP 1、または SQL Server 2016 SP 2
+2. インターネットに接続されているデバイスで、使用するバージョンの SQL Server 用の累積更新プログラムの一覧に移動します。
 
-2. インターネット接続されているデバイスでは、SQL Server のバージョンの累積更新プログラムの一覧に移動します。
+   + SQL Server 2019 更新プログラム " *(2019 用の更新プログラムはまだ利用できません)* "
+::: moniker-end
 
-  + [SQL Server 2017 更新プログラム](https://sqlserverupdates.com/sql-server-2017-updates/)
-  + [SQL Server 2016 更新プログラム](https://sqlserverupdates.com/sql-server-2016-updates/)
+::: moniker range="=sql-server-2017||=sqlallproducts-allversions"
+1. ベースライン インスタンスを使用して開始します。 累積的な更新プログラムは、SQL Server の初回リリースの既存のインストールにのみ適用できます。
 
-3. 実行可能ファイルをダウンロードする累積的な最新の更新プログラムを選択します。
+2. インターネットに接続されているデバイスで、使用するバージョンの SQL Server 用の累積更新プログラムの一覧に移動します。
 
-4. R と Python の対応する CAB ファイルを取得します。 ダウンロード リンクは、次を参照してください。[インスタンス SQL Server データベース内分析に累積的更新プログラム用 CAB のダウンロード](sql-ml-cab-downloads.md)します。
+   + [SQL Server 2017 の更新プログラム](https://sqlserverupdates.com/sql-server-2017-updates/)
+::: moniker-end
 
-5. すべてのファイル、実行可能ファイルと、オフラインのコンピューター上の同じフォルダーに、CAB ファイルを転送します。
+::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
+1. ベースライン インスタンスを使用して開始します。 累積的な更新プログラムは、SQL Server 2016 初回リリース、SQL Server 2016 SP 1、または SQL Server 2016 SP 2 の既存のインストールに対してのみ適用できます。
 
-6. セットアップを実行します。 ライセンス条項に同意し、[機能の選択] ページで、累積的更新プログラムの適用対象の機能を確認します。 Machine learning の機能を含む、現在のインスタンスのインストールされているすべての機能が表示されます。
+2. インターネットに接続されているデバイスで、使用するバージョンの SQL Server 用の累積更新プログラムの一覧に移動します。
 
-  ![機能ツリーから機能の選択](media/cumulative-update-feature-selection.png "機能一覧")
+   + [SQL Server 2016 更新プログラム](https://sqlserverupdates.com/sql-server-2016-updates/)
+::: moniker-end
 
-5. R と Python のディストリビューションのライセンス条項を使用して、ウィザードの手順を続行します。 インストール中に、更新済みの CAB ファイルを含むフォルダーの場所の選択を求められます。
+3. 最新の累積的な更新プログラムを選択して、実行可能ファイルをダウンロードします。
 
-## <a name="set-environment-variables"></a>環境変数な設定
+4. R および Python 用の対応する CAB ファイルを入手します。 ダウンロード リンクについては、[SQL Server データベース内分析インスタンスの累積的な更新プログラムの CAB ダウンロード](sql-ml-cab-downloads.md)に関するページを参照してください。
 
-R の機能統合のみに設定する必要があります、 **MKL_CBWR**環境変数を[出力を一貫性のある](https://software.intel.com/articles/introduction-to-the-conditional-numerical-reproducibility-cnr)Intel 数値演算ライブラリ (MKL) 計算から。
+5. すべてのファイル (実行可能ファイルと CAB ファイル) を、オフライン コンピューター上の同じフォルダーに転送します。
 
-1. コントロール パネルで、次のようにクリックします**システムとセキュリティ** > **システム** > **システムの詳細設定** >   **。環境変数**します。
+6. セットアップを実行します。 ライセンス条項に同意し、[機能の選択] ページで、累積的な更新プログラムが適用される機能を確認します。 機械学習機能を含む、現在のインスタンスにインストールされているすべての機能が表示されます。
 
-2. 新しいユーザーまたはシステム変数を作成します。 
+   ![機能ツリーから機能を選択する](media/cumulative-update-feature-selection.png "機能の一覧")
 
-  + セットを変数名を指定 `MKL_CBWR`
-  + 変数の値に設定します。 `AUTO`
+5. ウィザードを続行し、R および Python ディストリビューションのライセンス条項に同意します。 インストール中に、更新された CAB ファイルを含むフォルダーの場所を選択するように求められます。
 
-この手順では、サーバーを再起動する必要があります。 スクリプトの実行を有効にしようとする場合は、すべての構成作業が完了するまでは、再起動時に留保することができます。
+## <a name="set-environment-variables"></a>環境変数の設定
+
+R 機能の統合のみの場合、**MKL_CBWR** 環境変数を設定して、Intel Math Kernel Library (MKL) 計算からの[一貫した出力を保証](https://software.intel.com/articles/introduction-to-the-conditional-numerical-reproducibility-cnr)する必要があります。
+
+1. コントロール パネルで、 **[システムとセキュリティ]**  >  **[システム]**  >  **[システムの詳細設定]**  >  **[環境変数]** の順にクリックします。
+
+2. 新しいユーザー変数またはシステム変数を作成します。 
+
+   + 変数名を `MKL_CBWR` に設定する
+   + 変数値を `AUTO` に設定する
+
+この手順では、サーバーを再起動する必要があります。 スクリプトの実行を有効にしようとしている場合は、すべての構成作業が完了するまで再起動を遅らせることができます。
 
 ## <a name="post-install-configuration"></a>インストール後の構成
 
-インストールが完了すると、サービスを再起動し、スクリプトの実行を有効にするサーバーを構成します。
+::: moniker range=">=sql-server-2017||=sqlallproducts-allversions"
+インストールが完了したら、サービスを再起動した後、スクリプトの実行が有効になるようにサーバーを構成します。
 
-+ [外部スクリプトの実行 (SQL Server 2017) を有効にします。](sql-machine-learning-services-windows-install.md#bkmk_enableFeature)
-+ [外部スクリプトの実行 (SQL Server 2016) を有効にします。](sql-r-services-windows-install.md#bkmk_enableFeature)
++ [外部スクリプトの実行を有効にする](sql-machine-learning-services-windows-install.md#bkmk_enableFeature)
 
-SQL Server 2017 Machine Learning Services または SQL Server 2016 R Services のいずれかの初期のオフライン インストールでは、オンラインのインストールと同じ構成が必要です。
+SQL Server Machine Learning Services の初回オフライン インストールには、オンライン インストールと同じ構成が必要です。
 
-+ [インストールの確認](sql-machine-learning-services-windows-install.md#verify-installation)(SQL Server 2016 では、次のようにクリックします。[ここ](sql-r-services-windows-install.md#verify-installation))。
-+ [必要に応じて追加の構成](sql-machine-learning-services-windows-install.md#additional-configuration)(SQL Server 2016 では、次のようにクリックします。[ここ](sql-r-services-windows-install.md#bkmk_FollowUp))。
++ [インストールの確認](sql-machine-learning-services-windows-install.md#verify-installation)
++ [必要に応じた追加の構成](sql-machine-learning-services-windows-install.md#additional-configuration)
+::: moniker-end
+
+::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
+インストールが完了したら、サービスを再起動した後、スクリプトの実行が有効になるようにサーバーを構成します。
+
++ [外部スクリプトの実行を有効にする](sql-r-services-windows-install.md#bkmk_enableFeature)
+
+SQL Server R Services の初回オフライン インストールには、オンライン インストールと同じ構成が必要です。
+
++ [インストールの確認](sql-r-services-windows-install.md#verify-installation)
++ [必要に応じた追加の構成](sql-r-services-windows-install.md#bkmk_FollowUp)
+::: moniker-end
 
 ## <a name="next-steps"></a>次の手順
 
-インスタンスのインストール状態を確認し、一般的な問題を修正を参照してください。 [for SQL Server R Services のカスタム レポート](../r/monitor-r-services-using-custom-reports-in-management-studio.md)します。
+インスタンスのインストール状態を確認し、よくある問題を解決するには、[SQL Server のカスタム レポート](../r/monitor-r-services-using-custom-reports-in-management-studio.md)に関する記事をご覧ください。
 
-不明なメッセージやログ エントリのすべてのヘルプを参照してください。[アップグレードとインストールに関する FAQ - Machine Learning サービス](../r/upgrade-and-installation-faq-sql-server-r-services.md)します。
-
+見慣れないメッセージやログ エントリに関するヘルプについては、[アップグレードとインストールの FAQ - Machine Learning Services](../r/upgrade-and-installation-faq-sql-server-r-services.md) に関する記事をご覧ください。

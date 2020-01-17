@@ -11,19 +11,18 @@ helpviewer_keywords:
 - SQL Server Management Studio [SQL Server], user interface elements
 - user interface [SQL Server Management Studio]
 ms.assetid: 436d9afb-09c3-4838-9b54-4449a5178d0f
-author: stevestein
-ms.author: sstein
-manager: craigg
-ms.openlocfilehash: b87ea260382268eb47c7886e2cbff553a086d79a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: f8832355b2ef5ae1969d3bd98e84f654ba9cde16
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47676093"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68265060"
 ---
 # <a name="general-user-interface-elements"></a>一般的なユーザー インターフェイス要素
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-[!INCLUDE[msCoName](../includes/msconame_md.md)] [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] の基本的な要素には、**エディター**、**[プロパティ]** ウィンドウ、**ツールボックス**などがあります。  
+[!INCLUDE[msCoName](../includes/msconame_md.md)] [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] の基本的な要素には、**エディター**、 **[プロパティ]** ウィンドウ、**ツールボックス**などがあります。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
 [[バージョン情報] ダイアログ ボックス](../ssms/about-dialog-box.md)  

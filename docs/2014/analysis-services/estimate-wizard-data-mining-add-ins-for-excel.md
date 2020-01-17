@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 12/29/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - data modeling [data mining]
@@ -14,12 +13,12 @@ ms.assetid: 7f2b1d5f-c9b3-4939-b35a-34ae099af15f
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 04a5bf6b80e95df3b01ac73fd4580813c0709fe9
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 9b7ffc1b77d90946a119dc462da2057cf3fe4988
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48182462"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66081251"
 ---
 # <a name="estimate-wizard-data-mining-add-ins-for-excel"></a>推定ウィザード (Excel 用データ マイニング アドイン)
   ![データ マイニング リボンの推定ウィザード](media/dmc-estimate.gif "データ マイニング リボンの推定ウィザード")  

@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: b62c66ca-58d5-430e-9257-eb38c65e48c2
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 8fb037216c851a869cb19013a37fccd48145f284
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 4dc881b96a1e2641d4946340c9462455197f2043
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47789680"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67919253"
 ---
 # <a name="cursortype-property-ado"></a>CursorType プロパティ (ADO)
 使用するカーソルの種類を示す、 [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md)オブジェクト。  
@@ -40,7 +39,7 @@ ms.locfileid: "47789680"
   
 |この CursorType のレコード セット|これらの定数のすべての True サポート メソッドを返す必要があります。|  
 |----------------------------------------|---------------------------------------------------------------------|  
-|**adOpenForwardOnly**|なし|  
+|**adOpenForwardOnly**|none|  
 |**adOpenKeyset**|**adBookmark**、 **adHoldRecords**、 **adMovePrevious**、 **adResync**|  
 |**adOpenDynamic**|**adMovePrevious**|  
 |**adOpenStatic**|**adBookmark**、 **adHoldRecords**、 **adMovePrevious**、 **adResync**|  
@@ -56,7 +55,7 @@ ms.locfileid: "47789680"
 ## <a name="applies-to"></a>適用対象  
  [Recordset オブジェクト (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [CursorType、LockType、EditMode プロパティの例 (VB)](../../../ado/reference/ado-api/cursortype-locktype-and-editmode-properties-example-vb.md)   
  [CursorType、LockType、EditMode プロパティの例 (vc++)](../../../ado/reference/ado-api/cursortype-locktype-and-editmode-properties-example-vc.md)   
  [Supports メソッド](../../../ado/reference/ado-api/supports-method.md)

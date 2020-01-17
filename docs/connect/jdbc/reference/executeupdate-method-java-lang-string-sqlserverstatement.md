@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: 85e7c3a2-f2da-49bf-9d90-5fd246fd60e1
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: ceb1b692c08e53945f3b621e09ab4d7d750289a1
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 5adfcb9127e6bc073bda7385387edf0946a96021
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47766740"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67954716"
 ---
 # <a name="executeupdate-method-javalangstring-sqlserverstatement"></a>executeUpdate (java.lang.String) メソッド (SQLServerStatement)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -38,7 +37,7 @@ public int executeUpdate(java.lang.String sql)
 #### <a name="parameters"></a>パラメーター  
  *sql*  
   
- A**文字列**SQL ステートメントを格納しています。  
+ SQL ステートメントを含む**文字列**です。  
   
 ## <a name="return-value"></a>戻り値  
  影響を受けた行数を示す **int** です。DDL ステートメントを使用している場合は 0 です。  

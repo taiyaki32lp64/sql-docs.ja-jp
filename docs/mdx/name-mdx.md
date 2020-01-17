@@ -1,5 +1,5 @@
 ---
-title: 名前 (MDX) |Microsoft ドキュメント
+title: Name (MDX) |Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -8,18 +8,17 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-manager: kfile
-ms.openlocfilehash: 143fb6409e430b8fcbda7c073b8614cd0ecfcbe2
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.openlocfilehash: 8fd8aa240a72dacc67e7cd09cb058192cddee282
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34741981"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68088379"
 ---
 # <a name="name-mdx"></a>Name (MDX)
 
 
-  ディメンション、階層、レベル、メンバーの名前を返します。  
+  ディメンション、階層、レベル、またはメンバーの名前を返します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -43,16 +42,16 @@ Member_Expression.Name
  ディメンションを返す有効な多次元式 (MDX) 式です。  
   
  *Hierarchy_Expression*  
- 階層を返す有効な多次元式 (MDX) 式です。  
+ 階層を返す有効な多次元式 (MDX) 式。  
   
  *Level_Expression*  
- レベルを返す有効な多次元式 (MDX) 式です。  
+ レベルを返す有効な多次元式 (MDX) 式。  
   
  *メンバー式*  
  メンバーを 1 つ返す有効な多次元式 (MDX) 式です。  
   
 ## <a name="remarks"></a>コメント  
- **名前**関数は、一意の名前ではなく、オブジェクトの名前を返します。  
+ **Name**関数は、一意の名前ではなく、オブジェクトの名前を返します。  
   
 ## <a name="examples"></a>使用例  
   
@@ -69,7 +68,7 @@ from [Adventure Works]
 ```  
   
 ### <a name="member-expression-example"></a>メンバー式の例  
- 次の例では、メンバー値、メンバー キー、メンバー キャプションと共にメンバー名を返します。  
+ 次の例は、値、メンバー キー、メンバー キャプションと共にメンバー、メンバー名を返します。  
   
 ```  
 WITH MEMBER MemberName AS [Date].[Calendar].[July 1, 2001].Name  
@@ -81,7 +80,7 @@ SELECT {Measures.MemberName, Measures.ValueColumn, Measures.KeyColumn, Measures.
 from [Adventure Works]  
 ```  
   
-## <a name="see-also"></a>参照  
- [MDX 関数リファレンス&#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
+## <a name="see-also"></a>関連項目  
+ [MDX 関数リファレンス &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
   
   

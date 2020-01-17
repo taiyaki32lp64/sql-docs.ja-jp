@@ -1,10 +1,10 @@
 ---
 title: DROP EXTERNAL LIBRARY (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 03/05/2018
+ms.date: 11/04/2019
 ms.prod: sql
 ms.reviewer: ''
-ms.technology: t-sql
+ms.technology: machine-learning
 ms.topic: language-reference
 f1_keywords:
 - DROP EXTERNAL LIBRARY
@@ -13,21 +13,27 @@ dev_langs:
 - TSQL
 helpviewer_keywords:
 - DROP EXTERNAL LIBRARY
-author: HeidiSteen
-ms.author: heidist
+author: dphansen
+ms.author: davidph
 manager: cgronlund
-monikerRange: '>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 8cdf4e44a1c22d78fbc05a3bcd182bbc507527f3
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=azuresqldb-current||=sqlallproducts-allversions'
+ms.openlocfilehash: 2758b728792c48ef309eb08f545ea4a6953c9e9d
+ms.sourcegitcommit: 830149bdd6419b2299aec3f60d59e80ce4f3eb80
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47666850"
+ms.lasthandoff: 11/04/2019
+ms.locfileid: "73530818"
 ---
 # <a name="drop-external-library-transact-sql"></a>DROP EXTERNAL LIBRARY (Transact-SQL)  
-[!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]
 
-既存のパッケージ ライブラリを削除します。 パッケージ ライブラリは、R や Python などのサポートされる外部ランタイムで使用されます。
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+
+既存のパッケージ ライブラリを削除します。 パッケージ ライブラリは、R、Python、Java などのサポートされる外部ランタイムで使用されます。
+
+::: moniker range=">=sql-server-2017||>=sql-server-linux-ver15||sqlallproducts-allversions"
+> [!NOTE]
+> SQL Server 2017 では、R 言語と Windows プラットフォームがサポートされています。 Windows および Linux プラットフォームの R、Python、Java は SQL Server 2019 以降でサポートされています。 
+::: moniker-end
 
 ## <a name="syntax"></a>構文
 
@@ -64,6 +70,7 @@ SQL Server の他の `DROP` とは異なり、このステートメントは、�
 
 ## <a name="examples"></a>使用例
 
+::: moniker range=">=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions"
 カスタムの R パッケージ `customPackage` をデータベースに追加します。
 
 ```sql
@@ -72,6 +79,7 @@ FROM (CONTENT = 'C:\temp\customPackage_v1.1.zip')
 WITH (LANGUAGE = 'R');
 GO
 ```
+::: moniker-end
 
 `customPackage` ライブラリを削除します。
 
@@ -85,4 +93,3 @@ DROP EXTERNAL LIBRARY customPackage;
 [ALTER EXTERNAL LIBRARY (Transact-SQL)](alter-external-library-transact-sql.md)  
 [sys.external_library_files](../../relational-databases/system-catalog-views/sys-external-library-files-transact-sql.md)  
 [sys.external_libraries](../../relational-databases/system-catalog-views/sys-external-libraries-transact-sql.md)  
-

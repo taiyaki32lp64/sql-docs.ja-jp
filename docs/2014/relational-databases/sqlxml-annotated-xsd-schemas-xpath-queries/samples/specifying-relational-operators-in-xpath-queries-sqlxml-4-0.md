@@ -12,15 +12,15 @@ helpviewer_keywords:
 - XPath operators [SQLXML]
 - operators [SQLXML]
 ms.assetid: 177a0eb2-11ef-4459-a317-485a433ee769
-author: douglaslMS
-ms.author: douglasl
+author: MightyPen
+ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 2189c2efbdf7c67399c8a06e5823f073b69c82b4
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 1597893c203f1223ad916f5c7acecb66ff554c76
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52804445"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66012437"
 ---
 # <a name="specifying-relational-operators-in-xpath-queries-sqlxml-40"></a>XPath クエリ内での関係演算子の指定 (SQLXML 4.0)
   以下の例では、XPath クエリに関係演算子を指定する方法を示します。 これらの例では、SampleSchema1.xml に格納されているマッピング スキーマに対して XPath クエリを指定しています。 このサンプル スキーマについては、次を参照してください。 [XPath の例のサンプル注釈付き XSD スキーマ&#40;SQLXML 4.0&#41;](sample-annotated-xsd-schema-for-xpath-examples-sqlxml-4-0.md)します。  
@@ -28,7 +28,7 @@ ms.locfileid: "52804445"
 ## <a name="examples"></a>使用例  
   
 ### <a name="a-specify-relational-operator"></a>A. 関係演算子を指定する  
- この XPath クエリは、子の要素を返します、 **\<顧客 >** 要素を**CustomerID**属性の値が「1」、任意の子**\<順序>** 要素が含まれる、  **\<OrderDetail >** を持つ子、 **OrderQty** 3 より大きい値を持つ属性。  
+ この XPath クエリは、子の要素を返します、 **\<顧客 >** 要素を**CustomerID**属性の値が「1」、任意の子 **\<順序>** 要素が含まれる、  **\<OrderDetail >** を持つ子、 **OrderQty** 3 より大きい値を持つ属性。  
   
 ```  
 /child::Customer[@CustomerID="1"]/Order/OrderDetail[@OrderQty > 3]  

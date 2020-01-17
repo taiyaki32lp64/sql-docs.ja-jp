@@ -12,15 +12,14 @@ helpviewer_keywords:
 - viewing join properties
 - displaying join properties
 ms.assetid: e7985d14-8e6c-4fca-a1c9-9af1eeacb1e2
-author: stevestein
-ms.author: sstein
-manager: craigg
-ms.openlocfilehash: f2dddd95b448a3de74506836bda646581679b346
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 228e1d6f52dce6b9e6ccabd4258286f317065e45
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47839510"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68267390"
 ---
 # <a name="view-join-properties-visual-database-tools"></a>結合のプロパティの表示 (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

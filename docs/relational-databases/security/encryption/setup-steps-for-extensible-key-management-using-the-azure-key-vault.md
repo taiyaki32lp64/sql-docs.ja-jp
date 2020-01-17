@@ -1,7 +1,8 @@
 ---
-title: Azure Key Vault を使用する SQL Server TDE 拡張キー管理 - 設定手順 | Microsoft Docs
-ms.custom: ''
-ms.date: 08/24/2018
+title: Azure Key Vault を使用した TDE 拡張キー管理を設定する
+description: SQL Server コネクタ for Microsoft Azure Key Vault をインストールし、構成するための手順。
+ms.custom: seo-lt-2019
+ms.date: 09/12/2019
 ms.prod: sql
 ms.reviewer: vanto
 ms.technology: security
@@ -11,15 +12,14 @@ helpviewer_keywords:
 - SQL Server Connector, setup
 - SQL Server Connector
 ms.assetid: c1f29c27-5168-48cb-b649-7029e4816906
-author: aliceku
-ms.author: aliceku
-manager: craigg
-ms.openlocfilehash: 3bdc541e919e9a30d4ab043ef9c13d78a2f4b445
-ms.sourcegitcommit: c6e71ed14198da67afd7ba722823b1af9b4f4e6f
+author: jaszymas
+ms.author: jaszymas
+ms.openlocfilehash: 1ccffc653225645de94355707ae2116982d2deb4
+ms.sourcegitcommit: 035ad9197cb9799852ed705432740ad52e0a256d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/16/2019
-ms.locfileid: "54327353"
+ms.lasthandoff: 12/31/2019
+ms.locfileid: "75557535"
 ---
 # <a name="sql-server-tde-extensible-key-management-using-azure-key-vault---setup-steps"></a>Azure Key Vault を使用する SQL Server TDE 拡張キー管理 - 設定手順
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -45,7 +45,7 @@ SQL Server のバージョン  |再頒布可能パッケージのインストー
 2016 | [Visual Studio 2015 の Visual C++ 再頒布可能パッケージ](https://www.microsoft.com/download/details.aspx?id=48145)    
  
   
-## <a name="part-i-set-up-an-azure-active-directory-service-principal"></a>パート I:Azure Active Directory サービス プリンシパルをセットアップする  
+## <a name="part-i-set-up-an-azure-active-directory-service-principal"></a>パート I: Azure Active Directory サービス プリンシパルをセットアップする  
  SQL Server のアクセス権を Azure Key Vault に付与するためには、Azure Active Directory (AAD) にサービス プリンシパル アカウントが必要です。  
   
 1.  [Azure Portal](https://ms.portal.azure.com/) に移動してサインインします。  
@@ -58,7 +58,7 @@ SQL Server のバージョン  |再頒布可能パッケージのインストー
   
  ![ekm-key-id](../../../relational-databases/security/encryption/media/ekm-key-id.png "ekm-key-id")  
   
-## <a name="part-ii-create-a-key-vault-and-key"></a>パート II:Key Vault とキーを作成する  
+## <a name="part-ii-create-a-key-vault-and-key"></a>パート II: Key Vault とキーを作成する  
  ここで作成される Key Vault とキーは、SQL Server データベース エンジンが暗号化キーを保護するために使用します。  
   
 > [!IMPORTANT]  
@@ -87,7 +87,7 @@ SQL Server のバージョン  |再頒布可能パッケージのインストー
   
 2.  **新しいリソース グループを作成する**  
   
-     Azure Resource Manager で作成されるすべての Azure リソースは、リソース グループに属している必要があります。 そこで、Key Vault の従属先となるリソース グループを作成します。 この例では `ContosoDevRG`を使用します。 すべての Key Vault 名はグローバルに **一意** であるため、リソース グループと Key Vault には独自の一意の名前を選択します。  
+     Azure Resource Manager で作成されるすべての Azure リソースは、リソース グループに属している必要があります。 そこで、Key Vault の従属先となるリソース グループを作成します。 この例では、`ContosoDevRG` を使用します。 すべての Key Vault 名はグローバルに **一意** であるため、リソース グループと Key Vault には独自の一意の名前を選択します。  
   
     ```powershell  
     New-AzResourceGroup -Name ContosoDevRG -Location 'East Asia'  
@@ -107,7 +107,7 @@ SQL Server のバージョン  |再頒布可能パッケージのインストー
     > [!NOTE]  
     >  `-Location parameter`については、コマンド `Get-AzureLocation` を使用して、この例とは別の場所を指定する方法を確認します。 さらに詳しい情報が必要な場合は、次のように入力します。 `Get-Help Get-AzureLocation`  
   
-3.  **Key Vault を作成する**  
+3.  **キー コンテナーの作成**  
   
      `New-AzKeyVault` コマンドレットには、リソース グループ名、Key Vault 名、地理的位置を指定する必要があります。 たとえば、 `ContosoDevKeyVault`という名前の Key Vault の場合、次のように入力します。  
   
@@ -174,9 +174,9 @@ SQL Server のバージョン  |再頒布可能パッケージのインストー
     
     すばやいキー復旧を確保し、Azure 以外のデータにアクセスできるようにするには、次のベスト プラクティスをお勧めします。
  
-    1. ローカル HSM デバイスのローカルに暗号化キーを作成します (SQL Server によってサポートされるように、必ず非対称の RSA 2048 キーを作成してください)。
+    1. ローカル HSM デバイス上で暗号化キーをローカルに作成します。 (SQL Server によってサポートされるように、必ず非対称の RSA 2048 キーを作成してください)。
     2. 暗号化キーを Azure Key Vault にインポートします。 その方法については、以下の手順を参照してください。
-    3. 初めて Azure Key Vault でキーを使用する前に、Azure Key Vault キーのバックアップを作成します。 詳細については、 [Backup-AzureKeyVaultKey](https://msdn.microsoft.com/library/mt126292.aspx) コマンドを参照してください。
+    3. 初めて Azure Key Vault でキーを使用する前に、Azure Key Vault キーのバックアップを作成します。 Backup-AzureKeyVaultKey コマンドの詳細については、[こちら](/sql/relational-databases/security/encryption/setup-steps-for-extensible-key-management-using-the-azure-key-vault)をご覧ください。
     4. キーに何らかの変更を加える場合 (ACL の追加、タグの追加、キー属性の追加など) は常に、新しい Azure Key Vault キーのバックアップを作成してください。
 
         > [!NOTE]  
@@ -235,14 +235,14 @@ SQL Server のバージョン  |再頒布可能パッケージのインストー
                  keys/ContosoRSAKey0/<guid>  
     ```  
  > [!IMPORTANT]  
-    >  Key Vault は、同じ名前を持った複数バージョンのキーをサポートしていますが、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] コネクタで使用するキーについては、複数のバージョンを使用したりロールオーバーしたりすることは避けてください。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] の暗号化に使用するキーをロールしたいと管理者が考える場合は、コンテナー内に別の名前で新しいキーを作成し、DEK を暗号化するために使用してください。  
+ > Key Vault は、同じ名前を持った複数バージョンのキーをサポートしていますが、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] コネクタで使用するキーについては、複数のバージョンを使用したりロールオーバーしたりすることは避けてください。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] の暗号化に使用するキーをロールしたいと管理者が考える場合は、コンテナー内に別の名前で新しいキーを作成し、DEK を暗号化するために使用してください。  
    
   
 ## <a name="part-iii-install-the-includessnoversionincludesssnoversion-mdmd-connector"></a>パート III:[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] コネクタをインストールする  
  [Microsoft ダウンロード センター](https://go.microsoft.com/fwlink/p/?LinkId=521700)から SQL Server コネクタをダウンロードします。 (この作業は、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] コンピューターの管理者が行う必要があります。)  
 
 > [!NOTE]  
->  1.0.0.440 以前のバージョンは置き換えられ、実稼働環境ではサポートされなくなりました。 [Microsoft ダウンロード センター](https://www.microsoft.com/download/details.aspx?id=45344)にアクセスし、[[SQL Server コネクタのメンテナンスとトラブルシューティング]](../../../relational-databases/security/encryption/sql-server-connector-maintenance-troubleshooting.md) ページの "SQL Server コネクタのアップグレード" に示されている手順を使用して、バージョン 1.0.1.0 以降にアップグレードしてください。
+>  1\.0.0.440 以前のバージョンは置き換えられ、実稼働環境ではサポートされなくなりました。 [Microsoft ダウンロード センター](https://www.microsoft.com/download/details.aspx?id=45344)にアクセスし、[[SQL Server コネクタのメンテナンスとトラブルシューティング]](../../../relational-databases/security/encryption/sql-server-connector-maintenance-troubleshooting.md) ページの "SQL Server コネクタのアップグレード" に示されている手順を使用して、バージョン 1.0.1.0 以降にアップグレードしてください。
 
 > [!NOTE]  
 > バージョン 1.0.5.0 では、サムプリントのアルゴリズムについて破壊的変更があります。 バージョン 1.0.5.0 にアップグレードした後、データベースの復元でエラーが発生する可能性があります。 サポート技術情報の記事 [447099](https://support.microsoft.com/help/4470999/db-backup-problems-to-sql-server-connector-for-azure-1-0-5-0) をご覧ください。
@@ -343,7 +343,7 @@ SQL Server のバージョン  |再頒布可能パッケージのインストー
   
 5.  **で Azure Key Vault のキーを開く [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]**  
   
-     パート II で、非対称キーをインポートした場合は、次の [!INCLUDE[tsql](../../../includes/tsql-md.md)] スクリプトで目的のキー名を指定してキーを開きます。  
+     新しいキーを作成したか、パート II での説明に従って非対称キーをインポートしたかにかかわらず、キーを開く必要があります。 次の [!INCLUDE[tsql](../../../includes/tsql-md.md)] スクリプトにご利用のキー名を指定することで、キーを開きます。  
   
     -   `CONTOSO_KEY` の部分は、実際に [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] でキーに割り当てる名前に置き換えます。  
   

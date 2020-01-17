@@ -11,11 +11,11 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: d2d0e73d1d9a4058ff63320552604b2bfa1bca8a
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56031683"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63249402"
 ---
 # <a name="customizing-and-processing-the-forecasting-model-intermediate-data-mining-tutorial"></a>予測モデルのカスタマイズと処理 (中級者向けデータ マイニング チュートリアル)
   [!INCLUDE[msCoName](../includes/msconame-md.md)] タイム シリーズ アルゴリズムには、モデルの作成方法と時間データの分析方法に影響するいくつかのパラメーターがあります。 これらのプロパティを変更すると、マイニング モデルでの予測の作成方法に大きく影響する場合があります。  

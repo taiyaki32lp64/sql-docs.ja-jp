@@ -1,24 +1,23 @@
 ---
-title: チュートリアル:スパーク ラインの追加、レポート (レポート ビルダー) |Microsoft Docs
+title: チュートリアル:レポートへのスパークラインの追加 (レポート ビルダー) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 ms.assetid: 18c90a36-48bf-4805-a960-2d1e8f00c2dc
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 1fddfc39b7f6e5764dbe11bf6b069136fba8420d
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: a543182d5c367be9cc1be875f05c1ab5d4c9bfcf
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56294730"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66099042"
 ---
-# <a name="tutorial-add-a-sparkline-to-your-report-report-builder"></a>チュートリアル:レポート (レポート ビルダー) へのスパーク ラインを追加します。
+# <a name="tutorial-add-a-sparkline-to-your-report-report-builder"></a>チュートリアル:レポートへのスパークラインの追加 (レポート ビルダー)
   このチュートリアルでは、サンプルの売上データに基づいて基本的なテーブル レポートを作成してから、テーブルのセルにスパークライン グラフを追加します。  
   
  このチュートリアルで作成するレポートについては、[!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] レポート ビルダーのサンプル レポートに発展版が含まれています。 このサンプル レポートおよびその他のダウンロードの詳細については、次を参照してください。[レポート ビルダーのサンプル レポート](https://go.microsoft.com/fwlink/?LinkId=184851)します。 次の図に、ここで作成するレポートと同様のサンプル レポートを示します。  
@@ -58,7 +57,7 @@ ms.locfileid: "56294730"
   
 #### <a name="to-create-a-report"></a>レポートを作成するには  
   
-1.  **[スタート]** ボタンをクリックし、 **[プログラム]**、 **[Microsoft SQL Server 2012 レポート ビルダー]** の順にポイントして、 **[レポート ビルダー]** をクリックします。  
+1.  **[スタート]** ボタンをクリックし、 **[プログラム]** 、 **[Microsoft SQL Server 2012 レポート ビルダー]** の順にポイントして、 **[レポート ビルダー]** をクリックします。  
   
      **Getting Started**  ダイアログ ボックスが表示されます。  
   
@@ -147,7 +146,7 @@ ms.locfileid: "56294730"
        'Slim Digital' as Product, CAST(26576.00 AS money) AS Sales, 88 as Quantity  
     ```  
   
-4.  クエリ デザイナーのツール バーで、[実行]\(**!**) をクリックします。  
+4.  クエリ デザイナーのツール バーで、[実行]\( **!** ) をクリックします。  
   
      **SalesDate**、 **Subcategory**、 **Product**、 **Sales**、および **Quantity**の各フィールドを取得するクエリが実行され、結果セットが表示されます。  
   
@@ -183,7 +182,7 @@ ms.locfileid: "56294730"
   
 14. テーブルがデザイン画面に追加されます。 テーブルには 3 列および 5 行が含まれています。  
   
-     グループ化ペインを確認します。 グループ化ペインが表示されない場合、 **[表示]** メニューの **[グループ化]** をクリックします。 行グループ ペインには、1 つの行グループを示しています。**製品**します。 列グループ ペインには、1 つの列グループを示しています。**SalesDate**します。 詳細データは、データセット クエリによって取得されるすべてのデータです。  
+     グループ化ペインを確認します。 グループ化ペインが表示されない場合、 **[表示]** メニューの **[グループ化]** をクリックします。 行グループ ペインには 1 つの行グループ**Product** が表示されます。 列グループ ペインには 1 つ列グループ**SalesDate** が表示されます。 詳細データは、データセット クエリによって取得されるすべてのデータです。  
   
 15. **[実行]** をクリックして、レポートをプレビューします。  
   
@@ -341,7 +340,7 @@ ms.locfileid: "56294730"
   
 1.  **レポート ビルダー** のボタンの **[名前を付けて保存]** をクリックします。  
   
-2.  **[デスクトップ]**、 **[マイ ドキュメント]**、または **[マイ コンピューター]** をクリックして、レポートを保存するフォルダーを参照します。  
+2.  **[デスクトップ]** 、 **[マイ ドキュメント]** 、または **[マイ コンピューター]** をクリックして、レポートを保存するフォルダーを参照します。  
   
 3.  **[名前]** に入力されている既定の名前を「 **Product Sales**」に置き換えます。  
   

@@ -1,7 +1,7 @@
 ---
 title: Linux と macOS の ODBC ドライバー - 高可用性とディザスター リカバリー | Microsoft Docs
 ms.custom: ''
-ms.date: 04/04/2018
+ms.date: 04/05/2018
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,18 +10,17 @@ ms.topic: conceptual
 ms.assetid: fa656c5b-a935-40bf-bc20-e517ca5cd0ba
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 952194b55ef14527e2f04d18edb5873e6098d2da
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.openlocfilehash: 08fb8cc6e54fff4b315a0a98ace046a49b2673a3
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51600102"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68008767"
 ---
 # <a name="odbc-driver-on-linux-and-macos-support-for-high-availability-and-disaster-recovery"></a>Linux と macOS の ODBC ドライバーでの高可用性とディザスター リカバリーのサポート
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
 
-Linux と macOS のサポート用の ODBC ドライバー[!INCLUDE[ssHADR](../../../includes/sshadr_md.md)]します。 [!INCLUDE[ssHADR](../../../includes/sshadr_md.md)]の詳細については、以下を参照してください。  
+Linux および macOS 用の ODBC ドライバーは [!INCLUDE[ssHADR](../../../includes/sshadr_md.md)] をサポートしています。 [!INCLUDE[ssHADR](../../../includes/sshadr_md.md)]の詳細については、以下を参照してください。  
   
 -   [可用性グループ リスナー、クライアント接続、およびアプリケーションのフェールオーバー (SQL Server)](https://msdn.microsoft.com/library/hh213417.aspx)  
   
@@ -33,16 +32,16 @@ Linux と macOS のサポート用の ODBC ドライバー[!INCLUDE[ssHADR](../.
   
 接続文字列で、特定の可用性グループの可用性グループ リスナーを指定できます。 Linux または macOS 上の ODBC アプリケーションが、フェールオーバーする可用性グループ内のデータベースに接続されている場合、元の接続が切断されるため、フェールオーバー後にアプリケーションが動作を継続するには新しい接続を開く必要があります。
 
-Linux と macOS の ODBC ドライバーは、可用性グループ リスナーに接続していないと、複数の IP アドレスは、ホスト名に関連付けられている場合は、DNS ホスト名に関連付けられているすべての IP アドレスを順番に反復処理します。
+Linux および macOS 上の ODBC ドライバーでは、可用性グループ リスナーに接続しておらず、ホスト名に複数の IP アドレスが関連付けられている場合、DNS ホスト名に関連付けられているすべての IP アドレスが順次繰り返し処理されます。
 
-DNS サーバーの最初の返された IP アドレスで接続可能なない場合、これらのイテレーションは時間がかかるできます。 可用性グループ リスナーに接続するとき、ドライバーではすべての IP アドレスに対して並列して接続の確立が試みられます。 接続試行が成功すると、ドライバーは保留状態の接続試行をすべて破棄します。
+DNS サーバーから最初に返された IP アドレスに接続できない場合、このような繰り返し処理には時間がかかる可能性があります。 可用性グループ リスナーに接続するとき、ドライバーではすべての IP アドレスに対して並列して接続の確立が試みられます。 接続試行が成功すると、ドライバーは保留状態の接続試行をすべて破棄します。
 
 > [!NOTE]  
 > 可用性グループのフェールオーバーにより接続が失敗する可能性があるため、失敗した接続が再接続されるまで再試行する接続再試行ロジックを実装します。 接続タイムアウトを長くして、接続再試行ロジックを実装すると、可用性グループに接続できる可能性が高くなります。
 
 ## <a name="connecting-with-multisubnetfailover"></a>MultiSubnetFailover を使用した接続
 
-[!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] 可用性グループ リスナーまたは [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] フェールオーバー クラスター インスタンスに接続するときは、常に **MultiSubnetFailover=Yes** を指定します。 **MultiSubnetFailover** を使用すると、[!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] のすべての可用性グループとフェールオーバー クラスター インスタンスで高速にフェールオーバーできます。 また、**MultiSubnetFailover** によって、単一およびマルチサブネットの AlwaysOn トポロジのフェールオーバー時間が大幅に短縮されます。 マルチサブネット フェールオーバーの場合、クライアントは複数の接続を並列で試行します。 サブネットのフェールオーバー中に、ドライバーは、TCP 接続を積極的に再試行します。
+[!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] 可用性グループ リスナーまたは [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] フェールオーバー クラスター インスタンスに接続するときは、常に **MultiSubnetFailover=Yes** を指定します。 **MultiSubnetFailover** を使用すると、[!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] のすべての可用性グループとフェールオーバー クラスター インスタンスで高速にフェールオーバーできます。 また、**MultiSubnetFailover** によって、単一およびマルチサブネットの AlwaysOn トポロジのフェールオーバー時間が大幅に短縮されます。 マルチサブネット フェールオーバーの場合、クライアントは複数の接続を並列で試行します。 サブネット フェールオーバーの場合、ドライバーは TCP 接続を積極的に再試行します。
 
 **MultiSubnetFailover** 接続プロパティは、可用性グループまたはフェールオーバー クラスター インスタンスにアプリケーションが配置されていることを示します。 ドライバーでは、すべての IP アドレスに対する接続を試行することで、プライマリ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] インスタンス上のデータベースへの接続が試みられます。 **MultiSubnetFailover=Yes** を指定して接続している場合、クライアントでは、オペレーティング システムの既定の TCP 再送信間隔より短い間隔で TCP 接続が再試行されます。 **MultiSubnetFailover=Yes** を指定すると、AlwaysOn 可用性グループまたは AlwaysOn フェールオーバー クラスター インスタンスのフェールオーバー後に、短時間で再接続できます。 **MultiSubnetFailover=Yes** は、単一およびマルチサブネットの可用性グループとフェールオーバー クラスター インスタンスの両方に適用されます。  
 
@@ -50,13 +49,13 @@ DNS サーバーの最初の返された IP アドレスで接続可能なない
 
 可用性グループまたはフェールオーバー クラスター インスタンス内のサーバーに接続するときは、次のことに注意してください。
   
--   指定**MultiSubnetFailover = Yes**単一サブネットまたはマルチ サブネット可用性グループに接続するときにパフォーマンスを向上させるためにします。
+-   単一サブネットまたは複数サブネットの可用性グループに接続するときのパフォーマンスを向上するには、**MultiSubnetFailover=Yes** を指定します。
 
 -   接続文字列でサーバーとして、可用性グループの可用性グループ リスナーを指定します。
   
 -   IP アドレス数が 64 個を超える構成の [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] インスタンスには接続できません。
 
--   両方[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]認証または Kerberos 認証で使用できる**MultiSubnetFailover = [はい]** アプリケーションの動作には影響しません。
+-   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 認証または Kerberos 認証のいずれも、アプリケーションの動作に影響を与えることなく **MultiSubnetFailover=Yes** と併用できます。
 
 -   **loginTimeout** の値を増やすことで、フェールオーバー時間に対応し、アプリケーションの接続試行回数を減らすことができます。
 
@@ -84,7 +83,7 @@ DNS サーバーの最初の返された IP アドレスで接続可能なない
   
 ODBC 接続文字列キーワードの詳細については、「[SQL Server Native Client での接続文字列キーワードの使用](../../../relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md)」を参照してください。  
   
-同等の接続属性は次のとおりです。
+対応する接続属性は次のとおりです。
   
 -   **SQL_COPT_SS_APPLICATION_INTENT**  
   
@@ -105,4 +104,4 @@ ODBC 接続プロパティの詳細については、「[SQLSetConnectAttr](../.
 
 [プログラミング ガイドライン](../../../connect/odbc/linux-mac/programming-guidelines.md)
 
-[リリース ノート](../../../connect/odbc/linux-mac/release-notes.md)  
+[リリース ノート](../../../connect/odbc/linux-mac/release-notes-odbc-sql-server-linux-mac.md)  

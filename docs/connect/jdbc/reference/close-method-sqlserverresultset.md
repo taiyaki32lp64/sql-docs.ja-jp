@@ -1,5 +1,5 @@
 ---
-title: close メソッド (SQLServerResultSet) |Microsoft Docs
+title: close メソッド (SQLServerResultSet) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: 8f3adf5b-874e-4cf2-b4ef-672dda42d77a
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: ec9b51d08e10df0f829308d163b573c0670c78e7
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e78dbb981938e9af2fbe894919368da17347941a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47637260"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67955582"
 ---
 # <a name="close-method-sqlserverresultset"></a>close メソッド (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: b4ca861a-c164-4e87-8672-d5de15e3823c
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: f6ce5decd2744c0ce9d753e355321a40d00fd620
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 521a2ffbf0f8eb5e2590ae6e42d50dc71d536683
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47840660"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68086040"
 ---
 # <a name="transactions-odbc"></a>トランザクション (ODBC)
 A*トランザクション*作業単位は、1 つのアトミック操作として行われます。 は、操作の成功や全体が失敗しました。 たとえば、1 つの銀行口座から資金の転送を検討してください。 これは、2 つの手順: 最初のアカウントからお金を現金との 1 秒間のデポジットします。 重要です。 両方の手順が成功します。1 つのステップが成功して失敗するその他の余裕がないです。 トランザクションをサポートするデータベースは、これを保証できます。  

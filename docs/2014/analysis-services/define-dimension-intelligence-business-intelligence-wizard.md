@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.biwizard.dimensionintelligence.adddimensionintelligence.f1
@@ -13,12 +12,12 @@ ms.assetid: 1089a788-763f-4c3e-80e3-b625e0728343
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 2aaef74d9e94446022b8c0585749a4eb0bf05cd2
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 4a66a940e916cc05bb3fe502cb6f4d10a9c2fae6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48194260"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66082140"
 ---
 # <a name="define-dimension-intelligence-business-intelligence-wizard"></a>[ディメンション インテリジェンスの定義] (ビジネス インテリジェンス ウィザード)
   **[ディメンション インテリジェンスの定義]** ページを使用すると、指定した種類のディメンションの属性の型に、既存のディメンションの属性を割り当てることができます。  

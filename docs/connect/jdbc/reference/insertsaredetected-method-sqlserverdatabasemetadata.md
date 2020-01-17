@@ -1,5 +1,5 @@
 ---
-title: insertsAreDetected メソッド (SQLServerDatabaseMetaData) |Microsoft Docs
+title: インストールされたメソッド (SQLServerDatabaseMetaData) |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: f296cc42-9d26-48c3-a360-bcf51c31f7fb
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: a681258a2232ed43c1547024f8bc0eff51f42e0d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 4d2889af814e7c7122c9784f5ac9a70421731c09
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47742830"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67977876"
 ---
 # <a name="insertsaredetected-method-sqlserverdatabasemetadata"></a>insertsAreDetected メソッド (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -65,7 +64,7 @@ public boolean insertsAreDetected(int type)
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- この insertsAreDetected メソッドは、java.sql.DatabaseMetaData インターフェイスで insertsAreDetected メソッドによって指定されます。  
+ このインストールされているこのメソッドは、java メタデータインターフェイスの、インストールされているこのメソッドによって指定されます。  
   
 > [!NOTE]  
 >  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] では、どの種類のカーソルについても挿入された行は検出されません。  

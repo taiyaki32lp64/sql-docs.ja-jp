@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.cubewizard.mgtableselection.f1
@@ -13,12 +12,12 @@ ms.assetid: 67e8e1ef-c7c6-434e-bd36-4b35f3cb7759
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 126cc0aa341c386672f14651d18117cc5a95da77
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 7eea2aaca722ed2621127120f21b2ec350392606
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48195642"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66069464"
 ---
 # <a name="select-measure-group-tables-cube-wizard"></a>[メジャー グループ テーブルの選択] (キューブ ウィザード)
   **[メジャー グループ テーブルの選択]** ページを使用すると、データ ソース ビューを特定して、キューブに使用するメジャー グループ テーブルを選択できます。  

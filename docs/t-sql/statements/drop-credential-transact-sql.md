@@ -22,13 +22,12 @@ helpviewer_keywords:
 ms.assetid: df22c826-317d-45a6-b078-186acb65f71e
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: ba22628773ece8251c61858b1f2a24d19b4531fb
-ms.sourcegitcommit: 9c99f992abd5f1c174b3d1e978774dffb99ff218
+ms.openlocfilehash: e365b03b5a6a475f98a940f5b6f243bc7fa31789
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/17/2019
-ms.locfileid: "54361372"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67898225"
 ---
 # <a name="drop-credential-transact-sql"></a>DROP CREDENTIAL (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

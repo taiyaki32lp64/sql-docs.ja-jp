@@ -1,5 +1,5 @@
 ---
-title: sp_send_dbmail (TRANSACT-SQL) |Microsoft Docs
+title: sp_send_dbmail (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 08/10/2016
 ms.prod: sql
@@ -18,18 +18,17 @@ helpviewer_keywords:
 ms.assetid: f1d7a795-a3fd-4043-ac4b-c781e76dab47
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 11b5d9c48c073d3a8208b9c8be1e73c5aa68e88e
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 42c763b37f5c721a259fbe87eca804e22f5c27b5
+ms.sourcegitcommit: f6bfe4a0647ce7efebaca11d95412d6a9a92cd98
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48075784"
+ms.lasthandoff: 10/05/2019
+ms.locfileid: "71974374"
 ---
-# <a name="spsenddbmail-transact-sql"></a>sp_send_dbmail (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+# <a name="sp_send_dbmail-transact-sql"></a>sp_send_dbmail (Transact-SQL)
+[!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
 
-  指定した受信者に電子メール メッセージを送信します。 メッセージには、クエリ結果セットまたは添付ファイル、あるいはその両方を含めることができます。 メールが正常にデータベース メール キューに配置されるときに**sp_send_dbmail**を返します、 **mailitem_id**メッセージ。 このストアド プロシージャは、 **msdb**データベース。  
+  指定した受信者に電子メール メッセージを送信します。 このメッセージには、クエリ結果セット、添付ファイル、またはその両方が含まれる場合があります。 メールがデータベースメールキューに正常に配置されると、 **sp_send_dbmail**によってメッセージの**mailitem_id**が返されます。 このストアドプロシージャは**msdb**データベースにあります。  
   
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -64,32 +63,23 @@ sp_send_dbmail [ [ @profile_name = ] 'profile_name' ]
 ```  
   
 ## <a name="arguments"></a>引数  
- [ **@profile_name=** ] **'***profile_name***'**  
- メッセージの送信元プロファイルの名前を指定します。 *Profile_name*の種類は**sysname**、既定値は NULL です。 *Profile_name*既存のデータベース メール プロファイルの名前を指定する必要があります。 ない場合*profile_name*が指定されている**sp_send_dbmail**現在のユーザーの既定のプライベート プロファイルを使用します。 ユーザーが既定のプライベート プロファイルを持たない場合**sp_send_dbmail**の既定のパブリック プロファイルを使用して、 **msdb**データベース。 ユーザーに既定のプライベート プロファイルがないし、データベースの既定のパブリック プロファイルがない場合**@profile_name**指定する必要があります。  
+`[ @profile_name = ] 'profile_name'` は、メッセージの送信元のプロファイルの名前です。 *Profile_name*の型は**sysname**で、既定値は NULL です。 *Profile_name*には、既存のデータベースメールプロファイルの名前を指定する必要があります。 *Profile_name*が指定されていない場合、 **sp_send_dbmail**は、現在のユーザーの既定のプライベートプロファイルを使用します。 ユーザーが既定のプライベートプロファイルを持っていない場合、 **sp_send_dbmail**では**msdb**データベースの既定のパブリックプロファイルが使用されます。 ユーザーに既定のプライベートプロファイルがなく、データベースの既定のパブリックプロファイルがない場合は、 **\@profile_name**を指定する必要があります。  
   
- [  **@recipients=** ] **'***受信者***'**  
- メッセージの送信先の電子メール アドレスを、セミコロン区切りのリストで指定します。 受信者リストのデータ型**varchar (max)** します。 このパラメーターは省略可能な少なくとも 1 つの**@recipients**、 **@copy_recipients**、または**@blind_copy_recipients**指定する必要がありますまたは**sp _send_dbmail**はエラーを返します。  
+`[ @recipients = ] 'recipients'` は、メッセージの送信先となる電子メールアドレスのセミコロン区切りの一覧です。 受信者リストの型は**varchar (max)** です。 このパラメーターは省略可能ですが、\@の**受信者**、 **\@copy_recipients**、または **\@blind_copy_recipients**の少なくとも1つを指定する必要があります。指定しないと、 **sp_send_dbmail**はエラーを返します。  
   
- [ **@copy_recipients=** ] **'***copy_recipients***'**  
- メッセージのカーボン コピーを送信する電子メール アドレスを、セミコロン区切りのリストで指定します。 コピーの受信者リストのデータ型**varchar (max)** します。 このパラメーターは省略可能な少なくとも 1 つの**@recipients**、 **@copy_recipients**、または**@blind_copy_recipients**指定する必要がありますまたは**sp _send_dbmail**はエラーを返します。  
+`[ @copy_recipients = ] 'copy_recipients'` は、メッセージのカーボンコピー先となる電子メールアドレスのセミコロン区切りの一覧です。 コピーの受信者リストの型は**varchar (max)** です。 このパラメーターは省略可能ですが、\@の**受信者**、 **\@copy_recipients**、または **\@blind_copy_recipients**の少なくとも1つを指定する必要があります。指定しないと、 **sp_send_dbmail**はエラーを返します。  
   
- [ **@blind_copy_recipients=** ] **'***blind_copy_recipients***'**  
- メッセージのブラインド カーボン コピーを送信する電子メール アドレスを、セミコロン区切りのリストで指定します。 ブラインド コピーの受信者リストのデータ型**varchar (max)** します。 このパラメーターは省略可能な少なくとも 1 つの**@recipients**、 **@copy_recipients**、または**@blind_copy_recipients**指定する必要がありますまたは**sp _send_dbmail**はエラーを返します。  
+`[ @blind_copy_recipients = ] 'blind_copy_recipients'` は、メッセージをブラインドカーボンコピーする電子メールアドレスのセミコロン区切りのリストです。 ブラインドコピーの受信者リストの型は**varchar (max)** です。 このパラメーターは省略可能ですが、\@の**受信者**、 **\@copy_recipients**、または **\@blind_copy_recipients**の少なくとも1つを指定する必要があります。指定しないと、 **sp_send_dbmail**はエラーを返します。  
   
- [ **@from_address=** ] **'***from_address***'**  
- 電子メール メッセージの差出人アドレスの値を指定します。 これは、メール プロファイルの設定をオーバーライドするためのオプションのパラメーターです。 このパラメーターは型**varchar (max)** します。 オーバーライドが許可されるかどうかは、SMTP のセキュリティ設定によって決まります。 パラメーターを指定しなかった場合の既定値は NULL です。  
+`[ @from_address = ] 'from_address'` は、電子メールメッセージの [差出人アドレス] の値です。 これは、メールプロファイルの設定を上書きするために使用される省略可能なパラメーターです。 このパラメーターの型は**varchar (MAX)** です。 オーバーライドが許可されるかどうかは、SMTP のセキュリティ設定によって決まります。 パラメーターを指定しない場合、既定値は NULL になります。  
   
- [ **@reply_to=** ] **'***reply_to***'**  
- 電子メール メッセージの返信先アドレスの値を指定します。 有効な値として電子メール アドレスが 1 つだけ許可されます。 これは、メール プロファイルの設定をオーバーライドするためのオプションのパラメーターです。 このパラメーターは型**varchar (max)** します。 オーバーライドが許可されるかどうかは、SMTP のセキュリティ設定によって決まります。 パラメーターを指定しなかった場合の既定値は NULL です。  
+`[ @reply_to = ] 'reply_to'` は、電子メールメッセージの返信先アドレスの値です。 有効な値として1つの電子メールアドレスのみを受け入れます。 これは、メールプロファイルの設定を上書きするために使用される省略可能なパラメーターです。 このパラメーターの型は**varchar (MAX)** です。 オーバーライドが許可されるかどうかは、SMTP のセキュリティ設定によって決まります。 パラメーターを指定しない場合、既定値は NULL になります。  
   
- [  **@subject=** ] **'***サブジェクト***'**  
- 電子メール メッセージの件名を指定します。 件名は、型の**nvarchar (255)** します。 件名を指定しない場合、既定の件名 'SQL Server メッセージ' が使用されます。  
+`[ @subject = ] 'subject'` は、電子メールメッセージの件名です。 サブジェクトの型は**nvarchar (255)** です。 件名が指定されていない場合、既定値は ' SQL Server Message ' です。  
   
- [ **@body=** ] **'***body***'**  
- 電子メール メッセージの本文を指定します。 型のメッセージの本文は、 **nvarchar (max)**、既定値は NULL です。  
+`[ @body = ] 'body'` は、電子メールメッセージの本文です。 メッセージの本文の型は**nvarchar (max)** で、既定値は NULL です。  
   
- [ **@body_format=** ] **'***body_format***'**  
- メッセージの本文の形式を指定します。 型のパラメーターが**varchar (20)**、既定値は NULL です。 指定した場合、送信メッセージのヘッダーには、メッセージの本文が指定の形式であることを示す文字列が設定されます。 次のいずれかの値を指定できます。  
+`[ @body_format = ] 'body_format'` は、メッセージ本文の形式です。 パラメーターの型は**varchar (20)** ,、既定値は NULL です。 指定した場合、送信メッセージのヘッダーには、メッセージの本文が指定の形式であることを示す文字列が設定されます。 パラメーターには、次のいずれかの値を含めることができます。  
   
 -   [TEXT]  
   
@@ -97,19 +87,17 @@ sp_send_dbmail [ [ @profile_name = ] 'profile_name' ]
   
  既定値は TEXT です。  
   
- [  **@importance=** ] **'***重要度***'**  
- メッセージの重要度を指定します。 型のパラメーターが**varchar (6)** します。 次のいずれかの値を指定できます。  
+`[ @importance = ] 'importance'` は、メッセージの重要度です。 パラメーターの型は**varchar (6)** です。 パラメーターには、次のいずれかの値を含めることができます。  
   
 -   Low  
   
 -   標準  
   
--   高  
+-   High  
   
  既定値は Normal です。  
   
- [  **@sensitivity=** ] **'***感度***'**  
- メッセージの秘密度を指定します。 型のパラメーターが**varchar (12)** します。 次のいずれかの値を指定できます。  
+`[ @sensitivity = ] 'sensitivity'` は、メッセージの秘密度です。 パラメーターの型は**varchar (12)** です。 パラメーターには、次のいずれかの値を含めることができます。  
   
 -   標準  
   
@@ -117,98 +105,88 @@ sp_send_dbmail [ [ @profile_name = ] 'profile_name' ]
   
 -   Private  
   
--   Confidential  
+-   部外  
   
  既定値は Normal です。  
   
- [  **@file_attachments=** ] **'***@file_attachments***'**  
- メール メッセージに添付するファイル名を、セミコロン区切りのリストで指定します。 リスト内のファイルは、絶対パスで指定する必要があります。 添付ファイル リストのデータ型**nvarchar (max)** します。 既定では、データベース メールの添付ファイルは 1 ファイルにつき 1 MB に制限されます。  
+`[ @file_attachments = ] 'file_attachments'` は、電子メールメッセージに添付するファイル名のセミコロン区切りの一覧です。 リスト内のファイルは絶対パスとして指定する必要があります。 添付ファイルの一覧は、 **nvarchar (max)** 型です。 既定では、データベース メールの添付ファイルは 1 ファイルにつき 1 MB に制限されます。  
+ 
+ > [!IMPORTANT]
+ > このパラメーターは、ローカルファイルシステムにアクセスできないため、Azure SQL Managed Instance では使用できません。
   
- [  **@query=** ] **'***クエリ***'**  
- 実行するクエリを指定します。 クエリの結果をファイルとして添付するか、メッセージの本文に含めるかを指定します。 クエリの種類のデータ**nvarchar (max)**、任意の有効なを含めることができる[!INCLUDE[tsql](../../includes/tsql-md.md)]ステートメント。 別のセッション スクリプトの呼び出しのためのローカル変数で、クエリが実行されることに注意してください。 **sp_send_dbmail**は、クエリを使用できません。  
+`[ @query = ] 'query'` は、実行するクエリです。 クエリの結果は、ファイルとして添付するか、電子メールメッセージの本文に含めることができます。 クエリの型は**nvarchar (max)** で、任意の有効な [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントを含めることができます。 クエリは別のセッションで実行されるため、 **sp_send_dbmail**を呼び出すスクリプトのローカル変数はクエリで使用できません。  
   
- [  **@execute_query_database=** ] **'***@execute_query_database***'**  
- ストアド プロシージャがクエリを実行するデータベース コンテキストを指定します。 型のパラメーターが**sysname**、現在のデータベースの既定値。 このパラメーターはのみに適用される場合**@query**を指定します。  
+`[ @execute_query_database = ] 'execute_query_database'` は、ストアドプロシージャでクエリを実行するデータベースコンテキストです。 パラメーターのデータ型は**sysname**で、既定値は現在のデータベースです。 このパラメーターは、 **\@クエリ**が指定されている場合にのみ適用されます。  
   
- [ **@attach_query_result_as_file=** ] *attach_query_result_as_file*  
- クエリの結果セットを添付ファイルとして返すかどうかを指定します。 *attach_query_result_as_file*の種類は**ビット**、既定値は 0。  
+`[ @attach_query_result_as_file = ] attach_query_result_as_file` クエリの結果セットが添付ファイルとして返されるかどうかを指定します。 *attach_query_result_as_file*の型は**bit**で、既定値は0です。  
   
- 内容の後、クエリの結果が、電子メール メッセージの本文に含まれる値が 0 の場合、 **@body**パラメーター。 値が 1 の場合、結果は添付ファイルとして返されます。 このパラメーターはのみに適用される場合**@query**を指定します。  
+ 値が0の場合、クエリの結果は、 **\@本文**パラメーターの内容の後に、電子メールメッセージの本文に含まれます。 値が1の場合、結果は添付ファイルとして返されます。 このパラメーターは、 **\@クエリ**が指定されている場合にのみ適用されます。  
   
- [ **@query_attachment_filename=** ] *query_attachment_filename*  
- クエリの結果セットの添付ファイルに使用するファイル名を指定します。 *query_attachment_filename*の種類は**nvarchar (255)**、既定値は NULL です。 このパラメーターは無視されますと*attach_query_result*は 0 です。 ときに*attach_query_result* 1 で、このパラメーターが null の場合、データベース メールは、任意のファイル名を作成します。  
+`[ @query_attachment_filename = ] query_attachment_filename`、クエリの添付ファイルの結果セットに使用するファイル名を指定します。 *query_attachment_filename*の型は**nvarchar (255)** ,、既定値は NULL です。 *Attach_query_result*が0の場合、このパラメーターは無視されます。 *Attach_query_result*が1で、このパラメーターが NULL の場合、データベースメールによって任意のファイル名が作成されます。  
   
- [ **@query_result_header=** ] *query_result_header*  
- クエリの結果に列のヘッダーを含めるかどうかを指定します。 Query_result_header 値の型は**ビット**します。 値が 1 の場合は、クエリの結果に列ヘッダーが含まれます。 値が 0 の場合、クエリの結果には列のヘッダーは含まれません。 このパラメーターの既定値**1**します。 このパラメーターはのみに適用される場合**@query**を指定します。  
+`[ @query_result_header = ] query_result_header` クエリの結果に列ヘッダーを含めるかどうかを指定します。 Query_result_header 値の型は**bit**です。 値が1の場合、クエリ結果には列ヘッダーが含まれます。 値が 0 の場合、クエリの結果には列のヘッダーは含まれません。 このパラメーターの既定値は**1**です。 このパラメーターは、 **\@クエリ**が指定されている場合にのみ適用されます。  
  
    >[!NOTE]
-   > 設定するときに、次のエラーが発生する@query_result_header0 と設定に@query_no_truncate1。
-   > <br> Msg 22050、レベル 16、状態 1、行の 12: は、エラー番号-2147024809 使用して sqlcmd ライブラリを初期化できませんでした。
+   > \@query_result_header を0に設定し、\@query_no_truncate を1に設定すると、次のエラーが発生する可能性があります。
+   > <br> メッセージ22050、レベル16、状態1、行 12: エラー番号-2147024809 を使用して sqlcmd ライブラリを初期化できませんでした。
   
- [ **@query_result_width** =] *query_result_width*  
- クエリの結果の書式設定に使用する行の幅を、バイト単位で指定します。 *Query_result_width*の種類は**int**、既定値は 256 です。 値は 10 ～ 32767 の間の数値で指定してください。 このパラメーターはのみに適用される場合**@query**を指定します。  
+`[ @query_result_width = ] query_result_width` は、クエリの結果の書式設定に使用する行の幅を文字数で示します。 *Query_result_width*の型は**int**で、既定値は256です。 指定する値は10から32767の間である必要があります。 このパラメーターは、 **\@クエリ**が指定されている場合にのみ適用されます。  
   
- [  **@query_result_separator=** ] **'***@query_result_separator***'**  
- クエリの出力で列の区切りに使用する文字を指定します。 型の区切り記号は**char (1)** します。 既定値は、' ' (空白文字) です。  
+`[ @query_result_separator = ] 'query_result_separator'` は、クエリ出力で列を区切るために使用される文字です。 区切り記号の型は**char (1)** です。 既定値は ' ' (スペース) です。  
   
- [ **@exclude_query_output=** ] *exclude_query_output*  
- 電子メール メッセージ内にクエリ実行の出力を返すかどうかを指定します。 **exclude_query_output**ビットは、既定値は 0。 このパラメーターが 0 の場合の実行の場合、 **sp_send_dbmail**ストアド プロシージャは、コンソールで、クエリの実行の結果として返されるメッセージを出力します。 このパラメーターが 1 での実行の場合、 **sp_send_dbmail**ストアド プロシージャが印刷されないクエリの実行のメッセージのいずれかのコンソールにします。  
+`[ @exclude_query_output = ] exclude_query_output`、電子メールメッセージのクエリ実行の出力を返すかどうかを指定します。 **exclude_query_output**はビット,、既定値は0です。 このパラメーターが0の場合、 **sp_send_dbmail**ストアドプロシージャを実行すると、クエリの実行結果として返されたメッセージがコンソールに出力されます。 このパラメーターが1の場合、 **sp_send_dbmail**ストアドプロシージャを実行しても、クエリ実行メッセージはコンソールに出力されません。  
   
- [ **@append_query_error=** ] *append_query_error*  
- 指定されたクエリからエラーが返されるときに電子メールを送信するかどうかを指定します、 **@query**引数。 **append_query_error**は**ビット**、既定値は 0。 このパラメーターの値が 1 の場合、データベース メールでは本文にクエリのエラー メッセージを含めた電子メール メッセージが送信されます。 データベース メールで電子メール メッセージを送信しませんこのパラメーターが 0 の場合と**sp_send_dbmail**失敗を示すリターン コード 1 で終了します。  
+`[ @append_query_error = ] append_query_error` は、 **\@クエリ**引数で指定されたクエリからエラーが返されたときに電子メールを送信するかどうかを指定します。 **append_query_error**は**ビット**,、既定値は0です。 このパラメーターが1の場合、データベースメールは電子メールメッセージを送信し、電子メールメッセージの本文にクエリエラーメッセージを含めます。 このパラメーターが0の場合、データベースメールは電子メールメッセージを送信せず、 **sp_send_dbmail**は失敗を示すリターンコード1で終了します。  
   
- [  **@query_no_truncate=** ] *query_no_truncate*  
- 長い可変長データ型の切り捨てを回避するオプションを使用してクエリを実行するかどうかを指定します (**varchar (max)**、 **nvarchar (max)**、 **varbinary (max)**、 **xml**、**テキスト**、 **ntext**、**イメージ**、およびユーザー定義データ型)。 設定した場合、クエリの結果には、列ヘッダーが含まれません。 *Query_no_truncate*値の型は**ビット**します。 値が 0 の場合や指定されていない場合、クエリ内の列は 256 文字に切り捨てられます。 値が 1 の場合、クエリ内の列は切り捨てられません。 このパラメーターの既定値は 0 です。  
+`[ @query_no_truncate = ] query_no_truncate` は、大規模な可変長データ型 (**varchar (max)** 、 **nvarchar (max)** 、 **varbinary (max)** 、 **xml**、 **text**、 **ntext**、 **image**、およびユーザー定義データ型) の切り捨てを回避するオプションを使用してクエリを実行するかどうかを指定します。 設定すると、クエリ結果に列ヘッダーは含まれません。 *Query_no_truncate*値の型は**bit**です。 値が 0 の場合や指定されていない場合、クエリ内の列は 256 文字に切り捨てられます。 値が1の場合、クエリ内の列は切り捨てられません。 このパラメーターの既定値は0です。  
   
 > [!NOTE]  
->  大量のデータを使用すると、@**query_no_truncate**オプションは、追加のリソースを消費し、サーバーのパフォーマンスが低下することができます。  
+>  大量のデータを使用する場合、\@**query_no_truncate**オプションは追加のリソースを消費するため、サーバーのパフォーマンスが低下する可能性があります。  
   
- [ **@query_result_no_padding** ] *@query_result_no_padding*  
- 型は bit です。 既定値は 0 です。 1 に設定すると、クエリ結果埋め込みは行われません、ファイルのサイズを減らす可能性があります。設定した場合@query_result_no_paddingを 1 に設定、@query_result_widthパラメーター、@query_result_no_paddingパラメーターの上書き、@query_result_widthパラメーター。  
+`[ @query_result_no_padding ] @query_result_no_padding` 型は bit です。 既定値は 0 です。 を1に設定すると、クエリ結果は埋め込まれず、ファイルサイズが小さくなる可能性があります。\@query_result_no_padding を1に設定し、\@query_result_width パラメーターを設定すると、\@query_result_no_padding パラメーターによって \@query_result_width パラメーターが上書きされます。  
   
  この場合、エラーは発生しません。  
  
   >[!NOTE]
-  > 設定するときに、次のエラーが発生する@query_result_no_padding1 からのパラメーターを指定するには @query_no_truncate:
-  > <br> Msg 22050、レベル 16、状態 1、行 0: ために、クエリを実行できませんでした、@query_result_no_appendと@query_no_truncateオプションは相互に排他的です。 
+  > \@query_result_no_padding を1に設定し、\@query_no_truncate のパラメーターを指定すると、次のエラーが発生する可能性があります。
+  > <br> メッセージ22050、レベル16、状態1、行 0: \@query_result_no_append と \@query_no_truncate オプションが同時に指定されていないため、クエリを実行できませんでした。 
   
- 設定した場合、@query_result_no_paddingを 1 に設定、@query_no_truncateパラメーター、エラーが発生します。  
+ \@query_result_no_padding を1に設定し、\@query_no_truncate パラメーターを設定すると、エラーが発生します。  
   
- [ **@mailitem_id=** ] *mailitem_id* [ OUTPUT ]  
- 省略可能な出力パラメーターを返します、 *mailitem_id*メッセージ。 *Mailitem_id*の種類は**int**します。  
+`[ @mailitem_id = ] mailitem_id [ OUTPUT ]` 省略可能な出力パラメーターを指定すると、メッセージの*mailitem_id*が返されます。 *Mailitem_id*の型は**int**です。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
- リターン コードが 0 の場合は成功を示します。 その他の値は、障害を意味します。 失敗したステートメントのエラー コードは、@@ERROR変数。  
+ リターン コードが 0 の場合は成功を示します。 それ以外の値は失敗を意味します。 失敗したステートメントのエラーコードは、\@\@エラー変数に格納されます。  
   
 ## <a name="result-sets"></a>結果セット  
  成功すると、"メールがキューに登録されました。" というメッセージが返されます。  
   
-## <a name="remarks"></a>コメント  
- を使用する前にデータベース メールを有効に、データベース メール構成ウィザードを使用してまたは**sp_configure**します。  
+## <a name="remarks"></a>Remarks  
+ 使用する前に、データベースメール構成ウィザードまたは**sp_configure**を使用してデータベースメールを有効にする必要があります。  
   
- **sysmail_stop_sp**データベース メール外部プログラムが使用する Service Broker オブジェクトの停止を停止します。 **sp_send_dbmail**を使用してデータベース メールが停止したときにメールを受け付ける**sysmail_stop_sp**します。 データベース メールを開始するには使用**sysmail_start_sp**します。  
+ **sysmail_stop_sp**は、外部プログラムが使用する Service Broker オブジェクトを停止することによってデータベースメールを停止します。 **sysmail_stop_sp**を使用してデータベースメールを停止しても、 **sp_send_dbmail**は引き続きメールを受け取ります。 データベースメールを開始するには、 **sysmail_start_sp**を使用します。  
   
- ときに**@profile**が指定されていない**sp_send_dbmail**既定プロファイルが使用されます。 電子メール メッセージを送信するユーザーに既定のプライベート プロファイルがある場合、データベース メールではそのプロファイルが使用されます。 ユーザーが既定のプライベート プロファイルを持たない場合**sp_send_dbmail**既定パブリック プロファイルを使用します。 ユーザーの既定のプライベート プロファイルと、既定のパブリック プロファイルが存在しない場合**sp_send_dbmail**はエラーを返します。  
+ **\@プロファイル**が指定されていない場合、 **sp_send_dbmail**は既定のプロファイルを使用します。 電子メール メッセージを送信するユーザーに既定のプライベート プロファイルがある場合、データベース メールではそのプロファイルが使用されます。 ユーザーに既定のプライベートプロファイルがない場合、 **sp_send_dbmail**は既定のパブリックプロファイルを使用します。 ユーザーの既定のプライベートプロファイルがなく、既定のパブリックプロファイルもない場合、 **sp_send_dbmail**はエラーを返します。  
   
- **sp_send_dbmail**内容のない電子メール メッセージをサポートしていません。 電子メール メッセージを送信するの少なくとも 1 つを指定する必要があります**@body**、 **@query**、 **@file_attachments**、または **@subject**. それ以外の場合、 **sp_send_dbmail**はエラーを返します。  
+ **sp_send_dbmail**では、コンテンツのない電子メールメッセージはサポートされません。 電子メールメッセージを送信するには、少なくとも1つの **\@本文**、 **\@クエリ**、 **\@file_attachments**、または **\@件名**を指定する必要があります。 それ以外の場合、 **sp_send_dbmail**はエラーを返します。  
   
- データベース メールでは、ファイルへのアクセス制御に現在のユーザーの [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows セキュリティ コンテキストが使用されます。 そのため、認証されたユーザーがで[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]認証を使用してファイルをアタッチできません **@file_attachments**します。 Windows では、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] を使用してリモート コンピューター間で資格情報を交換することは許可されません。 そのため、データベース メールできない場合は、コマンドを実行して、コンピューター以外のコンピューターからネットワーク共有からファイルを添付する[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]上で実行します。  
+ データベース メールでは、ファイルへのアクセス制御に現在のユーザーの [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows セキュリティ コンテキストが使用されます。 したがって、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 認証を使用して認証されたユーザーは、 **\@file_attachments**を使用してファイルを添付することはできません。 Windows では、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] を使用してリモート コンピューター間で資格情報を交換することは許可されません。 このため、を実行して [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] いるコンピューター以外のコンピューターからコマンドを実行した場合、データベースメールはネットワーク共有からファイルを添付できない可能性があります。  
   
- 両方**@query**と**@file_attachments**は指定されたファイルが見つからないと、クエリは実行されますが、電子メールは送信されません。  
+ **\@クエリ**と **\@file_attachments**の両方が指定されていて、ファイルが見つからない場合でも、クエリは実行されますが、電子メールは送信されません。  
   
- クエリを指定すると、結果セットの書式はインライン テキストに設定されます。 結果セットにあるバイナリ データは 16 進数形式で送信されます。  
+ クエリを指定すると、結果セットはインラインテキストとして書式設定されます。 結果セットにあるバイナリ データは 16 進数形式で送信されます。  
   
- パラメーター **@recipients**、 **@copy_recipients**、および**@blind_copy_recipients**は電子メール アドレスのセミコロン区切りのリスト。 これらのパラメーターの少なくとも 1 つを指定する必要があります、または**sp_send_dbmail**はエラーを返します。  
+ 受信者、 **\@copy_recipients**、および **\@blind_copy_recipients** **\@** パラメーターは、セミコロンで区切られた電子メールアドレスのリストです。 これらのパラメーターのうち、少なくとも1つを指定する必要があります。指定しないと**sp_send_dbmail**がエラーを返します。  
   
- 実行時に**sp_send_dbmail**トランザクションのコンテキストなしデータベース メールが開始され、暗黙のトランザクションをコミットします。 実行時に**sp_send_dbmail**から既存のトランザクション内でデータベース メールはユーザーのコミットまたは変更をロールバックします。 内側のトランザクションは開始されません。  
+ トランザクションコンテキストを使用せずに**sp_send_dbmail**を実行すると、データベースメールが開始され、暗黙のトランザクションがコミットされます。 既存のトランザクション内から**sp_send_dbmail**を実行する場合、データベースメールは、変更をコミットまたはロールバックするためにユーザーに依存します。 内部トランザクションは開始されません。  
   
 ## <a name="permissions"></a>アクセス許可  
- 実行権限**sp_send_dbmail**の既定値のすべてのメンバーは、 **DatabaseMailUser**データベース ロール、 **msdb**データベース。 ただし、ときに、メッセージを送信するユーザーは権限がありません、要求のプロファイルを使用する**sp_send_dbmail**エラーが返され、メッセージを送信しません。  
+ 既定**sp_send_dbmail**の実行権限は、 **Msdb**データベースの**databasemailuser**データベースロールのすべてのメンバに与えます。 ただし、メッセージを送信するユーザーに要求のプロファイルを使用するアクセス許可がない場合、 **sp_send_dbmail**はエラーを返し、メッセージを送信しません。  
   
 ## <a name="examples"></a>使用例  
   
-### <a name="a-sending-an-e-mail-message"></a>A. 電子メール メッセージを送信します。  
- この例では、電子メール メッセージを送信する電子メール アドレスを使用して、友人`myfriend@Adventure-Works.com`します。 メッセージの件名`Automated Success Message`します。 メッセージの本文には、文が含まれています。`'The stored procedure finished successfully'`します。  
+### <a name="a-sending-an-e-mail-message"></a>A. 電子メールメッセージの送信  
+ この例では、`myfriend@Adventure-Works.com`電子メールアドレスを使用して、友人に電子メールメッセージを送信します。 メッセージには、件名 `Automated Success Message`があります。 メッセージの本文には `'The stored procedure finished successfully'`文が含まれています。  
   
 ```  
 EXEC msdb.dbo.sp_send_dbmail  
@@ -218,8 +196,8 @@ EXEC msdb.dbo.sp_send_dbmail
     @subject = 'Automated Success Message' ;  
 ```  
   
-### <a name="b-sending-an-e-mail-message-with-the-results-of-a-query"></a>B. 電子メール メッセージをクエリの結果と共に送信する  
- この例では、電子メール メッセージを送信する電子メール アドレスを使用して、友人`yourfriend@Adventure-Works.com`します。 メッセージの件名は `Work Order Count` で、このメッセージでは `DueDate` が 2004 年 4 月 30 日から 2 日以内となっている作業指示の番号を表示するクエリが実行されます。 データベース メールでは、この結果がテキスト ファイルとして添付されます。  
+### <a name="b-sending-an-e-mail-message-with-the-results-of-a-query"></a>b. 電子メール メッセージをクエリの結果と共に送信する  
+ この例では、`yourfriend@Adventure-Works.com`電子メールアドレスを使用して、友人に電子メールメッセージを送信します。 メッセージの件名は `Work Order Count` で、このメッセージでは `DueDate` が 2004 年 4 月 30 日から 2 日以内となっている作業指示の番号を表示するクエリが実行されます。 データベースメール結果をテキストファイルとして添付します。  
   
 ```  
 EXEC msdb.dbo.sp_send_dbmail  
@@ -232,8 +210,8 @@ EXEC msdb.dbo.sp_send_dbmail
     @attach_query_result_as_file = 1 ;  
 ```  
   
-### <a name="c-sending-an-html-e-mail-message"></a>C. HTML 形式の電子メール メッセージを送信する  
- この例では、電子メール メッセージを送信する電子メール アドレスを使用して、友人`yourfriend@Adventure-Works.com`します。 メッセージの件名`Work Order List`、作業注文を表示する HTML ドキュメントが含まれています、 `DueDate` 2 日以内、2004 年 4 月 30 日後。 データベース メールでは、このメッセージが HTML 形式で送信されます。  
+### <a name="c-sending-an-html-e-mail-message"></a>C. HTML 電子メールメッセージの送信  
+ この例では、`yourfriend@Adventure-Works.com`電子メールアドレスを使用して、友人に電子メールメッセージを送信します。 メッセージには件名 `Work Order List`があり、2004年4月30日から2日以内 `DueDate` を持つ作業指示を示す HTML ドキュメントが含まれています。 データベース メールでは、このメッセージが HTML 形式で送信されます。  
   
 ```  
 DECLARE @tableHTML  NVARCHAR(MAX) ;  
@@ -269,8 +247,8 @@ EXEC msdb.dbo.sp_send_dbmail @recipients='yourfriend@Adventure-Works.com',
   
 ## <a name="see-also"></a>参照  
  [データベース メール](../../relational-databases/database-mail/database-mail.md)   
- [データベース メール構成オブジェクト](../../relational-databases/database-mail/database-mail-configuration-objects.md)   
- [データベース メール ストアド プロシージャ&#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/database-mail-stored-procedures-transact-sql.md)   
+ [構成オブジェクトのデータベースメール](../../relational-databases/database-mail/database-mail-configuration-objects.md)   
+ [ストアドプロシージャ&#40;transact-sql &#41;のデータベースメール](../../relational-databases/system-stored-procedures/database-mail-stored-procedures-transact-sql.md)  
  [sp_addrolemember &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addrolemember-transact-sql.md)  
   
   

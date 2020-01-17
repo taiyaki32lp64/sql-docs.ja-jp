@@ -12,15 +12,14 @@ dev_langs:
 helpviewer_keywords:
 - STConvexHull method (geography)
 ms.assetid: fb435db7-31bb-4243-9d8b-35379184cfb4
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: 6f44a22b200eba0948ceb1bd036d51ceff884442
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: MladjoA
+ms.author: mlandzic
+ms.openlocfilehash: b3d06da6d6f972c64d4bf196699b55a611b0f992
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47666860"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68042467"
 ---
 # <a name="stconvexhull-geography-data-type"></a>STConvexHull (geography データ型)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -37,7 +36,7 @@ ms.locfileid: "47666860"
 ## <a name="return-types"></a>戻り値の型  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 戻り値の型: **geography**  
   
- CLR の戻り値の型: **SqlGeography**  
+ CLR の戻り値の型:**SqlGeography**  
   
 ## <a name="remarks"></a>Remarks  
  エンベロープの角度が 90°より大きい **geography** インスタンスに対して `FullGlobe` オブジェクトを返します。  

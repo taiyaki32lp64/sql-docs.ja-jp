@@ -1,6 +1,7 @@
 ---
-title: エンドポイント URL の指定 - 可用性レプリカの追加と変更 | Microsoft Docs
-ms.custom: ''
+title: 可用性レプリカのエンドポイント URL の指定
+description: SQL Server 上で Always On 可用性グループ内のレプリカを追加または変更するときにエンドポイント URL を指定する方法について説明します。
+ms.custom: seo-lt-2019
 ms.date: 05/17/2016
 ms.prod: sql
 ms.reviewer: ''
@@ -14,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: d7520c13-a8ee-4ddc-9e9a-54cd3d27ef1c
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 6c7ed2edb5eb62b6182b53859877b7f5d9b5b453
-ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
+ms.openlocfilehash: 28954a81cac3a5adacd037dbccb2e7584e060e79
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/18/2018
-ms.locfileid: "53589666"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75251286"
 ---
 # <a name="specify-endpoint-url---adding-or-modifying-availability-replica"></a>エンドポイント URL の指定 - 可用性レプリカの追加と変更
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -29,34 +29,27 @@ ms.locfileid: "53589666"
 > [!NOTE]  
 >  "エンドポイント URL" という用語は、データベース ミラーリングのユーザー インターフェイスとドキュメントで使用される "サーバー ネットワーク アドレス" という用語と同義です。  
   
--   [エンドポイント URL の構文](#SyntaxOfURL)  
-  
--   [システムの完全修飾ドメイン名の検索](#Finding_FQDN)  
-  
--   [関連タスク](#RelatedTasks)  
-  
--   [関連コンテンツ](#RelatedContent)  
   
 ##  <a name="SyntaxOfURL"></a> エンドポイント URL の構文  
  エンドポイント URL の構文は、次のような形式になります。  
   
- TCP<strong>://</strong>*\<system-address>*<strong>:</strong>*\<port>*  
+ TCP<strong>://</strong> *\<system-address>* <strong>:</strong> *\<port>*  
   
  パラメーターの説明  
   
--   *\<system-address* は、ミラーリング先のコンピューター システムを明確に識別する文字列です。 通常、サーバー アドレスは、システム名 (システムが同じドメインに存在する場合)、完全修飾ドメイン名、または IP アドレスになります。  
+-   *\<system-address&gt;* は、ターゲット コンピューター システムを明確に識別する文字列です。 通常、サーバー アドレスは、システム名 (システムが同じドメインに存在する場合)、完全修飾ドメイン名、または IP アドレスになります。  
   
     -   Windows Server フェールオーバー クラスタリング (WSFC) クラスターのノードが同じドメイン内にある場合、コンピューター システムの名前 ( `SYSTEM46`など) を使用できます。  
   
-    -   IP アドレスを使用するには、それが環境内で一意である必要があります。 IP アドレスが静的である場合にのみ、IP アドレスを使用することをお勧めします。 IP アドレスには、IP Version 4 (IPv4) または IP Version 6 (IPv6) を使用できます。 IPv6 アドレスは、**[**_<IPv6_address>_**]** のように、角かっこで囲む必要があります。  
+    -   IP アドレスを使用するには、それが環境内で一意である必要があります。 IP アドレスが静的である場合にのみ、IP アドレスを使用することをお勧めします。 IP アドレスには、IP Version 4 (IPv4) または IP Version 6 (IPv6) を使用できます。 IPv6 アドレスは、 **[** _<IPv6_address>_ **]** のように、角かっこで囲む必要があります。  
   
          システムの IP アドレスを参照するには、Windows コマンド プロンプトで、 **ipconfig** コマンドを入力します。  
   
     -   完全修飾ドメイン名は動作が保証されています。 これは、場所によって異なる形式を使用するローカルに定義されたアドレス文字列です。 常にではありませんが多くの場合、完全修飾ドメイン名は、次の形式のようにコンピューター名、およびピリオド区切りの一連のドメイン セグメントを含む複合名になります。  
   
-         _computer_name_ **など) を使用できます。** _domain_segment_[...**.**_domain_segment_]  
+         _computer_name_ **.** _domain_segment_[... **.** _domain_segment_]  
   
-         *computer_name*はサーバー インスタンスを実行しているコンピューターのネットワーク名、および *domain_segment*[...**.**_domain_segment_] はサーバーのその他のドメイン情報です。たとえば、 `localinfo.corp.Adventure-Works.com`のようになります。  
+         *computer_name*はサーバー インスタンスを実行しているコンピューターのネットワーク名、および *domain_segment*[... **.** _domain_segment_] はサーバーのその他のドメイン情報です。たとえば、 `localinfo.corp.Adventure-Works.com`のようになります。  
   
          ドメイン セグメントの内容と数は、会社内または組織内で決定されます。 詳細については、このトピックの「 [完全修飾ドメイン名の検索](#Finding_FQDN)」を参照してください。  
   
@@ -76,7 +69,7 @@ ms.locfileid: "53589666"
   
      **type_desc** の値が "DATABASE_MIRRORING" の行を検索し、対応するポート番号を使用します。  
   
-### <a name="examples"></a>使用例  
+### <a name="examples"></a>例  
   
 #### <a name="a-using-a-system-name"></a>A. システム名を使用する  
  次のエンドポイント URL では、システム名 `SYSTEM46`およびポート `7022`を指定しています。  
@@ -103,7 +96,7 @@ ms.locfileid: "53589666"
   
  **IPCONFIG /ALL**  
   
- 完全修飾ドメイン名を作成するには、次に示すように、*<host_name>* と *<Primary_Dns_Suffix>* の値を連結します:  
+ 完全修飾ドメイン名を作成するには、次に示すように、 *<host_name>* と *<Primary_Dns_Suffix>* の値を連結します:  
   
  _<host_name>_ **.** _<Primary_Dns_Suffix>_  
   
@@ -137,7 +130,7 @@ ms.locfileid: "53589666"
   
 -   可用性レプリカを追加または変更する場合のエンドポイント URL の指定 (SQL Server)  
   
--   [Always On 可用性グループの構成のトラブルシューティング &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/troubleshoot-always-on-availability-groups-configuration-sql-server.md)  
+-   [AlwaysOn 可用性グループの構成のトラブルシューティング &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/troubleshoot-always-on-availability-groups-configuration-sql-server.md)  
   
  **データベース ミラーリング エンドポイントに関する情報を表示するには**  
   

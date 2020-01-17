@@ -1,11 +1,10 @@
 ---
 title: Analysis Services データベースのバックアップと復元 |Microsoft Docs
 ms.custom: ''
-ms.date: 03/06/2017
+ms.date: 03/25/2019
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.ssmsimbi.Backup.f1
@@ -22,12 +21,12 @@ ms.assetid: 947eebd2-3622-479e-8aa6-57c11836e4ec
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 48fafd92104745ac438c212847e9b2976e84db6d
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 5f591a5a8c8099e496c10958b43694e98ae7a24b
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53352697"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66077027"
 ---
 # <a name="backup-and-restore-of-analysis-services-databases"></a>Analysis Services データベースのバックアップと復元
   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] には、特定の時点からデータベースとそのオブジェクトを復旧できるように、バックアップと復元機能が用意されています。 また、バックアップと復元は、アップグレードされたサーバーへのデータベースの移行、サーバー間でのデータベースの移動、実稼働サーバーへのデータベースの配置を行うための有効な方法でもあります。 バックアップ計画をまだ確立しておらず、重要なデータを保持している場合は、データ復旧のために、できるだけ早く計画を作成して実行してください。  
@@ -36,7 +35,7 @@ ms.locfileid: "53352697"
   
  ソース データを含む完全バックアップでは、詳細データを含むデータベースをバックアップする必要があります。 具体的には、ROLAP または DirectQuery データベース ストレージを使用している場合、詳細データは Analysis Services データベースとは異なる外部の SQL Server リレーショナル データベースに格納されます。 すべてのオブジェクトがテーブルまたは多次元の場合は、Analysis Services バックアップにはメタデータとソース データの両方が含まれます。  
   
- バックアップを自動化する明らかな利点の 1 つは、自動バックアップ頻度の指定に応じて、データのスナップショットが常に最新の状態に保たれることです。 自動スケジューラにより、バックアップの実行漏れはなくなります。 データベースの復元も自動化が可能です。これはデータをレプリケートする場合に適していますが、レプリケート先のインスタンスの暗号化キー ファイルを必ずバックアップする必要があります。 同期機能は [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] データベースのレプリケーションに特化していますが、最新でないデータに対してのみ実行されます。 ここで説明する機能はすべて、ユーザー インターフェイス、XML/A コマンド、または AMO 経由でのプログラムの実行によって実装できます。 バックアップの方針の詳細については、「 [Microsoft SQL Server 2005 Analysis Services を使用したバックアップの方針](https://go.microsoft.com/fwlink/?LinkId=81888)」を参照してください。  
+ バックアップを自動化する明らかな利点の 1 つは、自動バックアップ頻度の指定に応じて、データのスナップショットが常に最新の状態に保たれることです。 自動スケジューラにより、バックアップの実行漏れはなくなります。 データベースの復元も自動化が可能です。これはデータをレプリケートする場合に適していますが、レプリケート先のインスタンスの暗号化キー ファイルを必ずバックアップする必要があります。 同期機能は [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] データベースのレプリケーションに特化していますが、最新でないデータに対してのみ実行されます。 ここで説明する機能はすべて、ユーザー インターフェイス、XML/A コマンド、または AMO 経由でのプログラムの実行によって実装できます。  
   
  このトピックのセクションは次のとおりです。  
   

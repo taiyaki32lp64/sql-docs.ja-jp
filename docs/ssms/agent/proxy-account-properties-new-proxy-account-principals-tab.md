@@ -10,16 +10,15 @@ ms.topic: conceptual
 f1_keywords:
 - sql13.ag.proxy.permissions.f1
 ms.assetid: 3e3c42fe-5b61-45e5-8e46-9807bdec5389
-author: stevestein
-ms.author: sstein
-manager: craigg
+author: markingmyname
+ms.author: maghan
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: d8a37cf5c838a78529cc8fe43f449a7c731a0052
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 3f61d7ec9e5a50aeaad9a45154f4001869eaa8e1
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47651260"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68265519"
 ---
 # <a name="proxy-account-properties---new-proxy-account-principals-tab"></a>[プロキシ アカウントのプロパティ] - [新しいプロキシ アカウント] \([プリンシパル] タブ)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]

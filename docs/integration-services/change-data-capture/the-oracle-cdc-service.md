@@ -8,17 +8,20 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 47759ddc-358d-405b-acb9-189ada76ea6d
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: 105f32a1e95852a0c08b47da0632b53522718957
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 8a11a67f64a40aa5fe08d375a9f11fa186c568b1
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47780496"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71298605"
 ---
 # <a name="the-oracle-cdc-service"></a>Oracle CDC Service
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   Oracle CDC Service は、プログラム xdbcdcsvc.exe を実行する Windows サービスです。 それぞれ異なる Windows サービス名を持つ複数の Windows サービスを、同じコンピューターで実行するように構成できます。 1 つのコンピューターで複数の Oracle CDC Windows サービスを作成する場合としては、サービス間の分離を強化したい場合や、各サービスでそれぞれ異なる [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスを使用する必要がある場合などが一般的です。  
   
  Oracle CDC Service は、Oracle CDC Service 構成コンソールを使用して作成されるか、xdbcdcsvc.exe プログラムに組み込まれているコマンド ライン インターフェイスを使用して定義されます。 いずれの場合も、作成された Oracle CDC Service は、それぞれ 1 つの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンス ( **AlwaysOn** 設定を使用してクラスター化またはミラー化されている場合もあります) に関連付けられます。接続情報 (接続文字列とアクセス資格情報) はサービス構成に含まれます。  

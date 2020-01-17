@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 39c0797c-ad2b-4591-85c9-a23a7f902895
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 45d92aeace696b7e3675eb70b47942b4ee357120
-ms.sourcegitcommit: 6c9d35d03c1c349bc82b9ed0878041d976b703c6
+ms.openlocfilehash: a8b8e698dc6799847ddd462904da2eadeae14279
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/06/2018
-ms.locfileid: "51217133"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68115639"
 ---
 # <a name="notify-operator-task-maintenance-plan"></a>[オペレーターへの通知タスク] \(メンテナンス プラン)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -28,7 +27,7 @@ ms.locfileid: "51217133"
   
  このタスクでは、sp_notify_operator ストアド プロシージャを使用します。  
   
-## <a name="options"></a>[変数]  
+## <a name="options"></a>オプション  
  **[接続]**  
  このタスクを実行するときに使用するサーバー接続を選択します。  
   
@@ -72,7 +71,7 @@ ms.locfileid: "51217133"
  **User name**  
  認証に使用する [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ログインを指定します。 このオプションは利用できません。  
   
- **Password**  
+ **パスワード**  
  認証に使用するパスワードを指定します。 このオプションは利用できません。  
   
 ## <a name="see-also"></a>参照  

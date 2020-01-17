@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: d16491ef-4a25-4e02-88a7-ab7c0812904a
 author: julieMSFT
 ms.author: jrasnick
-manager: craigg
-ms.openlocfilehash: 6e81e66fd447c82465901da4382c1e562f4f3bcd
-ms.sourcegitcommit: 0c1d552b3256e1bd995e3c49e0561589c52c21bf
+ms.openlocfilehash: bc88a64348879c6fb25c8949a829698319c7f618
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/14/2018
-ms.locfileid: "53380213"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68113957"
 ---
 # <a name="sql-server-xtp-transaction-log"></a>SQL Server XTP トランザクション ログ
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

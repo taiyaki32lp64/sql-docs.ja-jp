@@ -1,6 +1,5 @@
 ---
-title: ADO (SQLXML 4.0) を使用してアップデート グラムの実行 |Microsoft Docs
-ms.custom: ''
+title: ADO を使用したアップデートグラムの実行 (SQLXML)
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -14,14 +13,14 @@ helpviewer_keywords:
 ms.assetid: 78610ca0-f763-45fc-ac64-da5c192cc3e5
 author: MightyPen
 ms.author: genemi
-manager: craigg
+ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: d886bde5ead026b28d0aca9fcebefec1a5ef5d50
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 9982a7128c8b6d34fefad77045bda59ed4f2f5f7
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56032023"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75252491"
 ---
 # <a name="executing-an-updategram-by-using-ado-sqlxml-40"></a>ADO を使用した、アップデートグラムの実行 (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -29,19 +28,19 @@ ms.locfileid: "56032023"
   
  サンプル アプリケーションの処理は次のとおりです。  
   
--   **Conn**オブジェクト (**ADODB します。接続**) の実行中のインスタンスへの接続を確立[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]特定のサーバー コンピューターにします。  
+-   **Conn**オブジェクト (**ADODB接続**) 特定のサーバーコンピューター上にある実行[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]中のインスタンスへの接続を確立します。  
   
--   **Cmd**オブジェクト (**ADODB.Command**) で確立された接続を実行します。  
+-   **Cmd**オブジェクト (**ADODB**) は、確立された接続で実行されます。  
   
 -   コマンド言語が DBGUID_MSSQLXML に設定されます。  
   
--   アップデート グラムがコマンド ストリームにコピーされます (**strmIn**)。  
+-   アップデートグラムはコマンドストリーム (**Strmin**) にコピーされます。  
   
--   設定されているコマンドの出力ストリーム、 **StrmOut**オブジェクト (**ADODB します。Stream**) が表示されるデータが返されます。  
+-   コマンドの出力ストリームは、 **Strmout**オブジェクト (ADODB) に設定され**ます。ストリーム**) が返されます。  
   
 -   最後にコマンド (アップデートグラム) が実行されます。  
   
- 次にサンプル コードを示します。  
+ 以下は、そのサンプル コードです。  
   
 ```vb  
 Private Sub Form_Load()  
@@ -185,7 +184,7 @@ End Sub
 ```  
   
 ## <a name="passing-parameters"></a>パラメーターの引き渡し  
- 上の Visual Basic アプリケーションでは、パラメーターを渡しません。 このアプリケーションで、 **ContactID**と**MiddleName**値は、アップデート グラムにパラメーター化された入力として渡されます。  
+ 上の Visual Basic アプリケーションでは、パラメーターを渡しません。 このアプリケーションでは、 **ContactID**と**MiddleName**の値がパラメーター化された入力としてアップデートグラムに渡されます。  
   
 ```vb  
 Private Sub Form_Load()  

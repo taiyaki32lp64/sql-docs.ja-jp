@@ -14,11 +14,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: a0dfa9a95697c4bb1fcb2e4e5d3798f18e305e42
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52393706"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68211657"
 ---
 # <a name="rename-views"></a>ビューの名前の変更
   [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] では、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] または [!INCLUDE[tsql](../../includes/tsql-md.md)]を使用して、ビューの名前を変更できます。  
@@ -40,7 +40,7 @@ ms.locfileid: "52393706"
   
      [Transact-SQL](#TsqlProcedure)  
   
--   **補足情報:**[ビューの名前を変更した後](#FollowUp)  
+-   **補足情報:** [ビューの名を変更した後](#FollowUp)  
   
 ##  <a name="BeforeYouBegin"></a> はじめに  
   
@@ -69,7 +69,7 @@ ms.locfileid: "52393706"
   
  詳細については、「[CREATE VIEW &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-view-transact-sql)」および「[DROP VIEW &#40;Transact-SQL&#41;](/sql/t-sql/statements/drop-view-transact-sql)」を参照してください。  
   
-##  <a name="FollowUp"></a> フォローしてください：ビューの名を変更した後  
+##  <a name="FollowUp"></a>補足情報: ビューの名を変更した後  
  ビューの古い名前を参照するすべてのオブジェクト、スクリプト、およびアプリケーションで新しい名前が使用されていることを確認します。  
   
   

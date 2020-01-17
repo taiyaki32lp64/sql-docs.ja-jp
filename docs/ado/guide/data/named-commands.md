@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 5a0ec8f9-5ba3-4f9f-b80d-2073aa049586
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: a9d38f80dcc44afa0d399885559b10f20027f906
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 928ac3b1d3cd753ded0bcf4337f10a654c9a3dc0
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47670611"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67924823"
 ---
 # <a name="named-commands"></a>名前付きコマンド
 [作成して、単純なコマンドを実行する](../../../ado/guide/data/creating-and-executing-a-simple-command.md)コマンドを実行する方法を示しています。 別の方法がある: ことを名前付きコマンドと、名前付きコマンドで直接これを呼び出すことができます、**接続**オブジェクト (に割り当てられている、 **ActiveConnection**のプロパティ、 **コマンド**オブジェクト)。 名前を割り当てることを意味コマンドの名前を付け、**名前**のプロパティを**コマンド**オブジェクト。 例を次に示します。  
@@ -90,5 +89,5 @@ ErrHandler:
 'EndNamedCmd  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [Connection オブジェクト (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)

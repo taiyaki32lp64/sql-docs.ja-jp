@@ -1,5 +1,5 @@
 ---
-title: '例 : CDATA ディレクティブの指定 | Microsoft Docs'
+title: '例: CDATA ディレクティブの指定 | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -10,17 +10,16 @@ ms.topic: conceptual
 helpviewer_keywords:
 - CDATA directive
 ms.assetid: 949071e6-787f-480d-bb86-3ac16a027af1
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: 604fce70ed6b03b3a3d752ec1ee75eda6aed0a2f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: MightyPen
+ms.author: genemi
+ms.openlocfilehash: 6e67e3bb42aa2d70ae4e27a3f13955e5d0827c2b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47725500"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68006750"
 ---
-# <a name="example-specifying-the-cdata-directive"></a>例 : CDATA ディレクティブの指定
+# <a name="example-specifying-the-cdata-directive"></a>例:CDATA ディレクティブの指定
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
   **CDATA**ディレクティブが指定されている場合、含まれているデータはエンティティとしてエンコードされず、CDATA セクションに配置されます。 **CDATA** 属性は、無名でなければなりません。  
   

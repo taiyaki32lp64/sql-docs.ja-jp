@@ -4,20 +4,18 @@ ms.custom: ''
 ms.date: 04/27/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: analysis-services
 ms.topic: reference
 ms.assetid: a636fc13-4054-4cea-bce1-192ec4796063
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 35b5eea0ce29f5360f3147ea250c7ca1ba6a7a87
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: c733fbf1e8a075d0d240f5cb69d888310fc6009f
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48090772"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62757702"
 ---
 # <a name="tables-representation-tabular"></a>テーブル表現 (テーブル)
   テーブル モデルでは、テーブルがデータの基本表現です。  

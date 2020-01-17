@@ -15,13 +15,12 @@ helpviewer_keywords:
 - BLOBs, fetching
 author: pmasl
 ms.author: pelopes
-manager: craigg
-ms.openlocfilehash: 381c7b9f657d89dee12f49aced3b0bf4857170e0
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 513da9e05794e2f0ba2ace396c481faa4c36160a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47770100"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67994199"
 ---
 # <a name="fetching-blob-data-using-irowgetcolumns-and-isequentialstream"></a>IRow::GetColumns と ISequentialStream を使用した BLOB データのフェッチ
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

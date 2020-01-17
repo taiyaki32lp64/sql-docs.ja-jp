@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: be2143ba-fc16-42c9-84f7-8985cd924860
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 62d13bdc9d1a0fc030dc33bf982f6561b454c4ea
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: 2f979ccb5a44ada8e86424e0f6134f39d28a021d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53213501"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68096599"
 ---
 # <a name="create-table---sql-command"></a>CREATE TABLE - SQL コマンド
 指定したフィールドを持つテーブルを作成します。  
@@ -76,7 +75,7 @@ CREATE TABLE | DBF TableName1 [NAME LongTableName] [FREE]
  確認*lExpression1*  
  フィールドの検証規則を指定します。 *lExpression1*ユーザー定義関数であることができます。 空のレコードを追加すると、されるたびに検証規則がチェックされます。 検証規則では、追加されたレコードのフィールドが空白の値が許可されていませんがある場合は、エラーが生成されます。  
   
- エラー *cMessageText1*  
+ ERROR *cMessageText1*  
  Visual FoxPro は、フィールド規則は、エラーを生成するときに表示されます。 エラー メッセージを指定します。 [参照] ウィンドウまたは編集ウィンドウ内でデータが変更されたときにのみ、メッセージが表示されます。  
   
  既定の*eExpression1*  
@@ -121,14 +120,14 @@ CREATE TABLE mytable (char1 C(10), char2 C(10) NOCPTRANS,;
  テーブルには、複数の候補となるインデックスを持つことができます。  
   
  外部キー *eExpression4*タグ*TagName4*[NODUP]  
- 外部 (プライマリ) のインデックスを作成し、親テーブルとのリレーションシップを確立します。 *eExpression4*外部インデックスのキー式を指定し、 *TagName4*作成される外部インデックス キーのタグの名前を指定します*します。* タグのインデックス名は、最大 10 個の文字を含めることができます。 候補の外部インデックスを作成する NODUP が含まれます。  
+ 外部 (プライマリ) のインデックスを作成し、親テーブルとのリレーションシップを確立します。 *eExpression4*外部インデックスのキー式を指定し、 *TagName4*作成される外部インデックス キーのタグの名前を指定します。 タグのインデックス名は、最大 10 個の文字を含めることができます。 候補の外部インデックスを作成する NODUP が含まれます。  
   
  複数の外部テーブル、インデックスを作成できますが、外部インデックス式は、テーブル内のさまざまなフィールドを指定する必要があります。  
   
  参照*TableName3*[タグ*TagName5*]  
  永続的な関係を確立する親テーブルを指定します。 タグを含める*TagName5*親テーブルのインデックス タグに基づく関係を確立します。 タグのインデックス名は、最大 10 個の文字を含めることができます。 タグを省略した場合、既定で*TagName5、* 親テーブルのプライマリ インデックスのキーを使用して関係を確立します。  
   
- 確認*eExpression2*[エラー *cMessageText2*]  
+ CHECK *eExpression2*[ERROR *cMessageText2*]  
  テーブルの検証規則を指定します。 エラー *cMessageText2* Visual FoxPro は、テーブルの検証ルールが実行されたときに表示されます。 エラー メッセージを指定します。 データ [参照] ウィンドウで変更されたかウィンドウを編集する場合にのみ、メッセージが表示されます。  
   
  配列から*ArrayName*  
@@ -151,7 +150,7 @@ CREATE TABLE mytable (char1 C(10), char2 C(10) NOCPTRANS,;
   
 |ODBC 構文|Visual FoxPro 構文|  
 |-----------------|--------------------------|  
-|CREATE TABLE*ベース テーブル名*<br /><br /> (*列識別子のデータ型*<br /><br /> [NULL 以外]<br /><br /> [、*列識別子のデータ型*<br /><br /> [NOT NULL]...)|テーブルを作成する*TableName1* [名前*LongTableName*]<br /><br /> (*FieldName1* *FieldType*<br /><br /> [(*nFieldWidth* [、 *nPrecision*])]<br /><br /> [NULL 以外])|  
+|CREATE TABLE *base-table-name*<br /><br /> (*列識別子のデータ型*<br /><br /> [NULL 以外]<br /><br /> [、*列識別子のデータ型*<br /><br /> [NOT NULL]...)|テーブルを作成する*TableName1* [名前*LongTableName*]<br /><br /> (*FieldName1* *FieldType*<br /><br /> [(*nFieldWidth* [, *nPrecision*])]<br /><br /> [NULL 以外])|  
   
  ドライバーを使用してテーブルを作成するときに、ドライバーは、他のユーザーがテーブルにアクセスできるように作成後すぐに、テーブルを閉じます。 これは、Visual FoxPro は、テーブルを作成時にのみ開いたままにするとは異なります。 ただし、CREATE TABLE ステートメントを含む、データ ソースのストアド プロシージャが実行されたテーブルが開いたままです。  
   
@@ -166,7 +165,7 @@ CREATE TABLE mytable (char1 C(10), char2 C(10) NOCPTRANS,;
   
  たとえば、一時テーブルを作成する場合は、トランザクションを必要とするステートメントを開始する前にテーブルを作成する必要があります。 バッチ トランザクションを必要とする SQL ステートメントに CREATE TABLE ステートメントを含めると、ドライバーはエラー メッセージを返します。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [ALTER TABLE - SQL コマンド](../../odbc/microsoft/alter-table-sql-command.md)   
  [サポートされるデータ型 (Visual FoxPro ODBC ドライバー)](../../odbc/microsoft/supported-data-types-visual-foxpro-odbc-driver.md)   
  [INSERT - SQL コマンド](../../odbc/microsoft/insert-sql-command.md)   

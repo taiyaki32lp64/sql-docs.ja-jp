@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 ms.assetid: dd553715-2b95-4119-8f58-d01de388d9ab
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: efc71378e6570a86d075ed50e206284a93b0532a
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 4d8e18215c6078026b617e079879da1eadbca612
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53353869"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66095961"
 ---
 # <a name="changes-to-cpu-and-memory-limits-for-sql-server-reporting-services-standard-and-enterprise"></a>SQL Server Reporting Services Standard および Enterprise での CPU およびメモリの制限の変更点
   [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] Reporting Services Standard Edition および Enterprise Edition では、最大 64 GB のシステム メモリがサポートされています。  

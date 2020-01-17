@@ -1,22 +1,21 @@
 ---
-title: データ マイニング プロジェクト |Microsoft Docs
+title: データマイニングプロジェクト |Microsoft Docs
 ms.custom: ''
 ms.date: 07/17/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: 543d70fc-34d2-42dd-8d6d-0543109f94d0
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 6370034c90acf91bcf69fc0dee697f48458b7e22
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 476159031ad00ada2e70b0c9eca5c775dab67285
+ms.sourcegitcommit: b4ad3182aa99f9cbfd15f4c3f910317d6128a2e5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53356404"
+ms.lasthandoff: 11/06/2019
+ms.locfileid: "73705298"
 ---
 # <a name="data-mining-projects"></a>データ マイニング プロジェクト
   データ マイニング プロジェクトは、 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] ソリューションの一部です。 デザイン プロセス時に、このプロジェクトで作成したオブジェクトをワークスペース データベースの一部としてテストおよびクエリに使用できます。 ユーザーがプロジェクト内のオブジェクトをクエリまたは参照できるようにするには、多次元モードで実行している [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] のインスタンスにプロジェクトを配置する必要があります。  
@@ -27,7 +26,7 @@ ms.locfileid: "53356404"
 ##  <a name="bkmk_Overview"></a> データ マイニング プロジェクトの作成  
  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]では、" **OLAP およびデータ マイニング プロジェクト**" テンプレートを使用して、データ マイニング プロジェクトを作成します。 AMO を使用して、プログラムでデータ マイニング プロジェクトを作成することもできます。 個々のデータ マイニング オブジェクトは、Analysis Services スクリプト言語 (ASSL) を使用してスクリプト化できます。 詳細については、「[Multidimensional Model Data Access (Analysis Services - Multidimensional Data)](../multidimensional-models/mdx/multidimensional-model-data-access-analysis-services-multidimensional-data.md)」(多次元モデルのデータ アクセス (Analysis Services - 多次元データ)) を参照してください。  
   
- 既存のソリューション内にデータ マイニング オブジェクトを作成する場合、既定では、データ マイニング オブジェクトはソリューション ファイルと同じ名前の [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] データベースに配置されます。 この名前およびターゲット サーバーは、**[プロジェクトのプロパティ]** ダイアログ ボックスを使用して変更できます。 詳細については、「[Configure Analysis Services Project Properties (SSDT)](../multidimensional-models/configure-analysis-services-project-properties-ssdt.md)」(Analysis Services プロジェクトのプロパティの構成 (SSDT)) を参照してください。  
+ 既存のソリューション内にデータ マイニング オブジェクトを作成する場合、既定では、データ マイニング オブジェクトはソリューション ファイルと同じ名前の [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] データベースに配置されます。 この名前およびターゲット サーバーは、 **[プロジェクトのプロパティ]** ダイアログ ボックスを使用して変更できます。 詳細については、「[Analysis Services プロジェクトのプロパティの構成 &#40;SSDT&#41;](../multidimensional-models/configure-analysis-services-project-properties-ssdt.md)」をご覧ください。  
   
 > [!WARNING]  
 >  プロジェクトを正常に作成して配置するには、OLAP/データ マイニング モードで実行されている [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] のインスタンスにアクセスできる必要があります。 テーブル モデルをサポートする [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] のインスタンスでは、データ マイニング ソリューションを開発または配置することはできません。また、PowerPivot ブックのデータまたはメモリ内データ ストアを使用するテーブル モデルのデータを直接使用することもできません。 使用する [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] のインスタンスがデータ マイニングをサポートできるかどうかを判断するには、「 [Determine the Server Mode of an Analysis Services Instance](../instances/determine-the-server-mode-of-an-analysis-services-instance.md)」(Analysis Services インスタンスのサーバー モードの決定) を参照してください。  
@@ -53,7 +52,7 @@ ms.locfileid: "53356404"
 ##  <a name="bkmk_Objects"></a> データ マイニング プロジェクト内のオブジェクト  
  すべてのデータ マイニング プロジェクトには、次の 4 種類のオブジェクトが含まれます。 どの種類のオブジェクトも複数含めることができます。  
   
--   [データ ソース]  
+-   データ ソース  
   
 -   データ ソース ビュー  
   
@@ -63,7 +62,7 @@ ms.locfileid: "53356404"
   
  たとえば、1 つのデータ マイニング プロジェクトに、それぞれが複数のデータ ソース ビューをサポートしている複数のデータ ソースへの参照を含めることができます。 さらに、各データ ソース ビューは、それぞれが多数のマイニング モデルに関連付けられている複数のマイニング構造をサポートできます。  
   
- また、プロジェクトには、プラグイン アルゴリズム、カスタム アセンブリ、またはカスタム ストアド プロシージャを含めることもできます。ただし、ここでは、これらのオブジェクトについて説明しません。 詳細については、次を参照してください。 [Developer's Guide &#40;Analysis Services&#41;](../analysis-services-developer-documentation.md)します。  
+ また、プロジェクトには、プラグイン アルゴリズム、カスタム アセンブリ、またはカスタム ストアド プロシージャを含めることもできます。ただし、ここでは、これらのオブジェクトについて説明しません。 詳細については、「[開発&#40;者&#41;ガイド Analysis Services](../analysis-services-developer-documentation.md)」を参照してください。  
  
   
 ###  <a name="bkmk_DataSources"></a> Data Sources  
@@ -71,7 +70,7 @@ ms.locfileid: "53356404"
   
  1 つのデータ マイニング プロジェクトで、複数のデータ ソースを参照できます。 マイニング モデルで一度に使用できるデータ ソースは 1 つだけですが、異なるデータ ソースを利用する複数のモデルをプロジェクトに含めることができます。  
   
- [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] ではさまざまな外部プロバイダーのデータをサポートしており、SQL Server データ マイニングではデータ ソースとしてリレーショナル データとキューブ データの両方を使用できます。 ただし、両方の種類のプロジェクト モデルがリレーショナル ソースに基づくと OLAP キューブに基づくモデルを開発する場合は、開発し、別のプロジェクトにこのような管理をすることもできます。  
+ [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] ではさまざまな外部プロバイダーのデータをサポートしており、SQL Server データ マイニングではデータ ソースとしてリレーショナル データとキューブ データの両方を使用できます。 ただし、両方の種類のプロジェクトを開発する場合は、リレーショナルソースに基づくモデルと OLAP キューブに基づくモデルを作成する必要があります。これらを別々のプロジェクトで開発して管理することをお勧めします。  
   
 -   通常、OLAP キューブに基づくモデルは、OLAP デザイン ソリューション内で開発する必要があります。 その理由の 1 つとして、キューブに基づくモデルでは、データを更新するためにキューブを処理する必要があることが挙げられます。 一般に、キューブ データを使用する必要があるのは、それがデータを保存およびアクセスするための主な手段である場合、または多次元プロジェクトで作成された集計、ディメンション、および属性が必要な場合だけです。  
   
@@ -105,11 +104,11 @@ ms.locfileid: "53356404"
 > [!WARNING]  
 >  データのフィルター選択はデータ ソース ビューで行うことができますが、マイニング モデルのレベルでデータに対するフィルターを作成することもできます。 フィルターの定義はマイニング モデルと共に格納されるため、モデル フィルターを使用すると、モデルのトレーニングに使用したデータを簡単に特定できます。 また、さまざまなフィルター条件を使用して、複数の関連モデルを作成することもできます。 詳細については、「[マイニング モデルのフィルター選択 (Analysis Services - データ マイニング)](mining-models-analysis-services-data-mining.md)」を参照してください。  
   
- 作成したデータ ソース ビューには、分析に直接使用されない追加のデータを含めることができます。 たとえば、テスト、予測、またはドリルスルーに使用するデータをデータ ソース ビューに追加できます。 これらの使用方法の詳細については、「 [テストおよび検証 (データ マイニング)](testing-and-validation-data-mining.md) 」と「 [ドリルスルー](drillthrough-queries-data-mining.md)" テンプレートを使用して、データ マイニング プロジェクトを作成します。  
+ 作成したデータ ソース ビューには、分析に直接使用されない追加のデータを含めることができます。 たとえば、テスト、予測、またはドリルスルーに使用するデータをデータ ソース ビューに追加できます。 これらの使用方法の詳細については、「[テストおよび検証 (データ マイニング)](testing-and-validation-data-mining.md)」と「[ドリルスルー](drillthrough-queries-data-mining.md)」を参照してください。  
   
 
   
-###  <a name="bkmk_Structures"></a> Mining Structures  
+###  <a name="bkmk_Structures"></a> マイニング構造  
  データ ソースとデータ ソース ビューを作成したら、プロジェクト内に *マイニング構造* を定義して、ビジネス上の問題に最も関連するデータの列を選択する必要があります。 マイニング構造によって、モデリング、トレーニング、およびテストに実際に使用するデータ ソース ビューのデータの列をプロジェクトに指示します。  
   
  新しいマイニング構造を追加するには、データ マイニング ウィザードを起動します。 ウィザードでは、自動的にマイニング構造が定義されます。手順に従ってデータを選択しますが、必要に応じて初期マイニング モデルを構造に追加することもできます。 マイニング構造内で、データ ソース ビューまたは OLAP キューブのテーブルおよび列を選択し、データに入れ子になったテーブルが含まれている場合は、テーブル間のリレーションシップを定義します。  
@@ -133,7 +132,7 @@ ms.locfileid: "53356404"
   
   
   
-###  <a name="bkmk_Models"></a> Mining Models  
+###  <a name="bkmk_Models"></a> [マイニング モデル]  
  マイニング モデルでは、アルゴリズム、つまりデータに対して使用する分析の方法を定義します。 それぞれのマイニング構造に、1 つ以上のマイニング モデルを追加します。  
   
  必要に応じて、複数のモデルを 1 つのプロジェクトにまとめることや、モデルや分析タスクの種類ごとに別々のプロジェクトを作成することができます。  
@@ -161,9 +160,7 @@ ms.locfileid: "53356404"
   
  これらの視覚エフェクトは一時的なもので、 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]とのセッションを終了すると、保存されずに閉じられます。 そのため、プレゼンテーションや追加の分析のために、これらの視覚エフェクトを別のアプリケーションにエクスポートする必要がある場合は、ビューアー インターフェイスの各タブまたはペインに用意されている **[コピー]** を使用します。  
   
- また、Excel 用データ マイニング アドインでは、Visio テンプレートが提供されます。それを使用して、Visio の図でモデルを表現し、Visio のツールを使用して図に注釈を付けたり、変更したりできます。 詳細については、「 [Microsoft Office 2007 用 Microsoft SQL Server 2008 データ マイニング アドイン](https://go.microsoft.com/fwlink/?LinkID=123146)」を参照してください。  
-  
-
+ また、Excel 用データ マイニング アドインでは、Visio テンプレートが提供されます。それを使用して、Visio の図でモデルを表現し、Visio のツールを使用して図に注釈を付けたり、変更したりできます。 詳細については、「 [Microsoft Office 2007 用 Microsoft SQL Server 2008 データ マイニング アドイン](https://www.microsoft.com/download/details.aspx?id=7294)」を参照してください。
   
 ###  <a name="bkmk_Validate"></a> Test and Validate Models  
  モデルを作成した後、結果を調査して、最もパフォーマンスの良いモデルを決定できます。  
@@ -174,7 +171,7 @@ ms.locfileid: "53356404"
   
  これらのレポートおよびチャートは、プロジェクトまたは ssASnoversion データベースに保存されません。そのため、その結果を保持または複製する必要がある場合は、結果を保存するか、DMX または AMO を使用してオブジェクトをスクリプト化する必要があります。 クロス検証にストアド プロシージャを使用することもできます。  
   
- 詳細については、「 [テストおよび検証 (データ マイニング)](testing-and-validation-data-mining.md)" テンプレートを使用して、データ マイニング プロジェクトを作成します。  
+ 詳細については、「[テストおよび検証 (データ マイニング)](testing-and-validation-data-mining.md)」を参照してください。  
   
 
   
@@ -203,10 +200,10 @@ ms.locfileid: "53356404"
 |各マイニング モデル ビューアーに関する情報へのリンクを提供します。|[データ マイニング モデル ビューアー](data-mining-model-viewers.md)|  
 |リフト チャート、利益チャート、または分類マトリックスを作成する方法、またはマイニング構造をテストする方法について説明します。|[テストおよび検証 (データ マイニング)](testing-and-validation-data-mining.md)|  
 |処理オプションと権限について説明します。|[データ マイニング オブジェクトの処理](processing-data-mining-objects.md)|  
-|Analysis Services について詳しく説明します。|[多次元モデル データベース (SSAS)](../multidimensional-models/multidimensional-model-databases-ssas.md)|  
+|Analysis Services について詳しく説明します。|[多次元モデル データベース &#40;SSAS&#41;](../multidimensional-models/multidimensional-model-databases-ssas.md)|  
   
 ## <a name="see-also"></a>参照  
- [Data Mining Designer](data-mining-designer.md)   
+ [データ マイニング デザイナー](data-mining-designer.md)   
  [SQL Server データ ツール (SSDT) を使用した多次元モデルの作成](../multidimensional-models/creating-multidimensional-models-using-sql-server-data-tools-ssdt.md)   
  [ワークスペース データベース (SSAS テーブル)](../tabular-models/workspace-database-ssas-tabular.md)  
   

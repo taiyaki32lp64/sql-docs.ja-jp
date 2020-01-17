@@ -10,15 +10,15 @@ helpviewer_keywords:
 - deleting subscription views [Master Data Services]
 - subscription views [Master Data Services], deleting
 ms.assetid: 14b09c81-1297-48b0-8fe5-991414b930e0
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: e01209b78acb778d39d376172192ca7ee0f1a9e7
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 3ae447196ebef455406202615ce4aff50d3749c8
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52796812"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65479469"
 ---
 # <a name="delete-a-subscription-view-master-data-services"></a>サブスクリプション ビューを削除する (マスター データ サービス)
   [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]で、不要になったサブスクリプション ビューを削除します。 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] でサブスクリプション ビューを削除すると、 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] データベースからビューが削除されます。  

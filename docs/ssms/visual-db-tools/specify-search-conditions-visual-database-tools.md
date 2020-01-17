@@ -12,15 +12,14 @@ helpviewer_keywords:
 - search conditions [SQL Server], specifying
 - search criteria [SQL Server], specifying conditions
 ms.assetid: 18e2c759-68ec-4efe-b208-2f73418cd9bd
-author: stevestein
-ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 1e9322a16f680bc29fbbc3a98a932df1aaccc2d0
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 1cdf4fc43478a8c1a6e4eca052abbec5c788263f
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47785390"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68263548"
 ---
 # <a name="specify-search-conditions-visual-database-tools"></a>検索条件の指定 (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: 9cbe2b62-4cf7-43ab-8fb4-9a53df2c6b3f
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: d472b36b62a8b3142a0127f29d013e8ebfce38de
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: 66a944c22c5f3c31ac1bd4cd8f556e97f28d331d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53212321"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68039570"
 ---
 # <a name="sqlsetstmtoption-function"></a>SQLSetStmtOption 関数
 **準拠**  

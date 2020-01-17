@@ -1,5 +1,5 @@
 ---
-title: 再生トレース ファイル (SQL Server Profiler) |Microsoft Docs
+title: トレースファイルを再生する (SQL Server プロファイラー) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -11,15 +11,14 @@ helpviewer_keywords:
 - traces [SQL Server], replaying
 - replaying traces
 ms.assetid: 9e361275-c8fd-4499-8389-242cf8e27415
-author: stevestein
-ms.author: sstein
-manager: craigg
-ms.openlocfilehash: f15ca40b0f924374795c122589caee31bfbd329a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: fe3a0971be4494c62d7e29a9641ed82655126a23
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47781500"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68031449"
 ---
 # <a name="replay-a-trace-file-sql-server-profiler"></a>トレース ファイルの再生 (SQL Server Profiler)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -37,9 +36,9 @@ ms.locfileid: "47781500"
   
 4.  必要に応じて、再生の保存先として次のいずれかを選択します。  
   
-    -   **[ファイルに保存]**: 再生の保存先となるファイルを指定します。  
+    -   **[ファイルに保存]** : 再生の保存先となるファイルを指定します。  
   
-    -   **[テーブルに保存]**: 再生の保存先となるデータベース テーブルを指定します。  
+    -   **[テーブルに保存]** : 再生の保存先となるデータベース テーブルを指定します。  
   
 5.  **[トレースされた順番にイベントを再生します。このオプションはデバッグを有効にします。]** または **[複数のスレッドを使用してイベントを再生します。このオプションはパフォーマンスを最適にし、デバッグを無効にします。]** のいずれかを選択します。 次の表では、これらの設定の違いについて説明します。  
   

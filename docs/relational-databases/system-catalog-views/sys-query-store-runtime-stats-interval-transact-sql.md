@@ -20,25 +20,24 @@ helpviewer_keywords:
 ms.assetid: 2be83785-0569-41a3-88c8-59bfa0932e6e
 author: stevestein
 ms.author: sstein
-manager: craigg
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: c9c494ab580d94f82587041c5c28ec60e2481e98
-ms.sourcegitcommit: 3d50caa30681bf384f5628b1dd3e06e24fc910cd
+monikerRange: =azuresqldb-current||>=sql-server-2016||= azure-sqldw-latest||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: c76e22bc0041c69ffc8ab9d0632ff69f8518031b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/24/2019
-ms.locfileid: "54838029"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68067944"
 ---
 # <a name="sysquerystoreruntimestatsinterval-transact-sql"></a>sys.query_store_runtime_stats_interval (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-asdw-xxx-md.md)]
 
-  クエリの実行の統計情報が収集されたランタイムでは、各間隔の開始および終了時間について説明します。  
+  クエリの実行の統計情報の収集されたランタイムでは、各間隔の開始および終了時間について説明します。  
   
 |列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
 |**runtime_stats_interval_id**|**bigint**|主キー。|
-|**start_time**|**datetimeoffset**|間隔の時間を開始します。|
-|**end_time**|**datetimeoffset**|間隔の終了時刻です。|
+|**start_time**|**datetimeoffset**|間隔の開始時刻。|
+|**end_time**|**datetimeoffset**|間隔の終了時刻。|
 |**comment**|**nvarchar(32)**|常に NULL になります。|
   
 ## <a name="permissions"></a>アクセス許可  
@@ -52,7 +51,7 @@ ms.locfileid: "54838029"
  [sys.query_store_query_text &#40;TRANSACT-SQL&#41;](../../relational-databases/system-catalog-views/sys-query-store-query-text-transact-sql.md)   
  [sys.query_store_runtime_stats &#40;TRANSACT-SQL&#41;](../../relational-databases/system-catalog-views/sys-query-store-runtime-stats-transact-sql.md)   
  [sys.query_store_wait_stats &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-query-store-wait-stats-transact-sql.md)  
- [関連するビュー、関数、プロシージャ](../../relational-databases/performance/monitoring-performance-by-using-the-query-store.md)   
+ [クエリのストアを使用した、パフォーマンスの監視](../../relational-databases/performance/monitoring-performance-by-using-the-query-store.md)   
  [カタログ ビュー &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
  [クエリ ストアのストアド プロシージャ&#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/query-store-stored-procedures-transact-sql.md)  
   

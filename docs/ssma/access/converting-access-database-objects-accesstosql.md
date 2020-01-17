@@ -29,13 +29,12 @@ helpviewer_keywords:
 ms.assetid: e0ef67bf-80a6-4e6c-a82d-5d46e0623c6c
 author: Shamikg
 ms.author: Shamikg
-manager: craigg
-ms.openlocfilehash: c4bb3d1b6fdc57e1251e9c8ca39f0c7437ffb126
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 56c55dbc5df61bfdb9013e505335af16fccbeecd
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51666201"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68006630"
 ---
 # <a name="converting-access-database-objects-accesstosql"></a>Access データベース オブジェクト (AccessToSQL) に変換します。
 Access データベースを追加してに接続した後[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]または SQL Azure、SSMA は、アクセスのメタデータを表示し、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]または SQL Azure データベースのオブジェクト。 これで Access データベースのオブジェクトを選択してへのスキーマを変換し、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]または SQL Azure のスキーマ。  
@@ -58,13 +57,13 @@ Access データベースを追加してに接続した後[!INCLUDE[ssNoVersion]
 |-----------------|-------------------------------|  
 |テーブル|テーブル|  
 |column|column|  
-|インデックス (index)|インデックス (index)|  
+|インデックス|インデックス|  
 |外部キー (foreign key)|外部キー (foreign key)|  
-|query|view<br /><br />ほとんどの SELECT クエリは、ビューに変換されます。 更新クエリなどの他のクエリは移行されません。<br /><br />SELECT クエリ パラメーターを受け取るは変換されません、およびクロス集計クエリ。|  
+|クエリ (query)|ビュー<br /><br />ほとんどの SELECT クエリは、ビューに変換されます。 更新クエリなどの他のクエリは移行されません。<br /><br />SELECT クエリ パラメーターを受け取るは変換されません、およびクロス集計クエリ。|  
 |レポート|変換されませんでした。|  
 |フォーム|変換されませんでした。|  
 |マクロ|変換されませんでした。|  
-|モジュール (module)|変換されませんでした。|  
+|モジュール|変換されませんでした。|  
 |既定値|既定値|  
 |0 個の長列のプロパティを許可します。|check 制約|  
 |列の検証規則|check 制約|  
@@ -118,6 +117,6 @@ Access データベース オブジェクトを変換するには、最初に変
 ## <a name="next-step"></a>次の手順  
 移行プロセスでは、次の手順は[SQL Server に変換されたデータベース オブジェクトを読み込む](loading-converted-database-objects-into-sql-server-accesstosql.md)  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
 [SQL Server へのアクセス データベースの移行](migrating-access-databases-to-sql-server-azure-sql-db-accesstosql.md)  
   

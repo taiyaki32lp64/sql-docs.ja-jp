@@ -17,15 +17,14 @@ helpviewer_keywords:
 - cursors [SQL Server], closing
 - CLOSE statement
 ms.assetid: 21546874-97e3-4b93-970f-87c27f6b78c7
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: 4c98cff1909bc74ff550ea9d68359d7a845d04d7
-ms.sourcegitcommit: f1cf91e679d1121d7f1ef66717b173c22430cb42
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 63234f9f337bd6427c4c5ed33c146e2ed3a714c9
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/29/2018
-ms.locfileid: "52586235"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67950326"
 ---
 # <a name="close-transact-sql"></a>CLOSE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]

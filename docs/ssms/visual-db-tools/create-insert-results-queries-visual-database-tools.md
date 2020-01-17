@@ -14,15 +14,14 @@ helpviewer_keywords:
 - Insert Results query
 - queries [SQL Server], results
 ms.assetid: 8770d630-09cc-47ec-a0e9-e9de2d7bbc89
-author: stevestein
-ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 6e02bff525732632dc97c3dc2fe6955053106e5d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 850d64df71644c5010cfda9a2c2624ab4bfd49cf
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47845010"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68264962"
 ---
 # <a name="create-insert-results-queries-visual-database-tools"></a>結果の挿入クエリの作成 (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -78,7 +77,7 @@ WHERE (pub_id = '0766')
     > [!NOTE]  
     > クエリおよびビュー デザイナーは、更新できるテーブルおよびビューを事前に判別できません。 そのため、 **[挿入先のテーブル選択]** ダイアログ ボックスの **[テーブル名]** ボックスには、クエリを実行するデータ接続で使用できるテーブルおよびビューがすべて表示されます。行をコピーできないテーブルおよびビューも表示されます。  
   
-4.  テーブルまたはテーブル値オブジェクトを示す四角形で、内容をコピーする列の名前を選択します。 すべての行をコピーする場合は、**&#42; (すべての行)** を選択します。  
+4.  テーブルまたはテーブル値オブジェクトを示す四角形で、内容をコピーする列の名前を選択します。 すべての行をコピーする場合は、 **[&#42; (すべての列)]** を選択します。  
   
     選択した列が、抽出条件ペインの **[列]** 列に追加されます。  
   
@@ -86,7 +85,7 @@ WHERE (pub_id = '0766')
   
 6.  特定の順序で行をコピーする場合は、並べ替え順序を指定します。 詳細については、「[クエリ結果の並べ替えおよびグループ化 (Visual Database Tools)](../../ssms/visual-db-tools/sort-and-group-query-results-visual-database-tools.md)」を参照してください。  
   
-7.  コピーする行を指定するために、**[フィルター]** 列に検索条件を入力します。 詳細については、「[検索基準の指定 (Visual Database Tools)](../../ssms/visual-db-tools/specify-search-criteria-visual-database-tools.md)」を参照してください。  
+7.  コピーする行を指定するために、 **[フィルター]** 列に検索条件を入力します。 詳細については、「[検索基準の指定 (Visual Database Tools)](../../ssms/visual-db-tools/specify-search-criteria-visual-database-tools.md)」を参照してください。  
   
     検索条件を指定しなかった場合は、コピー元テーブルのすべての行がコピー先テーブルにコピーされます。  
   

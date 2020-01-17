@@ -1,7 +1,7 @@
 ---
 title: CAST および CONVERT (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 11/19/2018
+ms.date: 08/23/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -32,59 +32,33 @@ helpviewer_keywords:
 - time zones [SQL Server]
 - roundtrip conversions
 ms.assetid: a87d0850-c670-4720-9ad5-6f5a22343ea8
-author: MashaMSFT
-ms.author: mathoma
-manager: craigg
+author: MikeRayMSFT
+ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 9ce80e0d5936c0a09eefc8abb09b35846bf5dc13
-ms.sourcegitcommit: 1e28f923cda9436a4395a405ebda5149202f8204
+ms.openlocfilehash: 5839bfa470bfc7a35c924f1710b1d78f86cb1245
+ms.sourcegitcommit: f688a37bb6deac2e5b7730344165bbe2c57f9b9c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/25/2019
-ms.locfileid: "55045021"
+ms.lasthandoff: 11/08/2019
+ms.locfileid: "73843432"
 ---
 # <a name="cast-and-convert-transact-sql"></a>CAST および CONVERT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-> [!div class="nextstepaction"]
-> [SQL ドキュメントの目次に関するご意見を共有してください。](https://aka.ms/sqldocsurvey)
-
 これらの関数は、あるデータ型の式を別のデータ型に変換します。  
 
-**例:** 入力データ型を変更します
-
-**CAST**
-```sql  
-SELECT 9.5 AS Original, CAST(9.5 AS int) AS int, 
-    CAST(9.5 AS decimal(6,4)) AS decimal;
-
-```  
-**[変換]**
-```sql  
-
-SELECT 9.5 AS Original, CONVERT(int, 9.5) AS int, 
-    CONVERT(decimal(6,4), 9.5) AS decimal;
-```  
-[!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
-
-|変更元   |ssNoversion    |Decimal |  
-|----|----|----|  
-|9.5 |9 |9.5000 |  
-
-**後で示す[例](#BKMK_examples)** をご覧ください。 
-  
-![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
-  
 ## <a name="syntax"></a>構文  
   
-```sql
+```
 -- CAST Syntax:  
 CAST ( expression AS data_type [ ( length ) ] )  
   
 -- CONVERT Syntax:  
 CONVERT ( data_type [ ( length ) ] , expression [ , style ] )  
 ```  
-  
+
+![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+
 ## <a name="arguments"></a>引数  
 *式 (expression)*  
 任意の有効な[式](../../t-sql/language-elements/expressions-transact-sql.md)。
@@ -93,19 +67,19 @@ CONVERT ( data_type [ ( length ) ] , expression [ , style ] )
 対象のデータ型です。 **xml**、**bigint**、**sql_variant** が含まれます。 別名データ型は使用できません。
   
 *length*  
-対象のデータ型の長さを指定する整数です (省略可能)。 既定値は、30 です。
+データ型でユーザー指定の長さが許可されるとき、ターゲット データ型の長さを指定する任意の整数。 既定値は、30 です。
   
 *style*  
 CONVERT 関数で *expression* を変換する方法を指定する整数式です。 スタイル値が NULL の場合は、NULL が返されます。 *data_type* は範囲を決定します。 
   
 ## <a name="return-types"></a>戻り値の型
 *data_type* に変換された *expression* を返します。
-
+  
 ## <a name="date-and-time-styles"></a>日付および時刻のスタイル  
 date または time データ型の *expression* の場合、*style* には次の表に示すいずれかの値を指定できます。 その他の値は 0 として処理されます。 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 以降では、date 型と time 型を **datetimeoffset** に変換するときにサポートされるスタイルは、0 または 1 のみです。 他のすべての変換スタイルでは 9809 が返されます。
   
 > [!NOTE]
->  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] は、クウェート アルゴリズムを使用して、アラビア スタイルで、日付の書式をサポートします。
+> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] は、クウェート アルゴリズムを使用して、アラビア スタイルで、日付の書式をサポートします。
   
 |2 桁の年 (yy) (<sup>1</sup>)|4 桁の年 (yyyy)|Standard|入力/出力 (<sup>3</sup>)|  
 |---|---|--|---|
@@ -113,27 +87,29 @@ date または time データ型の *expression* の場合、*style* には次�
 |**1**|**101**|米国|  1 = mm/dd/yy<br /> 101 = mm/dd/yyyy|  
 |**2**|**102**|ANSI|  2 = yy.mm.dd<br /> 102 = yyyy.mm.dd|  
 |**3**|**103**|イギリス/フランス|  3 = dd/mm/yy<br /> 103 = dd/mm/yyyy|  
-|**4**|**104**|ドイツ語|  4 = dd.mm.yy<br /> 104 = dd.mm.yyyy|  
-|**5**|**105**|イタリア語|  5 = dd-mm-yy<br /> 105 = dd-mm-yyyy|  
+|**4**|**104**|German|  4 = dd.mm.yy<br /> 104 = dd.mm.yyyy|  
+|**5**|**105**|Italian|  5 = dd-mm-yy<br /> 105 = dd-mm-yyyy|  
 |**6**|**106** <sup>(1)</sup>|-|  6 = dd mon yy<br /> 106 = dd mon yyyy|  
 |**7**|**107** <sup>(1)</sup>|-|  7 = Mon dd, yy<br /> 107 = Mon dd, yyyy|  
-|**8**|**108**|-|hh:mi:ss|  
+|**8** または **24**|**108**|-|hh:mi:ss|  
 |-|**9** または **109** (<sup>1、</sup><sup>2</sup>)|既定値 + ミリ秒|mon dd yyyy hh:mi:ss:mmmAM (または PM)|  
 |"**10**"|**110**|米国| 10 = mm-dd-yy<br /> 110 = mm-dd-yyyy|  
 |**11**|**111**|日本| 11 = yy/mm/dd<br /> 111 = yyyy/mm/dd|  
 |**12**|**112**|ISO| 12 = yymmdd<br /> 112 = yyyymmdd|  
-|-|**13** または **113** (<sup>1、</sup><sup>2</sup>)|ヨーロッパの既定値 + ミリ秒|dd mon yyyy hh:mi:ss:mmm(24h)|  
-|**14**|**114**|-|hh:mi:ss:mmm(24h)|  
-|-|**20** または **120** (<sup>2</sup>)|ODBC 標準|yyyy-mm-dd hh:mi:ss(24h)|  
-|-|**21** または **121** (<sup>2</sup>)|time、date、datetime2、および datetimeoffset の ODBC 標準 (ミリ秒を含む) の既定値|yyyy-mm-dd hh:mi:ss.mmm(24h)|  
-|-|**126** (<sup>4</sup>)|ISO8601|yyyy-mm-ddThh:mi:ss.mmm (スペースなし)<br /><br /> 注:ミリ秒 (mmm) の値が 0 の場合、ミリ秒を表す小数部の値は表示されません。 たとえば、値 "2012-11-07T18:26:20.000" は、"2012-11-07T18:26:20"' と表示されます。|  
-|-|**127**(<sup>6、7</sup>)|ISO 8601 (タイム ゾーン Z)|yyyy-mm-ddThh:mi:ss.mmmZ (スペースなし)<br /><br /> 注:ミリ秒 (mmm) の値が 0 の場合、ミリ秒を示す小数部の値は表示されません。 たとえば、値 "2012-11-07T18:26:20.000" は、"2012-11-07T18:26:20" と表示されます。|  
+|-|**13** または **113** (<sup>1、</sup><sup>2</sup>)|ヨーロッパの既定値 + ミリ秒|dd mon yyyy hh:mi:ss:mmm (24h)|  
+|**14**|**114**|-|hh:mi:ss:mmm (24h)|  
+|-|**20** または **120** (<sup>2</sup>)|ODBC 標準|yyyy-mm-dd hh:mi:ss (24h)|  
+|-|**21** または **25** または **121** (<sup>2</sup>)|time、date、datetime2、および datetimeoffset の ODBC 標準 (ミリ秒を含む) の既定値|yyyy-mm-dd hh:mi:ss.mmm (24h)|  
+|**22**|-|米国| mm/dd/yy hh:mi:ss AM (または PM)|
+|-|**23**|ISO8601|yyyy-mm-dd|
+|-|**126** (<sup>4</sup>)|ISO8601|yyyy-mm-ddThh:mi:ss.mmm (スペースなし)<br /><br /> **注:** ミリ秒 (mmm) の値が 0 の場合、ミリ秒を表す小数部の値は表示されません。 たとえば、値 "2012-11-07T18:26:20.000" は、"2012-11-07T18:26:20"' と表示されます。| 
+|-|**127**(<sup>6、7</sup>)|ISO 8601 (タイム ゾーン Z)|yyyy-mm-ddThh:mi:ss.mmmZ (スペースなし)<br /><br /> **注:** ミリ秒 (mmm) の値が 0 の場合、ミリ秒を示す小数部の値は表示されません。 たとえば、値 "2012-11-07T18:26:20.000" は、"2012-11-07T18:26:20" と表示されます。|  
 |-|**130** (<sup>1、</sup><sup>2</sup>)|Hijri (<sup>5</sup>)|dd mon yyyy hh:mi:ss:mmmAM<br /><br /> このスタイルでは、**mon** は月の正式名に関する複数トークンの Hijri (イスラム暦) ユニコード表現を表します。 この値は、SSMS の既定の米国用インストールでは正しく表示されません。|  
 |-|**131** (<sup>2</sup>)|Hijri (<sup>5</sup>)|dd/mm/yyyy hh:mi:ss:mmmAM|  
   
 <sup>1</sup> これらのスタイル値で返される結果は非決定的です。 この場合は、すべての (yy) (2 桁の年) スタイルと、(yyyy) (4 桁の年) スタイルのサブセットが対象となります。
   
-<sup>2</sup> 既定値 (**0** または **100**、**9** または **109**、**13** または **113**、**20** または **120**、および **21** または **121**) は常に 4 桁の年 (yyyy) を返します。
+<sup>2</sup> 既定値 (**0** または **100**、**9** または **109**、**13** または **113**、**20** または **120**、**23**、および **21** または **25** または **121**) は常に 4 桁の年 (yyyy) を返します。
 
 <sup>3</sup> **datetime** に変換する場合は入力になり、文字データに変換する場合は出力になります。
 
@@ -142,11 +118,11 @@ date または time データ型の *expression* の場合、*style* には次�
 <sup>5</sup> Hijri とはいくつかのバリエーションがあるカレンダー システムです。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ではクウェート アルゴリズムが使用されます。
 
 > [!IMPORTANT]
->  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の既定では、2 桁の年は、終了年 2049 年を基準に解釈されます。 つまり、SQL Server は 2 桁の年 49 を 2049 年と解釈し、2 桁の年 50 を 1950 年と解釈します。 クライアント アプリケーションの中には、Automation オブジェクトに基づくものなど、2030 年を終了年とするものも多くあります。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] には、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] によって使用される基準年を変更するための 2 桁年基準構成オプションが用意されています。 これにより、日付の一貫性のある処理を行うことができます。 年は 4 桁で指定することを推奨します。
+>  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の既定では、2 桁の年は、終了年 2049 年を基準に解釈されます。 つまり、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] は 2 桁の年 49 を 2049 年と解釈し、2 桁の年 50 を 1950 年と解釈します。 クライアント アプリケーションの中には、Automation オブジェクトに基づくものなど、2030 年を終了年とするものも多くあります。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] には、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] によって使用される基準年を変更するための 2 桁年基準構成オプションが用意されています。 これにより、日付の一貫性のある処理を行うことができます。 年は 4 桁で指定することをお勧めします。
 
 <sup>6</sup> 文字データを **datetime** または **smalldatetime** 型にキャストする場合のみサポートされます。 日付部分または時刻部分のみを表す文字データを、**datetime** または **smalldatetime** データ型にキャストするとき、時刻部分が指定されていないと 00:00:00.000 に設定され、日付部分が指定されていないと 1900-01-01 に設定されます。
   
-<sup>7</sup> タイム ゾーン インジケーター **Z** は省略可能です。これを使用すると、タイム ゾーン情報が含まれる XML の **datetime** 値から、タイム ゾーン情報が含まれない [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **datetime** 値へのマップが容易になります。 Z は、タイム ゾーン UTC-0 を示します。 + または - 方向の HH:MM オフセットは、他のタイム ゾーンを示します。 例: `2006-12-12T23:45:12-08:00`」を参照してください。
+<sup>7</sup> タイム ゾーン インジケーター **Z** は省略可能です。これを使用すると、タイム ゾーン情報が含まれる XML の **datetime** 値から、タイム ゾーン情報が含まれない [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **datetime** 値へのマップが容易になります。 Z は、タイム ゾーン UTC-0 を示します。 \+ または - 方向の HH:MM オフセットは、他のタイム ゾーンを示します。 例: `2006-12-12T23:45:12-08:00`」を参照してください。
   
 **smalldatetime** を文字データに変換する場合、秒またはミリ秒を含むスタイルではそれらの位置に 0 が表示されます。 **datetime** または **smalldatetime** の値から変換するときは、適切な **char** または **varchar** データ型の長さを使用して、日付の不要な部分を切り捨てます。
   
@@ -160,7 +136,7 @@ date または time データ型の *expression* の場合、*style* には次�
 |**0** (既定値)|最高 6 桁。 該当する場合は、科学的表記法で使用します。|  
 |**1**|常に 8 桁。 常に科学的表記法で使用します。|  
 |**2**|常に 16 桁。 常に科学的表記法で使用します。|  
-|**3**|常に 17 桁。 ロスレス変換に使用します。 このスタイルでは、すべての浮動小数点数または実数が異なる文字列に変換されることが保証されます。<br /><br /> **適用対象:** [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]、および [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 以降。|  
+|**3**|常に 17 桁。 ロスレス変換に使用します。 このスタイルでは、すべての浮動小数点数または実数が異なる文字列に変換されることが保証されます。<br /><br /> **適用対象:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 以降) と [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。|  
 |**126、128、129**|レガシのために含まれていますが、将来のリリースではこれらの値は非推奨になる可能性があります。|  
   
 ## <a name="money-and-smallmoney-styles"></a>money 型スタイルと smallmoney 型スタイル
@@ -184,26 +160,34 @@ date または time データ型の *expression* の場合、*style* には次�
 |**3**|余分な空白を保持し、限定的な内部 DTD サブセット処理を有効にします。|  
   
 ## <a name="binary-styles"></a>バイナリ スタイル
-*expression* が **binary(n)**、**char(n)**、**varbinary(n)**、または **varchar(n)** の場合、*style* は次の表に示すいずれかの値になります。 表に記載されていないスタイル値の場合は、エラーが返されます。
+*expression* が **binary(n)** 、**char(n)** 、**varbinary(n)** 、または **varchar(n)** の場合、*style* は次の表に示すいずれかの値になります。 表に記載されていないスタイル値の場合は、エラーが返されます。
   
 |[値]|[出力]|  
 |---|---|
 |**0** (既定値)|ASCII 文字をバイナリ バイトに変換するか、バイナリ バイトを ASCII 文字に変換します。 各文字またはバイトは 1:1 で変換されます。<br /><br /> バイナリの *data_type* の場合は、文字 0x が結果の左側に追加されます。|  
-|**1**、**2**|バイナリの *data_type* の場合は、式は文字式であることが必要です。 *expression* は**偶数**桁の 16 進数 (0、1、2、3、4、5、6、7、8、9、A、B、C、D、E、F、a、b、c、d、e、f) である必要があります。 *style* が 1 に設定されている場合、最初の 2 文字は 0x である必要があります。 式に奇数桁の文字が含まれているか、いずれかの文字が使用できない場合は、エラーが発生します。<br /><br /> 変換された式の長さが *data_type* の長さを超える場合、結果の右側が切り捨てられます。<br /><br /> 固定長の *data_type* が変換された結果より長い場合は、結果の右側に 0 が追加されます。<br /><br /> *data_type* が文字型の場合は、バイナリ式である必要があります。 各バイナリ文字は、16 進値を表す 2 桁の英数文字に変換されます。 変換された式の長さが *data_type* の長さを超える場合、右側が切り捨てられます。<br /><br /> *data_type* が固定サイズの文字型で、変換された結果の長さが *data_type* の長さよりも短い場合、変換された式の右側に空白が追加され、偶数桁の 16 進数が維持されます。<br /><br /> *style* が 1 の場合、変換された結果の左側に文字 0x が追加されます。|  
+|**1**、**2**|バイナリの *data_type* の場合は、式は文字式であることが必要です。 *expression* は**偶数**桁の 16 進数 (0、1、2、3、4、5、6、7、8、9、A、B、C、D、E、F、a、b、c、d、e、f) である必要があります。 *style* が 1 に設定されている場合、最初の 2 文字は 0x である必要があります。 式に奇数桁の文字が含まれているか、いずれかの文字が使用できない場合は、エラーが発生します。<br /><br /> 変換された式の長さが *data_type* の長さを超える場合、結果の右側が切り捨てられます。<br /><br /> 固定長の *data_type* が変換された結果より長い場合は、結果の右側に 0 が追加されます。<br /><br /> *data_type* が文字型の場合は、バイナリ式である必要があります。 各バイナリ文字は、2 桁の 16 進数の英数文字に変換されます。 変換された式の長さが *data_type* の長さを超える場合、右側が切り捨てられます。<br /><br /> *data_type* が固定サイズの文字型で、変換された結果の長さが *data_type* の長さよりも短い場合、変換された式の右側に空白が追加され、偶数桁の 16 進数が維持されます。<br /><br /> *style* が 1 の場合、変換された結果の左側に文字 0x が追加されます。|  
   
 ## <a name="implicit-conversions"></a>暗黙的な変換
 暗黙的な変換では、CAST 関数または CONVERT 関数を指定する必要はありません。 明示的な変換では、CAST 関数または CONVERT 関数を指定する必要があります。 次の図は、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] システムで提供されるデータ型に対して許可されるすべての明示的および暗黙的なデータ型変換を示しています。 **bigint**、**sql_variant**、**xml** が含まれます。 代入時に **sql_variant** データ型からの暗黙的な変換は行われませんが、**sql_variant** への暗黙的な変換は行われます。
   
 > [!TIP]  
->  この表は、[Microsoft ダウンロード センター](https://www.microsoft.com/download/details.aspx?id=35834)で PDF ファイルとしてダウンロードできます。  
+> この表は、[Microsoft ダウンロード センター](https://www.microsoft.com/download/details.aspx?id=35834)で PDF ファイルとしてダウンロードできます。  
   
-![データ型変換表](../../t-sql/data-types/media/lrdatahd.png "データ型変換表")
+![データ型変換テーブル](../../t-sql/data-types/media/lrdatahd.png "データ型変換テーブル")
   
+上のグラフは、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] で許可されているすべての明示的および暗黙的な変換を示していますが、結果的に生成される変換のデータ型は実行される操作に依存します。
+
+-  明示的な変換の場合、ステートメント自体によって結果のデータ型が決定されます。    
+-  暗黙的な変換の場合、変数の値の設定や列への値の挿入などの代入ステートメントは、変数宣言または列定義によって定義されたデータ型になります。    
+-  比較演算子または他の式の場合、結果のデータ型は、[データ型の優先順位](../../t-sql/data-types/data-type-precedence-transact-sql.md)の規則によって異なります。
+
+> [!TIP]
+> [変換でデータ型の優先順位の影響](#precedence-example)については、このセクションの後半で実際の例を確認できます。
+
 **datetimeoffset** と、**char**、**nchar**、**nvarchar**、および **varchar** の各文字型との間で変換を行う場合、変換後のタイム ゾーン オフセットの部分は、HH と MM の両方が常に 2 桁である必要があります。 たとえば、-08:00 などです。
   
-> [!NOTE]  
->  
->  Unicode データでは常に偶数のバイト数が使用されるので、**binary** 型または **varbinary** 型と、Unicode がサポートするデータ型との間でデータを変換する場合は注意してください。 たとえば、次のような変換を行うと、16 進数の 41 は返されません。 16 進数の値 4100 が返されます。`SELECT CAST(CAST(0x41 AS nvarchar) AS varbinary)`  
+> [!NOTE]   
+> Unicode データでは常に偶数のバイト数が使用されるので、**binary** 型または **varbinary** 型と、Unicode がサポートするデータ型との間でデータを変換する場合は注意してください。 たとえば、次のような変換を行うと、16 進数の 41 は返されません。 16 進数の値 4100 が返されます。`SELECT CAST(CAST(0x41 AS nvarchar) AS varbinary)` 詳細については、「 [Collation and Unicode Support](../../relational-databases/collations/collation-and-unicode-support.md)」を参照してください。 
   
 ## <a name="large-value-data-types"></a>大きな値のデータ型
 大きな値のデータ型では、それより小さな値のデータ型、つまり **nvarchar**、**varbinary**、および **varchar** 型と同様の明示的および暗黙的な変換動作が行われます。 ただし、次のガイドラインを考慮してください。
@@ -224,7 +208,7 @@ date または time データ型の *expression* の場合、*style* には次�
 ## <a name="output-collation"></a>出力の照合順序  
 CAST または CONVERT 関数が文字列を入出力する場合、出力では入力と同じ照合順序および照合順序ラベルが使用されます。 入力が文字列ではない場合、出力ではデータベースの既定の照合順序、および強制可能な既定照合順序の照合順序ラベルが使用されます。 詳細については、「[照合順序の優先順位 &#40;Transact-SQL&#41;](../../t-sql/statements/collation-precedence-transact-sql.md)」を参照してください。
   
-出力に別の照合順序を割り当てるには、CAST 関数または CONVERT 関数の結果式に COLLATE 句を適用します。 例 :
+出力に別の照合順序を割り当てるには、CAST 関数または CONVERT 関数の結果式に COLLATE 句を適用します。 例:
   
 `SELECT CAST('abc' AS varchar(5)) COLLATE French_CS_AS`
   
@@ -242,7 +226,7 @@ CAST または CONVERT 関数が文字列を入出力する場合、出力では
 ||**nchar**|E|  
 ||**nvarchar**|E|  
   
-\* = 結果が短すぎて表示できません<br /><br />E  = 結果が短すぎて表示できない場合エラーが返される。
+\* = 結果が短すぎて表示できません<br /><br />E = 結果が短すぎて表示できない場合エラーが返される。
   
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、元のデータから別のデータ型に変換し、再度元のデータ型に戻すラウンド トリップ変換の場合にだけ、異なるバージョンでも同じ結果が生成されることが保証されています。 次にラウンド トリップ変換の例を示します。
   
@@ -254,8 +238,8 @@ SELECT CAST(CAST(@myval AS varbinary(20)) AS decimal(10,5));
 SELECT CONVERT(decimal(10,5), CONVERT(varbinary(20), @myval));  
 ```  
   
-> [!NOTE]  
->  **binary** 型の値を作成し、これを数値データ型に変換することは避けてください。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、**decimal** または **numeric** データ型の **binary** 型への変換が [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のバージョン間で同じになることは保証されていません。  
+> [!WARNING]  
+> **binary** 型の値を作成し、これを数値データ型に変換することは避けてください。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、**decimal** または **numeric** データ型の **binary** 型への変換が [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のバージョン間で同じになることは保証されていません。  
   
 次の例では、短すぎて表示できない結果式を示します。
   
@@ -279,10 +263,11 @@ Terri       Duffy         NULL   *
 Roberto     Tamburello    NULL   *
 Rob         Walters       NULL   *
 Gail        Erickson      Ms.    *
+
 (5 row(s) affected)  
 ```
   
-小数点の位置が異なるデータ型を変換すると、SQL Server により、切り捨てられた結果の値が返される場合と、丸められた値が返される場合があります。 次の表にその動作を示します。
+小数点の位置が異なるデータ型を変換すると、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] により、切り捨てられた結果の値が返される場合と、丸められた値が返される場合があります。 次の表にその動作を示します。
   
 |From|変換先|動作|  
 |---|---|---|
@@ -292,7 +277,7 @@ Gail        Erickson      Ms.    *
 |**money**|**int**|四捨五入|  
 |**money**|**numeric**|四捨五入|  
 |**float**|**int**|切り捨て|  
-|**float**|**numeric**|四捨五入<br /><br /> 変換 **float** 値を科学的表記法を使用する **decimal** または **数値** 17 桁のみを有効桁数の値に制限されます。 有効桁数が 17 より多い値はゼロに丸められます。|  
+|**float**|**numeric**|四捨五入<br /><br /> 科学的表記法を使用した **float** 値から **decimal** または **numeric** への変換は、有効桁数 17 桁までの値に制限されます。 有効桁数が 17 より多い値はゼロに丸められます。|  
 |**float**|**datetime**|四捨五入|  
 |**datetime**|**int**|四捨五入|  
   
@@ -337,13 +322,20 @@ DECLARE @x NVARCHAR(10) = 'ab' + NCHAR(0x10000);
 SELECT CAST (@x AS NVARCHAR(3));  
 ```  
   
-SC の照合順序を使用する場合、`CONVERT` の動作は `CAST` の動作と似たものとなります。
+SC の照合順序を使用する場合、`CONVERT` の動作は `CAST` の動作と似たものとなります。 詳細については、「照合順序と Unicode のサポート」の「[補助文字](../../relational-databases/collations/collation-and-unicode-support.md#Supplementary_Characters)」セクションを参照してください。
   
 ## <a name="compatibility-support"></a>互換性サポート
 以前のバージョンの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、**time** および **datetime2** データ型に対する CAST および CONVERT 操作の既定のスタイルは、いずれかの型が計算列の式で使用されている場合を除き、121 です。 計算列の場合、既定のスタイルは 0 です。 この動作は、計算列が作成されるとき、自動パラメーター化を含むクエリで使用されるとき、または制約の定義で使用されるときに、計算列に影響を与えます。
   
-互換性レベル 110 以上では、**time** および **datetime2** データ型に対する CAST および CONVERT 操作は、既定のスタイルとして常に 121 になります。 クエリが古い動作に依存する場合は、110 より小さい互換性レベルを使用するか、または影響を受けるクエリで 0 スタイルを明示的に指定してください。
-  
+[互換性レベル](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md#compatibility-levels-and-database-engine-upgrades) 110 以上では、**time** および **datetime2** データ型に対する CAST および CONVERT 操作は、既定のスタイルとして常に 121 になります。 クエリが古い動作に依存する場合は、110 より小さい互換性レベルを使用するか、または影響を受けるクエリで 0 スタイルを明示的に指定してください。
+
+|[互換性レベル](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md#compatibility-levels-and-database-engine-upgrades)値|CAST と CONVERT の既定のスタイル<sup>1</sup>|計算列の既定のスタイル|  
+|------------|------------|------------|
+|< **110**|121|0|  
+|> = **110**|121|121|  
+
+<sup>1</sup> 計算列を除く
+
 データベースを互換性レベル 110 以上にアップグレードしても、ディスクに格納されているユーザー データは変更されません。 このようなデータは手動で適切に修正する必要があります。 たとえば、SELECT INTO を使用して、前に説明した計算列の式を含むソースからテーブルを作成した場合は、計算列の定義自体ではなく、(スタイル 0 を使用する) データが格納されます。 このようなデータは、手動で更新してスタイル 121 に一致させる必要があります。
   
 ## <a name="BKMK_examples"></a> 使用例  
@@ -357,7 +349,7 @@ USE AdventureWorks2012;
 GO  
 SELECT SUBSTRING(Name, 1, 30) AS ProductName, ListPrice  
 FROM Production.Product  
-WHERE CAST(ListPrice AS int) LIKE '3%';  
+WHERE CAST(ListPrice AS int) LIKE '33%';  
 GO  
   
 -- Use CONVERT.  
@@ -365,9 +357,46 @@ USE AdventureWorks2012;
 GO  
 SELECT SUBSTRING(Name, 1, 30) AS ProductName, ListPrice  
 FROM Production.Product  
-WHERE CONVERT(int, ListPrice) LIKE '3%';  
+WHERE CONVERT(int, ListPrice) LIKE '33%';  
 GO  
 ```  
+
+[!INCLUDE[ssResult](../../includes/ssresult-md.md)] このサンプル結果セットは、CAST と CONVERT の両方で同じです。 
+
+```
+ProductName                    ListPrice
+------------------------------ ---------------------
+LL Road Frame - Black, 58      337.22
+LL Road Frame - Black, 60      337.22
+LL Road Frame - Black, 62      337.22
+LL Road Frame - Red, 44        337.22
+LL Road Frame - Red, 48        337.22
+LL Road Frame - Red, 52        337.22
+LL Road Frame - Red, 58        337.22
+LL Road Frame - Red, 60        337.22
+LL Road Frame - Red, 62        337.22
+LL Road Frame - Black, 44      337.22
+LL Road Frame - Black, 48      337.22
+LL Road Frame - Black, 52      337.22
+Mountain-100 Black, 38         3374.99
+Mountain-100 Black, 42         3374.99
+Mountain-100 Black, 44         3374.99
+Mountain-100 Black, 48         3374.99
+HL Road Front Wheel            330.06
+LL Touring Frame - Yellow, 62  333.42
+LL Touring Frame - Blue, 50    333.42
+LL Touring Frame - Blue, 54    333.42
+LL Touring Frame - Blue, 58    333.42
+LL Touring Frame - Blue, 62    333.42
+LL Touring Frame - Yellow, 44  333.42
+LL Touring Frame - Yellow, 50  333.42
+LL Touring Frame - Yellow, 54  333.42
+LL Touring Frame - Yellow, 58  333.42
+LL Touring Frame - Blue, 44    333.42
+HL Road Tire                   32.60
+
+(28 rows affected)
+```
   
 ### <a name="b-using-cast-with-arithmetic-operators"></a>B. CAST を算術演算子と共に使用する  
 この例では、今年のこれまでの売り上げ合計 (`Computed`) を手数料のパーセンテージ (`SalesYTD`) で割り、単一列の計算 (`CommissionPCT`) を行います。 この値は、最も近い整数に丸められた後、`int` データ型に CAST されます。
@@ -399,6 +428,7 @@ Computed
 101664220
 124511336
 97688107
+
 (14 row(s) affected)  
 ```  
   
@@ -464,6 +494,7 @@ FirstName        LastName            SalesYTD         BusinessEntityID
 Tsvi             Reiter              2811012.7151      279
 Syed             Abbas               219088.8836       288
 Rachel           Valdez              2241204.0424      289
+
 (3 row(s) affected)  
 ```
   
@@ -491,7 +522,7 @@ SELECT CAST('<Name><FName>Carol</FName><LName>Elliot</LName></Name>'  AS XML)
 他の例については、「[XML データのインスタンスの作成](../../relational-databases/xml/create-instances-of-xml-data.md)」をご覧ください。
   
 ### <a name="g-using-cast-and-convert-with-datetime-data"></a>G. CAST および CONVERT を datetime データと共に使用する  
-GETDATE() の値以降、この例では、現在の日付と時刻を表示し、`CAST` を使用して現在の日付と時刻を文字列データ型に変更した後、`CONVERT` を使用して `ISO 8601` 形式で日付と時刻を表示します。
+`GETDATE()` の値以降、この例では、現在の日付と時刻を表示し、`CAST` を使用して現在の日付と時刻を文字列データ型に変更した後、`CONVERT` を使用して `ISO 8601` 形式で日付と時刻を表示します。
   
 ```sql
 SELECT   
@@ -507,6 +538,7 @@ GO
 UnconvertedDateTime     UsingCast              UsingConvertTo_ISO8601
 ----------------------- ---------------------- ------------------------------
 2006-04-18 09:58:04.570 Apr 18 2006  9:58AM    2006-04-18T09:58:04.570
+
 (1 row(s) affected)  
 ```
   
@@ -526,6 +558,7 @@ GO
 UnconvertedText         UsingCast               UsingConvertFrom_ISO8601
 ----------------------- ----------------------- ------------------------
 2006-04-25T15:50:59.997 2006-04-25 15:50:59.997 2006-04-25 15:50:59.997
+
 (1 row(s) affected)  
 ```
   
@@ -543,6 +576,7 @@ SELECT CONVERT(char(8), 0x4E616d65, 0) AS [Style 0, binary to character];
 Style 0, binary to character
 ----------------------------
 Name  
+
 (1 row(s) affected)  
 ```
  
@@ -557,6 +591,7 @@ SELECT CONVERT(char(8), 0x4E616d65, 1) AS [Style 1, binary to character];
 Style 1, binary to character
 ------------------------------
 0x4E616D
+
 (1 row(s) affected)  
 ```  
  
@@ -571,6 +606,7 @@ SELECT CONVERT(char(8), 0x4E616d65, 2) AS [Style 2, binary to character];
 Style 2, binary to character
 ------------------------------
 4E616D65
+
 (1 row(s) affected)  
 ```
   
@@ -585,6 +621,7 @@ SELECT CONVERT(binary(8), 'Name', 0) AS [Style 0, character to binary];
 Style 0, character to binary
 ----------------------------
 0x4E616D6500000000
+
 (1 row(s) affected)  
 ```
   
@@ -598,6 +635,7 @@ SELECT CONVERT(binary(4), '0x4E616D65', 1) AS [Style 1, character to binary];
 Style 1, character to binary
 ---------------------------- 
 0x4E616D65
+
 (1 row(s) affected)  
 ```  
 
@@ -611,6 +649,7 @@ SELECT CONVERT(binary(4), '4E616D65', 2) AS [Style 2, character to binary];
 Style 2, character to binary  
 ----------------------------------  
 0x4E616D65
+
 (1 row(s) affected)  
 ```  
   
@@ -632,11 +671,99 @@ SELECT @t1 AS [time], CAST (@t1 AS datetime) AS [time as datetime];
 SELECT @dt1 AS [datetime], CAST (@dt1 AS date) AS [datetime as date], 
    CAST (@dt1 AS time) AS [datetime as time];  
 ```  
+
+### <a name="j-using-convert-with-datetime-data-in-different-formats"></a>J. 異なる形式で CONVERT と datetime データを使用する  
+`GETDATE()` 値から、この例では `CONVERT` を使用し、この記事の「[日付および時刻のスタイル](#date-and-time-styles)」セクションのあらゆる日付スタイルと時刻スタイルを表示します。
+
+|形式番号|クエリの例|サンプルの結果|
+|--------|------------------------------------|------------------|
+|0|`SELECT CONVERT(nvarchar, GETDATE(), 0)`|Aug 23 2019  1:39PM|
+|1|`SELECT CONVERT(nvarchar, GETDATE(), 1)`|08/23/19|
+|2|`SELECT CONVERT(nvarchar, GETDATE(), 2)`|19.08.23|
+|3|`SELECT CONVERT(nvarchar, GETDATE(), 3)`|23/08/19|
+|4|`SELECT CONVERT(nvarchar, GETDATE(), 4)`|23.08.19|
+|5|`SELECT CONVERT(nvarchar, GETDATE(), 5)`|23-08-19|
+|6|`SELECT CONVERT(nvarchar, GETDATE(), 6)`|23 Aug 19|
+|7|`SELECT CONVERT(nvarchar, GETDATE(), 7)`|Aug 23, 19|
+|8 または 24 または 108|`SELECT CONVERT(nvarchar, GETDATE(), 8)`|13:39:17|
+|9 または 109|`SELECT CONVERT(nvarchar, GETDATE(), 9)`|Aug 23 2019  1:39:17:090PM|
+|10|`SELECT CONVERT(nvarchar, GETDATE(), 10)`|08-23-19|
+|11|`SELECT CONVERT(nvarchar, GETDATE(), 11)`|19/08/23|
+|12|`SELECT CONVERT(nvarchar, GETDATE(), 12)`|190823|
+|13 または 113|`SELECT CONVERT(nvarchar, GETDATE(), 13)`|23 Aug 2019 13:39:17:090|
+|14 または 114|`SELECT CONVERT(nvarchar, GETDATE(), 14)`|13:39:17:090|
+|20 または 120|`SELECT CONVERT(nvarchar, GETDATE(), 20)`|2019-08-23 13:39:17|
+|21 または 25 または 121|`SELECT CONVERT(nvarchar, GETDATE(), 21)`|2019-08-23 13:39:17.090|
+|22|`SELECT CONVERT(nvarchar, GETDATE(), 22)`|08/23/19  1:39:17 PM|
+|23|`SELECT CONVERT(nvarchar, GETDATE(), 23)`|2019-08-23|
+|101|`SELECT CONVERT(nvarchar, GETDATE(), 101)`|08/23/2019|
+|102|`SELECT CONVERT(nvarchar, GETDATE(), 102)`|2019.08.23|
+|103|`SELECT CONVERT(nvarchar, GETDATE(), 103)`|23/08/2019|
+|104|`SELECT CONVERT(nvarchar, GETDATE(), 104)`|23.08.2019|
+|105|`SELECT CONVERT(nvarchar, GETDATE(), 105)`|23-08-2019|
+|106|`SELECT CONVERT(nvarchar, GETDATE(), 106)`|23 Aug 2019|
+|107|`SELECT CONVERT(nvarchar, GETDATE(), 107)`|Aug 23, 2019|
+|110|`SELECT CONVERT(nvarchar, GETDATE(), 110)`|08-23-2019|
+|111|`SELECT CONVERT(nvarchar, GETDATE(), 111)`|2019/08/23|
+|112|`SELECT CONVERT(nvarchar, GETDATE(), 112)`|20190823|
+|113|`SELECT CONVERT(nvarchar, GETDATE(), 113)`|23 Aug 2019 13:39:17.090|
+|120|`SELECT CONVERT(nvarchar, GETDATE(), 120)`|2019-08-23 13:39:17|
+|121|`SELECT CONVERT(nvarchar, GETDATE(), 121)`|2019-08-23 13:39:17.090|
+|126|`SELECT CONVERT(nvarchar, GETDATE(), 126)`|2019-08-23T13:39:17.090|
+|127|`SELECT CONVERT(nvarchar, GETDATE(), 127)`|2019-08-23T13:39:17.090|
+|130|`SELECT CONVERT(nvarchar, GETDATE(), 130)`|22 ذو الحجة 1440  1:39:17.090P|
+|131|`SELECT CONVERT(nvarchar, GETDATE(), 131)`|22/12/1440  1:39:17.090PM|
+
+### <a name="precedence-example"></a> K. 許可される変換におけるデータ型の優先順位の影響  
+次の例では型 VARCHAR の変数が定義され、整数値が変数に代入された後、文字列型の変数の連結が選択されます。
+
+```sql
+DECLARE @string varchar(10);
+SET @string = 1;
+SELECT @string + ' is a string.' AS Result
+```
+
+[!INCLUDE[ssResult](../../includes/ssresult-md.md)]
   
+```  
+Result
+-----------------------
+1 is a string.
+```  
+
+int 値 1 は VARCHAR に変換されました。
+
+次の例では、同様のクエリで代わりに int 変数を利用しています。
+
+```sql
+DECLARE @notastring int;
+SET @notastring = '1';
+SELECT @notastring + ' is not a string.' AS Result
+```
+
+ここでは、SELECT ステートメントからは次のエラーがスローされます。
+
+```
+Msg 245, Level 16, State 1, Line 3
+Conversion failed when converting the varchar value ' is not a string.' to data type int.
+```
+
+式 `@notastring + ' is not a string.'` を評価するために、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、式の結果を計算する前に、データ型の優先順位の規則に従って暗黙的な変換を完了する必要があります。 int は VARCHAR よりも優先順位が高いため、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では文字列の整数への変換が試行され、その文字列を整数に変換できないため失敗します。 
+
+変換可能な文字列を指定する場合、ステートメントが成功します。次に例を示します。
+
+```SQL
+DECLARE @notastring int;
+SET @notastring = '1';
+SELECT @notastring + '1'
+```
+
+この場合、文字列 `'1'` を整数値 1 に変換できるため、この SELECT ステートメントからは値 2 が返されます。 指定されたデータ型が整数である場合、+ 演算子は文字列連結ではなく加算演算子になります。
+
 ## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>例: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] および [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
-### <a name="j-using-cast-and-convert"></a>J. CAST と CONVERT を使用する  
-次の各例では、表示価格の最初の桁が `3` である製品について製品名を取得し、これらの製品の `ListPrice` を **int** 型に変換します。AdventureWorksDW データベースを使用します。
+### <a name="l-using-cast-and-convert"></a>L. CAST と CONVERT を使用する  
+次の各例では、表示価格の最初の桁が `3` である製品について製品名を取得し、これらの製品の `ListPrice` を **int** 型に変換します。`AdventureWorksDW2016` データベースを使用します。
   
 ```sql
 SELECT EnglishProductName AS ProductName, ListPrice  
@@ -644,7 +771,7 @@ FROM dbo.DimProduct
 WHERE CAST(ListPrice AS int) LIKE '3%';  
 ```  
   
-CAST ではなく CONVERT を使用した同じクエリの例を次に示します。 AdventureWorksDW データベースを使用します。
+CAST ではなく CONVERT を使用した同じクエリの例を次に示します。 `AdventureWorksDW2016` データベースを使用します。
   
 ```sql
 SELECT EnglishProductName AS ProductName, ListPrice  
@@ -652,8 +779,8 @@ FROM dbo.DimProduct
 WHERE CONVERT(int, ListPrice) LIKE '3%';  
 ```  
   
-### <a name="k-using-cast-with-arithmetic-operators"></a>K. CAST を算術演算子と共に使用する  
-この例では、製品単価 (`UnitPrice`) を割引率 (`UnitPriceDiscountPct`) で割り、単一列の値を計算します。 この結果は、最も近い整数に丸められ、最終的に `int` データ型に変換されます。 この例では、AdventureWorksDW データベースを使用します。
+### <a name="m-using-cast-with-arithmetic-operators"></a>M. CAST を算術演算子と共に使用する  
+この例では、製品単価 (`UnitPrice`) を割引率 (`UnitPriceDiscountPct`) で割り、単一列の値を計算します。 この結果は、最も近い整数に丸められ、最終的に `int` データ型に変換されます。 この例では、`AdventureWorksDW2016` データベースを使用します。
   
 ```sql
 SELECT ProductKey, UnitPrice,UnitPriceDiscountPct,  
@@ -675,8 +802,8 @@ ProductKey  UnitPrice  UnitPriceDiscountPct  DiscountPrice
 216         18.5043    0.05                  1  
 ```  
   
-### <a name="l-using-cast-with-the-like-clause"></a>L. CAST を LIKE 句と共に使用する  
-この例では、**money** 列 `ListPrice` を **int** 型に変換して、次に LIKE 句と共に使用できるよう **char(20)** 列に変換します。 この例では、AdventureWorksDW データベースを使用します。  
+### <a name="n-using-cast-with-the-like-clause"></a>N. CAST を LIKE 句と共に使用する  
+この例では、**money** 列 `ListPrice` を **int** 型に変換して、次に LIKE 句と共に使用できるよう **char(20)** 列に変換します。 この例では、`AdventureWorksDW2016` データベースを使用します。  
   
 ```sql
 SELECT EnglishProductName AS Name, ListPrice  
@@ -684,8 +811,8 @@ FROM dbo.DimProduct
 WHERE CAST(CAST(ListPrice AS int) AS char(20)) LIKE '2%';  
 ```  
   
-### <a name="m-using-cast-and-convert-with-datetime-data"></a>M. CAST および CONVERT を datetime データと共に使用する  
-この例では、現在の日付と時刻を表示し、CAST を使用して現在の日付と時刻を文字列データ型に変更した後、最終的に CONVERT を使用して ISO 8601 形式で日付と時刻を表示します。 この例では、AdventureWorksDW データベースを使用します。
+### <a name="o-using-cast-and-convert-with-datetime-data"></a>O. CAST および CONVERT を datetime データと共に使用する  
+この例では、現在の日付と時刻を表示し、CAST を使用して現在の日付と時刻を文字列データ型に変更した後、最終的に CONVERT を使用して ISO 8601 形式で日付と時刻を表示します。 この例では、`AdventureWorksDW2016` データベースを使用します。
   
 ```sql
 SELECT TOP(1)  
@@ -703,7 +830,7 @@ UnconvertedDateTime     UsingCast                     UsingConvertTo_ISO8601
 07/20/2010 1:44:31 PM   2010-07-20 13:44:31.5879025   2010-07-20T13:44:31.5879025  
 ```  
   
-この例は、前の例とほぼ逆になります。 この例では、日付と時刻を文字型データとして表示し、CAST を使用して文字型データを **datetime** データ型に変更します。さらに、CONVERT を使用して、文字型データを **datetime** データ型に変換します。 この例では、AdventureWorksDW データベースを使用します。
+この例は、前の例とほぼ逆になります。 この例では、日付と時刻を文字型データとして表示し、CAST を使用して文字型データを **datetime** データ型に変更します。さらに、CONVERT を使用して、文字型データを **datetime** データ型に変換します。 この例では、`AdventureWorksDW2016` データベースを使用します。
   
 ```sql
 SELECT TOP(1)   
@@ -720,12 +847,14 @@ UnconvertedText         UsingCast               UsingConvertFrom_ISO8601
 ----------------------- ----------------------- ------------------------
 2010-07-25T13:50:38.544 07/25/2010 1:50:38 PM   07/25/2010 1:50:38 PM  
 ```  
-  
+
 ## <a name="see-also"></a>参照
- [データ型の変換 (&) #40";"データベース エンジン"&"#41 です。](../../t-sql/data-types/data-type-conversion-database-engine.md)  
- [FORMAT &#40;Transact-SQL&#41;](../../t-sql/functions/format-transact-sql.md)  
- [STR &#40;Transact-SQL&#41;](../../t-sql/functions/str-transact-sql.md)  
- [SELECT &#40;Transact-SQL&#41;](../../t-sql/queries/select-transact-sql.md)  
- [システム関数 &#40;Transact-SQL&#41;](../../relational-databases/system-functions/system-functions-for-transact-sql.md)  
- [国際化に対応した Transact-SQL ステートメントの記述](../../relational-databases/collations/write-international-transact-sql-statements.md)
+[データ型の優先順位 &#40;Transact-SQL&#41;](../../t-sql/data-types/data-type-precedence-transact-sql.md)       
+[データ型の変換 &#40;データベース エンジン&#41;](../../t-sql/data-types/data-type-conversion-database-engine.md)     
+[FORMAT &#40;Transact-SQL&#41;](../../t-sql/functions/format-transact-sql.md)      
+[STR &#40;Transact-SQL&#41;](../../t-sql/functions/str-transact-sql.md)     
+[SELECT &#40;Transact-SQL&#41;](../../t-sql/queries/select-transact-sql.md)      
+[システム関数 &#40;Transact-SQL&#41;](../../relational-databases/system-functions/system-functions-category-transact-sql.md)      
+[照合順序と Unicode のサポート](../../relational-databases/collations/collation-and-unicode-support.md)      
+[国際化に対応した Transact-SQL ステートメントの記述](../../relational-databases/collations/write-international-transact-sql-statements.md)       
   

@@ -13,11 +13,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: c078597954ac6754966a1a485ac03fc19f817618
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52806514"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63269894"
 ---
 # <a name="copy-query-results-visual-database-tools"></a>クエリ結果のコピー (Visual Database Tools)
   結果セットは、 **[結果]** ペインからタブ区切りテキストとしてコピーできます。 結果セット全体をコピーすることも、任意の数の連続する行やセル、または連続しない行やセルをコピーすることもできます。  
@@ -50,7 +50,7 @@ ms.locfileid: "52806514"
   
 5.  右クリックして **[コピー]** をクリックします。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [結果ペインのデータの操作 (Visual Database Tools)](visual-database-tools.md)  
   
   

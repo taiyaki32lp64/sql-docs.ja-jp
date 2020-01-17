@@ -1,5 +1,5 @@
 ---
-title: getSuperTables メソッド (SQLServerDatabaseMetaData) |Microsoft Docs
+title: getSuperTables メソッド (SQLServerDatabaseMetaData) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: 085461de-367b-4832-88aa-010813d2bc41
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: e74009881013dd539120cf31d6d8b7598e3023a7
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 798b5d2abca5aad5daa075a10652b4952dae6e8b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47711730"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67979315"
 ---
 # <a name="getsupertables-method-sqlserverdatabasemetadata"></a>getSuperTables メソッド (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -60,7 +59,7 @@ public java.sql.ResultSet getSuperTables(java.lang.String catalog,
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- この getSuperTables メソッドは、java.sql.DatabaseMetaData インターフェイスで getSuperTables メソッドによって指定されます。  
+ この getSuperTables メソッドは、java.sql.DatabaseMetaData インターフェイスの getSuperTables メソッドで規定されています。  
   
 ## <a name="see-also"></a>参照  
  [SQLServerDatabaseMetaData のメソッド](../../../connect/jdbc/reference/sqlserverdatabasemetadata-methods.md)   

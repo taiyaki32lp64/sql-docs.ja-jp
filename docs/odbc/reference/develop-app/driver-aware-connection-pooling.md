@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 53e7e3f7-edab-4d0b-8943-45442ba3ebc9
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 8ea4643354990ad416ac3975467c5991842adacc
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: 5dee7ee2b08e4b3b0249ede7f999cfb23d8db944
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52390575"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68047047"
 ---
 # <a name="driver-aware-connection-pooling"></a>ドライバー対応接続プール
 ドライバー対応接続プールは、Windows 8 のドライバー マネージャーの新しい機能です。 ドライバー対応接続プールには、接続プールの ODBC ドライバーでの動作をカスタマイズするためにドライバー作成者が使用できます。  

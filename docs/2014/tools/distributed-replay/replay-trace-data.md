@@ -11,11 +11,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: efb54bb64481dc29c50976cb58df813bad411f9c
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52819354"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63149894"
 ---
 # <a name="replay-trace-data"></a>トレース データの再生
   入力トレース データが準備できたら、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Distributed Replay 機能を使用して、分散再生を開始できます。 詳細については、「 [入力トレース データの準備](prepare-the-input-trace-data.md)」を参照してください。  

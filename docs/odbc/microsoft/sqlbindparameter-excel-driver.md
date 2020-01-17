@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 40489bc5-3e2a-425e-892d-e0dc037f4d7a
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 84f6e44f4849db81c591a791674878190f21e486
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 8b33200e0628566bc88f770ca1fe8fd895ecbf2a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47709320"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68063250"
 ---
 # <a name="sqlbindparameter-excel-driver"></a>SQLBindParameter (Excel ドライバー)
 > [!NOTE]  

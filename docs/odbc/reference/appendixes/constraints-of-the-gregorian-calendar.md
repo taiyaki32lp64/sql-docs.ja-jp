@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 70667410-c582-4369-8e06-9d98e21cd2bf
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 30fbdd17e7ec5eb970948e1c7133020081222614
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 9f67d313f5a1261dba1f88e9ef3a70d30c1cd503
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47847930"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68019178"
 ---
 # <a name="constraints-of-the-gregorian-calendar"></a>グレゴリオ暦カレンダーの制限
 日付、および日時のデータ型、および、interval データ型の後続のフィールドは、グレゴリオ暦の制約に従う必要があります。 これらの制約は次のとおりです。  

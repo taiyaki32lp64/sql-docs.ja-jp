@@ -8,17 +8,20 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 5634dbfb-740d-4c93-8fd5-2854cc741327
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: fa54997db4caa523ab298077ce8137045c6ee33d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: c35024df0f34f1a66a64bc587aa928cb0daf4475
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47784856"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71289384"
 ---
 # <a name="left-ssis-expression"></a>LEFT (SSIS 式)
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   指定された文字式の一番左の部分から指定された数の文字を返します。  
   
 ## <a name="syntax"></a>構文  

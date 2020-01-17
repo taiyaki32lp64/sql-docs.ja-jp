@@ -10,15 +10,15 @@ helpviewer_keywords:
 - sort attributes [Integration Services]
 - output columns [Integration Services]
 ms.assetid: 22ce3f5d-8a88-4423-92c2-60a8f82cd4fd
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 6f20391528b56bedca42e62ff9ae1f54111f3604
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 530cca00459ed1ae170272dfd20a54928f039b38
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52751534"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62900338"
 ---
 # <a name="sort-data-for-the-merge-and-merge-join-transformations"></a>マージ変換およびマージ結合変換用にデータを並べ替える
   [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)]のマージ変換およびマージ結合変換では、入力データが並べ替えられている必要があります。 入力データは物理的に並べ替える必要があります。さらに、変換元の出力および出力列、または上流の変換の出力および出力列に対して、並べ替えオプションを設定する必要があります。 並べ替えオプションでデータの並べ替えを設定していても、実際にデータの並べ替えが行われない場合、マージ操作やマージ結合操作で予測できない結果が発生します。  
@@ -38,7 +38,7 @@ ms.locfileid: "52751534"
   
      並べ替え変換では Windows 照合順序を使用して文字列値を並べ替えます。  
   
-     - または -  
+     \- または -  
   
 -   Transact-SQL の CAST 演算子を使用して最初に `varchar` 値を `nvarchar` 値にキャストし、次に Transact-SQL ORDER BY 句を使用してデータを並べ替えます。  
   
@@ -71,7 +71,7 @@ ms.locfileid: "52751534"
   
 5.  **[入力プロパティと出力プロパティ]** タブをクリックします。  
   
-6.  クリックして**\<コンポーネント名 > 出力**、設定、`IsSorted`プロパティを`True`します。  
+6.  クリックして **\<コンポーネント名 > 出力**、設定、`IsSorted`プロパティを`True`します。  
   
     > [!NOTE]  
     >  出力の `IsSorted` プロパティを手動で `True` に設定したにもかかわらず、データが並べ替えられない場合、パッケージの実行時に、下流の結合変換またはマージ結合変換で、データの欠落、または不良データの比較が生じている可能性があります。  

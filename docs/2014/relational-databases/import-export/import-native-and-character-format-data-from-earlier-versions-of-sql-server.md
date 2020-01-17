@@ -12,22 +12,22 @@ helpviewer_keywords:
 - data formats [SQL Server], earlier versions
 - previous versions [SQL Server], import and export data formats
 ms.assetid: e644696f-9017-428e-a5b3-d445d1c630b3
-author: douglaslMS
-ms.author: douglasl
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: a87863d3046de695e489e83ec46eb073a7f4761c
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 8f41e323faeb898be1f44159760bb1c28b7ab024
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52531593"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66011915"
 ---
 # <a name="import-native-and-character-format-data-from-earlier-versions-of-sql-server"></a>以前のバージョンの SQL Server からのネイティブ形式データおよび文字形式データのインポート
   [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]では、 **bcp** を使用すると、 [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)]、 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]、 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]、 [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]、または [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] からネイティブ形式データおよび文字形式データを **-V** スイッチを指定してインポートすることができます。 **-V** スイッチを使用すると、 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] は指定された以前のバージョンの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のデータ型を使用し、データ ファイル形式はその以前のバージョンのものと同じになります。  
   
  データ ファイルに以前の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] バージョンを指定するには、 **-V** スイッチと次のいずれかの修飾子を使用します。  
   
-|SQL Server のバージョン|Qualifier|  
+|SQL Server のバージョン|修飾子|  
 |------------------------|---------------|  
 |[!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)]|**-V80**|  
 |[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]|**-V90**|  
@@ -55,7 +55,7 @@ ms.locfileid: "52531593"
  使用してエクスポート データを一括するときに、 **-V80**切り替えるには、 `nvarchar(max)`、 `varchar(max)`、 `varbinary(max)`、XML、およびネイティブ モードの UDT データは、同様の 4 バイトのプレフィックスを使用して格納されます`text`、 `image`、および`ntext`、データの既定値は 8 バイトのプレフィックスではなく[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]以降のバージョン。  
   
 ## <a name="copying-date-values"></a>日付値のコピー  
- **bcp** は ODBC 一括コピー API を使用します。 したがって、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]、 **bcp** に日付値をインポートするには、ODBC の日付形式 (*yyyy-mm-dd hh:mm:ss*[*.f...*]) を使用します。  
+ **bcp** は ODBC 一括コピー API を使用します。 したがって、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]、 **bcp** に日付値をインポートするには、ODBC の日付形式 (*yyyy-mm-dd hh:mm:ss*[ *.f...* ]) を使用します。  
   
  **Bcp**コマンドでは、ODBC の既定形式を使用して、文字形式データ ファイルをエクスポートします。`datetime`と`smalldatetime`値。 たとえば、日付 `12 Aug 1998` が含まれた `datetime` 型の列は、文字列 `1998-08-12 00:00:00.000` としてデータ ファイルに一括コピーされます。  
   

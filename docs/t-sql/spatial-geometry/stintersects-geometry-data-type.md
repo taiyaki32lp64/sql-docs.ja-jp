@@ -15,15 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - STIntersects (geometry Data Type)
 ms.assetid: 7c18f5be-5a29-422e-8ca7-d8a5f38e03f5
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: 595fd7d26ea0fb7e8a2b9ecd7c76030032dc1185
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: MladjoA
+ms.author: mlandzic
+ms.openlocfilehash: 8a01a4ee58b4bca80cba9bfc9a1a094f575c5154
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47751750"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67950128"
 ---
 # <a name="stintersects-geometry-data-type"></a>STIntersects (geometry データ型)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -44,7 +43,7 @@ ms.locfileid: "47751750"
 ## <a name="return-types"></a>戻り値の型  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 戻り値の型: **bit**  
   
- CLR の戻り値の型: **SqlBoolean**  
+ CLR の戻り値の型:**SqlBoolean**  
   
 ## <a name="remarks"></a>Remarks  
  **geometry** インスタンスの SRID (spatial reference ID) が一致しない場合、このメソッドは常に null を返します。  

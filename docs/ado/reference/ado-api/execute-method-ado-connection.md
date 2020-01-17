@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 03c69320-96b2-4d85-8d49-a13b13e31578
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 2a52ca419f3f06e4156c278cb0ba8999c24e09ac
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 4999b1e21ec145713cadae28ff7ee8a64dd460b7
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47680030"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67932892"
 ---
 # <a name="execute-method-ado-connection"></a>Execute メソッド (ADO Connection)
 指定されたクエリ、SQL ステートメント、ストアド プロシージャ、またはプロバイダー固有のテキストを実行します。  

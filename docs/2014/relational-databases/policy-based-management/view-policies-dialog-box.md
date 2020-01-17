@@ -13,11 +13,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 40ce89f518dfdbf4d1c782121dc5ec0e935752ab
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52814994"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62676847"
 ---
 # <a name="view-policies-dialog-box"></a>[ポリシーの表示] ダイアログ ボックス
   このダイアログ ボックスを使用すると、この対象に対して有効なポリシーを表示できます。 このダイアログ ボックスには、関連するポリシー、それらのポリシー カテゴリ、およびポリシーに関する情報が表示されます。  
@@ -47,7 +47,7 @@ ms.locfileid: "52814994"
  **[最終実行]**  
  ポリシーが最後に実行された日時。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [ポリシー ベースの管理を使用したサーバーの管理](administer-servers-by-using-policy-based-management.md)  
   
   

@@ -1,6 +1,5 @@
 ---
-title: JSON パス式 (SQL Server) | Microsoft Docs
-ms.custom: ''
+title: JSON パス式
 ms.date: 01/23/2017
 ms.prod: sql
 ms.reviewer: genemi
@@ -12,14 +11,14 @@ helpviewer_keywords:
 ms.assetid: 25ea679c-84cc-4977-867c-2cbe9d192553
 author: jovanpop-msft
 ms.author: jovanpop
-manager: craigg
+ms.custom: seo-dt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: afa7622b5d8b71949018091862a70bc638b48c80
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: e8f345576db61768d9afe8243dfe41801f68b2ac
+ms.sourcegitcommit: 15fe0bbba963d011472cfbbc06d954d9dbf2d655
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56025923"
+ms.lasthandoff: 11/14/2019
+ms.locfileid: "74095731"
 ---
 # <a name="json-path-expressions-sql-server"></a>JSON パス式 (SQL Server)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -68,7 +67,7 @@ SELECT * FROM OPENJSON(@json, N'lax $.info')
   
     -   キー名。 たとえば、 `$.name` や `$."first name"`。 キー名がドル記号で始まるか、キー名にスペースなどの特殊文字が含まれている場合は、引用符で囲みます。   
   
-    -   配列の要素。 たとえば、`$.product[3]` のようにします。 配列は 0 から始まります。  
+    -   配列の要素。 たとえば、`$.product[3]` のようになります。 配列は 0 から始まります。  
   
     -   ドット演算子 (`.`) は、オブジェクトのメンバーを示します。 たとえば、`$.people[1].surname` では、`surname` は `people` の子です。
   

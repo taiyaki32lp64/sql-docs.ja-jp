@@ -8,17 +8,20 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 1568ed6a-022c-4839-b73e-4eb49558bbc2
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: b4b1bfeea10cf53ae279afac2c457e8fa8f1c6ec
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: a8c4908e3a2269733a71dc8fe5c6d6a9e697a576
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51641869"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71292049"
 ---
 # <a name="recordset-destination-custom-properties"></a>レコードセット変換先のカスタム プロパティ
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   レコードセット変換先には、カスタム プロパティと、すべてのデータ フロー コンポーネントとの共通プロパティの両方があります。  
   
  次の表は、レコードセット変換先のカスタム プロパティを示しています。 すべてのプロパティは読み取り/書き込み可能です。  

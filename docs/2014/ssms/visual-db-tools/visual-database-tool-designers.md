@@ -21,11 +21,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 773ceb4aedddd6a39df6487bd36b47b83f7fa9a9
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52781694"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63227042"
 ---
 # <a name="visual-database-tool-designers"></a>Visual Database Tools のデザイナー
   Visual Database Tools は、データ ソースの処理に使用できるデザイン ツールの組み合わせです。 デザイン ツールを使用して、クエリの作成、データベース構造のデザインまたは変更、データの更新を実行できます。 ツールには、データベース ダイアグラム デザイナー、テーブル デザイナー、クエリおよびビュー デザイナーがあります。  
@@ -86,7 +86,7 @@ ms.locfileid: "52781694"
 >   
 >  このバージョンの Visual Database Tools では、Microsoft SQL Server バージョン 7 以前はサポートされていません。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [データベース ダイアグラムのデザイン&#40;Visual Database Tools&#41;](design-database-diagrams-visual-database-tools.md)   
  [テーブルのデザイン&#40;Visual Database Tools&#41;](design-tables-visual-database-tools.md)   
  [クエリおよびビューのデザインの操作方法に関するトピック (Visual Database Tools)](design-queries-and-views-how-to-topics-visual-database-tools.md)  

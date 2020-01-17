@@ -8,15 +8,14 @@ ms.technology: ssdt
 ms.reviewer: ''
 ms.topic: conceptual
 ms.assetid: 80c5cf62-a9c9-4e9d-8c6f-8eed50a595a7
-author: stevestein
-ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 226c4760b0e8461b9183345c9e727f288edd32dd
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 8f84c8b03343b353cf355f0f604152a82b23627b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47751630"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68110741"
 ---
 # <a name="scripts-in-sql-server-unit-tests"></a>SQL Server の単体テストのスクリプト
 各 SQL Server 単体テストには、1 つの事前テスト アクション、テスト アクション、および事後テスト アクションが含まれています。 これらの各アクションには、次のものが含まれています。  
@@ -49,12 +48,12 @@ ms.locfileid: "47751630"
 ![2 つのデータベース単体テスト](../ssdt/media/twodatabaseunittests.png "2 つのデータベース単体テスト")  
   
 > [!NOTE]  
-> SQL Server データベース プロジェクトの配置が構成されている場合、テスト実行の開始時に、特権コンテキストの接続文字列で配置が行われます。 詳細については、「[SQL Server の単体テストの実行を構成する方法](../ssdt/how-to-configure-sql-server-unit-test-execution.md)」を参照してください。  
+> SQL Server データベース プロジェクトの配置が構成されている場合、テスト実行の開始時に、特権コンテキストの接続文字列で配置が行われます。 詳細については、「[ソフト NUMA を使用するようにSQL Server の単体テストの実行を構成する方法](../ssdt/how-to-configure-sql-server-unit-test-execution.md)」を参照してください。  
   
 ## <a name="initialization-and-cleanup-scripts"></a>初期化スクリプトとクリーンアップ スクリプト  
 SQL Server 単体テスト デザイナーでは、TestInitialize スクリプトと TestCleanup スクリプトが共通スクリプトと呼ばれます。 上記の例では、2 つの単体テストが同じテスト クラスに含まれていることを前提としています。 その結果、これらの単体テストでは、同一の TestInitialize スクリプトと TestCleanup スクリプトが共有されます。 すべての単体テストが 1 つのテスト クラス内にある場合は、常にこの例のようになります。 ただし、テスト実行に別のテスト クラスの単体テストが含まれる場合、単体テストの実行前と実行後に、関連するテスト クラスの共通スクリプトが実行されます。  
   
-SQL Server 単体テスト デザイナーのみを使用して単体テストを作成した場合は、テスト クラスの概念を理解していない可能性があります。 **[テスト]** メニューを開き、**[新しいテスト]** をクリックして単体テストを作成するたびに、SQL Server Data Tools ではテスト クラスが生成されます。 テスト クラスは、指定したテスト名の後に .cs または .vb 拡張子が付いた状態で**ソリューション エクスプローラー**に表示されます。 各テスト クラス内では、個々の単体テストがテスト メソッドとして格納されます。 ただし、テスト メソッド (つまり、単体テスト) の数に関係なく、各テスト クラスには 0 または 1 つの TestInitialize スクリプトと TestCleanup スクリプトを含めることができます。  
+SQL Server 単体テスト デザイナーのみを使用して単体テストを作成した場合は、テスト クラスの概念を理解していない可能性があります。 **[テスト]** メニューを開き、 **[新しいテスト]** をクリックして単体テストを作成するたびに、SQL Server Data Tools ではテスト クラスが生成されます。 テスト クラスは、指定したテスト名の後に .cs または .vb 拡張子が付いた状態で**ソリューション エクスプローラー**に表示されます。 各テスト クラス内では、個々の単体テストがテスト メソッドとして格納されます。 ただし、テスト メソッド (つまり、単体テスト) の数に関係なく、各テスト クラスには 0 または 1 つの TestInitialize スクリプトと TestCleanup スクリプトを含めることができます。  
   
 TestInitialize スクリプトを使用すると、テスト データベースを準備できます。また、TestCleanup スクリプトを使用すると、テスト データベースを既知の状態に戻すために使用できます。 たとえば、TestInitialize を使用して、後で実行するヘルパー ストアド プロシージャを作成し、テスト スクリプトで、別のストアド プロシージャをテストすることができます。  
   

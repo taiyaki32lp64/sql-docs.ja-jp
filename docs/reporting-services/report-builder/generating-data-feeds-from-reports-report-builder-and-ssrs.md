@@ -2,18 +2,18 @@
 title: 複数のレポートからのデータ フィードの生成 (レポート ビルダーおよび SSRS) | Microsoft Docs
 ms.date: 05/30/2017
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: report-builder
 ms.topic: conceptual
 ms.assetid: 4e00789f-6967-42e5-b2b4-03181fdb1e2c
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 94cfb8ec1aeb1d9c4333ef5c2bdded97f47d15b2
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 851a574989f56609298e4283a398fcddce027024
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56298340"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65580734"
 ---
 # <a name="generating-data-feeds-from-reports-report-builder-and-ssrs"></a>複数のレポートからのデータ フィードの生成 (レポート ビルダーおよび SSRS)
 

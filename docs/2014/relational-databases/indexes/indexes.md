@@ -13,11 +13,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 58d4d71189598a6fd101e6db0a40b8c8b0a3b903
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48101162"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63161865"
 ---
 # <a name="indexes"></a>インデックス
   次の表に、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] で使用できるインデックスの種類および追加情報へのリンクを示します。  
@@ -34,7 +34,7 @@ ms.locfileid: "48101162"
 |計算列のインデックス|その他の列の値 (複数可) から、または特定の決定的入力から導かれる列のインデックスです。|[計算列のインデックス](indexes-on-computed-columns.md)|  
 |フィルター選択されたインデックス|最適化された非クラスター化インデックスです。このインデックスは、適切に定義されたデータのサブセットから選択するクエリに対応する際に特に適しています。 フィルター選択されたインデックスは、フィルター述語を使用して、テーブル内の一部の行にインデックスを作成します。 フィルター選択されたインデックスを適切にデザインすると、クエリのパフォーマンスが向上し、インデックスのメンテナンス コストを削減して、テーブル全体のインデックスと比較してインデックスのストレージ コストを削減することができます。|[フィルター選択されたインデックスの作成](create-filtered-indexes.md)|  
 |空間インデックス|空間インデックスを使用すると、*geometry*データ型の列に含まれる空間オブジェクト ( **空間データ** ) に対する一部の操作をより効率的に実行できます。 空間インデックスにより、比較的コストの高い空間操作を適用するオブジェクトの数を減らすことができます。|[空間インデックスの概要](../spatial/spatial-indexes-overview.md)|  
-|XML|XML バイナリ ラージ オブジェクト (Blob) での細分化および永続化表現、`xml`データ型の列。|[XML インデックス &#40;SQL Server&#41;](../xml/xml-indexes-sql-server.md)|  
+|XML|`xml` データ型列内の XML BLOB (binary large object) を細分化および永続化した表現です。|[XML インデックス &#40;SQL Server&#41;](../xml/xml-indexes-sql-server.md)|  
 |フルテキスト|Microsoft Full-Text Engine for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]により構築および管理されるトークンベースの特殊な機能インデックスです。 文字列データに対する高度な単語検索を効率的にサポートします。|[フルテキスト インデックスの作成](../search/populate-full-text-indexes.md)|  
   
 ## <a name="related-tasks"></a>Related Tasks  
@@ -50,7 +50,7 @@ ms.locfileid: "48101162"
   
  [インデックス オプションの設定](set-index-options.md)  
   
- [インデックス DDL 操作に必要なディスク領域](disk-space-requirements-for-index-ddl-operations.md)  
+ [Disk Space Requirements for Index DDL Operations](disk-space-requirements-for-index-ddl-operations.md)  
   
  [インデックスの再編成と再構築](reorganize-and-rebuild-indexes.md)  
   

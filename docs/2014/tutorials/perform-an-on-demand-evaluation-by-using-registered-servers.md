@@ -4,20 +4,21 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: security"
+ms.technology: security
 ms.topic: conceptual
 ms.assetid: c14034ef-6e0b-4df5-8072-bfb8d90b3172
 author: VanMSFT
 ms.author: vanto
 manager: craigg
-ms.openlocfilehash: 31282041abe538bd51ba4b1367f70cd3c5fa3d5b
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: a3a79a6ec655e91264d6fcc00db5a920ad82a21e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56030793"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66822374"
 ---
 # <a name="perform-an-on-demand-evaluation-by-using-registered-servers"></a>登録済みサーバーを使用した要求時評価の実行
+
   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] の 1 つ以上のインスタンスに対して登録済みサーバーを使用して、ベスト プラクティス ポリシーの要求時評価を実行できます。 使用できるのは、ローカル サーバー グループまたは中央管理サーバーのいずれかです。  
   
 > [!NOTE]  
@@ -47,13 +48,13 @@ ms.locfileid: "56030793"
   
     -   特定のサーバーまたはサーバー グループに対してポリシーを評価するには展開**ローカル サーバー グループ**または中央管理サーバー名、サーバーまたはサーバー グループをクリックして、ポリシーの評価を右クリックして**ポリシー評価**します。  
   
-4.  **ポリシーの評価** ダイアログ ボックスの横に、**ソース**ボックスで、省略記号ボタンをクリックします (**.**) ボタンをクリックします。  
+4.  **ポリシーの評価** ダイアログ ボックスの横に、**ソース**ボックスで、省略記号ボタンをクリックします ( **.** ) ボタンをクリックします。  
   
 5.  **ソースの選択**ダイアログ ボックスで、いずれかを選択できます**ファイル**または**Server**を評価するポリシー ファイルのソースとして。 クリックすると**Server**、ローカルまたはリモート サーバー上のポリシー ベースの管理に以前インポートされたすべてのベスト プラクティス ポリシーのオンデマンドで評価を行うことができます。 このチュートリアルをクリックして**ファイル**、し評価する個々 のポリシー ファイルを選択します。 これを行うには、次の手順を実行します。  
   
     1.  クリックして**ファイル**します。  
   
-    2.  横に**ファイル**、省略記号をクリックします (**.**) ボタンをクリックします。  
+    2.  横に**ファイル**、省略記号をクリックします ( **.** ) ボタンをクリックします。  
   
     3.  クリックして、評価、1 つまたは複数の .xml ポリシー ファイルを選択します。**オープン**します。  
   

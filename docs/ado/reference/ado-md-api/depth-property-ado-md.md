@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: e41f2644-617d-4c09-80a4-feb5cf736186
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: b609b8ee65c193c181c4b7583e26f489c78cd8ad
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 249ab4a4a4f82e5fd6eebfd326c71971f401bcc7
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47828720"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67952197"
 ---
 # <a name="depth-property-ado-md"></a>Depth プロパティ (ADO MD)
 間のレベルの数を示す、[レベル](../../../ado/reference/ado-md-api/level-object-ado-md.md)と階層のルート。  
@@ -36,5 +35,5 @@ ms.locfileid: "47828720"
 ## <a name="applies-to"></a>適用対象  
  [Level オブジェクト (ADO MD)](../../../ado/reference/ado-md-api/level-object-ado-md.md)  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [LevelDepth プロパティ (ADO MD)](../../../ado/reference/ado-md-api/leveldepth-property-ado-md.md)

@@ -13,41 +13,39 @@ helpviewer_keywords:
 ms.assetid: 13b982c3-ae03-4155-bc0d-e225050703ce
 author: MightyPen
 ms.author: genemi
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: e6d813848a45326ee9a74ea38616ceef9dd02cd5
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: ebeffb57ccfb6b651dc126f814615322250cd47e
+ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52524055"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73786316"
 ---
 # <a name="sqlgettypeinfo"></a>SQLGetTypeInfo
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-[!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC ドライバーのレポートの結果に追加の列 USERTYPE が設定**SQLGetTypeInfo**します。 USERTYPE には DB-Library データ型の定義が示されるので、既存の DB-Library アプリケーションを ODBC に移植する開発者にとって便利です。  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC ドライバーは、 **SQLGetTypeInfo**の結果セットの列 USERTYPE を報告します。 USERTYPE には DB-Library データ型の定義が示されるので、既存の DB-Library アプリケーションを ODBC に移植する開発者にとって便利です。  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では ID が属性として処理されますが、ODBC ではデータ型として処理されます。 この不一致を解決するのには**SQLGetTypeInfo**データ型を返します: **intidentity**、 **smallintidentity**、 **tinyintidentity**、**decimalidentity**、および**numericidentity**します。 **SQLGetTypeInfo**結果セット列 AUTO_UNIQUE_VALUE でこれらのデータ型の値は TRUE を報告します。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では ID が属性として処理されますが、ODBC ではデータ型として処理されます。 この不一致を解決するために、 **SQLGetTypeInfo**は、 **intidentity**、 **smallintidentity**、 **tinyintidentity**、 **decimalidentity**、および**numericidentity**というデータ型を返します。 **SQLGetTypeInfo**結果セットの列 AUTO_UNIQUE_VALUE は、これらのデータ型の値 TRUE を報告します。  
   
- **Varchar**、 **nvarchar**と**varbinary**、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC ドライバーが引き続き、column_size それぞれ 8000、4000、および 8000 を報告するには場合でも、実際に限定されるわけでは値です。 これにより、旧バージョンとの互換性が確保されます。  
+ **Varchar**、 **nvarchar** 、および**Varbinary**の場合、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC ドライバーは、実際には無制限であるにもかかわらず、COLUMN_SIZE 値に対してそれぞれ8000、4000、および8000を報告します。 これにより、旧バージョンとの互換性が確保されます。  
   
- **Xml**データ型、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC ドライバーは、column_size がサイズ無制限を示す SQL_SS_LENGTH_UNLIMITED を報告します。  
+ **Xml**データ型の場合、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] NATIVE Client ODBC ドライバーは、無制限のサイズを示す COLUMN_SIZE の SQL_SS_LENGTH_UNLIMITED を報告します。  
   
 ## <a name="sqlgettypeinfo-and-table-valued-parameters"></a>SQLGetTypeInfo とテーブル値パラメーター  
- テーブル値パラメーターのテーブル型、実質的に、メタ-型のこと、その他の種類の定義に使用する型です。 そのため、SQLGetTypeInfo を介して公開することはありません。 アプリケーションでは、テーブル値パラメーターで使用されるテーブル型のメタデータを取得するのに SQLGetTypeInfo ではなく SQLTables を使用する必要があります。  
+ テーブル値パラメーターのテーブル型は、実質的には、他の型を定義するために使用される型であるメタ型です。 そのため、SQLGetTypeInfo を介して公開する必要はありません。 アプリケーションでは、テーブル値パラメーターで使用されるテーブル型のメタデータを取得するために、SQLGetTypeInfo ではなく SQLTables を使用する必要があります。  
   
- 詳細については、テーブル値パラメーターのメタデータを取得する方法について、次を参照してください。[ステートメント属性をその Affect Table-Valued パラメーター](../../relational-databases/native-client-odbc-table-valued-parameters/statement-attributes-that-affect-table-valued-parameters.md)します。  
+ テーブル値パラメーターのメタデータの取得の詳細については、「[テーブル値パラメーターに影響を与えるステートメント属性](../../relational-databases/native-client-odbc-table-valued-parameters/statement-attributes-that-affect-table-valued-parameters.md)」を参照してください。  
   
- テーブル値パラメーターの詳細については、次を参照してください。[テーブル値パラメーター &#40;ODBC&#41;](../../relational-databases/native-client-odbc-table-valued-parameters/table-valued-parameters-odbc.md)します。  
+ テーブル値パラメーターの詳細については、「[テーブル値パラメーター &#40;の&#41;ODBC](../../relational-databases/native-client-odbc-table-valued-parameters/table-valued-parameters-odbc.md)」を参照してください。  
   
 ## <a name="sqlgettypeinfo-support-for-enhanced-date-and-time-features"></a>SQLGetTypeInfo による機能強化された日付と時刻のサポート  
- 日付/時刻型に対して返される値を次を参照してください。[カタログ メタデータ](../../relational-databases/native-client-odbc-date-time/metadata-catalog.md)します。  
+ 日付型または時刻型に対して返される値については、「[カタログメタデータ](../../relational-databases/native-client-odbc-date-time/metadata-catalog.md)」を参照してください。  
   
- 詳細については、次を参照してください。[日付と時刻の強化&#40;ODBC&#41;](../../relational-databases/native-client-odbc-date-time/date-and-time-improvements-odbc.md)します。  
+ 一般的な情報については、「[日付&#40;と&#41;時刻の機能強化 ODBC](../../relational-databases/native-client-odbc-date-time/date-and-time-improvements-odbc.md)」を参照してください。  
   
 ## <a name="sqlgettypeinfo-support-for-large-clr-udts"></a>SQLGetTypeInfo による大きな CLR UDT のサポート  
- **SQLGetTypeInfo**大きなの CLR ユーザー定義型 (Udt) をサポートしています。 詳細については、次を参照してください。 [Large CLR User-Defined 型&#40;ODBC&#41;](../../relational-databases/native-client/odbc/large-clr-user-defined-types-odbc.md)します。  
+ **SQLGetTypeInfo**は、大きな CLR ユーザー定義型 (udt) をサポートしています。 詳細については、「 [LARGE CLR ユーザー定義&#40;型&#41;ODBC](../../relational-databases/native-client/odbc/large-clr-user-defined-types-odbc.md)」を参照してください。  
   
 ## <a name="see-also"></a>参照  
  [SQLGetTypeInfo 関数](https://go.microsoft.com/fwlink/?LinkId=59356)   

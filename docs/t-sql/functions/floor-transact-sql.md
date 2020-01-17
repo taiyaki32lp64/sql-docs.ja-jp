@@ -17,21 +17,20 @@ helpviewer_keywords:
 - largest integers
 - FLOOR function [Transact-SQL]
 ms.assetid: 4f26c784-9240-491f-b854-754be3fccae4
-author: MashaMSFT
-ms.author: mathoma
-manager: craigg
+author: MikeRayMSFT
+ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: a9f9bf9c7cd17237dadb71a346f5070e358f7479
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 2e366876c5b71f410f05b7ed4483347b1f754686
+ms.sourcegitcommit: c98c6e33d04d4a1888db7dbe89cb0b1bb3a66418
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47604807"
+ms.lasthandoff: 11/20/2019
+ms.locfileid: "74249797"
 ---
 # <a name="floor-transact-sql"></a>FLOOR (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-pdw-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-  指定された数値式以下の整数の中で、最大の整数を返します。  
+  指定された数値式以下の最大の整数を返します。  
   
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -48,7 +47,7 @@ FLOOR ( numeric_expression )
 ## <a name="return-types"></a>戻り値の型  
  *numeric_expression*と同じ型を返します。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
  この例では、正の数値、負の数値、および通貨値を使った `FLOOR` 関数を示しています。  
   
 ```  
@@ -62,7 +61,7 @@ SELECT FLOOR(123.45), FLOOR(-123.45), FLOOR($123.45);
 123            -124          123.0000     
 ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>例: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] および [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>例: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]、[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
  この例では、正の数値、負の数値、および `FLOOR` 関数を使用した値を示します。  
   
 ```  

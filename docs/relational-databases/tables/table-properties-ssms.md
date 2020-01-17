@@ -16,14 +16,13 @@ f1_keywords:
 ms.assetid: ad8a2fd4-f092-4c0f-be85-54ce8b9d725a
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 5f4b3c22e81f28116fcdaaa83076ff4212b24bf5
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 1c0dea1eff86506021907b184c80b3f28f74ab5a
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51676071"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72905951"
 ---
 # <a name="table-properties---ssms"></a>Table Properties - SSMS
 [!INCLUDE[tsql-appliesto-ss2016-all-md](../../includes/tsql-appliesto-ss2016-all-md.md)]
@@ -39,7 +38,7 @@ ms.locfileid: "51676071"
 3.  [[FileTable] ページ](#FileTable)  
   
 4.  [[ストレージ] ページ](#Storage)  
-  
+
 ##  <a name="GeneralPage"></a> [全般] ページ  
  **[データベース]**  
  このテーブルを含むデータベースの名前です。  
@@ -53,7 +52,7 @@ ms.locfileid: "51676071"
  **[作成日]**  
  テーブルが作成された日付と時刻です。  
   
- **名前**  
+ **[名前]**  
  テーブルの名前です。  
   
  **[スキーマ]**  
@@ -74,9 +73,8 @@ ms.locfileid: "51676071"
  AUTO  
  このオプションを使用すると、 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] は、テーブル スキーマに適したロック エスカレーションの粒度を選択します。  
   
--   テーブルがパーティション分割されている場合は、ロック エスカレーションをヒープまたは B ツリー (HoBT) 粒度に設定できます。 ロックは HoBT レベルにエスカレートされると、後で TABLE 粒度にエスカレートされません。  
-  
--   テーブルがパーティション分割されていない場合は、ロック エスカレーションは TABLE 粒度に設定されます。  
+- テーブルがパーティション分割されている場合は、ロック エスカレーションをヒープまたは B ツリー (HoBT) 粒度に設定できます。 つまり、エスカレーションはパーティション レベルで許可されます。 ロックは HoBT レベルにエスカレートされると、後で TABLE 粒度にエスカレートされません。
+- テーブルがパーティション分割されていない場合、TABLE 細分性に対してロックのエスカレーションが実行されます。 
   
  TABLE  
  テーブルがパーティション分割されているかどうかに関係なく、ロック エスカレーションはテーブルレベルの粒度で行われます。 TABLE は既定値です。  

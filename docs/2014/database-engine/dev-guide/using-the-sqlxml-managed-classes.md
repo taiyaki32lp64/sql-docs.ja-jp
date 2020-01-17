@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: database-engine
 ms.topic: reference
 helpviewer_keywords:
 - sample applications [SQLXML]
@@ -17,12 +15,12 @@ ms.assetid: 3f021290-00ee-44e1-af4b-33d3ba8c6302
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 7872bf8b0e9b6b40ff8668053a3c5d4818a44c1b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: ad1756d3943f6a9db68633c59013bcb85037ffa7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48225832"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62780331"
 ---
 # <a name="using-the-sqlxml-managed-classes"></a>SQLXML マネージド クラスの使用
   ここでは、[!INCLUDE[msCoName](../../includes/msconame-md.md)] SQLXML マネージド クラスの使用方法を説明するためのサンプル アプリケーションを紹介します。  

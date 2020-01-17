@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: d612461d-4c3f-46db-b968-ff4c80b2aa7c
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: eb5c7e7d4b95b66cfb1524d9c9729f9b9132fc5d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e32cbf975d156aae723dfbff105fe51e039dc1b5
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47722142"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67977024"
 ---
 # <a name="iswrapperfor-method-sqlserverxadatasource"></a>isWrapperFor メソッド (SQLServerXADataSource)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -33,7 +32,7 @@ public boolean isWrapperFor(Class iface)
 #### <a name="parameters"></a>パラメーター  
  *iface*  
   
- A**クラス**インターフェイスを定義します。  
+ インターフェイスを定義する**クラス**。  
   
 ## <a name="return-value"></a>戻り値  
  このオブジェクトがインターフェイスを実装しているか、インターフェイスを実装しているオブジェクトをラップしている場合は **true** です。 それ以外の場合は、 **false**です。  
@@ -46,10 +45,10 @@ public boolean isWrapperFor(Class iface)
   
  このメソッドが true を返す場合、同じ引数を使用した [unwrap](../../../connect/jdbc/reference/unwrap-method-sqlserverxadatasource.md) の呼び出しは成功します。  
   
- 詳細については、次を参照してください。[ラッパーとインターフェイス](../../../connect/jdbc/wrappers-and-interfaces.md)します。  
+ 詳細については、「[ラッパーとインターフェイス](../../../connect/jdbc/wrappers-and-interfaces.md)」を参照してください。  
   
 ## <a name="see-also"></a>参照  
- [unwrap メソッド&#40;SQLServerXADataSource&#41;](../../../connect/jdbc/reference/unwrap-method-sqlserverxadatasource.md)   
+ [SQLServerXADataSource メソッド&#40;のラップ解除&#41;](../../../connect/jdbc/reference/unwrap-method-sqlserverxadatasource.md)   
  [SQLServerXADataSource のメソッド](../../../connect/jdbc/reference/sqlserverxadatasource-methods.md)   
  [SQLServerXADataSource のメンバー](../../../connect/jdbc/reference/sqlserverxadatasource-members.md)   
  [SQLServerXADataSource クラス](../../../connect/jdbc/reference/sqlserverxadatasource-class.md)  

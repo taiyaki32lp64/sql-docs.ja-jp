@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 67dd1925-d672-4986-a85f-bce4fe832ef7
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: f5c7ca551fed96fb9c7149a894ecf78a441592c9
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 3b091f515af926fb17cea424b4f8875baf0fa83a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47789390"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68068423"
 ---
 # <a name="context-connection"></a>コンテキスト接続
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

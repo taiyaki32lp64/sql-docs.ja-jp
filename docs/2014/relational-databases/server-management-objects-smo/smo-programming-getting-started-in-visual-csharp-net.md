@@ -13,11 +13,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: dd25cd3ba339ebd27430bfeea2e634a6ad8f2ff4
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52797365"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63130730"
 ---
 # <a name="getting-started-in-visual-c-net"></a>Visual C# .NET の概要
   [!INCLUDE[csprcs](../../includes/csprcs-md.md)] .NET は、共通言語ランタイム (CLR) でサポートされているマネージ プログラミング言語のいずれかで[!INCLUDE[vsprvs](../../includes/vsprvs-md.md)].NET。 C# 言語の詳細については多く、 [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] .NET ドキュメント。 SMO アプリケーションを開発するには、[!INCLUDE[vsprvslong](../../includes/vsprvslong-md.md)] および [!INCLUDE[vsOrcas](../../includes/vsorcas-md.md)] を使用できます。  

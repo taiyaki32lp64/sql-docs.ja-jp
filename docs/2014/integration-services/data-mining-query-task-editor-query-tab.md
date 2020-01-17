@@ -1,33 +1,32 @@
 ---
-title: データ マイニング クエリ タスク エディター ([クエリ] タブ) |Microsoft Docs
+title: データマイニングクエリタスクエディター ([クエリ] タブ) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.dmquerytask.query.f1
 helpviewer_keywords:
 - Data Mining Query Task Editor
 ms.assetid: 72b1755d-d226-46c5-b862-0c9333196a10
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: ac3a7fd31f13ec513c1590d265b1984969ae8e12
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 0354c73a14b249065b69f41d5f7534fd97de5081
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48193062"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68890719"
 ---
 # <a name="data-mining-query-task-editor-query-tab"></a>[データ マイニング クエリ タスク エディター] ([クエリ] タブ)
   **[データ マイニング クエリ タスク]** ダイアログ ボックスの **[クエリ]** タブを使用すると、マイニング モデルに基づいて予測クエリを作成できます。 このダイアログ ボックスでは、パラメーターおよび結果セットを変数にバインドすることもできます。  
   
- パッケージでのデータ マイニングの実装の詳細については、「 [データ マイニング クエリ タスク](control-flow/data-mining-query-task.md) 」および「 [データ マイニング ソリューション](../analysis-services/data-mining/data-mining-solutions.md)」を参照してください。  
+ パッケージでのデータ マイニングの実装の詳細については、「 [データ マイニング クエリ タスク](control-flow/data-mining-query-task.md) 」および「 [データ マイニング ソリューション](https://docs.microsoft.com/analysis-services/data-mining/data-mining-solutions)」を参照してください。  
   
-## <a name="general-options"></a>[全般] のオプション  
+## <a name="general-options"></a>一般オプション  
  **名前**  
  データ マイニング クエリ タスクに固有の名前を指定します。 この名前は、タスク アイコンのラベルとして使用されます。  
   
@@ -41,12 +40,12 @@ ms.locfileid: "48193062"
  **[データ マイニング クエリ]**  
  データ マイニング クエリを入力します。  
   
- **関連項目:**  [データ マイニング拡張機能 (DMX) リファレンス](/sql/dmx/data-mining-extensions-dmx-reference)  
+ **関連トピック:** [データ マイニング拡張機能 &#40;DMX&#41; リファレンス](/sql/dmx/data-mining-extensions-dmx-reference)  
   
  **[新しいクエリの作成]**  
  グラフィカル ツールを使用してデータ マイニング クエリを作成します。  
   
- **関連項目:** [Data Mining Query](control-flow/data-mining-query.md)  
+ **関連トピック:** [データ マイニング クエリ](control-flow/data-mining-query.md)  
   
 ## <a name="parameter-mapping-tab-options"></a>[パラメーター マッピング] タブのオプション  
  **[パラメーター名]**  
@@ -79,10 +78,10 @@ ms.locfileid: "48193062"
  **[削除]**  
  結果を選択してから、 **[削除]** をクリックします。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [Integration Services のエラーおよびメッセージのリファレンス](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [データ マイニング クエリ タスク エディター&#40;マイニング モデル タブ&#41;](../../2014/integration-services/data-mining-query-task-editor-mining-model-tab.md)   
- [データ マイニング クエリ タスク エディター &#40;[出力] タブ&#41;](../../2014/integration-services/data-mining-query-task-editor-output-tab.md)   
- [データ マイニング デザイナー](../analysis-services/data-mining/data-mining-designer.md)  
+ [データ マイニング クエリ タスク エディター ([マイニング モデル] タブ)](../../2014/integration-services/data-mining-query-task-editor-mining-model-tab.md)   
+ [データ マイニング クエリ タスク エディター ([出力] タブ)](../../2014/integration-services/data-mining-query-task-editor-output-tab.md)   
+ [データ マイニング デザイナー](https://docs.microsoft.com/analysis-services/data-mining/data-mining-designer)  
   
   

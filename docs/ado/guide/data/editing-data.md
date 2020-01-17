@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: ef514f85-c446-4f05-824e-c9313b2ffae1
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 0c12692a6ebd1467148b52f993a77043ff495d43
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 8e8fd90849b8e046a7f4fe5d158d4594e612c91f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47823391"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67925492"
 ---
 # <a name="editing-data"></a>データの編集
 説明しました ADO を使用してデータ ソースへの接続、コマンドを実行で、結果を得る方法、**レコード セット**オブジェクト内を移動したり、**レコード セット**します。 このセクションでは、次の基本的な ADO 操作について重点的に取り上げます。: データを編集します。  
@@ -92,4 +91,4 @@ End Function
   
 -   [Delete メソッドを使用してレコードを削除する](../../../ado/guide/data/deleting-records-using-the-delete-method.md)  
   
--   [他の方法: SQL ステートメントを使用する](../../../ado/guide/data/alternatives-using-sql-statements.md)
+-   [代替手段:SQL ステートメントを使用](../../../ado/guide/data/alternatives-using-sql-statements.md)

@@ -16,17 +16,20 @@ helpviewer_keywords:
 - normalized data [Integration Services]
 - datasets [Integration Services], normalized data
 ms.assetid: f635c64b-a9c5-4f11-9c40-9cd9d5298c5d
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: 20a7422664808911e2241eacb4f48c51f0246b2d
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 0c89af926fdb8476ec53b27fde17503c4a34f124
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51639774"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71290998"
 ---
 # <a name="unpivot-transformation"></a>ピボット解除変換
+
+[!INCLUDE[ssis-appliesto](../../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   ピボット解除変換は、単一のレコード内にある複数の列の値を、単一の列内で同じ値を持つ複数のレコードに展開することにより、正規化されていないデータセットを正規化されたバージョンに変換します。 たとえば、顧客名を一覧表示するデータセットに、顧客ごとに 1 つの行があり、製品と購入した数量がその行の列に表示されているとします。 ピボット解除変換がこのデータセットを正規化すると、データセットには、顧客が購入した各製品に対して異なる行が含まれるようになります。  
   
  次の図は、データが Product 列でピボット解除される前のデータセットを示しています。  
@@ -60,11 +63,11 @@ ms.locfileid: "51639774"
 > [!NOTE]  
 >  このトピックでは、「 [ピボット解除変換](../../../integration-services/data-flow/transformations/unpivot-transformation.md) 」に示されているピボット解除の例に基づいて、オプションの使用方法を説明します。  
   
-### <a name="options"></a>[変数]  
+### <a name="options"></a>オプション  
  **使用できる入力列**  
  チェック ボックスを使用して、行でピボットする列を指定します。  
   
- **名前**  
+ **[名前]**  
  使用できる入力列の名前を表示します。  
   
  **[パススルー]**  

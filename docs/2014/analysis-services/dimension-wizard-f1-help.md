@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - Dimension Wizard
@@ -13,12 +12,12 @@ ms.assetid: 82c406ce-9e92-40c7-8374-cdbaf8b63d8f
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: c2c5f2d0cb6a12ad4d9c879633c97365d15b0287
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 0cc1b7eec5ceb3b74e575dce9fd5d1d71897a3f5
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48142252"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66081658"
 ---
 # <a name="dimension-wizard-f1-help"></a>ディメンション ウィザードの F1 ヘルプ
   [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] プロジェクトでデータベース ディメンションを作成するには、[!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] のディメンション ウィザードを使用します。 データベース ディメンションを作成した後は、ディメンション デザイナーを使用してそのプロパティを変更できます。 ディメンション デザイナーの詳細については、「[ディメンション デザイナー &#40;Analysis Services - 多次元データ&#41;](dimension-designer-analysis-services-multidimensional-data.md)」を参照してください。  

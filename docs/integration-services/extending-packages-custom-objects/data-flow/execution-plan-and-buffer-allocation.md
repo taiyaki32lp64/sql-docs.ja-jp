@@ -18,17 +18,20 @@ helpviewer_keywords:
 - data flow components [Integration Services], execution plans
 - execution plans [Integration Services]
 ms.assetid: 679d9ff0-641e-47c3-abb8-d1a7dcb279dd
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: d1ede86329f0082bac1927ca0c75fc64d6116a56
-ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: dba5ae3bf996f469f18a9802dd8cc8232a5bc885
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/18/2018
-ms.locfileid: "53591716"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71297239"
 ---
 # <a name="execution-plan-and-buffer-allocation"></a>実行プランおよびバッファーの割り当て
+
+[!INCLUDE[ssis-appliesto](../../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   実行前に、データ フロー タスクはそのコンポーネントを確認し、コンポーネントの各処理手順に応じて、実行プランを生成します。 このセクションでは、実行プラン、プランの表示方法、および実行プランに基づいて入力および出力バッファーを割り当てる方法に関する詳細について説明します。  
   
 ## <a name="understanding-the-execution-plan"></a>実行プランについて  

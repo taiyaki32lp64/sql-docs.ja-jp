@@ -13,24 +13,23 @@ helpviewer_keywords:
 ms.assetid: 6472bd69-b931-4bc2-a9bf-f1873ed4cdfe
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 15e16fb311bf3c9acb2823772247e0fc16eabeef
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 331613676b748453a56da1e41fe85f04a7715038
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47649050"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68081938"
 ---
 # <a name="create-index-for-paradox"></a>Paradox の CREATE INDEX
 ODBC Paradox ドライバーの CREATE INDEX ステートメントの構文です。  
   
- **作成****[UNIQUE]****インデックス***インデックス名*  
+ **CREATE** **[UNIQUE]** **INDEX** *index-name*  
   
  **ON** *テーブル名*  
   
- **(** *列識別子***[ASC]**  
+ **(** *列識別子* **[ASC]**  
   
- [**、** *列識別子***[ASC]**...**)**  
+ [ **、** *列識別子* **[ASC]** ... **)**  
   
  ODBC Paradox ドライバーはサポートしていません、 **DESC** CREATE INDEX ステートメントの ODBC SQL 文法のキーワード。 *テーブル名*引数は、テーブルの完全なパスを指定できます。  
   

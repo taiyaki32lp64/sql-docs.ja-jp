@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 317213f4-0ebb-4bf8-a37a-4d6b1313823f
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: d643ccad0110796127524a10e82aef7c3339b163
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: fe489222c026c1499135b716f0485bb04f51bad9
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47694631"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68069770"
 ---
 # <a name="freeing-descriptors"></a>記述子の解放
 明示的に割り当てられた記述子は、いずれかを呼び出すことによって、明示的に解放**SQLFreeHandle**で*HandleType* SQL_HANDLE_DESC、または暗黙的にすると、接続ハンドルが解放されます。 明示的に割り当てられた記述子を解放する場合、それらを暗黙的に割り当てられた記述子を元に戻す、解放された記述子を自動的に適用されるすべてのステートメント ハンドル。  

@@ -1,5 +1,5 @@
 ---
-title: コレクションを作成する (マスター データ サービス) | Microsoft Docs
+title: コレクションを作成する
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -11,15 +11,14 @@ helpviewer_keywords:
 - creating collections [Master Data Services]
 - collections [Master Data Services], creating
 ms.assetid: 3d4f152c-863c-4385-bca9-a9fcd0402e1f
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: e17fe8627164132568be0b7447656cc02a221ea6
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
-ms.translationtype: HT
+ms.openlocfilehash: a8a16d3730ea9dba7071403051dfc69d87f74473
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52753518"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73728522"
 ---
 # <a name="create-a-collection-master-data-services"></a>コレクションを作成する (Master Data Services)
 
@@ -52,7 +51,7 @@ ms.locfileid: "52753518"
   
 8.  必要に応じて、 **[説明]** ボックスにコレクションの説明を入力します。  
   
-9. **[OK]** をクリックします。  
+9. クリックして **OK**です。  
   
 ## <a name="next-steps"></a>Next Steps  
   

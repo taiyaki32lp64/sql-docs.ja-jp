@@ -8,17 +8,20 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: ce9c2201-4e9a-4495-948f-b68deeaa7955
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: f6892f59a80eafeabdbf62164e5aac448e9d2b4a
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 9a3e056e60eeab6dfdb79a448b4fc95bf1c01f50
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52410159"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71298935"
 ---
 # <a name="set-parameter-value-dialog-box"></a>[パラメーター値の設定] ダイアログ ボックス
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   プロジェクトとパッケージのパラメーターと接続マネージャーのプロパティの値を設定するには、 **[パラメーター値の設定]** ダイアログ ボックスを使用します。  
   
  **目的に合ったトピックをクリックしてください**  
@@ -43,7 +46,7 @@ ms.locfileid: "52410159"
  **パラメーター**  
  パラメーター名を一覧表示します。  
   
- **型**  
+ **Type**  
  パラメーター値のデータ型を一覧表示します。  
   
  **[説明]**  

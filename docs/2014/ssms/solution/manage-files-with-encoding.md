@@ -15,11 +15,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 22b1c18cba793d5845e2adf92b1dca300911a72f
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52763434"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62823801"
 ---
 # <a name="manage-files-with-encoding"></a>エンコーディングによるファイルの管理
   特定の言語や特定のプラットフォームでコードを正しく表示するために、特定の文字エンコードをファイルに関連付けることができます。  

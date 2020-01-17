@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: b280dd96-c80f-4c51-bc06-a88d42174acb
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 62a061632b5f598932fe29499519d7eb897c78a6
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: f593455269b8c005a3b4d3725f4360db77ea48f2
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56041743"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68039008"
 ---
 # <a name="conditional-expressions-xquery"></a>条件式 (XQuery)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -40,23 +39,23 @@ else
   <expression3>  
 ```  
   
- `expression1` の実効ブール値に応じて、`expression2` または `expression3` が評価されます。 以下に例を示します。  
+ 有効なブール値に応じて`expression1`, か、`expression2`または`expression3`が評価されます。 以下に例を示します。  
   
 -   テスト式 `expression1` の結果が空のシーケンスになった場合、結果は False になります。  
   
--   テスト式 `expression1` の結果が単純なブール値になった場合、この値は式の結果になります。  
+-   場合テスト式`expression1`、単純なブール値、この値に結果が式の結果。  
   
 -   テスト式 `expression1` の結果が複数ノードのシーケンスになった場合、式の結果は True になります。  
   
--   それ以外の場合は、静的エラーが発生します。  
+-   それ以外の場合、静的エラーが発生します。  
   
  また、次の点を注意してください。  
   
 -   テスト式は、かっこで囲む必要があります。  
   
--   **他**式が必要です。 これが必要ない場合は、このトピックの例にあるように、" ( ) " を返すことができます。  
+-   **他**式が必要です。 これを必要ない場合は、このトピックの例に示すように「()」を取得できます。  
   
- に対して次のクエリを指定するなど、 **xml**型の変数。 **場合**条件は、SQL 変数の値をテスト (@v) を使用して XQuery 式の内部で、 [sql:variable() 関数](../xquery/xquery-extension-functions-sql-variable.md)拡張関数。 変数の値が "FirstName" の場合、<`FirstName`> 要素が返されます。 それ以外の場合は、<`LastName`> 要素が返されます。  
+ に対して次のクエリを指定するなど、 **xml**型の変数。 **場合**条件は、SQL 変数の値をテスト (@v) を使用して XQuery 式の内部で、 [sql:variable() 関数](../xquery/xquery-extension-functions-sql-variable.md)拡張関数。 返すかどうかは変数の値が"FirstName"の場合、<`FirstName`> 要素。 返しますそれ以外の場合、<`LastName`> 要素。  
   
 ```  
 declare @x xml  
@@ -75,13 +74,13 @@ if ( sql:variable("@v")="FirstName" ) then
 ')  
 ```  
   
- これは、結果です。  
+ 結果を次に示します。  
   
 ```  
 <FirstName>fname</FirstName>  
 ```  
   
- 次のクエリは、特定の製品モデルの製品カタログの説明から、最初の 2 つの製品の特徴の記述を取得します。 ドキュメントに複数の特徴が記述されている場合は、内容のない <`there-is-more`> 要素が追加されます。  
+ 次のクエリでは、特定の製品モデルの製品カタログの説明から最初の 2 つの機能の説明を取得します。 多くの機能がかどうか、ドキュメントである、追加、<`there-is-more`> 空のコンテンツを持つ要素。  
   
 ```  
 SELECT CatalogDescription.query('  
@@ -107,7 +106,7 @@ WHERE ProductModelID = 19
   
  上記のクエリでは、条件、**場合**式は、複数の 2 つの子要素があるかどうかを確認します。 <`Features`>。 3 つ以上ある場合は、結果に `\<there-is-more/>` 要素が返されます。  
   
- これは、結果です。  
+ 結果を次に示します。  
   
 ```  
 <Product ProductModelID="19" ProductModelName="Mountain 100">  
@@ -123,7 +122,7 @@ WHERE ProductModelID = 19
 </Product>  
 ```  
   
- 次のクエリでは、ワーク センターでセットアップ時間が指定されていない場合に、<`Location`> に LocationID 属性が設定されて、返されます。  
+ 次のクエリで、<`Location`>、ワーク センター拠点でセットアップ時間が指定されていない場合、LocationID 属性を持つ要素が返されます。  
   
 ```  
 SELECT Instructions.query('  
@@ -142,7 +141,7 @@ FROM Production.ProductModel
 where ProductModelID=7  
 ```  
   
- これは、結果です。  
+ 結果を次に示します。  
   
 ```  
 <WorkCenterLocation LocationID="30" />  
@@ -165,7 +164,7 @@ FROM Production.ProductModel
 where ProductModelID=7  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [XQuery 式](../xquery/xquery-expressions.md)  
   
   

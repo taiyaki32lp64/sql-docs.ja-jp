@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 5e51bb79-5737-470b-9c47-fac330c001c5
 author: julieMSFT
 ms.author: jrasnick
-manager: craigg
-ms.openlocfilehash: a6b93453247ce29e2ff0a56404737234227f9478
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 8a3de3bf8c09149c21357a6d6b8c3e1aed4f995c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53365241"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68113302"
 ---
 # <a name="start-system-monitor-windows"></a>システム モニターの起動 (Windows)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -27,7 +26,7 @@ ms.locfileid: "53365241"
   
 ## <a name="start-system-monitor-in-windows"></a>Windows のシステム モニターを起動する  
   
-**[スタート]** ボタンをクリックして **[ファイル名を指定して実行]** をポイントし、**[ファイル名を指定して実行]** ダイアログ ボックスで「**perfmon**」と入力し、**[OK]** を選択します。  
+**[スタート]** ボタンをクリックして **[ファイル名を指定して実行]** をポイントし、 **[ファイル名を指定して実行]** ダイアログ ボックスで「**perfmon**」と入力し、 **[OK]** を選択します。  
   
 ## <a name="see-also"></a>参照  
  [システム モニターの実行](../../relational-databases/performance-monitor/run-system-monitor.md)  

@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: 24b3311d-5ce0-4581-9a05-5c7c726c7b21
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: a97bee55c0f23a82470091c1c9ea7b44463221e0
-ms.sourcegitcommit: cb9c54054449c586360c9cb634e33f505939a1c9
+ms.openlocfilehash: 7cd893c9556b1dd45e2206ce73740e253af98ed3
+ms.sourcegitcommit: 26715b4dbef95d99abf2ab7198a00e6e2c550243
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/15/2019
-ms.locfileid: "54317812"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70278767"
 ---
 # <a name="restore-a-database-backup-using-ssms"></a>SSMS を使用してデータベース バックアップを復元する
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -94,7 +93,7 @@ Microsoft Azure BLOB ストレージ サービスからの SQL Server の復元�
     
              **[バックアップ メディア]** ボックスに目的のデバイスを追加したら、 **[OK]** をクリックして、 **[全般]** ページに戻ります。    
     
-         **[ソース:デバイス:データベース]** ボックスの一覧で、復元するデータベースの名前を選択します。    
+         **[ソース: デバイス: データベース]** リスト ボックスで、復元するデータベースの名前を選択します。    
     
          > [!NOTE]
          > この一覧は **[デバイス]** を選択した場合にのみ使用できます。 選択されたデバイスにバックアップを持つデータベースのみが使用できるようになります。    
@@ -108,26 +107,28 @@ Microsoft Azure BLOB ストレージ サービスからの SQL Server の復元�
 7.  必要に応じて、**[ページの選択]** ペインの **[ファイル]** をクリックして、**[ファイル]** ダイアログ ボックスにアクセスします。 このダイアログ ボックスでは、**[次のデータベース ファイルに復元]** グリッド内の各ファイルに新しい復元先を指定することで、新しい場所にデータベースを復元できます。 このグリッドの詳細については、「[データベースの復元 &#40;[ファイル] ページ&#41;](../../relational-databases/backup-restore/restore-database-files-page.md)」を参照してください。    
     
 8. 拡張オプションを表示または選択するには、**[オプション]** ページの **[復元オプション]** パネルを使用します。状況に応じて、次の任意のオプションを選択できます。    
+
+   1. **WITH** オプション (必須ではありません):    
     
-    1.  **WITH** オプション (必須ではありません):    
+     - **[既存のデータベースを上書きする (WITH REPLACE)]**    
     
-        -   **[既存のデータベースを上書きする (WITH REPLACE)]**    
+     - **[レプリケーションの設定を保存する (WITH KEEP_REPLICATION)]**    
     
-        -   **[レプリケーションの設定を保存する (WITH KEEP_REPLICATION)]**    
+     - **[復元するデータベースへのアクセスを制限する (WITH RESTRICTED_USER)]**    
     
-        -   **[復元するデータベースへのアクセスを制限する (WITH RESTRICTED_USER)]**    
+   2. **[復旧状態]** ボックスのオプションを選択します。 このボックスの選択内容により、復元操作後のデータベースの状態が決まります。    
     
-    2.  **[復旧状態]** ボックスのオプションを選択します。 このボックスの選択内容により、復元操作後のデータベースの状態が決まります。    
+     - **[RESTORE WITH RECOVERY]** : コミットされていないトランザクションをロールバックして、データベースを使用可能な状態にします。これが既定の動作です。 別のトランザクション ログは復元できません。 このオプションは、必要なバックアップをすべて復元する場合に選択します。    
     
-        -   **[RESTORE WITH RECOVERY]** : コミットされていないトランザクションをロールバックして、データベースを使用可能な状態にします。これが既定の動作です。 別のトランザクション ログは復元できません。 このオプションは、必要なバックアップをすべて復元する場合に選択します。    
+     - **[RESTORE WITH NORECOVERY]** : データベースは操作不可状態のままとなり、コミットされていないトランザクションはロールバックされません。 別のトランザクション ログは復元できます データベースは、復旧されるまで使用できません。    
     
-        -   **[RESTORE WITH NORECOVERY]** : データベースは操作不可状態のままとなり、コミットされていないトランザクションはロールバックされません。 別のトランザクション ログは復元できます データベースは、復旧されるまで使用できません。    
+     - **[RESTORE WITH STANDBY]** : データベースを読み取り専用モードにします。 コミットされていないトランザクションは元に戻されますが、復旧結果を元に戻せるように元に戻す操作をスタンバイ ファイルに保存します。    
     
-        -   **[RESTORE WITH STANDBY]** : データベースを読み取り専用モードにします。 コミットされていないトランザクションは元に戻されますが、復旧結果を元に戻せるように元に戻す操作をスタンバイ ファイルに保存します。    
-    
-    3.  **復元の前にログ末尾のバックアップを実行します。** ログ末尾のバックアップは、すべての復元シナリオで必要となるわけではありません。  詳細については、「 **ログ末尾のバックアップ (SQL Server)** 」の「 [ログ末尾のバックアップが必要となるシナリオ](../../relational-databases/backup-restore/tail-log-backups-sql-server.md)」を参照してください。
-    4.  データベースへのアクティブな接続がある場合、復元操作は失敗する可能性があります。 **とデータベース間のすべてのアクティブな接続を閉じるには、** [既存の接続を閉じる] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] オプションをオンにします。 このチェック ボックスをオンにすると、データベースは復元操作の実行前にシングル ユーザー モードに設定され、復元操作の完了後にマルチユーザー モードに設定されます。    
-    5.  復元操作と復元操作の間に、その都度、確認のメッセージを表示するには、 **[各バックアップを復元する前に確認する]** をオンにします。 通常は、その必要はありません。データベースが大きく、復元操作のステータスを監視する必要がある場合にのみ使用します。    
+   3. **復元の前にログ末尾のバックアップを実行します。** ログ末尾のバックアップは、すべての復元シナリオで必要となるわけではありません。  詳細については、「 **ログ末尾のバックアップ (SQL Server)** 」の「 [ログ末尾のバックアップが必要となるシナリオ](../../relational-databases/backup-restore/tail-log-backups-sql-server.md)」を参照してください。
+  
+   4. データベースへのアクティブな接続がある場合、復元操作は失敗する可能性があります。 **とデータベース間のすべてのアクティブな接続を閉じるには、** [既存の接続を閉じる] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] オプションをオンにします。 このチェック ボックスをオンにすると、データベースは復元操作の実行前にシングル ユーザー モードに設定され、復元操作の完了後にマルチユーザー モードに設定されます。    
+  
+   5. 復元操作と復元操作の間に、その都度、確認のメッセージを表示するには、 **[各バックアップを復元する前に確認する]** をオンにします。 通常は、その必要はありません。データベースが大きく、復元操作のステータスを監視する必要がある場合にのみ使用します。    
     
 これらの復元オプションの詳細については、「[データベースの復元 &#40;[オプション] ページ&#41;](../../relational-databases/backup-restore/restore-database-options-page.md)」をご覧ください。    
     
@@ -211,29 +212,29 @@ Microsoft Azure BLOB ストレージ サービスからの SQL Server の復元�
 
 #### <a name="e1---restore-a-striped-backup-over-an-existing-database-and-a-shared-access-signature-exists"></a>E1.   既存のデータベース上にストライプ バックアップを復元し、共有アクセス署名が存在する場合
 保存されたアクセス ポリシーは読み取り、書き込み、削除および一覧表示権で作成されています。  保存されたアクセス ポリシーに関連付けられている Shared Access Signature は、コンテナー `https://mystorageaccount.blob.core.windows.net/myfirstcontainer`用に作成されています。  SQL Server 資格情報が既に存在する場合、手順はほとんど同じです。  現在、 `Sales` データベースはサーバーに存在しています。  バックアップ ファイルは、 `Sales_stripe1of2_20160601.bak` と `Sales_stripe2of2_20160601.bak`です。  
-*  
-7.  SQL Server 資格情報が既に存在する場合、 `https://mystorageaccount.blob.core.windows.net/myfirstcontainer` [Azure ストレージ コンテナー:] **ドロップダウン リストから [** ] を選択します。それ以外の場合は、手動でコンテナーの名前 ( `https://mystorageaccount.blob.core.windows.net/myfirstcontainer`) を入力します。 
-8.  **[Shared Access Signature:]** リッチ テキスト ボックス に Shared Access Signature を入力します。
-9.  **[OK]** をクリックすると、 **[Microsoft Azure でのバックアップ ファイルの位置指定]** ダイアログ ボックスが開きます。
-10. **[コンテナー]** を展開して、 `https://mystorageaccount.blob.core.windows.net/myfirstcontainer`に移動します。
-11. Ctrl キーを押しながらファイル `Sales_stripe1of2_20160601.bak` と `Sales_stripe2of2_20160601.bak`を選択します。
-12. **[OK]** をクリックします。
-13. **[OK]** をクリックして、 **[全般]** ページに戻ります。
-14. **[ページの選択]** ペインの **[オプション]** をクリックします。
-15. **[復元オプション]** パネルで、 **[既存のデータベースを上書きする (WITH REPLACE)]** チェック ボックスをオンにします。
-16. **[ログ末尾のバックアップ]** セクションで、 **[復元の前にログ末尾のバックアップを実行する]** チェック ボックスをオフにします。
-17. **[サーバー接続]** セクションで、 **[接続先データベースへの既存の接続を閉じる]** チェック ボックスをオンにします。
-18. **[OK]** をクリックします。
+
+1.  SQL Server 資格情報が既に存在する場合、 `https://mystorageaccount.blob.core.windows.net/myfirstcontainer` [Azure ストレージ コンテナー:] **ドロップダウン リストから [** ] を選択します。それ以外の場合は、手動でコンテナーの名前 ( `https://mystorageaccount.blob.core.windows.net/myfirstcontainer`) を入力します。 
+1. **[Shared Access Signature:]** リッチ テキスト ボックス に Shared Access Signature を入力します。
+1. **[OK]** をクリックすると、 **[Microsoft Azure でのバックアップ ファイルの位置指定]** ダイアログ ボックスが開きます。
+1. **[コンテナー]** を展開して、 `https://mystorageaccount.blob.core.windows.net/myfirstcontainer`に移動します。
+1. Ctrl キーを押しながらファイル `Sales_stripe1of2_20160601.bak` と `Sales_stripe2of2_20160601.bak`を選択します。
+1. [**OK**] をクリックします。
+1. **[OK]** をクリックして、 **[全般]** ページに戻ります。
+1. **[ページの選択]** ペインの **[オプション]** をクリックします。
+1. **[復元オプション]** パネルで、 **[既存のデータベースを上書きする (WITH REPLACE)]** チェック ボックスをオンにします。
+1. **[ログ末尾のバックアップ]** セクションで、 **[復元の前にログ末尾のバックアップを実行する]** チェック ボックスをオフにします。
+1. **[サーバー接続]** セクションで、 **[接続先データベースへの既存の接続を閉じる]** チェック ボックスをオンにします。
+1. [**OK**] をクリックします。
 
 #### <a name="e2---a-shared-access-signature-does-not-exist"></a>E2.   Shared Access Signature が存在しない場合
 この例では、現在、`Sales` データベースはサーバーに存在しません。
-7.  **[追加]** をクリックすると、 **[Microsoft サブスクリプションへの接続]** ダイアログ ボックスが開きます。  
-8.  **[Microsoft サブスクリプションへの接続]** ダイアログ ボックスに入力し、 **[OK]** をクリックして **[バックアップ ファイルの場所を選択]** ダイアログ ボックスに戻ります。  詳細については、「 [Microsoft Azure サブスクリプションへの接続](../../relational-databases/backup-restore/connect-to-a-microsoft-azure-subscription.md) 」をご覧ください。
-9.  **[バックアップ ファイルの場所を選択]** ダイアログ ボックスで **[OK]** をクリックして、 **[Microsoft Azure でのバックアップ ファイルの位置指定]** ダイアログ ボックスを開きます。
-10. **[コンテナー]** を展開して、 `https://mystorageaccount.blob.core.windows.net/myfirstcontainer`に移動します。
-11. バックアップ ファイルを選択して、 **[OK]** をクリックします。
-12. **[OK]** をクリックして、 **[全般]** ページに戻ります。
-13. **[OK]** をクリックします。
+1. **[追加]** をクリックすると、 **[Microsoft サブスクリプションへの接続]** ダイアログ ボックスが開きます。  
+1. **[Microsoft サブスクリプションへの接続]** ダイアログ ボックスに入力し、 **[OK]** をクリックして **[バックアップ ファイルの場所を選択]** ダイアログ ボックスに戻ります。  詳細については、「 [Microsoft Azure サブスクリプションへの接続](../../relational-databases/backup-restore/connect-to-a-microsoft-azure-subscription.md) 」をご覧ください。
+1. **[バックアップ ファイルの場所を選択]** ダイアログ ボックスで **[OK]** をクリックして、 **[Microsoft Azure でのバックアップ ファイルの位置指定]** ダイアログ ボックスを開きます。
+1. **[コンテナー]** を展開して、 `https://mystorageaccount.blob.core.windows.net/myfirstcontainer`に移動します。
+1. バックアップ ファイルを選択して、 **[OK]** をクリックします。
+1. **[OK]** をクリックして、 **[全般]** ページに戻ります。
+1. [**OK**] をクリックします。
 
 #### <a name="f-restore-local-backup-to-microsoft-azure-storage-url"></a>F. Microsoft Azure Storage (URL) のローカルのバックアップを復元する
 `Sales` データベースは、`E:\MSSQL\BAK` に置かれたバックアップから Microsoft Azure ストレージ コンテナー `https://mystorageaccount.blob.core.windows.net/myfirstcontainer` に復元されます。  Azure コンテナーの SQL Server 資格情報は、既に作成されています。  復元先コンテナーの SQL Server 資格情報は、 **[復元]** タスク中に作成できないので、既に存在している必要があります。  現在、 `Sales` データベースはサーバーに存在しません。
@@ -248,7 +249,7 @@ Microsoft Azure BLOB ストレージ サービスからの SQL Server の復元�
 9.  **[ページの選択]** ペインの **[ファイル]** をクリックします。
 10. **[すべてのファイルをフォルダーに移動]** チェック ボックスをオンにします。
 11. `https://mystorageaccount.blob.core.windows.net/myfirstcontainer`[データ ファイル フォルダー:] **と** [ログ ファイルのフォルダ:] **のテキスト ボックスで、コンテナー (**) を入力します。
-12. **[OK]** をクリックします。
+12. [**OK**] をクリックします。
 
 ## <a name="see-also"></a>参照    
  [トランザクション ログのバックアップ &#40;SQL Server&#41;](../../relational-databases/backup-restore/back-up-a-transaction-log-sql-server.md)     

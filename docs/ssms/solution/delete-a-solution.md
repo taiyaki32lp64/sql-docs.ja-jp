@@ -12,15 +12,14 @@ helpviewer_keywords:
 - solutions [SQL Server Management Studio], deleting
 - deleting solutions
 ms.assetid: 750bb2ac-4f69-4c8d-9db5-3f33837b6dff
-author: stevestein
-ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 33936535d8fe5284b147a9163d8c2c617a4e4dc0
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: a34a082d63e2d89d130e715e3f3a152adfdee102
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47652446"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68258403"
 ---
 # <a name="delete-a-solution"></a>ソリューションを削除する
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

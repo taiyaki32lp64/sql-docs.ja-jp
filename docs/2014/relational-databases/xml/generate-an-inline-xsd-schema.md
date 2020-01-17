@@ -15,15 +15,15 @@ helpviewer_keywords:
 - inline XSD schema generation [SQL Server]
 - XMLDATA option
 ms.assetid: 04b35145-1cca-45f4-9eb7-990abf2e647d
-author: douglaslMS
-ms.author: douglasl
+author: MightyPen
+ms.author: genemi
 manager: craigg
-ms.openlocfilehash: ad003060588215c0d5a218ade5103f5748e5ebfc
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 9b6c8233b95f3f95235bb4f618358d4680d3088f
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53369564"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63287481"
 ---
 # <a name="generate-an-inline-xsd-schema"></a>インライン XSD スキーマの生成
   FOR XML 句では、クエリからクエリ結果と共にインライン スキーマを返すように要求できます。 XDR スキーマが必要な場合は、FOR XML 句に XMLDATA キーワードを指定します。 XSD スキーマが必要な場合は、XMLSCHEMA キーワードを指定します。  
@@ -36,7 +36,7 @@ ms.locfileid: "53369564"
   
  FOR XML クエリに XMLSCHEMA を指定すると、クエリ結果としてスキーマと XML データの両方が返されます。 データの最上位レベルの各要素が既定の名前空間宣言を使用して前のスキーマを参照し、次に、既定の名前空間宣言がインライン スキーマの対象の名前空間を参照します。  
   
- 以下に例を示します。  
+ 例 :  
   
 ```  
 <xsd:schema targetNamespace="urn:schemas-microsoft-com:sql:SqlRowSet1" xmlns:schema="urn:schemas-microsoft-com:sql:SqlRowSet1" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:sqltypes="https://schemas.microsoft.com/sqlserver/2004/sqltypes" elementFormDefault="qualified">  
@@ -94,7 +94,7 @@ WHERE BusinessEntityID = 1
 FOR XML AUTO, ELEMENTS  
 ```  
   
- これは、結果です。  
+ 結果を次に示します。  
   
  `<Person>`  
   
@@ -114,7 +114,7 @@ AND     SalesOrderHeader.SalesOrderID=5001
 FOR XML AUTO, ELEMENTS, XMLSCHEMA  
 ```  
   
- このクエリには ELEMENTS ディレクティブが指定されているので、返される XML は要素中心になります。 また、このクエリには XMLSCHEMA ディレクティブも指定されています。 したがって、インライン XSD スキーマが返されます。 これは、結果です。  
+ このクエリには ELEMENTS ディレクティブが指定されているので、返される XML は要素中心になります。 また、このクエリには XMLSCHEMA ディレクティブも指定されています。 したがって、インライン XSD スキーマが返されます。 結果を次に示します。  
   
  `<xsd:schema targetNamespace="urn:schemas-microsoft-com:sql:SqlRowSet1" xmlns:schema="urn:schemas-microsoft-com:sql:SqlRowSet1" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:sqltypes="https://schemas.microsoft.com/sqlserver/2004/sqltypes" elementFormDefault="qualified">`  
   
@@ -221,7 +221,7 @@ FOR XML RAW, XMLSCHEMA, ELEMENTS
 ## <a name="element-name-clashes"></a>要素名の競合  
  FOR XML では、同じ名前で 2 つのサブ要素を示すことができます。 たとえば、次のクエリでは製品の ListPrice と DealerPrice の値が取得されますが、これら 2 つの列に Price という同じ別名が指定されます。 したがって、返される行セットには同じ名前の列が 2 つ含まれます。  
   
-### <a name="case-1-both-subelements-are-nonkey-columns-of-the-same-type-and-can-be-null"></a>ケース 1:両方のサブ要素は、同じ型の非キー列と NULL を指定できます。  
+### <a name="case-1-both-subelements-are-nonkey-columns-of-the-same-type-and-can-be-null"></a>ケース 1: 2 つのサブ要素が同じ型の非キー列でどちらも NULL 値が許容される場合  
  次のクエリの 2 つのサブ要素は同じ型の非キー列で、どちらも NULL 値が許容されます。  
   
 ```  
@@ -313,7 +313,7 @@ for    XML RAW, ELEMENTS, XMLSCHEMA
   
  `</row>`  
   
-### <a name="case-2-one-key-and-one-nonkey-column-of-the-same-type"></a>ケース 2:1 つのキーと同じ型の 1 つの非キー列  
+### <a name="case-2-one-key-and-one-nonkey-column-of-the-same-type"></a>ケース 2: 同じ型でも一方がキー列で他方が非キー列の場合  
  次のクエリでは、型が同じ型でも一方がキー列で他方が非キー列の場合について説明します。  
   
 ```  
@@ -391,7 +391,7 @@ FOR XML RAW, ELEMENTS, XMLSCHEMA
   
  インライン XSD スキーマで、Col2 に対応する <`Col`> 要素の minOccurs が 0 に設定されていることに注意してください。  
   
-### <a name="case-3-both-elements-of-different-types-and-corresponding-columns-can-be-null"></a>ケース 3:さまざまな種類と対応する列の両方の要素は NULL を指定できます。  
+### <a name="case-3-both-elements-of-different-types-and-corresponding-columns-can-be-null"></a>ケース 3: 2 つの要素の型が異なり、対応する列で NULL 値が許容される場合  
  ケース 2 で示したサンプル テーブルに対して、次のクエリを指定します。  
   
 ```  

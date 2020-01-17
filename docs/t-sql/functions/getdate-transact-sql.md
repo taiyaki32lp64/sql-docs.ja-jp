@@ -27,29 +27,25 @@ helpviewer_keywords:
 - dates [SQL Server], system date and time
 - time [SQL Server], system
 ms.assetid: bebe3b65-2b3e-4c73-bf80-ff1132c680a7
-author: MashaMSFT
-ms.author: mathoma
-manager: craigg
+author: MikeRayMSFT
+ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: a80ecfd82a50f7c69645901733ad74234f0dfd9d
-ms.sourcegitcommit: 96032813f6bf1cba680b5e46d82ae1f0f2da3d11
+ms.openlocfilehash: 9b92994f9a04b0b9bda56085b00896278e124705
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/15/2019
-ms.locfileid: "54298579"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67910669"
 ---
 # <a name="getdate-transact-sql"></a>GETDATE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
-
-> [!div class="nextstepaction"]
-> [SQL ドキュメントの目次に関するご意見を共有してください。](https://aka.ms/sqldocsurvey)
 
 として現在のデータベース システムのタイムスタンプを返す、 **datetime** 、データベース タイム ゾーン オフセットを持たない値。 この値は、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスが実行されているコンピューターのオペレーティング システムから取得されます。  
 
 > [!NOTE]  
 >  1 秒未満の有効桁数で比較すると、SYSDATETIME と SYSUTCDATETIME の方が GETDATE と GETUTCDATE よりも高い精度を得ることができます。 SYSDATETIMEOFFSET には、システムのタイム ゾーン オフセットが含まれます。 SYSDATETIME、SYSUTCDATETIME、および SYSDATETIMEOFFSET は、date 型と time 型の任意の変数に割り当てることができます。  
   
- すべての概要については [!INCLUDE[tsql](../../includes/tsql-md.md)] 日付と時刻のデータ型および関数、を参照してください。[ 日付と時刻のデータ型および関数と #40 です。TRANSACT-SQL と #41;](../../t-sql/functions/date-and-time-data-types-and-functions-transact-sql.md).  
+ すべての [!INCLUDE[tsql](../../includes/tsql-md.md)] 日付および時刻のデータ型と関数の概要については、「[日付と時刻のデータ型および関数 &#40;Transact-SQL&#41;](../../t-sql/functions/date-and-time-data-types-and-functions-transact-sql.md)」を参照してください。  
   
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -67,7 +63,7 @@ GETDATE ( )
   
  GETDATE は、非決定的関数です。 この関数を列内で参照するビューと式には、インデックスを付けることができません。  
   
- GETDATE() 関数で SWITCHOFFSET を使用すると、クエリの実行速度が低下する場合があります。クエリ オプティマイザーでは、GETDATE 値の正確なカーディナリティの推定を取得できないためです。 GETDATE 値を事前計算して、次の例に示すように、クエリでその値を指定することをお勧めします。 さらに、OPTION (RECOMPILE) クエリ ヒントを使用して、次に同じクエリが実行されるときに、クエリ オプティマイザーでクエリ プランが強制的に再コンパイルされるようにします。 そうすると、オプティマイザーは、GETDATE() の正確なカーディナリティの推定を取得し、より効率的なクエリ プランを生成します。  
+ GETDATE() 関数で SWITCHOFFSET を使用すると、クエリの実行速度が低下する場合があります。クエリ オプティマイザーでは、GETDATE 値の正確なカーディナリティの推定を取得できないためです。 GETDATE 値を事前計算して、次の例に示すように、クエリでその値を指定することをお勧めします。 さらに、OPTION (RECOMPILE) クエリ ヒントを使用して、次に同じクエリが実行されるときに、クエリ オプティマイザーでクエリ プランが強制的に再コンパイルされるようにします。 そうすると、オプティマイザーによって、GETDATE() の正確なカーディナリティの推定が取得され、より効率的なクエリ プランが生成されます。  
   
 ```  
 DECLARE @dt datetimeoffset = switchoffset (CONVERT(datetimeoffset, GETDATE()), '-04:00');   

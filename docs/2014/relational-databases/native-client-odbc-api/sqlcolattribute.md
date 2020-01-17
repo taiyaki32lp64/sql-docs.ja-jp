@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 706d08eb3c140571460f4ebccb541ac24a71160a
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53361274"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63067676"
 ---
 # <a name="sqlcolattribute"></a>SQLColAttribute
   使用することができます`SQLColAttribute`準備または実行された ODBC ステートメントの結果セット列の属性を取得します。 呼び出す`SQLColAttribute`で準備されたステートメント原因へのラウンドト リップ[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]します。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC ドライバーは、呼び出すので、ステートメントの実行の一部として結果セット列のデータを受信`SQLColAttribute`の完了後**SQLExecute**または**SQLExecDirect**はサーバーとのやり取りは関係ありません。  

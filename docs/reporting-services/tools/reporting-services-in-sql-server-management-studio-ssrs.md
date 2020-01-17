@@ -1,34 +1,30 @@
 ---
 title: SQL Server Management Studio の Reporting Services (SSRS) | Microsoft Docs
-ms.date: 03/01/2017
+ms.date: 06/10/2017
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: tools
 ms.topic: conceptual
 helpviewer_keywords:
 - report servers [Reporting Services], how-to topics
 ms.assetid: 60685458-9108-47bf-820a-5e7db454d408
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: f1ec33539e98a391c6de9cd61b5d2634c5f12187
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 27fe190bfa73414158d05353c4aa8f244b65b4f4
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50031151"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "67140356"
 ---
 # <a name="reporting-services-in-sql-server-management-studio-ssrs"></a>SQL Server Management Studio の Reporting Services (SSRS)
   レポート サーバー管理者は [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] を使用して次の操作を実行できます。  
   
 -   機能を有効化し、サーバーの既定値を設定して、実行中のジョブを管理する。  
   
--   カスタム レポートを表示および作成する。 オブジェクト エクスプローラーでは、 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]と共にインストールされた一連の標準レポートが多数のノードに表示されます。 管理者権限が必要です。 カスタム レポートのスキーマは、インストールされているレポートのスキーマと一致する必要があります。 詳細については、「[Management Studio におけるカスタム レポート](../../ssms/object/custom-reports-in-management-studio.md)」と「[レポート定義スキーマのバージョンを確認する &#40;SSRS&#41;](../../reporting-services/reports/find-the-report-definition-schema-version-ssrs.md)」を参照してください。  
+-   カスタム レポートを表示する。 オブジェクト エクスプ ローラーでは、ほとんどのノードは、カスタム レポート オプションを表示します。 管理者権限が必要です。 カスタム レポートのスキーマは、インストールされているレポートのスキーマと一致する必要があります。 詳細については、「[Management Studio におけるカスタム レポート](../../ssms/object/custom-reports-in-management-studio.md)」と「[レポート定義スキーマのバージョンを確認する &#40;SSRS&#41;](../../reporting-services/reports/find-the-report-definition-schema-version-ssrs.md)」を参照してください。  
   
- レポート作成者は [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] を使用して次の操作を実行できます。  
-  
--   マップ レポートのクエリ結果セットから空間データを表示する。 クエリを実行した後、結果セット ペインの **[空間結果]** タブを使用します。 詳細については、「 [オブジェクト エクスプローラーに空間データを表示する方法](../../relational-databases/scripting/view-spatial-data-in-object-explorer.md)」を参照してください。  
-  
- ここでは、 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]を使用してさまざまなレポート タスクを実行する操作手順を説明します。 共有スケジュールの作成と管理は、レポート マネージャーを使って行うこともできます。  
+ 次のセクションには使用して、さまざまなレポート タスクを実行する手順が含まれている記事へのリンクが含まれています[!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]します。 作成し、web ポータルでの共有スケジュールの管理もできます。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
   
@@ -42,6 +38,5 @@ ms.locfileid: "50031151"
   
 ## <a name="see-also"></a>参照  
  [Management Studio のレポート サーバーの F1 ヘルプ](../../reporting-services/tools/report-server-in-management-studio-f1-help.md)   
- [SQL Server Management Studio の概要](https://msdn.microsoft.com/library/f289e978-14ca-46ef-9e61-e1fe5fd593be)  
-  
+ [SQL Server Management Studio (SSMS)](../../ssms/sql-server-management-studio-ssms.md)  
   

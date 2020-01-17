@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - permissions [Analysis Services], process
@@ -14,12 +13,12 @@ ms.assetid: c1531c23-6b46-46a8-9ba3-b6d3f2016443
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 175e07432d3f67374710d6e33f3006f2b3b6bf68
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 49b8a1c8ce566b18143b6b693a227fba4a5bd094
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48181272"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66074888"
 ---
 # <a name="grant-process-permissions-analysis-services"></a>処理権限の付与 (Analysis Services)
   管理者は、Analysis Services 処理操作専用のロールを作成して、その特定のタスクを他のユーザーまたは自動スケジューリング処理用のアプリケーションに委任できます。 処理権限はデータベース、キューブ、ディメンション、およびマイニング構造レベルで許可することができます。 非常に大きなキューブまたは表形式データベースで作業している場合を除き、相互に依存関係にあるものなどすべてのオブジェクトを含めて、データベース レベルで処理権限を付与することをお勧めします。  
@@ -27,9 +26,9 @@ ms.locfileid: "48181272"
  権限は、オブジェクトを権限および Windows ユーザーアカウントまたはグループ アカウントに関連付けるロールによって付与されます。 権限は加算的であることに注意してください。 あるロールによってキューブを処理する権限が付与され、別のロールによって同じユーザーにディメンションを処理する権限が付与される場合、この 2 種類のロールによる権限が組み合わされ、キューブを処理する権限とそのデータベース内の指定のディメンションを処理する権限の両方がユーザーに付与されます。  
   
 > [!IMPORTANT]  
->  ロールによって処理権限のみが付与されているユーザーは、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] または [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] を使用して、 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] に接続したり、オブジェクトを処理したりすることはできません。 これらのツールが必要です、`Read Definition`オブジェクト メタデータにアクセスする権限。 どちらのツールも使用できない場合は、XMLA スクリプトを使用して処理操作を実行する必要があります。  
+>  ロールによって処理権限のみが付与されているユーザーは、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] または [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] を使用して、 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] に接続したり、オブジェクトを処理したりすることはできません。 これらのツールを使用するには、オブジェクト メタデータにアクセスするための`Read Definition`権限が必要となります。 どちらのツールも使用できない場合は、XMLA スクリプトを使用して処理操作を実行する必要があります。  
 >   
->  お勧めする grant`Read Definition`テストのためのアクセスを許可します。 両方を持つユーザー`Read Definition`と`Process Database`アクセス許可は、内のオブジェクトを処理できる[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]、対話的にします。 「 [Grant read definition permissions on object metadata &#40;Analysis Services&#41;](grant-read-definition-permissions-on-object-metadata-analysis-services.md) 」を参照してください。  
+>  また、テスト目的で`Read Definition`権限も付与することをお勧めします。 `Read Definition`権限と`Process Database`権限の両方を持つユーザーは、[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] で対話的にオブジェクトを処理できます。 「 [オブジェクト メタデータに対する定義の読み取り権限の付与 &#40;Analysis Services&#41;](grant-read-definition-permissions-on-object-metadata-analysis-services.md) 」を参照してください。  
   
 ## <a name="set-processing-permissions-at-the-database-level"></a>データベース レベルでの処理権限の設定  
  ここでは、管理者以外のユーザーがデータベース内のすべてのキューブ、ディメンション、マイニング構造、およびマイニング モデルを処理できるようにする方法について説明します。  
@@ -91,9 +90,9 @@ ms.locfileid: "48181272"
 5.  **[OK]** をクリックすると、ロール定義が完了します。  
   
 ## <a name="see-also"></a>参照  
- [データベースの処理、テーブル、またはパーティション](../tabular-models/process-database-table-or-partition-analysis-services.md)   
+ [データベース、テーブル、またはパーティションの処理](../tabular-models/process-database-table-or-partition-analysis-services.md)   
  [多次元モデル オブジェクトの処理](processing-a-multidimensional-model-analysis-services.md)   
- [データベースのアクセス許可を付与&#40;Analysis Services&#41;](grant-database-permissions-analysis-services.md)   
- [読み取りオブジェクト メタデータに対する定義のアクセス許可の付与&#40;Analysis Services&#41;](grant-read-definition-permissions-on-object-metadata-analysis-services.md)  
+ [データベース権限の付与 &#40;Analysis Services&#41;](grant-database-permissions-analysis-services.md)   
+ [オブジェクト メタデータに対する定義の読み取り権限の付与 &#40;Analysis Services&#41;](grant-read-definition-permissions-on-object-metadata-analysis-services.md)  
   
   

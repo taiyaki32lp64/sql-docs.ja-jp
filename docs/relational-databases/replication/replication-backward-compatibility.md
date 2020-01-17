@@ -18,16 +18,16 @@ helpviewer_keywords:
 ms.assetid: 091c51dc-8b32-4b4f-847e-b317456c8394
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 7b04e03d96dafe642035cc6e3c1a72b5eccfd464
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
+ms.openlocfilehash: d255b4f3599cc9d42f52e860a21941c6e8b95436
+ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51677661"
+ms.lasthandoff: 08/03/2019
+ms.locfileid: "68769736"
 ---
 # <a name="replication-backward-compatibility"></a>レプリケーションの旧バージョンとの互換性
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
 アップグレードを行う場合や、レプリケーション トポロジ内に複数のバージョンの SQL Server が存在する場合は、旧バージョンとの互換性を理解することが重要です。 
 

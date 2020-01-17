@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: a8ec22a9-4bbd-4759-9f21-957304ef3a5e
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 0e0111b401f43771a15e3e7ae001931039a2ab5f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 5300c381b7b64e90cdd9d6a9d3555ffce6a9af52
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47732410"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67996666"
 ---
 # <a name="updatecharacterstream-method-javalangstring-javaioreader"></a>updateCharacterStream (java.lang.String, java.io.Reader) メソッド
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -38,17 +37,17 @@ public void updateCharacterStream(java.lang.String columnLabel,
   
  *reader*  
   
- リーダー オブジェクト。  
+ リーダーオブジェクト。  
   
 ## <a name="exceptions"></a>例外  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- この updateCharacterStream メソッドは、java.sql.ResultSet インターフェイスの updateCharacterStream メソッドによって指定されます。  
+ この updateCharacterStream メソッドは、java.sql.ResultSet インターフェイスの updateCharacterStream メソッドで規定されています。  
   
- このメソッドは、Unicode 文字を Reader オブジェクトから選択したテキストおよびバイナリ列に渡します。 これには、すべてのテキスト列と **binary**、**varbinary**、**varbinary(max)**、**image**、**xml** の各列が含まれますが、**udt** 列は含まれません。  
+ このメソッドは、Unicode 文字を Reader オブジェクトから選択したテキストおよびバイナリ列に渡します。 これには、すべてのテキスト列と **binary**、**varbinary**、**varbinary(max)** 、**image**、**xml** の各列が含まれますが、**udt** 列は含まれません。  
   
- このメソッドを使用して、**イメージ**、**テキスト**、および**ntext** [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]データ型のパフォーマンスに影響を与える可能性があります。  
+ **Image**、 **text**、および**ntext** [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]データ型に対してこのメソッドを使用すると、パフォーマンスが低下する可能性があります。  
   
 ## <a name="see-also"></a>参照  
  [updateCharacterStream メソッド &#40;SQLServerResultSet&#41;](../../../connect/jdbc/reference/updatecharacterstream-method-sqlserverresultset.md)   

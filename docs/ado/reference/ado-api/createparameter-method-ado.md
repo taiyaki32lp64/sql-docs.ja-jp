@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 9666fdcc-0544-4ed7-a97b-c415f2a56d7e
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: b150fe1c0c7260960140558eeff74b54c0798d80
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: af796c36bd2960730536ec07ac49614876311e84
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47631350"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67933296"
 ---
 # <a name="createparameter-method-ado"></a>CreateParameter メソッド (ADO)
 新たに作成[パラメーター](../../../ado/reference/ado-api/parameter-object.md)オブジェクト プロパティを指定します。  
@@ -65,7 +64,7 @@ Set parameter = command.CreateParameter (Name, Type, Direction, Size, Value)
 ## <a name="applies-to"></a>適用対象  
  [Command オブジェクト (ADO)](../../../ado/reference/ado-api/command-object-ado.md)  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [Append および CreateParameter メソッドの例 (VB)](../../../ado/reference/ado-api/append-and-createparameter-methods-example-vb.md)   
  [Append および CreateParameter メソッドの例 (vc++)](../../../ado/reference/ado-api/append-and-createparameter-methods-example-vc.md)   
  [Append メソッド (ADO)](../../../ado/reference/ado-api/append-method-ado.md)   

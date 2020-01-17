@@ -13,16 +13,15 @@ helpviewer_keywords:
 - SQL Server Agent, errors
 - errors [SQL Server Agent]
 ms.assetid: 2597d0d7-951a-48cf-989f-abb67b9fdb36
-author: stevestein
-ms.author: sstein
-manager: craigg
+author: markingmyname
+ms.author: maghan
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: b061aa89ef6c10789511f05c4ca0763bd54a860d
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 7ff6bbdfa2964f8bf633f36f1911f8afe4bc34c4
+ms.sourcegitcommit: 57e20b7d02853ec9af46b648106578aed133fb45
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52524961"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69552596"
 ---
 # <a name="send-sql-server-agent-error-messages"></a>Send SQL Server Agent Error Messages
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -32,16 +31,6 @@ ms.locfileid: "52524961"
 
 このトピックでは、[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] を使用して [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] で、net send によってエラー メッセージを送信するように [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェントを構成する方法について説明します。  
   
-**このトピックの内容**  
-  
--   **作業を開始する準備:**  
-  
-    [制限事項と制約事項](#Restrictions)  
-  
-    [Security](#Security)  
-  
--   [SQL Server Management Studio を使用して SQL Server エージェントのエラー メッセージを送信するには](#SSMSProcedure)  
-  
 ## <a name="BeforeYouBegin"></a>はじめに  
   
 ### <a name="Restrictions"></a>制限事項と制約事項  
@@ -50,10 +39,10 @@ ms.locfileid: "52524961"
   
 -   net send イベントを受信するには、 [!INCLUDE[msCoName](../../includes/msconame_md.md)] Windows Messenger サービスを実行している必要があります。  
   
-### <a name="Security"></a>Security  
+### <a name="Security"></a>セキュリティ  
   
-#### <a name="Permissions"></a>Permissions  
-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェントの機能を実行するには、 **の** sysadmin [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]固定サーバー ロールのメンバーであるアカウントの資格情報を使用するように構成する必要があります。 このアカウントには、次の Windows 権限が必要です。  
+#### <a name="Permissions"></a>アクセス許可  
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェントの機能を実行するには、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]固定サーバー ロールの **sysadmin** のメンバーであるアカウントの資格情報を使用するように構成する必要があります。 このアカウントには、次の Windows 権限が必要です。  
   
 -   サービスとしてログオン (SeServiceLogonRight)  
   
@@ -73,7 +62,7 @@ ms.locfileid: "52524961"
   
 2.  **[SQL Server エージェント]** を右クリックし、 **[プロパティ]** を選択します。  
   
-3.  **[全般]** ページの **[SQL Server エージェントのプロパティ -**_server\_name]_ ダイアログ ボックスの **[エラー ログ]** の下の **[Net Send 受信者]** ボックスに、エラー メッセージの送信先となるユーザー名またはコンピューター名を入力します。  
+3.  **[全般]** ページの **[SQL Server エージェントのプロパティ -** _server\_name]_ ダイアログ ボックスの **[エラー ログ]** の下の **[Net Send 受信者]** ボックスに、エラー メッセージの送信先となるユーザー名またはコンピューター名を入力します。  
   
 4.  **[OK]** をクリックします。  
   

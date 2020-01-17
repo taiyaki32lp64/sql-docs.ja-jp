@@ -2,18 +2,18 @@
 title: RsReportServer.config 構成ファイル | Microsoft Docs
 ms.date: 06/12/2017
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: report-server
 ms.topic: conceptual
 ms.assetid: 60e0a0b2-8a47-4eda-a5df-3e5e403dbdbc
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 6ba83e5cb431b2bcc10c0ba195189fc570f14cb9
-ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 351ca36275fbd782e3bf3e8d098aaf6a49287430
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/18/2018
-ms.locfileid: "53591566"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66500410"
 ---
 # <a name="rsreportserverconfig-configuration-file"></a>RSReportServer Configuration File
 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]**RsReportServer.config** ファイルには、レポート サーバー Web サービスおよびバックグラウンド処理で使用される設定が格納されます。 すべての [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] アプリケーションは、RSReportServer.config ファイルに格納された構成設定を読み取る単一のプロセス内で実行されます。 ネイティブ モードのレポート サーバーと SharePoint モードのレポート サーバーはどちらも RSReportServer.config を使用しますが、両方のモードで構成ファイル内のまったく同じ設定が使用されるわけではありません。 SharePoint モードの設定の多くは、ファイルではなく SharePoint 構成データベースに格納されるため、SharePoint モード バージョンのファイルは、より小さくなります。 このトピックでは、ネイティブ モードおよび SharePoint モード用にインストールされる既定の構成ファイル、いくつかの重要な設定、および構成ファイルによって制御される動作について説明します。  
@@ -66,7 +66,7 @@ C:\Program Files\Common Files\Microsoft Shared\Web Server Extensions\15\WebServi
 |**Dsn**|レポート サーバー データベースをホストするデータベース サーバーへの接続文字列を指定します。 この値は、レポート サーバー データベースの作成時に、暗号化されて構成ファイルに追加されます。 SharePoint では、SharePoint 構成データベースからデータベース接続情報が取得されます。|N、S|  
 |**ConnectionType**|レポート サーバーがレポート サーバー データベースへの接続に使用する資格情報のタイプを指定します。 有効な値は、 **Default** および **Impersonate**です。 **Default** は、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のログインまたはサービス アカウントを使用してレポート サーバー データベースに接続するようにレポート サーバーを構成する場合に指定します。 **Impersonate** は、レポート サーバーが Windows アカウントを使用してレポート サーバー データベースに接続する場合に指定します。|×|  
 |**LogonUser、LogonDomain、LogonCred**|レポート サーバーがレポート サーバー データベースに接続するときに使用するドメイン アカウントのドメイン、ユーザー名、およびパスワードを格納します。 **LogonUser**、 **LogonDomain**、および **LogonCred** の値は、レポート サーバー接続がドメイン アカウントを使用するように構成されていると作成されます。 レポート サーバーのデータベース接続の詳細については、「[レポート サーバー データベース接続の構成 &#40;SSRS 構成マネージャー&#41;](../../reporting-services/install-windows/configure-a-report-server-database-connection-ssrs-configuration-manager.md)」を参照してください。|×|  
-|**InstanceID**|レポート サーバーのインスタンス用の識別子です。 レポート サーバー インスタンスの名前は、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスの名前に基づいています。 この値は、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンス名を指定します。 既定値は **MSRS12**_\<インスタンス名>_ です。 この設定は変更しないでください。 完全な値の例を次に示します: `<InstanceId>MSRS13.MSSQLSERVER</InstanceId>`<br /><br /> SharePoint モードの例を次に示します:<br /><br /> `<InstanceId>MSRS12.@Sharepoint</InstanceId>`|N、S|  
+|**InstanceID**|レポート サーバーのインスタンス用の識別子です。 レポート サーバー インスタンスの名前は、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスの名前に基づいています。 この値は、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンス名を指定します。 既定値は **MSRS12** _\<インスタンス名>_ です。 この設定は変更しないでください。 完全な値の例を次に示します: `<InstanceId>MSRS13.MSSQLSERVER</InstanceId>`<br /><br /> SharePoint モードの例を次に示します:<br /><br /> `<InstanceId>MSRS12.@Sharepoint</InstanceId>`|N、S|  
 |**InstallationID**|セットアップによって作成されるレポート サーバーのインストール用の識別子です。 この値は GUID に設定されます。 この設定は変更しないでください。|×|  
 |**SecureConnectionLevel**|Web サービス呼び出しにおける SSL (Secure Sockets Layer) の使用レベルを指定します。 この設定は、レポート サーバー Web サービスと Web ポータルの両方で使用されます。 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 構成ツールで、HTTP または HTTPS を使用するように URL を構成すると、この値が設定されます。 SQL Server 2008 R2 で、SecureConnectionLevel はオン/オフのスイッチとして使用されます。 SQL Server 2008 R2 より前のバージョンの場合、有効な値の範囲は 0 から 3 で、0 はセキュリティ レベルが最も低くなります。 詳細については、「[ConfigurationSetting メソッド - SetSecureConnectionLevel](../../reporting-services/wmi-provider-library-reference/configurationsetting-method-setsecureconnectionlevel.md)」、「[セキュリティで保護された Web サービス メソッドの使用](../../reporting-services/report-server-web-service/net-framework/using-secure-web-service-methods.md)」および「[ネイティブ モードのレポート サーバーでの SSL 接続の構成](../../reporting-services/security/configure-ssl-connections-on-a-native-mode-report-server.md)」を参照してください。|N、S|
 |**DisableSecureFormsAuthenticationCookie**|既定値は False です。<br /><br /> フォーム認証とカスタム認証をセキュリティで保護されているものとしてマークするために使用するクッキーの強制を無効にするかどうかを指定します。 SQL Server 2012 以降、 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] によって、カスタム認証拡張機能と共に使用されるフォーム認証クッキーが、クライアントへの送信時にセキュリティで保護されたクッキーとして自動的にマークされます。 このプロパティを変更することで、レポート サーバー管理者およびカスタム セキュリティ拡張機能の作成者は、カスタム セキュリティ拡張機能の作成者がクッキーをセキュリティで保護されたクッキーとしてマークするかどうかを指定できた以前の動作に戻すことができます。 ネットワーク スニッフィングや再生攻撃を防止するため、フォーム認証にはセキュリティで保護されたクッキーを使用することをお勧めします。|×|  
@@ -103,7 +103,7 @@ C:\Program Files\Common Files\Microsoft Shared\Web Server Extensions\15\WebServi
 |設定|[説明]|モード|  
 |-------------|-----------------|----------|  
 |**アプリケーション**|[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] アプリケーションの設定を格納します。|×|  
-|**名前**|[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] アプリケーションを指定します。 有効な値は ReportServerWebService または ReportManager です。|×|  
+|**[名前]**|[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] アプリケーションを指定します。 有効な値は ReportServerWebService または ReportManager です。|×|  
 |**VirtualDirectory**|アプリケーションの仮想ディレクトリ名を指定します。|×|  
 |**URLs、URL**|アプリケーションの 1 つまたは複数の URL 予約を格納します。|×|  
 |**UrlString**|HTTP.SYS の有効な URL 構文を指定します。 構文の詳細については、「[URL 予約の構文 &#40;SSRS 構成マネージャー&#41;](../../reporting-services/install-windows/url-reservation-syntax-ssrs-configuration-manager.md)」を参照してください。|×|  
@@ -131,13 +131,13 @@ C:\Program Files\Common Files\Microsoft Shared\Web Server Extensions\15\WebServi
   
 |設定|[説明]|モード|  
 |-------------|-----------------|----------|  
-|**AuthenticationTypes**|1 つまたは複数の認証の種類を指定します。 有効な値は、**RSWindowsNegotiate**、**RSWindowsKerberos**、**RSWindowsNTLM**、**RSWindowsBasic**、および **Custom** です。<br /><br /> **RSWindows** タイプと **Custom** は、相互に排他的です。<br /><br /> **RSWindowsNegotiate**、 **RSWindowsKerberos**、 **RSWindowsNTLM**、および **RSWindowsBasic** は累積的に設定されるため、前述の既定値の例に示したように、組み合わせて指定することができます。<br /><br /> 認証の種類が異なる複数のクライアント アプリケーションまたはブラウザーから要求を受け取る場合は、認証の種類を複数指定する必要があります。<br /><br /> **RSWindowsNTLM**は削除しないでください。削除した場合、サポートされるブラウザーの種類が制限されます。 詳細については、「 [Reporting Services と Power View のブラウザー サポート](../../reporting-services/browser-support-for-reporting-services-and-power-view.md)」を参照してください。|×|  
+|**AuthenticationTypes**|1 つまたは複数の認証の種類を指定します。 有効な値は、 **RSWindowsNegotiate**、 **RSWindowsKerberos**、 **RSWindowsNTLM**、 **RSWindowsBasic**、および **Custom**です。<br /><br /> **RSWindows** タイプと **Custom** は、相互に排他的です。<br /><br /> **RSWindowsNegotiate**、 **RSWindowsKerberos**、 **RSWindowsNTLM**、および **RSWindowsBasic** は累積的に設定されるため、前述の既定値の例に示したように、組み合わせて指定することができます。<br /><br /> 認証の種類が異なる複数のクライアント アプリケーションまたはブラウザーから要求を受け取る場合は、認証の種類を複数指定する必要があります。<br /><br /> **RSWindowsNTLM**は削除しないでください。削除した場合、サポートされるブラウザーの種類が制限されます。 詳細については、「 [Reporting Services と Power View のブラウザー サポート](../../reporting-services/browser-support-for-reporting-services-and-power-view.md)」を参照してください。|×|  
 |**RSWindowsNegotiate**|レポート サーバーは、Kerberos または NTLM のいずれかのセキュリティ トークンを受け付けます。 これは、レポート サーバーがネイティブ モードで実行され、サービス アカウントが Network Service である場合の既定の設定です。 レポート サーバーがネイティブ モードで実行され、サービス アカウントがドメイン ユーザー アカウントとして構成されている場合、この設定は省略されます。<br /><br /> レポート サーバー サービス アカウントに対してドメイン アカウントが構成されており、レポート サーバーに対してサービス プリンシパル名 (SPN) が構成されていない場合、この設定により、ユーザーがサーバーにログオンできないことがあります。|×|  
 |**RSWindowsNTLM**|サーバーは、NTLM のセキュリティ トークンを受け付けます。<br /><br /> この設定を削除した場合、サポートされるブラウザーの種類が制限されます。 詳細については、「 [Reporting Services と Power View のブラウザー サポート](../../reporting-services/browser-support-for-reporting-services-and-power-view.md)」を参照してください。|N、S|  
 |**RSWindowsKerberos**|サーバーは、Kerberos のセキュリティ トークンを受け付けます。<br /><br /> 制約付き委任の認証スキームで Kerberos 認証を使用する場合は、この設定か RSWindowsNegotiate を使用してください。|×|  
 |**RSWindowsBasic**|サーバーは基本資格情報を受け付けます。資格情報なしで接続が試みられた場合、チャレンジ/レスポンスを発行します。<br /><br /> 基本認証では、HTTP 要求において、資格情報がクリア テキストで渡されます。 基本認証を使用する場合は、レポート サーバーとの間でやり取りされるネットワーク トラフィックを SSL で暗号化してください。 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]で基本認証を構成するための構文例については、「 [レポート サーバーでの認証](../../reporting-services/security/authentication-with-the-report-server.md)」を参照してください。|×|  
 |**Custom**|レポート サーバー コンピューターにカスタム セキュリティ拡張機能を配置した場合は、この値を指定します。 詳細については、「 [Implementing a Security Extension](../../reporting-services/extensions/security-extension/implementing-a-security-extension.md)」を参照してください。|×|  
-|**LogonMethod**|この値は、 **RSWindowsBasic**におけるログオンの種類を指定します。 **RSWindowsBasic**を指定した場合、この値は省略できません。 有効な値は 2 または 3 で、それぞれ次の意味になります。<br /><br /> **2** = ネットワーク ログオン。プレーンテキスト パスワードを認証する高パフォーマンス サーバー向けです。<br /><br /> **3** = クリア テキスト ログオン。各 HTTP 要求と一緒に送信される認証パッケージにログオン資格情報が保持されます。これにより、ネットワーク内の他のサーバーに接続する際に、サーバーがユーザーの権限を借用できます。<br /><br /> <br /><br /> 注:値 0 (対話型ログオン) と値 1 (バッチ ログオン) は、[!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)] ではサポートされません。|×|  
+|**LogonMethod**|この値は、 **RSWindowsBasic**におけるログオンの種類を指定します。 **RSWindowsBasic**を指定した場合、この値は省略できません。 有効な値は 2 または 3 で、それぞれ次の意味になります。<br /><br /> **2** = ネットワーク ログオン。プレーンテキスト パスワードを認証する高パフォーマンス サーバー向けです。<br /><br /> **3** = クリア テキスト ログオン。各 HTTP 要求と一緒に送信される認証パッケージにログオン資格情報が保持されます。これにより、ネットワーク内の他のサーバーに接続する際に、サーバーがユーザーの権限を借用できます。<br /><br /> <br /><br /> 注: 値 0 (対話型ログオン) と値 1 (バッチ ログオン) は、 [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)]ではサポートされません。|×|  
 |**Realm**|この値は、 **RSWindowsBasic**で使用されます。 組織内の保護されたリソースへのアクセスを制御するための承認機能や認証機能を含んだリソース パーティションを指定します。|×|  
 |**DefaultDomain**|この値は、 **RSWindowsBasic**で使用されます。 サーバーがユーザーを認証する際のドメインを決定するために使用されます。 この値はオプションです。ただし、省略した場合、レポート サーバーでは、コンピューター名がドメインとして使用されます。 レポート サーバーをドメイン コントローラーにインストールした場合、そのコンピューターによって制御されるドメインを指定します。|×|  
 |**RSWindowsExtendedProtectionLevel**|既定値は **off**です。 詳細については、「 [Extended Protection for Authentication with Reporting Services](../../reporting-services/security/extended-protection-for-authentication-with-reporting-services.md)」をご覧ください。|×|  
@@ -238,7 +238,7 @@ C:\Program Files\Common Files\Microsoft Shared\Web Server Extensions\15\WebServi
 |**ExcludedRenderFormats**、 **RenderingExtension**|ファイル共有配信でうまく使用できないエクスポート形式を意図的に除外する場合に使用します。 通常、これらの形式は、対話型のレポートやプレビューに使用されるほか、レポートを事前にキャッシュする場合に使用されます。 デスクトップ アプリケーションから簡単に閲覧できるアプリケーション ファイルは生成されません。<br /><br /> HTMLOWC<br /><br /> RGDI<br /><br /> [Null]|  
   
 ####  <a name="bkmk_email_extension"></a> レポート サーバーの電子メール拡張機能の構成設定  
- レポート サーバーの電子メールでは、SMTP ネットワーク デバイスを使用して、レポートを電子メール アドレスに送信します。 使用するには、この配信拡張機能があらかじめ構成されている必要があります。 詳細については、「 [電子メール配信用にレポート サーバーを構成する (SSRS 構成マネージャー)](https://msdn.microsoft.com/b838f970-d11a-4239-b164-8d11f4581d83) 」および「 [Reporting Services 構成ファイル](../../reporting-services/subscriptions/e-mail-delivery-in-reporting-services.md)」を参照してください。  
+ レポート サーバーの電子メールでは、SMTP ネットワーク デバイスを使用して、レポートを電子メール アドレスに送信します。 使用するには、この配信拡張機能があらかじめ構成されている必要があります。 詳細については、「 [Reporting Services の電子メール配信](../../reporting-services/subscriptions/e-mail-delivery-in-reporting-services.md)」を参照してください。  
   
 |設定|[説明]|  
 |-------------|-----------------|  
@@ -250,7 +250,7 @@ C:\Program Files\Common Files\Microsoft Shared\Web Server Extensions\15\WebServi
 |**SMTPUseSSL**|ネットワークを介した SMTP メッセージの送信時に SSL (Secure Sockets Layer) を使用するよう設定できる、ブール値を指定します。 既定値は 0 (または False) です。 この設定は、 **SendUsing** 要素が 2 に設定されている場合に使用できます。|  
 |**SendUsing**|メッセージの送信に使用する方法を指定します。 有効な値は、<br /><br /> 1 = ローカル SMTP サービスのピックアップ ディレクトリからメッセージを送信します。<br /><br /> 2 = ネットワークの SMTP サービスからメッセージを送信します。|  
 |**SMTPAuthenticate**|TCP/IP 接続経由での SMTP サービスへのメッセージ送信に使用する認証の種類を示す整数値を指定します。 有効な値は、<br /><br /> 0 = 認証を行いません。<br /><br /> 1 = (サポートされていません)。<br /><br /> 2 = NTLM (NT LanMan) 認証を行います。 ネットワーク SMTP サーバーへの接続には、レポート サーバー Windows サービスのセキュリティ コンテキストが使用されます。|  
-|**From**|レポートの送信元の電子メール アドレスを、 *abc@host.xyz*」を参照してください。 アドレスは、送信する電子メール メッセージの **[差出人]** 行に表示されます。 リモート SMTP サーバーを使用している場合に、この値が必要です。 メールを送信する権限を持つ有効な電子メール アカウントを指定する必要があります。|  
+|**From**|レポートの送信元の電子メール アドレスを、 *abc@host.xyz* 」を参照してください。 アドレスは、送信する電子メール メッセージの **[差出人]** 行に表示されます。 リモート SMTP サーバーを使用している場合に、この値が必要です。 メールを送信する権限を持つ有効な電子メール アカウントを指定する必要があります。|  
 |**EmbeddedRenderFormats、RenderingExtension**|電子メール メッセージ本文内のレポートのカプセル化に使用する表示形式を指定します。 続いて、レポート内の画像がレポートに埋め込まれます。 有効な値は、MHTML および HTML4.0 です。|  
 |**PrivilegedUserRenderFormats**|"すべてのサブスクリプションを管理" タスクを使用してサブスクライブが有効になっている場合に、ユーザーがレポートのサブスクリプション用に選択できる表示形式を指定します。 この値が設定されていない場合は、意図的に除外されたものを除く、すべての表示形式を使用できます。|  
 |**ExcludedRenderFormats、RenderingExtension**|指定の配信拡張機能で適切に処理されない形式を意図的に除外します。 同じ表示拡張機能の複数のインスタンスは除外できません。 複数のインスタンスを除外すると、レポート サーバーが構成ファイルを読み取るときにエラーが発生します。 既定では、電子メール配信に対し、次の拡張機能は除外されます。<br /><br /> HTMLOWC<br /><br /> [Null]<br /><br /> RGDI|  

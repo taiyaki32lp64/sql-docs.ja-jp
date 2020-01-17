@@ -7,15 +7,15 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: f0a70216-fdac-44ae-af29-35f65626217c
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: e7d0e456b94ffc0bbb3c829121f7fa88e9b6b860
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: f70d32549bb99458b06b835240e826d15967d9b6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52790444"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62827814"
 ---
 # <a name="data-mining-model-training-destination-custom-properties"></a>データ マイニング モデル トレーニング変換先のカスタム プロパティ
   データ マイニング モデル トレーニング変換先には、カスタム プロパティと、すべてのデータ フロー コンポーネントとの共通プロパティの両方があります。  
@@ -33,6 +33,6 @@ ms.locfileid: "52790444"
  詳細については、「 [データ マイニング モデル トレーニング変換先](data-mining-model-training-destination.md)」を参照してください。  
   
 ## <a name="see-also"></a>参照  
- [Common Properties](../common-properties.md)  
+ [共通プロパティ](../common-properties.md)  
   
   

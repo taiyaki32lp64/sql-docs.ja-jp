@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - itemsets [Analysis Services]
@@ -17,12 +16,12 @@ ms.assetid: 68b39f5c-c439-44ac-8046-6f2d36649059
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 268685c489d03f7e9055042ab613223146f89600
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: a31052c0d239010407941141997fca8fc343f9cf
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52519403"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66086122"
 ---
 # <a name="association-model-query-examples"></a>結合モデルのクエリ例
   データ マイニング モデルに対するクエリを作成する際には、コンテンツ クエリを作成することも、予測クエリを作成することもできます。コンテンツ クエリでは、分析の間に検出されたルールやアイテムセットの詳細情報を取得できます。予測クエリでは、データ内で検出されたアソシエーションを使用して予測を行うことができます。 アソシエーション モデルの場合、予測はルールに基づいて行われるのが一般的で、提案を行うために使用できます。一方、コンテンツ クエリではアイテムセット間の関係を調べるのが一般的です。 モデルに関するメタデータを取得することもできます。  
@@ -236,7 +235,7 @@ ORDER BY NODE_SUPPORT DESC
 |[PredictSupport &#40;DMX&#41;](/sql/dmx/predictsupport-dmx)|指定された状態に対するサポート値を返します。|  
 |[PredictVariance (DMX)](/sql/dmx/predictvariance-dmx)|予測値の分散を返します。|  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [Microsoft アソシエーション アルゴリズム](microsoft-association-algorithm.md)   
  [Microsoft アソシエーション アルゴリズム テクニカル リファレンス](microsoft-association-algorithm-technical-reference.md)   
  [アソシエーション モデルのマイニング モデル コンテンツ (Analysis Services - データ マイニング)](mining-model-content-for-association-models-analysis-services-data-mining.md)  

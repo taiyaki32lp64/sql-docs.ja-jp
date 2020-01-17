@@ -23,21 +23,20 @@ helpviewer_keywords:
 ms.assetid: ab32d644-4228-449a-9ef0-5a975c305775
 author: VanMSFT
 ms.author: vanto
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 6cf3099efd6ccb301be024c6a18b2279d0482f26
-ms.sourcegitcommit: 019b6f355a69aa409e6601de8977a8c307f793cb
+ms.openlocfilehash: d2f8a3f4dbdbaa9cbd2cf1c99a86ad6f3573ab11
+ms.sourcegitcommit: f688a37bb6deac2e5b7730344165bbe2c57f9b9c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/16/2019
-ms.locfileid: "56331532"
+ms.lasthandoff: 11/08/2019
+ms.locfileid: "73844337"
 ---
-# <a name="username-transact-sql"></a>USER_NAME (Transact-SQL)
+# <a name="user_name-transact-sql"></a>USER_NAME (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-  指定した識別番号から、データベース ユーザー名を返します。  
+  指定した ID 番号から、データベース ユーザー名を返します。  
   
- ![記事のリンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "記事のリンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![記事リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "記事リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>構文  
   
@@ -47,17 +46,17 @@ USER_NAME ( [ id ] )
   
 ## <a name="arguments"></a>引数  
  *id*  
- データベース ユーザーに関連付けられている識別番号を指定します。 *id* は **int** です。かっこで囲む必要があります。  
+ データベース ユーザーに関連付けられている識別番号を指定します。 *id* は **int** です。かっこが必要です。  
   
 ## <a name="return-types"></a>戻り値の型  
- **nvarchar (256)**  
+ **nvarchar(128)**  
   
 ## <a name="remarks"></a>Remarks  
  *id* を省略した場合は、現在のコンテキストの現在のユーザーであると見なされます。 パラメーターに "NULL" という語が含まれていると、NULL が返されます。 EXECUTE AS ステートメントの実行後に *id* を指定せずに USER_NAME を呼び出した場合、USER_NAME では権限を借用したユーザーの名前が返されます。 Windows プリンシパルがグループのメンバーシップを使ってデータベースにアクセスした場合、USER_NAME はグループではなく Windows プリンシパルの名前を返します。  
   
 ## <a name="examples"></a>使用例  
   
-### <a name="a-using-username"></a>A. USER_NAME を使用する  
+### <a name="a-using-user_name"></a>A. USER_NAME を使用する  
  次の例では、ユーザー ID `13` のユーザー名を返します。  
   
 ```  
@@ -65,7 +64,7 @@ SELECT USER_NAME(13);
 GO  
 ```  
   
-### <a name="b-using-username-without-an-id"></a>B. ID を指定せずに USER_NAME を使用する  
+### <a name="b-using-user_name-without-an-id"></a>B. ID を指定せずに USER_NAME を使用する  
  次の例では、ID を指定せずに、現在のユーザーの名前を検索します。  
   
 ```  
@@ -82,7 +81,7 @@ dbo
 (1 row(s) affected)
 ```  
   
-### <a name="c-using-username-in-the-where-clause"></a>C. WHERE 句で USER_NAME を使用する  
+### <a name="c-using-user_name-in-the-where-clause"></a>C. WHERE 句で USER_NAME を使用する  
  次の例では、`sysusers` の行を検索します。検索される名前は、ユーザー識別番号 `USER_NAME` に対してシステム関数 `1` を適用した結果と同じになります。  
   
 ```  
@@ -100,7 +99,7 @@ dbo
 (1 row(s) affected)
 ```  
   
-### <a name="d-calling-username-during-impersonation-with-execute-as"></a>D. EXECUTE AS での権限借用中に USER_NAME を呼び出す  
+### <a name="d-calling-user_name-during-impersonation-with-execute-as"></a>D. EXECUTE AS での権限借用中に USER_NAME を呼び出す  
  次の例では、権限借用中の `USER_NAME` の動作を示します。  
   
 ```  
@@ -126,7 +125,7 @@ DBO
   
 ## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>例: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] および [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
-### <a name="e-using-username-without-an-id"></a>E. ID を指定せずに USER_NAME を使用する  
+### <a name="e-using-user_name-without-an-id"></a>E. ID を指定せずに USER_NAME を使用する  
  次の例では、ID を指定せずに、現在のユーザーの名前を検索します。  
   
 ```  
@@ -140,7 +139,7 @@ SELECT USER_NAME();
 User7                              
 ```  
   
-### <a name="f-using-username-in-the-where-clause"></a>F. WHERE 句で USER_NAME を使用する  
+### <a name="f-using-user_name-in-the-where-clause"></a>F. WHERE 句で USER_NAME を使用する  
  次の例では、`sysusers` の行を検索します。検索される名前は、ユーザー識別番号 `USER_NAME` に対してシステム関数 `1` を適用した結果と同じになります。  
   
 ```  
@@ -161,6 +160,6 @@ User7
  [CURRENT_TIMESTAMP &#40;Transact-SQL&#41;](../../t-sql/functions/current-timestamp-transact-sql.md)   
  [CURRENT_USER &#40;Transact-SQL&#41;](../../t-sql/functions/current-user-transact-sql.md)   
  [SESSION_USER &#40;Transact-SQL&#41;](../../t-sql/functions/session-user-transact-sql.md)   
- [システム関数 &#40;Transact-SQL&#41;](../../relational-databases/system-functions/system-functions-for-transact-sql.md)   
- [SYSTEM_USER (&) #40 です。TRANSACT-SQL と #41 です。](../../t-sql/functions/system-user-transact-sql.md)  
+ [システム関数 &#40;Transact-SQL&#41;](../../relational-databases/system-functions/system-functions-category-transact-sql.md)   
+ [SYSTEM_USER &#40;Transact-SQL&#41;](../../t-sql/functions/system-user-transact-sql.md)  
   

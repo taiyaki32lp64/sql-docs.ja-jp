@@ -9,15 +9,15 @@ ms.topic: conceptual
 helpviewer_keywords:
 - FOR XML clause, generating XML from rowsets
 ms.assetid: d061c0f1-3de9-4ad1-bbca-ce45d064b6c8
-author: douglaslMS
-ms.author: douglasl
+author: MightyPen
+ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 21135669cbacdad77e5dcb2da73500c8cdbe8fa2
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 181d07e187c6b1091d38ebbe0018c61ae856caf3
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48113732"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63204988"
 ---
 # <a name="generate-xml-from-rowsets-with-for-xml"></a>FOR XML を使用した行セットからの XML の生成
   生成することができます、`xml`新しいを FOR XML を使用して行セットからのデータ型のインスタンス**型**ディレクティブ。  
@@ -26,7 +26,7 @@ ms.locfileid: "48113732"
   
  新しい **FOR XML TYPE** ディレクティブを使用すると、リレーショナル データの読み取り専用の XML ビューを SQL 構文で定義できます。 このビューには、次の例で示すように SQL ステートメントおよびそれに埋め込まれた XQuery を使用してクエリを実行できます。 この SQL ビューをストアド プロシージャで参照することもできます。  
   
-## <a name="example-sql-view-returning-generated-xml-data-type"></a>例 : 生成された xml データ型を返す SQL ビュー  
+## <a name="example-sql-view-returning-generated-xml-data-type"></a>例: 生成された xml データ型を返す SQL ビュー  
  次の SQL ビュー定義により、リレーショナル列 pk および XML 列から取得した著者氏名の XML ビューが作成されます。  
   
 ```  

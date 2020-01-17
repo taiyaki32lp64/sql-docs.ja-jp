@@ -14,15 +14,14 @@ helpviewer_keywords:
 - database diagrams [SQL Server], ownership
 - owners [SQL Server], database diagrams
 ms.assetid: 4a27a48e-c4ef-4017-82b8-0cac4d0bbcac
-author: stevestein
-ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 7aeb291651fb79a766c120fec6eadf43a7c8bbf7
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: c331fb3e1b189d4362f91c9559f1ec6e28960c97
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47717600"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68263140"
 ---
 # <a name="understand-database-diagram-ownership-visual-database-tools"></a>データベース ダイアグラムの所有権について (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

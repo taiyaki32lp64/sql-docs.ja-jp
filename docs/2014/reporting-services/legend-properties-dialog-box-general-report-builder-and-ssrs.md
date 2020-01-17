@@ -4,22 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 f1_keywords:
 - sql12.rtp.rptdesigner.legendproperties.general.f1
 - "10184"
 ms.assetid: db718f8f-f185-422f-871c-96f0749e5893
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 76577b8623639d2fa9bffb5b83d65604a5afdcbe
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: defd23b4ef341f54551490470de494edd942221e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56287900"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66108555"
 ---
 # <a name="legend-properties-dialog-box-general-report-builder-and-ssrs"></a>[全般] ([凡例のプロパティ] ダイアログ ボックス) (レポート ビルダーおよび SSRS)
   **[凡例のプロパティ]** ダイアログ ボックスを使用すると、グラフ内の凡例の外観およびレイアウトを定義できます。 詳細については、次を参照してください。[グラフの凡例の書式設定&#40;レポート ビルダーおよび SSRS&#41;](report-design/chart-legend-formatting-report-builder.md)します。  

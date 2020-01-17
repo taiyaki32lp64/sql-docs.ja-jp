@@ -19,11 +19,11 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: 79637e9f891c70a79e5388a4932957cbff8377f8
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53360614"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62643389"
 ---
 # <a name="instancename-property-servernetworkprotocolipaddress-class"></a>InstanceName プロパティ (ServerNetworkProtocolIPAddress クラス)
   サーバー ネットワーク プロトコルがインストールされている [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] のインスタンスの名前を取得します。  

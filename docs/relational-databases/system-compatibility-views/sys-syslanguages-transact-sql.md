@@ -1,5 +1,5 @@
 ---
-title: sys.syslanguages (TRANSACT-SQL) |Microsoft Docs
+title: sys.syslanguages (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -20,37 +20,36 @@ helpviewer_keywords:
 ms.assetid: f216d1cd-997c-42f0-a737-abbdfcd88383
 author: rothja
 ms.author: jroth
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 0b873a4d43d76fe27c7a807324c2fb60ce3d42fa
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: bc152b8241b775f9fd686f8a31363cb4fca39de4
+ms.sourcegitcommit: f76b4e96c03ce78d94520e898faa9170463fdf4f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47719720"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70874875"
 ---
 # <a name="syssyslanguages-transact-sql"></a>sys.syslanguages (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスに存在する言語ごとに、1 行のデータを格納します。  
   
-|列名|データ型|説明|  
+|列名|データ型|[説明]|  
 |-----------------|---------------|-----------------|  
-|langid|**smallint**|一意な言語 ID。|  
-|dateformat|**nchar(3)**|日付の表示順序 (例 : DMY)。|  
-|datefirst|**tinyint**|週の最初の曜日。1 は月曜、2 は火曜のようになり、7 は日曜になります。|  
-|upgrade|**int**|システムでの使用のため予約済み。|  
-|NAME|**sysname**|たとえば、フランス語の公式言語名。|  
+|langid|**smallint**|一意の言語 ID。|  
+|dateformat|**nchar(3)**|日付の順序 (例、DMY)。|  
+|datefirst|**tinyint**|週の最初の曜日: 1 の場合は1、火曜日の場合は2、日曜日の場合は7です。|  
+|増設|**int**|システム用に予約されています。|  
+|name|**sysname**|公式言語名 (たとえば、フランス語)。|  
 |別名 (alias)|**sysname**|言語の別名 (例 : French)。|  
-|months|**nvarchar(372)**|1 月から 12 月の順に、コンマで区切った月の名前。月の名前は省略形ではなく、それぞれ 20 文字までです。|  
+|months|**nvarchar(372)**|1月から12月までの完全な長さの月名のコンマ区切りのリスト。各名前は最大20文字です。|  
 |shortmonths|**nvarchar(132)**|1 月から 12 月の順に、コンマで区切った月の名前。月の名前は省略形で、それぞれ 9 文字までです。|  
-|日|**nvarchar(217)**|月曜から日曜の順に、コンマで区切った曜日の名前。曜日の名前はそれぞれ 30 文字までです。|  
+|日時|**nvarchar(217)**|曜日の名前のコンマ区切りリスト。各名前は最大30文字で指定します。|  
 |lcid|**int**|この言語を使用する [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows のロケール ID。|  
-|msglangid|**smallint**|[!INCLUDE[ssDE](../../includes/ssde-md.md)] メッセージ グループ id。|  
+|msglangid|**smallint**|[!INCLUDE[ssDE](../../includes/ssde-md.md)] メッセージグループ ID。|  
   
- [!INCLUDE[ssDE](../../includes/ssde-md.md)]次のインストールされている言語が含まれています。  
+ [!INCLUDE[ssDE](../../includes/ssde-md.md)] には、インストールされている次の言語が含まれています。  
   
-|英語で表した名前|Windows LCID|[!INCLUDE[ssDE](../../includes/ssde-md.md)] メッセージ グループ ID|  
+|英語での名前|Windows LCID|[!INCLUDE[ssDE](../../includes/ssde-md.md)] メッセージ グループ ID|  
 |---------------------|------------------|-----------------------------------------|  
 |英語|1033|1033|  
 |ドイツ語|1031|1031|  
@@ -76,18 +75,18 @@ ms.locfileid: "47719720"
 |ロシア語|1049|1049|  
 |トルコ語|1055|1055|  
 |英語 (U.K.)|2057|1033|  
-|エストニア語|1061|1061|  
+|Estonian|1061|1061|  
 |ラトビア語|1062|1062|  
 |リトアニア語|1063|1063|  
-|ブラジル|1046|1046|  
+|ポルトガル語 (ブラジル)|1046|1046|  
 |繁体字中国語|1028|1028|  
 |韓国語|1042|1042|  
-|簡体字中国語|2052|2052|  
+|Simplified Chinese|2052|2052|  
 |アラビア語|1025|1025|  
 |タイ語|1054|1054|  
   
 ## <a name="see-also"></a>参照  
- [互換性ビュー &#40;TRANSACT-SQL&#41;](~/relational-databases/system-compatibility-views/system-compatibility-views-transact-sql.md)   
- [システム ビューへのシステム テーブルのマッピング&#40;TRANSACT-SQL&#41;](../../relational-databases/system-tables/mapping-system-tables-to-system-views-transact-sql.md)  
+ [互換性ビュー &#40;transact-sql&#41; ](~/relational-databases/system-compatibility-views/system-compatibility-views-transact-sql.md)   
+ [システムビュー &#40;へのシステムテーブルのマッピング transact-sql&#41;](../../relational-databases/system-tables/mapping-system-tables-to-system-views-transact-sql.md)  
   
   

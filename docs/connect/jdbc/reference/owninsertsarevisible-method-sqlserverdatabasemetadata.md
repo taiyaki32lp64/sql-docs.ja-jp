@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: 9fe76aa3-a539-4335-822f-69cc35a9e7e0
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 70c1e91c37954414b199e3edd15393a055ab5d47
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a78b6d90c58f7d04f5a3d9f6c8225cf592153d2d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47727890"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67976531"
 ---
 # <a name="owninsertsarevisible-method-sqlserverdatabasemetadata"></a>ownInsertsAreVisible メソッド (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -65,7 +64,7 @@ public boolean ownInsertsAreVisible(int type)
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- この ownInsertsAreVisible メソッドは、java.sql.DatabaseMetaData インターフェイスで ownInsertsAreVisible メソッドによって指定されます。  
+ この ownInsertsAreVisible メソッドは、ownInsertsAreVisible メソッドによって、java メタデータインターフェイスで指定されます。  
   
 ## <a name="see-also"></a>参照  
  [SQLServerDatabaseMetaData のメソッド](../../../connect/jdbc/reference/sqlserverdatabasemetadata-methods.md)   

@@ -15,11 +15,11 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: ee814dc0891e70dfeccf2b96383d1d7b5c324aa8
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56020783"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62931530"
 ---
 # <a name="lesson-2-building-a-forecasting-scenario-intermediate-data-mining-tutorial"></a>レッスン 2:予測シナリオ (中級者向けデータ マイニング チュートリアル) の作成
   [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)]のセールス アナリストであるあなたは、翌年の製品売上を予測するよう依頼されました。 具体的には、さまざまな地域および製品ラインの売上予測を比較する必要があります。 さらに、各製品の売上が一年を通じてどのように変化するかも調べなければなりません。  
@@ -85,7 +85,7 @@ ms.locfileid: "56020783"
   
  [レッスン 5: ニューラル ネットワーク モデルとロジスティック回帰モデルを構築&#40;中級者向けデータ マイニング チュートリアル&#41;](../../2014/tutorials/lesson-5-build-models-intermediate-data-mining-tutorial.md)  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [基本的なデータ マイニング チュートリアル](../../2014/tutorials/basic-data-mining-tutorial.md)   
  [中級者向けデータ マイニング チュートリアル&#40;Analysis Services - データ マイニング&#41;](../../2014/tutorials/intermediate-data-mining-tutorial-analysis-services-data-mining.md)   
  [Microsoft タイム シリーズ アルゴリズム](../../2014/analysis-services/data-mining/microsoft-time-series-algorithm.md)  

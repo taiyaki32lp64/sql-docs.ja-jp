@@ -4,21 +4,20 @@ ms.custom: ''
 ms.date: 08/22/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.forloopcontainer.f1
 ms.assetid: c4db9df6-d2f4-44da-9f4d-628893e86956
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: b27f4fc4d938f9b82ca3a4ad126f0cda6d75d8d1
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: e450559355baf1242e5d822761256047f4790fe2
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48123372"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66058566"
 ---
 # <a name="for-loop-editor"></a>[For ループ エディター]
   **[For ループ エディター]** ダイアログ ボックスの **[For ループ]** ページを使用すると、指定した条件が false と評価されるまでワークフローを繰り返すループを構成できます。  

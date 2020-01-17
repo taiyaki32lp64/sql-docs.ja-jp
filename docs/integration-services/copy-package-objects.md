@@ -13,17 +13,20 @@ helpviewer_keywords:
 - data flow [Integration Services], copying objects
 - connection managers [Integration Services], copying
 ms.assetid: 99b85e5c-d6bd-4e7c-afe4-51f6ce151c2f
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: a3f537581dca2880d31efc10e0e3a5ac339f6622
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 4636dde3123cc3742a7dde57fa2a468583e2f2bd
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52526159"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71293600"
 ---
 # <a name="copy-package-objects"></a>パッケージ オブジェクトをコピーする
+
+[!INCLUDE[ssis-appliesto](../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   このトピックでは、制御フロー アイテム、データ フロー アイテム、および接続マネージャーをパッケージ内またはパッケージ間でコピーする方法について説明します。  
   
 ### <a name="to-copy-control-and-data-flow-items"></a>制御フロー アイテムおよびデータ フロー アイテムをコピーするには  

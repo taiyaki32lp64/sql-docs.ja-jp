@@ -13,11 +13,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: c16001cf0b96c42ed2f14c3d63dc0ecd7c456988
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52797604"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62650498"
 ---
 # <a name="proxy-editor-and--add-principal"></a>プロキシ エディターおよび [プリンシパルの追加]
   このページを使用すると、[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェント プロキシ アカウントにサーバー プリンシパル アクセス権を付与できます。  

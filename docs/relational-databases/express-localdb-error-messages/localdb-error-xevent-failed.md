@@ -9,13 +9,12 @@ ms.topic: reference
 ms.assetid: e33f3809-0175-4d83-b1b7-b29d23238846
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: bd5e2af481b3e0f05f5f2975428975be6896ce11
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 85de85cae9ee90e5a3a28b3a3b069ae76553237d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47856959"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68126979"
 ---
 # <a name="localdberrorxeventfailed"></a>LOCALDB_ERROR_XEVENT_FAILED
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

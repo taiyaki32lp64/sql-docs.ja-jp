@@ -22,26 +22,72 @@ helpviewer_keywords:
 ms.assetid: 8b8b3b57-fd46-44de-9a4e-e3a8e3999c1e
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: 70487916496caa4cb2fba5a472262d22c7c123bd
-ms.sourcegitcommit: c61c7b598aa61faa34cd802697adf3a224aa7dc4
+ms.openlocfilehash: 11dc9169ec88928c893d875b7051bfbf551c95fd
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56154657"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68034524"
 ---
-# <a name="sql-server-service-broker"></a>SQL Server Service Broker (SQL Server Service Broker)
+# <a name="service-broker"></a>Service Broker
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssSB](../../includes/sssb-md.md)] は、 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]のメッセージング アプリケーションおよびキューイング アプリケーションをネイティブで サポートします。 これにより、 [!INCLUDE[ssDE](../../includes/ssde-md.md)] コンポーネントを使用して異種データベース間の通信を行う高度なアプリケーションを簡単に作成できるようになるため、 [!INCLUDE[ssSB](../../includes/sssb-md.md)] を使用すれば、信頼性の高い分散アプリケーションを簡単に開発できます。  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssSB](../../includes/sssb-md.md)] では、[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] および [Azure SQL Database Managed Instance](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-index) でのメッセージングとキューのネイティブ サポートが提供されています。 開発者は、[!INCLUDE[ssDE](../../includes/ssde-md.md)] コンポーネントを使用して異種データベース間の通信を行う高度なアプリケーションを簡単に作成し、分散型で信頼できるアプリケーションをビルドすることができます。  
   
- アプリケーション開発者は、 [!INCLUDE[ssSB](../../includes/sssb-md.md)] を使用すれば、通信やメッセージングの複雑な内部のプログラミングを行わなくても、データ ワークロードを複数のデータベースに分散できます。 [!INCLUDE[ssSB](../../includes/sssb-md.md)] によってメッセージ交換のコンテキスト内で通信パスが処理されるので、開発やテストの作業を削減できます。 また、パフォーマンスも向上します。 たとえば、Web サイトをサポートするフロントエンド データベースで情報の記録を行い、処理負荷の高いタスクはバックエンド データベースのキューに送信できます。 [!INCLUDE[ssSB](../../includes/sssb-md.md)] では、すべてのタスクがトランザクションのコンテキストで管理されるため、信頼性と技術的な一貫性を確保できます。  
+## <a name="when-to-use-service-broker"></a>Service Broker を使用する場合
+
+ Service Broker コンポーネントを使用して、ネイティブのデータベース内非同期メッセージ処理機能を実装します。 アプリケーション開発者は、 [!INCLUDE[ssSB](../../includes/sssb-md.md)] を使用すれば、通信やメッセージングの複雑な内部のプログラミングを行わなくても、データ ワークロードを複数のデータベースに分散できます。 [!INCLUDE[ssSB](../../includes/sssb-md.md)] によってメッセージ交換のコンテキスト内で通信パスが処理されるので、Service Broker によって開発やテストの作業が軽減されます。 また、パフォーマンスも向上します。 たとえば、Web サイトをサポートするフロントエンド データベースで情報の記録を行い、処理負荷の高いタスクはバックエンド データベースのキューに送信できます。 [!INCLUDE[ssSB](../../includes/sssb-md.md)] では、すべてのタスクがトランザクションのコンテキストで管理されるため、信頼性と技術的な一貫性を確保できます。  
   
+## <a name="overview"></a>概要
+
+  Service Broker は、ネイティブのデータベース内サービス指向アプリケーションを作成することができるメッセージ配信フレームワークです。 テーブルから常にデータを読み取り、クエリのライフサイクル中に処理する従来のクエリ処理機能とは異なり、サービス指向アプリケーションには、メッセージを交換するデータベース サービスが備えられています。 すべてのサービスには、メッセージが処理されるまで配置されるキューがあります。
+  
+![Service Broker](media/service-broker.png)
+  
+  Transact-SQL `RECEIVE` コマンドを使用するか、またはメッセージがキューに到着するたびに呼び出されるアクティブ化プロシージャによって、キュー内のメッセージをフェッチすることができます。
+  
+### <a name="creating-services"></a>サービスの作成
+ 
+  データベース サービスは、[CREATE SERVICE](../../t-sql/statements/create-service-transact-sql.md) Transact-SQL ステートメントを使用して作成されます。 サービスは、[CREATE QUEUE](../../t-sql/statements/create-queue-transact-sql.md) ステートメントを使用して作成されたメッセージ キューに関連付けることができます。
+  
+```sql
+CREATE QUEUE dbo.ExpenseQueue;
+GO
+CREATE SERVICE ExpensesService
+    ON QUEUE dbo.ExpenseQueue; 
+```
+
+### <a name="sending-messages"></a>メッセージの送信
+  
+  メッセージは、[SEND](../../t-sql/statements/send-transact-sql.md) Transact-SQL ステートメントを使用してサービス間のメッセージ交換で送信されます。 メッセージ交換は、`BEGIN DIALOG` Transact-SQL ステートメントを使用してサービス間で確立される通信チャネルです。 
+  
+```sql
+DECLARE @dialog_handle UNIQUEIDENTIFIER;
+
+BEGIN DIALOG @dialog_handle  
+FROM SERVICE ExpensesClient  
+TO SERVICE 'ExpensesService';  
+  
+SEND ON CONVERSATION @dialog_handle (@Message) ;  
+```
+   メッセージは `ExpenssesService` に送信され、`dbo.ExpenseQueue` に配置されます。 このキューに関連付けられているアクティブ化プロシージャがないため、メッセージは、誰かが読み取るまでキュー内に留まります。
+
+### <a name="processing-messages"></a>メッセージの処理
+
+   キューに配置されているメッセージは、標準の `SELECT` クエリを使用して選択できます。 `SELECT` ステートメントでは、キューが変更されたりメッセージが削除されたりしません。 キューからメッセージを読み取ってプルするには、[RECEIVE](../../t-sql/statements/receive-transact-sql.md) Transact-SQL ステートメントを使用します。
+
+```sql
+RECEIVE conversation_handle, message_type_name, message_body  
+FROM ExpenseQueue; 
+```
+
+  キューからのすべてのメッセージを処理したら、[END CONVERSATION](../../t-sql/statements/end-conversation-transact-sql.md) Transact-SQL ステートメントを使用してメッセージ交換を終了する必要があります。
+
 ## <a name="where-is-the-documentation-for-service-broker"></a>Service Broker のドキュメントの格納場所  
  [!INCLUDE[ssSB](../../includes/sssb-md.md)] のリファレンス ドキュメントは [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] のドキュメントに含まれています。 リファレンス ドキュメントには次のセクションがあります。  
   
--   CREATE、ALTER、および DROP ステートメントの[データ定義言語 &#40;DDL&#41; ステートメント &#40;Transact-SQL&#41;](../../t-sql/statements/statements.md)   
+-   CREATE、ALTER、および DROP ステートメントの[データ定義言語 &#40;DDL&#41; ステートメント &#40;Transact-SQL&#41;](../../t-sql/statements/statements.md)  
   
 -   [Service Broker のステートメント](../../t-sql/statements/service-broker-statements.md)  
   

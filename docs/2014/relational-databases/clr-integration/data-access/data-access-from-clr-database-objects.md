@@ -24,11 +24,11 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 4561c7b8979a919ea144bab6d9b42f722b089e48
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48168552"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62874079"
 ---
 # <a name="data-access-from-clr-database-objects"></a>CLR データベース オブジェクトからのデータ アクセス
   共通言語ランタイム (CLR) のルーチンのインスタンスに格納されているデータにアクセスする簡単に[!INCLUDE[msCoName](../../../includes/ssnoversion-md.md)]でこれを実行する、リモート インスタンスに格納されているデータだけでなく。 ルーチンからどのデータにアクセスできるかは、コードが実行されているユーザー コンテキストによって決まります。 .NET Framework Data Provider for を使用して CLR データベース オブジェクトからのデータにアクセス[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]マネージ クライアントと中間層アプリケーションからのデータ。 このため、クライアント アプリケーションや中間層アプリケーションでは、ADO.NET と `SqlClient` の知識を活用できます。  

@@ -10,12 +10,12 @@ ms.assetid: a8410ed2-bb98-4d51-a9eb-b239be1201c2
 author: minewiskan
 ms.author: owend
 manager: kfile
-ms.openlocfilehash: b32ffb832baf12a72df6e32b07386f24448b3c35
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 456aec6c6b9d0d1a5d0ee1d9949507a37577130c
+ms.sourcegitcommit: d9c5b9ab3c282775ed61712892eeb3e150ccc808
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56035263"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67597527"
 ---
 # <a name="creating-predictions-basic-data-mining-tutorial"></a>予測の作成 (基本的なデータ マイニング チュートリアル)
   予測クエリ ビルダーを使用して予測を生成できますし、マイニング モデルの精度をテストし、結果に満足していることにしましたが後、**マイニング モデル予測**データ マイニング モデル タブデザイナー。  
@@ -96,7 +96,7 @@ ms.locfileid: "56035263"
   
      これにより、`PredictProbability` 関数の対象列を指定します。 関数の詳細については、次を参照してください。[データ マイニング拡張機能&#40;DMX&#41;関数リファレンス](/sql/dmx/data-mining-extensions-dmx-function-reference)します。  
   
-5.  次の空白行をクリックして、**ソース**列、および TM_Decision_Tree マイニング モデル**します。**  
+5.  次の空白行をクリックして、**ソース**列、および選択**TM_Decision_Tree**マイニング モデルです。  
   
 6.  `TM_Decision_Tree`行の**フィールド**列で、`Bike Buyer`します。  
   

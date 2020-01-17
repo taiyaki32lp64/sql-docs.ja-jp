@@ -1,6 +1,6 @@
 ---
-title: ビジネス ルールに複数の条件を追加する (マスター データ サービス) | Microsoft Docs
-ms.custom: ''
+title: ビジネスルールに条件を追加する
+ms.custom: seo-lt-2019
 ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: mds
@@ -10,15 +10,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - business rules [Master Data Services], multiple conditions
 ms.assetid: 5f0f6958-6cf2-444b-bdcd-05b887637a0b
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 34e7a7cb4cfaaa75eca8d51bdb591a7016ba411b
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
-ms.translationtype: HT
+ms.openlocfilehash: 4b85846202ef1cd8a30012dddb2c88803c901d16
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52777374"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73728800"
 ---
 # <a name="add-multiple-conditions-to-a-business-rule-master-data-services"></a>ビジネス ルールに複数の条件を追加する (マスター データ サービス)
 
@@ -34,7 +33,7 @@ ms.locfileid: "52777374"
   
 -   **[システム管理]** 機能領域にアクセスする権限が必要です。  
   
--   モデル管理者である必要があります。 詳細については、「 [管理者 (マスター データ サービス)](../master-data-services/administrators-master-data-services.md)にアクセスすることなくグループに対してユーザーの追加または削除を行うことができます。  
+-   モデル管理者である必要があります。 詳細については、「[Administrators &#40;Master Data Services&#41; (管理者 &#40;マスター データ サービス&#41;)](../master-data-services/administrators-master-data-services.md)」を参照してください。  
   
 -   ビジネス ルールが存在する必要があります。 詳細については、「[ビジネス ルールを作成しパブリッシュする (マスター データ サービス)](../master-data-services/create-and-publish-a-business-rule-master-data-services.md)」を参照してください。  
   
@@ -58,7 +57,7 @@ ms.locfileid: "52777374"
   
 9. **[追加]** をクリックします。 パネルが表示されます。  
   
-10. **[属性]** ボックスの一覧から、属性を選択します。  
+10. **[属性]** ドロップダウン リストから、属性を選択します。  
   
 11. **[演算子]** ドロップダウン リストから、条件を選択します。  
   
@@ -76,7 +75,7 @@ ms.locfileid: "52777374"
   
 ## <a name="see-also"></a>参照  
  [ビジネス ルール (マスター データ サービス)](../master-data-services/business-rules-master-data-services.md)   
- [ビジネス ルールの名前を変更する &#40;マスター データ サービス&#41;](../master-data-services/change-a-business-rule-name-master-data-services.md)   
+ [ビジネス ルールの名前を変更する (マスター データ サービス)](../master-data-services/change-a-business-rule-name-master-data-services.md)   
  [通知を送信するようにビジネス ルールを構成する (マスター データ サービス)](../master-data-services/configure-business-rules-to-send-notifications-master-data-services.md)  
   
   

@@ -11,15 +11,14 @@ helpviewer_keywords:
 - queries [SQL Server], saving
 - saving queries
 ms.assetid: 1909b7be-cc87-44f1-9eb0-a3c355628ce6
-author: stevestein
-ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 974c93de786b363d9f8a2b5ceae8053edfe95a73
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 7a5f3370f0dfa6fcd6a258a74f061cde800a2507
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47696410"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68266885"
 ---
 # <a name="save-queries-visual-database-tools"></a>クエリの保存 (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -32,7 +31,7 @@ ms.locfileid: "47696410"
 2.  **[ファイル]** メニューの **[<クエリ名> の保存]** をクリックします。  
   
     > [!NOTE]  
-    > 新しく作成されたクエリにシステム名が与えられます。 クエリに任意の名前を付ける場合は、**[名前を付けて <クエリ名> を保存]** を選択します。  
+    > 新しく作成されたクエリにシステム名が与えられます。 クエリに任意の名前を付ける場合は、 **[名前を付けて <クエリ名> を保存]** を選択します。  
   
 3.  クエリは、ソリューション エクスプローラーのプロジェクトの Queries フォルダーに保存されます。  
   

@@ -10,15 +10,18 @@ ms.technology: integration-services
 ms.topic: conceptual
 author: haoqian
 ms.author: haoqian
-manager: craigg
-ms.openlocfilehash: 312fff4f7221c7ff7f644933494c71afd76b1136
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: 5c4d5cc303d297a21b730abc30e10b85c65cc3d2
+ms.sourcegitcommit: 495913aff230b504acd7477a1a07488338e779c6
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51640449"
+ms.lasthandoff: 08/06/2019
+ms.locfileid: "68811201"
 ---
 # <a name="scale-out-support-for-high-availability-via-sql-server-failover-cluster-instance"></a>SQL Server フェールオーバー クラスター インスタンスを介した高可用性の Scale Out のサポート
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
 
 SQL Server フェールオーバー クラスター インスタンスを使用して Scale Out Master 側の高可用性を設定するには、次の手順を実行します。
 

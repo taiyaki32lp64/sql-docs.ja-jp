@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 6f3da460-0f49-41e0-999d-a754ec1d887e
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: c529e6d4d03ad8ac476894a7442589c06c772b95
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 4c511e9328bb64928a027df5f9ff72bf93da17a5
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47613780"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67931882"
 ---
 # <a name="openschema-method-example-vc"></a>OpenSchema メソッドの例 (VC++)
 この例では、 [OpenSchema](../../../ado/reference/ado-api/openschema-method.md)内の各テーブルの種類と名前を表示するメソッド、 ***Pubs***データベース。  
@@ -194,5 +193,5 @@ void PrintComError(_com_error &e) {
 }  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [OpenSchema メソッド](../../../ado/reference/ado-api/openschema-method.md)

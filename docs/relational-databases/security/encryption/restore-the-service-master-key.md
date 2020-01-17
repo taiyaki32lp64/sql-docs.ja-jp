@@ -10,15 +10,14 @@ helpviewer_keywords:
 - service master key [SQL Server], importing
 - service master key [SQL Server], restoring
 ms.assetid: 14bdbbbe-d384-4692-b670-4243d2466fe1
-author: aliceku
-ms.author: aliceku
-manager: craigg
-ms.openlocfilehash: cf93c5a2918089bffd8bfe724f165d20722af086
-ms.sourcegitcommit: fa2f85b6deeceadc0f32aa7f5f4e2b6e4d99541c
+author: jaszymas
+ms.author: jaszymas
+ms.openlocfilehash: e27516fb2b0931c2df8f4a76a4153ee8c38616b9
+ms.sourcegitcommit: 39ea690996a7390e3d13d6fb8f39d8641cd5f710
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/03/2019
-ms.locfileid: "53997534"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "74957388"
 ---
 # <a name="restore-the-service-master-key"></a>サービス マスター キーの復元
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

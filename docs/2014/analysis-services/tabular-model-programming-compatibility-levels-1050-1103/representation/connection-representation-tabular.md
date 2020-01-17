@@ -4,20 +4,18 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: analysis-services
 ms.topic: reference
 ms.assetid: 4b410b16-d36e-4185-bb20-922e66e5e2b7
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: e7656ef997ae7cd05816a24813566e8c58510719
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: ffd99068db329ea8e9066c6bd9508dc13f239690
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48152852"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62757767"
 ---
 # <a name="connection-representation-tabular"></a>接続表現 (表形式)
   接続オブジェクトは、テーブル モデルに入力されるデータのソースを定義します。  
@@ -70,6 +68,6 @@ newDatasource.Update();
 ```  
   
 ## <a name="tabular-amo-2012-sample"></a>Tabular AMO 2012 サンプル  
- AMO を使用して作成して接続表現を操作する方法の理解がある、Tabular AMO 2012 サンプル; でのソース コードを参照してください。具体的には、次のソース ファイルをチェックイン: Database.cs します。 このサンプルは、Codeplex から入手できます。 サンプル コードは、ここで説明する論理的概念をサポートする目的でのみ提供されるものであり、運用環境では使用しないでください。  
+ AMO を使用して作成して接続表現を操作する方法の理解がある、Tabular AMO 2012 サンプル; でのソース コードを参照してください。具体的には、次のソース ファイルで確認します。Database.cs します。 このサンプルは、Codeplex から入手できます。 サンプル コードは、ここで説明する論理的概念をサポートする目的でのみ提供されるものであり、運用環境では使用しないでください。  
   
   

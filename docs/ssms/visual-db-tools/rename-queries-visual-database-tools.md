@@ -11,15 +11,14 @@ helpviewer_keywords:
 - renaming queries
 - queries [SQL Server], names
 ms.assetid: a263483e-87ba-49c4-b154-3e7bdf33063b
-author: stevestein
-ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 62b16e94c665113f479a09b184832e22412537ba
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 09ffe5aa93aa5273d50dba17df367853daf59511
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47658220"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68255979"
 ---
 # <a name="rename-queries-visual-database-tools"></a>クエリの名前の変更 (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

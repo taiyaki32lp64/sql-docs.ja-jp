@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.databasedesigner.dbconfigurationpane.f1
@@ -15,12 +14,12 @@ ms.assetid: 00c9c42b-db2b-4620-8fb6-1e165ff0cbdd
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 1a353d633287ad4b535a88b9ba76fa403a20c9e4
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: bf87f2441488810286523a75137a3285aabc1956
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48195812"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66081082"
 ---
 # <a name="general-database-designer-analysis-services---multidimensional-data"></a>[全般] (データベース デザイナー) (Analysis Services - 多次元データ)
   **[全般]** タブを使用して、 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] データベースのプロパティを変更します。  
@@ -49,7 +48,7 @@ ms.locfileid: "48195812"
  **言語**  
  指定したトランザクションの言語を選択します。  
   
- 新しい翻訳をグリッドに追加するには、クリックして**\<新しい翻訳の追加 >** します。  
+ 新しい翻訳をグリッドに追加するには、クリックして **\<新しい翻訳の追加 >** します。  
   
  **キャプションの翻訳**  
  データベースのキャプションを適切な翻訳言語で入力します。 空白の場合は、データベースの既定のキャプションが使用されます。  
@@ -68,7 +67,7 @@ ms.locfileid: "48195812"
  **名前**  
  勘定科目の種類の名前を入力します。  
   
- 新しいアカウントの種類を追加するには、クリックして**\<新しいアカウントの種類の追加 >** します。  
+ 新しいアカウントの種類を追加するには、クリックして **\<新しいアカウントの種類の追加 >** します。  
   
  **[エイリアス]**  
  ビジネス インテリジェンス ウィザードで使用するための、勘定科目の種類の既定名を設定します。 この列を空にすると、 **[名前]** 列での既定の設定が使用されます。  
@@ -76,7 +75,7 @@ ms.locfileid: "48195812"
  **集計関数**  
  選択された勘定科目の種類に使用される集計関数を選択します。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [Analysis Services のデザイナーおよびダイアログ ボックス&#40;多次元データ&#41;](analysis-services-designers-and-dialog-boxes-multidimensional-data.md)   
  [多次元モデル データベース&#40;SSAS&#41;](multidimensional-models/multidimensional-model-databases-ssas.md)   
  [警告&#40;データベース デザイナー&#41; &#40;Analysis Services - 多次元データ&#41;](warnings-database-designer-analysis-services-multidimensional-data.md)  

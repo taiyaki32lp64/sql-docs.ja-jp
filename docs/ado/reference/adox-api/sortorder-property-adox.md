@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: 04510b19-9cb2-4895-b23b-f7790123eb04
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 6ca43e10edf9f3fefb27fd40487032ebd947c84d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e30d3ba08c10b16768d75a9234cfa15fe501c9b5
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47789340"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67965216"
 ---
 # <a name="sortorder-property-adox"></a>SortOrder プロパティ (ADOX)
 列 (インデックス列のみ) の並べ替え順序を示します。  
@@ -39,7 +38,7 @@ ms.locfileid: "47789340"
 ## <a name="applies-to"></a>適用対象  
  [Column オブジェクト (ADOX)](../../../ado/reference/adox-api/column-object-adox.md)  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [SortOrder プロパティの例 (VB)](../../../ado/reference/adox-api/sortorder-property-example-vb.md)   
  [列のコレクション (ADOX)](../../../ado/reference/adox-api/columns-collection-adox.md)   
  [Index オブジェクト (ADOX)](../../../ado/reference/adox-api/index-object-adox.md)

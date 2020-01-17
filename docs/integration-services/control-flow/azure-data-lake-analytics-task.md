@@ -2,10 +2,10 @@
 title: Azure Data Lake Analytics タスク | Microsoft Docs
 description: Data Lake Analytics タスクを使用して、U-SQL ジョブを Azure Data Lake Analytics サービスに送信できます。
 ms.custom: ''
-ms.date: 05/18/2018
+ms.date: 06/27/2019
 ms.prod: sql
 ms.prod_service: integration-services
-ms.reviewer: douglasl
+ms.reviewer: maghan
 ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
@@ -13,15 +13,18 @@ f1_keywords:
 - SQL14.DTS.DESIGNER.AFPADLSTASK.F1
 author: yanancai
 ms.author: yanacai
-manager: craigg
-ms.openlocfilehash: 1b324d4aa115a08c1c13b1680176022cab343daa
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: ab9a357e8215310b21fa2e401067f49176aeefd4
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52808464"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67947356"
 ---
 # <a name="azure-data-lake-analytics-task"></a>Azure Data Lake Analytics タスク
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
 
 Data Lake Analytics タスクを使用して、U-SQL ジョブを Azure Data Lake Analytics サービスに送信できます。 このタスクは、[SQL Server Integration Services (SSIS) Feature Pack for Azure](../../integration-services/azure-feature-pack-for-integration-services-ssis.md) のコンポーネントです。
 
@@ -33,7 +36,7 @@ Data Lake Analytics タスクを使用して、U-SQL ジョブを Azure Data Lak
 
 ## <a name="general-page-configuration"></a>全般ページの構成
 
-**[全般]** ページを使ってタスクを構成し、タスクが送信する U-SQL スクリプトを指定します。 U-SQL 言語について詳しくは、[U-SQL 言語のリファレンス](https://msdn.microsoft.com/azure/data-lake-analytics/u-sql/u-sql-language-reference)をご覧ください。
+**[全般]** ページを使ってタスクを構成し、タスクが送信する U-SQL スクリプトを指定します。 U-SQL 言語について詳しくは、[U-SQL 言語のリファレンス](/u-sql/)をご覧ください。
 
 ### <a name="basic-configuration"></a>[基本構成]
 
@@ -55,9 +58,9 @@ U-SQL の構成には、**SourceType** と、**SourceType** の値に基づく�
 
 |[SourceType]|動的オプション|  
 |-----------|-----------------|  
-|**SourceType = DirectInput**|送信する U-SQL クエリを、オプション ボックスに直接入力します。または、参照ボタン [...] をクリックし、**[Enter U-SQL Query]\(U-SQL クエリの入力\)** ダイアログ ボックスで U-SQL クエリを入力します。|  
-|**SourceType = FileConnection**|既存のファイル接続マネージャーを選択するか、<**新しい接続…**> を選択して新しいファイル接続を作成します。 関連情報については、「[ファイル接続マネージャー](../../integration-services/connection-manager/file-connection-manager.md)」と「[ファイル接続マネージャー エディター](../../integration-services/connection-manager/file-connection-manager-editor.md)」をご覧ください。|  
-|**SourceType = Variable**|既存の変数を選択するか、\<**新しい変数...**> を選択して新しい変数を作成します。 関連情報については、「[Integration Services &#40;SSIS&#41; の変数](../../integration-services/integration-services-ssis-variables.md)」と「[変数の追加](https://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5)」をご覧ください。|
+|**SourceType = DirectInput**|送信する U-SQL クエリを、オプション ボックスに直接入力します。または、参照ボタン [...] をクリックし、 **[Enter U-SQL Query]\(U-SQL クエリの入力\)** ダイアログ ボックスで U-SQL クエリを入力します。|  
+|**SourceType = FileConnection**|既存のファイル接続マネージャーを選択するか、<**新しい接続…** > を選択して新しいファイル接続を作成します。 関連情報については、「[ファイル接続マネージャー](../../integration-services/connection-manager/file-connection-manager.md)」と「[ファイル接続マネージャー エディター](../../integration-services/connection-manager/file-connection-manager-editor.md)」をご覧ください。|  
+|**SourceType = Variable**|既存の変数を選択するか、\<**新しい変数...** > を選択して新しい変数を作成します。 関連情報については、「[Integration Services &#40;SSIS&#41; の変数](../../integration-services/integration-services-ssis-variables.md)」と「[変数の追加](https://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5)」をご覧ください。|
 
 
 ### <a name="job-configuration"></a>ジョブの構成
@@ -82,7 +85,7 @@ U-SQL の構成には、**SourceType** と、**SourceType** の値に基づく�
 
 **[Azure Data Lake Analytics Task Editor]\(Azure Data Lake Analytics タスク エディター\)** ダイアログ ボックスの **[パラメーター マッピング]** ページを使用して、U-SQL スクリプトのパラメーター (U-SQL 変数) に変数をマップします。
 
-- **[変数名]:****[追加]** を選択してパラメーター マッピングを追加したら、システム変数またはユーザー定義の変数を一覧から選択します。 または、<**新しい変数...**> を選択して、**[変数の追加]** ダイアログ ボックスを使用して新しい変数を追加できます。 関連情報については、「[Integration Services &#40;SSIS&#41; の変数](../../integration-services/integration-services-ssis-variables.md)」をご覧ください。  
+- **[変数名]:** **[追加]** を選択してパラメーター マッピングを追加したら、システム変数またはユーザー定義の変数を一覧から選択します。 または、<**新しい変数...** > を選択して、 **[変数の追加]** ダイアログ ボックスを使用して新しい変数を追加できます。 関連情報については、「[Integration Services &#40;SSIS&#41; の変数](../../integration-services/integration-services-ssis-variables.md)」をご覧ください。  
 
 - **[パラメーター名]:** U-SQL スクリプトのパラメーター/変数名を指定します。 パラメーター名が \@ 記号で始まっていることを確認します (例: \@Param1)。 
 

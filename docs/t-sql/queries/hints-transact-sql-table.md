@@ -34,15 +34,14 @@ helpviewer_keywords:
 - NOEXPAND table hint
 - PAGLOCK table hint
 ms.assetid: 8bf1316f-c0ef-49d0-90a7-3946bc8e7a89
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: b866f40fddcd5fa12082c296036492ec894d2989
-ms.sourcegitcommit: c9d33ce831723ece69f282896955539d49aee7f8
+author: VanMSFT
+ms.author: vanto
+ms.openlocfilehash: d5675f7c62ce43a9e41770075cd4a97253ea051e
+ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/12/2018
-ms.locfileid: "53306269"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "73981761"
 ---
 # <a name="hints-transact-sql---table"></a>ヒント (Transact-SQL) - Table
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -122,13 +121,13 @@ WITH  ( <table_hint> [ [, ]...n ] )
 ```  
   
 ## <a name="arguments"></a>引数  
-WITH **(** \<table_hint> **)** [ [**,** ]...*n* ]  
+WITH **(** \<table_hint> **)** [ **[,]** ...*n* ]  
 いくつかの例外を除き、テーブル ヒントは、FROM 句で WITH キーワードを使用して指定した場合にのみサポートされます。 また、テーブル ヒントはかっこを使用して指定する必要があります。  
   
 > [!IMPORTANT]  
 > WITH キーワードを省略することは非推奨とされます。[!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]  
   
-次のテーブル ヒントは、WITH キーワードを付けても付けなくても使用できます。NOLOCK、READUNCOMMITTED、UPDLOCK、REPEATABLEREAD、SERIALIZABLE、READCOMMITTED、TABLOCK、TABLOCKX、PAGLOCK、ROWLOCK、NOWAIT、READPAST、XLOCK、SNAPSHOT、および NOEXPAND。 これらのテーブル ヒントを WITH キーワードを使用せずに指定するときは、単独で指定してください。 例 :  
+次のテーブル ヒントは、WITH キーワードの有無に関係なく使用できます。NOLOCK、READUNCOMMITTED、UPDLOCK、REPEATABLEREAD、SERIALIZABLE、READCOMMITTED、TABLOCK、TABLOCKX、PAGLOCK、ROWLOCK、NOWAIT、READPAST、XLOCK、SNAPSHOT、NOEXPAND。 これらのテーブル ヒントを WITH キーワードを使用せずに指定するときは、単独で指定してください。 例:  
   
 ```sql  
 FROM t (TABLOCK)  
@@ -148,7 +147,7 @@ FROM t WITH (TABLOCK, INDEX(myindex))
 NOEXPAND  
 クエリ オプティマイザーがクエリを処理する場合に、インデックス付きビューが展開されず、基になるテーブルがアクセスされないことを指定します。 クエリ オプティマイザーは、ビューをクラスター化インデックスを持つテーブルのように取り扱います。 NOEXPAND はインデックス付きビューにのみ適用できます。 詳細については、「[NOEXPAND の使用](#using-noexpand)」を参照してください。  
   
-INDEX  **(**_index\_value_ [**,**... _n_ ] ) | INDEX =  ( _index\_value_**)**  
+INDEX  **(** _index\_value_ [ **,** ... _n_ ] ) | INDEX =  ( _index\_value_ **)**  
 INDEX() 構文では、ステートメントを処理するときにクエリ オプティマイザーが使用する 1 つ以上のインデックスの名前または ID を指定します。 一方、INDEX = 構文では、単一のインデックス値を指定します。 各テーブルに対して指定できるのは 1 つのインデックス ヒントだけです。  
   
 クラスター化インデックスがある場合、INDEX(0) はクラスター化インデックスのスキャンを実行し、INDEX(1) はクラスター化インデックスのスキャンまたはシークを実行します。 クラスター化インデックスがない場合、INDEX(0) はテーブル スキャンを実行し、INDEX(1) はエラーと見なされます。  
@@ -179,7 +178,7 @@ INSERT ステートメントで、BULK オプションが [OPENROWSET](../../t-s
   
 このヒントを INSERT ...SELECT * FROM OPENROWSET(BULK...) ステートメントに使用する例については、「[一括インポート中の NULL の保持または既定値の使用 &#40;SQL Server&#41;](../../relational-databases/import-export/keep-nulls-or-use-default-values-during-bulk-import-sql-server.md)」を参照してください。  
   
-FORCESEEK [ **(**_index\_value_**(**_index\_column\_name_ [ **,**... _n_ ] **))** ]  
+FORCESEEK [ **(** _index\_value_ **(** _index\_column\_name_ [ **,** ... _n_ ] **))** ]  
 クエリ オプティマイザーに対し、テーブルやビューのデータへのアクセス パスとしてインデックスのシーク操作のみを使用することを指定します。 
 
 > [!NOTE]
@@ -222,7 +221,7 @@ FORCESEEK ヒントは以下の方法で指定できます。
 > [!CAUTION]  
 > パラメーターを使用して FORCESEEK を指定すると、オプティマイザーで考慮できるプラン数の制限は、パラメーターなしで FORCESEEK を指定した場合よりも多くなります。 これにより、`Plan cannot be generated` というエラーが生じる回数が増加する可能性があります。 将来のリリースでは、クエリ オプティマイザーに対して内部変更を行うため、より多くのプランを考慮できるようになります。  
   
-FORCESCAN **適用対象**:[!INCLUDE[ssKilimanjaro](../../includes/ssKilimanjaro-md.md)] SP1 から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。
+FORCESCAN **適用対象**:[!INCLUDE[ssKilimanjaro](../../includes/ssKilimanjaro-md.md)] SP1 以降。
 クエリ オプティマイザーに対し、参照されているテーブルやビューへのアクセス パスとして、インデックスのスキャン操作のみを使うことを指定します。 FORCESCAN ヒントは、オプティマイザーが影響を受ける行数を過小評価し、スキャン操作ではなくシーク操作を選択するクエリに役立つ場合があります。 この場合、操作に許可されるメモリの量は少なすぎて、クエリのパフォーマンスに影響します。  
   
 FORCESCAN を指定する際には、INDEX ヒントを使用してもしなくてもかまいません。 インデックス ヒントと組み合わせると (`INDEX = index_name, FORCESCAN`)、クエリ オプティマイザーでは、参照されるテーブルにアクセスする際に、指定されたインデックスを介したアクセス パスのみが検討されます。 インデックス ヒント INDEX(0) ベース テーブルのテーブル スキャン操作を強制するには、FORCESCAN を指定できます。  
@@ -318,7 +317,7 @@ SERIALIZABLE
 HOLDLOCK に相当します。 共有ロックがより制限的になります。テーブルまたはデータ ページが不要になったときに、トランザクションが完了しているかどうかにかかわらず共有ロックが解除されるのではなく、共有ロックはトランザクションが完了するまで保持されます。 SERIALIZABLE 分離レベルで実行しているトランザクションと同じセマンティクスで、スキャンが実行されます。 分離レベルについての詳細については、「[SET TRANSACTION ISOLATION LEVEL &#40;Transact-SQL&#41;](../../t-sql/statements/set-transaction-isolation-level-transact-sql.md)」を参照してください。  
   
 SNAPSHOT  
-**適用対象**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 
+**適用対象**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 以降。 
   
 メモリ最適化されたテーブルは、SNAPSHOT 分離でアクセスされます。 SNAPSHOT は、メモリ最適化されたテーブルだけで使用できまます (ディスク ベースのテーブルでは使用できません)。 詳細については、「[メモリ最適化テーブルの概要](../../relational-databases/in-memory-oltp/introduction-to-memory-optimized-tables.md)」を参照してください。  
   
@@ -330,7 +329,7 @@ LEFT JOIN dbo.[Order History] AS oh
 ```  
   
 SPATIAL_WINDOW_MAX_CELLS = *integer*  
-**適用対象**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]  
+**適用対象**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 以降。  
 geometry オブジェクトや geography オブジェクトのテセレーションに使用するセルの最大数を指定します。 *数*は、1 から 8192 の範囲の値です。  
   
 このオプションを使用すると、プライマリとセカンダリのフィルターの実行時間の間のトレードオフを調整することによって、クエリの実行時間を微調整できます。 値を大きくすると、セカンダリ フィルターの実行時間が短縮されますが、プライマリ フィルターの実行時間が増加します。値を小さくすると、プライマリ フィルターの実行時間が短縮されますが、セカンダリ フィルターの実行時間が増加します。 密度の高い空間データの場合は、大きい値を指定して、プライマリ フィルターでより適切な近似値を提供し、セカンダリ フィルターの実行時間を減少させることで、実行時間を短縮させます。 密度の低いデータでは、小さい値を指定して、プライマリ フィルターの実行時間を短縮させます。  
@@ -365,8 +364,8 @@ XLOCK
 テーブルに計算列があり、その計算列が、別のテーブル内の列にアクセスする式や関数によって計算される場合、テーブル ヒントがそのテーブル上で使用されることや、反映されることはありません。 たとえば、クエリ内のテーブルに NOLOCK テーブル ヒントが指定されているものとします。 このテーブルには、別のテーブル内の列にアクセスする式と関数の組み合わせで計算される、計算列があります。 式と関数で参照されるテーブルが、アクセスされるときに NOLOCK テーブル ヒントを使用することはありません。  
   
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、FROM 句内の各テーブルに対して、次の各グループの複数のテーブル ヒントが許可されません。  
--   粒度ヒント:PAGLOCK、NOLOCK、READCOMMITTEDLOCK、ROWLOCK、TABLOCK、または TABLOCKX。  
--   分離レベル ヒント:HOLDLOCK、NOLOCK、READCOMMITTED、REPEATABLEREAD、SERIALIZABLE。  
+-   粒度ヒント: PAGLOCK、NOLOCK、READCOMMITTEDLOCK、ROWLOCK、TABLOCK、または TABLOCKX。  
+-   分離レベル ヒント: HOLDLOCK、NOLOCK、READCOMMITTED、REPEATABLEREAD、SERIALIZABLE。  
   
 ## <a name="filtered-index-hints"></a>フィルター選択されたインデックス ヒント  
  フィルター選択されたインデックスをテーブル ヒントとして使用できますが、クエリで選択する行のすべてがカバーされているわけではない場合、クエリ オプティマイザーからエラー 8622 が返されます。 フィルター選択されたインデックス ヒントが無効になる例を次に示します。 この例では、フィルター選択されたインデックス `FIBillOfMaterialsWithComponentID` を作成し、SELECT ステートメントのインデックス ヒントとして使用します。 フィルター選択されたインデックスの述語には、ComponentID が 533、324、および 753 のデータ行が含まれています。 クエリ述語にも ComponentID が 533、324、および 753 のデータ行が含まれていますが、フィルター選択されたインデックスには存在しない ComponentID 855 および 924 も結果セットに含めるよう拡張されています。 したがって、クエリ オプティマイザーはフィルター選択されたインデックス ヒントを使用できず、エラー 8622 が生成されます。 詳細については、「 [Create Filtered Indexes](../../relational-databases/indexes/create-filtered-indexes.md)」を参照してください。  

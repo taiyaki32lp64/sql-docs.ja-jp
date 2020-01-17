@@ -17,18 +17,17 @@ helpviewer_keywords:
 ms.assetid: faace8a3-daa9-4208-a2cd-4249eb32175c
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: 3e6e67c4be74332bb9faf25eeac62f811ad86526
-ms.sourcegitcommit: c6e71ed14198da67afd7ba722823b1af9b4f4e6f
+ms.openlocfilehash: f0bb90a3dd13ffd245c1cac5a9ee1610055aae55
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/16/2019
-ms.locfileid: "54327413"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67929282"
 ---
-# <a name="drop-server-audit--transact-sql"></a>DROP SERVER AUDIT (TRANSACT-SQL)
+# <a name="drop-server-audit--transact-sql"></a>DROP SERVER AUDIT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  SQL Server Audit 機能を使用して、SQL Server 監査オブジェクトを削除します。 SQL Server Audit について詳しくは、「[SQL Server Audit &#40;データベース エンジン&#41;](../../relational-databases/security/auditing/sql-server-audit-database-engine.md)」をご覧ください。  
+  SQL Server の監査機能を使用して、サーバー監査オブジェクトを削除します。 SQL Server Audit について詳しくは、「[SQL Server Audit &#40;データベース エンジン&#41;](../../relational-databases/security/auditing/sql-server-audit-database-engine.md)」をご覧ください。  
   
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -43,7 +42,7 @@ DROP SERVER AUDIT audit_name
 ## <a name="remarks"></a>Remarks  
  監査を変更する場合は、監査の状態を OFF に設定する必要があります。 STATE=OFF 以外のオプションを使用して監査を有効にしているときに DROP AUDIT を実行すると、MSG_NEED_AUDIT_DISABLED エラー メッセージが表示されます。  
   
- DROP SERVER AUDIT は、監査のメタデータを削除します。ただし、コマンドの実行前に収集された監査データは削除されません。  
+ DROP SERVER AUDIT では監査のメタデータが削除されますが、コマンドの発行前に収集された監査データは削除されません。  
   
  DROP SERVER AUDIT では、関連付けられているサーバー監査仕様またはデータベース監査仕様が削除されません。 これらの仕様は手動で削除するか、または孤立した状態にしておき、後で新しいサーバー監査にマップする必要があります。  
   

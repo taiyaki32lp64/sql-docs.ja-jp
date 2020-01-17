@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 f1_keywords:
 - "10183"
@@ -25,15 +24,15 @@ f1_keywords:
 - "10188"
 - sql12.rtp.rptdesigner.legendtitleproperties.general.f1
 ms.assetid: b035b2e0-ab1e-4a37-bff7-a42d1e914bac
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 5d4668bd2d0ba4b8b9e4ae965037fb929b8c3fe8
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: a658eeca1646488212ee8ecdf48c99818e3f9e6c
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56289730"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66106286"
 ---
 # <a name="formatting-the-legend-on-a-chart-report-builder-and-ssrs"></a>グラフの凡例の書式設定 (レポート ビルダーおよび SSRS)
   グラフの凡例には、グラフ内の各カテゴリの説明が含まれています。 凡例には常に 1 つ以上の凡例アイテムが含まれています。次の図に示すように、それぞれの凡例アイテムは、系列を表現する色つきのボックス、および系列を説明するテキスト文字列で構成されています。  
@@ -79,7 +78,7 @@ ms.locfileid: "56289730"
   
  既定では、凡例テキストは、凡例領域に合わせて最適化されません。 自動的に割り当てられた領域に合わせて凡例テキストは、AutoFitTextDisabled プロパティを設定`False`し、MinFontSize プロパティと思われる最小のフォント サイズを表現できる、可能で凡例のフォントの最小サイズを設定最適化します。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [[全般] ([凡例のプロパティ] ダイアログ ボックス) &#40;レポート ビルダーおよび SSRS&#41;](../legend-properties-dialog-box-general-report-builder-and-ssrs.md)   
  [凡例アイテムのテキストの変更 &#40;レポート ビルダーおよび SSRS&#41;](chart-legend-change-item-text-report-builder.md)   
  [グラフの書式設定 (レポート ビルダーおよび SSRS)](formatting-a-chart-report-builder-and-ssrs.md)   

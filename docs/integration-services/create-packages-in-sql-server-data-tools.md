@@ -13,17 +13,20 @@ helpviewer_keywords:
 - packages [Integration Services], creating
 - SQL Server Integration Services packages, creating
 ms.assetid: bb3c085b-1458-49fa-8348-6a76b6e97ea6
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: 199029eee15d44e3aba5b65c894de58b1ca2129c
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 96110e35227fbca970fd3bc92bcee314b5ebae6c
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51639709"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71293702"
 ---
 # <a name="create-packages-in-sql-server-data-tools"></a>SQL Server データ ツールでのパッケージの作成
+
+[!INCLUDE[ssis-appliesto](../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]で新しいパッケージを作成するには、次のいずれかの方法を使用します。  
   
 -   [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] に含まれるパッケージ テンプレートを使用する。  

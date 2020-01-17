@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 7ac96c1d-d0d8-4bf8-b165-533818d0f590
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: cfb5c03a9de4a5864984fb10d92d7069d8f38fbc
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e5ecdbf24ea70da0e16d05e4d866c0b2f0f9470c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47846850"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67919977"
 ---
 # <a name="clone-method-example-vc"></a>Clone メソッドの例 (VC++)
 この例では、[複製](../../../ado/reference/ado-api/clone-method-ado.md)のコピーを作成する方法、[レコード セット](../../../ado/reference/ado-api/recordset-object-ado.md)し、ユーザーの各コピーのレコード ポインターを個別に配置できるようにします。  
@@ -220,5 +219,5 @@ void PrintComError(_com_error &e) {
 }  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [Recordset オブジェクト (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)

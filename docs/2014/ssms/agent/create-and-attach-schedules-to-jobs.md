@@ -19,11 +19,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 414ff334139919e08b06291ec910f8531c70cd55
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52757539"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63136279"
 ---
 # <a name="create-and-attach-schedules-to-jobs"></a>スケジュールの作成とジョブへのアタッチ
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェント ジョブのスケジュール設定とは、ユーザーの操作なしでジョブの実行が開始される条件を定義することです。 ジョブのスケジュールを設定して自動的に実行するには、ジョブの新しいスケジュールを作成するか、既存のスケジュールをジョブにアタッチします。  
@@ -90,7 +90,7 @@ ms.locfileid: "52757539"
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェント ジョブのスケジュールを設定する方法について説明します。|[ジョブのスケジュール設定](schedule-a-job.md)|  
 |使用しているサーバーの CPU アイドル状態を定義する方法について説明します。|[CPU のアイドル時間と期間の設定 (SQL Server Management Studio)](set-cpu-idle-time-and-duration-sql-server-management-studio.md)|  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [sp_help_jobschedule &#40;TRANSACT-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-help-jobschedule-transact-sql)   
  [では&#40;TRANSACT-SQL&#41;](/sql/relational-databases/system-tables/dbo-sysjobschedules-transact-sql)  
   

@@ -1,22 +1,21 @@
 ---
-title: SQL Server および Azure SQL Database のデータをインポートおよびエクスポートする | Microsoft Docs
-ms.custom: ''
+title: SQL Server および Azure SQL Database のデータをインポートおよびエクスポートする
 ms.date: 10/27/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
 ms.technology: data-movement
 ms.topic: conceptual
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
+author: MashaMSFT
+ms.author: mathoma
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: fa36b331f42835a4b1bf6b25651a59669cb56ac9
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.custom: seo-lt-2019
+ms.openlocfilehash: c131954cce8e65cd7f309b59f3780bbd214cb228
+ms.sourcegitcommit: d00ba0b4696ef7dee31cd0b293a3f54a1beaf458
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52390495"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "74055942"
 ---
 # <a name="import-and-export-data-from-sql-server-and-azure-sql-database"></a>SQL Server および Azure SQL Database のデータをインポートおよびエクスポートする
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

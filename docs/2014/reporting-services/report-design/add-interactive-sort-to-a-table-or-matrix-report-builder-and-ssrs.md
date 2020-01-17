@@ -4,22 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 f1_keywords:
 - "10121"
 - sql12.rtp.rptdesigner.textboxproperties.intrctvsort.f1
 ms.assetid: 05819637-729b-4cf6-82de-91a99f184ec6
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: eb01b4a01222fd9c445f99ac2c80253c652737ae
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: 961a2a76f2a839ccc9fa8fb90027bec180d870d6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56294961"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66106643"
 ---
 # <a name="add-interactive-sort-to-a-table-or-matrix-report-builder-and-ssrs"></a>テーブルまたはマトリックスへの対話的な並べ替えの追加 (レポート ビルダーおよび SSRS)
   ユーザーがテーブルやマトリックス内で行と列の並べ替え順序を変更できるようにするには、対話的な並べ替えボタンを追加します。 この機能は、ユーザーとの対話が可能な、HTML などの表示形式でのみサポートされています。  
@@ -133,7 +132,7 @@ ms.locfileid: "56294961"
   
 5.  **[名前]** で、グループ化する複数のグループを指定する名前で、既定の名前を置換します。  
   
-6.  **[グループ式]** の **[グループ化の条件]** で、式 (**[fx]**) ボタンをクリックして **[式]** ダイアログ ボックスを開きます。  
+6.  **[グループ式]** の **[グループ化の条件]** で、式 ( **[fx]** ) ボタンをクリックして **[式]** ダイアログ ボックスを開きます。  
   
 7.  グループ化するすべてのフィールドを指定する式を入力します。 たとえば、グループ式 `=Fields!Color.Value & Fields!Size.Value`では、Color というフィールドと Size というフィールドが組み合わされます。  
   

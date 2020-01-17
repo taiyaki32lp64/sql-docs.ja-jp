@@ -7,15 +7,15 @@ ms.reviewer: ''
 ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: d88953d2-2258-40ac-b3bf-2ef502f9b5fd
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 230c8bbeb2736a3f9810a65dd445013d22e41f03
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 21d43023fd12d6e417268d115ce3f44d2364c2b1
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56022923"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65489214"
 ---
 # <a name="task-3-verifying-the-data-in-master-data-manager"></a>タスク 3:マスター データ マネージャーのデータを確認する
   このタスクですることを確認します、**業者**でエンティティが作成された**MDS**を使用して**マスター データ マネージャー Web アプリケーション**します。  

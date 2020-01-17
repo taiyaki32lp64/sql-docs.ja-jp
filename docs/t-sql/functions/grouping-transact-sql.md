@@ -1,7 +1,7 @@
 ---
 title: GROUPING (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 03/03/2017
+ms.date: 12/03/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -20,20 +20,19 @@ helpviewer_keywords:
 - GROUPING function
 - CUBE operator
 ms.assetid: 4efa3868-1fc4-4626-8fb1-e863cc03e422
-author: MashaMSFT
-ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 018d8de6b8e5fd50109b8e55186c88bda058ea2f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: MikeRayMSFT
+ms.author: mikeray
+ms.openlocfilehash: a5ecfbcd49712ce22f5e48aa5643d90414f78fae
+ms.sourcegitcommit: 26868c8ac3217176b370d972a26d307598a10328
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47747470"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74833781"
 ---
 # <a name="grouping-transact-sql"></a>GROUPING (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-asdw-xxx-md.md)]
 
-  GROUP BY リストの指定された列式が集計されるかどうかを示します。 GROUPING は、集計される場合に 1、集計されない場合に 0 を結果セットで返します。 GROUPING は、GROUP BY が指定されている場合に、\<SELECT <select> リスト、HAVING 句、および ORDER BY 句でのみ使用できます。  
+  GROUP BY リスト内の指定した列の式が集計されるかどうかを示します。 GROUPING は結果セットで、集計される場合は 1 を、集計されない場合は 0 を返します。 GROUPING は、GROUP BY が指定されている場合に、\<SELECT <select> リスト、HAVING 句、および ORDER BY 句でのみ使用できます。  
   
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -51,10 +50,10 @@ GROUPING ( <column_expression> )
 ## <a name="return-types"></a>戻り値の型  
  **tinyint**  
   
-## <a name="remarks"></a>Remarks  
- GROUPING を使用して、ROLLUP、CUBE、または GROUPING SETS から返される NULL 値と標準的な NULL 値を区別します。 ROLLUP、CUBE、または GROUPING SETS の演算結果として返される NULL 値は、NULL の特別な用途です。 結果セット内の列のプレースホルダーとして動作し、すべてという意味を持ちます。  
+## <a name="remarks"></a>解説  
+ GROUPING は、標準の null 値から、ROLLUP、CUBE、または GROUPING SETS によって返される null 値を区別するために使用します。 ROLLUP、CUBE、または GROUPING SETS の演算結果として返される NULL 値は、NULL の特別な用途です。 これは、結果セット内の列プレースホルダーとして機能し、すべてを意味します。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
  次の例では、`SalesQuota` をグループ化し、[!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] データベースの `SaleYTD` 額を集計します。 `GROUPING` 関数は、`SalesQuota` 列に適用されます。  
   
 ```  

@@ -13,11 +13,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: d4e583b08cf0ba55268c4acb9e19722d3a693d50
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48187782"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62987316"
 ---
 # <a name="icommand-ole-db"></a>ICommand (OLE DB)
   このトピックでは、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client に固有の OLE DB の動作について説明します。  
@@ -25,7 +25,7 @@ ms.locfileid: "48187782"
 ## <a name="icommandexecute"></a>ICommand::Execute  
  列のサイズより大きなデータを挿入すると、通常はエラーが発生します。 ただし、S_OK が返され、*dwStatus* が DBSTATUS_S_TRUNCATED に設定される場合もあります。 これは通常、データに対して列のサイズが不十分であり、`ICommandWithParameters::SetParameterInfo` が呼び出されていない場合に、データをパラメーターで挿入すると発生します。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [インターフェイス&#40;OLE DB&#41;](../../database-engine/dev-guide/interfaces-ole-db.md)  
   
   

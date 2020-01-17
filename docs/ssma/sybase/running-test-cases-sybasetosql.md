@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 195ffdef-cfde-4bf4-a3ae-e7402bb07972
 author: Shamikg
 ms.author: Shamikg
-manager: craigg
-ms.openlocfilehash: 664c2d3d4e1a1cea78bd93c748d9c17d2f1fe670
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 73047e0741d4dee12ecec3e83df308e3f7abd343
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47833240"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68021023"
 ---
 # <a name="running-test-cases-sybasetosql"></a>テスト ケースの実行 (SybaseToSQL)
 SSMA のテスト担当者がテスト_ケースを実行すると、テスト用に選択されたオブジェクトを実行し、検証結果に関するレポートを作成します。 結果が両方のプラットフォームで同一の場合、テストは成功しました。 Sybase の間でオブジェクトの対応と[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]SSMA プロジェクトを現在のスキーマ マッピングの設定に従って決定されます。  
@@ -35,7 +34,7 @@ SSMA のテスト担当者がテスト_ケースを実行すると、テスト�
   
 ## <a name="test-case-execution-steps"></a>テスト_ケースの実行ステップ  
   
-### <a name="prerequisites"></a>前提条件  
+### <a name="prerequisites"></a>必須コンポーネント  
 SSMA のテスト担当者は、テストの実行を開始する前に、テストのすべての前提条件が満たされたかどうかを確認します。 いくつかの条件が満たされない場合、エラー メッセージが表示されます。  
   
 ### <a name="initialization"></a>初期化  
@@ -70,7 +69,7 @@ SSMA のテスト担当者がで作成された補助オブジェクトをクリ
 ## <a name="next-step"></a>次の手順  
 [テスト_ケースのレポートを表示する&#40;SybaseToSQL&#41;](../../ssma/sybase/viewing-test-case-reports-sybasetosql.md)  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
 [選択し、テストするオブジェクトを構成する&#40;SybaseToSQL&#41;](../../ssma/sybase/selecting-and-configuring-objects-to-test-sybasetosql.md)  
 [影響を受けるオブジェクトの選択と構成&#40;SybaseToSQL&#41;](../../ssma/sybase/selecting-and-configuring-affected-objects-sybasetosql.md)  
 [移行されたデータベース オブジェクトのテスト&#40;SybaseToSQL&#41;](../../ssma/sybase/testing-migrated-database-objects-sybasetosql.md)  

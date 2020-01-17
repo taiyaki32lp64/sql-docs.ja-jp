@@ -13,13 +13,12 @@ helpviewer_keywords:
 - commands [OLE DB]
 author: pmasl
 ms.author: pelopes
-manager: craigg
-ms.openlocfilehash: 507da03dfe225ed9e37a8d2c8d2adac2cb4cf6dc
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: f6919c8355660ee2c1e27f2c0896ca189497b50d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47798181"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68016017"
 ---
 # <a name="commands"></a>コマンド
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

@@ -11,17 +11,20 @@ helpviewer_keywords:
 - DATEDIFF statement
 - dates [Integration Services], DATEDIFF
 ms.assetid: 449b327f-47c7-4709-8bc6-4ee9a35cc330
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: 9e7987044704cdcd765fefb64f5b5855f7b5a29c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 86bf6dc67143ea539ea0329fc1783629b26aa802
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47694170"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71297654"
 ---
 # <a name="datediff-ssis-expression"></a>DATEDIFF (SSIS 式)
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   指定された 2 つの日付間の差を、日付および時刻の単位で返します。 *datepart* パラメーターにより、差分を計算する基となる日付と時刻を指定します。  
   
 ## <a name="syntax"></a>構文  
@@ -90,7 +93,7 @@ DATEDIFF("Week", ModifiedDate,@YearEndDate)
   
 ## <a name="see-also"></a>参照  
  [DATEADD (SSIS 式)](../../integration-services/expressions/dateadd-ssis-expression.md)   
- [DATEPART &#40;SSIS 式&#41;](../../integration-services/expressions/datepart-ssis-expression.md)   
+ [DATEPART (SSIS 式)](../../integration-services/expressions/datepart-ssis-expression.md)   
  [DAY &#40;SSIS 式&#41;](../../integration-services/expressions/day-ssis-expression.md)   
  [MONTH &#40;SSIS 式&#41;](../../integration-services/expressions/month-ssis-expression.md)   
  [YEAR &#40;SSIS 式&#41;](../../integration-services/expressions/year-ssis-expression.md)   

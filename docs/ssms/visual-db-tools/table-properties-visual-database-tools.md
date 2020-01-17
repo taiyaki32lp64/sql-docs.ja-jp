@@ -11,15 +11,14 @@ f1_keywords:
 - vdt.tabledesigner
 - vdt.designers.properties.Table
 ms.assetid: cc392987-1aab-45f5-b5af-a26be53409bf
-author: stevestein
-ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 3ff3399745161d0ddb95d77f0f2f03a4c10da8b3
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 0d40b20c75b6ce9c86767ee655e6e7992ed32cff
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52508864"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68261573"
 ---
 # <a name="table-properties-visual-database-tools"></a>[テーブルのプロパティ] \(Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -34,7 +33,7 @@ ms.locfileid: "52508864"
 > このトピックでは、プロパティを五十音順ではなくカテゴリ別に示しています。  
   
 **[IDENTITY] カテゴリ**  
-展開して **[名前]**、 **[説明]**、および **[スキーマ]** の各プロパティを表示します。  
+展開して **[名前]** 、 **[説明]** 、および **[スキーマ]** の各プロパティを表示します。  
   
 **名前**  
 テーブルの名前を表示します。 名前を編集するには、テキスト ボックスに入力します。  
@@ -55,7 +54,7 @@ ms.locfileid: "52508864"
 データ ソースのサーバーの名前を表示します。  
   
 **[テーブル デザイナー] カテゴリ**  
-展開して **[IDENTITY 列]**、 **[Indexable]**、および **[Replicated]** の各プロパティを表示します。  
+展開して **[IDENTITY 列]** 、 **[Indexable]** 、および **[Replicated]** の各プロパティを表示します。  
   
 **[IDENTITY 列]**  
 テーブルの ID 列として使用されている列を表示します。 ID 列を変更するには、ドロップダウン リストから列を選択します。 数値データ型の列だけが一覧に表示されます。  
@@ -67,7 +66,7 @@ ms.locfileid: "52508864"
 テーブルが別の場所でレプリケートされているかどうかを表示します。  
   
 **[標準データ スペースの指定] カテゴリ**  
-展開して **[(データ スペースの種類)]**、 **[ファイル グループまたはパーティション スキーム名]**、および **[パーティション列の一覧]** の各プロパティを表示します。  
+展開して **[(データ スペースの種類)]** 、 **[ファイル グループまたはパーティション スキーム名]** 、および **[パーティション列の一覧]** の各プロパティを表示します。  
   
 **[(データ スペースの種類)]**  
 テーブルがファイル グループまたはパーティション スキームを使用して保存されるかどうかを表示します。  

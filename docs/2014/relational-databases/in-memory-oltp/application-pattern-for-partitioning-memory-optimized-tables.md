@@ -10,15 +10,15 @@ ms.assetid: 3f867763-a8e6-413a-b015-20e9672cc4d1
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: dc60d3491e4203db8f548dcbafd7c3b5373d266c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: f3296d0162136a441d141d32089a674a67e7b5b0
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48123912"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62466100"
 ---
 # <a name="application-pattern-for-partitioning-memory-optimized-tables"></a>メモリ最適化テーブルのパーティション分割に関するアプリケーションのパターン
-  [!INCLUDE[hek_2](../../includes/hek-2-md.md)] は、限られた量のアクティブなデータがメモリ最適化テーブルに保持される一方、アクセス頻度の低いデータはディスクで処理される、というパターンをサポートします。 通常、これはデータが格納されているシナリオに基づいて、`datetime`キー。  
+  [!INCLUDE[hek_2](../../includes/hek-2-md.md)] は、限られた量のアクティブなデータがメモリ最適化テーブルに保持される一方、アクセス頻度の低いデータはディスクで処理される、というパターンをサポートします。 通常、これはデータが `datetime` キーに基づいて格納されるシナリオです。  
   
  パーティション テーブルとメモリ最適化テーブルを共通のスキーマで維持することで、メモリ最適化テーブルでパーティション テーブルをエミュレートすることができます。 アクセス頻度の少ないデータが従来のパーティション テーブルに保持される一方、現在のデータはメモリ最適化テーブルに挿入されて更新されます。  
   
@@ -46,7 +46,7 @@ ms.locfileid: "48123912"
   
  このサンプルの最初の部分では、データベースおよび必要なオブジェクトを作成します。 サンプルの 2 番目の部分では、メモリ最適化テーブルからパーティション テーブルにデータを移動する方法を示します。  
   
-```tsql  
+```sql  
 CREATE DATABASE partitionsample;  
 GO  
   

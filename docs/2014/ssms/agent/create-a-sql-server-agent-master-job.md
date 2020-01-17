@@ -15,11 +15,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: e80d5790f78c83a8a1ff3059e12e0946e206c060
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52795834"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68211455"
 ---
 # <a name="create-a-sql-server-agent-master-job"></a>SQL Server エージェントのマスター ジョブの作成
   このトピックでは、[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] または [!INCLUDE[tsql](../../includes/tsql-md.md)] を使用して、[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] で [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェントのマスター ジョブを作成する方法について説明します。  
@@ -28,7 +28,7 @@ ms.locfileid: "52795834"
 ##  <a name="BeforeYouBegin"></a> はじめに  
   
 ###  <a name="Restrictions"></a> 制限事項と制約事項  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェントのマスター ジョブの変更は、関係するすべての対象サーバーに伝達する必要があります。 これらのターゲットが指定されるまで対象サーバーはジョブをダウンロードしないので、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] では、対象サーバーを指定する前に、特定のジョブのすべてのジョブ ステップとジョブ スケジュールを完了しておくことをお勧めしています。 この順序に従わなかった場合は、 **sp_post_msx_operation** ストアド プロシージャを実行するか、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]を使用してジョブを変更することによって、変更されたジョブを対象サーバーが再びダウンロードするように手動で要求する必要があります。 詳細については、次を参照してください。 [sp_post_msx_operation &#40;TRANSACT-SQL&#41; ](/sql/relational-databases/system-stored-procedures/sp-post-msx-operation-transact-sql)または[ジョブの変更](modify-a-job.md)します。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェントのマスター ジョブの変更は、関係するすべての対象サーバーに伝達する必要があります。 これらのターゲットが指定されるまでターゲット サーバーはジョブをダウンロードしないので、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] では、ターゲット サーバーを指定する前に、特定のジョブのすべてのジョブ ステップとジョブ スケジュールを完了しておくことをお勧めしています。 この順序に従わなかった場合は、 **sp_post_msx_operation** ストアド プロシージャを実行するか、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]を使用してジョブを変更することによって、変更されたジョブをターゲット サーバーが再びダウンロードするように手動で要求する必要があります。 詳細については、次を参照してください。 [sp_post_msx_operation &#40;TRANSACT-SQL&#41; ](/sql/relational-databases/system-stored-procedures/sp-post-msx-operation-transact-sql)または[ジョブの変更](modify-a-job.md)します。  
   
 ###  <a name="Security"></a> セキュリティ  
   
@@ -53,7 +53,7 @@ ms.locfileid: "52795834"
   
 2.  プラス記号をクリックして **[SQL Server エージェント]** を展開します。  
   
-3.  **[ジョブ]** フォルダーを右クリックし、**[新しいジョブ]** を選択します。  
+3.  **[ジョブ]** フォルダーを右クリックし、 **[新しいジョブ]** を選択します。  
   
 4.  **[新しいジョブ]** ダイアログ ボックスの **[全般]** ページで、ジョブの全般的なプロパティを変更します。 このページで使用可能なオプションの詳細については、次を参照してください[ジョブのプロパティと新しいジョブ&#40;[全般] ページ。&#41;](../../integration-services/general-page-of-integration-services-designers-options.md)  
   

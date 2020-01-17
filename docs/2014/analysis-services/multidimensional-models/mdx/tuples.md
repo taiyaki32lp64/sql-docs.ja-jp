@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 07/17/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: 35b629ae-b1ef-44b1-b556-96956aeb56e7
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 8e6565d727ad6fd3f11e2332f53e32fb2c942687
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 5025d76d439933f7392d55661ca52d3f33992db8
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48115632"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66073766"
 ---
 # <a name="tuples"></a>Tuples
   組はキューブからデータのスライスを一意に識別します。 組は、同じ階層に属するメンバーが複数存在しない限り、ディメンション メンバーを組み合わせて作成されます。  
@@ -41,7 +40,7 @@ FROM [Adventure Works]
 ```  
   
 > [!NOTE]  
->  クエリでセット (ここでは、1 つの組から構成されます) の軸を指定するときは、行の軸のセットを指定する前に列の軸のセットを指定する必要があります。 列の軸は、*axis(0)*、または単に *0* とも表現できます。 MDX クエリの詳細については、「[MDX の基本的なクエリ (MDX)](mdx-query-the-basic-query.md)」を参照してください。  
+>  クエリでセット (ここでは、1 つの組から構成されます) の軸を指定するときは、行の軸のセットを指定する前に列の軸のセットを指定する必要があります。 列の軸は、*axis(0)* 、または単に *0* とも表現できます。 MDX クエリの詳細については、「[MDX の基本的なクエリ (MDX)](mdx-query-the-basic-query.md)」を参照してください。  
   
 ### <a name="tuples-as-values-or-member-references"></a>値またはメンバー参照としての組  
  上記の例のように、クエリで組を使用して、その組が参照しているセルの値を取得できます。 また、式で組を使用して、組で指定されているメンバーを明示的に参照できます。 組を取得または使用する関数をクエリまたは式で使用できます。 組を使用して、組で指定されているセルの値を参照できます。また、関数内で使用する場合はメンバーの組み合わせを指定できます。  
@@ -63,10 +62,10 @@ FROM [Adventure Works]
 > [!NOTE]  
 >  属性メンバーは、メンバー名またはメンバー キーで参照できます。 上記の例で、[CY 2004] への参照を &[2004] としてもかまいません。  
   
-## <a name="see-also"></a>参照  
- [MDX の主な概念 &#40;Analysis Services&#41;](../key-concepts-in-mdx-analysis-services.md)   
+## <a name="see-also"></a>関連項目  
+ [MDX の主な概念 (Analysis Services)](../key-concepts-in-mdx-analysis-services.md)   
  [キューブ空間](cube-space.md)   
  [Autoexists](autoexists.md)   
- [メンバー、組、およびセットの操作&#40;MDX&#41;](working-with-members-tuples-and-sets-mdx.md)  
+ [メンバー、組、およびセットの操作 (MDX)](working-with-members-tuples-and-sets-mdx.md)  
   
   

@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: 983d0c8a-77da-4c6e-8638-283bcb14f143
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: a0f278f5d0d036bac02e53263acc023dcae7d808
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 6f73a8e9e79a08c3f4a1f1e2b40ff5f83a0e39b7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52538132"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66067659"
 ---
 # <a name="connect-to-a-tabular-model-database-ssas"></a>テーブル モデル データベースへの接続 (SSAS)
   テーブル モデルを構築し、Analysis Services テーブル モード サーバーに配置したら、クライアント アプリケーションからの使用を可能にするための権限を設定する必要があります。 このトピックでは、クライアント アプリケーションからデータベースに接続するための権限と方法について説明します。  
@@ -114,7 +113,7 @@ ms.locfileid: "52538132"
   
  SharePoint では、モデル データを使用するピボットテーブルでデータのフィルター処理などのデータ操作を実行しようとすると、この Microsoft Excel エラーが発生します。 このエラーは、ユーザーがブックに対する十分な SharePoint 権限を持っていないために発生します。 ユーザーには、 **読み取り** 権限以上の権限が必要です。 データにアクセスするには、**表示のみ** 権限では不十分です。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [テーブル モデル ソリューションの配置 &#40;SSAS テーブル&#41;](tabular-model-solution-deployment-ssas-tabular.md)  
   
   

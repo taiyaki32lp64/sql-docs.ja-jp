@@ -13,20 +13,19 @@ helpviewer_keywords:
 ms.assetid: eded7e8c-a25f-46a6-bc2b-32d89a54d1bc
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 131e889847625dea825ca48ca30bf801046d229c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a2881ca390aebc18cf5e80b390591c81a575c8de
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47678490"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67926178"
 ---
 # <a name="ado-event-instantiation-by-language"></a>言語別の ADO イベントのインスタンス化
 それぞれのプログラミング言語では、ADO イベントのインスタンスを異なる方法で作成します。 次の例のすべてを作成、 **ConnectComplete**イベント ハンドラー。  
   
 -   [Visual Basic](../../../ado/guide/data/ado-event-instantiation-visual-basic.md)  
   
--   [Visual C](../../../ado/guide/data/ado-event-instantiation-visual-c.md)  
+-   [Visual C++](../../../ado/guide/data/ado-event-instantiation-visual-c.md)  
   
 -   [[VBScript]](../../../ado/guide/data/ado-event-instantiation-vbscript.md)  
   

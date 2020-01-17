@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 75b774a5-fa94-490a-b521-b2b8f7d48919
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 2142b11c477db480d2a1b905d83e118317dfb391
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e2b0e7b3ad36067c7ef2ba9cc80cf9abd2f418a2
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47615790"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67923195"
 ---
 # <a name="ado-multidimensional-ado-md"></a>ADO (多次元) (ADO MD)
 このセクションには、次のトピックが含まれています。  

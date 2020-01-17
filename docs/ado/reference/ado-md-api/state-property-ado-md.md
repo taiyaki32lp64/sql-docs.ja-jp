@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 06d480ca-9eb6-4570-a45d-a73539bddd32
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 812863395c2980f341ed2419eee1d9d661f19dd0
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 0c11bb74b62d54b1e2489cba5dd7cd35ee376a41
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47822166"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67949152"
 ---
 # <a name="state-property-ado-md"></a>State プロパティ (ADO MD)
 セル セットの現在の状態を示します。  
@@ -36,6 +35,6 @@ ms.locfileid: "47822166"
 ## <a name="applies-to"></a>適用対象  
  [CellSet オブジェクト (ADO MD)](../../../ado/reference/ado-md-api/cellset-object-ado-md.md)  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [Close メソッド (ADO MD)](../../../ado/reference/ado-md-api/close-method-ado-md.md)   
  [Open メソッド (ADO MD)](../../../ado/reference/ado-md-api/open-method-ado-md.md)

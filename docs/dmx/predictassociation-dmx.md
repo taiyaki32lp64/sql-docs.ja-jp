@@ -8,13 +8,12 @@ ms.topic: conceptual
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-manager: kfile
-ms.openlocfilehash: 7a23407b546bcde2dd1fde81654da4fe861e0719
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 3038bd010c5ca76ad26a301bad45ff4e1aa29460
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37989544"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68008063"
 ---
 # <a name="predictassociation-dmx"></a>PredictAssociation (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -40,7 +39,7 @@ PredictAssociation(<table column reference>, option1, option2, n ...)
  オプション、 **PredictAssociation**関数には、EXCLUDE_、INCLUDE_、INCLUSIVE、EXCLUSIVE (既定)、INPUT_ONLY、INCLUDE_STATISTICS、および INCLUDE_NODE_ID が含まれます。  
   
 > [!NOTE]  
->  INCLUSIVE、EXCLUSIVE、INPUT_ONLY、および INCLUDE_STATISTICS はテーブル列の参照にのみ適用され、EXCLUDE_NULL および INCLUDE_NULL はスカラー列の参照にのみ適用されます。  
+>  包括的、EXCLUSIVE、INPUT_ONLY、および INCLUDE_STATISTICS のみテーブルの列の参照とに適用されます EXCLUDE_ および INCLUDE_ はスカラー列参照に対してのみ適用します。  
   
  INCLUDE_STATISTICS はのみ返します **$Probability**と **$AdjustedProbability**します。  
   
@@ -77,7 +76,7 @@ SHAPE {
 ~~~~  
 
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [データ マイニング拡張機能&#40;DMX&#41;関数リファレンス](../dmx/data-mining-extensions-dmx-function-reference.md)   
  [関数&#40;DMX&#41;](../dmx/functions-dmx.md)   
  [一般的な予測関数&#40;DMX&#41;](../dmx/general-prediction-functions-dmx.md)  

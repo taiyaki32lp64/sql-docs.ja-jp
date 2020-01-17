@@ -6,14 +6,14 @@ ms.prod_service: reporting-services-native
 ms.technology: reporting-services
 ms.topic: conceptual
 ms.assetid: f02dee0c-85ad-45d4-b707-10e9e8541db9
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 43cd64469ef5a1cf08b1c99e42ee5f6dd20ab85b
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: e8bcfe976a8094c6faa22d8aab3db8a4a833d8cd
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52391725"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62651600"
 ---
 # <a name="lesson-2-define-a-data-connection-and-data-table-for-parent-report"></a>レッスン 2: 親レポートのデータ接続とデータ テーブルを定義する
 Visual C# 用の ASP.NET Web サイト テンプレートを使用して新しい Web サイト プロジェクトを作成した後は、親レポートのデータ接続とデータ テーブルを作成します。 このチュートリアルでは、データ接続先として AdventureWorks2014 データベースを使用します。  
@@ -26,11 +26,11 @@ Visual C# 用の ASP.NET Web サイト テンプレートを使用して新し�
   
     これにより、 **DataSet1.xsd** という新しい XSD ファイルがプロジェクトに追加され、データセット デザイナーが開きます。  
   
-3.  [ツールボックス] ウィンドウから **[TableAdapter](https://msdn.microsoft.com/library/bz9tthwx.aspx)** コントロールをデザイン画面にドラッグします。 これにより、 **TableAdapter** の構成ウィザードが起動します。  
+3.  [ツールボックス] ウィンドウから **[TableAdapter](/visualstudio/data-tools/fill-datasets-by-using-tableadapters)** コントロールをデザイン画面にドラッグします。 これにより、 **TableAdapter** の構成ウィザードが起動します。  
   
 4.  **[データ接続の選択]** ページで、 **[新しい接続]** をクリックします。  
   
-5.  Visual Studio で初めてデータ ソースを作成する場合は、**[データ ソースの選択]** ページが表示されます。 **[データ ソース]** ボックスで、 **[Microsoft SQL Server]** を選択します。  
+5.  Visual Studio で初めてデータ ソースを作成する場合は、 **[データ ソースの選択]** ページが表示されます。 **[データ ソース]** ボックスで、 **[Microsoft SQL Server]** を選択します。  
   
 6.  **[接続の追加]** ダイアログ ボックスで、次の手順を実行します。  
   

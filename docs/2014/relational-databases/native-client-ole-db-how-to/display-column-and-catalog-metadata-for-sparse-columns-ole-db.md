@@ -10,20 +10,20 @@ ms.assetid: 3b8ccad5-411d-4b79-b95e-ee524714f7d6
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: fa66d85d11c4c99094f554cb1be8c036329b8608
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 3150dd7c37564429f5f31205bdf733fe134baf5d
+ms.sourcegitcommit: f76b4e96c03ce78d94520e898faa9170463fdf4f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48109282"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70874562"
 ---
 # <a name="display-column-and-catalog-metadata-for-sparse-columns-ole-db"></a>スパース列に対する列およびカタログ メタデータの表示 (OLE DB)
   このサンプルでは、スパース列、非スパース列、columnset 列の 3 つの列を持ったテーブルを作成します。 その後、非スパース列および columnset 列に対する列およびカタログ メタデータを示す OLE DB フラグを表示します。  
   
- このサンプルは、[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 以降で動作します。 スパース列の詳細については、次を参照してください。 [SQL Server Native Client におけるスパース列のサポート](../native-client/features/sparse-columns-support-in-sql-server-native-client.md)します。  
+ このサンプルは、[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 以降で動作します。 スパース列の詳細については、「 [SQL Server Native Client でのスパース列のサポート](../native-client/features/sparse-columns-support-in-sql-server-native-client.md)」を参照してください。  
   
 ## <a name="example"></a>例  
- INCLUDE 環境変数には、sqlncli.h を含むディレクトリが含まれています。 を確認します。  
+ INCLUDE 環境変数に、sqlncli を含むディレクトリが含まれていることを確認します。  
   
 ```  
 #include <stddef.h>  
@@ -112,7 +112,7 @@ void DumpErrorInfo ( IUnknown* pObjectWithError, REFIID IID_InterfaceWithError )
    SSERRORINFO * pSSErrorInfo = NULL;  
    OLECHAR * pSSErrorStrings = NULL;  
   
-   // Hard-code an American English locale for the example.  
+   // Hard-code an English (United States) locale for the example.  
    DWORD MYLOCALEID = 0x0409;  
   
    // Only ask for error information if the interface supports it.  

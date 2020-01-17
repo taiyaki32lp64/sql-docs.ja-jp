@@ -1,6 +1,8 @@
 ---
-title: 可用性グループの権限の許可 (Transact-SQL) | Microsoft Docs
-ms.custom: ''
+title: GRANT (可用性グループのアクセス許可の許可)
+description: Always On 可用性グループに対する権限を許可します。
+titleSuffix: SQL Server (Transact-SQL)
+ms.custom: seo-lt-2019
 ms.date: 06/12/2017
 ms.prod: sql
 ms.prod_service: sql-database
@@ -17,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: 060eb839-666a-4046-9e1d-5edc9ea75a11
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: 70a595b13bde3f013e07af02d0599b240a7bdbfc
-ms.sourcegitcommit: c6e71ed14198da67afd7ba722823b1af9b4f4e6f
+ms.openlocfilehash: 0a9954e823ae66017c3a6105f0f0ec27964b7043
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/16/2019
-ms.locfileid: "54327383"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75246172"
 ---
 # <a name="grant-availability-group-permissions-transact-sql"></a>可用性グループの権限の許可 (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -52,8 +53,8 @@ GRANT permission  [ ,...n ] ON AVAILABILITY GROUP :: availability_group_name
  *permission*  
  可用性グループに対して許可できる権限を指定します。 権限の一覧については、後の「解説」を参照してください。  
   
- ON AVAILABILITY GROUP **::**_availability_group_name_  
- 権限を許可する可用性グループを指定します。 スコープ修飾子 (**::**) が必要です。  
+ ON AVAILABILITY GROUP **::** _availability_group_name_  
+ 権限を許可する可用性グループを指定します。 スコープ修飾子 ( **::** ) が必要です。  
   
  TO \<server_principal>  
  権限を許可する [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ログインを指定します。  
@@ -76,12 +77,12 @@ GRANT permission  [ ,...n ] ON AVAILABILITY GROUP :: availability_group_name
  AS *SQL_Server_login*  
  このクエリを実行するプリンシパルが権限を許可する権利を取得した、元の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ログインを指定します。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  サーバー スコープの権限を許可できるのは、現在のデータベースが **master** のときだけです。  
   
  可用性グループに関する情報は、[sys.availability_groups &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-availability-groups-transact-sql.md) カタログ ビューで表示できます。 サーバー権限に関する情報は [sys.server_permissions](../../relational-databases/system-catalog-views/sys-server-permissions-transact-sql.md) カタログ ビュー、サーバー プリンシパルに関する情報は [sys.server_principals](../../relational-databases/system-catalog-views/sys-server-principals-transact-sql.md) カタログ ビューでそれぞれ確認できます。  
   
- 可用性グループは、サーバー レベルのセキュリティ保護可能なリソースです。 次の表に、可用性グループで許可できる権限のうち最も限定的なものを、それらを暗黙的に含む一般的な権限と共に示します。  
+ 可用性グループは、サーバー レベルでセキュリティ保護可能なリソースです。 次の表に、可用性グループで許可できる権限のうち最も限定的なものを、それらを暗黙的に含む一般的な権限と共に示します。  
   
 |可用性グループの権限|権限が含まれる可用性グループ権限|権限が含まれるサーバー権限|  
 |-----------------------------------|----------------------------------------------|----------------------------------|  
@@ -96,7 +97,7 @@ GRANT permission  [ ,...n ] ON AVAILABILITY GROUP :: availability_group_name
 ## <a name="permissions"></a>アクセス許可  
  可用性グループに対する CONTROL 権限、またはサーバーに対する ALTER ANY AVAILABILITY GROUP 権限が必要です。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
   
 ### <a name="a-granting-view-definition-permission-on-an-availability-group"></a>A. 可用性グループの VIEW DEFINITION 権限を許可する  
  次の例では、可用性グループ `MyAg` での `VIEW DEFINITION` 権限を、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ログイン `ZArifin` に対して許可します。  
@@ -131,7 +132,7 @@ GO
  [DENY (可用性グループの権限の拒否) &#40;Transact-SQL&#41;](../../t-sql/statements/deny-availability-group-permissions-transact-sql.md)   
  [CREATE AVAILABILITY GROUP &#40;Transact-SQL&#41;](../../t-sql/statements/create-availability-group-transact-sql.md)   
  [sys.availability_groups &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-availability-groups-transact-sql.md)   
- [AlwaysOn 可用性グループ カタログ ビュー &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/always-on-availability-groups-catalog-views-transact-sql.md) [アクセス許可 &#40;データベース エンジン&#41;](../../relational-databases/security/permissions-database-engine.md)   
+ [AlwaysOn 可用性グループ カタログ ビュー (Transact-SQL)](../../relational-databases/system-catalog-views/always-on-availability-groups-catalog-views-transact-sql.md) [アクセス許可 (データベース エンジン)](../../relational-databases/security/permissions-database-engine.md)   
  [プリンシパル &#40;データベース エンジン&#41;](../../relational-databases/security/authentication-access/principals-database-engine.md)  
   
   

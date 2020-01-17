@@ -1,5 +1,5 @@
 ---
-title: Isscommandwithparameters::getparameterproperties (OLE DB) |Microsoft Docs
+title: 'ISSCommandWithParameters:: GetParameterProperties (OLE DB) |Microsoft Docs'
 description: ISSCommandWithParameters::GetParameterProperties (OLE DB)
 ms.custom: ''
 ms.date: 06/14/2018
@@ -15,13 +15,12 @@ helpviewer_keywords:
 - GetParameterProperties method
 author: pmasl
 ms.author: pelopes
-manager: craigg
-ms.openlocfilehash: 91bf864bef7178fe7532b33648cdf307d80fe61c
-ms.sourcegitcommit: af1d9fc4a50baf3df60488b4c630ce68f7e75ed1
+ms.openlocfilehash: 4ed73892ae0ebe88d4b18f2d2114143423570c60
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/06/2018
-ms.locfileid: "51030272"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68015418"
 ---
 # <a name="isscommandwithparametersgetparameterproperties-ole-db"></a>ISSCommandWithParameters::GetParameterProperties (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

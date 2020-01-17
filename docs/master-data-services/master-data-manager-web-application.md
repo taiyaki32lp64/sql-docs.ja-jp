@@ -1,5 +1,5 @@
 ---
-title: マスター データ マネージャー Web アプリケーション | Microsoft Docs
+title: マスター データ マネージャー Web アプリケーション
 ms.custom: ''
 ms.date: 12/20/2016
 ms.prod: sql
@@ -8,15 +8,14 @@ ms.reviewer: ''
 ms.technology: master-data-services
 ms.topic: conceptual
 ms.assetid: 8eac727c-2304-4612-bc1f-14539295b4b3
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 6fff6e1ab9f6394c34c60356fdd4f5eb76ab89c6
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
-ms.translationtype: HT
+ms.openlocfilehash: cc881f7d3b232e8d2ae31041fd990e833acac901
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53212381"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73729089"
 ---
 # <a name="master-data-manager-web-application"></a>マスター データ マネージャー Web アプリケーション
 

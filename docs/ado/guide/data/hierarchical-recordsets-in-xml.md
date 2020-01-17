@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 5d4b11c4-c94f-4910-b99b-5b9abc50d791
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 860732a8d694ee59dae05f76eb9cabe49ebc8c96
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: 17ed6f29442bc55f81d0ef83bfd19473a99e9a95
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53211257"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67925106"
 ---
 # <a name="hierarchical-recordsets-in-xml"></a>XML での階層レコードセット
 ADO には、XML に階層レコード セット オブジェクトの永続化ができます。 階層レコード セット オブジェクトでは、親レコード セット内のフィールドの値は、別のレコード セットです。 このようなフィールドは、属性ではなく、XML ストリーム内の子要素として表されます。  
@@ -125,5 +124,5 @@ Rs.Open "SHAPE {select stor_id, stor_name, state from stores} APPEND ({select st
   
 -   子レコードには、複数の親レコードへの参照がある場合は、レコード セットをもう一度開こう子レコード セットが重複レコードを含みます。 ただし、これらの重複は場合にのみ表示、ユーザーが基になる子行セットを直接操作します。 子レコード セット (つまり ADO 内を移動する唯一の方法) を移動するチャプターを使用する場合は、重複部分は表示されません。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [レコードを XML 形式で保持する](../../../ado/guide/data/persisting-records-in-xml-format.md)

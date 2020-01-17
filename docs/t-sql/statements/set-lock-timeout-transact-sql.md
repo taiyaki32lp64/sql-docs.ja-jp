@@ -24,14 +24,13 @@ helpviewer_keywords:
 ms.assetid: dd0c389e-956d-435e-bf71-e16624a0a215
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: df2683d7a0c580624dd56aa8d35e183ab7ac6bbf
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 97bdfbe485c129e7040235db7fffe296bb16897a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47630150"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67928906"
 ---
 # <a name="set-locktimeout-transact-sql"></a>SET LOCK_TIMEOUT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -48,12 +47,12 @@ SET LOCK_TIMEOUT timeout_period
   
 ## <a name="arguments"></a>引数  
  *timeout_period*  
- [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] がロック エラーを返すまでの経過時間をミリ秒単位で指定します。 値が -1 (既定値) の場合は、タイムアウトは設定されず、無期限に待機することになります。  
+ [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] がロック エラーを返すまでの経過時間をミリ秒単位で指定します。 値が -1 (既定値) の場合は、タイムアウトはなく、無期限に待機します。  
   
  ロックの待ち時間がタイムアウト値を超えると、エラーが返されます。 値が 0 の場合は、待ち時間はなく、ロックがかかるとすぐにメッセージが返されます。  
   
 ## <a name="remarks"></a>Remarks  
- この設定には、接続の開始時に -1 が割り当てられます。 この値が変更されると、その接続の残りの期間については、新しい設定が適用されます。  
+ この設定では、接続の開始時に -1 が割り当てられます。 この値が変更されると、その接続の残りの期間については、新しい設定が適用されます。  
   
  SET LOCK_TIMEOUT は、解析時ではなく実行時に設定されます。  
   
@@ -66,7 +65,7 @@ SET LOCK_TIMEOUT timeout_period
   
 ## <a name="examples"></a>使用例  
   
-### <a name="a-set-the-lock-timeout-to-1800-milliseconds"></a>A: ロック タイムアウトを 1,800 ミリ秒に設定する  
+### <a name="a-set-the-lock-timeout-to-1800-milliseconds"></a>A:ロック タイムアウトを 1,800 ミリ秒に設定する  
  次の例では、ロック タイムアウトの待ち時間を `1800` ミリ秒に設定します。  
   
 ```sql  

@@ -1,7 +1,7 @@
 ---
 title: 可用性グループ用の CLUSTER.LOG を生成および分析する
 description: 'Always On 可用性グループ用にクラスター ログを生成および分析する方法について説明します。 '
-ms.custom: ag-guide, seodec18
+ms.custom: seo-lt-2019
 ms.date: 06/14/2017
 ms.prod: sql
 ms.reviewer: ''
@@ -10,19 +10,16 @@ ms.topic: conceptual
 ms.assetid: 01a9e3c1-2a5f-4b98-a424-0ffc15d312cf
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: bfb0b56bba45d5e4622076f1d38bec2f4aca97a3
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: 045444c2141027854e54480483f09ab8eb9a04b6
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53211731"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75244381"
 ---
 # <a name="generate-and-analyze-the-clusterlog-for-an-always-on-availability-group"></a>Always On 可用性グループ用の CLUSTER.LOG を生成および分析する
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  フェールオーバー クラスター リソースとして SQL Server 内で監視できない外部的な対話があります。それは SQL Server、Windows Server フェールオーバー クラスター サービス (WSFC) クラスター、および SQL Server リソース DLL (hadrres.dll) の間で行われるものです。 WSFC ログ (CLUSTER.LOG) を使用すると、WSFC クラスターでの問題、または SQL Server リソース DLL での問題を診断することができます。  
-  
- 次の図では、可用性グループのリソースの作成、破棄、または状態変更を開始する、SQL Server や Windows クラスター マネージャーなどのアプリケーション間の関係を示します。  
+  フェールオーバー クラスター リソースとして SQL Server 内で監視できない外部的な対話があります。それは SQL Server、Windows Server フェールオーバー クラスター サービス (WSFC) クラスター、および SQL Server リソース DLL (hadrres.dll) の間で行われるものです。 WSFC ログ (CLUSTER.LOG) を使用すると、WSFC クラスターでの問題、または SQL Server リソース DLL での問題を診断することができます。 
   
 ## <a name="generate-cluster-log"></a>クラスター ログを生成する  
  クラスター ログを生成するには、次の 2 つの方法があります。  
@@ -41,26 +38,26 @@ Get-ClusterLog -TimeSpan 15 -Destination .
 ## <a name="always-on-log-verbosity"></a>Always On ログの詳細レベル  
  可用性グループに対する CLUSTER.LOG ではログの詳細レベルを上げることができます。 詳細レベルを変更するには、次の手順を実行します。  
   
-1.  **[スタート]** メニューから、**[フェールオーバー クラスター マネージャー]** を開きます。  
+1.  **[スタート]** メニューから、 **[フェールオーバー クラスター マネージャー]** を開きます。  
   
-2.  クラスター、**[サービスとアプリケーション]** ノードの順に展開し、可用性グループの名前をクリックします。  
+2.  クラスター、 **[サービスとアプリケーション]** ノードの順に展開し、可用性グループの名前をクリックします。  
   
-3.  詳細ウィンドウで、可用性グループのリソースを右クリックし、**[プロパティ]** をクリックします。  
+3.  詳細ウィンドウで、可用性グループのリソースを右クリックし、 **[プロパティ]** をクリックします。  
   
 4.  **[プロパティ]** タブをクリックします。  
   
 5.  **VerboseLogging** プロパティを変更します。 既定では、**VerboseLogging** は `0` に設定されます。この場合、情報、警告、およびエラーがレポートされます。 **VerboseLogging** には `0` から `2` までの値を設定できます。  
   
-6.  [**OK**] をクリックします。  
+6.  **[OK]** をクリックします。  
   
-7.  可用性グループのリソースをもう一度右クリックし、**[このリソースをオフラインにする]** をクリックします。  
+7.  可用性グループのリソースをもう一度右クリックし、 **[このリソースをオフラインにする]** をクリックします。  
   
-8.  可用性グループのリソースをもう一度右クリックし、**[このリソースをオンラインにする]** をクリックします。  
+8.  可用性グループのリソースをもう一度右クリックし、 **[このリソースをオンラインにする]** をクリックします。  
   
 ## <a name="availability-group-resource-events"></a>可用性グループのリソース イベント  
  次の表に、可用性グループのリソースに関連するイベントのうち、CLUSTER.LOG 内で確認できる各種イベントを示します。 WSFC のリソース ホスティング サブシステム (RHS) およびリソース コントロール モニター (RCM) の詳細については、「[Resource Hosting Subsystem (RHS) In Windows Server 2008 Failover Clusters](https://blogs.technet.com/b/askcore/archive/2009/11/23/resource-hosting-subsystem-rhs-in-windows-server-2008-failover-clusters.aspx)」 (Windows Server 2008 フェールオーバー クラスターのリソース ホスティング サブシステム (RHS)) を参照してください。  
   
-|[Identifier]|Source|CLUSTER.LOG の例|  
+|[Identifier]|source|CLUSTER.LOG の例|  
 |----------------|------------|------------------------------|  
 |`[RES]` と `[hadrag]` が先頭に付けられたメッセージ|hadrres.dll (Always On リソース DLL)|00002cc4.00001264::2011/08/05-13:47:42.543 INFO  [RES] SQL Server 可用性グループ \<ag>:`[hadrag]` オフライン要求。<br /><br /> 00002cc4.00003384::2011/08/05-13:47:42.558 ERR   [RES] SQL Server 可用性グループ \<ag>:`[hadrag]` リース スレッドが終了しました<br /><br /> 00002cc4.00003384::2011/08/05-13:47:42.605 INFO  [RES] SQL Server 可用性グループ \<ag>:`[hadrag]` 解放 SQL ステートメント<br /><br /> 00002cc4.00003384::2011/08/05-13:47:42.902 INFO  [RES] SQL Server 可用性グループ \<ag>:`[hadrag]` SQL Server からの切断|  
 |`[RHS]` が先頭に付けられたメッセージ|RHS.EXE (リソース ホスティング サブシステム、hadrres.dll のホスト プロセス)|00000c40.00000a34::2011/08/10-18:42:29.498 INFO  [RHS] リソース ag がオフラインになりました。 RHS はリソースのステータスを RCM にレポートしようとしています。|  

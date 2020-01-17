@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: 0f68d9f7-0d8d-4d8d-9188-14e253a2576a
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 62596595a155b900a69595b71c11dc1ca37b185a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 9f11d0b52c6852a76bafa11eeb07433a1ac2a1de
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47815820"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67969274"
 ---
 # <a name="supportsmixedcaseidentifiers-method-sqlserverdatabasemetadata"></a>supportsMixedCaseIdentifiers メソッド (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -42,7 +41,7 @@ public boolean supportsMixedCaseIdentifiers()
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- この supportsMixedCaseIdentifiers メソッドは、java.sql.DatabaseMetaData インターフェイスで supportsMixedCaseIdentifiers メソッドによって指定されます。  
+ この supportsMixedCaseIdentifiers メソッドは、java メタデータインターフェイスの supportsMixedCaseIdentifiers メソッドによって指定されます。  
   
 ## <a name="see-also"></a>参照  
  [SQLServerDatabaseMetaData のメソッド](../../../connect/jdbc/reference/sqlserverdatabasemetadata-methods.md)   

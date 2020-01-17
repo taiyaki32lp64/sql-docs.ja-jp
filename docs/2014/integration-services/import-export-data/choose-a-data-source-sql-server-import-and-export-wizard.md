@@ -9,15 +9,15 @@ ms.topic: conceptual
 f1_keywords:
 - sql12.dts.impexpwizard.chooseadatasource.f1
 ms.assetid: ebf28a62-dfc1-4b39-9db5-df1919e5fccb
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 1cff58f58543ae5876840bb7640f9cc11abf793d
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: b6e399cf6c145f36febd9b32ae7a84c54741bb43
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53370274"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62893597"
 ---
 # <a name="choose-a-data-source-sql-server-import-and-export-wizard"></a>[データ ソースの選択] (SQL Server インポートおよびエクスポート ウィザード)
   使用して、**データ ソースの選択**ページをコピーするデータのソースを指定します。  
@@ -83,7 +83,7 @@ ms.locfileid: "53370274"
 >  選択**Excel** Excel 2003 を使用するデータ ソースに接続する場合にのみ、またはそれ以前。 Excel 2007 を使用するデータ ソースに接続するには、選択**Microsoft Office 12.0 Access Database Engine OLE DB Provider**、 をクリックして**プロパティ**、し、**すべて**のタブ、**データ リンク プロパティ** ダイアログ ボックスに、入力`Excel 12.0`の値として**拡張プロパティ**します。  
   
  **[Excel ファイル パス]**  
- データをインポートするスプレッドシートのパスとファイル名を指定します。 たとえば、 **C:\MyData.xls、 \\\Sales\Database\Northwind.xls**します。 または、**[参照]** をクリックします。  
+ データをインポートするスプレッドシートのパスとファイル名を指定します。 たとえば、 **C:\MyData.xls、 \\\Sales\Database\Northwind.xls**します。 または、 **[参照]** をクリックします。  
   
  **[参照]**  
  **[ファイルを開く]** ダイアログ ボックスを使用して、ワークシートを検索します。  
@@ -100,7 +100,7 @@ ms.locfileid: "53370274"
 >  選択**Access** Access 2003 を使用するデータベースに接続する場合にのみ、またはそれ以前。 Access 2007 を使用するデータベースに接続するには、選択**Microsoft Office 12.0 Access Database Engine OLE DB Provider**代わりにします。  
   
  **[ファイル名]**  
- データをインポートするデータベース ファイルのパスとファイル名を指定します。 たとえば、**C:\MyData.mdb、\\\Sales\Database\Northwind.mdb** などです。 または、**[参照]** をクリックします。  
+ データをインポートするデータベース ファイルのパスとファイル名を指定します。 たとえば、**C:\MyData.mdb、\\\Sales\Database\Northwind.mdb** などです。 または、 **[参照]** をクリックします。  
   
  **[参照]**  
  **[ファイルを開く]** ダイアログ ボックスを使用して、データベース ファイルを検索します。  

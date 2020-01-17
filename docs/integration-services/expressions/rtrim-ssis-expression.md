@@ -11,17 +11,20 @@ helpviewer_keywords:
 - RTRIM function
 - trailing blanks
 ms.assetid: 529bd43e-3f8a-4682-a33e-569176aa7fc4
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: acca0e8559488e37c2aed619e6f92013ac70fa73
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: bb899229cf38697ea7abf25fb82dddb7d2826842
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47605650"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71297385"
 ---
 # <a name="rtrim-ssis-expression"></a>RTRIM (SSIS 式)
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   末尾のスペースを削除した後の文字式を返します。  
   
 > [!NOTE]  
@@ -67,7 +70,7 @@ RTRIM(@FirstName)
   
 ## <a name="see-also"></a>参照  
  [LTRIM (SSIS 式)](../../integration-services/expressions/ltrim-ssis-expression.md)   
- [TRIM &#40;SSIS 式&#41;](../../integration-services/expressions/trim-ssis-expression.md)   
+ [TRIM (SSIS 式)](../../integration-services/expressions/trim-ssis-expression.md)   
  [関数 (SSIS 式)](../../integration-services/expressions/functions-ssis-expression.md)  
   
   

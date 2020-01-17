@@ -16,11 +16,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 6bfb1bf3cd43bac47dfb06e4f24c74dc4835709b
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52813804"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62629750"
 ---
 # <a name="join-filters"></a>結合フィルター
   結合フィルターを使用すると、パブリケーションにおける関連するテーブルのフィルター方法に基づいて、テーブルにフィルターを適用できます。 通常、親テーブルにはパラメーター化されたフィルターが使用されます。そのため、テーブル間の結合を定義する場合とほぼ同じ方法で 1 つ以上の結合フィルターを定義できます。 結合フィルターは、結合フィルター句に一致した場合のみ関連テーブルのデータがレプリケートされるように、パラメーター化されたフィルターを拡張します。  

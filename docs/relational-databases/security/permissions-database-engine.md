@@ -18,21 +18,20 @@ helpviewer_keywords:
 ms.assetid: f28e3dea-24e6-4a81-877b-02ec4c7e36b9
 author: VanMSFT
 ms.author: vanto
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 521b183a1901bac8a5ac982baa65d2d8cbb60264
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 8488462e75a6f836a1b77c49052a9cfdd0c82d2e
+ms.sourcegitcommit: 58f1d5498c87bfe0f6ec4fd9d7bbe723be47896b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47840084"
+ms.lasthandoff: 08/13/2019
+ms.locfileid: "68995854"
 ---
 # <a name="permissions-database-engine"></a>権限 (データベース エンジン)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のセキュリティ保護可能なリソースにはすべて、プリンシパルに許可できる権限が関連付けられています。 [!INCLUDE[ssDE](../../includes/ssde-md.md)] の権限は、ログインおよびサーバー ロールに割り当てられたサーバー レベル、およびデータベース ユーザーおよびデータベース ロールに割り当てられたデータベース レベルで管理されます。 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] のモデルには、データベース権限用に同じシステムがありますが、サーバー レベルの権限は使用できません。 このトピックでは、権限の一覧を示します。 アクセス許可の一般的な実装については、「 [Getting Started with Database Engine Permissions](../../relational-databases/security/authentication-access/getting-started-with-database-engine-permissions.md)」を参照してください。  
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のセキュリティ保護可能なリソースにはすべて、プリンシパルに許可できる権限が関連付けられています。 [!INCLUDE[ssDE](../../includes/ssde-md.md)] の権限は、ログインおよびサーバー ロールに割り当てられたサーバー レベル、およびデータベース ユーザーおよびデータベース ロールに割り当てられたデータベース レベルで管理されます。 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] のモデルには、データベース権限用に同じシステムがありますが、サーバー レベルの権限は使用できません。 このトピックでは、権限の一覧を示します。 アクセス許可の一般的な実装については、「 [Getting Started with Database Engine Permissions](../../relational-databases/security/authentication-access/getting-started-with-database-engine-permissions.md)」を参照してください。  
   
-[!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] と [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] の権限の合計数 は 237 です。 ほとんどの権限はすべてのプラットフォームに適用されますがが、一部は適用されません。 たとえば、サーバー レベルの権限は SQL データベースに対して付与することができず、 [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]で意味を成すのは、いくつかの権限のみです。 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] は 230 の権限を公開します。 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] は 219 の権限を公開します。 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] は 214 の権限を公開します。 [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] は 195 の権限を公開します。 [Sys.fn_builtin_permissions](../../relational-databases/system-functions/sys-fn-builtin-permissions-transact-sql.md) トピックでは、最近のバージョンでどのトピックが新しいかが明確に記載されています。
+[!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] と [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] の権限の合計数 は 237 です。 ほとんどの権限はすべてのプラットフォームに適用されますがが、一部は適用されません。 たとえば、サーバー レベルの権限は [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] に対して付与することができず、[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] で意味を成すのは、いくつかの権限のみです。 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] は 230 の権限を公開します。 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] は 219 の権限を公開します。 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] は 214 の権限を公開します。 [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] は 195 の権限を公開します。 [Sys.fn_builtin_permissions](../../relational-databases/system-functions/sys-fn-builtin-permissions-transact-sql.md) トピックでは、最近のバージョンでどのトピックが新しいかが明確に記載されています。
 
 権限を理解したら、 [GRANT](../../t-sql/statements/grant-transact-sql.md)、 [REVOKE](../../t-sql/statements/revoke-transact-sql.md)、および [DENY](../../t-sql/statements/deny-transact-sql.md) ステートメントを使用してサーバー レベルの権限をログインとデータベース レベルの権限ユーザーに付与します。 例:   
 ```sql
@@ -104,12 +103,12 @@ REVOKE SELECT ON OBJECT::HumanResources.Employee TO Larry;
 |----------------|----------------|  
 |ALTER|オブジェクトのすべてのクラス (TYPE を除く)。|  
 |CONTROL|オブジェクトのすべてのクラス: <br />AGGREGATE、<br />APPLICATION ROLE、<br />ASSEMBLY、<br />ASYMMETRIC KEY、<br />AVAILABILITY GROUP、<br />CERTIFICATE、<br />CONTRACT、<br />CREDENTIALS、DATABASE、<br />DATABASE SCOPED CREDENTIAL、<br /> DEFAULT、<br />ENDPOINT、<br />FULLTEXT CATALOG、<br />FULLTEXT STOPLIST、<br />FUNCTION、<br />LOGIN、<br />MESSAGE TYPE、<br />PROCEDURE、<br />QUEUE、 <br />REMOTE SERVICE BINDING、<br />ROLE、<br />ROUTE、<br />RULE、<br />SCHEMA、<br />SEARCH PROPERTY LIST、<br />SERVER、<br />SERVER ROLE、<br />SERVICE、<br />SYMMETRIC KEY、<br />SYNONYM、<br />TABLE、<br />TYPE、USER、<br />VIEW、および<br />XML SCHEMA COLLECTION|  
-|Del|オブジェクトのすべてのクラス (DATABASE SCOPED CONFIGURATION および SERVER を除く)。|  
+|DELETE|オブジェクトのすべてのクラス (DATABASE SCOPED CONFIGURATION および SERVER を除く)。|  
 |EXECUTE|CLR 型、外部スクリプト、プロシージャ ([!INCLUDE[tsql](../../includes/tsql-md.md)] と CLR)、スカラー関数、集計関数 ([!INCLUDE[tsql](../../includes/tsql-md.md)] と CLR)、およびシノニム|  
 |IMPERSONATE|ログイン、ユーザー|  
 |INSERT|シノニム、テーブルと列、ビューと列。 データベース、スキーマ、またはオブジェクト レベルで権限を付与できます。|  
 |RECEIVE|[!INCLUDE[ssSB](../../includes/sssb-md.md)] キュー|  
-|REFERENCES|AGGREGATE、<br />ASSEMBLY、<br />ASYMMETRIC KEY、<br />CERTIFICATE、<br />CONTRACT、<br />DATABASE、<br />DATABASE SCOPED CREDENTIAL、<br />FULLTEXT CATALOG、<br />FULLTEXT STOPLIST、<br />FUNCTION、<br />MESSAGE TYPE、<br />PROCEDURE、<br />QUEUE、 <br />RULE、<br />SCHEMA、<br />SEARCH PROPERTY LIST、<br />SEQUENCE OBJECT、 <br />SYMMETRIC KEY、<br />SYNONYM、<br />TABLE、<br />TYPE、<br />VIEW、および<br />XML SCHEMA COLLECTION|  
+|REFERENCES|AGGREGATE、<br />ASSEMBLY、<br />ASYMMETRIC KEY、<br />CERTIFICATE、<br />CONTRACT、<br />DATABASE、<br />DATABASE SCOPED CREDENTIAL、<br />FULLTEXT CATALOG、<br />FULLTEXT STOPLIST、<br />FUNCTION、<br />MESSAGE TYPE、<br />PROCEDURE、<br />QUEUE、 <br />RULE、<br />SCHEMA、<br />SEARCH PROPERTY LIST、<br />SEQUENCE OBJECT、 <br />SYMMETRIC KEY、<br />TABLE、<br />TYPE、<br />VIEW、および<br />XML SCHEMA COLLECTION|  
 |SELECT|シノニム、テーブルと列、ビューと列。 データベース、スキーマ、またはオブジェクト レベルで権限を付与できます。|  
 |TAKE OWNERSHIP|オブジェクトのすべてのクラス (DATABASE SCOPED CONFIGURATION、LOGIN、SERVER、および USER を除く)。|  
 |UPDATE|シノニム、テーブルと列、ビューと列。 データベース、スキーマ、またはオブジェクト レベルで権限を付与できます。|  
@@ -120,7 +119,7 @@ REVOKE SELECT ON OBJECT::HumanResources.Employee TO Larry;
 >  セットアップ時にシステム オブジェクトに付与された既定のアクセス許可は、発生する可能性のある脅威に対して慎重に評価されているため、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインストールの際、セキュリティ強化の一部として変更する必要はありません。 システム オブジェクトのアクセス許可の変更はどのようなものであっても、機能を制限または中断する可能性があり、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインストールがサポートされていない状態のままになる場合があります。  
   
 ##  <a name="_permissions"></a> SQL Server 権限  
- 次の表に、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のすべての権限の一覧を示します。 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] のアクセス許可は、サポートされている基本のセキュリティ保護可能なリソースにのみ使用できます。 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]ではサーバー レベルのアクセス許可を付与することはできませんが、代わりにデータベースのアクセス許可を付与できる場合があります。  
+ 次の表に、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のすべての権限の一覧を示します。 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] のアクセス許可は、サポートされている基本のセキュリティ保護可能なリソースにのみ使用できます。 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]ではサーバー レベルのアクセス許可を付与することはできませんが、代わりにデータベースのアクセス許可を付与できる場合があります。  
   
 |セキュリティ保護可能な基本リソース|セキュリティ保護可能な基本リソースに対する粒度の細かい権限|権限の種類のコード|基本リソースを含んでいる別のセキュリティ保護可能なリソース|セキュリティ保護可能なコンテナーに対する権限 (基本リソースに対する粒度の細かい権限を暗示)|  
 |--------------------|--------------------------------------------|--------------------------|--------------------------------------------|------------------------------------------------------------------------------------------|  
@@ -157,26 +156,26 @@ REVOKE SELECT ON OBJECT::HumanResources.Employee TO Larry;
 |DATABASE|ALTER ANY ASSEMBLY|ALAS|SERVER|CONTROL SERVER|  
 |DATABASE|ALTER ANY ASYMMETRIC KEY|ALAK|SERVER|CONTROL SERVER|  
 |DATABASE|ALTER ANY CERTIFICATE|ALCF|SERVER|CONTROL SERVER|  
-|DATABASE|任意の列の暗号化キーを変更します。|ALCK<br /><br /> 適用対象 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] から現在のバージョンまで)、 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]。|SERVER|CONTROL SERVER|  
-|DATABASE|ALTER ANY COLUMN MASTER KEY|ALCM<br /><br /> 適用対象 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] から現在のバージョンまで)、 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]。|SERVER|CONTROL SERVER|  
+|DATABASE|任意の列の暗号化キーを変更します。|ALCK<br /><br /> 適用対象 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] から現在のバージョンまで)、 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。|SERVER|CONTROL SERVER|  
+|DATABASE|ALTER ANY COLUMN MASTER KEY|ALCM<br /><br /> 適用対象 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] から現在のバージョンまで)、 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。|SERVER|CONTROL SERVER|  
 |DATABASE|ALTER ANY CONTRACT|ALSC|SERVER|CONTROL SERVER|  
 |DATABASE|ALTER ANY DATABASE AUDIT|ALDA|SERVER|ALTER ANY SERVER AUDIT|  
 |DATABASE|ALTER ANY DATABASE DDL TRIGGER|ALTG|SERVER|CONTROL SERVER|  
 |DATABASE|ALTER ANY DATABASE EVENT NOTIFICATION|ALED|SERVER|ALTER ANY EVENT NOTIFICATION|  
-|DATABASE|ALTER ANY DATABASE EVENT SESSION|AADS<br /><br /> [!INCLUDE[ssSDS](../../includes/sssds-md.md)]に適用されます。|SERVER|ALTER ANY EVENT SESSION|  
-|DATABASE|ALTER ANY DATABASE SCOPED CONFIGURATION|ALDC<br /><br /> 適用対象 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] から現在のバージョンまで)、 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]。|SERVER|CONTROL SERVER|  
+|DATABASE|ALTER ANY DATABASE EVENT SESSION|AADS<br /><br /> [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]に適用されます。|SERVER|ALTER ANY EVENT SESSION|  
+|DATABASE|ALTER ANY DATABASE SCOPED CONFIGURATION|ALDC<br /><br /> 適用対象 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] から現在のバージョンまで)、 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。|SERVER|CONTROL SERVER|  
 |DATABASE|ALTER ANY DATASPACE|ALDS|SERVER|CONTROL SERVER|  
 |DATABASE|すべての外部データ ソースを変更します。|AEDS|SERVER|CONTROL SERVER|  
 |DATABASE|任意の外部のファイル形式を変更します。|AEFF|SERVER|CONTROL SERVER|  
 |DATABASE|ALTER ANY FULLTEXT CATALOG|ALFT|SERVER|CONTROL SERVER|  
-|DATABASE|任意のマスクを変更します。|AAMK<br /><br /> 適用対象 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] から現在のバージョンまで)、SQL Database。|SERVER|CONTROL SERVER|  
+|DATABASE|任意のマスクを変更します。|AAMK<br /><br /> 適用対象 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] から現在のバージョンまで)、 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。|SERVER|CONTROL SERVER|  
 |DATABASE|ALTER ANY MESSAGE TYPE|ALMT|SERVER|CONTROL SERVER|  
 |DATABASE|ALTER ANY REMOTE SERVICE BINDING|ALSB|SERVER|CONTROL SERVER|  
 |DATABASE|ALTER ANY ROLE|ALRL|SERVER|CONTROL SERVER|  
 |DATABASE|ALTER ANY ROUTE|ALRT|SERVER|CONTROL SERVER|  
 |DATABASE|ALTER ANY SCHEMA|ALSM|SERVER|CONTROL SERVER|  
-|DATABASE|すべてのセキュリティ ポリシーを変更します。|ALSP<br /><br /> 適用対象 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] から現在のバージョンまで)、 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]。|SERVER|CONTROL SERVER|  
-|DATABASE|ALTER ANY SENSITIVITY CLASSIFICATION|ALSP<br />適用対象 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (SQL Server 2019 (15.x) から現在のバージョンまで)、SQL Database。|DATABASE|CONTROL SERVER|
+|DATABASE|すべてのセキュリティ ポリシーを変更します。|ALSP<br /><br /> 適用対象 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] から現在のバージョンまで)、 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。|SERVER|CONTROL SERVER|  
+|DATABASE|ALTER ANY SENSITIVITY CLASSIFICATION|ALSP<br />適用対象 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (SQL Server 2019 (15.x) から現在のバージョンまで)、[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。|DATABASE|CONTROL SERVER|
 |DATABASE|ALTER ANY SERVICE|ALSV|SERVER|CONTROL SERVER|  
 |DATABASE|ALTER ANY SYMMETRIC KEY|ALSK|SERVER|CONTROL SERVER|  
 |DATABASE|ALTER ANY USER|ALUS|SERVER|CONTROL SERVER|  
@@ -212,20 +211,20 @@ REVOKE SELECT ON OBJECT::HumanResources.Employee TO Larry;
 |DATABASE|CREATE TYPE|CRTY|SERVER|CONTROL SERVER|  
 |DATABASE|CREATE VIEW|CRVW|SERVER|CONTROL SERVER|  
 |DATABASE|CREATE XML SCHEMA COLLECTION|CRXS|SERVER|CONTROL SERVER|  
-|DATABASE|Del|DL|SERVER|CONTROL SERVER|  
+|DATABASE|DELETE|DL|SERVER|CONTROL SERVER|  
 |DATABASE|EXECUTE|EX|SERVER|CONTROL SERVER|  
 |DATABASE|EXECUTE ANY EXTERNAL SCRIPT|EAES<br /><br /> 適用対象 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] から現在のバージョンまで)。|SERVER|CONTROL SERVER|  
 |DATABASE|INSERT|IN|SERVER|CONTROL SERVER|  
-|DATABASE|KILL DATABASE CONNECTION|KIDC<br /><br /> [!INCLUDE[ssSDS](../../includes/sssds-md.md)]だけに適用されます。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]で ALTER ANY CONNECTION を使用する。|SERVER|ALTER ANY CONNECTION|  
+|DATABASE|KILL DATABASE CONNECTION|KIDC<br /><br /> [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]だけに適用されます。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]で ALTER ANY CONNECTION を使用する。|SERVER|ALTER ANY CONNECTION|  
 |DATABASE|REFERENCES|RF|SERVER|CONTROL SERVER|  
 |DATABASE|SELECT|SL|SERVER|CONTROL SERVER|  
 |DATABASE|SHOWPLAN|SPLN|SERVER|ALTER TRACE|  
 |DATABASE|SUBSCRIBE QUERY NOTIFICATIONS|SUQN|SERVER|CONTROL SERVER|  
 |DATABASE|TAKE OWNERSHIP|TO|SERVER|CONTROL SERVER|  
-|DATABASE|マスク解除します。|UMSK<br /><br /> 適用対象 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] から現在のバージョンまで)、SQL Database。|SERVER|CONTROL SERVER|  
+|DATABASE|マスク解除します。|UMSK<br /><br /> 適用対象 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] から現在のバージョンまで)、 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。|SERVER|CONTROL SERVER|  
 |DATABASE|UPDATE|UP|SERVER|CONTROL SERVER|  
-|DATABASE|列の暗号化キーの定義を表示します。|VWCK<br /><br /> 適用対象 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] から現在のバージョンまで)、 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]。|SERVER|VIEW SERVER STATE|  
-|DATABASE|任意の列のマスター_キーの定義の表示|vWCM<br /><br /> 適用対象 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] から現在のバージョンまで)、 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]。|SERVER|VIEW SERVER STATE|  
+|DATABASE|列の暗号化キーの定義を表示します。|VWCK<br /><br /> 適用対象 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] から現在のバージョンまで)、 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。|SERVER|VIEW SERVER STATE|  
+|DATABASE|任意の列のマスター_キーの定義の表示|vWCM<br /><br /> 適用対象 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] から現在のバージョンまで)、 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。|SERVER|VIEW SERVER STATE|  
 |DATABASE|VIEW DATABASE STATE|VWDS|SERVER|VIEW SERVER STATE|  
 |DATABASE|VIEW DEFINITION|VW|SERVER|VIEW ANY DEFINITION|  
 |DATABASE SCOPED CREDENTIAL|ALTER|AL|DATABASE|CONTROL|
@@ -251,7 +250,7 @@ REVOKE SELECT ON OBJECT::HumanResources.Employee TO Larry;
 |Login|ALTER|AL|SERVER|ALTER ANY LOGIN|  
 |Login|CONTROL|CL|SERVER|CONTROL SERVER|  
 |Login|IMPERSONATE|IM|SERVER|CONTROL SERVER|  
-|LOGIN|VIEW DEFINITION|VW|SERVER|VIEW ANY DEFINITION|  
+|Login|VIEW DEFINITION|VW|SERVER|VIEW ANY DEFINITION|  
 |MESSAGE TYPE|ALTER|AL|DATABASE|ALTER ANY MESSAGE TYPE|  
 |MESSAGE TYPE|CONTROL|CL|DATABASE|CONTROL|  
 |MESSAGE TYPE|REFERENCES|RF|DATABASE|REFERENCES|  
@@ -259,7 +258,7 @@ REVOKE SELECT ON OBJECT::HumanResources.Employee TO Larry;
 |MESSAGE TYPE|VIEW DEFINITION|VW|DATABASE|VIEW DEFINITION|  
 |OBJECT|ALTER|AL|SCHEMA|ALTER|  
 |OBJECT|CONTROL|CL|SCHEMA|CONTROL|  
-|OBJECT|Del|DL|SCHEMA|Del|  
+|OBJECT|DELETE|DL|SCHEMA|DELETE|  
 |OBJECT|EXECUTE|EX|SCHEMA|EXECUTE|  
 |OBJECT|INSERT|IN|SCHEMA|INSERT|  
 |OBJECT|RECEIVE|RC|SCHEMA|CONTROL|  
@@ -289,7 +288,7 @@ REVOKE SELECT ON OBJECT::HumanResources.Employee TO Larry;
 |SCHEMA|ALTER|AL|DATABASE|ALTER ANY SCHEMA|  
 |SCHEMA|CONTROL|CL|DATABASE|CONTROL|  
 |SCHEMA|CREATE SEQUENCE|CRSO|DATABASE|CONTROL|  
-|SCHEMA|Del|DL|DATABASE|Del|  
+|SCHEMA|DELETE|DL|DATABASE|DELETE|  
 |SCHEMA|EXECUTE|EX|DATABASE|EXECUTE|  
 |SCHEMA|INSERT|IN|DATABASE|INSERT|  
 |SCHEMA|REFERENCES|RF|DATABASE|REFERENCES|  
@@ -418,7 +417,7 @@ REVOKE SELECT ON OBJECT::HumanResources.Employee TO Larry;
 
 ## <a name="special-considerations-for-column-level-permissions"></a>列レベルのアクセス許可に関する特別な考慮事項
 
-列レベルの権限は構文 *<table_name>(\<column _name>)* を使用して許可されます。 例 :
+列レベルの権限は構文 *<table_name>(\<column _name>)* を使用して許可されます。 例:
 ```sql
 GRANT SELECT ON OBJECT::Customer(CustomerName) TO UserJoe;
 ```

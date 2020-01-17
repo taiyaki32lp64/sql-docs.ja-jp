@@ -1,5 +1,5 @@
 ---
-title: unwrap メソッド (SQLServerCallableStatement) |Microsoft Docs
+title: unwrap メソッド (SQLServerCallableStatement) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: cbbf2728-b8c8-4c35-875a-6e967c8285dc
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 40a1072776d2f926d353012656c921f217528d92
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 0dc8ddf82859b8bf47853a3d72a7461567388b87
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47666790"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67995198"
 ---
 # <a name="unwrap-method-sqlservercallablestatement"></a>unwrap メソッド (SQLServerCallableStatement)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -48,7 +47,7 @@ public <T> T unwrap(Class<T> iface)
   
  [SQLServerCallableStatement](../../../connect/jdbc/reference/sqlservercallablestatement-class.md) は、[ISQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md) クラスから拡張された [ISQLServerPreparedStatement](../../../connect/jdbc/reference/sqlserverpreparedstatement-class.md) クラスを実装します。 このメソッドが呼び出されると、オブジェクトは [SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md)、[SQLServerPreparedStatement](../../../connect/jdbc/reference/sqlserverpreparedstatement-class.md)、および [SQLServerCallableStatement](../../../connect/jdbc/reference/sqlservercallablestatement-class.md) の各クラスにアンラップされます。  
   
- 詳細については、次を参照してください。[ラッパーとインターフェイス](../../../connect/jdbc/wrappers-and-interfaces.md)します。  
+ 詳細については、「[ラッパーとインターフェイス](../../../connect/jdbc/wrappers-and-interfaces.md)」を参照してください。  
   
  次のコード例では、isWrapperFor メソッドと unwrap メソッドを使用してドライバー拡張を確認し、[setResponseBuffering](../../../connect/jdbc/reference/setresponsebuffering-method-sqlserverstatement.md) や [getResponseBuffering](../../../connect/jdbc/reference/getresponsebuffering-method-sqlserverstatement.md) などのベンダー固有メソッドを呼び出す方法を示します。  
   

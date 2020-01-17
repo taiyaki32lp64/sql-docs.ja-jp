@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: a28b16eb-ca36-4297-9297-ecd7c107a84e
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 1a7c87c0dc81035d59e17db02a6e95c3b573523a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 788f0b8c69636ad9bf93de73632abc911a0fb0e3
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47686980"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67898759"
 ---
 # <a name="sqlgettypeinfo-access-driver"></a>SQLGetTypeInfo (Access ドライバー)
 > [!NOTE]  

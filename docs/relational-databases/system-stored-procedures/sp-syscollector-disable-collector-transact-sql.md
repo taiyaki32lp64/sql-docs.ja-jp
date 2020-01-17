@@ -18,18 +18,17 @@ helpviewer_keywords:
 ms.assetid: 9ef4c85d-cca6-452d-94be-2be6f616c3d8
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: e0e699b0bfd8eb5916ac4be913530659249f3b98
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 2d5ae3f6f130852611c57eebaffc452ae1424fd2
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47658720"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68000844"
 ---
 # <a name="spsyscollectordisablecollector-transact-sql"></a>sp_syscollector_disable_collector (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  データ コレクターを無効にします。 データ コレクターはサーバーごとに 1 つしか存在しないので、パラメーターは必要ありません。  
+  データ コレクターを無効にします。 サーバーごとに 1 つだけのデータ コレクターがあるため、パラメーターは必要ありません。  
   
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -47,7 +46,7 @@ dbo.sp_syscollector_disable_collector
  **0** (成功) または**1** (失敗)  
   
 ## <a name="remarks"></a>コメント  
- 既定でサーバー上のデータ コレクターが使用されます。  
+ 既定値は、サーバー上のデータ コレクターです。  
   
 ## <a name="permissions"></a>アクセス許可  
  このプロシージャを実行するには、(EXECUTE 権限を持つ) **dc_admin** または **dc_operator** 固定データベース ロールのメンバーシップが必要です。  
@@ -59,7 +58,7 @@ dbo.sp_syscollector_disable_collector
 EXEC dbo.sp_syscollector_disable_collector;  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [システム ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
  [[データ コレクション]](../../relational-databases/data-collection/data-collection.md)  
   

@@ -4,23 +4,22 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.ffileconnection.preview.f1
 helpviewer_keywords:
 - Flat File Connection Manager Editor
 ms.assetid: de47ea98-135e-4730-900e-dac629848798
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: c0368fefac4c927ee1f1483ba433feb13b3c1dc5
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 233bc63102243c60c7ed74b5beeadd2c921f399a
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48125182"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66058741"
 ---
 # <a name="flat-file-connection-manager-editor-preview-page"></a>[フラット ファイル接続マネージャー エディター] ([プレビュー] ページ)
   **[フラット ファイル接続マネージャー エディター]** ダイアログ ボックスの **[プレビュー]** ノードを使用すると、ソース ファイルの内容を表形式で表示できます。  
@@ -37,7 +36,7 @@ ms.locfileid: "48125182"
  **[スキップするデータ行数]**  
  フラット ファイルの冒頭でスキップする行数を指定します。  
   
- **[更新]**  
+ **更新**  
  **[最新の情報に更新]** をクリックすると、スキップする行数を変更した結果が表示されます。 このボタンは、他の接続オプションを変更した場合にのみ表示されます。  
   
  **[プレビュー]**  
@@ -45,8 +44,8 @@ ms.locfileid: "48125182"
   
 ## <a name="see-also"></a>参照  
  [Integration Services のエラーおよびメッセージのリファレンス](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [フラット ファイル接続マネージャー エディター &#40;[全般] ページ&#41;](general-page-of-integration-services-designers-options.md)   
- [フラット ファイル接続マネージャー エディター&#40;列 ページ&#41;](../../2014/integration-services/flat-file-connection-manager-editor-columns-page.md)   
+ [[フラット ファイル接続マネージャー エディター] &#40;[全般] ページ&#41;](general-page-of-integration-services-designers-options.md)   
+ [[フラット ファイル接続マネージャー エディター] &#40;[列] ページ&#41;](../../2014/integration-services/flat-file-connection-manager-editor-columns-page.md)   
  [[フラット ファイル接続マネージャー エディター] &#40;[詳細設定] ページ&#41;](../../2014/integration-services/flat-file-connection-manager-editor-advanced-page.md)  
   
   

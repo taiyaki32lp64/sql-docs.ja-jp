@@ -4,20 +4,18 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: database-engine
 ms.topic: reference
 ms.assetid: 590f5396-98d5-485e-9b41-728c6ed7cb9d
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 31c9372674ab439c3435515c13f1d76518771328
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 2a6273032f88807291bfc7024f1abcdbd1440073
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48219272"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62780682"
 ---
 # <a name="sql-dmo-mapping-to-smo"></a>SQL-DMO の SMO へのマッピング
   [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] では、SQL 分散管理オブジェクト (SQL-DMO) は含まれなくなりました。SQL-DMO アプリケーションは、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 管理オブジェクト (SMO) で使用できるように変換する必要があります。 SMO オブジェクト モデルは SQL-DMO に似ているため、大半の SQL-DMO オブジェクトは SMO と同じ名前のオブジェクトにマップされます。 ただし、一部の SQL-DMO オブジェクトは SMO への移行で変更または削除されました。 次の表は、SMO に直接変換されなかった SQL-DMO オブジェクトに対して推奨される操作を示しています。  
@@ -26,7 +24,7 @@ ms.locfileid: "48219272"
 |---------------------|-------------------|  
 |View2 オブジェクト|移動<xref:Microsoft.SqlServer.Management.Smo.Agent>Namespace です。|  
 |AlertSystem オブジェクト|移動<xref:Microsoft.SqlServer.Management.Smo.Agent>Namespace です。|  
-|Application オブジェクト|削除されました。|  
+|Application オブジェクト|削除されます。|  
 |Backup オブジェクトおよび Backup2 オブジェクト|<xref:Microsoft.SqlServer.Management.Smo.Backup> オブジェクトおよび <xref:Microsoft.SqlServer.Management.Smo.BackupRestoreBase> オブジェクト。|  
 |BackupDevice オブジェクト|<xref:Microsoft.SqlServer.Management.Smo.BackupDevice> オブジェクト|  
 |BulkCopy オブジェクトおよび BulkCopy2 オブジェクト|削除され、<xref:Microsoft.SqlServer.Management.Smo.Transfer> オブジェクトによって置き換えられました。|  
@@ -67,7 +65,7 @@ ms.locfileid: "48219272"
 |MergePullSubscription オブジェクトおよび MergePullSubscription2 オブジェクト|<xref:Microsoft.SqlServer.Replication.MergePullSubscription> オブジェクト。 移動<xref:Microsoft.SqlServer.Replication>名前空間。|  
 |MergeSubscription オブジェクト|<xref:Microsoft.SqlServer.Replication.MergeSubscription> オブジェクト。 移動<xref:Microsoft.SqlServer.Replication>名前空間。|  
 |MergeSubsetFilter オブジェクト|移動`N:Microsoft.SqlServer.Replication`名前空間。|  
-|NameList オブジェクト|削除されました。 代替機能が <xref:Microsoft.SqlServer.Management.Smo.Scripter> オブジェクトで提供されています。|  
+|NameList オブジェクト|削除されます。 代替機能が <xref:Microsoft.SqlServer.Management.Smo.Scripter> オブジェクトで提供されています。|  
 |Operator オブジェクト|移動<xref:Microsoft.SqlServer.Management.Smo.Agent>名前空間。|  
 |Permission オブジェクトおよび Permission2 オブジェクト|<xref:Microsoft.SqlServer.Management.Smo.ServerPermission> オブジェクト、<xref:Microsoft.SqlServer.Management.Smo.DatabasePermission> オブジェクト、<xref:Microsoft.SqlServer.Management.Smo.ApplicationRole> オブジェクト、および <xref:Microsoft.SqlServer.Management.Smo.ObjectPermission> オブジェクト。|  
 |Property オブジェクト|`Property` オブジェクト。|  
@@ -75,7 +73,7 @@ ms.locfileid: "48219272"
 |QueryResults オブジェクトおよび QueryResults2 オブジェクト|<xref:System.Data.DataTable> システム オブジェクトまたは <xref:System.Data.DataSet> システム オブジェクトによって置き換えられました。|  
 |RegisteredServer オブジェクト|移動<xref:Microsoft.SqlServer.Replication>名前空間。|  
 |RegisteredSubscriber オブジェクト|移動<xref:Microsoft.SqlServer.Replication>名前空間。|  
-|Registry オブジェクトおよび Registry2 オブジェクト|削除されました。|  
+|Registry オブジェクトおよび Registry2 オブジェクト|削除されます。|  
 |RemoteLogin オブジェクト|<xref:Microsoft.SqlServer.Management.Common.ServerConnection> オブジェクト。 Common 名前空間に移動されました。|  
 |RemoteServer オブジェクトおよび RemoteServer2 オブジェクト|<xref:Microsoft.SqlServer.Management.Common.ServerConnection> オブジェクト。 移動<xref:Microsoft.SqlServer.Management.Common>名前空間。|  
 |レプリケーション オブジェクト|移動<xref:Microsoft.SqlServer.Replication>名前空間。|  
@@ -86,7 +84,7 @@ ms.locfileid: "48219272"
 |Restore オブジェクトおよび Restore2 オブジェクト|<xref:Microsoft.SqlServer.Management.Smo.Restore> オブジェクトおよび <xref:Microsoft.SqlServer.Management.Smo.BackupRestoreBase> オブジェクト。|  
 |Rule オブジェクトおよび Rule2 オブジェクト|<xref:Microsoft.SqlServer.Management.Smo.Rule> オブジェクト|  
 |Schedule オブジェクト|移動<xref:Microsoft.SqlServer.Replication>名前空間。|  
-|ServerGroup オブジェクト|削除されました。|  
+|ServerGroup オブジェクト|削除されます。|  
 |ServerRole オブジェクト|<xref:Microsoft.SqlServer.Management.Smo.ServerRole> オブジェクト。|  
 |SQLObjectList オブジェクト|<xref:Microsoft.SqlServer.Management.Smo.SqlSmoObject> 配列。|  
 |SQLServer オブジェクトおよび SQLServer2 オブジェクト|<xref:Microsoft.SqlServer.Management.Smo.Server> オブジェクト。|  

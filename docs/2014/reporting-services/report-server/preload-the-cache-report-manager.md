@@ -4,22 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 helpviewer_keywords:
 - cache [Reporting Services]
 - preloading cache
 ms.assetid: 152a1051-8aa5-4c01-bc85-f8be8971b0cd
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: ff32fcd498d7998f79b480369d90a07f974f6dc6
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 98ce4f723c0b4c04b166b01d17e8014567253518
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56035083"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66103584"
 ---
 # <a name="preload-the-cache-report-manager"></a>キャッシュの事前読み込み (レポート マネージャー)
   共有データセットのキャッシュ更新計画を作成することによって、共有データセットのキャッシュを事前に読み込むことができます。  
@@ -59,7 +58,7 @@ ms.locfileid: "56035083"
   
 7.  共有スケジュールを使用する場合は、 **[共有スケジュール]** をクリックして、使用するスケジュールの名前を選択します。  
   
-     カスタム スケジュールを使用する場合は、 **[アイテム固有のスケジュール]**、 **[構成]** の順にクリックします。  
+     カスタム スケジュールを使用する場合は、 **[アイテム固有のスケジュール]** 、 **[構成]** の順にクリックします。  
   
 8.  スケジュールを構成します。  
   
@@ -116,12 +115,12 @@ ms.locfileid: "56035083"
   
     -   キャッシュされたコピーが、特定の期間が過ぎた後で有効期限が切れるようにするには、**レポートの一時コピーをキャッシュします。レポートのコピーの有効期限は数分後に切れます** をクリックします。 レポートの有効期限を分単位で入力します。  
   
-    -   キャッシュされたコピーが、スケジュールに基づいて有効期限が切れるようにするには、**[レポートの一時コピーをキャッシュします。次のスケジュールでレポートのコピーの有効期限は切れます。]** をクリックします。 **[構成]** をクリックするか、共有スケジュールを選択して、レポートの有効期限をスケジュールします。  
+    -   キャッシュされたコピーが、スケジュールに基づいて有効期限が切れるようにするには、 **[レポートの一時コピーをキャッシュします。次のスケジュールでレポートのコピーの有効期限は切れます。]** をクリックします。 **[構成]** をクリックするか、共有スケジュールを選択して、レポートの有効期限をスケジュールします。  
   
 18. **[適用]** をクリックします。  
   
-## <a name="see-also"></a>参照  
- [Data-Driven Subscriptions](../subscriptions/data-driven-subscriptions.md)   
+## <a name="see-also"></a>関連項目  
+ [データ ドリブン サブスクリプション](../subscriptions/data-driven-subscriptions.md)   
  [データ ドリブン サブスクリプションの作成 (SSRS チュートリアル)](../create-a-data-driven-subscription-ssrs-tutorial.md)   
  [パフォーマンス、スナップショット、キャッシュ (Reporting Services)](performance-snapshots-caching-reporting-services.md)   
  [レポート処理プロパティの設定](set-report-processing-properties.md)   

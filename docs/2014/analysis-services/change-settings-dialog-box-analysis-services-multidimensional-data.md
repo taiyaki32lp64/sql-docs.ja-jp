@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.process.batchsettingsdialog.f1
@@ -13,18 +12,18 @@ ms.assetid: 0041e042-d7ce-48f9-a690-a6dc65471ff3
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: e549e9b4121d116adc627c34dad017b85099a825
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 43dfc1dca2e60fe2f5e467556ee36c3add1a9da3
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48077862"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66088248"
 ---
 # <a name="change-settings-dialog-box-analysis-services---multidimensional-data"></a>[設定の変更] ダイアログ ボックス (Analysis Services - 多次元データ)
   **および** の [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] [設定の変更] [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] ダイアログ ボックスを使用すると、 **[処理]** ダイアログ ボックスに示されているオブジェクトの処理を制御する設定を変更できます。 **[設定の変更]** ダイアログ ボックスを表示するには、 **[処理]** ダイアログ ボックスの **[設定の変更]** をクリックします。  
   
 > [!NOTE]  
->  このダイアログ ボックスで指定された設定は、**[処理]** ダイアログ ボックスに一覧表示されたオブジェクトの、[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] データベースから継承された既定の設定をオーバーライドします。  
+>  このダイアログ ボックスで指定された設定は、 **[処理]** ダイアログ ボックスに一覧表示されたオブジェクトの、[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] データベースから継承された既定の設定をオーバーライドします。  
   
 ## <a name="options"></a>および  
  **処理オプション**  
@@ -138,7 +137,7 @@ ms.locfileid: "48077862"
  **[影響を受けたオブジェクトの処理]**  
  **[処理]** ダイアログ ボックスで選択されたオブジェクトに依存するオブジェクトを処理します。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [Analysis Services のデザイナーおよびダイアログ ボックス&#40;多次元データ&#41;](analysis-services-designers-and-dialog-boxes-multidimensional-data.md)   
  [[プロセス] ダイアログ ボックス&#40;Analysis Services - 多次元データ&#41;](process-dialog-box-analysis-services-multidimensional-data.md)  
   

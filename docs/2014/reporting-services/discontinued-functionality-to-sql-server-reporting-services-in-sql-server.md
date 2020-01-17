@@ -1,20 +1,21 @@
 ---
 title: 廃止された機能
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.prod: reporting-services-2014, sql-server-2014
+ms.prod: sql-server-2014
 ms.reviewer: ''
+ms.technology: reporting-services
 ms.prod_service: reporting-services-native, reporting-services-sharepoint
 ms.topic: conceptual
 ms.custom: seodec18
 ms.date: 12/14/2018
-ms.openlocfilehash: f36a55baee21f81305857ba766879d69c73bbdb5
-ms.sourcegitcommit: 2f5773f4bc02bfff4f2924226ac5651eb0c00924
+ms.openlocfilehash: 14a5a6e38d4c9fcf306436374d80dd1c1c08b27e
+ms.sourcegitcommit: 0a4879dad09c6c42ad1ff717e4512cfea46820e9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/18/2018
-ms.locfileid: "53552974"
+ms.lasthandoff: 06/27/2019
+ms.locfileid: "67413043"
 ---
 # <a name="discontinued-functionality-in-sql-server-reporting-services-ssrs"></a>SQL Server Reporting Services (SSRS) で廃止された機能
 

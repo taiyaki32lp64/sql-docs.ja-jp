@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 5dac737a-b77e-47d3-9228-cd52b7a97b0a
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 2b0f5877343246a6328e9e709b7f205ef82f0922
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 0ea275767e2d4c67af1d03011c8db9f7190618b2
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47789690"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67938655"
 ---
 # <a name="cubedef-object-properties-methods-and-events"></a>CubeDef オブジェクトのプロパティ、メソッド、およびイベント
 ## <a name="propertiescollections"></a>プロパティ/コレクション  
@@ -36,5 +35,5 @@ ms.locfileid: "47789690"
 ## <a name="events"></a>イベント  
  [なし] :  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [CubeDef オブジェクト (ADO MD)](../../../ado/reference/ado-md-api/cubedef-object-ado-md.md)

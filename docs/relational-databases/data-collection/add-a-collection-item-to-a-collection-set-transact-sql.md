@@ -1,6 +1,6 @@
 ---
-title: コレクション アイテムをコレクション セットに追加する (Transact-SQL) | Microsoft Docs
-ms.custom: ''
+title: コレクション アイテムのコレクション セットへの追加 (T-SQL)
+ms.custom: seo-lt-2019
 ms.date: 03/07/2017
 ms.prod: sql
 ms.reviewer: ''
@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 9fe6454e-8c0e-4b50-937b-d9871b20fd13
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 0b9c1b720fe48c18ecbeab3eaf5c4d54b9c4a296
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 8b6a17bf6732221787bda5e34d42b01046b3f828
+ms.sourcegitcommit: d00ba0b4696ef7dee31cd0b293a3f54a1beaf458
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47675235"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "74055589"
 ---
 # <a name="add-a-collection-item-to-a-collection-set-transact-sql"></a>コレクション アイテムをコレクション セットに追加する (Transact-SQL)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

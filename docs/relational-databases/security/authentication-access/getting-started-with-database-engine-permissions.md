@@ -12,14 +12,13 @@ helpviewer_keywords:
 ms.assetid: 051af34e-bb5b-403e-bd33-007dc02eef7b
 author: VanMSFT
 ms.author: vanto
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 23ed71d50fc84c743f5574a3e3e96852b2e9bd21
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: 0fd86c132a0a51ea6bbba533bc7e8a2ab1083ddc
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53202661"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72903016"
 ---
 # <a name="getting-started-with-database-engine-permissions"></a>データベース エンジンの権限の概要
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -29,29 +28,29 @@ ms.locfileid: "53202661"
 ## <a name="security-principals"></a>セキュリティ プリンシパル  
  セキュリティ プリンシパルとは、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] を使用する ID の正式名であり、アクションを実行するように権限を割り当てることができます。 基本的にはユーザーまたはユーザーのグループですが、ユーザーとして扱われるエンティティでもかまいません。 セキュリティ プリンシパルは一覧の [!INCLUDE[tsql](../../../includes/tsql-md.md)] または [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]を使用して作成および管理できます。  
   
- Login  
+##### <a name="logins"></a>Login  
  ログインとは、 [!INCLUDE[ssDEnoversion](../../../includes/ssdenoversion-md.md)]にログオンするための個々のユーザー アカウントです。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] と [!INCLUDE[ssSDS](../../../includes/sssds-md.md)] は Windows 認証に基づくログインと、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 認証に基づくログインをサポートします。 2 種類のログインの詳細については、「 [Choose an Authentication Mode](../../../relational-databases/security/choose-an-authentication-mode.md)」を参照してください。  
   
- 固定サーバー ロール  
+##### <a name="fixed-server-roles"></a>固定サーバー ロール  
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]では、固定サーバー ロールは構成済みの一連ロールで、サーバー レベルの権限の便利なグループを提供します。 ロールには `ALTER SERVER ROLE ... ADD MEMBER` ステートメントを使用してログインを追加できます。 詳細については、「[ALTER SERVER ROLE &#40;Transact-SQL&#41;](../../../t-sql/statements/alter-server-role-transact-sql.md)」を参照してください。 [!INCLUDE[ssSDS](../../../includes/sssds-md.md)] は固定サーバー ロールをサポートしていませんが、マスター データベースにサーバー ロールとして機能する 2 つのロール (`dbmanager` と `loginmanager`) があります。  
   
- ユーザー定義サーバー ロール  
+##### <a name="user-defined-server-roles"></a>ユーザー定義サーバー ロール  
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]では、独自のサーバー ロールを作成して、サーバー レベルの権限を割り当てることができます。 サーバー ロールには `ALTER SERVER ROLE ... ADD MEMBER` ステートメントを使用してログインを追加できます。 詳細については、「[ALTER SERVER ROLE &#40;Transact-SQL&#41;](../../../t-sql/statements/alter-server-role-transact-sql.md)」を参照してください。 [!INCLUDE[ssSDS](../../../includes/sssds-md.md)] はユーザー定義サーバー ロールをサポートしていません。  
   
- データベース ユーザー  
+##### <a name="database-users"></a>データベース ユーザー  
  データベースにデータベース ユーザーを作成してそのデータベース ユーザーをログインにマッピングすることで、ログインにデータベースへのアクセスが付与されます。 通常、データベース ユーザー名はログイン名と同じですが、同じにする必要はありません。 各データベース ユーザーは、単一のログインにマッピングされます。 ログインはデータベース内の 1 つのユーザーにのみマッピングできますが、異なる複数のデータベースにデータベース ユーザーとしてマッピングできます。  
   
  対応するログインがないデータベース ユーザーも作成できます。 これらは *包含データベース ユーザー*と呼ばれます。 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] では包含データベース ユーザーの使用をお勧めしています。 ログインと同様に、包含データベース ユーザーは Windows 認証または [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 認証のいずれかを使用できます。 詳細については、「 [包含データベース ユーザー - データベースの可搬性を確保する](../../../relational-databases/security/contained-database-users-making-your-database-portable.md)」を参照してください。  
   
  12 種類のユーザーはそれぞれ認証方法がわずかに異なり、それぞれ何を代表するかも異なります。 ユーザーの一覧は「[CREATE USER &#40;Transact-SQL&#41;](../../../t-sql/statements/create-user-transact-sql.md)」で確認してください。  
   
- 固定データベース ロール  
+##### <a name="fixed-database-roles"></a>固定データベース ロール  
  固定データベース ロールは構成済みの一連のロールで、データベース レベルの権限の便利なグループを提供します。 固定データベース ロールには、`ALTER ROLE ... ADD MEMBER` ステートメントを使用してデータベース ユーザーとユーザー定義データベース ロールを追加できます。 詳細については、「[ALTER ROLE &#40;Transact-SQL&#41;](../../../t-sql/statements/alter-role-transact-sql.md)」を参照してください。  
   
- ユーザー定義データベース ロール  
+##### <a name="user-defined-database-roles"></a>ユーザー定義データベース ロール  
  `CREATE ROLE` の権限を持つユーザーは、一般的な権限を持つユーザーのグループを代表する、新しいユーザー定義データベース ロールを作成できます。 通常、権限の管理と監視を簡略化するために、権限はロール全体に対して付与または拒否されます。 データベース ロールには、 `ALTER ROLE ... ADD MEMBER` ステートメントを使用してデータベース ユーザーを追加できます。 詳細については、「[ALTER ROLE &#40;Transact-SQL&#41;](../../../t-sql/statements/alter-role-transact-sql.md)」を参照してください。  
   
- その他のプリンシパル  
+##### <a name="other-principals"></a>その他のプリンシパル  
  ここで取り上げていないその他のセキュリティ ポリシーには、アプリケーション ロールのほか、証明書や非対称キーに基づくログインやユーザーなどがあります。  
   
  Windows ユーザー、Windows グループ、ログイン、データベース ユーザー間の関係を示す図については、「 [Create a Database User](../../../relational-databases/security/authentication-access/create-a-database-user.md)」を参照してください。  
@@ -66,7 +65,7 @@ ms.locfileid: "53202661"
 2.  作業単位と職務を表す Windows グループを作成します。  
   
 3.  Windows ユーザーを Windows グループに追加します。  
-  
+
 #### <a name="if-the-person-connecting-will-be-connecting-to-many-databases"></a>接続するユーザーが多数のデータベースに接続する場合  
   
 1.  Windows グループのログインを作成します。 ( [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 認証を使用する場合は、Active Directory の手順をスキップし、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 認証のログインをここで作成します)。  
@@ -229,7 +228,9 @@ JOIN sys.database_principals AS dRole
 ## <a name="next-steps"></a>Next Steps  
  開始に役立つトピックについては、次を参照してください。  
   
--   [チュートリアル: データベース エンジンの概要](../../../relational-databases/tutorial-getting-started-with-the-database-engine.md) [データベースの作成 &#40;チュートリアル&#41;](../../../t-sql/lesson-1-creating-database-objects.md#)  
+-   [チュートリアル: データベース エンジンの概要](../../../relational-databases/tutorial-getting-started-with-the-database-engine.md) 
+
+-   [データベースの作成 (チュートリアル)](../../../t-sql/lesson-1-creating-database-objects.md)  
   
 -   [チュートリアル: SQL Server Management Studio](../../../tools/sql-server-management-studio/tutorial-sql-server-management-studio.md)  
   

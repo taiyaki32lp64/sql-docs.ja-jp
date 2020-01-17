@@ -1,5 +1,5 @@
 ---
-title: sqlagent90 アプリケーション |Microsoft Docs
+title: sqlagent90 Application |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -13,15 +13,14 @@ helpviewer_keywords:
 - SQL Server Agent, starting
 - command prompt utilities [SQL Server], sqlagent90
 ms.assetid: e8b80e8d-d0c9-4500-a868-0ce08233da08
-author: stevestein
-ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 25758924ace9a03da1e885e0af637262e80cde2a
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 20405a10a2e36232068329542923aae65c10c4e1
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51670131"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68059593"
 ---
 # <a name="sqlagent90-application"></a>sqlagent90 アプリケーション
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

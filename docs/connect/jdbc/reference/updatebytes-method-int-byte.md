@@ -1,5 +1,5 @@
 ---
-title: updateBytes (int, byte) メソッド |Microsoft Docs
+title: updateBytes (int, byte) メソッドMicrosoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: 625f48ba-53d0-45a6-8fcb-643f1e0cbe8a
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: e61895c1d19cc2372de63be5572dcfe2d141b1fd
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 60de0b0fd051ed67a2f2804443e419d454c2cb5c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47831436"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67996907"
 ---
 # <a name="updatebytes-method-int-byte"></a>updateBytes (int, byte) メソッド
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -43,13 +42,13 @@ public void updateBytes(int index,
   
  *x*  
   
- 配列の**バイト**値。  
+ **バイト**値の配列。  
   
 ## <a name="exceptions"></a>例外  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- この updateBytes メソッドは、java.sql.ResultSet インターフェイスの updateBytes メソッドによって指定されます。  
+ この updateBytes メソッドは、java.sql.ResultSet インターフェイスの updateBytes メソッドで規定されています。  
   
  以前のバージョンの [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)] では、SQLServerResultSet.updateBytes を使用してバイト配列と [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] データ型の **date**、**time**、**datetime2**、または **datetimeoffset** との間の変換を実行できました。 新しいバージョンでは、これらのデータ型に対してこのメソッドを使用すると、変換がサポートされていないことを示す例外が発生します。  
   

@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 8a8594f2-422b-4d2e-94f8-7fe337445900
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 6afe36c7b3923c9ebf33fd615a1c21e34955e62d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: c2e56178ad306d5b39c2445c391c3bbabe4fc424
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47827600"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67917034"
 ---
 # <a name="savetofile-method"></a>SaveToFile メソッド
 バイナリ コンテンツを保存、 [Stream](../../../ado/reference/ado-api/stream-object-ado.md)ファイル。  
@@ -54,6 +53,6 @@ Stream.SaveToFile FileName, SaveOptions
 ## <a name="applies-to"></a>適用対象  
  [Stream オブジェクト (ADO)](../../../ado/reference/ado-api/stream-object-ado.md)  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [Open メソッド (ADO Stream)](../../../ado/reference/ado-api/open-method-ado-stream.md)   
  [Save メソッド](../../../ado/reference/ado-api/save-method.md)

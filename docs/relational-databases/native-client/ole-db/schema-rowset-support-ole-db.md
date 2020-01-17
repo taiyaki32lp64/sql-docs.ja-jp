@@ -1,5 +1,5 @@
 ---
-title: スキーマ行セットのサポート (OLE DB) |マイクロソフトのドキュメント
+title: スキーマ行セットのサポート (OLE DB) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -16,25 +16,23 @@ helpviewer_keywords:
 ms.assetid: a75b4b69-b095-4690-9b31-a2b32a67489e
 author: MightyPen
 ms.author: genemi
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: f57e5ffe71c84bb682c26ab05e708f243b35cce3
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 316bfd740f909321798cc2203af9577c5ef6e404
+ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47791780"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73759547"
 ---
 # <a name="schema-rowset-support-ole-db"></a>スキーマ行セットのサポート (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-[!INCLUDE[SNAC_Deprecated](../../../includes/snac-deprecated.md)]
 
-  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client OLE DB プロバイダーは、処理するときにも、リンク サーバーから返されるスキーマ情報をサポート[!INCLUDE[tsql](../../../includes/tsql-md.md)]分散クエリ。  
+  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client OLE DB プロバイダーは、[!INCLUDE[tsql](../../../includes/tsql-md.md)] 分散クエリを処理するときに、リンクサーバーからスキーマ情報を返すこともできます。  
   
 > [!NOTE]  
 >  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ではシノニムがサポートされていますが、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client ではシノニムのメタデータは返されません。  
   
- スキーマ行セットの一覧とでサポートされる制限列を以下に示します、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client OLE DB プロバイダー。  
+ 次の表に、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client OLE DB プロバイダーでサポートされるスキーマ行セットと制限列を示します。  
   
 |スキーマ行セット|制限列|  
 |-------------------|-------------------------|  
@@ -57,10 +55,10 @@ ms.locfileid: "47791780"
 ## <a name="in-this-section"></a>このセクションの内容  
  [スキーマ行セットでの分散クエリのサポート](../../../relational-databases/native-client/ole-db/schema-rowsets-distributed-query-support.md)  
   
- [LINKEDSERVERS 行セット&#40;OLE DB&#41;](../../../relational-databases/native-client/ole-db/schema-rowsets-linkedservers-rowset.md)  
+ [LINKEDSERVERS 行&#40;セット OLE DB&#41;](../../../relational-databases/native-client/ole-db/schema-rowsets-linkedservers-rowset.md)  
   
 ## <a name="see-also"></a>参照  
- [SQL Server Native Client &#40;OLE DB&#41;](../../../relational-databases/native-client/ole-db/sql-server-native-client-ole-db.md)   
+ [SQL Server Native Client &#40;OLE DB&#41; ](../../../relational-databases/native-client/ole-db/sql-server-native-client-ole-db.md)   
  [ユーザー定義型の使用](../../../relational-databases/native-client/features/using-user-defined-types.md)  
   
   

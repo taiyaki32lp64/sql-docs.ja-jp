@@ -20,15 +20,14 @@ helpviewer_keywords:
 - rolling back transactions, ROLLBACK WORK
 - savepoints [SQL Server]
 ms.assetid: 2071dbd3-53d5-4510-be8d-26e80f2553b4
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: a1bce048d3504fdf5d2367bacc1aa45d8699d2b2
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 72426dddcab7c0250b6ef0d744f9ede0a19f1550
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47821803"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68072352"
 ---
 # <a name="rollback-work-transact-sql"></a>ROLLBACK WORK (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]

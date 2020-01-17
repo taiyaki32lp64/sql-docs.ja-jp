@@ -11,11 +11,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 6da38b25ca23302c8b683a5c9b54ed2b6f88f6b2
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48128842"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62773754"
 ---
 # <a name="utility-administration-sql-server-utility"></a>ユーティリティの管理 (SQL Server ユーティリティ)
   ユーティリティの管理の各タブでは、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] ユーティリティのポリシー設定、セキュリティ設定、およびデータ ウェアハウス設定を管理できます。 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] ユーティリティの概念の詳細については、「 [SQL Server ユーティリティの機能とタスク](../relational-databases/manage/sql-server-utility-features-and-tasks.md)」を参照してください。  
@@ -23,7 +23,7 @@ ms.locfileid: "48128842"
 ## <a name="uielement-list"></a>UI 要素の一覧  
  [ポリシー] タブ - このタブでは、グローバル監視ポリシーを表示または指定できます。  
   
- [グローバル データ層アプリケーション監視ポリシーを設定する] :  このオプションの値一覧を表示するには、ポリシー名の横にある矢印をクリックするか、ポリシーのタイトルをクリックします。  
+ [グローバル データ層アプリケーション監視ポリシーを設定する] : このオプションの値一覧を表示するには、ポリシー名の横にある矢印をクリックするか、ポリシーのタイトルをクリックします。  
  [アプリケーションがプロセッサの能力を使い果たすタイミング] : このポリシー説明の右側にあるコントロールを使用してポリシーを変更し、 **[適用]** をクリックします。 また、画面の下部にあるボタンを使用して、既定値を復元したり変更を破棄したりすることもできます。  
   
 -   プロセッサ使用率の既定の最大値は 70% です。  
@@ -89,11 +89,11 @@ ms.locfileid: "48128842"
  [ユーティリティ データ ウェアハウスの構成情報]  
  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]のこのリリースで構成できない構成設定は次のとおりです。  
   
--   UMDW name: Sysutility_mdw_\<GUID>_DATA.  
+-   UMDW 名:Sysutility_mdw _\<GUID > _DATA します。  
   
--   コレクション セットのアップロード頻度: 15 分ごと  
+-   コレクション セットのアップロード頻度。15 分ごとにします。  
   
- UMDW ディレクトリ \<System drive>:\Program Files\Microsoft SQL Server\MSSQL10_50.<UCP_Name>\MSSQL\Data\\ (通常、\<System drive> は C:\ ドライブ) は構成可能です。 ログ ファイル UMDW_\<GUID>_LOG は同じディレクトリにあります。  
+ UMDW ディレクトリは構成できます。\<システム ドライブ >: \Program Files\Microsoft SQL server \mssql10_50. < UCP_Name > \MSSQL\Data\\ここで、\<システム ドライブ > は、通常は、C:\ドライブ。 ログ ファイル UMDW_\<GUID>_LOG は同じディレクトリにあります。  
   
 > [!NOTE]  
 >  UMDW (sysutility_mdw) ファイルの場所を変更するには、デタッチとアタッチを使用する方法と ALTER DATABASE を使用する方法があります。 ALTER DATABASE の使用をお勧めします。 詳細については、「[ALTER DATABASE &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql)」を参照してください。  
@@ -101,10 +101,10 @@ ms.locfileid: "48128842"
  [追加設定なしの既定値に戻す]  
  このタブの設定を既定値にリセットするには、 **[既定値に戻す]** ボタンをクリックし、 **[適用]** をクリックします。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [ユーティリティ ダッシュ ボード&#40;SQL Server ユーティリティ&#41;](../../2014/database-engine/utility-dashboard-sql-server-utility.md)   
  [配置済みのデータ層アプリケーションの詳細 &#40;SQL Server ユーティリティ&#41;](../../2014/database-engine/deployed-data-tier-application-details-sql-server-utility.md)   
- [マネージド インスタンスの詳細 &amp;amp;#40;SQL Server ユーティリティ&amp;amp;#41;](../../2014/database-engine/managed-instance-details-sql-server-utility.md)   
+ [マネージド インスタンスの詳細 &#40;SQL Server ユーティリティ&#41;](../../2014/database-engine/managed-instance-details-sql-server-utility.md)   
  [SQL Server ユーティリティでの SQL Server のインスタンスの監視](../relational-databases/manage/monitor-instances-of-sql-server-in-the-sql-server-utility.md)  
   
   

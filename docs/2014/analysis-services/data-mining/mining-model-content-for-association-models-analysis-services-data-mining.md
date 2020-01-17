@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - itemsets [Analysis Services]
@@ -17,12 +16,12 @@ ms.assetid: d5849bcb-4b8f-4f71-9761-7dc5bb465224
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 4cdbacc27816464440fe57db7c7d727026754220
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 9a1e525d7b42d058343e41ea154f0687fb969839
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48135062"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66083686"
 ---
 # <a name="mining-model-content-for-association-models-analysis-services---data-mining"></a>アソシエーション モデルのマイニング モデル コンテンツ (Analysis Services - データ マイニング)
   このトピックでは、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] アソシエーション ルール アルゴリズムを使用するモデルに固有のマイニング モデル コンテンツについて説明します。 すべてのモデルの種類に適用されるマイニング モデル コンテンツに関連する一般用語と統計用語の説明については、「[マイニング モデル コンテンツ &#40;Analysis Services - データ マイニング&#41;](mining-model-content-analysis-services-data-mining.md)」を参照してください。  
@@ -102,12 +101,12 @@ ms.locfileid: "48135062"
 |RULE_COUNT|モデル内のすべてのルールの数。|  
 |MIN_SUPPORT|任意の 1 つのアイテムセットに対して検出された最小のサポート。<br /><br /> **注** この値は、 *MINIMUM _SUPPORT* パラメーターに設定した値とは異なる場合があります。|  
 |MAX_SUPPORT|任意の 1 つのアイテムセットに対して検出された最大のサポート。<br /><br /> **注** この値は、 *MAXIMUM_SUPPORT* パラメーターに設定した値とは異なる場合があります。|  
-|MIN_ITEMSET_SIZE|アイテムの数として表される最小のアイテムセットのサイズ。<br /><br /> 0 の値を示す、`Missing`状態が独立したアイテムとして扱われます。<br /><br /> **注** *MINIMUM_ITEMSET_SIZE* パラメーターの既定値は 1 です。|  
+|MIN_ITEMSET_SIZE|アイテムの数として表される最小のアイテムセットのサイズ。<br /><br /> 値 0 は、`Missing` 状態が独立したアイテムとして扱われたことを示します。<br /><br /> **注** *MINIMUM_ITEMSET_SIZE* パラメーターの既定値は 1 です。|  
 |MAX_ITEMSET_SIZE|検出された最大のアイテムセットのサイズを示します。<br /><br /> **注** この値は、モデルの作成時に *MAX_ITEMSET_SIZE* パラメーターに設定した値によって制限されます。 その値を超えることはありませんが、その値より小さくなることはあります。 既定値は、3 です。|  
-|MIN_PROBABILITY|モデル内の任意の 1 つのアイテムセットまたはルールに対して検出された最小の確率。<br /><br /> 例: 0.400390625<br /><br /> **注** アイテムセットの場合、この値は常に、モデルの作成時に *MINIMUM_PROBABILITY* パラメーターに設定した値より大きくなります。|  
-|MAX_PROBABILITY|モデル内の任意の 1 つのアイテムセットまたはルールに対して検出された最大の確率。<br /><br /> 例: 1<br /><br /> **注** アイテムセットの最大確率を制限するパラメーターはありません。 頻度が高すぎるアイテムを除外するには、代わりに *MAXIMUM_SUPPORT* パラメーターを使用します。|  
-|MIN_LIFT|モデルによって任意のアイテムセットに対して提供されているリフトの最小量。<br /><br /> 例 : 0.14309369632511<br /><br /> 注: 最小リフトがわかると、特定のアイテムセットのリフトが大きいかどうかを判断できます。|  
-|MAX_LIFT|モデルによって任意のアイテムセットに対して提供されているリフトの最大量。<br /><br /> 例 : 1.95758227647523 **注** 最大リフトがわかると、特定のアイテムセットのリフトが大きいかどうかを判断できます。|  
+|MIN_PROBABILITY|モデル内の任意の 1 つのアイテムセットまたはルールに対して検出された最小の確率。<br /><br /> 例:0.400390625<br /><br /> **注** アイテムセットの場合、この値は常に、モデルの作成時に *MINIMUM_PROBABILITY* パラメーターに設定した値より大きくなります。|  
+|MAX_PROBABILITY|モデル内の任意の 1 つのアイテムセットまたはルールに対して検出された最大の確率。<br /><br /> 例:1<br /><br /> **注** アイテムセットの最大確率を制限するパラメーターはありません。 頻度が高すぎるアイテムを除外するには、代わりに *MAXIMUM_SUPPORT* パラメーターを使用します。|  
+|MIN_LIFT|モデルによって任意のアイテムセットに対して提供されているリフトの最小量。<br /><br /> 例:0.14309369632511<br /><br /> 注:最小リフトと、任意の 1 つのアイテム セットのリフトが大きいかどうかを判断できます。|  
+|MAX_LIFT|モデルによって任意のアイテムセットに対して提供されているリフトの最大量。<br /><br /> 例:1.95758227647523**注**最大リフトと任意の 1 つのアイテム セットのリフトが大きいかどうかを判断するが役立つことができます。|  
   
  **アイテムセット ノード** アイテムセット ノードには、コンマ区切りのテキスト文字列として表示されるアイテムのリストが含まれています。  
   
@@ -194,7 +193,7 @@ ms.locfileid: "48135062"
  空白。  
   
 ## <a name="see-also"></a>参照  
- [マイニング モデル コンテンツ&#40;Analysis Services - データ マイニング&#41;](mining-model-content-analysis-services-data-mining.md)   
+ [マイニング モデル コンテンツ &#40;Analysis Services - データ マイニング&#41;](mining-model-content-analysis-services-data-mining.md)   
  [Microsoft アソシエーション アルゴリズム](microsoft-association-algorithm.md)   
  [結合モデルのクエリ例](association-model-query-examples.md)  
   

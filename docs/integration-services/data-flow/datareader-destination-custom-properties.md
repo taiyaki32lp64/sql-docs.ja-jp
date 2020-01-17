@@ -8,17 +8,20 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: f151c3e8-3811-457d-a3d3-6158ca65a646
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: c54d0c7c254f07d06c34ffc3860d03d8ccfba124
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 5b2e9ebcf8464b17712d36fc43c86b7785de9ae7
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51638230"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71292996"
 ---
 # <a name="datareader-destination-custom-properties"></a>DataReader 変換先のカスタム プロパティ
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   DataReader 変換先には、カスタム プロパティと、すべてのデータ フロー コンポーネントとの共通プロパティの両方があります。  
   
  次の表は、DataReader 変換先のカスタム プロパティを示しています。 **DataReader** を除き、すべてのプロパティは読み取り/書き込み可能です。  
@@ -26,7 +29,7 @@ ms.locfileid: "51638230"
 |プロパティ名|データ型|[説明]|  
 |-------------------|---------------|-----------------|  
 |DataReader|String|DataReader 変換先のクラス名。|  
-|FailOnTimeout|ブール値|**ReadTimeout** が発生したときに失敗するかどうかを示します。 このプロパティの既定値は **False**です。|  
+|FailOnTimeout|Boolean|**ReadTimeout** が発生したときに失敗するかどうかを示します。 このプロパティの既定値は **False**です。|  
 |ReadTimeout|Integer|タイムアウトが発生するまでの時間 (ミリ秒単位)。 このプロパティの既定値は 30000 (30 秒) です。|  
   
  DataReader 変換先の入力および入力列には、カスタム プロパティはありません。  

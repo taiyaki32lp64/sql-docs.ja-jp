@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: 2f44a689-65c8-4c94-9574-e9c08ea7918e
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 83e035d659fd7b6b59c7b8d8a0799415bef5c112
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a5c905c11d76f6f9928cb621ce5a35caa4dd1419
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47611708"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67954746"
 ---
 # <a name="executeupdate-method-javalangstring-javalangstring"></a>executeUpdate (java.lang.String, java.lang.String) メソッド
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -39,7 +38,7 @@ public final int executeUpdate(java.lang.String sql,
 #### <a name="parameters"></a>パラメーター  
  *sql*  
   
- A**文字列**SQL ステートメントを格納しています。  
+ SQL ステートメントを含む**文字列**です。  
   
  *columnNames*  
   

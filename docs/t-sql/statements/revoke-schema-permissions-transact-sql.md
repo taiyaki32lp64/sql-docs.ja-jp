@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: a1fabf35-1f42-48db-b0b8-7181f413ba3a
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: a033eb0e5d4064c3289a3275763150e097a7e4a5
-ms.sourcegitcommit: c6e71ed14198da67afd7ba722823b1af9b4f4e6f
+ms.openlocfilehash: eb41f051eca6a837abb61c308b67167a1874a44d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/16/2019
-ms.locfileid: "54327753"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67914280"
 ---
 # <a name="revoke-schema-permissions-transact-sql"></a>REVOKE (スキーマ権限の取り消し) (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -47,7 +46,7 @@ REVOKE [ GRANT OPTION FOR ] permission  [ ,...n ]
  スキーマに対して取り消すことができる権限を指定します。 スキーマで取り消すことができる権限の一覧については、後の「解説」を参照してください。  
   
  GRANT OPTION FOR  
- 指定した権限を他のプリンシパルに与えるための権限が、取り消されます。 権限自体は取り消されません。  
+ 指定した権限を他のプリンシパルに付与する権限が取り消されることを示します。 権限自体は取り消されません。  
   
 > [!IMPORTANT]  
 >  指定した権限が GRANT オプションなしでプリンシパルに許可されている場合は、その権限自体が取り消されます。  
@@ -100,14 +99,14 @@ REVOKE [ GRANT OPTION FOR ] permission  [ ,...n ]
 -   サーバー プリンシパルにマップされていないデータベース ユーザー  
   
 ## <a name="remarks"></a>Remarks  
- スキーマは、データベース レベルのセキュリティ保護可能なリソースで、権限の階層で親となっているデータベースに含まれています。 次の表に、スキーマで取り消すことのできる権限のうち最も限定的なものを、それらを暗黙的に含む一般的な権限と共に示します。  
+ スキーマは、データベース レベルのセキュリティ保護可能なリソースで、権限の階層で親となっているデータベースに含まれています。 次の表に、スキーマで取り消すことができる権限のうち最も限定的なものを、それらを暗黙的に含むより一般的な権限と共に示します。  
   
 |スキーマ権限|権限が含まれるスキーマ権限|権限が含まれるデータベース権限|  
 |-----------------------|----------------------------------|------------------------------------|  
 |ALTER|CONTROL|ALTER ANY SCHEMA|  
 |CONTROL|CONTROL|CONTROL|  
 |CREATE SEQUENCE|ALTER|ALTER ANY SCHEMA|  
-|Del|CONTROL|Del|  
+|DELETE|CONTROL|DELETE|  
 |EXECUTE|CONTROL|EXECUTE|  
 |INSERT|CONTROL|INSERT|  
 |REFERENCES|CONTROL|REFERENCES|  

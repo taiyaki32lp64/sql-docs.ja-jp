@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - modifying named calculations
@@ -15,12 +14,12 @@ ms.assetid: 729e7b12-6185-4b73-8bcb-cfe459b15355
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: c67d7becd2fae8557a734424f9f767e17b3ba7ea
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: a69d5194c6eea3bc81676e8c0c3b1cac1d06270c
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48146182"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66075566"
 ---
 # <a name="define-named-calculations-in-a-data-source-view-analysis-services"></a>データ ソース ビューでの名前付き計算の定義 (Analysis Services)
   名前付き計算は、計算される列として表現されている SQL 式です。 この式は、テーブル内の列として表示され動作します。 名前付き計算を使用すると、基になるデータ ソースのテーブルやビューを変更しなくても、データ ソース ビュー内の既存のテーブルまたはビューのリレーショナル スキーマを拡張できます。 次の例を考えてみます。  
@@ -85,6 +84,6 @@ FROM
  名前付き計算を削除しようとすると、削除するかどうかを確認するメッセージが、削除によって無効になるプロジェクトまたはデータベースに定義されているオブジェクトのリストと共に表示されます。 計算を削除する前に、リストを慎重に確認します。  
   
 ## <a name="see-also"></a>参照  
- [データ ソース ビューで名前付きクエリの定義&#40;Analysis Services&#41;](define-named-queries-in-a-data-source-view-analysis-services.md)  
+ [データ ソース ビューでの名前付きクエリの定義 (Analysis Services)](define-named-queries-in-a-data-source-view-analysis-services.md)  
   
   

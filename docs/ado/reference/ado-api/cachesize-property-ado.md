@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 49dc9a49-af7b-433b-be36-7a14ca984fb7
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 76cd9e4977ffda023c270a027602597ddf7b9a4a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: c6b33ef7eb4bae796fa2b2da59a7b1dc805d739e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47724670"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67920330"
 ---
 # <a name="cachesize-property-ado"></a>CacheSize プロパティ (ADO)
 レコードの数を示す、 [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md)メモリにローカルにキャッシュされたオブジェクト。  
@@ -48,7 +47,7 @@ ms.locfileid: "47724670"
 ## <a name="applies-to"></a>適用対象  
  [Recordset オブジェクト (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [CacheSize プロパティの例 (VB)](../../../ado/reference/ado-api/cachesize-property-example-vb.md)   
  [CacheSize プロパティの例 (vc++)](../../../ado/reference/ado-api/cachesize-property-example-vc.md)   
  [CacheSize プロパティの例 (JScript)](../../../ado/reference/ado-api/cachesize-property-example-jscript.md)

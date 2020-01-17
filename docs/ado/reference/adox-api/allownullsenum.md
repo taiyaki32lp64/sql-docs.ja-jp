@@ -15,18 +15,17 @@ helpviewer_keywords:
 ms.assetid: 6acf3689-1a7f-4379-9d7f-df452ccbac27
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 9d1f4f5ce302c6f9e3e28b037c838d452f771114
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 48e9d8c40d2ab76b902d285526fcd9e9abf7be07
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47692690"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67967332"
 ---
 # <a name="allownullsenum"></a>AllowNullsEnum
 Null 値を持つレコードのインデックスを作成するかどうかを指定します。  
   
-|定数|値|説明|  
+|定数|Value|説明|  
 |--------------|-----------|-----------------|  
 |**adIndexNullsAllow**|0|インデックス キー列が null 値のエントリを許可します。 キー列に null 値を入力すると、エントリは、インデックスに挿入されます。|  
 |**adIndexNullsDisallow**|1|既定値です。 インデックスでは、エントリのキー列を null にできません。 キー列に null 値を入力すると、エラーが発生します。|  

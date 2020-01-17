@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 17dc9129-04cd-430c-b5b3-82824116425d
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: fe04b5fbe8d5bd0ab16ca81fc503ac72ff7a1966
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b83188359489759f50b2929de769721d627c15d8
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47787402"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67992899"
 ---
 # <a name="retrieving-data-as-a-stream-using-the-sqlsrv-driver"></a>SQLSRV ドライバーを使用してデータをストリームとして取得する
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]

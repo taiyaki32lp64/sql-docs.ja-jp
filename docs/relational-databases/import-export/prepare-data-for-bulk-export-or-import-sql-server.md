@@ -1,6 +1,5 @@
 ---
-title: 一括エクスポートまたは一括インポートのデータの準備 (SQL Server) | Microsoft Docs
-ms.custom: ''
+title: 一括エクスポートまたは一括インポートのデータの準備
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
@@ -14,18 +13,18 @@ helpviewer_keywords:
 - CSV files [SQL Server]
 - quoted fields in CSV files [SQL Server]
 ms.assetid: 783fd581-2e5f-496b-b79c-d4de1e09ea30
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
+author: MashaMSFT
+ms.author: mathoma
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 14027e51732d0177f9058a2635358ec7ae46c8c4
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.custom: seo-lt-2019
+ms.openlocfilehash: b5aecdf222ea325f67a23b728ed29ee40e768387
+ms.sourcegitcommit: d00ba0b4696ef7dee31cd0b293a3f54a1beaf458
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52535842"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "74056413"
 ---
-# <a name="prepare-data-for-bulk-export-or-import-sql-server"></a>一括エクスポートまたは一括インポートのデータの準備 (SQL Server)
+# <a name="prepare-data-for-bulk-export-or-import"></a>一括エクスポートまたは一括インポートのデータの準備
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
   ここでは、一括エクスポート操作の計画に関する考慮事項と一括インポート操作の要件について説明します。  
@@ -71,7 +70,7 @@ ms.locfileid: "52535842"
   
      データを [!INCLUDE[msCoName](../../includes/msconame-md.md)] FoxPro や Visual FoxPro テーブル (.dbf) ファイル、または [!INCLUDE[ofprexcel](../../includes/ofprexcel-md.md)] ワークシート (.xls) ファイルから一括インポートするには、前述の制限に準拠した CSV ファイルにデータを変換する必要があります。 通常、ファイル拡張子は .csv です。 そうすると、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 一括インポート操作で .csv ファイルをデータ ファイルとして使用できます。  
   
-     32 ビット システムでは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] OPENROWSET [を OLE DB Provider for Jet と共に使用することにより、一括インポートの最適化を使用せずに CSV データを](../../t-sql/functions/openrowset-transact-sql.md) テーブルにインポートできます。 Jet は、データ ソースと同じディレクトリ内にある schema.ini ファイルで定義されたスキーマを使用して、テキスト ファイルをテーブルとして扱います。  CSV データの場合、schema.ini ファイル内のパラメーターの 1 つが "FORMAT=CSVDelimited" となります。 この解決方法を使用するには、Jet Test IISAMm 操作、その接続文字列の構文、schema.ini の使用法、レジストリ設定オプションなどについて理解する必要があります。  この情報については、Microsoft Access ヘルプとサポート技術情報 (KB) の資料を参照することをお勧めします。 詳しくは、「 [テキスト データ ソース ドライバーを初期化する](https://msdn.microsoft.com/library/office/ff834391.aspx)」、「 [HOWTO: セキュリティ設定された Access データベースへのリンク サーバーを指定した SQL Server 7.0 分散クエリ](https://go.microsoft.com/fwlink/?LinkId=128504)」、「 [Jet OLE DB プロバイダー 4.0 を使用して ISAM データベースに接続する方法](https://go.microsoft.com/fwlink/?LinkId=128505)」、「 [Jet プロバイダーの Text IIsam を使用して区切り記号付きテキスト ファイルを開く方法](https://go.microsoft.com/fwlink/?LinkId=128501)」をご覧ください。  
+     32 ビット システムでは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] OPENROWSET [を OLE DB Provider for Jet と共に使用することにより、一括インポートの最適化を使用せずに CSV データを](../../t-sql/functions/openrowset-transact-sql.md) テーブルにインポートできます。 Jet は、データ ソースと同じディレクトリ内にある schema.ini ファイルで定義されたスキーマを使用して、テキスト ファイルをテーブルとして扱います。  CSV データの場合、schema.ini ファイル内のパラメーターの 1 つが "FORMAT=CSVDelimited" となります。 この解決方法を使用するには、Jet Test IISAMm 操作、その接続文字列の構文、schema.ini の使用法、レジストリ設定オプションなどについて理解する必要があります。  この情報については、Microsoft Access ヘルプとサポート技術情報 (KB) の資料を参照することをお勧めします。 詳細については、「[Initializing the Text Data Source Driver](https://msdn.microsoft.com/library/office/ff834391.aspx)」 (テキスト データ ソースのドライバーを初期化する)、「[How To Use a SQL Server 7.0 Distributed Query with a Linked Server to Secured Access Databases](https://go.microsoft.com/fwlink/?LinkId=128504)」 (セキュリティ設定された Access データベースにリンクされたサーバーで SQL Server 7.0 分散クエリを使用する方法)、「[HOW TO:Use Jet OLE DB Provider 4.0 to Connect to ISAM Databases](https://go.microsoft.com/fwlink/?LinkId=128505)」 (ISAM データベースへの接続に Jet OLE DB プロバイダー 4.0 を使用する方法)、「[How To Open Delimited Text Files Using the Jet Provider's Text IIsam](https://go.microsoft.com/fwlink/?LinkId=128501)」 (Jet プロバイダーの Text IIsam を使用して区切り記号付きテキスト ファイルを開く方法) を参照してください。  
   
  また、データ ファイルのデータをテーブルに一括インポートするには、以下の要件も満たしている必要があります。  
   

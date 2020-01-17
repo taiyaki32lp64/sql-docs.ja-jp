@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 ms.assetid: db6542ee-02d0-4073-90e6-cba8f9510fbb
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: e7b1a8f740ed11bf476bb72896cc14954c63536f
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: 5f4c61c346452664557396032cb4ea14f89da66c
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56287720"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66105329"
 ---
 # <a name="aggregate-functions-reference-report-builder-and-ssrs"></a>集計関数リファレンス (レポート ビルダーおよび SSRS)
   レポートに集計値を含めるには、式に組み込み集計関数を使用できます。 数値フィールドの既定の集計関数は SUM です。 式を編集して異なる組み込み集計関数を使用したり、異なるスコープを指定することもできます。 スコープにより、計算に使用するデータセットが識別されます。  
@@ -72,7 +71,7 @@ ms.locfileid: "56287720"
   
 |レポート内の場所|フィールド|パラメーター|ReportItems|PageNumber<br /><br /> TotalPages|DataSource<br /><br /> DataSet|変数:|RenderFormat|  
 |------------------------|------------|----------------|-----------------|-------------------------------|----------------------------|---------------|------------------|  
-|ページ ヘッダー<br /><br /> ページ フッター|はい|はい|最大 1<br /><br /> 注 1|はい|[はい]|[はい]|はい|  
+|ページ ヘッダー<br /><br /> ページ フッター|[はい]|はい|最大 1<br /><br /> 注 1|はい|[はい]|[はい]|はい|  
 |本文|はい<br /><br /> 注 2|はい|現在のスコープまたはコンテナー スコープのアイテムのみ<br /><br /> 注 3|いいえ|はい|[はい]|はい|  
 |レポート パラメーター|いいえ|リスト内で先に出現するパラメーターのみ<br /><br /> 注 4|いいえ|いいえ|いいえ|いいえ|いいえ|  
 |フィールド|はい|[はい]|いいえ|いいえ|いいえ|いいえ|いいえ|  
@@ -82,9 +81,9 @@ ms.locfileid: "56287720"
 |[フィルター式]|はい|[はい]|いいえ|いいえ|はい|はい<br /><br /> 注 6|いいえ|  
 |コード|いいえ|はい<br /><br /> 注 7|いいえ|いいえ|いいえ|いいえ|いいえ|  
 |レポートの言語|いいえ|はい|いいえ|いいえ|いいえ|いいえ|いいえ|  
-|変数:|はい|[はい]|いいえ|いいえ|はい|現在のスコープかコンテナー スコープ|いいえ|  
+|変数:|[はい]|[はい]|いいえ|いいえ|はい|現在のスコープかコンテナー スコープ|いいえ|  
 |集計|はい|はい|ページ ヘッダー/ページ フッター内のみ|レポート アイテムの集計内のみ|はい|いいえ|いいえ|  
-|参照関数|はい|[はい]|[はい]|いいえ|はい|いいえ|いいえ|  
+|参照関数|[はい]|[はい]|[はい]|いいえ|はい|いいえ|いいえ|  
   
 -   **注 1:** ReportItems は、表示されるレポート ページに存在する必要があります。そうでない場合は値が Null になります。 レポート アイテムの表示が式に依存し、その式が False に評価される場合、ページにはレポート アイテムが存在しません。  
   

@@ -1,5 +1,5 @@
 ---
-title: IBCPSession::BCPDone (OLE DB) |Microsoft Docs
+title: 'IBCPSession:: BCPDone (OLE DB) |Microsoft Docs'
 description: IBCPSession::BCPDone (OLE DB)
 ms.custom: ''
 ms.date: 06/14/2018
@@ -15,13 +15,12 @@ helpviewer_keywords:
 - BCPDone method
 author: pmasl
 ms.author: pelopes
-manager: craigg
-ms.openlocfilehash: d0338fc05683c22df4a900f709770ac35e8b2bad
-ms.sourcegitcommit: af1d9fc4a50baf3df60488b4c630ce68f7e75ed1
+ms.openlocfilehash: 9df2726898fdbd3d877296d4da67738c3f792234
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/06/2018
-ms.locfileid: "51031529"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67994561"
 ---
 # <a name="ibcpsessionbcpdone-ole-db"></a>IBCPSession::BCPDone (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

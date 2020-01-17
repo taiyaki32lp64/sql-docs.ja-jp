@@ -6,17 +6,20 @@ ms.prod: sql
 ms.prod_service: integration-services
 ms.custom: ''
 ms.technology: integration-services
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: a23e0bcefc098f0e70f5515cb12253c10446f846
-ms.sourcegitcommit: 12779bddd056a203d466d83c4a510a97348fe9d9
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: cdd1dc130efb795b957911c51d5d8c2243522d38
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/29/2018
-ms.locfileid: "50216706"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71281618"
 ---
 # <a name="run-an-ssis-package-from-visual-studio-code-with-transact-sql"></a>Transact-SQL を使用して Visual Studio Code から SSIS パッケージを実行する
+
+[!INCLUDE[ssis-appliesto](../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
 このクイックスタートでは、Visual Studio Code を使用して SSIS カタログ データベースに接続し、Transact-SQL ステートメントを使用して SSIS カタログに格納されている SSIS パッケージを実行する方法を示します。
 
 Visual Studio Code は、拡張機能をサポートする Windows、macOS、および Linux のコード エディターです。拡張機能には、Microsoft SQL Server、Azure SQL Database、または Azure SQL Data Warehouse に接続するための `mssql` 拡張機能が含まれます。 VS Code の詳細については、「[Visual Studio Code](https://code.visualstudio.com/)」を参照してください。
@@ -45,14 +48,14 @@ Linux で SSIS パッケージを実行する場合は、このクイックス�
 
 2. ステータス バーの右下隅にある **[プレーン テキスト]** をクリックします。
 
-3. 開いた **[言語モードの選択]** ドロップダウン メニューで、**[SQL]** を選択または入力して、**Enter** キーを押して言語モードを SQL に設定します。 
+3. 開いた **[言語モードの選択]** ドロップダウン メニューで、 **[SQL]** を選択または入力して、**Enter** キーを押して言語モードを SQL に設定します。 
 
 ## <a name="for-azure-sql-database-get-the-connection-info"></a>Azure SQL Database の場合の接続情報の取得
 
 Azure SQL Database でパッケージを実行するには、SSIS カタログ データベース (SSISDB) に接続するために必要な接続情報を取得します。 次の手順では、完全修飾サーバー名とログイン情報が必要です。
 
 1. [Azure ポータル](https://portal.azure.com/)にログインします。
-2. 左側のメニューから **[SQL Databases]** を選択し、**[SQL データベース]** ページで SSISDB データベースを選びます。 
+2. 左側のメニューから **[SQL Databases]** を選択し、 **[SQL データベース]** ページで SSISDB データベースを選びます。 
 3. データベースの **[概要]** ページで、完全修飾サーバー名を確認します。 **[クリックしてコピー]** オプションを表示するには、サーバー名にマウス ポインターを移動します。 
 4. Azure SQL Database サーバーのログイン情報を忘れた場合は、[SQL Database サーバー] ページに移動し、サーバーの管理者名を表示します。 必要に応じて、パスワードをリセットできます。
 
@@ -67,7 +70,7 @@ Visual Studio Code を使用して、SSIS カタログへの接続を確立し�
 
 2. 「**sqlcon**」と入力し、**Enter** キーを押します。
 
-3. **Enter** キーを押して、**[接続プロファイルの作成]** を選択します。 この手順では、SQL Server インスタンスの接続プロファイルを作成します。
+3. **Enter** キーを押して、 **[接続プロファイルの作成]** を選択します。 この手順では、SQL Server インスタンスの接続プロファイルを作成します。
 
 4. 指示に従って、新しい接続プロファイルの接続プロパティを指定します。 それぞれの値を指定してから、**Enter** キーを押して続行します。 
 
@@ -88,7 +91,7 @@ Visual Studio Code を使用して、SSIS カタログへの接続を確立し�
 ## <a name="run-the-t-sql-code"></a>T-SQL コードを実行する
 SSIS パッケージを実行するには、次の Transact-SQL コードを実行します。
 
-1. **エディター** ウィンドウで、空のクエリ ウィンドウに次のクエリを入力します  (このコードは、SSMS の **[パッケージ実行]** ダイアログ ボックスの **[スクリプト]** オプションによって生成されたコードです)。
+1. **エディター** ウィンドウで、空のクエリ ウィンドウに次のクエリを入力します (このコードは、SSMS の **[パッケージ実行]** ダイアログ ボックスの **[スクリプト]** オプションによって生成されたコードです)。
 
 2. システムの `catalog.create_execution` ストアド プロシージャ内のパラメーター値を更新します。
 

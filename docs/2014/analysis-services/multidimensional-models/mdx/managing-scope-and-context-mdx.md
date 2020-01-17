@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - scripts [MDX], context
@@ -18,20 +17,20 @@ ms.assetid: 631e7c20-8be9-4c35-8609-76516aef19d1
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 5bcaff42dd71f1c278c390d06240657f5f80f112
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: bec0dc51a4f91ba4ca8f71a0a3caba387d37bf1d
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48118112"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66074642"
 ---
 # <a name="managing-scope-and-context-mdx"></a>スコープとコンテキストの管理 (MDX)
-  [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]では、多次元式 (MDX) スクリプトをキューブ全体に適用することも、スクリプト実行の特定の時点でキューブの特定の部分に適用することもできます。 MDX スクリプトは、計算パスを使用することにより、階層化されたアプローチでキューブ内の計算を実行することができます。  
+   [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]では、多次元式 (MDX) スクリプトをキューブ全体に適用することも、スクリプト実行の特定の時点でキューブの特定の部分に適用することもできます。 MDX スクリプトは、計算パスを使用することにより、階層化されたアプローチでキューブ内の計算を実行することができます。  
   
 > [!NOTE]  
 >  計算パスが計算に及ぼす影響の詳細については、「[パス順序と解決順序の概要 (MDX)](mdx-data-manipulation-understanding-pass-order-and-solve-order.md)」をご覧ください。  
   
- 計算パス、スコープ、および MDX スクリプト内でコンテキストを制御するには、具体的にはステートメントを使用する、CACULATE、`This`関数、および SCOPE ステートメント。  
+ MDX スクリプト内の計算パス、スコープ、およびコンテキストを制御するための具体的な方法は、CALCULATE ステートメント、`This` 関数、および SCOPE ステートメントを使用することです。  
   
 ## <a name="using-the-calculate-statement"></a>CALCULATE ステートメントの使用  
  CALCULATE ステートメントは、キューブ内の各セルに集計データを格納します。 たとえば、既定の MDX スクリプトの冒頭には、単一の CALCULATE ステートメントが置かれています。  
@@ -42,13 +41,13 @@ ms.locfileid: "48118112"
 >  スクリプトの中で CALCULATE ステートメントが SCOPE ステートメントに入れられている場合、MDX は CALCULATE ステートメントの評価を、キューブ全体に対してではなく、SCOPE ステートメントで定義されるサブキューブのコンテキストの中で行います。  
   
 ## <a name="using-the-this-function"></a>This 関数の使用  
- `This` 関数により、MDX スクリプトの中で現在のサブキューブを取得できます。 使用することができます、`This`関数を簡単に、現在のサブキューブ内のセルの値を MDX 式に設定します。 多くの場合に使用する、`This`特定の計算パス中に特定のサブキューブの内容を変更する、SCOPE ステートメントと組み合わせて関数。  
+ `This` 関数により、MDX スクリプトの中で現在のサブキューブを取得できます。 `This` 関数を使用すると、現在のサブキューブの中のセルの値を MDX 式にすばやく設定できます。 `This` 関数を SCOPE ステートメントと併用して、特定の計算パスの間に特定のサブキューブの内容を変更することもできます。  
   
 > [!NOTE]  
->  含むスコープ ステートメントがスクリプトに含まれている場合、`This`関数、MDX の評価、`This`キューブ全体に対してではなく、SCOPE ステートメントによって定義されたサブキューブのコンテキスト内での関数。  
+>  スクリプトの中で `This` 関数が SCOPE ステートメントに入れられている場合、MDX は `This` 関数の評価を、キューブ全体に対してではなく、SCOPE ステートメントで定義されるサブキューブのコンテキストの中で行います。  
   
 ### <a name="this-function-example"></a>This 関数の例  
- 次の MDX スクリプト コマンドの例では、 `This` 、Finance メジャー グループの Amount メジャーの値を大きく関数、[!INCLUDE[ssAWDWsp](../../../includes/ssawdwsp-md.md)]サンプル キューブにおいて、Customer ディメンションの Redmond メンバーの子の 10% に。  
+ 次の MDX スクリプト コマンドの例では、`This` 関数を使用することにより、[!INCLUDE[ssAWDWsp](../../../includes/ssawdwsp-md.md)] サンプル キューブにおいて、Customer ディメンションの Redmond メンバーの子に関して、Finance メジャー グループの Amount メジャーの値を 10% 増加させます。  
   
 ```  
 /* This SCOPE statement defines the current subcube */  
@@ -115,8 +114,8 @@ END SCOPE;
  SCOPE ステートメントの構文の詳細については、「[SCOPE ステートメント (MDX)](/sql/mdx/mdx-scripting-scope)」をご覧ください。  
   
 ## <a name="see-also"></a>参照  
- [MDX 言語リファレンス&#40;MDX&#41;](/sql/mdx/mdx-language-reference-mdx)   
- [基本的な MDX スクリプト&#40;MDX&#41;](the-basic-mdx-script-mdx.md)   
- [MDX クエリの基礎&#40;Analysis Services&#41;](mdx-query-fundamentals-analysis-services.md)  
+ [MDX 言語リファレンス (MDX)](/sql/mdx/mdx-language-reference-mdx)   
+ [基本的な MDX スクリプト (MDX)](the-basic-mdx-script-mdx.md)   
+ [MDX クエリの基礎 &#40;Analysis Services&#41;](mdx-query-fundamentals-analysis-services.md)  
   
   

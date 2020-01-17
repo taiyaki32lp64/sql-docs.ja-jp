@@ -1,5 +1,5 @@
 ---
-title: getRef (int) メソッド (SQLServerResultSet) |Microsoft Docs
+title: getRef メソッド (int) (SQLServerResultSet) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: fc3f2d79-7cc3-47fa-a05e-4f7939d7f090
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: dd439052732d17a146adac8c89bc649f8d54f3f0
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 8ad14430d5750befc073489596de2a4082f4ff8d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47786300"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67980598"
 ---
 # <a name="getref-method-int-sqlserverresultset"></a>getRef (int) メソッド (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -47,7 +46,7 @@ public java.sql.Ref getRef(int i)
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- この getRef メソッドは、java.sql.ResultSet インターフェイスの getRef メソッドによって指定されます。  
+ この getRef メソッドは、java.sql.ResultSet インターフェイスの getRef メソッドで規定されています。  
   
 ## <a name="see-also"></a>参照  
  [getRef メソッド&#40;SQLServerResultSet&#41;](../../../connect/jdbc/reference/getref-method-sqlserverresultset.md)   

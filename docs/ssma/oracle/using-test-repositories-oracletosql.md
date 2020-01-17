@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: f941cce4-d3e3-4aeb-a88a-4f101a97a9f4
 author: Shamikg
 ms.author: Shamikg
-manager: craigg
-ms.openlocfilehash: cae34190da8179663996c7a385cc13541353ee0d
-ms.sourcegitcommit: 769b71f01052ec9b4fc5eb02d9da9a1a58118029
+ms.openlocfilehash: da99b63c986029a1791793fbbd33910bb95d4b7b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56319243"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68086805"
 ---
 # <a name="using-test-repositories-oracletosql"></a>テスト リポジトリの使用 (OracleToSQL)
 SSMA テスト リポジトリ ストア SSMA テスター テスト_ケースとテストの結果を後で使用します。 リポジトリのデータは、SQL Server テーブルに保存されます**TestCaseRepository**と**RunTestCaseResultRepository**スキーマ**ssma_oracle_utilities** の**ssmatesterdb**データベース。  
@@ -34,7 +33,7 @@ SSMA テスト リポジトリ ストア SSMA テスター テスト_ケース�
   
 グリッドには、各テスト・ケースに関する次の情報が表示されます。  
   
--   名前 :テスト_ケース名。  
+-   名前:テスト_ケース名。  
   
 -   作成されます。テスト_ケースの作成日。  
   
@@ -63,7 +62,7 @@ SSMA テスト リポジトリ ストア SSMA テスター テスト_ケース�
   
 テスト結果の詳細については、次の情報がグリッドに表示されます。  
   
--   名前 :テスト_ケース名。  
+-   名前:テスト_ケース名。  
   
 -   保存。保存のテスト ケースの日付。  
   
@@ -75,7 +74,7 @@ SSMA テスト リポジトリ ストア SSMA テスター テスト_ケース�
   
 -   をクリックして、**削除** ボタンを選択したテスト結果を削除するには  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
 [テスト_ケースを実行している&#40;OracleToSQL&#41;](../../ssma/oracle/running-test-cases-oracletosql.md)  
 [移行されたデータベース オブジェクトのテスト&#40;OracleToSQL&#41;](../../ssma/oracle/testing-migrated-database-objects-oracletosql.md)  
   

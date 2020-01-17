@@ -15,20 +15,19 @@ dev_langs:
 helpviewer_keywords:
 - KEY_NAME function
 ms.assetid: 7b693e5d-2325-4bf9-9b45-ad6a23374b41
-author: MashaMSFT
-ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 59b69687434a1432f087da75d77d93907c02edee
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: VanMSFT
+ms.author: vanto
+ms.openlocfilehash: bd2246ed1a6c2c03e3a9f5c1989ce9e544c8b199
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47745450"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68109332"
 ---
 # <a name="keyname-transact-sql"></a>KEY_NAME (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  対称キーの GUID または暗号化テキストの対称キーの名前を返します。  
+  対称キー GUID または暗号化テキストから対称キーの名前を返します。  
   
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -68,7 +67,7 @@ SELECT KEY_NAME(@guid) AS [Name of Key];
 ```  
   
 ### <a name="b-displaying-the-name-of-a-symmetric-key-using-the-cipher-text"></a>B. 暗号化テキストを使用して対称キーの名前を表示する  
- 次の例では、対称キーを作成してテーブルにデータを取り込む全手順を示します。 さらに、KEY_NAME に暗号化テキストに渡してキーの名前を返す方法を示します。  
+ 次の例では、対称キーを作成してテーブルにデータを入力するプロセス全体を示します。 次に、この例では、暗号化テキストが渡されたときに KEY_NAME によってキーの名前がどのように返されるかを示します。  
   
 ```  
 -- Create a symmetric key  
@@ -110,8 +109,8 @@ SELECT KEY_NAME(@ciphertext) AS [Name of Key] ;
 ```  
   
 ## <a name="see-also"></a>参照  
- [sys.symmetric_keys (&) #40 です。TRANSACT-SQL と #41 です。](../../relational-databases/system-catalog-views/sys-symmetric-keys-transact-sql.md)   
+ [sys.symmetric_keys &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-symmetric-keys-transact-sql.md)   
  [ENCRYPTBYKEY &#40;Transact-SQL&#41;](../../t-sql/functions/encryptbykey-transact-sql.md)   
- [DECRYPTBYKEYAUTOASYMKEY (&) #40 です。TRANSACT-SQL と #41 です。](../../t-sql/functions/decryptbykeyautoasymkey-transact-sql.md)  
+ [DECRYPTBYKEYAUTOASYMKEY &#40;Transact-SQL&#41;](../../t-sql/functions/decryptbykeyautoasymkey-transact-sql.md)  
   
   

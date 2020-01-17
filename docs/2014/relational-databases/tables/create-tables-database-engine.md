@@ -12,18 +12,18 @@ ms.assetid: 6f7c6ac5-e6d3-4dca-831e-b28442ba535b
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: ad54f13fbb939b9ac65f656f37bbba94560da829
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: b909160a11dbcced44a0c81d92fd28ce02a50906
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53377434"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62761602"
 ---
 # <a name="create-tables-database-engine"></a>テーブルの作成 (データベース エンジン)
   [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] では、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] または [!INCLUDE[tsql](../../includes/tsql-md.md)]を使用して新しいテーブルを作成して名前を付け、それを既存のデータベースに追加できます。  
   
 > [!NOTE]  
->  SQL Azure データベースに接続している場合、[新しいテーブル] オプションを選択すると、テーブルの作成テンプレート スクリプトが実行されます。 パラメーターを編集してから、このスクリプトを実行して新しいテーブルを作成してください。 詳細については、「 [SQL Azure の概要](https://go.microsoft.com/fwlink/?LinkId=163948)」を参照してください。  
+>  SQL Azure データベースに接続している場合、[新しいテーブル] オプションを選択すると、テーブルの作成テンプレート スクリプトが実行されます。 パラメーターを編集してから、このスクリプトを実行して新しいテーブルを作成してください。 詳細については、「 [SQL Azure の概要](https://microsoft.sharepoint.com/sites/infopedia_g01/pages/cards/azure-sql-database.aspx)」を参照してください。  
   
  **このトピックの内容**  
   
@@ -64,7 +64,7 @@ ms.locfileid: "53377434"
   
 5.  他のプロパティ (ID 列または計算列の値など) を指定するには、列をクリックし、列のプロパティ タブで適切なプロパティを選択します。 列のプロパティの詳細については、「[テーブル列のプロパティ &#40;SQL Server Management Studio&#41;](table-column-properties-sql-server-management-studio.md)」を参照してください。  
   
-6.  列を主キーとして指定するには、列を右クリックし、**[主キーの設定]** をクリックします。 詳細については、「 [Create Primary Keys](../tables/create-primary-keys.md)」を参照してください。  
+6.  列を主キーとして指定するには、列を右クリックし、 **[主キーの設定]** をクリックします。 詳細については、「 [Create Primary Keys](../tables/create-primary-keys.md)」を参照してください。  
   
 7.  外部キーのリレーションシップ、CHECK 制約、またはインデックスを作成するには、テーブル デザイナー ペイン内で右クリックし、次の図に示すように、一覧からオブジェクトを選択します。  
   
@@ -78,7 +78,7 @@ ms.locfileid: "53377434"
   
      スキーマの詳細については、「 [Create a Database Schema](../security/authentication-access/create-a-database-schema.md)」を参照してください。  
   
-9.  **ファイル** メニューの **を保存** *を保存*をクリックします。  
+9. **[ファイル]** メニューの **[<*テーブル名*> を保存]** をクリックします。  
   
 10. **[名前の選択]** ダイアログ ボックスで、テーブルの名前を入力し、 **[OK]** をクリックします。  
   

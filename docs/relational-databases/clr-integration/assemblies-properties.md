@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 88d40d3b-8983-4a57-b79d-ed1477a5c3c6
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 5983223e1f945cc9f09ceee08a07230847c5f869
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: cab96fb470e4cc19da0612163f364d6339841985
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47735490"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68027971"
 ---
 # <a name="assemblies---properties"></a>アセンブリ - プロパティ
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -31,7 +30,7 @@ ms.locfileid: "47735490"
  所有者名またはスキーマ名を入力するか、一覧から選択します。  
   
  **アクセス許可セット**  
- アセンブリにセキュリティ レベルを設定します。 次の 3 つのレベルのセキュリティが提供されます:**セーフ**、**外部アクセス**、および**Unsafe**アクセス。  
+ アセンブリにセキュリティ レベルを設定します。 セキュリティの 3 つのレベルが用意されています。**安全な**、**外部アクセス**、および**Unsafe**アクセスします。  
   
  **アセンブリへのパス**  
  アセンブリ ファイルへのパスを入力します。  
@@ -46,10 +45,10 @@ ms.locfileid: "47735490"
  **厳密な名前**  
  表示**True**アセンブリがデジタル署名されている場合**False**デジタル署名されていない場合。  
   
- **[バージョン]**  
+ **バージョン**  
  アセンブリのバージョン番号を表示します。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [CREATE ASSEMBLY &#40;Transact-SQL&#41;](../../t-sql/statements/create-assembly-transact-sql.md)  
   
   

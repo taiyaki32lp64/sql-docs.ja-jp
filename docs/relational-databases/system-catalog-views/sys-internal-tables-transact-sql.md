@@ -1,7 +1,7 @@
 ---
 title: sys.internal_tables (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
-ms.date: 06/10/2016
+ms.date: 03/14/2019
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
@@ -20,13 +20,12 @@ helpviewer_keywords:
 ms.assetid: a5821c70-f150-4676-8476-3a31f7403dca
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 2efa30de8307a33ea9d0f537f687b4f73c48ed1a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 0b3f262943d41f1cd9592ab805d02bce3ade77a8
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47845120"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68044541"
 ---
 # <a name="sysinternaltables-transact-sql"></a>sys.internal_tables (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -39,8 +38,8 @@ ms.locfileid: "47845120"
 |列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
 |**\<Sys.objects から継承された列 >**||このビューが継承する列の一覧は、次を参照してください。 [sys.objects &#40;TRANSACT-SQL&#41;](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md)します。|  
-|**internal_type**|**tinyint**|内部テーブルの種類。<br /><br /> 201 = **queue_messages**<br /><br /> 202 = **xml_index_nodes**<br /><br /> 203 = **fulltext_catalog_freelist**<br /><br /> 205 = **query_notification**<br /><br /> 206 = **service_broker_map**<br /><br /> 207 = **extended_indexes** (など、空間インデックスの場合)<br /><br /> 208 = **filestream_tombstone**<br /><br /> 209 = **change_tracking**<br /><br /> 210 = **tracked_committed_transactions**<br /><br /> 236 = **selective_xml_index_node_table**|  
-|**internal_type_desc**|**nvarchar(60)**|内部テーブルの種類の説明。<br /><br /> QUEUE_MESSAGES<br /><br /> XML_INDEX_NODES<br /><br /> FULLTEXT_CATALOG_FREELIST<br /><br /> FULLTEXT_CATALOG_MAP<br /><br /> QUERY_NOTIFICATION<br /><br /> SERVICE_BROKER_MAP<br /><br /> EXTENDED_INDEXES<br /><br /> FILESTREAM_TOMBSTONE<br /><br /> CHANGE_TRACKING<br /><br /> TRACKED_COMMITTED_TRANSACTIONS<br /><br /> SELECTIVE_XML_INDEX_NODE_TABLE|  
+|**internal_type**|**tinyint**|内部テーブルの種類。<br /><br /> 3 = **query_disk_store_query_hints**<br /><br /> 4 = **query_disk_store_query_template_parameterization**<br /><br /> 6 = **query_disk_store_wait_stats**<br /><br /> 201 = **queue_messages**<br /><br /> 202 = **xml_index_nodes**<br /><br /> 203 = **fulltext_catalog_freelist**<br /><br /> 205 = **query_notification**<br /><br /> 206 = **service_broker_map**<br /><br /> 207 = **extended_indexes** (など、空間インデックスの場合)<br /><br /> 208 = **filestream_tombstone**<br /><br /> 209 = **change_tracking**<br /><br /> 210 = **tracked_committed_transactions**<br /><br /> 220 = **contained_features**<br /><br /> 225 = **filetable_updates**<br /><br /> 236 = **selective_xml_index_node_table**<br /><br /> 240 = **query_disk_store_query_text**<br /><br /> 241 = **query_disk_store_query**<br /><br /> 242 = **query_disk_store_plan**<br /><br /> 243 = **query_disk_store_runtime_stats**<br /><br /> 244 = **query_disk_store_runtime_stats_interval**<br /><br /> 245 = **query_context_settings**|  
+|**internal_type_desc**|**nvarchar(60)**|内部テーブルの種類の説明。<br /><br /> QUERY_DISK_STORE_QUERY_HINTS<br /><br /> QUERY_DISK_STORE_QUERY_TEMPLATE_PARAMETERIZATION<br /><br /> QUERY_DISK_STORE_WAIT_STATS<br /><br /> QUEUE_MESSAGES<br /><br /> XML_INDEX_NODES<br /><br /> FULLTEXT_CATALOG_FREELIST<br /><br /> FULLTEXT_CATALOG_MAP<br /><br /> QUERY_NOTIFICATION<br /><br /> SERVICE_BROKER_MAP<br /><br /> EXTENDED_INDEXES<br /><br /> FILESTREAM_TOMBSTONE<br /><br /> CHANGE_TRACKING<br /><br /> TRACKED_COMMITTED_TRANSACTIONS<br /><br /> CONTAINED_FEATURES<br /><br /> FILETABLE_UPDATES<br /><br /> SELECTIVE_XML_INDEX_NODE_TABLE<br /><br /> QUERY_DISK_STORE_QUERY_TEXT<br /><br /> QUERY_DISK_STORE_QUERY<br /><br /> QUERY_DISK_STORE_PLAN<br /><br /> QUERY_DISK_STORE_RUNTIME_STATS<br /><br /> QUERY_DISK_STORE_RUNTIME_STATS_INTERVAL<br /><br /> QUERY_CONTEXT_SETTINGS|  
 |**parent_id**|**int**|親の ID。スキーマのスコープが設定されているかどうかは関係ありません。 親が存在しない場合は 0 です。<br /><br /> **queue_messages** = **object_id**のキュー<br /><br /> **xml_index_nodes** = **object_id**の xml インデックス<br /><br /> **fulltext_catalog_freelist** = **fulltext_catalog_id**のフルテキスト カタログ<br /><br /> **fulltext_index_map** = **object_id**のフルテキスト インデックス<br /><br /> **query_notification**、または**service_broker_map** = 0<br /><br /> **extended_indexes** = **object_id**の空間インデックスなど拡張インデックスは、<br /><br /> **object_id**表の追跡が有効になっているテーブルの = **change_tracking**|  
 |**parent_minor_id**|**int**|親のマイナー ID。<br /><br /> **xml_index_nodes** = **index_id**の XML インデックス<br /><br /> **extended_indexes** = **index_id**の空間インデックスなど拡張インデックスは、<br /><br /> 0 = **queue_messages**、 **fulltext_catalog_freelist**、 **fulltext_index_map**、 **query_notification**、 **service_broker_map**、または**change_tracking**|  
 |**lob_data_space_id**|**int**|0 以外の値の場合、このテーブルのラージ オブジェクト (LOB) データを格納するデータ領域 (ファイル グループまたはパーティション構成) の ID。|  

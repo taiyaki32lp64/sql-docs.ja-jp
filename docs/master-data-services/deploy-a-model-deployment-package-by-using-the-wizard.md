@@ -1,5 +1,5 @@
 ---
-title: ウィザードを使用したモデルの配置パッケージの展開 | Microsoft Docs
+title: モデル配置パッケージの配置 (ウィザード)
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -11,15 +11,14 @@ helpviewer_keywords:
 - deployment packages [Master Data Services], deploying
 - models [Master Data Services], deploying a package
 ms.assetid: 4f65dc60-0ff8-46e6-9988-5bc5b9603ad0
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: be5a8ecff530cfcc381ca8b6bd2d5c89bc2c46e8
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
-ms.translationtype: HT
+ms.openlocfilehash: 7e41af6f7b5f1d2a770400ab66191f7957937659
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52790204"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73729393"
 ---
 # <a name="deploy-a-model-deployment-package-by-using-the-wizard"></a>ウィザードを使用したモデルの配置パッケージの展開
 
@@ -30,14 +29,14 @@ ms.locfileid: "52790204"
 > [!IMPORTANT]  
 >  パッケージは、そのパッケージが作成されたエディションの [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] にのみ配置できます。 つまり、 [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] で作成されたパッケージを [!INCLUDE[ssSQL14](../includes/sssql14-md.md)]に配置することはできません。  
   
-## <a name="prerequisites"></a>Prerequisites  
+## <a name="prerequisites"></a>前提条件  
  この手順を実行するには  
   
 -   ターゲット **環境の** [システム管理] [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 機能領域にアクセスする権限が必要です。  
   
 -   モデルの配置パッケージが必要です。 詳細については、「 [ウィザードを使用したモデルの配置パッケージの作成](../master-data-services/create-a-model-deployment-package-by-using-the-wizard.md)」を参照してください。  
   
--   モデルを配置する環境の管理者である必要があります。 詳細については、「 [管理者 (マスター データ サービス)](../master-data-services/administrators-master-data-services.md)にアクセスすることなくグループに対してユーザーの追加または削除を行うことができます。  
+-   モデルを配置する環境の管理者である必要があります。 詳細については、「[Administrators &#40;Master Data Services&#41; (管理者 &#40;マスター データ サービス&#41;)](../master-data-services/administrators-master-data-services.md)」を参照してください。  
   
 ### <a name="to-deploy-a-model-deployment-package-of-model-objects-only"></a>モデル オブジェクトのみのパッケージを配置するには  
   
@@ -51,7 +50,7 @@ ms.locfileid: "52790204"
   
 5.  配置パッケージ (.pkg ファイル) を見つけて **[開く]** をクリックします。  
   
-6.  [**次へ**] をクリックします。  
+6.  **[次へ]** をクリックします。  
   
 7.  パッケージが読み込まれたら **[次へ]** をクリックします。  
   
@@ -59,9 +58,9 @@ ms.locfileid: "52790204"
   
 9. **[完了]** をクリックして、ウィザードを終了します。  
   
- **注**  
+ **注:**  
   
--   パッケージ内のサブスクリプション ビューの名前が、既存のモデル内のサブスクリプション ビューの名前と同じである場合、"**配置機能サブスクリプション ビューが名前変更されました**" という警告が表示されます。 さらに、このビューは *modelname.subscriptionviewname*として作成されます。 この名前が既に使用されている場合、サブスクリプション ビューは作成されません。  
+-   パッケージ内のサブスクリプション ビューの名前が、既存のモデル内のサブスクリプション ビューの名前と同じである場合、" **配置機能サブスクリプション ビューが名前変更されました**" という警告が表示されます。 さらに、このビューは *modelname.subscriptionviewname*として作成されます。 この名前が既に使用されている場合、サブスクリプション ビューは作成されません。  
   
 -   配置プロセスには、次の 4 つの手順があります。  
   
@@ -75,7 +74,7 @@ ms.locfileid: "52790204"
   
      モデルを更新する場合、最初の 3 つの手順のいずれかでプロセスが失敗すると、その手順から先のプロセスは続行されません。ただし、既に行われた変更はロールバックされません。  
   
-## <a name="next-steps"></a>Next Steps  
+## <a name="next-steps"></a>次の手順  
  ファイル属性、ユーザーとグループの権限は、モデル配置パッケージに含まれていません。 モデルを配置した後、これらを手動で更新する必要があります。 詳細については、以下をご覧ください。  
   
 -   [モデル オブジェクト権限を割り当てる (マスター データ サービス)](../master-data-services/assign-model-object-permissions-master-data-services.md)  

@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 3328f2f1-b34a-472f-82cf-ad49768ff061
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 509979a38e6d7e71f979ce317b9e1626a85c5a54
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 9e531149af21facd80e9e6ddab19a76c3bdc0fa6
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47813940"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68088141"
 ---
 # <a name="using-microsoft-internet-information-services"></a>Microsoft インターネット インフォメーション サービスの使用
 > [!IMPORTANT]  

@@ -8,23 +8,22 @@ ms.technology: scripting
 ms.reviewer: ''
 ms.topic: conceptual
 ms.assetid: e7c7a8ef-f561-4258-a7b6-c445dba69f87
-author: stevestein
-ms.author: sstein
-manager: craigg
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 8a4d94524bfe9b991f59dfbe21a5160c5b726ef1
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: bfc2f81c95b25397da77aa046ba80edeecaaa7a7
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52501993"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68256458"
 ---
 # <a name="configure-editors-sql-server-management-studio"></a>エディターの構成 (SQL Server Management Studio)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] エディターのオプションを構成することにより、各エディターの操作をカスタマイズできます。  
   
 ## <a name="settng-editor-options"></a>エディター オプションの設定  
- ほとんどのエディター オプションは、**[ツール]** メニューで **[オプション]** を選択し、**[オプション]** ダイアログを表示して設定します。 **[オプション]** ダイアログの左ペインの **[テキスト エディター]** ノードを開いて、コードとテキストの編集オプションを設定します。 [テキスト エディター] の下のノードは特定のエディターに適用されます。  
+ ほとんどのエディター オプションは、 **[ツール]** メニューで **[オプション]** を選択し、 **[オプション]** ダイアログを表示して設定します。 **[オプション]** ダイアログの左ペインの **[テキスト エディター]** ノードを開いて、コードとテキストの編集オプションを設定します。 [テキスト エディター] の下のノードは特定のエディターに適用されます。  
   
 1.  **すべての言語**: このノードを使用して設定されたオプションは、すべての [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] エディターに適用されます。 これらの設定は、他のノードを使用して特定のエディターの別のオプションを設定することによりオーバーライドできます。  
   

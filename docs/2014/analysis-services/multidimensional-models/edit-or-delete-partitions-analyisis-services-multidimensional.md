@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - modifying partitions
@@ -14,12 +13,12 @@ ms.assetid: fb7a64ca-d021-4926-b92d-83476fbc40a3
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: db1d69bcd614144a33aabde0934d7c4d12060e82
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 7d7f51b24c487175d13153b9e5627e101175740b
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48104913"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66075147"
 ---
 # <a name="edit-or-delete-partitions-analyisis-services---multidimensional"></a>パーティションの編集または削除 (Analysis Services - 多次元)
   キューブ パーティションを変更するには、[!INCLUDE[ssBIDevStudio](../../../includes/ssbidevstudio-md.md)] でキューブ デザイナーの **[パーティション]** タブを使用します。 **[パーティション]** タブには、キューブのすべてのメジャー グループのパーティションが一覧表示されます。 また、書き戻しが有効な書き戻しパーティションも表示されます。  
@@ -34,11 +33,11 @@ ms.locfileid: "48104913"
 >  代わりに、パーティションの作成、マージ、および削除を実行するためのタスクを自動化する XMLA スクリプトを使用することもできます。 XMLA スクリプトは、 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]、または定期タスクとして実行されるカスタム SSIS パッケージで作成および実行できます。 詳細については、「 [SSIS による Analysis Services 管理タスクの自動化](../instances/automate-analysis-services-administrative-tasks-with-ssis.md)」を参照してください。  
   
 ## <a name="partition-source"></a>パーティション ソース  
- パーティションのソース テーブルまたは名前付きクエリを指定します。 ソース テーブルを変更するには、セルをクリックし、参照ボタン (**[...]**) をクリックします。  
+ パーティションのソース テーブルまたは名前付きクエリを指定します。 ソース テーブルを変更するには、セルをクリックし、参照ボタン ( **[...]** ) をクリックします。  
   
  ![[パーティション] ペイン内のソース列](../media/ssas-partitionsource.png "パーティション ペイン内の基になる列")  
   
- パーティションがクエリに基づいている場合は、参照ボタン (**[...]**) をクリックしてクエリを編集します。 これにより、パーティションの **[ソース]** プロパティが編集されます。 詳しくは、「 [別のファクト テーブルを使用するためのパーティション ソースの変更](change-a-partition-source-to-use-a-different-fact-table.md)」をご覧ください。  
+ パーティションがクエリに基づいている場合は、参照ボタン ( **[...]** ) をクリックしてクエリを編集します。 これにより、パーティションの **[ソース]** プロパティが編集されます。 詳しくは、「 [別のファクト テーブルを使用するためのパーティション ソースの変更](change-a-partition-source-to-use-a-different-fact-table.md)」をご覧ください。  
   
  (データの取得元となる外部データ ソース内の) 元のソース テーブルと同じ構造を持つ、データ ソース ビュー内のテーブルを指定できます。 ソースには、キューブ データベースのデータ ソースまたはデータ ソース ビューを使用できます。  
   
@@ -48,8 +47,8 @@ ms.locfileid: "48104913"
  ストレージは、キューブ内の各メジャー グループのパーティションごとに個別に構成できます。 キューブまたはメジャー グループの既定のストレージ設定を構成することもできます。 ストレージは、キューブ ウィザードの **[パーティション]** タブで構成します。  
   
 ## <a name="see-also"></a>参照  
- [作成およびローカル パーティションの管理&#40;Analysis Services&#41;](create-and-manage-a-local-partition-analysis-services.md)   
- [集計のデザイン&#40;Analysis Services - 多次元&#41;](designing-aggregations-analysis-services-multidimensional.md)   
- [Analysis Services でのパーティションをマージ&#40;SSAS - 多次元&#41;](merge-partitions-in-analysis-services-ssas-multidimensional.md)  
+ [ローカル パーティションの作成と管理 &#40;Analysis Services&#41;](create-and-manage-a-local-partition-analysis-services.md)   
+ [集計のデザイン &#40;Analysis Services - 多次元&#41;](designing-aggregations-analysis-services-multidimensional.md)   
+ [Analysis Services でのパーティションのマージ (SSAS - 多次元)](merge-partitions-in-analysis-services-ssas-multidimensional.md)  
   
   

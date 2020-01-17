@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 ms.assetid: 5f5e1149-c967-454d-9a63-18ec4a33d985
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: e41b76481748175a68b4a0a0a4877c7c17147788
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: ef0438dfa0750c2a516a801a2d81b5d1c0b49721
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56288570"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66106439"
 ---
 # <a name="built-in-globals-and-users-references-report-builder-and-ssrs"></a>組み込み Globals および Users 参照 (レポート ビルダーおよび SSRS)
   組み込みフィールドのコレクションには、レポートの処理時に Reporting Services によって提供されるグローバルな値を表す `Globals` コレクションと `User` コレクションの両方が含まれています。 `Globals` コレクションでは、レポート名、レポート処理の開始時刻、レポート ヘッダーまたはレポート フッターの現在のページ番号などの値が提供されます。 `User` コレクションでは、ユーザー ID と言語設定が提供されます。 これらの値は、レポート内の結果をフィルター処理する際に式で使用できます。  
@@ -89,7 +88,7 @@ ms.locfileid: "56288570"
 ### <a name="identifying-userid-for-snapshot-or-history-reports"></a>スナップショット レポートまたは履歴レポートの UserID の識別  
  場合によっては、 *User!UserID* 変数を含むレポートは、レポートを参照している現在のユーザー固有のレポート データを表示することができません。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [式 &#40;レポート ビルダーおよび SSRS&#41;](expressions-report-builder-and-ssrs.md)   
  [[式] ダイアログ ボックス (レポート ビルダー)](../expression-dialog-box-report-builder.md)   
  [式で使用されるデータ型 &#40;レポート ビルダーおよび SSRS&#41;](expressions-report-builder-and-ssrs.md)   

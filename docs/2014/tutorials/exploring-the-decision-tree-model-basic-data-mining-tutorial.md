@@ -11,11 +11,11 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: e7b77b445ff8cbef8be3acb72ef9cdb6fa3af159
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56013743"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63224595"
 ---
 # <a name="exploring-the-decision-tree-model-basic-data-mining-tutorial"></a>デシジョン ツリー モデルの検証 (基本的なデータ マイニング チュートリアル)
   [!INCLUDE[msCoName](../includes/msconame-md.md)] デシジョン ツリー アルゴリズムは、自転車の購入に影響する列をトレーニング セットのその他の列に基づいて予測します。  
@@ -63,7 +63,7 @@ ms.locfileid: "56013743"
   
  ここでは、構造とモデルを作成したときにドリルスルーを有効にしてあるため、モデル ケースやマイニング構造から詳細情報を取得することができます。これには、マイニング モデルには含まれていなかった列 (emailAddress や FirstName など) も含まれます。  
   
- 詳細については、「 [ドリルスルー クエリ (データ マイニング)](../../2014/analysis-services/data-mining/drillthrough-queries-data-mining.md)」をご覧ください。  
+ 詳細については、「[ドリルスルー クエリ (データ マイニング)](../../2014/analysis-services/data-mining/drillthrough-queries-data-mining.md)」をご覧ください。  
   
 #### <a name="to-drill-through-to-case-data"></a>ケース データにドリルスルーするには  
   

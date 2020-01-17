@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 184f7ab2-725f-491e-a15b-b889f2fb6a68
 author: Shamikg
 ms.author: Shamikg
-manager: craigg
-ms.openlocfilehash: 98b7c0433e506d7ef6e825199a9a6629c52e6f3b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d31304dae7246e425ef54af6d1382af7e885696c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47837012"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68102999"
 ---
 # <a name="edit-type-mapping-mysqltosql"></a>型のマッピングの編集 (MySQLToSQL)
 **型マッピングの編集** ダイアログ ボックスでは、ソースと変換先のデータベース オブジェクトの間で型をマップする方法を指定することができます。  
@@ -38,7 +37,7 @@ SQL Server のデータ型にマップするソース データの種類を選�
 ##### <a name="from"></a>From  
 このマッピングの最小の長さを指定します。 たとえば、 **nchar**データ型の場合は、このマッピングを開始位置として範囲を指定するための 10 を入力する**nchar(10) します。**  
   
-##### <a name="to"></a>変換先  
+##### <a name="to"></a>目的  
 このマッピングの最大長を指定します。 たとえば、 **nchar**データ型、終了範囲のこのマッピングであることを指定する 20 を入力する**nchar (20) 型。**  
   
 ##### <a name="target-type"></a>[対象になる種類]  

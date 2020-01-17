@@ -1,5 +1,5 @@
 ---
-title: 大きな CLR ユーザー定義型 (ODBC) |マイクロソフトのドキュメント
+title: 大きな CLR ユーザー定義型 (ODBC) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/17/2017
 ms.prod: sql
@@ -13,24 +13,22 @@ helpviewer_keywords:
 ms.assetid: ddce337e-bb6e-4a30-b7cc-4969bb1520a9
 author: MightyPen
 ms.author: genemi
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 5dd11fcb72496465685ce763f48518f7bcd0c2c6
-ms.sourcegitcommit: 5d6e1c827752c3aa2d02c4c7653aefb2736fffc3
+ms.openlocfilehash: 6f7b166ae15e403e2a84bc3a7f3902350c805788
+ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/10/2018
-ms.locfileid: "49072216"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73760592"
 ---
 # <a name="large-clr-user-defined-types-odbc"></a>大きな CLR ユーザー定義型 (ODBC)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-[!INCLUDE[SNAC_Deprecated](../../../includes/snac-deprecated.md)]
 
   このトピックでは、大きな共通言語ランタイム (CLR) ユーザー定義型 (UDT) をサポートするための、SQL Server Native Client の ODBC に対する変更について説明します。  
   
- ODBC による大きな CLR Udt のサポートを示すサンプルは、次を参照してください。[大きな Udt のサポート](../../../relational-databases/native-client-odbc-how-to/support-for-large-udts.md)します。  
+ 大きな CLR Udt の ODBC サポートを示すサンプルについては、「[大きな udt のサポート](../../../relational-databases/native-client-odbc-how-to/support-for-large-udts.md)」を参照してください。  
   
- SQL Server Native Client における大きな CLR Udt のサポートの詳細については、次を参照してください。 [Large CLR User-Defined 型](../../../relational-databases/native-client/features/large-clr-user-defined-types.md)します。  
+ SQL Server Native Client での大きな CLR Udt のサポートの詳細については、「[大きな Clr ユーザー定義型](../../../relational-databases/native-client/features/large-clr-user-defined-types.md)」を参照してください。  
   
 ## <a name="data-format"></a>データ形式  
  SQL Server Native Client では、大きなオブジェクト (LOB) の型について、列のサイズが 8,000 バイトを超えていることを示す場合に、SQL_SS_LENGTH_UNLIMITED が使用されます。 SQL Server 2008 以降では、サイズが 8,000 バイトを超えている CLR UDT にも同じ値が使用されるようになりました。  
@@ -43,7 +41,7 @@ ms.locfileid: "49072216"
 |--------------------------|-------------------|-----------|  
 |CLR UDT|SQL_SS_UDT|-151 (sqlncli.h)|  
   
- 次の表では、対応する構造体と ODBC C 型について説明します。 基本的に、CLR UDT は、 **varbinary**追加のメタデータを持つ型。  
+ 次の表では、対応する構造体と ODBC C 型について説明します。 基本的に、CLR UDT は、追加のメタデータを持つ**varbinary**型です。  
   
 |SQL データ型|メモリ レイアウト|C データ型|値 (sqlext.h)|  
 |-------------------|-------------------|-----------------|------------------------|  
@@ -68,11 +66,11 @@ ms.locfileid: "49072216"
 |SQL_DESC_TYPE_NAME|"udt"|"udt"|  
 |SQL_DESC_UNSIGNED|SQL_TRUE|SQL_TRUE|  
 |SQL_CA_SS_UDT_CATALOG_NAME|UDT を含むカタログの名前|UDT を含むカタログの名前|  
-|SQL_CA_SS_UDT_SCHEMA_NAME|UDT を含むスキーマの名前|スキーマの名前、UDT が含まれています。|  
+|SQL_CA_SS_UDT_SCHEMA_NAME|UDT を含むスキーマの名前|に UDT を含むスキーマの名前を指定します。|  
 |SQL_CA_SS_UDT_TYPE_NAME|UDT の名前|UDT の名前|  
 |SQL_CA_SS_UDT_ASSEMBLY_TYPE_NAME|UDT の完全修飾名|UDT の完全修飾名|  
   
- UDT パラメーターの場合は、SQL_CA_SS_UDT_TYPE_NAME は必ず設定を使用して**SQLSetDescField**します。 SQL_CA_SS_UDT_CATALOG_NAME と SQL_CA_SS_UDT_SCHEMA_NAME は省略可能です。  
+ UDT パラメーターの場合、SQL_CA_SS_UDT_TYPE_NAME は常に**SQLSetDescField**を使用して設定する必要があります。 SQL_CA_SS_UDT_CATALOG_NAME と SQL_CA_SS_UDT_SCHEMA_NAME は省略可能です。  
   
  UDT が、テーブルとは異なるスキーマで同じデータベースに定義されている場合は、SQL_CA_SS_UDT_SCHEMA_NAME を設定する必要があります。  
   
@@ -125,32 +123,32 @@ ms.locfileid: "49072216"
 |SS_UDT_SCHEMA_NAME|UDT を含むスキーマの名前|UDT を含むスキーマの名前|  
 |SS_UDT_ASSEMBLY_TYPE_NAME|UDT の完全修飾名|UDT の完全修飾名|  
   
- 最後の 3 つの列はドライバー固有の列です。 それらがすべて SQLColumns、SQLProcedureColumns の結果セットの既存のドライバーに固有の列の前に、ODBC で定義された列の後に追加されます。  
+ 最後の 3 つの列はドライバー固有の列です。 これらは、ODBC 定義の列の後、SQLColumns または SQLProcedureColumns の結果セットの既存のドライバー固有の列の前に追加されます。  
   
- 個々 の Udt またはジェネリック型"udt"、SQLGetTypeInfo、していない行が返されます。  
+ 個々の Udt またはジェネリック型 "udt" に対して、SQLGetTypeInfo によって返される行はありません。  
   
 ## <a name="bindings-and-conversions"></a>バインドと変換  
  SQL から C データ型への変換としてサポートされているものは次のとおりです。  
   
 |変換対象|SQL_SS_UDT|  
 |-----------------------------|------------------|  
-|SQL_C_WCHAR|サポートされている *|  
+|SQL_C_WCHAR|さ|  
 |SQL_C_BINARY|Supported|  
-|SQL_C_CHAR|サポートされている *|  
+|SQL_C_CHAR|さ|  
   
- \* バイナリ データは、16 進文字列に変換されます。  
+ \* バイナリデータは16進数の文字列に変換されます。  
   
  C から SQL データ型への変換としてサポートされているものは次のとおりです。  
   
 |変換対象|SQL_SS_UDT|  
 |-----------------------------|------------------|  
-|SQL_C_WCHAR|サポートされている *|  
+|SQL_C_WCHAR|さ|  
 |SQL_C_BINARY|Supported|  
-|SQL_C_CHAR|サポートされている *|  
+|SQL_C_CHAR|さ|  
   
- \* 16 進文字列バイナリ データへの変換からが発生します。  
+ バイナリデータ変換のための16進文字列 \* します。  
   
-## <a name="sqlvariant-support-for-udts"></a>SQL_VARIANT による UDT のサポート  
+## <a name="sql_variant-support-for-udts"></a>SQL_VARIANT による UDT のサポート  
  SQL_VARIANT 列では UDT がサポートされません。  
   
 ## <a name="bcp-support-for-udts"></a>BCP による UDT のサポート  
@@ -168,7 +166,7 @@ ms.locfileid: "49072216"
  ここでは、大きな CLR UDT をサポートするための、SQL Server Native Client の ODBC 関数に対する変更について説明します。  
   
 ### <a name="sqlbindcol"></a>SQLBindCol  
- UDT 結果列の値は、SQL から C データ型「バインドと変換」セクションで、このトピックの「」の説明に従ってに変換されます。  
+ UDT の結果列の値は、このトピックの「バインドと変換」の説明に従って、SQL から C データ型に変換されます。  
   
 ### <a name="sqlbindparameter"></a>SQLBindParameter  
  UDT に必要な値は次のとおりです。  
@@ -182,7 +180,7 @@ ms.locfileid: "49072216"
  UDT に対して返される値は、このトピックの「結果の記述子フィールド」で説明したとおりです。  
   
 ### <a name="sqlcolumns"></a>SQLColumns  
- Udt に対して返される値は、このトピックの「、"列のメタデータから返された SQLColumns および SQLProcedureColumns (カタログ メタデータ)」セクションで説明したとおりです。  
+ Udt に対して返される値は、このトピックの「SQLColumns および SQLProcedureColumns によって返される列のメタデータ (カタログメタデータ)」で説明されています。  
   
 ### <a name="sqldescribecol"></a>SQLDescribeCol  
  UDT に対して返される値は次のとおりです。  
@@ -201,13 +199,13 @@ ms.locfileid: "49072216"
 |SQL_SS_UDT<br /><br /> (8,000 バイトを超える長さ)|SQL_SS_UDT|SQL_SS_LENGTH_UNLIMITED (0)|0|  
   
 ### <a name="sqlfetch"></a>SQLFetch  
- UDT 結果列の値は、SQL から C データ型「バインドと変換」セクションで、このトピックの「」の説明に従ってに変換されます。  
+ UDT の結果列の値は、このトピックの「バインドと変換」の説明に従って、SQL から C データ型に変換されます。  
   
 ### <a name="sqlfetchscroll"></a>SQLFetchScroll  
- UDT 結果列の値は、SQL から C データ型「バインドと変換」セクションで、このトピックの「」の説明に従ってに変換されます。  
+ UDT の結果列の値は、このトピックの「バインドと変換」の説明に従って、SQL から C データ型に変換されます。  
   
 ### <a name="sqlgetdata"></a>SQLGetData  
- UDT 結果列の値は、SQL から C データ型「バインドと変換」セクションで、このトピックの「」の説明に従ってに変換されます。  
+ UDT の結果列の値は、このトピックの「バインドと変換」の説明に従って、SQL から C データ型に変換されます。  
   
 ### <a name="sqlgetdescfield"></a>SQLGetDescField  
  新しい型で使用できる記述子フィールドは、このトピックの「パラメーターの記述子フィールド」および「結果の記述子フィールド」で説明したとおりです。  
@@ -227,10 +225,10 @@ ms.locfileid: "49072216"
  UDT に対して返される値は、このトピックの「SQLColumns および SQLProcedureColumns から返される列のメタデータ (カタログ メタデータ)」で説明したとおりです。  
   
 ### <a name="sqlputdata"></a>SQLPutData  
- UDT パラメーターの値は、from C「バインドと変換」セクションで、このトピックの「」の説明に従って、SQL データ型に変換されます。  
+ UDT パラメーター値は、このトピックの「バインドと変換」の説明に従って、C から SQL データ型に変換されます。  
   
 ### <a name="sqlsetdescfield"></a>SQLSetDescField  
- 新しい型で使用できる記述子フィールドは「パラメーターの記述子フィールド」と「結果の記述子フィールド」セクションでは、このトピックの前に説明します。  
+ 新しい型で使用できる記述子フィールドについては、このトピックで前述した「パラメーターの記述子フィールド」と「結果の記述子フィールド」を参照してください。  
   
 ### <a name="sqlsetdescrec"></a>SQLSetDescRec  
  UDT に対して許可される値は次のとおりです。  

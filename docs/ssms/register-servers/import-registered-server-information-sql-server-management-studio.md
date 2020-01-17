@@ -14,15 +14,14 @@ helpviewer_keywords:
 - Registered Servers [SQL Server], importing
 - importing registered server information
 ms.assetid: cc497a14-1360-4887-b70c-002f042823b6
-author: stevestein
-ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 525ff9699f6e88a0cdc7c9b0405660d3a37d0d71
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 9ccbcc8465f713d23922fc10dfe483bb3cfbb774
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47640076"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68267111"
 ---
 # <a name="import-registered-server-information-sql-server-management-studio"></a>登録済みサーバー情報のインポート (SQL Server Management Studio)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -42,7 +41,7 @@ ms.locfileid: "47640076"
 3.  **[登録済みサーバーのインポート]** ダイアログ ボックスで、インポートする登録済みサーバーのファイルをクリックし、 **[OK]** をクリックします。  
   
      **[インポート ファイル]**  
-     インポート ファイルの名前をテキスト ボックスに入力します。または、参照ボタン (**[...]**) をクリックし、クライアント コンピューター上のインポート ファイルを指定します。 既存のファイルを選択した場合は、登録済みサーバー情報がファイルに追加されます。 あらかじめエクスポートされた登録済みサーバー ファイルだけを、インポート ファイルとして使用できます。 登録済みサーバー ファイルは、拡張子 .regsrvr を持ちます。  
+     インポート ファイルの名前をテキスト ボックスに入力します。または、参照ボタン ( **[...]** ) をクリックし、クライアント コンピューター上のインポート ファイルを指定します。 既存のファイルを選択した場合は、登録済みサーバー情報がファイルに追加されます。 あらかじめエクスポートされた登録済みサーバー ファイルだけを、インポート ファイルとして使用できます。 登録済みサーバー ファイルは、拡張子 .regsrvr を持ちます。  
   
      **[インポート先のサーバー グループを選択]**  
      ファイル内の登録済みサーバーのエントリのインポート先のルート ノード、または特定のサーバー グループを選択します。 エクスポート ファイルには、すべての登録済みサーバー、特定のサーバー グループ内の登録済みサーバー、または単独の登録済みサーバーをインポートできます。 インポート機能は再帰的です。たとえば、サーバー グループ A にサーバー グループ B が含まれており、サーバー グループ B にサーバー グループ C および D が含まれている場合、サーバー グループ A をインポートすると、A、B、C、および D 内のすべてのエントリがエクスポートされます。  

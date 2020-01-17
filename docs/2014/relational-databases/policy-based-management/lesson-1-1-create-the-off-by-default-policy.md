@@ -4,32 +4,31 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 ms.assetid: 98fde3c5-297c-4d95-981e-95700bbf5ccd
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 73294cfc5d1a7e4b2693615692604ef991421169
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: c96443d7f46dee539fd7d39a91a168b3ed5a0d8c
+ms.sourcegitcommit: 56b963446965f3a4bb0fa1446f49578dbff382e0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48117912"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67792935"
 ---
 # <a name="create-the-off-by-default-policy"></a>"既定でオフ" ポリシーの作成
   ここでは、セキュリティ構成ファセットに基づく "メールをオフ" という条件を作成します。 その後、"既定でオフ" というポリシーを作成します。  
   
 ### <a name="to-create-the-mail-off-condition"></a>"メールをオフ" 条件を作成するには  
   
-1.  オブジェクト エクスプローラーで、 **[管理]**、 **[ポリシー管理]**、 **[ファセット]** の順に展開し、 **[セキュリティ構成]** を右クリックして **[新しい条件]** をクリックします。  
+1.  オブジェクト エクスプローラーで、 **[管理]** 、 **[ポリシー管理]** 、 **[ファセット]** の順に展開し、 **[セキュリティ構成]** を右クリックして **[新しい条件]** をクリックします。  
   
 2.  **[新しい条件の作成]** ダイアログ ボックスで、 **[名前]** ボックスに「 **メールをオフ**」と入力します。  
   
 3.  **[ファセット]** ボックスで、 **[セキュリティ構成]** ファセットが選択されていることを確認します。  
   
-4.  **[式]** 領域の **[フィールド]** ボックスで **@DatabaseMailEnabled** を選択し、**[演算子]** ボックスで **=** を選択し、**[値]** ボックスで **[False]** を選択します。  
+4.  **式**領域で、**フィールド**ボックスで、  **\@DatabaseMailEnabled**の**演算子**ボックス選択 **=** 、し、**値**選択**False**します。  
   
 5.  **[説明]** ページで条件の説明を入力し、 **[OK]** をクリックして条件を作成します。  
   

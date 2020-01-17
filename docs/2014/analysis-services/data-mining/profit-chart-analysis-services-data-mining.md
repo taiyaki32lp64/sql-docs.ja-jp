@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - accuracy, charting
@@ -17,12 +16,12 @@ ms.assetid: 760ee051-6fd8-48e3-8d2e-82db3ab45e45
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: b9a094303b62bf134d750ed1b94c9cd0126e188d
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: 1a64eacb1219e239ad894d9922db5a5032ed525b
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52407319"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66083089"
 ---
 # <a name="profit-chart-analysis-services---data-mining"></a>利益チャート (Analysis Services - データ マイニング)
   利益チャートには、マイニング モデルの使用に関連して推定される収益性が表示されます。 たとえば、モデルでは、どの顧客か、会社がビジネス シナリオでお問い合わせくださいが予測と仮定します。 この場合、利益チャートに対して、ターゲット メーリング キャンペーンの実施コストに関する情報を追加します。 その後、完成したチャートで、ランダムに顧客に連絡を取った場合と比較して、顧客を正しくターゲット指定した場合に推定される利益を表示できます。  

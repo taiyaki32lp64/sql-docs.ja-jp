@@ -8,17 +8,20 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 551494c4-9e27-4592-9200-c6bf19e80c9a
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: ed9dc1c64a11707d2222549d84598435b75ea4cb
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: cddf7bd9714a42cefa55d9af1e9a5ce5a59aeac6
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47761930"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71292117"
 ---
-# <a name="preview"></a>プレビュー
+# <a name="preview"></a>プレビュー 
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   SAP BW 変換元が抽出するデータをプレビューするには、 **[プレビュー]** ダイアログ ボックスを使用します。  
   
 > [!IMPORTANT]  
@@ -47,7 +50,7 @@ ms.locfileid: "47761930"
     > [!NOTE]  
     >  **[プレビュー]** をクリックすると、 **[要求のログ]** ダイアログ ボックスも表示されます。 このダイアログ ボックスの詳細については、「 [Request Log](../../integration-services/data-flow/request-log.md)」をご覧ください。  
   
-## <a name="options"></a>[変数]  
+## <a name="options"></a>オプション  
  **[プレビュー]** ダイアログ ボックスには、SAP Netweaver BW システムから要求された行が表示されます。 表示される列は、ソース データで定義された列です。  
   
  このダイアログ ボックスに他のオプションはありません。  

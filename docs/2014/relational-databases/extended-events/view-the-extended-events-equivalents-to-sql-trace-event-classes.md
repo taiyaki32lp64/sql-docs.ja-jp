@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 0dd90613851184ad7fcff16ecf0a89875433dbfd
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52764764"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62512384"
 ---
 # <a name="view-the-extended-events-equivalents-to-sql-trace-event-classes"></a>SQL トレースのイベント クラスと等価な拡張イベントを確認する
   拡張イベントを使用して、SQL トレース イベントのクラスや列に相当するイベント データを収集する場合、SQL トレース イベントが、拡張イベントのイベントおよびアクションとどのように対応しているかを理解しておくことが大切です。  
@@ -77,7 +77,7 @@ ms.locfileid: "52764764"
   
 -   ユーザーが構成できる SQL トレースのイベント クラス (UserConfigurable:1 ～ UserConfigurable:9) は、拡張イベントでは単一のイベントに置き換えられます。 このイベントには、user_event という名前が付けられます。 このイベントは、SQL トレースと同じ sp_trace_generateevent ストアド プロシージャを使用して生成されます。 user_event イベントは、ストアド プロシージャに渡されたイベント ID に関係なく返されます。 ただし、event_id フィールドは、イベント データの一部として返されます。 これによって、イベント ID に基づく述語の作成が可能となります。 たとえば、UserConfigurable:0 (イベント ID = 82) をコード内で使用する場合、user_event イベントをセッションに追加し、'event_id = 82' という述語を指定することができます。 拡張イベントの user_event イベントも SQL トレースにおける等価なイベント クラスも sp_trace_generateevent ストアド プロシージャによって生成されるため、コードを変更する必要はありません。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [sp_trace_generateevent &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-trace-generateevent-transact-sql)  
   
   

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.dimensionwizard.timefrequency.f1
@@ -13,12 +12,12 @@ ms.assetid: 6bda6b7e-d306-4e68-9acb-84de8f44d1b4
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 5a8839c847d9c415a549ac829a3f24c351ed1cb8
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 98ed499f4f2b751ef092a4091076478338173e17
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48104291"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66081975"
 ---
 # <a name="define-time-periods-dimension-wizard"></a>[時間間隔の定義] (ディメンション ウィザード)
   **[時間間隔の定義]** ページを使用すると、時間ディメンションまたはサーバー時間ディメンションに含める暦年情報と時間頻度を定義できます。  

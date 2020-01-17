@@ -1,5 +1,5 @@
 ---
-title: Server 要素 (DTA) の構成 |Microsoft Docs
+title: Configuration の Server 要素 (DTA) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -12,15 +12,14 @@ dev_langs:
 helpviewer_keywords:
 - Server element
 ms.assetid: da9ff870-9cfd-42fe-994b-7b9292681f7d
-author: stevestein
-ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 1374ae2bff41360c473d039909859bd1f67b4f95
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 9f5ce7a8d8cda4c130da96a68e9cbdbacd8b5fb7
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51671461"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68105993"
 ---
 # <a name="server-element-for-configuration-dta"></a>Configuration の Server 要素 (DTA)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

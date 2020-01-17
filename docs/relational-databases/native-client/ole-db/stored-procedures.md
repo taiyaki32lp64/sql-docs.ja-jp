@@ -1,5 +1,5 @@
 ---
-title: ストアド プロシージャ |Microsoft Docs
+title: ストアド プロシージャ | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -15,20 +15,18 @@ helpviewer_keywords:
 ms.assetid: 75611e40-789f-412b-91e5-0cc0b8d289ef
 author: MightyPen
 ms.author: genemi
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 181558e7827102a3b35b7b32227f8164a2e1490d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 668d264d9be032c7886026e628921ead837d7879
+ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47748100"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73758415"
 ---
 # <a name="stored-procedures"></a>ストアド プロシージャ
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-[!INCLUDE[SNAC_Deprecated](../../../includes/snac-deprecated.md)]
 
-  ストアド プロシージャ ([Stored Procedures&#40;データベース エンジン&#41;](../../../relational-databases/stored-procedures/stored-procedures-database-engine.md)) は、データベースに格納されている実行可能オブジェクトです。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] では次に示すオブジェクトをサポートしています。  
+  ストアドプロシージャ ([ストアドプロシージャ&#40;データベースエンジン&#41;](../../../relational-databases/stored-procedures/stored-procedures-database-engine.md)) は、データベースに格納されている実行可能オブジェクトです。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] では次に示すオブジェクトをサポートしています。  
   
 -   ストアド プロシージャ  
   

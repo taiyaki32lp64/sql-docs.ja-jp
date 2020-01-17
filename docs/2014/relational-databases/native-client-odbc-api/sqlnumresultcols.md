@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 88edec63a97ff6c463f07add895ff8399fc4268a
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53372614"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63046757"
 ---
 # <a name="sqlnumresultcols"></a>SQLNumResultCols
   実行されるステートメントを[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native Client ODBC ドライバーは結果セット内の列の数を報告するサーバーを利用しません。 この場合、`SQLNumResultCols`サーバーとのやり取りは行われません。 ような[SQLDescribeCol](sqldescribecol.md)と[SQLColAttribute](sqlcolattribute.md)を呼び出すと、`SQLNumResultCols`準備されていても実行されていないステートメントには、サーバーとのやり取りが生成されます。  

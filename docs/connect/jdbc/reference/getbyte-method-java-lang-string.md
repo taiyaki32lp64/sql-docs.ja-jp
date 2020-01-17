@@ -1,5 +1,5 @@
 ---
-title: getByte (java.lang.String) メソッド |Microsoft Docs
+title: getByte メソッド (java.lang.String) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: 2071c1e4-eca0-4ed4-b50f-85d3c861185d
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 4a2bf6cbf3f61dc56bde9c1b6804dfb62f8e2bf4
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: cfe3f65125f9369630cac6e2f8e8cd4533107b82
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47694820"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67953442"
 ---
 # <a name="getbyte-method-javalangstring"></a>getByte (java.lang.String) メソッド
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

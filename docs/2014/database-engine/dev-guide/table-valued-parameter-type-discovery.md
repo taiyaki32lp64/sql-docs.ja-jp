@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: database-engine
 ms.topic: reference
 helpviewer_keywords:
 - table-valued parameters, type discovery
@@ -14,12 +12,12 @@ ms.assetid: f55818c2-ebb5-4cf6-8c0c-0da41f592560
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: bdf4acafd0a1bd2d986bbc75f5b1486d7dbb524b
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: cf3f7b4d6754902ac38172ffa0e8fc392599d307
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52532421"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62780321"
 ---
 # <a name="table-valued-parameter-type-discovery"></a>テーブル値パラメーターの型の検出
   コンシューマーでは、クライアント アプリケーションを使用して、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB プロバイダーがコマンド テキストに OLE DB プロバイダーに指定された場合、各コマンドのパラメーターの型を検出します。 テーブル値パラメーターの型がわかったら、コンシューマーはテーブル値パラメーターの個別の列ごとにメタデータ情報を検出できます。  
@@ -32,7 +30,7 @@ ms.locfileid: "52532421"
   
  型名がわかったら、コンシューマーは個々の列情報を取得するために、IOpenRowset::OpenRowset を呼び出すか、テーブル値パラメーターの型名をテーブル名として指定して、DBSCHEMA_TABLE_TYPE_COLUMNS 行セットを取得する必要があります。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [テーブル値パラメーター &#40;OLE DB&#41;](../../relational-databases/native-client-ole-db-table-valued-parameters/table-valued-parameters-ole-db.md)   
  [テーブル値パラメーターの使用 &#40;OLE DB&#41;](../../relational-databases/native-client-ole-db-how-to/use-table-valued-parameters-ole-db.md)  
   

@@ -18,17 +18,20 @@ helpviewer_keywords:
 - Integration Services packages, about packages
 - Integration Services packages
 ms.assetid: 9266bc64-7e1a-4e78-913b-a8deaa9843bf
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: 6e4eb0d6b5f40e3acd6b44d86dda24764de6e3bb
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 78aa101ac0f7c86bc2563f7cf0151e7f976a5b80
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47671720"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71296187"
 ---
 # <a name="integration-services-ssis-packages"></a>Integration Services (SSIS) パッケージ
+
+[!INCLUDE[ssis-appliesto](../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   パッケージは、接続、制御フロー要素、データ フロー要素、イベント ハンドラー、変数、パラメーター、および構成の組み合わせとして構成されています。パッケージは、[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] に用意されているグラフィカル デザイン ツールを使用して作成するか、プログラムによって構築します。  完成したパッケージは、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]、 [!INCLUDE[ssIS](../includes/ssis-md.md)] パッケージ ストア、またはファイル システムに保存します。または、ssISnoversion プロジェクトを [!INCLUDE[ssIS](../includes/ssis-md.md)] サーバーに配置することができます。 パッケージとは、取得、実行、および保存の対象となる作業単位のことです。  
   
  最初にパッケージを作成した時点では、パッケージは何も実行しない空のオブジェクトです。 パッケージに機能を追加するには、制御フロー、および任意で 1 つ以上のデータ フローを追加します。  
@@ -87,8 +90,8 @@ ms.locfileid: "47671720"
   
 |ログ エントリ|[説明]|  
 |---------------|-----------------|  
-|**PackageStart**|パッケージの実行が開始されたことを示します。<br /><br /> 注: このログ エントリは自動的にログに書き込まれます。 除外することはできません。|  
-|**PackageEnd**|パッケージが完了したことを示します。<br /><br /> 注: このログ エントリは自動的にログに書き込まれます。 除外することはできません。|  
+|**PackageStart**|パッケージの実行が開始されたことを示します。<br /><br /> 注:このログ エントリは自動的にログに書き込まれます。 除外することはできません。|  
+|**PackageEnd**|パッケージが完了したことを示します。<br /><br /> 注:このログ エントリは自動的にログに書き込まれます。 除外することはできません。|  
 |**Diagnostic**|同時実行できる実行可能ファイル数など、パッケージの実行に影響するシステム構成に関する情報を提供します。|  
   
 ## <a name="set-the-properties-of-a-package"></a>パッケージのプロパティを設定する  

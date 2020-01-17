@@ -1,5 +1,5 @@
 ---
-title: ユーザー定義テーブルの使用 |マイクロソフトのドキュメント
+title: ユーザー定義テーブルを使用する |Microsoft Docs
 ms.custom: ''
 ms.date: 08/06/2017
 ms.prod: sql
@@ -10,23 +10,22 @@ ms.topic: reference
 helpviewer_keywords:
 - user-defined tables [SQL Server]
 ms.assetid: 620a4e1f-9678-4711-ae09-bcf7c9cae724
-author: stevestein
-ms.author: sstein
-manager: craigg
+author: markingmyname
+ms.author: maghan
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: ce1e0d3cf0514ce2c6428fba8d0a6b015b20be07
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 0aa54692cf300a8d52d767092881ab30bc62d80f
+ms.sourcegitcommit: f3f83ef95399d1570851cd1360dc2f072736bef6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47846300"
+ms.lasthandoff: 08/13/2019
+ms.locfileid: "70911216"
 ---
 # <a name="using-user-defined-tables"></a>ユーザー定義テーブルの使用
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
 
   ユーザー定義テーブルは、表形式の情報を表します。 ストアド プロシージャやユーザー定義関数に表形式のデータを渡すときにパラメーターとして使用されます。 データベース テーブルの列を表すために使用することはできません。  
   
- <xref:Microsoft.SqlServer.Management.Smo.Database> オブジェクトには、<xref:Microsoft.SqlServer.Management.Smo.Database.UserDefinedTableTypes%2A> オブジェクトを参照する <xref:Microsoft.SqlServer.Management.Smo.UserDefinedTableTypeCollection> プロパティがあります。 各<xref:Microsoft.SqlServer.Management.Smo.UserDefinedTableType>オブジェクト コレクションには、**列**プロパティのコレクションを参照する<xref:Microsoft.SqlServer.Management.Smo.Column>ユーザー定義テーブルの列を一覧表示するオブジェクト。 Add メソッドを使用すると、ユーザー定義テーブルに列を追加できます。  
+ <xref:Microsoft.SqlServer.Management.Smo.Database> オブジェクトには、<xref:Microsoft.SqlServer.Management.Smo.Database.UserDefinedTableTypes%2A> オブジェクトを参照する <xref:Microsoft.SqlServer.Management.Smo.UserDefinedTableTypeCollection> プロパティがあります。 その<xref:Microsoft.SqlServer.Management.Smo.UserDefinedTableType>コレクション内の各オブジェクトには、ユーザー定義テーブルの列を<xref:Microsoft.SqlServer.Management.Smo.Column>一覧表示するオブジェクトのコレクションを参照する**Columns**プロパティがあります。 Add メソッドを使用すると、ユーザー定義テーブルに列を追加できます。  
   
  <xref:Microsoft.SqlServer.Management.Smo.UserDefinedTableType> オブジェクトを使用して新しいユーザー定義テーブルを定義するときには、テーブルの列と、それらの列のいずれかに基づく主キーを指定する必要があります。  
   
@@ -35,15 +34,15 @@ ms.locfileid: "47846300"
  <xref:Microsoft.SqlServer.Management.Smo.DataType> クラスは、列やパラメーターに関連付けられたデータ型を指定するために使用します。 この型を使用して、ユーザー定義テーブル型を、ユーザー定義の関数やストアド プロシージャのパラメーターとして指定できます。  
   
 ## <a name="examples"></a>使用例  
-提供されているコード例を使用するには、アプリケーションを作成するプログラミング環境、プログラミング テンプレート、およびプログラミング言語を選択する必要があります。 詳細については、次を参照してください。 [Visual C の作成&#35;Visual Studio .NET での SMO プロジェクト](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md)します。  
+提供されているコード例を使用するには、アプリケーションを作成するプログラミング環境、プログラミング テンプレート、およびプログラミング言語を選択する必要があります。 詳細については、「 [Visual Studio&#35; .Net での Visual C SMO プロジェクトの作成](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md)」を参照してください。  
 
   
 ## <a name="creating-a-user-defined-table-in-visual-basic"></a>Visual Basic でのユーザー定義テーブルの作成  
- この例を含むクラス ライブラリの imports ステートメントを含める必要が、 **StringCollection**型。  
+ この例では、 **StringCollection**型を含むクラスライブラリの imports ステートメントを含める必要があります。  
   
  `Imports System.Collections.Specialized`  
   
- この例では、ユーザー定義のテーブルを作成する方法と、ユーザー定義関数のパラメーターとして使用する方法を示します。  
+ この例では、ユーザー定義テーブルを作成する方法と、ユーザー定義テーブルをユーザー定義関数のパラメーターとして使用する方法を示します。  
   
 ```VBNET  
 'Connect to the local, default instance of SQL Server  
@@ -103,7 +102,7 @@ ms.locfileid: "47846300"
 ```  
   
 ## <a name="creating-a-user-defined-table-in-visual-c"></a>Visual C# でのユーザー定義テーブルの作成  
- この例を含むクラス ライブラリの imports ステートメントを含める必要が、 **StringCollection**型。  
+ この例では、 **StringCollection**型を含むクラスライブラリの imports ステートメントを含める必要があります。  
   
  `using System.Collections.Specialized;`  
   
@@ -173,7 +172,7 @@ ms.locfileid: "47846300"
 ```  
   
 ## <a name="creating-a-user-defined-table-in-powershell"></a>PowerShell でのユーザー定義テーブルの作成  
- この例を含むクラス ライブラリの imports ステートメントを含める必要が、 **StringCollection**型。  
+ この例では、 **StringCollection**型を含むクラスライブラリの imports ステートメントを含める必要があります。  
   
  `using System.Collections.Specialized;`  
   

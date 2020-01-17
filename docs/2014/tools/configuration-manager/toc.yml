@@ -2,7 +2,7 @@
   href: sql-server-configuration-manager-help.md
 - name: '[SQL Server のサービス]'
   href: sql-server-services.md
-- name: 分析サーバー (SQL Server 構成マネージャー)
+- name: 分析サーバー <server> (SQL Server 構成マネージャー)
   href: analysis-server-server-sql-server-configuration-manager.md
   items:
     - name: '[SQL Server Analysis Services のプロパティ] ダイアログ ボックス ([ログオン] タブ)'
@@ -14,13 +14,13 @@
 - name: SQL Server Notification Services (SQL Server 構成マネージャー)
   href: notification-services-sql-server-configuration-manager.md
   items:
-    - name: 'NS$ のプロパティ ([ログオン] タブ)'
+    - name: 'NS$<service name> のプロパティ ([ログオン] タブ)'
       href: ns-service-name-properties-log-on-tab.md
-    - name: 'NS$ のプロパティ ([サービス] タブ)'
+    - name: 'NS$<service name> のプロパティ ([サービス] タブ)'
       href: ns-service-name-properties-service-tab.md
-    - name: 'NS$ のプロパティ ([詳細設定] タブ)'
+    - name: 'NS$<service name> のプロパティ ([詳細設定] タブ)'
       href: ns-service-name-properties-advanced-tab.md
-- name: レポート サーバー (SQL Server 構成マネージャー)
+- name: レポート サーバー <server> (SQL Server 構成マネージャー)
   href: report-server-server-sql-server-configuration-manager.md
   items:
     - name: '[SQL Server Reporting Services のプロパティ] ダイアログ ボックス ([ログオン] タブ)'
@@ -29,7 +29,7 @@
       href: report-server-properties-service-tab.md
     - name: '[SQL Server Reporting Services のプロパティ] ダイアログ ボックス ([詳細設定] タブ)'
       href: report-server-properties-advanced-tab.md
-- name: SQL Server エージェント (SQL Server 構成マネージャー)
+- name: SQL Server エージェント <server> (SQL Server 構成マネージャー)
   href: sql-server-agent-server-sql-server-configuration-manager.md
   items:
     - name: '[SQL Server Agent のプロパティ] ダイアログ ボックス ([ログオン] タブ)'
@@ -47,7 +47,7 @@
       href: sql-server-browser-properties-service-tab.md
     - name: '[SQL Server Browser のプロパティ] ダイアログ ボックス ([詳細設定] タブ)'
       href: sql-server-browser-properties-advanced-tab.md
-- name: SQL Server (SQL Server 構成マネージャー)
+- name: SQL Server <server> (SQL Server 構成マネージャー)
   href: sql-server-server-sql-server-configuration-manager.md
   items:
     - name: '[SQL Server のプロパティ] ダイアログ ボックス ([ログオン] タブ)'
@@ -85,7 +85,7 @@
 - name: SQL Server のネットワーク構成
   href: sql-server-network-configuration.md
   items:
-    - name: のプロトコル (SQL Server 構成マネージャー)
+    - name: <server> のプロトコル (SQL Server 構成マネージャー)
       href: protocols-for-server-sql-server-configuration-manager.md
     - name: '[MSSQLSERVER のプロトコルのプロパティ] ダイアログ ボックス ([フラグ] タブ)'
       href: protocols-for-mssqlserver-properties-flags-tab.md
@@ -121,7 +121,7 @@
   items:
     - name: '[別名 - 新規] ダイアログ ボックス ([別名] タブ)'
       href: new-alias-alias-tab.md
-    - name: 'のプロパティ ([別名] タブ)'
+    - name: '<Alias> のプロパティ ([別名] タブ)'
       href: alias-properties-alias-tab.md
     - name: 共有メモリ プロトコルを使用した有効な接続文字列の作成
       href: creating-a-valid-connection-string-using-shared-memory-protocol.md

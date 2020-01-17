@@ -14,17 +14,20 @@ helpviewer_keywords:
 - indexes [Integration Services]
 - Rebuild Index task
 ms.assetid: 021884dd-e72d-47b2-99e8-b741410509c3
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: 29e5210a44842d349ab76081f141d2d3d7152bb4
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: af10da0db8cff17e6cf06c155a85713a3fae50eb
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51637819"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71294017"
 ---
 # <a name="rebuild-index-task"></a>インデックスの再構築タスク
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   インデックスの再構築タスクでは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データベースのテーブルおよびビュー内のインデックスを再構築します。 インデックスの管理の詳細については、「 [インデックスの再編成と再構築](../../relational-databases/indexes/reorganize-and-rebuild-indexes.md)」を参照してください。  
   
  インデックスの再構築タスクを使用すると、パッケージは単一データベースまたは複数のデータベース内のインデックスを再構築できます。 このタスクにより単一データベース内のインデックスのみを再構築する場合、タスクによってインデックスを再構築するビューおよびテーブルを選択できます。  

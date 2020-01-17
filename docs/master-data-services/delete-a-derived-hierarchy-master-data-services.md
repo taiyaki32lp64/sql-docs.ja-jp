@@ -1,5 +1,5 @@
 ---
-title: 派生階層を削除する (マスター データ サービス) | Microsoft Docs
+title: 派生階層を削除する
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -11,21 +11,20 @@ helpviewer_keywords:
 - deleting derived hierarchies [Master Data Services]
 - derived hierarchies, deleting
 ms.assetid: f46d660e-47f2-47ca-9372-1b5931540beb
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 8918a9c8373f8d711f0400915be97dc6799a5b5f
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
-ms.translationtype: HT
+ms.openlocfilehash: 7e9e36545c9d9e99f627cc8f4a1f0a92d50af5de
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52779604"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73728366"
 ---
 # <a name="delete-a-derived-hierarchy-master-data-services"></a>派生階層を削除する (マスター データ サービス)
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-  [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]で、不要になった派生階層を削除します。  
+  [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] で、不要になった派生階層を削除します。  
   
 > [!NOTE]  
 >  派生階層を削除しても、その階層が基づいている属性リレーションシップには影響しません。  
@@ -35,7 +34,7 @@ ms.locfileid: "52779604"
   
 -   **[システム管理]** 機能領域にアクセスする権限が必要です。  
   
--   モデル管理者である必要があります。 詳細については、「 [管理者 (マスター データ サービス)](../master-data-services/administrators-master-data-services.md)にアクセスすることなくグループに対してユーザーの追加または削除を行うことができます。  
+-   モデル管理者である必要があります。 詳細については、「[Administrators &#40;Master Data Services&#41; (管理者 &#40;マスター データ サービス&#41;)](../master-data-services/administrators-master-data-services.md)」を参照してください。  
   
 ### <a name="to-delete-a-derived-hierarchy"></a>派生階層を削除するには  
   

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - ReadOnly property
@@ -15,12 +14,12 @@ ms.assetid: 4eff8181-08dd-4fad-b091-d400fc21a020
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 48bb00cba9a01029da31146f9e98e2ef8b3627d6
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 790e509dd29e388dfb697ba577958395a4a046ea
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53362614"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66072884"
 ---
 # <a name="switch-an-analysis-services-database-between-readonly-and-readwrite-modes"></a>Analysis Services データベースの ReadOnly モードと ReadWrite モードの切り替え
   多くの場合、状況があるときに、[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]データベース管理者 (dba) が、表形式または多次元データベースの読み取り/書き込みモードを変更します。 こうした状況は、ユーザーが操作しやすくなるように一連の [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] サーバー間でデータベースを共有するなどのビジネス上のニーズによって頻繁に発生します。  
@@ -52,7 +51,7 @@ ms.locfileid: "53362614"
   
 6.  右クリックし、**データベース**フォルダーと選択**アタッチしています.**  
   
-7.  **[フォルダー]** ボックスに、データベース フォルダーの元の場所を入力します。 また、[参照] ボタンを使用することができます (**.**) データベース フォルダーを検索します。  
+7.  **[フォルダー]** ボックスに、データベース フォルダーの元の場所を入力します。 また、[参照] ボタンを使用することができます ( **.** ) データベース フォルダーを検索します。  
   
 8.  データベースの読み取り/書き込みモードを選択します。  
   

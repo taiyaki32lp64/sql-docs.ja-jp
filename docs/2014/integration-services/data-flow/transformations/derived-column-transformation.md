@@ -15,15 +15,15 @@ helpviewer_keywords:
 - columns [Integration Services], derivations
 - Derived Column transformation
 ms.assetid: 8eba755e-8e48-4233-bd1e-09a46bf2692f
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 5575991201f48c48fee1b27ad95b6d07de6251ba
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 2a2767de67eac1a0346f059e1a2c81a5698607dc
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53373894"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62900515"
 ---
 # <a name="derived-column-transformation"></a>派生列変換
   派生列変換では、式を変換入力列に適用することにより新しい列の値を作成します。 式には、変換入力からの列、変数、関数、および演算子の任意の組み合わせを含めることができます。 結果は、新しい列として追加するか、または既存の列の値を置き換える値として挿入できます。 派生列変換では複数の派生列を定義でき、任意の変数または入力列を複数の式に含めることができます。  
@@ -77,6 +77,6 @@ ms.locfileid: "53373894"
 ## <a name="related-content"></a>関連コンテンツ  
  social.technet.microsoft.com の技術記事「 [SSIS 式の例](https://go.microsoft.com/fwlink/?LinkId=220761)」  
   
- curatedviews.cloudapp.net の Curated Answer「 [SSIS を使用して列データを分割する方法](https://go.microsoft.com/fwlink/?LinkId=321995)」  
+ ブログ、 [SSIS を使用して列データの分割方法](https://microsoft-ssis.blogspot.com/2012/10/split-multi-value-column-into-multiple.html)します。  
   
   

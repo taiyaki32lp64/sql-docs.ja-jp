@@ -24,11 +24,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 1c53c039d6194edbc37438ef30ac4fef0113ae87
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52794064"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68211034"
 ---
 # <a name="start-a-trace"></a>トレースの開始
   [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]を使用して新しいトレース定義するか、テンプレートを作成したら、新しいトレース定義またはテンプレートを使用してデータのキャプチャを開始、一時停止、または停止することができます。  
@@ -43,7 +43,7 @@ ms.locfileid: "52794064"
 > [!NOTE]  
 >  既存のトレースを使用する場合、プロパティを参照できますが、変更できません。 プロパティを変更するには、トレースを停止または一時停止する必要があります。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [サーバーへの接続後の自動的なトレースの開始 &#40;SQL Server Profiler&#41;](start-a-trace-automatically-after-connecting-to-a-server-sql-server-profiler.md)   
  [トレースの一時停止 &#40;SQL Server Profiler&#41;](pause-a-trace-sql-server-profiler.md)   
  [トレースの停止 &#40;SQL Server Profiler&#41;](stop-a-trace-sql-server-profiler.md)   

@@ -1,5 +1,5 @@
 ---
-title: sp_add_agent_parameter (TRANSACT-SQL) |Microsoft Docs
+title: sp_add_agent_parameter (Transact-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -13,20 +13,19 @@ f1_keywords:
 helpviewer_keywords:
 - sp_add_agent_parameter
 ms.assetid: 055f4765-0574-47c3-bf7d-6ef6e9bd8b34
-author: CarlRabeler
-ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: a36f49bb392d8f29ff52bb574f1dff9c9813eccd
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+author: mashamsft
+ms.author: mathoma
+ms.openlocfilehash: c1aafa1736ff626f7b0bea9bea8753ae2c509ac4
+ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52764669"
+ms.lasthandoff: 08/03/2019
+ms.locfileid: "68770961"
 ---
-# <a name="spaddagentparameter-transact-sql"></a>sp_add_agent_parameter (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+# <a name="sp_add_agent_parameter-transact-sql"></a>sp_add_agent_parameter (Transact-SQL)
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
-  エージェント プロファイルに新しいパラメーターとその値を追加します。 このストアド プロシージャは、ディストリビューター側で任意のデータベースについて実行されます。  
+  エージェント プロファイルに新しいパラメーターとその値を追加します。 このストアドプロシージャは、ディストリビューター側で任意のデータベースに対して実行されます。  
   
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -40,10 +39,9 @@ sp_add_agent_parameter [ @profile_id = ] profile_id
 ```  
   
 ## <a name="arguments"></a>引数  
- [ **@profile_id=** ] *profile_id*  
- プロファイルの id、 **MSagent_profiles**テーブルに、 **msdb**データベース。 *profile_id*は**int**、既定値はありません。  
+`[ @profile_id = ] profile_id`**Msdb**データベースの**MSagent_profiles**テーブルにあるプロファイルの ID を示します。 *profile_id*は**int**,、既定値はありません。  
   
- エージェントの種類を確認する*profile_id*表す、検索、 *profile_id*で、 [MSagent_profiles &#40;TRANSACT-SQL&#41; ](../../relational-databases/system-tables/msagent-profiles-transact-sql.md)テーブルとに注意してください、*agent_type*フィールドの値。 値は次のとおりです。  
+ この*profile_id*が表すエージェントの種類を確認するには、 [MSagent_profiles &#40;Transact-SQL&#41;](../../relational-databases/system-tables/msagent-profiles-transact-sql.md)テーブルで*profile_id*を見つけ、 *agent_type*フィールド値をメモします。 値は次のとおりです。  
   
 |値|説明|  
 |-----------|-----------------|  
@@ -53,8 +51,7 @@ sp_add_agent_parameter [ @profile_id = ] profile_id
 |**4**|[マージ エージェント]|  
 |**9**|キュー リーダー エージェント (Queue Reader Agent)|  
   
- [  **@parameter_name=** ] **'***parameter_name***'**  
- パラメーターの名前を指定します。 *parameter_name*は**sysname**、既定値はありません。 システム プロファイルで既に定義されているパラメーターの一覧は、次を参照してください。[レプリケーション エージェント プロファイル](../../relational-databases/replication/agents/replication-agent-profiles.md)します。 各エージェントの有効なパラメーターの一覧については、次のトピックを参照してください。  
+`[ @parameter_name = ] 'parameter_name'`パラメーターの名前を指定します。 *parameter_name*は**sysname**,、既定値はありません。 システムプロファイルで既に定義されているパラメーターの一覧については、「[レプリケーションエージェントプロファイル](../../relational-databases/replication/agents/replication-agent-profiles.md)」を参照してください。 各エージェントの有効なパラメーターの完全な一覧については、次のトピックを参照してください。  
   
 -   [Replication Snapshot Agent](../../relational-databases/replication/agents/replication-snapshot-agent.md)  
   
@@ -66,25 +63,24 @@ sp_add_agent_parameter [ @profile_id = ] profile_id
   
 -   [レプリケーション キュー リーダー エージェント](../../relational-databases/replication/agents/replication-queue-reader-agent.md)  
   
- [  **@parameter_value=**] **'***parameter_value***'**  
- パラメーターに割り当てる値を指定します。 *parameter_value*は**nvarchar (255)**、既定値はありません。  
+`[ @parameter_value = ] 'parameter_value'`パラメーターに割り当てる値を指定します。 *parameter_value*は**nvarchar (255)** ,、既定値はありません。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  **0** (成功) または**1** (失敗)  
   
 ## <a name="remarks"></a>コメント  
- **sp_add_agent_parameter**はスナップショット レプリケーション、トランザクション レプリケーション、およびマージ レプリケーションで使用します。  
+ **sp_add_agent_parameter**は、スナップショットレプリケーション、トランザクションレプリケーション、およびマージレプリケーションで使用します。  
   
 ## <a name="permissions"></a>アクセス許可  
- メンバーのみ、 **sysadmin**固定サーバー ロールが実行できる**sp_add_agent_parameter**します。  
+ **Sp_add_agent_parameter**を実行できるのは、 **sysadmin**固定サーバーロールのメンバーだけです。  
   
 ## <a name="see-also"></a>参照  
  [レプリケーション エージェント プロファイルの操作](../../relational-databases/replication/agents/work-with-replication-agent-profiles.md)   
  [レプリケーション エージェント プロファイル](../../relational-databases/replication/agents/replication-agent-profiles.md)   
- [sp_add_agent_profile &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-agent-profile-transact-sql.md)   
- [sp_change_agent_profile &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-change-agent-profile-transact-sql.md)   
- [sp_change_agent_parameter &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-change-agent-parameter-transact-sql.md)   
- [sp_drop_agent_parameter &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-drop-agent-parameter-transact-sql.md)   
- [sp_help_agent_parameter &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-agent-parameter-transact-sql.md)  
+ [sp_add_agent_profile &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-add-agent-profile-transact-sql.md)   
+ [sp_change_agent_profile &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-change-agent-profile-transact-sql.md)   
+ [sp_change_agent_parameter &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-change-agent-parameter-transact-sql.md)   
+ [sp_drop_agent_parameter &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-drop-agent-parameter-transact-sql.md)   
+ [sp_help_agent_parameter &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-help-agent-parameter-transact-sql.md)  
   
   

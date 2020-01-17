@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 ms.assetid: 0445b0ac-acae-4462-80fb-fe9735ac66db
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 5624d341ac70f9e1d82abb0edb21a2111272c331
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: 1828f0f76963cea8cf792c17a251c843a93b5b0c
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56293540"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66106562"
 ---
 # <a name="add-or-delete-a-group-in-a-chart-report-builder-and-ssrs"></a>グラフでのグループの追加または削除 (レポート ビルダーおよび SSRS)
   表示するグラフ データ領域内をクリックして、**グラフ データ**ウィンドウ。 データセット フィールドを **[カテゴリ グループ]** 領域と **[系列グループ]** 領域にドラッグすると、グループが作成されます。 入れ子になったグループを追加するには、複数のフィールドを領域に追加します。  

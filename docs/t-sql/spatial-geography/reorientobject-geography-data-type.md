@@ -15,15 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - ReorientObject method (geography)
 ms.assetid: e2a1a4f1-211b-4e82-abed-03fc7140a83c
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: cda6f09124127d04c8ded1773feab4e9ffbf2ba9
-ms.sourcegitcommit: 01e17c5f1710e7058bad8227c8011985a9888d36
+author: MladjoA
+ms.author: mlandzic
+ms.openlocfilehash: 9c4660fa212a85f3bba5812d6cc990f9c02c5539
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/14/2019
-ms.locfileid: "56265229"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68101751"
 ---
 # <a name="reorientobject-geography-data-type"></a>ReorientObject (geography データ型)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]

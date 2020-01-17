@@ -1,5 +1,5 @@
 ---
-title: Stretch 対応データベースの復元 (Stretch Database) | Microsoft Docs
+title: Stretch 対応データベースの復元
 ms.date: 07/06/2016
 ms.service: sql-server-stretch-database
 ms.reviewer: ''
@@ -7,13 +7,13 @@ ms.topic: conceptual
 ms.assetid: cebc1f6d-d5ea-460d-ae60-d047d29c2723
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 479d632b8d5413de9517f92f604c44383012acab
-ms.sourcegitcommit: ec1f01b4bb54621de62ee488decf9511d651d700
+ms.custom: seo-dt-2019
+ms.openlocfilehash: 4b53e333802af9bd70e51ad320300c6f868dea43
+ms.sourcegitcommit: f688a37bb6deac2e5b7730344165bbe2c57f9b9c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/14/2019
-ms.locfileid: "56240796"
+ms.lasthandoff: 11/08/2019
+ms.locfileid: "73843769"
 ---
 # <a name="restore-stretch-enabled-databases-stretch-database"></a>Stretch 対応データベースの復元 (Stretch Database)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md-winonly](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md-winonly.md)]

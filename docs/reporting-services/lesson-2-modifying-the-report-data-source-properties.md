@@ -6,14 +6,14 @@ ms.prod_service: reporting-services-native
 ms.technology: reporting-services
 ms.topic: conceptual
 ms.assetid: c962b0ff-ce8a-4742-8262-dc730901afcf
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 7da1fa318ac1bab2310cb8708215db3456d84d66
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 466415ebd4075afd5dda83e95a498a32b50af453
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52399915"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62651727"
 ---
 # <a name="lesson-2-modifying-the-report-data-source-properties"></a>レッスン 2: レポート データ ソースのプロパティの変更
 この [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] レッスンでは、受信者に配信されるレポートを、Web ポータルを使って選択します。 ここで定義するデータ ドリブン サブスクリプションによって、チュートリアル「 **基本的なテーブル レポートの作成 (SSRS チュートリアル)** 」で作成されたレポート [基本的なテーブル レポートの作成 (SSRS チュートリアル)](../reporting-services/create-a-basic-table-report-ssrs-tutorial.md)が配信されます。  この後の手順では、レポートがデータの取得に使用するデータ ソースの接続情報を変更します。 データ ドリブン サブスクリプションを介して配信できるのは、 **保存されている資格情報** を使用してレポート データ ソースにアクセスするレポートのみです。 保存されている資格情報は、レポートの自動処理に必要となります。  
@@ -24,7 +24,7 @@ ms.locfileid: "52399915"
   
 1.  管理者特権を使用して [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] Web ポータルを参照します。たとえば、Internet Explorer アイコンを右クリックして **[管理者として実行]** をクリックします。  
  
-2.    Web ポータルの URL を参照します。  例 :   
+2.    Web ポータルの URL を参照します。  例:   
     `https://<server name>/reports`が配信されます。  
     `https://localhost/reports`
  **注:** Web *ポータル* URL は "Reports" です。Report *Server* の URL "Reportserver" ではありません。  
@@ -52,7 +52,7 @@ ms.locfileid: "52399915"
 10. **[保存]** をクリックします。
 11. **[キャンセル]** をクリックします。  
   
-11. レポートを表示し、指定した資格情報を使用してレポートが実行されていることを確認します。 .  
+11. レポートを表示し、指定した資格情報を使用してレポートが実行されていることを確認します。 。  
   
 ## <a name="bkmk_modify_dataset"></a>AdventureWorksDataset を変更するには  
  次の手順では、パラメーターを使用して注文番号でデータ セットをフィルター処理できるよう、データセットを変更します。

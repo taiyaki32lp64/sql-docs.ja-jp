@@ -8,17 +8,20 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 0216266d-d866-4ea2-bbeb-955965f4d7c2
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: 714136a95b47626b0d8db0875a6b3d72402a472f
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: f9203423267f68137e11203be60ffa4d0e0c3e41
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52407349"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71296896"
 ---
 # <a name="integration-services-ssis-in-a-cluster"></a>クラスターにおける Integration Services (SSIS)
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] をクラスター化することはお勧めしません。[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] サービスは、クラスター化されるサービスまたはクラスター対応サービスではなく、クラスター ノード間のフェールオーバーはサポートしません。 したがって、クラスター環境では、クラスターの各ノードで [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] をインストールし、スタンドアロン サービスとして起動する必要があります。  
   
  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] サービスはクラスター化されるサービスではありませんが、クラスターの各ノードに個別に [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] をインストールした後、クラスター リソースとして動作するように手動で構成することができます。  
@@ -99,7 +102,7 @@ ms.locfileid: "52407349"
   
 4.  **[ファイル]** メニューの **[新規作成]** をポイントし、 **[リソース]** をクリックします。  
   
-5.  リソース ウィザードの **[新しいリソース]** ページで、名前を入力し、**[サービスの種類]** として **[汎用サービス]** を選択します。 **[グループ]** の値は変更せずに、 **[次へ]** をクリックします。  
+5.  リソース ウィザードの **[新しいリソース]** ページで、名前を入力し、 **[サービスの種類]** として **[汎用サービス]** を選択します。 **[グループ]** の値は変更せずに、 **[次へ]** をクリックします。  
   
 6.  **[実行可能な所有者]** ページで、リソースの実行可能な所有者として、クラスターのノードを追加または削除し、 **[次へ]** をクリックします。  
   

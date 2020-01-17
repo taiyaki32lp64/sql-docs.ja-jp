@@ -15,14 +15,13 @@ helpviewer_keywords:
 ms.assetid: ca6aa3e9-9885-44c3-bafc-aec441fd97ec
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 3dfb480335b36dde5ce7faece207fb214d1dba5b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 3c9dc1c5650c98a925ff79a9bc78917a80d73656
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47620681"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72909899"
 ---
 # <a name="delete-tables-database-engine"></a>テーブルの削除 (データベース エンジン)
 [!INCLUDE[tsql-appliesto-ss2016-all-md](../../includes/tsql-appliesto-ss2016-all-md.md)]
@@ -38,7 +37,7 @@ ms.locfileid: "47620681"
   
      [制限事項と制約事項](#Restrictions)  
   
-     [Security](#Security)  
+     [セキュリティ](#Security)  
   
 -   **テーブルを削除する方法:**  
   
@@ -46,7 +45,7 @@ ms.locfileid: "47620681"
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> 作業を開始する準備  
+##  <a name="BeforeYouBegin"></a> はじめに  
   
 ###  <a name="Restrictions"></a> 制限事項と制約事項  
   
@@ -74,7 +73,7 @@ ms.locfileid: "47620681"
 2.  テーブルを右クリックし、ショートカット メニューの **[削除]** をクリックします。  
   
 3.  削除の確認を要求するメッセージ ボックスが表示されます。 **[はい]** をクリックします。  
-  
+
     > [!NOTE]  
     >  テーブルを削除すると、テーブルへのリレーションシップが自動的に削除されます。  
   

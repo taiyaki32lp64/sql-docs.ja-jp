@@ -10,14 +10,13 @@ ms.topic: conceptual
 ms.assetid: ba6f1a15-8b69-4ca6-9f44-f5e3f2962bc5
 author: MightyPen
 ms.author: genemi
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 7854ddbe4795a347b0a824f607c7206c0bc6b78c
-ms.sourcegitcommit: 97340deee7e17288b5eec2fa275b01128f28e1b8
+ms.openlocfilehash: 0c80e52eff233c2d04cb77fb5cf5d85bdac8fe34
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55421369"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68081764"
 ---
 # <a name="transactions-with-memory-optimized-tables"></a>メモリ最適化テーブルでのトランザクション
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -26,7 +25,7 @@ ms.locfileid: "55421369"
   
 SQL Server のトランザクション分離レベルは、ディスク ベースのテーブルとは異なる方法でメモリ最適化テーブルに適用されます。基になるメカニズムも異なっています。 プログラマは、この違いを理解することで、高スループットのシステムを設計しやすくなります。 トランザクションの整合性という目標は、すべての状況で共有されます。  
 
-メモリ最適化テーブルでのトランザクションに固有のエラー条件については、「 [競合の検出と再試行ロジック](#confdetretry34ni)」のセクションに移動してください。
+メモリ最適化テーブルでのトランザクションに固有のエラー条件については、「 [競合の検出と再試行ロジック](#conflict-detection-and-retry-logic)」のセクションに移動してください。
   
 詳細については、「 [SET TRANSACTION ISOLATION LEVEL (Transact-SQL)](../../t-sql/statements/set-transaction-isolation-level-transact-sql.md)」を参照してください。  
   
@@ -97,7 +96,7 @@ READ_COMMITTED_SNAPSHOT または SNAPSHOT 分離レベルが有効な場合は�
   
 ## <a name="isolation-levels"></a>分離レベル 
   
-次の表は、トランザクション分離のレベルを、分離が少ないものから順に示しています。 発生する可能性のある競合、およびこれらの競合を処理するための再試行ロジックの詳細については、「 [競合の検出と再試行ロジック](#confdetretry34ni)」を参照してください。 
+次の表は、トランザクション分離のレベルを、分離が少ないものから順に示しています。 発生する可能性のある競合、およびこれらの競合を処理するための再試行ロジックの詳細については、「 [競合の検出と再試行ロジック](#conflict-detection-and-retry-logic)」を参照してください。 
   
 | [分離レベル] | [説明] |   
 | :-- | :-- |   
@@ -123,7 +122,7 @@ READ_COMMITTED_SNAPSHOT または SNAPSHOT 分離レベルが有効な場合は�
 #### <a name="validation-phase-2-of-3"></a>検証:フェーズ 2 (2/3)  
   
 - 終了時刻を割り当て、それによってトランザクションに論理的完了とマークすると、検証フェーズが始まります。 この完了により、このトランザクションと依存関係があるその他のトランザクションに、トランザクションのすべての変更内容が表示されます。 従属トランザクションは、このトランザクションが正常にコミットされるまではコミットできません。 さらに、このような依存関係を保持するトランザクションは、結果セットをクライアントに返すことはできません。データベースに正常にコミットされたデータのみ、クライアントが参照するようにするためです。  
-- このフェーズは、repeatable read と serializable の検証で構成されます。 repeatable read の検証では、トランザクションによって読み取られた行のいずれかが以降更新されたかどうかがチェックされます。 serializable の検証では、このトランザクションによってスキャンされたいずれかのデータ範囲に行が挿入されたかどうかがチェックされます。 スナップショット分離の使用時は、一意キー制約と外部キー制約の整合性を検証するために、「[分離レベルと競合](#confdegreeiso30ni)」の表に従って、repeatable read と serializable の両方の検証が行われることがあります。  
+- このフェーズは、repeatable read と serializable の検証で構成されます。 repeatable read の検証では、トランザクションによって読み取られた行のいずれかが以降更新されたかどうかがチェックされます。 serializable の検証では、このトランザクションによってスキャンされたいずれかのデータ範囲に行が挿入されたかどうかがチェックされます。 スナップショット分離の使用時は、一意キー制約と外部キー制約の整合性を検証するために、「[分離レベルと競合](#isolation-levels)」の表に従って、repeatable read と serializable の両方の検証が行われることがあります。  
   
 #### <a name="commit-processing-phase-3-of-3"></a>コミット処理:フェーズ 3 (3/3)  
   

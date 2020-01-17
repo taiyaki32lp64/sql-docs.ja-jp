@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 1a801f22-6fea-48aa-a723-3187a2ad852b
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 66361572427c3264a1b25fe1c851685a07b2e029
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 853a364b61b63d58da93111c75db0d7d723ee49b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47765020"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68073911"
 ---
 # <a name="sqlgetdescfield-and-sqlgetdescrec-cursor-library"></a>SQLGetDescField および SQLGetDescRec (カーソル ライブラリ)
 > [!IMPORTANT]  
@@ -29,7 +28,7 @@ ms.locfileid: "47765020"
   
  カーソル ライブラリを実行します**SQLGetDescRec**ブックマーク列のメタデータを返します。 カーソル ライブラリを実行します**SQLGetDescField**によって返されるのと同じフィールドを返す**SQLGetDescRec**は、SQL_DESC_NAME、SQL_DESC_TYPE、SQL_DESC_DATETIME_INTERVAL_CODE SQL_DESC_OCTET_長さ、SQL_DESC_PRECISION、SQL_DESC_SCALE、および SQL_DESC_NULLABLE します。 一貫性を保つのため**SQLGetDescField**も SQL_DESC_UNNAMED を返します。  
   
- カーソル ライブラリを実行します**SQLGetDescField**ブックマーク列をバインドするために設定されているフィールドが、次の値を返すに呼び出されます SQL_DESC_DATA_PTR、SQL_DESC_INDICATOR_PTR、SQL_DESC_OCTET_LENGTH_PTR、と。SQL_DESC_LENGTH します。  
+ カーソル ライブラリを実行します**SQLGetDescField**ブックマーク列をバインドするために設定されているフィールドが、次の値を返すに呼び出されます。SQL_DESC_DATA_PTR、SQL_DESC_INDICATOR_PTR、SQL_DESC_OCTET_LENGTH_PTR、および SQL_DESC_LENGTH します。  
   
  カーソル ライブラリを実行します**SQLGetDescField** SQL_DESC_BIND_OFFSET_PTR、SQL_DESC_BIND_TYPE、SQL_DESC_ROW_ARRAY_SIZE、または SQL_DESC_ROW_STATUS_PTR フィールドの値を返すに呼び出されます。 これらのフィールドは、ブックマークの行だけでなく、任意の行に対して返されます。  
   

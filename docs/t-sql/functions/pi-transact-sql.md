@@ -16,16 +16,15 @@ helpviewer_keywords:
 - constant value of PI
 - PI function
 ms.assetid: d7c4575b-ba1c-4ef7-a633-9a379d7f01fd
-author: MashaMSFT
-ms.author: mathoma
-manager: craigg
+author: MikeRayMSFT
+ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: af68d76959944c39517be7f0ea3af0ac130d1f98
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 119b6b789ec19ca33839ae324024ae467a7dc014
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47851500"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67914332"
 ---
 # <a name="pi-transact-sql"></a>PI (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]

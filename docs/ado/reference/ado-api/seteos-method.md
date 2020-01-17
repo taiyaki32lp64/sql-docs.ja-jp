@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 707c18ca-6a56-4970-bbd6-ae1fb86a0b8a
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: e0db8c7972d6b647cdd021d43dbb3cdee1ba0452
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 357778765f0c7ac59d924518340ca34226853fc0
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47678530"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67916924"
 ---
 # <a name="seteos-method"></a>SetEOS メソッド
 ストリームの末尾の位置を設定します。  

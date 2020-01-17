@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 55c51fff-119d-445f-8732-c1569966e559
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 25b3fd8ae5c4f63c69200eaec8a736d8c44931f5
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.openlocfilehash: d256f65c191ff0f9ed8623a9ecf345eb707d6032
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51603589"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68008502"
 ---
 # <a name="asynchronous-execution-notification-method-sample"></a>非同期実行 (通知方法) の例
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]

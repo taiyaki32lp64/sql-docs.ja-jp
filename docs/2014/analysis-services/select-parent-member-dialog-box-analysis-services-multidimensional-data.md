@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.saveparentmemberdilaog.f1
@@ -15,12 +14,12 @@ ms.assetid: d3fea023-3334-493f-97ce-5c9829e7ce71
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 14ba9b6439938461b6cb9cbe4146f0046cc1f7cd
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 5d8407f04061075bb19aa0207595dc1fffab92c0
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48067472"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66069306"
 ---
 # <a name="select-parent-member-dialog-box-analysis-services---multidimensional-data"></a>[親メンバーの選択] ダイアログ ボックス (Analysis Services - 多次元データ)
   [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] の **[親メンバーの選択]** ダイアログ ボックスを使用すると、計算されるメンバーの親メンバーを選択できます。 **[親メンバーの選択]** ダイアログ ボックスを表示するには、キューブ デザイナーの **[計算]** タブで **計算されるメンバー フォーム エディター** ペインの **[変更]** をクリックします。  

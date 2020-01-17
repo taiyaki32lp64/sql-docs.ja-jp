@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: b378c3bb-eead-46eb-b213-70d994f2d562
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: a0a4c8105b023bbb98387315a37a770f7e034937
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 48616d24169e0b3981595baf2ff924b83ca45224
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53359014"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66062406"
 ---
 # <a name="analysis-services-tutorials-ssas"></a>Analysis Services チュートリアル (SSAS)
   このセクションには、[!INCLUDE[ssSQL14](../includes/sssql14-md.md)] Analysis Services のチュートリアルが含まれます。  

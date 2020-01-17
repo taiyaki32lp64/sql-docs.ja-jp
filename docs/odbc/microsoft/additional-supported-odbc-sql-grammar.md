@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 2ead7727-3245-4c2b-91f5-ed946ef4edf5
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: b34584a32d5a0adbf95a76415d1141a464b3fe8a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 2a5939ee2b8163e5e71899d5074b851dfda87484
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47675490"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67901393"
 ---
 # <a name="additional-supported-odbc-sql-grammar"></a>サポートされているその他の ODBC SQL 文法
 ODBC ドライバーでは、コアおよび ODBC 2.5 の拡張の文法で最小 ODBC 2.5 文法と、次の句を完全にサポートします。 ジャンプすることにより、追加情報を表示できる、 [ALTER TABLE ステートメント](../../odbc/microsoft/alter-table-statement.md)、[相関名](../../odbc/microsoft/correlation-names.md)、および[プロシージャの呼び出し](../../odbc/microsoft/procedure-invocation.md)トピック。  
@@ -40,7 +39,7 @@ ODBC ドライバーでは、コアおよび ODBC 2.5 の拡張の文法で最�
   
 -   [日付の算術演算子](../../odbc/microsoft/date-arithmetic.md)  
   
--   [Jet: 日付、時刻、およびタイムスタンプのリテラル](../../odbc/microsoft/jet-date-time-and-timestamp-literals.md)  
+-   [Jet:日付、時刻、およびタイムスタンプのリテラル](../../odbc/microsoft/jet-date-time-and-timestamp-literals.md)  
   
 -   [DROP INDEX ステートメント](../../odbc/microsoft/drop-index-statement.md)  
   
@@ -56,7 +55,7 @@ ODBC ドライバーでは、コアおよび ODBC 2.5 の拡張の文法で最�
   
 -   IN (*値リスト*) (コア)  
   
--   [Jet: 外部結合](../../odbc/microsoft/jet-outer-joins.md)(拡張)  
+-   [Jet:外部結合](../../odbc/microsoft/jet-outer-joins.md)(拡張)  
   
 -   (GROUP BY、HAVING、および UNION 句を含む) の SELECT ステートメント (拡張)  
   

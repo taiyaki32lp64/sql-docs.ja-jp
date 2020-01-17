@@ -2,18 +2,18 @@
 title: 軸の間隔の指定 (レポート ビルダーおよび SSRS) | Microsoft Docs
 ms.date: 09/02/2016
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: report-design
 ms.topic: conceptual
 ms.assetid: ae46712d-a5bf-44c0-9929-e30ccc1e7e33
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: cdcd36d1e8de8c6765de0f07a9ecaf6263fd2366
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: ecee87ddf31314b8e54c98148ab0570db08a1caf
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56296590"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65578497"
 ---
 # <a name="specify-an-axis-interval-report-builder-and-ssrs"></a>軸の間隔の指定 (レポート ビルダーおよび SSRS)
 [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] ページ分割されたレポートで軸の間隔を設定して、グラフのカテゴリ (x) 軸に表示するラベル数と目盛り数を変更する方法について説明します。
@@ -22,7 +22,7 @@ ms.locfileid: "56296590"
 
 ただし、カテゴリ軸 (通常は x 軸) では、軸の間隔の自動調整によって、カテゴリの軸ラベルが表示されないことがあります。 軸の Interval プロパティで、必要な間隔の数を指定できます。 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] では、実行時に、結果セットのデータに基づいて間隔の数が計算されます。 軸の間隔を計算する方法の詳細については、「 [グラフの軸ラベルの書式設定](../../reporting-services/report-design/formatting-axis-labels-on-a-chart-report-builder-and-ssrs.md)」を参照してください。  
 
-サンプル データを使って軸の間隔を設定するには、「[チュートリアル:レポートへの縦棒グラフの追加 (レポート ビルダー)](Tutorial:%20Add%20a%20Column%20Chart%20to%20Your%20Report%20\(Report%20Builder\).md)」を参照してください。
+サンプル データを使って軸の間隔を設定するには、「[チュートリアル: レポートへの縦棒グラフの追加 (レポート ビルダー)](Tutorial:%20Add%20a%20Column%20Chart%20to%20Your%20Report%20\(Report%20Builder\).md)」を参照してください。
   
 > [!NOTE]  
 >  カテゴリ軸は、通常、横軸 (X 軸) です。 ただし、横棒グラフの場合は、縦軸 (Y 軸) です。  
@@ -41,7 +41,7 @@ ms.locfileid: "56296590"
 
     ![report-builder-column-chart-x-axis-labels](../../reporting-services/report-design/media/report-builder-column-chart-x-axis-labels.png)
   
-2.  **[横軸のプロパティ]** ダイアログ ボックスの **[軸のオプション]** タブで、**[間隔]** を **1** に設定して、すべてのカテゴリ グループ ラベルを表示します。 X 軸でカテゴリ グループのラベルを 1 つおきに表示するには、 **2**と入力します。 
+2.  **[横軸のプロパティ]** ダイアログ ボックスの **[軸のオプション]** タブで、 **[間隔]** を **1** に設定して、すべてのカテゴリ グループ ラベルを表示します。 X 軸でカテゴリ グループのラベルを 1 つおきに表示するには、 **2**と入力します。 
 
      ![report-builder-column-chart-x-axis-interval-one](../../reporting-services/report-design/media/report-builder-column-chart-x-axis-interval-one.png)
   
@@ -78,7 +78,7 @@ ms.locfileid: "56296590"
   
 1.  変更するグラフ軸を右クリックし、 **[軸のプロパティ]** をクリックします。 
   
-2.  **[横軸のプロパティ]** ダイアログ ボックスの **[軸のオプション]** タブで、**[間隔]** を **[自動]** に設定して、すべてのカテゴリ グループ ラベルを表示します。軸に収まる最適な数のカテゴリ ラベルがグラフに表示されます。  
+2.  **[横軸のプロパティ]** ダイアログ ボックスの **[軸のオプション]** タブで、 **[間隔]** を **[自動]** に設定して、すべてのカテゴリ グループ ラベルを表示します。軸に収まる最適な数のカテゴリ ラベルがグラフに表示されます。  
   
 3.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   

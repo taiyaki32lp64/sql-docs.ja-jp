@@ -16,18 +16,17 @@ helpviewer_keywords:
 ms.assetid: d02b199e-1e52-4cc9-b118-750952ae7f63
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: ae03c7dccdc702ccb4deae068013a69d7852d623
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 74562de6d4bd606e4cb9217cdd119646f51e2e47
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52529629"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67920987"
 ---
 # <a name="ado-for-visual-c-syntax-index-for-com"></a>COM 向け Visual C++ 構文用の ADO のインデックス
 このインデックスは、Microsoft Visual C に基づく、ADO 言語リファレンスへの相互参照します。  
   
- 使用する場合、 **#import**アプリケーションでディレクティブをヘッダー ファイルが生成されます Microsoft Visual Basic に似た構文を使用することを有効になります。 フォームのプロパティ名**get _**_PropertyName_と**put _**_PropertyName_ として単純に宣言されたかのように扱うことができます*PropertyName*します。 プロパティは、関数の代わりにデータ メンバーのように処理できます。  
+ 使用する場合、 **#import**アプリケーションでディレクティブをヘッダー ファイルが生成されます Microsoft Visual Basic に似た構文を使用することを有効になります。 フォームのプロパティ名**get _** _PropertyName_と**put _** _PropertyName_ として単純に宣言されたかのように扱うことができます*PropertyName*します。 プロパティは、関数の代わりにデータ メンバーのように処理できます。  
   
  返す関数をすべてのメソッド、プロパティ、イベント、 **HRESULT**関数が正常に実行されたかどうかを判断するテストできます。  
   
@@ -51,6 +50,6 @@ ms.locfileid: "52529629"
   
 -   [Stream オブジェクト](../../../ado/reference/ado-api/stream-ado-for-visual-c-syntax.md)  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [#Import の Visual C 構文のインデックス用の ADO](../../../ado/reference/ado-api/ado-for-visual-c-syntax-index-with-sharpimport.md)   
  [Microsoft ActiveX Data Objects (ADO)](../../../ado/microsoft-activex-data-objects-ado.md)

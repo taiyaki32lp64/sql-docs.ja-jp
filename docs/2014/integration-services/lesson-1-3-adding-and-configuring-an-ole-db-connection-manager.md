@@ -7,17 +7,17 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: e7b74cba-a0e5-4478-af12-3f81b9484e9e
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: c04f6fe6e414e2468277644ef74bb2dab395af33
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: c22c9ca183a5975b762fd166ee434f305422e6ed
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52757114"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62891721"
 ---
-# <a name="step-3-adding-and-configuring-an-ole-db-connection-manager"></a>手順 3:追加して、OLE DB 接続マネージャーの構成
+# <a name="step-3-adding-and-configuring-an-ole-db-connection-manager"></a>手順 3:OLE DB 接続マネージャーの追加と構成
   前の実習では、データ ソースに接続するためのフラット ファイル接続マネージャーを追加しました。次は、データの変換先に接続するための OLE DB 接続マネージャーを追加します。 パッケージに OLE DB 接続マネージャーを追加すれば、OLE DB 対応のデータ ソースからデータを抽出したり、OLE DB 対応のデータ ソースへデータを読み込んだりできるようになります。 OLE DB 接続マネージャーでは、接続に必要なサーバー、認証方法、既定のデータベースを指定できます。  
   
  このレッスンでは、Windows 認証を使用して **AdventureWorksDB2012**のローカル インスタンスに接続する OLE DB 接続マネージャーを作成します。 参照変換や OLE DB 変換先など、このチュートリアルで後ほど作成するその他のコンポーネントも、ここで作成する OLE DB 接続マネージャーを参照します。  
@@ -49,7 +49,7 @@ ms.locfileid: "52757114"
 ## <a name="next-task-in-lesson"></a>このレッスンの次の作業  
  [手順 4:データ フロー タスクをパッケージに追加します。](lesson-1-4-adding-a-data-flow-task-to-the-package.md)  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [OLE DB 接続マネージャー](connection-manager/ole-db-connection-manager.md)  
   
   

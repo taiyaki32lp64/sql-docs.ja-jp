@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 7e0eaa39-0c24-4d8c-87e8-f9c4fd3455e7
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 32751ae891da27602dc80aa9dc3b54990b3e27a3
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 88d211c825bd9d1c3aa0c76dc26778f18108ff07
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47835940"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67920176"
 ---
 # <a name="cancel-method-example-vc"></a>Cancel メソッドの例 (VC++)
 この例では、[キャンセル](../../../ado/reference/ado-api/cancel-method-ado.md)でコマンドの実行をキャンセルするメソッド、[接続](../../../ado/reference/ado-api/connection-object-ado.md)オブジェクトのかどうか、接続がビジー状態です。  
@@ -141,6 +140,6 @@ void PrintComError(_com_error &e) {
 }  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [Cancel メソッド (ADO)](../../../ado/reference/ado-api/cancel-method-ado.md)   
  [Connection オブジェクト (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)

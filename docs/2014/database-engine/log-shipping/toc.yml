@@ -1,35 +1,28 @@
-items:
 - name: 概要
   href: about-log-shipping-sql-server.md
 - name: 操作方法
   items:
-  - name: SQL Server 2014 へのログ配布のアップグレード
-    href: upgrading-log-shipping-to-sql-server-2016-transact-sql.md
-  - name: ログ配布の構成
-    href: configure-log-shipping-sql-server.md
-  - name: セカンダリ データベースの追加
-    href: add-a-secondary-database-to-a-log-shipping-configuration-sql-server.md
-  - name: セカンダリ データベースの削除
-    href: remove-a-secondary-database-from-a-log-shipping-configuration-sql-server.md
-  - name: ログ配布の削除
-    href: remove-log-shipping-sql-server.md
-  - name: ログ配布レポートの表示
-    href: view-the-log-shipping-report-sql-server-management-studio.md
-  - name: ログ配布の監視
-    href: monitor-log-shipping-transact-sql.md
-  - name: セカンダリへのフェールオーバー
-    href: fail-over-to-a-log-shipping-secondary-sql-server.md
-  - name: プライマリとセカンダリ間でのロールの変更
-    href: change-roles-between-primary-and-secondary-log-shipping-servers-sql-server.md
+    - name: SQL Server 2014 へのログ配布のアップグレード
+      href: upgrading-log-shipping-to-sql-server-2016-transact-sql.md
+    - name: ログ配布の構成
+      href: configure-log-shipping-sql-server.md
+    - name: セカンダリ データベースの追加
+      href: add-a-secondary-database-to-a-log-shipping-configuration-sql-server.md
+    - name: セカンダリ データベースの削除
+      href: remove-a-secondary-database-from-a-log-shipping-configuration-sql-server.md
+    - name: ログ配布の削除
+      href: remove-log-shipping-sql-server.md
+    - name: ログ配布レポートの表示
+      href: view-the-log-shipping-report-sql-server-management-studio.md
+    - name: ログ配布の監視
+      href: monitor-log-shipping-transact-sql.md
+    - name: セカンダリへのフェールオーバー
+      href: fail-over-to-a-log-shipping-secondary-sql-server.md
+    - name: プライマリとセカンダリ間でのロールの変更
+      href: change-roles-between-primary-and-secondary-log-shipping-servers-sql-server.md
 - name: 概念
   items:
-  - name: ログ配布とレプリケーション
-    href: log-shipping-and-replication-sql-server.md
-  - name: Log Shipping Tables and Stored Procedures
-    href: log-shipping-tables-and-stored-procedures.md
-ms.openlocfilehash: 951323a40f1adbd3b02e3016da2835f989bd7cec
-ms.sourcegitcommit: 032273bfbc240fe22ac6c1f6601a14a6d99573f7
-ms.translationtype: HT
-ms.contentlocale: ja-JP
-ms.lasthandoff: 02/01/2019
-ms.locfileid: "55513822"
+    - name: ログ配布とレプリケーション
+      href: log-shipping-and-replication-sql-server.md
+    - name: Log Shipping Tables and Stored Procedures
+      href: log-shipping-tables-and-stored-procedures.md

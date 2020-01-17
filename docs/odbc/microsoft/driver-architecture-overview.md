@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: ef5a91cd-158e-40bf-b5a8-8ba535c4705e
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 0fdb1789c6640c072ec013c341bd4889b28bb469
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 833c953df3502eb7e5d5676da8df057734174619
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47771870"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68071919"
 ---
 # <a name="driver-architecture-overview"></a>ドライバーのアーキテクチャの概要
 Microsoft Visual FoxPro ODBC ドライバーは、32 ビット ドライバーを開き、Microsoft Visual FoxPro データベースまたは開く Database Connectivity (ODBC) インターフェイスを使用して FoxPro テーブルをクエリすることができます。 FoxPro を次の種類のアプリケーションを使用してデータにアクセスできます。  

@@ -12,21 +12,20 @@ f1_keywords:
 helpviewer_keywords:
 - Advanced Save Options dialog box
 ms.assetid: 6e11159f-df1f-4681-9b37-c4a5e5f2fca1
-author: stevestein
-ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 8913538096fba205f8880f3a89afcbd2d4268a87
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 341a9c32855ca9510c8161df549173c4d69bf39e
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47825430"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68265027"
 ---
 # <a name="advanced-save-options"></a>[保存オプションの詳細設定]
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-このダイアログ ボックスを使用すると、言語エンコード方式を選択したり、各行の末尾に挿入する文字を指定したりできます。 **[保存オプションの詳細設定]** ダイアログ ボックスを表示するには、**[ファイル]** メニューの **[名前を付けて** <query name>**.sql を保存]** をクリックします。**[名前を付けてファイルを保存]** ダイアログ ボックスが開くので、**[保存]** ボタンにある下矢印をクリックして、**[エンコード付きで保存]** をクリックします。  
+このダイアログ ボックスを使用すると、言語エンコード方式を選択したり、各行の末尾に挿入する文字を指定したりできます。 **[保存オプションの詳細設定]** ダイアログ ボックスを表示するには、 **[ファイル]** メニューの **[名前を付けて** <query name> **.sql を保存]** をクリックします。 **[名前を付けてファイルを保存]** ダイアログ ボックスが開くので、 **[保存]** ボタンにある下矢印をクリックして、 **[エンコード付きで保存]** をクリックします。  
   
-## <a name="options"></a>[変数]  
+## <a name="options"></a>オプション  
 **[エンコード]**  
 このリスト ボックスを使用すると、新しい言語エンコード方式を対象のファイルに適用できます。  
   

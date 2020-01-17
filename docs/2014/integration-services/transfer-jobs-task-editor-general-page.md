@@ -4,23 +4,22 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.transferjobstask.general.f1
 helpviewer_keywords:
 - Transfer Jobs Task Editor
 ms.assetid: 96531920-92d4-4a3b-a38a-6f0c8bc78ada
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 7836d55463e653dcb6c1c3da2f26d969ca46bfe0
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: f8f8c9fd4f0a7f377640b99ac0bc7831c3f43de3
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48158402"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66055009"
 ---
 # <a name="transfer-jobs-task-editor-general-page"></a>[ジョブ転送タスク エディター] ([全般] ページ)
   **[ジョブ転送タスク エディター]** ダイアログ ボックスの **[全般]** ページを使用すると、ジョブ転送タスクの名前と説明を入力できます。 ジョブ転送タスクの詳細については、「 [Transfer Jobs Task](control-flow/transfer-jobs-task.md)」を参照してください。  
@@ -41,7 +40,7 @@ ms.locfileid: "48158402"
 ## <a name="see-also"></a>参照  
  [Integration Services のエラーおよびメッセージのリファレンス](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [Integration Services タスク](control-flow/integration-services-tasks.md)   
- [ジョブ転送タスク エディター&#40;ジョブ ページ&#41;](../../2014/integration-services/transfer-jobs-task-editor-jobs-page.md)   
+ [[ジョブ転送タスク エディター] &#40;[ジョブ] ページ&#41;](../../2014/integration-services/transfer-jobs-task-editor-jobs-page.md)   
  [[式] ページ](expressions/expressions-page.md)  
   
   

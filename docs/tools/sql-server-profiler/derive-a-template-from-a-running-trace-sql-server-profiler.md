@@ -11,15 +11,14 @@ helpviewer_keywords:
 - templates [SQL Server], traces
 - trace templates [SQL Server]
 ms.assetid: 25a3b845-affb-4b2a-a382-198a4bdd9ad1
-author: stevestein
-ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 7410a9b202209ea1f91e81c444e9ec090ba19589
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 287a72468a0fa777ef47238f2821decb691ad830
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47713410"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67930049"
 ---
 # <a name="derive-a-template-from-a-running-trace-sql-server-profiler"></a>実行中のトレースからのテンプレートの作成 (SQL Server Profiler)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

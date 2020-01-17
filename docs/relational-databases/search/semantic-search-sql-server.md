@@ -1,10 +1,8 @@
 ---
 title: セマンティック検索 (SQL Server) | Microsoft Docs
-ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: search, sql-database
-ms.reviewer: ''
 ms.technology: search
 ms.topic: conceptual
 helpviewer_keywords:
@@ -13,15 +11,15 @@ helpviewer_keywords:
 - statistical semantic search [SQL Server]
 - statistical semantic search [SQL Server], overview
 ms.assetid: cd8faa9d-07db-420d-93f4-a2ea7c974b97
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: 287ef0015b58e65e541ded8bc1a4200fed804814
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: pmasl
+ms.author: pelopes
+ms.reviewer: mikeray
+ms.openlocfilehash: 70798b0e967d62b51879cc694c8eb43363d364c6
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47755970"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67912956"
 ---
 # <a name="semantic-search-sql-server"></a>セマンティック検索 (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -32,7 +30,7 @@ ms.locfileid: "47755970"
   
  以降の例に、セマンティック検索の機能を示します。 同時に、これらの例では、セマンティック インデックスに対してクエリを実行し、その結果を構造化データとして取得するために使用する 3 つの Transact-SQL 行セット関数を示します。  
   
-###  <a name="find1"></a> Find the key phrases in a document  
+###  <a name="find1"></a> ドキュメント内のキー フレーズを検索します。  
  次のクエリは、サンプル ドキュメントで識別されたキー フレーズを取得します。 結果は、各キー フレーズの統計的有意性を順位付けするスコアの降順で表されます。
  
  このクエリは、[semantickeyphrasetable](../../relational-databases/system-functions/semantickeyphrasetable-transact-sql.md) 関数を呼び出します。  
@@ -70,7 +68,7 @@ SELECT @Title AS SourceTitle, DocumentTitle AS MatchedTitle,
   
 ```  
   
-###  <a name="find3"></a> Find the key phrases that make documents similar or related  
+###  <a name="find3"></a> 類似または関連ドキュメントを示すキー フレーズを検索します。  
  次のクエリは、2 つのサンプル ドキュメント間の類似性または関連性を示すキー フレーズを取得します。 結果は、各キー フレーズの重みを順位付けするスコアの降順で表されます。
  
  このクエリは、[semanticsimilaritydetailstable](../../relational-databases/system-functions/semanticsimilaritydetailstable-transact-sql.md) 関数を呼び出します。  

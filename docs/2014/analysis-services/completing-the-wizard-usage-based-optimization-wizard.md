@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.storagedesignwizard.finish.f1
@@ -13,12 +12,12 @@ ms.assetid: 7393f846-7195-4cd3-95cd-83d102841e2e
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 02628703bebc6b797e3eeada2ea7bb6e467236c7
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 87c638b2c5455a2f3a15051b0e62ee86685d4e5f
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48051102"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66087556"
 ---
 # <a name="completing-the-wizard-usage-based-optimization-wizard"></a>[ウィザードの完了] (使用法に基づく最適化ウィザード)
   **[ウィザードの完了]** ページを使用すると、集計デザインを保存し、選択したパーティションに割り当てることができます。 オプションで、使用法に基づく最適化ウィザードによる集計のデザインと保存が完了した後に、選択したパーティションを処理するように指定することもできます。  

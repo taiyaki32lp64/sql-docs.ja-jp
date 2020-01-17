@@ -14,11 +14,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 19a757f82c2fa2ff2e78453ddf0fea1fbebda3c1
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48164882"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62626217"
 ---
 # <a name="statement-attributes-that-affect-table-valued-parameters"></a>テーブル値パラメーターに影響を与えるステートメント属性
   次の表では、記述子フィールド内の属性について説明します。  

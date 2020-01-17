@@ -11,21 +11,20 @@ helpviewer_keywords:
 - FileTables [SQL Server], security
 - FileTables [SQL Server], managing access
 ms.assetid: 93af982c-b4fe-4be0-8268-11f86dae27e1
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: e1d2d1dbd025db3a72251435133149cdc80275f0
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+author: MikeRayMSFT
+ms.author: mikeray
+ms.openlocfilehash: ef64d09c7f99f5081ebd1cbcdd7418614c3b41f1
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52411779"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72908746"
 ---
 # <a name="manage-filetables"></a>FileTable の管理
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   FileTable を管理するための一般的な管理タスクについて説明します。  
   
-##  <a name="HowToEnumerate"></a> 方法: FileTable と関連オブジェクトの一覧を取得する  
+##  <a name="HowToEnumerate"></a>方法:FileTable と関連オブジェクトの一覧を取得する  
  FileTable の一覧を取得するには、次のいずれかのカタログ ビューに対してクエリを実行します。  
   
 -   [sys.filetables &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-filetables-transact-sql.md)  
@@ -80,7 +79,7 @@ GO
   
 -   FILESTREAM がインスタンス レベルで無効化された場合、そのインスタンスのデータベース レベルのディレクトリはすべて表示されません。  
   
-###  <a name="HowToDisable"></a> 方法: データベース レベルで非トランザクション アクセスを無効化および再有効化する  
+###  <a name="HowToDisable"></a> 方法:データベース レベルで非トランザクション アクセスを無効化および再有効化する  
  詳細については、「[ALTER DATABASE の SET オプション &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-set-options.md)」を参照してください。  
   
  **完全な非トランザクション アクセスを無効化するには**  
@@ -107,7 +106,7 @@ SET FILESTREAM ( NON_TRANSACTED_ACCESS = FULL );
 GO  
 ```  
   
-###  <a name="visible"></a> 方法: データベースの FileTable が必ず表示されるようにする  
+###  <a name="visible"></a> 方法:データベースの FileTable が必ず表示されるようにする  
  以下のすべての条件が満たされる場合、データベース レベルのディレクトリとその下の FileTable ディレクトリは表示状態になります。  
   
 1.  インスタンス レベルで FILESTREAM が有効になっている。  
@@ -115,7 +114,7 @@ GO
 2.  データベース レベルで非トランザクション アクセスが有効になっている。  
   
 3.  データベース レベルで有効なディレクトリが指定されている。  
-  
+
 ##  <a name="BasicsEnabling"></a> テーブル レベルでの FileTable 名前空間の無効化および再有効化  
  FileTable 名前空間を無効にすると、FileTable に対して作成されたすべてのシステム定義制約およびトリガーが無効になります。 これは、FileTable セマンティクスの適用を行うことなく [!INCLUDE[tsql](../../includes/tsql-md.md)] 操作を使用して FileTable を大幅に再編成する必要がある場合に便利です。 ただし、これらの操作によって FileTable の一貫性が損なわれ、FileTable 名前空間の再有効化が妨げられる可能性があります。  
   
@@ -139,7 +138,7 @@ GO
   
 -   FileTable ディレクトリと、それに含まれているファイルおよびディレクトリは、ファイル システムに表示され、ファイル I/O アクセスに使用できるようになります。  
   
-###  <a name="HowToEnableNS"></a> 方法: テーブル レベルで FileTable 名前空間を無効化および再有効化する  
+###  <a name="HowToEnableNS"></a> 方法:テーブル レベルで FileTable 名前空間を無効化および再有効化する  
  **{ ENABLE | DISABLE } FILETABLE_NAMESPACE** オプションを指定して ALTER TABLE ステートメントを呼び出します。  
   
  **FileTable 名前空間を無効にするには**  
@@ -162,7 +161,7 @@ GO
 > [!WARNING]  
 >  開いているファイル ハンドルを終了すると、保存されていないデータをユーザーが失う可能性があります。 この動作は、ファイル システム自体の動作と一致しています。  
   
-###  <a name="HowToListOpen"></a> 方法: FileTable に関連付けられた開いているファイル ハンドルの一覧を取得する  
+###  <a name="HowToListOpen"></a> 方法:FileTable に関連付けられた開いているファイル ハンドルの一覧を取得する  
  カタログ ビュー [sys.dm_filestream_non_transacted_handles &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-filestream-non-transacted-handles-transact-sql.md) に対してクエリを実行します。  
   
 ```sql  
@@ -170,7 +169,7 @@ SELECT * FROM sys.dm_filestream_non_transacted_handles;
 GO  
 ```  
   
-###  <a name="HowToKill"></a> 方法: FileTable に関連付けられた開いているファイル ハンドルを終了する  
+###  <a name="HowToKill"></a> 方法:FileTable に関連付けられた開いているファイル ハンドルを終了する  
  データベースまたは FileTable のすべての開いているファイル ハンドルを終了するか、特定のハンドルを終了するための適切な引数を指定して、[sp_kill_filestream_non_transacted_handles &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/filestream-and-filetable-sp-kill-filestream-non-transacted-handles.md) ストアド プロシージャを呼び出します。  
   
 ```sql  
@@ -189,7 +188,7 @@ EXEC sp_kill_filestream_non_transacted_handles @handle_id = integer_handle_id;
 GO  
 ```  
   
-###  <a name="HowToIdentifyLocks"></a> 方法: FileTable によって保持されているロックを識別する  
+###  <a name="HowToIdentifyLocks"></a> 方法:FileTable によって保持されているロックを識別する  
  FileTable によって取得されるほとんどのロックは、アプリケーションによって開かれたファイルに対応します。  
   
  **開いているファイルおよび関連付けられているロックを識別するには**  

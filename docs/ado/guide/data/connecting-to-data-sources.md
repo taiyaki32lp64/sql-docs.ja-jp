@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 82770486-37bd-4c90-885f-6817a7c77ad7
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 1fb066b2d75efd1ea1d5974c92ea5c524165f2e7
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 000302715e7ce7d3a8ae53f06d61f54e98cbd883
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47635310"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67925798"
 ---
 # <a name="connecting-to-data-sources"></a>データ ソースへの接続
 ADO**接続**オブジェクトは、DBMS、ファイル ストアでは、コンマ区切りのテキスト ファイルなど、データ ソースとの一意のセッションを表します。 クライアント/サーバー データベース システムでは、ADO 接続はサーバーへの実際のネットワーク接続を指定できます。  

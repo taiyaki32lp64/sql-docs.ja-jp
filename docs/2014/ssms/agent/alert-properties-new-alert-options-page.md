@@ -1,5 +1,5 @@
 ---
-title: アラートのプロパティ:新しい警告 (オプション ページ) |Microsoft Docs
+title: '[警告のプロパティ]:新しい警告] ([オプション] ページ) |Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,13 +13,13 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 69f467af1c797b9bf1cfa55c7def8456ad4a32bd
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52772814"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63061276"
 ---
-# <a name="alert-properties-new-alert-options-page"></a>アラートのプロパティ:新しい警告 (オプション ページ)
+# <a name="alert-properties-new-alert-options-page"></a>[警告のプロパティ]:[新しい警告] ([オプション] ページ)
   このページを使用すると、[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェントの警告のオプションを表示および変更できます。  
   
 ## <a name="options"></a>および  
@@ -44,7 +44,7 @@ ms.locfileid: "52772814"
  **Seconds**  
  遅延を秒単位で指定します。 イベントが発生するごとに応答するには、0 分 0 秒を指定します。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [警告](alerts.md)  
   
   

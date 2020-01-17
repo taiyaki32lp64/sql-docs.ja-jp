@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: a1b325cf-0c42-41c1-b141-b5a4fee7e708
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 0351a6fa4621acb09d18a72b32ec2010a605ed9b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b512a795c3b9e2d1c6aa1c7c9e92fbc42a8c7862
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47769570"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68125589"
 ---
 # <a name="sqlsetconnectoption-mapping"></a>SQLSetConnectOption のマッピング
 ODBC 2 時にします。*x*アプリケーション呼び出し**SQLSetConnectOption**を通じて、ODBC 3 *.x*ドライバーへの呼び出し  
@@ -54,7 +53,7 @@ SQLSetConnectOption(hdbc, fOption, vParam)
   
  ODBC 2 場合。*x*アプリケーション呼び出し**SQLSetConnectOption** 、ODBC 3 でドライバー固有のステートメントのオプションを設定する *.x*ドライバー、およびオプションは、ODBC 2 で定義された *。x* ODBC 3 のオプションのバージョンのドライバーでは、新しいマニフェスト定数を定義する必要があります *.x*ドライバー。 古いのマニフェスト定数への呼び出しで使用する場合**SQLSetConnectOption**、ドライバー マネージャーが呼び出す**SQLSetConnectAttr**で、 **StringLength**引数は 0 に設定します。  
   
- ODBC 3 の場合、*.x*ドライバー、ドライバー マネージャーは不要になったかどうかを確認します*fOption* SQL_CONN_OPT_MIN と SQL_CONN_OPT_MAX、間、または SQL_CONNECT_OPT_DRVR_START よりも大きい。  
+ ODBC 3 の場合、 *.x*ドライバー、ドライバー マネージャーは不要になったかどうかを確認します*fOption* SQL_CONN_OPT_MIN と SQL_CONN_OPT_MAX、間、または SQL_CONNECT_OPT_DRVR_START よりも大きい。  
   
 ## <a name="setting-statement-options-on-the-connection-level"></a>接続レベルのステートメントのオプションを設定  
  ODBC 2。*x*、アプリケーションを呼び出すことが**SQLSetConnectOption**ステートメント オプションを設定します。 ドライバーにステートメントのオプションを既定として確立が完了したら、その接続に割り当てられた後でステートメントをします。 これはドライバーの定義、ドライバーが指定された接続に関連付けられているすべての既存のステートメントのステートメント オプションを設定するかどうか。  

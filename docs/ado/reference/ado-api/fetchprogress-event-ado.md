@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 301716fd-81fc-40eb-8a04-221ef7ab410e
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: f47fb473d0120c124fd07fbb0b30bdecf991926f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ab93d8117a5fb3d2bbc95ea33bbacdc7fba3f151
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47682164"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67932829"
 ---
 # <a name="fetchprogress-event-ado"></a>FetchProgress イベント (ADO)
 **FetchProgress**に現在取得された複数行の数を報告する時間のかかる非同期操作中に定期的にイベントが呼び出される、 [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md)します。  
@@ -53,6 +52,6 @@ FetchProgress Progress, MaxProgress, adStatus, pRecordset
 > [!NOTE]
 >  使用する**FetchProgress** Microsoft Visual Basic、Visual Basic 6.0 以降が必要です。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [ADO イベント モデルの例 (vc++)](../../../ado/reference/ado-api/ado-events-model-example-vc.md)   
  [ADO イベント ハンドラーの概要](../../../ado/guide/data/ado-event-handler-summary.md)

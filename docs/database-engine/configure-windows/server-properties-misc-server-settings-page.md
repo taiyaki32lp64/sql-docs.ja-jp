@@ -12,19 +12,18 @@ f1_keywords:
 ms.assetid: b170c066-30cd-42dd-8d34-aa129ea09551
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: e72286c63ef8721d68817a4a0347f4124630b2cc
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 62a8af2e4a82a0a0bdeec231db62c2166ed030de
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47739320"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68030834"
 ---
 # <a name="server-properties---misc-server-settings-page"></a>[サーバーのプロパティ] - [その他のサーバーの設定] ページ
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   このページを使用すると、サーバーの設定を表示したり、変更したりできます。  
   
-## <a name="options"></a>[変数]  
+## <a name="options"></a>オプション  
  **[ユーザーの既定の言語]**  
  新しく作成するすべてのログインの既定の言語を指定します。  
   

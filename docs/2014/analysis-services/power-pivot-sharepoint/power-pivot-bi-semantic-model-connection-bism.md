@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 04/19/2015
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: 08828eec-4f8c-4f34-a145-e442f7b7031d
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: a527ad5c165ff7b155b04627a41062a2b553c62b
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 846998acaa20b572760edcc67ecd24f8346a762a
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53362244"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66071382"
 ---
 # <a name="powerpivot-bi-semantic-model-connection-bism"></a>PowerPivot BI セマンティック モデル接続 (.bism)
   BI セマンティック モデル接続 (.bism) は、Excel または [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] レポートを [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] テーブル モデル データベースまたは多次元モードの [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] インスタンスに接続する、移植可能な接続です。 Office データ接続 (.odc) ファイルに精通している場合は、.bism 接続ファイルの定義方法と使用方法が類似していることがわかります。  

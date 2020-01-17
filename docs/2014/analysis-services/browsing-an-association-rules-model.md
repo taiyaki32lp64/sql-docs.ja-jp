@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 12/29/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - mining models, browsing
@@ -16,12 +15,12 @@ ms.assetid: faffe208-7a64-4ec6-825f-ecbaa79caff7
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 1259cc627ef53d8f5a201e42772a9dba390824cc
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 30ff9705949be3fb9bf99d985d0db1aa17d93ab1
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52537185"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66088467"
 ---
 # <a name="browsing-an-association-rules-model"></a>アソシエーション ルール モデルの参照
   使用してアソシエーション モデルを開く**参照**、アソシエーション ルール ビューアーに似た、対話型ビューアーでモデルが表示されます[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]します。  このビューアーを使用すると、相互に関連付けられたアイテムをひとめで確認できます。また、このビューアーには、予測または提案を行うために使用できるルールが表示されます。  
@@ -151,7 +150,7 @@ ms.locfileid: "52537185"
   
 -   **アイテム セット:** 生成されるアイテムセットの数は、モデルの作成時に、MINIMUM_PROBABILITY パラメーターに値を割り当てることによって制御することもできます。 このパラメーターは、アルゴリズム パラメーター ダイアログ ボックスで使用できます。  
   
--   **ルール:**[!INCLUDE[msCoName](../includes/msconame-md.md)] アソシエーション ルール アルゴリズムは、確率値を使用して、生成されるルールの数を制限します。 ルールの数を制御するには、`MINIMUM_PROBABILITY` パラメーターまたは `MINIMUM _IMPORTANCE` パラメーターを設定します。  
+-   **ルール:** [!INCLUDE[msCoName](../includes/msconame-md.md)] アソシエーション ルール アルゴリズムは、確率値を使用して、生成されるルールの数を制限します。 ルールの数を制御するには、`MINIMUM_PROBABILITY` パラメーターまたは `MINIMUM _IMPORTANCE` パラメーターを設定します。  
   
  高度なパラメーターを構成する方法の詳細については、次を参照してください。[データ マイニング アルゴリズム&#40;SQL Server データ マイニング アドイン&#41;](data-mining-algorithms-sql-server-data-mining-add-ins.md)します。  
   

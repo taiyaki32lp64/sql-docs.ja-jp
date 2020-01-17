@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 74801dc1-cf0f-4a6e-960b-5990fe55e30d
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 291ef7f063ef8c5fb0769ea8430eacef946797bc
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 5b97aebefa2176d3569b818751cd3b8ff039bfc4
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47851510"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67931778"
 ---
 # <a name="parameter-ado-for-visual-c-syntax"></a>Parameter (Visual C++ 構文用の ADO)
 ## <a name="methods"></a>メソッド  
@@ -30,7 +29,7 @@ ms.locfileid: "47851510"
 AppendChunk(VARIANT Val)  
 ```  
   
-## <a name="properties"></a>[プロパティ]  
+## <a name="properties"></a>Properties  
   
 ```  
 get_Attributes(LONG *plParmAttribs)  
@@ -51,5 +50,5 @@ get_Value(VARIANT *pvar)
 put_Value(VARIANT val)  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [Parameter オブジェクト](../../../ado/reference/ado-api/parameter-object.md)

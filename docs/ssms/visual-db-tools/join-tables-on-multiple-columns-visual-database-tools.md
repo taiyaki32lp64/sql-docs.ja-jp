@@ -11,15 +11,14 @@ helpviewer_keywords:
 - multiple column joins
 - joins [SQL Server], multiple columns
 ms.assetid: 56a158bc-a42a-4b78-baad-4721d2d22cd3
-author: stevestein
-ms.author: sstein
-manager: craigg
-ms.openlocfilehash: fa18294f62eed2a412d3abbb5bb9d740a4364499
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: ef9ddbdc8d59335ccf4dd639a57339ee6e5572aa
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47685180"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68265332"
 ---
 # <a name="join-tables-on-multiple-columns-visual-database-tools"></a>複数の列でテーブルを結合する (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

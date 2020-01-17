@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: database-engine
 ms.topic: reference
 helpviewer_keywords:
 - interfaces [OLE DB]
@@ -16,12 +14,12 @@ ms.assetid: 34c33364-8538-45db-ae41-5654481cda93
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: fb0ec7cd01f38f2279a1885d890ae47738b01080
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 6c3e4d6a7875969e254874fa3dde101d986a9f9a
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48225172"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62781317"
 ---
 # <a name="interfaces-ole-db"></a>インターフェイス (OLE DB)
   Microsoft Data Access Components (MDAC) によって提供される主要 OLE DB インターフェイスだけでなく、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB プロバイダーは、次の追加の OLE DB インターフェイスを実装します。  

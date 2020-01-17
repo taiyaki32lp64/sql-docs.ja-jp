@@ -28,15 +28,14 @@ helpviewer_keywords:
 - computed sums
 - WHERE clause, SELECT statement
 ms.assetid: 9b9caa3d-e7d0-42e1-b60b-a5572142186c
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: 558092ec5c5cfe587b9a7644561cc94a6a5c1610
-ms.sourcegitcommit: 110e5e09ab3f301c530c3f6363013239febf0ce5
+author: VanMSFT
+ms.author: vanto
+ms.openlocfilehash: e3d7c9b661a69f4a575a18aae03f9eb5e601b69b
+ms.sourcegitcommit: ba44730f5cc33295ae2ed1f281186dd266bad4ef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/10/2018
-ms.locfileid: "48906092"
+ms.lasthandoff: 11/19/2019
+ms.locfileid: "74191084"
 ---
 # <a name="select-examples-transact-sql"></a>SELECT の例 (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -52,7 +51,7 @@ ms.locfileid: "48906092"
   
  [!code-sql[Select#SelectExamples2](../../t-sql/queries/codesnippet/tsql/select-examples-transact_2.sql)]  
   
- この例では、製品ラインが `Product` で、製造所要日数が `R` 日未満の `4` の行のみを返しています。  
+ この例では、製品ラインが `R` で、製造所要日数が `4` 日未満の `Product` の行のみを返しています。  
   
  [!code-sql[Select#SelectExamples3](../../t-sql/queries/codesnippet/tsql/select-examples-transact_3.sql)]  
   
@@ -79,12 +78,14 @@ ms.locfileid: "48906092"
   
  [!code-sql[Select#SelectExamples8](../../t-sql/queries/codesnippet/tsql/select-examples-transact_8.sql)]  
   
-## <a name="e-using-correlated-subqueries"></a>E. 相関サブクエリを使用する  
- 次の例では、`EXISTS` キーワードと `IN` キーワードを使用した意味的に等しいクエリと、それらの違いを示します。 いずれも、製品モデルが長袖ジャージで、`ProductModelID` テーブルと `Product` テーブルの間で `ProductModel` 番号が一致する各製品名の 1 つのインスタンスを取得する有効なサブクエリの例です。  
+## <a name="e-using-correlated-subqueries"></a>E. 相関サブクエリを使用する
+相関サブクエリは、外側のクエリによって値が決まるクエリです。 このクエリは、外側のクエリが選択する行に対して 1 回ずつ、繰り返し実行できます。
+
+最初の例では、`EXISTS` キーワードと `IN` キーワードを使用した意味的に等しいクエリと、それらの違いを示します。 いずれも、製品モデルが長袖ジャージで、`ProductModelID` テーブルと `Product` テーブルの間で `ProductModel` 番号が一致する各製品名の 1 つのインスタンスを取得する有効なサブクエリの例です。  
   
  [!code-sql[Select#SelectExamples9](../../t-sql/queries/codesnippet/tsql/select-examples-transact_9.sql)]  
   
- 次の例では、相関または繰り返しサブクエリ内で `IN` を使用しています。 これは、外側のクエリによって値が決まるクエリです。 このクエリは、外側のクエリが選択する行に対して 1 回ずつ、繰り返し実行されます。 このクエリは、`SalesPerson` テーブルのボーナス額が `5000.00` で、従業員の ID 番号が `Employee` テーブルと `SalesPerson` テーブルで一致する各従業員の姓名のインスタンスを 1 つ取得します。  
+ 次の例では、`IN` が使用され、`SalesPerson` テーブルのボーナス額が `5000.00` で、従業員の ID 番号が `Employee` テーブルと `SalesPerson` テーブルで一致する各従業員の姓名のインスタンスを 1 つ取得します。  
   
  [!code-sql[Select#SelectExamples10](../../t-sql/queries/codesnippet/tsql/select-examples-transact_10.sql)]  
   
@@ -144,7 +145,7 @@ GO
 ```  
   
 ## <a name="l-using-having-and-group-by"></a>L. HAVING と GROUP BY を使用する  
- 次の例では、1 つの `GROUP BY` ステートメントの中で `HAVING` 句、`WHERE` 句、`ORDER BY` 句、および `SELECT` 句を使用しています。 これによって、$25 より高く平均注文数量が 5 未満の製品を除外した、グループとサマリー値が作成されます。 この結果は `ProductID` 別にまとめられます。  
+ 次の例では、1 つの `SELECT` ステートメントの中で `GROUP BY` 句、`HAVING` 句、`WHERE` 句、および `ORDER BY` 句を使用しています。 これによって、$25 より高く平均注文数量が 5 未満の製品を除外した、グループとサマリー値が作成されます。 この結果は `ProductID` 別にまとめられます。  
   
  [!code-sql[Select#SelectExamples21](../../t-sql/queries/codesnippet/tsql/select-examples-transact_19.sql)]  
   
@@ -161,7 +162,7 @@ GO
   
  [!code-sql[Select#SelectExamples24](../../t-sql/queries/codesnippet/tsql/select-examples-transact_22.sql)]  
   
-## <a name="n-using-the-index-optimizer-hint"></a>N. INDEX オプティマイザー ヒントを使用する  
+## <a name="n-using-the-index-optimizer-hint"></a>北 INDEX オプティマイザー ヒントを使用する  
  次の例では、`INDEX` オプティマイザー ヒントの使用方法を 2 とおり示します。 最初の例では、オプティマイザーで非クラスター化インデックスを使用し、テーブルから行を取得しています。2 番目の例では、index = 0 を使ってテーブル スキャンを実行しています。  
   
  [!code-sql[Select#SelectExamples45](../../t-sql/queries/codesnippet/tsql/select-examples-transact_23.sql)]  
@@ -171,7 +172,7 @@ GO
   
  [!code-sql[Select#SelectExamples46](../../t-sql/queries/codesnippet/tsql/select-examples-transact_24.sql)]  
   
-## <a name="o-using-the-union-query-hint"></a>O.  UNION クエリ ヒントを使用する  
+## <a name="o-using-the-union-query-hint"></a>O. UNION クエリ ヒントを使用する  
  次の例では、`MERGE UNION` クエリ ヒントを使用します。  
   
  [!code-sql[Select#SelectExamples47](../../t-sql/queries/codesnippet/tsql/select-examples-transact_25.sql)]  
@@ -181,20 +182,20 @@ GO
   
  [!code-sql[Select#SelectExamples48](../../t-sql/queries/codesnippet/tsql/select-examples-transact_26.sql)]  
   
-## <a name="q-using-select-into-with-union"></a>Q.  UNION と共に SELECT INTO を使用する  
+## <a name="q-using-select-into-with-union"></a>Q. UNION と共に SELECT INTO を使用する  
  この例では、2 番目の `INTO` ステートメントの `SELECT` 句で、`ProductResults` および `ProductModel` テーブルの指定された列のユニオンの最終的な結果セットを `Gloves` という名前のテーブルに格納することを指定します。 `Gloves` テーブルは、最初の `SELECT` ステートメントで作成されます。  
   
  [!code-sql[Select#SelectExamples49](../../t-sql/queries/codesnippet/tsql/select-examples-transact_27.sql)]  
   
-## <a name="r-using-union-of-two-select-statements-with-order-by"></a>R.  ORDER BY 句を指定した 2 つの SELECT ステートメントで UNION 句を使用する  
- UNION 句で使用するある種のパラメーターの順序には重要な意味があります。 次の例では、出力時に列名を変更する 2 つの `UNION` ステートメントでの `SELECT` の誤った使用法と正しい使用法を示しています。  
+## <a name="r-using-union-of-two-select-statements-with-order-by"></a>R. ORDER BY 句を指定した 2 つの SELECT ステートメントで UNION 句を使用する  
+ UNION 句で使用するある種のパラメーターの順序には重要な意味があります。 次の例では、出力時に列名を変更する 2 つの `SELECT` ステートメントでの `UNION` の誤った使用法と正しい使用法を示しています。  
   
  [!code-sql[Select#SelectExamples50](../../t-sql/queries/codesnippet/tsql/select-examples-transact_28.sql)]  
   
-## <a name="s-using-union-of-three-select-statements-to-show-the-effects-of-all-and-parentheses"></a>S.  3 つの SELECT ステートメントで UNION を使用して、ALL とかっこの効果を示す  
- 次の例では、`UNION` を使用して 3 つのテーブルのクエリ結果を結合します。これらのテーブルはすべて同じ 5 行のデータで構成されます。 最初の例では、`UNION ALL` を使用して、重複するレコードも含めて 15 行すべてを返します。 2 番目の例では、`UNION` を指定せずに `ALL` を使用して、3 つの `SELECT` ステートメントの結果を結合したものから重複する行を削除し、5 行を返します。  
+## <a name="s-using-union-of-three-select-statements-to-show-the-effects-of-all-and-parentheses"></a>S. 3 つの SELECT ステートメントで UNION を使用して、ALL とかっこの効果を示す  
+ 次の例では、`UNION` を使用して 3 つのテーブルのクエリ結果を結合します。これらのテーブルはすべて同じ 5 行のデータで構成されます。 最初の例では、`UNION ALL` を使用して、重複するレコードも含めて 15 行すべてを返します。 2 番目の例では、`ALL` を指定せずに `UNION` を使用して、3 つの `SELECT` ステートメントの結果を結合したものから重複する行を削除し、5 行を返します。  
   
- 3 番目の例では、最初の `ALL` と共に `UNION` を使用し、`UNION` を使用していない 2 番目の `ALL` をかっこで囲んでいます。 2 番目の `UNION` はかっこで囲まれているので、最初に処理されます。また、`ALL` オプションを使用せずに重複を削除するので、5 行を返します。 これらの 5 行は、`SELECT` キーワードを使用して最初の `UNION ALL` の結果と結合されます。 これによって 2 組の 5 行の間での重複が削除されることはありません。 最終的な結果は 10 行になります。  
+ 3 番目の例では、最初の `ALL` と共に `UNION` を使用し、`UNION` を使用していない 2 番目の `ALL` をかっこで囲んでいます。 2 番目の `UNION` はかっこで囲まれているので、最初に処理されます。また、`ALL` オプションを使用せずに重複を削除するので、5 行を返します。 これらの 5 行は、`UNION ALL` キーワードを使用して最初の `SELECT` の結果と結合されます。 これによって 2 組の 5 行の間での重複が削除されることはありません。 最終的な結果は 10 行になります。  
   
  [!code-sql[Select#SelectExamples51](../../t-sql/queries/codesnippet/tsql/select-examples-transact_29.sql)]  
   

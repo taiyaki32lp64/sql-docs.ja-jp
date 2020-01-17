@@ -1,6 +1,8 @@
 ---
-title: REVOKE (サーバー プリンシパルの権限の取り消し) (Transact-SQL) | Microsoft Docs
-ms.custom: ''
+title: REVOKE (サーバー プリンシパルのアクセス許可の取り消し)
+description: SQL Server ログインに対する権限を取り消します。
+titleSuffix: SQL Server (Transact-SQL)
+ms.custom: seo-lt-2019
 ms.date: 08/10/2017
 ms.prod: sql
 ms.prod_service: sql-database
@@ -19,13 +21,12 @@ helpviewer_keywords:
 ms.assetid: 75409024-f150-4326-af16-9d60e900df18
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: 32ddb009c4cbeb843e3c2150431a43d86219fc5d
-ms.sourcegitcommit: c6e71ed14198da67afd7ba722823b1af9b4f4e6f
+ms.openlocfilehash: 21cb290cb91ca74227db7a3cd16501ddd882ae48
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/16/2019
-ms.locfileid: "54326073"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75255790"
 ---
 # <a name="revoke-server-principal-permissions-transact-sql"></a>REVOKE (サーバー プリンシパルの権限の取り消し) (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -58,11 +59,11 @@ REVOKE [ GRANT OPTION FOR ] permission [ ,...n ] }
  *permission*  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ログインで取り消せる権限を指定します。 権限の一覧については、後の「解説」を参照してください。  
   
- LOGIN **::***SQL_Server_login*  
- 権限を取り消す [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ログインを指定します。 スコープ修飾子 (**::**) が必要です。  
+ LOGIN **::** *SQL_Server_login*  
+ 権限を取り消す [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ログインを指定します。 スコープ修飾子 ( **::** ) が必要です。  
   
  SERVER ROLE **::** *server_role*  
- 権限を取り消すサーバー ロールを指定します。 スコープ修飾子 (**::**) が必要です。  
+ 権限を取り消すサーバー ロールを指定します。 スコープ修飾子 ( **::** ) が必要です。  
   
  { FROM | TO } \<server_principal> 権限を取り消す [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ログインまたはサーバー ロールを指定します。  
   
@@ -82,7 +83,7 @@ REVOKE [ GRANT OPTION FOR ] permission [ ,...n ] }
  ユーザー定義サーバー ロールの名前を指定します。  
   
  GRANT OPTION  
- 指定した権限を他のプリンシパルに許可するための権利が、取り消されます。 権限自体は取り消されません。  
+ 指定した権限を他のプリンシパルに許可するための権利が、取り消されることを示します。 権限自体は取り消されません。  
   
 > [!IMPORTANT]  
 >  指定した権限が GRANT オプションなしでプリンシパルに許可されている場合は、その権限自体が取り消されます。  
@@ -96,7 +97,7 @@ REVOKE [ GRANT OPTION FOR ] permission [ ,...n ] }
  AS *SQL_Server_login*  
  このクエリを実行するプリンシパルが権限を取り消す権利を取得した、元の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ログインを指定します。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ログインおよびサーバー ロールはサーバー レベルのセキュリティ保護可能なリソースです。 次の表に、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ログインまたはサーバー ロールで取り消すことができる権限のうち最も限定的なものを、それらを暗黙的に含む一般的な権限と共に示します。  
   
 |SQL Server ログインまたはサーバー ロールの権限|権限が含まれる SQL Server ログインまたはサーバー ロールの権限|権限が含まれるサーバー権限|  
@@ -111,7 +112,7 @@ REVOKE [ GRANT OPTION FOR ] permission [ ,...n ] }
   
  サーバー ロールの場合、サーバー ロールに対する CONTROL 権限、またはサーバーに対する ALTER ANY SERVER ROLE 権限が必要です。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
   
 ### <a name="a-revoking-impersonate-permission-on-a-login"></a>A. ログインの IMPERSONATE 権限を取り消す  
  次の例では、Windows ユーザー `AdvWorks\YoonM` を基に作成された [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ログインから、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ログイン `WanidaBenshoof` のアクセス許可 `IMPERSONATE` を取り消します。  

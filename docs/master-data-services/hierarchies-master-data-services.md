@@ -1,5 +1,5 @@
 ---
-title: 階層 (Master Data Services) | Microsoft Docs
+title: 階層
 ms.custom: ''
 ms.date: 04/01/2016
 ms.prod: sql
@@ -11,15 +11,14 @@ helpviewer_keywords:
 - hierarchies [Master Data Services]
 - hierarchies [Master Data Services], about hierarchies
 ms.assetid: 70dbb1fc-ead7-45be-9552-a45e3ccd8d21
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: c4c2247dc5015088cdb492667c7a470aedba1647
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
-ms.translationtype: HT
+ms.openlocfilehash: 6441012078592ba42c8449c794462b06bed845bb
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52813454"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73729225"
 ---
 # <a name="hierarchies-master-data-services"></a>階層 (Master Data Services)
 
@@ -41,7 +40,7 @@ ms.locfileid: "52813454"
   
 -   明示的階層と呼ばれる、単一エンティティから作成される不規則階層。 詳細については、「 [明示的階層 (マスター データ サービス)](../master-data-services/explicit-hierarchies-master-data-services.md)」を参照してください。  
   
--   派生階層と呼ばれる、複数のエンティティと属性間の既存のリレーションシップに基づいて作成されるレベル ベースの階層。 詳細については、「 [派生階層 (マスター データ サービス)](../master-data-services/derived-hierarchies-master-data-services.md)」を参照してください。  
+-   派生階層と呼ばれる、複数のエンティティと属性間の既存のリレーションシップに基づいて作成されるレベル ベースの階層。 詳細については、「[派生階層 (マスター データ サービス)](../master-data-services/derived-hierarchies-master-data-services.md)」を参照してください。  
   
 > [!NOTE]  
 >  階層内のすべてのメンバーは、同じモデル内に含める必要があります。  
@@ -54,9 +53,9 @@ ms.locfileid: "52813454"
 ## <a name="hierarchy-example"></a>階層の例  
  次の例では、製品メンバーはサブカテゴリ メンバーごとにグループ化されます。  
   
- ![サブカテゴリごとにグループ化された階層の例](../master-data-services/media/mds-conc-hierarchy.gif "サブカテゴリごとにグループ化された階層の例")  
+ ![サブカテゴリ別にグループ化された階層の例](../master-data-services/media/mds-conc-hierarchy.gif "サブカテゴリ別にグループ化された階層の例")  
   
-## <a name="related-tasks"></a>Related Tasks  
+## <a name="related-tasks"></a>関連タスク  
   
 |タスクの説明|トピック|  
 |----------------------|-----------|  

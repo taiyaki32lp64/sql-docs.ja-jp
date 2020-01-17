@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: f90fcf55-6b24-401d-94e1-d65bd24bd342
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 13a91d6b8512b2c1287c3cc8e36e43a1317022d7
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: e09113b42f655a3b94ab3877ff81f2553a363931
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53208501"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67924180"
 ---
 # <a name="shape-append-clause"></a>Shape の APPEND 句
 Shape コマンドの APPEND 句を追加、列または列を**Recordset**します。 これらの列が子を参照しているチャプター列には多くの場合、 **Recordset**します。  
@@ -121,7 +120,7 @@ SHAPE {select * from t1; drop table t1} APPEND ({select * from t2} RELATE k1 TO 
   
 -   [介在する Shape COMPUTE 句](../../../ado/guide/data/intervening-shape-compute-clauses.md)  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [データ シェイプの例](../../../ado/guide/data/data-shaping-example.md)   
  [Shape の正式文法](../../../ado/guide/data/formal-shape-grammar.md)   
  [一般的な Shape コマンド](../../../ado/guide/data/shape-commands-in-general.md)

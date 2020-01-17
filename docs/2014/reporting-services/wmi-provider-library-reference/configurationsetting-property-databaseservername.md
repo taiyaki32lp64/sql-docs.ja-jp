@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 api_name:
 - DatabaseServerName Property
@@ -16,15 +15,15 @@ topic_type:
 helpviewer_keywords:
 - DatabaseServerName property
 ms.assetid: 57d09ad0-66a8-44f2-a81f-736217e3815c
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 54a93f0d33927652bd8efe0f1ffa9369fc398038
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 9d11822d656b9faa83cad15fde69ba95dffbe9df
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56042553"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66097716"
 ---
 # <a name="databaseservername-property-wmi-msreportserverconfigurationsetting"></a>DatabaseServerName プロパティ (WMI MSReportServer_ConfigurationSetting)
   レポート サーバー データベースがインストールされるサーバーの名前を指定します。 読み取りと書き込みが可能です。  

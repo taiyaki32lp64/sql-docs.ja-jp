@@ -1,5 +1,5 @@
 ---
-title: 変更セットを作成する (マスター データ サービス) | Microsoft Docs
+title: 変更セットを作成する
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -8,15 +8,14 @@ ms.reviewer: ''
 ms.technology: master-data-services
 ms.topic: conceptual
 ms.assetid: cfad6f1c-9125-4896-b5f5-a4b9f9593cc4
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: bd8bd63f7fa3bb2d674076ae7780a132a916e7a1
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
-ms.translationtype: HT
+ms.openlocfilehash: 859eb2c829b7d6f35aa39cb2301a4a380c0d039e
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52753584"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73729624"
 ---
 # <a name="create-a-changeset-master-data-services"></a>変更セットを作成する (マスター データ サービス)
 
@@ -48,7 +47,7 @@ ms.locfileid: "52753584"
   
 2.  **[エンティティ]** メニューでエンティティをクリックします。  
   
-3.  エンティティに変更を加え、**[OK]** をクリックします。  
+3.  エンティティに変更を加え、 **[OK]** をクリックします。  
   
 4.  **[[Choose A changeset]]** (変更セットの選択) ダイアログ ボックスが表示されます。  
   

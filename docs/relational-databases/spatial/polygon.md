@@ -1,6 +1,6 @@
 ---
 title: 多角形 | Microsoft Docs
-ms.date: 03/06/2017
+ms.date: 03/07/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -10,19 +10,20 @@ helpviewer_keywords:
 - geometry subtypes [SQL Server]
 - Polygon geometry subtype [SQL Server]
 ms.assetid: b6a21c3c-fdb8-4187-8229-1c488454fdfb
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
+author: MladjoA
+ms.author: mlandzic
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 90f1ff1b99dbc5880909fb8387fc1b82d9b32df8
-ms.sourcegitcommit: 467b2c708651a3a2be2c45e36d0006a5bbe87b79
+ms.openlocfilehash: bd7b379df56f94710a22684c9cc8d662cfb0a396
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53979019"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72907210"
 ---
-# <a name="polygon"></a>Polygon
+# <a name="polygon"></a>多角形
+
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+
   **Polygon** は、1 つの外部境界リングと 0 個以上の内部リングを定義する一連の点として格納される 2 次元表面です。  
   
 ## <a name="polygon-instances"></a>Polygon インスタンス  
@@ -41,14 +42,14 @@ ms.locfileid: "53979019"
 2.  図 2 は、1 つの外部リングと 2 つの内部リングによって境界が定義されている **Polygon** インスタンスです。 内部リングの内側の領域は、 **Polygon** インスタンスの外部の一部です。  
   
 3.  図 3 の **Polygon** インスタンスは、内部リングが 1 つの接点で交差しているため有効です。  
-  
+
 ### <a name="accepted-instances"></a>許容されるインスタンス  
  許容される **Polygon** インスタンスとは、例外をスローすることなく **geometry** 変数または **geography** 変数に格納できるインスタンスです。 次に示す **Polygon** インスタンスは許容されます。  
   
 -   空の **Polygon** インスタンス  
--   1 つの許容される外部境界リングと 0 個以上の許容される内部リングを持つ **Polygon** インスタンス  
+-   1 つの許容される外部境界リング (**LineString**) と 0 個以上の許容される内部リング (**LineString**) を持つ **Polygon** インスタンス  
   
-リングが許容されるためには、次の条件を満たす必要があります。  
+リング (**LineString**) が許容されるためには、次の条件を満たす必要があります。  
   
 -   **LineString** インスタンスが許容されていること。  
 -   **LineString** インスタンスに 4 つ以上の点があること。  
@@ -106,12 +107,14 @@ SELECT @g1.STIsValid(), @g2.STIsValid(), @g3.STIsValid(), @g4.STIsValid(), @g5.S
  `@g1` 内部リングが 2 か所で外部リングに接しているため、無効です。 `@g2` 2 つ目の内部リングが 1 つ目の内部リングの内側にあるため、無効です。 `@g3` 2 つの内部リングが連続する複数の点で接しているため、無効です。 `@g4` 2 つの内部リングの内部が交差しているため、無効です。 `@g5` 外部リングが 1 つ目のリングでないため、無効です。 `@g6` リングが 3 つ以上の異なる点を持たないため、無効です。  
   
 ## <a name="examples"></a>使用例  
-### <a name="example-a"></a>例 A。  
-次の例では、1 つの穴を持つ単純な `geometry``Polygon` インスタンスを作成しています。このインスタンスの SRID は 10 です。  
+### <a name="example-a"></a>例 A.  
+次の例では、1 つのすき間を持つ単純な `geometry` `Polygon` インスタンスを作成しています。SRID は 10 です。
   
 ```sql  
 DECLARE @g geometry;  
-SET @g = geometry::STPolyFromText('POLYGON((0 0, 0 3, 3 3, 3 0, 0 0), (1 1, 1 2, 2 1, 1 1))', 10);  
+SET @g = geometry::STPolyFromText(
+    'POLYGON((0 0, 0 3, 3 3, 3 0, 0 0), (1 1, 1 2, 2 1, 1 1))',
+    10);
 ```  
   
 
@@ -120,7 +123,9 @@ SET @g = geometry::STPolyFromText('POLYGON((0 0, 0 3, 3 3, 3 0, 0 0), (1 1, 1 2,
   
 ```sql  
 DECLARE @g geometry;  
-SET @g = geometry::Parse('POLYGON((1 0, 0 1, 1 2, 2 1, 1 0), (2 0, 1 1, 2 2, 3 1, 2 0))');  
+SET @g = geometry::Parse(
+    'POLYGON((1 0, 0 1, 1 2, 2 1, 1 0), (2 0, 1 1, 2 2, 3 1, 2 0))'
+    );  
 ```  
   
 ### <a name="example-c"></a>例 C。  
@@ -134,7 +139,8 @@ SELECT @g.ToString();
 上の例で返される `geometry` インスタンスは `MultiPolygon`です。  
   
 ```sql  
-MULTIPOLYGON (((2 0, 3 1, 2 2, 1.5 1.5, 2 1, 1.5 0.5, 2 0)), ((1 0, 1.5 0.5, 1 1, 1.5 1.5, 1 2, 0 1, 1 0)))  
+MULTIPOLYGON (((2 0, 3 1, 2 2, 1.5 1.5, 2 1, 1.5 0.5, 2 0)),
+              ((1 0, 1.5 0.5, 1 1, 1.5 1.5, 1 2, 0 1, 1 0)))
 ```  
   
 ### <a name="example-d"></a>例 D。  

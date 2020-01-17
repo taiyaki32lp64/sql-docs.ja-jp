@@ -11,16 +11,15 @@ f1_keywords:
 helpviewer_keywords:
 - Transact-SQL debugger, breakpoint hit count
 ms.assetid: 24836939-94ed-4e57-aa85-5d6938d859e4
-author: stevestein
-ms.author: sstein
-manager: craigg
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: fa195eb188c35d3ac3b6ed23e874495676d1d74b
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: 862d99fd57b22e1643ce2591fccfb0478b664074
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51643989"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68267689"
 ---
 # <a name="specify-a-hit-count"></a>ヒット カウントの指定
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -47,7 +46,7 @@ ms.locfileid: "51643989"
   
 1.  エディター ウィンドウで、ブレークポイント グリフを右クリックし、ショートカット メニューの **[ヒット カウント]** をクリックします。  
   
-     - または -  
+     \- または -  
   
      **[ブレークポイント]** ウィンドウで、ブレークポイント グリフを右クリックし、ショートカット メニューの **[ヒット カウント]** をクリックします。  
   
@@ -61,7 +60,7 @@ ms.locfileid: "51643989"
   
 1.  エディター ウィンドウで、ブレークポイント グリフを右クリックし、ショートカット メニューの **[ヒット カウント]** をクリックします。  
   
-     - または -  
+     \- または -  
   
      **[ブレークポイント]** ウィンドウで、ブレークポイント グリフを右クリックし、ショートカット メニューの **[ヒット カウント]** をクリックします。  
   

@@ -11,17 +11,20 @@ helpviewer_keywords:
 - '* (multiply operator)'
 - multiply operator (*)
 ms.assetid: d457f052-ffbb-4485-833f-f4bed4349b69
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: 833655612685ad19dbb96da8d5a0faab9e158595
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: bc5c349835acb6211fb3d46c0bad37d377760063
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47628331"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71288839"
 ---
 # <a name="-multiply-ssis-expression"></a>* (乗算) (SSIS 式)
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   2 つの数値式を乗算します。  
   
 ## <a name="syntax"></a>構文  
@@ -63,6 +66,6 @@ ListPrice - (ListPrice * @[Discount%])
   
 ## <a name="see-also"></a>参照  
  [演算子の優先順位と結合規則](../../integration-services/expressions/operator-precedence-and-associativity.md)   
- [演算子 (SSIS 式)](../../integration-services/expressions/operators-ssis-expression.md)  
+ [演算子 &#40;SSIS 式&#41;](../../integration-services/expressions/operators-ssis-expression.md)  
   
   

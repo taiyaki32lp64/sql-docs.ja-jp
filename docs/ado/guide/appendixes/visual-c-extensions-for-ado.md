@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 2952ece0-7217-4448-bb09-f6b64f43b7e2
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 4432c125b0c860775911aa753984806a472a64ba
-ms.sourcegitcommit: 96b2355d54dfad259826e88bdff91cc9344e16f2
+ms.openlocfilehash: db11e86ab479ad0df4224d59c3408729fa9903ab
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51350187"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67926376"
 ---
 # <a name="visual-c-extensions-for-ado"></a>ADO 用の Visual C++ Extensions
 Visual C で ADO のプログラミングの推奨される方法を使用して、 **#import**ディレクティブで説明したよう[Microsoft Visual C++ での ADO プログラミング](../../../ado/guide/appendixes/visual-c-ado-programming.md)します。 ただし、ADO の以前のバージョンに付属 Visual C を使用したプログラミングの代替方法: Visual C 拡張します。 このセクションでは、この機能をドキュメントにとって Visual C の拡張機能のコードを維持する必要がありますが、# を使用して新しい ADO コードを記述する必要があります**インポート**します。
@@ -40,5 +39,5 @@ Visual C で ADO のプログラミングの推奨される方法を使用して
 
 -   [Visual C 拡張機能の例での ADO](../../../ado/guide/appendixes/visual-c-extensions-example.md)
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
  [COM 用の Visual C 構文のインデックス用の ADO](../../../ado/reference/ado-api/ado-for-visual-c-syntax-index-for-com.md) [Visual C の拡張機能の使用例](../../../ado/guide/appendixes/visual-c-extensions-example.md) [Visual C の拡張機能を使用して](../../../ado/guide/appendixes/using-visual-c-extensions.md) [Visual C Extensions のヘッダー](../../../ado/guide/appendixes/visual-c-extensions-header.md)

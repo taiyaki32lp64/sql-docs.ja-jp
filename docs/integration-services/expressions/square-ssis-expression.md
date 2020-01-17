@@ -11,17 +11,20 @@ helpviewer_keywords:
 - SQUARE
 - square values
 ms.assetid: cecf1bb2-3d55-40a6-9688-ed67bcc150b4
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: 835b6cb97bc23b1d7c4fb9c38a7b98050695cf06
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 06bf3ea82f026a36fece8266354e79992473df44
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47599460"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71288641"
 ---
 # <a name="square-ssis-expression"></a>SQUARE (SSIS 式)
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   数値式の 2 乗値を返します。  
   
 ## <a name="syntax"></a>構文  

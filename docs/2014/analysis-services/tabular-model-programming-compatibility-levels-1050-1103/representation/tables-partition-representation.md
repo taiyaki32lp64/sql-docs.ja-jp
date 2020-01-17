@@ -4,20 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: analysis-services
 ms.topic: reference
 ms.assetid: b606cd63-755c-4ac0-b19b-95b5363afbdf
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 27cb9b5ea146514de38d776b72c7fac767716f2f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 3a1f7718c984c564d8ef000adeb9605768e6a70d
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48139493"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62795521"
 ---
 # <a name="partition-representation-tabular"></a>パーティション表現 (テーブル)
   運用上の目的のために、結合させるとテーブルを形成する異なる行のサブセットにテーブルを分割することができます。それぞれのサブセットがテーブルのパーティションです。  

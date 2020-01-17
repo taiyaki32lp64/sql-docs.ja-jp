@@ -11,15 +11,14 @@ helpviewer_keywords:
 - HAVING clause, query groups
 - group query conditions [SQL Server]
 ms.assetid: 269ad9c5-3261-4526-badf-7be3c869f229
-author: stevestein
-ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 0dd5f15a013da84217bb588bca8efbf62d257108
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 851245e9e294a5b7f5dfe0db9945bf6c2005ea0e
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52509642"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68263586"
 ---
 # <a name="specify-conditions-for-groups-visual-database-tools"></a>グループの条件を指定する方法 (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

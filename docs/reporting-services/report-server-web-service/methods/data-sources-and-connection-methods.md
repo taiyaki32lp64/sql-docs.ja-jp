@@ -10,14 +10,14 @@ helpviewer_keywords:
 - reports [Reporting Services], data
 - data sources [Reporting Services], methods
 ms.assetid: 50999b52-fc7c-4333-9fb0-d04c37a4c90f
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 52bc9d57540cdf3bd57e77e3da039e5e9c6d8e50
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 464a24e9a23103323a14140c25563e753c6c3e18
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47838810"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62512594"
 ---
 # <a name="data-sources-and-connection-methods"></a>データ ソースと接続のメソッド
   これらのメソッドを使用して、データ ソースの接続と資格情報を設定および管理できます。  

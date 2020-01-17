@@ -1,3 +1,11 @@
+---
+ms.openlocfilehash: 336162ea06533901107c83dd47f062fc94fdd869
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68213324"
+---
 ## <a name="prerequisites"></a>Prerequisites
 
 可用性グループを作成する前に、以下のことを行う必要があります。
@@ -77,9 +85,9 @@ BACKUP CERTIFICATE dbm_certificate
 CREATE MASTER KEY ENCRYPTION BY PASSWORD = '**<Master_Key_Password>**';
 CREATE CERTIFICATE dbm_certificate
     AUTHORIZATION dbm_user
-    FROM FILE = '/var/opt/mssql/data/dbm_certificate.cer'
+    FROM FILE = 'C:\Program Files\Microsoft SQL Server\MSSQL14.MSSQLSERVER\MSSQL\DATA\dbm_certificate.cer'
     WITH PRIVATE KEY (
-    FILE = '/var/opt/mssql/data/dbm_certificate.pvk',
+    FILE = 'c:\Program Files\Microsoft SQL Server\MSSQL14.MSSQLSERVER\MSSQL\DATA\dbm_certificate.pvk',
     DECRYPTION BY PASSWORD = '**<Private_Key_Password>**'
             );
 ```

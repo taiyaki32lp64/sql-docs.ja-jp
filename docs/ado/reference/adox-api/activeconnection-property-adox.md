@@ -21,13 +21,12 @@ helpviewer_keywords:
 ms.assetid: 25fff69b-7556-4a28-b6f5-600a4bb0f607
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: a51f18109aef439576965e73782b7aa03a6a8b56
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 4ddd18225f8497294f1f44fa134a2d02040c8ada
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47719320"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67952170"
 ---
 # <a name="activeconnection-property-adox"></a>ActiveConnection プロパティ (ADOX)
 ADO を示す[接続](../../../ado/reference/ado-api/connection-object-ado.md)先となるオブジェクト、[カタログ](../../../ado/reference/adox-api/catalog-object-adox.md)が属しています。  
@@ -41,7 +40,7 @@ ADO を示す[接続](../../../ado/reference/ado-api/connection-object-ado.md)�
 ## <a name="applies-to"></a>適用対象  
  [Catalog オブジェクト (ADOX)](../../../ado/reference/adox-api/catalog-object-adox.md)  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [カタログ ActiveConnection プロパティの例 (VB)](../../../ado/reference/adox-api/catalog-activeconnection-property-example-vb.md)   
  [Command プロパティおよび CommandText プロパティの例 (VB)](../../../ado/reference/adox-api/command-and-commandtext-properties-example-vb.md)   
  [Connection Close メソッド、Table Type プロパティの例 (VB)](../../../ado/reference/adox-api/connection-close-method-table-type-property-example-vb.md)   

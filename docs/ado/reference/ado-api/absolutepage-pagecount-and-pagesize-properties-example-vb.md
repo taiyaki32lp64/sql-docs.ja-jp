@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 5aaada64-5115-4adc-8668-827348f32566
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 4e290e124b0c4c08905edc62838605112f1acf38
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ad832a1e0028005ff1893df43fbadcd078bc2859
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47831210"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67921850"
 ---
 # <a name="absolutepage-pagecount-and-pagesize-properties-example-vb"></a>AbsolutePage、PageCount、PageSize プロパティの例 (VB)
 ```  
@@ -101,7 +100,7 @@ End Sub
 'EndAbsolutePageVB  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [AbsolutePage プロパティ (ADO)](../../../ado/reference/ado-api/absolutepage-property-ado.md)   
  [PageCount プロパティ (ADO)](../../../ado/reference/ado-api/pagecount-property-ado.md)   
  [PageSize プロパティ (ADO)](../../../ado/reference/ado-api/pagesize-property-ado.md)   

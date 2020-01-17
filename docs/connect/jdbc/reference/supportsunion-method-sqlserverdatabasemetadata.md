@@ -1,5 +1,5 @@
 ---
-title: supportsUnion メソッド (SQLServerDatabaseMetaData) |Microsoft Docs
+title: supportsUnion メソッド (SQLServerDatabaseMetaData) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: a757ea51-ff2e-4848-adaf-d9373e418fa3
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: eb1fee2fd21db56b58db14122580c9ca43f4104b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b7dd44915a066753e367beb82d88258c3a0d3abf
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47715970"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67968564"
 ---
 # <a name="supportsunion-method-sqlserverdatabasemetadata"></a>supportsUnion メソッド (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -36,13 +35,13 @@ public boolean supportsUnion()
 ```  
   
 ## <a name="return-value"></a>戻り値  
- **true**サポートされている場合。 それ以外の場合は、 **false**です。  
+ サポートされている場合は**true** 。 それ以外の場合は、 **false**です。  
   
 ## <a name="exceptions"></a>例外  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- この supportsUnion メソッドは、java.sql.DatabaseMetaData インターフェイスで supportsUnion メソッドによって指定されます。  
+ この supportsUnion メソッドは、java メタデータインターフェイスの supportsUnion メソッドによって指定されます。  
   
 ## <a name="see-also"></a>参照  
  [SQLServerDatabaseMetaData のメソッド](../../../connect/jdbc/reference/sqlserverdatabasemetadata-methods.md)   

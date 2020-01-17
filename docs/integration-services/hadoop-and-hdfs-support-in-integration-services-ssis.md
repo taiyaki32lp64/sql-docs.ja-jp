@@ -10,17 +10,20 @@ ms.topic: conceptual
 f1_keywords:
 - SQL13.SSIS.HADOOP.F1
 ms.assetid: fea03c62-9361-4b6f-b4ce-8fe0f94b34f2
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: b310d2673f8cbe352830279e8531218ebdc13382
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: dc008fc1f59d8ea6b5f015f2028779aa270d3b2a
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47793420"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71285868"
 ---
 # <a name="hadoop-and-hdfs-support-in-integration-services-ssis"></a>Integration Services (SSIS) での Hadoop と HDFS のサポート
+
+[!INCLUDE[ssis-appliesto](../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   SQL Server 2016 Integration Services (SSIS) には、オンプレミスの Hadoop と HDFS のサポートを提供する次のコンポーネントが含まれています。  
   
  HDInsight およびその他の Microsoft Azure の機能をサポートする Integration Services コンポーネントについては、「[Integration Services &#40;SSIS&#41; 用の Azure Feature Pack](../integration-services/azure-feature-pack-for-integration-services-ssis.md)」をご覧ください。  

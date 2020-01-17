@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 6aaaf6d0-1376-4473-bea6-b81f2645a9ac
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 2a2b6172fdd35e98d1b4a5f1b3c6ff19293a7f81
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: f242a3596735a4bc43256d05b87100e71295a3da
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53214683"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67926437"
 ---
 # <a name="vbscript-ado-programming"></a>VBScript での ADO プログラミング
 ## <a name="creating-an-ado-project"></a>ADO プロジェクトの作成  

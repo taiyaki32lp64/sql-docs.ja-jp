@@ -1,6 +1,6 @@
 - name: SQL Server 2014 チュートリアル
   href: tutorials-for-sql-server-2014.md
-- name: 'チュートリアル: Transact-SQL ステートメントの作成 +'
+- name: 'チュートリアル:Transact-SQL ステートメントの作成 +'
   href: ../t-sql/tutorial-writing-transact-sql-statements.md
 - name: データ マイニングのチュートリアル
   href: ../analysis-services/data-mining-tutorials-analysis-services.md
@@ -8,7 +8,7 @@
     - name: 基本的なデータ マイニング チュートリアル
       href: basic-data-mining-tutorial.md
       items:
-        - name: 'レッスン 1 : Analysis Services データベースの準備'
+        - name: 'レッスン 1:Analysis Services データベースの準備'
           href: lesson-1-preparing-the-analysis-services-database-basic-data-mining-tutorial.md
           items:
             - name: Analysis Services プロジェクトの作成
@@ -17,7 +17,7 @@
               href: creating-a-data-source-basic-data-mining-tutorial.md
             - name: データ ソース ビューの作成
               href: creating-a-data-source-view-basic-data-mining-tutorial.md
-        - name: 'レッスン 2 : 絞り込みメール配信構造の作成'
+        - name: 'レッスン 2:絞り込みメール配信構造の作成'
           href: lesson-2-building-a-targeted-mailing-structure-basic-data-mining-tutorial.md
           items:
             - name: 絞り込みメール配信マイニング モデル構造の作成
@@ -26,14 +26,14 @@
               href: specifying-the-data-type-and-content-type-basic-data-mining-tutorial.md
             - name: 構造のテスト データ セットの指定
               href: specifying-a-testing-data-set-for-the-structure-basic-data-mining-tutorial.md
-        - name: 'レッスン 3: モデルの追加と処理'
+        - name: 'レッスン 3:モデルの追加と処理'
           href: lesson-3-adding-and-processing-models.md
           items:
             - name: 絞り込みメール配信構造への新しいモデルの追加
               href: adding-new-models-to-the-targeted-mailing-structure-basic-data-mining-tutorial.md
             - name: 絞り込みメール配信構造でのモデルの処理
               href: processing-models-in-the-targeted-mailing-structure-basic-data-mining-tutorial.md
-        - name: 'レッスン 4: 絞り込みメール配信モデルの検証'
+        - name: 'レッスン 4:絞り込みメール配信モデルの検証'
           href: lesson-4-exploring-the-targeted-mailing-models-basic-data-mining-tutorial.md
           items:
             - name: デシジョン ツリー モデルの検証
@@ -59,12 +59,12 @@
     - name: 中級者向けデータ マイニング チュートリアル
       href: intermediate-data-mining-tutorial-analysis-services-data-mining.md
       items:
-        - name: 'レッスン 1: 中級者向けデータ マイニング ソリューションの作成'
+        - name: 'レッスン 1:中級者向けデータ マイニング ソリューションの作成'
           href: lesson-1-create-solution-intermediate-data-mining-tutorial.md
           items:
             - name: ソリューションとデータ ソースの作成
               href: creating-a-solution-and-data-source-intermediate-data-mining-tutorial.md
-        - name: 'レッスン 2 : 予測シナリオの作成'
+        - name: 'レッスン 2:予測シナリオの作成'
           href: lesson-2-building-a-forecasting-scenario-intermediate-data-mining-tutorial.md
           items:
             - name: 予測用のデータ ソース ビューの追加
@@ -90,7 +90,7 @@
                   href: time-series-predictions-replacement-data-intermediate-data-mining.md
             - name: 予測モデルの予測の比較
               href: comparing-predictions-for-forecasting-models-intermediate-data-mining-tutorial.md
-        - name: 'レッスン 3 : マーケット バスケット シナリオの作成'
+        - name: 'レッスン 3:マーケット バスケット シナリオの作成'
           href: lesson-3-building-a-market-basket-scenario-intermediate-data-mining-tutorial.md
           items:
             - name: 入れ子になったテーブルを伴うデータ ソース ビューの追加
@@ -105,7 +105,7 @@
               href: filtering-a-nested-table-in-a-mining-model-intermediate-data-mining-tutorial.md
             - name: アソシエーションの予測
               href: predicting-associations-intermediate-data-mining-tutorial.md
-        - name: 'レッスン 4 : シーケンス クラスター シナリオの作成'
+        - name: 'レッスン 4:シーケンス クラスター シナリオの作成'
           href: lesson-4-build-sequence-clustering-scenario-intermediate-data-mining.md
           items:
             - name: シーケンス クラスター マイニング モデル構造の作成
@@ -131,45 +131,45 @@
               href: add-logistic-regression-model-to-call-center-intermediate-data-mining.md
             - name: コール センター モデルの予測の作成 (中級者向けデータ マイニング チュートリアル)
               href: create-predictions-call-center-models-intermediate-data-mining-tutorial.md
-    - name: 'DMX を使用したデータ マイニング モデルの作成とクエリ : チュートリアル'
+    - name: DMX を使用したデータ マイニング モデルの作成とクエリチュートリアル
       href: create-query-data-mining-models-dmx-tutorials.md
       items:
         - name: Bike Buyer DMX のチュートリアル
           href: bike-buyer-dmx-tutorial.md
           items:
-            - name: 'レッスン 1: Bike Buyer マイニング構造の作成'
+            - name: 'レッスン 1:Bike Buyer マイニング構造の作成'
               href: lesson-1-creating-the-bike-buyer-mining-structure.md
-            - name: 'レッスン 2: Bike Buyer マイニング構造へのマイニング モデルの追加'
+            - name: 'レッスン 2:Bike Buyer マイニング構造へのマイニング モデルの追加'
               href: lesson-2-adding-mining-models-to-the-bike-buyer-mining-structure.md
-            - name: 'レッスン 3: Bike Buyer マイニング構造の処理'
+            - name: 'レッスン 3:Bike Buyer マイニング構造の処理'
               href: lesson-3-processing-the-bike-buyer-mining-structure.md
-            - name: 'レッスン 4: Bike Buyer マイニング モデルの参照'
+            - name: 'レッスン 4:Bike Buyer マイニング モデルの参照'
               href: lesson-4-browsing-the-bike-buyer-mining-models.md
             - name: 'レッスン 5: 予測クエリの実行'
               href: lesson-5-executing-prediction-queries.md
         - name: マーケット バスケット DMX のチュートリアル
           href: market-basket-dmx-tutorial.md
           items:
-            - name: 'レッスン 1: Market Basket マイニング構造の作成'
+            - name: 'レッスン 1:Market Basket マイニング構造の作成'
               href: lesson-1-creating-the-market-basket-mining-structure.md
-            - name: 'レッスン 2: Market Basket マイニング構造へのマイニング モデルの追加'
+            - name: 'レッスン 2:マイニング モデルを Market Basket マイニング構造に追加する'
               href: lesson-2-adding-mining-models-to-the-market-basket-mining-structure.md
-            - name: 'レッスン 3: Market Basket マイニング構造の処理'
+            - name: 'レッスン 3:Market Basket マイニング構造の処理'
               href: lesson-3-processing-the-market-basket-mining-structure.md
-            - name: 'レッスン 4: マーケット バスケット予測の実行'
+            - name: 'レッスン 4:マーケット バスケット予測の実行'
               href: lesson-4-executing-market-basket-predictions.md
         - name: 時系列予測の DMX のチュートリアル
           href: time-series-prediction-dmx-tutorial.md
           items:
-            - name: 'レッスン 1: 時系列マイニング モデルおよびマイニング構造の作成'
+            - name: 'レッスン 1:時系列マイニング モデルおよびマイニング構造の作成'
               href: lesson-1-creating-a-time-series-mining-model-and-mining-structure.md
-            - name: 'レッスン 2: 時系列マイニング構造へのマイニング モデルの追加'
+            - name: 'レッスン 2:時系列マイニング構造へのマイニング モデルの追加'
               href: lesson-2-adding-mining-models-to-the-time-series-mining-structure.md
-            - name: 'レッスン 3: 時系列構造と時系列モデルの処理'
+            - name: 'レッスン 3:時系列構造と時系列モデルの処理'
               href: lesson-3-processing-the-time-series-structure-and-models.md
-            - name: 'レッスン 4: DMX を使用した時系列予測の作成'
+            - name: 'レッスン 4:DMX を使用した時系列予測の作成'
               href: lesson-4-creating-time-series-predictions-using-dmx.md
-            - name: 'レッスン 5 : 時系列モデルの拡張'
+            - name: 'レッスン 5: 時系列モデルの拡張'
               href: lesson-5-extending-the-time-series-model.md
 - name: Reporting Services のチュートリアル
   href: ../reporting-services/reporting-services-tutorials-ssrs.md
@@ -177,37 +177,37 @@
     - name: 基本的なテーブル レポートの作成 (SSRS チュートリアル)
       href: ../reporting-services/create-a-basic-table-report-ssrs-tutorial.md
       items:
-        - name: 'レッスン 1 : レポート サーバー プロジェクトの作成'
+        - name: 'レッスン 1:レポート サーバー プロジェクトの作成'
           href: ../reporting-services/lesson-1-creating-a-report-server-project-reporting-services.md
-        - name: 'レッスン 2 : 接続情報の指定'
+        - name: 'レッスン 2:接続情報の指定'
           href: ../reporting-services/lesson-2-specifying-connection-information-reporting-services.md
-        - name: 'レッスン 3 : テーブル レポートのデータセットの定義'
+        - name: 'レッスン 3:テーブル レポートのデータセットの定義'
           href: ../reporting-services/lesson-3-defining-a-dataset-for-the-table-report-reporting-services.md
-        - name: 'レッスン 4 : レポートへのテーブルの追加'
+        - name: 'レッスン 4:レポートへのテーブルの追加'
           href: ../reporting-services/lesson-4-adding-a-table-to-the-report-reporting-services.md
-        - name: 'Lesson 5: Formatting a Report'
+        - name: 'レッスン 5: レポートの書式設定'
           href: ../reporting-services/lesson-5-formatting-a-report-reporting-services.md
-        - name: 'Lesson 6: Adding Grouping and Totals'
+        - name: 'レッスン 6: グループと合計の追加'
           href: ../reporting-services/lesson-6-adding-grouping-and-totals-reporting-services.md
     - name: データ ドリブン サブスクリプションの作成 (SSRS チュートリアル)
       href: ../reporting-services/create-a-data-driven-subscription-ssrs-tutorial.md
       items:
-        - name: 'レッスン 1 : サンプル サブスクライバー データベースの作成'
+        - name: 'レッスン 1:サンプル サブスクライバー データベースの作成'
           href: ../reporting-services/lesson-1-creating-a-sample-subscriber-database.md
-        - name: 'Lesson 2: Modifying the Report Data Source Properties'
+        - name: 'レッスン 2:レポート データ ソースのプロパティの変更'
           href: ../reporting-services/lesson-2-modifying-the-report-data-source-properties.md
-        - name: 'Lesson 3: Defining a Data-Driven Subscription'
+        - name: 'レッスン 3:データ ドリブン サブスクリプションの定義'
           href: ../reporting-services/lesson-3-defining-a-data-driven-subscription.md
     - name: ReportViewer を使用してパラメーターを含む詳細 (RDLC) レポートを作成する (SSRS チュートリアル)
       href: ../reporting-services/create-drillthrough-rdlc-report-with-parameters-reportviewer.md
       items:
-        - name: 'レッスン 1: 新しい Web サイトを作成する'
+        - name: 'レッスン 1:新しい Web サイトを作成する'
           href: ../reporting-services/lesson-1-create-a-new-web-site.md
-        - name: 'レッスン 2: 親レポートのデータ接続とデータ テーブルを定義する'
+        - name: 'レッスン 2:親レポートのデータ接続とデータ テーブルを定義する'
           href: ../reporting-services/lesson-2-define-a-data-connection-and-data-table-for-parent-report.md
-        - name: 'レッスン 3: レポート ウィザードを使用して親レポートを設計する'
+        - name: 'レッスン 3:レポート ウィザードを使用して親レポートを設計する'
           href: ../reporting-services/lesson-3-design-the-parent-report-using-the-report-wizard.md
-        - name: 'レッスン 4: 子レポートのデータ接続とデータ テーブルを定義する'
+        - name: 'レッスン 4:子レポートのデータ接続とデータ テーブルを定義する'
           href: ../reporting-services/lesson-4-define-a-data-connection-and-data-table-for-child-report.md
         - name: 'レッスン 5: レポート ウィザードを使用して子レポートを設計する'
           href: ../reporting-services/lesson-5-design-the-child-report-using-the-report-wizard.md
@@ -217,33 +217,33 @@
           href: ../reporting-services/lesson-7-add-drillthrough-action-on-parent-report.md
         - name: 'レッスン 8: データ フィルターを作成する'
           href: ../reporting-services/lesson-8-create-a-data-filter.md
-        - name: 'Lesson 9: Build and Run the Application'
+        - name: 'レッスン 9: アプリケーションをビルドして実行する'
           href: ../reporting-services/lesson-9-build-and-run-the-application.md
     - name: 'Visual Basic または Visual C# を使用したレポート サーバー Web サービスへのアクセス (SSRS チュートリアル)'
       href: access-report-server-web-service-vb-vcsharp-ssrs-tutorial.md
       items:
-        - name: 'レッスン 1: Web サービス クライアント プロジェクトの作成'
+        - name: 'レッスン 1:Web サービス クライアント プロジェクトの作成'
           href: lesson-1-creating-the-web-service-client-project.md
-        - name: 'レッスン 2 : Web 参照の追加'
+        - name: 'レッスン 2:Web 参照の追加'
           href: lesson-2-adding-a-web-reference.md
-        - name: 'レッスン 3 : Web サービスへのアクセス'
+        - name: 'レッスン 3:Web サービスへのアクセス'
           href: lesson-3-accessing-the-web-service.md
-        - name: 'レッスン 4 : アプリケーション (VB/VC#) の実行'
+        - name: 'レッスン 4:アプリケーション (VB/VC#) の実行'
           href: lesson-4-running-the-application-vb-vcsharp.md
     - name: RDL スキーマから生成されたクラスを使ったレポートの更新 (SSRS チュートリアル)
       href: updating-reports-using-classes-generated-from-the-rdl-schema-ssrs-tutorial.md
       items:
-        - name: 'レッスン 1 : RDL スキーマ Visual Studio プロジェクトの作成'
+        - name: 'レッスン 1:RDL スキーマ Visual Studio プロジェクトの作成'
           href: lesson-1-create-the-rdl-schema-visual-studio-project.md
-        - name: 'レッスン 2 : xsd ツールを使用して RDL スキーマからクラスを作成'
+        - name: 'レッスン 2:xsd ツールを使用して RDL スキーマからクラスを作成'
           href: lesson-2-generate-classes-from-the-rdl-schema-using-the-xsd-tool.md
-        - name: 'レッスン 3 : レポート サーバーからのレポート定義の読み込み'
+        - name: 'レッスン 3:レポート サーバーからのレポート定義の読み込み'
           href: lesson-3-load-a-report-definition-from-the-report-server.md
-        - name: 'レッスン 4 : プログラムによるレポート定義の更新'
+        - name: 'レッスン 4:プログラムによるレポート定義の更新'
           href: lesson-4-update-the-report-definition-programmatically.md
-        - name: 'レッスン 5 : レポート サーバーへのレポート定義のパブリッシュ'
+        - name: 'レッスン 5: レポート サーバーへのレポート定義のパブリッシュ'
           href: lesson-5-publish-the-report-definition-to-the-report-server.md
-        - name: 'レッスン 6 : RDL スキーマ アプリケーション (VB/C#) の実行'
+        - name: 'レッスン 6: RDL スキーマ アプリケーション (VB/C#) の実行'
           href: lesson-6-run-the-rdl-schema-application-vb-csharp.md
     - name: チュートリアル (レポート ビルダー)
       href: ../reporting-services/report-builder-tutorials.md
@@ -252,31 +252,31 @@
           href: ../reporting-services/prerequisites-for-tutorials-report-builder.md
         - name: 別の方法でデータ接続を取得する (レポート ビルダー)
           href: ../reporting-services/alternative-ways-to-get-a-data-connection-report-builder.md
-        - name: 'チュートリアル: 基本的な表レポートの作成'
+        - name: 'チュートリアル:基本的なテーブル レポートの作成'
           href: ../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md
-        - name: 'チュートリアル: マトリックス レポートの作成'
+        - name: 'チュートリアル:マトリックス形式のレポートの作成'
           href: ../reporting-services/tutorial-creating-a-matrix-report-report-builder.md
-        - name: 'チュートリアル: 自由形式のレポートの作成'
+        - name: 'チュートリアル:自由形式のレポートの作成'
           href: ../reporting-services/tutorial-creating-a-free-form-report-report-builder.md
-        - name: 'チュートリアル: テキストの書式設定 (レポート ビルダー)'
+        - name: 'チュートリアル:テキストを書式設定する (レポート ビルダー)'
           href: ../reporting-services/tutorial-format-text-report-builder.md
-        - name: 'チュートリアル: レポートへの縦棒グラフの追加 (レポート ビルダー)'
+        - name: 'チュートリアル:レポートへの縦棒グラフの追加 (レポート ビルダー)'
           href: ../reporting-services/tutorial-add-a-column-chart-to-your-report-report-builder.md
-        - name: 'チュートリアル: レポートへの円グラフの追加 (レポート ビルダー)'
+        - name: 'チュートリアル:レポートへの円グラフの追加 (レポート ビルダー)'
           href: ../reporting-services/tutorial-add-a-pie-chart-to-your-report-report-builder.md
-        - name: 'チュートリアル: レポートへの横棒グラフの追加 (レポート ビルダー)'
+        - name: 'チュートリアル:レポートへの横棒グラフの追加 (レポート ビルダー)'
           href: ../reporting-services/tutorial-add-a-bar-chart-to-your-report-report-builder.md
-        - name: 'チュートリアル: レポートへのスパークラインの追加 (レポート ビルダー)'
+        - name: 'チュートリアル:レポートへのスパークラインの追加 (レポート ビルダー)'
           href: ../reporting-services/tutorial-add-a-sparkline-to-your-report-report-builder.md
-        - name: 'チュートリアル: レポートへの KPI の追加'
+        - name: 'チュートリアル:レポートへの KPI の追加'
           href: ../reporting-services/tutorial-adding-a-kpi-to-your-report-report-builder.md
-        - name: 'チュートリアル: マップ レポート'
+        - name: 'チュートリアル:マップ レポート'
           href: ../reporting-services/tutorial-map-report-report-builder.md
-        - name: 'チュートリアル: レポートへのパラメーターの追加 (レポート ビルダー)'
+        - name: 'チュートリアル:レポートへのパラメーターの追加 (レポート ビルダー)'
           href: ../reporting-services/tutorial-add-a-parameter-to-your-report-report-builder.md
-        - name: 'チュートリアル: 詳細レポートとメイン レポートの作成'
+        - name: 'チュートリアル:詳細レポートとメイン レポートの作成'
           href: ../reporting-services/tutorial-creating-drillthrough-and-main-reports-report-builder.md
-        - name: 'チュートリアル: 式の概要'
+        - name: 'チュートリアル:式の概要'
           href: ../reporting-services/tutorial-introducing-expressions.md
 - name: Enterprise Information Management のチュートリアル
   href: enterprise-information-management-tutorials.md
@@ -284,116 +284,116 @@
     - name: 'SSIS、MDS、DQS の組み合わせを使用した Enterprise Information Management [チュートリアル]'
       href: 'enterprise-information-management-using-ssis-mds-and-dqs-together-[tutorial].md'
       items:
-        - name: 'レッスン 1: Suppliers DQS ナレッジ ベースを作成する'
+        - name: 'レッスン 1:Suppliers DQS ナレッジ ベースを作成する'
           href: lesson-1-creating-the-suppliers-dqs-knowledge-base.md
           items:
-            - name: 'タスク 1: ナレッジ ベースとドメインを作成する'
+            - name: 'タスク 1:ナレッジ ベースとドメインを作成する'
               href: task-1-creating-a-knowledge-base-and-domains.md
-            - name: 'タスク 2: ドメイン値を手動で追加する'
+            - name: 'タスク 2:ドメイン値を手動で追加する'
               href: task-2-adding-domain-values-manually.md
             - name: 'タスク 3:Excel ファイルからドメイン値をインポートする'
               href: task-3-importing-domain-values-from-an-excel-file.md
-            - name: 'タスク 4: ドメイン ルールを設定する'
+            - name: 'タスク 4:ドメイン ルールを設定する'
               href: task-4-setting-domain-rules.md
-            - name: 'タスク 5: 用語ベースのリレーションを設定する'
+            - name: 'タスク 5:用語ベースのリレーションを設定する'
               href: task-5-setting-term-based-relationships.md
-            - name: 'タスク 6: シノニムを設定する'
+            - name: 'タスク 6:シノニムを設定する'
               href: task-6-setting-synonyms.md
-            - name: 'タスク 7: 複合ドメインを作成する'
+            - name: 'タスク 7:複合ドメインを作成する'
               href: task-7-creating-a-composite-domain.md
-            - name: 'タスク 8: 複合ドメイン ルールを作成する'
+            - name: 'タスク 8:複合ドメイン ルールを作成する'
               href: task-8-creating-a-composite-domain-rule.md
-            - name: 'タスク 9: 参照データ サービスを構成する'
+            - name: 'タスク 9:参照データ サービスを構成する'
               href: task-9-configuring-a-reference-data-service.md
-            - name: 'タスク 10: 参照データ サービスを使用して複合ドメインを構成する'
+            - name: 'タスク 10:参照データ サービスを使用して複合ドメインを構成する'
               href: task-10-configuring-composite-domain-to-use-reference-data-service.md
-            - name: 'タスク 11: ナレッジ ベースをパブリッシュする'
+            - name: 'タスク 11:ナレッジ ベースをパブリッシュする'
               href: task-11-publishing-the-knowledge-base.md
-            - name: 'タスク 12: ナレッジを検出する (ナレッジ検出)'
+            - name: 'タスク 12:ナレッジを検出する (ナレッジ検出)'
               href: task-12-discovering-knowledge-knowledge-discovery.md
-        - name: 'レッスン 2: Suppliers ナレッジ ベースを使用して仕入先データをクレンジングする'
+        - name: 'レッスン 2:Suppliers ナレッジ ベースを使用して仕入先データをクレンジングする'
           href: lesson-2-cleansing-supplier-data-using-the-suppliers-knowledge-base.md
           items:
-            - name: 'タスク 1: データ品質プロジェクトを作成する'
+            - name: 'タスク 1:データ品質プロジェクトを作成する'
               href: task-1-creating-a-data-quality-project.md
-            - name: 'タスク 2: DQS ドメインに Excel 列をマップする'
+            - name: 'タスク 2:DQS ドメインに Excel 列をマップする'
               href: task-2-mapping-excel-columns-to-dqs-domains.md
-            - name: 'タスク 3: Suppliers ナレッジ ベースに対してデータをクレンジングする'
+            - name: 'タスク 3:Suppliers ナレッジ ベースに対してデータをクレンジングする'
               href: task-3-cleansing-data-against-the-suppliers-knowledge-base.md
-            - name: 'タスク 4: 結果を管理および表示する'
+            - name: 'タスク 4:結果を管理および表示する'
               href: task-4-manaing-and-viewing-results.md
-            - name: 'タスク 5: Excel ファイルにクレンジングの結果をエクスポートする'
+            - name: 'タスク 5:Excel ファイルにクレンジングの結果をエクスポートする'
               href: task-5-exporting-cleansing-results-to-an-excel-file.md
-            - name: 'タスク 6: Cleanse Supplier List プロジェクトから値をインポートする'
+            - name: 'タスク 6:Cleanse Supplier List プロジェクトから値をインポートする'
               href: task-6-importing-values-from-the-cleanse-supplier-list-project.md
-        - name: 'レッスン 3: データを照合して仕入先の一覧から重複を削除する'
+        - name: 'レッスン 3:データを照合して仕入先の一覧から重複を削除する'
           href: lesson-3-matching-data-to-remove-duplicates-from-supplier-list.md
           items:
-            - name: 'タスク 1: 照合ポリシーを定義する'
+            - name: 'タスク 1:照合ポリシーを定義する'
               href: task-1-defining-a-matching-policy.md
-            - name: 'タスク 2: 照合ポリシーをテストおよびパブリッシュする'
+            - name: 'タスク 2:照合ポリシーをテストおよびパブリッシュする'
               href: task-2-testing-and-publishing-the-matching-policy.md
-            - name: 'タスク 3: 照合するデータ品質プロジェクトを作成および実行する'
+            - name: 'タスク 3:照合するデータ品質プロジェクトを作成および実行する'
               href: task-3-creating-and-running-a-data-quality-project-for-matching.md
-            - name: 'タスク 4: 照合アクティビティから Excel ファイルに結果をエクスポートする'
+            - name: 'タスク 4:照合アクティビティから Excel ファイルに結果をエクスポートする'
               href: task-4-exporting-the-results-from-matching-activity-to-an-excel-file.md
-        - name: 'レッスン 4: MDS に仕入先データを格納する'
+        - name: 'レッスン 4:MDS に仕入先データを格納する'
           href: lesson-4-storing-supplier-data-in-mds.md
           items:
-            - name: 'タスク 1: マスター データ マネージャーを使用して Suppliers モデルを作成する'
+            - name: 'タスク 1:マスター データ マネージャーを使用して Suppliers モデルを作成する'
               href: task-1-creating-suppliers-model-using-master-data-manager.md
-            - name: 'タスク 2: Excel 用 MDS アドインを使用して仕入先データを MDS にアップロードする'
+            - name: 'タスク 2:Excel 用 MDS アドインを使用して仕入先データを MDS にアップロードする'
               href: task-2-uploading-supplier-data-to-mds-using-mds-add-in-for-excel.md
-            - name: 'タスク 3: マスター データ マネージャーのデータを確認する'
+            - name: 'タスク 3:マスター データ マネージャーのデータを確認する'
               href: task-3-verifying-the-data-in-master-data-manager.md
-            - name: 'タスク 4 (オプション): 新しいデータ セットを結合、照合、およびパブリッシュする'
+            - name: 'タスク 4 (オプション):新しいデータ セットを結合、照合、およびパブリッシュする'
               href: task-4-optional-combining-matching-and-publishing-new-set-of-data.md
-            - name: 'タスク 5: Excel からドメイン ベースの属性を作成する'
+            - name: 'タスク 5:Excel からドメイン ベースの属性を作成する'
               href: task-5-creating-a-domain-based-attribute-from-excel.md
-            - name: 'タスク 6: マスター データ マネージャーを使用してドメイン ベースの属性が作成されていることを確認する'
+            - name: 'タスク 6:マスター データ マネージャーを使用してドメイン ベースの属性が作成されていることを確認する'
               href: task-6-verify-domain-based-attribute-master-data-manager.md
-            - name: 'タスク 7: Excel でマスター データ マネージャーを使用して行った更新を表示する'
+            - name: 'タスク 7:Excel でマスター データ マネージャーを使用して行った更新を表示する'
               href: task-7-viewing-updates-made-using-master-data-manager-in-excel.md
-            - name: 'タスク 8: Excel で State エンティティに新しい値を追加する'
+            - name: 'タスク 8:Excel で State エンティティに新しい値を追加する'
               href: task-8-adding-a-new-value-for-state-entity-in-excel.md
-            - name: 'タスク 9: マスター データ マネージャーを使用して派生階層を作成する'
+            - name: 'タスク 9:マスター データ マネージャーを使用して派生階層を作成する'
               href: task-9-creating-a-derived-hierarchy-using-master-data-manager.md
         - name: 'レッスン 5: SSIS を使用してクレンジングと照合を自動化する'
           href: lesson-5-automating-the-cleansing-and-matching-using-ssis.md
           items:
-            - name: 'タスク 1 (前提条件): MDS の仕入先データを削除する'
+            - name: 'タスク 1 (前提条件):MDS の仕入先データを削除する'
               href: task-1-prerequisite-removing-supplier-data-in-mds.md
-            - name: 'タスク 2 (オプション): マスター データ マネージャーを使用して MDS サブスクリプション ビューを作成する'
+            - name: 'タスク 2 (オプション):マスター データ マネージャーを使用して MDS サブスクリプション ビューを作成する'
               href: task-2-optional-creating-a-mds-subscription-view-using-master-data-manager.md
-            - name: 'タスク 3 (オプション): サブスクリプション ビューを確認する'
+            - name: 'タスク 3 (オプション):サブスクリプション ビューを確認する'
               href: task-3-optional-reviewing-the-subscription-views.md
-            - name: 'タスク 4: SQL Server Data Tools を使用して SSIS プロジェクトを作成する'
+            - name: 'タスク 4:SQL Server Data Tools を使用して SSIS プロジェクトを作成する'
               href: task-4-creating-an-ssis-project-using-sql-server-data-tools.md
-            - name: 'タスク 5: データ フロー タスクを追加する'
+            - name: 'タスク 5:データ フロー タスクを追加する'
               href: task-5-adding-data-flow-task.md
-            - name: 'タスク 6: Excel ソースをデータ フローに追加する'
+            - name: 'タスク 6:Excel ソースをデータ フローに追加する'
               href: task-6-adding-excel-source-to-the-data-flow.md
-            - name: 'タスク 7: DQS クレンジング変換をデータ フローに追加する'
+            - name: 'タスク 7:DQS クレンジング変換をデータ フローに追加する'
               href: task-7-adding-dqs-cleansing-transform-to-the-data-flow.md
-            - name: 'タスク 8: 条件分割変換を追加してクレンジング出力を分割する'
+            - name: 'タスク 8:条件分割変換を追加してクレンジング出力を分割する'
               href: task-8-adding-conditional-split-transform-to-split-cleansing-output.md
-            - name: 'タスク 9: 全体結合変換を追加して適切なレコードと修正済みレコードを結合する'
+            - name: 'タスク 9:全体結合変換を追加して適切なレコードと修正済みレコードを結合する'
               href: task-9-adding-union-all-transform-to-combine-correct-and-corrected-records.md
-            - name: 'タスク 10: あいまいグループ化変換を追加して重複を識別する'
+            - name: 'タスク 10:あいまいグループ化変換を追加して重複を識別する'
               href: task-10-adding-fuzzy-group-transform-to-identify-duplicates.md
-            - name: 'タスク 11: 条件分割変換を追加して重複をフィルターする'
+            - name: 'タスク 11:条件分割変換を追加して重複をフィルターする'
               href: task-11-adding-conditional-split-transform-to-filter-duplicates.md
-            - name: 'タスク 12: 派生列変換を追加して MDS で必要な列を追加する'
+            - name: 'タスク 12:派生列変換を追加して MDS で必要な列を追加する'
               href: task-12-adding-derived-column-transform-to-add-columns-required-by-mds.md
-            - name: 'タスク 13: データを書き込む OLE DB 変換先を MDS ステージング テーブルに追加する'
+            - name: 'タスク 13:データを書き込む OLE DB 変換先を MDS ステージング テーブルに追加する'
               href: task-13-adding-ole-db-destination-to-write-data-to-mds-staging-table.md
-            - name: 'タスク 14: SQL 実行タスクを制御フローに追加して MDS のストアド プロシージャを実行する'
+            - name: 'タスク 14:SQL 実行タスクを制御フローに追加して MDS のストアド プロシージャを実行する'
               href: task-14-add-execute-to-control-flow-run-mds-stored-procedure.md
-            - name: 'タスク 15: SSIS プロジェクトをビルドおよび実行する'
+            - name: 'タスク 15:SSIS プロジェクトをビルドおよび実行する'
               href: task-15-building-and-running-the-ssis-project.md
-            - name: 'タスク 16: マスター データ マネージャーを確認する'
+            - name: 'タスク 16:マスター データ マネージャーを確認する'
               href: task-16-verifying-with-master-data-manager.md
-            - name: 'タスク 17: SSIS パッケージによって作成された DQS クレンジング プロジェクトを確認する'
+            - name: 'タスク 17:SSIS パッケージによって作成された DQS クレンジング プロジェクトを確認する'
               href: task-17-reviewing-dqs-cleansing-project-created-by-the-ssis-package.md
         - name: まとめ
           href: conclusion.md

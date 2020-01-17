@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 35033910-623b-449a-a57d-baff3ed5ab8f
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 902d077cfb46926ce9eade6ea9a99c2df0730916
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 5be99b4f43669a14f948cf10ee0b91028907ec0c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47747220"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67933363"
 ---
 # <a name="count-property-example-vb"></a>Count プロパティの例 (VB)
 この例では、[カウント](../../../ado/reference/ado-api/count-property-ado.md)で 2 つのコレクションのプロパティ、***従業員***データベース。 プロパティは、各コレクション内のオブジェクトの数を取得し、これらのコレクションを列挙するループの上限を設定します。 別の方法を使用せずにこれらのコレクションを列挙するために、**カウント**プロパティを使用すること`For Each...Next`ステートメント。  
@@ -97,5 +96,5 @@ End Sub
 'EndCountVB  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [Count プロパティ (ADO)](../../../ado/reference/ado-api/count-property-ado.md)

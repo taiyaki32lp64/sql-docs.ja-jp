@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 089b7ca7-684f-4259-8032-5bd1ecc54426
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: fcba9515535e32557470b75267a0e99976a18595
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a676bf5eb3d8d98f1b2eb9367aa8ad56f0da209d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47681626"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67931253"
 ---
 # <a name="refresh-method-ado"></a>Refresh メソッド (ADO)
 プロバイダーをコレクションから、使用可能なオブジェクトを反映するように、特定のオブジェクトを更新します。  
@@ -51,7 +50,7 @@ collection.Refresh
 ### <a name="fields"></a>フィールド  
  使用して、**更新**メソッドを[フィールド](../../../ado/reference/ado-api/fields-collection-ado.md)コレクションが表示される影響を与えません。 基になるデータベース構造からの変更を取得する、いずれかを使用する必要があります、 [Requery](../../../ado/reference/ado-api/requery-method.md)メソッドや、[レコード セット](../../../ado/reference/ado-api/recordset-object-ado.md)オブジェクトは、ブックマークをサポートしていません、 [MoveFirst](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)メソッド。  
   
-### <a name="properties"></a>[プロパティ]  
+### <a name="properties"></a>Properties  
  使用して、**更新**メソッドを**プロパティ**一部のオブジェクトのコレクションが、プロバイダーを公開する動的プロパティのコレクションを設定します。 これらのプロパティは、ADO がサポートする組み込みのプロパティを超える、プロバイダーに固有の機能に関する情報を提供します。  
   
 ## <a name="applies-to"></a>適用対象  
@@ -66,7 +65,7 @@ collection.Refresh
 |[プロパティのコレクション](../../../ado/reference/ado-api/properties-collection-ado.md)|[Tables コレクション](../../../ado/reference/adox-api/tables-collection-adox.md)|[ユーザー コレクション](../../../ado/reference/adox-api/users-collection-adox.md)|  
 |[Views コレクション](../../../ado/reference/adox-api/views-collection-adox.md)|||  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [Refresh メソッドの例 (VB)](../../../ado/reference/ado-api/refresh-method-example-vb.md)   
  [Refresh メソッドの例 (vc++)](../../../ado/reference/ado-api/refresh-method-example-vc.md)   
  [Count プロパティ (ADO)](../../../ado/reference/ado-api/count-property-ado.md)   

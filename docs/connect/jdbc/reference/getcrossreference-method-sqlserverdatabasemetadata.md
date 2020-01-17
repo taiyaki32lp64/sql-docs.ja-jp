@@ -1,5 +1,5 @@
 ---
-title: getCrossReference メソッド (SQLServerDatabaseMetaData) |Microsoft Docs
+title: Getクロスバー Reference メソッド (SQLServerDatabaseMetaData) |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: 099dd0bf-b017-479d-9696-f5b06f4c6bf9
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: bae60cb90c0459b5a221f88f463cfda0a520f47e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: f23da4d83217fbed39e6dddacfe92541eae0db23
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47600860"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67984217"
 ---
 # <a name="getcrossreference-method-sqlserverdatabasemetadata"></a>getCrossReference メソッド (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -72,7 +71,7 @@ public java.sql.ResultSet getCrossReference(java.lang.String cat1,
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- この getCrossReference メソッドは、java.sql.DatabaseMetaData インターフェイスで getCrossReference メソッドによって指定されます。  
+ この Getクロスバー参照メソッドは、java メタデータインターフェイスの Getクロスリファレンスメソッドによって指定されます。  
   
  getCrossReference メソッドによって返される結果セットには、次の情報が含まれます。  
   

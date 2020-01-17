@@ -21,17 +21,20 @@ helpviewer_keywords:
 - counting extracted items
 - Term Lookup transformation
 ms.assetid: 3c0fa2f8-cb6a-4371-b184-7447be001de1
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: 9d3d52a5a1f63933bc383601a650bf8e044d22dc
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 61dad85fb7857b8694712f79b860f58d88e7d650
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52522718"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71291202"
 ---
 # <a name="term-lookup-transformation"></a>用語参照変換
+
+[!INCLUDE[ssis-appliesto](../../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   用語参照変換は、変換入力列内のテキストから抽出された用語を、参照テーブルの用語と照合します。 次に、入力データセットで参照テーブル内の用語が検出された回数をカウントし、その数を参照テーブルの用語と共に変換出力の列に書き込みます。 この変換は、単語の使用頻度を示す統計付きのユーザー定義の単語一覧を、入力テキストから作成する場合に便利です。  
   
  用語参照変換は、用語抽出変換と同じ次の方法を使用して、参照を実行する前に入力列のテキストから単語を抽出します。  
@@ -60,13 +63,13 @@ ms.locfileid: "52522718"
   
  参照セット内で重複している用語が参照項目に含まれる場合、つまりサブ用語が複数の参照レコード内に存在する場合、用語参照変換は参照結果を 1 つだけ返します。 次の例は、重複するサブ用語が参照項目に含まれる場合の結果を示しています。 この場合、重複するサブ用語は *Windows*で、2 つの参照用語内に存在します。 ただし、変換は結果を 2 つ返さず、参照用語の 1 つ *Windows*のみを返します。 2 番目の参照用語である *Windows 7 Professional*は返されません。  
   
-|アイテム|ReplTest1|  
+|アイテム|[値]|  
 |----------|-----------|  
 |入力用語|Windows 7 Professional|  
 |参照用語|Windows, Windows 7 Professional|  
 |[出力]|Windows|  
   
- 用語参照変換は、特殊文字が含まれる名詞および名詞句を照合でき、参照テーブルのデータにもこれらの文字を含めることができます。 特殊文字とは、%、@、&、$、#、\*、:、;、.、**,**、!、?、\<、>、+、=、^、~、|、\\、/、(、)、[、]、{、}、“、‘ です。  
+ 用語参照変換は、特殊文字が含まれる名詞および名詞句を照合でき、参照テーブルのデータにもこれらの文字を含めることができます。 特殊文字とは、%、@、&、$、#、\*、:、;、.、 **,** 、!、?、\<、>、+、=、^、~、|、\\、/、(、)、[、]、{、}、“、‘ です。  
   
 ## <a name="data-types"></a>データ型  
  用語参照変換で使用できる列は、DT_WSTR または DT_NTEXT データ型のどちらかの列のみです。 列にテキストが含まれていても、これらのデータ型ではない場合、データ変換の変換では、DT_WSTR または DT_NTEXT データ型の列をデータ フローに追加し、列の値を新しい列にコピーできます。 その後、データ変換の変換からの出力を、用語参照変換への入力として使用できます。 詳細については、「 [Data Conversion Transformation](../../../integration-services/data-flow/transformations/data-conversion-transformation.md)」を参照してください。  
@@ -107,7 +110,7 @@ ms.locfileid: "52522718"
 ## <a name="term-lookup-transformation-editor-term-lookup-tab"></a>[用語参照変換エディター] ([用語参照] タブ)
   **[用語参照変換エディター]** ダイアログ ボックスの **[用語参照]** タブを使用すると、入力列を参照テーブルの参照列にマップし、各出力列の別名を提供できます。  
   
-### <a name="options"></a>[変数]  
+### <a name="options"></a>オプション  
  **使用できる入力列**  
  チェック ボックスを使用して、出力にそのまま渡す入力列を選択します。 **[使用できる参照列]** の一覧に入力列をドラッグして、入力列を参照テーブル内の参照列にマップします。 入力列と参照列は、DT_NTEXT または DT_WSTR のサポートされるデータ型が同じである必要があります。 マッピングする行を選択して右クリックし、 [[リレーションシップの作成]](../../../integration-services/data-flow/transformations/create-relationships.md) ダイアログ ボックスでマッピングを編集します。  
   
@@ -126,7 +129,7 @@ ms.locfileid: "52522718"
 ## <a name="term-lookup-transformation-editor-reference-table-tab"></a>[用語参照変換エディター] ([参照テーブル] タブ)
   **[用語参照変換エディター]** ダイアログ ボックスの **[参照テーブル]** タブを使用すると、参照テーブルへの接続を指定できます。  
   
-### <a name="options"></a>[変数]  
+### <a name="options"></a>オプション  
  **OLE DB 接続マネージャー**  
  既存の接続マネージャーを一覧から選択するか、 **[新規作成]** をクリックして新しい接続を作成します。  
   
@@ -142,7 +145,7 @@ ms.locfileid: "52522718"
 ## <a name="term-lookup-transformation-editor-advanced-tab"></a>[用語参照変換エディター] ([詳細設定] タブ)
   **[用語参照変換エディター]** ダイアログ ボックスの **[詳細設定]** タブを使用すると、参照で大文字と小文字を区別するかどうかを指定できます。  
   
-### <a name="options"></a>[変数]  
+### <a name="options"></a>オプション  
  **[用語参照で大文字と小文字を区別する]**  
  参照で大文字と小文字が区別されるかどうかを示します。 既定値は **False**です。  
   

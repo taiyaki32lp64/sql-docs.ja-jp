@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 ms.assetid: d52f68e9-2ba7-4bff-9053-4089e5164ab4
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: f88222768c3194543ec2abd5821b53c67f3b04fe
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: 31665fc3512314f197ab6371ec17705332c4e55b
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56292980"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66104830"
 ---
 # <a name="specify-consistent-colors-across-multiple-shape-charts-report-builder-and-ssrs"></a>複数の図形グラフでの色の統一 (レポート ビルダーおよび SSRS)
   図形以外のグラフでは、新しい色は、グラフの系列のインデックスに基づいてパレットから選択されます。 たとえば、グラフの最初の系列は、パレット内の最初の色にマップされます。 しかし、この動作は図形グラフでは異なります。 図形グラフの場合、パレットの各色は、データセット内のデータ ポイントにマップされます。 たとえば、データ ポイント 1 はパレットの最初の色にマップされ、データ ポイント 2 は 2 番目の色にマップされます。  
@@ -66,7 +65,7 @@ ms.locfileid: "56292980"
   
 4.  図形グラフ上を右クリックし、 **[系列のプロパティ]** を選択します。  
   
-5.  **[塗りつぶし]** の **式** (*[fx]*) ボタンをクリックして、 **Color** プロパティの式を編集します。  
+5.  **[塗りつぶし]** の **式** ( *[fx]* ) ボタンをクリックして、 **Color** プロパティの式を編集します。  
   
 6.  次の式を入力します。ここで、"MyCategoryField" は、 **[カテゴリ グループ]** 領域に表示されるフィールドです。  
   

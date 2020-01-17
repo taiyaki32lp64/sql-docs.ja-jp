@@ -2,20 +2,20 @@
 title: EditionName プロパティ (WMI MSReportServer_Instance) | Microsoft Docs
 ms.date: 03/01/2017
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: wmi-provider-library-reference
 ms.topic: conceptual
 helpviewer_keywords:
 - EditionName property
 ms.assetid: 983a5f94-f3c7-4b3a-943e-35fcb9822cc6
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 05dd5c1adf3082fb5db5527bc8681f7f92a2427e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 71247b471b9aa092f6e7c581d891355190006800
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47683494"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65571101"
 ---
 # <a name="msreportserverinstance-properties---editionname"></a>MSReportServer_Instance プロパティ - EditionName
   人間が判読できる、レポート サーバーのエディション名を返します。 読み取り専用です。  

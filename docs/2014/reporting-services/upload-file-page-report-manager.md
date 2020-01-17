@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 ms.assetid: 7bb3166f-9374-4449-b66a-ffb77298507d
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: d83f8d097c74b0a7171d0e91e1d36ad716a00415
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 1100baa3cd72a04d208b2076d91ca4efed7d38e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56023543"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66098866"
 ---
 # <a name="upload-file-page-report-manager"></a>[ファイルのアップロード] ページ (レポート マネージャー)
   ファイル システムからレポート サーバー データベースにファイルをパブリッシュするには、[ファイルのアップロード] ページを使用します。 アップロードされたファイルは、レポート サーバーのフォルダー階層に、アイテムとして表示されます。  

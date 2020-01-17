@@ -12,15 +12,14 @@ helpviewer_keywords:
 - Registered Servers [SQL Server], help
 - SQL Server Management Studio Help [SQL Server], registered servers
 ms.assetid: 59f76b28-ba78-4a1a-b5d5-8b581f30114d
-author: stevestein
-ms.author: sstein
-manager: craigg
-ms.openlocfilehash: ac157acea3b64b81bef5eb505b4c9b0d3525ba11
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: cf08f76b0df0b3624aa1450b2463599b31fb85fa
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47674950"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68266142"
 ---
 # <a name="registered-servers-f1-help"></a>[登録済みサーバー] の F1 ヘルプ
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -118,7 +117,7 @@ ms.locfileid: "47674950"
   
 ### <a name="options"></a>および  
  **サーバーの種類**  
- [登録済みサーバー] でサーバーを登録する場合は、 **[サーバーの種類]** ボックスは読み取り専用になっており、そのサーバーは [登録済みサーバー] に表示されるサーバーの種類に一致します。 別の種類のサーバーを登録するには、新しいサーバーの登録を開始する前に、 **[登録済みサーバー]**, **[データベース エンジン]**, **[分析サーバー]**, **[Reporting Services]**、**[SQL Server Compact]** **[Edition]**、または **[Integration Services]** をクリックします。  
+ [登録済みサーバー] でサーバーを登録する場合は、 **[サーバーの種類]** ボックスは読み取り専用になっており、そのサーバーは [登録済みサーバー] に表示されるサーバーの種類に一致します。 別の種類のサーバーを登録するには、新しいサーバーの登録を開始する前に、 **[登録済みサーバー]** , **[データベース エンジン]** , **[分析サーバー]** , **[Reporting Services]** 、 **[SQL Server Compact]** **[Edition]** 、または **[Integration Services]** をクリックします。  
   
  **サーバー名**  
  接続先のサーバーを選択します。 既定では、最後に接続していたサーバーが表示されます。  

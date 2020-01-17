@@ -19,16 +19,15 @@ helpviewer_keywords:
 ms.assetid: 35f0384f-7a6d-41b1-9461-f1406d68f317
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 1f62185fc99512a966789f1b878b23f90264fba9
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 8a5358b75da914919cb4db567dc7eae6ad8617f1
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47721280"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68118107"
 ---
-# <a name="sysassemblytypes-transact-sql"></a>sys.assembly_types (Transact-SQL)
+# <a name="sysassemblytypes-transact-sql"></a>sys.assembly_types (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-pdw-md.md)]
 
   CLR アセンブリによって定義されるユーザー定義型ごとに 1 行のデータを保持します。 次**sys.assembly_types**継承された列の一覧に表示されます (を参照してください[sys.types &#40;TRANSACT-SQL&#41;](../../relational-databases/system-catalog-views/sys-types-transact-sql.md)) 後**rule_object_id**します。  
@@ -37,10 +36,10 @@ ms.locfileid: "47721280"
 |-----------------|---------------|-----------------|  
 |**assembly_id**|**int**|この型の作成元であるアセンブリの ID です。|  
 |**assembly_class**|**sysname**|この型を定義しているアセンブリ内のクラスの名前です。|  
-|**is_binary_ordered**|**bit**|この型のバイトの並べ替えは、この型での比較演算子を使用した並べ替えと同じです。|  
-|**is_fixed_length**|**bit**|この型の長さは、常に max_length と同じです。|  
-|**prog_id**|**nvarchar(40)**|COM に公開される型の ProgID です。|  
-|**assembly_qualified_name**|**nvarchar (4000)**|アセンブリの修飾された型名です。 この名前は、Type.GetType() に渡すのに適した形式になっています。|  
+|**is_binary_ordered**|**bit**|この型のバイトの並べ替えは、型の比較演算子を使用した並べ替えと同じです。|  
+|**is_fixed_length**|**bit**|型の長さは、常に max_length と同じです。|  
+|**prog_id**|**nvarchar(40)**|COM に公開される型の progID|  
+|**assembly_qualified_name**|**nvarchar (4000)**|アセンブリ修飾型名。 名前は、Type.GetType() に渡すに適した形式では。|  
   
 ## <a name="permissions"></a>アクセス許可  
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] 詳細については、「 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)」を参照してください。  

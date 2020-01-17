@@ -10,21 +10,20 @@ ms.topic: conceptual
 helpviewer_keywords:
 - xsd:simpleType declarations
 ms.assetid: 557b972d-3af9-40bf-8382-72b05c9de1c1
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: 680be158a469d57deadf916ab2a1e5fc0dfcd725
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: MightyPen
+ms.author: genemi
+ms.openlocfilehash: 4c19a71b12b16ddd408e7cdd356debc5ec87de43
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47665359"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68096980"
 ---
 # <a name="values-for-ltxsdsimpletypegt-declarations"></a>&lt;xsd:simpleType&gt; 宣言の値
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
   次の表に、認識されるすべての XSD 単純型を列挙して、適用される制限の概要を示します。  
   
- また、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、**\<xsd:simpleType>** 宣言で NaN 値がサポートされません。 NaN 値を含むスキーマはサーバーで拒否されます。  
+ また、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、 **\<xsd:simpleType>** 宣言で NaN 値がサポートされません。 NaN 値を含むスキーマはサーバーで拒否されます。  
   
 |単純型|制限事項|  
 |-----------------|----------------|  

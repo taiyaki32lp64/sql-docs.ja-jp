@@ -4,23 +4,22 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.sorttransformation.f1
 helpviewer_keywords:
 - Sort Transformation Editor
 ms.assetid: 8ae23970-49a9-4d6d-9f15-c7074783347c
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: d57129a0997093aa351b83b09f87ee7d38bb2a25
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: becd97e843909a5d7bc181dfdf1060988836ee3b
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48178312"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66055492"
 ---
 # <a name="sort-transformation-editor"></a>並べ替え変換エディター
   **[並べ替え変換エディター]** ダイアログ ボックスを使用すると、並べ替える列を選択し、並べ替え順を設定して、重複する部分を削除するかどうかを指定できます。  
@@ -55,7 +54,7 @@ ms.locfileid: "48178312"
  **[重複した並べ替え値を含む行を削除する]**  
  指定された文字列比較オプションに基づいて、重複した列を変換出力にコピーするか、すべての重複部分に対して 1 つのエントリを作成するかを示します。  
   
-## <a name="see-also"></a>参照  
- [Integration Services のエラーとメッセージのリファレンス](../../2014/integration-services/integration-services-error-and-message-reference.md)  
+## <a name="see-also"></a>関連項目  
+ [Integration Services のエラーおよびメッセージのリファレンス](../../2014/integration-services/integration-services-error-and-message-reference.md)  
   
   

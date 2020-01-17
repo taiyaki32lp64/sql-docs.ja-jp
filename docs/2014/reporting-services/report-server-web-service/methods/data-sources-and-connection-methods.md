@@ -4,24 +4,22 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- docset-sql-devref
-- reporting-services-native
+ms.technology: reporting-services
 ms.topic: reference
 helpviewer_keywords:
 - connections [Reporting Services], data sources
 - reports [Reporting Services], data
 - data sources [Reporting Services], methods
 ms.assetid: 50999b52-fc7c-4333-9fb0-d04c37a4c90f
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: ac2c57dbab3dd75ab44dc11d7e20ba363d18f059
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 43f68015c7488c1fcf07ccff612950038f873855
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56022553"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62518955"
 ---
 # <a name="data-sources-and-connection-methods"></a>データ ソースと接続のメソッド
   これらのメソッドを使用して、データ ソースの接続と資格情報を設定および管理できます。  

@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 38331bc2-4391-4f9f-aa83-9873dad605a0
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 21f88cccf3e9984f425c5e8207e6f9127d40ddc7
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ba15ea2e756e6c83b2fcdb6cf56c39511bd95296
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47806230"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67992753"
 ---
 # <a name="sqlsrvexecute"></a>sqlsrv_execute
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -47,7 +46,7 @@ sqlsrv_execute( resource $stmt)
 ブール値: ステートメントが正常に実行された場合、 **true** です。 それ以外の場合は、 **false**です。  
   
 ## <a name="example"></a>例  
-次の例では、*AdventureWorks* データベースの [Sales.SalesOrderDetail](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) テーブルのフィールドを更新するステートメントを実行します。 この例では、ローカル コンピューターに SQL Server および AdventureWorks データベースがインストールされていることを前提にしています。 コマンド ラインからこの例を実行すると、すべての出力はコンソールに書き込まれます。  
+次の例では、 *AdventureWorks* データベースの [Sales.SalesOrderDetail](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) テーブルのフィールドを更新するステートメントを実行します。 この例では、ローカル コンピューターに SQL Server および AdventureWorks データベースがインストールされていることを前提にしています。 コマンド ラインからこの例を実行すると、すべての出力はコンソールに書き込まれます。  
   
 ```  
 <?php  

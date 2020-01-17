@@ -12,12 +12,12 @@ ms.assetid: f69f8214-5af1-4769-878b-117ad6eaff52
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 97e10f93b2a61c1f2f096b1de9205e2bd22406b3
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 9aa14c99113f00339efcc0b584a6677042679b5a
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53355159"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62912987"
 ---
 # <a name="mssqlserver825"></a>MSSQLSERVER_825
     
@@ -33,7 +33,7 @@ ms.locfileid: "53355159"
 |メッセージ テキスト|ファイル '%ls' のオフセット %#016I64x での読み取りは、読み取りに %d 回失敗 (エラー: %ls) した後で成功しました。 SQL Server エラー ログとシステム イベント ログ内の別のメッセージで詳細情報が報告されることもあります。 このエラー状態はデータベースの整合性を損なうので、解決する必要があります。 完全なデータベース整合性確認 (DBCC CHECKDB) を完了させてください。 このエラーには多くの要因があります。詳細については、SQL Server オンライン ブックを参照してください。|  
   
 ## <a name="explanation"></a>説明  
- このメッセージは、読み取り操作が少なくとも 1 回は再実行されたことを示し、ディスク ハードウェアに大きな問題があることを示しています。 このメッセージは、現時点では [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の問題を示していませんが、ディスクの問題を解決しないと、データの損失やデータベースの破損につながる可能性があります。 システム イベント ログに、問題の診断に役立つ関連するイベントが含まれている場合があります。 I/O エラーの詳細については、「[Microsoft SQL Server I/O Basics, Chapter 2](https://go.microsoft.com/fwlink/?LinkId=69370)」 (Microsoft SQL Server I/O の基礎 (第 2 章)) を参照してください。  
+ このメッセージは、読み取り操作が少なくとも 1 回は再実行されたことを示し、ディスク ハードウェアに大きな問題があることを示しています。 このメッセージは、現時点では [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の問題を示していませんが、ディスクの問題を解決しないと、データの損失やデータベースの破損につながる可能性があります。 システム イベント ログに、問題の診断に役立つ関連するイベントが含まれている場合があります。 I/O エラーの詳細については、「[Microsoft SQL Server I/O Basics, Chapter 2](/previous-versions/sql/sql-server-2005/administrator/cc917726(v=technet.10))」 (Microsoft SQL Server I/O の基礎 (第 2 章)) を参照してください。  
   
 ## <a name="user-action"></a>ユーザーの操作  
  次の操作を行って、原因となっている問題を特定し、解決してください。  

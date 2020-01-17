@@ -7,15 +7,15 @@ ms.reviewer: ''
 ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: ae466627-cc36-4460-a234-fe060f6f01c0
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 4c5cfdc3a7afa210b88bbe0410d31b5b655d95a7
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: aaccdd5d4f84f5bdba240fadc7d4d0729476f215
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56017783"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65489147"
 ---
 # <a name="task-5-adding-data-flow-task"></a>タスク 5:データ フロー タスクを追加する
   ここでは、SSIS パッケージの制御フローにデータ フロー タスクを追加します。  

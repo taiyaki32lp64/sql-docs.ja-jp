@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: c1de9804-1f27-4854-8985-3385fadcbebb
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: a22148e21a8a4efd451bb7dac2a9a05ea2873229
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 0e0eee2cafe95e04ffd5c697667cac2701ee0b80
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47806122"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67953030"
 ---
 # <a name="getclob-method-javalangstring-sqlserverresultset"></a>getClob (java.lang.String) メソッド (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -47,7 +46,7 @@ public java.sql.Clob getClob(java.lang.String colName)
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- この getClob メソッドは、java.sql.ResultSet インターフェイスの getClob メソッドによって指定されます。  
+ この getClob メソッドは、java.sql.ResultSet インターフェイスの getClob メソッドで規定されています。  
   
 ## <a name="see-also"></a>参照  
  [getClob メソッド &#40;SQLServerResultSet&#41;](../../../connect/jdbc/reference/getclob-method-sqlserverresultset.md)   

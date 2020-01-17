@@ -30,16 +30,15 @@ helpviewer_keywords:
 - densities [SQL Server]
 - displaying distribution statistics
 ms.assetid: 12be2923-7289-4150-b497-f17e76a50b2e
-author: uc-msft
+author: pmasl
 ms.author: umajay
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 234d124260e007cd43a52cc9baa8d2475d1db91a
-ms.sourcegitcommit: 1f53b6a536ccffd701fc87e658ddac714f6da7a2
+ms.openlocfilehash: 327b084471155c9e7d8451fc8dceec8e4c00496f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/10/2019
-ms.locfileid: "54206338"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68116478"
 ---
 # <a name="dbcc-showstatistics-transact-sql"></a>DBCC SHOW_STATISTICS (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -87,7 +86,7 @@ DBCC SHOW_STATISTICS ( table_name , target )
  NO_INFOMSGS  
  重大度レベル 0 から 10 のすべての情報メッセージを表示しないようにします。  
   
- STAT_HEADER | DENSITY_VECTOR | HISTOGRAM | STATS_STREAM [ **,**_n_ ]  
+ STAT_HEADER | DENSITY_VECTOR | HISTOGRAM | STATS_STREAM [ **,** _n_ ]  
  これらのオプションを 1 つ以上指定すると、ステートメントによって返される結果セットが、指定のオプションに合わせて制限されます。 オプションを指定しないと、すべての統計情報が返されます。  
   
  STATS_STREAM は[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
@@ -104,10 +103,10 @@ DBCC SHOW_STATISTICS ( table_name , target )
 |手順|ヒストグラムの区間の数。 各区間の範囲には、上限の列値までの列値の範囲が含まれます。 ヒストグラムの区間は、統計の最初のキー列に基づいて定義されます。 区間の最大数は 200 です。|  
 |[密度]|ヒストグラムの境界値を除く、統計オブジェクトの最初のキー列のすべての値について、"1 / *distinct values* " として計算されます。 この Density の値はクエリ オプティマイザーでは使用されません。[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] より前のバージョンとの互換性を維持するために表示されます。|  
 |[キーの平均の長さ]|統計オブジェクトのすべてのキー列の、値ごとの平均バイト数。|  
-|String Index|Yes の場合は、統計オブジェクトに文字列の統計概要が含まれています。これにより、LIKE 演算子を使用するクエリ述語 (`WHERE ProductName LIKE '%Bike'` など) に対するカーディナリティの推定が向上します。 文字列の統計概要は、ヒストグラムとは別に格納されます。この統計は、統計オブジェクトの最初のキー列について、その型が **char**、**varchar**、**nchar**、**nvarchar**、**varchar(max)**、**nvarchar(max)**、**text**、**ntext** である場合に作成されます。|  
+|String Index|Yes の場合は、統計オブジェクトに文字列の統計概要が含まれています。これにより、LIKE 演算子を使用するクエリ述語 (`WHERE ProductName LIKE '%Bike'` など) に対するカーディナリティの推定が向上します。 文字列の統計概要は、ヒストグラムとは別に格納されます。この統計は、統計オブジェクトの最初のキー列について、その型が **char**、**varchar**、**nchar**、**nvarchar**、**varchar(max)** 、**nvarchar(max)** 、**text**、**ntext** である場合に作成されます。|  
 |[フィルター式]|統計オブジェクトに含まれるテーブル行のサブセットの述語。 NULL = フィルター選択されていない統計情報です。 フィルター選択された述語の詳細については、「[フィルター選択されたインデックスの作成](../../relational-databases/indexes/create-filtered-indexes.md)」を参照してください。 フィルター選択された統計情報の詳細については、「[統計情報](../../relational-databases/statistics/statistics.md)」を参照してください。|  
 |[フィルター処理なしの行数]|フィルター式を適用する前のテーブル内の行の合計数。 [フィルター式] が NULL の場合、[フィルター処理なしの行数] は [行数] と同じになります。|  
-|永続化されたサンプルのパーセンテージ|サンプリングの割合を明示的に指定しない統計情報の更新に使用される永続化されたサンプルのパーセンテージです。 値がゼロの場合、永続化されたサンプルのパーセンテージがこの統計に設定されていません。<br /><br /> **適用対象:**[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1 CU4| 
+|永続化されたサンプルのパーセンテージ|サンプリングの割合を明示的に指定しない統計情報の更新に使用される永続化されたサンプルのパーセンテージです。 値がゼロの場合、永続化されたサンプルのパーセンテージがこの統計に設定されていません。<br /><br /> **適用対象:** [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1 CU4| 
   
 次の表は、DENSITY_VECTOR を指定した場合に結果セットに返される列を示しています。
   
@@ -178,7 +177,7 @@ DBCC SHOW_STATISTICS では、次のいずれかのメンバーシップまた�
 ## <a name="limitations-and-restrictions-for-includesssdwincludessssdw-mdmd-and-includesspdwincludessspdw-mdmd"></a>[!INCLUDE[ssSDW](../../includes/sssdw-md.md)] および [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] の制限事項と制約事項  
 DBCC SHOW_STATISTICS では、コントロールのノード レベルでのシェル データベースに格納されている統計情報を表示します。 計算ノード上で [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] によって自動的に作成される統計情報は表示されません。
   
-DBCC show_statistics では、テーブルの外部ではサポートされていません。
+DBCC SHOW_STATISTICS は、外部テーブルではサポートされません。
   
 ## <a name="examples-includessnoversionincludesssnoversion-mdmd-and-includesssdsincludessssds-mdmd"></a>例: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] および [!INCLUDE[ssSDS](../../includes/sssds-md.md)]  
 ### <a name="a-returning-all-statistics-information"></a>A. すべての統計情報を返す  

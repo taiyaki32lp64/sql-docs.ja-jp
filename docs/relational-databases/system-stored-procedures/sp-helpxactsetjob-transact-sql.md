@@ -1,5 +1,5 @@
 ---
-title: sp_helpxactsetjob (TRANSACT-SQL) |Microsoft Docs
+title: sp_helpxactsetjob (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -15,18 +15,17 @@ helpviewer_keywords:
 ms.assetid: 242cea3e-e6ac-4f84-a072-b003b920eb33
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 7402fcc825e6f537703268c1fd3fead9c88b1f5e
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: 0fdd70480a63e334aa3e178d19287b30937e2f53
+ms.sourcegitcommit: d00ba0b4696ef7dee31cd0b293a3f54a1beaf458
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53204681"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "74056793"
 ---
-# <a name="sphelpxactsetjob-transact-sql"></a>sp_helpxactsetjob (Transact-SQL)
+# <a name="sp_helpxactsetjob-transact-sql"></a>sp_helpxactsetjob (Transact-sql)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Oracle パブリッシャーに対する Xactset ジョブの情報を表示します。 このストアド プロシージャは、ディストリビューター側で任意のデータベースについて実行されます。  
+  Oracle パブリッシャーの Xactset ジョブに関する情報を表示します。 このストアドプロシージャは、ディストリビューター側で任意のデータベースに対して実行されます。  
   
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -38,40 +37,39 @@ sp_helpxactsetjob [ @publisher = ] 'publisher'
 ```  
   
 ## <a name="arguments"></a>引数  
- [**@publisher** =] **'***パブリッシャー***'**  
- 以外の名前を指定します[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]パブリッシャーは、ジョブが属しています。 *パブリッシャー*は**sysname**、既定値はありません。  
+`[ @publisher = ] 'publisher'` は、ジョブが属する [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 以外のパブリッシャーの名前です。 *パブリッシャー* は **sysname** 、既定値はありません。  
   
 ## <a name="result-sets"></a>結果セット  
   
-|列名|データ型|説明|  
+|列名|データ型|[説明]|  
 |-----------------|---------------|-----------------|  
-|**仕事番号**|**int**|Oracle のジョブ番号です。|  
-|**lastdate**|**varchar(22)**|ジョブが最後に実行された日付です。|  
-|**thisdate**|**varchar(22)**|変更時刻です。|  
-|**nextdate**|**varchar(22)**|ジョブを次に実行する日付です。|  
-|**分割**|**varchar (1)**|ジョブが壊れているかどうかを示すフラグです。|  
-|**間隔**|**varchar(200)**|ジョブの間隔です。|  
-|**エラー**|**int**|ジョブの失敗の回数です。|  
-|**xactsetjobwhat**|**varchar(200)**|ジョブによって実行されるプロシージャの名前です。|  
-|**xactsetjob**|**varchar (1)**|ジョブの状態です。次のいずれかになります。<br /><br /> **1** -ジョブが有効にします。<br /><br /> **0** -ジョブは無効です。|  
+|**jobnumber**|**int**|Oracle ジョブ番号。|  
+|**lastdate**|**varchar(22)**|ジョブが最後に実行された日付。|  
+|**この日付**|**varchar(22)**|変更時刻です。|  
+|**nextdate**|**varchar(22)**|ジョブが実行される次の日。|  
+|**分解**|**varchar (1)**|ジョブが中断されたかどうかを示すフラグです。|  
+|**定期的**|**varchar(200)**|ジョブの間隔。|  
+|**回**|**int**|ジョブの失敗の回数です。|  
+|**xactsetjobwhat**|**varchar(200)**|ジョブによって実行されるプロシージャの名前。|  
+|**xactsetjob**|**varchar (1)**|ジョブの状態。次のいずれかを指定できます。<br /><br /> **1** -ジョブが有効になっています。<br /><br /> **0** -ジョブは無効です。|  
 |**xactsetlonginterval**|**int**|ジョブの長い間隔です。|  
-|**xactsetlongthreshold**|**int**|ジョブの長いしきい値です。|  
-|**xactsetshortinterval**|**int**|ジョブの短い間隔です。|  
+|**xactsetlongthreshold**|**int**|ジョブの長いしきい値。|  
+|**xactsetshortinterval**|**int**|ジョブの短い間隔。|  
 |**xactsetshortthreshold**|**int**|ジョブの短いしきい値です。|  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  **0** (成功) または**1** (失敗)  
   
-## <a name="remarks"></a>コメント  
- **sp_helpxactsetjob**スナップショット レプリケーションと、Oracle パブリッシャーのトランザクション レプリケーションで使用されます。  
+## <a name="remarks"></a>Remarks  
+ **sp_helpxactsetjob**は、Oracle パブリッシャーのスナップショットレプリケーションおよびトランザクションレプリケーションで使用します。  
   
- **sp_helpxactsetjob**常に、パブリッシャーで Xactset ジョブ (HREPL_XactSetJob) の現在の設定を返します。 Xactset ジョブが現在ジョブ キューに入っている場合は、Oracle パブリッシャーにおいて、管理者アカウントで作成された USER_JOB データ辞書ビューから、ジョブの属性も返します。  
+ **sp_helpxactsetjob**は、常にパブリッシャーで Xactset ジョブ (HREPL_XactSetJob) の現在の設定を返します。 Xactset ジョブが現在ジョブキューにある場合は、Oracle パブリッシャーの管理者アカウントで作成された USER_JOB データディクショナリビューから、さらにジョブの属性が返されます。  
   
 ## <a name="permissions"></a>アクセス許可  
- メンバーのみ、 **sysadmin**固定サーバー ロールが実行できる**sp_helpxactsetjob**します。  
+ **Sp_helpxactsetjob**を実行できるのは、 **sysadmin**固定サーバーロールのメンバーだけです。  
   
 ## <a name="see-also"></a>参照  
  [Oracle パブリッシャー用のトランザクション セット ジョブの構成 &#40;レプリケーション Transact-SQL プログラミング&#41;](../../relational-databases/replication/administration/configure-the-transaction-set-job-for-an-oracle-publisher.md)   
- [sp_publisherproperty &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-publisherproperty-transact-sql.md)  
+ [sp_publisherproperty &#40;transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-publisherproperty-transact-sql.md)  
   
   

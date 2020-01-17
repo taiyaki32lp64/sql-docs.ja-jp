@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: da9ccd1f-d402-41a2-940c-45556fc5340d
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 988ee3dc6cb4b394ee1da170cb902b88fcb0f1ca
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 292a4a8c26b3b10aa47fcbe7046a5897f601ed9f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47759330"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67919353"
 ---
 # <a name="count-property-ado"></a>Count プロパティ (ADO)
 コレクション内のオブジェクトの数を示します。  
@@ -48,7 +47,7 @@ ms.locfileid: "47759330"
 |[Properties コレクション (ADO)](../../../ado/reference/ado-api/properties-collection-ado.md)|[Tables コレクション (ADOX)](../../../ado/reference/adox-api/tables-collection-adox.md)|[Users コレクション (ADOX)](../../../ado/reference/adox-api/users-collection-adox.md)|  
 |[Views コレクション (ADOX)](../../../ado/reference/adox-api/views-collection-adox.md)|||  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [Count プロパティの例 (VB)](../../../ado/reference/ado-api/count-property-example-vb.md)   
  [Count プロパティの例 (vc++)](../../../ado/reference/ado-api/count-property-example-vc.md)   
  [Refresh メソッド (ADO)](../../../ado/reference/ado-api/refresh-method-ado.md)

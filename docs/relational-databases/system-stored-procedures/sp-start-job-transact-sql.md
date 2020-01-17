@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 8a91df6a-eb84-4512-9a17-4a6e32a9538a
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 78c6a92d11cc192e2b0643c264352adcfb30d759
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 1b3015651dc263d95aa80e6108db2e8017e112d6
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47715160"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68032831"
 ---
 # <a name="spstartjob-transact-sql"></a>sp_start_job (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -46,23 +45,17 @@ sp_start_job
 ```  
   
 ## <a name="arguments"></a>引数  
- [ **@job_name=** ] **'***job_name***'**  
- 開始するジョブの名前を指定します。 いずれか*job_id*または*job_name*指定する必要がありますが、両方を指定することはできません。 *job_name*は**sysname**、既定値は NULL です。  
+`[ @job_name = ] 'job_name'` 開始するジョブの名前。 いずれか*job_id*または*job_name*指定する必要がありますが、両方を指定することはできません。 *job_name*は**sysname**、既定値は NULL です。  
   
- [ **@job_id=** ] *job_id*  
- 開始するジョブの識別番号を指定します。 いずれか*job_id*または*job_name*指定する必要がありますが、両方を指定することはできません。 *job_id*は**uniqueidentifier**、既定値は NULL です。  
+`[ @job_id = ] job_id` 開始するジョブの識別番号。 いずれか*job_id*または*job_name*指定する必要がありますが、両方を指定することはできません。 *job_id*は**uniqueidentifier**、既定値は NULL です。  
   
- [ **@error_flag=** ] *error_flag*  
- [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
+`[ @error_flag = ] error_flag` [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
   
- [ **@server_name=** ] **'***server_name***'**  
- ジョブを開始するターゲット サーバーを指定します。 *server_name*は**nvarchar (128)**、既定値は NULL です。 *server_name*ジョブが現在対象となる対象のサーバーのいずれかを指定する必要があります。  
+`[ @server_name = ] 'server_name'` ジョブを開始する対象サーバーです。 *server_name*は**nvarchar (128)** 、既定値は NULL です。 *server_name*ジョブが現在対象となる対象のサーバーのいずれかを指定する必要があります。  
   
- [ **@step_name=** ] **'***step_name***'**  
- ジョブの実行を開始するステップの名前を指定します。 ローカル ジョブにのみ適用されます。 *step_name*は**sysname**、既定値は NULL  
+`[ @step_name = ] 'step_name'` ジョブの実行を開始するステップの名前。 ローカル ジョブにのみ適用されます。 *step_name*は**sysname**、既定値は NULL  
   
- [ **@output_flag=** ] *output_flag*  
- [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
+`[ @output_flag = ] output_flag` [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  **0** (成功) または**1** (失敗)  

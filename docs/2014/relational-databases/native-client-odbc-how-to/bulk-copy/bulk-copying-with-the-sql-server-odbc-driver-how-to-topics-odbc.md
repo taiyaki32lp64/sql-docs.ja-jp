@@ -1,7 +1,7 @@
 ---
-title: 一括コピー SQL Server ODBC ドライバーの方法に関するトピック (ODBC) |マイクロソフトのドキュメント
+title: SQL Server ODBC ドライバーを使用した一括コピーに関するトピック (ODBC) |Microsoft Docs
 ms.custom: ''
-ms.date: 06/13/2017
+ms.date: 10/18/2019
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.technology: native-client
@@ -13,31 +13,31 @@ ms.assetid: 6037b2c2-62b5-4a9e-b36d-83e5b315eef2
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 6c2cca868cbbdeddc98264160e646dde3676c585
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: dcc35614e156301efa5892d59a09156c189e0fac
+ms.sourcegitcommit: 82a1ad732fb31d5fa4368c6270185c3f99827c97
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52766314"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72688878"
 ---
 # <a name="bulk-copying-with-the-sql-server-odbc-driver-how-to-topics-odbc"></a>SQL Server ODBC ドライバーで一括コピーを行う方法に関するトピック (ODBC)
-  ?? Microsoft と併用すると SQL Server 2005、SQL Server ODBC ドライバーでは、Db-library API でサポートされている同じの一括コピー関数をサポートします。  
+  Microsoft SQL Server 2005 で使用する場合、SQL Server ODBC ドライバーは、DB-LIBRARY API でサポートされているのと同じ一括コピー関数をサポートします。  
   
- 一括コピーの開始については、互換性に影響する変更[!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]を参照してください[一括コピー操作を実行する&#40;ODBC&#41;](../../native-client-odbc-bulk-copy-operations/performing-bulk-copy-operations-odbc.md)します。  
+ @No__t_0 による一括コピーの重大な変更については、「[一括コピー操作&#40;の&#41;実行 ODBC](../../native-client-odbc-bulk-copy-operations/performing-bulk-copy-operations-odbc.md)」を参照してください。  
   
-## <a name="in-this-section"></a>このセクションの内容  
+## <a name="in-this-section"></a>トピックの内容  
   
--   [一括コピー フォーマット ファイルなし&#40;ODBC&#41;](bulk-copy-without-a-format-file-odbc.md)  
+-   [フォーマットファイル&#40;を使用しない一括コピー ODBC&#41;](bulk-copy-without-a-format-file-odbc.md)  
   
--   [SELECT 結果セットの一括コピー &#40;ODBC&#41;](bulk-copy-a-select-result-set-odbc.md)  
+-   [SELECT 結果セット&#40;の一括コピー ODBC&#41;](bulk-copy-a-select-result-set-odbc.md)  
   
--   [一括コピー フォーマット ファイルを作成&#40;ODBC&#41;](create-a-bulk-copy-format-file-odbc.md)  
+-   [一括コピーフォーマットファイル&#40;を作成する ODBC&#41;](create-a-bulk-copy-format-file-odbc.md)  
   
--   [フォーマット ファイルを使用して一括コピー &#40;ODBC&#41;](bulk-copy-by-using-a-format-file-odbc.md)  
+-   [フォーマットファイル&#40;を使用した一括コピー ODBC&#41;](bulk-copy-by-using-a-format-file-odbc.md)  
   
--   [データを一括コピー プログラム変数から&#40;ODBC&#41;](bulk-copy-data-from-program-variables-odbc.md)  
+-   [プログラム変数&#40;ODBC からの一括データコピー&#41;](bulk-copy-data-from-program-variables-odbc.md)  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>「  
  [ODBC の使用法に関するトピック](../odbc-how-to-topics.md)  
   
   

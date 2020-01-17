@@ -12,15 +12,14 @@ helpviewer_keywords:
 - text in database diagrams
 - appearance of database diagrams
 ms.assetid: 14de9c19-8bbf-4347-bef5-156499640052
-author: stevestein
-ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 1846a7fb3723a2f59115b6820714c46191456f87
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 1f9b24f6806706f8b3367d64d705ce82aecbded3
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47797440"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68258523"
 ---
 # <a name="change-the-font-color-size-and-style-in-diagrams-visual-database-tools"></a>ダイアグラムのフォントの色、サイズ、およびスタイルを変更する (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

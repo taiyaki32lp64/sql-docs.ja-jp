@@ -13,15 +13,14 @@ helpviewer_keywords:
 - operators [Transact-SQL], about operators
 - operators [Transact-SQL]
 ms.assetid: 1fc2de8b-e7e0-4c61-9a02-4776a7d93ab7
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: b9ca22d4dcd4a8c25933d06d2311efa1cf28c029
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 61dad1f375a60fa22f4ee38f7023b5836bc3d5a5
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51701200"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68121913"
 ---
 # <a name="operators-transact-sql"></a>演算子 (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

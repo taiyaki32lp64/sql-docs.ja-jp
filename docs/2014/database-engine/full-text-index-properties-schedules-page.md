@@ -13,14 +13,14 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: 067c77839a852965c7684359acf50fb328d21a6a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48059822"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62779032"
 ---
 # <a name="full-text-index-properties-schedules-page"></a>[フルテキスト インデックスのプロパティ] ([スケジュール] ページ)
-  このページでは、フルテキスト インデックスのベース テーブルに対する更新の増分作成を開始する SQL Server エージェント ジョブの実行スケジュールを表示および作成できます。 ベース テーブルまたはビューの列がない場合、`timestamp`データ型の完全作成が実行されます。  
+  このページでは、フルテキスト インデックスのベース テーブルに対する更新の増分作成を開始する SQL Server エージェント ジョブの実行スケジュールを表示および作成できます。 ベース テーブルまたはビューに `timestamp` データ型の列が含まれていない場合は、完全作成が実行されます。  
   
  **表示または変更、フルテキスト インデックスのプロパティ**  
   
@@ -36,7 +36,7 @@ ms.locfileid: "48059822"
  **作成の種類**  
  スケジュールされた各作成の種類を表示します。  
   
- **Enabled**  
+ **有効**  
  スケジュールされた作成が現在有効か無効かを示します。  
   
  **[説明]**  

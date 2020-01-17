@@ -1,54 +1,53 @@
 ---
-title: SQL Server on Linux の可用性グループの動作 |Microsoft Docs
+title: 可用性グループ SQL Server on Linux を操作する
 description: ''
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
+ms.reviewer: vanto
 ms.date: 03/01/2018
 ms.topic: conceptual
 ms.prod: sql
-ms.custom: sql-linux
 ms.technology: linux
 ms.assetid: ''
-ms.openlocfilehash: a33c18175a03b589f7b431655ff4704356f5eeaf
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
-ms.translationtype: MT
+ms.openlocfilehash: 24a9d3d9ee0fd65b08e30f40a0597eadf47c6b76
+ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47796000"
+ms.lasthandoff: 07/25/2019
+ms.locfileid: "67916041"
 ---
-# <a name="operate-always-on-availability-groups-on-linux"></a>Linux 上の可用性グループに対して常に
+# <a name="operate-always-on-availability-groups-on-linux"></a>Linux で Always On 可用性グループを操作する
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
-## <a name="upgrade-availability-group"></a>可用性グループをアップグレードします。
+## <a name="upgrade-availability-group"></a>可用性グループのアップグレード
 
-可用性グループをアップグレードする前に、パターンとプラクティスを確認してください。[可用性グループ レプリカ インスタンスのアップグレード](../database-engine/availability-groups/windows/upgrading-always-on-availability-group-replica-instances.md)します。
+可用性グループをアップグレードする前に、[可用性グループ レプリカ インスタンスのアップグレード](../database-engine/availability-groups/windows/upgrading-always-on-availability-group-replica-instances.md)に関するページにあるパターンとプラクティスを見直してください。
 
-次のセクションでは、可用性グループで Linux 上の SQL Server インスタンスでのローリング アップグレードを実行する方法を説明します。 
+以降のセクションでは、可用性グループを使用し、Linux 上の SQL Server インスタンスでローリング アップグレードを実行する方法について説明します。 
 
-### <a name="upgrade-steps-on-linux"></a>Linux 上のアップグレード手順
+### <a name="upgrade-steps-on-linux"></a>Linux でのアップグレード手順
 
-可用性グループ レプリカが Linux での SQL Server のインスタンス上にある場合は、可用性グループのクラスターの種類は`EXTERNAL`または`NONE`します。 さらに、Windows Server フェールオーバー クラスター (WSFC) は、クラスター マネージャーで管理されている可用性グループ`EXTERNAL`します。 Corosync と pacemaker は、外部のクラスター マネージャーの例を示します。 クラスター マネージャーがない可用性グループがクラスターの種類`NONE`アップグレード手順は、こちらは、クラスターの種類の可用性グループの特定`EXTERNAL`または`NONE`します。
+可用性グループのレプリカが SQL Server in Linux のインスタンスにある場合、可用性グループのクラスター タイプは `EXTERNAL` または `NONE` です。 Windows Server Failover Cluster (WSFC) 以外のクラスター マネージャーで管理される可用性グループは `EXTERNAL` です。 Pacemaker with Corosync は外部クラスター マネージャーの一例です。 クラスター マネージャーのない可用性グループのクラスターの種類は `NONE` です。ここで説明するアップグレード手順は、クラスターの種類が `EXTERNAL` か `NONE` に固有の手順です。
 
-インスタンスをアップグレードする順序は、各自のロールがセカンダリと同期または非同期レプリカをホストするかどうかのかどうかに依存します。 最初に非同期のセカンダリ レプリカをホストする SQL Server のインスタンスをアップグレードします。 同期セカンダリ レプリカをホストするインスタンスをアップグレードします。 
+インスタンスをアップグレードする順序は、ロールがセカンダリであるかどうかと、ホストするレプリカが同期か非同期かに依存します。 非同期セカンダリ レプリカをホストする SQL Server のインスタンスを最初にアップグレードします。 次に、同期セカンダリ レプリカをホストするインスタンスをアップグレードします。 
 
    >[!NOTE]
-   >場合は、可用性グループのみがある非同期レプリカは、データの損失を回避するためには 1 つのレプリカを同期に変更し、同期されるまで待ちます。 このレプリカをアップグレードします。
+   >可用性グループに非同期レプリカのみが含まれる場合、データ損失を回避する目的で、1 つのレプリカを同期に変更し、同期されるまで待ちます。 その後、このレプリカをアップグレードします。
    
-開始する前に、各データベースをバックアップします。
+始める前に、各データベースをバックアップします。
 
-1. アップグレードの対象となるセカンダリ レプリカをホストしているノードのリソースを停止します。
+1. アップグレードの対象になっているセカンダリ レプリカをホストしているノードでリソースを停止します。
    
-   アップグレード コマンドを実行する前に、クラスターの監視し、不必要に失敗することはありませんので、リソースを停止します。 次の例では、停止するリソース上の原因となるノードの場所の制約を追加します。 Update`ag_cluster-master`リソース名を持つと`nodeName1`ノードがアップグレードの対象となるレプリカをホストします。
+   アップグレード コマンドを実行する前に、リソースを停止します。そうすることで、クラスターはリソースを監視せず、不必要に不合格にすることがありません。 次の例では、場所の制約がノードに追加され、その結果、リソースが停止します。 `ag_cluster-master` をリソース名で、`nodeName1` をアップグレードの対象になっているレプリカをホストしているノードで更新します。
 
    ```bash
    pcs constraint location ag_cluster-master avoids nodeName1
    ```
 
-1. セカンダリ レプリカでは、SQL Server をアップグレードします。
+1. セカンダリ レプリカで SQL Server をアップグレードします。
 
-   次の例のアップグレード`mssql-server`と`mssql-server-ha`パッケージ。
+   次の例では、`mssql-server` パッケージと `mssql-server-ha` パッケージがアップグレードされます。
 
    ```bash
    sudo yum update mssql-server
@@ -56,17 +55,17 @@ ms.locfileid: "47796000"
    ```
 1. 場所の制約を削除します。
 
-   アップグレード コマンドを実行する前に、クラスターの監視し、不必要に失敗することはありませんので、リソースを停止します。 次の例では、停止するリソース上の原因となるノードの場所の制約を追加します。 Update`ag_cluster-master`リソース名を持つと`nodeName1`ノードがアップグレードの対象となるレプリカをホストします。
+   アップグレード コマンドを実行する前に、リソースを停止します。そうすることで、クラスターはリソースを監視せず、不必要に不合格にすることがありません。 次の例では、場所の制約がノードに追加され、その結果、リソースが停止します。 `ag_cluster-master` をリソース名で、`nodeName1` をアップグレードの対象になっているレプリカをホストしているノードで更新します。
 
    ```bash
    pcs constraint remove location-ag_cluster-master-rhel1--INFINITY
    ```
-   ベスト プラクティスとして、リソースが開始されたことを確認します (を使用して`pcs status`コマンド) と、セカンダリ レプリカが接続されているし、アップグレード後に状態を同期します。
+   ベスト プラクティスとしては、アップグレード後に (`pcs status` コマンドを使用して) リソースが確実に起動され、セカンダリ レプリカが接続され、状態が同期されるようにします。
 
-1. すべてのセカンダリ レプリカをアップグレードした後に手動でフェールオーバー同期セカンダリ レプリカの 1 つ。
+1. セカンダリ レプリカがすべてアップグレードされたら、同期セカンダリ レプリカの 1 つに手動でフェールオーバーします。
 
-   可用性グループを`EXTERNAL`クラスターの種類をクラスターの管理ツールを使用して、失敗を over; で可用性グループを`NONE`クラスターの種類は、TRANSACT-SQL を使用してフェールオーバーする必要があります。 
-   次の例では、クラスターの管理ツールを使用して可用性グループのフェールオーバーが失敗しました。 置換`<targetReplicaName>`プライマリとなる同期セカンダリ レプリカの名前に置き換えます。
+   クラスターの種類が `EXTERNAL` の可用性グループについては、クラスター管理ツールを使用してフェールオーバーします。クラスターの種類が `NONE` の可用性グループでは、Transact-SQL を使用してフェールオーバーします。 
+   次の例では、クラスター管理ツールを利用し、可用性グループがフェールオーバーされます。 `<targetReplicaName>` を、プライマリになる同期セカンダリ レプリカの名前に置換します。
 
    ```bash
    sudo pcs resource move ag_cluster-master <targetReplicaName> --master  
@@ -75,23 +74,23 @@ ms.locfileid: "47796000"
    >[!IMPORTANT]
    >次の手順は、クラスター マネージャーがない可用性グループにのみ適用されます。
 
-   可用性グループのクラスターの種類が場合`NONE`、手動でフェールオーバーします。 次の手順を実行します。
+   可用性グループのクラスターの種類が `NONE` の場合、手動でフェールオーバーします。 次の手順を実行します。
 
-      A. 次のコマンドは、プライマリ レプリカをセカンダリに設定します。 置換`AG1`可用性グループの名前に置き換えます。 プライマリ レプリカをホストする SQL Server のインスタンスでは、TRANSACT-SQL コマンドを実行します。
+      A. 次のコマンドでは、プライマリ レプリカがセカンダリに設定されます。 `AG1` を実際の可用性グループの名前に置換します。 プライマリ レプリカをホストする SQL Server のインスタンスで Transact-SQL コマンドを実行します。
 
       ```transact-sql
       ALTER AVAILABILITY GROUP [ag1] SET (ROLE = SECONDARY);
       ```
 
-      B. 次のコマンドは、同期セカンダリ レプリカをプライマリに設定します。 同期セカンダリ レプリカをホストする SQL Server のインスタンスのターゲット インスタンスで、次の TRANSACT-SQL コマンドを実行します。
+      B. 次のコマンドでは、同期セカンダリ レプリカがプライマリに設定されます。 SQL Server のターゲット インスタンス (同期セカンダリ レプリカをホストするインスタンス) で次の Transact-SQL コマンドを実行します。
 
       ```transact-sql
       ALTER AVAILABILITY GROUP [ag1] FAILOVER;
       ```
 
-1. フェールオーバー後は、前の手順を繰り返すことにより、古いプライマリ レプリカで SQL Server をアップグレードします。
+1. フェールオーバー後、前の手順を繰り返すことで、古いプライマリ レプリカで SQL Server をアップグレードします。
 
-   次の例のアップグレード`mssql-server`と`mssql-server-ha`パッケージ。
+   次の例では、`mssql-server` パッケージと `mssql-server-ha` パッケージがアップグレードされます。
 
    ```bash
    # add constraint for the resource to stop on the upgraded node
@@ -112,23 +111,23 @@ ms.locfileid: "47796000"
    pcs constraint remove location-ag_cluster-master-rhel1--INFINITY
    ```
 
-1. クラスター タイプが EXTERNAL、-、外部のクラスター マネージャーで、可用性グループの手動フェールオーバーが発生した場所の制約をクリーンアップします。 
+1. 外部クラスター マネージャーのある可用性グループの場合、クラスターの種類が EXTERNAL ですが、手動のフェールオーバーによって引き起こされる場所の制約を消去します。 
 
    ```bash
    sudo pcs constraint remove cli-prefer-ag_cluster-master  
    ```
 
-1. 新しくアップグレードされたセカンダリ レプリカの元のプライマリ レプリカのデータ移動を再開します。 SQL Server の上位バージョンのインスタンスが可用性グループに低いバージョンのインスタンスにログ ブロックを転送するときに、この手順が必要です。 新しいセカンダリ レプリカ (元のプライマリ レプリカ) で、次のコマンドを実行します。
+1. 新しくアップグレードされたセカンダリ レプリカ (前のプライマリ レプリカ) のデータ移動を再開します。 この手順は、SQL Server の上位インスタンスにより、可用性グループにおいて下位インスタンスにログ ブロックが転送されるときに必要です。 新しいセカンダリ レプリカ (前のプライマリ レプリカ) で次のコマンドを実行します。
 
    ```transact-sql
    ALTER DATABASE database_name SET HADR RESUME;
    ```
 
-すべてのサーバーをアップグレードした後にフェールバックできます。 必要な場合は、- 元のプライマリにフェールオーバーします。 
+すべてのサーバーをアップグレードしたら、フェールバックできます。 必要に応じて、元のプライマリにフェールバックします。 
 
-## <a name="drop-an-availability-group"></a>可用性グループを削除します。
+## <a name="drop-an-availability-group"></a>可用性グループを削除する
 
-可用性グループを削除する実行[DROP AVAILABILITY GROUP](../t-sql/statements/drop-availability-group-transact-sql.md)します。 クラスターの種類が場合`EXTERNAL`または`NONE`レプリカをホストする SQL Server の各インスタンス上のコマンドを実行します。 たとえば、という名前の可用性グループを削除する`group_name`次のコマンドを実行します。
+可用性グループを削除するには、[DROP AVAILABILITY GROUP](../t-sql/statements/drop-availability-group-transact-sql.md) を実行します。 クラスターの種類が `EXTERNAL` か `NONE` の場合、レプリカをホストする SQL Server の各インスタンスでコマンドを実行します。 たとえば、`group_name` という名前の可用性グループを削除するには、次のコマンドを実行します。
 
    ```transact-sql
    DROP AVAILABILITY GROUP group_name
@@ -137,8 +136,8 @@ ms.locfileid: "47796000"
 
 ## <a name="next-steps"></a>次の手順
 
-[SQL Server 可用性グループのクラスター リソースの Red Hat Enterprise Linux クラスターを構成します。](sql-server-linux-availability-group-cluster-rhel.md)
+[SQL Server 可用性グループ クラスター リソースに対して Red Hat Enterprise Linux クラスターを構成する](sql-server-linux-availability-group-cluster-rhel.md)
 
-[SQL Server 可用性グループのクラスター リソースの SUSE Linux Enterprise Server クラスターを構成します。](sql-server-linux-availability-group-cluster-sles.md)
+[SQL Server 可用性グループ クラスター リソースに対して SUSE Linux Enterprise Server クラスターを構成する](sql-server-linux-availability-group-cluster-sles.md)
 
-[SQL Server 可用性グループのクラスター リソースの Ubuntu クラスターの構成します。](sql-server-linux-availability-group-cluster-ubuntu.md)
+[SQL Server 可用性グループ クラスター リソースに対して Ubuntu クラスターを構成する](sql-server-linux-availability-group-cluster-ubuntu.md)

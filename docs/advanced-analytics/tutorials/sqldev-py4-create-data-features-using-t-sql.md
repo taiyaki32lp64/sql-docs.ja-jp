@@ -1,26 +1,27 @@
 ---
-title: T-SQL 関数、SQL Server Machine Learning Python を使用してデータ機能を作成します。
-description: Python machine learning のモデルで使用するためのストアド プロシージャに計算を追加する方法を示すチュートリアル。
+title: Python + T-SQL:データ機能
+description: Python machine learning モデルで使用するために計算をストアド プロシージャに追加する方法を示すチュートリアルです。
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 11/01/2018
 ms.topic: tutorial
-author: HeidiSteen
-ms.author: heidist
-manager: cgronlun
-ms.openlocfilehash: 0e9a502a2fbc7af0793bdd1a8e8a2135828df898
-ms.sourcegitcommit: ee76332b6119ef89549ee9d641d002b9cabf20d2
-ms.translationtype: MT
+author: dphansen
+ms.author: davidph
+ms.custom: seo-lt-2019
+monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
+ms.openlocfilehash: 94d3160fe372fafb666ed451d207301b86d119d9
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/20/2018
-ms.locfileid: "53644961"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73725196"
 ---
-# <a name="create-data-features-using-t-sql"></a>T-SQL を使用してデータ機能を作成します。
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+# <a name="create-data-features-using-t-sql"></a>T-SQL を使用してデータ機能を作成する
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-データの探索の後に、データからインサイトが収集したおよび上に移動する準備が整いました*特徴エンジニア リング*します。 生データから機能を作成するには、このプロセスは、高度な分析のモデリングの重要なステップを指定できます。
+データ探索を行うと、データからインサイトが収集されているので、 *機能エンジニアリング*に移ることができます。 生データから機能を作成するこのプロセスは、高度な分析のモデリングにおいて重要な手順となり得ます。
 
-この記事では、チュートリアルの一部[SQL 開発者向けの in-database Python analytics](sqldev-in-database-python-for-sql-developers.md)します。 
+この記事は、[SQL 開発者向けのデータベース内 Python analytics](sqldev-in-database-python-for-sql-developers.md) チュートリアルの一部です。 
 
 この手順では、 [!INCLUDE[tsql](../../includes/tsql-md.md)] 関数を利用し、生データから機能を作成する方法について説明します。 その後、その関数をストアド プロシージャから呼び出し、機能の値を含むテーブルを作成します。
 
@@ -30,11 +31,11 @@ ms.locfileid: "53644961"
 
 1 つ目のカスタム T-SQL 関数、 _fnCalculateDistance_を利用し、Haversine 式で距離を計算し、2 つ目のカスタム T-SQL 関数、 _fnEngineerFeatures_を利用し、すべての機能を含むテーブルを作成します。
 
-### <a name="calculate-trip-distance-using-fncalculatedistance"></a>FnCalculateDistance を使用して、乗車距離を計算します。
+### <a name="calculate-trip-distance-using-fncalculatedistance"></a>fnCalculateDistance を利用して乗車距離を計算する
 
-1.  このチュートリアルの準備の一環として関数 _fnCalculateDistance_ がダウンロードされ、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] に登録されているはずです。 時間がかかるコードを確認します。
+1.  このチュートリアルの準備の一環として関数 _fnCalculateDistance_ がダウンロードされ、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] に登録されているはずです。 少し時間をかけてコードを確認してください。
   
-    [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]で、 **[プログラミング]**、 **[関数]** 、 **[スカラー値関数]** の順に展開します。
+    [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]で、 **[プログラミング]** 、 **[関数]** 、 **[スカラー値関数]** の順に展開します。
     _fnCalculateDistance_を右クリックし、 **[変更]** を選択し、新しいクエリ ウィンドウで [!INCLUDE[tsql](../../includes/tsql-md.md)] スクリプトを開きます。
   
     ```sql
@@ -67,7 +68,7 @@ ms.locfileid: "53644961"
 
 計算された値をモデルのトレーニングに利用できるテーブルに追加するには、別の関数、 _fnEngineerFeatures_を利用します。
 
-### <a name="save-the-features-using-fnengineerfeatures"></a>使用して機能を保存_fnEngineerFeatures_
+### <a name="save-the-features-using-_fnengineerfeatures_"></a>_fnEngineerFeatures_ を利用して機能を保存する
 
 1.  カスタム T-SQL 関数、 _fnEngineerFeatures_のコードを再確認します。この関数は、このチュートリアルの一環として自動的に作成されているはずです。
   
@@ -107,16 +108,16 @@ ms.locfileid: "53644961"
         ORDER BY trip_time_in_secs DESC
     ```
   
-    ご覧のとおり、メーターによって報告された距離と地理的距離は常に一致しているわけではありません。 これは、特徴エンジニア リングが重要な理由です。
+    ご覧のとおり、メーターによって報告された距離と地理的距離は常に一致しているわけではありません。 そのため、フィーチャー エンジニアリングが重要となります。
 
-次の手順では、これらのデータ機能を使用して作成および Python を使用して機械学習モデルをトレーニングする方法を学習します。
+次の手順では、これらのデータ機能を利用し、Python による機械学習モデルを作成してトレーニングします。
 
 ## <a name="next-step"></a>次の手順
 
-[トレーニングし、T-SQL を使用して Python モデルの保存](sqldev-py5-train-and-save-a-model-using-t-sql.md)
+[T-SQL モデルを使用して Python モデルをトレーニングし保存する](sqldev-py5-train-and-save-a-model-using-t-sql.md)
 
 ## <a name="previous-step"></a>前の手順
 
-[探索し、データの視覚化](sqldev-py3-explore-and-visualize-the-data.md)
+[データの探索と視覚化](sqldev-py3-explore-and-visualize-the-data.md)
 
 

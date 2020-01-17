@@ -1,5 +1,5 @@
 ---
-title: コレクション セット レポートの表示 (SQL Server Management Studio) | Microsoft Docs
+title: コレクション セットのレポートの表示 (SSMS)
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: c3b1e791-9aa1-4bba-9622-4954568e1820
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 9c6dd8a715e9f6f009335fe54bc591262c6479fd
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: dd303efebcf988d07d068f5518dd340b9ae74fbc
+ms.sourcegitcommit: d00ba0b4696ef7dee31cd0b293a3f54a1beaf458
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47606530"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "74055561"
 ---
 # <a name="view-a-collection-set-report-sql-server-management-studio"></a>コレクション セット レポートの表示 (SQL Server Management Studio)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -36,9 +35,9 @@ ms.locfileid: "47606530"
   
 ### <a name="to-view-a-collection-set-report"></a>コレクション セットのレポートを表示するには  
   
-1.  レポートのテーブルは、収集したデータの初回アップロード時に作成されます。 この初回アップロード以前にレポートを表示しようとするとエラーが発生し、レポートは表示されません。 ディスク使用量コレクション セットのデータをアップロードするには、オブジェクト エクスプローラーで、 **[管理]** フォルダー、 **[データ コレクション]**、 **[システム データ コレクション セット]** の順に展開し、 **[ディスク使用量]** コレクション セットを右クリックして、 **[今すぐ収集してアップロード]** をクリックします。  
+1.  レポートのテーブルは、収集したデータの初回アップロード時に作成されます。 この初回アップロード以前にレポートを表示しようとするとエラーが発生し、レポートは表示されません。 ディスク使用量コレクション セットのデータをアップロードするには、オブジェクト エクスプローラーで、 **[管理]** フォルダー、 **[データ コレクション]** 、 **[システム データ コレクション セット]** の順に展開し、 **[ディスク使用量]** コレクション セットを右クリックして、 **[今すぐ収集してアップロード]** をクリックします。  
   
-2.  レポートを表示するには、オブジェクト エクスプローラーで、 **[管理]** フォルダーを展開し、 **[データ コレクション]** を右クリックします。次に、 **[レポート]**、 **[管理データ ウェアハウス]** の順にポイントし、 **[ディスク使用量の概要]** をクリックします。  
+2.  レポートを表示するには、オブジェクト エクスプローラーで、 **[管理]** フォルダーを展開し、 **[データ コレクション]** を右クリックします。次に、 **[レポート]** 、 **[管理データ ウェアハウス]** の順にポイントし、 **[ディスク使用量の概要]** をクリックします。  
   
     > [!NOTE]  
     >  一部のレポートでは、データ コレクション タイムラインの下にカレンダーのボタンが表示される場合があります。 このボタンをクリックして、 **データ コレクション レポート カレンダー**にアクセスします。  

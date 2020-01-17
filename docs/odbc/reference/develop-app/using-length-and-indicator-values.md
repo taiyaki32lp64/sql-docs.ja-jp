@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 849792f1-cb1e-4bc2-b568-c0aff0b66199
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 442d0865ede4819ea3413d662411295daa5b48bd
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b3a0b54617d55033addabc729adbd078680022fc
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47646020"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67902469"
 ---
 # <a name="using-length-and-indicator-values"></a>長さとインジケーターの値の使用
 長さ/インジケーター バッファーを使用して、データ バッファーまたは SQL_NULL_DATA、データが NULL であることを示すなどの特殊なインジケーター内のデータのバイトの長さを渡します。 によって使用されている関数は、長さ/インジケーター バッファーは、SQLINTEGER または、SQLSMALLINT に定義されます。 そのため、1 つの引数は、説明に必要です。 データ バッファーが使用中として入力バッファーの場合は、この引数には、データ自体のバイトの長さまたはインジケーターの値が含まれます。 という名前が多くの場合、 *StrLen_or_Ind*または類似する名前。 たとえば、次のコード呼び出し**SQLPutData**バッファーを渡すデータの完全な; バイトの長さ (*ValueLen*) ため、直接渡されるデータ バッファー (*ValuePtr*) は、入力バッファー。  

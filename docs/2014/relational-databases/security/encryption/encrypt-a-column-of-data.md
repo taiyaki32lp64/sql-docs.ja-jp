@@ -10,15 +10,15 @@ helpviewer_keywords:
 - encryption [SQL Server], columns
 - cryptography [SQL Server], columns
 ms.assetid: 38e9bf58-10c6-46ed-83cb-e2d76cda0adc
-author: aliceku
-ms.author: aliceku
+author: jaszymas
+ms.author: jaszymas
 manager: craigg
-ms.openlocfilehash: c6615baf7d9a5bf228b75a0e8cf520f86bf2109c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: bd0b5824abfc36923909ce37866b221c0bc830d5
+ms.sourcegitcommit: 39ea690996a7390e3d13d6fb8f39d8641cd5f710
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48066515"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "74957209"
 ---
 # <a name="encrypt-a-column-of-data"></a>データの列の暗号化
   このトピックでは、 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] を使用して [!INCLUDE[tsql](../../../includes/tsql-md.md)]で対称暗号化を使用してデータ列を暗号化する方法について説明します。  
@@ -27,15 +27,15 @@ ms.locfileid: "48066515"
   
 -   **作業を開始する準備:**  
   
-     [Security](#Security)  
+     [保護](#Security)  
   
--   [Transact-SQL を使用してデータ列を暗号化するには](#TsqlProcedure)  
+-   [Transact-sql を使用してデータ列を暗号化するには](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> 作業を開始する準備  
+##  <a name="BeforeYouBegin"></a>開始する前に  
   
-###  <a name="Security"></a> セキュリティ  
+###  <a name="Security"></a>保護  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a>許可  
  次の手順を実行するには、次の権限が必要です。  
   
 -   データベースに対する CONTROL 権限。  
@@ -46,13 +46,15 @@ ms.locfileid: "48066515"
   
 -   キーに対する権限。VIEW DEFINITION 権限が拒否されていないことが必要です。  
   
-##  <a name="TsqlProcedure"></a> Transact-SQL の使用  
+##  <a name="TsqlProcedure"></a>Transact-sql の使用  
   
 #### <a name="to-encrypt-a-column-of-data-using-a-simple-symmetric-encryption"></a>単純な対称暗号化を使用してデータ列を暗号化するには  
   
-1.  **オブジェクト エクスプローラー**で、 [!INCLUDE[ssDE](../../../includes/ssde-md.md)]のインスタンスに接続します。  
+1.  
+  **オブジェクト エクスプローラー**で、 [!INCLUDE[ssDE](../../../includes/ssde-md.md)]のインスタンスに接続します。  
   
-2.  [標準] ツール バーの **[新しいクエリ]** をクリックします。  
+2.  
+  [標準] ツール バーの **[新しいクエリ]** をクリックします。  
   
 3.  次の例をコピーしてクエリ ウィンドウに貼り付け、 **[実行]** をクリックします。  
   
@@ -113,9 +115,11 @@ ms.locfileid: "48066515"
   
 #### <a name="to-encrypt-a-column-of-data-using-symmetric-encryption-that-includes-an-authenticator"></a>認証子を含む対称暗号化を使用して列を暗号化するには  
   
-1.  **オブジェクト エクスプローラー**で、 [!INCLUDE[ssDE](../../../includes/ssde-md.md)]のインスタンスに接続します。  
+1.  
+  **オブジェクト エクスプローラー**で、 [!INCLUDE[ssDE](../../../includes/ssde-md.md)]のインスタンスに接続します。  
   
-2.  [標準] ツール バーの **[新しいクエリ]** をクリックします。  
+2.  
+  [標準] ツール バーの **[新しいクエリ]** をクリックします。  
   
 3.  次の例をコピーしてクエリ ウィンドウに貼り付け、 **[実行]** をクリックします。  
   
@@ -174,14 +178,14 @@ ms.locfileid: "48066515"
     GO  
     ```  
   
- 詳細については、以下を参照してください。  
+ 詳細については、次のトピックを参照してください。  
   
--   [CREATE CERTIFICATE &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-certificate-transact-sql)  
+-   [Transact-sql&#41;&#40;証明書の作成](/sql/t-sql/statements/create-certificate-transact-sql)  
   
--   [CREATE SYMMETRIC KEY &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-symmetric-key-transact-sql)  
+-   [CREATE SYMMETRIC KEY &#40;Transact-sql&#41;](/sql/t-sql/statements/create-symmetric-key-transact-sql)  
   
--   [ALTER TABLE &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-table-transact-sql)  
+-   [ALTER TABLE &#40;Transact-sql&#41;](/sql/t-sql/statements/alter-table-transact-sql)  
   
--   [OPEN SYMMETRIC KEY &#40;Transact-SQL&#41;](/sql/t-sql/statements/open-symmetric-key-transact-sql)  
+-   [オープン対称キー &#40;Transact-sql&#41;](/sql/t-sql/statements/open-symmetric-key-transact-sql)  
   
   

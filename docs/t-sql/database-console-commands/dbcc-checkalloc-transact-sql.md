@@ -24,15 +24,14 @@ helpviewer_keywords:
 - disk space [SQL Server], allocation consistency checks
 - space allocation [SQL Server], checking
 ms.assetid: bc1218eb-ffff-44ce-8122-6e4fa7d68a79
-author: uc-msft
+author: pmasl
 ms.author: umajay
-manager: craigg
-ms.openlocfilehash: e772a5afba4129d90ae7ab26fb051db7fd8113bd
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d1735a107f0510deaf062ce28bdc1a8db2acbae1
+ms.sourcegitcommit: d00ba0b4696ef7dee31cd0b293a3f54a1beaf458
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47597781"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "74056349"
 ---
 # <a name="dbcc-checkalloc-transact-sql"></a>DBCC CHECKALLOC (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -87,7 +86,7 @@ DBCC CHECKALLOC
  オプションを指定可能にします。
 
  ALL_ERRORMSGS  
- すべてのエラー メッセージを表示します。 既定では、すべてのエラー メッセージが表示されます。 そのため、このオプションを指定しても省略しても影響はありません。
+ すべてのエラー メッセージを表示します。 既定では、すべてのエラー メッセージが表示されます。 このオプションを指定しても省略しても影響はありません。
 
  NO_INFOMSGS  
  すべての情報メッセージと使用領域に関するレポートを表示しないようにします。
@@ -95,7 +94,7 @@ DBCC CHECKALLOC
  TABLOCK  
  DBCC コマンドでデータベースを排他的にロックします。
 
- ESTIMATE ONLY  
+ ESTIMATEONLY  
  他のすべてのオプションを指定したときに、DBCC CHECKALLOC の実行に必要な tempdb 領域の予測サイズを表示します。
   
 ## <a name="remarks"></a>Remarks  
@@ -109,7 +108,7 @@ NO_INFOMSGS を指定しない場合、DBCC CHECKALLOC ではデータベース�
 DBCC CHECKALLOC では、内部データベースのスナップショットを使用して、これらのチェックを実行するために必要なトランザクションの一貫性を確保します。 スナップショットを作成できない場合や、TABLOCK が指定されている場合は、DBCC CHECKALLOC はデータベースの排他 (X) ロックを取得して、必要な一貫性を確保します。
   
 > [!NOTE]  
-> Tempdb に対して DBCC CHECKALLOC を実行してもチェックは実行されません。 これは、パフォーマンス上の理由から、データベースのスナップショットが tempdb では利用できないためです。 つまり、必要なトランザクションの一貫性を実現できないためです。 停止して、tempdb の割り当ての問題を解決するのには、MSSQLSERVER サービスを開始します。 この操作では、削除して、tempdb データベースを再作成します。  
+> Tempdb に対して DBCC CHECKALLOC を実行してもチェックは実行されません。 これは、パフォーマンス上の理由から、データベースのスナップショットが tempdb では利用できないためです。 つまり、必要なトランザクションの一貫性を実現できないためです。 tempdb の割り当ての問題を解決するのには、MSSQLSERVER サービスを停止して開始します。 この操作では、tempdb データベースを削除して再作成します。  
   
 ## <a name="understanding-dbcc-error-messages"></a>DBCC エラー メッセージについて  
 DBCC CHECKALLOC コマンドの終了後、メッセージが [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エラー ログに書き込まれます。 DBCC コマンドが正常に実行された場合、メッセージでは正常完了とコマンド実行時間が示されます。 エラーが発生して DBCC コマンドが完了前に停止した場合、メッセージではコマンドが終了したことと、状態の値、コマンド実行時間が示されます。 次の表は、メッセージに含まれる可能性がある状態値の一覧と説明です。
@@ -150,9 +149,9 @@ DBCC CHECKALLOC では、各ファイルのインデックスとパーティシ�
 |Used pages|インデックスによって割り当てられ、使用中のページ。|  
 |Partition ID|内部使用のみです。|  
 |Alloc Unit ID|内部使用のみです。|  
-|行内データ|インデックスまたはヒープ データが含まれるページ。|  
-|LOB データ|ページには、**varchar(max)**、**nvarchar(max)**、**varbinary(max)**、**text**、**ntext**、**xml**、**image** データが含まれています。|  
-|行オーバーフロー データ|行外に移動した可変長の列のデータが含まれるページ。|  
+|In-row data|インデックスまたはヒープ データが含まれるページ。|  
+|LOB データ|ページには、**varchar(max)** 、**nvarchar(max)** 、**varbinary(max)** 、**text**、**ntext**、**xml**、**image** データが含まれています。|  
+|Row-overflow data|行外に移動した可変長の列のデータが含まれるページ。|  
   
 DBCC CHECKALLOC では、ESTIMATEONLY または NO_INFOMSGS を指定した場合を除き、次の結果セットが返されます。値は変化することがあります。
   

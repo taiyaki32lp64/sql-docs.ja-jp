@@ -9,15 +9,15 @@ helpviewer_keywords:
 - add-in for sharepoint
 - rsSharePoint
 ms.assetid: dc6a3372-db26-43f0-b7aa-f725acc635c2
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 8fb0f6ab994ffc096324a179050abbb4e8f303e7
-ms.sourcegitcommit: c7febcaff4a51a899bc775a86e764ac60aab22eb
-ms.translationtype: HT
+ms.openlocfilehash: 59cd04ffa97005edc1e957ed4fcefb66685c2256
+ms.sourcegitcommit: 58f1d5498c87bfe0f6ec4fd9d7bbe723be47896b
+ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "52711523"
+ms.lasthandoff: 08/13/2019
+ms.locfileid: "68995867"
 ---
 # <a name="supported-combinations-of-sharepoint-and-reporting-services-server"></a>SharePoint および Reporting Services サーバーのサポートされる組み合わせ
 
@@ -42,19 +42,20 @@ SharePoint モードでインストールされている SQL Server Reporting Se
 |2|SQL Server 2016|SQL Server 2016|SharePoint 2013|
 |3|SQL Server 2014|SQL Server 2014|SharePoint 2013|
 |4|SQL Server 2014|SQL Server 2014|SharePoint 2010|
-|5|SQL Server 2012 SP3|SQL Server 2014 および SQL Server 2012 SP3|SharePoint 2013|
-|6|SQL Server 2012 SP2|SQL Server 2014 および SQL Server 2012 SP2|SharePoint 2013|
-|7|SQL Server 2012 SP1|SQL Server 2014 および SQL Server 2012 SP1|SharePoint 2013|
-|8|SQL Server 2012 および SQL Server 2012 SP1*|SQL Server 2014|SharePoint 2010|
-|9|SQL Server 2012|SQL Server 2012|SharePoint 2010|
-|10|SQL Server 2008 R2|SQL Server 2014|SharePoint 2010|
-|11|SQL Server 2008 R2|SQL Server 2012 および SQL Server 2012 SP1 以降|SharePoint 2010|
-|12|SQL Server 2008 R2|SQL Server 2008 R2|SharePoint 2010|
-|13|SQL Server 2008 R2|SQL Server 2008 SP2|SharePoint 2007|
-|14|SQL Server 2008 SP2|SQL Server 2008 R2|SharePoint 2010|
-|15|SQL Server 2008 SP2|SQL Server 2008 および SQL Server 2008 SP2|SharePoint 2007|
+|5|SQL Server 2012 SP4|SQL Server 2014 および SQL Server 2012 SP4|SharePoint 2013|
+|6|SQL Server 2012 SP3|SQL Server 2014 および SQL Server 2012 SP3|SharePoint 2013|
+|7|SQL Server 2012 SP2|SQL Server 2014 および SQL Server 2012 SP2|SharePoint 2013|
+|8|SQL Server 2012 SP1|SQL Server 2014 および SQL Server 2012 SP1|SharePoint 2013|
+|9|SQL Server 2012 および SQL Server 2012 SP1*|SQL Server 2014|SharePoint 2010|
+|10|SQL Server 2012|SQL Server 2012|SharePoint 2010|
+|11|SQL Server 2008 R2|SQL Server 2014|SharePoint 2010|
+|12|SQL Server 2008 R2|SQL Server 2012 および SQL Server 2012 SP1 以降|SharePoint 2010|
+|13|SQL Server 2008 R2|SQL Server 2008 R2|SharePoint 2010|
+|14|SQL Server 2008 R2|SQL Server 2008 SP2|SharePoint 2007|
+|15|SQL Server 2008 SP2|SQL Server 2008 R2|SharePoint 2010|
+|16|SQL Server 2008 SP2|SQL Server 2008 および SQL Server 2008 SP2|SharePoint 2007|
 
- * 例外: Power View の統合はサポートされていません。
+ \* 例外: Power View の統合はサポートされていません。
 
  アドインのダウンロード ページへのリンクについては、「 [SharePoint 製品用 Reporting Services アドインの検索場所](../../reporting-services/install-windows/where-to-find-the-reporting-services-add-in-for-sharepoint-products.md)」を参照してください。  
 

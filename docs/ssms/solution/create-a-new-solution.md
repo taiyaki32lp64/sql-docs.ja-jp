@@ -10,15 +10,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - solutions [SQL Server Management Studio], creating
 ms.assetid: 05a7edd9-8acc-4ccd-abc9-33ced53265de
-author: stevestein
-ms.author: sstein
-manager: craigg
-ms.openlocfilehash: ac0bfe3762635d4e903221a1688514faff0e4488
-ms.sourcegitcommit: 9f2edcdf958e6afce9a09fb2e572ae36dfe9edb0
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: b8f05d883896e4d027a34afb1d7849c8c9368b01
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50099865"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68258284"
 ---
 # <a name="create-a-new-solution"></a>新しいソリューションの作成
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

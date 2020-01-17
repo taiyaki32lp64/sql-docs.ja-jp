@@ -94,19 +94,19 @@
       href: invalid-characters-and-escape-rules.md
     - name: FOR XML での RAW モードの使用
       href: use-raw-mode-with-for-xml.md
-    - name: '例 : XML での製品モデル情報の取得'
+    - name: '例:XML での製品モデル情報の取得'
       href: example-retrieving-product-model-information-as-xml.md
-    - name: '例 : ELEMENTS ディレクティブで XSINIL を指定する'
+    - name: '例: ELEMENTS ディレクティブで XSINIL を指定する'
       href: example-specifying-xsinil-with-the-elements-directive.md
     - name: '例: XMLDATA オプションと XMLSCHEMA オプションを使用した結果としてのスキーマの要求'
       href: example-requesting-schemas-as-results-with-the-xmldata-and-xmlschema-options.md
-    - name: '例 : バイナリ データの取得'
+    - name: '例:バイナリ データの取得'
       href: example-retrieving-binary-data.md
-    - name: '例: <row> 要素の名前を変更する'
+    - name: '例:<row> 要素の名前を変更する'
       href: example-renaming-the-row-element.md
-    - name: '例 : FOR XML で生成される XML のルート要素の指定'
+    - name: '例:FOR XML で生成される XML のルート要素の指定'
       href: example-specifying-a-root-element-for-the-xml-generated-by-for-xml.md
-    - name: '例 : XML 型の列のクエリ'
+    - name: '例: XML 型の列のクエリ'
       href: example-querying-xmltype-columns.md
     - name: FOR XML での AUTO モードの使用
       href: use-auto-mode-with-for-xml.md
@@ -114,29 +114,29 @@
       href: use-the-binary-base64-option.md
     - name: 返される XML を構造化する際の AUTO モード ヒューリスティック
       href: auto-mode-heuristics-in-shaping-returned-xml.md
-    - name: '例 : AUTO モードの使用'
+    - name: '例 :AUTO モードの使用'
       href: examples-using-auto-mode.md
     - name: FOR XML での EXPLICIT モードの使用
       href: use-explicit-mode-with-for-xml.md
-    - name: '例 : 従業員情報の取得'
+    - name: '例:従業員情報の取得'
       href: example-retrieving-employee-information.md
-    - name: '例 : ELEMENT ディレクティブの指定'
+    - name: '例:ELEMENT ディレクティブの指定'
       href: example-specifying-the-element-directive.md
-    - name: '例 : ELEMENTXSINIL ディレクティブの指定'
+    - name: '例:ELEMENTXSINIL ディレクティブの指定'
       href: example-specifying-the-elementxsinil-directive.md
-    - name: '例: EXPLICIT モードを使用した兄弟の構築'
+    - name: '例:EXPLICIT モードを使用した兄弟の構築'
       href: example-constructing-siblings-with-explicit-mode.md
-    - name: '例 : ID ディレクティブと IDREF ディレクティブの指定'
+    - name: '例:ID ディレクティブと IDREF ディレクティブの指定'
       href: example-specifying-the-id-and-idref-directives.md
-    - name: '例 : ID ディレクティブと IDREFS ディレクティブの指定'
+    - name: '例:ID ディレクティブと IDREFS ディレクティブの指定'
       href: example-specifying-the-id-and-idrefs-directives.md
-    - name: '例 : HIDE ディレクティブの指定'
+    - name: '例: HIDE ディレクティブの指定'
       href: example-specifying-the-hide-directive.md
-    - name: '例 : ELEMENT ディレクティブとエンティティのエンコードを指定する'
+    - name: '例:ELEMENT ディレクティブとエンティティのエンコードの指定'
       href: example-specifying-the-element-directive-and-entity-encoding.md
-    - name: '例 : CDATA ディレクティブの指定'
+    - name: '例:CDATA ディレクティブの指定'
       href: example-specifying-the-cdata-directive.md
-    - name: '例: XMLTEXT ディレクティブの指定'
+    - name: '例:XMLTEXT ディレクティブの指定'
       href: example-specifying-the-xmltext-directive.md
     - name: FOR XML での PATH モードの使用
       href: use-path-mode-with-for-xml.md
@@ -154,7 +154,7 @@
       href: columns-that-contain-a-null-value-by-default.md
     - name: PATH モードでの名前空間のサポート
       href: namespace-support-in-path-mode.md
-    - name: '例 : PATH モードの使用'
+    - name: '例 :PATH モードの使用'
       href: examples-using-path-mode.md
     - name: FOR XML クエリの TYPE ディレクティブ
       href: type-directive-in-for-xml-queries.md
@@ -191,7 +191,7 @@
 - name: OPENXML
   href: openxml-sql-server.md
   items:
-    - name: '例: OPENXML の使用'
+    - name: '例 :OPENXML の使用'
       href: examples-using-openxml.md
     - name: OPENXML 内でのメタプロパティの指定
       href: specify-metaproperties-in-openxml.md

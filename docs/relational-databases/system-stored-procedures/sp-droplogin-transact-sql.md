@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: e58684d1-c394-48de-906e-da6ee91100c3
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 05adcc690b1fdb869f8de4d306e989e74d831cf8
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: de01ffe595a636356bf5b82ed2c5540cc3f5a092
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47659740"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68056503"
 ---
 # <a name="spdroplogin-transact-sql"></a>sp_droplogin (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -43,8 +42,7 @@ sp_droplogin [ @loginame = ] 'login'
 ```  
   
 ## <a name="arguments"></a>引数  
- [ **@loginame =** ] **'***login***'**  
- 削除するログインを指定します。 *ログイン*は**sysname**、既定値はありません。 *ログイン*に既に存在する必要があります[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]します。  
+`[ @loginame = ] 'login'` 削除するログインです。 *ログイン*は**sysname**、既定値はありません。 *ログイン*に既に存在する必要があります[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]します。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  0 (成功) または 1 (失敗)  

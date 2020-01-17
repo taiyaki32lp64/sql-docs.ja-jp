@@ -7,16 +7,15 @@ ms.reviewer: ''
 ms.technology: ''
 ms.topic: conceptual
 ms.assetid: ae357f9b-e3e2-4cdf-af02-012acda2e466
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
+author: MladjoA
+ms.author: mlandzic
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 2e58734bb3487e86b30f561e4e636bbe4851435e
-ms.sourcegitcommit: 467b2c708651a3a2be2c45e36d0006a5bbe87b79
+ms.openlocfilehash: a063a2a00ba67640b6a36a43abda2ea9eb45025d
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53979960"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72909209"
 ---
 # <a name="compoundcurve"></a>CompoundCurve
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -30,7 +29,7 @@ ms.locfileid: "53979960"
 1.  少なくとも 1 つの **CircularString** インスタンスまたは **LineString** インスタンスを含める必要があります。  
   
 2.  **CircularString** インスタンスまたは **LineString** インスタンスのシーケンスは連続している必要があります。  
-  
+
 **CompoundCurve** に複数の **CircularString** インスタンスおよび **LineString** インスタンスのシーケンスが含まれている場合、最後のインスタンスを除くすべてのインスタンスのエンドポイントは、シーケンス内の次のインスタンスの開始エンドポイントであることが必要です。 これは、シーケンス内の前のインスタンスの終点が (4 3 7 2) である場合は、シーケンス内の次のインスタンスの始点が (4 3 7 2) になる必要があることを意味します。 点の Z (標高) 値および M (メジャー) 値も同じである必要があることに注意してください。 これら 2 つの点が異なる場合は、 `System.FormatException` がスローされます。 **CircularString** の点は、Z 値または M 値を持つ必要はありません。 前のインスタンスの終点に対して Z 値または M 値が指定されていない場合、次のインスタンスの始点には Z 値または M 値を含めることはできません。 前のシーケンスの終点が (4 3) である場合、次のシーケンスの始点は (4 3) となり、(4 3 7 2) を設定することはできません。 **CompoundCurve** インスタンスのすべての点は、Z 値をまったく持たないか、または同じ Z 値を持つ必要があります。  
   
 ## <a name="compoundcurve-instances"></a>CompoundCurve インスタンス  
@@ -138,7 +137,7 @@ SET @g = geometry::Parse('COMPOUNDCURVE(CIRCULARSTRING(0 2, 2 0, 4 2), CIRCULARS
 SELECT @g.STLength();  
 ```  
   
-この場合の出力は、4∏ と等しい `12.5663706143592` となります。 この例の `CompoundCurve` インスタンスは、半径が 2 の円を格納します。 前のコード例のどちらの場合も、 `CompoundCurve`を使用する必要はありません。 最初の例では `LineString` インスタンスを、2 番目の例では `CircularString` インスタンスをより単純化することができました。 ただし、次の例は、 `CompoundCurve` がより優れた代替手段となるケースを示しています。  
+この場合の出力は、4? と等しい `12.5663706143592` となります。 この例の `CompoundCurve` インスタンスは、半径が 2 の円を格納します。 前のコード例のどちらの場合も、 `CompoundCurve`を使用する必要はありません。 最初の例では `LineString` インスタンスを、2 番目の例では `CircularString` インスタンスをより単純化することができました。 ただし、次の例は、 `CompoundCurve` がより優れた代替手段となるケースを示しています。  
   
 ### <a name="f-using-a-compoundcurve-to-store-a-semicircle"></a>F. CompoundCurve を使用して半円を格納する  
  次の例では、 `CompoundCurve` インスタンスを使用して半円を格納します。  
@@ -184,7 +183,7 @@ Circle One11.940039...
 Circle Two12.566370...  
 ```  
   
-Circle Two の境界は約 4∏ で、これは境界の実際の値です。 ただし、Circle One の境界はきわめて不正確です。 Circle One の `CompoundCurve` インスタンスは、1 つの円弧 (ABC) と 2 つの線分 (CD、DA) を格納します。 `CompoundCurve` インスタンスは、円を定義するために 2 つの円弧 (ABC、CDA) を格納する必要があります。 `LineString` インスタンスは、2 番目の点のセット (4 2, 2 4, 0 2) を Circle One の `CompoundCurve` インスタンスに定義します。 ここで、 `CircularString` 内の `CompoundCurve`インスタンスを明示的に宣言する必要があります。  
+Circle Two の境界は約 4? で、これは境界の実際の値です。 ただし、Circle One の境界はきわめて不正確です。 Circle One の `CompoundCurve` インスタンスは、1 つの円弧 (ABC) と 2 つの線分 (CD、DA) を格納します。 `CompoundCurve` インスタンスは、円を定義するために 2 つの円弧 (ABC、CDA) を格納する必要があります。 `LineString` インスタンスは、2 番目の点のセット (4 2, 2 4, 0 2) を Circle One の `CompoundCurve` インスタンスに定義します。 ここで、 `CircularString` 内の `CompoundCurve`インスタンスを明示的に宣言する必要があります。  
   
 ## <a name="see-also"></a>参照  
  [STIsValid &#40;geometry データ型&#41;](../../t-sql/spatial-geometry/stisvalid-geometry-data-type.md)   

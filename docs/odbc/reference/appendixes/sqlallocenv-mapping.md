@@ -13,16 +13,15 @@ helpviewer_keywords:
 ms.assetid: 4bb51845-ee91-4b97-9dd4-2fab977f2aec
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 39736d4d007814e29bc8c8293fa7e1020539b940
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: afbd1404cb40408166ecfc59993db7b183ae5ed2
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47692741"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68065014"
 ---
 # <a name="sqlallocenv-mapping"></a>SQLAllocEnv のマッピング
-アプリケーションを呼び出すと**SQLAllocEnv**を通じて、ODBC 3 *.x*ドライバーでは、呼び出し**SQLAllocEnv**(*phenv*)にマップされて**SQLAllocHandle**次のようにします。  
+アプリケーションを呼び出すと**SQLAllocEnv** ODBC を通じて*3.x*ドライバーでは、呼び出し**SQLAllocEnv**(*phenv*)にマップされて**SQLAllocHandle**次のようにします。  
   
 1.  ドライバー マネージャーは、環境ハンドルを割り当てるし、アプリケーションに返します。 ドライバー マネージャー呼び出し**SQLSetEnvAttr** SQL_OV_ODBC2 を SQL_ATTR_ODBC_VERSION 環境属性を設定します。  
   

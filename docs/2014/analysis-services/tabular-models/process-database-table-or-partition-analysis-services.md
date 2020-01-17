@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 f1_keywords:
 - SQL12.ASVS.SSMS.PARTITIONS.PROCESSINGOPTIONS.IMBI.F1
@@ -13,12 +12,12 @@ ms.assetid: 307d69c3-cabb-4dfa-b90c-9852492c1213
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 6cfe1f291bd6a045bea635ea4501e76854d32e47
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: ea2d05c2862445737ea544fdab9c4ca8fc5e6c76
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48067722"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66066844"
 ---
 # <a name="process-database-table-or-partition"></a>データベース、テーブル、またはパーティションの処理
   このトピックのタスクを使用してテーブル モデル データベース、テーブル、またはパーティションを手動で処理する方法を説明する、**プロセス\<オブジェクト >**  ダイアログ ボックスで[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]します。  
@@ -76,8 +75,8 @@ ms.locfileid: "48067722"
   
 4.  **[処理]** チェックボックス列で、選択したモードで処理するパーティションを選択し、 **[OK]** をクリックします。  
   
-## <a name="see-also"></a>参照  
- [テーブル モデル パーティション&#40;SSAS 表形式&#41;](tabular-model-partitions-ssas-tabular.md)   
- [テーブル モデル パーティション作成し、管理&#40;SSAS 表形式&#41;](create-and-manage-tabular-model-partitions-ssas-tabular.md)  
+## <a name="see-also"></a>関連項目  
+ [テーブル モデル パーティション (SSAS テーブル)](tabular-model-partitions-ssas-tabular.md)   
+ [テーブル モデル パーティションの作成および管理 (SSAS テーブル)](create-and-manage-tabular-model-partitions-ssas-tabular.md)  
   
   

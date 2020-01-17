@@ -19,11 +19,11 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: 38da38f867c6266d25f3b5d4c329a3e18a0e7292
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53357321"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63223335"
 ---
 # <a name="acceptstop-property-sqlservice-class"></a>AcceptStop プロパティ (SqlService クラス)
   サービスを停止できるかどうかを指定するブール型のプロパティの値を取得します。  

@@ -13,11 +13,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 2b81fb13b8b8635bd5e5cecde801b4123fc74c99
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52804244"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63253525"
 ---
 # <a name="create-a-policy-based-management-policy"></a>ポリシー ベースの管理ポリシーの作成
   このトピックでは、 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] を使用して、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]でポリシー ベースの管理ポリシーを作成する方法について説明します。  
@@ -55,7 +55,7 @@ ms.locfileid: "52804244"
   
 6.  作成されたポリシーを直ちに有効にする場合は、 **[有効]** チェック ボックスをオンにします。 評価モードが **[要求時]** である場合、 **[有効]** チェック ボックスは使用できません。  
   
-7.  **[条件の確認]** ボックスの一覧で、既存の条件の 1 つを選択するか、 **[新しい条件]** をクリックします。 条件を編集するには、条件を選択し、省略記号ボタン (**[...]**) をクリックします。詳細については、「 [新しいポリシー ベースの管理条件の作成](create-a-new-policy-based-management-condition.md) 」または「 [ポリシー ベースの管理条件のプロパティの表示または変更](view-or-modify-the-properties-of-a-policy-based-management-condition.md)」を参照してください。  
+7.  **[条件の確認]** ボックスの一覧で、既存の条件の 1 つを選択するか、 **[新しい条件]** をクリックします。 条件を編集するには、条件を選択し、省略記号ボタン ( **[...]** ) をクリックします。詳細については、「 [新しいポリシー ベースの管理条件の作成](create-a-new-policy-based-management-condition.md) 」または「 [ポリシー ベースの管理条件のプロパティの表示または変更](view-or-modify-the-properties-of-a-policy-based-management-condition.md)」を参照してください。  
   
 8.  **[対象]** ボックスで、このポリシーの対象になる種類を 1 つ以上選択します。 一部の条件とファセットは、特定の種類の対象にしか適用できません。 使用可能な対象セットが、関連するボックスに表示されます。 **[すべて]** を展開して、一部の種類の対象に対してフィルター条件を選択します。 対象がこのボックスに表示されていない場合、条件の確認がサーバー レベルのスコープを持っています。  
   

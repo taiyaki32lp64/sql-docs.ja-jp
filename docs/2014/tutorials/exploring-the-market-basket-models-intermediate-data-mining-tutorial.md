@@ -11,11 +11,11 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: 8a7b2f97cbda0594698c6cbaa68019a6493f1e74
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56035303"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63224606"
 ---
 # <a name="exploring-the-market-basket-models-intermediate-data-mining-tutorial"></a>マーケット バスケット モデルの検証 (中級者向けデータ マイニング チュートリアル)
   これでビルドした、`Association`モデルでは、利用できることを使用して、[!INCLUDE[msCoName](../includes/msconame-md.md)]アソシエーション ビューアーで、**マイニング モデル ビューアー**データ マイニング デザイナーのタブ。 このチュートリアルでは、ビューアーを使用してアイテム間の関係を検証する方法を、順を追って学習します。 ビューアーを使用すると、どの製品とどの製品がよく一緒に表示されるかが一目でわかるほか、新たなパターンの概観も可能です。  
@@ -137,7 +137,7 @@ ms.locfileid: "56035303"
 ##  <a name="bkmk_Rules"></a> [規則] タブ  
  **ルール** タブには、アルゴリズムの検索ルールに関連する次の情報が表示されます。  
   
--   **確率:***尤度*ルールの右辺のアイテムの左側にある項目を指定した確率として定義されているのです。  
+-   **確率:** *尤度*ルールの右辺のアイテムの左側にある項目を指定した確率として定義されているのです。  
   
 -   **重要:** ルールの有用性の測定結果。 この値が大きいほどルールの有効性が高くなります。  
   

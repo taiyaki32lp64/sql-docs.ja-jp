@@ -1,6 +1,7 @@
 ---
-title: Microsoft レプリケーション インタラクティブ競合回避モジュール | Microsoft Docs
-ms.custom: ''
+title: インタラクティブ競合回避モジュール (マージ)
+describes: Describes the Interactive Conflict Resolver that can be used for merge subscriptions that are synchronized using the Windows Synchronization Manager.
+ms.custom: seo-lt-2019
 ms.date: 03/07/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -12,14 +13,13 @@ f1_keywords:
 ms.assetid: d3d4a480-782b-4b1d-b839-565c8cf6cb24
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 62d63299c05ea17d57130fcad7d81af417b78610
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+monikerRange: =azuresqldb-current||>=sql-server-2014||=sqlallproducts-allversions
+ms.openlocfilehash: 5eca59b2277eefc351b63013dbc614eac9ed0b65
+ms.sourcegitcommit: 02d44167a1ee025ba925a6fefadeea966912954c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47619880"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75321949"
 ---
 # <a name="microsoft-replication-interactive-conflict-resolver"></a>Microsoft レプリケーション インタラクティブ競合回避モジュール
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -28,20 +28,20 @@ ms.locfileid: "47619880"
 > [!NOTE]  
 >  論理レコードに関連する競合は、インタラクティブ競合回避モジュールには表示されません。 これらの競合に関する情報を表示するには、レプリケーション ストアド プロシージャを使用します。 詳細については、「[マージ パブリケーションの競合情報の表示 (レプリケーション Transact-SQL プログラミング)](../../relational-databases/replication/view-conflict-information-for-merge-publications.md)」を参照してください。  
   
-## <a name="options"></a>[変数]  
+## <a name="options"></a>オプション  
  **列名**  
  テーブルのすべての列の名前です。 1 つまたは複数の列が競合するデータを持つ場合があります。 どの列が競合するかにかかわらず、競合で優先された行全体が、優先されなかった行全体を上書きします。  
   
  **[提案された解決策]**  
  アーティクルの競合回避モジュールによって提案された解決策です。  
   
- **パブリッシャー**  
+ **発行元**  
  パブリッシャーでのデータ値です。  
   
- **サブスクライバー (Subscriber)**  
+ **サブスクライバー**  
  サブスクライバーでのデータ値です。  
   
- **[推奨設定を優先]**、 **[パブリッシャーを優先]**、 **[サブスクライバーを優先]**  
+ **[推奨設定を優先]** 、 **[パブリッシャーを優先]** 、 **[サブスクライバーを優先]**  
  パブリッシャーまたはサブスクライバーのどちらが競合に優先されなかったかによって、どちらかが適用される行を受け入れます。 パブリッシャーが競合に優先されなかった場合、その他のすべてのサブスクライバーは、次にパブリッシャーと同期される際に、競合に優先される行を受け取ります。  
   
  **[残りの競合を自動的に解決]**  

@@ -12,21 +12,20 @@ helpviewer_keywords:
 ms.assetid: fbc39e3d-67d9-4331-bf5f-76dbd74c4c45
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 015ea45d1383e6813973aeb1e4c86451a506a2aa
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 14837bc5ba3368fbb0d33680ee1c54936ab0a224
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47855420"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67898847"
 ---
 # <a name="sqlgetinfo-visual-foxpro-odbc-driver"></a>SQLGetInfo (Visual FoxPro ODBC ドライバー)
 > [!NOTE]  
 >  このトピックでには、Visual FoxPro ODBC ドライバー固有の情報が含まれています。 この関数の詳細については、該当するトピックを参照してください。 [ODBC API リファレンス](../../odbc/reference/syntax/odbc-api-reference.md)します。  
   
- サポート: 完全な  
+ サポート:[完全]  
   
- レベル 1 の ODBC API 準拠:  
+ ODBC API 準拠:レベル 1  
   
  Visual FoxPro ODBC ドライバーと、接続ハンドルに関連付けられているデータ ソースに関する一般的な情報を返します*hdbc*します。 次の一覧には、各 Visual FoxPro ODBC ドライバーによって返される値が表示されます。 *fInfoType*引数と戻り値に関するコメント。  
   

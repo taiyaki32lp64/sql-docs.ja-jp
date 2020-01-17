@@ -13,19 +13,18 @@ f1_keywords:
 ms.assetid: 2ef0a556-9566-4af8-849e-ab038b9279cc
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: c66e1d0f6a7eeb7835b7a255f0aef253476cee93
-ms.sourcegitcommit: ef6e3ec273b0521e7c79d5c2a4cb4dcba1744e67
+ms.openlocfilehash: 34223d46b9c66f28f1dad82bda0125c06d0e08ca
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51512863"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67940512"
 ---
 # <a name="create-new-condition-or-open-condition-dialog-box-description-page"></a>[新しい条件の作成] または [条件を開く] ダイアログ ボックスの [説明] ページ
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   このダイアログ ボックスを使用すると、ポリシー ベースの管理条件に説明を追加できます。  
   
-## <a name="options"></a>[変数]  
+## <a name="options"></a>オプション  
  **[説明]**  
  条件の説明を入力します。  
   

@@ -1,32 +1,32 @@
 ---
 title: レポート サーバー アプリケーションで利用可能なメモリの構成 | Microsoft Docs
-ms.date: 03/20/2017
+ms.date: 05/30/2019
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: report-server
 ms.topic: conceptual
 helpviewer_keywords:
 - memory [Reporting Services]
 - memory thresholds [Reporting Services]
 ms.assetid: ac7ab037-300c-499d-89d4-756f8d8e99f6
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: ab39c1de4741906559002281dacf9b255274f9f4
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: d7cbcb0b2cd0da8bd13d28620261c2e9894463db
+ms.sourcegitcommit: e4b241fd92689c2aa6e1f5e625874bd0b807dd01
+ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47722710"
+ms.lasthandoff: 07/04/2019
+ms.locfileid: "67564024"
 ---
 # <a name="configure-available-memory-for-report-server-applications"></a>レポート サーバー アプリケーションで利用可能なメモリの構成
-  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] は、利用可能なすべてのメモリを使用できますが、[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] サーバー アプリケーションに割り当てることのできる合計メモリ リソース量に上限を設けることによって、既定の動作をオーバーライドすることができます。 また、しきい値を設定することにより、メモリの圧迫度 (低、中、高) に応じて、要求の優先度付けや処理の方法を変えることもできます。 メモリ圧迫の度合いが低い場合、レポート サーバーは、対話型のレポート処理またはオンデマンドのレポート処理に若干高い優先度を割り当てます。 メモリ圧迫の度合いが高い場合、レポート サーバーは、さまざまな手法を用いながら、利用できる限られたリソースで稼働状態を保ちます。  
+ [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] は、利用可能なすべてのメモリを使用できますが、[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] サーバー アプリケーションに割り当てることのできる合計メモリ リソース量に上限を設けることによって、既定の動作をオーバーライドすることができます。 また、しきい値を設定することにより、メモリの圧迫度 (低、中、高) に応じて、要求の優先度付けや処理の方法を変えることもできます。 メモリ圧迫の度合いが低い場合、レポート サーバーは、対話型のレポート処理またはオンデマンドのレポート処理に若干高い優先度を割り当てます。 メモリ圧迫の度合いが高い場合、レポート サーバーは、さまざまな手法を用いながら、利用できる限られたリソースで稼働状態を保ちます。  
   
- このトピックでは、指定できる構成設定について取り上げ、さらに、要求の処理に影響するメモリ不足が発生した場合に、サーバーがどのように対処するかについて説明します。  
+ この記事では、指定できる構成設定について取り上げ、さらに、要求の処理に影響するメモリ不足が発生した場合に、サーバーがどのように対処するかについて説明します。  
   
 ## <a name="memory-management-policies"></a>メモリ管理ポリシー  
  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] は、特定のアプリケーションや処理要求の種類に対して割り当て可能なメモリ量を調整することによってシステム リソースの制約に対処します。 レポート サーバー サービスとして実行され、メモリ管理の対象となるアプリケーションには、次のものがあります。  
   
--   レポート マネージャー (レポート サーバーの Web フロントエンド アプリケーション)  
+-   Web ポータル (レポート サーバーの Web フロントエンド アプリケーション)  
   
 -   レポート サーバー Web サービス (対話型のレポート処理およびオンデマンドの要求用)  
   
@@ -50,7 +50,7 @@ ms.locfileid: "47722710"
  負荷が急激に増加するような場合は、既定の設定を変更する必要があります。 処理負荷の急激な増加が発生した場合、メモリ不足がまったく生じていない状態から、メモリ割り当てエラーの状態へと、きわめて短時間の間に遷移することが考えられます。 たとえば、メモリを激しく消費するレポートの複数のインスタンスが同時に開始されて実行された場合などが該当します。 この種の処理負荷に対処するためには、メモリ消費が中レベルまたは高レベルに達したことをレポート サーバーに認識させ、できるだけ早期に処理をスローダウンさせる必要があります。 こうすることで、より多くの要求を完了させることができます。 そのためには、 **MemorySafetyMargin** の値を低く設定して、低メモリ圧迫度ゾーンを他のゾーンよりも小さくする必要があります。 これにより、中～高レベルのメモリ圧迫が発生した場合の対応を早めることができます。  
   
 ## <a name="configuration-settings-for-memory-management"></a>メモリ管理の構成設定  
- レポート サーバーのメモリ割り当てを制御する構成設定には、**WorkingSetMaximum**、**WorkingSetMinimum****MemorySafetyMargin** および **MemoryThreshold** があります。  
+ レポート サーバーのメモリ割り当てを制御する構成設定には、**WorkingSetMaximum**、**WorkingSetMinimum** **MemorySafetyMargin** および **MemoryThreshold** があります。  
   
 -   使用可能なメモリの範囲は、**WorkingSetMaximum** および **WorkingSetMinimum** によって定義されます。 これらを構成することで、レポート サーバー アプリケーションに使用可能なメモリの範囲を設定できます。 たとえば、同じコンピューターで複数のアプリケーションをホストしているとき、レポート サーバーに対し、同じコンピューター上の他のアプリケーションとは異なる割合で、システム リソースを使用させることもできます。  
   
@@ -60,7 +60,7 @@ ms.locfileid: "47722710"
   
  次の図は、メモリの圧迫度を低、中、高に分ける際に使用される設定の組み合わせを示しています。  
   
- ![メモリの状態の構成設定](../../reporting-services/report-server/media/rs-memoryconfigurationzones.gif "メモリの状態の構成設定")  
+ ![メモリの状態の構成設定](../../reporting-services/report-server/media/rs-memoryconfigurationzones.png "メモリの状態の構成設定")  
   
  次の表では、 **WorkingSetMaximum**、 **WorkingSetMinimum**、 **MemorySafetyMargin**、 **MemoryThreshold** の各設定について説明します。 構成設定は、 [RSReportServer.config ファイル](../../reporting-services/report-server/rsreportserver-config-configuration-file.md)で指定されます。  
   
@@ -72,12 +72,13 @@ ms.locfileid: "47722710"
 |**MemorySafetyMargin**|**WorkingSetMaximum** を上限として、メモリ圧迫の度合いを中レベルと低レベルに分けたとき、その境界を定義するパーセンテージを指定します。 メモリには、システム用に予約され、レポート サーバーの処理には使用できない領域も存在します。この値は、使用可能なメモリに対するパーセンテージを示します。 既定値は 80 です。|  
   
 > [!NOTE]  
->  **MemoryLimit** および **MaximumMemoryLimit** の設定は、[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 以降のバージョンでは廃止されています。 既存のインストールをアップグレードした場合、または、該当する設定を含んだ RSReportServer.config ファイルを使用している場合、これらの値は読み取られません。  
+>  **MemoryLimit** および **MaximumMemoryLimit** の設定は、 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 以降のバージョンでは廃止されています。 既存のインストールをアップグレードした場合、または、該当する設定を含んだ RSReportServer.config ファイルを使用している場合、これらの値は読み取られません。  
   
 #### <a name="example-of-memory-configuration-settings"></a>メモリの構成設定の例  
  次の例は、カスタム メモリ構成値を使用したレポート サーバー コンピューターの構成設定を示しています。 **WorkingSetMaximum** または **WorkingSetMinimum**を追加する場合は、その要素と値を RSReportServer.config ファイルに入力する必要があります。 どちらの値も、サーバー アプリケーションに割り当てる RAM のサイズ (キロバイト単位) を整数で指定します。 次の例では、レポート サーバー アプリケーションに対するメモリの合計割当量が 4 GB を超えないように指定しています。 **WorkingSetMinimum** の既定値 ( **WorkingSetMaximum**の 60%) を使用する場合は、そちらを省略し、RSReportServer.config ファイルには **WorkingSetMaximum** のみを指定することも可能です。 この例では、実際にどのように追加すればよいかを示すために、 **WorkingSetMinimum** を省略せずに記載しています。  
   
-```  
+```
+      Config files 
       <MemorySafetyMargin>80</MemorySafetyMargin>  
       <MemoryThreshold>90</MemoryThreshold>  
       <WorkingSetMaximum>4000000</WorkingSetMaximum>  
@@ -85,12 +86,10 @@ ms.locfileid: "47722710"
 ```  
   
 #### <a name="about-aspnet-memory-configuration-settings"></a>ASP.NET のメモリの構成設定について  
- レポート サーバー Web サービスとレポート マネージャーは [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] アプリケーションですが、どちらのアプリケーションも、IIS 5.0 互換モードで実行される **アプリケーションの machine.config (** processModel [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] セクション) に指定されているメモリ構成設定は参照しません。 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] は、メモリの構成設定を RSReportServer.config ファイルからのみ読み取ります。  
+ 以前のバージョンには、2016 以降レポート サーバー Web サービスおよび web ポータルには、HTML5 アプリケーションが、[!INCLUDE[vstecasp](../../includes/vstecasp-md.md)]メモリ構成設定で指定したアプリケーションでは、どちらのアプリケーション応答、 **processModel**用の machine.config のセクション[!INCLUDE[vstecasp](../../includes/vstecasp-md.md)]IIS 5.0 および上位互換モードで実行されるアプリケーション。 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] は、メモリの構成設定を RSReportServer.config ファイルからのみ読み取ります。  
   
 ## <a name="see-also"></a>参照  
  [RsReportServer.config 構成ファイル](../../reporting-services/report-server/rsreportserver-config-configuration-file.md)   
- [RsReportServer.config 構成ファイル](../../reporting-services/report-server/rsreportserver-config-configuration-file.md)   
- [Reporting Services の構成ファイル &#40;RSreportserver.config&#41; の変更](../../reporting-services/report-server/modify-a-reporting-services-configuration-file-rsreportserver-config.md)   
+ [Reporting Services の構成ファイル &#40;RSreportserver.config&#41; の変更](../../reporting-services/report-server/modify-a-reporting-services-configuration-file-rsreportserver-config.md)  
  [レポート サーバー アプリケーションのアプリケーション ドメイン](../../reporting-services/report-server/application-domains-for-report-server-applications.md)  
-  
   

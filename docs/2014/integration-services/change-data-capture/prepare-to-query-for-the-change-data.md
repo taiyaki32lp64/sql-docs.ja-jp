@@ -9,15 +9,15 @@ ms.topic: conceptual
 helpviewer_keywords:
 - incremental load [Integration Services],preparing query
 ms.assetid: 9ea2db7a-3dca-4bbf-9903-cccd2d494b5f
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 831e44cb232dea7f0730c73d360cd787f3895878
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 559af9cdd7e7014e114b431dddf25b09dd18dc81
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52756994"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62771278"
 ---
 # <a name="prepare-to-query-for-the-change-data"></a>変更データのクエリを準備する
   変更データの増分読み込みを実行する [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] パッケージの制御フローにおいて、3 番目に行う最後のタスクは、変更データのクエリを準備してデータ フロー タスクを追加することです。  
@@ -61,7 +61,7 @@ ms.locfileid: "52756994"
   
 2.  **[スクリプト タスク エディター]** の **[スクリプト]** ページで、次のオプションを選択します。  
   
-    1.  **[ReadOnlyVariables]** で **[User::DataReady]**、 **[User::ExtractStartTime]**、および **[User::ExtractEndTime]** を一覧から選択します。  
+    1.  **[ReadOnlyVariables]** で **[User::DataReady]** 、 **[User::ExtractStartTime]** 、および **[User::ExtractEndTime]** を一覧から選択します。  
   
     2.  **[ReadWriteVariables]** で [User::SqlDataQuery] を一覧から選択します。  
   
@@ -93,7 +93,7 @@ ms.locfileid: "52756994"
         Dts.Variables["SqlDataQuery"].Value = sqlDataQuery;  
         ```  
   
-         \- または -  
+         \- - または -  
   
     -   [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]でプログラミングしている場合は、次のコード行を入力します。  
   
@@ -198,6 +198,6 @@ ms.locfileid: "52756994"
 ## <a name="next-step"></a>次の手順  
  クエリ文字列を準備してデータ フロー タスクを構成したら、次にデータベースから変更データを取得するテーブル値関数を作成します。  
   
- **次のトピック:**[変更データを取得する関数を作成する](create-the-function-to-retrieve-the-change-data.md)  
+ **次のトピック:** [変更データを取得する関数を作成する](create-the-function-to-retrieve-the-change-data.md)  
   
   

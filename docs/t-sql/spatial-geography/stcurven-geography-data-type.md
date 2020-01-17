@@ -15,15 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - STCurveN method (geography)
 ms.assetid: 99ef7100-2c4b-4f07-8d66-b343da94b023
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: c9807fd2d9a447ba9d791b590eed6daf0cde60b0
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: MladjoA
+ms.author: mlandzic
+ms.openlocfilehash: 19aec9ae5a0253e74ff8816fadcfdbb7a2a74001
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47747670"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68042451"
 ---
 # <a name="stcurven-geography-data-type"></a>STCurveN (geography データ型)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -44,7 +43,7 @@ ms.locfileid: "47747670"
 ## <a name="return-types"></a>戻り値の型  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 戻り値の型: **geography**  
   
- CLR の戻り値の型: **SqlGeography**  
+ CLR の戻り値の型:**SqlGeography**  
   
 ## <a name="exceptions"></a>例外  
  n < 1 のとき、**ArgumentOutOfRangeException** がスローされます。  

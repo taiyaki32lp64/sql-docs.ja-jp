@@ -17,22 +17,18 @@ helpviewer_keywords:
 - ELSE keyword
 - IF keyword
 ms.assetid: 6f2b4278-0dea-4603-bbd3-7cbad602a645
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
+author: rothja
+ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 15c28ceccbdaf6d4c4b69e9e15c356cffc0c085c
-ms.sourcegitcommit: 96032813f6bf1cba680b5e46d82ae1f0f2da3d11
+ms.openlocfilehash: 86ae34994c00622ae66eee4afcb3ae3dacedd989
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/15/2019
-ms.locfileid: "54298449"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68075312"
 ---
 # <a name="else-ifelse-transact-sql"></a>ELSE (IF...ELSE) (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
-
-  > [!div class="nextstepaction"]
-  > [SQL ドキュメントの目次に関するご意見を共有してください。](https://aka.ms/sqldocsurvey)
 
   [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントを実行する条件を設定します。 *Boolean_expression* が TRUE に評価された場合、*Boolean_expression* に続く [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメント (*sql_statement*) が実行されます。 オプションの ELSE キーワードは、*Boolean_expression* が FALSE または NULL と評価される場合に、代わりに実行される [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントを指定します。  
   
@@ -52,10 +48,10 @@ IF Boolean_expression
  TRUE または FALSE を返す式です。 *Boolean_expression* が SELECT ステートメントを含む場合は、SELECT ステートメントをかっこで囲む必要があります。  
   
  { *sql_statement* | *statement_block* }  
- 有効な 1 つの [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメント、またはステートメント ブロックとして定義した一連のステートメントです。 ステートメント ブロック (バッチ) を定義するのには、BEGIN と END は、フロー制御言語キーワードを使用します。 [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントはすべて BEGIN...END ブロック内で有効ですが、同じバッチ (ステートメント ブロック) 内で一緒にグループ化できない [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントもあります。  
+ 有効な 1 つの [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメント、またはステートメント ブロックとして定義した一連のステートメントです。 ステートメント ブロック (バッチ) を定義するには、フロー制御言語キーワードの BEGIN と END を使用します。 [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントはすべて BEGIN...END ブロック内で有効ですが、同じバッチ (ステートメント ブロック) 内で一緒にグループ化できない [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントもあります。  
   
 ## <a name="result-types"></a>戻り値の型  
- **ブール値**  
+ **Boolean**  
   
 ## <a name="examples"></a>使用例  
   
@@ -121,7 +117,7 @@ GO
 ```  
   
 ### <a name="d-using-nested-ifelse-statements"></a>D. 入れ子になった IF...ELSE ステートメントを使用する  
- 次の例では、IF のかを示します。別の内部は、ELSE ステートメントを入れ子にすることができます。 各ステートメントをテストするには、`@Number` 変数を `5`、`50`、および `500` に設定します。  
+ 次の例では、IF のかを示します。ELSE ステートメントを入れ子にする方法を示します。 各ステートメントをテストするには、`@Number` 変数を `5`、`50`、および `500` に設定します。  
   
 ```  
 DECLARE @Number int;  
@@ -157,7 +153,7 @@ ELSE
   
 ## <a name="see-also"></a>参照  
  [ALTER TRIGGER &#40;Transact-SQL&#41;](../../t-sql/statements/alter-trigger-transact-sql.md)   
- [フロー制御言語 &#40;TRANSACT-SQL&#41;](~/t-sql/language-elements/control-of-flow.md)   
+ [フロー制御言語 &#40;Transact-SQL&#41;](~/t-sql/language-elements/control-of-flow.md)   
  [CREATE TRIGGER &#40;Transact-SQL&#41;](../../t-sql/statements/create-trigger-transact-sql.md)   
  [IF...ELSE &#40;Transact-SQL&#41;](../../t-sql/language-elements/if-else-transact-sql.md)  
   

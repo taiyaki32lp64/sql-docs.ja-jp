@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 6dcfd6d5-772c-4876-aa94-a7f43c4b9d59
 author: Shamikg
 ms.author: Shamikg
-manager: craigg
-ms.openlocfilehash: 4e9e3aabd08566d65cd09242dbaf8a2041cc4ef1
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 9d2d58b06c1a222a2ff6042bb5ca46338f752f7c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52527438"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68083541"
 ---
 # <a name="appendix---1-sybasetosql"></a>付録 - 1 (SybaseToSQL)
 SSMA コンソールのコマンド ライン オプションを簡単に確認します。  
@@ -30,9 +29,9 @@ SSMA コンソールのコマンド ライン オプションを簡単に確認�
 |4|-x/xmloutput|いいえ|xmloutputfile|このオプションでは、XML 形式でコンソール出力を示します。 このオプションが指定されていない場合、既定の出力は、テキスト形式では。<br /><br />Xmloutputfile が指定されていない場合、XML 出力は STDOUT に送られます。<br /><br />Xmloutputfile では、XML 形式でコンソール出力の書き込み先ファイルの名前です。|  
 |5|-l/log|いいえ|logfile|有効なファイル名。|  
 |6|-e/projectenvironment|いいえ|projectenvironmentfolder|SSMA プロジェクト環境ファイルを含む有効なフォルダー名。|  
-|7|-p/securepassword|いいえ|-、/add {< server_id > [,... n]&#124;すべて}-c&#124;serverconnection < サーバー接続ファイル > [-v&#124;変数 < 変数値ファイル >] [-o/上書き]<br /><br />または<br /><br />-、/add {< server_id > [,... n]&#124;すべて}-s&#124;スクリプト < スクリプト ファイル > [-v&#124;変数 < 変数値ファイル >] [-o/上書き]<br /><br />-r/remove {< server_id > [,... n]&#124;すべて}<br /><br />-l/一覧表示<br /><br />-e/エクスポート {< サーバー id > [,... n]&#124;すべて} < 暗号化-パスワード ファイル ><br /><br />-i/インポート {< サーバー id > [,... n]&#124;すべて} < 暗号化パスワード-ファイル >|指定した場合、このオプションをその他のオプションと組み合わされていない必要があります。<br /><br />サーバー id:サーバー {文字列} に指定された一意の ID<br /><br />サーバー接続ファイル: サーバーの定義ファイル (serverconnectionfile または scriptfile)。<br /><br />変数の値のファイル:変数の定義ファイルし、サーバー接続ファイルで使用します。<br /><br />暗号化されたパスワード ファイルに:サーバー パスワード ファイルがユーザーが指定したパス フレーズを使用して暗号化することをお勧めします。|  
-|8|-?|いいえ|該当なし|該当なし|  
+|7|-p/securepassword|いいえ|-、/add {< server_id > [,...n]&#124;すべて}-c&#124;serverconnection < サーバー接続ファイル > [-v&#124;変数 < 変数値ファイル >] [-o/上書き]<br /><br />または<br /><br />-、/add {< server_id > [,...n]&#124;すべて}-s&#124;スクリプト < スクリプト ファイル > [-v&#124;変数 < 変数値ファイル >] [-o/上書き]<br /><br />-r/remove {<server_id> [, ...n] &#124; all}<br /><br />-l/一覧表示<br /><br />-e/エクスポート {< サーバー id > [,...n]&#124;すべて} < 暗号化-パスワード ファイル ><br /><br />-i/インポート {< サーバー id > [,...n]&#124;すべて} < 暗号化パスワード-ファイル >|指定した場合、このオプションをその他のオプションと組み合わされていない必要があります。<br /><br />サーバー id:サーバー {文字列} に指定された一意の ID<br /><br />サーバー接続ファイル: サーバーの定義ファイル (serverconnectionfile または scriptfile)。<br /><br />変数の値のファイル:変数の定義ファイルし、サーバー接続ファイルで使用します。<br /><br />暗号化されたパスワード ファイルに:サーバー パスワード ファイルがユーザーが指定したパス フレーズを使用して暗号化することをお勧めします。|  
+|8|-?|いいえ|適用できません|適用できません|  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
 [SSMA コンソール (Sybase) の実行](https://msdn.microsoft.com/ea8950b7-fabc-4aa4-89f8-9573a2617d70)  
   

@@ -13,11 +13,11 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: 2aff15a42c8bffeb5a54e92b9ce7a09ace282ce4
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48195232"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62774504"
 ---
 # <a name="new-search-property-list"></a>新しい検索プロパティ リスト
   このダイアログ ボックスを使用すると、検索プロパティ リストを作成できます。  
@@ -48,7 +48,7 @@ ms.locfileid: "48195232"
  参照してください[CREATE SEARCH PROPERTY LIST &#40;TRANSACT-SQL&#41;](/sql/t-sql/statements/create-search-property-list-transact-sql)します。  
   
 ## <a name="to-use-sql-server-management-studio-to-manage-search-property-lists"></a>SQL Server Management Studio を使用した検索プロパティ リストの管理  
- プロパティ検索用のフルテキスト インデックスを構成する方法の詳細と作成、表示、変更、または、検索プロパティ リストを削除する方法については、次を参照してください。[検索プロパティ リストを使用したドキュメント プロパティの検索](../relational-databases/search/search-document-properties-with-search-property-lists.md)します。  
+ 検索プロパティ リストを作成、表示、変更、または削除する方法、およびプロパティ検索用にフルテキスト インデックスを構成する方法については、「 [Search Document Properties with Search Property Lists](../relational-databases/search/search-document-properties-with-search-property-lists.md)」を参照してください。  
   
 ## <a name="see-also"></a>参照  
  [CREATE SEARCH PROPERTY LIST &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-search-property-list-transact-sql)   

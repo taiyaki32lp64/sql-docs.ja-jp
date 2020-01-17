@@ -16,17 +16,20 @@ f1_keywords:
 - sql13.is.upgradewizard.completewizard.f1
 - sql13.is.upgradewizard.upgradingpackage.f1
 ms.assetid: 7fe886ff-1ea5-48d5-9d20-d5da36dd1cd7
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: 4c1d1da13379b9a273ca3b5e0c1809434c7ed165
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 98f0e19bb0e3eb424d742990ce2f63e3fb0af019
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47829490"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71295704"
 ---
 # <a name="ssis-package-upgrade-wizard-f1-help"></a>SSIS パッケージ アップグレード ウィザードの F1 ヘルプ
+
+[!INCLUDE[ssis-appliesto](../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   SSIS パッケージ アップグレード ウィザードを使用して、以前のバージョンの [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] で作成されたパッケージを、現在のリリースの [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] のパッケージ形式にアップグレードします。  
   
  **SSIS パッケージ アップグレード ウィザードを実行するには**  
@@ -35,7 +38,7 @@ ms.locfileid: "47829490"
 
 ## <a name="ssis-upgrade-wizard"></a>SSIS アップグレード ウィザード
   
-### <a name="options"></a>[変数]  
+### <a name="options"></a>オプション  
  **[次回からこのページを表示しない]**  
  次回ウィザードを起動するときに、このようこそページをスキップします。  
  
@@ -49,7 +52,7 @@ ms.locfileid: "47829490"
  **[パッケージ ソース]**  
  アップグレードするパッケージが格納されている場所を選択します。 このオプションには、次の表に示す値があります。  
   
-|ReplTest1|[説明]|  
+|[値]|[説明]|  
 |-----------|-----------------|  
 |**[ファイル システム]**|アップグレードするパッケージがローカル コンピューター上のフォルダーにあることを示します。<br /><br /> パッケージをアップグレードする前に元のパッケージをウィザードでバックアップするには、元のパッケージがファイル システムに格納されている必要があります。 詳細については、方法に関するトピックを参照してください。|  
 |**[SSIS パッケージ ストア]**|アップグレードするパッケージがパッケージ ストア内にあることを示します。 パッケージ ストアは、[!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] サービスが管理するファイル システム フォルダーのセットで構成されます。 詳細については、「[パッケージの管理 (SSIS サービス)](../integration-services/service/package-management-ssis-service.md)」を参照してください。<br /><br /> この値を選択すると、対応する**パッケージ ソース**動的オプションが表示されます。|  
@@ -80,7 +83,7 @@ ms.locfileid: "47829490"
  **User name**  
  サーバーへの接続時に [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 認証で使用するユーザー名を入力します。  
   
- **Password**  
+ **パスワード**  
  サーバーへの接続時に [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 認証で使用するパスワードを入力します。  
  
 ## <a name="select-destination-location-page"></a>[アップグレード先の場所を選択] ページ
@@ -101,7 +104,7 @@ ms.locfileid: "47829490"
  **[パッケージ ソース]**  
  アップグレード パッケージが格納される場所を指定します。 このオプションには、次の表に示す値があります。  
   
-|ReplTest1|[説明]|  
+|[値]|[説明]|  
 |-----------|-----------------|  
 |**[ファイル システム]**|アップグレードされたパッケージをローカル コンピューター上のフォルダーに保存することを示します。|  
 |**[SSIS パッケージ ストア]**|アップグレードされたパッケージを Integration Services パッケージ ストア内に保存することを示します。 パッケージ ストアは、Integration Services サービスが管理するファイル システム フォルダーのセットで構成されます。 詳細については、「[パッケージの管理 &#40;SSIS サービス&#41;](../integration-services/service/package-management-ssis-service.md)」を参照してください。<br /><br /> この値を選択すると、対応する**パッケージ ソース**動的オプションが表示されます。|  
@@ -132,7 +135,7 @@ ms.locfileid: "47829490"
  **User name**  
  サーバーへの接続時に [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 認証で使用するユーザー名を入力します。  
   
- **Password**  
+ **パスワード**  
  サーバーへの接続時に [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 認証で使用するパスワードを入力します。  
  
 ## <a name="select-package-management-options-page"></a>[パッケージ管理オプションの選択] ページ
@@ -142,9 +145,9 @@ ms.locfileid: "47829490"
   
 -   [SSIS パッケージ アップグレード ウィザードを使用した Integration Services パッケージのアップグレード](../integration-services/install-windows/upgrade-integration-services-packages-using-the-ssis-package-upgrade-wizard.md)  
   
-### <a name="options"></a>[変数]  
+### <a name="options"></a>オプション  
  **[接続文字列を更新して新しいプロバイダー名を使用する]**  
- 現在のリリースの [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] の次のプロバイダーの名前を使用するように、接続文字列を更新します。  
+ 現在のリリースの [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]の次のプロバイダーの名前を使用するように、接続文字列を更新します。  
   
 -   OLE DB Provider for [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]  
   
@@ -191,7 +194,7 @@ ms.locfileid: "47829490"
 ## <a name="select-packages-page"></a>[パッケージの選択] ページ
   **[パッケージの選択]** ページを使用すると、アップグレードするパッケージを選択できます。 このページには、ウィザードの **[ソースの場所を選択]** ページで指定した場所に格納されているパッケージが一覧表示されます。  
   
-### <a name="options"></a>[変数]  
+### <a name="options"></a>オプション  
  **[既存のパッケージ名]**  
  アップグレードする 1 つ以上のパッケージを選択します。  
   
@@ -201,7 +204,7 @@ ms.locfileid: "47829490"
 > [!NOTE]  
 >  パッケージのアップグレード後に、アップグレード先パッケージ名を変更することもできます。 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] または [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]でアップグレード済みのパッケージを開き、パッケージ名を変更します。  
   
- **Password**  
+ **パスワード**  
  選択したアップグレード パッケージの複号化に使用するパスワードを指定します。  
   
  **[選択項目に適用]**  
@@ -210,14 +213,14 @@ ms.locfileid: "47829490"
 ## <a name="complete-the-wizard-page"></a>[ウィザードの完了] ページ
   **[ウィザードの完了]** ページでは、選択したパッケージ アップグレード オプションを確認できます。 このページは、このセッションのウィザードのオプションを前に戻って変更できる、最後のウィザード ページです。  
   
-### <a name="options"></a>[変数]  
+### <a name="options"></a>オプション  
  **オプションの概要**  
  ウィザードで選択したアップグレード オプションを確認します。 いずれかのオプションを変更するには、 **[戻る]** をクリックして前のウィザード ページに戻ります。
  
 ## <a name="upgrading-the-packages-page"></a>[パッケージをアップグレードしています] ページ
   **[パッケージをアップグレードしています]** ページでは、パッケージのアップグレードの進行状況を表示したり、アップグレード プロセスを中断したりできます。 [!INCLUDE[ssIS](../includes/ssis-md.md)] パッケージ アップグレード ウィザードでは、選択したパッケージが 1 つずつアップグレードされます。  
   
-### <a name="options"></a>[変数]  
+### <a name="options"></a>オプション  
  **[メッセージ] ペイン**  
  アップグレード プロセス中に、進行状況メッセージと概要情報が表示されます。  
   

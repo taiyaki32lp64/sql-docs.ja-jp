@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: ec970319-e749-4753-8675-9cf76ed99669
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 52a7ceaa177c223363f4c14313cf14f70a0e52f3
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 0da11d8f49c1de88297a9bf8876588c8b5aeb81b
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52508680"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66056276"
 ---
 # <a name="sap-bw-connection-manager-editor"></a>SAP BW 接続マネージャー エディター
   SAP Netweaver BW Version 7 システムへの接続に使用するプロパティを指定するには、 **[SAP BW 接続マネージャー エディター]** を使用します。  
@@ -34,7 +33,7 @@ ms.locfileid: "52508680"
   
     -   [SAP BW 接続マネージャー] をダブルクリックします。  
   
-         - または -  
+         \- または -  
   
     -   [SAP BW 接続マネージャー] を右クリックし、 **[編集]** を選択します。  
   

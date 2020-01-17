@@ -14,11 +14,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: ca584a81b8ba70073ee833d8033cd5f664747741
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48112112"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62807473"
 ---
 # <a name="database-mirroring-and-log-shipping-sql-server"></a>データベース ミラーリングとログ配布 (SQL Server)
   特定のデータベースをミラーリングまたはログ配布することができます。また、ミラーリングとログ配布を同時に行うこともできます。 使用する方法を選択するには、次の点を検討します。  

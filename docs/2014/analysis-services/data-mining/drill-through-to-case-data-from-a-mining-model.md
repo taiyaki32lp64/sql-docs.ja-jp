@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - drillthrough [Analysis Services]
@@ -13,12 +12,12 @@ ms.assetid: b4d3f350-e543-4ea9-b3a2-b4f7c0a9ae27
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 2ed7750ac0f09fd90ffd846fa4257eb5aae25546
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 6d683c9dc9a201b1f4351ee00d718ad0d7917606
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48062626"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66084606"
 ---
 # <a name="drill-through-to-case-data-from-a-mining-model"></a>マイニング モデルからケース データへのドリルスルー
   モデル ケースへのドリルスルーを許可するようにマイニング モデルが構成されている場合は、モデルの参照時に、モデルの作成に使用されたケースに関する詳細情報を取得できます。 さらに、基になるマイニング構造が、構造ケースへのドリルスルーを許可するように構成されており、ユーザーが適切な権限を持っている場合は、マイニング構造から情報を返すことができます。 これには、マイニング モデルに含まれていない列を含めることもできます。  
@@ -58,6 +57,6 @@ ms.locfileid: "48062626"
 6.  データをクリップボードにコピーするには、テーブル内の任意の行を右クリックして **[すべてコピー]** をクリックします。  
   
 ## <a name="see-also"></a>参照  
- [ドリルスルー クエリ&#40;データ マイニング&#41;](drillthrough-queries-data-mining.md)  
+ [ドリルスルー クエリ &#40;データ マイニング&#41;](drillthrough-queries-data-mining.md)  
   
   

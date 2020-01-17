@@ -1,5 +1,5 @@
 ---
-title: othersInsertsAreVisible メソッド (SQLServerDatabaseMetaData) |Microsoft Docs
+title: OthersSQLServerDatabaseMetaData Tsarevisible メソッド () |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: aa32f059-bb59-47f8-bac1-292f314df730
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: b124003525af7f461057d3183b5ed185f54410c7
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d274dec50ef238e0f87f63524d47275bb386810d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47690310"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67976654"
 ---
 # <a name="othersinsertsarevisible-method-sqlserverdatabasemetadata"></a>othersInsertsAreVisible メソッド (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -65,7 +64,7 @@ public boolean othersInsertsAreVisible(int type)
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- この othersInsertsAreVisible メソッドは、java.sql.DatabaseMetaData インターフェイスで othersInsertsAreVisible メソッドによって指定されます。  
+ この Othersを参照することができます。このメソッドは、java メタデータインターフェイスの Otherssqlarevisible メソッドによって指定されます。  
   
 ## <a name="see-also"></a>参照  
  [SQLServerDatabaseMetaData のメソッド](../../../connect/jdbc/reference/sqlserverdatabasemetadata-methods.md)   

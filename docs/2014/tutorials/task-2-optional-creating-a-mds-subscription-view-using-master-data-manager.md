@@ -1,5 +1,5 @@
 ---
-title: 'タスク 2 (オプション): マスター データ マネージャーを使用して MDS サブスクリプション ビューを作成する |Microsoft Docs'
+title: タスク 2 (オプション):マスター データ マネージャーを使用して MDS サブスクリプション ビューを作成する |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -7,17 +7,17 @@ ms.reviewer: ''
 ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: f3da8219-e0cb-4848-95ca-285a76ec1ba9
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 4596485b4eebeba66028d03f5a54b3ee2461205b
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: e6cbed42d059714dde1c82dbb50edf8ccc1dd65b
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56015283"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65484723"
 ---
-# <a name="task-2-optional-creating-a-mds-subscription-view-using-master-data-manager"></a>タスク 2 (オプション): マスター データ マネージャーを使用して MDS サブスクリプション ビューを作成する
+# <a name="task-2-optional-creating-a-mds-subscription-view-using-master-data-manager"></a>タスク 2 (オプション):マスター データ マネージャーを使用して MDS サブスクリプション ビューを作成する
   このタスクで公開するサブスクリプション ビューを作成する、 **Supplier**内のエンティティ、 **Suppliers**モデルを他のアプリケーション。 現在のバージョンのチュートリアルでは、このビューを使用しません。  
   
 1.  メイン ページに切り替えます**マスター データ マネージャー** ([http://localhost/MDS](http://localhost/MDS)) をクリックして**SQL Server 2012 マスター データ サービス**上部にあります。  

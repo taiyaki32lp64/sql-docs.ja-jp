@@ -15,11 +15,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: c5d487965237395da68bbc8ba3134c8d372f90db
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53359365"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62815599"
 ---
 # <a name="availability-replica-does-not-have-a-healthy-role"></a>正常なロールのない可用性レプリカ
     
@@ -28,7 +28,7 @@ ms.locfileid: "53359365"
 |||  
 |-|-|  
 |**ポリシー名**|可用性レプリカのロールの状態|  
-|**問題点**|可用性レプリカに正常なロールがありません。|  
+|**問題**|可用性レプリカに正常なロールがありません。|  
 |**カテゴリ**|**重大**|  
 |**ファセット**|可用性レプリカ|  
   
@@ -41,7 +41,7 @@ ms.locfileid: "53359365"
 ## <a name="possible-causes"></a>考えられる原因  
  この可用性レプリカのロールが正常ではありません。 このレプリカにはプライマリ ロールもセカンダリ ロールも割り当てられていません。  
   
-## <a name="possible-solution-informationstilltocome"></a>解決方法:Information_still_to_come  
+## <a name="possible-solution-informationstilltocome"></a>考えられる解決方法:Information_still_to_come  
   
 ## <a name="see-also"></a>参照  
  [AlwaysOn 可用性グループの概要&#40;SQL Server&#41;](overview-of-always-on-availability-groups-sql-server.md)   

@@ -10,17 +10,20 @@ ms.topic: conceptual
 helpviewer_keywords:
 - Data Profiling Task Editor
 ms.assetid: 9ccb8fc5-f65e-41a2-9511-7fa55586eb8b
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: e2ee8252b123456b1c07f6373c8e9be2c7bcd1ba
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 85f02243a8b331ac96dce55ed39813b39fa697b0
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47619121"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71294248"
 ---
 # <a name="column-pattern-profile-request-options-data-profiling-task"></a>[列パターン プロファイル要求] のオプション (データ プロファイル タスク)
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   **[プロファイル要求]** ページの **[要求プロパティ]** ペインを使用すると、要求ペインで選択した **[列パターン プロファイル要求]** のオプションを設定できます。 列パターン プロファイルは、文字列型の列に含まれる指定された比率の値に対応する一連の正規表現を報告します。 このプロファイルを使用すると、無効な文字列などのデータの問題を特定できます。また、このプロファイルには、新しい値を検証するために将来使用できる正規表現も提示されます。 たとえば、米国郵便番号列のパターン プロファイルでは、\d{5}-\d{4}、\d{5}、および \d{9} という正規表現が生成されます。 その他の正規表現が示された場合、データに無効な値または形式が正しくない値が含まれている可能性があります。  
   
 > [!NOTE]  
@@ -33,7 +36,7 @@ ms.locfileid: "47619121"
   
 -   **Delimiters** 既定では、区切り記号の一覧には、空白文字、水平タブ文字 (\t)、改行文字 (\n)、および復帰文字 (\r) が含まれます。 追加の区切り記号を指定できますが、既定の区切り記号を削除することはできません。  
   
--   **Symbols** 既定では、**[Symbols]** の一覧には、`,.;:-"'~=&/@!?()<>[]{}|#*^%` と目盛が含まれます。 たとえば、記号が "`()-`" の場合、値 "(425) 123-4567" は ["(", "425", ")", "123", "-", "4567", ")"] としてトークン化されます。  
+-   **Symbols** 既定では、 **[Symbols]** の一覧には、`,.;:-"'~=&/@!?()<>[]{}|#*^%` と目盛が含まれます。 たとえば、記号が "`()-`" の場合、値 "(425) 123-4567" は ["(", "425", ")", "123", "-", "4567", ")"] としてトークン化されます。  
   
  1 つの文字を区切り記号と記号の両方に使用することはできません。  
   
@@ -72,7 +75,7 @@ ms.locfileid: "47619121"
 ## <a name="request-properties-options"></a>[要求プロパティ] のオプション  
  **[要求プロパティ]** ペインに表示される **[列パターン プロファイル要求]** のオプション グループは次のとおりです。  
   
--   **[データ]**( **[TableOrView]** オプション、 **[Column]** オプションなど)  
+-   **[データ]** ( **[TableOrView]** オプション、 **[Column]** オプションなど)  
   
 -   **全般**  
   
@@ -88,7 +91,7 @@ ms.locfileid: "47619121"
  詳細については、このトピックの「[TableorView] のオプション」を参照してください。  
   
  **[Column]**  
- プロファイル対象の既存の列を選択します。 すべての列をプロファイルするには、**[(\*)]** を選択します。  
+ プロファイル対象の既存の列を選択します。 すべての列をプロファイルするには、 **[(\*)]** を選択します。  
   
  詳細については、このトピックの「[列] のオプション」を参照してください。  
   
@@ -113,7 +116,7 @@ ms.locfileid: "47619121"
  **RequestID**  
  このプロファイル要求を識別するわかりやすい名前を入力します。 通常、自動生成された値を変更する必要はありません。  
   
-### <a name="options"></a>[変数]  
+### <a name="options"></a>オプション  
  **[MaxNumberOfPatterns]**  
  プロファイルで計算するパターンの最大数を指定します。 このオプションの既定値は 10 です。 最大値は 100 です。  
   
@@ -129,7 +132,7 @@ ms.locfileid: "47619121"
  詳細については、このトピックの「区切り記号と記号の使用方法について」を参照してください。  
   
  **Symbols**  
- パターンの一部として保持する記号の一覧が表示されます。 記号の例として、日付を表す "/"、時刻を表す ":"、電子メール アドレスを表す "\@" などがあります。 既定では、**[Symbols]** の一覧には、`,.;:-"'~=&/@!?()<>[]{}|#*^%` が含まれます。  
+ パターンの一部として保持する記号の一覧が表示されます。 記号の例として、日付を表す "/"、時刻を表す ":"、電子メール アドレスを表す "\@" などがあります。 既定では、 **[Symbols]** の一覧には、`,.;:-"'~=&/@!?()<>[]{}|#*^%` が含まれます。  
   
  詳細については、このトピックの「区切り記号と記号の使用方法について」を参照してください。  
   
@@ -145,6 +148,6 @@ ms.locfileid: "47619121"
   
 ## <a name="see-also"></a>参照  
  [データ プロファイル タスク エディター ([全般] ページ)](../../integration-services/control-flow/data-profiling-task-editor-general-page.md)   
- [単一テーブル クイック プロファイル フォーム &#40;データ プロファイル タスク&#41;](../../integration-services/control-flow/single-table-quick-profile-form-data-profiling-task.md)  
+ [単一テーブル クイック プロファイル フォーム (データ プロファイル タスク)](../../integration-services/control-flow/single-table-quick-profile-form-data-profiling-task.md)  
   
   

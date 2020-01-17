@@ -15,11 +15,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 73f5cdd35404617be9563c33574b09f825a2c7ad
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52801884"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63138704"
 ---
 # <a name="testserver-element-dta"></a>TestServer 要素 (DTA)
   実稼働サーバーのチューニング時に使用するテスト サーバーを指定します。  
@@ -50,7 +50,7 @@ ms.locfileid: "52801884"
 |**子要素**|[なし] :|  
   
 ## <a name="example"></a>例  
- この要素の使用例では、次を参照してください。 [実稼働サーバーのチューニング負荷を軽減](../../relational-databases/performance/reduce-the-production-server-tuning-load.md)します。  
+ この要素の使用例では、[実稼働サーバーのチューニング負荷を軽減](../../relational-databases/performance/reduce-the-production-server-tuning-load.md)を参照してください。  
   
 ## <a name="see-also"></a>参照  
  [XML 入力ファイル リファレンス &#40;データベース エンジン チューニング アドバイザー&#41;](xml-input-file-reference-database-engine-tuning-advisor.md)  

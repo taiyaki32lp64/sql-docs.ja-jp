@@ -19,24 +19,23 @@ helpviewer_keywords:
 ms.assetid: 09eb88ea-b6f6-4eca-b19d-0951cebc6c0a
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: a10ec8f8fa6ef2b0e310680f58252f98628ff045
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: e2f2bcd3fef2946e5b983c1bbdeee1efe4776512
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53215611"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68018919"
 ---
 # <a name="sqlsetconfigmode-function"></a>SQLSetConfigMode 関数
 **準拠**  
  バージョンが導入されました。ODBC 3.0  
   
- **まとめ**  
+ **概要**  
  **SQLSetConfigMode** DSN の値を一覧表示した Odbc.ini エントリが、システム情報の場所を示す構成モードを設定します。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
   
 BOOL SQLSetConfigMode(  
      UWORD     wConfigMode);  

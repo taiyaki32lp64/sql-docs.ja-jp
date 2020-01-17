@@ -7,18 +7,18 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 4fde5bb0-6d78-4ec4-8f0b-67f91c53fe99
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 46c44d1274271dfc826db44513b64b96f8ff9e57
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: fbae9e97e99223665e6d89d9e8c1a2bce3e48a26
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52766954"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62901201"
 ---
 # <a name="odata-source-properties"></a>OData ソースのプロパティ
-  データ フローで **[OData ソース]** を右クリックし、**[プロパティ]** をクリックすると、**[プロパティ]** ウィンドウに **[OData ソース]** コンポーネントに対応するプロパティが表示されます。  
+  データ フローで **[OData ソース]** を右クリックし、 **[プロパティ]** をクリックすると、 **[プロパティ]** ウィンドウに **[OData ソース]** コンポーネントに対応するプロパティが表示されます。  
   
 |||  
 |-|-|  

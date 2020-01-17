@@ -1,5 +1,5 @@
 ---
-title: 予約語 (マスター データ サービス) | Microsoft Docs
+title: 予約語
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -11,15 +11,14 @@ helpviewer_keywords:
 - reserved words [Master Data Services]
 - Master Data Services, reserved words
 ms.assetid: 88afd0d0-4362-4394-8357-4e65388fc0fc
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: fe1e59c83160b3a6e5f21c9713d023b451e27dd5
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
-ms.translationtype: HT
+ms.openlocfilehash: 817e15d2fe7e91f63628826f58d6a86dd4edbcb3
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52752112"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73727915"
 ---
 # <a name="reserved-words-master-data-services"></a>予約語 (マスター データ サービス)
 
@@ -32,7 +31,7 @@ ms.locfileid: "52752112"
   
 -   [モデル](../master-data-services/reserved-words-master-data-services.md#models)  
   
--   [[エンティティ]](../master-data-services/reserved-words-master-data-services.md#entities)  
+-   [エンティティ](../master-data-services/reserved-words-master-data-services.md#entities)  
   
 -   [明示的階層](../master-data-services/reserved-words-master-data-services.md#exhierarchies)  
   
@@ -53,7 +52,7 @@ ms.locfileid: "52752112"
   
 -   **ID**  
   
--   **Code**  
+-   **コード**  
   
 -   **EnterUserName**  
   

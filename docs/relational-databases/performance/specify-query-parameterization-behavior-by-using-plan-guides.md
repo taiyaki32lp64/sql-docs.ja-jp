@@ -1,6 +1,6 @@
 ---
-title: プラン ガイドを使用したクエリのパラメーター化動作の指定 | Microsoft Docs
-ms.custom: ''
+title: プラン ガイドを使用したクエリのパラメーター化動作の設定
+ms.custom: seo-dt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.reviewer: ''
@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: f0f738ff-2819-4675-a8c8-1eb6c210a7e6
 author: julieMSFT
 ms.author: jrasnick
-manager: craigg
-ms.openlocfilehash: 02469a92e530521a32fab9cf126acd51c859312a
-ms.sourcegitcommit: dd794633466b1da8ead9889f5e633bdf4b3389cd
+ms.openlocfilehash: f79996ca171fa6c77daaf4c25bc3c1a8da9420d9
+ms.sourcegitcommit: f018eb3caedabfcde553f9a5fc9c3e381c563f1a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54143192"
+ms.lasthandoff: 11/18/2019
+ms.locfileid: "74165976"
 ---
 # <a name="specify-query-parameterization-behavior-by-using-plan-guides"></a>プラン ガイドを使用したクエリのパラメーター化動作の指定
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -52,11 +51,11 @@ GROUP BY pi.ProductID, pi.Quantity HAVING SUM(pi.Quantity) > 50;
 1.  パラメーター化された形式のクエリを取得します。 **sp_create_plan_guide** で使用するためにこの値を安全に取得する唯一の方法は、 [sp_get_query_template](../../relational-databases/system-stored-procedures/sp-get-query-template-transact-sql.md) システム ストアド プロシージャを使う方法です。  
   
 2.  パラメーター化された形式のクエリのプラン ガイドを作成し、PARAMETERIZATION FORCED クエリ ヒントを指定します。  
-  
+
     > [!IMPORTANT]  
-    >  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] はクエリのパラメーター化処理の一環として、リテラルの値とサイズに従って、リテラル値を置き換えるパラメーターにデータ型を割り当てます。 **sp_get_query_template** の **@stmt** 出力パラメーターに定数リテラルの値が渡される場合も、これと同じ処理が行われます。 **sp_create_plan_guide** の **@params** 引数に指定されたデータ型は、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] がパラメーター化を行う場合にクエリのデータ型と一致する必要があるので、クエリのパラメーター値としてとり得る値すべてに対応できるように、複数のプラン ガイドを作成しなければならない可能性があります。  
-  
- 次のスクリプトを使用すると、パラメーター化クエリの取得と、このクエリのプラン ガイドの作成の両方の処理を行えます。  
+    >  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] はクエリのパラメーター化処理の一環として、リテラルの値とサイズに従って、リテラル値を置き換えるパラメーターにデータ型を割り当てます。 **sp_get_query_template** の **\@stmt** 出力パラメーターに定数リテラルの値が渡される場合も、これと同じ処理が行われます。 **sp_create_plan_guide** の **\@params** 引数に指定されたデータ型は、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] がパラメーター化を行う場合にクエリのデータ型と一致する必要があるので、クエリのパラメーター値としてとり得る値すべてに対応できるように、複数のプラン ガイドを作成しなければならない可能性があります。  
+
+次のスクリプトを使用すると、パラメーター化クエリの取得と、このクエリのプラン ガイドの作成の両方の処理を行えます。  
   
 ```  
 DECLARE @stmt nvarchar(max);  
@@ -79,9 +78,7 @@ EXEC sp_create_plan_guide
     N'OPTION(PARAMETERIZATION FORCED)';  
 ```  
   
- 同様に、強制パラメーター化が既に有効になっているデータベースでは、サンプルのクエリや、構文が同じでも定数リテラル値が異なるその他のクエリが、簡易パラメーター化のルールに従ってパラメーター化されるようにすることができます。 この場合は、OPTION 句に PARAMETERIZATION FORCED ではなく PARAMETERIZATION SIMPLE を指定します。  
+同様に、強制パラメーター化が既に有効になっているデータベースでは、サンプルのクエリや、構文が同じでも定数リテラル値が異なるその他のクエリが、簡易パラメーター化のルールに従ってパラメーター化されるようにすることができます。 この場合は、OPTION 句に PARAMETERIZATION FORCED ではなく PARAMETERIZATION SIMPLE を指定します。  
   
 > [!NOTE]  
->  TEMPLATE プラン ガイドは、ステートメントと、単一のステートメントのみで構成されるバッチにより送信されるクエリとを対応付けます。 複数のステートメントで構成されるバッチ内のステートメントは、TEMPLATE プラン ガイドで対応付けできません。  
-  
-  
+>  TEMPLATE プラン ガイドは、ステートメントと、単一のステートメントのみで構成されるバッチにより送信されるクエリとを対応付けます。 複数のステートメントで構成されるバッチ内のステートメントは、TEMPLATE プラン ガイドで対応付けできません。

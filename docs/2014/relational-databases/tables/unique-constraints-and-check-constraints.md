@@ -14,16 +14,16 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 2a8dfd7da9bb1ccc60d18e68ccbe4930a6edb00d
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52772284"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68196676"
 ---
 # <a name="unique-constraints-and-check-constraints"></a>UNIQUE 制約と CHECK 制約
   UNIQUE 制約と CHECK 制約は、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] テーブル内のデータに整合性を適用するために使用できる 2 種類の制約です。 これらは重要なデータベース オブジェクトです。  
   
- このトピックの内容は次のとおりです。  
+ このトピックは次のセクションで構成されます。  
   
  [UNIQUE 制約](#Unique)  
   
@@ -82,7 +82,7 @@ GO
 DELETE CheckTbl WHERE col1 = 10;  
 ```  
   
- `DELETE` 制約では、テーブル `CHECK` に `CheckTbl` 行以上が格納されていなければならないことを指定していますが、 `1` ステートメントは成功します。  
+ `CHECK` 制約では、テーブル `CheckTbl` に `1` 行以上が格納されていなければならないことを指定していますが、`DELETE` ステートメントは成功します。  
   
 ##  <a name="Tasks"></a> 関連タスク  
   

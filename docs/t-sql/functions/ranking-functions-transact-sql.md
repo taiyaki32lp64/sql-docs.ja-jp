@@ -15,20 +15,19 @@ helpviewer_keywords:
 - functions [SQL Server], ranking
 - ranking rows
 ms.assetid: e7f917ba-bf4a-4fe0-b342-a91bcf88a71b
-author: MashaMSFT
-ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 507318d5cb779d64e78df6cc7f23e4eaa94f26b3
-ms.sourcegitcommit: bbdf51f0d56acfa6bcc4a5c4fe2c9f3cd4225edc
+author: MikeRayMSFT
+ms.author: mikeray
+ms.openlocfilehash: 36c2fd4974bb295516f90f7e8c80635dbcae48eb
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56079438"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67927764"
 ---
 # <a name="ranking-functions-transact-sql"></a>順位付け関数 (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
-  パーティションの各行の順位値を返します。 使用する関数によっては、いくつかの行で、他の行と同じ値を受け取る場合があります。 順位付け関数は非決定的です。  
+  順位付け関数により、パーティションの各行の順位値が返されます。 使用する関数によっては、いくつかの行で、他の行と同じ値を受け取る場合があります。 順位付け関数は非決定的です。  
   
  [!INCLUDE[tsql](../../includes/tsql-md.md)] には、次の順位付け関数があります。  
   

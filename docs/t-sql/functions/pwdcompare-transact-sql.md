@@ -17,20 +17,19 @@ helpviewer_keywords:
 - passwords [SQL Server], blank
 - PWDCOMPARE function [Transact-SQL]
 ms.assetid: 5f84ff9e-c1ec-46aa-8501-50f854ebcc3a
-author: MashaMSFT
-ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 2e45ede3ad5a61d0d701cf2bab35967111e3e143
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: VanMSFT
+ms.author: vanto
+ms.openlocfilehash: 4d0feb6b3254ddff640a41de8e0b833739225761
+ms.sourcegitcommit: af6f66cc3603b785a7d2d73d7338961a5c76c793
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47782370"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73168767"
 ---
 # <a name="pwdcompare-transact-sql"></a>PWDCOMPARE (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  パスワードをハッシュして既存のパスワードのハッシュと比較します。 PWDCOMPARE を使用すると、空白の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ログイン パスワードや、よくある脆弱なパスワードを検索できます。  
+  パスワードをハッシュし、そのハッシュを既存のパスワードのハッシュと比較します。 PWDCOMPARE を使用すると、空白の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ログイン パスワードや、よくある脆弱なパスワードを検索できます。  
   
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -45,7 +44,7 @@ PWDCOMPARE ( 'clear_text_password'
   
 ## <a name="arguments"></a>引数  
  **'** *clear_text_password* **'**  
- 暗号化されていないパスワードです。 *clear_text_password* is **sysname** (**nvarchar(128)**).  
+ 暗号化されていないパスワードです。 *clear_text_password* is **sysname** (**nvarchar(128)** ).  
   
  *password_hash*  
  パスワードの暗号化ハッシュです。 *password_hash* が **varbinary (128)** です。  
@@ -64,10 +63,10 @@ PWDCOMPARE ( 'clear_text_password'
 ## <a name="remarks"></a>Remarks  
  PWDCOMPARE 関数は、パスワード ハッシュの強度に対する脅威にはなりません。このテストは、最初のパラメーターとして渡されるパスワードを使用してログインしようとした場合に実行されるテストと同じテストです。  
   
- **PWDCOMPARE** 包含データベース ユーザーのパスワードを使用することはできません。 該当する包含データベースは存在しません。  
+ **PWDCOMPARE** 包含データベース ユーザーのパスワードを使用することはできません。 包含データベースに相当するものがありません。  
   
 ## <a name="permissions"></a>アクセス許可  
- PWDENCRYPT は、パブリックで使用できます。  
+ PWDENCRYPT はパブリックに使用できます。  
   
  sys.sql_logins の password_hash 列を調べるには CONTROL SERVER 権限が必要です。  
   

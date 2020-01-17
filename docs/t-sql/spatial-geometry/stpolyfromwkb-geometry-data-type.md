@@ -15,15 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - STPolyFromWKB (geometry Data Type)
 ms.assetid: 8e8f0c41-0c62-4919-9d4c-d37c93fdd31c
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: e27aab88b7931fa94771fd56046d8cd2bce1e6c9
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: MladjoA
+ms.author: mlandzic
+ms.openlocfilehash: 358553f62952c9bea60076ea34e85387b95bf543
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47670180"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68066329"
 ---
 # <a name="stpolyfromwkb-geometry-data-type"></a>STPolyFromWKB (geometry データ型)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -47,9 +46,9 @@ STPolyFromWKB ( 'WKB_polygon' , SRID )
 ## <a name="return-types"></a>戻り値の型  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の戻り値の型: **geometry**  
   
- CLR の戻り値の型: **SqlGeometry**  
+ CLR の戻り値の型:**SqlGeometry**  
   
- OGC の型: **Polygon**  
+ OGC の型:**多角形**  
   
 ## <a name="remarks"></a>Remarks  
  このメソッドでは、入力が正しい形式でない場合に、**FormatException** をスローします。  

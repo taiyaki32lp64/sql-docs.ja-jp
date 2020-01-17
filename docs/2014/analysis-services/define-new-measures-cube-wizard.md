@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.cubewizard.definenewmeasures.f1
@@ -13,12 +12,12 @@ ms.assetid: f97698f8-6f0f-49d8-86b0-5bfac3c4e627
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 3769eaaa3b07c8f62ba8d558a44fdd16c85c2305
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 8f526c1327f67bdcf84dce44e670eb195de9a96a
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48055092"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66082108"
 ---
 # <a name="define-new-measures-cube-wizard"></a>[新しいメジャーの定義] (キューブ ウィザード)
   **[新しいメジャーの定義]** ページを使用すると、データ ソースを使用せずに作成されるキューブの新しいメジャーを作成できます。  

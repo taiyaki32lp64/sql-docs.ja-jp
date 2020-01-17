@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: fd1ea582-29a1-4154-8de2-47bab3539b4d
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: c0f3d10776e661eaa15ed39a141fe06608d8dbde
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: ccdf0285dc110cde89e08778f6badf56f586a5ab
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48223182"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66085150"
 ---
 # <a name="cross-validation-formulas"></a>クロス検証の式
   生成したクロス検証レポートには、マイニング モデルの種類 (つまり、モデルの作成に使用したアルゴリズム)、予測可能な属性のデータ型、および予測可能な属性の値に応じて、モデルごとの精度のメジャーが含まれます。  
@@ -46,7 +45,7 @@ ms.locfileid: "48223182"
 |**Root mean squared error**|不連続属性、対象の指定なし。|パーティション内のケースの数で割った、確率スコアの補数の 2 乗の平均の平方根。対象の属性の不足値があるケースは除外されます。|  
   
 ## <a name="see-also"></a>参照  
- [テストと検証&#40;データ マイニング&#41;](testing-and-validation-data-mining.md)   
- [クロス検証&#40;Analysis Services - データ マイニング&#41;](cross-validation-analysis-services-data-mining.md)  
+ [テストおよび検証 &#40;データ マイニング&#41;](testing-and-validation-data-mining.md)   
+ [相互検証 &#40;Analysis Services - データ マイニング&#41;](cross-validation-analysis-services-data-mining.md)  
   
   

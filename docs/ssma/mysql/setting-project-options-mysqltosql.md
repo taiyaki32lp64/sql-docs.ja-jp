@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 08820d88-e157-4d49-9401-38580dd7ec2d
 author: Shamikg
 ms.author: Shamikg
-manager: craigg
-ms.openlocfilehash: e397bf4480dd7a9955fb8c7acbce0d11fd910893
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 346fcd2ea7f83abcb9a5c23a22cb0eded76acc0e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51663971"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67944687"
 ---
 # <a name="setting-project-options-mysqltosql"></a>プロジェクト オプションの設定 (MySQLToSQL)
 SSMA プロジェクトごとに、プロジェクト レベルのオプションを設定することができます。 これらのオプションは、オブジェクトに変換する方法、データを移行する方法、およびソースのデータ型が対象のデータ型にマップする方法を指定します。  SQL Server または SQL Azure にオブジェクトを変換するか、または SQL Server または SQL Azure にデータを移行する前に、構成オプションが、プロジェクトの適切なことを確認します。  
@@ -101,6 +100,6 @@ SSMA では、すべてのプロジェクトの既定の設定を構成できま
   
 -   それ以外の場合、SQL Server または SQL Azure のオブジェクトの定義に MySQL データベースのオブジェクトの定義に変換できます。 詳細については、次を参照してください[MySQL データベースを変換する&#40;MySQLToSQL。&#41;](../../ssma/mysql/converting-mysql-databases-mysqltosql.md)  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
 [MySQL と SQL Server データ型のマッピング&#40;MySQLToSQL&#41;](../../ssma/mysql/mapping-mysql-and-sql-server-data-types-mysqltosql.md)  
   

@@ -1,30 +1,29 @@
 ---
-title: 'レッスン 14: 配置 |Microsoft Docs'
+title: レッスン 14:展開 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: 24863a8a-9017-415a-a97b-fbac76ed0675
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: ea979963906af46a1d032614ad6b398f70ef3483
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 96ffa6445d46f1e68efa907330d0945a499bf3b2
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48196232"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66079136"
 ---
-# <a name="lesson-14-deploy"></a>レッスン 14: 配置
+# <a name="lesson-14-deploy"></a>レッスン 14:配置
   このレッスンでは、配置プロパティを構成します。具体的には、テーブル モードで実行されている Analysis Services の配置サーバー インスタンスと、配置するモデルの名前を指定します。 その後、そのインスタンスにモデルを配置します。 配置が完了すると、ユーザーはレポート クライアント アプリケーションを使用してモデルに接続できるようになります。 詳細については、[「テーブル モデル ソリューションの配置 (SSAS テーブル)」](tabular-models/tabular-model-solution-deployment-ssas-tabular.md)を参照してください。  
   
- このレッスンの推定所要時間: **5 分**  
+ このレッスンを完了するまでに時間を推定するには。**5 分**  
   
 ## <a name="prerequisites"></a>前提条件  
- このトピックはテーブル モデリング チュートリアルの一部であり、チュートリアルでの順番に従って実行する必要があります。 このレッスンの実習を行う前に、前のレッスン[「レッスン 13: Excel での分析」](lesson-12-analyze-in-excel.md) を完了している必要があります。  
+ このトピックはテーブル モデリング チュートリアルの一部であり、チュートリアルでの順番に従って実行する必要があります。 このレッスンでは、タスクを実行する前に、前のレッスンを完了が必要があります。[レッスン 13:Excel で分析](lesson-12-analyze-in-excel.md)します。  
   
 ## <a name="deploy-the-model"></a>モデルの配置  
   
@@ -50,7 +49,7 @@ ms.locfileid: "48196232"
   
 #### <a name="to-deploy-the-adventure-works-internet-sales-tabular-model"></a>Adventure Works Internet Sales テーブル モデルを配置するには  
   
-1.  [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)] で、**[ビルド]** メニューをクリックし、**[AW Internet Sales Tabular Model の配置]** をクリックします。  
+1.  [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)] で、 **[ビルド]** メニューをクリックし、 **[AW Internet Sales Tabular Model の配置]** をクリックします。  
   
      [配置] ダイアログ ボックスが表示され、メタデータの配置状況と、モデルに含まれる各テーブルが表示されます。  
   
@@ -62,7 +61,7 @@ ms.locfileid: "48196232"
   
 ## <a name="see-also"></a>関連項目  
  [DirectQuery モード &#40;SSAS テーブル&#41;](tabular-models/directquery-mode-ssas-tabular.md)   
- [既定のデータ モデルと配置プロパティを構成する&#40;SSAS 表形式&#41;](tabular-models/configure-default-data-modeling-and-deployment-properties-ssas-tabular.md)   
- [表形式モデル データベース&#40;SSAS 表形式&#41;](tabular-models/tabular-model-databases-ssas-tabular.md)  
+ [既定のデータ モデルと配置プロパティの構成 &#40;SSAS テーブル&#41;](tabular-models/configure-default-data-modeling-and-deployment-properties-ssas-tabular.md)   
+ [表形式モデルのデータベース (SSAS 表形式)](tabular-models/tabular-model-databases-ssas-tabular.md)  
   
   

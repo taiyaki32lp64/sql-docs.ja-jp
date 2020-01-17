@@ -20,13 +20,12 @@ helpviewer_keywords:
 ms.assetid: 7c7ce52a-6b77-4a1c-9abf-d5feb664bea8
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: 4eeee8a769931fdd28dfa608a49162df545732bb
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 746d2f33d780e4eada7accabdd029998c9e61742
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47713040"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68070182"
 ---
 # <a name="drop-search-property-list-transact-sql"></a>DROP SEARCH PROPERTY LIST (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -43,7 +42,7 @@ DROP SEARCH PROPERTY LIST property_list_name
   
 ## <a name="arguments"></a>引数  
  *property_list_name*  
- 削除する検索プロパティ リストの名前を指定します。 *property_list_name* は識別子です。  
+ 削除する検索プロパティ リストの名前です。 *property_list_name* は識別子です。  
   
  既存のプロパティ リストの名前を表示するには、次のように [sys.registered_search_property_lists](../../relational-databases/system-catalog-views/sys-registered-search-property-lists-transact-sql.md) カタログ ビューを使用します。  
   
@@ -70,7 +69,7 @@ SELECT name FROM sys.registered_search_property_lists;
  検索プロパティ リストに対する CONTROL 権限が必要です。  
   
 > [!NOTE]  
->  プロパティ リストの CONTROL 権限はそのリストの所有者が許可できます。 既定では、検索プロパティ リストを作成したユーザーが所有者になります。 所有者は、[ALTER AUTHORIZATION](../../t-sql/statements/alter-authorization-transact-sql.md) [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントを使って変更できます。  
+>  プロパティ リストの CONTROL 権限はそのリストの所有者が許可できます。 既定では、検索プロパティ リストを作成したユーザーがその所有者になります。 所有者は、[ALTER AUTHORIZATION](../../t-sql/statements/alter-authorization-transact-sql.md) [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントを使って変更できます。  
   
 ## <a name="examples"></a>使用例  
  次の例では、`JobCandidateProperties` プロパティ リストを `AdventureWorks2012` データベースから削除します。  

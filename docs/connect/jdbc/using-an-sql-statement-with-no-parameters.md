@@ -1,7 +1,7 @@
 ---
-title: パラメーターなしの SQL ステートメントを使って |Microsoft Docs
+title: パラメーターを含まない SQL ステートメントの使用 |Microsoft Docs
 ms.custom: ''
-ms.date: 01/19/2017
+ms.date: 08/12/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,15 +10,14 @@ ms.topic: conceptual
 ms.assetid: 4b0728bd-059b-4b71-895c-999335bc7427
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 041a0119425e6469a394420469b14f47f3b84a81
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: da4342b8640e89a0183a3f80889dd27ecfb1a76e
+ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47674840"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "69026541"
 ---
-# <a name="using-an-sql-statement-with-no-parameters"></a>パラメータのない SQL ステートメントの使用
+# <a name="using-an-sql-statement-with-no-parameters"></a>パラメーターのない SQL ステートメントの使用
 
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
@@ -28,7 +27,7 @@ ms.locfileid: "47674840"
 
 [!code[JDBC#UsingSQLWithNoParams1](../../connect/jdbc/codesnippet/Java/using-an-sql-statement-w_0_1.java)]
 
-結果セットの使用に関する詳細については、次を参照してください。 [JDBC ドライバーでの結果セットの管理](../../connect/jdbc/managing-result-sets-with-the-jdbc-driver.md)します。
+結果セットの使用方法の詳細については、「 [JDBC ドライバーを使用した結果セットの管理](../../connect/jdbc/managing-result-sets-with-the-jdbc-driver.md)」を参照してください。
 
 ## <a name="see-also"></a>参照
 

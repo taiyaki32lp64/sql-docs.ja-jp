@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - projects [Analysis Services], building
@@ -14,12 +13,12 @@ ms.assetid: caac03cb-b2b4-4652-8913-3dd39c4b0127
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: f1a0afbd256b26a3743d85f2e8e5d09bba428fff
-ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
+ms.openlocfilehash: 97e32b80d19675b3763101d1c226529a48e23e68
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50147677"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66076773"
 ---
 # <a name="build-analysis-services-projects-ssdt"></a>Analysis Services プロジェクトのビルド (SSDT)
   [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]を使用した [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] プロジェクトの作成方法は、Visual Studio を使用したプログラミング プロジェクトの作成方法とほとんど同じです。 プロジェクトを作成する場合、出力ディレクトリ内に XML ファイルのセットが作成されます。 この XML ファイルは、Analysis Services Scripting Language (ASSL) を使用したファイルです。ASSL は、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] や [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] などのクライアント アプリケーションが [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] インスタンスと接続して [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] オブジェクトの作成や変更に使用する XML 言語仕様です。 この XML ファイルを使用して [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] プロジェクト内の [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] オブジェクト定義が、指定された [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] インスタンスに配置されます。  
@@ -52,7 +51,7 @@ ms.locfileid: "50147677"
   
 |ファイル (obj フォルダー内)|説明|  
 |-----------------------------|-----------------|  
-|\<構成名 > \LastBuilt.xml|[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] プロジェクトの最終作成時刻を表すタイム スタンプおよびハッシュ コードが含まれています。|  
+|\<Configuration Name>\LastBuilt.xml|[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] プロジェクトの最終作成時刻を表すタイム スタンプおよびハッシュ コードが含まれています。|  
   
  これらの XML ファイルに含まれていない\<Create > および\<Alter > タグで、展開時に作成されます。  
   

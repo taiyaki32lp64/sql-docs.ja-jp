@@ -1,5 +1,5 @@
 ---
-title: SSIS チュートリアル:パッケージの配置 |Microsoft Docs
+title: 'SSIS チュートリアル: パッケージの配置 |Microsoft Docs'
 ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql-server-2014
@@ -17,24 +17,26 @@ helpviewer_keywords:
 - deployment utility [Integration Services]
 - deploying packages [Integration Services], configurations
 ms.assetid: de18468c-cff3-48f4-99ec-6863610e5886
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: f55b593bc172174002074de759f45b9b5f7d8243
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 89db7def474b26ffd25da1495e3efaf0e1af43dd
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53368254"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75232687"
 ---
-# <a name="ssis-tutorial-deploying-packages"></a>SSIS チュートリアル:パッケージを展開します。
-  [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] には、パッケージを別のコンピューターへ簡単に配置できるツールが用意されています。 この配置ツールでは、パッケージに必要な構成やファイルなどの依存関係を管理することもできます。 このチュートリアルでは、これらのツールを使用して、ターゲット コンピューターにパッケージとその依存関係をインストールする方法を学習します。  
+# <a name="ssis-tutorial-deploying-packages"></a>SSIS チュートリアル : パッケージの配置
+  [!INCLUDE[msCoName](../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]には、パッケージを別のコンピューターに簡単に配置するためのツールが用意されてい[!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]ます。 この配置ツールでは、パッケージに必要な構成やファイルなどの依存関係を管理することもできます。 このチュートリアルでは、これらのツールを使用して、ターゲット コンピューターにパッケージとその依存関係をインストールする方法を学習します。  
   
- まず、配置の準備を行います。 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] で新しい [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] プロジェクトを作成し、既存のパッケージとデータ ファイルをプロジェクトに追加します。 新しいパッケージを最初から作成するのではなく、このチュートリアル用に作成された既存のパッケージで作業を行います。 このチュートリアルでパッケージの機能は変更しませんが、パッケージをプロジェクトに追加した後、 [!INCLUDE[ssIS](../includes/ssis-md.md)] デザイナーでパッケージを開いて内容を確認しておくことをお勧めします。 パッケージの内容を確認すると、ログ ファイルなどのパッケージの依存関係やその他の便利な機能について理解できます。  
+ まず、配置の準備を行います。 
+  [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] で新しい [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] プロジェクトを作成し、既存のパッケージとデータ ファイルをプロジェクトに追加します。 新しいパッケージを最初から作成するのではなく、このチュートリアル用に作成された既存のパッケージで作業を行います。 このチュートリアルでパッケージの機能は変更しませんが、パッケージをプロジェクトに追加した後、 [!INCLUDE[ssIS](../includes/ssis-md.md)] デザイナーでパッケージを開いて内容を確認しておくことをお勧めします。 パッケージの内容を確認すると、ログ ファイルなどのパッケージの依存関係やその他の便利な機能について理解できます。  
   
  また、配置の前に、パッケージが構成を使用するように更新しておきます。 構成によって、実行時にパッケージやパッケージ オブジェクトのプロパティを更新できます。 このチュートリアルでは、構成を使用して、ログ ファイルとテキスト ファイルの接続文字列、およびパッケージが使用する XML ファイルと XSD ファイルの場所を更新します。 詳細については、「 [パッケージ構成](../../2014/integration-services/package-configurations.md) 」および「 [パッケージ構成を作成する](../../2014/integration-services/create-package-configurations.md)」を参照してください。  
   
- [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]でパッケージが正常に実行されることを確認したら、パッケージのインストールに使用する配置バンドルを作成します。 配置バンドルは、 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] プロジェクトに追加したパッケージ ファイルとその他の項目、 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] に自動的に含まれるパッケージの依存関係、および構築した配置ユーティリティから構成されます。 詳細については、「 [配置ユーティリティを作成する](../../2014/integration-services/create-a-deployment-utility.md)」を参照してください。  
+ 
+  [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]でパッケージが正常に実行されることを確認したら、パッケージのインストールに使用する配置バンドルを作成します。 配置バンドルは、 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] プロジェクトに追加したパッケージ ファイルとその他の項目、 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] に自動的に含まれるパッケージの依存関係、および構築した配置ユーティリティから構成されます。 詳細については、「 [配置ユーティリティを作成する](../../2014/integration-services/create-a-deployment-utility.md)」を参照してください。  
   
  配置バンドルをターゲット コンピューターにコピーし、パッケージ インストール ウィザードを実行して、パッケージとパッケージの依存関係をインストールします。 パッケージは msdb SQL Server データベースにインストールされ、サポート ファイルと補助ファイルはファイル システムにインストールされます。 配置されたパッケージは構成を使用するので、新しい値に更新して、パッケージを新しい環境で正常に実行できるようにします。  
   
@@ -43,14 +45,15 @@ ms.locfileid: "53368254"
  このチュートリアルの目的は、実際の配置で発生する可能性のある複雑な問題をシミュレーションすることです。 ただし、パッケージを別のコンピューターに配置できない場合は、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]のローカル インスタンスの msdb データベースにパッケージをインストールし、パッケージを同じインスタンスの [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] から実行して、このチュートリアルを行うこともできます。  
   
 ## <a name="what-you-will-learn"></a>学習する内容  
- [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] の新しいツール、コントロール、機能などに慣れる最良の方法は、実際に使ってみることです。 このチュートリアルでは、 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] プロジェクトを作成し、パッケージとその他の必要なファイルをプロジェクトに追加する手順を紹介します。 プロジェクトが完成したら、配置バンドルを作成し、バンドルを目的のコンピューターにコピーして、そのコンピューターにパッケージをインストールします。  
+ [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]で[!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]使用できる新しいツール、コントロール、および機能について理解を深めるには、それらを使用することをお勧めします。 このチュートリアルでは、 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] プロジェクトを作成し、パッケージとその他の必要なファイルをプロジェクトに追加する手順を紹介します。 プロジェクトが完成したら、配置バンドルを作成し、バンドルを目的のコンピューターにコピーして、そのコンピューターにパッケージをインストールします。  
   
-## <a name="requirements"></a>必要条件  
- このチュートリアルは、ファイル システムの基本的な操作は理解していても、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]の新機能はほとんど使用したことがないユーザーを対象にしています。 基本を理解する[!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]このチュートリアルで使用する配置は概念、便利に最初に、次の手順に[!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]チュートリアル。[実行の SQL Server インポートおよびエクスポート ウィザード](import-export-data/start-the-sql-server-import-and-export-wizard.md)と[SSIS チュートリアル。簡単な ETL パッケージを作成する](../integration-services/ssis-how-to-create-an-etl-package.md)します。  
+## <a name="requirements"></a>要件  
+ このチュートリアルは、ファイルシステムの基本的な操作について理解しているが、で[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]利用可能な新機能の公開を制限しているユーザーを対象としています。 このチュートリアルで使用[!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]する基本的な概念について理解を深めるために、最初に次[!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]のチュートリアルを完了しておくと役に立つ場合があります。 [SQL Server インポートおよびエクスポートウィザード](import-export-data/start-the-sql-server-import-and-export-wizard.md)と[SSIS チュートリアル: 簡単な ETL パッケージの作成](../integration-services/ssis-how-to-create-an-etl-package.md)。  
   
- **ソース コンピューター** 配置バンドルを作成するコンピューターには、次のコンポーネントがインストールされている必要があります。  
+ **ソースコンピューター。** 配置バンドルを作成するコンピューターには、次のコンポーネントがインストールされている必要があります。  
   
--   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] および AdventureWorks データベース。 セキュリティ強化のため、既定ではサンプル データベースがインストールされません。 サンプル データベースをダウンロードする[CodePlex](http://msftdbprodsamples.codeplex.com/releases/view/125550)します。  
+-   
+  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] および AdventureWorks データベース。 セキュリティ強化のため、既定ではサンプル データベースがインストールされません。 サンプルデータベースは、 [CodePlex](https://msftdbprodsamples.codeplex.com/releases/view/125550)からダウンロードできます。  
   
 -   AdventureWorks に対してテーブルの作成および削除を行うための権限。  
   
@@ -58,32 +61,32 @@ ms.locfileid: "53368254"
   
 -   ビジネス インテリジェンスの開発環境、 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]。  
   
- **配置先コンピューター** パッケージを配置するコンピューターには、次のコンポーネントがインストールされている必要があります。  
+ **対象のコンピューター。** パッケージを配置するコンピューターには、次のコンポーネントがインストールされている必要があります。  
   
--   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] および AdventureWorks データベース。  
+-   
+  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] および AdventureWorks データベース。  
   
--   [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 。  
+-   [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)].  
   
--   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]」を参照してください。  
+-   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)].  
   
 -   AdventureWorks でテーブルを作成および削除する権限と、 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]でパッケージを実行する権限が必要です。  
   
--   必要で読み取りおよび書き込みアクセス許可、msdb の sysssispackages テーブル[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]システム データベースです。  
+-   Msdb[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]システムデータベースの sysssispackages テーブルに対する読み取りおよび書き込み権限を持っている必要があります。  
   
  配置バンドルを作成したコンピューターにパッケージを配置する場合は、そのコンピューターが配置元コンピューターと配置先コンピューターの両方の必要条件を満たしている必要があります。  
   
- **このチュートリアルを完了するまでに時間を推定するには。** 2 時間  
+ **このチュートリアルの推定所要時間:** 2 時間  
   
 ## <a name="lessons-in-this-tutorial"></a>このチュートリアルで行うレッスン  
- [レッスン 1:配置バンドルを作成する準備](../integration-services/lesson-1-preparing-to-create-the-deployment-bundle.md)  
+ [レッスン 1: 配置バンドルを作成する準備](../integration-services/lesson-1-preparing-to-create-the-deployment-bundle.md)  
  このレッスンでは、新しい [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] プロジェクトを作成し、パッケージとその他の必要なファイルをプロジェクトに追加して、ETL ソリューションを配置する準備を行います。  
   
- [レッスン 2:配置バンドルを作成します。](../integration-services/lesson-2-create-the-deployment-bundle-in-ssis.md)  
+ [レッスン 2: 配置バンドルの作成](../integration-services/lesson-2-create-the-deployment-bundle-in-ssis.md)  
  このレッスンでは、配置ユーティリティを構築し、配置バンドルに必要なファイルが含まれていることを確認します。  
   
- [レッスン 3:パッケージをインストールします。](../integration-services/lesson-3-install-ssis-package.md)  
+ [レッスン 3: パッケージのインストール](../integration-services/lesson-3-install-ssis-package.md)  
  このレッスンでは、配置バンドルをターゲット コンピューターにコピーし、パッケージをインストールして、パッケージを実行します。  
   
-![Integration Services のアイコン (小)](media/dts-16.gif "Integration Services アイコン (小)")**Integration Services の日付を維持します。**<br /> マイクロソフトが提供する最新のダウンロード、アーティクル、サンプル、ビデオ、およびコミュニティで選択されたソリューションについては、MSDN の [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] のページを参照してください。<br /><br /> [MSDN の Integration Services のページを参照してください。](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> これらの更新が自動で通知されるようにするには、ページの RSS フィードを定期受信します。  
-  
+![Integration Services アイコン (小)](media/dts-16.gif "Integration Services のアイコン (小)")**は Integration Services で最新の**状態を維持  <br /> マイクロソフトが提供する最新のダウンロード、アーティクル、サンプル、ビデオ、およびコミュニティで選択されたソリューションについては、MSDN の [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] のページを参照してください。<br /><br /> [MSDN の Integration Services に関するページを参照してください。](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> これらの更新が自動で通知されるようにするには、ページの RSS フィードを定期受信します。  
   

@@ -11,20 +11,19 @@ helpviewer_keywords:
 ms.assetid: 1c0202e8-546d-4cb3-a37f-1d2e35d53839
 author: Shamikg
 ms.author: Shamikg
-manager: craigg
-ms.openlocfilehash: beebb6df04675e87ff65b51161191700e07f0199
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: a5b94ef545285cd7dfa4597820da00552b9f3930
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52400185"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68103010"
 ---
 # <a name="generating-reports-mysqltosql"></a>レポートの生成 (MySQLToSQL)
 オブジェクト ツリーのレベルでの SSMA コンソールのコマンドを使用して実行される特定のアクティビティ レポートが生成されます。  
   
 レポートを生成するのにには、次の手順を使用します。  
   
-1.  指定、**書き込みで概要レポート-を**パラメーター。 (指定した) 場合に、ファイル名として、関連するレポートが格納されているまたはでフォルダーを指定します。 ファイル名は、where、次の表で説明したようにシステム定義済み**&lt;n&gt;** は、同じコマンドを実行するたびに 1 桁の数字をインクリメントする一意のファイル数です。  
+1.  指定、**書き込みで概要レポート-を**パラメーター。 (指定した) 場合に、ファイル名として、関連するレポートが格納されているまたはでフォルダーを指定します。 ファイル名は、where、次の表で説明したようにシステム定義済み **&lt;n&gt;** は、同じコマンドを実行するたびに 1 桁の数字をインクリメントする一意のファイル数です。  
   
     レポートの vis-比べて-vis コマンドは次のとおりです。  
   
@@ -60,7 +59,7 @@ ms.locfileid: "52400185"
     |-|-|-|  
     |**Sl.No.**|**コマンドとパラメーター**|**出力の説明**|  
     |1|レポート エラー ="false"|エラーの詳細はありません/警告/情報メッセージ。|  
-    |2|レポート エラー ="true"|エラーの詳細/警告/情報メッセージ。|  
+    |2|report-errors="true"|エラーの詳細/警告/情報メッセージ。|  
   
     > [!NOTE]  
     > 上記で指定したエラー報告の設定は生成評価レポート、convert スキーマ、データの移行、sql ステートメントの変換コマンド。  
@@ -143,6 +142,6 @@ ms.locfileid: "52400185"
   
 -   フェールオーバー スクリプト  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
 [SSMA コンソール (MySQL) の実行](https://msdn.microsoft.com/e3e9f7e4-0619-4861-a202-3d5d39953b26)  
   

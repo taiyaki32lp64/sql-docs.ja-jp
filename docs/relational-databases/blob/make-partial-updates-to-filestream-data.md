@@ -11,15 +11,14 @@ helpviewer_keywords:
 - FILESTREAM [SQL Server], FSCTL_SQL_FILESTREAM_FETCH_OLD_CONTENT
 - FSCTL_SQL_FILESTREAM_FETCH_OLD_CONTENT
 ms.assetid: d6f7661e-6c14-4d31-9541-4520ca0f82b2
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: 86e18215f393971debf60c377514a261937bf647
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+author: MikeRayMSFT
+ms.author: mikeray
+ms.openlocfilehash: fbc9f9d7cba88021c2a3d4939ea21ae91b69ee97
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51664721"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68125164"
 ---
 # <a name="make-partial-updates-to-filestream-data"></a>FILESTREAM データの部分的な更新
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

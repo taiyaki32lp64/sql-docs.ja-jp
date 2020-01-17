@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 helpviewer_keywords:
 - permissions [Reporting Services], SharePoint integrated mode
@@ -13,15 +12,15 @@ helpviewer_keywords:
 - permissions [Reporting Services], native mode
 - security [Reporting Services], SharePoint integrated mode
 ms.assetid: 0eb2f34a-3643-4b03-81c2-5741ba7ebefd
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: c9afb10180087998afd0cc891af895a9db669feb
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: aa11481ed3c446becf2519a2ed149867456ac94a
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56017263"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66101926"
 ---
 # <a name="granting-permissions-on-report-server-items-on-a-sharepoint-site"></a>SharePoint サイトのレポート サーバー アイテムに対する権限の付与
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[SPF2010](../../includes/spf2010-md.md)] は、SharePoint のサイトおよびライブラリにあるレポート サーバー アイテムへのアクセス許可に使用できる、組み込みのセキュリティ機能を提供します。 既にユーザーに権限を割り当てている場合、 [!INCLUDE[SPF2010](../../includes/spf2010-md.md)] とレポート サーバーの統合設定を構成すると、直ちにそのユーザーがレポート サーバーのアイテムおよび操作にアクセスできるようになります。 既存の権限を使用して、レポート定義などのドキュメントのアップロード、レポートの表示、サブスクリプションの作成、アイテムの管理を実行できます。  
@@ -59,7 +58,7 @@ ms.locfileid: "56017263"
  サーバー管理者またはサイト コレクション管理者は、他のサイト所有者が権限を設定できるかどうかを決定するオプションを設定できます。 持っている権限のレベルによっては、SharePoint グループや権限レベルの作成やカスタマイズを行えない場合があります。  
   
 ## <a name="using-predefined-sharepoint-groups-and-permission-levels"></a>定義済み SharePoint グループと権限レベルの使用  
-  [!INCLUDE[SPF2010](../../includes/spf2010-md.md)] 製品マニュアルでは、標準の SharePoint グループ ( *Site name* **所有者**, *Site name* **メンバー**、および *Site name* **閲覧者**) を使用し、サイト レベルで権限を割り当てることが推奨されています。 権限を割り当てるユーザーのほとんどは、" *Site name* **閲覧者** " グループまたは " *Site name* **メンバー** "グループのメンバーになるはずです。 親サイトの権限は、サイト階層全体に継承されます。 制限を追加する必要がある特定のアイテムに対しては、権限の継承を無効にできます。  
+ [!INCLUDE[SPF2010](../../includes/spf2010-md.md)] 製品マニュアルでは、標準の SharePoint グループ ( *Site name* **所有者**, *Site name* **メンバー**、および *Site name* **閲覧者**) を使用し、サイト レベルで権限を割り当てることが推奨されています。 権限を割り当てるユーザーのほとんどは、" *Site name* **閲覧者** " グループまたは " *Site name* **メンバー** "グループのメンバーになるはずです。 親サイトの権限は、サイト階層全体に継承されます。 制限を追加する必要がある特定のアイテムに対しては、権限の継承を無効にできます。  
   
  定義済みの SharePoint グループと、対応する権限レベルを次に示します。  
   

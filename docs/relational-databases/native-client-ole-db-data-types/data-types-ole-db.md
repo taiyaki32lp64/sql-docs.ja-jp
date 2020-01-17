@@ -1,5 +1,5 @@
 ---
-title: データ型 (OLE DB) |マイクロソフトのドキュメント
+title: データ型 (OLE DB) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -15,20 +15,18 @@ helpviewer_keywords:
 ms.assetid: 15953706-f0d1-45f5-a2eb-a8bd36e1a5fc
 author: MightyPen
 ms.author: genemi
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 7608790ab66ab39e3d9dbc61a76a7ccd1bab07fd
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: fd73a7498914060757a9ce4e8137638440556ae3
+ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47778170"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73770753"
 ---
 # <a name="data-types-ole-db"></a>データ型 (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-[!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
 
-  実行するために[!INCLUDE[tsql](../../includes/tsql-md.md)]ステートメントを使用して、結果を処理し、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]知る必要があります Native Client OLE DB プロバイダーでは、方法、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB プロバイダーのマップ[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]データ型を OLE DB データ型をバインドするときパラメーターまたは列を使用する場合と、行セットで、 **ITableDefinition**でテーブルを作成するインターフェイス[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]します。  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB プロバイダーを使用して [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントを実行し、結果を処理するには、のパラメーターまたは列をバインドするときに OLE DB データ型を [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データ型にマップする [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 方法を把握しておく必要があります。行セットと、 **Itabledefinition**インターフェイスを使用して [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]でテーブルを作成する場合。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
   

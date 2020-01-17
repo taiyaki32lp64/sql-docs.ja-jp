@@ -1,24 +1,27 @@
 ---
-title: 'チュートリアル: SQL Server Integration Services Scale Out をセットアップする | Microsoft Docs'
+title: チュートリアル:SQL Server Integration Services Scale Out を設定する | Microsoft Docs
 description: この記事では、SSIS Scale Out のセットアップと構成について説明します
 ms.custom: performance
 ms.date: 12/13/2017
 ms.prod: sql
 ms.prod_service: integration-services
-ms.reviewer: douglasl
+ms.reviewer: maghan
 ms.technology: integration-services
 ms.topic: conceptual
-author: haoqian
+author: HaoQian-MS
 ms.author: haoqian
-manager: craigg
-ms.openlocfilehash: 4f68e562884073761303b2450956ae4ebaca66ed
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d3b6ea9f53a54b7f02042b85781bc8fe24028a69
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47620570"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67896133"
 ---
-# <a name="walkthrough-set-up-integration-services-ssis-scale-out"></a>チュートリアル: SQL Server Integration Services (SSIS) Scale Out をセットアップする
+# <a name="walkthrough-set-up-integration-services-ssis-scale-out"></a>チュートリアル:Integration Services (SSIS) Scale Out を設定する
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
 以下のタスクを実行して、[!INCLUDE[ssISnoversion_md](../../includes/ssisnoversion-md.md)] (SSIS) Scale Out をセットアップします。 
 
 > [!TIP]
@@ -73,7 +76,7 @@ Scale Out Master 機能をインストールするには、[!INCLUDE[ssNoVersion
 
 ### <a name="install-scale-out-master-from-the-command-prompt"></a>コマンド プロンプトからの Scale Out Master のインストール
 
-「[コマンド プロンプトからの SQL Server のインストール](../../database-engine/install-windows/install-sql-server-2016-from-the-command-prompt.md)」の手順に従います。 次の手順を実行して、Scale Out Master のパラメーターを設定します。
+「 [コマンド プロンプトからの SQL Server のインストール](../../database-engine/install-windows/install-sql-server-2016-from-the-command-prompt.md)」の手順に従います。 次の手順を実行して、Scale Out Master のパラメーターを設定します。
  
 1.  パラメーター `/FEATURES` に `IS_Master` を追加します。
 
@@ -128,7 +131,7 @@ Scale Out Worker 機能をインストールするには、[!INCLUDE[ssNoVersion
 
 ### <a name="install-scale-out-worker-from-the-command-prompt"></a>コマンド プロンプトからの Scale Out Worker のインストール
 
-「[コマンド プロンプトからの SQL Server のインストール](../../database-engine/install-windows/install-sql-server-2016-from-the-command-prompt.md)」の手順に従います。 次の手順を実行して、Scale Out Worker のパラメーターを設定します。
+「 [コマンド プロンプトからの SQL Server のインストール](../../database-engine/install-windows/install-sql-server-2016-from-the-command-prompt.md)」の手順に従います。 次の手順を実行して、Scale Out Worker のパラメーターを設定します。
 
 1.  パラメーター `/FEATURES` に IS_Worker を追加します。
 
@@ -156,13 +159,13 @@ Scale Out Master コンピューターの Windows ファイアウォールで、
 
 インストール時にサービスのスタートアップの種類を **[自動]** に設定していない場合は、次のサービスを開始してください。
 
--   SQL Server Integration Services Scale Out Master 14.0 (SSISScaleOutMaster140S)
+-   SQL Server Integration Services Scale Out Master 14.0 (SSISScaleOutMaster140)
 
 -   SQL Server Integration Services Scale Out Worker 14.0 (SSISScaleOutWorker140)
 
 ## <a name="EnableMaster"></a> Scale Out Master を有効にする
 
-[!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio_md](../../includes/ssmanstudio-md.md)] で SSISDB カタログを作成するときに、**[カタログの作成]** ダイアログ ボックスで **[SSIS スケール アウト マスターとしてこのサーバーを有効にする]** をクリックします。
+[!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio_md](../../includes/ssmanstudio-md.md)] で SSISDB カタログを作成するときに、 **[カタログの作成]** ダイアログ ボックスで **[SSIS スケール アウト マスターとしてこのサーバーを有効にする]** をクリックします。
 
 カタログの作成後は、[[Scale Out Manager]](integration-services-ssis-scale-out-manager.md) を使用して Scale Out Master を有効にすることができます。
 

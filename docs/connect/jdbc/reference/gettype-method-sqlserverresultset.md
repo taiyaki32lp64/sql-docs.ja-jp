@@ -1,5 +1,5 @@
 ---
-title: getType メソッド (SQLServerResultSet) |Microsoft Docs
+title: getType メソッド (SQLServerResultSet) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: ffbc4a02-e851-431c-bc1a-7ab381d982bb
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: d9beb1e335faa29dc83e727e2366208172713909
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 521f44a5a9e33903177d05ae6d2a49d023db013e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47726800"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67978554"
 ---
 # <a name="gettype-method-sqlserverresultset"></a>getType メソッド (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -48,7 +47,7 @@ public int getType()
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- この getType メソッドは、java.sql.ResultSet インターフェイスで、getType メソッドによって指定されます。  
+ この getType メソッドは、java.sql.ResultSet インターフェイスの getType メソッドで規定されています。  
   
  このメソッドを使用すると、実際のカーソルの種類を確認できます。 アプリケーションで TYPE_FORWARD_ONLY を選択した場合、または既定のカーソルの種類を使用した場合は、TYPE_FORWARD_ONLY が返されます。  
   

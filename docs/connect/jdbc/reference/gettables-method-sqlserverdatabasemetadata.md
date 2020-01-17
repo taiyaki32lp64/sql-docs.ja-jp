@@ -1,5 +1,5 @@
 ---
-title: getTables メソッド (SQLServerDatabaseMetaData) |Microsoft Docs
+title: getTables メソッド (SQLServerDatabaseMetaData) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: a7514673-3457-4541-9560-28a8284ad9e3
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: caabbe281791120a4f3b162029cb86dd340ffc28
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e8dfd7f14d6006f5a41a7cd2a9b0cae4933804fe
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47730470"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67979213"
 ---
 # <a name="gettables-method-sqlserverdatabasemetadata"></a>getTables メソッド (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

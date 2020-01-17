@@ -10,22 +10,22 @@ helpviewer_keywords:
 - Unicode [SQL Server], bulk importing and exporting
 - data formats [SQL Server], Unicode native
 ms.assetid: a6213308-f3d5-406e-9029-19d8bb3367f3
-author: douglaslMS
-ms.author: douglasl
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: d05e69dd4a094e3f361098583adf3aed7899a018
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: b1d115dacc53cb074080931c2ebad88dcaf1c68d
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48137963"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66011566"
 ---
 # <a name="use-unicode-native-format-to-import-or-export-data-sql-server"></a>Unicode ネイティブ形式を使用したデータのインポートまたはエクスポート (SQL Server)
   Unicode ネイティブ形式は、[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインストール環境間で情報をコピーする必要がある場合に役立ちます。 非文字データに対してネイティブ形式を使用すると、時間を節約でき、文字形式との間でデータ型の不要な変換が行われなくなります。 すべての文字データに対して Unicode 文字形式を使用すると、異なるコード ページを使用している複数のサーバー間でデータを一括転送するときに、拡張文字の損失を防ぐことができます。 Unicode ネイティブ形式のデータ ファイルは、すべての一括インポート方法で読み取ることができます。  
   
- 拡張文字や DBCS 文字を含むデータ ファイルを使用して [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の複数のインスタンス間でデータを一括転送する場合は、Unicode ネイティブ形式を使用することをお勧めします。 非文字データの場合、Unicode ネイティブ形式ではネイティブ (データベース) データ型が使用されます。 文字データのなど`char`、 `nchar`、 `varchar`、 `nvarchar`、 `text`、 `varchar(max)`、 `nvarchar(max)`、および`ntext`、Unicode ネイティブ形式は、Unicode 文字データ形式を使用します。  
+ 拡張文字や DBCS 文字を含むデータ ファイルを使用して [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の複数のインスタンス間でデータを一括転送する場合は、Unicode ネイティブ形式を使用することをお勧めします。 非文字データの場合、Unicode ネイティブ形式ではネイティブ (データベース) データ型が使用されます。 `char`、`nchar`、`varchar`、`nvarchar`、`text`、`varchar(max)`、`nvarchar(max)`、`ntext` などの文字データの場合、Unicode ネイティブ形式では Unicode 文字データ形式が使用されます。  
   
- Unicode ネイティブ形式のデータ ファイルに SQLVARIANT として格納される `sql_variant` データは、ネイティブ形式のデータ ファイルに格納される場合と同様に動作します。ただし、`char` と `varchar` の値がそれぞれ `nchar` と `nvarchar` に変換される点を除きます。この場合、影響を受ける列で 2 倍のストレージが必要になります。 元のメタデータは保持され、元の値が変換`char`と`varchar`データ型は、テーブルの列に一括インポートされるとき。  
+ Unicode ネイティブ形式のデータ ファイルに SQLVARIANT として格納される `sql_variant` データは、ネイティブ形式のデータ ファイルに格納される場合と同様に動作します。ただし、`char` と `varchar` の値がそれぞれ `nchar` と `nvarchar` に変換される点を除きます。この場合、影響を受ける列で 2 倍のストレージが必要になります。 元のメタデータは保持され、値はテーブル列に一括インポートされるときに、元の `char` データ型や `varchar` データ型に再び変換されます。  
   
 ## <a name="command-options-for-unicode-native-format"></a>Unicode ネイティブ形式のコマンド オプション  
  Unicode ネイティブ形式のデータは、**bcp**、BULK INSERT、または INSERT ...SELECT \* FROM OPENROWSET(BULK...)。**bcp** コマンドまたは BULK INSERT ステートメントの場合は、コマンド ラインでデータ形式を指定できます。 INSERT ...SELECT * FROM OPENROWSET(BULK...) ステートメントの場合は、フォーマット ファイルでデータ形式を指定する必要があります。  

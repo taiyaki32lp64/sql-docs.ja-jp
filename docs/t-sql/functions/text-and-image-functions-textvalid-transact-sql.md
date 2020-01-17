@@ -20,15 +20,14 @@ helpviewer_keywords:
 - text-pointer values
 - verifying text pointers
 ms.assetid: 9411c349-b59b-4740-a270-92f91d81ad23
-author: MashaMSFT
-ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 840b1ae9924e2b582ee726f917e31a2922d84c18
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+author: MikeRayMSFT
+ms.author: mikeray
+ms.openlocfilehash: 0608d1c5bd8c24fc9e78b21abf7cad6b1045db18
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51702570"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68099037"
 ---
 # <a name="text-and-image-functions---textvalid-transact-sql"></a>テキスト関数とイメージ関数 - TEXTVALID (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -67,8 +66,8 @@ TEXTVALID ( 'table.column' ,text_ ptr )
   
 |関数またはステートメント|[説明]|  
 |---------------------------|-----------------|  
-|PATINDEX **(**'_%pattern%_'**,** _expression_**)**|**text** および **ntext** 列で指定された文字列の文字位置を返します。|  
-|DATALENGTH **(**_expression_**)**|**text**、**ntext**、**image** 列のデータの長さを返します。|  
+|PATINDEX **(** ' _%pattern%_ ' **,** _expression_ **)**|**text** および **ntext** 列で指定された文字列の文字位置を返します。|  
+|DATALENGTH **(** _expression_ **)**|**text**、**ntext**、**image** 列のデータの長さを返します。|  
 |[SET TEXTSIZE]|SELECT ステートメントで返される **text**、**ntext**、または **image** データの制限値をバイト単位で返します。|  
   
 ## <a name="examples"></a>使用例  

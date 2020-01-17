@@ -11,21 +11,20 @@ dev_langs:
 ms.assetid: 662d019e-f217-49df-9e2f-b5662fa0342d
 author: ronortloff
 ms.author: rortloff
-manager: craigg
 monikerRange: '>= aps-pdw-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 9eefa5a7120f64f5dc6f621a2a74956a461619d9
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: 0d4148e002ba84677e13e101a4830f0b6da10915
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52394030"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68088972"
 ---
 # <a name="create-diagnostics-session-transact-sql"></a>CREATE DIAGNOSTICS SESSION (Transact-SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md.md)]
 
-  診断セッションを使用すると、システムまたはクエリのパフォーマンスに詳細なユーザー定義の診断情報を保存することができます。  
+  診断セッションを使用すると、システムまたはクエリのパフォーマンスについての詳細なユーザー定義の診断情報を保存することができます。  
   
- 診断のセッションは通常、特定のクエリのパフォーマンスをデバッグする、またはアプライアンス操作中に特定のアプライアンス コンポーネントの動作を監視する場合に使用します。  
+ 診断セッションは通常、特定のクエリのパフォーマンスをデバッグする、またはアプライアンス操作中に特定のアプライアンス コンポーネントの動作を監視する場合に使用します。  
   
 > [!NOTE]  
 >  診断セッションを使用するために XML を熟知してください。  
@@ -58,13 +57,13 @@ DROP DIAGNOSTICS SESSION diagnostics_name ;
   
 ## <a name="arguments"></a>引数  
  *diagnostics_name*  
- 診断セッションの名前。 診断セッションの名前には、文字 a ～ z、A ～ Z、0 ～ 9 のみを含めることができます。 また、診断セッションの名前は、文字で開始する必要があります。 *diagnostics_name* の上限は 127 文字です。  
+ 診断セッションの名前。 診断セッションの名前には、文字 a - z、A - Z、0 - 9 のみを含めることができます。 また、診断セッションの名前は、文字で開始する必要があります。 *diagnostics_name* の上限は 127 文字です。  
   
  *max_item_count_num*  
- ビューに保存されるイベントの数。 たとえば、100 を指定すると場合、は、フィルター条件に一致する最新の 100 のイベントを診断セッションを永続化は。 イベントの照合の 100 よりも少ないが見つかると、診断のセッションが 100 未満のイベントが含まれます。 *max_item_count_num* は 100 以上 100,000 以下である必要があります。  
+ ビューに保存されるイベントの数。 たとえば、100 を指定した場合は、フィルター条件に一致する最新の 100 イベントが診断セッションに保存されます。 見つかった一致するイベントが 100 より少ない場合は、診断セッションに含まれるイベントは 100 未満になります。 *max_item_count_num* は 100 以上 100,000 以下である必要があります。  
   
  *event_name*  
- 診断セッションで収集する実際のイベントを定義します。  *event_name* は、`sys.pdw_diag_events.is_enabled='True'` の場合に [sys.pdw_diag_events](https://msdn.microsoft.com/d813aac0-cea1-4f53-b8e8-d26824bc2587) に列挙されるイベントの 1 つです。  
+ 診断セッションで収集する実際のイベントを定義します。  *event_name* は、`sys.pdw_diag_events.is_enabled='True'` の場合に [sys.pdw_diag_events](../../relational-databases/system-catalog-views/sys-pdw-diag-events-transact-sql.md) に列挙されるイベントの 1 つです。  
   
  *filter_property_name*  
  結果を制限するプロパティの名前です。 たとえば、セッション ID に基づいて制限する場合は、*filter_property_name* を *SessionId* にする必要があります。 *filter_property_name* に使用できる値の一覧については、以下の *property_name* を参照してください。  
@@ -73,37 +72,37 @@ DROP DIAGNOSTICS SESSION diagnostics_name ;
  *filter_property_name* に対して評価する値。 値の型は、プロパティの型と一致する必要があります。 たとえば、プロパティの型が decimal の場合、*value* の型も decimal である必要があります。  
   
  *comp_type*  
- 比較型。 潜在的な値が: Equals、EqualsOrGreaterThan、EqualsOrLessThan、GreaterThan、LessThan、NotEquals、Contains、正規表現  
+ 比較型。 可能性のある値: Equals、EqualsOrGreaterThan、EqualsOrLessThan、GreaterThan、LessThan、NotEquals、Contains、RegEx  
   
  *property_name*  
- イベントに関連するプロパティです。  プロパティの名前は、キャプチャのタグの一部を使用またはフィルターの条件の一部として使用します。  
+ イベントに関連するプロパティです。  プロパティ名は、キャプチャ タグの一部でもかまわず、またはフィルター条件の一部として使用されます。  
   
 |プロパティ名|[説明]|  
 |-------------------|-----------------|  
-|UserName|ユーザー (ログイン) の名前です。|  
+|UserName|ユーザー (ログイン) の名前。|  
 |SessionId|セッション ID。|  
-|QueryId|クエリの id。|  
+|QueryId|クエリの ID。|  
 |CommandType|コマンドの種類。|  
-|CommandText|処理コマンドのテキストです。|  
+|CommandText|処理されたコマンド内のテキスト。|  
 |[OperationType]|イベントの操作の種類。|  
-|Duration|イベントの期間です。|  
-|SPID|サービスの プロセス id です。|  
+|Duration|イベントの期間。|  
+|SPID|サービス プロセス ID。|  
   
 ## <a name="remarks"></a>Remarks  
- 各ユーザーには、最大 10 個の同時実行の診断セッションに許可します。 現在のセッションの一覧については、[sys.pdw_diag_sessions](https://msdn.microsoft.com/ca111ddc-2787-4205-baf0-1a242c0257a9) を参照してください。不要なセッションがある場合は、`DROP DIAGNOSTICS SESSION` を使用して削除します。  
+ 各ユーザーには、最大 10 個の同時診断セッションが許可されます。 現在のセッションの一覧については、[sys.pdw_diag_sessions](../../relational-databases/system-catalog-views/sys-pdw-diag-sessions-transact-sql.md) を参照してください。不要なセッションがある場合は、`DROP DIAGNOSTICS SESSION` を使用して削除します。  
   
- 診断セッションでは、収集のメタデータが削除されるまで続行されます。  
+ 診断セッションでは、削除されるまでメタデータの収集が続行されます。  
   
 ## <a name="permissions"></a>アクセス許可  
  **ALTER SERVER STATE** アクセス許可が必要です。  
   
 ## <a name="locking"></a>ロック  
- 診断セッションの表に、上には、共有ロックを取得します。  
+ 診断セッション テーブルで共有ロックを取得します。  
   
 ## <a name="examples"></a>使用例  
   
-### <a name="a-creating-a-diagnostics-session"></a>A. 診断セッションを作成します。  
- この例では、データベース エンジンのパフォーマンスのメトリックを記録する診断セッションを作成します。 この例では、エンジンのクエリの実行時刻から終了イベントと、ブロックの DMS イベントをリッスンする診断セッションを作成します。 返される結果は、コマンド テキスト、コンピューター名、要求 id (クエリの id)、イベントが作成されたセッションです。  
+### <a name="a-creating-a-diagnostics-session"></a>A. 診断セッションを作成する  
+ この例では、データベース エンジンのパフォーマンスのメトリックを記録する診断セッションを作成します。 この例では、エンジン クエリ実行/終了イベントと DMS ブロック   イベントをリッスンする診断セッションを作成します。 返される結果は、コマンド テキスト、コンピューター名、要求 ID (クエリ ID)、イベントが作成されたセッションです。  
   
 ```  
 CREATE DIAGNOSTICS SESSION MYDIAGSESSION AS N'  
@@ -133,13 +132,13 @@ CREATE DIAGNOSTICS SESSION MYDIAGSESSION AS N'
 SELECT COUNT(EmployeeKey) FROM AdventureWorksPDW2012..FactSalesQuota;  
 ```  
   
- Sysdiag スキーマからを選択して、診断セッションの結果を表示します。  
+ その後、sysdiag スキーマから選択して、診断セッションの結果を表示します。  
   
 ```  
 SELECT * FROM master.sysdiag.MYDIAGSESSION;  
 ```  
   
- Sysdiag スキーマには、診断セッションの名前、というビューが含まれていることを確認します。  
+ sysdiag スキーマには、診断セッション名の名前が付いたビューが含まれることに注意してください。  
   
  接続のアクティビティのみを表示するには、`Session.SPID` プロパティを追加し、`WHERE [Session.SPID] = @@spid;` をクエリに追加します。  
   
@@ -181,7 +180,7 @@ CREATE DIAGNOSTICS SESSION PdwOptimizationDiagnostics AS N'
 </Session>';  
 ```  
   
- など、クエリを実行します。  
+ 次のような、クエリを実行します。  
   
 ```  
 USE ssawPDW;  

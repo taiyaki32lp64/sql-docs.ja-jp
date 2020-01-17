@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: b2e3f97f-18a8-42b6-9030-b4f818afc3b9
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 4ad60799fa8590609cabd2e1e1fdfd8d7493c282
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: f525c45e71c290d3eaab410c0fa0fa62d1e9a61d
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48095798"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66071643"
 ---
 # <a name="create-a-bi-semantic-model-connection-to-a-powerpivot-workbook"></a>PowerPivot ブックへの BI セマンティック モデル接続の作成
   このトピックでは、同一ファーム内の PowerPivot ブックにリダイレクトする BI セマンティック モデル接続を設定する方法について説明します。  
@@ -99,7 +98,7 @@ ms.locfileid: "48095798"
   
 ## <a name="see-also"></a>参照  
  [PowerPivot BI セマンティック モデル接続&#40;.bism&#41;](power-pivot-bi-semantic-model-connection-bism.md)   
- [Excel または Reporting Services での BI セマンティック モデル接続を使用します。](use-a-bi-semantic-model-connection-in-excel-or-reporting-services.md)   
+ [Excel または Reporting Services での BI セマンティック モデル接続の使用](use-a-bi-semantic-model-connection-in-excel-or-reporting-services.md)   
  [テーブル モデル データベースへの BI セマンティック モデル接続の作成](create-a-bi-semantic-model-connection-to-a-tabular-model-database.md)  
   
   

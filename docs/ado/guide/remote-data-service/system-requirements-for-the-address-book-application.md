@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: da385405-1c9a-478b-9bf6-fba70015324c
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 10a7097292562acd60e8b83af9a48bd61aeb8557
-ms.sourcegitcommit: 1a5448747ccb2e13e8f3d9f04012ba5ae04bb0a3
+ms.openlocfilehash: 2450cc97229a6629d4c2895f3960e3033d129789
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51558059"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67922036"
 ---
 # <a name="system-requirements-for-the-address-book-application"></a>アドレス帳アプリケーションのシステム要件
 アドレス帳のサンプル アプリケーションをセットアップするには、次のソフトウェアとデータベースの要件を満たす必要があります。  
@@ -51,7 +50,7 @@ ms.locfileid: "51558059"
   
  特権がいない場合、データベース管理者は、システムおよびアクセス許可をデータベースまたはデータベースを設定することを設定する必要があります。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [アドレス帳の SQL スクリプトを実行します。](../../../ado/guide/remote-data-service/running-the-address-book-sql-script.md)   
  [DataControl オブジェクト (RDS)](../../../ado/reference/rds-api/datacontrol-object-rds.md)   
  [アドレス帳のサンプル アプリケーションの実行](../../../ado/guide/remote-data-service/running-the-address-book-sample-application.md)

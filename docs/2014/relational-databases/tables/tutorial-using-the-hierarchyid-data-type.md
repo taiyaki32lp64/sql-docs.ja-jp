@@ -14,11 +14,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: e3718b45b69870969dae85b4eb1ad2e9e80adc85
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52788763"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68211776"
 ---
 # <a name="tutorial-using-the-hierarchyid-data-type"></a>チュートリアル:hierarchyid データ型の使用
   このチュートリアルは、[!INCLUDE[tsql](../../includes/tsql-md.md)] については理解しているが、`hierarchyid` データ型は初めて使用するユーザーを対象としています。  
@@ -41,9 +41,9 @@ ms.locfileid: "52788763"
   
 -   Internet Explorer 6 以降。  
   
-## <a name="see-also"></a>参照  
- [チュートリアル:データベース エンジンの概要](../tutorial-getting-started-with-the-database-engine.md)   
- [チュートリアル:TRANSACT-SQL ステートメントの作成](../../t-sql/tutorial-writing-transact-sql-statements.md)   
+## <a name="see-also"></a>関連項目  
+ [チュートリアル: データベース エンジンの概要](../tutorial-getting-started-with-the-database-engine.md)   
+ [チュートリアル: TRANSACT-SQL ステートメントの作成](../../t-sql/tutorial-writing-transact-sql-statements.md)   
  [hierarchyid データ型メソッド リファレンス](/sql/t-sql/data-types/hierarchyid-data-type-method-reference)   
  [階層データ&#40;SQL Server&#41;](../hierarchical-data-sql-server.md)   
  [hierarchyid &#40;Transact-SQL&#41;](/sql/t-sql/data-types/hierarchyid-data-type-method-reference)  

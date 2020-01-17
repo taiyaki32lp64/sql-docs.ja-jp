@@ -13,15 +13,15 @@ helpviewer_keywords:
 - Union All transformation
 - datasets [Integration Services], merging
 ms.assetid: 78304403-a81c-4101-b87e-ec80ddfdac98
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: ed4ee0e1c46b2fd4b1ddb31c3cc5f1dc53be5b84
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 7f5504c6f58d7ff5254d081ea479ca30ed6ca705
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52782654"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62770344"
 ---
 # <a name="merge-data-by-using-the-union-all-transformation"></a>全体結合変換を使用してデータをマージする
   全体結合変換を追加して構成するには、パッケージに 1 つ以上のデータ フロー タスクと 2 つのデータ ソースがあらかじめ含まれている必要があります。  
@@ -50,7 +50,7 @@ ms.locfileid: "52782654"
   
 7.  各入力の列ごとに、手順 5. と 6. を繰り返します。  
   
-8.  **[OK]** をクリックします。  
+8.  [**OK**] をクリックします。  
   
 9. 更新したパッケージを保存するには、 **[ファイル]** メニューの **[選択されたファイルを上書き保存]** をクリックします。  
   

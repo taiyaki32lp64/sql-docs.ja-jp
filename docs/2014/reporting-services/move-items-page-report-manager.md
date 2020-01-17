@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 ms.assetid: fc83b8d2-bc79-4b56-8970-34a1cbbcc176
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 96d3310c489dea5aadc3e9b7e873dbb89ceee9bb
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 2f64a9e9efe180c2db776c38553403e5f7cdfac9
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56009687"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66108222"
 ---
 # <a name="move-items-page-report-manager"></a>[<ItemName> を移動] ページ (レポート マネージャー)
   [アイテムの移動] ページは、レポート、フォルダー、またはその他のアイテムを、レポート サーバー上の新しい場所に移動するときに使用します。 レポート サーバーの名前空間内の移動先を参照する際は、移動先のパスを入力することも、ツリー ビューを使用することもできます。 移動できるアイテムは、移動する権限を持っていて、現在のレポート サーバーに保存されているアイテムに限ります。  
@@ -65,7 +64,7 @@ ms.locfileid: "56009687"
   
 4.  アイテムのツール バーの **[移動]** をクリックします。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [レポート マネージャー &#40;SSRS ネイティブ モード&#41;](../../2014/reporting-services/report-manager-ssrs-native-mode.md)   
  [[全般] プロパティ ページ、フォルダー&#40;レポート マネージャー&#41;](../../2014/reporting-services/general-properties-page-folders-report-manager.md)   
  [全般プロパティ ページ、レポート &#40;レポート マネージャー&#41;](../../2014/reporting-services/general-properties-page-reports-report-manager.md)   

@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 1974fd26-ef0d-45d5-860b-298917c8e9c3
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 1a9e1c94eec150cc24522cd6e4c57eb35b4a2126
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: db1fbaffbee0f74625f4a11cad3b961f194e3829
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47854830"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67948776"
 ---
 # <a name="string-functions-visual-foxpro-odbc-driver"></a>文字列関数 (Visual FoxPro ODBC ドライバー)
 次の表に、Visual FoxPro ODBC ドライバーでサポートされている ODBC の文字列操作関数ODBC 構文から同じ関数の場合、Visual FoxPro の文法が異なる場合は、Visual FoxPro のと同じですが一覧表示されます。  
@@ -33,7 +32,7 @@ ms.locfileid: "47854830"
 |CONCAT *(string_exp1 string_exp2)*|*string_exp1 + string_exp2*|  
 |違い *(string_exp1 string_exp2)*||  
 |挿入 *(string_exp1、開始、長さ、string_exp2)*|STUFF *(string_exp1、開始、長さ、string_exp2)*|  
-|LCASE *(string_exp)*|低い *(string_exp)*|  
+|LCASE *(string_exp)*|LOWER *(string_exp)*|  
 |左 *(string_exp 数)*||  
 |長さ *(string_exp)*|LEN *(string_exp)*|  
 |LTRIM *(string_exp)*||  

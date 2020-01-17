@@ -13,17 +13,16 @@ helpviewer_keywords:
 ms.assetid: da7dbb4b-f632-45a0-b1ab-c35cc2695c86
 author: julieMSFT
 ms.author: jrasnick
-manager: craigg
-ms.openlocfilehash: 1a1218e5d27abd72acef7967e0a71284384fed89
-ms.sourcegitcommit: 0c1d552b3256e1bd995e3c49e0561589c52c21bf
+ms.openlocfilehash: 7841fef89ae4eb0600dcc62c1561bff769500a47
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/14/2018
-ms.locfileid: "53380303"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67995654"
 ---
 # <a name="sql-server-sql-statistics-object"></a>SQL Server: SQL Statistics オブジェクト
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  **の** SQLServer:SQL Statistics [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] オブジェクトには、コンパイルの動作や、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のインスタンスに送信された要求の種類を監視するためのカウンターが用意されています。 クエリのコンパイルと再コンパイルの回数、および [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスが受信するバッチの数を監視すると、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] がユーザー クエリを処理する速度や、クエリ オプティマイザーによるクエリ処理の効果がわかります。  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の **SQLServer:SQL Statistics** オブジェクトには、コンパイルの動作や、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のインスタンスに送信された要求の種類を監視するためのカウンターが用意されています。 クエリのコンパイルと再コンパイルの回数、および [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスが受信するバッチの数を監視すると、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] がユーザー クエリを処理する速度や、クエリ オプティマイザーによるクエリ処理の効果がわかります。  
   
  コンパイルは、クエリのターンアラウンド時間の大半を占めます。 [!INCLUDE[ssDE](../../includes/ssde-md.md)] では、コンパイルのコストを節約するために、コンパイル済みのクエリ プランがクエリ キャッシュに保存されます。 キャッシュを使用して、コンパイル済みのクエリを再使用のために保存すると、後から実行するときに再コンパイルの必要がなくなるので、コンパイルを減らすことができます。 ただし、一意のクエリはすべて、少なくとも 1 回コンパイルする必要があります。 クエリの再コンパイルは、次の要因によって生じることがあります。  
   
@@ -33,7 +32,7 @@ ms.locfileid: "53380303"
   
  簡易パラメーター化と強制パラメーター化の詳細については、「[ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md)」を参照してください。  
   
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **SQL Statistics** カウンターを次に示します。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **SQL Statistics** カウンターを次に示します。  
   
 |SQL Server SQL Statistics カウンター|[説明]|  
 |----------------------------------------|-----------------|  

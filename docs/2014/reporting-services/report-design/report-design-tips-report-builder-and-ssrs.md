@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 ms.assetid: c1490ff0-5b8a-43c1-8d22-e459395db4f6
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: efcf8685dcee6b85572747f01fd939831047a64e
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: ba5cdb309d277e751c2de7fcfbce5dfc02174366
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56294670"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66105097"
 ---
 # <a name="report-design-tips-report-builder-and-ssrs"></a>レポート デザインに関するヒント (レポート ビルダーおよび SSRS)
   ここでは、レポートをデザインする際のヒントを紹介します。  

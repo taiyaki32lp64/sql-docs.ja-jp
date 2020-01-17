@@ -1,5 +1,5 @@
 ---
-title: プロジェクトで Microsoft SQL Server 2012 のオブジェクトを使用する方法 | Microsoft Docs
+title: 方法:プロジェクトで Microsoft SQL Server 2012 のオブジェクトを使用する | Microsoft Docs
 ms.custom:
 - SSDT
 ms.date: 02/09/2017
@@ -8,17 +8,16 @@ ms.technology: ssdt
 ms.reviewer: ''
 ms.topic: conceptual
 ms.assetid: 9baf122f-cf22-4860-98db-ef782cd972fc
-author: stevestein
-ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 2ead75f8b71227b1bd3831b650cc036a66b5b325
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 222b725e7e5497adaf679f710fa390dcea8aecf7
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52397094"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68034978"
 ---
-# <a name="how-to-use-microsoft-sql-server-2012-objects-in-your-project"></a>プロジェクトで Microsoft SQL Server 2012 のオブジェクトを使用する方法
+# <a name="how-to-use-microsoft-sql-server-2012-objects-in-your-project"></a>方法:プロジェクトで Microsoft SQL Server 2012 のオブジェクトを使用する
 この例では、Microsoft SQL Server 2012 をターゲットとするデータベース プロジェクトに、シーケンス オブジェクトを追加します。  
   
 シーケンスは、Microsoft SQL Server 2012 で導入されたものです。 シーケンスは、シーケンスが作成された仕様に従って数値のシーケンスを生成するユーザー定義のスキーマ バインド オブジェクトです。 数値のシーケンスは、定義された間隔で昇順または降順に生成され、要求に応じて繰り返されます。  シーケンス オブジェクトについて詳しくは、「[シーケンス番号](htttp://msdn.microsoft.com/library/ff878058(SQL.110).aspx)」をご覧ください。 Microsoft SQL Server 2012 の新機能に関する情報は、「[SQL Server 2012 における新機能」](https://msdn.microsoft.com/library/bb500435(SQL.110).aspx)」をご覧ください。  
@@ -28,9 +27,9 @@ ms.locfileid: "52397094"
   
 ### <a name="to-add-a-new-sequence-object-to-your-project"></a>新しいシーケンス オブジェクトをプロジェクトに追加するには  
   
-1.  **ソリューション エクスプローラー**で **TradeDev** データベース プロジェクトを右クリックし、**[追加]** をポイントして、**[新しい項目]** をクリックします。  
+1.  **ソリューション エクスプローラー**で **TradeDev** データベース プロジェクトを右クリックし、 **[追加]** をポイントして、 **[新しい項目]** をクリックします。  
   
-2.  左ペインの **[プログラミング]** をクリックし、**[シーケンス]** をクリックします。 **[追加]** をクリックして新しいオブジェクトをプロジェクトに追加します。  
+2.  左ペインの **[プログラミング]** をクリックし、 **[シーケンス]** をクリックします。 **[追加]** をクリックして新しいオブジェクトをプロジェクトに追加します。  
   
 3.  既定のコードを次のコードに置き換えます。  
   
@@ -50,7 +49,7 @@ ms.locfileid: "52397094"
   
 ### <a name="to-use-the-new-sequence-object"></a>新しいシーケンス オブジェクトを使用するには  
   
-1.  SQL Server オブジェクト エクスプローラーで、前の手順で公開したデータベースを右クリックし、**[新しいクエリ]** をクリックします。  
+1.  SQL Server オブジェクト エクスプローラーで、前の手順で公開したデータベースを右クリックし、 **[新しいクエリ]** をクリックします。  
   
 2.  次のコードをクエリ ウィンドウに貼り付けます。  
   

@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: f0c9bdfd-f79d-4088-9ecb-afcd8ca7fb73
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 2d1faa7dfd8873b8c11cda5cb3e67d5408c35474
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 926b2285bcce9a28579fffc4004c5454b2837392
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47853980"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67912431"
 ---
 # <a name="thread-safety-notes-on-api-functions-odbc-driver-for-oracle"></a>API 関数 (ODBC Driver for Oracle) のスレッド セーフの注意事項
 > [!IMPORTANT]  

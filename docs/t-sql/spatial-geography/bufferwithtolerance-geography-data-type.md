@@ -2,7 +2,7 @@
 title: BufferWithTolerance (geography データ型) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
-ms.prod: sqll
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
 ms.technology: t-sql
@@ -15,15 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - BefferWithTolerance method
 ms.assetid: f1783e6b-0f17-464f-b1c7-1c3f7d8aa042
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: 01eccfab960c7ed6ac2d207c7768f2ea7ae24696
-ms.sourcegitcommit: c61c7b598aa61faa34cd802697adf3a224aa7dc4
+author: MladjoA
+ms.author: mlandzic
+ms.openlocfilehash: ac8532f2cc5d8e2f50c0408ce983a61626748fb1
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56154677"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68066541"
 ---
 # <a name="bufferwithtolerance-geography-data-type"></a>BufferWithTolerance (geography データ型)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]

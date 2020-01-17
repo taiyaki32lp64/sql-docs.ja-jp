@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: f4ea1ced-9f9f-4a9d-88ab-81dbab64adc3
 author: Shamikg
 ms.author: Shamikg
-manager: craigg
-ms.openlocfilehash: 21962c8849204db6f3e5f114b6f8f86994d53b35
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: 7af5566094c9cc4c40ba2aa33f27e79bae1c7445
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53215498"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68141033"
 ---
 # <a name="loading-converted-database-objects-into-sql-server-db2tosql"></a>SQL Server (DB2ToSQL) へのデータベース オブジェクトの変換後の読み込み
 DB2 スキーマに変換した後[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]には、結果のデータベース オブジェクトを読み込むことができます[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]します。 SSMA は、オブジェクトを作成したか、またはオブジェクトをスクリプトし、自分でスクリプトを実行することができます。 SSMA によりの実際の内容で対象のメタデータを更新する、また、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]データベース。  

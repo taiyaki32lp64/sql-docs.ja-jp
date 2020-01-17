@@ -23,13 +23,12 @@ helpviewer_keywords:
 ms.assetid: b6c0b08f-2060-4696-9e12-50cb7e674321
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: 424f595b2a1fa5d1c55afd003d10fa42ba5b130e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 84060374e3d46dde985e32a549180d8492c72892
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47800121"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67929002"
 ---
 # <a name="set-forceplan-transact-sql"></a>SET FORCEPLAN (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -46,14 +45,14 @@ SET FORCEPLAN { ON | OFF }
 ```  
   
 ## <a name="remarks"></a>Remarks  
- SET FORCEPLAN は基本的に、クエリ オプティマイザーが [!INCLUDE[tsql](../../includes/tsql-md.md)] SELECT ステートメントの処理で使用するロジックをオーバーライドします。 SELECT ステートメントから返されるデータは同じであり、この設定とは無関係です。 唯一の違いは、クエリの要求を満たすために、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] がテーブルをどのように処理するかという点です。  
+ SET FORCEPLAN は基本的に、クエリ オプティマイザーが [!INCLUDE[tsql](../../includes/tsql-md.md)] SELECT ステートメントの処理で使用するロジックをオーバーライドします。 SELECT ステートメントから返されるデータは、この設定とは関係なく同じです。 唯一の違いは、クエリの要求を満たすために、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] がテーブルをどのように処理するかという点です。  
   
  クエリ内でクエリ オプティマイザー ヒントを使用することによって、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の SELECT ステートメントの処理方法を変更することもできます。  
   
  SET FORCEPLAN は、解析時ではなく実行時に設定されます。  
   
 ## <a name="permissions"></a>アクセス許可  
- SET FORCEPLAN の実行権限は、特に指定のない限りすべてのユーザーに与えられます。  
+ SET FORCEPLAN の実行権限は、既定ですべてのユーザーに与えられます。  
   
 ## <a name="examples"></a>使用例  
  次の例では、4 つのテーブルの結合を実行します。 `SHOWPLAN_TEXT` が ON に設定されているので、`SET FORCE_PLAN` が ON に設定された後、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] は、クエリの処理方法がどのように変更されたかに関する情報を返します。  

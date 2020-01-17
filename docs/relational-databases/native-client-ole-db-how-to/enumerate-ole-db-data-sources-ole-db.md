@@ -1,5 +1,5 @@
 ---
-title: OLE DB データ ソース (OLE DB) の列挙 |Microsoft Docs
+title: OLE DB データソースの列挙 (OLE DB) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -12,22 +12,20 @@ helpviewer_keywords:
 ms.assetid: ba240060-3237-4fb8-b2fb-b87fda2b1e7a
 author: MightyPen
 ms.author: genemi
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: ddf90bb571be757645b1d20b45fc9d9dd879d22a
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 803e3de97115bea9c467044d59a1a5a305836fa3
+ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51673232"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73790099"
 ---
 # <a name="enumerate-ole-db-data-sources-ole-db"></a>OLE DB データ ソースの列挙 (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-[!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
 
   このサンプルでは、列挙子オブジェクトを使用して、使用可能なデータ ソースを一覧表示する方法を示します。  
   
- コンシューマーを呼び出し、SQLOLEDB 列挙子に表示されるデータ ソースを一覧表示、 [isourcesrowset::getsourcesrowset](https://go.microsoft.com/fwlink/?LinkId=120312)メソッド。 このメソッドは、現在表示されているデータ ソースに関する情報の行セットを返します。  
+ SQLOLEDB 列挙子に表示されるデータソースを一覧表示するために、コンシューマーは[isourcesrowset を:: GetSourcesRowset](https://go.microsoft.com/fwlink/?LinkId=120312)メソッドを呼び出します。 このメソッドは、現在表示されているデータ ソースに関する情報の行セットを返します。  
   
  使用しているネットワーク ライブラリに応じて、適切なドメインでデータ ソースが検索されます。 名前付きパイプの場合は、クライアントがログオンしたドメインになります。 AppleTalk の場合は、既定のゾーンになります。 SPX/IPX の場合は、バインダリ内にある [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインストールの一覧になります。 Banyan VINES の場合は、ローカル ネットワークにある [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインストールになります。 マルチプロトコルと TCP/IP ソケットはサポートされません。  
   
@@ -40,20 +38,20 @@ ms.locfileid: "51673232"
   
 ### <a name="to-enumerate-ole-db-data-sources"></a>OLE DB データ ソースを列挙するには  
   
-1.  ソース行セットを呼び出すことによって取得**ISourceRowset::GetSourcesRowset**します。  
+1.  **ISourceRowset:: GetSourcesRowset**を呼び出して、ソース行セットを取得します。  
   
-2.  呼び出して列挙子の行セットの説明を検索**GetColumnInfo::IColumnInfo**します。  
+2.  **GetColumnInfo:: IColumnInfo**を呼び出して、列挙子行セットの説明を検索します。  
   
 3.  列情報からバインド構造体を作成します。  
   
-4.  行セットのアクセサーを呼び出すことによって作成**iaccessor::createaccessor**します。  
+4.  **IAccessor:: CreateAccessor**を呼び出して、行セットアクセサーを作成します。  
   
-5.  呼び出すことによって、行のフェッチ**irowset::getnextrows**します。  
+5.  **IRowset:: GetNextRows**を呼び出して、行をフェッチします。  
   
 6.  **IRowset::GetData** を呼び出して、行の行セットのコピーからデータを取得し、そのデータを処理します。  
   
 ## <a name="example"></a>例  
- ole32.lib を使用して次の C++ コード リストをコンパイルし、実行します。 このアプリケーションは、コンピューターの既定の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスに接続します。 一部の Windows オペレーティング システムでは、(localhost) または (local) を実際の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスの名前に変更する必要があります。 名前付きインスタンスに接続するには、接続文字列を L"(local)" から L"(local)\\\name" に変更します。ここで、name は名前付きインスタンスです。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express は、既定で名前付きインスタンスとしてインストールされます。 INCLUDE 環境変数には、sqlncli.h を含むディレクトリが含まれています。 を確認します。  
+ ole32.lib を使用して次の C++ コード リストをコンパイルし、実行します。 このアプリケーションは、コンピューターの既定の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスに接続します。 一部の Windows オペレーティング システムでは、(localhost) または (local) を実際の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスの名前に変更する必要があります。 名前付きインスタンスに接続するには、接続文字列を L"(local)" から L"(local)\\\name" に変更します。ここで、name は名前付きインスタンスです。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express は、既定で名前付きインスタンスとしてインストールされます。 INCLUDE 環境変数に、sqlncli を含むディレクトリが含まれていることを確認します。  
   
 ```  
 // compile with: ole32.lib  

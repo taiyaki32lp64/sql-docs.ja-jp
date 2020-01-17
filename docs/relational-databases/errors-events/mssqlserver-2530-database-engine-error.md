@@ -9,13 +9,12 @@ ms.topic: language-reference
 ms.assetid: 5d4be07a-38a5-4b25-819c-4dcb4636cc15
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 51ed043ddd34d902a989d966ee8f04405a2fbc72
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b51fb99c97447d630610be45dc3e3b681d90c40f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47751005"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68085997"
 ---
 # <a name="mssqlserver2530"></a>MSSQLSERVER_2530
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

@@ -14,12 +14,12 @@ ms.assetid: d7da14d3-848c-44d4-8e49-d536a1158a61
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: d8653161775a35e326a7ed85ed982f1cb75bee03
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: a19d5d39a3133ffc664f5ea7050645e2a28a8a20
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53361495"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62774284"
 ---
 # <a name="management-of-logins-and-jobs-for-the-databases-of-an-availability-group-sql-server"></a>可用性グループのデータベースのためのログインとジョブの管理 (SQL Server)
   AlwaysOn 可用性グループのすべてのプライマリ データベースとその対応するセカンダリ データベース上で、ユーザー ログインと [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] エージェント ジョブの同じセットを定期的に管理する必要があります。 可用性グループの可用性レプリカをホストする [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] のすべてのインスタンス上でログインとジョブを再作成する必要があります。  
@@ -30,7 +30,7 @@ ms.locfileid: "53361495"
   
      可用性グループの可用性レプリカをホストするサーバー インスタンスは、構成が異なる場合があります (別のテープ ドライブ文字など)。 各可用性レプリカのジョブは、このような違いを考慮する必要があります。  
   
-     バックアップ ジョブは、 [sys.fn_hadr_is_preferred_backup_replica](/sql/relational-databases/system-functions/sys-fn-hadr-backup-is-preferred-replica-transact-sql) 関数を使用し、可用性グループのバックアップ設定に従ってローカル レプリカがバックアップ用に推奨されるかどうかを識別できます。 [メンテナンス プラン ウィザード](../relational-databases/maintenance-plans/use-the-maintenance-plan-wizard.md) を使用して作成されたバックアップ ジョブは、ネイティブでこの関数を使用します。 他のバックアップ ジョブでは、バックアップ ジョブの中でこの関数を条件として使用して、バックアップ ジョブが優先レプリカでのみ実行されるようにすることをお勧めします。 詳細については、次を参照してください。[アクティブなセカンダリ。セカンダリ レプリカ (AlwaysOn 可用性グループ) でバックアップ](availability-groups/windows/active-secondaries-backup-on-secondary-replicas-always-on-availability-groups.md)します。  
+     バックアップ ジョブは、 [sys.fn_hadr_is_preferred_backup_replica](/sql/relational-databases/system-functions/sys-fn-hadr-backup-is-preferred-replica-transact-sql) 関数を使用し、可用性グループのバックアップ設定に従ってローカル レプリカがバックアップ用に推奨されるかどうかを識別できます。 [メンテナンス プラン ウィザード](../relational-databases/maintenance-plans/use-the-maintenance-plan-wizard.md) を使用して作成されたバックアップ ジョブは、ネイティブでこの関数を使用します。 他のバックアップ ジョブでは、バックアップ ジョブの中でこの関数を条件として使用して、バックアップ ジョブが優先レプリカでのみ実行されるようにすることをお勧めします。 詳細については、「[アクティブなセカンダリ:セカンダリ レプリカ (AlwaysOn 可用性グループ) でバックアップ](availability-groups/windows/active-secondaries-backup-on-secondary-replicas-always-on-availability-groups.md)します。  
   
 -   **ログイン**  
   

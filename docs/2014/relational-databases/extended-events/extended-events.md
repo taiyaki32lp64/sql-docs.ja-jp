@@ -14,11 +14,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 485c748aad8b07a5e8b92a02c03d51a82e5f362a
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53354050"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62990703"
 ---
 # <a name="extended-events"></a>拡張イベント
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 拡張イベントのアーキテクチャは高い拡張性と柔軟な構成を備えており、これによってユーザーは、トラブルシューティングまたはパフォーマンスの問題の特定に必要な量の情報を過不足なく収集できます。  
@@ -26,7 +26,7 @@ ms.locfileid: "53354050"
  Web サイトで拡張イベントに関する詳細を検索する[SQL Server 拡張イベント](https://blogs.msdn.com/b/extended_events/)します。  
   
 ## <a name="benefits-of-includessnoversionincludesssnoversion-mdmd-extended-events"></a>[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 拡張イベントの利点  
- 拡張イベントは軽量なパフォーマンス監視システムであり、使用されるパフォーマンス リソースはごくわずかです。 拡張イベントには、セッション データを容易かつ迅速に作成、変更、表示、および分析するためのグラフィカル ユーザー インターフェイスが 2 つ用意されています (**新規セッション ウィザード** と **[新しいセッション]**)。  
+ 拡張イベントは軽量なパフォーマンス監視システムであり、使用されるパフォーマンス リソースはごくわずかです。 拡張イベントには、セッション データを容易かつ迅速に作成、変更、表示、および分析するためのグラフィカル ユーザー インターフェイスが 2 つ用意されています (**新規セッション ウィザード** と **[新しいセッション]** )。  
   
 ## <a name="extended-events-concepts"></a>拡張イベントの概念  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 拡張イベントは、イベントやイベント コンシューマーなど、既存の概念を基にして、Event Tracing for Windows の概念や、新しい概念を導入したものです。  

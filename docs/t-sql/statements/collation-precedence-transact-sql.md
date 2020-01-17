@@ -25,21 +25,20 @@ helpviewer_keywords:
 ms.assetid: 58c4e64b-5634-4c29-aa22-33193282dd27
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 0fd55a9b0b6dd98a00ce7d826611845e8597170c
-ms.sourcegitcommit: eddf8cede905d2adb3468d00220a347acd31ae8d
+ms.openlocfilehash: 0cfd6c1c64c4e5d99ebddc8d610d7c6d56015b6c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/24/2018
-ms.locfileid: "49960776"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68141148"
 ---
 # <a name="collation-precedence"></a>照合順序の優先順位
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   照合順序の優先順位は、照合順序強制適用ルールとも呼ばれ、次の照合順序を決定します。  
   
--   文字列として評価される式の最終的な結果の照合順序  
+-   文字列として評価される式の最終的な結果の照合順序。  
   
 -   LIKE、IN など、入力として文字列を使用するが文字列を返さない、照合順序依存の演算子によって使用される照合順序  
   
@@ -112,7 +111,7 @@ FROM TestTab
 WHERE CharCol LIKE N'abc'  
 ```  
   
-`N'abc'` という単純な式の Unicode データ型は、データ型の優先順位が高いため、 その結果式には `N'abc'` に割り当てられている Unicode データ型が使用されます。 これに対し、式 `CharCol` は暗黙的な照合順序のラベルを持ち、`N'abc'` はそれよりも優先順位の低い強制可能な既定照合順序のラベルを持つため、 照合順序には、`French_CI_AS` の照合順序 `CharCol` が使用されます。  
+`N'abc'` という単純な式の Unicode データ型は、データ型の優先順位が高いため、 その結果式には `N'abc'` に割り当てられている Unicode データ型が使用されます。 これに対し、式 `CharCol` は暗黙的な照合順序のラベルを持ち、`N'abc'` はそれよりも優先順位の低い強制可能な既定照合順序のラベルを持つため、 照合順序には、`CharCol` の照合順序 `French_CI_AS` が使用されます。  
   
 ### <a name="examples-of-collation-rules"></a>照合順序ルールの例  
  照合順序ルールについて、以下の例で説明します。 この例を実行するには、次に示すテスト テーブルを作成します。  
@@ -233,8 +232,8 @@ CAST、CONVERT、および COLLATE の各関数は、**char**、**varchar**、**
 |-|-|  
 |CHARINDEX|[REPLACE]|  
 |DIFFERENCE|REVERSE|  
-|ISNUMERIC|[RIGHT]|  
-|[LEFT]|SOUNDEX|  
+|ISNUMERIC|RIGHT|  
+|LEFT|SOUNDEX|  
 |LEN|STUFF|  
 |[LOWER]|[SUBSTRING]|  
 |PATINDEX|[UPPER]|  

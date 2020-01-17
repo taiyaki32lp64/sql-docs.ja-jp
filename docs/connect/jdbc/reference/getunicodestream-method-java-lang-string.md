@@ -1,5 +1,5 @@
 ---
-title: getUnicodeStream (java.lang.String) メソッド |Microsoft Docs
+title: getUnicodeStream メソッド (java lang.ini) |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: e8ea50a3-804a-4752-96e5-eb3d521f93c1
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 40ee3d928d6a958aa19ef2cf1153a900ce1761f1
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: be721dad48fae3f83aa720516d0979d9f8ff26df
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47789730"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67978408"
 ---
 # <a name="getunicodestream-method-javalangstring"></a>getUnicodeStream (java.lang.String) メソッド
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -50,7 +49,7 @@ public java.io.InputStream getUnicodeStream(java.lang.String columnName)
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- この getUnicodeString メソッドは、java.sql.ResultSet インターフェイスの getUnicodeString メソッドによって指定されます。  
+ この getUnicodeString メソッドは、getUnicodeString インターフェイスのメソッドによって指定されます。  
   
 ## <a name="see-also"></a>参照  
  [getUnicodeStream メソッド &#40;SQLServerResultSet&#41;](../../../connect/jdbc/reference/getunicodestream-method-sqlserverresultset.md)   

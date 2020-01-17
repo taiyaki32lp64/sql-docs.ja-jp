@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: e491439f-8eff-4bf6-a808-8dba243af8c3
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 3c161898599cadd5e31a45720cbace26243ea7ba
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 86fb1c06f34f3c8c6688c234b8c2714cd61c089e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47696551"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67938523"
 ---
 # <a name="dimension-object-properties-methods-and-events"></a>Dimension オブジェクトのプロパティ、メソッド、およびイベント
 ## <a name="propertiescollections"></a>プロパティ/コレクション  
@@ -38,5 +37,5 @@ ms.locfileid: "47696551"
 ## <a name="events"></a>イベント  
  [なし] :  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [Dimension オブジェクト (ADO MD)](../../../ado/reference/ado-md-api/dimension-object-ado-md.md)

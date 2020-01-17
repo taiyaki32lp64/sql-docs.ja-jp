@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 ms.assetid: 49f07ad6-242b-4861-8fc1-91ca78c36d6c
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 80ec9da0ce3ee4fee6ded91ad5ecb326c3f272db
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: c1db711e5a1eec51323b38ee34bd1df08ed8aa9e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56286560"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66106752"
 ---
 # <a name="add-an-expand-or-collapse-action-to-an-item-report-builder-and-ssrs"></a>アイテムへの展開または折りたたみアクションの追加 (レポート ビルダーおよび SSRS)
   レポート アイテムの展開と折りたたみや、グループと関連付けられているテーブルやマトリックスの行と列の展開と折りたたみを、ユーザーが対話形式で行うようにできます。 アイテムの展開と折りたたみをユーザーが行うようにするには、アイテムの表示プロパティを設定します。 表示の設定は HTML レポート ビューアーで行い、 *ドリルダウン* アクションと呼ばれることがあります。  
@@ -51,7 +50,7 @@ ms.locfileid: "56286560"
   
     -   選択`True`レポート アイテムを非表示にします。  
   
-    -   **[式]** ダイアログ ボックスを開いて実行時に評価する式を作成し、表示/非表示を指定するには、**[\<式>]** を選択します。  
+    -   **[式]** ダイアログ ボックスを開いて実行時に評価する式を作成し、表示/非表示を指定するには、 **[\<式>]** を選択します。  
   
 5.  **[切り替えアイテム]** で、ドロップダウン ボックスから、切り替えイメージを追加するテキスト ボックスの名前を選択します。  
   
@@ -68,7 +67,7 @@ ms.locfileid: "56286560"
   
 ### <a name="to-add-expand-and-collapse-action-to-a-report-item"></a>レポート アイテムに展開/折りたたみアクションを追加するには  
   
-1.  レポート デザイン ビューで、表示または非表示にするレポート アイテムを右クリックして、*[\<レポート アイテム>* **プロパティ]** をクリックします。 レポート アイテムの *[\<レポート アイテム>* **プロパティ]** ダイアログ ボックスが開きます。  
+1.  レポート デザイン ビューで、表示または非表示にするレポート アイテムを右クリックして、 *[\<レポート アイテム>* **プロパティ]** をクリックします。 レポート アイテムの *[\<レポート アイテム>* **プロパティ]** ダイアログ ボックスが開きます。  
   
 2.  **[表示]** をクリックします。  
   
@@ -78,7 +77,7 @@ ms.locfileid: "56286560"
   
     -   レポート アイテムを非表示にする場合は、 **[非表示]** をクリックします。  
   
-    -   実行時に評価される式を使用して表示/非表示を指定するには、 **[式を基に表示/非表示を切り替える]** をクリックします。 式を作成するには、**[fx]** をクリックして **[式]** ダイアログ ボックスを開きます。  
+    -   実行時に評価される式を使用して表示/非表示を指定するには、 **[式を基に表示/非表示を切り替える]** をクリックします。 式を作成するには、 **[fx]** をクリックして **[式]** ダイアログ ボックスを開きます。  
   
         > [!NOTE]  
         >  表示/非表示を設定する式を指定する場合、レポート アイテムの Hidden プロパティを設定します。 式を評価した値が `Boolean` 値の `True` の場合はアイテムが非表示になり、`False` の場合はアイテムが表示されます。  

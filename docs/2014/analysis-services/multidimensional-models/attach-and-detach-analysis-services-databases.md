@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.ssms.detachdatabase.f1
@@ -19,12 +18,12 @@ ms.assetid: 41887413-2d47-49b8-8614-553cb799fb18
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: c73417ea9d74588c55177527abdbb42a33c4496e
-ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
+ms.openlocfilehash: 4447f58baaa5ea88a48c67a9a32fcda77681d8d4
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50144917"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66077484"
 ---
 # <a name="attach-and-detach-analysis-services-databases"></a>Analysis Services データベースのインポートとデタッチ
   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] のデータベース管理者 (DBA) がデータベースを一時的にオフラインにした後、そのデータベースを同じサーバー インスタンスまたは別のサーバー インスタンス上でオンラインに戻すことは少なくありません。 こうした状況は、パフォーマンス向上のためにデータベースを別のディスクに移動したり、データベース拡張のための領域を確保したり、製品をアップグレードしたりするなど、ビジネス上のニーズによって頻繁に発生します。 このような状況だけでなくさまざまな場合に、`Attach` コマンドと `Detach` コマンドを使用することによって、[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] の DBA は、データベースをオフラインにした後、簡単にオンラインに戻すことができます。  
@@ -47,7 +46,7 @@ ms.locfileid: "50144917"
   
 |読み書き可能なデータベースのデタッチ|読み取り専用データベースのデタッチ|  
 |--------------------------------------|-------------------------------------|  
-|1) サーバーはデータベースに対する CommitExclusive ロックの要求を発行します<br />2) サーバーは、実行中のトランザクションすべてがコミットまたはロールバックされるまで待機します<br />3) サーバーはデータベースのデタッチに必要なすべてのメタデータを構築します<br />4) データベースは削除済みに設定されます<br />5) サーバーはトランザクションをコミットします|1) データベースは削除済みに設定されます<br />2) サーバーはトランザクションをコミットします<br /><br /> <br /><br /> 注: 読み取り専用データベースでは、デタッチ用のパスワードを変更できません。 アタッチされたデータベースに既にパスワードが含まれている場合にパスワード パラメーターを指定すると、エラーが発生します。|  
+|1) サーバーはデータベースに対する CommitExclusive ロックの要求を発行します<br />2) サーバーは、実行中のトランザクションすべてがコミットまたはロールバックされるまで待機します<br />3) サーバーはデータベースのデタッチに必要なすべてのメタデータを構築します<br />4) データベースは削除済みに設定されます<br />5) サーバーはトランザクションをコミットします|1) データベースは削除済みに設定されます<br />2) サーバーはトランザクションをコミットします<br /><br /> <br /><br /> 注:読み取り専用データベースのデタッチのパスワードを変更できません。 アタッチされたデータベースに既にパスワードが含まれている場合にパスワード パラメーターを指定すると、エラーが発生します。|  
   
  `Attach` コマンドおよび `Detach` コマンドは 1 つの操作として実行する必要があります。 同じトランザクション内でその他の操作と組み合わせることはできません。 また、`Attach`と`Detach`コマンドはアトミックなトランザクション コマンドです。 つまり、操作は成功するか失敗するかのどちらかになります。 データベースは未完了の状態にしておくことはできません。  
   

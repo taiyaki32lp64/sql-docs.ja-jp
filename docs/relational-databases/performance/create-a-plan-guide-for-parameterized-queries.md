@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: b532ae16-66e7-4641-9bc8-b0d805853477
 author: julieMSFT
 ms.author: jrasnick
-manager: craigg
-ms.openlocfilehash: 3c7e540b4f5c614f54d15f16ae5f5589c5138518
-ms.sourcegitcommit: dd794633466b1da8ead9889f5e633bdf4b3389cd
+ms.openlocfilehash: 45a57f45eae2a54d73e08064b9a02446871f8400
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54143532"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67946956"
 ---
 # <a name="create-a-plan-guide-for-parameterized-queries"></a>パラメーター化クエリのプラン ガイドの作成
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]

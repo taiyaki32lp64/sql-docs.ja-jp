@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 9775ebde-111d-476c-9188-b77805f90e98
 author: julieMSFT
 ms.author: jrasnick
-manager: craigg
-ms.openlocfilehash: ccaaab04a0ebb4e3ccb4771789588d966f5a7e1c
-ms.sourcegitcommit: 0c1d552b3256e1bd995e3c49e0561589c52c21bf
+ms.openlocfilehash: f79d41e3fd247ca596a6257415d29f7ebcbe87b6
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/14/2018
-ms.locfileid: "53380843"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67986935"
 ---
 # <a name="sql-server-buffer-manager-object"></a>SQL Server: Buffer Manager オブジェクト
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

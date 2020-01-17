@@ -16,30 +16,30 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 333d4d9f0ab9feb5d5b5c4d0aa48fd584cef3143
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48063852"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62856514"
 ---
 # <a name="view-the-definition-of-a-stored-procedure"></a>ストアド プロシージャの定義の表示
     
 ##  <a name="Top"></a> ストアド プロシージャの定義は、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] でオブジェクト エクスプローラーのメニュー オプションを使用するか、クエリ エディターで [!INCLUDE[tsql](../../includes/tsql-md.md)]を使用して表示できます。 このトピックでは、オブジェクト エクスプローラーでプロシージャの定義を表示する方法について説明します。さらに、クエリ エディターでのシステム プロシージャ、システム関数、およびオブジェクト カタログ ビューを使用した表示方法について説明します。  
   
--   **作業を開始する準備:**  [セキュリティ](#Security)  
+-   **作業を開始する準備:** [Security](#Security)  
   
--   **プロシージャの定義を**  [SQL Server Management Studio](#SSMSProcedure)または [Transact-SQL](#TsqlProcedure)  
+-   **プロシージャの定義を表示するを使用します。** [SQL Server Management Studio](#SSMSProcedure)、[Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> 作業を開始する準備  
+##  <a name="BeforeYouBegin"></a> はじめに  
   
 ###  <a name="Security"></a> セキュリティ  
   
 ####  <a name="Permissions"></a> Permissions  
  システム ストアド プロシージャ: `sp_helptext`  
- ロール **public** のメンバーシップが必要です。 システム オブジェクトの定義は、公開されます。 ユーザー オブジェクトの定義は、オブジェクトの所有者、または ALTER、CONTROL、TAKE OWNERSHIP、VIEW DEFINITION のいずれかの権限を許可された人が表示できます。  
+ ロール **public** のメンバーシップが必要です。 システム オブジェクトの定義は、公開されます。 ユーザー オブジェクトの定義は、オブジェクトの所有者、または次のいずれかの権限を許可された人が表示できます。ALTER、CONTROL、TAKE OWNERSHIP、VIEW DEFINITION。  
   
  システム関数: `OBJECT_DEFINITION`  
- システム オブジェクトの定義は、公開されます。 ユーザー オブジェクトの定義は、オブジェクトの所有者、または ALTER、CONTROL、TAKE OWNERSHIP、VIEW DEFINITION のいずれかの権限を許可された人が表示できます。 これらの権限は **db_owner**、 **db_ddladmin**、および **db_securityadmin** 固定データベース ロールのメンバーが暗黙的に保有します。  
+ システム オブジェクトの定義は、公開されます。 ユーザー オブジェクトの定義は、オブジェクトの所有者、または次のいずれかの権限を許可された人が表示できます。ALTER、CONTROL、TAKE OWNERSHIP、VIEW DEFINITION。 これらの権限は **db_owner**、 **db_ddladmin**、および **db_securityadmin** 固定データベース ロールのメンバーが暗黙的に保有します。  
   
  オブジェクト カタログ ビュー: `sys.sql_modules`  
  カタログ ビューでのメタデータの表示が、ユーザーが所有しているかそのユーザーが権限を許可されている、セキュリティ保護可能なメタデータに制限されます。 詳細については、「 [Metadata Visibility Configuration](../security/metadata-visibility-configuration.md)」を参照してください。  
@@ -58,7 +58,7 @@ ms.locfileid: "48063852"
   
 2.  **[データベース]** を展開し、プロシージャが属するデータベースを展開し、 **[プログラミング]** を展開します。  
   
-3.  **[ストアド プロシージャ]** を展開します。プロシージャを右クリックし、 **[ストアド プロシージャをスクリプト化]** を選択し、 **[CREATE]**、 **[ALTER]**、 **[DROP および CREATE]** のいずれかをクリックします。  
+3.  展開**ストアド プロシージャ**プロシージャを右クリックし、クリックして**ストアド プロシージャをスクリプト**、次のいずれかをクリックします。**作成する**、 **Alter**、または**削除し、作成する**。  
   
 4.  **[新しいクエリ エディター ウィンドウ]** をクリックします。 プロシージャの定義が表示されます。  
   
@@ -70,7 +70,7 @@ ms.locfileid: "48063852"
   
 2.  ツール バーの **[新しいクエリ]** をクリックします。  
   
-3.  クエリ ウィンドウで使用する、次のステートメントを入力、`sp_helptext`システム ストアド プロシージャ。 データベース名とストアド プロシージャ名を変更し、目的のデータベースとストアド プロシージャを参照するようにします。  
+3.  クエリ ウィンドウで、`sp_helptext` システム ストアド プロシージャを使用した次のステートメントを入力します。 データベース名とストアド プロシージャ名を変更し、目的のデータベースとストアド プロシージャを参照するようにします。  
   
     ```  
     USE AdventureWorks2012;  
@@ -96,7 +96,7 @@ ms.locfileid: "48063852"
   
 2.  ツール バーの **[新しいクエリ]** をクリックします。  
   
-3.  クエリ ウィンドウで入力を使用して、次のステートメント、`sys.sql_modules`カタログ ビューです。 データベース名とストアド プロシージャ名を変更し、目的のデータベースとストアド プロシージャを参照するようにします。  
+3.  クエリ ウィンドウで、`sys.sql_modules` カタログ ビューを使用した次のステートメントを入力します。 データベース名とストアド プロシージャ名を変更し、目的のデータベースとストアド プロシージャを参照するようにします。  
   
     ```  
     USE AdventureWorks2012;  

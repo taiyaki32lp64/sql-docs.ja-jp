@@ -13,11 +13,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: bc810ced25733ce77d80c7bec38b03e3aaf3753a
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52774684"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63233080"
 ---
 # <a name="new-date-and-time-features-with-previous-sql-server-versions-ole-db"></a>以前のバージョンの SQL Server における、新しい日付または時刻の機能の動作 (OLE DB)
   このトピックでは、強化された日付と時刻の機能を使用するクライアント アプリケーションのバージョンと通信する場合に想定される動作を説明します[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]よりも前[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]、クライアントのバージョンでコンパイルされたときに、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client前[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]強化された日付と時刻の機能をサポートするサーバーへのコマンドを送信します。  
@@ -128,7 +128,7 @@ ms.locfileid: "52774684"
 #### <a name="providertypes-rowset"></a>PROVIDER_TYPES 行セット  
  日付/時刻型に対して返される行を次に示します。  
   
-|型 -><br /><br /> [列]|日付|time|smalldatetime|DATETIME|datetime2|datetimeoffset|  
+|型 -> します。<br /><br /> [列]|日付|time|smalldatetime|DATETIME|datetime2|datetimeoffset|  
 |--------------------------|----------|----------|-------------------|--------------|---------------|--------------------|  
 |TYPE_NAME|日付|time|smalldatetime|DATETIME|datetime2|datetimeoffset|  
 |DATA_TYPE|DBTYPE_WSTR|DBTYPE_WSTR|DBTYPE_DBTIMESTAMP|DBTYPE_DBTIMESTAMP|DBTYPE_WSTR|DBTYPE_WSTR|  

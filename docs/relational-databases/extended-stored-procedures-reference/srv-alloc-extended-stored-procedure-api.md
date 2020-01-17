@@ -19,15 +19,14 @@ helpviewer_keywords:
 ms.assetid: 91505c59-a273-452f-b71d-5e8205c21863
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 8677bb878094bf2345f00b7c6838a43b653faac6
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 91b6f1ac9d8fcf551ebc786368791354a7d6c27e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51670661"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68064191"
 ---
-# <a name="srvalloc-extended-stored-procedure-api"></a>srv_alloc (拡張ストアド プロシージャ API)
+# <a name="srv_alloc-extended-stored-procedure-api"></a>srv_alloc (拡張ストアド プロシージャ API)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
     
 > [!IMPORTANT]  

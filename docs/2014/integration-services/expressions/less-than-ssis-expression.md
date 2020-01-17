@@ -10,15 +10,15 @@ helpviewer_keywords:
 - less than (<)
 - < (less than operator)
 ms.assetid: 8674afdc-4276-46cb-be08-5aadfe8b9624
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 1bf00ad5c0fa4478b308ec3feb38a7896e186e81
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: c0683f741de16b688330fcd7833d5705e4bbb9a2
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52799768"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62769048"
 ---
 # <a name="lt-less-than-ssis-expression"></a>&lt; (より小さい) (SSIS 式)
   最初の式が 2 番目の式未満かどうかを判別するための比較を実行します。 式エバリュエーターは、比較の実行前にさまざまなデータ型を自動的に変換します。  
@@ -55,7 +55,7 @@ expression1 < expression2
     > [!NOTE]  
     >  文字列の比較では、大文字と小文字、アクセント、かな、および文字幅が区別されます。  
   
--   **日付、時刻、または日付/時刻**両方*expression1*と*expression2*次のデータ型のいずれかを評価する必要があります。DT_DBDATE、DT_DATE、DT_DBTIME、DT_DBTIME2、DT_DBTIMESTAMP、DT_DBTIMESTAMP2、DT_DBTIMESTAPMOFFSET、または DT_FILETIME。  
+-   **日付、時刻、または日付/時刻** *expression1* と *expression2* は、どちらも次のいずれかのデータ型に評価される必要があります。DT_DBDATE、DT_DATE、DT_DBTIME、DT_DBTIME2、DT_DBTIMESTAMP、DT_DBTIMESTAMP2、DT_DBTIMESTAPMOFFSET、DT_FILETIME。  
   
     > [!NOTE]  
     >  時刻データ型に評価される式と、日付データ型または日付/時刻データ型に評価される式との間の比較はサポートされていません。 システムによってエラーが生成されます。  

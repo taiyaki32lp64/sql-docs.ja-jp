@@ -15,11 +15,11 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: 5a749bb4da4511f30a231f6ab2dd05a35ebdb11d
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52544597"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62779262"
 ---
 # <a name="full-text-search-backward-compatibility"></a>フルテキスト検索における旧バージョンとの互換性
   旧バージョンとの互換性のセクションの各トピックでは、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] の以前のバージョンと [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]におけるフルテキスト検索の動作の違いについて説明します。  

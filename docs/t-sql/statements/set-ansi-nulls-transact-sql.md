@@ -24,14 +24,13 @@ helpviewer_keywords:
 ms.assetid: aae263ef-a3c7-4dae-80c2-cc901e48c755
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: aef2847aa8e6aed4504359bcc3bd5e0c21c3d8c7
-ms.sourcegitcommit: 01e17c5f1710e7058bad8227c8011985a9888d36
+ms.openlocfilehash: 651af5040782bc729d5bca48fa2285e14e709e10
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/14/2019
-ms.locfileid: "56265259"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67929175"
 ---
 # <a name="set-ansinulls-transact-sql"></a>SET ANSI_NULLS (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-pdw-md.md)]
@@ -79,9 +78,9 @@ ANSI_NULLS が ON に設定されていると、NULL 値に対するすべての
 |NULL IS NOT NULL|FALSE|FALSE|  
 |1 IS NOT NULL|TRUE|TRUE|  
 
-比較のオペランドの 1 つが NULL またはリテラル NULL のいずれかの変数であるとき、SET ANSI_NULLS が ON の場合のみ比較に影響します。 比較の両側が列または複合式の場合は、この設定は比較に影響しません。  
+比較のオペランドの一方が NULL またはリテラル NULL のいずれかの変数である場合のみ、SET ANSI_NULLS ON が比較に影響します。 比較の両側が列または複合式の場合は、この設定は比較に影響しません。  
   
-スクリプトが意図どおりに動作するようにするには、ANSI_NULLS データベース オプションや SET ANSI_NULLS の設定とは無関係に、NULL 値を含む可能性のある比較で、IS NULL と IS NOT NULL を使用するようにしてください。  
+スクリプトを意図どおりに動作させるようにするには、ANSI_NULLS データベース オプションや SET ANSI_NULLS の設定とは無関係に、NULL 値を含む可能性のある比較で、IS NULL と IS NOT NULL を使用するようにしてください。  
   
 分散クエリを実行する際には、ANSI_NULLS を ON に設定する必要があります。  
   

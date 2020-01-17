@@ -15,14 +15,14 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: e29280e6771c06ad11a0ec833445ba94c93c279f
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52814844"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63012192"
 ---
 # <a name="audit-schema-object-gdr-event-class"></a>Audit Schema Object GDR イベント クラス
-   **Audit Schema Object GDR** イベント クラスは、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のユーザーによって、スキーマ オブジェクトの権限に対して GRANT、REVOKE、または DENY が実行されるたびに発生します。  
+  **Audit Schema Object GDR** イベント クラスは、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のユーザーによって、スキーマ オブジェクトの権限に対して GRANT、REVOKE、または DENY が実行されるたびに発生します。  
   
 ## <a name="audit-schema-object-gdr-event-class-data-columns"></a>Audit Schema Object GDR イベント クラスのデータ列  
   
@@ -52,16 +52,16 @@ ms.locfileid: "52814844"
 |**ServerName**|**nvarchar**|トレースされている [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスの名前。|26|いいえ|  
 |**SessionLoginName**|**nvarchar**|セッションを開始したユーザーのログイン名。 たとえば、Login1 を使用して [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] に接続し、Login2 でステートメントを実行すると、 **SessionLoginName** には Login1 が表示され、 **LoginName** には Login2 が表示されます。 この列には、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ログインと Windows ログインの両方が表示されます。|64|はい|  
 |**SPID**|**int**|イベントが発生したセッションの ID。|12|はい|  
-|**StartTime**|**datetime**|イベントの開始時刻 (取得できた場合)。|14|はい|  
-|**成功**|**int**|1 = 成功。 0 = 失敗。 たとえば、値 1 は権限チェックの成功を示し、値 0 は失敗を示します。|23|はい|  
+|**StartTime**|**datetime**|イベントの開始時刻 (取得できた場合)。|14|[はい]|  
+|**成功**|**int**|1 = 成功。 0 = 失敗。 たとえば、値 1 は権限チェックの成功を示し、値 0 は失敗を示します。|23|[はい]|  
 |**TargetLoginName**|**nvarchar**|新しいログインの追加など、ログインを対象とする操作で、対象となるログインの名前。|42|はい|  
 |**TargetLoginSid**|**image**|新しいログインの追加など、ログインを対象とする操作で、対象となるログインのセキュリティ識別番号 (SID)。|43|はい|  
 |**TargetUserName**|**nvarchar**|権限のユーザーへの付与など、データベース ユーザーを対象とする操作で、対象となるユーザーの名前。|39|はい|  
 |**TextData**|**ntext**|トレースでキャプチャされたイベント クラスに依存するテキスト値。|1|はい|  
 |**TransactionID**|**bigint**|システムによって割り当てられたトランザクション ID。|4|はい|  
-|**XactSequence**|**bigint**|現在のトランザクションを説明するトークン。|50|はい|  
+|**XactSequence**|**bigint**|現在のトランザクションを説明するトークン。|50|[はい]|  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [拡張イベント](../extended-events/extended-events.md)   
  [sp_trace_setevent &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql)   
  [GRANT &#40;Transact-SQL&#41;](/sql/t-sql/statements/grant-transact-sql)   

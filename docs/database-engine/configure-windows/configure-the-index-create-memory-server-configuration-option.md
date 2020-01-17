@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 3d722d9b-bada-4bf5-a9d7-bfc556bb4915
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 0cbe80b602b0882604df23b2f7fa3f6fcdf633b4
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 289610b05757a1b2e94f27164b8f43464d49c227
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47740910"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68012607"
 ---
 # <a name="configure-the-index-create-memory-server-configuration-option"></a>index create memory サーバー構成オプションの構成
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -33,7 +32,7 @@ ms.locfileid: "47740910"
   
      [推奨事項](#Recommendations)  
   
-     [Security](#Security)  
+     [セキュリティ](#Security)  
   
 -   **以下を使用して index create memory オプションを構成するには:**  
   
@@ -41,9 +40,9 @@ ms.locfileid: "47740910"
   
      [Transact-SQL](#TsqlProcedure)  
   
--   **補足情報:**  [index create memory オプションを構成した後](#FollowUp)  
+-   **補足情報:** [index create memory オプションを構成した後](#FollowUp)  
   
-##  <a name="BeforeYouBegin"></a> 作業を開始する準備  
+##  <a name="BeforeYouBegin"></a> はじめに  
   
 ###  <a name="Restrictions"></a> 制限事項と制約事項  
   
@@ -59,7 +58,7 @@ ms.locfileid: "47740910"
   
 -   **index create memory** オプションは自動的に設定されるので、通常は調整する必要がありません。 ただし、インデックスを正常に作成できない場合は、必要に応じて、このオプションの値を実行値より大きくしてください。  
 
--   通常、稼働中のシステムではインデックス作成は頻度の少ない作業であり、多くの場合、閑散時に実行が予定されるジョブです。 したがって、インデックスの作成が頻繁でなく、閑散時に行われる場合、**index create memory** を増やすとインデックス作成のパフォーマンスが向上できます。 ただし、**[min memory per query](../../database-engine/configure-windows/configure-the-min-memory-per-query-server-configuration-option.md)** 構成オプションの値は小さい数にします。そうすれば、要求したすべてのメモリが利用できない場合でも、インデックス作成ジョブは起動します。
+-   通常、稼働中のシステムではインデックス作成は頻度の少ない作業であり、多くの場合、閑散時に実行が予定されるジョブです。 したがって、インデックスの作成が頻繁でなく、閑散時に行われる場合、**index create memory** を増やすとインデックス作成のパフォーマンスが向上できます。 ただし、 **[min memory per query](../../database-engine/configure-windows/configure-the-min-memory-per-query-server-configuration-option.md)** 構成オプションの値は小さい数にします。そうすれば、要求したすべてのメモリが利用できない場合でも、インデックス作成ジョブは起動します。
   
 ###  <a name="Security"></a> セキュリティ  
   
@@ -100,9 +99,9 @@ RECONFIGURE;
 GO  
 ```  
   
- 詳細については、「 [サーバー構成オプション &#40;SQL Server&#41;](../../database-engine/configure-windows/server-configuration-options-sql-server.md)構成オプションを構成する方法について説明します。  
+ 詳細については、「 [サーバー構成オプション &#40;SQL Server&#41;](../../database-engine/configure-windows/server-configuration-options-sql-server.md)」を参照してください。  
   
-##  <a name="FollowUp"></a> 補足情報: index create memory オプションを構成した後  
+##  <a name="FollowUp"></a>補足情報: index create memory オプションを構成した後  
  新しい設定は、サーバーを再起動しなくてもすぐに有効になります。  
   
 ## <a name="see-also"></a>参照  

@@ -11,16 +11,16 @@ helpviewer_keywords:
 - folders [Master Data Services]
 - files [Master Data Services]
 ms.assetid: 6402d81d-7349-47b1-95ca-99b0c0f4f373
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
 robots: noindex,nofollow
-ms.openlocfilehash: 594ceb3c21dec321afb7b08a2a54e90571ec8f5f
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 06ae01a097b164abb1b55267853ee99f7e5bf445
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52802854"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65483832"
 ---
 # <a name="folder-and-file-permissions-master-data-services"></a>フォルダーとファイルの権限 (マスター データ サービス)
   [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]のインストール時に、ファイル システムで指定のインストール パスにフォルダーとファイルが [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 共有機能用にインストールされます。 既定のインストール パスを使用する場合[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]共有機能には、インストール パス[!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]は*ドライブ*: \Program Files\Microsoft SQL server \120\master Data Services です。 共有機能のインストール パスは変更できますが、親フォルダーから継承される権限と [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]に対して明示的に設定されている権限に注意する必要があります。  

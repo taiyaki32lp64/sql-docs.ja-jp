@@ -23,16 +23,15 @@ helpviewer_keywords:
 - text [SQL Server]
 - unindenting code
 ms.assetid: ddbac4d2-6bdc-4467-a352-e869ec880eed
-author: stevestein
-ms.author: sstein
-manager: craigg
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 107fbd704b2dd9b2a036f1212e2b99caadd4a93a
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: 4c971543a87645c1c4a25d181fa7cef478eef0f6
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51644030"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68265414"
 ---
 # <a name="manage-code-formatting"></a>コードの書式設定の管理
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -55,7 +54,7 @@ ms.locfileid: "51644030"
   
     -   **None**。 カーソルは次の行の先頭に移動します。  
   
-    -   **[ブロック]**。 次行のインデントは前行に合わせて設定されます。  
+    -   **[ブロック]** 。 次行のインデントは前行に合わせて設定されます。  
   
     -   **[スマート]** (既定)。 適切なインデント スタイルが言語サービスによって決定されます。  
   

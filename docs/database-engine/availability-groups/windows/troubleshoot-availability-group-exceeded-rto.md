@@ -1,5 +1,5 @@
 ---
-title: 'トラブルシューティング: 可用性グループ接続の超過 RTO (SQL Server) | Microsoft Docs'
+title: トラブルシューティング:可用性グループ接続の超過 RTO (SQL Server) | Microsoft Docs
 ms.custom: ag-guide
 ms.date: 06/13/2017
 ms.prod: sql
@@ -9,15 +9,14 @@ ms.topic: conceptual
 ms.assetid: e83e4ef8-92f0-406f-bd0b-dc48dc210517
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 392b683ac3213f51f4a263f6643adf34d76c133c
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.openlocfilehash: 9b62bcc1eebe8371bc45ae7f565d9aa712f1b1d4
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51606872"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68013752"
 ---
-# <a name="troubleshoot-availability-group-exceeded-rto"></a>トラブルシューティング: 可用性グループ接続の超過 RTO
+# <a name="troubleshoot-availability-group-exceeded-rto"></a>トラブルシューティング:可用性グループ接続の超過 RTO
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   可用性グループのデータ損失のない自動フェールオーバーまたは計画された手動フェールオーバーの後に、フェールオーバー時間が回復時刻の目標 (RTO) を超えていることに気づく場合があります。 または、「[Always On 可用性グループのパフォーマンスを監視する](monitor-performance-for-always-on-availability-groups.md)」の方法を使用して同期コミット セカンダリ レプリカのフェールオーバー時間を推定したとき (自動フェールオーバー パートナーなど)、RTO を超過していることが判明します。  
   
@@ -43,7 +42,7 @@ select session_id, command, blocking_session_id, wait_time, wait_type, wait_reso
 from sys.dm_exec_requests where command = 'DB STARTUP'  
 ```  
   
- レポート ワークロードを完了させて、その時点で再実行スレッドをブロック解除させるか、ブロックしているセッション ID で [KILL &#40;TRANSACT-SQL&#41; ](~/t-sql/language-elements/kill-transact-sql.md) を実行して直ちに再実行スレッドをブロック解除することができます。  
+ レポート ワークロードを完了させて、その時点で再実行スレッドをブロック解除させるか、ブロックしているセッション ID で [KILL &#40;Transact-SQL&#41; ](~/t-sql/language-elements/kill-transact-sql.md) を実行して直ちに再実行スレッドをブロック解除することができます。  
   
 ##  <a name="BKMK_CONTENTION"></a> リソースの競合のために再実行スレッドが遅れる  
  セカンダリ レプリカでの大量のレポート ワークロードのために、セカンダリ レプリカのパフォーマンスが低下し、再実行スレッドが遅れています。  

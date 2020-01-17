@@ -18,14 +18,13 @@ helpviewer_keywords:
 ms.assetid: b2b52258-642b-462e-8e0f-18c09d2eccf4
 author: rothja
 ms.author: jroth
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 245ff3f542bead93290c09bf4dd3de25337795cd
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ed3026ae450e50bcb2d9debf93c4b90eab3afad0
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47624270"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72905534"
 ---
 # <a name="create-dml-triggers"></a>DML トリガーの作成
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -50,7 +49,7 @@ ms.locfileid: "47624270"
   
 1.  **オブジェクト エクスプローラー**で、 [!INCLUDE[ssDE](../../includes/ssde-md.md)] のインスタンスに接続し、そのインスタンスを展開します。  
   
-2.  **[データベース]**、 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] データベース、 **[テーブル]** 、 **Purchasing.PurchaseOrderHeader**テーブルの順に展開します。  
+2.  **[データベース]** 、 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] データベース、 **[テーブル]** 、 **Purchasing.PurchaseOrderHeader**テーブルの順に展開します。  
   
 3.  **[トリガー]** を右クリックし、 **[新しいトリガー]** をクリックします。  
   
@@ -58,7 +57,7 @@ ms.locfileid: "47624270"
   
 5.  **[テンプレート パラメーターの値の指定]** ダイアログ ボックスで、各パラメーターに次の値を入力します。  
   
-    |パラメーター|ReplTest1|  
+    |パラメーター|[値]|  
     |---------------|-----------|  
     |Author|*名前*|  
     |Create Date|*今日の日付*|  
@@ -99,7 +98,7 @@ ms.locfileid: "47624270"
 9. DML トリガーを作成するには、 **[クエリ]** メニューの **[実行]** をクリックします。 DML トリガーがデータベース内のオブジェクトとして作成されます。  
   
 10. オブジェクト エクスプローラーにリストされた DML トリガーを確認するには、 **[トリガー]** を右クリックして **[更新]** を選択します。  
-  
+
  [はじめに](#Top)  
   
 ###  <a name="TsqlProcedure"></a> Transact-SQL の使用  

@@ -10,16 +10,15 @@ ms.topic: language-reference
 dev_langs:
 - TSQL
 ms.assetid: e9b8daff-b72f-4a53-907d-5a83a78785ec
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
+author: rothja
+ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 5d716b9b6eb372a1464cf5653469f724d3a6bb41
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 8aeaab6c13f16d8fc6b1f0cbe4f9f664c1c5418e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47772590"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68122252"
 ---
 # <a name="language-elements-transact-sql"></a>言語要素 (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]

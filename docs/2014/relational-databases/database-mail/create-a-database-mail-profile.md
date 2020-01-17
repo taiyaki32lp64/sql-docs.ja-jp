@@ -15,11 +15,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 55eab0bbfacdde17ff69dd36a0641561695bc14d
-ms.sourcegitcommit: 467b2c708651a3a2be2c45e36d0006a5bbe87b79
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53979138"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62872208"
 ---
 # <a name="create-a-database-mail-profile"></a>データベース メール プロファイルの作成
   **データベース メール構成ウィザード** または [!INCLUDE[tsql](../../includes/tsql-md.md)] を使用して、データベース メールのパブリック プロファイルとプライベート プロファイルを作成します。  
@@ -52,7 +52,7 @@ ms.locfileid: "53979138"
   
 -   **[プロファイルとアカウントの管理]** ページで、 **[新しいプロファイルを作成する]** オプションを選択し、 **[次へ]** をクリックします。  
   
--   **新しいプロファイル**ページで、プロファイル名と説明を指定して、プロファイルに含める をクリックしてアカウントを追加する**次**します。  
+-   **[新しいプロファイル]** ページで、プロファイル名と説明を指定し、プロファイルに含めるアカウントを追加して、 **[次へ]** をクリックします。  
   
 -   **[ウィザードの完了]** ページで、実行される動作を確認し、 **[完了]** をクリックして、新しいプロファイルの作成を完了します。  
   
@@ -96,7 +96,7 @@ ms.locfileid: "53979138"
   
      *@description* = '*Desciption*'  
   
-     *@profile_name* はプロファイルの名前です。*@description* はプロファイルの説明です。 このパラメーターはオプションです。  
+     *@profile_name* はプロファイルの名前です。 *@description* はプロファイルの説明です。 このパラメーターはオプションです。  
   
 -   アカウントごとに、ストアド プロシージャ [sysmail_add_profileaccount_sp &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sysmail-add-profileaccount-sp-transact-sql) を次のように実行します。  
   
@@ -108,7 +108,7 @@ ms.locfileid: "53979138"
   
      *@sequence_number* = '*sequence number of the account within the profile.* '  
   
-     *@profile_name* はプロファイルの名前です。*@account_name* は、プロファイルに追加するアカウントの名前です。*@sequence_number* は、プロファイル内のアカウントが使用される順序を決定します。  
+     *@profile_name* はプロファイルの名前です。 *@account_name* は、プロファイルに追加するアカウントの名前です。 *@sequence_number* は、プロファイル内のアカウントが使用される順序を決定します。  
   
 -   このプロファイルを使用してメールを送信する各データベース ロールまたはユーザーについて、プロファイルへのアクセス権を付与します。 そのためには、ストアド プロシージャ [sysmail_add_principalprofile_sp &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sysmail-add-principalprofile-sp-transact-sql) を次のように実行します。  
   
@@ -120,7 +120,7 @@ ms.locfileid: "53979138"
   
      *@is_default* = '*Default Profile status* '  
   
-     *@profile_name* はプロファイルの名前です。*@principal_name* はデータベース ユーザーまたはロールの名前です。*@is_default* は、このプロファイルが、データベース ユーザーまたはロールの既定のプロファイルであるかどうかを決定します。  
+     *@profile_name* はプロファイルの名前です。 *@principal_name* はデータベース ユーザーまたはロールの名前です。 *@is_default* は、このプロファイルが、データベース ユーザーまたはロールの既定のプロファイルであるかどうかを決定します。  
   
  次の例ではまず、データベース メール アカウントを作成し、データベース メールのプライベート プロファイルを作成します。その後、アカウントをプロファイルに追加し、そのプロファイルへのアクセス権を、 **msdb** データベースの **DBMailUsers** データベース ロールに与えます。  
   
@@ -166,7 +166,7 @@ EXECUTE msdb.dbo.sysmail_add_principalprofile_sp
   
      *@description* = '*Desciption*'  
   
-     *@profile_name* はプロファイルの名前です。*@description* はプロファイルの説明です。 このパラメーターはオプションです。  
+     *@profile_name* はプロファイルの名前です。 *@description* はプロファイルの説明です。 このパラメーターはオプションです。  
   
 -   アカウントごとに、ストアド プロシージャ [sysmail_add_profileaccount_sp &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sysmail-add-profileaccount-sp-transact-sql) を次のように実行します。  
   
@@ -178,7 +178,7 @@ EXECUTE msdb.dbo.sysmail_add_principalprofile_sp
   
      *@sequence_number* = '*sequence number of the account within the profile.* '  
   
-     *@profile_name* はプロファイルの名前です。*@account_name* は、プロファイルに追加するアカウントの名前です。*@sequence_number* は、プロファイル内のアカウントが使用される順序を決定します。  
+     *@profile_name* はプロファイルの名前です。 *@account_name* は、プロファイルに追加するアカウントの名前です。 *@sequence_number* は、プロファイル内のアカウントが使用される順序を決定します。  
   
 -   パブリック アクセス権を付与するには、ストアド プロシージャ [sysmail_add_principalprofile_sp &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sysmail-add-principalprofile-sp-transact-sql) を次のように実行します。  
   
@@ -190,7 +190,7 @@ EXECUTE msdb.dbo.sysmail_add_principalprofile_sp
   
      *@is_default* = '*Default Profile status* '  
   
-     *@profile_name* はプロファイルの名前です。*@principal_name* は、このプロファイルがパブリック プロファイルであることを示します。*@is_default* は、このプロファイルが、データベース ユーザーまたはロールの既定のプロファイルであるかどうかを決定します。  
+     *@profile_name* はプロファイルの名前です。 *@principal_name* は、このプロファイルがパブリック プロファイルであることを示します。 *@is_default* は、このプロファイルが、データベース ユーザーまたはロールの既定のプロファイルであるかどうかを決定します。  
   
  次の例ではまず、データベース メール アカウントを作成し、データベース メールのプライベート プロファイルを作成します。その後、アカウントをプロファイルに追加し、そのプロファイルへのパブリック アクセス権を与えます。  
   

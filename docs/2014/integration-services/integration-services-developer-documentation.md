@@ -15,15 +15,15 @@ helpviewer_keywords:
 - SQL Server Integration Services, programming
 - packages [Integration Services], programming
 ms.assetid: 60fe148b-a7c4-4289-ae3e-2e949fc1886c
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 6e18e1d1e2219dd33fe6eea241d50ff6b077fe62
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 3fc7c93f8e499fb063e0d01c9132606f3ddfa3f7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53361404"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62892414"
 ---
 # <a name="developer39s-guide-integration-services"></a>開発者&#39;ガイド (Integration Services)
   [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] には、完全に再記述されたオブジェクト モデルが含まれています。それは、多数の機能で強化されています。この結果、パッケージのプログラミングや拡張作業は、より簡単に、柔軟に、また強力に行えるようになりました。 開発者は、[!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] パッケージのほとんどすべての側面を拡張およびプログラミングできます。  
@@ -72,7 +72,7 @@ ms.locfileid: "53361404"
  [プログラムによるパッケージの実行と管理](run-manage-packages-programmatically/running-and-managing-packages-programmatically.md)  
  [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] パッケージをプログラムで列挙、実行、および管理する方法について説明します。  
   
-## <a name="reference"></a>参照  
+## <a name="reference"></a>リファレンス  
  [Integration Services のエラーとメッセージのリファレンス](integration-services-error-and-message-reference.md)  
  定義済みの [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] エラー コードと、そのシンボル名および説明の一覧を示します。  
   
@@ -84,7 +84,7 @@ ms.locfileid: "53361404"
   
 -   www.codeplex.com/MSFTISProdSamples の CodePlex サンプル「[Integration Services 製品サンプル](https://go.microsoft.com/fwlink/?LinkID=131204)」  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [SQL Server Integration Services](sql-server-integration-services.md)  
   
   

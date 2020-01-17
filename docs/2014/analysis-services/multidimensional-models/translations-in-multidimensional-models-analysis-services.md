@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.dimensiondesigner.deletelanguagefirm.f1
@@ -13,18 +12,18 @@ ms.assetid: 5521f8ef-b10a-4861-9df7-1e43e0a1fb3f
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: f3238267021c0fd4054fb9757ea8d00cae6114dc
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: a80c7950ec4079021bbcf03d9ccee6970d68786b
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48218944"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66072743"
 ---
 # <a name="translations-in-multidimensional-models"></a>多次元モデルの翻訳
   複数の言語のサポートで[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]翻訳を使用して行われます。 翻訳には、複数の言語で表示可能な [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] オブジェクトのプロパティの言語識別子およびバインドが含まれます。 たとえば、[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] データベースの翻訳を、指定した言語でそのデータベースのキャプションと説明が表示されるように定義できます。 翻訳の詳細については、次を参照してください。[キューブの翻訳](../multidimensional-models-olap-logical-cube-objects/cube-translations.md)します。  
   
 ## <a name="defining-translations"></a>翻訳の定義  
- [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] で翻訳を定義するには、翻訳対象の [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] オブジェクトに適したデザイナーを使用します。 翻訳の定義を作成、`Translation`オブジェクトに関連付けられた、適切な[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]オブジェクトを関連付けられているプロパティの指定した言語で指定された明示的なリテラル値を持つ[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]オブジェクト。  
+ [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] で翻訳を定義するには、翻訳対象の [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] オブジェクトに適したデザイナーを使用します。 翻訳を定義すると、該当する [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] オブジェクトに関連付けられた `Translation` オブジェクトが作成されます。この Translation オブジェクトには、関連付けられた [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] オブジェクトのプロパティに対応する、指定した言語の明示的なリテラル値が含まれています。  
   
  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] では、次のオブジェクトおよびプロパティに翻訳を関連付けることができます。  
   
@@ -41,7 +40,7 @@ ms.locfileid: "48218944"
 |名前付きセット|`Caption`|[翻訳&#40;キューブ デザイナー&#41; &#40;Analysis Services - 多次元データ&#41;](../translations-cube-designer-analysis-services-multidimensional-data.md)|  
 |計算されるメンバー|`Caption`|[翻訳&#40;キューブ デザイナー&#41; &#40;Analysis Services - 多次元データ&#41;](../translations-cube-designer-analysis-services-multidimensional-data.md)|  
 |データベース ディメンション|`Caption`, `AttributeAllMember`|[翻訳&#40;ディメンション デザイナー&#41; &#40;Analysis Services - 多次元データ&#41;](../translations-dimension-designer-analysis-services-multidimensional-data.md)|  
-|属性|`Caption`、 `CaptionColumn` <sup>1</sup>、 `AttributeHierarchyDisplayFolder`、 `NamingTemplate`、 `MembersWithDataCaption`|[翻訳&#40;ディメンション デザイナー&#41; &#40;Analysis Services - 多次元データ&#41;](../translations-dimension-designer-analysis-services-multidimensional-data.md)|  
+|属性|`Caption`, `CaptionColumn`<sup>1</sup>, `AttributeHierarchyDisplayFolder`, `NamingTemplate`, `MembersWithDataCaption`|[翻訳&#40;ディメンション デザイナー&#41; &#40;Analysis Services - 多次元データ&#41;](../translations-dimension-designer-analysis-services-multidimensional-data.md)|  
 |Hieararchy|`Caption`, `AllMemberName`|[翻訳&#40;ディメンション デザイナー&#41; &#40;Analysis Services - 多次元データ&#41;](../translations-dimension-designer-analysis-services-multidimensional-data.md)|  
 |Level|`Caption`|[翻訳&#40;ディメンション デザイナー&#41; &#40;Analysis Services - 多次元データ&#41;](../translations-dimension-designer-analysis-services-multidimensional-data.md)|  
   
@@ -79,6 +78,6 @@ ms.locfileid: "48218944"
   
 ## <a name="see-also"></a>参照  
  [Analysis Services 多次元のグローバリゼーションのシナリオ](../globalization-scenarios-for-analysis-services-multiidimensional.md)   
- [言語および照合順序&#40;Analysis Services&#41;](../languages-and-collations-analysis-services.md)  
+ [言語および照合順序 &#40;Analysis Services&#41;](../languages-and-collations-analysis-services.md)  
   
   

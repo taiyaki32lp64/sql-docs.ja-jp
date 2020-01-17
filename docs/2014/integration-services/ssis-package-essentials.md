@@ -4,21 +4,20 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords:
 - package requirements
 ms.assetid: b0c86c35-e3d3-4724-9a96-4087e9d74bf3
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: f767bf80d2271b88eca526be3a47a2033f56d5bf
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 8cba1fb860d884b568fe132fc2b38ff50fbd480d
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53360864"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66055417"
 ---
 # <a name="ssis-package-essentials"></a>SSIS パッケージの基本事項
   パッケージは、データの抽出、変換、および読み込みを行うための [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 機能が実装されているオブジェクトです。 パッケージは [!INCLUDE[ssIS](../includes/ssis-md.md)] で [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)] デザイナーを使用して作成します。 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] インポートおよびエクスポート ウィザード、または [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 接続プロジェクト ウィザードを使用してもパッケージを作成できます。 詳細については、 [SQL Server Data Tools でパッケージの作成](create-packages-in-sql-server-data-tools.md)SSIS デザイナーで、[プロジェクトのインポート ウィザード](../../2014/integration-services/import-project-wizard.md)します。  

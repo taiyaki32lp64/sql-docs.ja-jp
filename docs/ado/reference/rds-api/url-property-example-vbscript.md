@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 6ae5ac50-c88c-4262-b7ab-f2b3de382a0b
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: abd4e255c9e148bbfed33750cd9c7e7c63015213
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.openlocfilehash: a7cdfd5b91caa52b3c2de3d0775ecf7d706b1a73
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51602662"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67963234"
 ---
 # <a name="url-property-example-vbscript"></a>URL プロパティの例 (VBScript)
 > [!IMPORTANT]
@@ -139,7 +138,7 @@ End Sub
 <!-- EndURLServerVBS -->  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [URL プロパティ (RDS)](../../../ado/reference/rds-api/url-property-rds.md)
 
 

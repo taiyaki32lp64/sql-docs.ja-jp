@@ -15,15 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - STLength (geometry Data Type)
 ms.assetid: e34dc620-2a65-4248-b099-fff91830ab98
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: 309b74e21d131b47e94f4890ace0072f0b85e64e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: MladjoA
+ms.author: mlandzic
+ms.openlocfilehash: 2b42f879a238e1c1e9a44c92c8683a91c9021600
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47678121"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68030863"
 ---
 # <a name="stlength-geometry-data-type"></a>STLength (geometry データ型)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -40,7 +39,7 @@ ms.locfileid: "47678121"
 ## <a name="return-types"></a>戻り値の型  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 戻り値の型: **float**  
   
- CLR の戻り値の型: **SqlDouble**  
+ CLR の戻り値の型:**SqlDouble**  
   
 ## <a name="remarks"></a>Remarks  
  **geometry** インスタンスが閉じられている場合、長さはインスタンスの周囲の合計長として計算されます。多角形の長さとは、周囲の長さです。地点の長さは 0 です。 **geometrycollection** コレクション型の長さは、コレクションに含まれるすべての **geometry** インスタンスの長さの合計として計算されます。  

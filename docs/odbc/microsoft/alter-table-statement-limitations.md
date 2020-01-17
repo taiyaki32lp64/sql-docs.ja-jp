@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: f3e88f85-edf4-47cd-a822-292b106ddb34
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 02ce530385cdc911250a81d831dd2fdb81873f76
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 1333cd6cd5946b7a3a70152e12f4d3decfa7fed0
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47828860"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68138432"
 ---
 # <a name="alter-table-statement-limitations"></a>ALTER TABLE ステートメントの制限事項
 ときに、dBASE ファイルまたは Paradox ドライバーを使って、インデックスが作成され、新しいレコードの追加、インデックスが削除され、テーブルの内容は削除しない限り、ALTER TABLE ステートメントによって、テーブルの構造を変更ことはできません。  

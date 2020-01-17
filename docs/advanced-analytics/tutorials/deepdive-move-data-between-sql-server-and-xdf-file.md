@@ -1,34 +1,35 @@
 ---
-title: SQL Server と RevoScaleR - SQL Server Machine Learning を使用して、XDF ファイル間でデータを移動します。
-description: SQL Server で XDF と R 言語を使用してデータを移行する方法に関するチュートリアル。
+title: XDF ファイルを使用してデータを移動する
+description: このチュートリアルは、SQL Server で XDF と R 言語を使用してデータを移動する方法について詳しく説明しています。
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 11/27/2018
 ms.topic: tutorial
-author: HeidiSteen
-ms.author: heidist
-manager: cgronlun
-ms.openlocfilehash: d0f097c64d48a3a2e87f01965914b3100c8a28dc
-ms.sourcegitcommit: ee76332b6119ef89549ee9d641d002b9cabf20d2
-ms.translationtype: MT
+author: dphansen
+ms.author: davidph
+ms.custom: seo-lt-2019
+monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
+ms.openlocfilehash: 6935276a47061652647666184637af8ba1535edd
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/20/2018
-ms.locfileid: "53645211"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73727209"
 ---
-# <a name="move-data-between-sql-server-and-xdf-file-sql-server-and-revoscaler-tutorial"></a>SQL Server と XDF ファイル (SQL Server と RevoScaleR チュートリアル) の間でデータを移動します。
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+# <a name="move-data-between-sql-server-and-xdf-file-sql-server-and-revoscaler-tutorial"></a>SQL Server と XDF ファイル間でデータを移動する (SQL Server と RevoScaleR のチュートリアル)
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-このレッスンの一部である、 [RevoScaleR チュートリアル](deepdive-data-science-deep-dive-using-the-revoscaler-packages.md)を使用する方法の[RevoScaleR 関数](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler)と SQL Server。
+このレッスンは、SQL Server で [RevoScaleR 関数](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler)を使用する方法についての [RevoScaleR チュートリアル](deepdive-data-science-deep-dive-using-the-revoscaler-packages.md)の一部です。
 
-この手順では、XDF ファイルを使用して、リモートとローカル計算コンテキストの間でデータを転送するについて説明します。 XDF ファイルにデータを格納するデータの変換を実行することができます。
+この手順では、XDF ファイルを使用して、リモートとローカルの両方のコンピューティング コンテキストでデータを転送する方法について説明します。 XDF ファイルにデータを格納すると、データを変換できるようになります。
 
-新たに作成するファイルにデータを使用する設定が完了したら、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]テーブル。 関数は、 [rxDataStep](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxdatastep)データに変換を適用することができ、データ フレームと .xdf ファイル間の変換を実行します。
+完了したら、ファイル内のデータで新しい [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] テーブルを作成します。 関数 [rxDataStep](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxdatastep) は、データを変換し、データ フレームと xdf ファイル間で変換を実行できます。
   
-## <a name="create-a-sql-server-table-from-an-xdf-file"></a>XDF ファイルから SQL Server テーブルを作成します。
+## <a name="create-a-sql-server-table-from-an-xdf-file"></a>XDF ファイルから SQL Server テーブルを作成する
 
-この演習では、データを使用するクレジット_カード詐欺もう一度です。 このシナリオでは、カリフォルニア、オレゴン、ワシントンの各州のユーザーに対して追加の分析を実行するように求められています。 詳細、効率的なを決めたら、ローカル コンピューターでこれらの状態のデータを格納し、変数の性別、カード所有者、状態、および分散のみを使用します。
+この練習では、クレジット カードの不正使用データを再度使用します。 このシナリオでは、カリフォルニア、オレゴン、ワシントンの各州のユーザーに対して追加の分析を実行するように求められています。 効率向上のため、これらの州のデータだけをローカル コンピューターに格納し、性別、カード会員、州、および残高のみの変数を操作します。
 
-1. 再利用、`stateAbb`を含めるには、し、新しい変数に書き込むレベルを識別するために以前作成した変数`statesToKeep`します。
+1. 以前に作成した `stateAbb` 変数を再利用して、含めるレベルを特定し、新しい変数 `statesToKeep` に書き込みます。
   
     ```R
     statesToKeep <- sapply(c("CA", "OR", "WA"), grep, stateAbb)
@@ -40,7 +41,7 @@ ms.locfileid: "53645211"
     ----|----|----
     5|38|48
     
-2. SQL Server から提供するデータの定義を使用して、[!INCLUDE[tsql](../../includes/tsql-md.md)]クエリ。  この変数を使用して後で、 *inData*引数**rxImport**します。
+2. [!INCLUDE[tsql](../../includes/tsql-md.md)] クエリを使用し、SQL Server から引き渡すデータを定義します。  後で、この変数は *rxImport* の **inData** 引数として使用します。
   
     ```R
     importQuery <- paste("SELECT gender,cardholder,balance,state FROM",  sqlFraudTable,  "WHERE (state = 5 OR state = 38 OR state = 48)")
@@ -48,7 +49,7 @@ ms.locfileid: "53645211"
   
     クエリにライン フィードやタブなどの隠し文字がないことを確認します。
   
-3. 次に、R でデータを扱うときに使用する列を定義します。たとえば、データ セットが小さいはクエリのみの 3 つの状態のデータを返すため、3 つだけの因子レベルが必要。  適用、`statesToKeep`に含める正しい水準を識別する変数。
+3. 次に、R でデータを操作するときに使用する列を定義します。たとえば、データ セットが小さいとき、クエリは 3 つの州のデータのみを返すため、3 つのファクト レベルのみを必要とします。  `statesToKeep` 変数を再利用して、含める正しいレベルを特定します。
   
     ```R
     importColInfo <- list(
@@ -58,15 +59,15 @@ ms.locfileid: "53645211"
             )
     ```
   
-4. コンピューティング コンテキストを設定**ローカル**使用可能なすべてのデータをローカル コンピューターにするためです。
+4. ローカル コンピューターですべてのデータが使用できる必要があるため、コンピューティング コンテキストを**ローカル**に設定します。
   
     ```R
     rxSetComputeContext("local")
     ```
     
-    [RxImport](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxsqlserverdata)関数はローカル XDF ファイルに任意のサポートされているデータ ソースからデータをインポートすることができます。 データに対して多くのさまざまな分析を実行するが、同じクエリを繰り返し実行されないようにする場合に、データのローカル コピーを使用すると便利です。
+    [rxImport](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxsqlserverdata) 関数を使用して、サポートされているデータ ソースからローカル XDF ファイルにデータをインポートできます。 データのローカル コピーを使用することは、同じクエリを何度も実行せずに、データに対してさまざまな分析を行う際に便利なことがあります。
 
-5. 引数として以前に定義された変数を渡すことによって、データ ソース オブジェクトを作成する**RxSqlServerData**します。
+5. **RxSqlServerData** の引数として以前定義したの変数を渡し、データ ソース オブジェクトを作成します。
   
     ```R
     sqlServerImportDS <- RxSqlServerData(
@@ -75,7 +76,7 @@ ms.locfileid: "53645211"
         colInfo = importColInfo)
     ```
   
-6. 呼び出す**rxImport**という名前のファイルにデータを書き込む`ccFraudSub.xdf`、現在の作業ディレクトリにします。
+6. **rxImport** を呼び出して、現在の作業ディレクトリの `ccFraudSub.xdf` というファイルにデータを書き込みます。
   
     ```R
     localDS <- rxImport(inData = sqlServerImportDS,
@@ -83,7 +84,7 @@ ms.locfileid: "53645211"
         overwrite = TRUE)
     ```
   
-    `localDs`によって返されるオブジェクト、 **rxImport**関数は、軽量**RxXdfData**データ ソース オブジェクトを表す、`ccFraud.xdf`データ ファイルをローカル ディスクに保存します。
+    **rxImport** 関数から返される `localDs` オブジェクトは、ディスクにローカルに保存された `ccFraud.xdf` データ ファイルを表す軽量の **RxXdfData** データ ソース オブジェクトです。
   
 7. XDF ファイルで [rxGetVarInfo](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxgetvarinfoxdf) を呼び出し、データ スキーマが同じであることを確認します。
   
@@ -101,7 +102,7 @@ ms.locfileid: "53645211"
     Var 4: state, Type: factor, no factor levels available
     ```
 
-8. 分析するさまざまな R 関数を呼び出すようになりましたことができます、 **localDs**オブジェクト、SQL Server のソース データの場合と同様です。 たとえば、性別による集約する可能性があります。
+8. これでさまざまな R 関数を呼び出して、SQL Server 上のソース データの場合と同じように、**localDs** オブジェクトを分析できます。 たとえば、性別によって集計することができます。
   
     ```R
     rxSummary(~gender + cardholder + balance + state, data = localDS)
@@ -109,9 +110,9 @@ ms.locfileid: "53645211"
 
 ## <a name="next-steps"></a>次の手順
 
-このレッスンで、マルチパートのチュートリアル シリーズの最後に**RevoScaleR**と SQL Server。 独自のデータとプロジェクトの要件を進めるための基盤を提供、さまざまなデータ関連およびコンピューティング概念が導入されました。
+このレッスンで、**RevoScaleR** と SQL Server に関する複数パートにおよぶチュートリアル シリーズを終了します。 ここでは、さまざまなデータに関係する計算の概念を紹介し、独自のデータとプロジェクトの要件を扱うための基盤を提供しています。
 
-知識を深める**RevoScaleR**、できなかった可能性があります、演習を通じてステップに R のチュートリアルの一覧を返すことができます。 また、一般的なタスクに関する情報のコンテンツの表に、ハウツー記事を確認します。
+**RevoScaleR** についての知識を深めるため、R チュートリアルの一覧に戻って、見逃した演習を順を追って進めることができます。 または、目次にあるハウツーに関する記事を参照して、一般的なタスクに関する情報を確認してください。
 
 > [!div class="nextstepaction"]
 > [SQL Server の R チュートリアル](sql-server-r-tutorials.md)

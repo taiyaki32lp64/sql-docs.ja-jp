@@ -16,13 +16,12 @@ helpviewer_keywords:
 - commands [OLE DB]
 author: pmasl
 ms.author: pelopes
-manager: craigg
-ms.openlocfilehash: 429fb9be40b519b30b5359295e72b5144220a5f6
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 1ed49ebaffb46b8542247e67ff7c639cec1cca1d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47794110"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68016107"
 ---
 # <a name="command-parameters"></a>コマンド パラメーター
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -35,7 +34,7 @@ ms.locfileid: "47794110"
 {call SalesByCategory('Produce', ?)}  
 ```  
   
- ネットワーク トラフィックを削減してパフォーマンスを向上するために、OLE DB Driver for SQL Server では、コマンドの実行前に **ICommandWithParameters::GetParameterInfo** または **ICommandPrepare::Prepare** が呼び出されない限り、パラメーター情報の自動抽出は行いません。 つまり、OLE DB Driver for SQL Server が自動的にしません。  
+ ネットワーク トラフィックを削減してパフォーマンスを向上するために、OLE DB Driver for SQL Server では、コマンドの実行前に **ICommandWithParameters::GetParameterInfo** または **ICommandPrepare::Prepare** が呼び出されない限り、パラメーター情報の自動抽出は行いません。 つまり、SQL Server の OLE DB ドライバーは、次のように自動的には行われません。  
   
 -   **ICommandWithParameters::SetParameterInfo** で指定されたデータ型の正当性を確認すること。  
   
@@ -54,11 +53,11 @@ ms.locfileid: "47794110"
 > [!NOTE]  
 >  SQL Native Client OLE DB プロバイダーでは、FROM 句が含まれている [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] UPDATE ステートメントや DELETE ステートメント、パラメーターを含むサブクエリに依存する SQL ステートメント、比較の両方の式、LIKE 述部、および定量化された述語内にパラメーター マーカーを含む SQL ステートメント、またはパラメーターのいずれかが、関数に対するパラメーターになっているクエリの場合は、**ICommandWithParameters::GetParameterInfo** を呼び出すことはできません。 また、SQL ステートメントをバッチ処理する場合、バッチ内の最初のステートメントの後にあるステートメント内のパラメーター マーカーに対して、**ICommandWithParameters::GetParameterInfo** を呼び出すことはできません。 [!INCLUDE[tsql](../../../includes/tsql-md.md)] コマンド内ではコメント (/* \*/) を使用できません。  
   
- OLE DB Driver for SQL Server では、SQL ステートメント コマンドの入力パラメーターをサポートします。 プロシージャ呼び出しコマンドで、OLE DB Driver for SQL Server には、入力、出力、および入力/出力パラメーターがサポートしています。 出力パラメーターの値は、実行時 (行セットが返されない場合のみ)、または返されたすべての行セットがアプリケーションによって使用されたときにアプリケーションに返されます。 返される値が有効であることを保証するには、**IMultipleResults** を使用して行セットを強制的に使用します。  
+ OLE DB Driver for SQL Server では、SQL ステートメントコマンドの入力パラメーターがサポートされています。 プロシージャ呼び出しコマンドでは、SQL Server の OLE DB ドライバーは、入力、出力、入出力のパラメーターをサポートしています。 出力パラメーターの値は、実行時 (行セットが返されない場合のみ)、または返されたすべての行セットがアプリケーションによって使用されたときにアプリケーションに返されます。 返される値が有効であることを保証するには、**IMultipleResults** を使用して行セットを強制的に使用します。  
   
  ストアド プロシージャ パラメーターの名前を DBPARAMBINDINFO 構造体で指定する必要はありません。 OLE DB Driver for SQL Server でパラメーター名を無視し、**ICommandWithParameters::SetParameterInfo** の *rgParamOrdinals* メンバーで指定された序数だけを使用する必要があることを示すには、*pwszName* メンバーの値に NULL を使用します。 コマンド テキストに名前付きのパラメーターと名前のないパラメーターの両方が含まれている場合、どの名前付きパラメーターよりも前に、名前のないパラメーターをすべて指定する必要があります。  
   
- ストアド プロシージャ パラメーターの名前が指定された場合、OLE DB Driver for SQL Server ではその名前が妥当かどうかがチェックされます。 OLE DB Driver for SQL Server は、コンシューマーから不適切なパラメーター名を受信すると、エラーを返します。  
+ ストアド プロシージャ パラメーターの名前が指定された場合、OLE DB Driver for SQL Server ではその名前が妥当かどうかがチェックされます。 SQL Server の OLE DB ドライバーは、コンシューマーから間違ったパラメーター名を受け取ったときにエラーを返します。  
   
 > [!NOTE]  
 >  OLE DB Driver for SQL Server には [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] XML と UDT (ユーザー定義型) のサポートを公開するために、新しい [ISSCommandWithParameters](../../oledb/ole-db-interfaces/isscommandwithparameters-ole-db.md) インターフェイスが実装されています。  

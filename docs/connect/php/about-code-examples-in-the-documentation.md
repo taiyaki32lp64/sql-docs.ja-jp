@@ -10,29 +10,28 @@ ms.topic: conceptual
 ms.assetid: 3f035c37-0f2e-47d4-94e0-a10774402e82
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 1520106fa39e850bf09d78a5eeee955fba1260fb
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.openlocfilehash: dc76cee723c11d49a4d6149a7c3a1df4cedbc256
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51606742"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68015171"
 ---
 # <a name="about-code-examples-in-the-documentation"></a>ドキュメントのコード例について
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
-## <a name="remarks-about-the-code-examples"></a>コード例については、「解説」
+## <a name="remarks-about-the-code-examples"></a>コード例についての解説
 [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] ドキュメントのコード例を実行する際に、いくつか注意する点があります。  
   
--   ほぼすべての例では、SQL Server 2008 またはそれ以降、および AdventureWorks データベースがローカル コンピューターにインストールされていることを前提としています。  
+-   ほとんどの例では、SQL Server 2008 以降と AdventureWorks データベースがローカルコンピューターにインストールされていることを前提としています。  
   
     SQL Server の無償のエディションと評価版をダウンロードする方法については、「 [SQL Server](https://go.microsoft.com/fwlink/?LinkID=120193)」を参照してください。  
   
-    ダウンロードして、AdventureWorks データベースをインストールする方法については、次を参照してください。、 [AdventureWorks SQL Server のサンプル Github リポジトリ ページ](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works)します。
+    AdventureWorks データベースをダウンロードしてインストールする方法の詳細については、 [SQL Server Samples の Github リポジトリにある adventureworks のページ](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works)を参照してください。
   
 -   このドキュメントのほぼすべてのコード例では、コマンド ラインから実行することを前提にしています。これにより、すべてのコード例は自動的にテストされます。 PHP をコマンドラインから実行する方法については、「 [コマンドラインからの PHP の使用](https://php.net/manual/en/features.commandline.php)」を参照してください。  
   
--   例はコマンド ラインから実行するようになっていますが、各例はスクリプトに変更を加えずに、ブラウザーから呼び出し実行することもできます。 出力を適切に書式設定で各"\n"を置き換えます。"\<\/br >"ブラウザーから呼び出す前に、それぞれの例です。  
+-   例はコマンド ラインから実行するようになっていますが、各例はスクリプトに変更を加えずに、ブラウザーから呼び出し実行することもできます。 出力の書式を適切に設定するには、各\<例の各 "\n" を "\/br >" に置き換えてから、ブラウザーから呼び出します。  
   
 -   各例の目的を絞るため、すべての例で正しいエラー処理はされていません。 **sqlsrv** 関数または PDO メソッドへのすべての呼び出しにエラーがないか確認し、アプリケーションの要件に従って処理することが推奨されます。  
   

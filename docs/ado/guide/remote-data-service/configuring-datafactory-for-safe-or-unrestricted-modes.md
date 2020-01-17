@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 8ff24805-dc7a-42ae-b600-5bad0e3f51b8
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 32b87f7ddcd871748adbba66eb0a64a10204f0c1
-ms.sourcegitcommit: 1a5448747ccb2e13e8f3d9f04012ba5ae04bb0a3
+ms.openlocfilehash: 92e3b029d2b18065faf50dcd0343f64b7b01654e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51559913"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67922940"
 ---
 # <a name="configuring-datafactory-for-safe-or-unrestricted-modes"></a>安全または無制限モード用の DataFactory の構成
 > [!IMPORTANT]
@@ -36,9 +35,9 @@ ms.locfileid: "51559913"
   
  安全な構成のハンドラーのレジストリ エントリを設定するには、レジストリ ファイル handsafe.reg を用意されています。 セーフ モードで実行するには、handsafe.reg を実行します。  
   
- Handsafe.reg を実行した後に、停止してコマンド プロンプト ウィンドウで、次のコマンドを入力して、Web サーバー上の World Wide Web 発行サービスを再起動する必要があります:"NET W3SVC を停止"、"NET 開始 W3SVC"。  
+ Handsafe.reg を実行した後は、停止し、コマンド プロンプト ウィンドウで、次のコマンドを入力して、Web サーバー上の World Wide Web 発行サービスを再起動する必要があります。"NET STOP W3SVC"と"NET 開始 W3SVC"。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [DataFactory のカスタマイズ](../../../ado/guide/remote-data-service/datafactory-customization.md)   
  [RDS の基礎](../../../ado/guide/remote-data-service/rds-fundamentals.md)
 

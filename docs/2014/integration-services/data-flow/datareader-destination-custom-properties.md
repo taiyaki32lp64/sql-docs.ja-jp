@@ -7,15 +7,15 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: f151c3e8-3811-457d-a3d3-6158ca65a646
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: c7117115e461d0e33a3c62100a3e914128003b96
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 948ebbc696048915662caaa24b791e6258c459be
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52790354"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62827606"
 ---
 # <a name="datareader-destination-custom-properties"></a>DataReader 変換先のカスタム プロパティ
   DataReader 変換先には、カスタム プロパティと、すべてのデータ フロー コンポーネントとの共通プロパティの両方があります。  
@@ -33,6 +33,6 @@ ms.locfileid: "52790354"
  詳細については、「 [DataReader 変換先](datareader-destination.md)」をご覧ください。  
   
 ## <a name="see-also"></a>参照  
- [Common Properties](../common-properties.md)  
+ [共通プロパティ](../common-properties.md)  
   
   

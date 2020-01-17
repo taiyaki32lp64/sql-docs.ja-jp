@@ -1,150 +1,143 @@
-items:
 - name: 概要
   href: database-mirroring-sql-server.md
   items:
-  - name: データベース ミラーリングの前提条件、制限事項、および推奨事項
-    href: prerequisites-restrictions-and-recommendations-for-database-mirroring.md
-  - name: ミラーリング状態 (SQL Server)
-    href: mirroring-states-sql-server.md
-  - name: データベース ミラーリングの動作モード
-    href: database-mirroring-operating-modes.md
-  - name: データベース ミラーリング監視サーバー
-    href: database-mirroring-witness.md
+    - name: データベース ミラーリングの前提条件、制限事項、および推奨事項
+      href: prerequisites-restrictions-and-recommendations-for-database-mirroring.md
+    - name: ミラーリング状態 (SQL Server)
+      href: mirroring-states-sql-server.md
+    - name: データベース ミラーリングの動作モード
+      href: database-mirroring-operating-modes.md
+    - name: データベース ミラーリング監視サーバー
+      href: database-mirroring-witness.md
 - name: 操作方法
   items:
-  - name: 構成
-    items:
-    - name: 展開
+    - name: 構成
       items:
-      - name: データベース ミラーリングの設定
-        href: setting-up-database-mirroring-sql-server.md
-      - name: ミラーリングのためのミラー データベースの準備
-        href: prepare-a-mirror-database-for-mirroring-sql-server.md
-      - name: 暗号化されたミラー データベースの設定
-        href: set-up-an-encrypted-mirror-database.md
-      - name: Trustworthy プロパティを使用するようにミラー データベースを設定する
-        href: set-up-a-mirror-database-to-use-the-trustworthy-property-transact-sql.md
-      - name: サーバー ネットワーク アドレスの指定
-        href: specify-a-server-network-address-database-mirroring.md
-      - name: Windows 認証を使用してデータベース ミラーリング セッションを確立する
-        href: establish-database-mirroring-session-windows-authentication.md
-      - name: データベース ミラーリングの削除
-        href: removing-database-mirroring-sql-server.md
-    - name: ミラーリング監視サーバー
+        - name: 展開
+          items:
+            - name: データベース ミラーリングの設定
+              href: setting-up-database-mirroring-sql-server.md
+            - name: ミラーリングのためのミラー データベースの準備
+              href: prepare-a-mirror-database-for-mirroring-sql-server.md
+            - name: 暗号化されたミラー データベースの設定
+              href: set-up-an-encrypted-mirror-database.md
+            - name: Trustworthy プロパティを使用するようにミラー データベースを設定する
+              href: set-up-a-mirror-database-to-use-the-trustworthy-property-transact-sql.md
+            - name: サーバー ネットワーク アドレスの指定
+              href: specify-a-server-network-address-database-mirroring.md
+            - name: Windows 認証を使用してデータベース ミラーリング セッションを確立する
+              href: establish-database-mirroring-session-windows-authentication.md
+            - name: データベース ミラーリングの削除
+              href: removing-database-mirroring-sql-server.md
+        - name: ミラーリング監視サーバー
+          items:
+            - name: Windows 認証を使用してミラーリング監視サーバーを追加する
+              href: add-a-database-mirroring-witness-using-windows-authentication-transact-sql.md
+            - name: ミラーリング監視サーバーを追加または置き換える (SQL Server Management Studio)
+              href: add-or-replace-a-database-mirroring-witness-sql-server-management-studio.md
+            - name: ミラーリング監視サーバーを削除する
+              href: remove-the-witness-from-a-database-mirroring-session-sql-server.md
+    - name: 管理
       items:
-      - name: Windows 認証を使用してミラーリング監視サーバーを追加する
-        href: add-a-database-mirroring-witness-using-windows-authentication-transact-sql.md
-      - name: ミラーリング監視サーバーを追加または置き換える (SQL Server Management Studio)
-        href: add-or-replace-a-database-mirroring-witness-sql-server-management-studio.md
-      - name: ミラーリング監視サーバーを削除する
-        href: remove-the-witness-from-a-database-mirroring-session-sql-server.md
-  - name: 管理
-    items:
-    - name: ミラー化されたデータベースの状態を表示する
-      href: view-the-state-of-a-mirrored-database-sql-server-management-studio.md
-    - name: データベース ミラーリングを一時停止または再開する
-      href: pausing-and-resuming-database-mirroring-sql-server.md
-    - name: クライアントを接続する
-      href: connect-clients-to-a-database-mirroring-session-sql-server.md
-    - name: トランザクションの安全性を変更する
-      href: change-transaction-safety-in-a-database-mirroring-session-transact-sql.md
-    - name: 手動フェールオーバー (T-SQL)
-      href: manually-fail-over-a-database-mirroring-session-transact-sql.md
-    - name: 手動フェールオーバー (SSMS)
-      href: manually-fail-over-a-database-mirroring-session-sql-server-management-studio.md
-    - name: サービスを強制的にフェールオーバーする
-      href: force-service-in-a-database-mirroring-session-transact-sql.md
-    - name: 役割の交代中の中断を見積もる
-      href: estimate-the-interruption-of-service-during-role-switching-database-mirroring.md
-    - name: サーバー インスタンスのアップグレード時に、ミラー化されたデータベースのダウンタイムを最小化する方法
-      href: upgrading-mirrored-instances.md
-    - name: ミラーリング パフォーマンス基準の警告しきい値および警告の使用
-      href: use-warning-thresholds-and-alerts-on-mirroring-performance-metrics-sql-server.md
-  - name: Security
-    items:
-    - name: データベース ミラーリングまたは AlwaysOn 可用性グループのログイン アカウントの設定
-      href: set-up-login-accounts-database-mirroring-always-on-availability.md
-    - name: Windows 認証のエンドポイントを作成する
-      href: create-a-database-mirroring-endpoint-for-windows-authentication-transact-sql.md
-    - name: エンドポイントへのネットワーク アクセスを許可する
-      href: ../database-mirroring-allow-network-access-windows-authentication.md
-    - name: エンドポイントに証明書を使用する
-      href: use-certificates-for-a-database-mirroring-endpoint-transact-sql.md
+        - name: ミラー化されたデータベースの状態を表示する
+          href: view-the-state-of-a-mirrored-database-sql-server-management-studio.md
+        - name: データベース ミラーリングを一時停止または再開する
+          href: pausing-and-resuming-database-mirroring-sql-server.md
+        - name: クライアントを接続する
+          href: connect-clients-to-a-database-mirroring-session-sql-server.md
+        - name: トランザクションの安全性を変更する
+          href: change-transaction-safety-in-a-database-mirroring-session-transact-sql.md
+        - name: 手動フェールオーバー (T-SQL)
+          href: manually-fail-over-a-database-mirroring-session-transact-sql.md
+        - name: 手動フェールオーバー (SSMS)
+          href: manually-fail-over-a-database-mirroring-session-sql-server-management-studio.md
+        - name: サービスを強制的にフェールオーバーする
+          href: force-service-in-a-database-mirroring-session-transact-sql.md
+        - name: 役割の交代中の中断を見積もる
+          href: estimate-the-interruption-of-service-during-role-switching-database-mirroring.md
+        - name: サーバー インスタンスのアップグレード時に、ミラー化されたデータベースのダウンタイムを最小化する方法
+          href: upgrading-mirrored-instances.md
+        - name: ミラーリング パフォーマンス基準の警告しきい値および警告の使用
+          href: use-warning-thresholds-and-alerts-on-mirroring-performance-metrics-sql-server.md
+    - name: Security
       items:
-      - name: 送信接続に証明書を使用する
-        href: database-mirroring-use-certificates-for-outbound-connections.md
-      - name: 受信接続に証明書を使用する
-        href: database-mirroring-use-certificates-for-inbound-connections.md
+        - name: データベース ミラーリングまたは AlwaysOn 可用性グループのログイン アカウントの設定
+          href: set-up-login-accounts-database-mirroring-always-on-availability.md
+        - name: Windows 認証のエンドポイントを作成する
+          href: create-a-database-mirroring-endpoint-for-windows-authentication-transact-sql.md
+        - name: エンドポイントへのネットワーク アクセスを許可する
+          href: ../database-mirroring-allow-network-access-windows-authentication.md
+        - name: エンドポイントに証明書を使用する
+          href: use-certificates-for-a-database-mirroring-endpoint-transact-sql.md
+          items:
+            - name: 送信接続に証明書を使用する
+              href: database-mirroring-use-certificates-for-outbound-connections.md
+            - name: 受信接続に証明書を使用する
+              href: database-mirroring-use-certificates-for-inbound-connections.md
 - name: 概念
   items:
-  - name: 相互運用性と共存
-    href: database-mirroring-interoperability-and-coexistence-sql-server.md
-    items:
-    - name: データベース ミラーリングと SQL Server フェールオーバー クラスター インスタンス
-      href: database-mirroring-and-sql-server-failover-cluster-instances.md
-    - name: データベース ミラーリングとログ配布
-      href: database-mirroring-and-log-shipping-sql-server.md
-    - name: データベース ミラーリングとフルテキスト カタログ
-      href: database-mirroring-and-full-text-catalogs-sql-server.md
-    - name: データベース ミラーリングとデータベース スナップショット
-      href: database-mirroring-and-database-snapshots-sql-server.md
-    - name: データベース ミラーリングとレプリケーション
-      href: database-mirroring-and-replication-sql-server.md
-  - name: 管理
-    items:
-    - name: データベース ミラーリングの監視
-      href: monitoring-database-mirroring-sql-server.md
-    - name: クォーラム:データベースの可用性にミラーリング監視サーバーが与える影響
-      href: quorum-how-a-witness-affects-database-availability-database-mirroring.md
-    - name: データベース ミラーリング セッション中の役割の交代
-      href: role-switching-during-a-database-mirroring-session-sql-server.md
-    - name: データベース ミラーリング中に発生する可能性のあるエラー
-      href: possible-failures-during-database-mirroring.md
-    - name: データベース ミラーリング構成のトラブルシューティング
-      href: troubleshoot-database-mirroring-configuration-sql-server.md
-    - name: ミラー化されたデータベースのダウンタイムを最小限に抑えた Service Pack のシステムへのインストール
-      href: ../install-a-service-pack-on-a-system-with-minimal-downtime-for-mirrored-databases.md
-  - name: Security
-    items:
-    - name: エンドポイント
-      href: the-database-mirroring-endpoint-sql-server.md
-    - name: データベース ミラーリングと AlwaysOn 可用性グループのトランスポート セキュリティ
-      href: transport-security-database-mirroring-always-on-availability.md
+    - name: 相互運用性と共存
+      href: database-mirroring-interoperability-and-coexistence-sql-server.md
+      items:
+        - name: データベース ミラーリングと SQL Server フェールオーバー クラスター インスタンス
+          href: database-mirroring-and-sql-server-failover-cluster-instances.md
+        - name: データベース ミラーリングとログ配布
+          href: database-mirroring-and-log-shipping-sql-server.md
+        - name: データベース ミラーリングとフルテキスト カタログ
+          href: database-mirroring-and-full-text-catalogs-sql-server.md
+        - name: データベース ミラーリングとデータベース スナップショット
+          href: database-mirroring-and-database-snapshots-sql-server.md
+        - name: データベース ミラーリングとレプリケーション
+          href: database-mirroring-and-replication-sql-server.md
+    - name: 管理
+      items:
+        - name: データベース ミラーリングの監視
+          href: monitoring-database-mirroring-sql-server.md
+        - name: 'クォーラム:データベースの可用性にミラーリング監視サーバーが与える影響'
+          href: quorum-how-a-witness-affects-database-availability-database-mirroring.md
+        - name: データベース ミラーリング セッション中の役割の交代
+          href: role-switching-during-a-database-mirroring-session-sql-server.md
+        - name: データベース ミラーリング中に発生する可能性のあるエラー
+          href: possible-failures-during-database-mirroring.md
+        - name: データベース ミラーリング構成のトラブルシューティング
+          href: troubleshoot-database-mirroring-configuration-sql-server.md
+        - name: ミラー化されたデータベースのダウンタイムを最小限に抑えた Service Pack のシステムへのインストール
+          href: ../install-a-service-pack-on-a-system-with-minimal-downtime-for-mirrored-databases.md
+    - name: Security
+      items:
+        - name: エンドポイント
+          href: the-database-mirroring-endpoint-sql-server.md
+        - name: データベース ミラーリングと AlwaysOn 可用性グループのトランスポート セキュリティ
+          href: transport-security-database-mirroring-always-on-availability.md
 - name: リファレンス
   items:
-  - name: データベース ミラーリング セキュリティ構成ウィザード
-    href: start-the-configuring-database-mirroring-security-wizard.md
-    items:
-    - name: ミラーリング監視サーバーを含める
-      href: include-witness-server-configure-database-mirroring-security-wizard.md
-    - name: 構成するサーバーを選択する
-      href: choose-servers-to-configure-configure-database-mirroring-security-wizard.md
-    - name: プリンシパル サーバー インスタンス
-      href: principal-server-instance-configure-database-mirroring-security-wizard.md
-    - name: ミラー サーバー インスタンス
-      href: mirror-server-instance-configure-database-mirroring-security-wizard.md
-    - name: ミラーリング監視サーバー インスタンス
-      href: witness-server-instance-configure-database-mirroring-security-wizard.md
-    - name: サービス アカウント
-      href: service-accounts-configure-database-mirroring-security-wizard.md
-  - name: データベース ミラーリング モニターの概要
-    href: database-mirroring-monitor-overview.md
-    items:
-    - name: データベース ミラーリング モニターの起動 (SQL Server Management Studio)
-      href: start-database-mirroring-monitor-sql-server-management-studio.md
-    - name: '[ミラー化されたデータベースの登録]'
-      href: register-mirrored-database.md
-    - name: '[データベース ミラーリング モニター] ([状態] ページ)'
-      href: database-mirroring-monitor-status-page.md
-    - name: '[データベース ミラーリングの履歴]'
-      href: database-mirroring-history.md
-    - name: データベース ミラーリング モニター ([警告] ページ)
-      href: database-mirroring-monitor-warnings-page.md
-    - name: '[警告しきい値の設定]'
-      href: set-warning-thresholds.md
-ms.openlocfilehash: 0239489ead1956474a2807b1cf13ae86a580eac7
-ms.sourcegitcommit: a192814756570bcbce3b1dbbb05acb24a79d1530
-ms.translationtype: HT
-ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54457575"
+    - name: データベース ミラーリング セキュリティ構成ウィザード
+      href: start-the-configuring-database-mirroring-security-wizard.md
+      items:
+        - name: ミラーリング監視サーバーを含める
+          href: include-witness-server-configure-database-mirroring-security-wizard.md
+        - name: 構成するサーバーを選択する
+          href: choose-servers-to-configure-configure-database-mirroring-security-wizard.md
+        - name: プリンシパル サーバー インスタンス
+          href: principal-server-instance-configure-database-mirroring-security-wizard.md
+        - name: ミラー サーバー インスタンス
+          href: mirror-server-instance-configure-database-mirroring-security-wizard.md
+        - name: ミラーリング監視サーバー インスタンス
+          href: witness-server-instance-configure-database-mirroring-security-wizard.md
+        - name: サービス アカウント
+          href: service-accounts-configure-database-mirroring-security-wizard.md
+    - name: データベース ミラーリング モニターの概要
+      href: database-mirroring-monitor-overview.md
+      items:
+        - name: データベース ミラーリング モニターの起動 (SQL Server Management Studio)
+          href: start-database-mirroring-monitor-sql-server-management-studio.md
+        - name: '[ミラー化されたデータベースの登録]'
+          href: register-mirrored-database.md
+        - name: '[データベース ミラーリング モニター] ([状態] ページ)'
+          href: database-mirroring-monitor-status-page.md
+        - name: '[データベース ミラーリングの履歴]'
+          href: database-mirroring-history.md
+        - name: 'データベース ミラーリング モニター ([警告] ページ)'
+          href: database-mirroring-monitor-warnings-page.md
+        - name: '[警告しきい値の設定]'
+          href: set-warning-thresholds.md

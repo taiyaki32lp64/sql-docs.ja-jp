@@ -8,23 +8,26 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: be0ec384-e03b-4483-96ca-02b289804d6a
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: 506987635969a1f9a6b6484e7deeda02712f9eb6
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 194eb7232aaf0ffd1f323d6291c0efb06f88a397
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52398005"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71298591"
 ---
 # <a name="user-roles"></a>ユーザー ロール
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   ここでは、Change Data Capture Service for Oracle by Attunity のユーザー ロールについて説明します。 ここで説明するロールは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データベース ロール、Windows ロール、または Oracle データベース ロールです。  
   
 ## <a name="windows-user-roles"></a>Windows ユーザー ロール  
  ここでは、Oracle CDC Service によって使用される Windows ユーザー ロールについて説明します。  
   
-### <a name="computer-administrator-oracle-cdc-service"></a>コンピューターの管理者: Oracle CDC Service  
+### <a name="computer-administrator-oracle-cdc-service"></a>コンピューター管理者:Oracle CDC Service  
  コンピューターの管理者は、コンピューターでの CDC Service の作成とメンテナンスを担当する Windows ユーザーです。 このユーザーは、ローカル コンピューターの Administrators グループに属している必要があります。  
   
  Oracle CDC Service のコンピューターの管理者が実行するタスクには次のものがあります。  
@@ -53,7 +56,7 @@ ms.locfileid: "52398005"
   
 -   CDC Service for Oracle がインストールされているコンピューターで管理者として承認されたコンピューターの管理者の業務遂行。 この人物は、CDC Service for Oracle をインストールし、CDC Service 構成コンソールを使用して CDC Service for Oracle をローカル コンピューターで構成します。  
   
-### <a name="service-account-oracle-cdc-service"></a>サービス アカウント: Oracle CDC Service  
+### <a name="service-account-oracle-cdc-service"></a>サービス アカウント:Oracle CDC Service  
  これは Oracle CDC Service Windows サービス アカウントで、Oracle CDC Service を実行するために使用する Windows アカウント (サービス アカウント) です。  
   
  サービス アカウントに必要な特権は、Oracle クライアントと [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC プロバイダーを使用するための特権だけです。 このアカウントは、特定のプロバイダーで必要な場合を除いて、ファイルにアクセスする必要はありません (たとえば、 **tnsnames.ora** ファイルで Oracle クライアントの接続文字列が Oracle データベース インスタンスを参照している場合、サービス アカウントにはそのファイルへの読み取りアクセス権が必要です)。  

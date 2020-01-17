@@ -13,11 +13,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 6b2d8a9218c5cb654f3343a7475d17630d7b49e7
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48074102"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62762243"
 ---
 # <a name="mssqlserver7908"></a>MSSQLSERVER_7908
     
@@ -30,7 +30,7 @@ ms.locfileid: "48074102"
 |イベント ソース|MSSQLSERVER|  
 |コンポーネント|SQLEngine|  
 |シンボル名|DBCC2_FS_INVALID_COLUMN_LEVEL_FILE|  
-|メッセージ テキスト|テーブル エラー : パーティション ID PN_ID のファイル 'FILE' は有効な FileStream ファイルではありません。|  
+|メッセージ テキスト|テーブル エラー:パーティション ID PN_ID のファイル 'FILE' は、有効な Filestream ファイルではありません。|  
   
 ## <a name="explanation"></a>説明  
  列ディレクトリにある FILESTREAM ファイルの名前は ROWGUID です。 列ディレクトリにあるファイル名を ROWGUID に変換できない場合、そのファイルは有効なファイルではありません。  

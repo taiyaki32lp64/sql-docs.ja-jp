@@ -1,5 +1,5 @@
 ---
-title: 'チュートリアル: OData ソースの使用 | Microsoft Docs'
+title: チュートリアル:OData ソースの使用 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -8,18 +8,21 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 2c64cf8b-5edb-48df-8ffe-697096258f71
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: 841892faace82677df0bbd8939a147d2c65b363f
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 95dceade62e487db05a66df6b7986f23723b1303
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52513005"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71297768"
 ---
-# <a name="tutorial-using-the-odata-source"></a>チュートリアル: OData ソースの使用
-  このチュートリアルでは、サンプルの **Northwind** OData サービス (https://services.odata.org/V3/Northwind/Northwind.svc/)) から **Employees** (従業員) コレクションを抽出し、フラット ファイルに読み込むプロセスについて説明します。  
+# <a name="tutorial-using-the-odata-source"></a>チュートリアル:OData ソースの使用
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
+  このチュートリアルでは、サンプルの **Northwind** OData サービス (https://services.odata.org/V3/Northwind/Northwind.svc/) ) から **Employees** (従業員) コレクションを抽出し、フラット ファイルに読み込むプロセスについて説明します。  
   
 ## <a name="1-create-an-integration-services-project"></a>1.Integration Services プロジェクトの作成  
   
@@ -27,7 +30,7 @@ ms.locfileid: "52513005"
   
 2.  **[ファイル]** メニューの **[新規作成]** をポイントし、 **[プロジェクト]** をクリックします。  
   
-3.  **[新しいプロジェクト]** ダイアログ ボックスで **[インストール済み]**、 **[テンプレート]**、 **[ビジネス インテリジェンス]** の順に展開し、 **[Integration Services]** をクリックします。  
+3.  **[新しいプロジェクト]** ダイアログ ボックスで **[インストール済み]** 、 **[テンプレート]** 、 **[ビジネス インテリジェンス]** の順に展開し、 **[Integration Services]** をクリックします。  
   
 4.  プロジェクトの種類として、 **[Integration Services プロジェクト]** をクリックします。  
   
@@ -37,31 +40,31 @@ ms.locfileid: "52513005"
   
 1.  **[SSIS ツールボックス]** の **[データ フロー タスク]** を、SSIS パッケージの制御フロー デザイン画面にドラッグ アンド ドロップします。  
   
-2.  **[データ フロー]** タブをクリックするか、**[データ フロー タスク]** をダブルクリックして、[データ フロー] デザイン画面を開きます。  
+2.  **[データ フロー]** タブをクリックするか、 **[データ フロー タスク]** をダブルクリックして、[データ フロー] デザイン画面を開きます。  
   
 3.  **[SSIS ツールボックス]** の **[共通]** から **[OData ソース]** をドラッグ アンド ドロップします。
   
-4.  **OData ソース** コンポーネントをダブルクリックして、**[OData ソース エディター]** ダイアログ ボックスを起動します。  
+4.  **OData ソース** コンポーネントをダブルクリックして、 **[OData ソース エディター]** ダイアログ ボックスを起動します。  
   
 5.  **[新規]** をクリックし、新しい OData 接続マネージャーを追加します。  
   
 6.  **[サービス ドキュメントの場所]** に対応する OData サービスの URL を入力します。 この URL には、サービス ドキュメントに対応する URL、または特定のフィードかエンティティに対応する URL を指定できます。 このチュートリアルでは、サービス ドキュメントへの URL ([https://services.odata.org/V3/Northwind/Northwind.svc/](https://services.odata.org/V3/Northwind/Northwind.svc/)) を入力します。  
   
-7.  OData サービスにアクセスするために、 **[認証]** で **[Windows 認証]** が選択されていることを確認します。 既定では、**[Windows 認証]** が選択されています。  
+7.  OData サービスにアクセスするために、 **[認証]** で **[Windows 認証]** が選択されていることを確認します。 既定では、 **[Windows 認証]** が選択されています。  
   
-8.  **[接続テスト]** をクリックして接続をテストし、**[OK]** をクリックして OData 接続マネージャーのインスタンスの作成を完了します。  
+8.  **[接続テスト]** をクリックして接続をテストし、 **[OK]** をクリックして OData 接続マネージャーのインスタンスの作成を完了します。  
   
 9. **[OData ソース エディター]** ダイアログ ボックスの **[リソースのパスでコレクションを使用する]** オプションで **[コレクション]** が選択されていること確認します。  
   
-10. **[コレクション]** ドロップダウン リストで、**[Employees]** を選択します。  
+10. **[コレクション]** ドロップダウン リストで、 **[Employees]** を選択します。  
   
-11. **[クエリ オプション]** で、追加の OData クエリ オプションまたはフィルターを入力します。 たとえば、`$orderby=CompanyName&$top=100` のようにします。 このチュートリアルでは、「`$top=5`」と入力します。  
+11. **[クエリ オプション]** で、追加の OData クエリ オプションまたはフィルターを入力します。 たとえば、`$orderby=CompanyName&$top=100` のようになります。 このチュートリアルでは、「`$top=5`」と入力します。  
   
 12. **[プレビュー]** をクリックして、データをプレビューします。  
   
 13. 左側のナビゲーション ウィンドウで **[列]** をクリックし、 **[列]** ページに切り替えます。  
   
-14. **[使用できる外部列]** で **[EmployeeID]**、 **[FirstName]** 、 **[LastName]** の各チェック ボックスをオンにし、これらを選択します。  
+14. **[使用できる外部列]** で **[EmployeeID]** 、 **[FirstName]** 、 **[LastName]** の各チェック ボックスをオンにし、これらを選択します。  
   
 15. **[OK]** をクリックし、 **[OData ソース エディター]** ダイアログ ボックスを閉じます。  
   
@@ -75,7 +78,7 @@ ms.locfileid: "52513005"
   
 4.  **[フラット ファイル変換先エディター]** ダイアログ ボックスで **[新規]** をクリックし、新しいフラット ファイル接続マネージャーを作成します。  
   
-5.  **[フラット ファイル形式]** ダイアログ ボックスで、 **[区切り記号]** を選択します。 その後、**[フラット ファイル接続マネージャー エディター]** ダイアログ ボックスが表示されます。  
+5.  **[フラット ファイル形式]** ダイアログ ボックスで、 **[区切り記号]** を選択します。 その後、 **[フラット ファイル接続マネージャー エディター]** ダイアログ ボックスが表示されます。  
   
 6.  **[フラット ファイル接続マネージャー エディター]** ダイアログ ボックスの **[ファイル名]** で、「`c:\Employees.txt`」と入力します。  
   

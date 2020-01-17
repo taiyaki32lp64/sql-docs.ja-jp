@@ -2,7 +2,7 @@
 title: グラフ (レポート ビルダーおよび SSRS) | Microsoft Docs
 ms.date: 03/07/2017
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: report-design
 ms.topic: conceptual
 f1_keywords:
@@ -16,14 +16,14 @@ f1_keywords:
 - "10172"
 - sql13.rtp.rptdesigner.chartareaproperties.3doptions.f1
 ms.assetid: d56d0521-362f-4361-843a-acf2c897a87c
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: ef017892d128fc1287c13fbfe893ba7973dab729
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: ca1a0b760f89e581a4e5209960caa76d89cd1350
+ms.sourcegitcommit: 312b961cfe3a540d8f304962909cd93d0a9c330b
+ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56287700"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73593790"
 ---
 # <a name="charts-report-builder-and-ssrs"></a>グラフ (レポート ビルダーおよび SSRS)
 [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] の改ページ調整されたレポートを読むユーザーが、大量の集計データを一目で理解できるよう、グラフ データ領域の使用について説明します。  
@@ -48,7 +48,7 @@ ms.locfileid: "56287700"
 ##  <a name="SimilarMatrix"></a> マトリックスとグラフの類似点  
  グラフがどのように動作するかについての考え方の 1 つは、グラフをマトリックスと比較することです。  
   
- ![ツールボックスから追加された新しいマトリックス、選択](../../reporting-services/report-design/media/rs-matrixtemplatenewselected.gif "ツールボックスから追加された新しいマトリックス、選択")  
+ ![ツールボックスから追加された新しいマトリックス、選択済み](../../reporting-services/report-design/media/rs-matrixtemplatenewselected.gif "ツールボックスから追加された新しいマトリックス、選択済み")  
   
  概念的には、グラフとマトリックスの組織は次のように同じです。  
   
@@ -80,7 +80,7 @@ ms.locfileid: "56287700"
 ##  <a name="DatasetConsiderations"></a> グラフを作成する前のデータセットに関する注意点  
  グラフを使用すると、データの概要を表示できます。 ただし、大きなデータセットの場合、グラフの情報がわかりにくくなったり、読み取れなくなったりする可能性があります。 存在しないデータ ポイントや NULL データ ポイント、グラフの種類に適さないデータ型、およびグラフとテーブルの組み合わせなどの詳細設定の適用はすべて、グラフの読みやすさに影響します。 グラフをデザインする前に、データを慎重に準備し、理解しておく必要があります。これにより、短時間で効率的にグラフをデザインできます。  
   
- レポートには、必要な数だけグラフを作成することができます。 グラフは、マトリックスやテーブルなど他のデータ領域と同様に、1 つのデータセットにバインドされます。 複数のデータセットを同じグラフに表示する場合は、SQL クエリで JOIN ステートメントまたは UNION ステートメントを使用する追加のデータセットを作成した後、データをグラフに追加します。 JOIN ステートメントおよび UNION ステートメントの詳細については、オンライン ブックまたは SQL のその他のリファレンスを参照してください。  
+ レポートには、必要な数だけグラフを作成することができます。 グラフは、マトリックスやテーブルなど他のデータ領域と同様に、1 つのデータセットにバインドされます。 複数のデータセットを同じグラフに表示する場合は、SQL クエリで JOIN ステートメントまたは UNION ステートメントを使用する追加のデータセットを作成した後、データをグラフに追加します。  
   
  詳細データが不要な場合や有用ではない場合は、データセット クエリでデータを事前に集計することを検討してください。 各データ ポイントをより明確に表示するには、データセット内のカテゴリの数を減らします。 データセットをフィルター選択したり、返される行数を少なくする条件をクエリに追加したりすることができます。 
   
@@ -138,7 +138,7 @@ ms.locfileid: "56287700"
 ## <a name="see-also"></a>参照  
  [画像、テキスト ボックス、四角形、および罫線 &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/images-text-boxes-rectangles-and-lines-report-builder-and-ssrs.md)   
  [対話的な並べ替え、ドキュメント マップ、およびリンク &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/interactive-sort-document-maps-and-links-report-builder-and-ssrs.md)   
- [入れ子になったデータ領域 (レポート ビルダーおよび SSRS)](../../reporting-services/report-design/nested-data-regions-report-builder-and-ssrs.md)   
+ [入れ子になったデータ領域 &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/nested-data-regions-report-builder-and-ssrs.md)   
  [チュートリアル: レポートへの縦棒グラフの追加 &#40;レポート ビルダー&#41;](../../reporting-services/tutorial-add-a-column-chart-to-your-report-report-builder.md)   
  [チュートリアル: レポートへの円グラフの追加 &#40;レポート ビルダー&#41;](../../reporting-services/tutorial-add-a-pie-chart-to-your-report-report-builder.md)   
  [チュートリアル: レポートへの横棒グラフの追加 &#40;レポート ビルダー&#41;](../../reporting-services/tutorial-add-a-bar-chart-to-your-report-report-builder.md)  

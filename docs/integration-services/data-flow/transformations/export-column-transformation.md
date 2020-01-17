@@ -19,17 +19,20 @@ helpviewer_keywords:
 - inserting data
 - truncate options [Integration Services]
 ms.assetid: 678d2dfc-e40c-4fbb-b2cc-42fffc44478a
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: 0505215ab152f9941870f5ee5d2d884750288a04
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 52acb1db548f6425dcfaf6339d38a4b55e57b76e
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51639599"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71297943"
 ---
 # <a name="export-column-transformation"></a>列エクスポート変換
+
+[!INCLUDE[ssis-appliesto](../../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   列エクスポート変換は、データ フローのデータを読み取り、そのデータをファイルに挿入します。 たとえば、データ フローに、各製品の写真などの製品情報が含まれる場合、列エクスポート変換を使用して、その画像をファイルに保存できます。  
   
 ## <a name="append-and-truncate-options"></a>追加オプションと切り捨てオプション  
@@ -41,10 +44,10 @@ ms.locfileid: "51639599"
 |True|False|いいえ|新しいファイルが作成され、そのファイルにデータが書き込まれます。|  
 |False|True|いいえ|新しいファイルが作成され、そのファイルにデータが書き込まれます。|  
 |True|True|いいえ|デザイン時の検証に失敗します。 両方のプロパティに **true**を設定するのは無効です。|  
-|False|False|[ユーザー アカウント制御]|実行時エラーが発生します。 ファイルは存在しますが、そのファイルに書き込めません。|  
-|False|True|[ユーザー アカウント制御]|ファイルが削除されて再作成され、データが書き込まれます。|  
-|True|False|[ユーザー アカウント制御]|ファイルが開かれ、そのファイルの終わりにデータが書き込まれます。|  
-|True|True|[ユーザー アカウント制御]|デザイン時の検証に失敗します。 両方のプロパティに **true**を設定するのは無効です。|  
+|False|False|はい|実行時エラーが発生します。 ファイルは存在しますが、そのファイルに書き込めません。|  
+|False|True|はい|ファイルが削除されて再作成され、データが書き込まれます。|  
+|True|False|はい|ファイルが開かれ、そのファイルの終わりにデータが書き込まれます。|  
+|True|True|はい|デザイン時の検証に失敗します。 両方のプロパティに **true**を設定するのは無効です。|  
   
 ## <a name="configuration-of-the-export-column-transformation"></a>列エクスポート変換の構成  
  列エクスポート変換は、次の方法で構成できます。  
@@ -58,7 +61,7 @@ ms.locfileid: "51639599"
     > [!NOTE]  
     >  BOM は、データが既存のファイルに追加されず、DT_NTEXT データ型の場合にのみ書き込まれます。  
   
- この変換では、ファイル名が含まれる入力列と、データが含まれる入力列の組を使用します。 データセットの各行では、異なるファイルを指定できます。 この変換により行が処理されると、データは指定したファイルに挿入されます。 実行時に既存のファイルがない場合、変換によりファイルが作成され、そのファイルにデータが書き込まれます。 書き込まれるデータは、DT_TEXT、DT_NTEXT、または DT_IMAGE データ型である必要があります。 詳細については、「 [Integration Services Data Types](../../../integration-services/data-flow/integration-services-data-types.md)」を参照してください。  
+ この変換では入力列の組を使用します: 1 つの列にはファイル名が含まれ、もう 1 つの列にはデータが含まれます。 データセットの各行では、異なるファイルを指定できます。 この変換により行が処理されると、データは指定したファイルに挿入されます。 実行時に既存のファイルがない場合、変換によりファイルが作成され、そのファイルにデータが書き込まれます。 書き込まれるデータは、DT_TEXT、DT_NTEXT、または DT_IMAGE データ型である必要があります。 詳細については、「 [Integration Services Data Types](../../../integration-services/data-flow/integration-services-data-types.md)」を参照してください。  
   
  この変換は、1 つの入力、1 つの出力、および 1 つのエラー出力をとります。  
   
@@ -75,7 +78,7 @@ ms.locfileid: "51639599"
 ## <a name="export-column-transformation-editor-columns-page"></a>[列エクスポート変換エディター] ([列] ページ)
   **[列エクスポート変換エディター]** ダイアログ ボックスの **[列]** ページを使用すると、ファイルに抽出するデータ フロー内の列を指定できます。 列エクスポート変換でファイルにデータを追加するか、既存のファイルを上書きするかどうかを指定できます。  
   
-### <a name="options"></a>[変数]  
+### <a name="options"></a>オプション  
  **[列の抽出]**  
  テキストまたは画像データを持つ入力列の一覧から選択します。 すべての行には、 **[列の抽出]** と **[ファイル パス列]** の定義が含まれます。  
   
@@ -94,7 +97,7 @@ ms.locfileid: "51639599"
 ## <a name="export-column-transformation-editor-error-output-page"></a>[列エクスポート変換エディター] ([エラー出力] ページ)
   **[列エクスポート変換エディター]** ダイアログ ボックスの **[エラー出力]** ページを使用すると、エラーをどのように処理するかを指定できます。  
   
-### <a name="options"></a>[変数]  
+### <a name="options"></a>オプション  
  **[入力または出力]**  
  出力の名前を表示します。 名前をクリックすると、ビューを展開して列を含めることができます。  
   

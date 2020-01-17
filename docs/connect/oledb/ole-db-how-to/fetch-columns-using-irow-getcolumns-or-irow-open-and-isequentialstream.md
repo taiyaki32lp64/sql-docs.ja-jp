@@ -14,13 +14,12 @@ helpviewer_keywords:
 - GetColumns method
 author: pmasl
 ms.author: pelopes
-manager: craigg
-ms.openlocfilehash: 79aa1dcfd924dbe3e63989587afd6d706b1834de
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: 0ff29e4ed9a5986173020530bd691d0c95a89749
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53213538"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67994797"
 ---
 # <a name="fetch-columns-using-irowgetcolumns-or-irowopen-and-isequentialstream"></a>IRow::GetColumns (または IRow::Open) と ISequentialStream を使用した列のフェッチ
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -38,13 +37,13 @@ ms.locfileid: "53213538"
   
 2.  コマンドを実行します (この例では、**ICommandExecute::Execute()** が IID_IRow を使用して呼び出されます)。  
   
-3.  使用して列データをフェッチ**IRow::Open()** または**irow::getcolumns()** します。  
+3.  **Irow:: Open ()** または**Irow:: getcolumns ()** を使用して列データをフェッチします。  
   
-    -   **IRow::Open()** を開くために使用できる、 **ISequentialStream**行にします。 列にバイナリ データのストリームが含まれることを示す DBGUID_STREAM を指定します (これによって、**IStream** または **ISequentialStream** を使用して、列からデータを読み取ることができます)。  
+    -   **IRow:: open ()** を使用して、行の**ISequentialStream**を開くことができます。 列にバイナリ データのストリームが含まれることを示す DBGUID_STREAM を指定します (これによって、**IStream** または **ISequentialStream** を使用して、列からデータを読み取ることができます)。  
   
     -   **IRow::GetColumns()** を使用すると、DBCOLUMNACCESS 構造体の **pData** 要素が、ストリーム オブジェクトを指すように設定されます。  
   
-4.  使用**ISequentialStream::Read()** 繰り返しに指定したバイト数をコンシューマーのバッファーに読み込みます。  
+4.  **ISequentialStream:: Read ()** を繰り返し使用して、指定されたバイト数をコンシューマーバッファーに読み取ります。  
   
 ## <a name="example"></a>例  
  この例では、IRow を使用して単一の行をフェッチする方法を示します。 また、行から一度に 1 つの列を取得します。 この例では、IRow::GetColumns() および IRow::Open() の使用方法も示します。 列のデータの読み取りには ISequentialStream::Read を使用しています。  

@@ -1,5 +1,5 @@
 ---
-title: Stretch 対応データベースのバックアップ (Stretch Database) | Microsoft Docs
+title: Stretch 対応データベースのバックアップ
 ms.date: 06/14/2016
 ms.service: sql-server-stretch-database
 ms.reviewer: ''
@@ -10,13 +10,13 @@ helpviewer_keywords:
 ms.assetid: 18f0dff0-d8ce-4bee-a935-76ed6dfb3208
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 7e7fb7bc85c3dbe56ed0ba4e694c04e0abea66c1
-ms.sourcegitcommit: ec1f01b4bb54621de62ee488decf9511d651d700
+ms.custom: seo-dt-2019
+ms.openlocfilehash: 897f748c5aeab43c7e3ef98f6dbfff84b9da69d7
+ms.sourcegitcommit: f688a37bb6deac2e5b7730344165bbe2c57f9b9c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/14/2019
-ms.locfileid: "56240716"
+ms.lasthandoff: 11/08/2019
+ms.locfileid: "73843833"
 ---
 # <a name="backup-stretch-enabled-databases-stretch-database"></a>Stretch 対応データベースのバックアップ (Stretch Database)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md-winonly](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md-winonly.md)]

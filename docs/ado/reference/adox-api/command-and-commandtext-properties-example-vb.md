@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 413263a8-05c0-4404-929d-69f82b987ba3
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 742f00402a553d8f918e0de0c3aad0f6c6e4af64
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 848fffdaabaf0a7f783969d7e44d7612bb2f92dc
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47634628"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67966780"
 ---
 # <a name="command-and-commandtext-properties-example-vb"></a>Command プロパティおよび CommandText プロパティの例 (VB)
 次のコードを使用する方法を示します、[コマンド](../../../ado/reference/adox-api/command-property-adox.md)プロシージャのテキストを更新するプロパティ。  
@@ -76,7 +75,7 @@ End Sub
 ' EndProcedureTextVB  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [ActiveConnection プロパティ (ADOX)](../../../ado/reference/adox-api/activeconnection-property-adox.md)   
  [Catalog オブジェクト (ADOX)](../../../ado/reference/adox-api/catalog-object-adox.md)   
  [Command プロパティ (ADOX)](../../../ado/reference/adox-api/command-property-adox.md)   

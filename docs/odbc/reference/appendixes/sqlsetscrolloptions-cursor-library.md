@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: c5c0ac6d-a6c1-4077-8186-1644df1944f8
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: e1fe6765c0ff8a057aac8e86ea5ad4aa1ac388b4
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 18a0bc111f6b4e8d82d0ed353837b499f920479e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47739670"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68023360"
 ---
 # <a name="sqlsetscrolloptions-cursor-library"></a>SQLSetScrollOptions (カーソル ライブラリ)
 > [!IMPORTANT]  

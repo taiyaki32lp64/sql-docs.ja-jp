@@ -1,6 +1,6 @@
 ---
-title: 結果セット (OLE DB) から行がフェッチ |Microsoft Docs
-description: 使用して結果セット OLE DB Driver for SQL Server からの行をフェッチします。
+title: 結果セットから行をフェッチする (OLE DB) |Microsoft Docs
+description: SQL Server 用の OLE DB ドライバーを使用して結果セットから行をフェッチする
 ms.custom: ''
 ms.date: 06/14/2018
 ms.prod: sql
@@ -12,13 +12,12 @@ helpviewer_keywords:
 - rows [OLE DB]
 author: pmasl
 ms.author: pelopes
-manager: craigg
-ms.openlocfilehash: 7e323d3a8fdeb5ecd59185a9ea2a5d396f12b918
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.openlocfilehash: 8aed6ce5eb93c68f22217667fe01306e28d9910e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51603052"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68015551"
 ---
 # <a name="fetch-rows-from-a-result-set-ole-db"></a>結果セットからの行のフェッチ (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

@@ -1,5 +1,5 @@
 ---
-title: '- (減算)(MDX) |Microsoft ドキュメント'
+title: '- (減算)(MDX) |Microsoft Docs'
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -8,18 +8,17 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-manager: kfile
-ms.openlocfilehash: fd0bb64169f6474874405cfd88476d426a9a6ee0
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.openlocfilehash: 3b8003bdeddea32f80636dc10a78e200d6b0e0be
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34743082"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68036684"
 ---
 # <a name="--subtract-mdx"></a>- (減算) (MDX)
 
 
-  1 つの数から別の数を減算する算術演算を実行します。  
+  1 つの数値を別の数値から減算する算術演算を実行します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -30,16 +29,16 @@ Numeric_Expression - Numeric_Expression
   
 #### <a name="parameters"></a>パラメーター  
  *Numeric_Expression*  
- 数値を返す有効な多次元式 (MDX) 式です。  
+ 数値の値を返す有効な多次元式 (MDX) 式。  
   
 ## <a name="return-value"></a>戻り値  
- パラメーターのデータ型のうち、優先順位が高い方のデータ型を持つ値です。  
+ 優先順位の高いパラメーターのデータ型の値。  
   
 ## <a name="remarks"></a>コメント  
- 両方の式は、同じデータ型でなければなりません。または、一方の式をもう一方の式のデータ型に暗黙的に変換できる必要があります。 1 つの式が NULL 値に評価される場合、この演算子は、NULL ではない式の結果を返します。  
+ 両方の式は、同じデータ型でなければなりません。または、一方の式をもう一方の式のデータ型に暗黙的に変換できる必要があります。 1 つの式は、null 値に評価、演算子は null 以外の式の結果を返します。  
   
 ## <a name="examples"></a>使用例  
- この演算子の使用例を以下に示します。  
+ 次の例では、この演算子の使用を示します。  
   
 ```  
 -- This member returns the increase or decrease  
@@ -62,7 +61,7 @@ WHERE
 ([Measures].[GPM Delta])  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [MDX 演算子リファレンス&#40;MDX&#41;](../mdx/mdx-operator-reference-mdx.md)  
   
   

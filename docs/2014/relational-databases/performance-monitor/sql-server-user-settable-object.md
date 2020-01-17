@@ -14,21 +14,21 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 5ac802569356979f3a01da4c204a80272c2be43a
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52805364"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63151088"
 ---
 # <a name="sql-server-user-settable-object"></a>SQL Server: User Settable オブジェクト
-  Microsoft **の** User Settable [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] オブジェクトを使用すると、カスタムのカウンター インスタンスを作成できます。 カスタムのカウンター インスタンスは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データベースのユーザー独自のコンポーネントなど、既存のカウンターでは監視されないサーバーの特性を監視するために使用します。たとえば、ログに記録された顧客注文数や製品在庫数などを監視できます。  
+  Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の **User Settable** オブジェクトを使用すると、カスタムのカウンター インスタンスを作成できます。 カスタムのカウンター インスタンスは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データベースのユーザー独自のコンポーネントなど、既存のカウンターでは監視されないサーバーの特性を監視するために使用します。たとえば、ログに記録された顧客注文数や製品在庫数などを監視できます。  
   
- **User Settable**オブジェクトには、クエリ カウンターの 10 個のインスタンスが含まれています。**ユーザー カウンター 1**を通じて**ユーザー カウンター 10**します。 これらのカウンターは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sp_user_counter1 **から** sp_user_counter10 **までの**ストアド プロシージャに対応します。 ユーザー アプリケーションからこれらのストアド プロシージャが実行されると、ストアド プロシージャによって設定された値がシステム モニターに表示されます。 1 つのカウンターは、1 日に発生した特定製品の注文件数を数えるストアド プロシージャなど、任意の整数値を 1 つ監視できます。  
+ **User Settable** オブジェクトには、**ユーザー カウンター 1** から **ユーザー カウンター 10** まで、クエリ カウンターの 10 個のインスタンスが含まれています。 これらのカウンターは、 **sp_user_counter1** から **sp_user_counter10** までの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ストアド プロシージャに対応します。 ユーザー アプリケーションからこれらのストアド プロシージャが実行されると、ストアド プロシージャによって設定された値がシステム モニターに表示されます。 1 つのカウンターは、1 日に発生した特定製品の注文件数を数えるストアド プロシージャなど、任意の整数値を 1 つ監視できます。  
   
 > [!NOTE]  
 >  ユーザー カウンターのストアド プロシージャは、システム モニターから自動的にポーリングされることはありません。 カウンター値を更新するには、ユーザー アプリケーションから明示的にストアド プロシージャを実行する必要があります。 カウンター値を自動的に更新するには、トリガーを使用します。 たとえば、テーブルの行数を監視するカウンターを作成するには、テーブルに対する INSERT と DELETE のトリガーを作成し、 `SELECT COUNT(*) FROM table`というステートメントが実行されるようにします。 テーブルに対する INSERT 操作か DELETE 操作が発生するとトリガーが起動され、システム モニター カウンターが自動的に更新されます。  
   
- 次の表では、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **User Settable** object.  
+ 次の表では、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の **User Settable** オブジェクトについて説明します。  
   
 |SQL Server User Settable カウンター|説明|  
 |---------------------------------------|-----------------|  

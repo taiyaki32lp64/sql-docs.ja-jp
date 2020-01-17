@@ -1,7 +1,7 @@
 ---
 title: アプリケーションのセキュリティ |Microsoft Docs
 ms.custom: ''
-ms.date: 01/19/2017
+ms.date: 08/12/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,15 +10,14 @@ ms.topic: conceptual
 ms.assetid: 940879b4-aa0f-41ce-a369-6cfc0e78e01d
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 42cf0e2a39a4a08ceab94e5391d3c926fb5751ab
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 81c57e5ab7ca88267693690992106b5f39e2af82
+ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47775760"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "69028511"
 ---
-# <a name="application-security"></a>アプリケーション セキュリティ
+# <a name="application-security"></a>アプリケーションのセキュリティ
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
   [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] を使用するときは、アプリケーションのセキュリティを確保するための対策を講じることが重要です。 以下のセクションでは、アプリケーションをセキュリティ保護するために実行できる手順に関する情報を提供します。  
@@ -62,7 +61,7 @@ permission java.net.SocketPermission "*", "listen, connect, accept";
 ## <a name="protecting-server-communication"></a>サーバーとの通信の保護  
  JDBC ドライバーを使用して [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データベースと通信する場合、インターネット プロトコル セキュリティ (IPSec) または SSL (Secure Sockets Layer) を使用して、通信チャネルをセキュリティで保護できます。また、IPSec と SSL の両方を使用することも可能です。  
   
- SSL のサポートは、IPSec 以外の追加の保護レベルを提供するために使用できます。 SSL の使用方法の詳細については、次を参照してください。 [Using SSL Encryption](../../connect/jdbc/using-ssl-encryption.md)します。  
+ SSL のサポートは、IPSec 以外の追加の保護レベルを提供するために使用できます。 SSL の使用方法の詳細については、「 [ssl 暗号化の使用](../../connect/jdbc/using-ssl-encryption.md)」を参照してください。  
   
 ## <a name="see-also"></a>参照  
  [JDBC ドライバー アプリケーションのセキュリティ保護](../../connect/jdbc/securing-jdbc-driver-applications.md)  

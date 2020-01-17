@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: d6a66928-e68f-4c38-b87a-838c5de50a28
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 448eda8c3c77f410bedd88d1193f2302c926ee95
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 75f5030f8faa5aa5d8e8a0f6bcb6d72b186c8448
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47681370"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67926065"
 ---
 # <a name="ado-fundamentals"></a>ADO の基礎
 ADO は、プログラムへのアクセス、編集、およびさまざまなシステムの OLE DB インターフェイス経由でデータ ソースからデータを更新するための強力な論理オブジェクト モデルを開発者に提供します。 ADO の最も一般的な使用方法をテーブルやリレーショナル データベースのテーブルをクエリを取得し、アプリケーションでは、結果を表示し、おそらくユーザー行い、データに変更を保存できるようにします。 その他のタスクを以下に示します。  
@@ -59,7 +58,7 @@ ADO は、プログラムへのアクセス、編集、およびさまざまな�
   
 -   [ADO オブジェクトとコレクション](../../../ado/guide/data/ado-objects-and-collections.md)  
   
--   [HelloData: 単純な ADO アプリケーション](../../../ado/guide/data/hellodata-a-simple-ado-application.md)  
+-   [HelloData:単純な ADO アプリケーション](../../../ado/guide/data/hellodata-a-simple-ado-application.md)  
   
 -   [OLE DB プロバイダー](../../../ado/guide/data/ole-db-providers-ado.md)  
   

@@ -7,15 +7,15 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 80964293-f1f5-4da7-b1fb-00ab8c30c1c5
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: bfca842a547ac20365dbd79ad5ad3295fa83f75f
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 1ba6dcb7052fed3d209dd87f55789a99df24116c
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52752555"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62767354"
 ---
 # <a name="step-2-converting-the-project-to-the-project-deployment-model"></a>手順 2:プロジェクトをプロジェクト配置モデルに変換する
   ここでは、Integration Services プロジェクトの変換ウィザードを使用して、プロジェクトをプロジェクト配置モデルに変換します。  
@@ -51,6 +51,6 @@ ms.locfileid: "52752555"
 13. [パラメーター] タブをクリックし、パッケージが VarFolderName のパラメーターに含まれ、値がレッスン 5 の構成ファイルの新しいサンプル データ フォルダーに指定されたパスと同じであることを確認します。  
   
 ## <a name="next-task-in-lesson"></a>このレッスンの次の作業  
- [手順 3:レッスン 6 パッケージのテスト](lesson-6-3-testing-the-lesson-6-package.md)  
+ [ステップ 3:レッスン 6 パッケージのテスト](lesson-6-3-testing-the-lesson-6-package.md)  
   
   

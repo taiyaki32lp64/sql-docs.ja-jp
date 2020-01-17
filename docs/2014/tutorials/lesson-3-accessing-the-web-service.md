@@ -11,19 +11,19 @@ author: markingmyname
 ms.author: maghan
 manager: kfile
 ms.openlocfilehash: 09671f8880f9f7745359961d9c6c126a893d26a7
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56024833"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62653785"
 ---
-# <a name="lesson-3-accessing-the-web-service"></a>レッスン 3: Web サービスにアクセスします。
+# <a name="lesson-3-accessing-the-web-service"></a>レッスン 3: Web サービスへのアクセス
   レポート サーバー Web サービスへの参照をプロジェクトに追加したら、次は、Web サービスのプロキシ クラスのインスタンスを作成します。 その後、このプロキシ クラスのメソッドを呼び出すことによって、Web サービスのメソッドにアクセスできます。 アプリケーションから Web サービスのメソッドが呼び出されると、 [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] によって生成されたプロキシ クラスのコードにより、アプリケーションと Web サービス間の通信が処理されます。  
   
  まず、Web サービスのプロキシ クラス <xref:ReportService2010.ReportingService2010> のインスタンスを作成します。 次に、このプロキシ クラスを使用して Web サービスの <xref:ReportService2010.ReportingService2010.GetProperties%2A> メソッドを呼び出します。 この呼び出しを使用して、サンプル レポート Company Sales の名前と記述を取得します。  
   
 > [!NOTE]  
->  [!INCLUDE[ssExpress](../includes/ssexpress-md.md)] with Advanced Services 上で実行されている Web サービスにアクセスする場合は、"ReportServer" パスに "$SQLExpress" を追加する必要があります。 以下に例を示します。  
+>  [!INCLUDE[ssExpress](../includes/ssexpress-md.md)] with Advanced Services 上で実行されている Web サービスにアクセスする場合は、"ReportServer" パスに "$SQLExpress" を追加する必要があります。 例 :  
 >   
 >  `http://<Server Name>/reportserver$sqlexpress/reportservice2010.asmx"`  
   
@@ -122,7 +122,7 @@ ms.locfileid: "56024833"
   
  レポート サーバー Web サービスのプロキシ クラスの作成と使用の詳細については、「 [Creating the Web Service Proxy](../reporting-services/report-server-web-service/net-framework/creating-the-web-service-proxy.md)」を参照してください。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [レッスン 4:アプリケーションを実行している&#40;VB VC&#35;&#41;](../../2014/tutorials/lesson-4-running-the-application-vb-vcsharp.md)   
  [Visual Basic または Visual C を使用してレポート サーバー Web サービスにアクセスする&#35; &#40;SSRS チュートリアル&#41;](../../2014/tutorials/access-report-server-web-service-vb-vcsharp-ssrs-tutorial.md)  
   

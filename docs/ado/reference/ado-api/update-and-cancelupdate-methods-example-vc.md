@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: cc59d23a-2f38-42f9-8b65-ed89009e87ec
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 8094271c765b9e211f724b7c18a72862f70a1d04
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 09b33331607678d20e2e7fff6cb487f100d29d84
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47615950"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67940089"
 ---
 # <a name="update-and-cancelupdate-methods-example-vc"></a>Update および CancelUpdate メソッドの例 (VC++)
 この例では、 [Update](../../../ado/reference/ado-api/update-method.md)メソッドと組み合わせて、 [CancelUpdate](../../../ado/reference/ado-api/cancelupdate-method-ado.md)メソッド。  
@@ -310,6 +309,6 @@ void PrintComError(_com_error &e) {
 }  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [CancelUpdate メソッド (ADO)](../../../ado/reference/ado-api/cancelupdate-method-ado.md)   
  [Update メソッド](../../../ado/reference/ado-api/update-method.md)

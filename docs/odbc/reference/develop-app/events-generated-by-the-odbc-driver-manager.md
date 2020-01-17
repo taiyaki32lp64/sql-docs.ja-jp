@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 8c6efbbd-2c7d-4342-aa7b-201f94b3e3e3
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 09e55da499359bfcb44cd794db1ba11503d1fc62
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: cd52aa1427e5fa768ab521d3533cbabfa4d6ad0f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47639840"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67901351"
 ---
 # <a name="events-generated-by-the-odbc-driver-manager"></a>ODBC ドライバー マネージャーによって生成されたイベント
 > [!IMPORTANT]  
@@ -29,7 +28,7 @@ ms.locfileid: "47639840"
   
 |Visual Studio Analyzer イベント|説明|  
 |----------------------------------|-----------------|  
-|**呼び出し**|ODBC API のすべてのエントリに生成されます。|  
+|**Call**|ODBC API のすべてのエントリに生成されます。|  
 |**ReturnException**|リターン コードが SQL_ERROR である場合は、ODBC API のリターンごとに生成されます。|  
 |**ReturnNormal**|リターン コードが SQL_ERROR ではない場合は、ODBC API のリターンごとに生成されます。|  
 |**接続の開始**|接続が開始されていることを示します。ODBC ドライバー マネージャーがドライバーの接続 Api を呼び出すときに生成されます。|  

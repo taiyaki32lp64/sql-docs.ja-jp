@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: ee620b4a-9375-4eaa-a016-69916c9e1e68
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: b32bbcb94aa1f52c951c0bce341828e7df202b4f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b91242524f3edada4de8112558a01f09fb3310cb
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47598360"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67927223"
 ---
 # <a name="alter-remote-service-binding-transact-sql"></a>ALTER REMOTE SERVICE BINDING (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -45,7 +44,7 @@ ALTER REMOTE SERVICE BINDING binding_name
   
 ## <a name="arguments"></a>引数  
  *binding_name*  
- 変更するリモート サービス バインドの名前を指定します。 サーバー名、データベース名、スキーマ名は指定できません。  
+ 変更するリモート サービス バインドの名前です。 サーバー名、データベース名、スキーマ名は指定できません。  
   
  WITH USER = \<*user_name>*  
  このバインド用のリモート サービスに関連付けられた証明を保持しているデータベース ユーザーを指定します。 この証明の公開キーは、リモート サービスとの間で交換されるメッセージの暗号化と認証に使用されます。  
@@ -59,7 +58,7 @@ ALTER REMOTE SERVICE BINDING binding_name
 ## <a name="permissions"></a>アクセス許可  
  リモート サービス バインドを変更する権限は、既定では、リモート サービス バインドの所有者、**db_owner** 固定データベース ロールのメンバー、**sysadmin** 固定サーバー ロールのメンバーに与えられています。  
   
- ALTER REMOTE SERVICE BINDING ステートメントを実行するには、ステートメントで指定されるユーザーの借用権限が必要です。  
+ ALTER REMOTE SERVICE BINDING ステートメントを実行するユーザーは、ステートメントで指定されるユーザーの借用権限が必要です。  
   
  リモート サービス バインドの AUTHORIZATION を変更するには、ALTER AUTHORIZATION ステートメントを使用します。  
   

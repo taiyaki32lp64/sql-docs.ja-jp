@@ -9,20 +9,19 @@ ms.topic: conceptual
 ms.assetid: 0b57f375-9242-4bb2-9d4b-c560d5a93524
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
 monikerRange: '>= sql-server-2017 || = sqlallproducts-allversions'
-ms.openlocfilehash: cfe10c3f5c3db33a5e9e0e417477cf2e36a2f035
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: 87537979ab3459727f07aec460118a74e15561f9
+ms.sourcegitcommit: f76b4e96c03ce78d94520e898faa9170463fdf4f
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52406449"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70874825"
 ---
 # <a name="whats-new-in-sql-server-2017"></a>SQL Server 2017 の新機能
 [!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]
 SQL Server 2017 は、SQL Server をプラットフォームとする方向に向けた大きな一歩を表します。そのプラットフォームは、SQL Server、Linux、Linux ベースの Docker コンテナー、および Windows の機能を利用することによって、開発言語、データ型、オンプレミスまたはクラウド、オペレーティング システムの選択肢を提供します。 このトピックは、特定の機能領域の新機能と、その詳細へのリンクをまとめたものです。 Linux 上の SQL Server の詳細については、[Linux 上の SQL Server に関するドキュメント](https://docs.microsoft.com/sql/linux/)をご覧ください
 
-[![Evaluation Center からダウンロードする](../includes/media/download2.png)](https://go.microsoft.com/fwlink/?LinkID=829477)  **お試しください:** [SQL Server 2017 リリース (2017 年 10 月) をダウンロードする](https://go.microsoft.com/fwlink/?LinkID=829477)。
+[![Evaluation Center からダウンロードする](../includes/media/download2.png)](https://go.microsoft.com/fwlink/?LinkID=829477) **お試しください:** [SQL Server 2017 リリース (2017 年 10 月) をダウンロードする](https://go.microsoft.com/fwlink/?LinkID=829477)。
 
 > [!NOTE]
 > 以下の変更に加えて、GA リリースの後も累積的な更新プログラムが定期的にリリースされます。 これらの累積的な更新プログラムでは、多くの機能強化と修正が提供されます。 最新の CU リリースについては、[SQL Server 2017 の累積的な更新プログラム](https://aka.ms/sql2017cu)に関するページをご覧ください。
@@ -30,10 +29,10 @@ SQL Server 2017 は、SQL Server をプラットフォームとする方向に�
 ## <a name="sql-server-2017-database-engine"></a>SQL Server 2017 データベース エンジン
 
 SQL Server 2017 には多くの新しいデータベース エンジン機能、機能強化、パフォーマンス向上が含まれています。 
-- CTP 2.0 で説明されている `clr strict security` 機能の回避策として、**CLR アセンブリ**をホワイトリストに追加できるようになりました。 信頼できるアセンブリ (RC1) のホワイトリストをサポートするために、[sp_add_trusted_assembly](../relational-databases/system-stored-procedures/sys-sp-add-trusted-assembly-transact-sql.md)、[sp_drop_trusted_assembly](../relational-databases/system-stored-procedures/sys-sp-drop-trusted-assembly-transact-sql.md)、および [sys.trusted_asssemblies](../relational-databases/system-catalog-views/sys-trusted-assemblies-transact-sql.md) が追加されました。  
+- CTP 2.0 で説明されている `clr strict security` 機能の回避策として、**CLR アセンブリ**を信頼できるアセンブリの一覧に追加できるようになりました。 信頼できるアセンブリ (RC1) の一覧をサポートするために、[sp_add_trusted_assembly](../relational-databases/system-stored-procedures/sys-sp-add-trusted-assembly-transact-sql.md)、[sp_drop_trusted_assembly](../relational-databases/system-stored-procedures/sys-sp-drop-trusted-assembly-transact-sql.md)、および [sys.trusted_asssemblies](../relational-databases/system-catalog-views/sys-trusted-assemblies-transact-sql.md) が追加されました。  
 - **再開可能なオンライン インデックス リビルド**は、障害 (レプリカへのフェールオーバーや、ディスク領域不足など) 発生後、一時停止した場所からオンライン インデックス リビルド操作を再開します。または、一時停止し、オンライン インデックス リビルド操作を後から再開します。 「[ALTER INDEX](../t-sql/statements/alter-index-transact-sql.md)」と「[オンライン インデックス操作のガイドライン](../relational-databases/indexes/guidelines-for-online-index-operations.md)」を参照してください。 (CTP 2.0)
 - ALTER DATABASE SCOPED CONFIGURATION の **IDENTITY_CACHE** オプションを使用すると、サーバーが予期せず再起動したときやセカンダリ サーバーにフェールオーバーしたときに、ID 列の値のギャップを回避できます。 「[ALTER DATABASE SCOPED CONFIGURATION (ALTER データベース スコープ ベースの構成)](../t-sql/statements/alter-database-scoped-configuration-transact-sql.md)」を参照してください。 (CTP 2.0)
-- 新世代のクエリ処理では、最適化戦略がアプリケーション ワークロードの実行時条件に適用される点が改善されています。 **アダプティブ クエリ処理**機能ファミリのこの最初のバージョンでは、3 つの新しい改善点があります。**バッチ モード適応型結合**、**バッチ モード メモリ許可フィードバック**、そして複数ステートメントのテーブル値関数の**インターリーブ実行**です。  「[Microsoft SQL データベースでのアダプティブ クエリの処理](../relational-databases/performance/adaptive-query-processing.md)」を参照してください。
+- 新世代のクエリ処理では、最適化戦略がアプリケーション ワークロードの実行時条件に適用される点が改善されています。 **アダプティブ クエリ処理**機能ファミリのこの最初のバージョンでは、3 つの新しい改善点があります。**バッチ モード適応型結合**、**バッチ モード メモリ許可フィードバック**、そして複数ステートメントのテーブル値関数の**インターリーブ実行**です。  「[SQL データベースでのインテリジェントなクエリ処理](../relational-databases/performance/intelligent-query-processing.md)」を参照してください。
 - **自動データベース チューニング**は、潜在的なクエリ パフォーマンスの問題に関する洞察を提供し、解決策を推奨して、特定された問題を自動的に解決できます。 「[自動調整](../relational-databases/automatic-tuning/automatic-tuning.md)」を参照してください。 (CTP 2.0)
 - 多対多のリレーションシップをモデル化する新しい**グラフ データベース機能**には、ノードとエッジ テーブルを作成するための新しい [CREATE TABLE](../t-sql/statements/create-table-sql-graph.md) 構文と、クエリ用の [MATCH](../t-sql/queries/match-sql-graph.md) キーワードが含まれています。 「[Graph Processing with SQL Server 2017](../relational-databases/graphs/sql-graph-overview.md)」 (SQL Server 2017 でのグラフ処理) を参照してください。 (CTP 2.0)
 - CLR アセンブリのセキュリティを強化する `clr strict security` という sp_configure オプションが既定で有効になります。 「[CLR strict security](../database-engine/configure-windows/clr-strict-security.md)」 (CLR の厳格なセキュリティ) を参照してください。 (CTP 2.0)
@@ -41,7 +40,7 @@ SQL Server 2017 には多くの新しいデータベース エンジン機能、
 - [sys.dm_db_file_space_usage](../relational-databases/system-dynamic-management-views/sys-dm-db-file-space-usage-transact-sql.md) の **modified_extent_page_count** 列は、各データベース ファイル内の差分変更を追跡します。これにより、データベース内の変更されたページの割合に基づいて差分バックアップまたは完全バックアップを実行するスマート バックアップ ソリューションが有効になります。 (CTP 2.0)
 - [SELECT INTO](../t-sql/queries/select-into-clause-transact-sql.md) の T-SQL 構文で、**ON** キーワードを使用した、ユーザーの既定のファイル グループ以外のファイル グループへのテーブルの読み込みがサポートされました。 (CTP 2.0)
 - **Always On 可用性グループ**の一部であるすべてのデータベースで、同じインスタンスの一部であるデータベースも含め、データベース間トランザクションがサポートされました。 「[Transactions - Always On Availability Groups and Database Mirroring](../database-engine/availability-groups/windows/transactions-always-on-availability-and-database-mirroring.md)」 (トランザクション - Always On 可用性グループとデータベース ミラーリング) を参照してください。 (CTP 2.0)
-- 新しい**可用性グループ**機能として、クラスターを使用しない可用性グループのサポート、最小レプリカ コミット可用性グループの設定、Windows と Linux の OS 間の移行とテストが含まれます。 (1.3 CTP)
+- 新しい**可用性グループ**機能として、クラスターを使用しない読み取りスケールのサポート、最小レプリカ コミット可用性グループの設定、Windows と Linux の OS 間の移行とテストが含まれます。 (1.3 CTP)
 - 新しい動的管理ビュー:
     - [sys.dm_db_log_stats](../relational-databases/system-dynamic-management-views/sys-dm-db-log-stats-transact-sql.md) は、トランザクション ログの正常性監視に役立つ、トランザクション ログ ファイルに関する概要レベルの属性と情報を公開します。 (CTP 2.1)
     - [sys.dm_tran_version_store_space_usage](../relational-databases/system-dynamic-management-views/sys-dm-tran-version-store-space-usage.md) は、データベースごとのバージョン ストア使用量を追跡します。これは、データベースごとのデータベース ストア使用量に基づくプロアクティブな tempdb サイズ計画に役立ちます。 (CTP 2.0)
@@ -86,12 +85,12 @@ SQL Server Analysis Services 2017 には、表形式モデルの多くの機能�
 - SSDT 用の DAX エディター。 (CTP 2.0)
 - エンコードのヒント。これは、大規模なメモリ内表形式モデルのデータ更新を最適化するために使用される高度な機能です。 (1.3 CTP)
 - 表形式モデルでの **1400 互換性レベル**のサポート。 新規の 1400 互換性レベルの表形式モデル プロジェクトを作成するか、既存の表形式モデル プロジェクトを 1400 互換性レベルにアップグレードするには、[SQL Server Data Tools (SSDT) 17.0 RC2](https://go.microsoft.com/fwlink?LinkId=837939) をダウンロードしてインストールします。 (CTP 1.1)
-- 1400 互換性レベルの表形式モデルでの、最新の**データ取得**エクスペリエンス。 [分析サービス チームのブログ](https://blogs.msdn.microsoft.com/analysisservices/2016/12/16/introducing-a-modern-get-data-experience-for-sql-server-2017-on-windows-ctp-1-1-for-analysis-services/)を参照してください。 (CTP 1.1)
+- 1400 互換性レベルの表形式モデルでの、最新の**データ取得**エクスペリエンス。 [分析サービス チームのブログ](https://blogs.msdn.microsoft.com/analysisservices/2016/12/16/introducing-a-modern-get-data-experience-for-sql-server-vnext-on-windows-ctp-1-1-for-analysis-services/)を参照してください。 (CTP 1.1)
 - 不規則階層で空のメンバーを非表示にする、**メンバーを隠す**プロパティ。 (CTP 1.1)
-- 集計情報の**詳細を表示**する、新しい**詳細行**エンドユーザー アクション。 詳細行の式を作成するための [SELECTCOLUMNS](https://msdn.microsoft.com/library/mt761759.aspx) および **DETAILROWS** 関数。 (CTP 1.1)
+- 集計情報の**詳細を表示**する、新しい**詳細行**エンドユーザー アクション。 詳細行の式を作成するための [SELECTCOLUMNS](/dax/selectcolumns-function-dax) および **DETAILROWS** 関数。 (CTP 1.1)
 - 複数の値を指定するための DAX **IN** 演算子。 (CTP 1.1)
 
-詳細については、「[What's new in SQL Server Analysis Services 2017](~/analysis-services/what-s-new-in-sql-server-analysis-services-2017.md)」 (SQL Server Analysis Services 2017 の新機能) を参照してください。
+詳細については、「[What's new in SQL Server Analysis Services (SQL Server Analysis Services の新機能)](/analysis-services/what-s-new-in-analysis-services)」をご覧ください。
 
 ## <a name="sql-server-2017-reporting-services-ssrs"></a>SQL Server 2017 Reporting Services (SSRS)
 SQL Server Reporting Services は、SQL Server セットアップでインストールできなくなりました。 Microsoft ダウンロード センターに移動し、[Microsoft SQL Server 2017 Reporting Services をダウンロード](https://www.microsoft.com/download/details.aspx?id=55252)してください。 

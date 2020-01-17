@@ -1,6 +1,6 @@
 ---
-title: FAST_FORWARD カーソルを取得 |Microsoft Docs
-description: SQL Server の OLE DB ドライバーを使用して FAST_FORWARD カーソルを取得します。
+title: FAST_FORWARD Cursor | を取得するMicrosoft Docs
+description: OLE DB Driver for SQL Server を使用して FAST_FORWARD カーソルを取得する
 ms.custom: ''
 ms.date: 06/14/2018
 ms.prod: sql
@@ -12,13 +12,12 @@ helpviewer_keywords:
 - fast forward-only cursors
 author: pmasl
 ms.author: pelopes
-manager: craigg
-ms.openlocfilehash: 63eea442ea07dfa7562a51b758b0cecec11edfbe
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.openlocfilehash: 2b49071908be3d8093d66358148e305b79476324
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51603873"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67994742"
 ---
 # <a name="obtain-a-fastforward-cursor"></a>FAST_FORWARD カーソルの取得
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

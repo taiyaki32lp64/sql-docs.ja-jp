@@ -11,15 +11,14 @@ helpviewer_keywords:
 - projects [SQL Server Management Studio], default locations
 - default project locations
 ms.assetid: 3b8af28d-3095-40aa-b7db-636f2852d483
-author: stevestein
-ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 6088e4a6550c469a43c5e9fa82dbe9477b3ad8d5
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 00afc835c8d604fe303e57ef03d70ff6999fc72c
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47748170"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68263580"
 ---
 # <a name="change-the-default-location-for-projects"></a>プロジェクトの既定の場所の変更
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

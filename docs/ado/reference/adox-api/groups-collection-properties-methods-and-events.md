@@ -12,16 +12,15 @@ helpviewer_keywords:
 ms.assetid: 0776457f-bf78-4a79-96bf-a17136d45811
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 80eea07c297c77065f955e8c59daffc1f047a84f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a3e3b7147593cc6d6f1654ccdb0f9d362bd7b421
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47688140"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67966163"
 ---
 # <a name="groups-collection-properties-methods-and-events"></a>Groups コレクションのプロパティ、メソッド、およびイベント
-## <a name="properties"></a>[プロパティ]  
+## <a name="properties"></a>Properties  
  [Count プロパティ](../../../ado/reference/ado-api/count-property-ado.md)  
   
  [項目のプロパティ](../../../ado/reference/ado-api/item-property-ado.md)  
@@ -36,5 +35,5 @@ ms.locfileid: "47688140"
 ## <a name="events"></a>イベント  
  [なし] :  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [Groups コレクション (ADOX)](../../../ado/reference/adox-api/groups-collection-adox.md)

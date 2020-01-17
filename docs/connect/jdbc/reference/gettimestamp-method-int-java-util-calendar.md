@@ -1,5 +1,5 @@
 ---
-title: getTimestamp (int, java.util.Calendar) メソッド |Microsoft Docs
+title: getTimestamp メソッド (int, java.util.Calendar) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: 161c559a-8651-44ba-a914-15eb6a612417
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: fc078598377ec7a866b90d68677cfd9302b6263a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 50aa202837bee9e091cbb2ad31f56da6ea15eef0
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47673150"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67978872"
 ---
 # <a name="gettimestamp-method-int-javautilcalendar"></a>getTimestamp (int, java.util.Calendar) メソッド
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -41,12 +40,12 @@ public java.sql.Timestamp getTimestamp(int index,
   
  パラメーターのインデックスを示す **int** です。  
   
- *cal*  
+ *カレンダー*  
   
- 暦オブジェクト。  
+ Calendar オブジェクト。  
   
 ## <a name="return-value"></a>戻り値  
- タイムスタンプのオブジェクト。  
+ タイムスタンプオブジェクト。  
   
 ## <a name="exceptions"></a>例外  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  

@@ -2,7 +2,7 @@
 title: rsconfig ユーティリティ (SSRS) | Microsoft Docs
 ms.date: 03/20/2017
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: tools
 ms.topic: conceptual
 helpviewer_keywords:
@@ -12,14 +12,14 @@ helpviewer_keywords:
 - command prompt utilities [Reporting Services]
 - command prompt utilities [SQL Server], rsconfig
 ms.assetid: 84e45a2f-3ca6-4c16-8259-c15ff49d72ad
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: c8904d9cd03f8d9e7b7010f34f8bfde7e23f0475
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 38c2cd6242e9515872ef086ec4851bf6cec103ef
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53213661"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65571526"
 ---
 # <a name="rsconfig-utility-ssrs"></a>rsconfig ユーティリティ (SSRS)
   **rsconfig.exe** ユーティリティは、接続値とアカウント値を RSReportServer.config ファイルへ暗号化して格納します。 暗号化される値は、自動レポート処理に使用される、レポート サーバー データベースの接続情報とアカウント値です。  
@@ -46,7 +46,7 @@ rsconfig {-?}
 |項目|省略可/必須|定義|  
 |----------|------------------------|----------------|  
 |**-?**|省略可。|Rsconfig.exe の引数の構文を表示します。|  
-|**-c**|**-e** 引数を使用しない場合は必須。|レポート サーバーをレポート サーバー データベースに接続するために使用する、接続文字列、資格情報、データ ソース値を指定します。<br /><br /> この引数は値を取りません。 ただし、必須の接続値をすべて指定する場合は、この引数と共に追加の引数を指定する必要があります。<br /><br /> **-c** と共に指定する引数には、 **-m**、 **-s**、 **-i**、**-d**、**-a**、**-u**、**-p**、および **-t**があります。|  
+|**-c**|**-e** 引数を使用しない場合は必須。|レポート サーバーをレポート サーバー データベースに接続するために使用する、接続文字列、資格情報、データ ソース値を指定します。<br /><br /> この引数は値を取りません。 ただし、必須の接続値をすべて指定する場合は、この引数と共に追加の引数を指定する必要があります。<br /><br /> **-c** と共に指定する引数には、 **-m**、 **-s**、 **-i**、 **-d**、 **-a**、 **-u**、 **-p**、および **-t**があります。|  
 |**-e**|**-c** 引数を使用しない場合は必須。|自動的にレポートを実行する場合のアカウントを指定します。<br /><br /> この引数は値を取りません。 ただし、構成ファイルで暗号化されている値を指定する場合は、コマンド ラインに追加の引数を追加する必要があります。<br /><br /> **-e** と共に指定する引数には、 **-u** および **-p**があります。 **-t**を設定することもできます。|  
 |**-m**  *computername*|リモート レポート サーバー インスタンスを構成する場合は必須。|レポート サーバーをホストするコンピューターの名前を指定します。 この引数が省略された場合、既定は **localhost**です。|  
 |**-s**  *servername*|必須。|レポート サーバー データベースをホストする [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスを指定します。|  

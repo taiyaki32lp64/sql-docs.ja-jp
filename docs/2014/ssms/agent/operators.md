@@ -1,5 +1,5 @@
 ---
-title: 演算子 | Microsoft Docs
+title: オペレーター | Microsoft Docs
 ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
@@ -24,11 +24,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 03deab738f374716002c4d78e07078e90fb41822
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52797994"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68189019"
 ---
 # <a name="operators"></a>演算子
   オペレーターとは、ジョブの完了時や警告の発生時に電子通知を受け取ることのできる人またはグループの別名です。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェント サービスでは、オペレーターを経由した管理者の通知がサポートされています。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェントの通知機能および監視機能はオペレーターが有効にします。  
@@ -47,7 +47,7 @@ ms.locfileid: "52797994"
  オペレーターの連絡先情報では、オペレーターに通知する方法を定義します。 オペレーターへの通知には、電子メール、ポケットベル、または **net send** コマンドを使用できます。  
   
 > [!IMPORTANT]  
->  今後のバージョンの **では、** エージェントからポケットベル オプションと [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] net send [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]オプションが削除される予定です。 新しい開発作業では、これらの機能の使用を避け、現在これらの機能を使用しているアプリケーションは修正するようにしてください。  
+>  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の今後のバージョンでは、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェントからポケットベル オプションと **net send** オプションが削除される予定です。 新しい開発作業では、これらの機能の使用を避け、現在これらの機能を使用しているアプリケーションは修正するようにしてください。  
   
 -   **電子メールによる通知**  
   
@@ -121,7 +121,7 @@ ms.locfileid: "52797994"
 |オペレーターの作成に関連するタスク|[オペレーターの作成](create-an-operator.md)<br /><br /> [Designate a Fail-Safe Operator](designate-a-fail-safe-operator.md)|  
 |警告の割り当てに関連するタスク|[オペレーターへの警告の割り当て](assign-alerts-to-an-operator.md)<br /><br /> [警告への応答の定義 (SQL Server Management Studio)](define-the-response-to-an-alert-sql-server-management-studio.md)<br /><br /> [sp_add_notification &#40;TRANSACT-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-add-notification-transact-sql)<br /><br /> [オペレーターへの警告の割り当て](assign-alerts-to-an-operator.md)|  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [データベース メール](../../relational-databases/database-mail/database-mail.md)  
   
   

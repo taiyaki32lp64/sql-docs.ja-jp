@@ -10,17 +10,20 @@ ms.topic: reference
 helpviewer_keywords:
 - Script component [Integration Services], using variables
 ms.assetid: 92d1881a-1ef1-43ae-b1ca-48d0536bdbc2
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: 51dddf0e5fd971aeb2aa1229bb1af2faae744b6e
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 990797242acb57f36530315c416011325cce6358
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51638529"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71286426"
 ---
 # <a name="using-variables-in-the-script-component"></a>スクリプト コンポーネントでの変数の使用
+
+[!INCLUDE[ssis-appliesto](../../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   変数には、パッケージとそのコンテナー、タスク、およびイベント ハンドラーが実行時に使用できる値が格納されます。 詳細については、「 [Integration Services &#40;SSIS&#41; の変数](../../../integration-services/integration-services-ssis-variables.md)」を参照してください。  
   
  **[スクリプト変換エディター]** の **[スクリプト]** ページで、**ReadOnlyVariables** および **ReadWriteVariables** フィールドに変数の一覧をコンマ区切り形式で入力すると、既存の変数を、カスタム スクリプトで読み取り専用または読み取り/書き込みアクセス可能な変数として使用できます。 変数名の大文字と小文字は区別されることに注意してください。 **Value** プロパティを使用して、各変数に対する読み取りおよび書き込みを行います。 スクリプトが実行時に変数を処理すると、スクリプト コンポーネントは状況に応じて自動的に必要なロックを処理します。  

@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 ms.assetid: 6a9fd19b-2367-4908-b638-363b1e929e1e
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 65797fdf770196723a74510501d381fb608ad2ff
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: b8e9532c9d3ecbc32942e6a70d82f5837856a329
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53369064"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66093591"
 ---
 # <a name="overview-of-sql-server-servicing-installation"></a>SQL Server サービスのインストールの概要
   [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] サービス更新プログラムが適用された、インストール済みの [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] コンポーネントに更新プログラムを適用できます。 既存の [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] コンポーネントのバージョン レベルが更新のバージョン レベルより新しい場合、そのコンポーネントは、セットアップ プログラムによって自動的にアップデートから除外されます。 更新サービスを適用する方法の詳細についてを参照してください[SQL Server 2014 サービス更新プログラムのインストール](../../database-engine/install-windows/install-sql-server-servicing-updates.md)します。  
@@ -88,9 +87,9 @@ ms.locfileid: "53369064"
 #### <a name="starting-a-includesscurrentincludessscurrent-mdmd-update"></a>[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 更新プログラムの開始  
  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 更新プログラムをインストールするには、自己解凍形式のパッケージ ファイルを実行します。  
   
- 累積更新プログラム パッケージ (CU):\<SQLServer2014 >-kbxxxxxx-*PPP*.exe  
+ 累積更新プログラム パッケージ (CU):\<SQLServer2014>-KBxxxxxx-*PPP*.exe  
   
- サービス パック パッケージ (PCU):\<SQLServer2014 >\<SPx > - KBxxxxxx-PPP-LLL.exe  
+ サービス パック パッケージ (PCU):\<SQLServer2014>\<SPx> -KBxxxxxx-PPP-LLL.exe  
   
 -   x はサービス パックの番号を表します。  
   
@@ -134,7 +133,7 @@ ms.locfileid: "53369064"
  次に、 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 更新プログラムのセットアップの実行前に終了したアプリケーションを再起動します。 インストールが正常に終了した直後に、アップグレード後の `master` データベース、`msdb` データベース、および `model` データベースをバックアップすることもお勧めします。  
   
 ## <a name="uninstalling-updates-from-includesscurrentincludessscurrent-mdmd"></a>更新プログラムのアンインストール [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]  
- [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 累積更新プログラムおよびサービス パックのアンインストールは、コントロール パネルの **[プログラムと機能]** で行うことができます。 インストールされた更新プログラムの一覧を表示するには、 **[スタート]** ボタンをクリックし、 **[コントロール パネル]** をクリックします。 **[プログラム]**、 **[プログラムと機能]**、 **[インストールされた更新プログラムを表示]** の順にクリックして、[インストールされた更新プログラム] を開きます。 各累積更新プログラムは、個別に表示されています。 ただし、累積更新プログラムより新しいサービス パックがインストールされていると、累積更新プログラムの項目が表示されなくなるため、サービス パックをアンインストールしないと個別の項目を利用できません。  
+ [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 累積更新プログラムおよびサービス パックのアンインストールは、コントロール パネルの **[プログラムと機能]** で行うことができます。 インストールされた更新プログラムの一覧を表示するには、 **[スタート]** ボタンをクリックし、 **[コントロール パネル]** をクリックします。 **[プログラム]** 、 **[プログラムと機能]** 、 **[インストールされた更新プログラムを表示]** の順にクリックして、[インストールされた更新プログラム] を開きます。 各累積更新プログラムは、個別に表示されています。 ただし、累積更新プログラムより新しいサービス パックがインストールされていると、累積更新プログラムの項目が表示されなくなるため、サービス パックをアンインストールしないと個別の項目を利用できません。  
   
  サービス パックおよび更新プログラムをアンインストールするには、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスに適用されている最新のものから古いものへと順番に処理していってください。 以下の各例では、サービス パックおよび更新プログラムをアンインストールすることによって、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] は Cumulative Update 1 の状態になります。  
   

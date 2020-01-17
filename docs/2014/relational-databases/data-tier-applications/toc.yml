@@ -1,4 +1,4 @@
-- name: の
+- name: データ層アプリケーション
   href: data-tier-applications.md
   items:
     - name: SQL Server オブジェクトとバージョンの DAC サポート

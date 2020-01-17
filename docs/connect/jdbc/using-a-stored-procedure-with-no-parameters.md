@@ -1,7 +1,7 @@
 ---
 title: パラメーターのないストアド プロシージャの使用 | Microsoft Docs
 ms.custom: ''
-ms.date: 07/11/2018
+ms.date: 08/12/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: e9470a6d-a758-4c56-96ec-7b37139e36a7
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 5430d5bc97c91357dd0e3d756e8f28f7a813467b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 01f59f44d42af1d0880df48b043080525d9821ee
+ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47820590"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "69027019"
 ---
 # <a name="using-a-stored-procedure-with-no-parameters"></a>パラメーターのないストアド プロシージャの使用
 
@@ -29,7 +28,7 @@ JDBC ドライバーを使用してパラメーターのないストアド プ�
 `{call procedure-name}`
 
 > [!NOTE]  
-> SQL エスケープ シーケンスの詳細については、次を参照してください。 [SQL エスケープ シーケンスを使用して](../../connect/jdbc/using-sql-escape-sequences.md)します。
+> SQL エスケープシーケンスの詳細については、「 [sql エスケープシーケンスの使用](../../connect/jdbc/using-sql-escape-sequences.md)」を参照してください。
 
 たとえば、[!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal_md.md)] サンプル データベースで次のストアド プロシージャを作成します。
 

@@ -4,23 +4,22 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 helpviewer_keywords:
 - SharePoint integration [Reporting Services], viewing reports
 - Web Parts [Reporting Services]
 - Report Viewer Web Part [Reporting Services]
 ms.assetid: 086d6546-7299-41bc-bca9-083a15a53679
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 46873ce2a5a8ad006fafb2c0311e895c6305cd6a
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 73fd65c8770d6e0c25232d727d56529910edc6cd
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56017964"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66109539"
 ---
 # <a name="customize-the-report-viewer-web-part"></a>レポート ビューアー Web パーツのカスタマイズ
   レポート ビューアー Web パーツを使用することで、SharePoint 統合用に構成されているレポート サーバーで実行されるレポートを表示できます。 表示できるレポートは、レポート定義 (.rdl) ファイルやレポート ビルダーのレポートなどです。 レポートは自動的に新しいページのレポート ビューアー Web パーツに表示されますが、既存の Web ページや Web サイトにレポート ビューアー Web パーツを追加することで、そのページで特定のレポートが常に表示されるようにすることもできます。  
@@ -92,7 +91,7 @@ ms.locfileid: "56017964"
   
  パラメーター領域には、レポートの実行前に値を入力するためのフィールドが用意されています。 この領域は、レポート定義にパラメーターが含まれている場合にのみ使用されます。 パラメーター領域または資格情報領域が表示されるときには、Web パーツの残りの幅に収まるようにレポート表示が調整されます。 Web パーツのプロパティを設定して、パラメーターの幅をカスタマイズできます。 ページ上で個々のパラメーターの横に表示されるラベルも定義できます。 パラメーター ラベルの変更方法の詳細については、「[パブリッシュ済みレポートのパラメーターを設定する方法 (Reporting Services の SharePoint 統合モード)](report-design/set-parameters-on-a-published-report-sharepoint-integrated-mode.md)」を参照してください。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [SharePoint サイトのレポート ビューアー Web パーツ](../../2014/reporting-services/report-viewer-web-part-on-a-sharepoint-site.md)   
  [レポート ビューアー Web パーツを Web ページに追加する (Reporting Services の SharePoint 統合モード)](report-server-sharepoint/add-reporting-services-content-types-to-a-sharepoint-library.md)  
   

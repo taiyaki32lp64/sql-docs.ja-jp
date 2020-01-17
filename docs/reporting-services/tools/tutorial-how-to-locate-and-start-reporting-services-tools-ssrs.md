@@ -1,8 +1,8 @@
 ---
-title: チュートリアル:Reporting Services ツールを検索および開始する方法 (SSRS) | Microsoft Docs
-ms.date: 12/07/2018
+title: 'チュートリアル : Reporting Services ツールを検索および開始する方法 (SSRS) | Microsoft Docs'
+ms.date: 05/15/2019
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: tools
 description: このチュートリアルでは、レポート サーバーの設定、レポート サーバーのコンテンツと動作の管理、Reporting Services の改ページ調整されたレポートとモバイル レポートの作成とパブリッシュに使用できるツールを紹介します。
 ms.custom: seodec18
@@ -18,16 +18,16 @@ helpviewer_keywords:
 - tutorials [Reporting Services]
 - Report Builder
 ms.assetid: 51ad69d8-fe92-4662-a7cd-d235692f0c03
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 7c4722d276321a8839d7d569c084a8b4e4253280
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 27e90deec22d20f65943f9c7e07cf425772c7737
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56291830"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65875171"
 ---
-# <a name="tutorial-how-to-locate-and-start-reporting-services-tools-ssrs"></a>チュートリアル:Reporting Services ツールを検索および開始する方法 (SSRS)
+# <a name="tutorial-how-to-locate-and-start-reporting-services-tools-ssrs"></a>チュートリアル : Reporting Services ツールを検索および開始する方法 (SSRS)
 
   このチュートリアルでは、レポート サーバーの設定、レポート サーバーのコンテンツと動作の管理、 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] の改ページ調整されたレポートとモバイル レポートの作成とパブリッシュに使用できるツールを紹介します。 既にツールを使用している場合は、 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]を使用するスキルを学ぶことができるその他のチュートリアルへお進みください。 その他のチュートリアルについては、「 [Reporting Services のチュートリアル (SSRS)](../../reporting-services/reporting-services-tutorials-ssrs.md)を使用するスキルを学ぶことができるその他のチュートリアルへお進みください。  
   
@@ -42,7 +42,7 @@ ms.locfileid: "56291830"
 -   暗号化キーを管理します。  
 -   自動レポート処理および電子メールによるレポート配信を構成します。  
   
-**インストール:**[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 構成マネージャーは、[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] ネイティブ モードのインストール時にインストールされます。 詳細については、 [「Reporting Services ネイティブ モードのレポート サーバーのインストール」](assetid:///8f25e6dc-b753-400e-9e9a-50f4f35bf6c4)を参照してください。  
+**インストール:** [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 構成マネージャーは、 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] ネイティブ モードのインストール時にインストールされます。 詳細については、 [「Reporting Services ネイティブ モードのレポート サーバーのインストール」](assetid:///8f25e6dc-b753-400e-9e9a-50f4f35bf6c4)を参照してください。  
   
 ### <a name="to-start-the-reporting-services-configuration-manager"></a>Reporting Services 構成マネージャーを起動するには  
   
@@ -52,7 +52,7 @@ ms.locfileid: "56291830"
   
      **Or**  
   
-     **[スタート]** ボタンをクリックして、 **[プログラム]** をクリックし、[ [!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)]]、 **[構成ツール]**、 **[Reporting Services 構成マネージャー]** の順にクリックします。  
+     **[スタート]** ボタンをクリックして、 **[プログラム]** をクリックし、[ [!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)]]、 **[構成ツール]** 、 **[Reporting Services 構成マネージャー]** の順にクリックします。  
   
      **[レポート サーバー インスタンスの選択]** ダイアログ ボックスが表示されます。このダイアログ ボックスでは構成するレポート サーバー インスタンスを選択します。  
   
@@ -68,12 +68,12 @@ ms.locfileid: "56291830"
   
      ![Reporting Services 構成ツール](../../reporting-services/tools/media/rs-ui-reportserverconfigkatmai.png "Reporting Services 構成ツール")  
   
- **次の手順:**「[レポート サーバーを構成および管理する (SSRS ネイティブ モード)](../../reporting-services/report-server/configure-and-administer-a-report-server-ssrs-native-mode.md)」と「[Reporting Services 構成マネージャー (ネイティブ モード)](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md)」。  
+ **次の手順:** 「[レポート サーバーを構成および管理する (SSRS ネイティブ モード)](../../reporting-services/report-server/configure-and-administer-a-report-server-ssrs-native-mode.md)」、「[Reporting Services 構成マネージャー (ネイティブ モード)](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md)  
   
 ##  <a name="web-portal-native-mode"></a>Web ポータル (ネイティブ モード)  
  [Web portal (SSRS Native Mode)](../../reporting-services/web-portal-ssrs-native-mode.md) を使用して、権限の設定、サブスクリプションおよびスケジュールの管理、レポートを使用した作業を実行できます。 Web ポータルを使用してレポートを表示することもできます。  
   
- **インストール:** Web ポータルは、[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] ネイティブ モードのインストール時にインストールされます。[Reporting Services ネイティブ モードのレポート サーバーのインストール](assetid:///8f25e6dc-b753-400e-9e9a-50f4f35bf6c4)  
+ **:** [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] ネイティブ モードをインストールすると Web ポータルがインストールされます: [Reporting Services ネイティブ モードのレポート サーバーのインストール](assetid:///8f25e6dc-b753-400e-9e9a-50f4f35bf6c4)  
   
  Web ポータルを起動するには適切なアクセス許可が必要です。初期状態では、Web ポータルの機能へのアクセス許可は、ローカルの管理者グループのメンバーにのみ与えられています。 Web ポータルに表示されるページとオプションは、現在のユーザーに割り当てられているロールによって異なります。 アクセス許可のないユーザーには空白のページが表示され、 レポート閲覧用のアクセス許可が与えられているユーザーにはリンクが表示されます。このユーザーはリンクをクリックしてレポートを表示することができます。 アクセス許可の詳細については、「[ロールと権限 &#40;Reporting Services&#41;](../../reporting-services/security/roles-and-permissions-reporting-services.md)」を参照してください。  
   
@@ -88,7 +88,7 @@ ms.locfileid: "56291830"
 4.  ローカル レポート サーバーで Web ポータルを実行する場合は、「[Configure a Native Mode Report Server for Local Administration (SSRS)](../../reporting-services/report-server/configure-a-native-mode-report-server-for-local-administration-ssrs.md)」(ローカル管理用のネイティブ モード レポート サーバーの構成 (SSRS)) を参照してください。  
    
 ##  <a name="bkmk_managements_studio"></a> Management Studio  
- レポート サーバー管理者は、 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] を使用して、レポート サーバーと共に他の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] コンポーネント サーバーを管理できます。 詳細については、「 [Use SQL Server Management Studio](https://msdn.microsoft.com/library/f289e978-14ca-46ef-9e61-e1fe5fd593be)」を参照してください。  
+ レポート サーバー管理者は、 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] を使用して、レポート サーバーと共に他の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] コンポーネント サーバーを管理できます。 詳細については、[SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/tutorials/tutorial-sql-server-management-studio) のチュートリアルを参照してください。  
   
 ### <a name="to-start-sql-server-management-studio"></a>SQL Server Management Studio を起動するには  
   
@@ -98,7 +98,7 @@ ms.locfileid: "56291830"
   
      **Or**  
   
-     **[スタート]**、 **[すべてのプログラム]** とクリックし、[ [!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)]]、 **[SQL Server Management Studio]** の順にクリックします。 **[サーバーへの接続]** ダイアログ ボックスが表示されます。  
+     **[スタート]** 、 **[すべてのプログラム]** とクリックし、[ [!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)]]、 **[SQL Server Management Studio]** の順にクリックします。 **[サーバーへの接続]** ダイアログ ボックスが表示されます。  
   
 2.  **[サーバーへの接続]** ダイアログ ボックスが表示されない場合は、 **[オブジェクト エクスプローラー]** で **[接続]** をクリックし、 **[Reporting Services]** を選択します。  
   
@@ -109,7 +109,7 @@ ms.locfileid: "56291830"
 5.  **[接続]** をクリックします。 ルート ノードを展開して、サーバーのプロパティを設定したり、ロールの定義を変更したり、レポート サーバー機能をオフにすることができます。  
   
 ##  <a name="bkmk_ssdt"></a> レポート デザイナーとレポート ウィザードが統合された SQL Server データ ツール  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の改ページ調整されたレポートを作成するためのツールには、  レポート デザイナーと[レポート ビルダー](#bkmk_report_builder)の 2 つがあります。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の改ページ調整されたレポートを作成するためのツールには、レポート デザイナーと [レポート ビルダー](#bkmk_report_builder)の 2 つがあります。  
   
  レポート デザイナーは、 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] - Visual Studio で使用できます。 レポート デザイナーのデザイン画面にはタブ付きウィンドウ、ウィザード、メニューが用意されており、これらを使ってレポートの作成機能にアクセスできます。 レポート デザイナー ツールは、レポート サーバー プロジェクトまたは [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]のレポート サーバー ウィザードのテンプレートを選択すると使用可能になります。 詳細については、「[SQL Server データ ツールの Reporting Services (SSDT)](../../reporting-services/tools/reporting-services-in-sql-server-data-tools-ssdt.md)」を参照してください。 
  
@@ -146,7 +146,7 @@ ms.locfileid: "56291830"
   
      ![PBI_SSMRP_NewMenu](../../reporting-services/mobile-reports/media/pbi-ssmrp-newmenu.png "PBI_SSMRP_NewMenu")  
   
-2.  [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] がコンピューターにまだインストールされていない場合は、**[[!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] の入手]** を選択します。  
+2.  [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] がコンピューターにまだインストールされていない場合は、 **[[!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] の入手]** を選択します。  
   
      または  
   
@@ -165,7 +165,7 @@ ms.locfileid: "56291830"
   
      ![PBI_SSMRP_NewMenu](../../reporting-services/mobile-reports/media/pbi-ssmrp-newmenu.png "PBI_SSMRP_NewMenu")  
   
-2.  [!INCLUDE[SS_MobileReptPub_Short](../../includes/ss-mobilereptpub-short.md)] がコンピューターにまだインストールされていない場合は、**[[!INCLUDE[SS_MobileReptPub_Short](../../includes/ss-mobilereptpub-short.md)] の入手]** を選択します。  
+2.  [!INCLUDE[SS_MobileReptPub_Short](../../includes/ss-mobilereptpub-short.md)] がコンピューターにまだインストールされていない場合は、 **[[!INCLUDE[SS_MobileReptPub_Short](../../includes/ss-mobilereptpub-short.md)] の入手]** を選択します。  
   
      または  
   

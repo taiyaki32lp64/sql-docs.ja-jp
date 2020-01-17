@@ -12,27 +12,27 @@ ms.assetid: 0622619d-27c5-4ff0-83e5-cde31648c27a
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 2c5428611c67315407ed31478fbb60ccca1b6dd2
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 6de7b5c8f9cdc7162eb9c6a8ddd214d0486255c6
+ms.sourcegitcommit: 3b1f873f02af8f4e89facc7b25f8993f535061c9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53351345"
+ms.lasthandoff: 08/30/2019
+ms.locfileid: "70175956"
 ---
 # <a name="create-credential---authenticate-to-azure-storage"></a>資格情報の作成- Azure ストレージに対する認証
   **[Backup To URL - 資格情報の作成]** ダイアログ ボックスを使用すると、新しい SQL 資格情報を作成できます。  
   
- このダイアログ ボックスを使用して資格情報を作成する場合、サブスクリプションとストレージ アカウント情報を検証するために、ローカル証明書ストアに追加した Windows Azure 管理証明書、またはコンピューターにダウンロードした公開プロファイルを指定する必要があります。  
+ このダイアログボックスを使用して資格情報を作成する場合は、ローカルの証明書ストアに追加された Azure 管理証明書、またはコンピューターにダウンロードした発行プロファイルを指定して、サブスクリプションとストレージアカウント情報を検証する必要があります。  
   
  **[SQL 資格情報]**  
  作成する SQL 資格情報の名前を指定します。  
   
-## <a name="windows-azure-credentials"></a>Windows Azure 資格情報  
+## <a name="azure-credentials"></a>Azure の資格情報  
  **[管理証明書]**  
- このオプションを使用して、Windows Azure からの管理証明書に一致するローカル証明書ストアの証明書を指定します。 Windows Azure 管理証明書の詳細については、「 [Windows Azure の管理証明書の作成とアップロード](https://go.microsoft.com/fwlink/?LinkId=320781)」を参照してください。  
+ このオプションを使用して、Azure の管理証明書に一致するローカル証明書ストアの証明書を指定します。 Azure 管理証明書の詳細については、「 [azure の管理証明書の作成とアップロード](https://go.microsoft.com/fwlink/?LinkId=320781)」を参照してください。  
   
  **サブスクリプション**  
- ローカル証明書ストアの管理証明書と一致する Windows Azure サブスクリプション ID を選択、入力、または貼り付けます。  
+ ローカル証明書ストアの管理証明書と一致する Azure サブスクリプション ID を選択、入力、または貼り付けます。  
   
  **[公開プロファイル]**  
  コンピューターにダウンロードした公開プロファイルがある場合は、このオプションを使用します。 このオプションを使用すると、サブスクリプション ID と証明書が自動的に入力されます。  

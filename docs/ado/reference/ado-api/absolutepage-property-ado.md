@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: ddb58a35-ec3a-423c-a504-3c65e62c23d4
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: efdbd68bf464fea3a0d59396380b082eb66375b8
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 12b2e6c6f12fc06cb223551b55cb7f9a38df9ac3
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47824150"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67921832"
 ---
 # <a name="absolutepage-property-ado"></a>AbsolutePage プロパティ (ADO)
 現在のレコードがどのページが存在することを示します。  
@@ -45,7 +44,7 @@ ms.locfileid: "47824150"
 ## <a name="applies-to"></a>適用対象  
  [Recordset オブジェクト (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [AbsolutePage、PageCount、PageSize プロパティの例 (VB)](../../../ado/reference/ado-api/absolutepage-pagecount-and-pagesize-properties-example-vb.md)   
  [AbsolutePage、PageCount、PageSize プロパティの例 (vc++)](../../../ado/reference/ado-api/absolutepage-pagecount-and-pagesize-properties-example-vc.md)   
  [AbsolutePosition プロパティ (ADO)](../../../ado/reference/ado-api/absoluteposition-property-ado.md)   

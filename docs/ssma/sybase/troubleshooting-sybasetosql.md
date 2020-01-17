@@ -11,20 +11,19 @@ helpviewer_keywords:
 ms.assetid: 8684ed23-c36b-46f6-9687-30ad7f47f876
 author: Shamikg
 ms.author: Shamikg
-manager: craigg
-ms.openlocfilehash: d2f8fa753623e9b7d978556c16c5c4bbeba6efe7
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 2ecbd6235e0ebec1850bb959aec2aa25832e857f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47664360"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68020880"
 ---
 # <a name="troubleshooting-sybasetosql"></a>トラブルシューティング (SybaseToSQL)
 コンソールのスクリプトまたはコマンドを実行する移行の問題の途中に実行することは珍しくありません。  
   
 修正可能であるエラーの関連する可能性があります。  
   
-1.  機能  
+1.  関数  
   
 2.  手順  
   

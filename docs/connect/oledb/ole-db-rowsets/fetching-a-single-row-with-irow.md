@@ -1,6 +1,6 @@
 ---
-title: IRow による 1 行のフェッチ |Microsoft Docs
-description: SQL Server 用の OLE DB Driver IRow インターフェイスを使用して 1 つの行をフェッチしています
+title: IRow | を使用した単一の行のフェッチMicrosoft Docs
+description: OLE DB Driver for SQL Server の IRow インターフェイスを使用して1つの行をフェッチする
 ms.custom: ''
 ms.date: 06/14/2018
 ms.prod: sql
@@ -17,20 +17,19 @@ helpviewer_keywords:
 - OLE DB Driver for SQL Server, fetching
 author: pmasl
 ms.author: pelopes
-manager: craigg
-ms.openlocfilehash: 9d5db0319725f0a2180dc341faad4c530a5857b1
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 542875dc322cd94970c238747db0adb139b9a480
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47672410"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67994294"
 ---
 # <a name="fetching-a-single-row-with-irow"></a>IRow による 1 行のフェッチ
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
-  **IRow**インターフェイスの OLE DB driver の実装のパフォーマンスを向上させる SQL Server が簡略化されます。 **IRow** では、1 つの行オブジェクトの列に直接アクセスできます。 コマンドの実行結果が正確に 1 行になることが事前にわかっている場合、**IRow** でその行の列を取得できます。 結果セットが複数の行で構成される場合は、**IRow** では先頭の行だけが公開されます。  
+  SQL Server の OLE DB ドライバーでの**IRow**インターフェイスの実装は、パフォーマンスを向上させるために簡略化されています。 **IRow** では、1 つの行オブジェクトの列に直接アクセスできます。 コマンドの実行結果が正確に 1 行になることが事前にわかっている場合、**IRow** でその行の列を取得できます。 結果セットが複数の行で構成される場合は、**IRow** では先頭の行だけが公開されます。  
   
  **IRow** 実装では、行を移動することはできません。 行内の各列には 1 回だけアクセスされます。ただし、例外が 1 つあります。最初に列サイズを確認し、次にデータをフェッチする場合は、列に 2 回アクセスできます。  
   

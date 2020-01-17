@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: 17be755b-673d-4cd4-9544-6ecb4220bed3
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 4c8d9fe6a682a2f9d8847268c0d2a746b03ccf1e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 70df2ef47b4d74ef2a4316da4809aecf2005e15e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47635040"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68108112"
 ---
 # <a name="spdbmmonitorchangemonitoring-transact-sql"></a>sp_dbmmonitorchangemonitoring (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -43,11 +42,11 @@ sp_dbmmonitorchangemonitoring parameter
   
 ## <a name="arguments"></a>引数  
  *parameter*  
- 変更するパラメーターの識別子を指定します。 現時点では、次のパラメーターだけを指定できます。  
+ 変更するパラメーターの識別子を指定します。 現時点では、次のパラメーターのみがあります。  
   
  1 = 更新期間  
   
- データベース モニタリングの状態テーブルの更新間隔 (分単位) です。 既定の間隔は 1 分です。  
+ データベース モニタリングの状態テーブルの更新間隔 (分単位) です。 既定の間隔は、1 分です。  
   
  *value*  
  変更するパラメーターの新しい値を指定します。  
@@ -72,7 +71,7 @@ sp_dbmmonitorchangemonitoring parameter
 EXEC sp_dbmmonitorchangemonitoring 1, 5 ;  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [データベース ミラーリングの監視 &#40;SQL Server&#41;](../../database-engine/database-mirroring/monitoring-database-mirroring-sql-server.md)   
  [sp_dbmmonitoraddmonitoring &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dbmmonitoraddmonitoring-transact-sql.md)   
  [sp_dbmmonitordropmonitoring &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dbmmonitordropmonitoring-transact-sql.md)   

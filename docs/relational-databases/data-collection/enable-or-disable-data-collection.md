@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 0137971b-fb48-4a3e-822a-3df2b9bb09d7
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 6697f631ec0ca4c0fb2ee26529b1f0f410e36912
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: cea0fabf5a30ac2f92e1aa9087b1d1df595d761c
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47596850"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72909656"
 ---
 # <a name="enable-or-disable-data-collection"></a>データ コレクションを有効または無効にする方法
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -28,7 +27,7 @@ ms.locfileid: "47596850"
   
 -   **作業を開始する準備:**  
   
-     [Security](#Security)  
+     [セキュリティ](#Security)  
   
 -   **データ コレクションを有効または無効にする方法:**  
   
@@ -36,7 +35,7 @@ ms.locfileid: "47596850"
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> 作業を開始する準備  
+##  <a name="BeforeYouBegin"></a> はじめに  
   
 ###  <a name="Security"></a> セキュリティ  
   
@@ -50,7 +49,7 @@ ms.locfileid: "47596850"
 1.  オブジェクト エクスプローラーで、 **[管理]** ノードを展開します。  
   
 2.  **[データ コレクション]** を右クリックし、 **[データ コレクションの有効化]** をクリックします。  
-  
+
 #### <a name="to-disable-the-data-collector"></a>データ コレクターを無効にするには  
   
 1.  オブジェクト エクスプローラーで、 **[管理]** ノードを展開します。  

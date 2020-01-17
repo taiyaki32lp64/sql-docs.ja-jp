@@ -14,24 +14,23 @@ helpviewer_keywords:
 ms.assetid: 6e6cabcf-a204-40eb-b77d-8a0c4a5e8524
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 89be9c958cb848384a67e7eaf74cfecc72f07c35
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 3987085d7d04bf248bcc728c3bcd1ee5503d9af1
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47855020"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68107362"
 ---
 # <a name="sqlstate-mappings"></a>SQLSTATE マッピング
-このトピックでは、ODBC 2 の SQLSTATE 値について説明します。*x*および ODBC 3 *。x*します。 ODBC 3 の詳細についてはします。*x* SQLSTATE の値を参照してください[付録 a: ODBC エラー コード](../../../odbc/reference/appendixes/appendix-a-odbc-error-codes.md)します。  
+このトピックでは、ODBC の SQLSTATE 値を説明*2.x*および ODBC *3.x*します。 ODBC の詳細については*3.x* SQLSTATE の値を参照してください[付録 a:ODBC エラー コード](../../../odbc/reference/appendixes/appendix-a-odbc-error-codes.md)します。  
   
- ODBC 3。*x*HYxxx SQLSTATEs が S1xxx、代わりに返される、S00XX ではなく 42Sxx SQLSTATEs が返されます。 これは、Open Group および ISO 標準に合わせて行われました。 多くの場合、標準がいくつかについての解釈を再定義があるため、マッピングは 1 対 1 ありません。  
+ ODBC で*3.x*HYxxx SQLSTATEs が S1xxx、代わりに返される、S00XX ではなく 42Sxx SQLSTATEs が返されます。 これは、Open Group および ISO 標準に合わせて行われました。 多くの場合、標準がいくつかについての解釈を再定義があるため、マッピングは 1 対 1 ありません。  
   
- ODBC 2 時にします。*x*アプリケーションは、ODBC 3 にアップグレードします *。x* ODBC 3 の期待に変更するアプリケーション、アプリケーションが *。x* ODBC 2 ではなく SQLSTATEs *。x* SQLSTATEs します。 次の表には、ODBC 3 が一覧表示します。*x* SQLSTATEs を各 ODBC 2 *。x* SQLSTATE にマップされます。  
+ ときに、ODBC *2.x*を ODBC アプリケーションはアップグレード*3.x* ODBC の期待に変更するアプリケーション、アプリケーションが*3.x* ODBCではなくSQLSTATEs*2.x* SQLSTATEs します。 次の表は、ODBC *3.x* SQLSTATEs を各 ODBC *2.x* SQLSTATE にマップされます。  
   
- SQL_OV_ODBC2 を SQL_ATTR_ODBC_VERSION 環境属性を設定すると、ドライバーは ODBC 2 を送信します。*x* ODBC 3 ではなく SQLSTATEs *。x* SQLSTATEs とき**SQLGetDiagField**または**SQLGetDiagRec**が呼び出されます。 特定のマッピングは、ODBC 2 に注意して決定できます *.x* ODBC 3 に対応する次の表の 1 列目の SQLSTATE *。x*列 2 の SQLSTATE。  
+ ODBC ドライバーの投稿 SQL_OV_ODBC2 を SQL_ATTR_ODBC_VERSION 環境属性を設定すると、 *2.x* ODBC ではなく SQLSTATEs *3.x* SQLSTATEs とき**SQLGetDiagField**または**SQLGetDiagRec**が呼び出されます。 特定のマッピングは、ODBC に注意して決定できます*2.x* ODBC に対応する次の表の 1 列目の SQLSTATE *3.x*列 2 の SQLSTATE。  
   
-|ODBC 2。*x* SQLSTATE|ODBC 3。*x* SQLSTATE|コメント|  
+|ODBC *2.x* SQLSTATE|ODBC *3.x* SQLSTATE|コメント|  
 |-------------------------|-------------------------|--------------|  
 |01S03|01001||  
 |01S04|01001||  
@@ -50,7 +49,7 @@ ms.locfileid: "47855020"
 |S0023|42S23||  
 |S1000|HY000||  
 |S1001|HY001||  
-|S1002|07009|ODBC 2。*x* S1002 の SQLSTATE は ODBC 3 にマップされます *。x* SQLSTATE 07009 場合は、基になる関数**SQLBindCol**、 **SQLColAttribute**、 **SQLExtendedFetch**、 **SQLFetch**、 **SQLFetchScroll**、または**SQLGetData**します。|  
+|S1002|07009|ODBC *2.x* odbc SQLSTATE S1002 がマップされている*3.x* SQLSTATE 07009 場合は、基になる関数**SQLBindCol**、 **SQLColAttribute**、**SQLExtendedFetch**、 **SQLFetch**、 **SQLFetchScroll**、または**SQLGetData**します。|  
 |S1003|HY003||  
 |S1004|HY004||  
 |S1008|HY008||  
@@ -63,7 +62,7 @@ ms.locfileid: "47855020"
 |S1090|HY090||  
 |S1091|HY091||  
 |S1092|HY092||  
-|S1093|07009|ODBC 3。*x* 07009 SQLSTATE は ODBC 2 にマップされます *。x*関数を基になる場合は、SQLSTATE S1093 **SQLBindParameter**または**SQLDescribeParam**します。|  
+|S1093|07009|ODBC *3.x* odbc SQLSTATE 07009 がマップされている*2.x*関数を基になる場合は、SQLSTATE S1093 **SQLBindParameter**または**SQLDescribeParam**.|  
 |S1096|HY096||  
 |S1097|HY097||  
 |S1098|HY098||  
@@ -83,4 +82,4 @@ ms.locfileid: "47855020"
 |S1T00|HYT00||  
   
 > [!NOTE]  
->  ODBC 3。*x* 07008 SQLSTATE は ODBC 2 にマップされます *。x* SQLSTATE S1000 します。
+>  ODBC *3.x* odbc SQLSTATE 07008 がマップされている*2.x* SQLSTATE S1000 します。

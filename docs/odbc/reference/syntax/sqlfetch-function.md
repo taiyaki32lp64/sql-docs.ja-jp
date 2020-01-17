@@ -1,7 +1,7 @@
 ---
 title: SQLFetch 関数 |Microsoft Docs
 ms.custom: ''
-ms.date: 01/19/2017
+ms.date: 07/18/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -11,6 +11,7 @@ apiname:
 - SQLFetch
 apilocation:
 - sqlsrv32.dll
+- odbc32.dll
 apitype: dllExport
 f1_keywords:
 - SQLFetch
@@ -19,24 +20,23 @@ helpviewer_keywords:
 ms.assetid: 6c6611d2-bc6a-4390-87c9-1c5dd9cfe07c
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 001238b4e5d47b22ca991efcd8b4ee28971d7af7
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: 5c5d2d14786080f665e488acf2bfa888f09a5df4
+ms.sourcegitcommit: c1382268152585aa77688162d2286798fd8a06bb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53213091"
+ms.lasthandoff: 07/19/2019
+ms.locfileid: "68345199"
 ---
 # <a name="sqlfetch-function"></a>SQLFetch 関数
-**準拠**  
- バージョンが導入されました。ODBC 1.0 規格に準拠します。ISO 92  
+**互換性**  
+ 導入されたバージョン:ODBC 1.0 標準準拠:ISO 92  
   
  **まとめ**  
- **SQLFetch**結果セットからデータの次の行セットをフェッチし、すべてのバインドされた列のデータを返します。  
+ **Sqlfetch**は、結果セットから次の行セットデータをフェッチし、すべてのバインドされた列のデータを返します。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
   
 SQLRETURN SQLFetch(  
      SQLHSTMT     StatementHandle);  
@@ -44,230 +44,230 @@ SQLRETURN SQLFetch(
   
 ## <a name="arguments"></a>引数  
  *StatementHandle*  
- [入力]ステートメント ハンドルです。  
+ 代入ステートメントハンドル。  
   
 ## <a name="returns"></a>戻り値  
- SQL_SUCCESS、SQL_SUCCESS_WITH_INFO、SQL_NO_DATA、SQL_STILL_EXECUTING、SQL_ERROR、または SQL_INVALID_HANDLE します。  
+ SQL_SUCCESS、SQL_SUCCESS_WITH_INFO、SQL_NO_DATA、SQL_STILL_EXECUTING、SQL_ERROR、または SQL_INVALID_HANDLE。  
   
 ## <a name="diagnostics"></a>診断  
- ときに**SQLFetch** SQL_ERROR または SQL_SUCCESS_WITH_INFO のいずれかを返します呼び出すことによって、関連付けられた SQLSTATE 値を取得できる[SQLGetDiagRec 関数](../../../odbc/reference/syntax/sqlgetdiagrec-function.md)で、 *HandleType*sql_handle_stmt としての*処理*の*StatementHandle*します。 次の表に、によって返される通常の SQLSTATE 値**SQLFetch** ; この関数のコンテキストでそれぞれについて説明しますと表記"(DM)"の前にドライバー マネージャーによって返されるについての説明。 SQLSTATE 値ごとに関連付けられているリターン コードは明記しない限り、SQL_ERROR です。 1 つの列でエラーが発生した場合[SQLGetDiagField](../../../odbc/reference/syntax/sqlgetdiagfield-function.md)で呼び出すことができます、 *DiagIdentifier* SQL_DIAG_COLUMN_NUMBER; でエラーが発生した列を判断するのと**SQLGetDiagField**で呼び出すことができます、 *DiagIdentifier* SQL_DIAG_ROW_NUMBER その列を含む行を決定するのです。  
+ **Sqlfetch**が SQL_ERROR または SQL_SUCCESS_WITH_INFO のいずれかを返す場合、SQL_HANDLE_STMT の*Handletype*と StatementHandle の*ハンドル*を指定して[SQLGetDiagRec Function](../../../odbc/reference/syntax/sqlgetdiagrec-function.md)を呼び出すことによって、関連する SQLSTATE 値を取得できます。 次の表に、 **Sqlfetch**によって通常返される SQLSTATE 値と、この関数のコンテキストでのそれぞれについて説明します。"(DM)" という表記は、ドライバーマネージャーによって返される SQLSTATEs の説明の前にあります。 特に記載がない限り、各 SQLSTATE 値に関連付けられているリターンコードは SQL_ERROR です。 1つの列でエラーが発生した場合は、SQL_DIAG_COLUMN_NUMBER の*DiagIdentifier*を使用して[SQLGetDiagField](../../../odbc/reference/syntax/sqlgetdiagfield-function.md)を呼び出して、エラーが発生した列を特定することができます。と**SQLGetDiagField**は、 *DiagIdentifier*の SQL_DIAG_ROW_NUMBER を使用して呼び出すことで、その列を含む行を特定できます。  
   
- 複数行の操作の 1 つ以上のただしすべてではなく行にエラーが発生した場合にエラーが発生した場合、SQL_ERROR が返されますをすべてその SQLSTATEs SQL_SUCCESS_WITH_INFO または SQL_ERROR (を除く 01xxx SQLSTATEs) を返すことができる、SQL_SUCCESS_WITH_INFO が返される、単一行の操作です。  
+ SQL_SUCCESS_WITH_INFO または SQL_ERROR を返すことができるすべての SQLSTATEs (01xxx SQLSTATEs を除く) では、複数行操作のすべての行ではなく、1つ以上の行でエラーが発生すると SQL_SUCCESS_WITH_INFO が返され、エラーが発生した場合は SQL_ERROR が返されます。単一行演算。  
   
 |SQLSTATE|[エラー]|説明|  
 |--------------|-----------|-----------------|  
-|01000|一般的な警告|ドライバー固有の情報メッセージです。 (関数は、SQL_SUCCESS_WITH_INFO を返します)。|  
-|01004|文字列データで、右側が切り捨てられました|文字列またはバイナリ データの列に対して返される空白文字または NULL 以外のバイナリ データの切り捨てが発生しました。 文字列値がいた場合は、右側から切り捨てられますことでした。|  
-|01S01|行内のエラー|1 つまたは複数の行をフェッチ中にエラーが発生しました。<br /><br /> (この SQLSTATE が返されない場合、ODBC 3 *.x*アプリケーションの操作は、ODBC 2 *.x*ドライバー、無視できます)。|  
-|01S07|分数が切り捨てられました|列に対して返されるデータが切り捨てられました。 数値データ型、数値の小数部が切り捨てられました。 時刻、タイムスタンプ、および時刻部分が含まれている interval データ型の場合は、時間の小数部が切り捨てられました。<br /><br /> (関数は、SQL_SUCCESS_WITH_INFO を返します)。|  
-|07006|制限付きのデータ型の属性違反|指定されたデータ型に結果セット内の列のデータ値を変換でした*TargetType*で**SQLBindCol**します。<br /><br /> SQL_C_BOOKMARK のデータ型にバインドされた列 0 と SQL_UB_VARIABLE に SQL_ATTR_USE_BOOKMARKS ステートメントの属性が設定されました。<br /><br /> SQL_C_VARBOOKMARK のデータ型にバインドされた列 0 と SQL_UB_VARIABLE に SQL_ATTR_USE_BOOKMARKS ステートメントの属性が設定されませんでした。|  
-|07009|無効な記述子のインデックス|ドライバーが、ODBC 2 *.x*がサポートされていないドライバー **SQLExtendedFetch**列のバインドで指定された列数が 0 とします。<br /><br /> 列 0 がバインドされているし、SQL_UB_OFF に SQL_ATTR_USE_BOOKMARKS ステートメントの属性が設定されました。|  
-|08S01|通信リンク エラー|関数が完了した処理の前に、ドライバーとドライバーが接続されているデータ ソース間の通信リンクに失敗しました。|  
-|22001|文字列データで、右側が切り捨てられました|列に対して返される可変長のブックマークが切り捨てられました。|  
-|22002|インジケーター変数が必要ですが、指定されていません|NULL データのフェッチの列にある*StrLen_or_IndPtr*によって設定**SQLBindCol** (またはによって設定 SQL_DESC_INDICATOR_PTR **SQLSetDescField**または**SQLSetDescRec**) が null ポインター。|  
-|22003|数値が範囲外|数値として数値の値またはバインドされた列の 1 つまたは複数の文字列を取得する原因となる (ではなく小数部) 整数部分が切り捨てられる数値。<br /><br /> 詳細については、次を参照してください[SQL から C データ型への変換データ](../../../odbc/reference/appendixes/converting-data-from-sql-to-c-data-types.md)付録 d:。データ型。|  
-|22007|無効な datetime 形式|結果セット内の文字の列は、日付、時刻、またはタイムスタンプ C 構造体にバインドされましたし、列の値が、それぞれ、無効な日付、時刻、またはタイムスタンプ。|  
-|22012|0 による除算|算術式の値がによって返される、その結果、除算 0。|  
-|22015|Interval フィールド オーバーフロー|真数型または interval SQL 型から C の間隔の種類への割り当てと、先頭のフィールドに有効桁数の損失が発生します。<br /><br /> C の間隔の種類にデータをフェッチするときに C の間隔の種類の SQL 型の値の表現はありませんでした。|  
-|22018|キャストの無効な文字の値|C 文字バッファーにバインドされた結果セット内の文字の列と列には、対象のバッファーの文字セットで表現がない文字が含まれています。<br /><br /> C 型は、真数または概数の数値、datetime、またはデータ間隔の種類。列の SQL 型が文字データ型。列の値がバインドされた C 型の有効なリテラルではありませんでした。|  
-|24000|カーソル状態が無効|*StatementHandle*実行の状態でしたが、結果セットが関連付けられていない、 *StatementHandle*します。|  
-|40001|シリアル化エラー|デッドロックを防止するフェッチが実行されたトランザクションが終了しました。|  
-|40003|不明なステートメント入力候補|、この関数の実行中に、関連付けられた接続が失敗し、トランザクションの状態を特定できません。|  
-|HY000|一般的なエラー|これがなかった固有の SQLSTATE とする実装に固有の SQLSTATE が定義されていない、エラーが発生しました。 によって返されるエラー メッセージ**SQLGetDiagRec**で、  *\*MessageText*バッファーは、エラーとその原因について説明します。|  
-|HY001|メモリの割り当てエラー|ドライバーは、実行または関数の完了をサポートするために必要なメモリを割り当てることができませんでした。|  
-|HY008|操作が取り消されました|非同期処理が有効に、 *StatementHandle*します。 **SQLFetch**関数が呼び出され、実行を完了する前に**SQLCancel**または**SQLCancelHandle**が呼び出されて、 *StatementHandle*. 次に、 **SQLFetch**で関数が再度呼び出されました、 *StatementHandle*します。<br /><br /> また、 **SQLFetch**関数が呼び出され、実行を完了する前に**SQLCancel**または**SQLCancelHandle**が呼び出されて、 *StatementHandle*マルチ スレッド アプリケーションで別のスレッドから。|  
-|HY010|関数のシーケンス エラー|(DM) を非同期的に実行中の関数が呼び出された接続ハンドルに関連付けられているため、 *StatementHandle*します。 この非同期関数ではときに実行されている、 **SQLFetch**関数が呼び出されました。<br /><br /> (DM) **SQLExecute**、 **SQLExecDirect**、または**SQLMoreResults**に対して呼び出された、 *StatementHandle* SQL_PARAM_DATA_ を返されます。ご利用いただけます。 ストリームのすべてのパラメーターのデータが取得される前に、この関数が呼び出されました。<br /><br /> (DM)、指定した*StatementHandle*実行の状態ではありませんでした。 最初に呼び出さず、関数が呼び出された**SQLExecDirect**、 **SQLExecute**またはカタログ関数。<br /><br /> (DM) を非同期的に実行中の関数 (いないこの"1") が呼び出された、 *StatementHandle*この関数が呼び出されたときに実行されているとします。<br /><br /> (DM) **SQLExecute**、 **SQLExecDirect**、 **SQLBulkOperations**、または**SQLSetPos**に対して呼び出された、 *StatementHandle* SQL_NEED_DATA が返されます。 すべての実行時データ パラメーターまたは列のデータが送信される前に、この関数が呼び出されました。<br /><br /> (DM) **SQLFetch**に対して呼び出された、 *StatementHandle*後**SQLExtendedFetch**が呼び出されたとする前に**SQLFreeStmt**で、sql _終了 オプションが呼び出されました。|  
-|HY013|メモリ管理エラー|基になるメモリ オブジェクトにアクセスできませんでした、場合によってメモリ不足が原因であるために、関数呼び出しを処理できませんでした。|  
-|HY090|文字列またはバッファーの長さが無効です。|SQL_ATTR_USE_BOOKMARK ステートメント属性は SQL_UB_VARIABLE に設定されており、列 0 がの長さはこの結果セットに対してブックマークの最大の長さと等しくありませんでした。 バッファーにバインドされました。 (この長さは、IRD の SQL_DESC_OCTET_LENGTH フィールドで使用できますし、呼び出すことによって取得できる**SQLDescribeCol**、 **SQLColAttribute**、または**SQLGetDescField**)。|  
-|HY107|行の値が範囲外|SQL_ATTR_CURSOR_TYPE ステートメント属性で指定された値が、SQL_CURSOR_KEYSET_DRIVEN が SQL_ATTR_KEYSET_SIZE ステートメント属性で指定された値が 0 より大きいと、SQL_ATTR_ROW_ARRAY_ で指定された値よりも小さいサイズのステートメント属性です。|  
-|HY117|不明なトランザクションの状態のため、接続が中断されます。 のみを切断して、読み取り専用の関数が許可されます。|(DM) 中断状態の詳細については、次を参照してください。 [SQLEndTran 関数](../../../odbc/reference/syntax/sqlendtran-function.md)します。|  
-|HYC00|省略可能な機能が実装されていません|ドライバーまたはデータ ソースの組み合わせで指定された変換をサポートしていません、 *TargetType*で**SQLBindCol**と対応する列の SQL データ型。|  
-|HYT00|タイムアウトが発生しました|クエリのタイムアウト期間は、要求された結果セットが返されるデータ ソースの前に有効期限が切れました。 SQLSetStmtAttr、SQL_ATTR_QUERY_TIMEOUT を通じて、タイムアウト期間が設定されています。|  
-|HYT01|接続がタイムアウトしました|データ ソースが要求に応答する前に、接続のタイムアウト期間が終了しました。 によって、接続タイムアウト期間が設定されます**SQLSetConnectAttr**、SQL_ATTR_CONNECTION_TIMEOUT します。|  
-|IM001|ドライバーでは、この関数はサポートされていません|(DM) に、ドライバーが関連付けられている、 *StatementHandle*関数をサポートしていません。|  
-|IM017|非同期通知モードでのポーリングは無効です。|通知のモデルを使用すると、常にポーリングは無効です。|  
-|IM018|**SQLCompleteAsync**このハンドルに対する前の非同期操作を完了が呼び出されていません。|通知モードが有効になっている場合、ハンドルでは、前の関数呼び出しに SQL_STILL_EXECUTING が返された場合と**SQLCompleteAsync**後処理を行い、操作を完了するハンドルで呼び出す必要があります。|  
+|01000|一般警告|ドライバー固有の情報メッセージ。 (関数は SQL_SUCCESS_WITH_INFO を返します)。|  
+|01004|文字列データ、右側が切り捨てられました|列に対して返された文字列またはバイナリデータにより、空白以外の文字または NULL 以外のバイナリデータが切り捨てられました。 文字列値の場合は、右側が切り捨てられました。|  
+|01S01|行にエラーがあります|1つ以上の行をフェッチ中にエラーが発生しました。<br /><br /> (Odbc*2.x アプリケーションが*odbc*2.x ドライバーで*動作しているときにこの SQLSTATE が返された場合は、無視してかまいません)。|  
+|01S07|小数部の切り捨て|列に対して返されたデータが切り捨てられました。 数値データ型の場合、数値の小数部は切り捨てられました。 時刻、タイムスタンプ、および期間のデータ型については、時間部分が含まれていますが、時間の小数部が切り捨てられました。<br /><br /> (関数は SQL_SUCCESS_WITH_INFO を返します)。|  
+|07006|制限されたデータ型の属性違反|結果セットの列のデータ値を、 **SQLBindCol**の*TargetType*によって指定されたデータ型に変換できませんでした。<br /><br /> 列0は SQL_C_BOOKMARK のデータ型にバインドされており、SQL_ATTR_USE_BOOKMARKS statement 属性は SQL_UB_VARIABLE に設定されていました。<br /><br /> 列0は SQL_C_VARBOOKMARK のデータ型にバインドされていますが、SQL_ATTR_USE_BOOKMARKS statement 属性が SQL_UB_VARIABLE に設定されていません。|  
+|07009|無効な記述子のインデックス|ドライバーは、 **SQLExtendedFetch**をサポートしていない ODBC*2.x ドライバーで*、列のバインドに指定された列番号が0でした。<br /><br /> 列0がバインドされ、SQL_ATTR_USE_BOOKMARKS statement 属性が SQL_UB_OFF に設定されました。|  
+|08S01|通信リンクの失敗|関数が処理を完了する前に、ドライバーと、ドライバーが接続されていたデータソースとの間の通信リンクが失敗しました。|  
+|22001|文字列データ、右側が切り捨てられました|列に対して返された可変長のブックマークが切り捨てられました。|  
+|22002|インジケーター変数が必要ですが、指定されていません|NULL データが、 **SQLBindCol**によって設定された*StrLen_or_IndPtr* (または**SQLSetDescField**または**SQLSetDescRec**によって設定された SQL_DESC_INDICATOR_PTR) が null ポインターである列にフェッチされました。|  
+|22003|数値が有効範囲にありません|1つ以上のバインドされた列の数値または文字列として数値を返すと、切り捨てられる数値の一部 (小数部分ではなく) が発生する可能性があります。<br /><br /> 詳細については、次を参照してください。[データを SQL から C データ型に変換](../../../odbc/reference/appendixes/converting-data-from-sql-to-c-data-types.md)する付録 D:データ型。|  
+|22007|無効な datetime 形式|結果セットの文字列が日付、時刻、またはタイムスタンプ C 構造体にバインドされました。列の値は、それぞれ無効な日付、時刻、またはタイムスタンプです。|  
+|22012|0による除算|算術式からの値が返されました。この結果、0による除算が行われました。|  
+|22015|間隔フィールドオーバーフロー|数値または期間の SQL 型から範囲 C 型への割り当てにより、先頭のフィールドの有効桁数が失われました。<br /><br /> データを interval C 型にフェッチする場合、interval C 型の SQL 型の値は表現されませんでした。|  
+|22018|キャストの指定に無効な文字値があります|結果セットの文字列が文字 C バッファーにバインドされました。この列には、バッファーの文字セットに表現がなかった文字が含まれていました。<br /><br /> C 型は、正確な数値、概数、datetime、または interval データ型でした。列の SQL 型は文字データ型でした。列の値が、バインドされた C 型の有効なリテラルではありませんでした。|  
+|24000|カーソル状態が無効|*StatementHandle*は実行状態でしたが、結果セットが*StatementHandle*に関連付けられていませんでした。|  
+|40001|シリアル化エラー|フェッチが実行されたトランザクションは、デッドロックを防ぐために終了されました。|  
+|40003|ステートメントの完了が不明です|この関数の実行中に関連付けられた接続に失敗しました。トランザクションの状態を確認できません。|  
+|HY000|一般エラー|特定の SQLSTATE がなく、実装固有の SQLSTATE が定義されていないエラーが発生しました。 Messagetext バッファーの**SQLGetDiagRec によっ**て返されるエラーメッセージには、エラーとその原因が記述されています。  *\**|  
+|HY001|メモリ割り当てエラー|ドライバーは、関数の実行または完了をサポートするために必要なメモリを割り当てることができませんでした。|  
+|HY008|操作が取り消されました|*StatementHandle*に対して非同期処理が有効になりました。 **Sqlfetch**関数が呼び出され、実行が完了する前に、 **SQLCancel**または**sqlcancelhandle**が*StatementHandle*で呼び出されました。 その後、 *StatementHandle*で**sqlfetch**関数が再度呼び出されました。<br /><br /> または、 **Sqlfetch**関数が呼び出され、実行が完了する前に、マルチスレッドアプリケーションの別のスレッドの*StatementHandle*で**SQLCancel**または**sqlcancelhandle**が呼び出されました。|  
+|HY010|関数のシーケンスエラー|(DM) 非同期的に実行する関数が、 *StatementHandle*に関連付けられている接続ハンドルに対して呼び出されました。 この非同期関数は、 **Sqlfetch**関数が呼び出されたときにまだ実行されていました。<br /><br /> (DM) **Sqlexecute**、 **SQLExecDirect**、または**Sqlmoreresults**が*STATEMENTHANDLE*に対して呼び出され、SQL_PARAM_DATA_AVAILABLE が返されました。 この関数は、ストリーミングされたすべてのパラメーターのデータが取得される前に呼び出されました。<br /><br /> (DM) 指定された*StatementHandle*は実行状態ではありませんでした。 最初に**SQLExecDirect**、 **sqlexecute** 、または catalog 関数を呼び出さずに関数が呼び出されました。<br /><br /> (DM) 非同期的に実行されている関数 (この1つではない) が*StatementHandle*に対して呼び出され、この関数が呼び出されたときにまだ実行されています。<br /><br /> (DM) **Sqlexecute**、 **SQLExecDirect**、 **sqlbulkoperations**、または**SQLSetPos**が*StatementHandle*に対して呼び出され、SQL_NEED_DATA が返されました。 この関数は、実行時データのすべてのパラメーターまたは列に対してデータが送信される前に呼び出されました。<br /><br /> (DM) **SQLExtendedFetch**が呼び出された後、SQL_CLOSE オプションが呼び出さ**れる前に**、 *StatementHandle*に対して**sqlfetch**が呼び出されました。|  
+|HY013|メモリ管理エラー|基になるメモリオブジェクトにアクセスできなかったため、関数呼び出しを処理できませんでした。メモリ不足の状態が原因である可能性があります。|  
+|HY090|文字列またはバッファーの長さが無効です|SQL_ATTR_USE_BOOKMARK statement 属性が SQL_UB_VARIABLE に設定されました。列0は、長さがこの結果セットのブックマークの最大長と等しくないバッファーにバインドされています。 (この長さは IRD の SQL_DESC_OCTET_LENGTH フィールドにあり、 **SQLDescribeCol**、 **sqlcolattribute**、または**SQLGetDescField**を呼び出すことによって取得できます)。|  
+|HY107|行の値が有効範囲にありません|SQL_ATTR_CURSOR_TYPE statement 属性で指定された値は SQL_CURSOR_KEYSET_DRIVEN でしたが、SQL_ATTR_KEYSET_SIZE statement 属性で指定された値は0より大きく、SQL_ATTR_ROW_ARRAY_ で指定された値よりも小さくなっています。SIZE ステートメントの属性。|  
+|HY117|トランザクションの状態が不明なため、接続が中断されました。 切断と読み取り専用の機能のみが許可されます。|(DM) 中断状態の詳細については、「 [SQLEndTran 関数](../../../odbc/reference/syntax/sqlendtran-function.md)」を参照してください。|  
+|HYC00|省略可能な機能は実装されていません|ドライバーまたはデータソースが、 **SQLBindCol**の*TargetType*と対応する列の SQL データ型の組み合わせによって指定された変換をサポートしていません。|  
+|HYT00|タイムアウトが発生しました|データソースが要求された結果セットを返す前に、クエリのタイムアウト期間が経過しました。 タイムアウト期間は、SQLSetStmtAttr、SQL_ATTR_QUERY_TIMEOUT によって設定されます。|  
+|HYT01|接続タイムアウトの期限が切れました|データソースが要求に応答する前に、接続のタイムアウト期間が経過しました。 接続タイムアウト期間は、 **SQLSetConnectAttr**、SQL_ATTR_CONNECTION_TIMEOUT によって設定されます。|  
+|IM001|ドライバーはこの機能をサポートしていません|(DM) *StatementHandle*に関連付けられているドライバーでは、関数はサポートされていません。|  
+|IM017|非同期通知モードでは、ポーリングは無効になっています|通知モデルが使用されるたびに、ポーリングは無効になります。|  
+|IM018|**Sqlcompleteasync**は、このハンドルで前の非同期操作を完了するために呼び出されていません。|ハンドルに対する前の関数呼び出しで SQL_STILL_EXECUTING が返され、通知モードが有効になっている場合は、処理を完了するために、ハンドルで**Sqlcompleteasync**を呼び出して、操作を完了する必要があります。|  
   
 ## <a name="comments"></a>コメント  
- **SQLFetch**結果セット内の次の行セットを返します。 結果セットが存在する間だけ呼び出すことができます。 つまり、呼び出しの後に結果セットを作成すると、結果セット全体が閉じているカーソルの前に。 すべての列がバインドされている場合は、これらの列にデータを返します。 アプリケーションには、行の状態配列をフェッチされた行の数を返すバッファーへのポインターが指定した場合**SQLFetch**もこの情報を返します。 呼び出す**SQLFetch**への呼び出しに組み込むことができます**SQLFetchScroll**への呼び出しを混在させることはできませんが、 **SQLExtendedFetch**します。 詳細については、次を参照してください。[行のデータのフェッチ](../../../odbc/reference/develop-app/fetching-a-row-of-data.md)します。  
+ **Sqlfetch**は、結果セット内の次の行セットを返します。 結果セットが存在する場合にのみ呼び出すことができます。つまり、結果セットを作成する呼び出しの後、その結果セットのカーソルが閉じられる前に呼び出すことができます。 列がバインドされている場合は、それらの列のデータが返されます。 アプリケーションが、フェッチされた行の数を返す行の状態の配列またはバッファーへのポインターを指定した場合、 **Sqlfetch**はこの情報も返します。 **Sqlfetch**の呼び出しと**sqlfetchscroll**の呼び出しを混在させることはできますが、 **SQLExtendedFetch**の呼び出しと混在させることはできません。 詳細については、「[データ行のフェッチ](../../../odbc/reference/develop-app/fetching-a-row-of-data.md)」を参照してください。  
   
- 場合、ODBC 3 *.x*アプリケーションが動作する ODBC 2 *.x*ドライバー、ドライバー マネージャーは、マップ**SQLFetch**呼び出し**SQLExtendedFetch**のODBC 2 *.x*をサポートするドライバー **SQLExtendedFetch**します。 場合、ODBC 2 *.x*ドライバーがサポートしていない**SQLExtendedFetch**、ドライバー マネージャーは、マップ**SQLFetch**呼び出し**SQLFetch** ODBC 2 *.x*ドライバーで、1 つの行のみをフェッチすることができます。  
+ Odbc*2.x アプリケーションが*odbc*2.x ドライバーで*動作する場合、ドライバーマネージャーは**SQLExtendedFetch**をサポートする odbc*2.X ドライバーの* **sqlfetch**呼び出しを**SQLExtendedFetch**にマップします。 ODBC*2.x ドライバーが* **SQLExtendedFetch**をサポートしていない場合、ドライバーマネージャーは**sqlfetch**呼び出しを odbc*2.x ドライバーの* **sqlfetch**にマップします。これにより、1つの行のみがフェッチされます。  
   
- 詳細については、次を参照してください[ブロック カーソル、スクロール可能なカーソル、および下位互換性](../../../odbc/reference/appendixes/block-cursors-scrollable-cursors-and-backward-compatibility.md)で付録 g:。旧バージョンとの互換性のためのガイドラインをドライバーです。  
+ 詳細については、「付録 G:[ブロックカーソル、スクロール可能なカーソル、および旧バージョンとの互換性](../../../odbc/reference/appendixes/block-cursors-scrollable-cursors-and-backward-compatibility.md)」を参照してください。旧バージョンとの互換性のためのドライバーガイドライン。  
   
-## <a name="positioning-the-cursor"></a>カーソルを配置します。  
- 結果セットが作成されると、カーソルは結果セットの開始前にします。 **SQLFetch**次の行セットをフェッチします。 呼び出すことと同じである**SQLFetchScroll**で*FetchOrientation* SQL_FETCH_NEXT に設定します。 カーソルの詳細については、次を参照してください。[カーソル](../../../odbc/reference/develop-app/cursors.md)と[ブロック カーソル](../../../odbc/reference/develop-app/block-cursors.md)します。  
+## <a name="positioning-the-cursor"></a>カーソルの位置を指定する  
+ 結果セットが作成されると、カーソルが結果セットの先頭の前に配置されます。 **Sqlfetch**は次の行セットをフェッチします。 *Fetchorientation*を SQL_FETCH_NEXT に設定して**sqlfetchscroll**を呼び出すことと同じです。 カーソルの詳細については、「[カーソル](../../../odbc/reference/develop-app/cursors.md)と[ブロックカーソル](../../../odbc/reference/develop-app/block-cursors.md)」を参照してください。  
   
- SQL_ATTR_ROW_ARRAY_SIZE ステートメント属性は、行セット内の行の数を指定します。 によって、行セットをフェッチされている場合、 **SQLFetch** 、結果セットの末尾と重なる**SQLFetch**部分的な行セットを返します。 つまり、S + R - L より大きい、S は、開始行フェッチされる行セット、R の行セットのサイズは、あり L は、最後の 1 行の結果セットし、最初の左辺にのみ場合 S + 1 行の行セットは有効です。 残りの行は空であり、sql_row_norow であっての状態を持っています。  
+ SQL_ATTR_ROW_ARRAY_SIZE statement 属性は、行セット内の行の数を指定します。 **Sqlfetch**によってフェッチされる行セットが結果セットの末尾と重複する場合、 **sqlfetch**は部分的な行セットを返します。 つまり、S + R-1 が L よりも大きい場合 (S はフェッチされる行セットの開始行、R は行セットのサイズ、L は結果セットの最後の行)、行セットの最初の L-S + 1 行だけが有効です。 残りの行は空で、状態は SQL_ROW_NOROW です。  
   
- 後**SQLFetch** 、現在の行が行セットの最初の行を返します。  
+ **Sqlfetch**が返された後、現在の行が行セットの最初の行になります。  
   
- 次の表に記載されている規則は、呼び出しの後にカーソルの位置決めについて説明する**SQLFetch**このセクションでは、2 番目の表に示す条件に基づいて、します。  
+ 次の表に示すルールは、このセクションの2番目の表に示す条件に基づいて、 **Sqlfetch**の呼び出し後のカーソル位置を示しています。  
   
 |条件|新しい行セットの最初の行|  
 |---------------|-----------------------------|  
-|開始する前に|1|  
-|*CurrRowsetStart* \< =  *LastResultRow - 複合カーソル*[1]|*CurrRowsetStart* + *複合カーソル*[2]|  
-|*CurrRowsetStart* > *LastResultRow - 複合カーソル*[1]|終了後|  
+|開始前|1|  
+|*CurrRowsetStart*Lastresultrow-RowsetSize [1] \< = |CurrRowsetStart + *RowsetSize*[2]|  
+|CurrRowsetStart > *lastresultrow-RowsetSize*[1]|終了後|  
 |終了後|終了後|  
   
- [1] のフェッチ、行セットのサイズが変更された場合、前回フェッチで使用されていた行セットのサイズになります。  
+ [1] フェッチの間で行セットのサイズが変更された場合、これは前のフェッチで使用された行セットのサイズになります。  
   
- [2] のフェッチ、行セットのサイズが変更された場合、新しくフェッチで使用されていた行セットのサイズになります。  
+ [2] フェッチ間で行セットのサイズが変更された場合、これは新しいフェッチで使用された行セットのサイズです。  
   
-|表記法|説明|  
+|Notation|説明|  
 |--------------|-------------|  
-|開始する前に|ブロック カーソルは結果セットの開始前に配置されます。 新しい行セットの最初の行は、結果セットの開始前に、する場合**SQLFetch** sql_no_data が返されます。|  
-|終了後|ブロック カーソルは、結果の最後の設定後に配置されます。 場合、新しい行セットの最初の行は、結果セットの終了後**SQLFetch** sql_no_data が返されます。|  
-|*CurrRowsetStart*|現在の行セットの最初の行の数。|  
-|*LastResultRow*|結果セットの最後の行の数。|  
-|*複合カーソル*|行セットのサイズ。|  
+|開始前|ブロックカーソルは、結果セットの先頭の前に配置されます。 新しい行セットの最初の行が結果セットの先頭より前にある場合、 **Sqlfetch**は SQL_NO_DATA を返します。|  
+|終了後|ブロックカーソルは、結果セットの末尾の後に配置されます。 新しい行セットの最初の行が結果セットの末尾の後にある場合、 **Sqlfetch**は SQL_NO_DATA を返します。|  
+|*CurrRowsetStart*|現在の行セットの最初の行の番号。|  
+|*LastResultRow*|結果セットの最後の行の番号。|  
+|*RowsetSize*|行セットのサイズ。|  
   
- たとえば、結果セットが 100 行、行セットのサイズを 5 に設定するとします。 次の表に、によって返される行セットとリターン コード**SQLFetch**の別の開始位置。  
+ たとえば、結果セットの行数が100で、行セットのサイズが5であるとします。 次の表は、さまざまな開始位置に対して**Sqlfetch**によって返される行セットとリターンコードを示しています。  
   
-|現在の行セット|リターン コード|新しい行セット|フェッチされた行の数|  
+|現在の行セット|リターン コード|新しい行セット|フェッチされる行の数|  
 |--------------------|-----------------|----------------|------------------------|  
-|開始する前に|SQL_SUCCESS|1 ~ 5|5|  
+|開始前|SQL_SUCCESS|1 ~ 5|5|  
 |1 ~ 5|SQL_SUCCESS|6 ~ 10|5|  
-|52 に 56|SQL_SUCCESS|57 に 61|5|  
+|52 ~ 56|SQL_SUCCESS|57 ~ 61|5|  
 |91 ~ 95|SQL_SUCCESS|96 ~ 100|5|  
-|93 から 97 に|SQL_SUCCESS|98 ~ 100 です。 行 4 と 5 行の状態配列は、sql_row_norow であってに設定されます。|3|  
+|93 ~ 97|SQL_SUCCESS|98 ~ 100。 行の状態配列の行4および5は、SQL_ROW_NOROW に設定されています。|3|  
 |96 ~ 100|SQL_NO_DATA|[なし] :|0|  
 |99 ~ 100|SQL_NO_DATA|[なし] :|0|  
 |終了後|SQL_NO_DATA|[なし] :|0|  
   
-## <a name="returning-data-in-bound-columns"></a>バインドされた列内のデータを返す  
- として**SQLFetch**を返します。 それぞれの行に、その列にバインドされるバッファーにバインドされた各列のデータを入れします。 列がバインドされていない場合**SQLFetch**データは返されませんは、ブロック カーソルを前方移動します。 データを使用して引き続き取得できる**SQLGetData**します。 カーソルが複数行のカーソルの場合 (つまり、SQL_ATTR_ROW_ARRAY_SIZE が 1 より大きい)、 **SQLGetData** SQL_GD_BLOCK が返される場合にのみ呼び出すことができます**SQLGetInfo**を呼び出すと、 *情報の種類*SQL_GETDATA_EXTENSIONS の。 (詳細については、次を参照してください[SQLGetData](../../../odbc/reference/syntax/sqlgetdata-function.md)。)。  
+## <a name="returning-data-in-bound-columns"></a>バインドされた列のデータを返す  
+ **Sqlfetch**は各行を返すため、その列にバインドされている各列のデータをバッファーに格納します。 列がバインドされていない場合、 **Sqlfetch**はデータを返しませんが、ブロックカーソルを前方に移動します。 **SQLGetData**を使用してデータを取得することもできます。 カーソルが複数行のカーソルの場合 (つまり、SQL_ATTR_ROW_ARRAY_SIZE が1より大きい場合)、 *InfoType*が SQL_GETDATA_EXTENSIONS で呼び出され**たときに**SQL_GD_BLOCK が返された場合にのみ、 **SQLGetData**を呼び出すことができます。 (詳細については、「 [SQLGetData](../../../odbc/reference/syntax/sqlgetdata-function.md)」を参照してください)。  
   
- バインドされた各列の行**SQLFetch**は次の処理します。  
+ **Sqlfetch**は、行内のバインドされた列ごとに次のことを行います。  
   
-1.  SQL_NULL_DATA を長さ/インジケーター バッファーに設定し、データが NULL の場合は、次の列に進みます。 データが NULL で、長さ/インジケーター バッファーがバインドされていない、 **SQLFetch**行の SQLSTATE 22002 (インジケーター変数に必要なが指定されていません) を返し、次の行に進みます。 長さ/インジケーター バッファーのアドレスを確認する方法については、「バッファー アドレス」を参照してください[SQLBindCol](../../../odbc/reference/syntax/sqlbindcol-function.md)します。  
+1.  長さ/インジケーターバッファーを SQL_NULL_DATA に設定し、データが NULL の場合は次の列に進みます。 データが NULL で、長さ/インジケーターバッファーがバインドされていない場合、 **Sqlfetch**は、行の SQLSTATE 22002 (必要であるが指定されていないインジケーター変数) を返し、次の行に進みます。 長さ/インジケーターバッファーのアドレスを確認する方法の詳細については、 [SQLBindCol](../../../odbc/reference/syntax/sqlbindcol-function.md)の「buffer Addresses」を参照してください。  
   
-     列のデータが NULL でない場合**SQLFetch**手順 2. に進みます。  
+     列のデータが NULL でない場合、 **Sqlfetch**は手順2に進みます。  
   
-2.  SQL_ATTR_MAX_LENGTH ステートメント属性は、0 以外の値に設定されて、列には、文字またはバイナリ データが含まれている場合は、データは SQL_ATTR_MAX_LENGTH バイトに切り捨てられます。  
+2.  SQL_ATTR_MAX_LENGTH statement 属性が0以外の値に設定されていて、列に文字またはバイナリデータが含まれている場合、データは SQL_ATTR_MAX_LENGTH バイトに切り捨てられます。  
   
     > [!NOTE]  
-    >  SQL_ATTR_MAX_LENGTH ステートメント属性は、ネットワーク トラフィックを削減するものです。 一般に、ネットワーク経由で返す前に、データが切り捨てられますデータ ソースによって実装されます。 ドライバーとデータ ソースは、それをサポートする必要はありません。 そのため、データが特定のサイズに切り捨てられたことを確実に、アプリケーションする必要がありますそのサイズのバッファーを割り当てるし、サイズで指定、 *cbValueMax*引数**SQLBindCol**します。  
+    >  SQL_ATTR_MAX_LENGTH statement 属性は、ネットワークトラフィックを減らすことを目的としています。 通常、データソースによって実装されます。これにより、データはネットワーク経由で返される前に切り捨てられます。 ドライバーとデータソースは、それをサポートするためには必要ありません。 したがって、データが特定のサイズに切り捨てられることを保証するために、アプリケーションでは、そのサイズのバッファーを割り当て、 **SQLBindCol**の*cbValueMax*引数にサイズを指定する必要があります。  
   
-3.  指定された型にデータを変換*TargetType*で**SQLBindCol**します。  
+3.  **SQLBindCol**の*TargetType*によって指定された型にデータを変換します。  
   
-4.  データが文字またはバイナリなどの可変長データ型に変換された場合**SQLFetch**データの長さが、データ バッファーの長さを超えるかどうかを確認します。 (Null 終了文字を含む) の文字データのデータ バッファーの長さを超えている場合**SQLFetch** null 終了文字の長さ未満のデータ バッファーの長さのデータを切り捨てます。 Null 終端データ。 バイナリ データのデータ バッファーの長さを超えている場合**SQLFetch**データ バッファーの長さに切り捨てます。 データ バッファーの長さを指定した*BufferLength*で**SQLBindCol**します。  
+4.  データが文字やバイナリなどの可変長データ型に変換された場合、 **Sqlfetch**はデータの長さがデータバッファーの長さを超えているかどうかをチェックします。 文字データの長さ (null 終端文字を含む) がデータバッファーの長さを超えている場合、 **Sqlfetch**はデータを null 終端文字の長さより短いデータバッファーの長さに切り捨てます。 その後、データを null で終了します。 バイナリデータの長さがデータバッファーの長さを超える場合、 **Sqlfetch**はそれをデータバッファーの長さに切り捨てます。 データバッファーの長さは、 **SQLBindCol**で*bufferlength*を使用して指定します。  
   
-     **SQLFetch**切り捨てますしない固定長データ型に変換されたデータは、常に想定する、データ バッファーの長さはデータ型のサイズ。  
+     **Sqlfetch**は、固定長データ型に変換されたデータを切り捨てません。データバッファーの長さがデータ型のサイズであることが常に想定されます。  
   
-5.  変換された (および切り捨てられる可能性があります) のデータをデータ バッファーになります。 データ バッファーのアドレスを確認する方法については、「バッファー アドレス」を参照してください[SQLBindCol](../../../odbc/reference/syntax/sqlbindcol-function.md)します。  
+5.  変換された (場合によっては切り捨てられた) データをデータバッファーに配置します。 データバッファーのアドレスを確認する方法の詳細については、 [SQLBindCol](../../../odbc/reference/syntax/sqlbindcol-function.md)の「buffer Addresses」を参照してください。  
   
-6.  データの長さを長さ/インジケーター バッファーになります。 同じバッファーには、インジケーターのポインターと長さポインター両方設定されている場合 (への呼び出しとして**SQLBindCol**は)、長さが有効なデータのバッファーに書き込まれるおよび SQL_NULL_DATA が NULL のデータのバッファーに書き込まれます。 長さ/インジケーター バッファーがバインドされていない場合**SQLFetch**長さは返されません。  
+6.  長さ/インジケーターバッファーにデータの長さを格納します。 インジケーターポインターと長さポインターが両方とも ( **SQLBindCol**の呼び出しとして) 同じバッファーに設定されている場合、有効なデータの長さがバッファーに書き込まれ、SQL_NULL_DATA が NULL データ用のバッファーに書き込まれます。 長さ/インジケーターバッファーがバインドされていない場合、 **Sqlfetch**は長さを返しません。  
   
-    -   文字またはバイナリ データは、これは、データの長さの変換後と切り捨て前に、データのバッファーが小さすぎるため。 場合は、ドライバーは長い形式のデータの場合、変換後、データの長さを決定することはできません、SQL_NO_TOTAL に長さを設定します。 SQL_ATTR_MAX_LENGTH のステートメント属性によりデータが切り捨てられる場合は、この属性の値が実際の長さではなく長さ/インジケーター バッファーに格納されます。 これは、ドライバーには実際の長さを判断する方法があるないように、この属性が、変換前に、サーバー上のデータを切り捨てるに設計されているためにです。  
+    -   文字またはバイナリデータの場合、これは変換後のデータの長さであり、データバッファーが小さすぎるために切り捨てが行われます。 変換後にドライバーがデータの長さを決定できない場合は、長いデータの場合と同様に、長さを SQL_NO_TOTAL に設定します。 SQL_ATTR_MAX_LENGTH statement 属性によってデータが切り捨てられた場合、この属性の値は実際の長さではなく、長さ/インジケーターバッファーに格納されます。 これは、この属性は変換前にサーバー上のデータを切り捨てるように設計されているため、ドライバーが実際の長さを判断する方法がないためです。  
   
-    -   その他のすべてのデータ型の変換後、データの長さは、このこれは、データが変換される型のサイズがあります。  
+    -   他のすべてのデータ型については、変換後のデータの長さです。つまり、データが変換された型のサイズです。  
   
-     長さ/インジケーター バッファーのアドレスを確認する方法については、「バッファー アドレス」を参照してください[SQLBindCol](../../../odbc/reference/syntax/sqlbindcol-function.md)します。  
+     長さ/インジケーターバッファーのアドレスを確認する方法の詳細については、 [SQLBindCol](../../../odbc/reference/syntax/sqlbindcol-function.md)の「buffer Addresses」を参照してください。  
   
-7.  有効桁数を失うことがなく変換中にデータが切り捨てられるかどうか (たとえば、実数 1.234 が切り捨てられるは整数 1 が変換されるときに) **SQLFetch** SQLSTATE 01S07 を返します (分数が切り捨てられました) と sql _SUCCESS_WITH_INFO します。 データ バッファーの長さが小さすぎるため、データが切り捨てられる場合 (たとえば、文字列"abcdef"がバッファーに格納 4 バイト)、 **SQLFetch** SQLSTATE 01004 (データが切り捨てられました) と、SQL_SUCCESS_WITH_INFO を返します。 SQL_ATTR_MAX_LENGTH ステートメント属性によりデータが切り捨てられる場合**SQLFetch** SQL_SUCCESS を返し、SQLSTATE 01S07 は返されません (分数が切り捨てられました) または SQLSTATE 01004 (データが切り捨てられます)。 (たとえば、100,000 より大きい SQL_INTEGER 値が、SQL_C_TINYINT に変換された場合)、有効桁数の損失が変換中にデータが切り捨てられる場合**SQLFetch** SQLSTATE 22003 (範囲外の数値の値) を返します(行セットのサイズが 1 の場合)、SQL_ERROR または SQL_SUCCESS_WITH_INFO (行セットのサイズが 1 より大きい場合)。  
+7.  データが変換中に切り捨てられ、有効桁数が失われた場合 (たとえば、変換時に実数1.234 が整数1に切り捨てられた場合)、 **Sqlfetch**は SQLSTATE 01S07 (小数の切り捨て) と SQL_SUCCESS_WITH_INFO を返します。 データバッファーの長さが小さすぎるためにデータが切り捨てられた場合 (たとえば、文字列 "abcdef" が4バイトのバッファーに格納されている場合)、 **Sqlfetch**は SQLSTATE 01004 (データが切り捨てられました) と SQL_SUCCESS_WITH_INFO を返します。 SQL_ATTR_MAX_LENGTH statement 属性によってデータが切り捨てられた場合、 **Sqlfetch**は SQL_SUCCESS を返し、sqlstate 01S07 (小数部の切り捨て) または sqlstate 01004 (データの切り捨て) を返しません。 有効桁数の損失による変換中にデータが切り捨てられた場合 (たとえば、10万より大きい SQL_INTEGER 値が SQL_C_TINYINT に変換された場合)、 **Sqlfetch**は SQLSTATE 22003 (数値の範囲外) と SQL_ERROR (行セットのサイズが 1) または SQL_SUCCESS_WITH_INFO (行セットのサイズが1より大きい場合)。  
   
- バインドされたデータ バッファーおよび長さ/インジケーター バッファーの内容は定義されていない場合は**SQLFetch**または**SQLFetchScroll** SQL_SUCCESS または SQL_SUCCESS_WITH_INFO が返されません。  
+ **Sqlfetch**または**SQLFETCHSCROLL**が SQL_SUCCESS または SQL_SUCCESS_WITH_INFO を返さない場合、バインドされたデータバッファーと長さ/インジケーターバッファーの内容は未定義になります。  
   
 ## <a name="row-status-array"></a>行の状態の配列  
- 行の状態配列は、行セットの各行のステータスを返すに使用されます。 この配列のアドレスは、し、SQL_ATTR_ROW_STATUS_PTR ステートメント属性で指定されます。 配列は、アプリケーションが割り当てられる、SQL_ATTR_ROW_ARRAY_SIZE ステートメント属性で指定された数の要素を必要とします。 その値によって設定**SQLFetch**、 **SQLFetchScroll**、および**SQLBulkOperations**または**SQLSetPos** (それらが呼び出された場合を除く後で、カーソルが位置付けられている**SQLExtendedFetch**)。 SQL_ATTR_ROW_STATUS_PTR ステートメント属性の値が null ポインターの場合は、これらの関数は行のステータスを返しません。  
+ 行の状態の配列は、行セットの各行の状態を返すために使用されます。 この配列のアドレスは、SQL_ATTR_ROW_STATUS_PTR statement 属性で指定します。 配列は、アプリケーションによって割り当てられ、SQL_ATTR_ROW_ARRAY_SIZE statement 属性で指定された数の要素を持つ必要があります。 この値は、 **Sqlfetch**、 **sqlfetchscroll**、および**Sqlbulkoperations**または**SQLSetPos**によって設定されます (カーソルが**SQLExtendedFetch**によって配置された後に呼び出された場合を除く)。 SQL_ATTR_ROW_STATUS_PTR statement 属性の値が null ポインターの場合、これらの関数は行の状態を返しません。  
   
- 行の状態配列バッファーの内容は定義されていない場合は**SQLFetch**または**SQLFetchScroll** SQL_SUCCESS または SQL_SUCCESS_WITH_INFO が返されません。  
+ **Sqlfetch**または**SQLFETCHSCROLL**が SQL_SUCCESS または SQL_SUCCESS_WITH_INFO を返さない場合、行ステータス配列バッファーの内容は未定義になります。  
   
- 行の状態配列では、次の値が返されます。  
+ 次の値が行の状態配列に返されます。  
   
-|行の状態の配列の値|説明|  
+|行の状態の配列値|説明|  
 |----------------------------|-----------------|  
-|SQL_ROW_SUCCESS|この行が正常にフェッチされたれ、この結果セットから最後にフェッチした後は変更されていません。|  
-|SQL_ROW_SUCCESS_WITH_INFO|この行が正常にフェッチされたれ、この結果セットから最後にフェッチした後は変更されていません。 ただし、行の詳細については、警告が返されました。|  
+|SQL_ROW_SUCCESS|行は正常にフェッチされました。この行は、この結果セットから最後にフェッチされてから変更されていません。|  
+|SQL_ROW_SUCCESS_WITH_INFO|行は正常にフェッチされました。この行は、この結果セットから最後にフェッチされてから変更されていません。 ただし、行に関する警告が返されました。|  
 |SQL_ROW_ERROR|行のフェッチ中にエラーが発生しました。|  
-|SQL_ROW_UPDATED [1]、[2] と [3]|行が正常にフェッチし、この結果セットから最後にフェッチした後に変更されました。 行をこの結果セットから、再びフェッチはによって更新されますか**SQLSetPos**状態は、行の新しい状態に変更されます。|  
-|SQL_ROW_DELETED [3]|この結果セットから最後にフェッチしたため、行が削除されました。|  
-|SQL_ROW_ADDED [4]|行が挿入された**SQLBulkOperations**します。 行をこの結果セットから、再びフェッチはによって更新されますか**SQLSetPos**、その状態が SQL_ROW_SUCCESS します。|  
-|SQL_ROW_NOROW であって|行セットには、結果セットの末尾がオーバー ラップされ、この要素の行の状態配列に対応する行が返されません。|  
+|SQL_ROW_UPDATED [1]、[2]、[3]|行は正常にフェッチされました。この行は、この結果セットから最後にフェッチされてから変更されています。 行がこの結果セットから再びフェッチされた場合、または**SQLSetPos**によって更新された場合、状態は行の新しい状態に変わります。|  
+|SQL_ROW_DELETED[3]|この行は、この結果セットから最後にフェッチされてから削除されています。|  
+|SQL_ROW_ADDED[4]|行は**Sqlbulkoperations**によって挿入されました。 行がこの結果セットから再びフェッチされた場合、または**SQLSetPos**によって更新された場合、その状態は SQL_ROW_SUCCESS になります。|  
+|SQL_ROW_NOROW|行セットには、結果セットの末尾が重なっています。行の状態配列のこの要素にこれする行は返されませんでした。|  
   
- [1] の keyset、混合、および動的カーソルでは、データの行が削除されていると見なされますキー値が更新された場合と新しい行を追加します。  
+ [1] キーセット、混合、および動的カーソルの場合、キー値が更新されると、データ行は削除され、新しい行が追加されたと見なされます。  
   
- [2] のドライバーでは、データへの更新を検出できないし、そのため、この値を返すことはできません。 アプリケーションを呼び出すドライバーが行の再フェッチの更新を検出できるかどうかを判断する**SQLGetInfo** SQL_ROW_UPDATES オプションを使用します。  
+ [2] 一部のドライバーがデータの更新を検出できないため、この値を返すことができません。 ドライバーが refetched 行の更新を検出できるかどうかを判断するには、アプリケーションは SQL_ROW_UPDATES オプションを使用して**SQLGetInfo**を呼び出します。  
   
- [3] **SQLFetch**への呼び出しでの混在がある場合のみ、この値を返すことができます**SQLFetchScroll**します。 これは、ため**SQLFetch**結果セットを前方に移動します。 とのみ使用する場合が任意の行を更新できません。 行が再フェッチしないため、 **SQLFetch**以前にフェッチした行に加えられた変更を検出しません。 ただし場合、 **SQLFetchScroll**いずれかが以前に行をフェッチする前にカーソルが置かれますと**SQLFetch**これらの行をフェッチするために使用**SQLFetch**への変更を検出できますこれらの行。  
+ [3] **Sqlfetch**は、 **sqlfetchscroll**の呼び出しが混在している場合にのみ、この値を返すことができます。 これは、 **Sqlfetch**は結果セットを前方に移動し、排他的に使用されている場合は行を再フェッチません。 行が既にフェッチされていないため、 **Sqlfetch**は以前にフェッチされた行に対して行われた変更を検出しません。 ただし、以前にフェッチされた行と**Sqlfetch**を使用して行をフェッチする前に、 **sqlfetchscroll**がカーソルを移動すると、それらの行に対する変更が**sqlfetch**によって検出されます。  
   
- [4] SQLBulkOperations によってのみ返されます。 設定されていない**SQLFetch**または**SQLFetchScroll**します。  
+ [4] SQLBulkOperations によってのみ返されます。 **Sqlfetch**または**sqlfetchscroll**では設定されません。  
   
-### <a name="rows-fetched-buffer"></a>行がフェッチ バッファー  
- バッファーをフェッチされた行は、対象のデータが返されなかったがフェッチされているときにエラーが発生したため、これらの行を含む、フェッチされた行の数を返すために使用します。 つまり、行の状態配列内の値のない sql_row_norow であって行の数になります。 このバッファーのアドレスは、SQL_ATTR_ROWS_FETCHED_PTR ステートメント属性で指定されます。 バッファーは、アプリケーションによって割り当てられます。 によって設定された**SQLFetch**と**SQLFetchScroll**します。 SQL_ATTR_ROWS_FETCHED_PTR ステートメント属性の値が null ポインターの場合は、これらの関数にフェッチされる行数は返されません。 結果セットの現在の行の数を決定するには、アプリケーションを呼び出すことができます**SQLGetStmtAttr** SQL_ATTR_ROW_NUMBER 属性を持つ。  
+### <a name="rows-fetched-buffer"></a>フェッチされる行のバッファー  
+ フェッチされた行数は、フェッチ中にエラーが発生したためにデータが返されなかった行も含めて、フェッチされた行の数を返すために使用されます。 つまり、行の状態配列の値が SQL_ROW_NOROW されていない行の数です。 このバッファーのアドレスは、SQL_ATTR_ROWS_FETCHED_PTR statement 属性で指定します。 バッファーは、アプリケーションによって割り当てられます。 これは**Sqlfetch**および**sqlfetchscroll**によって設定されます。 SQL_ATTR_ROWS_FETCHED_PTR statement 属性の値が null ポインターの場合、これらの関数はフェッチされた行の数を返しません。 アプリケーションでは、結果セット内の現在の行の数を確認するために、SQL_ATTR_ROW_NUMBER 属性を使用して**SQLGetStmtAttr**を呼び出すことができます。  
   
- フェッチされた行のバッファーの内容は定義されていない場合は**SQLFetch**または**SQLFetchScroll**返さない SQL_SUCCESS または SQL_SUCCESS_WITH_INFO、SQL_NO_DATA が返される場合、その場合を除く、バッファーをフェッチされた行の値は 0 に設定されます。  
+ フェッチされた行の内容は、 **Sqlfetch**または**SQLFETCHSCROLL**が SQL_SUCCESS または SQL_SUCCESS_WITH_INFO を返さない場合には未定義です。ただし、SQL_NO_DATA が返された場合は、フェッチされたバッファーの行の値が0に設定されます。  
   
 ### <a name="error-handling"></a>エラー処理  
- エラーと警告は、個々 の行にまたは関数全体を適用できます。 診断レコードの詳細については、次を参照してください。[診断](../../../odbc/reference/develop-app/diagnostics.md)と[SQLGetDiagField](../../../odbc/reference/syntax/sqlgetdiagfield-function.md)します。  
+ エラーと警告は、個々の行または関数全体に適用できます。 診断レコードの詳細については、「[診断](../../../odbc/reference/develop-app/diagnostics.md)と[SQLGetDiagField](../../../odbc/reference/syntax/sqlgetdiagfield-function.md)」を参照してください。  
   
-#### <a name="errors-and-warnings-on-the-entire-function"></a>関数全体に関するエラーと警告  
- かどうか、エラーは SQLSTATE HYT00 など、関数全体に適用されます。 (タイムアウトの期限切れ) または SQLSTATE 24000 (無効なカーソルの状態)、 **SQLFetch** SQL_ERROR と適切な SQLSTATE を返します。 行セットのバッファーの内容は定義されていないと、カーソル位置は変更されません。  
+#### <a name="errors-and-warnings-on-the-entire-function"></a>関数全体のエラーと警告  
+ SQLSTATE HYT00 (タイムアウト期限切れ) や SQLSTATE 24000 (無効なカーソル状態) などの関数全体にエラーが適用された場合、 **Sqlfetch**は SQL_ERROR および該当する sqlstate を返します。 行セットバッファーの内容は未定義で、カーソル位置は変更されません。  
   
- 警告は、関数全体に適用される場合**SQLFetch** SQL_SUCCESS_WITH_INFO と適切な SQLSTATE を返します。 状態レコードの個々 の行に適用される前に、関数全体に適用される警告の状態レコードが返されます。  
+ 関数全体に警告が適用された場合、 **Sqlfetch**は SQL_SUCCESS_WITH_INFO および該当する SQLSTATE を返します。 関数全体に適用される警告の状態レコードは、個々の行に適用される状態レコードの前に返されます。  
   
-#### <a name="errors-and-warnings-in-individual-rows"></a>個々 の行でエラーや警告  
- (SQLSTATE 22012 (ゼロによる除算)) などのエラーまたは警告 (SQLSTATE 01004 (データが切り捨てられました)) などは、1 つの行に適用される場合**SQLFetch**は次の処理します。  
+#### <a name="errors-and-warnings-in-individual-rows"></a>個々の行のエラーと警告  
+ エラー (SQLSTATE 22012 (0 除算) など) または警告 (SQLSTATE 01004 (データの切り捨て) など) が1つの行に適用される場合、 **Sqlfetch**は次のことを行います。  
   
--   警告のエラーや SQL_ROW_SUCCESS_WITH_INFO、SQL_ROW_ERROR に行の状態配列の対応する要素を設定します。  
+-   行状態配列の対応する要素を SQL_ROW_ERROR に設定します。エラーの場合は SQL_ROW_SUCCESS_WITH_INFO、警告の場合はに設定します。  
   
--   エラーまたは警告の SQLSTATEs を含む 0 個以上の状態レコードを追加します。  
+-   エラーまたは警告の SQLSTATEs を含む0個以上の状態レコードを追加します。  
   
--   状態レコード内の行と列の数値フィールドを設定します。 場合**SQLFetch**行または列の数を決定することはできませんそれぞれを SQL_ROW_NUMBER_UNKNOWN または SQL_COLUMN_NUMBER_UNKNOWN、その番号に設定にします。 状態レコードが特定の列に適用されない場合**SQLFetch** SQL_NO_COLUMN_NUMBER 列番号を設定します。  
+-   状態レコード内の行と列の番号フィールドを設定します。 **Sqlfetch**が行または列の番号を特定できない場合は、その数値を SQL_ROW_NUMBER_UNKNOWN または SQL_COLUMN_NUMBER_UNKNOWN にそれぞれ設定します。 状態レコードが特定の列に適用されない場合、 **Sqlfetch**は列番号を SQL_NO_COLUMN_NUMBER に設定します。  
   
- **SQLFetch**まで、行セット内のすべての行をフェッチした行のフェッチが続行されます。 後者 SQL_ERROR を返します (sql_row_norow であっての状態を持つ行を除く)、行セットのすべての行でエラーが発生しない限り、SQL_SUCCESS_WITH_INFO を返します。 行セットのサイズが 1 で、その行でエラーが発生した場合、特に**SQLFetch** SQL_ERROR を返します。  
+ **Sqlfetch**は、行セット内のすべての行がフェッチされるまで、行のフェッチを続行します。 行セットのすべての行でエラーが発生した場合 (status SQL_ROW_NOROW の行は含まない)、SQL_SUCCESS_WITH_INFO が返されます。この場合、SQL_ERROR が返されます。 特に、行セットのサイズが1で、その行でエラーが発生した場合、 **Sqlfetch**は SQL_ERROR を返します。  
   
- **SQLFetch**行番号の順序で状態レコードを返します。 つまり、不明な行 (あれば) のすべての状態レコードを返します最初の行 (あれば) では、すべての状態レコードが返されます次と 2 番目の行 (あれば)、すべての状態レコードを返します。 行ごとに状態レコードは通常の状態レコードの順序の規則に従って順序付け詳細についてを参照してください「の状態レコードのシーケンス」 [SQLGetDiagField](../../../odbc/reference/syntax/sqlgetdiagfield-function.md)します。  
+ **Sqlfetch**は、行番号の順序で状態レコードを返します。 つまり、不明な行 (存在する場合) のすべての状態レコードが返されます。次に、最初の行 (存在する場合) のすべての状態レコードを返し、2番目の行 (存在する場合) のすべてのステータスレコードを返します。 各行の状態レコードは、ステータスレコードの順序付けに関する通常のルールに従って並べ替えられます。詳細については、 [SQLGetDiagField](../../../odbc/reference/syntax/sqlgetdiagfield-function.md)の「状態レコードのシーケンス」を参照してください。  
   
-### <a name="descriptors-and-sqlfetch"></a>記述子および SQLFetch  
- 次のセクションで説明する方法**SQLFetch**記述子と対話します。  
+### <a name="descriptors-and-sqlfetch"></a>記述子と SQLFetch  
+ 以下のセクションでは、 **Sqlfetch**が記述子と対話する方法について説明します。  
   
-#### <a name="argument-mappings"></a>引数マッピング  
- ドライバーの引数に基づいた任意の記述子フィールドを設定しない**SQLFetch**します。  
+#### <a name="argument-mappings"></a>引数のマッピング  
+ ドライバーは、 **Sqlfetch**の引数に基づいて記述子フィールドを設定しません。  
   
 #### <a name="other-descriptor-fields"></a>その他の記述子フィールド  
- 次の記述子フィールドを使って**SQLFetch**します。  
+ **Sqlfetch**では、次の記述子フィールドが使用されます。  
   
-|記述子フィールド|Desc です。|内のフィールド|使用して設定します。|  
+|記述子フィールド|順.|のフィールド|設定|  
 |----------------------|-----------|--------------|-----------------|  
-|SQL_DESC_ARRAY_SIZE|ARD|ヘッダー|SQL_ATTR_ROW_ARRAY_SIZE ステートメント属性|  
-|SQL_DESC_ARRAY_STATUS_PTR|IRD|ヘッダー|SQL_ATTR_ROW_STATUS_PTR ステートメント属性|  
-|SQL_DESC_BIND_OFFSET_PTR|ARD|ヘッダー|SQL_ATTR_ROW_BIND_OFFSET_PTR ステートメント属性|  
-|SQL_DESC_BIND_TYPE|ARD|ヘッダー|SQL_ATTR_ROW_BIND_TYPE ステートメント属性|  
-|SQL_DESC_COUNT|ARD|ヘッダー|*ColumnNumber*の引数**SQLBindCol**|  
-|SQL_DESC_DATA_PTR|ARD|レコード|*TargetValuePtr*の引数**SQLBindCol**|  
-|SQL_DESC_INDICATOR_PTR|ARD|レコード|*StrLen_or_IndPtr*引数**SQLBindCol**|  
-|SQL_DESC_OCTET_LENGTH|ARD|レコード|*BufferLength*引数**SQLBindCol**|  
-|SQL_DESC_OCTET_LENGTH_PTR|ARD|レコード|*StrLen_or_IndPtr*引数**SQLBindCol**|  
-|SQL_DESC_ROWS_PROCESSED_PTR|IRD|ヘッダー|SQL_ATTR_ROWS_FETCHED_PTR ステートメント属性|  
-|SQL_DESC_TYPE|ARD|レコード|*TargetType*引数**SQLBindCol**|  
+|SQL_DESC_ARRAY_SIZE|ブロ|項目|SQL_ATTR_ROW_ARRAY_SIZE statement 属性|  
+|SQL_DESC_ARRAY_STATUS_PTR|IRD|項目|SQL_ATTR_ROW_STATUS_PTR statement 属性|  
+|SQL_DESC_BIND_OFFSET_PTR|ブロ|項目|SQL_ATTR_ROW_BIND_OFFSET_PTR statement 属性|  
+|SQL_DESC_BIND_TYPE|ブロ|項目|SQL_ATTR_ROW_BIND_TYPE statement 属性|  
+|SQL_DESC_COUNT|ブロ|項目|**SQLBindCol**の*columnnumber*引数|  
+|SQL_DESC_DATA_PTR|ブロ|レコード|**SQLBindCol**の*targetvalueptr*引数|  
+|SQL_DESC_INDICATOR_PTR|ブロ|レコード|**SQLBindCol**の*StrLen_or_IndPtr*引数|  
+|SQL_DESC_OCTET_LENGTH|ブロ|レコード|**SQLBindCol**の*bufferlength*引数|  
+|SQL_DESC_OCTET_LENGTH_PTR|ブロ|レコード|**SQLBindCol**の*StrLen_or_IndPtr*引数|  
+|SQL_DESC_ROWS_PROCESSED_PTR|IRD|項目|SQL_ATTR_ROWS_FETCHED_PTR statement 属性|  
+|SQL_DESC_TYPE|ブロ|レコード|**SQLBindCol**の*TargetType*引数|  
   
- すべての記述子フィールドを設定することも**SQLSetDescField**します。  
+ すべての記述子フィールドは、 **SQLSetDescField**を使用して設定することもできます。  
   
-#### <a name="separate-length-and-indicator-buffers"></a>別の長さとインジケーター バッファー  
- アプリケーションには、1 つのバッファーまたは長さとインジケーターの値を保持するために使用できる 2 つの独立したバッファーをバインドできます。 アプリケーションを呼び出すと**SQLBindCol**、ドライバーでは、同じアドレスに、ARD の SQL_DESC_OCTET_LENGTH_PTR および SQL_DESC_INDICATOR_PTR のフィールドを設定する、 *StrLen_or_IndPtr*引数。 アプリケーションを呼び出すと**SQLSetDescField**または**SQLSetDescRec**、異なるアドレスにこれら 2 つのフィールドを設定できます。  
+#### <a name="separate-length-and-indicator-buffers"></a>長さとインジケーターバッファーを分離する  
+ アプリケーションでは、長さとインジケーターの値を保持するために使用できる1つのバッファーまたは2つの個別のバッファーをバインドできます。 アプリケーションが**SQLBindCol**を呼び出すと、ドライバーは、の SQL_DESC_OCTET_LENGTH_PTR および SQL_DESC_INDICATOR_PTR フィールドを同じアドレスに設定します。このアドレスは*StrLen_or_IndPtr*引数で渡されます。 アプリケーションが**SQLSetDescField**または**SQLSetDescRec**を呼び出すと、これらの2つのフィールドを異なるアドレスに設定できます。  
   
- **SQLFetch**アプリケーションが別の長さとインジケーターのバッファーを指定するかどうかを決定します。 この場合は、ときに、データが NULL でない**SQLFetch**インジケーター バッファーを 0 に設定し、長さのバッファーの長さを返します。 データが null の場合、 **SQLFetch** SQL_NULL_DATA をインジケーター バッファーに設定し、長さのバッファーは変更されません。  
+ **Sqlfetch**は、アプリケーションで個別の長さとインジケーターバッファーが指定されているかどうかを判断します。 この場合、データが NULL でない場合、 **Sqlfetch**はインジケーターバッファーを0に設定し、長さバッファーの長さを返します。 データが NULL の場合、 **Sqlfetch**はインジケーターバッファーを SQL_NULL_DATA に設定し、長さバッファーを変更しません。  
   
 ### <a name="code-example"></a>コード例  
- 参照してください[SQLBindCol](../../../odbc/reference/syntax/sqlbindcol-function.md)、 [SQLColumns](../../../odbc/reference/syntax/sqlcolumns-function.md)、 [SQLGetData](../../../odbc/reference/syntax/sqlgetdata-function.md)、および[SQLProcedures](../../../odbc/reference/syntax/sqlprocedures-function.md)します。  
+ 「 [SQLBindCol](../../../odbc/reference/syntax/sqlbindcol-function.md)、 [sqlcolumns](../../../odbc/reference/syntax/sqlcolumns-function.md)、 [SQLGetData](../../../odbc/reference/syntax/sqlgetdata-function.md)、および[sqlcolumns](../../../odbc/reference/syntax/sqlprocedures-function.md)」を参照してください。  
   
 ### <a name="related-functions"></a>関連する関数  
   
 |詳細|参照先|  
 |---------------------------|---------|  
-|バッファーを結果セット内の列にバインドします。|[SQLBindCol 関数](../../../odbc/reference/syntax/sqlbindcol-function.md)|  
-|ステートメントの処理をキャンセル|[SQLCancel 関数](../../../odbc/reference/syntax/sqlcancel-function.md)|  
-|結果セット内の列に関する情報を返す|[SQLDescribeCol 関数](../../../odbc/reference/syntax/sqldescribecol-function.md)|  
-|SQL ステートメントを実行します。|[SQLExecDirect 関数](../../../odbc/reference/syntax/sqlexecdirect-function.md)|  
-|準備された SQL ステートメントを実行します。|[SQLExecute 関数](../../../odbc/reference/syntax/sqlexecute-function.md)|  
-|データのブロックをフェッチしています。 または、結果をスクロールの設定|[SQLFetchScroll 関数](../../../odbc/reference/syntax/sqlfetchscroll-function.md)|  
+|結果セット内の列へのバッファーのバインド|[SQLBindCol 関数](../../../odbc/reference/syntax/sqlbindcol-function.md)|  
+|ステートメント処理の取り消し|[SQLCancel 関数](../../../odbc/reference/syntax/sqlcancel-function.md)|  
+|結果セットの列に関する情報を返す|[SQLDescribeCol 関数](../../../odbc/reference/syntax/sqldescribecol-function.md)|  
+|SQL ステートメントの実行|[SQLExecDirect 関数](../../../odbc/reference/syntax/sqlexecdirect-function.md)|  
+|準備された SQL ステートメントの実行|[SQLExecute 関数](../../../odbc/reference/syntax/sqlexecute-function.md)|  
+|データのブロックのフェッチまたは結果セットのスクロール|[SQLFetchScroll 関数](../../../odbc/reference/syntax/sqlfetchscroll-function.md)|  
 |ステートメントでカーソルを閉じる|[SQLFreeStmt 関数](../../../odbc/reference/syntax/sqlfreestmt-function.md)|  
-|列のデータの一部またはすべてをフェッチしています|[SQLGetData 関数](../../../odbc/reference/syntax/sqlgetdata-function.md)|  
-|結果の数を返すセットの列|[SQLNumResultCols 関数](../../../odbc/reference/syntax/sqlnumresultcols-function.md)|  
-|実行するステートメントを準備します。|[SQLPrepare 関数](../../../odbc/reference/syntax/sqlprepare-function.md)|  
+|データ列の一部またはすべてをフェッチしています|[SQLGetData 関数](../../../odbc/reference/syntax/sqlgetdata-function.md)|  
+|結果セットの列数を返す|[SQLNumResultCols 関数](../../../odbc/reference/syntax/sqlnumresultcols-function.md)|  
+|実行するステートメントの準備|[SQLPrepare 関数](../../../odbc/reference/syntax/sqlprepare-function.md)|  
   
 ## <a name="see-also"></a>参照  
  [ODBC API リファレンス](../../../odbc/reference/syntax/odbc-api-reference.md)   

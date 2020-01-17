@@ -1,5 +1,5 @@
 ---
-title: PDOStatement::bindValue |Microsoft Docs
+title: 'PDOStatement:: bindValue |Microsoft Docs'
 ms.custom: ''
 ms.date: 05/22/2018
 ms.prod: sql
@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 13bc4ece-420e-4887-8809-bf0705ddf126
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: d7ae069a5bb485f4b74a11b066f5871aba2f30ec
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.openlocfilehash: 89126d696f7210132adb5ef10ec557604ebc543f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51606282"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67993124"
 ---
 # <a name="pdostatementbindvalue"></a>PDOStatement::bindValue
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -77,10 +76,10 @@ while ($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
 ```
 
 > [!NOTE]
-> 値をバインドするときに、入力として文字列を使用することをお勧め、[列を decimal 型または numeric](https://docs.microsoft.com/sql/t-sql/data-types/decimal-and-numeric-transact-sql) PHP での有効桁数が限られているために、精度と正確性を確実に[浮動小数点数](https://php.net/manual/en/language.types.float.php)します。 特にの範囲外の値が場合に、bigint 列にも同様、[整数](../../t-sql/data-types/int-bigint-smallint-and-tinyint-transact-sql.md)します。
+> 値を [10 進数列または数値列](https://docs.microsoft.com/sql/t-sql/data-types/decimal-and-numeric-transact-sql)にバインドするときは、有効桁数と精度を保持するために、入力として文字列を使用することをお勧めします。これは、PHP には[浮動小数点数](https://php.net/manual/en/language.types.float.php)の有効桁数に制限があるためです。 値が[整数](../../t-sql/data-types/int-bigint-smallint-and-tinyint-transact-sql.md)の範囲外にある場合は特に、同じことが bigint 列にも適用されます。
 
 ## <a name="example"></a>例  
-このコード サンプルでは、入力パラメーターとして 10 進値をバインドする方法を示します。  
+このコード サンプルでは、入力パラメーターとして 10 進数値をバインドする方法を示しています。  
 
 ```
 <?php  

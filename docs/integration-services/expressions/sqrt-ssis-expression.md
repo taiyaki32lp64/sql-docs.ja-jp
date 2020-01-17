@@ -11,17 +11,20 @@ helpviewer_keywords:
 - SQRT function
 - square root of given expression
 ms.assetid: 54a75389-c501-4e22-87b8-905f66d6a3a5
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: 32d755dbf79a57552c73a79a3c8a1daad60dd208
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: a13d07fe353c4d10345cce609f4b82cd7019db6c
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47608380"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71297394"
 ---
 # <a name="sqrt-ssis-expression"></a>SQRT (SSIS 式)
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   数値式の平方根を返します。  
   
 ## <a name="syntax"></a>構文  

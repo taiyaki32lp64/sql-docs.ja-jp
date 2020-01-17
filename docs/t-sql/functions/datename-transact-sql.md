@@ -22,16 +22,15 @@ helpviewer_keywords:
 - comparing dates times [SQL Server]
 - dates [SQL Server], dateparts
 ms.assetid: 11855b56-c554-495d-aad4-ba446990153b
-author: MashaMSFT
-ms.author: mathoma
-manager: craigg
+author: MikeRayMSFT
+ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: e430a8b3555fe42377950d5176e63e7d487ff277
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 6052e7eb0e759b7821ac8d7ad6b213fef188be06
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47609170"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75255818"
 ---
 # <a name="datename-transact-sql"></a>DATENAME (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -106,7 +105,7 @@ DATENAME ( datepart , date )
 ## <a name="default-returned-for-a-datepart-that-is-not-in-the-date-argument"></a>date 引数に存在しない datepart を指定した場合に返される既定値  
 *date* 引数のデータ型に *datepart* が指定されていない場合、`DATENAME` は、*date* 引数にリテラルが含まれる場合にのみ、その *datepart* の既定値を返します。
   
-* * など、既定の年-月-日の任意の**日付**データ型は 1900年-01-01 です。 このステートメントでは、*datepart* 引数と *date* 引数にそれぞれ日付部分と時刻を表す値が指定されています。`DATENAME` は `1900, January, 1, 1, Monday` を返します。
+など、既定の年-月-日の任意の**日付**データ型は 1900年-01-01 です。 このステートメントでは、*datepart* 引数と *date* 引数にそれぞれ日付部分と時刻を表す値が指定されています。`DATENAME` は `1900, January, 1, 1, Monday` を返します。
   
 ```sql
 SELECT DATENAME(year, '12:10:30.123')  
@@ -116,14 +115,14 @@ SELECT DATENAME(year, '12:10:30.123')
     ,DATENAME(weekday, '12:10:30.123');  
 ```  
   
-*date* が変数またはテーブル列として指定され、その変数または列のデータ型に *datepart* が指定されていない場合、`DATENAME` はエラー 9810 を返します。 この例では、変数 *@t* に **time** データ型があります。 **time** データ型の日付部分の年度が無効なため、この例は失敗します。
+*date* が変数またはテーブル列として指定され、その変数または列のデータ型に *datepart* が指定されていない場合、`DATENAME` はエラー 9810 を返します。 この例では、変数 *\@t* は **time** データ型です。 **time** データ型の日付部分の年度が無効なため、この例は失敗します。
   
 ```sql
 DECLARE @t time = '12:10:30.123';   
 SELECT DATENAME(year, @t);  
 ```  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
 
 次の句で `DATENAME` を使用します。
 
@@ -135,7 +134,7 @@ SELECT DATENAME(year, @t);
   
 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] , 、DATENAME は、文字列リテラルを暗黙的にキャスト、 **datetime2** 型です。 つまり、`DATENAME` では、日付が文字列として渡される場合、YDM 形式がサポートされません。 文字列を明示的にキャストする必要があります、 **datetime** または **smalldatetime** YDM 形式を使用する型。
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
 この例は、指定された日付の日付部分を返します。 SELECT ステートメントの `datepart` 引数の代わりにテーブルの *datepart* 値を使用します。
   
 `SELECT DATENAME(datepart,'2007-10-30 12:15:32.1234567 +05:10');`
@@ -150,14 +149,14 @@ SELECT DATENAME(year, @t);
 |**dayofyear、dy、y**|303|  
 |**day、dd、d**|30|  
 |**week、wk、ww**|44|  
-|**weekday、dw**|火曜日|  
+|**weekday、dw**|Tuesday|  
 |**hour、hh**|12|  
 |**minute、n**|15|  
 |**second、ss、s**|32|  
 |**millisecond、ms**|123|  
 |**microsecond、mcs**|123456|  
 |**nanosecond、ns**|123456700|  
-|**TZoffset、tz**|310|  
+|**TZoffset、tz**|+05:10|  
 |**ISO_WEEK、ISOWK、ISOWW**|44|  
   
 [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] および [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]
@@ -178,14 +177,14 @@ SELECT DATENAME(datepart,'2007-10-30 12:15:32.1234567 +05:10');
 |**dayofyear、dy、y**|303|  
 |**day、dd、d**|30|  
 |**week、wk、ww**|44|  
-|**weekday、dw**|火曜日|  
+|**weekday、dw**|Tuesday|  
 |**hour、hh**|12|  
 |**minute、n**|15|  
 |**second、ss、s**|32|  
 |**millisecond、ms**|123|  
 |**microsecond、mcs**|123456|  
 |**nanosecond、ns**|123456700|  
-|**TZoffset、tz**|310|  
+|**TZoffset、tz**|+05:10|  
 |**ISO_WEEK、ISOWK、ISOWW**|44|  
   
 ## <a name="see-also"></a>参照

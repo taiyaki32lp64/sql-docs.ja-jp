@@ -1,159 +1,159 @@
 ---
-title: Analytics Platform System でのワークロード管理 |Microsoft Docs
-description: Analytics Platform System でワークロードの管理。
+title: ワークロード管理
+description: 分析プラットフォームシステムのワークロード管理。
 author: mzaman1
-manager: craigg
 ms.prod: sql
 ms.technology: data-warehouse
 ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: 2281262c086f4d8dcab27debc8bb735ea5e8e1ba
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.custom: seo-dt-2019
+ms.openlocfilehash: d14714cb23a9f6b0d6cc63ddca5049cb6741017c
+ms.sourcegitcommit: d587a141351e59782c31229bccaa0bff2e869580
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52419883"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74399446"
 ---
-# <a name="workload-management-in-analytics-platform-system"></a>Analytics Platform System でのワークロード管理
+# <a name="workload-management-in-analytics-platform-system"></a>Analytics Platform System のワークロード管理
 
-SQL Server PDW のワークロード管理機能は、ユーザーと管理者は、メモリと同時実行の構成を事前設定する要求を割り当てることを許可します。 すべての要求を枯渇させて永久になく、適切なリソースをさせることが要求を許可することで、一貫性のある、または混合、ワークロードのパフォーマンスを向上させるために、ワークロード管理を使用します。  
+SQL Server PDW のワークロード管理機能を使用すると、ユーザーと管理者は、事前設定されたメモリの構成および同時実行に対して要求を割り当てることができます。 ワークロード管理を使用すると、要求が永久に失われることなく、要求に適切なリソースを割り当てることができるため、一貫性のある、または混在するワークロードのパフォーマンスを向上させることができます。  
   
-たとえば、SQL Server PDW のワークロード管理機能を操作できます。  
+たとえば、SQL Server PDW のワークロード管理手法を使用すると、次のことができます。  
   
--   リソースを読み込みジョブの数が多いを割り当てます。  
+-   負荷ジョブに大量のリソースを割り当てます。  
   
--   列ストア インデックスを構築するための他のリソースを指定します。  
+-   列ストアインデックスを構築するためのリソースをさらに指定します。  
   
--   低速なハッシュ結合してより多くのメモリが必要がある場合のトラブルシューティングを行うしより多くのメモリを提供します。  
+-   実行速度の遅いハッシュ結合のトラブルシューティングを行って、より多くのメモリが必要かどうかを確認してから、より多くのメモリを確保します。  
   
 ## <a name="Basics"></a>ワークロード管理の基礎  
   
 ### <a name="key-terms"></a>主な用語  
 ワークロード管理  
-*ワークロード管理*を理解し、同時要求の最適なパフォーマンスを実現するためにシステム リソースの使用率を調整できることです。  
+*ワークロード管理*は、同時要求に最適なパフォーマンスを実現するために、システムリソースの使用率を把握し、調整する機能です。  
   
 リソース クラス  
-SQL Server PDW で、*リソース クラス*メモリおよび同時実行の事前割り当て済みの制限のある組み込みのサーバーの役割です。 SQL Server PDW は、要求を送信したログインのリソース クラスのサーバー ロール メンバーシップに基づいて要求にリソースを割り当てます。  
+SQL Server PDW の*リソースクラス*は、メモリと同時実行に対して事前に割り当てられた制限を持つ組み込みのサーバーロールです。 SQL Server PDW は、要求を送信するログインのリソースクラスサーバーロールメンバーシップに従って、リソースを要求に割り当てます。  
   
-コンピューティング ノードでは、リソース クラスの実装は、SQL Server でのリソース ガバナー機能を使用します。 リソース ガバナーに関する詳細については、次を参照してください。[リソース ガバナー](../relational-databases/resource-governor/resource-governor.md) msdn です。  
+コンピューティングノードでは、リソースクラスの実装で SQL Server の Resource Governor 機能が使用されます。 Resource Governor の詳細については、MSDN の「 [Resource Governor](../relational-databases/resource-governor/resource-governor.md) 」を参照してください。  
   
-### <a name="understand-current-resource-utilization"></a>現在のリソース使用率を理解します。  
-現在実行中の要求のシステム リソースの使用率を理解するには、SQL Server PDW の動的管理ビューを使用します。 たとえばより多くのメモリで実行速度の遅い大規模なハッシュ結合も役立つようなかどうかを理解するのに Dmv を使用することができます。  
+### <a name="understand-current-resource-utilization"></a>現在のリソース使用率について  
+現在実行中の要求のシステムリソース使用率を把握するには、SQL Server PDW 動的管理ビューを使用します。 たとえば、Dmv を使用すると、実行速度の遅い大きなハッシュ結合がメモリを増やすことによってメリットがあるかどうかを把握できます。  
   
 <!-- MISSING LINKS
 For examples, see [Common Metadata Query Examples &#40;SQL Server PDW&#41;](../sqlpdw/common-metadata-query-examples-sql-server-pdw.md).  
 -->
   
-### <a name="adjust-resource-allocations"></a>リソース割り当てを調整します。  
-リソース使用率を調整するのには、要求を送信しているログインのリソース クラスのメンバーシップを変更します。 リソース クラスのサーバー ロールの名前は**mediumrc**、 **largerc**、および**xlargerc**します。 中規模、大規模、および超大規模なリソース割り当てをそれぞれ表します。  
+### <a name="adjust-resource-allocations"></a>リソース割り当ての調整  
+リソース使用率を調整するには、要求を送信しているログインのリソースクラスのメンバーシップを変更します。 リソースクラスのサーバーロールには、 **mediumrc**、 **largerc**、および**xlargerc**という名前が付けられます。 これらは、それぞれ中規模、大規模、および特大のリソース割り当てを表します。  
   
-たとえば、大量の要求にシステム リソースを割り当てるへの要求を送信しているログインを追加、 **largerc**サーバーの役割。 次の ALTER SERVER ROLE ステートメントは、Anna のログインを largerc サーバーの役割に追加します。  
+たとえば、大量のシステムリソースを要求に割り当てるには、要求を送信しているログインを**largerc**サーバーロールに追加します。 次の ALTER SERVER ROLE ステートメントでは、ログイン Anna を largerc サーバーロールに追加します。  
   
 ```sql  
 ALTER SERVER ROLE largerc ADD MEMBER Anna;  
 ```  
   
-## <a name="RC"></a>リソース クラスの説明  
-次の表では、リソース クラスと、システム リソースの割り当てについて説明します。  
+## <a name="RC"></a>リソースクラスの説明  
+次の表では、リソースクラスとそのシステムリソースの割り当てについて説明します。  
   
-|リソース クラス|要求の重要度|最大メモリ使用量 *|同時実行スロット (最大 32 =)|説明|  
+|リソース クラス|要求の重要度|最大メモリ使用量 *|同時実行スロット (最大 = 32)|説明|  
 |------------------|----------------------|--------------------------|---------------------------------------|---------------|  
-|既定値 (default)|Medium|400 MB|1|既定では、各ログインは少量のメモリ、およびその要求のリソースを同時実行を許可します。<br /><br />リソース クラスには、ログインを追加するときに、新しいクラスが優先されます。 すべてのリソース クラスのログインが削除されると、ログインは、既定のリソース割り当てに戻ります。|  
-|MediumRC|Medium|1200 MB|3|中規模リソース クラスが必要になる要求の例:<br /><br />CTAS の操作を持つ大規模なハッシュ結合です。<br /><br />ディスクにキャッシュを回避するためにより多くのメモリを必要とする操作を選択します。<br /><br />クラスター化列ストア インデックスにデータを読み込んでいます。<br /><br />ビルド、リビルド、および 10 ~ 15 列を含む小さなテーブルにクラスター化列ストア インデックスを再構成します。|  
-|Largerc|高|2.8 GB|7|サイズの大きいリソース クラスが必要になる要求の例:<br /><br />膨大なハッシュ結合、または大規模な ORDER BY または GROUP BY 句などの大量の集計を含めることが非常に大きな CTAS 操作。<br /><br />ハッシュ結合などの操作または ORDER BY または GROUP BY 句などの集計の非常に大量のメモリを必要とする操作を選択します。<br /><br />クラスター化列ストア インデックスにデータを読み込んでいます。<br /><br />ビルド、リビルド、および 10 ~ 15 列を含む小さなテーブルにクラスター化列ストア インデックスを再構成します。|  
-|xlargerc|高|8.4 GB|22|超大規模なリソース クラスは、実行時に超大規模なリソースの消費量が必要になる要求です。|  
+|default|中|400 MB|1 で保護されたプロセスとして起動されました|既定では、各ログインには、少量のメモリと、その要求に対する同時実行リソースが許可されます。<br /><br />リソースクラスにログインを追加すると、新しいクラスが優先されます。 ログインがすべてのリソースクラスから削除されると、ログインは既定のリソース割り当てに戻ります。|  
+|MediumRC|中|1200 MB|3|中規模リソースクラスを必要とする可能性のある要求の例を次に示します。<br /><br />大きなハッシュ結合を持つ CTAS 操作。<br /><br />ディスクへのキャッシュを回避するために、より多くのメモリを必要とする操作を選択します。<br /><br />クラスター化列ストアインデックスへのデータの読み込み。<br /><br />10-15 列を含む小さいテーブルのクラスター化列ストアインデックスを構築、再構築、再編成します。|  
+|Largerc|高|2.8 GB|7|大きなリソースクラスを必要とする可能性のある要求の例を次に示します。<br /><br />大量のハッシュ結合を持つか、大きな集計 (large ORDER BY 句や GROUP BY 句など) を含む非常に大きな CTAS 操作。<br /><br />ハッシュ結合などの操作に非常に大量のメモリを必要とする操作、または ORDER BY 句や GROUP BY 句などの集計を選択します。<br /><br />クラスター化列ストアインデックスへのデータの読み込み。<br /><br />10-15 列を含む小さいテーブルのクラスター化列ストアインデックスを構築、再構築、再編成します。|  
+|xlargerc|高|8.4 GB|22|特大のリソースクラスは、実行時に追加の大規模なリソース消費が必要になる可能性のある要求に使用されます。|  
   
-<sup>*</sup>最大メモリ使用量は、簡略化したものです。  
+<sup>*</sup>最大メモリ使用量は近似値です。  
   
 ### <a name="request-importance"></a>要求の重要度  
-要求の重要度は、要求に、コンピューティング ノードで実行される、SQL Server は、CPU 時間の量にマップされます。  優先順位の高い要求には、多くの CPU 時間が表示されます。  
+要求の重要度は、コンピューティングノードで実行されている SQL Server の CPU 時間によって、要求に割り当てられます。  優先順位の高い要求には、より多くの CPU 時間が与えられます。  
   
-### <a name="maximum-memory-usage"></a>最大メモリ使用量  
-最大メモリ使用量は、要求が各処理領域内で使用できる使用可能なメモリの最大量です。 たとえば mediumrc 要求では、各配布内で処理を 1200 MB を使用できます。 ほとんどの作業を実行するいくつかのディストリビューションを回避するためにデータがスキューしないことを確認することも重要です。  
+### <a name="maximum-memory-usage"></a>メモリの最大使用量  
+最大メモリ使用量は、要求が各処理領域内で使用できるメモリの最大量です。 たとえば、mediumrc 要求では、各ディストリビューション内の処理に最大 1200 MB を使用できます。 ほとんどの作業を実行するディストリビューションが少数にならないように、データがスキューされないようにすることも重要です。  
   
 ### <a name="concurrency-slots"></a>同時実行スロット  
-1、3、7、および 22 の同時実行スロットの割り当ての目標は、大小のプロセスが大規模なプロセスを実行するときに、小規模なプロセスをブロックすることがなく、同時に実行できるようにすること。  たとえば、SQL Server PDW は 1 超大規模な要求 (22 スロット)、1 つの大きな要求 (7 スロット)、および中規模の 1 つの要求 (3 つのスロット) を同時に実行する 32 の同時実行スロットの最大値を割り当てることができます。  
+1、3、7、および22の同時実行スロットを割り当てることの目標は、大規模なプロセスの実行中に小さなプロセスをブロックすることなく、大規模なプロセスと小さいプロセスの両方を同時に実行できるようにすることです。  たとえば、SQL Server PDW は最大32の同時実行スロットを割り当てて、1つの特大の要求 (22 個のスロット)、1つの大きな要求 (7 個のスロット)、および1つの中程度の要求 (3 スロット) を同時に実行できます。  
   
-同時実行要求に最大 32 個の同時実行スロットの割り当ての例:  
+同時実行要求に最大32の同時実行スロットを割り当てる例を次に示します。  
   
--   28 スロット 4 の大規模なを =  
+-   28スロット = 4 large  
   
--   30 個のスロット 10 メディアを =  
+-   30スロット = 10 m  
   
--   32 個のスロット = 32 既定  
+-   32スロット = 既定値32  
   
--   32 個のスロット = 極大サイズ 1 + 1 の大規模な + 1 のメディア  
+-   32スロット = 1 超 large + 1 large + 1 medium  
   
--   32 個のスロット 2 の大きな + 4 のメディア + 6 既定を =  
+-   32スロット = 2 large + 4 medium + 6 既定  
   
-SQL Server の PDW に 6 つの大規模な要求が送信され、既定の 10 件の要求を送信し、あるとします。 SQL Server PDW では、次のように優先順位に従って要求を処理は。  
+6個の大きな要求が SQL Server PDW に送信され、10個の既定の要求が送信されたとします。 SQL Server PDW は、次のように、優先順位に従って要求を処理します。  
   
--   メモリが使用可能になるように 4 つの大規模な要求の処理を開始する 28 の同時実行スロットを割り当てるし、2 つの大規模な要求をキューに保持します。  
+-   メモリが使用可能になったときに4つの大きな要求の処理を開始するために28個の同時実行スロットを割り当て、キューに2つの大きな要求を保持します。  
   
--   4 つの既定の要求の処理を開始する 4 つの同時実行スロットを割り当て、待機キューに 6 つの既定の要求を保持します。  
+-   4つの既定の要求の処理を開始し、待機キューで6個の既定の要求を保持するために、4つの同時実行スロットを割り当てます。  
   
-要求が完了し、同時実行スロットが利用可能になる、SQL Server PDW では使用可能なリソースと優先順位に従って残りの要求を割り当てます。 たとえば、7 の同時実行スロットの開きがある場合は、大規模な要求を待機している必要があります 7 スロットが中程度の要求を待機するよりも、高い優先順位。  6 つのスロットが開く場合は SQL Server PDW は 6 以上既定サイズの要求を割り当てます。 ただし、メモリおよび同時実行スロットできる必要がありますすべて SQL Server PDW は、要求を実行する前にします。  
+要求の完了と同時実行スロットが使用可能になると、SQL Server PDW は使用可能なリソースと優先度に従って残りの要求を割り当てます。 たとえば、7つの同時実行スロットが開いている場合、サイズの大きい要求の待機は、中程度の要求を待機している7つのスロットに対して高い優先順位を持ちます。  6個のスロットが開いている場合、SQL Server PDW によって、既定のサイズの要求が6つ割り当てられます。 ただし、SQL Server PDW が要求を実行できるようにするには、メモリと同時実行スロットがすべて使用可能である必要があります。  
   
-各リソース クラス内では、要求は、先入れ先出し (FIFO) 順で最初に実行します。  
+各リソースクラス内では、要求が先入れ先出し (FIFO) の順序で実行されます。  
   
-## <a name="GeneralRemarks"></a>全般的な解説  
-ログインが 1 つ以上のリソース クラスのメンバーである場合は、ほとんどのリソースを使用して、クラスが優先されます。  
+## <a name="GeneralRemarks"></a>一般的な解説  
+ログインが複数のリソースクラスのメンバーである場合は、最も多くのリソースを持つクラスが優先されます。  
   
-ログインが追加またはリソースのクラスから削除されるときに、変更は; 将来のすべての要求をすぐに有効実行中または待機している現在の要求は影響しません。 ログインは、切断して、変更が発生するために再接続する必要はありません。  
+リソースクラスに対してログインが追加または削除されると、その変更は、今後のすべての要求に対して直ちに有効になります。実行中または待機中の現在の要求は影響を受けません。 このログインは、変更を行うために切断して再接続する必要はありません。  
   
-ログインごとに、リソース クラスの設定は、個々 のステートメントと、操作して、セッションが適用されます。  
+各ログインについて、リソースクラスの設定は、セッションではなく、個々のステートメントと操作に適用されます。  
   
-SQL Server PDW のステートメントを実行する前に、要求のために必要な同時実行スロットを取得しようとします。 十分な同時実行スロットを取得できない場合は SQL Server PDW は、要求を待機しているをする--実行状態に移動します。 要求に既に割り当てられていたすべてのリソース システムがシステムに返されます。  
+SQL Server PDW は、ステートメントを実行する前に、要求に必要な同時実行スロットを取得しようとします。 十分な数の同時実行スロットを取得できない場合、SQL Server PDW は要求を実行待ち状態に移行します。 要求に既に割り当てられていたすべてのリソースシステムが、システムに戻されます。  
   
-ほとんどの SQL ステートメントでは、常に既定のリソース割り当てを必要し、そのため、リソース クラスによって制御されていません。 たとえば、CREATE LOGIN はのみ少量のリソースの必要があり、CREATE LOGIN を呼び出してログインのリソース クラスのメンバーである場合でも、既定のリソースが割り当てられます。  たとえば、Anna largerc のリソース クラスのメンバーである、彼女は、CREATE LOGIN ステートメントを送信する場合は、CREATE LOGIN ステートメントは、リソースの既定の数で実行されます。  
+ほとんどの SQL ステートメントは、既定のリソース割り当てを常に必要とするため、リソースクラスによって制御されません。 たとえば、CREATE LOGIN は少量のリソースのみを必要とし、CREATE LOGIN を呼び出したログインがリソースクラスのメンバーである場合でも、既定のリソースが割り当てられます。  たとえば、Anna が largerc リソースクラスのメンバーであり、ユーザーが CREATE LOGIN ステートメントを送信した場合、CREATE LOGIN ステートメントは既定の数のリソースを使用して実行されます。  
   
-SQL ステートメントとリソース クラスによって管理される操作:  
+リソースクラスによって管理される SQL ステートメントと操作:  
   
 -   ALTER INDEX REBUILD  
   
 -   ALTER INDEX REORGANIZE  
   
--   ALTER テーブルの再構築  
+-   ALTER TABLE REBUILD  
   
--   CREATE CLUSTERED INDEX  
+-   クラスター化インデックスの作成  
   
 -   CREATE CLUSTERED COLUMNSTORE INDEX  
   
--   CREATE TABLE AS を選択します  
+-   CREATE TABLE AS SELECT  
   
--   REMOTE TABLE AS SELECT を作成します。  
+-   SELECT としてリモートテーブルを作成する  
   
--   データを読み込む**dwloader**します。  
+-   **Dwloader**を使用してデータを読み込んでいます。  
   
 -   INSERT-SELECT  
   
 -   UPDATE  
   
--   Del  
+-   DELETE  
   
--   RESTORE DATABASE より多くのコンピューティング ノードを備えたアプライアンスに復元するときにします。  
+-   コンピューティングノードの数が多いアプライアンスに復元する場合は、データベースを復元します。  
   
--   DMV 専用のクエリを除外するを選択します。  
+-   選択 (DMV のみのクエリを除く)  
   
 ## <a name="Limits"></a>制限事項と制約事項  
-リソース クラスでは、メモリおよび同時実行の割り当てによって制御されます。  入力/出力操作の管理を行わない。  
+リソースクラスは、メモリと同時実行の割り当てを制御します。  入力/出力操作は制御されません。  
   
-## <a name="Metadata"></a>メタデータ  
-リソース クラスとリソース クラスのメンバーに関する情報が含まれている Dmv。  
+## <a name="Metadata"></a>Metadata  
+リソースクラスおよびリソースクラスのメンバーに関する情報を含む Dmv。  
   
 -   [sys.server_role_members](../relational-databases/system-catalog-views/sys-server-role-members-transact-sql.md)  
   
 -   [sys.server_principals](../relational-databases/system-catalog-views/sys-server-principals-transact-sql.md)  
   
-要求および必要なリソースの状態に関する情報が含まれている Dmv:  
+要求の状態と必要なリソースに関する情報を含む Dmv。  
   
--   [sys.dm_pdw_lock_waits](../relational-databases/system-dynamic-management-views/sys-dm-pdw-lock-waits-transact-sql.md)  
+-   [dm_pdw_lock_waits](../relational-databases/system-dynamic-management-views/sys-dm-pdw-lock-waits-transact-sql.md)  
   
--   [sys.dm_pdw_resource_waits](../relational-databases/system-dynamic-management-views/sys-dm-pdw-resource-waits-transact-sql.md)  
+-   [dm_pdw_resource_waits](../relational-databases/system-dynamic-management-views/sys-dm-pdw-resource-waits-transact-sql.md)  
   
-コンピューティング ノード上の SQL Server Dmv から公開されている関連するシステム ビュー。 参照してください[SQL Server の動的管理ビュー](../relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)これらの Dmv msdn へのリンク。  
+コンピューティングノードの SQL Server Dmv から公開された関連するシステムビュー。 MSDN のこれらの Dmv へのリンクについては、「 [SQL Server 動的管理ビュー](../relational-databases/system-dynamic-management-views/system-dynamic-management-views.md) 」を参照してください。  
   
 -   sys.dm_pdw_nodes_resource_governor_resource_pools  
   
@@ -161,7 +161,7 @@ SQL ステートメントとリソース クラスによって管理される操
   
 -   sys.dm_pdw_nodes_resource_governor_resource_pools  
   
--   sys.dm_pdw_nodws_resource_governor_workload_groups  
+-   dm_pdw_nodws_resource_governor_workload_groups  
   
 -   sys.dm_pdw_nodes_exec_sessions  
   
@@ -177,8 +177,8 @@ SQL ステートメントとリソース クラスによって管理される操
   
 -   sys.dm_pdw_nodes_exec_cached_plans  
   
-## <a name="RelatedTasks"></a>関連するタスク  
-[ワークロードの管理タスク](workload-management-tasks.md)  
+## <a name="RelatedTasks"></a>関連タスク  
+[ワークロード管理タスク](workload-management-tasks.md)  
   
 <!-- MISSING LINKS
 See the Workload Management section of [Common Metadata Query Examples &#40;SQL Server PDW&#41;](../sqlpdw/common-metadata-query-examples-sql-server-pdw.md) for the following tasks:  

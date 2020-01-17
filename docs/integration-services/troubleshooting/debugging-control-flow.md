@@ -17,17 +17,20 @@ helpviewer_keywords:
 - color-coded progress reporting [Integration Services]
 - Set Breakpoints dialog box
 ms.assetid: 54a458cc-9f4f-4b48-8cf2-db2e0fa7756c
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: ef4d7e038c9c8ed4d22bbc49e0139f2408ca8afe
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: f762b5c7c5c4ce48c0c1bee660ed726b124e9c55
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54134932"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71295129"
 ---
 # <a name="debugging-control-flow"></a>制御フローのデバッグ
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] と [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] には、 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] パッケージの制御フローのトラブルシューティングに使用できる、機能とツールが含まれています。  
   
 -   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] では、コンテナーおよびタスク上のブレークポイントがサポートされています。  
@@ -105,7 +108,7 @@ ms.locfileid: "54134932"
 ## <a name="debug-windows"></a>デバッグ ウィンドウ  
  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] には、ブレークポイントの処理、およびブレークポイントが含まれるパッケージのデバッグに使用できる多数のウィンドウがあります。 各ウィンドウの詳細については、ウィンドウを開いて F1 キーを押し、目的のウィンドウのヘルプを参照してください。  
   
- [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]でこれらのウィンドウを開くには、 **[デバッグ]** メニューをクリックし、 **[ウィンドウ]** をポイントします。次に、 **[ブレークポイント]**、 **[出力]**、または **[イミディエイト]** をクリックします。  
+ [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]でこれらのウィンドウを開くには、 **[デバッグ]** メニューをクリックし、 **[ウィンドウ]** をポイントします。次に、 **[ブレークポイント]** 、 **[出力]** 、または **[イミディエイト]** をクリックします。  
   
  次の表は、各ウィンドウについて説明しています。  
   

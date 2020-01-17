@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 07f3d1fc-b4ee-4693-b342-330b2231b6d0
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: f7b9a69941364b32e6b43d79f2d092511fd61f22
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 6e58551ae3c6edda3cd865817223fd8052d03ec5
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52506085"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68130048"
 ---
 # <a name="decimal-digits"></a>10 進数字
 *10 進数字*decimal および numeric のデータの種類は、またはデータの小数点以下桁数、小数点の右側に桁の数字の最大数として定義されます。 浮動小数点概数の数値列またはパラメーターの場合、小数点の右側にある数字の数が固定されていないため、小数点以下桁数が定義されていません。 秒コンポーネントを含む datetime または間隔のデータ、10 進数字は、データの秒部分の小数点の右側にある数字の数として定義されます。  

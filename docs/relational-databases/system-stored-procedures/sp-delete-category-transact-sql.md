@@ -17,15 +17,14 @@ helpviewer_keywords:
 ms.assetid: 63ea7d0d-a567-456e-a778-bee99e21d16c
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 9e8ada6daf4fc7e545856b52b163a2ff8f9e40db
-ms.sourcegitcommit: fc6a6eedcea2d98c93e33d39c1cecd99fbc9a155
+ms.openlocfilehash: a9a6812e12366900dfc1c5808eaede727c05f958
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49168662"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68120050"
 ---
-# <a name="spdeletecategory-transact-sql"></a>sp_delete_category (Transact-SQL)
+# <a name="spdeletecategory-transact-sql"></a>sp_delete_category (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   指定したジョブ、警告、またはオペレーターのカテゴリを、現在のサーバーから削除します。  
@@ -41,17 +40,15 @@ sp_delete_category [ @class = ] 'class' , [ @name = ] 'name'
 ```  
   
 ## <a name="arguments"></a>引数  
- [  **@class =**] **'**_クラス_**'**  
- カテゴリのクラスを指定します。 *クラス*は**varchar (8)**, ない必要があり、既定で、これらの値のいずれかであります。  
+`[ @class = ] 'class'` カテゴリのクラスです。 *クラス*は**varchar (8)** , ない必要があり、既定で、これらの値のいずれかであります。  
   
 |値|説明|  
 |-----------|-----------------|  
 |**JOB**|ジョブ カテゴリを削除します。|  
-|**アラートを生成します。**|警告カテゴリを削除します。|  
+|**アラートを生成します。**|アラートのカテゴリを削除します。|  
 |**演算子**|オペレーター カテゴリを削除します。|  
   
- [  **@name =**] **'**_名前_**'**  
- 削除するカテゴリの名前を指定します。 *名前*は**sysname**、既定値はありません。  
+`[ @name = ] 'name'` 削除するカテゴリの名前。 *名前*は**sysname**、既定値はありません。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  **0** (成功) または**1** (失敗)  
@@ -62,7 +59,7 @@ sp_delete_category [ @class = ] 'class' , [ @name = ] 'name'
 ## <a name="remarks"></a>コメント  
  **sp_delete_category**から実行する必要があります、 **msdb**データベース。  
   
- カテゴリを削除すると、そのカテゴリ内のすべてのジョブ、警告、およびオペレーターは、そのクラスの既定のカテゴリに再分類されます。  
+ カテゴリを削除するには、任意のジョブ、警告、またはクラスの既定のカテゴリには、そのカテゴリの演算子再分類されます。  
   
 ## <a name="permissions"></a>アクセス許可  
  メンバーのみ、 **sysadmin**固定サーバー ロールは、この手順を実行できます。  

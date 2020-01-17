@@ -17,15 +17,14 @@ helpviewer_keywords:
 - number of triggers
 - TRIGGER_NESTLEVEL function
 ms.assetid: 6a33e74a-0cf9-4ae1-a1e4-4a137a3ea39d
-author: MashaMSFT
-ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 9f2c368e3cc4052c57ce26b81599aaaac10567de
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: MikeRayMSFT
+ms.author: mikeray
+ms.openlocfilehash: 6215824f230001cb9d7add20d32c85780a65ede6
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47755310"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68098813"
 ---
 # <a name="triggernestlevel-transact-sql"></a>TRIGGER_NESTLEVEL (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]

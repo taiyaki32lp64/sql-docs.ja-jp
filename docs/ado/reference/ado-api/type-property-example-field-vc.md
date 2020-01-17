@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 440dbdb1-16fc-4cfe-9451-59a153852537
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: a3185f7666d628b6461c3ae3a432393a6965be89
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 8e166b4c7517a6901bb383629821daebe56984a5
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47666239"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67936658"
 ---
 # <a name="type-property-example-field-vc"></a>Type プロパティの例 (Field) (VC++)
 この例では、[型](../../../ado/reference/ado-api/type-property-ado.md)プロパティの値に対応する定数の名前を表示することによって、**型**すべてのプロパティ、[フィールド](../../../ado/reference/ado-api/field-object.md)内のオブジェクト、***従業員***テーブル。 FieldType 関数は、この手順を実行する必要があります。  
@@ -171,6 +170,6 @@ void PrintComError(_com_error &e) {
  **型: ファミリ**  
  **名前: hire_date**  
  **型: adDBTimeStamp**   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [Field オブジェクト](../../../ado/reference/ado-api/field-object.md)   
  [Type プロパティ (ADO)](../../../ado/reference/ado-api/type-property-ado.md)

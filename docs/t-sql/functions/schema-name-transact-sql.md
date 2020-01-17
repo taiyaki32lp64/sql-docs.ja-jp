@@ -16,21 +16,20 @@ helpviewer_keywords:
 - SCHEMA_NAME function
 - schemas [SQL Server], names
 ms.assetid: 20071b77-2b6e-4ce7-a8e3-fa71480baf73
-author: MashaMSFT
-ms.author: mathoma
-manager: craigg
+author: MikeRayMSFT
+ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 8cda886a4178a6dabd6ddf5042700ba3ddc8c4d5
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ee0119ccd051912551c1274860265d48750ac969
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47794820"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68111341"
 ---
 # <a name="schemaname-transact-sql"></a>SCHEMA_NAME (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-  スキーマ ID に関連付けられているスキーマ名を返します。  
+  スキーマ名に関連付けられているスキーマ ID を返します。  
   
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -44,7 +43,7 @@ SCHEMA_NAME ( [ schema_id ] )
   
 |項目|定義|  
 |----------|----------------|  
-|*schema_id*|スキーマの ID を指定します。 *schema_id* は、 **int**です。場合 *schema_id* が定義されていない場合、SCHEMA_NAME は、呼び出し元の既定のスキーマの名前が返すされます。|  
+|*schema_id*|スキーマの ID です。 *schema_id* は、 **int**です。場合 *schema_id* が定義されていない場合、SCHEMA_NAME は、呼び出し元の既定のスキーマの名前が返すされます。|  
   
 ## <a name="return-types"></a>戻り値の型  
  **sysname**  
@@ -71,7 +70,7 @@ SELECT SCHEMA_NAME(1);
 ## <a name="see-also"></a>参照  
  [式 &#40;Transact-SQL&#41;](../../t-sql/language-elements/expressions-transact-sql.md)   
  [SCHEMA_ID &#40;Transact-SQL&#41;](../../t-sql/functions/schema-id-transact-sql.md)   
- [sys.schemas (&) #40 です。TRANSACT-SQL と #41 です。](../../relational-databases/system-catalog-views/schemas-catalog-views-sys-schemas.md)   
+ [sys.schemas &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/schemas-catalog-views-sys-schemas.md)   
  [sys.database_principals &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-principals-transact-sql.md)   
  [メタデータ関数 &#40;Transact-SQL&#41;](../../t-sql/functions/metadata-functions-transact-sql.md)   
  [WHERE &#40;Transact-SQL&#41;](../../t-sql/queries/where-transact-sql.md)  

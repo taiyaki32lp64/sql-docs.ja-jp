@@ -21,16 +21,15 @@ helpviewer_keywords:
 - executing Transact-SQL statements together [SQL Server]
 - statements [SQL Server], grouping
 ms.assetid: fc2c7f76-f1f9-4f91-beef-bc8ef0da2feb
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
+author: rothja
+ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: a7fd8d98d15fc5b7ffd66e38755d5003fa2b7b4c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 7e278e41fa2f27684b1ce249bb45b1dc78356753
+ms.sourcegitcommit: a92fa97e7d3132ea201e4d86c76ac39cd564cd3c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47700450"
+ms.lasthandoff: 12/21/2019
+ms.locfileid: "75325564"
 ---
 # <a name="beginend-transact-sql"></a>BEGIN...END (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -51,12 +50,12 @@ END
  { *sql_statement* | *statement_block* }  
  有効な 1 つの [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメント、またはステートメント ブロックで定義したステートメントのグループを指定します。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  BEGIN...END ブロックは入れ子にできます。  
   
  BEGIN...END ブロック内ではすべての [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントが有効ですが、同じバッチまたはステートメント ブロック内で一緒にグループ化できない [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントもあります。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
  次の例では、`BEGIN` と `END` を使用して、まとめて実行する一連の [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントを定義します。 `BEGIN...END` ブロックが指定されていない場合、両方の `ROLLBACK TRANSACTION` ステートメントが実行され、両方の `PRINT` メッセージが返されます。  
   
 ```  
@@ -79,7 +78,7 @@ Rolled back the transaction.
 */  
 ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>例: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] および [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>例: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]、[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
  次の例では、`BEGIN` と `END` を使用して、まとめて実行する一連の [!INCLUDE[DWsql](../../includes/dwsql-md.md)] ステートメントを定義します。 `BEGIN...END` ブロックが含まれていない場合、次の例は連続するループになります。  
   
 ```  
@@ -90,14 +89,14 @@ WHILE @Iteration <10
 BEGIN  
     SELECT FirstName, MiddleName   
     FROM dbo.DimCustomer WHERE LastName = 'Adams';  
-SET @Iteration += 1  
+    SET @Iteration += 1  
 END;  
   
 ```  
   
 ## <a name="see-also"></a>参照  
  [ALTER TRIGGER &#40;Transact-SQL&#41;](../../t-sql/statements/alter-trigger-transact-sql.md)   
- [フロー制御言語 &#40;TRANSACT-SQL&#41;](~/t-sql/language-elements/control-of-flow.md)   
+ [フロー制御言語 &#40;Transact-SQL&#41;](~/t-sql/language-elements/control-of-flow.md)   
  [CREATE TRIGGER &#40;Transact-SQL&#41;](../../t-sql/statements/create-trigger-transact-sql.md)   
  [END &#40;BEGIN...END&#41; &#40;Transact-SQL&#41;](../../t-sql/language-elements/end-begin-end-transact-sql.md)  
   

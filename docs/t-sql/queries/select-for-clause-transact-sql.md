@@ -19,15 +19,14 @@ helpviewer_keywords:
 - BROWSE option
 - FOR clause [Transact-SQL]
 ms.assetid: 08a6f084-8f73-4f2a-bae4-3c7513dc99b9
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: a8f1ce1c1c5a572874b301f326a711bbcfbda8a1
-ms.sourcegitcommit: dd794633466b1da8ead9889f5e633bdf4b3389cd
+author: VanMSFT
+ms.author: vanto
+ms.openlocfilehash: ad3852f0bb935371fd141cc4ceb98f90c7aa9c19
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54143552"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67904354"
 ---
 # <a name="select---for-clause-transact-sql"></a>SELECT - FOR 句 (Transact-SQL)
 
@@ -118,7 +117,7 @@ JSON
   
 -   外部結合ステートメントの内部に存在するテーブルに一意のインデックスが定義されている場合。  
   
- ブラウズ モードでこの動作を再現するには、以下の手順を実行します。  
+ ブラウズ モードでこの動作を再現するには、以下の手順を行います。  
   
 1.  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] で、SampleDB という名前のデータベースを作成します。  
   
@@ -179,7 +178,7 @@ JSON
  XML  
  クエリの結果を XML ドキュメントとして返します。 XML モードとして、RAW、AUTO、EXPLICIT のいずれか 1 つを指定する必要があります。 XML データと [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の詳細については、「[FOR XML &#40;SQL Server&#41;](../../relational-databases/xml/for-xml-sql-server.md)」を参照してください。  
   
- RAW [ **('**_ElementName_**')** ]  
+ RAW [ **('** _ElementName_ **')** ]  
  クエリの結果を取得し、結果セット内の各行を、要素タグとして汎用識別子 \<row /> が指定されている XML 要素に変換します。 必要に応じて、その行要素に名前を指定することもできます。 結果の XML 出力では、指定した *ElementName* が、行ごとに生成される行要素として使用されます。 詳細については、「 [FOR XML での RAW モードの使用](../../relational-databases/xml/use-raw-mode-with-for-xml.md)」を参照してください。
   
  AUTO  
@@ -210,20 +209,23 @@ _不要な改行を非表示にする:_ SQL Server Management Studio (SSMS) を�
 
 <!-- The preceding Stack Overflow example is per MicrosoftDocs/sql-docs Issue 1501.  2019-01-06 -->
 
- XMLSCHEMA [ **('**_TargetNameSpaceURI_**')** ]  
+ XMLSCHEMA [ **('** _TargetNameSpaceURI_ **')** ]  
  インライン XSD スキーマを返します。 このディレクティブを指定する場合は、必要に応じて、対象名前空間の URI を指定することもできます。指定した場合は、スキーマにある指定した名前空間が返されます。 詳細については、「 [Generate an Inline XSD Schema](../../relational-databases/xml/generate-an-inline-xsd-schema.md)」を参照してください。  
   
  ELEMENTS  
  列を副要素として返します。 指定していない場合は、XML 属性にマップされます。 このオプションは、RAW、AUTO、および PATH モードでのみサポートされます。 詳細については、「 [FOR XML での RAW モードの使用](../../relational-databases/xml/use-raw-mode-with-for-xml.md)」を参照してください。  
   
  XSINIL  
- 列の値が NULL の場合、**xsi:nil** 属性が **True** に設定されている要素を作成します。 このオプションは、ELEMENTS ディレクティブでのみ指定できます。 詳細については、「[XSINIL パラメーターを使用した NULL 値に対する要素の生成](../../relational-databases/xml/generate-elements-for-null-values-with-the-xsinil-parameter.md)」を参照してください。  
+ 列の値が NULL の場合、**xsi:nil** 属性が **True** に設定されている要素を作成します。 このオプションは、ELEMENTS ディレクティブでのみ指定できます。 詳細については、以下をご覧ください。
+
+- [XSINIL パラメーターを使用した NULL 値に対する要素の生成](../../relational-databases/xml/generate-elements-for-null-values-with-the-xsinil-parameter.md)。
+- [SELECT ステートメントでの FOR XML](../../relational-databases/xml/for-xml-sql-server.md)
   
  ABSENT  
  列の値が NULL の場合、対応する XML 要素を XML 結果に追加しません。 このオプションは、ELEMENTS でのみ指定してください。  
   
- PATH [ **('**_ElementName_**')** ]  
- 結果セットの各行に対して \<row> 要素ラッパーを生成します。 必要に応じて、\<row> 要素ラッパーに要素名を指定することもできます。 FOR XML PATH (**''**) ) などの空文字列を指定すると、ラッパー要素は生成されません。 EXPLICIT ディレクティブを使用するよりも、PATH を使用した方が、クエリが単純になる場合があります。 詳細については、「 [FOR XML での PATH モードの使用](../../relational-databases/xml/use-path-mode-with-for-xml.md)」を参照してください。  
+ PATH [ **('** _ElementName_ **')** ]  
+ 結果セットの各行に対して \<row> 要素ラッパーを生成します。 必要に応じて、\<row> 要素ラッパーに要素名を指定することもできます。 FOR XML PATH ( **''** ) ) などの空文字列を指定すると、ラッパー要素は生成されません。 EXPLICIT ディレクティブを使用するよりも、PATH を使用した方が、クエリが単純になる場合があります。 詳細については、「 [FOR XML での PATH モードの使用](../../relational-databases/xml/use-path-mode-with-for-xml.md)」を参照してください。  
   
  BINARY BASE64  
  クエリは、バイナリ データをバイナリ ベース 64 エンコード形式で返します。 RAW モードおよび EXPLICIT モードでバイナリ データを取得する場合は、このオプションを指定する必要があります。 AUTO モードの場合は、これは既定値です。  
@@ -231,7 +233,7 @@ _不要な改行を非表示にする:_ SQL Server Management Studio (SSMS) を�
  TYPE  
  クエリが結果を **xml** 型で返すことを指定します。 詳細については、「 [FOR XML クエリの TYPE ディレクティブ](../../relational-databases/xml/type-directive-in-for-xml-queries.md)」を参照してください。  
   
- ROOT [ **('**_RootName_**')** ]  
+ ROOT [ **('** _RootName_ **')** ]  
  単一のトップレベル要素を、結果として生成される XML に追加します。 必要に応じて、生成するルート要素名を指定することもできます。 オプションのルート名を指定しない場合は、既定の \<root> 要素が追加されます。  
   
  詳細については、「[FOR XML &#40;SQL Server&#41;](../../relational-databases/xml/for-xml-sql-server.md)」を参照してください。  
@@ -267,7 +269,7 @@ FOR XML AUTO, TYPE, XMLSCHEMA, ELEMENTS XSINIL;
  INCLUDE_NULL_VALUES  
  **INCLUDE_NULL_VALUES** オプションと **FOR JSON** 句を指定し、JSON 出力に NULL 値を含めます。 このオプションを指定しない場合、出力では、クエリ結果の NULL 値に対する JSON のプロパティは含まれません。 詳細については、「[INCLUDE_NULL_VALUES オプションを使用して JSON の出力に Null 値を含める &#40;SQL Server&#41;](../../relational-databases/json/include-null-values-in-json-include-null-values-option.md)」を参照してください。  
   
- ROOT [ **('**_RootName_**')** ]  
+ ROOT [ **('** _RootName_ **')** ]  
  **ROOT** オプションと **FOR JSON** 句を指定し、最上位要素を 1 つ JSON 出力に追加します。 指定しない場合、 **ROOT** オプションでは、JSON の出力はルート要素がないです。 詳細と例については、「[ROOT オプションを使用して JSON 出力にルート ノードを追加する &#40;SQL Server&#41;](../../relational-databases/json/add-a-root-node-to-json-output-with-the-root-option-sql-server.md)」を参照してください。  
   
  WITHOUT_ARRAY_WRAPPER  

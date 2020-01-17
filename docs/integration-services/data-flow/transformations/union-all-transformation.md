@@ -16,17 +16,20 @@ helpviewer_keywords:
 - Union All transformation
 - datasets [Integration Services], merging
 ms.assetid: 942e4b90-9c41-4e9c-a6f3-80b3afe57f2f
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: 2b4d6dc76ba333681e14a9437c6931b21035bda0
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 0b9f629126dcd5a8f81eeab444aef50456589e4a
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51639749"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71291006"
 ---
 # <a name="union-all-transformation"></a>全体結合変換
+
+[!INCLUDE[ssis-appliesto](../../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   全体結合変換は、複数の入力を 1 つの出力に結合します。 たとえば、5 つの異なるフラット ファイル ソースからの出力を全体結合変換への入力とし、1 つの出力に結合できます。  
   
 ## <a name="inputs-and-outputs"></a>入力および出力  
@@ -52,7 +55,7 @@ ms.locfileid: "51639749"
 ## <a name="union-all-transformation-editor"></a>全体結合変換エディター
   **[全体結合変換エディター]** ダイアログ ボックスを使用すると、複数の入力行セットを 1 つの出力行セットにマージできます。 データ フローに全体結合変換を含めることで、複数のデータ フローのデータをマージしたり、全体結合変換を入れ子にして複雑なデータセットを作成したり、データ内のエラーを修正した後で行を再マージしたりできます。  
   
-### <a name="options"></a>[変数]  
+### <a name="options"></a>オプション  
  **[出力列の名前]**  
  各列に対して別名を入力します。 既定では最初の (参照) 入力の入力列の名前が使用されますが、一意なわかりやすい名前を任意に付けることもできます。  
   

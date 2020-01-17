@@ -2,17 +2,17 @@
 title: レポートのエクスポート (レポート ビルダーおよび SSRS) | Microsoft Docs
 ms.date: 05/30/2017
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: report-builder
 ms.topic: conceptual
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 2133fdc66f6dfe6ac4950b1fd9164a4de81f5b6c
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 0cb5c07545a719571c9fee26edc820006e9f0827
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56289030"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65580816"
 ---
 # <a name="export-reports-report-builder-and-ssrs"></a>レポートのエクスポート (レポート ビルダーおよび SSRS)
 
@@ -96,15 +96,15 @@ ms.locfileid: "56289030"
   
 -   **データ表示拡張機能** データ表示拡張機能では、すべての書式設定とレイアウト情報がレポートから取り除かれ、データのみが表示されます。 生成されたファイルを使用して、生のレポート データを別のファイル形式 (Excel、他のデータベース、XML データ メッセージ、カスタム アプリケーションなど) にインポートできます。 データ表示拡張機能では、改ページはサポートされません。  
   
-     次のデータ表示拡張機能がサポートされます。CSV、XML、Atom。  
+     サポートされているデータ表示拡張機能は、CSV、XML、および Atom です。  
   
 -   **ソフト改ページ表示拡張機能** ソフト改ページ表示拡張機能では、レポートのレイアウトと書式設定が維持されます。 生成されたファイルは、Web ページや **ReportViewer** コントロールなど、画面上での閲覧や配信に最適化されます。  
   
-     次のソフト改ページ表示拡張機能がサポートされます。[!INCLUDE[msCoName](../../includes/msconame-md.md)]Excel、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Word、Web アーカイブ (MHTML)。  
+     サポートされているソフト改ページ表示拡張機能は、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Excel、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Word、および Web アーカイブ (MHTML) です。  
   
 -   **ハード改ページ表示拡張機能** ハード改ページ表示拡張機能では、レポートのレイアウトと書式設定が維持されます。 生成されたファイルは、一貫した印刷結果を提供すること、または、レポートを印刷物のような形でオンライン配信する際の見やすさを優先して最適化されます。  
   
-     次のハード改ページ表示拡張機能がサポートされます。TIFF と PDF。  
+     サポートされているハード改ページ表示拡張機能は、TIFF および PDF です。  
   
 ##  <a name="ExportFormats"></a> レポートの表示中にエクスポートできる形式  
  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] には、さまざまな形式でレポートを表示する表示拡張機能が用意されています。 選択したファイル形式に合わせてレポート デザインを最適化する必要があります。  次の表に、ユーザー インターフェイスからエクスポートできる形式を示します。  これに加え、 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] サブスクリプションで利用できる形式や URL へのアクセスによってエクスポートできる形式もあります。  このトピックの「 [レポートをエクスポートするその他の方法](#OtherWaysExportingReports)」セクションを参照してください。  
@@ -116,7 +116,7 @@ ms.locfileid: "56289030"
 |CSV|data|CSV (コンマ区切り) 表示拡張機能では、レポートのデータを平面的に表して、標準化されたプレーンテキスト形式でレポートを表示します。プレーンテキスト形式のレポートは、多くのアプリケーションで簡単に読み取ったり変換したりすることができます。<br /><br /> 詳細については、「[CSV ファイルへのエクスポート](../../reporting-services/report-builder/exporting-to-a-csv-file-report-builder-and-ssrs.md)」を参照してください。|  
 |EXCELOPENXML|ソフト改ページ|レポートを表示するときにエクスポート メニューで "Excel" として表示されます。 Excel 表示拡張機能では、レポートは、 [!INCLUDE[ofprexcel](../../includes/ofprexcel-md.md)] 2013 と互換性のある Excel ドキュメント (.xlsx) として表示されます。  詳細については、「[Microsoft Excel へのエクスポート](../../reporting-services/report-builder/exporting-to-microsoft-excel-report-builder-and-ssrs.md)」を参照してください。|  
 |PowerPoint|ハード改ページ|PowerPoint 表示拡張機能では、レポートは、PowerPoint 2013 と互換性のある PowerPoint ドキュメント (.pptx) として表示されます。|  
-|TIFF ファイル|ハード改ページ|画像表示拡張機能では、レポートがビットマップまたはメタファイルとして表示されます。 画像表示拡張機能では、既定でレポートの TIFF ファイルが生成されます。このファイルは、複数のページに表示することもできます。 クライアントは、受信した画像をイメージ ビューアーで表示したり、印刷したりできます。<br /><br /> 画像表示拡張機能は、[!INCLUDE[ndptecgdiplus](../../includes/ndptecgdiplus-md.md)] でサポートされている次のいずれの形式でもファイルを生成できます:BMP、EMF、EMFPlus、GIF、JPEG、PNG、TIFF。<br /><br /> 詳細については、「[画像ファイルへのエクスポート](../../reporting-services/report-builder/exporting-to-an-image-file-report-builder-and-ssrs.md)」を参照してください。|  
+|TIFF ファイル|ハード改ページ|画像表示拡張機能では、レポートがビットマップまたはメタファイルとして表示されます。 画像表示拡張機能では、既定でレポートの TIFF ファイルが生成されます。このファイルは、複数のページに表示することもできます。 クライアントは、受信した画像をイメージ ビューアーで表示したり、印刷したりできます。<br /><br /> 画像表示拡張機能では、 [!INCLUDE[ndptecgdiplus](../../includes/ndptecgdiplus-md.md)]でサポートされている形式 (BMP、EMF、EMFPlus、GIF、JPEG、PNG、TIFF) でファイルを生成できます。<br /><br /> 詳細については、「[画像ファイルへのエクスポート](../../reporting-services/report-builder/exporting-to-an-image-file-report-builder-and-ssrs.md)」を参照してください。|  
 |Web アーカイブ|ソフト改ページ|HTML 表示拡張機能では、HTML 形式でレポートを表示します。 また、完全な HTML ページを生成することも、他の HTML ページに埋め込むための HTML の一部分を生成することもできます。 すべての HTML は、UTF-8 エンコードで生成されます。<br /><br /> HTML 表示拡張機能は、 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Web ポータルで実行する場合など、レポート ビルダーでプレビューされ、ブラウザーで表示されるレポートの既定の表示拡張機能です。<br /><br /> 詳細については、「[HTML での表示](../../reporting-services/report-builder/rendering-to-html-report-builder-and-ssrs.md)」を参照してください。|  
 |WORDOPENXML|ソフト改ページ|レポートを表示するときにエクスポート メニューで "Word" として表示されます。 Word 表示拡張機能では、レポートは、 [!INCLUDE[ofprword](../../includes/ofprword-md.md)] 2013 と互換性のある Word 文書 (.docx) として表示されます。  詳細については、「[Microsoft Word へのエクスポート](../../reporting-services/report-builder/exporting-to-microsoft-word-report-builder-and-ssrs.md)」を参照してください。|  
 |XML|データ|XML 表示拡張機能では、レポートが XML 形式で返されます。 レポート XML のスキーマは、レポート固有のものであり、データのみを含んでいます。 XML 表示拡張機能では、レイアウト情報はレンダリングされません。また、改ページ位置も維持されません。 この拡張機能で生成された XML は、データベースにインポートしたり、XML データ メッセージとして使用したり、カスタム アプリケーションに送信することができます。<br/><br/> 詳細については、「[XML へのエクスポート](../../reporting-services/report-builder/exporting-to-xml-report-builder-and-ssrs.md)」を参照してください。|  

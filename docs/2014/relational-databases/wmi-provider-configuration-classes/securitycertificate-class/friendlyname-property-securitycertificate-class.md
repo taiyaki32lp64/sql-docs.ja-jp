@@ -19,11 +19,11 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: ab80d077af7db8fe1162a725bb94f9eec032061c
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53351361"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63231267"
 ---
 # <a name="friendlyname-property-securitycertificate-class"></a>FriendlyName プロパティ (SecurityCertificate クラス)
   セキュリティ証明書の別の表示名を取得または設定します。  

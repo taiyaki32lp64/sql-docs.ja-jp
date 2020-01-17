@@ -1,6 +1,7 @@
 ---
-title: 'トラブルシューティング: 可用性グループ接続の超過 RPO (SQL Server) | Microsoft Docs'
-ms.custom: ag-guide
+title: 可用性グループ接続の超過 RPO
+description: Always On 可用性グループが回復ポイントの目標 (RPO) を超えた場合の一般的な問題と解決策
+ms.custom: seo-lt-2019
 ms.date: 06/13/2017
 ms.prod: sql
 ms.reviewer: ''
@@ -9,15 +10,14 @@ ms.topic: conceptual
 ms.assetid: 38de1841-9c99-435a-998d-df81c7ca0f1e
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 4e1840f9c6d04965ae24d8b9d188b7def303a0b5
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: 92c78d36559a8cb08a7f3368012a94ce3048c93c
+ms.sourcegitcommit: f8cf8cc6650a22e0b61779c20ca7428cdb23c850
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52408769"
+ms.lasthandoff: 12/04/2019
+ms.locfileid: "74822184"
 ---
-# <a name="troubleshoot-availability-group-exceeded-rpo"></a>トラブルシューティング: 可用性グループ接続の超過 RPO
+# <a name="troubleshoot-availability-group-exceeded-rpo"></a>トラブルシューティング:可用性グループ接続の超過 RPO
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   非同期コミット セカンダリ レプリカへの可用性グループの強制手動フェールオーバーを実行した後に、データ損失が回復ポイントの目標 (RPO) を超えていることが判明する場合があります。 または、「[Always On 可用性グループのパフォーマンスを監視する](monitor-performance-for-always-on-availability-groups.md)」の方法を使用して非同期コミット セカンダリ レプリカの予想されるデータ損失を計算したときに RTO を超過していることが判明します。  
   
@@ -116,17 +116,17 @@ ORDER BY r.io_pending , r.io_pending_ms_ticks DESC;
   
 -   **物理ディスク: すべてのカウンター**  
   
--   **Physical Disk: Avg.Disk sec/Transfer**  
+-   **物理ディスク:Avg.Disk sec/Transfer**  
   
--   **SQL Server: Databases > Log Flush Wait Time**  
+-   **SQL Server:Databases > Log Flush Wait Time**  
   
--   **SQL Server: Databases > Log Flush Waits/sec**  
+-   **SQL Server:Databases > Log Flush Waits/sec**  
   
--   **SQL Server: Databases > Log Pool Disk Reads/sec**  
+-   **SQL Server:Databases > Log Pool Disk Reads/sec**  
   
  I/O のボトルネックを特定し、ログ ファイルとデータ ファイルが同じハード ディスク上に置かれている場合、最初の手順として、データ ファイルとログ ファイルを別々のディスクに置く必要があります。 このベスト プラクティスにより、レポート ワークロードが、プライマリ レプリカからログ バッファーへのログ転送パスに干渉することがなくなり、セカンダリ ディスク上でトランザクションを書き込む機能に影響しなくなります。  
   
-## <a name="next-steps"></a>次の手順  
+## <a name="next-steps"></a>次のステップ  
  [SQL Server (SQL Server 2012 に適用されます) のパフォーマンスに関する問題のトラブルシューティング](https://msdn.microsoft.com/library/dd672789(v=SQL.100).aspx)  
   
   

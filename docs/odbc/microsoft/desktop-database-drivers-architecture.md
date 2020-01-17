@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 8b4d13f7-ab37-40b4-a9c6-145e7385352f
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 7487d073b95190418ee7f6900390a2d60ce42e13
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: ccd1f14b0cfbcbdbc675a142ebabf11932409832
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52516863"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68071907"
 ---
 # <a name="desktop-database-drivers-architecture"></a>デスクトップ データベース ドライバーのアーキテクチャ
 使用には、Microsoft Windows 95 以降、または Windows NT 4.0 と Windows 2000 は、これらのドライバーが設計されています。 Windows 95 以降; のみの 32 ビット アプリケーションがサポートされます。16 ビットおよび 32 ビット アプリケーションは、Windows NT 4.0 および Windows 2000 でサポートされます。  

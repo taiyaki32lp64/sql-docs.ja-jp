@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 34bd5a607998c6e37f688ccbadcd4d612d3daea7
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52818217"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62807037"
 ---
 # <a name="rebuild-index-task-maintenance-plan"></a>[インデックスの再構築タスク]\(メンテナンス プラン)
   **[インデックスの再構築タスク]** ダイアログ ボックスを使用すると、データベースのテーブルに新しい FILL FACTOR でインデックスを再作成できます。 FILL FACTOR は、後で拡張できるように、インデックスの各ページの空き領域の量を決定します。 FILL FACTOR が適用されるのはインデックスの作成時だけであるため、テーブルにデータが追加されるにつれて、各ページの空き容量は徐々に減少します。 データ ページおよびインデックス ページを再編成すると、再び空き領域を確保できます。  
@@ -28,7 +28,7 @@ ms.locfileid: "52818217"
  **[インデックスの再構築タスク]** では、ALTER INDEX ステートメントが使用されます。  
   
 ## <a name="options"></a>および  
- **[接続]**  
+ **Connection**  
  このタスクを実行するときに使用するサーバー接続を選択します。  
   
  **[新規作成]**  
@@ -90,7 +90,7 @@ ms.locfileid: "52818217"
  **[サーバー名の選択または入力]**  
  このタスクを実行するときに接続するサーバーを選択します。  
   
- **[更新]**  
+ **更新**  
  使用できるサーバーの一覧を表示します。  
   
  **[サーバーにログオンするための情報の入力]**  
@@ -108,7 +108,7 @@ ms.locfileid: "52818217"
  **Password**  
  認証に使用するパスワードを指定します。 このオプションは利用できません。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [ALTER INDEX &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-index-transact-sql)   
  [DBCC DBREINDEX &#40;Transact-SQL&#41;](/sql/t-sql/database-console-commands/dbcc-dbreindex-transact-sql)   
  [CREATE INDEX &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-index-transact-sql)   

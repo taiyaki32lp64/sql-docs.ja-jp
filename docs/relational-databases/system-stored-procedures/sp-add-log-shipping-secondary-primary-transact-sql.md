@@ -1,5 +1,5 @@
 ---
-title: sp_add_log_shipping_secondary_primary (TRANSACT-SQL) |Microsoft Docs
+title: sp_add_log_shipping_secondary_primary (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -17,15 +17,14 @@ helpviewer_keywords:
 ms.assetid: bfbbbee2-c255-4a59-a963-47d6e980a8e2
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: fc2bf117e78f897102f85a7cab43295b079db12b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 155f59426e8167d5d888f3890089dd4b2ea3bf7c
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47824740"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72909684"
 ---
-# <a name="spaddlogshippingsecondaryprimary-transact-sql"></a>sp_add_log_shipping_secondary_primary (Transact-SQL)
+# <a name="sp_add_log_shipping_secondary_primary-transact-sql"></a>sp_add_log_shipping_secondary_primary (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   指定したプライマリ データベースのセカンダリ サーバーに対して、プライマリ情報の設定、ローカルおよびリモート監視リンクの追加、コピー ジョブと復元ジョブの作成を行います。  
@@ -54,82 +53,68 @@ sp_add_log_shipping_secondary_primary
 ```  
   
 ## <a name="arguments"></a>引数  
- [ **@primary_server** =] '*primary_server*'  
- プライマリ インスタンスの名前、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]ログ配布構成にします。 *primary_server*は**sysname** NULL にすることはできません。  
+ログ配布構成の [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] のプライマリインスタンスの名前 `[ @primary_server = ] 'primary_server'` ます。 *primary_server*は**sysname**であり、NULL にすることはできません。  
   
- [ **@primary_database** =] '*primary_database*'  
- プライマリ サーバー上のデータベースの名前を指定します。 *primary_database*は**sysname**、既定値はありません。  
+`[ @primary_database = ] 'primary_database'` は、プライマリサーバー上のデータベースの名前です。 *primary_database*は**sysname**であり、既定値はありません。  
   
- [ **@backup_source_directory** =] '*backup_source_directory*'  
- プライマリ サーバーのトランザクション ログ バックアップ ファイルが格納されているディレクトリ。 *backup_source_directory*は**nvarchar (500)** NULL にすることはできません。  
+プライマリサーバーからのトランザクションログバックアップファイルが格納されているディレクトリを `[ @backup_source_directory = ] 'backup_source_directory'` します。 *backup_source_directory*は**nvarchar (500)** であり、NULL にすることはできません。  
   
- [ **@backup_destination_directory** =] '*backup_destination_directory*'  
- バックアップ ファイルのコピー先となるセカンダリ サーバーのディレクトリ。 *backup_destination_directory*は**nvarchar (500)** NULL にすることはできません。  
+バックアップファイルのコピー先となるセカンダリサーバー上のディレクトリを `[ @backup_destination_directory = ] 'backup_destination_directory'` します。 *backup_destination_directory*は**nvarchar (500)** であり、NULL にすることはできません。  
   
- [ **@copy_job_name** = ] '*copy_job_name*'  
- 使用する名前、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]トランザクション ログ バックアップをセカンダリ サーバーにコピーに作成されているエージェント ジョブ。 *copy_job_name*は**sysname** NULL にすることはできません。  
+トランザクションログバックアップをセカンダリサーバーにコピーするために作成される [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェントジョブに使用する名前を `[ @copy_job_name = ] 'copy_job_name'` します。 *copy_job_name*は**sysname**であり、NULL にすることはできません。  
   
- [ **@restore_job_name** =] '*restore_job_name*'  
- 名前を指定します、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]セカンダリ データベースにバックアップを復元するセカンダリ サーバー上のエージェント ジョブ。 *restore_job_name*は**sysname** NULL にすることはできません。  
+`[ @restore_job_name = ] 'restore_job_name'` は、セカンダリデータベースにバックアップを復元するセカンダリサーバー上の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェントジョブの名前です。 *restore_job_name*は**sysname**であり、NULL にすることはできません。  
   
- [ **@file_retention_period** =] '*file_retention_period*'  
- 指定されたパスのセカンダリ サーバーでバックアップ ファイルが保持される分単位の時間の長さ、@backup_destination_directoryパラメーターを削除する前にします。 *history_retention_period*は**int**、既定値は NULL です。 指定されていない場合、値 14420 が使用されます。  
+@backup_destination_directory パラメーターで指定されたパスにおいて、バックアップファイルがセカンダリサーバー上で保持される時間 (分単位) を `[ @file_retention_period = ] 'file_retention_period'` します。この時間を経過すると、削除されます。 *history_retention_period*は**int**,、既定値は NULL です。 値が指定されていない場合は、14420の値が使用されます。  
   
- [ **@monitor_server** =] '*monitor_server*'  
- 監視サーバーの名前を指定します。 *Monitor_server*は**sysname**、既定値はありません、NULL にすることはできません。  
+`[ @monitor_server = ] 'monitor_server'` 監視サーバーの名前を指定します。 *Monitor_server*は**sysname**であり、既定値はありません。 NULL にすることはできません。  
   
- [ **@monitor_server_security_mode** =] '*monitor_server_security_mode*'  
- 監視サーバーへの接続に使用されるセキュリティ モード。  
+監視サーバーへの接続に使用するセキュリティモードを `[ @monitor_server_security_mode = ] 'monitor_server_security_mode'` します。  
   
  1 = Windows 認証。  
   
- 0 =[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]認証します。  
+ 0 = [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 認証。  
   
- *monitor_server_security_mode*は**ビット**NULL にすることはできません。  
+ *monitor_server_security_mode*は**ビット**であり、NULL にすることはできません。  
   
- [ **@monitor_server_login** =] '*monitor_server_login*'  
- 監視サーバーへのアクセスに使用するアカウントのユーザー名を指定します。  
+`[ @monitor_server_login = ] 'monitor_server_login'` は、監視サーバーへのアクセスに使用するアカウントのユーザー名です。  
   
- [ **@monitor_server_password** =] '*monitor_server_password*'  
- 監視サーバーへのアクセスに使用するアカウントのパスワードを指定します。  
+`[ @monitor_server_password = ] 'monitor_server_password'` は、監視サーバーへのアクセスに使用するアカウントのパスワードです。  
   
- [ **@copy_job_id** =] '*copy_job_id*' 出力  
- セカンダリ サーバーでのコピー ジョブに関連付けられた ID。 *copy_job_id*は**uniqueidentifier** NULL にすることはできません。  
+セカンダリサーバー上のコピージョブに関連付けられている ID `[ @copy_job_id = ] 'copy_job_id' OUTPUT` ます。 *copy_job_id*は**uniqueidentifier**であり、NULL にすることはできません。  
   
- [ **@restore_job_id** =] '*restore_job_id*' 出力  
- セカンダリ サーバーでの復元ジョブに関連付けられた ID。 *restore_job_id*は**uniqueidentifier** NULL にすることはできません。  
+セカンダリサーバー上の復元ジョブに関連付けられている ID `[ @restore_job_id = ] 'restore_job_id' OUTPUT` ます。 *restore_job_id*は**uniqueidentifier**であり、NULL にすることはできません。  
   
- [ **@secondary_id** =] '*secondary_id*' 出力  
- ログ配布構成におけるセカンダリ サーバーの ID。 *secondary_id*は**uniqueidentifier** NULL にすることはできません。  
+ログ配布構成のセカンダリサーバーの ID を `[ @secondary_id = ] 'secondary_id' OUTPUT` します。 *secondary_id*は**uniqueidentifier**であり、NULL にすることはできません。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  0 (成功) または 1 (失敗)  
   
 ## <a name="result-sets"></a>結果セット  
- なし  
+ [InclusionThresholdSetting]  
   
-## <a name="remarks"></a>コメント  
- **sp_add_log_shipping_secondary_primary**から実行する必要があります、**マスター**セカンダリ サーバー上のデータベース。 このストアド プロシージャでは次の処理が行われます。  
+## <a name="remarks"></a>Remarks  
+ **sp_add_log_shipping_secondary_primary**は、セカンダリサーバーの**master**データベースから実行する必要があります。 このストアド プロシージャでは次の処理が行われます。  
   
 1.  指定したプライマリ サーバーとプライマリ データベースのセカンダリ ID を生成する。  
   
-2.  また、次の処理が行われます。  
-  
-    1.  セカンダリ ID のエントリを追加します。 **log_shipping_secondary**指定された引数を使用します。  
+2.  では、次のことが行われます。  
+
+    1.  指定された引数を使用して**log_shipping_secondary**にセカンダリ ID のエントリを追加します。  
   
     2.  無効になったセカンダリ ID のコピー ジョブを作成する。  
   
-    3.  コピー ジョブ ID を設定、 **log_shipping_secondary**コピー ジョブのジョブ ID を入力します。  
+    3.  **Log_shipping_secondary**エントリのコピージョブ id をコピージョブのジョブ id に設定します。  
   
-    4.  無効になったセカンダリ ID の復元ジョブを作成する。  
+    4.  セカンダリ ID に対して無効になっている復元ジョブを作成します。  
   
-    5.  復元ジョブ ID を設定、 **log_shipping_secondary**復元ジョブのジョブ ID を入力します。  
+    5.  **Log_shipping_secondary**エントリの復元ジョブ id を、復元ジョブのジョブ id に設定します。  
   
 ## <a name="permissions"></a>アクセス許可  
- メンバーのみ、 **sysadmin**固定サーバー ロールは、この手順を実行できます。  
+ このプロシージャを実行できるのは、 **sysadmin**固定サーバーロールのメンバーだけです。  
   
 ## <a name="examples"></a>使用例  
- この例を使用して、 **sp_add_log_shipping_secondary_primary**ストアド プロシージャをプライマリ データベースの情報を設定する[!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)]セカンダリ サーバーです。  
+ この例では、 **sp_add_log_shipping_secondary_primary**ストアドプロシージャを使用して、セカンダリサーバー上のプライマリデータベース [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] の情報を設定する方法を示します。  
   
 ```  
 EXEC master.dbo.sp_add_log_shipping_secondary_primary   

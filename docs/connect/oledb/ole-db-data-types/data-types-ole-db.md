@@ -15,13 +15,12 @@ helpviewer_keywords:
 - OLE DB, data types
 author: pmasl
 ms.author: pelopes
-manager: craigg
-ms.openlocfilehash: c4dfe5f61d13b79f9f4b7ad3053ad10ca49f5c81
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 05e9714159a3253a92c2eb0aeef3ea48e632345c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47803060"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68015817"
 ---
 # <a name="data-types-ole-db"></a>データ型 (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

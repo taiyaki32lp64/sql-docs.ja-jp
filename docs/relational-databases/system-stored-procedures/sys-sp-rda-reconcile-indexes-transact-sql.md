@@ -14,20 +14,19 @@ dev_langs:
 helpviewer_keywords:
 - sys.sp_rda_reconcile_indexes stored procedure
 ms.assetid: 96b31ab9-bf84-46d6-9990-81f5c51f885a
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: 329446a2ca5b7719e68123b2257d32ceddcd0e8a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: MikeRayMSFT
+ms.author: mikeray
+ms.openlocfilehash: 0e439a04e55816f25cae318a8451452bf09dee0b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47756520"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67905046"
 ---
 # <a name="syssprdareconcileindexes-transact-sql"></a>sys.sp_rda_reconcile_indexes (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
-  リモート テーブルのインデックスを調整するために、スキーマに関するタスク キューに入れます。 このタスクが正常に完了した後、リモートのテーブルは、ローカルの拡張が有効なテーブルに存在するのと同じインデックスにあります。  
+  リモート テーブルのインデックスを調整するスキーマ タスク キューに入れます。 このタスクが正常に完了すると、リモート テーブルがローカルの Stretch 対応テーブルに存在すると同じインデックスにあります。  
   
  呼び出すときにインデックスを調整する別のタスクがキューに存在する場合**sp_rda_reconcile_indexes**、重複するタスクがこのストアド プロシージャをキューに登録します。  
   
@@ -43,10 +42,10 @@ sp_rda_reconcile_indexes [@objname = ] 'objname'
   
 ## <a name="arguments"></a>引数  
  [@objname =] *'objname'*  
- インデックスを調整する、拡張が有効なテーブルの修飾名または非修飾の名前です。 修飾されたオブジェクトを指定する場合にのみ、引用符が必要です。  
+ インデックスを調整する、Stretch 対応テーブルの修飾名または非修飾名です。 修飾されたオブジェクトを指定する場合にのみ、引用符が必要です。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
- 0 (成功) または >0 (失敗)  
+ 0 (成功) または > 0 (失敗)  
   
 ## <a name="see-also"></a>関連項目  
  [Stretch Database](../../sql-server/stretch-database/stretch-database.md)  

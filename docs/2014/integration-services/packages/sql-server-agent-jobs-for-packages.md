@@ -12,15 +12,15 @@ helpviewer_keywords:
 - scheduling packages [Integration Services]
 - SQL Server Agent [Integration Services]
 ms.assetid: ecf7a5f9-b8a7-47f1-9ac0-bac07cb89e31
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: fe378671c1cb9b93ae8262869742c0b01a6d9cac
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 7a4b9cd5eaad7b51f7cc3d2a0c73bea3f23fd542
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53369934"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62767184"
 ---
 # <a name="sql-server-agent-jobs-for-packages"></a>パッケージに対する SQL Server エージェント ジョブ
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェントを使用して、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] パッケージの実行を自動化およびスケジュール設定できます。 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] サーバーに配置されているパッケージ、および [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]、 [!INCLUDE[ssIS](../../includes/ssis-md.md)] パッケージ ストア、ファイル システムに格納されているパッケージのスケジュールを設定できます。  
@@ -54,14 +54,14 @@ ms.locfileid: "53369934"
   
  詳しくは、「 [SQL Server エージェントを使用してパッケージのスケジュールを設定する](../schedule-a-package-by-using-sql-server-agent.md)」を参照してください。  
   
- 使用する方法を説明したビデオの[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]パッケージを実行するエージェントは、ビデオのホーム ページを参照してください[方法。SQL Server エージェント (SQL Server ビデオ) を使用してパッケージの実行を自動化](https://go.microsoft.com/fwlink/?LinkId=141771)、MSDN ライブラリ。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェントを使用してパッケージを実行する方法を示しているビデオについては、MSDN ライブラリのビデオのホームページの「[SQL Server エージェントを使用してパッケージ実行を自動化する方法 (SQL Server ビデオ)](https://go.microsoft.com/fwlink/?LinkId=141771)」をご覧ください。  
   
 ##  <a name="trouble"></a> トラブルシューティング  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェントのジョブ ステップは、パッケージを [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] およびコマンド ラインで正常に実行できる場合でも、パッケージの開始に失敗することがあります。 この問題には、いくつかの一般的な原因と、推奨されるソリューションがあります。 詳細については、次のリソースを参照してください。  
   
 -   [!INCLUDE[msCoName](../../includes/msconame-md.md)] サポート技術情報の記事「 [SQL Server エージェントのジョブ ステップから SSIS パッケージを呼び出したときに SSIS パッケージが実行されません](https://support.microsoft.com/kb/918760)  
   
--   ビデオ、[のトラブルシューティングします。パッケージの SQL Server エージェント (SQL Server ビデオ) を使用して実行](https://go.microsoft.com/fwlink/?LinkId=141772)、MSDN ライブラリ。  
+-   MSDN ライブラリのビデオ「[トラブルシューティング: SQL Server エージェントを使用した SSIS パッケージ実行 (SQL Server ビデオ)](https://go.microsoft.com/fwlink/?LinkId=141772)」  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェントのジョブ ステップがパッケージを開始した後、パッケージの実行が失敗したり、正常に実行されても予期しない結果になる場合があります。 これらの問題のトラブルシューティングには、次のツールを使用できます。  
   
@@ -87,7 +87,7 @@ ms.locfileid: "53369934"
   
     4.  SSISDB を右クリックし、[レポート]、[標準レポート] の順にポイントして、[すべての実行] をクリックします。  
   
-    5.  **[すべての実行]** レポートの **[ID]** 列で、実行 ID を探します。 **[概要]**、 **[すべてのメッセージ]**、または **[実行のパフォーマンス]** をクリックして、このパッケージ実行についての情報を表示します。  
+    5.  **[すべての実行]** レポートの **[ID]** 列で、実行 ID を探します。 **[概要]** 、 **[すべてのメッセージ]** 、または **[実行のパフォーマンス]** をクリックして、このパッケージ実行についての情報を表示します。  
   
          "概要"、"すべてのメッセージ"、および "実行のパフォーマンス" の各レポートの詳細については、「 [Integration Services サーバーのレポート](../reports-for-the-integration-services-server.md)」を参照してください。  
   
@@ -95,9 +95,9 @@ ms.locfileid: "53369934"
   
 -   [Web サイトのサポート技術情報の記事「](https://support.microsoft.com/kb/918760)SQL Server エージェントのジョブ ステップから SSIS パッケージを呼び出したときに SSIS パッケージが実行されません [!INCLUDE[msCoName](../../includes/msconame-md.md)] 」  
   
--   ビデオ、[のトラブルシューティングします。パッケージの SQL Server エージェント (SQL Server ビデオ) を使用して実行](https://go.microsoft.com/fwlink/?LinkId=141772)、MSDN ライブラリ  
+-   MSDN ライブラリのビデオ「[トラブルシューティング: SQL Server エージェントを使用した SSIS パッケージ実行 (SQL Server ビデオ)](https://go.microsoft.com/fwlink/?LinkId=141772)」  
   
--   ビデオ、[方法。SQL Server エージェント (SQL Server ビデオ) を使用してパッケージの実行を自動化](https://go.microsoft.com/fwlink/?LinkId=141771)、MSDN ライブラリ  
+-   MSDN ライブラリのビデオ「[SQL Server エージェントを使用してパッケージ実行を自動化する方法 (SQL Server ビデオ)](https://go.microsoft.com/fwlink/?LinkId=141771)」  
   
 -   mssqltips.com の技術記事「 [Windows PowerShell を使用した SQL Server エージェント ジョブの確認](https://go.microsoft.com/fwlink/?LinkId=165675)」  
   

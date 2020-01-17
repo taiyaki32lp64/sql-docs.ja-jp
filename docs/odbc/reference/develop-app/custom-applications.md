@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: f28178d9-ecd6-4e8c-9644-9bb624999dcb
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 6ab470951162b5e4035c1253ed4ce425356ad8ec
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 240bdf074fbe7fd28f5aafff5c1bbab7651d0c71
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47799860"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68067473"
 ---
 # <a name="custom-applications"></a>カスタム アプリケーション
 通常、カスタム アプリケーションは、いくつかの Dbms の特定のタスクを実行します。 たとえば、アプリケーションが 1 つの DBMS のデータを取得し、レポートを生成またはいくつかの Dbms の間でデータを転送場合があります。 これらの Dbms が、アプリケーションが書き込まれる前に呼ばれ、アプリケーションの有効期間の経過と共に変化する可能性が低いことにはどのようなこれらのアプリケーションが共通します。  

@@ -2,18 +2,18 @@
 title: SQL Server 並列データ ウェアハウスの接続の種類 (SSRS) | Microsoft Docs
 ms.date: 05/30/2017
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: report-data
 ms.topic: conceptual
 ms.assetid: 3925fd3d-2aa1-4768-96ad-cfc2c0ba9283
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 1253ef0bc89bc72dbd3b0e19fe8fca90f68c75e4
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 7a7da810593c6b7dee9ab80af17d840ed3d0dc4d
+ms.sourcegitcommit: 312b961cfe3a540d8f304962909cd93d0a9c330b
+ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50029861"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73594038"
 ---
 # <a name="sql-server-parallel-data-warehouse-connection-type-ssrs"></a>SQL Server 並列データ ウェアハウスの接続の種類 (SSRS)
 
@@ -24,8 +24,7 @@ ms.locfileid: "50029861"
  [!INCLUDE[ssDW](../../includes/ssdw-md.md)] からのデータをレポートに含めるには、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 並列データ ウェアハウスの種類に該当するレポート データ ソースに基づいたデータセットが必要です。 このビルトイン データ ソースの種類は、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 並列データ ウェアハウスのデータ拡張機能に基づいています。 このデータ ソースの種類を使用して、 [!INCLUDE[ssDW](../../includes/ssdw-md.md)]からのデータに接続し、そのデータを取得します。  
   
  このデータ拡張機能は、接続文字列とは個別に管理される、複数の値を持つパラメーター、サーバー集計、および資格情報をサポートしています。  
-  
- 詳細については、「 [SQL Server 2008 R2 並列データ ウェアハウス](https://go.microsoft.com/fwlink/?LinkId=150895)」の Web サイトを参照してください。  
+   
   
  このトピックの情報を使用して、データ ソースを構築してください。 手順については、「 [データ接続を追加および確認する (レポート ビルダーおよび SSRS)](../../reporting-services/report-data/add-and-verify-a-data-connection-report-builder-and-ssrs.md)」を参照してください。  
   
@@ -38,7 +37,7 @@ HOST=<IP address>; database= CustomerSales; port=<port>
   
  また、 **[データ ソースのプロパティ]** ダイアログ ボックスを使用して、ユーザー名やパスワードなどの資格情報を入力します。 `User Id` オプションと `Password` オプションは、接続文字列に自動的に付加されます。これらを接続文字列の一部として入力する必要はありません。 このユーザー インターフェイスには、 [!INCLUDE[ssDW](../../includes/ssdw-md.md)] アプライアンス内の管理ノードの IP アドレスとポート番号を指定するオプションもあります。 既定のポート番号は 17000 です。 ポートは管理者が変更できるので、接続文字列で別のポート番号を使用することもあります。  
   
- 接続文字列の例の詳細については、「 [レポート ビルダーでのデータ接続、データ ソース、および接続文字列](https://msdn.microsoft.com/library/7e103637-4371-43d7-821c-d269c2cc1b34)」を参照してください。  
+ 接続文字列の例の詳細については、「 [レポート ビルダーでのデータ接続、データ ソース、および接続文字列](data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)」を参照してください。  
   
 ##  <a name="Credentials"></a> [資格情報]  
  [!INCLUDE[ssDW](../../includes/ssdw-md.md)] ユーザー名とパスワードを実装および保存するための独自のセキュリティ技術が用意されています。 Windows 認証は使用できません。 Windows 認証を使用して [!INCLUDE[ssDW](../../includes/ssdw-md.md)] に接続しようとすると、エラーが発生します。  
@@ -49,9 +48,9 @@ HOST=<IP address>; database= CustomerSales; port=<port>
   
 -   保存されているユーザー名とパスワードを使用する。 レポート データを格納するデータベースがレポート サーバーとは別のサーバーに存在する場合に発生するダブル ホップに対処するには、資格情報を Windows 資格情報として使用するオプションを選択します。 データ ソースに接続した後に、認証されているユーザーの権限を借用するオプションもあります。  
   
--   資格情報を必要としない。 このオプションを使用するには、レポート サーバーで自動実行アカウントを構成しておく必要があります。 詳細については、msdn.microsoft.com で [Reporting Services に関するドキュメント](https://go.microsoft.com/fwlink/?linkid=121312)の「[自動実行アカウントの構成 &#40;SSRS 構成マネージャー&#41;](../../reporting-services/install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md)」を参照してください。  
+-   資格情報を必要としない。 このオプションを使用するには、レポート サーバーで自動実行アカウントを構成しておく必要があります。 詳細については、「[自動実行アカウントを構成する &#40;SSRS 構成マネージャー&#41;](../../reporting-services/install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md)」を参照してください。 
   
- 詳しくは、「[データ接続、データ ソース、および接続文字列 &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)」または「[レポート ビルダーでの資格情報の指定](https://msdn.microsoft.com/library/7412ce68-aece-41c0-8c37-76a0e54b6b53)」を参照してください。  
+ 詳細については、「[データ接続、データソース、および&#40;接続文字列レポートビルダー&#41;と SSRS](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md) 」または「[レポートデータソースに関する資格情報と接続情報の指定](specify-credential-and-connection-information-for-report-data-sources.md)」を参照してください。  
   
   
 ##  <a name="Query"></a> クエリ  
@@ -69,7 +68,7 @@ HOST=<IP address>; database= CustomerSales; port=<port>
   
  テキスト ベースのクエリ デザイナーでは、 [Text](#QueryText) モードをサポートしています。このモードで、データ ソースからデータを選択する [!INCLUDE[DWsql](../../includes/dwsql-md.md)] コマンドを入力します。  
   
--   [テキスト](#QueryText)  
+-   [[テキスト]](#QueryText)  
   
  [!INCLUDE[DWsql](../../includes/dwsql-md.md)] では [!INCLUDE[ssDW](../../includes/ssdw-md.md)] を使用し、SQL Server では [!INCLUDE[tsql](../../includes/tsql-md.md)] を使用します。 SQL 言語のこの 2 つの言語仕様はよく似ています。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データ ソースの接続の種類に対して作成されたクエリは、通常、 [!INCLUDE[ssDWCurrentFull](../../includes/ssdwcurrentfull-md.md)] データ ソースの接続の種類に使用できます。  
   
@@ -79,7 +78,7 @@ HOST=<IP address>; database= CustomerSales; port=<port>
   
  [!INCLUDE[ssDW](../../includes/ssdw-md.md)] で使用されるグラフィカル クエリ デザイナーには、要約データのみを取得するクエリの作成に役立つグループ化と集計のサポートが組み込まれています。 [!INCLUDE[DWsql](../../includes/dwsql-md.md)] 言語の機能には、GROUP BY 句、DISTINCT キーワード、および集計 (SUM、COUNT など) があります。 テキスト ベースのクエリ デザイナーでは、グループ化と集計が含まれている [!INCLUDE[DWsql](../../includes/dwsql-md.md)] 言語が完全にサポートされています。  
   
- [!INCLUDE[tsql](../../includes/tsql-md.md)] の詳細については、msdn.microsoft.com の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [オンライン ブック](https://go.microsoft.com/fwlink/?LinkId=141687)にある「[Transact-SQL リファレンス (データベース エンジン)](../../t-sql/transact-sql-reference-database-engine.md)」を参照してください。  
+ [!INCLUDE[tsql](../../includes/tsql-md.md)] の詳細については、「[Transact-SQL リファレンス &#40;データベース エンジン&#41;](../../t-sql/transact-sql-reference-database-engine.md)」を参照してください。  
   
 ###  <a name="QueryText"></a> Text の種類のクエリの使用  
  テキスト ベースのクエリ デザイナーでは、 [!INCLUDE[DWsql](../../includes/dwsql-md.md)] コマンドを入力して、データセット内のデータを定義します。 [!INCLUDE[ssDW](../../includes/ssdw-md.md)] からデータを取得するときに使用するクエリは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] アプリケーション内で実行されていない [!INCLUDE[ssDW](../../includes/ssdw-md.md)] のインスタンスからデータを取得するときに使用するクエリと同じです。 たとえば、次の [!INCLUDE[DWsql](../../includes/dwsql-md.md)] クエリでは、マーケティング アシスタントであるすべての従業員の名前を選択します。  
@@ -97,7 +96,7 @@ FROM
 WHERE HumanResources.Employee.JobTitle = 'Marketing Assistant'   
 ```  
   
- ツール バーの **[実行]** ボタン (**!**) をクリックすると、クエリが実行され、結果セットが表示されます。  
+ ツール バーの **[実行]** ボタン ( **!** ) をクリックすると、クエリが実行され、結果セットが表示されます。  
   
  このクエリをパラメーター化するには、クエリ パラメーターを追加します。 たとえば、WHERE 句を次の構文に変更します。  
   
@@ -123,7 +122,7 @@ WHERE EmployeeID = (@EmpID)
 ##  <a name="Remarks"></a> 解説  
   
 ###### <a name="platform-and-version-information"></a>プラットフォームおよびバージョン情報  
- プラットフォームおよびバージョン サポートの詳細については、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [オンライン ブック](https://go.microsoft.com/fwlink/?linkid=121312)にある [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] ドキュメントの「[Reporting Services でサポートされるデータ ソース (SSRS)](../../reporting-services/report-data/data-sources-supported-by-reporting-services-ssrs.md)」を参照してください。  
+ プラットフォームとバージョンのサポートについて詳しくは、「[Reporting Services でサポートされるデータ ソース &#40;SSRS&#41;](../../reporting-services/report-data/data-sources-supported-by-reporting-services-ssrs.md)」をご覧ください。  
   
   
 ##  <a name="HowTo"></a> 操作方法に関するトピック  
@@ -142,7 +141,7 @@ WHERE EmployeeID = (@EmpID)
  [レポート データセット &#40;SSRS&#41;](../../reporting-services/report-data/report-datasets-ssrs.md)  
  レポートのデータへのアクセスの概要について説明します。  
   
- [レポート ビルダーでのデータ接続、データ ソース、および接続文字列](https://msdn.microsoft.com/library/7e103637-4371-43d7-821c-d269c2cc1b34)  
+ [レポート ビルダーでのデータ接続、データ ソース、および接続文字列](data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)  
  データ接続とデータ ソースについて説明します。  
   
  [レポート埋め込みデータセットと共有データセット (レポート ビルダーおよび SSRS)](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)  
@@ -151,7 +150,7 @@ WHERE EmployeeID = (@EmpID)
  [データセット フィールド コレクション (レポート ビルダーおよび SSRS)](../../reporting-services/report-data/dataset-fields-collection-report-builder-and-ssrs.md)  
  クエリによって生成されるデータセット フィールド コレクションについて説明します。  
   
- [Reporting Services でサポートされるデータ ソース &#40;SSRS&#41;](../../reporting-services/report-data/data-sources-supported-by-reporting-services-ssrs.md) ([!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [オンライン ブックの [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] ドキュメント](https://go.microsoft.com/fwlink/?linkid=121312))。  
+ [Reporting Services でサポートされるデータ ソース &#40;SSRS&#41;](../../reporting-services/report-data/data-sources-supported-by-reporting-services-ssrs.md)。  
  各データ拡張機能のプラットフォームおよびバージョン サポートに関する詳細な情報です。  
 
 ## <a name="next-steps"></a>次の手順

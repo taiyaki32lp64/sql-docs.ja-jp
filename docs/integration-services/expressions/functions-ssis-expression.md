@@ -14,17 +14,20 @@ helpviewer_keywords:
 - SQL Server Integration Services, functions
 - SSIS, functions
 ms.assetid: e9a41a31-94f4-46a4-b737-c707dd59ce48
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: 38729c2588ce7f779951403e72470b5ab0744e14
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: a271b9dd9da2a4b21040a89145d9f2ab1fe84b68
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47816940"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71297590"
 ---
 # <a name="functions-ssis-expression"></a>関数 (SSIS 式)
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   式言語には、式で使用するための関数セットが含まれています。 式で 1 つの関数を使用することもできますが、通常、式は関数と演算子を組み合わせて使用したり、複数の関数を使用します。  
   
  関数は、次の各グループに分類されます。  
@@ -48,7 +51,7 @@ ms.locfileid: "47816940"
 |[LN &#40;SSIS 式&#41;](../../integration-services/expressions/ln-ssis-expression.md)|数値式の自然対数を返します。|  
 |[LOG &#40;SSIS 式&#41;](../../integration-services/expressions/log-ssis-expression.md)|数値式の常用対数を返します。|  
 |[POWER &#40;SSIS 式&#41;](../../integration-services/expressions/power-ssis-expression.md)|指定された数値式の結果をべき乗値で返します。|  
-|[ROUND &#40;SSIS 式&#41;](../../integration-services/expressions/round-ssis-expression.md)|指定された長さまたは有効桁数に丸めた数値式を返します。 のインスタンスにアクセスするたびに SQL Server ログインを指定する必要はありません。|  
+|[ROUND &#40;SSIS 式&#41;](../../integration-services/expressions/round-ssis-expression.md)|指定された長さまたは有効桁数に丸めた数値式を返します。 。|  
 |[SIGN &#40;SSIS 式&#41;](../../integration-services/expressions/sign-ssis-expression.md)|数値式の符号として正 (+)、負 (-)、ゼロ (0) のいずれかを返します。|  
 |[SQUARE &#40;SSIS 式&#41;](../../integration-services/expressions/square-ssis-expression.md)|数値式の 2 乗値を返します。|  
 |[SQRT &#40;SSIS 式&#41;](../../integration-services/expressions/sqrt-ssis-expression.md)|数値式の平方根を返します。|  
@@ -75,7 +78,7 @@ ms.locfileid: "47816940"
   
  式エバリュエーターには、次の日付と時刻関数が用意されています。  
   
-|関数|[説明]|  
+|機能|[説明]|  
 |--------------|-----------------|  
 |[DATEADD &#40;SSIS 式&#41;](../../integration-services/expressions/dateadd-ssis-expression.md)|指定された日付に日付または期間を加えて、新しい DT_DBTIMESTAMP 値を返します。|  
 |[DATEDIFF &#40;SSIS 式&#41;](../../integration-services/expressions/datediff-ssis-expression.md)|指定された 2 つの日付間の差を、日付および時刻の単位で返します。|  

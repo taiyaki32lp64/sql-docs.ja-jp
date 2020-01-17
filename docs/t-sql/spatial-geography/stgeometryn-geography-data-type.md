@@ -14,15 +14,14 @@ dev_langs:
 helpviewer_keywords:
 - STGeometryN method
 ms.assetid: 53755f69-cd50-475b-b3b8-a1a9157cf03a
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: 19c11e02f561919767cc9eb67b68cc863442ceb6
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: MladjoA
+ms.author: mlandzic
+ms.openlocfilehash: 249639ef13d9200d1d6cedc189044c30ba8ff7ac
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47628990"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68042263"
 ---
 # <a name="stgeometryn-geography-data-type"></a>STGeometryN (geography データ型)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -43,7 +42,7 @@ ms.locfileid: "47628990"
 ## <a name="return-types"></a>戻り値の型  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 戻り値の型: **geography**  
   
- CLR の戻り値の型: **SqlGeography**  
+ CLR の戻り値の型:**SqlGeography**  
   
 ## <a name="remarks"></a>Remarks  
  パラメーターが [STNumGeometries()](../../t-sql/spatial-geography/stnumgeometries-geography-data-type.md) の結果よりも大きい場合、このメソッドは null を返します。*expression* パラメーターが 1 より小さい場合は、**ArgumentOutOfRangeException** をスローします。  

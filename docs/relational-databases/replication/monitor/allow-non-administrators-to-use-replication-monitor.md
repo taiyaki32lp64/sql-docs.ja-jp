@@ -1,6 +1,7 @@
 ---
-title: 管理者以外のユーザーがレプリケーション モニターを使用できるようにする | Microsoft Docs
-ms.custom: ''
+title: 管理者以外のユーザーがレプリケーション モニターを使用できるようにする
+description: SQL Server Management Studio (SSMS) で管理者以外のユーザーにレプリケーション モニターへのアクセス権を付与する方法について説明します。
+ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -12,16 +13,16 @@ helpviewer_keywords:
 ms.assetid: 1cf21d9e-831d-41a1-a5a0-83ff6d22fa86
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: e163616fc8cf99ea2a70dfab01d2a420bec1d9f5
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
+ms.openlocfilehash: ee5905259958b1b396b1b9c2726ca3a74b24a7d6
+ms.sourcegitcommit: 02d44167a1ee025ba925a6fefadeea966912954c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47717980"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75320625"
 ---
 # <a name="allow-non-administrators-to-use-replication-monitor"></a>管理者以外のユーザーがレプリケーション モニターを使用できるようにする
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
   このトピックでは、 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] で [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] または [!INCLUDE[tsql](../../../includes/tsql-md.md)]を使用して、管理者以外のユーザーがレプリケーション モニターを使用できるようにする方法について説明します。 レプリケーション モニターは、次のロールのメンバーになっているユーザーが使用できます。  
   
 -   **sysadmin** 固定サーバー ロール  
@@ -36,7 +37,7 @@ ms.locfileid: "47717980"
   
 -   **作業を開始する準備:**  
   
-     [Security](#Security)  
+     [セキュリティ](#Security)  
   
 -   **管理者以外のユーザーがレプリケーション モニターを使用できるようにするために使用するもの:**  
   
@@ -44,7 +45,7 @@ ms.locfileid: "47717980"
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> 作業を開始する準備  
+##  <a name="BeforeYouBegin"></a> はじめに  
   
 ###  <a name="Security"></a> セキュリティ  
   
@@ -57,7 +58,7 @@ ms.locfileid: "47717980"
   
 1.  [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]で、ディストリビューターに接続し、サーバー ノードを展開します。  
   
-2.  **[データベース]**、 **[システム データベース]** の順に展開してから、ディストリビューション データベース (既定の名前は **distribution** ) を展開します。  
+2.  **[データベース]** 、 **[システム データベース]** の順に展開してから、ディストリビューション データベース (既定の名前は **distribution** ) を展開します。  
   
 3.  **[セキュリティ]** を展開し、 **[ユーザー]** を右クリックしてから、 **[新しいユーザー]** をクリックします。  
   
@@ -68,21 +69,21 @@ ms.locfileid: "47717980"
 6.  **[データベース ロールのメンバーシップ]** の **[replmonitor]** チェック ボックスをオンにします。  
   
 7.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
-  
+
 ##  <a name="TsqlProcedure"></a> Transact-SQL の使用  
   
 #### <a name="to-add-a-user-to-the-replmonitor-fixed-database-role"></a>固定データベース ロール replmonitor にユーザーを追加するには  
   
 1.  ディストリビューターのディストリビューション データベースで [sp_helpuser (Transact-SQL)](../../../relational-databases/system-stored-procedures/sp-helpuser-transact-sql.md) を実行します。 対象のユーザーが結果セットの **UserName** に含まれていなかった場合は、そのユーザーに対し、[CREATE USER (Transact-SQL)](../../../t-sql/statements/create-user-transact-sql.md) ステートメントを使って、ディストリビューション データベースへのアクセスを許可する必要があります。  
   
-2.  ディストリビューターのディストリビューション データベースで [sp_helprolemember (Transact-SQL)](../../../relational-databases/system-stored-procedures/sp-helprolemember-transact-sql.md) を実行します。このとき、**@rolename** パラメーターには値 **replmonitor** を指定します。 対象のユーザーが結果セットの **MemberName** に含まれていた場合、そのユーザーは既にこのロールに所属しています。  
+2.  ディストリビューターのディストリビューション データベースで [sp_helprolemember &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-helprolemember-transact-sql.md) を実行します。このとき、`@rolename` パラメーターには値 **replmonitor** を指定します。 対象のユーザーが結果セットの **MemberName** に含まれていた場合、そのユーザーは既にこのロールに所属しています。  
   
-3.  ユーザーが **replmonitor** ロールに属していなかった場合は、ディストリビューターのディストリビューション データベースで [sp_addrolemember (Transact-SQL)](../../../relational-databases/system-stored-procedures/sp-addrolemember-transact-sql.md) を実行します。 **@rolename** には値 **replmonitor** を、**@membername** には、追加するデータベース ユーザーの名前または [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Windows ログイン名を指定します。  
+3.  ユーザーが **replmonitor** ロールに属していなかった場合は、ディストリビューターのディストリビューション データベースで [sp_addrolemember (Transact-SQL)](../../../relational-databases/system-stored-procedures/sp-addrolemember-transact-sql.md) を実行します。 `@rolename` には値 **replmonitor** を、`@membername` には、追加するデータベース ユーザーの名前または [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Windows ログイン名を指定します。  
   
 #### <a name="to-remove-a-user-from-the-replmonitor-fixed-database-role"></a>固定データベース ロール replmonitor からユーザーを削除するには  
   
-1.  ユーザーが **replmonitor** ロールに属しているかどうかを確認するには、ディストリビューターのディストリビューション データベースで [sp_helprolemember (Transact-SQL)](../../../relational-databases/system-stored-procedures/sp-helprolemember-transact-sql.md) を実行します。このとき、**@rolename** に値 **replmonitor** を指定します。 対象のユーザーが結果セットの **MemberName** に含まれていなかった場合、そのユーザーは現在、このロールに所属していません。  
+1.  ユーザーが **replmonitor** ロールに属しているかどうかを確認するには、ディストリビューターのディストリビューション データベースで [sp_helprolemember &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-helprolemember-transact-sql.md) を実行します。このとき、`@rolename` に値 **replmonitor** を指定します。 対象のユーザーが結果セットの **MemberName** に含まれていなかった場合、そのユーザーは現在、このロールに所属していません。  
   
-2.  ユーザーが **replmonitor** ロールに属している場合は、ディストリビューターのディストリビューション データベースで [sp_droprolemember (Transact-SQL)](../../../relational-databases/system-stored-procedures/sp-droprolemember-transact-sql.md) を実行します。 **@rolename** には値 **replmonitor** を、**@membername** には、削除するデータベース ユーザーの名前または Windows ログイン名を指定します。  
+2.  ユーザーが **replmonitor** ロールに属している場合は、ディストリビューターのディストリビューション データベースで [sp_droprolemember (Transact-SQL)](../../../relational-databases/system-stored-procedures/sp-droprolemember-transact-sql.md) を実行します。 `@rolename` には値 **replmonitor** を、`@membername` には、削除するデータベース ユーザーの名前または Windows ログイン名を指定します。 
   
   

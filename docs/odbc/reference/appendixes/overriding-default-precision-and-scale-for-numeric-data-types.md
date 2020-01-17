@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 84292334-0e33-4a1b-84de-8c018dd787f3
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 5f071cf4391c760f7d269382537c3cd4f2b758c3
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 66fc728440808314dbdaa30065c68232f4a89fba
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47772070"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68100613"
 ---
 # <a name="overriding-default-precision-and-scale-for-numeric-data-types"></a>数値データ型での既定の有効桁数と小数点以下桁数のオーバーライド
 ARD の SQL_DESC_TYPE フィールド設定されている場合、SQL_C_NUMERIC にいずれかを呼び出して**SQLBindCol**または**SQLSetDescField**ARD SQL_DESC_SCALE フィールドが 0 に設定されて、SQL_DESC_PRECISION フィールドが設定されますドライバーで定義された既定の有効桁数。 これは、場合でも、APD の SQL_DESC_TYPE フィールドは、いずれかを呼び出すことによって、SQL_C_NUMERIC に設定されて**SQLBindParameter**または**SQLSetDescField**します。 これは、入力、入力/出力、または出力パラメーターの場合は true。  

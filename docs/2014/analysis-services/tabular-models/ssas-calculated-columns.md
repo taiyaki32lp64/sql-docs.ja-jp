@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: e1011278-556d-4984-b01d-a37f8a33b304
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 6360770c57660ec62493b8ecd6c2aaea695289f7
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: e9a93fffba5c34d26cdb0305b0f6a97369e51b3e
+ms.sourcegitcommit: 0818f6cc435519699866db07c49133488af323f4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52395525"
+ms.lasthandoff: 06/20/2019
+ms.locfileid: "67284889"
 ---
 # <a name="calculated-columns-ssas-tabular"></a>計算列 (SSAS テーブル)
   テーブル モデルの計算列では、モデルに新しいデータを追加することができます。 貼り付けや列に値のインポートではなく、列の行レベルの値を定義する DAX 数式を作成します。 すると、計算列を他のデータ列と同じように、レポート、ピボットテーブル、またはピボットグラフで使用できるようになります。  
@@ -61,7 +60,7 @@ ms.locfileid: "52395525"
   
 -   計算列の名前を変更する場合、その列に依存する数式をすべて手動で更新する必要があります。 手動更新モードでない場合、数式の結果の更新は自動的に実行されます。 ただし、この処理には時間がかかることがあります。  
   
--   列名に使用できない文字がいくつかあります。 詳細については、「[PowerPivot の DAX 構文の仕様](https://msdn.microsoft.com/library/ee634217(v=sql.120).aspx)」の「名前付けに関する要件」を参照してください。  
+-   列名に使用できない文字がいくつかあります。 詳細については、「[PowerPivot の DAX 構文の仕様](/dax/dax-syntax-reference)」の「名前付けに関する要件」を参照してください。  
   
 ##  <a name="bkmk_perf"></a> 計算列のパフォーマンス  
  計算列で使用される数式は、メジャーで使用される数式よりリソースを大量に消費する可能性があります。 その理由の 1 つとして、計算列の結果が常にテーブルのすべての行を対象に計算されるのに対し、メジャーはレポート、ピボットテーブル、またはピボットグラフに使用されているフィルターで定義されたセルのみを対象として計算されることが挙げられます。 たとえば、テーブルに 100 万行含まれている場合、計算列には必ず 100 万個の結果が含まれるため、それだけパフォーマンスにも影響します。 ただし、ピボットテーブルでは、通常、行見出しおよび列見出しを適用してデータをフィルター処理します。したがって、メジャーは、ピボットテーブルの各セルに含まれているデータのサブセットのみを対象として計算されます。  

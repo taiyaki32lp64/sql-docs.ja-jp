@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: a0630602-53c1-4db0-98ce-70d160aedf8d
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 276b8627588bcd3472c12564db1e8c6e6af1ef2b
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: 43acc6708b5df71893c2c6b7658ca99bfb73f616
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53212531"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68018997"
 ---
 # <a name="sqlinstalltranslatorex-function"></a>SQLInstallTranslatorEx 関数
 **準拠**  
@@ -38,7 +37,7 @@ ms.locfileid: "53212531"
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
   
 BOOL SQLInstallTranslatorEx(  
      LPCSTR    lpszTranslator,  

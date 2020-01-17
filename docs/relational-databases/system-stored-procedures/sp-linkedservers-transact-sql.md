@@ -17,15 +17,14 @@ helpviewer_keywords:
 ms.assetid: d8f82f78-8a1f-4831-bcee-7c36c6e7dfbb
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: f21e65fab4cdedb37b2971e037f9b24c3b29fcd1
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 675707453fbc79f3f9c578469ed5e78b73d2fbfa
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47660140"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68139830"
 ---
-# <a name="splinkedservers-transact-sql"></a>sp_linkedservers (Transact-SQL)
+# <a name="splinkedservers-transact-sql"></a>sp_linkedservers (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   ローカル サーバーに定義されているリンク サーバーの一覧を返します。  
@@ -40,24 +39,24 @@ sp_linkedservers
 ```  
   
 ## <a name="return-code-values"></a>リターン コードの値  
- 0 (成功) または 0 以外の数値 (失敗)  
+ 0 (成功) または 0 以外の値の数 (失敗)  
   
 ## <a name="result-sets"></a>結果セット  
   
 |列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
 |**SRV_NAME**|**sysname**|リンク サーバーの名前|  
-|**SRV_PROVIDERNAME**|**nvarchar(** 128 **)**|指定したリンク サーバーへのアクセスを管理している OLE DB プロバイダーの名前|  
-|**SRV_PRODUCT**|**nvarchar(** 128 **)**|リンク サーバーの製品名|  
-|**SRV_DATASOURCE**|**nvarchar (** 4000 **)**|指定したリンク サーバーに対応する OLE DB のデータ ソース プロパティ|  
-|**SRV_PROVIDERSTRING**|**nvarchar (** 4000 **)**|リンク サーバーに対応する OLE DB プロバイダーの文字列プロパティ|  
-|**SRV_LOCATION**|**nvarchar (** 4000 **)**|指定したリンク サーバーに対応する OLE DB の位置プロパティ|  
-|**SRV_CAT**|**sysname**|指定したリンク サーバーに対応する OLE DB のカタログ プロパティ|  
+|**SRV_PROVIDERNAME**|**nvarchar(** 128 **)**|指定したリンク サーバーへのアクセスを管理する OLE DB プロバイダーのフレンドリ名。|  
+|**SRV_PRODUCT**|**nvarchar(** 128 **)**|リンク サーバーの製品名。|  
+|**SRV_DATASOURCE**|**nvarchar(** 4000 **)**|指定したリンク サーバーに対応する OLE DB データ ソース プロパティ。|  
+|**SRV_PROVIDERSTRING**|**nvarchar(** 4000 **)**|リンク サーバーに対応する OLE DB プロバイダーの文字列プロパティ。|  
+|**SRV_LOCATION**|**nvarchar(** 4000 **)**|指定したリンク サーバーに対応する OLE DB の場所のプロパティ。|  
+|**SRV_CAT**|**sysname**|指定したリンク サーバーに対応する OLE DB カタログのプロパティ。|  
   
 ## <a name="permissions"></a>アクセス許可  
  スキーマに対する SELECT 権限が必要です。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [sp_catalogs &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-catalogs-transact-sql.md)   
  [sp_column_privileges &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-column-privileges-transact-sql.md)   
  [sp_columns_ex &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-columns-ex-transact-sql.md)   

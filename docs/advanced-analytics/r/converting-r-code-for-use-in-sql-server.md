@@ -1,170 +1,171 @@
 ---
-title: ストアド プロシージャ - SQL Server Machine Learning Services の R コードを変換します。
-description: SQL Server のリレーショナル データへのソリューションの配置とデータ アクセス用の SQL Server ストアド プロシージャに R コードを移行します。
+title: SQL 用の R コードを変換する
+description: SQL Server 上でのソリューションの配置とリレーショナル データへのデータ アクセスのために、R コードを SQL Server ストアド プロシージャに移行します。
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 04/15/2018
 ms.topic: conceptual
-author: HeidiSteen
-ms.author: heidist
-manager: cgronlun
-ms.openlocfilehash: fd3197fa542a6650d482f7c6019ad9e8b1f2c7c0
-ms.sourcegitcommit: ee76332b6119ef89549ee9d641d002b9cabf20d2
-ms.translationtype: MT
+author: dphansen
+ms.author: davidph
+ms.custom: seo-lt-2019
+monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
+ms.openlocfilehash: 882ce47467a38ab4a891f632c9598070e13494e3
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/20/2018
-ms.locfileid: "53645001"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73727539"
 ---
-# <a name="convert-r-code-for-execution-in-sql-server-in-database-instances"></a>SQL Server (In-database) のインスタンスで実行される R コードを変換します。
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+# <a name="convert-r-code-for-execution-in-sql-server-in-database-instances"></a>SQL Server (データベース内) のインスタンスで実行するために R コードを変換する
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-この記事では、SQL Server で R コードを変更する方法の大まかなガイダンスを提供します。 
+この記事では、SQL Server で動作するように R コードを変更する方法の概要について説明します。 
 
-R Studio または別の環境から SQL Server に R コードを移動するときに最も多くの場合、コードの動作変更なし: など、コードが単純な場合などいくつかを受け取る関数の入力し、値を返します。 使用するポートのソリューションを簡単にも、 **RevoScaleR**または**MicrosoftML**パッケージで、最小限の変更で異なる実行コンテキストで実行をサポートします。
+R コードを R Studio または別の環境から SQL Server に移動するときに、コードはほとんどの場合 (たとえば、入力を受け取って値を返す関数など、コードが単純な場合)、追加の変更なしで動作します。 また、最小限の変更でさまざまな実行コンテキストでの実行をサポートする **RevoScaleR** や **MicrosoftMl** パッケージを使用するソリューションの移植も容易です。
 
-ただし、次のいずれかの場合、コードは大幅な変更を必要があります。
+ただし、次のいずれかに該当する場合は、コードに大幅な変更が必要になることがあります。
 
-+ ネットワークにアクセスするか、SQL Server をインストールすることはできません、R ライブラリを使用するとします。
-+ コードは、Excel ワークシート、共有のファイルおよびその他のデータベースなど、SQL Server の外部データ ソースに個別の呼び出しです。 
-+ コードを実行する、 *@script*パラメーターの[sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md)もストアド プロシージャをパラメーター化します。
-+ 元のソリューションには、データの準備やトレーニング、スコア付け、またはレポート モデルと特徴エンジニア リングなど、独立して実行する場合は、運用環境でより効率的になる可能性がある複数のステップが含まれています。
-+ 強化するライブラリを変更する、並列実行を使用して、または SQL Server にいくつかの処理をオフロードしてパフォーマンスを最適化します。 
++ ネットワークにアクセスするか、SQL Server にインストールできない R ライブラリを使用する。
++ コードが、Excel ワークシート、共有のファイル、その他のデータベースなど、SQL Server 外部のデータソースに対して個別の呼び出しを行う。 
++ [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md) の *\@script* パラメーターでコードを実行し、ストアド プロシージャのパラメーター化も行う。
++ 元のソリューションに、データ準備や特徴エンジニアリング、またはモデル トレーニング、スコアリング、レポート作成など、単独で実行した方が運用環境で効率的な場合がある複数の手順が含まれている。
++ ライブラリを変更したり、並列実行を使用したり、一部の処理を SQL Server にオフロードしたりして、パフォーマンスを最適化したい。 
 
-## <a name="step-1-plan-requirements-and-resources"></a>手順 1. 要件とリソースを計画します。
+## <a name="step-1-plan-requirements-and-resources"></a>手順 1. 要件とリソースを計画する
 
 **パッケージ**
 
-+ どのパッケージが必要です。 を決定し、SQL Server で動作することを確認します。
++ 必要なパッケージを特定し、SQL Server で動作することを確認します。
  
-+ Machine Learning サービスで使用される既定のパッケージ ライブラリ、事前にパッケージをインストールします。 ユーザー ライブラリがサポートされていません。
++ Machine Learning Services によって使用される既定のパッケージ ライブラリに、事前にパッケージをインストールします。 ユーザー ライブラリはサポートされていません。
 
 **[データ ソース]** 
 
-+ R コードを埋め込む場合[sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md)、プライマリとセカンダリのデータ ソースを特定します。 
++ [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md) に R コードを埋め込む場合は、プライマリとセカンダリのデータ ソースを特定します。 
 
-    + **プライマリ**データ ソースは、モデルのトレーニング データや予測の入力データなどの大規模なデータセット。 入力パラメーターに、最も大きなデータセットをマップする[sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md)します。
+    + **プライマリ** データソースは、モデル トレーニング データや予測用の入力データなどの大規模なデータセットです。 最も大きなデータセットを、[sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md) の入力パラメーターにマップするよう計画します。
 
-    + **セカンダリ**データ ソースは、要因や追加のグループ化変数のリストなどの小規模な通常のデータ セット。 
+    + **セカンダリ** データソースは、通常、要因の一覧や追加のグループ化変数など、サイズの小さいデータセットです。 
     
-    現時点では、sp_execute_external_script では、ストアド プロシージャへの入力として 1 つのデータセットのみをサポートしています。 ただし、スカラーまたはバイナリの複数の入力を追加することができます。
+    現在、sp_execute_external_script では、ストアド プロシージャへの入力として 1 つのデータセットのみがサポートされています。 ただし、複数のスカラーまたはバイナリの入力を追加できます。
 
-    EXECUTE に先行するストアド プロシージャ呼び出しへの入力として使用することはできません[sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md)します。 クエリ、ビュー、または有効な SELECT ステートメントを使用することができます。
+    EXECUTE で始まるストアド プロシージャの呼び出しは、[sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md) への入力として使用することはできません。 クエリ、ビュー、またはその他の有効な SELECT ステートメントを使用できます。
 
-+ 必要な出力を決定します。 Sp_execute_external_script を使用して R コードを実行する場合、ストアド プロシージャでは、結果として 1 つだけのデータ フレームを出力できます。 ただし、プロットを含む複数のスカラー出力を出力することもでき、パラメーターの R コード、または SQL から派生したその他のスカラー値と同様に、バイナリ形式でのモデル。
++ 必要な出力を決定します。 sp_execute_external_script を使用して R コードを実行した場合、ストアド プロシージャは 1 つのデータ フレームだけを結果として出力できます。 ただし、バイナリ形式のプロットおよびモデルや、R コードまたは SQL パラメーターから派生したその他のスカラー値など、複数のスカラー出力を出力することもできます。
 
 **データ型**
 
 + 起こり得るデータ型の問題のチェックリストを作成します。
 
-    すべての R データ型は、SQL Server machine Learning Services でサポートされます。 ただし、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] R. よりも大きい各種のデータ型をサポートしています送信するときにそのため、一部の暗黙的なデータ型変換が実行される[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]データから R、およびその逆です。 明示的にキャストまたは一部のデータを変換する必要があります。 
+    すべての R データ型は、SQL Server Machine Learning Services でサポートされています。 ただし、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] は R よりも多くの種類のデータ型をサポートします。そのため、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のデータを R に送信するときに (逆の場合も)、暗黙的なデータ型変換が実行されます。 一部のデータは、明示的なキャストまたは変換が必要な場合もあります。 
 
-    NULL 値がサポートされます。 ただし、R を使用して、`na`を null に似ていますが、欠損値を表すデータ構造。
+    NULL 値がサポートされます。 ただし、R では、`na` データ コンストラクトを使用して、null 値に似た欠落値を表します。
 
-+ R: たとえば、rowid が使用できないデータへの依存関係を排除することを検討し、SQL Server からのデータ型の GUID は、R で使用されることはできませんし、エラーが発生します。
++ R で使用できないデータへの依存関係を排除することを検討してください。たとえば、SQL Server の rowid および GUID データ型を R で使用してエラーを生成することはできません。
 
-    詳細については、次を参照してください。 [R ライブラリとデータ型](../r/r-libraries-and-data-types.md)します。
+    詳しくは、[R のライブラリとデータ型](../r/r-libraries-and-data-types.md)に関する記事をご覧ください。
 
-## <a name="step-2-convert-or-repackage-code"></a>手順 2. 変換するか、コードを再パッケージ化
+## <a name="step-2-convert-or-repackage-code"></a>手順 2. コードを変換または再パッケージ化する
 
-コードを変更する量は、SQL Server 計算コンテキストで実行するリモート クライアントから R コードを送信するか、パフォーマンスが向上し、データのセキュリティを提供するストアド プロシージャの一部として、コードをデプロイするかどうかによって異なります。 いくつか追加の要件は、ストアド プロシージャにコードをラップします。 
+コードをどの程度変更するかは、リモート クライアントから R コードを送信して SQL Server の計算コンテキストで実行するか、パフォーマンスとデータ セキュリティに優れた、ストアド プロシージャの一部としてのコードの配置を行うかによって異なります。 ストアド プロシージャでコードをラップするには、いくつかの追加要件があります。 
 
-+ 可能な限り、データの移動を回避するためには、SQL クエリとして、プライマリの入力データを定義します。
++ データ移動を回避するために、可能な限り、プライマリ入力データを SQL クエリとして定義します。
 
-+ 複数を通過できるストアド プロシージャで R を実行するときに**スカラー**入力します。 出力で使用するパラメーターを追加、**出力**キーワード。 
++ ストアド プロシージャで R を実行する場合は、複数の**スカラー**入力をパススルーできます。 出力で使用するパラメーターについては、**OUTPUT** キーワードを追加します。 
 
-    たとえば、次のスカラー入力`@model_name`も出力結果に独自の列では、モデルの名前が含まれています。
+    たとえば、次のスカラー入力 `@model_name` には、モデル名が含まれています。これは、結果の独自の列にも出力されます。
 
     ```sql
     EXEC sp_execute_external_script @model_name="DefaultModel" OUTPUT, @language=N'R', @script=N'R code here'
     ``` 
 
-+ ストアド プロシージャのパラメーターとして渡す変数[sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md) R コードの変数にマップする必要があります。 既定では、変数は、名前によってマップされます。
++ ストアド プロシージャ [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md) のパラメーターとして渡す変数は、R コードの変数にマップする必要があります。 既定では、変数は、名前によってマップされます。
 
-    入力データセットのすべての列は、R スクリプトの変数にもマップする必要があります。  たとえば、R スクリプトには、次のような数式が含まれています。
+    入力データセット内のすべての列も、R スクリプトの変数にマップする必要があります。  たとえば、R スクリプトに次のような数式が含まれているとします。
 
     ```R
     formula <- ArrDelay ~ CRSDepTime + DayOfWeek + CRSDepHour:DayOfWeek
     ```
     
-    入力データセットに一致する名前 ArrDelay、CRSDepTime、DayOfWeek、CRSDepHour、および DayOfWeek の列が含まれていない場合は、エラーが発生します。
+    ArrDelay、CRSDepTime、DayOfWeek、CRSDepHour、および DayOfWeek と一致する名前の列が入力データセットに含まれていない場合は、エラーが発生します。
 
-+ 場合によっては、出力スキーマは、結果を得るのために事前に定義する必要があります。
++ 場合によっては、結果に対して事前に出力スキーマを定義する必要があります。
 
-    たとえば、テーブルにデータを挿入するにする必要がありますを使用して、**結果のセット**スキーマを指定する句。
+    たとえば、データをテーブルに挿入するには、**WITH RESULT SET** 句を使用してスキーマを指定する必要があります。
 
-    出力のスキーマは、R スクリプトの引数を使用している場合にも必要`@parallel=1`します。 理由は、クエリを並列で実行するために SQL Server が複数のプロセスを作成し、最後に結果を収集する可能性があるためです。 そのため、並列処理を作成するには、出力スキーマを準備する必要があります。
+    R スクリプトで引数 `@parallel=1` を使用する場合は、出力スキーマも必要です。 理由は、クエリを並列で実行するために SQL Server が複数のプロセスを作成し、最後に結果を収集する可能性があるためです。 したがって、並列処理を作成する前に、出力スキーマを準備する必要があります。
     
-    それ以外の場合、オプションを使用して、結果のスキーマを省略できます**で RESULT SETS UNDEFINED**します。 このステートメントは、列の名前を付け、または SQL データ型を指定することがなく、R スクリプトからデータセットを返します。
+    それ以外の場合は、オプション **WITH RESULT SETS UNDEFINED** を使用して結果スキーマを省略できます。 このステートメントは、列に名前を付けたり SQL データ型を指定したりせずに、R スクリプトからデータセットを返します。
 
-+ R. ではなく T-SQL を使用してタイミングまたは追跡データの生成を検討してください。
++ R ではなく T-SQL を使用して、タイミング データまたは追跡データを生成することを検討してください。
 
-    たとえば、システム時刻など、R スクリプトのようなデータを生成するのではなく、結果に渡される T-SQL の呼び出しを追加で監査とストレージの使用の情報を渡すこともできます。 
+    たとえば、R スクリプトで類似のデータを生成するのではなく、結果に渡される T-SQL 呼び出しを追加することによって、監査とストレージに使用されるシステム時刻やその他の情報を渡すことができます。 
 
-**パフォーマンスとセキュリティを向上します。**
+**パフォーマンスとセキュリティを向上させる**
 
-+ 予測またはファイルへの中間結果を記述しないでください。 テーブルにデータの移動を回避する代わりに、予測を書き込みます。
++ 予測または中間結果をファイルに書き込むことは避けてください。 データ移動を避けるために、予測はテーブルに書き込みます。
 
-+ 事前に、すべてのクエリを実行し、並列で実行できるタスクを識別するために SQL Server クエリ プランを確認します。
++ すべてのクエリを事前に実行し、SQL Server クエリ プランを確認して、並列で実行できるタスクを識別します。
 
-    入力クエリを並列に処理できる場合は、設定`@parallel=1`に渡す引数の一部として[sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md)します。 
+    入力クエリを並列化できる場合は、[sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md) に渡す引数の一部として `@parallel=1` を設定します。 
 
     このフラグによる並列処理は、SQL Server がパーティション分割されたテーブルを操作できるか、クエリを複数のプロセスに分散して最後に結果を集計できるときは、通常はいつでも実行できます。 このフラグによる並列処理は、すべてのデータを読み取る必要があるアルゴリズムを使用するモデルをトレーニングする場合、または集計を作成する必要がある場合は、通常は実行できません。
 
-+ R コードを見直して、別のストアド プロシージャの呼び出しを使用して単独で実行できる手順またはより効率的に実行できる手順があるかどうかを判断します。 たとえばとは別に、特徴エンジニア リングや特徴の抽出を行うと、テーブルに値を保存してパフォーマンスを向上させるを取得可能性があります。
++ R コードを見直して、別のストアド プロシージャの呼び出しを使用して単独で実行できる手順またはより効率的に実行できる手順があるかどうかを判断します。 たとえば、特徴エンジニアリングや特徴抽出を別々に実行し、値をテーブルに保存することによってパフォーマンスを高めることができる場合があります。
 
-+ セットベースの計算用 R コードではなく T-SQL を使用する方法を探します。
++ セットベースの計算では、R コードではなく T-SQL を使用する方法を探します。
 
-    この R ソリューションは、T-SQL 関数のユーザー定義方法を示しています。 して、R は、同じ機能エンジニア リング タスクを実行できます。[データ サイエンスのエンド ツー エンド チュートリアル](../tutorials/walkthrough-data-science-end-to-end-walkthrough.md)します。
+    たとえば、次の R ソリューションは、ユーザー定義の T-SQL 関数と R が同じ特徴エンジニアリング タスクをどのように実行できるかを示しています。[データ サイエンスのエンドツーエンド チュートリアル](../tutorials/walkthrough-data-science-end-to-end-walkthrough.md)。
 
-+ 可能であれば、従来の R 関数を置き換える**ScaleR**分散的実行をサポートする関数。 詳細については、次を参照してください。[比較の基本 R と R の機能をスケール](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler-compared-to-base-r)します。
++ 可能であれば、従来の R 関数を、分散実行をサポートする **ScaleR** 関数に置き換えます。 詳細については、[ベース R とスケール R 関数の比較](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler-compared-to-base-r)に関するページを参照してください。
 
-+ SQL Server の機能を使用して、パフォーマンスを向上させる方法を決定する、データベース開発者にご相談[メモリ最適化テーブルで](https://docs.microsoft.com/sql/relational-databases/in-memory-oltp/introduction-to-memory-optimized-tables)、または Enterprise Edition がある場合[リソース ガバナー](https://docs.microsoft.com/sql/relational-databases/resource-governor/resource-governor))。
++ データベース開発者と相談して、[メモリ最適化テーブル](https://docs.microsoft.com/sql/relational-databases/in-memory-oltp/introduction-to-memory-optimized-tables)などの SQL Server 機能 (または、Enterprise Edition を使用している場合は [Resource Governor](https://docs.microsoft.com/sql/relational-databases/resource-governor/resource-governor)) を使用してパフォーマンスを向上させる方法を決定します。
 
-    詳細については、次を参照してください[分析サービスの SQL Server の最適化のヒントとテクニック。](https://gallery.cortanaintelligence.com/Tutorial/SQL-Server-Optimization-Tips-and-Tricks-for-Analytics-Services)
+    詳細については、「[Analytics Services のための SQL Server 最適化のヒントとテクニック](https://gallery.cortanaintelligence.com/Tutorial/SQL-Server-Optimization-Tips-and-Tricks-for-Analytics-Services)」を参照してください
 
-### <a name="step-3-prepare-for-deployment"></a>手順 3. 展開を準備します。
+### <a name="step-3-prepare-for-deployment"></a>手順 3. 展開を準備する
 
 + 管理者に通知して、コードを展開する前にパッケージをインストールして事前にテストできるようにしてください。 
 
-    開発環境で、コードの一部としてパッケージをインストールできることが考えられますが、これは、運用環境での不適切な手法。 
+    開発環境では、パッケージをコードの一部としてインストールしても問題はないかもしれませんが、これは運用環境では不適切な行為です。 
 
-    ストアド プロシージャを使用するか、SQL Server 計算コンテキストで R コードを実行するかに関係なく、このユーザー ライブラリがサポートされているいません。
+    ストアド プロシージャを使用しているか、SQL Server の計算コンテキストで R コードを実行しているかに関係なく、ユーザー ライブラリはサポートされません。
 
-**ストアド プロシージャで R コードをパッケージ化します。**
+**ストアド プロシージャで R コードをパッケージ化する**
 
-+ コードが比較的単純な場合は、埋め込むことができます、変更を加えなければ、T-SQL ユーザー定義関数でこれらのサンプル」の説明に従って。
++ コードが比較的単純な場合は、これらのサンプルで説明されているように、コードを変更せずに T-SQL ユーザー定義関数に埋め込むことができます。
 
-    + [RxExec で実行されている R 関数を作成します。](../tutorials/deepdive-create-a-simple-simulation.md)
-    + [T-SQL と R を使用して特徴エンジニア リング](../tutorials/sqldev-create-data-features-using-t-sql.md)
+    + [rxExec で実行する R 関数を作成する](../tutorials/deepdive-create-a-simple-simulation.md)
+    + [T-SQL と R を使用した特徴エンジニアリング](../tutorials/sqldev-create-data-features-using-t-sql.md)
 
-+ コードがより複雑な場合は、R パッケージを使用して、 **sqlrutils**コードを変換します。 このパッケージは、経験豊富な R ユーザーが適切なストアド プロシージャのコードを記述するように設計されています。 
++ コードがより複雑な場合は、R パッケージ **sqlrutils** を使用してコードを変換します。 このパッケージは、経験豊富な R ユーザーが適切なストアド プロシージャ コードを記述できるように設計されています。 
 
-    最初の手順では、明確に定義された入力と出力の 1 つの関数として、R コードを書き直してください。
+    最初の手順では、明示的に定義された入力と出力を使用して、R コードを 1 つの関数として書き直します。
 
-    次に、使用、 **sqlrutils**正しい形式で入力と出力を生成するパッケージ。 **Sqlrutils**パッケージは、ストアド プロシージャの完全なコードを生成し、データベースでストアド プロシージャを登録することもできます。 
+    次に、**sqlrutils** パッケージを使用して、正しい形式で入力と出力を生成します。 **sqlrutils** パッケージは、ストアド プロシージャの完全なコードを自動的に生成します。また、データベースにストアド プロシージャを登録することもできます。 
 
-    詳細と例については、次を参照してください。 [sqlrutils (SQL)](ref-r-sqlrutils.md)します。
+    詳細と例については、[sqlrutils (SQL)](ref-r-sqlrutils.md) に関する記事を参照してください。
 
-**他のワークフローとの統合します。**
+**他のワークフローと統合する**
 
-+ T-SQL のツールと ETL プロセスを活用します。 特徴エンジニア リング、特徴の抽出、およびデータのワークフローの一部として事前にデータのクレンジングを実行します。
++ T-SQL ツールと ETL プロセスを活用します。 データ ワークフローの一部として、特徴エンジニアリング、特徴抽出、およびデータ クレンジングを事前に実行します。
 
-    で作業している専用の R 開発環境など[!INCLUDE[rsql_rtvs_md](../../includes/rsql-rtvs-md.md)]または RStudio、する可能性がありますをコンピューターにデータをプル、繰り返し、データを分析し、書き出すまたは結果が表示されます。 
+    [!INCLUDE[rsql_rtvs_md](../../includes/rsql-rtvs-md.md)] や RStudio などの専用の R 開発環境で作業する場合は、データをコンピューターにプルして繰り返し分析した後、結果を書き出すか表示することができます。 
     
-    ただし、スタンドアロン R コードが SQL Server に移行されると、このプロセスの多くが簡素化したり、他の SQL Server ツールに委任します。 
+    ただし、スタンドアロン R コードが SQL Server に移行された場合、このプロセスの大半は、簡素化するか他の SQL Server ツールに委任できます。 
 
-+ セキュリティで保護された、非同期の視覚エフェクトの戦略を使用します。
++ セキュリティで保護された非同期の視覚化方法を使用します。
 
-    多くの場合、SQL Server のユーザーは、サーバー上のファイルにアクセスできないし、SQL クライアント ツールは通常、R グラフィックス デバイスをサポートしています。 ソリューションの一部としてプロットやその他のグラフィックスを生成する場合は、バイナリ データとして、プロットをエクスポートして、テーブルへの保存または書き込みを検討してください。
+    多くの場合、SQL Server のユーザーはサーバー上のファイルにアクセスすることはできず、SQL クライアント ツールは、通常、R グラフィックス デバイスをサポートしていません。 ソリューションの一部としてプロットまたはその他のグラフィックスを生成する場合は、プロットをバイナリ データとしてエクスポートし、テーブルに保存するか、書き込みを行うことを検討してください。
 
-+ アプリケーションで直接アクセスするためのストアド プロシージャで予測およびスコアリング関数をラップします。
++ アプリケーションによる直接アクセスのために、予測およびスコアリング関数をストアド プロシージャにラップします。
 
 ### <a name="other-resources"></a>その他のリソース
 
-SQL Server で R ソリューションを展開する方法の例については、これらのサンプルを参照してください。
+SQL Server への R ソリューションの展開方法の例については、これらのサンプルを参照してください。
 
-+ [R と SQL Server を使用して、スキー レンタル業の予測モデルを構築します。](https://microsoft.github.io/sql-ml-tutorials/R/rentalprediction/)
++ [R と SQL Server を使用してスキー レンタル事業用の予測モデルを作成する](https://microsoft.github.io/sql-ml-tutorials/R/rentalprediction/)
 
-+ [SQL 開発者向けのデータベース内分析](../tutorials/sqldev-in-database-r-for-sql-developers.md)利用方法を示しますが、R コード モジュール性の高いストアド プロシージャにラップします。
++ [SQL 開発者向けのデータベース内分析](../tutorials/sqldev-in-database-r-for-sql-developers.md): R コードをストアド プロシージャにラップすることでモジュール性を高める方法が示されています
 
-+ [エンド ツー エンドのデータ サイエンス ソリューション](../tutorials/walkthrough-data-science-end-to-end-walkthrough.md)R と T-SQL での特徴エンジニア リングの比較が含まれています
++ [エンドツーエンドのデータ サイエンス ソリューション](../tutorials/walkthrough-data-science-end-to-end-walkthrough.md): R と T-SQL での特徴エンジニアリングの比較が含まれています

@@ -19,29 +19,28 @@ helpviewer_keywords:
 ms.assetid: 97ee01e6-9c9e-4fd9-884b-68b4084669d5
 author: VanMSFT
 ms.author: vanto
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 6d6c97b167cb69eec72ad771504a1070ed59e4f1
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 49684671c25ea83fa7554bec7f80d0b16c30d4eb
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47709600"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68122715"
 ---
-# <a name="sysidentitycolumns-transact-sql"></a>sys.identity_columns (Transact-SQL)
+# <a name="sysidentitycolumns-transact-sql"></a>sys.identity_columns (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-  ID 列ごとに 1 行のデータを保持します。  
+  Id 列である各列の行が含まれています。  
   
  **Sys.identity_columns**ビューから行を継承する、 **sys.columns**ビュー。 **Sys.identity_columns**ビュー内の列を返します、 **sys.columns**ビューだけでなく、 **seed_value**、 **increment_value**、 **last_value**、および**is_not_for_replication**列。 詳細については、「[カタログ ビュー &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)」を参照してください。  
   
 |列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
-|**\<sys.columns から継承された列 >**||**Sys.identity_columns**ビューは、すべての列を返します、 **sys.columns**ビュー。 また、次に示す追加の列も返します。 列の説明を**sys.identity_columns**ビューが継承**sys.columns**を参照してください[sys.columns &#40;TRANSACT-SQL&#41;](../../relational-databases/system-catalog-views/sys-columns-transact-sql.md)します。|  
-|**seed_value**|**sql_variant**|この ID 列に対するシード値です。 シード値のデータ型は、列自体のデータ型と同じです。|  
-|**increment_value**|**sql_variant**|この ID 列に対する増分値です。 シード値のデータ型は、列自体のデータ型と同じです。|  
-|**last_value**|**sql_variant**|この ID 列に対して生成された最後の値です。 シード値のデータ型は、列自体のデータ型と同じです。|  
-|**is_not_for_replication**|**bit**|ID 列は NOT FOR REPLICATION と宣言されます。|  
+|**\<sys.columns から継承された列 >**||**Sys.identity_columns**ビューは、すべての列を返します、 **sys.columns**ビュー。 以下に示す追加の列も返します。 列の説明を**sys.identity_columns**ビューが継承**sys.columns**を参照してください[sys.columns &#40;TRANSACT-SQL&#41;](../../relational-databases/system-catalog-views/sys-columns-transact-sql.md)します。|  
+|**seed_value**|**sql_variant**|この id 列のシード値。 シード値のデータ型は、列自体のデータ型の場合と同じです。|  
+|**increment_value**|**sql_variant**|この ID 列に対する増分値です。 シード値のデータ型は、列自体のデータ型の場合と同じです。|  
+|**last_value**|**sql_variant**|この id 列に対して生成された最後の値。 シード値のデータ型は、列自体のデータ型の場合と同じです。|  
+|**is_not_for_replication**|**bit**|Id 列は NOT FOR REPLICATION で宣言されています。|  
   
 > [!NOTE]  
 >  複数のテーブルで使用できる自動的に増分する番号、またはテーブルを参照せずにアプリケーションから呼び出すことができる自動的に増分する番号を作成するには、「[シーケンス番号](../../relational-databases/sequence-numbers/sequence-numbers.md)」を参照してください。  

@@ -15,15 +15,15 @@ helpviewer_keywords:
 - Integration Services, data types
 - SQL Server Integration Services, data types
 ms.assetid: 896fc3e8-3aa6-4396-ba82-5d7741cffa56
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 5fc0a802cc3d266cc96d8deaaeeda39056508062
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: fbd39569da4623eda3bb3906fd81bd5da69ab831
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53377842"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62902448"
 ---
 # <a name="integration-services-data-types"></a>Integration Services のデータ型
   データがパッケージ内のデータ フローに入ると、データを抽出する変換元は、そのデータを [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] のデータ型に変換します。 数値データは数値データ型、文字列データは文字列データ型、および日付データは日付データ型に割り当てられます。 GUID やバイナリ ラージ オブジェクト (BLOB) などの他のデータも、同様に適切な [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] のデータ型に割り当てられます。 データのデータ型が [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] のデータ型に変換できない場合は、エラーが発生します。  
@@ -34,7 +34,7 @@ ms.locfileid: "53377842"
   
 |データ型|説明|  
 |---------------|-----------------|  
-|DT_BOOL|ブール値。|  
+|DT_BOOL|ブール値です。|  
 |DT_BYTES|バイナリ データ値です。 長さは可変で、最大長は 8,000 バイトです。|  
 |DT_CY|通貨値です。 このデータ型は、8 バイトの符号付き整数で、4 の小数点以下桁数を持ち、最大有効桁数は 19 です。|  
 |DT_DATE|年、月、日、時間、分、秒、および秒未満の時間で構成される日付の構造体です。  秒未満の固定された小数点以下桁数は 7 です。<br /><br /> DT_DATE データ型は、8 バイトの浮動小数点数を使用して実装されます。 年、月、日は、1899 年 12 月 30 日の午前 0 時を 0 とし、そこからの経過日数が整数で表されます。 時間の値は、数値の小数部分の絶対値で表されます。 ただし、浮動小数点数値ではすべての実数値を表すことができません。したがって、DT_DATE で表すことができる日付の範囲には制限があります。<br /><br /> 一方、DT_DBTIMESTAMP は、年、月、日、時間、分、秒、およびミリ秒の個別のフィールドを内部に持つ構造体で表されます。 このデータ型で表すことができる日付の範囲には緩い制限が課されています。|  
@@ -222,7 +222,7 @@ ms.locfileid: "53377842"
 |---------------|--------------------------------------------|------------------------------|---------|---------------------------------|--------------------------|--------------------------|  
 |DT_BOOL|bit|bit|bit||||  
 |DT_BYTES|binary、varbinary、timestamp|binary、varbinary、timestamp|BigBinary、VarBinary|RAW|||  
-|DT_CY|smallmoney、money|smallmoney、money|通貨||||  
+|DT_CY|smallmoney、money|smallmoney、money|Currency||||  
 |DT_DATE|||||||  
 |DT_DBDATE|[date &#40;Transact-SQL&#41;](/sql/t-sql/data-types/date-transact-sql)|[date &#40;Transact-SQL&#41;](/sql/t-sql/data-types/date-transact-sql)||日付|日付|日付|  
 |DT_DBTIME||||TIMESTAMP|time|time|  
@@ -237,8 +237,8 @@ ms.locfileid: "53377842"
 |DT_I2|SMALLINT|SMALLINT|Short||smallint|SMALLINT|  
 |DT_I4|ssNoversion|ssNoversion|Long||INTEGER|INTEGER|  
 |DT_I8|BIGINT|BIGINT|||bigint|bigint|  
-|DT_NUMERIC|decimal、numeric|decimal、numeric|Decimal|NUMBER、INT|decimal、numeric|decimal、numeric|  
-|DT_R4|REAL|REAL|単一||real|real|  
+|DT_NUMERIC|decimal、numeric|decimal、numeric|10 進数|NUMBER、INT|decimal、numeric|decimal、numeric|  
+|DT_R4|REAL|REAL|Single||real|real|  
 |DT_R8|FLOAT|FLOAT|Double|FLOAT、REAL|FLOAT、DOUBLE|FLOAT、DOUBLE|  
 |DT_STR|char、varchar||varchar||char、varchar|char、varchar|  
 |DT_UI1|TINYINT|TINYINT|Byte||||  
@@ -255,7 +255,7 @@ ms.locfileid: "53377842"
 ## <a name="related-content"></a>関連コンテンツ  
  blogs.msdn.com のブログ「 [SSIS 2008 のデータ型の変換手法間のパフォーマンス比較](https://go.microsoft.com/fwlink/?LinkId=220823)」  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [データ フロー内のデータ](data-in-data-flows.md)  
   
   

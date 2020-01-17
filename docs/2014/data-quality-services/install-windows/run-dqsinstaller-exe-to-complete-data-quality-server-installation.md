@@ -7,15 +7,15 @@ ms.reviewer: ''
 ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: 7a8c96e0-1328-4f35-97fc-b6d9cb808bae
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: a47a205ca7d216f17ec8a5893483180235b775a5
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 88b80e0eeba26e1a2c03f795d7ae3ce6fa796f10
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56026323"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65480481"
 ---
 # <a name="run-dqsinstallerexe-to-complete-data-quality-server-installation"></a>Data Quality Server のインストールを完了するための DQSInstaller.exe の実行
   [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] のインストールを完了するには、 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]のインストールを完了した後で、DQSInstaller.exe ファイルを実行する必要があります。 このトピックでは、 **[スタート]** 画面、 **[スタート]** メニュー、Windows エクスプローラー、またはコマンド プロンプトから DQSInstaller.exe を実行する方法について説明します。DQSInstaller.exe ファイルの実行には、これらの方法のいずれも使用できます。  
@@ -32,11 +32,11 @@ ms.locfileid: "56026323"
   
 1.  [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)]をインストールするコンピューターで、次のうち適切ないずれかを使用して DQSInstaller.exe ファイルを実行します。  
   
-    -   **スタート画面**:**開始**画面で、 **Data Quality Server インストーラー。**  
+    -   **[スタート] 画面**: **[スタート]** 画面で、 **[Data Quality Server Installer]** をクリックします。  
   
-    -   **スタート メニュー**:タスク バーで、次のようにクリックします。**開始**、 をポイント**すべてのプログラム**、 をクリック**Microsoft SQL Server 2014**します。  **Microsoft SQL Server 2014**、 をクリックして**Data Quality Services**、 をクリックし、 **Data Quality Server インストーラー。**  
+    -   **スタート メニュー**: タスク バーで、次のようにクリックします。**開始**、 をポイント**すべてのプログラム**、 をクリック**Microsoft SQL Server 2014**します。 **Microsoft SQL Server 2014**、をクリックして**Data Quality Services**、をクリックし、 **Data Quality Server インストーラー。**  
   
-    -   **Windows エクスプ ローラー**:DQSInstaller.exe ファイルを見つけます。 SQL Server の既定のインスタンスをインストールした場合、DQSInstaller.exe ファイルは C:\Program files \microsoft SQL Server\MSSQL12 でご利用いただけますになります。MSSQLSERVER\MSSQL\Binn します。 DQSInstaller.exe ファイルをダブルクリックします。  
+    -   **Windows エクスプローラー**: DQSInstaller.exe ファイルを探します。 SQL Server の既定のインスタンスをインストールした場合、DQSInstaller.exe ファイルは C:\Program files \microsoft SQL Server\MSSQL12 でご利用いただけますになります。MSSQLSERVER\MSSQL\Binn します。 DQSInstaller.exe ファイルをダブルクリックします。  
   
 2.  インストールの状態を表示するコマンド プロンプト ウィンドウが表示されます。 次の 3 つのことが確認できます。  
   
@@ -52,7 +52,7 @@ ms.locfileid: "56026323"
 3.  データベース マスター キーのパスワードの入力を求めるメッセージが表示されます。 後で [!INCLUDE[ssDQSnoversion](../../includes/ssdqsnoversion-md.md)] (DQS) に参照データ プロバイダーを設定するときに DQS_MAIN データベースに保存される参照データ サービス プロバイダー キーを暗号化するには、データベース マスター キーが必要です。  
   
     > [!IMPORTANT]  
-    >  パスワードは、8 文字以上にする必要があり、次の 4 つのカテゴリのうち 3 つカテゴリの文字を含める必要があります。英語の大文字アルファベット (A、B、C、.Z)、英語の小文字 (a、b、c、...)、数字 (0、1、2、...9) と英数字以外の特殊文字 (~!@#$%^&*()_-+=|\\{}[]:;"'<>,.?/) です。 たとえば、 P@sswordのようにします。 現在のパスワードがこの要件を満たしていない場合は、別のパスワードの入力を求めるメッセージが表示されます。  
+    >  パスワードは、少なくとも 8 文字にする必要があり、次の 4 つのカテゴリの 3 つの文字を含める必要があります。英語の大文字 (A、B、C、...Z)、英語の小文字 (a、b、c、...)、数字 (0、1、2、...9) と英数字以外の特殊文字 (~!@#$%^&*()_-+=|\\{}[]:;"'<>,.?/) です。 たとえば、「 P@ssword」のように入力します。 現在のパスワードがこの要件を満たしていない場合は、別のパスワードの入力を求めるメッセージが表示されます。  
   
 4.  パスワードを入力し、さらに確認のためにもう一度そのパスワードを入力してから、Enter キーを押してインストールを続行します。  
   
@@ -87,9 +87,9 @@ ms.locfileid: "56026323"
   
 3.  コマンド プロンプトで、DQSInstaller.exe を実行します。コマンド ライン パラメーターは必要に応じて使用します。  
   
-    -   **コマンド ライン パラメーターを指定しない**:「`dqsinstaller.exe`」と入力して Enter キーを押します。  
+    -   **コマンド ライン パラメーターを使用しない場合**:「`dqsinstaller.exe`」と入力して Enter キーを押します。  
   
-    -   **コマンド ライン パラメーターを持つ**:上の表で説明したように、必要なコマンドを入力し、Enter キーを押します。  
+    -   **コマンド ライン パラメーターを使用する場合**:前の表で説明したように必要なコマンドを入力し、ENTER キーを押します。  
   
 4.  指定したコマンドに基づいて、必要なアクションが実行されます。 コマンド ライン パラメーターを使用せずに [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] をインストールした場合、残りの手順は、前のセクション (「 [[スタート] 画面、[スタート] メニュー、または Windows エクスプローラーから DQSInstaller.exe を実行する](run-dqsinstaller-exe-to-complete-data-quality-server-installation.md#WindowsExplorer)」) の手順 2. ～ 6. と同じです。  
   

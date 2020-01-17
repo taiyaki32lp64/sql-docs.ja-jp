@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 45938efb-b678-47d8-9345-644fa26ad679
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 63e42091ed0e1763cb24eef5e6a32f551b29ad5f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 599dbebd8701913b71a482045be121298e39e8c1
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47798140"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68132448"
 ---
 # <a name="sqltables-dbase-driver"></a>SQLTables (dBASE ドライバー)
 > [!NOTE]  

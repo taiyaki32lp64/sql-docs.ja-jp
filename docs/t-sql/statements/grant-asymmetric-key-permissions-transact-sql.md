@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: a70e2ee6-59b0-4543-b883-e9cbae6199be
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: e4e2eafc126a092a3507e49b5eb7e1ca92a25e43
-ms.sourcegitcommit: c6e71ed14198da67afd7ba722823b1af9b4f4e6f
+ms.openlocfilehash: f128cbf86d30cabe0aa00ce7033b7cd5b04c93e3
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/16/2019
-ms.locfileid: "54326753"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68065603"
 ---
 # <a name="grant-asymmetric-key-permissions-transact-sql"></a>GRANT (非対称キーの権限の許可) (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -44,9 +43,9 @@ GRANT { permission  [ ,...n ] }
   
 ## <a name="arguments"></a>引数  
  *permission*  
- 非対称キーに対して許可できる権限を指定します。 下の表をご覧ください。  
+ 非対称キーに対して許可できる権限を指定します。 以下に一覧を示します。  
   
- ON ASYMMETRIC KEY **::**_asymmetric_key_name_  
+ ON ASYMMETRIC KEY **::** _asymmetric_key_name_  
  権限を許可する非対称キーを指定します。 スコープ修飾子 "::" が必要です。  
   
  *database_principal*  

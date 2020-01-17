@@ -15,11 +15,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: f76a48481066ff30bbd5a825d477d0e6309abaca
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52787294"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63204963"
 ---
 # <a name="stop-a-query-visual-database-tools"></a>クエリの停止 (Visual Database Tools)
   クエリの実行に時間がかかりすぎる場合や、期待した結果を得ることができない場合は、クエリを中止できます。  

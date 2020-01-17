@@ -14,21 +14,19 @@ ms.assetid: ea928535-6fd1-4738-a8ed-ffb602f3825e
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 638570c8a2be779b11b0ec852d17ea4815960054
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 537ea93edb56b84be0cbeff5633b943252a98ff8
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53356411"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62870904"
 ---
 # <a name="errors-and-events-reference-database-engine"></a>エラーおよびイベント リファレンス (データベース エンジン)
-  [イベントとエラー メッセージ センター](https://go.microsoft.com/fwlink/?LinkId=47660)のエラー メッセージについての主要なソースは、technet[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]します。 このページでは、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] および他のマイクロソフト製品のエラー メッセージに関する情報をすばやく検索できます。また、メッセージのフルテキスト検索が可能で、製品、バージョン、ソース、数値識別子、シンボル識別子を指定して検索結果を絞り込むこともできます。 さらに、新しいインターフェイスは複数の言語をサポートしています。 このページには、頻繁に検出されるエラーの最新トラブルシューティング情報が表示されます。  
-  
- 将来的には、「イベントおよびエラー メッセージの検索」ページは拡張されてトラブルシューティングの内容がダウンロード可能な形式で利用できるようになり、インターネットに接続していないコンピューターからでもアクセスが可能になります。  
+
+このセクションには、さらに説明が必要な選択したデータベース エンジン エラー メッセージが含まれています。
   
 ## <a name="in-this-section"></a>このセクションの内容  
- [データベース エンジンのイベントとエラー](データベースのエンジンのイベント-と-errors.md0  
- [!INCLUDE[ssDE](../../includes/ssde-md.md)] のエラー メッセージの形式について説明します。また、エラー メッセージの表示方法とアプリケーションにエラー メッセージを返す方法についても説明します。  
+ [データベース エンジンのイベントとエラー](database-engine-events-and-errors.md)の形式を記述[!INCLUDE[ssDE](../../includes/ssde-md.md)]エラー メッセージし、エラー メッセージを表示し、アプリケーションにエラー メッセージを返す方法について説明します。  
   
  [!INCLUDE[ssDE](../../includes/ssde-md.md)] のエラー メッセージとその原因、および問題を解決するための対策について説明します。  
   

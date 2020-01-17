@@ -1,6 +1,6 @@
 ---
-title: WMI プロバイダーを使用してサービスとネットワーク設定の管理 |Microsoft Docs
-ms.custom: ''
+title: WMI プロバイダーを使用したサービスの管理とネットワーク設定
+ms.custom: seo-dt-2019
 ms.date: 08/06/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -13,29 +13,28 @@ helpviewer_keywords:
 - network settings [SMO]
 - monitoring [SMO]
 ms.assetid: ef8c3986-1098-4f21-b03a-f1f6bdb51c26
-author: stevestein
-ms.author: sstein
-manager: craigg
+author: markingmyname
+ms.author: maghan
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 8aba2f18b40b86f7d285a9942053a6ea84de446d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 0807a034f05d723ae19c86e8b00d08309176551c
+ms.sourcegitcommit: 15fe0bbba963d011472cfbbc06d954d9dbf2d655
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47735400"
+ms.lasthandoff: 11/14/2019
+ms.locfileid: "74095152"
 ---
 # <a name="managing-services-and-network-settings-by-using-wmi-provider"></a>WMI プロバイダーを使用したサービスの管理とネットワーク設定
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
 
-  WMI プロバイダーが公開されたインターフェイスで使用される[!INCLUDE[msCoName](../../../includes/msconame-md.md)]を管理する管理コンソール (MMC)、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]サービスおよびネットワーク プロトコル。 SMO では、<xref:Microsoft.SqlServer.Management.Smo.Wmi.ManagedComputer>オブジェクトは、WMI プロバイダーを表します。  
+  WMI プロバイダーは、 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] のサービスおよびネットワーク プロトコルを管理するために、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 管理コンソール (MMC) によって使用される、公開されたインターフェイスです。 SMO では、<xref:Microsoft.SqlServer.Management.Smo.Wmi.ManagedComputer> オブジェクトは WMI プロバイダーを表します。  
   
- <xref:Microsoft.SqlServer.Management.Smo.Wmi.ManagedComputer>で確立された接続とは独立して動作するオブジェクト、<xref:Microsoft.SqlServer.Management.Smo.Server>オブジェクトのインスタンスに[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]、WMI サービスに接続する Windows 資格情報を使用します。  
+ <xref:Microsoft.SqlServer.Management.Smo.Wmi.ManagedComputer> オブジェクトは、<xref:Microsoft.SqlServer.Management.Smo.Server> オブジェクトと [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] のインスタンスで確立されている接続から独立して動作し、Windows 資格情報を使用して WMI サービスに接続します。  
   
 ## <a name="example"></a>例  
-提供されているコード例を使用するには、アプリケーションを作成するプログラミング環境、プログラミング テンプレート、およびプログラミング言語を選択する必要があります。 詳細については、次を参照してください。 [Visual C の作成&#35;Visual Studio .NET での SMO プロジェクト](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md)します。  
+提供されているコード例を使用するには、アプリケーションを作成するプログラミング環境、プログラミング テンプレート、およびプログラミング言語を選択する必要があります。 詳細については、「 [Visual Studio&#35; .Net での Visual C SMO プロジェクトの作成](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md)」を参照してください。  
 
   
- プログラムを使用して、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]含める必要があります、WMI プロバイダー、 **Imports** WMI 名前空間を修飾するステートメント。 アプリケーションの宣言の前、かつ他の **Imports** ステートメントの後に、次のようにステートメントを挿入します。  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] WMI プロバイダーを使用するプログラムでは、WMI 名前空間を修飾する**Imports**ステートメントを含める必要があります。 アプリケーションの宣言の前、かつ他の **Imports** ステートメントの後に、次のようにステートメントを挿入します。  
   
  `Imports Microsoft.SqlServer.Management.Smo`  
   

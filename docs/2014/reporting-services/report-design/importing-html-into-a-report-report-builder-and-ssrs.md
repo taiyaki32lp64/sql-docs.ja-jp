@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 ms.assetid: dd0410ea-8839-4e8c-9944-8cdfe5465591
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 6f4b4714a6863f4a103ca00c151bc4209467e890
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: fcab02cbe7f24da3567fdfa615a6595a268185ba
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56292400"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66105668"
 ---
 # <a name="importing-html-into-a-report-report-builder-and-ssrs"></a>レポートへの HTML のインポート (レポート ビルダーおよび SSRS)
   テキスト ボックスを使用すると、データセットのフィールドから取得した HTML 形式のテキストをレポートに挿入できます。 正しい形式の HTML に評価される単純型または複合型の式のテキストを使用できます。 書式付きのテキストは、PDF などのサポートされている出力形式すべてにレンダリングできます。  
@@ -36,7 +35,7 @@ ms.locfileid: "56292400"
 ## <a name="supported-html-tags"></a>サポートされる HTML タグ  
  以下は、プレースホルダー テキストとして定義された場合に HTML として表示されるタグの全リストです。  
   
--   ヘッダー、スタイル、およびブロック要素: \<H {n} >、 \<DIV >、 \<SPAN >、\<P >、 \<LI >  
+-   ヘッダー、スタイル、およびブロック要素:\<H {n} >、 \<DIV >、 \<SPAN >、\<P >、 \<LI >  
   
  レポートの処理中、その他の HTML マークアップ タグはすべて無視されます。 プレースホルダー テキスト内の式で表される HTML が整形式でない場合、プレースホルダーはプレーン テキストに変換されます。 HTML タグの大文字と小文字は区別されません。  
   

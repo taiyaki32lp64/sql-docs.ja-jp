@@ -1,5 +1,5 @@
 ---
-title: データベースはトランザクション内のデータ定義ステートメントが無視 |Microsoft Docs
+title: Database は、Transaction | のデータ定義ステートメントを無視します。Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: 1674fb46-43a7-46d0-9f05-cf993d3bc032
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 31720bc3dfb2d39bb0dc83bfa7aa771aa1ef02fe
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 4d1538cc4aaf3e62086f57602b29ce0e61bceb6a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47809810"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67955204"
 ---
 # <a name="datadefinitionignoredintransactions-method-sqlserverdatabasemetadata"></a>dataDefinitionIgnoredInTransactions メソッド (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -42,7 +41,7 @@ public boolean dataDefinitionIgnoredInTransactions()
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- この dataDefinitionIgnoredInTransactions メソッドは、java.sql.DatabaseMetaData インターフェイスで dataDefinitionIgnoredInTransactions メソッドによって指定されます。  
+ この dataDefinitionIgnoredInTransactions メソッドは、java メタデータインターフェイスの dataDefinitionIgnoredInTransactions メソッドによって指定されます。  
   
 ## <a name="see-also"></a>参照  
  [SQLServerDatabaseMetaData のメソッド](../../../connect/jdbc/reference/sqlserverdatabasemetadata-methods.md)   

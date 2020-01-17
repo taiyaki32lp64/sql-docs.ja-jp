@@ -16,19 +16,19 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 9a9a93c9c6efdd5a864b5ab3ce0beacb7cbf1632
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48052312"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63049629"
 ---
 # <a name="change-the-ip-address-of-a-failover-cluster-instance"></a>フェールオーバー クラスター インスタンスの IP アドレスの変更
   このトピックでは、フェールオーバー クラスター マネージャー スナップインを使用して、AlwaysOn フェールオーバー クラスター インスタンス (FCI) の IP アドレス リソースを変更する方法について説明します。 フェールオーバー クラスター マネージャー スナップインは、Windows Server フェールオーバー クラスタリング (WSFC) サービスのクラスター管理アプリケーションです。  
   
--   **Before you begin:**  [Security](#Security)  
+-   **作業を開始する準備:**[Security](#Security)  
   
-##  <a name="BeforeYouBegin"></a> 作業を開始する準備  
- 開始する前に、「 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] オンライン ブックのトピック: [フェールオーバー クラスタ リングをインストールする前に](../install/before-installing-failover-clustering.md)」を参照してください。  
+##  <a name="BeforeYouBegin"></a> はじめに  
+ 開始する前に、次を参照してください[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]オンライン ブックのトピック。[Before Installing Failover Clustering](../install/before-installing-failover-clustering.md)」を参照してください。  
   
 ###  <a name="Security"></a> セキュリティ  
   

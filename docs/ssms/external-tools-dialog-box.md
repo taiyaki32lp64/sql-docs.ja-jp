@@ -12,21 +12,20 @@ helpviewer_keywords:
 - external tools [SQL Server Management Studio]
 - SQL Server Management Studio [SQL Server], external tools
 ms.assetid: ba797203-24d0-4922-9b97-8ab483f1db14
-author: stevestein
-ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 13e530d68185bd6a2433a446456481672162e2b6
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 22b70fa3a33404cee302f12ccb98ea03dbdb9aed
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47625830"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68265123"
 ---
 # <a name="external-tools-dialog-box"></a>[外部ツール] ダイアログ ボックス
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 **[外部ツール]** ダイアログ ボックスは、SQLCMD やメモ帳などの外部ツールを **[ツール]** メニューに追加するために使用します。 外部ツールを追加すると、 [!INCLUDE[msCoName](../includes/msconame_md.md)] [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 環境で作業しながら、簡単に他のアプリケーションを起動できるようになります。 また、ツールを起動するときに引数や作業ディレクトリを指定できます。 また、一部のツールからの出力を **[出力]** ウィンドウに表示することもできます。 **[外部ツール]** ダイアログ ボックスは、 **[ツール]** メニューから使用できます。  
   
-## <a name="options"></a>[変数]  
+## <a name="options"></a>オプション  
 **[メニューの内容]**  
 **[ツール]** メニューに現在追加されている項目のタイトルを一覧表示します。 メニューに表示される項目の順序を変更するには、 **[上へ移動]** と **[下へ移動]** を使用します。 メニューから項目を削除するには、 **[削除]** ボタンを使用します。  
   
@@ -43,7 +42,7 @@ ms.locfileid: "47625830"
 **[メニューの内容]** の一覧および **[ツール]** メニューから、ツールまたはコマンドを削除します。  
   
 **[タイトル]**  
-**[ツール]** メニューの **[外部メニュー]** サブメニューに表示されるツールまたはコマンドの名前を入力します。 ツール名の 1 文字の前にアンパサンド (&) を付けて、その文字をキーボード ショートカットとして指定します。 たとえば、"&SQLCMD" と指定した場合は、**[ツール]** メニューに &SQLCMD が表示されます。  
+**[ツール]** メニューの **[外部メニュー]** サブメニューに表示されるツールまたはコマンドの名前を入力します。 ツール名の 1 文字の前にアンパサンド (&) を付けて、その文字をキーボード ショートカットとして指定します。 たとえば、"&SQLCMD" と指定した場合は、 **[ツール]** メニューに &SQLCMD が表示されます。  
   
 **Command**  
 起動するファイルへのパスを指定します。  
@@ -69,7 +68,7 @@ ms.locfileid: "47625830"
 ## <a name="example"></a>例  
 **[外部ツール]** ダイアログ ボックスに次の値を入力すると、"DAC" というラベルが付いたメニュー項目が作成されます。このメニュー項目を選択すると、コマンド プロンプトが開き、専用管理者接続を使用して **sqlcmd** ユーティリティが実行されます。  
   
-|ボックス|ReplTest1|  
+|ボックス|[値]|  
 |-------|---------|  
 |**Title**|DAC (DAC)|  
 |**Command**|[!INCLUDE[ssInstallPath](../includes/ssinstallpath-md.md)]Tools\Binn\SQLCMD.exe|  

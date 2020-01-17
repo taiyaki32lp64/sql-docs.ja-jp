@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: analysis-services
 ms.topic: reference
 helpviewer_keywords:
 - errors [XML for Analysis]
@@ -22,12 +20,12 @@ ms.assetid: ab895282-098d-468e-9460-032598961f45
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 5a41e9cedf8a2a19aea0cf8a374bc71f520ff52f
-ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
+ms.openlocfilehash: 856886a5edfa5dcae604b44f5c2dca356ba0addb
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50147747"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62702135"
 ---
 # <a name="handling-errors-and-warnings-xmla"></a>エラーおよび警告の処理 (XMLA)
   XML for Analysis (XMLA) の場合は、エラー処理が必要な[Discover](https://docs.microsoft.com/bi-reference/xmla/xml-elements-methods-discover)または[Execute](https://docs.microsoft.com/bi-reference/xmla/xml-elements-methods-execute)メソッドの呼び出しは実行されませんが正常に実行しますが、エラーまたは警告を生成またはが正常に実行、結果が返されますエラーを含みます。  
@@ -127,7 +125,7 @@ HelpFile="" />
 </return>  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [Analysis Services での XMLA による開発](developing-with-xmla-in-analysis-services.md)  
   
   

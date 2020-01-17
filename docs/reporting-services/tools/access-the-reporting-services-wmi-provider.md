@@ -2,7 +2,7 @@
 title: Reporting Services WMI プロバイダーへのアクセス | Microsoft Docs
 ms.date: 11/02/2016
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: tools
 ms.topic: conceptual
 apiname:
@@ -13,14 +13,14 @@ helpviewer_keywords:
 - WMI provider [Reporting Services]
 - programming [Reporting Services]
 ms.assetid: 22cfbeb8-4ea3-4182-8f54-3341c771e87b
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: bf1a42cb16c499490bd7ea1ff5657e8dff58bcde
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: bbce09bb5c76d29bf56defb3c5403665e5226558
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52524416"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65576759"
 ---
 # <a name="access-the-reporting-services-wmi-provider"></a>Reporting Services WMI プロバイダーへのアクセス
   Reporting Services WMI プロバイダーは、ネイティブ モードのレポート サーバー インスタンスの管理に使用できる 2 つの WMI クラスを、スクリプトを通じて公開します。  
@@ -30,8 +30,8 @@ ms.locfileid: "52524416"
   
 |クラス|Namespace|[説明]|  
 |-----------|---------------|-----------------|  
-|MSReportServer_Instance|root\Microsoft\SqlServer\ReportServer\RS_*\<EncodedInstanceName>* \v13|インストールされているレポート サーバーに接続するための基本情報をクライアントに提供します。|  
-|MSReportServer_ConfigurationSetting|root\Microsoft\SqlServer\ReportServer\RS_*\<EncodedInstanceName>* \v13\Admin|レポート サーバー インスタンスのインストール パラメーターとランタイム パラメーターを表します。 これらのパラメーターはレポート サーバーの構成ファイルに格納されています。<br /><br /> **\*\* 重要 \*\*** このクラスは管理者権限でのみアクセス可能です。|  
+|MSReportServer_Instance|root\Microsoft\SqlServer\ReportServer\RS_ *\<EncodedInstanceName>* \v13|インストールされているレポート サーバーに接続するための基本情報をクライアントに提供します。|  
+|MSReportServer_ConfigurationSetting|root\Microsoft\SqlServer\ReportServer\RS_ *\<EncodedInstanceName>* \v13\Admin|レポート サーバー インスタンスのインストール パラメーターとランタイム パラメーターを表します。 これらのパラメーターはレポート サーバーの構成ファイルに格納されています。<br /><br /> **\*\* 重要 \*\*** このクラスは管理者権限でのみアクセス可能です。|  
   
  上記のクラスの各インスタンスは、レポート サーバー インスタンスごとに作成されます。 レポート サーバーによって公開されている WMI オブジェクト (.NET Framework 自体によって公開されている WMI プログラミング インターフェイスを含む) へは、Microsoft またはサード パーティの任意のツールを使用してアクセスできます。 このトピックでは、PowerShell コマンド [Get-WmiObject](https://technet.microsoft.com/library/dd315295.aspx)を使用した、WMI クラスのインスタンスに対するアクセス方法と使用方法について説明します。  
   
@@ -66,7 +66,7 @@ PS C:\windows\system32> Get-WmiObject -namespace "root\Microsoft\SqlServer\Repor
 ```  
   
 ## <a name="query-the-available-methods-and-properties"></a>使用可能なメソッドとプロパティの照会  
- 特定の Reporting Services WMI クラスで使用できるメソッドとプロパティを確認するには、Get-WmiObject から Get-Member へと結果をパイプします。 例 :  
+ 特定の Reporting Services WMI クラスで使用できるメソッドとプロパティを確認するには、Get-WmiObject から Get-Member へと結果をパイプします。 例:  
   
 ```  
 PS C:\windows\system32> Get-WmiObject -namespace "root\Microsoft\SqlServer\ReportServer\RS_MSSQLServer\v13\Admin" -class MSReportServer_ConfigurationSetting -ComputerName myrshost | Get-Member  

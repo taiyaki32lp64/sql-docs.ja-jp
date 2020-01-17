@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: 4a44f9f6-0265-4c00-8def-d85b6af923b1
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: ddeaadb1f25c3ea50e59c20d48f14e31831f2639
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 58bbbc299f13c0d876807476136cede76894bbb8
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47822019"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67916698"
 ---
 # <a name="stream-property"></a>Stream プロパティ
 OLE DB の設定を取得または**Stream**オブジェクトとの間で、 **ADOStreamConstruction**オブジェクト。  

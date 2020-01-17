@@ -12,15 +12,14 @@ helpviewer_keywords:
 - FileTables [SQL Server], bulk loading
 - FileTables [SQL Server], loading files
 ms.assetid: dc842a10-0586-4b0f-9775-5ca0ecc761d9
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: 75f0c0b036a261c7262934f1ac03c4a0edf4e2f5
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+author: MikeRayMSFT
+ms.author: mikeray
+ms.openlocfilehash: de6e6a237c0aa80e2793f33373ec664dfe93f953
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52526710"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72908709"
 ---
 # <a name="load-files-into-filetables"></a>FileTable へのファイルの読み込み
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -32,9 +31,9 @@ ms.locfileid: "52526710"
 |ファイルの現在の場所|移行のオプション|  
 |-------------------------------|---------------------------|  
 |ファイルは現在、ファイル システム内に格納されている。<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] にはファイルに関する情報がありません。|FileTable は Windows ファイル システムにおいてフォルダーとして表示されるため、ファイルの移動またはコピーに使用できる任意の方法で、ファイルを新しい FileTable に簡単に読み込むことができます。 これらの方法には、Windows エクスプローラー、コマンド ライン オプション (xcopy、robocopy)、およびカスタム スクリプトまたはアプリケーションが含まれます。<br /><br /> 既存のフォルダーを FileTable に変換することはできません。|  
-|ファイルは現在、ファイル システム内に格納されている。<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] には、ファイルへのポインターが格納されたメタデータのテーブルが含まれています。|まず、前の項目で示したいずれかの方法を使用して、ファイルを移動またはコピーします。<br /><br /> 次に、ファイルの新しい場所を指すように既存のメタデータのテーブルを更新します。<br /><br /> 詳しくは、この記事の「[例: ファイルをファイル システムから FileTable に移行する](#HowToMigrateFiles)」をご覧ください。|  
+|ファイルは現在、ファイル システム内に格納されている。<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] には、ファイルへのポインターが格納されたメタデータのテーブルが含まれています。|まず、前の項目で示したいずれかの方法を使用して、ファイルを移動またはコピーします。<br /><br /> 次に、ファイルの新しい場所を指すように既存のメタデータのテーブルを更新します。<br /><br /> 詳細については、「[例:ファイルをファイル システムから FileTable に移行する](#HowToMigrateFiles)」(この記事内) をご覧ください。|  
   
-###  <a name="HowToLoadNew"></a> 方法: FileTable にファイルを読み込む  
+###  <a name="HowToLoadNew"></a> 方法:FileTable にファイルを読み込む  
 次の方法を使って、ファイルを FileTable に読み込むことができます。  
   
 -   Windows エクスプローラーで、基になるフォルダーから新しい FileTable フォルダーにファイルをドラッグ アンド ドロップします。  
@@ -55,7 +54,7 @@ ms.locfileid: "52526710"
 2.  xcopy または同様のツールを使用して、ディレクトリ構造を保ったまま .jpg ファイルを FileTable のルート ディレクトリにコピーします。  
   
 3.  次の例のようなコードを使って、**PhotoMetadata** テーブル内のメタデータを修正します。  
-  
+
 ```sql  
 --  Add a path locator column to the PhotoMetadata table.  
 ALTER TABLE PhotoMetadata ADD pathlocator hierarchyid;  
@@ -99,7 +98,7 @@ UPDATE PhotoMetadata
   
     -   INSERT INTO ... SELECT * FROM OPENROWSET(BULK ...) (IGNORE_CONSTRAINTS 句を含む)。  
   
-###  <a name="HowToBulkLoad"></a> 方法: FileTable へのファイルの一括読み込みを行う  
+###  <a name="HowToBulkLoad"></a>方法:FileTable へのファイルの一括読み込みを行う  
  ファイルを FileTable に一括読み込みするには、次の方法を使用できます。  
   
 -   **bcp**  
@@ -122,7 +121,7 @@ UPDATE PhotoMetadata
   
  FileTable 制約の無効化の詳細については、「 [FileTable の管理](../../relational-databases/blob/manage-filetables.md)」を参照してください。  
   
-###  <a name="disabling"></a> 方法: 一括読み込みのための FileTable の制約を無効化する  
+###  <a name="disabling"></a>方法:一括読み込みのための FileTable の制約を無効化する  
  システム定義の制約を一時的に無効化すると、制約の適用というオーバーヘッドなしで、FileTable へのファイルの一括読み込みを行うことができます。 詳細については、「 [FileTable の管理](../../relational-databases/blob/manage-filetables.md)」を参照してください。  
   
 ## <a name="see-also"></a>参照  

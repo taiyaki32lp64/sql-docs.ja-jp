@@ -13,17 +13,20 @@ helpviewer_keywords:
 - destinations [Integration Services], components
 - Script component [Integration Services], examples
 ms.assetid: d198c866-78f4-4a50-ae15-333160645815
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: 4678c0230a58f53bd56aa973db94fb97f753dbd1
-ms.sourcegitcommit: 485e4e05d88813d2a8bb8e7296dbd721d125f940
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: bb28965af992a19864ccf2e6959decd778468403
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/11/2018
-ms.locfileid: "49100443"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71296499"
 ---
 # <a name="creating-an-odbc-destination-with-the-script-component"></a>スクリプト コンポーネントによる ODBC 変換先の作成
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] では、通常、[!INCLUDE[vstecado](../../includes/vstecado-md.md)] 変換先および [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] Data Provider for ODBC を使用して、ODBC 変換先にデータを保存します。 ただし、単一のパッケージで使用するアドホックな ODBC 変換先を作成することもできます。 このアドホックな ODBC 変換先を作成するには、次の例に示すように、スクリプト コンポーネントを使用します。  
   
 > [!NOTE]  
@@ -36,7 +39,7 @@ ms.locfileid: "49100443"
   
 -   マネージド コードから ODBC 接続マネージャーの **AcquireConnection** メソッドを呼び出すことはできません。このメソッドを呼び出すと、ネイティブ オブジェクトが返されます。 そのため、この例では、接続マネージャーの接続文字列を使用して、マネージド ODBC [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] データ プロバイダーで直接データ ソースに接続しています。  
   
--   **OdbcCommand** には、位置パラメーターが必要です。 パラメーターの位置は、コマンドのテキストの疑問符 (?) で示されます  (一方、**SqlCommand** では名前付きパラメーターが必要です)。  
+-   **OdbcCommand** には、位置パラメーターが必要です。 パラメーターの位置は、コマンドのテキストの疑問符 (?) で示されます (一方、**SqlCommand** では名前付きパラメーターが必要です)。  
   
  この例では、**AdventureWorks** サンプル データベースの **Person.Address** テーブルを使用します。 この例では、このテーブルの第 1 列と第 4 列、つまり **int _AddressID_** 列と **nvarchar(30) _City_** 列をデータ フローに渡します。 「[特定の種類のスクリプト コンポーネントの開発](../../integration-services/extending-packages-scripting-data-flow-script-component-types/developing-specific-types-of-script-components.md)」の変換元、変換、および変換先の例でも、同じデータが使用されます。  
   
@@ -53,7 +56,7 @@ ms.locfileid: "49100443"
   
 3.  新しいスクリプト コンポーネントを [データ フロー] デザイナー画面に追加し、変換先として構成します。  
   
-4.  [!INCLUDE[ssIS](../../includes/ssis-md.md)] デザイナーで、上流変換元の出力または変換の出力を変換先コンポーネントに接続します  (変換を介さずに変換元を直接変換先に接続することもできます)。このサンプルを機能させるには、上流コンポーネントの出力に、**AdventureWorks** サンプル データベースの **Person.Address** テーブルにある **AddressID** 列と **City** 列を最低限含める必要があります。  
+4.  [!INCLUDE[ssIS](../../includes/ssis-md.md)] デザイナーで、上流変換元の出力または変換の出力を変換先コンポーネントに接続します (変換を介さずに変換元を直接変換先に接続することもできます)。このサンプルを機能させるには、上流コンポーネントの出力に、**AdventureWorks** サンプル データベースの **Person.Address** テーブルにある **AddressID** 列と **City** 列を最低限含める必要があります。  
   
 5.  **[スクリプト変換エディター]** を開きます。 **[入力列]** ページで、**AddressID** 列と **City** 列を選択します。  
   
@@ -61,7 +64,7 @@ ms.locfileid: "49100443"
   
 7.  **[接続マネージャー]** ページで、ODBC 接続マネージャーを追加または作成し、**MyODBCConnectionManager** などのわかりやすい名前を付けます。  
   
-8.  **[スクリプト]** ページで、**[スクリプトの編集]** をクリックし、以下に示すスクリプトを **ScriptMain** クラスに入力します。  
+8.  **[スクリプト]** ページで、 **[スクリプトの編集]** をクリックし、以下に示すスクリプトを **ScriptMain** クラスに入力します。  
   
 9. スクリプト開発環境と **[スクリプト変換エディター]** を閉じ、サンプルを実行します。  
   

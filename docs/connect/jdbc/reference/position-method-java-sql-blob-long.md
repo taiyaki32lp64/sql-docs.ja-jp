@@ -1,5 +1,5 @@
 ---
-title: position (java.sql.Blob, long) メソッド |Microsoft Docs
+title: position メソッド (java .sql. Blob, long) |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: ebd005e5-f6c5-4789-87f9-d2fdacd35060
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: f7d4ae8550d35b65589ba735765016df623fc7c3
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: cedfe53b8b30152ed4ca2dd3d1c68d6ff885b6bc
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47830090"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67976431"
 ---
 # <a name="position-method-javasqlblob-long"></a>position (java.sql.Blob, long) メソッド
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -52,7 +51,7 @@ public long position(java.sql.Blob pattern,
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- この位置のメソッドは、java.sql.Blob インターフェイスでの位置のメソッドによって指定されます。  
+ この位置メソッドは、java. Blob インターフェイスの position メソッドによって指定されます。  
   
 ## <a name="see-also"></a>参照  
  [position メソッド&#40;SQLServerBlob&#41;](../../../connect/jdbc/reference/position-method-sqlserverblob.md)   

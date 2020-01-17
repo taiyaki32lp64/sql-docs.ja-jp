@@ -1,6 +1,7 @@
 ---
-title: マージ パブリケーションの互換性レベルの設定 | Microsoft Docs
-ms.custom: ''
+title: マージ パブリケーションの互換性レベルの設定
+description: SQL Server Management Studio (SSMS) または Transact-SQL (T-SQL) を使用して、マージ パブリケーションの互換性レベルを設定する方法について説明します。
+ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -14,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: db47ac73-948b-4d77-b272-bb3565135ea5
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: d38354f7533deebba413028a5b925c37de6e8fe3
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ac82c951c3e65c1d26891f802d19b8522f22a6e9
+ms.sourcegitcommit: 02d44167a1ee025ba925a6fefadeea966912954c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47606460"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75321223"
 ---
 # <a name="set-the-compatibility-level-for-merge-publications"></a>マージ パブリケーションの互換性レベルの設定
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -46,18 +46,18 @@ ms.locfileid: "47606460"
   
 #### <a name="to-increase-the-publication-compatibility-level"></a>パブリケーションの互換性レベルを上げるには  
   
--   **[パブリケーションのプロパティ - \<Publication>]** ダイアログ ボックスの **[全般]** ページで、**[互換性レベル]** を選択します。  
+-   **[パブリケーションのプロパティ - \<Publication>]** ダイアログ ボックスの **[全般]** ページで、 **[互換性レベル]** を選択します。  
   
 ##  <a name="TsqlProcedure"></a> Transact-SQL の使用  
  マージ パブリケーションの互換性レベルは、パブリケーションを作成したときにプログラムで設定するか、または後でプログラムから変更できます。 レプリケーション ストアド プロシージャを使用して、このパブリケーション プロパティを設定または変更できます。  
   
 #### <a name="to-set-the-publication-compatibility-level-for-a-merge-publication"></a>マージ パブリケーションのパブリケーション互換性レベルを設定するには  
   
-1.  パブリケーションに古いバージョンの [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] との互換性を持たせるには、パブリッシャーで [sp_addmergepublication &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addmergepublication-transact-sql.md) を実行し、**@publication_compatibility_level** に値を指定します。 詳細については、「 [Create a Publication](../../../relational-databases/replication/publish/create-a-publication.md)」を参照してください。  
-  
+1.  パブリケーションに古いバージョンの [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] との互換性を持たせるには、パブリッシャーで `@publication_compatibility_level` に値を指定して、[sp_addmergepublication (Transact-SQL)](../../../relational-databases/system-stored-procedures/sp-addmergepublication-transact-sql.md) を実行します。 詳しくは、「 [パブリケーションを作成](../../../relational-databases/replication/publish/create-a-publication.md)」をご覧ください。  
+
 #### <a name="to-change-the-publication-compatibility-level-of-a-merge-publication"></a>マージ パブリケーションのパブリケーション互換性レベルを変更するには  
   
-1.  [sp_changemergepublication &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-changemergepublication-transact-sql.md) を実行し、**@property** に **publication_compatibility_level** を指定して、適切なパブリケーション互換性レベルを **@value** に指定します。  
+1.  `@property` に **publication_compatibility_level** を、`@value` に適切なパブリケーション互換性レベルを指定して、[sp_changemergepublication &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-changemergepublication-transact-sql.md) を実行します。  
   
 #### <a name="to-determine-the-publication-compatibility-level-of-a-merge-publication"></a>マージ パブリケーションのパブリケーション互換性レベルを確認するには  
   
@@ -68,7 +68,7 @@ ms.locfileid: "47606460"
 ###  <a name="TsqlExample"></a> 例 (Transact-SQL)  
  次の例では、マージ パブリケーションを作成して、パブリケーションの互換性レベルを設定します。  
   
-```  
+```sql  
 -- To avoid storing the login and password in the script file, the values   
 -- are passed into SQLCMD as scripting variables. For information about   
 -- how to use scripting variables on the command line and in SQL Server  
@@ -105,7 +105,7 @@ GO
 > [!NOTE]  
 >  パブリケーションで特定の互換性レベルを必要とする機能を使用していると、パブリケーションの互換性レベルの変更が許可されない場合があります。 詳しくは、「[レプリケーションの旧バージョンとの互換性](../../../relational-databases/replication/replication-backward-compatibility.md)」をご覧ください。  
   
-```  
+```sql  
 DECLARE @publication AS sysname;  
 SET @publication = N'AdvWorksSalesOrdersMerge' ;  
   
@@ -121,7 +121,7 @@ GO
   
  次の例では、マージ パブリケーションの現在のパブリケーション互換性レベルが返されます。  
   
-```  
+```sql  
 DECLARE @publication AS sysname;  
 SET @publication = N'AdvWorksSalesOrdersMerge' ;  
 EXEC sp_helpmergepublication   
@@ -131,6 +131,6 @@ GO
 ```  
   
 ## <a name="see-also"></a>参照  
- [Create a Publication](../../../relational-databases/replication/publish/create-a-publication.md)  
+ [パブリケーションを作成する](../../../relational-databases/replication/publish/create-a-publication.md)  
   
   

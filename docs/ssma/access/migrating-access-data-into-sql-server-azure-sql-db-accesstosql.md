@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: f3b18af7-1af0-499d-a00d-a0af94895625
 author: Shamikg
 ms.author: Shamikg
-manager: craigg
-ms.openlocfilehash: d15d7608879d9116832e083654cc07717c72e23e
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 8f0e93efee0c57c904c32ec52fbb560f973f21b8
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51666471"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67907145"
 ---
 # <a name="migrating-access-data-into-sql-server---azure-sql-db-accesstosql"></a>SQL Server - Azure SQL DB (AccessToSQL) に移行するデータにアクセス
 データベース オブジェクトを正常に作成した後[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]へのアクセスからデータを移行する[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]または SQL Azure です。  

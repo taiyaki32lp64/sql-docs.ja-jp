@@ -12,21 +12,20 @@ f1_keywords:
 helpviewer_keywords:
 - SQL Server Management Studio dialog box
 ms.assetid: b3568e0f-3227-45a0-ad6d-997ee87cdf0f
-author: stevestein
-ms.author: sstein
-manager: craigg
-ms.openlocfilehash: ae5dd450183648335f4702bad49849071d4426bc
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 8b7026b90766cb98335f1cbb626357ddc9c50718
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47723780"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68265050"
 ---
 # <a name="about-sql-server-management-studio"></a>[Microsoft SQL Server Management Studio のバージョン情報]
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 このダイアログ ボックスを使用すると、インストール済みの [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] に関する情報を表示したり、コピーしたりできます。 評価版の場合、製品の有効期限を示す日数が表示されます。  
   
-## <a name="options"></a>[変数]  
+## <a name="options"></a>オプション  
 **[コンポーネント名]**  
 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] のインストール済みコンポーネントの名前とオペレーティング システムの名前が一覧表示されます。  
   

@@ -1,6 +1,6 @@
 ---
 title: コマンドの準備 |Microsoft Docs
-description: SQL Server の OLE DB ドライバーを使用してコマンドの準備
+description: OLE DB Driver for SQL Server を使用したコマンドの準備
 ms.custom: ''
 ms.date: 06/14/2018
 ms.prod: sql
@@ -15,13 +15,12 @@ helpviewer_keywords:
 - command preparation [OLE DB Driver for SQL Server]
 author: pmasl
 ms.author: pelopes
-manager: craigg
-ms.openlocfilehash: a7722fc3dc089ac937575b7ba7a9b447d8cf1667
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d4242f987820b384ab5bfed1bd74066a54fc09ce
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47782980"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68016050"
 ---
 # <a name="preparing-commands"></a>コマンドの準備
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

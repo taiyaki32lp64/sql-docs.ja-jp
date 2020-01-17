@@ -1,6 +1,6 @@
 ---
-title: 日付のプロパティ (ClientNetLibInfo クラス) |Microsoft Docs
-ms.custom: ''
+title: Date プロパティ (ClientNetLibInfo)
+ms.custom: seo-lt-2019
 ms.date: 03/03/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 4ca7e569-f097-49f7-b83c-795b0f1319ec
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: efd8c8d25ffc5f98810508785a5948d77713ab5b
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: afbbebcfb2d569479ba502e19564adf4df4a70f6
+ms.sourcegitcommit: baa40306cada09e480b4c5ddb44ee8524307a2ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51663331"
+ms.lasthandoff: 11/06/2019
+ms.locfileid: "73659615"
 ---
 # <a name="date-property-clientnetlibinfo-class"></a>Date プロパティ (ClientNetLibInfo クラス)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -43,7 +42,7 @@ object.Date [= value]
 ## <a name="property-valuereturn-value"></a>プロパティ値/戻り値  
  クライアント ネットワーク ライブラリ ファイルの日付を指定する uint32 値。  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>解説  
   
 ## <a name="see-also"></a>参照  
  [クライアント プロトコルの構成](https://technet.microsoft.com/library/ms181035.aspx)  

@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: e6d03089-30a3-4627-a642-591ba0980894
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: f0fad1db10e40c71d22dd75417420c54cefa7803
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 09b29277d74383abff1510ca7394aecad036fc7e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47750380"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68036439"
 ---
 # <a name="connection-attributes"></a>接続属性
 接続属性は、接続の特性です。 たとえば、トランザクションは接続レベルで行われるので、トランザクション分離レベルは 1 つの接続属性になります。 同様に、ログイン タイムアウト、または、タイムアウトするまでに接続しているときに待機する秒数は、接続属性です。  

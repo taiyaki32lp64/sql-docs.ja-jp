@@ -1,6 +1,6 @@
 ---
-title: ネイティブ コンパイル ストアド プロシージャに MERGE 機能を実装する | Microsoft Docs
-ms.custom: ''
+title: MERGE 機能 - ネイティブ コンパイル ストアド プロシージャ
+ms.custom: seo-dt-2019
 ms.date: 11/17/2016
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -10,14 +10,13 @@ ms.topic: conceptual
 ms.assetid: d4bcdc36-3302-4abc-9b35-64ec2b920986
 author: MightyPen
 ms.author: genemi
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: aa0139887cc51e9b883d7afe6091d818d49073f9
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 811b3dfbd79e60d5fb626f814f7b4bf38272fd19
+ms.sourcegitcommit: 384e7eeb0020e17a018ef8087970038aabdd9bb7
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47743850"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74412643"
 ---
 # <a name="implementing-merge-functionality-in-a-natively-compiled-stored-procedure"></a>ネイティブ コンパイル ストアド プロシージャに MERGE 機能を実装する
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]

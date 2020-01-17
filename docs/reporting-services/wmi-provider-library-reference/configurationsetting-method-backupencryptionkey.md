@@ -2,7 +2,7 @@
 title: BackupEncryptionKey メソッド (WMI MSReportServer_ConfigurationSetting) | Microsoft Docs
 ms.date: 03/01/2017
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: wmi-provider-library-reference
 ms.topic: conceptual
 apiname:
@@ -13,14 +13,14 @@ apitype: MOFDef
 helpviewer_keywords:
 - BackupEncryptionKey method
 ms.assetid: da1d5dae-2517-448e-96fb-5379c93222ea
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: e08d76daea2e0fc1f8a9bea7dc1f8c1692dba53d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 869967e3f8797aa9af4bf59f128730a9fc39641d
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47744710"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65570824"
 ---
 # <a name="configurationsetting-method---backupencryptionkey"></a>ConfigurationSetting メソッド - BackupEncryptionKey
   指定されたレポート サーバー インスタンスの暗号化キーをバックアップします。 暗号化キーは、パスワードを使用して暗号化されて格納されます。  
@@ -40,7 +40,7 @@ public void BackupEncryptionKey(string Password, out Byte[] KeyFile,
 ```  
   
 ## <a name="parameters"></a>パラメーター  
- *Password*  
+ *パスワード*  
  暗号化キーを暗号化するための文字列。暗号化キーを返す前に、この文字列を使用して暗号化されます。  
   
  *KeyFile[]*  

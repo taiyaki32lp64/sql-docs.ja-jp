@@ -2,18 +2,18 @@
 title: ゲージのポインターの書式設定 (レポート ビルダーおよび SSRS) | Microsoft Docs
 ms.date: 03/01/2017
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: report-design
 ms.topic: conceptual
 ms.assetid: 2fdf670a-5237-48fe-813d-97657c5c77d2
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: d718dec9ee17f64177ae5749b862f9edff616f15
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 780cda075d8280d71f3438c79359c58ad1ac3133
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56293770"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65575632"
 ---
 # <a name="formatting-pointers-on-a-gauge-report-builder-and-ssrs"></a>ゲージのポインターの書式設定 (レポート ビルダーおよび SSRS)
  [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] の改ページ調整されたレポートのゲージ ポインターは、ゲージの現在の値を示します。   
@@ -37,7 +37,7 @@ ms.locfileid: "56293770"
 ##  <a name="DisplayingMultiple"></a> ゲージでの複数のポインターの表示  
  複数のポインターをゲージに追加して、同じスケール上の複数の値を示すことができます。 これは、小さい値と大きい値を同時に表示する場合に便利です。 同じスケールのゲージに複数のポインターを指定するには、ゲージ内を右クリックし、ショートカット メニューの **[ポインターの追加]** をクリックします。 または、ゲージ内を右クリックし、 **[スケールの追加]** をクリックしてスケールを追加し、 続いて新しいポインターを追加できます。このポインターは、最後のスケールに自動的に関連付けられます。  
   
- ポインターが重なる場合、ポインターの描画順序はゲージにポインターが追加された順序です。 データ ペインでフィールドの順序を変更して、ポインターの描画順序を変更することはできません。 複数のポインターの描画順序を変更するには、プロパティ ペインを開き、**[ポインター (…)]** をクリックします。次に、ポインター コレクションでポインターの順序を変更します。  
+ ポインターが重なる場合、ポインターの描画順序はゲージにポインターが追加された順序です。 データ ペインでフィールドの順序を変更して、ポインターの描画順序を変更することはできません。 複数のポインターの描画順序を変更するには、プロパティ ペインを開き、 **[ポインター (…)]** をクリックします。次に、ポインター コレクションでポインターの順序を変更します。  
   
 ##  <a name="SettingGradients"></a> ニードル キャップのグラデーションの設定  
  放射状ゲージに限り、ポインターの上部または下部に描画できるニードル キャップを指定できます。 すべてのニードル キャップ スタイルは、変更できない組み込みのグラデーションを使用して描画されます。 ただし、例外として **RoundedDark** スタイルではグラデーションの色とスタイルを指定できます。  

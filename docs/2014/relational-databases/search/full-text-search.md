@@ -9,15 +9,15 @@ ms.topic: conceptual
 helpviewer_keywords:
 - full-text search [SQL Server]
 ms.assetid: a0ce315d-f96d-4e5d-b4eb-ff76811cab75
-author: douglaslMS
-ms.author: douglasl
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 560761383a06bf9e3b319546011d58c7c1bdecb4
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 6d56a6e32818296343b711769ad594bf7cadce57
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52788644"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66011244"
 ---
 # <a name="full-text-search"></a>フルテキスト検索
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] および [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] のフルテキスト検索は、ユーザーおよびアプリケーションが [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] テーブルの文字ベースのデータに対してフルテキスト クエリを実行できるようにします。 フルテキスト クエリをテーブルに対して実行するには、まずデータベース管理者がテーブル上にフルテキスト インデックスを作成する必要があります。 フルテキスト インデックスには、テーブルの 1 つ以上の文字ベースの列が含まれます。 この列のデータ型は、`char`、`varchar`、`nchar`、`nvarchar`、`text`、`ntext`、`image`、`xml`、`varbinary(max)`、FILESTREAM のいずれかになります。 各フルテキスト インデックスによってテーブルの 1 つ以上の列にインデックスが設定され、列ごとに特定の言語を使用できます。  

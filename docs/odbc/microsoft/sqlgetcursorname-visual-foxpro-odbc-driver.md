@@ -12,21 +12,20 @@ helpviewer_keywords:
 ms.assetid: 8b1c5233-950e-4173-ae15-dfc46be6ed09
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 35e6f1fc4b95002e248f482fd204f7414b99a939
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 1eec75ec935e8b60fadb540c9bab05fbe2a05fdb
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47691300"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68003389"
 ---
 # <a name="sqlgetcursorname-visual-foxpro-odbc-driver"></a>SQLGetCursorName (Visual FoxPro ODBC ドライバー)
 > [!NOTE]  
 >  このトピックでには、Visual FoxPro ODBC ドライバー固有の情報が含まれています。 この関数の詳細については、該当するトピックを参照してください。 [ODBC API リファレンス](../../odbc/reference/syntax/odbc-api-reference.md)します。  
   
- サポート: 完全な  
+ サポート:[完全]  
   
- ODBC API 準拠: コア レベル  
+ ODBC API 準拠:コア レベル  
   
  関連付けられているカーソルの名前を返します、指定された*hstmt*します。 **SQLGetCursorName**のため、Visual FoxPro ODBC ドライバー API には含まコア レベル API の機能の一部である。 ドライバーが位置指定更新をサポートしていないためには、その他の API 関数と共に使用することはできません。  
   

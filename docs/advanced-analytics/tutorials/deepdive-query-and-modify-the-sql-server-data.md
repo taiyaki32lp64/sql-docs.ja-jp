@@ -1,38 +1,39 @@
 ---
-title: クエリおよび RevoScaleR - SQL Server Machine Learning を使用してデータを SQL Server の変更
-description: クエリおよび SQL Server で R 言語を使用してデータを変更する方法のチュートリアル。
+title: RevoScaleR を使用して SQL データを変更する
+description: このチュートリアルでは、SQL Server で R 言語を使用してデータのクエリを実行し、データを変更する方法について詳しく説明しています。
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 11/27/2018
 ms.topic: tutorial
-author: HeidiSteen
-ms.author: heidist
-manager: cgronlun
-ms.openlocfilehash: 191dd7237307d33d3cdaca5872fee9a09d27f321
-ms.sourcegitcommit: ee76332b6119ef89549ee9d641d002b9cabf20d2
-ms.translationtype: MT
+author: dphansen
+ms.author: davidph
+ms.custom: seo-lt-2019
+monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
+ms.openlocfilehash: 65db15d8c6778723ff04f82cde985c4827813339
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/20/2018
-ms.locfileid: "53645411"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73727187"
 ---
-# <a name="query-and-modify-the-sql-server-data-sql-server-and-revoscaler-tutorial"></a>クエリおよび SQL Server のデータ (SQL Server と RevoScaleR チュートリアル) を変更します。
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+# <a name="query-and-modify-the-sql-server-data-sql-server-and-revoscaler-tutorial"></a>SQL Server データのクエリを実行し、データを変更する (SQL Server と RevoScaleR のチュートリアル)
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-このレッスンの一部である、 [RevoScaleR チュートリアル](deepdive-data-science-deep-dive-using-the-revoscaler-packages.md)を使用する方法の[RevoScaleR 関数](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler)と SQL Server。
+このレッスンは、SQL Server で [RevoScaleR 関数](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler)を使用する方法についての [RevoScaleR チュートリアル](deepdive-data-science-deep-dive-using-the-revoscaler-packages.md)の一部です。
 
-データが読み込まれる前のレッスンで[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]します。 この手順で検証し、データを使用して変更**RevoScaleR**:
+前のレッスンでは、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] にデータを読み込みました。 このステップでは、**RevoScaleR** を使用してデータを探索および変更できます。
 
 > [!div class="checklist"]
-> * 変数に関する基本情報を返す
-> * 生データからのカテゴリ データを作成します。
+> * 変数に関する基本的な情報を返します。
+> * 生データからカテゴリ データを作成します。
 
-カテゴリのデータまたは*要因変数*は、探索的データの視覚化に役立ちます。 その操作は、次のようにどのような変数のデータを理解するのにヒストグラムへの入力として使用できます。
+カテゴリデータまたは *factor 変数*は、探索データの視覚化に役立ちます。 これらをヒストグラムへの入力として使用すると、変数データがどのように表示されるかを把握できます。
 
 ## <a name="query-for-columns-and-types"></a>列と型のクエリ
 
-R スクリプトを実行するのに R IDE または RGui.exe を使用します。 
+R IDE または RGui を使用して R スクリプトを実行します。 
 
-最初に、列とそのデータ型の一覧を取得します。 関数を使用する[rxGetVarInfo](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxgetvarinfoxdf)し分析するデータ ソースを指定します。 バージョンによって**RevoScaleR**、使用することも[rxGetVarNames](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxgetvarnames)します。 
+最初に、列とそのデータ型の一覧を取得します。 関数 [rxGetVarInfo](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxgetvarinfoxdf) を使用し、分析するデータ ソースを指定できます。 **RevoScaleR** のバージョンによっては、[rxGetVarNames](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxgetvarnames) を使用することもできます。 
   
 ```R
 rxGetVarInfo(data = sqlFraudDS)
@@ -54,13 +55,13 @@ Var 9: fraudRisk, Type: integer
 
 ## <a name="create-categorical-data"></a>カテゴリ データを作成します。
 
-すべての変数は、整数として格納されますが、いくつかの変数と呼ばれるカテゴリのデータを表す*要因変数*r.たとえば、列*状態*50 の州およびコロンビア、識別子として使用する番号が含まれています。 データをわかりやすくするために、この数値を州の略称の一覧で置き換えます。
+すべての変数は整数として格納されますが、一部の変数はカテゴリ データ (R で *要因変数* と呼ばれる) を表します。たとえば、*state* 列には、50 の州およびコロンビア特別区の識別子として使用される数値が含まれています。 データをわかりやすくするために、この数値を州の略称の一覧で置き換えます。
 
-この手順で、省略形を含む文字列ベクトルを作成し、元の整数識別子をこれらのカテゴリ値をマップします。 新しい変数を使用して、 *colInfo*この列が係数として処理することを指定するための引数。 データを分析したり、移動したときに、省略形が使用され、列が係数として処理されます。
+この手順では、略称を含む文字列ベクトルを作成し、そのカテゴリ値を元の整数の識別子にマップします。 その後で、*colInfo* 引数で新しい変数を使用し、この列を要因として処理するように指定します。 データを分析または移動するたびに、省略形が使用され、列が要素として処理されます。
 
-列を略称にマップしてから要因として使用すると、パフォーマンスも改善されます。 詳細については、次を参照してください。 [R とデータの最適化](../r/r-and-data-optimization-r-services.md)します。
+列を略称にマップしてから要因として使用すると、パフォーマンスも改善されます。 詳細については、「[R とデータの最適化](../r/r-and-data-optimization-r-services.md)」を参照してください。
 
-1. R 変数を作成して開始*stateAbb*、し、次のように、追加する文字列のベクトルを定義します。
+1. まず、次のように R 変数 *stateAbb*を作成し、この変数に追加する文字列のベクトルを定義します。
   
     ```R
     stateAbb <- c("AK", "AL", "AR", "AZ", "CA", "CO", "CT", "DC",
@@ -95,7 +96,7 @@ Var 9: fraudRisk, Type: integer
     )
     ```
   
-3. 作成する、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]呼び出し、更新されたデータを使用するデータ ソース、 **RxSqlServerData**以前と同様に機能しますが、追加、 *colInfo*引数。
+3. 最新のデータを使用する [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データ ソースを作成するには、以前と同様に **RxSqlServerData** を呼び出しますが、今回は *colInfo* 引数を追加します。
   
     ```R
     sqlFraudDS <- RxSqlServerData(connectionString = sqlConnString,

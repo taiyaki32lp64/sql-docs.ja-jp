@@ -8,14 +8,14 @@ ms.technology: mobile-reports
 ms.custom: seodec18
 ms.topic: conceptual
 ms.assetid: a5a8dbf6-4c3a-435d-8188-d6656c32f229
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: ce369a5652e2fe45335a49b6df3d3fc48dd9caf0
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 51708fc41bb154fcf67ac3a21bd6680c69e2f2c2
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56295050"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63200535"
 ---
 # <a name="create-mobile-reports-with-sql-server-mobile-report-publisher"></a>SQL Server Mobile Report Publisher を使用してモバイル レポートを作成する
 多様なデータ視覚エフェクトが含まれる [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] モバイル レポートについて学びます。これらのレポートはモバイル デバイス用に最適化されており、オンプレミス データに接続します。 
@@ -36,14 +36,14 @@ ms.locfileid: "56295050"
 操作を開始するために次の記事が役立ちます。
 -  [SQL Server Mobile Report Publisher](https://go.microsoft.com/fwlink/?LinkID=733527)のダウンロード  
 -  [Reporting Services モバイル レポートの作成](../../reporting-services/mobile-reports/create-a-reporting-services-mobile-report.md)  
--  [詳細なチュートリアル:SQL Server Reporting Services でのモバイル レポートと KPI の作成](https://christopherfinlan.com/2015/12/21/how-to-create-mobile-reports-and-kpis-in-sql-server-reporting-services-2016-an-end-to-end-walkthrough/) (Christopher Finlan のブログ)  
-- [デザイン優先、またはデータ優先](../../reporting-services/mobile-reports/design-first-or-data-first-when-creating-in-reporting-services-mobile-reports.md):シミュレートされたデータで最初にレポートをデザインするか、独自のデータで開始するかどうかを決定します。  
-- [Reporting Services モバイル レポートのデータ](../../reporting-services/mobile-reports/data-for-reporting-services-mobile-reports.md):共有データセットのデータを使用するか、Excel ブックから準備したデータをモバイル レポートで使用します。
-- [Reporting Services のモバイル レポートと KPI におけるデータ更新のしくみ](https://christopherfinlan.com/2016/02/10/so-refreshinghow-data-refresh-works-with-mobile-reports-and-kpis-in-reporting-services/) (Christopher Finlan のブログ):データの更新頻度を制御して、レポートのパフォーマンスを高速化できるよう、共有データセットのキャッシュを設定する方法について説明します。
+-  [詳細なチュートリアル: SQL Server Reporting Services でのモバイル レポートと KPI の作成](https://christopherfinlan.com/2015/12/21/how-to-create-mobile-reports-and-kpis-in-sql-server-reporting-services-2016-an-end-to-end-walkthrough/) (Christopher Finlan のブログ)  
+- [デザイン優先、またはデータ優先](../../reporting-services/mobile-reports/design-first-or-data-first-when-creating-in-reporting-services-mobile-reports.md): シミュレートされたデータで最初にレポートをデザインするか、独自のデータで開始するかどうかを決定します。  
+- [Reporting Services モバイル レポートのデータ](../../reporting-services/mobile-reports/data-for-reporting-services-mobile-reports.md): 共有データセットからデータを使用するか、モバイル レポートで使用する Excel ブックからデータを準備します。
+- [Reporting Services のモバイル レポートと KPI におけるデータ更新のしくみ](https://christopherfinlan.com/2016/02/10/so-refreshinghow-data-refresh-works-with-mobile-reports-and-kpis-in-reporting-services/) (Christopher Finlan のブログ): 共有データセットのキャッシュの設定について確認し、データが更新される頻度を制御し、レポートのパフォーマンスを高速化します。
 - [モバイル レポートでの視覚化](../../reporting-services/mobile-reports/add-visualizations-to-reporting-services-mobile-reports.md)
 - [モバイル レポートでのゲージ](../../reporting-services/mobile-reports/add-gauges-to-mobile-reports-reporting-services.md)
 - [モバイル レポートでのマップ](../../reporting-services/mobile-reports/maps-in-reporting-services-mobile-reports.md)
-- ビジネスの色とロゴを使用する[Web ポータルとモバイル レポートのブランド化](../../reporting-services/branding-the-web-portal.md) 
+- ビジネスの色とロゴを使用する[Web ポータルとモバイル レポートのブランド化](../../reporting-services/branding-the-web-portal.md)
   
 ## <a name="ssrs-mobile-reports-in-the-power-bi-mobile-apps"></a>Power BI モバイル アプリでの SSRS モバイル レポート
 

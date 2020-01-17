@@ -15,16 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - STIntersects method
 ms.assetid: c9db8b42-83c7-48c6-8963-fce54eb34c05
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
+author: MladjoA
+ms.author: mlandzic
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 617edb15f042478982f62846947fad5caf5a0714
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 3185634a4370ccb86fdb2f0199dc3af452d77558
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47740240"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68042077"
 ---
 # <a name="stintersects-geography-data-type"></a>STIntersects (geography データ型)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-asdw-xxx-md.md)]
@@ -45,7 +44,7 @@ ms.locfileid: "47740240"
 ## <a name="return-types"></a>戻り値の型  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 戻り値の型: **bit**  
   
- CLR の戻り値の型: **SqlBoolean**  
+ CLR の戻り値の型:**SqlBoolean**  
   
 ## <a name="remarks"></a>Remarks  
  **geography** インスタンスの SRID (spatial reference ID) が一致しない場合、このメソッドは常に **NULL** を返します。  

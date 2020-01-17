@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: de99fc60-d0ad-4117-a17d-02bdde6512b4
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 80bb427800f57ddaa07e5e53f21b03df9e8317d3
-ms.sourcegitcommit: bfa10c54e871700de285d7f819095d51ef70d997
+ms.openlocfilehash: 21bf98ac97c9a695b7b9576412d43c832011322d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/14/2019
-ms.locfileid: "54255527"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68004659"
 ---
 # <a name="functions-on-sequences---id"></a>シーケンスの関数 - id
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -40,15 +39,15 @@ fn:id($arg as xs:IDREF*) as element()*
  1 つ以上の xs:IDREF 値。  
   
 ## <a name="remarks"></a>コメント  
- 関数の結果は、XML インスタンス内の要素をドキュメント順に示したシーケンスです。シーケンスを形成する要素の xs:ID 値は、候補となる xs:IDREF のリストに含まれている 1 つ以上の xs:IDREF のいずれかに一致します。  
+ 関数の結果は、xs:ID 値と等しく、xs:IDREFs の 1 つ以上 xs:IDREFs の候補の一覧で、ドキュメント順で、XML インスタンス内の要素のシーケンスです。  
   
  xs:IDREF 値がどの要素とも一致しない場合は、空のシーケンスを返します。  
   
 ## <a name="examples"></a>使用例  
  このトピックではさまざまなに格納されている XML インスタンスに対して XQuery の例について**xml**内の列を入力、[!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)]データベース。  
   
-### <a name="a-retrieving-elements-based-on-the-idref-attribute-value"></a>A. IDREF 属性値に基づいて要素を取得する  
- 次の例では、fn:id を使用し、IDREF マネージャー属性に基づいて <`employee`> 要素を取得します。 この例では、マネージャー属性は IDREF 型の属性で、eid 属性は ID 型の属性です。  
+### <a name="a-retrieving-elements-based-on-the-idref-attribute-value"></a>A. IDREF 属性値に基づいて要素を取得します。  
+ 次の例では、fn:id を使用して、取得、<`employee`>、IDREF マネージャー属性に基づいて、要素。 この例では、マネージャー属性は IDREF 型の属性で、eid 属性は ID 型の属性です。  
   
  、特定のマネージャー属性の値の、 **id()** 検索の機能、<`employee`> 要素の ID 型属性値が入力の IDREF 値と一致します。 つまり、特定の従業員の**id()** 関数は、従業員のマネージャーを返します。  
   
@@ -96,10 +95,10 @@ select @x.value(' declare namespace e="emp";
 Go  
 ```  
   
- クエリは値として "Dave" を返します。 これは、Dave が Joe のマネージャーであることを示します。  
+ クエリでは、値として"Dave"を返します。 これは、Dave が Joe のマネージャーであることを示します。  
   
 ### <a name="b-retrieving-elements-based-on-the-orderlist-idrefs-attribute-value"></a>B. OrderList IDREFS 属性値に基づいて要素を取得する  
- 次の例では、<`Customer`> 要素の OrderList 属性は IDREFS 型の属性です。 この例では特定の顧客に対応する注文 ID がリストされます。 注文 ID ごとに、<`Customer`> の下に注文の値を提供する <`Order`> 子要素が存在します。  
+ 次の例では、OrderList 属性で、<`Customer`> 要素は IDREFS 型の属性。 この例では特定の顧客に対応する注文 ID がリストされます。 各注文 id は、<`Order`> 下の子要素、<`Customer`> 順序の値を指定します。  
   
  クエリ式 `data(CustOrders:Customers/Customer[1]/@OrderList)[1]` では、最初の顧客の最初の値が IDRES 一覧から取得されます。 この値に渡されます、 **id()** 関数。 関数で検索し、<`Order`> 要素の OrderID 属性値への入力に一致、 **id()** 関数。  
   
@@ -181,7 +180,7 @@ select @x.query('declare namespace CustOrders="Customers";
   
 -   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 引数の型を必要と**id()** xs:IDREF* のサブタイプにします。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [シーケンスの関数](https://msdn.microsoft.com/library/672d2795-53ab-49c2-bf24-bc81a47ecd3f)  
   
   

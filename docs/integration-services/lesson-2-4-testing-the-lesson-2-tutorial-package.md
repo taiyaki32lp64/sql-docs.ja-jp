@@ -8,17 +8,20 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: tutorial
 ms.assetid: 0e8c0a25-8f79-41df-8ed2-f82a74b129cd
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: 2c17b7679a10d9273578c74dfa452b120ae2d87b
-ms.sourcegitcommit: dd794633466b1da8ead9889f5e633bdf4b3389cd
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 1b17fc99cc7746739f381ba22f55a973d55497a1
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54143202"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71283555"
 ---
 # <a name="lesson-2-4-test-the-lesson-2-tutorial-package"></a>レッスン 2 から 4:レッスン 2 で作成したチュートリアル パッケージのテスト
+
+[!INCLUDE[ssis-appliesto](../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
 
 Foreach ループ コンテナーとフラット ファイル接続マネージャーを構成したので、レッスン 2 のパッケージは、Sample Data フォルダー内の 14 個のフラット ファイルに対して反復処理を実行できるようになりました。 ファイル名が指定した条件と一致するたびに、Foreach ループ コンテナーは、ユーザー定義変数にそのファイル名を取り込みます。 次に、この変数に基づいて、フラット ファイル接続マネージャーの ConnectionString プロパティが更新され、フラット ファイルへの接続が確立されます。 さらに、Foreach ループ コンテナーは、そのフラット ファイル内のデータに対して未変更のデータ フロー タスクを実行します。  
   
@@ -38,11 +41,11 @@ Foreach ループ コンテナーとフラット ファイル接続マネージ�
   
 ## <a name="test-the-lesson-2-tutorial-package"></a>レッスン 2 で作成したチュートリアル パッケージのテスト  
   
-1.  **ソリューション エクスプローラー**で **[Lesson 2.dtsx]** を右クリックし、**[パッケージの実行]** を選択します。  
+1.  **ソリューション エクスプローラー**で **[Lesson 2.dtsx]** を右クリックし、 **[パッケージの実行]** を選択します。  
   
-    パッケージが実行されます。 各ループのステータスは **[出力]** ウィンドウで確認できます。または、**[進行状況]** タブを選択しても確認できます。たとえば、ファイル Currency_VEB.txt から 1,097 個の行が宛先のテーブルに追加されたことがわかります。  
+    パッケージが実行されます。 各ループのステータスは **[出力]** ウィンドウで確認できます。または、 **[進行状況]** タブを選択しても確認できます。たとえば、ファイル Currency_VEB.txt から 1,097 個の行が宛先のテーブルに追加されたことがわかります。  
   
-2.  パッケージの実行が完了したら、**[デバッグ]** メニューの **[デバッグの停止]** を選択します。  
+2.  パッケージの実行が完了したら、 **[デバッグ]** メニューの **[デバッグの停止]** を選択します。  
   
 ## <a name="go-to-next-lesson"></a>次のレッスンに進む  
 [レッスン 3:SSIS でのログ記録の追加](../integration-services/lesson-3-add-logging-with-ssis.md)  

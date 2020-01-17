@@ -10,15 +10,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - saving tables
 ms.assetid: 86943b49-48f3-432c-8021-928c13edfbcf
-author: stevestein
-ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 0f793c940e6c32bfd3455946db4d538546f49f96
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: c473a6af4ee2bcf10c482f223d442da0936c0a40
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47819900"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68256386"
 ---
 # <a name="save-selected-tables-on-a-diagram-visual-database-tools"></a>ダイアグラムで選択したテーブルの保存 (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

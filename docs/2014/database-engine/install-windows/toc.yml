@@ -1,378 +1,371 @@
-items:
 - name: SQL Server のインストール
   href: installation-for-sql-server.md
 - name: SQL Server のインストール計画
   href: ../../sql-server/install/planning-a-sql-server-installation.md
   items:
-  - name: SQL Server インストールの新機能
-    href: ../../sql-server/install/what-s-new-in-sql-server-installation.md
-  - name: SQL Server 2014 のインストールに必要なハードウェアおよびソフトウェア
-    href: ../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md
-  - name: SQL Server インストールにおけるセキュリティの考慮事項
-    href: ../../sql-server/install/security-considerations-for-a-sql-server-installation.md
-  - name: ネットワーク プロトコルとネットワーク ライブラリ
-    href: ../../sql-server/install/network-protocols-and-network-libraries.md
-  - name: SQL Server の複数のバージョンおよびインスタンスの使用
-    href: ../../sql-server/install/work-with-multiple-versions-and-instances-of-sql-server.md
-  - name: SQL Server のローカル言語版
-    href: ../../sql-server/install/local-language-versions-in-sql-server.md
-  - name: SQL Server の既定のインスタンスおよび名前付きインスタンスのファイルの場所
-    href: ../../sql-server/install/file-locations-for-default-and-named-instances-of-sql-server.md
+    - name: SQL Server インストールの新機能
+      href: ../../sql-server/install/what-s-new-in-sql-server-installation.md
+    - name: SQL Server 2014 のインストールに必要なハードウェアおよびソフトウェア
+      href: ../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md
+    - name: SQL Server インストールにおけるセキュリティの考慮事項
+      href: ../../sql-server/install/security-considerations-for-a-sql-server-installation.md
+    - name: ネットワーク プロトコルとネットワーク ライブラリ
+      href: ../../sql-server/install/network-protocols-and-network-libraries.md
+    - name: SQL Server の複数のバージョンおよびインスタンスの使用
+      href: ../../sql-server/install/work-with-multiple-versions-and-instances-of-sql-server.md
+    - name: SQL Server のローカル言語版
+      href: ../../sql-server/install/local-language-versions-in-sql-server.md
+    - name: SQL Server の既定のインスタンスおよび名前付きインスタンスのファイルの場所
+      href: ../../sql-server/install/file-locations-for-default-and-named-instances-of-sql-server.md
 - name: SQL Server 2014 のインストール
   href: install-sql-server.md
   items:
-  - name: SQL Server データベース エンジンについて
-    href: install-sql-server-database-engine.md
-  - name: 分散再生のインストール
-    href: ../../tools/distributed-replay/install-distributed-replay.md
-  - name: Distributed Replay Requirements
-    href: ../../tools/distributed-replay/distributed-replay-requirements.md
-  - name: 分散再生のインストール (セットアップ)
-    href: ../../sql-server/install/install-distributed-replay-setup.md
-  - name: コマンド プロンプトからの 分散再生のインストール
-    href: ../../tools/distributed-replay/install-distributed-replay-overview.md
-  - name: 構成ファイルを使用した 分散再生のインストール
-    href: ../../sql-server/install/install-distributed-replay-using-a-configuration-file.md
-  - name: インストール後の手順の実行
-    href: ../../tools/distributed-replay/complete-the-post-installation-steps.md
-  - name: Controller および Client のサービス アカウントの変更
-    href: ../../tools/distributed-replay/modify-the-controller-and-client-services-accounts.md
-  - name: 分散再生のインストールの修復
-    href: ../../sql-server/install/repair-a-distributed-replay-installation.md
-  - name: 分散再生の既存のインスタンスのアンインストール
-    href: ../../sql-server/install/uninstall-an-existing-instance-of-distributed-replay.md
-  - name: SQL Server レプリケーションのインストール
-    href: install-sql-server-replication.md
-  - name: SQL Server 管理ツールのインストール
-    href: ../../sql-server/install/install-sql-server-management-tools.md
-  - name: SQL Server PowerShell のインストール
-    href: install-sql-server-powershell.md
-  - name: Server Core への SQL Server 2014 のインストール
-    href: install-sql-server-on-server-core.md
-  - name: SQL Server をストレージ オプションとして SMB ファイル共有にインストールする
-    href: install-sql-server-with-smb-fileshare-as-a-storage-option.md
-  - name: SysPrep を使用した SQL Server のインストールに関する注意点
-    href: considerations-for-installing-sql-server-using-sysprep.md
-  - name: SQL Server のインストールの検証
-    href: validate-a-sql-server-installation.md
-  - name: システム構成チェッカーの検査パラメーター
-    href: check-parameters-for-the-system-configuration-checker.md
-  - name: Server Core インストールでの SQL Server の構成
-    href: configure-sql-server-on-a-server-core-installation.md
-  - name: Configure the Windows Firewall to Allow SQL Server Access
-    href: ../../sql-server/install/configure-the-windows-firewall-to-allow-sql-server-access.md
-  - name: SQL Server アクセス用のマルチホーム コンピューターの構成
-    href: ../../sql-server/install/configure-a-multi-homed-computer-for-sql-server-access.md
-  - name: インストール方法に関するトピック
-    href: ../../sql-server/install/installation-how-to-topics.md
-  - name: インストール ウィザードからの SQL Server 2014 のインストール (セットアップ)
-    href: install-sql-server-from-the-installation-wizard-setup.md
-  - name: コマンド プロンプトからの SQL Server 2014 のインストール
-    href: install-sql-server-from-the-command-prompt.md
-  - name: 構成ファイルを使用した SQL Server 2014 のインストール
-    href: install-sql-server-using-a-configuration-file.md
-  - name: SysPrep を使用した SQL Server 2014 のインストール
-    href: install-sql-server-using-sysprep.md
-  - name: SQL Server 2014 のインスタンスへの機能の追加 (セットアップ)
-    href: add-features-to-an-instance-of-sql-server-setup.md
-  - name: SQL Server 2014 のインストールの削除
-    href: repair-a-failed-sql-server-installation.md
-  - name: SQL Server のスタンドアロン インスタンスをホストするコンピューターの名前変更
-    href: rename-a-computer-that-hosts-a-stand-alone-instance-of-sql-server.md
-  - name: SQL Server 2014 サービス更新プログラムのインストール
-    href: install-sql-server-servicing-updates.md
-  - name: SQL Server セットアップ ログ ファイルの表示と読み取り
-    href: view-and-read-sql-server-setup-log-files.md
+    - name: SQL Server データベース エンジンについて
+      href: install-sql-server-database-engine.md
+    - name: 分散再生のインストール
+      href: ../../tools/distributed-replay/install-distributed-replay.md
+    - name: Distributed Replay Requirements
+      href: ../../tools/distributed-replay/distributed-replay-requirements.md
+    - name: 分散再生のインストール (セットアップ)
+      href: ../../sql-server/install/install-distributed-replay-setup.md
+    - name: コマンド プロンプトからの 分散再生のインストール
+      href: ../../tools/distributed-replay/install-distributed-replay-overview.md
+    - name: 構成ファイルを使用した 分散再生のインストール
+      href: ../../sql-server/install/install-distributed-replay-using-a-configuration-file.md
+    - name: インストール後の手順の実行
+      href: ../../tools/distributed-replay/complete-the-post-installation-steps.md
+    - name: Controller および Client のサービス アカウントの変更
+      href: ../../tools/distributed-replay/modify-the-controller-and-client-services-accounts.md
+    - name: 分散再生のインストールの修復
+      href: ../../sql-server/install/repair-a-distributed-replay-installation.md
+    - name: 分散再生の既存のインスタンスのアンインストール
+      href: ../../sql-server/install/uninstall-an-existing-instance-of-distributed-replay.md
+    - name: SQL Server レプリケーションのインストール
+      href: install-sql-server-replication.md
+    - name: SQL Server 管理ツールのインストール
+      href: ../../sql-server/install/install-sql-server-management-tools.md
+    - name: SQL Server PowerShell のインストール
+      href: install-sql-server-powershell.md
+    - name: Server Core への SQL Server 2014 のインストール
+      href: install-sql-server-on-server-core.md
+    - name: SQL Server をストレージ オプションとして SMB ファイル共有にインストールする
+      href: install-sql-server-with-smb-fileshare-as-a-storage-option.md
+    - name: SysPrep を使用した SQL Server のインストールに関する注意点
+      href: considerations-for-installing-sql-server-using-sysprep.md
+    - name: SQL Server のインストールの検証
+      href: validate-a-sql-server-installation.md
+    - name: システム構成チェッカーの検査パラメーター
+      href: check-parameters-for-the-system-configuration-checker.md
+    - name: Server Core インストールでの SQL Server の構成
+      href: configure-sql-server-on-a-server-core-installation.md
+    - name: Configure the Windows Firewall to Allow SQL Server Access
+      href: ../../sql-server/install/configure-the-windows-firewall-to-allow-sql-server-access.md
+    - name: SQL Server アクセス用のマルチホーム コンピューターの構成
+      href: ../../sql-server/install/configure-a-multi-homed-computer-for-sql-server-access.md
+    - name: インストール方法に関するトピック
+      href: ../../sql-server/install/installation-how-to-topics.md
+    - name: インストール ウィザードからの SQL Server 2014 のインストール (セットアップ)
+      href: install-sql-server-from-the-installation-wizard-setup.md
+    - name: コマンド プロンプトからの SQL Server 2014 のインストール
+      href: install-sql-server-from-the-command-prompt.md
+    - name: 構成ファイルを使用した SQL Server 2014 のインストール
+      href: install-sql-server-using-a-configuration-file.md
+    - name: SysPrep を使用した SQL Server 2014 のインストール
+      href: install-sql-server-using-sysprep.md
+    - name: SQL Server 2014 のインスタンスへの機能の追加 (セットアップ)
+      href: add-features-to-an-instance-of-sql-server-setup.md
+    - name: SQL Server 2014 のインストールの削除
+      href: repair-a-failed-sql-server-installation.md
+    - name: SQL Server のスタンドアロン インスタンスをホストするコンピューターの名前変更
+      href: rename-a-computer-that-hosts-a-stand-alone-instance-of-sql-server.md
+    - name: SQL Server 2014 サービス更新プログラムのインストール
+      href: install-sql-server-servicing-updates.md
+    - name: SQL Server セットアップ ログ ファイルの表示と読み取り
+      href: view-and-read-sql-server-setup-log-files.md
 - name: SQL Server 2014 のビジネス インテリジェンス機能のインストール
   href: ../../sql-server/install/install-sql-server-business-intelligence-features.md
   items:
-  - name: 多次元モードおよびデータ マイニング モードでの Analysis Services のインストール
-    href: ../../sql-server/install/install-analysis-services-in-multidimensional-and-data-mining-mode.md
-  - name: 表形式モードでの Analysis Services のインストール
-    href: ../../analysis-services/instances/install-windows/install-analysis-services.md
-  - name: Data Quality Services のインストール
-    href: ../../data-quality-services/install-windows/install-data-quality-services.md
-  - name: Data Quality Server のインストールを完了するための DQSInstaller.exe の実行
-    href: ../../data-quality-services/install-windows/run-dqsinstaller-exe-to-complete-data-quality-server-installation.md
-  - name: ユーザーに DQS ロールを付与する
-    href: ../../data-quality-services/install-windows/grant-dqs-roles-to-users.md
-  - name: DQS 操作のためのデータへのアクセス
-    href: ../../data-quality-services/install-windows/access-data-for-the-dqs-operations.md
-  - name: DQSInstaller.exe を使用した DQS ナレッジ ベースのエクスポートとインポート
-    href: ../../data-quality-services/install-windows/export-and-import-dqs-knowledge-bases-using-dqsinstaller-exe.md
-  - name: .NET Framework 更新後の SQLCLR アセンブリのアップグレード
-    href: ../../data-quality-services/install-windows/upgrade-sqlclr-assemblies-after-net-framework-update.md
-  - name: SQL Server 更新プログラムのインストール後の DQS データベース スキーマのアップグレード
-    href: ../../data-quality-services/install-windows/upgrade-dqs-databases-schema-after-installing-sql-server-update.md
-  - name: Integration Services のインストール
-    href: ../../integration-services/install-windows/install-integration-services.md
-  - name: 相互運用性と共存
-    href: ../../integration-services/install-windows/installing-integration-services-versions-side-by-side.md
-  - name: マスター データ サービスのインストール
-    href: ../../master-data-services/install-windows/install-master-data-services.md
-  - name: Web アプリケーションの要件 (マスター データ サービス)
-    href: ../../master-data-services/install-windows/web-application-requirements-master-data-services.md
-  - name: データベース要件 (マスター データ サービス)
-    href: ../../master-data-services/install-windows/database-requirements-master-data-services.md
-  - name: マスター データ サービス データベースの作成
-    href: ../../master-data-services/install-windows/create-a-master-data-services-database.md
-  - name: マスター データ マネージャー Web アプリケーションの作成 (マスター データ サービス)
-    href: ../../master-data-services/install-windows/create-a-master-data-manager-web-application-master-data-services.md
-  - name: マスター データ マネージャー Web アプリケーションのセキュリティ保護
-    href: ../../master-data-services/install-windows/secure-a-master-data-manager-web-application.md
-  - name: Master Data Services データベースと Web アプリケーションの関連付け
-    href: ../../master-data-services/install-windows/associate-a-master-data-services-database-and-web-application.md
-  - name: マスター データ サービスを使用した Data Quality Services 統合の有効化
-    href: ../../master-data-services/install-windows/enable-data-quality-services-integration-with-master-data-services.md
-  - name: 多言語配置とグローバル配置 (Master Data Services)
-    href: ../../master-data-services/install-windows/multi-lingual-and-global-deployments-master-data-services.md
-  - name: Reporting Services ネイティブ モードのレポート サーバーのインストール
-    href: ../../reporting-services/install-windows/install-reporting-services-native-mode-report-server.md
-  - name: Reporting Services ファイルのみのインストール
-    href: ../../reporting-services/install-windows/files-only-installation-reporting-services.md
-  - name: Reporting Services とインターネット インフォメーション サービスのサイド バイ サイド インストール (SSRS ネイティブ モード)
-    href: ../../reporting-services/install-windows/install-reporting-and-internet-information-services-side-by-side.md
-  - name: SQL Server フェールオーバー クラスターでのレポート サーバー データベースのホスト
-    href: ../../reporting-services/install-windows/host-a-report-server-database-in-a-sql-server-failover-cluster.md
-  - name: Reporting Services 構成マネージャー (ネイティブ モード)
-    href: ../../sql-server/install/reporting-services-configuration-manager-native-mode.md
-    items:
-    - name: レポート サーバー サービス アカウントの構成 (SSRS 構成マネージャー)
-      href: ../../reporting-services/install-windows/configure-the-report-server-service-account-ssrs-configuration-manager.md
-    - name: サービス アカウントの構成 (SSRS 構成マネージャー)
-      href: ../../sql-server/install/configure-a-service-account-ssrs-configuration-manager.md
-    - name: レポート サーバー URL の構成 (SSRS 構成マネージャー)
-      href: ../../reporting-services/install-windows/configure-report-server-urls-ssrs-configuration-manager.md
-    - name: URL の予約と登録について (SSRS 構成マネージャー)
-      href: ../../reporting-services/install-windows/about-url-reservations-and-registration-ssrs-configuration-manager.md
-    - name: URL の構成 (SSRS 構成マネージャー)
-      href: ../../reporting-services/install-windows/configure-a-url-ssrs-configuration-manager.md
-    - name: URL 予約の構文 (SSRS 構成マネージャー)
-      href: ../../reporting-services/install-windows/url-reservation-syntax-ssrs-configuration-manager.md
-    - name: 構成ファイル内の URL (SSRS 構成マネージャー)
-      href: ../../reporting-services/install-windows/urls-in-configuration-files-ssrs-configuration-manager.md
-    - name: レポート サーバーの複数インスタンス配置における URL 予約 (SSRS 構成マネージャー)
-      href: ../../reporting-services/install-windows/url-reservations-for-multi-instance-report-server-deployments.md
-    - name: レポート サーバー データベースの作成 (SSRS 構成マネージャー)
-      href: ../../sql-server/install/create-a-report-server-database-ssrs-configuration-manager.md
-    - name: ネイティブ モード レポート サーバー データベースの作成 (SSRS 構成マネージャー)
-      href: ../../reporting-services/install-windows/ssrs-report-server-create-a-native-mode-report-server-database.md
-    - name: レポート サーバー データベース接続の構成
-      href: ../../sql-server/install/configure-a-report-server-database-connection-ssrs-configuration-manager.md
-    - name: 電子メール配信用にレポート サーバーを構成する (SSRS 構成マネージャー)
-      href: ../../sql-server/install/configure-a-report-server-for-e-mail-delivery-ssrs-configuration-manager.md
-    - name: 自動実行アカウントの構成 (SSRS 構成マネージャー)
-      href: ../../reporting-services/install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md
-    - name: 暗号化キーの構成と管理 (SSRS 構成マネージャー)
-      href: ../../reporting-services/install-windows/ssrs-encryption-keys-manage-encryption-keys.md
-    - name: レポート サーバーの初期化 (SSRS 構成マネージャー)
-      href: ../../reporting-services/install-windows/ssrs-encryption-keys-initialize-a-report-server.md
-    - name: 暗号化されたレポート サーバー データの格納 (SSRS 構成マネージャー)
-      href: ../../reporting-services/install-windows/ssrs-encryption-keys-store-encrypted-report-server-data.md
-    - name: 暗号化キーのバックアップおよび復元
-      href: ../../reporting-services/install-windows/ssrs-encryption-keys-back-up-and-restore-encryption-keys.md
-    - name: 暗号化キーの削除と再作成 (SSRS 構成マネージャー)
-      href: ../../reporting-services/install-windows/ssrs-encryption-keys-delete-and-re-create-encryption-keys.md
-    - name: スケールアウト配置に関する暗号化キーの追加と削除 (SSRS 構成マネージャー)
-      href: ../../reporting-services/install-windows/add-and-remove-encryption-keys-for-scale-out-deployment.md
-    - name: ネイティブ モード レポート サーバーのスケールアウト配置の構成 (SSRS 構成マネージャー)
-      href: ../../reporting-services/install-windows/configure-a-native-mode-report-server-scale-out-deployment.md
-    - name: Reporting Services 構成マネージャーの F1 ヘルプ トピック (SSRS ネイティブ モード)
-      href: ../../sql-server/install/reporting-services-configuration-manager-f1-help-topics-ssrs-native-mode.md
-    - name: ネイティブ モードのレポート サーバーへの接続
-      href: ../../sql-server/install/connect-to-a-native-mode-report-server.md
-    - name: レポート サーバーの状態 (SSRS ネイティブ モード)
-      href: ../../sql-server/install/report-server-status-ssrs-native-mode.md
-    - name: サービス アカウント (SSRS ネイティブ モード)
-      href: ../../sql-server/install/service-account-ssrs-native-mode.md
-    - name: Web サービス URL (SSRS ネイティブ モード)
-      href: ../../sql-server/install/web-service-url-ssrs-native-mode.md
+    - name: 多次元モードおよびデータ マイニング モードでの Analysis Services のインストール
+      href: ../../sql-server/install/install-analysis-services-in-multidimensional-and-data-mining-mode.md
+    - name: 表形式モードでの Analysis Services のインストール
+      href: ../../analysis-services/instances/install-windows/install-analysis-services.md
+    - name: Data Quality Services のインストール
+      href: ../../data-quality-services/install-windows/install-data-quality-services.md
+    - name: Data Quality Server のインストールを完了するための DQSInstaller.exe の実行
+      href: ../../data-quality-services/install-windows/run-dqsinstaller-exe-to-complete-data-quality-server-installation.md
+    - name: ユーザーに DQS ロールを付与する
+      href: ../../data-quality-services/install-windows/grant-dqs-roles-to-users.md
+    - name: DQS 操作のためのデータへのアクセス
+      href: ../../data-quality-services/install-windows/access-data-for-the-dqs-operations.md
+    - name: DQSInstaller.exe を使用した DQS ナレッジ ベースのエクスポートとインポート
+      href: ../../data-quality-services/install-windows/export-and-import-dqs-knowledge-bases-using-dqsinstaller-exe.md
+    - name: .NET Framework 更新後の SQLCLR アセンブリのアップグレード
+      href: ../../data-quality-services/install-windows/upgrade-sqlclr-assemblies-after-net-framework-update.md
+    - name: SQL Server 更新プログラムのインストール後の DQS データベース スキーマのアップグレード
+      href: ../../data-quality-services/install-windows/upgrade-dqs-databases-schema-after-installing-sql-server-update.md
+    - name: Integration Services のインストール
+      href: ../../integration-services/install-windows/install-integration-services.md
+    - name: 相互運用性と共存
+      href: ../../integration-services/install-windows/installing-integration-services-versions-side-by-side.md
+    - name: マスター データ サービスのインストール
+      href: ../../master-data-services/install-windows/install-master-data-services.md
+    - name: Web アプリケーションの要件 (マスター データ サービス)
+      href: ../../master-data-services/install-windows/web-application-requirements-master-data-services.md
+    - name: データベース要件 (マスター データ サービス)
+      href: ../../master-data-services/install-windows/database-requirements-master-data-services.md
+    - name: マスター データ サービス データベースの作成
+      href: ../../master-data-services/install-windows/create-a-master-data-services-database.md
+    - name: マスター データ マネージャー Web アプリケーションの作成 (マスター データ サービス)
+      href: ../../master-data-services/install-windows/create-a-master-data-manager-web-application-master-data-services.md
+    - name: マスター データ マネージャー Web アプリケーションのセキュリティ保護
+      href: ../../master-data-services/install-windows/secure-a-master-data-manager-web-application.md
+    - name: Master Data Services データベースと Web アプリケーションの関連付け
+      href: ../../master-data-services/install-windows/associate-a-master-data-services-database-and-web-application.md
+    - name: マスター データ サービスを使用した Data Quality Services 統合の有効化
+      href: ../../master-data-services/install-windows/enable-data-quality-services-integration-with-master-data-services.md
+    - name: 多言語配置とグローバル配置 (Master Data Services)
+      href: ../../master-data-services/install-windows/multi-lingual-and-global-deployments-master-data-services.md
+    - name: Reporting Services ネイティブ モードのレポート サーバーのインストール
+      href: ../../reporting-services/install-windows/install-reporting-services-native-mode-report-server.md
+    - name: Reporting Services ファイルのみのインストール
+      href: ../../reporting-services/install-windows/files-only-installation-reporting-services.md
+    - name: Reporting Services とインターネット インフォメーション サービスのサイド バイ サイド インストール (SSRS ネイティブ モード)
+      href: ../../reporting-services/install-windows/install-reporting-and-internet-information-services-side-by-side.md
+    - name: SQL Server フェールオーバー クラスターでのレポート サーバー データベースのホスト
+      href: ../../reporting-services/install-windows/host-a-report-server-database-in-a-sql-server-failover-cluster.md
+    - name: Reporting Services 構成マネージャー (ネイティブ モード)
+      href: ../../sql-server/install/reporting-services-configuration-manager-native-mode.md
       items:
-      - name: 高度な複数 Web サイト構成 (SSRS ネイティブ モード)
-        href: ../../sql-server/install/advanced-multiple-web-site-configuration-ssrs-native-mode.md
-    - name: データベース (SSRS ネイティブ モード)
-      href: ../../sql-server/install/database-ssrs-native-mode.md
+        - name: レポート サーバー サービス アカウントの構成 (SSRS 構成マネージャー)
+          href: ../../reporting-services/install-windows/configure-the-report-server-service-account-ssrs-configuration-manager.md
+        - name: サービス アカウントの構成 (SSRS 構成マネージャー)
+          href: ../../sql-server/install/configure-a-service-account-ssrs-configuration-manager.md
+        - name: レポート サーバー URL の構成 (SSRS 構成マネージャー)
+          href: ../../reporting-services/install-windows/configure-report-server-urls-ssrs-configuration-manager.md
+        - name: URL の予約と登録について (SSRS 構成マネージャー)
+          href: ../../reporting-services/install-windows/about-url-reservations-and-registration-ssrs-configuration-manager.md
+        - name: URL の構成 (SSRS 構成マネージャー)
+          href: ../../reporting-services/install-windows/configure-a-url-ssrs-configuration-manager.md
+        - name: URL 予約の構文 (SSRS 構成マネージャー)
+          href: ../../reporting-services/install-windows/url-reservation-syntax-ssrs-configuration-manager.md
+        - name: 構成ファイル内の URL (SSRS 構成マネージャー)
+          href: ../../reporting-services/install-windows/urls-in-configuration-files-ssrs-configuration-manager.md
+        - name: レポート サーバーの複数インスタンス配置における URL 予約 (SSRS 構成マネージャー)
+          href: ../../reporting-services/install-windows/url-reservations-for-multi-instance-report-server-deployments.md
+        - name: レポート サーバー データベースの作成 (SSRS 構成マネージャー)
+          href: ../../sql-server/install/create-a-report-server-database-ssrs-configuration-manager.md
+        - name: ネイティブ モード レポート サーバー データベースの作成 (SSRS 構成マネージャー)
+          href: ../../reporting-services/install-windows/ssrs-report-server-create-a-native-mode-report-server-database.md
+        - name: レポート サーバー データベース接続の構成
+          href: ../../sql-server/install/configure-a-report-server-database-connection-ssrs-configuration-manager.md
+        - name: 電子メール配信用にレポート サーバーを構成する (SSRS 構成マネージャー)
+          href: ../../sql-server/install/configure-a-report-server-for-e-mail-delivery-ssrs-configuration-manager.md
+        - name: 自動実行アカウントの構成 (SSRS 構成マネージャー)
+          href: ../../reporting-services/install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md
+        - name: 暗号化キーの構成と管理 (SSRS 構成マネージャー)
+          href: ../../reporting-services/install-windows/ssrs-encryption-keys-manage-encryption-keys.md
+        - name: レポート サーバーの初期化 (SSRS 構成マネージャー)
+          href: ../../reporting-services/install-windows/ssrs-encryption-keys-initialize-a-report-server.md
+        - name: 暗号化されたレポート サーバー データの格納 (SSRS 構成マネージャー)
+          href: ../../reporting-services/install-windows/ssrs-encryption-keys-store-encrypted-report-server-data.md
+        - name: 暗号化キーのバックアップおよび復元
+          href: ../../reporting-services/install-windows/ssrs-encryption-keys-back-up-and-restore-encryption-keys.md
+        - name: 暗号化キーの削除と再作成 (SSRS 構成マネージャー)
+          href: ../../reporting-services/install-windows/ssrs-encryption-keys-delete-and-re-create-encryption-keys.md
+        - name: スケールアウト配置に関する暗号化キーの追加と削除 (SSRS 構成マネージャー)
+          href: ../../reporting-services/install-windows/add-and-remove-encryption-keys-for-scale-out-deployment.md
+        - name: ネイティブ モード レポート サーバーのスケールアウト配置の構成 (SSRS 構成マネージャー)
+          href: ../../reporting-services/install-windows/configure-a-native-mode-report-server-scale-out-deployment.md
+        - name: Reporting Services 構成マネージャーの F1 ヘルプ トピック (SSRS ネイティブ モード)
+          href: ../../sql-server/install/reporting-services-configuration-manager-f1-help-topics-ssrs-native-mode.md
+        - name: ネイティブ モードのレポート サーバーへの接続
+          href: ../../sql-server/install/connect-to-a-native-mode-report-server.md
+        - name: レポート サーバーの状態 (SSRS ネイティブ モード)
+          href: ../../sql-server/install/report-server-status-ssrs-native-mode.md
+        - name: サービス アカウント (SSRS ネイティブ モード)
+          href: ../../sql-server/install/service-account-ssrs-native-mode.md
+        - name: Web サービス URL (SSRS ネイティブ モード)
+          href: ../../sql-server/install/web-service-url-ssrs-native-mode.md
+          items:
+            - name: 高度な複数 Web サイト構成 (SSRS ネイティブ モード)
+              href: ../../sql-server/install/advanced-multiple-web-site-configuration-ssrs-native-mode.md
+        - name: データベース (SSRS ネイティブ モード)
+          href: ../../sql-server/install/database-ssrs-native-mode.md
+          items:
+            - name: データベースの変更ウィザード (SSRS ネイティブ モード)
+              href: ../../sql-server/install/change-database-wizard-ssrs-native-mode.md
+            - name: 資格情報の変更ウィザード (SSRS ネイティブ モード)
+              href: ../../sql-server/install/change-credentials-wizard-ssrs-native-mode.md
+        - name: レポート マネージャー URL (SSRS ネイティブ モード)
+          href: ../../sql-server/install/report-manager-url-ssrs-native-mode.md
+        - name: 電子メールの設定 - 構成マネージャー (SSRS ネイティブ モード)
+          href: ../../reporting-services/install-windows/e-mail-settings-reporting-services-native-mode-configuration-manager.md
+        - name: 実行アカウント (SSRS ネイティブ モード)
+          href: ../../sql-server/install/execution-account-ssrs-native-mode.md
+        - name: 暗号化キー (SSRS ネイティブ モード)
+          href: ../../sql-server/install/encryption-keys-ssrs-native-mode.md
+          items:
+            - name: 暗号化キーをバックアップする (SSRS ネイティブ モード)
+              href: ../../sql-server/install/backup-encryption-key-ssrs-native-mode.md
+            - name: 暗号化キーを復元する (SSRS ネイティブ モード)
+              href: ../../sql-server/install/restore-encryption-key-ssrs-native-mode.md
+        - name: スケールアウト配置 (ネイティブ モードのレポート サーバー)
+          href: ../../sql-server/install/scale-out-deployment-native-mode-report-server.md
+    - name: SharePoint を使用した SQL Server の BI 機能のインストール (PowerPivot と Reporting Services)
+      href: ../../sql-server/install/install-sql-server-bi-features-sharepoint-powerpivot-reporting-services.md
+    - name: SharePoint の SQL Server BI 機能の配置トポロジ
+      href: ../../sql-server/install/deployment-topologies-for-sql-server-bi-features-in-sharepoint.md
+    - name: SharePoint 2010 ファームで SQL Server BI 機能を使用するためのガイド
+      href: ../../sql-server/install/guidance-for-using-sql-server-bi-features-in-a-sharepoint-2010-farm.md
+    - name: SharePoint を使用した BI 機能のインストール用チェック リスト
+      href: ../../sql-server/install/checklists-for-installing-bi-features-with-sharepoint.md
       items:
-      - name: データベースの変更ウィザード (SSRS ネイティブ モード)
-        href: ../../sql-server/install/change-database-wizard-ssrs-native-mode.md
-      - name: 資格情報の変更ウィザード (SSRS ネイティブ モード)
-        href: ../../sql-server/install/change-credentials-wizard-ssrs-native-mode.md
-    - name: レポート マネージャー URL (SSRS ネイティブ モード)
-      href: ../../sql-server/install/report-manager-url-ssrs-native-mode.md
-    - name: 電子メールの設定 - 構成マネージャー (SSRS ネイティブ モード)
-      href: ../../reporting-services/install-windows/e-mail-settings-reporting-services-native-mode-configuration-manager.md
-    - name: 実行アカウント (SSRS ネイティブ モード)
-      href: ../../sql-server/install/execution-account-ssrs-native-mode.md
-    - name: 暗号化キー (SSRS ネイティブ モード)
-      href: ../../sql-server/install/encryption-keys-ssrs-native-mode.md
+        - name: 'チェックリスト:Reporting Services、Power View、PowerPivot for SharePoint'
+          href: ../../sql-server/install/deployment-checklist-reporting-services-power-view-power-pivot-for-sharepoint.md
+        - name: 'チェックリスト:SharePoint 2010 ファームへの PowerPivot サーバーの追加によるスケールアウト'
+          href: ../../sql-server/install/deployment-checklist-scale-out-adding-powerpivot-servers-sharepoint-2010-farm.md
+        - name: 'チェックリスト:既存の SharePoint ファームへの Reporting Services のインストール'
+          href: ../../sql-server/install/deployment-checklist-install-reporting-services-existing-sharepoint-farm.md
+        - name: 'チェックリスト:PowerPivot for SharePoint 2010 のマルチサーバー インストール'
+          href: ../../sql-server/install/deployment-checklist-multiserver-installation-powerpivot-sharepoint-2010.md
+        - name: 'チェック リスト: PowerShell を使用して Power Pivot for SharePoint を確認する'
+          href: ../../analysis-services/instances/install-windows/checklist-use-powershell-to-verify-power-pivot-for-sharepoint.md
+    - name: Reporting Services SharePoint モードのインストール (SharePoint 2010 および SharePoint 2013)
+      href: ../../reporting-services/install-windows/install-reporting-services-sharepoint-mode.md
       items:
-      - name: 暗号化キーをバックアップする (SSRS ネイティブ モード)
-        href: ../../sql-server/install/backup-encryption-key-ssrs-native-mode.md
-      - name: 暗号化キーを復元する (SSRS ネイティブ モード)
-        href: ../../sql-server/install/restore-encryption-key-ssrs-native-mode.md
-    - name: スケールアウト配置 (ネイティブ モードのレポート サーバー)
-      href: ../../sql-server/install/scale-out-deployment-native-mode-report-server.md
-  - name: SharePoint を使用した SQL Server の BI 機能のインストール (PowerPivot と Reporting Services)
-    href: ../../sql-server/install/install-sql-server-bi-features-sharepoint-powerpivot-reporting-services.md
-  - name: SharePoint の SQL Server BI 機能の配置トポロジ
-    href: ../../sql-server/install/deployment-topologies-for-sql-server-bi-features-in-sharepoint.md
-  - name: SharePoint 2010 ファームで SQL Server BI 機能を使用するためのガイド
-    href: ../../sql-server/install/guidance-for-using-sql-server-bi-features-in-a-sharepoint-2010-farm.md
-  - name: SharePoint を使用した BI 機能のインストール用チェック リスト
-    href: ../../sql-server/install/checklists-for-installing-bi-features-with-sharepoint.md
-    items:
-    - name: 'チェック リスト: Reporting Services、Power View、および PowerPivot for SharePoint'
-      href: ../../sql-server/install/deployment-checklist-reporting-services-power-view-power-pivot-for-sharepoint.md
-    - name: 'チェックリスト: SharePoint 2010 ファームへの PowerPivot サーバーの追加によるスケールアウト'
-      href: ../../sql-server/install/deployment-checklist-scale-out-adding-powerpivot-servers-sharepoint-2010-farm.md
-    - name: 'チェック リスト: 既存の SharePoint ファームへの Reporting Services のインストール'
-      href: ../../sql-server/install/deployment-checklist-install-reporting-services-existing-sharepoint-farm.md
-    - name: 'チェック リスト: PowerPivot for SharePoint 2010 のマルチサーバー インストール'
-      href: ../../sql-server/install/deployment-checklist-multiserver-installation-powerpivot-sharepoint-2010.md
-    - name: 'チェック リスト: PowerShell を使用して PowerPivot for SharePoint を確認する'
-      href: ../../analysis-services/instances/install-windows/checklist-use-powershell-to-verify-power-pivot-for-sharepoint.md
-  - name: Reporting Services SharePoint モードのインストール (SharePoint 2010 および SharePoint 2013)
-    href: ../../reporting-services/install-windows/install-reporting-services-sharepoint-mode.md
-    items:
-    - name: Reporting Services の SharePoint モードに関するハードウェアとソフトウェアの要件
-      href: ../../sql-server/install/hardware-and-software-requirements-for-reporting-services-in-sharepoint-mode.md
-    - name: SharePoint、Reporting Services サーバー、Reporting Services アドインのサポートされる組み合わせ
-      href: ../../reporting-services/install-windows/supported-combinations-of-sharepoint-and-reporting-services-server.md
-    - name: SharePoint 2013 用 Reporting Services のインストール
-      href: ../../sql-server/install/install-reporting-services-sharepoint-mode-for-sharepoint-2013.md
-    - name: SharePoint 2010 用 Reporting Services のインストール
-      href: ../../sql-server/install/install-reporting-services-sharepoint-mode-for-sharepoint-2010.md
-    - name: SharePoint 用 Reporting Services アドインのインストールまたはアンインストール
-      href: ../../reporting-services/install-windows/install-or-uninstall-the-reporting-services-add-in-for-sharepoint.md
-    - name: SharePoint 用 SSRS アドインの検索場所
-      href: ../../reporting-services/install-windows/where-to-find-the-reporting-services-add-in-for-sharepoint-products.md
-    - name: ファームへのレポート サーバーの追加 (SSRS スケールアウト)
-      href: ../../reporting-services/install-windows/add-an-additional-report-server-to-a-farm-ssrs-scale-out.md
-    - name: ファームへの Reporting Services Web フロントエンドの追加
-      href: ../../reporting-services/install-windows/add-an-additional-reporting-services-web-front-end-to-a-farm.md
-    - name: Reporting Services サービス アプリケーションの電子メールの構成
-      href: ../../reporting-services/install-windows/configure-e-mail-for-a-reporting-services-service-application.md
-    - name: SSRS サービス アプリケーションを使用するためのサブスクリプションと警告の準備
-      href: ../../reporting-services/install-windows/provision-subscriptions-and-alerts-for-ssrs-service-applications.md
-    - name: Claims to Windows Token Service (c2WTS) と SSRS
-      href: ../../sql-server/install/claims-to-windows-token-service-c2wts-and-reporting-services.md
-  - name: PowerPivot for SharePoint 2013 のインストール
-    href: ../../analysis-services/instances/install-windows/install-analysis-services-in-power-pivot-mode.md
-    items:
-    - name: SharePoint モードの Analysis Services サーバーのハードウェアとソフトウェアの要件 (SQL Server 2014)
-      href: ../../sql-server/install/hardware-software-requirements-analysis-services-server-sharepoint-mode.md
-    - name: Power Pivot for SharePoint 2013 向けに最小限の特権を構成する例
-      href: ../../analysis-services/instances/install-windows/power-pivot-minimum-privilege-example-sharepoint-2013.md
-    - name: PowerPivot for SharePoint アドインのインストールまたはアンインストール (SharePoint 2013)
-      href: ../../analysis-services/instances/install-windows/install-or-uninstall-the-power-pivot-for-sharepoint-add-in-sharepoint-2013.md
-    - name: PowerPivot の構成とソリューションの配置 (SharePoint 2013)
-      href: ../../analysis-services/instances/install-windows/configure-power-pivot-and-deploy-solutions-sharepoint-2013.md
-    - name: SharePoint 2013 への PowerPivot の移行
-      href: ../../analysis-services/instances/install-windows/migrate-power-pivot-to-sharepoint-2013.md
-    - name: ブックのアップグレードと定期データ更新 (SharePoint 2013)
-      href: ../../analysis-services/instances/install-windows/upgrade-workbooks-and-scheduled-data-refresh-sharepoint-2013.md
-  - name: PowerPivot for SharePoint 2010 のインストール
-    href: ../../sql-server/install/powerpivot-for-sharepoint-2010-installation.md
-    items:
-    - name: PowerPivot for SharePoint 2010 をインストールする
-      href: ../../sql-server/install/install-powerpivot-for-sharepoint-2010.md
-    - name: SharePoint サーバーへの Analysis Services OLE DB プロバイダーのインストール
-      href: ../../sql-server/install/install-the-analysis-services-ole-db-provider-on-sharepoint-servers.md
-    - name: SharePoint リストのデータ フィードのエクスポートをサポートする ADO.NET Data Services のインストール
-      href: ../../sql-server/install/install-ado-net-data-services-to-support-data-feed-exports-of-sharepoint-lists.md
-    - name: サーバーの全体管理を実行している Web フロントエンド サーバーに ADOMD.NET をインストールする
-      href: ../../sql-server/install/install-adomd-net-on-web-front-end-servers-running-central-administration.md
-    - name: コマンド プロンプトからの PowerPivot のインストール
-      href: ../../sql-server/install/install-powerpivot-from-the-command-prompt.md
-    - name: PowerPivot for SharePoint の修復
-      href: ../../sql-server/install/repair-powerpivot-for-sharepoint.md
-    - name: PowerPivot 単一サーバー インストールの初期構成
-      href: ../../sql-server/install/initial-configuration-powerpivot-for-sharepoint.md
-  - name: Reporting Services のコマンド プロンプト インストール (SharePoint モードとネイティブ モード)
-    href: ../../reporting-services/install-windows/install-reporting-services-at-the-command-prompt.md
-  - name: インストールの確認またはトラブルシューティング
-    href: ../../sql-server/install/verify-or-troubleshoot-sql-server-bi-feature-installation-problems.md
-  - name: Verify a Reporting Services Installation
-    href: ../../reporting-services/install-windows/verify-a-reporting-services-installation.md
-  - name: Reporting Services インストール時の問題解決
-    href: ../../reporting-services/install-windows/troubleshoot-a-reporting-services-installation.md
-  - name: PowerPivot for SharePoint インストールの確認
-    href: ../../analysis-services/instances/install-windows/verify-a-power-pivot-for-sharepoint-installation.md
-  - name: PowerPivot for SharePoint インストールのトラブルシューティング
-    href: ../../sql-server/install/troubleshoot-a-powerpivot-for-sharepoint-installation.md
+        - name: Reporting Services の SharePoint モードに関するハードウェアとソフトウェアの要件
+          href: ../../sql-server/install/hardware-and-software-requirements-for-reporting-services-in-sharepoint-mode.md
+        - name: SharePoint、Reporting Services サーバー、Reporting Services アドインのサポートされる組み合わせ
+          href: ../../reporting-services/install-windows/supported-combinations-of-sharepoint-and-reporting-services-server.md
+        - name: SharePoint 2013 用 Reporting Services のインストール
+          href: ../../sql-server/install/install-reporting-services-sharepoint-mode-for-sharepoint-2013.md
+        - name: SharePoint 2010 用 Reporting Services のインストール
+          href: ../../sql-server/install/install-reporting-services-sharepoint-mode-for-sharepoint-2010.md
+        - name: SharePoint 用 Reporting Services アドインのインストールまたはアンインストール
+          href: ../../reporting-services/install-windows/install-or-uninstall-the-reporting-services-add-in-for-sharepoint.md
+        - name: SharePoint 用 SSRS アドインの検索場所
+          href: ../../reporting-services/install-windows/where-to-find-the-reporting-services-add-in-for-sharepoint-products.md
+        - name: ファームへのレポート サーバーの追加 (SSRS スケールアウト)
+          href: ../../reporting-services/install-windows/add-an-additional-report-server-to-a-farm-ssrs-scale-out.md
+        - name: ファームへの Reporting Services Web フロントエンドの追加
+          href: ../../reporting-services/install-windows/add-an-additional-reporting-services-web-front-end-to-a-farm.md
+        - name: Reporting Services サービス アプリケーションの電子メールの構成
+          href: ../../reporting-services/install-windows/configure-e-mail-for-a-reporting-services-service-application.md
+        - name: SSRS サービス アプリケーションを使用するためのサブスクリプションと警告の準備
+          href: ../../reporting-services/install-windows/provision-subscriptions-and-alerts-for-ssrs-service-applications.md
+        - name: Claims to Windows Token Service (c2WTS) と SSRS
+          href: ../../sql-server/install/claims-to-windows-token-service-c2wts-and-reporting-services.md
+    - name: PowerPivot for SharePoint 2013 のインストール
+      href: ../../analysis-services/instances/install-windows/install-analysis-services-in-power-pivot-mode.md
+      items:
+        - name: SharePoint モードの Analysis Services サーバーのハードウェアとソフトウェアの要件 (SQL Server 2014)
+          href: ../../sql-server/install/hardware-software-requirements-analysis-services-server-sharepoint-mode.md
+        - name: Power Pivot for SharePoint 2013 向けに最小限の特権を構成する例
+          href: ../../analysis-services/instances/install-windows/power-pivot-minimum-privilege-example-sharepoint-2013.md
+        - name: PowerPivot for SharePoint アドインのインストールまたはアンインストール (SharePoint 2013)
+          href: ../../analysis-services/instances/install-windows/install-or-uninstall-the-power-pivot-for-sharepoint-add-in-sharepoint-2013.md
+        - name: PowerPivot の構成とソリューションの配置 (SharePoint 2013)
+          href: ../../analysis-services/instances/install-windows/configure-power-pivot-and-deploy-solutions-sharepoint-2013.md
+        - name: SharePoint 2013 への PowerPivot の移行
+          href: ../../analysis-services/instances/install-windows/migrate-power-pivot-to-sharepoint-2013.md
+        - name: ブックのアップグレードと定期データ更新 (SharePoint 2013)
+          href: ../../analysis-services/instances/install-windows/upgrade-workbooks-and-scheduled-data-refresh-sharepoint-2013.md
+    - name: PowerPivot for SharePoint 2010 のインストール
+      href: ../../sql-server/install/powerpivot-for-sharepoint-2010-installation.md
+      items:
+        - name: PowerPivot for SharePoint 2010 をインストールする
+          href: ../../sql-server/install/install-powerpivot-for-sharepoint-2010.md
+        - name: SharePoint サーバーへの Analysis Services OLE DB プロバイダーのインストール
+          href: ../../sql-server/install/install-the-analysis-services-ole-db-provider-on-sharepoint-servers.md
+        - name: SharePoint リストのデータ フィードのエクスポートをサポートする ADO.NET Data Services のインストール
+          href: ../../sql-server/install/install-ado-net-data-services-to-support-data-feed-exports-of-sharepoint-lists.md
+        - name: サーバーの全体管理を実行している Web フロントエンド サーバーに ADOMD.NET をインストールする
+          href: ../../sql-server/install/install-adomd-net-on-web-front-end-servers-running-central-administration.md
+        - name: コマンド プロンプトからの PowerPivot のインストール
+          href: ../../sql-server/install/install-powerpivot-from-the-command-prompt.md
+        - name: PowerPivot for SharePoint の修復
+          href: ../../sql-server/install/repair-powerpivot-for-sharepoint.md
+        - name: PowerPivot 単一サーバー インストールの初期構成
+          href: ../../sql-server/install/initial-configuration-powerpivot-for-sharepoint.md
+    - name: Reporting Services のコマンド プロンプト インストール (SharePoint モードとネイティブ モード)
+      href: ../../reporting-services/install-windows/install-reporting-services-at-the-command-prompt.md
+    - name: インストールの確認またはトラブルシューティング
+      href: ../../sql-server/install/verify-or-troubleshoot-sql-server-bi-feature-installation-problems.md
+    - name: Verify a Reporting Services Installation
+      href: ../../reporting-services/install-windows/verify-a-reporting-services-installation.md
+    - name: Reporting Services インストール時の問題解決
+      href: ../../reporting-services/install-windows/troubleshoot-a-reporting-services-installation.md
+    - name: PowerPivot for SharePoint インストールの確認
+      href: ../../analysis-services/instances/install-windows/verify-a-power-pivot-for-sharepoint-installation.md
+    - name: PowerPivot for SharePoint インストールのトラブルシューティング
+      href: ../../sql-server/install/troubleshoot-a-powerpivot-for-sharepoint-installation.md
 - name: SQL Server 2014 へのアップグレード
   href: upgrade-sql-server.md
   items:
-  - name: サポートされるバージョンとエディションのアップグレード
-    href: supported-version-and-edition-upgrades.md
-  - name: SQL Server 2005 からアップグレードしますか?
-    href: ../../sql-server/install/are-you-upgrading-from-sql-server-2005.md
-  - name: アップグレード アドバイザーを使用したアップグレードの準備
-    href: ../../sql-server/install/use-upgrade-advisor-to-prepare-for-upgrades.md
-  - name: 分散再生ユーティリティを使用したアップグレードの準備
-    href: ../../sql-server/install/use-the-distributed-replay-utility-to-prepare-for-upgrades.md
-  - name: Analysis Services のアップグレード
-    href: upgrade-analysis-services.md
-  - name: データベース エンジンのアップグレード
-    href: upgrade-database-engine.md
-  - name: クエリ プランの移行
-    href: change-the-database-compatibility-mode-and-use-the-query-store.md
-  - name: Data Quality Services のアップグレード
-    href: upgrade-data-quality-services.md
-  - name: Integration Services のアップグレード
-    href: ../../integration-services/install-windows/upgrade-integration-services.md
-  - name: Integration Services パッケージのアップグレード
-    href: ../../integration-services/install-windows/upgrade-integration-services-packages.md
-  - name: SSIS パッケージ アップグレード ウィザードを使用した Integration Services パッケージのアップグレード
-    href: ../../integration-services/install-windows/upgrade-integration-services-packages-using-the-ssis-package-upgrade-wizard.md
-  - name: VSTA へのスクリプトの移行
-    href: ../../sql-server/install/migrate-scripts-to-vsta.md
-  - name: 参照変換のアップグレード
-    href: ../../sql-server/install/upgrade-lookup-transformations.md
-  - name: マスター データ サービスのアップグレード
-    href: upgrade-master-data-services.md
-  - name: PowerPivot for SharePoint のアップグレード
-    href: upgrade-power-pivot-for-sharepoint.md
-  - name: レプリケートされたデータベースのアップグレード
-    href: upgrade-replicated-databases.md
-  - name: Upgrade and Migrate Reporting Services
-    href: ../../reporting-services/install-windows/upgrade-and-migrate-reporting-services.md
-  - name: Reporting Services のインストールの移行 (ネイティブ モード)
-    href: ../../reporting-services/install-windows/migrate-a-reporting-services-installation-native-mode.md
-  - name: Reporting Services の移行 (SharePoint モード)
-    href: ../../reporting-services/install-windows/migrate-a-reporting-services-installation-sharepoint-mode.md
-  - name: ネイティブ モードから SharePoint モードへの移行 (SSRS)
-    href: ../../reporting-services/install-windows/native-to-sharepoint-migration-ssrs.md
-  - name: レポート サーバー データベースのアップグレード
-    href: ../../reporting-services/install-windows/upgrade-a-report-server-database.md
-  - name: Upgrade Reports
-    href: ../../reporting-services/install-windows/upgrade-reports.md
-  - name: Reporting Services のバックアップおよび復元操作
-    href: ../../reporting-services/install-windows/backup-and-restore-operations-for-reporting-services.md
-  - name: SQL Server 管理ツールのアップグレード
-    href: upgrade-sql-server-management-tools.md
-  - name: アップグレード方法に関するトピック
-    href: ../../sql-server/install/upgrade-how-to-topics.md
-  - name: インストール ウィザードを使用した SQL Server 2014 へのアップグレード (セットアップ)
-    href: upgrade-sql-server-using-the-installation-wizard-setup.md
-  - name: SQL Server 2014 の別のエディションへのアップグレード (セットアップ)
-    href: upgrade-to-a-different-edition-of-sql-server-setup.md
+    - name: サポートされるバージョンとエディションのアップグレード
+      href: supported-version-and-edition-upgrades.md
+    - name: SQL Server 2005 からアップグレードしますか?
+      href: ../../sql-server/install/are-you-upgrading-from-sql-server-2005.md
+    - name: アップグレード アドバイザーを使用したアップグレードの準備
+      href: ../../sql-server/install/use-upgrade-advisor-to-prepare-for-upgrades.md
+    - name: 分散再生ユーティリティを使用したアップグレードの準備
+      href: ../../sql-server/install/use-the-distributed-replay-utility-to-prepare-for-upgrades.md
+    - name: Analysis Services のアップグレード
+      href: upgrade-analysis-services.md
+    - name: データベース エンジンのアップグレード
+      href: upgrade-database-engine.md
+    - name: クエリ プランの移行
+      href: change-the-database-compatibility-mode-and-use-the-query-store.md
+    - name: Data Quality Services のアップグレード
+      href: upgrade-data-quality-services.md
+    - name: Integration Services のアップグレード
+      href: ../../integration-services/install-windows/upgrade-integration-services.md
+    - name: Integration Services パッケージのアップグレード
+      href: ../../integration-services/install-windows/upgrade-integration-services-packages.md
+    - name: SSIS パッケージ アップグレード ウィザードを使用した Integration Services パッケージのアップグレード
+      href: ../../integration-services/install-windows/upgrade-integration-services-packages-using-the-ssis-package-upgrade-wizard.md
+    - name: VSTA へのスクリプトの移行
+      href: ../../sql-server/install/migrate-scripts-to-vsta.md
+    - name: 参照変換のアップグレード
+      href: ../../sql-server/install/upgrade-lookup-transformations.md
+    - name: マスター データ サービスのアップグレード
+      href: upgrade-master-data-services.md
+    - name: PowerPivot for SharePoint のアップグレード
+      href: upgrade-power-pivot-for-sharepoint.md
+    - name: レプリケートされたデータベースのアップグレード
+      href: upgrade-replicated-databases.md
+    - name: Upgrade and Migrate Reporting Services
+      href: ../../reporting-services/install-windows/upgrade-and-migrate-reporting-services.md
+    - name: Reporting Services のインストールの移行 (ネイティブ モード)
+      href: ../../reporting-services/install-windows/migrate-a-reporting-services-installation-native-mode.md
+    - name: Reporting Services の移行 (SharePoint モード)
+      href: ../../reporting-services/install-windows/migrate-a-reporting-services-installation-sharepoint-mode.md
+    - name: ネイティブ モードから SharePoint モードへの移行 (SSRS)
+      href: ../../reporting-services/install-windows/native-to-sharepoint-migration-ssrs.md
+    - name: レポート サーバー データベースのアップグレード
+      href: ../../reporting-services/install-windows/upgrade-a-report-server-database.md
+    - name: Upgrade Reports
+      href: ../../reporting-services/install-windows/upgrade-reports.md
+    - name: Reporting Services のバックアップおよび復元操作
+      href: ../../reporting-services/install-windows/backup-and-restore-operations-for-reporting-services.md
+    - name: SQL Server 管理ツールのアップグレード
+      href: upgrade-sql-server-management-tools.md
+    - name: アップグレード方法に関するトピック
+      href: ../../sql-server/install/upgrade-how-to-topics.md
+    - name: インストール ウィザードを使用した SQL Server 2014 へのアップグレード (セットアップ)
+      href: upgrade-sql-server-using-the-installation-wizard-setup.md
+    - name: SQL Server 2014 の別のエディションへのアップグレード (セットアップ)
+      href: upgrade-to-a-different-edition-of-sql-server-setup.md
 - name: SQL Server 2014 のアンインストール
   href: ../../sql-server/install/uninstall-sql-server.md
   items:
-  - name: SQL Server の既存のインスタンスのアンインストール (セットアップ)
-    href: ../../sql-server/install/uninstall-an-existing-instance-of-sql-server-setup.md
-  - name: Data Quality Server オブジェクトの削除
-    href: ../../sql-server/install/remove-data-quality-server-objects.md
-  - name: マスター データ サービスのアンインストールと削除
-    href: ../../sql-server/install/uninstall-and-remove-master-data-services.md
-  - name: PowerPivot for SharePoint のアンインストール
-    href: ../../sql-server/install/uninstall-power-pivot-for-sharepoint.md
-  - name: Reporting Services のアンインストール
-    href: ../../sql-server/install/uninstall-reporting-services.md
-ms.openlocfilehash: 0b023fe9b53636d1b407afe9e9ded827c6e7d936
-ms.sourcegitcommit: 182d77997133a6e4ee71e7a64b4eed6609da0fba
-ms.translationtype: HT
-ms.contentlocale: ja-JP
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50051164"
+    - name: SQL Server の既存のインスタンスのアンインストール (セットアップ)
+      href: ../../sql-server/install/uninstall-an-existing-instance-of-sql-server-setup.md
+    - name: Data Quality Server オブジェクトの削除
+      href: ../../sql-server/install/remove-data-quality-server-objects.md
+    - name: マスター データ サービスのアンインストールと削除
+      href: ../../sql-server/install/uninstall-and-remove-master-data-services.md
+    - name: PowerPivot for SharePoint のアンインストール
+      href: ../../sql-server/install/uninstall-power-pivot-for-sharepoint.md
+    - name: Reporting Services のアンインストール
+      href: ../../sql-server/install/uninstall-reporting-services.md

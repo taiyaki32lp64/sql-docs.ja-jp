@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.storagedesignwizard.selectpartitions.f1
@@ -13,12 +12,12 @@ ms.assetid: 1de6e214-5efa-4efa-9336-edbe2310cfbe
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 2dc3f38aec3ba41330e29aa8ac5fdea771d90da6
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: e98a7c30869428f4cc31428f35eaf6c6f86e97c6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48103092"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66069329"
 ---
 # <a name="select-partitions-to-modify-usage-based-optimization-wizard"></a>[変更するパーティションの選択] (使用法に基づく最適化ウィザード)
   **[変更するパーティションの選択]** ページを使用すると、集計をデザインするパーティションを選択できます。  

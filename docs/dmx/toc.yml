@@ -1,0 +1,207 @@
+- name: データ マイニング拡張機能 (DMX) リファレンス
+  href: ../dmx/data-mining-extensions-dmx-reference.md
+  items:
+    - name: データ マイニング拡張機能 (DMX) ステートメント
+      href: ../dmx/data-mining-extensions-dmx-statements.md
+      items:
+        - name: DMX ステートメント - データ定義
+          href: ../dmx/dmx-statements-data-definition.md
+          items:
+            - name: CREATE MINING STRUCTURE
+              href: ../dmx/create-mining-structure-dmx.md
+            - name: ALTER MINING STRUCTURE
+              href: ../dmx/alter-mining-structure-dmx.md
+            - name: CREATE MINING MODEL
+              href: ../dmx/create-mining-model-dmx.md
+            - name: DROP MINING STRUCTURE
+              href: ../dmx/drop-mining-structure-dmx.md
+            - name: DROP MINING MODEL
+              href: ../dmx/drop-mining-model-dmx.md
+            - name: EXPORT
+              href: ../dmx/export-dmx.md
+            - name: IMPORT
+              href: ../dmx/import-dmx.md
+            - name: SELECT INTO
+              href: ../dmx/select-into-dmx.md
+        - name: DMX ステートメント - データ操作
+          href: ../dmx/dmx-statements-data-manipulation.md
+          items:
+            - name: <source data query> - OPENQUERY
+              href: ../dmx/source-data-query-openquery.md
+            - name: <source data query> - OPENROWSET
+              href: ../dmx/source-data-query-openrowset.md
+            - name: <source data query> - SHAPE
+              href: ../dmx/source-data-query-shape.md
+            - name: SELECT DISTINCT FROM <model >
+              href: ../dmx/select-distinct-from-model-dmx.md
+            - name: SELECT FROM <model>.CONTENT
+              href: ../dmx/select-from-model-content-dmx.md
+            - name: SELECT FROM <model>.CASES
+              href: ../dmx/select-from-model-cases-dmx.md
+            - name: SELECT FROM <model>.SAMPLE_CASES
+              href: ../dmx/select-from-model-sample-cases-dmx.md
+            - name: SELECT FROM <model>.DIMENSION_CONTENT
+              href: ../dmx/select-from-model-dimension-content-dmx.md
+            - name: SELECT FROM <model> PREDICTION JOIN
+              href: ../dmx/select-from-model-prediction-join-dmx.md
+            - name: SELECT FROM <model>
+              href: ../dmx/select-from-model-dmx.md
+            - name: SELECT FROM <structure>.CASES
+              href: ../dmx/select-from-structure-cases.md
+            - name: DELETE
+              href: ../dmx/delete-dmx.md
+            - name: INSERT INTO
+              href: ../dmx/insert-into-dmx.md
+            - name: SELECT
+              href: ../dmx/select-dmx.md
+            - name: <source data query>
+              href: ../dmx/source-data-query.md
+            - name: UPDATE
+              href: ../dmx/update-dmx.md
+    - name: 構造と DMX 予測クエリの使用
+      href: structure-and-usage-of-dmx-prediction-queries.md
+    - name: DMX 選択ステートメントについて
+      href: understanding-the-dmx-select-statement.md
+    - name: 一般的な予測関数 (DMX)
+      href: general-prediction-functions-dmx.md
+    - name: DMX 構文要素
+      href: data-mining-extensions-dmx-syntax-elements.md
+      items:
+        - name: 演算子 - 算術
+          href: ../dmx/operators-arithmetic.md
+        - name: 演算子 - 比較
+          href: ../dmx/operators-comparison.md
+        - name: 演算子 - 論理
+          href: ../dmx/operators-logical.md
+        - name: 演算子 - 単項
+          href: ../dmx/operators-unary.md
+        - name: 識別子 (DMX)
+          href: ../dmx/identifiers-dmx.md
+        - name: データ型 (DMX)
+          href: ../dmx/data-types-dmx.md
+        - name: 式 (DMX)
+          href: ../dmx/expressions-dmx.md
+        - name: 演算子 (DMX)
+          href: ../dmx/operators-dmx.md
+        - name: 関数 (DMX)
+          href: ../dmx/functions-dmx.md
+        - name: コメント (DMX)
+          href: ../dmx/comments-dmx.md
+        - name: 予約されているキーワード (DMX)
+          href: ../dmx/reserved-keywords-dmx.md
+        - name: コンテンツの種類 (DMX)
+          href: ../dmx/content-types-dmx.md
+        - name: 分布 (DMX)
+          href: ../dmx/distributions-dmx.md
+        - name: 使用法 (DMX)
+          href: ../dmx/usage-dmx.md
+        - name: モデリング フラグ (DMX)
+          href: ../dmx/modeling-flags-dmx.md
+    - name: DMX 関数リファレンス
+      href: data-mining-extensions-dmx-function-reference.md
+      items:
+        - name: BottomCount
+          href: ../dmx/bottomcount-dmx.md
+        - name: BottomPercent
+          href: ../dmx/bottompercent-dmx.md
+        - name: BottomSum
+          href: ../dmx/bottomsum-dmx.md
+        - name: クラスター
+          href: ../dmx/cluster-dmx.md
+        - name: ClusterDistance
+          href: ../dmx/clusterdistance-dmx.md
+        - name: ClusterProbability
+          href: ../dmx/clusterprobability-dmx.md
+        - name: Exists
+          href: ../dmx/exists-dmx.md
+        - name: IsDescendant
+          href: ../dmx/isdescendant-dmx.md
+        - name: IsInNode
+          href: ../dmx/isinnode-dmx.md
+        - name: IsTestCase
+          href: ../dmx/istestcase-dmx.md
+        - name: IsTrainingCase
+          href: ../dmx/istrainingcase-dmx.md
+        - name: Lag
+          href: ../dmx/lag-dmx.md
+        - name: Predict
+          href: ../dmx/predict-dmx.md
+        - name: PredictAdjustedProbability
+          href: ../dmx/predictadjustedprobability-dmx.md
+        - name: PredictAssociation
+          href: ../dmx/predictassociation-dmx.md
+        - name: PredictCaseLikelihood
+          href: ../dmx/predictcaselikelihood-dmx.md
+        - name: PredictHistogram
+          href: ../dmx/predicthistogram-dmx.md
+        - name: PredictNodeId
+          href: ../dmx/predictnodeid-dmx.md
+        - name: PredictProbability
+          href: ../dmx/predictprobability-dmx.md
+        - name: PredictSequence
+          href: ../dmx/predictsequence-dmx.md
+        - name: PredictStdev
+          href: ../dmx/predictstdev-dmx.md
+        - name: PredictSupport
+          href: ../dmx/predictsupport-dmx.md
+        - name: PredictTimeSeries
+          href: ../dmx/predicttimeseries-dmx.md
+        - name: PredictVariance
+          href: ../dmx/predictvariance-dmx.md
+        - name: RangeMax
+          href: ../dmx/rangemax-dmx.md
+        - name: RangeMid
+          href: ../dmx/rangemid-dmx.md
+        - name: RangeMin
+          href: ../dmx/rangemin-dmx.md
+        - name: StructureColumn
+          href: ../dmx/structurecolumn-dmx.md
+        - name: TopCount
+          href: ../dmx/topcount-dmx.md
+        - name: TopPercent
+          href: ../dmx/toppercent-dmx.md
+        - name: TopSum
+          href: ../dmx/topsum-dmx.md
+        - name: DMX 演算子リファレンス
+          href: ../dmx/data-mining-extensions-dmx-operator-reference.md
+          items:
+            - name: + (加算)
+              href: ../dmx/add-dmx.md
+            - name: '- (減算)'
+              href: ../dmx/subtract-dmx.md
+            - name: '* (乗算)'
+              href: ../dmx/multiply-dmx.md
+            - name: (除算) (DMX)
+              href: ../dmx/divide-dmx.md
+            - name: < (より小さい)
+              href: ../dmx/less-than-dmx.md
+            - name: '> (より大きい)'
+              href: ../dmx/greater-than-dmx.md
+            - name: = (等しい)
+              href: ../dmx/equal-to-dmx.md
+            - name: <> (等しくない)
+              href: ../dmx/not-equal-to-dmx.md
+            - name: <= (以下)
+              href: ../dmx/less-than-or-equal-to-dmx.md
+            - name: '>= (以上)'
+              href: ../dmx/greater-than-or-equal-to-dmx.md
+            - name: AND
+              href: ../dmx/and-dmx.md
+            - name: NOT
+              href: ../dmx/not-dmx.md
+            - name: OR
+              href: ../dmx/or-dmx.md
+            - name: + (正号)
+              href: ../dmx/positive-dmx.md
+            - name: '- (負号)'
+              href: ../dmx/negative-dmx.md
+            - name: // (コメント)
+              href: ../dmx/double-slash-comment-dmx.md
+            - name: '-- (コメント)'
+              href: ../dmx/comment-dmx-summary.md
+            - name: /*...*/ (コメント)
+              href: ../dmx/slash-star-comment-dmx.md
+    - name: DMX 構文表記規則
+      href: data-mining-extensions-dmx-syntax-conventions.md
+    - name: DMX のチュートリアル
+      href: dmx-tutorials-analysis-services-data-mining.md

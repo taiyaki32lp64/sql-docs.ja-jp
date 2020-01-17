@@ -13,11 +13,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: b545fbe28e28739b5f66a7beca1ab7c0450ae08a
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52781684"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63150458"
 ---
 # <a name="tcp---ip-properties-protocols-tab"></a>TCP - IP プロパティ ([プロトコル] タブ)
   **[TCP/IP のプロパティ]** ダイアログ ボックスは、TCP/IP プロトコルのオプションを構成するために使用します。 左ペインで **[TCP/IP]** をクリックすると、詳細ペインに個々の IP アドレス構成が表示されます。  
@@ -25,7 +25,7 @@ ms.locfileid: "52781684"
  変更を有効にするには、Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] を再起動する必要があります。  
   
 ## <a name="options"></a>および  
- **Enabled**  
+ **有効**  
  可能な値は、 **[はい]** と **[いいえ]** です。  
   
  **[Keep Alive]**  

@@ -1,5 +1,6 @@
 ---
-title: 変更の追跡について (SQL Server) | Microsoft Docs
+title: 変更の追跡について
+ms.custom: seo-dt-2019
 ms.date: 08/08/2016
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -15,14 +16,13 @@ helpviewer_keywords:
 ms.assetid: 5e0ef05a-8317-4c98-be20-b19d4cd78f12
 author: rothja
 ms.author: jroth
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 63995b077cd041e79cad82cd1b5479ece1dc1328
-ms.sourcegitcommit: 1a5448747ccb2e13e8f3d9f04012ba5ae04bb0a3
+ms.openlocfilehash: 954701f03910556c2fe2c4e151ce4a4e3aac2af4
+ms.sourcegitcommit: 15fe0bbba963d011472cfbbc06d954d9dbf2d655
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51558659"
+ms.lasthandoff: 11/14/2019
+ms.locfileid: "74095308"
 ---
 # <a name="about-change-tracking-sql-server"></a>変更の追跡について (SQL Server)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -50,12 +50,12 @@ ms.locfileid: "51558659"
 ### <a name="one-way-synchronization-applications"></a>一方向の同期アプリケーション  
  変更の追跡を使用するクライアントや中間層キャッシュ アプリケーションなどの一方向の同期アプリケーションを構築できます。 次の図に示すように、キャッシュ アプリケーションでは、データが [!INCLUDE[ssDE](../../includes/ssde-md.md)] に格納され、他のデータ ストアにキャッシュされる必要があります。 また、データベース テーブルに加えられた変更を含むように、キャッシュを最新の状態に保つ必要があります。 変更は [!INCLUDE[ssDE](../../includes/ssde-md.md)]に返されません。  
   
- ![一方向の同期アプリケーションを示す図](../../relational-databases/track-changes/media/one-waysync.gif "一方向の同期アプリケーションを示す図")  
+ ![一方向の同期アプリケーションを表示する](../../relational-databases/track-changes/media/one-waysync.gif "一方向の同期アプリケーションを表示する")  
   
 ### <a name="two-way-synchronization-applications"></a>双方向の同期アプリケーション  
  変更の追跡を使用する双方向の同期アプリケーションも構築できます。 このシナリオでは、 [!INCLUDE[ssDE](../../includes/ssde-md.md)] のインスタンスのデータが 1 つ以上のデータ ストアと同期されます。 これらのデータ ストアのデータは更新でき、変更は [!INCLUDE[ssDE](../../includes/ssde-md.md)]に返され、同期される必要があります。  
   
- ![双方向の同期アプリケーションを示す図](../../relational-databases/track-changes/media/two-waysync.gif "双方向の同期アプリケーションを示す図")  
+ ![二方向の同期アプリケーションを表示する](../../relational-databases/track-changes/media/two-waysync.gif "二方向の同期アプリケーションを表示する")  
   
  双方向の同期アプリケーションの好例として、常時接続でないアプリケーションが挙げられます。 この種のアプリケーションでは、クライアント アプリケーションによってローカル ストアに対するクエリおよび更新が行われます。 クライアントとサーバーの間で接続が確立されると、アプリケーションとサーバーが同期され、変更されたデータが双方向に送信されます。  
   

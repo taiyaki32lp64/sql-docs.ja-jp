@@ -18,15 +18,14 @@ helpviewer_keywords:
 - sessions [SQL Server], application locks
 - APPLOCK_MODE function
 ms.assetid: e43d4917-77f1-45cc-b231-68ba7fee3385
-author: MashaMSFT
-ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 4b3971c156dc20d7f24f73009f1920cf10a06631
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: MikeRayMSFT
+ms.author: mikeray
+ms.openlocfilehash: 4544cc4f0a4d7c1d6d33e1f71bde4b55c09a59c9
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47638356"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68040360"
 ---
 # <a name="applockmode-transact-sql"></a>APPLOCK_MODE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -49,7 +48,7 @@ APPLOCK_MODE( 'database_principal' , 'resource_name' , 'lock_owner' )
 クライアント アプリケーションによって指定されたロック リソース名を指定します。 アプリケーション側では、リソース名が一意になるよう管理されている必要があります。 指定した名前は、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ロック マネージャーが内部的に保存できる値に内部的にハッシュされます。 *resource_name* は **nvarchar (255**) であり、既定値はありません。 *resource_name* はバイナリ比較し、現在のデータベースの照合順序の設定に関係なく大文字小文字を区別します。
   
 '*lock_owner*'  
-ロックの所有者を指定します。これはロックが要求されたときの *lock_owner* 値です。 *lock_owner* は **nvarchar (32)**, 、値には、いずれかを指定して **トランザクション** (既定値) または **セッション**です。
+ロックの所有者を指定します。これはロックが要求されたときの *lock_owner* 値です。 *lock_owner* は **nvarchar (32)** , 、値には、いずれかを指定して **トランザクション** (既定値) または **セッション**です。
   
 ## <a name="return-types"></a>戻り値の型
 **nvarchar(32)**
@@ -63,7 +62,7 @@ APPLOCK_MODE( 'database_principal' , 'resource_name' , 'lock_owner' )
 |**IntentShared**|**IntentExclusive**|**\*UpdateIntentExclusive**|  
 |**Shared**|**[Exclusive]**||  
   
-* このロック モードは他のロック モードの組み合わせであり、sp_getapplock で明示的に取得することはできません。
+\* このロック モードは他のロック モードの組み合わせであり、sp_getapplock で明示的に取得することはできません。
   
 ## <a name="function-properties"></a>関数のプロパティ
 **非決定的**
@@ -132,7 +131,7 @@ GO
   
 ## <a name="see-also"></a>参照
 [APPLOCK_TEST &#40;Transact-SQL&#41;](../../t-sql/functions/applock-test-transact-sql.md)  
-[sp_getapplock (&) #40 です。TRANSACT-SQL と #41 です。](../../relational-databases/system-stored-procedures/sp-getapplock-transact-sql.md)  
-[sp_releaseapplock (&) #40 です。TRANSACT-SQL と #41 です。](../../relational-databases/system-stored-procedures/sp-releaseapplock-transact-sql.md)
+[sp_getapplock &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-getapplock-transact-sql.md)  
+[sp_releaseapplock &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-releaseapplock-transact-sql.md)
   
   

@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 4e4f739b-fd27-4dce-8be6-3d808040d8d7
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 9febf511aef30bde1b01a5cad8eba3e3f8845b2f
-ms.sourcegitcommit: eb1f3a2f5bc296f74545f17d20c6075003aa4c42
+ms.openlocfilehash: 81f96fac7ea9021c1f5eb39ad186dcdd35c92127
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52191032"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68067371"
 ---
 # <a name="model-database"></a>model データベース
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -53,33 +52,33 @@ SQL Server 2014 での既定のファイル拡張値については、「[model 
   
 |データベース オプション|既定値|変更可否|  
 |---------------------|-------------------|---------------------|  
-|ALLOW_SNAPSHOT_ISOLATION|OFF|[ユーザー アカウント制御]|  
-|ANSI_NULL_DEFAULT|OFF|[ユーザー アカウント制御]|  
-|ANSI_NULLS|OFF|[ユーザー アカウント制御]|  
-|ANSI_PADDING|OFF|[ユーザー アカウント制御]|  
-|ANSI_WARNINGS|OFF|[ユーザー アカウント制御]|  
-|ARITHABORT|OFF|[ユーザー アカウント制御]|  
-|AUTO_CLOSE|OFF|[ユーザー アカウント制御]|  
-|AUTO_CREATE_STATISTICS|ON|[ユーザー アカウント制御]|  
-|AUTO_SHRINK|OFF|[ユーザー アカウント制御]|  
-|AUTO_UPDATE_STATISTICS|ON|[ユーザー アカウント制御]|  
-|AUTO_UPDATE_STATISTICS_ASYNC|OFF|[ユーザー アカウント制御]|  
+|ALLOW_SNAPSHOT_ISOLATION|OFF|はい|  
+|ANSI_NULL_DEFAULT|OFF|はい|  
+|ANSI_NULLS|OFF|はい|  
+|ANSI_PADDING|OFF|はい|  
+|ANSI_WARNINGS|OFF|はい|  
+|ARITHABORT|OFF|はい|  
+|AUTO_CLOSE|OFF|はい|  
+|AUTO_CREATE_STATISTICS|ON|はい|  
+|AUTO_SHRINK|OFF|はい|  
+|AUTO_UPDATE_STATISTICS|ON|はい|  
+|AUTO_UPDATE_STATISTICS_ASYNC|OFF|はい|  
 |CHANGE_TRACKING|OFF|いいえ|  
-|CONCAT_NULL_YIELDS_NULL|OFF|[ユーザー アカウント制御]|  
-|CURSOR_CLOSE_ON_COMMIT|OFF|[ユーザー アカウント制御]|  
-|CURSOR_DEFAULT|GLOBAL|[ユーザー アカウント制御]|  
-|データベース可用性オプション|ONLINE<br /><br /> MULTI_USER<br /><br /> READ_WRITE|いいえ<br /><br /> はい<br /><br /> [ユーザー アカウント制御]|  
-|DATE_CORRELATION_OPTIMIZATION|OFF|[ユーザー アカウント制御]|  
+|CONCAT_NULL_YIELDS_NULL|OFF|はい|  
+|CURSOR_CLOSE_ON_COMMIT|OFF|はい|  
+|CURSOR_DEFAULT|GLOBAL|はい|  
+|データベース可用性オプション|ONLINE<br /><br /> MULTI_USER<br /><br /> READ_WRITE|いいえ<br /><br /> はい<br /><br /> はい|  
+|DATE_CORRELATION_OPTIMIZATION|OFF|はい|  
 |DB_CHAINING|OFF|いいえ|  
 |ENCRYPTION|OFF|いいえ|  
 |MIXED_PAGE_ALLOCATION|ON|いいえ|  
-|NUMERIC_ROUNDABORT|OFF|[ユーザー アカウント制御]|  
-|PAGE_VERIFY|CHECKSUM|[ユーザー アカウント制御]|  
-|PARAMETERIZATION|SIMPLE|[ユーザー アカウント制御]|  
-|QUOTED_IDENTIFIER|OFF|[ユーザー アカウント制御]|  
-|READ_COMMITTED_SNAPSHOT|OFF|[ユーザー アカウント制御]|  
-|RECOVERY|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のエディションによって異なる*|[ユーザー アカウント制御]|  
-|RECURSIVE_TRIGGERS|OFF|[ユーザー アカウント制御]|  
+|NUMERIC_ROUNDABORT|OFF|はい|  
+|PAGE_VERIFY|CHECKSUM|はい|  
+|PARAMETERIZATION|SIMPLE|はい|  
+|QUOTED_IDENTIFIER|OFF|はい|  
+|READ_COMMITTED_SNAPSHOT|OFF|はい|  
+|RECOVERY|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のエディションによって異なる*|はい|  
+|RECURSIVE_TRIGGERS|OFF|はい|  
 |Service Broker のオプション|DISABLE_BROKER|いいえ|  
 |TRUSTWORTHY|OFF|いいえ|  
   

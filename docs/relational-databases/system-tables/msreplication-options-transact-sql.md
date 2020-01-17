@@ -17,29 +17,30 @@ helpviewer_keywords:
 ms.assetid: 23cf10d7-8bc1-4368-b5eb-e5576421e776
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 4bb4c4568c220df16f9f5592f8e38d143340f96b
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: c48a57b876cde41d6bb514c522bcaa241eec11fd
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52757944"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68063004"
 ---
-# <a name="msreplicationoptions-transact-sql"></a>MSreplication_options (Transact-SQL)
+# <a name="msreplication_options-transact-sql"></a>MSreplication_options (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  **MSreplication_options**テーブルがレプリケーションによって内部的に使用されるメタデータを格納します。 このテーブルに格納されます、**マスター**データベース。  
+
+  **MSreplication_options** テーブルには、レプリケーションで内部的に使用されるメタデータが格納されます。 このテーブルは **master** データベースに保存されます。
+
   
 |列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
 |**optname**|**sysname**|内部使用のみです。|  
 |**value**|**bit**|内部使用のみです。|  
 |**major_version**|**int**|内部使用のみです。|  
-|**よう**|**int**|内部使用のみです。|  
-|**リビジョン**|**int**|内部使用のみです。|  
+|**minor_version**|**int**|内部使用のみです。|  
+|**revision**|**int**|内部使用のみです。|  
 |**install_failures**|**int**|内部使用のみです。|  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [レプリケーション テーブル &#40;Transact-SQL&#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)  
   
   

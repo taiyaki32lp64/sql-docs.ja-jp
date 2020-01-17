@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 ms.assetid: cf3a6bd0-e0b2-4875-a532-63ef34cfa860
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 8ae3948d019467590b885c706e6b2c8d1c186da2
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: eec92d7c58b68b14374666f65489f145fa863422
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56031543"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66101089"
 ---
 # <a name="subscriptions-page-report-manager"></a>[サブスクリプション] ページ (レポート マネージャー)
   [サブスクリプション] ページは、現在のレポートまたは共有データ ソースのサブスクリプションをすべて表示するために使用します。 [すべてのサブスクリプションを管理] での指定により十分な権限を持っている場合、すべてのユーザーのサブスクリプションを表示できます。 それ以外の場合、このページには自分のサブスクリプションのみが表示されます。  

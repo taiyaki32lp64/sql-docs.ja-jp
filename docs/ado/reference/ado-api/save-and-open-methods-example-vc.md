@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 334ae655-8cac-48e6-8d00-1d28f3436e1e
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 6eaa73453339fd1e62bcd2e3039374a9ca7974b9
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 245affed25c7fb3d0ccc91504de0cfaaeee1807a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47735990"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67917072"
 ---
 # <a name="save-and-open-methods-example-vc"></a>保存および開く方法の例 (vc++)
 これら 3 つの例を示す方法、[保存](../../../ado/reference/ado-api/save-method.md)と**オープン**メソッドを併用することができます。  
@@ -261,7 +260,7 @@ bool FileExists() {
 }  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [Open メソッド (ADO Recordset)](../../../ado/reference/ado-api/open-method-ado-recordset.md)   
  [RecordSet オブジェクト (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)   
  [Save メソッド](../../../ado/reference/ado-api/save-method.md)

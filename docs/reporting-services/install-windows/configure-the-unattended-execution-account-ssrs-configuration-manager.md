@@ -13,20 +13,20 @@ helpviewer_keywords:
 - accounts [Reporting Services]
 - reports [Reporting Services], processing
 ms.assetid: 4e50733e-bd8c-4bf6-8379-98b1531bb9ca
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: ade8f4233e2cf830ecd17fe1626098f786312f01
-ms.sourcegitcommit: 9f2edcdf958e6afce9a09fb2e572ae36dfe9edb0
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 4326c38c84ad7af8fb23a5dde035720a1a7024d4
+ms.sourcegitcommit: 312b961cfe3a540d8f304962909cd93d0a9c330b
+ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50099913"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73593303"
 ---
 # <a name="configure-the-unattended-execution-account-ssrs-configuration-manager"></a>自動実行アカウントの構成 (SSRS 構成マネージャー)
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] には、自動レポート処理とネットワークを介した接続要求の送信に使用される特別なアカウントが用意されています。 アカウントは次の場合に使用します。  
   
--   データベース認証を使用するレポートに対する接続要求のネットワーク経由での送信や、認証を必要としないまたは使用しない外部レポート データ ソースへの接続。 詳細については、SQL Server オンライン ブックの「 [レポート データ ソースに関する資格情報と接続情報を指定する](../../reporting-services/report-data/specify-credential-and-connection-information-for-report-data-sources.md) 」を参照してください。  
-  
+-   データベース認証を使用するレポートに対する接続要求のネットワーク経由での送信や、認証を必要としないまたは使用しない外部レポート データ ソースへの接続。 詳細については、「 [レポート データ ソースに関する資格情報と接続情報を指定する](../../reporting-services/report-data/specify-credential-and-connection-information-for-report-data-sources.md)」をご覧ください。
+
 -   レポートに使用する外部の画像ファイルの取得。 匿名アクセスでアクセスできない画像ファイルを使用する場合は、自動レポート処理アカウントを構成し、アカウントに対してファイルへのアクセス許可を与えます。  
   
  自動レポート処理とは、ユーザーの要求ではなく、イベント (スケジュール ドリブンのイベントまたはデータ更新イベント) によって起動されたレポート実行処理を示します。 レポート サーバーは、自動レポート処理アカウントを使用して、外部データ ソースをホストしているコンピューターにログオンします。 レポート サーバー サービス アカウントの資格情報は他のコンピューターへの接続に使用されないため、このアカウントは必要です。  
@@ -56,8 +56,8 @@ ms.locfileid: "50099913"
   
      **rsconfig -e -u\<ドメイン/ユーザー名> -p\<パスワード>**  
   
- **rsconfig -e** では、他にも引数がサポートされています。 構文の詳細およびコマンド例については、SQL Server オンライン ブックの「[rsconfig ユーティリティ (SSRS)](../../reporting-services/tools/rsconfig-utility-ssrs.md)」を参照してください。  
-  
+ **rsconfig -e** では、他にも引数がサポートされています。 構文の詳細およびコマンド例の表示方法については、「[rsconfig ユーティリティ &#40;SSRS&#41;](../../reporting-services/tools/rsconfig-utility-ssrs.md)」を参照してください。
+ 
 ### <a name="how-account-information-is-stored"></a>アカウント情報の保存方法  
  アカウントを設定すると、ローカルまたはリモートのレポート サーバー インスタンス上の RSreportserver.config ファイル内で、暗号化された値として次の設定が指定されます。  
   
@@ -75,6 +75,9 @@ ms.locfileid: "50099913"
  画像ファイルを取得する際、レポート サーバーでは自動的にこのアカウントが使用され、ユーザー側で特別な操作を行う必要はありません。 このアカウントを使用してレポート用のデータを提供する外部データ ソースに接続するには、レポート データ ソースまたは共有データ ソースの [データ ソースのプロパティ] ページで **[資格情報の種類]** オプションを指定する必要があります。  
   
 -   [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)] または SharePoint サイトで、 **[資格情報は必要ありません]** オプションを選択します。  
+
+> [!NOTE]
+> SharePoint と Reporting Services の統合は、SQL Server 2016 以降では使用できません。
   
  自動レポート処理アカウントは主に外部サーバーへの接続に使用されますが、データベース サーバーへのログインには使用されません。 アカウント資格情報を使用してデータベースにログインする場合は、資格情報を接続文字列に指定する必要があります。 データベース サーバーで Windows 統合セキュリティがサポートされ、自動実行レポート処理に使用されるアカウントにデータベースの読み取り権限がある場合は、 **Integrated Security=SSPI** を指定できます。 それ以外の場合は、接続文字列にユーザー名およびパスワードを入力する必要があり、これはデータ ソース接続プロパティを編集する権限を持つすべてのユーザーにクリア テキストで表示されます。  
   
@@ -101,6 +104,6 @@ ms.locfileid: "50099913"
  アカウント情報が RSReportServer.config ファイルから削除されます。  
   
 ## <a name="see-also"></a>参照  
- [Reporting Services 構成マネージャー (SSRS ネイティブ モード)](https://msdn.microsoft.com/379eab68-7f13-4997-8d64-38810240756e)  
+ [Reporting Services 構成マネージャー (SSRS ネイティブ モード)](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md)  
   
   

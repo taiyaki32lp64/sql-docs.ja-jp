@@ -7,15 +7,15 @@ ms.reviewer: ''
 ms.technology: master-data-services
 ms.topic: conceptual
 ms.assetid: 7b3e30dc-8f41-4a5d-8009-ae5a4426a64b
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 8a52df417f41e2ba7a71152ededc0d2846f43956
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 296ace8d97269d80179d437b1033b92196d6adc5
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52798085"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65478985"
 ---
 # <a name="create-a-domain-based-attribute-mds-add-in-for-excel"></a>ドメイン ベースの属性の作成 (Excel 用 MDS アドイン)
   [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)][!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)]の管理者は、列内の値を特定の一連の値に制約する場合に、ドメイン ベースの属性を作成できます。  
@@ -46,7 +46,7 @@ ms.locfileid: "52798085"
   
 5.  **[属性に次の値を設定]** ボックスの一覧で、次の操作を実行します。  
   
-    -   ワークシートの値を使用するには、**[選択した列]** をクリックします。 選択した列の値を使用して、新しいエンティティと新しいステージング テーブルが作成されます。  
+    -   ワークシートの値を使用するには、 **[選択した列]** をクリックします。 選択した列の値を使用して、新しいエンティティと新しいステージング テーブルが作成されます。  
   
     -   既存のエンティティの値を使用するには、エンティティの名前を選択します。  
   

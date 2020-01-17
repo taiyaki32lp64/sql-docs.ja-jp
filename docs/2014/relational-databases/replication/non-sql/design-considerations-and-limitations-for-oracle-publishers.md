@@ -13,11 +13,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 043bf26fb17a3433e59623b5b3bfddaaea8bc89f
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54136062"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63022515"
 ---
 # <a name="design-considerations-and-limitations-for-oracle-publishers"></a>Oracle パブリッシャーの設計上の注意点および制限
   Oracle データベースからのパブリッシュは、 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] データベースからのパブリッシュとほぼ同じように機能するように設計されています。 ただし、以下の制限および問題に注意してください。  
@@ -103,7 +103,7 @@ ms.locfileid: "54136062"
   
  以下の問題についても考慮に入れてください。  
   
--   Oracle と[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]NULL の処理が異なります。Oracle では、NULL を許容し、一意の制約またはインデックスに含まれる列の NULL 値を持つ複数の行を許可します。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] では一意性が強制され、同じ列に NULL 値のある行は 1 行だけ許可されます。 NULL を許容する一意の制約またはインデックスをパブリッシュすることはできません。パブリッシュされたテーブルで、インデックスまたは制約に含まれる列に NULL 値のある行が複数含まれる場合、サブスクライバーで制約違反が発生します。  
+-   Oracle および [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] は NULL の扱いが異なります。Oracle では、NULL を許容する列に NULL 値が指定された複数の行を許可し、一意の制約またはインデックスに含めることができます。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] では一意性が強制され、同じ列に NULL 値のある行は 1 行だけ許可されます。 NULL を許容する一意の制約またはインデックスをパブリッシュすることはできません。パブリッシュされたテーブルで、インデックスまたは制約に含まれる列に NULL 値のある行が複数含まれる場合、サブスクライバーで制約違反が発生します。  
   
 -   一意性をテストする場合、フィールドの後続の空白は、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] では無視されますが、Oracle では無視されません。  
   
@@ -149,7 +149,7 @@ ms.locfileid: "54136062"
   
 -   スナップショット エージェントおよびログ リーダー エージェントがディストリビューターからパブリッシャーへの接続に使用するアカウントは、次のいずれかの方法で指定されます。  
   
-    -   [sp_adddistpublisher &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-adddistpublisher-transact-sql) の **@security_mode** パラメーター (Oracle 認証が使用される場合、**@login** と **@password** にも値を指定します)  
+    -   [sp_adddistpublisher &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-adddistpublisher-transact-sql) の **@security_mode** パラメーター (Oracle 認証が使用される場合、 **@login** と **@password** にも値を指定します)  
   
     -   SQL Server Management Studio の **[サーバーへの接続]** ダイアログ ボックス。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ディストリビューターで Oracle パブリッシャーを構成するときに、これを使用します。  
   

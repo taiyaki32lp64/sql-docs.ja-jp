@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 35ffdb79-a931-4271-a3bb-0cd804cf173e
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 3202b607f3971dd1fcad2c3ae5e0ed83a667e923
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 2189bf9b2a82cdf21fdd13ed77a977f6b333ac87
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47758820"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67925893"
 ---
 # <a name="calling-a-stored-procedure-as-a-method-on-a-connection-object"></a>Connection オブジェクトに対するメソッドとしてストアド プロシージャを呼び出す
 関連するオープンでネイティブ メソッドの場合と同様に、ストアド プロシージャを呼び出すことができます**接続**オブジェクト。 名前付きコマンドを呼び出すことに似ています、**接続**オブジェクト。  
@@ -79,5 +78,5 @@ Set objConn = Nothing
 Set objComm = Nothing  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [Connection オブジェクト (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)

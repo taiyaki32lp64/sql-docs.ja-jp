@@ -9,15 +9,15 @@ ms.topic: conceptual
 f1_keywords:
 - sql12.mds.configmanager.webconfigpg.f1
 ms.assetid: 7b900778-0169-4e42-9faf-98dc1c01313e
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: f45eef12a81ada02a26a0f4c2318523de31cbf0d
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 12ba4a2d03e98d5f2dac79917e23a93c0a24cdb0
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53357772"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65481217"
 ---
 # <a name="web-configuration-page-master-data-services-configuration-manager"></a>[Web の構成] ページ (マスター データ サービス構成マネージャー)
   **[Web の構成]** ページを使用すると、Web サイトまたは Web アプリケーションを新規作成できます。 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] Web アプリケーションを選択すると、アプリケーションの [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] データベースを指定して、Data Quality Services を有効にすることができます。  

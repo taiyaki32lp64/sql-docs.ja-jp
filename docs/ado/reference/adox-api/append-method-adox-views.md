@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 6070fd58-3237-4c77-a966-5b39ce5d57e4
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 584c3d0144197425b307f2d4a04bd8a09f27a36c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 637932fed7effb87705b3aa195578cfd506e1454
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47707460"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67967155"
 ---
 # <a name="append-method-adox-views"></a>Append メソッド (ADOX Views)
 新たに作成[ビュー](../../../ado/reference/adox-api/view-object-adox.md)オブジェクトに追加され、[ビュー](../../../ado/reference/adox-api/views-collection-adox.md)コレクション。  
@@ -52,7 +51,7 @@ Views.Append Name, Command
 ## <a name="applies-to"></a>適用対象  
  [Views コレクション (ADOX)](../../../ado/reference/adox-api/views-collection-adox.md)  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [Views Append メソッドの例 (VB)](../../../ado/reference/adox-api/views-append-method-example-vb.md)   
  [Append メソッド (ADOX Columns)](../../../ado/reference/adox-api/append-method-adox-columns.md)   
  [Append メソッド (ADOX Groups)](../../../ado/reference/adox-api/append-method-adox-groups.md)   

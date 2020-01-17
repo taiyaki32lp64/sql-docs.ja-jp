@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - predictions [Analysis Services], discrete attributes
@@ -22,12 +21,12 @@ ms.assetid: 95ffe66f-c261-4dc5-ad57-14d2d73205ff
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 0e68a857a928cbc737a647d0b497366c1148d948
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 7a9adfe74aef16e475d06eddfbe08852f7618518
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48198182"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66084113"
 ---
 # <a name="microsoft-decision-trees-algorithm"></a>Microsoft デシジョン ツリー アルゴリズム
   [!INCLUDE[msCoName](../../includes/msconame-md.md)]デシジョン ツリー アルゴリズムは、分類と回帰アルゴリズムのによって提供される[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]両方不連続値と連続属性の予測モデリングで使用します。  
@@ -44,7 +43,7 @@ ms.locfileid: "48198182"
 ## <a name="how-the-algorithm-works"></a>アルゴリズムの動作  
  [!INCLUDE[msCoName](../../includes/msconame-md.md)] デシジョン ツリー アルゴリズムでは、一連の分割をツリー内に作成することによって、データ マイニング モデルが作成されます。 これらの分割は *ノード*として表されます。 ノードは、入力列が予測可能列に密接に相関していることが認識されるたびに、アルゴリズムによってモデルに追加されます。 アルゴリズムで分割が決定される方法は、連続列と不連続列のどちらを予測するかによって異なります。  
   
- [!INCLUDE[msCoName](../../includes/msconame-md.md)] デシジョン ツリー アルゴリズムの *機能の選択* を使用すると、最も役に立つ属性を選択できます。 特徴選択を使用してすべて[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]パフォーマンスと分析の質を向上させるために、データ マイニング アルゴリズム。 機能の選択は、重要でない属性によってプロセッサ時間が使用されるのを防ぐために重要です。 データ マイニング モデルの設計時に入力属性または予測可能属性を多用しすぎると、モデルの処理に非常に時間がかかったり、メモリが不足する場合があります。 ツリーを分割するかどうかの判断方法には、*エントロピ*およびベイジアン ネットワーク*に関する業界標準の基準があります。* 重要な属性の選択、スコア計算、および順位付けの方法の詳細については、「[機能の選択 &#40;データ マイニング&#41;](feature-selection-data-mining.md)」を参照してください。  
+ [!INCLUDE[msCoName](../../includes/msconame-md.md)] デシジョン ツリー アルゴリズムの *機能の選択* を使用すると、最も役に立つ属性を選択できます。 機能の選択は、すべての [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] データ マイニング アルゴリズムにおいて、パフォーマンスと分析の質を高めるために使用されています。 機能の選択は、重要でない属性によってプロセッサ時間が使用されるのを防ぐために重要です。 データ マイニング モデルの設計時に入力属性または予測可能属性を多用しすぎると、モデルの処理に非常に時間がかかったり、メモリが不足する場合があります。 ツリーを分割するかどうかの判断方法には、*エントロピ*およびベイジアン ネットワーク*に関する業界標準の基準があります。* 重要な属性の選択、スコア計算、および順位付けの方法の詳細については、「[機能の選択 &#40;データ マイニング&#41;](feature-selection-data-mining.md)」を参照してください。  
   
  データ マイニング モデルにおける一般的な問題は、モデルにトレーニング データ内の小さな違いに過度に反映なる、場合は、あると言われます*過剰適合*または*オーバー トレーニング*します。 オーバーフィット モデルは、他のデータセットに一般化することができません。 特定のデータセットへのオーバーフィットを回避するため、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] デシジョン ツリー アルゴリズムでは、ツリーの拡大を制御する手法が使用されます。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] デシジョン ツリー アルゴリズムのしくみの詳細については、「 [Microsoft デシジョン ツリー アルゴリズム テクニカル リファレンス](microsoft-decision-trees-algorithm-technical-reference.md)」を参照してください。  
   
@@ -84,7 +83,7 @@ ms.locfileid: "48198182"
 ## <a name="viewing-a-decision-trees-model"></a>デシジョン ツリー モデルの表示  
  モデルを参照するには、 **Microsoft ツリー ビューアー**を使用します。 モデルで複数のツリーが生成される場合、そのいずれかを選択すると、予測可能属性ごとのケースの分類がビューアーに表示されます。 また、依存関係ネットワーク ビューアーを使用すると、複数ツリー間の相互関係を表示できます。 詳細については、「 [Microsoft ツリー ビューアーを使用したモデルの参照](browse-a-model-using-the-microsoft-tree-viewer.md)」を参照してください。  
   
- ツリー内の特定の分岐 (ノード) の詳細を調べる場合は、 [Microsoft 汎用コンテンツ ツリー ビューアー](browse-a-model-using-the-microsoft-generic-content-tree-viewer.md)でモデルを参照することもできます。 モデルに保存される内容には、各ノードのすべての値の分布、ツリーの各レベルにおける確率、および連続属性用の回帰式が含まれます。 詳細については、「[デシジョン ツリー モデルのマイニング モデル コンテンツ &#40;Analysis Services - データ マイニング&#41;](mining-model-content-for-decision-tree-models-analysis-services-data-mining.md)」を参照してください。  
+ ツリー内の特定の分岐 (ノード) の詳細を調べる場合は、 [Microsoft 汎用コンテンツ ツリー ビューアー](browse-a-model-using-the-microsoft-generic-content-tree-viewer.md)でモデルを参照することもできます。 モデルに保存される内容には、各ノードのすべての値の分布、ツリーの各レベルにおける確率、および連続属性用の回帰式が含まれます。 詳細については、「 [デシジョン ツリー モデルのマイニング モデル コンテンツ &#40;Analysis Services - データ マイニング&#41;](mining-model-content-for-decision-tree-models-analysis-services-data-mining.md)として表されます。  
   
 ## <a name="creating-predictions"></a>予測の作成  
  モデルの処理後、結果がパターンと統計のセットとして保存されます。これを使用して、関係を調査したり予測を実行したりできます。  
@@ -102,9 +101,9 @@ ms.locfileid: "48198182"
 -   OLAP マイニング モデルの使用およびデータ マイニング ディメンションの作成がサポートされています。  
   
 ## <a name="see-also"></a>参照  
- [データ マイニング アルゴリズム&#40;Analysis Services - データ マイニング&#41;](data-mining-algorithms-analysis-services-data-mining.md)   
+ [データ マイニング アルゴリズム &#40;Analysis Services - データ マイニング&#41;](data-mining-algorithms-analysis-services-data-mining.md)   
  [Microsoft デシジョン ツリー アルゴリズム テクニカル リファレンス](microsoft-decision-trees-algorithm-technical-reference.md)   
  [デシジョン ツリー モデルのクエリ例](decision-trees-model-query-examples.md)   
- [デシジョン ツリー モデルのマイニング モデル コンテンツ&#40;Analysis Services - データ マイニング&#41;](mining-model-content-for-decision-tree-models-analysis-services-data-mining.md)  
+ [デシジョン ツリー モデルのマイニング モデル コンテンツ (Analysis Services - データ マイニング)](mining-model-content-for-decision-tree-models-analysis-services-data-mining.md)  
   
   

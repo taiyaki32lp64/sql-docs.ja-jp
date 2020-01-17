@@ -17,11 +17,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 28203de42b3cdb4a033ce222c747df3e80da96f9
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52806794"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63224502"
 ---
 # <a name="combine-conditions-when-or-has-precedence-visual-database-tools"></a>OR が優先する場合の条件の結合 (Visual Database Tools)
   AND で結合した条件よりも OR で結合した条件を優先させるには、各 OR 条件に対して AND 条件を繰り返す必要があります。  

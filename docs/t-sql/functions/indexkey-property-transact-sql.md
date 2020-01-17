@@ -19,23 +19,22 @@ helpviewer_keywords:
 - displaying index keys
 - keys [SQL Server], index
 ms.assetid: 87c0c385-6b2d-4716-ac8c-a3ce6e8d89e9
-author: MashaMSFT
-ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 4107bfb27ad756d47a80257289cb05c62f1f99e3
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: MikeRayMSFT
+ms.author: mikeray
+ms.openlocfilehash: edaa3069bece2d6acf7f28ab32da5f5639f49be4
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47844040"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68024269"
 ---
-# <a name="indexkeyproperty-transact-sql"></a>INDEXKEY_PROPERTY (Transact-SQL)
+# <a name="indexkey_property-transact-sql"></a>INDEXKEY_PROPERTY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   インデックス キーについての情報を返します。 XML インデックスに対して NULL を返します。  
   
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] 代わりに、 [sys.index_columns (&) #40 です。TRANSACT-SQL と #41;](../../relational-databases/system-catalog-views/sys-index-columns-transact-sql.md).  
+>  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] 代わりに、 [sys.index_columns &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-index-columns-transact-sql.md)します。  
   
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -57,9 +56,9 @@ INDEXKEY_PROPERTY ( object_ID ,index_ID ,key_ID ,property )
  インデックス キー列の位置です。 *key_ID* is **int**.  
   
  *property*  
- 情報を返す基になるプロパティの名前です。 *プロパティ* 、文字の文字列は、次の値のいずれかを指定することができます。  
+ 情報が返されるプロパティの名前です。 *プロパティ* 、文字の文字列は、次の値のいずれかを指定することができます。  
   
-|ReplTest1|[説明]|  
+|[値]|[説明]|  
 |-----------|-----------------|  
 |**ColumnId**|列の ID で、*key_ID*、インデックスの位置。|  
 |**IsDescending**|インデックス列を格納する順序です。<br /><br /> 1 = 降順、0 = 昇順|  
@@ -85,7 +84,7 @@ SELECT
         1,1,'IsDescending') AS [Asc or Desc order];  
 ```  
   
- Here is the result set:  
+ 以下に結果セットを示します。  
   
 ```  
 Column ID   Asc or Desc order   

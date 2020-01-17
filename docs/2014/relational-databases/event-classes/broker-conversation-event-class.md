@@ -15,11 +15,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 2d6f29eba93e7841d2d64db57266d8f2ad859377
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52804447"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62664368"
 ---
 # <a name="brokerconversation-event-class"></a>Broker:Conversation イベント クラス
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、 **Service Broker** メッセージ交換の進行状況を報告するために、Broker:Conversation イベントが生成されます。  
@@ -28,9 +28,9 @@ ms.locfileid: "52804447"
   
 |データ列|型|説明|列番号|フィルターの適用|  
 |-----------------|----------|-----------------|-------------------|----------------|  
-|**ApplicationName**|`nvarchar`|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のインスタンスへの接続を作成したクライアント アプリケーションの名前。 この列には、プログラムの表示名ではなく、アプリケーションによって渡された値が格納されます。|10|はい|  
-|**ClientProcessID**|`int`|クライアント アプリケーションが実行されているプロセスに対し、ホスト コンピューターによって割り当てられた ID。 クライアントでクライアント プロセス ID が指定されると、このデータ列が作成されます。|9|はい|  
-|**DatabaseID**|`int`|USE *database* ステートメントで指定されているデータベースの ID。 特定のインスタンスについて USE *database*ステートメントが実行されていない場合は既定のデータベースの ID となります。 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] では、 **ServerName** データ列がトレースにキャプチャされ、そのサーバーが利用可能な場合、データベースの名前が表示されます。 データベースに対応する値は、 **DB_ID** 関数を使用して特定します。|3|はい|  
+|**ApplicationName**|`nvarchar`|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のインスタンスへの接続を作成したクライアント アプリケーションの名前。 この列には、プログラムの表示名ではなく、アプリケーションによって渡された値が格納されます。|10|[はい]|  
+|**ClientProcessID**|`int`|クライアント アプリケーションが実行されているプロセスに対し、ホスト コンピューターによって割り当てられた ID。 クライアントでクライアント プロセス ID が指定されると、このデータ列が作成されます。|9|[はい]|  
+|**DatabaseID**|`int`|USE *database* ステートメントで指定されているデータベースの ID。 特定のインスタンスについて USE *database*ステートメントが実行されていない場合は既定のデータベースの ID となります。 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] では、 **ServerName** データ列がトレースにキャプチャされ、そのサーバーが利用可能な場合、データベースの名前が表示されます。 データベースに対応する値は、 **DB_ID** 関数を使用して特定します。|3|[はい]|  
 |**EventClass**|`int`|キャプチャされたイベント クラスの種類。 **Broker:Conversation** の場合は、常に **124**です。|27|いいえ|  
 |**EventSequence**|`int`|このイベントのシーケンス番号。|51|いいえ|  
 |**EventSubClass**|`nvarchar`|イベント サブクラスの種類。 各イベント クラスについての詳細情報を提供します。|21|はい|  

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.cubewizard.newdimselection.f1
@@ -13,12 +12,12 @@ ms.assetid: 7241a3b3-bba9-4b4c-99d9-61ec92ab969a
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: ac4ccf95fb193f029fadc8e7d937bae8b85ffaeb
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 0362322d63e351ab7547a6bb19511c2c10d1df95
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48134282"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66069342"
 ---
 # <a name="select-new-dimensions-cube-wizard"></a>[新しいディメンションの選択] (キューブ ウィザード)
   **[新しいディメンションの選択]** ページを使用すると、作成する新しいディメンションを選択できます。  

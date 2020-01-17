@@ -17,21 +17,20 @@ helpviewer_keywords:
 ms.assetid: 76f4fefa-5b99-4deb-beed-e198987a45a9
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 007f0eea045c22ea2fb7ef2ed0d6db6e9262d060
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: e3f0afcd0007dc0e61424449e87851ca562b0cdd
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52535812"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68009205"
 ---
 # <a name="spaddmaintenanceplandb-transact-sql"></a>sp_add_maintenance_plan_db (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  データベースとメンテナンス プランを関連付けます。  
+  データベース メンテナンス プランに関連付けます。  
   
 > [!NOTE]  
->  このストアド プロシージャは、データベース メンテナンス プランと共に使用できます。 ただし、この機能は、このストアド プロシージャを使用しないメンテナンス プランでも実行できます。 このプロシージャは、以前のバージョンの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] からアップグレードしたプログラムでデータベース メンテナンス プランを管理する場合に使用します。  
+>  このストアド プロシージャは、データベース メンテナンス プランで使用されます。 この機能は、このストアド プロシージャを使用しないメンテナンス プランに置き換わりました。 このプロシージャは、以前のバージョンの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] からアップグレードしたプログラムでデータベース メンテナンス プランを管理する場合に使用します。  
   
  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]  
   
@@ -46,11 +45,9 @@ sp_add_maintenance_plan_db [ @plan_id = ] 'plan_id' ,
 ```  
   
 ## <a name="arguments"></a>引数  
- [  **@plan_id =**] **'**_plan_id_**'**  
- メンテナンス プランのプラン ID を指定します。 *plan_id*は**uniqueidentifier**、有効な ID を指定する必要があります  
+`[ @plan_id = ] 'plan_id'` メンテナンス プランのプラン ID を指定します。 *plan_id*は**uniqueidentifier**、有効な ID を指定する必要があります  
   
- [  **@db_name =**] **'**_database_name_**'**  
- メンテナンス プランに追加するデータベースの名前を指定します。 データベースが存在しない場合は、データベースをプランに追加する前にデータベースを作成する必要があります。 *database_name* は **sysname** です。  
+`[ @db_name = ] 'database_name'` メンテナンス プランに追加するデータベースの名前を指定します。 データベースは、作成する必要があります。 または計画に追加する前に存在します。 *database_name* は **sysname** です。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  0 (成功) または 1 (失敗)  
@@ -68,7 +65,7 @@ sp_add_maintenance_plan_db [ @plan_id = ] 'plan_id' ,
 EXECUTE   sp_add_maintenance_plan_db N'FAD6F2AB-3571-11D3-9D4A-00C04FB925FC',N'AdventureWorks2012';  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [メンテナンス プラン](../../relational-databases/maintenance-plans/maintenance-plans.md)   
  [データベース メンテナンス プラン ストアド プロシージャ&#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/database-maintenance-plan-stored-procedures-transact-sql.md)  
   

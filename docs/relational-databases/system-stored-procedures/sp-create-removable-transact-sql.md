@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 06e36ae5-f70d-4a26-9a7f-ee4b9360b355
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: a17ec458ffe1094691932fee6661e38551012b54
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d6f842b96a9b179548688a4c655a566087ba1ebf
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47749451"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68108619"
 ---
 # <a name="spcreateremovable-transact-sql"></a>sp_create_removable (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -56,37 +55,27 @@ sp_create_removable
 ```  
   
 ## <a name="arguments"></a>引数  
- [ **@dbname=** ] **'***dbname***'**  
- リムーバブル メディアに作成するデータベースの名前を指定します。 *dbname*は**sysname**します。  
+`[ @dbname = ] 'dbname'` リムーバブル メディアを作成するには、データベースの名前です。 *dbname*は**sysname**します。  
   
- [ **@syslogical=** ] **'***syslogical***'**  
- システム カタログ テーブルを格納するファイルの論理名を指定します。 *syslogical*は**sysname**します。  
+`[ @syslogical = ] 'syslogical'` システム カタログ テーブルを含むファイルの論理名です。 *syslogical*は**sysname**します。  
   
- [  **@sysphysical=** ] **'***sysphysical***'**  
- 物理名です。 システム カタログ テーブルを格納するファイルの名前をフル パスと共に指定します。 *sysphysical*は**nvarchar (260)** します。  
+`[ @sysphysical = ] 'sysphysical'` 物理名です。 システム カタログ テーブルを格納するファイルの名前をフル パスと共に指定します。 *sysphysical*は**nvarchar (260)** します。  
   
- [ **@syssize=** ] *syssize*  
- システム カタログ テーブルを格納するファイルのサイズ (MB) を指定します。 *syssize*は**int**します。最小*syssize*は 1 です。  
+`[ @syssize = ] syssize` システム カタログ テーブルを格納するファイルのメガバイト単位で、サイズです。 *syssize*は**int**します。最小*syssize*は 1 です。  
   
- [ **@loglogical=** ] **'***loglogical***'**  
- トランザクション ログを格納するファイルの論理名を指定します。 *loglogical*は**sysname**します。  
+`[ @loglogical = ] 'loglogical'` トランザクション ログを含むファイルの論理名です。 *loglogical*は**sysname**します。  
   
- [  **@logphysical=** ] **'***logphysical***'**  
- 物理名です。 トランザクション ログを格納するファイルの名前をフル パスと共に指定します。 *logphysical*は**nvarchar (260)** します。  
+`[ @logphysical = ] 'logphysical'` 物理名です。 これには、トランザクション ログを格納するファイルの完全修飾パスが含まれます。 *logphysical*は**nvarchar (260)** します。  
   
- [ **@logsize=** ] *logsize*  
- トランザクション ログを格納するファイルのサイズ (MB) を指定します。 *logsize*は**int**します。最小*logsize*は 1 です。  
+`[ @logsize = ] logsize` トランザクション ログを含むファイルのメガバイト単位で、サイズです。 *logsize*は**int**します。最小*logsize*は 1 です。  
   
- [  **@datalogical1=** ] **'***datalogical***'**  
- データ テーブルを格納するファイルの論理名を指定します。 *datalogical*は**sysname**します。  
+`[ @datalogical1 = ] 'datalogical'` データ テーブルを含むファイルの論理名です。 *datalogical*は**sysname**します。  
   
- データ ファイルの数は 1 ～ 16 です。 データベースが大きくなり複数のディスクに分散する必要が生じた場合に備えて、通常、複数のデータ ファイルを作成します。  
+ 1 ~ 16 個のデータ ファイルがあります。 データベースが大きくなり複数のディスクに分散する必要が生じた場合に備えて、通常、複数のデータ ファイルを作成します。  
   
- [  **@dataphysical1=** ] **'***dataphysical***'**  
- 物理名です。 データ テーブルを格納するファイルの名前をフル パスと共に指定します。 *dataphysical*は**nvarchar (260)** します。  
+`[ @dataphysical1 = ] 'dataphysical'` 物理名です。 データ テーブルを格納するファイルの名前をフル パスと共に指定します。 *dataphysical*は**nvarchar (260)** します。  
   
- [  **@datasize1=** ] **'***datasize***'**  
- データ テーブルを格納するファイルのサイズ (MB) を指定します。 *datasize*は**int**します。最小*datasize*は 1 です。  
+`[ @datasize1 = ] 'datasize'` データ テーブルを含むファイルのメガバイト単位で、サイズです。 *datasize*は**int**します。最小*datasize*は 1 です。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  0 (成功) または 1 (失敗)  
@@ -103,13 +92,13 @@ sp_create_removable
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のインスタンス上のディスク使用量を管理するため、通常、データベースを作成する権限をいくつかのログイン アカウントに制限します。  
   
 ### <a name="permissions-on-data-and-log-files"></a>データおよびログ ファイルに対する権限  
- 特定の操作がデータベースに対して実行されるときは必ず、そのデータおよびログ ファイルに対して必要な権限が設定されます。 この権限は、開く権限のあるディレクトリにファイルが存在する場合に、そのファイルが誤って書き換えられるのを防ぎます。  
+ 特定の操作を実行するには、データベースで、たびに、対応するアクセス許可は、そのデータおよびログ ファイルで設定されます。 この権限は、開く権限のあるディレクトリにファイルが存在する場合に、そのファイルが誤って書き換えられるのを防ぎます。  
   
 |データベースに対する操作|ファイルに対して設定される権限|  
 |---------------------------|------------------------------|  
 |変更して新しいファイルを追加|Created|  
 |バックアップ|アタッチ|  
-|復元|デタッチ|  
+|復元|Detached|  
   
 > [!NOTE]  
 >  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] セットのデータではなくファイルとログ ファイルのアクセス許可。  
@@ -129,7 +118,7 @@ EXEC sp_create_removable 'inventory',
 10;  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [データベースのデタッチとアタッチ &#40;SQL Server&#41;](../../relational-databases/databases/database-detach-and-attach-sql-server.md)   
  [sp_certify_removable &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-certify-removable-transact-sql.md)   
  [ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md)   

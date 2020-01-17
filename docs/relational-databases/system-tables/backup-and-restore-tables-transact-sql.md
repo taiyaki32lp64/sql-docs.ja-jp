@@ -17,25 +17,24 @@ helpviewer_keywords:
 ms.assetid: aa615add-54e6-40f5-8b55-3728b26884ee
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 021077a7e127f9c93ee752dea7f87aa12e792d02
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 3b70edcd7a8dec126816af944ed81516cb260f40
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47596410"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68091894"
 ---
-# <a name="backup-and-restore-tables-transact-sql"></a>バックアップ テーブルと復元テーブル (Transact-SQL)
+# <a name="backup-and-restore-tables-transact-sql"></a>バックアップと復元テーブル (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
-  ここでは、データベース バックアップと復元操作で使用される情報を格納するシステム テーブルについて説明します。  
+  このセクションのトピックでは、システム データベースで使用される情報を格納するテーブルのバックアップし、復元操作について説明します。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
  [backupfile](../../relational-databases/system-tables/backupfile-transact-sql.md)  
  データベースの各データまたは各ログ ファイルに対して 1 行のデータを格納します。  
   
  [backupfilegroup](../../relational-databases/system-tables/backupfilegroup-transact-sql.md)  
- バックアップ時に、データベース内のファイル グループごとに 1 行のデータを格納します。  
+ バックアップの時点では、データベース内のファイル グループごとに 1 つの行が含まれています。  
   
  [backupmediafamily](../../relational-databases/system-tables/backupmediafamily-transact-sql.md)  
  メディア ファミリごとに 1 行のデータを格納します。  
@@ -47,10 +46,10 @@ ms.locfileid: "47596410"
  バックアップ セットごとに 1 行のデータを格納します。  
   
  [logmarkhistory](../../relational-databases/system-tables/logmarkhistory-transact-sql.md)  
- コミットされたマーク付きのトランザクションごとに 1 行のデータを格納します。  
+ コミットされているマークされたトランザクションごとに 1 つの行が含まれています。  
   
  [restorefile](../../relational-databases/system-tables/restorefile-transact-sql.md)  
- 復元されたファイルごとに 1 行のデータを格納します。 これには、ファイル グループ名によって間接的に復元されたファイルが含まれます。  
+ 復元されたファイルごとに 1 行のデータを格納します。 間接的に復元されたファイル グループの名前でファイルが含まれます。  
   
  [restorefilegroup](../../relational-databases/system-tables/restorefilegroup-transact-sql.md)  
  復元されたファイル グループごとに 1 行のデータを格納します。  
@@ -59,7 +58,7 @@ ms.locfileid: "47596410"
  復元操作ごとに 1 行のデータを格納します。  
   
  [suspect_pages](../../relational-databases/system-tables/suspect-pages-transact-sql.md)  
- 824 エラーで失敗したページごとに 1 行のデータを格納します (最大 1,000 行)。  
+ (最大 1,000 行) の 824 エラーで失敗したページごとに 1 行が含まれています。  
   
  [sysopentapes](../../relational-databases/system-tables/sysopentapes-transact-sql.md)  
  現在開いているテープ デバイスごとに 1 行のデータを格納します。  

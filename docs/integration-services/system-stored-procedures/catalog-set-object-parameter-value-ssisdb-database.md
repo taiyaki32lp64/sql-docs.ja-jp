@@ -8,17 +8,20 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: language-reference
 ms.assetid: fb887543-f92f-404d-9495-a1dd23a6716e
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: 19eec5935f79e3adaa136ec3a661f417e7be6dd3
-ms.sourcegitcommit: 3a8293b769b76c5e46efcb1b688bffe126d591b3
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 36d73a0248be0bd8f9a0873e5ae8445ee68af2e4
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/30/2018
-ms.locfileid: "50226294"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71295280"
 ---
-# <a name="catalogsetobjectparametervalue-ssisdb-database"></a>catalog.set_object_parameter_value (SSISDB データベース)
+# <a name="catalogset_object_parameter_value-ssisdb-database"></a>catalog.set_object_parameter_value (SSISDB データベース)
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] カタログのパラメーターの値を設定します。 他の値が割り当てられていない場合は、値を環境変数に関連付けるか、または既定で使用されるリテラル値を割り当てます。  

@@ -15,17 +15,20 @@ f1_keywords:
 helpviewer_keywords:
 - Web Service task [Integration Services]
 ms.assetid: 5c7206f1-7d6a-4923-8dff-3c4912da4157
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: f6dde11eba11acc7e0136c34025e74fead99f9e1
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 343d3d0d16a19e6d7e1610eff84f6e1aa8ff860a
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52502614"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71293799"
 ---
 # <a name="web-service-task"></a>Web サービス タスク
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   Web サービス タスクは、Web サービス メソッドを実行します。 Web サービス タスクは、次の目的で使用できます。  
   
 -   Web サービス メソッドが返す値を変数に書き込みます。 たとえば、Web サービス メソッドから 1 日の最高気温を取得し、その値を使用して、列の値を設定する式で使用する変数を更新できます。  
@@ -82,14 +85,14 @@ ms.locfileid: "52502614"
 ## <a name="web-service-task-editor-general-page"></a>[Web サービス タスク エディター] ([全般] ページ)
   **[Web サービス タスク エディター]** ダイアログ ボックスの **[全般]** ページを使用すると、HTTP 接続マネージャーの指定、Web サービス タスクで使用する WSDL (Web サービス記述言語) ファイルの場所の指定、Web サービス タスクの記述、WSDL ファイルのダウンロードなどの操作を実行できます。  
   
-### <a name="options"></a>[変数]  
+### <a name="options"></a>オプション  
  **[HTTPConnection]**  
  接続マネージャーを一覧から選択するか、\<[**新しい接続...>]** をクリックして新しい接続マネージャーを作成します。  
   
 > [!IMPORTANT]  
 >  HTTP 接続マネージャーでは、匿名認証と基本認証のみがサポートされています。 Windows 認証はサポートされていません。  
   
- **関連項目:**  [HTTP 接続マネージャー](../../integration-services/connection-manager/http-connection-manager.md), 、[[HTTP 接続マネージャー エディター] ([サーバー] ページ)](../../integration-services/connection-manager/http-connection-manager-editor-server-page.md)  
+ **関連トピック:** [HTTP 接続マネージャー](../../integration-services/connection-manager/http-connection-manager.md)、[HTTP 接続マネージャー エディター &#40;[サーバー] ページ&#41;](../../integration-services/connection-manager/http-connection-manager-editor-server-page.md)  
   
  **[WSDLFile]**  
  コンピューターのローカルにある WSDL ファイルの完全修飾パスを入力するか、参照ボタン ( **[...]** ) をクリックしてファイルを指定します。  
@@ -112,7 +115,7 @@ ms.locfileid: "52502614"
   
  **[WSDL のダウンロード]** ボタンを使用して WSDL ファイルをダウンロードする場合は、この値を **True**に設定します。  
   
- **名前**  
+ **[名前]**  
  Web サービス タスクの一意な名前を指定します。 この名前は、タスク アイコンのラベルとして使用されます。  
   
 > [!NOTE]  
@@ -129,7 +132,7 @@ ms.locfileid: "52502614"
 ## <a name="web-service-task-editor-input-page"></a>[Web サービス タスク エディター] ([入力] ページ)
   **[Web サービス タスク エディター]** ダイアログ ボックスの **[入力]** ページを使用すると、Web サービス、Web メソッド、および Web メソッドの入力値を指定できます。 値を指定するには、[値] 列に直接文字列を入力するか、[値] 列から変数を選択します。  
   
-### <a name="options"></a>[変数]  
+### <a name="options"></a>オプション  
  **サービス**  
  Web メソッドを実行するために使用する Web サービスを一覧から選択します。  
   
@@ -139,10 +142,10 @@ ms.locfileid: "52502614"
  **[WebMethodDocumentation]**  
  Web メソッドの説明を入力するか、参照ボタン ( **[...]** ) をクリックして **[Web メソッド ドキュメント]** ダイアログ ボックスに説明を入力します。  
   
- **名前**  
+ **[名前]**  
  Web メソッドへの入力の名前を一覧表示します。  
   
- **型**  
+ **Type**  
  入力のデータ型を一覧表示します。  
   
 > [!NOTE]  
@@ -172,13 +175,13 @@ ms.locfileid: "52502614"
  **[最近使ったファイル]**  
  ファイル接続マネージャーを一覧から選択するか、\<[**新しい接続...>]** をクリックして新しい接続マネージャーを作成します。  
   
- **関連トピック:** [ファイル接続マネージャー](../../integration-services/connection-manager/file-connection-manager.md)、 [ファイル接続マネージャー エディター](../../integration-services/connection-manager/file-connection-manager-editor.md)  
+ **関連トピック:** [ファイル接続マネージャー](../../integration-services/connection-manager/file-connection-manager.md)、[ファイル接続マネージャー エディター](../../integration-services/connection-manager/file-connection-manager-editor.md)  
   
 #### <a name="outputtype--variable"></a>[OutputType] = [変数]  
  **変数**  
  一覧で変数を選択するか、\<[**新しい変数...>]** をクリックして新しい変数を作成します。  
   
- **関連項目:** [Integration Services (SSIS) の変数](../../integration-services/integration-services-ssis-variables.md)、[変数の追加](https://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5)  
+ **関連トピック:** [Integration Services &#40;SSIS&#41; の変数](../../integration-services/integration-services-ssis-variables.md)、[変数の追加](https://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5)  
   
 ## <a name="related-content"></a>関連コンテンツ  
- technet.microsoft.com のビデオ「 [Web サービス タスクを使用して Web サービスを呼び出す方法 (SQL Server ビデオ)](https://go.microsoft.com/fwlink/?LinkId=259642)」  
+ MSDN ライブラリのビデオ「[Web サービス タスクを使用して Web サービスを呼び出す方法 (SQL Server ビデオ)](https://go.microsoft.com/fwlink/?LinkId=259642) (technet.microsoft.com)  

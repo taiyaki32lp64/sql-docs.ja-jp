@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 140d1517-6f0c-4fc9-9deb-9658982d88ed
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: bafbd9240cb1686f14b50ed5f11dc82c59ba41cd
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: c52e65ffe7d258b3707927b1f996be3a3a5f3dd3
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47760360"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67965176"
 ---
 # <a name="table-object-properties-methods-and-events"></a>Table オブジェクトのプロパティ、メソッド、およびイベント
 ## <a name="propertiescollections"></a>プロパティ/コレクション  
@@ -46,5 +45,5 @@ ms.locfileid: "47760360"
 ## <a name="events"></a>イベント  
  [なし] :  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [Table オブジェクト (ADOX)](../../../ado/reference/adox-api/table-object-adox.md)

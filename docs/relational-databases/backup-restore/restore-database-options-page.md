@@ -12,13 +12,12 @@ f1_keywords:
 ms.assetid: 9a75d48b-c25f-40f3-8ea1-32cfa8211754
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: bbeeb28aced36cf1d80b2a6c4efeba3c614385c0
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: e5fb68197b4347c3b3c2e9c6c7186d28c9c79efa
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53209991"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68041570"
 ---
 # <a name="restore-database-options-page"></a>[データベースの復元] \([オプション] ページ)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -110,7 +109,7 @@ ms.locfileid: "53209991"
   
 -   次のバックアップが完全バックアップまたは差分バックアップの場合は、 **[データベースの復元]** タスクを再度使用します。  
   
--   次のバックアップがファイル バックアップの場合は、**[ファイルおよびファイル グループの復元]** タスクを使用します。 詳細については、「[ファイルとファイル グループの復元 &#40;SQL Server&#41;](../../relational-databases/backup-restore/restore-files-and-filegroups-sql-server.md)」を参照してください。  
+-   次のバックアップがファイル バックアップの場合は、 **[ファイルおよびファイル グループの復元]** タスクを使用します。 詳細については、「[ファイルとファイル グループの復元 &#40;SQL Server&#41;](../../relational-databases/backup-restore/restore-files-and-filegroups-sql-server.md)」を参照してください。  
   
 -   次のバックアップがログ バックアップの場合は、 **[トランザクション ログの復元]** タスクを使用します。 トランザクション ログの復元による復元シーケンスの再開については、「 [トランザクション ログ バックアップの復元 &#40;SQL Server&#41;](../../relational-databases/backup-restore/restore-a-transaction-log-backup-sql-server.md)」を参照してください。  
   

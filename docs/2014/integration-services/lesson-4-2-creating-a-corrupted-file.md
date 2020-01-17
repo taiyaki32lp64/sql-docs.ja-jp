@@ -7,15 +7,15 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: cd0b18dc-66c3-4d88-86ef-8e40cb660fae
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 96690ca99a03c8e6d5cd8c6fefb9760ed3f6e71e
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: fa1bb23843447cc77276a34d5466d417f2a87a05
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53366814"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62767384"
 ---
 # <a name="step-2-creating-a-corrupted-file"></a>手順 2:破損ファイルの作成
   変換エラーの構成と処理を体験するために、コンポーネントの処理が失敗するサンプル フラット ファイルを作成します。  
@@ -61,6 +61,6 @@ ms.locfileid: "53366814"
     >  数値 27 はコンポーネントの ID です。 この値はデータ フローを構築したときに割り当てられるもので、パッケージの値とは異なることがあります。  
   
 ## <a name="next-steps"></a>次の手順  
- [手順 3:エラー フロー リダイレクションの追加](lesson-4-3-adding-error-flow-redirection.md)  
+ [ステップ 3:エラー フロー リダイレクションの追加](lesson-4-3-adding-error-flow-redirection.md)  
   
   

@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: analysis-services
 ms.topic: reference
 helpviewer_keywords:
 - statefulness [XML for Analysis]
@@ -19,12 +17,12 @@ ms.assetid: b83bb3ff-09be-4fda-9d1d-6248e04ffb21
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 4932ca855d753577765cca2f262e1756352dda35
-ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
+ms.openlocfilehash: 3bbd5ef006674a61830bf07de31f73c3915b0d4e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50146237"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62701994"
 ---
 # <a name="managing-connections-and-sessions-xmla"></a>接続およびセッションの管理 (XMLA)
   *状態保持*は id およびコンテキストをメソッド呼び出しの間でのクライアントのサーバーを保持する条件です。 *状態を保持しない*は、サーバーは覚えていない id とクライアントのコンテキスト メソッドの呼び出しが完了したら条件です。  

@@ -6,14 +6,14 @@ ms.prod_service: reporting-services-native
 ms.technology: reporting-services
 ms.topic: conceptual
 ms.assetid: fb0bc38f-dc56-4350-8457-cd135c0346e1
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 7cab15eb6feb4a502957c7e8a1b929601cd6fd1a
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 0516adde38fc7f6e9cc1b4e20bc9beef76a4df22
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52537353"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68222642"
 ---
 # <a name="working-with-paginated-reports-web-portal"></a>ページ分割されたレポートの使用 (Web ポータル)
 
@@ -50,9 +50,9 @@ Web ポータル内のページ分割されたレポートのプロパティを�
     
     ![ssRSWebPortal-manage-report2](../reporting-services/media/ssrswebportal-manage-report2.png)  
   
-## <a name="properties"></a>[プロパティ]  
+## <a name="properties"></a>Properties  
   
-プロパティ画面では、ページ分割されたレポートの **[名前]** と **[説明]** を変更できます。 また、 **[削除]**、 **[移動]**、 **[リンク レポートの作成]**、 **[レポート ビルダーでの編集]**、 **[ダウンロード]** 、または **[置換]** を選択することもできます。  
+プロパティ画面では、ページ分割されたレポートの **[名前]** と **[説明]** を変更できます。 また、 **[削除]** 、 **[移動]** 、 **[リンク レポートの作成]** 、 **[レポート ビルダーでの編集]** 、 **[ダウンロード]** 、または **[置換]** を選択することもできます。  
     
 ![ssRSWebPortal-report-properties](../reporting-services/media/ssrswebportal-report-properties.png)  
    
@@ -79,7 +79,7 @@ Web ポータル内のページ分割されたレポートのプロパティを�
   
     data source=(a SQL Server instance);initial catalog=MyData  
   
-接続文字列は式として構成できます。これにより、データ ソースを実行時に指定することができます。 データ ソースの式は、レポート デザイナーを使用してレポートで定義されます。 データ ソースの式は、Web ポータル上で定義、表示、変更できません。 ただし、**[既定値よりオーバーライド]** をクリックして静的な接続文字列を入力することで、データ ソースの式をオーバーライドすることができます。 式に戻す場合は、 **[既定値に戻す]** をクリックします。 レポート サーバーは、復元する必要がある場合に備えて元の接続文字列を保存します。 データ ソースの式を使用するには、レポートに本来パブリッシュされていたデータ ソース接続情報を使用する必要があります。 共有データ ソースでは、接続文字列の式の使用はサポートされていません。  
+接続文字列は式として構成できます。これにより、データ ソースを実行時に指定することができます。 データ ソースの式は、レポート デザイナーを使用してレポートで定義されます。 データ ソースの式は、Web ポータル上で定義、表示、変更できません。 ただし、 **[既定値よりオーバーライド]** をクリックして静的な接続文字列を入力することで、データ ソースの式をオーバーライドすることができます。 式に戻す場合は、 **[既定値に戻す]** をクリックします。 レポート サーバーは、復元する必要がある場合に備えて元の接続文字列を保存します。 データ ソースの式を使用するには、レポートに本来パブリッシュされていたデータ ソース接続情報を使用する必要があります。 共有データ ソースでは、接続文字列の式の使用はサポートされていません。  
   
 **[資格情報]**  
   

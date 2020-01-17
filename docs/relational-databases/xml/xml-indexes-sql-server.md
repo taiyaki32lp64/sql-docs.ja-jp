@@ -31,15 +31,14 @@ helpviewer_keywords:
 - PROPERTY index
 - XML indexes [SQL Server], creating
 ms.assetid: f5c9209d-b3f3-4543-b30b-01365a5e7333
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: dac012727df032d45674add5016782de3ca6ad6a
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+author: MightyPen
+ms.author: genemi
+ms.openlocfilehash: b9cfd2d1e81d3778653a59b697dc740680169071
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51669911"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68096914"
 ---
 # <a name="xml-indexes-sql-server"></a>XML インデックス (SQL Server)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -95,11 +94,11 @@ WHERE CatalogDescription.exist ('/PD:ProductDescription/@ProductModelID[.="19"]'
   
 -   ベース テーブルの主キー。 ベース テーブルとの逆結合のため、ベース テーブルの主キーがプライマリ XML インデックスにコピーされます。ベース テーブルの主キーの最大列数は 15 です。  
   
- このノード情報は、指定されたクエリに対して XML の結果を評価し構築するために使用されます。 最適化のために、タグ名とノード型の情報は整数値でエンコードされるので、パス列でも同じエンコードを使用します。 また、パスのサフィックスが既知の場合にのみパスを照合できるように、パスは逆の順序で格納されます。 例 :  
+ このノード情報は、指定されたクエリに対して XML の結果を評価し構築するために使用されます。 最適化のために、タグ名とノード型の情報は整数値でエンコードされるので、パス列でも同じエンコードを使用します。 また、パスのサフィックスが既知の場合にのみパスを照合できるように、パスは逆の順序で格納されます。 例:  
   
 -   `//ContactRecord/PhoneNumber` 最後の 2 つのロケーション ステップだけが既知です。  
   
- スイッチまたは  
+ OR  
   
 -   `/Book/*/Title` 式の中間でワイルドカード文字 (`*`) が指定されています。  
   
@@ -143,7 +142,7 @@ USE AdventureWorks2012;SELECT InstructionsFROM Production.ProductModel WHERE Pro
   
 -   `/root/Location` パスだけを指定しています。  
   
- スイッチまたは  
+ OR  
   
 -   `/root/Location/@LocationID[.="10"]` パスとノード値の両方を指定しています。  
   

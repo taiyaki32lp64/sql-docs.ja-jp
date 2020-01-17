@@ -15,11 +15,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 909db99964faaf2fc3aec8196db929bf61fc7c09
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52808064"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63023495"
 ---
 # <a name="lockcancel-event-class"></a>Lock:Cancel イベント クラス
   **Lock:Cancel** イベント クラスは、クエリの取り消しなどにより、リソースのロックの取得が取り消されたことを示します。  
@@ -49,7 +49,7 @@ ms.locfileid: "52808064"
 |**Exchange Spill**|`int`|ロックが取り消されたオブジェクトの ID (使用可能かつ適用可能な場合)。|22|はい|  
 |**ObjectID2**|`bigint`|関連するオブジェクトまたはエンティティの ID (使用可能かつ適用可能な場合)。|56|はい|  
 |**OwnerID**|`int`|1 = TRANSACTION<br /><br /> 2 = CURSOR<br /><br /> 3 = SESSION<br /><br /> 4 = SHARED_TRANSACTION_WORKSPACE<br /><br /> 5 = EXCLUSIVE_TRANSACTION_WORKSPACE|58|はい|  
-|**RequestID**|`int`|ステートメントが含まれている要求の ID。|49|はい|  
+|**RequestID**|`int`|ステートメントが含まれている要求の ID。|49|[はい]|  
 |**ServerName**|`nvarchar`|トレースされている [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスの名前。|26|いいえ|  
 |**SessionLoginName**|`nvarchar`|セッションを開始したユーザーのログイン名。 たとえば、Login1 を使用して [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] に接続し、Login2 でステートメントを実行すると、 **SessionLoginName** には Login1 が表示され、 **LoginName** には Login2 が表示されます。 この列には、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ログインと Windows ログインの両方が表示されます。|64|はい|  
 |**SPID**|`int`|イベントが発生したセッションの ID。|12|はい|  
@@ -58,7 +58,7 @@ ms.locfileid: "52808064"
 |**TransactionID**|`bigint`|システムによって割り当てられたトランザクション ID。|4|はい|  
 |**型**|`int`|1 = NULL_RESOURCE<br /><br /> 2 = DATABASE<br /><br /> 3 = FILE<br /><br /> 5 = OBJECT<br /><br /> 6 = PAGE<br /><br /> 7 = KEY<br /><br /> 8 = EXTENT<br /><br /> 9 = RID<br /><br /> 10 = APPLICATION<br /><br /> 11 = METADATA<br /><br /> 12 = AUTONAMEDB<br /><br /> 13 = HOBT<br /><br /> 14 = ALLOCATION_UNIT|57|はい|  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [sp_trace_setevent &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql)   
  [sys.dm_tran_locks &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql)  
   

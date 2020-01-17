@@ -19,16 +19,15 @@ helpviewer_keywords:
 ms.assetid: 63426d31-7a5c-4378-aa9e-afcf4f64ceb3
 author: VanMSFT
 ms.author: vanto
-manager: craigg
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: 14ee8d172f48640f414bb27d4c600248acac99cb
-ms.sourcegitcommit: 97340deee7e17288b5eec2fa275b01128f28e1b8
+ms.openlocfilehash: c4649a591f7261943d2d5393678f63888930c01f
+ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55420989"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "73982035"
 ---
-# <a name="alter-server-audit--transact-sql"></a>ALTER SERVER AUDIT (TRANSACT-SQL)
+# <a name="alter-server-audit--transact-sql"></a>ALTER SERVER AUDIT (Transact-SQL)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Audit 機能を使用して、サーバー監査オブジェクトを変更します。 詳しくは、「[SQL Server Audit &#40;データベース エンジン&#41;](../../relational-databases/security/auditing/sql-server-audit-database-engine.md)」を参照してください。  
@@ -82,23 +81,23 @@ ALTER SERVER AUDIT audit_name
 > [!IMPORTANT]
 > Azure SQL Database マネージド インスタンスでは SQL 監査はサーバー レベルで動作し、Azure Blob Storage に `.xel` ファイルを格納します。
   
- FILEPATH **= '**_os\_file\_path_**'**  
+ FILEPATH **= '** _os\_file\_path_ **'**  
  監査記録のパス。 ファイル名は、監査名と監査 GUID に基づいて生成されます。  
   
- MAXSIZE **=**_max\_size_  
+ MAXSIZE **=** _max\_size_  
  監査ファイルのサイズの上限を指定します。 *max_size* の値は、整数の後に **MB**、**GB**、**TB** を付けて指定するか、または **UNLIMITED** を指定します。 *max_size* に指定できる最小サイズは 2 **MB**、最大サイズは 2,147,483,647 **TB** です。 **UNLIMITED** を指定した場合、ファイルはディスクがいっぱいになるまで拡張されます。 2 MB 未満の値を指定すると、MSG_MAXSIZE_TOO_SMALL エラーが発生します。 既定値は **UNLIMITED** です。  
   
- MAX_ROLLOVER_FILES **=**_integer_ | **UNLIMITED**  
+ MAX_ROLLOVER_FILES **=** _integer_ | **UNLIMITED**  
  ファイル システム内に保持するファイルの最大数を指定します。 MAX_ROLLOVER_FILES=0 が設定されている場合、作成されるロールオーバー ファイルの数は制限されません。 既定値は 0 です。 指定できるファイルの最大数は 2,147,483,647 です。  
   
  MAX_FILES =*integer*  
  作成できる監査ファイルの最大数を指定します。 制限に達しても、最初のファイルへのロールオーバーは行われません。 MAX_FILES の制限に達すると、追加の監査イベントを生成させるアクションは失敗し、エラーが発生します。  
-**適用対象**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]  
+**適用対象**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 以降。  
   
  RESERVE_DISK_SPACE **=** { ON | OFF }  
  このオプションは、ディスク上のファイルを MAXSIZE 値に事前に割り当てます。 MAXSIZE が UNLIMITED でない場合にのみ適用されます。 既定値は OFF です。  
   
- QUEUE_DELAY **=**_integer_  
+ QUEUE_DELAY **=** _integer_  
  監査アクションの処理が強制されるまでの経過時間 (ミリ秒) を指定します。 値 0 は同期配信を表します。 クエリ遅延に設定可能な最小値は 1000 (1 秒) で、これが既定値です。 最大値は 2,147,483,647 (2,147,483.647 秒、つまり 24 日、20 時間、31 分、23.647 秒) です。 無効な数値を指定すると、MSG_INVALID_QUEUE_DELAY エラーが発生します。  
   
  ON_FAILURE **=** { CONTINUE | SHUTDOWN | FAIL_OPERATION}  
@@ -112,29 +111,29 @@ SHUTDOWN
   
  FAIL_OPERATION  
  監査イベントを発生させるデータベース アクションを失敗させます。 監査イベントを発生させないアクションは続行できますが、監査イベントを発生させることはできません。 監査はイベントのログ記録を試行し続け、エラー状態が解決されると、記録を再開します。 [!INCLUDE[ssDE](../../includes/ssde-md.md)]へのフル アクセスより、完全な監査の維持の方が重要である場合に、このオプションを使用します。  
- **適用対象**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]   
+ **適用対象**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 以降。   
   
  STATE **=** { ON | OFF }  
- 監査によるレコードの収集を有効または無効にします。 実行中の監査の状態を (ON から OFF に) 変更すると、監査が停止されたこと、監査を停止したプリンシパル、および監査が停止された時間を表す監査エントリが作成されます。  
+ 監査によるレコードの収集を有効または無効にします。 実行中の監査の状態を (ON から OFF に) 変更すると、監査が停止されたこと示す監査エントリ、監査を停止したプリンシパル、および監査が停止された時間が作成されます。  
   
  MODIFY NAME = *new_audit_name*  
  監査の名前を変更します。 他のオプションと組み合わせて使用することはできません。  
   
  predicate_expression  
  イベントを処理する必要があるかどうかを判定するために使用する述語式を指定します。 述語式は 3,000 文字に制限され、これにより文字列引数が制限されます。  
- **適用対象**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]  
+ **適用対象**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 以降。  
   
  event_field_name  
  述語ソースを識別するイベント フィールドの名前を指定します。 監査フィールドについては、「[sys.fn_get_audit_file &#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-get-audit-file-transact-sql.md)」で説明されています。 `file_name` と `audit_file_offset` 以外のすべてのフィールドは、監査できます。  
- **適用対象**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]  
+ **適用対象**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 以降。  
   
  number  
  **decimal** を含む任意の数値型です。 制限として、使用可能な物理メモリの不足、または 64 ビット整数として表すのに大きすぎる数字が挙げられます。  
- **適用対象**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]  
+ **適用対象**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 以降。  
   
  ' string '  
  述語の比較に必要な ANSI 文字列または Unicode 文字列です。 述語比較関数に対しては、暗黙の文字列型変換は行われません。 無効な型を渡すとエラーになります。  
- **適用対象**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]  
+ **適用対象**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 以降。  
   
 ## <a name="remarks"></a>Remarks  
  ALTER AUDIT を呼び出すときは、TO 句、WITH 句、MODIFY NAME 句のうち少なくとも 1 つを指定する必要があります。  
@@ -144,7 +143,9 @@ SHUTDOWN
  監査仕様の追加、変更、および削除は、監査を停止せずに実行できます。  
   
  監査を作成した後で、監査の GUID を変更することはできません。  
-  
+ 
+ **ALTER SERVER AUDIT** ステートメントはユーザー トランザクション内では使用できません。
+ 
 ## <a name="permissions"></a>アクセス許可  
  サーバー監査のプリンシパルを作成、変更、または削除するには、ALTER ANY SERVER AUDIT 権限または CONTROL SERVER 権限を持っている必要があります。  
   

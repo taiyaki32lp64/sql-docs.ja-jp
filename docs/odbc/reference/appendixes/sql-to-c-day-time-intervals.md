@@ -1,5 +1,5 @@
 ---
-title: 'SQL c: から日付と時刻の間隔 |Microsoft Docs'
+title: 'SQL から C へ: 日付と時刻の間隔 |Microsoft Docs'
 ms.custom: ''
 ms.date: 01/19/2019
 ms.prod: sql
@@ -15,15 +15,14 @@ helpviewer_keywords:
 ms.assetid: 8ea84d69-2292-4128-89a0-f184f68abb98
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: ee08f42a4ccd7eb51f45e1654f20e264f80c49d2
-ms.sourcegitcommit: 480961f14405dc0b096aa8009855dc5a2964f177
+ms.openlocfilehash: db39751059d84e4e3a7950acbbbcb7f1a2b0b00d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/22/2019
-ms.locfileid: "54420037"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68056860"
 ---
-# <a name="sql-to-c-day-time-intervals"></a>SQL c: から日付と時刻の間隔
+# <a name="sql-to-c-day-time-intervals"></a>SQL から C へ: 日付と時刻の間隔
 
 日付と時刻の間隔の ODBC SQL データ型の識別子、次に示します。
 
@@ -43,7 +42,7 @@ ms.locfileid: "54420037"
 |C 型識別子|テスト|**TargetValuePtr*|**StrLen_or_IndPtr*|SQLSTATE|  
 |-----------------------|----------|------------------------|----------------------------|--------------|  
 |すべての日付と時刻 C interval 型|末尾のフィールドの部分を切り捨てることができません。<br /><br /> 末尾のフィールドの部分が切り捨てられます<br /><br /> ソースからデータを保持するために十分な大きさが先頭のターゲットの有効桁数です。|データ<br /><br /> 切り捨てられたデータ<br /><br /> 未定義。|データの長さ<br /><br /> データの長さ<br /><br /> 未定義。|n/a<br /><br /> 01S07<br /><br /> 22015|  
-|SQL_C_STINYINT[b] SQL_C_UTINYINT[b] SQL_C_USHORT[b] SQL_C_SHORT[b] SQL_C_SLONG[b] SQL_C_ULONG[b] SQL_C_NUMERIC[b] SQL_C_BIGINT[b]|間隔の有効桁数が 1 つのフィールドとデータを切り捨てることがなく変換されました。<br /><br /> 間隔の有効桁数が 1 つのフィールドと小数部の切り捨て<br /><br /> 間隔の有効桁数が 1 つのフィールドおよび全体が切り捨て<br /><br /> 間隔の有効桁数が 1 つのフィールド|データ<br /><br /> 切り捨てられたデータ<br /><br /> 切り捨てられたデータ<br /><br /> 未定義。|C データ型のサイズ<br /><br /> データの長さ<br /><br /> データの長さ<br /><br /> C データ型のサイズ|n/a<br /><br /> 01S07<br /><br /> 22003<br /><br /> 07006|  
+|[B] [b] [b] [b] [b] [b] [b] [b] SQL_C_BIGINT SQL_C_NUMERIC SQL_C_ULONG SQL_C_SLONG SQL_C_SHORT SQL_C_USHORT SQL_C_UTINYINT SQL_C_STINYINT|間隔の有効桁数が 1 つのフィールドとデータを切り捨てることがなく変換されました。<br /><br /> 間隔の有効桁数が 1 つのフィールドと小数部の切り捨て<br /><br /> 間隔の有効桁数が 1 つのフィールドおよび全体が切り捨て<br /><br /> 間隔の有効桁数が 1 つのフィールド|データ<br /><br /> 切り捨てられたデータ<br /><br /> 切り捨てられたデータ<br /><br /> 未定義。|C データ型のサイズ<br /><br /> データの長さ<br /><br /> データの長さ<br /><br /> C データ型のサイズ|n/a<br /><br /> 01S07<br /><br /> 22003<br /><br /> 07006|  
 |SQL_C_BINARY|データのバイト長 < = *BufferLength*<br /><br /> データのバイト長 > *BufferLength*|データ<br /><br /> 未定義。|データの長さ<br /><br /> 未定義。|n/a<br /><br /> 22003|  
 |SQL_C_CHAR|バイトの長さを文字 < *BufferLength*<br /><br /> (ではなく小数部) 全体の桁数 < *BufferLength*<br /><br /> (ではなく小数部) 全体の桁数 > = *BufferLength*|データ<br /><br /> 切り捨てられたデータ<br /><br /> 未定義。|C データ型のサイズ<br /><br /> C データ型のサイズ<br /><br /> 未定義。|n/a<br /><br /> 01004<br /><br /> 22003|  
 |SQL_C_WCHAR|文字長 < *BufferLength*<br /><br /> (ではなく小数部) 全体の桁数 < *BufferLength*<br /><br /> (ではなく小数部) 全体の桁数 > = *BufferLength*|データ<br /><br /> 切り捨てられたデータ<br /><br /> 未定義。|C データ型のサイズ<br /><br /> C データ型のサイズ<br /><br /> 未定義。|n/a<br /><br /> 01004<br /><br /> 22003|  

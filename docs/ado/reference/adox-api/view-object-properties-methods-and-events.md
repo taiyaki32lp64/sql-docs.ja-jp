@@ -12,16 +12,15 @@ helpviewer_keywords:
 ms.assetid: 02b5ba88-cacd-4a68-881b-974824ea4a04
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 6b0281821ff073b09de1158b9c88ec126702b5db
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 01ddab58c594991cf38fb6da66dc2b77692c3daa
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47822122"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67964817"
 ---
 # <a name="view-object-properties-methods-and-events"></a>View オブジェクトのプロパティ、メソッド、およびイベント
-## <a name="properties"></a>[プロパティ]  
+## <a name="properties"></a>Properties  
  [Command プロパティ](../../../ado/reference/adox-api/command-property-adox.md)  
   
  [DateCreated プロパティ](../../../ado/reference/adox-api/datecreated-property-adox.md)  
@@ -36,5 +35,5 @@ ms.locfileid: "47822122"
 ## <a name="events"></a>イベント  
  [なし] :  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [View オブジェクト (ADOX)](../../../ado/reference/adox-api/view-object-adox.md)

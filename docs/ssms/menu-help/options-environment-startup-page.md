@@ -5,21 +5,20 @@ ms.prod: sql
 ms.prod_service: sql-tools
 ms.technology: ssms
 ms.topic: conceptual
-author: stevestein
-ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 87de35c23a89e49f376b41676462dd275f676871
-ms.sourcegitcommit: a2be75158491535c9a59583c51890e3457dc75d6
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 80fff1e8db1fb9dabe6ed12d425bd844e954dac9
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/07/2018
-ms.locfileid: "51269466"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68257275"
 ---
 # <a name="options-environment---startup-page"></a>[オプション] ([環境] - [スタートアップ] ページ)
 
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
-**[オプション]** ダイアログ ボックスを使用すると、[!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] スタートアップ アクション、全般的なウィンドウ管理オプション、およびその他の全般設定を構成できます。 **[ツール]** メニューの **[オプション]** をクリックし、**[環境]** フォルダーを展開して **[スタートアップ]** をクリックします。
+**[オプション]** ダイアログ ボックスを使用すると、[!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] スタートアップ アクション、全般的なウィンドウ管理オプション、およびその他の全般設定を構成できます。 **[ツール]** メニューの **[オプション]** をクリックし、 **[環境]** フォルダーを展開して **[スタートアップ]** をクリックします。
 
 ## <a name="uielement-list"></a>UI 要素の一覧
 
@@ -31,7 +30,7 @@ ms.locfileid: "51269466"
 
 - **[新しいクエリ ウィンドウを開く]** 。接続を要求してから SQL クエリ エディターを開きます。
 
-- **[オブジェクト エクスプローラーとクエリ ウィンドウを開く]**。接続を要求してから、その接続を使用してオブジェクト エクスプローラーおよび SQL クエリ エディターの両方を開きます。
+- **[オブジェクト エクスプローラーとクエリ ウィンドウを開く]** 。接続を要求してから、その接続を使用してオブジェクト エクスプローラーおよび SQL クエリ エディターの両方を開きます。
 
 - **[オブジェクト エクスプローラーと利用状況モニターを開く]**
 

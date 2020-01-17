@@ -11,11 +11,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: b18f9c9979121856fc04941438b9e7ce7d461fc8
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53349298"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68207012"
 ---
 # <a name="send-blob-data-to-sql-server-using-irowsetfastload-and-isequentialstream-ole-db"></a>IROWSETFASTLOAD と ISEQUENTIALSTREAM を使用した SQL SERVER への BLOB データの送信 (OLE DB)
   このサンプルでは、IRowsetFastLoad を使用して可変長の BLOB データを行ごとにストリーミングする方法について説明します。  
@@ -24,7 +24,7 @@ ms.locfileid: "53349298"
   
  ソース コードで #define USE_ISEQSTREAM のコメント化を解除した場合、このサンプルでは ISequentialStream が使用されます。 サンプルにストリームの実装を定義すると、MAX_BLOB を変更するだけであらゆるサイズの BLOB データを送信できます。 ストリーム データの場合、メモリ容量に合わせる必要も、1 ブロックにする必要もありません。 このプロバイダーを呼び出すには、IRowsetFastLoad::InsertRow を使用します。 IRowsetFastLoad::InsertRow を使用して、ストリームから読み出すことができるデータ量と一緒に、ポインターをデータ バッファー (rgBinding.obValue オフセット) のストリームの実装に渡します。 プロバイダーによっては、バインドするときにデータの長さを渡す必要がない場合があります。 その場合は、バインドから長さを省略できます。  
   
- サンプルでは、プロバイダーにデータを書き込む、プロバイダーのストリーム インターフェイスを使用しません。 代わりに、プロバイダーがデータを読み出すために使用するストリーム オブジェクトにポインターを渡します。 通常、Microsoft のプロバイダー (SQLOLEDB および SQLNCLI) では、すべてのデータを処理するまでオブジェクトからデータを 1024 バイト単位で読み出します。 SQLOLEDB と SQLNCLI のどちらも、コンシューマーからプロバイダーのストリーム オブジェクトへのデータの書き込みができる完全な実装は備えていません。 プロバイダーのストリーム オブジェクトを使用して送信できるのは、長さ 0 のデータだけです。  
+ このサンプルでは、プロバイダーにデータを書き込む際に、プロバイダーのストリーム インターフェイスを使用しません。 代わりに、プロバイダーがデータを読み出すために使用するストリーム オブジェクトにポインターを渡します。 通常、Microsoft のプロバイダー (SQLOLEDB および SQLNCLI) では、すべてのデータを処理するまでオブジェクトからデータを 1024 バイト単位で読み出します。 SQLOLEDB と SQLNCLI のどちらも、コンシューマーからプロバイダーのストリーム オブジェクトへのデータの書き込みができる完全な実装は備えていません。 プロバイダーのストリーム オブジェクトを使用して送信できるのは、長さ 0 のデータだけです。  
   
  コンシューマーに実装された ISequentialStream オブジェクトは、行セット データ (IRowsetChange::InsertRow、IRowsetChange::SetData) と共に使用できます。DBTYPE_IUNKNOWN としてパラメーターをバインドすることで、パラメーターとも共に使用できます。  
   

@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: e770c2f2-52b9-4471-a207-0d35df41399c
 author: Shamikg
 ms.author: Shamikg
-manager: craigg
-ms.openlocfilehash: 6cca10f2a54a70e91e46bb8b98e9799885b5f175
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 8680685640b234e47f6e68d7fb802fc7e2f5d81c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51671722"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68029023"
 ---
 # <a name="installing-ssma--for-sybase-client-sybasetosql"></a>SSMA for Sybase クライアントのインストール (SybaseToSQL)
 Sybase Adaptive Server Enterprise (ASE) のデータベース サーバーとのインスタンスへの接続に使用されるプログラム ファイルから成る SSMA クライアント[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]または Azure SQL DB、ASE データベース オブジェクトを変換[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]または Azure SQL DB の構文、読み込み、オブジェクトに[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]または Azure SQL DB へのデータを移行および[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]または Azure SQLDB します。  

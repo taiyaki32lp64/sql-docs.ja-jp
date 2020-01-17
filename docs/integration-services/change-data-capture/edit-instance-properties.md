@@ -8,17 +8,20 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: e7d6b164-b14a-4c2b-b8ad-0d4fe1f329f4
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: f3a47492ab278ec37480eb3e533803626e94fff9
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: f1e80f153b8bf8b6e5b37ea6dd11811f3994106f
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47687390"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71298806"
 ---
 # <a name="edit-instance-properties"></a>インスタンスのプロパティの編集
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   プロパティ エディターを使用すると、初期構成を作成した後に CDC インスタンスを変更することができます。 プロパティ エディターでは、次の操作を実行できます。  
   
 -   [Oracle データベースのプロパティの編集](../../integration-services/change-data-capture/edit-the-oracle-database-properties.md)  
@@ -43,7 +46,7 @@ ms.locfileid: "47687390"
   
      左ペインでサービスを右クリックし、 **[プロパティ]** をクリックすることもできます。  
   
-### <a name="or"></a>スイッチまたは  
+### <a name="or"></a>OR  
   
 1.  CDC デザイナー コンソールの左側のペインで、操作するサービスを選択します。  
   

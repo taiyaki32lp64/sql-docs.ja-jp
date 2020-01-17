@@ -1,5 +1,5 @@
 ---
-title: 要素 (DTA) データベースの名前を付けます |Microsoft Docs
+title: Database の Name 要素 (DTA) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -12,15 +12,14 @@ dev_langs:
 helpviewer_keywords:
 - Name element
 ms.assetid: e871c4fa-3b57-46cf-b4f8-e3be86f92dc4
-author: stevestein
-ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 1a183ba4c5ab5bf3698ecf421899d00a70c746ef
-ms.sourcegitcommit: 0f7cf9b7ab23df15624d27c129ab3a539e8b6457
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: b86c6a16dc8bf86e02a8d4d30170077e63fb85af
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51291138"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68034731"
 ---
 # <a name="name-element-for-database-dta"></a>Database の Name 要素 (DTA)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

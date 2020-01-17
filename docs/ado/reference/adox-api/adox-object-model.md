@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 31c0781c-96c8-4460-90ea-134066154fc7
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 334f96c221e87188bc830c868170852d690e3269
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ad9942121c6b6173e773cc601f33b572a58512d6
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47718940"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67928536"
 ---
 # <a name="adox-object-model"></a>ADOX オブジェクト モデル
 次の図は、オブジェクトの表現方法と ADOX に関連する方法を示しています。 特定のオブジェクトまたはコレクションの詳細については、特定のリファレンス トピック、または[ADOX オブジェクト](../../../ado/reference/adox-api/adox-objects.md)や[ADOX コレクション](../../../ado/reference/adox-api/adox-collections.md)を参照してください。  
@@ -27,7 +26,7 @@ ms.locfileid: "47718940"
   
  各[テーブル](../../../ado/reference/adox-api/table-object-adox.md)、[インデックス](../../../ado/reference/adox-api/index-object-adox.md)、そして[列](../../../ado/reference/adox-api/column-object-adox.md)オブジェクトも標準 ADO[プロパティ](../../../ado/reference/ado-api/properties-collection-ado.md)コレクションを備えています。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [ADOX の API リファレンス](../../../ado/reference/adox-api/adox-api-reference.md)   
  [ADOX のコード例](../../../ado/reference/adox-api/adox-code-examples.md)   
  [ADOX のコレクション](../../../ado/reference/adox-api/adox-collections.md)   

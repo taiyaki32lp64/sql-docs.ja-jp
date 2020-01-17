@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: d346a64e-a32c-4153-a40f-5b53c2f57ef2
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 50e3e733a4ddd4855da2ea7722407e5f061eee47
-ms.sourcegitcommit: bfa10c54e871700de285d7f819095d51ef70d997
+ms.openlocfilehash: 70263b98f6b0e933f8b14fbfa74428c77317f462
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/14/2019
-ms.locfileid: "54255797"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68087805"
 ---
 # <a name="types-of-applications"></a>アプリケーションの種類
 ODBC アプリケーションは、次のように分類できます。  
@@ -52,7 +51,7 @@ ODBC アプリケーションは、次のように分類できます。
   
 -   **純粋な ODBC 3.0 アプリケーション**32 ビット アプリケーションです。  
   
-    -   3.0 のヘッダーと共にコンパイルされます。  
+    -   3\.0 のヘッダーと共にコンパイルされます。  
   
     -   場合によっては非推奨のものも含めて、すべての ODBC 3.0 関数を呼び出します。  
   

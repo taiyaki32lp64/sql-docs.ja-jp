@@ -10,15 +10,14 @@ ms.topic: language-reference
 dev_langs:
 - TSQL
 ms.assetid: 764d8f91-957b-4037-997b-a9b6b533c504
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: b2e6e7d28fb4b04b61c1cd1cf5877d231f220e76
-ms.sourcegitcommit: 5ef24b3229b4659ede891b0af2125ef22bd94b96
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: ff16ec709e8ed3cf7e0d6a4b129641d1e553a11a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/06/2019
-ms.locfileid: "55759945"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68072294"
 ---
 # <a name="-scope-resolution-transact-sql"></a>::(スコープ解決) (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -39,5 +38,5 @@ PRINT @hid.ToString();
  `/`  
   
 ## <a name="see-also"></a>参照  
- [演算子 (&) #40 です。TRANSACT-SQL と #41 です。](../../t-sql/language-elements/operators-transact-sql.md)  
+ [演算子 &#40;Transact-SQL&#41;](../../t-sql/language-elements/operators-transact-sql.md)  
  

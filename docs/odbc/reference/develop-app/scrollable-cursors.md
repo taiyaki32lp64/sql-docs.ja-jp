@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 2c8a5f50-9b37-452f-8160-05f42bc4d97e
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 80be6994c7094b365bc24dd135bdda6ec4e561ab
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 38eb4c8e5cc859297a36115ba5cc6dd2c0529304
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52513481"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68061614"
 ---
 # <a name="scrollable-cursors"></a>スクロール可能なカーソル
 最新のスクリーン ベースのアプリケーションでは、ユーザーは、データを前後をスクロールします。 このようなアプリケーションでは、問題は、以前にフェッチした行を返します。 1 つの方法としてを終了し、カーソルを閉じて、カーソルが必要な行に達するまで行をフェッチします。 結果セットを読み取り、ローカルにキャッシュ、およびアプリケーションでのスクロールを実装する可能性もあることです。 両方の可能性が、小さな結果セットにのみ使用して、後者の可能性としては実装も困難です。 優れたソリューションが使用するには、*スクロール可能なカーソル、* 後ろに移動し、結果セットに転送することができます。  

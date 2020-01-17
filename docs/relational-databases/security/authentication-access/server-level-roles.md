@@ -22,14 +22,13 @@ helpviewer_keywords:
 ms.assetid: 7adf2ad7-015d-4cbe-9e29-abaefd779008
 author: VanMSFT
 ms.author: vanto
-manager: craigg
 monikerRange: '>=aps-pdw-2016||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 5225b335cc028397f63cb930b07e8781ce0d8454
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: 239e2d3f2475738044e4c3644f734fdbb6a0eafb
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53213711"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68116787"
 ---
 # <a name="server-level-roles"></a>サーバー レベルのロール
 [!INCLUDE[appliesto-ss-xxxx-xxxx-pdw-md](../../../includes/appliesto-ss-xxxx-xxxx-pdw-md.md)]
@@ -53,7 +52,7 @@ ms.locfileid: "53213711"
 |**serveradmin**|**serveradmin** 固定サーバー ロールのメンバーは、サーバー全体の構成オプションを変更したり、サーバーをシャットダウンしたりできます。|  
 |**securityadmin**|**securityadmin** 固定サーバー ロールのメンバーは、ログインとログインのプロパティを管理します。 サーバー レベルの権限を `GRANT`、`DENY`、`REVOKE` することができます。 また、データベースにアクセスできる場合は、データベース レベルの権限も `GRANT`、`DENY`、`REVOKE` できます。 また、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ログインのパスワードをリセットできます。<br /><br /> **重要:** セキュリティ管理者は、[!INCLUDE[ssDE](../../../includes/ssde-md.md)]へのアクセスを許可する権限およびユーザー権限を構成する権限を使用して、ほとんどのサーバー権限を割り当てることができます。 **securityadmin** ロールは、 **sysadmin** ロールと同等のものとして扱う必要があります。|  
 |**processadmin**|**processadmin** 固定サーバー ロールのメンバーは、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] のインスタンス内で実行中のプロセスを終了できます。|  
-|**setupadmin**|**setupadmin** 固定サーバー ロールのメンバーは、[!INCLUDE[tsql](../../../includes/tsql-md.md)] ステートメントを使用して、リンク サーバーを追加および削除できます  (**sysadmin** メンバーシップは、[!INCLUDE[ssManStudio](../../../includes/ssmanstudio-md.md)] を使用するときに必要になります)。|  
+|**setupadmin**|**setupadmin** 固定サーバー ロールのメンバーは、[!INCLUDE[tsql](../../../includes/tsql-md.md)] ステートメントを使用して、リンク サーバーを追加および削除できます (**sysadmin** メンバーシップは、[!INCLUDE[ssManStudio](../../../includes/ssmanstudio-md.md)] を使用するときに必要になります)。|  
 |**bulkadmin**|**bulkadmin** 固定サーバー ロールのメンバーは、`BULK INSERT` ステートメントを実行できます。|  
 |**diskadmin**|**diskadmin** 固定サーバー ロールは、ディスク ファイルを管理するために使用します。|  
 |**dbcreator**|**dbcreator** 固定サーバー ロールのメンバーは、任意のデータベースを作成、変更、削除、および復元できます。|  
@@ -64,7 +63,7 @@ ms.locfileid: "53213711"
 ![fixed_server_role_permissions](../../../relational-databases/security/authentication-access/media/permissions-of-server-roles.png)   
   
 > [!IMPORTANT]  
->  **CONTROL SERVER** 権限は **sysadmin** 固定サーバー ロールと似ていますが、同じではありません。 権限があることはロールのメンバーシップを意味せず、ロールのメンバーシップによって権限は付与されません。 (例: **CONTROL SERVER** は **sysadmin** 固定サーバー ロールのメンバーシップを意味しません)。ただし、ロールと同等の権限の間で借用が可能な場合があります。 ほとんどの **DBCC** コマンドと多くのシステム プロシージャには、**sysadmin** 固定サーバー ロールのメンバーシップが必要です。 **sysadmin** メンバーシップを必要とする 171 のシステム ストアド プロシージャの一覧については、Andreas Wolter によるブログ投稿「 [CONTROL SERVER と sysadmin/sa: 権限、システム プロシージャ、DBCC、自動スキーマ作成、および特権のエスカレーション - 注意](https://www.insidesql.org/blogs/andreaswolter/2013/08/control-server-vs-sysadmin-sa-permissions-privilege-escalation-caveats)」を参照してください。  
+>  **CONTROL SERVER** 権限は **sysadmin** 固定サーバー ロールと似ていますが、同じではありません。 権限があることはロールのメンバーシップを意味せず、ロールのメンバーシップによって権限は付与されません。 (例: **CONTROL SERVER** は **sysadmin** 固定サーバー ロールのメンバーシップを意味しません)。ただし、ロールと同等の権限の間で借用が可能な場合があります。 ほとんどの **DBCC** コマンドと多くのシステム プロシージャには、**sysadmin** 固定サーバー ロールのメンバーシップが必要です。 **sysadmin** メンバーシップを必要とする 171 のシステム ストアド プロシージャの一覧については、Andreas Wolter によるブログ投稿「 [CONTROL SERVER と sysadmin/sa: 権限、システム プロシージャ、DBCC、自動スキーマ作成、および特権のエスカレーション - 注意](http://andreas-wolter.com/en/control-server-vs-sysadmin-sa/)」を参照してください。  
   
 ## <a name="server-level-permissions"></a>サーバーレベルの権限  
  ユーザー定義のサーバー ロールに追加できるのは、サーバー レベルの権限のみです。 サーバー レベルの権限の一覧を表示するには、次のステートメントを実行します。 サーバー レベルの権限は、次のとおりです。  

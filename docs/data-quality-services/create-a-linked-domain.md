@@ -1,6 +1,5 @@
 ---
-title: リンク ドメインの作成 | Microsoft Docs
-ms.custom: ''
+title: リンク ドメインの作成
 ms.date: 11/08/2011
 ms.prod: sql
 ms.prod_service: data-quality-services
@@ -10,15 +9,14 @@ ms.topic: conceptual
 f1_keywords:
 - sql13.dqs.kb.linkeddomain.f1
 ms.assetid: fd99d422-c53d-4d7c-9cdd-303c703683b6
-author: leolimsft
-ms.author: lle
-manager: craigg
-ms.openlocfilehash: 231c1111dbdb6a56419c25d5f467c2813156780a
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
-ms.translationtype: HT
+author: swinarko
+ms.author: sawinark
+ms.openlocfilehash: 3ebd6ca2702c902d25f7a73539017bd0540cc3d4
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56022091"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75252252"
 ---
 # <a name="create-a-linked-domain"></a>リンク ドメインの作成
 
@@ -37,36 +35,41 @@ ms.locfileid: "56022091"
   
  たとえば、Customer First Name、Customer Last Name、および Father's First Name というフィールドを含むレコードがあるとします。 顧客の名と父親の名の両方を First Name ドメインにマップし、First Name ドメインと Last Name ドメインを Full Name 複合ドメインに含めるとすると、 姓がない複合ドメインに父親の名を追加することが問題になります。 この場合は、2 つの名のフィールドのそれぞれをドメインにリンクし、その 2 つのドメインをリンクすると、Customer First Name ドメインだけを Full Name 複合ドメインに追加し、Father's First Name フィールドは複合ドメインに追加しないようにすることができます。このようにすると、Father's First Name を複合ドメインに追加せずに済みます。  
   
-##  <a name="BeforeYouBegin"></a> はじめに  
+##  <a name="BeforeYouBegin"></a>開始する前に  
   
-###  <a name="Prerequisites"></a> 前提条件  
+###  <a name="Prerequisites"></a>応募  
  リンク ドメインを作成するには、ナレッジ ベースとリンク先の既存のドメインが必要です。  
   
-###  <a name="Security"></a> セキュリティ  
+###  <a name="Security"></a>保護  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a>許可  
  リンク ドメインを作成するには、DQS_MAIN データベースの dqs_kb_editor ロールまたは dqs_administrator ロールが必要です。  
   
-##  <a name="Create"></a> リンク ドメインの作成  
+##  <a name="Create"></a>リンクドメインの作成  
   
-1.  [!INCLUDE[ssDQSInitialStep](../includes/ssdqsinitialstep-md.md)]「[Data Quality Client アプリケーションの実行](../data-quality-services/run-the-data-quality-client-application.md)」をご覧ください。  
+1.  [!INCLUDE[ssDQSInitialStep](../includes/ssdqsinitialstep-md.md)][Data Quality Client アプリケーションを実行](../data-quality-services/run-the-data-quality-client-application.md)します。  
   
-2.  [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] のホーム画面で、ナレッジ ベースを開くか作成します。 アクティビティとして **[ドメイン管理]** を選択した後に、 **[開く]** または **[作成]** をクリックします。 詳細については、「 [ナレッジ ベースの作成](../data-quality-services/create-a-knowledge-base.md) 」または「 [ナレッジ ベースを開く](../data-quality-services/open-a-knowledge-base.md)」を参照してください。  
+2.  
+  [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] のホーム画面で、ナレッジ ベースを開くか作成します。 アクティビティとして **[ドメイン管理]** を選択した後に、 **[開く]** または **[作成]** をクリックします。 詳細については、「 [ナレッジ ベースの作成](../data-quality-services/create-a-knowledge-base.md) 」または「 [ナレッジ ベースを開く](../data-quality-services/open-a-knowledge-base.md)」を参照してください。  
   
-3.  **[ドメイン管理]** ページの **[ドメイン リスト]** から、新しいドメインをリンクするドメインを右クリックし、 **[リンク ドメインの作成]** をクリックします。  
+3.  
+  **[ドメイン管理]** ページの **[ドメイン リスト]** から、新しいドメインをリンクするドメインを右クリックし、 **[リンク ドメインの作成]** をクリックします。  
   
     > [!NOTE]  
     >  リンク ドメインを作成するための専用のアイコンはありません。 この操作は、コンテキスト メニューのコマンドでのみ実行できます。  
   
-4.  **[ドメインの作成]** ダイアログ ボックスで、ナレッジ ベースに一意の名前と 256 文字までの説明を入力します。 リンク先のドメインの名前が正しいことを確認します。  
+4.  
+  **[ドメインの作成]** ダイアログ ボックスで、ナレッジ ベースに一意の名前と 256 文字までの説明を入力します。 リンク先のドメインの名前が正しいことを確認します。  
   
-5.  **[OK]** をクリックしてリンク ドメインの作成を完了します。  
+5.  
+  **[OK]** をクリックしてリンク ドメインの作成を完了します。  
   
 6.  必要に応じて、リンク ドメインの名前や説明を [ドメインのプロパティ] タブで変更できます。  
   
-7.  **[完了]** をクリックし、「 [ドメイン管理アクティビティの終了](https://msdn.microsoft.com/library/ab6505ad-3090-453b-bb01-58435e7fa7c0)」の説明に従ってドメイン管理アクティビティを完了します。  
+7.  
+  **[完了]** をクリックし、「 [ドメイン管理アクティビティの終了](https://msdn.microsoft.com/library/ab6505ad-3090-453b-bb01-58435e7fa7c0)」の説明に従ってドメイン管理アクティビティを完了します。  
   
-##  <a name="Map"></a> Map two fields to linked domains  
+##  <a name="Map"></a>リンクドメインに2つのフィールドをマップする  
   
 1.  ナレッジ検出アクティビティでナレッジ ベースを開き、データベースとテーブルまたはビューにナレッジ ベースをマップします。  
   
@@ -76,10 +79,10 @@ ms.locfileid: "56022091"
   
 4.  [ドメインの作成] ダイアログ ボックスで、ドメインの名前と説明を入力し、[OK] をクリックします。  
   
-##  <a name="FollowUp"></a>補足情報: リンク ドメインの作成後  
+##  <a name="FollowUp"></a>補足情報: リンクドメインを作成した後  
  リンク ドメインを作成した後、ドメインで他のドメイン管理タスクを実行したり、ナレッジ検出を実行してナレッジをドメインに追加したり、照合ポリシーをドメインに追加することができます。 詳しくは、「[ナレッジ検出の実行](../data-quality-services/perform-knowledge-discovery.md)」、「[ドメインの管理](../data-quality-services/managing-a-domain.md)」、または「[照合ポリシーの作成](../data-quality-services/create-a-matching-policy.md)」をご覧ください。  
   
-##  <a name="Behavior"></a> リンク ドメインの動作  
+##  <a name="Behavior"></a>リンクドメインの動作  
  リンク ドメインの設定については、以下の変更が可能です。  
   
 -   リンク ドメインの名前と説明を変更することができます。  

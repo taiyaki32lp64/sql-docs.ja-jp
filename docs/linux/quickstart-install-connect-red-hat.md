@@ -1,175 +1,174 @@
 ---
-title: Red Hat Enterprise Linux 上の SQL Server の概要します。
+title: RHEL:Linux 上に SQL Server をインストールする
 titleSuffix: SQL Server
-description: このクイック スタートでは、Red Hat Enterprise Linux に SQL Server 2017 または SQL Server 2019 インストール作成し、sqlcmd でデータベースをクエリする方法を示します。
-author: rothja
-ms.author: jroth
-manager: craigg
-ms.date: 07/16/2018
+description: このクイックスタートでは、Red Hat Enterprise Linux (RHEL) に SQL Server 2017 または SQL Server 2019 をインストールしてから、sqlcmd を使用してデータベースを作成してクエリを実行する方法を示します。
+author: VanMSFT
+ms.custom: seo-lt-2019
+ms.author: vanto
+ms.date: 11/04/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
-ms.custom: sql-linux, seodec18
 ms.assetid: 92503f59-96dc-4f6a-b1b0-d135c43e935e
-ms.openlocfilehash: 794d241773addc5584869eaa2e05cfa316908ce1
-ms.sourcegitcommit: de8ef246a74c935c5098713f14e9dd06c4733713
-ms.translationtype: MT
+ms.openlocfilehash: b93ea834e890981d3fd45fd999a05ae5b2b68042
+ms.sourcegitcommit: 035ad9197cb9799852ed705432740ad52e0a256d
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53160480"
+ms.lasthandoff: 12/31/2019
+ms.locfileid: "75558439"
 ---
-# <a name="quickstart-install-sql-server-and-create-a-database-on-red-hat"></a>クイック スタート:SQL Server をインストールし、Red Hat でデータベースを作成
+# <a name="quickstart-install-sql-server-and-create-a-database-on-red-hat"></a>クイック スタート:Red Hat に SQL Server をインストールし、データベースを作成する
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
 <!--SQL Server 2017 on Linux-->
 ::: moniker range="= sql-server-linux-2017 || = sql-server-2017"
 
-このクイック スタートでインストールする SQL Server 2017 または SQL Server 2019 の Red Hat Enterprise Linux (RHEL) 7.3 以降。 接続して**sqlcmd**最初のデータベースを作成し、クエリを実行します。
+このクイックスタートでは、Red Hat Enterprise Linux (RHEL) に SQL Server 2017 または SQL Server 2019 をインストールします。 次に、**sqlcmd** と接続して最初のデータベースを作成し、クエリを実行します。
 
 ::: moniker-end
 <!--SQL Server 2019 on Linux-->
 ::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 || =sqlallproducts-allversions"
 
-このクイック スタートで SQL Server 2019 プレビューにで Red Hat Enterprise Linux (RHEL) 7.3 以降をインストールします。 接続して**sqlcmd**最初のデータベースを作成し、クエリを実行します。
+このクイックスタートでは、Red Hat Enterprise Linux (RHEL) 7.3+ に SQL Server 2019 をインストールします。 次に、**sqlcmd** と接続して最初のデータベースを作成し、クエリを実行します。
 
 ::: moniker-end
 
 > [!TIP]
-> このチュートリアルでは、ユーザー入力と、インターネット接続が必要です。 [無人](sql-server-linux-setup.md#unattended) または [オフライン](sql-server-linux-setup.md#offline) インストール手順に興味のある場合、[Linux 上の SQL Server のインストールのガイダンス](sql-server-linux-setup.md) を参照してください。
+> このチュートリアルには、ユーザー入力とインターネット接続が必要です。 [無人](sql-server-linux-setup.md#unattended)または[オフライン](sql-server-linux-setup.md#offline)のインストール手順について関心をお持ちの場合は、[SQL Server on Linux のインストール ガイダンス](sql-server-linux-setup.md)に関する記事を参照してください。
 
 ## <a name="prerequisites"></a>前提条件
 
-RHEL 7.3 または 7.4 マシンで **少なくとも 2 GB** のメモリが必要です。
+RHEL 7.3、7.4、7.5、7.6 コンピューターには**少なくとも 2 GB** のメモリが必要です。
 
-自分のコンピューターで Red Hat Enterprise Linux をインストールするには[ https://access.redhat.com/products/red-hat-enterprise-linux/evaluation](https://access.redhat.com/products/red-hat-enterprise-linux/evaluation)します。 Azure で RHEL 仮想マシンを作成することもできます。 参照してください[の作成と Azure CLI を使用した Linux Vm の管理](https://docs.microsoft.com/azure/virtual-machines/linux/tutorial-manage-vm)、および使用`--image RHEL`への呼び出しで`az vm create`します。
+自分のコンピューターに Red Hat Enterprise Linux をインストールする方法については、[https://access.redhat.com/products/red-hat-enterprise-linux/evaluation](https://access.redhat.com/products/red-hat-enterprise-linux/evaluation) にお進みください。 Azure で RHEL 仮想マシンを作成することもできます。 「[Azure CLI を使用した Linux VM の作成と管理](https://docs.microsoft.com/azure/virtual-machines/linux/tutorial-manage-vm)」を参照し、`az vm create` の呼び出しで `--image RHEL` を使用します。
 
-CTP または SQL Server 2017 の RC リリースをインストールした場合は、次の手順に従う前に、古いリポジトリを削除する必要があります。 詳細については、次を参照してください。 [Linux の構成リポジトリの SQL Server 2017 と 2019](sql-server-linux-change-repo.md)します。
+SQL Server の CTP または RC リリースを以前インストールしている場合、この手順を行う前に、古いリポジトリを削除する必要があります。 詳細は、[SQL Server 2017 と 2019 に Linux リポジトリを構成する](sql-server-linux-change-repo.md)方法に関するページを参照してください。
 
-その他のシステム要件については、[Linux 上の SQL Server のシステム要件](sql-server-linux-setup.md#system) を参照してください。
+他のシステム要件については、[SQL Server on Linux のシステム要件](sql-server-linux-setup.md#system)に関する記事を参照してください。
 
 <!--SQL Server 2017 on Linux-->
 ::: moniker range="= sql-server-linux-2017 || = sql-server-2017"
 
-## <a id="install"></a>SQL Server をインストールします。
+## <a id="install"></a>SQL Server をインストールする
 
-RHEL で SQL Server を構成するためには、ターミナルで次のコマンドを実行して **mssql サーバー** パッケージをインストールします。
+RHEL 上で SQL Server を構成するには、ターミナルで次のコマンドを実行して **mssql-server** パッケージをインストールします。
 
-1. Microsoft SQL Server 2017 の Red Hat のリポジトリの構成ファイルをダウンロードするには。
+1. Microsoft SQL Server 2017 Red Hat リポジトリ構成ファイルをダウンロードします。
 
    ```bash
    sudo curl -o /etc/yum.repos.d/mssql-server.repo https://packages.microsoft.com/config/rhel/7/mssql-server-2017.repo
    ```
 
    > [!TIP]
-   > SQL Server 2019 を試す場合は、代わりに登録する必要あります、**プレビュー (2019)** リポジトリ。 次のコマンドを使用して、SQL Server 2019 のインストール用。
+   > SQL Server 2019 をインストールする場合は、代わりに SQL Server 2019 リポジトリを登録する必要があります。 SQL Server 2019 のインストールには、次のコマンドを使用します。
    >
    > ```bash
-   > sudo curl -o /etc/yum.repos.d/mssql-server.repo https://packages.microsoft.com/config/rhel/7/mssql-server-preview.repo
+   > sudo curl -o /etc/yum.repos.d/mssql-server.repo https://packages.microsoft.com/config/rhel/7/mssql-server-2019.repo
    > ```
 
-2. SQL Server をインストールするには、次のコマンドを実行します。
+2. 次のコマンドを実行して SQL Server をインストールします。
 
    ```bash
    sudo yum install -y mssql-server
    ```
 
-3. パッケージのインストールが完了したら、**mssql-conf setup** の実行後に、SA パスワードの設定とエディションを選択する指示に従います。
+3. パッケージのインストールが完了したら、**mssql-conf setup** を実行し、プロンプトに従って SA パスワードを設定し、エディションを選択します。
 
    ```bash
    sudo /opt/mssql/bin/mssql-conf setup
    ```
 
    > [!TIP]
-   > 次の SQL Server 2017 エディションのライセンスは自由に。Evaluation、Developer、および高速です。
+   > 次の SQL Server 2017 エディションは無料でライセンスが付与されます。Evaluation、Developer、Express。
 
    > [!NOTE]
-   > SA アカウントは強力なパスワードを指定していることを確認してください。(最小長さが 8 文字で、大文字と小文字のアルファベット、10 進数の数字や英数字以外の記号を含む)。
+   > SA アカウントには必ず強力なパスワードを指定してください (大文字と小文字、10 進数の数字、英数字以外の記号を含む、最小 8 文字の長さ)。
 
-4. 構成を完了したら、サービスが実行されていることを確認します。
+4. 構成が完了したら、サービスが実行されていることを確認します。
 
    ```bash
    systemctl status mssql-server
    ```
 
-5. リモート接続を許可するには、RHEL 上のファイアウォールで SQL Server のポートを開きます。 SQL Server の既定ポートは、TCP 1433 です。 ファイアウォールとして **FirewallD** を使用している場合、次のコマンドを使用することができます。
+5. リモート接続を許可するには、RHEL のファイアウォールで SQL Server ポートを開きます。 既定の SQL Server ポートは TCP 1433 です。 ファイアウォールに **FirewallD** を使用している場合、次のコマンドを使用できます。
 
    ```bash
    sudo firewall-cmd --zone=public --add-port=1433/tcp --permanent
    sudo firewall-cmd --reload
    ```
 
-この時点で、SQL Server はRHEL コンピューター上で実行されており、使用する準備ができました!
+この時点で、SQL Server は RHEL コンピューター上で動作しており、使用する準備ができています。
 
 ::: moniker-end
 <!--SQL Server 2019 on Linux-->
 ::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 || =sqlallproducts-allversions"
 
-## <a id="install"></a>SQL Server をインストールします。
+## <a id="install"></a>SQL Server をインストールする
 
-RHEL で SQL Server を構成するためには、ターミナルで次のコマンドを実行して **mssql サーバー** パッケージをインストールします。
+RHEL 上で SQL Server を構成するには、ターミナルで次のコマンドを実行して **mssql-server** パッケージをインストールします。
 
-1. Microsoft SQL Server 2019 プレビュー Red Hat リポジトリ構成ファイルをダウンロードするには。
+1. Microsoft SQL Server 2019 Red Hat リポジトリ構成ファイルをダウンロードします。
 
    ```bash
-   sudo curl -o /etc/yum.repos.d/mssql-server.repo https://packages.microsoft.com/config/rhel/7/mssql-server-preview.repo
+   sudo curl -o /etc/yum.repos.d/mssql-server.repo https://packages.microsoft.com/config/rhel/7/mssql-server-2019.repo
    ```
 
-2. SQL Server をインストールするには、次のコマンドを実行します。
+2. 次のコマンドを実行して SQL Server をインストールします。
 
    ```bash
    sudo yum install -y mssql-server
    ```
 
-3. パッケージのインストールが完了したら、**mssql-conf setup** の実行後に、SA パスワードの設定とエディションを選択する指示に従います。
+3. パッケージのインストールが完了したら、**mssql-conf setup** を実行し、プロンプトに従って SA パスワードを設定し、エディションを選択します。
 
    ```bash
    sudo /opt/mssql/bin/mssql-conf setup
    ```
 
    > [!NOTE]
-   > SA アカウントは強力なパスワードを指定していることを確認してください。(最小長さが 8 文字で、大文字と小文字のアルファベット、10 進数の数字や英数字以外の記号を含む)。
+   > SA アカウントには必ず強力なパスワードを指定してください (大文字と小文字、10 進数の数字、英数字以外の記号を含む、最小 8 文字の長さ)。
 
-4. 構成を完了したら、サービスが実行されていることを確認します。
+4. 構成が完了したら、サービスが実行されていることを確認します。
 
    ```bash
    systemctl status mssql-server
    ```
 
-5. リモート接続を許可するには、RHEL 上のファイアウォールで SQL Server のポートを開きます。 SQL Server の既定ポートは、TCP 1433 です。 ファイアウォールとして **FirewallD** を使用している場合、次のコマンドを使用することができます。
+5. リモート接続を許可するには、RHEL のファイアウォールで SQL Server ポートを開きます。 既定の SQL Server ポートは TCP 1433 です。 ファイアウォールに **FirewallD** を使用している場合、次のコマンドを使用できます。
 
    ```bash
    sudo firewall-cmd --zone=public --add-port=1433/tcp --permanent
    sudo firewall-cmd --reload
    ```
 
-この時点では、SQL Server 2019 プレビューでは、RHEL コンピューターで実行しているしを使用する準備ができました!
+この時点で、SQL Server 2019 は RHEL コンピューター上で動作しており、使用する準備ができています。
 
 ::: moniker-end
 
-## <a id="tools"></a>SQL Server コマンド ライン ツールをインストールします。
+## <a id="tools"></a>SQL Server コマンドライン ツールをインストールする
 
-データベースを作成するには、SQL Server で TRANSACT-SQL ステートメントを実行できるツールを使用して接続する必要があります。 次の手順で、SQL Server コマンド ライン ツール: [sqlcmd](../tools/sqlcmd-utility.md) と [bcp](../tools/bcp-utility.md) をインストールします。
+データベースを作成するには、SQL Server 上で Transact-SQL ステートメントを実行できるツールと接続する必要があります。 次の手順で SQL Server コマンドライン ツールの [sqlcmd](../tools/sqlcmd-utility.md) と [bcp](../tools/bcp-utility.md) をインストールします。
 
-1. Microsoft の Red Hat リポジトリの構成ファイルをダウンロードします。
+1. Microsoft Red Hat リポジトリ構成ファイルをダウンロードします。
 
    ```bash
    sudo curl -o /etc/yum.repos.d/msprod.repo https://packages.microsoft.com/config/rhel/7/prod.repo
    ```
 
-1. インストールされている **mssql ツール** の以前のバージョンがあれば、古い unixODBC パッケージを削除します。
+1. 旧版の **mssql-tools** がインストールされている場合、古い unixODBC パッケージはすべて削除してください。
 
    ```bash
    sudo yum remove unixODBC-utf16 unixODBC-utf16-devel
    ```
 
-1. 次のコマンドを実行して **mssql-tools** を unixODBC 開発者パッケージとともにインストールします。
+1. 次のコマンドを実行し、unixODBC 開発者パッケージと共に **mssql-tools** をインストールします。
 
    ```bash
    sudo yum install -y mssql-tools unixODBC-devel
    ```
 
-1. 利便性のために、`/opt/mssql-tools/bin/` を **PATH** 環境変数に追加します。 これにより、完全なパスを指定せずに、ツールを実行することができます。 次のコマンドを実行し、**PATH** をログイン セッションと対話型/非ログイン セッションの両方に変更します。
+1. **PATH** 環境変数に `/opt/mssql-tools/bin/` を追加すると便利です。 完全なパスを指定せずにツールを実行できます。 次のコマンドを実行し、ログイン セッションと対話型/非ログイン セッションの両方の **PATH** を変更します。
 
    ```bash
    echo 'export PATH="$PATH:/opt/mssql-tools/bin"' >> ~/.bash_profile

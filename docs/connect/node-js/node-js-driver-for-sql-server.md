@@ -1,5 +1,5 @@
 ---
-title: Node.js Driver for SQL Server |Microsoft Docs
+title: Node.js Driver for SQL Server | Microsoft Docs
 ms.custom: ''
 ms.date: 08/08/2017
 ms.prod: sql
@@ -10,21 +10,20 @@ ms.topic: conceptual
 ms.assetid: c4cdbfa6-9b73-4b72-a1a6-e1b45d8a773d
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 4091b9334b024519054738c4f3fde6d0d0348625
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.openlocfilehash: 6fa534b756084f74606e9d40a8c1c69934b240d1
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51602992"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67916052"
 ---
 # <a name="nodejs-driver-for-sql-server"></a>Node.js Driver for SQL Server
 
-![ダウンロード下方向丸](../../ssdt/media/download.png)[Node.js SQL ドライバーのダウンロード](../sql-connection-libraries.md#anchor-20-drivers-relational-access)
+![ダウンロード-ダウン矢印-](../../ssdt/media/download.png)[NODE.JS SQL ドライバーをダウンロードするため](../sql-connection-libraries.md#anchor-20-drivers-relational-access)の丸
 
-面倒なモジュールは、JavaScript で実装された TDS プロトコルであり、すべての最新バージョンの SQL Server でサポートされています。 ドライバーは、Github で使用できるオープン ソース プロジェクトです。  
+面倒なモジュールは、JavaScript で実装された TDS プロトコルであり、すべての最新バージョンの SQL Server でサポートされています。 このドライバーは、Github で入手できるオープンソースプロジェクトです。  
   
-Windows、Linux、またはファルダに Node.js を使用して SQL Database に接続することができます。  
+Windows、Linux、または Mac で node.js を使用して、SQL Database に接続できます。  
   
 ## <a name="getting-started"></a>作業の開始  
 * [ステップ 1: Node.js 開発用に開発環境を構成する](step-1-configure-development-environment-for-node-js-development.md)  
@@ -33,15 +32,15 @@ Windows、Linux、またはファルダに Node.js を使用して SQL Database 
   
 ## <a name="documentation"></a>ドキュメント  
   
-[Github で面倒なモジュールのドキュメント](https://tediousjs.github.io/tedious/)  
+[Github の面倒モジュールに関するドキュメント](https://tediousjs.github.io/tedious/)  
   
 ## <a name="community"></a>コミュニティ  
-* [Azure Node.js デベロッパー センター](https://azure.microsoft.com/develop/nodejs/)  
-* [関連する nodejs.org を取得します。](https://nodejs.org/en/get-involved/)
+* [Azure node.js デベロッパーセンター](https://azure.microsoft.com/develop/nodejs/)  
+* [Nodejs.org に参加する](https://nodejs.org/en/get-involved/)
 
 ## <a name="code-examples"></a>コード例
-* [Windows での Node.js の概要](https://www.microsoft.com/sql-server/developer-get-started/node/windows/)
-* [MacOS で Node.js の概要](https://www.microsoft.com/sql-server/developer-get-started/node/mac/)
-* [Ubuntu で Node.js の概要](https://www.microsoft.com/sql-server/developer-get-started/node/ubuntu/)
-* [Red Hat Enterprise Linux (RHEL) での Node.js の概要](https://www.microsoft.com/sql-server/developer-get-started/node/rhel/)
-* [SUSE Linux Enterprise Server (SLES) での Node.js の概要](https://www.microsoft.com/sql-server/developer-get-started/node/sles/)
+* [Windows 上の node.js を使用したはじめに](https://www.microsoft.com/sql-server/developer-get-started/node/windows/)
+* [MacOS での node.js のはじめに](https://www.microsoft.com/sql-server/developer-get-started/node/mac/)
+* [Ubuntu での node.js を使用したはじめに](https://www.microsoft.com/sql-server/developer-get-started/node/ubuntu/)
+* [Red Hat Enterprise Linux (RHEL) での node.js のはじめに](https://www.microsoft.com/sql-server/developer-get-started/node/rhel/)
+* [SUSE Linux Enterprise Server (SLES) での node.js のはじめに](https://www.microsoft.com/sql-server/developer-get-started/node/sles/)

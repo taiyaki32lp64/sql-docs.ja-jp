@@ -21,21 +21,20 @@ helpviewer_keywords:
 - 0 (zero)
 - negative values
 ms.assetid: c3a98b52-6fbe-4127-a5c9-8a4922e83e28
-author: MashaMSFT
-ms.author: mathoma
-manager: craigg
+author: MikeRayMSFT
+ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: c2ddba2215d6298baa750b6975fd3873a1d3a684
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 0c9a0803b3f90a244fdd4ca05298e5c34eb8c984
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47798230"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68139289"
 ---
 # <a name="sign-transact-sql"></a>SIGN (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-  指定した式の符号として、正 (+1)、負 (-1)、ゼロ (0) のいずれかを返します。  
+  指定された式の符号として正 (+1)、ゼロ (0)、負 (-1) のいずれかを返します。  
   
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -52,7 +51,7 @@ SIGN ( numeric_expression )
   
 ## <a name="return-types"></a>戻り値の型  
   
-|指定した式|の戻り値の型 : |  
+|指定した式|の戻り値の型 :|  
 |--------------------------|-----------------|  
 |**bigint**|**bigint**|  
 |**int/smallint/tinyint**|**int**|  
@@ -61,7 +60,7 @@ SIGN ( numeric_expression )
 |**その他の型**|**float**|  
   
 ## <a name="examples"></a>使用例  
- 次の例では、-1 から 1 までの値の SIGN 値を返します。  
+ 次の例では、-1 から 1 の 3 つの数値の SIGN 値を返します。  
   
 ```  
 DECLARE @value real  

@@ -8,17 +8,20 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: language-reference
 ms.assetid: 1b38e8e3-c560-4b6e-b60e-bfd7cfcd4fdf
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: cbac839b4148557e6c8c9a6f22fc1414f01f23d7
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 957d0fa1d5b311fbecfd76340e443e8f2f3f81f5
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47612610"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71296431"
 ---
-# <a name="functions---dmexecutionperformancecounters"></a>関数 - dm_execution_performance_counters
+# <a name="functions---dm_execution_performance_counters"></a>関数 - dm_execution_performance_counters
+
+[!INCLUDE[ssis-appliesto](../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
 [!INCLUDE[tsql-appliesto-ss2014-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2014-xxxx-xxxx-xxx-md.md)]
 
   [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] サーバーで処理中の実行のパフォーマンス統計を返します。  

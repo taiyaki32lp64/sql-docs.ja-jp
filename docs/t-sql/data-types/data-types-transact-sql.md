@@ -16,20 +16,16 @@ helpviewer_keywords:
 ms.assetid: a54f7373-b247-4d61-8fb8-7f2ec7a8d0a4
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: ec7126848048350120592a325f5a5f593b38a7f3
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: a03da24fe18f0d910f5054d8cfb321c42d633db8
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56028513"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68113740"
 ---
 # <a name="data-types-transact-sql"></a>データ型 (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
-
-> [!div class="nextstepaction"]
-> [SQL ドキュメントの目次に関するご意見を共有してください。](https://aka.ms/sqldocsurvey)
 
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、列、ローカル変数、式、パラメーターのそれぞれに、関連するデータ型があります。 データ型は、整数データ、文字データ、通貨データ、日時データ、バイナリ文字列など、オブジェクトが保持できるデータの種類を示す属性です。
   
@@ -53,8 +49,8 @@ ms.locfileid: "56028513"
 |文字列||  
   
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では一部のデータ型は、格納の特性に基づいて次のグループに分けられます。
--   大きな値データ型: **varchar(max)**、**nvarchar(max)**  
--   ラージ オブジェクト データ型: **text**、**ntext**、**image**、**varbinary(max)**、**xml**  
+-   大きな値データ型: **varchar(max)** 、**nvarchar(max)**  
+-   ラージ オブジェクト データ型: **text**、**ntext**、**image**、**varbinary(max)** 、**xml**  
   
     > [!NOTE]  
     >  sp_help は、大きな値および **xml** を受け取るデータ型の長さとして -1 を返します。  
@@ -101,14 +97,14 @@ ms.locfileid: "56028513"
   
 |||  
 |-|-|  
-|[[バイナリ]](../../t-sql/data-types/binary-and-varbinary-transact-sql.md)|[varbinary](../../t-sql/data-types/binary-and-varbinary-transact-sql.md)|  
+|[binary](../../t-sql/data-types/binary-and-varbinary-transact-sql.md)|[varbinary](../../t-sql/data-types/binary-and-varbinary-transact-sql.md)|  
 |[image](../../t-sql/data-types/ntext-text-and-image-transact-sql.md)||  
   
 ### <a name="other-data-types"></a>その他のデータ型
   
 |||  
 |-|-|  
-|[カーソル (cursor)](../../t-sql/data-types/cursor-transact-sql.md)|[rowversion](../../t-sql/data-types/rowversion-transact-sql.md)|  
+|[cursor](../../t-sql/data-types/cursor-transact-sql.md)|[rowversion](../../t-sql/data-types/rowversion-transact-sql.md)|  
 |[hierarchyid](../../t-sql/data-types/hierarchyid-data-type-method-reference.md)|[uniqueidentifier](../../t-sql/data-types/uniqueidentifier-transact-sql.md)|  
 |[sql_variant](../../t-sql/data-types/sql-variant-transact-sql.md)|[xml](../../t-sql/xml/xml-transact-sql.md)|  
 |[空間 geometry 型](../../t-sql/spatial-geometry/spatial-types-geometry-transact-sql.md) |[空間 geography 型](../../t-sql/spatial-geography/spatial-types-geography.md)|  

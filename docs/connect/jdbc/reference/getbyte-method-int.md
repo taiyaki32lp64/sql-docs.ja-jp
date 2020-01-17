@@ -1,5 +1,5 @@
 ---
-title: getByte (int) メソッド |Microsoft Docs
+title: getByte メソッド (int) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: cff3ad26-0b6c-4d98-8deb-e89217486d79
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 396e474ed07195dfdb8ecb4f3405338c86346bf5
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 61a2f61961808d63a66d5dd29c8b9387f51a688c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47734646"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67953478"
 ---
 # <a name="getbyte-method-int"></a>getByte (int) メソッド
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

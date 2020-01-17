@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 2f3475d1-3999-4dd8-aba2-a6e1299c95f8
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: f357576e9e7510ae581b41a50976a34981f35109
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 55b2ff4d428f02b59883b675fde95531366f0b4d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52517355"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68020601"
 ---
 # <a name="result-generating-and-result-free-statements"></a>結果生成および結果解放ステートメント
 SQL ステートメントは、疎に次の 5 つのカテゴリに分類できます。  

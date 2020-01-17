@@ -1,5 +1,5 @@
 ---
-title: setCharacterStream メソッド (SQLServerCallableStatement) |Microsoft Docs
+title: setCharacterStream メソッド (SQLServerCallableStatement) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 3b4c3234-09f6-44fa-9757-0a20ca90e13e
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: db74ecad764ba2010be565195ea1d09d1084b495
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 6cac17e028a8d17f26b593b61b0fdf0440ea8dce
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47706280"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67974659"
 ---
 # <a name="setcharacterstream-method-sqlservercallablestatement"></a>setCharacterStream メソッド (SQLServerCallableStatement)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 36b754b4-6b17-4dd1-a925-bca46938b7c4
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: fe681a0f93dd88ad7f4752daf213817c21b054ad
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 690c81a46c62c8844780e82b5c82a0ff7301105d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47798280"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67949760"
 ---
 # <a name="getschemaobject-method-ado-md"></a>GetSchemaObject メソッド (ADO MD)
 ADO MD のスキーマ オブジェクトを取得します ([ディメンション](../../../ado/reference/ado-md-api/dimension-object-ado-md.md)、[階層](../../../ado/reference/ado-md-api/hierarchy-object-ado-md.md)、[レベル](../../../ado/reference/ado-md-api/level-object-ado-md.md)、または[メンバー](../../../ado/reference/ado-md-api/member-object-ado-md.md)) によってその[UniqueName](../../../ado/reference/ado-md-api/uniquename-property-ado-md.md).  
@@ -47,5 +46,5 @@ Set object = CubeDef.GetSchemaObject (ObjType, UniqueName)
 ## <a name="applies-to"></a>適用対象  
  [CubeDef オブジェクト (ADO MD)](../../../ado/reference/ado-md-api/cubedef-object-ado-md.md)  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [CubeDef オブジェクト (ADO MD)](../../../ado/reference/ado-md-api/cubedef-object-ado-md.md)

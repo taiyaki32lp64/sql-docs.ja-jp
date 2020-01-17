@@ -1,5 +1,5 @@
 ---
-title: SQLDriverConnect |マイクロソフトのドキュメント
+title: SQLDriverConnect |Microsoft Docs
 ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
@@ -13,57 +13,55 @@ helpviewer_keywords:
 ms.assetid: a1e38e2c-3a97-42d1-9c45-a0ca3282ffd1
 author: MightyPen
 ms.author: genemi
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 23475a80aeb63f0681977f096e18886c426c4862
-ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
+ms.openlocfilehash: 9a76a653277b7f99ecf88c3b0277617eb053a41c
+ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/18/2018
-ms.locfileid: "53591257"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73787098"
 ---
 # <a name="sqldriverconnect"></a>SQLDriverConnect
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-[!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
 
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC ドライバーでは、接続文字列のキーワードを置き換えたり、拡張したりするための接続属性を定義します。 接続文字列のいくつかのキーワードには、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC ドライバーが指定する既定値があります。  
   
- 使用できるキーワードの一覧については、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC ドライバーを参照してください[使用した Connection String Keywords with SQL Server Native Client を使用して](../../relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md)します。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC ドライバーで使用できるキーワードの一覧については、「 [SQL Server Native Client での接続文字列キーワードの使用](../../relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md)」を参照してください。  
   
- 詳細については[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]接続属性とドライバーの既定の動作を参照してください。 [SQLSetConnectAttr](../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md)します。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 接続属性とドライバーの既定の動作の詳細については、「 [SQLSetConnectAttr](../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md)」を参照してください。  
   
- 有効な接続文字列キーワードの詳細については[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native Client を参照してください[使用した Connection String Keywords with SQL Server Native Client を使用して](../../relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md)します。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client で有効な接続文字列キーワードの詳細については、「 [SQL Server Native Client での接続文字列キーワードの使用](../../relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md)」を参照してください。  
   
- ときに、 **SQLDriverConnect**_DriverCompletion_パラメーター値が SQL_DRIVER_PROMPT、SQL_DRIVER_COMPLETE、または sql_driver_complete_required の場合、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC ドライバー表示されるダイアログ ボックスからキーワード値を取得します。 接続文字列でキーワード値が渡され、ユーザーがダイアログ ボックスでキーワードの値を変更しなかった場合、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC ドライバーは接続文字列の値を使用します。 接続文字列で値が設定されていない場合、ユーザーがダイアログ ボックスで割り当てを行わないと、ドライバーは既定値を使用します。  
+ **SQLDriverConnect**_drivercompletion_パラメーター値が SQL_DRIVER_PROMPT、SQL_DRIVER_COMPLETE、または SQL_DRIVER_COMPLETE_REQUIRED の場合、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC ドライバーは、表示されるダイアログボックスからキーワード値を取得します。 接続文字列でキーワード値が渡され、ユーザーがダイアログ ボックスでキーワードの値を変更しなかった場合、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC ドライバーは接続文字列の値を使用します。 接続文字列で値が設定されていない場合、ユーザーがダイアログ ボックスで割り当てを行わないと、ドライバーは既定値を使用します。  
   
- **SQLDriverConnect** 、有効なを指定する必要があります*WindowHandle*いずれかが*DriverCompletion*値が必要です (または必要があります)、ドライバーの接続 ダイアログ ボックスの表示。 無効なハンドルを指定すると、SQL_ERROR が返されます。  
+ *Drivercompletion*の値でドライバーの接続ダイアログボックスを表示する必要がある (または必要になる可能性がある) 場合は、 **SQLDriverConnect**に有効な*WindowHandle*を指定する必要があります。 無効なハンドルを指定すると、SQL_ERROR が返されます。  
   
- DRIVER キーワードまたは DSN キーワードを指定します。 ODBC は、これらの 2 つのキーワードが両方指定されている場合、左側に指定されているキーワードを使用し、他方を無視するように指示します。 ドライバーが指定されているか、2 つの場合、 **SQLDriverConnect**_DriverCompletion_パラメーター値が SQL_DRIVER_NOPROMPT、SERVER キーワードと、適切な値が必要です。  
+ DRIVER キーワードまたは DSN キーワードを指定します。 ODBC は、これらの 2 つのキーワードが両方指定されている場合、左側に指定されているキーワードを使用し、他方を無視するように指示します。 DRIVER が指定されている場合、またはが2の左端で、 **SQLDriverConnect**_drivercompletion_パラメーター値が SQL_DRIVER_NOPROMPT の場合、SERVER キーワードと適切な値が必要です。  
   
  SQL_DRIVER_NOPROMPT が指定されているときは、ユーザー認証に関するキーワードに値が指定されている必要があります。 ドライバーは、文字列 "Trusted_Connection=yes" または UID キーワードと PWD キーワードの両方が指定されていることを確認します。  
   
- 場合、 *DriverCompletion*パラメーター値が SQL_DRIVER_NOPROMPT または SQL_DRIVER_COMPLETE_REQUIRED と言語またはデータベースが接続文字列から取得し、いずれかが有効でない**SQLDriverConnect**SQL_ERROR を返します。  
+ *Drivercompletion*パラメーター値が SQL_DRIVER_NOPROMPT または SQL_DRIVER_COMPLETE_REQUIRED で、言語またはデータベースが接続文字列から取得され、その言語またはデータベースが無効である場合、 **SQLDriverConnect**は SQL_ERROR を返します。  
   
- 場合、 *DriverCompletion*パラメーター値が SQL_DRIVER_NOPROMPT または SQL_DRIVER_COMPLETE_REQUIRED と言語またはデータベースが ODBC データ ソースの定義から取得し、いずれかが有効でない**SQLDriverConnect**指定されたユーザー ID を既定の言語またはデータベースを使用し、SQL_SUCCESS_WITH_INFO が返されます。  
+ *Drivercompletion*パラメーター値が SQL_DRIVER_NOPROMPT または SQL_DRIVER_COMPLETE_REQUIRED であり、言語またはデータベースが ODBC データソースの定義から取得されていて、または無効な場合、 **SQLDriverConnect**は指定されたユーザー ID の既定の言語またはデータベースを使用して、SQL_SUCCESS_WITH_INFO を返します。  
   
- 場合、 *DriverCompletion*パラメーター値が SQL_DRIVER_COMPLETE または SQL_DRIVER_PROMPT とかどうか、言語またはデータベースの無効な**SQLDriverConnect**  ダイアログ ボックスを再表示します。  
+ *Drivercompletion*パラメーター値が SQL_DRIVER_COMPLETE または SQL_DRIVER_PROMPT で、言語またはデータベースが無効である場合、 **SQLDriverConnect**はダイアログボックスを再指定します。  
   
 ## <a name="sqldriverconnect-support-for-high-availability-disaster-recovery"></a>SQLDriverConnect の HADR サポート  
- 使用しての詳細については**SQLDriverConnect**への接続に、[!INCLUDE[ssHADR](../../includes/sshadr-md.md)]クラスターを参照してください[SQL Server Native Client のサポート高可用性、ディザスター リカバリー](../../relational-databases/native-client/features/sql-server-native-client-support-for-high-availability-disaster-recovery.md)します。  
+ **SQLDriverConnect**を使用して [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] クラスターに接続する方法の詳細については、「[高可用性、ディザスターリカバリーのサポートの SQL Server Native Client](../../relational-databases/native-client/features/sql-server-native-client-support-for-high-availability-disaster-recovery.md)」を参照してください。  
   
 ## <a name="sqldriverconnect-support-for-service-principal-names-spns"></a>SQLDriverConnect によるサービス プリンシパル名 (SPN) のサポート  
- SQLDDriverConnect では、ダイアログ ボックスの確認が有効になっている ODBC のログインを使用します。 これにより、プリンシパル サーバーとそのフェールオーバー パートナーの両方に対して SPN を入力できます。  
+ SQLDDriverConnect では、プロンプトが有効になっているときに ODBC ログインダイアログボックスが使用されます。 これにより、プリンシパル サーバーとそのフェールオーバー パートナーの両方に対して SPN を入力できます。  
   
- SQLDriverConnect が新しい接続文字列キーワードを受け入れる**ServerSPN**と**FailoverPartnerSPN**、し、新しい接続属性である SQL_COPT_SS_SERVER_SPN および SQL_COPT_SS_ が認識されますFAILOVER_PARTNER_SPN します。  
+ SQLDriverConnect は新しい接続文字列キーワード**Serverspn**と**failoverpartnerspn**を受け入れ、新しい接続属性 SQL_COPT_SS_SERVER_SPN と SQL_COPT_SS_FAILOVER_PARTNER_SPN を認識します。  
   
  接続属性の値が複数指定されている場合は、DSN の値や接続文字列の値より、プログラムによって設定された値が優先されます。 DSN の値は接続文字列の値より優先されます。  
   
  接続が開いている場合、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client では、SQL_COPT_SS_MUTUALLY_AUTHENTICATED および SQL_COPT_SS_INTEGRATED_AUTHENTICATION_METHOD が、接続を開くときに使用された認証方式に設定されます。  
   
- Spn の詳細については、次を参照してください。[サービス プリンシパル名&#40;Spn&#41;クライアント接続で&#40;ODBC&#41;](../../relational-databases/native-client/odbc/service-principal-names-spns-in-client-connections-odbc.md)します。  
+ Spn の詳細については、「[クライアント&#40;接続&#41; &#40;ODBC&#41;でのサービスプリンシパル名 spn](../../relational-databases/native-client/odbc/service-principal-names-spns-in-client-connections-odbc.md)」を参照してください。  
   
 ## <a name="examples"></a>使用例  
- 次の呼び出しに必要なデータ量が少なくを示しています**SQLDriverConnect**:。  
+ 次の呼び出しは、 **SQLDriverConnect**に必要なデータ量の最小値を示しています。  
   
 ```  
 SQLDriverConnect(hdbc, hwnd,  
@@ -71,7 +69,7 @@ SQLDriverConnect(hdbc, hwnd,
     MAX_CONN_OUT, &cbOutConn, SQL_DRIVER_COMPLETE);  
 ```  
   
- 次の接続文字列は、最低限必要なデータを示していますときに、 *DriverCompletion*パラメーター値が SQL_DRIVER_NOPROMPT:。  
+ 次の接続文字列は、 *Drivercompletion*パラメーター値が SQL_DRIVER_NOPROMPT 場合に最低限必要なデータを示しています。  
   
 ```  
 "DSN=Human Resources;Trusted_Connection=yes"  
@@ -86,6 +84,6 @@ SQLDriverConnect(hdbc, hwnd,
  [ODBC API 実装の詳細](../../relational-databases/native-client-odbc-api/odbc-api-implementation-details.md)   
  [SET ANSI_NULLS &#40;Transact-SQL&#41;](../../t-sql/statements/set-ansi-nulls-transact-sql.md)   
  [SET ANSI_PADDING &#40;Transact-SQL&#41;](../../t-sql/statements/set-ansi-padding-transact-sql.md)   
- [SET ANSI_WARNINGS &#40;TRANSACT-SQL&#41;](../../t-sql/statements/set-ansi-warnings-transact-sql.md)  
+ [Transact-sql の&#40;設定 ANSI_WARNINGS&#41;](../../t-sql/statements/set-ansi-warnings-transact-sql.md)  
   
   

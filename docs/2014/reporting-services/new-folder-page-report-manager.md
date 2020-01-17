@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 ms.assetid: 9212fc68-f0a6-4f79-83c1-84baf4d1957e
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: b4af24352b24741fffe53f9eae6675a9a43b4595
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 21d79e84ca30283eab6fe788be940f712b2cd41f
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56020591"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66108203"
 ---
 # <a name="new-folder-page-report-manager"></a>[新しいフォルダー] ページ (レポート マネージャー)
   [新しいフォルダー] ページでは、レポート サーバーのフォルダー階層に新しいフォルダーを作成できます。 作成するフォルダーは、レポート サーバー データベースに保存される仮想フォルダーです。 このフォルダーは、コンピューターのファイル システムに作成されるわけではありません。  

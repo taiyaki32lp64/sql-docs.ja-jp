@@ -2,7 +2,7 @@
 title: ConfigurationSetting プロパティ - WindowsServiceIdentityActual | Microsoft Docs
 ms.date: 03/01/2017
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: wmi-provider-library-reference
 ms.topic: conceptual
 apiname:
@@ -13,14 +13,14 @@ apitype: MOFDef
 helpviewer_keywords:
 - WindowsServiceIdentityActual property
 ms.assetid: 08289240-098d-4ad1-b165-227699747ba4
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 833cb4d01e50ad5f8851bdcc036428ffb0c295c4
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 9a5cedf8b4a64007147c39d69913c51f1fb2d0c7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47787240"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65569160"
 ---
 # <a name="configurationsetting-property---windowsserviceidentityactual"></a>ConfigurationSetting プロパティ - WindowsServiceIdentityActual
   レポート サーバー Windows サービスを実行している ID です。 読み取り専用です。  

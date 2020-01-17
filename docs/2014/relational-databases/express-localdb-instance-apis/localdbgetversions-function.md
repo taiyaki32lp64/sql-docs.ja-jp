@@ -17,11 +17,11 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: 431124cff2fcf293ccf1e8e8bcb74321245a661e
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52807954"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63032283"
 ---
 # <a name="localdbgetversions-function"></a>LocalDBGetVersions 関数
   コンピューターで使用できるすべての SQL Server Express LocalDB バージョンを返します。  

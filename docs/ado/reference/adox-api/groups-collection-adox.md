@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 09aa7b0a-69d5-4564-80a7-20ad8189670f
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: e6b8aea077af67c882830220da9ce24b802e25e5
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e39be3cf32f04a60e554928f66cdc6123322f19c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47801432"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67966182"
 ---
 # <a name="groups-collection-adox"></a>Groups コレクション (ADOX)
 すべてを含む保存[グループ](../../../ado/reference/adox-api/group-object-adox.md)カタログまたはユーザーのオブジェクト。  
@@ -52,6 +51,6 @@ ms.locfileid: "47801432"
   
 -   [Groups コレクションのプロパティ、メソッド、およびイベント](../../../ado/reference/adox-api/groups-collection-properties-methods-and-events.md)  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [Catalog オブジェクト (ADOX)](../../../ado/reference/adox-api/catalog-object-adox.md)   
  [Group オブジェクト (ADOX)](../../../ado/reference/adox-api/group-object-adox.md)

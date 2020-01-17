@@ -21,17 +21,20 @@ helpviewer_keywords:
 - sorting data [Integration Services]
 - aggregations [Integration Services]
 ms.assetid: c4bbefa6-172b-4547-99a1-a0b38e3e2b05
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: 8b172eb0635c54bf6b9e0289ac220676eb08fd9c
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 0c5c86d90536d1ba7c8acd5402317ff364ffdc67
+ms.sourcegitcommit: baa40306cada09e480b4c5ddb44ee8524307a2ab
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52411989"
+ms.lasthandoff: 11/06/2019
+ms.locfileid: "73637956"
 ---
 # <a name="data-flow-performance-features"></a>データ フロー パフォーマンス機能
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   このトピックでは、パフォーマンスに関する一般的な問題を [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] パッケージのデザイン時に回避するための考え方を示します。 また、パッケージのパフォーマンスのトラブルシューティングに使用できる機能やツールについての情報も提供します。  
   
 ## <a name="configuring-the-data-flow"></a>データ フローの構成  
@@ -77,7 +80,7 @@ ms.locfileid: "52411989"
  ディスクへのページングが開始される大きさにまでバッファー サイズを増やさないでください。 ディスクへのページングが行われると、バッファー サイズが最適化されていない場合よりもパフォーマンスが低下します。 ページングが行われているかどうかを判断するには、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 管理コンソール (MMC) のパフォーマンス スナップインで "Buffers spooled" パフォーマンス カウンターを監視します。  
   
 ### <a name="configure-the-package-for-parallel-execution"></a>並列実行用のパッケージの構成  
- 並列実行を行うと、複数の物理プロセッサまたは論理プロセッサが搭載されているコンピューターのパフォーマンスが向上します。 パッケージ内で各種タスクの並列実行をサポートするには、 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] で と **MaxConcurrentExecutables** と **EngineThreads**の 2 つのプロパティを使用します。  
+ 並列実行を行うと、複数の物理プロセッサまたは論理プロセッサが搭載されているコンピューターのパフォーマンスが向上します。 パッケージ内で各種タスクの並列実行をサポートするには、[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] で次の 2 つのプロパティを使用します。**MaxConcurrentExecutables** と **EngineThreads**。  
   
 #### <a name="the-maxconcurrentexcecutables-property"></a>MaxConcurrentExcecutables プロパティ  
  **MaxConcurrentExecutables** プロパティは、パッケージ自体のプロパティです。 このプロパティによって、同時に実行できるタスクの数が定義されます。 既定値は -1 です。これは、物理プロセッサまたは論理プロセッサの数に 2 を加えた数を示します。  
@@ -148,7 +151,7 @@ ms.locfileid: "52411989"
   
  通常、緩やかに変化するディメンション変換の中で最も低速なコンポーネントは、一度に 1 行に対して UPDATE を実行する OLE DB コマンド変換です。 したがって、緩やかに変化するディメンション変換のパフォーマンスを向上させる最も効果的な方法は、OLE DB コマンド変換を置き換えることです。 この変換は、更新するすべての行をステージング テーブルに保存する変換先コンポーネントに置き換えることができます。 その後、同時にすべての行に対して単一セット ベースの Transact-SQL UPDATE を実行する SQL 実行タスクを追加できます。  
   
- 上級ユーザーは、大きなディメンションのために最適化された、緩やかに変化するディメンション処理用のカスタム データ フローをデザインできます。 この方法の説明と例については、ホワイト ペーパー「 [プロジェクト REAL: ビジネス インテリジェンス ETL のデザイン方法](https://go.microsoft.com/fwlink/?LinkId=96602)」の「特有のディメンション シナリオ」を参照してください。  
+ 上級ユーザーは、大きなディメンションのために最適化された、緩やかに変化するディメンション処理用のカスタム データ フローをデザインできます。 この方法の説明と例については、ホワイト ペーパー「[Project REAL: Business Intelligence ETL Design Practices (プロジェクト REAL: ビジネス インテリジェンス ETL のデザイン方法)](https://www.microsoft.com/download/details.aspx?id=14582)」の「Unique dimension scenario, (固有のディメンション シナリオ)」をご覧ください。  
   
 ### <a name="destinations"></a>変換先  
  変換先のパフォーマンスを向上させるには、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 変換先の使用と、変換先のパフォーマンスのテストを検討してください。  
@@ -171,13 +174,13 @@ ms.locfileid: "52411989"
 ## <a name="related-content"></a>関連コンテンツ  
  **記事とブログ投稿**  
   
--   technet.microsoft.com の技術記事、「 [SQL Server 2005 Integration Services: パフォーマンスに関する戦略](https://go.microsoft.com/fwlink/?LinkId=98899)」。  
+-   technet.microsoft.com の技術記事、「[SQL Server 2005 Integration Services: パフォーマンスに関する戦略](https://go.microsoft.com/fwlink/?LinkId=98899)」  
   
--   technet.microsoft.com の技術記事、「 [Integration Services のパフォーマンス チューニング技法](https://go.microsoft.com/fwlink/?LinkId=98900)」。  
+-   technet.microsoft.com の技術記事、「[Integration Services のパフォーマンス チューニング技法](https://go.microsoft.com/fwlink/?LinkId=98900)」  
   
--   sqlcat.com の技術資料「 [同期変換を複数タスクに分割してパイプラインのスループットを向上](https://sqlcat.com/technicalnotes/archive/2010/08/18/increasing-throughput-of-pipelines-by-splitting-synchronous-transformations-into-multiple-tasks.aspx)」  
+-   _BI と分析に関する SQLCAT のガイド_の技術資料「[同期変換を複数タスクに分割してパイプラインのスループットを向上](https://download.microsoft.com/download/0/F/B/0FBFAA46-2BFD-478F-8E56-7BF3C672DF9D/SQLCAT's%20Guide%20to%20BI%20and%20Analytics.pdf)」
   
--   msdn.microsoft.com の技術記事「 [Integration Services のパフォーマンス チューニング技法](https://go.microsoft.com/fwlink/?LinkId=220816)」  
+-   msdn.microsoft.com の技術記事: [Integration Services のパフォーマンス チューニング技法](https://go.microsoft.com/fwlink/?LinkId=220816)  
   
 -   msdn.microsoft.com の技術記事「 [SSIS なら 1 TB を 30 分で読み込むことが可能](https://go.microsoft.com/fwlink/?LinkId=220817)」  
   

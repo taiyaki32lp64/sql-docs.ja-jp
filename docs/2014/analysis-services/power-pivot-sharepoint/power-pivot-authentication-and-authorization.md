@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 03/09/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: 48230cc0-4037-4f99-8360-dadf4bc169bd
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 4f28da387576eee3d9619e4fc817485beb5c8662
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 3f567da3318c7b8fff799475c638c1086613f45b
+ms.sourcegitcommit: e366f702c49d184df15a9b93c2c6a610e88fa0fe
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53377862"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67826335"
 ---
 # <a name="powerpivot-authentication-and-authorization"></a>PowerPivot の認証および承認
   SharePoint 2010 ファーム内で実行される PowerPivot for SharePoint の配置では、SharePoint サーバーによって提供される認証サブシステムと承認モデルを使用します。 PowerPivot 関連のすべてのコンテンツは SharePoint コンテンツ データベースに格納され、PowerPivot 関連のすべての操作はファーム内の PowerPivot 共有サービスによって実行されるので、SharePoint のセキュリティ インフラストラクチャは PowerPivot のコンテンツや操作にまで及ぶことになります。 PowerPivot データが含まれているブックを要求するユーザーは、Windows ユーザー ID に基づく SharePoint ユーザー ID を使用して認証されます。 この要求が許可されるか拒否されるかは、ブックに対する表示権限によって決まります。  
@@ -111,7 +110,7 @@ ms.locfileid: "53377862"
 |信頼できるデータ接続ライブラリ|任意。|PowerPivot ブックでは、Office データ接続 (.odc) ファイルを使用できます。 .odc ファイルを使用してローカル PowerPivot ブックに接続情報を提供する場合、同じ .odc ファイルをこのライブラリに追加できます。|  
 |ユーザー定義関数アセンブリ|該当なし。|PowerPivot for SharePoint では、Excel Services 用にビルドおよび配置するユーザー定義関数アセンブリは無視されます。 特定の動作についてユーザー定義アセンブリに依存する場合、作成したユーザー定義関数は PowerPivot クエリ処理では使用されないことに留意してください。|  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [PowerPivot サービス アカウントを構成します。](configure-power-pivot-service-accounts.md)   
  [構成、PowerPivot 自動データ更新アカウント&#40;PowerPivot for SharePoint&#41;](../configure-unattended-data-refresh-account-powerpivot-sharepoint.md)   
  [サーバーの全体管理で PowerPivot サイト用の信頼できる場所を作成します。](create-a-trusted-location-for-power-pivot-sites-in-central-administration.md)   

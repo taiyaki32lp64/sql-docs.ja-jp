@@ -17,17 +17,20 @@ helpviewer_keywords:
 - text file writing [Integration Services]
 - destinations [Integration Services], Flat File
 ms.assetid: e0d6e356-8db4-48aa-ba66-029397f98f61
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: 6e6fa3edeeff19f7ddf9fde79114586ba7588324
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: c837241abfaebe3776a21e03a9c2cbf4c4f5ee9d
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51641319"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71292530"
 ---
 # <a name="flat-file-destination"></a>フラット ファイル変換先
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   フラット ファイル変換先は、データをテキスト ファイルに書き込みます。 テキスト ファイルには、区切り形式、固定幅形式、行区切り記号を使用した固定幅形式、または幅合わせしない形式を使用できます。  
   
  フラット ファイル変換先は、次の方法で構成できます。  
@@ -57,7 +60,7 @@ ms.locfileid: "51641319"
 ## <a name="flat-file-destination-editor-connection-manager-page"></a>[フラット ファイル変換先エディター] ([接続マネージャー] ページ)
   **[フラット ファイル変換先エディター]** ダイアログ ボックスの **[接続マネージャー]** ページを使用すると、変換先のフラット ファイル接続を選択したり、既存の変換先ファイルに対して上書きまたは追加のどれを実行するかを指定したりできます。 フラット ファイル変換先は、データをテキスト ファイルに書き込みます。 テキスト ファイルには、区切り形式、固定幅形式、行区切り記号付き固定幅形式、または幅合わせしない形式を使用できます。  
   
-### <a name="options"></a>[変数]  
+### <a name="options"></a>オプション  
  **フラット ファイル接続マネージャー**  
  既存の接続マネージャーを一覧から選択するか、 **[新規作成]** をクリックして新しい接続を作成します。  
   
@@ -80,7 +83,7 @@ ms.locfileid: "51641319"
 ## <a name="flat-file-destination-editor-mappings-page"></a>[フラット ファイル変換先エディター] ([マッピング] ページ)
   **[フラット ファイル変換先エディター]** ダイアログ ボックスの **[マッピング]** ページを使用すると、入力列を変換先列にマップできます。  
   
-### <a name="options"></a>[変数]  
+### <a name="options"></a>オプション  
  **使用できる入力列**  
  使用できる入力列の一覧を表示します。 ドラッグ アンド ドロップ操作により、使用できる入力列を変換先列にマップします。  
   
@@ -88,7 +91,7 @@ ms.locfileid: "51641319"
  使用できる変換先列の一覧を表示します。 ドラッグ アンド ドロップ操作により、使用できる変換先列を入力列にマップします。  
   
  **入力列**  
- このトピックの前の手順で選択した入力列を表示します。 **[使用できる入力列]** ボックスの一覧を使用して、マッピングを変更できます。 出力から列を除外するには、**[\<無視>]** を選択します。  
+ このトピックの前の手順で選択した入力列を表示します。 **[使用できる入力列]** ボックスの一覧を使用して、マッピングを変更できます。 出力から列を除外するには、 **[\<無視>]** を選択します。  
   
  **変換先列**  
  マップされているかどうかに関係なく、使用できる変換先列を表示します。  

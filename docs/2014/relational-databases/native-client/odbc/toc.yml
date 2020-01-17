@@ -83,7 +83,7 @@
       href: ../../native-client-odbc-cursors/properties/cursor-properties.md
     - name: カーソルの行セット サイズ
       href: ../../native-client-odbc-cursors/properties/cursor-rowset-size.md
-    - name: カーソル同時実行 (ODBC)
+    - name: カーソル コンカレンシー (ODBC)
       href: ../../native-client-odbc-cursors/properties/cursor-concurrency-odbc.md
     - name: カーソルのトランザクション分離レベル
       href: ../../native-client-odbc-cursors/properties/cursor-transaction-isolation-level.md
@@ -309,7 +309,7 @@
       href: ../../native-client-odbc-how-to/support-for-large-udts.md
     - name: スパース列を持つテーブルに対する SQLColumns の呼び出し
       href: ../../native-client-odbc-how-to/call-sqlcolumns-on-a-table-with-sparse-columns.md
-    - name: Geography 列に行を挿入する方法 (ODBC)
+    - name: '方法:Geography 列に行を挿入する (ODBC)'
       href: ../../native-client-odbc-how-to/how-to-insert-rows-into-geography-column-odbc.md
     - name: Kerberos 相互認証の取得
       href: ../../native-client-odbc-how-to/get-mutual-kerberos-authentication.md

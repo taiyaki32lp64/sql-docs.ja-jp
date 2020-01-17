@@ -4,21 +4,20 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.ssis.designer.cdcsource.connection.f1
 ms.assetid: 304e6717-e160-4a7b-a06f-32182449fef8
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 8ff990559adb693ac9e3db1ceb18843978fcfe0b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 7e33946220b10f35596a6496637c8572f5b97403
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48190482"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66061062"
 ---
 # <a name="cdc-source-editor-connection-manager-page"></a>[CDC ソース エディター] ([接続マネージャー] ページ)
   **[CDC ソース エディター]** ダイアログ ボックスの **[接続マネージャー]** ページを使用すると、CDC ソースが変更行を読み取る [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] データベース (CDC データベース) の ADO.NET 接続マネージャーを選択できます。 CDC データベースを選択した後で、キャプチャされたテーブルをデータベースで選択する必要があります。  
@@ -52,15 +51,15 @@ ms.locfileid: "48190482"
  **[CDC 処理モード]**  
  処理上のニーズに最も適した処理モードを選択します。 オプションは次のとおりです。  
   
--   **[すべて]**: **[更新前]** の値なしで、現在の CDC 範囲内の変更を返します。  
+-   **[すべて]** : **[更新前]** の値なしで、現在の CDC 範囲内の変更を返します。  
   
--   **[古い値を含むすべて]**: 古い値 (**[更新前]**) を含め、現在の CDC 処理範囲内の変更を返します。 更新操作ごとに、2 つの行 (更新前の値の行と更新後の値の行) が存在することになります。  
+-   **[古い値を含むすべて]** : 古い値 ( **[更新前]** ) を含め、現在の CDC 処理範囲内の変更を返します。 更新操作ごとに、2 つの行 (更新前の値の行と更新後の値の行) が存在することになります。  
   
--   **[差分]**: 現在の CDC 処理範囲内で変更された、ソース行あたり 1 つの変更行のみを返します。 ソース行が複数回更新された場合は、変更が結合されたうえで生成されます (たとえば、挿入と更新が 1 回の更新として、または更新と削除が 1 回の削除として、結合されたうえで生成されることがあります)。 [差分] 変更処理モードで作業する場合は、1 つのソース行が複数の出力に出現するため、変更を削除、挿入、および更新の各出力に分割し、並行処理することができます。  
+-   **[差分]** : 現在の CDC 処理範囲内で変更された、ソース行あたり 1 つの変更行のみを返します。 ソース行が複数回更新された場合は、変更が結合されたうえで生成されます (たとえば、挿入と更新が 1 回の更新として、または更新と削除が 1 回の削除として、結合されたうえで生成されることがあります)。 [差分] 変更処理モードで作業する場合は、1 つのソース行が複数の出力に出現するため、変更を削除、挿入、および更新の各出力に分割し、並行処理することができます。  
   
--   **[更新マスクを含む差分]**: このモードは通常の [差分] モードと似ていますが、**__$\<column-name>\__Changed** という名前のパターンを持つブール型の列も追加されます。これは、現在の変更行の変更された列を示します。  
+-   **[更新マスクを含む差分]** : このモードは通常の [差分] モードと似ていますが、 **__$\<column-name>\__Changed** という名前のパターンを持つブール型の列も追加されます。これは、現在の変更行の変更された列を示します。  
   
--   **[結合を含む差分]**: このモードは通常の [結合] モードと似ていますが、挿入操作と更新操作が 1 つの結合操作 (UPSERT) に結合されます。  
+-   **[結合を含む差分]** : このモードは通常の [結合] モードと似ていますが、挿入操作と更新操作が 1 つの結合操作 (UPSERT) に結合されます。  
   
 > [!NOTE]  
 >  どの差分変更オプションを使用する場合も、ソース テーブルに主キーまたは一意のインデックスが必要です。 主キーまたは一意のインデックスがないテーブルに対しては、 **[すべて]** オプションを使用する必要があります。  
@@ -75,8 +74,8 @@ ms.locfileid: "48190482"
   
  詳細については、「 [CDC ソースのカスタム プロパティ](data-flow/cdc-source-custom-properties.md)」を参照してください。  
   
-## <a name="see-also"></a>参照  
- [[CDC ソース エディター&#40;列] ページ&#41;](../../2014/integration-services/cdc-source-editor-columns-page.md)   
- [[CDC ソース エディター&#40;エラー出力] ページ&#41;](../../2014/integration-services/cdc-source-editor-error-output-page.md)  
+## <a name="see-also"></a>関連項目  
+ [[CDC ソース エディター] ([列] ページ)](../../2014/integration-services/cdc-source-editor-columns-page.md)   
+ [[CDC ソース エディター] ([エラー出力] ページ)](../../2014/integration-services/cdc-source-editor-error-output-page.md)  
   
   

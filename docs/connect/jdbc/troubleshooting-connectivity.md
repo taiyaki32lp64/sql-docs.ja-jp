@@ -1,7 +1,7 @@
 ---
 title: 接続のトラブルシューティング |Microsoft Docs
 ms.custom: ''
-ms.date: 01/19/2017
+ms.date: 08/12/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: bfba0b49-2e1f-411d-a625-d25fad9ea12d
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 7ae5f65538c0303a92fdb86f71d75a556ad3f458
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d6a64589b44de50328aa3384a51e29e0c2cc9a6e
+ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47840890"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "69027619"
 ---
 # <a name="troubleshooting-connectivity"></a>接続のトラブルシューティング
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -29,7 +28,7 @@ ms.locfileid: "47840890"
   
     -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] はインストールされていますが、TCP/IP が [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 用のネットワーク プロトコルとして、[!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ネットワーク ユーティリティ、または [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 以降の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 構成マネージャーを使用して、インストールされていません。  
   
-    -   TCP/IP は [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] プロトコルとしてインストールされていますが、JDBC 接続 URL で指定されたポートでリッスンしていません。 既定のポートは 1433 ですが、製品のインストール時に任意のポートで待機するように [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] を構成することができます。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] がポート 1433 でリッスンしていることを確認します。 または、ポートが変更されている場合は、JDBC 接続 URL で指定するポートを、変更されたポートと一致させます。 JDBC 接続 Url の詳細については、次を参照してください。[接続 URL の構築](../../connect/jdbc/building-the-connection-url.md)します。  
+    -   TCP/IP は [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] プロトコルとしてインストールされていますが、JDBC 接続 URL で指定されたポートでリッスンしていません。 既定のポートは 1433 ですが、製品のインストール時に任意のポートで待機するように [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] を構成することができます。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] がポート 1433 でリッスンしていることを確認します。 または、ポートが変更されている場合は、JDBC 接続 URL で指定するポートを、変更されたポートと一致させます。 JDBC 接続 Url の詳細については、「[接続 url の構築](../../connect/jdbc/building-the-connection-url.md)」を参照してください。  
   
     -   JDBC 接続 URL で指定されたコンピューターのアドレスが、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] がインストールおよび起動されたサーバーを参照していません。  
   
@@ -44,7 +43,7 @@ ms.locfileid: "47840890"
 -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 認証を使用する場合、JDBC ドライバーでは、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] が既定ではない [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 認証でインストールされている必要があります。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスをインストールまたは構成するときに、このオプションが選択されていることを確認します。  
   
 ## <a name="see-also"></a>参照  
- [JDBC ドライバーで発生した問題の診断](../../connect/jdbc/diagnosing-problems-with-the-jdbc-driver.md)   
+ [JDBC ドライバーに関する問題の診断](../../connect/jdbc/diagnosing-problems-with-the-jdbc-driver.md)   
  [JDBC ドライバーによる SQL Server への接続](../../connect/jdbc/connecting-to-sql-server-with-the-jdbc-driver.md)  
   
   

@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: 8cfdb64f-64c5-47e6-ad57-0533ac630afa
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: fe1b3a3420ad882136b13b131938169dbdb224bd
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: e63677180cc86f022550477bd598eaa61013d694
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53204082"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68039525"
 ---
 # <a name="sqltableprivileges-function"></a>SQLTablePrivileges 関数
 **準拠**  
@@ -36,7 +35,7 @@ ms.locfileid: "53204082"
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
   
 SQLRETURN SQLTablePrivileges(  
      SQLHSTMT      StatementHandle,  
@@ -114,9 +113,9 @@ SQLRETURN SQLTablePrivileges(
 > [!NOTE]  
 >  一般的な使用、引数、および ODBC カタログ関数の返されたデータの詳細については、次を参照してください。[カタログ関数](../../../odbc/reference/develop-app/catalog-functions.md)します。  
   
- 次の列が ODBC 3 の名前が変更された *.x*します。 列名の変更では、アプリケーションは、列番号でバインドため、旧バージョンとの互換性は影響しません。  
+ 次の列が ODBC の名前が変更された*3.x*します。 列名の変更では、アプリケーションは、列番号でバインドため、旧バージョンとの互換性は影響しません。  
   
-|ODBC 2.0 列|ODBC 3 *.x*列|  
+|ODBC 2.0 列|ODBC *3.x*列|  
 |---------------------|-----------------------|  
 |TABLE_QUALIFIER|TABLE_CAT|  
 |TABLE_OWNER|TABLE_SCHEM|  

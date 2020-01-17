@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 982f09e5-8205-41b9-98b3-8f898e24743f
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: db5077b9df2673593b6eaec9622aafd1d2c77234
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: c6682ae98f2da64f6936049bee96fe2fff2a84db
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47753990"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68057061"
 ---
 # <a name="sql-92-cast-function"></a>SQL-92 CAST 関数
 **キャスト**、sql-92 で定義されている関数は、**変換**ODBC で定義された関数。 同等の関数の構文は次のとおりです。  

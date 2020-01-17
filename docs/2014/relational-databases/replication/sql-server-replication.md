@@ -13,12 +13,12 @@ ms.assetid: 3a5f4592-3c61-4b4d-9ceb-39716aeeba41
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 9c2e9c5b1a0bf136e6b21f5b3ad6f12107d1f9b9
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: be03754ea8eeb61d838357667da6e37e1be6bc31
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54126072"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62626154"
 ---
 # <a name="sql-server-replication"></a>SQL Server のレプリケーション
   レプリケーションとは、あるデータベースから別のデータベースにデータやデータベース オブジェクトをコピーおよび配布し、それらのデータベースを同期させて一貫性を保つための一連のテクノロジです。 レプリケーションを使用すると、ローカル エリア ネットワーク、ワイド エリア ネットワーク、ダイヤルアップ接続、ワイヤレス接続、インターネットなどを経由して、別の場所や、リモート ユーザーまたはモバイル ユーザーにデータを配布することができます。  
@@ -29,10 +29,10 @@ ms.locfileid: "54126072"
   
 
 ## <a name="whats-new"></a>新機能 
-- SQL Server 2017 では、SQL Server レプリケーションに重要な新機能が導入できません。 
-- SQL Server 2016 では、SQL Server レプリケーションに重要な新機能が導入できません。 
+- SQL Server 2017 では、SQL Server のレプリケーションに重要な新機能は加えられていません。 
+- SQL Server 2016 では、SQL Server のレプリケーションに重要な新機能は加えられていません。 
 
-旧バージョンとの互換性情報」を参照して[レプリケーションの旧バージョンとの互換性](replication-backward-compatibility.md) 
+下位互換性の情報については、「[レプリケーションの旧バージョンとの互換性](replication-backward-compatibility.md)」を参照してください。 
 
 
  ## <a name="replication-security"></a>レプリケーションのセキュリティ
@@ -51,7 +51,7 @@ ms.locfileid: "54126072"
 -   [パブリケーションの作成](publish/create-a-publication.md)    
 -   [アーティクルの定義](publish/define-an-article.md)   
 -   [パブリケーション プロパティの表示および変更](publish/view-and-modify-publication-properties.md)   
--   [アーティクルのプロパティの表示と変更](publish/view-and-modify-article-properties.md)    
+-   [アーティクルのプロパティの表示および変更](publish/view-and-modify-article-properties.md)    
 -   [パブリケーションの削除](publish/delete-a-publication.md)   
 -   [アーティクルの削除](publish/delete-an-article.md)    
 -   [Oracle データベースからのパブリケーションの作成](publish/create-a-publication-from-an-oracle-database.md)   
@@ -63,10 +63,10 @@ ms.locfileid: "54126072"
   
 ### <a name="snapshot-options"></a>スナップショット オプション  
   
--   [スナップショットのプロパティを構成します。](publish/configure-snapshot-properties-replication-transact-sql-programming.md)    
+-   [スナップショットのプロパティの構成](publish/configure-snapshot-properties-replication-transact-sql-programming.md)    
 -   [FTP でのスナップショットの配信](publish/deliver-a-snapshot-through-ftp.md) 
   
-### <a name="filter-data"></a>データをフィルター処理します。  
+### <a name="filter-data"></a>データのフィルター選択  
   
 -   [列フィルターの定義および変更](publish/define-and-modify-a-column-filter.md)    
 -   [静的行フィルターの定義および変更](publish/define-and-modify-a-static-row-filter.md)    
@@ -82,7 +82,7 @@ ms.locfileid: "54126072"
 ### <a name="merge-replication-options"></a>マージ レプリケーション オプション  
   
 -   [マージ テーブル アーティクル間に論理レコード リレーションシップを定義する](publish/define-a-logical-record-relationship-between-merge-table-articles.md)    
--   [マージ レプリケーションのプロパティを指定します](publish/specify-merge-replication-properties.md)    
+-   [マージ レプリケーションのプロパティの指定](publish/specify-merge-replication-properties.md)    
 -   [マージ アーティクル競合回避モジュールの指定](publish/specify-a-merge-article-resolver.md)    
 
   
@@ -98,7 +98,7 @@ ms.locfileid: "54126072"
 -   [トランザクション パブリケーションの更新可能なサブスクリプションの作成](publish/create-an-updatable-subscription-to-a-transactional-publication.md)  
 -   [SQL Server 以外のサブスクライバーのサブスクリプションの作成](create-a-subscription-for-a-non-sql-server-subscriber.md)  
   
-## <a name="synchronize-subscriptions"></a>サブスクリプションを同期します。  
+## <a name="synchronize-subscriptions"></a>サブスクリプションの同期  
   
 -   [初期スナップショットの作成および適用](create-and-apply-the-initial-snapshot.md)   
 -   [パラメーター化されたフィルターを使用したパブリケーションのスナップショットの作成](create-a-snapshot-for-a-merge-publication-with-parameterized-filters.md)    
@@ -126,13 +126,13 @@ ms.locfileid: "54126072"
 -   [ピア ツー ピア トポロジを管理します。](administration/administer-a-peer-to-peer-topology-replication-transact-sql-programming.md)    
 -   [レプリケーション トポロジの停止](administration/quiesce-a-replication-topology-replication-transact-sql-programming.md)    
 -   [Oracle パブリッシャーのトランザクション セット ジョブを構成します。](administration/configure-the-transaction-set-job-for-an-oracle-publisher.md)   
--   [レプリケーション スクリプトをアップグレードします。 ](administration/upgrade-replication-scripts-replication-transact-sql-programming.md)  
+-   [レプリケーション スクリプトをアップグレードします。](administration/upgrade-replication-scripts-replication-transact-sql-programming.md)  
   
-## <a name="monitor"></a>モニター
+## <a name="monitor"></a>監視
   
 -   [管理者以外のユーザーがレプリケーション モニターを使用できるようにする](monitor/allow-non-administrators-to-use-replication-monitor.md)    
 -   [プログラムによるレプリケーションの監視](monitor/programmatically-monitor-replication.md)    
--   [レプリケートされたコマンドとディストリビューション データベースの他の情報を表示 ](monitor/view-replicated-commands-and-information-in-distribution-database.md)    
--   [マージ パブリケーションの競合情報の表示 ](view-conflict-information-for-merge-publications.md) 
+-   [レプリケートされたコマンドとディストリビューション データベースの他の情報を表示](monitor/view-replicated-commands-and-information-in-distribution-database.md)    
+-   [マージ パブリケーションの競合情報の表示](view-conflict-information-for-merge-publications.md) 
 -   [トランザクション レプリケーションの待機時間の計測および接続の検証](monitor/measure-latency-and-validate-connections-for-transactional-replication.md)  
   

@@ -24,15 +24,14 @@ helpviewer_keywords:
 - low overhead checks
 - table integrity checks [SQL Server]
 ms.assetid: 0d6cb620-eb58-4745-8587-4133a1b16994
-author: uc-msft
+author: pmasl
 ms.author: umajay
-manager: craigg
-ms.openlocfilehash: a9d14601c7fad616d4d5e2d5420adcea458b11fb
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: a4c68ce8ca6174f036b2b893a664b758745369d0
+ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53206251"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "73982321"
 ---
 # <a name="dbcc-checktable-transact-sql"></a>DBCC CHECKTABLE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -52,7 +51,7 @@ DBCC CHECKTABLE
     ]     
 )    
     [ WITH     
-        { ALL_ERRORMSGS ]    
+        { [ ALL_ERRORMSGS ]    
           [ , EXTENDED_LOGICAL_CHECKS ]     
           [ , NO_INFOMSGS ]    
           [ , TABLOCK ]     
@@ -65,7 +64,7 @@ DBCC CHECKTABLE
     
 ## <a name="arguments"></a>引数    
  *table_name* | *view_name*  
- 整合性チェックを行うテーブルまたはインデックス付きビューを指定します。 テーブル名やビュー名は、[識別子](../../relational-databases/databases/database-identifiers.md)のルールに従っている必要があります。  
+ 整合性チェックを行うテーブルまたはインデックス付きビューです。 テーブル名やビュー名は、[識別子](../../relational-databases/databases/database-identifiers.md)のルールに従っている必要があります。  
     
 NOINDEX  
  ユーザー テーブルの非クラスター化インデックスの集中チェックを実行しないように指定します。 これにより、全体の実行時間が短縮されます。 整合性チェックは、常にすべてのシステム テーブルのインデックスに対して実行されるため、NOINDEX はシステム テーブルに対しては無効です。  
@@ -74,7 +73,7 @@ NOINDEX
  整合性チェックを行うインデックスの識別 (ID) 番号を指定します。 *index_id* を指定した場合、DBCC CHECKTABLE は、そのインデックスに対してのみ整合性チェックを行います (ヒープやクラスター化インデックスもチェックされます)。  
     
 REPAIR_ALLOW_DATA_LOSS | REPAIR_FAST | REPAIR_REBUILD  
- 検出されたエラーを DBCC CHECKTABLE が修復するように指定します。 修復オプションを使用するには、データベースがシングル ユーザー モードになっている必要があります。  
+ 検出されたエラーを DBCC CHECKTABLE で修復するように指定します。 修復オプションを使用するには、データベースがシングル ユーザー モードになっている必要があります。  
     
 REPAIR_ALLOW_DATA_LOSS  
  報告されたすべてのエラーの修復を試みます。 修復を実行すると、データが失われることがあります。  
@@ -91,7 +90,7 @@ REPAIR_REBUILD
  > REPAIR を使用する必要がある場合は、修復オプションを指定せずに `DBCC CHECKTABLE` を実行して、使用する修復レベルを確認してください。 REPAIR_ALLOW_DATA_LOSS レベルを使用する場合は、このオプションを指定して `DBCC CHECKTABLE` を実行する前に、データベースをバックアップすることをお勧めします。  
     
 ALL_ERRORMSGS  
- エラーを無制限に表示します。 既定では、すべてのエラー メッセージが表示されます。 そのため、このオプションを指定しても省略しても影響はありません。  
+ エラーを無制限に表示します。 既定では、すべてのエラー メッセージが表示されます。 このオプションを指定しても省略しても影響はありません。  
     
 EXTENDED_LOGICAL_CHECKS  
  互換性レベルが 100 ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]) 以上の場合、インデックス付きビュー、XML インデックス、空間インデックス (存在する場合) について、論理的な一貫性をチェックします。  
@@ -107,7 +106,7 @@ ESTIMATEONLY
  必要な他のオプションをすべて指定した状態で、DBCC CHECKTABLE の実行時に必要となる tempdb 領域の予測サイズを表示します。  
     
 PHYSICAL_ONLY  
- チェック内容を、ページ、レコード ヘッダー、および B-Tree の物理構造の整合性に限定します。 テーブルの物理的一貫性に関する低オーバーヘッド チェックを提供するように設計されているため、このチェックではデータが損傷する可能性のある破損ページおよび一般的なハードウェア障害も検出できます。 完全な DBCC CHECKTABLE を実行すると、以前のバージョンよりはるかに時間がかかることがあります。 原因は次のとおりです。  
+ チェック内容を、ページ、レコード ヘッダー、および B ツリーの物理構造の整合性に限定します。 テーブルの物理的一貫性に関する低オーバーヘッド チェックを提供するように設計されているため、このチェックではデータが損傷する可能性のある破損ページおよび一般的なハードウェア障害も検出できます。 完全な DBCC CHECKTABLE を実行すると、以前のバージョンよりはるかに時間がかかることがあります。 この現象は次の原因により発生します。  
  -   論理チェックの対象範囲が広がった。  
  -   チェック対象の、基になる構造の一部が複雑になった。  
  -   新機能を含めるために多数の新しいチェックが導入された。  
@@ -124,9 +123,9 @@ DATA_PURITY
  PHYSICAL_ONLY を指定した場合は、列の整合性チェックは行われません。  
     
 MAXDOP  
- **適用対象**:[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] SP2 から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)])。  
+ **適用対象**:[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] SP2 以降)。  
  
- ステートメントの **sp_configure** の **max degree of parallelism** 構成オプションをオーバーライドします。 MAXDOP では、sp_configure で構成されている値を超えることができます。 MAXDOP では、リソース ガバナーで構成されている値を超えると、データベース エンジンは、ALTER WORKLOAD GROUP (TRANSACT-SQL)」に記載のリソース ガバナーの MAXDOP 値を使用します。 MAXDOP クエリ ヒントを使用している場合は、max degree of parallelism 構成オプションで使用されるすべての意味ルールを適用できます。 詳細については、「 [max degree of parallelism サーバー構成オプションの構成](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md)」を参照してください。  
+ ステートメントの **sp_configure** の **max degree of parallelism** 構成オプションをオーバーライドします。 MAXDOP では、sp_configure で構成されている値を超えることができます。 MAXDOP では、Resource Governor で構成されている値を超えると、データベース エンジンは、「ALTER WORKLOAD GROUP (TRANSACT-SQL)」に記載のリソース ガバナーの MAXDOP 値を使用します。 MAXDOP クエリ ヒントを使用している場合は、max degree of parallelism 構成オプションで使用されるすべての意味ルールを適用できます。 詳細については、「 [max degree of parallelism サーバー構成オプションの構成](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md)」を参照してください。  
     
  > [!NOTE]  
  > MAXDOP が 0 に設定されている場合、サーバーでは最大限の並列処理が実行されます。  
@@ -136,8 +135,8 @@ MAXDOP
 > [!NOTE]    
 > データベース内のすべてのテーブルに対して DBCC CHECKTABLE を実行するには、[DBCC CHECKDB](../../t-sql/database-console-commands/dbcc-checkdb-transact-sql.md) を使用します。    
     
-指定したテーブルについて、次の項目がチェックされます。
--   インデックス、行、LOB、および行オーバーフロー データの各ページが正しくリンクされていること。    
+指定したテーブルについて、DBCC CHECKTABLE によって次の項目がチェックされます。
+-   インデックス、行内、LOB、および行オーバーフロー データの各ページが正しくリンクされていること。    
 -   インデックスが正しい並べ替え順序で並んでいること。    
 -   ポインターに一貫性があること。    
 -   各ページ上のデータが、計算列も含め、適切であること。    
@@ -165,7 +164,7 @@ DBCC CHECKTABLE は、内部データベースのスナップショットを使�
 スナップショットを作成できない場合や、TABLOCK が指定されている場合は、DBCC CHECKTABLE は共有テーブル ロックを取得して必要な一貫性を実現します。
     
 > [!NOTE]    
-> Tempdb に対して DBCC CHECKTABLE を実行すると、共有テーブル ロックを取得して必要があります。 これは、パフォーマンス上の理由から、データベースのスナップショットが tempdb では利用できないためです。 つまり、必要なトランザクションの一貫性を実現できないためです。    
+> tempdb に対して DBCC CHECKTABLE を実行する場合、共有テーブル ロックを取得する必要があります。 これは、パフォーマンス上の理由から、データベースのスナップショットが tempdb では利用できないためです。 つまり、必要なトランザクションの一貫性を実現できないためです。    
     
 ## <a name="checking-and-repairing-filestream-data"></a>FILESTREAM データのチェックと修復    
 データベースとテーブルに対して FILESTREAM が有効になっている場合、**varbinary(max)** バイナリ ラージ オブジェクト (BLOB) をファイル システムに格納することもできます。 BLOB をファイル システムに格納するテーブルに対して DBCC CHECKTABLE を使用する場合は、DBCC によって、ファイル システムとデータベースの間でのリンクレベルの一貫性がチェックされます。

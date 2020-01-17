@@ -19,11 +19,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 659bba7156ccc1c3a60bef38a51fd983554e4ead
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52816894"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62721204"
 ---
 # <a name="implement-a-business-logic-handler-for-a-merge-article"></a>マージ アーティクルのビジネス ロジック ハンドラーの実装
   このトピックでは、 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] でレプリケーション プログラミングまたはレプリケーション管理オブジェクト (RMO) を使用して、マージ アーティクルにビジネス ロジック ハンドラーを実装する方法について説明します。  
@@ -99,18 +99,18 @@ ms.locfileid: "52816894"
   
 1.  パブリッシャーで、[sp_enumcustomresolvers &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-enumcustomresolvers-transact-sql) を実行して、アセンブリがまだビジネス ロジック ハンドラーとして登録されていないことを確認します。  
   
-2.  ディストリビューターで実行[sp_registercustomresolver &#40;TRANSACT-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-registercustomresolver-transact-sql)、ビジネス ロジック ハンドラーのフレンドリ名を指定する**@article_resolver**、 @property`true`の**@is_dotnet_assembly**、名前のアセンブリの**@dotnet_assembly_name**、オーバーライドするクラスの完全修飾名と<xref:Microsoft.SqlServer.Replication.BusinessLogicSupport.BusinessLogicModule>の**@dotnet_class_name**.  
+2.  ディストリビューターで実行[sp_registercustomresolver &#40;TRANSACT-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-registercustomresolver-transact-sql)、ビジネス ロジック ハンドラーのフレンドリ名を指定する **@article_resolver** 、 @property`true`の **@is_dotnet_assembly** 、名前のアセンブリの **@dotnet_assembly_name** 、オーバーライドするクラスの完全修飾名と<xref:Microsoft.SqlServer.Replication.BusinessLogicSupport.BusinessLogicModule>の **@dotnet_class_name** .  
   
     > [!NOTE]  
-    >  マージ エージェント実行可能ファイルがあるディレクトリ、マージ エージェントを同期的に起動するアプリケーションがあるディレクトリ、およびグローバル アセンブリ キャッシュ (GAC) の、いずれとも異なる場所にビジネス ロジック ハンドラー アセンブリが配置されている場合は、 **@dotnet_assembly_name**」を参照してください。 Web 同期を使用する場合は、Web サーバーでアセンブリの位置を指定する必要があります。  
+    >  マージ エージェント実行可能ファイルがあるディレクトリ、マージ エージェントを同期的に起動するアプリケーションがあるディレクトリ、およびグローバル アセンブリ キャッシュ (GAC) の、いずれとも異なる場所にビジネス ロジック ハンドラー アセンブリが配置されている場合は、 **@dotnet_assembly_name** 」を参照してください。 Web 同期を使用する場合は、Web サーバーでアセンブリの位置を指定する必要があります。  
   
 #### <a name="to-use-a-business-logic-handler-with-a-new-table-article"></a>新しいテーブル アーティクルでビジネス ロジック ハンドラーを使用するには  
   
-1.  [sp_addmergearticle &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql) を実行してアーティクルを定義し、**@article_resolver** にビジネス ロジック ハンドラーの表示名を指定します。 詳しくは、「 [アーティクルを定義](publish/define-an-article.md)」をご覧ください。  
+1.  [sp_addmergearticle &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql) を実行してアーティクルを定義し、 **@article_resolver** にビジネス ロジック ハンドラーの表示名を指定します。 詳しくは、「 [アーティクルを定義](publish/define-an-article.md)」をご覧ください。  
   
 #### <a name="to-use-a-business-logic-handler-with-an-existing-table-article"></a>既存のテーブル アーティクルでビジネス ロジック ハンドラーを使用するには  
   
-1.  [sp_changemergearticle &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql) を実行し、**@publication**、**@article** を指定し、**@property** に **article_resolver** 値、**@value** にビジネス ロジック ハンドラーの表示名を指定します。  
+1.  [sp_changemergearticle &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql) を実行し、 **@publication** 、 **@article** を指定し、 **@property** に **article_resolver** 値、 **@value** にビジネス ロジック ハンドラーの表示名を指定します。  
   
 ###  <a name="TsqlExample"></a> 例 (レプリケーション プログラミング)  
  次の例に、監査ログを作成するビジネス ロジック ハンドラーを示します。  

@@ -15,24 +15,23 @@ helpviewer_keywords:
 ms.assetid: 73257c2e-cc4c-48e7-9d66-7ef045bdd4f5
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 97b527ef6d3b0363874d770e950106a7127c5483
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: ed0992ff1b6b7de6f93213b612ff05ebcbdb3df5
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52819254"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68042700"
 ---
 # <a name="spvupgrademergeobjects-transact-sql"></a>sp_vupgrade_mergeobjects (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  マージ レプリケーションのデータ変更を追跡および適用するために使用される、アーティクル固有のトリガー、ストアド プロシージャ、ビューを再生成します。 このプロシージャは、次の状況で実行します。  
+  アーティクル固有のトリガー、ストアド プロシージャ、および追跡し、マージ レプリケーションのデータの変更の適用に使用されるビューを再生成します。 次の状況でこの手順を実行します。  
   
 -   レプリケーションによって要求されたオブジェクトが誤って削除された場合。  
   
 -   1 つ以上のレプリケーション オブジェクトに修正プログラムなどの更新プログラムを適用する場合で、プログラムに修正が必要な場合。 更新プログラムを適用した後、各ノードでプロシージャを実行します。  
   
- このストアド プロシージャを実行するために、サブスクリプションの再初期化は必要ありません。 Service Pack をインストールするか、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の新しいバージョンにアップグレードした場合は、このプロシージャを実行する必要はありません。  
+ このストアド プロシージャを実行しても、サブスクリプションの再初期化は不要です。 この手順は、サービス パックをインストールまたはの新しいバージョンにアップグレードする場合は必要ありません[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]します。  
   
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -46,14 +45,11 @@ sp_vupgrade_mergeobjects [ [@login = ] 'login' ]
 ```  
   
 ## <a name="arguments"></a>引数  
- [  **@login=**] **'***ログイン***'**  
- ディストリビューション データベースに新しいシステム オブジェクトを作成するときに使用する、システム管理者のログインを指定します。 *login* のデータ型は **sysname** で、既定値は NULL です。 このパラメーターは必要ない場合は*security_mode*に設定されている**1**、つまり Windows 認証。  
+`[ @login = ] 'login'` ディストリビューション データベースに新しいシステム オブジェクトを作成するときに使用するシステム管理者のログインです。 *login* のデータ型は **sysname** で、既定値は NULL です。 このパラメーターは必要ない場合は*security_mode*に設定されている**1**、つまり Windows 認証。  
   
- [  **@password=**] **'***パスワード***'**  
- ディストリビューション データベースに新しいシステム オブジェクトを作成するときに使用する、システム管理者のパスワードを指定します。 *パスワード*は**sysname**、既定値は **'** (空の文字列)。 このパラメーターは必要ない場合は*security_mode*に設定されている**1**、つまり Windows 認証。  
+`[ @password = ] 'password'` ディストリビューション データベースに新しいシステム オブジェクトを作成するときに使用するシステム管理者のパスワードです。 *パスワード*は**sysname**、既定値は **'** (空の文字列)。 このパラメーターは必要ない場合は*security_mode*に設定されている**1**、つまり Windows 認証。  
   
- [  **@security_mode=**] **'***security_mode***'**  
- ディストリビューション データベースに新しいシステム オブジェクトを作成するときに使用する、ログイン セキュリティ モードを指定します。 *security_mode*は**ビット**の既定値を持つ**1**します。 場合**0**、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]認証が使用されます。 場合**1**、Windows 認証が使用されます。 [!INCLUDE[ssNoteWinAuthentication](../../includes/ssnotewinauthentication-md.md)]  
+`[ @security_mode = ] 'security_mode'` ディストリビューション データベースに新しいシステム オブジェクトを作成するときに使用するログイン セキュリティ モードです。 *security_mode*は**ビット**の既定値を持つ**1**します。 場合**0**、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]認証が使用されます。 場合**1**、Windows 認証が使用されます。 [!INCLUDE[ssNoteWinAuthentication](../../includes/ssnotewinauthentication-md.md)]  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  **0** (成功) または**1** (失敗)  
@@ -64,7 +60,7 @@ sp_vupgrade_mergeobjects [ [@login = ] 'login' ]
 ## <a name="permissions"></a>アクセス許可  
  **sysadmin** 固定サーバー ロールのメンバーシップが必要です。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [レプリケーション ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)   
  [レプリケートされたデータベースのアップグレード](../../database-engine/install-windows/upgrade-replicated-databases.md)  
   

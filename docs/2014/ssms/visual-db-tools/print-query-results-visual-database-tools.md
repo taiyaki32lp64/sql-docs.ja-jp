@@ -16,11 +16,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: a768b1e05bc123aecec4175ed6f66f6d920e1806
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52755594"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63295256"
 ---
 # <a name="print-query-results-visual-database-tools"></a>クエリ結果の印刷 (Visual Database Tools)
   クエリの結果を印刷するには、 [結果ペイン](visual-database-tools.md) の内容をワード プロセッシング プログラムなど、他の Windows プログラムにコピーし、書式を設定してから印刷します。  
@@ -39,7 +39,7 @@ ms.locfileid: "52755594"
   
 5.  書式設定を行い、結果を印刷します。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [クエリに関する基本操作の実行 (Visual Database Tools)](perform-basic-operations-with-queries-visual-database-tools.md)  
   
   

@@ -4,22 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords:
 - components [Integration Services], data flow
 - expressions [Integration Services], data flow components
 ms.assetid: 9181b998-d24a-41fb-bb3c-14eee34f910d
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 8a6510294daf15eac25c335ee84a73f136a57f5e
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: bc9f6c28e775cdbd21806172d7074e655fdd1545
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48083464"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66054820"
 ---
 # <a name="use-an-expression-in-a-data-flow-component"></a>データ フロー コンポーネントで式を使用する
   この手順では、条件分割変換または派生列変換に式を追加する方法について説明します。 条件分割変換では、式を使用して、変換出力にデータ行を出力する条件を定義します。また、派生列変換では、式を使用して、列に割り当てる値を定義します。  
@@ -49,7 +48,7 @@ ms.locfileid: "48083464"
   
 7.  左側のペインで **[変数]** を展開し、システム変数およびユーザー定義変数を表示します。また、 **[列]** を展開して、変換の入力列を表示します。  
   
-8.  右側のペインで **[数学関数]**、 **[文字列関数]**、 **[日付/時刻関数]**、 **[NULL 関数]**、 **[型キャスト]**、および **[演算子]** を展開して、式の文法で用意されている関数、キャスト、および演算子にアクセスします。  
+8.  右側のペインで **[数学関数]** 、 **[文字列関数]** 、 **[日付/時刻関数]** 、 **[NULL 関数]** 、 **[型キャスト]** 、および **[演算子]** を展開して、式の文法で用意されている関数、キャスト、および演算子にアクセスします。  
   
 9. 変換に応じて、次のいずれかの操作を実行し、式を作成します。  
   
@@ -65,11 +64,11 @@ ms.locfileid: "48083464"
     > [!NOTE]  
     >  式が有効でない場合、式に文法エラーがあることを示す警告が表示されます。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [Integration Services &#40;SSIS&#41; 式](expressions/integration-services-ssis-expressions.md)   
- [条件分割変換](data-flow/transformations/conditional-split-transformation.md)   
- [派生列変換](data-flow/transformations/derived-column-transformation.md)   
- [データ フロー タスク](control-flow/data-flow-task.md)   
+ [Conditional Split Transformation](data-flow/transformations/conditional-split-transformation.md)   
+ [Derived Column Transformation](data-flow/transformations/derived-column-transformation.md)   
+ [[データ フロー タスク]](control-flow/data-flow-task.md)   
  [データ フロー](data-flow/data-flow.md)  
   
   

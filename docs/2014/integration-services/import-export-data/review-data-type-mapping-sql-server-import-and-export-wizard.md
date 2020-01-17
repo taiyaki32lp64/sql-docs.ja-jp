@@ -9,15 +9,15 @@ ms.topic: conceptual
 f1_keywords:
 - sql12.dts.impexpwizard.reviewissues.f1
 ms.assetid: 0625c4f9-b8ff-4593-b884-39398b9d43af
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: bdc6c232814f3d45330a1cb0982f207272f39c3f
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 6472ff165894937d31366e47651ada64af38ae1b
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52764094"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62767944"
 ---
 # <a name="review-data-type-mapping-sql-server-import-and-export-wizard"></a>[データ型マッピングの確認]\(SQL Server インポートおよびエクスポート ウィザード)
   使用して、**データ型マッピングの確認**ページ、ウィザードを実行してソース データのコピー先との互換性があるデータ型変換についての詳細情報を確認します。 この情報には、成功すると予測される変換と、エラーまたは切り捨てが発生する可能性がある変換を区別するための視覚的な手掛かりが含まれています。 変換ごとに、ウィザードによって提案された変換を受け入れるかどうかを決定したり、発生したエラーの処理方法を指定したりすることができます。  
@@ -42,7 +42,7 @@ ms.locfileid: "52764094"
  個々 のテーブルの変換情報を表示するには、このテーブルを選択**テーブル**グリッド。 内の列に、選択したテーブルの変換情報が表示されます、**データ型のマッピング グリッド**ページの下部にあります。  
   
 ### <a name="data-type-mapping-list"></a>[データ型マッピング] の一覧  
- 下部にある、**データ型の問題の確認**ページは、**データ型マッピング**一覧。 このグリッドには、**[テーブル]** の一覧で選択したテーブルの列についての詳細な変換情報が表示されます。 次の表では、この一覧の列について説明します。  
+ 下部にある、**データ型の問題の確認**ページは、**データ型マッピング**一覧。 このグリッドには、 **[テーブル]** の一覧で選択したテーブルの列についての詳細な変換情報が表示されます。 次の表では、この一覧の列について説明します。  
   
 |[列]|説明|  
 |------------|-----------------|  

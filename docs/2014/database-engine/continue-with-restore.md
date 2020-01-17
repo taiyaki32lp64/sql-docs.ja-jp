@@ -13,11 +13,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: d396dd41c7643991063bfa476059362c668673e5
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48139982"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62808254"
 ---
 # <a name="continue-with-restore"></a>[復元の続行]
   **[復元の続行]** ダイアログ ボックスを使用すると、次のバックアップ セットを復元するかどうかを指定できます。 テープを交換する場合など、復元操作を遅らせるには、続行する準備ができてから **[OK]** をクリックします。  
@@ -34,7 +34,7 @@ ms.locfileid: "48139982"
  **バックアップ セットの説明**  
  バックアップ セットの説明を表示します。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [バックアップ テープまたはバックアップ ファイルの内容の表示 &#40;SQL Server&#41;](../relational-databases/backup-restore/view-the-contents-of-a-backup-tape-or-file-sql-server.md)   
  [論理バックアップ デバイスのプロパティと内容の表示 &#40;SQL Server&#41;](../relational-databases/backup-restore/view-the-properties-and-contents-of-a-logical-backup-device-sql-server.md)   
  [データベースのバックアップを復元&#40;SQL Server Management Studio&#41;](../relational-databases/backup-restore/restore-a-database-backup-using-ssms.md)   

@@ -1,7 +1,6 @@
 ---
-title: FOR JSON を使用してクエリ結果を JSON として書式設定する (SQL Server) | Microsoft Docs
-ms.custom: ''
-ms.date: 07/18/2017
+title: FOR JSON を使用してクエリ結果を JSON として書式設定する
+ms.date: 06/06/2019
 ms.prod: sql
 ms.reviewer: genemi
 ms.technology: ''
@@ -13,16 +12,17 @@ helpviewer_keywords:
 ms.assetid: 15b56365-58c2-496c-9d4b-aa2600eab09a
 author: jovanpop-msft
 ms.author: jovanpop
-manager: craigg
+ms.custom: seo-dt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 80f17c3bb5dcc0cbea13d7f587eb7a72d83995b3
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 43e9b416885a5cbd1239b0694ffc3613b7509186
+ms.sourcegitcommit: 15fe0bbba963d011472cfbbc06d954d9dbf2d655
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56033893"
+ms.lasthandoff: 11/14/2019
+ms.locfileid: "74095814"
 ---
 # <a name="format-query-results-as-json-with-for-json-sql-server"></a>FOR JSON を使用してクエリ結果を JSON として書式設定する (SQL Server)
+
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
 クエリ結果を JSON として書式設定するか、SQL Server のデータを JSON としてエクスポートするには、**FOR JSON** 句を **SELECT** ステートメントに追加します。 **FOR JSON** 句を使用して、JSON 出力の書式設定をアプリから [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] に委任することによって、クライアント アプリケーションを簡素化します。
@@ -38,7 +38,7 @@ ms.locfileid: "56033893"
  ![JSON の](../../relational-databases/json/media/jsonslides2forjson.png)
   
 ## <a name="option-1---you-control-output-with-for-json-path"></a>オプション 1 - FOR JSON PATH でユーザーが出力を制御する
-**PATH** モードではドット構文を使用できます。たとえば、ネストした出力を書式設定するには、`'Item.Price'` と指定します。  
+**PATH** モードではドット構文を使用できます。たとえば、ネストした出力を書式設定するには、`'Item.UnitPrice'` と指定します。  
 
 **FOR JSON** 句で **PATH** モードを使用するサンプル クエリを次に示します。 次の例では、**ROOT** オプションを使用して名前付きのルート要素を指定しています。 
   
@@ -55,17 +55,15 @@ ms.locfileid: "56033893"
 既定では、 **null** 値は出力に含まれません。 **INCLUDE_NULL_VALUES** を使用してこの動作を変更できます。  
 
 **FOR JSON** 句で **AUTO** モードを使用するサンプル クエリを以下に示します。
- 
-**クエリ:**  
-  
+
 ```sql  
 SELECT name, surname  
 FROM emp  
-FOR JSON AUTO  
+FOR JSON AUTO;
 ```  
-  
- **結果**  
-  
+
+そして返された JSON を以下に示します。
+
 ```json  
 [{
     "name": "John"
@@ -74,8 +72,95 @@ FOR JSON AUTO
     "surname": "Doe"
 }]
 ```
- 
+
+### <a name="2b---example-with-join-and-null"></a>2.b - JOIN と NULL の例
+
+以下の `SELECT...FOR JSON AUTO` の例には、`JOIN` されたテーブルからのデータ間に 1 対多の関係がある場合に JSON の結果がどのように表示されるかが含まれています。
+
+返された JSON に null 値が存在しないことも示されています。 ただし、この既定の動作は、`FOR` 句で `INCLUDE_NULL_VALUES` キーワードを使用することでオーバーライドできます。
+
+```sql
+go
+
+DROP TABLE IF EXISTS #tabStudent;
+DROP TABLE IF EXISTS #tabClass;
+
+go
+
+CREATE TABLE #tabClass
+(
+   ClassGuid   uniqueIdentifier  not null  default newid(),
+   ClassName   nvarchar(32)      not null
+);
+
+CREATE TABLE #tabStudent
+(
+   StudentGuid   uniqueIdentifier  not null  default newid(),
+   StudentName   nvarchar(32)      not null,
+   ClassGuid     uniqueIdentifier      null   -- Foreign key.
+);
+
+go
+
+INSERT INTO #tabClass
+      (ClassGuid, ClassName)
+   VALUES
+      ('DE807673-ECFC-4850-930D-A86F921DE438', 'Algebra Math'),
+      ('C55C6819-E744-4797-AC56-FF8A729A7F5C', 'Calculus Math'),
+      ('98509D36-A2C8-4A65-A310-E744F5621C83', 'Art Painting')
+;
+
+INSERT INTO #tabStudent
+      (StudentName, ClassGuid)
+   VALUES
+      ('Alice Apple', 'DE807673-ECFC-4850-930D-A86F921DE438'),
+      ('Alice Apple', 'C55C6819-E744-4797-AC56-FF8A729A7F5C'),
+      ('Betty Boot' , 'C55C6819-E744-4797-AC56-FF8A729A7F5C'),
+      ('Betty Boot' , '98509D36-A2C8-4A65-A310-E744F5621C83'),
+      ('Carla Cap'  , null)
+;
+
+go
+
+SELECT
+      c.ClassName,
+      s.StudentName
+   from
+                       #tabClass   as c
+      RIGHT OUTER JOIN #tabStudent as s ON s.ClassGuid = c.ClassGuid
+   --where
+   --   c.ClassName LIKE '%Math%'
+   order by
+      c.ClassName,
+      s.StudentName
+   FOR
+      JSON AUTO
+      --, INCLUDE_NULL_VALUES
+;
+
+go
+
+DROP TABLE IF EXISTS #tabStudent;
+DROP TABLE IF EXISTS #tabClass;
+
+go
+```
+
+次に示すのは、上記の SELECT により出力される JSON です。
+
+```json
+JSON_F52E2B61-18A1-11d1-B105-00805F49916B
+
+[
+   {"s":[{"StudentName":"Carla Cap"}]},
+   {"ClassName":"Algebra Math","s":[{"StudentName":"Alice Apple"}]},
+   {"ClassName":"Art Painting","s":[{"StudentName":"Betty Boot"}]},
+   {"ClassName":"Calculus Math","s":[{"StudentName":"Alice Apple"},{"StudentName":"Betty Boot"}]}
+]
+```
+
 ### <a name="more-info-about-for-json-auto"></a>FOR JSON AUTO に関する詳細情報
+
 詳細と例については、「[AUTO モードで自動的に JSON 出力を書式設定する &#40;SQL Server&#41;](../../relational-databases/json/format-json-output-automatically-with-auto-mode-sql-server.md)」を参照してください。
 
 構文と使用法については、「 [FOR 句 &#40;Transact-SQL&#41;](../../t-sql/queries/select-for-clause-transact-sql.md)。  
@@ -109,7 +194,7 @@ FOR JSON AUTO
     -   (FOR JSON 句が適用される前の) SELECT ステートメントの結果の各列は、JSON オブジェクトのプロパティになります。  
   
 3.  列の名前とその値は、JSON の構文に従ってエスケープされます。 詳細については、「 [FOR JSON での特殊文字のエスケープと制御文字 &#40;SQL Server&#41;](../../relational-databases/json/how-for-json-escapes-special-characters-and-control-characters-sql-server.md)。
-  
+
 ### <a name="example"></a>例
 **FOR JSON** 句による JSON 出力の書式設定の例を次に示します。  
   
@@ -121,6 +206,7 @@ FOR JSON AUTO
 |10|11|12|×|  
 |20|21|22|Y|  
 |30|31|32|Z|  
+| &nbsp; | &nbsp; | &nbsp; | &nbsp; |
   
  **JSON 出力**  
   

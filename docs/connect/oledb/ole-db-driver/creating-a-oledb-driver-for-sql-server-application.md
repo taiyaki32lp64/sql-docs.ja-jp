@@ -14,26 +14,25 @@ helpviewer_keywords:
 - OLE DB, creating applications
 author: pmasl
 ms.author: pelopes
-manager: craigg
-ms.openlocfilehash: fb718e2288b1d5e2aaccc1cbafc0c85037bd8082
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.openlocfilehash: 4f7861e02b1ed203911f4e3f86575a9688c861fb
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51605772"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68015664"
 ---
 # <a name="creating-an-ole-db-driver-for-sql-server-application"></a>OLE DB Driver for SQL Server のアプリケーションの作成
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
-  OLE DB Driver for SQL Server アプリケーションを作成するには、次の手順が含まれます。  
+  SQL Server アプリケーション用の OLE DB ドライバーを作成するには、次の手順を実行します。  
   
 1.  データ ソースへの接続の確立。  
   
 2.  コマンドの実行。  
   
-3.  結果を処理します。  
+3.  結果を処理しています。  
   
 > [!NOTE]  
 >  可能な場合は、Windows 認証を使用します。 Windows 認証が使用できない場合は、実行時に資格情報を入力するようユーザーに求めます。 資格情報をファイルに保存するのは避けてください。 資格情報を保存する必要がある場合は、[Win32 CryptoAPI](https://go.microsoft.com/fwlink/?LinkId=9504) を使用して暗号化してください。  

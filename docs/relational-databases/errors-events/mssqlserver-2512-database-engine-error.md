@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 989b527f-5b02-403c-9b7f-51580f4e7688
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: fdbaeb17e6ce722c0b14fcd9eac99982c5bf8684
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: f0b8a226e1376aa705ec3644aacbbc761cc1014b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47803660"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68138593"
 ---
 # <a name="mssqlserver2512"></a>MSSQLSERVER_2512
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -31,7 +30,7 @@ ms.locfileid: "47803660"
 |イベント ソース|MSSQLSERVER|  
 |コンポーネント|SQLEngine|  
 |シンボル名|DBCC_DUPLICATE_KEYS|  
-|メッセージ テキスト|テーブル エラー : オブジェクト ID O_ID、インデックス ID I_ID、パーティション ID PN_ID、アロケーション ユニット ID A_ID (型 TYPE)。 ページ P_ID1 スロット SLOT1 とページ P_ID2 スロット SLOT2 でキーが重複しています。|  
+|メッセージ テキスト|テーブル エラー:オブジェクト ID O_ID、インデックス ID I_ID、パーティション ID PN_ID、アロケーション ユニット ID A_ID (型 TYPE)。 ページ P_ID1 スロット SLOT1 とページ P_ID2 スロット SLOT2 でキーが重複しています。|  
   
 ## <a name="explanation"></a>説明  
 **uniqueifiers** を含めて、示されている 2 つのスロットのキーが同じです。  

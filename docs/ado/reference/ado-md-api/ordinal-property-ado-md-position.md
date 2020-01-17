@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 6efe8b5d-a2d5-43a9-a5ea-f9244f8d4ec9
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 319d63b5faead9a01588ef50482e20f5fb179ca4
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: c212b9a31c72b96444649129f0c54a4c52226de4
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47695190"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67949300"
 ---
 # <a name="ordinal-property-ado-md-position"></a>Ordinal プロパティ (ADO MD 位置)
 一意に識別する、[位置](../../../ado/reference/ado-md-api/position-object-ado-md.md)軸に沿ったします。  
@@ -38,7 +37,7 @@ ms.locfileid: "47695190"
 ## <a name="applies-to"></a>適用対象  
  [Position オブジェクト (ADO MD)](../../../ado/reference/ado-md-api/position-object-ado-md.md)  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [Cellset オブジェクト (ADO MD)](../../../ado/reference/ado-md-api/cellset-object-ado-md.md)   
  [Item プロパティ (ADO MD セルセット)](../../../ado/reference/ado-md-api/item-property-ado-md-cellset.md)   
  [Ordinal プロパティ (ADO MD セル)](../../../ado/reference/ado-md-api/ordinal-property-ado-md-cell.md)

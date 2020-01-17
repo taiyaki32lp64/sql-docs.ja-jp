@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 5bcb4df7-6df3-4f2b-9207-b97b5addf2a6
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: df800e141a922250cea37eee1aeee5af6f373f7f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 757d842dfe0521bd8195bf85e02a3ed0eee2b5b5
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47650230"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68045806"
 ---
 # <a name="spchangelogshippingsecondaryprimary-transact-sql"></a>sp_change_log_shipping_secondary_primary (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -48,33 +47,25 @@ sp_change_log_shipping_secondary_primary
 ```  
   
 ## <a name="arguments"></a>引数  
- [ **@primary_server** =] '*primary_server*'  
- プライマリ インスタンスの名前、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]ログ配布構成にします。 *primary_server*は**sysname** NULL にすることはできません。  
+`[ @primary_server = ] 'primary_server'` プライマリ インスタンスの名前、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]ログ配布構成にします。 *primary_server*は**sysname** NULL にすることはできません。  
   
- [ **@primary_database** =] '*primary_database*'  
- プライマリ サーバー上のデータベースの名前を指定します。 *primary_database*は**sysname**、既定値はありません。  
+`[ @primary_database = ] 'primary_database'` プライマリ サーバー上のデータベースの名前です。 *primary_database*は**sysname**、既定値はありません。  
   
- [ **@backup_source_directory** =] '*backup_source_directory*'  
- プライマリ サーバーのトランザクション ログ バックアップ ファイルが格納されているディレクトリ。 *backup_source_directory*は**nvarchar (500)** NULL にすることはできません。  
+`[ @backup_source_directory = ] 'backup_source_directory'` プライマリ サーバーからのトランザクション ログ バックアップ ファイルの保存先ディレクトリ。 *backup_source_directory*は**nvarchar (500)** NULL にすることはできません。  
   
- [ **@backup_destination_directory** =] '*backup_destination_directory*'  
- バックアップ ファイルのコピー先となるセカンダリ サーバーのディレクトリ。 *backup_destination_directory*は**nvarchar (500)** NULL にすることはできません。  
+`[ @backup_destination_directory = ] 'backup_destination_directory'` バックアップ ファイルがコピー先のセカンダリ サーバー上のディレクトリ。 *backup_destination_directory*は**nvarchar (500)** NULL にすることはできません。  
   
- [ **@file_retention_period** =] '*file_retention_period*'  
- 履歴を保持する期間を分単位で指定します。 *history_retention_period*は**int**、既定値は NULL です。 指定されていない場合、値 14420 が使用されます。  
+`[ @file_retention_period = ] 'file_retention_period'` 分の履歴を保持する時間の長さです。 *history_retention_period*は**int**、既定値は NULL です。 指定されていない場合、値 14420 が使用されます。  
   
- [ **@monitor_server_security_mode** =] '*monitor_server_security_mode*'  
- 監視サーバーへの接続に使用されるセキュリティ モード。  
+`[ @monitor_server_security_mode = ] 'monitor_server_security_mode'` 監視サーバーへの接続に使用されるセキュリティ モード。  
   
- 1 = Windows 認証。  
+ 1 = Windows 認証です。  
   
  0 =[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]認証します。 *monitor_server_security_mode*は**ビット**NULL にすることはできません。  
   
- [ **@monitor_server_login** =] '*monitor_server_login*'  
- 監視サーバーへのアクセスに使用するアカウントのユーザー名を指定します。  
+`[ @monitor_server_login = ] 'monitor_server_login'` 監視サーバーへのアクセスに使用するアカウントの username です。  
   
- [ **@monitor_server_password** =] '*monitor_server_password*'  
- 監視サーバーへのアクセスに使用するアカウントのパスワードを指定します。  
+`[ @monitor_server_password = ] 'monitor_server_password'` 監視サーバーへのアクセスに使用するアカウントのパスワードです。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  0 (成功) または 1 (失敗)  
@@ -92,7 +83,7 @@ sp_change_log_shipping_secondary_primary
 ## <a name="permissions"></a>アクセス許可  
  メンバーのみ、 **sysadmin**固定サーバー ロールは、この手順を実行できます。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [ログ配布について &#40;SQL Server&#41;](../../database-engine/log-shipping/about-log-shipping-sql-server.md)   
  [システム ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   

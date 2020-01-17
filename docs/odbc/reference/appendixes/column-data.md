@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 0425818c-9469-493f-9e3c-fc03d9411c5c
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 95f80c82d3804e31d5ea29d55af0fbedd4184e6c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: f4bc57a5a0b500dc8828d5b0e35c2d6023165ac5
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47695160"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68019251"
 ---
 # <a name="column-data"></a>列のデータ
 > [!IMPORTANT]  

@@ -2,18 +2,18 @@
 title: 式のリファレンス (レポート ビルダーおよび SSRS) | Microsoft Docs
 ms.date: 03/01/2017
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: report-design
 ms.topic: conceptual
 ms.assetid: bb16e4ab-b13f-48f2-8cfe-1851656875ef
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 137699f1e533d2c91498674fa08c93b2987c319a
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 35bcbd777ac703ad0db2bf6693a1987ef8e124d4
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56286390"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65576368"
 ---
 # <a name="expression-reference-report-builder-and-ssrs"></a>式のリファレンス (レポート ビルダーおよび SSRS)
   レポートの式には、各種の組み込み関数や組み込みコレクションの参照を使用できます。 レポートをパブリッシュまたは処理するには、式に有効な [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] 構文が使用されている必要があります。  

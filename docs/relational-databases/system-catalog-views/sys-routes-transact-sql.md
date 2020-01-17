@@ -19,30 +19,29 @@ helpviewer_keywords:
 ms.assetid: 8fc65915-8bd6-425b-95d9-6a8468cb1e48
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: 098ff2a0a3e4827a9d80c3955cc6f2689c3fa53e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: bfdd322107da1a08edb3933aee9d5b79b6c2b47a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47633270"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67904434"
 ---
-# <a name="sysroutes-transact-sql"></a>sys.routes (Transact-SQL)
+# <a name="sysroutes-transact-sql"></a>sys.routes (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
 
-  ルートごとに 1 行のデータを格納するカタログ ビューです。 Service Broker では、ルートを使用してサービスのネットワーク アドレスを特定します。   
+  このカタログ ビューには、ルートごとに 1 行が含まれています。 Service Broker では、ルートを使用してサービスのネットワーク アドレスを特定します。   
 
 |列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
-|**name**|**sysname**|ルートの名前。データベース内で一意です。 Null を許容しません。|  
-|**route_id**|**int**|ルートの識別子。 Null を許容しません。|  
-|**principal_id**|**int**|ルートを所有するデータベース プリンシパルの識別子。 NULL 値は許可されます。|  
-|**remote_service_name**|**nvarchar (256)**|リモート サービスの名前。 NULL 値は許可されます。|  
-|**broker_instance**|**nvarchar(128)**|リモート サービスをホストするブローカーの識別子。 NULL 値は許可されます。|  
-|**lifetime**|**datetime**|ルートが期限切れとなる日時。 この値はローカル タイム ゾーンの値ではなく、 UTC での有効期限の日時です。 NULL 値は許可されます。|  
-|**address**|**nvarchar (256)**|Service Broker がリモート サービス宛のメッセージを送信するネットワーク アドレス。 NULL 値は許可されます。 SQL Database マネージ インスタンスのアドレスをローカルにある必要があります。|  
-|**mirror_address**|**nvarchar (256)**|アドレスで指定されているサーバーの、ミラーリング パートナーのネットワーク アドレス。 NULL 値は許可されます。|  
+|**name**|**sysname**|ルートは、データベース内で一意の名前です。 Null を許容しません。|  
+|**route_id**|**int**|ルートの識別子です。 Null を許容しません。|  
+|**principal_id**|**int**|ルートを所有するデータベース プリンシパルの識別子。 NULL 値を許容します。|  
+|**remote_service_name**|**nvarchar (256)**|リモート サービスの名前。 NULL 値を許容します。|  
+|**broker_instance**|**nvarchar(128)**|リモート サービスをホストしているブローカーの識別子です。 NULL 値を許容します。|  
+|**lifetime**|**datetime**|日付と、ルートの有効期限が切れる時刻。 この値がローカル タイム ゾーンを使用しないことに注意してください。 代わりに、値は、UTC の有効期限の時間を示します。 NULL 値を許容します。|  
+|**address**|**nvarchar (256)**|Service Broker リモート サービスのメッセージを送信する先のネットワーク アドレス。 NULL 値を許容します。 SQL Database マネージ インスタンスのアドレスをローカルにある必要があります。|  
+|**mirror_address**|**nvarchar (256)**|ネットワーク アドレスで指定されたサーバーのミラーリング パートナーのアドレス。 NULL 値を許容します。|  
   
 ## <a name="permissions"></a>アクセス許可  
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] 詳細については、「 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)」を参照してください。  

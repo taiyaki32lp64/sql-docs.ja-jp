@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: 4668cfb7-462f-40d0-948c-8f740a792a4d
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: dd5c396db88a8377a46bd965b664bc2a667d51de
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 3e09efe938dabb031e1c57020f051cd5ab03e55a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47784970"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68010570"
 ---
 # <a name="spsyscollectorstopcollectionset-transact-sql"></a>sp_syscollector_stop_collection_set (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -47,7 +46,7 @@ sp_syscollector_stop_collection_set
  [ @collection_set_id = ] *collection_set_id*  
  コレクション セットの一意なローカル識別子を指定します。 *collection_set_id*は**int**既定値は NULL です。 *collection_set_id*場合、値が必要*名前*は NULL です。  
   
- [ @name =] '*名前*'  
+ [ @name = ] '*name*'  
  コレクション セットの名前を指定します。 *名前*は**sysname**既定値は NULL です。 *名前*場合、値が必要*collection_set_id*は NULL です。  
   
  [ @stop_collection_job = ] *stop_collection_job*  

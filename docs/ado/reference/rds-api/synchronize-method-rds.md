@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 7af42866-7db2-4174-8251-388a2cf741f2
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: f8481d843ce49227c343b71111c0f56a8af00a5e
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.openlocfilehash: e280e5f8c9eda472c6448b199ffa94ac18c13751
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51601583"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67963264"
 ---
 # <a name="synchronize-method-rds"></a>Synchronize メソッド (RDS)
 ADO 2.5 以降で使用するための接続文字列で指定されたデータベースでは、特定のレコード セットを同期します。  
@@ -56,7 +55,7 @@ object.Synchronize(ConnectionString As String, HandlerString As String, lSynchro
  同期するレコード セットへのポインター。  
   
  *pStatusArray*  
- 影響を受ける行の行の状態のセーフ配列を返すために使用バリアントを同期します。 未設定、次の同期オプションのいずれも設定されている場合: *RefreshWithUpdate*、*更新*と*RefreshConflicts*します。  
+ 影響を受ける行の行の状態のセーフ配列を返すために使用バリアントを同期します。 次の同期オプションのいずれも設定されている場合を設定できません。*RefreshWithUpdate*、*更新*と*RefreshConflicts*します。  
   
  *lcid*  
  返されるエラーをビルドするために使用、LCID *pInformation*します。  

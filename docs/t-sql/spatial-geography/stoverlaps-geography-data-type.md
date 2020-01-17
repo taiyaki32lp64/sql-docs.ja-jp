@@ -12,15 +12,14 @@ dev_langs:
 helpviewer_keywords:
 - STOverlaps method (geography)
 ms.assetid: 2babbb9c-59ef-4494-9e6b-528cf296cbd7
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: 5bde947912b98abdfc5318ff2b421076ccda9e69
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: MladjoA
+ms.author: mlandzic
+ms.openlocfilehash: fc0d0a449941c3d8a04526180cfa721931d98d09
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47763420"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68120853"
 ---
 # <a name="stoverlaps-geography-data-type"></a>STOverlaps (geography データ型)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -41,7 +40,7 @@ ms.locfileid: "47763420"
 ## <a name="return-types"></a>戻り値の型  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 戻り値の型: **bit**  
   
- CLR の戻り値の型: **SqlBoolean**  
+ CLR の戻り値の型:**SqlBoolean**  
   
 ## <a name="remarks"></a>Remarks  
  2 つの **geography** インスタンスの SRID (spatial reference ID) が一致しない場合、このメソッドは常に null を返します。  

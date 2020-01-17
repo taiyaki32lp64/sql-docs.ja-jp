@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: bad9b7e8-5967-4afa-8dc8-6d840faf9372
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: d7194f151caf4495e448bbdde649d5bd77cc683c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 2e654e1e14aa09e5414a100e6d06c64eba93dab7
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47776670"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68009802"
 ---
 # <a name="clr-user-defined-aggregates"></a>CLR ユーザー定義集計
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

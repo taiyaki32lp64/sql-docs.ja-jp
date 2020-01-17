@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.bidtoolset.pastepreviewdb.f1
@@ -13,12 +12,12 @@ ms.assetid: 2f8d8b3d-810b-4c31-98f2-341015e13da8
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 24d35372e81b131ce9053649bc964edd9251efa4
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: ad25ecae16a9b5e5f32554350a315156e9818241
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48129302"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66086968"
 ---
 # <a name="copy-and-paste-data-ssas-tabular"></a>データのコピーと貼り付け (SSAS テーブル)
   テーブルのデータを外部アプリケーションからコピーし、モデル デザイナーの新規または既存のテーブルに貼り付けることができます。 Excel や Word からコピーされたデータなど、クリップボードから貼り付けるデータは HTML 形式である必要があります。 モデル デザイナーは自動的にデータ型を検出し、貼り付けられたデータにその型を適用します。 手動でデータ型を変更することも、列の書式を表示することもできます。  
@@ -61,7 +60,7 @@ ms.locfileid: "48129302"
     -   選択したテーブルをクリップボードの内容に置き換えるには、 **[貼り付け置換]** をクリックします。 既存のすべての列ヘッダー名はテーブルに残り、リレーションシップは保持されます。  
   
 ##  <a name="bkmk_paste_preview"></a> [貼り付けプレビュー] ダイアログ ボックス  
- **[貼り付けプレビュー]** ダイアログ ボックスを使用すると、デザイナー ウィンドウにコピーされたデータのプレビューを表示して、データが正しくコピーされたことを確認することができます。 このダイアログ ボックスにアクセスするには、テーブル ベースのデータを HTML 形式でクリップボードにコピーし、デザイナーで **[編集]** メニューをクリックして、 **[貼り付け]**、 **[貼り付け追加]**、または **[貼り付け置換]** をクリックします。 **[貼り付け追加]** オプションと **[貼り付け置換]** オプションは、クリップボードからコピーして貼り付けることで作成されたテーブル内のデータを追加または置換する場合にのみ使用できます。 **[貼り付け追加]** または **[貼り付け置換]** を使用して、インポートされたデータのテーブルにデータを追加することはできません。  
+ **[貼り付けプレビュー]** ダイアログ ボックスを使用すると、デザイナー ウィンドウにコピーされたデータのプレビューを表示して、データが正しくコピーされたことを確認することができます。 このダイアログ ボックスにアクセスするには、テーブル ベースのデータを HTML 形式でクリップボードにコピーし、デザイナーで **[編集]** メニューをクリックして、 **[貼り付け]** 、 **[貼り付け追加]** 、または **[貼り付け置換]** をクリックします。 **[貼り付け追加]** オプションと **[貼り付け置換]** オプションは、クリップボードからコピーして貼り付けることで作成されたテーブル内のデータを追加または置換する場合にのみ使用できます。 **[貼り付け追加]** または **[貼り付け置換]** を使用して、インポートされたデータのテーブルにデータを追加することはできません。  
   
  このダイアログ ボックスのオプションは、まったく新しいテーブルにデータを貼り付けるか、既存のテーブルにデータを貼り付けて既存のデータを新しいデータで置き換えるか、既存のテーブルにデータを追加するかによって異なります。  
   
@@ -87,8 +86,8 @@ ms.locfileid: "48129302"
  クリップボードの内容のサンプルが表示されます。 貼り付け先のテーブル内の既存のデータは削除され、テーブルに新しい行が挿入されます。  
   
 ## <a name="see-also"></a>参照  
- [データをインポート&#40;SSAS 表形式&#41;](import-data-ssas-tabular.md)   
- [サポートされるデータ ソース&#40;SSAS 表形式&#41;](tabular-models/data-sources-supported-ssas-tabular.md)   
- [列のデータ型を設定&#40;SSAS 表形式&#41;](tabular-models/set-the-data-type-of-a-column-ssas-tabular.md)  
+ [データのインポート &#40;SSAS テーブル&#41;](import-data-ssas-tabular.md)   
+ [サポートされているデータ ソース (SSAS テーブル)](tabular-models/data-sources-supported-ssas-tabular.md)   
+ [列のデータ型の設定 (SSAS テーブル)](tabular-models/set-the-data-type-of-a-column-ssas-tabular.md)  
   
   

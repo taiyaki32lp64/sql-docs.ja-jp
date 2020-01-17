@@ -30,16 +30,15 @@ helpviewer_keywords:
 ms.assetid: 8e814f9d-77c1-4906-b8e4-668a86fc94ba
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: f26eace7208ce0ec251707a34e964f718fcc1d09
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: c456b6e34dba77b7e35cc24e8af673662725a2bb
+ms.sourcegitcommit: 3de1fb410de2515e5a00a5dbf6dd442d888713ba
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54124792"
+ms.lasthandoff: 09/02/2019
+ms.locfileid: "70211374"
 ---
 # <a name="begin-dialog-conversation-transact-sql"></a>BEGIN DIALOG CONVERSATION (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
 
   あるサービスから別のサービスに対してダイアログを開始します。 ダイアログとは、2 つのサービスの間で順序どおりにメッセージを 1 回だけ交換する (exactly-once-in-order) メッセージ交換のことです。  
   

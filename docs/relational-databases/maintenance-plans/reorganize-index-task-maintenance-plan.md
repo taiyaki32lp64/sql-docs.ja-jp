@@ -14,19 +14,18 @@ helpviewer_keywords:
 ms.assetid: e9cbebbd-f36f-4176-9832-382a46ac946c
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 52412e1e6cc12c45399168062d397eb070887843
-ms.sourcegitcommit: 6c9d35d03c1c349bc82b9ed0878041d976b703c6
+ms.openlocfilehash: 748a7f24d8e15974138f4fbaa5e9df6bd56cca75
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/06/2018
-ms.locfileid: "51217967"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68115573"
 ---
 # <a name="reorganize-index-task-maintenance-plan"></a>[インデックスの再構成タスク] \(メンテナンス プラン)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   **[インデックスの再構成タスク]** ダイアログを使用すると、インデックス ページを効率的な検索順になるように移動できます。 このタスクでは、 `ALTER INDEX REORGANIZE` データベースに [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] ステートメントを使用します。  
   
-## <a name="options"></a>[変数]  
+## <a name="options"></a>オプション  
  **[接続]**  
  このタスクを実行するときに使用するサーバー接続を選択します。  
   
@@ -94,7 +93,7 @@ ms.locfileid: "51217967"
  **User name**  
  認証に使用する [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ログインを指定します。 このオプションは利用できません。  
   
- **Password**  
+ **パスワード**  
  認証に使用するパスワードを指定します。 このオプションは利用できません。  
   
 ## <a name="see-also"></a>参照  

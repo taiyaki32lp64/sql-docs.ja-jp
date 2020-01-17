@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 ms.assetid: f37edda0-19e6-489e-b544-8751fa6b6cfb
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: e2e0a15c9b60faf43a7e067d696f2a6cdeb5b7b1
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: e094c61fe26faca4e60303c340f2b3557c0f148e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56031988"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66109419"
 ---
 # <a name="data-sources-properties-page-report-manager"></a>[データ ソース] プロパティ ページ (レポート マネージャー)
   [データ ソース] プロパティ ページでは、現在のレポートの外部データ ソースへの接続方法を定義できます。 レポートに本来パブリッシュされていたデータ ソース接続情報をオーバーライドすることができます。 レポートで複数のデータ ソースが使用される場合、プロパティ ページに各データ ソースの独自のセクションがあります。 データ ソースは、レポートで定義された順に一覧表示されます。  
@@ -56,7 +55,7 @@ ms.locfileid: "56031988"
   
  `data source=<a SQL Server instance>;initial catalog=MyData`  
   
- 接続文字列は式として構成できます。これにより、データ ソースを実行時に指定することができます。 データ ソースの式は、レポート デザイナーを使用してレポートで定義されます。 データ ソースの式は、レポート マネージャー上で定義、表示、変更できません。 ただし、**[既定値よりオーバーライド]** をクリックして静的な接続文字列を入力することで、データ ソースの式をオーバーライドすることができます。 式に戻す場合は、 **[既定値に戻す]** をクリックします。 レポート サーバーは、復元する必要がある場合に備えて元の接続文字列を保存します。 データ ソースの式を使用するには、レポートに本来パブリッシュされていたデータ ソース接続情報を使用する必要があります。 共有データ ソースでは、接続文字列の式の使用はサポートされていません。  
+ 接続文字列は式として構成できます。これにより、データ ソースを実行時に指定することができます。 データ ソースの式は、レポート デザイナーを使用してレポートで定義されます。 データ ソースの式は、レポート マネージャー上で定義、表示、変更できません。 ただし、 **[既定値よりオーバーライド]** をクリックして静的な接続文字列を入力することで、データ ソースの式をオーバーライドすることができます。 式に戻す場合は、 **[既定値に戻す]** をクリックします。 レポート サーバーは、復元する必要がある場合に備えて元の接続文字列を保存します。 データ ソースの式を使用するには、レポートに本来パブリッシュされていたデータ ソース接続情報を使用する必要があります。 共有データ ソースでは、接続文字列の式の使用はサポートされていません。  
   
  **使用して接続します。**  
  資格情報の取得方法を決定するオプションを指定します。  

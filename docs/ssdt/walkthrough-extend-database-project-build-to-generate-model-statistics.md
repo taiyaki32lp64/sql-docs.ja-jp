@@ -1,5 +1,5 @@
 ---
-title: チュートリアル :モデルの統計を生成するためのデータベース プロジェクトのビルドの拡張 | Microsoft Docs
+title: 'チュートリアル: モデルの統計を生成するためのデータベース プロジェクトのビルドの拡張 | Microsoft Docs'
 ms.custom:
 - SSDT
 ms.date: 02/09/2017
@@ -8,17 +8,16 @@ ms.technology: ssdt
 ms.reviewer: ''
 ms.topic: conceptual
 ms.assetid: d44935ce-63bf-46df-976a-5a54866c8119
-author: stevestein
-ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 9841763f003b0a177913da72cf6dd3efd0c4d3d3
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 5e1844ae19de96b13b36fad59f5032fe68caaf19
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52523421"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68069010"
 ---
-# <a name="walkthrough-extend-database-project-build-to-generate-model-statistics"></a>チュートリアル :モデルの統計を生成するためのデータベース プロジェクトのビルドの拡張
+# <a name="walkthrough-extend-database-project-build-to-generate-model-statistics"></a>チュートリアル:モデルの統計を生成するためのデータベース プロジェクトのビルドの拡張
 ビルド コントリビューターを作成して、データベース プロジェクトのビルド時にカスタム アクションを実行できます。 このチュートリアルでは、データベース プロジェクトのビルド時に SQL データベース モデルから統計を出力する ModelStatistics という名前のビルド コントリビューターを作成します。 このビルド コントリビューターはビルド時にパラメーターを受け取るため、追加のステップが必要となります。  
   
 このチュートリアルでは、次の主なタスクを行います。  
@@ -89,11 +88,11 @@ ms.locfileid: "52523421"
   
 2.  "Class1.cs" ファイルの名前を "ModelStatistics.cs" に変更します。  
   
-3.  ソリューション エクスプローラーで、プロジェクト ノードを右クリックし、**[参照の追加]** をクリックします。  
+3.  ソリューション エクスプローラーで、プロジェクト ノードを右クリックし、 **[参照の追加]** をクリックします。  
   
 4.  **System.ComponentModel.Composition** エントリを選択し、 **[OK]** をクリックします。  
   
-5.  必要な SQL 参照を追加します。この操作を行うには、プロジェクト ノードを右クリックし、**[参照の追加]** をクリックします。 **[参照]** をクリックし、 **C:\Program Files (x86)\Microsoft SQL Server\110\DAC\Bin** フォルダーに移動します。 **Microsoft.SqlServer.Dac.dll**、 **Microsoft.SqlServer.Dac.Extensions.dll**、および **Microsoft.Data.Tools.Schema.Sql.dll** の各エントリを選択し、 **[OK]** をクリックします。  
+5.  必要な SQL 参照を追加します。この操作を行うには、プロジェクト ノードを右クリックし、 **[参照の追加]** をクリックします。 **[参照]** をクリックし、 **C:\Program Files (x86)\Microsoft SQL Server\110\DAC\Bin** フォルダーに移動します。 **Microsoft.SqlServer.Dac.dll**、 **Microsoft.SqlServer.Dac.Extensions.dll**、および **Microsoft.Data.Tools.Schema.Sql.dll** の各エントリを選択し、 **[OK]** をクリックします。  
   
     次に、コードをクラスに追加します。  
   
@@ -525,7 +524,7 @@ ms.locfileid: "52523421"
   
 1.  Visual Studio で、プロジェクトを右クリックし、[リビルド] をクリックします。 これにより、プロジェクトがビルドし直されます。生成されたモデルの統計が表示されると共に、出力はビルド出力に含まれ、ModelStatistics.xml に保存されます。 xml ファイルを表示するには、ソリューション エクスプローラーで [すべてのファイルを表示] を選択する必要があることに注意してください。  
   
-2.  Visual Studio のコマンド プロンプトを開きます。これには、**[スタート]** ボタンをクリックし、**[すべてのプログラム]**、**[Microsoft Visual Studio <Visual Studio Version>]**、**[Visual Studio Tools]** の順にクリックして、**[Visual Studio コマンド プロンプト (<Visual Studio Version>)]** をクリックします。  
+2.  Visual Studio のコマンド プロンプトを開きます。これには、 **[スタート]** ボタンをクリックし、 **[すべてのプログラム]** 、 **[Microsoft Visual Studio <Visual Studio Version>]** 、 **[Visual Studio Tools]** の順にクリックして、 **[Visual Studio コマンド プロンプト (<Visual Studio Version>)]** をクリックします。  
   
 3.  コマンド プロンプトで、SQL プロジェクトが含まれているフォルダーに移動します。  
   
@@ -593,5 +592,5 @@ Relationships
   
 ## <a name="see-also"></a>参照  
 [ビルド コントリビューターと配置コントリビューターを使用してデータベースのビルドと配置をカスタマイズする](../ssdt/use-deployment-contributors-to-customize-database-build-and-deployment.md)  
-[チュートリアル: 配置計画を分析するためのデータベース プロジェクトの配置の拡張](../ssdt/walkthrough-extend-database-project-deployment-to-analyze-the-deployment-plan.md)  
+[チュートリアル:配置計画を分析するためのデータベース プロジェクトの配置の拡張](../ssdt/walkthrough-extend-database-project-deployment-to-analyze-the-deployment-plan.md)  
   

@@ -1,6 +1,5 @@
 ---
-title: OLE DB (SQLXML 4.0) を使用してアップデート グラムの実行 |マイクロソフトのドキュメント
-ms.custom: ''
+title: OLE DB を使用したアップデートグラムの実行 (SQLXML)
 ms.date: 03/16/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -15,29 +14,29 @@ helpviewer_keywords:
 ms.assetid: 4154c590-1541-49d0-8117-4ddf2ce5ccba
 author: MightyPen
 ms.author: genemi
-manager: craigg
+ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: eb4617c4fc45e8e1672d11ef755b24c9d529529d
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 754db698b7c82a64f66cbb7a4df43bd4127413d1
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56027424"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75241278"
 ---
 # <a name="executing-an-updategram-by-using-ole-db-sqlxml-40"></a>OLE DB を使用した、アップデートグラムの実行 (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-  このトピックでは、アップデート グラムを実行する DB usingOLE の実際のサンプルを提供します。  
+  このトピックでは、Ole DB を使用してアップデートグラムを実行する実際のサンプルについて説明します。  
   
 ## <a name="using-icommandstream-to-set-an-xml-command"></a>ICommandStream を使用した XML コマンドの設定  
- OLE DB (バージョン 2.6 以降) ICommandStream インターフェイスは、文字列ではなく、ストリーム オブジェクトとしてのコマンドを渡します。  
+ OLE DB (バージョン2.6 以降) ICommandStream インターフェイスは、文字列ではなく、ストリームオブジェクトとしてコマンドを渡します。  
   
- このインターフェイスでは、XML パーサーで認識されるエンコードのコマンドを使用できます。 Icommand::execute が呼び出されると、コマンド テキストは、ストリームから直接読み取りし、変換は必要ありません。 そのため、ICommandStream を使用して XML コマンドを実行するインターフェイスが効率的です。  
+ このインターフェイスでは、XML パーサーで認識されるエンコードのコマンドを使用できます。 ICommand:: Execute が呼び出されると、コマンドテキストがストリームから直接読み取られ、変換は必要ありません。 したがって、ICommandStream インターフェイスを使用して XML コマンドを実行する方が効率的です。  
   
 ### <a name="setting-xml-as-a-command-using-icommandstream-and-retrieving-the-results-as-an-xml-document"></a>ICommandStream を使用した、コマンドとしての XML の設定と、XML ドキュメントとしての結果の取得  
- ICommandStream インターフェイスは、コマンドとして XML ドキュメントを設定するために使用でき、結果を XML ドキュメントとして取得することができます。  
+ ICommandStream インターフェイスを使用して、XML ドキュメントをコマンドとして設定し、結果を XML ドキュメントとして取得することができます。  
   
 #### <a name="executing-templates-with-xpath-queries"></a>XPath クエリを含むテンプレートの実行  
- XPath クエリで構成される次の XML テンプレートは ICommandStream を使用してコマンドとして指定します。  
+ XPath クエリで構成される次の XML テンプレートは、ICommandStream を使用してコマンドとして指定されます。  
   
 ```  
 <ROOT xmlns:sql="urn:schemas-microsoft-com:xml-sql">  
@@ -61,19 +60,19 @@ ms.locfileid: "56027424"
 </Schema>  
 ```  
   
- このクエリでは、従業員のすべての要素が返されます。 既定のマッピングにより、  **\<Person.Contact >** 要素が AdventureWorks データベースの Person.Contact テーブルにマップします。  
+ このクエリでは、従業員のすべての要素が返されます。 既定のマッピングでは、 ** \<person. contact>** 要素は、AdventureWorks データベースの person テーブルにマップされます。  
   
 ###### <a name="to-set-xml-as-a-command-and-retrieving-result-as-an-xml-document"></a>XML をコマンドとして設定し、結果を XML ドキュメントとして取得するには  
   
 1.  データベースへの接続を初期化し、確立します。  
   
-2.  ICommand の ICommandStream インターフェイスを取得します。  
+2.  ICommand で ICommandStream インターフェイスを取得します。  
   
 3.  必要なコマンド プロパティを設定します。 この例では、プロバイダー固有のプロパティ SSPROP_STREAM_BASEPATH を、マッピング スキーマとテンプレート ファイルが格納されているディレクトリに設定します。  
   
-4.  ICommandStream::SetCommandStream を使用すると、コマンド ストリームを指定します。 この例では、実行する XML テンプレートをファイルから読み込みます。 大きな XML テンプレートを実行する場合はこの方法が便利です。  
+4.  コマンドストリームを指定するには、ICommandStream:: SetCommandStream を使用します。 この例では、実行する XML テンプレートをファイルから読み込みます。 大きな XML テンプレートを実行する場合はこの方法が便利です。  
   
-5.  Icommand::execute、IID_ISequentialStream インターフェイス ID を要求を使用して XML コマンドを実行します  
+5.  ICommand:: Execute を使用して XML コマンドを実行し、IID_ISequentialStream インターフェイス ID を要求します。  
   
 6.  結果を処理します。 この例では、ストリームから読み取った XML が画面に表示されます。  
   
@@ -516,11 +515,11 @@ FOR XML AUTO</sql:query>
 </ROOT>  
 ```  
   
- このテンプレートには SQL クエリが含まれており、 クエリでは、そのパラメーターの値が必要です (@Title)。 パラメーター値が渡されない場合は、既定値 ("Mr.") が使用されます。  
+ このテンプレートには SQL クエリが含まれており、 クエリでは、パラメーター (@Title) の値が必要です。 パラメーター値が渡されない場合は、既定値 ("Mr.") が使用されます。  
   
  テンプレートにパラメーター値を渡すときには、パラメーターの名前と値の両方を指定する必要があります。  
   
- これは、コードを示します。  
+ 次にコードを示します。  
   
 ```  
 #define UNICODE  

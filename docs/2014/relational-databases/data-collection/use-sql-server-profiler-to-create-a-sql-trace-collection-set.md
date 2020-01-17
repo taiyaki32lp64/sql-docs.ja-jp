@@ -13,11 +13,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: a9e37fd917dc2716967623648a62057e45df73dc
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52798694"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62873340"
 ---
 # <a name="use-sql-server-profiler-to-create-a-sql-trace-collection-set-sql-server-management-studio"></a>SQL Server Profiler を使用して SQL トレース コレクション セットを作成する (SQL Server Management Studio)
   [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] では、[!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] のサーバー側のトレース機能を利用して、ジェネリック SQL トレース コレクター型を使用するコレクション セットを作成するためのトレース定義をエクスポートできます。 このプロセスは 2 つの部分で構成されます。  
@@ -78,7 +78,7 @@ ms.locfileid: "52798694"
   
 10. ツール バーの **[選択されたトレースの停止]** または **[選択されたトレースの一時停止]** をクリックします。  
   
-11. **[ファイル]** メニューで **[エクスポート]**、 **[トレース定義のスクリプト]** の順にポイントし、 **[SQL トレース コレクション セット]** をクリックします。  
+11. **[ファイル]** メニューで **[エクスポート]** 、 **[トレース定義のスクリプト]** の順にポイントし、 **[SQL トレース コレクション セット]** をクリックします。  
   
 12. **[名前を付けてファイルを保存]** ダイアログ ボックスの **[ファイル名]** ボックスに、トレース定義に使用する名前を入力し、目的の場所に保存します。 この例では、ファイル名はトレース名 (SPgt80) と同じです。  
   
@@ -104,7 +104,7 @@ ms.locfileid: "52798694"
   
     1.  **[管理]** を右クリックし、 **[更新]** をクリックします。  
   
-    2.  **[管理]**、 **[データ コレクション]** の順に展開します。  
+    2.  **[管理]** 、 **[データ コレクション]** の順に展開します。  
   
      `SPROC_CollectionSet`と同じレベルでコレクション セットが表示されます、**システム データ コレクション セット**ノード。 既定では、このコレクション セットは無効になっています。  
   

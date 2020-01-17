@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 084c7020-f729-4f91-90e0-143f85fa68d1
 author: Shamikg
 ms.author: Shamikg
-manager: craigg
-ms.openlocfilehash: 233b6824ef527a9ed4e7e02164a08e31e41f3699
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: 6cb47c0f06d7133b8c7454a4fa538937a0e78e19
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52409504"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68103169"
 ---
 # <a name="connecting-to-mysql-mysqltosql"></a>MySQL への接続 (MySQLToSQL)
 SQL Server または SQL Azure に MySQL データベースを移行するを移行する MySQL データベースに接続する必要があります。 接続すると、SSMA は、すべての MySQL スキーマに関するメタデータを取得し、MySQL メタデータ エクスプ ローラー ペインに表示します。 SSMA は、データベース サーバーに関する情報を格納しますが、パスワードは保存されません。  
@@ -114,6 +113,6 @@ MySQL データベースについてのメタデータは、自動的に更新�
 ## <a name="next-step"></a>次の手順  
 移行プロセスでは、次の手順は[SQL Server に接続する&#40;MySQLToSQL&#41;](../../ssma/mysql/connecting-to-sql-server-mysqltosql.md)  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
 [SQL Server - Azure SQL DB への移行 MySQL データベース&#40;MySQLToSql&#41;](../../ssma/mysql/migrating-mysql-databases-to-sql-server-azure-sql-db-mysqltosql.md)  
   

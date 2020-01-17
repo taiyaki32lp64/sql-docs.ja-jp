@@ -1,5 +1,6 @@
 ---
-title: 変更データの処理 (SQL Server) | Microsoft Docs
+title: 変更データの処理
+ms.custom: seo-dt-2019
 ms.date: 01/02/2019
 ms.prod: sql
 ms.prod_service: database-engine
@@ -14,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 5346b852-1af8-4080-b278-12efb9b735eb
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: c55ff97602a2c56a54523c68b5ef76a832888676
-ms.sourcegitcommit: a11e733bd417905150567dfebc46a137df85a2fa
+ms.openlocfilehash: f68227bb3f88996ee8a4f5ea60c9cdd88f4f765a
+ms.sourcegitcommit: 15fe0bbba963d011472cfbbc06d954d9dbf2d655
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/03/2019
-ms.locfileid: "53991895"
+ms.lasthandoff: 11/14/2019
+ms.locfileid: "74095403"
 ---
 # <a name="work-with-change-data-sql-server"></a>変更データの処理 (SQL Server)
 [!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]

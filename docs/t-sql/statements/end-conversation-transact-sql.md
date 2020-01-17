@@ -24,16 +24,15 @@ helpviewer_keywords:
 ms.assetid: 4415a126-cd22-4a5e-b84a-d8c68515c83b
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: 8ff8f2d557fac07f588b278e2b2667b75e60f478
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: 26051de067dd496d25cfcc3c2cb0f71715ed3145
+ms.sourcegitcommit: 3de1fb410de2515e5a00a5dbf6dd442d888713ba
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51701294"
+ms.lasthandoff: 09/02/2019
+ms.locfileid: "70211361"
 ---
 # <a name="end-conversation-transact-sql"></a>END CONVERSATION (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
 
   既存のメッセージ交換の一方の側を終了します。  
   
@@ -55,10 +54,10 @@ END CONVERSATION conversation_handle
  終了するメッセージ交換のメッセージ交換ハンドルを指定します。  
   
  WITH ERROR =*failure_code*  
- エラー コードを指定します。 *Failure_code* のデータ型は **int**です。このエラー コードはユーザー定義のコードで、メッセージ交換の相手側に送信するエラー メッセージの一部となります。 このエラー コードは 0 よりも大きい値にする必要があります。  
+ エラー コードです。 *Failure_code* のデータ型は **int**です。このエラー コードはユーザー定義のコードであり、メッセージ交換の相手側に送信するエラー メッセージの一部となります。 このエラー コードは 0 よりも大きい値にする必要があります。  
   
  DESCRIPTION =*failure_text*  
- エラー メッセージです。 *Failure_text* のデータ型は **nvarchar (3000)** です。 このエラー テキストはユーザー定義のテキストで、メッセージ交換の相手側に送信するエラー メッセージの一部となります。  
+ エラー メッセージです。 *Failure_text* のデータ型は **nvarchar (3000)** です。 このエラー テキストはユーザー定義のテキストであり、メッセージ交換の相手側に送信するエラー メッセージの一部となります。  
   
  WITH CLEANUP  
  正常に完了できなかったメッセージ交換の一方の側のメッセージとカタログ ビュー エントリをすべて削除します。 メッセージ交換の相手側にはクリーンアップは通知されません。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、メッセージ交換のエンドポイントが削除され、転送キューおよびサービス キューにあるメッセージ交換のすべてのメッセージも削除されます。 管理者は、このオプションを使用して、正常に完了できなかったメッセージ交換のメッセージを削除できます。 たとえば、リモート サービスが永久的に削除された場合、管理者は WITH CLEANUP を使ってこのサービスに対するメッセージを削除できます。 WITH CLEANUP は、[!INCLUDE[ssSB](../../includes/sssb-md.md)] アプリケーションのコードでは使用しないでください。 受信エンドポイントでメッセージの受信を確認する前に END CONVERSATION WITH CLEANUP が実行されると、送信エンドポイントからそのメッセージが再び送信されます。 これにより、ダイアログが再実行される可能性があります。  
@@ -74,7 +73,7 @@ END CONVERSATION conversation_handle
   
 -   メッセージ交換がエラーで終了し、リモート サービスへのメッセージ交換がアクティブな状態を継続していると、[!INCLUDE[ssSB](../../includes/sssb-md.md)] からリモート サービスに、`https://schemas.microsoft.com/SQL/ServiceBroker/Error` のようなメッセージが送信されます。 現在転送キューに残っているメッセージ交換のメッセージはすべて、[!INCLUDE[ssSB](../../includes/sssb-md.md)] によって削除されます。  
   
--   データベース管理者は WITH CLEANUP 句を使用して、正常に完了しなかったメッセージ交換のメッセージを削除できます。 このオプションでは、メッセージ交換のすべてのメッセージとカタログ ビュー エントリが削除されます。 この場合、メッセージ交換のリモート側にはメッセージ交換が終了したことが通知されません。また、アプリケーションでは送信されたが、ネットワーク経由では転送されていなかったメッセージは受信できないことがあります。 メッセージ交換が正常に完了できない場合にのみ、このオプションを使用してください。  
+-   データベース管理者は WITH CLEANUP 句を使用して、正常に完了しなかったメッセージ交換を削除できます。 このオプションでは、メッセージ交換のすべてのメッセージとカタログ ビュー エントリが削除されます。 この場合、メッセージ交換のリモート側にはメッセージ交換が終了したことが通知されません。また、アプリケーションでは送信されたが、ネットワーク経由では転送されていなかったメッセージは受信できないことがあります。 メッセージ交換が正常に完了できない場合にのみ、このオプションを使用してください。  
   
  メッセージ交換が終了した後、[!INCLUDE[tsql](../../includes/tsql-md.md)] SEND ステートメントでそのメッセージ交換ハンドルが指定されると、[!INCLUDE[tsql](../../includes/tsql-md.md)] エラーが発生します。 メッセージ交換の相手側からメッセージを受信した場合、これらのメッセージは [!INCLUDE[ssSB](../../includes/sssb-md.md)] によって破棄されます。  
   

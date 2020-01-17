@@ -10,15 +10,14 @@ ms.topic: conceptual
 f1_keywords:
 - sql13.swb.table.tablerecreatenosave.f1
 ms.assetid: 7efda8e3-739f-4c97-a497-b8808a0acbea
-author: stevestein
-ms.author: sstein
-manager: craigg
-ms.openlocfilehash: b491d5d0bf14c90d813b0fc66c0112eac1ff0e16
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 84cfbc428c617126c3e895b4dafc65c816b386e0
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47635300"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68266892"
 ---
 # <a name="save-not-permitted-dialog-box"></a>[保存 (許可されない)] ダイアログ ボックス
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

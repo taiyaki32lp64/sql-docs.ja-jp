@@ -4,22 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 f1_keywords:
 - "10150"
 - sql12.rtp.rptdesigner.datasetproperties.parameters.f1
 ms.assetid: 43b00aab-e2c3-4e85-abe1-a2b5a21efeed
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: d792081d7554aefe4684b5a2e491aac875de49d0
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: d621895212e72479090363a980ddc00fa2b5a0c8
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56038443"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66107332"
 ---
 # <a name="dataset-properties-dialog-box-parameters"></a>[パラメーター] ([データセットのプロパティ] ダイアログ ボックス)
   **[データセットのプロパティ]** ダイアログ ボックスの **[パラメーター]** を選択すると、クエリ パラメーター (レポート パラメーターにリンクするクエリ パラメーターを含む) の追加、変更、および削除を実行できます。  
@@ -47,7 +46,7 @@ ms.locfileid: "56038443"
  **下矢印**  
  選択したパラメーターを一覧内で下に移動します。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [レポート パラメーター &#40;レポート ビルダーおよびレポート デザイナー&#41;](../report-design/report-parameters-report-builder-and-report-designer.md)   
  [レポートにデータを追加&#40;レポート ビルダーおよび SSRS&#41;](report-datasets-ssrs.md)   
  [レポート パラメーターの順序の変更 (レポート ビルダーおよび SSRS)](../report-design/change-the-order-of-a-report-parameter-report-builder-and-ssrs.md)  

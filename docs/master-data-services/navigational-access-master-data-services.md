@@ -1,5 +1,5 @@
 ---
-title: ナビゲーション アクセス (マスター データ サービス) | Microsoft Docs
+title: ナビゲーション アクセス
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -11,15 +11,14 @@ helpviewer_keywords:
 - navigational access [Master Data Services]
 - security [Master Data Services], navigational access
 ms.assetid: 3403b7b0-44e2-48c3-a1b7-9c4612b874b8
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 670377e2a2a40c14fcdde2cc8f5691c867d705ab
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
-ms.translationtype: HT
+ms.openlocfilehash: c167d33c29a78100e5a0f1bfcd987dc50368cdc4
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52813094"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73728996"
 ---
 # <a name="navigational-access-master-data-services"></a>ナビゲーション アクセス (マスター データ サービス)
 

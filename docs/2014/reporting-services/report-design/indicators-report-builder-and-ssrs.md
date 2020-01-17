@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 04/27/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 f1_keywords:
 - "10545"
@@ -15,15 +14,15 @@ f1_keywords:
 - "10546"
 - sql12.rtp.rptdesigner.indicatorproperties.validateandstates.f1
 ms.assetid: 2edbd279-be39-4d97-b1b6-ddbc5b17c422
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 301ed0986cdb9971e2b03bd1af76ab3d2a71d86f
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: da3f95120b81877076533d19e4cb05785d5cb932
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56293881"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66105644"
 ---
 # <a name="indicators-report-builder-and-ssrs"></a>インジケーター (レポート ビルダーおよび SSRS)
   インジケーターは、1 つのデータ値の状態をひとめでわかるようにするための小さなゲージです。 インジケーターとその状態を表すアイコンは単純で、小さなサイズでもわかりやすくなっています。  
@@ -44,7 +43,7 @@ ms.locfileid: "56293881"
   
  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] には、そのまま使用できるインジケーター セットとインジケーター アイコンが組み込まれていますが、必要に応じて、個々のインジケーター アイコンとインジケーター セットをカスタマイズできます。  
   
- インジケーターを Kpi として使用する方法の詳細については、次を参照してください。[チュートリアル。レポートへの KPI の追加&#40;レポート ビルダー&#41;](../tutorial-adding-a-kpi-to-your-report-report-builder.md)します。  
+ インジケーターを KPI として使用する方法の詳細については、「[チュートリアル:レポートへの KPI の追加 &#40;レポート ビルダー&#41;](../tutorial-adding-a-kpi-to-your-report-report-builder.md)」を参照してください。  
   
 > [!NOTE]  
 >  インジケーターは、レポート パーツとしてレポートとは別にパブリッシュできます。 [!INCLUDE[ssRBrptparts](../../includes/ssrbrptparts-md.md)]  
@@ -201,7 +200,7 @@ ms.locfileid: "56293881"
 -   [ゲージ パネルへのインジケーターとゲージの配置 (レポート ビルダーおよび SSRS)](include-indicators-and-gauges-in-a-gauge-panel-report-builder-and-ssrs.md)  
   
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [ゲージ (レポート ビルダーおよび SSRS)](gauges-report-builder-and-ssrs.md)   
  [スパークラインとデータ バー (レポート ビルダーおよび SSRS)](sparklines-and-data-bars-report-builder-and-ssrs.md)   
  [グラフ (レポート ビルダーおよび SSRS)](charts-report-builder-and-ssrs.md)  

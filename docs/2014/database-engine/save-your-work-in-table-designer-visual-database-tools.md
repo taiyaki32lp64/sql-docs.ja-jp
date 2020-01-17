@@ -15,11 +15,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 1b6b705f887e0df06684d33fc7be26aa73ff4048
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54130802"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62773690"
 ---
 # <a name="save-your-work-in-table-designer-visual-database-tools"></a>テーブル デザイナーでの作業を保存する (Visual Database Tools)
   テーブル デザイナーで開いているテーブルへの変更を保存できます。  

@@ -14,15 +14,14 @@ helpviewer_keywords:
 - SQL Server Profiler, permissions
 - security [SQL Server], SQL Server Profiler
 ms.assetid: 5c580a87-88ae-4314-8fe1-54ade83f227f
-author: stevestein
-ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 695870ff131cb265470173a1bc76b6e2ee96bcf2
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 73b4be6320ab342bcdee3b2e66d8bcd31445e0d1
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47757040"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68031510"
 ---
 # <a name="permissions-required-to-run-sql-server-profiler"></a>SQL Server Profiler の実行に必要な権限
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -64,7 +63,7 @@ ms.locfileid: "47757040"
   
  次の図に、トレース再生時の権限のチェック プロセスを示します。  
   
- ![SQL Server Profiler のトレースを再生するための権限](../../tools/sql-server-profiler/media/replaytracedecisiontree.gif "SQL Server Profiler のトレースを再生するための権限")  
+ ![SQL Server プロファイラー再生トレースのアクセス許可](../../tools/sql-server-profiler/media/replaytracedecisiontree.gif "SQL Server プロファイラー再生トレースのアクセス許可")  
   
 ## <a name="see-also"></a>参照  
  [SQL Server Profiler のストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sql-server-profiler-stored-procedures-transact-sql.md)   

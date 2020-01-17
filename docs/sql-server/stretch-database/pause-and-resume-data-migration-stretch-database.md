@@ -1,5 +1,5 @@
 ---
-title: データ移行の一時停止と再開 (Stretch Database) | Microsoft Docs
+title: データ移行の一時停止と再開
 ms.date: 06/14/2016
 ms.service: sql-server-stretch-database
 ms.reviewer: ''
@@ -11,13 +11,13 @@ helpviewer_keywords:
 ms.assetid: 65d6a990-b295-41b2-97f9-7b6bf3000e4d
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: ad3cca8d2b1f58610e3eefb9227cee804668bf78
-ms.sourcegitcommit: ec1f01b4bb54621de62ee488decf9511d651d700
+ms.custom: seo-dt-2019
+ms.openlocfilehash: b853d764d1cf7a6aa7252aa181b70dbcccc265fe
+ms.sourcegitcommit: f688a37bb6deac2e5b7730344165bbe2c57f9b9c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/14/2019
-ms.locfileid: "56240736"
+ms.lasthandoff: 11/08/2019
+ms.locfileid: "73844539"
 ---
 # <a name="pause-and-resume-data-migration-stretch-database"></a>データ移行の一時停止と再開 (Stretch Database)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md-winonly](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md-winonly.md)]

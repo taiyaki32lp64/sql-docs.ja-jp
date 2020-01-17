@@ -1,6 +1,7 @@
 ---
-title: SQL Server レプリケーションの [パブリッシャーのプロパティ] ダイアログ ボックス | Microsoft Docs
-ms.custom: ''
+title: '[パブリッシャーのプロパティ] ダイアログ ボックス (SSMS)'
+description: SQL Server Management Studio (SSMS) 内の特定のパブリケーションの [パブリッシャーのプロパティ] ダイアログ ボックスについて説明します。
+ms.custom: seo-lt-2019
 ms.date: 11/20/2018
 ms.prod: sql
 ms.prod_service: database-engine
@@ -15,16 +16,16 @@ f1_keywords:
 ms.assetid: 98df1aea-0406-40bf-a917-4bd80464125c
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 1ba43fc3f35c1fd3cacd3bdda6d4192cf7dc75af
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
+ms.openlocfilehash: 12c7a8482561e6ab608501158a05a275763ab74a
+ms.sourcegitcommit: 02d44167a1ee025ba925a6fefadeea966912954c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54129842"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75320729"
 ---
 # <a name="sql-server-replication-publisher-properties-dialog-box"></a>SQL Server レプリケーションの [パブリッシャーのプロパティ] ダイアログ ボックス
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
 このトピックでは、[パブリッシャーのプロパティ] ダイアログ ボックス内にあるさまざまなオプションについて説明します。 
 
@@ -33,7 +34,7 @@ ms.locfileid: "54129842"
   
 1.  パブリッシャーでのパブリッシングを無効にします。 詳細については、「[パブリッシングの無効化と配布](../../relational-databases/replication/disable-publishing-and-distribution.md)」を参照してください。    
 2.  パブリッシングおよびディストリビューションを再構成します。 詳細については、「 [Configure Publishing and Distribution](../../relational-databases/replication/configure-publishing-and-distribution.md)」をご参照ください。  
-  
+
 ## <a name="distributor"></a>ディストリビューター 
 **[パブリッシャーのプロパティ]** ダイアログ ボックスを使用すると、パブリッシャーとそのディストリビューター間のリレーションシップに関連するプロパティの表示と修正を行うことができます。  
   
@@ -61,7 +62,7 @@ ms.locfileid: "54129842"
  **トランザクション**  
  このチェック ボックスをオンにすると、 **db_owner** 固定データベース ロール内のユーザーは、スナップショット パブリケーションまたはトランザクション パブリケーションをそのデータベースに作成できるようになります。 
   
- **Merge**  
+ **[マージ]**  
  このチェック ボックスをオンにすると、 **db_owner** 固定データベース ロール内のユーザーは、マージ パブリケーションをそのデータベースに作成できるようになります。  
   
 
@@ -70,14 +71,14 @@ ms.locfileid: "54129842"
   
 ### <a name="options"></a>オプション  
  **[パブリッシャーのプロパティ]**  
- **[サブスクライバー]** プロパティ グリッドには、このパブリッシャー上のパブリケーションからデータを受け取るように設定されているサブスクライバーが表示されます。 その他のプロパティを表示し、設定するには、サブスクライバーの横にあるプロパティ ボタン (**[...]**) をクリックします。  
+ **[サブスクライバー]** プロパティ グリッドには、このパブリッシャー上のパブリケーションからデータを受け取るように設定されているサブスクライバーが表示されます。 その他のプロパティを表示し、設定するには、サブスクライバーの横にあるプロパティ ボタン ( **[...]** ) をクリックします。  
   
- **[追加]**  
+ **追加**  
  サブスクライバーを追加するには、 **[追加]** をクリックしてから、 **[SQL Server サブスクライバーの追加]** または **[SQL Server 以外のサブスクライバーの追加]** をクリックします。  
   
 ## <a name="see-also"></a>参照  
  [View and Modify Distributor and Publisher Properties (ディストリビューターとパブリッシャーのプロパティの表示および変更)](../../relational-databases/replication/view-and-modify-distributor-and-publisher-properties.md)   
- [Publisher で文書を作成するには](../../relational-databases/replication/publish/create-a-publication.md)   
+ [パブリケーションを作成する](../../relational-databases/replication/publish/create-a-publication.md)   
 
 
   

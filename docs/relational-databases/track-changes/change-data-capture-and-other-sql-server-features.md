@@ -1,5 +1,6 @@
 ---
-title: 変更データ キャプチャとその他の SQL Server 機能 | Microsoft Docs
+title: 変更データ キャプチャとその他の SQL Server 機能
+ms.custom: seo-dt-2019
 ms.date: 01/02/2019
 ms.prod: sql
 ms.prod_service: database-engine
@@ -11,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 7dfcb362-1904-4578-8274-da16681a960e
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: a293914cad908b8c4d7fc295bf1e0846446dc2ec
-ms.sourcegitcommit: a11e733bd417905150567dfebc46a137df85a2fa
+ms.openlocfilehash: e29ad6de65172b08bb3f35aa89820ca817a9e1d3
+ms.sourcegitcommit: 15fe0bbba963d011472cfbbc06d954d9dbf2d655
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/03/2019
-ms.locfileid: "53991825"
+ms.lasthandoff: 11/14/2019
+ms.locfileid: "74095295"
 ---
 # <a name="change-data-capture-and-other-sql-server-features"></a>変更データ キャプチャとその他の SQL Server 機能
 [!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
@@ -43,9 +43,9 @@ ms.locfileid: "53991825"
   
 2.  新しいプリンシパル データベース (以前のミラー データベース) にキャプチャ ジョブとクリーンアップ ジョブを作成します。 ジョブを作成するには、 [sp_cdc_add_job](../../relational-databases/system-stored-procedures/sys-sp-cdc-add-job-transact-sql.md) ストアド プロシージャを使用します。  
   
- クリーンアップまたはキャプチャ ジョブの現在の構成を表示するには、新しいプリンシパル サーバー インスタンスで [sys.sp_cdc_help_jobs](../../relational-databases/system-stored-procedures/sys-sp-cdc-help-jobs-transact-sql.md) ストアド プロシージャを使用します。 特定のデータベースに対し、キャプチャ ジョブの名前は cdc.*database_name*_capture に、クリーンアップ ジョブの名前は cdc.*database_name*_cleanup になります ( *database_name* はデータベースの名前)。  
+ クリーンアップまたはキャプチャ ジョブの現在の構成を表示するには、新しいプリンシパル サーバー インスタンスで [sys.sp_cdc_help_jobs](../../relational-databases/system-stored-procedures/sys-sp-cdc-help-jobs-transact-sql.md) ストアド プロシージャを使用します。 特定のデータベースに対し、キャプチャ ジョブの名前は cdc.*database\_name*\_capture に、クリーンアップ ジョブの名前は cdc.*database\_name*\_cleanup になります (*database_name* はデータベースの名前)。  
   
- ジョブの構成を変更するには、[sys.sp_cdc_change_job](../../relational-databases/system-stored-procedures/sys-sp-cdc-change-job-transact-sql.md) ストアド プロシージャを使用します。  
+ ジョブの構成を変更するには、 [sys.sp_cdc_change_job](../../relational-databases/system-stored-procedures/sys-sp-cdc-change-job-transact-sql.md) ストアド プロシージャを使用します。  
   
  データベース ミラーリングの詳細については、「[データベース ミラーリング &#40;SQL Server&#41;](../../database-engine/database-mirroring/database-mirroring-sql-server.md)」を参照してください。  
   
@@ -70,7 +70,7 @@ ms.locfileid: "53991825"
   
 -   データベースをデタッチしてから、同じサーバーまたは別のサーバーにアタッチした場合、変更データ キャプチャは有効のままです。  
   
--   **KEEP_CDC** オプションを使用してデータベースを Enterprise 以外のエディションにアタッチまたは復元しようとすると、操作がブロックされます。これは変更データ キャプチャが [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Enterprise を必要とするためです。 エラー メッセージ 934 が表示されます。  
+-   **KEEP_CDC** オプションを使用してデータベースを Standard または Enterprise 以外のエディションにアタッチまたは復元しようとすると、操作がブロックされます。これは変更データ キャプチャを使用するには、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Standard または Enterprise Edition が必要であるためです。 エラー メッセージ 934 が表示されます。  
   
      `SQL Server cannot load database '%.*ls' because Change Data Capture is enabled. The currently installed edition of SQL Server does not support Change Data Capture. Either restore database without KEEP_CDC option, or upgrade the instance to one that supports Change Data Capture.`  
   

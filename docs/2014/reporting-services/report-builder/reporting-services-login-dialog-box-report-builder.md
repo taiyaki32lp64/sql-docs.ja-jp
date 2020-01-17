@@ -4,21 +4,20 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 f1_keywords:
 - "10059"
 ms.assetid: daf5eec6-f9d2-475c-8c65-9cf74e5523a2
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: ce767793dc0994c30bba1301a193f0736c7e2e14
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 16da6af99af021185c8965dccd087e1c8420e50a
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56030423"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66107660"
 ---
 # <a name="reporting-services-login-dialog-box-report-builder"></a>[Reporting Services ログイン] ダイアログ ボックス (レポート ビルダー)
   **[Reporting Services ログイン]** ダイアログ ボックスを使用すると、レポートをレポート サーバーにパブリッシュする際に使用する資格情報を指定できます。 これらの資格情報については、レポート サーバー管理者に問い合わせてください。  
@@ -33,7 +32,7 @@ ms.locfileid: "56030423"
  **Password**  
  Web サービスへのログインに使用するパスワードを入力します。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [レポート ビルダーのダイアログ ボックス、ペイン、およびウィザードに関するヘルプ](../report-builder-help-for-dialog-boxes-panes-and-wizards.md)  
   
   

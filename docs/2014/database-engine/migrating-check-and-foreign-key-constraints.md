@@ -10,12 +10,12 @@ ms.assetid: e0a1a1e4-0062-4872-93c3-cd91b7a43c23
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 2c84ecb4076fc7aff20383b56a81b6df56d28ea3
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 2494ab96cc3b4964c26a1ce17593e9b5aece2e7e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48049102"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62774933"
 ---
 # <a name="migrating-check-and-foreign-key-constraints"></a>CHECK 制約と外部キー制約の移行
   チェックと外部キー制約でサポートされていない[!INCLUDE[hek_2](../includes/hek-2-md.md)]で[!INCLUDE[ssSQL14](../includes/sssql14-md.md)]します。 これらのコンストラクトは、通常は、スキーマ内の論理データの整合性を適用する使用し、アプリケーションの機能の正確性を維持するために重要なことができます。  
@@ -40,7 +40,7 @@ ms.locfileid: "48049102"
 ## <a name="table-definition-for-the-workarounds"></a>回避策のテーブルの定義  
  前に、メモリ最適化テーブルへの変換は、[Sales] の定義。[SalesOrderDetail] は次のとおりです。  
   
-```tsql  
+```sql  
 USE [AdventureWorks2012]  
 GO  
   
@@ -101,7 +101,7 @@ GO
   
  その rowguid はなくなりました ROWGUIDCOL ではサポートされていない[!INCLUDE[hek_2](../includes/hek-2-md.md)]します。 列が削除されました。 さらに、LineTotal は計算列と、この記事で取り上げませんためも削除されています。  
   
-```tsql  
+```sql  
 USE [AdventureWorks2012]  
 GO  
   
@@ -127,7 +127,7 @@ GO
   
 ## <a name="checking-constraints-after-an-insert-update-or-delete-operation"></a>挿入、更新、または削除操作の後に制約のチェック  
   
-```tsql  
+```sql  
 USE AdventureWorks2012  
 GO  
   
@@ -185,7 +185,7 @@ END
   
 ## <a name="enforcing-constraints-before-an-insert-update-or-delete-operation"></a>強制の制約を挿入する前に更新または削除操作  
   
-```tsql  
+```sql  
 USE AdventureWorks2012  
 GO  
   

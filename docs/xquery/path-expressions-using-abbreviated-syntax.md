@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: f83c2e41-5722-47c3-b5b8-bf0f8cbe05d3
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: ee9a48b4bec625e4d64caf20aa1b5c8eaefe34f3
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 8e75db08f283631cf9b5daf064790786a1abc10f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51660401"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67946414"
 ---
 # <a name="path-expressions---using-abbreviated-syntax"></a>パス式 - 省略構文の使用
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -36,15 +35,15 @@ child::ProductDescription[attribute::ProductModelID=19]
   
  XQuery は、パス式で次の省略をサポートしています。  
   
--   **子**軸は既定の軸。 そのため、**子::** 軸は、式のステップから省略できます。 たとえば、`/child::ProductDescription/child::Summary` は `/ProductDescription/Summary` のように記述できます。  
+-   **子**軸は既定の軸。 そのため、**子::** 軸は、式のステップから省略できます。 たとえば、`/child::ProductDescription/child::Summary`として記述できます`/ProductDescription/Summary`します。  
   
--   **属性**として省略できます@します。 たとえば、`/child::ProductDescription[attribute::ProductModelID=10]` は `/ProudctDescription[@ProductModelID=10]` のように記述できます。  
+-   **属性**として省略できます@します。 たとえば、`/child::ProductDescription[attribute::ProductModelID=10]`として記述できます`/ProudctDescription[@ProductModelID=10]`します。  
   
--   A **/descendant-or-self::node()** ように短縮できます//。 たとえば、`/descendant-or-self::node()/child::act:telephoneNumber` は `//act:telephoneNumber` のように記述できます。  
+-   A **/descendant-or-self::node()** ように短縮できます//。 たとえば、`/descendant-or-self::node()/child::act:telephoneNumber`として記述できます`//act:telephoneNumber`します。  
   
-     上記のクエリは、Contact テーブルの AdditionalContactInfo 列に格納されているすべての電話番号を取得しています。 AdditionalContactInfo のスキーマが方法で定義されている、 \<telephoneNumber > 要素がドキュメントにどこでも表示できます。 したがって、すべての電話番号を取得するには、ドキュメント内のすべてのノードを検索する必要があります。 検索は、ドキュメントのルートから開始され、続いてすべての子孫ノードが検索されます。  
+     前のクエリでは、Contact テーブルの AdditionalContactInfo 列に格納されているすべての電話番号を取得します。 AdditionalContactInfo のスキーマが方法で定義されている、 \<telephoneNumber > 要素がドキュメントにどこでも表示できます。 したがって、すべての電話番号を取得するには、ドキュメント内のすべてのノードを検索する必要があります。 検索は、ドキュメントのルートから開始され、続いてすべての子孫ノードが検索されます。  
   
-     次のクエリは、特定の顧客の電話番号をすべて取得します。  
+     次のクエリは、特定の顧客の連絡先のすべての電話番号を取得します。  
   
     ```  
     SELECT AdditionalContactInfo.query('             
@@ -57,7 +56,7 @@ child::ProductDescription[attribute::ProductModelID=19]
     WHERE ContactID=1             
     ```  
   
-     パス式を省略構文の `//act:telephoneNumber` に置き換えても、同じ結果が得られます。  
+     省略構文のパス式に置き換えた場合`//act:telephoneNumber`、同じ結果が表示されます。  
   
 -   **Self::node()** の手順では、1 つのドット (.) を省略できます。 ただし、ドットでないと同等か、互換性、 **self::node()** します。  
   

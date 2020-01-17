@@ -19,14 +19,13 @@ helpviewer_keywords:
 ms.assetid: 012aab95-8888-4f35-9ea3-b5dff6e3f60f
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 29449905da888d0f7c85b66d3731eed381dc582c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 7395d52b7c91678f11a37a4da32877f31e5780bf
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47704710"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68265865"
 ---
 # <a name="sysdmosbufferdescriptors-transact-sql"></a>sys.dm_os_buffer_descriptors (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -44,19 +43,19 @@ ms.locfileid: "47704710"
 |page_id|**int**|ファイル内のページの ID。 NULL 値が許可されます。|  
 |page_level|**int**|ページのインデックス レベル。 NULL 値が許可されます。|  
 |allocation_unit_id|**bigint**|ページのアロケーション ユニットの ID。 この値は sys.allocation_units の結合に使用できます。 NULL 値が許可されます。|  
-|page_type|**nvarchar(60)**|ページの種類。データ ページ、インデックス ページなどがあります。 NULL 値が許可されます。|  
+|page_type|**nvarchar(60)**|など、ページを種類します。データ ページやインデックス ページです。 NULL 値が許可されます。|  
 |row_count|**int**|ページの行数。 NULL 値が許可されます。|  
 |free_space_in_bytes|**int**|使用できるページの空き領域 (バイト単位)。 NULL 値が許可されます。|  
 |is_modified|**bit**|1 = ディスクからの読み取り後にページが変更されました。 NULL 値が許可されます。|  
 |numa_node|**int**|バッファーの Nonuniform Memory Access ノード。 NULL 値が許可されます。|  
-|read_microsec|**bigint**|バッファーにページを読み込むために必要な実時間 (マイクロ秒)。 この数字では、バッファーを再利用するとリセットされます。 NULL 値が許可されます。|  
-|is_in_bpool_extension|**bit**|1 = ページがバッファー プール拡張機能。 NULL 値が許可されます。|  
-|pdw_node_id|**int**|**適用対象**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]、 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> この配布であるノードの識別子。|  
+|read_microsec|**bigint**|バッファーにページを読み込むために必要な実時間 (マイクロ秒)。 この数字では、バッファーを再利用するとリセットされます。 NULL 値が許可されます。|  
+|is_in_bpool_extension|**bit**|1 = ページがバッファー プール拡張機能。 NULL 値が許可されます。|  
+|pdw_node_id|**int**|**適用対象**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]、 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> この配布であるノードの識別子。|  
   
 ## <a name="permissions"></a>アクセス許可  
 
 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]、必要があります`VIEW SERVER STATE`権限。   
-[!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]が必要です、`VIEW DATABASE STATE`データベースの権限。   
+[!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] Premium レベルでは、必要があります、`VIEW DATABASE STATE`データベースの権限。 [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] Standard および Basic 階層は、必要があります、**サーバー管理者**または**Azure Active Directory 管理者**アカウント。   
    
 ## <a name="remarks"></a>コメント  
  sys.dm_os_buffer_descriptors では、リソース データベースによって使用されているページが返されます。 sys.dm_os_buffer_descriptors では、ページの空きや流用ページ、または読み取られたときにエラーを発生したページに関する情報は返されません。  

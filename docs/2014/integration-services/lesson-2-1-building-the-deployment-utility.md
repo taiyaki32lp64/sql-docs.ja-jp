@@ -1,5 +1,5 @@
 ---
-title: 手順 1:配置ユーティリティの構築 |Microsoft Docs
+title: 手順 1:配置ユーティリティの構築 | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -7,15 +7,15 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 1ff4dcff-89b3-4b99-a725-5f7963e98abf
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: e8be4778dc8ca28372132e3ca9447d5804454195
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: b788f82fc28ee39e7d65ae484da49313eea7c610
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53356346"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62767584"
 ---
 # <a name="step-1-building-the-deployment-utility"></a>手順 1:配置ユーティリティの構築
   ここでは、Deployment Tutorial プロジェクト用の配置ユーティリティを構成し、構築します。  
@@ -26,7 +26,7 @@ ms.locfileid: "53356346"
   
 ### <a name="to-set-the-deployment-utility-properties"></a>配置ユーティリティのプロパティを設定するには  
   
-1.  [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] がまだ開いていない場合は、 **[スタート]** ボタンをクリックし、 **[すべてのプログラム]**、 **[Microsoft SQL Server]** の順にポイントして、 **[Business Intelligence Development Studio]** をクリックします。  
+1.  [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] がまだ開いていない場合は、 **[スタート]** ボタンをクリックし、 **[すべてのプログラム]** 、 **[Microsoft SQL Server]** の順にポイントして、 **[Business Intelligence Development Studio]** をクリックします。  
   
 2.  **[ファイル]** メニューの **[開く]** をクリックし、 **[プロジェクト/ソリューション]** をクリックします。次に、 **[Deployment Tutorial]** フォルダーをクリックして **[開く]** をクリックし、 **Deployment Tutorial.sln**をダブルクリックします。  
   
@@ -48,7 +48,7 @@ ms.locfileid: "53356346"
   
 4.  出力ウィンドウに、次のような情報が表示されます。  
   
-     ビルドが開始されました。SQL Integration Services プロジェクト:増分しています.  
+     ビルド開始:SQL Integration Services プロジェクト:インクリメンタル...  
   
      配置ユーティリティを作成しています  
   
@@ -56,7 +56,7 @@ ms.locfileid: "53356346"
   
      ビルドの完了 -- エラー 0 個、警告 0 個  
   
-     ステージのビルド:0 正常終了、0 失敗、1 の最新の状態、0 スキップ ステージ  
+     ========== ビルド:0 正常終了、0 失敗、1 更新、0 スキップ ==========  
   
 5.  **[ファイル]** メニューの **[終了]** をクリックします。 Deployment Tutorial アイテムへの変更の保存を指示するメッセージが表示されたら、 **[はい]** をクリックします。  
   

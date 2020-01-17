@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 ms.assetid: 31d99d9b-2303-4bae-9466-fb67b97cf11a
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 2181e4ab949eef70c5ba9cb06c4fc8cfe82435dc
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 901ed097b1a1f689a854d60e0df9b541403fdc76
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56031593"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66109130"
 ---
 # <a name="general-properties-page-folders-report-manager"></a>[全般] プロパティ ページ、フォルダー (レポート マネージャー)
   フォルダーの [全般] プロパティ ページでは、作成するフォルダーのプロパティを表示または設定できます。 フォルダーを作成または変更したユーザーおよびフォルダーの変更日時に関する情報が、[全般] プロパティ ページの上部に表示されます。  

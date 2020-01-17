@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: dcc48b1e545fb58d076074f9b11960227f788321
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48220672"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63206986"
 ---
 # <a name="datetime-data-type-conversions-odbc"></a>datetime データ型変換 (ODBC)
   次の変換は、ODBC によって既に定義されているか、ODBC の一貫性がある拡張機能です。 各プロバイダーによって提供される変換は、プロバイダーが管理するコミュニティによって決まるので、プロバイダー間で一貫性がないことがよくあります。 角かっこで囲まれている値は省略可能です。  
@@ -30,7 +30,7 @@ ms.locfileid: "48220672"
   
 -   date 型の文字列の形式は 'yyyy-mm-dd' です。  
   
- 文字列からの変換では、空白文字やフィールドの幅を柔軟に処理できます。 詳細については、の「データ形式: 文字列とリテラルをデータする"セクションを参照してください。 [ODBC の日付と時刻の強化に対するデータ型のサポート](data-type-support-for-odbc-date-and-time-improvements.md)します。  
+ 文字列からの変換では、空白文字やフィールドの幅を柔軟に処理できます。 詳細については、次を参照してください。、"データ形式。文字列とリテラル」のセクション[ODBC の日付と時刻の強化に対するデータ型のサポート](data-type-support-for-odbc-date-and-time-improvements.md)します。  
   
  一般的な変換規則を次に示します。  
   
@@ -57,7 +57,7 @@ ms.locfileid: "48220672"
  [SQL から C への変換](datetime-data-type-conversions-from-sql-to-c.md)  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の日付型または時刻型から C 型に変換する際に考慮する問題を示します。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [日付と時刻の強化&#40;ODBC&#41;](date-and-time-improvements-odbc.md)  
   
   

@@ -19,11 +19,11 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: b409d8d1597fa738aacf180c45dd3eb5af36cf1b
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53366164"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63242495"
 ---
 # <a name="flagvalue-property-clientsettingsgeneralflag-class"></a>FlagValue プロパティ (ClientSettingsGeneralFlag クラス)
   フラグの値を取得します。  
@@ -45,7 +45,7 @@ object
   
 ## <a name="remarks"></a>コメント  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [クライアント プロトコルの構成](https://technet.microsoft.com/library/ms181035.aspx)  
   
   

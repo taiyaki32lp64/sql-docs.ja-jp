@@ -4,22 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 helpviewer_keywords:
 - printing reports, SharePoint Web application
 - printing reports
 ms.assetid: 026784f7-8cb4-4351-93ee-230b2ab0f8f5
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 70f100a3293f77babf2d8f58a6dd14e765f75710
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: 8bc6234789e85105799a865e46b8b7ffe82286f4
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56287990"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66107750"
 ---
 # <a name="print-a-report-reporting-services-in-sharepoint-mode"></a>レポートを印刷する (Reporting Services の SharePoint モード)
   SharePoint モードで実行されているレポート サーバーで SharePoint Web アプリケーションからレポートを印刷するには次の 3 つの方法があります。  
@@ -49,7 +48,7 @@ ms.locfileid: "56287990"
   
      印刷する前にレポートを表示するには、 **[プレビュー]** ボタンをクリックします。 これにより、レポートの最初のページが別のプレビュー ウィンドウに表示されます。 残りのページは、レポート サーバーでレポートが表示されると利用可能になります。 レポートのプレビューは、EMF 形式で表示されます。 プレビューでは前後のページに移動することができ、最後のページに到達すると、 **[次へ]** ボタンが無効になります。 プレビュー ページの印刷余白を変更するには、 **[余白]** ボタンをクリックします。 **[余白]** ダイアログ ボックスが表示されます。 上下および左右の余白を設定し、 **[OK]** をクリックします。 ダイアログ ボックスが閉じ、プレビューの表示および印刷の設定が保存されます。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [Reporting Services のクライアント側印刷機能の有効化と無効化](../report-server/enable-and-disable-client-side-printing-for-reporting-services.md)  
   
   

@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 892b79c7-9e20-4d1f-bc60-d4b25694ca25
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: b0cb17ed043a6b533b007769b9cbb28652d06e6f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: f4d4b3d8d417591bd72dde22240c81a91d80f990
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47719616"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67948971"
 ---
 # <a name="sqltransact-access-driver"></a>SQLTransact (Access ドライバー)
 > [!NOTE]  

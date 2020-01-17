@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: f87d46fb-4b33-42b5-8a54-6d2c4577c69a
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 6afaf936cdd604f72b36c53abe0bc0f9c209ed3b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a7ccfe887f870bc6a517913dd49848a434572994
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47625270"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67966899"
 ---
 # <a name="column-object-properties-methods-and-events"></a>Column オブジェクトのプロパティ、メソッド、およびイベント
 ## <a name="propertiescollections"></a>プロパティ/コレクション  
@@ -48,5 +47,5 @@ ms.locfileid: "47625270"
 ## <a name="events"></a>イベント  
  [なし] :  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [Column オブジェクト (ADOX)](../../../ado/reference/adox-api/column-object-adox.md)

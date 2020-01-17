@@ -19,15 +19,14 @@ helpviewer_keywords:
 ms.assetid: a08f608a-10e6-4bff-9b48-0d02e8026cdb
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: d1ed05a99d46f523f2e7d119f097c5f5161d4ba2
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 47bfaa2ceb0885379bd5633f0160d2a9b24cf3c4
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51660781"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68036035"
 ---
-# <a name="srvsendrow-extended-stored-procedure-api"></a>srv_sendrow (拡張ストアド プロシージャ API)
+# <a name="srv_sendrow-extended-stored-procedure-api"></a>srv_sendrow (拡張ストアド プロシージャ API)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
     
 > [!IMPORTANT]  

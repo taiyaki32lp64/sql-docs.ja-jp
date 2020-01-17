@@ -14,11 +14,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 99f32a970ee8cc3c68da6f4fb150ec36e17bcea1
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48094233"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62789082"
 ---
 # <a name="policy-evaluation-result-alwayson"></a>ポリシー評価の結果 (AlwaysOn)
   AlwaysOn ダッシュボードの **[ポリシー評価の結果]** ページは、現在のポリシーの問題を表示するために使用します。  
@@ -29,7 +29,7 @@ ms.locfileid: "48094233"
  **[検出された問題]**  
  検出された各問題の行を表示します。 問題に関連付けられているアイコンでは、次のように問題の重大度が視覚的に示されます。  
   
-|アイコン|Severity|  
+|アイコン|重大度|  
 |----------|--------------|  
 |![UI アイコン: エラー](../../../relational-databases/replication/media/repl-icon-error.gif "UI アイコン: エラー")|重大|  
 |![UI アイコン: 警告](../../../relational-databases/replication/media/repl-icon-warn.gif "UI アイコン: 警告")|警告|  

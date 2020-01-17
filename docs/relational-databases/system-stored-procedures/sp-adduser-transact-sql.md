@@ -17,15 +17,14 @@ helpviewer_keywords:
 ms.assetid: 61a40eb4-573f-460c-9164-bd1bbfaf8b25
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: 73859064fc8a56a53fd5ea6cb1295d81ed0e4150
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a2984479c8a1be35f8ccfa63d14b3250939f56c3
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47766530"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68117904"
 ---
-# <a name="spadduser-transact-sql"></a>sp_adduser (Transact-SQL)
+# <a name="spadduser-transact-sql"></a>sp_adduser (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   現在のデータベースに新しいユーザーを追加します。  
@@ -45,14 +44,11 @@ sp_adduser [ @loginame = ] 'login'
 ```  
   
 ## <a name="arguments"></a>引数  
- [ **@loginame =** ] **'***login***'**  
- 名前を指定します、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]ログインまたは Windows ログインします。 *ログイン*は、 **sysname**、既定値はありません。 *ログイン*既存する必要があります[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]ログインまたは Windows ログインします。  
+`[ @loginame = ] 'login'` 名前を指定します、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]ログインまたは Windows ログインします。 *ログイン*は、 **sysname**、既定値はありません。 *ログイン*既存する必要があります[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]ログインまたは Windows ログインします。  
   
- [  **@name_in_db =** ] **'***ユーザー***'**  
- 新しいデータベース ユーザーの名前です。 *ユーザー*は、 **sysname**、既定値は NULL です。 場合*ユーザー*が指定されていない、既定で、新しいデータベース ユーザーの名前、*ログイン*名。 指定する*ユーザー*サーバー レベルのログイン名と異なるデータベースの名前を新しいユーザーに与えます。  
+`[ @name_in_db = ] 'user'` 新しいデータベース ユーザーの名前です。 *ユーザー*は、 **sysname**、既定値は NULL です。 場合*ユーザー*が指定されていない、既定で、新しいデータベース ユーザーの名前、*ログイン*名。 指定する*ユーザー*サーバー レベルのログイン名と異なるデータベースの名前を新しいユーザーに与えます。  
   
- [  **@grpname =** ] **'***ロール***'**  
- 新しいユーザーがメンバーになるデータベース ロールを指定します。 *ロール*は**sysname**、既定値は NULL です。 *ロール*現在のデータベースで有効なデータベース ロールである必要があります。  
+`[ @grpname = ] 'role'` データベースの役割、新しいユーザーがメンバーになります。 *ロール*は**sysname**、既定値は NULL です。 *ロール*現在のデータベースで有効なデータベース ロールである必要があります。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  0 (成功) または 1 (失敗)  
@@ -60,7 +56,7 @@ sp_adduser [ @loginame = ] 'login'
 ## <a name="remarks"></a>コメント  
  **sp_adduser**もユーザーの名前を持つスキーマが作成されます。  
   
- ユーザーを追加した後、GRANT、DENY、および REVOKE ステートメントを使用して、ユーザーが実行する操作を制御する権限を定義します。  
+ ユーザーを追加した後は、GRANT、DENY を使用し、REVOKE ステートメントをユーザーによって実行されたアクティビティを制御するアクセス許可を定義します。  
   
  使用**sys.server_principals**有効なログイン名の一覧を表示します。  
   
@@ -82,28 +78,28 @@ GO
   
 ## <a name="examples"></a>使用例  
   
-### <a name="a-adding-a-database-user"></a>A. データベース ユーザーを追加する  
+### <a name="a-adding-a-database-user"></a>A. データベース ユーザーを追加します。  
  次の例は、データベース ユーザーを追加します。`Vidur`既存`Recruiting`既存を使用して、現在のデータベース内のロール[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]ログイン`Vidur`します。  
   
 ```  
 EXEC sp_adduser 'Vidur', 'Vidur', 'Recruiting';  
 ```  
   
-### <a name="b-adding-a-database-user-with-the-same-login-id"></a>B. ログイン ID と同じデータベース ユーザーを追加する  
+### <a name="b-adding-a-database-user-with-the-same-login-id"></a>B. 同じログイン ID を持つデータベース ユーザーを追加します。  
  次の例では、ユーザー `Arvind` を、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のログイン `Arvind` として現在のデータベースに追加します。 既定値をこのユーザーが属している**パブリック**ロール。  
   
 ```  
 EXEC sp_adduser 'Arvind';  
 ```  
   
-### <a name="c-adding-a-database-user-with-a-different-name-than-its-server-level-login"></a>C. サーバーレベル ログインとは異なる名前のデータベース ユーザーを追加する  
+### <a name="c-adding-a-database-user-with-a-different-name-than-its-server-level-login"></a>C. サーバー レベル ログインとは異なる名前を持つデータベース ユーザーを追加します。  
  次の例では、追加[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]ログイン`BjornR`のユーザー名を持つ現在のデータベースに`Bjorn`、データベース ユーザーを追加および`Bjorn`を`Production`データベース ロール。  
   
 ```  
 EXEC sp_adduser 'BjornR', 'Bjorn', 'Production';  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [セキュリティ ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md)   
  [sys.server_principals &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-server-principals-transact-sql.md)   
  [sp_addrole &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addrole-transact-sql.md)   

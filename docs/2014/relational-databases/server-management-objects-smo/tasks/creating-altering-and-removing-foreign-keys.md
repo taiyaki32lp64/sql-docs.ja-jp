@@ -1,5 +1,5 @@
 ---
-title: 作成、変更、および外部キーの削除 |マイクロソフトのドキュメント
+title: 外部キーの作成、変更、および削除 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -12,12 +12,12 @@ ms.assetid: d43c8dca-bb6b-4a41-8a79-c96fd546fc91
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 4f8c7474d645de0ba8b8c94beed44ee7c02d33de
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: a0462af67afbf5ac25c52ded8523ca26678699b9
+ms.sourcegitcommit: f912c101d2939084c4ea2e9881eb98e1afa29dad
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52789544"
+ms.lasthandoff: 10/23/2019
+ms.locfileid: "72796961"
 ---
 # <a name="creating-altering-and-removing-foreign-keys"></a>外部キーの作成、変更、および削除
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 管理オブジェクト (SMO) では、外部キーは <xref:Microsoft.SqlServer.Management.Smo.ForeignKey> オブジェクトで表現します。  
@@ -27,7 +27,7 @@ ms.locfileid: "52789544"
  外部キーを表す列は、<xref:Microsoft.SqlServer.Management.Smo.ForeignKey> オブジェクトの一覧は `Columns` オブジェクト プロパティで表されます。 外部キーが参照している主キーは、<xref:Microsoft.SqlServer.Management.Smo.ForeignKey.ReferencedKey%2A> プロパティで指定されたテーブルにある <xref:Microsoft.SqlServer.Management.Smo.ForeignKey.ReferencedTable%2A> プロパティで表現します。  
   
 ## <a name="example"></a>例  
- 提供されているコード例を使用するには、アプリケーションを作成するプログラミング環境、プログラミング テンプレート、およびプログラミング言語を選択する必要があります。 詳細については、次を参照してください。 [Visual Studio .NET で Visual Basic SMO プロジェクトを作成](../../../database-engine/dev-guide/create-a-visual-basic-smo-project-in-visual-studio-net.md)または[Visual C の作成&#35;Visual Studio .NET での SMO プロジェクト](../how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md)します。  
+ 提供されているコード例を使用するには、アプリケーションを作成するプログラミング環境、プログラミング テンプレート、およびプログラミング言語を選択する必要があります。 詳細については、「 [Visual studio .net での VISUAL BASIC SMO プロジェクトの作成](../../../database-engine/dev-guide/create-a-visual-basic-smo-project-in-visual-studio-net.md)」または「visual [studio .Net での Visual C&#35; SMO プロジェクトの作成](../how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md)」を参照してください。  
   
 ## <a name="creating-altering-and-removing-a-foreign-key-in-visual-basic"></a>Visual Basic での外部キーの作成、変更、および削除  
  このコード例では、あるテーブル内の 1 つまたは複数の列から、別のテーブル内の主キー列に対する外部キー リレーションシップを作成する方法を示します。  
@@ -37,7 +37,7 @@ ms.locfileid: "52789544"
 ## <a name="creating-altering-and-removing-a-foreign-key-in-visual-c"></a>Visual C# での外部キーの作成、変更、および削除  
  このコード例では、あるテーブル内の 1 つまたは複数の列から、別のテーブル内の主キー列に対する外部キー リレーションシップを作成する方法を示します。  
   
-```  
+```csharp
 {  
             //Connect to the local, default instance of SQL Server.   
             Server srv;  
@@ -66,7 +66,7 @@ ms.locfileid: "52789544"
 ## <a name="creating-altering-and-removing-a-foreign-key-in-powershell"></a>PowerShell での外部キーの作成、変更、および削除  
  このコード例では、あるテーブル内の 1 つまたは複数の列から、別のテーブル内の主キー列に対する外部キー リレーションシップを作成する方法を示します。  
   
-```  
+```powershell
 # Set the path context to the local, default instance of SQL Server and to the  
 #database tables in Adventureworks2012  
 CD \sql\localhost\default\databases\AdventureWorks2012\Tables\  
@@ -92,7 +92,7 @@ $fk.ReferencedTableSchema = "HumanResources"
 $fk.Create()  
 ```  
   
-## <a name="sample-foreign-keys-primary-keys-and-unique-constraint-columns"></a>サンプル:外部キー、主キー、および Unique 制約列  
+## <a name="sample-foreign-keys-primary-keys-and-unique-constraint-columns"></a>サンプル: 外部キー、主キー、および UNIQUE 制約列  
  このサンプルでは、次のことを示します。  
   
 -   既存オブジェクトの外部キーの検索  
@@ -103,7 +103,7 @@ $fk.Create()
   
  このサンプルの C# バージョンを次に示します。  
   
-```  
+```csharp
 // compile with:   
 // /r:Microsoft.SqlServer.Smo.dll   
 // /r:microsoft.sqlserver.management.sdk.sfc.dll   
@@ -198,7 +198,7 @@ public class A {
   
  このサンプルの Visual Basic バージョンを次に示します。  
   
-```  
+```vb
 ' compile with:   
 ' /r:Microsoft.SqlServer.Smo.dll   
 ' /r:microsoft.sqlserver.management.sdk.sfc.dll   
@@ -291,5 +291,3 @@ Public Class A
    End Sub  
 End Class  
 ```  
-  
-  

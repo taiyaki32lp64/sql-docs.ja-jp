@@ -15,11 +15,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: f7f6cbc6b4150f2f951befcb70c1b09108de3b51
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52788124"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62670485"
 ---
 # <a name="collapse-groups-of-rows-visual-database-tools"></a>行グループの集約 (Visual Database Tools)
   基になるデータの行グループ全体に結果の各行が対応するようなクエリ結果を作成することができます。 行を集約するときは、次の点に注意してください。  

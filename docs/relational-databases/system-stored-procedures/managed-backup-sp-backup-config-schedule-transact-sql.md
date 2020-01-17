@@ -20,13 +20,12 @@ helpviewer_keywords:
 ms.assetid: 82541160-d1df-4061-91a5-6868dd85743a
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: a7361e26a7796ad617789985b962411ace5c70d6
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 52df69439cecad5fddf3d38b8852a1ce86cc4dbd
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47812970"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67942072"
 ---
 # <a name="managedbackupspbackupconfigschedule-transact-sql"></a>managed_backup.sp_backup_config_schedule (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -50,7 +49,7 @@ EXEC managed_backup.sp_backup_config_schedule
   
 ##  <a name="Arguments"></a> 引数  
  @database_name  
- 有効にするためのデータベース名は、特定のデータベースでのバックアップを管理します。 NULL の場合、または *、し、この管理対象のバックアップは、サーバー上のすべてのデータベースに適用します。  
+ 特定のデータベースでマネージ バックアップを有効にするためのデータベース名。 NULL の場合、または *、この管理対象のバックアップは、サーバー上のすべてのデータベースに適用されます。  
   
  @scheduling_option  
  バックアップ スケジュールのシステム管理の対象には、'System' を指定します。 カスタム スケジュールをその他のパラメーターで定義されている 'Custom' を指定します。  
@@ -62,13 +61,13 @@ EXEC managed_backup.sp_backup_config_schedule
  バックアップの曜日と@full_backup_freq_type毎週に設定されます。 '月曜日' のような完全な文字列の名前を指定します。  1 日の名、パイプで区切られた複数指定できます。 たとえば N'Monday |水曜日 |金曜日 ' です。  
   
  @backup_begin_time  
- バックアップ ウィンドウの開始時刻です。 組み合わせによって定義されている時間枠の外部でのバックアップは開始されません@backup_begin_timeと@backup_durationします。  
+ バックアップ ウィンドウの開始時刻。 組み合わせによって定義されている時間枠の外部でのバックアップは開始されません@backup_begin_timeと@backup_durationします。  
   
  @backup_duration  
- バックアップの時間帯の期間。 によって定義された時間枠中にバックアップが完了することの保証がないことに注意してください。@backup_begin_timeと@backup_durationします。 この時間帯で開始されるウィンドウの期間を超えるバックアップ操作はキャンセルできません。  
+ バックアップの時間枠の期間です。 によって定義された時間枠中にバックアップが完了することの保証がないことに注意してください。@backup_begin_timeと@backup_durationします。 この時間帯で開始されるウィンドウの期間を超えるバックアップ操作はキャンセルできません。  
   
  @log_backup_freq  
- これにより、トランザクション ログ バックアップの頻度が決まります。 これらのバックアップは、データベースのバックアップに指定されたスケジュールではなく、一定の間隔で発生します。 @log_backup_freq 0 が有効でないことを示しますログ バックアップ、数分または数時間でできます。 ログ バックアップを無効にするとだけ適用することが単純復旧モデルを含むデータベース。  
+ これは、トランザクション ログ バックアップの頻度を決定します。 これらのバックアップは、データベースのバックアップに指定されたスケジュールではなく、一定の間隔で行われます。 @log_backup_freq 0 が有効でないことを示しますログ バックアップ、数分または数時間でできます。 ログ バックアップを無効にするだけでしょう単純復旧モデルでデータベースの適切です。  
   
 > [!NOTE]  
 >  復旧モデルは、完全に単純なものから変更された場合は、0 以外の値を 0 から log_backup_freq を再構成する必要があります。  
@@ -81,7 +80,7 @@ EXEC managed_backup.sp_backup_config_schedule
 ### <a name="permissions"></a>アクセス許可  
  メンバーシップが必要です**db_backupoperator**データベース ロール、 **ALTER ANY CREDENTIAL**アクセス許可、および**EXECUTE**に対する**sp_deletebackuphistory**ストアド プロシージャ。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [managed_backup.sp_backup_config_basic (TRANSACT-SQL)](../../relational-databases/system-stored-procedures/managed-backup-sp-backup-config-basic-transact-sql.md)   
  [managed_backup.sp_backup_config_advanced &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/managed-backup-sp-backup-config-advanced-transact-sql.md)  
   

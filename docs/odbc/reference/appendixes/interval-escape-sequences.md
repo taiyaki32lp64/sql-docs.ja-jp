@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 303e8dab-8f13-4fa5-857f-15cc1f75bdd6
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 81481db74d973da0e54bc6bf9e70550fa3cc0c81
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 69c674ee8838273af9bf4ed91ddcead7e1768fb9
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47767820"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68041639"
 ---
 # <a name="interval-escape-sequences"></a>Interval のエスケープ シーケンス
 ODBC では、interval のリテラルのエスケープ シーケンスを使用します。 このエスケープ シーケンスの構文は次のとおりです。  

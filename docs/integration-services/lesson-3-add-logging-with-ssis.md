@@ -1,5 +1,5 @@
 ---
-title: 'レッスン 3: SSIS でのログ記録の追加 | Microsoft Docs'
+title: レッスン 3:SSIS でのログ記録の追加 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/04/2019
 ms.prod: sql
@@ -8,17 +8,20 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: tutorial
 ms.assetid: 64cd24cc-ba8e-4bd7-b10b-6b80d8b04af6
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: 790738d3c66d4b973d2f6934e89caa77af6ffde0
-ms.sourcegitcommit: dd794633466b1da8ead9889f5e633bdf4b3389cd
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 6ebbc82f5570fb97d7b1169563bfde7c67f5be0d
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54143002"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71296020"
 ---
-# <a name="lesson-3-add-logging-with-ssis"></a>レッスン 3: SSIS でのログ記録の追加
+# <a name="lesson-3-add-logging-with-ssis"></a>レッスン 3:SSIS でのログ記録の追加
+
+[!INCLUDE[ssis-appliesto](../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
 
 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] には、パッケージの実行を監視し、問題を解決するためのログ機能があります。このログを使用して、タスクやコンテナー イベントを追跡できます。 ログ記録には柔軟性があります。 ログ記録はパッケージ レベルで有効にするか、パッケージ内の個々のタスクやコンテナーで有効にすることができます。 ログを記録するイベントを複数選択すると、1 つのパッケージに対して複数のログが作成されます。  
   
@@ -42,12 +45,12 @@ ms.locfileid: "54143002"
 ## <a name="lesson-tasks"></a>このレッスンの作業  
 このレッスンの内容は次のとおりです。  
   
--   [ステップ 1: レッスン 2 のパッケージのコピー](../integration-services/lesson-3-1-copying-the-lesson-2-package.md)  
+-   [ステップ 1:レッスン 2 のパッケージのコピー](../integration-services/lesson-3-1-copying-the-lesson-2-package.md)  
   
 -   [ステップ 2:ログ記録の追加および構成](../integration-services/lesson-3-2-adding-and-configuring-logging.md)  
   
 -   [ステップ 3:レッスン 3 のパッケージのテスト](../integration-services/lesson-3-3-testing-the-lesson-3-tutorial-package.md)  
   
 ## <a name="start-the-lesson"></a>レッスンの開始  
-[ステップ 1: レッスン 2 のパッケージのコピー](../integration-services/lesson-3-1-copying-the-lesson-2-package.md)  
+[ステップ 1:レッスン 2 のパッケージのコピー](../integration-services/lesson-3-1-copying-the-lesson-2-package.md)  
   

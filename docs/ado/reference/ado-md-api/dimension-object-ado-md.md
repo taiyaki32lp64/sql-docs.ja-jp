@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 66adbbd2-23a3-4c19-a91b-84c31309aa1b
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 332701caacd2eb4a813e8ec09ff66aa4dc4bf828
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: f7a13ad87d56f5e7855070d8fe577bb408d6ce9e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47639570"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67938539"
 ---
 # <a name="dimension-object-ado-md"></a>Dimension オブジェクト (ADO MD)
 1 つまたは複数のメンバーの階層を含む多次元キューブのディメンションの 1 つを表します。  
@@ -58,7 +57,7 @@ ms.locfileid: "47639570"
   
 -   [プロパティ、メソッド、およびイベント](../../../ado/reference/ado-md-api/dimension-object-properties-methods-and-events.md)  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [CubeDef の例 (VBScript)](../../../ado/reference/ado-md-api/cubedef-example-vbscript.md)   
  [CubeDef オブジェクト (ADO MD)](../../../ado/reference/ado-md-api/cubedef-object-ado-md.md)   
  [Dimensions コレクション (ADO MD)](../../../ado/reference/ado-md-api/dimensions-collection-ado-md.md)   

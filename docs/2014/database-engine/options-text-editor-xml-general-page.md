@@ -4,25 +4,24 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 ms.assetid: 46a9f913-d0b9-40ff-b382-9bbdec7461a6
 author: craigg-msft
 ms.author: craigg
 manager: craigg
-ms.openlocfilehash: a7f41e13024f059677fe7015a3a89e4ff7028258
-ms.sourcegitcommit: af1d9fc4a50baf3df60488b4c630ce68f7e75ed1
+ms.openlocfilehash: 784032205f081e340e30203314e96a3b2dbf640e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/06/2018
-ms.locfileid: "51029101"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66089198"
 ---
 # <a name="options-text-editor---xml---general-page"></a>[オプション] ([テキスト エディター]/[XML]/[全般] ページ)
   このダイアログ ボックスを使用すると、XML ドキュメントの編集に使用される XML エディターの全般的な編集の動作を変更できます。 これらの設定を変更するには、 **[ツール]** メニューの **[オプション]** をクリックし、 **[XML]** サブフォルダーを展開します。次に、 **[全般]** をクリックします。  
   
 ## <a name="setting-options-in-multiple-locations"></a>複数の場所でのオプション設定  
- XML エディターのオプションは、**[すべての言語] の [全般]** ダイアログで設定することもできます。 ただし、DMX エディターや MDX エディターなど、他の **エディターに対し、** [すべての言語] [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] のダイアログを使用して異なるオプションを設定する場合は、ここで紹介したダイアログを使用して XML エディターのオプションを設定し直す必要があります。  
+ XML エディターのオプションは、 **[すべての言語] の [全般]** ダイアログで設定することもできます。 ただし、DMX エディターや MDX エディターなど、他の **エディターに対し、** [すべての言語] [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] のダイアログを使用して異なるオプションを設定する場合は、ここで紹介したダイアログを使用して XML エディターのオプションを設定し直す必要があります。  
   
 ## <a name="statement-completion"></a>[入力候補]  
  **自動メンバー表示**  
@@ -34,7 +33,7 @@ ms.locfileid: "51029101"
  **パラメーター情報**  
  このチェック ボックスがオンの場合、エディター内の挿入ポイントの左側に、現在の宣言またはプロシージャの完全な構文が、使用可能なすべてのパラメーターと共に表示されます。 割り当て可能な次のパラメーターは、太字で表示されます。  
   
-## <a name="settings"></a>[設定]  
+## <a name="settings"></a>設定  
  **仮想空間を有効にします。**  
  このチェック ボックスがオンの場合、各コード行の末尾にスペースが挿入されます。 コードの横の一定の場所にコメントを記述する場合に、このチェック ボックスをオンにします。  
   
@@ -56,7 +55,7 @@ ms.locfileid: "51029101"
   
  行が空白でない場合、 **[コピー]** または **[切り取り]** の動作はこの設定の影響を受けません。 何も選択されていない場合、行全体がコピーまたは切り取られます。 その後で **[貼り付け]** をクリックすると、行全体のテキストと行末文字が貼り付けられます。  
   
-## <a name="display"></a>表示  
+## <a name="display"></a>ディスプレイ  
  **行番号**  
  このチェック ボックスがオンの場合、各コード行の横に行番号が表示されます。  
   

@@ -2,18 +2,18 @@
 title: CountRows 関数 (レポート ビルダーおよび SSRS) | Microsoft Docs
 ms.date: 03/07/2017
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: report-design
 ms.topic: conceptual
 ms.assetid: 5b1c403d-6afd-44c8-b5f6-5ecff2a29a45
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: b9bb3a1c8fcfa71560d4f5973a03588948ae99fd
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 9295abe7d34ee0b799517137163d4581d8b34ce5
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56292763"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65579610"
 ---
 # <a name="report-builder-functions---countrows-function"></a>レポート ビルダー関数 - CountRows 関数
   NULL 値の行を含めて、指定されたスコープ内の行数を返します。  

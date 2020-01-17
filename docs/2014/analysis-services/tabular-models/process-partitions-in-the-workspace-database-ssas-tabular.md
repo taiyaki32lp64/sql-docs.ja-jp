@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: 3a369705-43fa-4961-9045-32e06fbdde33
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: af0534e049c5038676849f40178d865e9f15de61
-ms.sourcegitcommit: 2e8783e6bedd9597207180941be978f65c2c2a2d
+ms.openlocfilehash: 15b9f9203075734dd84d7b601574f66bc401e700
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/19/2019
-ms.locfileid: "54405892"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66066800"
 ---
 # <a name="process-partitions-in-the-workspace-database-ssas-tabular"></a>ワークスペース データベース (SSAS テーブル) でのパーティションの処理
   パーティションは、テーブルを論理的な部分に分割します。 各パーティションは、他のパーティションとは個別に処理 (更新) できます。 このトピックのタスクでは、 **で** [パーティションの処理] [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]ダイアログ ボックスを使用して、モデル ワークスペース データベースでパーティションを処理する方法について説明します。  
@@ -39,7 +38,7 @@ ms.locfileid: "54405892"
   
 3.  **[処理]** チェックボックス列で、選択したモードで処理するパーティションを選択し、 **[OK]** をクリックします。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [パーティション (SSAS テーブル)](partitions-ssas-tabular.md)   
  [ワークスペース データベースのパーティションの作成と管理 (SSAS テーブル)](workspace-database-ssas-tabular.md)  
   

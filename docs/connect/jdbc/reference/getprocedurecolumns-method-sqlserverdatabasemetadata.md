@@ -1,5 +1,5 @@
 ---
-title: getProcedureColumns メソッド (SQLServerDatabaseMetaData) |Microsoft Docs
+title: getProcedureColumns メソッド (SQLServerDatabaseMetaData) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: 4f0df8fe-3cd6-46e4-ae3c-dc23c35676b2
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: c239a16728538acece726c1d0b4722d9c2977765
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 1767519cc2f36bac4a70da84efeb8da9e2a1ec3c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47734700"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67980754"
 ---
 # <a name="getprocedurecolumns-method-sqlserverdatabasemetadata"></a>getProcedureColumns メソッド (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -43,7 +42,7 @@ public java.sql.ResultSet getProcedureColumns(java.lang.String sCatalog,
   
  カタログ名を含む**文字列**です。 このパラメーターに null を指定すると、カタログ名を使用する必要はありません。  
   
- *スキーマ*  
+ *sSchema*  
   
  スキーマ名のパターンを含む**文字列**です。 このパラメーターに null を指定すると、スキーマ名を使用する必要はありません。  
   
@@ -62,7 +61,7 @@ public java.sql.ResultSet getProcedureColumns(java.lang.String sCatalog,
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- この getProcedureColumns メソッドは、java.sql.DatabaseMetaData インターフェイスで getProcedureColumns メソッドによって指定されます。  
+ この Sqlserverdatabasemetadata.getprocedurecolumns メソッドは、Sqlserverdatabasemetadata.getprocedurecolumns メソッドによって、java メタデータインターフェイスで指定されます。  
   
  getProcedureColumns メソッドによって返される結果セットには、次の情報が含まれます。  
   
@@ -75,7 +74,7 @@ public java.sql.ResultSet getProcedureColumns(java.lang.String sCatalog,
 |COLUMN_TYPE|**short**|列の型。 次のいずれかの値を指定できます。<br /><br /> procedureColumnUnknown (0)<br /><br /> procedureColumnIn (1)<br /><br /> procedureColumnInOut (2)<br /><br /> procedureColumnOut (4)<br /><br /> procedureColumnReturn (5)<br /><br /> procedureColumnResult (3)|  
 |DATA_TYPE|**smallint**|java.sql.Types の SQL データ型です。|  
 |TYPE_NAME|**String**|データ型の名前です。|  
-|PRECISION|**int**|有効桁数の合計数。|  
+|PRECISION|**int**|有効桁数の合計。|  
 |LENGTH|**int**|データの長さです (バイト)。|  
 |SCALE|**short**|小数点以下の桁数です。|  
 |RADIX|**short**|数値型の基数です。|  

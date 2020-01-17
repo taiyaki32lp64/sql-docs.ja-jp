@@ -80,17 +80,17 @@
       href: xml-input-file-sample-with-inline-workload-dta.md
     - name: ユーザー指定の構成を指定した XML 入力ファイルのサンプル (DTA)
       href: xml-input-file-sample-with-user-specified-configuration-dta.md
-- name: 'チュートリアル:データベース エンジン チューニング アドバイザー'
+- name: 'チュートリアル:Database Engine Tuning Advisor'
   href: tutorial-database-engine-tuning-advisor.md
   items:
-    - name: 'レッスン 1: データベース エンジン チューニング アドバイザーでの基本操作'
+    - name: 'レッスン 1:データベース エンジン チューニング アドバイザーでの基本操作'
       href: lesson-1-basic-navigation-in-database-engine-tuning-advisor.md
       items:
         - name: データベース エンジン チューニング アドバイザーの起動
           href: lesson-1-1-launching-database-engine-tuning-advisor.md
         - name: ツール オプションとレイアウトの設定
           href: lesson-1-2-setting-tool-options-and-layout.md
-    - name: 'レッスン 2 : データベース エンジン チューニング アドバイザーの使用'
+    - name: 'レッスン 2:データベース エンジン チューニング アドバイザーの使用'
       href: lesson-2-using-database-engine-tuning-advisor.md
       items:
         - name: ワークロードのチューニング
@@ -99,7 +99,7 @@
           href: lesson-1-2-viewing-tuning-recommendations.md
         - name: チューニング レポートの表示
           href: lesson-1-3-viewing-tuning-reports.md
-    - name: 'レッスン 3 : dta コマンド プロンプト ユーティリティの使用'
+    - name: 'レッスン 3:DTA コマンド プロンプト ユーティリティの使用'
       href: lesson-3-using-the-dta-command-prompt-utility.md
       items:
         - name: dta コマンド プロンプト ユーティリティの起動とワークロードのチューニング

@@ -1,33 +1,33 @@
 ---
-title: Parallel Data Warehouse の読み込みの監視 |Microsoft Docs
-description: Analytics Platform System (APS) 管理コンソールまたは並列データ ウェアハウス (PDW) のシステム ビューを使用してアクティブと最近の負荷を監視します。"
+title: 負荷の監視
+description: Analytics Platform System (APS) 管理コンソールまたは並列データウェアハウス (PDW) システムビューを使用して、アクティブおよび最近の負荷を監視します。 "
 author: mzaman1
-manager: craigg
 ms.prod: sql
 ms.technology: data-warehouse
 ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: cb840c64c2235a2f3902c45633aa5471655482dc
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.custom: seo-dt-2019
+ms.openlocfilehash: b284fdcef506924c26e452196db6e9518faa1351
+ms.sourcegitcommit: d587a141351e59782c31229bccaa0bff2e869580
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52413519"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74400962"
 ---
-# <a name="monitor-loads-into-parallel-data-warehouse"></a>モニターは、Parallel Data Warehouse に読み込みます
-モニターがアクティブで最近[dwloader](dwloader.md) 、Analytics Platform System (APS) 管理コンソールまたは並列データ ウェアハウス (PDW) を使用して読み込む[システム ビュー](https://azure.microsoft.com/documentation/articles/sql-data-warehouse-reference-tsql-system-views/)します。 
+# <a name="monitor-loads-into-parallel-data-warehouse"></a>並列データウェアハウスへの負荷を監視する
+Analytics Platform System (APS) 管理コンソールまたは並列データウェアハウス (PDW)[システムビュー](https://azure.microsoft.com/documentation/articles/sql-data-warehouse-reference-tsql-system-views/)を使用して、アクティブおよび最近の[dwloader](dwloader.md)の読み込みを監視します。 
   
 > [!TIP]  
-> INSERT ステートメントまたは SQL ステートメントを使用して、負荷を実行するビジネス インテリジェンス ツールを使用して、いくつかの読み込みが開始されます。 
+> 読み込みを実行するために SQL ステートメントを使用する INSERT ステートメントまたはビジネスインテリジェンスツールを使用することによって、一部の読み込みが開始されます。 
 
 <!-- MISSING LINKS
 To monitor this type of load, see [Monitoring Active Queries](monitor-active-queries.md).  
 -->
   
 ## <a name="prerequisites"></a>前提条件  
-負荷を監視するために使用する方法に関係なく、ログインは、基になるデータ ソースにアクセスする権限が必要です。 
+読み込みの監視に使用される方法に関係なく、ログインには基になるデータソースにアクセスする権限が必要です。 
 
 <!-- MISSING LINKS
 For the permissions to grant, see "Use All of the Admin Console" in [Grant Permissions to Use the Admin Console](grant-permissions-admin-console.md). 
@@ -35,38 +35,38 @@ For the permissions to grant, see "Use All of the Admin Console" in [Grant Permi
 --> 
   
 ## <a name="monitoring-loads"></a>負荷の監視  
-次のセクションでは、負荷を監視する方法について説明します。  
+以下のセクションでは、負荷を監視する方法について説明します。  
   
 ### <a name="to-monitor-loads-by-using-the-admin-console"></a>管理コンソールを使用して負荷を監視するには  
   
-1.  管理者コンソールにログオンします。 <!-- MISSING LINKS See [Monitor the Appliance by Using the Admin Console;](monitor-admin-console.md) for instructions. --> 
+1.  管理コンソールにログオンします。 <!-- MISSING LINKS See [Monitor the Appliance by Using the Admin Console;](monitor-admin-console.md) for instructions. --> 
   
-2.  上部のメニューでクリックして**読み込み**します。 最近使ったすべての表示、並べ替え可能なテーブルとアクティブな読み込み、読み込みが完了するかがまだアクティブかどうかなどの追加情報が表示されます。 行を並べ替える列見出しをクリックします。  
+2.  上部のメニューで、[**読み込み**] をクリックします。 最近とアクティブなすべての読み込みを含む並べ替え可能なテーブルが表示され、読み込みが完了しているか、まだアクティブになっているかなどの追加情報が表示されます。 列ヘッダーをクリックすると、行が並べ替えられます。  
   
-3.  特定のロードの詳細を表示するには、負荷をクリックして**ID**左の列にします。 詳細ビューでは、負荷の各手順の進行状況を確認できます。  
+3.  特定の負荷に関するその他の詳細を表示するには、左側の列の [読み込み**ID** ] をクリックします。 詳細ビューでは、負荷の各ステップの進行状況を確認できます。  
   
-管理コンソールに表示されている負荷に関するメタデータ情報の次のシステム ビューを参照してください。  
+管理コンソールに表示される負荷に関するメタデータの詳細については、次のシステムビューを参照してください。  
   
--   [sys.dm_pdw_exec_requests](../relational-databases/system-dynamic-management-views/sys-dm-pdw-exec-requests-transact-sql.md)  
+-   [dm_pdw_exec_requests](../relational-databases/system-dynamic-management-views/sys-dm-pdw-exec-requests-transact-sql.md)  
   
 -   [sys.pdw_loader_run_stages](https://msdn.microsoft.com/library/mt203879.aspx)  
   
--   [sys.pdw_loader_backup_runs](../relational-databases/system-catalog-views/sys-pdw-loader-backup-runs-transact-sql.md)  
+-   [pdw_loader_backup_runs](../relational-databases/system-catalog-views/sys-pdw-loader-backup-runs-transact-sql.md)  
   
--   [sys.pdw_loader_backup_run_details](../relational-databases/system-catalog-views/sys-pdw-loader-backup-run-details-transact-sql.md)  
+-   [pdw_loader_backup_run_details](../relational-databases/system-catalog-views/sys-pdw-loader-backup-run-details-transact-sql.md)  
   
-### <a name="to-monitor-loads-by-using-system-views"></a>システム ビューを使用して負荷を監視するには  
-SQL Server PDW のビューを使用してアクティブと最近の負荷を監視するには、次の手順に従います。 使用される各システム ビュー、ビューによって返される可能性のある値と列については、そのビューのドキュメントを参照してください。  
+### <a name="to-monitor-loads-by-using-system-views"></a>システムビューを使用して負荷を監視するには  
+SQL Server PDW ビューを使用してアクティブおよび最近の読み込みを監視するには、次の手順に従います。 使用されるシステムビューごとに、ビューによって返される列と可能性のある値の詳細については、そのビューのドキュメントを参照してください。  
   
-1.  検索、`request_id`の負荷、 [sys.dm_pdw_exec_requests](../relational-databases/system-dynamic-management-views/sys-dm-pdw-exec-requests-transact-sql.md)ローダーのコマンドラインを検索して特定のビュー、`command`このビューの列。  
+1.  このビュー `request_id`の`command`列でローダーコマンドラインを見つけることにより、 [dm_pdw_exec_requests](../relational-databases/system-dynamic-management-views/sys-dm-pdw-exec-requests-transact-sql.md)ビューでの読み込みのを検索します。  
   
-    コマンド テキストと現在の状態では、たとえば、次のコマンドが返されますだけでなく、`request_id`します。  
+    たとえば、次のコマンドは、コマンドテキストと現在の状態、およびを`request_id`返します。  
   
     ```sql  
     SELECT request_id, status, command FROM sys.dm_pdw_exec_requests;  
     ```  
   
-2.  使用して、`request_id`を使用して、負荷の追加情報を取得する、 [sys.pdw_loader_run_stages](../relational-databases/system-catalog-views/sys-pdw-loader-run-stages-transact-sql.md) 、および[sys.pdw_loader_backup_run_details](../relational-databases/system-catalog-views/sys-pdw-loader-backup-run-details-transact-sql.md)ビュー。 たとえば、次のクエリを返します、`run_id`については、開始、終了、およびの負荷のほか、エラーの持続時間と処理された行の数に関する情報。  
+2.  `request_id`を使用して、 [pdw_loader_run_stages](../relational-databases/system-catalog-views/sys-pdw-loader-run-stages-transact-sql.md) 、および[sys. pdw_loader_backup_run_details](../relational-databases/system-catalog-views/sys-pdw-loader-backup-run-details-transact-sql.md)ビューを使用して、読み込みに関する追加情報を取得します。 たとえば、次のクエリでは、 `run_id`負荷の開始時刻、終了時刻、および実行時間に関する情報と、処理された行数に関する情報が返されます。  
   
     ```sql  
     SELECT lbr.run_id,   

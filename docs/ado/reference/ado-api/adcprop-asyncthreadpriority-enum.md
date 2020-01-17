@@ -15,20 +15,19 @@ helpviewer_keywords:
 ms.assetid: f0965617-17d8-41e0-98d0-f824274735a6
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: c0b9d4e0e6f844ef2dda18e95aadfcf3b910995d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 22a8cd4bb8d1bdddbaaa68e92349d9c728557ac0
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47824650"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67921468"
 ---
 # <a name="adcpropasyncthreadpriorityenum"></a>ADCPROP_ASYNCTHREADPRIORITY_ENUM
 RDS の[Recordset](../../../ado/reference/ado-api/recordset-object-ado.md)オブジェクト、データを取得する非同期のスレッドの実行の優先順位を指定します。  
   
  これらの定数を使用して、**レコード セット**"**バック グラウンド スレッド優先順位**"動的プロパティを ADO、OLE DB の動的プロパティのインデックスで参照されていると記載されて、 [OLE DB 用の Microsoft カーソル サービス](../../../ado/guide/appendixes/microsoft-cursor-service-for-ole-db-ado-service-component.md)ドキュメント。  
   
-|定数|値|説明|  
+|定数|Value|説明|  
 |--------------|-----------|-----------------|  
 |**adPriorityAboveNormal**|4|通常と最高の優先順位を設定します。|  
 |**adPriorityBelowNormal**|2|最も低いと通常の優先順位を設定します。|  

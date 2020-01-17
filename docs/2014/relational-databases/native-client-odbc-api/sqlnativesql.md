@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 0556d4e3b06c68e70513d68a5c2616bf47fc299c
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53360594"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63046737"
 ---
 # <a name="sqlnativesql"></a>SQLNativeSql
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC ドライバーは、サーバーにアクセスせずに **SQLNativeSql** 要求に応じます。 この関数を使用すると、SQL ステートメントの構文を効率的にテストできます。 構文チェックでは、識別子または SQL ステートメント内の式の結果が有効かどうかは判断されないので、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SQLNativeSql **によって返された** ネイティブ SQL を実行すると失敗することがあります。  

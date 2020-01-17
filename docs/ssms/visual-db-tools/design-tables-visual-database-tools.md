@@ -15,15 +15,14 @@ helpviewer_keywords:
 - tables [SQL Server], opening
 - Table Designer, opening
 ms.assetid: c49e0155-5dcb-481f-9538-e1bde77105e2
-author: stevestein
-ms.author: sstein
-manager: craigg
-ms.openlocfilehash: f4dcdc69317db78546a5dcc2550ebfc58b02ab36
-ms.sourcegitcommit: b5cea9c67c7f896944065f09dace17b4929a34f7
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 8c10e17fd9da739eecc07536b40be3964705abef
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "52267857"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68263769"
 ---
 # <a name="create-and-update-database-tables"></a>データベース テーブルの作成と更新
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -32,7 +31,7 @@ ms.locfileid: "52267857"
   
 ## <a name="create-a-table"></a>テーブルの作成  
   
-1. データベースで **[テーブル]** ノードを右クリックし、**[新規作成]** > **[テーブル]** を選択します。  
+1. データベースで **[テーブル]** ノードを右クリックし、 **[新規作成]**  >  **[テーブル]** を選択します。  
   
     ![新しいテーブル](../media/design-tables/new-table.png)
   
@@ -44,7 +43,7 @@ ms.locfileid: "52267857"
   
 ## <a name="update-a-table"></a>テーブルを更新する  
   
-1. データベースの **[テーブル]** ノードの下にあるテーブルを右クリックし、**[デザイン]** を選択します。  
+1. データベースの **[テーブル]** ノードの下にあるテーブルを右クリックし、 **[デザイン]** を選択します。  
   
    ![テーブルを更新する](../media/design-tables/update-table.png)
 

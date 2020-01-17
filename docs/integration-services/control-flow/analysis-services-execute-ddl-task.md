@@ -15,17 +15,20 @@ helpviewer_keywords:
 - Analysis Services Execute DDL task
 - DDL
 ms.assetid: 7f25c8c6-b601-41f2-9553-be0a2ee0751a
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: 1bc7cdf4c8ba8e114565aee25b557ea3173b7051
-ms.sourcegitcommit: bfa10c54e871700de285d7f819095d51ef70d997
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: a160e61e390f58dc640a5d1da265cdb77d5d9be1
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/14/2019
-ms.locfileid: "54255408"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71294338"
 ---
 # <a name="analysis-services-execute-ddl-task"></a>Analysis Services DDL 実行タスク
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] DDL 実行タスクは、データ定義言語 (DDL) ステートメントを実行します。DDL ステートメントを使用すると、マイニング モデルや多次元オブジェクト (キューブおよびディメンションなど) を作成、削除、または変更できます。 たとえば DDL ステートメントは、 **Adventure Works** キューブ内にパーティションを作成したり、 [!INCLUDE[ssAWDWsp](../../includes/ssawdwsp-md.md)]に含まれるサンプルの [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] データベースである [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のディメンションを削除したりできます。  
   
  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] DDL 実行タスクは、 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 接続マネージャーを使用して、 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] のインスタンスまたは [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] プロジェクトに接続します。 詳しくは、「 [Analysis Services 接続マネージャー](../../integration-services/connection-manager/analysis-services-connection-manager.md)」をご覧ください。  
@@ -41,9 +44,9 @@ ms.locfileid: "54255408"
 ## <a name="ddl-statements"></a>DDL ステートメント  
  DDL ステートメントは、 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] スクリプト言語 (ASSL) のステートメントとして表され、XML for Analysis (XMLA) コマンドで構成されます。  
   
--   ASSL は、[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] のインスタンス、それに含まれるデータベースやデータベース オブジェクトの定義、および記述に使用されます。 詳細については、「[Analysis Services スクリプト言語 (XMLA 用 ASSL)](../../analysis-services/scripting/analysis-services-scripting-language-assl-for-xmla.md)」を参照してください。  
+-   ASSL は、[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] のインスタンス、それに含まれるデータベースやデータベース オブジェクトの定義、および記述に使用されます。 詳細については、「[Analysis Services スクリプト言語 (XMLA 用 ASSL)](/bi-reference/assl/analysis-services-scripting-language-assl-for-xmla)」を参照してください。  
   
--   XMLA は、Create、Alter、Process などのアクション コマンドを、[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] のインスタンスに送信する場合に使用されるコマンド言語です。 詳細については、「[XML for Analysis (XMLA) リファレンス](../../analysis-services/xmla/xml-for-analysis-xmla-reference.md)」を参照してください。  
+-   XMLA は、Create、Alter、Process などのアクション コマンドを、[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] のインスタンスに送信する場合に使用されるコマンド言語です。 詳細については、「[XML for Analysis (XMLA) リファレンス](/bi-reference/xmla/xml-for-analysis-xmla-reference)」を参照してください。  
   
  DDL コードが別のファイルに格納されている場合、[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] DDL 実行タスクはファイル接続マネージャーを使用して、そのファイルのパスを指定します。 詳しくは「 [File Connection Manager](../../integration-services/connection-manager/file-connection-manager.md)」をご覧ください。  
   
@@ -236,7 +239,7 @@ ms.locfileid: "54255408"
   **[Analysis Services DDL 実行タスク エディター]** ダイアログ ボックスの **[全般]** ページを使用すると、 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] DDL 実行タスクの名前と説明を入力できます。  
   
 ### <a name="options"></a>オプション  
- **名前**  
+ **[名前]**  
  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] DDL 実行タスクの一意な名前を指定します。 この名前は、タスク アイコンのラベルとして使用されます。  
   
 > [!NOTE]  
@@ -250,7 +253,7 @@ ms.locfileid: "54255408"
   
 ### <a name="static-options"></a>静的オプション  
  **[接続]**  
- [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] プロジェクトまたは [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 接続マネージャーを一覧で選択するか、\<**[新しい接続...]**> をクリックして **[Analysis Services 接続マネージャーの追加]** ダイアログ ボックスを使用して新しい接続を作成します。  
+ [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] プロジェクトまたは [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 接続マネージャーを一覧で選択するか、\< **[新しい接続...]** > をクリックして **[Analysis Services 接続マネージャーの追加]** ダイアログ ボックスを使用して新しい接続を作成します。  
   
  **関連トピック:** [[Analysis Services 接続マネージャーの追加] ダイアログ ボックスの UI リファレンス](../../integration-services/connection-manager/add-analysis-services-connection-manager-dialog-box-ui-reference.md)、[Analysis Services 接続マネージャー](../../integration-services/connection-manager/analysis-services-connection-manager.md)  
   
@@ -271,13 +274,13 @@ ms.locfileid: "54255408"
   
 #### <a name="sourcetype--file-connection"></a>[SourceType] = [ファイル接続]  
  **ソース**  
- 一覧でファイル接続を選択するか、\<**[新しい接続...]**> をクリックし、**[ファイル接続マネージャー]** ダイアログ ボックスを使用して新しい接続を作成します。  
+ 一覧でファイル接続を選択するか、\< **[新しい接続...]** > をクリックし、 **[ファイル接続マネージャー]** ダイアログ ボックスを使用して新しい接続を作成します。  
   
  **関連トピック:** [ファイル接続マネージャー](../../integration-services/connection-manager/file-connection-manager.md)  
   
 #### <a name="sourcetype--variable"></a>[SourceType] = [変数]  
  **ソース**  
- 一覧で変数を選択するか、\<**[新しい変数...]**> をクリックし、**[変数の追加]** ダイアログ ボックスを使用して新しい接続を作成します。  
+ 一覧で変数を選択するか、\< **[新しい変数...]** > をクリックし、 **[変数の追加]** ダイアログ ボックスを使用して新しい接続を作成します。  
   
  **関連トピック:** [Integration Services &#40;SSIS&#41; の変数](../../integration-services/integration-services-ssis-variables.md)  
   

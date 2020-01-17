@@ -12,23 +12,22 @@ helpviewer_keywords:
 ms.assetid: 5a35449e-4694-4ee5-9fa1-45d5a8fe7823
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 398d098615a0453cb016286867836388fd817540
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 48a4c8666ab7aa7e210289564210d99c947e5631
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47631790"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68071711"
 ---
 # <a name="sqlsetconnectoption-visual-foxpro-odbc-driver"></a>SQLSetConnectOption (Visual FoxPro ODBC ドライバー)
 > [!NOTE]  
 >  このトピックでには、Visual FoxPro ODBC ドライバー固有の情報が含まれています。 この関数の詳細については、該当するトピックを参照してください。 [ODBC API リファレンス](../../odbc/reference/syntax/odbc-api-reference.md)します。  
   
- サポート: 部分  
+ サポート:Partial  
   
- レベル 1 の ODBC API 準拠:  
+ ODBC API 準拠:レベル 1  
   
- 接続の側面を制御するオプションを設定します。 この関数が部分的にサポートされています: ドライバーのすべての値をサポートする、 *fOption*引数の一部でサポートされていません*vParam*の値を*fOption*引数SQL_TXN_ISOLATION します。  
+ 接続の側面を制御するオプションを設定します。 この関数は部分的にサポートされています。ドライバーのすべての値をサポートする、 *fOption*引数の一部でサポートされていません*vParam*の値を*fOption* SQL_TXN_ISOLATION 引数。  
   
  次の表に、これらの引数の Visual FoxPro ODBC ドライバーの実装に固有の動作にのみ**SQLSetConnectOption**します。  
   

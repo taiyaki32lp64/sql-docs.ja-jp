@@ -14,16 +14,15 @@ helpviewer_keywords:
 - arithmetic operators
 - math operations [Transact-SQL]
 ms.assetid: a41b92a5-1061-4e4d-bb3b-a180b73c88fa
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
+author: rothja
+ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 80574014aa381744177369fbac9dd4f6b39fb44f
-ms.sourcegitcommit: c61c7b598aa61faa34cd802697adf3a224aa7dc4
+ms.openlocfilehash: 94d617f0da60b73ecfc7a0dcdd4530a3a36f3ca7
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56154777"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67927368"
 ---
 # <a name="arithmetic-operators-transact-sql"></a>算術演算子 (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]

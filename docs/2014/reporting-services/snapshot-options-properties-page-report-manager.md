@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 ms.assetid: f6641f59-5267-4f57-8957-63b93d1a9679
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 458a04b87bf8aedd0d772e18ceb9cbc669fe6ba4
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 7a73f3be75a7f0cadf633943aeafffb7217d8e29
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56042353"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66101158"
 ---
 # <a name="snapshot-options-properties-page-report-manager"></a>[スナップショット オプション] プロパティ ページ (レポート マネージャー)
   [スナップショット オプション] プロパティ ページを使用すると、レポート スナップショットをレポート履歴に追加するスケジュールを設定したり、レポート履歴に保存するレポート スナップショットの件数の上限を設定したりできます。  

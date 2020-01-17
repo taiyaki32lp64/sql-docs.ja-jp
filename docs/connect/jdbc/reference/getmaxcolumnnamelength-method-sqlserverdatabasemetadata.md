@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: 67fb5407-55b9-48b6-87f3-112700f304ba
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: cc09f60866983807946d314a4f2234f5528da148
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ab90493a897d5b9561f3e1f4f58413a5de8e8b9e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47610200"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67982311"
 ---
 # <a name="getmaxcolumnnamelength-method-sqlserverdatabasemetadata"></a>getMaxColumnNameLength メソッド (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -42,7 +41,7 @@ public int getMaxColumnNameLength()
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- この getMaxColumnNameLength メソッドは、java.sql.DatabaseMetaData インターフェイスで getMaxColumnNameLength メソッドによって指定されます。  
+ この getMaxColumnNameLength メソッドは、getMaxColumnNameLength メソッドによって、java メタデータインターフェイスで指定されます。  
   
 ## <a name="see-also"></a>参照  
  [SQLServerDatabaseMetaData のメソッド](../../../connect/jdbc/reference/sqlserverdatabasemetadata-methods.md)   

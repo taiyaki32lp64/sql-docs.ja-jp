@@ -1,5 +1,5 @@
 ---
-title: SQLServerXAResource のフィールド |Microsoft Docs
+title: SQLServerXAResource Fields |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -14,17 +14,16 @@ apilocation:
 ms.assetid: a62bbaf4-9ec3-44b5-8a26-7213786b67b3
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: be0c8402d3e679e64064f91ba5342e795d391375
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 9f28dd938839fa5a0bae0bba8da6cc947c4758a3
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47768442"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67970074"
 ---
 # <a name="sqlserverxaresource-fields"></a>SQLServerXAResource のフィールド
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  メンバーに関する情報の[SQLServerXAResource](../../../connect/jdbc/reference/sqlserverxaresource-class.md)を参照してください[SQLServerXAResource のメンバー](../../../connect/jdbc/reference/sqlserverxaresource-members.md)します。  
+  [SQLServerXAResource](../../../connect/jdbc/reference/sqlserverxaresource-class.md)のメンバーの詳細については、「 [SQLServerXAResource members](../../../connect/jdbc/reference/sqlserverxaresource-members.md)」を参照してください。  
   
   

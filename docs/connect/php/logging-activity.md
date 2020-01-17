@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: a777b3d9-2262-4e82-bc82-b62ad60d0e55
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: bf960ec912f51c5a39f8d07366174e1c0cd4f7b8
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 29c7c1e3b536e237e2c61a8e3303313ec53fe679
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47600188"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67993330"
 ---
 # <a name="logging-activity"></a>アクティビティのログ記録
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -37,13 +36,13 @@ pdo_sqlsrv.log_severity = <number>
   
 **log_severity** は次のいずれかの値をとります。場所は次の値のいずれかです。  
   
-|ReplTest1|Description|  
+|[値]|Description|  
 |---------|---------------|  
 |0|ログ記録は無効です (何も定義されていない場合は、これが既定です)。|  
 |-1|エラー、警告、および通知をログ記録することを指定します。|  
-|1|エラーを記録することを指定します。|  
-|2|警告を記録することを指定します。|  
-|4|通知を記録することを指定します。|  
+|1|エラーをログに記録することを指定します。|  
+|2|警告をログに記録することを指定します。|  
+|4|通知をログに記録することを指定します。|  
   
 ログ記録の情報は、phperrors.log ファイルに追加されます。  
   
@@ -96,9 +95,9 @@ PHP では、初期化時に構成ファイルを読み取り、データをキ�
 |値 (かっこ内と同等の整数)|[説明]|  
 |-----------------------------------------------|---------------|  
 |SQLSRV_LOG_SEVERITY_ALL (-1)|エラー、警告、および通知をログ記録することを指定します。|  
-|SQLSRV_LOG_SEVERITY_ERROR (1)|エラーを記録することを指定します。 これは既定値です。|  
-|SQLSRV_LOG_SEVERITY_WARNING (2)|警告を記録することを指定します。|  
-|SQLSRV_LOG_SEVERITY_NOTICE (4)|通知を記録することを指定します。|  
+|SQLSRV_LOG_SEVERITY_ERROR (1)|エラーをログに記録することを指定します。 これは既定値です。|  
+|SQLSRV_LOG_SEVERITY_WARNING (2)|警告をログに記録することを指定します。|  
+|SQLSRV_LOG_SEVERITY_NOTICE (4)|通知をログに記録することを指定します。|  
   
 論理 OR 演算子 (|) を使用して、**LogSeverity** の設定に一度に複数の値を設定することができます。 たとえば、次のコードの行では、エラーと警告をログ記録することを指定します。  
   
@@ -116,7 +115,7 @@ PHP では、初期化時に構成ファイルを読み取り、データをキ�
 `sqlsrv.LogSeverity = 3`  
   
 ## <a name="see-also"></a>参照  
-[For PHP for SQL Server のプログラミング、Microsoft ドライバーのガイド](../../connect/php/programming-guide-for-php-sql-driver.md)
+[SQL Server 用 Microsoft Drivers for PHP のためのプログラミング ガイド](../../connect/php/programming-guide-for-php-sql-driver.md)
 
 [定数 &#40;Microsoft Drivers for PHP for SQL Server&#41;](../../connect/php/constants-microsoft-drivers-for-php-for-sql-server.md)
 

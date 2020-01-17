@@ -1,5 +1,5 @@
 ---
-title: sys.sp_rda_test_connection (TRANSACT-SQL) |Microsoft Docs
+title: sp_rda_test_connection (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -14,20 +14,19 @@ dev_langs:
 helpviewer_keywords:
 - sys.sp_rda_test_connection stored procedure
 ms.assetid: e2ba050c-d7e3-4f33-8281-c9b525b4edb4
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: ef50b770019450f99ede55369c1bdaa654cd52b5
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: MikeRayMSFT
+ms.author: mikeray
+ms.openlocfilehash: 69b3b9eae6c292b9501dfbe74b84d7399304a291
+ms.sourcegitcommit: 43c3d8939f6f7b0ddc493d8e7a643eb7db634535
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47843730"
+ms.lasthandoff: 10/14/2019
+ms.locfileid: "72305155"
 ---
-# <a name="syssprdatestconnection-transact-sql"></a>sys.sp_rda_test_connection (TRANSACT-SQL)
+# <a name="syssp_rda_test_connection-transact-sql"></a>sp_rda_test_connection (Transact-sql)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
-  SQL Server から、リモート Azure サーバーへの接続をテストし、データの移行を妨げる可能性のある問題を報告します。  
+  SQL Server からリモート Azure サーバーへの接続をテストし、データ移行を妨げる可能性のある問題を報告します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -43,45 +42,45 @@ EXECUTE sys.sp_rda_test_connection
 ```  
   
 ## <a name="arguments"></a>引数  
- @database_name = N'*db_name*'  
- Stretch 対応 SQL Server データベースの名前。 このパラメーターはオプションです。  
+ @database_name = N '*db_name*'  
+ Stretch が有効な SQL Server データベースの名前。 このパラメーターはオプションです。  
   
- @server_address = N'*azure_server_fully_qualified_address*'  
- Azure のサーバーの完全修飾アドレス。  
+ @server_address = N '*azure_server_fully_qualified_address*'  
+ Azure サーバーの完全修飾アドレス。  
   
--   値を指定する場合**@database_name**、指定されたデータベースで Stretch 対応はありませんが、その値を指定する必要がある **@server_address**します。  
+-   **\@database_name**に値を指定しても、指定したデータベースで Stretch が有効になっていない場合は **\@server_address**に値を指定する必要があります。  
   
--   値を指定する場合 **@database_name**の値を指定する必要はありませんし、指定されたデータベースが Stretch 有効になっている **@server_address**します。 値を指定する場合**@server_address**Stretch 対応データベースに関連付けられている既存の Azure サーバーを既に使用や、ストアド プロシージャでは無視されます。  
+-   **\@database_name**に値を指定し、指定されたデータベースで Stretch が有効になっている場合、 **\@server_address**に値を指定する必要はありません。 **\@server_address**に値を指定した場合、ストアドプロシージャはそれを無視し、既に Stretch が有効なデータベースに関連付けられている既存の Azure サーバーを使用します。  
   
- @azure_username = N'*azure_username*  
+ @azure_username = N '*azure_username*  
  リモート Azure サーバーのユーザー名。  
   
- @azure_password = N'*azure_password*'  
+ @azure_password = N '*azure_password*'  
  リモート Azure サーバーのパスワード。  
   
- @credential_name = N'*credential_name*'  
- ユーザー名とパスワードを指定すると、代わりに、Stretch 対応データベースに格納されている資格情報の名前を行うことができます。  
+ @credential_name = N '*credential_name*'  
+ ユーザー名とパスワードを指定する代わりに、Stretch が有効なデータベースに格納されている資格情報の名前を指定できます。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
- 場合に**成功**sp_rda_test_connection EX_INFO 重大度を持つエラー 14855 (STRETCH_MAJOR、STRETCH_CONNECTION_TEST_PROC_SUCCEEDED) を返します、成功コードが返されます。  
+ **成功**した場合、sp_rda_test_connection によってエラー 14855 (STRETCH_MAJOR、STRETCH_CONNECTION_TEST_PROC_SUCCEEDED) と重大度 EX_INFO および成功したリターンコードが返されます。  
   
- 場合に**エラー**sp_rda_test_connection EX_USER 重大度を持つエラー 14856 (STRETCH_MAJOR、STRETCH_CONNECTION_TEST_PROC_FAILED) を返します、エラーには、コードが返されます。  
+ エラーが**発生**した場合、sp_rda_test_connection によってエラー 14856 (STRETCH_MAJOR、STRETCH_CONNECTION_TEST_PROC_FAILED) と重大度 EX_USER およびエラーリターンコードが返されます。  
   
 ## <a name="result-sets"></a>結果セット  
   
-|列名|データ型|説明|  
+|列名|データ型|[説明]|  
 |-----------------|---------------|-----------------|  
-|link_state|ssNoversion|値に対応して、次の値のいずれかの**link_state_desc**します。<br /><br /> -   0<br />-   1<br />-   2<br />-   3<br />-   4|  
-|link_state_desc|varchar(32)|上記に対応して、次の値のいずれかの値**link_state**します。<br /><br /> -正常<br />     SQL サーバーとリモート Azure サーバーが正常な状態です。<br />-   ERROR_AZURE_FIREWALL<br />     Azure のファイアウォールには、SQL Server とリモート Azure サーバー間のリンクが原因です。<br />-   ERROR_NO_CONNECTION<br />     SQL Server では、リモート Azure サーバーへの接続を作成できません。<br />-   ERROR_AUTH_FAILURE<br />     認証の失敗が原因で SQL Server とリモート Azure サーバー間のリンク。<br />-エラー<br />     認証の問題、接続の問題またはファイアウォールの問題でないエラーが SQL Server とリモート Azure サーバー間のリンクを妨げています。|  
-|error_number|ssNoversion|エラーの数。 エラーがない場合は、このフィールドは NULL です。|  
-|error_message|nvarchar (1024)|エラー メッセージです。 エラーがない場合は、このフィールドは NULL です。|  
+|link_state|Int|次のいずれかの値。 **link_state_desc**の値に対応します。<br /><br /> -   0<br />-   1<br />-   2<br />-   3<br />-   4|  
+|link_state_desc|varchar (32)|次のいずれかの値。 **link_state**の前の値に対応します。<br /><br /> -正常<br />     SQL Server とリモート Azure サーバーの間のが正常な状態です。<br />-   ERROR_AZURE_FIREWALL<br />     Azure ファイアウォールによって、SQL Server とリモート Azure サーバー間のリンクが妨げられています。<br />-   ERROR_NO_CONNECTION<br />     SQL Server は、リモートの Azure サーバーに接続することはできません。<br />-   ERROR_AUTH_FAILURE<br />     認証エラーにより、SQL Server とリモート Azure サーバーの間のリンクが妨げられています。<br />-エラー<br />     認証の問題、接続の問題、またはファイアウォールの問題ではないエラーにより、SQL Server とリモート Azure サーバーの間のリンクが妨げられています。|  
+|error_number|Int|エラーの番号。 エラーがない場合、このフィールドは NULL になります。|  
+|error_message|nvarchar(1024)|エラー メッセージです。 エラーがない場合、このフィールドは NULL になります。|  
   
 ## <a name="permissions"></a>アクセス許可  
  Db_owner アクセス許可が必要です。  
   
 ## <a name="examples"></a>使用例  
   
-### <a name="check-the-connection-from-sql-server-to-the-remote-azure-server"></a>SQL Server から、リモート Azure サーバーへの接続を確認してください。  
+### <a name="check-the-connection-from-sql-server-to-the-remote-azure-server"></a>SQL Server からリモート Azure サーバーへの接続を確認する  
   
 ```sql  
 EXECUTE sys.sp_rda_test_connection @database_name = N'<Stretch-enabled database>'  
@@ -89,13 +88,13 @@ GO
   
 ```  
   
- 結果は、SQL Server が、リモート Azure サーバーに接続できないことを示します。  
+ 結果は、SQL Server がリモートの Azure サーバーに接続できないことを示しています。  
   
 |link_state|link_state_desc|error_number|error_message|  
 |-----------------|-----------------------|-------------------|--------------------|  
-|2|ERROR_NO_CONNECTION|*\<接続に関連するエラー番号 >*|*\<接続に関連するエラー メッセージ >*|  
+|2|ERROR_NO_CONNECTION|*\<接続に関連するエラー番号 >*|*接続に関連するエラーメッセージの \<>*|  
   
-### <a name="check-the-azure-firewall"></a>Azure のファイアウォールを確認します。  
+### <a name="check-the-azure-firewall"></a>Azure ファイアウォールを確認する  
   
 ```sql  
 USE <Stretch-enabled database>  
@@ -105,13 +104,13 @@ GO
   
 ```  
   
- 結果は、Azure のファイアウォールが SQL Server とリモート Azure サーバー間のリンクを拒否されているを表示します。  
+ 結果は、Azure ファイアウォールが SQL Server とリモート Azure サーバー間のリンクを妨げていることを示しています。  
   
 |link_state|link_state_desc|error_number|error_message|  
 |-----------------|-----------------------|-------------------|--------------------|  
-|1|ERROR_AZURE_FIREWALL|*\<ファイアウォールに関連するエラー番号 >*|*\<ファイアウォールに関連するエラー メッセージ >*|  
+|@shouldalert|ERROR_AZURE_FIREWALL|*\<ファイアウォールに関連するエラー番号 >*|*\<ファイアウォール関連のエラーメッセージ >*|  
   
-### <a name="check-authentication-credentials"></a>認証の資格情報を確認してください。  
+### <a name="check-authentication-credentials"></a>認証資格情報の確認  
   
 ```sql  
 USE <Stretch-enabled database>  
@@ -121,13 +120,13 @@ GO
   
 ```  
   
- 結果は、SQL Server とリモート Azure サーバー間のリンクを認証の失敗が拒否されているを表示します。  
+ 結果には、認証エラーが原因で、SQL Server とリモート Azure サーバーの間のリンクが妨げられていることがわかります。  
   
 |link_state|link_state_desc|error_number|error_message|  
 |-----------------|-----------------------|-------------------|--------------------|  
 |3|ERROR_AUTH_FAILURE|*\<認証に関連するエラー番号 >*|*\<authentication-related error message>*|  
   
-### <a name="check-the-status-of-the-remote-azure-server"></a>リモート Azure サーバーの状態を確認してください。  
+### <a name="check-the-status-of-the-remote-azure-server"></a>リモート Azure サーバーの状態を確認する  
   
 ```sql  
 USE <SQL Server database>  
@@ -140,7 +139,7 @@ GO
   
 ```  
   
- 結果は、接続が正常であると、指定したデータベースの Stretch Database を有効にできることを示します。  
+ 結果は、接続が正常であることと、指定されたデータベースの Stretch Database を有効にできることを示しています。  
   
 |link_state|link_state_desc|error_number|error_message|  
 |-----------------|-----------------------|-------------------|--------------------|  

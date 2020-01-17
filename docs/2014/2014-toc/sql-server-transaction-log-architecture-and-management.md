@@ -11,11 +11,11 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: 2495b9487a633fff6c5214a07e589f58fafa5e61
-ms.sourcegitcommit: e3f5b70bbb4c66294df8c7b2c70186bdf2365af9
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/18/2019
-ms.locfileid: "54397641"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62512769"
 ---
 # <a name="sql-server-transaction-log-architecture-and-management"></a>SQL Server トランザクション ログのアーキテクチャと管理
 

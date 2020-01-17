@@ -1,22 +1,22 @@
 ---
 title: URL アクセス パラメーター リファレンス | Microsoft Docs
-ms.date: 09/09/2015
+ms.date: 05/10/2019
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: reporting-services
 ms.topic: conceptual
 helpviewer_keywords:
 - reports [Reporting Services], display options
 - URL access [Reporting Services], report display parameters
 ms.assetid: 1c3e680a-83ea-4979-8e79-fa2337ae12a3
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: e0848c1574a5ca46c1db922be72b0dceedf091ed
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: fba128636ce726396b499200b060592a63db5f65
+ms.sourcegitcommit: 8cb26b7dd40280a7403d46ee59a4e57be55ab462
+ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52515121"
+ms.lasthandoff: 10/17/2019
+ms.locfileid: "72542180"
 ---
 # <a name="url-access-parameter-reference"></a>URL Access Parameter Reference
   次のパラメーターを URL の一部として使用すると、 [!INCLUDE[ssRSCurrent](../includes/ssrscurrent-md.md)]レポートのルック アンド フィールを構成できます。 ここでは、最も一般的なパラメーターについて説明します。 パラメーターは大文字と小文字が区別されます。レポート サーバーに出力する場合は *rs:* 、HTML ビューアーに出力する場合は *rc:* をパラメーターの先頭に追加します。 デバイスや表示拡張機能に固有のパラメーターを指定することもできます。 デバイスに固有のパラメーターの詳細については、「 [URL でデバイス情報設定を指定する](../reporting-services/specify-device-information-settings-in-a-url.md)」を参照してください。  
@@ -35,7 +35,7 @@ ms.locfileid: "52515121"
 -   [レポート ビューアー Web パーツのコマンド (rv:)](#bkmk_webpart)  
   
 ##  <a name="bkmk_htmlviewer"></a> HTML ビューアーのコマンド (rc:)  
- HTML ビューアー コマンドは HTML ビューアーを対象として使用されます (たとえば、レポート マネージャーから)。接頭辞として *rc:* が付きます。  
+ - HTML ビューアー コマンドは HTML ビューアーを対象として使用され、接頭辞として *rc:* が付きます。
   
 -   *[ツール バー]* :  
                   ツール バーの表示と非表示を切り替えます。 このパラメーターの値が **false**の場合、残りのオプションすべてが無視されます。 このパラメーターを省略すると、サポートされている表示形式でツール バーが自動的に表示されます。 このパラメーターの既定値は **true**です。  

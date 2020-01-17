@@ -1,6 +1,6 @@
 ---
-title: SQL Server インデックスの削除 |Microsoft Docs
-description: SQL Server の OLE DB ドライバーを使用して sql server インデックスの削除
+title: SQL Server Index | を削除するMicrosoft Docs
+description: OLE DB Driver for SQL Server を使用した sql server インデックスの削除
 ms.custom: ''
 ms.date: 06/14/2018
 ms.prod: sql
@@ -17,22 +17,21 @@ helpviewer_keywords:
 - indexes [OLE DB]
 author: pmasl
 ms.author: pelopes
-manager: craigg
-ms.openlocfilehash: 990318037a3f1b35e311a983859507a364c52127
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 708deecefe451115ca0fca97075f88311dec2f5a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47669170"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68015255"
 ---
 # <a name="dropping-a-sql-server-index"></a>SQL Server インデックスの削除
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
-  OLE DB Driver for SQL Server を公開、 **iindexdefinition::dropindex**関数。 コンシューマーはこの関数を使用して、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] テーブルからインデックスを削除できます。  
+  SQL Server の OLE DB ドライバーは、 **Iindexdefinition::D ropindex**関数を公開します。 コンシューマーはこの関数を使用して、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] テーブルからインデックスを削除できます。  
   
- 複数の OLE DB Driver for SQL Server が公開されて[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]インデックスと主キーと UNIQUE 制約。 テーブル所有者、データベース所有者、一部の管理ロールのメンバーは、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] テーブルを変更して、制約を削除できます。 既定では、テーブル所有者だけが既存のインデックスを削除できます。 したがって、**DropIndex** が成功するか失敗するかは、アプリケーション ユーザーのアクセス権だけでなく、指定されたインデックスの種類によっても異なります。  
+ SQL Server の OLE DB ドライバーは、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]主キーと一意の制約をインデックスとして公開します。 テーブル所有者、データベース所有者、一部の管理ロールのメンバーは、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] テーブルを変更して、制約を削除できます。 既定では、テーブル所有者だけが既存のインデックスを削除できます。 したがって、**DropIndex** が成功するか失敗するかは、アプリケーション ユーザーのアクセス権だけでなく、指定されたインデックスの種類によっても異なります。  
   
  コンシューマーは、*pTableID* パラメーターの *uName* 共用体の *pwszName* メンバーに Unicode 文字列としてテーブル名を指定します。 *pTableID* の *eKind* メンバーを DBKIND_NAME にする必要があります。  
   

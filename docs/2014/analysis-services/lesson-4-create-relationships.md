@@ -1,24 +1,23 @@
 ---
-title: レッスン 5:[リレーションシップの作成] | Microsoft Docs
+title: 'レッスン 5: [リレーションシップの作成] | Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: abac1a00-f827-4c3e-a473-6db5c8a3a66f
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 05ebc2ffa952c0b5c927d890aad70bbf55f3c5af
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: 7a80f607c3187e967404ce018b7eed00497d9c01
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52409059"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66078580"
 ---
-# <a name="lesson-5-create-relationships"></a>レッスン 5:[リレーションシップの作成]
+# <a name="lesson-5-create-relationships"></a>レッスン 5: [リレーションシップの作成]
   このレッスンでは、データをインポートした際に自動的に作成されたリレーションシップを確認し、異なるテーブル間に新しいリレーションシップを追加します。 リレーションシップとは、2 つのテーブル間を接続し、それらのテーブル内のデータをどのように関連付けるかを決定するものです。 たとえば、Product テーブルと Product Subcategory テーブルの間には、どの製品も特定のサブカテゴリに属しているという事実に基づいたリレーションシップが存在します。 詳細については、[「リレーションシップ (SSAS テーブル)」](tabular-models/relationships-ssas-tabular.md) を参照してください。  
   
  このレッスンを完了するまでに時間を推定するには。**10 分**  
@@ -31,7 +30,7 @@ ms.locfileid: "52409059"
   
 #### <a name="to-review-existing-relationships"></a>既存のリレーションシップを確認するには  
   
-1.  [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]で、**[モデル]** メニューをクリックし、**[モデル ビュー]** をポイントして、**[ダイアグラム ビュー]** をクリックします。  
+1.  [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]で、 **[モデル]** メニューをクリックし、 **[モデル ビュー]** をポイントして、 **[ダイアグラム ビュー]** をクリックします。  
   
      モデル デザイナーがダイアグラム ビューで表示されます。このグラフィカルな形式では、インポートしたすべてのテーブルが、それらを結ぶ線と共に表示されます。 テーブル間の線は、データのインポート時に自動的に作成されたリレーションシップを表します。  
   
@@ -42,7 +41,7 @@ ms.locfileid: "52409059"
      **Customer** テーブル内の **Geography Id** 列と **Geography** テーブル内の **Geography Id** 列が、どちらもボックス内に表示されます。 これは、これらがリレーションシップに使用される列であるということを示しています。 リレーションシップのプロパティに表示されます、**プロパティ**ウィンドウ。  
   
     > [!TIP]  
-    >  ダイアグラム ビューのモデル デザイナーを使用することに加え、**[リレーションシップの管理]** ダイアログ ボックスを使用して、すべてのテーブル間のリレーションシップをテーブル形式で表示することもできます。 **[テーブル]** メニューをクリックし、**[リレーションシップの管理]** をクリックします。 **[リレーションシップの管理]** ダイアログ ボックスに、データのインポート時に自動的に作成されたリレーションシップが表示されます。  
+    >  ダイアグラム ビューのモデル デザイナーを使用することに加え、 **[リレーションシップの管理]** ダイアログ ボックスを使用して、すべてのテーブル間のリレーションシップをテーブル形式で表示することもできます。 **[テーブル]** メニューをクリックし、 **[リレーションシップの管理]** をクリックします。 **[リレーションシップの管理]** ダイアログ ボックスに、データのインポート時に自動的に作成されたリレーションシップが表示されます。  
   
 3.  ダイアグラム ビューのモデル デザイナーか、または **[リレーションシップの管理]** ダイアログ ボックスを使用して、各テーブルが AdventureWorksDW データベースからインポートされた際に、次のリレーションシップが作成されたことを確認します。  
   
@@ -50,7 +49,7 @@ ms.locfileid: "52409059"
     |------------|-----------|--------------------------|  
     |はい|**Customer [Geography Id]**|**Geography [Geography Id]**|  
     |はい|**製品 [製品のサブカテゴリの Id]**|**Product Subcategory [製品のサブカテゴリの Id]**|  
-    |はい|**Product Subcategory [製品カテゴリ Id]**|**製品カテゴリの [製品カテゴリ Id]**|  
+    |[はい]|**Product Subcategory [製品カテゴリ Id]**|**製品カテゴリの [製品カテゴリ Id]**|  
     |はい|**Internet Sales [Customer Id]**|**Customer [Customer Id]**|  
     |はい|**Internet Sales [Product Id]**|**製品 [Product Id]**|  
   

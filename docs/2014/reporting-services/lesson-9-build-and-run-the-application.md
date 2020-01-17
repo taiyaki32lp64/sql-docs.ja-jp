@@ -4,21 +4,20 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 ms.assetid: f52d3f3a-0b09-4b34-9112-0b3655271587
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 47519a65a927184f67799a7c82a9a10d1d39c91f
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 321075631a48570a80e8294f992e8ddb17d50bd3
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56042800"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66108380"
 ---
-# <a name="lesson-9-build-and-run-the-application"></a>レッスン 9: ビルドして、アプリケーションの実行
+# <a name="lesson-9-build-and-run-the-application"></a>レッスン 9: アプリケーションをビルドして実行する
   データ テーブルのデータ フィルターを作成した後は、Web サイト アプリケーションをビルドして実行します。  
   
 ### <a name="to-build-and-run-the-application"></a>アプリケーションをビルドして実行するには  

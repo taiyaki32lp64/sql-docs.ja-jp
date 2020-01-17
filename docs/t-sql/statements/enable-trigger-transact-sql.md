@@ -22,13 +22,12 @@ helpviewer_keywords:
 ms.assetid: 6e21f0ad-68d0-432f-9c7c-a119dd2d3fc9
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: 86b23a92006e4a2f3e3896cd1fe20c8b566d14e4
-ms.sourcegitcommit: c4870cb5bebf9556cdb4d8b35ffcca265fb07862
+ms.openlocfilehash: 369dd7ec16ee530d7612222ad7e77dd6faf66e14
+ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/02/2019
-ms.locfileid: "55652521"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "73980947"
 ---
 # <a name="enable-trigger-transact-sql"></a>ENABLE TRIGGER (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -61,7 +60,7 @@ DATABASE
 DDL トリガーの場合、*trigger_name* が、データベース スコープで実行するために作成または変更されたことを示します。  
   
 ALL SERVER  
-**適用対象**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]  
+**適用対象**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 以降。  
   
 DDL トリガーの場合、*trigger_name* が、サーバー スコープで実行するために作成または変更されたことを示します。 ALL SERVER はログオン トリガーにも適用されます。  
   
@@ -81,7 +80,7 @@ DML トリガーを有効化するには、少なくとも、そのトリガー�
 ### <a name="a-enabling-a-dml-trigger-on-a-table"></a>A. テーブル上の DML トリガーを有効化する  
 次の例では、AdventureWorks データベースのテーブル `Address` 上に作成されたトリガー `uAddress` を無効化し、次に有効化します。  
   
-```  
+```sql  
 DISABLE TRIGGER Person.uAddress ON Person.Address;  
 GO  
 ENABLE Trigger Person.uAddress ON Person.Address;  
@@ -91,7 +90,7 @@ GO
 ### <a name="b-enabling-a-ddl-trigger"></a>B. DDL トリガーを有効化する  
 次の例では、データベース スコープの DDL トリガー `safety` を作成し、無効にします。  
   
-```  
+```sql  
 CREATE TRIGGER safety   
 ON DATABASE   
 FOR DROP_TABLE, ALTER_TABLE   
@@ -108,9 +107,9 @@ GO
 ### <a name="c-enabling-all-triggers-that-were-defined-with-the-same-scope"></a>C. 同じスコープで定義されたすべてのトリガーを有効化する  
 次の例では、サーバー スコープで作成されたすべての DDL トリガーを有効化します。  
   
-**適用対象**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]  
+**適用対象**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 以降。  
   
-```  
+```sql  
 ENABLE Trigger ALL ON ALL SERVER;  
 GO  
 ```  

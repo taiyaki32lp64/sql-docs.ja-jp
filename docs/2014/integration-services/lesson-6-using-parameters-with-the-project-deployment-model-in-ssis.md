@@ -1,5 +1,5 @@
 ---
-title: レッスン 6:プロジェクト配置モデルでパラメーターの使用 |Microsoft Docs
+title: 'レッスン 6: プロジェクト配置モデルでパラメーターの使用 |Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -7,17 +7,17 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 9216f18c-1762-4f2d-8c22-bd0ab7107555
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 01bcc625a02814b0c6181cad1954eb11d961f023
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: d559defe1dd08f26077738cdd0aea219e8f7554b
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53355376"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62890547"
 ---
-# <a name="lesson-6-using-parameters-with-the-project-deployment-model"></a>レッスン 6:プロジェクト配置モデルを持つパラメーターを使用する
+# <a name="lesson-6-using-parameters-with-the-project-deployment-model"></a>レッスン 6: プロジェクト配置モデルを持つパラメーターを使用する
   SQL Server 2012 では、Integration Services サーバーにプロジェクトを配置できる新しい配置モデルが導入されています。 Integration Services サーバーを使用すると、パッケージの管理、パッケージの実行、およびパッケージに合わせたランタイム値の構成を行うことができます。  
   
  このレッスンで作成したパッケージを変更します[レッスン 5。パッケージ配置モデルのパッケージ構成の追加](lesson-5-add-ssis-package-configurations-for-the-package-deployment-model.md)プロジェクト配置モデルを使用します。 構成値をパラメーターに置換して、サンプル データの場所を指定します。 または、チュートリアルに含まれている、レッスン 5 を完了した状態のパッケージをコピーすることもできます。  
@@ -36,7 +36,7 @@ ms.locfileid: "53355376"
   
 2.  [手順 2:プロジェクトをプロジェクト配置モデルに変換します。](lesson-6-2-converting-the-project-to-the-project-deployment-model.md)  
   
-3.  [手順 3:レッスン 6 パッケージのテスト](lesson-6-3-testing-the-lesson-6-package.md)  
+3.  [ステップ 3:レッスン 6 パッケージのテスト](lesson-6-3-testing-the-lesson-6-package.md)  
   
 4.  [手順 4:レッスン 6 パッケージの展開](lesson-6-4-deploying-the-lesson-6-package.md)  
   

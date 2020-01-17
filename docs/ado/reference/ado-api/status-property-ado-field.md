@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 8cd1f7f4-0a3a-4f07-b8ba-6582e70140ad
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 11a39cf6f30e7a4892d6f2df5c8c373ab6847632
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d90eff53ef998a009aecd4d82fc3b502a487c01d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47741520"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67930834"
 ---
 # <a name="status-property-ado-field"></a>Status プロパティ (ADO Field)
 状態を示します、[フィールド](../../../ado/reference/ado-api/field-object.md)オブジェクト。  
@@ -48,6 +47,6 @@ ms.locfileid: "47741520"
 ## <a name="applies-to"></a>適用対象  
  [Field オブジェクト](../../../ado/reference/ado-api/field-object.md)  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [Status プロパティの例 (Field) (VB)](../../../ado/reference/ado-api/status-property-example-field-vb.md)   
  [Status プロパティの例 (VC++)](../../../ado/reference/ado-api/status-property-example-vc.md)   

@@ -1,5 +1,5 @@
 ---
-title: SQLSTATE (ODBC エラー コード) |マイクロソフトのドキュメント
+title: SQLSTATE (ODBC エラーコード) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -16,20 +16,18 @@ helpviewer_keywords:
 ms.assetid: 84cce528-edb0-473f-a85f-3eb87fbe2cf3
 author: MightyPen
 ms.author: genemi
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 18f7ebab7d6463c419d31464c1343d6fd03d4cec
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 162f6ff15a95c1839ef59b10c659935b687aeb59
+ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51672981"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73783212"
 ---
 # <a name="sqlstate-odbc-error-codes"></a>SQLSTATE (ODBC エラー コード)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-[!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
 
-  SQLSTATE は、警告やエラーの原因についての詳細情報を提供します。 データで発生するエラーのソースが検出され、によって返される[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC ドライバーでは、返されたネイティブ エラー番号を適切な SQLSTATE にマップします。 ネイティブ エラー番号をマップできる ODBC エラー コードを持たない場合、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC ドライバーは SQLSTATE 42000 (「構文エラーまたはアクセス違反です」) を返します。 ドライバーで検出されたエラーのため、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC ドライバーが適切な SQLSTATE を生成します。  
+  SQLSTATE は、警告やエラーの原因についての詳細情報を提供します。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]によって検出され、データソースで発生したエラーの場合、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC ドライバーは、返されたネイティブエラー番号を適切な SQLSTATE にマップします。 ネイティブエラー番号にマップする ODBC エラーコードがない場合、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC ドライバーは SQLSTATE 42000 ("構文エラーまたはアクセス違反") を返します。 ドライバーによって検出されたエラーについては、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC ドライバーによって適切な SQLSTATE が生成されます。  
   
  状態エラー コードの詳細については、次のトピックを参照してください。  
   

@@ -1,29 +1,28 @@
 ---
 title: Always Encrypted のキー管理の概要 | Microsoft Docs
 ms.custom: ''
-ms.date: 07/20/2016
+ms.date: 10/01/2019
 ms.prod: sql
 ms.prod_service: security, sql-database"
 ms.reviewer: vanto
 ms.technology: security
 ms.topic: conceptual
 ms.assetid: 07a305b1-4110-42f0-b7aa-28a4e32e912a
-author: VanMSFT
-ms.author: vanto
-manager: craigg
+author: jaszymas
+ms.author: jaszymas
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: b9250b8e8ceb392973c5799d8cf473d8b94a267b
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 50411ab35801dea8db00dcea6f6d0109be954a02
+ms.sourcegitcommit: 312b961cfe3a540d8f304962909cd93d0a9c330b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52535388"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73594108"
 ---
 # <a name="overview-of-key-management-for-always-encrypted"></a>Always Encrypted のキー管理の概要
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
 
-[Always Encrypted](../../../relational-databases/security/encryption/always-encrypted-database-engine.md) は、2 種類の暗号化キーを使用します。1 つはデータを暗号化するキーと、もう 1 つはデータを暗号化するキーを暗号化するキーです。 列暗号化キーはデータを暗号化し、列マスター キーは列暗号化キーを暗号化します。 この記事では、これらの暗号化キーを管理するための詳細な概要を提供します。
+[Always Encrypted](../../../relational-databases/security/encryption/always-encrypted-database-engine.md) は、2 種類の暗号化キーを使用します。1 つはデータを暗号化するキーと、もう 1 つはデータを暗号化するキーを暗号化するキーです。 列暗号化キーはデータを暗号化し、列マスター キーは列暗号化キーを暗号化します。 この記事では、これらの暗号化キーを管理するための詳細な概要を提供します。  
 
 Always Encrypted キーとキーの管理について説明するときは、実際の暗号化キーと、キーを *記述* するメタデータ オブジェクトとの違いを理解することが重要です。 実際の暗号化キーを指す **列暗号化キー** と **列マスター キー** という用語と、データベース内の Always Encrypted キーの **説明** を指す **列暗号化キーのメタデータ** と *列マスター キーのメタデータ* という用語を使用します。
 
@@ -32,9 +31,9 @@ Always Encrypted キーとキーの管理について説明するときは、実
 
 - ***列マスター キー*** は、列暗号化キーの暗号化に使用される保護キーです。 列マスター キーは、Windows 証明書ストア、Azure Key Vault、またはハードウェア セキュリティ モジュールなどの信頼できるキー ストアに格納する必要があります。 データベースには、列マスター キーに関するメタデータ (キー ストアの種類と場所) のみが含まれます。 列マスター キーのメタデータは、 [sys.column_master_keys (TRANSACT-SQL)](../../../relational-databases/system-catalog-views/sys-column-master-keys-transact-sql.md) カタログ ビューに格納されています。  
 
-データベース システム内のキー メタデータには、プレーンテキストの列マスター キーまたはプレーンテキストの列暗号化キーは含まれていないことに注意してください。 データベースには、列マスター キーの種類と場所に関する情報と、列暗号化キーの暗号化された値のみが含まれます。 これは、プレーンテキストのキーはデータベース システムに決して公開されないので、データベース システムが侵害された場合でも、Always Encrypted を使用して保護されているデータの安全性が保証されることを意味します。 データベース システムがプレーンテキストのキーにアクセスできないようにするため、キー管理ツールは、データベースをホストしているコンピューターとは異なるコンピューターで必ず実行します。詳細については、後述の「 [キー管理のセキュリティに関する考慮事項](#SecurityForKeyManagement) 」でご確認ください。
+データベース システム内のキー メタデータには、プレーンテキストの列マスター キーまたはプレーンテキストの列暗号化キーは含まれていないことに注意してください。 データベースには、列マスター キーの種類と場所に関する情報と、列暗号化キーの暗号化された値のみが含まれます。 これは、プレーンテキストのキーはデータベース システムに決して公開されないので、データベース システムが侵害された場合でも、Always Encrypted を使用して保護されているデータの安全性が保証されることを意味します。 データベース システムがプレーンテキストのキーにアクセスできないようにするため、キー管理ツールは、データベースをホストしているコンピューターとは異なるコンピューターで必ず実行します。詳細については、後述の「 [キー管理のセキュリティに関する考慮事項](#security-considerations-for-key-management) 」でご確認ください。
 
-データベースには (Always Encrypted で保護された列内の) 暗号化されたデータだけが含まれ、プレーン テキストのキーにアクセスできないため、データを復号化することはできません。 つまり、Always Encrypted 列に対してクエリを実行しても、暗号化された値が返されるだけなので、保護されたデータを暗号化または復号化する必要があるクライアント アプリケーションは、列マスター キーと関連する列暗号化キーにアクセスできる必要があります。 詳細については、「 [Always Encrypted (クライアント開発)](../../../relational-databases/security/encryption/always-encrypted-client-development.md)」を参照してください。
+データベースには (Always Encrypted で保護された列内の) 暗号化されたデータだけが含まれ、プレーン テキストのキーにアクセスできないため、データを復号化することはできません。 つまり、Always Encrypted 列に対してクエリを実行しても、暗号化された値が返されるだけなので、保護されたデータを暗号化または復号化する必要があるクライアント アプリケーションは、列マスター キーと関連する列暗号化キーにアクセスできる必要があります。 詳しくは、「[Always Encrypted を使用したアプリケーションの開発](always-encrypted-client-development.md)」をご覧ください。
 
 
 
@@ -71,18 +70,15 @@ Always Encrypted キーを管理するユーザーには、セキュリティ管
 Always Encrypted キーは、 [SQL Server Management Studio (SSMS)](https://msdn.microsoft.com/library/ms174173.aspx) と [PowerShell](../../scripting/sql-server-powershell.md)を使用して管理できます。
 
 - **SQL Server Management Studio (SSMS)** は、キー ストアのアクセスとデータベース のアクセスに関するタスクを組み合わせるダイアログとウィザードを提供しています。そのため、SSMS では役割の分離をサポートしていませんが、キーの構成を容易にします。 SSMS を使用したキー管理の詳細については、以下を参照してください。
-    - [列マスター キーの準備](../../../relational-databases/security/encryption/configure-always-encrypted-using-sql-server-management-studio.md#provisioncmk)
-    - [列暗号化キーの準備](../../../relational-databases/security/encryption/configure-always-encrypted-using-sql-server-management-studio.md#provisioncek)
-    - [列マスター キーの回転](../../../relational-databases/security/encryption/configure-always-encrypted-using-sql-server-management-studio.md#rotatecmk)
-    - [列暗号化キーの回転](../../../relational-databases/security/encryption/configure-always-encrypted-using-sql-server-management-studio.md#rotatecek)
-
+    - [SQL Server Management Studio を使用して Always Encrypted キーをプロビジョニングする](configure-always-encrypted-keys-using-ssms.md)
+    - [SQL Server Management Studio を使用して Always Encrypted キーを交換する](rotate-always-encrypted-keys-using-ssms.md)
 
 - **SQL Server PowerShell** - 役割の分離を使用または使用せずに Always Encrypted キーを管理するためのコマンドレットが含まれます。 詳細については、以下をご覧ください。
-    - [PowerShell を使用して Always Encrypted キーの構成](../../../relational-databases/security/encryption/configure-always-encrypted-keys-using-powershell.md)
-    - [PowerShell を使用した Always Encrypted キーの交換](../../../relational-databases/security/encryption/rotate-always-encrypted-keys-using-powershell.md)
+    - [PowerShell を使用して Always Encrypted キーを構成する](../../../relational-databases/security/encryption/configure-always-encrypted-keys-using-powershell.md)
+    - [PowerShell を使用して Always Encrypted キーをローテーションする](../../../relational-databases/security/encryption/rotate-always-encrypted-keys-using-powershell.md)
 
 
-## <a name="SecurityForKeyManagement"></a> キー管理のセキュリティに関する考慮事項
+## <a name="security-considerations-for-key-management"></a>キー管理でのセキュリティに関する考慮事項
 
 Always Encrypted の主な目的は、データベース システムまたはそのホスティング環境が侵害された場合でも、データベースに格納されている機密データの安全を保証することです。 Always Encrypted が機密データの漏えい防止に役立つ、セキュリティ攻撃の例を次に示します。
 
@@ -97,16 +93,13 @@ Always Encrypted の主な目的は、データベース システムまたは�
 - キー管理プロセスで誤って列マスター キーや列暗号化キーを公開しないようにするには、キー管理プロセスを定義して実装する前に、潜在的な敵対者およびセキュリティの脅威を識別することが重要です。 たとえば、DBA が機密データにアクセスできないようにすることが目的の場合は、DBA がキーの生成を担当することはできません。 ただし、メタデータにはプレーンテキストのキーは含まれていないため、DBA はデータベース内のキーのメタデータを管理することは *できます* 。
 
 ## <a name="next-steps"></a>Next Steps
+- [Always Encrypted ウィザードを使用して列暗号化を構成する](always-encrypted-wizard.md)
+- [Always Encrypted の列マスター キーを作成して保存する](create-and-store-column-master-keys-always-encrypted.md)
+- [SQL Server Management Studio を使用して Always Encrypted キーをプロビジョニングする](configure-always-encrypted-keys-using-ssms.md)
+- [PowerShell を使用して Always Encrypted キーをプロビジョニングする](configure-always-encrypted-keys-using-powershell.md)
 
-- [列マスター キーを作成して保存する (Always Encrypted)](../../../relational-databases/security/encryption/create-and-store-column-master-keys-always-encrypted.md)
-- [PowerShell を使用して Always Encrypted キーの構成](../../../relational-databases/security/encryption/configure-always-encrypted-keys-using-powershell.md)
-- [PowerShell を使用した Always Encrypted キーの交換](../../../relational-databases/security/encryption/rotate-always-encrypted-keys-using-powershell.md)
-- [SQL Server Management Studio を使用した Always Encrypted の構成](../../../relational-databases/security/encryption/configure-always-encrypted-using-sql-server-management-studio.md)
-
-## <a name="additional-resources"></a>その他のリソース
-
-- [Always Encrypted (Database Engine) (Always Encrypted (データベース エンジン))](../../../relational-databases/security/encryption/always-encrypted-database-engine.md)
-- [Always Encrypted (Client Development)](../../../relational-databases/security/encryption/always-encrypted-client-development.md)
+## <a name="see-also"></a>参照
+- [Always Encrypted](../../../relational-databases/security/encryption/always-encrypted-database-engine.md)
 - [Always Encrypted ウィザード チュートリアル (Azure Key Vault)](https://azure.microsoft.com/documentation/articles/sql-database-always-encrypted-azure-key-vault/)
 - [Always Encrypted ウィザード チュートリアル (Windows 証明書ストア)](https://azure.microsoft.com/documentation/articles/sql-database-always-encrypted/)
 

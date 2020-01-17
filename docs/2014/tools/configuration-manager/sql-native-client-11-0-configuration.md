@@ -13,11 +13,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 52d059977481236883be931a78a302c249f43ae4
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52818768"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63137554"
 ---
 # <a name="sql-native-client-110-configuration"></a>SQL Native Client 11.0 の構成
   ここでは、[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 構成マネージャーの **[SQL Server Native Client の構成]** ダイアログ ボックスの F1 ヘルプ トピックについて紹介します。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client は、クライアント コンピューターが [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 以降の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] に接続するために使用するネットワーク ライブラリです。  

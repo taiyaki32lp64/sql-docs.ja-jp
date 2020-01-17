@@ -15,15 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - STEndpoint (geometry Data Type)
 ms.assetid: 61773c45-b568-4e0c-94da-1310c42de7f5
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: 2fcdb5b59b146f55a1b83de8e26a4bf356255bf1
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: MladjoA
+ms.author: mlandzic
+ms.openlocfilehash: aeaa48534b2a46e5ace697624e425a93afda0d76
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47750290"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68044636"
 ---
 # <a name="stendpoint-geometry-data-type"></a>STEndpoint (geometry データ型)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -40,9 +39,9 @@ ms.locfileid: "47750290"
 ## <a name="return-types"></a>戻り値の型  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の戻り値の型: **geometry**  
   
- CLR の戻り値の型: **SqlGeometry**  
+ CLR の戻り値の型:**SqlGeometry**  
   
- Open Geospatial Consortium (OGC) の型: **Point**  
+ Open Geospatial Consortium (OGC) の型:**Point**  
   
 ## <a name="remarks"></a>Remarks  
  `STEndPoint()` は、[STPointN](../../t-sql/spatial-geometry/stpointn-geometry-data-type.md) (x.NumPoints()) と同じです。  

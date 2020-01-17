@@ -15,12 +15,12 @@ ms.assetid: ce4053fb-e37a-4851-b711-8e504059a780
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 1db606c086624610a158b6a87576188fa14aefaa
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 0b1265d3ef58f6ef0946937b15411b0cb79a3c20
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53357831"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62916892"
 ---
 # <a name="tempdb-database"></a>tempdb データベース
   **tempdb** システム データベースは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスに接続しているすべてのユーザーが使用できるグローバル リソースであり、以下のものを保持するために使用されます。  
@@ -78,7 +78,7 @@ ms.locfileid: "53357831"
 |CHANGE_TRACKING|OFF|いいえ|  
 |CONCAT_NULL_YIELDS_NULL|OFF|はい|  
 |CURSOR_CLOSE_ON_COMMIT|OFF|はい|  
-|CURSOR_DEFAULT|GLOBAL|はい|  
+|CURSOR_DEFAULT|GLOBAL|[はい]|  
 |データベース可用性オプション|ONLINE<br /><br /> MULTI_USER<br /><br /> READ_WRITE|いいえ<br /><br /> いいえ<br /><br /> いいえ|  
 |DATE_CORRELATION_OPTIMIZATION|OFF|はい|  
 |DB_CHAINING|ON|いいえ|  
@@ -142,7 +142,7 @@ ms.locfileid: "53357831"
   
  [データベース ファイルの移動](move-database-files.md)  
   
-## <a name="see-also"></a>参照  
- [SQL Server 2005 での tempdb の使用](https://go.microsoft.com/fwlink/?LinkId=81216)  
+## <a name="see-also"></a>関連項目  
+ [SQL Server 2005 での tempdb の使用](https://chresandro.wordpress.com/2014/09/29/working-with-tempdb-in-sql-server-2005/)  
   
   

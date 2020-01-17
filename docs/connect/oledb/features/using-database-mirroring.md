@@ -1,6 +1,6 @@
 ---
-title: データベース ミラーリングの使用 |Microsoft Docs
-description: SQL Server のデータベースが OLE DB ドライバーを使用したミラーリングの使用
+title: データベースミラーリングの使用 |Microsoft Docs
+description: OLE DB Driver for SQL Server でのデータベースミラーリングの使用
 ms.custom: ''
 ms.date: 06/12/2018
 ms.prod: sql
@@ -17,13 +17,12 @@ helpviewer_keywords:
 - OLE DB Driver for SQL Server, database mirroring
 author: pmasl
 ms.author: pelopes
-manager: craigg
-ms.openlocfilehash: 9a6804b68680600f9db9690929236d9f6128bc9e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 9d61dfe1441029cfa1b742e3b56021e55764d4eb
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47614480"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67988869"
 ---
 # <a name="using-database-mirroring"></a>データベース ミラーリングの使用
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -47,7 +46,7 @@ ms.locfileid: "47614480"
  ミラー データベース名を指定するときには別名を使用できます。  
   
 > [!NOTE]  
->  最初の接続試行と再接続の試行をミラー化されたデータベースについては、次を参照してください。[データベース ミラーリング セッションへのクライアントの接続&#40;SQL Server&#41;](../../../database-engine/database-mirroring/connect-clients-to-a-database-mirroring-session-sql-server.md)します。  
+>  最初の接続試行およびミラー化されたデータベースへの再接続試行の詳細については、「[データベースミラーリングセッション&#40;へのクライアントの接続 SQL Server&#41;](../../../database-engine/database-mirroring/connect-clients-to-a-database-mirroring-session-sql-server.md)」を参照してください。  
   
 ## <a name="programming-considerations"></a>プログラミングの考慮事項  
  プリンシパル データベース サーバーに障害が発生した場合、クライアント アプリケーションの API 呼び出しの応答がエラーになり、データベースへの接続が失われたことが伝えられます。 このとき、データベースへのコミットされていない変更は反映されず、現在のトランザクションはロールバックされます。 その場合、アプリケーションは接続を閉じ (またはデータ ソース オブジェクトを解放し)、再度接続を開く必要があります。 再接続の結果、プリンパル サーバーの機能を引き継いだミラー データベースに自動的にリダイレクトされます。  
@@ -55,18 +54,18 @@ ms.locfileid: "47614480"
  接続を確立するときに、プリンシパル サーバーからクライアントに対し、フェールオーバーが行われるときに使用されるフェールオーバー パートナーの ID が送信されます。 プリンシパル サーバーで障害が発生した後で接続を確立すると、クライアント側でフェールオーバー パートナーの ID を把握できません。 このシナリオでクライアントが適切な処理を行うため、初期化プロパティおよび関連する接続文字列キーワードを使用して、クライアントが独自にフェールオーバー パートナーの ID を指定することができます。 クライアント属性が使用されるのは、このシナリオのみです。プリンシパル サーバーが利用できる場合、クライアント属性は使用されません。 クライアントが指定したフェールオーバー パートナー サーバーが、フェールオーバー パートナーとして機能しているサーバーを参照していない場合は、サーバーへの接続が拒否されます。 アプリケーションが構成の変更に対応できるようにするため、接続を確立した後で属性を調査することにより、実際のフェールオーバー パートナーの ID を特定できます。 パートナー情報をキャッシュして接続文字列を更新することを検討するか、最初の接続に失敗した場合の再接続の方法を検討することをお勧めします。  
   
 > [!NOTE]  
->  この機能を DSN、接続文字列、または接続プロパティや接続属性で使用する場合は、接続で使用するデータベースを明示的に指定する必要があります。 これを行わない場合、OLE DB Driver for SQL Server はパートナー データベースへのフェールオーバーを試行しません。  
+>  この機能を DSN、接続文字列、または接続プロパティや接続属性で使用する場合は、接続で使用するデータベースを明示的に指定する必要があります。 この処理が行われていない場合、SQL Server の OLE DB ドライバーは、パートナーデータベースへのフェールオーバーを試行しません。  
 >   
 >  ミラー化はデータベースの機能です。 複数のデータベースを併用するアプリケーションでは、この機能を利用できない場合があります。  
 >   
 >  また、サーバー名は大文字小文字が区別されませんが、データベース名は区別されます。 したがって、大文字小文字の使い方を DSN と接続文字列で統一してください。  
   
 ## <a name="ole-db-driver-for-sql-server"></a>OLE DB Driver for SQL Server  
- OLE DB Driver for SQL Server は、接続属性および接続文字列の属性を使用してデータベース ミラーリングをサポートしています。 DBPROPSET_SQLSERVERDBINIT プロパティ セットには、SSPROP_INIT_FAILOVERPARTNER プロパティが追加されています。**FailoverPartner** キーワードは、DBPROP_INIT_PROVIDERSTRING の新しい接続文字列属性です。 詳細については、次を参照してください。 [OLE DB Driver for SQL Server での接続文字列キーワードの使用](../../oledb/applications/using-connection-string-keywords-with-oledb-driver-for-sql-server.md)します。  
+ OLE DB Driver for SQL Server は、接続属性および接続文字列の属性を使用してデータベース ミラーリングをサポートしています。 DBPROPSET_SQLSERVERDBINIT プロパティ セットには、SSPROP_INIT_FAILOVERPARTNER プロパティが追加されています。**FailoverPartner** キーワードは、DBPROP_INIT_PROVIDERSTRING の新しい接続文字列属性です。 詳細については、「 [SQL Server の OLE DB ドライバーでの接続文字列キーワードの使用](../../oledb/applications/using-connection-string-keywords-with-oledb-driver-for-sql-server.md)」を参照してください。  
   
  プロバイダーを読み込んでいる間 (**CoUninitialize** が呼び出されるまで)、または OLE DB Driver for SQL Server の管理下にある、データ ソース オブジェクトなどのオブジェクトをアプリケーションから参照している間は、フェールオーバー キャッシュが保持されます。  
   
- 詳細については OLE DB Driver for SQL Server データベース ミラーリング サポートを参照してください。[初期化プロパティと承認プロパティ](../../oledb/ole-db-data-source-objects/initialization-and-authorization-properties.md)します。  
+ データベースミラーリングの SQL Server サポートの OLE DB ドライバーの詳細については、「[初期化と承認のプロパティ](../../oledb/ole-db-data-source-objects/initialization-and-authorization-properties.md)」を参照してください。  
  
   
 ## <a name="see-also"></a>参照  

@@ -8,17 +8,20 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: language-reference
 ms.assetid: a345675b-d32e-4624-96cf-ec656730b114
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: 7a8731ee4883166fee1cd2a50868ca6bdbd8bb47
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: d8c455243f6ca903f61bfa7ad6ef6d88e544a258
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47654340"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71295429"
 ---
-# <a name="catalogsetenvironmentproperty-ssisdb-database"></a>catalog.set_environment_property (SSISDB データベース)
+# <a name="catalogset_environment_property-ssisdb-database"></a>catalog.set_environment_property (SSISDB データベース)
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] カタログの環境のプロパティを設定します。  

@@ -1,5 +1,5 @@
 ---
-title: getArray メソッド (SQLServerResultSet) |Microsoft Docs
+title: getArray メソッド (SQLServerResultSet) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: dc61c774-dcd9-49c0-8dfa-2e775fe2afa8
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 573f4344b3de210fea3a23a03597d4d2d45fd76a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: accd36006c48d13c211d5e0d9db7ecf49cbfd91d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47703920"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67954267"
 ---
 # <a name="getarray-method-sqlserverresultset"></a>getArray メソッド (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

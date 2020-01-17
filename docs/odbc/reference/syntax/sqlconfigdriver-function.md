@@ -19,26 +19,25 @@ helpviewer_keywords:
 ms.assetid: 4f681961-ac9f-4d88-b065-5258ba112642
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: d2b28b6380594150030e8f70a5b658a3bc18e258
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: e324b1f49bd6f8d0cad15ac2bcde73f558220330
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53201771"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68121446"
 ---
 # <a name="sqlconfigdriver-function"></a>SQLConfigDriver 関数
 **準拠**  
  バージョンが導入されました。ODBC 2.5  
   
- **まとめ**  
+ **概要**  
  **SQLConfigDriver**適切なドライバーのセットアップ DLL と呼び出しを読み込み、 **ConfigDriver**関数。  
   
  機能**SQLConfigDriver**にアクセスすることも[ODBCCONF します。EXE](../../../odbc/odbcconf-exe.md)します。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
   
 BOOL SQLConfigDriver(  
      HWND     hwndParent,  
@@ -109,7 +108,7 @@ BOOL SQLConfigDriver(
   
  ときに**SQLConfigDriver**を使用して呼び出した*起こり*ODBC_INSTALL_DRIVER または ODBC_REMOVE_DRIVER に設定すると、ドライバー マネージャー、適切なドライバーのセットアップ DLL と読み込みの呼び出し、 **ConfigDriver**関数。 ときに**SQLConfigDriver**を呼び出すと、*起こり*ODBC_CONFIG_DRIVER のすべての処理が、ODBC インストーラーの実行、ドライバーのセットアップ DLL が読み込まれる必要があるないようにします。  
   
-## <a name="messages"></a>メッセージ  
+## <a name="messages"></a>Messages  
  ドライバーのセットアップ ルーチンは、アプリケーション内の null で終わる文字列としてテキスト メッセージを送信することができます、 *lpszMsg*バッファー。 メッセージに切り捨てられます*cbMsgMax*によって null 終了文字マイナス、 **ConfigDriver**する以上の場合は機能*cbMsgMax*文字。  
   
 ## <a name="related-functions"></a>関連する関数  

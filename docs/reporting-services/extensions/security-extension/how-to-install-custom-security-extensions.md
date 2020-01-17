@@ -6,14 +6,14 @@ ms.prod_service: reporting-services-native
 ms.technology: extensions
 ms.topic: reference
 ms.assetid: bfa0a35b-ccfb-4279-bae6-106c227c5f16
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 853d40be782355841d68d3ace92e4228b0631057
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 9fcef802f6c61b85b4905365bda075a9f11d9e10
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50020666"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68223231"
 ---
 # <a name="how-to-install-custom-security-extensions"></a>カスタム セキュリティ拡張機能をインストールする方法
 

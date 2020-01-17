@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: e5864ad9-92f5-43b5-95de-46d68ded8694
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 20b9bc67d9ba7e76f4bf99cdcc9ab1cedf44d7d5
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: c83790146e7572c8854cf12deda586adb1c0caeb
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47611111"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68011691"
 ---
 # <a name="ft-crawl-bandwidth-server-configuration-option"></a>ft crawl bandwidth サーバー構成オプション
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

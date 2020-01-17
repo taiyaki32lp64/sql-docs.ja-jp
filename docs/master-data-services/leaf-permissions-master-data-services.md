@@ -1,5 +1,5 @@
 ---
-title: リーフ アクセス許可 (Master Data Services) | Microsoft Docs
+title: リーフ権限
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -14,15 +14,14 @@ helpviewer_keywords:
 - leaf members [Master Data Services], attribute permissions
 - attributes [Master Data Services], leaf member attribute permissions
 ms.assetid: bde16e8c-bcd4-4041-8130-55c5450e5f72
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: c34e517cadb6f529cd0406ae84a09eefc13f9c25
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
-ms.translationtype: HT
+ms.openlocfilehash: 4e01c6773ce28694e95f992f1af49a7cce19e969
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52817804"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73728079"
 ---
 # <a name="leaf-permissions-master-data-services"></a>リーフ権限 (Master Data Services)
 
@@ -32,7 +31,7 @@ ms.locfileid: "52817804"
   
  明示的階層が有効になっていないエンティティの場合、 **リーフ** への権限の割り当ては、エンティティへの権限の割り当てと同じです。  
   
- **注**  
+ **Notes:**  
   
 -   リーフ権限は、ユーザー インターフェイスの **[エクスプローラー]** 機能領域にのみ適用されます。  
   
@@ -43,8 +42,8 @@ ms.locfileid: "52817804"
 |**読み取り**|ユーザーはリーフ メンバーと属性を読み取ることができます。|  
 |**作成**|ユーザーはリーフ メンバーを作成し、作成時に属性値を割り当てることができます。|  
 |**Update**|ユーザーはリーフ メンバーと属性を更新できます。|  
-|**削除**|ユーザーはリーフ メンバーを削除できます。|  
-|**Deny**|リーフ メンバーに対するすべてのアクセスを拒否します。|  
+|**[削除]**|ユーザーはリーフ メンバーを削除できます。|  
+|**拒否**|リーフ メンバーに対するすべてのアクセスを拒否します。|  
   
  読み取り、作成、更新、削除の各権限は組み合わせることができます。 作成、更新、削除が割り当てられると、読み取り権限が自動的に割り当てられます。  
   
@@ -55,17 +54,17 @@ ms.locfileid: "52817804"
 |----------------|-----------------|  
 |**読み取り**|ユーザーは属性の読み取ることができます。|  
 |**作成**|ユーザーはメンバーを作成するときに値を割り当てることができます。|  
-|**更新**|ユーザーは属性を更新できます。|  
-|**削除**|影響しません。|  
-|**拒否**|属性が表示されません。<br /><br /> 注:Name 属性と Code 属性へのアクセスを明示的に拒否することはできません。|  
+|**Update**|ユーザーは属性を更新できます。|  
+|**[削除]**|影響しません。|  
+|**拒否**|属性が表示されません。<br /><br /> 注: Name 属性と Code 属性へのアクセスを明示的に拒否することはできません。|  
   
 ### <a name="example"></a>例  
  Product エンティティの場合、Subcategory 属性に **更新** 権限を割り当てます。 他のすべての属性に対しては権限を拒否します。  
   
-|[オブジェクト名]|コード|Subcategory (更新)|  
+|[オブジェクト名]|Code|Subcategory (更新)|  
 |----------|----------|----------------------------|  
-|Mountain-100|BK-M101|{5} Mountain Bikes|  
-|Mountain-100|BK-M201|{5} Mountain Bikes|  
+|Mountain-100|BK-M101|{5} マウンテンバイク|  
+|Mountain-100|BK-M201|{5} マウンテンバイク|  
   
  **[エクスプローラー]** では、Subcategory 列の属性値を更新できます。 属性に対する権限がない場合、その属性は表示されません。  
   

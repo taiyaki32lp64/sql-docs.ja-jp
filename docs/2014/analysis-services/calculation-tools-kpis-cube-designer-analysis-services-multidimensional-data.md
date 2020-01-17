@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.cubeeditor.kpisview.calculationtoolspane.f1
@@ -13,12 +12,12 @@ ms.assetid: c030c725-7763-4c23-9988-4b274a88fc31
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 6b845d0ab12447580bb27be43f0d776eac98ee7f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: ecd16965c81ccb091d70320bd91c56112d3c15a0
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48181052"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66088269"
 ---
 # <a name="calculation-tools-kpis-tab-cube-designer-analysis-services---multidimensional-data"></a>[計算ツール] (キューブ デザイナーの [KPI] タブ) (Analysis Services - 多次元データ)
   キューブ デザイナーの **[KPI]** タブの **[計算ツール]** ペインを使用すると、主要業績評価指標 (KPI) で使用可能なメタデータ、関数、およびテンプレートを検索できます。  
@@ -48,7 +47,7 @@ ms.locfileid: "48181052"
 ## <a name="context-menu"></a>コンテキスト メニュー  
  **[計算ツール]** ペインで要素を右クリックして表示されるショートカット メニューでは、次のオプションを使用できます。  
   
- **[コピー]**  
+ **コピー**  
  **[メタデータ]** または **[関数]** で選択した要素をクリップボードにコピーします。  
   
 > [!NOTE]  
@@ -72,7 +71,7 @@ ms.locfileid: "48181052"
 > [!NOTE]  
 >  このオプションは、 **[メタデータ]** が選択されている場合にのみ表示されます。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [キューブ デザイナー &#40;Analysis Services - 多次元データ&#41;](cube-designer-analysis-services-multidimensional-data.md)   
  [Kpi&#40;キューブ デザイナー&#41; &#40;Analysis Services - 多次元データ&#41;](kpis-cube-designer-analysis-services-multidimensional-data.md)   
  [ツールバー &#40;[Kpi] タブ、キューブ デザイナー&#41; &#40;Analysis Services - 多次元データ&#41;](toolbar-kpis-tab-cube-designer-analysis-services-multidimensional-data.md)   

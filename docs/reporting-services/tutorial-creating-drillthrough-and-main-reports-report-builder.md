@@ -1,31 +1,31 @@
 ---
-title: チュートリアル:詳細レポートとメイン レポートの作成 (レポート ビルダー) | Microsoft Docs
+title: 'チュートリアル: 詳細レポートとメイン レポートの作成 (レポート ビルダー) | Microsoft Docs'
 ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: reporting-services
 ms.topic: conceptual
 ms.assetid: 7168c8d3-cef5-4c4a-a0bf-fff1ac5b8b71
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 4d1c367f530353991fca3f7b8301b8a1691f3833
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 02defc00e1c65eff7eb624a8d3295082d8d6dc8c
+ms.sourcegitcommit: baa40306cada09e480b4c5ddb44ee8524307a2ab
+ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56286930"
+ms.lasthandoff: 11/06/2019
+ms.locfileid: "73637983"
 ---
-# <a name="tutorial-creating-drillthrough-and-main-reports-report-builder"></a>チュートリアル:詳細レポートとメイン レポートの作成 (レポート ビルダー)
+# <a name="tutorial-creating-drillthrough-and-main-reports-report-builder"></a>チュートリアル: 詳細レポートとメイン レポートの作成 (レポート ビルダー)
 このチュートリアルでは、詳細レポートとメイン レポートという、 [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] の 2 種類のページ分割されたレポートの作成方法を説明します。 これらのレポートで使用する売上データのサンプルは、Analysis Services キューブから取得します。 
 
 次の図は、メイン レポートのフィールド値 "Games and Toys" を作成し、詳細レポートのタイトルに表示する方法を示します。 この詳細レポートには、Games and Toys 製品カテゴリに関連するデータが含まれています。  
   
 ![rs_DrillthroughCubeTutorial](../reporting-services/media/rs-drillthroughcubetutorial.gif "rs_DrillthroughCubeTutorial")  
    
-このチュートリアルの推定所要時間:30 分。  
+このチュートリアルの推定所要時間: 30 分。  
   
 ## <a name="requirements"></a>必要条件  
-このチュートリアルでは、詳細レポートとメイン レポートの両方で Contoso Sales キューブにアクセスする必要があります。 このデータセットは、ContosoDW データ ウェアハウスと Contoso_Retail オンライン分析処理 (OLAP) データベースで構成されています。 このチュートリアルで作成するレポートは、Contoso Sales キューブからレポート データを取得します。 Contoso_Retail OLAP データベースは、 [Microsoft ダウンロード センター](https://go.microsoft.com/fwlink/?LinkID=191575)からダウンロードできます。 ダウンロードする必要があるファイルは、ContosoBIdemoABF.exe だけです。 このファイルに OLAP データベースが含まれています。  
+このチュートリアルでは、詳細レポートとメイン レポートの両方で Contoso Sales キューブにアクセスする必要があります。 このデータセットは、ContosoDW データ ウェアハウスと Contoso_Retail オンライン分析処理 (OLAP) データベースで構成されています。 このチュートリアルで作成するレポートは、Contoso Sales キューブからレポート データを取得します。 Contoso_Retail OLAP データベースは、 [Microsoft ダウンロード センター](https://www.microsoft.com/download/details.aspx?id=18279)からダウンロードできます。 ダウンロードする必要があるファイルは、ContosoBIdemoABF.exe だけです。 このファイルに OLAP データベースが含まれています。  
   
 もう一方のファイル (ContosoBIdemoBAK.exe) は、ContosoDW データ ウェアハウスのファイルです。ContosoDW データ ウェアハウスは、このチュートリアルでは使用しません。  
   
@@ -44,7 +44,7 @@ OLAP データベースをインストールする [!INCLUDE[ssASnoversion](../i
   
     **[新しいレポートまたはデータセット]** ダイアログ ボックスが開きます。  
   
-    **[新しいレポートまたはデータセット]** ダイアログ ボックスが表示されない場合、**[ファイル]** メニューで **[新規作成]** を選択します。  
+    **[新しいレポートまたはデータセット]** ダイアログ ボックスが表示されない場合、 **[ファイル]** メニューで **[新規作成]** を選択します。  
   
 2.  左ペインで、 **[新しいレポート]** が選択されていることを確認します。  
   
@@ -101,12 +101,12 @@ OLAP データベースをインストールする [!INCLUDE[ssASnoversion](../i
   
 #### <a name="to-create-query-filters"></a>クエリ フィルターを作成するには  
   
-1.  **[クエリのデザイン]** ページのメタデータ ペインで、**[ (...) ]** ボタンをクリックします。  
+1.  **[クエリのデザイン]** ページのメタデータ ペインで、 **[ (...) ]** ボタンをクリックします。  
   
 2.  **[キューブの選択]** ダイアログ ボックスで、Sales をクリックし、 **[OK]** をクリックします。  
   
     > [!TIP]  
-    > MDX クエリを手動で作成しない場合は、![デザイン モードへの切り替え](../reporting-services/media/rsqdicon-designmode.gif "デザイン モードへの切り替え") アイコンをクリックしてクエリ デザイナーをクエリ モードに切り替えて、下の完成した MDX をクエリ デザイナーに貼り付けます。その後、「[データセットを作成するには](#DSkip)」の手順 6 に進みます。  
+    > MDX クエリを手動で作成しない場合は、![デザイン モードへの切り替え](../reporting-services/media/rsqdicon-designmode.gif "デザイン モードに切り替える") アイコンをクリックしてクエリ デザイナーをクエリ モードに切り替え、完成した MDX をクエリ デザイナーに貼り付けます。その後、「[データセットを作成するには](#DSkip)」の手順 6 に進みます。  
   
     ```  
     SELECT NON EMPTY { [Measures].[Sales Amount], [Measures].[Sales Return Amount] } ON COLUMNS, NON EMPTY { ([Channel].[Channel Name].[Channel Name].ALLMEMBERS * [Product].[Product Category Name].[Product Category Name].ALLMEMBERS * [Product].[Product Subcategory Name].[Product Subcategory Name].ALLMEMBERS ) } DIMENSION PROPERTIES MEMBER_CAPTION, MEMBER_UNIQUE_NAME ON ROWS FROM ( SELECT ( { [Date].[Calendar Year].&[2009] } ) ON COLUMNS FROM ( SELECT ( { [Sales Territory].[Sales Territory Group].&[North America] } ) ON COLUMNS FROM ( SELECT ( STRTOSET(\@ProductProductCategoryName, CONSTRAINED) ) ON COLUMNS FROM ( SELECT ( { [Channel].[Channel Name].&[2], [Channel].[Channel Name].&[4] } ) ON COLUMNS FROM [Sales])))) WHERE ( [Sales Territory].[Sales Territory Group].&[North America], [Date].[Calendar Year].&[2009] ) CELL PROPERTIES VALUE, BACK_COLOR, FORE_COLOR, FORMATTED_VALUE, FORMAT_STRING, FONT_NAME, FONT_SIZE, FONT_FLAGS  
@@ -120,7 +120,7 @@ OLAP データベースをインストールする [!INCLUDE[ssASnoversion](../i
   
 5.  フィルター式の一覧で、 **[All Channel]** を展開し、 **[Online]** と **[Reseller]** をクリックして、 **[OK]** をクリックします。  
   
-    これで、次のチャネルのみを含めるフィルターがクエリに追加されます:Online と Reseller のみに制限するフィルターがクエリに追加されます。  
+    Channel を Online と Reseller のみに制限するフィルターがクエリに追加されます。  
   
 6.  Sales Territory ディメンションを展開し、Sales Territory Group を **[階層]** 列 ( **Channel Name**の下) にドラッグします。  
   
@@ -157,7 +157,7 @@ OLAP データベースをインストールする [!INCLUDE[ssASnoversion](../i
   
 3.  Product ディメンションから Product Subcategory Name をデータ ペインにドラッグして、Product Category Name の右側に配置します。  
   
-4.  メタデータ ペインで、 **[メジャー]**、Sales の順に展開します。  
+4.  メタデータ ペインで、 **[メジャー]** 、Sales の順に展開します。  
   
 5.  Sales Amount メジャーをデータ ペインにドラッグして、Product Subcategory Name の右側に配置します。  
   
@@ -261,7 +261,7 @@ OLAP データベースをインストールする [!INCLUDE[ssASnoversion](../i
   
 2.  デザイン画面で、 **[クリックしてタイトルを追加]** をクリックします。  
   
-3.  「 **Sales and Returns for Category:**」と入力します。  
+3.  「 **Sales and Returns for Category:** 」と入力します。  
   
 4.  右クリックして **[プレースホルダーの作成]** をクリックします。  
   
@@ -286,7 +286,7 @@ OLAP データベースをインストールする [!INCLUDE[ssASnoversion](../i
   
 1.  レポート データ ペインで **[パラメーター]** を展開します。  
   
-2.  \@ProductProductCategoryName を右クリックし、**[パラメーターのプロパティ]** をクリックします。  
+2.  \@ProductProductCategoryName を右クリックし、 **[パラメーターのプロパティ]** をクリックします。  
   
     > [!NOTE]  
     > 名前の横の \@ 文字は、これがパラメーターであることを示しています。  
@@ -344,7 +344,7 @@ OLAP データベースをインストールする [!INCLUDE[ssASnoversion](../i
   
     **[新しいレポートまたはデータセット]** ダイアログ ボックスが開きます。  
   
-    **[新しいレポートまたはデータセット]** ダイアログ ボックスが表示されない場合、**[ファイル]** メニューで **[新規作成]** を選択します。  
+    **[新しいレポートまたはデータセット]** ダイアログ ボックスが表示されない場合、 **[ファイル]** メニューで **[新規作成]** を選択します。  
  
 2.  **[作業の開始]** ダイアログ ボックスで、 **[新しいレポート]** が選択されていることを確認し、 **[テーブルまたはマトリックス ウィザード]** をクリックします。  
   
@@ -397,7 +397,7 @@ OLAP データベースをインストールする [!INCLUDE[ssASnoversion](../i
 2.  **[キューブの選択]** ダイアログ ボックスで、Sales をクリックし、 **[OK]** をクリックします。  
   
     > [!TIP]  
-    > MDX クエリを手動で作成しない場合は、![デザイン モードへの切り替え](../reporting-services/media/rsqdicon-designmode.gif "デザイン モードへの切り替え") アイコンをクリックしてクエリ デザイナーをクエリ モードに切り替えて、下の完成した MDX をクエリ デザイナーに貼り付けます。その後、「[データセットを作成するには](#MSkip)」の手順 5 に進みます。  
+    > MDX クエリを手動で作成しない場合は、![デザイン モードへの切り替え](../reporting-services/media/rsqdicon-designmode.gif "デザイン モードに切り替える") アイコンをクリックしてクエリ デザイナーをクエリ モードに切り替え、完成した MDX をクエリ デザイナーに貼り付けます。その後、「[データセットを作成するには](#MSkip)」の手順 5 に進みます。  
   
     ```  
     WITH MEMBER [Measures].[Net QTY] AS [Measures].[Sales Quantity] -[Measures].[Sales Return Quantity] MEMBER [Measures].[Net Sales] AS [Measures].[Sales Amount] - [Measures].[Sales Return Amount] SELECT NON EMPTY { [Measures].[Net QTY], [Measures].[Net Sales] } ON COLUMNS, NON EMPTY { ([Channel].[Channel Name].[Channel Name].ALLMEMBERS * [Product].[Product Category Name].[Product Category Name].ALLMEMBERS ) } DIMENSION PROPERTIES MEMBER_CAPTION, MEMBER_UNIQUE_NAME ON ROWS FROM ( SELECT ( { [Date].[Calendar Year].&[2009] } ) ON COLUMNS FROM ( SELECT ( STRTOSET(\@ProductProductCategoryName, CONSTRAINED) ) ON COLUMNS FROM ( SELECT ( { [Sales Territory].[Sales Territory Group].&[North America] } ) ON COLUMNS FROM ( SELECT ( { [Channel].[Channel Name].&[2], [Channel].[Channel Name].&[4] } ) ON COLUMNS FROM [Sales])))) WHERE ( [Sales Territory].[Sales Territory Group].&[North America], [Date].[Calendar Year].&[2009] ) CELL PROPERTIES VALUE, BACK_COLOR, FORE_COLOR, FORMATTED_VALUE, FORMAT_STRING, FONT_NAME, FONT_SIZE, FONT_FLAGSQuery text: Code.  
@@ -411,7 +411,7 @@ OLAP データベースをインストールする [!INCLUDE[ssASnoversion](../i
   
 5.  フィルター式の一覧で、 **[All Channel]** を展開し、 **[Online]** と **[Reseller]** をクリックして、 **[OK]** をクリックします。  
   
-    これで、次のチャネルのみを含めるフィルターがクエリに追加されます:Online と Reseller のみに制限するフィルターがクエリに追加されます。  
+    Channel を Online と Reseller のみに制限するフィルターがクエリに追加されます。  
   
 6.  Sales Territory ディメンションを展開し、Sales Territory Group を **[階層]** 列 ( **Channel Name**の下) にドラッグします。  
   
@@ -457,7 +457,7 @@ OLAP データベースをインストールする [!INCLUDE[ssASnoversion](../i
   
 5.  **[計算されるメンバー]** を右クリックし、 **[新しい計算されるメンバー]** をクリックします。  
   
-6.  メタデータ ペインで、 **[メジャー]**、Sales の順に展開します。  
+6.  メタデータ ペインで、 **[メジャー]** 、Sales の順に展開します。  
   
 7.  Sales Amount メジャーを **[式]** ボックスにドラッグし、マイナス記号 (-) を入力します。次に、Sales Return Amount メジャーを **[式]** ボックスにドラッグして、マイナス記号の後に配置します。  
   
@@ -511,7 +511,7 @@ OLAP データベースをインストールする [!INCLUDE[ssASnoversion](../i
   
 1.  **[レイアウトの選択]** ページの **[オプション]** で、 **[小計と総計を表示]** が選択されていることを確認します。  
   
-    ウィザードのプレビュー ペインに、4 行を含むマトリックスが表示されます。  レポートを実行すると、各行は次のように表示されます。最初の行が列グループになり、2 行目に列見出し、3 行目に製品カテゴリのデータ (`[Sum(Net_ QTY)]` と `[Sum(Net_Sales)]`)、4 行目に合計が含まれます。  
+    ウィザードのプレビュー ペインに、4 行を含むマトリックスが表示されます。  レポートを実行すると、最初の行が列グループになり、2 行目に列見出し、3 行目に製品カテゴリのデータ (`[Sum(Net_ QTY)]` と `[Sum(Net_Sales)]`)、4 行目に合計が含まれます。  
   
 2.  **[次へ]** をクリックします。  
   
@@ -541,7 +541,7 @@ OLAP データベースをインストールする [!INCLUDE[ssASnoversion](../i
   
 3.  **[アクション]** タブをクリックします。  
   
-4.   **[レポートに移動する]** を選択します。  
+4.  **[レポートに移動する]** を選択します。  
   
 5.  **[レポートの指定]** で、 **[参照]** をクリックして、ResellerVSOnlineDrillthrough という名前の詳細レポートを指定します。  
   
@@ -627,7 +627,7 @@ OLAP データベースをインストールする [!INCLUDE[ssASnoversion](../i
   
 1.  デザイン画面で、 **[クリックしてタイトルを追加]** をクリックします。  
   
-2.  「**2009 Product Category Sales:Online and Reseller Category:**」と入力します。  
+2.  「 **2009 Product Category Sales: Online and Reseller Category:** 」と入力します。  
   
 3.  入力したテキストを選択します。  
   

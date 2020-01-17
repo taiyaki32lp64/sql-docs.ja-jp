@@ -1,6 +1,6 @@
 ---
-title: データベース エンジン チューニング アドバイザー (DTA) での列ストア インデックスの推奨事項 | Microsoft Docs
-ms.custom: ''
+title: 列ストア インデックスの推奨事項 - データベース エンジン チューニング アドバイザー (DTA)
+ms.custom: seo-dt-2019
 ms.date: 01/09/2017
 ms.prod: sql
 ms.reviewer: ''
@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 9fba1139-82cb-4244-a41f-4337a7d0c132
 author: julieMSFT
 ms.author: jrasnick
-manager: craigg
-ms.openlocfilehash: ed6d36c68fad62155261181d4134e097f59dd163
-ms.sourcegitcommit: 40c3b86793d91531a919f598dd312f7e572171ec
+ms.openlocfilehash: 1d0086a6698c45d5c24d89f8e6a681d14051e11f
+ms.sourcegitcommit: f018eb3caedabfcde553f9a5fc9c3e381c563f1a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53328772"
+ms.lasthandoff: 11/18/2019
+ms.locfileid: "74165998"
 ---
 # <a name="columnstore-index-recommendations-in-database-engine-tuning-advisor-dta"></a>データベース エンジン チューニング アドバイザー (DTA) での列ストア インデックスの推奨事項
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -35,12 +34,12 @@ ms.locfileid: "53328772"
   
   2. **[全般]** ウィンドウで、チューニングを行うデータベースとワークロードを選択します。
   
-  3. [チューニング オプション] ウィンドウで、**[列ストア インデックスを推奨する]** チェック ボックスをオンにします (次の図を参照してください)。
+  3. [チューニング オプション] ウィンドウで、 **[列ストア インデックスを推奨する]** チェック ボックスをオンにします (次の図を参照してください)。
   ![DTA 列ストア インデックスのチューニング オプション](../../relational-databases/performance/media/dta-columnstore-indexes-tuning-option.gif)
  
-  4. その他のチューニング オプションを選択し、**[分析の開始]** ボタンをクリックします。
+  4. その他のチューニング オプションを選択し、 **[分析の開始]** ボタンをクリックします。
   
-  5. チューニングが完了したら、**[推奨事項]** ウィンドウに列ストア インデックスを含む、すべての推奨事項が表示されます (次の図を参照してください)。      
+  5. チューニングが完了したら、 **[推奨事項]** ウィンドウに列ストア インデックスを含む、すべての推奨事項が表示されます (次の図を参照してください)。      
   ![DTA 列ストア インデックスの推奨事項](../../relational-databases/performance/media/dta-columnstore-index-recommendation.gif)
   
   6. **[定義]** ハイパーリンクをクリックして、推奨インデックスを作成できる、SQL データ定義言語 (DDL) ステートメントを表示します。 既定では、DTA は、列ストア インデックスを簡単に識別できるように、列ストア インデックスの名前にサフィックス **col** を使用します (次の図を参照してください)。

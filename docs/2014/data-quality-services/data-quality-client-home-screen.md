@@ -9,15 +9,15 @@ ms.topic: conceptual
 f1_keywords:
 - sql12.dqs.clienthome.f1
 ms.assetid: 7c6ec469-bc7d-4d19-8e21-11dcf8ade108
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 0c6e29b89a4ff5908ac48cc70bf0b94c75195455
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 8d12e45d2f2b7ee3d3f06cf8820495e40cf9fbd3
+ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56041293"
+ms.lasthandoff: 08/29/2019
+ms.locfileid: "70154480"
 ---
 # <a name="data-quality-client-home-screen"></a>Data Quality Client のホーム画面
   この画面を使用すると、 [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) の 3 つの主要なタスク グループ (ナレッジ ベース管理、データ品質プロジェクト、および管理) のそれぞれに対するユーザー インターフェイスにアクセスできます。  
@@ -38,7 +38,7 @@ ms.locfileid: "56041293"
   
  ロックされたナレッジ ベースを開いて編集できるのは、自分でロックした場合だけです。 その場合、ナレッジ ベースは閉じたときの状態で開かれます。状態はかっこの中に表示されます。 ナレッジ ベースがロックされていて、自分でロックしたのではない場合は、読み取り専用としてのみ開くことができます。  
   
-### <a name="data-quality-projects"></a>データ品質プロジェクト  
+### <a name="data-quality-projects"></a>Data Quality Projects  
  データ品質プロジェクトは、コンピューター支援型のデータ修正とインタラクティブなデータ クレンジングの両方を通じて、DQS がデータ クレンジングとデータ照合を実行するプロセスです。  
   
  **[新しいデータ品質プロジェクト]**  
@@ -56,8 +56,8 @@ ms.locfileid: "56041293"
  **[アクティビティ監視]**  
  接続されている [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)]に関連するすべてのアクティビティ (現在のアクティビティと履歴アクティビティの両方) の状態のビューが表示されます。 監視対象となるアクティビティの種類は、ナレッジ マネージメント、データ品質プロジェクト、および SSIS ベースのデータ修正です。  
   
- **Configuration**  
- 参照データ サービス アカウント (Windows Azure Marketplace 経由と参照データ サービス直接の両方)、一般設定 (対話形式のクレンジング、照合、プロファイリング)、およびログの重大度設定に対する構成プロパティが表示されます。  
+ **構成**  
+ 参照データサービスアカウントの構成プロパティ (Azure Marketplace を通じて、参照データサービスに直接)、全般設定 (インタラクティブなクレンジング、照合、プロファイル)、およびログの重大度設定を表示します。  
   
 ## <a name="see-also"></a>参照  
  [DQS のナレッジ ベースとドメイン](../../2014/data-quality-services/dqs-knowledge-bases-and-domains.md)   

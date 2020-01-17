@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 ms.assetid: eb5c6f4a-3ed5-430b-a712-d5ed4b6b9b2b
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: d071000fa25a732465deb9c1020ed6365a9fc58e
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: c1ce348edd9b4d4b6260a0eea56fe28656b03985
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56017931"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66101946"
 ---
 # <a name="extended-protection-for-authentication-with-reporting-services"></a>Reporting Services での認証の拡張保護
   拡張保護は、最新バージョンの [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows オペレーティング システムに追加された一連の拡張機能です。 拡張保護により、アプリケーションで資格情報と認証を保護する方法の幅が広がります。 この機能自体は、資格情報の転送をはじめとする特定の攻撃を直接防ぐものではありませんが、 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] などのアプリケーションに対し、認証の拡張保護を適用するためのインフラストラクチャを提供します。  
@@ -114,7 +113,7 @@ ms.locfileid: "56017931"
 |設定|説明|  
 |-------------|-----------------|  
 |`RSWindowsExtendedProtectionLevel`|拡張保護の適用レベルを指定します。 有効な値は `Off`、`Allow`、`Require` です。<br /><br /> 既定値は `Off` です。<br /><br /> `Off` を指定した場合、チャネル バインドまたはサービス バインドの検証は行われません。<br /><br /> `Allow` を指定した場合、拡張保護はサポートされますが、要求されません。 Allow を指定した場合、次の効果があります。<br /><br /> 拡張保護がサポートされているオペレーティング システムで実行中のクライアント アプリケーションに対し、拡張保護が適用されます。 保護の適用方法は、`RsWindowsExtendedProtectionScenario` 設定によって決まります。<br /><br /> 拡張保護がサポートされていないオペレーティング システムで実行中のアプリケーションに対し、認証が許可されます。<br /><br /> `Require` を指定した場合、次の効果があります。<br /><br /> 拡張保護がサポートされているオペレーティング システムで実行中のクライアント アプリケーションに対し、拡張保護が適用されます。<br /><br /> 認証は**いない**拡張保護がサポートされていないオペレーティング システムで実行されているアプリケーションに許可します。|  
-|`RsWindowsExtendedProtectionScenario`|検証する拡張保護の形式を指定します。チャネル バインド、サービス バインド、またはその両方を指定します。 有効な値は `Any`、`Proxy`、`Direct` です。<br /><br /> 既定値は `Proxy` です。<br /><br /> `Any` を指定した場合、次の効果があります。<br /><br /> - Windows NTLM 認証、Kerberos 認証、およびネゴシエート認証とチャネル バインドは要求されません。<br /><br /> - サービス バインドが適用されます。<br /><br /> `Proxy` を指定した場合、次の効果があります。<br /><br /> - チャネル バインド トークンが存在する場合は、Windows NTLM 認証、Kerberos 認証、およびネゴシエート認証が行われます。<br /><br /> - サービス バインドが適用されます。<br /><br /> `Direct` を指定した場合、次の効果があります。<br /><br /> - CBT と現在のサービスへの SSL 接続が存在し、SSL 接続の CBT が NTLM、Kerberos、またはネゴシエート トークンの CBT に一致する場合に、それぞれ Windows NTLM 認証、Kerberos 認証、またはネゴシート認証が行われます。<br /><br /> - サービス バインドは適用されません。<br /><br /> <br /><br /> 注:`RsWindowsExtendedProtectionLevel` を `OFF` に設定した場合、この設定は無視されます。|  
+|`RsWindowsExtendedProtectionScenario`|検証する拡張保護の形式を指定します。チャネル バインド、サービス バインド、またはその両方です。 有効な値は `Any`、`Proxy`、`Direct` です。<br /><br /> 既定値は `Proxy` です。<br /><br /> `Any` を指定した場合、次の効果があります。<br /><br /> \- Windows NTLM 認証、Kerberos 認証、およびネゴシエート認証とチャネル バインドは要求されません。<br /><br /> \- サービス バインドが適用されます。<br /><br /> `Proxy` を指定した場合、次の効果があります。<br /><br /> \- チャネル バインド トークンが存在する場合は、Windows NTLM 認証、Kerberos 認証、およびネゴシエート認証が行われます。<br /><br /> \- サービス バインドが適用されます。<br /><br /> `Direct` を指定した場合、次の効果があります。<br /><br /> \- CBT と現在のサービスへの SSL 接続が存在し、SSL 接続の CBT が NTLM、Kerberos、またはネゴシエート トークンの CBT に一致する場合に、それぞれ Windows NTLM 認証、Kerberos 認証、またはネゴシート認証が行われます。<br /><br /> \- サービス バインドは適用されません。<br /><br /> <br /><br /> 注:場合、この設定は無視されます`RsWindowsExtendedProtectionLevel`に設定されている`OFF`します。|  
   
  `rsreportserver.config` 構成ファイル内のエントリの例を次に示します。  
   

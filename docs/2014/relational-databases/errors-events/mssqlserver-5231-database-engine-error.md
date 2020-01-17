@@ -13,11 +13,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 6c57150dd8fac6dab1c2c9cf6fdf7cefbdb1b5f8
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48048493"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62913589"
 ---
 # <a name="mssqlserver5231"></a>MSSQLSERVER_5231
     
@@ -30,7 +30,7 @@ ms.locfileid: "48048493"
 |イベント ソース|MSSQLSERVER|  
 |コンポーネント|SQLEngine|  
 |シンボル名|DBCC4_DEADLOCK_SKIPPED_OBJECT|  
-|メッセージ テキスト|オブジェクト ID O_ID (オブジェクト 'NAME') : このオブジェクトを確認のためにロックしようとして、デッドロックが発生しました。 このオブジェクトはスキップされたので、処理されません。|  
+|メッセージ テキスト|Object ID O_ID (object 'NAME'):このオブジェクトを確認のためにロックしようとして、デッドロックが発生しました。 このオブジェクトはスキップされたので、処理されません。|  
   
 ## <a name="explanation"></a>説明  
  DBCC がオブジェクトをロックしようとしてデッドロックが発生し、DBCC がデッドロック対象として選択されました。 このオブジェクトは処理されません。  

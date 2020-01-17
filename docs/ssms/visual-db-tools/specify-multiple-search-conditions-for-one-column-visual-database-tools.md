@@ -14,15 +14,14 @@ helpviewer_keywords:
 - OR operator
 - AND, Criteria pane
 ms.assetid: 2c006e36-56b1-4992-89b4-c6c0b19808f3
-author: stevestein
-ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 22116b45059ddbfe923d4f72d2e97e1d9946d64b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 519dbfa8d8ce0d3e80df9abe1532813dca63f0e9
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47804870"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68263615"
 ---
 # <a name="specify-multiple-search-conditions-for-one-column-visual-database-tools"></a>1 つの列に対して複数の検索条件を指定する方法 (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

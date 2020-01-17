@@ -15,13 +15,12 @@ apitype: DLLExport
 ms.assetid: 31b3152a-94cf-4f75-a31b-296d7dd16dbe
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: 5751ea9f09a0f2c286602b753cfe68bcee09d22b
-ms.sourcegitcommit: ddb682c0061c2a040970ea88c051859330b8ac00
+ms.openlocfilehash: d5aa59cdb3b1c59b78a0ef99fb7d375275d370e4
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51570491"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68091220"
 ---
 # <a name="localdbformatmessage-function"></a>LocalDBFormatMessage 関数
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

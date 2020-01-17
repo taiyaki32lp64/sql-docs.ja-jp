@@ -15,14 +15,14 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: a109468616cb414fa2a4b3769af37626ff42ca85
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52803744"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62938951"
 ---
 # <a name="audit-database-scope-gdr-event-class"></a>Audit Database Scope GDR イベント クラス
-   **Audit Database Scope GDR** イベント クラスは、データベースに対する権限の許可などのデータベース限定の操作時に、ステートメント権限に対して [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のユーザーが GRANT、REVOKE、または DENY を実行するたびに発生します。  
+  **Audit Database Scope GDR** イベント クラスは、データベースに対する権限の許可などのデータベース限定の操作時に、ステートメント権限に対して [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のユーザーが GRANT、REVOKE、または DENY を実行するたびに発生します。  
   
 ## <a name="audit-database-scope-gdr-event-class-data-columns"></a>Audit Database Scope GDR イベント クラスのデータ列  
   
@@ -35,7 +35,7 @@ ms.locfileid: "52803744"
 |**DBUserName**|**nvarchar**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ユーザー名。|40|はい|  
 |**EventClass**|**int**|イベントの種類 = 102。|27|いいえ|  
 |**EventSequence**|**int**|要求内の特定のイベントのシーケンス。|51|いいえ|  
-|**EventSubClass**|**int**|イベント サブクラスの種類。<br /><br /> 1 = 許可<br /><br /> 2 = 取り消し<br /><br /> 3 = 拒否|21|はい|  
+|**EventSubClass**|**int**|イベント サブクラスの種類。<br /><br /> 1 = 許可<br /><br /> 2 = 取り消し<br /><br /> 3 = 拒否|21|[はい]|  
 |**HostName**|**nvarchar**|クライアントが実行されているコンピューターの名前。 このデータ列にはクライアントからホスト名が提供されている場合に値が格納されます。 ホスト名を指定するには、HOST_NAME 関数を使用します。|8|はい|  
 |**IsSystem**|**int**|イベントがシステム プロセスとユーザー プロセスのどちらで発生したか。 1 はシステム、0 はユーザーです。|60|はい|  
 |**LoginName**|**nvarchar**|ユーザーのログイン名 ( [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] セキュリティ ログイン、または DOMAIN\username の形式で表された [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows ログイン資格情報)。|11|はい|  
@@ -59,7 +59,7 @@ ms.locfileid: "52803744"
 |**TransactionID**|**bigint**|システムによって割り当てられたトランザクション ID。|4|はい|  
 |**XactSequence**|**bigint**|現在のトランザクションを説明するトークン。|50|はい|  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [SQL Server Profiler](../../tools/sql-server-profiler/sql-server-profiler.md)   
  [sp_trace_setevent &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql)   
  [GRANT &#40;Transact-SQL&#41;](/sql/t-sql/statements/grant-transact-sql)   

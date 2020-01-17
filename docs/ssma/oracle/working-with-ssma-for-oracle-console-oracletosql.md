@@ -9,13 +9,13 @@ ms.topic: conceptual
 ms.assetid: 4e47bb04-cf9b-41a0-923e-bdab9ba0c51d
 author: Shamikg
 ms.author: Shamikg
-manager: v-thobro
-ms.openlocfilehash: 6131551a793257e201809dff469ee0980b8ece61
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: shamikg
+ms.openlocfilehash: 855f84253db65da29bc871fa3b37dd9780a5cab8
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47639450"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68256656"
 ---
 # <a name="working-with-ssma-for-oracle-console-oracletosql"></a>SSMA for Oracle コンソールの操作 (OracleToSQL)
 [!INCLUDE[msCoName](../../includes/msconame_md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] For Oracle migration Assistant (SSMA) のリリースは、コマンドラインでコンソール アプリケーションからアクセスできるようになりました。 スクリプト ファイルは、コマンドを実行するためのアプリケーションへの入力を形成します。 コンソール アプリケーションとしては、SSMA はにより、スクリプト レベルのインターフェイス、移行サイクルが削減され、移行作業を拡大または縮小します。  
@@ -38,6 +38,6 @@ ms.locfileid: "47639450"
 |[レポートを生成する&#40;OracleToSQL&#41;](../../ssma/oracle/generating-reports-oracletosql.md)|レポートを生成するコマンドが表示されます。|  
 |[トラブルシューティング&#40;OracleToSQL&#41;](../../ssma/oracle/troubleshooting-oracletosql.md)|移行に関する問題の解決方法に関する簡単な情報を提供します。|  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
 [Ssma for Oracle コンソール作業の開始](getting-started-with-ssma-for-oracle-console-oracletosql.md)  
   

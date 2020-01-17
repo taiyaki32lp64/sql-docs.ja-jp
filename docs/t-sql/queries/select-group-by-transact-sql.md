@@ -1,7 +1,7 @@
 ---
 title: GROUP BY (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 03/03/2017
+ms.date: 03/01/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -31,14 +31,13 @@ helpviewer_keywords:
 ms.assetid: 40075914-6385-4692-b4a5-62fe44ae6cb6
 author: shkale-msft
 ms.author: shkale
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 3aafd6afb6e619cb9d4112fe5c7fcd1c1775d84b
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: c2ca8bd62bc1f05e655875c528efa8ea32b20ff5
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52509052"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67948427"
 ---
 # <a name="select---group-by--transact-sql"></a>SELECT - GROUP BY- Transact-SQL
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -91,6 +90,7 @@ GROUP BY
 GROUP BY {
       column-name [ WITH (DISTRIBUTED_AGG) ]  
     | column-expression
+    | ROLLUP ( <group_by_expression> [ ,...n ] ) 
 } [ ,...n ]
 
 ```  
@@ -264,9 +264,9 @@ GROUP BY GROUPING SETS ( Country, () );
 
 ### <a name="group-by--all--column-expression--n-"></a>GROUP BY [ ALL ] column-expression [ ,...n ] 
 
-適用対象: SQL Server および Azure SQL Database
+適用対象:SQL Server と Azure SQL Database
 
-注: この構文は、旧バージョンとの互換性を維持するためだけに提供されます。 将来のバージョンでは削除される予定です。 新規の開発作業ではこの構文を使用しないようにし、現在この構文を使用しているアプリケーションは修正することを検討してください。
+注:この構文は、旧バージョンとの互換性を維持するためだけに提供されます。 将来のバージョンでは削除される予定です。 新規の開発作業ではこの構文を使用しないようにし、現在この構文を使用しているアプリケーションは修正することを検討してください。
 
 WHERE 句の検索条件を満たしているかどうかに関係なく、結果にすべてのグループを含めることを指定します。 検索条件を満たしていないグループの集計は NULL になります。 
 
@@ -275,11 +275,11 @@ GROUP BY ALL:
 - FILESTREAM 属性を持つ列では失敗します。
   
 ### <a name="with-distributedagg"></a>WITH (DISTRIBUTED_AGG)
-適用対象: Azure SQL Data Warehouse と Parallel Data Warehouse
+適用対象:Azure SQL Data Warehouse と Parallel Data Warehouse
 
 DISTRIBUTED_AGG クエリ ヒントは、超並列処理 (MPP) システムで、特定の列に対し、集計を実行する前にテーブルを強制的に再配布します。 DISTRIBUTED_AGG クエリ ヒントを持つことができるのは、GROUP BY 句内で 1 つの列だけです。 クエリが完了したら、再配布されたテーブルは破棄されます。 元のテーブルは変更されません。  
 
-注: DISTRIBUTED_AGG クエリ ヒントは、Parallel Data Warehouse の旧バージョンとの下位互換性を保つために提供されており、ほとんどのクエリでパフォーマンスが向上することはありません。 既定では、MPP は集計のパフォーマンスを向上させるために必要なデータを既に再分配しています。 
+注:DISTRIBUTED_AGG クエリ ヒントは、Parallel Data Warehouse の旧バージョンとの下位互換性を保つために提供されており、ほとんどのクエリでパフォーマンスが向上することはありません。 既定では、MPP は集計のパフォーマンスを向上させるために必要なデータを既に再分配しています。 
   
 ## <a name="general-remarks"></a>全般的な解説
 
@@ -302,7 +302,7 @@ NULL 値:
   
 ## <a name="limitations-and-restrictions"></a>制限事項と制約事項
 
-適用対象: SQL Server (2008 以降) および Azure SQL Data Warehouse
+適用対象:SQL Server (2008 以降) および Azure SQL Data Warehouse
 
 ### <a name="maximum-capacity"></a>最大容量
 
@@ -344,7 +344,7 @@ GROUP BY 句では、SQL-2006 標準規格に含まれているすべての GROU
 |機能|SQL Server Integration Services|SQL Server 互換性レベル 100 以上|SQL Server 2008 以降で互換性レベル 90|  
 |-------------|-------------------------------------|--------------------------------------------------|-----------------------------------------------------------|  
 |DISTINCT 集計|WITH CUBE および WITH ROLLUP ではサポートされていません。|WITH CUBE、WITH ROLLUP、GROUPING SETS、CUBE、および ROLLUP でサポートされています。|互換性レベル 100 と同じです。|  
-|GROUP BY 句内の、CUBE または ROLLUP の名前を持つユーザー定義関数|GROUP BY 句では、ユーザー定義関数 **dbo.cube(**_arg1_**,**_...argN_**)** または **dbo.rollup(**_arg1_**,**..._argN_**)** を使用できます。<br /><br /> 例: `SELECT SUM (x) FROM T  GROUP BY dbo.cube(y);`|GROUP BY 句では、ユーザー定義関数 **dbo.cube (**_arg1_**,**...argN **)** または **dbo.rollup(** arg1 **,**_...argN_**)** は使用できません。<br /><br /> 例: `SELECT SUM (x) FROM T  GROUP BY dbo.cube(y);`<br /><br /> 「キーワード 'cube'&#124;'rollup' の周辺に正しくない構文があります」というエラー メッセージが返されます。<br /><br /> この問題を回避するには、`dbo.cube` を `[dbo].[cube]` に、または `dbo.rollup` を `[dbo].[rollup]` に置き換えます。<br /><br /> 次の例は使用できます: `SELECT SUM (x) FROM T  GROUP BY [dbo].[cube](y);`|GROUP BY 句では、ユーザー定義関数 **dbo.cube (**_arg1_**,**_...argN_) または **dbo.rollup(**_arg1_**,**_...argN_**)** を使用できます<br /><br /> 例: `SELECT SUM (x) FROM T  GROUP BY dbo.cube(y);`|  
+|GROUP BY 句内の、CUBE または ROLLUP の名前を持つユーザー定義関数|GROUP BY 句では、ユーザー定義関数 **dbo.cube(** _arg1_ **,** _...argN_ **)** または **dbo.rollup(** _arg1_ **,** ..._argN_ **)** を使用できます。<br /><br /> 例: `SELECT SUM (x) FROM T  GROUP BY dbo.cube(y);`|GROUP BY 句では、ユーザー定義関数 **dbo.cube (** _arg1_ **,** ...argN **)** または **dbo.rollup(** arg1 **,** _...argN_ **)** は使用できません。<br /><br /> 例: `SELECT SUM (x) FROM T  GROUP BY dbo.cube(y);`<br /><br /> 次のエラー メッセージが返されます。"キーワード 'cube'&#124;'rollup' 付近に不適切な構文があります。"<br /><br /> この問題を回避するには、`dbo.cube` を `[dbo].[cube]` に、または `dbo.rollup` を `[dbo].[rollup]` に置き換えます。<br /><br /> 次の例は使用できます: `SELECT SUM (x) FROM T  GROUP BY [dbo].[cube](y);`|GROUP BY 句では、ユーザー定義関数 **dbo.cube (** _arg1_ **,** _...argN_) または **dbo.rollup(** _arg1_ **,** _...argN_ **)** を使用できます<br /><br /> 例: `SELECT SUM (x) FROM T  GROUP BY dbo.cube(y);`|  
 |GROUPING SETS|サポートされていません|Supported|Supported|  
 |CUBE|サポートされていません|Supported|サポートされていません|  
 |ROLLUP|サポートされていません|Supported|サポートされていません|  
@@ -403,7 +403,7 @@ HAVING DATEPART(yyyy,OrderDate) >= N'2003'
 ORDER BY DATEPART(yyyy,OrderDate);  
 ```  
   
-## <a name="examples-sql-data-warehouse-and-parallel-data-warehouse"></a>例: SQL Data Warehouse と Parallel Data Warehouse  
+## <a name="examples-sql-data-warehouse-and-parallel-data-warehouse"></a>例 :SQL Data Warehouse と Parallel Data Warehouse  
   
 ### <a name="e-basic-use-of-the-group-by-clause"></a>E. GROUP BY 句の基本的な使用方法  
  次の例では、各日のすべての売上の合計金額を検索します。 各日に、すべての売上の合計を含む 1 つの行が返されます。  

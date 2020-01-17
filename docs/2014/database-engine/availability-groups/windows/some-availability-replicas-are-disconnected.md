@@ -15,11 +15,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: b7393fe6d415f8b68758d75fafba91c9ab0a420c
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53370344"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62788417"
 ---
 # <a name="some-availability-replicas-are-disconnected"></a>いくつかの可用性レプリカが切断されている
     
@@ -28,7 +28,7 @@ ms.locfileid: "53370344"
 |||  
 |-|-|  
 |**ポリシー名**|可用性レプリカの接続状態|  
-|**問題点**|一部の可用性レプリカの接続が解除されます。|  
+|**問題**|一部の可用性レプリカの接続が解除されます。|  
 |**カテゴリ**|**警告**|  
 |**ファセット**|可用性グループ|  
   
@@ -44,7 +44,7 @@ ms.locfileid: "53370344"
 ## <a name="possible-solution"></a>考えられる解決方法  
  可用性レプリカのポリシーの状態を検索条件として、DISCONNECTED 状態の可用性レプリカを探し、問題を解決してください。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [AlwaysOn 可用性グループの概要&#40;SQL Server&#41;](overview-of-always-on-availability-groups-sql-server.md)   
  [AlwaysOn ダッシュボードの使用 &#40;SQL Server Management Studio&#41;](use-the-always-on-dashboard-sql-server-management-studio.md)  
   

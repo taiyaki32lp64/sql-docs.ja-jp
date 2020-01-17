@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.datasourcewizard.completion.f1
@@ -13,12 +12,12 @@ ms.assetid: fa04d602-d12e-425a-971d-68bf1500152a
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: e6099fdba06e03c178f2673c66e49e71564a0d5f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 489c0aaa7a25c10e024c63a11c2bf98fdf46917a
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48048752"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66087669"
 ---
 # <a name="completing-the-wizard-data-source-wizard-analysis-services"></a>[ウィザードの完了] (データ ソース ウィザード) (Analysis Services)
   ウィザードの **[ウィザードの完了]** ページを使用すると、接続文字列を確認し、新しいデータ ソースの名前を指定できます。  

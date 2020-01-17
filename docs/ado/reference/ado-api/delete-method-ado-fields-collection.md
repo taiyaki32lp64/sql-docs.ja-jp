@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 25bedc25-c51c-4cab-96ce-930b959965d9
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 097286f14de4dead4490c322615a6405c157f118
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 9db49905b6548e5cb21cca976683c8b387017d32
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47768390"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67919132"
 ---
 # <a name="delete-method-ado-fields-collection"></a>Delete メソッド (ADO Fields コレクション)
 オブジェクトを削除、[フィールド](../../../ado/reference/ado-api/fields-collection-ado.md)コレクション。  
@@ -44,7 +43,7 @@ Fields.Delete Field
 ## <a name="applies-to"></a>適用対象  
  [Fields コレクション (ADO)](../../../ado/reference/ado-api/fields-collection-ado.md)  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [Delete メソッド (ADO Parameters コレクション)](../../../ado/reference/ado-api/delete-method-ado-parameters-collection.md)   
  [Delete メソッド (ADO Recordset)](../../../ado/reference/ado-api/delete-method-ado-recordset.md)   
  [DeleteRecord メソッド (ADO)](../../../ado/reference/ado-api/deleterecord-method-ado.md)

@@ -15,11 +15,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: bf6e9bb278417d69be0ec0a99cb1c47d88ffddff
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52809670"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62664028"
 ---
 # <a name="brokerforwarded-message-dropped-event-class"></a>Broker:Forwarded Message Dropped イベント クラス
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、Service Broker が転送予定のメッセージを削除すると Broker:Forwarded Message Dropped イベントが生成されます。  
@@ -50,7 +50,7 @@ ms.locfileid: "52809670"
 |OwnerName|`nvarchar`|このメッセージの送信先のブローカー インスタンス ID。|37|いいえ|  
 |RoleName|`nvarchar`|メッセージ交換ハンドルのロール。 次のいずれかです。<br /><br /> Initiator。 このブローカーがメッセージ交換の発信側です。<br /><br /> Target。 このブローカーがメッセージ交換の発信先です。|38|いいえ|  
 |ServerName|`nvarchar`|トレースされる [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスの名前。|26|いいえ|  
-|Severity|`int`|イベントのテキストの重大度を表す数値。|29|いいえ|  
+|重大度|`int`|イベントのテキストの重大度を表す数値。|29|いいえ|  
 |SPID|`int`|クライアントに関連付けられているプロセスに、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] によって割り当てられているサーバー プロセス ID。|12|はい|  
 |StartTime|`datetime`|イベントの開始時刻 (取得できた場合)。|14|はい|  
 |状態|`int`|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のソース コード内のイベントが生成された場所を示します。 イベントが生成された場所によって、状態コードが異なることがあります。 マイクロソフトのサポート エンジニアはこの状態コードを使用して、イベントが生成されたソース コード内の場所を特定することができます。|30|いいえ|  

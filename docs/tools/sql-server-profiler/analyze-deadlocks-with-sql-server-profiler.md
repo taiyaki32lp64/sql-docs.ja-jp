@@ -1,5 +1,5 @@
 ---
-title: SQL Server Profiler を使用したデッドロックの分析 |Microsoft Docs
+title: SQL Server プロファイラー | を使用したデッドロックの分析Microsoft Docs
 ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: sql
@@ -17,15 +17,14 @@ helpviewer_keywords:
 - events [SQL Server], deadlocks
 - edges [SQL Server Profiler]
 ms.assetid: 72d6718f-501b-4ea6-b344-c0e653f19561
-author: stevestein
-ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 918856e619fbb44ef5b5bc382e5d95efc99aba0e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: ab8914abdaa2056a71fdd4d0e1a277c89e200dc7
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47833490"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68105627"
 ---
 # <a name="analyze-deadlocks-with-sql-server-profiler"></a>SQL Server Profiler を使用したデッドロックの分析
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

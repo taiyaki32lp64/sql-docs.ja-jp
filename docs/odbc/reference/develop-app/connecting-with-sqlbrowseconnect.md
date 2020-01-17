@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 6c2e9f76-b766-48df-b109-246bb05ae45d
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: ec1cd42e6704bc5168b1eb20841100fc279a66ab
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 04df089b97bf385925c87a98b3f89cdac3ef21e4
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47762520"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68083131"
 ---
 # <a name="connecting-with-sqlbrowseconnect"></a>SQLBrowseConnect による接続
 **SQLBrowseConnect**と同様に、 **SQLDriverConnect**、接続文字列を使用します。 使用して、ただし、 **SQLBrowseConnect**アプリケーションが実行時に完全な接続文字列を作成できます。 この方法を使用すると、アプリケーションで次の 2 つのことを行えます。  

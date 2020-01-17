@@ -13,15 +13,14 @@ helpviewer_keywords:
 ms.assetid: 77ed4c6c-d976-4eb2-8526-a12697b0ef83
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: b96d86952b2d8be152aefad584e85104accb7cee
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 1a00861365df27357099176151bcd681e15e585e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47715410"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67985114"
 ---
-# <a name="tracing"></a>追跡
+# <a name="tracing"></a>トレース
 ODBC ドライバー マネージャーが、記録し、ログ ファイルに議事録を作成する ODBC アプリケーションによって行われる関数呼び出しのシーケンスを許可するトレース機能。 トレースは、トレース、アプリケーションと、ドライバー マネージャーとドライバー マネージャーとドライバーの間の呼び出しをキャプチャする DLL によって実行されます。 トレースには、このメソッドは、ODBC 2 によって実行されるトレースを置き換えます *.x*ドライバー マネージャーと、トレースは、ODBC 2 で実行される *.x* ODBC スパイでします。  
   
  このセクションでは、次のトピックを扱います。  

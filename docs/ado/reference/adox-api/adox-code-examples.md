@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 438e4369-f7e8-4dca-a709-dd501a3ca83f
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 5d92a7d12f7ea0f60bcd6ea7f89e105962785b2f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 8ac4e07dd4721cf2ae38f480563350fa0fbbaf51
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47821930"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67952076"
 ---
 # <a name="adox-code-examples"></a>ADOX のコード例
 ADOX オブジェクト、メソッド、プロパティ、およびイベントを使用する方法を学ぶためには、次のコード例を使用してください。  
@@ -30,7 +29,7 @@ ADOX オブジェクト、メソッド、プロパティ、およびイベント
   
 -   [Microsoft Visual C++ での ADOX のコード例](../../../ado/reference/adox-api/adox-code-examples-in-microsoft-visual-c.md)  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [カタログ ActiveConnection プロパティの例 (VB)](../../../ado/reference/adox-api/catalog-activeconnection-property-example-vb.md)   
  [Columns および Tables Append メソッド、Name プロパティの例 (VB)](../../../ado/reference/adox-api/columns-and-tables-append-methods-name-property-example-vb.md)   
  [Command プロパティおよび CommandText プロパティの例 (VB)](../../../ado/reference/adox-api/command-and-commandtext-properties-example-vb.md)   

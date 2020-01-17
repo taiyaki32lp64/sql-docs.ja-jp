@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: fdfa56f5-e324-4ec2-9267-fdf95ab99373
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 66dab60f4a9a180d2a8b74ce4d0c8f4d7bf8d242
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d9a0a57c3dce920c6d5fbc2510932066cb5a2659
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47682840"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68096357"
 ---
 # <a name="dbase-indexes"></a>dBASE インデックス
 ODBC の dBASE ドライバーは自動的に開き、dBASE IV インデックス ファイルを更新します。 使用する必要があります、**インデックスの選択**dBASE III .ndx ファイルを関連付ける dBASE ファイルに ODBC データ ソース アドミニストレーターで表示されるダイアログ ボックス。  

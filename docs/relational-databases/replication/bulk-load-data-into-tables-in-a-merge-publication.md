@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 16e6498a-b449-4051-aec4-ea814a2ad993
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: cc2ab453279e429f148f257f75f44f26c4e57287
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: f5b6deb043b12dc90a6543f7ef394046b00aaf5e
+ms.sourcegitcommit: 8732161f26a93de3aa1fb13495e8a6a71519c155
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47781740"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71710294"
 ---
 # <a name="bulk-load-data-into-tables-in-a-merge-publication"></a>マージ パブリケーションでのテーブルへのデータの一括読み込み
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -36,6 +35,6 @@ ms.locfileid: "47781740"
   
     -   FIRE_TRIGGERS オプションを使用して一括コピーを実行する。  
   
-    -   データの挿入先のデータベースで、[sp_addtabletocontents &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addtabletocontents-transact-sql.md) を実行する。 データの挿入先のテーブル名を **@table_name**を実行する。  
+    -   データの挿入先のデータベースで、[sp_addtabletocontents &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addtabletocontents-transact-sql.md) を実行する。 `@table_name` には、データが挿入されたテーブルの名前を指定します。  
   
   

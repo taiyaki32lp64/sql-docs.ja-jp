@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 07d25fc0-4958-4e12-b616-36257ead812b
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: c5c01c1b764ad09243ce20d25997036c38d167b9
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 65a015888223fc94f5bf427b1d0b560d5e888ac5
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47634870"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67926530"
 ---
 # <a name="using-ado-with-microsoft-visual-c"></a>Microsoft Visual C++ での ADO の使用
 Visual C で ADO を使用する方法の詳細については、次のセクションを参照してください。  
@@ -35,7 +34,7 @@ Visual C で ADO を使用する方法の詳細については、次のセクシ
   
 -   [Visual C++ 拡張機能の例](../../../ado/guide/appendixes/visual-c-extensions-example.md)  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [Microsoft ActiveX Data Objects (ADO)](../../../ado/microsoft-activex-data-objects-ado.md)   
  [COM 用の Visual C 構文のインデックス用の ADO](../../../ado/reference/ado-api/ado-for-visual-c-syntax-index-for-com.md)   
  [#Import の Visual C 構文のインデックス用の ADO](../../../ado/reference/ado-api/ado-for-visual-c-syntax-index-with-sharpimport.md)   

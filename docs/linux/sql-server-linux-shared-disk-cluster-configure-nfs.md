@@ -1,126 +1,126 @@
 ---
-title: フェールオーバー クラスター インスタンス ストレージ NFS - SQL Server on Linux の構成 |Microsoft Docs
-description: ''
+title: NFS ストレージ FCI の構成 - SQL Server on Linux
+description: SQL Server 用の NFS ストレージを使用してフェールオーバー クラスター インスタンス (FCI) を構成する方法について説明します。
+ms.custom: seo-lt-2019
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
+ms.reviewer: vanto
 ms.date: 08/28/2017
 ms.topic: conceptual
 ms.prod: sql
-ms.custom: sql-linux
 ms.technology: linux
-ms.openlocfilehash: 672e6142ee7196115ba10309e6ac5ef7aa7d151f
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
-ms.translationtype: MT
+ms.openlocfilehash: 35f6dc79756c192419dbe3a8962d5dcdfeea8aef
+ms.sourcegitcommit: 035ad9197cb9799852ed705432740ad52e0a256d
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52507034"
+ms.lasthandoff: 12/31/2019
+ms.locfileid: "75558337"
 ---
-# <a name="configure-failover-cluster-instance---nfs---sql-server-on-linux"></a>NFS - SQL Server on Linux を構成するには、フェールオーバー クラスター インスタンス。
+# <a name="configure-failover-cluster-instance---nfs---sql-server-on-linux"></a>フェールオーバー クラスター インスタンスを構成する - NFS - SQL Server on Linux
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
-この記事では、Linux でのフェールオーバー クラスター インスタンス (FCI) の NFS ストレージを構成する方法について説明します。 
+この記事では、Linux 上のフェールオーバー クラスター インスタンス (FCI) 用の NFS ストレージを構成する方法について説明します。 
 
-NFS、またはネットワーク ファイル システムでは、Linux の世界がいずれかの Windows ではないのでディスクを共有するための一般的な方法です。 同様に、iSCSI、NFS で構成できます、サーバーまたはなんらかのアプライアンスまたは記憶域ユニット for SQL Server の記憶域の要件を満たしている限りです。
+NFS (ネットワーク ファイル システム) は、Linux 環境ではディスクを共有するための一般的な方法ですが、Windows ではそうではありません。 iSCSI と同様に、NFS は、SQL Server のストレージ要件を満たす限り、サーバーまたはある種のアプライアンスやストレージ ユニットに構成できます。
 
-## <a name="important-nfs-server-information"></a>NFS サーバーの重要な情報
+## <a name="important-nfs-server-information"></a>NFS サーバーに関する重要な情報
 
-NFS (Linux サーバーまたは別のもの) をホストしているソースを使用して/に準拠するバージョン 4.2 以降。 以前のバージョンは、SQL Server on Linux では機能しません。
+NFS をホストするソース (Linux サーバーまたはその他のもの) は、バージョン4.2 以降を使用しているか、それに準拠している必要があります。 それより前のバージョンは、SQL Server on Linux では動作しません。
 
-NFS サーバーで共有するフォルダーを構成する場合は、これらのガイドラインの全般的なオプションに従うことを確認します。
-- `rw` フォルダーの内容を確実にからの読み取りおよび書き込みできるに
-- `sync` フォルダーへの書き込みを保証することを確認
-- 使用しない`no_root_squash`オプションとして、セキュリティ リスクと捉えられます
-- フォルダーが完全な権限 (777) が適用されることを確認します。
+NFS サーバーで共有されるようにフォルダーを構成するときは、それらが次のガイドラインの一般的なオプションに従っていることを確認してください。
+- フォルダーを読み書きできるように `rw`
+- フォルダーへの書き込みが保証されるように `sync`
+- オプションとして `no_root_squash` を使用しないでください。セキュリティ上のリスクと見なされます
+- フォルダーにフル権限 (777) が適用されていることを確認します
 
-アクセスするため、セキュリティ標準が適用されていることを確認します。 フォルダーを構成するときに、FCI に参加しているサーバーのみが NFS フォルダーを表示する必要があることを確認します。 NFS の Linux ベースのソリューションに変更された/etc/exports の例は、フォルダーが FCIN1 と FCIN2 に制限以下に示します。
+アクセスに対してセキュリティ標準が適用されていることを確認します。 フォルダーを構成するときは、FCI に参加しているサーバーだけが NFS フォルダーを参照するようにします。 Linux ベースの NFS ソリューション上で変更された /etc/exports の例を次に示します。フォルダーは FCIN1 および FCIN2 に制限されています。
 
-![05 nfsacl][1]
+![05-nfsacl][1]
 
 ## <a name="instructions"></a>Instructions
 
-1. FCI の構成では、参加するサーバーのいずれかを選択します。 どれもかまいません。 
+1. FCI の構成に参加するいずれかのサーバーを選択します。 どれを選んでも問題ありません。 
 
-2. サーバーが NFS サーバー上、mount(s) を表示できることを確認します。
+2. サーバーで NFS サーバー上のマウントを参照できることを確認します。
 
     ```bash
     sudo showmount -e <IPAddressOfNFSServer>
     ```
 
-    \<IPAddressOfNFSServer > を使用している NFS サーバーの IP アドレスです。
+    \<IPAddressOfNFSServer> は、使用する NFS サーバーの IP アドレスです。
 
-3. システム データベースまたはデータの既定の場所に格納されているものは、次の手順に従います。 それ以外の場合、手順 4. に進みます。
+3. システム データベース、または既定のデータの場所に格納されているものについては、以下の手順に従います。 それ以外の場合は、手順 4 に進みます。
  
-   * 作業しているサーバーで SQL Server が停止していることを確認します。
+   * 作業中のサーバーで SQL Server が停止していることを確認します。
 
     ```bash
     sudo systemctl stop mssql-server
     sudo systemctl status mssql-server
     ```
-   * スーパー ユーザーを完全にスイッチします。 成功した場合は、すべての受信確認は受信しません。
+   * 完全にスーパーユーザーに切り替えます。 成功した場合は、確認応答を何も受け取りません。
 
     ```bash
     sudo -i
     ```
 
-   * スイッチを mssql ユーザーにします。 成功した場合は、すべての受信確認は受信しません。
+   * mssql ユーザーに切り替えます。 成功した場合は、確認応答を何も受け取りません。
 
     ```bash
     su mssql
     ```
 
-   * SQL Server のデータを格納するファイルとログ ファイルを一時ディレクトリを作成します。 成功した場合は、すべての受信確認は受信しません。
+   * SQL Server のデータ ファイルとログ ファイルを格納するための一時ディレクトリを作成します。 成功した場合は、確認応答を何も受け取りません。
 
     ```bash
     mkdir <TempDir>
     ```
 
-    \<TempDir > フォルダーの名前を指定します。 次の例では、/var/opt/mssql/tmp という名前のフォルダーを作成します。
+    \<TempDir> はフォルダーの名前です。 次の例では、/var/opt/mssql/tmp という名前のフォルダーを作成します。
 
     ```bash
     mkdir /var/opt/mssql/tmp
     ```
 
-   * SQL Server のデータとログ ファイルを一時ディレクトリにコピーします。 成功した場合は、すべての受信確認は受信しません。
+   * SQL Server のデータ ファイルとログ ファイルを一時ディレクトリにコピーします。 成功した場合は、確認応答を何も受け取りません。
     
     ```bash
     cp /var/opt/mssql/data/* <TempDir>
     ```
 
-    \<TempDir > は、前の手順からフォルダーの名前です。
+    \<TempDir> は、前の手順で指定したフォルダーの名前です。
 
-   * ファイルがディレクトリであることを確認します。
+   * ファイルがディレクトリ内にあることを確認します。
 
     ```bash
     ls TempDir
     ```
 
-    \<TempDir > 手順 d からフォルダーの名前を指定します。
+    \<TempDir> は、手順 d で作成したフォルダーの名前です。
 
-   * 既存の SQL Server データ ディレクトリからファイルを削除します。 成功した場合は、すべての受信確認は受信しません。
+   * 既存の SQL Server データ ディレクトリからファイルを削除します。 成功した場合は、確認応答を何も受け取りません。
 
     ```bash
     rm - f /var/opt/mssql/data/*
     ```
 
-   * ファイルが削除されたことを確認します。 
+   * ファイルが削除されていることを確認します。 
 
     ```bash
     ls /var/opt/mssql/data
     ```
     
-   * ルート ユーザーに切り替えてに exit」と入力します。
+   * 「exit」と入力して、ルート ユーザーに切り替えます。
 
-   * SQL Server データ フォルダーに、NFS 共有をマウントします。 成功した場合は、すべての受信確認は受信しません。
+   * SQL Server データ フォルダーに NFS 共有をマウントします。 成功した場合は、確認応答を何も受け取りません。
 
     ```bash
     mount -t nfs4 <IPAddressOfNFSServer>:<FolderOnNFSServer> /var/opt/mssql/data -o nfsvers=4.2,timeo=14,intr
     ```
 
-    \<IPAddressOfNFSServer > を使用している NFS サーバーの IP アドレスです 
+    \<IPAddressOfNFSServer> は、使用する NFS サーバーの IP アドレスです 
 
-    \<FolderOnNFSServer >、NFS 共有の名前を指定します。 次の構文の例では、手順 2 から NFS 情報と一致します。
+    \<FolderOnNFSServer> は、NFS 共有の名前です。 次の例の構文は、手順 2 の NFS の情報と一致します。
 
     ```bash
     mount -t nfs4 200.201.202.63:/var/nfs/fci1 /var/opt/mssql/data -o nfsvers=4.2,timeo=14,intr
@@ -132,15 +132,15 @@ NFS サーバーで共有するフォルダーを構成する場合は、これ�
     mount
     ```
 
-    ![10 mountnoswitches][2]
+    ![10-mountnoswitches][2]
 
-   * Mssql ユーザーに切り替えます。 成功した場合は、すべての受信確認は受信しません。
+   * mssql ユーザーに切り替えます。 成功した場合は、確認応答を何も受け取りません。
 
     ```bash
     su mssql
     ```
 
-   * 一時ディレクトリ/var/opt/mssql/data からファイルをコピーします。 成功した場合は、すべての受信確認は受信しません。
+   * 一時ディレクトリ /var/opt/mssql/data からファイルをコピーします。 成功した場合は、確認応答を何も受け取りません。
 
     ```bash
     cp /var/opt/mssql/tmp/* /var/opt/mssqldata
@@ -152,71 +152,71 @@ NFS サーバーで共有するフォルダーを構成する場合は、これ�
     ls /var/opt/mssql/data
     ```
 
-   * キャンセルする場合は mssql できませんを入力します。 
+   * 「exit」と入力して mssql を終了します 
     
-   * 終了できないルートを入力します。
+   * 「exit」と入力してルートを終了します
 
-   * SQL Server を起動します。 場合、すべてが正しくコピーされ、セキュリティが適用されて正しく、SQL Server 表示されますが開始します。
+   * SQL Server を起動します。 すべてが正しくコピーされ、セキュリティが正しく適用されている場合、SQL Server は起動済みと表示されます。
 
     ```bash
     sudo systemctl start mssql-server
     sudo systemctl status mssql-server
     ```
     
-   * セキュリティが正しく設定されているかをテストするデータベースを作成します。 Transact SQL; 経由で行われている例を次に示しますこれは、SSMS を使用して実行できます。
+   * データベースを作成して、セキュリティが適切に設定されていることをテストします。 次の例では、Transact-SQL を使用して行っています。SSMS で行うこともできます。
  
     ![CreateTestdatabase][3]
 
-   * SQL Server を停止し、シャット ダウンがあることを確認します。
+   * SQL Server を停止し、シャットダウンされていることを確認します。
 
     ```bash
     sudo systemctl stop mssql-server
     sudo systemctl status mssql-server
     ```
 
-   * 他の NFS のマウントを作成していない場合、共有のマウントを解除します。 場合はマウント解除できません。
+   * 他の NFS マウントを作成していない場合は、共有のマウントを解除します。 作成している場合は、マウントを解除しないでください。
 
     ```bash
     sudo umount <IPAddressOfNFSServer>:<FolderOnNFSServer> <FolderToMountIn>
     ```
 
-    \<IPAddressOfNFSServer > を使用している NFS サーバーの IP アドレスです
+    \<IPAddressOfNFSServer> は、使用する NFS サーバーの IP アドレスです
 
-    \<FolderOnNFSServer >、NFS 共有の名前を指定します
+    \<FolderOnNFSServer> は、NFS 共有の名前です
 
-    \<FolderMountedIn > は、前の手順で作成したフォルダーです。 
+    \<FolderMountedIn> は、前の手順で作成したフォルダーです。 
 
-4. ユーザー データベースやバックアップなどのシステム データベース以外の次の手順に従います。 既定の場所を使用して、専用の場合は、手順 5. に進んでください。
+4. ユーザー データベースやバックアップなどのシステム データベース以外のものについては、次の手順に従います。 既定の場所のみを使用する場合は、手順 5 に進みます。
 
-   * スーパー ユーザーを指定するスイッチです。 成功した場合は、すべての受信確認は受信しません。
+   * スーパーユーザーになるように切り替えます。 成功した場合は、確認応答を何も受け取りません。
 
     ```bash
     sudo -i
     ```
 
-   * SQL Server で使用されるフォルダーを作成します。 
+   * SQL Server によって使用されるフォルダーを作成します。 
 
     ```bash
     mkdir <FolderName>
     ```
 
-    \<フォルダー名 > フォルダーの名前を指定します。 フォルダーの完全なパスを指定する必要があります。 適切な場所ではない場合。 次の例では、/var/opt/mssql/userdata という名前のフォルダーを作成します。
+    \<FolderName> はフォルダーの名前です。 正しい場所にない場合は、フォルダーの完全なパスを指定する必要があります。 次の例では、/var/opt/mssql/userdata という名前のフォルダーを作成します。
 
     ```bash
     mkdir /var/opt/mssql/userdata
     ```
 
-   * 前の手順で作成したフォルダーで、NFS 共有をマウントします。 成功した場合は、すべての受信確認は受信しません。
+   * 前の手順で作成したフォルダーに NFS 共有をマウントします。 成功した場合は、確認応答を何も受け取りません。
 
     ```bash
     Mount -t nfs4 <IPAddressOfNFSServer>:<FolderOnNFSServer> <FolderToMountIn> -o nfsvers=4.2,timeo=14,intr
     ```
 
-    \<IPAddressOfNFSServer > を使用している NFS サーバーの IP アドレスです
+    \<IPAddressOfNFSServer> は、使用する NFS サーバーの IP アドレスです
 
-    \<FolderOnNFSServer >、NFS 共有の名前を指定します
+    \<FolderOnNFSServer> は、NFS 共有の名前です
 
-    \<FolderToMountIn > は、前の手順で作成したフォルダーです。 例を次に示します。 
+    \<FolderToMountIn> は、前の手順で作成したフォルダーです。 次に例を示します。 
 
     ```bash
     mount -t nfs4 200.201.202.63:/var/nfs/fci2 /var/opt/mssql/userdata -o nfsvers=4.2,timeo=14,intr
@@ -224,30 +224,30 @@ NFS サーバーで共有するフォルダーを構成する場合は、これ�
 
    * スイッチなしでマウントを発行して、マウントが成功したことを確認します。
   
-   * スーパー ユーザーをされなく exit」と入力します。
+   * スーパーユーザーではなくなるよう、「Exit」と入力します。
 
-   * テストするには、そのフォルダーで、データベースを作成します。 次の例では、sqlcmd を使用して、データベースを作成、コンテキストを切り替える、ファイルは、OS レベルで存在し、一時的な場所を削除し、確認します。 SSMS を使用することができます。
+   * テストするには、そのフォルダーにデータベースを作成します。 次の例では、sqlcmd を使用してデータベースを作成し、コンテキストをそれに切り替え、ファイルが OS レベルで存在することを確認した後、一時的な場所を削除します。 SSMS を使用できます。
 
-    ![15 createtestdatabase][4]
+    ![15-createtestdatabase][4]
  
-   * 共有のマウントを解除します。 
+   * 共有のマウントを解除します 
 
     ```bash
     sudo umount <IPAddressOfNFSServer>:<FolderOnNFSServer> <FolderToMountIn>
     ```
 
-    \<IPAddressOfNFSServer > を使用している NFS サーバーの IP アドレスです
+    \<IPAddressOfNFSServer> は、使用する NFS サーバーの IP アドレスです
     
-    \<FolderOnNFSServer >、NFS 共有の名前を指定します
+    \<FolderOnNFSServer> は、NFS 共有の名前です
 
-    \<FolderMountedIn > は、前の手順で作成したフォルダーです。 例を次に示します。 
+    \<FolderMountedIn> は、前の手順で作成したフォルダーです。 次に例を示します。 
  
-5. その他のノード上の手順を繰り返します。
+5. その他のノードでこれらの手順を繰り返します。
 
 
-## <a name="next-steps"></a>次の手順
+## <a name="next-steps"></a>次のステップ
 
-[Linux 上の SQL Server のフェールオーバー クラスター インスタンスを構成します。](sql-server-linux-shared-disk-cluster-configure.md)
+[フェールオーバー クラスター インスタンスの構成 - SQL Server on Linux](sql-server-linux-shared-disk-cluster-configure.md)
 
 <!--Image references-->
 [1]: ./media/sql-server-linux-shared-disk-cluster-configure-nfs/05-nfsacl.png

@@ -11,11 +11,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 1c23f91f24f2da173280e54a544b00a1b4a6fd09
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52795634"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62806159"
 ---
 # <a name="connect-to-a-sql-server-utility"></a>SQL Server ユーティリティへの接続
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ユーティリティに接続する前に、ユーティリティ コントロール ポイント (UCP) を作成する必要があります。 詳細については、「 [SQL Server ユーティリティの機能とタスク](sql-server-utility-features-and-tasks.md)」を参照してください。  
@@ -30,7 +30,7 @@ ms.locfileid: "52795634"
   
 3.  **[表示]** をクリックし、 **[ユーティリティ エクスプローラー]** をクリックします。  
   
-4.  ユーティリティ エクスプローラーのナビゲーション ウィンドウで、**[ユーティリティへの接続]** ![](../../database-engine/media/connect-to-utility.gif "Connect_to_Utility") をクリックします。  
+4.  ユーティリティ エクスプローラーのナビゲーション ウィンドウで、 **[ユーティリティへの接続]** ![](../../database-engine/media/connect-to-utility.gif "Connect_to_Utility") をクリックします。  
   
 5.  **[サーバーへの接続]** ダイアログ ボックスで、UCP インスタンス名を指定し、 **[接続]** をクリックします。  
   

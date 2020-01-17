@@ -12,15 +12,14 @@ helpviewer_keywords:
 - database diagrams [SQL Server], discarding changes
 - diagrams [SQL Server], discarding changes
 ms.assetid: a3e8e874-60f2-4d96-ae81-272c8319c3d7
-author: stevestein
-ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 94609f8b9fcd2b36eb32e10110f493df0a8b3f8f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 499d0d70e03472c2e2f038404f48663072e8ac7e
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47767110"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68254709"
 ---
 # <a name="discard-changes-made-to-diagrams-visual-database-tools"></a>ダイアグラムに加えた変更の破棄 (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

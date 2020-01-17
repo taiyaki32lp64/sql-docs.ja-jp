@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.dimensiondesigner.ardesigner.ardiagram.f1
@@ -13,12 +12,12 @@ ms.assetid: 320989ad-bd95-43f4-a2e7-b262d66dbda7
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 1255cbcaffe114a47b4c7d251c37e5b3d50d6b2b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 8fbd67f8a6fcc88a3821583d1e06ec3e8a75ab91
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48174662"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66063096"
 ---
 # <a name="attribute-relationship-diagram-attribute-relationship-designer-tab-dimension-designer-analysis-services---multidimensional-data"></a>属性リレーションシップ ダイアグラム ([属性リレーションシップ] タブ、ディメンション デザイナー) (Analysis Services - 多次元データ)
   **[属性リレーションシップ]** タブのツール バーのすぐ下にあるペインを使用すると、属性リレーションシップ ダイアグラムを表示したり、属性リレーションシップを作成、変更、および削除したりできます。  
@@ -79,7 +78,7 @@ ms.locfileid: "48174662"
  リレーションシップのショートカット メニューを開くには、2 つの属性間のリレーションシップを示す矢印を右クリックします。 リレーションシップのショートカット メニューには次のコマンドがあります。  
   
  **属性リレーションシップを編集します。**  
- 属性リレーションシップを変更できる、**[属性リレーションシップの編集]** ダイアログ ボックスを開きます。  
+ 属性リレーションシップを変更できる、 **[属性リレーションシップの編集]** ダイアログ ボックスを開きます。  
   
  詳細については、[[属性リレーションシップの作成] ダイアログ ボックスと [属性リレーションシップの編集] ダイアログ ボックス &#40;[属性リレーションシップ] タブ、ディメンション デザイナー&#41; &#40;Analysis Services - 多次元データ&#41;](create-edit-attribute-relationships-dialog-boxes-analysis-services-multidimensional-data.md) と [属性リレーションシップの定義](multidimensional-models/attribute-relationships-define.md) を参照してください。  
   
@@ -92,7 +91,7 @@ ms.locfileid: "48174662"
  **Properties**  
  リレーションシップのプロパティを **[プロパティ]** ウィンドウに表示します。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [属性リレーションシップ&#40;ディメンション デザイナー&#41; &#40;Analysis Services - 多次元データ&#41;](attribute-relationships-dimension-designer-analysis-services-multidimensional-data.md)   
  [ツールバー&#40;属性リレーションシップ タブ、ディメンション デザイナー&#41; &#40;Analysis Services - 多次元データ&#41;](toolbar-attribute-relationship-dimension-designer-analysis-services-multidimensional-data.md)   
  [属性&#40;属性リレーションシップ タブ、ディメンション デザイナー&#41; &#40;Analysis Services - 多次元データ&#41;](attributes-designer-tab-dimension-designer-analysis-services-multidimensional-data.md)   

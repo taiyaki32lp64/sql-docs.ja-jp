@@ -10,15 +10,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - Visual Database Tools [SQL Server], queries
 ms.assetid: 65883f21-c898-4857-a0b8-d1851e1486e1
-author: stevestein
-ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 91ce35907cf75e723eb2fa92416b300223a1d144
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: eddc5af4c5cf37212ba2fc42394254d9769b915d
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47745370"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68267478"
 ---
 # <a name="copy-query-results-visual-database-tools"></a>クエリ結果のコピー (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

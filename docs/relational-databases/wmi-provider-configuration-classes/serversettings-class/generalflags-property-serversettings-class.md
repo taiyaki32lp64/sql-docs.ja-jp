@@ -1,6 +1,6 @@
 ---
-title: GeneralFlags プロパティ (ServerSettings クラス) |Microsoft Docs
-ms.custom: ''
+title: "\"全般フラグ\" プロパティ (ServerSettings)"
+ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 129bff8d-d2bc-4297-952f-d0a919d169f7
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: 5604ad8e59af9bd7cbcdec5fb2af5002ea00af47
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: bd79263e09f1b3eccb4a4efff0ed8ecd036fcc9d
+ms.sourcegitcommit: baa40306cada09e480b4c5ddb44ee8524307a2ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51656772"
+ms.lasthandoff: 11/06/2019
+ms.locfileid: "73659299"
 ---
 # <a name="generalflags-property-serversettings-class"></a>GeneralFlags プロパティ (ServerSettings クラス)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -43,9 +42,9 @@ object.GeneralFlags [= value]
 ## <a name="property-valuereturn-value"></a>プロパティ値/戻り値  
  [のインスタンスに関連付けられた一般的なフラグを指定する](../../../relational-databases/wmi-provider-configuration-classes/serversettingsgeneralflag-class/serversettingsgeneralflag-class.md) ServerSettingsGeneralFlag クラス [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]オブジェクトの配列。  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>解説  
   
 ## <a name="see-also"></a>参照  
- [サーバー ネットワーク プロトコルとネットワーク ライブラリの構成](https://msdn.microsoft.com/library/ms177485\(v=sql.100\).aspx)  
+ [サーバーネットワークプロトコルと Net-library の構成](https://msdn.microsoft.com/library/ms177485\(v=sql.100\).aspx)  
   
   

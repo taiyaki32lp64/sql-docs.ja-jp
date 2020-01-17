@@ -8,17 +8,20 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: language-reference
 ms.assetid: b9c08992-500c-447e-bc19-1eb13c9b0293
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: ae60521ebd4b3bf9d10e12d5f15a54ceb0166c04
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 496de1c9dd7e37542f5d3588a9662948ef8aabd4
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47626140"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71281338"
 ---
-# <a name="catalogdeletefolder-ssisdb-database"></a>catalog.delete_folder (SSISDB データベース)
+# <a name="catalogdelete_folder-ssisdb-database"></a>catalog.delete_folder (SSISDB データベース)
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] カタログからフォルダーを削除します。  

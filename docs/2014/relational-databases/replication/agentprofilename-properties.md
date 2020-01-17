@@ -15,11 +15,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: b2ecd6ec8584eb4031e7d2c8a0af95204a930498
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52763574"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62721844"
 ---
 # <a name="ltagentprofilenamegt-properties"></a>&lt;AgentProfileName&gt; プロパティ
   **[&lt;AgentProfileName&gt; のプロパティ]** ダイアログ ボックスを使用すると、プロファイル内の各エージェント パラメーターに対して指定された値を表示したり、ユーザー定義のプロファイルの値を変更したりできます。  
@@ -34,7 +34,7 @@ ms.locfileid: "52763574"
  **パラメーター**  
  プロファイルに含まれるエージェント パラメーターです。 各パラメーターに対する値は、プロファイルで指定されるとは限りません。 指定されたエージェントで有効なパラメーターをすべて表示するには、 **[このプロファイルに使用されているパラメーターのみ表示する]** チェック ボックスをオフにします。 各パラメーターの詳細については、次を参照してください。  
   
--   [Replication Snapshot Agent](agents/replication-snapshot-agent.md)  
+-   [レプリケーション スナップショット エージェント](agents/replication-snapshot-agent.md)  
   
 -   [レプリケーション ログ リーダー エージェント](agents/replication-log-reader-agent.md)  
   

@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: bbb8a204-d0e4-4f0b-9709-271feb1f136e
 author: Shamikg
 ms.author: Shamikg
-manager: craigg
-ms.openlocfilehash: 2307a62c05503a231c3ee16b79efb25e964f55bd
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: 60140559f94cdeebea935b423fbbeef24bce7a08
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52402127"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67929466"
 ---
 # <a name="project-settings-azure-sql-db-accesstosql"></a>プロジェクトの設定 (Azure SQL DB) (AccessToSQL)
 SQL Azure プロジェクトの設定を使用して、接続ダイアログで追加して、SQL Azure 接続でハートビート メカニズムを実装することもできますを SQL Azure データベース サフィックスを構成できます。  

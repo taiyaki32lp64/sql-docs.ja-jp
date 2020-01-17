@@ -1,5 +1,5 @@
 ---
-title: '方法: 行を挿入 Geography 列 (ODBC) |マイクロソフトのドキュメント'
+title: 操作方法:Geography 列 (ODBC) に行を挿入 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,14 +11,14 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 9067a1ceeff9422ed55f9a96fd3b52e2f99fe999
-ms.sourcegitcommit: fafb9b5512695b8e3fc2891f9c5e3abd7571d550
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/01/2018
-ms.locfileid: "50753499"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68206809"
 ---
-# <a name="how-to-insert-rows-into-geography-column-odbc"></a>Geography 列に行を挿入する方法 (ODBC)
-  このサンプルでは、2 つの異なるバインド (SQLCCHAR および SQLCBINARY) を使用して WellKnownBinary (WKB) から geography 列を持つテーブルに 2 行追加します。 次に、そのテーブルから 1 行選択し、::STAsText() を使用してその行を表示します。WKB は 0x01010000000700ECFAD03A4C4001008000B5DF07C0 で、アプリケーションは POINT(56.4595 -2.9842) をコンソールに出力します。  
+# <a name="how-to-insert-rows-into-geography-column-odbc"></a>操作方法:Geography 列に行を挿入する (ODBC)
+  このサンプルでは、2 つの異なるバインド (SQLCCHAR および SQLCBINARY) を使用して WellKnownBinary (WKB) から geography 列を持つテーブルに 2 行追加します。 これには、そのテーブルから 1 つの行を選択し、使用、し、::stastext() を表示します。WKB は 0x01010000000700ECFAD03A4C4001008000B5DF07C0 で、アプリケーション、コンソールに出力します。ポイント (56.4595-2.9842)。  
   
  このサンプルは ODBC データ ソースを必要としませんが、既定では SQL Server のローカル インスタンスで実行されます。  
   

@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 6e6cbd25-6b1c-4e21-9ade-4584e243fd8f
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: cf446db934f1088882bd19e2095aa99b1a5a025a
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: 08c4877b4fc3280826100cdfe7f0dfcad716ca22
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52409429"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68115314"
 ---
 # <a name="sql-server-utility-features-and-tasks"></a>SQL Server ユーティリティの機能とタスク
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -55,7 +54,7 @@ ms.locfileid: "52409429"
 |ユーティリティ正常性ポリシーを構成する方法について説明します。|[正常性ポリシーの構成 &#40;SQL Server ユーティリティ&#41;](../../relational-databases/manage/configure-health-policies-sql-server-utility.md)|  
 |CPU 使用ポリシーの減弱を調整する方法について説明します。|[CPU 使用率のポリシーにおけるノイズの軽減 &#40;SQL Server ユーティリティ&#41;](../../relational-databases/manage/reduce-noise-in-cpu-utilization-policies-sql-server-utility.md)|  
 |SQL Server のインスタンスを UCP から削除する方法について説明します。|[SQL Server ユーティリティからの SQL Server のインスタンスの削除](../../relational-databases/manage/remove-an-instance-of-sql-server-from-the-sql-server-utility.md)|  
-|SQL Server のマネージド インスタンスでユーティリティ コレクション セットのプロキシ アカウントを変更する方法について説明します。|[SQL Server のマネージド インスタンスにおけるユーティリティ コレクション セットのプロキシ アカウントの変更 &amp;amp;#40;SQL Server ユーティリティ&amp;amp;#41;](../../relational-databases/manage/change-proxy-account-for-utility-collection-on-managed-sql-server.md)|  
+|SQL Server のマネージド インスタンスでユーティリティ コレクション セットのプロキシ アカウントを変更する方法について説明します。|[SQL Server のマネージド インスタンスにおけるユーティリティ コレクション セットのプロキシ アカウントの変更 &#40;SQL Server ユーティリティ&#41;](../../relational-databases/manage/change-proxy-account-for-utility-collection-on-managed-sql-server.md)|  
 |SQL Server のインスタンス間で UCP を移動する方法について説明します。|[SQL Server のインスタンス間での UCP の移動 &#40;SQL Server ユーティリティ&#41;](../../relational-databases/manage/move-a-ucp-from-one-instance-of-sql-server-to-another-sql-server-utility.md)|  
 |UCP を削除する方法について説明します。|[ユーティリティ コントロール ポイントの削除 &#40;SQL Server ユーティリティ&#41;](../../relational-databases/manage/remove-a-utility-control-point-sql-server-utility.md)|  
 |SQL Server ユーティリティのトラブルシューティングの方法について説明します。|[SQL Server ユーティリティのトラブルシューティング](https://msdn.microsoft.com/library/f5f47c2a-38ea-40f8-9767-9bc138d14453)|  

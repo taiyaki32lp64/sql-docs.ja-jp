@@ -1,37 +1,37 @@
 ---
-title: Analytics Platform System での容量使用率の表示 |Microsoft Docs
-description: Analytics Platform System での容量使用率を表示します。
+title: 容量使用率の参照
+description: Analytics Platform System の容量使用率を表示します。
 author: mzaman1
-manager: craigg
 ms.prod: sql
 ms.technology: data-warehouse
 ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: 5fe722e6ce3d75f6e271e19d66551ccf951d045f
-ms.sourcegitcommit: 731c5aed039607a8df34c63e780d23a8fac937e1
+ms.custom: seo-dt-2019
+ms.openlocfilehash: c2dafa2df09bb8141fca8c30a80c6471ffe1e060
+ms.sourcegitcommit: d587a141351e59782c31229bccaa0bff2e869580
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/07/2018
-ms.locfileid: "37909732"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74399449"
 ---
 # <a name="view-capacity-utilization-in-analytics-platform-system"></a>Analytics Platform System の容量使用率の表示
-このトピックでは、SQL Server PDW アプライアンスでの容量使用率を表示する方法について説明します。  
+このトピックでは、SQL Server PDW アプライアンスで容量使用率を表示する方法について説明します。  
   
 ## <a name="to-view-capacity-utilization-by-using-admin-console"></a>管理コンソールを使用して容量使用率を表示するには  
-使用されている領域を表示する、管理コンソールを開くし、をクリックして、**ストレージ**タブ。**ストレージ**PDW リージョンのタブ。  
+使用されている領域を表示するには、管理コンソールを開き、[**記憶域**] タブをクリックします。PDW 領域の [**ストレージ**] タブがあります。  
   
 ![PDW 管理コンソールのストレージ](./media/view-capacity-utilization/SQL_Server_PDW_AdminConsol_StorageV2.png "SQL_Server_PDW_AdminConsol_StorageV2")  
   
 ## <a name="to-view-capacity-utilization-by-using-queries"></a>クエリを使用して容量使用率を表示するには  
-ノードの容量が不足してかどうかについては、SQL Server PDW の正常性監視システムは既に各ノード内のすべてのボリュームの空き領域を監視します。  
+ノードで領域が不足しているかどうかを確認するために、SQL Server PDW の正常性監視システムでは、各ノード内のすべてのボリュームの空き領域が既に監視されています。  
   
-ボリューム内の空き領域が 30% を下回った場合に、SQL Server PDW が生成、**警告**で警告[sys.dm_pdw_component_health_active_alerts](../relational-databases/system-dynamic-management-views/sys-dm-pdw-component-health-active-alerts-transact-sql.md)します。  アラートは、利用可能な空き領域は残ります。  
+ボリューム内の空き領域が30% を下回ると、SQL Server PDW によって[dm_pdw_component_health_active_alerts](../relational-databases/system-dynamic-management-views/sys-dm-pdw-component-health-active-alerts-transact-sql.md)に**警告**アラートが生成されます。  空き領域が使用可能になるまで、アラートは残ります。  
   
-ボリューム内の空き領域が 10% 未満、SQL Server PDW が生成されます、**重要な**アラート。 これと見なされますクリティカルなデータベースの拡張が発生する場合に、クエリが失敗する可能性があるため。  
+ボリューム内の空き領域が10% 未満になると、SQL Server PDW によって**重大な**アラートが生成されます。 これは重大と見なされます。これは、データベースの拡張が原因でクエリが失敗する可能性があるためです。  
   
-ボリュームの使用率を取得するには、次の例を参照してください。  
+ボリュームの使用量を取得するには、次の例を参照してください。  
   
 ```sql  
 SELECT   
@@ -68,7 +68,7 @@ GROUP BY space.[pdw_node_id] , space.[node_name] , space.[component_instance_id]
 ORDER BY space.[pdw_node_id], MAX(space.[volume_name]);  
 ```  
   
-アプライアンスのノード間でのデータベースで使用されている領域を取得するには、次の例を参照してください。  
+アプライアンスノード間でデータベースによって使用される領域を取得するには、次の例を参照してください。  
   
 ```sql  
 SELECT   
@@ -105,5 +105,5 @@ ORDER BY [db_name], [pdw_node_id];
   
 ## <a name="see-also"></a>参照  
 <!-- MISSING LINKS [Common Metadata Query Examples &#40;SQL Server PDW&#41;](../sqlpdw/common-metadata-query-examples-sql-server-pdw.md)  -->
-[アプライアンスの監視&#40;Analytics Platform System&#41;](appliance-monitoring.md)  
+[アプライアンス監視 &#40;Analytics Platform System&#41;](appliance-monitoring.md)  
   

@@ -4,26 +4,25 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 ms.assetid: f985856b-31d5-4e56-844b-8a8ee38da67e
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: ace0ffeea6d268768b4e846bbb2d75d1377fdab4
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 1ccdd085b4beb757e0f16e973ad02c9e27a3dafb
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56033419"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66107108"
 ---
 # <a name="sap-netweaver-bi-connection-type-ssrs"></a>SAP NetWeaver BI の接続の種類 (SSRS)
   SAP NetWeaver® Business Intelligence の外部データ ソースのデータをレポートに含めるには、種類が [!INCLUDE[SAP_DPE_BW_1](../../includes/sap-dpe-bw-1-md.md)]のレポート データ ソースに基づいたデータセットが必要です。 このビルトイン データ ソースの種類は、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] .NET Framework Data Provider 1.0 for [!INCLUDE[SAP_DPE_BW_1](../../includes/sap-dpe-bw-1-md.md)]のデータ拡張機能に基づいています。  
   
  このデータ拡張機能を使用すると、 [!INCLUDE[SAP_DPE_BW_1](../../includes/sap-dpe-bw-1-md.md)] の外部データ ソースで定義された InfoCube、MultiProvider (仮想 InfoCube)、および Web 対応クエリから多次元データを取得できます。  
   
- このトピックの情報を使用して、データ ソースを構築してください。 手順については、次を参照してください。[データ接続またはデータ ソース追加および確認&#40;レポート ビルダーおよび SSRS&#41;](add-and-verify-a-data-connection-report-builder-and-ssrs.md)します。  
+ このトピックの情報を使用して、データ ソースを構築してください。 手順については、[データ接続またはデータ ソース追加および確認&#40;レポート ビルダーおよび SSRS&#41;](add-and-verify-a-data-connection-report-builder-and-ssrs.md)を参照してください。  
   
 ##  <a name="support"></a> Supported Versions  
  SAP BW 3.5 および 7.0 に対して、データ プロバイダーが開発され、テストが実施されています。  
@@ -34,7 +33,7 @@ ms.locfileid: "56033419"
   
 -   SAP Portals 6.40 サポート パッケージ 20  
   
--   7.0 のポータル サポート パッケージ 11 を SAP します。  
+-   7\.0 のポータル サポート パッケージ 11 を SAP します。  
   
 -   SAP Duet 1.0  
   
@@ -109,7 +108,7 @@ DataSource=http://mySAPNetWeaverBIServer:8000/sap/bw/xml/soap/xmla
 |`Key`|`Object`|レベルのキーを返します。|  
 |`LevelNumber`|`Integer`|親子階層の場合は、レベル番号またはディメンション番号を返します。|  
 |`ParentUniqueName`|`String`|親子階層の場合は、親レベルの完全修飾名を返します。|  
-|`UniqueName`|`String`|レベルの完全修飾名を返します。 たとえば、`UniqueName`従業員の値は *[0D_Company]. [10D_Department]。[11]*.|  
+|`UniqueName`|`String`|レベルの完全修飾名を返します。 たとえば、`UniqueName`従業員の値は *[0D_Company]. [10D_Department]。[11]* .|  
   
  フィールドおよびフィールド プロパティを式で使用する方法について詳しくは、「[式で使用される組み込みコレクション &#40;レポート ビルダーおよび SSRS&#41;](../report-design/built-in-collections-in-expressions-report-builder.md)」をご覧ください。  
   

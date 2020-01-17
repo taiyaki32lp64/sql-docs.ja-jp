@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 737ace72f201f3abe192393b1a1cc3747f5774e2
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53361994"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63067758"
 ---
 # <a name="sqlcolumnprivileges"></a>SQLColumnPrivileges
   **SQLColumnPrivileges**値が存在するかどうかに関係なく SQL_SUCCESS を返します、*CatalogName*、 *SchemaName*、 *TableName*、または*ColumnName*パラメーター。 **SQLFetch** SQL_NO_DATA が返されるこれらのパラメーターに無効な値を使用する場合。  

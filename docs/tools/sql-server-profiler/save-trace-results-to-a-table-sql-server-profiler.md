@@ -11,15 +11,14 @@ helpviewer_keywords:
 - saving traces
 - traces [SQL Server], saving
 ms.assetid: edbecf74-683b-4e43-a1ef-7a3d5f5e27f6
-author: stevestein
-ms.author: sstein
-manager: craigg
-ms.openlocfilehash: aa36bff5b14a1ff201b24a6e607dbe65293f8a45
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 9191c2ab44f4152a54211a1a66a5d843c0d6c12c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47755250"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67928758"
 ---
 # <a name="save-trace-results-to-a-table-sql-server-profiler"></a>トレース結果のテーブルへの保存 (SQL Server Profiler)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

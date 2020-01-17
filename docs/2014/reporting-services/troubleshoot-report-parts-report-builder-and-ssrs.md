@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 ms.assetid: d9fe1932-46e7-421b-a8a9-4c54d9576e94
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 58de4bd8c12bf4ac9551260ac3ba27b5888dce90
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: df37de909461ace62edbbf3cfe9e7b9dd8448b56
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56288520"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66099390"
 ---
 # <a name="troubleshoot-report-parts-report-builder-and-ssrs"></a>レポート パーツのトラブルシューティング (レポート ビルダーおよび SSRS)
   レポート パーツを使用するために役立つヒントを以下に示します。  

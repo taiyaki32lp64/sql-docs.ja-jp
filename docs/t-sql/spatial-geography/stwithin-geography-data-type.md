@@ -12,15 +12,14 @@ dev_langs:
 helpviewer_keywords:
 - STWithin method (geography)
 ms.assetid: 6fc745cc-7976-418a-a89a-c267e64ab3a2
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: 93715075a2313a53c6b7221deb6a10758e35cf8f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: MladjoA
+ms.author: mlandzic
+ms.openlocfilehash: ab4a3aee5c1828df80fc89f9fc5c230f41ead295
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47712473"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68120692"
 ---
 # <a name="stwithin-geography-data-type"></a>STWithin (geography データ型)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
@@ -41,7 +40,7 @@ ms.locfileid: "47712473"
 ## <a name="return-types"></a>戻り値の型  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 戻り値の型: **bit**  
   
- CLR の戻り値の型: **SqlBoolean**  
+ CLR の戻り値の型:**SqlBoolean**  
   
 ## <a name="remarks"></a>Remarks  
  2 つの **geography** インスタンスの SRID (spatial reference ID) が一致しない場合、このメソッドは常に null を返します。  

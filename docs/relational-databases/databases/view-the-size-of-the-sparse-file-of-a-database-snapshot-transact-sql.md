@@ -1,10 +1,10 @@
 ---
-title: データベース スナップショットのスパース ファイルのサイズを表示する方法 (Transact-SQL) | Microsoft Docs
+title: データベース スナップショット (T-SQL) のスパース ファイルのサイズを表示する方法
 ms.date: 07/28/2016
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
-ms.custom: ''
+ms.custom: seo-lt-2019
 ms.technology: supportability
 ms.topic: conceptual
 helpviewer_keywords:
@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: 1867c5f8-d57c-46d3-933d-3642ab0a8e24
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 71b50aa6c27b2328833685051bcc31917f584cb3
-ms.sourcegitcommit: 1a5448747ccb2e13e8f3d9f04012ba5ae04bb0a3
+ms.openlocfilehash: 71881edf1c98b0588a731964cf6f23dcffe6aa82
+ms.sourcegitcommit: d00ba0b4696ef7dee31cd0b293a3f54a1beaf458
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51558899"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "74055208"
 ---
 # <a name="view-the-size-of-the-sparse-file-of-a-database-snapshot-transact-sql"></a>データベース スナップショットのスパース ファイルのサイズを表示する方法 (Transact-SQL)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -36,7 +35,7 @@ ms.locfileid: "51558899"
 ## <a name="verify-that-a-database-file-is-a-sparse-file"></a>データベース ファイルがスパース ファイルであることを確認する  
   
 1.  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のインスタンスで次の操作を実行する:  
-  
+
      データベース スナップショットの **sys.database_files** または **sys.master_files** から **is_sparse**列を選択します。 次に示すように、この値からファイルがスパース ファイルであるかどうかがわかります。  
   
      1 = ファイルはスパース ファイルです。  

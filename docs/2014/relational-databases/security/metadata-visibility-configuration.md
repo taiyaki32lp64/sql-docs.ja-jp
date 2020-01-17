@@ -20,11 +20,11 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: 2401fab80c6210e3061e9cb949f1c92bab456525
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48222222"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63187930"
 ---
 # <a name="metadata-visibility-configuration"></a>メタデータ表示の構成
   メタデータの表示は、ユーザーが所有するセキュリティ保護可能なリソース、またはそのユーザーが権限を許可されているセキュリティ保護可能なリソースに制限されています。 たとえば、次のクエリを実行すると、ユーザーがテーブル `myTable`に対する SELECT または INSERT 権限を許可されている場合は、1 行が返されます。  
@@ -187,7 +187,7 @@ GO
 |**sys.sql_dependencies**|**sys.type_assembly_usages**|  
 |**sys.parameter_type_usages**|**sys.column_type_usages**|  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [GRANT &#40;Transact-SQL&#41;](/sql/t-sql/statements/grant-transact-sql)   
  [DENY &#40;Transact-SQL&#41;](/sql/t-sql/statements/deny-transact-sql)   
  [REVOKE &#40;Transact-SQL&#41;](/sql/t-sql/statements/revoke-transact-sql)   

@@ -19,11 +19,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: ddbf842839e917477269c0de7886055d585a196c
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52797074"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63250489"
 ---
 # <a name="replication-backward-compatibility"></a>レプリケーションの旧バージョンとの互換性
   旧バージョンとの互換性のセクションの各トピックでは、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] レプリケーションのバージョン間における動作の違いについて説明します。 アップグレードを行う場合や、レプリケーション トポロジ内に複数のバージョンの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] が存在する場合は、旧バージョンとの互換性を理解することが重要です。  

@@ -2,7 +2,7 @@
 title: Reporting Services エラーの原因と解決方法 | Microsoft Docs
 ms.date: 03/01/2017
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: troubleshooting
 ms.topic: conceptual
 helpviewer_keywords:
@@ -10,21 +10,21 @@ helpviewer_keywords:
 - errors [Reporting Services]
 - troubleshooting [Reporting Services], errors
 ms.assetid: 3db0fef3-37f8-40d0-acc7-1928760dc0e9
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: b330d2dc764a029f805d5063cf99019574173c4c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: a554e3f4ce5f7f5f844038eeb8c31f84e205312c
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47784242"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65575580"
 ---
 # <a name="cause-and-resolution-of-reporting-services-errors"></a>Reporting Services エラーの原因と解決方法
   このトピックでは、 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]に関連するさまざまなエラーの原因と解決方法について説明します。 このセクションのエラー メッセージ トピックでは、エラー メッセージとその原因、および問題を解決するための対策について説明します。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
   
-|[エラー]|メッセージ|  
+|Error|メッセージ|  
 |-----------|-------------|  
 |[rsAccessedDenied - Reporting Services エラー](../../reporting-services/troubleshooting/rsaccesseddenied-reporting-services-error.md)|ユーザー 'mydomain\myAccount' には、この操作を行うのに必要な権限が与えられていません。 (rsAccessDenied) (ReportingServicesLibrary)。|  
 |[rsInternalError - Reporting Services エラー](../../reporting-services/troubleshooting/rsinternalerror-reporting-services-error.md)|レポート サーバーで内部エラーが発生しました。 詳細については、エラー ログを参照してください。|  

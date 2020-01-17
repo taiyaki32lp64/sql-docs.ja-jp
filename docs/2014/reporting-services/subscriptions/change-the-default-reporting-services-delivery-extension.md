@@ -4,21 +4,20 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 helpviewer_keywords:
 - Report Manager [Reporting Services], default delivery extension
 ms.assetid: 5f6fee72-01bf-4f6c-85d2-7863c46c136b
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 1cba433f840f2e2284ed41ca4b87f0fd2bb1410f
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: e37dcf69a09d92236e0b8f4f97cb99541f1c7532
+ms.sourcegitcommit: a165052c789a327a3a7202872669ce039bd9e495
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56013683"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72783253"
 ---
 # <a name="change-the-default-reporting-services-delivery-extension"></a>Reporting Services の既定の配信拡張機能を変更する
   サブスクリプション定義ページの [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] [配信者] **リストに表示される既定の配信拡張機能は** の構成設定で変更できます。 たとえば、ユーザーが新しいサブスクリプションを作成したときに電子メール配信ではなくファイル共有配信が既定で選択されるように構成を変更することができます。 また、ユーザー インターフェイスにおける配信拡張機能の表示順を変更することもできます。  
@@ -34,7 +33,7 @@ ms.locfileid: "56013683"
   
  以下に示すコードは、 **RSReportServer.config** の既定のセクションです。既定の配信拡張機能とレポート マネージャーにおける表示順がこのセクションで制御されます。 このファイルで電子メールが先に記述され、なおかつ既定として設定されていることに注目してください。  
   
-```  
+```xml
 <DeliveryUI>  
      <Extension Name="Report Server Email" Type="Microsoft.ReportingServices.EmailDeliveryProvider.EmailDeliveryProviderControl,ReportingServicesEmailDeliveryProvider">  
           <DefaultDeliveryExtension>True</DefaultDeliveryExtension>  
@@ -54,7 +53,7 @@ ms.locfileid: "56013683"
   
      テキスト エディターで RSReportServer.config ファイルを開きます。 構成ファイルの詳細については、「 [RSReportServer Configuration File](../report-server/rsreportserver-config-configuration-file.md)」を参照してください。 以下の画像は、構成変更後の UI を示しています。  
   
-     ![配信拡張機能の変更した一覧](../media/ssrs-modified-delivery.png "配信拡張機能の変更した一覧")  
+     ![配信拡張機能の変更された一覧](../media/ssrs-modified-delivery.png "配信拡張機能の変更された一覧")  
   
 2.  DeliveryUI セクションを以下の例のように変更します。主な変更点は次のとおりです。  
   
@@ -101,22 +100,20 @@ ms.locfileid: "56013683"
   
 2.  [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] サービス アプリケーションの名前が既にわかっている場合、この手順は省略してかまいません。 次の PowerShell コマンドを使用して、SharePoint ファーム内の [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] サービス アプリケーションを一覧表示します。  
   
-    ```  
-    get-sprsserviceapplication | format-list *  
+    ```powershell
+    Get-SPRSServiceApplication | Format-List *  
     ```  
   
 3.  [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] サービス アプリケーション "ssrsapp" に使用されている現在の既定の配信拡張機能を次の PowerShell コードで確認します。  
   
-    ```  
-    $app=get-sprsserviceapplication | where {$_.name -like "ssrsapp*"};Get-SPRSExtension -identity $app | where{$_.ServerDirectivesXML -like "<DefaultDelivery*"} | format-list *  
-  
+    ```powershell
+    $app = Get-SPRSServiceApplication | Where {$_.name -Like "ssrsapp*"};
+    Get-SPRSExtension -Identity $app | Where {$_.ServerDirectivesXML -Like "<DefaultDelivery*"} | Format-List *
     ```  
   
 ## <a name="see-also"></a>参照  
- [RSReportServer 構成ファイル](../report-server/rsreportserver-config-configuration-file.md)   
- [RSReportServer 構成ファイル](../report-server/rsreportserver-config-configuration-file.md)   
+ [Rsreportserver 構成ファイル](../report-server/rsreportserver-config-configuration-file.md)   
+ [Rsreportserver 構成ファイル](../report-server/rsreportserver-config-configuration-file.md)   
  [Reporting Services でのファイル共有の配信](file-share-delivery-in-reporting-services.md)   
  [Reporting Services の電子メール配信](e-mail-delivery-in-reporting-services.md)   
- [レポート サーバー電子メール配信用に構成&#40;SSRS 構成マネージャー&#41;](../../sql-server/install/configure-a-report-server-for-e-mail-delivery-ssrs-configuration-manager.md)  
-  
-  
+ [電子メール配信&#40;SSRS 用にレポートサーバーを構成する Configuration Manager&#41;](../../sql-server/install/configure-a-report-server-for-e-mail-delivery-ssrs-configuration-manager.md)  

@@ -2,18 +2,18 @@
 title: 別のコンピューターへのレポート サーバー データベースの移動 (SSRS ネイティブ モード) | Microsoft Docs
 ms.date: 05/30/2017
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: report-server
 ms.topic: conceptual
 ms.assetid: 44a9854d-e333-44f6-bdc7-8837b9f34416
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 94cdbe6358bd0361addd70d682a3d0d41e70bbba
-ms.sourcegitcommit: 9f2edcdf958e6afce9a09fb2e572ae36dfe9edb0
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: be1e4f34356f611e4c76ba57aa12bd13b0bf8f30
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50100223"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65619686"
 ---
 # <a name="moving-the-report-server-databases-to-another-computer-ssrs-native-mode"></a>別のコンピューターへのレポート サーバー データベースの移動 (SSRS ネイティブ モード)
 
@@ -27,14 +27,14 @@ ms.locfileid: "50100223"
   
 -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェント ジョブは、スケジュールを開始する際に使用され、新しいデータベース インスタンスで再作成されます。 このジョブを新しいコンピューターに移動する必要はありませんが、そのコンピューターで今後使用しないジョブは削除することをお勧めします。  
   
--   サブスクリプション、キャッシュされたレポート、およびスナップショットは、移動したデータベースに保持されます。 データベースの移動後にスナップショットが更新されたデータを取得していない場合は、レポート マネージャーでスナップショット オプションを解除し、 **[適用]** をクリックして変更を保存します。次に、スケジュールを再作成し、もう一度 **[適用]** をクリックして変更を保存します。  
+-   サブスクリプション、キャッシュされたレポート、およびスナップショットは、移動したデータベースに保持されます。 データベースの移動後にスナップショットが更新されたデータを取得していない場合は、スナップショット オプションを解除し、 **[適用]** を選択して変更を保存します。次に、スケジュールを再作成し、もう一度 **[適用]** を選択して変更を保存します。  
   
 -   reportservertempdb に格納される一時的なレポートとユーザー セッション データは、データベースを移動すると保存されます。  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] には、バックアップと復元、アタッチとデタッチ、コピーなど、データベースを移動するための方法がいくつかあります。 ただし、既存のデータベースを新しいサーバー インスタンスに再配置する場合に、これらすべての方法が適切とは限りません。 レポート サーバー データベースを移動するために使用する方法は、システムの可用性要件によって異なります。 レポート サーバー データベースを移動する最も簡単な方法は、レポート サーバー データベースをアタッチおよびデタッチすることです。 ただし、この方法を使用する場合、データベースをデタッチするときにレポート サーバーをオフラインにする必要があります。 サービスの中断を最小限に抑えるには、バックアップと復元が適しています。ただし、この操作を行うには、 [!INCLUDE[tsql](../../includes/tsql-md.md)] コマンドを実行する必要があります。 権限設定がデータベースに保持されないため、データベースをコピーすること (特に、データベース コピー ウィザードの使用) は推奨されていません。  
   
 > [!IMPORTANT]  
->  このトピックの手順をお勧めできるのは、既存環境に対して行う変更が、レポート サーバー データベースの再配置のみの場合です。 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] インストール全体を移行する場合 (データベースの移動と、データベースを使用するレポート サーバー Windows サービスの ID の変更を行う場合)、接続を再構成して、暗号化キーを再設定する必要があります。  
+>  この記事の手順をお勧めできるのは、既存環境に対して行う変更が、レポート サーバー データベースの再配置のみの場合です。 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] インストール全体を移行する場合 (データベースの移動と、データベースを使用するレポート サーバー Windows サービスの ID の変更を行う場合)、接続を再構成して、暗号化キーを再設定する必要があります。  
   
 ## <a name="detaching-and-attaching-the-report-server-databases"></a>レポート サーバー データベースのデタッチとアタッチ  
  レポート サーバーをオフラインにすると、データベースをデタッチして、使用する [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスにデータベースを移動できます。 この方法では、権限がデータベースに保持されます。 SQL Server データベースを使用している場合は、SQL Server の別のインスタンスにそのデータベースを移動する必要があります。 データを移動した後、レポート サーバーがそのレポート サーバー データベースに接続されるように再構成する必要があります。 スケールアウト配置を実行している場合は、各レポート サーバーについて、レポート サーバー データベースの接続を再構成する必要があります。  

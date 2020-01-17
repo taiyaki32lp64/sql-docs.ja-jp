@@ -7,15 +7,15 @@ ms.reviewer: ''
 ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: 9ba826a0-11c5-4819-9435-3e17d53cffa7
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 345dd3670fe42789907a567fce4df4ad34ce3cd3
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: fb3fa69a552dc00c85e1053cb230ba56ae840ac8
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56031963"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65484065"
 ---
 # <a name="task-11-publishing-the-knowledge-base"></a>タスク 11:ナレッジ ベースをパブリッシュする
   ここでは、ナレッジ ベースをパブリッシュします。 パブリッシュされたナレッジ ベースは、データ品質プロジェクトでのクレンジングまたは照合アクティビティに使用できます。  

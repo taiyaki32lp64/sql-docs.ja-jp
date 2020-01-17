@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 f1_keywords:
 - "10226"
@@ -156,15 +155,15 @@ f1_keywords:
 - "10190"
 - "10232"
 ms.assetid: 1f086882-4834-48e9-ab30-c214beee2040
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: c27f8438d0576f06fb071b4073035a5885a2606e
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: ec55d658da67c7d6ef7e9989f310c26ef11a20d3
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56297390"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66105744"
 ---
 # <a name="gauges-report-builder-and-ssrs"></a>ゲージ (レポート ビルダーおよび SSRS)
   ゲージ データ領域は、データセット内の 1 つの値を表示する 1 次元データ領域です。 各ゲージは常に、ゲージ パネル内に配置されます。ゲージ パネルでは、子ゲージまたは隣接ゲージを追加できます。 ゲージ パネルを使用すると、フィルター選択、グループ化、並べ替えなどの共通機能を使用する 1 つのゲージ パネル内に複数のゲージを作成できます。  
@@ -181,7 +180,7 @@ ms.locfileid: "56297390"
   
  ![ゲージ要素の図](../media/gauge-elements-diagram.gif "ゲージ要素の図")  
   
- ゲージを Kpi として使用する方法の詳細については、次を参照してください。[チュートリアル。レポートへの KPI の追加&#40;レポート ビルダー&#41;](../tutorial-adding-a-kpi-to-your-report-report-builder.md)します。  
+ ゲージを KPI として使用する方法の詳細については、「[チュートリアル:レポートへの KPI の追加 &#40;レポート ビルダー&#41;](../tutorial-adding-a-kpi-to-your-report-report-builder.md)」を参照してください。  
   
 > [!NOTE]  
 >  ゲージは、レポート パーツとしてレポートとは別にパブリッシュできます。 [!INCLUDE[ssRBrptparts](../../includes/ssrbrptparts-md.md)]  
@@ -204,13 +203,13 @@ ms.locfileid: "56297390"
   
  ![rs_RadialGauge](../media/rs-radialgauge.gif "rs_RadialGauge")  
   
- 放射状ゲージのオプション:放射状、ミニゲージ、2 つのスケール、右上 90 °、左上 90 °、左下 90 °、右下 90 °、上 180 °、下 180 °、180 度 West180 度東部、およびメーターで放射状. です。  
+ 放射状ゲージのオプション:放射状、ミニゲージ付きで放射状、2 つのスケール、右上 90°、左上 90°、左下 90°、右下 90°、上 180°、下 180°、左 180°、右 180°、メーター。  
   
  **線形ゲージ**  
   
  ![rs_LinearGauge](../media/rs-lineargauge.gif "rs_LinearGauge")  
   
- 線形ゲージのオプション:水平、垂直、複数バー ポインター、2 つのスケール、3 色の範囲、対数、温度計、温度計華氏/(摂氏)、およびブレット グラフ。  
+ 線形ゲージのオプション:横、縦、複数バー ポインター、2 つのスケール、3 色の範囲、対数、温度計、温度計 (華氏/摂氏)、ブレット グラフ。  
   
   
 ##  <a name="AddingData"></a> ゲージへのデータの追加  

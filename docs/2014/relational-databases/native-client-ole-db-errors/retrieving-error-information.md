@@ -17,15 +17,15 @@ ms.assetid: 687b3c27-1a00-4122-8276-ea0f8fed895a
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: ffc13d634c5f213980f837db958860ea7ff51b32
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: a62997caa5625a901684e2e8da3c5dc8c46a82b9
+ms.sourcegitcommit: f76b4e96c03ce78d94520e898faa9170463fdf4f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48214482"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70874592"
 ---
 # <a name="retrieving-error-information"></a>エラー情報の取得
-  この例では、によって公開されるさまざまなエラー インターフェイスから情報を取得、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB プロバイダー。  
+  この例では、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB プロバイダーによって公開されるさまざまなエラーインターフェイスから情報を取得します。  
   
 ```  
 // DumpErrorInfo queries SQLOLEDB error interfaces, retrieving available  
@@ -64,7 +64,7 @@ void DumpErrorInfo
     SSERRORINFO*            pSSErrorInfo = NULL;  
     OLECHAR*                pSSErrorStrings = NULL;  
   
-    // Hard-code an American English locale for the example.  
+    // Hard-code an English (United States) locale for the example.  
     DWORD                   MYLOCALEID = 0x0409;  
   
     // Only ask for error information if the interface supports  
@@ -216,7 +216,7 @@ void DumpErrorInfo
     }  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [エラー](errors.md)  
   
   

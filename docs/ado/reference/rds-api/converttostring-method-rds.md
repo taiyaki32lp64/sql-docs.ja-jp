@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: b3f36bc8-6f69-49b0-83cd-2ccd3afebfbe
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 426fd1fdcd3931981037b346b048de816e8596d0
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.openlocfilehash: 71e50c4f611342c8e06687c47ab1c45fb60974ac
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51600292"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67964572"
 ---
 # <a name="converttostring-method-rds"></a>ConvertToString メソッド (RDS)
 変換を[レコード セット](../../../ado/reference/ado-api/recordset-object-ado.md)レコード セットのデータを表す MIME 文字列にします。  
@@ -54,7 +53,7 @@ DataFactory.ConvertToString(Recordset)
 ## <a name="applies-to"></a>適用対象  
  [DataFactory オブジェクト (RDSServer)](../../../ado/reference/rds-api/datafactory-object-rdsserver.md)  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [ConvertToString メソッドの例 (VB)](../../../ado/reference/ado-api/converttostring-method-example-vb.md)   
  [ConvertToString メソッドの例 (VBScript)](../../../ado/reference/rds-api/converttostring-method-example-vbscript.md)
 

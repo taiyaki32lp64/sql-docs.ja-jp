@@ -9,13 +9,13 @@ ms.topic: conceptual
 ms.assetid: 9418cb34-d869-4d24-95b3-6cb9db949bb0
 author: Shamikg
 ms.author: Shamikg
-manager: v-thobro
-ms.openlocfilehash: f1497b40fbf3462228af6b0ef9ce964c7212df64
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: shamikg
+ms.openlocfilehash: a5e8feb6c083c787d877cbc5491c533b8a35d740
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47664246"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68266606"
 ---
 # <a name="project-settingsloading-system-objects-oracletosql"></a>プロジェクトの設定 (システム オブジェクトの読み込み) (OracleToSQL)
 [システム オブジェクトの読み込み] ページ、**プロジェクト設定** ダイアログ ボックスでは、SSMA に変換し、読み込む Oracle システム オブジェクトを指定できます。[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]します。  

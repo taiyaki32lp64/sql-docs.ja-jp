@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 8da14323-9dd6-4019-bf79-3e8b972a9bc0
 author: Shamikg
 ms.author: Shamikg
-manager: craigg
-ms.openlocfilehash: 2d40fd986c68968680bcd39821d762101723b87b
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 75ce91d7948b53522f6ac861a078f8f902b23ab7
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56026732"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68086788"
 ---
 # <a name="viewing-test-case-reports-oracletosql"></a>テスト ケースのレポートの表示 (OracleToSQL)
 テスト_ケースのレポートは、テスト検証の結果とテストの一般的な情報を示します。 失敗した場合、テスト、検証済みのオブジェクト内の一致しないデータに関する情報も表示されます。  
@@ -43,7 +42,7 @@ ms.locfileid: "56026732"
 **終了処理**  
 としての実行の状態を表示**成功**または**エラー**します。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
 [テスト_ケースを実行している&#40;OracleToSQL&#41;](../../ssma/oracle/running-test-cases-oracletosql.md)  
 [移行されたデータベース オブジェクトのテスト&#40;OracleToSQL&#41;](../../ssma/oracle/testing-migrated-database-objects-oracletosql.md)  
   

@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: a584e642-a4a3-418e-bc20-3aff81a5625a
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 17cf661e092e253e206b595dec5d807a35b895fb
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 6fcdb630f2391f685080ac594cfdb537edf626a2
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47770890"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67925322"
 ---
 # <a name="fabricating-hierarchical-recordsets"></a>階層レコードセットの作成
 次の例は、データのシェイプの親、子、および孫の列を定義する文法を使用して、基になるデータ ソースのない階層レコード セットを作成する方法を示しています。**レコード セット**します。  

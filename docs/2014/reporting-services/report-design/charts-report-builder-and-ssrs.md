@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 f1_keywords:
 - sql12.rtp.rptdesigner.chartareaproperties.3doptions.f1
@@ -18,15 +17,15 @@ f1_keywords:
 - "10251"
 - "10172"
 ms.assetid: d56d0521-362f-4361-843a-acf2c897a87c
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 84a4d723a545ebe6fb849d3b5b78f2f2e8e99908
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: 6fb26ce238953f9bf4a3472385de6dd1bf5c167d
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56295390"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66106249"
 ---
 # <a name="charts-report-builder-and-ssrs"></a>グラフ (レポート ビルダーおよび SSRS)
   データをビジュアル形式でまとめるには、グラフ データ領域を使用します。 グラフを使用すると、大量の集計情報がひとめでわかります。 グラフを作成する前に、データを慎重に準備および理解することが重要です。これにより、グラフをすばやく効率的にデザインできます。 詳細については、「[レポートへのグラフの追加 &#40;レポート ビルダーおよび SSRS&#41;](add-a-chart-to-a-report-report-builder-and-ssrs.md)」を参照してください。 グラフをすぐに使用を開始するには、バー、列、スパーク ライン、および円グラフのチュートリアルを参照してください[チュートリアル&#40;レポート ビルダー&#41; ](../report-builder-tutorials.md)または横棒グラフおよび円グラフのチュートリアル[Reporting Services のチュートリアル&#40;SSRS&#41;](../reporting-services-tutorials-ssrs.md)します。  
@@ -148,12 +147,12 @@ ms.locfileid: "56295390"
  [グラフのトラブルシューティング &#40;レポート ビルダーおよび SSRS&#41;](troubleshoot-charts-report-builder-and-ssrs.md)  
  グラフを操作する際に役立つヒントについて説明します。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [画像、テキスト ボックス、四角形、および罫線 &#40;レポート ビルダーおよび SSRS&#41;](rectangles-and-lines-report-builder-and-ssrs.md)   
  [対話的な並べ替え、ドキュメント マップ、およびリンク &#40;レポート ビルダーおよび SSRS&#41;](interactive-sort-document-maps-and-links-report-builder-and-ssrs.md)   
  [入れ子になったデータ領域 (レポート ビルダーおよび SSRS)](nested-data-regions-report-builder-and-ssrs.md)   
- [チュートリアル: レポートに縦棒グラフの追加&#40;レポート ビルダー&#41;](../tutorial-add-a-column-chart-to-your-report-report-builder.md)   
- [チュートリアル: 円グラフをレポートに追加&#40;レポート ビルダー&#41;](../tutorial-add-a-pie-chart-to-your-report-report-builder.md)   
- [チュートリアル: レポートに横棒グラフの追加&#40;レポート ビルダー&#41;](../tutorial-add-a-bar-chart-to-your-report-report-builder.md)  
+ [チュートリアル: レポートへの縦棒グラフの追加 &#40;レポート ビルダー&#41;](../tutorial-add-a-column-chart-to-your-report-report-builder.md)   
+ [チュートリアル: レポートへの円グラフの追加 &#40;レポート ビルダー&#41;](../tutorial-add-a-pie-chart-to-your-report-report-builder.md)   
+ [チュートリアル: レポートへの横棒グラフの追加 &#40;レポート ビルダー&#41;](../tutorial-add-a-bar-chart-to-your-report-report-builder.md)  
   
   

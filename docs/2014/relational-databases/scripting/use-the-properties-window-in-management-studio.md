@@ -1,11 +1,10 @@
 ---
-title: Management Studio の [プロパティ] ウィンドウの使用 | Microsoft Docs
-ms.custom: ''
+title: Management Studio の [プロパティ] ウィンドウの使用
+ms.custom: seo-lt-2019
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 helpviewer_keywords:
 - viewing properties
@@ -15,12 +14,12 @@ ms.assetid: 903d4aca-f57c-43d9-a893-702eceaa7004
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: a210cea5407bc56e45c4ea8cc12a578ed488b59c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: ddcb099e81ef99ff3a2f0d0cf7bbf23adc0bc16b
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48156032"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75242969"
 ---
 # <a name="use-the-properties-window-in-management-studio"></a>Management Studio の [プロパティ] ウィンドウの使用
   [プロパティ] ウィンドウには、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]内の項目 (接続、プラン表示操作など) の状態や、データベース オブジェクト (テーブル、ビュー、デザイナーなど) の情報が表示されます。  
@@ -43,7 +42,8 @@ ms.locfileid: "48156032"
   
 ### <a name="to-view-the-properties-of-a-showplan-operator"></a>プラン表示操作のプロパティを表示するには  
   
-1.  **[クエリ]** メニューの **[実際の実行プランを含める]** をクリックします。  
+1.  
+  **[クエリ]** メニューの **[実際の実行プランを含める]** をクリックします。  
   
 2.  SQL クエリ エディターで、クエリを入力して実行します。  
   
@@ -52,6 +52,6 @@ ms.locfileid: "48156032"
 4.  SQL クエリ エディターの **[実行プラン]** タブでオペレーターのアイコンをクリックすると、[プロパティ] ウィンドウにそのオペレーターの情報が表示されます。  
   
 ## <a name="see-also"></a>参照  
- [[プロパティ] ウィンドウ &#40;Management Studio&#41;](../../ssms/properties-window-management-studio.md)  
+ [プロパティウィンドウ &#40;Management Studio&#41;](../../ssms/properties-window-management-studio.md)  
   
   

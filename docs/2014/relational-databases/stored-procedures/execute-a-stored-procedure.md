@@ -19,12 +19,12 @@ ms.assetid: a0b1337d-2059-4872-8c62-3f967d8b170f
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 528881f91b39e2dd25ce76c63c5cbead33392265
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 0cd447f6ad12ee12c96f6bcbb6af858aa32fdb06
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48057490"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63016061"
 ---
 # <a name="execute-a-stored-procedure"></a>ストアド プロシージャの実行
   このトピックでは、 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] または [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] を使用して、 [!INCLUDE[tsql](../../includes/tsql-md.md)]でストアド プロシージャを実行する方法について説明します。  
@@ -47,13 +47,13 @@ ms.locfileid: "48057490"
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> 作業を開始する準備  
+##  <a name="BeforeYouBegin"></a> はじめに  
   
 ###  <a name="Restrictions"></a> 制限事項と制約事項  
   
 -   システム プロシージャ名を照合するときに、呼び出し元のデータベースの照合順序が使用されます。 そのため、プロシージャの呼び出しでは、システム プロシージャ名の大文字と小文字を常に区別する必要があります。 たとえば、次のコードは、大文字と小文字を区別する照合順序が指定されたデータベースのコンテキストで実行された場合は失敗します。  
   
-    ```tsql  
+    ```sql  
     EXEC SP_heLP; -- Will fail to resolve because SP_heLP does not equal sp_help  
     ```  
   
@@ -67,7 +67,7 @@ ms.locfileid: "48057490"
   
      システム ストアド プロシージャは、 **sp_** というプレフィックスで始まります。 システム ストアド プロシージャは、論理的にすべてのユーザー定義データベースおよびシステム定義データベースに表示されるため、プロシージャ名を完全修飾する必要なく、任意のデータベースから実行できます。 ただし、名前の競合を回避するためには、すべてのシステム プロシージャ名を **sys** スキーマ名でスキーマ修飾することをお勧めします。 次の例は、システム ストアド プロシージャの呼び出しに関して推奨されている方法を示しています。  
   
-    ```tsql  
+    ```sql  
     EXEC sys.sp_who;  
     ```  
   
@@ -77,7 +77,7 @@ ms.locfileid: "48057490"
   
      次の例は、ユーザー定義のプロシージャを実行するために推奨されている方法を示しています。 このプロシージャは 1 つの入力パラメーターを受け取ります。 入力パラメーターと出力パラメーターを指定する方法の詳細については、「 [パラメーターの指定](specify-parameters.md)」を参照してください。  
   
-    ```tsql  
+    ```sql  
     USE AdventureWorks2012;  
     GO  
     EXEC dbo.uspGetEmployeeManagers @BusinessEntityID = 50;  
@@ -85,7 +85,7 @@ ms.locfileid: "48057490"
   
      または  
   
-    ```tsql  
+    ```sql  
     EXEC AdventureWorks2012.dbo.uspGetEmployeeManagers 50;  
     GO  
     ```  
@@ -164,7 +164,7 @@ ms.locfileid: "48057490"
   
 3.  次の例をコピーしてクエリ ウィンドウに貼り付け、 **[実行]** をクリックします。 この例は、1 つのパラメーターを受け取るストアド プロシージャを実行する方法を示します。 この例では、 `uspGetEmployeeManagers` パラメーター値として値  `6` を指定して、 `@EmployeeID` ストアド プロシージャを実行します。  
   
-```tsql  
+```sql  
 USE AdventureWorks2012;  
 GO  
 EXEC dbo.uspGetEmployeeManagers 6;  
@@ -179,7 +179,7 @@ GO
   
 3.  次の例をコピーしてクエリ ウィンドウに貼り付け、 **[実行]** をクリックします。 この例は、 [sp_procoption](/sql/relational-databases/system-stored-procedures/sp-procoption-transact-sql) を使用してプロシージャの自動実行を設定する方法を示しています。  
   
-```tsql  
+```sql  
 USE AdventureWorks2012;  
 GO  
 EXEC sp_procoption @ProcName = '<procedure name>'   
@@ -195,7 +195,7 @@ EXEC sp_procoption @ProcName = '<procedure name>'
   
 3.  次の例をコピーしてクエリ ウィンドウに貼り付け、 **[実行]** をクリックします。 この例は、 [sp_procoption](/sql/relational-databases/system-stored-procedures/sp-procoption-transact-sql) を使用して、プロシージャの自動実行を解除する方法を示しています。  
   
-```tsql  
+```sql  
 USE AdventureWorks2012;  
 GO  
 EXEC sp_procoption @ProcName = '<procedure name>'   

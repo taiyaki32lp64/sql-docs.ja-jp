@@ -15,14 +15,13 @@ helpviewer_keywords:
 ms.assetid: f22daef8-e350-40ef-8ff0-b5f87d1d9e56
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: d325480ad39800d28161e79cf468419278fb894f
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: b0aeeeab2e90ebd90068be44f817cd6bd65af061
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52507348"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72907266"
 ---
 # <a name="modify-check-constraints"></a>CHECK 制約の変更
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -33,7 +32,7 @@ ms.locfileid: "52507348"
   
 -   **作業を開始する準備:**  
   
-     [Security](#Security)  
+     [セキュリティ](#Security)  
   
 -   **CHECK 制約を変更するための方法:**  
   
@@ -74,7 +73,7 @@ ms.locfileid: "52507348"
 5.  **[閉じる]** をクリックします。  
   
 6.  **[ファイル]** メニューの **[<_テーブル名_> を保存]** をクリックします。  
-  
+
 ##  <a name="TsqlProcedure"></a> Transact-SQL の使用  
  **CHECK 制約を変更するには**  
   

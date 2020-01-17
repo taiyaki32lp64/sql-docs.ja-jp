@@ -7,15 +7,15 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: e062a9ab-1e6b-4061-845a-4f8a0552b09d
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 79e6f6956cd9406bad988ad8076526478f6cf69b
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: ee7d1aba2b468c8aa0420bbacc76aea652ae7556
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52773150"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62828656"
 ---
 # <a name="ado-net-custom-properties"></a>ADO NET カスタム プロパティ
   **変換元のカスタム プロパティ**  
@@ -49,6 +49,6 @@ ms.locfileid: "52773150"
  詳しくは、「 [ADO NET 変換先](ado-net-destination.md)」をご覧ください。  
   
 ## <a name="see-also"></a>参照  
- [Common Properties](../common-properties.md)  
+ [共通プロパティ](../common-properties.md)  
   
   

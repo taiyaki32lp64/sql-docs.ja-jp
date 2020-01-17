@@ -15,15 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - STAsBinary method
 ms.assetid: 99602a62-265d-4aa4-a8dc-92992ca55ba4
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: 10a3c61b4fa5d261b35ca2f8fe57c73ec06dd66e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: MladjoA
+ms.author: mlandzic
+ms.openlocfilehash: 559a358e0a95af870a716001abb3935523d86248
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47813460"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68042544"
 ---
 # <a name="stasbinary-geography-data-type"></a>STAsBinary (geography データ型)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
@@ -42,7 +41,7 @@ ms.locfileid: "47813460"
 ## <a name="return-types"></a>戻り値の型  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 戻り値の型: **varbinary(max)**  
   
- CLR 戻り値の型: **SqlBytes**  
+ CLR の戻り値の型:**SqlBytes**  
   
 ## <a name="remarks"></a>Remarks  
  **geography** インスタンスの OGC 型は、[STGeometryType()](../../t-sql/spatial-geography/stgeometrytype-geography-data-type.md) を呼び出すことによって判別できます。  

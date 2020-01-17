@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: feefe0fd-5679-4c42-aa9e-e52b83f02544
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 7444b02140bb102753cbc25026b990fb92f19d65
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 8f3a08b400c24308c7466f379ecd4dd6eb6c2b8b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47610381"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67939899"
 ---
 # <a name="supported-options-odbc-driver-for-oracle"></a>サポートされているオプション (ODBC Driver for Oracle)
 > [!IMPORTANT]  

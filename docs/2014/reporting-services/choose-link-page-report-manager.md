@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 ms.assetid: a89a555d-efa3-45d6-951e-db78ec6a2c8e
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: ae9bebff71148f9b88228c77fb3946919c7fd197
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 910b06a5cd7af69cc668fb3054dfdfd98c3ae036
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56036123"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66109883"
 ---
 # <a name="choose-link-page-report-manager"></a>[リンクの選択] ページ (レポート マネージャー)
   [リンクの選択] ページでは、現在選択しているリンク レポートに基づいて別のレポートを選択できます。 リンク レポートは、レポート サーバーに既にパブリッシュされている他のレポートに基づいています。 リンク レポートでは基本レポートのレイアウトとデータを使用しますが、個々のプロパティ ページを使用してパラメーターのプロパティ、セキュリティ設定、名前、説明、および場所をカスタマイズできます。  
@@ -43,7 +42,7 @@ ms.locfileid: "56036123"
  **ツリー ビュー**  
  レポート サーバーのフォルダー階層にあるすべてのフォルダーが表示されます。 ツリー ビューを使用して **[場所]** フィールドに入力するには、レポート名をクリックします。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [全般プロパティ ページ、レポート &#40;レポート マネージャー&#41;](../../2014/reporting-services/general-properties-page-reports-report-manager.md)   
  [新しいリンク レポート ページ &#40;レポート マネージャー&#41;](../../2014/reporting-services/new-linked-report-page-report-manager.md)   
  [レポート マネージャー F1 ヘルプ](../../2014/reporting-services/report-manager-f1-help.md)  

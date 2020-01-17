@@ -10,12 +10,12 @@ ms.assetid: 808db1d0-acc1-41d0-9287-8a5455001a02
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 0e3120bc2f18b780101b705200761f868ba94b06
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: fdddf626aa081138d58387b9562327964d600074
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48186902"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62869455"
 ---
 # <a name="mssqlserver1793"></a>MSSQLSERVER_1793
     
@@ -42,7 +42,7 @@ ms.locfileid: "48186902"
   
  次の例は、基本データにパーティション構成が指定されているにもかかわらず、FILESTREAM データには指定されているので、失敗します。  
   
-```tsql  
+```sql  
 DROP INDEX [<clustered_index_name>] ON [<table_name>]   
 WITH ( ONLINE = OFF, MOVE TO [PRIMARY] )  
 GO  
@@ -50,7 +50,7 @@ GO
   
  次の例は、基本データに **MOVE TO** 句、FILESTREAM データに **FILESTREAM_ON** 句の両方が指定されているので、成功します。  
   
-```tsql  
+```sql  
 DROP INDEX [<clustered_index_name>] ON [<table_name>]   
 WITH ( ONLINE = OFF, MOVE TO [PRIMARY], filestream_on 'default' )  
 GO  
@@ -58,7 +58,7 @@ GO
   
  次の例は、基本データに **MOVE TO** 句、FILESTREAM データに **FILESTREAM_ON** 句の両方とも指定されていないので、成功します。  
   
-```tsql  
+```sql  
 DROP INDEX [<clustered_index_name>] ON [<table_name>]   
 WITH ( ONLINE = OFF )  
 GO  

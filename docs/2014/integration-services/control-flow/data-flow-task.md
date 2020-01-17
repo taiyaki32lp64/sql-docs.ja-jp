@@ -15,15 +15,15 @@ helpviewer_keywords:
 - data flow [Integration Services], Data Flow task
 - Integration Services, performance
 ms.assetid: c27555c4-208c-43c8-b511-a4de2a8a3344
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 2afaa918e25c9473513dfdac82cde3223e83df38
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: eab0ef5519aea7f563104d61146ed5f441d15981
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53366864"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62832457"
 ---
 # <a name="data-flow-task"></a>[データ フロー タスク]
   データ フロー タスクは、変換元と変換先との間でデータを移動するデータ フロー エンジンをカプセル化して、データの移動時にユーザーがデータを変換、クリーンアップ、および変更できるようにします。 データ フロー タスクをパッケージの制御フローに追加すると、パッケージでデータの抽出、変換、および読み込みを行うことができます。  
@@ -71,7 +71,7 @@ ms.locfileid: "53366864"
 ### <a name="sample-messages-from-a-data-flow-task"></a>データ フロー タスクからのサンプル メッセージ  
  次の表は、ごく単純なパッケージでのログ エントリのサンプル メッセージの一覧です。 このパッケージは、OLE DB ソースを使用してテーブルからデータを抽出し、並べ替え変換を使用してデータを並べ替え、さらに OLE DB 変換先を使用してデータを別のテーブルに書き込みます。  
   
-|ログ エントリ|メッセージ|  
+|ログ エントリ|Messages|  
 |---------------|--------------|  
 |`BufferSizeTuning`|`Rows in buffer type 0 would cause a buffer size greater than the configured maximum. There will be only 9637 rows in buffers of this type.`<br /><br /> `Rows in buffer type 2 would cause a buffer size greater than the configured maximum. There will be only 9497 rows in buffers of this type.`<br /><br /> `Rows in buffer type 3 would cause a buffer size greater than the configured maximum. There will be only 9497 rows in buffers of this type.`|  
 |`OnPipelinePostEndOfRowset`|`A component will be given the end of rowset signal. : 1180 : Sort : 1181 : Sort Input`<br /><br /> `A component will be given the end of rowset signal. : 1291 : OLE DB Destination : 1304 : OLE DB Destination Input`|  
@@ -86,7 +86,7 @@ ms.locfileid: "53366864"
   
  ログ イベントの多くは複数のエントリを書き込み、多数のログ エントリのメッセージに複雑なデータが含まれています。 メッセージ テキストを解析することで、複雑なメッセージの内容をより簡単に理解して伝えられるようになります。 ログの場所によっては、Transact-SQL ステートメントまたはスクリプト コンポーネントを使用して、複雑なテキストを列、またはより有効なその他の形式に分けることができます。  
   
- たとえば、次の表に含まれるメッセージ "行がデータ フロー コンポーネントに入力として指定されました。 :  :1185:OLE DB ソースの出力:1180:並べ替え:1181:並べ替えの入力:76"は、列に解析します。 このメッセージは、OLE DB ソースから並べ替え変換に行が送信されるときに `OnPipelineRowsSent` イベントによって書き込まれました。  
+ たとえば、次の表に含まれるメッセージ "行がデータ フロー コンポーネントに入力として指定されました。 :  : 1185 : OLE DB ソースの出力 : 1180 : 並べ替え : 1181 : 並べ替えの入力 : 76" は、列へと解析されています。 このメッセージは、OLE DB ソースから並べ替え変換に行が送信されるときに `OnPipelineRowsSent` イベントによって書き込まれました。  
   
 |[列]|説明|値|  
 |------------|-----------------|-----------|  

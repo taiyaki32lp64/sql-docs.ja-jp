@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 48a7b2fe-6bc3-4278-a7ec-1babc1290345
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 5669af5105e8d46f346d279b3be8027b7c22088d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: c8c7429c9352ca7f488317547eb082532c3916eb
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47700100"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72909647"
 ---
 # <a name="start-or-stop-a-collection-set"></a>コレクション セットの開始または停止
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -34,7 +33,7 @@ ms.locfileid: "47700100"
   
      [推奨事項](#Recommendations)  
   
-     [Security](#Security)  
+     [セキュリティ](#Security)  
   
 -   **コレクション セットを開始または停止する方法:**  
   
@@ -42,7 +41,7 @@ ms.locfileid: "47700100"
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> 作業を開始する準備  
+##  <a name="BeforeYouBegin"></a> はじめに  
   
 ###  <a name="Restrictions"></a> 制限事項と制約事項  
   
@@ -67,15 +66,15 @@ ms.locfileid: "47700100"
   
 #### <a name="to-start-a-collection-set"></a>コレクション セットを開始するには  
   
-1.  オブジェクト エクスプローラーで、 **[管理]** ノード、 **[データ コレクション]**、 **[システム データ コレクション セット]** の順に展開します。  
+1.  オブジェクト エクスプローラーで、 **[管理]** ノード、 **[データ コレクション]** 、 **[システム データ コレクション セット]** の順に展開します。  
   
 2.  開始するコレクション セットを右クリックして **[データ コレクション セットの開始]** をクリックします。  
-  
+
      メッセージ ボックスにはこのアクションの結果が表示され、コレクション セットのアイコンに緑色の矢印が付いている場合は、コレクション セットが開始されていることを示します。  
   
 #### <a name="to-stop-a-collection-set"></a>コレクション セットを停止するには  
   
-1.  オブジェクト エクスプローラーで、 **[管理]** ノード、 **[データ コレクション]**、 **[システム データ コレクション セット]** の順に展開します。  
+1.  オブジェクト エクスプローラーで、 **[管理]** ノード、 **[データ コレクション]** 、 **[システム データ コレクション セット]** の順に展開します。  
   
 2.  停止するコレクション セットを右クリックして **[データ コレクション セットの停止]** をクリックします。  
   

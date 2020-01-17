@@ -19,11 +19,11 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: 0444399eb056b733bf0c9f9e7506b434e06b84db
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53357391"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63223289"
 ---
 # <a name="binarypath-property-sqlservice-class-"></a>BinaryPath プロパティ (SqlService クラス)
   サービスのバイナリ パスを取得します。  
@@ -45,7 +45,7 @@ object
   
 ## <a name="remarks"></a>コメント  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [開始とサービスの停止](https://technet.microsoft.com/library/ms174886\(v=sql.105\).aspx)  
   
   

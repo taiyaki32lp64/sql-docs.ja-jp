@@ -13,11 +13,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: e54a04cc9d787ae4d6d4545bbc5d9661bbba213d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48192772"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62869383"
 ---
 # <a name="mssqlserver2020"></a>MSSQLSERVER_2020
     
@@ -118,7 +118,7 @@ ms.locfileid: "48192772"
   
  `GO`  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [sys.dm_sql_referenced_entities &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-sql-referenced-entities-transact-sql)  
   
   

@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: 8697e4a4-4f59-4cda-af71-7de86005bd4a
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 0468195ebe718db73dfa4a302185b677f76c6896
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: 1dd8c492c2353793ad195cea9606a89c502dc5f1
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52413169"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68024477"
 ---
 # <a name="utility-explorer-f1-help"></a>ユーティリティ エクスプローラーの F1 ヘルプ
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -65,7 +64,7 @@ ms.locfileid: "52413169"
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のマネージド インスタンスまたはデータ層アプリケーションについてフィルターを適用したビューを作成するには、ユーティリティ ダッシュボードのスライド式インジケーターの横にある使用率カテゴリのリンクをクリックします。 たとえば、 **ユーティリティ エクスプローラーのコンテンツ** ペインで **[使用率が高いインスタンス CPU]** をクリックすると、SSMS では、現在のポリシー設定に基づいてフィルターが適用され、CPU 使用率の高い [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のマネージド インスタンスについてのリスト ビューが作成されます。  
   
- 使用率カテゴリのリンクをクリックすると、ユーティリティ エクスプローラー ナビゲーション ウィンドウの対応するノードに **(フィルター選択)** と表示されます。つまり、 **[マネージド インスタンス]** のラベルが **[マネージド インスタンス (フィルター選択)]** になります。 フィルターの設定を表示するには、ナビゲーション ウィンドウでノードを右クリックし、 **[フィルター]**、 **[フィルターの設定]** の順にクリックします。 フィルターの設定をクリアするには、ナビゲーション ウィンドウでノードを右クリックし、**[フィルター]**、**[フィルターの削除]** の順にクリックします。  
+ 使用率カテゴリのリンクをクリックすると、ユーティリティ エクスプローラー ナビゲーション ウィンドウの対応するノードに **(フィルター選択)** と表示されます。つまり、 **[マネージド インスタンス]** のラベルが **[マネージド インスタンス (フィルター選択)]** になります。 フィルターの設定を表示するには、ナビゲーション ウィンドウでノードを右クリックし、 **[フィルター]** 、 **[フィルターの設定]** の順にクリックします。 フィルターの設定をクリアするには、ナビゲーション ウィンドウでノードを右クリックし、 **[フィルター]** 、 **[フィルターの削除]** の順にクリックします。  
   
  個々の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスの正常性状態の表示と、ポリシー構成設定の表示または変更の詳細については、「[マネージド インスタンスの詳細 &#40;SQL Server ユーティリティ &#41;](https://msdn.microsoft.com/library/6e51b7bb-a733-4852-8c33-7f4dbdf931c2)」を参照してください。  
   
@@ -140,11 +139,11 @@ ms.locfileid: "52413169"
   
 -   [アプリケーションの CPU] - このデータ層アプリケーションのプロセッサ使用率の正常性状態が表示されます。 このパラメーターの正常性状態は、データ層アプリケーション用に設定された CPU 使用率ポリシーと、変動の多いリソースの評価ポリシーの構成設定に従って決定されます。 詳細については、「[CPU 使用率のポリシーにおけるノイズの軽減 &#40;SQL Server ユーティリティ&#41;](../../relational-databases/manage/reduce-noise-in-cpu-utilization-policies-sql-server-utility.md)」を参照してください。  
   
-     このデータ層アプリケーションのプロセッサ使用率の履歴を表示するか、またはポリシーの制限を表示または変更するには、**[CPU 使用率]** タブをクリックします。  
+     このデータ層アプリケーションのプロセッサ使用率の履歴を表示するか、またはポリシーの制限を表示または変更するには、 **[CPU 使用率]** タブをクリックします。  
   
 -   [コンピューターの CPU] - コンピューターのプロセッサ使用率の正常性状態が表示されます。 このパラメーターの正常性状態は、コンピューター用に設定された CPU 使用率ポリシーと、変動の多いリソースの評価ポリシーの構成設定に従って決定されます。 詳細については、「[CPU 使用率のポリシーにおけるノイズの軽減 &#40;SQL Server ユーティリティ&#41;](../../relational-databases/manage/reduce-noise-in-cpu-utilization-policies-sql-server-utility.md)」を参照してください。  
   
-     このデータ層アプリケーションのプロセッサ使用率の履歴を表示するか、またはポリシーの制限を表示または変更するには、**[CPU 使用率]** タブをクリックします。  
+     このデータ層アプリケーションのプロセッサ使用率の履歴を表示するか、またはポリシーの制限を表示または変更するには、 **[CPU 使用率]** タブをクリックします。  
   
 -   [ファイル領域] - 各データ層アプリケーションに関するファイル領域使用率の正常性状態の概要が表示されます。  
   
@@ -168,17 +167,17 @@ ms.locfileid: "52413169"
   
 -   [配置日]  
   
--   [Trustworthy]\([True] または [False])  
+-   信頼可能: (True または False)  
   
--   [照合順序]  
+-   照合順序  
   
 -   [互換性レベル]\([Version100] など)  
   
--   [暗号化有効]\([True] または [False])  
+-   暗号化有効: (True または False)  
   
--   [復旧モデル]\([単純]、[完全]、または [一括ログ])  
+-   復旧モデル: (単純、完全、または一括ログ)  
   
--   [最終報告日時] - この列には、UCP のローカル日時が datetime データ型で表示されます。 詳細については、「 [datetime (Transact-SQL)](https://go.microsoft.com/fwlink/?LinkId=164071) 」を参照してください。 ユーティリティ オブジェクト モデルを使用する場合は、SSMS で datetimeoffset データ型が使用されることに注意してください。 詳細については、「 [datetimeoffset (Transact-SQL)](https://go.microsoft.com/fwlink/?LinkId=141713) 」を参照してください。  
+-   最終報告日時: この列には、UCP のローカル日時が datetime データ型を使用して表示されます。 詳細については、「 [datetime (Transact-SQL)](https://go.microsoft.com/fwlink/?LinkId=164071) 」を参照してください。 ユーティリティ オブジェクト モデルを使用する場合は、SSMS で datetimeoffset データ型が使用されることに注意してください。 詳細については、「 [datetimeoffset (Transact-SQL)](https://go.microsoft.com/fwlink/?LinkId=141713) 」を参照してください。  
   
  [CPU 使用率] タブ  
  [CPU 使用率] タブには、データ層アプリケーションとコンピューターの CPU 使用率を示す履歴データのグラフが並んで表示されます。  
@@ -234,7 +233,7 @@ ms.locfileid: "52413169"
   
  データ ファイル用およびログ ファイル用に、記憶域使用率のポリシーを構成できます。 ファイルの記憶域使用率ポリシーのしきい値を表示または変更するには、[ストレージの使用率] ペインの下部にある **[ファイル ポリシー]** リンクをクリックします。 記憶域ボリュームの記憶域使用率ポリシーのしきい値を表示または変更するには、[ストレージの使用率] ペインの下部にある **[ボリューム ポリシー]** リンクをクリックします。  
   
- 既定のポリシーのしきい値をオーバーライドするには、**[既定のポリシーをオーバーライド]** のオプション ボタンをクリックして上限と下限の値を指定し、**[OK]** をクリックします。  
+ 既定のポリシーのしきい値をオーバーライドするには、 **[既定のポリシーをオーバーライド]** のオプション ボタンをクリックして上限と下限の値を指定し、 **[OK]** をクリックします。  
   
  ポリシー違反の許容範囲変更の詳細については、「[CPU 使用率のポリシーにおけるノイズの軽減 &#40;SQL Server ユーティリティ&#41;](../../relational-databases/manage/reduce-noise-in-cpu-utilization-policies-sql-server-utility.md)」を参照してください。  
   
@@ -245,17 +244,17 @@ ms.locfileid: "52413169"
   
 -   [配置日]  
   
--   [Trustworthy]\([True] または [False])  
+-   信頼可能: (True または False)  
   
--   [照合順序]  
+-   照合順序  
   
 -   [互換性レベル]\([Version100] など)  
   
--   [暗号化有効]\([True] または [False])  
+-   暗号化有効: (True または False)  
   
--   [復旧モデル]\([単純]、[完全]、または [一括ログ])  
+-   復旧モデル: (単純、完全、または一括ログ)  
   
--   [最終報告日時] - この列には、UCP のローカル日時が datetime データ型で表示されます。 詳細については、「 [datetime (Transact-SQL)](https://go.microsoft.com/fwlink/?LinkId=164071) 」を参照してください。 ユーティリティ オブジェクト モデルを使用する場合は、SSMS で datetimeoffset データ型が使用されることに注意してください。 詳細については、「 [datetimeoffset (Transact-SQL)](https://go.microsoft.com/fwlink/?LinkId=141713) 」を参照してください。
+-   最終報告日時: この列には、UCP のローカル日時が datetime データ型を使用して表示されます。 詳細については、「 [datetime (Transact-SQL)](https://go.microsoft.com/fwlink/?LinkId=164071) 」を参照してください。 ユーティリティ オブジェクト モデルを使用する場合は、SSMS で datetimeoffset データ型が使用されることに注意してください。 詳細については、「 [datetimeoffset (Transact-SQL)](https://go.microsoft.com/fwlink/?LinkId=141713) 」を参照してください。
 
 ## <a name="managed-instance-details-sql-server-utility"></a>マネージド インスタンスの詳細 (SQL Server ユーティリティ)
  ユーティリティ エクスプローラーの [マネージド インスタンス] ビューでは、個々の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]インスタンスの使用率に関するデータ、CPU 使用率の履歴、ファイル レベルでの記憶域使用率の詳細を参照できます。ポリシーしきい値の表示と更新も可能です。 ポリシーのしきい値は、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンス レベルでコンピューター、データベース ファイル、およびログ ファイルを対象に制御するか、記憶域ボリュームのレベルで制御することができます。 特定の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]マネージド インスタンスのプロパティ詳細を参照することもできます。  
@@ -280,11 +279,11 @@ ms.locfileid: "52413169"
   
 -   [インスタンスの CPU] - この [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]インスタンスに割り当てられたプロセッサ使用率の正常性状態が表示されます。 このパラメーターの正常性状態は、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンス用に設定された CPU 使用率ポリシーと、変動の多いリソースの評価ポリシーの構成設定に従って決定されます。 詳細については、「[CPU 使用率のポリシーにおけるノイズの軽減 &#40;SQL Server ユーティリティ&#41;](../../relational-databases/manage/reduce-noise-in-cpu-utilization-policies-sql-server-utility.md)」を参照してください。  
   
-     この [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスのプロセッサ使用率の履歴を表示するか、またはポリシーの制限を表示または変更するには、**[CPU 使用率]** タブをクリックします。  
+     この [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスのプロセッサ使用率の履歴を表示するか、またはポリシーの制限を表示または変更するには、 **[CPU 使用率]** タブをクリックします。  
   
 -   [コンピューターの CPU] - コンピューターのプロセッサ使用率の正常性状態が表示されます。 このパラメーターの正常性状態は、コンピューター用に設定された CPU 使用率ポリシーと、変動の多いリソースの評価ポリシーの構成設定に従って決定されます。 詳細については、「[CPU 使用率のポリシーにおけるノイズの軽減 &#40;SQL Server ユーティリティ&#41;](../../relational-databases/manage/reduce-noise-in-cpu-utilization-policies-sql-server-utility.md)」を参照してください。  
   
-     この [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスのプロセッサ使用率の履歴を表示するか、またはポリシーの制限を表示または変更するには、**[CPU 使用率]** タブをクリックします。  
+     この [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスのプロセッサ使用率の履歴を表示するか、またはポリシーの制限を表示または変更するには、 **[CPU 使用率]** タブをクリックします。  
   
 -   [ファイル領域] - 選択した [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]インスタンスに属するすべてのデータベースについて、ファイル領域使用率の正常性状態の概要が表示されます。 いずれかのデータベースの正常性状態が過大使用になっている場合、そのファイル領域の正常性状態は過大使用としてリスト ビューに報告されます。 いずれかのデータベースの正常性状態が過小使用になっており、かつ、いずれのデータベースも過大使用でない場合、そのファイル領域の正常性状態は過小使用としてリスト ビューに報告されます。 それ以外の場合、ファイル領域の正常性状態は適正使用としてリスト ビューに報告されます。 ポリシーの制限を表示または変更するには、 **[ストレージの使用率]** タブをクリックします。  
   
@@ -308,17 +307,17 @@ ms.locfileid: "52413169"
   
 -   [SQL Server のエディション]  
   
--   [クラスター化]\([True] または [False])  
+-   [クラスター化] (True または False)  
   
 -   [バックアップ ディレクトリ]  
   
 -   [照合順序]  
   
--   [大文字と小文字を区別]\([True] または [False])  
+-   [大文字と小文字を区別する] (True または False)  
   
 -   [言語]  
   
--   [最終報告日時] - この列には、UCP のローカル日時が datetime データ型で表示されます。 詳細については、「 [datetime (Transact-SQL)](https://go.microsoft.com/fwlink/?LinkId=164071) 」を参照してください。 ユーティリティ オブジェクト モデルを使用する場合は、SSMS で datetimeoffset データ型が使用されることに注意してください。 詳細については、「 [datetimeoffset (Transact-SQL)](https://go.microsoft.com/fwlink/?LinkId=141713) 」を参照してください。  
+-   [最終報告日時] この列には、UCP のローカル日時が datetime データ型を使用して表示されます。 詳細については、「 [datetime (Transact-SQL)](https://go.microsoft.com/fwlink/?LinkId=164071) 」を参照してください。 ユーティリティ オブジェクト モデルを使用する場合は、SSMS で datetimeoffset データ型が使用されることに注意してください。 詳細については、「 [datetimeoffset (Transact-SQL)](https://go.microsoft.com/fwlink/?LinkId=141713) 」を参照してください。  
   
  [CPU 使用率] タブ  
  [CPU 使用率] タブには、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスとコンピューターの CPU 使用率を示す履歴データのグラフが並んで表示されます。  
@@ -384,7 +383,7 @@ ms.locfileid: "52413169"
   
  データ ファイル用およびログ ファイル用に、記憶域使用率のポリシーを構成できます。 ファイルの記憶域使用率ポリシーのしきい値を表示または変更するには、[ストレージの使用率] ペインの下部にある **[ファイル ポリシー]** リンクをクリックします。 記憶域ボリュームの記憶域使用率ポリシーのしきい値を表示または変更するには、[ストレージの使用率] ペインの下部にある **[ボリューム ポリシー]** リンクをクリックします。  
   
- 既定のポリシーのしきい値をオーバーライドするには、**[既定のポリシーをオーバーライド]** のオプション ボタンをクリックして上限と下限の値を指定し、**[OK]** をクリックします。  
+ 既定のポリシーのしきい値をオーバーライドするには、 **[既定のポリシーをオーバーライド]** のオプション ボタンをクリックして上限と下限の値を指定し、 **[OK]** をクリックします。  
   
  ポリシー違反の許容範囲変更の詳細については、「[CPU 使用率のポリシーにおけるノイズの軽減 &#40;SQL Server ユーティリティ&#41;](../../relational-databases/manage/reduce-noise-in-cpu-utilization-policies-sql-server-utility.md)」を参照してください。  
   
@@ -405,13 +404,13 @@ ms.locfileid: "52413169"
   
 -   [SQL Server のエディション]  
   
--   [クラスター化]\([True] または [False])  
+-   [クラスター化] (True または False)  
   
 -   [バックアップ ディレクトリ]  
   
 -   [照合順序]  
   
--   [大文字と小文字を区別]\([True] または [False])  
+-   [大文字と小文字を区別する] (True または False)  
   
 -   [言語]  
 
@@ -487,11 +486,11 @@ ms.locfileid: "52413169"
  [ユーティリティ データ ウェアハウスの構成情報]  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のこのリリースで構成できない構成設定は次のとおりです。  
   
--   UMDW name: Sysutility_mdw_\<GUID>_DATA.  
+-   UMDW 名: Sysutility_mdw_\<GUID>_DATA  
   
--   コレクション セットのアップロード頻度: 15 分ごと  
+-   コレクション セットのアップロードの頻度: 15 分ごと。  
   
- UMDW ディレクトリ \<System drive>:\Program Files\Microsoft SQL Server\MSSQL10_50.<UCP_Name>\MSSQL\Data\\ (通常、\<System drive> は C:\ ドライブ) は構成可能です。 ログ ファイル UMDW_\<GUID>_LOG は同じディレクトリにあります。  
+ UMDW ディレクトリは構成可能です: \<システム ドライブ>:\Program Files\Microsoft SQL Server\MSSQL10_50.<UCP_Name>\MSSQL\Data\\ (通常、\<システム ドライブ> は C:\ ドライブです)。 ログ ファイル UMDW_\<GUID>_LOG は同じディレクトリにあります。  
   
 > **注:** UMDW (sysutility_mdw) ファイルの場所を変更するには、デタッチとアタッチを使用する方法と ALTER DATABASE を使用する方法があります。 ALTER DATABASE の使用をお勧めします。 詳細については、「[ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md)」を参照してください。  
   

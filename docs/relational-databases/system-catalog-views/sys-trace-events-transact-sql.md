@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: e7d2c5df-0e17-4e94-9d41-d36c7ee60662
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 302a0ea8c058eb3e69d89c2fc1e742af1965c4ca
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 17bf8ff345e2869d6189491cbf09df49312e1f75
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47628300"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68106657"
 ---
 # <a name="systraceevents-transact-sql"></a>sys.trace_events (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

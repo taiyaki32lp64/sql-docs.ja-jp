@@ -11,11 +11,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: db1f62b6562d794cf35a7bca680e523401c4c8cc
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52407220"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62774836"
 ---
 # <a name="managing-memory-for-in-memory-oltp"></a>インメモリ OLTP のメモリ管理
   メモリ最適化テーブルでは、すべての行とインデックスをメモリ内に保持するために十分なメモリが必要です。 メモリは有限のリソースであるため、システム上のメモリ使用量を把握して管理することが重要です。 このセクションのトピックでは、一般的なメモリの使用量と管理シナリオについて説明します。  
@@ -31,7 +31,7 @@ ms.locfileid: "52407220"
 |[データベースの復元とリソース プールへのバインド](../relational-databases/in-memory-oltp/restore-a-database-and-bind-it-to-a-resource-pool.md)|[!INCLUDE[hek_2](../includes/hek-2-md.md)] データベースを復元して名前付きリソース プールにバインドする手順。|  
 |[インメモリ OLTP ガベージ コレクション](../relational-databases/in-memory-oltp/in-memory-oltp-garbage-collection.md)|削除された行でのガベージ コレクションの動作に関する理解を深めることができます。|  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [インメモリ OLTP &#40;インメモリ最適化&#41;](../relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md)  
   
   

@@ -8,17 +8,20 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: language-reference
 ms.assetid: 273a54f8-b107-4f36-9461-2b475644760d
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: 690d2cb04b9764e0aa0a65934d4f5ae52a5640ff
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 9026edfafeb24eae766e9d42634512a565b6934b
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47613160"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71296677"
 ---
-# <a name="catalogeventmessagecontext"></a>catalog.event_message_context
+# <a name="catalogevent_message_context"></a>catalog.event_message_context 
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] サーバーでの実行について、実行イベントのメッセージに関連付けられた条件に関する情報を表示します。  
@@ -27,7 +30,7 @@ ms.locfileid: "47613160"
 |-----------------|---------------|-----------------|  
 |Context_id|BIGINT|エラー コンテキストの一意の ID。|  
 |Event_message_id|BIGINT|コンテキストに関連するメッセージの一意の ID。|  
-|Context_depth|ssNoversion|深さが増えるにつれて、コンテキストはエラーからかけ離れたものになります。 エラーが発生した場合、コンテキストの深さは 1 から始まります。 値 0 は、実行が開始される前のパッケージの状態を示します。|  
+|Context_depth|INT|深さが増えるにつれて、コンテキストはエラーからかけ離れたものになります。 エラーが発生した場合、コンテキストの深さは 1 から始まります。 値 0 は、実行が開始される前のパッケージの状態を示します。|  
 |Package_path|Nvarchar(max)|コンテキスト ソースのパッケージ パス。|  
 |Context_type|SMALLINT|コンテキストのソースであるオブジェクトの型。 コンテキストの種類の一覧については、「**解説**」セクションを参照してください。|  
 |Context_source_name|Nvarchar (4000)|コンテキストのソースであるオブジェクトの名前。|  

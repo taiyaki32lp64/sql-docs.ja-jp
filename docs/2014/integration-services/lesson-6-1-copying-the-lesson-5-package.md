@@ -7,15 +7,15 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: a25fcc13-987e-4f3d-8f0c-76f7e6e59920
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: d3175da6c4f53bd8a829a54180fd6739d2a3e051
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: ede34999b9ca7a18a2bb5ec997c4a93735b82be2
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53357851"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62890758"
 ---
 # <a name="step-1-copying-the-lesson-5-package"></a>手順 1:レッスン 5 のパッケージのコピー
   ここでは、レッスン 5 で作成した Lesson 5.dtsx パッケージのコピーを作成します。 または、チュートリアルに含まれている、レッスン 5 を完了した状態のパッケージをプロジェクトに追加した後、コピーすることもできます。 レッスン 6 の実習では、このパッケージの新しいコピーを使用します。  
@@ -48,7 +48,7 @@ ms.locfileid: "53357851"
   
 3.  [既存のパッケージのコピーを追加] ダイアログ ボックスの [パッケージの場所] で、[ファイル システム] をクリックします。  
   
-4.  参照ボタン ([...]) をクリックし、コンピューター上の Lesson 5.dtsx に移動して、**[開く]** をクリックします。  
+4.  参照ボタン ([...]) をクリックし、コンピューター上の Lesson 5.dtsx に移動して、 **[開く]** をクリックします。  
   
      このチュートリアルのレッスン パッケージをすべてダウンロードするには、次の手順を実行します。  
   

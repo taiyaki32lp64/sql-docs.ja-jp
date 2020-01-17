@@ -11,15 +11,15 @@ helpviewer_keywords:
 - Active Server Pages
 - updategrams [SQLXML], ASP applications
 ms.assetid: 10eff799-4c39-4b52-8b38-7ea6f68454a8
-author: douglaslMS
-ms.author: douglasl
+author: MightyPen
+ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 26a68a6f66af2f74544f800d7c3786caf4a577d9
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: e209a4f6118ae9581889299c09653ebaf1cfe2cd
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52806154"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66014629"
 ---
 # <a name="using-an-updategram-in-a-sample-asp-application-sqlxml-40"></a>サンプル ASP アプリケーションでのアップデートグラムの使用 (SQLXML 4.0)
   この ASP (Active Server Pages) アプリケーションでは、Microsoft [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] の AdventureWorks サンプル データベースにある Person.Contact テーブル内の顧客情報を更新できます。 このアプリケーションによって次の処理が行われます。  
@@ -158,7 +158,7 @@ You may update customer information below.<br><br>
 </html>  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [アップデート グラムのセキュリティに関する考慮事項&#40;SQLXML 4.0&#41;](../security/updategram-security-considerations-sqlxml-4-0.md)  
   
   

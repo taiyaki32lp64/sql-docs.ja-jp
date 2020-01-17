@@ -13,15 +13,15 @@ helpviewer_keywords:
 - tasks [Integration Services], packages
 - adding package tasks
 ms.assetid: 5d4652d5-228c-4238-905c-346dd8503fdf
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 8ea8b24eafe0005b3e316fd0c7972d4042747639
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: da9a2e5bf8338b8188f00f3c340d50ef32f1204f
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53367164"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62771838"
 ---
 # <a name="adding-tasks-programmatically"></a>プログラムによるタスクの追加
   ランタイム エンジン内の次の種類のオブジェクトに、タスクを追加できます。  

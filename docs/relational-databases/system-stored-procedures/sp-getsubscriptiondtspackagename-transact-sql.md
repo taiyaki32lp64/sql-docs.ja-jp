@@ -15,18 +15,17 @@ helpviewer_keywords:
 ms.assetid: 606c40aa-2593-43af-9762-0f260bbb51f2
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: df214182e992bf9616ddcb77a4f305ea4f47a4c4
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: f8b8f0a91715a2af0cb794965e2de6ad520cabd2
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52818834"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68123927"
 ---
-# <a name="spgetsubscriptiondtspackagename-transact-sql"></a>sp_getsubscriptiondtspackagename (Transact-SQL)
+# <a name="spgetsubscriptiondtspackagename-transact-sql"></a>sp_getsubscriptiondtspackagename (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  データをサブスクライバーに送信するに先立って、データを変換するときに使用するデータ変換サービス (DTS) パッケージの名前を返します。 このストアド プロシージャは、任意のデータベース上のパブリッシャー側で実行されます。  
+  サブスクライバーに送信される前にデータを変換するために使用するデータ変換サービス (DTS) パッケージの名前を返します。 このストアド プロシージャは、任意のデータベースのパブリッシャーで実行されます。  
   
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -39,11 +38,9 @@ sp_getsubscriptiondtspackagename [ @publication = ] 'publication'
 ```  
   
 ## <a name="arguments"></a>引数  
- [ **@publication**=] **'***パブリケーション***'**  
- パブリケーションの名前です。 **'***パブリケーション***'** は**sysname**、既定値はありません。  
+`[ @publication = ] 'publication'` パブリケーションの名前です。 **'***パブリケーション***'** は**sysname**、既定値はありません。  
   
- [  **@subscriber=**] **'***サブスクライバー***'**  
- サブスクライバーの名前です。 *サブスクライバー*が sysname で、既定値は NULL です。  
+`[ @subscriber = ] 'subscriber'` サブスクライバーの名前です。 *サブスクライバー*が sysname で、既定値は NULL です。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  **0** (成功) または**1** (失敗)  

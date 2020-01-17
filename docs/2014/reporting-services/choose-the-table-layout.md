@@ -4,21 +4,20 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 f1_keywords:
 - sql12.rtp.rptwizard.choosetablelayout.f1
 ms.assetid: 370079eb-4a13-42f6-8f90-8fb8adf4d55e
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: eda73eb52e99a24811e55ae89b703db1d9a2e7e9
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: 916ea06221ffd6ff33427a26870cd3005ec79e67
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56297870"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66109847"
 ---
 # <a name="choose-the-table-layout"></a>テーブルのレイアウトを選択
   レポート ウィザードのこのページを使用すると、レポート内のテーブルのレイアウトを選択できます。  

@@ -1,5 +1,5 @@
 ---
-title: getLong (int) メソッド (SQLServerResultSet) |Microsoft Docs
+title: getLong メソッド (int) (SQLServerResultSet) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: 2d1beec5-fc50-4563-81da-835e4b392874
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: c4c5b5afc6f3324fd2b5b9e5430183bf4df672da
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: f775473fcab7f7019f4ba640fccc8af34188ab12
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47759130"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67982533"
 ---
 # <a name="getlong-method-int-sqlserverresultset"></a>getLong (int) メソッド (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -41,7 +40,7 @@ public long getLong(int columnIndex)
  列インデックスを示す **int** です。  
   
 ## <a name="return-value"></a>戻り値  
- A**長い**値。  
+ **long** 値です。  
   
 ## <a name="exceptions"></a>例外  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  

@@ -16,15 +16,14 @@ helpviewer_keywords:
 - full globe
 - STGeomFromText method
 ms.assetid: 3717987b-77d8-4ccf-a1db-5a8016ac1083
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: 40044ced21eec81e90f9d479a217782a95cfc225
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: MladjoA
+ms.author: mlandzic
+ms.openlocfilehash: 90359259bb7ba85377e72c40a8eece79de44cbf2
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47753410"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68042122"
 ---
 # <a name="stgeomfromtext-geography-data-type"></a>STGeomFromText (geography データ型)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -50,7 +49,7 @@ STGeomFromText ( 'geography_tagged_text' , SRID )
 ## <a name="return-types"></a>戻り値の型  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 戻り値の型: **geography**  
   
- CLR の戻り値の型: **SqlGeography**  
+ CLR の戻り値の型:**SqlGeography**  
   
 ## <a name="remarks"></a>Remarks  
  STGeomFromText() によって返される **geography** インスタンスの OGC 型は、対応する WKT 入力に設定されています。  

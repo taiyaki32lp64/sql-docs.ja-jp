@@ -21,11 +21,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 8e5b7592ba97f779d3c1aeb83f34317ef7c6833d
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52763224"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63022247"
 ---
 # <a name="non-sql-server-subscribers"></a>Non-SQL Server Subscribers
   以下の[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 以外のサブスクライバーでは、プッシュ サブスクリプションを使用することで、スナップショット パブリケーションおよびトランザクション パブリケーションにサブスクライブできます。 以下に示す 2 つのデータベースの最新バージョンでは、OLE DB プロバイダーを使用したサブスクリプションがサポートされています。  
@@ -69,7 +69,7 @@ ms.locfileid: "52763224"
   
 -   アーティクルをパブリケーションに追加または削除する場合、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 以外のサブスクライバーのサブスクリプションは再初期化する必要があります。  
   
--   すべてのサポートされる唯一の制約以外[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]サブスクライバーします。NULL および NOT NULL します。 主キーの制約は一意なインデックスとしてレプリケートされます。  
+-   すべての [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 以外のサブスクライバーでサポートされる制約は、NULL および NOT NULL のみです。 主キーの制約は一意なインデックスとしてレプリケートされます。  
   
 -   NULL 値の扱いはデータベースによって異なり、空白値、空の文字列、および NULL の表示方法に影響します。 また、UNIQUE 制約が定義されている列に値を挿入する際の動作にも影響します。 たとえば、Oracle では一意な列に複数の NULL 値を挿入できますが、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] では一意な列に 1 つの NULL 値しか挿入できません。  
   

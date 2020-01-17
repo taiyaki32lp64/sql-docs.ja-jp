@@ -11,11 +11,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: de5f805a9d722974adf7975f713436bc7b1ca4d0
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48075302"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63155150"
 ---
 # <a name="supported-data-types"></a>サポートされるデータ型
   次のデータ型は**サポート**でメモリ最適化テーブルおよびネイティブ コンパイル ストアド プロシージャ。  
@@ -40,9 +40,9 @@ ms.locfileid: "48075302"
 |データ型|詳細情報|  
 |---------------|--------------------------|  
 |char(n)|[char および varchar &#40;Transact-SQL&#41;](/sql/t-sql/data-types/char-and-varchar-transact-sql)|  
-|varchar (n) <sup>1</sup>|[char および varchar &#40;Transact-SQL&#41;](/sql/t-sql/data-types/char-and-varchar-transact-sql)|  
+|varchar(n) <sup>1</sup>|[char および varchar &#40;Transact-SQL&#41;](/sql/t-sql/data-types/char-and-varchar-transact-sql)|  
 |nchar(n)|[nchar および nvarchar &#40;Transact-SQL&#41;](/sql/t-sql/data-types/nchar-and-nvarchar-transact-sql)|  
-|nvarchar (n) <sup>1</sup>|[nchar および nvarchar &#40;Transact-SQL&#41;](/sql/t-sql/data-types/nchar-and-nvarchar-transact-sql)|  
+|nvarchar(n) <sup>1</sup>|[nchar および nvarchar &#40;Transact-SQL&#41;](/sql/t-sql/data-types/nchar-and-nvarchar-transact-sql)|  
 |sysname|[nchar および nvarchar &#40;Transact-SQL&#41;](/sql/t-sql/data-types/nchar-and-nvarchar-transact-sql)|  
   
  <sup>1</sup>制限では、1 行の合計、8,060 バイトの可変長型の (n) をカウントします。  
@@ -53,10 +53,10 @@ ms.locfileid: "48075302"
   
 |データ型|詳細情報|  
 |---------------|--------------------------|  
-|日付|[日付&#40;TRANSACT-SQL&#41;](/sql/t-sql/data-types/date-transact-sql)|  
+|日付|[date &#40;Transact-SQL&#41;](/sql/t-sql/data-types/date-transact-sql)|  
 |time|[time &#40;Transact-SQL&#41;](/sql/t-sql/data-types/time-transact-sql)|  
 |DATETIME|[datetime (&) #40 です。TRANSACT-SQL と #41 です。](/sql/t-sql/data-types/datetime-transact-sql)|  
-|datetime2|[datetime2 &#40;TRANSACT-SQL&#41;](/sql/t-sql/data-types/datetime2-transact-sql)|  
+|datetime2|[datetime2 &#40;Transact-SQL&#41;](/sql/t-sql/data-types/datetime2-transact-sql)|  
 |smalldatetime|[smalldatetime &#40;Transact-SQL&#41;](/sql/t-sql/data-types/smalldatetime-transact-sql)|  
   
  **バイナリ データ型**  
@@ -65,7 +65,7 @@ ms.locfileid: "48075302"
 |---------------|--------------------------|  
 |bit|[bit &#40;Transact-SQL&#41;](/sql/t-sql/data-types/bit-transact-sql)|  
 |binary(n)|[binary と varbinary &#40;Transact-SQL&#41;](/sql/t-sql/data-types/binary-and-varbinary-transact-sql)|  
-|varbinary (n) <sup>1</sup>|[binary と varbinary &#40;Transact-SQL&#41;](/sql/t-sql/data-types/binary-and-varbinary-transact-sql)|  
+|varbinary(n) <sup>1</sup>|[binary と varbinary &#40;Transact-SQL&#41;](/sql/t-sql/data-types/binary-and-varbinary-transact-sql)|  
   
  <sup>1</sup>制限では、1 行の合計、8,060 バイトの可変長型の (n) をカウントします。  
   

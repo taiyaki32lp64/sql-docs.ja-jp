@@ -11,15 +11,14 @@ helpviewer_keywords:
 - templates [Transact-SQL], opening
 - opening templates
 ms.assetid: 605b0f4c-5ba1-4249-ad1c-6341df77cd7a
-author: stevestein
-ms.author: sstein
-manager: craigg
-ms.openlocfilehash: a9d7566a71f5b7c86f45b667c376f06d3a4db38c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: c52d9b58a3fb738222c78dd57e9d45634963fbde
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47717410"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68266761"
 ---
 # <a name="open-a-template"></a>テンプレートを開く
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

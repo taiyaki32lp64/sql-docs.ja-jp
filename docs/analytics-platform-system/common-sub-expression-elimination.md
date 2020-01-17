@@ -1,25 +1,25 @@
 ---
-title: Analytics Platform System で説明されている共通部分式 |Microsoft Docs
-description: Analytics Platform System CU7.3 で導入された例のクエリの改善を表示します。
+title: 共通部分式
+description: Analytics Platform System CU 7.3 で導入されたクエリの改善の例を示します。
 author: mzaman1
-manager: craigg
 ms.prod: sql
 ms.technology: data-warehouse
 ms.topic: conceptual
 ms.date: 12/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
+ms.custom: seo-dt-2019
 monikerRange: '>= aps-pdw-2016-au7 || = sqlallproducts-allversions'
-ms.openlocfilehash: 2dd02bed55f3d3781428eae3ec4bc2d0655819ab
-ms.sourcegitcommit: 33712a0587c1cdc90de6dada88d727f8623efd11
+ms.openlocfilehash: d05314f4d100e469c621d42a10ed89671b2bdd9c
+ms.sourcegitcommit: d587a141351e59782c31229bccaa0bff2e869580
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53597306"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74401334"
 ---
-# <a name="common-subexpression-elimination-explained"></a>説明共通部分式の削除
+# <a name="common-subexpression-elimination-explained"></a>共通部分式の削除について説明します。
 
-APS CU7.3 では、SQL クエリ オプティマイザーの共通部分式の削除によるクエリ パフォーマンスが向上します。 改善には、2 つの方法でクエリが向上します。 最初の特典を特定し、削除などの機能は、SQL のコンパイル時間を短縮式を使用します。 2 番目とさらに重要な利点は、これら冗長部分式のデータ移動操作クエリが高速化のための実行時間は除外されます。
+APS CU 7.3 では、SQL クエリオプティマイザーにおける共通部分式の削除によって、クエリのパフォーマンスが向上します。 改善により、2つの方法でクエリが向上します。 1つ目の利点は、このような式を特定して削除することで、SQL のコンパイル時間を短縮できることです。 2つ目の重要な利点は、これらの冗長な部分式に対するデータ移動操作が不要になるため、クエリの実行時間が短縮されます。
 
 ```sql
 select top 100 asceding.rnk, i1.i_product_name best_performing, i2.i_product_name worst_performing
@@ -55,14 +55,14 @@ select top 100 asceding.rnk, i1.i_product_name best_performing, i2.i_product_nam
   order by asceding.rnk
   ;
 ```
-TPC-DS ベンチマーク ツールから、上記のクエリを検討してください。  上記のクエリでは、サブクエリは、同じが order by 句関数経由で rank() では 2 つの方法で並べ替えられます。 CU7.3 前、は、このサブクエリを評価され、昇順と、1 回の降順では、2 つのデータ移動操作を発生させるに対して 1 回、2 回実行が取得されます。 AP CU7.3 をインストールすると、サブクエリの一部がデータの移動を削減しより高速のクエリを終了ため 1 回評価されます。
+前述の TPC-DS ベンチマークツールからのクエリを考えてみましょう。  上記のクエリでは、サブクエリは同じですが、rank () over 関数を使用した order by 句は、2つの異なる方法で並べ替えられています。 CU 7.3 以前では、このサブクエリは2回評価されて実行されます。1回は昇順で、1回は降順で、2つのデータ移動操作を行います。 APS CU 7.3 をインストールすると、サブクエリの部分が1回評価されるため、データの移動が減少し、クエリの処理が速くなります。
 
-導入されています、[機能スイッチ](appliance-feature-switch.md)'OptimizeCommonSubExpressions' を呼び出す AP CU7.3 にアップグレードした後でも、機能をテストできるようになります。 機能が既定でオン、オフにすることです。 
+APS CU 7.3 にアップグレードした後でも機能をテストできるようにする "OptimizeCommonSubExpressions" という[機能スイッチ](appliance-feature-switch.md)が導入されました。 この機能は既定でオンになっていますが、無効にすることができます。 
 
 > [!NOTE] 
-> 機能スイッチの値への変更には、サービスの再起動が必要です。
+> 機能スイッチの値を変更するには、サービスを再起動する必要があります。
 
-テスト環境で、次の表を作成し、上記のクエリの explain プランを評価するサンプル クエリを試すことができます。 
+サンプルクエリを試すには、テスト環境で次のテーブルを作成し、前述のクエリのプランの説明を評価します。 
 
 ```sql
 CREATE TABLE [dbo].[store_sales] (
@@ -118,6 +118,6 @@ CREATE TABLE [dbo].[item] (
 )
 WITH (CLUSTERED INDEX ( [i_item_sk] ASC ), DISTRIBUTION = REPLICATE);
 ```
-クエリの操作のおよび CU7.3 後 (または機能スイッチがオン) 17 の合計数が、説明、クエリのプランを見て、CU7.3 する前に表示されるされます (または機能スイッチがオフのとき)、同じクエリ操作の合計数が 9 を示しています。 単にデータの移動操作をカウントする場合、前のプランにある新しいプランで 2 つの移動操作と 4 つの移動操作が表示されます。 新しいクエリ オプティマイザーがクエリの実行を減らす新しいプランを既に作成した一時テーブルを再利用して 2 つのデータ移動操作を削減することでした。 
+クエリの [プランの説明] を見ると、CU 7.3 より前 (または機能スイッチがオフになっている場合) に、クエリの合計操作数が17に達した後 (または機能スイッチがオンになっている場合)、同じクエリによって合計で9個の操作が表示されていることがわかります。 データ移動操作をカウントするだけの場合は、前のプランの移動操作が4回、新しいプランに2つの移動操作があることがわかります。 新しいクエリオプティマイザーでは、新しいプランで既に作成した一時テーブルを再利用することで、2つのデータ移動操作を減らすことができました。これにより、クエリの実行時間が短縮されました。 
 
 

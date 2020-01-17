@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 86b83a38-efdf-4831-a6d5-7e470d517d1c
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: a879e05e5c2df68058d9351b217382366ae80a0d
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: f638f6e48dccccd91849f02c65331d9212f9bbb7
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52532347"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67927033"
 ---
 # <a name="ado-security-design-features"></a>ADO セキュリティ デザイン機能
 次のセクションでは、セキュリティ デザイン機能で ActiveX データ オブジェクト (ADO) 2.8 以降について説明します。 セキュリティを強化する ADO 2.8 行ったこれらの変更。 Windows Vista での Windows DAC 6.0 に含まれている、ADO 6.0 では、します機能的には、Windows XP および Windows Server 2003 で MDAC 2.8 に含まれていた ADO 2.8。 このトピックでは、ADO 2.8 以降ではアプリケーションの最適なセキュリティ保護する方法についての情報を提供します。

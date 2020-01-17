@@ -11,17 +11,20 @@ helpviewer_keywords:
 - REVERSE function
 - reverse character expressions
 ms.assetid: bcebcc55-7247-4896-8f53-4d582d58cfb4
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: a1384cf0cbd0045e150187d4aa22a3779bb0abef
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: d7a0e8974f781f5f69817cf3374416de7bc32580
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47819720"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71288382"
 ---
 # <a name="reverse-ssis-expression"></a>REVERSE (SSIS 式)
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   文字式を逆に並べ替えたものを返します。  
   
 ## <a name="syntax"></a>構文  

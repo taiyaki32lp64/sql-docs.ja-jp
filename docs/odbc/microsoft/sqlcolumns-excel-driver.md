@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 4bae3fcd-0287-4f79-ad7c-8f7ab2f6f940
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: b6b4775b62a4e411f38084113c1313688b5388c5
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 8481a4ea9cf69b615aa0142cc01556018801e823
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47620180"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68132540"
 ---
 # <a name="sqlcolumns-excel-driver"></a>SQLColumns (Excel ドライバー)
 > [!NOTE]  

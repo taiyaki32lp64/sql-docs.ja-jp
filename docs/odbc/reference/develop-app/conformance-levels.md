@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: f776d467-5d5d-4761-9043-3dad5f73c610
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 4274188beb0b67fa5a49ce9e25b781c5b1cd95d1
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 507d23e6f7a344e9d3fe4a17cf34903235803426
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47680582"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68083175"
 ---
 # <a name="conformance-levels"></a>適合性レベル
 ODBC ドライバーでは、多様なデータ ソースに、アプリケーション アクセスを付与します。 各ドライバーにより、アプリケーションは実行時に決定 ODBC 機能とどのような SQL 文法のドライバーと、各データ ソースをサポートしています。 これは、これらのアプリケーションは、そのドライバーまたはドライバーの機能に単純に書き込むことがあるために、1 つのドライバーや、ドライバーの既知の小さなセットを操作するようデザインされたアプリケーションの要件ではありません。 アプリケーションがドライバーとデータ ソースの機能を検出するために、準拠の 2 つの領域が使用可能な: ODBC インターフェイスと SQL の文法。  

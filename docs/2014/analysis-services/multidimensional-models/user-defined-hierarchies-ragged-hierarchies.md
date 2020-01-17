@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - ragged hierarchies [Analysis Services]
@@ -13,12 +12,12 @@ ms.assetid: e40a5788-7ede-4b0f-93ab-46ca33d0cace
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: b3bf372682217f177d7f5a4c8b0982f1a75c4e11
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 533abbb47db40f16c0d7d5e4d85851975c89e23d
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52502891"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68889330"
 ---
 # <a name="ragged-hierarchies"></a>不規則階層
   不規則階層はユーザー定義の階層で、不均一な数のレベルが含まれています。 一般的な例として、部門の管理者と管理者以外のメンバーの両方が直属の部下として上級管理者に属している組織図や、国 - 地域 - 市から構成される地理的な階層 (ワシントン D.C.、バチカン、ニューデリーなど、親となる州や省などを持たない市がいくつかあります) などを挙げることができます。  
@@ -42,9 +41,9 @@ ms.locfileid: "52502891"
   
 -   標準階層を使用します。ただし、各レベルの `HideMemberIf` プロパティを設定し、ユーザーに対して欠落しているレベルを表示するかどうかを指定します。 `HideMemberIf` を設定するとき、接続文字列で `MDXCompatibility` も設定し、既定のナビゲーション動作をオーバーライドします。 これらのプロパティの設定手順をこのトピックで説明します。  
   
--   レベル メンバーを明示的に管理する親子階層を作成します。 この技法の図解については、「 [Ragged Hierarchy in SSAS (blog post)](http://dwbi1.wordpress.com/2011/03/30/ragged-hierarchy-in-ssas/)」(SSAS での不規則階層 (ブログ投稿)) をご覧ください。 オンライン ブックの「詳細については、次を参照してください。 [、親子階層](parent-child-dimension.md)します。 親子階層を作成する際の問題点は、ディメンションごとに 1 つの階層があるので、中間レベルのメンバーを集計する場合のパフォーマンスが一般的に低下することです。  
+-   レベル メンバーを明示的に管理する親子階層を作成します。 この技法の図解については、「 [Ragged Hierarchy in SSAS (blog post)](http://dwbi1.wordpress.com/2011/03/30/ragged-hierarchy-in-ssas/)」(SSAS での不規則階層 (ブログ投稿)) をご覧ください。 オンラインブックの詳細については、「[親子階層](parent-child-dimension.md)」を参照してください。 親子階層を作成する際の問題点は、ディメンションごとに 1 つの階層があるので、中間レベルのメンバーを集計する場合のパフォーマンスが一般的に低下することです。  
   
- ディメンションに複数の不規則階層が含まれている場合は、第 1 の方法である、`HideMemberIf` の設定を使用してください。 不規則階層の操作について実践的な経験がある BI 開発者であれば、さらに、物理データ テーブルへの追加の変更を提案したり、レベルごとの個別のテーブルを作成したりすることができます。 参照してください[Martin Mason の SSAS 財務キューブ パート 1a 不規則階層 (ブログ)](http://martinmason.wordpress.com/2012/03/03/the-ssas-financial-cubepart-1aragged-hierarchies-cont/)この方法の詳細について。  
+ ディメンションに複数の不規則階層が含まれている場合は、第 1 の方法である、`HideMemberIf` の設定を使用してください。 不規則階層の操作について実践的な経験がある BI 開発者であれば、さらに、物理データ テーブルへの追加の変更を提案したり、レベルごとの個別のテーブルを作成したりすることができます。 この手法の詳細について[は、「Martin を使用した SSAS 財務キューブ-パート 1a-不規則階層 (ブログ)](http://martinmason.wordpress.com/2012/03/03/the-ssas-financial-cubepart-1aragged-hierarchies-cont/) 」を参照してください。  
   
 ##  <a name="bkmk_Hide"></a> HideMemberIf を設定して標準階層のメンバーを非表示にする  
  不規則なディメンションのテーブルでは、論理的に欠落しているメンバーはさまざまな方法で表されます。 テーブルのセルに NULL または空の文字列を含めたり、親と同じ値を含めてプレースホルダーとして使用できます。 プレースホルダーの表示は、子メンバーのプレースホルダーのステータス、`HideMemberIf` プロパティ、クライアント アプリケーションの `MDX Compatibility` 接続文字列プロパティによって決まります。  
@@ -75,6 +74,6 @@ ms.locfileid: "52502891"
  [ユーザー定義階層の作成](user-defined-hierarchies-create.md)   
  [ユーザー階層](../multidimensional-models-olap-logical-dimension-objects/user-hierarchies.md)   
  [親子階層](parent-child-dimension.md)   
- [接続文字列プロパティ &#40;Analysis Services&#41;](../../analysis-services/instances/connection-string-properties-analysis-services.md)  
+ [接続文字列プロパティ &#40;Analysis Services&#41;](https://docs.microsoft.com/analysis-services/instances/connection-string-properties-analysis-services)  
   
   

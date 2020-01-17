@@ -2,7 +2,7 @@
 title: '[クエリ] ([データセットのプロパティ] ダイアログ ボックス) (レポート ビルダー) | Microsoft Docs'
 ms.date: 08/17/2018
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: report-data
 ms.topic: reference
 f1_keywords:
@@ -10,21 +10,21 @@ f1_keywords:
 - sql13.rtp.rptdesigner.datasetproperties.query.f1
 - "10160"
 ms.assetid: 75432318-0b00-4797-917c-0a2e74f9d951
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: d6e0d987c9976759a870bb58578c9f39593bfb87
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: e05ae59d963bd9b165d2f6f825955ee276683328
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50021766"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66500448"
 ---
 # <a name="dataset-properties-dialog-box-query-report-builder"></a>「クエリ」 (「データセットのプロパティ」 ダイアログ ボックス) (レポート ビルダー)
  
 **[データセットのプロパティ]** ダイアログ ボックスの **[クエリ]** を選択すると、レポート サーバーから共有データセットを選択したり、埋め込みデータセットを作成したりできます。 埋め込みデータセットを作成するには、データ ソースを選択し、クエリを構築する必要があります。  
   
-## <a name="options"></a>[変数]  
- **名前**  
+## <a name="options"></a>オプション  
+ **[名前]**  
  データセットの名前を入力します。 名前は、レポートのすべてのデータ領域名またはグループ名と異なっている必要があります。  
   
  **[共有データセットを使用する]**  
@@ -61,11 +61,11 @@ ms.locfileid: "50021766"
  クエリがタイムアウトするまでの期間を秒数で入力します。既定値は 30 秒です。 **[タイムアウト]** には、値を指定しないか、0 より大きい値を指定する必要があります。 空の場合は、クエリはタイムアウトしません。  
   
  **[フィールドの更新]**  
- クエリ コマンドを実行して、「**[フィールド] ([データセットのプロパティ] ダイアログ ボックス)**」ページにあるフィールドの一覧を更新します。  
+ クエリ コマンドを実行して、「 **[フィールド] ([データセットのプロパティ] ダイアログ ボックス)** 」ページにあるフィールドの一覧を更新します。  
   
 ## <a name="see-also"></a>参照  
 [レポート埋め込みデータセットと共有データセット &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)  
 [レポート データセット (SSRS)](../../reporting-services/report-data/report-datasets-ssrs.md)  
-[クエリ デザイナー &#40;レポート ビルダー&#41;](https://msdn.microsoft.com/library/553f0d4e-8b1d-4148-9321-8b41a1e8e1b9)  
+[クエリ デザイン ツール &#40;SSRS&#41;](query-design-tools-ssrs.md)  
   
   

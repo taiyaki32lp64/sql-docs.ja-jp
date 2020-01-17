@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: e0dabf23-a159-4fe5-a962-3df544a21f5c
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 9b3222c39515bad505d24b10e31b36a9c1c61965
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.openlocfilehash: f70eba6b5f53be7068708fdd8b139f0add10be90
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51604472"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67963349"
 ---
 # <a name="sql-property"></a>SQL プロパティ
 取得するために使用するクエリ文字列を示します、 [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md)します。  
@@ -52,7 +51,7 @@ Run time: DataControl.SQL = "QueryString"
 ## <a name="applies-to"></a>適用対象  
  [DataControl オブジェクト (RDS)](../../../ado/reference/rds-api/datacontrol-object-rds.md)  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [SQL プロパティの例 (VBScript)](../../../ado/reference/rds-api/sql-property-example-vbscript.md)   
  [接続プロパティ (RDS)](../../../ado/reference/rds-api/connect-property-rds.md)   
  [クエリ メソッド (RDS)](../../../ado/reference/rds-api/query-method-rds.md)   

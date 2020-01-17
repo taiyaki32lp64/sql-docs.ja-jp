@@ -13,16 +13,16 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 3da27154a824433d214dc495bf7f236ff104274f
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52754014"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68198932"
 ---
 # <a name="configure-resource-governor-using-a-template"></a>テンプレートを使用してリソース ガバナーを構成する
   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]に用意されているテンプレートを使用してリソース ガバナーを構成できます。  
   
--   **作業を開始する準備:**[アクセス許可](#Permissions)  
+-   **作業を開始する準備:** [Permissions](#Permissions)  
   
 -   **ワークロード グループの作成に使用するもの:**  [テンプレート](#ConfRGTemplate)  
   
@@ -47,7 +47,7 @@ ms.locfileid: "52754014"
   
 6.  クエリを実行するには、 **[実行]** をクリックします。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [リソース ガバナー](resource-governor.md)   
  [リソース ガバナーの有効化](enable-resource-governor.md)   
  [リソース ガバナー リソース プール](resource-governor-resource-pool.md)   

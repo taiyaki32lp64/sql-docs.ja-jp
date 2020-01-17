@@ -9,19 +9,18 @@ ms.topic: conceptual
 ms.assetid: bac234ef-bc16-47e6-8a7c-aa6e76d860c5
 author: Shamikg
 ms.author: Shamikg
-manager: craigg
-ms.openlocfilehash: 3d70a2546a925474e0b80bb1d7cee4ee7ab2c266
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b05ca315401e587a4a200ff6fc78634993260b07
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47759540"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68029403"
 ---
 # <a name="data-migration-report-sybasetosql"></a>データ移行レポート (SybaseToSQL)
 **データ移行レポート**へのデータを移行した後、ダイアログ ボックスが表示されます[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]します。  
   
 ## <a name="options"></a>および  
-**ステータス**  
+**状態**  
 ソースからターゲット データベースへのデータ移行の状態が表示されます。  
   
 **From**  

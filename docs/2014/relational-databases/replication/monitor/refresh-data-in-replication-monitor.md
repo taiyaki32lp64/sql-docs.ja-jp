@@ -13,11 +13,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 03dae95f44b4166947da4ef7bd88b532db00dd03
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52757904"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62667238"
 ---
 # <a name="refresh-data-in-replication-monitor"></a>レプリケーション モニターのデータの更新
   レプリケーション モニターでは、メイン ウィンドウと詳細ウィンドウ (メイン ウィンドウから起動するウィンドウ) を自動または手動で最新の情報に更新できます。 ウィンドウを手動で最新の情報に更新する場合は、F5 キーを押します。 既定では、メイン ウィンドウは 5 秒ごとに自動で最新の情報に更新されます。この更新頻度は、パブリッシャーごとにカスタマイズできます。  
@@ -34,7 +34,7 @@ ms.locfileid: "52757904"
   
 ### <a name="to-specify-that-a-detail-window-should-automatically-refresh"></a>詳細ウィンドウを自動更新するように指定するには  
   
-1.  レプリケーション モニターで詳細ウィンドウを開きます。 以下に例を示します。  
+1.  レプリケーション モニターで詳細ウィンドウを開きます。 例 :  
   
     1.  左ペインでパブリッシャー グループを展開し、パブリッシャーを展開して、パブリケーションをクリックします。  
   
@@ -42,7 +42,7 @@ ms.locfileid: "52757904"
   
     3.  サブスクリプションを右クリックし、 **[詳細表示]** をクリックします。  
   
-2.  **[サブスクリプション \<SubscriptionName>]** 詳細ウィンドウで、**[アクション]** をクリックし、**[自動更新]** をクリックします。 更新頻度は、 **[パブリッシャーの設定]** ダイアログ ボックスの **[更新頻度]** 設定によって決まります。  
+2.  **[サブスクリプション \<SubscriptionName>]** 詳細ウィンドウで、 **[アクション]** をクリックし、 **[自動更新]** をクリックします。 更新頻度は、 **[パブリッシャーの設定]** ダイアログ ボックスの **[更新頻度]** 設定によって決まります。  
   
 ## <a name="see-also"></a>参照  
  [レプリケーションの監視](../monitoring-replication.md)  

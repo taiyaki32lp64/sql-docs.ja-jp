@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 7c554334-d2d9-4eae-a4ae-097aa4020e1a
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 3ba1be72858cea8813b500020b7a429f63570da0
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: d026e01ee6675d0af462492469913d280124cc31
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56031273"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68000360"
 ---
 # <a name="write-database-engine"></a>Write (データベース エンジン)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -38,7 +37,7 @@ void Write( BinaryWriter w )
   
 ## <a name="arguments"></a>引数  
 *w*  
-wA **BinaryWriter** オブジェクトをこのバイナリ表現 **hierarchyid** ノードが書き出されます。
+**BinaryWriter** オブジェクトをこのバイナリ表現 **hierarchyid** ノードが書き出されます。
   
 ## <a name="return-types"></a>戻り値の型  
 **CLR の戻り値の型: void**
@@ -57,8 +56,8 @@ byte[] encoding = stream.ToArray();
 ```  
   
 ## <a name="see-also"></a>参照
-[読み取りと #40";"データベース エンジン"&"#41 です。](../../t-sql/data-types/read-database-engine.md)  
-[ToString (&) #40";"データベース エンジン"&"#41 です。](../../t-sql/data-types/tostring-database-engine.md)  
+[Read &#40;データベース エンジン&#41;](../../t-sql/data-types/read-database-engine.md)  
+[ToString &#40;データベース エンジン&#41;](../../t-sql/data-types/tostring-database-engine.md)  
 [CAST および CONVERT &#40;Transact-SQL&#41;](../../t-sql/functions/cast-and-convert-transact-sql.md)  
 [hierarchyid データ型メソッド リファレンス](https://msdn.microsoft.com/library/01a050f5-7580-4d5f-807c-7f11423cbb06)
   

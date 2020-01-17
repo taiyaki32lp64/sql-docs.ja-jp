@@ -22,11 +22,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 0ec1db8e0f88bea5a02eb54b94a88194882ad9ff
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53370494"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63046254"
 ---
 # <a name="changing-passwords-programmatically"></a>プログラムによるパスワードの変更
   [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] より前のリリースでは、ユーザーのパスワードの有効期限が切れたとき、そのパスワードをリセットできるのは管理者だけでした。 以降で[!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]プログラムで両方のパスワードの有効期限の処理 Native Client では、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client OLE DB プロバイダーと[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Native Client ODBC ドライバー、およびを変更して、**SQL Server ログイン** ダイアログ ボックス。  
@@ -55,12 +55,12 @@ ms.locfileid: "53370494"
 ### <a name="ole-db-user-interface-password-expiration"></a>OLE DB ユーザー インターフェイスによるパスワード期限切れの処理  
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client OLE DB プロバイダーは、パスワードの期限切れに加えられた変更をサポートしている、 **SQL Server ログイン** ダイアログ ボックス。 DBPROP_INIT_PROMPT の値を DBPROMPT_NOPROMPT に設定すると、パスワードの有効期限が切れている場合に、最初の接続試行が失敗します。  
   
- DBPROP_INIT_PROMPT を DBPROMPT_NOPROMPT 以外の値に設定している場合は、パスワードの有効期限が切れているかどうかに関係なく、**[SQL Server ログイン]** ダイアログ ボックスが表示されます。 ユーザーは、**[オプション]** をクリックし、**[パスワードの変更]** チェック ボックスをオンにしてパスワードを変更できます。  
+ DBPROP_INIT_PROMPT を DBPROMPT_NOPROMPT 以外の値に設定している場合は、パスワードの有効期限が切れているかどうかに関係なく、 **[SQL Server ログイン]** ダイアログ ボックスが表示されます。 ユーザーは、 **[オプション]** をクリックし、 **[パスワードの変更]** チェック ボックスをオンにしてパスワードを変更できます。  
   
  パスワードの有効期限が切れている場合にユーザーが [OK] をクリックすると、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] からユーザーに **[パスワードの変更]** ダイアログ ボックスを使用して新しいパスワードを入力し、確認することを要求されます。  
   
 #### <a name="ole-db-prompt-behavior-and-locked-accounts"></a>OLE DB プロンプトの動作とロックされたアカウント  
- アカウントがロックされていることにより、接続に失敗することがあります。 **[SQL Server ログイン]** ダイアログ ボックスが表示された後にこの現象が発生する場合は、サーバー エラー メッセージが表示され、接続試行が中止されます。 また、**[パスワードの変更]** ダイアログ ボックスが表示された後にユーザーが古いパスワードに無効な値を入力すると、この現象が発生することもあります。 この場合も同じエラー メッセージが表示され、接続試行が中止されます。  
+ アカウントがロックされていることにより、接続に失敗することがあります。 **[SQL Server ログイン]** ダイアログ ボックスが表示された後にこの現象が発生する場合は、サーバー エラー メッセージが表示され、接続試行が中止されます。 また、 **[パスワードの変更]** ダイアログ ボックスが表示された後にユーザーが古いパスワードに無効な値を入力すると、この現象が発生することもあります。 この場合も同じエラー メッセージが表示され、接続試行が中止されます。  
   
 #### <a name="ole-db-connection-pooling-password-expiration-and-locked-accounts"></a>OLE DB 接続プーリング、パスワードの期限切れ、およびロックされたアカウント  
  接続プール内で接続がアクティブな状態になっている間に、アカウントがロックされたり、そのアカウントのパスワードの有効期限が切れたりすることがあります。 サーバーでは、期限切れのパスワードとロックされたアカウントを 2 回チェックします。 最初のチェックは、初回接続時に行われます。 2 回目のチェックは、接続のリセット時、接続がプールから取り除かれるときに行われます。  
@@ -96,12 +96,12 @@ ms.locfileid: "53370494"
   
  場合[SQLDriverConnect](../../native-client-odbc-api/sqldriverconnect.md)と呼びますの値と**DriverCompletion**パスワードの有効期限が切れている場合に SQL_DRIVER_NOPROMPT、最初の接続が失敗に設定されます。 SQLSTATE 値 28000 とネイティブ エラー コード値 18487 が後続の呼び出しによって返される**SQLError**または**SQLGetDiagRec**します。  
   
- 場合**DriverCompletion**ユーザーに表示されるその他の任意の値に設定されて、 **SQL Server ログイン**ダイアログ ボックスで、パスワードが期限切れかどうかに関係なく、します。 ユーザーは、**[オプション]** をクリックし、**[パスワードの変更]** チェック ボックスをオンにしてパスワードを変更できます。  
+ 場合**DriverCompletion**ユーザーに表示されるその他の任意の値に設定されて、 **SQL Server ログイン**ダイアログ ボックスで、パスワードが期限切れかどうかに関係なく、します。 ユーザーは、 **[オプション]** をクリックし、 **[パスワードの変更]** チェック ボックスをオンにしてパスワードを変更できます。  
   
  ユーザーが [ok] をクリックし、パスワードの有効期限が切れている場合[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]と使用して新しいパスワードの確認入力を画面の指示、 **SQL Server のパスワードの変更**ダイアログ。  
   
 #### <a name="odbc-prompt-behavior-and-locked-accounts"></a>ODBC プロンプトの動作とロックされたアカウント  
- アカウントがロックされていることにより、接続に失敗することがあります。 **[SQL Server ログイン]** ダイアログ ボックスが表示された後にこの現象が発生する場合は、サーバー エラー メッセージが表示され、接続試行が中止されます。 また、**[パスワードの変更]** ダイアログ ボックスが表示された後にユーザーが古いパスワードに無効な値を入力すると、この現象が発生することもあります。 この場合も同じエラー メッセージが表示され、接続試行が中止されます。  
+ アカウントがロックされていることにより、接続に失敗することがあります。 **[SQL Server ログイン]** ダイアログ ボックスが表示された後にこの現象が発生する場合は、サーバー エラー メッセージが表示され、接続試行が中止されます。 また、 **[パスワードの変更]** ダイアログ ボックスが表示された後にユーザーが古いパスワードに無効な値を入力すると、この現象が発生することもあります。 この場合も同じエラー メッセージが表示され、接続試行が中止されます。  
   
 #### <a name="odbc-connection-pooling-password-expiry-and-locked-accounts"></a>ODBC 接続プーリング、パスワードの期限切れ、およびロックされたアカウント  
  接続プール内で接続がアクティブな状態になっている間に、アカウントがロックされたり、そのアカウントのパスワードの有効期限が切れたりすることがあります。 サーバーでは、期限切れのパスワードとロックされたアカウントを 2 回チェックします。 最初のチェックは、初回接続時に行われます。 2 回目のチェックは、接続のリセット時、接続がプールから取り除かれるときに行われます。  

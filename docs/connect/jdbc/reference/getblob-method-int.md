@@ -1,5 +1,5 @@
 ---
-title: getBlob (int) メソッド |Microsoft Docs
+title: getBlob メソッド (int) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,18 +15,17 @@ apitype: Assembly
 ms.assetid: bef3ef12-cdda-4a18-90d6-4a501b8e30f0
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: ef2ab07997f052a8ae97bd1f654fab08e51e02dd
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d4ed9b8f6e4b29d5609ced88592b96de9c196d89
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47619210"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67953813"
 ---
 # <a name="getblob-method-int"></a>getBlob (int) メソッド
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  パラメーターに渡されたインデックスを使用して、指定された JDBC BLOB パラメーターの値を Java プログラミング言語の BLOB オブジェクトとして取得します。  
+  パラメーターに渡されたインデックスを使用して、指定された JDBC BLOB パラメーターの値を Java プログラミング言語の Blob オブジェクトとして取得します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -41,7 +40,7 @@ public java.sql.Blob getBlob(int index)
  パラメーターのインデックスを示す **int** です。  
   
 ## <a name="return-value"></a>戻り値  
- Blob オブジェクト。  
+ Blob オブジェクトです。  
   
 ## <a name="exceptions"></a>例外  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  

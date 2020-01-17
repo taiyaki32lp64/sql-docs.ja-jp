@@ -15,16 +15,15 @@ helpviewer_keywords:
 - notifications [SQL Server], job status
 - displaying operators
 ms.assetid: 92c82cdf-f704-444e-9539-82aea7fe6fb7
-author: stevestein
-ms.author: sstein
-manager: craigg
+author: markingmyname
+ms.author: maghan
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 0ce920c169e2a3e64be1c6aa02841305b64378ee
-ms.sourcegitcommit: bfa10c54e871700de285d7f819095d51ef70d997
+ms.openlocfilehash: f59914cd2bb873080d7008dfc79018d2f3b5b33b
+ms.sourcegitcommit: 57e20b7d02853ec9af46b648106578aed133fb45
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/14/2019
-ms.locfileid: "54256397"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69552425"
 ---
 # <a name="view-information-about-an-operator"></a>View Information About an Operator
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -33,18 +32,6 @@ ms.locfileid: "54256397"
 > [Azure SQL Database Managed Instance](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance) では現在、すべてではありませんがほとんどの SQL Server エージェントの機能がサポートされています。 詳細については、「[Azure SQL Database Managed Instance と SQL Server の T-SQL の相違点](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent)」を参照してください。
 
 このトピックでは、[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] で [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] または [!INCLUDE[tsql](../../includes/tsql-md.md)] を使用して、[!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェント オペレーターに関する情報の表示方法について説明します。  
-  
-**このトピックの内容**  
-  
--   **作業を開始する準備:**  
-  
-    [セキュリティ](#Security)  
-  
--   **オペレーターに関する情報を表示する方法:**  
-  
-    [SQL Server Management Studio](#SSMSProcedure)  
-  
-    [Transact-SQL](#TsqlProcedure)  
   
 ## <a name="BeforeYouBegin"></a>はじめに  
   
@@ -71,7 +58,7 @@ ms.locfileid: "54256397"
   
 3.  プラス記号をクリックして **[オペレーター]** フォルダーを展開します。  
   
-4.  表示するオペレーターを右クリックし、**[プロパティ]** をクリックします。  
+4.  表示するオペレーターを右クリックし、 **[プロパティ]** をクリックします。  
   
     _operator_name_**のプロパティ** ダイアログ ボックスに表示される使用可能なオプションの詳細については、以下を参照してください。  
   

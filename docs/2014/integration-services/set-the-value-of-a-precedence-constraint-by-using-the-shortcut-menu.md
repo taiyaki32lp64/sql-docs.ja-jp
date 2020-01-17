@@ -4,21 +4,20 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords:
 - precedence constraints [Integration Services], values
 ms.assetid: ab9d8e8e-b7da-44b2-b89f-b215d799f032
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: b08747188adf73ad2d11dc921022510a077ae3e4
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 4086ab60e4f9fab576ba2d28ab0bbe332435ba58
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48111853"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66055658"
 ---
 # <a name="set-the-value-of-a-precedence-constraint-by-using-the-shortcut-menu"></a>ショートカット メニューを使用して優先順位制約の値を設定する
   この手順では、ショートカット メニューを使用して、優先順位制約の値を設定する方法について説明します。  
@@ -31,7 +30,7 @@ ms.locfileid: "48111853"
   
 3.  **[制御フロー]** タブをクリックします。  
   
-4.  **[制御フロー]** タブのデザイン画面で優先順位制約を右クリックし、次に、 **[成功]**、 **[失敗]**、または **[完了]** をクリックします。  
+4.  **[制御フロー]** タブのデザイン画面で優先順位制約を右クリックし、次に、 **[成功]** 、 **[失敗]** 、または **[完了]** をクリックします。  
   
 5.  更新したパッケージを保存するには、 **[ファイル]** メニューの **[選択されたファイルを上書き保存]** をクリックします。  
   

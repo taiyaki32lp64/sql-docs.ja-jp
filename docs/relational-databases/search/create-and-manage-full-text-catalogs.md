@@ -1,26 +1,24 @@
 ---
 title: フルテキスト カタログの作成と管理 | Microsoft Docs
-ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: search, sql-database
-ms.reviewer: ''
 ms.technology: search
 ms.topic: conceptual
 helpviewer_keywords:
 - full-text catalogs [SQL Server], creating
 - full-text search [SQL Server], using SQL Server Management Studio
 ms.assetid: 824b7131-44a6-4815-89e6-62b7bab060e3
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
+author: pmasl
+ms.author: pelopes
+ms.reviewer: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 727ad77d1e757014f723d1ca1a10b9c5502cad50
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: ed7e7f31da9cacaf4862c29ada9c98df9559f9c9
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51681260"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72903860"
 ---
 # <a name="create-and-manage-full-text-catalogs"></a>フルテキスト カタログの作成と管理
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -31,7 +29,7 @@ ms.locfileid: "51681260"
 ##  <a name="creating"></a> フルテキスト カタログを作成する  
 
 ### <a name="create-a-full-text-catalog-with-transact-sql"></a>Transact SQL を使用してフルテキスト カタログを作成する
-[CREATE FULLTEXT CATALOG](../../t-sql/statements/create-fulltext-catalog-transact-sql.md) を使用します。 例 :
+[CREATE FULLTEXT CATALOG](../../t-sql/statements/create-fulltext-catalog-transact-sql.md) を使用します。 例:
 
 ```sql 
 USE AdventureWorks;  
@@ -47,13 +45,13 @@ GO
   
 3.  **[新しいフルテキスト カタログ]** を選択します。  
   
-4.  **[新しいフルテキスト カタログ]** ダイアログ ボックスで、再作成するカタログの情報を指定します。 詳細については、「[[新しいフルテキスト カタログ] &#40;[全般] ページ&#41;](https://msdn.microsoft.com/library/5ed6f7cd-d9af-4439-9f33-fc935b883d91)」を参照してください。  
+4.  **[新しいフルテキスト カタログ]** ダイアログ ボックスで、再作成するカタログの情報を指定します。 詳細については、「[[新しいフルテキスト カタログ] &#40;[全般] ページ&#41;](/sql/database-engine/new-full-text-catalog-general-page)」を参照してください。  
   
     > [!NOTE]  
     >  フルテキスト カタログ ID は、00005 から始まり、新しいカタログが作成されるたびに 1 ずつ増加します。  
   
 5.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
-  
+
 ##  <a name="props"></a>フルテキスト カタログのプロパティの取得  
 [!INCLUDE[tsql](../../includes/tsql-md.md)] 関数 **FULLTEXTCATALOGPROPERTY** を使用して、フルテキスト インデックスに関連するさまざまなプロパティの値を取得します。 詳細については、「[FULLTEXTCATALOGPROPERTY](../../t-sql/functions/fulltextcatalogproperty-transact-sql.md)」を参照してください。
 

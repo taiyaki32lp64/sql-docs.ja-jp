@@ -1,5 +1,5 @@
 ---
-title: execute メソッド (java.lang.String, int[]) |Microsoft Docs
+title: execute メソッド (java.lang.String, int[]) | Microsoft Docs
 ms.custom: ''
 ms.date: 02/07/2017
 ms.prod: sql
@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: dc73d1c3-e756-43af-b1fc-ac438cbd0965
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: bf42996fac6ac5f48a41311aa072866ebd79f8b3
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 6e96e0c9c957522db6a766b3491d394b7337d7b6
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47667480"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67954982"
 ---
 # <a name="execute-method-javalangstring-int"></a>execute (java.lang.String, int[]) メソッド
 
@@ -38,7 +37,7 @@ public final boolean execute(
 #### <a name="parameters"></a>パラメーター
 *sql*
 
-A**文字列**SQL ステートメントを格納しています。
+SQL ステートメントを含む**文字列**です。
 
 *columnIndexes*
 

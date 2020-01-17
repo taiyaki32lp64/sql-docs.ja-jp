@@ -12,14 +12,13 @@ helpviewer_keywords:
 ms.assetid: 8519aa2f-f09c-4c1c-96b5-abc24811e60c
 author: VanMSFT
 ms.author: vanto
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 04e14297fe4eb7cdad254bc888cf0657d4a80298
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 99e5f88f730953929115a5b18c00e5d1bb67562e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51669231"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68126828"
 ---
 # <a name="sql-server-certificates-and-asymmetric-keys"></a>SQL Server の証明書と非対称キー
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -71,8 +70,8 @@ ms.locfileid: "51669231"
 |||  
 |-|-|  
 |ツール|用途|  
-|[makecert](https://msdn2.microsoft.com/library/bfsktky3\(VS.80\).aspx)|証明書を作成します。|  
-|[sn](https://msdn2.microsoft.com/library/k5b5tt23\(VS.80\).aspx)|対称キーの厳密名を作成します。|  
+|[makecert](/windows/desktop/SecCrypto/makecert)|証明書を作成します。|  
+|[sn](/dotnet/framework/tools/sn-exe-strong-name-tool)|対称キーの厳密名を作成します。|  
   
 ## <a name="related-tasks"></a>Related Tasks  
  [暗号化アルゴリズムの選択](../../relational-databases/security/encryption/choose-an-encryption-algorithm.md)  

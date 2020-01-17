@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 92340b87-9084-4838-a509-e9ca22d5fd5c
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: e2e218035473d1ebb980aa5f44da8cc7b8ef843d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: f713f9a0c96aaf3798cf160e648404470e3a4363
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47827040"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68064506"
 ---
 # <a name="sqlendtran-cursor-library"></a>SQLEndTran (カーソル ライブラリ)
 > [!IMPORTANT]  

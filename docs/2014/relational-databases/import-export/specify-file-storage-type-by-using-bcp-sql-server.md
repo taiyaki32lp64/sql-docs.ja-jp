@@ -13,18 +13,18 @@ helpviewer_keywords:
 - file storage types [SQL Server]
 - data formats [SQL Server], file storage types
 ms.assetid: 85e12df8-1be7-4bdc-aea9-05aade085c06
-author: douglaslMS
-ms.author: douglasl
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 307cc94aff7fb1e5f8f9bad99aac1c99c08fc293
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 2a3646aa6ef61c820ca5512203b0ff1e36894cab
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48048442"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66011820"
 ---
 # <a name="specify-file-storage-type-by-using-bcp-sql-server"></a>bcp を使用したファイル ストレージ型の指定 (SQL Server)
-  *ファイル ストレージ型* は、データ ファイルへのデータの格納方法を記述します。 データとしてエクスポートできますデータ ファイルに、データベース テーブルの型 (ネイティブ形式)、文字表現 (文字形式)、または任意のデータ型を暗黙的な変換がサポートされています。たとえば、コピー、`smallint`として、`int`します。 ユーザー定義のデータ型は、基本データ型としてエクスポートされます。  
+  *ファイル ストレージ型* は、データ ファイルへのデータの格納方法を記述します。 データ ファイルには、データベース テーブルの型 (ネイティブ形式)、文字表現 (文字形式)、または暗黙的な型変換がサポートされているデータ型のいずれかでデータをエクスポートできます。暗黙的な型変換では、たとえば、`smallint` は `int` としてコピーされます。 ユーザー定義のデータ型は、基本データ型としてエクスポートされます。  
   
 ## <a name="the-bcp-prompt-for-file-storage-type"></a>ファイル ストレージ型の bcp プロンプト  
  対話型の **bcp** コマンドで、フォーマット ファイル スイッチ ( **-f** ) またはデータ形式スイッチ ( **-n** 、**-c**、**-w**、または **-N**) のどちらも付けずに **in**または **out**オプションを指定すると、次のように各データ フィールドのファイル ストレージ型を要求するプロンプトが表示されます。  
@@ -35,9 +35,9 @@ ms.locfileid: "48048442"
   
 -   できるだけコンパクトなストレージ型 (ネイティブ データ形式) で [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスからデータ ファイルにデータを一括エクスポートするには、 **bcp**によって提供される既定のファイル ストレージ型をそのまま使用します。 ネイティブのファイル ストレージ型の一覧については、このトピックの「ネイティブのファイル ストレージ型」を参照してください。  
   
--   インスタンスからデータの一括エクスポートする[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]文字形式でデータ ファイルに次のように指定します。`char`テーブル内のすべての列のファイル ストレージ型として。  
+-   文字形式で [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスからデータ ファイルにデータを一括エクスポートするには、テーブルのすべての列にファイル ストレージ型として `char` を指定します。  
   
--   インスタンスにデータを一括インポートする[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]、データ ファイルから指定のファイル ストレージ型として`char`文字に格納された型は、書式設定し、ネイティブ データ型の形式で格納されているデータの適切なファイル ストレージの種類のいずれかを指定します。  
+-   データ ファイルから [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスにデータを一括インポートするには、文字形式で格納されたデータの場合はファイル ストレージ型として `char` を指定し、ネイティブ データ型形式で格納されたデータの場合は、必要に応じて次のファイル ストレージ型のいずれかを指定します。  
   
     |ファイル ストレージ型|コマンド プロンプトで入力する文字|  
     |-----------------------|-----------------------------|  
@@ -75,7 +75,7 @@ ms.locfileid: "48048442"
   
      <sup>1</sup>フィールド長、プレフィックス長、およびターミネータの相互作用としてエクスポートされた非文字データのデータ ファイルに割り当てられる記憶域スペースの量を決定する、`char`ファイル ストレージ型。  
   
-     <sup>2</sup> 、 `ntext`、 `text`、および`image`データ型はの将来のバージョンで削除される[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]します。 新しい開発作業ではこれらのデータ型の使用を避け、現在このデータ型を使用しているアプリケーションは変更を検討してください。 使用`nvarchar(max)`、 `varchar(max)`、および`varbinary(max)`代わりにします。  
+     <sup>2</sup> 、 `ntext`、 `text`、および`image`データ型はの将来のバージョンで削除される[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]します。 新しい開発作業ではこれらのデータ型の使用を避け、現在このデータ型を使用しているアプリケーションは変更を検討してください。 代わりに `nvarchar(max)`、`varchar(max)`、および `varbinary(max)` 型を使用してください。  
   
 ## <a name="native-file-storage-types"></a>ネイティブのファイル ストレージ型  
  各ネイティブのファイル ストレージ型は、対応するホスト ファイル データ型として、フォーマット ファイルに記録されます。  
@@ -120,7 +120,7 @@ ms.locfileid: "48048442"
   
 -   無効な暗黙的な変換を表すファイル ストレージ型を入力すると**bcp**は失敗します指定できますが、`int`の`smallint`を指定する場合は、データ`smallint`の`int`データ。オーバーフロー エラーの結果。  
   
--   非文字データ型がなど`float`、 `money`、 `datetime`、または`int`が格納されているそれぞれのデータベース型として、データが内のデータ ファイルに書き込まれます、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]ネイティブ形式。  
+-   `float`、`money`、`datetime`、または `int` などの非文字データ型をそれぞれのデータベース型として格納すると、データが [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のネイティブ形式でデータ ファイルに書き込まれます。  
   
     > [!NOTE]  
     >  **bcp** コマンドですべてのフィールドを対話形式で指定すると、各フィールドへの応答を XML 形式以外のファイルに保存するように要求するプロンプトが表示されます。 XML 以外のフォーマット ファイルの詳細については、「[XML 以外のフォーマット ファイル &#40;SQL Server&#41;](xml-format-files-sql-server.md)」を参照してください。  

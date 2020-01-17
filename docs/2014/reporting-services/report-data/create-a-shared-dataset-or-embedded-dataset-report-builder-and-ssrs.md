@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 ms.assetid: d1d7bc71-f0e9-4ce5-b3ad-6fee54388a31
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 95772746d8f13993962f67bff863865dec519f70
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 208c5608037d99b9dc02f1ab7fefd151cd4bdecf
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56011163"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66107425"
 ---
 # <a name="create-a-shared-dataset-or-embedded-dataset-report-builder-and-ssrs"></a>共有データセットまたは埋め込みデータセットの作成 (レポート ビルダーおよび SSRS)
   データセットを作成する際は、1 つのレポートに使用する埋め込みデータセットか、レポート サーバーに保存して複数のレポートに使用する共有データセットを作成することができます。 データセットを作成するには、埋め込みデータ ソースまたは共有データ ソースが存在する必要があります。  
@@ -111,7 +110,7 @@ ms.locfileid: "56011163"
   
      データセットとそのフィールド コレクションがレポート データ ペインのデータ ソース ノードの下に表示されます。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [レポート埋め込みデータセットと共有データセット &#40;レポート ビルダーおよび SSRS&#41;](report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)   
  [データセット フィールド コレクション &#40;レポート ビルダーおよび SSRS&#41;](dataset-fields-collection-report-builder-and-ssrs.md)   
  [クエリ デザイナー &#40;レポート ビルダー&#41;](../query-designers-report-builder.md)   

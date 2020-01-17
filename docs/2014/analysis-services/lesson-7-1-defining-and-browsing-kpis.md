@@ -1,22 +1,21 @@
 ---
-title: 定義と Kpi を表示 |Microsoft Docs
+title: Kpi の定義と参照 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: 648b9a02-1278-4f11-b940-6f0de6a4042d
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: f8f0807478066e5e82cf479246c35dcd6b511f75
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 4f5d61b3880474851aa0c7302e402ff2f0ac0a47
+ms.sourcegitcommit: 8cb26b7dd40280a7403d46ee59a4e57be55ab462
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48170382"
+ms.lasthandoff: 10/17/2019
+ms.locfileid: "69493793"
 ---
 # <a name="defining-and-browsing-kpis"></a>KPI の定義と表示
   主要業績評価指標 (KPI) を定義するには、まず、KPI の名前と、KPI に関連するメジャー グループを定義します。 すべてのメジャー グループ、または単一のメジャー グループを KPI に関連付けることができます。 その後、KPI の次のような要素を定義します。  
@@ -40,7 +39,7 @@ ms.locfileid: "48170382"
  これらの KPI 要素の定義に加えて、いくつかの KPI プロパティも定義します。 定義するプロパティには、表示フォルダー、親 KPI (他の KPI から計算される KPI の場合)、現在の時間メンバー (存在する場合)、KPI の重み (存在する場合)、KPI についての説明などがあります。  
   
 > [!NOTE]  
->  KPI の詳しいサンプルについては、[計算ツール] ペインの [テンプレート] タブの KPI サンプル、または **Adventure Works DW 2012** サンプル データ ウェアハウスの KPI サンプルを参照してください。 このデータベースのインストールの詳細については、「[Analysis Services 多次元モデリング チュートリアル用のサンプル データおよびプロジェクトのインストール](install-sample-data-and-projects.md)」を参照してください。  
+>  KPI の詳しいサンプルについては、[計算ツール] ペインの [テンプレート] タブの KPI サンプル、または **Adventure Works DW 2012** サンプル データ ウェアハウスの KPI サンプルを参照してください。 このデータベースのインストールの詳細については、「 [Analysis Services 多次元モデリング チュートリアル用のサンプル データおよびプロジェクトのインストール](install-sample-data-and-projects.md)」を参照してください。  
   
  このレッスンの実習では、KPI を [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Tutorial プロジェクト内で定義した後、これらの KPI を使用して [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Tutorial キューブを表示します。 次の KPI を定義します。  
   
@@ -60,19 +59,19 @@ ms.locfileid: "48170382"
   
      次の図は、キューブ デザイナーの **[KPI]** タブを示しています。  
   
-     ![キューブ デザイナーの [Kpi] タブ](../../2014/tutorials/media/l7-kpi-1.gif "キューブ デザイナーの [Kpi] タブ")  
+     ![キューブデザイナーの [Kpi] タブ](../../2014/tutorials/media/l7-kpi-1.gif "キューブデザイナーの [Kpi] タブ")  
   
 2.  **[KPI]** タブのツール バーで **[新しい KPI]** ボタンをクリックします。  
   
      次の図のように、空白の KPI テンプレートが表示ペインに表示されます。  
   
-     ![表示ウィンドウで空白の KPI テンプレート](../../2014/tutorials/media/l7-kpi-2.gif "表示ウィンドウで空白の KPI テンプレート")  
+     ![表示ウィンドウの空白の KPI テンプレート](../../2014/tutorials/media/l7-kpi-2.gif "表示ウィンドウの空白の KPI テンプレート")  
   
-3.  **名前**ボックスに「 `Reseller Revenue`、し、 **Reseller Sales**で、**関連付けられたメジャー グループ**一覧。  
+3.  **[名前]** ボックスに「`Reseller Revenue`」と入力し、 **[関連付けられたメジャーグループ]** ボックスの一覧で **[再販業者の売上]** を選択します。  
   
-4.  **[計算ツール]** ペインの **[メタデータ]** タブで、 **[Measures]**、 **[Reseller Sales]** の順に展開します。次に、 **Reseller Sales-Sales Amount** メジャーを **[値式]** ボックスにドラッグします。  
+4.  **[計算ツール]** ペインの **[メタデータ]** タブで、 **[Measures]** 、 **[Reseller Sales]** の順に展開します。次に、 **Reseller Sales-Sales Amount** メジャーを **[値式]** ボックスにドラッグします。  
   
-5.  **[計算ツール]** ペインの **[メタデータ]** タブで、 **[Measures]**、 **[Sales Quotas]** の順に展開します。次に、 **Sales Amount Quota** メジャーを **[目標式]** ボックスにドラッグします。  
+5.  **[計算ツール]** ペインの **[メタデータ]** タブで、 **[Measures]** 、 **[Sales Quotas]** の順に展開します。次に、 **Sales Amount Quota** メジャーを **[目標式]** ボックスにドラッグします。  
   
 6.  **[状態インジケーター]** ボックスの一覧で **[ゲージ]** が選択されていることを確認します。次に、以下の MDX 式を **[状態式]** ボックスに入力します。  
   
@@ -147,13 +146,13 @@ ms.locfileid: "48170382"
   
 5.  **[KPI ブラウザー]** ペイン内の任意の場所をクリックすると、 **Reseller Revenue KPI**の値が更新されます。  
   
-     KPI の **[値]**、 **[目標]**、および **[状態]** セクションに新しい期間の値が反映されていることがわかります。  
+     KPI の **[値]** 、 **[目標]** 、および **[状態]** セクションに新しい期間の値が反映されていることがわかります。  
   
 ## <a name="defining-the-product-gross-profit-margin-kpi"></a>Product Gross Profit Margin KPI の定義  
   
 1.  **[KPI]** タブのツール バーの **[フォーム ビュー]** ボタンをクリックして、 **[新しい KPI]** ボタンをクリックします。  
   
-2.  **名前**ボックスに「 `Product Gross Profit Margin`、ことを確認します**\<すべて >** に表示されます、**関連付けられたメジャー グループ**一覧。  
+2.  **名前** ボックスに「`Product Gross Profit Margin`」と入力し、**関連付けられているメジャーグループ** ボックスの一覧に  **\<All >** が表示されていることを確認します。  
   
 3.  **[計算ツール]** ペインの **[メタデータ]** タブで、 **Total GPM** メジャーを **[値式]** ボックスにドラッグします。  
   
@@ -262,13 +261,13 @@ ms.locfileid: "48170382"
   
 2.  配置が正常に完了したら、 **[KPI]** タブのツール バーの **[再接続]** をクリックして、 **[ブラウザー ビュー]** をクリックします。  
   
-     `Product Gross Profit Margin` KPI が表示され KPI 値と共に**Q3 CY 2007**と**北米**販売区域。  
+     @No__t_0 KPI が表示され、 **Q3 CY 2007**と**北米**販売区域の kpi 値が表示されます。  
   
 3.  **[フィルター]** ペインで、 **[ディメンション]** ボックスの一覧の **[Product]** をクリックし、 **[階層]** ボックスの一覧の **[Category]** をクリックし、 **[演算子]** ボックスの一覧の **[等しい]** をクリックします。次に、 **[フィルター式]** ボックスの一覧で **[Bikes]** チェック ボックスをオンにし、 **[OK]** をクリックします。  
   
      Q3 CY 2007 の North America における小売店のバイクの売上総利益率が表示されます。  
   
 ## <a name="next-lesson"></a>次のレッスン  
- [レッスン 8: アクションの定義](../analysis-services/lesson-8-defining-actions.md)  
+ [レッスン 8 : アクションの定義](lesson-8-defining-actions.md)  
   
   

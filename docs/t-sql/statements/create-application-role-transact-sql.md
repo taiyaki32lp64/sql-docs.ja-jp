@@ -23,13 +23,12 @@ helpviewer_keywords:
 ms.assetid: 647386da-ee80-41cf-86c9-dd590f9d66b6
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: d78cd012d2a66dff8b3cfb2a4d3fba5745dfbe36
-ms.sourcegitcommit: c6e71ed14198da67afd7ba722823b1af9b4f4e6f
+ms.openlocfilehash: dc3caf4c1643405cc7db31e2a9c76cf70456b272
+ms.sourcegitcommit: e9c1527281f2f3c7c68981a1be94fe587ae49ee9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/16/2019
-ms.locfileid: "54327633"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73064594"
 ---
 # <a name="create-application-role-transact-sql"></a>CREATE APPLICATION ROLE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -50,10 +49,10 @@ CREATE APPLICATION ROLE application_role_name
  *application_role_name*  
  アプリケーション ロールの名前を指定します。 この名前は、データベース内のどのプリンシパルへの参照にも使用されていない名前である必要があります。  
   
- PASSWORD **='**_password_**'**  
+ PASSWORD **='** _password_ **'**  
  データベース ユーザーがアプリケーション ロールのアクティブ化に使用するパスワードを指定します。 複雑なパスワードの使用をお勧めします。 *password* は、Windows のパスワード ポリシーが [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスを実行するコンピューターに要求する条件を満足する必要があります。  
   
- DEFAULT_SCHEMA **=**_schema\_name_  
+ DEFAULT_SCHEMA **=** _schema\_name_  
  このロール用のオブジェクトの名前を解決するときに、サーバーで最初に検索されるスキーマを指定します。 DEFAULT_SCHEMA が定義されていない場合、アプリケーション ロールでは既定のスキーマとして DBO が使用されます。 *schema_name* にはデータベースに存在しないスキーマを指定できます。  
   
 ## <a name="remarks"></a>Remarks  
@@ -74,7 +73,7 @@ CREATE APPLICATION ROLE application_role_name
 ## <a name="examples"></a>使用例  
  次の例では、アプリケーション ロール `weekly_receipts` を作成します。このアプリケーション ロールのパスワードは `987Gbv876sPYY5m23` で、既定のスキーマは `Sales` です。  
   
-```  
+```sql  
 CREATE APPLICATION ROLE weekly_receipts   
     WITH PASSWORD = '987G^bv876sPY)Y5m23'   
     , DEFAULT_SCHEMA = Sales;  

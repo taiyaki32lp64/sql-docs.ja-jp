@@ -9,17 +9,16 @@ ms.topic: conceptual
 ms.assetid: e05b1ab4-c10b-402a-9591-f6ec1e3db8c0
 author: rothja
 ms.author: jroth
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 1b5fe6e690c59f4d49fbbf8a250c7cac426e19c5
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 1566d1404b7be2af520d26c557550ffb1c3feca7
+ms.sourcegitcommit: 82a1ad732fb31d5fa4368c6270185c3f99827c97
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47777230"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72689862"
 ---
 # <a name="capture-logon-trigger-event-data"></a>ログオン トリガーのイベント データのキャプチャ
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
   ログオン トリガー内で使用するために LOGON イベントに関する XML データをキャプチャするには、 [EVENTDATA](../../t-sql/functions/eventdata-transact-sql.md) 関数を使用します。 LOGON イベントは、次のイベントのデータ スキーマを返します。  
   
  `<EVENT_INSTANCE>`  

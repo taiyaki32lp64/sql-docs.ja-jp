@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 7b44c8e5-0bc3-4912-8a5d-56f4d5562fe6
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 10695dd9bf044e270bb1ce1d26de78e53a1dd85a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 5a8385c8efb1ab7dcee651e5acb52062292a0bcc
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47656760"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68045017"
 ---
 # <a name="microsoft-excel-data-types"></a>Microsoft Excel のデータ型
 次の表では、Microsoft Excel ドライバーのデータ型を ODBC SQL データ型にマップする方法を示します。 Microsoft Excel ドライバーでは、列のデータに基づく Microsoft Excel のテーブル内の列にこれらのデータ型が割り当てられます。  
@@ -41,7 +40,7 @@ ms.locfileid: "47656760"
   
  次の表では、Microsoft Excel のデータ型の制限事項を示します。  
   
-|データ型|説明|  
+|データの種類|説明|  
 |---------------|-----------------|  
 |暗号化データ|Microsoft Excel ドライバーでは、暗号化されたデータを読み取ることができません。|  
 |エラー文字列|Microsoft Excel ドライバーは、Microsoft Excel エラー値の文字の文字列を返すことはできません (#n/a!、#value!!、#REF!、#DIV/0!、#num!!、#NAME? と #NULL!)、代わりに NULL を返しますが。|  

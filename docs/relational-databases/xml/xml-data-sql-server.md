@@ -11,15 +11,14 @@ helpviewer_keywords:
 - XML [SQL Server]
 - XML [SQL Server], about XML
 ms.assetid: 6a1793c9-9856-485c-aac5-88fda62f61a8
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: 3522215dde7a25b4a1907ed41a3e35b6f68cb411
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: MightyPen
+ms.author: genemi
+ms.openlocfilehash: fc11a8dd385266d38bb12f067d2ffa1a88030b87
+ms.sourcegitcommit: 00350f6ffb73c2c0d99beeded61c5b9baa63d171
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47768880"
+ms.lasthandoff: 08/30/2019
+ms.locfileid: "70190429"
 ---
 # <a name="xml-data-sql-server"></a>XML データ (SQL Server)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -45,4 +44,5 @@ ms.locfileid: "47768880"
 ## <a name="related-content"></a>関連コンテンツ  
  [XML ドキュメントの一括インポートと一括エクスポートの例 &#40;SQL Server&#41;](../../relational-databases/import-export/examples-of-bulk-import-and-export-of-xml-documents-sql-server.md)  
  [XQuery 言語リファレンス &#40;SQL Server&#41;](../../xquery/xquery-language-reference-sql-server.md)  
+ [xml (Transact-SQL)](../../t-sql/xml/xml-transact-sql.md)
   

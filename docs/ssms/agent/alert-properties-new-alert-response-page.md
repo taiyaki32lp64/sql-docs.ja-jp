@@ -10,16 +10,15 @@ ms.topic: conceptual
 f1_keywords:
 - sql13.ag.alert.response.f1
 ms.assetid: 72daf008-f9ea-4077-b217-5048e7759d3e
-author: stevestein
-ms.author: sstein
-manager: craigg
+author: markingmyname
+ms.author: maghan
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 4a8d46d0d43d3e1fd1e56b6774976640b690c7d7
-ms.sourcegitcommit: 110e5e09ab3f301c530c3f6363013239febf0ce5
+ms.openlocfilehash: 1af60c77e97c22dca5a6e2c5e80008261e6fcb8f
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/10/2018
-ms.locfileid: "48906182"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68266413"
 ---
 # <a name="alert-properties---new-alert-response-page"></a>[警告のプロパティ] - [新しい警告] ([応答] ページ)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -29,9 +28,9 @@ ms.locfileid: "48906182"
 
 このページを使用すると、実行するジョブや、オペレーターの一覧を取得するジョブを指定できます。この一覧のオペレーターは、 [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェントの警告に関する通知を受け取ります。  
 
-## <a name="options"></a>[変数]  
+## <a name="options"></a>オプション  
 **[ジョブの実行]**  
-**[ジョブ一覧]**、 **[新しいジョブ]** 、および **[ジョブの表示]** の各オプションを有効にします。  
+**[ジョブ一覧]** 、 **[新しいジョブ]** 、および **[ジョブの表示]** の各オプションを有効にします。  
   
 **[新しいジョブ]**  
 **[新しいジョブ]** ダイアログ ボックスを開きます。 **[ジョブの実行]** が選択されていない場合、このボタンは使用できません。  
@@ -43,7 +42,7 @@ ms.locfileid: "48906182"
 オペレーターを追加、削除、または変更できるようにするためのコントロールを有効にします。  
   
 **[オペレーター一覧]**  
-警告の発生時に通知するオペレーターの一覧を表示します。 通知方法を指定するには、オペレーター名の後に表示されている **[電子メール]**、 **[ポケットベル]**、または **[Net Send]** チェック ボックスをオンにします。 **[オペレーターに通知する]** が選択されていない場合、このオプションは使用できません。  
+警告の発生時に通知するオペレーターの一覧を表示します。 通知方法を指定するには、オペレーター名の後に表示されている **[電子メール]** 、 **[ポケットベル]** 、または **[Net Send]** チェック ボックスをオンにします。 **[オペレーターに通知する]** が選択されていない場合、このオプションは使用できません。  
   
 **[電子メール]**  
 電子メールを使用してオペレーターに通知します。  

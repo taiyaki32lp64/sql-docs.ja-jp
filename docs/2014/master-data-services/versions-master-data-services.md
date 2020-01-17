@@ -12,15 +12,15 @@ helpviewer_keywords:
 - version flags [Master Data Services]
 - versions [Master Data Services], version flags
 ms.assetid: 752ec96d-53d7-4160-8ed2-92e0324645f3
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 67f99012be602f80279826de0446df006ff4e69f
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 07ba6990049c5ad3bff2e93b06aac0023dedbfe8
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52778394"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65481356"
 ---
 # <a name="versions-master-data-services"></a>バージョン (マスター データ サービス)
   [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]では、モデル内に複数のバージョンのマスター データを作成できます。 データを検証している間はバージョンをロックし、データが検証した後にコミットすることができます。 コミットされたバージョンは、変更の監査可能なレコードを形成します。 作成される各バージョンには、モデルのすべてのメンバー、属性値、階層メンバー、階層リレーションシップ、およびコレクションが含まれます。  

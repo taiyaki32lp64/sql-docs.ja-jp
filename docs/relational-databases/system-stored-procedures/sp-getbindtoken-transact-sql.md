@@ -17,18 +17,17 @@ helpviewer_keywords:
 ms.assetid: 5db87d77-85fa-45a3-a23a-3ea500f9a5ac
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: d3636ce2bb082d4686d0895716fb10567b5dc750
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ac8bc2087b4c100b784aadac8458e106538f76d8
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47853410"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68124003"
 ---
 # <a name="spgetbindtoken-transact-sql"></a>sp_getbindtoken (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  トランザクションの一意識別子を返します。 この一意識別子は、sp_bindsession を使用してセッションをバインドするために使用する文字列です。  
+  トランザクションの一意の識別子を返します。 この一意識別子は、sp_bindsession を使用してセッションをバインドするために使用する文字列です。  
   
 > [!IMPORTANT]  
 >  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]代わりに、複数のアクティブな結果セット (MARS) または分散トランザクションを使用してください。 詳細については、「[複数のアクティブな結果セット &#40;MARS&#41; の使用](../../relational-databases/native-client/features/using-multiple-active-result-sets-mars.md)」を参照してください。  
@@ -53,7 +52,7 @@ sp_getbindtoken [@out_token =] 'return_value' OUTPUT
  なし  
   
 ## <a name="remarks"></a>コメント  
- アクティブなトランザクション内部ストアド プロシージャが実行される場合にのみ、sp_getbindtoken は有効なトークンを返します。 それ以外の場合、[!INCLUDE[ssDE](../../includes/ssde-md.md)]はエラー メッセージを返します。 以下に例を示します。  
+ アクティブなトランザクション内部ストアド プロシージャが実行される場合のみ、sp_getbindtoken は有効なトークンを返します。 それ以外の場合、[!INCLUDE[ssDE](../../includes/ssde-md.md)]はエラー メッセージを返します。 以下に例を示します。  
   
 ```  
 -- Declare a variable to hold the bind token.  
@@ -98,7 +97,7 @@ PKb'gN5<9aGEedk_16>8U=5---/5G=--
 (1 row(s_) affected)  
 ```  
   
- sp_bindsession でバインド トークンを使用して、新規セッションを同じトランザクションにバインドできます。 バインド トークンは有効の各インスタンス内でローカルでのみ、[!INCLUDE[ssDE](../../includes/ssde-md.md)]複数のインスタンス間で共有することはできません。  
+ 新しいセッションを同じトランザクションにバインドする sp_bindsession でバインド トークンを使用できます。 バインド トークンは有効の各インスタンス内でローカルでのみ、[!INCLUDE[ssDE](../../includes/ssde-md.md)]複数のインスタンス間で共有することはできません。  
   
  バインド トークンを取得して渡すには、sp_getbindtoken を実行してから sp_bindsession を実行して、同じロック領域を共有します。 バインド トークンの取得後は、sp_bindsession を正常に実行できます。  
   
@@ -109,7 +108,7 @@ PKb'gN5<9aGEedk_16>8U=5---/5G=--
  public ロールのメンバーシップが必要です。  
   
 ## <a name="examples"></a>使用例  
- この例では、バインド トークンを取得し、そのバインド トークンの名前を表示します。  
+ 次の例では、バインド トークンを取得し、バインド トークンの名前を表示します。  
   
 ```  
 DECLARE @bind_token varchar(255);  
@@ -126,7 +125,7 @@ SELECT @bind_token AS Token;
   
  `\0]---5^PJK51bP<1F<-7U-]ANZ`  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [sp_bindsession &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-bindsession-transact-sql.md)   
  [システム ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
  [srv_getbindtoken&#40;拡張ストアド プロシージャ API&#41;](../../relational-databases/extended-stored-procedures-reference/srv-getbindtoken-extended-stored-procedure-api.md)  

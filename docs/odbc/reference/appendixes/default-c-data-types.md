@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 229140ae-af8f-4ec8-9ccf-1e92360e0bac
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 9c4147b1bfa5ffb1e379c3aa8be2c9ea2a9d2775
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b9e0a9b8e85967ce46344e824c03e74fe3552e7c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47854110"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68130013"
 ---
 # <a name="default-c-data-types"></a>既定の C データ型
 アプリケーションで SQL_C_DEFAULT を指定する場合**SQLBindCol**、 **SQLGetData**、または**SQLBindParameter**ドライバーは、その入力バッファーまたは出力の C データ型が前提としています。列またはパラメーターのバッファーをバインドする対象の SQL データ型に対応します。  

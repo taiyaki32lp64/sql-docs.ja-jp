@@ -1,6 +1,5 @@
 ---
-title: bcp を使用した互換性のためのデータ形式の指定 (SQL Server) | Microsoft Docs
-ms.custom: ''
+title: bcp で互換性データ形式を指定する
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
@@ -14,18 +13,18 @@ helpviewer_keywords:
 - data formats [SQL Server], compatibility
 - bcp utility [SQL Server], compatibility
 ms.assetid: cd5fc8c8-eab1-4165-9468-384f31e53f0a
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
+author: MashaMSFT
+ms.author: mathoma
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: cfb476dacf1b0dfc725d0b51316a731b82f00a7f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.custom: seo-lt-2019
+ms.openlocfilehash: d16b152bed2a0ed774ea443ada13201e4416f173
+ms.sourcegitcommit: d00ba0b4696ef7dee31cd0b293a3f54a1beaf458
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47620146"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "74055923"
 ---
-# <a name="specify-data-formats-for-compatibility-when-using-bcp-sql-server"></a>bcp を使用した互換性のためのデータ形式の指定 (SQL Server)
+# <a name="specify-compatibility-data-formats-when-using-bcp-sql-server"></a>bcp を使用して互換性データ形式を指定する (SQL Server)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
   このトピックでは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]**bcp** コマンドのデータ形式属性、フィールド固有のプロンプト、および XML 以外のフォーマット ファイルでのフィールドごとのデータの格納について説明します。 このトピックの内容は、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データを一括エクポートして別のプログラム (別のデータベース プログラムなど) に一括インポートする場合に有用です。 ソース テーブルの既定のデータ形式 (ネイティブ、文字、または Unicode) が、他のプログラムで想定されているデータ レイアウトと互換性がない場合があります。互換性がない場合はデータをエクスポートするときに、データ レイアウトを記述する必要があります。  
   
@@ -54,7 +53,7 @@ ms.locfileid: "47620146"
   
   
 ##  <a name="FieldSpecificPrompts"></a> フィールド固有のプロンプトの概要  
- 対話的な **bcp** コマンドに **in** オプションまたは **out** オプションが含まれていて、フォーマット ファイル スイッチ (**-f**) またはデータ形式スイッチ (**-n**、 **-c**、 **-w**、または **-N**) のいずれも含まれていない場合は、ソース テーブルとターゲット テーブルの各列で、上記の属性について順番に問い合わせが行われます。 問い合わせが行われる際は、 **bcp** コマンドにより、テーブル列の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データ型に基づいてそれぞれ既定値が表示されます。 すべての問い合わせに対して既定値を受け入れることは、コマンド ラインでネイティブ形式 (**-n**) を指定するのと同じ結果になります。 各プロンプトには、[*default*] のように既定値が角かっこ付きで表示されます。 表示される既定値を受け入れるには、Enter キーを押します。 既定値以外を指定するには、プロンプトで新しい値を入力します。  
+ 対話的な **bcp** コマンドに **in** オプションまたは **out** オプションが含まれていて、フォーマット ファイル スイッチ ( **-f**) またはデータ形式スイッチ ( **-n**、 **-c**、 **-w**、または **-N**) のいずれも含まれていない場合は、ソース テーブルとターゲット テーブルの各列で、上記の属性について順番に問い合わせが行われます。 問い合わせが行われる際は、 **bcp** コマンドにより、テーブル列の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データ型に基づいてそれぞれ既定値が表示されます。 すべての問い合わせに対して既定値を受け入れることは、コマンド ラインでネイティブ形式 ( **-n**) を指定するのと同じ結果になります。 各プロンプトには、[*default*] のように既定値が角かっこ付きで表示されます。 表示される既定値を受け入れるには、Enter キーを押します。 既定値以外を指定するには、プロンプトで新しい値を入力します。  
   
 ### <a name="example"></a>例  
  次の例では、 **bcp** コマンドを使用して、 `HumanResources.myTeam` テーブルから `myTeam.txt` ファイルに、データを対話的に一括エクスポートします。 このテーブルを作成しないと、例を実行できません。 テーブルの詳細とテーブルを作成する方法については、「[HumanResources.myTeam サンプル テーブル &#40;SQL Server&#41;](../../relational-databases/import-export/humanresources-myteam-sample-table-sql-server.md)」を参照してください。  

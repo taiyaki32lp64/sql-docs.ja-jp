@@ -15,18 +15,17 @@ helpviewer_keywords:
 ms.assetid: f0ec0c92-8253-47c6-9a14-e5dbccbad219
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: a6e044c4a2cda01fcc9cbba2667beaae75a12caf
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 886825b4d32354572a5162487add419b00ec35d6
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47772730"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67931065"
 ---
 # <a name="seekenum"></a>SeekEnum
 型を指定[シーク](../../../ado/reference/ado-api/seek-method.md)を実行します。  
   
-|定数|値|説明|  
+|定数|Value|説明|  
 |--------------|-----------|-----------------|  
 |**adSeekFirstEQ**|1|等しい最初のキーをシーク*KeyValues*します。|  
 |**adSeekLastEQ**|2|最後のキーと等しいをシーク*KeyValues*します。|  

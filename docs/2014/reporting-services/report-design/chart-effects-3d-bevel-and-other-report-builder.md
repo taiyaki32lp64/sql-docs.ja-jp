@@ -4,21 +4,20 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 f1_keywords:
 - "10156"
 ms.assetid: 18ef2119-2931-43ae-9078-f39b460462dd
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: ddcf0bae98a6e07a6e3c84de1068a8f4bd93833e
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: 7ae056d72d3966a9787ac2d52f89689ae9f6a799
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56289561"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66106296"
 ---
 # <a name="3d-bevel-and-other-effects-in-a-chart-report-builder-and-ssrs"></a>グラフに対する 3D、傾斜、およびその他の効果 (レポート ビルダーおよび SSRS)
   3 次元 (3D) 効果を使用すると、グラフに奥行を与え、グラフの視覚的な効果を高めることができます。 たとえば、分割円グラフの特定のスライスを強調する場合は、そのスライスが最初に目に留まるように、グラフのパースペクティブを回転および変更することができます。 グラフに 3D 効果を適用すると、グラデーションの色および陰影のスタイルはすべて無効になります。  
@@ -60,7 +59,7 @@ ms.locfileid: "56289561"
 ## <a name="highlighting-3d-effects"></a>3D 効果の強調表示  
  強調表示のスタイルは、 **Shading** プロパティを使用して 3D グラフに追加することができます。このプロパティは、グラフ領域を選択すると、プロパティ ペインの [Area3DStyle] の下に表示されます。 単純な光源のスタイルでは、グラフ領域の要素に同じ色合いが適用されます。 写実的なスタイルでは、指定された光源の角度に応じて、グラフ領域の要素の色合いが変わります。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [グラフの軸ラベルの書式設定 (レポート ビルダーおよび SSRS)](formatting-axis-labels-on-a-chart-report-builder-and-ssrs.md)   
  [グラフの書式設定 (レポート ビルダーおよび SSRS)](formatting-a-chart-report-builder-and-ssrs.md)   
  [グラフへの 3D 効果の追加 (レポート ビルダーおよび SSRS)](chart-effects-add-3d-effects-report-builder.md)  

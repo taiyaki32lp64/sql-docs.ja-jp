@@ -15,11 +15,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 7369e9d37e5f706786410f8e171c89c6c38287d2
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48108712"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62808727"
 ---
 # <a name="connect-to-server-login-page-reporting-services"></a>[サーバーへの接続] \([ログイン] ページ) (Reporting Services)
   このタブは、[!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] に接続するときに以下のオプションを表示または指定する場合に使用します。  
@@ -63,7 +63,7 @@ ms.locfileid: "48108712"
  パスワードの保存など、追加のサーバー接続オプションが表示されます。  
   
 ## <a name="see-also"></a>参照  
- [レポート サーバー データベース接続の構成&#40;SSRS 構成マネージャー&#41;](../../2014/sql-server/install/configure-a-report-server-database-connection-ssrs-configuration-manager.md)   
+ [レポート サーバー データベース接続の構成 &#40;SSRS構成マネージャー&#41;](../../2014/sql-server/install/configure-a-report-server-database-connection-ssrs-configuration-manager.md)   
  [Management Studio でレポート サーバーに接続する](../reporting-services/tools/connect-to-a-report-server-in-management-studio.md)   
  [レポート サーバーでの認証](../reporting-services/security/authentication-with-the-report-server.md)  
   

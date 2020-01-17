@@ -13,14 +13,13 @@ helpviewer_keywords:
 ms.assetid: a5d04171-dfbc-4b90-acd0-1bb27d4b7e34
 author: rothja
 ms.author: jroth
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: c6cf384434915fd0f83dc20d6bfbfd0f6c24788c
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 0c0db066b17e00c374e788395815d4e844e2c8ea
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51673761"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68081612"
 ---
 # <a name="sql-server-guides"></a>SQL Server ガイド
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

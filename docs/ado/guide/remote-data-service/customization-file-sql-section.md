@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: e65c2871-9986-44ff-b8b7-7f5eda91b3fa
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 5efa6587ade3a15ce4b45b7247da1c3a896f69ee
-ms.sourcegitcommit: 1a5448747ccb2e13e8f3d9f04012ba5ae04bb0a3
+ms.openlocfilehash: 6163a5b5fd0999e17e17961639e0a1fee3e8fa4c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51558529"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67922798"
 ---
 # <a name="customization-file-sql-section"></a>カスタマイズ ファイルの SQL セクション
 **Sql**セクションは、クライアントのコマンド文字列を置換する新しい SQL 文字列を含めることができます。 セクション内に SQL 文字列がない場合は、セクションは無視されます。  
@@ -43,7 +42,7 @@ SQL = " "
 ## <a name="syntax"></a>構文  
  形式は、交換用の SQL 文字列を入力します。  
   
- **SQL=**   
+ **SQL=**    
  ***sqlString***  
   
 |要素|説明|  
@@ -51,7 +50,7 @@ SQL = " "
 |**SQL**|これを示すリテラル文字列は、SQL セクション エントリです。|  
 |***sqlString***|クライアントの文字列を置換する SQL 文字列です。|  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [カスタマイズ ファイル Connect セクション](../../../ado/guide/remote-data-service/customization-file-connect-section.md)   
  [カスタマイズ ファイル Logs セクション](../../../ado/guide/remote-data-service/customization-file-logs-section.md)   
  [カスタマイズ ファイル UserList セクション](../../../ado/guide/remote-data-service/customization-file-userlist-section.md)   

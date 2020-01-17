@@ -2,18 +2,18 @@
 title: 複数の値を持つパラメーターのレポートへの追加 | Microsoft Docs
 ms.date: 03/07/2017
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: report-design
 ms.topic: conceptual
 ms.assetid: 12ad0e77-4c28-4bbb-ab11-473ae89ec9f1
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: ba4b779d3cba79c3bed3574f5ab5d53eec6bffeb
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: ac257b63b3cd36cc789a842c87aff9d5186f1206
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56293560"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65575418"
 ---
 # <a name="add-a-multi-value-parameter-to-a-report"></a>複数の値を持つパラメーターのレポートへの追加
   ユーザーがパラメーター値として複数の値を選択できるパラメーターをレポートに追加できます。  

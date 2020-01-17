@@ -17,21 +17,20 @@ helpviewer_keywords:
 - REVERSE function
 - reverse character expressions
 ms.assetid: 555d8877-7cc7-4955-ae2c-6215aca313b7
-author: MashaMSFT
-ms.author: mathoma
-manager: craigg
+author: MikeRayMSFT
+ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 2a110e06ce78792f3cf58119e0f4cdd2078b035b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 208babd394592d48feaf257d14329db89d11f767
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47805482"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68092619"
 ---
 # <a name="reverse-transact-sql"></a>REVERSE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-  文字列値を逆に並べ替えたものを返します。  
+  文字列値を反転して返します。  
   
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -52,7 +51,7 @@ REVERSE ( string_expression )
  *string_expression* に暗黙的に変換できるデータ型である必要があります **varchar** です。 それ以外の場合、使用して [CAST](../../t-sql/functions/cast-and-convert-transact-sql.md) に明示的に変換する *string_expression* です。  
   
 ## <a name="supplementary-characters-surrogate-pairs"></a>補助文字 (サロゲート ペア)  
- SC 照合順序を使用すると、REVERSE 関数は、サロゲート ペアの 2 つの要素の順序を逆にしません。  
+ SC の照合順序を使用する場合、REVERSE 関数はサロゲート ペアの 2 つの要素の順序を反転しません。  
   
 ## <a name="examples"></a>使用例  
  次の例では、すべての連絡先の名前の文字を、逆に並べ替えて返します。 この例では、[!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] データベースを使用します。  
@@ -78,7 +77,7 @@ Terri          irreT
 (4 row(s) affected)
 ```  
   
- 次の例では、変数内の文字列を逆に並べ替えます。  
+ 次の例では、変数内の文字を反転します。  
   
 ```  
 DECLARE @myvar varchar(10);  

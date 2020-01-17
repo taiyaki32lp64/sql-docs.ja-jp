@@ -18,17 +18,20 @@ helpviewer_keywords:
 - deployment utility [Integration Services]
 - deploying packages [Integration Services], configurations
 ms.assetid: de18468c-cff3-48f4-99ec-6863610e5886
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: 2c92d803dd38015950123501743d6a0e0cdfa8fd
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: b873c611c0e997c5033c2efed341f93e0ec5aa5e
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47739610"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71290727"
 ---
 # <a name="deploy-packages-with-ssis"></a>SSIS によるパッケージの配置
+
+[!INCLUDE[ssis-appliesto](../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] には、パッケージを別のコンピューターへ簡単に配置できるツールが用意されています。 この配置ツールでは、パッケージに必要な構成やファイルなどの依存関係を管理することもできます。 このチュートリアルでは、これらのツールを使用して、ターゲット コンピューターにパッケージとその依存関係をインストールする方法を学習します。    
     
 まず、配置の準備を行います。 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] で新しい [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] プロジェクトを作成し、既存のパッケージとデータ ファイルをプロジェクトに追加します。 新しいパッケージを最初から作成するのではなく、このチュートリアル用に作成された既存のパッケージで作業を行います。 このチュートリアルでパッケージの機能は変更しませんが、パッケージをプロジェクトに追加した後、 [!INCLUDE[ssIS](../includes/ssis-md.md)] デザイナーでパッケージを開いて内容を確認しておくことをお勧めします。 パッケージの内容を確認すると、ログ ファイルなどのパッケージの依存関係やその他の便利な機能について理解できます。    
@@ -49,13 +52,13 @@ ms.locfileid: "47739610"
 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] の新しいツール、コントロール、機能などに慣れる最良の方法は、実際に使ってみることです。 このチュートリアルでは、 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] プロジェクトを作成し、パッケージとその他の必要なファイルをプロジェクトに追加する手順を紹介します。 プロジェクトが完成したら、配置バンドルを作成し、バンドルを目的のコンピューターにコピーして、そのコンピューターにパッケージをインストールします。    
     
 ## <a name="prerequisites"></a>Prerequisites    
-このチュートリアルは、ファイル システムの基本的な操作は理解していても、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]の新機能はほとんど使用したことがないユーザーを対象にしています。 このチュートリアルで使用する基本的な [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] の概念をよく理解するためには、最初に [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] のチュートリアルの「 [SSIS ETL パッケージを作成する方法](../integration-services/ssis-how-to-create-an-etl-package.md)」を終えることをお勧めします。    
+このチュートリアルは、ファイル システムの基本的な操作は理解していても、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]の新機能はほとんど使用したことがないユーザーを対象にしています。 このチュートリアルで使用する基本的な [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] の概念をよく理解するためには、最初に [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] チュートリアルの「[SSIS ETL パッケージを作成する方法](../integration-services/ssis-how-to-create-an-etl-package.md)」を終えることをお勧めします。    
     
 ### <a name="on-the-source-computer"></a>ソース コンピューターの場合
 
 配置バンドルを作成するコンピューターには、**次のコンポーネントがインストールされている必要があります。**
 
-- SQL Server :  ([SQL Server のダウンロード](https://www.microsoft.com/sql-server/sql-server-downloads)に関するページから無料の Evaluation Edition または Developer Edition の SQL Server をダウンロードします)。
+- SQL Server : ([SQL Server のダウンロード](https://www.microsoft.com/sql-server/sql-server-downloads)に関するページから無料の Evaluation Edition または Developer Edition の SQL Server をダウンロードします)。
 
 - サンプル データ、完成したパッケージ、構成、Readme。 サンプル データとレッスン パッケージを ZIP ファイルとしてダウンロードする場合は、[SQL Server Integration Services のチュートリアル ファイル](https://www.microsoft.com/download/details.aspx?id=56827)に関するページを参照してください。 Zip ファイル内のファイルのほとんどは、意図しない変更を回避するために読み取り専用になっています。 ファイルに出力を書き込んだり、ファイルを変更したりするには、ファイルのプロパティで読み取り専用属性をオフにする必要がある場合があります。
 
@@ -69,7 +72,7 @@ ms.locfileid: "47739610"
 
 パッケージを配置するコンピューターには、 **次のコンポーネントがインストールされている必要があります。**    
     
-- SQL Server :  ([SQL Server のダウンロード](https://www.microsoft.com/sql-server/sql-server-downloads)に関するページから無料の Evaluation Edition または Developer Edition の SQL Server をダウンロードします)。
+- SQL Server : ([SQL Server のダウンロード](https://www.microsoft.com/sql-server/sql-server-downloads)に関するページから無料の Evaluation Edition または Developer Edition の SQL Server をダウンロードします)。
 
 - サンプル データ、完成したパッケージ、構成、Readme。 サンプル データとレッスン パッケージを ZIP ファイルとしてダウンロードする場合は、[SQL Server Integration Services のチュートリアル ファイル](https://www.microsoft.com/download/details.aspx?id=56827)に関するページを参照してください。 Zip ファイル内のファイルのほとんどは、意図しない変更を回避するために読み取り専用になっています。 ファイルに出力を書き込んだり、ファイルを変更したりするには、ファイルのプロパティで読み取り専用属性をオフにする必要がある場合があります。
 
@@ -86,13 +89,13 @@ ms.locfileid: "47739610"
 配置バンドルを作成したコンピューターにパッケージを配置する場合は、そのコンピューターが配置元コンピューターと配置先コンピューターの両方の必要条件を満たしている必要があります。    
         
 ## <a name="lessons-in-this-tutorial"></a>このチュートリアルで行うレッスン    
-[レッスン 1: 配置バンドルを作成する準備](../integration-services/lesson-1-preparing-to-create-the-deployment-bundle.md)    
+[レッスン 1:配置バンドルを作成する準備](../integration-services/lesson-1-preparing-to-create-the-deployment-bundle.md)    
 このレッスンでは、新しい [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] プロジェクトを作成し、パッケージとその他の必要なファイルをプロジェクトに追加して、ETL ソリューションを配置する準備を行います。    
     
-[レッスン 2: SSIS での配置バンドルの作成](../integration-services/lesson-2-create-the-deployment-bundle-in-ssis.md)    
+[レッスン 2:SSIS での配置バンドルの作成](../integration-services/lesson-2-create-the-deployment-bundle-in-ssis.md)    
 このレッスンでは、配置ユーティリティを構築し、配置バンドルに必要なファイルが含まれていることを確認します。    
     
-[レッスン 3: SSIS パッケージのインストール](../integration-services/lesson-3-install-ssis-packages.md)    
+[レッスン 3:SSIS パッケージのインストール](../integration-services/lesson-3-install-ssis-packages.md)    
 このレッスンでは、配置バンドルをターゲット コンピューターにコピーし、パッケージをインストールして、パッケージを実行します。    
     
 

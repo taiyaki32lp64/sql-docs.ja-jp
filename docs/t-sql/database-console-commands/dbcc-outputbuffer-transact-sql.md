@@ -19,15 +19,14 @@ helpviewer_keywords:
 - output buffers
 - current output buffer
 ms.assetid: e912a06d-9fde-4e26-b057-801255d79504
-author: uc-msft
+author: pmasl
 ms.author: umajay
-manager: craigg
-ms.openlocfilehash: 14c2c0d5d08ee90854d37754cf747a79a4d52f2d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: f35532913a21ed6f90d1e940dd6346137fc3feda
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47691060"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68039087"
 ---
 # <a name="dbcc-outputbuffer-transact-sql"></a>DBCC OUTPUTBUFFER (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

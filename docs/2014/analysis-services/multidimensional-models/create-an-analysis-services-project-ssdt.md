@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - templates [Analysis Services]
@@ -18,12 +17,12 @@ ms.assetid: d00913b0-cd6d-4de0-a1e7-4ce86fcc078d
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: ccf355df8a26136a72b48c4b81a1953d84d90186
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 313fdd08234e9dd784d45c65d7ee23cd0a0a308c
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52529642"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66076237"
 ---
 # <a name="create-an-analysis-services-project-ssdt"></a>Analysis Services プロジェクトの作成 (SSDT)
   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] プロジェクトは、 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] を使用して定義できます。具体的には、 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] プロジェクト テンプレートを使用するか、または [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] データベースのインポート ウィザードを使用して、 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] データベースのコンテンツを読み取ります。 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]に読み込まれているソリューションがない場合は、新しい [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] プロジェクトを作成すると自動的に新しいソリューションが作成されます。 それ以外の場合は、新しい [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] プロジェクトが既存のソリューションに追加されます。 ソリューション開発のベスト プラクティスでは、アプリケーション データの種類ごとにプロジェクトを個別に作成することが必要です。複数のプロジェクトが関係していても、使用するソリューションは 1 つです。 たとえば、Integration Services パッケージ、Analysis Services データベース、および Reporting Services レポートすべてを同じビジネス アプリケーションが使用し、これらのための独立した複数プロジェクトを含むソリューションが 1 つ存在する場合があります。  
@@ -59,7 +58,7 @@ ms.locfileid: "52529642"
   
 5.  新しいプロジェクトを既存のソリューションに追加するには、 **[ソリューション]** の一覧から **[ソリューションに追加する]** をクリックします。  
   
-     - または -  
+     \- または -  
   
      新規のソリューションを作成するには、 **[ソリューション]** の一覧で **[新しいソリューションを作成する]** をクリックします。 新しいソリューション用に新規のフォルダーを作成するには、 **[ソリューションのディレクトリを作成]** をクリックします。 **[ソリューション名]** に、新しいソリューションの名前を入力します。  
   
@@ -160,7 +159,7 @@ ms.locfileid: "52529642"
 ||[ディメンション]|ディメンション ウィザードを起動して、新しいデータベース ディメンションを [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] プロジェクトに追加します。|  
 ||[マイニング構造]|データ マイニング ウィザードを起動して、新しいマイニング構造と関連マイニング モデルを [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] プロジェクトに追加します。|  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [Analysis Services プロジェクトのプロパティの構成 &#40;SSDT&#41;](configure-analysis-services-project-properties-ssdt.md)   
  [Analysis Services プロジェクトのビルド &#40;SSDT&#41;](build-analysis-services-projects-ssdt.md)   
  [Analysis Services プロジェクトの配置 &#40;SSDT&#41;](deploy-analysis-services-projects-ssdt.md)  

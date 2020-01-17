@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 309339e9-9ccd-4a58-8aa4-b6dc88f4eb7c
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: f1fd069336a52b0a27ae927880f749c02d2c1d43
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d0dbddc71b0d647246d10dad16ad72d533df16de
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47765899"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68023346"
 ---
 # <a name="parameter-binding-offsets"></a>パラメーター バインディングのオフセット
 アプリケーションがバインドされたパラメーター バッファーのアドレスおよび対応する長さ/インジケーターにオフセットを追加することを指定できますバッファー アドレスとき**SQLExecDirect**または**SQLExecute**が呼び出されます。 これらの追加の結果は、これらの操作で使用されるアドレスを決定します。  

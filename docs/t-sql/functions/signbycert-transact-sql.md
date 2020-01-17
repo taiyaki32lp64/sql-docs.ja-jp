@@ -21,15 +21,14 @@ helpviewer_keywords:
 - SIGNBYCERT function
 - cryptography [SQL Server], certificates
 ms.assetid: b4c6bced-4473-4bae-85b9-56deced495f9
-author: MashaMSFT
-ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 884e7f3928c95584b6a2e675f79a8b88d5fb36bd
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: VanMSFT
+ms.author: vanto
+ms.openlocfilehash: 039e6b776240121aa66559cfb637c11f0ac70a9d
+ms.sourcegitcommit: a24f6e12357979f1134a54a036ebc58049484a4f
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47727090"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71314577"
 ---
 # <a name="signbycert-transact-sql"></a>SIGNBYCERT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -47,13 +46,13 @@ SignByCert ( certificate_ID , @cleartext [ , 'password' ] )
   
 ## <a name="arguments"></a>引数  
  *certificate_ID*  
- データベースに含まれる証明書の ID を指定します。 *certificate_ID* は **int** です。  
+ 現在のデータベースでの証明書の ID です。 *certificate_ID* は **int** です。  
   
- *@cleartext*  
+ *\@cleartext*  
  署名されるデータを含む **nvarchar**、**char**、**varchar**、または **nchar** 型の変数です。  
   
  **'** *password* **'**  
- 証明書の秘密キーを暗号化する場合に使用したパスワードを指定します。 *password* は **nvarchar (128)** です。  
+ 証明書の秘密キーを暗号化する場合に使用したパスワードです。 *password* は **nvarchar (128)** です。  
   
 ## <a name="return-types"></a>戻り値の型  
  **varbinary** 8,000 バイトの最大サイズ。  

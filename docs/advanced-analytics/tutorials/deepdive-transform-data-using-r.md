@@ -1,57 +1,58 @@
 ---
-title: RevoScaleR rxDataStep - SQL Server Machine Learning を使用したデータを変換します。
-description: SQL Server で R 言語を使用してデータを変換する方法のチュートリアル。
+title: RevoScaleR を使用してデータを変換する
+description: このチュートリアルは、SQL Server で R 言語を使用してデータを変換する方法について詳しく説明しています。
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 11/27/2018
 ms.topic: tutorial
-author: HeidiSteen
-ms.author: heidist
-manager: cgronlun
-ms.openlocfilehash: e124825e29392111a453cae0c41b49e8984c9906
-ms.sourcegitcommit: ee76332b6119ef89549ee9d641d002b9cabf20d2
-ms.translationtype: MT
+author: dphansen
+ms.author: davidph
+ms.custom: seo-lt-2019
+monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
+ms.openlocfilehash: 773607c7800ed1d507aa721ca7cf86a03857ab8b
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/20/2018
-ms.locfileid: "53645391"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73727163"
 ---
-# <a name="transform-data-using-r-sql-server-and-revoscaler-tutorial"></a>R (SQL Server と RevoScaleR チュートリアル) を使用してデータを変換します。
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+# <a name="transform-data-using-r-sql-server-and-revoscaler-tutorial"></a>R を使用してデータを変換する (SQL Server と RevoScaleR のチュートリアル)
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-このレッスンの一部である、 [RevoScaleR チュートリアル](deepdive-data-science-deep-dive-using-the-revoscaler-packages.md)を使用する方法の[RevoScaleR 関数](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler)と SQL Server。
+このレッスンは、SQL Server で [RevoScaleR 関数](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler)を使用する方法についての [RevoScaleR チュートリアル](deepdive-data-science-deep-dive-using-the-revoscaler-packages.md)の一部です。
 
-このレッスンでについて説明します、 **RevoScaleR**分析のさまざまな段階でデータを変換する関数。
+このレッスンでは、分析のさまざまな段階におけるデータの変換に関して **RevoScaleR** 関数について説明します。
 
 > [!div class="checklist"]
-> * 使用**rxDataStep**作成し、データのサブセットを変換するには
-> * 使用**rxImport**のインポート中に、XDF ファイルまたはメモリ内のデータ フレームとの間の転送中のデータを変換するには
+> * **rxDataStep** を使用してデータ サブセットを作成し変換する
+> * **rxImport** を使用して、インポート中に XDF ファイルまたはメモリ内のデータ フレームとの間で転送中のデータを変換する
 
 データ移動専用ではありませんが、 **rxSummary**、 **rxCube**、 **rxLinMod**、 **rxLogit** の各関数もすべてデータ変換をサポートします。
 
-## <a name="use-rxdatastep-to-transform-variables"></a>RxDataStep を使用して変数を変換するには
+## <a name="use-rxdatastep-to-transform-variables"></a>rxDataStep を使用して変数を変換する
 
 [rxDataStep](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxdatastep) 関数は一度に 1 つのチャンクのデータを処理し、1 つのデータ ソースからデータを読み取って別のデータ ソースに書き込みます。 変換する列や読み込む変換などを指定できます。
 
-この例を興味深いにするには、するのにには、データを変換するのに別の R パッケージから関数を使用してみましょう。 **boot** パッケージは "推奨" パッケージの 1 つであり、 **boot** は R のすべてのディストリビューションに含まれますが、起動時に自動的に読み込まれることはありません。 そのため、パッケージが既に利用できます、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]インスタンスの R 統合用に構成します。
+この例を興味深いものにするため、別の R パッケージの関数を使用してデータを変換します。 **boot** パッケージは "推奨" パッケージの 1 つであり、 **boot** は R のすべてのディストリビューションに含まれますが、起動時に自動的に読み込まれることはありません。 そのため、パッケージは、R 統合用に構成された [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスで既に使用できるようになっている必要があります。
 
-**ブート**関数を使用してパッケージを**inv.logit**、これは、ロジットの逆数を計算します。 つまり、 **inv.logit** 関数はロジットを [0,1] のスケールで確率に変換します。
+**boot** パッケージからは、ロジットの逆数を計算する、**inv.logit** 関数を使用します。 つまり、 **inv.logit** 関数はロジットを [0,1] のスケールで確率に変換します。
 
 > [!TIP] 
 > このスケールの予測を取得するもう 1 つの方法としては、 *rxPredict* の元の呼び出しで **type** パラメーターを **response**に設定します。
 
-1. テーブル用のデータを保持するためにデータ ソースを作成して開始`ccScoreOutput`します。
+1. まず、テーブル `ccScoreOutput` 用のデータを保持するためのデータ ソースを作成して開始します。
   
     ```R
     sqlOutScoreDS <- RxSqlServerData( table =  "ccScoreOutput",  connectionString = sqlConnString, rowsPerRead = sqlRowsPerRead )
     ```
   
-2. テーブルのデータを保持するために別のデータ ソースを追加`ccScoreOutput2`します。
+2. テーブル `ccScoreOutput2` のデータを保持するための別のデータ ソースを追加します。
   
     ```R
     sqlOutScoreDS2 <- RxSqlServerData( table =  "ccScoreOutput2",  connectionString = sqlConnString, rowsPerRead = sqlRowsPerRead )
     ```
   
-    新しいテーブルで、前のすべての変数を格納`ccScoreOutput`テーブルに加えて、新しく作成された変数。
+    新しいテーブルでは、前の `ccScoreOutput` テーブルのすべての変数に加えて、新しく作成された変数を格納します。
   
 3. 計算コンテキストを [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスに設定します。
   
@@ -59,7 +60,7 @@ ms.locfileid: "53645391"
     rxSetComputeContext(sqlCompute)
     ```
   
-4. 関数を使用して**rxSqlServerTableExists**を確認するかどうか、出力テーブル`ccScoreOutput2`; が存在して、そうである場合は、関数を使用して既に**rxSqlServerDropTable**テーブルを削除します。
+4. **rxSqlServerTableExists** 関数を使用して、出力テーブル `ccScoreOutput2` が既に存在するかどうかを確認します。存在する場合は、**rxSqlServerDropTable** 関数を使用してテーブルを削除します。
   
     ```R
     if (rxSqlServerTableExists("ccScoreOutput2"))     rxSqlServerDropTable("ccScoreOutput2")
@@ -75,7 +76,7 @@ ms.locfileid: "53645391"
         overwrite = TRUE)
     ```
 
-    各列に適用される変換を定義するときは、変換の実行に必要な追加の R パッケージも指定できます。  実行できる変換の種類の詳細については、次を参照してください。 [RevoScaleR を使用してデータを変換およびサブセット方法](https://docs.microsoft.com/machine-learning-server/r/how-to-revoscaler-data-transform)します。
+    各列に適用される変換を定義するときは、変換の実行に必要な追加の R パッケージも指定できます。  実行できる変換の種類の詳細については、[RevoScaleR を使用したデータの変換およびサブセット化の方法](https://docs.microsoft.com/machine-learning-server/r/how-to-revoscaler-data-transform)に関するセクションを参照してください。
   
 6. **rxGetVarInfo** を呼び出して、新しいデータ セットの変数の概要を表示します。
   
@@ -99,7 +100,7 @@ Var 9: ccFraudProb, Type: numeric
 
 元のロジット スコアは保持されますが、新しい列の *ccFraudProb*が追加されており、ロジット スコアが 0 ～ 1 の値として表示されます。
 
-因子変数が、テーブルに書き込まれた通知`ccScoreOutput2`文字データとして。 以降の解析で因子として使用するには、 *colInfo* パラメーターを使用してレベルを指定します。
+ファクト変数が文字データとしてテーブル `ccScoreOutput2` に書き込まれていることに注意してください。 以降の解析で因子として使用するには、 *colInfo* パラメーターを使用してレベルを指定します。
 
 ## <a name="next-steps"></a>次の手順
 

@@ -20,15 +20,14 @@ helpviewer_keywords:
 ms.assetid: 8119b7c7-e93b-4de5-8f71-c3b7c70b993c
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: 5190dcadfcef62bf01fdf8208fc102d6cfdd078a
-ms.sourcegitcommit: c6e71ed14198da67afd7ba722823b1af9b4f4e6f
+ms.openlocfilehash: f45cb5b270bff9b2609ca0228c4e37a06314d368
+ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/16/2019
-ms.locfileid: "54327483"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "73982002"
 ---
-# <a name="alter-table-columnconstraint-transact-sql"></a>ALTER TABLE column_constraint (Transact-SQL)
+# <a name="alter-table-column_constraint-transact-sql"></a>ALTER TABLE column_constraint (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   [ALTER TABLE](../../t-sql/statements/alter-table-transact-sql.md) を使用してテーブルに追加された新しい列定義の一部になっている PRIMARY KEY、FOREIGN KEY、UNIQUE、または CHECK 制約のプロパティを指定します。  
@@ -65,7 +64,7 @@ ms.locfileid: "54327483"
  制約の名前を指定します。 制約名は[識別子](../../relational-databases/databases/database-identifiers.md)の規則に従う必要があります。ただし、番号記号 (#) で始めることはできません。 *constraint_name* を指定しない場合、この制約にはシステムによって生成された名前が割り当てられます。  
   
  NULL | NOT NULL  
- 列で NULL 値が許容されるかどうかを指定します。 NULL 値を許可しない列は、既定値が指定されているときだけ追加できます。 新規列が NULL 値を許可し、既定値が指定されていない場合は、テーブル内のすべての行で、新しい列は NULL 値を格納します。 新規列が NULL 値を許可し、新規列と共に既定の定義が追加される場合、WITH VALUES オプションを使用して、テーブル内の既存の各行の新規列に既定値を格納できます。  
+ 列に null 値を使用できるかどうかを指定します。 NULL 値を許可しない列は、既定値が指定されているときだけ追加できます。 新規列が NULL 値を許可し、既定値が指定されていない場合は、テーブル内のすべての行で、新しい列は NULL 値を格納します。 新規列が NULL 値を許可し、新規列と共に既定の定義が追加される場合、WITH VALUES オプションを使用して、テーブル内の既存の各行の新規列に既定値を格納できます。  
   
  新規列が NULL 値を許可しない場合、新規列と共に DEFAULT 定義を追加する必要があります。 新規列は、各既存の行の新規列に既定値と共に自動で読み込まれます。  
   
@@ -84,15 +83,15 @@ ms.locfileid: "54327483"
   
  テーブルに既存のクラスター化制約またはクラスター化インデックスがある場合、CLUSTERED は指定できません。 テーブルにクラスター化制約またはクラスター化インデックスが既に存在する場合、PRIMARY KEY 制約には既定で NONCLUSTERED が適用されます。  
   
- **ntext**、**text**、**varchar(max)**、**nvarchar(max)**、**varbinary(max)**、**xml**、**image** データ型の列を、インデックスの列として指定することはできません。  
+ **ntext**、**text**、**varchar(max)** 、**nvarchar(max)** 、**varbinary(max)** 、**xml**、**image** データ型の列を、インデックスの列として指定することはできません。  
   
- WITH FILLFACTOR **=**_fillfactor_  
+ WITH FILLFACTOR **=** _fillfactor_  
  インデックス データの格納に使用される個々のインデックス ページを [!INCLUDE[ssDE](../../includes/ssde-md.md)] がどの程度埋めるかを指定します。 ユーザー定義の FILL FACTOR 値は、1 ～ 100 の範囲で指定できます。 値を指定しない場合の既定値は 0 です。  
   
 > [!IMPORTANT]  
 >  マニュアルには、WITH FILLFACTOR = *fillfactor* が PRIMARY KEY 制約または UNIQUE 制約に適用される唯一のインデックス オプションとして記述されていますが、これは旧バージョンとの互換性を維持するために記載されており、将来のリリースではこのような記述はなくなります。 ALTER TABLE の [index_option](../../t-sql/statements/alter-table-index-option-transact-sql.md) 句で他のインデックス オプションも指定できます。  
   
- ON { _partition_scheme_name_**(**_partition_column_name_**)** | *filegroup* | **"** default **"** } **適用対象**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。  
+ ON { _partition_scheme_name_ **(** _partition_column_name_ **)**  | *filegroup* |  **"** default **"** } **適用対象**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 以降。  
   
  制約に対して作成されるインデックスの格納場所を指定します。 *partition_scheme_name* を指定した場合、インデックスがパーティション分割され、分割後のパーティションは *partition_scheme_name* で指定したファイル グループにマップされます。 *filegroup* を指定すると、インデックスは指定されたファイル グループに作成されます。 **"** default **"** を指定するか、ON を指定しなかった場合、インデックスはテーブルと同じファイル グループに作成されます。 PRIMARY KEY 制約または UNIQUE 制約のクラスター化インデックスを追加する場合に ON を指定すると、クラスター化インデックスの作成時に、指定したファイル グループにテーブル全体が移動します。  
   
@@ -161,7 +160,7 @@ ms.locfileid: "54327483"
  これに対して、NO ACTION を指定した場合は、**ProductVendor** テーブルに Vendor テーブルの行を参照する行が 1 つでもあると、[!INCLUDE[ssDE](../../includes/ssde-md.md)] ではエラーが発生し、**Vendor** テーブルの行に対する更新操作はロールバックされます。  
   
  NOT FOR REPLICATION  
- **適用対象**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]  
+ **適用対象**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 以降。  
   
  FOREIGN KEY 制約と CHECK 制約に対して指定できます。 制約でこの句を指定すると、レプリケーション エージェントが挿入、更新、削除操作を行う際に制約が適用されません。  
   

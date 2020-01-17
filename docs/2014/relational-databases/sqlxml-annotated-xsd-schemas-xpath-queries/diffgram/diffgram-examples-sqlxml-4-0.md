@@ -12,15 +12,15 @@ helpviewer_keywords:
 - diffgr:parentID
 - parentID annotation
 ms.assetid: fc148583-dfd3-4efb-a413-f47b150b0975
-author: douglaslMS
-ms.author: douglasl
+author: MightyPen
+ms.author: genemi
 manager: craigg
-ms.openlocfilehash: ed354e6b72f66908c12e1254738df75008659f8d
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 38bee43ed5b727bca552c1b44010dd692012d823
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52804534"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66012972"
 ---
 # <a name="diffgram-examples-sqlxml-40"></a>DiffGram の例 (SQLXML 4.0)
   ここでは、データベースに対して挿入、変更、および削除の各操作を実行する DiffGram の例を示します。 例を使用する前に、次のことに注意してください。  
@@ -99,7 +99,7 @@ ms.locfileid: "52804534"
 </ROOT>  
 ```  
   
- **\<する前に >** が、ブロック、 **\<順序 >** 要素 (**diffgr:id ="Order1"**) と **\<顧客 >** 要素 (**diffgr:id ="Customer1"**)。 これらの要素はデータベースの既存のレコードを表します。  **\<DataInstance >** 要素に対応するレコードがありません (同じ**diffgr:id**)。 これは削除操作を表します。  
+ **\<する前に >** が、ブロック、 **\<順序 >** 要素 (**diffgr:id ="Order1"** ) と **\<顧客 >** 要素 (**diffgr:id ="Customer1"** )。 これらの要素はデータベースの既存のレコードを表します。 **\<DataInstance >** 要素に対応するレコードがありません (同じ **diffgr:id**)。 これは削除操作を表します。  
   
 #### <a name="to-test-the-diffgram"></a>DiffGram をテストするには  
   
@@ -166,7 +166,7 @@ ms.locfileid: "52804534"
 </ROOT>  
 ```  
   
- この DiffGram で、 **\<する前に >** ブロックが指定されていない (既存のデータベース レコード)。 2 つのレコード インスタンスがある (で識別される、 **\<顧客 >** と**\<順序 >** 内の要素、  **\<DataInstance >** ブロック) それぞれ Cust と Ord テーブルにマップされます。 これらの要素の両方を指定、 **diffgr:hasChanges**属性 (**hasChanges ="inserted"**)。 これは挿入操作を表します。 指定した場合、この DiffGram で**hasChanges ="modified"**、その結果、エラーが存在しないレコードを変更することを示します。  
+ この DiffGram で、 **\<する前に >** ブロックが指定されていない (既存のデータベース レコード)。 2 つのレコード インスタンスがある (で識別される、 **\<顧客 >** と **\<順序 >** 内の要素、  **\<DataInstance >** ブロック) それぞれ Cust と Ord テーブルにマップされます。 これらの要素の両方を指定、 **diffgr:hasChanges**属性 (**hasChanges ="inserted"** )。 これは挿入操作を表します。 指定した場合、この DiffGram で**hasChanges ="modified"** 、その結果、エラーが存在しないレコードを変更することを示します。  
   
 #### <a name="to-test-the-diffgram"></a>DiffGram をテストするには  
   
@@ -238,7 +238,7 @@ ms.locfileid: "52804534"
 </ROOT>  
 ```  
   
- **\<する前に >** ブロックが含まれています、 **\<顧客 >** 要素 (**diffgr:id ="Customer1"**)。  **\<DataInstance >** ブロックに含まれる、対応する**\<顧客 >** 要素と同じ**id**します。**\<顧客 >** 内の要素、  **\<NewDataSet >** も指定**diffgr:hasChanges ="modified"** します。 これは、更新操作、および顧客レコードを示します、 **Cust**テーブルがそれに応じて更新されます。 その場合、 **diffgr:hasChanges**属性が指定されていない、DiffGram の処理ロジックがこの要素は無視されます、および更新は実行されません。  
+ **\<する前に >** ブロックが含まれています、 **\<顧客 >** 要素 (**diffgr:id ="Customer1"** )。 **\<DataInstance >** ブロックに含まれる、対応する **\<顧客 >** 要素と同じ **id**します。 **\<顧客 >** 内の要素、 **\<NewDataSet >** も指定 **diffgr:hasChanges ="modified"** します。 これは、更新操作、および顧客レコードを示します、 **Cust**テーブルがそれに応じて更新されます。 その場合、 **diffgr:hasChanges**属性が指定されていない、DiffGram の処理ロジックがこの要素は無視されます、および更新は実行されません。  
   
 #### <a name="to-test-the-diffgram"></a>DiffGram をテストするには  
   
@@ -341,13 +341,13 @@ ms.locfileid: "52804534"
   
 -   DiffGram の処理ロジックで内のすべての最上位要素、 **\<する前に >** マッピング スキーマ」の説明に従って、対応するテーブルにマップをブロックします。  
   
--   **\<する前に >** ブロックには、 **\<順序 >** 要素 (**dffgr:id ="Order1"**) と**\<顧客>** 要素 (**diffgr:id ="Customer1"**) がないの対応する要素の **\<DataInstance >** (同じ ID) をブロックします。 これは削除操作を表し、レコードは Cust テーブルと Ord テーブルから削除されます。  
+-   **\<する前に >** ブロックには、 **\<順序 >** 要素 (**dffgr:id ="Order1"** ) と **\<顧客>** 要素 (**diffgr:id ="Customer1"** ) がないの対応する要素の **\<DataInstance >** (同じ ID) をブロックします。 これは削除操作を表し、レコードは Cust テーブルと Ord テーブルから削除されます。  
   
--   **\<する前に >** ブロックには、 **\<顧客 >** 要素 (**diffgr:id ="Customer2"**) が対応する**\<顧客 >** 内の要素、  **\<DataInstance >** (同じ ID) をブロックします。 内の要素、  **\<DataInstance >** ブロックを指定します**diffgr:hasChanges ="modified"** します。 これは顧客 ANATR、CompanyName と ContactName の情報が更新で指定されている値を使用して、Cust テーブルに update 操作、  **\<DataInstance >** ブロックします。  
+-   **\<する前に >** ブロックには、 **\<顧客 >** 要素 (**diffgr:id ="Customer2"** ) が対応する **\<顧客 >** 内の要素、 **\<DataInstance >** (同じ ID) をブロックします。 内の要素、  **\<DataInstance >** ブロックを指定します**diffgr:hasChanges ="modified"** します。 これは顧客 ANATR、CompanyName と ContactName の情報が更新で指定されている値を使用して、Cust テーブルに update 操作、  **\<DataInstance >** ブロックします。  
   
--    **\<DataInstance >** ブロックには、 **\<顧客 >** 要素 (**diffgr:id ="Customer3"**) および **\<順序 >** 要素 (**diffgr:id ="Order3"**)。 これらの要素のどちらが指定されて、 **diffgr:hasChanges**属性。 このため、DiffGram の処理ロジックで、これらの要素は無視されます。  
+-   **\<DataInstance >** ブロックには、 **\<顧客 >** 要素 (**diffgr:id ="Customer3"** ) および **\<順序 >** 要素 (**diffgr:id ="Order3"** )。 これらの要素のどちらが指定されて、 **diffgr:hasChanges**属性。 このため、DiffGram の処理ロジックで、これらの要素は無視されます。  
   
--    **\<DataInstance >** ブロックには、 **\<顧客 >** 要素 (**diffgr:id ="Customer4"**) および **\<順序 >** 要素 (**diffgr:id ="Order4"**) がないに対応する要素、\<する前に > ブロックします。 これらの要素を **\<DataInstance >** ブロック指定**diffgr:hasChanges ="inserted"** します。 このため、新しいレコードが Cust テーブルと Ord テーブルに追加されます。  
+-   **\<DataInstance >** ブロックには、 **\<顧客 >** 要素 (**diffgr:id ="Customer4"** ) および **\<順序 >** 要素 (**diffgr:id ="Order4"** ) がないに対応する要素、\<する前に > ブロックします。 これらの要素を **\<DataInstance >** ブロック指定**diffgr:hasChanges ="inserted"** します。 このため、新しいレコードが Cust テーブルと Ord テーブルに追加されます。  
   
 #### <a name="to-test-the-diffgram"></a>DiffGram をテストするには  
   

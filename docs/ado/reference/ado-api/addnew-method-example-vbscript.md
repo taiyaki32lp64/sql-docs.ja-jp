@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: dcdcaf0a-b9b0-4d81-8728-43c38c4c853b
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: e5d6db633a5c718ea38d2b8959fa54305ec02883
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e8329b1edd2e240e00221096bd501d3edf204e71
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47701620"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67921280"
 ---
 # <a name="addnew-method-example-vbscript"></a>AddNew メソッドの例 (VBScript)
 この例では、 [AddNew](../../../ado/reference/ado-api/addnew-method-ado.md)メソッドを指定した名前の新しいレコードを作成します。  
@@ -213,6 +212,6 @@ End Sub
 <!-- EndAddNewVBS -->  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [AddNew メソッド (ADO)](../../../ado/reference/ado-api/addnew-method-ado.md)   
  [Recordset オブジェクト (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)

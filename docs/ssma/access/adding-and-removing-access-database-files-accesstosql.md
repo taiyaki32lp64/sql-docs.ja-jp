@@ -28,13 +28,12 @@ helpviewer_keywords:
 ms.assetid: e944c740-4c8a-4bc1-b0ed-be57bc06dced
 author: Shamikg
 ms.author: Shamikg
-manager: craigg
-ms.openlocfilehash: 8de9b27a58d277191a4d40da6b34dbcbbd43e497
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 39df13a3cab2d842a313ca37fc4a98d0c331ba83
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51655641"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68104213"
 ---
 # <a name="adding-and-removing-access-database-files-accesstosql"></a>追加および Access データベース ファイル (AccessToSQL) を削除します。
 アクセス データを移行する[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]または SQL Azure では、SSMA プロジェクトに 1 つ以上の Access データベースを追加する必要があります。 これらのデータベースは、Access 97 または以降のバージョンである必要があります。 アクセスの以前のバージョンからのデータベースがある場合より新しいバージョンにデータベースを変換する必要があります。 これには開くして SSMA に追加する前に、Access 97 以降のバージョンでデータベースを保存します。  
@@ -102,7 +101,7 @@ Access データベースをプロジェクトに追加すると、アクセス 
   
 3.  展開**テーブル**し、テーブルを選択します。  
   
-    4 つのタブが表示されることに注意してください:**テーブル**、**型マッピングの**、**プロパティ**、および**データ**します。  
+    4 つのタブが表示されることに注意してください。**テーブル**、**の種類のマッピング**、**プロパティ**、および**データ**します。  
   
 4.  テーブルを展開し、**キー**、キーを選択します。  
   

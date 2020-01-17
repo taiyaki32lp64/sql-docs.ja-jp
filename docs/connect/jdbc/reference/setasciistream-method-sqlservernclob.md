@@ -1,5 +1,5 @@
 ---
-title: setAsciiStream メソッド (SQLServerNClob) |Microsoft Docs
+title: setAsciiStream メソッド (SQLServerNClob) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 617ece92-0fb1-4f95-b32d-29b5b56eb3fb
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 9fb61bbc8ef450a6c0cf2b2cc16e27976a3c0dbf
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 043a94108bdb7c8938f06e8bf1d4bf58651fbf21
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47742970"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67975369"
 ---
 # <a name="setasciistream-method-sqlservernclob"></a>setAsciiStream メソッド (SQLServerNClob)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -31,7 +30,7 @@ public java.io.OutputStream setAsciiStream(long pos)
 ```  
   
 #### <a name="parameters"></a>パラメーター  
- *pos*  
+ *po*  
   
  **NCLOB** オブジェクトへの書き込みを開始する位置です。最初の位置は 1 です。  
   
@@ -42,7 +41,7 @@ public java.io.OutputStream setAsciiStream(long pos)
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- この setAsciiStream メソッドは、java.sql.NClob インターフェイスの setAsciiStream メソッドによって指定されます。  
+ この setAsciiStream メソッドは、NClob インターフェイスの setAsciiStream メソッドによって指定されます。  
   
 ## <a name="see-also"></a>参照  
  [SQLServerNClob のメソッド](../../../connect/jdbc/reference/sqlservernclob-methods.md)   

@@ -13,13 +13,13 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: 940b33cda3158e98c9fee519ea12f1193e615bca
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52746925"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62642578"
 ---
-# <a name="lesson-2-configuring-permissions-on-database-objects"></a>レッスン 2:データベース オブジェクトに対する権限の構成
+# <a name="lesson-2-configuring-permissions-on-database-objects"></a>レッスン 2:データベース オブジェクトに対するアクセス許可の構成
   データベースへのアクセス権をユーザーに付与するには、次の 3 つの手順があります。 まず、ログインを作成します。 ユーザーはこのログインを使用して、 [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]に接続できます。 次に、指定したデータベースでユーザーとしてログインを構成します。 最後に、データベース オブジェクトに対する権限をユーザーに付与します。 このレッスンではこれらの 3 つの手順を紹介し、ビューとストアド プロシージャをオブジェクトとして作成する方法について説明します。  
   
  このレッスンの内容は次のとおりです。  

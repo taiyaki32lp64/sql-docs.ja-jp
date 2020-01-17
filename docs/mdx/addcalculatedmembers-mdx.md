@@ -1,5 +1,5 @@
 ---
-title: AddCalculatedMembers (MDX) |Microsoft ドキュメント
+title: AddCalculatedMembers (MDX) |Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -8,18 +8,17 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-manager: kfile
-ms.openlocfilehash: 18ccf4ad808c15945d82f1ca05616f0da878a7ca
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.openlocfilehash: 982484b729b59a7106b6195e361110c1d4012653
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34739391"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68017183"
 ---
 # <a name="addcalculatedmembers-mdx"></a>AddCalculatedMembers (MDX)
 
 
-  計算されるメンバーを指定されたセットに追加して生成したセットを返します。  
+  指定されたセットに計算されるメンバーを追加することによって生成されるセットを返します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -33,13 +32,13 @@ AddCalculatedMembers(Set_Expression)
  セットを返す有効な多次元式 (MDX) です。  
   
 ## <a name="remarks"></a>コメント  
- 既定では、セット関数を解決する際、計算されるメンバーは除外されます。 **AddCalculatedMembers**関数がで指定されたセット式を調べ*Set_Expression、* スコープ内に含まれるメンバーの兄弟である計算されるメンバーが含まれていますとそのセット式のです。  
+ 既定では、MDX は、セット関数を解決するときに計算されるメンバーを除外します。 **AddCalculatedMembers**関数がで指定されたセット式を調べ*Set_Expression、* そのセットのスコープ内に含まれるメンバーの兄弟である計算されるメンバーが含まれています式。  
   
 > [!NOTE]  
 >  この関数で使用できるのは、1 次元のセット式だけです。  
   
 ## <a name="examples"></a>使用例  
- この関数の使用例を以下に示します。  
+ 次の例では、この関数の使用を示します。  
   
 ```  
 -- This query returns the calculated members for the cube  
@@ -60,7 +59,7 @@ FROM
    [Adventure Works]  
 ```  
   
-## <a name="see-also"></a>参照  
- [MDX 関数リファレンス&#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
+## <a name="see-also"></a>関連項目  
+ [MDX 関数リファレンス &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
   
   

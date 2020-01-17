@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 084761fe-e65b-4f38-ba4f-69884b2a7700
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 98bd56051c724186d7308eff669263d29b82ecd5
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: eb2587f733f5042436144f7865627fee576e3d9c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47813830"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68096309"
 ---
 # <a name="delete-statement-limitations"></a>DELETE ステートメントの制限事項
 DELETE ステートメントは、Microsoft Excel またはテキストのドライバーではサポートされていません。 テキストのドライバーの INSERT ステートメントがサポートされていることに注意してください。  

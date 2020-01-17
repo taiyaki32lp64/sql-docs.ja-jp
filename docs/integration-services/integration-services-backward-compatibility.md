@@ -15,17 +15,20 @@ helpviewer_keywords:
 - Integration Services, backward compatibility
 - backward compatibility [Integration Services]
 ms.assetid: bfff5b25-cfe1-449b-8e07-38cd511ac307
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: e48a39f307afc8a9c10d2d5b35184bb212db9a7c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: bb6f782de8d271edf005f5adb69e8c3e6b8945d3
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47668951"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71296239"
 ---
 # <a name="integration-services-backward-compatibility"></a>Integration Services の旧バージョンとの互換性
+
+[!INCLUDE[ssis-appliesto](../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   ここでは、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]のバージョン間の変更について説明します。 使用できなくなる機能や、将来のリリースで削除される予定の機能の情報を提供します。 また、 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 機能を含む既存のアプリケーションが使用できなくなったり動作が変わったりするような、製品の変更についても説明します。  
   
 ## <a name="deprecated-integration-services-features-in-sql-server-2016"></a>SQL Server 2016 の非推奨 Integration Services 機能

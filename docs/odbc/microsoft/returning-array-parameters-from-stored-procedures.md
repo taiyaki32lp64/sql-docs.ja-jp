@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 2018069b-da5d-4cee-a971-991897d4f7b5
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: a154a8739438b76f12e311d0dec0e9d98d886457
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: be89e4c9cc544048dada325c563ac1faa6cfd2d6
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47837027"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67987972"
 ---
 # <a name="returning-array-parameters-from-stored-procedures"></a>ストアド プロシージャから返される配列パラメーター
 > [!IMPORTANT]  

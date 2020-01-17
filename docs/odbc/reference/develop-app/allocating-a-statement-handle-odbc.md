@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 4ce3b446-34ab-46dc-96e5-f40ec95c267e
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 9524f2e6b01d2a5827dcface3159b7c52a728c59
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d50b0a31aed4935c805ca30620575ccff70d4a0b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47711530"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68077200"
 ---
 # <a name="allocating-a-statement-handle-odbc"></a>ステートメント ハンドルの割り当て (ODBC)
 アプリケーションがステートメントを実行する前にように、ステートメント ハンドルを割り当てますする必要があります。  

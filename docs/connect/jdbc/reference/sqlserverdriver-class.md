@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: fbdceae5-7e7b-4edb-8c33-c701ca6b2d53
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: fcd19bdf5c7126d56665cca5a8dd8d98defc4583
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 55c8a6bc70b8a2674b28d80552ef0cc95465007e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47809030"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67971318"
 ---
 # <a name="sqlserverdriver-class"></a>SQLServerDriver クラス
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

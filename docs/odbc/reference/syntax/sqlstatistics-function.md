@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: 45210682-cfea-4e5d-9951-bcf1cbe10f41
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 6cd0503b9f0169a19179bcee545132279903ea10
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: ef0f25660a0faa0747752a8ca15c207c1e939669
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53207551"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68039548"
 ---
 # <a name="sqlstatistics-function"></a>SQLStatistics 関数
 **準拠**  
@@ -36,7 +35,7 @@ ms.locfileid: "53207551"
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
   
 SQLRETURN SQLStatistics(  
      SQLHSTMT        StatementHandle,  
@@ -86,7 +85,7 @@ SQLRETURN SQLStatistics(
   
  SQL_ENSURE では、ドライバーが統計を無条件に取得することを要求します。 (ドライバーのみ、Open Group 標準に準拠しているし、ODBC 拡張機能をサポートしていないをできなく SQL_ENSURE をサポートするためにします。)  
   
- SQL_QUICK 要求をサーバーからすぐに使用できる場合に、ドライバーでカーディナリティおよびページを取得します。 この場合、ドライバーで取得される値が最新であるかどうかは保証されません。 (Open Group 標準に記述されているアプリケーションが ODBC 3 から SQL_QUICK 動作を取得常に *.x*-準拠のドライバーです)。  
+ SQL_QUICK 要求をサーバーからすぐに使用できる場合に、ドライバーでカーディナリティおよびページを取得します。 この場合、ドライバーで取得される値が最新であるかどうかは保証されません。 (ODBC から SQL_QUICK 動作を常に取得は、Open Group 標準に記述されているアプリケーション*3.x*-準拠のドライバーです)。  
   
 ## <a name="returns"></a>戻り値  
  SQL_SUCCESS、SQL_SUCCESS_WITH_INFO、SQL_STILL_EXECUTING、SQL_ERROR、または SQL_INVALID_HANDLE します。  
@@ -126,9 +125,9 @@ SQLRETURN SQLStatistics(
 > [!NOTE]  
 >  一般的な使用、引数、および ODBC カタログ関数の返されたデータの詳細については、次を参照してください。[カタログ関数](../../../odbc/reference/develop-app/catalog-functions.md)します。  
   
- 次の列が ODBC 3 の名前が変更された *.x*します。 列名の変更では、アプリケーションは、列番号でバインドため、旧バージョンとの互換性は影響しません。  
+ 次の列が ODBC の名前が変更された*3.x*します。 列名の変更では、アプリケーションは、列番号でバインドため、旧バージョンとの互換性は影響しません。  
   
-|ODBC 2.0 列|ODBC 3 *.x*列|  
+|ODBC 2.0 列|ODBC *3.x*列|  
 |---------------------|-----------------------|  
 |TABLE_QUALIFIER|TABLE_CAT|  
 |TABLE_OWNER|TABLE_SCHEM|  

@@ -10,15 +10,15 @@ helpviewer_keywords:
 - permissions [Master Data Services], assigning functional area permissions
 - functional area permissions [Master Data Services], assigning
 ms.assetid: af6fe2f3-37d0-4413-ab27-b3a0fb95eb50
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: b1649b95e751a3ea3a93285f480b0ec9b2b04075
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 5df56444fd5a7835a6ac4f13493a4aa33e4b42ca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52814294"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65480099"
 ---
 # <a name="assign-functional-area-permissions-master-data-services"></a>機能領域の権限を割り当てる (マスター データ サービス)
   機能領域の権限を割り当てて、ユーザーまたはグループに [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]の機能領域へのアクセス権を付与します。  
@@ -48,7 +48,7 @@ ms.locfileid: "52814294"
   
 -   [モデル オブジェクト権限を割り当てる (マスター データ サービス)](assign-model-object-permissions-master-data-services.md)  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [モデル管理者を作成する (マスター データ サービス)](../../2014/master-data-services/create-a-model-administrator-master-data-services.md)   
  [セキュリティ (マスター データ サービス)](../../2014/master-data-services/security-master-data-services.md)  
   

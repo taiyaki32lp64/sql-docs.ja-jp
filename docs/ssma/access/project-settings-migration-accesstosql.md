@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 4caebc9c-8680-4b99-a8fa-89c43161c95d
 author: Shamikg
 ms.author: Shamikg
-manager: craigg
-ms.openlocfilehash: 441366208d2bfd886794dd7e50dca7e0aef7b3ff
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 3e3d979b6f3c5943723fb5dd8f37831adfbc1305
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51659341"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67929395"
 ---
 # <a name="project-settings-migration-accesstosql"></a>プロジェクトの設定 (移行) (AccessToSQL)
 移行プロジェクトの設定では、データを移行する方法を構成できます。[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]または SQL Azure です。  
@@ -33,47 +32,47 @@ ms.locfileid: "51659341"
 **CHECK 制約**  
 テーブルにデータを追加する場合、SSMA が制約をチェックするかどうかを指定します。  
   
--   **既定のモード**: False  
+-   **既定のモード**:False  
   
--   **オプティミスティック モード**: True  
+-   **オプティミスティック モード**:True  
   
--   **フル モード**: False  
+-   **フル モード**:False  
   
 **[トリガーを起動する]**  
 データを追加するときに、SSMA が挿入トリガーを起動するかどうかを指定します。[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]テーブル。  
   
--   **既定のモード**: False  
+-   **既定のモード**:False  
   
--   **オプティミスティック モード**: True  
+-   **オプティミスティック モード**:True  
   
--   **フル モード**: False  
+-   **フル モード**:False  
   
 **[ID を保持する]**  
 SSMA では、データを追加する場合に、アクセス id の値が保持されるかどうかを指定します。[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]します。 この値が False の場合[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]id 値を割り当てます。  
   
--   **既定のモード**: True  
+-   **既定のモード**:True  
   
--   **オプティミスティック モード**: True  
+-   **オプティミスティック モード**:True  
   
--   **フル モード**: False  
+-   **フル モード**:False  
   
 **[NULL を保持する]**  
 SSMA では、データを追加する場合に、ソース データ内の null 値が保持されるかどうかを指定します。[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]で指定されている既定値に関係なく、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]します。  
   
--   **既定のモード**: True  
+-   **既定のモード**:True  
   
--   **オプティミスティック モード**: False  
+-   **オプティミスティック モード**:False  
   
--   **フル モード**: True  
+-   **フル モード**:True  
   
 **テーブル ロック**  
 データ移行中にデータをテーブルに追加する場合、SSMA でテーブルをロックするかどうかを指定します。 値が False の場合は、SSMA は、行ロックを使用します。  
   
--   **既定のモード**: True  
+-   **既定のモード**:True  
   
--   **オプティミスティック モード**: True  
+-   **オプティミスティック モード**:True  
   
--   **フル モード**: True  
+-   **フル モード**:True  
   
 **サポートされていない日付を置き換えます**  
 SSMA は、最も古いより前のアクセスの日付を修正する必要があるかどうかを指定します。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] datetime の日付 (1753 年 1 月 1)。  
@@ -87,6 +86,6 @@ SSMA は、最も古いより前のアクセスの日付を修正する必要が
 **バッチ サイズ**  
 データ移行中に使用されるバッチ サイズ。 各バッチの後にトランザクションが記録されます。 既定では、すべての構成のバッチ サイズは 10000 です。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
 [ユーザー インターフェイスの Reference(Access)](https://msdn.microsoft.com/af24c303-4a41-449b-9c86-d6558a97e839)  
   

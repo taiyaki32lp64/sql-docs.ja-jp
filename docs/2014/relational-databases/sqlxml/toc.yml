@@ -125,7 +125,7 @@
       href: ../sqlxml-annotated-xsd-schemas-xpath-queries/updategrams/updating-data-using-xml-updategrams-sqlxml-4-0.md
     - name: アップデートグラムへのパラメーターの引き渡し (SQLXML 4.0)
       href: ../sqlxml-annotated-xsd-schemas-xpath-queries/updategrams/passing-parameters-to-updategrams-sqlxml-4-0.md
-    - name: アップデートグラムでのデータベースの同時実行に関する問題への対応 (SQLXML 4.0)
+    - name: アップデートグラムでのデータベース コンカレンシーに関する問題への対応 (SQLXML 4.0)
       href: ../sqlxml-annotated-xsd-schemas-xpath-queries/updategrams/handling-database-concurrency-issues-in-updategrams-sqlxml-4-0.md
     - name: ADO を使用した、アップデートグラムの実行 (SQLXML 4.0)
       href: ../sqlxml-annotated-xsd-schemas-xpath-queries/updategrams/executing-an-updategram-by-using-ado-sqlxml-4-0.md

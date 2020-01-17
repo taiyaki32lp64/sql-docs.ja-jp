@@ -1,6 +1,7 @@
 ---
-title: REVOKE (XML スキーマ コレクションの権限の許可) (Transact-SQL) | Microsoft Docs
-ms.custom: ''
+title: REVOKE (XML スキーマ コレクションのアクセス許可の取り消し)
+description: Transact-SQL を使用して、REVOKE XML スキーマ コレクションの権限を取り消します。
+ms.custom: seo-lt-2019
 ms.date: 08/10/2017
 ms.prod: sql
 ms.prod_service: pdw, sql-database
@@ -16,14 +17,13 @@ helpviewer_keywords:
 ms.assetid: 8ca0973c-30b2-4633-a165-c09b13cc81ae
 author: MightyPen
 ms.author: genemi
-manager: craigg
 monikerRange: '>=aps-pdw-2016||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 09927ba3835b1a5e633adfec6e865600386336e1
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: df4f6cb9ed29d5efb5c943d140591c5c97bf124d
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56013833"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75255464"
 ---
 # <a name="revoke-xml-schema-collection-permissions-transact-sql"></a>REVOKE (XML スキーマ コレクションの権限の取り消し) (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-pdw-md.md)]
@@ -58,11 +58,11 @@ REVOKE [ GRANT OPTION FOR ] permission [ ,...n ] ON
  *permission*  
  XML スキーマ コレクションで取り消すことができる権限を指定します。 権限の一覧については、後の「解説」を参照してください。  
   
- ON XML SCHEMA COLLECTION :: [ _schema_name_**.** ] *XML_schema_collection_name*  
+ ON XML SCHEMA COLLECTION :: [ _schema_name_ **.** ] *XML_schema_collection_name*  
  権限を取り消す XML スキーマ コレクションを指定します。 スコープ修飾子 (::) が必要です。 *schema_name* が指定されていない場合、既定のスキーマが使用されます。 *schema_name* が指定されている場合、スキーマのスコープ修飾子 (.) が必要です。  
   
  GRANT OPTION  
- 指定した権限を他のプリンシパルに許可するための権利が、取り消されます。 権限自体は取り消されません。  
+ 指定した権限を他のプリンシパルに許可するための権利が、取り消されることを示します。 権限自体は取り消されません。  
   
 > [!IMPORTANT]  
 >  指定した権限が GRANT オプションなしでプリンシパルに許可されている場合は、その権限自体が取り消されます。  
@@ -102,7 +102,7 @@ REVOKE [ GRANT OPTION FOR ] permission [ ,...n ] ON
  *Database_user_with_no_login*  
  対応するサーバー レベルのプリンシパルがないデータベース ユーザーを指定します。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  XML スキーマ コレクションに関する情報は、[sys.xml_schema_collections](../../relational-databases/system-catalog-views/sys-xml-schema-collections-transact-sql.md) カタログ ビューで確認できます。  
   
  GRANT OPTION で権限が許可されたプリンシパルから権限を取り消すときに CASCADE を指定しない場合、ステートメントは失敗します。  
@@ -121,7 +121,7 @@ REVOKE [ GRANT OPTION FOR ] permission [ ,...n ] ON
 ## <a name="permissions"></a>アクセス許可  
  XML スキーマ コレクションに対する CONTROL アクセス許可が必要です。 AS オプションを使用する場合は、指定したプリンシパルが XML スキーマ コレクションを所有している必要があります。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
  次の例では、XML スキーマ コレクション `Invoices4` の `EXECUTE` 権限を、ユーザー `Wanida` から取り消します。 XML スキーマ コレクション `Invoices4` は、`AdventureWorks2012` データベースの `Sales` スキーマ内にあります。  
   
  ```

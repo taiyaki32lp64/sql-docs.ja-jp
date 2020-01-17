@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 423950e9-a5c0-4da9-b9b2-49c38b3bb0b8
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: a640d2432e6a079174644646fed5106fbc040c2b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 333ae13b9959337c6adb5142e253a16ba890aa61
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47633640"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68046779"
 ---
 # <a name="enabling-visual-studio-analyzer"></a>Visual Studio Analyzer の有効化
 > [!IMPORTANT]  

@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: d50ea3e6-7a9e-4fb6-8cd8-1d429d2f7b3c
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: df7a2d036692cefcd1b2ea2338d51938a11ea85a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 6d0ed7a5f488765b56b2af0688ca14361590ab44
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47610480"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68022105"
 ---
 # <a name="vertical-applications"></a>垂直アプリケーション
 垂直方向のアプリケーションは、通常 1 つの DBMS に対して明確に定義されたタスクを実行します。 たとえば、受注アプリケーションは、会社に注文を追跡します。 どのようなアプリケーションのこれらの型が共通は、データベース スキーマは、通常、アプリケーション開発者が設計されています、さまざまな Dbms の数が、アプリケーションが動作可能性があります、機能、1 つの DBMS で単一の顧客のです。  

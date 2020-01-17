@@ -1,5 +1,5 @@
 ---
-title: setString メソッド (SQLServerPreparedStatement) |Microsoft Docs
+title: setString メソッド (SQLServerPreparedStatement) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: 25dabdc9-c60f-485a-87eb-306067964765
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 65841c763e12d99148c1ab0549cb70312a6172d8
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ca49c8e50527ab7cafce9c93c314a0e363b45402
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47733788"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67972585"
 ---
 # <a name="setstring-method-sqlserverpreparedstatement"></a>setString メソッド (SQLServerPreparedStatement)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -49,7 +48,7 @@ public final void setString(int index,
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- この setString メソッドは、java.sql.PreparedStatement インターフェイスで、setString メソッドによって指定されます。  
+ この setString メソッドは、java.sql.PreparedStatement インターフェイスの setString メソッドで規定されています。  
   
 ## <a name="see-also"></a>参照  
  [SQLServerPreparedStatement のメンバー](../../../connect/jdbc/reference/sqlserverpreparedstatement-members.md)   

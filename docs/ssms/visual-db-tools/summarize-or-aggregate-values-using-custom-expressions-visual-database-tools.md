@@ -11,15 +11,14 @@ helpviewer_keywords:
 - summarizing query results
 - custom expressions to aggregate values [SQL Server]
 ms.assetid: 34130ac1-0106-4766-b324-acb0b7bb6f6e
-author: stevestein
-ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 6764b8702af1323357be42c63f3a278bc096c13f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 5a5ba3f3022e39bc9fb4db7c7af3d62ab9fbe430
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47631172"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68267420"
 ---
 # <a name="summarize-or-aggregate-values-using-custom-expressions-visual-database-tools"></a>カスタム式を使用して値を要約または集計する (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -33,11 +32,11 @@ ms.locfileid: "47631172"
   
 1.  検索するグループを指定します。 詳しくは、「[クエリ結果内の行のグループ化 (Visual Database Tools)](../../ssms/visual-db-tools/group-rows-in-query-results-visual-database-tools.md)」をご覧ください。  
   
-2.  抽出条件ペインの空白行に移動し、**[列]** 列に式を入力します。  
+2.  抽出条件ペインの空白行に移動し、 **[列]** 列に式を入力します。  
   
     クエリ出力にわかりやすい列ヘッダーを作成できるように、[クエリおよびビュー デザイナー](../../ssms/visual-db-tools/query-and-view-designer-tools-visual-database-tools.md)により、式に列の別名が自動的に割り当てられます。 詳細については、「[列の別名の作成 (Visual Database Tools)](../../ssms/visual-db-tools/create-column-aliases-visual-database-tools.md)」を参照してください。  
   
-3.  式の **[グループ化]** 列で、**[式]** をクリックします。  
+3.  式の **[グループ化]** 列で、 **[式]** をクリックします。  
   
 4.  クエリを実行します。  
   

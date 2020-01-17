@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords:
 - projects [Integration Services], creating
@@ -13,15 +12,15 @@ helpviewer_keywords:
 - SQL Server Integration Services projects, creating
 - SSIS projects, creating
 ms.assetid: 6e90b016-36a5-415e-9440-a20199fffff0
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: b8c58ba2eef86ec9c827ea1722abea441ac8ae48
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 3211a79c21f4c180590b53e869f9a19939b0dd19
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48192072"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66059461"
 ---
 # <a name="development-of-an-integration-services-project"></a>Integration Services プロジェクトの開発
   プロジェクトに [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] パッケージを追加します。 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] プロジェクトを作成して作業するには、 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 環境をインストールする必要があります。 詳細については、「 [Integration Services のインストール](install-windows/install-integration-services.md)」を参照してください。  

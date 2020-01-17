@@ -16,19 +16,18 @@ helpviewer_keywords:
 ms.assetid: 966b75b5-ca87-4203-8bf9-95c4e00cb0b5
 author: VanMSFT
 ms.author: vanto
-manager: craigg
 monikerRange: = azuresqldb-current || = azure-sqldw-latest || = sqlallproducts-allversions
-ms.openlocfilehash: 0e9ac1c3e0ff2298acf3b155d5b99189a80e30f5
-ms.sourcegitcommit: c6e71ed14198da67afd7ba722823b1af9b4f4e6f
+ms.openlocfilehash: d4fc71583bf972b2def20d78a69001f00d14966d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/16/2019
-ms.locfileid: "54326733"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68065829"
 ---
-# <a name="alter-database-scoped-credential-transact-sql"></a>ALTER データベース スコープ ベースの資格情報 (TRANSACT-SQL)
+# <a name="alter-database-scoped-credential-transact-sql"></a>ALTER DATABASE SCOPED CREDENTIAL (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-  データベースのプロパティの変更には、資格情報がスコープ設定されます。  
+  データベース スコープ資格情報のプロパティを変更します。  
   
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -42,7 +41,7 @@ ALTER DATABASE SCOPED CREDENTIAL credential_name WITH IDENTITY = 'identity_name'
   
 ## <a name="arguments"></a>引数  
  *credential_name*  
- 変更対象のデータベース スコープの資格情報の名前を指定します。  
+ 変更対象のデータベース スコープ資格情報の名前を指定します。  
   
  IDENTITY **='***identity_name***'**  
  サーバーの外部に接続するときに使用するアカウントの名前を指定します。 Azure Blob Storage からファイルをインポートするには、ID 名が `SHARED ACCESS SIGNATURE` である必要があります。  Shared Access Signature の詳細については、「[Shared Access Signatures (SAS) の使用](https://docs.microsoft.com/azure/storage/storage-dotnet-shared-access-signature-part-1)」をご覧ください。  
@@ -65,7 +64,7 @@ ALTER DATABASE SCOPED CREDENTIAL credential_name WITH IDENTITY = 'identity_name'
   
 ## <a name="examples"></a>使用例  
   
-### <a name="a-changing-the-password-of-a-database-scoped-credential"></a>A. 資格情報をスコープするデータベースのパスワードを変更します。  
+### <a name="a-changing-the-password-of-a-database-scoped-credential"></a>A. データベース スコープ資格情報のパスワードを変更する  
  次の例では、`Saddles` というデータベース スコープの資格情報に格納されているシークレットを変更します。 データベース スコープの資格情報には、Windows ログインが含まれています。`RettigB` とそのパスワードです。 新しいパスワードには、SECRET 句を使用して、データベース スコープの資格情報が追加されます。  
   
 ```  
@@ -75,7 +74,7 @@ GO
 ```  
   
 ### <a name="b-removing-the-password-from-a-credential"></a>B. 資格情報からパスワードを削除する  
- 次の例では、`Frames` というデータベース スコープ資格情報からパスワードを削除します。 データベース スコープの資格情報には、Windows ログインが含まれています。`Aboulrus8` とパスワードです。 ステートメントを実行すると、後に、データベース スコープの資格情報は秘密のオプションが指定されていないためにパスワードは NULL があります。  
+ 次の例では、`Frames` というデータベース スコープ資格情報からパスワードを削除します。 データベース スコープの資格情報には、Windows ログインが含まれています。`Aboulrus8` とパスワードです。 ステートメントを実行すると、SECRET オプションが指定されていないので、データベース スコープ資格情報のパスワードは NULL になります。  
   
 ```  
 ALTER DATABASE SCOPED CREDENTIAL Frames WITH IDENTITY = 'Aboulrus8';  

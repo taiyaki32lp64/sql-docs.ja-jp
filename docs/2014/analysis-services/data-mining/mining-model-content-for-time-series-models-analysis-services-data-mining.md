@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - time series algorithms [Analysis Services]
@@ -15,24 +14,24 @@ ms.assetid: bb225387-fbbf-4189-b172-9daa2495fa9c
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 03d108e015b831f44c84747b48afd110bf3fe2f3
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 73539ddcf9162cbedabfc0bad82da1fd9788d241
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52531393"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66083533"
 ---
 # <a name="mining-model-content-for-time-series-models-analysis-services---data-mining"></a>タイム シリーズ モデルのマイニング モデル コンテンツ (Analysis Services - データ マイニング)
   すべてのマイニング モデルは同じ構造を使用してコンテンツを格納します。 この構造は、データ マイニング コンテンツ スキーマ行セットに従って定義されます。 しかし、その標準の構造の中で、情報を含むノードがさまざまな形で配置されて、さまざまな種類のツリーが表現されます。 このトピックでは、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] タイム シリーズ アルゴリズムに基づくマイニング モデルについて、ノードの構成や各ノードの意味を説明します。  
   
- すべてのモデルの種類に適用される一般的なマイニング モデル コンテンツの説明については、「[マイニング モデル コンテンツ &#40;Analysis Services - データ マイニング&#41;](mining-model-content-analysis-services-data-mining.md)」を参照してください。  
+ すべてのモデルの種類に適用される一般的なマイニング モデル コンテンツの説明については、「 [マイニング モデル コンテンツ &#40;Analysis Services - データ マイニング&#41;](mining-model-content-analysis-services-data-mining.md)」を参照してください。  
   
  このトピックは、タイム シリーズ モデルのコンテンツを参照しながら読むことをお勧めします。 タイム シリーズ モデルは、「基本的なデータ マイニング チュートリアル」を完了することによって作成できます。 このチュートリアルで作成するモデルは、ARIMA アルゴリズムと ARTXP アルゴリズムの両方を使用してデータをトレーニングする混合モデルです。 詳細については、次を参照してください。[予測構造およびモデルの作成&#40;中級者向けデータ マイニング チュートリアル&#41;](../../tutorials/creating-a-forecasting-structure-and-model-intermediate-data-mining-tutorial.md)します。 マイニング モデルのコンテンツの表示方法の詳細については、「 [データ マイニング モデル ビューアー](data-mining-model-viewers.md)」を参照してください。  
   
 ## <a name="understanding-the-structure-of-a-time-series-model"></a>タイム シリーズ モデルの構造について  
  タイム シリーズ モデルには、モデルとそのメタデータを表す 1 つの親ノードがあります。 その親ノードの下には、モデルの作成に使用したアルゴリズムに応じて 1 つまたは 2 つのタイム シリーズ ツリーがあります。  
   
- 混合モデルを作成した場合は、ARIMA と ARTXP のそれぞれに 1 つずつ、2 つの個別のツリーがモデルに追加されます。 ARTXP または ARIMA のアルゴリズムのみを使用するように選択した場合は、そのアルゴリズムに対応する 1 つのツリーが含まれます。 どちらのアルゴリズムを使用するかは、FORECAST_METHOD パラメーターを設定して指定します。 ARTXP、ARIMA、または混合モデルのどれを使用するかについては、「 [Microsoft タイム シリーズ アルゴリズム](microsoft-time-series-algorithm.md)」を参照してください。  
+ 混合モデルを作成した場合は、ARIMA と ARTXP のそれぞれに 1 つずつ、2 つの個別のツリーがモデルに追加されます。 ARTXP または ARIMA のアルゴリズムのみを使用するように選択した場合は、そのアルゴリズムに対応する 1 つのツリーが含まれます。 どちらのアルゴリズムを使用するかは、FORECAST_METHOD パラメーターを設定して指定します。 ARTXP、ARIMA、または混合モデルのどれを使用するかについては、「 [Microsoft Time Series アルゴリズム](microsoft-time-series-algorithm.md)」を参照してください。  
   
  次の図は、既定の設定 (混合モデルが作成されます) を使用して作成したタイム シリーズ データ マイニング モデルの例を示しています。 ここでは、2 つのモデルの違いを比較しやすいように、図の左側に ARTXP モデルが、右側に ARIMA モデルが示されています。  ARTXP は、しだいに小さな分岐に分割されていくツリー状の構造であるのに対し、ARIMA アルゴリズムによって作成される構造はむしろ、小さな構成要素から積み上げられていくピラミッドに似ています。  
   
@@ -64,7 +63,7 @@ ms.locfileid: "52531393"
 >  式を表示するには、リーフ ノードのレベルで完全な回帰式を取得します。中間のノードやルート ノードでは取得できません。  
   
 ### <a name="structure-of-an-arima-model"></a>ARIMA モデルの構造  
- ARIMA アルゴリズムが 1 つのデータ系列の組み合わせごとの情報を作成します (など **[Region]**) と予測可能な属性 (など **[Sales Amount]**)-を表す式、時間の経過と共に、予測可能属性を変更します。  
+ ARIMA アルゴリズムが 1 つのデータ系列の組み合わせごとの情報を作成します (など **[Region]** ) と予測可能な属性 (など **[Sales Amount]** )-を表す式、時間の経過と共に、予測可能属性を変更します。  
   
  各系列の式は、複数の構成要素から導き出されます。これらの構成要素は、データ内で検出された周期構造ごとに 1 つずつあります。 たとえば、1 か月ごとに収集される売上データがある場合には、月、四半期、年などの周期構造がアルゴリズムによって検出される可能性があります。  
   
@@ -76,14 +75,14 @@ ms.locfileid: "52531393"
   
 -   *移動平均* (MA) のノード  
   
- これらの用語の意味については、「 [Microsoft タイム シリーズ アルゴリズム](microsoft-time-series-algorithm.md)」を参照してください。  
+ これらの用語の意味については、「 [Microsoft Time Series アルゴリズム](microsoft-time-series-algorithm.md)」を参照してください。  
   
- *差分の次数* は数式の重要な一部であり、式で表されます。 差分の次数の使用方法の詳細については、「 [Microsoft タイム シリーズ アルゴリズム テクニカル リファレンス](microsoft-time-series-algorithm-technical-reference.md)」を参照してください。  
+ *差分の次数* は数式の重要な一部であり、式で表されます。 差分の次数の使用方法の詳細については、「 [Microsoft Time Series アルゴリズム テクニカル リファレンス](microsoft-time-series-algorithm-technical-reference.md)」を参照してください。  
   
 ## <a name="model-content-for-time-series"></a>タイム シリーズ モデルのモデル コンテンツ  
  ここでは、マイニング モデル コンテンツの列のうち、タイム シリーズ モデルに関連する列についてのみ詳細と例を紹介します。  
   
- スキーマ行セットの汎用の列 (MODEL_CATALOG や MODEL_NAME など) の詳細や、マイニング モデルの用語の説明については、「[マイニング モデル コンテンツ &#40;Analysis Services - データ マイニング&#41;](mining-model-content-analysis-services-data-mining.md)」を参照してください。  
+ スキーマ行セットの汎用の列 (MODEL_CATALOG や MODEL_NAME など) の詳細や、マイニング モデルの用語の説明については、「 [マイニング モデル コンテンツ &#40;Analysis Services - データ マイニング&#41;](mining-model-content-analysis-services-data-mining.md)」を参照してください。  
   
  MODEL_CATALOG  
  モデルが格納されているデータベースの名前。  
@@ -198,7 +197,7 @@ ms.locfileid: "52531393"
  NODE_SUPPORT  
  このノードをサポートするケースの数。  
   
- **ARTXP:****(すべて)** ノードは、分岐に含まれるタイム スライスの合計数を示します。  
+ **ARTXP:** **(すべて)** ノードは、分岐に含まれるタイム スライスの合計数を示します。  
   
  末端のノードの場合は、NODE_CAPTION によって表される範囲に含まれるタイム スライスの数を表します。 末端のノードのタイム スライスの数を合計すると、常に分岐の **[(すべて)]** ノードの NODE_SUPPORT 値になります。  
   
@@ -245,14 +244,14 @@ ms.locfileid: "52531393"
  要するに、データ マイニングは、興味の対象になりうる現象がどこで発生しているかについてのヒントを得るのには役立ちますが、その情報の価値をコンテキストの中で正確に解釈するためには、詳細な調査と、ビジネス ユーザーの専門知識が必要になります。  
   
 ### <a name="elements-of-the-artxp-time-series-formula"></a>ARTXP のタイム シリーズ式の要素  
- ARTXP のツリーまたは分岐の完全な式を表示するには、 **Microsoft タイム シリーズ ビューアー** の [[マイニング凡例]](browse-a-model-using-the-microsoft-time-series-viewer.md)を使用することをお勧めします。これにより、すべての定数を判読可能な形式で表示できます。  
+ ARTXP のツリーまたは分岐の完全な式を表示するには、 **Microsoft タイム シリーズ ビューアー** の [マイニング凡例](browse-a-model-using-the-microsoft-time-series-viewer.md)を使用することをお勧めします。これにより、すべての定数を判読可能な形式で表示できます。  
   
 -   [タイム シリーズ モデルの式の表示 &#40;データ マイニング&#41;](view-the-formula-for-a-time-series-model-data-mining.md)  
   
  次のセクションで、式のサンプルを示して基本的な項について説明します。  
   
 #### <a name="mining-legend-for-an-artxp-formula"></a>ARTXP 式のマイニング凡例  
- 次の例は、 **[マイニング凡例]** に表示されたモデルの一部の ARTXP 式を示しています。 この式を表示するには、Microsoft タイム シリーズ ビューアーで基本的なデータ マイニング チュートリアルで作成した [Forecasting] モデルを開くをクリックして、**モデル**タブをクリックし、R250 のツリーを選択します。Europe データ系列。  
+ 次の例は、 **[マイニング凡例]** に表示されたモデルの一部の ARTXP 式を示しています。 この式を表示するには、Microsoft タイム シリーズ ビューアーで基本的なデータ マイニング チュートリアルで作成した [Forecasting] モデルを開く をクリックして、**モデル**タブをクリックし、R250 のツリーを選択します。Europe データ系列。  
   
  この例で使用される式を表示するには、7/5/2003 以降のデータ系列を表すノードをクリックします。  
   
@@ -260,7 +259,7 @@ ms.locfileid: "52531393"
   
  Quantity = 21.322  
   
- -0.293 * quantity (R250 北アメリカ、~ 7) + 0.069\*数量 (R250 Europe、-1) + 0.023 \*  
+ -0.293 * Quantity(R250 North America,-7) + 0.069 \* Quantity(R250 Europe,-1) + 0.023 \*  
   
  Quantity(R250 Europe,-3) -0.142 * Quantity(R750 Europe,-8)  
   
@@ -385,7 +384,7 @@ AND (NODE_TYPE = 29 or NODE_TYPE = 30)
   
  ARIMA 式:  
   
- ARIMA ({1,1}0,{1,1.49791920964142,1.10640053499397,0.888873034670339,-5.05429403071953E-02,-0.905265316720334,-0.961908900643379,-0.649991020901922、}): 56.8888888888889 インターセプト  
+ ARIMA ({1,1},0,{1,1.49791920964142,1.10640053499397,0.888873034670339,-5.05429403071953E-02,-0.905265316720334,-0.961908900643379,-0.649991020901922}) Intercept:56.8888888888889  
   
  この式は、係数や切片の値を含む長い ARIMA 形式です。 この式を短い形式にすると{1,0,7}1 タイム スライスの数と期間を示す、用語の差分の次数は 0、7 は係数の数を示します。  
   

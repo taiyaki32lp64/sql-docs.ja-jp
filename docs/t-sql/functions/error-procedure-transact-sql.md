@@ -21,16 +21,15 @@ helpviewer_keywords:
 - messages [SQL Server], stored procedure where occurred
 - errors [SQL Server], trigger where occurred
 ms.assetid: b81edbf0-856a-498f-ba87-48ff1426d980
-author: MashaMSFT
-ms.author: mathoma
-manager: craigg
+author: MikeRayMSFT
+ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: caae632e8e413001d57d125126bb3f8f979a8e82
-ms.sourcegitcommit: c19696d3d67161ce78aaa5340964da3256bf602d
+ms.openlocfilehash: 75e3664517ac0ce66f2a56499286303df81513ab
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/29/2018
-ms.locfileid: "52617062"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68094679"
 ---
 # <a name="errorprocedure-transact-sql"></a>ERROR_PROCEDURE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -49,7 +48,7 @@ ERROR_PROCEDURE ( )
 **nvarchar(128)**  
   
 ## <a name="return-value"></a>戻り値  
-エラーが発生したストアド プロシージャの CATCH ブロック内で呼び出されると、`ERROR_PROCEDURE` はそのストアド プロシージャの名前を返します。  
+CATCH ブロックで呼び出された場合、`ERROR_PROCEDURE` はエラーが発生したストアド プロシージャまたはトリガーの名前を返します。
   
 ストアド プロシージャまたはトリガー内でエラーが発生しなかった場合、`ERROR_PROCEDURE` は NULL を返します。  
   

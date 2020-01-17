@@ -1,7 +1,7 @@
 ---
-title: sys.dm_exec_compute_node_status (TRANSACT-SQL) |Microsoft Docs
+title: dm_exec_compute_node_status (Transact-sql) |Microsoft Docs
 ms.custom: ''
-ms.date: 03/15/2017
+ms.date: 11/04/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -20,40 +20,40 @@ helpviewer_keywords:
 ms.assetid: b606f91f-3a08-4a4f-bb57-32ae155b3738
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 55023b301b1c6bae53f890e273f5a415fde42355
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 11883f7744aad3f8d483e808922a7170c8fe5391
+ms.sourcegitcommit: 830149bdd6419b2299aec3f60d59e80ce4f3eb80
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51671061"
+ms.lasthandoff: 11/04/2019
+ms.locfileid: "73532758"
 ---
-# <a name="sysdmexeccomputenodestatus-transact-sql"></a>sys.dm_exec_compute_node_status (TRANSACT-SQL)
+# <a name="sysdm_exec_compute_node_status-transact-sql"></a>dm_exec_compute_node_status (Transact-sql)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2016-xxxx-asdw-pdw-md.md)]
 
-  パフォーマンスと PolyBase のすべてのノードの状態に関する追加情報を保持します。 ノードごとに 1 行の一覧を表示します。  
+  すべての PolyBase ノードのパフォーマンスと状態に関する追加情報を保持します。 ノードごとに1行を一覧表示します。  
   
-|列名|データ型|説明|範囲|  
+|列名|[データ型]|[説明]|範囲|  
 |-----------------|---------------|-----------------|-----------|  
-|compute_node_id|**int**|ノードに関連付けられている一意の数値 id です。|種類に関係なく、スケール アウト クラスター全体にわたって一意です。|  
-|process_id|**int**|||  
-|process_name|**nvarchar (255)**|ノードの論理名です。|適切な長さの任意の文字列。|  
-|allocated_memory|**bigint**|合計では、このノード上のメモリが割り当てられます。||  
-|available_memory|**bigint**|このノードで使用可能なメモリの合計。||  
-|process_cpu_usage|**bigint**|合計のプロセス CPU 使用率、タイマー刻みで。||  
-|total_cpu_usage|**bigint**|合計 CPU 使用率、タイマー刻みで。||  
-|thread_count|**bigint**|このノードで使用しているスレッドの合計数。||  
-|handle_count|**bigint**|このノードで使用中のハンドルの合計数。||  
-|total_elapsed_time|**bigint**|時間の合計には、システムを起動または再起動からが経過しました。|時間の合計には、システムを起動または再起動からが経過しました。 Total_elapsed_time では、整数値 (ミリ秒単位で 24.8 日) の最大値を超えるをオーバーフローしました期日の実体化エラーが発生します。最大値をミリ秒単位は 24.8 日に相当します。|  
-|is_available|**bit**|このノードが使用できるかどうかを示すフラグします。||  
-|sent_time|**datetime**|最後にこのネットワークのパッケージが送信されました||  
-|received_time|**datetime**|最後に、ネットワークのパッケージは、このノードが送信されました。||  
-|error_id|**nvarchar(36)**|このノードで発生した最後のエラーの一意の識別子。||  
-  
+|compute_node_id|`int`|ノードに関連付けられている一意の数値 id。|種類に関係なく、スケールアウトクラスター全体で一意です。|  
+|process_id|`int`|||  
+|process_name|`nvarchar(255)`|ノードの論理名。|適切な長さの任意の文字列。|  
+|allocated_memory|`bigint`|このノードで割り当てられたメモリの合計。||  
+|available_memory|`bigint`|このノードで使用可能なメモリの合計。||  
+|process_cpu_usage|`bigint`|プロセス CPU 使用率の合計 (ティック単位)。||  
+|total_cpu_usage|`bigint`|合計 CPU 使用率 (ティック単位)。||  
+|thread_count|`bigint`|このノードで使用されているスレッドの合計数。||  
+|handle_count|`bigint`|このノードで使用されているハンドルの合計数。||  
+|total_elapsed_time|`bigint`|システムの開始または再起動からの経過時間の合計。|システムの開始または再起動からの経過時間の合計。 Total_elapsed_time が整数の最大値 (ミリ秒単位で24.8 日) を超えた場合、オーバーフローによる具体化エラーが発生します。ミリ秒単位の最大値は24.8 日に相当します。|  
+|is_available|`bit`|このノードが使用可能かどうかを示すフラグです。||  
+|sent_time|`datetime`|最後にネットワークパッケージが送信された時刻||  
+|received_time|`datetime`|ネットワークパッケージがこのノードによって最後に送信された時刻。||  
+|error_id|`nvarchar(36)`|このノードで発生した最後のエラーの一意の識別子。||
+|compute_pool_id|`int`|プールの一意の識別子。|
+
 ## <a name="see-also"></a>参照  
- [PolyBase 動的管理ビューでのトラブルシューティング](https://msdn.microsoft.com/library/ce9078b7-a750-4f47-b23e-90b83b783d80)   
+ [動的管理ビューを使用した PolyBase のトラブルシューティング](https://msdn.microsoft.com/library/ce9078b7-a750-4f47-b23e-90b83b783d80)   
  [動的管理ビューと動的管理関数 &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
- [データベース関連の動的管理ビュー &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/database-related-dynamic-management-views-transact-sql.md)  
+ [データベース関連の動的管理ビュー &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/database-related-dynamic-management-views-transact-sql.md)  
   
   

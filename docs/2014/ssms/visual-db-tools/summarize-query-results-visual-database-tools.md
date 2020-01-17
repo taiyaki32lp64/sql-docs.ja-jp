@@ -15,11 +15,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 25f79dee9adb9ac6e953a802d404597508e7abba
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52806874"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63204537"
 ---
 # <a name="summarize-query-results-visual-database-tools"></a>クエリ結果の要約 (Visual Database Tools)
   集計クエリを作成するときには、一定の論理原則が適用されます。 たとえば、サマリ クエリでは個別の行の内容は表示できません。 クエリおよびビュー デザイナーでは、 [ダイアグラム ペイン](visual-database-tools.md) および [抽出条件ペイン](criteria-pane-visual-database-tools.md) を使用してこのような原則に従い、作業を行うことができます。  

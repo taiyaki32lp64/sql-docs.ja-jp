@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 12/29/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: 7c888c95-8986-461e-9f11-2395044b9d97
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: d212cf20e8701f9fc9af5266308f81873e6fc4c6
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 79d356aa1b14ac30ba5bc9a8f579fc66ddebea92
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52541243"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66081266"
 ---
 # <a name="exploring-and-cleaning-data"></a>データの探索とクリーニング
   データの準備は、データのクレンジングよりはるかに大きな概念です。 データの準備方法によって、最終的な結果の解釈も影響を受けることを忘れないでください。 データの準備には、次のようなタスクがあります。  

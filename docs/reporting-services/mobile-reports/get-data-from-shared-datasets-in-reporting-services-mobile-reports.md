@@ -6,14 +6,14 @@ ms.prod_service: reporting-services-native
 ms.technology: mobile-reports
 ms.topic: conceptual
 ms.assetid: 0b846451-c8d0-412c-802d-a42bb1ff8c63
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 1437d9394a372ba9a0aa3510db8f903f9b737e16
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: cac1a32b49fde5b41c0a8ef21706d873ce037cd3
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56298190"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63061152"
 ---
 # <a name="get-data-from-shared-datasets-in-reporting-services-mobile-reports"></a>Reporting Services モバイル レポートの共有データセットからデータを取得する
 SQL Server Mobile Report Publisher では、[Excel ファイルからのデータの読み込み](../../reporting-services/mobile-reports/prepare-excel-data-for-reporting-services-mobile-reports.md)以外にも、ほぼすべてのソースからのデータにアクセスできます。 データへのアクセスには、Reporting Services Web ポータルで構成された共有データ ソースが必要です。 詳細については、 [共有データ ソースの作成](../../reporting-services/report-data/create-modify-and-delete-shared-data-sources-ssrs.md) についてのページと、 [共有データセットの作成](../../reporting-services/report-data/manage-shared-datasets.md)についてのページを参照してください。  

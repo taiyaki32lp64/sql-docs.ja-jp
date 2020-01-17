@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 12/29/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: 0e056c95-ba06-413e-8dc1-4d411a447c3b
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 9c74fcbc925091a563d10bc8feef44337af48f84
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 9a20fde7ebe09a3e57af504846cf010c8120ffbc
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52519933"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66088146"
 ---
 # <a name="checklist-of-preparation-for-data-mining"></a>データ マイニングの準備のチェック リスト
   データ マイニング アドインを使うと、モデルの作成およびテストをかなり容易に楽しく行うことができますが、反復可能で実用的な結果を得る必要がある場合は、十分な時間をかけて基本的なビジネス要件を明確にし、データの取得と準備を実行する必要があります。 ここでは、調査を計画するために役立つチェックリストを提供し、一般的な問題について説明します。  
@@ -71,7 +70,7 @@ ms.locfileid: "52519933"
   
 -   データセットを結合した場合、同じデータを表す列が複数あるかどうかを確認したか。  
   
- **ソース データの保存場所、出所、処理方法がわかっています。必要な場合は、プロセスを繰り返す簡単にします。**  
+ **ソース データの保存場所、送信元およびの処理方法を知っています。必要な場合は、プロセスを繰り返す簡単にします。**  
  1 回限りのデータ セットは、の場合は、モデルを運用環境に移行することがありますが、クリーニング プロセスをオペレーショナル データに適用する方法について事前に考慮します。 また、運用上のデータがあればを知っておくべき方法がありますが変更されている取得する前に、どの丸め、または集計を確実にされたを把握する必要があります。  
   
 -   テストは反復可能である必要があるか。  

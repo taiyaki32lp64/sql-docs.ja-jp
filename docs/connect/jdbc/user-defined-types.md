@@ -1,7 +1,7 @@
 ---
-title: ユーザー定義の種類 |Microsoft Docs
+title: ユーザー定義型 |Microsoft Docs
 ms.custom: ''
-ms.date: 01/19/2017
+ms.date: 08/12/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 19a71b27-b788-43a3-a76d-fe3001a6f016
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: eb80abeee8d95a834ca4da372b483fc765f96eb4
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 3ed890ee562d3fcc2221877b23ee09bbf9a8ccf9
+ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47660450"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "69027138"
 ---
 # <a name="user-defined-types"></a>ユーザー定義型
 

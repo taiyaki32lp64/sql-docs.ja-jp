@@ -1,6 +1,8 @@
 ---
-title: REVOKE (検索プロパティ リスト権限の取り消し) (Transact-SQL) | Microsoft Docs
-ms.custom: ''
+title: REVOKE (検索プロパティ リスト アクセス許可の取り消し)
+description: 検索プロパティ リストに対する権限を取り消します。
+titleSuffix: SQL Server (Transact-SQL)
+ms.custom: seo-lt-2019
 ms.date: 06/10/2016
 ms.prod: sql
 ms.prod_service: sql-database
@@ -17,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: a6b8b37c-0015-4596-898c-51a567659e2e
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: 1270cc8f84113433954a5178f791f3795ed419fc
-ms.sourcegitcommit: c6e71ed14198da67afd7ba722823b1af9b4f4e6f
+ms.openlocfilehash: 84d15026a188bd24522195d22e70707a8803fda8
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/16/2019
-ms.locfileid: "54326653"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75255803"
 ---
 # <a name="revoke-search-property-list-permissions-transact-sql"></a>REVOKE (検索プロパティ リスト権限の取り消し) (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -45,7 +46,7 @@ REVOKE [ GRANT OPTION FOR ] permission [ ,...n ] ON
   
 ## <a name="arguments"></a>引数  
  GRANT OPTION FOR  
- 指定した権限を他のプリンシパルに許可するための権利が、取り消されます。 権限自体は取り消されません。  
+ 指定した権限を他のプリンシパルに許可するための権利が、取り消されることを示します。 権限自体は取り消されません。  
   
 > [!IMPORTANT]  
 >  指定した権限が GRANT オプションなしでプリンシパルに許可されている場合は、その権限自体が取り消されます。  
@@ -53,11 +54,11 @@ REVOKE [ GRANT OPTION FOR ] permission [ ,...n ] ON
  *permission*  
  権限の名前を指定します。 権限とセキュリティ保護可能なリソースの有効な組み合わせについては、後の「解説」を参照してください。  
   
- ON SEARCH PROPERTY LIST **::**_search_property_list_name_  
+ ON SEARCH PROPERTY LIST **::** _search_property_list_name_  
  権限を取り消す検索プロパティ リストを指定します。 スコープ修飾子 **::** が必要です。  
   
  *database_principal*  
- 権限を取り消すプリンシパルを指定します。 プリンシパルは次のいずれかです。  
+ 権限を取り消すプリンシパルを指定します。 プリンシパルには、次のいずれかを指定することができます。  
   
 -   データベース ユーザー  
   
@@ -82,7 +83,7 @@ REVOKE [ GRANT OPTION FOR ] permission [ ,...n ] ON
 >  WITH GRANT OPTION で許可されている権限を CASCADE で取り消すと、その権限の GRANT および DENY の両方が取り消されます。  
   
  AS *revoking_principal*  
- このクエリを実行するプリンシパルが権限を取り消す権利を取得した、元のプリンシパルを指定します。 プリンシパルは次のいずれかです。  
+ このクエリを実行するプリンシパルが権限を取り消す権利を取得した、元のプリンシパルを指定します。 プリンシパルには、次のいずれかを指定することができます。  
   
 -   データベース ユーザー  
   
@@ -100,7 +101,7 @@ REVOKE [ GRANT OPTION FOR ] permission [ ,...n ] ON
   
 -   サーバー プリンシパルにマップされていないデータベース ユーザー  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
   
 ## <a name="search-property-list-permissions"></a>SEARCH PROPERTY LIST 権限  
  検索プロパティ リストは、データベース レベルのセキュリティ保護可能なリソースで、権限の階層で親となっているデータベースに含まれています。 以下に、検索プロパティ リストで取り消すことのできる権限のうち最も限定的なものを、それらを暗黙的に含む一般的な権限と共に示します。  

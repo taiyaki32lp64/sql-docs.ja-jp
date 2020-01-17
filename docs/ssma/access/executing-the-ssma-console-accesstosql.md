@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: aa1bf665-8dc0-4259-b36f-46ae67197a43
 author: Shamikg
 ms.author: Shamikg
-manager: craigg
-ms.openlocfilehash: d1dbbb57527fc2d362837e0340f35a241d764b75
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: 97425a6795889f72b329280ff70f9638378e7799
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52408319"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68006568"
 ---
 # <a name="executing-the-ssma-console-accesstosql"></a>SSMA コンソール (AccessToSQL) の実行
 Microsoft は、堅牢な一連のスクリプト ファイルのコマンドとコマンド ライン オプションを実行し、SSMA アクティビティの制御を提供します。 次のセクションでは、同じについて説明します。  

@@ -15,11 +15,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 16376e7c1be1e22968846e7cbfbfc361fa8bb16e
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53203409"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62510321"
 ---
 # <a name="save-as"></a>[名前を付けて保存]
   このダイアログ ボックスを使用すると、現在のアイテムのインスタンスを、指定した場所に指定したファイル形式で保存できます。 このダイアログ ボックスを表示するには、次のようにクリックします**保存** *\<ファイル >* **として**上、**ファイル**メニュー (場所 *。\<ファイル >* は現在の項目の名前です)、または alt キーを押しながら F キーをコード エディターでキーを押します。  

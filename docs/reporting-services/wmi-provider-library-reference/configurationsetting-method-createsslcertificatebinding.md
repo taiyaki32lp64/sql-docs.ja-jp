@@ -2,20 +2,20 @@
 title: CreateSSLCertificateBinding メソッド (WMI MSReportServer_ConfigurationSetting) | Microsoft Docs
 ms.date: 03/01/2017
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: wmi-provider-library-reference
 ms.topic: conceptual
 helpviewer_keywords:
 - CreateSSLCertificateBinding
 ms.assetid: 407d50e4-0a55-43cb-8ddf-2d82714071b1
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 88dfd8e699fd71bbf2fdce8057fda78992dd498d
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 7b65838720b7300b92829aa57da58563628740cf
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52543460"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65570758"
 ---
 # <a name="configurationsetting-method---createsslcertificatebinding"></a>ConfigurationSetting メソッド - CreateSSLCertificateBinding
   SSL 証明書のバインドを作成します。  

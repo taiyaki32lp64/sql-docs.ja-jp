@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 739a9d72-26aa-42dd-b9fd-76c679976d09
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: bbeceddb135649223be29956d0796e76fd5d57f6
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 3d2578c9abe6e2e3b1f99b0e680fc0fcf8c104f2
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47676700"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67898805"
 ---
 # <a name="sqlgetinfo-returned-values-for-text-files"></a>SQLGetInfo でテキスト ファイルに返される値
 次の表に、C 言語 # の defines、 *fInfoType*引数と対応する値によって返される**SQLGetInfo**します。 この情報を一覧表示されている C 言語を渡すことによって取得できます #defines **SQLGetInfo**で、 *fInfoType*引数。 によって返される値の詳細については**SQLGetInfo**を参照してください、 [ODBC プログラマ リファレンス](../../odbc/reference/odbc-programmer-s-reference.md)します。  
@@ -87,7 +86,7 @@ ms.locfileid: "47676700"
 |SQL_DATABASE_NAME|現在のデータベース ディレクトリ|  
 |SQL_DATETIME_LITERALS|0|  
 |SQL_DBMS_NAME|"TEXT"|  
-|SQL_DBMS_VER|ISAM: テキスト<br /><br /> バージョン: 1.0<br /><br /> バージョン番号の形式: 01.00.0000|  
+|SQL_DBMS_VER|ISAM:テキスト<br /><br /> バージョン:1.0<br /><br /> バージョン番号の形式:01.00.0000|  
 |SQL_DDL_INDEX|0|  
 |SQL_DEFAULT_TXN_ISOLATION|0|  
 |SQL_DESCRIBE_PARAMETER|0|  
@@ -112,7 +111,7 @@ ms.locfileid: "47676700"
 |SQL_GETDATA_EXTENSIONS|[複数の値]|  
 |SQL_GROUP_BY|SQL_GB_GROUP_BY_CONTAINS_SELECT|  
 |SQL_IDENTIFIER_CASE|SQL_IC_MIXED|  
-|SQL_IDENTIFIER_QUOTE_CHAR|"'"(引用符をバックアップする場合)|  
+|SQL_IDENTIFIER_QUOTE_CHAR|"\`"(引用符をバックアップする場合)|  
 |SQL_KEYWORDS|[複数の値]|  
 |SQL_LIKE_ESCAPE_CLAUSE|"N"|  
 |SQL_MAX_BINARY_LITERAL_LEN|255|  
@@ -142,7 +141,7 @@ ms.locfileid: "47676700"
 |SQL_NON_NULLABLE_COLUMNS|SQL_NNC_NON_NULL|  
 |SQL_NULL_COLLATION|SQL_NC_LOW|  
 |SQL_NUMERIC_FUNCTIONS|[複数の値]|  
-|SQL_ODBC_SAG_CLI_ への準拠|SQL_OSCC_COMPLIANT|  
+|SQL_ODBC_SAG_CLI_ CONFORMANCE|SQL_OSCC_COMPLIANT|  
 |SQL_ODBC_SQL_INTEGRITY|"N"|  
 |SQL_ODBC_VER|ドライバー マネージャーから|  
 |SQL_OJ_CAPABILITIES|[複数の値]|  
@@ -157,7 +156,7 @@ ms.locfileid: "47676700"
 |SQL_SCROLL_OPTIONS|[複数の値]|  
 |SQL_SEARCH_PATTERN_ESCAPE|"\\"|  
 |SQL_SERVER_NAME|"TEXT"|  
-|SQL_SPECIAL_CHARACTERS|"~`@#$%^&*_-+=\\}{"';:?/><,.!'[]&#124;"|  
+|SQL_SPECIAL_CHARACTERS|"~\`@#$%^&*_-+=\\}{"';:?/><,.!'[]&#124;"|  
 |SQL_STRING_FUNCTIONS|[複数の値]|  
 |SQL_SUBQUERIES|[複数の値]|  
 |SQL_SYSTEM_FUNCTIONS|0|  

@@ -21,11 +21,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 12962333f722032797470943d3f5ffc79d0cdee6
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48132908"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62865002"
 ---
 # <a name="allocating-a-connection-handle"></a>接続ハンドルの割り当て
   アプリケーションからデータ ソースまたはドライバーに接続する前に、接続ハンドルを割り当てる必要があります。 呼び出すことによってこれは、 **SQLAllocHandle**で、 *HandleType*パラメーターを sql_handle_dbc として設定と*InputHandle*初期化環境ハンドルをポイントします。  

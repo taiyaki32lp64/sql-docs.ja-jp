@@ -11,17 +11,20 @@ helpviewer_keywords:
 - largest integer less than or equal to expression
 - FLOOR function [SSIS]
 ms.assetid: 168084db-badd-40f2-87b4-1f5bc45c3e24
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: 9a6c832401d8ca663c0234da5e6fe64f726d1ffc
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 56f69743e8bbfb8290e492613daeb07885f5ed7d
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47607156"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71289622"
 ---
 # <a name="floor-ssis-expression"></a>FLOOR (SSIS 式)
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   数値式以下で最大の整数を返します。  
   
 ## <a name="syntax"></a>構文  
@@ -60,7 +63,7 @@ FLOOR(-123.45)
 FLOOR(0.00)  
 ```  
   
- 0.00 を返します。  
+ 0\.00 を返します。  
   
 ## <a name="see-also"></a>参照  
  [CEILING (SSIS 式)](../../integration-services/expressions/ceiling-ssis-expression.md)   

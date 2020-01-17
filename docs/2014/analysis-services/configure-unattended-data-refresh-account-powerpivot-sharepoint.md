@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: 81401eac-c619-4fad-ad3e-599e7a6f8493
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 51cc5f71c3a3e7515238aef08e97316e549c0e70
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 894e7d4fb5a0234643cf237e767a8ae999e67496
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53366596"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66087421"
 ---
 # <a name="configure-the-powerpivot-unattended-data-refresh-account-powerpivot-for-sharepoint"></a>PowerPivot 自動データ更新アカウントの構成 (PowerPivot for SharePoint)
   PowerPivot 自動データ更新アカウントは、SharePoint ファームで PowerPivot データ更新ジョブを実行するために指定されたアカウントです。 これを構成して有効にすると、**データ更新アカウントの管理者によって構成を使用**オプション、データ更新スケジュール ページ (下記参照)。 データ更新をスケジュールするブックの作成者は、データ更新ジョブの実行に PowerPivot 自動データ更新アカウントを使用したい場合に、このオプションを選択できます。 データ更新スケジュールで、資格情報オプションを表示する方法の詳細については、次を参照してください。[データ更新のスケジュール&#40;PowerPivot for SharePoint&#41;](schedule-a-data-refresh-powerpivot-for-sharepoint.md)します。  
@@ -37,7 +36,7 @@ ms.locfileid: "53366596"
   
  [手順 2:PowerPivot サーバー構成ページで自動アカウントを指定します。](#bkmk_specifyUA)  
   
- [手順 3:許可、アカウントへのアクセス許可を投稿します。](#bkmk_grant)  
+ [ステップ 3:許可、アカウントへのアクセス許可を投稿します。](#bkmk_grant)  
   
  [手順 4:読み取りデータの更新で使用される外部データ ソースにアクセスする権限の付与](#bkmk_dbread)  
   
@@ -72,7 +71,7 @@ ms.locfileid: "53366596"
   
 -   [データ更新の管理] スケジュール ページで、パブリッシュされた PowerPivot ブックのアカウントが使用できることを確認する。  
   
-###  <a name="bkmk_create"></a> 手順 1:ターゲット アプリケーションを作成し、資格情報の設定  
+###  <a name="bkmk_create"></a> ステップ 1:ターゲット アプリケーションを作成し、資格情報の設定  
   
 1.  サーバーの全体管理で、[アプリケーション構成の管理] の **[サービス アプリケーションの管理]** をクリックします。  
   
@@ -109,7 +108,7 @@ ms.locfileid: "53366596"
   
 16. **[OK]** をクリックします。  
   
-###  <a name="bkmk_specifyUA"></a> 手順 2:PowerPivot サーバー構成ページで自動アカウントを指定します。  
+###  <a name="bkmk_specifyUA"></a> ステップ 2:PowerPivot サーバー構成ページで自動アカウントを指定します。  
   
 1.  サーバーの全体管理で、[アプリケーション構成の管理] の **[サービス アプリケーションの管理]** をクリックします。  
   
@@ -123,7 +122,7 @@ ms.locfileid: "53366596"
   
 6.  **[OK]** をクリックします。  
   
-###  <a name="bkmk_grant"></a> 手順 3:許可、アカウントへのアクセス許可を投稿します。  
+###  <a name="bkmk_grant"></a> ステップ 3:許可、アカウントへのアクセス許可を投稿します。  
  PowerPivot 自動データ更新アカウントを使用する前に、使用する任意の PowerPivot ブックに対する投稿権限をこのアカウントに割り当てる必要があります。 この権限レベルは、ライブラリからブックを開き、データの更新後に再度ライブラリに保存するために必要です。  
   
  権限の割り当ては、サイト コレクションの管理者が実行する手順です。 SharePoint の権限は、ルート サイト コレクションで割り当てるか、ルート サイト コレクションより下位の任意のレベル (個々のドキュメントやアイテムを含む) で割り当てることができます。 権限の設定方法は、権限をどのくらい細かく設定する必要があるかによって異なります。 次の手順は、権限を付与する方法の一例を示しています。  
@@ -187,7 +186,7 @@ ms.locfileid: "53366596"
   
 8.  **[OK]** をクリックします。  
   
- パスワードだけでなく、アカウントのユーザー名も変更する場合、通常は外部データ ソースに対する読み取り権限や PowerPivot ブックを更新するための SharePoint 権限の付与などの追加の構成手順を実行する必要があります。 手順については、PowerPivot 自動データ更新アカウントの構成には、この手順を参照してください。[手順 3:許可、アカウントへのアクセス許可の貢献](#bkmk_grant)、し、アカウントが正しく構成されていることの確認の終端、残りのすべての手順を続行します。  
+ パスワードだけでなく、アカウントのユーザー名も変更する場合、通常は外部データ ソースに対する読み取り権限や PowerPivot ブックを更新するための SharePoint 権限の付与などの追加の構成手順を実行する必要があります。 手順については、PowerPivot 自動データ更新アカウントの構成には、この手順を参照してください。[ステップ 3:許可、アカウントへのアクセス許可の貢献](#bkmk_grant)、し、アカウントが正しく構成されていることの確認の終端、残りのすべての手順を続行します。  
   
 ## <a name="see-also"></a>参照  
  [SharePoint 2010 で PowerPivot データ更新](powerpivot-data-refresh-with-sharepoint-2010.md)   

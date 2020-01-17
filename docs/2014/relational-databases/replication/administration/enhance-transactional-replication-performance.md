@@ -21,12 +21,12 @@ ms.assetid: 67084a67-43ff-4065-987a-3b16d1841565
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 1cb8d3e14d7963bdcbad9bdc273f2adfaf11c0ee
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: d04ba8b85c124b66e250d17ad204ef76a8de6dc7
+ms.sourcegitcommit: 619917a0f91c8f1d9112ae6ad9cdd7a46a74f717
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52813654"
+ms.lasthandoff: 11/09/2019
+ms.locfileid: "73882356"
 ---
 # <a name="enhance-transactional-replication-performance"></a>トランザクション レプリケーションのパフォーマンスの向上
   「 [レプリケーションの全般的パフォーマンスの向上](enhance-general-replication-performance.md)」で説明した全般的なパフォーマンス向上のヒントを検討した後、トランザクション レプリケーションに固有なこれらの項目を併せて検討してください。  
@@ -65,7 +65,7 @@ ms.locfileid: "52813654"
   
      エージェントを連続的に実行するようにし、高い頻度のスケジュール、たとえば毎分などのスケジュールの作成を避けることで、レプリケーションのパフォーマンスが向上します。これは、エージェントが開始および停止する必要がなくなるからです。 ディストリビューション エージェントを連続的に実行するように設定すると、トポロジ内で接続しているその他のサーバーに、短い待機時間で変更が反映されます。 詳細については、以下をご覧ください。  
   
-    -   [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]:[同期スケジュールの指定](../specify-synchronization-schedules.md)  
+    -   [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]: [同期スケジュールの指定](../specify-synchronization-schedules.md)  
   
 ## <a name="distribution-agent-and-log-reader-agent-parameters"></a>ディストリビューション エージェントおよびログ リーダー エージェントのパラメーター  
   
@@ -76,11 +76,11 @@ ms.locfileid: "52813654"
     > [!WARNING]  
     >  `MaxCmdsInTran` は、常に有効になるようには設計されていませんでした。 このパラメーターは、ユーザーが誤って 1 つのトランザクションで多数の DML 操作を実行した場合に対応するためのものです (このような場合、トランザクション全体がディストリビューション データベースに格納されるまでコマンドの配布で遅延が発生したり、ロックが保持されたりするなどの問題が発生します)。 このような状況が定期的に発生する場合は、アプリケーションを確認し、トランザクションのサイズを縮小する方法を見つけてください。  
   
--   使用して、 **- SubscriptionStreams**配布エージェントのパラメーター。  
+-   ディストリビューションエージェントには **-subscriptionstreams**パラメーターを使用します。  
   
      **-SubscriptionStreams** パラメーターを使用すると、集計レプリケーションのスループットを大幅に向上できます。 このパラメーターを使用すると、単一のスレッドを使用するときに存在するトランザクション特性の多くを維持しつつ、変更のバッチをサブスクライバーへの複数の接続で並列的に適用できます。 いずれかの接続が実行またはコミットに失敗した場合、進行中のバッチがすべての接続について中止されます。その場合、エージェントは、単一のストリームを使用して、失敗したバッチを再試行します。 この再試行フェーズが完了するまでは、サブスクライバー側に、トランザクションの一時的な不整合が存在する可能性があります。 サブスクライバーのトランザクション一貫性は、前回失敗したバッチが正常にコミットされた後で復元されます。  
   
-     このエージェント パラメーターの値は、[sp_addsubscription &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addsubscription-transact-sql) の **@subscriptionstreams** を使用して指定できます。  
+     このエージェントパラメーターの値は、 [sp_addsubscription &#40;transact-sql&#41;](/sql/relational-databases/system-stored-procedures/sp-addsubscription-transact-sql)の **\@subscriptionstreams**を使用して指定できます。  
   
 -   ログ リーダー エージェントの **-ReadBatchSize** パラメーターの値を大きくする。  
   
@@ -100,6 +100,6 @@ ms.locfileid: "52813654"
   
 -   [レプリケーション エージェント コマンド プロンプト パラメーターを表示および変更する &#40;SQL Server Management Studio&#41;](../agents/view-and-modify-replication-agent-command-prompt-parameters.md)  
   
--   [Replication Agent Executables Concepts](../concepts/replication-agent-executables-concepts.md)  
+-   [レプリケーション エージェント実行可能ファイルの概念](../concepts/replication-agent-executables-concepts.md)  
   
   

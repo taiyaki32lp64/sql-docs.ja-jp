@@ -10,17 +10,20 @@ ms.topic: conceptual
 helpviewer_keywords:
 - incremental load [Integration Services],preparing query
 ms.assetid: 9ea2db7a-3dca-4bbf-9903-cccd2d494b5f
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: c4052b68e5266d063a17bd613d33c5732bc23348
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 610f75fa8b706dab60b9691b4f5e5e82c2bdb93f
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47793454"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71294623"
 ---
 # <a name="prepare-to-query-for-the-change-data"></a>変更データのクエリを準備する
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   変更データの増分読み込みを実行する [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] パッケージの制御フローにおいて、3 番目に行う最後のタスクは、変更データのクエリを準備してデータ フロー タスクを追加することです。  
   
 > [!NOTE]  
@@ -62,7 +65,7 @@ ms.locfileid: "47793454"
   
 2.  **[スクリプト タスク エディター]** の **[スクリプト]** ページで、次のオプションを選択します。  
   
-    1.  **[ReadOnlyVariables]** で **[User::DataReady]**、 **[User::ExtractStartTime]**、および **[User::ExtractEndTime]** を一覧から選択します。  
+    1.  **[ReadOnlyVariables]** で **[User::DataReady]** 、 **[User::ExtractStartTime]** 、および **[User::ExtractEndTime]** を一覧から選択します。  
   
     2.  **[ReadWriteVariables]** で [User::SqlDataQuery] を一覧から選択します。  
   

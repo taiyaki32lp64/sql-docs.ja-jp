@@ -1,5 +1,5 @@
 ---
-title: 大きな CLR Udt (OLE DB) の使用 |Microsoft Docs
+title: 大きな CLR Udt を使用する (OLE DB) |Microsoft Docs
 description: 大きな CLR UDT の使用 (OLE DB)
 ms.custom: ''
 ms.date: 06/14/2018
@@ -10,20 +10,19 @@ ms.technology: connectivity
 ms.topic: reference
 author: pmasl
 ms.author: pelopes
-manager: craigg
-ms.openlocfilehash: 0eeb91d3cebd709b96fc08fe6317c90a08bdb4c7
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: 07a3023f61f26bbc4850eaa495f134d87c6a61c0
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53211971"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67994609"
 ---
 # <a name="use-large-clr-udts-ole-db"></a>大きな CLR UDT の使用 (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
-  このサンプルでは、大きなユーザー定義型を持つ行を結果セットからフェッチする方法を示します。 詳細については、次を参照してください。 [Large CLR User-Defined 型&#40;OLE DB&#41;](../../oledb/ole-db/large-clr-user-defined-types-ole-db.md)します。 このサンプルは、[!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)] 以降で動作します。  
+  このサンプルでは、大きなユーザー定義型を持つ行を結果セットからフェッチする方法を示します。 詳細については、「 [ &#40;OLE DB&#41;](../../oledb/ole-db/large-clr-user-defined-types-ole-db.md)」を参照してください。 このサンプルは、[!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)] 以降で動作します。  
   
 ## <a name="example"></a>例  
  このサンプルには 2 つのプロジェクトが含まれています。 1 つは、C# ソース コードからアセンブリ (DLL) を作成するプロジェクトです。 このアセンブリには、CLR 型が格納されます。 テーブルがデータベースに追加されます。 テーブルの列の型はアセンブリで定義されます。このサンプルでは、既定で master データベースを使用します。 もう 1 つのプロジェクトは、テーブルからデータを読み取るネイティブの C++ アプリケーションです。  

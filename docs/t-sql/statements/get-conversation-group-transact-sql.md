@@ -24,16 +24,15 @@ helpviewer_keywords:
 ms.assetid: 4da8a855-33c0-43b2-a49d-527487cb3b5c
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: 997334b76a2f07d5e9c9b7a06cc5499838251e7f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d0ede71391f31096191255c5a8fee2051ad6f696
+ms.sourcegitcommit: c426c7ef99ffaa9e91a93ef653cd6bf3bfd42132
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47665082"
+ms.lasthandoff: 10/10/2019
+ms.locfileid: "72252187"
 ---
 # <a name="get-conversation-group-transact-sql"></a>GET CONVERSATION GROUP (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
 
   次に受信するメッセージのメッセージ交換グループの識別子を返すと共に、そのメッセージが含まれるメッセージ交換のメッセージ交換グループをロックします。 メッセージ交換グループの識別子は、メッセージ自体を取得する前にメッセージ交換の状態情報を取得する場合に使用できます。  
   
@@ -50,16 +49,14 @@ ms.locfileid: "47665082"
 [ ; ]  
   
 <queue> ::=  
-{  
-    [ database_name . [ schema_name ] . | schema_name . ] queue_name  
-}  
+{ database_name.schema_name.queue_name | schema_name.queue_name | queue_name }  
 ```  
   
 ## <a name="arguments"></a>引数  
  WAITFOR  
- 現在メッセージが存在しない場合、GET CONVERSATION GROUP ステートメントは、キューにメッセージが到着するのを待機します。  
+ 現在メッセージが存在しない場合、GET CONVERSATION GROUP ステートメントが、キューにメッセージが到着するのを待機するように指定します。  
   
- *@conversation_group_id*  
+ *\@conversation_group_id*  
  GET CONVERSATION GROUP ステートメントによって返されるメッセージ交換グループ ID が格納される変数です。 この変数は、**uniqueidentifier** 型である必要があります。 使用できるメッセージ交換グループがない場合、この変数は NULL に設定されます。  
   
  FROM  
@@ -75,12 +72,12 @@ ms.locfileid: "47665082"
  メッセージ交換グループを取得するキューの名前を指定します。  
   
  TIMEOUT *timeout*  
- Service Broker が、キューにメッセージが到着するのを待機する時間を指定します (ミリ秒単位)。 この句は WAITFOR 句と共に使用する必要があります。 WAITFOR 句を使用するステートメントにこの句が含まれないか、*timeout* が -1 の場合、待機時間は無制限になります。 タイムアウトになると、GET CONVERSATION GROUP では *@conversation_group_id* 変数に NULL が設定されます。  
+ Service Broker が、キューにメッセージが到着するのを待機する時間を指定します (ミリ秒単位)。 この句は WAITFOR 句と共に使用する必要があります。 WAITFOR 句を使用するステートメントにこの句が含まれないか、*timeout* が -1 の場合、待機時間は無制限になります。 タイムアウトになると、GET CONVERSATION GROUP では *\@conversation_group_id* 変数に NULL が設定されます。  
   
 ## <a name="remarks"></a>Remarks  
   
 > [!IMPORTANT]  
->  GET CONVERSATION GROUP ステートメントがバッチまたはストアド プロシージャの最初のステートメントではない場合は、前のステートメントの後に、[!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントのターミネータであるセミコロン (**;**) を指定する必要があります。  
+>  GET CONVERSATION GROUP ステートメントがバッチまたはストアド プロシージャの最初のステートメントではない場合は、前のステートメントの後に、[!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントのターミネータであるセミコロン ( **;** ) を指定する必要があります。  
   
  GET CONVERSATION GROUP ステートメントで指定したキューが使用できない場合、ステートメントは失敗し、[!INCLUDE[tsql](../../includes/tsql-md.md)] エラーが返されます。  
   

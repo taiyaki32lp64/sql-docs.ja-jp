@@ -17,14 +17,13 @@ helpviewer_keywords:
 ms.assetid: 681ef31d-ceb9-4da5-86bf-bf1240df950f
 author: VanMSFT
 ms.author: vanto
-manager: craigg
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: 16267d2af81e3338bb04f5f548e2f9d14d1d4186
-ms.sourcegitcommit: 009bee6f66142c48477849ee03d5177bcc3b6380
+ms.openlocfilehash: 00497dfe67c03eab4d9d0bc1798f6d5537628ed7
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/13/2019
-ms.locfileid: "56231009"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68101942"
 ---
 # <a name="dbcc-flushauthcache-transact-sql"></a>DBCC FLUSHAUTHCACHE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
@@ -40,7 +39,7 @@ DBCC FLUSHAUTHCACHE [ ; ]
 ```  
   
 ## <a name="arguments"></a>引数  
-なし。
+[なし] :
   
 ## <a name="remarks"></a>Remarks  
 認証キャッシュは、マスターに格納されているログインおよびサーバー ファイアウォール ルールのコピーを作成し、ユーザー データベースのメモリに配置します。  含まれているデータベース ユーザーに関する情報は、既にユーザー データベースに格納されているため、含まれているデータベース ユーザーは認証キャッシュの一部ではありません。

@@ -13,22 +13,20 @@ helpviewer_keywords:
 ms.assetid: 8cce22d5-28b1-4b50-a5bc-1de03e0ffd6b
 author: MightyPen
 ms.author: genemi
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: c5ab485199920932bd88ce8740a51b7e56152a0b
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: a295df72be56343cdca65591a147adf173b36059
+ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51669431"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73785580"
 ---
 # <a name="sqltableprivileges"></a>SQLTablePrivileges
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-[!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
 
-  **SQLTablePrivileges**静的カーソルで実行できます。 実行しようとすると、 **SQLTablePrivileges**で更新可能な (キーセット ドリブンまたは動的) 返しますが、カーソルの種類を示す SQL_SUCCESS_WITH_INFO が変更されました。  
+  **Sqltableprivileges**は、静的カーソルで実行できます。 更新可能な (キーセットドリブンまたは動的) に対して**Sqltableprivileges**を実行しようとすると、カーソルの種類が変更されたことを示す SQL_SUCCESS_WITH_INFO が返されます。  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC ドライバーでは、リンク サーバー上のテーブルに関する情報のレポートをサポートの 2 つの部分名をそのまま使用して、 *CatalogName*パラメーター: *Linked_Server_Name.Catalog_Name*.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC ドライバーでは、 *CatalogName*パラメーターの2部構成の名前を使用して、リンクサーバー上のテーブルの情報をレポートすることができます。 *Linked_Server_Name Catalog_Name*です。  
   
 ## <a name="see-also"></a>参照  
  [SQLTablePrivileges 関数](https://go.microsoft.com/fwlink/?LinkId=59373\)   

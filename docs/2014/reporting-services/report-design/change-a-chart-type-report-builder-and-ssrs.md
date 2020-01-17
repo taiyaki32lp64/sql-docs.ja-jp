@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 ms.assetid: fff24978-e3bd-4fac-8cd7-d6aa81f3cc25
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: a636559f5d90bd4e0fec5cf9df140e88f17796a6
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: e20363b7d26b2b668ca52d44615488e06573f730
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56286550"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66106375"
 ---
 # <a name="change-a-chart-type-report-builder-and-ssrs"></a>グラフの種類の変更 (レポート ビルダーおよび SSRS)
   まず、レポートにグラフを挿入するとき、**グラフの種類の選択**ダイアログが表示されます。 このダイアログ ボックスを取り消すと、縦棒グラフというグラフの種類が既定で追加されます。  
@@ -37,7 +36,7 @@ ms.locfileid: "56286550"
   
 2.  **[グラフの種類を選択]** ダイアログ ボックスで、一覧からグラフの種類を選択します。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [グラフ &#40;レポート ビルダーおよび SSRS&#41;](charts-report-builder-and-ssrs.md)   
  [ゲージ &#40;レポート ビルダーおよび SSRS&#41;](gauges-report-builder-and-ssrs.md)   
  [レポートへのグラフの追加 &#40;レポート ビルダーおよび SSRS&#41;](add-a-chart-to-a-report-report-builder-and-ssrs.md)  

@@ -18,34 +18,33 @@ helpviewer_keywords:
 ms.assetid: 119c8d62-eea8-44fb-bf72-de469c838c50
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 112e45b056de0f1915a4ef5419e0e916f1f8d5a6
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 70dffcbf2ac3eac13f7ef42e901c4fcd99dce769
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47772620"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68130552"
 ---
 # <a name="suspectpages-transact-sql"></a>suspect_pages (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  マイナー 823 エラーまたは 824 エラーで失敗したページごとに 1 行が含まれています。 このテーブルには、問題がある可能性はあるものの、実際には問題がないことも考えられるページが格納されます。 未確認のページを修復するでその状態が更新、 **event_type**列。  
+  マイナー 823 エラーまたは 824 エラーで失敗したページごとに 1 行が含まれています。 ページは、ため、それらが疑われるが、問題が実際にあります。 このテーブルに表示されます。 未確認のページを修復するでその状態が更新、 **event_type**列。  
   
  次の表は、最大 1,000 行には、 **msdb**データベース。  
   
 |列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
-|**database_id**|**int**|このページが適用されるデータベースの ID。|  
+|**database_id**|**int**|このページを適用するデータベースの ID。|  
 |**file_id**|**int**|データベース内のファイルの ID。|  
-|**page_id**|**bigint**|問題があると考えられるページの ID。 すべてのページには 32 ビット値のページ ID が付けられており、データベース内のページの場所を識別します。 **Page_id**は 8 KB ページのデータ ファイルへのオフセット。 各ページ ID はファイル内で一意です。|  
-|**event_type**|**int**|エラーの種類。次のいずれかになります。<br /><br /> 1 = 問題があると考えられるページ (ディスク エラーなど) の原因となった 823 エラー、または、不正なチェックサムまたは破損ページ (不適切なページ ID) 以外の 824 エラー。<br /><br /> 2 = 不正なチェックサム。<br /><br /> 3 = 破損ページ。<br /><br /> 4 = 復元済み (不正とマークされた後、復元されたページ)。<br /><br /> 5 = 修復済み (DBCC で修復されたページ)。<br /><br /> 7 = DBCC により割り当て解除。|  
-|**error_count**|**int**|エラーの発生回数。|  
+|**page_id**|**bigint**|問題があると考えられるページの ID。 すべてのページでは、データベース内のページの場所を識別する 32 ビット値であるページ ID を持ちます。 **Page_id**は 8 KB ページのデータ ファイルへのオフセット。 各ページ ID はファイル内で一意です。|  
+|**event_type**|**int**|エラーの種類いずれか:<br /><br /> 1 = 問題があると考えられるページ (ディスク エラーなど) の原因となった 823 エラー、または、不正なチェックサムまたは破損ページ (不適切なページ ID) 以外の 824 エラー。<br /><br /> 2 = 不適切なチェックサム。<br /><br /> 3 = 破損ページ。<br /><br /> 4 = 復元済み (不正とマークされた後、ページが復元された)。<br /><br /> 5 = 修復済み (DBCC で修復されたページ)。<br /><br /> 7 = DBCC により割り当て解除。|  
+|**error_count**|**int**|エラーが発生した回数。|  
 |**last_update_date**|**datetime**|最終更新日時のタイムスタンプ。|  
   
 ## <a name="permissions"></a>アクセス許可  
  **msdb** に対するアクセスを持つユーザー は、 **suspect_pages** テーブルのデータを読み取ることができます。 suspect_pages テーブルに対する UPDATE 権限を持つすべてのユーザーは、そのレコードを更新できます。 **msdb** の **db_owner** 固定データベース ロールのメンバーまたは **sysadmin** 固定サーバー ロールのメンバーは、レコードの挿入、更新、および削除を行うことができます。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [ページ復元 &#40;SQL Server&#41;](../../relational-databases/backup-restore/restore-pages-sql-server.md)   
  [Database Suspect Data Page イベント クラス](../../relational-databases/event-classes/database-suspect-data-page-event-class.md)   
  [システム テーブル&#40;TRANSACT-SQL&#41;](../../relational-databases/system-tables/system-tables-transact-sql.md)   

@@ -1,5 +1,5 @@
 ---
-title: チュートリアル:TRANSACT-SQL ステートメントの記述 |Microsoft Docs
+title: チュートリアル:Transact-SQL ステートメントの作成 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/09/2017
 ms.prod: sql-server-2014
@@ -15,11 +15,11 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: 67e09713fdec72313bde6ba81e1cc169467fda0c
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52807584"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68211198"
 ---
 # <a name="tutorial-writing-transact-sql-statements"></a>チュートリアル:Transact-SQL ステートメントの作成
   [!INCLUDE[tsql](../includes/tsql-md.md)] ステートメントの作成チュートリアルへようこそ。 このチュートリアルは、SQL ステートメントを初めて作成するユーザーを対象としています。 ここでは初心者のユーザーを対象に、テーブルを作成し、データを挿入するための基本的なステートメントを紹介します。 このチュートリアルでは、 [!INCLUDE[tsql](../includes/tsql-md.md)]製品に実装されている SQL 規格の [!INCLUDE[msCoName](../includes/msconame-md.md)] を使用します。 このチュートリアルは、 [!INCLUDE[tsql](../includes/tsql-md.md)] 言語を簡単に紹介することを目的としています。 [!INCLUDE[tsql](../includes/tsql-md.md)] クラスの代わりとなるものではありません。 このチュートリアルで使用するステートメントは意図的に簡潔化されており、通常の実稼働データベースに見られる複雑性を表すものではありません。  
@@ -38,7 +38,7 @@ ms.locfileid: "52807584"
  [レッスン 1:データベース オブジェクトの作成](lesson-1-creating-database-objects.md)  
  このレッスンでは、データベースを作成し、データベースにテーブルを作成し、データをテーブルに挿入します。さらに、データを更新し、読み取ります。  
   
- [レッスン 2:データベース オブジェクトに対する権限の構成](lesson-2-configuring-permissions-on-database-objects.md)  
+ [レッスン 2:データベース オブジェクトに対するアクセス許可の構成](lesson-2-configuring-permissions-on-database-objects.md)  
  このレッスンでは、ログインとユーザーを作成します。 また、ビューとストアド プロシージャも作成し、ストアド プロシージャにユーザー権限を与えます。  
   
  [レッスン 3:データベース オブジェクトの削除](lesson-3-1-deleting-database-objects.md)  

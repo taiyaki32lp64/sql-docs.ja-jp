@@ -17,18 +17,17 @@ helpviewer_keywords:
 ms.assetid: eeab0120-c869-4c95-a79d-6dc418d0b23a
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: 2e93a3272e16af482afaaecb052f7a89ac04100e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 1cc965b55cb1f7216d4711c129a5e99bb4da067f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47604062"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68010496"
 ---
 # <a name="spsyspolicydeletepolicycategorysubscription-transact-sql"></a>sp_syspolicy_delete_policy_category_subscription (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  特定のデータベースのポリシー カテゴリのサブスクリプションを削除します。  
+  特定のデータベースのポリシー カテゴリ サブスクリプションを削除します。  
   
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -40,8 +39,7 @@ sp_syspolicy_delete_policy_category_subscription [ @policy_category_subscription
 ```  
   
 ## <a name="arguments"></a>引数  
- [  **@policy_category_subscription_id=** ] *policy_category_subscription_id*  
- ポリシー カテゴリのサブスクリプションの識別子を指定します。 *policy_category_subscription_id*は**int**します。  
+`[ @policy_category_subscription_id = ] policy_category_subscription_id` ポリシー カテゴリ サブスクリプションの識別子です。 *policy_category_subscription_id*は**int**します。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  **0** (成功) または**1** (失敗)  
@@ -72,7 +70,7 @@ EXEC msdb.dbo.sp_syspolicy_delete_policy_category_subscription @policy_category_
 GO  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [ポリシー ベースの管理ストアド プロシージャ&#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/policy-based-management-stored-procedures-transact-sql.md)   
  [sp_syspolicy_update_policy_category_subscription &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-syspolicy-update-policy-category-subscription-transact-sql.md)  
   

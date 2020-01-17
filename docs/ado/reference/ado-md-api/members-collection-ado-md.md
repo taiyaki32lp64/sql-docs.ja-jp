@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 3a647cde-efdc-4394-b1b9-8cbb1b9d689f
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 541e1098dfd18210e7c07a0718ecd3add758c8a4
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 79394abee5b12bb10f34a34e882d2ac0562722fe
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47616950"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67949430"
 ---
 # <a name="members-collection-ado-md"></a>Members コレクション (ADO MD)
 含まれています、[メンバー](../../../ado/reference/ado-md-api/member-object-ado-md.md)レベル、または軸に沿った位置からのオブジェクト。  
@@ -49,6 +48,6 @@ ms.locfileid: "47616950"
   
 -   [プロパティ、メソッド、およびイベント](../../../ado/reference/ado-md-api/members-collection-properties-methods-and-events.md)  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [メンバーの例 (VBScript)](../../../ado/reference/ado-md-api/members-example-vbscript.md)   
  [Member オブジェクト (ADO MD)](../../../ado/reference/ado-md-api/member-object-ado-md.md)

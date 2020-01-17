@@ -14,11 +14,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 42ae16970e59e2eac1af68e54a38b19bd760c068
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48195092"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62779902"
 ---
 # <a name="exclude-files-from-source-control"></a>ソース管理からのファイルの除外
   使用することで作業しているソリューションにソース管理サービスを必要としないファイルが含まれている場合、**ソース管理から除外する**コマンド ファイルをソース管理から除外します。 ファイルを除外すると、そのファイルは [!INCLUDE[msCoName](../includes/msconame-md.md)] Visual SourceSafe データベースに残りますが、プロジェクトと共にチェックインまたはチェックアウトされなくなります。  

@@ -1,5 +1,5 @@
 ---
-title: getPrimaryKeys メソッド (SQLServerDatabaseMetaData) |Microsoft Docs
+title: getPrimaryKeys メソッド (SQLServerDatabaseMetaData) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: ebfe236a-dc02-493e-a3ab-5353d3769e36
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 73c1f5576d440cc9c98708882b98c5b6d9ceff42
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: bdb1eb0053c9bb15c6d03013df13635e022a5072
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47809980"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67980766"
 ---
 # <a name="getprimarykeys-method-sqlserverdatabasemetadata"></a>getPrimaryKeys メソッド (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -57,7 +56,7 @@ public java.sql.ResultSet getPrimaryKeys(java.lang.String cat,
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- この getPrimaryKeys メソッドは、java.sql.DatabaseMetaData インターフェイスで getPrimaryKeys メソッドによって指定されます。  
+ この getPrimaryKeys メソッドは、java メタデータインターフェイスの getPrimaryKeys メソッドによって指定されます。  
   
  getPrimaryKeys メソッドによって返される結果セットには、次の情報が含まれます。  
   

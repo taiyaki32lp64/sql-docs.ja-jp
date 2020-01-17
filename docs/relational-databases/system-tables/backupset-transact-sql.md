@@ -19,14 +19,13 @@ helpviewer_keywords:
 ms.assetid: 6ff79bbf-4acf-4f75-926f-38637ca8a943
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: '>=aps-pdw-2016||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: baf454d021f64931d06c39b49ee0a18f92841507
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: b138a299edbb1e9f3a2314e92b7e77418594a711
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52402857"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68119331"
 ---
 # <a name="backupset-transact-sql"></a>backupset (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-pdw-md.md)]
@@ -79,7 +78,7 @@ ms.locfileid: "52402857"
 |**unicode_compare_style**|**int**|Unicode の比較形式。 NULL にすることができます。|  
 |**collation_name**|**nvarchar(128)**|照合順序名。 NULL にすることができます。|  
 |**Is_password_protected**|**bit**|バックアップ セット。<br /><br /> パスワードの保護は次のとおりです。<br /><br /> 0 = 保護されていない<br /><br /> 1 = 保護されている|  
-|**recovery_model**|**nvarchar(60)**|データベースの復旧モデル。<br /><br /> FULL<br /><br /> BULK-LOGGED <br /><br /> SIMPLE|  
+|**recovery_model**|**nvarchar(60)**|データベースの復旧モデル。<br /><br /> FULL<br /><br /> BULK-LOGGED<br /><br /> SIMPLE|  
 |**has_bulk_logged_data**|**bit**|1 = 一括ログ データを含むバックアップ。|  
 |**is_snapshot**|**bit**|1 = バックアップは SNAPSHOT オプションで実行された。|  
 |**is_readonly**|**bit**|1 = バックアップ時、データベースは読み取り専用であった。|  

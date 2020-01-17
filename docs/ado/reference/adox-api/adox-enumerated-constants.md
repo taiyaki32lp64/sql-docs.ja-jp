@@ -12,20 +12,19 @@ helpviewer_keywords:
 ms.assetid: 9d91f511-d46f-44ef-97ef-77bf93836186
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: bdbd67d5e4d7d4647b92b32590a5258de038c80f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 8ff18386cb9da4edbeaa8930d138ba9951965ee0
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47729480"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67928550"
 ---
 # <a name="adox-enumerated-constants"></a>ADOX の列挙定数
 デバッグを支援するには、ADOX の列挙定数には、各定数の値が一覧表示します。 ただし、この値は、参考し、ADOX の 1 つのリリース別に変更があります。 コードは、列挙定数の実際の値ではなく、名前にのみ依存する必要があります。  
   
  次の列挙定数が定義されます。  
   
-|列挙型|説明|  
+|列挙値|説明|  
 |-----------------|-----------------|  
 |[ActionEnum](../../../ado/reference/adox-api/actionenum.md)|ときに実行されるアクションの種類を指定します**SetPermissions**が呼び出されます。|  
 |[AllowNullsEnum](../../../ado/reference/adox-api/allownullsenum.md)|Null 値を持つレコードのインデックスを作成するかどうかを指定します。|  
@@ -38,6 +37,6 @@ ms.locfileid: "47729480"
 |[RuleEnum](../../../ado/reference/adox-api/ruleenum.md)|ときに従うルールを指定します、**キー**は削除されます。|  
 |[SortOrderEnum](../../../ado/reference/adox-api/sortorderenum.md)|インデックス付き列の並べ替え順序を指定します。|  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [ADOX の API リファレンス](../../../ado/reference/adox-api/adox-api-reference.md)   
  [データ定義言語とセキュリティの ADO 拡張機能 (ADOX)](../../../ado/guide/extensions/ado-extensions-for-data-definition-language-and-security-adox.md)

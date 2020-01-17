@@ -12,16 +12,15 @@ helpviewer_keywords:
 ms.assetid: 7fba3296-5bd0-4f9e-8f63-9565fe1ee15f
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 22fe9f04ea03769cbdc2f100ec6284d17deff097
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 81603a2a8ab558d0f574e08c90992ea68afffc80
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47602580"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67949516"
 ---
 # <a name="levels-collection-properties-methods-and-events"></a>Levels コレクションのプロパティ、メソッド、およびイベント
-## <a name="properties"></a>[プロパティ]  
+## <a name="properties"></a>Properties  
  [Count プロパティ](../../../ado/reference/ado-api/count-property-ado.md)  
   
  [項目のプロパティ](../../../ado/reference/ado-api/item-property-ado.md)  

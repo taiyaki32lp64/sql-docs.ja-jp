@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 14f98054-13b4-4231-a6b0-2452f3b9941d
 author: Shamikg
 ms.author: Shamikg
-manager: craigg
-ms.openlocfilehash: ffe475b53048a97f878bfad1d8bef68d6fb3cfc6
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 99e86d99a4214b1ccdf317e75218fe22bb2c7af7
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47855130"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67908990"
 ---
 # <a name="mapping-mysql-and-sql-server-data-types-mysqltosql"></a>MySQL と SQL Server データ型のマッピング (MySQLToSQL)
 MySQL データベースの型が異なる[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]または SQL Azure データベースの型。 MySQL のデータベース オブジェクトを変換する際に[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]または SQL Azure のオブジェクトから MySQL へのデータ型をマップする方法を指定する必要があります[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]または SQL Azure です。 既定のデータ型マッピングをそのまま使用できるまたはマッピングをカスタマイズするには、次の手順で示すようにします。  
@@ -55,7 +54,7 @@ SSMA では、データ型マッピングの既定セットがあります。 �
   
     4.  これにより、同じデータ型の値が小さくなりより大きなデータのマッピングをカスタマイズできます。 **ターゲットの種類**、ターゲット SQL Server または SQL Azure のデータ型を選択します。  
   
-        1.  一部の種類には、対象のデータ型の長さが必要です。 必要に応じて、入力内の新しいデータ長、**置換**ボックスをクリックして **[ok]**。  
+        1.  一部の種類には、対象のデータ型の長さが必要です。 必要に応じて、入力内の新しいデータ長、**置換**ボックスをクリックして **[ok]** 。  
   
         2.  一部の種類が対象のデータ型を必要と**精度**と**スケール**します。 必要に応じて、新しい有効桁数を入力し、スケールイン、**置換**ボックスをクリックして**OK**。  
   
@@ -69,7 +68,7 @@ SSMA では、データ型マッピングの既定セットがあります。 �
   
     これにより、同じデータ型の値が小さくなりより大きなデータのマッピングをカスタマイズできます。 **ターゲットの種類**、ターゲット SQL Server または SQL Azure のデータ型を選択します。  
   
-    1.  一部の種類には、対象のデータ型の長さが必要です。 必要に応じて、入力内の新しいデータ長、**置換**ボックスをクリックして **[ok]**。  
+    1.  一部の種類には、対象のデータ型の長さが必要です。 必要に応じて、入力内の新しいデータ長、**置換**ボックスをクリックして **[ok]** 。  
   
     2.  一部の種類が対象のデータ型を必要と**精度**と**スケール**します。 必要に応じて、新しい有効桁数を入力し、スケールイン、**置換**ボックスをクリックして**OK** 。  
   

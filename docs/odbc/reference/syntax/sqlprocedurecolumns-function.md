@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: 4ca37b28-a6df-465b-8988-d422d37fc025
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 1b47ef4c2df8a326d993a95e056b27d331dc649f
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: a5a869d38782478b69ce47656455c38c2b4645b6
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53205601"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68005744"
 ---
 # <a name="sqlprocedurecolumns-function"></a>SQLProcedureColumns 関数
 **準拠**  
@@ -36,7 +35,7 @@ ms.locfileid: "53205601"
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
   
 SQLRETURN SQLProcedureColumns(  
      SQLHSTMT      StatementHandle,  
@@ -114,7 +113,7 @@ SQLRETURN SQLProcedureColumns(
 |IM018|**SQLCompleteAsync**このハンドルに対する前の非同期操作を完了が呼び出されていません。|通知モードが有効になっている場合、ハンドルでは、前の関数呼び出しに SQL_STILL_EXECUTING が返された場合と**SQLCompleteAsync**後処理を行い、操作を完了するハンドルで呼び出す必要があります。|  
   
 ## <a name="comments"></a>コメント  
- この関数は、プロシージャのパラメーターと存在する場合、結果セットまたはプロシージャによって返されたセットを構成する列についての情報を取得するステートメントを実行する前に通常使用されます。 詳細については、次を参照してください。[プロシージャ](../../../odbc/reference/develop-app/procedures-odbc.md)します。  
+ この関数は、プロシージャのパラメーターと存在する場合、結果セットまたはプロシージャによって返されたセットを構成する列についての情報を取得するステートメントを実行する前に通常使用されます。 詳細については、「[プロシージャ](../../../odbc/reference/develop-app/procedures-odbc.md)」を参照してください。  
   
 > [!NOTE]  
 >  **SQLProcedureColumns**プロシージャで使用されるすべての列が返されない可能性があります。 たとえば、ドライバーは、プロシージャ、および生成の結果セットの列によって使用されるパラメーターに関する情報だけを返す可能性があります。  

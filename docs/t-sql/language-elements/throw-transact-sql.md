@@ -15,16 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - THROW statement
 ms.assetid: 43661b89-8f13-4480-ad53-70306cbb14c5
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
+author: rothja
+ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 6146c25c64acce0688221df63039b17bff358971
-ms.sourcegitcommit: 9c99f992abd5f1c174b3d1e978774dffb99ff218
+ms.openlocfilehash: bfedebc32722f860fb0c84f385742c441023140d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/17/2019
-ms.locfileid: "54361562"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68072210"
 ---
 # <a name="throw-transact-sql"></a>THROW (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-all-md](../../includes/tsql-appliesto-ss2012-all-md.md)]
@@ -50,7 +49,7 @@ THROW [ { error_number | @local_variable },
  例外を説明する文字列または変数です。 *message* は **nvarchar(2048)** です。  
   
  *state*  
- メッセージに関連付けられる状態を示す、0 ～ 255 の範囲の定数または変数です。 *state* は **tinyint** です。  
+ メッセージに関連付けられる状態を示す、0 から 255 の範囲の定数または変数です。 *state* は **tinyint** です。  
   
 ## <a name="remarks"></a>Remarks  
  THROW ステートメントの前のステートメントの後に、セミコロン (;) ステートメント ターミネータが続く必要があります。  
@@ -59,10 +58,10 @@ THROW [ { error_number | @local_variable },
   
  パラメーターを使用せずに THROW ステートメントを指定する場合は、ステートメントが CATCH ブロック内に存在する必要があります。 これによりキャッチされた例外が発生します。 THROW ステートメント内でエラーが発生すると、ステートメント バッチが終了します。  
   
- % は THROW ステートメントのメッセージ テキストに予約された文字で、エスケープする必要があります。 文字 % を二重にすると、% をメッセージ テキストの一部として返します (例: 「増加が元の値の 15 %% を超えました。」)。  
+ % は THROW ステートメントのメッセージ テキストに予約された文字で、エスケープする必要があります。 文字 % を二重にすると、% をメッセージ テキストの一部として返します (例: "増加が元の値の 15% を超えました。")。  
   
 ## <a name="differences-between-raiserror-and-throw"></a>RAISERROR と THROW の違い  
- 次の表では、RAISERROR ステートメントと THROW ステートメントの違いを示します。  
+ 次の表に、RAISERROR ステートメントと THROW ステートメントの違いを示します。  
   
 |RAISERROR ステートメント|THROW ステートメント|  
 |-------------------------|---------------------|  

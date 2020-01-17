@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: e6e92199-7bb6-447c-8987-049a4c6ce05d
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: faa88d18a5b682b98a56b6426ba6a94ee4687cab
-ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
+ms.openlocfilehash: 4017ed07681a74da4832db2db3aeabddf22edb19
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/18/2018
-ms.locfileid: "53591816"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68020330"
 ---
 # <a name="sqlgetcursorname-function"></a>SQLGetCursorName 関数
 **準拠**  
@@ -36,7 +35,7 @@ ms.locfileid: "53591816"
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
   
 SQLRETURN SQLGetCursorName(  
      SQLHSTMT        StatementHandle,  
@@ -55,7 +54,7 @@ SQLRETURN SQLGetCursorName(
  場合*カーソル名*が null の場合、 *NameLengthPtr*はまだ文字 (文字データの null 終端文字を除く) の合計数を返しますが指すバッファーに返される使用可能な*カーソル名*します。  
   
  *BufferLength*  
- [入力]長さ\**カーソル名*、文字数。 場合の値*\*カーソル名*は Unicode 文字列です (呼び出し時に**SQLGetCursorNameW**)、 *BufferLength*引数は偶数である必要があります。  
+ [入力]長さ\**カーソル名*、文字数。 場合の値 *\*カーソル名*は Unicode 文字列です (呼び出し時に**SQLGetCursorNameW**)、 *BufferLength*引数は偶数である必要があります。  
   
  *NameLengthPtr*  
  [出力]文字 (null 終了文字を除く) の合計数を返すメモリへのポインターで返される使用可能な\**カーソル名*します。 返すに使用できる文字数がより大きいかに等しい場合*BufferLength*でカーソル名\**カーソル名*に切り捨てられます*BufferLength*null 終了文字の長さマイナスです。  

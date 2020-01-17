@@ -25,20 +25,19 @@ helpviewer_keywords:
 ms.assetid: cf96155f-30a8-48b7-8d6b-24ce90dafdc7
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 8cda2bf030b8e04cf40144c117359d553353ebf6
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 302b29901b9f20c70799704bdf75938270900173
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47846760"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68019807"
 ---
 # <a name="security-considerations-for-a-sql-server-installation"></a>SQL Server インストールにおけるセキュリティの考慮事項
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
  セキュリティは、あらゆる製品、あらゆる企業にとって重要です。 単純なベスト プラクティスに従うことで、多くのセキュリティの脆弱性を避けることができます。 この記事では、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] をインストールする前と [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] をインストールした後の両方で考慮する必要があるセキュリティのベスト プラクティスについて説明します。 特定の機能のセキュリティについては、その機能の参照記事で説明しています。  
   
-## <a name="before-installing-includessnoversionincludesssnoversion-mdmd"></a>をインストールする前に [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
+## <a name="before-installing-includessnoversionincludesssnoversion-mdmd"></a>[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  をインストールする前に  
  サーバー環境をセットアップする場合、次のベスト プラクティスに従ってください。  
   
 -   [物理的なセキュリティの強化](#physical_security)  
@@ -126,7 +125,7 @@ ms.locfileid: "47846760"
   
 -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] セットアップでは、読み取り専用ドメイン コントローラーにセキュリティ グループを作成したり [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] サービス アカウントを準備したりすることはできません。 この場合、セットアップは失敗します。  
   
-## <a name="during-or-after-installation-of-includessnoversionincludesssnoversion-mdmd"></a>のインストール中またはインストール後 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
+## <a name="during-or-after-installation-of-includessnoversionincludesssnoversion-mdmd"></a>[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  のインストール中またはインストール後  
  インストール後にアカウントと認証モードに関する次のベスト プラクティスに従うと、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インストールのセキュリティを強化できます。  
   
  **サービス アカウント**  

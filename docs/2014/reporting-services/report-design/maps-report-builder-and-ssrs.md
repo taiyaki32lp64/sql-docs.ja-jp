@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 f1_keywords:
 - sql12.rtp.rptdesigner.mapproperties.general.f1
@@ -15,15 +14,15 @@ f1_keywords:
 - MICROSOFT.REPORTDESIGNER.MAPPOLYGON.CENTERPOINTTEMPLATE
 - "10500"
 ms.assetid: b5e9ef21-11b7-4ed2-838e-d8eecdb5c5f0
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: ef5cc5ba452ddd29bd961cfd693a89b2b7f3e56c
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: 86932da9ccec6e973a2a35fc0ccbb5f54af63f05
+ms.sourcegitcommit: e366f702c49d184df15a9b93c2c6a610e88fa0fe
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56291250"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67826546"
 ---
 # <a name="maps-report-builder-and-ssrs"></a>マップ (レポート ビルダーおよび SSRS)
   レポートにマップを追加すると、地理的背景に対してビジネス データを視覚化することができます。 選択するマップの種類は、レポートでどのような情報を伝えるかによって異なります。 追加できるマップの種類としては、単に場所を表示するマップのほか、バブル サイズが領域内の世帯数に応じて変化するバブル マップ、店舗ごとの最も利益率の高い製品に基づいてマーカーのスタイルが変わるマーカー マップ、店舗間の経路を表示するライン マップがあります。  
@@ -32,7 +31,7 @@ ms.locfileid: "56291250"
   
  ![rs_MapElements](../media/rs-mapelements.gif "rs_MapElements")  
   
- マップをすぐに使用を開始するを参照してください。[チュートリアル。マップ レポート&#40;レポート ビルダー&#41; ](../tutorial-map-report-report-builder.md)または[サンプル (レポート ビルダーおよび SSRS) レポート](https://go.microsoft.com/fwlink/?LinkId=198283)します。  
+ 今すぐマップを使い始めるには、「[チュートリアル:マップ レポート &#40;レポート ビルダー&#41;](../tutorial-map-report-report-builder.md)」または「[レポート サンプル (レポート ビルダーおよび SSRS)](https://go.microsoft.com/fwlink/?LinkId=198283)」を参照してください。  
   
 > [!NOTE]  
 >  マップは、レポート パーツとして、レポートとは別に保存できます。  [!INCLUDE[ssRBrptparts](../../includes/ssrbrptparts-md.md)]  
@@ -78,12 +77,12 @@ ms.locfileid: "56291250"
 #### <a name="sources-of-spatial-data"></a>空間データのソース  
  空間データには次のソースがサポートされます。  
   
--   **マップ ギャラリーのレポート** 空間データはマップ ギャラリーにあるレポートに埋め込まれます。 既定では、マップ ギャラリーが *\<ドライブ>*:\Program Files\Microsoft SQL Server\Report Builder \MapGallery にインストールされます。  
+-   **マップ ギャラリーのレポート** 空間データはマップ ギャラリーにあるレポートに埋め込まれます。 既定では、マップ ギャラリーが *\<ドライブ>* :\Program Files\Microsoft SQL Server\Report Builder \MapGallery にインストールされます。  
   
     > [!NOTE]  
-    >  この [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] マッピング機能は、米国の国勢調査局 ([http://www.census.gov/](http://www.census.gov/)) から無料で入手できます。 TIGER/Line シェープファイルは、Census MAF/TIGER データベースからの選択された地理的情報および地図情報の抜粋です。 TIGER/Line シェープファイルは、米国の国勢調査局から無料で入手できます。 TIGER/Line シェープファイルの詳細については、[http://www.census.gov/geo/www/tiger](http://www.census.gov/geo/www/tiger) にアクセスしてください。 TIGER/Line シェープファイル内の境界情報は、統計データの収集および集計を唯一の目的としています。統計目的のための表現および表示は、法的管轄機関、所有権、または権利の付与の決定となるものではなく、また法的な土地の記載でもありません。 Census TIGER および TIGER/Line は、米国の国勢調査局の登録商標です。  
+    >  この [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] マッピング機能は、米国の国勢調査局 ([http://www.census.gov/](http://www.census.gov/)) から無料で入手できます。 TIGER/Line シェープファイルは、Census MAF/TIGER データベースからの選択された地理的情報および地図情報の抜粋です。 TIGER/Line シェープファイルは、米国の国勢調査局から無料で入手できます。 TIGER/Line シェープファイルに関する詳細情報については、「[TIGER/Line Shapefiles and TIGER/Line Files Technical Documentation (TIGER/Line シェープファイルと TIGER/Line ファイルに関する技術ドキュメント)](https://www.census.gov/programs-surveys/geography/technical-documentation/complete-technical-documentation/tiger-geo-line.html)」をご覧ください。 TIGER/Line シェープファイル内の境界情報は、統計データの収集および集計を唯一の目的としています。統計目的のための表現および表示は、法的管轄機関、所有権、または権利の付与の決定となるものではなく、また法的な土地の記載でもありません。 Census TIGER および TIGER/Line は、米国の国勢調査局の登録商標です。  
   
--   **ESRI シェープファイル** ESRI シェープファイルには、Environmental Systems Research Institute, Inc. (ESRI) のシェープファイル空間データ形式に準拠するデータが格納されています。 ESRI シェープファイルは、一連のファイルを参照します。 .shp ファイル内のデータにより、地形学的または幾何学的な形状が指定されます。 .dbf ファイル内のデータは、形状の属性を示します。 マップをデザイン ビューで表示したり、レポート サーバーからマップを実行したりするには、この両方のファイルを同じフォルダーに置く必要があります。 ローカルのファイル システム上にある .shp ファイルから空間データを追加すると、空間データがレポートに埋め込まれます。 実行時に空間データを動的に取得するには、レポート サーバーにシェープファイルをアップロードし、空間データの参照元として指定します。 詳細については、「 [マップに使用する ESRI シェープファイルの検索](https://go.microsoft.com/fwlink/?linkid=178814)」を参照してください。  
+-   **ESRI シェープファイル** ESRI シェープファイルには、Environmental Systems Research Institute, Inc. (ESRI)シェープファイルの空間データ形式。 ESRI シェープファイルは、一連のファイルを参照します。 .shp ファイル内のデータにより、地形学的または幾何学的な形状が指定されます。 .dbf ファイル内のデータは、形状の属性を示します。 マップをデザイン ビューで表示したり、レポート サーバーからマップを実行したりするには、この両方のファイルを同じフォルダーに置く必要があります。 ローカルのファイル システム上にある .shp ファイルから空間データを追加すると、空間データがレポートに埋め込まれます。 実行時に空間データを動的に取得するには、レポート サーバーにシェープファイルをアップロードし、空間データの参照元として指定します。 詳細については、「 [マップに使用する ESRI シェープファイルの検索](https://go.microsoft.com/fwlink/?linkid=178814)」を参照してください。  
   
 -   **データベースに格納されている SQL Server 空間データ** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] リレーショナル データベース内の `SQLGeometry` データ型または `SQLGeography` データ型を指定するクエリを使用できます。 詳細については、 [SQL Server オンライン ブック](../../relational-databases/spatial/spatial-data-types-overview.md) の「 [空間データ型の概要](https://go.microsoft.com/fwlink/?linkid=98335)」を参照してください。  
   
@@ -244,7 +243,7 @@ ms.locfileid: "56291250"
   
  マップ レポートを閲覧する際に期待した結果が表示されない根本原因は多種多様です。 それぞれの問題を特定して把握するには、扱うレイヤーは一度に 1 つずつとすることをお勧めします。 マップ ペインを使用すると、特定のレイヤーを選択し、その表示/非表示を簡単に切り替えることができます。  
   
- マップ レポートの問題の詳細については、次を参照してください。[レポートのトラブルシューティング。マップ レポート&#40;レポート ビルダーおよび SSRS&#41;](troubleshoot-reports-map-reports-report-builder-and-ssrs.md)  
+ マップ レポートの問題の詳細については、「[レポートのトラブルシューティング:マップ レポート &#40;レポート ビルダーおよび SSRS&#41;](troubleshoot-reports-map-reports-report-builder-and-ssrs.md)」を参照してください。  
   
 
   
@@ -274,6 +273,6 @@ ms.locfileid: "56291250"
   
  [カスタムの場所のマップへの追加 &#40;レポート ビルダーおよび SSRS&#41;](add-custom-locations-to-a-map-report-builder-and-ssrs.md)  
   
- [レポートのトラブルシューティング: マップ レポート&#40;レポート ビルダーおよび SSRS&#41;](troubleshoot-reports-map-reports-report-builder-and-ssrs.md)  
+ [レポートのトラブルシューティング: マップ レポート &#40;レポート ビルダーおよび SSRS&#41;](troubleshoot-reports-map-reports-report-builder-and-ssrs.md)  
   
   

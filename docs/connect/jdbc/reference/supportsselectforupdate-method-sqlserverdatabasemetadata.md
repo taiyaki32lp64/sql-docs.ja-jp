@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: 721bc8e3-36c0-4fa6-8561-4f8d54c8265a
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: ba3293377bfe3b8210271e703dd463e3458cf757
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a5b70b18a7b331ac448d5135d57e95741f76b85b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47728420"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67968869"
 ---
 # <a name="supportsselectforupdate-method-sqlserverdatabasemetadata"></a>supportsSelectForUpdate メソッド (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -36,13 +35,13 @@ public boolean supportsSelectForUpdate()
 ```  
   
 ## <a name="return-value"></a>戻り値  
- **true**サポートされている場合。 それ以外の場合は、 **false**です。  
+ サポートされている場合は**true** 。 それ以外の場合は、 **false**です。  
   
 ## <a name="exceptions"></a>例外  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- この supportsSelectForUpdate メソッドは、java.sql.DatabaseMetaData インターフェイスで supportsSelectForUpdate メソッドによって指定されます。  
+ この supportsSelectForUpdate メソッドは、java メタデータインターフェイスの supportsSelectForUpdate メソッドによって指定されます。  
   
 ## <a name="see-also"></a>参照  
  [SQLServerDatabaseMetaData のメソッド](../../../connect/jdbc/reference/sqlserverdatabasemetadata-methods.md)   

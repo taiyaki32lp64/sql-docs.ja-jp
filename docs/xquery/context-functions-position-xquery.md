@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: f1bab9e4-1715-4c06-9cb0-06c7e0c9c97f
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: c7ec642a516d4ad2ac5a0f8d894351fc6670c117
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: de9f30c3c63030aa956366c222b7cbda94e2becb
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52540621"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68038982"
 ---
 # <a name="context-functions---position-xquery"></a>コンテキスト関数 - position (XQuery)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -36,13 +35,13 @@ fn:position() as xs:integer
 ```  
   
 ## <a name="remarks"></a>コメント  
- [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]、 **Fn:position()** をコンテキストに依存する述語のコンテキストでのみ使用できます。 具体的には、角かっこ ([ ]) 内でしか使用できません。この関数との比較を行っても、静的な型の推定中にカーディナリティが減少することはありません。  
+ [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]、 **Fn:position()** をコンテキストに依存する述語のコンテキストでのみ使用できます。 具体的にのみ使用できます角かっこ () 内で。この関数との比較は、カーディナリティは静的な型の推論中に縮小されません。  
   
 ## <a name="examples"></a>使用例  
  このトピックではさまざまなに格納されている XML インスタンスに対して XQuery の例について**xml**内の列を入力、[!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)]データベース。  
   
-### <a name="a-using-the-position-xquery-function-to-retrieve-the-first-two-product-features"></a>A. position() XQuery 関数を使用して、先頭 2 つの製品特徴を取得する  
- 次のクエリは、先頭 2 製品の機能、つまり <`Features`> 要素の最初から 2 つの子要素を製品モデル カタログの説明から取得します。 3 つ以上特徴がある場合は、<`there-is-more/`> 要素が結果に追加されます。  
+### <a name="a-using-the-position-xquery-function-to-retrieve-the-first-two-product-features"></a>A. Position() XQuery 関数を使用して、最初の 2 つの製品特徴を取得するには  
+ 次のクエリは、最初の 2 つの機能の最初の 2 つの子要素を取得します <`Features`> 要素は、製品モデル カタログの説明。 かどうかより多くの機能がある、追加、<`there-is-more/`> 要素が結果にします。  
   
 ```  
 SELECT CatalogDescription.query('  
@@ -72,7 +71,7 @@ WHERE CatalogDescription is not null
   
 -   クエリ本文が XML を構築します、\<製品 > を持つ要素**ProductModelID**と**ProductModelName**子要素として返される、製品の機能があり、します。  
   
--   **Position()** の位置を決定する、述語で使用される関数、\<機能 > 子要素のコンテキストでします。 最初または 2 番目の特徴の場合は、これが返されます。  
+-   **Position()** の位置を決定する、述語で使用される関数、\<機能 > 子要素のコンテキストでします。 最初または 2 つ目の機能場合が返されます。  
   
 -   IF ステートメントを追加、\<そこがより/> 製品カタログの複数の 2 つの機能がある場合、結果の要素。  
   
@@ -96,7 +95,7 @@ WHERE CatalogDescription is not null
 ...  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [xml データ型に対する XQuery 関数](../xquery/xquery-functions-against-the-xml-data-type.md)  
   
   

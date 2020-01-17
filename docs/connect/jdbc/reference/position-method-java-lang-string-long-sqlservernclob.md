@@ -10,18 +10,17 @@ ms.topic: conceptual
 ms.assetid: 46d4beec-831a-449f-98b6-322a80cc499a
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 6b74fa32c08115ea67cd75a33db6f917ad0bb1bd
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 4dd9e30039b0d5ef429b8e729ce36f7b085e5cfc
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47672580"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67976460"
 ---
 # <a name="position-method-javalangstring-long-sqlservernclob"></a>position (java.lang.String, long) メソッド (SQLServerNClob)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  文字位置を取得します。 指定された部分文字列*searchstr*に表示されます、 **NCLOB**これによって表される値**NClob**オブジェクト。  
+  この**NCLOB**オブジェクトによって表される**NCLOB**値に、指定した部分文字列*searchstr*がある文字位置を取得します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -34,7 +33,7 @@ public long position(java.lang.String searchstr,
 #### <a name="parameters"></a>パラメーター  
  *searchstr*  
   
- 検索する部分文字列。  
+ 検索対象の部分文字列。  
   
  *start*  
   
@@ -47,7 +46,7 @@ public long position(java.lang.String searchstr,
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- この位置のメソッドは、java.sql.NClob インターフェイス内の位置のメソッドによって指定されます。  
+ この位置メソッドは、NClob インターフェイスの position メソッドによって指定されます。  
   
 ## <a name="see-also"></a>参照  
  [position メソッド&#40;SQLServerNClob&#41;](../../../connect/jdbc/reference/position-method-sqlservernclob.md)   

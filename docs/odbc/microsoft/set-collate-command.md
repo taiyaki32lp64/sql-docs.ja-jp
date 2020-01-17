@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 00efbcd4-fea8-4061-86a5-82de413cb753
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 372d3b2df79d66084f5599b4ac098b8c273ee78a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 8a7701edd4c1902399f1d040ae9027365bdf04ac
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47801959"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67997745"
 ---
 # <a name="set-collate-command"></a>SET COLLATE コマンド
 後続のインデックス作成および並べ替え操作では、文字列フィールドの照合順序を指定します。  
@@ -74,5 +73,5 @@ SET COLLATE TO cSequenceName
   
  たとえば、[全般] に設定を部単位印刷設定でインデックスを作成し、部単位印刷設定設定がスペイン語に変更された後で、インデックスは一般的な照合順序を保持します。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [ODBC Visual FoxPro セットアップ ダイアログ ボックス](../../odbc/microsoft/odbc-visual-foxpro-setup-dialog-box.md)

@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: b0478836-4123-4357-969a-c5784fc28be5
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 3b93ee4ab5b57414d8c8d640bc12a5ebbff882c6
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 96307c0106a99ae1b95d58d9ec08cf2732863eb5
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52530390"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67911692"
 ---
 # <a name="ado-glossary"></a>ADO の用語集
 このトピックでは、ADO に関連する用語を定義します。  
@@ -50,7 +49,7 @@ ms.locfileid: "52530390"
  テーブル内のフィールドと変数のマッピングです。 Visual C の ADO 拡張機能で**Recordset**フィールドは、C と C++ の変数にマップされます。  
   
  ビットマスク  
- 数値の値を他の数値と比較値のビットで通常に対象パラメーターまたは戻り値のオプション フラグを設定します。 この比較がなどのビットごとの論理演算子と行われ、通常は**と**と**または**Visual basic で**&** と **&#124;** C++ でします。  
+ 数値の値を他の数値と比較値のビットで通常に対象パラメーターまたは戻り値のオプション フラグを設定します。 この比較がなどのビットごとの論理演算子と行われ、通常は**と**と**または**Visual basic で **&** と **&#124;** C++ でします。  
   
  たとえば、ADO **FieldAttributeEnum**値は、フィールドの属性を決定するビットマスクとして使用できます。 フィールドが更新可能なかどうかを確認したいとします。 Visual Basic では、次の式では、このテストできます。`Field.Attributes AND adFldUpdatable`  
   
@@ -160,7 +159,7 @@ ms.locfileid: "52530390"
  データ プロバイダーまたはカーソル サービスに固有のプロパティ。 **プロパティ**オブジェクトのコレクションが自動的に入力されます (「動的」)。 特定のデータ プロバイダーを介してデータ ソースに接続されるまでオブジェクトの動的プロパティがありません。 参照データ プロバイダー、カーソル。  
   
 ## <a name="e"></a>E  
- 列挙型  
+ 列挙値  
  名前付き定数のリスト。 列挙値は一意でない必要があります。 ただし各値の名前は、列挙が定義されているスコープ内で一意である必要があります。 ADO では、列挙型は数値パラメーターは使用され、ADO のコードに意味を追加して、開発者が数値 (これは、バージョンを変更することがあります) をシールドする値を返します。 たとえば、静的なを開く**レコード セット**を使用して、 **adOpenStatic**列挙値。 `Recordset.Open ,,adOpenStatic`  
   
  呼ば*列挙型定数*します。 参照してください*定数*します。  

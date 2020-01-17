@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: analysis-services
 ms.topic: reference
 helpviewer_keywords:
 - objects [XML for Analysis]
@@ -20,12 +18,12 @@ ms.assetid: a2080867-e130-440c-92eb-f768869f34a8
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 3d4249f12e062659778eb9bcf3ce562f92465f01
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 3dcc6eedc97b3d476d79420b4e067883e17f03d2
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53354063"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62702299"
 ---
 # <a name="creating-and-altering-objects-xmla"></a>オブジェクトの作成と変更 (XMLA)
   主要なオブジェクトは、個別に作成、変更、削除することができます。 主要なオブジェクトには以下のオブジェクトが含まれます。  

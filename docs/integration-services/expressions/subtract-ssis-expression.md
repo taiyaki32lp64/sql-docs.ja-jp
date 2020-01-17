@@ -11,17 +11,20 @@ helpviewer_keywords:
 - '- (subtract)'
 - subtract operator (-)
 ms.assetid: b48da086-37dd-460a-8a4b-912f52c9b158
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: e544a284cca78a48835af719fe881a995ee87580
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: e26df3ba35f81fb386cd208e8df207360510254c
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52506121"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71297380"
 ---
 # <a name="--subtract-ssis-expression"></a>- (減算) (SSIS 式)
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   最初の数値式から 2 番目の数値式を減算します。  
   
 ## <a name="syntax"></a>構文  

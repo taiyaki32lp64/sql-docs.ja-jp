@@ -15,15 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - ORIGINAL_DB_NAME function
 ms.assetid: 7dadc40a-1287-4f31-8487-434ee477144d
-author: MashaMSFT
-ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 8782f07e774d48c371a558fa6626ef09e372ab30
-ms.sourcegitcommit: 032273bfbc240fe22ac6c1f6601a14a6d99573f7
+author: VanMSFT
+ms.author: vanto
+ms.openlocfilehash: dba855440971ba74ce15fb108e1ac88ebeb1cd24
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/01/2019
-ms.locfileid: "55513782"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67914573"
 ---
 # <a name="originaldbname-transact-sql"></a>ORIGINAL_DB_NAME (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

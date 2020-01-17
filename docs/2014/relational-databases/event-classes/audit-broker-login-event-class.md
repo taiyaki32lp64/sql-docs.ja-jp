@@ -15,11 +15,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: de23ecd1201d7ce0e24638cf9e64c63cb782face
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52814834"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62912108"
 ---
 # <a name="audit-broker-login-event-class"></a>Audit Broker Login イベント クラス
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] は **Audit Broker Login** イベントを作成して、Service Broker トランスポートのセキュリティに関する監査メッセージを報告します。  

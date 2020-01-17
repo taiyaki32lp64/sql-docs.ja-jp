@@ -12,15 +12,14 @@ helpviewer_keywords:
 - Web browsers [SQL Server Management Studio]
 - integrated Web browsers [SQL Server Management Studio]
 ms.assetid: 493dd3d0-50c6-4d8d-aba1-cd7c3030a581
-author: stevestein
-ms.author: sstein
-manager: craigg
-ms.openlocfilehash: f3d9d187f35cf69d23c210151c857e122114b36e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 58ee4e47485a0e224d68e0f5161999b8dd9d7898
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47595050"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68267094"
 ---
 # <a name="sql-server-management-studio-web-browser"></a>SQL Server Management Studio の Web ブラウザー
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

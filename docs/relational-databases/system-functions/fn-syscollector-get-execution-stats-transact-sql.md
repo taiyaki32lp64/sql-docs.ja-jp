@@ -17,15 +17,14 @@ helpviewer_keywords:
 ms.assetid: 793ad72c-a992-4a8d-8584-bcb6b3b476f1
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 91227f3f5d1ef6238b18064b4c978d238f85e4b2
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 71a070de7c74d353be395628566c0bd3f63fd99a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47811210"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68042744"
 ---
-# <a name="fnsyscollectorgetexecutionstats-transact-sql"></a>fn_syscollector_get_execution_stats (Transact-SQL)
+# <a name="fnsyscollectorgetexecutionstats-transact-sql"></a>fn_syscollector_get_execution_stats (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
   コレクション セットまたはパッケージに関する詳細な統計 (パッケージのデータ フロー タスクによってログ記録されたエラー行の数を含む) を返します。 データ フロー タスクは、[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]データを処理するコンポーネントです。 このデータはリレーショナル形式のため、行で構成される入力データセットと出力データセットが含まれます。  
@@ -49,20 +48,20 @@ fn_syscollector_get_execution_stats ( log_id )
   
 |列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
-|avg_row_count_in|**int**|パッケージのデータ フロー タスクが開始された行の平均数です。<br /><br /> 注: データ フロー タスクは、[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]データを処理するコンポーネントです。 このデータはリレーショナル形式のため、行で構成される入力データセットが含まれます。 これはタスクに入力された行数です。 このデータは、変換されてから、行で構成される結果セットとして出力されます。 データ フロー タスクでは、データを変換して行で構成される結果セットを出力します。 この出力はタスクが終了した行数です。|  
-|min_row_count_in|**int**|パッケージのデータ フロー タスクが開始された行の最小数です。|  
-|max_row_count_in|**int**|パッケージのデータ フロー タスクが開始された行の最大数です。|  
+|avg_row_count_in|**int**|パッケージのデータ フロー タスクが開始された行の平均数です。<br /><br /> 注:データ フロー タスクは、[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]データを処理するコンポーネントです。 このデータはリレーショナル形式では行で構成される入力データセットがあるためです。 これは、タスクに入力された行の数です。 データを変換すると後の結果セットとして行で構成される出力になります。 データ フロー タスクでは、データを変換して行で構成される結果セットを出力します。 この出力はタスクが終了した行数です。|  
+|min_row_count_in|**int**|データを入力した行の最小数は、パッケージのタスクをフローします。|  
+|max_row_count_in|**int**|データを入力した行の最大数は、パッケージのタスクをフローします。|  
 |avg_row_count_out|**int**|パッケージのデータ フロー タスクが終了した行の平均数です。|  
-|min_row_count_out|**int**|パッケージのデータ フロー タスクが終了した行の最小数です。|  
-|max_row_count_out|**int**|パッケージのデータ フロー タスクが終了した行の最大数です。|  
-|avg_duration|**int**|パッケージのデータ フロー コンポーネントに費やされた時間の平均値です (ミリ秒)。|  
-|min_duration|**int**|パッケージのデータ フロー コンポーネントに費やされた時間の最小値です (ミリ秒)。|  
-|max_duration|**int**|パッケージのデータ フロー コンポーネントに費やされた時間の最大値です (ミリ秒)。|  
+|min_row_count_out|**int**|データが終了した行の最小数は、パッケージのタスクをフローします。|  
+|max_row_count_out|**int**|データが終了した行の最大数は、パッケージのタスクをフローします。|  
+|avg_duration|**int**|パッケージのデータ フロー コンポーネントに要した平均時間は、(ミリ秒単位)。|  
+|min_duration|**int**|パッケージのデータ フロー コンポーネントに費やされたミリ秒単位の最小時間。|  
+|max_duration|**int**|パッケージのデータ フロー コンポーネントに費やされたミリ秒単位の最大時間。|  
   
 ## <a name="permissions"></a>アクセス許可  
  SELECT 権限が必要**dc_operator**します。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [syscollector_execution_stats &#40;TRANSACT-SQL&#41;](../../relational-databases/system-catalog-views/syscollector-execution-stats-transact-sql.md)   
  [[データ コレクション]](../../relational-databases/data-collection/data-collection.md)  
   

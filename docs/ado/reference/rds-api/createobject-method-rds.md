@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: dec96be6-0b31-4953-9c9a-e962b5afcd18
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: d220a9abc0e2dc72d7ab65306b514a9925b4fc43
-ms.sourcegitcommit: 480961f14405dc0b096aa8009855dc5a2964f177
+ms.openlocfilehash: c6b50714cdff536418e759828d972c16abd7d7a0
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/22/2019
-ms.locfileid: "54419927"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67964543"
 ---
 # <a name="createobject-method-rds"></a>CreateObject メソッド (RDS)
 対象のビジネス オブジェクトのプロキシを作成し、ポインターを返します。 サーバー側のスタブ、インターネット経由で要求とデータを送信するビジネス オブジェクトとの通信をプロキシ パッケージとマーシャ リング データ。 インプロセス コンポーネントのオブジェクトのプロキシは使用されず、オブジェクトへのポインターのみが提供されます。  
@@ -30,12 +29,12 @@ ms.locfileid: "54419927"
 ## <a name="syntax"></a>構文  
  リモート データ サービスには、次のプロトコルがサポートされています。HTTP、HTTPS (HTTP over Secure Socket Layer)、DCOM、およびプロセスにします。  
   
-|[プロトコル]|構文|  
+|プロトコル|構文|  
 |--------------|------------|  
-|HTTP|Set object = DataSpace.CreateObject("ProgId", "https\://awebsrvr")|  
-|HTTPS|Set object = DataSpace.CreateObject("ProgId", "https\://awebsrvr")|  
+|HTTP|Set オブジェクト = DataSpace.CreateObject ("ProgId"、"https\://awebsrvr")|  
+|HTTPS|Set オブジェクト = DataSpace.CreateObject ("ProgId"、"https\://awebsrvr")|  
 |DCOM|Set オブジェクト DataSpace.CreateObject ("ProgId"、"computername") を =|  
-|インプロセス|Set object = DataSpace.CreateObject("ProgId", "")|  
+|インプロセス|Set オブジェクト = DataSpace.CreateObject ("ProgId"、"")|  
   
 ## <a name="parameters"></a>パラメーター  
  *Object*  
@@ -56,7 +55,7 @@ ms.locfileid: "54419927"
 ## <a name="applies-to"></a>適用対象  
  [DataSpace オブジェクト (RDS)](../../../ado/reference/rds-api/dataspace-object-rds.md)  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [DataFactory オブジェクト、クエリ メソッドをおよび CreateObject メソッドの例 (VBScript)](../../../ado/reference/rds-api/datafactory-object-query-method-and-createobject-method-example-vbscript.md)   
  [DataSpace オブジェクトおよび CreateObject メソッドの例 (VBScript)](../../../ado/reference/rds-api/dataspace-object-and-createobject-method-example-vbscript.md)   
  [CreateRecordset メソッド (RDS)](../../../ado/reference/rds-api/createrecordset-method-rds.md)

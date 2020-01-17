@@ -13,11 +13,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 805d500f33c661756d211f081254608eb389f298
-ms.sourcegitcommit: 40c3b86793d91531a919f598dd312f7e572171ec
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53328532"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62470019"
 ---
 # <a name="customize-commands-page"></a>[カスタマイズ] ([コマンド] ページ)
   このダイアログ ボックスでは、ツール バーおよびメニューのコマンドを追加したり、削除したりできます。また、ツール バー ボタンやメニュー コマンドに使用されているイメージを変更できます。 **[コマンド]** ページにアクセスするには、 **[ツール]** メニューの **[カスタマイズ]** をクリックし、次に **[コマンド]** をクリックします。  

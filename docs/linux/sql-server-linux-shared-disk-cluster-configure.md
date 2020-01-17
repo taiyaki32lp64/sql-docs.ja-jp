@@ -1,71 +1,71 @@
 ---
-title: SQL Server Linux (RHEL) でのフェールオーバー クラスター インスタンスの構成 |Microsoft Docs
-description: ''
+title: FCI の構成 - SQL Server on Linux (RHEL)
+description: SQL Server 用の Red Hat Enterprise Linux (RHEL) でフェールオーバー クラスター インスタンス (FCI) を構成する方法について説明します。
+ms.custom: seo-lt-2019
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
+ms.reviewer: vanto
 ms.date: 08/28/2017
 ms.topic: conceptual
 ms.prod: sql
-ms.custom: sql-linux
 ms.technology: linux
 ms.assetid: 31c8c92e-12fe-4728-9b95-4bc028250d85
-ms.openlocfilehash: adfd7ad72fcc9f9e3e619c7798d68c536e4370e4
-ms.sourcegitcommit: 1e28f923cda9436a4395a405ebda5149202f8204
-ms.translationtype: MT
+ms.openlocfilehash: 61fe5d7ffb5dfc6ec98f6d5350eff396deaa0312
+ms.sourcegitcommit: 035ad9197cb9799852ed705432740ad52e0a256d
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/25/2019
-ms.locfileid: "55044538"
+ms.lasthandoff: 12/31/2019
+ms.locfileid: "75558327"
 ---
-# <a name="configure-failover-cluster-instance---sql-server-on-linux-rhel"></a>SQL Server Linux (RHEL) でのフェールオーバー クラスター インスタンスを構成します。
+# <a name="configure-failover-cluster-instance---sql-server-on-linux-rhel"></a>フェールオーバー クラスター インスタンスの構成 - SQL Server on Linux (RHEL)
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
-SQL Server の 2 つのノードの共有ディスク フェールオーバー クラスターのインスタンスは、高可用性のためのサーバー レベルの冗長性を提供します。 このチュートリアルでは、Linux 上の SQL Server の 2 ノード フェールオーバー クラスター インスタンスを作成する方法について説明します。 完了が特定の手順は次のとおりです。
+SQL Server の 2 ノード共有ディスクによるフェールオーバー クラスター インスタンスによって、高可用性のためのサーバーレベルの冗長性が提供されます。 このチュートリアルでは、SQL Server on Linux の 2 ノード フェールオーバー クラスター インスタンスを作成する方法について説明します。 実行する具体的な手順は次のとおりです。
 
 > [!div class="checklist"]
-> * 設定および Linux を構成します。
-> * インストールして SQL Server の構成
-> * ホスト ファイルを構成します。
-> * 共有記憶域を構成し、データベース ファイルの移動
-> * 各クラスター ノードでPacemakerインストールして構成する
-> * フェールオーバー クラスター インスタンスを構成します。
+> * Linux を設定および構成する
+> * SQL Server をインストールして構成する
+> * hosts ファイルを構成する
+> * 共有ストレージを構成してデータベース ファイルを移動する
+> * 各クラスター ノードに Pacemaker をインストールして構成する
+> * フェールオーバー クラスター インスタンスを構成する
 
-この記事では、SQL Server の 2 つのノードの共有ディスク フェールオーバー クラスター インスタンス (FCI) を作成する方法について説明します。 この記事には Red Hat Enterprise Linux (RHEL) の手順とスクリプトの例が含まれています。 Ubuntu ディストリビューションは、スクリプトの例は、通常されます RHEL のような Ubuntu でも機能します。 
+この記事では、SQL Server の 2 ノード共有ディスクによるフェールオーバー クラスター インスタンス (FCI) を作成する方法について説明します。 この記事には、Red Hat Enterprise Linux (RHEL) 用の手順とスクリプト例が記載されています。 Ubuntu ディストリビューションは RHEL と似ているため、通常、このスクリプト例は Ubuntu 上でも動作します。 
 
-概念については、次を参照してください。 [SQL Server フェールオーバー クラスター インスタンス (FCI) で Linux](sql-server-linux-shared-disk-cluster-concepts.md)します。
+概念については、[Linux での SQL Server フェールオーバー クラスター インスタンス (FCI)](sql-server-linux-shared-disk-cluster-concepts.md) に関する記事をご覧ください。
 
 ## <a name="prerequisites"></a>前提条件
 
-次のエンド ツー エンド シナリオを完了するには、2 つのマシンが 2 つのノード クラスターと記憶域を別のサーバーを展開する必要があります。 以下の手順には、これらのサーバーを構成する方法を説明します。
+以下のエンドツーエンドのシナリオを完了するには、2 ノードのクラスターとストレージ用の別のサーバーを配置するために、2 台のコンピューターが必要です。 以下の手順では、これらのサーバーの構成方法を説明します。
 
-## <a name="set-up-and-configure-linux"></a>設定および Linux を構成します。
+## <a name="set-up-and-configure-linux"></a>Linux を設定および構成する
 
-最初の手順では、クラスター ノードで、オペレーティング システムを構成します。 クラスター内の各ノードでは、linux ディストリビューションを構成します。 両方のノードで、同じディストリビューションとバージョンを使用します。 いずれかまたは次のディストリビューションの他のいずれかを使用します。
+最初の手順は、クラスター ノード上のオペレーティング システムを構成することです。 クラスター内の各ノード上で、linux ディストリビューションを構成します。 両方のノードで同じディストリビューションとバージョンを使用します。 次のディストリビューションのどちらか一方だけを使用します。
     
-* RHEL HA アドオンの有効なサブスクリプション
+* HA アドオン用の有効なサブスクリプションを備えた RHEL
 
-## <a name="install-and-configure-sql-server"></a>インストールして SQL Server の構成
+## <a name="install-and-configure-sql-server"></a>SQL Server をインストールして構成する
 
-1. インストールし、両方のノードで、SQL Server を設定します。  詳細については、次を参照してください。 [Linux 上の SQL Server のインストール](sql-server-linux-setup.md)します。
-1. 構成のために、1つのノードをプライマリとして指定し、もう片方をセカンダリとして指定します。 このガイドでは、これ以降これらの用語を使用します。  
-1. セカンダリ ノードでSQL Server を停止し無効にします。
-    次の例では、SQL Server を停止して無効にします。 
+1. 両方のノードに SQL Server をインストールして設定します。  詳細については、[SQL Server on Linux のインストール](sql-server-linux-setup.md)に関するページを参照してください。
+1. 構成目的の場合は、1 つのノードをプライマリ、もう 1 つをセカンダリとして指定します。 このガイドでは、以降でこれらの用語を使用します。  
+1. セカンダリ ノードで SQL Server を停止して無効にします。
+    次の例では、SQL Server を停止して無効にしています。 
     ```bash
     sudo systemctl stop mssql-server
     sudo systemctl disable mssql-server
     ```
 
     > [!NOTE] 
-    > サーバーのマスター _ キーの SQL Server インスタンスの生成し、に配置に時間を設定するには、`var/opt/mssql/secrets/machine-key`します。 Linux では、SQL Server は、常に mssql と呼ばれるローカル アカウントとして実行されます。 ローカル アカウントであるために、その id は、ノード間で共有されません。 したがって、各ローカル mssql アカウント がサーバー マスター  キーの暗号化を解除するためにアクセスできるようにするために、各セカンダリ ノードにプライマリ ノードから暗号化キーをコピーする必要があります。 
+    > 設定時に、SQL Server インスタンスのサーバー マスター キーが生成され、`var/opt/mssql/secrets/machine-key` に配置されます。 Linux では、SQL Server は常に mssql というローカル アカウントとして実行されます。 ローカル アカウントであるため、その ID はノード間で共有されません。 したがって、プライマリ ノードから各セカンダリ ノードに暗号化キーをコピーして、サーバー マスター キーの暗号化を解除するために各ローカル mssql アカウントがそれにアクセスできるようにする必要があります。 
 
-1.  プライマリ ノードで、Pacemaker 用 SQL server ログインを作成および実行する権限をログイン`sp_server_diagnostics`します。 Pacemaker は、このアカウントを使用して、ノードは、SQL Server を実行していることを確認します。 
+1.  プライマリ ノードで、Pacemaker の SQL Server ログインを作成し、`sp_server_diagnostics` を実行するためにログイン権限を付与します。 Pacemaker は、このアカウントを使用して、SQL Server が実行されているノードを確認します。 
 
     ```bash
     sudo systemctl start mssql-server
     ```
    
-   SQL Server の`master`データベースに sa アカウントを使用して接続し、次のスクリプトを実行します。
+   sa アカウントを使用して SQL Server `master` データベースに接続し、次のように実行します。
 
    ```sql
    USE [master]
@@ -74,26 +74,26 @@ SQL Server の 2 つのノードの共有ディスク フェールオーバー �
    ALTER SERVER ROLE [sysadmin] ADD MEMBER [<loginName>]
    ```
 
-   このスクリプトの代わりに、より細かなレベルでアクセス許可を設定することもできます。 Pacemaker のログインが必要です`VIEW SERVER STATE`sp_server_diagnostics の正常性状態をクエリする`setupadmin`と`ALTER ANY LINKED SERVER`sp_dropserver sp_addserver を実行して、リソース名を持つ FCI インスタンスの名前を更新します。 
+   または、より細かなレベルでアクセス許可を設定することもできます。 Pacemaker ログインでは、sp_server_diagnostics で正常性状態を照会するための `VIEW SERVER STATE` と、sp_dropserver と sp_addserver を実行することで FCI インスタンス名をリソース名で更新するための `setupadmin` と `ALTER ANY LINKED SERVER` が必要です。 
 
-1. プライマリ ノードで、SQL Server を停止し無効にします。 
+1. プライマリ ノードで SQL Server を停止して無効にします。 
 
-## <a name="configure-the-hosts-file"></a>ホスト ファイルを構成します。
+## <a name="configure-the-hosts-file"></a>hosts ファイルを構成する
 
-各クラスター ノードでは、hosts ファイルを構成します。 Hosts ファイルには、すべてのクラスター ノードの名前と IP アドレスを含める必要があります。
+各クラスター ノード上で hosts ファイルを構成します。 hosts ファイルには、すべてのクラスター ノードの IP アドレスと名前が含まれている必要があります。
 
-1. 各ノードの IP アドレスを確認します。 次のスクリプトでは、現在のノードの IP アドレスを示します。 
+1. 各ノードの IP アドレスを確認します。 次のスクリプトを実行すると、現在のノードの IP アドレスが表示されます。 
 
     ```bash
     sudo ip addr show
     ```
 
-1. 各ノードで、コンピューター名を設定します。 各ノードに 15 文字以下の一意の名前を指定します。 そのコンピューター名を`/etc/hosts`に追加することにより設定します。 次のスクリプトを使うと、`vi` で `/etc/hosts` を編集できます。 
+1. 各ノードのコンピューター名を設定します。 各ノードに 15 文字以下の一意の名前を指定します。 コンピューター名は `/etc/hosts` に追加することで設定します。 次のスクリプトを使うと、`vi` で `/etc/hosts` を編集できます。 
 
    ```bash
    sudo vi /etc/hosts
    ```
-   次の`/etc/hosts`の例は`sqlfcivm1`と`sqlfcivm2`という名前の 2 つのノードの追加します。
+   次の例では、`sqlfcivm1` および `sqlfcivm2` という名前の 2 つのノードが追加された `/etc/hosts` を示します。
 
    ```bash
    127.0.0.1   localhost localhost4 localhost4.localdomain4
@@ -102,17 +102,17 @@ SQL Server の 2 つのノードの共有ディスク フェールオーバー �
    10.128.16.77 sqlfcivm2
    ```
 
-## <a name="configure-storage--move-database-files"></a>記憶域を構成するし、データベース ファイルの移動  
+## <a name="configure-storage--move-database-files"></a>ストレージの構成とデータベース ファイルの移動  
 
-両方のノードにアクセスできる記憶域を提供する必要があります。 ISCSI、NFS、または SMB を使用することができます。 記憶域の構成や、記憶域クラスターのノードに提供する新しい記憶域にデータベース ファイルを移動します。 次の記事では、記憶域の種類ごとの手順について説明します。
+両方のノードがアクセスできるストレージを用意する必要があります。 iSCSI、NFS、または SMB を使用できます。 ストレージを構成し、そのストレージをクラスター ノード用に指定した後、データベース ファイルをその新しいストレージに移動します。 次の記事では、ストレージの種類ごとの手順について説明します。
 
-- [フェールオーバー クラスター インスタンスの iSCSI - SQL Server on Linux を構成します。](sql-server-linux-shared-disk-cluster-configure-iscsi.md)
-- [NFS - SQL Server on Linux を構成するには、フェールオーバー クラスター インスタンス。](sql-server-linux-shared-disk-cluster-configure-nfs.md)
-- [フェールオーバー クラスター インスタンス - SMB - SQL Server on Linux の構成します。](sql-server-linux-shared-disk-cluster-configure-smb.md)
+- [フェールオーバー クラスター インスタンスの構成 - iSCSI - SQL Server on Linux](sql-server-linux-shared-disk-cluster-configure-iscsi.md)
+- [フェールオーバー クラスター インスタンスの構成 - NFS - SQL Server on Linux](sql-server-linux-shared-disk-cluster-configure-nfs.md)
+- [フェールオーバー クラスター インスタンスの構成 - SMB - SQL Server on Linux](sql-server-linux-shared-disk-cluster-configure-smb.md)
 
-## <a name="install-and-configure-pacemaker-on-each-cluster-node"></a>各クラスター ノードでPacemakerインストールして構成する
+## <a name="install-and-configure-pacemaker-on-each-cluster-node"></a>各クラスター ノードに Pacemaker をインストールして構成する
 
-1. 両方のクラスター ノードで、Pacemaker がログインするための SQL Server のユーザー名とパスワードを格納するファイルを作成します。 
+1. 両方のクラスター ノードで、Pacemaker にログインするための SQL Server のユーザー名とパスワードを格納するファイルを作成します。 
 
     次のコマンドは、このファイルを作成および設定します。
 
@@ -131,10 +131,10 @@ SQL Server の 2 つのノードの共有ディスク フェールオーバー �
    sudo firewall-cmd --reload
    ```
 
-   > 組み込みの高可用性構成がない別のファイアウォールを使用している場合、次のポートが、クラスター内の他のノードと通信できる Pacemaker 用に開かれる必要があります。
+   > 組み込みの高可用性構成が備わっていない別のファイアウォールを使用する場合は、Pacemaker 用に次のポートを開き、クラスター内の他のノードと通信できるようにする必要があります
    >
-   > * [TCP]: ポート、2224 3121、21064
-   > * UDP:ポート 5405
+   > * TCP: ポート 2224、3121、21064
+   > * UDP: ポート 5405
 
 1. 各ノードに Pacemaker パッケージをインストールします。
 
@@ -160,17 +160,17 @@ SQL Server の 2 つのノードの共有ディスク フェールオーバー �
    sudo yum install mssql-server-ha
    ```
 
-## <a name="configure-the-failover-cluster-instance"></a>フェールオーバー クラスター インスタンスを構成します。
+## <a name="configure-the-failover-cluster-instance"></a>フェールオーバー クラスター インスタンスを構成する
 
-FCI は、リソース グループに作成されます。 これは、機能は、リソース グループの制約の必要性を軽減するため、もう少し簡単です。 ただし、開始する必要がありますの順序でリソース グループにリソースを追加します。 開始する必要があります、順序は次のとおりです。 
+FCI はリソース グループ内に作成されます。 リソース グループによって制約の必要性が軽減されるため、この方が少し簡単になります。 ただし、リソースは、起動させる順番でリソース グループに追加する必要があります。 起動させる順番は次のとおりです。 
 
 1. ストレージ リソース
 2. ネットワーク リソース
-3. アプリケーションのリソース
+3. アプリケーション リソース
 
-この例では、NewLinFCIGrp グループで FCI を作成します。 リソース グループの名前は、Pacemaker で作成したリソースから一意である必要があります。
+この例では、グループ NewLinFCIGrp 内に FCI を作成します。 リソース グループの名前は、Pacemaker で作成されるすべてのリソースに対して一意である必要があります。
 
-1.  ディスク リソースを作成します。 応答が返されますしない問題がない場合。 ディスク リソースを作成する方法は、ストレージの種類によって異なります。 各ストレージの種類の例を次に示します。 クラスター化された記憶域の記憶域の種類に適用する例を使用します。
+1.  ディスク リソースを作成します。 問題がなければ、応答は返されません。 ディスク リソースを作成する方法は、ストレージの種類によって異なります。 ストレージの種類ごとの例を以下に示します。 ご自分のクラスター記憶域のストレージの種類に適用される例をお使いください。
 
     **iSCSI**
 
@@ -178,15 +178,15 @@ FCI は、リソース グループに作成されます。 これは、機能�
     sudo pcs resource create <iSCSIDiskResourceName> Filesystem device="/dev/<VolumeGroupName>/<LogicalVolumeName>" directory="<FolderToMountiSCSIDisk>" fstype="<FileSystemType>" --group RGName
     ```
 
-    \<iSCSIDIskResourceName > iSCSI ディスクに関連付けられているリソースの名前を指定します
+    \<iSCSIDIskResourceName> は、iSCSI ディスクに関連付けられるリソースの名前です
 
-    \<VolumeGroupName > ボリューム グループの名前を指定します  
+    \<VolumeGroupName> はボリューム グループの名前です  
 
-    \<LogicalVolumeName > が作成された論理ボリュームの名前を指定します  
+    \<LogicalVolumeName> は、作成された論理ボリュームの名前です  
 
-    \<FolderToMountiSCSIDIsk > は、ディスクをマウントするフォルダーです (システム データベースと既定の場所は、なります/var/opt/mssql/data)
+    \<FolderToMountiSCSIDIsk> はディスクをマウントするフォルダーです (システム データベースと既定の場所の場合は、/var/opt/mssql/data になります)
 
-    \<FileSystemType > によって処理された書式設定方法と、どのような配布をサポートしています EXT4 または XFS があります。 
+    \<FileSystemType> は EXT4 または XFS になります。これは、書式設定を行う方法と、ディストリビューションが何をサポートするかによって異なります。 
 
     **NFS**
 
@@ -195,15 +195,15 @@ FCI は、リソース グループに作成されます。 これは、機能�
     mount -t nfs4 IPAddressOfNFSServer:FolderOnNFSServer /var/opt/mssql/data -o 
     ```
 
-    \<NFSDIskResourceName > NFS 共有に関連付けられたリソースの名前を指定します
+    \<NFSDIskResourceName> は、NFS 共有に関連付けられるリソースの名前です
 
-    \<IPAddressOfNFSServer > を使用している NFS サーバーの IP アドレスです
+    \<IPAddressOfNFSServer> は、使用する NFS サーバーの IP アドレスです
 
-    \<FolderOnNFSServer >、NFS 共有の名前を指定します
+    \<FolderOnNFSServer> は、NFS 共有の名前です
 
-    \<FolderToMountNFSShare > は、ディスクをマウントするフォルダーです (システム データベースと既定の場所は、なります/var/opt/mssql/data)
+    \<FolderToMountNFSShare> はディスクをマウントするフォルダーです (システム データベースと既定の場所の場合は、/var/opt/mssql/data になります)
 
-    例を次に示します。
+    次に 1 つの例を示します。
 
     ```bash
     mount -t nfs4 200.201.202.63:/var/nfs/fci1 /var/opt/mssql/data -o nfsvers=4.2,timeo=14,intr
@@ -215,61 +215,61 @@ FCI は、リソース グループに作成されます。 これは、機能�
     sudo pcs resource create SMBDiskResourceName Filesystem device="//<ServerName>/<ShareName>" directory="<FolderName>" fstype=cifs options="vers=3.0,username=<UserName>,password=<Password>,domain=<ADDomain>,uid=<mssqlUID>,gid=<mssqlGID>,file_mode=0777,dir_mode=0777" --group <RGName>
     ```
 
-    \<ServerName > は SMB 共有を使用したサーバーの名前です
+    \<ServerName> は、SMB 共有を使用するサーバーの名前です
 
-    \<共有名 > は、共有の名前です
+    \<ShareName> は共有の名前です
 
-    \<フォルダー名 > は、最後の手順で作成したフォルダーの名前です
+    \<FolderName> は、最後の手順で作成したフォルダーの名前です
     
-    \<ユーザー名 > の共有にアクセスするユーザーの名前を指定します
+    \<UserName> は、共有にアクセスするユーザーの名前です
 
-    \<パスワード > は、ユーザーのパスワード
+    \<Password> はユーザーのパスワードです
 
-    \<ADDomain > (該当する場合、Windows Server ベースの SMB 共有を使用する場合)、AD DS ドメインは、
+    \<ADDomain> は AD DS ドメインです (Windows Server ベースの SMB 共有を使用する場合に適用します)
 
-    \<mssqlUID > mssql ユーザーの UID は、
+    \<mssqlUID> は mssql ユーザーの UID です
 
-    \<mssqlGID > mssql ユーザーの GID は、
+    \<mssqlGID> は mssql ユーザーの GID です
 
-    \<RGName > リソース グループの名前を指定します
+    \<RGName> はリソース グループの名前です
  
-2.  FCI によって使用される IP アドレスを作成します。 応答が返されますしない問題がない場合。
+2.  FCI によって使用される IP アドレスを作成します。 問題がなければ、応答は返されません。
 
     ```bash
     sudo pcs resource create <IPResourceName> ocf:heartbeat:IPaddr2 ip=<IPAddress> nic=<NetworkCard> cidr_netmask=<NetMask> --group <RGName>
     ```
 
-    \<IPResourceName > IP アドレスに関連付けられたリソースの名前を指定します
+    \<IPResourceName> は、IP アドレスに関連付けられるリソースの名前です
 
-    \<Ip アドレス > は、FCI の IP アドレス
+    \<IPAddress> は FCI の IP アドレスです
 
-    \<NetworkCard > (つまり eth0) サブネットに関連付けられているネットワーク カードには
+    \<NetworkCard> はサブネットに関連付けられているネットワーク カードです (つまり eth0)
 
-    \<ネットマスク > サブネット (つまり 24) のネットマスクは、
+    \<NetMask> はサブネットのネットマスクです (つまり 24)
 
-    \<RGName > リソース グループの名前を指定します
+    \<RGName> はリソース グループの名前です
  
-3.  FCI のリソースを作成します。 応答が返されますしない問題がない場合。
+3.  FCI リソースを作成します。 問題がなければ、応答は返されません。
 
     ```bash
     sudo pcs resource create FCIResourceName ocf:mssql:fci op defaults timeout=60s --group RGName
     ```
 
-    \<FCIResourceName > だけでなく、リソースの名前が、FCI に関連付けられているフレンドリ名。 これは、どのようなユーザーとアプリケーションが接続に使用します。 
+    \<FCIResourceName> は、リソースの名前であるだけでなく、FCI に関連付けられるフレンドリ名でもあります。 ユーザーとアプリケーションはこれを使って接続を行います。 
 
-    \<RGName > リソース グループの名前を指定します。
+    \<RGName> はリソース グループの名前です。
  
-4.  コマンドを実行`sudo pcs resource`します。 FCI は、オンラインにする必要があります。
+4.  コマンド `sudo pcs resource` を実行します。 FCI はオンラインである必要があります。
  
-5.  SSMS または FCI の DNS/リソース名を使用して sqlcmd で FCI に接続します。
+5.  FCI の DNS/リソース名を使用して、SSMS または sqlcmd で FCI に接続します。
 
-6.  ステートメントを発行`SELECT @@SERVERNAME`します。 FCI の名前が返されます。
+6.  ステートメント `SELECT @@SERVERNAME` を発行します。 FCI の名前が返されます。
 
-7.  ステートメントを発行`SELECT SERVERPROPERTY('ComputerNamePhysicalNetBIOS')`します。 FCI がで実行されているノードの名前が返されます。
+7.  ステートメント `SELECT SERVERPROPERTY('ComputerNamePhysicalNetBIOS')` を発行します。 FCI が実行されているノードの名前が返されます。
 
-8.  その他のノードに FCI を手動で失敗します。 」の手順を参照してください。 [Operate フェールオーバー クラスター インスタンス - SQL Server on Linux](sql-server-linux-shared-disk-cluster-operate.md)します。
+8.  FCI を、他のノードに手動でフェールオーバーします。 「[フェールオーバー クラスター インスタンスの操作 - SQL Server on Linux](sql-server-linux-shared-disk-cluster-operate.md)」に記載されている手順をご覧ください。
 
-9.  最後に、FCI を元のノードが失敗して、コロケーションの制約を削除します。
+9.  最後に、FCI を元のノードにフェールバックし、コロケーション制約を削除します。
 
 <!---
 
@@ -281,18 +281,18 @@ FCI は、リソース グループに作成されます。 これは、機能�
 -->
 ## <a name="summary"></a>まとめ
 
-このチュートリアルでは、次のタスクを完了します。
+このチュートリアルでは、以下のタスクを完了しました。
 
 > [!div class="checklist"]
-> * 設定および Linux を構成します。
-> * インストールして SQL Server の構成
-> * ホスト ファイルを構成します。
-> * 共有記憶域を構成し、データベース ファイルの移動
-> * 各クラスター ノードでPacemakerインストールして構成する
-> * フェールオーバー クラスター インスタンスを構成します。
+> * Linux を設定および構成する
+> * SQL Server をインストールして構成する
+> * hosts ファイルを構成する
+> * 共有ストレージを構成してデータベース ファイルを移動する
+> * 各クラスター ノードに Pacemaker をインストールして構成する
+> * フェールオーバー クラスター インスタンスを構成する
 
-## <a name="next-steps"></a>次の手順
+## <a name="next-steps"></a>次のステップ
 
-- [Linux 上の SQL Server のフェールオーバー クラスター インスタンスを動作します。](sql-server-linux-shared-disk-cluster-operate.md)
+- [フェールオーバー クラスター インスタンスの操作 - SQL Server on Linux](sql-server-linux-shared-disk-cluster-operate.md)
 
 <!--Image references-->

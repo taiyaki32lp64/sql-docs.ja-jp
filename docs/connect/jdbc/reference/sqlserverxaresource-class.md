@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: df957b79-536f-4db7-b6ac-3d59343559fc
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 575982cd29c949203fdd667230cb8cad8d79f774
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 282201b7ff3f5b2ebfe4d8a1224d4d1b39285c53
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47784270"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67970083"
 ---
 # <a name="sqlserverxaresource-class"></a>SQLServerXAResource クラス
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

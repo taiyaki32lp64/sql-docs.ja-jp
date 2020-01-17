@@ -36,19 +36,18 @@ helpviewer_keywords:
 ms.assetid: aecc2f73-2ab5-4db9-b1e6-2f9e3c601fb9
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 7f0e93aaff4ed0f8eb02de0acb3e9362c1a390a1
-ms.sourcegitcommit: a11e733bd417905150567dfebc46a137df85a2fa
+ms.openlocfilehash: 50ae26a445faa8f8bcd811ed7834868417fc27b4
+ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/03/2019
-ms.locfileid: "53991915"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "73982670"
 ---
 # <a name="create-view-transact-sql"></a>CREATE VIEW (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-  クエリによって内容 (列と行) が定義される仮想テーブルを作成します。 このステートメントを使用すると、データベースの 1 つまたは複数のテーブル内のデータのビューを作成できます。 たとえば、ビューは、次の目的で使用できます。  
+  クエリによって内容 (列と行) が定義される仮想テーブルを作成します。 このステートメントを使用して、データベースの 1 つまたは複数のテーブル内のデータのビューを作成します。 たとえば、ビューは次の目的で使用できます。  
   
 -   各ユーザーのデータベースに対する認識を特化、簡素化、およびカスタマイズする。  
   
@@ -99,7 +98,7 @@ OR ALTER
  ビューが所属するスキーマの名前を指定します。  
   
  *view_name*  
- ビューの名前を指定します。 ビュー名は、識別子の規則に従っている必要があります。 ビューの所有者名の指定は省略可能です。  
+ ビューの名前です。 ビュー名は、識別子のルールに従っている必要があります。 ビューの所有者名の指定は省略可能です。  
   
  *column*  
  ビューの列に付ける名前を指定します。 列名が必要なのは、算術式、関数、または定数から列を導いた場合と、名前を付けないと (通常、結合によって) 2 つ以上の列の名前が同じになる場合、および、ビュー内の列に派生元と異なる列名を付ける場合に限られます。 列名は、SELECT ステートメントで指定することもできます。  
@@ -107,7 +106,7 @@ OR ALTER
  *column* を指定しなかった場合は、SELECT ステートメントの列の名前が、このビューの列名として使用されます。  
   
 > [!NOTE]  
->  ビューの列では、列名に対する権限は、基底となるデータのソースがどこにあるかにかかわらず、CREATE VIEW ステートメントまたは ALTER VIEW ステートメントを超えて適用されます。 たとえば、CREATE VIEW ステートメントで **SalesOrderID** 列に対して権限が与えられる場合、ALTER VIEW ステートメントでは **SalesOrderID** 列に **OrderRef** などの異なる列名を付けることができ、その後も **SalesOrderID** を使用してビューに関連付けられた権限を保持します。  
+>  ビューの列では、基底となるデータのソースにかかわらず、列名に対する権限は、CREATE VIEW ステートメントまたは ALTER VIEW ステートメントを超えて適用されます。 たとえば、CREATE VIEW ステートメントで **SalesOrderID** 列に対して権限が与えられる場合、ALTER VIEW ステートメントでは **SalesOrderID** 列に **OrderRef** などの異なる列名を付けることができ、その後も **SalesOrderID** を使用してビューに関連付けられた権限を保持します。  
   
  AS  
  ビューが行う動作を指定します。  
@@ -119,14 +118,14 @@ OR ALTER
   
  インデックス付きビュー定義では、SELECT ステートメントは、単一のテーブル ステートメントまたは複数のテーブルの JOIN (集計は省略可) にする必要があります。  
   
- ビュー定義の SELECT 句に、次の要素を含めることはできません。  
+ ビュー定義の SELECT 句に、次を含めることはできません。  
   
 -   ORDER BY 句。ただし、SELECT ステートメントの選択リストに TOP 句が同時に含まれている場合は例外です。  
   
     > [!IMPORTANT]  
-    >  ORDER BY 句は、ビュー定義において TOP 句または OFFSET 句によって返される行を特定する場合にのみ使用されます。 クエリ自体にも ORDER BY を指定しない限り、ビューをクエリしたときに、ORDER BY 句で順序どおりの結果が得られるかどうかは保証されません。  
+    >  ORDER BY 句は、ビュー定義において TOP 句または OFFSET 句によって返される行を決定する場合にのみ使用されます。 クエリ自体にも ORDER BY を指定しない限り、ビューをクエリしたときに、ORDER BY 句で順序どおりの結果が得られるかどうかは保証されません。  
   
--   INTO キーワード。  
+-   INTO キーワード  
   
 -   OPTION 句。  
   
@@ -143,14 +142,14 @@ OR ALTER
 >  ビューの基になるテーブルに対して直接更新が実行された場合は、CHECK OPTION を指定してもビューに対する確認は行われません。  
   
  ENCRYPTION  
- **適用対象**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] および [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。  
+ **適用対象**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 以降と [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。  
   
- CREATE VIEW ステートメントのテキストが含まれている [sys.syscomments](../../relational-databases/system-compatibility-views/sys-syscomments-transact-sql.md) のエントリを暗号化します。 WITH ENCRYPTION を使用すると、そのビューを SQL Server レプリケーションの一部としてパブリッシュできなくなります。  
+ CREATE VIEW ステートメントのテキストが含まれている [sys.syscomments](../../relational-databases/system-compatibility-views/sys-syscomments-transact-sql.md) のエントリを暗号化します。 WITH ENCRYPTION を使用すると、そのビューを SQL Server レプリケーションの一部として発行できなくなります。  
   
  SCHEMABINDING  
- 基になるテーブルのスキーマにビューをバインドします。 SCHEMABINDING を指定した場合、ベース テーブルに対してビュー定義に影響を与えるような変更は行えません。 まずビュー定義を変更または削除して、変更するテーブルとの依存関係を解消する必要があります。 SCHEMABINDING を使用する場合は、*select_statement* に、参照されるテーブル、ビュー、またはユーザー定義関数の名前として、2 つの部分から構成される名前 (_schema_**.**_object_) を指定する必要があります。 参照されるオブジェクトは、すべて同じデータベース内にあることが必要です。  
+ 基になるテーブルのスキーマにビューをバインドします。 SCHEMABINDING を指定した場合、ベース テーブルに対してビュー定義に影響を与えるような変更を行うことはできません。 まずビュー定義を変更または削除して、変更するテーブルとの依存関係を解消する必要があります。 SCHEMABINDING を使用する場合は、*select_statement* に、参照されるテーブル、ビュー、またはユーザー定義関数の名前として、2 つの部分から構成される名前 (_schema_ **.** _object_) を指定する必要があります。 参照されるオブジェクトは、すべて同じデータベース内にあることが必要です。  
   
- SCHEMABINDING 句を指定して作成したビューに参加しているビューまたはテーブルは、そのビューが削除または変更されてスキーマ バインドがなくならない限り削除できません。 スキーマ バインドが残っている場合は、[!INCLUDE[ssDE](../../includes/ssde-md.md)]からエラーが返されます。 また、ビュー定義に影響を与える ALTER TABLE ステートメントを、スキーマ バインドを持つビューに参加しているテーブルに対して実行すると、ステートメントは失敗します。  
+ SCHEMABINDING 句を指定して作成したビューに参加しているビューまたはテーブルは、そのビューが削除または変更されてスキーマ バインドがなくならない限り削除できません。 スキーマ バインドが残っている場合は、[!INCLUDE[ssDE](../../includes/ssde-md.md)]からエラーが返されます。 また、ビュー定義に影響を与える ALTER TABLE ステートメントを、スキーマ バインドを持つビューに参加しているテーブルに対して実行しても、ステートメントは失敗します。  
   
  VIEW_METADATA  
  ビューを参照するクエリ用にブラウズ モード メタデータが要求されている場合、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスは、DB-Library、ODBC、および OLE DB API に対して、ベース テーブルではなくビューに関するメタデータ情報を返します。 ブラウズ モード メタデータは、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスからクライアント側 API に返される追加のメタデータです。 クライアント側 API ではこのメタデータによって、更新可能なクライアント側カーソルを実装できます。 ブラウズ モード メタデータには、結果セット内の列が属するベース テーブルの情報が含まれています。  
@@ -162,20 +161,20 @@ OR ALTER
 ## <a name="remarks"></a>Remarks  
  ビューは現在のデータベースでのみ作成できます。 CREATE VIEW は、クエリ バッチの最初のステートメントであることが必要です。 1 つのビューで保持できる列の数は最大 1,024 です。  
   
- ビューからクエリを実行すると、[!INCLUDE[ssDE](../../includes/ssde-md.md)] では、ステートメントで参照されているデータベース オブジェクトがすべて存在すること、データベース オブジェクトがステートメントのコンテキストで有効であること、およびデータ変更ステートメントがデータの整合性規則に違反していないことが確認されます。 確認に失敗すると、エラー メッセージが返されます。 確認に成功すると、指定した動作が、基になるテーブルに対する動作に変換されます。  
+ ビューからクエリを実行すると、[!INCLUDE[ssDE](../../includes/ssde-md.md)] では、ステートメントで参照されているデータベース オブジェクトがすべて存在すること、データベース オブジェクトがステートメントのコンテキストで有効であること、およびデータ変更ステートメントがデータの整合性規則に違反していないことが確認されます。 確認に失敗すると、エラー メッセージが返されます。 確認に成功すると、そのアクションが、基になるテーブルに対するアクションに変換されます。  
   
  削除されたテーブル (またはビュー) に従属しているビューを使用すると、[!INCLUDE[ssDE](../../includes/ssde-md.md)] ではエラー メッセージが返されます。 テーブルの構造が以前のベース テーブルから変わっていなければ、削除されたテーブルやビューの代わりになる、新しいテーブルまたはビューを作成すると、ビューは再び使用可能になります。 新しいテーブルまたはビューの構造が変化した場合は、ビューを削除し、再作成する必要があります。  
   
- ビューが SCHEMABINDING 句を使用して作成したものでない場合、ビューの基になっているオブジェクトに対して、ビューの定義に影響するような変更が行われた際には、[sp_refreshview](../../relational-databases/system-stored-procedures/sp-refreshview-transact-sql.md) を実行する必要があります。 この操作を行わないと、ビューのクエリ時に、予期しない結果が表示される可能性があります。  
+ ビューが SCHEMABINDING 句を使用して作成したものでない場合、ビューの基になっているオブジェクトに対して、ビューの定義に影響するような変更が行われた際には、[sp_refreshview](../../relational-databases/system-stored-procedures/sp-refreshview-transact-sql.md) を実行します。 それ以外の場合は、ビューのクエリ時に、予期しない結果が生成される可能性があります。  
   
  ビューが作成されると、ビューについての情報がカタログ ビュー [sys.views](../../relational-databases/system-catalog-views/sys-views-transact-sql.md)、[sys.columns](../../relational-databases/system-catalog-views/sys-columns-transact-sql.md)、[sys.sql_expression_dependencies](../../relational-databases/system-catalog-views/sys-sql-expression-dependencies-transact-sql.md) に格納されます。 CREATE VIEW ステートメントのテキストは、[sys.sql_modules](../../relational-databases/system-catalog-views/sys-sql-modules-transact-sql.md) カタログ ビューに格納されます。  
   
- **numeric** または **float** 型の式で定義されたビューのインデックスを使用するクエリでは、ビューのインデックスを使用しない類似したクエリとは、異なる結果セットが返されます。 この相違は、基になるテーブルに対して INSERT、DELETE、または UPDATE 操作を行った場合の丸め誤差によって発生することがあります。  
+ **numeric** または **float** 型の式で定義されたビューのインデックスを使用するクエリでは、ビューのインデックスを使用しない類似したクエリとは、異なる結果セットが返されます。 この相違は、基になるテーブルに対して INSERT、DELETE、または UPDATE アクションを行った場合の丸め誤差によって発生することがあります。  
   
  ビューを作成すると、[!INCLUDE[ssDE](../../includes/ssde-md.md)]では、SET QUOTED_IDENTIFIER と SET ANSI_NULLS の設定が保存されます。 これらの元の設定は、ビューの使用時に、ビューの解析で使用されます。 したがって、ビューへアクセスするとき、SET QUOTED_IDENTIFIER と SET ANSI_NULLS のクライアント セッションの設定によってビュー定義に影響が生じることはありません。  
   
 ## <a name="updatable-views"></a>更新可能なビュー  
- 次の条件を満たす場合、ビューから基になるデータベース テーブルのデータを変更できます。  
+ 次の条件を満たす場合、ビューから基になるベース テーブルのデータを変更できます。  
   
 -   UPDATE、INSERT、DELETE ステートメントなどの変更で、1 つのベース テーブルのみの列を参照している。  
   
@@ -195,11 +194,11 @@ OR ALTER
   
 -   **INSTEAD OF トリガー**  
   
-     ビューに INSTEAD OF トリガーを作成して、そのビューを更新可能にできます。 INSTEAD OF トリガーは、そのトリガーが定義されているデータ変更ステートメントの代わりに実行されます。 このトリガーで、データ変更ステートメントを処理する一連の操作を指定できます。 したがって、特定のデータ変更ステートメント (INSERT、UPDATE、または DELETE) に対する INSTEAD OF トリガーがビューに存在する場合は、そのステートメントを介して対応するビューを更新できます。 INSTEAD OF トリガーの詳細については、「[DML トリガー](../../relational-databases/triggers/dml-triggers.md)」を参照してください。  
+     ビューに INSTEAD OF トリガーを作成して、そのビューを更新可能にできます。 INSTEAD OF トリガーは、そのトリガーが定義されているデータ変更ステートメントの代わりに実行されます。 このトリガーで、データ変更ステートメントを処理するために発生させる必要がある、一連のアクションを指定できます。 したがって、特定のデータ変更ステートメント (INSERT、UPDATE、または DELETE) に対する INSTEAD OF トリガーがビューに存在する場合は、そのステートメントを介して対応するビューを更新できます。 INSTEAD OF トリガーの詳細については、「[DML トリガー](../../relational-databases/triggers/dml-triggers.md)」を参照してください。  
   
 -   **パーティション ビュー**  
   
-     ビューがパーティション ビューである場合は、いくつかの制限の範囲内で更新可能です。 必要に応じて、[!INCLUDE[ssDE](../../includes/ssde-md.md)]では、ローカル パーティション ビュー (参加しているすべてのテーブルとビューが同じ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンス上にあるビュー) と分散パーティション ビュー (ビュー内の少なくとも 1 つのテーブルが別のサーバーまたはリモート サーバー上にあるビュー) が区別されます。  
+     ビューがパーティション ビューである場合は、特定の制限の範囲内で更新可能です。 必要に応じて、[!INCLUDE[ssDE](../../includes/ssde-md.md)]では、ローカル パーティション ビュー (参加しているすべてのテーブルとビューが同じ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンス上にあるビュー) と分散パーティション ビュー (ビュー内の少なくとも 1 つのテーブルが別のサーバーまたはリモート サーバー上にあるビュー) が区別されます。  
   
 ## <a name="partitioned-views"></a>パーティション ビュー  
  パーティション ビューは、同じ構造のメンバー テーブルの UNION ALL によって定義されるビューです。ただし、これらのメンバー テーブルは、同じ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンス内、または連合データベース サーバーと呼ばれる [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] サーバー インスタンスの独立したグループ内に、複数のテーブルとして個別に格納されます。  
@@ -228,7 +227,7 @@ SELECT *
 FROM Server3.CompanyData.dbo.Customers_99;  
 ```  
   
- 一般に、次の形式のビューをパーティション ビューといいます。  
+ 一般に、次の形式の場合、ビューをパーティション ビューといいます。  
   
 ```  
 SELECT <select_list1>  
@@ -246,11 +245,11 @@ FROM Tn;
   
 1.  選択リスト (`list`  
   
-    -   メンバー テーブルのすべての列は、ビュー定義の列リストで選択する必要があります。  
+    -   ビュー定義の列リストで、メンバー テーブルのすべての列を選択します。  
   
-    -   それぞれの `select list` の同じ位置にある列は、照合順序も含めて同じ型であることが必要です。 列が暗黙的に変換される型であるという条件だけでは十分ではありません。これは UNION の場合とは異なります。  
+    -   それぞれの `select list` の同じ位置にある列は、照合順序も含めて同じ型にします。 一般的に UNION の場合のように、列が暗黙的に変換される型にするだけでは十分ではありません。  
   
-         また、すべての選択リストの同じ位置に、少なくとも 1 つの列 (たとえば `<col>`) が指定されている必要があります。 この `<col>` は、メンバー テーブル `T1, ..., Tn` の `<col>` にそれぞれ CHECK 制約 `C1, ..., Cn` を指定することで定義します。  
+         また、すべての選択リストの同じ位置に、少なくとも 1 つの列 (たとえば `<col>`) が指定されている必要があります。 `<col>` は、メンバー テーブル `T1, ..., Tn` の `<col>` にそれぞれ CHECK 制約 `C1, ..., Cn` が定義されるように定義します。  
   
          テーブル `C1` の制約 `T1` は、次の形式で定義する必要があります。  
   
@@ -264,7 +263,7 @@ FROM Tn;
         < col > { < | <= } < value2 >  
         ```  
   
-    -   これらの制約は、`<col>` に指定したすべての値が `C1, ..., Cn` の制約の 1 つにのみ該当するような形式にする必要があります。つまり、連続せずかつ重複しない間隔を持つ制約セットを形成するように定義します。 連続しない制約が定義されている列 `<col>` は、パーティション分割列と呼ばれます。 パーティション分割列は、基になるテーブルではそれぞれ異なる名前が付いている場合があります。 前に示したパーティション分割列の条件を満たすには、パーティション分割列に対して制約が有効かつ信頼されている必要があります。 制約が無効の場合は、ALTER TABLE の CHECK CONSTRAINT *constraint_name* オプションを使用して制約チェックを再度有効にし、WITH CHECK オプションを使用して制約を検証します。  
+    -   制約は、連続せずかつ重複しない間隔を持つ制約セットを形成されるよう、`<col>` に指定したすべての値が `C1, ..., Cn` の制約の 1 つにのみ該当するような形式にする必要があります。 連続しない制約が定義されている列 `<col>` は、パーティション分割列と呼ばれます。 パーティション分割列は、基になるテーブルではそれぞれ異なる名前が付いている場合があります。 前に示したパーティション分割列の条件を満たすには、パーティション分割列に対して制約が有効かつ信頼されている必要があります。 制約が無効の場合は、ALTER TABLE の CHECK CONSTRAINT *constraint_name* オプションを使用して制約チェックを再度有効にし、WITH CHECK オプションを使用して制約を検証します。  
   
          次は、有効な制約のセットの例です。  
   
@@ -281,7 +280,7 @@ FROM Tn;
   
     -   計算列、ID 列、既定の列、または **timestamp** 列に対して指定することはできません。  
   
-    -   メンバー テーブルの 1 つの列に複数の制約が定義されている場合、データベース エンジンではすべての制約が無視され、ビューがパーティション ビューであるかどうかを判断する際にそれらの制約は考慮されません。 パーティション ビューの条件を満たすには、パーティション分割列にパーティション分割制約を 1 つだけ定義する必要があります。  
+    -   メンバー テーブルの同じ列に複数の制約が定義されている場合、データベース エンジンではすべての制約が無視され、ビューがパーティション ビューであるかどうかを判断する際にそれらの制約は考慮されません。 パーティション ビューの条件を満たすには、パーティション分割列にパーティション分割制約を 1 つだけにします。  
   
     -   パーティション分割列の更新可能性に制限はありません。  
   
@@ -289,59 +288,59 @@ FROM Tn;
   
     -   テーブルは、ローカル テーブルまたは [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] が実行されている他のコンピューター上のテーブルのいずれかになります。他のコンピューター上のテーブルの場合は、4 つの要素で構成される名前か、OPENDATASOURCE ベースまたは OPENROWSET ベースの名前で参照されます。 OPENDATASOURCE および OPENROWSET の構文では、テーブル名は指定できますが、パススルー クエリは指定できません。 詳細については、「[OPENDATASOURCE &#40;Transact-SQL&#41;](../../t-sql/functions/opendatasource-transact-sql.md)」および「[OPENROWSET &#40;Transact-SQL&#41;](../../t-sql/functions/openrowset-transact-sql.md)」を参照してください。  
   
-         1 つ以上のメンバー テーブルがリモートにある場合、そのビューは分散パーティション ビューと呼ばれ、さらに条件が適用されます。 これらの条件については後で説明します。  
+         1 つ以上のメンバー テーブルがリモートにある場合、そのビューは分散パーティション ビューと呼ばれ、さらに条件が適用されます。 これらについてはこのセクションの後で説明します。  
   
-    -   UNION ALL ステートメントで組み合わせるテーブルのセットに、同じテーブルを 2 回指定することはできません。  
+    -   UNION ALL ステートメントで組み合わせるテーブルのセットに、同じテーブルを 2 回表示することはできません。  
   
     -   メンバー テーブルでは、テーブル内の計算列上にインデックスを作成することはできません。  
   
-    -   メンバー テーブルでは、すべての PRIMARY KEY 制約が同じ数の列に対して定義されている必要があります。  
+    -   メンバー テーブルでは、すべての PRIMARY KEY 制約が同じ数の列に対して与えられます。  
   
-    -   ビューのすべてのメンバー テーブルには、同じ ANSI PADDING 設定を指定する必要があります。 これは、**sp_configure** の **user options** オプションまたは SET ステートメントを使用して設定できます。  
+    -   ビューのすべてのメンバー テーブルには、同じ ANSI PADDING 設定が与えられます。 これは、**sp_configure** の **user options** オプションまたは SET ステートメントを使用して設定できます。  
   
 ## <a name="conditions-for-modifying-data-in-partitioned-views"></a>パーティション ビューのデータを変更する条件  
  パーティション ビューのデータを変更するステートメントには、次の制限が適用されます。  
   
--   INSERT ステートメントでは、基になるメンバー テーブルで列に DEFAULT 制約が定義されているか NULL 値が許容されている場合でも、ビューのすべての列に値を提供する必要があります。 メンバー テーブルの列に DEFAULT 定義がある場合、ステートメントではこれらの列に DEFAULT キーワードを使用できません。  
+-   INSERT ステートメントでは、基になるメンバー テーブルで列に DEFAULT 制約があるか、NULL 値が許可されている場合でも、ビューのすべての列に値を提供します。 メンバー テーブルの列に DEFAULT 定義がある場合、ステートメントで明示的に DEFAULT キーワードを使用することはできません。  
   
--   パーティション分割列に挿入する値は、基になる制約の少なくとも 1 つを満たしている必要があります。満たしていない場合、INSERT 操作は制約違反で失敗します。  
+-   パーティション分割列に挿入する値は、基になる制約の少なくとも 1 つを満たします。満たしていない場合、INSERT アクションは制約違反で失敗します。  
   
 -   UPDATE ステートメントでは、対応するメンバー テーブルで列の DEFAULT 値が定義されている場合でも、SET 句の値として DEFAULT キーワードを指定することはできません。  
   
--   ビューの列が、1 つ以上のメンバー テーブルで ID 列になっている場合、INSERT ステートメントまたは UPDATE ステートメントでこの列を変更することはできません。  
+-   1 つまたは複数のメンバー テーブルで ID 列になっているビューの列は、INSERT ステートメントまたは UPDATE ステートメントを使用して変更することはできません。  
   
 -   メンバー テーブルのいずれかに **timestamp** 型の列が含まれている場合、データを INSERT または UPDATE ステートメントで変更することはできません。  
   
 -   メンバー テーブルに、トリガー、ON UPDATE CASCADE/SET NULL/SET DEFAULT 制約、または ON DELETE CASCADE/SET NULL/SET DEFAULT 制約が含まれている場合、ビューを変更することはできません。  
   
--   ステートメント内に、同じビューまたはいずれかのメンバー テーブルとの自己結合が指定された場合、パーティション ビューに対して INSERT、UPDATE、および DELETE 操作は許可されません。  
+-   ステートメント内に、同じビューまたはいずれかのメンバー テーブルとの自己結合が指定された場合、パーティション ビューに対して INSERT、UPDATE、DELETE アクションは許可されません。  
   
 -   パーティション ビューへのデータの一括インポートは、**bcp**、または BULK INSERT ステートメントや INSERT ...SELECT * FROM OPENROWSET(BULK...) ステートメントを使用してデータを一括インポートする場合のフォーマット ファイルの使用方法を示します。 しかし、[INSERT](../../t-sql/statements/insert-transact-sql.md) ステートメントを使用することにより、パーティション ビューに複数の行を挿入できます。  
   
     > [!NOTE]  
-    >  パーティション ビューを更新するには、メンバー テーブルに対して INSERT、UPDATE、DELETE の各権限を持っている必要があります。  
+    >  パーティション ビューを更新するには、ユーザーはメンバー テーブルに対して INSERT、UPDATE、DELETE の各権限を持っている必要があります。  
   
 ## <a name="additional-conditions-for-distributed-partitioned-views"></a>分散パーティション ビューの追加条件  
- 分散パーティション ビュー (1 つ以上のメンバー テーブルがリモートの場合) では、次の追加条件が適用されます。  
+ 分散パーティション ビュー (1 つまたは複数のメンバー テーブルがリモートの場合) では、次の追加条件が適用されます。  
   
--   更新によって影響を受けるすべてのノードにおいて原子性を保証するため、分散トランザクションが起動されます。  
+-   更新によって影響を受けるすべてのノードを超えて原子性を保証するため、分散トランザクションが起動されます。  
   
--   INSERT、UPDATE、または DELETE ステートメントが動作するには、XACT_ABORT SET オプションを ON に設定する必要があります。  
+-   INSERT、UPDATE、または DELETE ステートメントが動作するには、XACT_ABORT SET オプションを ON に設定します。  
   
 -   パーティション ビューで参照されるリモート テーブルの **smallmoney** 型の列は、**money** としてマップされます。 このため、ローカル テーブルの対応する列 (選択リストの同じ順番にある列) も、**money** 型であることが必要です。  
   
 -   データベース互換性レベル 110 以上では、パーティション ビューで参照されるリモート テーブルの **smalldatetime** 型の列は、**smalldatetime** としてマップされます。 ローカル テーブルの対応する列 (選択リストの同じ順番にある列) は、**smalldatetime** であることが必要です。 この動作は、以前のバージョンの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] から変更されています。以前のバージョンでは、パーティション ビューで参照されるリモート テーブルの **smalldatetime** 型の列は **datetime** としてマップされ、ローカル テーブルの対応する列は **datetime** 型であることが必要でした。 詳細については、「[ALTER DATABASE 互換性レベル &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md)」を参照してください。  
   
--   パーティション ビューのリンク サーバーは、ループバック リンク サーバーとして使用できません。 ループバック リンク サーバーは、同じ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスを指すリンク サーバーです。  
+-   パーティション ビューのリンク サーバーは、ループバック リンク サーバーにすることはできません。 ループバック リンク サーバーは、同じ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスを指すリンク サーバーです。  
   
- 更新可能なパーティション ビューとリモート テーブルに関連する INSERT、UPDATE、DELETE 操作では、SET ROWCOUNT オプションの設定は無視されます。  
+ 更新可能なパーティション ビューとリモート テーブルに関連する INSERT、UPDATE、DELETE アクションでは、SET ROWCOUNT オプションの設定は無視されます。  
   
  メンバー テーブルとビュー定義が準備されると、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のクエリ オプティマイザーでは、クエリを効率的に使用してメンバー テーブルからデータにアクセスする高度なプランが構築されます。 クエリ プロセッサでは、CHECK 制約の定義を使用して、キー値の分布が複数のメンバー テーブルにマップされます。 ユーザーがクエリを実行すると、クエリ プロセッサでは、マップと WHERE 句で指定した値とが比較され、メンバー サーバー間のデータ転送が最も少なくなる実行プランが構築されます。 したがって、いくつかのメンバー テーブルがリモート サーバー上にある場合でも、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスでは転送の対象となる分散データの量が最も少なくなる方法で分散クエリが解決されます。  
   
 ## <a name="considerations-for-replication"></a>レプリケーションに関する注意点  
  レプリケーションに関係するメンバー テーブルのパーティション ビューを作成するには、次の点に注意してください。  
   
--   基になるテーブルが、更新サブスクライバーとのマージ レプリケーションまたはトランザクション レプリケーションに関係する場合、選択リストには **uniqueidentifier** 列も含まれる必要があります。  
+-   基になるテーブルが、更新サブスクライバーとのマージ レプリケーションまたはトランザクション レプリケーションに関係する場合、選択リストには **uniqueidentifier** 列も含まれるようにします。 
   
      パーティション ビューに対する INSERT 操作では、**uniqueidentifier** 列の NEWID() 値を指定する必要があります。 **uniqueidentifier** 列に対する UPDATE 操作では、DEFAULT キーワードを使用できないので、NEWID() を値として指定する必要があります。  
   
@@ -354,8 +353,8 @@ FROM Tn;
 
 次の例では、AdventureWorks 2012 または AdventureWorksDW データベースを使用します。  
 
-### <a name="a-using-a-simple-create-view"></a>A. 単純な CREATE VIEW を使用する  
- 次の例では、単純な `SELECT` ステートメントを使用してビューを作成します。 単純なビューは、列の組み合わせを頻繁にクエリする場合に便利です。 このビューのデータは、[!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] データベースの `HumanResources.Employee` テーブルと `Person.Person` テーブルから取得されます。 このデータには、[!INCLUDE[ssSampleDBCoFull](../../includes/sssampledbcofull-md.md)] の従業員の名前と採用日の情報が含まれています。 従業員の勤続祝いの担当者用にビューを作成することができますが、この担当者はテーブルのすべてのデータにアクセスできるわけではありません。  
+### <a name="a-using-a-simple-create-view"></a>A. シンプルな CREATE VIEW を使用する  
+ 次の例では、単純な `SELECT` ステートメントを使用してビューを作成します。 簡易ビューは、列の組み合わせを頻繁にクエリする場合に便利です。 このビューのデータは、[!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] データベースの `HumanResources.Employee` テーブルと `Person.Person` テーブルから取得されます。 このデータには、[!INCLUDE[ssSampleDBCoFull](../../includes/sssampledbcofull-md.md)] の従業員の名前と採用日の情報が含まれています。 従業員の勤続祝いの担当者用にビューを作成することができますが、この担当者はテーブルのすべてのデータにアクセスできるわけではありません。  
   
 ```  
 CREATE VIEW hiredate_view  
@@ -370,7 +369,7 @@ GO
 ### <a name="b-using-with-encryption"></a>B. 暗号化を使用する  
  次の例では、`WITH ENCRYPTION` オプションを使用して、計算列、名前変更された列、複数列を表示します。  
   
-**適用対象**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] および [!INCLUDE[ssSDS](../../includes/sssds-md.md)]。  
+**適用対象**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 以降と [!INCLUDE[ssSDS](../../includes/sssds-md.md)]。  
   
 ```  
 CREATE VIEW Purchasing.PurchaseOrderReject  
@@ -406,7 +405,7 @@ WITH CHECK OPTION ;
 GO  
 ```  
   
-### <a name="d-using-built-in-functions-within-a-view"></a>D. ビュー内部の組み込み関数を使用する  
+### <a name="d-using-built-in-functions-within-a-view"></a>D. ビュー内の組み込み関数を使用する  
  次の例では、組み込み関数を含むビュー定義を示しています。 関数を使用するときには、派生列に列名を指定する必要があります。  
   
 ```  

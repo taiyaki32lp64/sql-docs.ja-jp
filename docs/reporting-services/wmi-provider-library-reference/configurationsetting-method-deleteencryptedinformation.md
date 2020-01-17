@@ -2,7 +2,7 @@
 title: DeleteEncryptedInformation メソッド (WMI MSReportServer_ConfigurationSetting) | Microsoft Docs
 ms.date: 03/01/2017
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: wmi-provider-library-reference
 ms.topic: conceptual
 apiname:
@@ -13,14 +13,14 @@ apitype: MOFDef
 helpviewer_keywords:
 - DeleteEncryptedInformation method
 ms.assetid: c14ed187-bdd9-4304-88e3-72072f03c21b
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 8596860d7da0f41844c9dfcef341ec595609e1e1
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 9e86c1964a4ece26115116b8e21c763caaab797b
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47620155"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65572226"
 ---
 # <a name="configurationsetting-method---deleteencryptedinformation"></a>ConfigurationSetting メソッド - DeleteEncryptedInformation
   レポート サーバー データベースから暗号化された情報を削除します。  

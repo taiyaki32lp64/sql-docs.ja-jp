@@ -20,11 +20,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: bcca4bc6161526d1bd78e55bc9452f2d7d9d69d3
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52776184"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63200004"
 ---
 # <a name="mapping-data-types-odbc"></a>データ型のマッピング (ODBC)
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC ドライバーのマップ[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]ODBC SQL データ型への SQL データ型。 次のセクションでは、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SQL データ型とマップ先の ODBC SQL データ型について説明します。 また、ODBC SQL データ型と対応する ODBC C データ型、およびサポートされる変換と既定の変換についても説明します。  
@@ -88,7 +88,7 @@ while ((retcode = SQLFetch (hstmt))==SQL_SUCCESS)
 ### <a name="sending-data-to-the-server"></a>サーバーへのデータの送信  
  **SQL_SS_VARIANT**、新しいデータ型に固有の[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native Client ODBC ドライバーに送信されるデータの使用、 **sql_variant**列。 パラメーターを使用してサーバーにデータを送信するときに (たとえば、INSERT INTO TableName VALUES (?、ですか?))、 [SQLBindParameter](../native-client-odbc-api/sqlbindparameter.md) C 型と、対応するなどのパラメーター情報を指定するために使用[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]型。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC ドライバーは、適切ないずれかに C データ型を変換**sql_variant**サブタイプ。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [結果の処理&#40;ODBC&#41;](processing-results-odbc.md)  
   
   

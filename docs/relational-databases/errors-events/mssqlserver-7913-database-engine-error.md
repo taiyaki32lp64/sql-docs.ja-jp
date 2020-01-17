@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 9d8ad456-b1a2-4f79-a252-657fbec9ad9b
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 4e79bfacb1db51fc522f9c6520c6db0ad3a7cd1d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ec08dc7368417e8ca93574a3dd8571c14eff5291
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47614590"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67951334"
 ---
 # <a name="mssqlserver7913"></a>MSSQLSERVER_7913
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -31,7 +30,7 @@ ms.locfileid: "47614590"
 |イベント ソース|MSSQLSERVER|  
 |コンポーネント|SQLEngine|  
 |シンボル名|DBCC2_REPAIR_EXTENT_DEALLOCATED|  
-|メッセージ テキスト|修復: エクステント P_ID が、オブジェクト ID O_ID、インデックス ID I_ID、パーティション ID PN_ID、アロケーション ユニット ID A_ID (型 TYPE) から割り当て解除されました。|  
+|メッセージ テキスト|修復:エクステント P_ID が、オブジェクト ID O_ID、インデックス ID I_ID、パーティション ID PN_ID、アロケーション ユニット ID A_ID (型 TYPE) から割り当て解除されました。|  
   
 ## <a name="explanation"></a>説明  
 これは、REPAIR からの情報メッセージであり、指定のオブジェクトからエクステントが割り当て解除されたことを示しています。  

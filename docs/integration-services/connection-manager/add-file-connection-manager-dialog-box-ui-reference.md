@@ -12,17 +12,20 @@ f1_keywords:
 helpviewer_keywords:
 - Add File Connection Manager
 ms.assetid: 9370bfb5-5993-4ad8-a9cd-2de53f320f34
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: b238ff33975944483906f91fa360159eacd05b71
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: dc0df82879f835428640b403a5d9b2befa66e34a
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47783499"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71294495"
 ---
 # <a name="add-file-connection-manager-dialog-box-ui-reference"></a>[ファイル接続マネージャーの追加] ダイアログ ボックスの UI リファレンス
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   **[ファイル接続マネージャーの追加]** ダイアログ ボックスを使用すると、ファイルまたはフォルダーのグループへの接続を定義できます。  
   
  複数のファイルの接続マネージャーの詳細については、「 [Multiple Files Connection Manager](../../integration-services/connection-manager/multiple-files-connection-manager.md)」を参照してください。  
@@ -30,11 +33,11 @@ ms.locfileid: "47783499"
 > [!NOTE]  
 >  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] の組み込みタスクとデータ フロー コンポーネントは、複数ファイル接続マネージャーを使用しません。 ただし、スクリプト タスクまたはスクリプト コンポーネントでは、この接続マネージャーを使用できます。  
   
-## <a name="options"></a>[変数]  
+## <a name="options"></a>オプション  
  **[使用法の種類]**  
  複数のファイルの接続マネージャーに使用するファイルの種類を指定します。  
   
-|ReplTest1|[説明]|  
+|[値]|[説明]|  
 |-----------|-----------------|  
 |**[ファイルの作成]**|接続マネージャーはファイルを作成します。|  
 |**[既存のファイル]**|接続マネージャーは既存のファイルを使用します。|  

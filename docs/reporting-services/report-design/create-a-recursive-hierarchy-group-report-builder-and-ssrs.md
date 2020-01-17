@@ -2,18 +2,18 @@
 title: 再帰型階層グループの作成 (レポート ビルダーおよび SSRS) | Microsoft Docs
 ms.date: 03/01/2017
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: report-design
 ms.topic: conceptual
 ms.assetid: 8b830ba5-4d64-4348-a2b1-76b9338a1462
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 577043b3994b5acdee3cd71c76040ec9de7c3481
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 8a506442cca08dfa40cb3665571662a477ef5345
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56296670"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65581561"
 ---
 # <a name="create-a-recursive-hierarchy-group-report-builder-and-ssrs"></a>再帰型階層グループの作成 (レポート ビルダーおよび SSRS)
 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] のページ分割されたレポートでは、再帰型階層グループは、組織階層内のマネージャーと従業員のリレーションシップを表す上司/部下構造など、複数の階層レベルから成る単一のレポート データセットのデータを編成します。  
@@ -48,7 +48,7 @@ ms.locfileid: "56296670"
     > [!NOTE]  
     >  プロパティ ペインが表示されない場合は、 **[表示]** タブの **[プロパティ]** をクリックします。  
   
-2.  プロパティ ペインで、**[余白]** ノードを展開して **[左]** をクリックします。次に、ドロップダウン リストから **[\<式...>]** を選びます。  
+2.  プロパティ ペインで、 **[余白]** ノードを展開して **[左]** をクリックします。次に、ドロップダウン リストから **[\<式...>]** を選びます。  
   
 3.  式ペインで次の式を入力します。  
   

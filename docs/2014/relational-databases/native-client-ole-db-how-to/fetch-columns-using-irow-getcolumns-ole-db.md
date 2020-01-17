@@ -13,11 +13,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 225a624f22f80b00a848d73f38febad60936b90a
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53372964"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62468498"
 ---
 # <a name="fetch-columns-using-irowgetcolumns-ole-db"></a>IRow::GetColumns を使用した列のフェッチ (OLE DB)
   `IRow` インターフェイスでは、結果セット内の単一行の列に直接アクセスできます。 つまり、`IRow` では、1 つの行の結果セットから効率的に列を取得できます。  
@@ -48,7 +48,7 @@ ms.locfileid: "53372964"
   
 -   列に 2 回アクセスする方法。初回に列の実際の幅を取得し、その後実際のデータにアクセスします。  
   
- DBCOLUMNACCESS 構造体では、pData が NULL で cbMaxLen が 0 の場合、IRow->GetColumns を呼び出すと、列の実際の長さだけが返されます。 この場合、IRow->GetColumns を同じ列に対してもう一度呼び出すと、実際のデータを取得できます。 このサンプルは IA64 ではサポートされていません。  
+ DBCOLUMNACCESS 構造体の場合は、pData が NULL で cbMaxLen が 0、IRow への呼び出し]-> [GetColumns を返します。 実際の列の長さだけです。 この場合は、IRow]-> [GetColumns は、実際のデータを取得する同じ列に対してもう一度に呼び出すことが。 このサンプルは IA64 ではサポートされていません。  
   
  このサンプルには AdventureWorks サンプル データベースが必要です。このサンプル データベースは、[Microsoft SQL Server サンプルとコミュニティのプロジェクト](https://go.microsoft.com/fwlink/?LinkID=85384)のホーム ページからダウンロードできます。  
   

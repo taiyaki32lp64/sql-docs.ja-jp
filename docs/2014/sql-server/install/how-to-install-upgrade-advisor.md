@@ -1,11 +1,10 @@
 ---
-title: '方法: アップグレード アドバイザーのインストール |Microsoft Docs'
+title: 操作方法:アップグレード アドバイザーのインストール |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 helpviewer_keywords:
 - installing Upgrade Advisor
@@ -16,14 +15,14 @@ ms.assetid: 481b0704-ce79-4543-b141-67306128aa2b
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 69d5be9a4514f002ebd8c9b7ffb05c6f614e2129
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 0de86b9690f0647803938218ce566508662da20e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48112934"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66094918"
 ---
-# <a name="how-to-install-upgrade-advisor"></a>アップグレード アドバイザーをインストールする方法
+# <a name="how-to-install-upgrade-advisor"></a>操作方法:アップグレード アドバイザーをインストールする
   アップグレード アドバイザーでは、[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 以外のサポートされているすべてのコンポーネントをリモートで分析できます。 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] のインスタンスをスキャンしない場合は、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスに接続できる任意のコンピューターにアップグレード アドバイザーをインストールできます。 コンピューターはアップグレード アドバイザーの前提条件を満たしている必要もあります。 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] のインスタンスをスキャンする場合は、アップグレード アドバイザーをレポート サーバーにインストールする必要があります。  
   
  詳細については、次を参照してください。[アップグレード アドバイザーのインストール](../../../2014/sql-server/install/installing-upgrade-advisor.md)します。  

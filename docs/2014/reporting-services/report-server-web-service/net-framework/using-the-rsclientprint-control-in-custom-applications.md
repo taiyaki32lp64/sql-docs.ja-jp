@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- docset-sql-devref
-- reporting-services-native
+ms.technology: reporting-services
 ms.topic: reference
 helpviewer_keywords:
 - RSPrintClient control
@@ -14,15 +12,15 @@ helpviewer_keywords:
 - custom printing [Reporting Services]
 - client-side printing
 ms.assetid: 8c0bdd18-8905-4e22-9774-a240fc81a8a7
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 0cddac844ac9603da32a4fabc47fa71a8ddcd226
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 52b4bc564c9ea8d105809a4d5225056a231ad2e7
+ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56036603"
+ms.lasthandoff: 08/29/2019
+ms.locfileid: "70155001"
 ---
 # <a name="using-the-rsclientprint-control-in-custom-applications"></a>カスタム アプリケーション内での RSClientPrint コントロールの使用
   [!INCLUDE[msCoName](../../../includes/msconame-md.md)] ActiveX コントロールである **RSPrintClient** を使用すると、HTML ビューアーで表示されたレポートをクライアント側で印刷することができます。 このコントロールには **[印刷]** ダイアログ ボックスがあり、印刷ジョブの開始、レポートのプレビュー、印刷するページの指定、余白の変更を行うことができます。 クライアント側での印刷操作の間、レポート サーバーが画像 (EMF) 表示拡張機能でレポートを表示し、オペレーティング システムの印刷機能を使用して印刷ジョブを作成し、そのジョブをプリンターに送ります。  
@@ -44,7 +42,7 @@ ms.locfileid: "56036603"
 -   オンライン ブックの画像 (EMF) 表示に関するトピックを参照し、印刷プレビューおよび出力用にページを表示する方法を確認します。  
   
 ## <a name="rsprintclient-overview"></a>RSPrintClient の概要  
- このコントロールによって表示されるカスタム印刷ダイアログ ボックスでは、印刷プレビュー、特定のページや範囲を指定するためのページ選択、ページ余白、ページの向きなど、一般的な印刷ダイアログ ボックスの機能がサポートされています。 コントロールは CAB ファイルとしてパッケージ化されています。 **[印刷]** ダイアログ ボックス内のテキストは、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] がサポートするすべての言語に向けてローカライズされています。 **RSPrintClient** ActiveX コントロールでは、画像表示拡張機能 (EMF) を使用してレポートが印刷されます。 次の EMF デバイス情報を使用するとします。StartPage、EndPage、MarginBottom、MarginLeft、MarginTop、MarginRight、PageHeight、および PageWidth 画像表示に対するその他のデバイス情報の設定はサポートされません。  
+ このコントロールによって表示されるカスタム印刷ダイアログ ボックスでは、印刷プレビュー、特定のページや範囲を指定するためのページ選択、ページ余白、ページの向きなど、一般的な印刷ダイアログ ボックスの機能がサポートされています。 コントロールは CAB ファイルとしてパッケージ化されています。 **[印刷]** ダイアログ ボックス内のテキストは、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] がサポートするすべての言語に向けてローカライズされています。 **RSPrintClient** ActiveX コントロールでは、画像表示拡張機能 (EMF) を使用してレポートが印刷されます。 EMF デバイス情報として StartPage、EndPage、MarginBottom、MarginLeft、MarginTop、MarginRight、PageHeight、および PageWidth が使用されます。 画像表示に対するその他のデバイス情報の設定はサポートされません。  
   
 ### <a name="language-support"></a>言語サポート  
  印刷コントロールでは、ユーザー インターフェイスのテキストがさまざまな言語で表示され、異なる測定系を使用した入力値を受け付けます。 使われる言語と測定系は、**Culture** プロパティと **UICulture** プロパティで決まります。 どちらのプロパティも LCID 値を受け付けます。 サポートされている言語から派生した言語の LCID を指定すると、最も近い言語が選択されます。 サポート対象外で、近い言語もない LCID を指定すると、英語 (U.S.) となります。  
@@ -53,7 +51,7 @@ ms.locfileid: "56036603"
  この ActiveX コントロールとそのメソッドおよびプロパティにプログラムからアクセスするには、**RSClientPrint** オブジェクトを使用します。 このコントロールでは、印刷プレビュー用のモーダル ダイアログが提供されます。  
   
 ### <a name="specifying-default-values"></a>既定値の指定  
- **[印刷]** ダイアログ ボックスに、レポートの余白やページの各値を初期設定することができます。 既定では、**[印刷]** ダイアログ ボックスはレポート定義の値で初期化されます。 既定値を使用することも、オブジェクトのプロパティを設定して異なる値を指定することもできます。  
+ **[印刷]** ダイアログ ボックスに、レポートの余白やページの各値を初期設定することができます。 既定では、 **[印刷]** ダイアログ ボックスはレポート定義の値で初期化されます。 既定値を使用することも、オブジェクトのプロパティを設定して異なる値を指定することもできます。  
   
  サイズはすべて mm 単位で設定されます。 **Culture** および **UICulture** がメートル法を使わないロケールに設定されている場合は、実行時に単位が変換されます。  
   
@@ -67,7 +65,7 @@ ms.locfileid: "56036603"
   
 ### <a name="rsclientprint-properties"></a>RSClientPrint プロパティ  
   
-|プロパティ|型|RW|既定値|説明|  
+|プロパティ|[型]|RW|既定値|[説明]|  
 |--------------|----------|--------|-------------|-----------------|  
 |MarginLeft|Double|RW|レポートにより設定|左余白を取得または設定します。 開発者が設定せず、レポートにも指定がない場合の既定値は 12.2 mm です。|  
 |MarginRight|Double|RW|レポートにより設定|右余白を取得または設定します。 開発者が設定せず、レポートにも指定がない場合の既定値は 12.2 mm です。|  
@@ -75,9 +73,9 @@ ms.locfileid: "56036603"
 |MarginBottom|Double|RW|レポートにより設定|下余白を取得または設定します。 開発者が設定せず、レポートにも指定がない場合の既定値は 12.2 mm です。|  
 |PageWidth|Double|RW|レポートにより設定|ページの幅を取得または設定します。 開発者が設定せず、レポートにも定義がない場合の既定値は 215.9 mm です。|  
 |PageHeight|Double|RW|レポートにより設定|ページの高さを取得または設定します。 開発者が設定せず、レポートにも定義がない場合の既定値は 279.4 mm です。|  
-|カルチャ|Int32|RW|ブラウザーのロケール|ロケール ID (LCID) を指定します。 この値によりユーザー入力の測定単位が決まります。 たとえば、ユーザーが`3`言語がフランス語またはインチの言語が英語 (米国) の場合にその値がミリメートル単位で測定されます。 有効な値は次のとおりです。1028, 1031, 1033, 1036, 1040, 1041, 1042, 2052, 3082.|  
-|UICulture|String|RW|クライアントのカルチャ|ダイアログ ボックスの文字列のローカライズを指定します。 [印刷] ダイアログ ボックスのテキストは、これらの言語にローカライズされます。簡体字、中国語、従来の英語、フランス語、ドイツ語、イタリア語、日本語、韓国語、およびスペイン語。 有効な値は次のとおりです。1028, 1031, 1033, 1036, 1040, 1041, 1042, 2052, 3082.|  
-|Authenticate|ブール値|RW|False|セッション外印刷の接続を開始するためにコントロールからレポート サーバーに GET コマンドを発行するかどうかを指定します。|  
+|カルチャ|Int32|RW|ブラウザーのロケール|ロケール ID (LCID) を指定します。 この値によりユーザー入力の測定単位が決まります。 たとえば、ユーザーが `3`を入力した場合、言語がフランス語 (米国) の場合、値はミリメートル単位で測定されます。 有効な値は、1028、1031、1033、1036、1040、1041、1042、2052、3082 です。|  
+|UICulture|文字列|RW|クライアントのカルチャ|ダイアログ ボックスの文字列のローカライズを指定します。 [印刷] ダイアログ内のテキストは、簡体中国語、繁体中国語、英語、フランス語、ドイツ語、イタリア語、日本語、韓国語、スペイン語にローカライズされています。 有効な値は、1028、1031、1033、1036、1040、1041、1042、2052、3082 です。|  
+|Authenticate|Boolean|RW|False|セッション外印刷の接続を開始するためにコントロールからレポート サーバーに GET コマンドを発行するかどうかを指定します。|  
   
 ### <a name="when-to-set-the-authenticate-property"></a>Authenticate プロパティを設定する状況  
  ブラウザー セッションの内部から印刷を行う場合は、`Authenticate` プロパティを設定する必要はありません。 アクティブなセッションのコンテキストでは、印刷コントロールからレポート サーバーへの要求はすべてブラウザーによって処理されます。 レポート サーバーへの通信に必要なセッション変数はブラウザーによって設定されます。  
@@ -95,7 +93,7 @@ ms.locfileid: "56036603"
   
 -   60677965-AB8B-464f-9B04-4BA871A2F17F  
   
- レポートを Windows Azure SQL Reporting で実行している場合は、次の CLSID 値を使用します。  
+ レポートを Azure SQL Reporting で実行している場合は、次の CLSID 値を使用します。  
   
 -   3DD32426-554D-48C0-A200-65D3BF880E38  
   
@@ -104,11 +102,11 @@ ms.locfileid: "56036603"
 ### <a name="rsprintclient-support-for-the-print-method"></a>RSPrintClient による Print メソッドのサポート  
  **RSClientPrint** オブジェクトは、[印刷] ダイアログ ボックスを表示するための **Print** メソッドをサポートしています。 **Print** メソッドには、以下の引数があります。  
   
-|引数|I/O|型|説明|  
+|引数|I/O|[型]|[説明]|  
 |--------------|----------|----------|-----------------|  
-|ServerPath|In|String|レポート サーバーの仮想ディレクトリを指定します (たとえば、 https://adventure-works/reportserver)します。|  
-|ReportPathParameters|In|String|パラメーターを含む、レポート サーバー フォルダー名前空間内のレポートの完全な名前を指定します。 レポートは、URL にアクセスすることによって取得されます。 たとえば、「/AdventureWorks Sample Reports/Employee Sales Summary&EmpID=1234」のように指定します。|  
-|ReportName|In|String|レポートの短縮名です (上の例では、短縮名は「Employee Sales Summary」です)。 ここで設定した内容は、[印刷] ダイアログ ボックスと印刷キューに表示されます。|  
+|ServerPath|In|文字列|レポートサーバーの仮想ディレクトリ (https://adventure-works/reportserver)など) を指定します。|  
+|ReportPathParameters|In|文字列|パラメーターを含む、レポート サーバー フォルダー名前空間内のレポートの完全な名前を指定します。 レポートは、URL にアクセスすることによって取得されます。 例: "/AdventureWorks Sample Reports/Employee Sales Summary&EmpID=1234"|  
+|ReportName|In|文字列|レポートの短縮名です (上の例では、短縮名は「Employee Sales Summary」です)。 ここで設定した内容は、[印刷] ダイアログ ボックスと印刷キューに表示されます。|  
   
 ### <a name="example"></a>例  
  以下の HTML の例では、JavaScript 内で .cab ファイル、**Print** メソッド、プロパティを指定する方法を示します。  

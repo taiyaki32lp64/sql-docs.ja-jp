@@ -19,15 +19,14 @@ helpviewer_keywords:
 - database objects [SQL Server], names
 - OBJECT_SCHEMA_NAME function
 ms.assetid: 5ba90bb9-d045-4164-963e-e9e96c0b1e8b
-author: MashaMSFT
-ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: fd30ff2c40271028a742e0dcab575e4ff3c99159
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: MikeRayMSFT
+ms.author: mikeray
+ms.openlocfilehash: 70556dd6365c6c3b204456db2877fdbc61e53d44
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47722590"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67914751"
 ---
 # <a name="objectschemaname-transact-sql"></a>OBJECT_SCHEMA_NAME (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-asdw-xxx-md.md)]
@@ -45,7 +44,7 @@ OBJECT_SCHEMA_NAME ( object_id [, database_id ] )
   
 ## <a name="arguments"></a>引数  
  *object_id*  
- 使用するオブジェクトの ID を指定します。 *object_id* のデータ型は **int** です。指定したデータベース コンテキスト、または現在のデータベース コンテキストのスキーマ スコープ オブジェクトと見なされます。  
+ 使用するオブジェクトの ID です。 *object_id* のデータ型は **int** です。指定したデータベース コンテキスト、または現在のデータベース コンテキストのスキーマ スコープ オブジェクトと見なされます。  
   
  *database_id*  
  オブジェクトを検索するデータベースの ID を指定します。 *database_id* は **int** です。  

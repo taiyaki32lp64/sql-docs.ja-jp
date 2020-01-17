@@ -15,15 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - STMGeomCollFromWKB method
 ms.assetid: bbed028c-9cd6-4236-b5e5-8e914a21f2e4
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: b62631ee9c167d8f9393f1e538f450cfe6e63aab
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: MladjoA
+ms.author: mlandzic
+ms.openlocfilehash: afa95f660c04bf38bf12cee66b1053b935cc5113
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47746420"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68042241"
 ---
 # <a name="stgeomcollfromwkb-geography-data-type"></a>STGeomCollFromWKB (geography データ型)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -47,7 +46,7 @@ STGeomCollFromWKB ( 'WKB_geometrycollection' , SRID )
 ## <a name="return-types"></a>戻り値の型  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 戻り値の型: **geography**  
   
- CLR の戻り値の型: **SqlGeography**  
+ CLR の戻り値の型:**SqlGeography**  
   
 ## <a name="remarks"></a>Remarks  
  STGeomCollFromWKB() によって返される **geography** インスタンスの OGC 型は、対応する WKB 入力に基づき、**GeometryCollection**、**MultiPolygon**、**MultiLineString** または **MultiPoint** のいずれかに設定されます。  

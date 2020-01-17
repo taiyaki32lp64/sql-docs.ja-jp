@@ -1,6 +1,7 @@
 ---
-title: データベース ミラーリングの前提条件、制限事項、推奨事項 | Microsoft Docs
-ms.custom: ''
+title: 'データベース ミラーリング: 前提条件、制限事項、推奨事項'
+description: SQL Server を使用してデータベース ミラーリングを構成するための前提条件、制限事項、推奨事項について説明します。
+ms.custom: seo-lt-2019
 ms.date: 05/17/2016
 ms.prod: sql
 ms.prod_service: high-availability
@@ -18,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: fdcf2251-9895-44c6-b81e-768fef32e732
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: cc62539432599cf6273772d5db9fca0a296b5980
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 1f6a1c47cf5672cdf0f9a22be6a252cfc8cdbe87
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47669860"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75244365"
 ---
 # <a name="prerequisites-restrictions-and-recommendations-for-database-mirroring"></a>データベース ミラーリングの前提条件、制限事項、および推奨事項
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

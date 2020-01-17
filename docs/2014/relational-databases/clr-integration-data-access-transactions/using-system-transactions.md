@@ -18,11 +18,11 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: e39106ea1c4077d1aee90cedc17c5af07503a136
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48198342"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62919532"
 ---
 # <a name="using-systemtransactions"></a>System.Transactions の使用
   `System.Transactions` 名前空間では、ADO.NET と [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] CLR (共通言語ランタイム) 統合に完全に統合される新しいトランザクション フレームワークが提供されます。 `System.Transactions.TransactionScope` クラスは、接続を分散トランザクションに暗黙に参加させることで、コード ブロックをトランザクション対応にします。 `Complete` でマークされたコード ブロックの最後には、`TransactionScope` メソッドを呼び出す必要があります。 プログラムの実行がコード ブロックから離れる際には `Dispose` メソッドが呼び出され、このとき `Complete` メソッドが呼び出されなければ、トランザクションの続行が中止されます。 コードがスコープから離れるような例外がスローされると、このトランザクションは中止されたと見なされます。  

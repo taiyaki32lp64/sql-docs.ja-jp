@@ -1,5 +1,5 @@
 ---
-title: getDriverVersion メソッド (SQLServerDatabaseMetaData) |Microsoft Docs
+title: getDriverVersion メソッド (SQLServerDatabaseMetaData) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: 3be84d65-af61-4c34-b052-74a5d488eaa9
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: bdd85a56b1a75ccaf5d57493686e9f99852f068a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: fd67749bc8dcb29617c97a441c9858b3bb8fb6f5
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47680890"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67983421"
 ---
 # <a name="getdriverversion-method-sqlserverdatabasemetadata"></a>getDriverVersion メソッド (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -42,7 +41,7 @@ public java.lang.String getDriverVersion()
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- この getDriverVersion メソッドは、java.sql.DatabaseMetaData インターフェイスで getDriverVersion メソッドによって指定されます。  
+ この getDriverVersion メソッドは、java.sql.DatabaseMetaData インターフェイスの getDriverVersion メソッドで規定されています。  
   
 ## <a name="see-also"></a>参照  
  [SQLServerDatabaseMetaData のメソッド](../../../connect/jdbc/reference/sqlserverdatabasemetadata-methods.md)   

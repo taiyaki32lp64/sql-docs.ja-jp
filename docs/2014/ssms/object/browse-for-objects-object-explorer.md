@@ -14,11 +14,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 1df8207ebf479d22f1e67191dfdd254fb6403fea
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52769234"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63276865"
 ---
 # <a name="browse-for-objects-object-explorer"></a>[オブジェクトの参照] (オブジェクト エクスプローラー)
   選択されている種類のオブジェクトを表示します。 対応するチェック ボックスをオンにすると、この一覧から 1 つまたは複数のオブジェクトを選択できます。 **[オブジェクトの参照]** ボックスには、アクションに対して適切であり、ユーザーが表示する権限を持っている項目のみが表示されます。  

@@ -10,16 +10,15 @@ helpviewer_keywords:
 - MultiLineString geometry subtype [SQL Server]
 - geometry subtypes [SQL Server]
 ms.assetid: 95deeefe-d6c5-4a11-b347-379e4486e7b7
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
+author: MladjoA
+ms.author: mlandzic
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 04fdc9eb5b22a9c3f88ab635c456e3fa81cf88e4
-ms.sourcegitcommit: 467b2c708651a3a2be2c45e36d0006a5bbe87b79
+ms.openlocfilehash: 54fe24ab5a9e07e5cc39e32462e5d412bb8f163b
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53979537"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72907020"
 ---
 # <a name="multilinestring"></a>MultiLineString
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -66,7 +65,7 @@ DECLARE @g geometry = 'MULTILINESTRING((1 1, 3 5),(-5 3))';
 1.  **MultiLineString** インスタンスを構成するすべてのインスタンスが、有効な **LineString** インスタンスでなければならない。  
   
 2.  **MultiLineString** インスタンスを構成する 2 つの **LineString** インスタンスが内部で互いに重ならない。 **LineString** インスタンスは、有限数の接点のみで、互いにまたは他の **LineString** インスタンスと交差するか接することができます。  
-  
+
 次の例に、3 つの有効な **MultiLineString** インスタンスと 1 つの無効な **MultiLineString** インスタンスを示します。  
   
 ```sql  

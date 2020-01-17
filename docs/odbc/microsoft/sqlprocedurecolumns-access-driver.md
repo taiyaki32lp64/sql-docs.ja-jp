@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 34fee995-5848-4ecb-bda0-fc362a77b2d9
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: a438823d1aa71eecb25c4935026c1b43e45842d1
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 1a33d449396b5cc80e8d29767708d2f9f16736fa
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47812700"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67987848"
 ---
 # <a name="sqlprocedurecolumns-access-driver"></a>SQLProcedureColumns (Access ドライバー)
 > [!NOTE]  

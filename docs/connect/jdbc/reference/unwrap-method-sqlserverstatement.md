@@ -1,5 +1,5 @@
 ---
-title: unwrap メソッド (SQLServerStatement) |Microsoft Docs
+title: ラップ解除メソッド (SQLServerStatement) |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: ce680176-ef04-4e44-bb6c-ec50bd06e7e6
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 7a6823a9f6f57e1ebf1348f35d4a1478100962bb
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d9b57c0d984198a40e04c1dfe6eeb6ce946d2d13
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47785556"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67985605"
 ---
 # <a name="unwrap-method-sqlserverstatement"></a>unwrap メソッド (SQLServerStatement)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -48,9 +47,9 @@ public <T> T unwrap(Class<T> iface)
   
  このメソッドが呼び出されると、オブジェクトは [SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md) クラスにアンラップされます。  
   
- コード例は、「[大規模なデータ サンプルの更新](../../../connect/jdbc/updating-large-data-sample.md)、または[unwrap メソッド&#40;SQLServerCallableStatement&#41;](../../../connect/jdbc/reference/unwrap-method-sqlservercallablestatement.md)します。  
+ コード例については、「[大きなデータサンプルの更新](../../../connect/jdbc/updating-large-data-sample.md)」または「 [ &#40;メソッド SQLServerCallableStatement&#41;のラップ](../../../connect/jdbc/reference/unwrap-method-sqlservercallablestatement.md)解除」を参照してください。  
   
- 詳細については、次を参照してください。[ラッパーとインターフェイス](../../../connect/jdbc/wrappers-and-interfaces.md)します。  
+ 詳細については、「[ラッパーとインターフェイス](../../../connect/jdbc/wrappers-and-interfaces.md)」を参照してください。  
   
 ## <a name="see-also"></a>参照  
  [isWrapperFor メソッド &#40;SQLServerStatement&#41;](../../../connect/jdbc/reference/iswrapperfor-method-sqlserverstatement.md)   

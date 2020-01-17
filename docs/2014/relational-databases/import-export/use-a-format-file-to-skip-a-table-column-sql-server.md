@@ -10,15 +10,15 @@ helpviewer_keywords:
 - skipping columns when importing
 - format files [SQL Server], skipping columns
 ms.assetid: 30e0e7b9-d131-46c7-90a4-6ccf77e3d4f3
-author: douglaslMS
-ms.author: douglasl
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 9bf80986582802ad70c39d62ae0fbb835fcb360e
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 80c5c5b2f4e6d4f691b7c3977ae2f715f5424e7f
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53373134"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66011688"
 ---
 # <a name="use-a-format-file-to-skip-a-table-column-sql-server"></a>フォーマット ファイルを使用したテーブル列のスキップ (SQL Server)
   このトピックでは、フォーマット ファイルについて説明します。 フォーマット ファイルを使用すると、データ ファイルにフィールドが存在しない場合にテーブル列のインポートをスキップできます。 スキップされる列に NULL 値が許容されているか、既定値があるか、またはその両方の場合のみ、テーブルの列の数より少ないフィールドをデータ ファイルに含めることができます。  

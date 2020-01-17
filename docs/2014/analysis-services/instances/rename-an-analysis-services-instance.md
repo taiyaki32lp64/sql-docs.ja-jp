@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - instances of Analysis Services, renaming
@@ -16,12 +15,12 @@ ms.assetid: 87494741-4a2e-4fed-8061-418fd1e111c3
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 88a87802574290dee1cf0faaea2474e9fce408ce
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: 3ef94fc86c78e896eab03bffb318b58e4b328245
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52401447"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66079618"
 ---
 # <a name="rename-an-analysis-services-instance"></a>Analysis Services インスタンスの名前変更
   既存のインスタンスの名前を変更することができます[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]を使用して、**インスタンスの名前を変更**ダイアログ ボックス。  
@@ -60,7 +59,7 @@ ms.locfileid: "52401447"
   
      次に例を示します。 "Tabular"既定の仮想アカウントを使用してその結果、次の構成を名前付きインスタンスとして、表形式モードのサーバーをインストールしたとします。  
   
-    1.  インスタンス名 = \<server > \TABULAR  
+    1.  Instance name = \<server>\TABULAR  
   
     2.  サービス名 = MSOLAP$TABULAR  
   
@@ -68,7 +67,7 @@ ms.locfileid: "52401447"
   
      これで、"TAB2"インスタンスの名前を変更するとします。 名前を変更したことで、必要な構成も次のように変わります。  
   
-    1.  インスタンス名 = \<server > \TAB2  
+    1.  Instance name = \<server>\TAB2  
   
     2.  サービス名 = MSOLAP$TAB2  
   

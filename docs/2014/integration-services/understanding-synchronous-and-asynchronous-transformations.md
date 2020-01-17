@@ -12,15 +12,15 @@ helpviewer_keywords:
 - data flow components [Integration Services], synchronous and asynchronous
 - synchronous transformations [Integration Services]
 ms.assetid: 0bc2bda5-3f8a-49c2-aaf1-01dbe4c3ebba
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 334e8f064d3db60b0c1540ab0f5a173ec8c659cf
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 8d0ae065c411214a1b86aff29917a34cdcff0e0a
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53369134"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62878062"
 ---
 # <a name="understanding-synchronous-and-asynchronous-transformations"></a>同期および非同期変換について
   [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] の同期変換と非同期変換の相違点を理解するには、まず同期変換を理解するのが最も簡単な方法です。 同期変換がニーズに合わない場合は、デザインに非同期変換が必要になることがあります。  

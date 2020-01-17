@@ -4,22 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 f1_keywords:
 - "10520"
 - sql12.rtp.rptdesigner.reportproperties.customcode.f1
 ms.assetid: 955d4b11-17b4-4f1c-9690-6e7af54caea7
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: eae136b7627a079356baeb4d723d2201e7d7c05e
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: ac600f2d8642162bb8f7a3c64b07933661715223
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56289570"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66104460"
 ---
 # <a name="report-properties-dialog-box-code"></a>[コード] ([レポートのプロパティ] ダイアログ ボックス)
   選択**コード**上、**レポート プロパティ**レポート内の式で使用されるカスタム コード定義 ダイアログ ボックス。  

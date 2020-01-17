@@ -14,12 +14,12 @@ ms.assetid: e7b8f084-1052-4133-959b-cebf4add790f
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 808100a35753a1a63e3e498d434fab4969a64342
-ms.sourcegitcommit: 04dd0620202287869b23cc2fde998a18d3200c66
+ms.openlocfilehash: 758c2b42d09e120bf0621bcdedf26b93f130b39f
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "52641518"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62786806"
 ---
 # <a name="configure-the-query-governor-cost-limit-server-configuration-option"></a>query governor cost limit サーバー構成オプションの構成
   このトピックでは、構成する方法を説明します、`query governor cost limit`サーバー構成オプション[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]を使用して[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]または[!INCLUDE[tsql](../../includes/tsql-md.md)]します。 query governor cost limit オプションは、クエリを実行できる時間の上限を指定します。 クエリ コストとは、特定のハードウェア構成でクエリを完了するために必要とされる予測所要時間を秒単位で表したものです。 このオプションの既定値は 0 です。クエリ ガバナーはオフに設定されます。 この場合、すべてのクエリは時間制限なしで実行することが許可されます。 0 以外の正の値を指定すると、クエリ ガバナーは、見積コストがこの値を超えるクエリの実行を許可しません。  
@@ -38,7 +38,7 @@ ms.locfileid: "52641518"
   
      [Transact-SQL](#TsqlProcedure)  
   
--   **補足情報:**[Query governor cost limit オプションを構成した後](#FollowUp)  
+-   **補足情報:** [Query governor cost limit オプションを構成した後](#FollowUp)  
   
 ##  <a name="BeforeYouBegin"></a> はじめに  
   
@@ -75,7 +75,7 @@ ms.locfileid: "52641518"
   
 3.  次の例をコピーしてクエリ ウィンドウに貼り付け、 **[実行]** をクリックします。 この例では、 [sp_configure](/sql/relational-databases/system-stored-procedures/sp-configure-transact-sql) を使用して `query governor cost limit` オプションの値を `120` 秒に設定する方法を示します。  
   
-```tsql  
+```sql  
 USE AdventureWorks2012 ;  
 GO  
 EXEC sp_configure 'show advanced options', 1;  
@@ -91,7 +91,7 @@ GO
   
  詳細については、「 [サーバー構成オプション &#40;SQL Server&#41;](server-configuration-options-sql-server.md)」を参照してください。  
   
-##  <a name="FollowUp"></a> フォローしてください：Query governor cost limit オプションを構成した後  
+##  <a name="FollowUp"></a>補足情報: Query governor cost limit オプションを構成した後  
  新しい設定は、サーバーを再起動しなくてもすぐに有効になります。  
   
 ## <a name="see-also"></a>参照  

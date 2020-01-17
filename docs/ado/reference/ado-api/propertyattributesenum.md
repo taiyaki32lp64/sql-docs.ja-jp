@@ -15,18 +15,17 @@ helpviewer_keywords:
 ms.assetid: 96a01955-a6b4-4cbf-9c73-52bcd1e9fb25
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 0bb38a73008d86144751ee324eb442bf711d65a5
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 624fa1976792a700342a114f82aa5ca6b75c70ea
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47835970"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67931569"
 ---
 # <a name="propertyattributesenum"></a>PropertyAttributesEnum
 属性を指定します、[プロパティ](../../../ado/reference/ado-api/property-object-ado.md)オブジェクト。  
   
-|定数|値|説明|  
+|定数|Value|説明|  
 |--------------|-----------|-----------------|  
 |**adPropNotSupported**|0|プロパティがプロバイダーによってサポートされていないことを示します。|  
 |**adPropRequired**|1|データ ソースが初期化される前に、ユーザーにこのプロパティの値を指定する必要がありますを示します。|  

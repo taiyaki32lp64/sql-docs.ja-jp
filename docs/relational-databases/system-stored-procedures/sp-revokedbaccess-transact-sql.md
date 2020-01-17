@@ -17,15 +17,14 @@ helpviewer_keywords:
 ms.assetid: c997cfa1-539d-485c-a664-9c6f76bfe0c2
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: 98e962d5600064194ef4aff4a8f514e39a8f71a4
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 5eea0129b76a7bb7825987da98be40ba4a66d6fb
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47806780"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67941715"
 ---
-# <a name="sprevokedbaccess-transact-sql"></a>sp_revokedbaccess (Transact-SQL)
+# <a name="sprevokedbaccess-transact-sql"></a>sp_revokedbaccess (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   現在のデータベースからデータベース ユーザーを削除します。  
@@ -43,16 +42,15 @@ sp_revokedbaccess [ @name_in_db = ] 'name'
 ```  
   
 ## <a name="arguments"></a>引数  
- [ **@name_in_db =** ] **'***name***'**  
- 削除するデータベース ユーザーの名前を指定します。 *名前*は、 **sysname**既定値はありません。 *名前*サーバー ログイン、Windows ログイン、または Windows グループの名前を指定でき、現在のデータベースに存在する必要があります。 Windows ログインまたは Windows グループを指定する場合は、データベースで認識される名前を指定します。  
+`[ @name_in_db = ] 'name'` 削除するデータベース ユーザーの名前です。 *名前*は、 **sysname**既定値はありません。 *名前*サーバー ログイン、Windows ログイン、または Windows グループの名前を指定でき、現在のデータベースに存在する必要があります。 Windows ログインまたは Windows グループを指定する場合は、データベースで認識される名前を指定します。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  0 (成功) または 1 (失敗)  
   
 ## <a name="remarks"></a>コメント  
- データベース ユーザーを削除すると、そのユーザーに従属する権限や別名も自動的に削除されます。  
+ データベース ユーザーが削除されると、アクセス許可と、ユーザーに依存する別名も削除されます。  
   
- **sp_revokedbaccess**現在のデータベースからデータベース ユーザーのみを削除することができます。 現在のデータベースにオブジェクトを所有しているデータベース ユーザーを削除する前には、オブジェクトの所有権を譲渡するか、オブジェクトをデータベースから削除する必要があります。 詳細については、次を参照してください。 [ALTER AUTHORIZATION &#40;Transact-SQL&#41;](../../t-sql/statements/alter-authorization-transact-sql.md).  
+ **sp_revokedbaccess**現在のデータベースからデータベース ユーザーのみを削除することができます。 現在のデータベース内のオブジェクトを所有するデータベース ユーザーを削除する前に、いずれかのオブジェクトの所有権を譲渡する必要があります。 またはデータベースから削除します。 詳細については、次を参照してください。 [ALTER AUTHORIZATION &#40;Transact-SQL&#41;](../../t-sql/statements/alter-authorization-transact-sql.md).  
   
  **sp_revokedbaccess**ユーザー定義のトランザクション内で実行することはできません。  
   
@@ -67,7 +65,7 @@ EXEC sp_revokedbaccess 'Edmonds\LolanSo';
 GO  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [セキュリティ ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md)   
  [システム ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
  [DROP USER &#40;Transact-SQL&#41;](../../t-sql/statements/drop-user-transact-sql.md)   

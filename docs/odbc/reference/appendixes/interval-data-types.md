@@ -25,13 +25,12 @@ helpviewer_keywords:
 ms.assetid: fba93f65-c1db-44f4-91ba-532f87241cf7
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 930a848ea01d128cb248c7929408ce7510937ad9
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a42c8767228c75d3b7b0da308d739516875cf966
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47622220"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67947554"
 ---
 # <a name="interval-data-types"></a>Interval データ型
 間隔は、2 つの日付と時刻の差として定義されます。 間隔は、2 つの方法の 1 つで表現されます。 1 つは、*年-月*単位、年と月を表す整数の間隔を表す間隔。 もう 1 つは、*日付と時刻*日、分、および秒単位の間隔を表す間隔。 これら 2 種類の間隔は、個別か月間のさまざまな日数があるため、混在させることはできません。  

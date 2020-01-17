@@ -19,15 +19,14 @@ helpviewer_keywords:
 ms.assetid: 216b4a31-786e-4361-8a33-e5f6e9790f90
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: d69215395a579f569cbcc18b266e3a796f06148b
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: b6ba4c356411800dc7c5e52907b0baccd5682f09
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51657721"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68064142"
 ---
-# <a name="srvconvert-extended-stored-procedure-api"></a>srv_convert (拡張ストアド プロシージャ API)
+# <a name="srv_convert-extended-stored-procedure-api"></a>srv_convert (拡張ストアド プロシージャ API)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
     
 > [!IMPORTANT]  

@@ -2,20 +2,20 @@
 title: Reporting Services チュートリアル (SSRS) | Microsoft Docs
 ms.date: 11/07/2017
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: reporting-services
 ms.topic: conceptual
 helpviewer_keywords:
 - tutorials [Reporting Services]
 ms.assetid: e90cc448-563b-4dbb-9776-defb8640ec66
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 2496d85fc0c6aaf3cbcea1abe2893e5435d970d8
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 9158caf6a1c1e39578bf49bfc3f99e3b37633baf
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56293800"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65570877"
 ---
 # <a name="reporting-services-tutorials-ssrs"></a>Reporting Services チュートリアル (SSRS)
 
@@ -40,7 +40,7 @@ ms.locfileid: "56293800"
 ## <a name="see-also"></a>参照  
 * [AdventureWorks サンプル データベース](https://github.com/Microsoft/sql-server-samples/releases)  
 * [TechNet wiki の Reporting Services サンプル](https://go.microsoft.com/fwlink/?LinkId=198283)  
-* [TechNet Wiki:SQL Server 2012 サンプル](https://go.microsoft.com/fwlink/?linkID=220734)  
+* [TechNet Wiki: SQL Server 2012 のサンプル](https://go.microsoft.com/fwlink/?linkID=220734)  
  
   
   

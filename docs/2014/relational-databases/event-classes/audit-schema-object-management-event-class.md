@@ -15,11 +15,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 53b96a33e4fc369c486dcdf19ed34279898eee57
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52784644"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63012540"
 ---
 # <a name="audit-schema-object-management-event-class"></a>Audit Schema Object Management イベント クラス
   **Audit Schema Object Management** イベント クラスは、サーバー オブジェクトが作成、変更、または削除されるときに発生します。  
@@ -42,8 +42,8 @@ ms.locfileid: "52784644"
 |**NTUserName**|**nvarchar**|Windows のユーザー名。|6|はい|  
 |**ObjectName**|**nvarchar**|参照されているオブジェクトの名前。|34|はい|  
 |**ObjectType**|**int**|イベントに関係するオブジェクトの種類を表す値。 この値は **sys.objects** カタログ ビューの type 列に対応します。 値については、「 [ObjectType トレース イベント列](objecttype-trace-event-column.md)」を参照してください。|28|はい|  
-|**OwnerName**|**nvarchar**|オブジェクト所有者のデータベース ユーザー名。|37|はい|  
-|**ParentName**|**nvarchar**|オブジェクトが存在するスキーマの名前。|59|はい|  
+|**OwnerName**|**nvarchar**|オブジェクト所有者のデータベース ユーザー名。|37|[はい]|  
+|**ParentName**|**nvarchar**|オブジェクトが存在するスキーマの名前。|59|[はい]|  
 |**RequestID**|**int**|ステートメントが含まれている要求の ID。|49|はい|  
 |**ServerName**|**nvarchar**|トレースされている [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスの名前。|26|いいえ|  
 |**SessionLoginName**|**nvarchar**|セッションを開始したユーザーのログイン名。 たとえば、Login1 を使用して [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] に接続し、Login2 でステートメントを実行すると、 **SessionLoginName** には Login1 が表示され、 **LoginName** には Login2 が表示されます。 この列には、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ログインと Windows ログインの両方が表示されます。|64|はい|  

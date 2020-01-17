@@ -1,5 +1,5 @@
 ---
-title: getFloat (int) メソッド (SQLServerResultSet) |Microsoft Docs
+title: getFloat メソッド (int) (SQLServerResultSet) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: 30863ef5-7a7c-440e-8fbb-426a99266ee1
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: f50325b245a821b114e7f8d9ca3898f195eae7cc
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e043b68592fa3f95c14798ef1ca8589fade64a70
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47810660"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67983220"
 ---
 # <a name="getfloat-method-int-sqlserverresultset"></a>getFloat (int) メソッド (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -41,18 +40,18 @@ public float getFloat(int columnIndex)
  列インデックスを示す **int** です。  
   
 ## <a name="return-value"></a>戻り値  
- A **float**値。  
+ **浮動小数点**値です。  
   
 ## <a name="exceptions"></a>例外  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- この getFloat メソッドは、java.sql.ResultSet インターフェイスの getFloat メソッドによって指定されます。  
+ この getFloat メソッドは、java.sql.ResultSet インターフェイスの getFloat メソッドで規定されています。  
   
  このメソッドは、数値ベースのすべての型を、Java の**float** の忠実性を使用して返します。  
   
 ## <a name="see-also"></a>参照  
- [getFloat メソッド&#40;SQLServerResultSet&#41;](../../../connect/jdbc/reference/getfloat-method-sqlserverresultset.md)   
+ [getFloat メソッド &#40;SQLServerResultSet&#41;](../../../connect/jdbc/reference/getfloat-method-sqlserverresultset.md)   
  [SQLServerResultSet のメンバー](../../../connect/jdbc/reference/sqlserverresultset-members.md)   
  [SQLServerResultSet クラス](../../../connect/jdbc/reference/sqlserverresultset-class.md)  
   

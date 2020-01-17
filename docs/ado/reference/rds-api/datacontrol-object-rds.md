@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: d85ea4fc-451c-436e-97b8-58f92b149dd0
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: aa05b8b4be3c155c7ca59132892e0863dda60a5f
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.openlocfilehash: a571e93a070c3ce07fbaf40a86b762c749042ec1
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51600642"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67964401"
 ---
 # <a name="datacontrol-object-rds"></a>DataControl オブジェクト (RDS)
 データのクエリをバインド[レコード セット](../../../ado/reference/ado-api/recordset-object-ado.md)を 1 つまたは複数のコントロール (たとえば、テキスト ボックス、取引先グリッド コントロール、またはコンボ ボックス) を表示する、**レコード セット**Web ページ上のデータ。  
@@ -109,7 +108,7 @@ ms.locfileid: "51600642"
   
 -   [DataControl オブジェクト (RDS) のプロパティ、メソッド、およびイベント](../../../ado/reference/rds-api/datacontrol-object-rds-properties-methods-and-events.md)  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [DataControl オブジェクトの例 (VBScript)](../../../ado/reference/rds-api/datacontrol-object-example-vbscript.md)
 
 

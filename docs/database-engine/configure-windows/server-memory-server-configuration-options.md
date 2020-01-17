@@ -1,7 +1,7 @@
 ---
-title: サーバー メモリに関するサーバー構成オプション | Microsoft Docs
+title: サーバー メモリの構成オプション | Microsoft Docs
 ms.custom: ''
-ms.date: 11/27/2017
+ms.date: 08/14/2019
 ms.prod: sql
 ms.prod_service: high-availability
 ms.reviewer: ''
@@ -19,17 +19,16 @@ helpviewer_keywords:
 - manual memory options [SQL Server]
 - memory [SQL Server], servers
 ms.assetid: 29ce373e-18f8-46ff-aea6-15bbb10fb9c2
-author: MikeRayMSFT
+author: pmasl
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: b1342d023b1edc828105dbbda2e18b0ca09877de
-ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
+ms.openlocfilehash: a9e617488ac0543dd7794cce37137518c1422c80
+ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/18/2018
-ms.locfileid: "53591646"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "69028739"
 ---
-# <a name="server-memory-server-configuration-options"></a>サーバー メモリに関するサーバー構成オプション
+# <a name="server-memory-configuration-options"></a>サーバー メモリの構成オプション
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 **min server memory** および **max server memory**の 2 つのサーバー メモリ オプションを使用して、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のインスタンスで使用される SQL Server プロセス用に SQL Server Memory Manager によって管理されるメモリ量を MB 単位で再構成します。  
@@ -39,7 +38,7 @@ ms.locfileid: "53591646"
 **max server memory** に設定できる最小メモリは 128 MB です。
   
 > [!IMPORTANT]  
-> **max server memory** 値の設定が高すぎると、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の単一インスタンスと、同じホストの他の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスでメモリの競合が発生することがあります。 ただし、この値の設定が低すぎても、メモリやパフォーマンス関連の大きな問題が発生する可能性があります。 **max server memory** を最小値に設定すると、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] が起動できなくなることもあります。 このオプションの変更後に [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] を起動できなくなった場合は、**_-f_** 起動オプションを使用して起動し、**max server memory** を元の値に戻します。 詳細については、「 [データベース エンジン サービスのスタートアップ オプション](../../database-engine/configure-windows/database-engine-service-startup-options.md)」を参照してください。  
+> **max server memory** 値の設定が高すぎると、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の単一インスタンスと、同じホストの他の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスでメモリの競合が発生することがあります。 ただし、この値の設定が低すぎても、メモリやパフォーマンス関連の大きな問題が発生する可能性があります。 **max server memory** を最小値に設定すると、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] が起動できなくなることもあります。 このオプションの変更後に [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] を起動できなくなった場合は、 **_-f_** 起動オプションを使用して起動し、**max server memory** を元の値に戻します。 詳細については、「 [データベース エンジン サービスのスタートアップ オプション](../../database-engine/configure-windows/database-engine-service-startup-options.md)」を参照してください。  
     
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] はメモリを動的に使用できますが、手動でメモリ オプションを設定して [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] がアクセスできるメモリの量を制限こともできます。 この場合は、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 用のメモリ量を設定する前に、OS に必要なメモリ、max_server_memory で制御されないメモリ割り当てに必要なメモリ、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の他のインスタンス (およびコンピューターが [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 専用でない場合は他のシステム) に必要なメモリの量を物理メモリ全体から差し引いて適切なメモリ設定を決定します。 この差が、現在の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスに割り当てることができる最大メモリ量です。  
  
@@ -50,19 +49,17 @@ ms.locfileid: "53591646"
 > **min server memory** および **max server memory** は拡張オプションです。 **sp_configure** システム ストアド プロシージャを使用してこれらの設定を変更するには、 **show advanced options** を 1 に設定する必要があります。 これらの設定は、サーバーを再起動しなくてもすぐに有効になります。  
   
 <a name="min_server_memory"></a> **min_server_memory** を使用すると、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンス用に [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Memory Manager で使用できる最小メモリ量を確保できます。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] は、 **min server memory** で指定されたメモリ量を起動時にすぐに割り当てるわけではありません。 ただし、クライアントの負荷によってメモリの使用量がこの値に達すると、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] min server memory **の値を小さくしない限り、** はメモリを解放できません。 たとえば、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の複数のインスタンスが同じホストに同時に存在するとき、インスタンスのメモリを予約する目的で、max_server_memory の代わりに min_server_memory パラメーターを設定します。 また、基礎をなすホストからのメモリ負荷が高いために、ゲスト [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 仮想マシン (VM) のバッファー プールから十分なパフォーマンスに必要な量を超えるメモリが割り当て解除される事態を回避するために、min_server_memory 値の設定は仮想環境で必要不可欠となります。
- 
-> [!NOTE]  
-> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] は、**min server memory** で指定されたメモリ量を必ず割り当てるわけではありません。 サーバーの負荷が **min server memory**で指定されたメモリ量の割り当てを必要としない場合、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] はより少ないメモリで実行します。  
-  
+
+>[!NOTE]
+>[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] は、**min server memory** で指定されたメモリ量を必ず割り当てるわけではありません。 サーバーの負荷が **min server memory**で指定されたメモリ量の割り当てを必要としない場合、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] はより少ないメモリで実行します。
+
 <a name="max_server_memory"></a> **max_server_memory** を利用し、OS に好ましくないメモリ負荷が発生しないようにします。 最大サーバー メモリ構成を設定するには、メモリ要件を判断する目的で、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の全体的使用量を観察します。 単一インスタンスでこのような計算をより精確に行うには:
- -  OS のメモリ合計から、1GB ～ 4GB を OS 自体に予約します。
- -  次に、**max server memory** で制御されない、潜在的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] メモリ割り当てに相当するメモリ量を差し引きます。この相当するメモリ量は、**_スタック サイズ<sup>1</sup>\* に計算した最大ワーカー スレッド<sup>2</sup> を掛けたものにスタートアップ パラメーター<sup>3</sup> の -g を足して_** 求められます (*-g* が設定されていない場合、既定で 256MB を足します)。 残ったものが単一インスタンス セットアップの max_server_memory 設定になります。
- 
+- OS のメモリ合計から、1GB ～ 4GB を OS 自体に予約します。
+- 次に、**max server memory** で制御されない、潜在的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] メモリ割り当てに相当するメモリ量を差し引きます。この相当するメモリ量は、**スタック サイズ <sup>1</sup> \* 最大ワーカー スレッド <sup>2</sup>** です。 残ったものが単一インスタンス セットアップの max_server_memory 設定になります。
+
 <sup>1</sup> アーキテクチャあたりのスレッド スタック サイズについては、「[メモリ管理アーキテクチャ ガイド](../../relational-databases/memory-management-architecture-guide.md#stacksizes)」を参照してください。
 
 <sup>2</sup> 現在のホストで関連付けられている所与の CPU 数に対して計算される既定のワーカー スレッドについては、ドキュメント ページの「[max worker threads サーバー構成オプションの構成](../../database-engine/configure-windows/configure-the-max-worker-threads-server-configuration-option.md)」を参照してください。
-
-<sup>3</sup> スタートアップ パラメーター *-g* の詳細については、ドキュメント ページの「[データベース エンジン サービスのスタートアップ オプション](../../database-engine/configure-windows/database-engine-service-startup-options.md)」を参照してください。
 
 ## <a name="how-to-configure-memory-options-using-includessmanstudiofullincludesssmanstudiofull-mdmd"></a>[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] を利用してメモリ オプションを構成する方法  
 **min server memory** および **max server memory**の 2 つのサーバー メモリ オプションを使用して、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンス用に [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Memory Manager によって管理されるメモリ量を MB 単位で再構成します。 既定では、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] は使用可能なシステム リソースに基づいて、必要なメモリを動的に変更できます。  
@@ -74,7 +71,7 @@ ms.locfileid: "53591646"
   
 2.  **[メモリ]** ノードをクリックします。  
   
-3.  **[サーバー メモリ オプション]** で、**[最小サーバー メモリ]** と **[最大サーバー メモリ]** と同じ量を入力します。  
+3.  **[サーバー メモリ オプション]** で、 **[最小サーバー メモリ]** と **[最大サーバー メモリ]** と同じ量を入力します。  
   
      既定の設定を使用すると、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] が使用できるシステム リソースに基づいて、そのメモリ要求を動的に変更できるようになります。 **max server memory** は[上記](#max_server_memory)のように設定することが推奨されます。 
   
@@ -120,27 +117,30 @@ lock pages in memory オプションを有効にするには:
  これらの設定はインスタンスを再起動しなくても変更できるので、簡単にいろいろな設定を試して、使用パターンに最適な設定を見つけることができます。  
   
 ## <a name="providing-the-maximum-amount-of-memory-to-sql-server"></a>SQL Server に対する最大メモリ容量の指定  
-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のすべてのエディションで、プロセス仮想アドレス空間の制限までメモリを構成できます。 詳細については、「[Memory Limits for Windows and Windows Server Releases](/windows/desktop/Memory/memory-limits-for-windows-releases#physical_memory_limits_windows_server_2016)」 (Windows リリースと Windows Server リリースのメモリ上限) を参照してください。
-  
-## <a name="examples"></a>使用例  
-  
-### <a name="example-a"></a>例 A  
- 次の例では、 `max server memory` オプションを 4 GB に設定します。  
-  
-```sql  
-sp_configure 'show advanced options', 1;  
-GO  
-RECONFIGURE;  
-GO  
-sp_configure 'max server memory', 4096;  
-GO  
-RECONFIGURE;  
-GO  
-```  
-  
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のすべてのエディションで、プロセス仮想アドレス空間の制限までメモリを構成できます。 詳細については、「[Memory Limits for Windows and Windows Server Releases](/windows/desktop/Memory/memory-limits-for-windows-releases#physical-memory-limits-windows-server-2016)」 (Windows リリースと Windows Server リリースのメモリ上限) を参照してください。
+
+## <a name="examples"></a>使用例
+
+### <a name="example-a-set-the-max-server-memory-option-to-4-gb"></a>例 A: max server memory オプションを 4 GB に設定する
+ 次の例では、`max server memory` オプションを 4 GB に設定します。  `sp_configure` ではオプションの名前は `max server memory (MB)` として指定されますが、例では `(MB)` が省略されていることに注目してください。
+
+```sql
+sp_configure 'show advanced options', 1;
+GO
+RECONFIGURE;
+GO
+sp_configure 'max server memory', 4096;
+GO
+RECONFIGURE;
+GO
+```
+これにより、次のようなステートメントが出力されます:
+
+> 構成オプション 'max server memory (MB)' は 2147483647 から 4096 に変更されました。 RECONFIGURE ステートメントを実行してインストールしてください。
+
 ### <a name="example-b-determining-current-memory-allocation"></a>例 B: 現在のメモリ割り当てを確認する  
  次のクエリでは、現在割り当てられているメモリに関する情報を返します。  
-  
+
 ```sql  
 SELECT 
   physical_memory_in_use_kb/1024 AS sql_physical_memory_in_use_MB, 
@@ -155,6 +155,14 @@ SELECT
     process_virtual_memory_low AS sql_process_virtual_memory_low
 FROM sys.dm_os_process_memory;  
 ```  
+
+### <a name="example-c-determining-value-for-max-server-memory-mb"></a>例 C: 'max server memory (MB)' の値を確認する
+次のクエリでは、現在構成されている値と SQL Server で使用中の値に関する情報が返されます。  このクエリでは、'show advanced options' が true であるかどうかに関係なく結果が返されます。
+
+```sql
+SELECT c.value, c.value_in_use
+FROM sys.configurations c WHERE c.[name] = 'max server memory (MB)'
+```
   
 ## <a name="see-also"></a>参照  
  [メモリ管理アーキテクチャ ガイド](../../relational-databases/memory-management-architecture-guide.md)   
@@ -167,4 +175,3 @@ FROM sys.dm_os_process_memory;
  [エディションと SQL Server 2017 のサポートされる機能](../../sql-server/editions-and-components-of-sql-server-2017.md#Cross-BoxScaleLimits)   
  [Linux 上の SQL Server 2017 のエディションとサポートされる機能](../../linux/sql-server-linux-editions-and-components-2017.md#Cross-BoxScaleLimits)   
  [Windows リリースと Windows Server リリースのメモリ上限](/windows/desktop/Memory/memory-limits-for-windows-releases)
- 

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 f1_keywords:
 - database engine configuration
@@ -14,12 +13,12 @@ ms.assetid: dfc27c1e-0fe2-4221-bed5-f52667ddd3c8
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 423573c78c78cb97b83f8709e19a0bfd6d642645
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: ba05d426f9515793ad3a924e375ff9a6ab9f940f
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52399435"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66095879"
 ---
 # <a name="database-engine-configuration---user-instance"></a>データベース エンジンの構成 - ユーザー インスタンス
   **[ユーザー インスタンス]** ページを使用して、管理者権限のないユーザー用に、 [!INCLUDE[ssDE](../../includes/ssde-md.md)] の個別インスタンスを作成し、それらのユーザーを管理者ロールに追加します。  

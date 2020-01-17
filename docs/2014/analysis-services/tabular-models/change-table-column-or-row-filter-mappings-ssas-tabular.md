@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: 2124c526-5772-4f84-a019-9dd3e906e8dd
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: af4604c6a645c181aab1b95db99d545ae0bb5221
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: dfee215fef54f942bc7b47cff684cc35c509075c
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48201492"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66067635"
 ---
 # <a name="change-table-column-or-row-filter-mappings-ssas-tabular"></a>テーブル、列、または行のフィルターのマッピングの変更 (SSAS テーブル)
   このトピックでは、 **の** [テーブルのプロパティの編集] [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]ダイアログ ボックスを使用して、テーブル、列、または行のフィルターのマッピングを変更する方法について説明します。  
@@ -45,6 +44,6 @@ ms.locfileid: "48201492"
          設定を間違ったため最初からやり直す場合は、 **[行フィルターのクリア]** をクリックします。  
   
 ## <a name="see-also"></a>参照  
- [テーブルのプロパティ ダイアログ ボックスを編集&#40;SSAS&#41;](../edit-table-properties-dialog-box-ssas.md)  
+ [[テーブルのプロパティの編集] ダイアログ ボックス (SSAS)](../edit-table-properties-dialog-box-ssas.md)  
   
   

@@ -12,16 +12,16 @@ f1_keywords:
 ms.assetid: 65ea76db-d809-439d-be64-08b6965aaea1
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: adbece38622571eecc0e3bcb00c8f69f022919b6
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
+ms.openlocfilehash: 7cc6c6ec614acb33938433f081dfcafc2cc5fb25
+ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54135602"
+ms.lasthandoff: 08/03/2019
+ms.locfileid: "68769674"
 ---
 # <a name="replication-monitor-main-page"></a>レプリケーション モニター、メイン ページ
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
   レプリケーション モニターを使用すると、レプリケーション トポロジにおけるパブリケーションとサブスクリプションの状態およびパフォーマンスを追跡できます。 以降のトピックで詳しく説明します。  
   
 -   レプリケーション モニターの概要については、「[レプリケーションの監視](../../relational-databases/replication/monitor/monitoring-replication.md)」を参照してください。  
@@ -34,7 +34,7 @@ ms.locfileid: "54135602"
   
     -   [レプリケーション モニターを使用して情報を表示し、タスクを実行する](../../relational-databases/replication/monitor/view-information-and-perform-tasks-replication-monitor.md)    
   
-    -   [トランザクション レプリケーションの待機時間の計測および接続の検証](../../relational-databases/replication/monitor/measure-latency-and-validate-connections-for-transactional-replication.md)  
+    -   [待機時間を計測して Connections for Transactional Replication を検証します。](../../relational-databases/replication/monitor/measure-latency-and-validate-connections-for-transactional-replication.md)  
   
     -   [レプリケーション モニターのしきい値と警告の設定](../../relational-databases/replication/monitor/set-thresholds-and-warnings-in-replication-monitor.md)  
   

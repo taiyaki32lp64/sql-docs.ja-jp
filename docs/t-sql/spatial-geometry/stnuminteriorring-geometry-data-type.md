@@ -15,15 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - STNumInteriorRing (geometry Data Type)
 ms.assetid: 48e78948-5b14-41dd-85d1-169bba1c4195
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: 0d2a1d1b8cea6a02b16b98edf57e3c92278599f4
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: MladjoA
+ms.author: mlandzic
+ms.openlocfilehash: a076c8356cb7dedec9759e445c9c80499528437b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47753847"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68140926"
 ---
 # <a name="stnuminteriorring-geometry-data-type"></a>STNumInteriorRing (geometry データ型)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -40,7 +39,7 @@ ms.locfileid: "47753847"
 ## <a name="return-types"></a>戻り値の型  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の戻り値の型: **int**  
   
- CLR の戻り値の型: **SqlInt32**  
+ CLR の戻り値の型:**SqlInt32**  
   
 ## <a name="remarks"></a>Remarks  
  **geometry** インスタンスが多角形ではない場合、このメソッドは NULL を返します。  

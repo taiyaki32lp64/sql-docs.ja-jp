@@ -14,17 +14,20 @@ helpviewer_keywords:
 - SMO connection manager
 - connection managers [Integration Services], SMO
 ms.assetid: d273f1fb-a6a8-4f2f-a5ff-55c2e3de4723
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: c69a68deb08cfd0248b9b27562a687a2ee10f939
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 87400e2216b51bfab0132f369e452f27447b0572
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47649990"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71294400"
 ---
 # <a name="smo-connection-manager"></a>SMO 接続マネージャー
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   SMO 接続マネージャーを使用すると、パッケージは、SQL 管理オブジェクト (SMO) サーバーに接続できます。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] に含まれる転送タスクでは、SMO 接続マネージャーを使用します。 たとえば、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ログインを転送するログイン転送タスクでは、SMO 接続マネージャーを使用します。  
   
  SMO 接続マネージャーをパッケージに追加すると、 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] は、実行時に SMO 接続を解決する接続マネージャーを作成し、接続マネージャーのプロパティを設定し、接続マネージャーをパッケージの **Connections** コレクションに追加します。 接続マネージャーの **ConnectionManagerType** プロパティは、 **SMOServer**に設定されます。  
@@ -47,7 +50,7 @@ ms.locfileid: "47649990"
   
  SMO 接続マネージャーの詳細については、「 [SMO Connection Manager](../../integration-services/connection-manager/smo-connection-manager.md)」を参照してください。  
   
-### <a name="options"></a>[変数]  
+### <a name="options"></a>オプション  
  **サーバー名**  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスの名前を入力するか、サーバーを一覧から選択します。  
   
@@ -63,7 +66,7 @@ ms.locfileid: "47649990"
  **User name**  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 認証を選択している場合は、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ユーザー名を入力します。  
   
- **Password**  
+ **パスワード**  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 認証を選択している場合は、パスワードを入力します。  
   
  **[接続テスト]**  

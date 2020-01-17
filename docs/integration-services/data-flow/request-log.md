@@ -8,17 +8,20 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 165d3833-0493-490c-9f63-8a134a7fafb8
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: 0cd73bf3ddd2982e3c663ef77d799cdcefc64c95
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 4a84025efefa397cd1f33a706073faceb0ad70ae
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47829400"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71292127"
 ---
 # <a name="request-log"></a>[要求のログ]
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   サンプル データの SAP Netweaver BW システムに対する要求中にログに記録されたイベントを表示するには、 **[要求のログ]** ダイアログ ボックスを使用します。 この情報は、SAP BW 変換元の構成をトラブルシューティングする場合に便利です。  
   
  [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector 1.1 for SAP BW の SAP BW 変換元コンポーネントの詳細については、「 [SAP BW Source](../../integration-services/data-flow/sap-bw-source.md)」(SAP BW 変換元) をご覧ください。  
@@ -42,14 +45,14 @@ ms.locfileid: "47829400"
     > [!NOTE]  
     >  **[プレビュー]** をクリックすると、 **[プレビュー]** ダイアログ ボックスが表示されます。 このダイアログ ボックスの詳細については、「 [プレビュー](../../integration-services/data-flow/preview.md)」を参照してください。  
   
-## <a name="options"></a>[変数]  
- **Time**  
+## <a name="options"></a>オプション  
+ **[時刻]**  
  イベントが記録された時刻を表示します。  
   
- **型**  
+ **Type**  
  記録されたイベントの種類を表示します。 次の表は、使用可能なイベントの種類を示しています。  
   
-|ReplTest1|[説明]|  
+|[値]|[説明]|  
 |-----------|-----------------|  
 |S|成功メッセージ|  
 |E|エラー メッセージ|  

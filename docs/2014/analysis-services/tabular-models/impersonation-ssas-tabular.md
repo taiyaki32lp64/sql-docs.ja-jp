@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: fcc79e96-182a-45e9-8ae2-aeb440e9bedd
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: cb44454c12dec173e586fd2a94d0147dfde01eef
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: 81e8f9ae90db3c7613ccb99039d70d9a28c5a113
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52391865"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66067059"
 ---
 # <a name="impersonation-ssas-tabular"></a>権限借用 (SSAS テーブル)
   このトピックでは、データのインポートおよび処理 (更新) のためにデータ ソースに接続するときに、ログオン資格情報が Analysis Services によってどのように使用されるかについて、テーブル モデルの作成者を対象に説明しています。  
@@ -68,7 +67,7 @@ ms.locfileid: "52391865"
   
 |オプション|ImpersonationMode<sup>1</sup>|説明|  
 |------------|-----------------------------------|-----------------|  
-|**特定の Windows ユーザー名とパスワード** <sup>2</sup>|ImpersonateWindowsUserAccount|データ ソースのデータをインポートまたは処理する際に、モデルで Windows ユーザー アカウントが使用されるように指定します。 ドメインとユーザー アカウントの名前は、次の形式:**\<ドメイン名 >\\< ユーザー アカウント名\>** します。 テーブルのインポート ウィザードを使用して新しいモデルを作成する場合は、これが既定のオプションです。|  
+|**特定の Windows ユーザー名とパスワード** <sup>2</sup>|ImpersonateWindowsUserAccount|データ ソースのデータをインポートまたは処理する際に、モデルで Windows ユーザー アカウントが使用されるように指定します。 ドメインとユーザー アカウントの名前は、次の形式: **\<ドメイン名 >\\< ユーザー アカウント名\>** します。 テーブルのインポート ウィザードを使用して新しいモデルを作成する場合は、これが既定のオプションです。|  
 |**[サービス アカウント]**|ImpersonateServiceAccount|モデルを管理している Analysis Services サービス インスタンスに関連付けられているセキュリティ資格情報をモデルで使用するように指定します。|  
   
  <sup>1</sup>ImpersonationMode の値を指定する、 [DataSourceImpersonationInfo 要素&#40;ASSL&#41; ](https://docs.microsoft.com/bi-reference/assl/properties/impersonationinfo-element-assl)データ ソースのプロパティ。  
@@ -93,7 +92,7 @@ ms.locfileid: "52391865"
   
  省略記号 (...) をクリックして、Analysis Services サーバーに配置されているモデルの場合、権限借用情報を構成することができます、**データ ソース権限借用情報**プロパティ、 **データベースのプロパティ**  ダイアログ ボックスの[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]します。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [DirectQuery モード &#40;SSAS テーブル&#41;](directquery-mode-ssas-tabular.md)   
  [データ ソース &#40;SSAS テーブル&#41;](../data-sources-ssas-tabular.md)   
  [テーブル モデル ソリューションの配置 &#40;SSAS テーブル&#41;](tabular-model-solution-deployment-ssas-tabular.md)  

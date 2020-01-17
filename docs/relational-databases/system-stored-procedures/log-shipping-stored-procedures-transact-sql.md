@@ -15,15 +15,14 @@ helpviewer_keywords:
 ms.assetid: 39554188-20fe-42ec-a53f-35e1dc98c274
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: ab42cd7c17915abef367ea30b97a750aef2dea9e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 0a081fd1d3cebb7d5d83362d2cf5af700f75da09
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47733151"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67942174"
 ---
-# <a name="log-shipping-stored-procedures-transact-sql"></a>ログ配布ストアド プロシージャ (Transact-SQL)
+# <a name="log-shipping-stored-procedures-transact-sql"></a>ログ配布ストアド プロシージャ (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 次のシステム ストアド プロシージャを使用して、構成を以降のバージョンでは、変更、および、ログ配布構成を監視します。  
@@ -43,7 +42,7 @@ ms.locfileid: "47733151"
 |[sp_delete_log_shipping_primary_database](../../relational-databases/system-stored-procedures/sp-delete-log-shipping-primary-database-transact-sql.md)|[sp_refresh_log_shipping_monitor](../../relational-databases/system-stored-procedures/sp-refresh-log-shipping-monitor-transact-sql.md)|  
 |[sp_delete_log_shipping_primary_secondary](../../relational-databases/system-stored-procedures/sp-delete-log-shipping-primary-secondary-transact-sql.md)||  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [ログ配布について &#40;SQL Server&#41;](../../database-engine/log-shipping/about-log-shipping-sql-server.md)   
  [システム ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   

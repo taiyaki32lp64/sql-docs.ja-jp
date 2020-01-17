@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 ms.assetid: 4be6e836-158e-4bc9-8870-7f394d7c7e11
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 5d6a7193d17e569d9fc0b797e61855afb6dc0dd8
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: bb547f3aa1352006b91641727f34ba85ba41dea5
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56295898"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66106180"
 ---
 # <a name="controlling-row-and-column-headings-report-builder-and-ssrs"></a>行見出しと列見出しの制御 (レポート ビルダーおよび SSRS)
   テーブル、マトリックス、一覧のいずれのデータ領域も、上下または左右に、複数のページにわたって続く場合があります。 行見出しや列見出しを各ページに繰り返し表示するかどうかは、適宜指定することが可能です。 また、レポート マネージャーやレポート プレビューなどの対話的なレンダラーでは、行見出しまたは列見出しを固定することにより、レポートを上下左右にスクロールしても、見出しが隠れないようにすることができます。 通常、テーブルまたはマトリックスでは、先頭行には、列データのラベルとしての列見出しが、先頭列には、行データのラベルとしての行見出しが表示されます。 入れ子構造のグループの場合は、グループ ラベルを含んでいる、先頭から数行分の行見出しまたは列見出しをひとまとめにして、繰り返し表示することもできます。 既定では、一覧データ領域に見出しは含まれません。  
@@ -113,7 +112,7 @@ ms.locfileid: "56295898"
   
  ![行グループ、詳細設定モードで静的メンバー](../media/rs-tableheaderdynamicwithgroupheadercelladvanced.gif "行グループ、詳細設定モードで静的メンバー")  
   
- 一連の tablix メンバーが一覧表示します。**静的**、(**静的**)、カテゴリ、および (**詳細**)。 かっこ () 付きの Tablix メンバーは、対応するグループ ヘッダーがないことを表します。 列見出しを繰り返し表示するか固定するには、一番上の静的な Tablix メンバーを選択し、プロパティ ペインでプロパティを設定します。  
+ tablix の場合、次のメンバーが一覧表示されます:**Static**、(**Static**)、Category、(**Details**)。 かっこ () 付きの Tablix メンバーは、対応するグループ ヘッダーがないことを表します。 列見出しを繰り返し表示するか固定するには、一番上の静的な Tablix メンバーを選択し、プロパティ ペインでプロパティを設定します。  
   
  [トップに戻る](#Top)  
   
@@ -140,7 +139,7 @@ ms.locfileid: "56295898"
   
  ![行グループ、詳細設定、グループ ヘッダーなし](../media/rs-tableheaderdynamicwithnogroupheadercelladvanced.gif "行グループ、詳細設定、グループ ヘッダーなし")  
   
- 行グループ ペインでは、次の tablix メンバーが一覧表示します。(**静的**)、(Category)、(**静的**)、および (**詳細**)。 列見出しを繰り返し表示するか固定するには、一番上の (**Static**) という Tablix メンバーを選択し、プロパティ ペインでプロパティを設定します。  
+ [行グループ] ウィンドウには、次の Tablix メンバーが一覧表示されます:(**Static**)、(Category)、(**Static**)、および (**Details**)。 列見出しを繰り返し表示するか固定するには、一番上の (**Static**) という Tablix メンバーを選択し、プロパティ ペインでプロパティを設定します。  
   
  [トップに戻る](#Top)  
   

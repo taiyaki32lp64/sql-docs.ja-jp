@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 4b146437-3061-47f6-9e8c-26eeea10b54e
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: fa54fa7b0f4eaf272b3a59f9beac80974bd6dcbf
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: ed494e55967bb02680f0397d3b651a59fd2d3bbc
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51672818"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68028042"
 ---
 # <a name="assemblies-database-engine"></a>アセンブリ (データベース エンジン)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

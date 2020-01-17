@@ -12,12 +12,12 @@ ms.assetid: b48da5b4-6fe7-4eb7-bade-dc7d697c6d5c
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 896a3d19345805d5468f3ec238ae5e75be34daba
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 7ba283ef2ff426521c881f733bc29465eebc0c76
+ms.sourcegitcommit: f912c101d2939084c4ea2e9881eb98e1afa29dad
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52822256"
+ms.lasthandoff: 10/23/2019
+ms.locfileid: "72798161"
 ---
 # <a name="create-a-cmdexec-job-step"></a>CmdExec ジョブ ステップの作成
   このトピックでは、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 、 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 、または SQL Server 管理オブジェクトを使用して、実行可能なプログラムまたはオペレーティング システム コマンドを使用する [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] [!INCLUDE[tsql](../../includes/tsql-md.md)] エージェント ジョブ ステップを作成および定義する方法について説明します。  
@@ -38,10 +38,10 @@ ms.locfileid: "52822256"
   
 ##  <a name="BeforeYouBegin"></a> はじめに  
   
-###  <a name="Security"></a> セキュリティ  
+###  <a name="Security"></a> Security  
  既定では、 **sysadmin** 固定サーバー ロールのメンバーだけが CmdExec ジョブ ステップを作成できます。 これらのジョブ ステップは、 **sysadmin** ユーザーがプロキシ アカウントを作成しない限り、SQL Server エージェント サービス アカウントのコンテキストで実行されます。 **sysadmin** ロールのメンバーではないユーザーでも、CmdExec プロキシ アカウントにアクセスできる場合は CmdExec ジョブ ステップを作成できます。  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> アクセス許可  
  詳細については、「 [SQL Server エージェントのセキュリティの実装](implement-sql-server-agent-security.md)」をご覧ください。  
   
 ##  <a name="SSMS"></a> SQL Server Management Studio の使用  
@@ -68,7 +68,7 @@ ms.locfileid: "52822256"
   
 ##  <a name="TSQL"></a> Transact-SQL の使用  
   
-#### <a name="to-create-a-cmdexec-job-step"></a>CmdExec ジョブ ステップを作成するには  
+### <a name="to-create-a-cmdexec-job-step"></a>CmdExec ジョブ ステップを作成するには  
   
 1.  **オブジェクト エクスプローラー**で、 [!INCLUDE[ssDE](../../includes/ssde-md.md)]のインスタンスに接続します。  
   
@@ -76,7 +76,7 @@ ms.locfileid: "52822256"
   
 3.  次の例をコピーしてクエリ ウィンドウに貼り付け、 **[実行]** をクリックします。  
   
-    ```  
+    ```sql
     -- creates a job step that uses CmdExec  
     USE msdb;  
     GO  
@@ -90,11 +90,10 @@ ms.locfileid: "52822256"
     GO  
     ```  
   
- 詳細については、次を参照してください[sp_add_jobstep &#40;TRANSACT-SQL。&#41;](/sql/relational-databases/system-stored-procedures/sp-add-jobstep-transact-sql)  
+ 詳細については、「 [sp_add_jobstep &#40;transact-sql&#41; ](/sql/relational-databases/system-stored-procedures/sp-add-jobstep-transact-sql) 」を参照してください。  
   
-##  <a name="SMO"></a> SQL Server 管理オブジェクトの使用  
- **CmdExec ジョブ ステップを作成するには**  
+##  <a name="SMO"></a>SQL Server 管理オブジェクトの使用  
+
+### <a name="to-create-a-cmdexec-job-step"></a>CmdExec ジョブ ステップを作成するには
   
- 使用して、 `JobStep` Visual Basic、Visual c#、PowerShell など、選択したプログラミング言語を使用してクラス。  
-  
-  
+ Visual Basic、ビジュアルC#、PowerShell などのプログラミング言語で `JobStep` クラスを使用します。  

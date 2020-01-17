@@ -12,16 +12,15 @@ helpviewer_keywords:
 ms.assetid: b27b5c37-3db2-4831-a447-ee6442e24d87
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: e5b0efd474debf81d7d61c9228beadb95beea16a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 1a26f602e5746f1dfc0556d16448514ae8df7215
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47696541"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67966027"
 ---
 # <a name="indexes-collection-properties-methods-and-events"></a>Indexes コレクションのプロパティ、メソッド、およびイベント
-## <a name="properties"></a>[プロパティ]  
+## <a name="properties"></a>Properties  
  [Count プロパティ](../../../ado/reference/ado-api/count-property-ado.md)  
   
  [項目のプロパティ](../../../ado/reference/ado-api/item-property-ado.md)  
@@ -36,5 +35,5 @@ ms.locfileid: "47696541"
 ## <a name="events"></a>イベント  
  [なし] :  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [Indexes コレクション (ADOX)](../../../ado/reference/adox-api/indexes-collection-adox.md)

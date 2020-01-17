@@ -7,17 +7,17 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 5c59f723-9707-4407-80ae-f05f483cf65f
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 756c6ce9c57b314ddd9f9e821df7c391af5fa84a
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: f652519efc4b77bd785cdded468fe114f6499200
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52805800"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62891550"
 ---
-# <a name="step-6-adding-and-configuring-the-lookup-transformations"></a>手順 6:追加して、参照変換を構成します。
+# <a name="step-6-adding-and-configuring-the-lookup-transformations"></a>手順 6:参照変換の追加と構成
   ソース ファイルからデータを取り出すフラット ファイルを構成したら、次は、 **CurrencyKey** および **DateKey**の値を取得する際に必要な参照変換を定義します。 参照変換は、指定の入力列のデータを参照データセットの列に結合することにより、参照を実行します。 参照データセットは、既存のテーブル、既存のビュー、新しいテーブル、または SQL ステートメントの結果のいずれかになります。 このチュートリアルでは、参照変換は、OLE DB 接続マネージャーを使用して、参照データセットのソースとなるデータを含むデータベースに接続します。  
   
 > [!NOTE]  
@@ -124,7 +124,7 @@ ms.locfileid: "52805800"
   
 9. **[詳細設定]** ページで、キャッシュ オプションを確認します。  
   
-10. **[OK]** をクリックして、**[データ フロー]** デザイン画面に戻ります。  
+10. **[OK]** をクリックして、 **[データ フロー]** デザイン画面に戻ります。  
   
 11. [Lookup Date Key] 変換を右クリックし、 **[プロパティ]** をクリックします。  
   
@@ -133,7 +133,7 @@ ms.locfileid: "52805800"
 ## <a name="next-task-in-lesson"></a>このレッスンの次の作業  
  [手順 7:追加して、OLE DB 変換先の構成](lesson-1-7-adding-and-configuring-the-ole-db-destination.md)  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [Lookup Transformation](data-flow/transformations/lookup-transformation.md)  
   
   

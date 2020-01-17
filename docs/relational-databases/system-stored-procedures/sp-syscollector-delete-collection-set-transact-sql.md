@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: 29c63a74-4db4-4068-bd57-9fb519b0c598
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 1636a081aee571297aa4c9e3cbe09cd30c8feca5
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e60fb13244d6740b7d52c568835e54155eeb8c46
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47651830"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68000877"
 ---
 # <a name="spsyscollectordeletecollectionset-transact-sql"></a>sp_syscollector_delete_collection_set (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -45,7 +44,7 @@ sp_syscollector_delete_collection_set [[ @collection_set_id = ] collection_set_i
  [ @collection_set_id = ] *collection_set_id*  
  コレクション セットの一意の識別子を指定します。 *collection_set_id*は**int**場合、値が必要と*名前*は NULL です。  
   
- [ @name =] '*名前*'  
+ [ @name = ] '*name*'  
  コレクション セットの名前を指定します。 *名前*は**sysname**場合、値が必要と*collection_set_id*は NULL です。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
@@ -56,7 +55,7 @@ sp_syscollector_delete_collection_set [[ @collection_set_id = ] collection_set_i
   
  いずれか*collection_set_id*または*名前*する必要があります値を持つ、どちらも NULL をすることはできません。 これらの値を取得するには、syscollector_collection_set システム ビューにクエリを実行します。  
   
- システム定義のコレクション セットは削除できません。  
+ システム定義のコレクション セットを削除できません。  
   
 ## <a name="permissions"></a>アクセス許可  
  このプロシージャを実行するには、(EXECUTE 権限を持つ) dc_admin 固定データベース ロールのメンバーシップが必要です。  
@@ -71,7 +70,7 @@ EXEC dbo.sp_syscollector_delete_collection_set
     @collection_set_id = 4;  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [データ コレクター ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/data-collector-stored-procedures-transact-sql.md)   
  [[データ コレクション]](../../relational-databases/data-collection/data-collection.md)   
  [syscollector_collection_sets &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/syscollector-collection-sets-transact-sql.md)  

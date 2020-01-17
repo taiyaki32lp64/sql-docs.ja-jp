@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: a15ee185-f433-4915-9c75-5ebd90c758fd
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 98441381db1d72b2cf33c2c7c6b937b9553fd8da
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 702abdf51c74ff3c6170a09c481f00f9d266fac7
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47774760"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67952726"
 ---
 # <a name="getconnection-method-sqlserverdatasource"></a>getConnection メソッド (SQLServerDataSource)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

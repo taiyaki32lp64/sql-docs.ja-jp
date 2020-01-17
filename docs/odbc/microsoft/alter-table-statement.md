@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 9cfa6ea3-7e33-46c7-99fd-3c717fbcc4e6
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: bf03b52495f572bf5dc9a82b289f15cb1c6146a2
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 8e830dbf765f501ddf041f076ffb7b66348c4467
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47671246"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68138240"
 ---
 # <a name="alter-table-statement"></a>ALTER TABLE ステートメント
 Microsoft Access、dBASE、または Paradoxdriver を使用する場合は、add および drop のテーブルの制約定義句を使用した ALTER TABLE ステートメントがサポートされています。 (ALTER TABLE ステートメントはサポートされませんなドライバを Microsoft Excel またはテキスト。)  

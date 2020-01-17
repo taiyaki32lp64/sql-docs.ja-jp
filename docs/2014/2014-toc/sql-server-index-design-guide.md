@@ -10,26 +10,26 @@ ms.assetid: b856ee9a-49e7-4fab-a88d-48a633fce269
 author: craigg-msft
 ms.author: craigg
 manager: craigg
-ms.openlocfilehash: ee47da3e97240ec4573303700e9793ee482821c7
-ms.sourcegitcommit: e3f5b70bbb4c66294df8c7b2c70186bdf2365af9
+ms.openlocfilehash: 726fb1ffd4175afa0d247d2029db559db2ff3231
+ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/18/2019
-ms.locfileid: "54397671"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68475981"
 ---
 # <a name="sql-server-index-design-guide"></a>SQL Server インデックス デザイン ガイド
 
   不完全なデザインのインデックスやインデックスの不備は、データベース アプリケーションのボトルネックの主な原因となります。 効率的なインデックスのデザインは、データベースとアプリケーションの高パフォーマンスを実現するための最優先事項です。 この SQL Server インデックス デザイン ガイドには、効果的なインデックスをデザインしてアプリケーションのニーズを満たすために役立つ情報および推奨事項が含まれています。  
   
-**適用対象**:[!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)]を通じて[!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]明記しない限りです。  
+**に適用さ**れ[!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]ます。特に指定がない限り、を[!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)]使用します。  
   
  このガイドでは、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]で使用できるインデックスの種類に関して一般的な知識があることを前提としています。 インデックスの種類に関する全般的な説明については、「 [インデックス](../relational-databases/indexes/indexes.md)」を参照してください。  
   
-##  <a name="Top"></a> このガイドで  
+##  <a name="Top"></a>このガイドの手順  
 
  [インデックスのデザインの基礎](#Basics)  
   
- [一般的なインデックスのデザイン ガイドライン](#General_Design)  
+ [インデックスのデザインに関する一般的なガイドライン](#General_Design)  
   
  [クラスター化インデックスのデザイン ガイドライン](#Clustered)  
   
@@ -39,7 +39,7 @@ ms.locfileid: "54397671"
   
  [フィルター選択されたインデックスのデザイン ガイドライン](#Filtered)  
   
- [その他の情報](#Additional_Reading)  
+ [その他の参考資料](#Additional_Reading)  
   
 ##  <a name="Basics"></a> インデックスのデザインの基礎  
 
@@ -55,7 +55,7 @@ ms.locfileid: "54397671"
 
  インデックスをデザインするには、次の作業を行うことをお勧めします。  
   
-1.  データベース自体の特性を理解します。 たとえば、データが頻繁に変更されるオンライン トランザクション処理 (OLTP) データベースであるか、主に読み取り専用データが格納されており非常に大きなデータ セットの高速処理を要する意思決定支援システム (DSS) データベースまたはデータ ウェアハウジング (OLAP) データベースであるかを理解する必要があります。 [!INCLUDE[ssSQL11](../includes/sssql11-md.md)]で、 *xVelocity メモリ最適化列ストア* インデックスは、一般的なデータ ウェアハウスのデータ セットに特に適しています。 列ストア インデックスによって、フィルター処理クエリ、集計クエリ、グループ化クエリ、スター結合クエリなどの一般的なデータ ウェアハウス クエリのパフォーマンスを向上することで、ユーザーが快適にデータ ウェアハウスを利用できるようになります。 詳細については、次を参照してください。[列ストア インデックスの概念](../relational-databases/indexes/columnstore-indexes-described.md)します。  
+1.  データベース自体の特性を理解します。 たとえば、データが頻繁に変更されるオンライン トランザクション処理 (OLTP) データベースであるか、主に読み取り専用データが格納されており非常に大きなデータ セットの高速処理を要する意思決定支援システム (DSS) データベースまたはデータ ウェアハウジング (OLAP) データベースであるかを理解する必要があります。 [!INCLUDE[ssSQL11](../includes/sssql11-md.md)]で、 *xVelocity メモリ最適化列ストア* インデックスは、一般的なデータ ウェアハウスのデータ セットに特に適しています。 列ストア インデックスによって、フィルター処理クエリ、集計クエリ、グループ化クエリ、スター結合クエリなどの一般的なデータ ウェアハウス クエリのパフォーマンスを向上することで、ユーザーが快適にデータ ウェアハウスを利用できるようになります。 詳細については、「[列ストアインデックスの説明](../relational-databases/indexes/columnstore-indexes-described.md)」を参照してください。  
   
 2.  最もよく使用されるクエリの特性を理解します。 たとえば、よく使用されるクエリの中に、複数のテーブルを結合するクエリがあることを把握していると、使用する最適なインデックスの種類を決定するときに役立ちます。  
   
@@ -180,7 +180,7 @@ ORDER BY RejectedQty DESC, ProductID ASC;
   
  次に示すこのクエリの実行プランは、クエリ オプティマイザーにより SORT 操作が使用され、ORDER BY 句で指定された順序で結果セットが返されたことを示します。  
   
- ![実行プランは、演算子を使用して、並べ替えを示しています。](media/indexsort1.gif "実行プランは演算子を使用して、並べ替えを示します。")  
+ ![実行プランは、SORT 演算子が使用されていることを示します。](media/indexsort1.gif "実行プランは、SORT 演算子が使用されていることを示します。")  
   
  作成したインデックスのキー列がクエリの ORDER BY 句で使用するキー列と一致する場合、クエリ プランの SORT 操作を削除できるので、クエリ プランがより効率的になります。  
   
@@ -192,13 +192,13 @@ ON Purchasing.PurchaseOrderDetail
   
  もう一度クエリを実行した後、次の実行プランは、SORT 操作が削除され、新しく作成された非クラスター化インデックスが使用されたことを示します。  
   
- ![演算子は使用されず、SORT 示す実行プラン](media/insertsort2.gif "演算子は使用されず、SORT 示す実行プラン")  
+ ![実行プランは、並べ替え演算子が使用されていないことを示し](media/insertsort2.gif "実行プランは、並べ替え演算子が使用されていないことを示し")ます  
   
  [!INCLUDE[ssDE](../includes/ssde-md.md)] は、どちらの方向でも同じように効率的に移動します。 `(RejectedQty DESC, ProductID ASC)` として定義されたインデックスは、ORDER BY 句の列の並べ替え方向が逆転されたクエリで引き続き使用できます。 たとえば、ORDER BY 句 `ORDER BY RejectedQty ASC, ProductID DESC` が含まれたクエリでは、このインデックスを使用できます。  
   
  並べ替え順は、キー列のみに指定できます。 [sys.index_columns](/sql/relational-databases/system-catalog-views/sys-indexes-transact-sql) カタログ ビューと INDEXKEY_PROPERTY 関数により、インデックス列が昇順と降順のどちらで格納されているかが報告されます。  
   
- ![上部のリンクに戻る で使用される矢印アイコン](media/uparrow16x16.gif "に戻る リンクの上位で使用される矢印アイコン")[このガイドで](#Top)  
+ "![トップに戻る" リンクで使用される矢印アイコン]"(media/uparrow16x16.gif "トップに戻る\" リンクで使用される矢印アイコン")[このガイドの手順](#Top)  
   
 ##  <a name="Clustered"></a> クラスター化インデックスのデザイン ガイドライン  
 
@@ -213,7 +213,7 @@ ON Purchasing.PurchaseOrderDetail
   
 -   範囲クエリで使用可能。  
   
- UNIQUE プロパティを指定せずにクラスター化インデックスが作成された場合、 [!INCLUDE[ssDE](../includes/ssde-md.md)] により、4 バイトの uniqueifier 列が自動的にテーブルに追加されます。 必要があれば、各キーを一意にするため、 [!INCLUDE[ssDE](../includes/ssde-md.md)] により自動的に uniqueifier 値が行に追加されます。 この列とその値は、内部的に使用されるもので、ユーザーが参照したりアクセスすることはできません。  
+ UNIQUE プロパティを使用してクラスター化インデックスが作成され[!INCLUDE[ssDE](../includes/ssde-md.md)]ていない場合、は自動的に4バイトの uniquifier 列をテーブルに追加します。 必要に応じて、 [!INCLUDE[ssDE](../includes/ssde-md.md)] uniquifier 値が自動的に行に追加され、各キーが一意になります。 この列とその値は、内部的に使用されるもので、ユーザーが参照したりアクセスすることはできません。  
   
 ### <a name="clustered-index-architecture"></a>クラスター化インデックスのアーキテクチャ  
 
@@ -273,7 +273,7 @@ ON Purchasing.PurchaseOrderDetail
   
      広範なキーは、複数の列または複数のサイズの大きな列を組み合わせたものです。 クラスター化インデックスのキー値は、すべての非クラスター化インデックスにより、参照キーとして使用されます。 非クラスター化インデックスのエントリには、クラスター化キー以外に、非クラスター化インデックスのキー列も格納されるため、同じテーブルに非クラスター化インデックスが定義されている場合は、サイズがかなり大きくなります。  
   
- ![上部のリンクに戻る で使用される矢印アイコン](media/uparrow16x16.gif "に戻る リンクの上位で使用される矢印アイコン")[このガイドで](#Top)  
+ "![トップに戻る" リンクで使用される矢印アイコン]"(media/uparrow16x16.gif "トップに戻る\" リンクで使用される矢印アイコン")[このガイドの手順](#Top)  
   
 ##  <a name="Nonclustered"></a> 非クラスター化インデックスのデザイン ガイドライン  
 
@@ -453,7 +453,7 @@ INCLUDE (AddressLine1, AddressLine2, City, StateProvinceID);
   
  データ変更によるパフォーマンスへの影響や追加ディスク領域の要件よりも、クエリのパフォーマンスから得られる利点の方が大きいかどうかを判断する必要があります。  
   
- ![上部のリンクに戻る で使用される矢印アイコン](media/uparrow16x16.gif "に戻る リンクの上位で使用される矢印アイコン")[このガイドで](#Top)  
+ "![トップに戻る" リンクで使用される矢印アイコン]"(media/uparrow16x16.gif "トップに戻る\" リンクで使用される矢印アイコン")[このガイドの手順](#Top)  
   
 ##  <a name="Unique"></a> 一意インデックスのデザイン ガイドライン  
 
@@ -479,7 +479,7 @@ INCLUDE (AddressLine1, AddressLine2, City, StateProvinceID);
   
 -   一意非クラスター化インデックスには、付加非キー列を含めることができます。 詳細については、 [付加列インデックス](#Included_Columns)に関する記述を参照してください。  
   
- ![上部のリンクに戻る で使用される矢印アイコン](media/uparrow16x16.gif "に戻る リンクの上位で使用される矢印アイコン")[このガイドで](#Top)  
+ "![トップに戻る" リンクで使用される矢印アイコン]"(media/uparrow16x16.gif "トップに戻る\" リンクで使用される矢印アイコン")[このガイドの手順](#Top)  
   
 ##  <a name="Filtered"></a> フィルター選択されたインデックスのデザイン ガイドライン  
 
@@ -626,7 +626,7 @@ WHERE b = CONVERT(Varbinary(4), 1);
   
  データ変換を比較演算子の左辺から右辺に移動すると、変換の意味が変わることがあります。 この例では、CONVERT 演算子を右辺に追加したときに、整数の比較から `varbinary` の比較に変わりました。  
   
- ![上部のリンクに戻る で使用される矢印アイコン](media/uparrow16x16.gif "に戻る リンクの上位で使用される矢印アイコン")[このガイドで](#Top)  
+ "![トップに戻る" リンクで使用される矢印アイコン]"(media/uparrow16x16.gif "トップに戻る\" リンクで使用される矢印アイコン")[このガイドの手順](#Top)  
   
 ##  <a name="Additional_Reading"></a> その他の情報  
 

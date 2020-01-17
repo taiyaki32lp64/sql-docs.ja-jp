@@ -13,15 +13,14 @@ helpviewer_keywords:
 - users [Master Data Services], about users
 - groups [Master Data Services], about groups
 ms.assetid: ed08dd2d-248e-4b68-91d4-e9961cb50eed
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 00c51ad3a3b3d428a9a89ef5aafed54c26db76cf
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
-ms.translationtype: HT
+ms.openlocfilehash: f52031d8dead33601dd9f60e5475da53b0b9c9d9
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52781784"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68102580"
 ---
 # <a name="users-and-groups-master-data-services"></a>ユーザーおよびグループ (Master Data Services)
 
@@ -45,7 +44,7 @@ ms.locfileid: "52781784"
   
  個々のユーザーに追加の権限を割り当てたり、ユーザーを [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]にアクセスできる複数のグループに含めたりしないでください。 また、特定のメンバーに対するグループのアクセスを制限する必要がない限り、階層メンバーの権限は使用しないでください。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [ユーザーを追加する (マスター データ サービス)](../master-data-services/add-a-user-master-data-services.md)   
  [グループを追加する (マスター データ サービス)](../master-data-services/add-a-group-master-data-services.md)   
  [ユーザーまたはグループを削除する (マスター データ サービス)](../master-data-services/delete-users-or-groups-master-data-services.md)   

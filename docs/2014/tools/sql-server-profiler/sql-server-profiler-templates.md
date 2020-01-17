@@ -18,11 +18,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 5cac924e926d03dffb9116e5ce7194bb784d45fe
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52779594"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68186146"
 ---
 # <a name="sql-server-profiler-templates"></a>SQL Server Profiler のテンプレート
   [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] を使用して、トレースに含めるイベント クラスとデータ列を定義するテンプレートを作成できます。 テンプレートを定義して保存したら、選択したイベント クラスごとにデータを記録するトレースを実行できます。 テンプレートは多くのトレースで使用できますが、テンプレート自体は実行できません。  
@@ -54,12 +54,12 @@ ms.locfileid: "52779594"
 ## <a name="default-template"></a>既定のテンプレート  
  [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] では、すべての新しいトレースに適用される既定のテンプレートとして **Standard** テンプレートが自動的に指定されます。 ただし、他の定義済みテンプレートまたはユーザー定義テンプレートを既定のテンプレートにすることもできます。 既定のテンプレートを変更するには、 **[トレース テンプレートのプロパティ]** ダイアログ ボックスの **[全般]** タブを使用してテンプレートを作成または編集するときに、 **[選択したサーバーの種類に対する既定のテンプレートとして使用する]** チェック ボックスをオンにします。  
   
- **[トレース テンプレートのプロパティ]** ダイアログ ボックスに移動するには、[!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] で、**[ファイル]** メニューの **[テンプレート]** を選択して、**[新しいテンプレート]** または **[テンプレートの編集]** をクリックします。  
+ **[トレース テンプレートのプロパティ]** ダイアログ ボックスに移動するには、[!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] で、 **[ファイル]** メニューの **[テンプレート]** を選択して、 **[新しいテンプレート]** または **[テンプレートの編集]** をクリックします。  
   
 > [!NOTE]  
 >  既定のテンプレートは、サーバーの特定の種類固有のテンプレートです。 あるサーバーの種類の既定のテンプレートを変更しても、他のサーバーの種類の既定のテンプレートには影響しません。 特定のサーバーの既定のテンプレートを設定する方法の詳細については、「[トレース定義の既定値の設定 &#40;SQL Server Profiler&#41;](set-trace-definition-defaults-sql-server-profiler.md)」を参照してください。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [トレース テンプレートの作成 &#40;SQL Server Profiler&#41;](create-a-trace-template-sql-server-profiler.md)   
  [トレース テンプレートの変更 &#40;SQL Server Profiler&#41;](../../database-engine/modify-a-trace-template-sql-server-profiler.md)   
  [トレース テンプレートのエクスポート &#40;SQL Server Profiler&#41;](export-a-trace-template-sql-server-profiler.md)   

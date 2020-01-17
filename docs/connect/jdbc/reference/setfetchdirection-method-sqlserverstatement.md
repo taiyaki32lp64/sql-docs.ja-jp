@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: 18176517-2fb3-4266-924d-0f01253083d2
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: f3c6e0080f4d94b0d792c1994695c590fd4fed66
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 995f3f0f63728d397cf51013bd5429943e9cac0c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47812340"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67974399"
 ---
 # <a name="setfetchdirection-method-sqlserverstatement"></a>setFetchDirection メソッド (SQLServerStatement)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -53,7 +52,7 @@ public final void setFetchDirection(int nDir)
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- この setFetchDirection メソッドは setFetchDirection メソッド java.sql.Statement インターフェイスで指定します。  
+ この setFetchDirection メソッドは、java. .sql. ステートメントインターフェイスの setFetchDirection メソッドによって指定されます。  
   
 ## <a name="see-also"></a>参照  
  [SQLServerStatement のメンバー](../../../connect/jdbc/reference/sqlserverstatement-members.md)   

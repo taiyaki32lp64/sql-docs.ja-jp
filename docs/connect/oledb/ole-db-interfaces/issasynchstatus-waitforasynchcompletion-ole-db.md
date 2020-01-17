@@ -1,5 +1,5 @@
 ---
-title: Issasynchstatus::waitforasynchcompletion (OLE DB) |Microsoft Docs
+title: 'ISSAsynchStatus:: WaitForAsynchCompletion (OLE DB) |Microsoft Docs'
 description: ISSAsynchStatus::WaitForAsynchCompletion (OLE DB)
 ms.custom: ''
 ms.date: 06/14/2018
@@ -15,13 +15,12 @@ helpviewer_keywords:
 - WaitForAsynchCompletion method
 author: pmasl
 ms.author: pelopes
-manager: craigg
-ms.openlocfilehash: 6df61043aae6f86ab4c632c58323e4d670cfcd7c
-ms.sourcegitcommit: af1d9fc4a50baf3df60488b4c630ce68f7e75ed1
+ms.openlocfilehash: 6779c0892137ee60f011f365e0f3ee4d46b046f0
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/06/2018
-ms.locfileid: "51030029"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67994365"
 ---
 # <a name="issasynchstatuswaitforasynchcompletion-ole-db"></a>ISSAsynchStatus::WaitForAsynchCompletion (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 57fcb0eb-5d40-4ad4-996d-380732de8a3d
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 589d94d83bb23dcf6753e49dd8ea2e77276dd616
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 0cd79f758d173a2060c21465b35284023942a15a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47747820"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67966614"
 ---
 # <a name="create-method-example-vc"></a>Create メソッドの例 (VC++)
 次のコードは、新しい Microsoft Jet データベースを作成する方法を示します、[作成](../../../ado/reference/adox-api/create-method-adox.md)メソッド。  
@@ -76,5 +75,5 @@ void CreateDatabaseX() {
 }  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [Create メソッド (ADOX)](../../../ado/reference/adox-api/create-method-adox.md)

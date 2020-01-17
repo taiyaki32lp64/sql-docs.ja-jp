@@ -1,7 +1,7 @@
 ---
-title: JDBC ドライバーによるセットの結果の管理 |Microsoft Docs
+title: JDBC driver を使用した結果セットの管理 |Microsoft Docs
 ms.custom: ''
-ms.date: 01/19/2017
+ms.date: 08/12/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 9ed5ad41-22e0-4e4a-8a79-10512db60d50
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 49bb2f1743675f1ad381b9a5849cc395a5355d42
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 273a03e088036057f6d7b31c98074391138de07e
+ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47837720"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "69027909"
 ---
 # <a name="managing-result-sets-with-the-jdbc-driver"></a>JDBC ドライバーによる結果セットの管理
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]

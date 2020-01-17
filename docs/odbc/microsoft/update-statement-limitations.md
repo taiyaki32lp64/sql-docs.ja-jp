@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 14700aac-e135-4dc0-9138-4b01224461d5
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: a6b854cc417898c5576c60ca129c597eae280df4
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 1cc8cf58d4e4d826dc4b152e395dedbea395a095
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47826340"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68088204"
 ---
 # <a name="update-statement-limitations"></a>UPDATE ステートメントの制限事項
 テーブルを更新する Paradox ドライバーの場合、テーブルに一意のインデックス (Paradox 主キー) ことが必要です。 Borland データベース エンジンを実装することがなく Paradox ドライバーを使用する場合、Paradox テーブルを更新することはできません。  

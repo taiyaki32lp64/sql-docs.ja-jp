@@ -1,6 +1,5 @@
 ---
-title: CommandStream プロパティを使用してテンプレート ファイルの実行 |Microsoft Docs
-ms.custom: ''
+title: CommandStream プロパティを使用してテンプレートファイルを実行する
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -15,20 +14,20 @@ helpviewer_keywords:
 ms.assetid: 55c564e3-56d1-4d85-bcaa-703e2905dd57
 author: MightyPen
 ms.author: genemi
-manager: craigg
+ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: fcb60f197b4b0aa61a4bc0ef4bf99ecf9e883a42
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 8741f9f4a094e33aa8da52d6a27d5169e2b09866
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56033063"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75251476"
 ---
 # <a name="executing-template-files-by-using-the-commandstream-property"></a>CommandStream プロパティを使用した、テンプレート ファイルの実行
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-  この例では、SqlXmlCommand オブジェクトの CommandStream プロパティを使用して、SQL または XPath クエリで構成されるテンプレート ファイルを指定する方法を示しています。 このアプリケーションでは、コマンド ファイルの場合、FileStreamobject が開かれ、ファイル ストリームが実行される CommandStream として割り当てられています。  
+  この例は、SqlXmlCommand オブジェクトの CommandStream プロパティを使用して、SQL クエリまたは XPath クエリで構成されるテンプレートファイルを指定する方法を示しています。 このアプリケーションでは、コマンドファイルの FileStreamobject が開かれ、実行される CommandStream としてファイルストリームが割り当てられます。  
   
- 次の例では、CommandType プロパティは (TemplateFile) としてではなく SqlXmlCommandType.Template として指定されます。  
+ 次の例では、CommandType プロパティが (TemplateFile としてではなく) SqlXmlCommandType. Template として指定されています。  
   
  次はサンプル XML テンプレートです。  
   
@@ -85,7 +84,7 @@ class Test
   
 1.  この例で提供される XML テンプレート (TemplateFile.xml) をフォルダーに保存します。  
   
-2.  スキーマが格納されている同じフォルダーには、この例では、c# コード (DocSample.cs されている) を保存します。 ファイルを別のフォルダーに保存する場合は、コードを編集して、マッピング スキーマに対する適切なディレクトリ パスを指定する必要があります。  
+2.  この例で提供されている C# コード (DocSample.cs) を、スキーマが格納されているのと同じフォルダーに保存します。 ファイルを別のフォルダーに保存する場合は、コードを編集して、マッピング スキーマに対する適切なディレクトリ パスを指定する必要があります。  
   
 3.  コードをコンパイルします。 コマンド プロンプトでコードをコンパイルするには、次を使用します。  
   

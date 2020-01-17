@@ -15,15 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - CHOOSE function
 ms.assetid: 1c382c83-7500-4bae-bbdc-c1dbebd3d83f
-author: MashaMSFT
-ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 4538f270007508cea6b90a34388968ed886b4d36
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+author: MikeRayMSFT
+ms.author: mikeray
+ms.openlocfilehash: a96f4e48c56be6558ecb6523ebd687e50d9f82a0
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52526139"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68059743"
 ---
 # <a name="logical-functions---choose-transact-sql"></a>論理関数 - CHOOSE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
@@ -41,7 +40,7 @@ CHOOSE ( index, val_1, val_2 [, val_n ] )
   
 ## <a name="arguments"></a>引数  
  *index*  
- 後に続く項目のリストへの 1 から始まるインデックスを表す整数式。  
+ 後に続く項目のリストへの 1 から始まるインデックスを表す整数式を指定します。  
   
  入力されたインデックス値が **int** 以外の数値データ型である場合、暗黙的に値が整数に変換されます。 インデックス値が値の配列の境界を超えると、CHOOSE は NULL を返します。  
   

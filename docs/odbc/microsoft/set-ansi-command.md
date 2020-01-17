@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: cf9a01b2-14bf-458c-a73c-2a58ddef32d8
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 5af98bd8f16d7278b932ad89f1c81c58ddb1fb54
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d32e4dc27568b37f273ef654ebd45d26ca23e555
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47612211"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67997768"
 ---
 # <a name="set-ansi-command"></a>SET ANSI コマンド
 異なる長さの文字列の比較が行われる方法を決定する、Visual FoxPro SQL コマンド内の演算子を = です。  
@@ -57,6 +56,6 @@ SET ANSI ON | OFF
 ## <a name="string-order"></a>文字列の順序  
  SQL コマンドの 2 つの文字列比較では左から右の順序は irrelevantswitching = の一方の側から文字列を = = または演算子には、比較の結果に影響しません。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [SELECT - SQL コマンド](../../odbc/microsoft/select-sql-command.md)   
  [SET EXACT コマンド](../../odbc/microsoft/set-exact-command.md)

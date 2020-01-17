@@ -1,5 +1,5 @@
 ---
-title: 例:ELEMENT ディレクティブとエンティティのエンコードを指定する |Microsoft Docs
+title: '例: ELEMENT ディレクティブとエンティティのエンコードを指定する | Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -10,17 +10,17 @@ helpviewer_keywords:
 - ELEMENT directive
 - entity encoding [XML]
 ms.assetid: 50cda5c1-7293-4080-93b3-872e3b8d484e
-author: douglaslMS
-ms.author: douglasl
+author: MightyPen
+ms.author: genemi
 manager: craigg
-ms.openlocfilehash: a90045a7a85bfc2c1397a1021125e9b413196b68
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 28e0e9f808820acc1959ccc11266174e5610600c
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53360804"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63287237"
 ---
-# <a name="example-specifying-the-element-directive-and-entity-encoding"></a>例:ELEMENT ディレクティブとエンティティのエンコードを指定します。
+# <a name="example-specifying-the-element-directive-and-entity-encoding"></a>例:ELEMENT ディレクティブとエンティティのエンコードの指定
   この例では、 **ELEMENT** ディレクティブと **XML** ディレクティブの違いを説明します。 **ELEMENT** ディレクティブを指定した場合はデータがエンティティとしてエンコードされますが、 **XML** ディレクティブを指定した場合はその処理が行われません。 このクエリでは、\<Summary> 要素に、`<Summary>This is summary description</Summary>` のように XML が割り当てられています。  
   
  次のクエリについて考えてみます。  
@@ -92,7 +92,7 @@ ORDER BY [ProductModel!1!ProdModelID],Tag
 FOR XML EXPLICIT  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [FOR XML での EXPLICIT モードの使用](use-explicit-mode-with-for-xml.md)  
   
   

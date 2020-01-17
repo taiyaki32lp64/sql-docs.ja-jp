@@ -17,11 +17,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: e38cc3a111eb68688fcc9c30ef01bb607349afcb
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52786370"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63022226"
 ---
 # <a name="oracle-subscribers"></a>Oracle サブスクライバー
   [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]以降の [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] では、Oracle の提供する OLE DB プロバイダーによる、Oracle へのプッシュ サブスクリプションがサポートされています。  
@@ -41,7 +41,7 @@ ms.locfileid: "52786370"
   
      Oracle Universal Installer が完了したら、Net Configuration Assistant を使用してネットワーク接続を構成します。 ネットワーク接続を構成するには、4 つの情報を指定する必要があります。 Oracle データベース管理者は、データベースとリスナーをセットアップするときにネットワークを構成しています。この情報が不明な場合は、管理者に問い合わせてください。 以下の操作を行う必要があります。  
   
-    |アクション|説明|  
+    |操作|説明|  
     |------------|-----------------|  
     |データベースを識別する|データベースは 2 とおりの方法で識別できます。 1 つ目は、SID (Oracle System Identifier) を使用する方法で、すべての Oracle リリースで使用できます。 2 つ目は、サービス名を使用する方法で、Oracle リリース 8.0 以降で使用できます。 どちらの方法も、データベースの作成時に構成される値を使用します。データベースのリスナーの構成時に管理者が使用したものと同じ命名方法を、クライアント ネットワーク構成でも使用することが重要です。|  
     |データベースのネットワークの別名を識別する|Oracle データベースへのアクセスに使用するネットワークの別名を指定する必要があります。 ネットワークの別名とは、基本的にはデータベースの作成時に構成されたリモート SID またはサービス名へのポインターです。ネットワークの別名は、各種の Oracle リリースや製品では、ネット サービス名や TNS 別名など、複数の名前で呼ばれています。 SQL*Plus では、ログイン時に "ホスト文字列" パラメーターとしてこの別名の入力画面が表示されます。|  
@@ -85,7 +85,7 @@ ms.locfileid: "52786370"
   
     -   パブリッシュされたテーブルに空の文字列が列値として挿入されないようにする。  
   
-    -   ディストリビューション エージェント履歴ログで失敗の通知および処理の続行が可能な場合は、ディストリビューション エージェントに対して **-SkipErrors** パラメーターを使用する。 Oracle エラー コード 1400 (**-SkipErrors1400**) を指定します。  
+    -   ディストリビューション エージェント履歴ログで失敗の通知および処理の続行が可能な場合は、ディストリビューション エージェントに対して **-SkipErrors** パラメーターを使用する。 Oracle エラー コード 1400 ( **-SkipErrors1400**) を指定します。  
   
     -   生成されたテーブルの作成スクリプトを変更して、空の文字列が関連付けられている文字型の列から NOT NULL 属性を削除する。さらに、 @creation_script sp_addarticle [の](/sql/relational-databases/system-stored-procedures/sp-addarticle-transact-sql)パラメーターを使用して、アーティクルのカスタム作成スクリプトとして変更済みスクリプトを指定する。  
   

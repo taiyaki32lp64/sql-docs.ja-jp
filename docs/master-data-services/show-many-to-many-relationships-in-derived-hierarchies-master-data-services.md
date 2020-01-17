@@ -1,6 +1,6 @@
 ---
-title: 派生階層 (Master Data Services) の多対多リレーションシップを表示する | Microsoft Docs
-ms.custom: ''
+title: 派生階層の多対多リレーションシップを表示する
+ms.custom: seo-lt-2019
 ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: mds
@@ -8,15 +8,14 @@ ms.reviewer: ''
 ms.technology: master-data-services
 ms.topic: conceptual
 ms.assetid: 8b2a9c43-40e0-48f7-a6a9-325beb9f27da
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 6da7d5b12dcd8e998a32403bc9f98ae3ceee121b
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
-ms.translationtype: HT
+ms.openlocfilehash: a0300b7f613610403970862fe9e5aad594372b27
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52797134"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73728955"
 ---
 # <a name="show-many-to-many-relationships-in-derived-hierarchies-master-data-services"></a>派生階層 (Master Data Services) の多対多リレーションシップを表示する
 
@@ -43,7 +42,7 @@ ms.locfileid: "52797134"
   
  上のスクリーンショットで、 **Employee** エンティティが唯一のレベルとして **[現在のレベル]** の中間に表示される点に注目してください。 右側の派生階層の **[プレビュー]** には、 **Employee** エンティティのすべてのメンバー一覧が表示されます。 左側の **[使用できるレベル]** セクションには、現在の上位レベル (**Employee**) に追加できるレベルが表示されます。 そのほとんどは、 **Department** DBA を含む、 **Employee** エンティティのドメインベースの属性 (DBA) です。  
   
- [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] 以降は、M2M リレーションシップをモデリングする新しい種類のレベルがあります。例: **Class (ClassRegistration.Student でマッピング)**。 レベル名は他の情報よりも詳細で、マッピング リレーションシップをあいまいに説明するために必要な追加情報を反映しています。 このレベルを **[現在のレベル]** セクションの **[Employee]** レベルにドロップ ダウンします。  
+ [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]以降は、M2M リレーションシップをモデリングする新しい種類のレベルがあります。例: **Class (ClassRegistration.Student でマッピング)** 。 レベル名は他の情報よりも詳細で、マッピング リレーションシップをあいまいに説明するために必要な追加情報を反映しています。 このレベルを **[現在のレベル]** セクションの **[Employee]** レベルにドロップ ダウンします。  
   
  ![mds_hierarchies_edit_derived_hierarchy_two](../master-data-services/media/mds-hierarchies-edit-derived-hierarchy-two.PNG "mds_hierarchies_edit_derived_hierarchy_two")  
   
@@ -76,7 +75,7 @@ ms.locfileid: "52797134"
 ### <a name="M2MSample"></a> サンプル モデル内の M2M リレーションシップ  
 M2M リレーションシップのデモを見るには、 [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)]に含まれている Customer サンプル モデル内の Region Climate 派生階層を表示します。   
   
-次の画像に示すように、このリレーションシップをモデル化したレベル名は ![mds_Number1](../master-data-services/media/mds-number1.png)**Climate です(RegionClimate.Region でマッピング)**。 ![mds_Number2](../master-data-services/media/mds-number2.png)**Preview** には、地域が、関連付けられている気候の種類によってグループ化されて表示されます。 複数の気候 (親) に関連付けられた地域 (子メンバー) が存在するため、これは M2M リレーションシップです。 たとえば、 ![mds_Number3](../master-data-services/media/mds-number3.png)**APCR {Asia Pacific}** は ![mds_Number4](../master-data-services/media/mds-number4.png)**A {Tropical}** と ![mds_Number5](../master-data-services/media/mds-number5.png)**B {Dry}** に関連付けられています。  
+次の画像に示すように、このリレーションシップをモデル化したレベル名は ![mds_Number1](../master-data-services/media/mds-number1.png)**Climate です(RegionClimate.Region でマッピング)** 。 ![mds_Number2](../master-data-services/media/mds-number2.png)**Preview** には、地域が、関連付けられている気候の種類によってグループ化されて表示されます。 複数の気候 (親) に関連付けられた地域 (子メンバー) が存在するため、これは M2M リレーションシップです。 たとえば、 ![mds_Number3](../master-data-services/media/mds-number3.png)**APCR {Asia Pacific}** は ![mds_Number4](../master-data-services/media/mds-number4.png)**A {Tropical}** と ![mds_Number5](../master-data-services/media/mds-number5.png)**B {Dry}** に関連付けられています。  
   
 ![mds_M2MRelationship_Example_CustomerModel](../master-data-services/media/mds-m2mrelationship-example-customermodel.png)  
   
@@ -92,7 +91,7 @@ Customer サンプル モデルや、 [!INCLUDE[ssMDSshort_md](../includes/ssmds
  ![mds_hierarchies_dh_screenshot](../master-data-services/media/mds-hierarchies-dh-screenshot.png "mds_hierarchies_dh_screenshot")  
   
 ##  <a name="bkmk_member_security"></a> メンバーのセキュリティ  
- メンバーの重複を許可する (1 人のメンバーが複数の親を持つことを許可する) 階層を使用して、メンバーのセキュリティ アクセス許可を割り当てることはできません。 例 :  
+ メンバーの重複を許可する (1 人のメンバーが複数の親を持つことを許可する) 階層を使用して、メンバーのセキュリティ アクセス許可を割り当てることはできません。 例:  
   
 -   null 再帰をアンカーしない再帰的派生階層 (RDH) (再帰レベルの各メンバーは、ROOT と再帰的な親以下に出現します)。  
   

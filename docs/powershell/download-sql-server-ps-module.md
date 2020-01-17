@@ -9,15 +9,14 @@ ms.topic: conceptual
 keywords:
 - sql server powershell のインストール, sql server powershell のダウンロード
 ms.assetid: ''
-author: stevestein
-ms.author: sstein
-manager: craigg
-ms.openlocfilehash: f0f14a3cee050fff07c7fe5bc2467bcb8209a53c
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 82daddf2589970c415a53ca756599ac892be1a35
+ms.sourcegitcommit: fd3e81c55745da5497858abccf8e1f26e3a7ea7d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56037493"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71713204"
 ---
 # <a name="install-sql-server-powershell-module"></a>SQL Server PowerShell モジュールのインストール
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -29,11 +28,10 @@ ms.locfileid: "56037493"
 > * **SqlServer**: このモジュールには、最新の SQL 機能をサポートする新しいコマンドレットが含まれています。 モジュールには、**SQLPS** 内のコマンドレットの更新バージョンも含まれています。 
 
 SQL Server Management Studio (SSMS) には前のバージョンの **SqlServer** が含まれて*いました*が、SSMS の 16.x バージョンのみです。 PowerShell を SSMS 17.0 以降で使用するには、**SqlServer** モジュールを [PowerShell ギャラリー](https://www.powershellgallery.com/packages/Sqlserver)からインストールする必要があります。
-**SqlServer** モジュールの現在のバージョンは 21.1.18080 です。 これは、Microsoft.SQLServer.SMO のバージョン v150 に基づいており、SQL Server の次のバージョンをサポートします。 Microsoft.SQLServer.SMO のバージョン v140 に基づくモジュールの最後のバージョンは、21.0.17279 です。
 
 モジュールのプレリリース版は、より頻繁に利用できるようになる可能性があります。モジュールのこのようなバージョンを取得する方法については、このページの下部のセクションを参照してください。
 
-PowerShell ギャラリーから **SqlServer** モジュールをインストールするには、[PowerShell](https://docs.microsoft.com/powershell/scripting/powershell-scripting) セッションを開始し、次のコマンドを使用します。 インストールに問題が発生した場合は、[Install-module のドキュメント](https://docs.microsoft.com/powershell/gallery/psget/module/psget_install-module)と [Install-Module の参照](https://docs.microsoft.com/powershell/module/powershellget/Install-Module)をご覧ください。
+PowerShell ギャラリーから **SqlServer** モジュールをインストールするには、[PowerShell](https://docs.microsoft.com/powershell/scripting/powershell-scripting) セッションを開始し、次のコマンドを使用します。 インストールに問題が発生した場合は、[Install-module のドキュメント](https://www.powershellgallery.com/packages/PowerShellGet/2.2.1)と [Install-Module の参照](https://docs.microsoft.com/powershell/module/powershellget/Install-Module)をご覧ください。
 
 **SqlServer** モジュールをインストールするには:
 

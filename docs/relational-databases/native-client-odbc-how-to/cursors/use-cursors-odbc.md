@@ -1,5 +1,5 @@
 ---
-title: カーソル (ODBC) を使用して、|マイクロソフトのドキュメント
+title: カーソルの使用 (ODBC) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -12,18 +12,16 @@ helpviewer_keywords:
 ms.assetid: c502736f-bca0-45c3-ae25-d2ad52d296bf
 author: MightyPen
 ms.author: genemi
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: cd6e33f7265eaa7f2ae7433410aae2d4d2e507db
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 16124d582d5651462e0ba0fda657fe66097b9a63
+ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51666631"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73781626"
 ---
 # <a name="use-cursors-odbc"></a>カーソルの使用 (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-[!INCLUDE[SNAC_Deprecated](../../../includes/snac-deprecated.md)]
 
     
 ### <a name="to-use-cursors"></a>カーソルを使用するには  
@@ -32,7 +30,7 @@ ms.locfileid: "51666631"
   
      SQL_ATTR_CURSOR_TYPE および SQL_ATTR_CONCURRENCY 属性を設定します (これは推奨オプションです)。  
   
-     スイッチまたは  
+     または  
   
      SQL_CURSOR_SCROLLABLE および SQL_CURSOR_SENSITIVITY 属性を設定します。  
   
@@ -42,13 +40,13 @@ ms.locfileid: "51666631"
   
 4.  SQL ステートメントを実行します。  
   
-5.  WHERE CURRENT OF 句を使用して位置指定更新を実行する場合、手順 3. で [SQLSetCursorName](https://go.microsoft.com/fwlink/?LinkId=58406) を使用してカーソル名を指定していなかったときは、[SQLGetCursorName](../../../relational-databases/native-client-odbc-api/sqlgetcursorname.md) を呼び出してカーソル名を取得することもできます。  
+5.  WHERE CURRENT OF 句を使用して位置指定更新を実行する場合、手順 3. で [SQLSetCursorName](../../../relational-databases/native-client-odbc-api/sqlgetcursorname.md) を使用してカーソル名を指定していなかったときは、[SQLGetCursorName](https://go.microsoft.com/fwlink/?LinkId=58406) を呼び出してカーソル名を取得することもできます。  
   
 6.  [SQLNumResultCols](../../../relational-databases/native-client-odbc-api/sqlnumresultcols.md) を呼び出して、行セット内の列数 (C) を取得します。  
   
      列方向のバインドを使用します。  
   
-     \- または -  
+     \- - または -  
   
      行方向のバインドを使用します。  
   
@@ -77,6 +75,6 @@ ms.locfileid: "51666631"
      使用するカーソルの種類を制御するには、SQL_ATTR_CURSOR_TYPE と SQL_ATTR_CONCURRENCY を設定するか、SQL_ATTR_CURSOR_SENSITIVITY と SQL_ATTR_CURSOR_SCROLLABLE を設定します。 カーソルの動作を指定するこの 2 つの方法を組み合わせて実行しないでください。  
   
 ## <a name="see-also"></a>参照  
- [カーソルの操作方法に関するトピックを使用して&#40;ODBC&#41;](../../../relational-databases/native-client-odbc-how-to/cursors/using-cursors-how-to-topics-odbc.md)  
+ [カーソルの使用方法に関する&#40;トピック ODBC&#41;](../../../relational-databases/native-client-odbc-how-to/cursors/using-cursors-how-to-topics-odbc.md)  
   
   

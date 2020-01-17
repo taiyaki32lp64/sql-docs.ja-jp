@@ -8,15 +8,14 @@ ms.reviewer: ''
 ms.technology: master-data-services
 ms.topic: conceptual
 ms.assetid: 33d9c8fc-9602-494d-b9ab-8f0f42785974
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 5b9e328f3abd3a53bfb4764470138d6d6b966236
-ms.sourcegitcommit: c19696d3d67161ce78aaa5340964da3256bf602d
-ms.translationtype: HT
+ms.openlocfilehash: ec72b2bd94d1ac7fbf68943be3081f39ed2d3e1e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/29/2018
-ms.locfileid: "52617602"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68074590"
 ---
 # <a name="master-data-services-add-in-for-microsoft-excel"></a>Microsoft Excel 用マスター データ サービス アドイン
 
@@ -31,6 +30,7 @@ ms.locfileid: "52617602"
 ## <a name="downloads"></a>ダウンロード 
 >*  [この Microsoft ダウンロード センター ページ](https://www.microsoft.com/download/details.aspx?id=56838)から SQL Server 2016 SP2 の Excel 用マスター データ サービス アドインをダウンロードします。 
 >* [この Microsoft ダウンロード センター ページ](https://go.microsoft.com/fwlink/?linkid=836867)から SQL Server 2017 の [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] [!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)] をダウンロードします。
+>*  SQL Server 2019 CTP の Excel 用マスター データ サービス アドインをダウンロード[この Microsoft ダウンロード センター ページ](https://go.microsoft.com/fwlink/?linkid=2086948)します。 
  
   
 ## <a name="terms"></a>用語  
@@ -67,15 +67,15 @@ ms.locfileid: "52617602"
   
 -   [接続 (Excel 用 MDS アドイン)](../../master-data-services/microsoft-excel-add-in/connections-mds-add-in-for-excel.md)  
   
--   [概要: Excel へのデータのエクスポート &#40;Excel 用 MDS アドイン&#41;](../../master-data-services/microsoft-excel-add-in/overview-exporting-data-to-excel-mds-add-in-for-excel.md)  
+-   [概要:Excel へのデータのエクスポート &#40;Excel 用 MDS アドイン&#41;](../../master-data-services/microsoft-excel-add-in/overview-exporting-data-to-excel-mds-add-in-for-excel.md)  
   
 -   [ショートカット クエリ ファイル &#40;Excel 用 MDS アドイン&#41;](../../master-data-services/microsoft-excel-add-in/shortcut-query-files-mds-add-in-for-excel.md)  
   
--   [データの更新 &#40;Excel 用 MDS アドイン&#41;](../../master-data-services/microsoft-excel-add-in/refreshing-data-mds-add-in-for-excel.md)  
+-   [データの更新 (Excel 用 MDS アドイン)](../../master-data-services/microsoft-excel-add-in/refreshing-data-mds-add-in-for-excel.md)  
   
--   [概要: Excel からのデータのインポート &#40;Excel 用 MDS アドイン&#41;](../../master-data-services/microsoft-excel-add-in/overview-importing-data-from-excel-mds-add-in-for-excel.md)  
+-   [概要:Excel からデータをインポートする&#40;MDS アドインの Excel&#41;](../../master-data-services/microsoft-excel-add-in/overview-importing-data-from-excel-mds-add-in-for-excel.md)  
   
--   [データの検証 &#40;Excel 用 MDS アドイン&#41;](../../master-data-services/microsoft-excel-add-in/validating-data-mds-add-in-for-excel.md)  
+-   [データの検証 (Excel 用 MDS アドイン)](../../master-data-services/microsoft-excel-add-in/validating-data-mds-add-in-for-excel.md)  
   
 -   [Excel 用 MDS アドインでのデータ品質照合](../../master-data-services/microsoft-excel-add-in/data-quality-matching-in-the-mds-add-in-for-excel.md)  
   

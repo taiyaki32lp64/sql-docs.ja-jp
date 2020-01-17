@@ -1,43 +1,42 @@
 ---
-title: レッスン 7:Windows Azure ストレージへのデータ ファイルの移動 |Microsoft Docs
+title: 'レッスン 7: データファイルを Azure Storage に移動する |Microsoft Docs'
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 ms.assetid: 26aa534a-afe7-4a14-b99f-a9184fc699bd
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: d88e1fa7853c1207f1a8c95da2f96bb77dd7d49c
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 25ae3cee8e08292297449914bfb6e40dfc1b4b3a
+ms.sourcegitcommit: 3b1f873f02af8f4e89facc7b25f8993f535061c9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53355332"
+ms.lasthandoff: 08/30/2019
+ms.locfileid: "70175456"
 ---
-# <a name="lesson-7-move-your-data-files-to-windows-azure-storage"></a>レッスン 7:Microsoft Azure ストレージへのデータ ファイルの移動
-  このレッスンでは、Windows Azure ストレージ (SQL Server インスタンスではなく) にデータ ファイルを移動する方法について学習します。 このレッスンを続行するには、レッスン 4、5、および 6 を実行する必要はありません。  
+# <a name="lesson-7-move-your-data-files-to-azure-storage"></a>レッスン 7: データファイルを Azure Storage に移動する
+  このレッスンでは、(SQL Server インスタンスではなく) Azure Storage にデータファイルを移動する方法を学習します。 このレッスンを続行するには、レッスン 4、5、および 6 を実行する必要はありません。  
   
- Windows Azure ストレージにデータ ファイルを移動するには、データ ファイルの場所を変更できる `ALTER DATABASE` ステートメントを使用できます。  
+ データファイルを Azure Storage に移動するには、 `ALTER DATABASE`ステートメントを使用します。これは、データファイルの場所を変更するのに役立ちます。  
   
- このレッスンでは、次の手順が既に完了したことを前提としています。  
+ このレッスンでは、次の手順を既に完了していることを前提としています。  
   
--   Windows Azure ストレージ アカウントを入手しました。  
+-   Azure Storage アカウントを持っています。  
   
--   Windows Azure ストレージ アカウントにコンテナーを作成しました。  
+-   Azure Storage アカウントでコンテナーを作成しました。  
   
 -   読み取り、書き込み、一覧表示の権限のあるコンテナーに対するポリシーを作成しました。 SAS キーも生成しました。  
   
 -   ソース コンピューターで SQL Server 資格情報を作成しました。  
   
- 次に、以下の手順を使用して、Windows Azure ストレージにデータ ファイルを移動します。  
+ 次に、次の手順を使用して、データファイルを Azure Storage に移動します。  
   
 1.  まず、ソース コンピューターにテスト データベースを作成し、それにデータを追加します。  
   
-    ```tsql  
+    ```sql  
   
     USE master;   
     CREATE DATABASE TestDB1Alter;   
@@ -53,10 +52,10 @@ ms.locfileid: "53355332"
   
 2.  次のコードを実行します。  
   
-    ```tsql  
+    ```sql  
   
     -- In the following statement, modify the path specified in FILENAME to   
-    -- the new location of the file in Windows Azure Storage container.   
+    -- the new location of the file in Azure Storage container.   
     ALTER DATABASE TestDB1Alter    
         MODIFY FILE ( NAME = TestDB1Alter,    
                     FILENAME = 'https://teststorageaccnt.blob.core.windows.net/testcontaineralter/TestDB1AlterData.mdf');   
@@ -64,24 +63,24 @@ ms.locfileid: "53355332"
   
     ```  
   
-3.  実行すると、次のメッセージが表示されます。"ファイル"TestDB1Alter"がシステム カタログに変更されました。 新しいパスが使用次回データベースを起動します。"  
+3.  これを実行すると、次のメッセージが表示されます。"ファイル" TestDB1Alter "はシステムカタログで変更されています。 新しいパスは、次回データベースを起動するときに使用されます。  
   
 4.  続いて、データベースをオフラインにします。  
   
-    ```tsql  
+    ```sql  
   
     ALTER DATABASE TestDB1Alter SET OFFLINE;   
     GO  
   
     ```  
   
-5.  ここで、次のいずれかの方法を使用してデータ ファイルを Microsoft Azure Storage へコピーする必要があります。[AzCopy ツール](https://blogs.msdn.com/b/windowsazurestorage/archive/2012/12/03/azcopy-uploading-downloading-files-for-windows-azure-blobs.aspx)、 [Put Page](https://msdn.microsoft.com/library/azure/ee691975.aspx)、[ストレージ クライアント ライブラリ リファレンス](https://msdn.microsoft.com/library/azure/dn261237.aspx)、またはサード パーティのストレージ エクスプ ローラー ツール。  
+5.  ここで、次のいずれかの方法を使用して、データファイルを Azure Storage にコピーする必要があります。[Azcopy ツール](https://blogs.msdn.com/b/windowsazurestorage/archive/2012/12/03/azcopy-uploading-downloading-files-for-windows-azure-blobs.aspx)、 [Put Page](https://msdn.microsoft.com/library/azure/ee691975.aspx)、 [storage クライアントライブラリリファレンス](https://msdn.microsoft.com/library/azure/dn261237.aspx)、またはサードパーティのストレージエクスプローラーツール。  
   
-     **重要:** この新しい機能強化を使用する場合は、必ずブロック BLOB ではなくページ BLOB を作成してください。  
+     **重要:** この新しい機能強化を使用する場合は、必ずブロック blob ではなくページ blob を作成してください。  
   
 6.  続いて、データベースをオンラインにします。  
   
-    ```tsql  
+    ```sql  
   
     ALTER DATABASE TestDB1Alter SET ONLINE;   
     GO  
@@ -90,6 +89,6 @@ ms.locfileid: "53355332"
   
  **次のレッスン:**  
   
- [レッスン 8:Windows Azure ストレージにデータベースを復元する](lesson-7-restore-a-database-to-a-point-in-time.md)  
+ [レッスン 8:Azure Storage にデータベースを復元する](lesson-7-restore-a-database-to-a-point-in-time.md)  
   
   

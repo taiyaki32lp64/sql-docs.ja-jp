@@ -4,23 +4,22 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.oledbsourceadapter.errorhandling.f1
 helpviewer_keywords:
 - OLE DB Source Editor
 ms.assetid: 7737c6ae-c16b-4856-aa6e-5882640093b7
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 05ba0c0d3ac25a30bbc823fb23e8f09f3cdf5d93
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: ddadfc3ab85afbecdff9b9969f7835c749a92bf7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48185002"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66057012"
 ---
 # <a name="ole-db-source-editor-error-output-page"></a>[OLE DB ソース エディター] ([エラー出力] ページ)
   **[OLE DB ソース エディター]** ダイアログ ボックスの **[エラー出力]** ページを使用すると、エラー処理オプションを選択したり、エラー出力列のプロパティを設定したりできます。  
@@ -51,11 +50,11 @@ ms.locfileid: "48185002"
  **[適用]**  
  選択したセルにエラー処理オプションを適用します。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [Integration Services のエラーおよびメッセージのリファレンス](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [OLE DB ソース エディター&#40;接続マネージャー ページ&#41;](../../2014/integration-services/ole-db-source-editor-connection-manager-page.md)   
- [OLE DB ソース エディター&#40;列 ページ&#41;](../../2014/integration-services/ole-db-source-editor-columns-page.md)   
- [OLE DB ソースを使用してデータを抽出します。](data-flow/extract-data-by-using-the-ole-db-source.md)   
+ [[OLE DB ソース エディター] ([接続マネージャー] ページ)](../../2014/integration-services/ole-db-source-editor-connection-manager-page.md)   
+ [OLE DB ソース エディター ([列] ページ)](../../2014/integration-services/ole-db-source-editor-columns-page.md)   
+ [OLE DB ソースを使用してデータを抽出する](data-flow/extract-data-by-using-the-ole-db-source.md)   
  [OLE DB 接続マネージャー](connection-manager/ole-db-connection-manager.md)  
   
   

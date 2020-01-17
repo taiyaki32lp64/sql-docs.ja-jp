@@ -1,7 +1,8 @@
 ---
-title: サポートされているバージョンとエディションのアップグレード - SQL Server 2017 | Microsoft Docs
-ms.custom: ''
-ms.date: 07/18/2017
+title: サポートされているバージョンとエディションのアップグレード
+titleSuffix: SQL Server 2017
+ms.custom: seo-lt-2019
+ms.date: 12/13/2019
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: install
@@ -15,13 +16,12 @@ ms.assetid: 702359c4-6ca9-42a8-860c-a95a802898a1
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-manager: craigg
-ms.openlocfilehash: 0a2942ac69ba5ed6d381c6377b08b551be94f589
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 4dba820ec4e353fff15b0695b97f940441caf802
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47711570"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75258834"
 ---
 # <a name="supported-version-and-edition-upgrades-for-sql-server-2017"></a>SQL Server 2017 のサポートされているバージョンとエディションのアップグレード
 
@@ -35,15 +35,15 @@ ms.locfileid: "47711570"
   
 -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]をアップグレードする前に、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェントの Windows 認証を有効にし、既定の構成 ( [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェントのサービス アカウントが [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sysadmin グループのメンバーであること) を確認してください。  
   
--   [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)] にアップグレードするには、サポート対象のオペレーティング システムを実行している必要があります。 詳細については、「[SQL Server のインストールに必要なハードウェアおよびソフトウェア](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md)」を参照してください。  
+-   [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)]にアップグレードするには、サポート対象のオペレーティング システムを実行している必要があります。 詳細については、「[SQL Server のインストールに必要なハードウェアおよびソフトウェア](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md)」を参照してください。  
   
 -   再起動を保留している場合はアップグレードがブロックされます。  
   
 -   Windows インストーラー サービスが実行されていない場合は、アップグレードがブロックされます。  
   
-## <a name="unsupported-scenarios"></a>サポートされていないシナリオ  
+## <a name="unsupported-scenarios"></a>サポートされないシナリオ  
   
--   [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)] の複数バージョンにまたがるインスタンスの使用はサポートされていません。 [!INCLUDE[ssDE](../../includes/ssde-md.md)]、 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]、および [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] コンポーネントのバージョン番号は [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)]のインスタンス内で同一であることが必要です。  
+-   [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)] の複数バージョンにまたがるインスタンスの使用はサポートされていません。 [!INCLUDE[ssDE](../../includes/ssde-md.md)] コンポーネントのバージョン番号は、[!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)] のインスタンス内で同一である必要があります。  
   
 -   [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)] は、64 ビット プラットフォームでのみ利用できます。 クロスプラットフォームのアップグレードはサポートされていません。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] セットアップを使用して、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の 32 ビット インスタンスをネイティブ 64 ビットにアップグレードすることはできません。 ただし、データベースがレプリケーションでパブリッシュされていない場合は、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]の 32 ビット インスタンスのデータベースをバックアップまたはデタッチしてから、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の新しいインスタンス (64 ビット) に復元またはアタッチすることができます。 master、msdb、および model の各システム データベースにある、すべてのログインとその他のユーザー オブジェクトを再作成する必要があります。  
   
@@ -112,7 +112,7 @@ ms.locfileid: "47711570"
  \* Microsoft では、特に Technology Adoption Program (TAP) に参加したお客様向けに、リリース候補版ソフトウェアからのアップグレードをサポートしています。 
 
    
-###  <a name="SupportFor2005"></a> [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)] サポート対象 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]  
+###  <a name="SupportFor2005"></a> [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] に対する [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)] のサポート  
  ここでは、 [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)] に対する [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]のサポートについて説明します。 [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)]では、次の作業を実行できます。  
   
 -   データベース エンジンの [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] インスタンスに、 [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)] データベース (mdf/ldf ファイル) をアタッチします。  
@@ -121,7 +121,7 @@ ms.locfileid: "47711570"
   
 -   [!INCLUDE[ssASversion2005](../../includes/ssasversion2005-md.md)] キューブをバックアップし、[!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)] で復元します。  
   
-[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] データベースを [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)] にアップグレードすると、そのデータベースの互換性レベルは 90 から 100 に変更されます  ([!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)] のデータベース互換性レベルの有効な値は 100、110、120、130、および 140 です)。[ALTER DATABASE Compatibility Level &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md) は、互換性レベルの変更が [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] アプリケーションに与える影響について説明します。  
+[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] データベースを [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)] にアップグレードすると、そのデータベースの互換性レベルは 90 から 100 に変更されます ([!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)] のデータベース互換性レベルの有効な値は 100、110、120、130、および 140 です)。[ALTER DATABASE Compatibility Level &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md) は、互換性レベルの変更が [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] アプリケーションに与える影響について説明します。  
   
 上記の一覧で説明されていないどのシナリオもサポートされていませんが、以下のシナリオに限定されるものではありません。  
   

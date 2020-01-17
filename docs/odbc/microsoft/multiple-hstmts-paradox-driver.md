@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 66aecd94-092d-43d4-9583-74f5e2990eac
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 2dc086f25ca4da2a64a5edde2422f1fe33fcc444
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 5e7a9a4ec0d6426779fb55d923bc7f0607089aad
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47626410"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68045031"
 ---
 # <a name="multiple-hstmts-paradox-driver"></a>複数 hstmts (Paradox ドライバー)
 ODBC Paradox ドライバーが使用されるときに 1 つ以上を使用したい場合*hstmt*をテーブルにクエリを実行するテーブルの一意のインデックス (Paradox 主キー) 必要があります。

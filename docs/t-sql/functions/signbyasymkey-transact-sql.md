@@ -21,20 +21,19 @@ helpviewer_keywords:
 - cryptography [SQL Server], asymmetric keys
 - clear text signing
 ms.assetid: b1c46159-cc76-4205-a841-8f4a71742f80
-author: MashaMSFT
-ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 76e23056ebb838febcb9f23dd849c0e1666108cc
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: VanMSFT
+ms.author: vanto
+ms.openlocfilehash: 804f8c1f2f7c59edec2c4e40c7d47f99ac71b5e7
+ms.sourcegitcommit: a24f6e12357979f1134a54a036ebc58049484a4f
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47772120"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71314553"
 ---
 # <a name="signbyasymkey-transact-sql"></a>SIGNBYASYMKEY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  非対称キーを使用してプレーン テキストに署名します。  
+  プレーン テキストに非対称キーで署名する  
   
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -49,7 +48,7 @@ SignByAsymKey( Asym_Key_ID , @plaintext [ , 'password' ] )
  *Asym_Key_ID*  
  現在のデータベース内の非対称キーの ID を指定します。 *Asym_Key_ID* は**int**です。  
   
- **@plaintext**  
+ **\@plaintext**  
  非対称キーを使って署名するデータを格納する **nvarchar**、**char**、**varchar**、または **nchar** 型の変数を指定します。  
   
  *password*  
@@ -81,8 +80,8 @@ GO
 ```  
   
 ## <a name="see-also"></a>参照  
- [ASYMKEY_ID (&) #40 です。TRANSACT-SQL と #41 です。](../../t-sql/functions/asymkey-id-transact-sql.md)   
- [VERIFYSIGNEDBYASYMKEY (&) #40 です。TRANSACT-SQL と #41 です。](../../t-sql/functions/verifysignedbyasymkey-transact-sql.md)   
+ [ASYMKEY_ID &#40;Transact-SQL&#41;](../../t-sql/functions/asymkey-id-transact-sql.md)   
+ [VERIFYSIGNEDBYASYMKEY &#40;Transact-SQL&#41;](../../t-sql/functions/verifysignedbyasymkey-transact-sql.md)   
  [CREATE ASYMMETRIC KEY &#40;Transact-SQL&#41;](../../t-sql/statements/create-asymmetric-key-transact-sql.md)   
  [ALTER ASYMMETRIC KEY &#40;Transact-SQL&#41;](../../t-sql/statements/alter-asymmetric-key-transact-sql.md)   
  [DROP ASYMMETRIC KEY &#40;Transact-SQL&#41;](../../t-sql/statements/drop-asymmetric-key-transact-sql.md)   

@@ -2,18 +2,18 @@
 title: Reporting Services のサブスクリプションと配信に関するトラブルシューティング | Microsoft Docs
 ms.date: 05/31/2016
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: troubleshooting
 ms.topic: conceptual
 ms.assetid: ae1775f7-9919-48ca-8bd7-cc16df274e2c
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 6b6a2665e963f552a7d5cb726b5d7904f7a13415
-ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 84ca5db4b8979b1b49ffc25b809638defc40fe1e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51812726"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65572113"
 ---
 # <a name="troubleshoot-reporting-services-subscriptions-and-delivery"></a>Reporting Services のサブスクリプションと配信に関するトラブルシューティング
   

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dm.miningmodeleditor.dependencynetwork.f1
@@ -13,12 +12,12 @@ ms.assetid: e58ce1b7-20d6-42cb-ade5-916da8471e09
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 3f907a03df66970d69fe4c6b0379d735af987102
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 819a69ad9c1b1415726d816e2cbc1faa92bd6cd1
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48226172"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66081941"
 ---
 # <a name="dependency-network-tab-mining-model-viewer"></a>[依存関係ネットワーク] タブ (マイニング モデル ビューアー)
   **[依存関係ネットワーク]** タブでは、マイニング モデルに含まれるすべての属性のグラフィカル ビューが表示され、属性がどのように関連しているかが示されます。  
@@ -65,8 +64,8 @@ ms.locfileid: "48226172"
  すべてのモデルに適用される一般的なルールとして、リンクが強ければ強いほど、2 つの属性間の予測関係も強くなります。  
   
 ## <a name="see-also"></a>参照  
- [データ マイニング アルゴリズム&#40;Analysis Services - データ マイニング&#41;](data-mining/data-mining-algorithms-analysis-services-data-mining.md)   
- [マイニング モデル ビューアー&#40;データ マイニング モデル デザイナー&#41;](mining-model-viewers-data-mining-model-designer.md)   
+ [データ マイニング アルゴリズム &#40;Analysis Services - データ マイニング&#41;](data-mining/data-mining-algorithms-analysis-services-data-mining.md)   
+ [マイニング モデル ビューアー (データ マイニング モデル デザイナー)](mining-model-viewers-data-mining-model-designer.md)   
  [データ マイニング モデル ビューアー](data-mining/data-mining-model-viewers.md)  
   
   

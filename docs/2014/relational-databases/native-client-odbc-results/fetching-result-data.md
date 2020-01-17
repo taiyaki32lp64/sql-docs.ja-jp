@@ -23,11 +23,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: b803ca3742f9cb831e51105aab9d0ed75ad78e16
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48095772"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63200083"
 ---
 # <a name="fetching-result-data"></a>結果データのフェッチ
   ODBC アプリケーションでは、結果データのフェッチを 3 つの方法で実行できます。  

@@ -1,5 +1,5 @@
 ---
-title: getArray (int) メソッド (SQLServerResultSet) |Microsoft Docs
+title: getArray メソッド (int) (SQLServerResultSet) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: 377746c7-8c9c-41f5-8490-ca0dd56fd57a
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: f993406e24265689f852e1e70515ca24eda6d536
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ff7355a5d63d5f6335612d2bf5de5131f23cab96
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47850510"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67954385"
 ---
 # <a name="getarray-method-int-sqlserverresultset"></a>getArray (int) メソッド (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -41,16 +40,16 @@ public java.sql.Array getArray(int i)
  列インデックスを示す **int** です。  
   
 ## <a name="return-value"></a>戻り値  
- 配列オブジェクト。  
+ Array オブジェクトです。  
   
 ## <a name="exceptions"></a>例外  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- この getArray メソッドは、java.sql.ResultSet インターフェイスの getArray メソッドによって指定されます。  
+ この getArray メソッドは、java.sql.ResultSet インターフェイスの getArray メソッドで規定されています。  
   
 ## <a name="see-also"></a>参照  
- [getArray メソッド&#40;SQLServerResultSet&#41;](../../../connect/jdbc/reference/getarray-method-sqlserverresultset.md)   
+ [getArray メソッド &#40;SQLServerResultSet&#41;](../../../connect/jdbc/reference/getarray-method-sqlserverresultset.md)   
  [SQLServerResultSet のメンバー](../../../connect/jdbc/reference/sqlserverresultset-members.md)   
  [SQLServerResultSet クラス](../../../connect/jdbc/reference/sqlserverresultset-class.md)  
   

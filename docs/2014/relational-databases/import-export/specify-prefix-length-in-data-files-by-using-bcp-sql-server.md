@@ -12,21 +12,21 @@ helpviewer_keywords:
 - lengths [SQL Server], prefix characters
 - data formats [SQL Server], prefix length
 ms.assetid: ce32dd1a-26f1-4f61-b9fa-3f1feea9992e
-author: douglaslMS
-ms.author: douglasl
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: b1f480c361c465f17fa50d2a13df29f44a56d131
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: e5d91c82d892888d2e6edde5615ba05a2a9ebf3c
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48058762"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66011756"
 ---
 # <a name="specify-prefix-length-in-data-files-by-using-bcp-sql-server"></a>bcp を使用したデータ ファイルのプレフィックス長の指定 (SQL Server)
   **bcp** コマンドでは、ネイティブ形式のデータをデータ ファイルに一括エクスポートするためのファイル ストレージが最も少なくなるように、各フィールドの前にそのフィールドの長さを 1 文字以上の文字列で指定します。 このような文字列を、 *プレフィックス長文字列*と呼びます。  
   
 ## <a name="the-bcp-prompt-for-prefix-length"></a>プレフィックス長の bcp プロンプト  
- 対話型の **bcp** コマンドで、フォーマット ファイル スイッチ ( **-f** ) またはデータ形式スイッチ ( **-n** 、**-c**、**-w**、または **-N**) のどちらも付けずに **in**または **out**オプションを指定すると、次のように各データ フィールドのプレフィックス長を要求するプロンプトが表示されます。  
+ 対話型の **bcp** コマンドで、フォーマット ファイル スイッチ ( **-f** ) またはデータ形式スイッチ ( **-n** 、 **-c**、 **-w**、または **-N**) のどちらも付けずに **in**または **out**オプションを指定すると、次のように各データ フィールドのプレフィックス長を要求するプロンプトが表示されます。  
   
  `Enter prefix length of field <field_name> [<default>]:`  
   
@@ -36,7 +36,7 @@ ms.locfileid: "48058762"
 >  **bcp** コマンドですべてのフィールドを対話形式で指定すると、各フィールドへの応答を XML 形式以外のファイルに保存するように要求するプロンプトが表示されます。 XML 以外のフォーマット ファイルの詳細については、「[XML 以外のフォーマット ファイル &#40;SQL Server&#41;](xml-format-files-sql-server.md)」を参照してください。  
   
 ## <a name="overview-of-prefix-length"></a>プレフィックス長の概要  
- フィールドのプレフィックス長を格納するには、フィールドの最大長を表すのに十分なバイト数が必要です。 必要なバイト数は、ファイル ストレージの型、列の NULL 値許容属性、およびデータがネイティブ形式または文字形式でデータ ファイルに格納されるかどうかによって異なります。 たとえば、`text`または`image`データ型は、4、フィールド長を格納する文字のプレフィックスが必要ですが、`varchar`データ型には、2 つの文字が必要です。 データ ファイルでは、このようなプレフィックス長文字列は、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]の内部バイナリ データ形式で格納されます。  
+ フィールドのプレフィックス長を格納するには、フィールドの最大長を表すのに十分なバイト数が必要です。 必要なバイト数は、ファイル ストレージの型、列の NULL 値許容属性、およびデータがネイティブ形式または文字形式でデータ ファイルに格納されるかどうかによって異なります。 たとえば、`text` データ型または `image` データ型では、フィールド長を格納するために 4 文字のプレフィックス文字列が必要ですが、`varchar` データ型で必要なのは 2 文字です。 データ ファイルでは、このようなプレフィックス長文字列は、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]の内部バイナリ データ形式で格納されます。  
   
 > [!IMPORTANT]  
 >  ネイティブ形式を使用するときは、フィールド ターミネータではなくプレフィックス長を使用します。 ネイティブ形式のデータ ファイルは [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の内部バイナリ データ形式で格納されるので、ネイティブ形式のデータがターミネータと競合することがあります。  
@@ -81,7 +81,7 @@ ms.locfileid: "48058762"
 |UDT (ユーザー定義データ型)|8|8|8|8|  
 |XML|8|8|8|8|  
   
- <sup>1</sup> 、 `ntext`、 `text`、および`image`データ型はの将来のバージョンで削除される[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]します。 新しい開発作業では、これらのデータ型の使用は避け、現在これらのデータ型を使用しているアプリケーションは修正するようにしてください。 使用`nvarchar(max)`、 `varchar(max)`、および`varbinary(max)`代わりにします。  
+ <sup>1</sup> 、 `ntext`、 `text`、および`image`データ型はの将来のバージョンで削除される[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]します。 新しい開発作業では、これらのデータ型の使用は避け、現在これらのデータ型を使用しているアプリケーションは修正するようにしてください。 代わりに `nvarchar(max)`、`varchar(max)`、および `varbinary(max)` 型を使用してください。  
   
 ##  <a name="PrefixLengthsImport"></a> 一括インポートのプレフィックス長  
  データが一括インポートされるときは、プレフィックス長はデータ ファイルが作成されたときに指定された値になります。 **bcp** コマンドでデータ ファイルが作成されなかった場合、プレフィックス長文字列が存在しない場合があります。 この場合は、プレフィックス長に 0 を指定します。  

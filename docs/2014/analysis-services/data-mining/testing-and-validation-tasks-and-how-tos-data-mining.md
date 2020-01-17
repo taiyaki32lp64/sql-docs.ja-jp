@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - Mining Accuracy Chart [Analysis Services]
@@ -18,12 +17,12 @@ ms.assetid: 3a0b4dc9-5b64-4be1-aa5f-6ff26f43dbf8
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 4697af2463587fcca244a291be0c8dace2907cc8
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 451efaa1bb6968c2e2f43e5fad01646e507ae8ec
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48143292"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66082868"
 ---
 # <a name="testing-and-validation-tasks-and-how-tos-data-mining"></a>テスト、検証タスク、および操作方法 (データ マイニング)
   **のデータ マイニング デザイナーの** [マイニング精度チャート] [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] タブを使用すると、マイニング構造内のマイニング モデルの予測精度を比較できます。  

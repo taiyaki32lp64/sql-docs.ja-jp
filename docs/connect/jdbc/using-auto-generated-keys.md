@@ -1,7 +1,7 @@
 ---
-title: Auto を使用して生成されたキー |Microsoft Docs
+title: 自動生成されたキーの使用 |Microsoft Docs
 ms.custom: ''
-ms.date: 07/11/2018
+ms.date: 08/12/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 55a062c7-45ce-40e3-9a6f-4a0f4da4e2a6
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: d50968acff5370bade29886af8d4a52dff3cf016
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: f93bad7ff490ee2774d10e2df940168a67d30867
+ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47757790"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "69026613"
 ---
 # <a name="using-auto-generated-keys"></a>自動生成キーの使用
 

@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 31731e4f-3c0c-451e-8cbc-c9df28fabf6c
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 01b032aa98e4e8887722521016c95d99b7b58a7a
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.openlocfilehash: 0cd23acb0f966ec04c4a2f3e6da48d21d33fb915
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51604652"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67933422"
 ---
 # <a name="converttostring-method-example-vb"></a>ConvertToString メソッドの例 (VB)
 ```  
@@ -99,6 +98,6 @@ End Sub
 'EndConvertToStringVB  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [ConvertToString メソッド (RDS)](../../../ado/reference/rds-api/converttostring-method-rds.md)   
  [Recordset オブジェクト (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)

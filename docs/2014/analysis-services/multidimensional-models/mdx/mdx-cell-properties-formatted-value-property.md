@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: 7534ff5f-954e-47d4-a2ed-4b5b8ccb30e6
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 3ecdc453b6498463e431cbad555af738fde2da1d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: a116be708dd714a48d1cc936a08350237ca98ddf
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48052358"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66074398"
 ---
 # <a name="language-and-formatstring-on-formatedvalue"></a>FORMATED_VALUE の LANGUAGE と FORMAT_STRING
   FORMATTED_VALUE プロパティは、セルの VALUE、FORMAT_STRING、および LANGUAGE の各プロパティの相互作用に基づいて構築されます。 このトピックではそのしくみについて説明します。  
@@ -34,7 +33,7 @@ ms.locfileid: "48052358"
  ローカライズされたバージョンの FORMATTED_VALUE を生成するために FORMAT_STRING と共に適用されるロケールの指定  
   
 ## <a name="formattedvalue-constructed"></a>FORMATTED_VALUE の構築  
- FORMATTED_VALUE プロパティは、FORMAT_STRING プロパティで指定されている書式設定テンプレートを VALUE プロパティの値に適用することによって構築されます。 さらに、書式設定の値は、必ず、 `named formatting literal` LANGUAGE プロパティで指定されて、名前付きの書式が設定されている言語の用法に従って FORMAT_STRING の出力を変更します。 名前付き書式設定リテラルはすべてローカライズできるように定義されています。 たとえば `"General Date"` はローカライズ可能な指定ですが、 `"YYYY-MM-DD hh:nn:ss",` は、言語の指定に関係なくこの定義のとおりに日付を表示するように指定するテンプレートです。  
+ FORMATTED_VALUE プロパティは、FORMAT_STRING プロパティで指定されている書式設定テンプレートを VALUE プロパティの値に適用することによって構築されます。 また、書式設定値が `named formatting literal` の場合は、LANGUAGE プロパティで指定されている言語の用法に従って FORMAT_STRING の出力が変更されます。 名前付き書式設定リテラルはすべてローカライズできるように定義されています。 たとえば `"General Date"` はローカライズ可能な指定ですが、 `"YYYY-MM-DD hh:nn:ss",` は、言語の指定に関係なくこの定義のとおりに日付を表示するように指定するテンプレートです。  
   
  FORMAT_STRING のテンプレートと LANGUAGE の指定が競合している場合は、FORMAT_STRING のテンプレートが LANGUAGE の指定をオーバーライドします。 たとえば、FORMAT_STRING="$ #0"、LANGUAGE=1034 (スペイン)、VALUE=123.456 の場合、書式設定テンプレートの値が言語の指定よりもオーバーライドされるため、FORMATTED_VALUE="€ 123" (予想される書式) ではなく FORMATTED_VALUE="$ 123" になります。  
   
@@ -143,9 +142,9 @@ ms.locfileid: "48052358"
 |L|06:30|FORMAT_STRING が明示的に `Short Time` に設定され、LANGUAGE が明示的に `1041` (日本語) に設定されています。|  
   
 ## <a name="see-also"></a>参照  
- [FORMAT_STRING の内容&#40;MDX&#41;](mdx-cell-properties-format-string-contents.md)   
- [セルのプロパティを使用して&#40;MDX&#41;](mdx-cell-properties-using-cell-properties.md)   
- [作成して、プロパティ値を使用して&#40;MDX&#41;](../../creating-and-using-property-values-mdx.md)   
- [MDX クエリの基礎&#40;Analysis Services&#41;](mdx-query-fundamentals-analysis-services.md)  
+ [FORMAT_STRING の内容 (MDX)](mdx-cell-properties-format-string-contents.md)   
+ [セル プロパティの使用 (MDX)](mdx-cell-properties-using-cell-properties.md)   
+ [プロパティ値の作成および使用&#40;MDX&#41;](../../creating-and-using-property-values-mdx.md)   
+ [MDX クエリの基礎 &#40;Analysis Services&#41;](mdx-query-fundamentals-analysis-services.md)  
   
   

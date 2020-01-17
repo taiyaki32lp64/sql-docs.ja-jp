@@ -10,15 +10,14 @@ ms.topic: conceptual
 f1_keywords:
 - VS.ToolsOptionsPages.Designers.Table_Designer
 ms.assetid: b43f4b97-17b9-4004-a824-f77b9e145741
-author: stevestein
-ms.author: sstein
-manager: craigg
-ms.openlocfilehash: fbf35f72721cee361d62ad5b5ac2b6b09c9c58df
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 04204d6d6c83411d1a47caa8f573bdbc2601d9f0
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47823140"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68262754"
 ---
 # <a name="options-designers---table-and-database-designers-page"></a>[オプション] \([デザイナー]/[テーブルおよびデータベース デザイナー] ページ)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

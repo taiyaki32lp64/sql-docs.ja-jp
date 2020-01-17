@@ -11,15 +11,14 @@ f1_keywords:
 - vdtsql.chm:65555
 - vdt.dlgbox.schema.addtable
 ms.assetid: 3c0b1b30-795c-4240-91d6-890b8348014a
-author: stevestein
-ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 8ca667e010b150137f9a50ca1ed61ff0f233fba2
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: e8d75f91a4373cbaa70521395020794d6976ee30
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47793050"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68263424"
 ---
 # <a name="add-table-dialog-box-database-designer-visual-database-tools"></a>[テーブルの追加] ダイアログ ボックス (データベース デザイナー) (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

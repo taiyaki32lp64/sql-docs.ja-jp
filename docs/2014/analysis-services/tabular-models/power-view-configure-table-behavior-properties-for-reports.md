@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.bidtoolset.tablebehavior.f1
@@ -13,12 +12,12 @@ ms.assetid: 1386aae0-1d73-4a50-9c69-ae12405d855c
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 84060846dc19862e057e55e4096df7e97fa4d825
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: f6ade5a39c974af7a87bb33aab6da490e0c3ae0e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53352878"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66066836"
 ---
 # <a name="configure-table-behavior-properties-for-power-view-reports-ssas-tabular"></a>Power View レポートのテーブル動作プロパティの構成 (SSAS テーブル)
   テーブル モデルを [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] のデータ モデルとして使用している場合は、詳細行をより細かなレベルで公開するテーブル動作プロパティを設定できます。 テーブル動作プロパティの設定により、詳細行のグループ化動作を変更できます。また、タイル、カード、およびグラフのレイアウトを使用して、識別情報 (名前、写真 ID、ロゴ イメージなど) の適切な既定位置を設定できます。  

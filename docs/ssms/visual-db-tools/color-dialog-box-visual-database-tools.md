@@ -10,21 +10,20 @@ ms.topic: conceptual
 f1_keywords:
 - VS.ToolsOptions.FontsAndColors.ColorPicker
 ms.assetid: 89a19608-f24c-41fa-a1a9-6e2e2cd952fa
-author: stevestein
-ms.author: sstein
-manager: craigg
-ms.openlocfilehash: e591c6bb6320817fbaf514a80b53b6f7961e8a85
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: fae0c136b1561aa93ff6f83f0bb0f7c7c69a8744
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47781480"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68262546"
 ---
 # <a name="color-dialog-box-visual-database-tools"></a>[色の設定] ダイアログ ボックス (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-**[色の設定]** ダイアログ ボックスは、ユーザーが選択した色の RGB 値を返します。 ユーザーは、ディスプレイ ドライバーによって決定された一連の基本色または作成した一連の色から選択できます。 基本色を選択するか、カスタムの色を作成します。 カラー マトリックスに表示された色をクリックするか、 **[色合い]**、 **[鮮やかさ]**、 **[明るさ]**、 **[赤]**、 **[緑]**、 **[青]** の各テキスト ボックスに入力して、色を定義します。  
+**[色の設定]** ダイアログ ボックスは、ユーザーが選択した色の RGB 値を返します。 ユーザーは、ディスプレイ ドライバーによって決定された一連の基本色または作成した一連の色から選択できます。 基本色を選択するか、カスタムの色を作成します。 カラー マトリックスに表示された色をクリックするか、 **[色合い]** 、 **[鮮やかさ]** 、 **[明るさ]** 、 **[赤]** 、 **[緑]** 、 **[青]** の各テキスト ボックスに入力して、色を定義します。  
   
-## <a name="options"></a>[変数]  
+## <a name="options"></a>オプション  
 **[基本色]**  
 ディスプレイ ドライバーによって事前に定義された色。  
   

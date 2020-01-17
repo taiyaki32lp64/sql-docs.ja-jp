@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: eb84c0f1-26dd-48f9-9368-13ee4a30a27c
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 7a4d8a511fe163907de4cec6e12c6f884c7ad983
-ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
+ms.openlocfilehash: 2ad8059466ac520b6f9f793af7670cbd73b96b38
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/18/2018
-ms.locfileid: "53589582"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68107932"
 ---
 # <a name="spoacreate-transact-sql"></a>sp_OACreate (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -41,14 +40,14 @@ sp_OACreate { progid | clsid } , objecttoken OUTPUT [ , context ]
   
 ## <a name="arguments"></a>引数  
  *progid*  
- 作成する OLE オブジェクトのプログラム ID (ProgID) を指定します。 この文字の文字列は OLE オブジェクトのクラスをについて説明し、フォーム。**'**_OLEComponent_**.**_オブジェクト_**'**  
+ 作成する OLE オブジェクトのプログラム ID (ProgID) を指定します。 この文字の文字列は OLE オブジェクトのクラスをについて説明し、フォーム。 **'** _OLEComponent_ **.** _オブジェクト_ **'**  
   
  *OLEComponent* 、OLE オートメーション サーバーのコンポーネントの名前と*オブジェクト*OLE オブジェクトの名前を指定します。 指定した OLE オブジェクトが有効にする必要があり、サポートする必要があります、 **IDispatch**インターフェイス。  
   
  たとえば、SQLDMO です。Sql Server は、SQL-DMO の ProgID **SQLServer**オブジェクト。 SQL-DMO は SQLDMO のコンポーネント名、 **SQLServer**オブジェクトが、有効であり (すべての SQL-DMO のようなオブジェクト)、 **SQLServer**オブジェクト サポート**IDispatch**します。  
   
  *clsid*  
- 作成する OLE オブジェクトのクラス ID (CLSID) を指定します。 この文字の文字列が OLE オブジェクトのクラスをについて説明し、フォーム: **' {**_nnnnnnnn-nnnn-nnnn-nnnn-nnnnnnnnnnnn_**}'** します。 指定した OLE オブジェクトが有効にする必要があり、サポートする必要があります、 **IDispatch**インターフェイス。  
+ 作成する OLE オブジェクトのクラス ID (CLSID) を指定します。 この文字の文字列が OLE オブジェクトのクラスをについて説明し、フォーム: **' {** _nnnnnnnn-nnnn-nnnn-nnnn-nnnnnnnnnnnn_ **}'** します。 指定した OLE オブジェクトが有効にする必要があり、サポートする必要があります、 **IDispatch**インターフェイス。  
   
  たとえば、{00026BA1-0000-0000-C000-000000000046} には、SQL-DMO の CLSID **SQLServer**オブジェクト。  
   
@@ -84,7 +83,7 @@ sp_OACreate { progid | clsid } , objecttoken OUTPUT [ , context ]
  作成された OLE オブジェクトは、[!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメント バッチの最後に自動的に破棄されます。  
   
 ## <a name="permissions"></a>アクセス許可  
- **sysadmin** 固定サーバー ロールのメンバーシップが必要です。  
+ メンバーシップが必要です、 **sysadmin**固定サーバー ロールまたはアクセス許可をこのストアド プロシージャを直接実行します。 `Ole Automation Procedures` 構成でなければなりません**有効になっている**OLE オートメーションに関連するすべてのシステム プロシージャを使用します。  
   
 ## <a name="examples"></a>使用例  
   

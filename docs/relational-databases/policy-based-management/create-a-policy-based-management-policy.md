@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: b28bf963-89f9-4941-b6c1-6004fec347f1
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: ce55668552be49eb708b02d79233c2888e2cf57e
-ms.sourcegitcommit: ef6e3ec273b0521e7c79d5c2a4cb4dcba1744e67
+ms.openlocfilehash: cd95caaa746204084c0d4748cd8bb20fede39f9a
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51511957"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72907180"
 ---
 # <a name="create-a-policy-based-management-policy"></a>ポリシー ベースの管理ポリシーの作成
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -28,7 +27,7 @@ ms.locfileid: "51511957"
   
 -   **作業を開始する準備:**  
   
-     [Security](#Security)  
+     [セキュリティ](#Security)  
   
 -   **以下を使用してポリシーを作成するには:**  
   
@@ -57,7 +56,7 @@ ms.locfileid: "51511957"
   
 6.  作成されたポリシーを直ちに有効にする場合は、 **[有効]** チェック ボックスをオンにします。 評価モードが **[要求時]** である場合、 **[有効]** チェック ボックスは使用できません。  
   
-7.  **[条件の確認]** ボックスの一覧で、既存の条件の 1 つを選択するか、 **[新しい条件]** をクリックします。 条件を編集するには、条件を選択し、省略記号ボタン (**[...]**) をクリックします。詳細については、「 [新しいポリシー ベースの管理条件の作成](../../relational-databases/policy-based-management/create-a-new-policy-based-management-condition.md) 」または「 [ポリシー ベースの管理条件のプロパティの表示または変更](../../relational-databases/policy-based-management/view-or-modify-the-properties-of-a-policy-based-management-condition.md)」を参照してください。  
+7.  **[条件の確認]** ボックスの一覧で、既存の条件の 1 つを選択するか、 **[新しい条件]** をクリックします。 条件を編集するには、条件を選択し、省略記号ボタン ( **[...]** ) をクリックします。詳細については、「 [新しいポリシー ベースの管理条件の作成](../../relational-databases/policy-based-management/create-a-new-policy-based-management-condition.md) 」または「 [ポリシー ベースの管理条件のプロパティの表示または変更](../../relational-databases/policy-based-management/view-or-modify-the-properties-of-a-policy-based-management-condition.md)」を参照してください。  
   
 8.  **[対象]** ボックスで、このポリシーの対象になる種類を 1 つ以上選択します。 一部の条件とファセットは、特定の種類の対象にしか適用できません。 使用可能な対象セットが、関連するボックスに表示されます。 **[すべて]** を展開して、一部の種類の対象に対してフィルター条件を選択します。 対象がこのボックスに表示されていない場合、条件の確認がサーバー レベルのスコープを持っています。  
   
@@ -70,5 +69,4 @@ ms.locfileid: "51511957"
      **[新しいポリシーの作成]** ダイアログ ボックスで使用可能なオプションの詳細については、「 [[新しいポリシーの作成] または [ポリシーを開く] ダイアログ ボックスの [全般] ページ](../../relational-databases/policy-based-management/create-new-policy-or-open-policy-dialog-box-general-page.md) 」または「 [[新しいポリシーの作成] または [ポリシーを開く] ダイアログ ボックスの [説明] ページ](../../relational-databases/policy-based-management/create-new-policy-or-open-policy-dialog-box-description-page.md)」を参照してください。  
   
 12. 完了したら、 **[OK]** をクリックします。  
-  
-  
+

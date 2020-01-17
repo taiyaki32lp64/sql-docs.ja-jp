@@ -3,22 +3,24 @@ title: Access データ ソースに接続する (SQL Server インポートお�
 ms.custom: ''
 ms.date: 06/20/2017
 ms.prod: sql
-ms.prod_service: integration-services
 ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: b44c159a-c33d-4f3c-bdb8-9832f35317c8
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: fb847f12e7b9a508d880033da7e66a426b757791
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 67a361446c69425f6b05bef913ded568a7dcfd75
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53202641"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71296292"
 ---
 # <a name="connect-to-an-access-data-source-sql-server-import-and-export-wizard"></a>Access データ ソースに接続する (SQL Server インポートおよびエクスポート ウィザード)
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
 このトピックでは、SQL Server インポートおよびエクスポート ウィザードの **[データ ソースの選択]** ページまたは **[変換先の選択]** ページから **Microsoft Access** データ ソースに接続する方法を説明します。
 
 Microsoft Access データベースへの接続例を次のスクリーン ショットに示します。 この例では、ターゲット データベースでワークグループ情報ファイルを使用ないため、ユーザー名とパスワードを入力する必要はありません。
@@ -44,10 +46,10 @@ Microsoft Access データベースへの接続例を次のスクリーン シ�
 > Access データベースに接続するために追加のファイルのダウンロードとインストールが必要になる場合もあります。 詳細については、このページの「[Access に接続するために必要なファイルを取得する](#officeDownloads)」を参照してください。
 
  **[ファイル名]**  
-Access ファイルのパスとファイル名を指定します。 たとえば、ローカル コンピューター上のファイルの場合は **C:\\MyData.mdb**、ネットワーク共有上のファイルの場合は **\\\\Sales\\Database\\Northwind.mdb** と指定します。 または、**[参照]** をクリックします。 
+Access ファイルのパスとファイル名を指定します。 たとえば、ローカル コンピューター上のファイルの場合は **C:\\MyData.mdb**、ネットワーク共有上のファイルの場合は **\\\\Sales\\Database\\Northwind.mdb** と指定します。 または、 **[参照]** をクリックします。 
 
 > [!NOTE]
-> **[参照]** をクリックして Access ファイルを見つける場合、**[開く]** ダイアログ ボックスでは古い .MDB 形式とファイル拡張子を持つファイルが既定でフィルター処理されます。 ただし、データ プロバイダーでは、新しい .ACCDB 形式とファイル拡張子を持つファイルを開くこともできます。
+> **[参照]** をクリックして Access ファイルを見つける場合、 **[開く]** ダイアログ ボックスでは古い .MDB 形式とファイル拡張子を持つファイルが既定でフィルター処理されます。 ただし、データ プロバイダーでは、新しい .ACCDB 形式とファイル拡張子を持つファイルを開くこともできます。
   
  **[参照]**  
  **[ファイルを開く]** ダイアログ ボックスを使用して、データベース ファイルを検索します。  
@@ -76,26 +78,26 @@ Access と Excel を含む Microsoft Office データ ソース用の接続コ�
 
 コンピューターに 32 ビット バージョンの Office が存在する場合は、32 ビット バージョンのコンポーネントをインストールする必要があるほか、32 ビット モードでパッケージが実行されるようにする必要があります。
 
-Office 365 サブスクリプションがある場合は、Microsoft Access 2016 ランタイムではなく、必ず Access データベース エンジン 2016 再頒布可能パッケージをダウンロードしてください。 インストーラーを実行するときに、ダウンロードを Office のクイック実行コンポーネントとサイド バイ サイドでインストールできないことを示すエラー メッセージが表示される場合があります。 このエラー メッセージを回避するには、コマンド プロンプト ウィンドウを開き、`/quiet` スイッチを使用してダウンロードした .EXE ファイルを実行して、Quiet モードでインストールを実行します。 例 :
+Office 365 サブスクリプションがある場合は、Microsoft Access 2016 ランタイムではなく、必ず Access データベース エンジン 2016 再頒布可能パッケージをダウンロードしてください。 インストーラーを実行するときに、ダウンロードを Office のクイック実行コンポーネントとサイド バイ サイドでインストールできないことを示すエラー メッセージが表示される場合があります。 このエラー メッセージを回避するには、コマンド プロンプト ウィンドウを開き、`/quiet` スイッチを使用してダウンロードした .EXE ファイルを実行して、Quiet モードでインストールを実行します。 例:
 
 `C:\Users\<user name>\Downloads\AccessDatabaseEngine.exe /quiet`
 
 ## <a name="database_password"></a> データベース ファイルはパスワードで保護されているか
 Access データベースがパスワードで保護されているものの、ワークグループの情報ファイルを使用していない場合があります。 すべてのユーザーが同じパスワードを指定する必要がありますが、ユーザー名を入力する必要はありません。 データベースのパスワードを提供するには、次の手順を実行します。
 
-1.  **[データ ソースの選択]** または **[変換先の選択]** ページで、**[詳細設定]** をクリックして、**[データ リンク プロパティ]** ダイアログ ボックスを開きます。  
-2.  **[データ リンク プロパティ]** ダイアログ ボックスで、**[すべて]** タブを選択します。  
-3.  プロパティと値のリストで、**[Jet OLEDB:データベースのパスワード]** を選択します。   
+1.  **[データ ソースの選択]** または **[変換先の選択]** ページで、 **[詳細設定]** をクリックして、 **[データ リンク プロパティ]** ダイアログ ボックスを開きます。  
+2.  **[データ リンク プロパティ]** ダイアログ ボックスで、 **[すべて]** タブを選択します。  
+3.  プロパティと値のリストで、 **[Jet OLEDB:データベースのパスワード]** を選択します。   
     
     ![Access パスワードの指定、画面 1](../../integration-services/import-export-data/media/specify-access-password-screen-1.jpg) 
-4.  **[値の編集]** をクリックして、**[プロパティの値を編集]** ダイアログ ボックスを開きます。  
+4.  **[値の編集]** をクリックして、 **[プロパティの値を編集]** ダイアログ ボックスを開きます。  
     
     ![Access パスワードの指定、画面 2](../../integration-services/import-export-data/media/specify-access-password-screen-2.jpg)
 5.  **[プロパティの値を編集]** ダイアログ ボックスで、データベースのパスワードを入力します。
 6.  各ダイアログ ボックスで **[OK]** をクリックして、ウィザードの **[データ ソースの選択]** または **[変換先の選択]** ページに戻り、続行します。
 
 ## <a name="keep-your-autonumber-values-when-you-export-from-access"></a>Access からエクスポートするときに、autonumber 値を保持する
-変換元データの既存の ID 値を変換先テーブルの ID 列に挿入できるようにするには、**[列マッピング]** ダイアログボックスで **[ID 挿入を許可する]** オプションを選択します。 既定では、変換先の ID 列に対して既存の値を挿入することは通常許可されません。 **[列マッピング]** ダイアログ ボックスを表示するには、ウィザードの **[コピー元のテーブルおよびビューを選択]** ページに到達したときに、**[マッピングの編集]** を選択します。 これらのページを見るには、「[コピー元のテーブルおよびビューを選択](../../integration-services/import-export-data/select-source-tables-and-views-sql-server-import-and-export-wizard.md)」と「[列マッピング](../../integration-services/import-export-data/column-mappings-sql-server-import-and-export-wizard.md)」を参照してください。
+変換元データの既存の ID 値を変換先テーブルの ID 列に挿入できるようにするには、 **[列マッピング]** ダイアログボックスで **[ID 挿入を許可する]** オプションを選択します。 既定では、変換先の ID 列に対して既存の値を挿入することは通常許可されません。 **[列マッピング]** ダイアログ ボックスを表示するには、ウィザードの **[コピー元のテーブルおよびビューを選択]** ページに到達したときに、 **[マッピングの編集]** を選択します。 これらのページを見るには、「[コピー元のテーブルおよびビューを選択](../../integration-services/import-export-data/select-source-tables-and-views-sql-server-import-and-export-wizard.md)」と「[列マッピング](../../integration-services/import-export-data/column-mappings-sql-server-import-and-export-wizard.md)」を参照してください。
 
 既存のプライマリ キーが id 列、autonumber 列、または同等の列である場合、既存のプライマリ キー値を保持するには、通常、このオプションを選択する必要があります。 その他の場合、変換先の ID 列には通常、新しい値が割り当てられます。
 

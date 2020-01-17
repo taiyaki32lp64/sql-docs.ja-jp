@@ -10,19 +10,18 @@ ms.topic: conceptual
 f1_keywords:
 - VS.ToolsOptionsPages.Environment.Help.Online
 ms.assetid: 24933338-3a47-44c0-87fc-c3dca8faf4de
-author: stevestein
-ms.author: sstein
-manager: craigg
-ms.openlocfilehash: b34b2eba22b30b4c2ff6f88d6791f6cb1c378e89
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 252acb0bc5e3d7fbbd66c0c41fdbd97b59b64f24
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47804640"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68257125"
 ---
 # <a name="options-environment---help---online-page"></a>[オプション] \([環境]/[ヘルプ]/[オンライン] ページ)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-**[オプション]** ダイアログ ボックスを使用すると、[!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 検索に使用するヘルプ ソース (F1 ヘルプなど) を指定できます。 **[ツール]** メニューの **[オプション]** をクリックし、 **[環境]** フォルダーを展開して、 **[ヘルプ]**、 **[オンライン]** の順にクリックします。 **[オンライン]** ページが一覧に表示されない場合は、 **[オプション]** ダイアログ ボックスの **[すべての設定を表示]** チェック ボックスをオンにしてください。  
+**[オプション]** ダイアログ ボックスを使用すると、[!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 検索に使用するヘルプ ソース (F1 ヘルプなど) を指定できます。 **[ツール]** メニューの **[オプション]** をクリックし、 **[環境]** フォルダーを展開して、 **[ヘルプ]** 、 **[オンライン]** の順にクリックします。 **[オンライン]** ページが一覧に表示されない場合は、 **[オプション]** ダイアログ ボックスの **[すべての設定を表示]** チェック ボックスをオンにしてください。  
   
 **[ヘルプ コンテンツを読み込むとき]**  
 F1 ヘルプで使用するヘルプ ソースの順序を設定し、使用するヘルプ ソースを指定します。  

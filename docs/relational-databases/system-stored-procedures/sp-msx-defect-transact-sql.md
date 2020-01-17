@@ -17,18 +17,17 @@ helpviewer_keywords:
 ms.assetid: 0dfd963a-3bc5-4b58-94f7-aec976da2883
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: b811fd8b1bb6be9c63794006888db253a8c341e6
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: c8f2e34d15f7cca4443680b2d8b8a9fa2c7c6199
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47843350"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67952318"
 ---
 # <a name="spmsxdefect-transact-sql"></a>sp_msx_defect (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  マルチサーバー操作から現在のサーバーを削除します。  
+  マルチ サーバー操作から現在のサーバーを削除します。  
   
 > [!CAUTION]  
 >  **sp_msx_defect**はレジストリを編集します。 レジストリは手動で編集しないでください。不適切または不正確な変更を加えると、システム構成に重大な問題が生じる場合があります。 熟練したユーザーのみがレジストリ エディターを使用してレジストリを編集することをお勧めします。 詳細については、Microsoft Windows のマニュアルを参照してください。  
@@ -43,8 +42,7 @@ sp_msx_defect [@forced_defection =] forced_defection
 ```  
   
 ## <a name="arguments"></a>引数  
- [  **@forced_defection =**] *forced_defection*  
- 強制的に、マスター SQLServerAgent が、致命的に破損した完全に失われた場合に発生する参加解除するかどうかを指定します**msdb**データベース、または いいえ**msdb**データベースのバックアップ。 *forced_defection*は**ビット**、既定値は**0**、強制的な参加解除が発生しないことを示します。 値**1**強制的に参加解除します。  
+`[ @forced_defection = ] forced_defection` 強制的に、マスター SQLServerAgent が、致命的に破損した完全に失われた場合に発生する参加解除するかどうかを指定します**msdb**データベース、または いいえ**msdb**データベースのバックアップ。 *forced_defection*は**ビット**、既定値は**0**、強制的な参加解除が発生しないことを示します。 値**1**強制的に参加解除します。  
   
  強制的に実行することによって、参加解除した後は**sp_msx_defect**のメンバー、 **sysadmin**マスター sqlserveragent の固定サーバー ロールは、参加解除を完了するには、次のコマンドを実行する必要があります。  
   
@@ -64,7 +62,7 @@ EXECUTE msdb.dbo.sp_delete_targetserver @server_name = 'tsx-server', @post_defec
 ## <a name="permissions"></a>アクセス許可  
  このストアド プロシージャを実行するには、 **sysadmin** 固定サーバー ロールのメンバーであることが必要です。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [sp_msx_enlist &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-msx-enlist-transact-sql.md)   
  [システム ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   

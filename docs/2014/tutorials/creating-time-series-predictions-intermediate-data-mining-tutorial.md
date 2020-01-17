@@ -11,11 +11,11 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: ca1aa4022931c78f6139a8058c05adc707af5e77
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56027993"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63313887"
 ---
 # <a name="creating-time-series-predictions-intermediate-data-mining-tutorial"></a>時系列予測の作成 (中級者向けデータ マイニング チュートリアル)
   このレッスンの前の作業では、時系列モデルを作成し、結果を検証しました。 既定では、[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] によって常に時系列モデルの 5 つの予測のセットが作成され、予測された値が予測グラフの一部として表示されます。 ただし、データ マイニング拡張機能 (DMX) の予測クエリを作成することによって、予測を作成することもできます。  

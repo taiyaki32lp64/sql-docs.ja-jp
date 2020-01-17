@@ -15,15 +15,14 @@ helpviewer_keywords:
 ms.assetid: bb0a38e0-4eb2-49bf-bba8-750fb706d06e
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 9d85238d497816c7e274283bfb1f8ae1a32c0283
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 20d8b284106bf3f8cfbcd7a69cf57d3fd59d7d82
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47768870"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68018374"
 ---
-# <a name="resource-governor-catalog-views-transact-sql"></a>リソース ガバナーのカタログ ビュー (Transact-SQL)
+# <a name="resource-governor-catalog-views-transact-sql"></a>リソース ガバナーのカタログ ビュー (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   ここでは、次のカタログ ビューのリソース ガバナーに関する情報を示します。 これらのビューは、パフォーマンスおよびユーティリティに対して最適化されています。 可能な場合は、これらのカタログ ビューを使用してリソース ガバナーのメタデータにアクセスできます。  

@@ -10,15 +10,15 @@ helpviewer_keywords:
 - versions [Master Data Services], copying
 - copying versions [Master Data Services]
 ms.assetid: f4678a02-bbe9-4f21-9e32-627eae053fe7
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: a42204b6cc095a5a285e5e68aa1aaf7a905668e6
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 70f328da53f2d346fe58f3416b0a3a0c331eb74c
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52765384"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65479981"
 ---
 # <a name="copy-a-version-master-data-services"></a>バージョンをコピーする (マスター データ サービス)
   [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]でモデルのバージョンをコピーして、新しいバージョンを作成します。  

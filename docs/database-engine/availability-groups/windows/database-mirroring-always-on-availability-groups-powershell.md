@@ -1,7 +1,7 @@
 ---
-title: PowerShell を利用し、可用性グループのデータベース ミラーリング エンドポイントを作成する
+title: Powershell:可用性グループのデータベース ミラーリング エンドポイント
 description: PowerShell を利用し、Always On 可用性グループのデータベース ミラーリング エンドポイントを作成する方法について説明します。
-ms.custom: seodec18
+ms.custom: seo-lt-2019
 ms.date: 05/17/2016
 ms.prod: sql
 ms.reviewer: ''
@@ -14,34 +14,25 @@ helpviewer_keywords:
 ms.assetid: 6197bbe7-67d4-446d-ba5f-cabfa5df77f1
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 2c3c9306b27804603e00bf9c5d542e5bc800f14e
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: d8cc91d628c365d4f9092ca24a8b4df06f17adf2
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53206381"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75252896"
 ---
 # <a name="create-a-database-mirroring-endpoint-for-an-availability-group-using-powershell"></a>PowerShell を利用し、可用性グループのデータベース ミラーリング エンドポイントを作成する
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
   このトピックでは、PowerShell を使用して、 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] の [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] で使用するデータベース ミラーリング エンドポイントを作成する方法について説明します。  
   
- **このトピックの内容**  
+
   
--   **作業を開始する準備:**[セキュリティ](#Security)  
-  
--   **データベース ミラーリング エンドポイントを作成するために使用するもの:** [PowerShell](#PowerShellProcedure)  
-  
-## <a name="before-you-begin"></a>はじめに  
-  
-###  <a name="Security"></a> セキュリティ  
-  
+##  <a name="Permissions"></a> Permissions  
+ CREATE ENDPOINT 権限、または sysadmin 固定サーバー ロールのメンバーシップが必要です。 詳細については、「 [GRANT (エンドポイントの権限の許可) &#40;Transact-SQL&#41;](../../../t-sql/statements/grant-endpoint-permissions-transact-sql.md)」を参照してください。  
+
 > [!IMPORTANT]  
 >  RC4 アルゴリズムは非推奨とされます。 [!INCLUDE[ssNoteDepFutureDontUse](../../../includes/ssnotedepfuturedontuse-md.md)] AES を使用することをお勧めします。  
-  
-####  <a name="Permissions"></a> Permissions  
- CREATE ENDPOINT 権限、または sysadmin 固定サーバー ロールのメンバーシップが必要です。 詳細については、「 [GRANT (エンドポイントの権限の許可) &#40;Transact-SQL&#41;](../../../t-sql/statements/grant-endpoint-permissions-transact-sql.md)」を参照してください。  
   
 ##  <a name="PowerShellProcedure"></a> PowerShell の使用  
  **データベース ミラーリング エンドポイントを作成するには**  
@@ -86,6 +77,6 @@ Set-SqlHadrEndpoint -InputObject $endpoint -State "Started"
   
 ## <a name="see-also"></a>参照  
  [可用性グループの作成 &#40;Transact-SQL&#41;](../../../database-engine/availability-groups/windows/create-an-availability-group-transact-sql.md)   
- [AlwaysOn 可用性グループの概要 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)  
+ [Always On 可用性グループの概要 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)  
   
   

@@ -1,114 +1,168 @@
 ---
-title: Azure Kubernetes サービスを構成します。
-titleSuffix: SQL Server 2019 big data clusters
-description: SQL Server 2019 ビッグ データ クラスター (プレビュー) のデプロイ用 Azure Kubernetes Service (AKS) を構成する方法について説明します。
-author: rothja
-ms.author: jroth
-manager: craigg
-ms.date: 02/28/2019
+title: Azure Kubernetes Service の構成
+titleSuffix: SQL Server big data clusters
+description: '[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)] のデプロイ用に Azure Kubernetes Service (AKS) を構成する方法について説明します。'
+author: MikeRayMSFT
+ms.author: mikeray
+ms.reviewer: mihaelab
+ms.date: 08/21/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.custom: seodec18
-ms.openlocfilehash: ae8a8b2869a46a9157c805edcb8c6d74ca49e3d0
-ms.sourcegitcommit: 2533383a7baa03b62430018a006a339c0bd69af2
-ms.translationtype: MT
+ms.openlocfilehash: 9a3b52a87927eb85d638ed97c1e145efd50602bf
+ms.sourcegitcommit: 6413b7495313830ad1ae5aefe0c09e8e7a284b07
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57017998"
+ms.lasthandoff: 09/16/2019
+ms.locfileid: "71016889"
 ---
-# <a name="configure-azure-kubernetes-service-for-sql-server-2019-big-data-cluster-preview-deployments"></a>SQL Server 2019 ビッグ データ クラスター (プレビュー) のデプロイ用 Azure Kubernetes サービスを構成します。
+# <a name="configure-azure-kubernetes-service-for-sql-server-big-data-cluster-deployments"></a>SQL Server ビッグ データ クラスターの展開のために Azure Kubernetes Service を構成する
 
-この記事では、SQL Server 2019 ビッグ データ クラスター (プレビュー) のデプロイ用 Azure Kubernetes Service (AKS) を構成する方法について説明します。
+[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
-AKS によって、作成、構成、およびコンテナー化されたアプリケーションを実行するための Kubernetes クラスターであらかじめ構成されている仮想マシンのクラスターの管理を簡単にできます。 これにより、既存のスキルを使用して、または Microsoft Azure でコンテナー ベースのアプリケーション展開および管理する、コミュニティの専門知識の増加し続けるの本文に描画することができます。
+この記事では、[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)] のデプロイ用に Azure Kubernetes Service (AKS) を構成する方法について説明します。
 
-この記事では、Azure CLI を使用して AKS で Kubernetes をデプロイする手順について説明します。 Azure サブスクリプションを持っていない場合は、開始する前に、無料のアカウントを作成します。
+AKS を使用すると、コンテナー化されたアプリケーションを実行するために、Kubernetes クラスターを利用して事前に構成された仮想マシンのクラスターを簡単に作成、構成、管理できます。 これにより、既存のスキルを使用したり、規模が拡大している専門知識コミュニティを利用したりして、コンテナー ベースのアプリケーションを Microsoft Azure 上に展開して管理することができます。
 
-> [!TIP] 
-> AKS と SQL Server の両方のビッグ データ クラスターをデプロイするサンプル python スクリプトについては、次を参照してください。[クイック スタート。ビッグ データ クラスター Azure Kubernetes Service (AKS) で SQL Server 展開](quickstart-big-data-cluster-deploy.md)します。
+この記事では、Azure CLI を使用して AKS 上に Kubernetes を展開する手順について説明します。 Azure サブスクリプションをお持ちでない場合は、開始する前に無料アカウントを作成してください。
 
-## <a name="prerequisites"></a>前提条件
+> [!TIP]
+> また、1 つの手順で AKS とビッグ データ クラスターの展開をスクリプト化することもできます。 詳細については、[Python スクリプト](quickstart-big-data-cluster-deploy.md)または Azure Data Studio の[ノートブック](deploy-notebooks.md)において、この操作を行う方法を確認してください。
 
-- [SQL Server 2019 のビッグ データ ツールの展開](deploy-big-data-tools.md):
+## <a name="prerequisites"></a>Prerequisites
+
+- [SQL Server 2019 ビッグ データ ツールを展開する](deploy-big-data-tools.md):
    - **kubectl**
    - **Azure Data Studio**
    - **SQL Server 2019 の拡張機能**
    - **Azure CLI**
 
-- Kubernetes のサーバーの最小 1.10 バージョンです。 For AKS を使用する必要があります。 `--kubernetes-version` 、既定値以外のバージョンを指定するパラメーター。
+- Kubernetes サーバーでの最小の 1.13 バージョン。 AKS の場合、`--kubernetes-version` パラメータ―を使用して、既定値とは異なるバージョンを指定する必要があります。
 
-- AKS での基本的なシナリオの検証中に最適なエクスペリエンスを使用します。
-   - 3 つのエージェント Vm の最小値
-   - VM あたり 4 Vcpu
-   - VM あたりのメモリとして 32 GB
+- AKS の基本的なシナリオを検証しながら、正常なデプロイと最適なエクスペリエンスを確保するために、次のリソースを使用可能な単一ノードまたはマルチノードの AKS クラスターを使用できます。
+   - すべてのノード全体で 8個の vCPU
+   - VM ごとに 64 GB のメモリ
+   - すべてのノード全体で 24 個以上の接続されたディスク
 
    > [!TIP]
-   > Azure インフラストラクチャ Vm のサイズの複数のオプションを参照してください[ここ](https://docs.microsoft.com/azure/virtual-machines/windows/sizes)の展開を計画しているリージョンの選択項目。
+   > Azure インフラストラクチャでは、VM に対して複数のサイズ オプションを提供しています。展開を計画しているリージョンでの選択については、[こちら](https://docs.microsoft.com/azure/virtual-machines/windows/sizes)を参照してください。
 
-## <a name="create-a-resource-group"></a>リソース グループを作成します。
+## <a name="create-a-resource-group"></a>リソース グループを作成する
 
-Azure リソース グループは、azure リソースのデプロイし、管理論理グループです。 次の手順では、Azure にサインインし、AKS クラスターのリソース グループを作成します。
+Azure リソース グループは、Azure リソースが展開され管理される論理グループです。 次の手順では、Azure にサインインし、AKS クラスターに対するリソース グループを作成します。
 
-1. コマンド プロンプトで次のコマンドを実行し、Azure サブスクリプションへのログインの指示に従います。
+1. コマンド プロンプトで次のコマンドを実行し、画面の指示に従って Azure サブスクリプションにログインします。
 
     ```azurecli
     az login
     ```
 
-1. 複数のサブスクリプションがある場合は、次のコマンドを実行してすべてのサブスクリプションを表示できます。
+1. 複数のサブスクリプションがある場合は、次のコマンドを実行すると、すべてのサブスクリプションを表示できます。
 
    ```azurecli
    az account list
    ```
 
-1. 別のサブスクリプションに変更したい場合は、このコマンドを実行できます。
+1. 別のサブスクリプションに変更する場合は、このコマンドを実行できます。
 
    ```azurecli
    az account set --subscription <subscription id>
    ```
 
-1. 使用してリソース グループを作成、 **az グループ作成**コマンド。 次の例は、という名前のリソース グループを作成します。`sqlbigdatagroup`で、`westus2`場所。
+1. **az group create** コマンドを使用して、リソース グループを作成します。 次の例では、`westus2` の場所に `sqlbdcgroup` という名前のリソース グループを作成します。
 
    ```azurecli
-   az group create --name sqlbigdatagroup --location westus2
+   az group create --name sqlbdcgroup --location westus2
    ```
 
-## <a name="create-a-kubernetes-cluster"></a>Kubernetes クラスターを作成します。
+## <a name="verify-available-kubernetes-versions"></a>利用可能な Kubernetes バージョンを確認する
 
-1. 使用して AKS で Kubernetes クラスターを作成、 [az aks 作成](https://docs.microsoft.com/cli/azure/aks)コマンド。 次の例では、という名前の Kubernetes クラスターを作成する*kubcluster* 3 つの Linux エージェント ノードを使用します。 前のセクションで使用したのと同じリソース グループで、AKS クラスターを作成することを確認します。
+利用可能な最新バージョンの Kubernetes を使用します。 利用可能な最新バージョンは、クラスターを展開する場所に応じて異なります。 次のコマンドは、特定の場所で利用できる Kubernetes バージョンを返します。
 
-    ```azurecli
+コマンドを実行する前に、スクリプトを更新します。 `<Azure data center>` をクラスターの場所に置き換えます。
+
+   **bash**
+
+   ```bash
+   az aks get-versions \
+   --location <Azure data center> \
+   --query orchestrators \
+   --o table
+   ```
+
+   **PowerShell**
+
+   ```powershell
+   az aks get-versions `
+   --location <Azure data center> `
+   --query orchestrators `
+   --o table
+   ```
+
+お使いのクラスターで利用可能な最新のバージョンを選択します。 バージョン番号を記録します。 次の手順で使用します。
+
+## <a name="create-a-kubernetes-cluster"></a>Kubernetes クラスターを作成する
+
+1. [az aks create](https://docs.microsoft.com/cli/azure/aks) コマンドを利用して、AKS に Kubernetes クラスターを作成します。 次の例では、サイズが **Standard_L8s** の Linux エージェント ノードを 1 つ備えた *kubcluster* という名前の Kubernetes クラスターを作成します。
+
+   スクリプトを実行する前に、`<version number>` を前の手順で特定したバージョン番号に置き換えます。
+
+   AKS クラスターは必ず、前のセクションで使用したときと同じリソース グループ内に作成してください。
+
+   **bash:**
+
+   ```bash
    az aks create --name kubcluster \
-    --resource-group sqlbigdatagroup \
-    --generate-ssh-keys \
-    --node-vm-size Standard_L4s \
-    --node-count 3 \
-    --kubernetes-version 1.10.9
-    ```
+   --resource-group sqlbdcgroup \
+   --generate-ssh-keys \
+   --node-vm-size Standard_L8s \
+   --node-count 1 \
+   --kubernetes-version <version number>
+   ```
 
-   大きくしたり、変更することで Kubernetes エージェント ノードの数を減らす、`--node-count <n>`場所`<n>`を使用するエージェント ノードの数です。 これは、AKS でバック グラウンドで管理されているマスターの Kubernetes ノードには含まれません。 上記の例では、 **3**サイズの Vm **Standard_L4s** AKS クラスターのエージェント ノードに使用します。
+   **PowerShell:**
 
-   数分後、コマンドが完了し、クラスターに関する情報を JSON 形式を返します。
+   ```powershell
+   az aks create --name kubcluster `
+   --resource-group sqlbdcgroup `
+   --generate-ssh-keys `
+   --node-vm-size Standard_L8s `
+   --node-count 1 `
+   --kubernetes-version <version number>
+   ```
 
-1. 後で使用できるは、前のコマンドからの JSON 出力を保存します。
+   Kubernetes エージェント ノードの数を増減するには、`--node-count <n>` を変更します。`<n>` は、使用するエージェント ノードの数です。 これには、AKS によってバックグラウンドで管理されるマスター Kubernetes ノードは含まれません。 上記の例では、評価目的のために 1 つのノードのみを使用しています。
 
-## <a name="connect-to-the-cluster"></a>クラスターに接続します。
+   数分後、コマンドが完了すると、クラスターに関する JSON 形式の情報が返されます。
 
-1. Kubernetes クラスターに接続するように kubectl を構成するには、実行、 [az aks 資格情報の取得](https://docs.microsoft.com/cli/azure/aks?view=azure-cli-latest#az-aks-get-credentials)コマンド。 この手順では、資格情報をダウンロードし、それらを使用する CLI kubectl を構成します。
+   > [!TIP]
+   > AKS にクラスターを作成する際にエラーを受け取った場合は、この記事の[「トラブルシューティング」のセクション](#troubleshoot)を参照してください。
+
+1. 後から使用するために、前のコマンドからの JSON 出力を保存します。
+
+## <a name="connect-to-the-cluster"></a>クラスターに接続する
+
+1. kubectl を構成して Kubernetes クラスターに接続するには、[az aks get-credentials](https://docs.microsoft.com/cli/azure/aks?view=azure-cli-latest#az-aks-get-credentials) コマンドを実行します。 この手順では、資格情報をダウンロードし、それらを使用するために kubectl CLI を構成します。
 
    ```azurecli
-   az aks get-credentials --resource-group=sqlbigdatagroup --name kubcluster
+   az aks get-credentials --resource-group=sqlbdcgroup --name kubcluster
    ```
 
-1. クラスターへの接続を確認するため、 [kubectl get](https://kubernetes.io/docs/reference/generated/kubectl/kubectl-commands)コマンドをクラスター ノードの一覧を返します。  次の例は、出力を示しています。 1 つのマスターと 3 つのエージェント ノードがある場合。
+1. クラスターへの接続を確認するには、クラスター ノードの一覧を返す [kubectl get](https://kubernetes.io/docs/reference/generated/kubectl/kubectl-commands) コマンドを使用します。  以下の例は、1 つのマスター ノードと 3 つのエージェント ノードがある場合の出力を示しています。
 
-   ```
+   ```bash
    kubectl get nodes
    ```
 
-## <a name="next-steps"></a>次のステップ
+## <a id="troubleshoot"></a> トラブルシューティング
 
-この記事の手順では、AKS で Kubernetes クラスターを構成します。 次の手順では、SQL Server 2019 ビッグ データ クラスターをデプロイします。 ビッグ データ クラスターをデプロイする方法の詳細については、次の記事を参照してください。
+上記のコマンドを利用して Azure Kubernetes サービスを作成する際に問題が発生した場合は、次の解決策を試してください。
 
-[Kubernetes での SQL Server のビッグ データ クラスターをデプロイする方法](deployment-guidance.md)
+- [最新の Azure CLI](https://docs.microsoft.com/cli/azure/install-azure-cli?view=azure-cli-latest) がインストールされていることを確認してください。
+- 別のリソース グループとクラスター名を使用して、同じ手順を試してください。
+
+## <a name="next-steps"></a>次の手順
+
+この記事の手順では、AKS に Kubernetes クラスターを構成しました。 次のステップとして、AKS Kubernetes クラスター上に SQL Server 2019 ビッグ データ クラスターを展開します。 ビッグ データ クラスターを展開する方法の詳細については、次の記事を参照してください。
+
+[Kubernetes に [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] を展開する方法](deployment-guidance.md)

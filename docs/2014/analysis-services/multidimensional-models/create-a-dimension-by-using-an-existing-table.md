@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - hierarchies [Analysis Services], dimensions
@@ -16,12 +15,12 @@ ms.assetid: edd96fbe-1b1c-445a-95d6-7a025e0ee868
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: e71f45689554a8f45f492eb974815935d112e0e4
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 5e65c2b8d543455a168bddc1be5ae5594c2ba8c3
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48226622"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66076420"
 ---
 # <a name="create-a-dimension-by-using-an-existing-table"></a>既存のテーブルを使用したディメンションの作成
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]では、 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] でディメンション ウィザードを使用して、既存のテーブルからディメンションを作成できます。 この操作を行うには、ウィザードの **[作成方法の選択]** ページで **[既存のテーブルの使用]** を選択します。 このオプションを選択すると、ディメンション構造は、ディメンション テーブル、その列、および既存のデータ ソース ビュー内の列間のリレーションシップに基づいて作成されます。 ウィザードでは、ソース テーブルと関連テーブル内のデータが抽出されます。 その後、このデータを使用して、ディメンション テーブル内の列に基づいて属性列を定義したり、属性階層 ( *ユーザー定義* 階層) を定義したりします。 ディメンション ウィザードを使用してディメンションを作成した後、ディメンション デザイナーを使用して、ディメンションの属性と階層を追加、削除、および構成できます。  
@@ -59,7 +58,7 @@ ms.locfileid: "48226622"
 > [!NOTE]  
 >  ディメンションの作成時にディメンションの種類と標準的な属性の型が設定されていない場合は、ディメンションの作成後に、ビジネス インテリジェンス ウィザードを使用して、これらの値を設定します。 詳しくは、「 [ディメンションへのディメンション インテリジェンスの追加](bi-wizard-add-dimension-intelligence-to-a-dimension.md) 」または (種類が勘定科目ディメンションの場合は)「 [ディメンションへの勘定科目インテリジェンスの追加](bi-wizard-add-account-intelligence-to-a-dimension.md)」をご覧ください。  
   
- ウィザードでは、指定されている属性の型に基づいて、ディメンションの種類が自動的に設定されます。 ウィザードのセットで指定された属性の型、`Type`属性のプロパティ。 ディメンションとその属性の `Type` プロパティの設定により、ディメンションのコンテンツに関する情報が、サーバーおよびクライアント アプリケーションに提供されます。 場合によっては、これら`Type`のみ、このプロパティの設定ではクライアント アプリケーションのガイダンスを提供およびは省略可能です。 その他の場合は、アカウント、時刻、または通貨の場合と、これらのディメンション`Type`プロパティの設定が特定のサーバー ベースの動作を決定し、特定のキューブの動作を実装する必要があります。  
+ ウィザードでは、指定されている属性の型に基づいて、ディメンションの種類が自動的に設定されます。 ウィザードで指定された属性の型によって、属性の `Type` プロパティが設定されます。 ディメンションとその属性の `Type` プロパティの設定により、ディメンションのコンテンツに関する情報が、サーバーおよびクライアント アプリケーションに提供されます。 場合によっては、このような `Type` プロパティの設定は、クライアント アプリケーションに情報を提供するだけなので、省略できます。 また、Accounts ディメンション、Time ディメンション、または Currency ディメンションでは、これらの `Type` プロパティの設定によって、サーバーベースの具体的な動作が決まるため、特定のキューブの動作を実装する際に、この設定が必要になる場合もあります。  
   
  ディメンションの種類と属性の型の詳細については、「 [ディメンションの種類](../multidimensional-models-olap-logical-dimension-objects/database-dimension-properties-types.md)」および「 [属性の種類の構成](attribute-properties-configure-attribute-types.md)」を参照してください。  
   
@@ -87,10 +86,10 @@ ms.locfileid: "48226622"
  **[ウィザードの完了]** ページで、新しいディメンションの名前を入力し、ディメンション構造を確認して、ウィザードを完了します。  
   
 ## <a name="see-also"></a>参照  
- [データ ソースの非時間テーブルを生成することで、ディメンションを作成します。](create-a-dimension-by-generating-a-non-time-table-in-the-data-source.md)   
- [時間テーブルの生成による時間ディメンションを作成します。](create-a-time-dimension-by-generating-a-time-table.md)   
- [ディメンション属性のプロパティの参照](dimension-attribute-properties-reference.md)   
- [時間テーブルの生成による時間ディメンションを作成します。](create-a-time-dimension-by-generating-a-time-table.md)   
+ [データ ソースに時間テーブル以外のテーブルを生成することによるディメンションの作成](create-a-dimension-by-generating-a-non-time-table-in-the-data-source.md)   
+ [時間テーブルの生成による時間ディメンションの作成](create-a-time-dimension-by-generating-a-time-table.md)   
+ [ディメンションの属性のプロパティの参照](dimension-attribute-properties-reference.md)   
+ [時間テーブルの生成による時間ディメンションの作成](create-a-time-dimension-by-generating-a-time-table.md)   
  [データ ソースに時間テーブル以外のテーブルを生成することによるディメンションの作成](create-a-dimension-by-generating-a-non-time-table-in-the-data-source.md)  
   
   

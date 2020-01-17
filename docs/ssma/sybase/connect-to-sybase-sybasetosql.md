@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 524f95ef-10bd-497c-84ca-c06a0ae794fb
 author: Shamikg
 ms.author: Shamikg
-manager: craigg
-ms.openlocfilehash: 0805246d5b88138cfa97019d1e0cd524c82456c6
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 6cb2f4196737cceec2f60684de1b7409f5e383a0
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47738077"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68083392"
 ---
 # <a name="connect-to-sybase-sybasetosql"></a>Sybase への接続 (SybaseToSQL)
 使用して、 **Sybase への接続**を移行する Sybase Adaptive Server Enterprise (ASE) のインスタンスに接続する ダイアログ ボックス。  
@@ -52,10 +51,10 @@ ASE に、接続の完全な接続文字列を入力します。
   
     |設定|Sybase 12.5 パラメーター|Sybase 15 パラメーター|  
     |-----------|-------------------------|-----------------------|  
-    |サーバー名|[サーバー名]|[サーバー]|  
+    |サーバー名|[サーバー名]|Server|  
     |Port|サーバーのポート アドレス|Port|  
     |[ユーザー名]|[ユーザー ID]|[ユーザー ID]|  
-    |パスワード|パスワード|パスワード|  
+    |Password|パスワード|Password|  
     |プロバイダー|プロバイダー|プロバイダー|  
   
     Sybase ASE の 12.5 の接続文字列の例のとおりです。  
@@ -71,9 +70,9 @@ ASE に、接続の完全な接続文字列を入力します。
     |設定|Sybase 12.5/15 パラメーター|  
     |-----------|-----------------------------|  
     |ドライバー名|ドライバー●どらいば○|  
-    |[サーバー名]|[サーバー]|  
+    |[サーバー名]|Server|  
     |[ユーザー名]|uid|  
-    |パスワード|pwd|  
+    |Password|pwd|  
     |[ポート番号]|Port|  
   
     Sybase ASE 12.5 または 15 では、接続文字列の例のとおりです。  
@@ -84,9 +83,9 @@ ASE に、接続の完全な接続文字列を入力します。
   
     |設定|Sybase 12.5/15 パラメーター|  
     |-----------|-----------------------------|  
-    |[サーバー名]|[サーバー]|  
+    |[サーバー名]|Server|  
     |[ユーザー名]|uid|  
-    |パスワード|pwd|  
+    |Password|pwd|  
     |[ポート番号]|Port|  
   
     ADO.NET プロバイダーの接続文字列の例は、次のようです。  

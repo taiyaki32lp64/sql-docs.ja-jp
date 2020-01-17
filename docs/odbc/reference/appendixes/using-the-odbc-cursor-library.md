@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 9653f2f8-ccfc-4220-99ef-601dc0fa641c
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 9fe19efb2d39e875cdafec76f2c50164f3a66f03
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: cdddf2e757c549de460f5e22c2ea76ce91a2a969
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47818430"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68069970"
 ---
 # <a name="using-the-odbc-cursor-library"></a>ODBC カーソル ライブラリの使用
 > [!IMPORTANT]  

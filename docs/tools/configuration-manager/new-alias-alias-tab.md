@@ -1,5 +1,5 @@
 ---
-title: 新しいエイリアス (別名 タブ) |Microsoft Docs
+title: 新しい別名 ([別名] タブ) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -8,16 +8,15 @@ ms.reviewer: ''
 ms.technology: configuration
 ms.topic: conceptual
 ms.assetid: 785eb6fb-f67e-449d-b1c8-c38dfbb95ef6
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-manager: craigg
-ms.openlocfilehash: 9bd80a957b3f571c4289935eaab145e0fd9f9719
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 24b08707a13bd67fcac41df0104ca916bfb2179c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51656372"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68010020"
 ---
 # <a name="new-alias-alias-tab"></a>[別名 - 新規] ダイアログ ボックス ([別名] タブ)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -28,7 +27,7 @@ ms.locfileid: "51656372"
  **[別名]**  
  この接続を参照するために使用する名前 (別名) です。  
   
- **[パイプ名]** / **[ポート番号]**  
+ **[パイプ名]**  /  **[ポート番号]**  
  接続文字列の追加要素です。 このボックスの名前は、選択したプロトコルによって異なります。  
   
  **[プロトコル]**  
@@ -46,7 +45,7 @@ ms.locfileid: "51656372"
   
 -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] が既定の名前付きパイプで受信を待機しない場合に、別のパイプ名を設定した接続文字列を指定します。  
   
--   `ACCT` という名前のサーバー上のデータベースに接続するアプリケーションがありますが、そのデータベースは、`ACCT` という名前のサーバー上の `CENTRAL` という名前のインスタンスとして統合されています。 そのアプリケーションは、簡単に変更できません。 この場合は、 `ACCT`という別名を作成し、接続文字列で `CENTRAL\ACCT`を参照します。  
+-   `ACCT`という名前のサーバー上のデータベースに接続するアプリケーションがありますが、そのデータベースは、 `ACCT` という名前のサーバー上の `CENTRAL`という名前のインスタンスとして統合されています。 そのアプリケーションは、簡単に変更できません。 この場合は、 `ACCT`という別名を作成し、接続文字列で `CENTRAL\ACCT`を参照します。  
   
 ## <a name="creating-a-valid-connection-string"></a>有効な接続文字列の作成  
  別名のプロパティの有効な組み合わせに関する説明と例については、以下のトピックを参照してください。  

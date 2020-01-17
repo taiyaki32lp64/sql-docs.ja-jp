@@ -10,12 +10,12 @@ ms.assetid: 64a9eade-22c3-4a9d-ab50-956219e08df1
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 65d6680d7e03960c0c59e83413be58cb74e5f028
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 7f5355af9adb2ae2a06fab1041b22959165dfaf2
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48158112"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63165047"
 ---
 # <a name="migrating-computed-columns"></a>計算列の移行
   計算列は、メモリ最適化テーブルではサポートされていません。 ただし、計算列をシミュレートすることはできます。  
@@ -25,7 +25,7 @@ ms.locfileid: "48158112"
 ## <a name="non-persisted-computed-columns"></a>保存されない計算列  
  保存されない計算列の効果をシミュレートするには、メモリ最適化テーブルのビューを作成します。 ビューを定義する SELECT ステートメントで、計算列の定義をビューに追加します。 ネイティブ コンパイル ストアド プロシージャ内を除き、計算列からの値を使用するクエリは、このビューから読み取る必要があります。 ネイティブ コンパイル ストアド プロシージャ内では、計算列の定義によって、SELECT、UPDATE、または DELETE ステートメントを更新する必要があります。  
   
-```tsql  
+```sql  
 -- Schema for the table dbo.OrderDetails:  
 -- OrderId int not null primary key,  
 -- ProductId int not null,  
@@ -47,7 +47,7 @@ CREATE VIEW dbo.v_order_details AS
 ## <a name="persisted-computed-columns"></a>保存される計算列  
  保存される計算列の効果をシミュレートするには、テーブルに挿入するためのストアド プロシージャとテーブルを更新するためのストアド プロシージャを作成します。 テーブルに対する挿入または更新を行う場合、これらのストアド プロシージャを呼び出してそれぞれのタスクを実行します。 ストアド プロシージャ内では、元のディスク ベース テーブルでの計算列の定義のように、入力に従って算定フィールドの値を計算します。 次に、ストアド プロシージャ内では必要に応じて、テーブルに対する挿入を更新を実行します。  
   
-```tsql  
+```sql  
 -- Schema for the table dbo.OrderDetails:  
 -- OrderId int not null primary key,  
 -- ProductId int not null,  

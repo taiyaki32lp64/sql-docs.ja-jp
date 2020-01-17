@@ -1,5 +1,5 @@
 ---
-title: モデル (マスター データ サービス) | Microsoft Docs
+title: モデル
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -11,15 +11,14 @@ helpviewer_keywords:
 - models [Master Data Services], about models
 - models [Master Data Services]
 ms.assetid: 9f862a3d-25ab-41e9-b833-1db99959e825
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: d403794bbf5168427580ed6233ccdaeee78bfe89
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
-ms.translationtype: HT
+ms.openlocfilehash: 6bee1ab1716eac70d51006b8bb4315b204be67ab
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52765934"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73727947"
 ---
 # <a name="models-master-data-services"></a>モデル (Master Data Services)
 
@@ -48,7 +47,7 @@ ms.locfileid: "52765934"
   
  次の図は、1 つのモデル内のオブジェクト間のリレーションシップを示しています。  
   
- ![マスター データ サービス モデル内のオブジェクト](../master-data-services/media/mds-conc-model-circles.gif "マスター データ サービス モデル内のオブジェクト")  
+ ![マスターデータサービスモデル内のオブジェクト](../master-data-services/media/mds-conc-model-circles.gif "マスターデータサービスモデル内のオブジェクト")  
   
 > [!NOTE]  
 >  派生階層はモデル オブジェクトでもありますが、図には示されていません。 派生階層は、エンティティ間に存在するドメイン ベースの属性リレーションシップから派生します。 詳細については、「[派生階層 (マスター データ サービス)](../master-data-services/derived-hierarchies-master-data-services.md)」を参照してください。  
@@ -60,7 +59,7 @@ ms.locfileid: "52765934"
 ## <a name="model-example"></a>モデルの例  
  次の例では、Product モデルのオブジェクトは製品 (product) に関連するデータを論理的にグループ化します。  
   
- ![製品モデル マスター データの例](../master-data-services/media/mds-conc-model.gif "製品モデル マスター データの例")  
+ ![製品モデルマスターデータの例](../master-data-services/media/mds-conc-model.gif "製品モデルマスターデータの例")  
   
  その他の一般的なモデルは次のとおりです。  
   
@@ -70,7 +69,7 @@ ms.locfileid: "52765934"
   
 -   Geography: 郵便番号、都道府県、郡市町村、地域、区域、国、大陸などのエンティティが含まれます。  
   
-## <a name="related-tasks"></a>Related Tasks  
+## <a name="related-tasks"></a>関連タスク  
   
 |タスクの説明|トピック|  
 |----------------------|-----------|  

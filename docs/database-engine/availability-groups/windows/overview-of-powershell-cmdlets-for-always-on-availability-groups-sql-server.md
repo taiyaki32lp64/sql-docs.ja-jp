@@ -1,7 +1,7 @@
 ---
-title: 可用性グループの PowerShell コマンドレットの概要
+title: 可用性グループの PowerShell コマンドレット
 description: 'Always On 可用性グループの管理に利用できるさまざまな PowerShell コマンドレットの参照。 '
-ms.custom: seodec18
+ms.custom: seo-lt-2019
 ms.date: 08/30/2017
 ms.prod: sql
 ms.reviewer: ''
@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: b3fef0d5-b6d7-4386-a0f0-d06c165ad4de
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: b4f60098f7410b847e2a420ef899e4abc8b2ef94
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: 8aac669c8e7b2f43666a43c26a8040c3658c560c
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53203771"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75236092"
 ---
 # <a name="overview-of-powershell-cmdlets-for-always-on-availability-groups"></a>Always On 可用性グループの PowerShell コマンドレットの概要
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -29,22 +28,6 @@ ms.locfileid: "53203771"
   
 > [!NOTE]  
 >  PowerShell コマンドレットは、アクションを正常に開始した時点で完了できます。 つまり、目的の操作 (可用性グループのフェールオーバーなど) の完了を示すわけではありません。 一連の操作をスクリプト化している場合は、アクションの状態を確認し、完了するまで待機しなければならないことがあります。  
-  
- このトピックでは、以下の一連のタスクのためのコマンドレットについて説明します。  
-  
--   [Always On 可用性グループのためのサーバー インスタンスの構成](#ConfiguringServerInstance)  
-  
--   [データベースおよびトランザクション ログのバックアップと復元](#BnRcmdlets)  
-  
--   [可用性グループの作成と管理](#DeployManageAGs)  
-  
--   [可用性グループ リスナーの作成と管理](#AGlisteners)  
-  
--   [可用性レプリカの作成と管理](#DeployManageARs)  
-  
--   [可用性データベースの追加と管理](#DeployManageDbs)  
-  
--   [可用性グループの正常性の監視](#MonitorTblshtAGs)  
   
 > [!NOTE]  
 >  [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]のタスクを実行するコマンドレットの使用方法を説明している [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] オンライン ブックのトピックの一覧については、「[Always On 可用性グループ &#40;SQL Server&#41 の概要](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)」の「関連タスク」を参照してください。  
@@ -118,12 +101,12 @@ ms.locfileid: "53203771"
 |[**Test-SqlAvailabilityReplica**](/powershell/module/sqlserver/test-sqlavailabilityreplica)|SQL Server のポリシー ベースの管理 (PBM) のポリシーを評価することによって、可用性レプリカの正常性を査定します。|可用性レプリカをホストする任意のサーバー インスタンス。*|  
 |[**Test-SqlDatabaseReplicaState**](/powershell/module/sqlserver/test-sqldatabasereplicastate)|SQL Server のポリシー ベースの管理 (PBM) のポリシーを評価することによって、参加しているすべての可用性レプリカ上の可用性データベースの正常性を査定します。|可用性レプリカをホストする任意のサーバー インスタンス。*|  
   
- * 可用性グループ内のすべての可用性レプリカについての情報を表示するには、プライマリ レプリカをホストするサーバー インスタンスを使用してください。  
+ \* 可用性グループ内のすべての可用性レプリカについての情報を表示するには、プライマリ レプリカをホストするサーバー インスタンスを使用してください。  
   
  詳細については、「[Always On ポリシーを使用した可用性グループの正常性の確認 &#40;SQL Server&#41](../../../database-engine/availability-groups/windows/use-always-on-policies-to-view-the-health-of-an-availability-group-sql-server.md)」を参照してください。  
   
 ## <a name="see-also"></a>参照  
- [Always On 可用性グループの概要 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   
- [SQL Server PowerShell のヘルプの参照](../../../relational-databases/scripting/get-help-sql-server-powershell.md)  
+ [AlwaysOn 可用性グループの概要 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   
+ [Get Help SQL Server PowerShell](../../../relational-databases/scripting/get-help-sql-server-powershell.md)  
   
   

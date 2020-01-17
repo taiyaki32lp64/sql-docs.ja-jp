@@ -15,20 +15,19 @@ dev_langs:
 helpviewer_keywords:
 - sp_help_fulltext_columns_cursor
 ms.assetid: 26054e76-53b7-4004-8d48-92ba3435e9d7
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: bb380be46723ce605a3021e1796a42bcb824ef36
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: MikeRayMSFT
+ms.author: mikeray
+ms.openlocfilehash: 8a9bbd9039e20fad5cf4c22b71e9a85662bf5912
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47755990"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68055097"
 ---
-# <a name="sphelpfulltextcolumnscursor-transact-sql"></a>sp_help_fulltext_columns_cursor (Transact-SQL)
+# <a name="sphelpfulltextcolumnscursor-transact-sql"></a>sp_help_fulltext_columns_cursor (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  カーソルを使用して、フルテキスト インデックスの作成用に指定された列を返します。  
+  カーソルを使用して、フルテキスト インデックス作成用に指定された列を返します。  
   
 > [!IMPORTANT]  
 >  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] 使用して、 [sys.fulltext_index_columns](../../relational-databases/system-catalog-views/sys-fulltext-index-columns-transact-sql.md)カタログ ビューを代わりにします。  
@@ -45,14 +44,11 @@ sp_help_fulltext_columns_cursor [ @cursor_return = ] @cursor_variable OUTPUT
 ```  
   
 ## <a name="arguments"></a>引数  
- [  **@cursor_return =**] *@cursor_variable*出力  
- 型の output 変数は、**カーソル**します。 結果として得られるカーソルとは、読み取り専用で、スクロール可能な動的カーソルです。  
+`[ @cursor_return = ] @cursor_variable OUTPUT` 型の output 変数は、**カーソル**します。 結果として得られるカーソルとは、読み取り専用で、スクロール可能な動的カーソルです。  
   
- [ **@table_name =**] **'***table_name***'**  
- フルテキスト インデックス情報を要求するテーブル名を指定します。この名前は 1 つまたは 2 つの要素で構成されます。 *table_name*は**nvarchar (517)** 既定値は NULL です。 場合*table_name*を省略すると、すべてのフルテキスト インデックス付きテーブルのフルテキスト インデックス列情報を取得します。  
+`[ @table_name = ] 'table_name'` フルテキスト インデックス情報を要求する対象の 1 つまたは 2 部テーブルの名前です。 *table_name*は**nvarchar (517)** 既定値は NULL です。 場合*table_name*を省略すると、すべてのフルテキスト インデックス付きテーブルのフルテキスト インデックス列情報を取得します。  
   
- [ **@column_name =**] **'***column_name***'**  
- フルテキスト インデックス メタデータが要求された列の名前を指定します。 *column_name*は**sysname**既定値は NULL です。 場合*column_name*を省略するかが null の場合のすべてのフルテキスト インデックス付き列のフルテキスト列情報が返されます*table_name*します。 場合*table_name*はも省略するかが null の場合、データベース内のすべてのテーブルのすべてのフルテキスト インデックス付き列のフルテキスト インデックス列情報が返されます。  
+`[ @column_name = ] 'column_name'` フルテキスト インデックス メタデータが必要な列の名前です。 *column_name*は**sysname**既定値は NULL です。 場合*column_name*を省略するかが null の場合のすべてのフルテキスト インデックス付き列のフルテキスト列情報が返されます*table_name*します。 場合*table_name*はも省略するかが null の場合、データベース内のすべてのテーブルのすべてのフルテキスト インデックス付き列のフルテキスト インデックス列情報が返されます。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  0 (成功) または (1) の失敗  
@@ -61,20 +57,20 @@ sp_help_fulltext_columns_cursor [ @cursor_return = ] @cursor_variable OUTPUT
   
 |列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
-|**TABLE_OWNER**|**sysname**|テーブル所有者 テーブルを作成したデータベース ユーザーの名前です。|  
-|**TABLE_ID**|**int**|テーブルの ID を指定します。|  
+|**TABLE_OWNER**|**sysname**|テーブル所有者 これは、テーブルを作成したデータベース ユーザーの名前です。|  
+|**TABLE_ID**|**int**|テーブルの ID。|  
 |**TABLE_NAME**|**sysname**|テーブル名です。|  
-|**FULLTEXT_COLUMN_NAME**|**sysname**|フルテキスト インデックスが作成されたテーブル内にある、インデックス作成用に指定された列。|  
+|**FULLTEXT_COLUMN_NAME**|**sysname**|インデックス作成のために指定されているフルテキスト インデックス付きテーブルの列。|  
 |**FULLTEXT_COLID**|**int**|フルテキスト インデックスが作成された列の列 ID。|  
 |**FULLTEXT_BLOBTP_COLNAME**|**sysname**|フルテキスト インデックスが作成されたテーブル内の列で、フルテキスト インデックス列のドキュメントの種類を指定する列。 この値は、フルテキスト インデックス列がときにのみ適用されます、 **varbinary (max)** または**イメージ**列。|  
-|**FULLTEXT_BLOBTP_COLID**|**int**|ドキュメント型列の列 ID。 この値は、フルテキスト インデックス列がときにのみ適用されます、 **varbinary (max)** または**イメージ**列。|  
-|**FULLTEXT_LANGUAGE**|**sysname**|列のフルテキスト検索に使用される言語。|  
+|**FULLTEXT_BLOBTP_COLID**|**int**|ドキュメント型の列の列 ID。 この値は、フルテキスト インデックス列がときにのみ適用されます、 **varbinary (max)** または**イメージ**列。|  
+|**FULLTEXT_LANGUAGE**|**sysname**|列のフルテキスト検索に使用される言語です。|  
   
 ## <a name="permissions"></a>アクセス許可  
  実行権限は、既定のメンバーに、**パブリック**ロール。  
   
 ## <a name="examples"></a>使用例  
- 次の例では、データベース内のすべてのテーブルを対象に、フルテキスト インデックスの作成用に指定された列に関する情報を返します。  
+ 次の例では、すべてのデータベースのテーブルでフルテキストのインデックス作成用に指定された列に関する情報を返します。  
   
 ```  
 USE AdventureWorks2012;  

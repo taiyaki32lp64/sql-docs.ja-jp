@@ -9,15 +9,15 @@ ms.topic: conceptual
 f1_keywords:
 - sql12.dqs.kb.linkeddomain.f1
 ms.assetid: fd99d422-c53d-4d7c-9cdd-303c703683b6
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 800326d3255180087cb7603435e2d0e1a8c8e029
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 7c9d5f86ba0be02ba21529aafc02897195ff4396
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56033653"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65481010"
 ---
 # <a name="create-a-linked-domain"></a>リンク ドメインの作成
   このトピックでは、 [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) でナレッジ ベースのリンク ドメインを作成する方法について説明します。 リンク ドメインとは、既存の別のドメインから作成されるドメインで、リンク先のドメインから値、ルール、およびプロパティ (名前と説明を除く) をすべて継承します。 リンク ドメインは 1 つのセットとしてまとめて管理できます。 ドメインを別のドメインにリンクすることで、他のドメインの内容を継承するドメインを作成することができます。  
@@ -31,7 +31,7 @@ ms.locfileid: "56033653"
 ### <a name="controlling-data-flow-to-composite-domains"></a>複合ドメインのデータ フローを制御する  
  リンク ドメインを使用すると、フィールドと複合ドメインの間のデータ フローを制御し、 複合ドメインに含まれるフィールドのデータ フローと、複合ドメインに含まれない非常によく似たフィールドのデータ フローを区別することができます。 これを実現するには、2 つのリンク ドメインの一方を複合ドメインに含め、もう一方を含めないように指定します。 ドメインの観点からは、リンク ドメインは同一であり、 どちらにも同じナレッジが含まれています。 ただし、複合ドメインの観点からは、リンク ドメインは同一ではなく、 一方は複合ドメインに含まれ、もう一方は含まれないという違いがあります。  
   
- 例では、次のフィールドを含むレコードを示します。Customer First Name、Customer Last Name、および父親の名。 顧客の名と父親の名の両方を First Name ドメインにマップし、First Name ドメインと Last Name ドメインを Full Name 複合ドメインに含めるとすると、 姓がない複合ドメインに父親の名を追加することが問題になります。 この場合は、2 つの名のフィールドのそれぞれをドメインにリンクし、その 2 つのドメインをリンクすると、Customer First Name ドメインだけを Full Name 複合ドメインに追加し、Father's First Name フィールドは複合ドメインに追加しないようにすることができます。このようにすると、Father's First Name を複合ドメインに追加せずに済みます。  
+ たとえば、Customer First Name、Customer Last Name、および Father's First Name というフィールドを含むレコードがあるとします。 顧客の名と父親の名の両方を First Name ドメインにマップし、First Name ドメインと Last Name ドメインを Full Name 複合ドメインに含めるとすると、 姓がない複合ドメインに父親の名を追加することが問題になります。 この場合は、2 つの名のフィールドのそれぞれをドメインにリンクし、その 2 つのドメインをリンクすると、Customer First Name ドメインだけを Full Name 複合ドメインに追加し、Father's First Name フィールドは複合ドメインに追加しないようにすることができます。このようにすると、Father's First Name を複合ドメインに追加せずに済みます。  
   
 ##  <a name="BeforeYouBegin"></a> はじめに  
   
@@ -72,7 +72,7 @@ ms.locfileid: "56033653"
   
 4.  [ドメインの作成] ダイアログ ボックスで、ドメインの名前と説明を入力し、[OK] をクリックします。  
   
-##  <a name="FollowUp"></a>補足情報: リンク ドメインを作成した後  
+##  <a name="FollowUp"></a>補足情報: リンク ドメインの作成後  
  リンク ドメインを作成した後、ドメインで他のドメイン管理タスクを実行したり、ナレッジ検出を実行してナレッジをドメインに追加したり、照合ポリシーをドメインに追加することができます。 詳しくは、「[ナレッジ検出の実行](../../2014/data-quality-services/perform-knowledge-discovery.md)」、「[ドメインの管理](../../2014/data-quality-services/managing-a-domain.md)」、または「[照合ポリシーの作成](../../2014/data-quality-services/create-a-matching-policy.md)」をご覧ください。  
   
 ##  <a name="Behavior"></a> リンク ドメインの動作  
@@ -80,7 +80,7 @@ ms.locfileid: "56033653"
   
 -   リンク ドメインの名前と説明を変更することができます。  
   
--   ドメインの **[データ型]**、 **[先頭の値を使用]**、または **[形式の出力先]** のプロパティを変更するには、リンク先のドメインを選択し、そのドメインの **[ドメインのプロパティ]** タブで設定を変更します。 これらの設定は、リンク ドメインのプロパティでは変更できません。 詳細については、「 [ドメインの作成](../../2014/data-quality-services/create-a-domain.md)」を参照してください。  
+-   ドメインの **[データ型]** 、 **[先頭の値を使用]** 、または **[形式の出力先]** のプロパティを変更するには、リンク先のドメインを選択し、そのドメインの **[ドメインのプロパティ]** タブで設定を変更します。 これらの設定は、リンク ドメインのプロパティでは変更できません。 詳細については、「 [ドメインの作成](../../2014/data-quality-services/create-a-domain.md)」を参照してください。  
   
 -   [ドメイン管理] ページの **[参照データ]** タブ、 **[ドメイン ルール]** タブ、 **[ドメイン値]** タブ、および **[用語ベースのリレーション]** タブの設定は、リンク ドメインとリンク先のドメインのどちらでも変更できます。一方を変更すると、もう一方に反映されます。  
   

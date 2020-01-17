@@ -4,22 +4,21 @@ ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 helpviewer_keywords:
 - reports [Reporting Services], properties
 - properties [Reporting Services], general
 ms.assetid: 10b941b2-28e6-4408-9ee4-acebc63c8496
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 603505052f95f442f6f4c140d49245b9811ac39d
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: cd0371497067f754166c33fb18022fe058cb88e4
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56291897"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66109746"
 ---
 # <a name="configure-general-properties-for-a-report-report-manager"></a>レポートの全般プロパティを構成する (レポート マネージャー)
     
@@ -54,7 +53,7 @@ ms.locfileid: "56291897"
   
 5.  レポートの [全般] プロパティの構成が完了したら、クリックして**適用**します。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [項目を削除または移動&#40;レポート マネージャー&#41;](report-server/move-or-delete-an-item-report-manager.md)   
  [[コンテンツ] ページ (レポート マネージャー)](../../2014/reporting-services/contents-page-report-manager.md)   
  [レポートの検索、表示、管理 (レポート ビルダーおよび SSRS)](report-builder/finding-viewing-and-managing-reports-report-builder-and-ssrs.md)   

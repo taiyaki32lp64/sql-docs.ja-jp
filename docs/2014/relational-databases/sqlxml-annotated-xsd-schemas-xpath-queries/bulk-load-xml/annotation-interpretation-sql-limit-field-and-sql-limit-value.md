@@ -14,15 +14,15 @@ helpviewer_keywords:
 - sql:limit-value
 - filtering [SQLXML]
 ms.assetid: 402c21cf-9566-463f-a928-f94270c11db3
-author: douglaslMS
-ms.author: douglasl
+author: MightyPen
+ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 608b14de16b338225be7e500a77cb612b5ee9312
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: c5d49a8159601236d280aed809fa41287cd4ab22
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52751114"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66013571"
 ---
 # <a name="sqllimit-field-and-sqllimit-value-sqlxml-40"></a>sql:limit-field と sql:limit-value (SQLXML 4.0)
   XML 一括読み込みでは、`sql:limit-field` および `sql:limit-value` 注釈が定義に従って処理されます。 詳細については、次を参照してください。 [sql:limit の値を使用してフィルター処理、および -値&#40;SQLXML 4.0&#41;](annotation-interpretation-sql-limit-field-and-sql-limit-value.md)します。  

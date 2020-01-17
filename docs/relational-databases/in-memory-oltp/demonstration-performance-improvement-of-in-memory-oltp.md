@@ -1,6 +1,6 @@
 ---
-title: '実証: インメモリ OLTP によるパフォーマンスの向上 | Microsoft Docs'
-ms.custom: ''
+title: パフォーマンスの向上 - インメモリ OLTP
+ms.custom: seo-dt-2019
 ms.date: 08/19/2016
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -10,14 +10,13 @@ ms.topic: conceptual
 ms.assetid: c6def45d-d2d4-4d24-8068-fab4cd94d8cc
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 2b2087165cc406971a6452298b672554a7c7994f
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 68cb4e95046ca2fb071ecf2ba7c713cf57646690
+ms.sourcegitcommit: 384e7eeb0020e17a018ef8087970038aabdd9bb7
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51677551"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74412731"
 ---
 # <a name="demonstration-performance-improvement-of-in-memory-oltp"></a>実証: インメモリ OLTP によるパフォーマンスの向上
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -33,7 +32,7 @@ ms.locfileid: "51677551"
 ## <a name="code-example"></a>コード例  
  次のサブセクションでは、各手順について説明します。  
   
-### <a name="step-1a-prerequisite-if-using-includessnoversionincludesssnoversion-mdmd"></a>手順 1a: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
+### <a name="step-1a-prerequisite-if-using-includessnoversionincludesssnoversion-mdmd"></a>手順 1a:[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 使用時の前提条件  
  この最初のサブセクションの手順は、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]で実行する場合にのみ適用され、 [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)]で実行する場合には適用されません。 次の操作を行います。  
   
 1.  SQL Server Management Studio (SSMS.exe) を使用して、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]に接続します。 または、SSMS.exe に類似した任意のツールも使用できます。  
@@ -59,7 +58,7 @@ USE imoltp;
 go  
 ```  
   
-### <a name="step-1b-prerequisite-if-using-includesssdsfullincludessssdsfull-mdmd"></a>手順 1b: [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)]  
+### <a name="step-1b-prerequisite-if-using-includesssdsfullincludessssdsfull-mdmd"></a>手順 1b:[!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)] 使用時の前提条件  
  このサブセクションは、 [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)]を使用している場合にのみ適用されます。 次の操作を行います。  
   
 1.  コード例に使用する既存のテスト データベースを決定します。  
@@ -68,7 +67,7 @@ go
   
  その場合に Azure ポータルを使用する手順については、「 [Get Started with Azure SQL Database (Azure SQL Database の概要)](https://azure.microsoft.com/documentation/articles/sql-database-get-started)」を参照してください。  
   
-### <a name="step-2-create-memory-optimized-tables-and-ncsproc"></a>手順 2: メモリ最適化テーブルと NCSProc を作成する  
+### <a name="step-2-create-memory-optimized-tables-and-ncsproc"></a>手順 2:メモリ最適化テーブルと NCSProc を作成する  
  この手順では、メモリ最適化テーブルとネイティブ コンパイル ストアド プロシージャ (NCSProc) を作成します。 次の操作を行います。  
   
 1.  SSMS.exe を使用して、新しいデータベースに接続します。  
@@ -118,7 +117,7 @@ END;
 go  
 ```  
   
-### <a name="step-3-run-the-code"></a>手順 3: コードを実行する  
+### <a name="step-3-run-the-code"></a>手順 3:コードを実行する  
  ここで、メモリ最適化テーブルによるパフォーマンスを実証するクエリを実行できます。 次の操作を行います。  
   
 1.  SSMS.exe を使用して、データベースで次の T-SQL を実行します。  

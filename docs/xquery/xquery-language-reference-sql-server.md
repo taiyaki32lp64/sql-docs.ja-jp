@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 8a69344f-2990-4357-8160-cb26aac95b91
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: c85930cf8296ac6589e0c7b768c28f298ee31296
-ms.sourcegitcommit: bfa10c54e871700de285d7f819095d51ef70d997
+ms.openlocfilehash: 87edbeaac26ca1c332efe981901cbf0bc57fed30
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/14/2019
-ms.locfileid: "54256707"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67945967"
 ---
 # <a name="xquery-language-reference-sql-server"></a>XQuery 言語リファレンス (SQL Server)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]

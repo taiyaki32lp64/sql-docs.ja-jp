@@ -20,23 +20,22 @@ helpviewer_keywords:
 - MERGE join hint
 - hints [SQL Server], join
 ms.assetid: 09069f4a-f2e3-4717-80e1-c0110058efc4
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: 270aaf41f6cb081f3c57156c10e3b448540a6731
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: VanMSFT
+ms.author: vanto
+ms.openlocfilehash: f6f89e973d5f021dbd48a1bc7fc8234f9c9b6a89
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47621350"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67902013"
 ---
 # <a name="hints-transact-sql---join"></a>ヒント (Transact-SQL) - Join
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   結合ヒントにより、クエリ オプティマイザーで、[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] の 2 つのテーブル間の結合方法を設定します。 結合および結合の構文に関する一般的な情報については、「[FROM &#40;Transact-SQL&#41;](../../t-sql/queries/from-transact-sql.md)」を参照してください。  
   
-> [!IMPORTANT]  
->  通常、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] クエリ オプティマイザーでは、クエリにとって最適な実行プランが選択されるため、\<join_hint> を含むヒントは、経験を積んだ開発者やデータベース管理者が最後の手段としてのみ使用することをお勧めします。
+> [!CAUTION]  
+>  通常、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] クエリ オプティマイザーでは、クエリにとって最適な実行プランが選択されるため、ヒントは、経験を積んだ開発者やデータベース管理者が最後の手段としてのみ使用することをお勧めします。
   
  **適用対象:**  
   
@@ -69,7 +68,7 @@ ms.locfileid: "47621350"
   
  REMOTE は、INNER JOIN 操作に対してのみ使用できます。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  結合ヒントは、クエリの FROM 句で指定します。 結合ヒントにより、2 つのテーブル間の結合方法を設定できます。 2 つのテーブルに対して結合ヒントが指定されると、クエリ オプティマイザーは、ON キーワードの位置に基づいて、クエリ内のすべての結合テーブルに対して結合の順番を自動的に設定します。 ON 句を指定せずに CROSS JOIN を使用する場合は、かっこを使用して結合の順番を指定できます。  
   
 ## <a name="examples"></a>使用例  

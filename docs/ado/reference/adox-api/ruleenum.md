@@ -15,21 +15,20 @@ helpviewer_keywords:
 ms.assetid: 738fd3ff-3daf-483d-a0b9-88bef1be54c1
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 81c93601dbc47033618fdc72106d91e1b670fd8c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 87c61baa93cb1dbca58bbe86ffc254a92d2b9d5b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47787050"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67965245"
 ---
 # <a name="ruleenum"></a>RuleEnum
 ときに従うルールを指定します、[キー](../../../ado/reference/adox-api/key-object-adox.md)は削除されます。  
   
-|定数|値|説明|  
+|定数|Value|説明|  
 |--------------|-----------|-----------------|  
 |**adRICascade**|1|Cascade 変更します。|  
-|**adRINone**|0|既定値です。 アクションが行われません。|  
+|**adRINone**|0|既定値です。 アクションは行われません。|  
 |**adRISetDefault**|3|外部キーの値は、既定値に設定されます。|  
 |**adRISetNull**|2|外部キー値の設定を null にします。|  
   

@@ -18,15 +18,14 @@ helpviewer_keywords:
 ms.assetid: 8bcccb37-5cfb-4e1e-a0bb-7ff4c279fe8e
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: cb48a9f0f7e30e6df4fa09485b9e0ea0c9fc8a56
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 49748a98ac221af17f7ce5a197bf24a08d1269a6
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47699210"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68121012"
 ---
-# <a name="sysdmcryptographicprovideralgorithms-transact-sql"></a>sys.dm_cryptographic_provider_algorithms (Transact-SQL)
+# <a name="sysdmcryptographicprovideralgorithms-transact-sql"></a>sys.dm_cryptographic_provider_algorithms (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   拡張キー管理 (EKM) プロバイダーによってサポートされているアルゴリズムを返します。  
@@ -50,8 +49,8 @@ sys.dm_cryptographic_provider_algorithms ( provider_id )
 |-----------------|---------------|-----------------|  
 |algorithm_id|**int**|アルゴリズムの識別番号を指定します。|  
 |algorithm_tag|**nvarchar(60)**|アルゴリズムの識別タグを指定します。|  
-|key_type|**nvarchar(128)**|キーの種類を示します。 ASYMMETRIC KEY または SYMMETRIC KEY を返します。|  
-|key_length|**int**|キーの長さをビット単位で示します。|  
+|key_type|**nvarchar(128)**|キーの種類を示します。 非対称キー、または対称キーを返します。|  
+|key_length|**int**|ビット単位のキーの長さを示します。|  
   
 ## <a name="permissions"></a>アクセス許可  
  ユーザーは、public データベース ロールのメンバーである必要があります。  
@@ -64,7 +63,7 @@ SELECT * FROM sys.dm_cryptographic_provider_algorithms(1234567);
 GO  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [拡張キー管理 &#40;EKM&#41;](../../relational-databases/security/encryption/extensible-key-management-ekm.md)   
  [セキュリティ関連の動的管理ビューおよび関数 &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/security-related-dynamic-management-views-and-functions-transact-sql.md)  
   

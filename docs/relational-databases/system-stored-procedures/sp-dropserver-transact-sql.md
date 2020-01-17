@@ -17,16 +17,15 @@ helpviewer_keywords:
 ms.assetid: 0fc83e35-0caa-49a3-a4b6-a1890d4f46ef
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: b486237208e5a374d5cae6da6fd82a22ee0ebe18
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 0155b154a1d63343c157bc2eca6e5cbd7c1b8968
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47658870"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68124833"
 ---
-# <a name="spdropserver-transact-sql"></a>sp_dropserver (Transact-SQL)
+# <a name="spdropserver-transact-sql"></a>sp_dropserver (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
 
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のローカル インスタンスにある、既知のリモート サーバーおよびリンク サーバーの一覧からサーバーを削除します。  
@@ -42,10 +41,10 @@ sp_dropserver [ @server = ] 'server'
   
 ## <a name="arguments"></a>引数  
  *server*  
- 削除するサーバーを指定します。 *server* のデータ型は **sysname**で、既定値はありません。 *server*存在する必要があります。  
+ サーバーを削除します。 *server* のデータ型は **sysname**で、既定値はありません。 *server*存在する必要があります。  
   
  *droplogins*  
- リモートおよびリンク サーバー ログインを関連することを示す*サーバー*場合にも削除する必要があります**droplogins**を指定します。 **`@droplogins`** **char (10)**、既定値は NULL です。  
+ リモートおよびリンク サーバー ログインを関連することを示す*サーバー*場合にも削除する必要があります**droplogins**を指定します。 **`@droplogins`** **char (10)** 、既定値は NULL です。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  0 (成功) または 1 (失敗)  
@@ -65,7 +64,7 @@ sp_dropserver [ @server = ] 'server'
 sp_dropserver 'ACCOUNTS', 'droplogins';  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [セキュリティ ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md)   
  [sp_addserver &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addserver-transact-sql.md)   
  [sp_dropremotelogin &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropremotelogin-transact-sql.md)   

@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 6d134515-e34d-4563-96d7-8ad7714818fd
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 7dc88892fab2fd18dbcbec5ce54fa09c9c9b89e7
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 1d8da8c15c861fff4767aa598e1b989d8f699c95
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47819930"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68020590"
 ---
 # <a name="result-set-metadata"></a>結果セットのメタデータ
 *メタデータ*はその他のデータを表すデータです。 たとえば、結果セットのメタデータには、結果セット内の列の数、それらの列、その名前、有効桁数、null 許容属性、およびなどのデータ型など、結果セットがについて説明します。  

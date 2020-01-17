@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: a4b6955b-9cae-40fb-99a1-2931e17a8e74
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: 61a22615cf1c85f20dd0e0486500e2112d64deba
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: f817408b30442d85566d094ccbf6491fe260925b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47659632"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67942437"
 ---
 # <a name="cursor-stored-procedures-transact-sql"></a>カーソル ストアド プロシージャ (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -39,7 +38,7 @@ ms.locfileid: "47659632"
 |[sp_cursoropen](../../relational-databases/system-stored-procedures/sp-cursoropen-transact-sql.md)|[sp_describe_cursor_tables](../../relational-databases/system-stored-procedures/sp-describe-cursor-tables-transact-sql.md)|  
 |[sp_cursoroption](../../relational-databases/system-stored-procedures/sp-cursoroption-transact-sql.md)||  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [システム ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

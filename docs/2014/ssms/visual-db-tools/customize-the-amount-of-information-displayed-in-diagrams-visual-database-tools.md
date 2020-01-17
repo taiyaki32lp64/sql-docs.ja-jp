@@ -16,11 +16,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: a15613c61db7469b242bbd5b76e5d1e51912e6be
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52790394"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63270559"
 ---
 # <a name="customize-the-amount-of-information-displayed-in-diagrams-visual-database-tools"></a>ダイアグラムに表示される情報の量のカスタマイズ (Visual Database Tools)
   データベース ダイアグラムにテーブルを追加すると、設定した数のプロパティが表示されます。 表示する情報の量をメニューから選択するか、プロパティのカスタム セットを作成できます。  

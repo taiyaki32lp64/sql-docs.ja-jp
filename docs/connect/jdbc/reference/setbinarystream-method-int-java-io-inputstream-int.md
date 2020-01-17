@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: fd6be063-08eb-40cf-9201-5a9f62387726
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 7a8324ff410c0896b890ce12c1e51d0e4e47c4a3
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 0265f06d589ea89b38f995f8a9616fd22bcf92ef
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47785601"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67975273"
 ---
 # <a name="setbinarystream-method-int-javaioinputstream-int"></a>setBinaryStream (int, java.io.InputStream, int) メソッド
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -54,7 +53,7 @@ public final void setBinaryStream(int n,
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- この setBinaryStream メソッドは、java.sql.PreparedStatement インターフェイスの setBinaryStream メソッドによって指定されます。  
+ この setBinaryStream メソッドは、PreparedStatement インターフェイスの setBinaryStream メソッドによって指定されます。  
   
  ストリームの長さが、*length* パラメーターで指定された長さと異なる場合は、行の更新または挿入時に JDBC ドライバーが例外をスローします。  
   

@@ -1,5 +1,5 @@
 ---
-title: データ ソース オブジェクト (OLE DB) |Microsoft Docs
+title: データソースオブジェクト (OLE DB) |Microsoft Docs
 description: データ ソース オブジェクト (OLE DB)
 ms.custom: ''
 ms.date: 06/14/2018
@@ -18,28 +18,27 @@ helpviewer_keywords:
 - CLSID
 author: pmasl
 ms.author: pelopes
-manager: craigg
-ms.openlocfilehash: 8c838857b09d0eb0279b2732e86602b0938a7fd4
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e0394c5fd3b72c538904c9b8cf946316e76e6650
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47726900"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68015924"
 ---
 # <a name="data-source-objects-ole-db"></a>データ ソース オブジェクト (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
-  OLE DB Driver for SQL Server では、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] などのデータ ストアへのリンクを確立するために使用する OLE DB インターフェイスのセットのことをデータ ソースと呼びます。 OLE DB Driver for SQL Server コンシューマーの最初のタスクは、プロバイダーのデータ ソース オブジェクトのインスタンスを作成します。  
+  OLE DB Driver for SQL Server では、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] などのデータ ストアへのリンクを確立するために使用する OLE DB インターフェイスのセットのことをデータ ソースと呼びます。 プロバイダーのデータソースオブジェクトのインスタンスを作成することは、SQL Server コンシューマー用の OLE DB ドライバーの最初のタスクです。  
   
- すべての OLE DB プロバイダーは、そのプロバイダー自体のクラス ID (CLSID) を宣言します。 OLE DB Driver for SQL Server の CLSID は、C/C++ GUID CLSID_MSOLEDBSQL (MSOLEDBSQL_CLSID が正しいを解決するシンボルを参照する msoledbsql.h ファイルに progid)。 コンシューマーは、CLSID を指定して OLE **CoCreateInstance** 関数を使用し、データ ソース オブジェクトのインスタンスを作成します。  
+ すべての OLE DB プロバイダーは、そのプロバイダー自体のクラス ID (CLSID) を宣言します。 SQL Server の OLE DB ドライバーの CLSID は C/C++ GUID CLSID_MSOLEDBSQL です (シンボル MSOLEDBSQL_CLSID は、参照する MSOLEDBSQL ファイル内の正しい progid に解決されます)。 コンシューマーは、CLSID を指定して OLE **CoCreateInstance** 関数を使用し、データ ソース オブジェクトのインスタンスを作成します。  
   
- OLE DB Driver for SQL Server は、インプロセス サーバーです。 実行可能なコンテキストを示すために、CLSCTX_INPROC_SERVER マクロを使用して、OLE DB Driver for SQL Server のオブジェクトのインスタンスを作成します。  
+ SQL Server 用の OLE DB ドライバーは、インプロセスサーバーです。 実行可能なコンテキストを示すために、CLSCTX_INPROC_SERVER マクロを使用して、OLE DB Driver for SQL Server のオブジェクトのインスタンスを作成します。  
   
  OLE DB Driver for SQL Server のデータ ソース オブジェクトでは、OLE DB 初期化インターフェイスが公開されます。コンシューマーは、このインターフェイスを使用して、既存の [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] データベースに接続できます。  
   
- SQL Server の OLE DB ドライバーを通じて行うすべての接続では、これらのオプションが自動的に設定します。  
+ OLE DB Driver for SQL Server を介して行われたすべての接続は、次のオプションを自動的に設定します。  
   
 -   SET ANSI_WARNINGS ON  
   

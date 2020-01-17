@@ -1,5 +1,5 @@
 ---
-title: データ ソース ウィザード画面 1 (ODBC Driver for SQL Server) |Microsoft Docs
+title: データソースウィザード画面 1 (ODBC Driver for SQL Server) |Microsoft Docs
 ms.custom: ''
 ms.date: 09/27/2017
 ms.prod: sql
@@ -10,19 +10,18 @@ ms.topic: conceptual
 ms.assetid: 76326eeb-1144-4b9f-85db-50524c655d30
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: f13746005f05d84bd8b987fe048baf392e81af3b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: f6edf465f5b853008c9bdc8c420f6e862e360593
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47641976"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67936600"
 ---
 # <a name="data-source-wizard-screen-1"></a>データ ソース ウィザード画面 1
 
 データ ソースの名前と説明、およびデータ ソースが接続される、SQL Server を実行しているサーバーの名前を指定します。 
     
-## <a name="options"></a>[変数]
+## <a name="options"></a>オプション
 
 ### <a name="name"></a>[オブジェクト名]
 
@@ -34,7 +33,7 @@ ms.locfileid: "47641976"
 
 ### <a name="select-or-enter-a-server-name"></a>[サーバー名の選択または入力]
 
-ネットワーク上には、SQL Server のインスタンスの名前。 次の編集ボックスにサーバーを指定する必要があります。
+ネットワーク上の SQL Server のインスタンスの名前。 次の編集ボックスにサーバーを指定する必要があります。
 
 ほとんどの場合、ODBC ドライバーは、既定のプロトコルの順序とこのボックスに指定されたサーバー名を使用して接続することが可能です。 サーバーの別名を作成する場合やクライアント ネットワーク ライブラリを構成する場合は、SQL Server 構成マネージャーを使用してください。
 
@@ -44,11 +43,11 @@ SQL Server と同じコンピューターを使用している場合は、[サ�
 
 ### <a name="finish"></a>[完了]
 
-SQL Server への接続に必要なすべての情報がこの画面で指定されると、**[完了]** をクリックすることができます。 ウィザードの他の画面で指定するすべての属性には既定値が使用されます。
+SQL Server への接続に必要なすべての情報がこの画面で指定されると、 **[完了]** をクリックすることができます。 ウィザードの他の画面で指定するすべての属性には既定値が使用されます。
 
 ### <a name="next"></a>Next
 
-続行するには、ウィザードの次の画面に次のようにクリックします。**次**します。
+ウィザードの次の画面に進むには、 **[次へ]** をクリックします。
 
 ## <a name="next-steps"></a>次の手順
 

@@ -1,5 +1,5 @@
 ---
-title: Modify a Filter (SQL Server Profiler) |Microsoft Docs
+title: フィルターの変更 (SQL Server プロファイラー) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -12,15 +12,14 @@ helpviewer_keywords:
 - modifying filters, modifying
 - filters [SQL Server], traces
 ms.assetid: 8b317813-4918-4485-b930-77b1951aa00c
-author: stevestein
-ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 9257ec9eb963d692e3a280781ce3a441d3e12ba5
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: ee101f13c7856b2701a02d1446a0ad8e5a4e2d24
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47759710"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68074905"
 ---
 # <a name="modify-a-filter-sql-server-profiler"></a>フィルターの変更 (SQL Server Profiler)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

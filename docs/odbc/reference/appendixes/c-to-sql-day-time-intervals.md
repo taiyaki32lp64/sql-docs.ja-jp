@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: f9ee1ddb-dec7-4f78-b6e2-5ba34e7d6f59
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: cb41d658637258c6d60b5adb4e0d7abb9ae81d91
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a3a4df236273b5afcaba78052ac236669bb133f0
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47757660"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68019369"
 ---
 # <a name="c-to-sql-day-time-intervals"></a>C から SQL へ: 日付と時刻の間隔
 日付と時刻の間隔の ODBC C データ型の識別子は次のとおりです。  
@@ -51,8 +50,8 @@ ms.locfileid: "47757660"
 |SQL 型識別子|テスト|SQLSTATE|  
 |-------------------------|----------|--------------|  
 |SQL_CHAR [a]<br /><br /> [A] SQL_VARCHAR<br /><br /> [A] SQL_LONGVARCHAR|列のバイト長 > バイト長の文字を =<br /><br /> 列のバイト長 < 文字バイト長 [a]<br /><br /> データの値がリテラルの有効期間です。|n/a<br /><br /> 22001<br /><br /> 22015|  
-|[A] SQL_WCHAR<br /><br /> SQL_WVARCHAR [a]<br /><br /> [A] SQL_WLONGVARCHAR|列の文字の長さ > データの文字の長さを =<br /><br /> 列の文字の長さ < [a] のデータの文字長<br /><br /> データの値がリテラルの有効期間です。|n/a<br /><br /> 22001<br /><br /> 22015|  
-|SQL_TINYINT [b]<br /><br /> SQL_SMALLINT [b] SQL_INTEGER [b]<br /><br /> SQL_BIGINT [b] SQL_NUMERIC [b]<br /><br /> SQL_DECIMAL [b]|単一フィールドの間隔の変換は整数の桁に切り捨てを実行できませんでした。<br /><br /> 変換の結果が整数の桁に切り捨て|n/a<br /><br /> 22003|  
+|[A] SQL_WCHAR<br /><br /> SQL_WVARCHAR [a]<br /><br /> SQL_WLONGVARCHAR[a]|列の文字の長さ > データの文字の長さを =<br /><br /> 列の文字の長さ < [a] のデータの文字長<br /><br /> データの値がリテラルの有効期間です。|n/a<br /><br /> 22001<br /><br /> 22015|  
+|SQL_TINYINT[b]<br /><br /> SQL_SMALLINT[b] SQL_INTEGER[b]<br /><br /> SQL_BIGINT [b] SQL_NUMERIC [b]<br /><br /> SQL_DECIMAL [b]|単一フィールドの間隔の変換は整数の桁に切り捨てを実行できませんでした。<br /><br /> 変換の結果が整数の桁に切り捨て|n/a<br /><br /> 22003|  
 |SQL_INTERVAL_DAY<br /><br /> SQL_INTERVAL_HOUR<br /><br /> SQL_INTERVAL_MINUTE<br /><br /> SQL_INTERVAL_SECOND<br /><br /> SQL_INTERVAL_DAY_TO_HOUR<br /><br /> SQL_INTERVAL_DAY_TO_MINUTE<br /><br /> SQL_INTERVAL_DAY_TO_SECOND<br /><br /> SQL_INTERVAL_HOUR_TO_MINUTE<br /><br /> SQL_INTERVAL_HOUR_TO_SECOND<br /><br /> SQL_INTERVAL_MINUTE_TO_SECOND|すべてのフィールドに変換されたデータ値<br /><br /> データ値の 1 つまたは複数のフィールドが変換中に切り詰められました。|n/a<br /><br /> 22015|  
   
  [a] すべての C interval データ型は、文字データ型に変換できます。  

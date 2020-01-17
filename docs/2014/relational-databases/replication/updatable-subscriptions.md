@@ -13,11 +13,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 00d51c24583231f28ec15dd86c1848ba95c345d6
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52771004"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63255388"
 ---
 # <a name="updatable-subscriptions"></a>[更新可能なサブスクリプション]
   トランザクション レプリケーションの場合、レプリケートされたデータは読み取り専用として扱う必要がありますが、更新可能なサブスクリプションを使用することにより、レプリケートされたデータを [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] サブスクライバーで変更できます。 サブスクライバーでデータを変更する必要がある場合は、要件に応じて次のいずれかのオプションを選択してください。  
@@ -38,7 +38,7 @@ ms.locfileid: "52771004"
 ## <a name="see-also"></a>参照  
  [Create a Pull Subscription](create-a-pull-subscription.md)   
  [ssSDSFull](create-a-push-subscription.md)   
- [Subscribe to Publications](subscribe-to-publications.md)   
+ [パブリケーションのサブスクライブ](subscribe-to-publications.md)   
  [Updatable Subscriptions for Transactional Replication](transactional/updatable-subscriptions-for-transactional-replication.md)  
   
   

@@ -21,13 +21,12 @@ helpviewer_keywords:
 ms.assetid: 3dfa2702-ba65-43b4-a777-6727846e133a
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 659d5a18ecce49c6d0f1db169b0be453797ae8d4
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 2fa898451638503b2f91c97026158e7331a25e90
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47738430"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68012811"
 ---
 # <a name="configure-client-protocols"></a>クライアント プロトコルの構成
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -43,28 +42,28 @@ ms.locfileid: "47738430"
   
 ###  <a name="EnableDisable"></a> クライアント プロトコルを有効または無効にするには  
   
-1.  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 構成マネージャーで、**[SQL Server Native Client の構成]** を展開し、**[クライアント プロトコル]** を右クリックして、**[プロパティ]** をクリックします。  
+1.  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 構成マネージャーで、 **[SQL Server Native Client の構成]** を展開し、 **[クライアント プロトコル]** を右クリックして、 **[プロパティ]** をクリックします。  
   
-2.  プロトコルを有効にするには、**[無効なプロトコル]** ボックスでプロトコルをクリックし、**[有効化]** をクリックします。  
+2.  プロトコルを有効にするには、 **[無効なプロトコル]** ボックスでプロトコルをクリックし、 **[有効化]** をクリックします。  
   
-3.  プロトコルを無効にするには、**[有効なプロトコル]** ボックスでプロトコルをクリックし、**[無効化]** をクリックします。  
+3.  プロトコルを無効にするには、 **[有効なプロトコル]** ボックスでプロトコルをクリックし、 **[無効化]** をクリックします。  
   
 ###  <a name="ChangeDefault"></a> 既定のプロトコル、またはクライアント コンピューターのプロトコルの順序を変更するには  
   
-1.  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 構成マネージャーで、**[SQL Server Native Client の構成]** を展開し、**[クライアント プロトコル]** を右クリックして、**[プロパティ]** をクリックします。  
+1.  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 構成マネージャーで、 **[SQL Server Native Client の構成]** を展開し、 **[クライアント プロトコル]** を右クリックして、 **[プロパティ]** をクリックします。  
   
-2.  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] に接続するときに試行されるプロトコルの順序を変更するには、**[有効なプロトコル]** ボックスで、**上へ移動**ボタンまたは**下へ移動**ボタンをクリックします。 **[有効なプロトコル]** ボックスの最上部に表示されているプロトコルが既定のプロトコルです。  
+2.  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] に接続するときに試行されるプロトコルの順序を変更するには、 **[有効なプロトコル]** ボックスで、**上へ移動**ボタンまたは**下へ移動**ボタンをクリックします。 **[有効なプロトコル]** ボックスの最上部に表示されているプロトコルが既定のプロトコルです。  
   
     > [!IMPORTANT]  
     >  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 構成マネージャーにより、サーバーの別名の構成や既定のクライアント ネットワーク ライブラリのレジストリ エントリが作成されます。 ただし、このアプリケーションでは、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] クライアント ネットワーク ライブラリもネットワーク プロトコルもインストールされません。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] クライアント ネットワーク ライブラリは、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] セットアップ中にインストールされます。また、ネットワーク プロトコルは、Microsoft Windows セットアップの一部として (または**コントロール パネル**の **[ネットワーク接続]** を使用して) インストールされます。 特定のネットワーク プロトコルは、Windows のセットアップ時にインストールされないことがあります。 そのようなネットワーク プロトコルのインストールの詳細については、製造元のマニュアルを参照してください。  
   
 ###  <a name="Configure"></a> TCP/IP を使用するようにクライアントを構成するには  
   
-1.  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 構成マネージャーで、**[SQL Server Native Client の構成]** を展開し、**[クライアント プロトコル]** を右クリックして、**[プロパティ]** をクリックします。  
+1.  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 構成マネージャーで、 **[SQL Server Native Client の構成]** を展開し、 **[クライアント プロトコル]** を右クリックして、 **[プロパティ]** をクリックします。  
   
 2.  **[有効なプロトコル]** ボックスで上矢印と下矢印をクリックして、SQL Server への接続を試行する際のプロトコルの試行順序を変更します。 **[有効なプロトコル]** ボックスの最上部に表示されているプロトコルが既定のプロトコルです。  
   
- 共有メモリ プロトコルは、**[共有メモリ プロトコルを有効にする]** チェック ボックスをオンにすることで、別個に有効にします。  
+ 共有メモリ プロトコルは、 **[共有メモリ プロトコルを有効にする]** チェック ボックスをオンにすることで、別個に有効にします。  
   
 ## <a name="see-also"></a>参照  
  [remote login timeout サーバー構成オプションの構成](../../database-engine/configure-windows/configure-the-remote-login-timeout-server-configuration-option.md)  

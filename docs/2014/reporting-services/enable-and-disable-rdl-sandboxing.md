@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 ms.assetid: d5619e9f-ec5b-4376-9b34-1f74de6fade7
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 2db60863c1ae8c21e391d62182cb27a52558a1e1
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: ebc5ee51dd32cb999f0e6551bb87c36eda8865c7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56013183"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66109228"
 ---
 # <a name="enable-and-disable-rdl-sandboxing"></a>RDL サンドボックスの有効化と無効化
   RDL (レポート定義言語) サンドボックス機能を使用すると、複数のテナントが 1 つのレポート サーバー Web ファームを使用している環境で、個々のテナントによる特定の種類のリソースの使用を検出および制限できるようになります。 このような例として、複数のテナントまたは複数の企業によって使用される単一のレポート サーバー Web ファームを管理するホスティング サービスのシナリオがあります。 レポート サーバー管理者は、次の目的を達成するためにこの機能を有効にできます。  
@@ -35,10 +34,10 @@ ms.locfileid: "56013183"
   
 -   式での名前付きパラメーター。  
   
- このトピックでは、RSReportServer.Config ファイルの <`RDLSandboxing`> 要素内の各要素について説明します。 このファイルの編集の詳細については、「[Reporting Services の構成ファイル &#40;RSreportserver.config&#41; の変更](report-server/modify-a-reporting-services-configuration-file-rsreportserver-config.md)」を参照してください。 RDL サンドボックス機能に関連した操作は、サーバー トレース ログに記録されます。 トレース ログの詳細については、「 [Report Server Service Trace Log](report-server/report-server-service-trace-log.md)」を参照してください。  
+ このトピックで説明内の各要素の <`RDLSandboxing`> RSReportServer.Config ファイル内の要素。 このファイルの編集の詳細については、「[Reporting Services の構成ファイル &#40;RSreportserver.config&#41; の変更](report-server/modify-a-reporting-services-configuration-file-rsreportserver-config.md)」を参照してください。 RDL サンドボックス機能に関連した操作は、サーバー トレース ログに記録されます。 トレース ログの詳細については、「 [Report Server Service Trace Log](report-server/report-server-service-trace-log.md)」を参照してください。  
   
 ## <a name="example-configuration"></a>構成例  
- RSReportServer.Config ファイルの <`RDLSandboxing`> 要素の設定および値の例を次に示します。  
+ 設定および値の次の例を示しています、<`RDLSandboxing`> RSReportServer.Config ファイル内の要素。  
   
 ```  
 <RDLSandboxing>  
@@ -149,7 +148,7 @@ ms.locfileid: "56013183"
 -   RDL 型に新しいメンバーが追加された可能性があるため、新しい RDL スキーマを処理できるようにレポート サーバーを更新する場合  
   
 ### <a name="working-with-operators-and-new"></a>演算子と New の操作  
- 既定では、[!INCLUDE[vbprvb](../includes/vbprvb-md.md)] .NET Framework の言語演算子は、`New` を除いて常に許可されます。 `New`演算子がによって制御される、`AllowNew`属性を**\<許可 >** 要素。 既定のコレクション アクセサー演算子などの他の言語演算子`!`と[!INCLUDE[vbprvb](../includes/vbprvb-md.md)].NET Framework のキャスト マクロ`CInt`は常に許可します。  
+ 既定では、[!INCLUDE[vbprvb](../includes/vbprvb-md.md)] .NET Framework の言語演算子は、`New` を除いて常に許可されます。 `New`演算子がによって制御される、`AllowNew`属性を **\<許可>** 要素。 既定のコレクション アクセサー演算子などの他の言語演算子`!`と[!INCLUDE[vbprvb](../includes/vbprvb-md.md)].NET Framework のキャスト マクロ`CInt`は常に許可します。  
   
  カスタム演算子を含め、ブロック一覧への演算子の追加はサポートされていません。 特定の型に対して演算子を除外するには、次の手順を実行する必要があります。  
   

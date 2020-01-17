@@ -15,20 +15,18 @@ apitype: DLLExport
 helpviewer_keywords:
 - bcp_readfmt function
 ms.assetid: 654001c8-ae9f-425c-b820-f0191bf89367
-author: MightyPen
-ms.author: genemi
-manager: craigg
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: a94a4c25e739b49b0e212e030f088c50ff818202
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 6e0277959c1776dfbe9bd088c639f243ad6a2f7d
+ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47794938"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73782520"
 ---
-# <a name="bcpreadfmt"></a>bcp_readfmt
+# <a name="bcp_readfmt"></a>bcp_readfmt
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-[!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
 
   指定されたフォーマット ファイルからデータ ファイル形式の定義を読み取ります。  
   
@@ -51,17 +49,17 @@ RETCODE bcp_readfmt (
 ## <a name="returns"></a>戻り値  
  SUCCEED または FAIL。  
   
-## <a name="remarks"></a>コメント  
- 後**bcp_readfmt**形式の値を読み取り、適切な呼び出し[bcp_columns](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-columns.md)と[bcp_colfmt](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-colfmt.md)します。 ユーザーがフォーマット ファイルを解析し、このような呼び出しを行う必要はありません。  
+## <a name="remarks"></a>解説  
+ **Bcp_readfmt**は、フォーマット値を読み取った後、 [bcp_columns](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-columns.md)と[bcp_colfmt](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-colfmt.md)に対する適切な呼び出しを行います。 ユーザーがフォーマット ファイルを解析し、このような呼び出しを行う必要はありません。  
   
- フォーマット ファイルを保持するためには、呼び出す[bcp_writefmt](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-writefmt.md)します。 呼び出す**bcp_readfmt**保存形式を参照できます。 詳細については、次を参照してください。 [bcp_init](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-init.md)します。  
+ フォーマットファイルを永続化するには、 [bcp_writefmt](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-writefmt.md)を呼び出します。 **Bcp_readfmt**の呼び出しでは、保存された形式を参照できます。 詳細については、「 [bcp_init](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-init.md)」を参照してください。  
   
- または、一括コピー ユーティリティ (**bcp**) で参照できるファイルにユーザー定義のデータ形式を保存できます**bcp_readfmt**します。 詳細については、 **bcp**ユーティリティと構造の**bcp**データ形式のファイルを参照してください[一括インポートとエクスポートのデータ&#40;SQL Server&#41;](../../relational-databases/import-export/bulk-import-and-export-of-data-sql-server.md)します。  
+ また、一括コピーユーティリティ (**bcp**) では、 **bcp_readfmt**が参照できるファイルにユーザー定義データ形式を保存することもできます。 **Bcp**ユーティリティと**bcp**データフォーマットファイルの構造の詳細については、「[データ&#40;SQL Server&#41;の一括インポートと一括エクスポート](../../relational-databases/import-export/bulk-import-and-export-of-data-sql-server.md)」を参照してください。  
   
- **BCPDELAYREADFMT**の値、 *eOption*パラメーターの[bcp_control](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-control.md) bcp_readfmt の動作を変更します。  
+ [Bcp_control](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-control.md)の*EOption*パラメーターの**bcpdelayreadfmt**値は、bcp_readfmt の動作を変更します。  
   
 > [!NOTE]  
->  4.2 以降のバージョンによって、フォーマット ファイルが生成される必要がありますが、 **bcp**ユーティリティ。  
+>  フォーマットファイルは、 **bcp**ユーティリティのバージョン4.2 以降で作成されている必要があります。  
   
 ## <a name="example"></a>例  
   

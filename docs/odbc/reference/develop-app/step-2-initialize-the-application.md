@@ -1,5 +1,5 @@
 ---
-title: '手順 2: アプリケーションの初期化 |Microsoft Docs'
+title: 手順 2:アプリケーションの初期化 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -13,15 +13,14 @@ helpviewer_keywords:
 ms.assetid: 23a7a230-ae2c-4a5e-9760-d2e17f92c389
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: b0d25173dc8dc14aa1ed41a4a88496ef654e2ff0
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 41030015645bda11242a703a163f26104e66dba0
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47850927"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68114250"
 ---
-# <a name="step-2-initialize-the-application"></a>ステップ 2: アプリケーションの初期化
+# <a name="step-2-initialize-the-application"></a>手順 2:アプリケーションを初期化する
 2 番目の手順は、アプリケーションを初期化するためには次の図に示すようにします。 正確にどのようなここでは、アプリケーションによって異なります。  
   
  ![ODBC アプリケーションの初期化を示しています](../../../odbc/reference/develop-app/media/pr12.gif "pr12。")  

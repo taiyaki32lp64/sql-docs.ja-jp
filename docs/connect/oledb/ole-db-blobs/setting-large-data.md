@@ -1,6 +1,6 @@
 ---
-title: 大きなデータの設定 |Microsoft Docs
-description: SQL Server の OLE DB ドライバーを使用して大きなデータの設定
+title: 大きなデータを設定する |Microsoft Docs
+description: OLE DB Driver for SQL Server を使用した大きなデータの設定
 ms.custom: ''
 ms.date: 06/14/2018
 ms.prod: sql
@@ -16,20 +16,19 @@ helpviewer_keywords:
 - large data, OLE objects
 author: pmasl
 ms.author: pelopes
-manager: craigg
-ms.openlocfilehash: f4ae2a3aae9bca39ff0ad86d8ac57c1b39eef77c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 03baaafbc3fed654bcd463a2971bf1fca6712304
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47816100"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67936529"
 ---
 # <a name="setting-large-data"></a>大きなデータの設定
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
-  OLE DB Driver for SQL Server、コンシューマー ストレージ オブジェクトへのポインターを渡すことによって BLOB データを設定できます。  
+  SQL Server 用の OLE DB ドライバーを使用して、コンシューマーストレージオブジェクトへのポインターを渡すことによって BLOB データを設定できます。  
   
  コンシューマーは、データを保持するストレージ オブジェクトを作成し、このストレージ オブジェクトへのポインターをプロバイダーに渡します。 次に、プロバイダーがコンシューマー ストレージ オブジェクトからデータを読み取り、BLOB 列に書き込みます。  
   

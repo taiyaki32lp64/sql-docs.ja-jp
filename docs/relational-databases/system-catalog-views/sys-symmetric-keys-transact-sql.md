@@ -19,14 +19,13 @@ helpviewer_keywords:
 ms.assetid: d410eae1-3a52-45de-b9a1-52d2bd93a8eb
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 57e5bc6d2959e14c7af7e5ccefddc14e9bb630ee
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 5b4607c5873889c17e9934cc4f24465fe4e83007
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47672950"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68108929"
 ---
 # <a name="syssymmetrickeys-transact-sql"></a>sys.symmetric_keys (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -35,19 +34,19 @@ ms.locfileid: "47672950"
   
 |列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
-|**name**|**sysname**|キーの名前。 c4database 内で一意です。|  
+|**name**|**sysname**|キーの名前。 データベース内で一意です。|  
 |**principal_id**|**int**|キーを所有するデータベース プリンシパルの ID。|  
 |**symmetric_key_id**|**int**|キーの ID。 データベース内で一意です。|  
-|**key_length**|**int**|キーの長さ (ビット単位)。|  
-|**key_algorithm**|**char(2)**|キーで使用されるアルゴリズム。<br /><br /> R2 = RC2<br /><br /> R4 = RC4<br /><br /> D = DES<br /><br /> D3 = Triple DES<br /><br /> DT = TRIPLE_DES_3KEY<br /><br /> DX = DESX<br /><br /> A1 = AES 128<br /><br /> A2 = AES 192<br /><br /> A3 = AES 256<br /><br /> NA = EKM キー|  
+|**key_length**|**int**|ビット単位のキーの長さ。|  
+|**key_algorithm**|**char(2)**|キーで使用されるアルゴリズム。<br /><br /> R2 = RC2<br /><br /> R4 = RC4<br /><br /> D = DES<br /><br /> D3 = Triple DES<br /><br /> DT = TRIPLE_DES_3KEY<br /><br /> DX = DESX<br /><br /> A1 = AES 128<br /><br /> A2 AES 192 を =<br /><br /> A3 = AES 256<br /><br /> NA = EKM キー|  
 |**algorithm_desc**|**nvarchar(60)**|キーで使用されるアルゴリズムの説明。<br /><br /> RC2<br /><br /> RC4<br /><br /> DES<br /><br /> Triple_DES<br /><br /> TRIPLE_DES_3KEY<br /><br /> DESX<br /><br /> AES_128<br /><br /> AES_192<br /><br /> AES_256<br /><br /> NULL (拡張キー管理アルゴリズムのみ)|  
 |**create_date**|**datetime**|キーが作成された日付。|  
 |**modify_date**|**datetime**|キーが変更された日付。|  
-|**key_guid**|**uniqueidentifier**|キーに関連付けられているグローバル一意識別子 (GUID)。 保存されたキーに対しては、自動生成されます。 一時キーの GUID は、ユーザー指定のパス フレーズから生成されます。|  
-|**key_thumbprint**|**sql_variant**|キーの SHA-1 ハッシュ。 ハッシュはグローバルに一意です。 拡張キー管理以外のキーの場合、この値は NULL になります。|  
-|**provider_type**|**nvarchar(120)**|暗号化サービス プロバイダーの種類。<br /><br /> CRYPTOGRAPHIC PROVIDER = 拡張キー管理キー<br /><br /> NULL = 拡張キー管理以外のキー|  
-|**cryptographic_provider_guid**|**uniqueidentifier**|暗号化サービス プロバイダーの GUID。 拡張キー管理以外のキーの場合、この値は NULL になります。|  
-|**cryptographic_provider_algid**|**sql_variant**|暗号化サービス プロバイダーのアルゴリズム ID。 拡張キー管理以外のキーの場合、この値は NULL になります。|  
+|**key_guid**|**uniqueidentifier**|キーに関連付けられているグローバル一意識別子 (GUID)。 保存されたキーに対しては、自動生成されます。 一時キーの Guid は、ユーザー指定のパス フレーズから派生します。|  
+|**key_thumbprint**|**sql_variant**|キーの sha-1 ハッシュ。 ハッシュはグローバルに一意です。 非拡張キー管理キーは、この値を NULL となります。|  
+|**provider_type**|**nvarchar(120)**|暗号化サービス プロバイダーの種類:<br /><br /> CRYPTOGRAPHIC PROVIDER = 拡張キー管理キー<br /><br /> NULL = 非拡張キー管理キー|  
+|**cryptographic_provider_guid**|**uniqueidentifier**|暗号化サービス プロバイダーの GUID です。 非拡張キー管理キーは、この値を NULL となります。|  
+|**cryptographic_provider_algid**|**sql_variant**|暗号化サービス プロバイダーのアルゴリズム ID。 非拡張キー管理キーは、この値を NULL となります。|  
   
 ## <a name="permissions"></a>アクセス許可  
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] 詳細については、「 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)」を参照してください。  
@@ -56,7 +55,7 @@ ms.locfileid: "47672950"
  RC4 アルゴリズムは非推奨とされます。 [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)]  
   
 > [!NOTE]  
->  RC4 アルゴリズムは、旧バージョンとの互換性のためにのみサポートされています。 データベース互換性レベルが 90 または 100 の場合、新しい素材は RC4 または RC4_128 を使用してのみ暗号化できます  (非推奨)。AES アルゴリズムのいずれかなど、新しいアルゴリズムを使用してください。 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] では、どの互換性レベルでも、RC4 または RC4_128 を使用して暗号化された素材を暗号化解除できます。  
+>  RC4 アルゴリズムは、旧バージョンとの互換性のためにのみサポートされています。 データベース互換性レベルが 90 または 100 の場合、新しい素材は RC4 または RC4_128 を使用してのみ暗号化できます (非推奨)。AES アルゴリズムのいずれかなど、新しいアルゴリズムを使用してください。 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] では、どの互換性レベルでも、RC4 または RC4_128 を使用して暗号化された素材を暗号化解除できます。  
   
  **DES アルゴリズムに関する説明:**  
   
@@ -66,7 +65,7 @@ ms.locfileid: "47672950"
   
 -   ALGORITHM = TRIPLE_DES を使用して作成された対称キーでは、128 ビット キーを使用した TRIPLE DES が使用されます。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [カタログ ビュー &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
  [拡張キー管理 &#40;EKM&#41;](../../relational-databases/security/encryption/extensible-key-management-ekm.md)   
  [セキュリティ カタログ ビュー &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/security-catalog-views-transact-sql.md)   

@@ -11,17 +11,20 @@ helpviewer_keywords:
 - exponential functions
 - EXP function
 ms.assetid: 4cd96d3c-58c9-4a67-a6f6-b72758232912
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: bf95ffb46ec323f314360d9a23690f10eb9383de
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: f53939adac7e0593245c4dfd35222696961a83b8
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47658693"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71289774"
 ---
 # <a name="exp-ssis-expression"></a>EXP (SSIS 式)
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   数値式の e を基数とする指数を返します。 EXP 関数は LN 関数の逆関数であり、真数と呼ばれる場合もあります。  
   
 ## <a name="syntax"></a>構文  
@@ -50,13 +53,13 @@ EXP(numeric_expression)
 EXP(74)  
 ```  
   
- 1.373382979540176E+32 が返されます。  
+ 1\.373382979540176E+32 が返されます。  
   
 ```  
 EXP(-27)  
 ```  
   
- 1.879528816539083E-12 が返されます。  
+ 1\.879528816539083E-12 が返されます。  
   
 ```  
 EXP(0)  

@@ -11,17 +11,20 @@ helpviewer_keywords:
 - CODEPOINT function
 - leftmost character of expression
 ms.assetid: 0783d05e-7f35-42fb-a2c4-9621c46effd6
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: 916077a69ca54616cf8e0bb7e8d0144aeba186df
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 06c015c2f96bf2f7206a3e802d44a65871828d2c
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47686160"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71290261"
 ---
 # <a name="codepoint-ssis-expression"></a>CODEPOINT (SSIS 式)
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   文字式の一番左の文字の Unicode コード ポイントを返します。  
   
 ## <a name="syntax"></a>構文  

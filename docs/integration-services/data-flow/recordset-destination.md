@@ -15,17 +15,20 @@ helpviewer_keywords:
 - destinations [Integration Services], Recordset
 - in-memory ADO recordsets [Integration Services]
 ms.assetid: be973cf1-c4ff-49f8-987e-314c08ef98e4
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: 977cf906b46ae792bc979c5b6b844dbf6368b40e
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: fc14bf340407903674014a84a6b48f2ff14522fc
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51640509"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71298125"
 ---
 # <a name="recordset-destination"></a>レコードセット変換先
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   レコードセット変換先は、インメモリ ADO レコードセットを作成して設定します。 レコードセットの形態は、レコードセット変換先への入力によってデザイン時に定義されます。  
   
 ## <a name="configuration-of-the-recordset-destination"></a>レコードセット変換先の構成  

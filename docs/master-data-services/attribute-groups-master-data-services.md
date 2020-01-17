@@ -1,5 +1,5 @@
 ---
-title: 属性グループ (マスター データ サービス) | Microsoft Docs
+title: 属性グループ
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -11,21 +11,20 @@ helpviewer_keywords:
 - attribute groups [Master Data Services]
 - attribute groups [Master Data Services], about attribute groups
 ms.assetid: 648b3d0b-e15a-45f9-8292-3a54a072e62c
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: fab92b86d9df1ca0000fb762602280b14e6a1aa7
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
-ms.translationtype: HT
+ms.openlocfilehash: 2b5cefb3548886cc26e55a9f408ac68e2bd30620
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52760434"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73729770"
 ---
 # <a name="attribute-groups-master-data-services"></a>属性グループ (マスター データ サービス)
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-  [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]では、属性グループがエンティティ内の属性の整理に役立ちます。 エンティティ内に多数の属性がある場合、属性グループを使用すると、 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] Web アプリケーションでのエンティティの表示が見やすくなります。  
+  [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] では、属性グループがエンティティ内の属性の整理に役立ちます。 エンティティ内に多数の属性がある場合、属性グループを使用すると、 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] Web アプリケーションでのエンティティの表示が見やすくなります。  
   
 ## <a name="how-attribute-groups-change-the-display"></a>属性グループによる表示の変更  
  属性グループは、 **の** [エクスプローラー] [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]機能領域のグリッドの上部にタブとして表示されます。  
@@ -47,7 +46,7 @@ ms.locfileid: "52760434"
   
  グループ内の特定の属性を非表示にするために、その属性に **[拒否]** の権限を割り当てることができます。 詳細については、「[リーフ アクセス許可 &#40;マスター データ サービス&#41;](../master-data-services/leaf-permissions-master-data-services.md)」を参照してください。  
   
-## <a name="related-tasks"></a>Related Tasks  
+## <a name="related-tasks"></a>関連タスク  
   
 |タスクの説明|トピック|  
 |----------------------|-----------|  

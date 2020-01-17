@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: a3b6fc09-ce21-450d-9063-bac505208d31
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: c5180ab3b7b633916f51b4a35a5128dc017cd751
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 26ce0f7bce4af9a57963a7efa29f6bcbc4280c29
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52527088"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67932267"
 ---
 # <a name="marshaloptions-property-example-vc"></a>MarshalOptions プロパティの例 (VC++)
 この例では、 [MarshalOptions](../../../ado/reference/ado-api/marshaloptions-property-ado.md)プロパティをどのような行がすべての行または変更された行のみのサーバーに送信されます。  
@@ -245,5 +244,5 @@ void PrintComError(_com_error &e) {
 }  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [MarshalOptions プロパティ (ADO)](../../../ado/reference/ado-api/marshaloptions-property-ado.md)

@@ -13,11 +13,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 0f6b0ebed67ba918cb45c1aaae9c14f15d6871c1
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48152124"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62869139"
 ---
 # <a name="mssqlserver2579"></a>MSSQLSERVER_2579
     
@@ -30,10 +30,10 @@ ms.locfileid: "48152124"
 |イベント ソース|MSSQLSERVER|  
 |コンポーネント|SQLEngine|  
 |シンボル名|DBCC_EXTENT_OUT_OF_RANGE|  
-|メッセージ テキスト|テーブル エラー : オブジェクト ID O_ID、インデックス ID I_ID、パーティション ID PN_ID、アロケーション ユニット ID A_ID (型 TYPE) のエクステント P_ID が、このデータベースの範囲を超えています。|  
+|メッセージ テキスト|テーブル エラー:エクステント P_ID オブジェクト ID O_ID、インデックス ID I_ID、パーティション ID PN_ID、アロケーション ユニット ID A_ID (型 TYPE) は、このデータベースの範囲外です。|  
   
 ## <a name="explanation"></a>説明  
- *P_ID* は、*(filenum:pageinfile)* という形式のページ ID です。 このエクステントの *pageinfile* が、データベース ファイル *(filenum)* の物理サイズより大きくなっています。 このエクステントが、表示されたアロケーション ユニット ID に対応して IAM ページ内で割り当てられていることを示しています。  
+ *P_ID* は、 *(filenum:pageinfile)* という形式のページ ID です。 このエクステントの *pageinfile* が、データベース ファイル *(filenum)* の物理サイズより大きくなっています。 このエクステントが、表示されたアロケーション ユニット ID に対応して IAM ページ内で割り当てられていることを示しています。  
   
 ## <a name="user-action"></a>ユーザーの操作  
   

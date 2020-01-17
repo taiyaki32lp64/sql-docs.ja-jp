@@ -2,18 +2,18 @@
 title: Web ポータルを使用したレポートの検索と表示 (レポート ビルダーおよび SSRS) | Microsoft Docs
 ms.date: 03/01/2017
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: report-builder
 ms.topic: conceptual
 ms.assetid: 8556807e-f2e2-4a7b-bb1b-ac5ea1872e51
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 6eb56d90c86397de22926f84083b26d754ca1eff
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 2f98607ce8544a913ace04bbc70aa578d1090557
+ms.sourcegitcommit: 071065bc5433163ebfda4fdf6576349f9d195663
+ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52508443"
+ms.lasthandoff: 10/03/2019
+ms.locfileid: "71923786"
 ---
 # <a name="finding-and-viewing-reports-in-the-web-portal-report-builder-and-ssrs"></a>Web ポータルを使用したレポートの検索と表示 (レポート ビルダーおよび SSRS)
   レポート マネージャーは、レポートの表示機能および管理機能を備えた Web ベースのツールです。 これは、レポート サーバー インストールの一部です。 レポート マネージャーを開くとき、ブラウザー ウィンドウにレポート マネージャーの URL を入力します。 ブラウザーの要件の詳細については、「 [Reporting Services と Power View のブラウザー サポート](../../reporting-services/browser-support-for-reporting-services-and-power-view.md)」を参照してください。 レポート サーバーでのレポート マネージャー URL の構成方法の詳細については、システム管理者に問い合わせてください。 詳細については、「[レポート マネージャーの構成 (ネイティブ モード)](../../reporting-services/report-server/configure-report-manager-native-mode.md)」を参照してください。  
@@ -40,8 +40,8 @@ ms.locfileid: "52508443"
 ## <a name="opening-a-report"></a>レポートを開く  
  レポートが見つかったら、レポート名をクリックしてそのレポートを開きます。 レポートは、レポート マネージャーの [コンテンツ] ページに HTML 形式で表示されます。 レポートは、ブラウザー セッションで常にキャッシュされます。したがって、レポートを開いた場合は、通常、 **[戻る]** ボタンをクリックしてそのレポートに戻ることができます。 これは、レポートの実行にユーザー名とパスワードが必要な場合にも当てはまります。 表示されたレポートは、ブラウザーを閉じるまで完全には閉じられません。  
   
- フォルダー階層で表示されているすべてのレポートにすぐアクセスできるとは限りません。 レポートによっては、ユーザー名とパスワードがユーザーに要求され、そのレポートのデータ ソースへのアクセス権がユーザーにあるかどうか、検証が行われるものもあります。 レポート マネージャーでレポートを開く方法の詳細については、「[レポートを開閉する (レポート マネージャー)](../../reporting-services/reports/open-and-close-a-report-report-manager.md)」を参照してください。  
-  
+ フォルダー階層で表示されているすべてのレポートにすぐアクセスできるとは限りません。 レポートによっては、ユーザー名とパスワードがユーザーに要求され、そのレポートのデータ ソースへのアクセス権がユーザーにあるかどうか、検証が行われるものもあります。 
+
  レポート ビルダーからレポート サーバーのレポートを直接参照したり開いたりすることもできます。 
   
 ## <a name="to-search-for-items"></a>項目を検索するには  

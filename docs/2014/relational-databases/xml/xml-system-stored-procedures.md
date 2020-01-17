@@ -13,15 +13,15 @@ helpviewer_keywords:
 - sp_xml_preparedocument
 - XML [SQL Server], system stored procedures
 ms.assetid: e60c7f85-6823-4d28-93d6-b053d08cc830
-author: douglaslMS
-ms.author: douglasl
+author: MightyPen
+ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 7f84fbd7435a092abc326f8bb253e5d8565618fc
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 20ea97f50592c6d8abc51e64acb4a164ad0b95b3
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48218142"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63192973"
 ---
 # <a name="xml-system-stored-procedures"></a>XML システム ストアド プロシージャ
   SQL Server には、OPENXML と共に使用する、次のシステム ストアド プロシージャが用意されています。  

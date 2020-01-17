@@ -1,5 +1,5 @@
 ---
-title: 'レッスン 2: SSIS でのループの追加 | Microsoft Docs'
+title: レッスン 2:SSIS でのループの追加 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/03/2019
 ms.prod: sql
@@ -8,17 +8,20 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: tutorial
 ms.assetid: 01f2ed61-1e5a-4ec6-b6a6-2bd070c64077
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: 90f3d3c73eea1413159d29ec2cc25522271d5646
-ms.sourcegitcommit: dd794633466b1da8ead9889f5e633bdf4b3389cd
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: ccd3be3203aae382cda239ed6d7bdc2fa224923b
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54143383"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71296052"
 ---
-# <a name="lesson-2-add-looping-with-ssis"></a>レッスン 2: SSIS でのループの追加
+# <a name="lesson-2-add-looping-with-ssis"></a>レッスン 2:SSIS でのループの追加
+
+[!INCLUDE[ssis-appliesto](../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
 
 「[レッスン 1: SSIS によるプロジェクトと基本パッケージの作成](../integration-services/lesson-1-create-a-project-and-basic-package-with-ssis.md)」で、1 つのフラット ファイル ソースからデータを抽出するパッケージを作成しました。 抽出されたデータは参照変換を使用して変換されます。 最後に、パッケージによって、**AdventureWorksDW2012** サンプル データベースの **FactCurrencyRate** ファクト テーブルのコピーにそのデータが読み込まれます。  
   
@@ -54,7 +57,7 @@ ms.locfileid: "54143383"
 ## <a name="lesson-tasks"></a>このレッスンの作業  
 このレッスンの内容は次のとおりです。  
   
--   [ステップ 1: レッスン 1 のパッケージをコピーする](../integration-services/lesson-2-1-copying-the-lesson-1-package.md)  
+-   [ステップ 1:レッスン 1 のパッケージをコピーする](../integration-services/lesson-2-1-copying-the-lesson-1-package.md)  
   
 -   [ステップ 2:Foreach ループ コンテナーの追加および構成](../integration-services/lesson-2-2-adding-and-configuring-the-foreach-loop-container.md)  
   
@@ -63,7 +66,7 @@ ms.locfileid: "54143383"
 -   [ステップ 4:レッスン 2 で作成したチュートリアル パッケージのテスト](../integration-services/lesson-2-4-testing-the-lesson-2-tutorial-package.md)  
   
 ## <a name="start-the-lesson"></a>レッスンの開始  
-[ステップ 1: レッスン 1 のパッケージをコピーする](../integration-services/lesson-2-1-copying-the-lesson-1-package.md)  
+[ステップ 1:レッスン 1 のパッケージをコピーする](../integration-services/lesson-2-1-copying-the-lesson-1-package.md)  
   
 ## <a name="see-also"></a>参照  
 [For ループ コンテナー](../integration-services/control-flow/for-loop-container.md)  

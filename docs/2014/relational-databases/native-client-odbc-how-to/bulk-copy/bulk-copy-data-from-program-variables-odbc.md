@@ -14,11 +14,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 3489e7a925ec09f84397ea27e5a749180999a9fc
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53364424"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62753644"
 ---
 # <a name="bulk-copy-data-from-program-variables-odbc"></a>プログラム変数からのデータの一括コピー (ODBC)
   このサンプルでは、一括コピー関数 `bcp_bind` と `bcp_sendrow` を使用して、プログラム変数から SQL Server にデータを一括コピーする方法を示します  (この例では、簡略化のためエラーチェック コードが削除されています)。  
@@ -300,7 +300,7 @@ IF EXISTS (SELECT name FROM sysobjects WHERE name = 'BCPTarget')
 GO  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [一括コピーの SQL Server ODBC ドライバーの操作について&#40;ODBC&#41;](bulk-copying-with-the-sql-server-odbc-driver-how-to-topics-odbc.md)   
  [プログラム変数からの一括コピー](../../native-client-odbc-bulk-copy-operations/bulk-copying-from-program-variables.md)  
   

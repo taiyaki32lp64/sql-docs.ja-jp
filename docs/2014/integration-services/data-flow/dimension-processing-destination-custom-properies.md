@@ -7,15 +7,15 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 9700f663-53f2-49b6-b1ef-92c7b752d6a1
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 2723231bb6200252a8c809214bd82826ce9b6e25
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: b63e508f87b9766507c541a7ed81e42466bbd1e8
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52790504"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62827365"
 ---
 # <a name="dimension-processing-destination-custom-properies"></a>ディメンション処理変換先のカスタム プロパティ
   ディメンション処理変換先には、カスタム プロパティと、すべてのデータ フロー コンポーネントとの共通プロパティの両方があります。  
@@ -41,6 +41,6 @@ ms.locfileid: "52790504"
  詳細については、「 [ディメンション処理変換先](dimension-processing-destination.md)」を参照してください。  
   
 ## <a name="see-also"></a>参照  
- [Common Properties](../common-properties.md)  
+ [共通プロパティ](../common-properties.md)  
   
   

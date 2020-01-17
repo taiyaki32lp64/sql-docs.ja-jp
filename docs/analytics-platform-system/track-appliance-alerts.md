@@ -1,46 +1,46 @@
 ---
-title: アプライアンスの警告 - Analytics Platform System の追跡 |Microsoft Docs
-description: Analytics Platform System でアプライアンスの警告を追跡します。
+title: アプライアンスの警告の追跡
+description: Analytics Platform System でアプライアンスのアラートを追跡します。
 author: mzaman1
-manager: craigg
 ms.prod: sql
 ms.technology: data-warehouse
 ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: f38f76975290538a35203ddbbed84b9354285edc
-ms.sourcegitcommit: 731c5aed039607a8df34c63e780d23a8fac937e1
+ms.custom: seo-dt-2019
+ms.openlocfilehash: 03568666367bf6273f197994f572bbbbd62bb42e
+ms.sourcegitcommit: d587a141351e59782c31229bccaa0bff2e869580
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/07/2018
-ms.locfileid: "37909792"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74399940"
 ---
-# <a name="track-appliance-alerts-in-analytics-platform-system"></a>Analytics Platform System でアプライアンスの警告を追跡します。
-このトピックでは、管理コンソールとシステム ビューを使用して、SQL Server PDW アプライアンスでアラートを管理する方法について説明します。  
+# <a name="track-appliance-alerts-in-analytics-platform-system"></a>Analytics Platform System でアプライアンスアラートを追跡する
+このトピックでは、管理コンソールとシステムビューを使用して、SQL Server PDW アプライアンスのアラートを追跡する方法について説明します。  
   
-## <a name="to-track-appliance-alerts"></a>アプライアンスの警告を追跡するには  
-SQL Server PDW では、注意が必要なハードウェアとソフトウェアの問題のアラートを作成します。 各アラートには、タイトルと、問題の説明が含まれています。  
+## <a name="to-track-appliance-alerts"></a>アプライアンスのアラートを追跡するには  
+SQL Server PDW は、注意が必要なハードウェアおよびソフトウェアの問題に関するアラートを作成します。 各アラートには、問題のタイトルと説明が含まれています。  
   
-SQL Server PDW でアラートのログ、 [sys.dm_pdw_component_health_alerts](../relational-databases/system-dynamic-management-views/sys-dm-pdw-component-health-alerts-transact-sql.md) DMV。 システムでは、10,000 のアラートの制限が保持され、制限を超えたときに最初に、最も古いアラートを削除します。  
+SQL Server PDW は、 [sys. dm_pdw_component_health_alerts](../relational-databases/system-dynamic-management-views/sys-dm-pdw-component-health-alerts-transact-sql.md) DMV で警告をログに記録します。 システムでは、1万のアラートの上限が保持され、上限を超えた場合に最も古いアラートが最初に削除されます。  
   
-### <a name="view-alerts-by-using-the-admin-console"></a>管理者コンソールを使用してアラートの表示  
-**アラート**PDW リージョンと、アプライアンスの fabric 領域のタブ。 フェールオーバーの発生後のページでアラートの数には、フェールオーバー イベントが含まれます。 PDW リージョンと、アプライアンスのファブリックのリージョンのページがあります。 各正常性ページには、タブがあります。アラートについての詳細については、次のようにクリックします。、**正常性** ページで、**アラート**タブをクリックし、アラート をクリックします。  
+### <a name="view-alerts-by-using-the-admin-console"></a>管理コンソールを使用してアラートを表示する  
+PDW 領域の [**アラート**] タブとアプライアンスのファブリックリージョンがあります。 フェールオーバーが発生した後、フェールオーバーイベントはページ上のアラートの数に含まれます。 PDW リージョン用のページとアプライアンスのファブリックリージョン用のページがあります。 各正常性ページにはタブがあります。アラートの詳細を確認するには、[**正常性**] ページの [**アラート**] タブをクリックし、アラートをクリックします。  
   
 ![PDW 管理コンソールの警告](./media/track-appliance-alerts/SQL_Server_PDW_AdminConsole_AlertsV2.png "SQL_Server_PDW_AdminConsole_AlertsV2")  
   
-**アラート**ページ。  
+[**アラート**] ページで、次のようにします。  
   
--   アラートの履歴を表示する をクリックして、**レビュー アラート履歴**リンク。  
+-   アラートの履歴を表示するには、[**アラート履歴の確認**] リンクをクリックします。  
   
--   アラートのコンポーネントとその現在のプロパティ値を表示するには、アラートの行をクリックします。  
+-   警告コンポーネントとその現在のプロパティ値を表示するには、[アラート] 行をクリックします。  
   
--   アラートを生成したノードに関する詳細を表示するには、ノード名をクリックします。  
+-   アラートを発生させたノードの詳細を表示するには、ノード名をクリックします。  
   
-### <a name="view-alerts-by-using-the-system-views"></a>システム ビューを使用してアラートの表示  
-システム ビューを使用してアラートを表示するにはクエリ[sys.dm_pdw_component_health_active_alerts](../relational-databases/system-dynamic-management-views/sys-dm-pdw-component-health-active-alerts-transact-sql.md)します。 この DMV ではないが修正されているアラートが表示されます。 アラートのトリアージとエラーについてを使用して、 [sys.dm_pdw_errors](../relational-databases/system-dynamic-management-views/sys-dm-pdw-errors-transact-sql.md) DMV。  
+### <a name="view-alerts-by-using-the-system-views"></a>システムビューを使用したアラートの表示  
+システムビューを使用して警告を表示するには、 [dm_pdw_component_health_active_alerts](../relational-databases/system-dynamic-management-views/sys-dm-pdw-component-health-active-alerts-transact-sql.md)クエリを実行します。 この DMV には、修正されていないアラートが表示されます。 アラートとエラーのトリアージに関するヘルプを表示するには、 [dm_pdw_errors](../relational-databases/system-dynamic-management-views/sys-dm-pdw-errors-transact-sql.md) DMV を使用します。  
   
-次の例では、現在のアラートを表示するための一般的なクエリです。  
+次の例は、現在のアラートを表示するための一般的なクエリです。  
   
 ```sql  
 SELECT   
@@ -72,5 +72,5 @@ ORDER BY
   
 ## <a name="see-also"></a>参照  
 <!-- MISSING LINKS [Common Metadata Query Examples &#40;SQL Server PDW&#41;](../sqlpdw/common-metadata-query-examples-sql-server-pdw.md)  -->
-[アプライアンスの監視&#40;Analytics Platform System&#41;](appliance-monitoring.md)  
+[アプライアンス監視 &#40;Analytics Platform System&#41;](appliance-monitoring.md)  
   

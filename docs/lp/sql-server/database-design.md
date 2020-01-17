@@ -7,16 +7,15 @@ ms.topic: hub-page
 ms.prod: sql
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
 ms.date: 12/15/2018
 featureFlags:
 - clicktale
-ms.openlocfilehash: 5c70902f23c4f149e42a1ee04dd515aa32aa9d2e
-ms.sourcegitcommit: 769b71f01052ec9b4fc5eb02d9da9a1a58118029
+ms.openlocfilehash: c08b067a8c92b7fea32b53cd8b14b7ecc13272d0
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56319083"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68077241"
 ---
 <div id="main" class="v2">
     <div class="container">
@@ -97,7 +96,7 @@ ms.locfileid: "56319083"
                                                     </div>
                                                 </div>
                                                 <div class="cardText">
-                                                    <h3>[照合順序]</h3>
+                                                    <h3>照合順序</h3>
                                                     <p>SQL Server の照合順序により、並べ替え規則、大文字と小文字の区別、およびアクセントの区別のプロパティをデータで利用できるようになります。 char や varchar などの文字データ型に使用する照合順序は、そのデータ型で表すことのできるコード ページおよび対応する文字を指定します。 </p>
                                                 </div>
                                             </div>
@@ -117,7 +116,7 @@ ms.locfileid: "56319083"
                                                 </div>
                                                 <div class="cardText">
                                                     <h3>データベース</h3>
-                                                    <p>SQL Server のデータベースは、特定の構造化データを格納するテーブルの集合です。 テーブルは一連の行 (レコードまたは組) と列 (属性) から構成されます。</p>
+                                                    <p>SQL Server のデータベースは、特定の構造化データを格納するテーブルの集合です。 テーブルは一連の行 (レコードまたはタプル) と列 (属性) から構成されます。</p>
                                                 </div>
                                             </div>
                                         </div>

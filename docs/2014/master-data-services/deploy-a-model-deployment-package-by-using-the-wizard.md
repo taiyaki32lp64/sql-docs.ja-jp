@@ -10,15 +10,15 @@ helpviewer_keywords:
 - deployment packages [Master Data Services], deploying
 - models [Master Data Services], deploying a package
 ms.assetid: 4f65dc60-0ff8-46e6-9988-5bc5b9603ad0
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 3b74a2de7cd9479552fdf560a324a93541496eaa
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: cbdf233af3c0c27d6b4e95d18dc2c438d5307e7d
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52792794"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65479485"
 ---
 # <a name="deploy-a-model-deployment-package-by-using-the-wizard"></a>ウィザードを使用したモデルの配置パッケージの展開
   モデル オブジェクトのみが含まれているパッケージを配置するには、 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] のモデル配置ウィザードを使用します。 データを含むパッケージを配置する必要がある場合は、「 [MDSModelDeploy を使用したモデルの配置パッケージの配置](../../2014/master-data-services/deploy-a-model-deployment-package-by-using-mdsmodeldeploy.md)」を参照してください。  
@@ -47,7 +47,7 @@ ms.locfileid: "52792794"
   
 5.  配置パッケージ (.pkg ファイル) を見つけて **[開く]** をクリックします。  
   
-6.  **[次へ]** をクリックします。  
+6.  [**次へ**] をクリックします。  
   
 7.  パッケージが読み込まれたら **[次へ]** をクリックします。  
   

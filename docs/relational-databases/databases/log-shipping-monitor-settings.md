@@ -12,13 +12,12 @@ f1_keywords:
 ms.assetid: 45e2ba7d-b3aa-4643-9451-bcb991572314
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 98c2a62a558785f2ea2c483eb1e109a6ee873b0d
-ms.sourcegitcommit: 1a5448747ccb2e13e8f3d9f04012ba5ae04bb0a3
+ms.openlocfilehash: 216fb75c9dcdffc83e8f4f21469aaa9cfc1b11d8
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51560439"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67934415"
 ---
 # <a name="log-shipping-monitor-settings"></a>[ログ配布モニターの設定]
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -26,7 +25,7 @@ ms.locfileid: "51560439"
   
  ログ配布の概念については、「[ログ配布について &#40;SQL Server&#41;](../../database-engine/log-shipping/about-log-shipping-sql-server.md)」を参照してください。  
   
-## <a name="options"></a>[変数]  
+## <a name="options"></a>オプション  
  **[監視サーバー インスタンス]**  
  ログ配布構成の監視サーバーとして現在構成されているサーバー インスタンスの名前を表示します。  
   

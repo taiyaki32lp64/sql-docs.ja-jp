@@ -13,15 +13,14 @@ helpviewer_keywords:
 - Update query
 - updating tables
 ms.assetid: 178b7b75-8078-4e61-b2a8-4719b9d8033d
-author: stevestein
-ms.author: sstein
-manager: craigg
-ms.openlocfilehash: bc61da94da4e7a442da5c2b4cd63200af14cd71f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: e6f2f2102008976bd997ffae729907fb0d0e0f58
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47803180"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68266923"
 ---
 # <a name="create-update-queries-visual-database-tools"></a>更新クエリの作成 (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -64,7 +63,7 @@ WHERE (pub_id = '0766')
     > [!CAUTION]  
     > クエリおよびビュー デザイナーは、値の長さが更新する列の長さの範囲内であるかどうかをチェックできません。 指定した値が長すぎる場合、予告なしに切り捨てられることがあります。 たとえば、 `name` 列の長さが 20 文字である場合に 25 文字の更新値を指定すると、最後の 5 文字は切り捨てられることがあります。  
   
-5.  更新する行を定義するために、**[フィルター]** 列に検索条件を入力します。 詳細については、「[検索基準の指定 (Visual Database Tools)](../../ssms/visual-db-tools/specify-search-criteria-visual-database-tools.md)」を参照してください。  
+5.  更新する行を定義するために、 **[フィルター]** 列に検索条件を入力します。 詳細については、「[検索基準の指定 (Visual Database Tools)](../../ssms/visual-db-tools/specify-search-criteria-visual-database-tools.md)」を参照してください。  
   
     検索条件を指定しない場合は、指定されたテーブルのすべての行が更新されます。  
   

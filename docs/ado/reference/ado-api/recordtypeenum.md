@@ -15,18 +15,17 @@ helpviewer_keywords:
 ms.assetid: f557e537-015d-4ba7-8a41-a6f00b366a91
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 195f76043cf65801289d081e497e28a41aff3209
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: df70838b7986993459df4f37af8b7043626a5d7b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47761440"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67931262"
 ---
 # <a name="recordtypeenum"></a>RecordTypeEnum
 型を指定[レコード](../../../ado/reference/ado-api/record-object-ado.md)オブジェクト。  
   
-|定数|値|説明|  
+|定数|Value|説明|  
 |--------------|-----------|-----------------|  
 |**adSimpleRecord**|0|示す、*単純*レコード (子ノードを含まない)。|  
 |**adCollectionRecord**|1|示す、*コレクション*レコード (子ノードが含まれています)。|  

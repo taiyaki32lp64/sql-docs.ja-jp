@@ -1,22 +1,21 @@
 ---
-title: チュートリアル:マップ レポート (レポート ビルダー) |Microsoft Docs
+title: チュートリアル:マップ レポート (レポート ビルダー) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 ms.assetid: 8d831356-7efa-40cc-ae95-383b3eecf833
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 5522f24dbb7b930b69b2656f7c2c5b53954f16ca
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: 3b456d165ef9c4f09bb040cefb63644efb51c112
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56290920"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66098861"
 ---
 # <a name="tutorial-map-report-report-builder"></a>チュートリアル:マップ レポート (レポート ビルダー)
   このチュートリアルでは、地図を背景としてレポート データを表示するときに使用できるマップ機能について学習できます。  
@@ -63,7 +62,7 @@ ms.locfileid: "56290920"
 10. [レポートを保存します。](#Save)  
   
 > [!NOTE]  
->  このチュートリアルでは、ウィザードに関する複数の手順を、データセットの作成とテーブルの作成の 2 つの手順にまとめて示します。 レポート サーバーを参照する方法の詳細については、データ ソースの選択、データセットの作成し、ウィザードを実行して、このシリーズの最初のチュートリアルを参照してください。[チュートリアル: 基本的なテーブル レポートを作成する&#40;レポート ビルダー&#41;](../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md)します。  
+>  このチュートリアルでは、ウィザードに関する複数の手順を、データセットの作成とテーブルの作成の 2 つの手順にまとめて示します。 レポート サーバーの参照、データ ソースの選択、データセットの作成、およびウィザードの実行に関する詳細な手順については、このシリーズの最初のチュートリアルである「[チュートリアル: 基本的な表レポートの作成 &#40;レポート ビルダー&#41;](../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md)」を参照してください。  
   
  このチュートリアルの推定所要時間:30 分。  
   
@@ -192,7 +191,7 @@ ms.locfileid: "56290920"
     CAST(1500000 as money) as Sales, CAST('POINT(-73.5626737425063 42.6940551238618)' as geography) AS SpatialLocation  
     ```  
   
-9. クエリ デザイナーのツール バーで、 **[実行]** (**!**) をクリックします。  
+9. クエリ デザイナーのツール バーで、 **[実行]** ( **!** ) をクリックします。  
   
      結果セットには、7 つの列が表示されます。StoreKey、StoreName、SellingArea、City、County、Sales、および SpatialLocation します。 このデータは、消費者向けの商品を販売している New York 州内の店舗を表しています。 結果セットの各行には、店舗識別子、店舗名、商品の展示に使用できる面積、店舗の所在地の市および郡、売上合計、および所在地の経度と緯度が含まれています。 展示面積の範囲は 455 ～ 1125 平方フィートです。  
   
@@ -319,7 +318,7 @@ ms.locfileid: "56290920"
   
 4.  **[表示]** をクリックします。  
   
-5.  **透明度 (%)**、型**30**します。  
+5.  **透明度 (%)** 、型**30**します。  
   
 6.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   

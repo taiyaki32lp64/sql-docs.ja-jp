@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: f38623c8-fdd4-4601-b1f0-97c593d31177
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: b512ff83d0002ef4a7c79b48cd8829fc2dbb9ba3
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 5025bf5eee4b0b65342e7ce47cbbde4ae9ef6b7e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47696581"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68106171"
 ---
 # <a name="descriptor-fields"></a>記述子フィールド
 記述子が含まれて*ヘッダー*と*レコード*列またはパラメーターを完全に記述されるフィールド。  

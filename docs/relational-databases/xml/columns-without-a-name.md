@@ -10,15 +10,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - names [SQL Server], columns without
 ms.assetid: 440de44e-3a56-4531-b4e4-1533ca933cac
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: f7990de0a0fb9dec2ee969ecdfe183a4e565777c
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+author: MightyPen
+ms.author: genemi
+ms.openlocfilehash: 0d8fb8fc597fd0562640821769e3314b4f3020bb
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51675311"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68112901"
 ---
 # <a name="columns-without-a-name"></a>名前のない列
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

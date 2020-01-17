@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 3b4742d5-74fb-4aff-aa21-d83a0064d73d
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 2e555ff4a3b33c4c827371dc1ad63546736d7189
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ca9b70ee6a96759e496b831f7c12dc3ee78419b7
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47745860"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68087869"
 ---
 # <a name="unicode-drivers"></a>Unicode ドライバー
 ドライバーが、ANSI、Unicode ドライバーにするかどうかは、データ ソースの性質に完全に依存します。 データ ソースは、Unicode データをサポートする場合、ドライバーが Unicode ドライバーにあります。 データ ソースは、ANSI データのみをサポートする場合ドライバーは、ANSI ドライバーを維持する必要があります。  

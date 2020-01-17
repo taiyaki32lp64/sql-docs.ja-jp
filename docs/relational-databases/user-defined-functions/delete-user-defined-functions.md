@@ -10,14 +10,13 @@ ms.topic: conceptual
 ms.assetid: db1d668a-23b7-4757-a9c5-1bd848ba7f6d
 author: rothja
 ms.author: jroth
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: c0e8c720660c17c262f66e5a14841dff490c008b
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: aa54440c5b1a506ce9c218dc7213383e0ff43ca0
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52412099"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72906866"
 ---
 # <a name="delete-user-defined-functions"></a>ユーザー定義関数の削除
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -29,7 +28,7 @@ ms.locfileid: "52412099"
   
      [制限事項と制約事項](#Restrictions)  
   
-     [Security](#Security)  
+     [セキュリティ](#Security)  
   
 -   **ユーザー定義関数を削除するために使用するもの:**  
   
@@ -69,7 +68,7 @@ ms.locfileid: "52412099"
 4.  削除する関数を右クリックして、 **[削除]** をクリックします。  
   
 5.  **[オブジェクトの削除]** ダイアログ ボックスで **[OK]** をクリックします。  
-  
+
     > [!IMPORTANT]  
     >  **[オブジェクトの削除]** ダイアログ ボックスの **[依存関係の表示]** をクリックして **[_function\_name_ の依存関係]** ダイアログ ボックスを開きます。 関数に依存するすべてのオブジェクトと、関数が依存するすべてのオブジェクトが表示されます。  
   

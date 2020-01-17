@@ -1,57 +1,58 @@
 ---
-title: Linux 上の SQL Server の active Directory 認証
+title: SQL Server on Linux に対する Active Directory 認証
 titleSuffix: SQL Server
-description: この記事では、Linux 上の SQL Server の Active Directory 認証の概要を示します。
-author: rothja
-ms.date: 02/23/2018
-ms.author: jroth
-manager: craigg
+description: この記事では、SQL Server on Linux に対する Active Directory 認証の概要を説明します。
+ms.date: 04/01/2019
+author: Dylan-MSFT
+ms.author: dygray
+ms.reviewer: vanto
 ms.topic: conceptual
 ms.prod: sql
-ms.custom: sql-linux, seodec18
 ms.technology: linux
 helpviewer_keywords:
 - Linux, AAD authentication
-ms.openlocfilehash: fcc2148119634c7114d72f67b2c7143fa7d47724
-ms.sourcegitcommit: de8ef246a74c935c5098713f14e9dd06c4733713
-ms.translationtype: MT
+ms.openlocfilehash: 32ff23fe1ea7f0a892a19cc6be0eef8439ee907f
+ms.sourcegitcommit: 365a919e3f0b0c14440522e950b57a109c00a249
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53160401"
+ms.lasthandoff: 01/10/2020
+ms.locfileid: "75831824"
 ---
-# <a name="active-directory-authentication-for-sql-server-on-linux"></a>Linux 上の SQL Server の active Directory 認証
+# <a name="active-directory-authentication-for-sql-server-on-linux"></a>SQL Server on Linux に対する Active Directory 認証
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
-この記事は、[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] on Linux における Active Directory (AD) 認証の概要を説明します。 AD 認証は [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] で統合認証とも呼ばれています。 
+この記事では、[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] on Linux に対する Active Directory (AD) 認証の概要について説明します。 AD 認証は [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] では統合認証とも呼ばれます。
 
 ## <a name="ad-authentication-overview"></a>AD 認証の概要
 
-AD 認証を使用への認証に Windows または Linux 上のクライアントのドメインに参加している[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]ドメイン資格情報と、Kerberos プロトコルを使用します。
+AD 認証を使用すると、Windows または Linux 上のドメインに参加しているクライアントは、ドメインの資格情報と Kerberos プロトコルを使用して [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] の認証を受けることができます。
 
-AD 認証は [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 認証に対して次の利点があります。
+AD 認証には、次のように [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 認証よりも優れている点があります。
 
-- ユーザーは、パスワードを入力することがなくシングル サインオンを使用して認証できます。   
-- AD グループのログインを作成すると、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] AD グループのメンバーシップを使用してアクセスおよびアクセス許可を管理することができます。  
-- 追跡をする必要はありませんので、各ユーザーが組織全体で単一の id が[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]ログインは、どのユーザーに対応します。   
-- AD では、組織全体で一元的なパスワード ポリシーを適用することができます。   
+- ユーザーは、パスワードの入力を求められることなく、シングル サインオンで認証されます。
+- AD グループのログインを作成することで、AD グループのメンバーシップを使用して [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] のアクセスとアクセス許可を管理できます。  
+- 各ユーザーは組織全体で 1 つの ID を持っているため、どの [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] ログインがどのユーザーに対応しているかを追跡する必要はありません。   
+- AD を使用すると、組織全体に一元的なパスワード ポリシーを適用できます。
 
-## <a name="configuration-steps"></a>構成手順
+## <a name="configuration-steps"></a>構成の手順
 
-Active Directory 認証を使用するには、ネットワーク上に AD ドメイン コント ローラー (Windows) が必要です。
+Active Directory 認証を使用するには、ネットワーク上に AD ドメイン コントローラー (Windows) が必要です。
 
-AD 認証を構成する方法の詳細については、チュートリアルでは提供されている[チュートリアル。SQL Server on Linux での Active Directory 認証の使用](sql-server-linux-active-directory-authentication.md)します。 このチュートリアルでの各セクションへのリンクの概要を次に示します。
+AD 認証を構成する方法の詳細については、チュートリアルの「[チュートリアル:SQL Server on Linux で Active Directory 認証を使用する](sql-server-linux-active-directory-authentication.md)」を参照してください。 次の一覧は、チュートリアルの各セクションへのリンクが指定された概要です。
 
-1. [SQL Server ホストを Active Directory ドメインに結合する](sql-server-linux-active-directory-authentication.md#join)
-1. [SQL Server の AD ユーザーを作成し、ServicePrincipalName を設定する](sql-server-linux-active-directory-authentication.md#createuser)
-1. [SQL Server サービス keytab を構成する](sql-server-linux-active-directory-authentication.md#configurekeytab)
-1. [TRANSACT-SQL での SQL Server の AD に基づくログインの作成](sql-server-linux-active-directory-authentication.md#createsqllogins)
-1. [AD 認証を使用して SQL Server に接続する](sql-server-linux-active-directory-authentication.md#connect)
+1. [SQL Server ホストを Active Directory ドメインに参加させる](sql-server-linux-active-directory-join-domain.md)。
+1. [SQL Server 用に AD ユーザーを作成し、ServicePrincipalName を設定する](sql-server-linux-active-directory-authentication.md#createuser)。
+1. [SQL Server サービス キータブを構成する](sql-server-linux-active-directory-authentication.md#configurekeytab)。
+1. [キータブ ファイルをセキュリティで保護する](sql-server-linux-active-directory-authentication.md#configurekeytab)。
+1. [Kerberos 認証にキータブ ファイルを使用するように SQL Server を構成する](sql-server-linux-active-directory-authentication.md#configurekeytab)。
+1. [Transact-SQL に AD ベースの SQL Server ログインを作成する](sql-server-linux-active-directory-authentication.md#createsqllogins)。
+1. [AD 認証を使用して SQL Server に接続する](sql-server-linux-active-directory-authentication.md#connect)。
 
 ## <a name="known-issues"></a>既知の問題
 
-- この時点では、データベース ミラーリング エンドポイントでサポートされる唯一の認証方法は、証明書です。 将来のリリースでは、WINDOWS 認証方法を有効になります。
+- 現時点では、データベース ミラーリング エンドポイントでサポートされている唯一の認証方法は CERTIFICATE です。 Windows 認証方法は今後のリリースで有効になる予定です。
 
 ## <a name="next-steps"></a>次の手順
 
-Linux 上の SQL Server の Active Directory 認証を実装する方法の詳細については、次を参照してください。[チュートリアル。SQL Server on Linux での Active Directory 認証の使用](sql-server-linux-active-directory-authentication.md)します。
+SQL Server on Linux に Active Directory 認証を実装する方法の詳細については、「[チュートリアル:SQL Server on Linux で Active Directory 認証を使用する](sql-server-linux-active-directory-authentication.md)」を参照してください。

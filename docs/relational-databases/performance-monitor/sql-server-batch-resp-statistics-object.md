@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: a58e8733-6a8d-4b47-b5cb-042e813d808a
 author: julieMSFT
 ms.author: jrasnick
-manager: craigg
-ms.openlocfilehash: b7fee4fdf7e15a39166b0bf72a4433b4125f4328
-ms.sourcegitcommit: 0c1d552b3256e1bd995e3c49e0561589c52c21bf
+ms.openlocfilehash: 87045f104bdf183c91c3b60b0d85c4a64929359e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/14/2018
-ms.locfileid: "53380683"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67987194"
 ---
 # <a name="sql-server-batch-resp-statistics-object"></a>SQL Server、Batch Resp Statistics オブジェクト
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

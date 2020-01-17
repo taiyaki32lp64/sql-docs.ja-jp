@@ -1,7 +1,7 @@
 ---
-title: ODBC データ ソースのサブキー |Microsoft Docs
+title: ODBC データソースサブキー |Microsoft Docs
 ms.custom: ''
-ms.date: 01/19/2017
+ms.date: 09/23/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -14,27 +14,28 @@ helpviewer_keywords:
 ms.assetid: 0a8ccb80-c573-4418-84e5-f04a2b0e2ac1
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 9867946ce84163a504582c8a9575100c3c9aacd3
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 4d6d54d1fc7c7742bf94e91d7370f356e28b5624
+ms.sourcegitcommit: 816ff47eeab157c66e0f75f18897a63dc8033502
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47600870"
+ms.lasthandoff: 09/24/2019
+ms.locfileid: "71207688"
 ---
-# <a name="odbc-data-sources-subkey"></a>ODBC データ ソースのサブキー
-ODBC データ ソースのサブキーの下の値は、データ ソースを一覧表示します。 これらの値の形式は、次の表に示すようにします。  
-  
-|名前|データ型|data|  
-|----------|---------------|----------|  
-|*データのソース名*|REG_SZ|*ドライバーの説明*|  
-  
- *データのソース名*(通常は、ユーザーを要求) を管理プログラムによって値が定義されていると*ドライバー説明*ドライバー開発者によって定義されます (の名前では、通常は、DBMS ドライバーに関連付けられている)。  
-  
- たとえば、3 つのデータ ソースが定義されているとしますインベントリは、SQL Server を使用する。給与支払い名簿 dBASE; を使用します。スタッフ、書式設定されたテキスト ファイルを使用します。 ODBC データ ソースのサブキーの下の値が次のようにあります。  
-  
-```  
-Inventory : REG_SZ : SQL Server  
-Payroll : REG_SZ : dBASE  
-Personnel : REG_SZ : Text  
+# <a name="odbc-data-sources-subkey"></a>ODBC データソースサブキー
+
+サブキーの`ODBC Data Sources`下の値には、データソースが一覧表示されます。 これらの値の形式を次の表に示します。
+
+| 名前 | データ型 | data |
+| :--- | :-------- | :--- |
+| *data-source-name* | REG_SZ | *ドライバー-説明* |
+| &nbsp; | &nbsp; | &nbsp; |
+
+*データソース名*の値は、管理プログラムによって定義されます (通常はユーザーにプロンプトを表示します)。*ドライバーの説明*は、ドライバーの開発者によって定義されます (通常は、ドライバーに関連付けられている DBMS の名前です)。
+
+たとえば、3つのデータソースが定義されているとします。インベントリ。 SQL Server を使用します。DBASE を使用する Payroll書式設定されたテキストファイルを使用するスタッフ。 サブキーの`ODBC Data Sources`下の値は次のようになります。
+
+```console
+Inventory : REG_SZ : SQL Server
+Payroll : REG_SZ : dBASE
+Personnel : REG_SZ : Text
 ```

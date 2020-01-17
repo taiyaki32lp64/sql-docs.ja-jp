@@ -17,18 +17,17 @@ helpviewer_keywords:
 ms.assetid: b2fc4ce1-0a8e-44d2-b206-7dc7b258d8c9
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 62a8246c6d694ae002a615e803c520127ab595c8
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: f5a68160c8aee1bcb399513051e1f4cc35cea970
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47630186"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68085212"
 ---
-# <a name="sphelpschedule-transact-sql"></a>sp_help_schedule (Transact-SQL)
+# <a name="sphelpschedule-transact-sql"></a>sp_help_schedule (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  スケジュールについての情報を一覧表示します。  
+  スケジュールの詳細についての情報を一覧表示します。  
   
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -44,27 +43,23 @@ sp_help_schedule
 ```  
   
 ## <a name="arguments"></a>引数  
- [ **@schedule_id =** ] *id*  
- 一覧表示するスケジュールの識別子を指定します。 *schedule_name*は**int**、既定値はありません。 いずれか*schedule_id*または*schedule_name*指定することがあります。  
+`[ @schedule_id = ] id` 一覧表示するスケジュールの識別子。 *schedule_name*は**int**、既定値はありません。 いずれか*schedule_id*または*schedule_name*指定することがあります。  
   
- [ **@schedule_name =** ] **'***schedule_name***'**  
- 一覧表示するスケジュールの名前を指定します。 *schedule_name*は**sysname**、既定値はありません。 いずれか*schedule_id*または*schedule_name*指定することがあります。  
+`[ @schedule_name = ] 'schedule_name'` 一覧表示するスケジュールの名前。 *schedule_name*は**sysname**、既定値はありません。 いずれか*schedule_id*または*schedule_name*指定することがあります。  
   
- [ **@attached_schedules_only** =] *attached_schedules_only* ]  
- ジョブがアタッチされているスケジュールのみを表示するかどうかを指定します。 *attached_schedules_only*は**ビット**、既定値は**0**します。 ときに*attached_schedules_only*は**0**、すべてのスケジュールが表示されます。 ときに*attached_schedules_only*は**1**ジョブにアタッチされているスケジュールのみが結果セットに含まれています。  
+`[ @attached_schedules_only = ] attached_schedules_only ]` ジョブに接続されているスケジュールのみを表示するかどうかを指定します。 *attached_schedules_only*は**ビット**、既定値は**0**します。 ときに*attached_schedules_only*は**0**、すべてのスケジュールが表示されます。 ときに*attached_schedules_only*は**1**ジョブにアタッチされているスケジュールのみが結果セットに含まれています。  
   
- [ **@include_description** =] *include_description*  
- 結果セットに説明を含めるかどうかを指定します。 *include_description*は**ビット**、既定値は**0**します。 ときに*include_description*は**0**、 *schedule_description*結果セットの列にはプレース ホルダーが含まれています。 ときに*include_description*は**1**、結果セットのスケジュールの説明が含まれます。  
+`[ @include_description = ] include_description` 結果セットに説明を含めるかどうかを指定します。 *include_description*は**ビット**、既定値は**0**します。 ときに*include_description*は**0**、 *schedule_description*結果セットの列にはプレース ホルダーが含まれています。 ときに*include_description*は**1**、結果セットのスケジュールの説明が含まれます。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  **0** (成功) または**1** (失敗)  
   
 ## <a name="result-sets"></a>結果セット  
- このプロシージャは次の結果セットを返します。  
+ このプロシージャでは、次の結果セットが返されます。  
   
 |列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
-|**schedule_id**|**int**|スケジュール識別番号。|  
+|**schedule_id**|**int**|スケジュールの識別番号。|  
 |**schedule_uid**|**uniqueidentifier**|スケジュールの識別子。|  
 |**schedule_name**|**sysname**|スケジュールの名前。|  
 |**enabled**|**int**|スケジュールが有効かどうか (**1**) または有効になっていません (**0**)。|  
@@ -76,7 +71,7 @@ sp_help_schedule
 |**freq_recurrence_factor**|**int**|定期ジョブの実行間隔 (月単位)。|  
 |**active_start_date**|**int**|スケジュールをアクティブにした日付。|  
 |**active_end_date**|**int**|スケジュールの終了日。|  
-|**active_start_time**|**int**|スケジュールを開始する時刻。|  
+|**active_start_time**|**int**|スケジュールの開始時刻。|  
 |**active_end_time**|**int**|スケジュールを終了する時刻。|  
 |**date_created**|**datetime**|スケジュールを作成した日付。|  
 |**schedule_description**|**nvarchar (4000)**|英語によるスケジュールの説明 (必要な場合)。|  
@@ -111,7 +106,7 @@ EXEC dbo.sp_help_schedule ;
 GO  
 ```  
   
-### <a name="b-listing-information-for-a-specific-schedule"></a>B. 特定のスケジュールに関する情報を一覧表示する  
+### <a name="b-listing-information-for-a-specific-schedule"></a>B. 特定のスケジュールに関する情報を一覧表示します。  
  次の例では、`NightlyJobs` というスケジュールに関する情報を一覧表示します。  
   
 ```  

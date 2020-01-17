@@ -2,26 +2,26 @@
 title: MHTML デバイス情報設定 | Microsoft Docs
 ms.date: 03/16/2017
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: reporting-services
 ms.topic: conceptual
 helpviewer_keywords:
 - device information settings [Reporting Services], MHTML rendering
 - MHTML [Reporting Services]
 ms.assetid: 60b85dd8-b4fb-4ad9-be6a-e7c89ac076fe
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 170c97c2f01f58972fbcba1d8dc9e63045a1095f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 996a7f53b5969c9c1d8c39edcd23b62d45a7ff15
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47659320"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65502726"
 ---
 # <a name="mhtml-device-information-settings"></a>MHTML デバイス情報設定
   次の表は、Web アーカイブ (MHTML) 形式でレポートを表示するためのデバイス情報設定を示しています。  
   
-|設定|ReplTest1|  
+|設定|[値]|  
 |-------------|-----------|  
 |**JavaScript**|表示レポートで JavaScript がサポートされるかどうかを示します。|  
 |**OutlookCompat**|Outlook でレポートの外観をよくする追加のメタデータを使用して表示するかどうかを示します。 既定値は **true**です。|  

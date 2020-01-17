@@ -25,11 +25,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 11235979a886e82fa09ca1d1a79fa21550965d0f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48119142"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68205699"
 ---
 # <a name="processing-statements-that-generate-messages"></a>メッセージを生成するステートメントの処理
   [!INCLUDE[tsql](../../includes/tsql-md.md)] SET ステートメントのオプション STATISTICS TIME と STATISTICS IO は、実行時間の長いクエリの診断に利用できる情報を取得する場合に使用します。 以前のバージョンの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、クエリ プランを分析するための SHOWPLAN オプションもサポートされています。 ODBC アプリケーションでは、次のステートメントを実行してこれらのオプションを設定できます。  
@@ -145,7 +145,7 @@ szErrorMsg= "[Microsoft] [SQL Server Native Client][SQL Server]
   
  PRINT または RAISERROR ステートメントが SELECT ステートメントの場合) など、SQL ステートメントの後に続く場合、PRINT または RAISERROR に関する情報が返される[SQLMoreResults](../native-client-odbc-api/sqlmoreresults.md)エラーを含む結果の位置に設定します。 **SQLMoreResults**メッセージの重大度に応じて、SQL_SUCCESS_WITH_INFO または SQL_ERROR を返します。 呼び出すことによってメッセージが取得される**SQLGetDiagRec** sql_no_data が返されるまでです。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [エラーとメッセージの処理](handling-errors-and-messages.md)  
   
   

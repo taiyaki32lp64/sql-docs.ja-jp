@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 8c0d2f39-59c1-4168-a649-65473f6a771b
 author: julieMSFT
 ms.author: jrasnick
-manager: craigg
-ms.openlocfilehash: 35e69092efe820f5da955f982e04ef9b356decaa
-ms.sourcegitcommit: dd794633466b1da8ead9889f5e633bdf4b3389cd
+ms.openlocfilehash: 22101d8ec2f24eeb1a93708adf52b2b24060ce28
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54143368"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67987143"
 ---
 # <a name="view-plan-guide-properties"></a>プラン ガイド プロパティの表示
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -63,7 +62,7 @@ ms.locfileid: "54143368"
      **[無効化]**  
      プラン ガイドの状態が表示されます。 指定できる値は、 **[True]** および **[False]** です。  
   
-     **名前**  
+     **[名前]**  
      プラン ガイドの名前が表示されます。  
   
      **パラメーター**  

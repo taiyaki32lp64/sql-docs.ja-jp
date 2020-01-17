@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: ab529cc6-d157-4b35-b6f9-6ffd09af098c
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 7cb48c5a763162685060a95e8d352ebddd8b0032
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e2d23ddc5fdd00db45aee235e96f13a8cf08082a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47853970"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68080777"
 ---
 # <a name="supported-data-types-visual-foxpro-odbc-driver"></a>サポートされるデータ型 (Visual FoxPro ODBC ドライバー)
 ODBC API を使用し、Microsoft のクエリでは、ドライバーによってサポートされるデータ型の一覧が表示されます。  

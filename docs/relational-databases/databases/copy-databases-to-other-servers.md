@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: 978406d6-a3c8-4902-b1f4-4ced75234be5
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: e7c74d83e785c2df763a4ec7c34b0b8a0fd8af79
-ms.sourcegitcommit: 1a5448747ccb2e13e8f3d9f04012ba5ae04bb0a3
+ms.openlocfilehash: a16eb1e7d6c94f87d77cac93c4f07f6ae251cd4a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51558419"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68137361"
 ---
 # <a name="copy-databases-to-other-servers"></a>他のサーバーへのデータベースのコピー
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

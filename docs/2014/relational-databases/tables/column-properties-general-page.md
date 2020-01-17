@@ -13,11 +13,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 741c8633a9b7eed9fcd253918c34a27119e51ee4
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52772264"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62854905"
 ---
 # <a name="column-properties-general-page"></a>[列のプロパティ] \([全般] ページ)
   このページを使用すると、選択されている列のプロパティを表示できます。  
@@ -53,7 +53,7 @@ ms.locfileid: "52772264"
  ID 列の最初の行の値を示します。  
   
  **[IDENTITY インクリメント]**  
-  **[ID の増分値]** プロパティは、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] で挿入される行の ID 値が生成されるときに、既存の行の最大 ID 値に追加される値を指定します。  
+ **[ID の増分値]** プロパティは、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] で挿入される行の ID 値が生成されるときに、既存の行の最大 ID 値に追加される値を指定します。  
   
  **[既定のバインド]**  
  列にバインドされた [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の既定値です。 既定値がバインドされていない場合、このオプションは空白になります。  

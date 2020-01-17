@@ -1,5 +1,5 @@
 ---
-title: テクニカル リファレンス (マスター データ サービス) | Microsoft Docs
+title: テクニカル リファレンス
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -8,15 +8,14 @@ ms.reviewer: ''
 ms.technology: master-data-services
 ms.topic: conceptual
 ms.assetid: 54865b00-563a-4932-ad4d-cbfd36b1e6c5
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 86c9baf93d4776bcd003e1978ee900df9dbc83ca
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
-ms.translationtype: HT
+ms.openlocfilehash: 397526d89ed6e89eb90f619b3bf891bf156e61be
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52749904"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73727857"
 ---
 # <a name="technical-reference-master-data-services"></a>テクニカル リファレンス (マスター データ サービス)
 

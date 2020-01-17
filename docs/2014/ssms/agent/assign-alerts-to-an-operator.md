@@ -18,11 +18,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 905114d0190a7d1e8441e98249664c985a433988
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52762854"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62473213"
 ---
 # <a name="assign-alerts-to-an-operator"></a>オペレーターへの警告の割り当て
   このトピックでは、[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] で [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] または [!INCLUDE[tsql](../../includes/tsql-md.md)] を使用して、[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェントの警告をオペレーターに割り当てて、ジョブに関する通知を受信できるようにする方法について説明します。  
@@ -66,11 +66,11 @@ ms.locfileid: "52762854"
   
 3.  プラス記号をクリックして **[オペレーター]** フォルダーを展開します。  
   
-4.  警告を割り当てるオペレーターを右クリックし、**[プロパティ]** を選択して、**[通知]** ページを選択します。  
+4.  警告を割り当てるオペレーターを右クリックし、 **[プロパティ]** を選択して、 **[通知]** ページを選択します。  
   
-5.  [_operator_name_ **のプロパティ]** ダイアログ ボックスで、**[ページの選択]** の **[通知]** を選択します。  
+5.  [_operator_name_ **のプロパティ]** ダイアログ ボックスで、 **[ページの選択]** の **[通知]** を選択します。  
   
-6.  **[このユーザーに送信された通知の表示方法]** で、 **[警告]** を選択してこのオペレーターに送信する警告の一覧を表示するか、または **[ジョブ]** を選択してこのオペレーターに通知を送信するジョブの一覧を表示します。 1 つ以上の必要に応じて、各通知の通知方法を定義する次のチェック ボックスを選択します。**電子メール**、**ポケットベル**、または**Net send**します。  
+6.  **[このユーザーに送信された通知の表示方法]** で、 **[警告]** を選択してこのオペレーターに送信する警告の一覧を表示するか、または **[ジョブ]** を選択してこのオペレーターに通知を送信するジョブの一覧を表示します。 次のチェック ボックスの中から 1 つまたは複数を選択し、必要に応じて通知ごとに通知方法を定義します: **[電子メール]** 、 **[ポケットベル]** 、または **[Net Send]** 。  
   
 7.  完了したら、 **[OK]** をクリックします。  
   

@@ -4,26 +4,24 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- docset-sql-devref
-- reporting-services-native
+ms.technology: reporting-services
 ms.topic: reference
 helpviewer_keywords:
 - custom assemblies [Reporting Services], debugging
 - debugging custom assemblies [Reporting Services]
 - troubleshooting [Reporting Services], custom assemblies
 ms.assetid: 3a3215b3-548c-4474-81ba-3a98dd3912bf
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: da4171b624fd4caf4eabae5cec50c4b6c19578b7
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 64a61e044c7ff6efe051eb316cb9f653f0993b68
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56011494"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63265058"
 ---
-# <a name="how-to-debug-custom-assemblies"></a>操作方法:カスタム アセンブリをデバッグします。
+# <a name="how-to-debug-custom-assemblies"></a>操作方法:カスタム アセンブリをデバッグする
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] には、カスタム アセンブリ コードを分析してエラーを探すのに役立ついくつかのデバッグ ツールが用意されています。 どのツールが最適であるかは、何を実行するかによって異なります。 この例では [!INCLUDE[vsOrcas](../../includes/vsorcas-md.md)]を使用します。  
   
  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] のカスタム アセンブリの設計、開発、およびテストに関して推奨する方法は、テスト レポートおよびカスタム アセンブリを含むソリューションを作成することです。  
@@ -42,9 +40,9 @@ ms.locfileid: "56011494"
   
      **[ソリューション プロパティ ページ]** ダイアログ ボックスが開きます。  
   
-5.  必要に応じて、左側のペインで **[共通プロパティ]** を展開し、**[プロジェクトの依存関係]** をクリックします。 **[プロジェクト]** ドロップダウン リストからレポート プロジェクトを選択します。 **[依存先]** の一覧でアセンブリ プロジェクトを選択します。  
+5.  必要に応じて、左側のペインで **[共通プロパティ]** を展開し、 **[プロジェクトの依存関係]** をクリックします。 **[プロジェクト]** ドロップダウン リストからレポート プロジェクトを選択します。 **[依存先]** の一覧でアセンブリ プロジェクトを選択します。  
   
-6.  **[OK]** をクリックして変更内容を保存し、**[プロパティ ページ]** ダイアログを閉じます。  
+6.  **[OK]** をクリックして変更内容を保存し、 **[プロパティ ページ]** ダイアログを閉じます。  
   
 7.  ソリューション エクスプローラーで、カスタム アセンブリ プロジェクトを選択します。  
   
@@ -54,11 +52,11 @@ ms.locfileid: "56011494"
   
 9. C# プロジェクトの場合は **[ビルド]** タブをクリックし、[!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] プロジェクトの場合は **[コンパイル]** タブをクリックします。  
   
-10. **[ビルド]**/**[コンパイル]** ページで、レポート デザイナー フォルダーへのパスを入力します。 既定では、**[出力パス]** テキスト ボックスの C:\Program Files\Microsoft SQL Server\100\Tools\Binn\VSShell\Common7\IDE になります。 これにより、レポートの実行前に、更新されたカスタム アセンブリのバージョンがレポート デザイナーに直接構築、配置されます。  
+10. **[ビルド]** / **[コンパイル]** ページで、レポート デザイナー フォルダーへのパスを入力します。 既定では、 **[出力パス]** テキスト ボックスの C:\Program Files\Microsoft SQL Server\100\Tools\Binn\VSShell\Common7\IDE になります。 これにより、レポートの実行前に、更新されたカスタム アセンブリのバージョンがレポート デザイナーに直接構築、配置されます。  
   
 11. レポートを設計してカスタム アセンブリを開発したら、カスタム アセンブリ コードにブレークポイントを設定します。  
   
-12. F5 キーを押して、**[DebugLocal]** モードでレポートを実行します。 ポップアップ プレビュー ウィンドウでレポートを実行すると、デバッガーはアセンブリの実行可能コードに対応するブレークポイントに到達します。 F11</localizedText> キーを使用して、カスタム アセンブリ コードを実行します。  
+12. F5 キーを押して、 **[DebugLocal]** モードでレポートを実行します。 ポップアップ プレビュー ウィンドウでレポートを実行すると、デバッガーはアセンブリの実行可能コードに対応するブレークポイントに到達します。 F11&lt;/localizedText&gt; キーを使用して、カスタム アセンブリ コードを実行します。  
   
 ### <a name="to-debug-assemblies-using-two-instances-of-visual-studio"></a>Visual Studio の 2 つのインスタンスを使用してアセンブリをデバッグするには  
   
@@ -70,20 +68,20 @@ ms.locfileid: "56011494"
   
 4.  カスタム アセンブリ プロジェクトを含む [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] のインスタンスに移動し、コードに複数のブレークポイントを設定します。  
   
-5.  カスタム アセンブリ プロジェクトのウィンドウを開いたまま、**[デバッグ]** メニューの **[プロセスにアタッチ]** をクリックします。  
+5.  カスタム アセンブリ プロジェクトのウィンドウを開いたまま、 **[デバッグ]** メニューの **[プロセスにアタッチ]** をクリックします。  
   
      **[プロセスにアタッチ]** ダイアログが開きます。  
   
-6.  プロセスの一覧から、レポート プロジェクトに対応する devenv.exe プロセスを選択して、**[アタッチ]** をクリックします。  
+6.  プロセスの一覧から、レポート プロジェクトに対応する devenv.exe プロセスを選択して、 **[アタッチ]** をクリックします。  
   
 7.  カスタム アセンブリのレポートで使用する式を定義し、レポートを設計します。  
   
-8.  レポートの設計が完了したら、**[プレビュー]** タブをクリックします。  
+8.  レポートの設計が完了したら、 **[プレビュー]** タブをクリックします。  
   
      レポートが実行され、カスタム アセンブリ コードが定義済みのブレークポイントで停止します。  
   
     > [!NOTE]  
-    >  **[プレビュー]** タブを使用すると、アセンブリのコード アクセス許可が適用されません。 コード アクセス セキュリティのエラーを含む完全なテストを行う場合は、**[DebugLocal]** 構成設定のレポート プロジェクトを開始します。  
+    >  **[プレビュー]** タブを使用すると、アセンブリのコード アクセス許可が適用されません。 コード アクセス セキュリティのエラーを含む完全なテストを行う場合は、 **[DebugLocal]** 構成設定のレポート プロジェクトを開始します。  
   
 9. F11 キーを使用してコードを実行します。 [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] を使用したデバッグの詳細については、[!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] のドキュメントを参照してください。  
   

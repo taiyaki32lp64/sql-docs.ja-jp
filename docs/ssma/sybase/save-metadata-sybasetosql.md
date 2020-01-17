@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: b2517735-dd19-449f-8cee-08e68ca89d3a
 author: Shamikg
 ms.author: Shamikg
-manager: craigg
-ms.openlocfilehash: 8bfe338c128ce301e98346d17ce00b973912ffd4
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 3a8cde296fd0a47c407752977f5e41269a05354e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47669703"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68020969"
 ---
 # <a name="save-metadata--sybasetosql"></a>メタデータの保存 (SybaseToSQL)
 **メタデータの保存** ダイアログ ボックスでは、SSMA プロジェクトにメタデータを保存する前にロードするように求められます。 これにより、オフラインで使用してテクニカル サポート担当者などの他のユーザーに送信する完全なプロジェクト ファイルがあります。  
@@ -26,7 +25,7 @@ ms.locfileid: "47669703"
 **名前**  
 プロジェクト内の各データベースの名前。  
   
-**ステータス**  
+**状態**  
 SSMA プロジェクトにメタデータが読み込まれている場合、またはメタデータが不足している場合を示します。  
   
 SSMA は、必要に応じて、プロジェクトにメタデータを読み込みます。 参照メタデータのスキーマを変換すると、メタデータが自動的に読み込まれます。  

@@ -17,11 +17,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 9918aca57caaef0dc460e810f5ed5ca2d1106ac3
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52784574"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62663811"
 ---
 # <a name="broker-event-category"></a>Broker イベント カテゴリ
   **Broker** イベント カテゴリには、一般的な Service Broker イベントが含まれます。  
@@ -43,7 +43,7 @@ ms.locfileid: "52784574"
   
  Service Broker には、2 つのセキュリティ監査イベントも提供されます。 これらのイベントの詳細については、「 [Audit Broker Login イベント クラス](audit-broker-login-event-class.md) 」と「 [Audit Broker Conversation イベント クラス](audit-broker-conversation-event-class.md)」を参照してください。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [セキュリティ監査イベント カテゴリ](https://docs.microsoft.com/bi-reference/trace-events/security-audit-event-category)  
   
   

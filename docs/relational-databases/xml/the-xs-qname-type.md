@@ -10,15 +10,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - xs:QName type
 ms.assetid: 72c5bfde-b0b2-4372-bf36-97ba930dea06
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: 6cfecd76a38c676b287070a3471972eb08329793
-ms.sourcegitcommit: bfa10c54e871700de285d7f819095d51ef70d997
+author: MightyPen
+ms.author: genemi
+ms.openlocfilehash: fd21cae531e41359c797bc3197e3e5bacce65a0f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/14/2019
-ms.locfileid: "54254988"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68078133"
 ---
 # <a name="the-xsqname-type"></a>The xs:QName Type
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

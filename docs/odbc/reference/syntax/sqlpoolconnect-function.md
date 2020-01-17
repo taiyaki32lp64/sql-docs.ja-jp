@@ -12,24 +12,24 @@ helpviewer_keywords:
 ms.assetid: 41322737-890d-4a81-aed2-06cc3d546962
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 4dda69fa741555f4402bded930f68260b154fd30
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: 0c390dacb5072c5d516e95b4fe6b789bfffbbd2d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52404857"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68005800"
 ---
 # <a name="sqlpoolconnect-function"></a>SQLPoolConnect 関数
 **準拠**  
  バージョンが導入されました。ODBC 3.8 規格に準拠します。ODBC  
   
- **まとめ**  
+ **概要**  
  **SQLPoolConnect**プール内の接続を再利用できるない場合は、新しい接続を作成するために使用します。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp
+  
 SQLRETURN  SQLPoolConnect(  
                 SQLHDBC              hDbc,  
                 SQLHDBC_INFO_TOKEN   hDbcInfoToken,  

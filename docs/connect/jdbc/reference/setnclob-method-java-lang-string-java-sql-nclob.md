@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 4e30d242-0c1b-45db-b75f-41b041692f31
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: d1a94bed36865c55fabc56704766f2a2c1bcd4d8
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: cafa1124f193be1f747ad63e2024ea24d8fd5137
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47736760"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67973692"
 ---
 # <a name="setnclob-method-javalangstring-javasqlnclob"></a>setNClob (java.lang.String, java.sql.NClob) メソッド
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -38,13 +37,13 @@ public final void setNClob(java.lang.String parameterName,
   
  *value*  
   
- NClob オブジェクト。  
+ NClob オブジェクトです。  
   
 ## <a name="exceptions"></a>例外  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- このメソッドを使用する必要があります**NCHAR**、 **NVARCHAR**、 **NTEXT**、および**XML**パラメーターのデータ型。  
+ このメソッドは、 **NCHAR**、 **NVARCHAR**、 **NTEXT**、および**XML**の各パラメーターのデータ型に対して使用する必要があります。  
   
  この setNClob メソッドは、java.sql.CallableStatement インターフェイスの setNClob メソッドで規定されています。  
   

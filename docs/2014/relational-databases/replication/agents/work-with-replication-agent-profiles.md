@@ -16,11 +16,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: b6f66d1bab70619db1631117268e5d62c24c943f
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52772204"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63157127"
 ---
 # <a name="work-with-replication-agent-profiles"></a>レプリケーション エージェント プロファイルを操作する
   このトピックでは、 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] で [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]、 [!INCLUDE[tsql](../../../includes/tsql-md.md)]、またはレプリケーション管理オブジェクト (RMO) を使用して、レプリケーション エージェント プロファイルを操作する方法について説明します。 各レプリケーション エージェントの動作は、エージェント プロファイルで設定できる一連のパラメーターによって制御されます。 各エージェントには既定のプロファイルがあり、その一部には事前に定義された追加のプロファイルがあります。1 つのエージェントに対しては、1 つのプロファイルのみがアクティブになります。  
@@ -61,13 +61,13 @@ ms.locfileid: "52772204"
   
     -   プロファイルの削除  
   
--   **補足情報:**[エージェントのパラメーターを変更した後](#FollowUp)  
+-   **補足情報:** [エージェント パラメーターを変更した後](#FollowUp)  
   
 ##  <a name="SSMSProcedure"></a> SQL Server Management Studio の使用  
   
 ###  <a name="Access_SSMS"></a> SQL Server Management Studio から [エージェント プロファイル] ダイアログ ボックスにアクセスするには  
   
-1.  **[ディストリビューターのプロパティ - \<Distributor>]** ダイアログ ボックスの **[全般]** ページで、**[プロファイルの既定値]** をクリックします。  
+1.  **[ディストリビューターのプロパティ - \<Distributor>]** ダイアログ ボックスの **[全般]** ページで、 **[プロファイルの既定値]** をクリックします。  
   
 #### <a name="to-access-the-agent-profiles-dialog-box-from-replication-monitor"></a>レプリケーション モニターから [エージェント プロファイル] ダイアログ ボックスにアクセスするには  
   
@@ -136,7 +136,7 @@ ms.locfileid: "52772204"
   
 ###  <a name="Create_tsql"></a> 新しいエージェント プロファイルを作成するには  
   
-1.  ディストリビューターで、[sp_add_agent_profile &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-add-agent-profile-transact-sql) を実行します。 **@name** に名前、**@profile_type に** 値 **1**、および **@agent_type** に次のいずれかの値を指定します。  
+1.  ディストリビューターで、[sp_add_agent_profile &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-add-agent-profile-transact-sql) を実行します。 **@name** に名前、 **@profile_type に** 値 **1**、および **@agent_type** に次のいずれかの値を指定します。  
   
     -   **@profile_type** - [Replication Snapshot Agent](replication-snapshot-agent.md)  
   
@@ -148,13 +148,13 @@ ms.locfileid: "52772204"
   
     -   **9** - [Replication Queue Reader Agent](replication-queue-reader-agent.md)  
   
-     このプロファイルがこの種類のレプリケーション エージェントの新しい既定のプロファイルになる場合、 **@profile_type** に **@default**をクリックします。 新しいプロファイルの ID は、 **@profile_id** 出力パラメーターにより返されます。 これにより、特定の種類のエージェントの既定のプロファイルに基づいたプロファイル パラメーターのセットを備えた、新しいプロファイルが作成されます。  
+     このプロファイルがこの種類のレプリケーション エージェントの新しい既定のプロファイルになる場合、 **@profile_type** に **@default** をクリックします。 新しいプロファイルの ID は、 **@profile_id** 出力パラメーターにより返されます。 これにより、特定の種類のエージェントの既定のプロファイルに基づいたプロファイル パラメーターのセットを備えた、新しいプロファイルが作成されます。  
   
 2.  新しいプロファイルを作成したら、既定のパラメーターを追加、削除、変更してプロファイルをカスタマイズします。  
   
 ###  <a name="Modify_tsql"></a> 既存のエージェント プロファイルを変更するには  
   
-1.  ディストリビューターで、[sp_help_agent_profile &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-help-agent-profile-transact-sql) を実行します。 次のいずれかの値を **@agent_type**に次のいずれかの値を指定します。  
+1.  ディストリビューターで、[sp_help_agent_profile &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-help-agent-profile-transact-sql) を実行します。 次のいずれかの値を **@agent_type** に次のいずれかの値を指定します。  
   
     -   **@profile_type** - [Replication Snapshot Agent](replication-snapshot-agent.md)  
   
@@ -168,24 +168,24 @@ ms.locfileid: "52772204"
   
      これにより、指定された種類のエージェントのプロファイルがすべて返されます。 変更するプロファイルの結果セットで **profile_id** の値を確認します。  
   
-2.  ディストリビューターで、[sp_help_agent_parameter &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-help-agent-parameter-transact-sql) を実行します。 手順 1. で確認したプロファイル ID を **@profile_id**をクリックします。 これにより、プロファイルのすべてのパラメーターが返されます。 変更するパラメーター、またはプロファイルから削除するパラメーターの名前を確認します。  
+2.  ディストリビューターで、[sp_help_agent_parameter &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-help-agent-parameter-transact-sql) を実行します。 手順 1. で確認したプロファイル ID を **@profile_id** をクリックします。 これにより、プロファイルのすべてのパラメーターが返されます。 変更するパラメーター、またはプロファイルから削除するパラメーターの名前を確認します。  
   
-3.  プロファイル内のパラメーターの値を変更するには、[sp_change_agent_profile &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-change-agent-profile-transact-sql) を実行します。 手順 1. で確認したプロファイル ID を **@profile_id**に指定し、変更するパラメーターの名前を **@property**に、パラメーターの新しい値を **@value**をクリックします。  
+3.  プロファイル内のパラメーターの値を変更するには、[sp_change_agent_profile &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-change-agent-profile-transact-sql) を実行します。 手順 1. で確認したプロファイル ID を **@profile_id** に指定し、変更するパラメーターの名前を **@property** に、パラメーターの新しい値を **@value** をクリックします。  
   
     > [!NOTE]  
     >  既存のエージェント プロファイルを変更して、エージェントの既定のプロファイルにすることはできません。 代わりに、前の手順に示すように、新しいプロファイルを既定のプロファイルとして作成する必要があります。  
   
-4.  プロファイルからパラメーターを削除するには、[sp_drop_agent_parameter &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-drop-agent-parameter-transact-sql) を実行します。 手順 1. で確認したプロファイル ID を **@profile_id** に指定し、削除するパラメーターの名前を **@parameter_name**をクリックします。  
+4.  プロファイルからパラメーターを削除するには、[sp_drop_agent_parameter &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-drop-agent-parameter-transact-sql) を実行します。 手順 1. で確認したプロファイル ID を **@profile_id** に指定し、削除するパラメーターの名前を **@parameter_name** をクリックします。  
   
 5.  プロファイルに新しいパラメーターを追加するには、次の手順を実行する必要があります。  
   
     -   ディストリビューターで [MSagentparameterlist &#40;Transact-SQL&#41;](/sql/relational-databases/system-tables/msagentparameterlist-transact-sql) テーブルに対してクエリを実行して、各種類のエージェントに設定できるプロファイル パラメーターを確認します。  
   
-    -   ディストリビューターで、[sp_add_agent_parameter &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-add-agent-parameter-transact-sql) を実行します。 手順 1. で確認したプロファイル ID を **@profile_id**に指定し、追加する有効なパラメーターの名前を **@parameter_name**に、パラメーターの値を **@parameter_value**をクリックします。  
+    -   ディストリビューターで、[sp_add_agent_parameter &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-add-agent-parameter-transact-sql) を実行します。 手順 1. で確認したプロファイル ID を **@profile_id** に指定し、追加する有効なパラメーターの名前を **@parameter_name** に、パラメーターの値を **@parameter_value** をクリックします。  
   
 ###  <a name="Delete_tsql"></a> エージェント プロファイルを削除するには  
   
-1.  ディストリビューターで、[sp_help_agent_profile &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-help-agent-profile-transact-sql) を実行します。 次のいずれかの値を **@agent_type**に次のいずれかの値を指定します。  
+1.  ディストリビューターで、[sp_help_agent_profile &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-help-agent-profile-transact-sql) を実行します。 次のいずれかの値を **@agent_type** に次のいずれかの値を指定します。  
   
     -   **@profile_type** - [Replication Snapshot Agent](replication-snapshot-agent.md)  
   
@@ -199,11 +199,11 @@ ms.locfileid: "52772204"
   
      これにより、指定された種類のエージェントのプロファイルがすべて返されます。 削除するプロファイルの結果セットで **profile_id** の値を確認します。  
   
-2.  ディストリビューターで、[sp_drop_agent_profile &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-drop-agent-profile-transact-sql) を実行します。 手順 1. で確認したプロファイル ID を **@profile_id**をクリックします。  
+2.  ディストリビューターで、[sp_drop_agent_profile &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-drop-agent-profile-transact-sql) を実行します。 手順 1. で確認したプロファイル ID を **@profile_id** をクリックします。  
   
 ###  <a name="Synch_tsql"></a> 同期の際にエージェント プロファイルを使用するには  
   
-1.  ディストリビューターで、[sp_help_agent_profile &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-help-agent-profile-transact-sql) を実行します。 次のいずれかの値を **@agent_type**に次のいずれかの値を指定します。  
+1.  ディストリビューターで、[sp_help_agent_profile &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-help-agent-profile-transact-sql) を実行します。 次のいずれかの値を **@agent_type** に次のいずれかの値を指定します。  
   
     -   **@profile_type** - [Replication Snapshot Agent](replication-snapshot-agent.md)  
   
@@ -284,7 +284,7 @@ ms.locfileid: "52772204"
   
 5.  <xref:Microsoft.SqlServer.Replication.AgentProfile.Remove%2A> メソッドを呼び出して、このオブジェクトで表されるユーザー定義プロファイルをサーバーから削除します。  
   
-##  <a name="FollowUp"></a> フォローしてください：エージェントのパラメーターを変更した後  
+##  <a name="FollowUp"></a> 補足情報:エージェント パラメーターを変更した後  
  エージェント パラメーターの変更は、エージェントの次回起動時に反映されます。 エージェントを継続して実行している場合は、そのエージェントを停止して再起動する必要があります。  
   
 ## <a name="see-also"></a>参照  

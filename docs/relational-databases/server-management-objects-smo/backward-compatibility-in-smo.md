@@ -1,5 +1,5 @@
 ---
-title: SMO の旧バージョンとの互換性 |マイクロソフトのドキュメント
+title: SMO | の旧バージョンとの互換性Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -8,16 +8,15 @@ ms.reviewer: ''
 ms.technology: ''
 ms.topic: reference
 ms.assetid: 2f986436-aaf2-4eaf-9809-df849d97d4fb
-author: stevestein
-ms.author: sstein
-manager: craigg
+author: markingmyname
+ms.author: maghan
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 810c0d5d1856b21b20129544890e8b9c57cc0d15
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 013dfc93c5e6acfa22d4283cbb0460a1c8f97c23
+ms.sourcegitcommit: f3f83ef95399d1570851cd1360dc2f072736bef6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47713320"
+ms.lasthandoff: 08/13/2019
+ms.locfileid: "70148776"
 ---
 # <a name="backward-compatibility-in-smo"></a>SMO の旧バージョンとの互換性
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
@@ -56,10 +55,10 @@ Imports Microsoft.SqlServer.Management.Smo
 Imports Microsoft.SqlServer.Management.Common  
 ```  
   
- コードがような Urn 機能を使用する場合**Server.GetSqlSmoObject(Urn)**、Microsoft.SqlServer.Management.Sdk.Sfc 名前空間にリンクする必要があります。  
+ コードで**GetSqlSmoObject (urn)** などの urn 機能が使用されている場合は、その名前空間にリンクする必要があります。  
   
  コードで Transfer オブジェクトを直接使用している場合は、Microsoft.SqlServer.Management.SmoExtended 名前空間へのリンクが必要になります。  
   
- コードを移行するときに、コードの修正が必要になる場合があります。 これは、[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] ではいくつかの [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 機能および [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 機能が非推奨とされているためです。 非推奨の機能の詳細については、次を参照してください。 [SQL Server 2016 におけるデータベース エンジン機能を非推奨とされます](../../database-engine/deprecated-database-engine-features-in-sql-server-2016.md)で[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]オンライン ブックの「します。  
+ コードを移行するときに、コードの修正が必要になる場合があります。 これは、[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] ではいくつかの [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 機能および [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 機能が非推奨とされているためです。 非推奨の機能の詳細については、オンラインブックの[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 「 [SQL Server 2016 の非推奨のデータベースエンジン機能](../../database-engine/deprecated-database-engine-features-in-sql-server-2016.md)」を参照してください。  
   
   

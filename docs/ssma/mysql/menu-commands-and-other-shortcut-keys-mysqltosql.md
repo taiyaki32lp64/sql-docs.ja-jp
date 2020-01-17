@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 9ae780dc-b33f-4861-a996-176bae9e7211
 author: Shamikg
 ms.author: Shamikg
-manager: craigg
-ms.openlocfilehash: 19e9abcf3af93ef85934d536de6ca726139afde0
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 585243f46296808a5ed190c3e6d9448eec1c63da
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47677250"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67908797"
 ---
 # <a name="menu-commands-and-other-shortcut-keys-mysqltosql"></a>メニュー コマンドやその他のショートカット キー (MySQLToSQL)
 次のセクションでは、メニュー コマンドや MySQL アプリケーションの SSMA のさまざまなダイアログ ボックスで使用されるその他のショートカット キーにアクセスするキーボード ショートカットについて説明します。  
@@ -180,6 +179,6 @@ ms.locfileid: "47677250"
 |クイック ヒントを起動します。|CTRL + SHIFT + スペース|  
 |宣言に移動します。|F12|  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
 [ショートカット キー &#40;MySQLToSQL&#41;](../../ssma/mysql/shortcut-keys-mysqltosql.md)  
   

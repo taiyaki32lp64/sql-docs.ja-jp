@@ -15,15 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - STIsSimple (geometry Data Type)
 ms.assetid: da8f45d4-4f9c-405d-b883-760eb5344a71
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: e974d8cda1a6c21e7b3d568f242d36c96d81b5f7
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: MladjoA
+ms.author: mlandzic
+ms.openlocfilehash: 0b91fdde3c6940ffa0a7f2e77591e05578e005c4
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47718300"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67894915"
 ---
 # <a name="stissimple-geometry-data-type"></a>STIsSimple (geometry データ型)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
@@ -40,7 +39,7 @@ ms.locfileid: "47718300"
 ## <a name="return-types"></a>戻り値の型  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 戻り値の型: **bit**  
   
- CLR の戻り値の型: **SqlBoolean**  
+ CLR の戻り値の型:**SqlBoolean**  
   
 ## <a name="remarks"></a>Remarks  
  単純であると見なされるには、**geometry** インスタンスが次の要件をすべて満たしている必要があります。  

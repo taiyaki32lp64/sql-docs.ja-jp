@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 5a4c6bd5-0c79-4f81-a977-0561392d8d50
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 0c7d864d61d2782955a52ce6e20a7025379cc946
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b2b5fbe59ab58b31cd0b796cbe46963683aa890b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47744071"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67932486"
 ---
 # <a name="getdataproviderdso-method"></a>GetDataProviderDSO メソッド
 Shape プロバイダーから基になる OLE DB データ ソース オブジェクトを取得します。  
@@ -39,5 +38,5 @@ HRESULT GetDataProviderDSO(
 ## <a name="remarks"></a>コメント  
  このメソッドではない addref インターフェイス ポインター。 呼び出し元が必要な addref を行う必要があります、呼び出し元ポインターを保持する場合、およびリリースします。  
   
-## <a name="applies-to"></a>適用対象  
+## <a name="applies-to"></a>対象  
  [IDSOShapeExtensions インターフェイス](../../../ado/reference/ado-api/idsoshapeextensions-interface.md)

@@ -14,20 +14,19 @@ helpviewer_keywords:
 ms.assetid: fb17498d-4f1d-4b3d-b33d-1e62c7d3c32d
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 18b1c144e84bf0be5aaeb68b66660f7bc7865ade
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 9daa81e2e0c2e927ee7407d4a00d5d48c333bd54
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47601540"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67990723"
 ---
 # <a name="numeric-literal-syntax"></a>数値リテラルの構文
 次の構文は、ODBC での数値リテラルに使用されます。  
   
  *数値リテラル*:: =*符号付き数値リテラル&#124;符号なし数値リテラル*  
   
- *符号付き数値リテラル*:: = [*サインオン*]*符号なし数値リテラル*  
+ *signed-numeric-literal* ::= [*sign*] *unsigned-numeric-literal*  
   
  *符号なし数値リテラル*:: =*正確な数値リテラル&#124;おおよその数値リテラル*  
   
@@ -41,7 +40,7 @@ ms.locfileid: "47601540"
   
  *指数*:: =*符号付き整数*  
   
- *符号付き整数*:: = [*サインオン*]*符号なし整数*  
+ *signed-integer* ::= [*sign*] *unsigned-integer*  
   
  *符号なし整数*:: =*桁.*  
   

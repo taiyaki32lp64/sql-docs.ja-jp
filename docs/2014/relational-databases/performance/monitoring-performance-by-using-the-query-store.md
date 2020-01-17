@@ -10,22 +10,22 @@ ms.assetid: e06344a4-22a5-4c67-b6c6-a7060deb5de6
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: bfdce1925bc4c73894e1ff1a9bb0d69f6da94501
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 8e380626408a7e50d8940e2cc1b347eac5f32922
+ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52756614"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "69028604"
 ---
 # <a name="monitoring-performance-by-using-the-query-store"></a>クエリのストアを使用した、パフォーマンスの監視
   クエリのストアの機能により、クエリ プランの選択やパフォーマンスに関する洞察が DBA に提供されます。 これにより、クエリ プランの変更によって生じるパフォーマンスの違いがすばやくわかるようになり、パフォーマンス上のトラブルシューティングを簡略化できます。 この機能により、クエリ、プラン、ランタイム統計情報の履歴が自動的にキャプチャされ、レビュー用に保持されます。 データは時間枠で区分されるため、データベースの使用パターンを表示して、サーバー上でクエリ プランが変わった時点を確認することができます。 クエリのストアは [ALTER DATABASE SET](/sql/t-sql/statements/alter-database-transact-sql-set-options) オプションを使用して構成できます。  
   
 ||  
 |-|  
-|**適用対象**:[!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] ([手](http://azure.micosoft.com/documentation/articles/sql-database-preview-whats-new/?WT.mc_id=TSQL_GetItTag))。|  
+|**適用対象**:[!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]([取得](http://azure.micosoft.com/documentation/articles/sql-database-preview-whats-new/?WT.mc_id=TSQL_GetItTag)します)。|  
   
 > [!IMPORTANT]  
->  現在、これはプレビュー機能です。 使用するクエリ ストアを確認して、クエリのストアの実装に同意する必要がありますが、プレビューの条項に従ってその適切なライセンス契約 (など、エンタープライズ契約、Microsoft Azure 契約、または Microsoft Online サブスクリプション契約) に [補足使用条件の Microsoft Azure プレビュー](http://azure.microsoft.com/en-us/support/legal/preview-supplemental-terms/)です。  
+>  現在、これはプレビュー機能です。 使用するクエリ ストアを確認して、クエリのストアの実装に同意する必要がありますが、プレビューの条項に従ってその適切なライセンス契約 (など、エンタープライズ契約、Microsoft Azure 契約、または Microsoft Online サブスクリプション契約) に [補足使用条件の Microsoft Azure プレビュー](https://azure.microsoft.com/support/legal/preview-supplemental-terms/)です。  
   
 ##  <a name="Enabling"></a> クエリのストアを有効にする  
  既定では、クエリのストアは新しいデータベースに対してアクティブではありません。  
@@ -70,7 +70,7 @@ ms.locfileid: "52756614"
   
 -   特定のデータベースのリソース (CPU、I/O、メモリ) の使用パターンを分析します。  
   
- クエリのストアには、次の&2; つのストアが含まれています。 **プラン ストア** は実行プラン情報を保持し、 **ランタイム統計情報ストア** は実行統計情報を保持するためのものです。 クエリのためにプラン ストア内に格納できる一意のプラン数は、`max_plans_per_query` 構成オプションによって制限されています。 パフォーマンスを向上させるために、この情報は つのストアに非同期的に書き込まれます。 領域使用量を最小にするため、ランタイム統計情報ストアのランタイム実行統計情報は、一定の時間枠で集計されます。 これらのストア内の情報は、クエリのストアのカタログ ビューに対してクエリを実行することによって表示できます。  
+ クエリのストアには、次の 2 つのストアが含まれています。 **プラン ストア** は実行プラン情報を保持し、 **ランタイム統計情報ストア** は実行統計情報を保持するためのものです。 クエリのためにプラン ストア内に格納できる一意のプラン数は、`max_plans_per_query` 構成オプションによって制限されています。 パフォーマンスを向上させるために、この情報は つのストアに非同期的に書き込まれます。 領域使用量を最小にするため、ランタイム統計情報ストアのランタイム実行統計情報は、一定の時間枠で集計されます。 これらのストア内の情報は、クエリのストアのカタログ ビューに対してクエリを実行することによって表示できます。  
   
  次のクエリは、クエリのストア内のクエリとプランに関する情報を返します。  
   
@@ -88,7 +88,7 @@ JOIN sys.query_store_query_text AS Txt
 ## <a name="using-the-regressed-queries-feature"></a>機能低下したクエリ機能の使用  
  クエリのストアを有効にしてから、[オブジェクト エクスプローラー] ペインのデータベースの部分を更新して、 **[クエリ ストア]** セクションを追加します。  
   
- ![QueryStore](../../database-engine/media/querystore.PNG "QueryStore")  
+ ![Querystore](../../database-engine/media/querystore.PNG "Querystore")  
   
  **[機能低下したクエリ]** を選択し、 **で** [機能低下したクエリ] [!INCLUDE[ssManStudio](../../../includes/ssmanstudio-md.md)]ペインを開きます。 [機能低下したクエリ] ペインにクエリと、クエリのストア内のプランが表示されます。 上部にあるドロップダウン ボックスを使用すると、さまざまな条件に合わせてクエリを選択できます。 プランを選択して、グラフィカルなクエリ プランを表示します。 ソース クエリの表示、クエリ プランの強制と強制解除、表示の更新に使用できるボタンが用意されています。  
   
@@ -205,7 +205,7 @@ ALTER DATABASE <database_name>
 SET QUERY_STORE (INTERVAL_LENGTH_MINUTES = 15);  
 ```  
   
- 任意の値が許可されていません - 次のいずれかを使用する必要がありますのことに注意してください。1、5、10、15、30 から 60 です。  
+ 任意の値が許可されていないことに注意してください。次のいずれかを使用する必要があります。1、5、10、15、30、60。  
   
  時間間隔に使用する新しい値は、`sys.database_query_store_options` ビューで公開されます。  
   
@@ -277,16 +277,16 @@ DEALLOCATE adhoc_queries_cursor;
   
  上記の例では、`sp_query_store_remove_query` 拡張ストアド プロシージャを使用して不要なデータを削除しています。 さらに、別の 2 つのプロシージャを使用できます。  
   
--   `sp_query_store_reset_exec_stats` -指定されたプランの実行時統計をオフにします。  
+-   `sp_query_store_reset_exec_stats`-指定されたプランの実行時統計をクリアします。  
   
--   `sp_query_store_remove_plan` -1 つのプランを削除します。  
+-   `sp_query_store_remove_plan`-1 つのプランを削除します。  
   
 
   
 ###  <a name="Peformance"></a> パフォーマンスの監査とトラブルシューティング  
  クエリのストアには、コンパイルの履歴とクエリの実行全体に関するランタイム メトリックスが保持されているため、ワークロードに関連した多くの疑問の答えを簡単に見つけることができます。  
   
- **最後*n*データベースで実行されるクエリ。**  
+ **データベースで実行された最後の*n 個*のクエリ。**  
   
 ```  
 SELECT TOP 10 qt.query_sql_text, q.query_id,   
@@ -301,7 +301,7 @@ JOIN sys.query_store_runtime_stats AS rs
 ORDER BY rs.last_execution_time DESC;  
 ```  
   
- **各クエリの実行回数です。**  
+ **各クエリの実行回数。**  
   
 ```  
 SELECT q.query_id, qt.query_text_id, qt.query_sql_text,   
@@ -317,7 +317,7 @@ GROUP BY q.query_id, qt.query_text_id, qt.query_sql_text
 ORDER BY total_execution_count DESC;  
 ```  
   
- **過去 1 時間で平均最長実行時間をクエリの数。**  
+ **過去1時間以内に平均実行時間が最も長いクエリの数。**  
   
 ```  
 SELECT TOP 10 rs.avg_duration, qt.query_sql_text, q.query_id,  
@@ -334,7 +334,7 @@ WHERE rs.last_execution_time > DATEADD(hour, -1, GETUTCDATE())
 ORDER BY rs.avg_duration DESC;  
 ```  
   
- **最大平均物理 IO がクエリの数は、対応する平均行数および実行カウントと、過去 24 時間に読み取ります。**  
+ **過去24時間に発生した平均物理 IO 読み取り数が、対応する平均行数と実行回数であるクエリの数。**  
   
 ```  
 SELECT TOP 10 rs.avg_physical_io_reads, qt.query_sql_text,   
@@ -382,7 +382,7 @@ JOIN sys.query_store_query_text qt
 ORDER BY query_id, plan_id;  
 ```  
   
- **最近低下したクエリのパフォーマンス (時間別のポイントの比較)。** 次のクエリの例では、プラン選択の変更により、過去 48 時間で実行時間が 2 倍になったすべてのクエリを返します。 次のクエリは、すべてのランタイム統計情報の時間間隔を並べて比較します。  
+ **最近パフォーマンスが低下したされた (異なる時点を比較する) クエリ。** 次のクエリの例では、プラン選択の変更により、過去 48 時間で実行時間が 2 倍になったすべてのクエリを返します。 次のクエリは、すべてのランタイム統計情報の時間間隔を並べて比較します。  
   
 ```  
 SELECT   
@@ -421,7 +421,7 @@ ORDER BY q.query_id, rsi1.start_time, rsi2.start_time;
   
  プラン選択の変更に関連するものだけでなく、パフォーマンス低下に関するすべての情報を表示する場合、前のクエリから条件 `AND p1.plan_id <> p2.plan_id` を削除します。  
   
- **最近 (最近の実行と履歴の実行を比較する場合) のパフォーマンスが低下するクエリ。** 次のクエリは、実行期間に基づいてクエリの実行を比較します。 この例では、クエリは、最近の期間 (1 時間) と履歴の期間 (過去 1 日間) とで実行を比較し、additional_duration_workload の原因となったものを識別します。 このメトリックは、最近の平均実行と履歴の平均実行に最近実行の数を掛けた値の間の差として計算されます。 これは、履歴と比較して、最近の実行でどれほどの期間が追加されたかを表します。  
+ **最近パフォーマンスに低下したしたクエリ (最近の実行と履歴の実行を比較)。** 次のクエリは、実行期間に基づいてクエリの実行を比較します。 この例では、クエリは、最近の期間 (1 時間) と履歴の期間 (過去 1 日間) とで実行を比較し、additional_duration_workload の原因となったものを識別します。 このメトリックは、最近の平均実行と履歴の平均実行に最近実行の数を掛けた値の間の差として計算されます。 これは、履歴と比較して、最近の実行でどれほどの期間が追加されたかを表します。  
   
 ```  
 --- "Recent" workload - last 1 hour  

@@ -10,17 +10,20 @@ ms.topic: conceptual
 f1_keywords:
 - desCons
 ms.assetid: 20a0d9ac-3393-4ab3-a296-862926b9b5e3
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: 3acfc4beeb64631a1c8bc00fe5e4a6ca2c31f470
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 9d6933f45d70636b2c7ea8b2ca20f71e1ab2fd02
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51641239"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71298883"
 ---
 # <a name="change-data-capture-designer-for-oracle-by-attunity"></a>Attunity の Change Data Capture Designer for Oracle
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   CDC デザイナー コンソールは、Oracle CDC インスタンスを開発および管理するために使用されます。 CDC デザイナー コンソールは、次の要素を含む Microsoft 管理コンソール スナップインです。  
   
 -   新しいインスタンス ウィザード: このウィザードでは、新しい Oracle CDC インスタンスを作成します。 新しいインスタンス ウィザードの使用の詳細については、「 [Use the New Instance Wizard](../../integration-services/change-data-capture/use-the-new-instance-wizard.md)」を参照してください。  
@@ -29,7 +32,7 @@ ms.locfileid: "51641239"
   
 -   CDC インスタンス プロパティ エディター: このダイアログ ボックスを使用して、既存の Oracle CDC Service インスタンスを編集します。 CDC インスタンス プロパティの編集の詳細については、「 [Edit Instance Properties](../../integration-services/change-data-capture/edit-instance-properties.md)」を参照してください。  
   
- Microsoft® Change Data Capture Designer および Service for Oracle by Attunity for Microsoft SQL Server® 2016 は、SQL Server 2016 Feature Pack に含まれています。 [SQL Server 2016 Feature Pack の Web ページ](https://go.microsoft.com/fwlink/?LinkId=746297)から、Feature Pack のコンポーネントをダウンロードします。  
+ MicrosoftÂ® Change Data Capture Designer および Service for Oracle by Attunity for Microsoft SQL ServerÂ® 2016 は、SQL Server 2016 Feature Pack に含まれています。 [SQL Server 2016 Feature Pack の Web ページ](https://go.microsoft.com/fwlink/?LinkId=746297)から、Feature Pack のコンポーネントをダウンロードします。  
   
 ## <a name="in-this-documentation"></a>このドキュメントの内容  
   

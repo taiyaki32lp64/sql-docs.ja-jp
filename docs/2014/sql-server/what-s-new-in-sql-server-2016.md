@@ -1,7 +1,7 @@
 ---
-title: どのような&#39;SQL Server 2014 の新 |Microsoft Docs
+title: SQL Server 2014 | の新機能Microsoft Docs
 ms.custom: ''
-ms.date: 05/25/2017
+ms.date: 12/10/2019
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.technology: install
@@ -17,77 +17,88 @@ ms.assetid: 6a428023-e3cc-4626-a88a-4c13ccbd7db0
 author: craigg-msft
 ms.author: craigg
 manager: craigg
-ms.openlocfilehash: 57acb73332f90f4084243184f480edf0a1395a7b
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: 23a1392256e103fa1bc112f11b5c5b97f5c398f1
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54124822"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75237714"
 ---
-# <a name="what39s-new-in-sql-server-2014"></a>どのような&#39;s SQL Server 2014 の新機能
-  このトピックでは、新機能の詳細なリンクをまとめたものです[!INCLUDE[ssSQL14](../includes/sssql14-md.md)]しのサービス パックの概要を示します。 [!INCLUDE[ssSQL14](../includes/sssql14-md.md)]  
+# <a name="whats-new-in-sql-server-2014"></a>SQL Server 2014 の新機能
+
+このトピックで[!INCLUDE[ssSQL14](../includes/sssql14-md.md)]は、の新機能に関する詳細なリンクと、のサービスパックの概要について説明します。[!INCLUDE[ssSQL14](../includes/sssql14-md.md)]  
  
-**お試しください:**![Azure Virtual Machine のアイコン](./media/what-s-new-in-sql-server-2016/azure-virtual-machine-small.png)Azure アカウントを持っているでしょうか。  やがて**[ここ](https://ms.portal.azure.com/?flight=1#create/Microsoft.SQLServer2014sp1EnterpriseWindowsServer2012R2)** 既にインストールされている SQL Server 2014 Service Pack 1 (SP1) の仮想マシンを作成します。 
+**試してみる:** ![azure Virtual Machine small](./media/what-s-new-in-sql-server-2016/azure-virtual-machine-small.png)に azure アカウントをお持ちですか?  にhttps://ms.portal.azure.com/?flight=1#create/Microsoft.SQLServer2014sp1EnterpriseWindowsServer2012R2アクセスして、SQL Server 2014 Service Pack 1 (SP1) が既にインストールされている仮想マシンを起動します。
+
+> [!TIP]
+> SQL Server 2014 のホームドキュメントページについては、[ここをクリック](../2014-toc/index.yml)してください。
+
+<!--
+Do not let this file's filename fool you.
+This filename contains "2016", but nevertheless...
+This file, at this exact GitHub path, is dedicated to SQL Server version 2014.
+-->
+
+## <a name="whats-new-articles"></a>新機能に関する記事
+
+-   [新機能 &#40;データベースエンジン&#41;](../database-engine/whats-new-in-sql-server-2016.md)  
   
--   [新機能については&#40;データベース エンジン&#41;](../database-engine/whats-new-in-sql-server-2016.md)  
-  
--   [新しい Analysis Services と Business Intelligence の新機能](../analysis-services/what-s-new-in-analysis-services.md)  
+-   [Analysis Services と Business Intelligence の新機能](https://docs.microsoft.com/analysis-services/what-s-new-in-analysis-services)  
   
 -   [SQL Server インストールの新機能](install/what-s-new-in-sql-server-installation.md)  
   
- **[!INCLUDE[ssSQL14](../includes/sssql14-md.md)] 次に重要な新機能が導入されていません。**  
+ **[!INCLUDE[ssSQL14](../includes/sssql14-md.md)]では、次の機能に重要な新機能が導入されていません。**  
   
--   [新機能については&#40;Integration Services&#41;](../integration-services/what-s-new-in-integration-services-in-sql-server-2016.md)  
+-   [新機能 &#40;Integration Services&#41;](../integration-services/what-s-new-in-integration-services-in-sql-server-2016.md)  
   
--   [新機能については&#40;Reporting Services&#41;](../reporting-services/what-s-new-reporting-services.md)  
+-   [新機能 &#40;Reporting Services&#41;](../reporting-services/what-s-new-reporting-services.md)  
   
-## <a name="includesssql14includessssql14-mdmd-service-pack-1-sp1"></a>[!INCLUDE[ssSQL14](../includes/sssql14-md.md)] Service Pack 1 (SP1)
-[!INCLUDE[ssSQL14](../includes/sssql14-md.md)] (SP1) は重要な新機能を含めていません。
--  [SQL Server 2014 Service Pack 1 リリース情報](https://support.microsoft.com/en-us/kb/3058865)します。
--  [![Microsoft Service Pack 1 をダウンロードしていますか。SQL Server??2014](./media/what-s-new-in-sql-server-2016/download.png)](https://www.microsoft.com/en-us/download/details.aspx?id=46694) [microsoft Service Pack 1 をダウンロードします。SQL Server??2014](https://www.microsoft.com/en-us/download/details.aspx?id=46694)します。
+## <a name="includesssql14includessssql14-mdmd-service-pack-1-sp1"></a>
+  [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] Service Pack 1 (SP1)
+[!INCLUDE[ssSQL14](../includes/sssql14-md.md)](SP1) では、重要な新機能は導入されませんでした。
+-  [SQL Server 2014 Service Pack 1 のリリース情報](https://support.microsoft.com/kb/3058865)。
+-  [Microsoft SQL Server 2014 の service pack 1 をダウンロードする Microsoft SQL Server 2014 用の service pack 1 をダウンロードします。 ![](./media/what-s-new-in-sql-server-2016/download.png)](https://www.microsoft.com/download/details.aspx?id=46694) [](https://www.microsoft.com/download/details.aspx?id=46694)
 
 
-## <a name="includesssql14includessssql14-mdmd-service-pack-2-sp2"></a>[!INCLUDE[ssSQL14](../includes/sssql14-md.md)] Service Pack 2 (SP2)
-- [SQL Server 2014 Service Pack 2 リリース情報](https://support.microsoft.com/en-us/kb/3171021)します。
--  [![Microsoft の Service Pack 2 をダウンロードするには [概要] タブSQL Server??2014](./media/what-s-new-in-sql-server-2016/download.png)](https://go.microsoft.com/fwlink/?LinkID=821558) [microsoft Service Pack 2 をダウンロードします。SQL Server??2014](https://go.microsoft.com/fwlink/?LinkID=821558)します。
--  [![SQL Server 2014 SP2 Feature Pack ダウンロード](./media/what-s-new-in-sql-server-2016/download.png)](https://www.microsoft.com/en-us/download/details.aspx?id=53164) [SQL Server 2014 SP2 Feature Pack ダウンロード](https://www.microsoft.com/en-us/download/details.aspx?id=53164)します。
+## <a name="includesssql14includessssql14-mdmd-service-pack-2-sp2"></a>[!INCLUDE[ssSQL14](../includes/sssql14-md.md)]Service Pack 2 (SP2)
+- [SQL Server 2014 Service Pack 2 リリース情報](https://support.microsoft.com/kb/3171021)。
+-  [Microsoft SQL Server 2014 の service pack 2 をダウンロードする Microsoft SQL Server 2014 用の service pack 2 をダウンロードします。 ![](./media/what-s-new-in-sql-server-2016/download.png)](https://go.microsoft.com/fwlink/?LinkID=821558) [](https://go.microsoft.com/fwlink/?LinkID=821558)
+-  [SQL Server 2014 sp2 feature pack SQL Server 2014 sp2 feature pack をダウンロードします。 ![](./media/what-s-new-in-sql-server-2016/download.png)](https://www.microsoft.com/download/details.aspx?id=53164) [](https://www.microsoft.com/download/details.aspx?id=53164)
 
-[!INCLUDE[ssSQL14](../includes/sssql14-md.md)] (SP2)次の機能強化が含まれています。
+[!INCLUDE[ssSQL14](../includes/sssql14-md.md)]SMSでは、次の点が改善されています。
 
 ### <a name="performance-and-scalability-improvements"></a>パフォーマンスとスケーラビリティの向上 
--   **自動ソフト NUMA のパーティション分割:**[!INCLUDE[ssSQL14](../includes/sssql14-md.md)]インスタンスの起動中にトレース フラグ 8079 が有効にしたときに SP2 で自動ソフト NUMA を有効にします。 起動時に、トレース フラグ 8079 が有効にすると[!INCLUDE[ssSQL14](../includes/sssql14-md.md)]SP2 はハードウェア レイアウトを問い合わせて、NUMA ノードあたり 8 個以上の Cpu をレポートするシステムのソフト NUMA を自動的に構成します。 自動的に、ソフト NUMA の動作は、ハイパー スレッド (HT/論理プロセッサ) に注意してください。 パーティション分割と追加ノードの作成により、リスナーの数の増加、スケーリング、およびネットワークと暗号化機能の向上により、バックグラウンド処理が拡張されます。 お勧めの最初のテストをパフォーマンス ワークロード自動ソフト NUMA を実稼働環境でこれを有効にする前にします。 [詳細については、ブログを参照してください。](https://blogs.msdn.microsoft.com/psssql/2016/03/30/sql-2016-it-just-runs-faster-automatic-soft-numa/)します。 
--  **動的メモリ オブジェクトのスケーリングします。**[!INCLUDE[ssSQL14](../includes/sssql14-md.md)] SP2 には、最新のハードウェア上でスケール アップするノードとコアの数に基づいて、オブジェクトのメモリが動的にパーティション分割します。 動的な昇格の目的は、ボトルネックとなる場合、スレッド セーフ メモリ オブジェクト (CMEMTHREAD) を自動的に分割します。 ノード (NUMA ノード数のパーティションと等しい数)、パーティションに分割するパーティション分割されていないメモリ オブジェクトを動的に昇格し、(の等しい数のパーティションの数を CPU によってパーティションに分割する昇格させたノードでパーティション分割されたオブジェクトが、さらにメモリCpu)。 [詳細については、ブログを参照してください。](https://blogs.msdn.microsoft.com/psssql/2016/04/06/sql-2016-it-just-runs-faster-dynamic-memory-object-cmemthread-partitioning/)します。
--  **DBCC CHECK の MAXDOP ヒント\*コマンド。** この機能強化がアドレス[connect フィードバック (468694)](https://connect.microsoft.com/SQLServer/feedback/details/468694/maxdop-option-in-dbcc-checkdb)します。 指定した DBCC CHECKDB を実行して、sp_configure 値以外の MAXDOP 設定します。 MAXDOP では、リソース ガバナーで構成されている値を超えると、データベース エンジンは、ALTER WORKLOAD GROUP (TRANSACT-SQL)」に記載のリソース ガバナーの MAXDOP 値を使用します。 MAXDOP クエリ ヒントを使用している場合は、max degree of parallelism 構成オプションで使用されるすべての意味ルールを適用できます。 詳細については、次を参照してください。 [DBCC CHECKDB (TRANSACT-SQL)](https://msdn.microsoft.com/library/ms176064.aspx)します。
--   **有効にする > のバッファー プールの 8 TB。**[!INCLUDE[ssSQL14](../includes/sssql14-md.md)] SP2 では、128 TB のバッファー プールの使用の仮想アドレス空間を使用できます。 この機能強化では、最新のハードウェアで 8 TB を超えてスケールする SQL Server バッファー プールを使用できます。
--   **SOS_RWLock スピンロックの向上:** SOS_RWLock は、SQL Server のコード ベースのさまざまな場所で使用される同期プリミティブです。  名前が示すように、コードは、複数の共有 (リーダー) または 1 つ (ライター) 所有権ことができます。 この機能強化は SOS_RWLock スピンロックの必要を削除し、代わりに、インメモリ OLTP のようなロック制御不要の手法を使用します。 この変更により、多数のスレッドが互いをブロックして、それによってスケーラビリティの向上を提供することがなく SOS_RWLock で並列で保護されたデータ構造を読み取ることができます。 今回の変更前は、スピンロックの実装は、データ構造の読み取りにも、時、SOS_RWLock を取得する 1 つのスレッドを許可します。  [詳細については、ブログを参照してください。](https://blogs.msdn.microsoft.com/psssql/2016/04/07/sql-2016-it-just-runs-faster-sos_rwlock-redesign/)します。
--    **空間のネイティブ実装。** 空間クエリのパフォーマンスが大幅に向上がで導入された[!INCLUDE[ssSQL14](../includes/sssql14-md.md)]SP2 ネイティブ実装から。 詳細については、次を参照してください。、[サポート技術情報記事 KB3107399](https://support.microsoft.com/en-us/kb/3107399)します。
+-   **ソフト NUMA の自動パーティション分割:** SP2 [!INCLUDE[ssSQL14](../includes/sssql14-md.md)]では、インスタンスの起動時にトレースフラグ8079が有効になっていると、自動ソフト NUMA が有効になります。 起動時にトレースフラグ8079が有効になっ[!INCLUDE[ssSQL14](../includes/sssql14-md.md)]ている場合、SP2 はハードウェアレイアウトを調査し、numa ノードあたり8個以上の cpu を報告するシステムでソフト NUMA を自動的に構成します。 ソフト NUMA の自動動作は、ハイパースレッド (HT/論理プロセッサ) に対応しています。 パーティション分割と追加ノードの作成により、リスナーの数の増加、スケーリング、およびネットワークと暗号化機能の向上により、バックグラウンド処理が拡張されます。 運用環境でチューニングする前に、自動ソフト NUMA を使用してパフォーマンスワークロードをテストすることをお勧めします。 [詳細については、ブログを参照してください](https://blogs.msdn.microsoft.com/psssql/2016/03/30/sql-2016-it-just-runs-faster-automatic-soft-numa/)。 
+-  **動的メモリオブジェクトのスケーリング:** [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] SP2 では、最新のハードウェアに拡張するために、ノードとコアの数に基づいてメモリオブジェクトを動的に分割します。 動的な昇格の目的は、スレッドセーフメモリオブジェクト (CMEMTHREAD) がボトルネックになった場合に、そのオブジェクトを自動的にパーティション分割することです。 パーティション分割されていないメモリオブジェクトは、ノードによって動的にパーティション分割できます (パーティションの数は NUMA ノードの数と等しくなります)。 ノードによってパーティション分割されたメモリオブジェクトは、CPU (パーティションの数は Cpu の数と等しくなります) によってさらにパーティション分割できます。 [詳細については、ブログを参照してください](https://blogs.msdn.microsoft.com/psssql/2016/04/06/sql-2016-it-just-runs-faster-dynamic-memory-object-cmemthread-partitioning/)。
+-  **DBCC\* CHECK コマンドの MAXDOP ヒント:** この機能強化には、 [connect のフィードバック (468694)](https://connect.microsoft.com/SQLServer/feedback/details/468694/maxdop-option-in-dbcc-checkdb)があります。 Sp_configure 値以外の MAXDOP 設定を使用して DBCC CHECKDB を実行できるようになりました。 MAXDOP では、Resource Governor で構成されている値を超えると、データベース エンジンは、「ALTER WORKLOAD GROUP (TRANSACT-SQL)」に記載のリソース ガバナーの MAXDOP 値を使用します。 MAXDOP クエリ ヒントを使用している場合は、max degree of parallelism 構成オプションで使用されるすべての意味ルールを適用できます。 詳細については、「 [DBCC CHECKDB (transact-sql)](https://msdn.microsoft.com/library/ms176064.aspx)」を参照してください。
+-   **バッファープールに対して >8 tb を有効にする:** [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] SP2 では、バッファープールの使用に 128 tb の仮想アドレス空間が有効になります。 この機能強化により、最新のハードウェアで SQL Server バッファープールを 8 TB を超えて拡張できます。
+-   **スピンロックの向上の SOS_RWLock:** SOS_RWLock は、SQL Server コードベースを通じてさまざまな場所で使用される同期プリミティブです。  名前が示すように、コードは複数の共有 (リーダー) または単一 (ライター) の所有権を持つことができます。 この機能強化により、SOS_RWLock のスピンロックが不要になり、代わりにインメモリ OLTP のようなロックフリーの手法が使用されます。 この変更により、多くのスレッドでは、SOS_RWLock によって保護されたデータ構造を相互にブロックすることなく、並列で読み取ることができます。 この並列処理により、スケーラビリティが向上します。 この変更の前に、スピンロックの実装では、データ構造を読み取る場合でも、一度に1つのスレッドで SOS_RWLock を取得できるようになりました。 [詳細については、ブログを参照してください](https://blogs.msdn.microsoft.com/psssql/2016/04/07/sql-2016-it-just-runs-faster-sos_rwlock-redesign/)。
+-    **空間ネイティブ実装:** ネイティブ実装によって、SP2 で[!INCLUDE[ssSQL14](../includes/sssql14-md.md)]は、空間クエリのパフォーマンスが大幅に向上しています。 詳細については、[サポート技術情報の記事 KB3107399](https://support.microsoft.com/kb/3107399)を参照してください。
 
-### <a name="supportability-and-diagnostics-improvements"></a>サポート性と診断機能の強化
--   **データベースのクローンを作成します。** 複製データベースは、スキーマとデータなしのメタデータを複製することにより既存の運用データベースのトラブルシューティングを強化する新しい DBCC コマンドです。 コマンドを使用して、複製が作成された`DBCC clonedatabase('source_database_name', 'clone_database_name')`します。  **注:** 複製されたデータベースは、実稼働環境では使用できません。 特定のデータベースが複製されたデータベースから生成されたかどうか、次のコマンドを使用して:`select DATABASEPROPERTYEX('clonedb', 'isClone')`します。 戻り値**1** clonedatabase 中から、データベースが作成されたことを示します**0**複製ではないことを示します。
--   **Tempdb のサポート:** Tempdb ファイルの数とサーバーの起動時に存在する tempdb データ ファイルのサイズと自動拡張を示す新しいエラー ログ メッセージ。
--   **データベース ファイルの瞬時初期化ログ:** サーバーのスタートアップ、データベース ファイルの瞬時初期化 (有効/無効) の状態を示す新しいエラー ログ メッセージ。
--   **呼び出し履歴内のモジュール名:** Xevent の呼び出し履歴には、モジュール名 + 絶対アドレスではなくオフセットが含まれています。
--   **増分統計の新しい DMF:** この機能強化がアドレス[connect フィードバック (797156)](https://connect.microsoft.com/SQLServer/feedback/details/797156/display-sys-dm-db-stats-properties-per-partition-for-incremental-statistics)パーティション レベルで増分統計情報の追跡を有効にします。 情報 - パーティションの増分統計を公開する新しい DMF sys.dm_db_incremental_stats_properties が導入されました。
--   **インデックス使用状況の DMV の更新動作:** この機能強化がアドレス[connect フィードバック (739566)](https://connect.microsoft.com/SQLServer/feedback/details/739566/rebuilding-an-index-clears-stats-from-sys-dm-db-index-usage-stats)顧客がインデックスを再構築するはどこから*いない*そのインデックスに対する sys.dm_db_index_usage_stats から既存の行エントリをクリアします。 動作では、SQL 2008 および SQL Server 2016 と同じではようになりました。 [詳細については、ブログを参照してください。](https://blogs.msdn.microsoft.com/sql_server_team/index-usage-dmv-behavior-updated/)します。
--   **診断 XE および Dmv 間の相関関係の向上:** この機能強化がアドレス[connect フィードバック (1934583)](https://connect.microsoft.com/SQLServer/feedback/details/1934583/extended-events-query-hash-and-query-plan-hash-data-types)します。 クエリを一意に識別するため、Query_hash と query_plan_hash が使用されます。 DMV はこれらを varbinary(8) として定義するのに対し、XEvent は UINT64 として定義します。 SQL server に"unisigned bigint"がないのでキャストが機能しません。 この機能強化では、新しい XEvent アクション/フィルター列が導入されています。これは XE と DMV 間の関連付けクエリに役立つ INT64 として定義されている点を除き、query_hash と query_plan_hash と同等です。
--   **BULK INSERT と BCP では、utf-8 のサポート:** この機能強化がアドレス[connect フィードバック (370419)](https://connect.microsoft.com/SQLServer/feedback/details/370419/bulk-insert-and-bcp-does-not-recognize-codepage-65001)文字セットを utf-8 でエンコードされたデータのエクスポートとインポートのサポート BULK INSERT と BCP になりました。
--   **演算子ごとの軽量なクエリの実行プロファイル:** プラン表示プランで、クエリ実行プランと演算子のコストで多くの情報を提供しますが、実際の情報が限られていますが、パフォーマンス、クエリのトラブルシューティング (CPU、I/O の読み取り、スレッドごとに経過時間) などのランタイム統計情報。 SQL 2014 SP2 では、プラン表示だけでなく、XEvent (query_thread_profile) クエリのパフォーマンスのトラブルシューティングを支援するために、演算子ごとのこれらの追加のランタイム統計情報について説明します。 [詳細については、ブログを参照してください。](https://blogs.msdn.microsoft.com/sql_server_team/added-per-operator-level-performance-stats-for-query-processing/)します。
--   **変更追跡のクリーンアップ。** 新しいストアド プロシージャ`sp_flush_CT_internal_table_on_demand`オンデマンド追跡の内部テーブルのクリーンアップの変更が導入されました。
--   **AlwaysON のリース タイムアウトをログ記録**リース タイムアウト メッセージに対する新しいログ機能を追加して、現在の時刻と予想される更新時刻をログに記録できるようにします。 また、新しいメッセージは、タイムアウトに関する SQL エラー ログで導入されました。 [詳細については、ブログを参照してください。](https://blogs.msdn.microsoft.com/alwaysonpro/2016/02/23/improved-alwayson-availability-group-lease-timeout-diagnostics/)します。
--   **SQL Server での入力バッファーを取得するための新しい DMF:** セッション/要求の入力バッファーを取得するための新しい DMF (sys.dm_exec_input_buffer) を使用できるようになりました。 これは DBCC INPUTBUFFER と同等の機能です。 [詳細については、ブログを参照してください。](https://blogs.msdn.microsoft.com/sql_server_team/new-dmf-for-retrieving-input-buffer-in-sql-server/)します。
--   **過小評価されると、あまりメモリ許可の軽減策:** 追加された新しいクエリ ヒント MIN_GRANT_PERCENT および MAX_GRANT_PERCENT をリソース ガバナーの。 これにより、メモリの競合を防ぐためにメモリ許可を制限してクエリを実行中にこれらのヒントを活用することができます。 詳細については、次を参照してください[サポート技術情報記事 KB310740。](https://support.microsoft.com/en-us/kb/3107401)
--   **メモリ許可/使用状況のより優れた診断:** 新しい拡張イベントは、メモリ許可の要求および付与を追跡するために SQL Server (query_memory_grant_usage) のトレース機能の一覧に追加されました。 これは、メモリ許可のクエリの実行に関する問題のトラブルシューティングの強化されたトレースと分析機能を提供します。 詳細については、次を参照してください。[サポート技術情報記事 KB3107173](https://support.microsoft.com/en-us/kb/3107173)します。
--   **クエリ実行の診断の tempdb の書き込み:**-Hash Warning および Sort Warnings 物理 I/O の統計情報、使用されるメモリと影響を受ける行を追跡する追加の列があるようになりました。 新しい hash_spill_details 拡張イベントも導入されています。 ハッシュと並べ替えの警告についてより詳細な情報を追跡するようになりました ([KB3107172](https://support.microsoft.com/en-us/kb/3107172))。 この機能強化が SpillToTempDbType 複合型に新しい属性の形式での XML クエリ プランを介して公開されるようになりました ([KB3107400](https://support.microsoft.com/en-us/kb/3107400))。 表示は、作業テーブルの統計情報を並べ替えるようになりましたの統計情報を設定します。 .
--   **残余述語のプッシュ ダウンに関連するクエリ実行プランの診断機能の向上:** 実際に読み取られた行は、クエリ パフォーマンスのトラブルシューティングを向上させるクエリ実行プランで今すぐ報告されます。 これは、SET STATISTICS IO を個別にキャプチャする必要を負数化する必要があります。 これでを使用すると、クエリ プランの残余述語のプッシュ ダウンに関連する情報を参照してください。 詳細については、次を参照してください。[サポート技術情報記事 KB3107397](https://support.microsoft.com/en-us/kb/3107397)します。
+### <a name="supportability-and-diagnostics-improvements"></a>サポートと診断の機能強化
+-   **データベースの複製:** 複製データベースは、データなしでスキーマとメタデータを複製することで、既存の運用データベースのトラブルシューティングを強化する新しい DBCC コマンドです。 複製は、コマンド`DBCC clonedatabase('source_database_name', 'clone_database_name')`を使用して作成されます。  **注:** 複製されたデータベースは、運用環境では使用できません。 次のコマンドを使用して、複製されたデータベースからデータベースが`select DATABASEPROPERTYEX('clonedb', 'isClone')`生成されたかどうかを確認します。 戻り値**1**は、データベースが clonedatabase から作成されていることを示し、 **0**は複製ではないことを示します。
+-   **Tempdb のサポート性:** Tempdb ファイルの数と tempdb のデータファイルのサイズと自動拡張の両方を開始時に示す新しいエラーログメッセージ。
+-   **データベースのファイルの瞬時初期化ログ:** サーバーの起動時に、データベースのファイルの瞬時初期化の状態 (有効/無効) を示す新しいエラーログメッセージ。
+-   **呼び出し履歴のモジュール名:** 拡張イベント (XEvent) の呼び出し履歴には、絶対アドレスではなく、モジュール名とオフセットが含まれるようになりました。
+-   **増分統計用の新しい DMF:** この改善により、 [connect のフィードバック (797156)](https://connect.microsoft.com/SQLServer/feedback/details/797156/display-sys-dm-db-stats-properties-per-partition-for-incremental-statistics)が、パーティションレベルで増分統計を追跡できるようになります。 新しい DMF の dm_db_incremental_stats_properties が導入され、増分統計のパーティションごとの情報を公開するようになりました。
+-   **インデックス使用状況 DMV の動作が更新されました:** この改善により、インデックスを再構築しても、そのインデックスの dm_db_index_usage_stats からの既存の行エントリがクリアされ*ない*お客様からの[接続フィードバック (739566)](https://connect.microsoft.com/SQLServer/feedback/details/739566/rebuilding-an-index-clears-stats-from-sys-dm-db-index-usage-stats)が解決されます。 動作は、SQL 2008 および SQL Server 2016 と同じになります。 [詳細については、ブログを参照してください](https://blogs.msdn.microsoft.com/sql_server_team/index-usage-dmv-behavior-updated/)。
+-   **診断の XE と dmv の相関関係が向上し**ました。この改善により、 [connect のフィードバック (1934583)](https://connect.microsoft.com/SQLServer/feedback/details/1934583/extended-events-query-hash-and-query-plan-hash-data-types)が解決します。 `Query_hash`と`query_plan_hash`は、クエリを一意に識別するために使用されます。 DMV はこれらを varbinary(8) として定義するのに対し、XEvent は UINT64 として定義します。 SQL server には "unsigned bigint" がないため、キャストは常に機能しません。 この機能強化により、新しい XEvent アクションとフィルター列が導入されました。 列は、と`query_hash` `query_plan_hash`に相当しますが、INT64 として定義されている点が異なります。 INT64 定義は、XE と Dmv 間のクエリを関連付けるのに役立ちます。
+-   **BULK INSERT および BCP での utf-8 のサポート:** この改善により、 [connect のフィードバック (370419)](https://connect.microsoft.com/SQLServer/feedback/details/370419/bulk-insert-and-bcp-does-not-recognize-codepage-65001)が解決します。 BULK INSERT と BCP は、UTF-8 文字セットでエンコードされたデータをエクスポートまたはインポートできるようになりました。
+-   **演算子ごとのクエリ実行の簡易プロファイリング:** Showplan は、プラン内の各オペレーターのコストに関する情報を提供します。 ただし、実際の実行時の統計情報は、CPU、i/o の読み取り、スレッドあたりの経過時間などに限定されます。 SQL Server 2014 SP2 では、プラン表示の操作ごとにこれらの追加のランタイム統計が導入されています。 R2 では、クエリの`query_thread_profile`パフォーマンスのトラブルシューティングを支援するために、という名前の XEvent も導入されています。 [詳細については、ブログを参照してください](https://blogs.msdn.microsoft.com/sql_server_team/added-per-operator-level-performance-stats-for-query-processing/)。
+-   **Change Tracking のクリーンアップ:** 必要に応じて`sp_flush_CT_internal_table_on_demand`変更の追跡の内部テーブルをクリーンアップするために、新しいストアドプロシージャが導入されました。
+-   **AlwaysON リースタイムアウトのログ**現在の時刻と予想される更新時刻がログに記録されるように、リースタイムアウトメッセージの新しいログ記録機能が追加されました。 また、タイムアウトに関して、SQL エラーログに新しいメッセージが導入されました。 [詳細については、ブログを参照してください](https://blogs.msdn.microsoft.com/alwaysonpro/2016/02/23/improved-alwayson-availability-group-lease-timeout-diagnostics/)。
+-   **SQL Server で入力バッファーを取得するための新しい DMF。** セッション/要求 (sys. dm_exec_input_buffer) の入力バッファーを取得するための新しい DMF が使用できるようになりました。 この DMF は、機能的には DBCC INPUTBUFFER と同等です。 [詳細については、ブログを参照してください](https://blogs.msdn.microsoft.com/sql_server_team/new-dmf-for-retrieving-input-buffer-in-sql-server/)。
+-   **過小使用および過剰推定メモリ許可の軽減策:** Resource Governor の新しいクエリヒントが MIN_GRANT_PERCENT と MAX_GRANT_PERCENT に追加されました。 この新しいクエリでは、メモリの競合を防ぐために、クエリの実行中にこれらのヒントを活用できます。 詳細については、[サポート技術情報の記事 KB310740](https://support.microsoft.com/kb/3107401)を参照してください。
+-   **メモリ許可と使用状況の診断の向上:** という名前`query_memory_grant_usage`の新しい拡張イベントが SQL Server のトレース機能の一覧に追加されました。 このイベントは、要求および許可されたメモリ許可を追跡します。 このイベントにより、メモリ許可に関連するクエリ実行の問題をトラブルシューティングするためのトレースと分析の機能が向上します。 詳細については、[サポート技術情報の記事 KB3107173](https://support.microsoft.com/kb/3107173)を参照してください。
+-   **Tempdb 書き込み用のクエリ実行診断:**-ハッシュ警告と並べ替えの警告に、物理 i/o 統計、使用されたメモリ、および影響を追跡する行を追加するための列が追加されました。 また、新しい hash_spill_details 拡張イベントも導入されました。 これで、ハッシュと並べ替えの警告 ([KB3107172](https://support.microsoft.com/kb/3107172)) の詳細情報を追跡できるようになりました。 この改善は、SpillToTempDbType 複合型 ([KB3107400](https://support.microsoft.com/kb/3107400)) に新しい属性の形式で XML クエリプランを通じて公開されるようになりました。 Set statistics `ON`に並べ替え作業テーブル統計が表示されるようになりました。
+-   **残存述語のプッシュダウンが関係するクエリ実行プランの診断が向上しました。** 実際に読み取られた行は、クエリのパフォーマンスのトラブルシューティングを向上させるために、クエリ実行プランにレポートされるようになりました。 これらの行は、SET STATISTICS IO を個別にキャプチャする必要性を否定します。 これらの行を使用すると、クエリプランの残存述語のプッシュダウンに関連する情報を確認することもできます。 詳細については、[サポート技術情報の記事 KB3107397](https://support.microsoft.com/kb/3107397)を参照してください。
 
 
 ## <a name="additional-information"></a>追加情報  
- [SQL Server 2014 リソース](../2014-toc/books-online-for-sql-server-2014.md)  
+ [SQL Server 2014 リソース](../2014-toc/index.yml)  
   
- [SQL Server 2014 リリース ノート](https://go.microsoft.com/fwlink/p/?linkID=296445)  
+ [SQL Server 2014 リリースノート](https://go.microsoft.com/fwlink/p/?linkID=296445)  
   
  [SQL Server 2014 リソース センター](https://msdn.microsoft.com/sqlserver/dn135309)  
   
  [SQLCat Web サイト](https://go.microsoft.com/fwlink/p/?linkID=220963)  
-  
-  

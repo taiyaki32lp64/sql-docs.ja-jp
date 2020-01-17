@@ -13,11 +13,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 1dad0f71b2978c25245a42cc33d4adec05dbeaf3
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52757714"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68211087"
 ---
 # <a name="create-a-trace-sql-server-profiler"></a>トレースの作成 (SQL Server Profiler)
   このトピックでは、[!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] を使用してトレースを作成する方法について説明します。  
@@ -29,11 +29,11 @@ ms.locfileid: "52757714"
      **[トレースのプロパティ]** ダイアログ ボックスが表示されます。  
   
     > [!NOTE]  
-    >  **[接続の確立直後にトレースを開始する]** を選択している場合は、**[トレースのプロパティ]** ダイアログ ボックスは表示されずに、トレースが開始されます。 この設定を無効にするには、**[ツール]** メニューの **[オプション]** をクリックし、**[接続の確立直後にトレースを開始する]** チェック ボックスをオフにします。  
+    >  **[接続の確立直後にトレースを開始する]** を選択している場合は、 **[トレースのプロパティ]** ダイアログ ボックスは表示されずに、トレースが開始されます。 この設定を無効にするには、 **[ツール]** メニューの **[オプション]** をクリックし、 **[接続の確立直後にトレースを開始する]** チェック ボックスをオフにします。  
   
 2.  **[トレース名]** ボックスに、トレースの名前を入力します。  
   
-3.  **[使用するテンプレート]** ボックスの一覧で、トレースの基本として使用するトレース テンプレートを選択します。テンプレートを使用しない場合は、**[空白]** を選択します。  
+3.  **[使用するテンプレート]** ボックスの一覧で、トレースの基本として使用するトレース テンプレートを選択します。テンプレートを使用しない場合は、 **[空白]** を選択します。  
   
 4.  トレース結果を保存するには、次のいずれかの操作を実行します。  
   
@@ -43,18 +43,18 @@ ms.locfileid: "52757714"
   
     -   トレースをデータベース テーブルに記録する場合は、 **[テーブルに保存]** をクリックします。  
   
-         必要に応じて、**[最大行数の設定 (1000 行単位)]** チェック ボックスをオンにし、値を指定します。  
+         必要に応じて、 **[最大行数の設定 (1000 行単位)]** チェック ボックスをオンにし、値を指定します。  
   
     > [!CAUTION]  
     >  トレース結果をファイルにもテーブルにも保存しない場合は、 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] を開いているときにトレースを表示できます。 ただし、トレースを停止して [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]を終了した場合、トレース結果は失われます。 このようにトレース結果が失われないようにするには、 **[ファイル]** メニューの **[保存]** をクリックして、 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]を終了する前にトレース結果を保存します。  
   
-5.  必要に応じて、**[トレース停止時刻を有効にする]** チェック ボックスをオンにして、停止日時を指定します。  
+5.  必要に応じて、 **[トレース停止時刻を有効にする]** チェック ボックスをオンにして、停止日時を指定します。  
   
-6.  イベント、データ列、フィルターを追加または削除するには、**[イベントの選択]** タブをクリックします。 詳細については、以下をご覧ください。[トレース ファイルに含めるイベントとデータ列の指定 &#40;SQL Server Profiler&#41;](sql-server-profiler.md)  
+6.  イベント、データ列、フィルターを追加または削除するには、 **[イベントの選択]** タブをクリックします。 詳細については、以下をご覧ください。[トレース ファイルに含めるイベントとデータ列の指定 &#40;SQL Server Profiler&#41;](sql-server-profiler.md)  
   
 7.  **[実行]** をクリックしてトレースを開始します。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [SQL Server Profiler の実行に必要な権限](permissions-required-to-run-sql-server-profiler.md)   
  [SQL Server プロファイラーのテンプレートと権限](sql-server-profiler-templates-and-permissions.md)   
  [[SQL Server Profiler]](sql-server-profiler.md)   

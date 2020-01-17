@@ -19,21 +19,20 @@ helpviewer_keywords:
 ms.assetid: 05d9884f-b74c-4e3c-a23b-c90c1ea5ef02
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 142329f80b55a18eb6724449f3e1ad68dfb72acb
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 09e760bac8e31ba9c78b9809a12f8d595b7ebd05
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47815270"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68263931"
 ---
 # <a name="sysdmexecbackgroundjobqueue-transact-sql"></a>sys.dm_exec_background_job_queue (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   非同期 (バックグラウンド) で実行するようスケジュール設定されたクエリ プロセッサ ジョブごとに 1 行のデータを返します。  
   
-> **注:** これから**[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]** または**[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]**、名前を使用して、 **sys.dm_pdw_nodes_exec_background_job_queue**します。  
+> **注:** これから **[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]** または **[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]** 、名前を使用して、 **sys.dm_pdw_nodes_exec_background_job_queue**します。  
   
 |列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
@@ -54,7 +53,7 @@ ms.locfileid: "47815270"
 ## <a name="permissions"></a>アクセス許可
 
 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]、必要があります`VIEW SERVER STATE`権限。   
-[!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]が必要です、`VIEW DATABASE STATE`データベースの権限。   
+[!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] Premium レベルでは、必要があります、`VIEW DATABASE STATE`データベースの権限。 [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] Standard および Basic 階層は、必要があります、**サーバー管理者**または**Azure Active Directory 管理者**アカウント。   
   
 ## <a name="remarks"></a>コメント  
  このビューは、統計の非同期更新ジョブに関する情報のみを返します。 統計の非同期更新の詳細については、次を参照してください。[統計](../../relational-databases/statistics/statistics.md)します。  

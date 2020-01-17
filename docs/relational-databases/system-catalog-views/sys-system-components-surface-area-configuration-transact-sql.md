@@ -19,28 +19,27 @@ helpviewer_keywords:
 ms.assetid: d9920008-3387-4f9e-8f21-47473f2ba04f
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: b1c7a560abb6b92203753c16ba2d28df89072732
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 665e73b3cd072bfffc214c518d75d96af3591f94
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47814990"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68108871"
 ---
-# <a name="syssystemcomponentssurfaceareaconfiguration-transact-sql"></a>sys.system_components_surface_area_configuration (Transact-SQL)
+# <a name="syssystemcomponentssurfaceareaconfiguration-transact-sql"></a>sys.system_components_surface_area_configuration (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  セキュリティ構成コンポーネントによって有効または無効にできる、実行可能なシステム オブジェクトごとに 1 行のデータを返します。 詳細については、「 [Surface Area Configuration](../../relational-databases/security/surface-area-configuration.md)」を参照してください。  
+  または、有効なセキュリティの構成コンポーネントによって無効になっている実行可能なシステム オブジェクトごとに 1 つの行を返します。 詳細については、「 [Surface Area Configuration](../../relational-databases/security/surface-area-configuration.md)」を参照してください。  
   
 |列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
-|**component_name**|**sysname**|コンポーネントの名前。 キーワード照合順序 Latin1_General_CI_AS_KS_WS が使用されます。 NULL 値は許容されません。|  
-|**database_name**|**sysname**|オブジェクトを含むデータベース。 キーワード照合順序 Latin1_General_CI_AS_KS_WS が使用されます。 次のいずれかを指定する必要があります。<br /><br /> **master**<br /><br /> **msdb**<br /><br /> **mssqlsystemresource**|  
-|**schema_name**|**sysname**|オブジェクトを含むスキーマ。 キーワード照合順序 Latin1_General_CI_AS_KS_WS が使用されます。 NULL 値は許容されません。|  
-|**object_name**|**sysname**|オブジェクトの名前。 キーワード照合順序 Latin1_General_CI_AS_KS_WS が使用されます。 NULL 値は許容されません。|  
+|**component_name**|**sysname**|コンポーネントの名前。 これにより、キーワード照合順序 Latin1_General_CI_AS_KS_WS があります。 NULL 値は許容されません。|  
+|**database_name**|**sysname**|オブジェクトを含むデータベース。 これにより、キーワード照合順序 Latin1_General_CI_AS_KS_WS があります。 次のいずれかを指定する必要があります。<br /><br /> **master**<br /><br /> **msdb**<br /><br /> **mssqlsystemresource**|  
+|**schema_name**|**sysname**|オブジェクトを含むスキーマです。 これにより、キーワード照合順序 Latin1_General_CI_AS_KS_WS があります。 NULL 値は許容されません。|  
+|**object_name**|**sysname**|オブジェクト名。 これにより、キーワード照合順序 Latin1_General_CI_AS_KS_WS があります。 NULL 値は許容されません。|  
 |**state**|**tinyint**|0 = 無効<br /><br /> 1 = 有効|  
-|**type**|**char(2)**|オブジェクトの種類です。 次のいずれかになります。<br /><br /> P = SQL_STORED_PROCEDURE<br /><br /> PC = CLR_STORED_PROCEDURE<br /><br /> FN = SQL_SCALAR_FUNCTION<br /><br /> FS = CLR_SCALAR_FUNCTION<br /><br /> FT = CLR_TABLE_VALUED_FUNCTION<br /><br /> IF = SQL_INLINE_TABLE_VALUED_FUNCTION<br /><br /> TF = SQL_TABLE_VALUED_FUNCTION<br /><br /> X = EXTENDED_STORED_PROCEDURE|  
-|**type_desc**|**nvarchar(60)**|オブジェクトの種類の表示名の説明。|  
+|**type**|**char(2)**|オブジェクトの種類です。 次のいずれかになります。<br /><br /> P = SQL_STORED_PROCEDURE<br /><br /> PC = CLR_STORED_PROCEDURE<br /><br /> FN = SQL_SCALAR_FUNCTION<br /><br /> FS CLR_SCALAR_FUNCTION を =<br /><br /> FT = CLR_TABLE_VALUED_FUNCTION<br /><br /> IF SQL_INLINE_TABLE_VALUED_FUNCTION を =<br /><br /> TF SQL_TABLE_VALUED_FUNCTION を =<br /><br /> X EXTENDED_STORED_PROCEDURE を =|  
+|**type_desc**|**nvarchar(60)**|オブジェクトの種類の説明をフレンドリ名です。|  
   
 ## <a name="permissions"></a>アクセス許可  
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] 詳細については、「 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)」を参照してください。  

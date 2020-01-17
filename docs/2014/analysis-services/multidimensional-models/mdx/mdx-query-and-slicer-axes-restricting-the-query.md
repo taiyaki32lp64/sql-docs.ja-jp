@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - Multidimensional Expressions [Analysis Services], axes
@@ -16,12 +15,12 @@ ms.assetid: a64b8172-cd73-42f9-8847-52e967b9697a
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 3413f4da8443df07732e1c6acca5ed6112cb59dd
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 3290bc5892280cda5e8042de79ff581b305e8ec3
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52508422"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66074040"
 ---
 # <a name="restricting-the-query-with-query-and-slicer-axes-mdx"></a>クエリ軸とスライサー軸によるクエリの制限 (MDX)
   多次元式 (MDX) の SELECT ステートメントを作成する場合、アプリケーションでは通常、キューブを調べ、階層のセットを以下の 2 つのサブセットに分けます。  

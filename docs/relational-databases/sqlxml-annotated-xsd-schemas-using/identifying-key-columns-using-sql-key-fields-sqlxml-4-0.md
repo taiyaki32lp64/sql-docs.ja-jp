@@ -1,10 +1,8 @@
 ---
-title: Sql:key のキー列を使用して特定のフィールド (SQLXML 4.0) |Microsoft Docs
-ms.custom: ''
+title: 'Sql: キーフィールド (SQLXML) を使用してキー列を識別する'
 ms.date: 03/16/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.reviewer: ''
 ms.technology: xml
 ms.topic: reference
 helpviewer_keywords:
@@ -20,38 +18,39 @@ helpviewer_keywords:
 - key-fields annotation
 ms.assetid: 1a5ad868-8602-45c4-913d-6fbb837eebb0
 author: MightyPen
-ms.author: douglasl
-manager: craigg
+ms.author: genemi
+ms.reviewer: ''
+ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: c5cfc4bf5d94e6b1d9820a6ba75c372114ec7eed
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 71d42f9f3f819dc12964ea0f13de92dfc8db5663
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56040443"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75257392"
 ---
 # <a name="identifying-key-columns-using-sqlkey-fields-sqlxml-40"></a>sql:key-fields を使用した、キー列の指定 (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-  XSD スキーマに対して XPath クエリを指定する場合、結果内に適切な入れ子を生成するには、多くの場合キー情報が必要です。 指定する、 **sql:key-フィールド**注釈は、適切な階層が生成されていることを確認する方法です。  
+  XSD スキーマに対して XPath クエリを指定する場合、結果内に適切な入れ子を生成するには、多くの場合キー情報が必要です。 **Sql: キーフィールド**の注釈を指定すると、適切な階層が生成されるようにすることができます。  
   
 > [!NOTE]  
->  適切な入れ子を確実には、お勧めを指定すること**sql:key-フィールド**をテーブルにマップされた要素。 作成される XML は、基になる結果セットの順序指定に影響を受けます。 場合**sql:key-フィールド**が指定されていない、生成された XML が適切ないない可能性があります。  
+>  適切な入れ子を確保するために、テーブルにマップされる要素には**sql: キーフィールド**を指定することをお勧めします。 作成される XML は、基になる結果セットの順序指定に影響を受けます。 **Sql: キーフィールド**が指定されていない場合は、生成された XML が正しく作成されていない可能性があります。  
   
- 値**sql:key-フィールド**リレーションの行を一意に識別する列を指定します。 1 つ以上の列は行を一意に識別するために必要な列の値はスペースで区切られます。  
+ **Sql: キーフィールド**の値は、リレーションシップ内の行を一意に識別する列を識別します。 行を一意に識別するために複数の列が必要な場合、列の値はスペースで区切られます。  
   
- 使用する必要があります、 **sql:key-フィールド**注釈要素が含まれている場合、  **\<sql:relationship >** を要素と子要素の間は、主キーは提供されません親要素で指定されているテーブル。  
+ 要素と子要素の間に定義されている** \<sql: relationship>** が要素に含まれていても、親要素で指定されているテーブルの主キーを提供しない場合は、 **sql: key-fields**注釈を使用する必要があります。  
   
-## <a name="examples"></a>使用例  
- 次の例を使用した実際のサンプルを作成するには、特定の条件を満たす必要があります。 詳細については、次を参照してください。 [SQLXML の例を実行するための要件](../../relational-databases/sqlxml/requirements-for-running-sqlxml-examples.md)します。  
+## <a name="examples"></a>例  
+ 次の例を使用した実際のサンプルを作成するには、特定の条件を満たす必要があります。 詳細については、「 [SQLXML の例を実行するための要件](../../relational-databases/sqlxml/requirements-for-running-sqlxml-examples.md)」を参照してください。  
   
-### <a name="a-producing-the-appropriate-nesting-when-sqlrelationship-does-not-provide-sufficient-information"></a>A. ときに適切な入れ子を生成\<sql:relationship > 十分な情報は提供されません  
- この例は、場所を示しています**sql:key-フィールド**指定する必要があります。  
+### <a name="a-producing-the-appropriate-nesting-when-sqlrelationship-does-not-provide-sufficient-information"></a>A. Sql: relationship> が\<十分な情報を提供しない場合に適切な入れ子を生成する  
+ 次の例は **、sql: キーフィールド**を指定する必要がある場所を示しています。  
   
- 次のスキーマを検討してください。 スキーマ間の階層の指定、 **\<順序 >** と **\<顧客 >** いる要素、 **\<順序 >** 要素は親と **\<顧客 >** 要素は、子。  
+ 次のスキーマについて考えてみます。 このスキーマでは、order ** \<>** 要素が親で、 ** \<customer>** 要素が子である、 ** \<order>** と** \<customer>** 要素の間の階層を指定します。  
   
- **\<Sql:relationship >** 親子リレーションシップを指定するタグを使用します。 このタグでは、Sales.SalesOrderHeader テーブルの CustomerID を親キーとして識別し、Sales.Customer テーブルの子キー CustomerID を参照します。 提供される情報 **\<sql:relationship >** 親テーブル (Sales.SalesOrderHeader) 内の行を一意に識別するには不十分です。 指定しないと、 **sql:key-フィールド**注釈、生成される階層は正確ではありません。  
+ ** \<Sql: relationship>** タグは、親子のリレーションシップを指定するために使用されます。 このタグでは、Sales.SalesOrderHeader テーブルの CustomerID を親キーとして識別し、Sales.Customer テーブルの子キー CustomerID を参照します。 ** \<Sql: relationship>** で提供される情報は、親テーブル (SalesOrderHeader) 内の行を一意に識別するのに十分ではありません。 このため、 **sql: キーフィールド**の注釈がないと、生成される階層が不正確になります。  
   
- **Sql:key-フィールド** で指定した **\<順序 >** 注釈は、親 (Sales.SalesOrderHeader テーブル) 内の行を一意に識別し、その子要素が下に表示、その親。  
+ Sql: ** \<順序>** で指定された**キーフィールド**では、注釈は親 (SalesOrderHeader テーブル) 内の行を一意に識別し、その子要素はその親の下に表示されます。  
   
  スキーマは次のようになります。  
   
@@ -90,7 +89,7 @@ ms.locfileid: "56040443"
   
 1.  上のスキーマのコードをコピーして、テキスト ファイルに貼り付け、 KeyFields1.xml として保存します。  
   
-2.  次のテンプレートをコピーして、テキスト ファイルに貼り付け、 KeyFields1.xml を保存したディレクトリに KeyFields1T.xml として保存します。 テンプレートの XPath クエリでは、すべてを返します、 **\<順序 >** 3 未満の顧客 Id を持つ要素。  
+2.  次のテンプレートをコピーして、テキスト ファイルに貼り付け、 KeyFields1.xml を保存したディレクトリに KeyFields1T.xml として保存します。 このテンプレートの XPath クエリでは、CustomerID が3未満のすべての** \<注文>** 要素が返されます。  
   
     ```  
     <ROOT xmlns:sql="urn:schemas-microsoft-com:xml-sql">  
@@ -107,10 +106,10 @@ ms.locfileid: "56040443"
     ```  
   
 3.  SQLXML 4.0 テスト スクリプト (sqlxml4test.vbs) を作成し、それを使用してテンプレートを実行します。  
+
+     詳細については、「ADO を使用した[SQLXML クエリの実行](../../relational-databases/sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md)」を参照してください。  
   
-     詳細については、次を参照してください。 [SQLXML クエリの実行に ADO を使用する](../../relational-databases/sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md)します。  
-  
- これは、結果セットの一部です。  
+ 結果セットの一部を次に示します。  
   
 ```  
 <ROOT xmlns:sql="urn:schemas-microsoft-com:xml-sql">  
@@ -128,7 +127,7 @@ ms.locfileid: "56040443"
 ```  
   
 ### <a name="b-specifying-sqlkey-fields-to-produce-proper-nesting-in-the-result"></a>B. sql:key-fields を指定して結果内に適切な入れ子を生成する  
- 次のスキーマを使用して指定された階層はありません **\<sql:relationship >** します。 スキーマを指定する必要がありますが、 **sql:key-フィールド**HumanResources.Employee テーブルに従業員を一意に識別する注釈。  
+ 次のスキーマでは、 ** \<sql: relationship>** を使用して階層が指定されていません。 スキーマでは、Humanresources.employee テーブル内の従業員を一意に識別するために、 **sql: キーフィールド**の注釈を指定する必要があります。  
   
 ```  
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"  
@@ -155,7 +154,7 @@ ms.locfileid: "56040443"
   
 1.  上のスキーマのコードをコピーして、テキスト ファイルに貼り付け、 KeyFields2.xml として保存します。  
   
-2.  次のテンプレートをコピーして、テキスト ファイルに貼り付け、 KeyFields2.xml を保存したディレクトリに KeyFields2T.xml として保存します。 テンプレートの XPath クエリでは、すべてを返します、  **\<HumanResources.Employee >** 要素。  
+2.  次のテンプレートをコピーして、テキスト ファイルに貼り付け、 KeyFields2.xml を保存したディレクトリに KeyFields2T.xml として保存します。 このテンプレートの XPath クエリは、すべての** \<humanresources.employee>** 要素を返します。  
   
     ```  
     <ROOT xmlns:sql="urn:schemas-microsoft-com:xml-sql">  
@@ -173,9 +172,9 @@ ms.locfileid: "56040443"
   
 3.  SQLXML 4.0 テスト スクリプト (sqlxml4test.vbs) を作成し、それを使用してテンプレートを実行します。  
   
-     詳細については、次を参照してください。 [SQLXML クエリの実行に ADO を使用する](../../relational-databases/sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md)します。  
+     詳細については、「ADO を使用した[SQLXML クエリの実行](../../relational-databases/sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md)」を参照してください。  
   
- これは、結果です。  
+ 結果を次に示します。  
   
 ```  
 <ROOT xmlns:sql="urn:schemas-microsoft-com:xml-sql">  

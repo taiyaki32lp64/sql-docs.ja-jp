@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: 9286a01d-cde2-4b90-af94-9fd7f8da48bf
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: ad8aec58fea182c080d55217db94ea2cda08184b
-ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
+ms.openlocfilehash: 12dffe315485aadc839654996f6af3a561161246
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/18/2018
-ms.locfileid: "53590436"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68003126"
 ---
 # <a name="sqlexecute-function"></a>SQLExecute 関数
 **準拠**  
@@ -36,7 +35,7 @@ ms.locfileid: "53590436"
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
   
 SQLRETURN SQLExecute(  
      SQLHSTMT     StatementHandle);  

@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: analysis-services
 ms.topic: reference
 helpviewer_keywords:
 - stored procedures [Analysis Services], designing
@@ -16,12 +14,12 @@ ms.assetid: af4e7bd5-041b-4a40-9942-0ef6a3af46c6
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: b05a4b7b1fe1c8ee70692472dc69105f01a275e0
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 2948b255f6b6cab85ae5dad71cc9b2f59e547b63
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48164432"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62727662"
 ---
 # <a name="designing-stored-procedures"></a>ストアド プロシージャのデザイン
   ストアド プロシージャでは、管理オブジェクト モデルである分析管理オブジェクト (AMO) とクライアント指向のオブジェクト モデルである [!INCLUDE[msCoName](../../includes/msconame-md.md)] ActiveX® Data Objects (Multidimensional) (ADO MD) の両方を使用できます。  

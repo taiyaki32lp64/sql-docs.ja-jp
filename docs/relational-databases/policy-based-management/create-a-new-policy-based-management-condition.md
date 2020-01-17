@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 8a612f7e-6c70-49db-a4de-48431e097cc5
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: 3f6f17e97b485e7c6c4dc747886bd5304b8fa812
-ms.sourcegitcommit: ef6e3ec273b0521e7c79d5c2a4cb4dcba1744e67
+ms.openlocfilehash: 739d706749b24720861b7572bde7e29473f1d406
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51512367"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67901160"
 ---
 # <a name="create-a-new-policy-based-management-condition"></a>新しいポリシー ベースの管理条件の作成
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

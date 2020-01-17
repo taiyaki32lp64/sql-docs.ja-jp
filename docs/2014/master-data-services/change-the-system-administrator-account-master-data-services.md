@@ -4,21 +4,20 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.topic: conceptual
 helpviewer_keywords:
 - administrators [Master Data Services], changing
 ms.assetid: cf30312e-4338-49a7-90f0-6e4f7b431ff8
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 4a10b20332059c9cf1b9aed41caf462faf96414e
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 911bd20c7d232bca52fdf9dca294bd7a4924d984
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56020294"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66054134"
 ---
 # <a name="change-the-system-administrator-account-master-data-services"></a>システム管理者アカウントの変更 (マスター データ サービス)
   として指定されているユーザー アカウントを変更することができます、[!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]システム管理者です。  

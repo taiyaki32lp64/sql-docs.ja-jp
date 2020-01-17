@@ -1,7 +1,7 @@
 ---
-title: セーブポイントの使用 |Microsoft Docs
+title: セーブポイントを使用する |Microsoft Docs
 ms.custom: ''
-ms.date: 01/19/2017
+ms.date: 08/12/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 3b48eb13-32ef-4fb3-8e95-dbc9468c9a44
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: dd1ab1ab51a1fa7214d704ab6152af9368c0c67a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 9d860e368fe66ce926687fd343fe9f23704cfc7d
+ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47695930"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "69026129"
 ---
 # <a name="using-savepoints"></a>セーブポイントの使用
 

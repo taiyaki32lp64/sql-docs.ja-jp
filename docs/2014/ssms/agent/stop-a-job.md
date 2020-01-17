@@ -14,17 +14,17 @@ ms.assetid: 4249328a-24d8-4284-9d1d-7d04ed90e3d7
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: f334834ff1deecebbc719ec71fb8348c13e4f68e
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: b55ca5e8f2e57e85a75f610efe4115ced0dce365
+ms.sourcegitcommit: f912c101d2939084c4ea2e9881eb98e1afa29dad
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53358764"
+ms.lasthandoff: 10/23/2019
+ms.locfileid: "72798147"
 ---
 # <a name="stop-a-job"></a>Stop a Job
   このトピックでは、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェントのジョブを停止する方法について説明します。 ジョブとは、SQL Server エージェントで実行される特定の一連の処理のことです。  
   
--   **作業を開始する準備:**   
+-   **作業を開始する準備:**  
   
      [制限事項と制約事項](#Restrictions)  
   
@@ -44,9 +44,9 @@ ms.locfileid: "53358764"
   
 -   ジョブで **CmdExec** または **PowerShell**型のステップが現在実行されている場合、実行中のプロセス (MyProgram.exe など) は途中で強制終了されます。 途中で強制終了した場合、そのプロセスによって使用されていたファイルが開いたままになるなど、予期しない結果が発生する可能性があります。  
   
--   マルチサーバー ジョブの場合、STOP 命令はそのジョブのすべての対象サーバーに通知されます。  
+-   マルチサーバー ジョブの場合、STOP 命令はそのジョブのすべてのターゲット サーバーに通知されます。  
   
-###  <a name="Security"></a> セキュリティ  
+###  <a name="Security"></a> Security  
  詳細については、「 [SQL Server エージェントのセキュリティの実装](implement-sql-server-agent-security.md)」をご覧ください。  
   
 ##  <a name="SSMS"></a> SQL Server Management Studio の使用  
@@ -61,15 +61,15 @@ ms.locfileid: "53358764"
   
 ##  <a name="TSQL"></a> Transact-SQL の使用  
   
-#### <a name="to-stop-a-job"></a>ジョブを停止するには  
+### <a name="to-stop-a-job"></a>ジョブを停止するには  
   
 1.  **オブジェクト エクスプローラー**で、 [!INCLUDE[ssDE](../../includes/ssde-md.md)]のインスタンスに接続します。  
   
 2.  [標準] ツール バーの **[新しいクエリ]** をクリックします。  
   
-3.  次の例をコピーしてクエリ ウィンドウに貼り付け、 **[実行]** をクリックします。  
+3.  次の例をコピーしてクエリ ウィンドウに貼り付け、**[実行]** をクリックします。  
   
-    ```  
+    ```sql
     -- stops a job named Weekly Sales Data Backup  
     USE msdb ;  
     GO  
@@ -79,11 +79,10 @@ ms.locfileid: "53358764"
     GO  
     ```  
   
- 詳細については、次を参照してください。 [sp_stop_job &#40;TRANSACT-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-stop-job-transact-sql)します。  
+ 詳細については、「 [sp_stop_job &#40;transact-sql&#41;](/sql/relational-databases/system-stored-procedures/sp-stop-job-transact-sql)」を参照してください。  
   
-##  <a name="SMO"></a> SQL Server 管理オブジェクトの使用  
- **ジョブを停止するには**  
+##  <a name="SMO"></a>SQL Server 管理オブジェクトの使用  
+
+### <a name="to-stop-a-job"></a>ジョブを停止するには
   
  Visual Basic、Visual C#、PowerShell などのプログラミング言語で `Stop` クラスの `Job` メソッドを呼び出します。 詳細については、「 [SQL Server 管理オブジェクト (SMO) プログラミング ガイド](https://msdn.microsoft.com/library/ms162169.aspx)」を参照してください。  
-  
-  

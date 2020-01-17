@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: bf2ae3ac-bfe4-4709-b50a-ea7c282c3164
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: e544c3f373f5e85254d40915e6b6f241a6b70379
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.openlocfilehash: 3558fc1fecd343fff480cca3b45c468860a801f8
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51606032"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67963838"
 ---
 # <a name="onreadystatechange-event-rds"></a>onReadyStateChange イベント (RDS)
 **OnReadyStateChange**イベントが呼び出されるたびの値、 [ReadyState](../../../ado/reference/rds-api/readystate-property-rds.md)プロパティの変更。  
@@ -43,7 +42,7 @@ onReadyStateChange
 ## <a name="applies-to"></a>適用対象  
  [DataControl オブジェクト (RDS)](../../../ado/reference/rds-api/datacontrol-object-rds.md)  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [ADO イベント モデルの例 (vc++)](../../../ado/reference/ado-api/ado-events-model-example-vc.md)   
  [ADO イベント ハンドラーの概要](../../../ado/guide/data/ado-event-handler-summary.md)
 

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - ARTXP
@@ -20,14 +19,14 @@ ms.assetid: 642297cc-f32a-499b-b26e-fdc7ee24361e
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: f9cf1670325e0f40ddfb481f186ee3440aa5b9dc
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 97132ff64405df19c56c080cc5a1baa704a700d3
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48134262"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66083769"
 ---
-# <a name="microsoft-time-series-algorithm"></a>Microsoft タイム シリーズ アルゴリズム
+# <a name="microsoft-time-series-algorithm"></a>Microsoft Time Series アルゴリズム
   [!INCLUDE[msCoName](../../includes/msconame-md.md)]タイム シリーズ アルゴリズムが時間の経過と共に製品売上などの連続値の予測用に最適化された回帰アルゴリズムを提供します。 デシジョン ツリーなどの他の [!INCLUDE[msCoName](../../includes/msconame-md.md)] アルゴリズムでは、傾向を予測するために新しい情報を含む列を追加する必要がありますが、タイム シリーズ モデルでは必要ありません。 タイム シリーズ モデルでは、モデルの作成に使用された元のデータセットのみを使用して傾向を予測できます。 予測を実行するときに新しいデータをモデルに追加することで、新しいデータを自動的に傾向分析に組み込むこともできます。  
   
  次の図は、4 つの販売地域における一定期間の製品売上を予測するための一般的なモデルを示しています。 図に示したモデルでは、各地域の売上が赤、黄、紫、青の線で表されています。 各地域を表す線は、次の 2 つの部分で構成されます。  
@@ -48,7 +47,7 @@ ms.locfileid: "48134262"
  この会社では、四半期ごとに最新の売上データを使ってモデルを更新し、予測を更新して、最新の傾向をモデル化することを計画しています。 売上データを正確に更新していない、または一貫して更新していない販売店のデータを修正するために、汎用予測モデルを作成し、それを使用して全地域の予測を作成します。  
   
 ## <a name="how-the-algorithm-works"></a>アルゴリズムの動作  
- [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]、[!INCLUDE[msCoName](../../includes/msconame-md.md)]タイム シリーズ アルゴリズムが ARTXP、1 つのアルゴリズムを使用します。 ARTXP アルゴリズムは短期的な予測が最適化されていましたし、そのため、一連の次の可能性が高い値を予測します。 以降で[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]、[!INCLUDE[msCoName](../../includes/msconame-md.md)]タイム シリーズ アルゴリズムが ARTXP アルゴリズムと 2 番目のアルゴリズム、ARIMA の両方を使用します。 ARIMA アルゴリズムは、長期的な予測に適しています。 ARTXP アルゴリズムと ARIMA アルゴリズムの実装の詳細については、「 [Microsoft タイム シリーズ アルゴリズム テクニカル リファレンス](microsoft-time-series-algorithm-technical-reference.md)」を参照してください。  
+ [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]、[!INCLUDE[msCoName](../../includes/msconame-md.md)]タイム シリーズ アルゴリズムが ARTXP、1 つのアルゴリズムを使用します。 ARTXP アルゴリズムは短期的な予測が最適化されていましたし、そのため、一連の次の可能性が高い値を予測します。 以降で[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]、[!INCLUDE[msCoName](../../includes/msconame-md.md)]タイム シリーズ アルゴリズムが ARTXP アルゴリズムと 2 番目のアルゴリズム、ARIMA の両方を使用します。 ARIMA アルゴリズムは、長期的な予測に適しています。 ARTXP アルゴリズムと ARIMA アルゴリズムの実装の詳細については、「 [Microsoft Time Series アルゴリズム テクニカル リファレンス](microsoft-time-series-algorithm-technical-reference.md)」を参照してください。  
   
  既定では、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] タイム シリーズ アルゴリズムはアルゴリズムを組み合わせて使用し、パターンの分析と予測を実行します。 同じデータを 2 つの異なるモデルをトレーニングします。 1 つのモデルは ARTXP アルゴリズムを使用すると、1 つのモデルは、ARIMA アルゴリズムを使用します。 この 2 つのモデルの結果を統合して、さまざまな数のタイム スライスに対して最適な予測を出力します。 ARTXP アルゴリズムは短期的な予測に適しているため、予測シリーズの初めのうちに高い割合で使用されます。 一方、さらに将来のタイム スライスを予測対象とするにつれて、ARIMA が使用される割合が高くなります。  
   
@@ -72,7 +71,7 @@ ms.locfileid: "48134262"
   
  2 つのアルゴリズムを使用することで、データの周期性を複数レベルで検出できます。 たとえば、データに年周期性があり、さらに月周期性もある場合があります。 このような周期性を検出するために、周期性のヒントを指定することや、アルゴリズムでの周期性の自動検出を指定することができます。  
   
- 周期性に加え、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] タイム シリーズ アルゴリズムには、周期性の検出、予測の実行、事例の分析の際の動作を制御するパラメーターが他にもあります。 アルゴリズムのパラメーターを設定する方法については、「 [Microsoft タイム シリーズ アルゴリズム テクニカル リファレンス](microsoft-time-series-algorithm-technical-reference.md)」を参照してください。  
+ 周期性に加え、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] タイム シリーズ アルゴリズムには、周期性の検出、予測の実行、事例の分析の際の動作を制御するパラメーターが他にもあります。 アルゴリズムのパラメーターを設定する方法については、「 [Microsoft Time Series アルゴリズム テクニカル リファレンス](microsoft-time-series-algorithm-technical-reference.md)」を参照してください。  
   
 ## <a name="data-required-for-time-series-models"></a>タイム シリーズ モデルに必要なデータ  
  データ マイニング モデルのトレーニングに使用するデータを用意する際には、特定のモデルにおける要件と、データの使用方法を把握しておいてください。  
@@ -99,10 +98,10 @@ ms.locfileid: "48134262"
   
  どちらの例でも、各製品の今後の売上と数量を新しく予測できます。 製品または時間について新しい値を予測することはできません。  
   
-### <a name="example-1-time-series-data-set-with-series-represented-as-column-values"></a>例 1: 列値として表されるシリーズを含むタイム シリーズ データ セット  
+### <a name="example-1-time-series-data-set-with-series-represented-as-column-values"></a>例 1 : 列の値として表されるシリーズでタイム シリーズ データ セット  
  この例では、次の入力ケースのテーブルを使用します。  
   
-|TimeID|Product|売上|Volume|  
+|TimeID|製品|売上|Volume|  
 |------------|-------------|-----------|------------|  
 |1/2001|A|1000|600|  
 |2/2001|A|1100|500|  
@@ -115,7 +114,7 @@ ms.locfileid: "48134262"
   
  Sales 列は 1 日の指定製品の総利益を示し、Volume 列は倉庫に残っている指定製品の数量を示します。 この 2 つの列に、モデルのトレーニングに使用されるデータが含まれます。 Sales と Volume の両方が、Product 列の各シリーズの予測可能な属性になります。  
   
-### <a name="example-2-time-series-data-set-with-each-series-in-separate-column"></a>例 2: 各シリーズが別の列に含まれるタイム シリーズ データ セット  
+### <a name="example-2-time-series-data-set-with-each-series-in-separate-column"></a>例 2:各系列を別の列にタイム シリーズ データ セット  
  この例では最初の例と基本的に同じ入力データを使用しますが、次の表に示すように、入力データの構成が異なります。  
   
 |TimeID|A_Sales|A_Volume|B_Sales|B_Volume|  
@@ -123,7 +122,7 @@ ms.locfileid: "48134262"
 |1/2001|1000|600|500|900|  
 |2/2001|1100|500|300|890|  
   
- このテーブルでも、TimeID 列にタイム シリーズ モデルのケース シリーズが含まれ、これを Key Time 列として指定します。 ただし、前の例での Sales 列と Volume 列がそれぞれ 2 つの列に分けられ、その各列の前に製品名が付けられています。 このため、TimeID 列の各日には 1 つのエントリしか存在しません。 これにより、タイム シリーズ モデルには、A_Sales、A_Volume、B_Sales、および B_Volume という 4 つの予測可能列が含まれます。  
+ このテーブルでも、TimeID 列にタイム シリーズ モデルのケース シリーズが含まれ、これを Key Time 列として指定します。 ただし、前の例での Sales 列と Volume 列がそれぞれ 2 つの列に分けられ、その各列の前に製品名が付けられています。 このため、TimeID 列の各日には 1 つのエントリしか存在しません。 これは、次の 4 つの予測可能列が含まれるタイム シリーズ モデルを作成します。A_Sales、A_Volume、B_Sales、および B_Volume します。  
   
  さらに、製品名が独立した列に分けられたため、シリーズ キー列を追加指定する必要がなくなります。 モデル内のすべての列が、ケース シリーズ列または予測可能列になります。  
   
@@ -153,11 +152,11 @@ ms.locfileid: "48134262"
   
 -   ドリルスルーがサポートされています。  
   
-## <a name="see-also"></a>参照  
- [データ マイニング アルゴリズム&#40;Analysis Services - データ マイニング&#41;](data-mining-algorithms-analysis-services-data-mining.md)   
- [Microsoft タイム シリーズ ビューアーを使用してモデルを参照します。](browse-a-model-using-the-microsoft-time-series-viewer.md)   
+## <a name="see-also"></a>関連項目  
+ [データ マイニング アルゴリズム &#40;Analysis Services - データ マイニング&#41;](data-mining-algorithms-analysis-services-data-mining.md)   
+ [Microsoft タイム シリーズ ビューアーを使用したモデルの参照](browse-a-model-using-the-microsoft-time-series-viewer.md)   
  [Microsoft タイム シリーズ アルゴリズム テクニカル リファレンス](microsoft-time-series-algorithm-technical-reference.md)   
  [タイム シリーズ モデルのクエリ例](time-series-model-query-examples.md)   
- [タイム シリーズ モデルのマイニング モデル コンテンツ&#40;Analysis Services - データ マイニング&#41;](mining-model-content-for-time-series-models-analysis-services-data-mining.md)  
+ [タイム シリーズ モデルのマイニング モデル コンテンツ (Analysis Services - データ マイニング)](mining-model-content-for-time-series-models-analysis-services-data-mining.md)  
   
   

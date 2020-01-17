@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: cfd37a82-aad2-41cd-8d13-1566c43d95f0
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: e8e37459c5e48fe817a3bdbb6a824550cf977f66
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 25ea858995c884af202d3d80f4de675c9f4cda27
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47696971"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67923057"
 ---
 # <a name="referencing-the-ado-libraries-in-a-visual-basic-6-application"></a>Visual Basic 6 アプリケーションで ADO ライブラリを参照する
 Microsoft Visual Basic 6 アプリケーションには、ADO ライブラリをインポートするには、Visual Basic プロジェクトで参照を設定する必要があります。  

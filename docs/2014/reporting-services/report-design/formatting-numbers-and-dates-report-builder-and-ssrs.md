@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 f1_keywords:
 - sql12.rtp.rptdesigner.placeholderproperties.number.f1
@@ -17,15 +16,15 @@ f1_keywords:
 - sql12.rtp.rptdesigner.textboxproperties.number.f1
 - "10285"
 ms.assetid: 6de1a725-9f06-4708-be26-2d55e442e344
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 2ea5a469c43ce89cb4d5f73f29b7c192fde08678
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: f0ee681c291d9dd96733f083138af39ef2b280e1
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56284490"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66105837"
 ---
 # <a name="formatting-numbers-and-dates-report-builder-and-ssrs"></a>数値と日付の書式設定 (レポート ビルダーおよび SSRS)
   データ領域の数値と日付の書式を設定するには、対応するデータ領域の **[プロパティ]** ダイアログ ボックスの **[数値]** ページを使用します。  
@@ -55,7 +54,7 @@ ms.locfileid: "56284490"
   
 -   同じテキスト ボックスで数字と文字が混在するテキストの書式を設定する場合、プレースホルダーを使用して、テキストの数値以外の部分とは別に数値の書式を設定します。 詳細については、「 [テキストとプレースホルダーの書式設定 (レポート ビルダーおよび SSRS)](formatting-text-and-placeholders-report-builder-and-ssrs.md)をクリックする必要があります。 テキスト ボックスで Format プロパティについて指定された書式設定文字列が正しくない場合、書式設定文字列は無視されます。 グラフまたはゲージで Format プロパティについて指定された書式設定文字列が正しくない場合、指定した書式設定文字列は文字列として解釈され、書式設定は適用されません。  
   
--   **[カテゴリ]** の **[通貨]** をクリックして、 **[値の表示単位]** をオンにすると、 **[千]**、 **[百万]**、または **[十億]** を選択し、財務上の形式を使用して数値を表示できます。 たとえば、フィールド値が 1,789,905,394 の場合、 **[十億]** を選択して、小数点以下桁数を 2 桁に指定すると、レポートに表示される値は 1.78 です。  
+-   **[カテゴリ]** の **[通貨]** をクリックして、 **[値の表示単位]** をオンにすると、 **[千]** 、 **[百万]** 、または **[十億]** を選択し、財務上の形式を使用して数値を表示できます。 たとえば、フィールド値が 1,789,905,394 の場合、 **[十億]** を選択して、小数点以下桁数を 2 桁に指定すると、レポートに表示される値は 1.78 です。  
   
 ## <a name="see-also"></a>参照  
  [テキストとプレースホルダーの書式設定 (レポート ビルダーおよび SSRS)](formatting-text-and-placeholders-report-builder-and-ssrs.md)   

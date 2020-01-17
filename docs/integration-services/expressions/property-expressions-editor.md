@@ -12,20 +12,23 @@ f1_keywords:
 helpviewer_keywords:
 - Property Expressions Editor dialog box
 ms.assetid: 4c8b1681-d8fe-4f92-b76f-a396eb921c0c
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: 74efb5537a801e7c01d9a11a2ef9cd219e46312a
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 8b1f4f85fbd4806c164faef0c8bcac7a982cc4fe
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52532155"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71288494"
 ---
 # <a name="property-expressions-editor"></a>[プロパティ式エディター]
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   **[プロパティ式エディター]** ダイアログ ボックスを使用すると、プロパティ値を更新するプロパティ式の作成、編集、または削除ができます。  
   
-## <a name="options"></a>[変数]  
+## <a name="options"></a>オプション  
  **プロパティ**  
  オブジェクト プロパティを一覧から選択します。  
   

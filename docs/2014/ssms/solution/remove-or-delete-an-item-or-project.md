@@ -15,11 +15,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: dd6d04b186c68b128ad35ec5e5bd8b92ad1541c0
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52795704"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63035695"
 ---
 # <a name="remove-or-delete-an-item-or-project"></a>アイテムやプロジェクトのクリアまたは削除
   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] プロジェクトに含まれるプロジェクト アイテムには、クエリ、接続、およびその他のファイルがあります。 プロジェクトのクエリとその他のファイルは、記憶域に残したままソリューションからクリアできます。 現在のソリューションでは使用せずに、別のソリューションで使用する場合は、プロジェクトやアイテムをクリアします。  
@@ -52,7 +52,7 @@ ms.locfileid: "52795704"
   
 3.  **[ファイル]** メニューの **[削除]** をクリックします。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [ソリューション エクスプ ローラー](solution-explorer.md)   
  [新しい項目をプロジェクトに追加します。](add-new-items-to-a-project.md)   
  [既存の項目をプロジェクトに追加する](add-existing-items-to-a-project.md)  

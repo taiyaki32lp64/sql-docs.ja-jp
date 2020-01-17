@@ -18,15 +18,15 @@ helpviewer_keywords:
 - bulk importing [SQL Server], BULK INSERT statement
 - Transact-SQL bulk export/import operations
 ms.assetid: 18a64236-0285-46ea-8929-6ee9bcc020b9
-author: douglaslMS
-ms.author: douglasl
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 8e8bbc4289a31d39c6e2801b39ec24039a69973d
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: e8b09ee01da2dde8e8bf50fbda21c1c8bca1689d
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54127582"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66011935"
 ---
 # <a name="import-bulk-data-by-using-bulk-insert-or-openrowsetbulk-sql-server"></a>BULK INSERT または OPENROWSET(BULK...) を使用した一括データのインポート (SQL Server)
   このトピックでは、 [!INCLUDE[tsql](../../includes/tsql-md.md)] の BULK INSERT ステートメントと INSERT...SELECT * FROM OPENROWSET(BULK...) ステートメントを使用して、データ ファイルから [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のテーブルにデータを一括インポートする方法の概要を説明します。 また、BULK INSERT および OPENROWSET(BULK...) を使用する場合のセキュリティの注意点や、リモート データ ソースから一括インポートする方法についても説明します。  
@@ -71,7 +71,7 @@ ms.locfileid: "54127582"
   
  INSERT ...SELECT * FROM OPENROWSET(BULK...)  
   
- OPENROWSET(BULK...) を INSERT ステートメント内で使用する場合は、テーブル ヒントがサポートされます。 BULK 句は、TABLOCK などの通常のテーブル ヒントに加えて、次の特殊なテーブル ヒントを使用できます。IGNORE_CONSTRAINTS (CHECK 制約のみ無視)、IGNORE_TRIGGERS、KEEPDEFAULTS、および KEEPIDENTITY です。 詳細については、「[テーブル ヒント &#40;Transact-SQL&#41;](/sql/t-sql/queries/hints-transact-sql-table)」を参照してください。  
+ OPENROWSET(BULK...) を INSERT ステートメント内で使用する場合は、テーブル ヒントがサポートされます。 TABLOCK などの通常のテーブル ヒントに加えて、BULK 句では、次の特殊なテーブル ヒントを使用できます:IGNORE_CONSTRAINTS (CHECK 制約のみ無視します)、IGNORE_TRIGGERS、KEEPDEFAULTS、KEEPIDENTITY。 詳細については、「[テーブル ヒント &#40;Transact-SQL&#41;](/sql/t-sql/queries/hints-transact-sql-table)」を参照してください。  
   
  BULK オプションの上記以外の使い方の詳細については、「[OPENROWSET &#40;Transact-SQL&#41;](/sql/t-sql/functions/openrowset-transact-sql)」を参照してください。  
   
@@ -102,7 +102,7 @@ ms.locfileid: "54127582"
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] および [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows では、認証されている Windows ユーザーの資格情報を転送することで、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスから別の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスへ接続できるように構成することが可能です。 この設定を、" *権限借用* " または " *権限委譲*" といいます。 BULK INSERT または OPENROWSET を使用する場合は、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] バージョンによってユーザーの権限借用のセキュリティがどのように処理されるかを理解しておくことが重要です。 ユーザーの権限を借用することで、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] プロセスまたはユーザーのいずれかが使用しているコンピューターとは異なるコンピューターにデータ ファイルを常駐させることができます。 たとえば、**Computer_A** 上のユーザーが **Computer_B** 上のデータ ファイルにアクセスでき、資格情報の委任が適切に設定されている場合、このユーザーは、**Computer_C** 上で実行されている [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスに接続して、**Computer_B** 上のデータ ファイルにアクセスし、そのファイルから **Computer_C** 上のテーブルにデータを一括インポートできます。  
   
 ## <a name="bulk-importing-from-a-remote-data-file"></a>リモート データ ファイルからの一括インポート  
- BULK INSERT または INSERT...SELECT \* FROM OPENROWSET(BULK...) を使用して別のコンピューターからデータを一括インポートするには、データ ファイルを 2 台のコンピューター間で共有している必要があります。 共有データ ファイルを指定するには、UNC (汎用名前付け規則) 名を使用します。UNC 名の一般的な形式は、 **\\\\**_Servername_**\\**_Sharename_**\\**_Path_**\\**_Filename_です。 また、データ ファイルへのアクセスに使用されるアカウントは、リモート ディスク上のファイルの読み取りに必要な権限を持っている必要があります。  
+ BULK INSERT または INSERT...SELECT \* FROM OPENROWSET(BULK...) を使用して別のコンピューターからデータを一括インポートするには、データ ファイルを 2 台のコンピューター間で共有している必要があります。 共有データ ファイルを指定するには、UNC (汎用名前付け規則) 名を使用します。UNC 名の一般的な形式は、 **\\\\** _Servername_ **\\** _Sharename_ **\\** _Path_ **\\** _Filename_です。 また、データ ファイルへのアクセスに使用されるアカウントは、リモート ディスク上のファイルの読み取りに必要な権限を持っている必要があります。  
   
  たとえば、次の `BULK INSERT` ステートメントでは、 `SalesOrderDetail` というデータ ファイルから `AdventureWorks` データベースの `newdata.txt`テーブルにデータの一括インポートを行います。 このデータ ファイルは、`\dailyorders` というシステムの `salesforce` というネットワーク共有ディレクトリの `computer2` という共有フォルダーにあります。  
   
@@ -115,14 +115,14 @@ GO
 > [!NOTE]  
 >  クライアントが読み取るファイルは [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] とは無関係であるため、**bcp** にはこの制限は適用されません。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [INSERT &#40;Transact-SQL&#41;](/sql/t-sql/statements/insert-transact-sql)   
  [SELECT 句 &#40;Transact-SQL&#41;](/sql/t-sql/queries/select-clause-transact-sql)   
  [データの一括インポートと一括エクスポート &#40;SQL Server&#41;](bulk-import-and-export-of-data-sql-server.md)   
  [OPENROWSET &#40;Transact-SQL&#41;](/sql/t-sql/functions/openrowset-transact-sql)   
  [SELECT &#40;Transact-SQL&#41;](/sql/t-sql/queries/select-transact-sql)   
  [FROM &#40;Transact-SQL&#41;](/sql/t-sql/queries/from-transact-sql)   
- [bcp ユーティリティ](../../tools/bcp-utility.md)   
+ [bcp Utility](../../tools/bcp-utility.md)   
  [BULK INSERT &#40;Transact-SQL&#41;](/sql/t-sql/statements/bulk-insert-transact-sql)  
   
   

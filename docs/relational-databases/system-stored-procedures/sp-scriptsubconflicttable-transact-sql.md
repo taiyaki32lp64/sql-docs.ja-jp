@@ -15,15 +15,14 @@ helpviewer_keywords:
 ms.assetid: 13867145-3dad-47a4-8d50-a65175418479
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 33aa0ee68e649dbf1fd2d0fa7373cab64560fa5d
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 806209b4f881576c680c14b0bc17ec4fd04a086c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52816204"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68126368"
 ---
-# <a name="spscriptsubconflicttable-transact-sql"></a>sp_scriptsubconflicttable (Transact-SQL)
+# <a name="spscriptsubconflicttable-transact-sql"></a>sp_scriptsubconflicttable (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   キューに登録されたサブスクリプション アーティクルのサブスクライバー上に競合テーブルを作成するためのスクリプトを生成します。 生成されたスクリプトは、サブスクライバー側でサブスクリプション データベースについて実行されます。 このストアド プロシージャは、パブリッシャー側でパブリケーション データベースについて実行されます。  
@@ -38,11 +37,9 @@ sp_scriptsubconflicttable [@publication =] 'publication'    , [@article =] 'arti
 ```  
   
 ## <a name="arguments"></a>引数  
- [ **@publication=**] **'***publication***'**  
- 目的のアーティクルを含むパブリケーションの名前を指定します。 名前はデータベース内で一意であることが必要です。 *パブリケーション*は**sysname**、既定値はありません。  
+`[ @publication = ] 'publication'` アーティクルを含むパブリケーションの名前です。 名前は、データベース内で一意である必要があります。 *パブリケーション* は **sysname** 、既定値はありません。  
   
- [  **@article=**] **'***記事***'**  
- サブスクリプション アーティクルの名前を指定します。 *記事*は**sysname**、既定値はありません。  
+`[ @article = ] 'article'` サブスクリプション アーティクルの名前です。 *記事*は**sysname**、既定値はありません。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  **0** (成功) または**1** (失敗)  
@@ -51,15 +48,15 @@ sp_scriptsubconflicttable [@publication =] 'publication'    , [@article =] 'arti
   
 |列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
-|**cmdtext**|**nvarchar (4000)**|キューに登録されたサブスクリプション アーティクルのサブスクライバー上に競合テーブルを作成するための [!INCLUDE[tsql](../../includes/tsql-md.md)] スクリプトを返します。 このスクリプトは、サブスクライバー側でサブスクリプション データベースについて実行されます。|  
+|**cmdtext**|**nvarchar (4000)**|キューに登録されたサブスクリプション アーティクルのサブスクライバー上に競合テーブルを作成するための [!INCLUDE[tsql](../../includes/tsql-md.md)] スクリプトを返します。 このスクリプトは、サブスクライバー側でサブスクリプション データベースで実行されます。|  
   
 ## <a name="remarks"></a>コメント  
- **sp_scriptsubconflicttable**を初期スナップショットが手動でに適用されるサブスクリプションを持つサブスクライバーに使用します。 競合テーブルは、サブスクライバー側ではオプションのテーブルです。  
+ **sp_scriptsubconflicttable**を初期スナップショットが手動でに適用されるサブスクリプションを持つサブスクライバーに使用します。 競合テーブルは、サブスクライバーで省略可能なテーブルです。  
   
 ## <a name="permissions"></a>アクセス許可  
  メンバーのみ、 **sysadmin**固定サーバー ロールまたは**db_owner**固定データベース ロールが実行できる**sp_scriptsubconflicttable**します。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [キュー更新における競合の検出と解決](../../relational-databases/replication/transactional/updatable-subscriptions-queued-updating-conflict-resolution.md)   
  [システム ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   

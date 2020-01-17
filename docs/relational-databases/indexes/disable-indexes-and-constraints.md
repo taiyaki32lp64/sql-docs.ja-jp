@@ -23,14 +23,13 @@ helpviewer_keywords:
 ms.assetid: 2198f1af-fa44-47e9-92df-f4fde322ba18
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: ffc25fcdd81c647dcff73c047924f3fbec13b6c6
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 8e3fbbeed1224c6cd67c4292a6e263fb079d3ad5
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47740100"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68107145"
 ---
 # <a name="disable-indexes-and-constraints"></a>インデックスと制約の無効化
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -43,7 +42,7 @@ ms.locfileid: "47740100"
   
      [制限事項と制約事項](#Restrictions)  
   
-     [Security](#Security)  
+     [セキュリティ](#Security)  
   
 -   **以下を使用してインデックスを無効化するには**  
   
@@ -51,7 +50,7 @@ ms.locfileid: "47740100"
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> 作業を開始する準備  
+##  <a name="BeforeYouBegin"></a> はじめに  
   
 ###  <a name="Restrictions"></a> 制限事項と制約事項  
   
@@ -131,7 +130,7 @@ ms.locfileid: "47740100"
  インデックスが作成されているテーブルまたはビューの名前を表示します。  
   
  **[インデックスの種類]**  
- インデックスの種類 ( **[クラスター化]**、 **[非クラスター化]**、 **[空間]**、または **[XML]**) を表示します。  
+ インデックスの種類を表示します:**クラスター化**、**非クラスター化**、**空間**、または **XML**。  
   
  **ステータス**  
  無効化操作の状態を表示します。 実行後の値は、次のいずれかになります。  

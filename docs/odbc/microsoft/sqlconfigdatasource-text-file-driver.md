@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: c505d36e-1e72-47b2-a9e5-e4926b408468
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 1635538f69b313a73a24ab1531f8793c7d98741e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 46bb00fb01ed3fee8098420794af089f2d8b981e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47612660"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68054085"
 ---
 # <a name="sqlconfigdatasource-text-file-driver"></a>SQLConfigDataSource (テキスト ファイル ドライバー)
 > [!NOTE]  

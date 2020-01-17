@@ -6,14 +6,14 @@ ms.prod_service: reporting-services-native
 ms.technology: mobile-reports
 ms.topic: conceptual
 ms.assetid: c4d5d80d-370a-4a6d-8b76-698bd5ba5ba6
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 45b598a405637d17c1e22cccfdb67858bd8e2a46
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: d01f9f1bef4d13cbce3f3e736cbef2f838c680ef
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56287910"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63061820"
 ---
 # <a name="create-a-tabbed-mobile-report-by-using-drillthrough"></a>ドリルスルーを使用してタブ付きモバイル レポートを作成する
 ドリルスルーとパラメーターを使用して、タブ付きレポートのような外観と動作の [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] モバイル レポートを作成する方法について説明します。
@@ -63,7 +63,7 @@ ms.locfileid: "56287910"
 
     ![02-Sales-Create-DrillThrough-Mobile-Report-Publisher](../../reporting-services/mobile-reports/media/02-sales-create-drillthrough-mobile-report-publisher.png)
 
-2. **[レイアウト]** タブを選択した状態で、**[ビジュアルのプロパティ]** ウィンドウの **[ドリルスルー ターゲット]** を選択します。
+2. **[レイアウト]** タブを選択した状態で、 **[ビジュアルのプロパティ]** ウィンドウの **[ドリルスルー ターゲット]** を選択します。
 
 3. **[モバイル レポート]** を選択します。
 
@@ -71,7 +71,7 @@ ms.locfileid: "56287910"
 
     ![03-Sales-Select-Dashboard-Mobile-Report-Publisher](../../reporting-services/mobile-reports/media/03-sales-select-dashboard-mobile-report-publisher.png)
 
-5. **[ターゲット レポートの構成]** でレポートをフィルター処理するパラメーターを選択し、**[適用]** を選択します。
+5. **[ターゲット レポートの構成]** でレポートをフィルター処理するパラメーターを選択し、 **[適用]** を選択します。
 
    ![04-Sales-Apply-Parameters-Mobile-Report-Publisher](../../reporting-services/mobile-reports/media/04-sales-apply-parameters-mobile-report-publisher.png)
    

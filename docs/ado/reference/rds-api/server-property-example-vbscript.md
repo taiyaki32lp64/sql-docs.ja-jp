@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 0fe57af9-a4d0-4986-a2e3-beaa4d26ed58
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 2c457676daa5870e90964ea4d3d25d0397797cd2
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.openlocfilehash: 661734c710cbc4aa8823965e22559c519e793d41
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51604442"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67963487"
 ---
 # <a name="server-property-example-vbscript"></a>Server プロパティの例 (VBScript)
 > [!IMPORTANT]
@@ -177,7 +176,7 @@ End Sub
 <!-- EndServerRuntimeVBS -->  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [DataControl オブジェクト (RDS)](../../../ado/reference/rds-api/datacontrol-object-rds.md)   
  [Server プロパティ (RDS)](../../../ado/reference/rds-api/server-property-rds.md)
 

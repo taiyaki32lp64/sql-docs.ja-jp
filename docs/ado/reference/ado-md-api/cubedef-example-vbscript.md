@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 4d72a912-ef53-4989-9fca-214937574116
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 34de230b7e52816d028972d4c29c6ba61308231c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 9d17bd016470e7b6f6f6b5452ed049168b977e10
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47735950"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67938661"
 ---
 # <a name="cubedef-example-vbscript"></a>CubeDef の例 (VBScript)
 この例は、web ページ上のキューブのメタデータを表示します。  

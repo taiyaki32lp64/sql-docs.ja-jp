@@ -9,18 +9,17 @@ ms.topic: conceptual
 ms.assetid: 685419f6-8606-462c-be12-8bace45bede6
 author: Shamikg
 ms.author: Shamikg
-manager: craigg
-ms.openlocfilehash: ea6d9a77cc7639bc9adc8daa38f12d0e21dbfb71
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 484b9e12d53d22160358d873ddb2a3dc60d0977e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51664352"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67989813"
 ---
 # <a name="creating-the-server-connection-files-db2tosql"></a>サーバー接続ファイル (DB2ToSQL) の作成
 スクリプト ファイルの [サーバー] セクションで、または別のサーバー接続ファイルには、サーバーの情報を指定することができます。 サーバー接続ファイルのコマンド ライン パラメーターがで`-c <serverconnectionfile>`します。 同じサーバー id がスクリプト ファイルとサーバー接続ファイルの両方に存在する場合は、スクリプト ファイル内のサーバー定義と見なされます。  
   
-**例: 1**  
+**例:1**  
   
 ```  
 <!--Sample of server connection file commands -->  
@@ -77,6 +76,6 @@ ms.locfileid: "51664352"
 ## <a name="next-step"></a>次の手順  
 コンソールの運用には、次の手順は[SSMA コンソールの実行&#40;DB2ToSQL&#41;](../../ssma/db2/executing-the-ssma-console-db2tosql.md)  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
 [SSMA コンソールの実行](https://msdn.microsoft.com/ce63f633-067d-4f04-b8e9-e1abd7ec740b)  
   

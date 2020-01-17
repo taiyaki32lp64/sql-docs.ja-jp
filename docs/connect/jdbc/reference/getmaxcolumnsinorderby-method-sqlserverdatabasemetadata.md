@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: d6af9bb4-c55d-41f4-a266-d10ebee61194
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 442c9acd655e8651cb01072bc076c32ece833f54
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 60bb089d5c53699cda93c888b959fe71e5ffbfe6
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47687520"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67982233"
 ---
 # <a name="getmaxcolumnsinorderby-method-sqlserverdatabasemetadata"></a>getMaxColumnsInOrderBy メソッド (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -42,7 +41,7 @@ public int getMaxColumnsInOrderBy()
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- この getMaxColumnsInOrderBy メソッドは、java.sql.DatabaseMetaData インターフェイスで getMaxColumnsInOrderBy メソッドによって指定されます。  
+ この getMaxColumnsInOrderBy メソッドは、java メタデータインターフェイスの getMaxColumnsInOrderBy メソッドによって指定されます。  
   
 ## <a name="see-also"></a>参照  
  [SQLServerDatabaseMetaData のメソッド](../../../connect/jdbc/reference/sqlserverdatabasemetadata-methods.md)   

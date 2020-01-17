@@ -20,11 +20,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 179944412ed72bc0055bf5c47b788a3a929e9844
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52817977"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63150842"
 ---
 # <a name="performance-monitoring-and-tuning-tools"></a>パフォーマンス監視およびチューニング ツール
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] には、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のイベントを監視したり、物理データベース デザインをチューニングしたりするための広範なツール セットが用意されています。 どのツールを選択するかは、実行する監視またはチューニングの種類や、監視するイベントによって異なります。  
@@ -54,7 +54,7 @@ ms.locfileid: "52817977"
 |キャプチャしたイベントの再生|可 (1 台のコンピューターから)|可 (複数のコンピューターから)|||||  
 |アドホック監視|はい|||[はい]|[はい]|はい|  
 |警告の生成|||はい||||  
-|グラフィック インターフェイス|はい||[はい]|[はい]||はい|  
+|グラフィック インターフェイス|はい||[はい]|[はい]||[はい]|  
 |カスタム アプリケーション内での使用|はい <sup>1</sup>||||はい||  
   
  <sup>1</sup> Using[!INCLUDE[ssSqlProfiler](../../../includes/sssqlprofiler-md.md)]システム ストアド プロシージャ。  

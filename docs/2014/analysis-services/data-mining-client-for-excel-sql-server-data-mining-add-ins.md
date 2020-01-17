@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 12/29/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - Data Mining Client
@@ -15,12 +14,12 @@ ms.assetid: e075e2de-11cc-4f71-9603-0b161bca8a24
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: e61ae53ee78574351545109f75cebd88827c404b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 9c2f11ecbdf90aeeb5e0e5a3ef097152898042d6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48063560"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66086428"
 ---
 # <a name="data-mining-client-for-excel-sql-server-data-mining-add-ins"></a>Excel 用のデータ マイニング クライアント (SQL Server データ マイニング アドイン)
   Excel 用データ マイニング クライアントは、データ クレンジング、モデル構築、予測クエリなど共通のデータ マイニング タスクを実行できる一連のツールです。 Excel テーブルまたは範囲のデータを使用することも、外部データ ソースにアクセスすることもできます。  
@@ -77,12 +76,12 @@ ms.locfileid: "48063560"
  [分類ウィザード&#40;データ マイニング Excel 用アドイン&#41;](classify-wizard-data-mining-add-ins-for-excel.md)  
  **分類**ウィザードを使用して、Excel テーブル、Excel 範囲、または外部データ ソースの既存のデータに基づいて分類モデルを構築できます。 分類モデルはデータから共通のパターンを抽出します。そのため、分類モデルを使用すると、グループ化された値に基づいて予測を行うことができます。 たとえば、分類モデルを使用して、収入パターンまたは支出パターンに基づくリスクを予測できます。  
   
- **分類**ウィザードは、これらの Microsoft データ マイニング アルゴリズムの使用をサポートしています: デシジョン ツリー アルゴリズム、ロジスティック回帰、単純ベイズ、ニューラル ネットワーク。  
+ **分類**ウィザードには、これらの Microsoft データ マイニング アルゴリズムの使用がサポートされています。ロジスティック回帰、ニューラル ネットワーク、単純ベイズ ツリー アルゴリズムを決定します。  
   
  [推定ウィザード&#40;データ マイニング Excel 用アドイン&#41;](estimate-wizard-data-mining-add-ins-for-excel.md)  
  **見積もり**ウィザードを使用して、推定モデルを作成できます。 推定モデルは、データからパターンを抽出し、そのパターンを基に、通貨、売上高、日付、時刻など数値による結果を予測します。  
   
- **見積もり**ウィザードは、これらの Microsoft データ マイニング アルゴリズムを使用: デシジョン ツリー、線形回帰、ロジスティック回帰およびニューラル ネットワーク。  
+ **見積もり**ウィザードは、これらの Microsoft データ マイニング アルゴリズムを使用します。デシジョン ツリー、線形回帰、ロジスティック回帰およびニューラル ネットワーク。  
   
  [主要な影響元の分析&#40;Excel 用テーブル分析ツール&#41;](analyze-key-influencers-table-analysis-tools-for-excel.md)  
  クラスター ウィザードでは、クラスター モデルを構築できます。 クラスター モデルにより、似た特性を共有する行グループが検出されます。 このウィザードは、あらゆる種類のデータのパターンを調べる場合に有用です。  
@@ -156,7 +155,7 @@ ms.locfileid: "48063560"
   
  ヘルプ ページには、アドインのヘルプ、追加のビデオ、デモ、サンプルなどのオンライン リソースへのリンクも記載されています。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [Excel 用テーブル分析ツール](table-analysis-tools-for-excel.md)   
  [Visio データ マイニング図形のトラブルシューティング&#40;SQL Server データ マイニング アドイン&#41;](troubleshooting-visio-data-mining-diagrams-sql-server-data-mining-add-ins.md)  
   

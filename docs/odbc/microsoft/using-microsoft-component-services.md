@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 06450562-d8f3-4987-b7bd-4a70223ff937
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 71c78c6879645fd4f323ca79a7f77911350810c6
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 91d6dcf0ca7f87d6ed510d582f7a7ba0f80e8c74
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47647110"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68088147"
 ---
 # <a name="using-microsoft-component-services"></a>Microsoft コンポーネント サービスの使用
 > [!IMPORTANT]  

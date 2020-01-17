@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - Business Intelligence enhancements [Analysis Services], custom member formulas
@@ -17,15 +16,15 @@ ms.assetid: c4467b08-ce59-4de7-a2d9-c22e246bdd52
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: e8850ce0f77b69be681bf99bcdcaeddc5234656c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 08db0d81ac198795386391f977d09d20ff8d22ac
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48050918"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66076876"
 ---
 # <a name="set-custom-member-formulas-for-attributes-in-a-dimension"></a>ディメンションの属性に対するカスタム メンバー式の設定
-  キューブまたはディメンションにカスタム メンバー式の拡張機能を追加して、多次元式 (MDX) の式の結果を持つディメンション メンバーに関連付けられている既定の集計を置換します  (この拡張機能により、ディメンションの指定した属性で `CustomRollupColumn` プロパティが設定されます)。  
+  キューブまたはディメンションにカスタム メンバー式の拡張機能を追加して、多次元式 (MDX) の式の結果を持つディメンション メンバーに関連付けられている既定の集計を置換します (この拡張機能により、ディメンションの指定した属性で `CustomRollupColumn` プロパティが設定されます)。  
   
 > [!NOTE]  
 >  カスタム メンバー式は、既存のデータ ソースを基にしたディメンションのみに使用できます。 データ ソースを使用せずに作成されたディメンションに対しては、スキーマ生成ウィザードを実行し、データ ソース ビューを作成してからカスタム メンバー式を追加する必要があります。  

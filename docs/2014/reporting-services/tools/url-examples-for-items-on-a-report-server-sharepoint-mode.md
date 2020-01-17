@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 ms.assetid: 54cb861a-8cec-445c-875d-599fb9bd1973
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 9138f2b27518a3b271bd14628b753ba5f729b3f6
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: a7cbf3b3e6e378f27e5c56de6b043c95c56774f8
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56026533"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66099451"
 ---
 # <a name="url-examples-for-published-report-items-on-a-report-server-in-sharepoint-mode-ssrs"></a>SharePoint モードのレポート サーバー上のパブリッシュされたレポート アイテムの URL の例 (SSRS)
   レポートおよび関連アイテムを SharePoint ライブラリにパブリッシュするには、レポート デザイナーなどの [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 作成ツールを使用してコンテンツをパブリッシュするか、SharePoint サイトのアクションを使用してコンテンツをアップロードします。  
@@ -34,7 +33,7 @@ ms.locfileid: "56026533"
   
 |オブジェクト|説明|  
 |------------|-----------------|  
-|SharePoint Web アプリケーション|SharePoint Web アプリケーションは、スタンドアロン サーバーとしてインストールするか、一連の仮想サーバーを含むファームの下にインストールできます。 Web アプリケーションには http:*//servername*などの URL を指定します。複数のサイトを指定することもできます。|  
+|SharePoint Web アプリケーション|SharePoint Web アプリケーションは、スタンドアロン サーバーとしてインストールするか、一連の仮想サーバーを含むファームの下にインストールできます。 Web アプリケーションには http: *//servername*などの URL を指定します。複数のサイトを指定することもできます。|  
 |Site|サイトは、Web アプリケーションの親サイトまたはサブサイトになります。|  
 |SharePoint ライブラリ|ライブラリには、ドキュメントやフォルダーが格納されます。 レポート、レポート モデル、共有データ ソース、および外部画像を保存できるサイト オブジェクトは、ライブラリまたはライブラリ内のフォルダーのみです。|  
 |アイテム|URL 内で参照できるレポート サーバーのアイテムとしては、レポートまたはサブレポートのレポート定義、レポート モデル、共有データ ソース、外部画像などがあります。|  
@@ -45,19 +44,19 @@ ms.locfileid: "56026533"
 ### <a name="url-for-a-sharepoint-server"></a>SharePoint サーバーの URL  
  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] からレポート サーバーに、レポート サーバー プロジェクトまたはレポート モデル プロジェクトを配置する場合は、SharePoint サーバーの URL を使用する必要があります。  
   
- 使用するサーバーの名前を見つけるには、ブラウザーを開いて、レポートのパブリッシュ先として使用する SharePoint ライブラリを探します。 プロトコル プレフィックスのすぐ後に、http:*//servername*のような形式のサーバー名が表示されます。  
+ 使用するサーバーの名前を見つけるには、ブラウザーを開いて、レポートのパブリッシュ先として使用する SharePoint ライブラリを探します。 プロトコル プレフィックスのすぐ後に、http: *//servername*のような形式のサーバー名が表示されます。  
   
- [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] URL プロキシ エンドポイントの使用はサポートされていません。 プロキシ エンドポイントには、http:*//servername:8080/reportserver*のようにポート番号が含まれます。  
+ [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] URL プロキシ エンドポイントの使用はサポートされていません。 プロキシ エンドポイントには、http: *//servername:8080/reportserver*のようにポート番号が含まれます。  
   
 ### <a name="url-for-a-sharepoint-server-site-or-subsite"></a>SharePoint Server サイトまたはサブサイトの URL  
  レポートまたはレポート データ ソースを配置する場合は、SharePoint サイトおよびサブサイト (ある場合) の URL を使用する必要があります。 URL ではサーバー名のすぐ後にサイト名が示されます。たとえば、 http://*servername/site* または http://*servername/site/subsite*のようになります。  
   
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[offSPServ](../../includes/offspserv-md.md)] 2007 または [!INCLUDE[SPS2010](../../includes/sps2010-md.md)] Web アプリケーションでは、サイトおよびサブサイトは一般的にメイン サイトのタブに対応します。 サイト名またはサブサイト名を見つけるには、 **[ホーム]** をクリックし、次に **[すべてのサイト コンテンツの表示]** をクリックします。 末尾までスクロールして **[サイトとワークスペース]** を選択します。 このセクションにサイトの一覧が表示されます。  
+ [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[offSPServ](../../includes/offspserv-md.md)] 2007 または [!INCLUDE[SPS2010](../../includes/sps2010-md.md)] Web アプリケーションでは、サイトおよびサブサイトは一般的にメイン サイトのタブに対応します。 サイト名またはサブサイト名を見つけるには、 **[ホーム]** をクリックし、次に **[すべてのサイト コンテンツの表示]** をクリックします。 末尾までスクロールして **[サイトとワークスペース]** を選択します。 このセクションにサイトの一覧が表示されます。  
   
 ### <a name="url-for-a-sharepoint-library"></a>SharePoint ライブラリの URL  
  レポートまたは関連アイテムを SharePoint ライブラリに配置する場合は、SharePoint ライブラリの URL を使用する必要があります。 ライブラリに使用する URL は、使用している SharePoint のバージョンによって異なります。  
   
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[winSPServ](../../includes/winspserv-md.md)] 3.0 または [!INCLUDE[SPF2010](../../includes/spf2010-md.md)]では、ライブラリはサーバー名の後に示されます。たとえば、 http://*servername/* Shared Documents のようになります。  
+ [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[winSPServ](../../includes/winspserv-md.md)] 3.0 または [!INCLUDE[SPF2010](../../includes/spf2010-md.md)]では、ライブラリはサーバー名の後に示されます。たとえば、 http://*servername/* Shared Documents のようになります。  
   
  [!INCLUDE[offSPServ](../../includes/offspserv-md.md)] 2007 または [!INCLUDE[SPS2010](../../includes/sps2010-md.md)]では、ライブラリはサイトおよびサブサイトの後に示されます。 たとえば、 http://*servername/site/* Documents のようになります。  
   

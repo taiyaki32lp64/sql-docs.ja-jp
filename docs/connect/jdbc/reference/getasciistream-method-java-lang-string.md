@@ -1,5 +1,5 @@
 ---
-title: getAsciiStream (java.lang.String) メソッド |Microsoft Docs
+title: getAsciiStream メソッド (java lang.ini) |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: b2d24a6b-f029-4691-981b-125c690b8ba5
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 2ff964eebb92eb6b4642b2dde7d7f19cdbaf742b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: feadeaffb5fd74ebc6b2d273dca263cac16c14ce
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47618720"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67954193"
 ---
 # <a name="getasciistream-method-javalangstring"></a>getAsciiStream (java.lang.String) メソッド
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -47,7 +46,7 @@ public java.io.InputStream getAsciiStream(java.lang.String columnName)
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- この getAsciiStream メソッドは、java.sql.ResultSet インターフェイスで、getAsciiStream メソッドによって指定されます。  
+ この getAsciiStream メソッドは、java.sql.ResultSet インターフェイスの getAsciiStream メソッドで規定されています。  
   
 ## <a name="see-also"></a>参照  
  [getAsciiStream メソッド &#40;SQLServerResultSet&#41;](../../../connect/jdbc/reference/getasciistream-method-sqlserverresultset.md)   

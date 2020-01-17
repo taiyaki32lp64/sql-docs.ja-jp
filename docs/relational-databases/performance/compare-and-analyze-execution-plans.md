@@ -18,16 +18,16 @@ ms.assetid: bcd6f094-c613-4835-ae19-4caaadb4bb17
 author: pmasl
 ms.author: pelopes
 manager: amitban
-ms.openlocfilehash: 0b7a932f58fe791b6609b999f4495a42af88422d
-ms.sourcegitcommit: ba7fb4b9b4f0dbfe77a7c6906a1fde574e5a8e1e
+ms.openlocfilehash: 4b300d1fbc144f25b3f725f34e49d961953c434c
+ms.sourcegitcommit: 43c3d8939f6f7b0ddc493d8e7a643eb7db634535
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/26/2018
-ms.locfileid: "52303425"
+ms.lasthandoff: 10/12/2019
+ms.locfileid: "72289333"
 ---
 # <a name="compare-and-analyze-execution-plans"></a>実行プランの比較と分析
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-このセクションでは、Microsoft [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] を使用して実行プランを比較し、分析する方法について説明します。  
+このセクションでは、Microsoft [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] を使用して実行プランを比較し、分析する方法について説明します。 この機能は [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] v17.4 以降で使用できます。  
   
 実行プランでは、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] クエリ オプティマイザーによって選択されたデータ取得方法がグラフィカルに表示されます。 実行プランでは、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の特定のステートメントやクエリの実行コストがアイコンで表されます。この点が、表形式で表す [SET SHOWPLAN_ALL](../../t-sql/statements/set-showplan-all-transact-sql.md) ステートメントまたは [SET SHOWPLAN_TEXT](../../t-sql/statements/set-showplan-text-transact-sql.md) ステートメントとは異なります。 グラフィカルな実行プランの表示は、クエリのパフォーマンスの特徴を理解するうえで非常に役立ちます。 
 
@@ -36,9 +36,6 @@ ms.locfileid: "52303425"
 クエリ実行プランの詳細については、[推定実行プラン](../../relational-databases/performance/display-the-estimated-execution-plan.md)、[実際の実行プラン](../../relational-databases/performance/display-an-actual-execution-plan.md)に関するページ、「[クエリ処理アーキテクチャ ガイド](../../relational-databases/query-processing-architecture-guide.md)」を参照してください。
   
 ## <a name="in-this-section"></a>このセクションの内容  
-  
--   [実行プランの比較](../../relational-databases/performance/display-the-estimated-execution-plan.md)  
-  
--   [実際の実行プランの分析](../../relational-databases/performance/display-an-actual-execution-plan.md)  
-  
+[実行プランの比較](../../relational-databases/performance/display-the-estimated-execution-plan.md)     
+[実際の実行プランの分析](../../relational-databases/performance/display-an-actual-execution-plan.md)      
   

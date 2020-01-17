@@ -1,6 +1,7 @@
 ---
-title: '[最初のデータの同期を選択] ページ - AlwaysOn 可用性グループ ウィザード | Microsoft Docs'
-ms.custom: ''
+title: '[最初のデータの同期を選択] ページ (可用性グループ ウィザード)'
+description: SQL Server Management Studio (SSMS) の Always On 可用性グループ ウィザードの [最初のデータの同期を選択] ページの説明。
+ms.custom: seo-lt-2019
 ms.date: 05/17/2016
 ms.prod: sql
 ms.reviewer: ''
@@ -13,20 +14,19 @@ f1_keywords:
 ms.assetid: 457b1140-4819-4def-8f7c-54a406e6db12
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 6a06a4f8bf7474cd2379886dc78cbdddc6a05cab
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: e8a6a14a6efc6a9d5f96144364f1532c14b0c1c0
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52545393"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75235342"
 ---
 # <a name="select-initial-data-synchronization-page-always-on-availability-group-wizards"></a>[最初のデータの同期を選択] ページ (AlwaysOn 可用性グループ ウィザード)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
   新しいセカンダリ データベースの初期データ同期のユーザー設定を指定するには、AlwaysOn の **[最初のデータの同期を選択]** ページを使用します。 このページは、[!INCLUDE[ssAoNewAgWiz](../../../includes/ssaonewagwiz-md.md)]、[!INCLUDE[ssAoAddRepWiz](../../../includes/ssaoaddrepwiz-md.md)]、[!INCLUDE[ssAoAddDbWiz](../../../includes/ssaoadddbwiz-md.md)] の 3 つのウィザードで共有されています。  
   
- 選択肢には、**[自動シード処理]**、**[完全なデータベースとログ バックアップ]**、**[参加のみ]**、**[最初のデータの同期をスキップ]** があります。 **[自動シード処理]**、**[完全]**、**[参加のみ]** を選択する前に、使用している環境が前提条件を満たしていることを確認してください。  
+ 選択肢には、 **[自動シード処理]** 、 **[完全なデータベースとログ バックアップ]** 、 **[参加のみ]** 、 **[最初のデータの同期をスキップ]** があります。 **[自動シード処理]** 、 **[完全]** 、 **[参加のみ]** を選択する前に、使用している環境が前提条件を満たしていることを確認してください。  
     
 ##  <a name="Recommendations"></a> 推奨事項  
   
@@ -67,7 +67,7 @@ ms.locfileid: "52545393"
   
  **前提条件を満たしている場合**  
   
- 前の前提条件がすべて満たされており、ウィザードで初期データの完全同期を実行する場合は、**[完全なデータベースとログ バックアップ]** オプションを選択し、ネットワーク共有を指定します。 これにより、ウィザードによって選択した各データベースの完全バックアップとログ バックアップが作成され、指定したネットワーク共有に配置されます。 その後、新しいセカンダリ レプリカの 1 つをホストする各サーバー インスタンスで、RESTORE WITH NORECOVERY を使用してバックアップを復元することで、セカンダリ データベースが作成されます。 各セカンダリ データベースが作成された後、新しいセカンダリ データベースを可用性グループに参加させます。 セカンダリ データベースを参加させるとすぐに、データベース上でデータの同期が開始されます。  
+ 前の前提条件がすべて満たされており、ウィザードで初期データの完全同期を実行する場合は、 **[完全なデータベースとログ バックアップ]** オプションを選択し、ネットワーク共有を指定します。 これにより、ウィザードによって選択した各データベースの完全バックアップとログ バックアップが作成され、指定したネットワーク共有に配置されます。 その後、新しいセカンダリ レプリカの 1 つをホストする各サーバー インスタンスで、RESTORE WITH NORECOVERY を使用してバックアップを復元することで、セカンダリ データベースが作成されます。 各セカンダリ データベースが作成された後、新しいセカンダリ データベースを可用性グループに参加させます。 セカンダリ データベースを参加させるとすぐに、データベース上でデータの同期が開始されます。  
   
  **[すべてのレプリカからアクセス可能な共有ネットワーク場所を指定]**  
  バックアップを作成および復元するには、ウィザードでネットワーク共有を指定する必要があります。 可用性レプリカをホストする各サーバー インスタンス上で [!INCLUDE[ssDE](../../../includes/ssde-md.md)] を起動するために使用されるアカウントは、ネットワーク共有での読み取り/書き込みファイルシステム権限を持つ必要があります。  
@@ -84,7 +84,7 @@ ms.locfileid: "52545393"
  このオプションは、各プライマリ データベースのデータベースおよびログ バックアップを実行し、セカンダリ レプリカをホストする各サーバー インスタンスに復元する場合に選択します。 ウィザードの終了後、各セカンダリ レプリカのすべてのセカンダリ データベースを参加させる必要があります。  
   
 > [!NOTE]  
->  詳細については、このトピックの「 [AlwaysOn セカンダリ データベース上のデータ移動の開始 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/start-data-movement-on-an-always-on-secondary-database-sql-server.md)の 3 つのウィザードで共有されています。  
+>  詳細については、「 [AlwaysOn セカンダリ データベース上のデータ移動の開始 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/start-data-movement-on-an-always-on-secondary-database-sql-server.md)」を参照してください。  
   
 ##  <a name="PrepareSecondaryDbs"></a> セカンダリ データベースを手動で準備するには  
  [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] ウィザードを使用せずにセカンダリ データベースを準備するには、次の方法のどちらかを使用できます。  
@@ -127,6 +127,6 @@ ms.locfileid: "52545393"
 -   [[新しい可用性グループ] ダイアログ ボックスの使用 &#40;SQL Server Management Studio&#41;](../../../database-engine/availability-groups/windows/use-the-new-availability-group-dialog-box-sql-server-management-studio.md)  
   
 ## <a name="see-also"></a>参照  
- [AlwaysOn 可用性グループの概要 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)  
+ [Always On 可用性グループの概要 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)  
   
   

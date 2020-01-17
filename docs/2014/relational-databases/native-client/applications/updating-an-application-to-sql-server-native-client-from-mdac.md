@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: d2c8afa1fbbb51947bef28ae45cabd445aaf0bf2
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52541926"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63046425"
 ---
 # <a name="updating-an-application-to-sql-server-native-client-from-mdac"></a>MDAC から SQL Server Native Client へのアプリケーションの更新
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client と MDAC (Microsoft Data Access Components) には多くの違いがあります (Windows Vista 以降、このデータ アクセス コンポーネントは Windows DAC (Windows Data Access Components) と呼ばれています)。 どちらを使用しても [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] データベースへのネイティブ データ アクセスは可能ですが、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client は、旧バージョンとの互換性を維持しながら、[!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] の新機能を公開することを主眼において作成されています。  
@@ -84,7 +84,7 @@ ms.locfileid: "52541926"
   
     -   再構成時  
   
-    -   Shutdown  
+    -   シャットダウン  
   
     -   Kill  
   
@@ -108,11 +108,11 @@ ms.locfileid: "52541926"
   
 -   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client、ITransactionLocal::BeginTransaction のすぐに開始されるトランザクションが発生します。 MDAC では、暗黙のトランザクション モードを必要とするステートメントをアプリケーションが実行するまで、トランザクションの開始が遅延されました。 詳細については、「[SET IMPLICIT_TRANSACTIONS &#40;Transact-SQL&#41;](/sql/t-sql/statements/set-implicit-transactions-transact-sql)」を参照してください。  
   
--   使用する場合に、エラーが発生する可能性が[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Native Client ドライバー System.Data.Odbc にアクセスすると、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 、新しい公開サーバー コンピューター [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-特定のデータ型または機能します。 System.Data.Odbc は ODBC の汎用実装を提供し、その後は公開しないベンダー固有の機能または拡張機能。 ([!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client ドライバーは最新の [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 機能をネイティブでサポートするように更新されます)。回避策をこの問題、MDAC に戻すか、System.Data.SqlClient に移行します。  
+-   使用する場合に、エラーが発生する可能性が[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Native Client ドライバー System.Data.Odbc にアクセスすると、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 、新しい公開サーバー コンピューター [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-特定のデータ型または機能します。 System.Data.Odbc は ODBC の汎用実装を提供し、その後は公開しないベンダー固有の機能または拡張機能。 (、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client ドライバーは、最新のネイティブ サポートするために更新[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]機能します)。回避策をこの問題、MDAC に戻すか、System.Data.SqlClient に移行します。  
   
- 行のバージョン管理機能を使用した Read Committed トランザクション分離は [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client と MDAC の両方でサポートされていますが、スナップショット トランザクション分離は [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client のみでサポートされています  (プログラミング用語では、「行のバージョン管理機能を使用した Read Committed トランザクション分離」は「Read Committed トランザクション」と同義語です)。  
+ 行のバージョン管理機能を使用した Read Committed トランザクション分離は [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client と MDAC の両方でサポートされていますが、スナップショット トランザクション分離は [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client のみでサポートされています (プログラミング用語では、「行のバージョン管理機能を使用した Read Committed トランザクション分離」は「Read Committed トランザクション」と同義語です)。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [SQL Server Native Client を使用したアプリケーションのビルド](building-applications-with-sql-server-native-client.md)  
   
   

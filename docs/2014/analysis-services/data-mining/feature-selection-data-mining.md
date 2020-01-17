@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - mining models [Analysis Services], feature selections
@@ -22,12 +21,12 @@ ms.assetid: b044e785-4875-45ab-8ae4-cd3b4e3033bb
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 6618a4a0818519ba4c3f0bbd63a46e02b4217296
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: a1d79bb3810a56e8a1769845131312eab306f223
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53360144"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66084418"
 ---
 # <a name="feature-selection-data-mining"></a>機能の選択 (データ マイニング)
   *機能の選択*はツールと処理と分析のために管理しやすいサイズに入力を減らすために使用できる手法を説明するデータ マイニングでよく使用する用語です。 機能の選択は意味だけでなく*カーディナリティの引き下げ*、つまり、モデルをも意味している属性の選択のビルド時に考慮できる属性の数に、任意または定義済みのカットオフを課すアナリストまたはモデリング ツールのいずれか積極的に、選択または分析のための有用性に基づく属性を破棄します。  
@@ -113,18 +112,18 @@ ms.locfileid: "53360144"
 |クラスター|興味深さのスコア|Microsoft クラスタリング アルゴリズムでは、不連続なデータまたは分離されたデータを使用できます。 ただし、各属性のスコアは距離として計算され、連続する数値として表現されるため、興味深さのスコアを使用する必要があります。<br /><br /> このアルゴリズムの詳細については、「 [Microsoft クラスタリング アルゴリズム テクニカル リファレンス](microsoft-clustering-algorithm-technical-reference.md)」を参照してください。|  
 |線形回帰|興味深さのスコア|Microsoft 線形回帰アルゴリズムでは、連続列のみをサポートするため、使用できるのは興味深さのスコアだけです。<br /><br /> このアルゴリズムの詳細については、「 [Microsoft 線形回帰アルゴリズム テクニカル リファレンス](microsoft-linear-regression-algorithm-technical-reference.md)」を参照してください。|  
 |アソシエーション ルール<br /><br /> シーケンス クラスター|使用しない|これらのアルゴリズムでは、機能の選択は実行されません。<br /><br /> ただし、必要に応じてパラメーター MINIMUM_SUPPORT および MINIMUM_PROBABILIITY の値を設定することによって、アルゴリズムの動作を制御し、入力データのサイズを小さくすることができます。<br /><br /> 詳細については、「 [Microsoft アソシエーション アルゴリズム テクニカル リファレンス](microsoft-association-algorithm-technical-reference.md) 」および「 [Microsoft シーケンス クラスタリング アルゴリズム テクニカル リファレンス](microsoft-sequence-clustering-algorithm-technical-reference.md)」を参照してください。|  
-|タイム シリーズ。|使用しない|機能の選択は、時系列モデルには適用されません。<br /><br /> このアルゴリズムの詳細については、「 [Microsoft タイム シリーズ アルゴリズム テクニカル リファレンス](microsoft-time-series-algorithm-technical-reference.md)」を参照してください。|  
+|タイム シリーズ。|使用しない|機能の選択は、時系列モデルには適用されません。<br /><br /> このアルゴリズムの詳細については、「 [Microsoft Time Series アルゴリズム テクニカル リファレンス](microsoft-time-series-algorithm-technical-reference.md)」を参照してください。|  
   
 ## <a name="feature-selection-parameters"></a>機能の選択のパラメーター  
  機能の選択をサポートするアルゴリズムでは、以下のパラメーターを使用して、機能の選択をいつオンにするかを制御できます。 各アルゴリズムには、許可される入力数の既定値がありますが、その既定値をオーバーライドして属性の数を指定できます。 このセクションは、機能の選択を管理するために提供されるパラメーターを示します。  
   
-#### <a name="maximuminputattributes"></a>MAXIMUM_INPUT_ATTRIBUTES  
+#### <a name="maximum_input_attributes"></a>MAXIMUM_INPUT_ATTRIBUTES  
  *MAXIMUM_INPUT_ATTRIBUTES* パラメーターで指定した数より多い列がモデルにある場合、アルゴリズムでは、計算により無意味であると判断されたすべての列が無視されます。  
   
-#### <a name="maximumoutputattributes"></a>MAXIMUM_OUTPUT_ATTRIBUTES  
+#### <a name="maximum_output_attributes"></a>MAXIMUM_OUTPUT_ATTRIBUTES  
  同様に、 *MAXIMUM_OUTPUT_ATTRIBUTES* パラメーターで指定した数より多い予測可能列がモデルにある場合、アルゴリズムでは、計算により無意味であると判断されたすべての列が無視されます。  
   
-#### <a name="maximumstates"></a>MAXIMUM_STATES  
+#### <a name="maximum_states"></a>MAXIMUM_STATES  
  モデルに *MAXIMUM_STATES* パラメーターで指定された数より多いケースがある場合、最も一般的でない状態はグループ化され、無視されます。 これらのパラメーターのいずれかが 0 に設定されている場合、機能の選択はオフになり、処理時間とパフォーマンスに影響を及ぼします。  
   
  機能の選択のこれらのメソッドに加え、モデルの "*モデリング フラグ*"、または構造の "*ディストリビューション フラグ*" を設定すると、アルゴリズム機能を改善して重要な属性を識別したり昇格させたりすることができます。 これらの概念の詳細については、「[モデリング フラグ &#40;データ マイニング&#41;](modeling-flags-data-mining.md)」および「[列の分布 &#40;データ マイニング&#41;](column-distributions-data-mining.md)」を参照してください。  

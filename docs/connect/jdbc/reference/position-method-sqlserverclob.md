@@ -1,5 +1,5 @@
 ---
-title: position メソッド (SQLServerClob) |Microsoft Docs
+title: position メソッド (SQLServerClob) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: 20e04cb0-34ea-4b7a-ba74-4de13b8645b6
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 43ac88017c33d392846dd8a6171e61c9f57e4639
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 3cd2ddc9c0728df5f5fe27227f64d7af035439c1
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47652280"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67976382"
 ---
 # <a name="position-method-sqlserverclob"></a>position メソッド (SQLServerClob)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

@@ -16,12 +16,12 @@ ms.assetid: 76a3abcf-2998-4712-9490-fe8d872c89ca
 author: Shamikg
 ms.author: Shamikg
 manager: murato
-ms.openlocfilehash: b15ecd732acf373dbc5cee817983305c1d792fe4
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 959af9bcb1879dc19d2bfb99253b4c40d637fd1e
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47683710"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68260242"
 ---
 # <a name="migrating-access-databases-to-sql-server---azure-sql-db-accesstosql"></a>SQL Server - Azure SQL DB (AccessToSQL) へのアクセス データベースの移行
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Migration Assistant (SSMA) は、すばやくへの Access データベースを移行するのに役立つ包括的な環境を提供するツール[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]または SQL Azure です。 SSMA を使用すると、アクセス権をレビューできますと[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]または SQL Azure データベース オブジェクト、Access データベースの移行の評価、Access データベース オブジェクトを変換、読み込みに[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]または SQL Azure、し、データを移行します。  

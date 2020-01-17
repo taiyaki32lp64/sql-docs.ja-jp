@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 ms.assetid: aebc5f3d-97d5-4d54-b525-753fed073a9a
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: c59a8f89c0c06aafdc9cc618b22c0bac444fe93d
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 36f489f25adc9746f844a6289ca8a2849ad83870
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56018014"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66109996"
 ---
 # <a name="alternative-ways-to-get-a-data-connection-report-builder"></a>別の方法でデータ接続を取得する (レポート ビルダー)
   データ接続には、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] データベースなどの外部データ ソースに接続するときに必要な情報が含まれます。 通常、使用する接続情報と資格情報の種類はデータ ソースの所有者から提供されます。  
@@ -36,11 +35,11 @@ ms.locfileid: "56018014"
   
 2.  データ ソースの一覧から、アクセスする権限があるデータ ソースを選択します。  
   
-3.  データ ソースに接続できることを確認するために、**[接続テスト]** をクリックします。 "接続が正常に作成されました" というメッセージが表示されます。 [!INCLUDE[clickOK](../includes/clickok-md.md)]  
+3.  データ ソースに接続できることを確認するために、 **[接続テスト]** をクリックします。 "接続が正常に作成されました" というメッセージが表示されます。 [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
 4.  **[次へ]** をクリックします。  
   
-     必要に応じて、資格情報を入力します。 資格情報をローカルに保存するには、**[接続時にパスワードを保存する]** を選択します。 このオプションを選択しない場合、レポートを実行するたびに資格情報が要求されます。  
+     必要に応じて、資格情報を入力します。 資格情報をローカルに保存するには、 **[接続時にパスワードを保存する]** を選択します。 このオプションを選択しない場合、レポートを実行するたびに資格情報が要求されます。  
   
 5.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
@@ -50,11 +49,11 @@ ms.locfileid: "56018014"
   
 2.  **[参照]** をクリックします。 **[データ ソースの選択]** ダイアログ ボックスが表示されます。  
   
-3.  **[検索対象]** ドロップダウン リストから **[最近使ったサイトとサーバー]** を選択します。 データ ソース ウィンドウでサーバーの URL をクリックし、**[開く]** をクリックします。  
+3.  **[検索対象]** ドロップダウン リストから **[最近使ったサイトとサーバー]** を選択します。 データ ソース ウィンドウでサーバーの URL をクリックし、 **[開く]** をクリックします。  
   
      データ ソースまたはモデルの一覧が表示されます。  
   
-4.  または、**[名前]** にレポート サーバーの URL を入力します。 **[開く]** をクリックします。  
+4.  または、 **[名前]** にレポート サーバーの URL を入力します。 **[開く]** をクリックします。  
   
      レポート ビルダーがレポート サーバーに接続され、ルート フォルダーにある使用可能なデータ ソースが読み込まれます。  
   
@@ -68,7 +67,7 @@ ms.locfileid: "56018014"
   
 7.  **[次へ]** をクリックします。  
   
-8.  ユーザー名とパスワードを要求された場合は、資格情報を入力します。 資格情報をローカルに保存するには、**[接続時にパスワードを保存する]** を選択します。  
+8.  ユーザー名とパスワードを要求された場合は、資格情報を入力します。 資格情報をローカルに保存するには、 **[接続時にパスワードを保存する]** を選択します。  
   
 9. [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   

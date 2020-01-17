@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - fact tables [Analysis Services]
@@ -14,12 +13,12 @@ ms.assetid: 5508312f-8e46-4802-9362-6688ca03d098
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 3f81cca9c4f7be1e0a94b9947432d1e7534994e1
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 94ab489420b4661cea27b942c39dff91a219a38d
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48153793"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66076713"
 ---
 # <a name="change-a-partition-source-to-use-a-different-fact-table"></a>別のファクト テーブルを使用するためのパーティション ソースの変更
   キューブのパーティションを作成する場合、複数のファクト テーブルを使用するように選択できます。 複数のテーブルは、単一のデータ ソース ビュー、複数のデータ ソース ビュー、または複数のデータ ソースから得たものである場合があります。 データ ソース ビューには、複数のデータ ソースから得た複数のテーブルが含まれている場合もあります。  
@@ -32,7 +31,7 @@ ms.locfileid: "48153793"
   
  重複データを含む複数のファクト テーブルを使用することは可能ですが、お勧めはできません。 使用する場合は、パーティション内でフィルターを使用して、あるパーティションで使用されるデータが、別のパーティションで使用されないようにする必要があります。 詳細については、「[ローカル パーティションの作成と管理 (Analysis Services)](create-and-manage-a-local-partition-analysis-services.md)」を参照してください。  
   
-## <a name="see-also"></a>関連項目  
- [作成およびローカル パーティションの管理&#40;Analysis Services&#41;](create-and-manage-a-local-partition-analysis-services.md)  
+## <a name="see-also"></a>参照  
+ [ローカル パーティションの作成と管理 (Analysis Services)](create-and-manage-a-local-partition-analysis-services.md)  
   
   

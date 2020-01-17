@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 8b804bcf-4cce-4e6f-aa45-00bab9ef9921
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 7dc74811bf6cead91850ebd3fcaa8cf64025c80d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 36f1c5a18eb9f0b1939a2c3602f1ebe7695741f7
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47848054"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67948822"
 ---
 # <a name="stored-procedure-parameter-limitations"></a>ストアド プロシージャのパラメーターの制限
 > [!IMPORTANT]  

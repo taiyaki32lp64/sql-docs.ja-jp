@@ -9,13 +9,13 @@ ms.topic: conceptual
 ms.assetid: 4ef384ea-5f3e-4f70-ad7c-b62d7b0da628
 author: Shamikg
 ms.author: Shamikg
-manager: v-pelars
-ms.openlocfilehash: ed7f16c6cee61281a8320b2b8874282fdfae6b24
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+manager: shamikg
+ms.openlocfilehash: e6e06585ca99305d6825898a98a7dbab31b5b39b
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52407929"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68266173"
 ---
 # <a name="connect-to-sql-server--oracletosql"></a>SQL Server への接続 (OracleToSQL)
 使用して、 **SQL サーバーへの接続** ダイアログ ボックスのインスタンスに接続する[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]に移行したいです。 アクセスする、 **SQL サーバーへの接続** ダイアログ ボックスで、**ファイル** メニューのをクリックして**SQL サーバーへの接続**します。  
@@ -24,7 +24,7 @@ ms.locfileid: "52407929"
 **サーバー名**  
 入力するかに接続する SQL Server のインスタンスを選択します。 既定では、最後に接続されているインスタンスが表示されます。  
   
--   ローカル コンピューターの既定のインスタンスに接続する場合、いずれかを入力する**localhost**またはドット (**.**)。  
+-   ローカル コンピューターの既定のインスタンスに接続する場合、いずれかを入力する**localhost**またはドット ( **.** )。  
   
 -   別のコンピューターで既定のインスタンスに接続する場合は、コンピューターの名前を入力します。  
   
@@ -36,7 +36,7 @@ ms.locfileid: "52407929"
 **[データベース]**  
 オブジェクトとデータを移行するデータベースを指定します。 このオプションに再接続する場合は使用できません[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]します。  
   
-**[認証]**  
+**\[認証]**  
 接続に使用される認証方法を選択[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]します。 現在の Windows アカウントを使用するには、Windows 認証を選択します。 指定する、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]ログインとパスワードで、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]認証します。  
   
 **ユーザー名**  

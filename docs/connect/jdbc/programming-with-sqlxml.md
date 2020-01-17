@@ -1,7 +1,7 @@
 ---
-title: SQLXML でのプログラミング |Microsoft Docs
+title: SQLXML を使用したプログラミング |Microsoft Docs
 ms.custom: ''
-ms.date: 01/19/2017
+ms.date: 08/12/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 4d2cc57c-7293-4d92-b8b1-525e2b35f591
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 399100d6e718138012453e47fdfe8d11386f8cbd
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 22f225799e704b7a34449bbfc69ef351cc4d4ac1
+ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47754900"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "69027769"
 ---
 # <a name="programming-with-sqlxml"></a>SQLXML でのプログラミング
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -28,17 +27,17 @@ ms.locfileid: "47754900"
 ## <a name="reading-and-writing-xml-data-with-sqlxml-objects"></a>SQLXML オブジェクトを使用した XML データの読み取りと書き込み  
  [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] API のメソッドと SQLXML オブジェクトを使用して、XML データの読み取りと書き込みを行う方法は次のとおりです。  
   
--   SQLXML オブジェクトを作成するには、[SQLServerConnection](../../connect/jdbc/reference/sqlserverconnection-class.md) クラスの [createSQLXML](../../connect/jdbc/reference/createsqlxml-method-sqlserverconnection.md) メソッドを使用します。 このメソッドで作成される SQLXML オブジェクトにはデータが一切含まれていないことに注意してください。 追加する**xml**データを SQLXML オブジェクトを呼び出し、SQLXML インターフェイスに指定されている次のいずれかの: setResult、setBinaryStream、setCharacterStream、setString またはします。  
+-   SQLXML オブジェクトを作成するには、[SQLServerConnection](../../connect/jdbc/reference/sqlserverconnection-class.md) クラスの [createSQLXML](../../connect/jdbc/reference/createsqlxml-method-sqlserverconnection.md) メソッドを使用します。 このメソッドで作成される SQLXML オブジェクトにはデータが一切含まれていないことに注意してください。 SQLXML オブジェクトに**xml**データを追加するには、sqlxml インターフェイスで指定されている次のいずれかのメソッドを呼び出します: setresult、Setresult Stream、setbinarystream、または setresult。  
   
 -   SQLXML オブジェクトそのものを取得するには、[SQLServerResultSet](../../connect/jdbc/reference/sqlserverresultset-class.md) クラスまたは [SQLServerCallableStatement](../../connect/jdbc/reference/sqlservercallablestatement-class.md) クラスの getSQLXML メソッドを使用します。  
   
--   取得する、 **xml** 、SQLXML オブジェクトからデータを使用して、SQLXML インターフェイスに指定されている次のいずれかの: getSource、getCharacterStream、getBinaryStream、getString またはします。  
+-   SQLXML オブジェクトから**xml**データを取得するには、sqlxml インターフェイスに指定されている次のメソッドのいずれかを使用します。 getsource、Getsource Stream、getbinarystream、または getString。  
   
 -   SQLXML オブジェクト内の **xml** データを更新するには、[SQLServerResultSet](../../connect/jdbc/reference/sqlserverresultset-class.md) クラスの [updateSQLXML](../../connect/jdbc/reference/updatesqlxml-method-sqlserverresultset.md) メソッドを使用します。  
   
 -   SQLXML オブジェクトをデータベース テーブルの **xml** 型の列に格納するには、[SQLServerPreparedStatement](../../connect/jdbc/reference/sqlserverpreparedstatement-class.md) クラスまたは [SQLServerCallableStatement](../../connect/jdbc/reference/sqlservercallablestatement-class.md) クラスの setSQLXML メソッドを使用します。  
   
- 以上に挙げた基本的な API タスクの使用例については、「[SQLXML データ型のサンプル](../../connect/jdbc/sqlxml-data-type-sample.md)」のコード例を参照してください。  
+ 「[SQLXML データ型のサンプル](../../connect/jdbc/sqlxml-data-type-sample.md)」に記載されているコード例では、これらの一般的な API タスクを実行する方法が示されています。  
   
 ## <a name="readable-and-writable-sqlxml-objects"></a>読み取り/書き込み可能な SQLXML オブジェクト  
  次の表は、JDBC API の setter、getter、および updater メソッドによってサポートされる SQLXML オブジェクトの種類を一覧にしたものです。 この表の各列の意味は次のとおりです。  
@@ -51,14 +50,14 @@ ms.locfileid: "47754900"
   
 |メソッド名|getter SQLXML オブジェクト<br /><br /> (読み取り可能)|setter SQLXML オブジェクト<br /><br /> (書き込み可能)|  
 |-----------------|-------------------------------------------|-------------------------------------------|  
-|CallableStatement.setSQLXML()|サポートされていません|Supported|  
+|CallableStatement. setSQLXML ()|サポートされていません|Supported|  
 |CallableStatement.setObject()|サポートされていません|Supported|  
 |PreparedStatement.setSQLXML()|サポートされていません|Supported|  
 |PreparedStatement.setObject()|サポートされていません|Supported|  
 |ResultSet.updateSQLXML()|サポートされていません|Supported|  
 |ResultSet.updateObject()|サポートされていません|Supported|  
-|ResultSet.getSQLXML()|Supported|サポートされていません|  
-|CallableStatement.getSQLXML()|Supported|サポートされていません|  
+|ResultSet。 getSQLXML ()|Supported|サポートされていません|  
+|CallableStatement。 getSQLXML ()|Supported|サポートされていません|  
   
  この表を見るとわかるように、setter SQLXML メソッドは、読み取り可能な SQLXML オブジェクトでは使用できません。同様に、getter メソッドを書き込み可能な SQLXML オブジェクトで使用することもできません。  
   
@@ -98,7 +97,7 @@ ms.locfileid: "47754900"
  XML パーサーは空の値を処理できません。 ただし、SQL Server が介在することで、アプリケーションが、XML データ型のデータベース列から空の値を取得したり、空の値を格納したりできるようになっています。 つまり、XML データを解析する際、基になる値が空である場合は、パーサーによって例外がスローされます。 DOM 出力の場合、JDBC ドライバーがその例外をキャッチして、エラーをスローします。 SAX および Stax 出力の場合、エラーは直接パーサーから送られます。  
   
 ## <a name="adaptive-buffering-and-sqlxml-support"></a>アダプティブ バッファリングと SQLXML サポート  
- SQLXML オブジェクトから返されたバイナリ ストリームと文字ストリームは、アダプティブ バッファリング モードまたはフル バッファリング モードに従います。 一方、XML パーサーがストリームではない場合、アダプティブとフルのいずれの設定にも従いません。 アダプティブ バッファリングの詳細については、次を参照してください。[アダプティブ バッファリングを使用して](../../connect/jdbc/using-adaptive-buffering.md)します。  
+ SQLXML オブジェクトから返されたバイナリ ストリームと文字ストリームは、アダプティブ バッファリング モードまたはフル バッファリング モードに従います。 一方、XML パーサーがストリームではない場合、アダプティブとフルのいずれの設定にも従いません。 アダプティブバッファリングの詳細については、「[アダプティブバッファリングの使用](../../connect/jdbc/using-adaptive-buffering.md)」を参照してください。  
   
 ## <a name="see-also"></a>参照  
  [XML データのサポート](../../connect/jdbc/supporting-xml-data.md)  

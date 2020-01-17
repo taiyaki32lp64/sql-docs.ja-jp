@@ -27,17 +27,17 @@
 - name: アップグレード アドバイザーの操作方法に関するトピック
   href: upgrade-advisor-how-to-topics.md
   items:
-    - name: アップグレード アドバイザーをインストールする方法
+    - name: '方法:アップグレード アドバイザーをインストールする'
       href: how-to-install-upgrade-advisor.md
-    - name: アップグレード アドバイザーを起動する方法
+    - name: '方法:アップグレード アドバイザーを起動する'
       href: how-to-launch-upgrade-advisor.md
-    - name: アップグレード アドバイザー分析ウィザードを実行する方法
+    - name: '方法:アップグレード アドバイザー分析ウィザードを実行する'
       href: how-to-run-the-upgrade-advisor-analysis-wizard.md
-    - name: アップグレード アドバイザーのレポートを表示する方法
+    - name: '方法:アップグレード アドバイザーのレポートを表示する'
       href: how-to-view-an-upgrade-advisor-report.md
-    - name: レポートに表示する問題を選択する方法
+    - name: '方法:レポートに表示する問題を選択する'
       href: how-to-filter-reports.md
-    - name: レポートをエクスポートする方法
+    - name: '方法:Export Reports'
       href: how-to-export-reports.md
 - name: ユーザー インターフェイス リファレンス
   href: upgrade-advisor-user-interface-reference.md
@@ -269,7 +269,7 @@
           href: sql-server-agent-service-cannot-use-sql-server-authentication.md
         - name: SQL Server エージェントのジョブ ステップのトークン構文を更新する
           href: update-token-syntax-in-sql-server-agent-job-steps.md
-        - name: マスター サーバーをアップグレードする前にすべての対象サーバーをアップグレードする
+        - name: マスター サーバーをアップグレードする前にすべてのターゲット サーバーをアップグレードする
           href: upgrade-all-target-servers-before-upgrading-the-master-server.md
         - name: アップグレードすると SQL Server エージェント ユーザーのプロキシ アカウントが一時的な UpgradedProxyAccount に変更される
           href: upgrading-changes-sql-server-agent-user-proxy-account-to-temporary-account.md
@@ -424,7 +424,7 @@
   items:
     - name: コマンド プロンプトからの更新プログラムのインストール
       href: ../../database-engine/install-windows/installing-updates-from-the-command-prompt.md
-    - name: SQL Server 更新プログラムのインストールが成功したかどうかを確認する方法
+    - name: '方法:SQL Server 更新プログラムのインストールが成功したかどうかを確認する'
       href: how-to-validate-successful-installation-of-a-sql-server-update.md
     - name: SQL Server サービスのインストールの概要
       href: overview-of-sql-server-servicing-installation.md

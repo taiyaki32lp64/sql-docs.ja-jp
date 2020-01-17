@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.bidtoolset.connoracledb.f1
@@ -13,12 +12,12 @@ ms.assetid: 9bd177fb-8539-46cd-bf96-189ade52c2a1
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 79808c965828844a467fc232a5432d1207b25c34
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 8bc5a08d96dbef0bae412b75c9592e4893e12a0f
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48058511"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66087023"
 ---
 # <a name="connect-to-an-oracle-database-ssas"></a>[Oracle データベースへの接続] (SSAS)
   **テーブルのインポート ウィザード**のこのページを使用すると、Oracle データベースに接続するための設定を指定できます。 [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]からウィザードにアクセスするには、 **[モデル]** メニューの **[データ ソースからのインポート]** をクリックします。  

@@ -14,15 +14,14 @@ helpviewer_keywords:
 - functions [SQL Server], cursors
 - cursors [SQL Server], statements
 ms.assetid: 63000023-54fc-4efc-a30f-fb4d4db73aae
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: b9cecc2db6396fc0335fc0011def4eedd1ad4abc
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 1e24efe4204d9117af0d3743f91fe028b305a36d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47635980"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68138308"
 ---
 # <a name="cursors-transact-sql"></a>カーソル (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]

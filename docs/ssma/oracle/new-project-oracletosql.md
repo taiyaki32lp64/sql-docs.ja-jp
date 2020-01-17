@@ -9,13 +9,13 @@ ms.topic: conceptual
 ms.assetid: 16849cfd-050c-4ac7-bd3d-a929aebb5010
 author: Shamikg
 ms.author: Shamikg
-manager: v-thobro
-ms.openlocfilehash: acfc9cc5593001e3a9a918abe788494b1b7fd405
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: shamikg
+ms.openlocfilehash: 02d1d499cb9030b737028e59219fd779bde295c6
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47601877"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68264670"
 ---
 # <a name="new-project-oracletosql"></a>新しいプロジェクト (OracleToSQL)
 使用して、**新しいプロジェクト**新しい SSMA プロジェクトを作成する ダイアログ ボックス。 アクセスする、**新しいプロジェクト** ダイアログ ボックスで、**ファイル** メニューのをクリックして**新しいプロジェクト**します。  

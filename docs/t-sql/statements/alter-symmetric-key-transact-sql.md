@@ -21,13 +21,12 @@ helpviewer_keywords:
 ms.assetid: d3c776a4-7d71-4e6f-84fc-1db47400c465
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: 6c9a5f59a076c857b335a4a8f82298b94b1c4ea3
-ms.sourcegitcommit: c6e71ed14198da67afd7ba722823b1af9b4f4e6f
+ms.openlocfilehash: 7314659cc8d0ba18b5b7b7b562ad5df467988638
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/16/2019
-ms.locfileid: "54327653"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68070249"
 ---
 # <a name="alter-symmetric-key-transact-sql"></a>ALTER SYMMETRIC KEY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -58,22 +57,22 @@ ALTER SYMMETRIC KEY Key_name <alter_option>
   
 ## <a name="arguments"></a>引数  
  *Key_name*  
- 変更する対称キーの、データベースで認識される名前を指定します。  
+ 変更する対称キーの、データベースで認識される名前です。  
   
- ADD ENCRYPTION BY   
+ ADD ENCRYPTION BY  
  指定の方法による暗号化を追加します。  
   
  DROP ENCRYPTION BY  
- 指定の方法による暗号化を削除します。 対称キーからすべての暗号化を削除することはできません。  
+ 指定の方法による暗号化を削除します。 対称キーからすべての暗号化を削除できるわけではありません。  
   
  CERTIFICATE *Certificate_name*  
- 対称キーの暗号化に使用されている証明書を指定します。 この証明書はデータベース内に存在する必要があります。  
+ 対称キーの暗号化に使用されている証明書を指定します。 この証明書はデータベース内に存在している必要があります。  
   
- PASSWORD **='**_password_**'**  
+ PASSWORD **='** _password_ **'**  
  対称キーの暗号化に使用されるパスワードを指定します。 *password* は、Windows のパスワード ポリシーが [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスを実行するコンピューターに要求する条件を満足する必要があります。  
   
  SYMMETRIC KEY *Symmetric_Key_Name*  
- 変更する対称キーの暗号化に使用されている対称キーを指定します。 この対称キーはデータベースに存在し、開かれている必要があります。  
+ 変更する対称キーの暗号化に使用されている対称キーを指定します。 この対称キーはデータベースに存在していて、開かれている必要があります。  
   
  ASYMMETRIC KEY *Asym_Key_Name*  
  変更する対称キーの暗号化に使用されている非対称キーを指定します。 この非対称キーはデータベース内に存在する必要があります。  
@@ -83,12 +82,12 @@ ALTER SYMMETRIC KEY Key_name <alter_option>
 > [!CAUTION]  
 >  データベースのマスター キーの公開キーではなく、パスワードを使用して対称キーを暗号化する場合は、TRIPLE_DES 暗号化アルゴリズムが使用されます。 このため、AES など、強力な暗号化アルゴリズムで作成されたキーでも、キー自身はそれより弱いアルゴリズムで保護されます。  
   
- 対称キーの暗号化を変更するには、ADD ENCRYPTION および DROP ENCRYPTION 句を使用します。 キーからすべての暗号化を削除することはできません。 このため、古い形式の暗号化を削除する前には、新しい形式の暗号化を追加してください。  
+ 対称キーの暗号化を変更するには、ADD ENCRYPTION および DROP ENCRYPTION 句を使用します。 キーからすべての暗号化を削除することはできません。 このため、古い形式の暗号化を削除する前に、新しい形式の暗号化を追加することをお勧めします。  
   
  対称キーの所有者を変更するには、[ALTER AUTHORIZATION](../../t-sql/statements/alter-authorization-transact-sql.md) を使います。  
   
 > [!NOTE]  
->  RC4 アルゴリズムは、旧バージョンとの互換性のためにのみサポートされています。 データベース互換性レベルが 90 または 100 の場合、新しい素材は RC4 または RC4_128 を使用してのみ暗号化できます  (非推奨)。AES アルゴリズムのいずれかなど、新しいアルゴリズムを使用してください。 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] では、どの互換性レベルでも、RC4 または RC4_128 を使用して暗号化された素材を暗号化解除できます。  
+>  RC4 アルゴリズムは、旧バージョンとの互換性のためにのみサポートされています。 データベース互換性レベルが 90 または 100 の場合、新しい素材は RC4 または RC4_128 を使用してのみ暗号化できます (非推奨)。AES アルゴリズムのいずれかなど、新しいアルゴリズムを使用してください。 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] では、どの互換性レベルでも、RC4 または RC4_128 を使用して暗号化された素材を暗号化解除できます。  
   
 ## <a name="permissions"></a>アクセス許可  
  対称キーに対する ALTER 権限が必要です。 証明書または非対称キーを使って暗号化を追加する場合は、証明書または非対称キーに対する VIEW DEFINITION 権限が必要です。 証明書または非対称キーを使って暗号化を削除する場合は、証明書または非対称キーに対する CONTROL 権限が必要です。  

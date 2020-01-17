@@ -15,19 +15,18 @@ helpviewer_keywords:
 ms.assetid: 21c97651-297f-469f-b5b5-c48af72b62a8
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: c95ec9525fe0890d241fd6a99a6c298f6ef7568e
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.openlocfilehash: c064120e3c658cafd88a96953ff00e18fbaa9b88
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51603665"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67931118"
 ---
 # <a name="schemaenum"></a>SchemaEnum
 スキーマの種類を指定します**Recordset**を[OpenSchema](../../../ado/reference/ado-api/openschema-method.md)メソッドを取得します。  
   
 ## <a name="remarks"></a>コメント  
- 各トピックで見つかる各 ADO 定数の関数と列に関する追加情報が返される[付録 B スキーマ行セット](https://msdn.microsoft.com/2b5fbf03-e50d-44ee-bc57-5a57666c55f1)の OLE DB プログラマーズ リファレンス。 次の表の説明 セクションにかっこで囲まれた各トピックの名前が表示されます。  
+ 各トピックで見つかる各 ADO 定数の関数と列に関する追加情報が返される[付録 b:スキーマ行セット](https://msdn.microsoft.com/2b5fbf03-e50d-44ee-bc57-5a57666c55f1)の OLE DB プログラマーズ リファレンス。 次の表の説明 セクションにかっこで囲まれた各トピックの名前が表示されます。  
   
  各トピックで見つかる各 ADO MD 定数の関数と列に関する追加情報が返される[OLE DB for OLAP オブジェクトおよびスキーマ行セット](https://msdn.microsoft.com/d20bb2a6-68bd-423f-9ec8-eb930cd0c144)オンライン分析処理 (OLAP) のドキュメントの OLE DB でします。 次の表の説明 列にかっこで囲まれた各トピックの名前が表示されます。  
   
@@ -35,7 +34,7 @@ ms.locfileid: "51603665"
   
  ADO には、定数、値のスキーマのような結果が生成されます。 **adSchemaDBInfoKeywords**と**adSchemaDBInfoLiterals**します。 ADO の作成、**レコード セット**、によってそれぞれ返される値を使用して各行を入力し、 **IDBInfo::GetKeywords**と**IDBInfo::GetLiteralInfo**メソッド。 これらのメソッドに関する追加情報が見つかりません、 [IDBInfo](https://msdn.microsoft.com/3f5ad97f-3fc6-4f21-b691-f6911e4007f3) OLE DB プログラマーズ リファレンスのセクション。  
   
-|定数|値|説明|制約列|  
+|定数|Value|説明|制約列|  
 |--------------|-----------|-----------------|------------------------|  
 |**adSchemaAsserts**|0|特定のユーザーによって所有されているカタログで定義されているアサーションを返します。<br /><br /> (アサーションの行セット)|CONSTRAINT_CATALOG CONSTRAINT_SCHEMA CONSTRAINT_NAME|  
 |**adSchemaCatalogs**|1|データベース管理システムからアクセス可能なカタログに関連付けられている物理属性を返します。<br /><br /> (行セットのカタログ)|CATALOG_NAME|  

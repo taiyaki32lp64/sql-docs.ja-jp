@@ -13,11 +13,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 4a8ab505f27bcbd271ef5d68e050545662d5b518
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48169242"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62870049"
 ---
 # <a name="mssqlserver12300"></a>MSSQLSERVER_12300
     
@@ -35,7 +35,7 @@ ms.locfileid: "48169242"
 ## <a name="user-action"></a>ユーザーの操作  
  計算列は、メモリ最適化テーブルでサポートされていません。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [インメモリ OLTP &#40;インメモリ最適化&#41;](../in-memory-oltp/in-memory-oltp-in-memory-optimization.md)  
   
   

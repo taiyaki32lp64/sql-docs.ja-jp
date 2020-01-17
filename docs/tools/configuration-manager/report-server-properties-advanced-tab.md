@@ -8,22 +8,21 @@ ms.reviewer: ''
 ms.technology: configuration
 ms.topic: conceptual
 ms.assetid: 80aedab6-2be4-409d-88ba-2107e96345fe
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-manager: craigg
-ms.openlocfilehash: 15384f5b0a0247d83bdfa987e48cab86f10b6599
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 7214cf97b4f7d23f8845e9a6506d1d778883b497
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47800720"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68058453"
 ---
 # <a name="report-server-properties-advanced-tab"></a>[SQL Server Reporting Services のプロパティ] ダイアログ ボックス ([詳細設定] タブ)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
   このサービスは、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]です。 カスタム プロパティが定義されていれば、そのプロパティと値がこのタブに表示されます。  
   
-## <a name="options"></a>[変数]  
+## <a name="options"></a>オプション  
  **[カスタマー フィードバック レポート]**  
  サービス品質の監視がこのサービスで有効になっているかどうかを示します。 カスタマー フィードバック報告の詳細については、オンライン ブックの「エラー レポートと使用状況レポートの設定」を検索してください。  
   

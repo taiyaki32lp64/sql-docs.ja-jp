@@ -15,11 +15,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 9f5b5c233a482672a0cc225364dbf1e4f3b4b645
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52813034"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63185407"
 ---
 # <a name="database-element-for-workload-dta"></a>Workload の Database 要素 (DTA)
   ワークロード トレース テーブルのあるデータベースを指定します。  
@@ -55,7 +55,7 @@ ms.locfileid: "52813034"
 ## <a name="example"></a>例  
  この使用例については`Database`要素のコード例を参照してください。 [Workload 要素&#40;DTA&#41;](workload-element-dta.md)します。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [XML 入力ファイル リファレンス &#40;データベース エンジン チューニング アドバイザー&#41;](xml-input-file-reference-database-engine-tuning-advisor.md)  
   
   

@@ -11,17 +11,20 @@ helpviewer_keywords:
 - ABS function
 - absolute positive value
 ms.assetid: 156747f6-e016-44cf-9a9f-ae8e4a1b4f17
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: c787a67c1c3a65b695e3fc7af79f2eda7c86f3be
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 2d332c8cdffae320d602f0581c7641d69c31c4fa
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47852150"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71297697"
 ---
 # <a name="abs-ssis-expression"></a>ABS (SSIS 式)
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   数値式の正の絶対値を返します。  
   
 ## <a name="syntax"></a>構文  

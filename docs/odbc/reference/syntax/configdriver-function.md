@@ -19,24 +19,23 @@ helpviewer_keywords:
 ms.assetid: 9473f48f-bcae-4784-89c1-7839bad4ed13
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: d69db144a460bb2f662c8ba906bf0302cdf98388
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 9e6c7759cf63611da167bf54a2e88487abc7b1cc
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47821660"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68016747"
 ---
 # <a name="configdriver-function"></a>ConfigDriver 関数
 **準拠**  
- 2.5 ODBC のバージョンで導入されました。  
+ バージョンが導入されました。ODBC 2.5  
   
  **概要**  
  **ConfigDriver**により、セットアップ プログラムをインストールを実行し、関数を呼び出すプログラムを必要とせずアンインストール**ConfigDSN**します。 この関数では、ドライバー固有のシステム情報を作成し、インストール中に、DSN の変換を実行するだけでなくアンインストール中に、システム情報の変更をクリーンアップなどのドライバー固有の関数を実行します。 この関数は、ドライバーのセットアップ DLL または別のセットアップ DLL によって公開されます。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
   
 BOOL ConfigDriver(  
       HWND    hwndParent,  
@@ -55,9 +54,9 @@ BOOL ConfigDriver(
  *起こり*  
  [入力]要求の種類。 *起こり*引数は、次の値のいずれかを含める必要があります。  
   
- ODBC_INSTALL_DRIVER: は、新しいドライバーをインストールします。  
+ ODBC_INSTALL_DRIVER:新しいドライバーをインストールします。  
   
- ODBC_REMOVE_DRIVER: は、ドライバーを削除します。  
+ ODBC_REMOVE_DRIVER:ドライバーを削除します。  
   
  このオプションは、ドライバー固有を場合にも、*起こり*ODBC_CONFIG_DRIVER_MAX + 1 から最初のオプションの引数を起動する必要があります。 *起こり*ODBC_CONFIG_DRIVER_MAX + 1 より大きい値から、追加のオプションの引数を開始する必要がありますもします。  
   
@@ -97,5 +96,5 @@ BOOL ConfigDriver(
 ### <a name="driver-specific-options"></a>ドライバー固有のオプション  
  アプリケーションを使用して、ドライバーによって公開されているドライバー固有の機能を要求できます、*起こり*引数。 *起こり*ODBC_CONFIG_DRIVER_MAX に 1 を加えた、最初のオプションは使用し、追加のオプションはその値から 1 ずつ増えます。 その関数が null で終わる文字列で指定する必要がありますのドライバーが必要な引数が渡された、 *lpszArgs*引数。 このような機能を提供するドライバーは、ドライバー固有のオプションのテーブルを維持する必要があります。 オプションは、ドライバーのマニュアルで完全に記述する必要があります。 ドライバー固有のオプションを使用しているアプリケーションの作成者は、これにより、アプリケーション小さい相互運用可能な対応にあります。  
   
-### <a name="messages"></a>メッセージ  
+### <a name="messages"></a>Messages  
  ドライバーのセットアップ ルーチンは null で終わる文字列としてアプリケーションにテキスト メッセージを送信することができます、 *lpszMsg*バッファー。 メッセージに切り捨てられます*cbMsgMax*によって null 終了文字マイナス、 **ConfigDriver**する以上の場合は機能*cbMsgMax*文字。

@@ -18,15 +18,15 @@ helpviewer_keywords:
 - id-prefix annotation [SQLXML]
 - is-mapping-schema annotation
 ms.assetid: f7b4d37b-d6d3-4ac3-b2fd-a0b534a924e4
-author: douglaslMS
-ms.author: douglasl
+author: MightyPen
+ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 668e26430e97a1e7d34e0e420966b975874224c0
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: fff698fc4eb92dd1bade50274a289f861e07ede0
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52750034"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66013610"
 ---
 # <a name="other-annotations-sqlxml-40"></a>その他の注釈 (SQLXML 4.0)
   前のトピックで説明した注釈に加えて、XML 一括読み込みでは、その他の注釈が次のように解釈されます。  
@@ -49,7 +49,7 @@ ms.locfileid: "52750034"
  `sql:key-fields`  
  XML 一括読み込みでは、この注釈は常に無視されます。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [注釈の解釈&#40;SQLXML 4.0&#41;](annotation-interpretation-sqlxml-4-0.md)  
   
   

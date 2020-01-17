@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: 3eb5c384-6751-4d50-be23-0c2ccc35593c
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: e661a6ed2dbc3f6503ca566ea8052edde735e415
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 1bf855697561638c0d4ca560c345bf2d21e4b027
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47804830"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67975908"
 ---
 # <a name="registeroutparameter-method-int-int-javalangstring"></a>registerOutParamete (int, int, java.lang.String) メソッド
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -44,7 +43,7 @@ public void registerOutParameter(int index,
   
  *sqlType*  
   
- JDBC の型コード java.sql.Types で定義されています。  
+ Java. .sql. の型で定義されている JDBC 型コード。  
   
  *typeName*  
   
@@ -54,11 +53,11 @@ public void registerOutParameter(int index,
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- この registerOutParameter メソッドは、java.sql.CallableStatement インターフェイスの registerOutParameter メソッドによって指定されます。  
+ この registerOutParameter メソッドは、java. sql. CallableStatement インターフェイスの registerOutParameter メソッドによって指定されます。  
   
- 以降で[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]JDBC Driver 3.0、 *sqlType*が java.sql.types.time 型は、このメソッドの動作は変更、**で sendTimeAsDatetime**接続プロパティ ([接続プロパティの設定](../../../connect/jdbc/setting-the-connection-properties.md)) と[SQLServerDataSource.setSendTimeAsDatetime](../../../connect/jdbc/reference/setsendtimeasdatetime-method-sqlserverdatasource.md)します。  
+ JDBC Driver 3.0 以降では、 *sqlType*の種類がの場合、このメソッドの動作は**sendTimeAsDatetime**接続プロパティ ([接続プロパティの設定](../../../connect/jdbc/setting-the-connection-properties.md)) によって変更されます。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [SQLServerDataSource Sqlserverdatasource.setsendtimeasdatetime](../../../connect/jdbc/reference/setsendtimeasdatetime-method-sqlserverdatasource.md)。  
   
- 詳細については、次を参照してください。[を構成する方法の java.sql.Time 値は、サーバーに送信される](../../../connect/jdbc/configuring-how-java-sql-time-values-are-sent-to-the-server.md)します。  
+ 詳細については、「 [java .sql の時刻値をサーバーに送信する方法の構成](../../../connect/jdbc/configuring-how-java-sql-time-values-are-sent-to-the-server.md)」を参照してください。  
   
 ## <a name="see-also"></a>参照  
  [registerOutParameter メソッド &#40;SQLServerCallableStatement&#41;](../../../connect/jdbc/reference/registeroutparameter-method-sqlservercallablestatement.md)   

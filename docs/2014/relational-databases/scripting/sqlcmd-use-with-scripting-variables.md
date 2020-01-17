@@ -1,11 +1,10 @@
 ---
-title: sqlcmd でのスクリプト変数の使用 | Microsoft Docs
-ms.custom: ''
+title: sqlcmd でのスクリプト変数の使用
+ms.custom: seo-lt-2019
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 dev_langs:
 - TSQL
@@ -19,12 +18,12 @@ ms.assetid: 793495ca-cfc9-498d-8276-c44a5d09a92c
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 85c701c583705a2d2c0e7438832a5074e60c337a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 6893d00a1fa7fb0986be2eb6241c596160085e2f
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48113782"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75243168"
 ---
 # <a name="use-sqlcmd-with-scripting-variables"></a>sqlcmd でのスクリプト変数の使用
   スクリプトで使用される変数は、スクリプト変数と呼ばれます。 スクリプト変数を使用すると、1 つのスクリプトを複数のシナリオで使用できます。 たとえば、1 つのスクリプトを複数のサーバーに対して実行する場合、各サーバー用にスクリプトを変更するのではなく、サーバー名にスクリプト変数を使用することができます。 サーバー名をスクリプト変数で指定することで、同じスクリプトを複数のサーバーで実行することができるようになります。  
@@ -34,7 +33,9 @@ ms.locfileid: "48113782"
  このトピックでは、 **SET**を使用して Cmd.exe コマンド プロンプトで環境変数を定義する例も紹介しています。  
   
 ## <a name="setting-scripting-variables-by-using-the-setvar-command"></a>setvar コマンドを使用したスクリプト変数の設定  
- **setvar** コマンドは、スクリプト変数を定義するのに使用します。 **setvar** コマンドを使用して定義されている変数は、内部的に格納されます。 スクリプト変数は、 **SET**を使用してコマンド プロンプトで定義されている環境変数と混同しないようにする必要があります。 環境変数でもなく **setvar**コマンドを使用して定義したものでもない変数をスクリプト内で参照していると、エラー メッセージが表示され、スクリプトの実行は停止されます。 詳細については、「 **sqlcmd ユーティリティ** 」の [-b](../../tools/sqlcmd-utility.md)オプションの説明を参照してください。  
+ 
+  **setvar** コマンドは、スクリプト変数を定義するのに使用します。 
+  **setvar** コマンドを使用して定義されている変数は、内部的に格納されます。 スクリプト変数は、 **SET**を使用してコマンド プロンプトで定義されている環境変数と混同しないようにする必要があります。 環境変数でもなく **setvar**コマンドを使用して定義したものでもない変数をスクリプト内で参照していると、エラー メッセージが表示され、スクリプトの実行は停止されます。 詳細については、「 **sqlcmd ユーティリティ** 」の [-b](../../tools/sqlcmd-utility.md)オプションの説明を参照してください。  
   
 ## <a name="variable-precedence-low-to-high"></a>変数の優先順位 (低から高)  
  複数の種類の変数に同じ名前が付いている場合、優先順位の最も高い変数が使用されます。  
@@ -43,11 +44,12 @@ ms.locfileid: "48113782"
   
 2.  ユーザー レベル環境変数  
   
-3.  **SET X=Y**の起動前にコマンド プロンプトで設定されたコマンド シェル ( **SET X=Y**)  
+3.  
+  **sqlcmd**の起動前にコマンド プロンプトで設定されたコマンド シェル (**SET X=Y**)  
   
-4.  **sqlcmd-v** X=Y  
+4.  **sqlcmd-v**X = Y  
   
-5.  **:Setvar** X Y  
+5.  **: Setvar**X Y  
   
 > [!NOTE]  
 >  環境変数を表示するには、 **[コントロール パネル]** の **[システム]** アイコンを開き、 **[詳細設定]** タブをクリックします。  
@@ -57,7 +59,8 @@ ms.locfileid: "48113782"
   
  `c:\> sqlcmd -l 60`  
   
- **-v** オプションを使用して、スクリプト内に存在するスクリプト変数を設定することもできます。 次のスクリプト (ファイル名は `testscript.sql`) では、 `ColumnName` がスクリプト変数です。  
+ 
+  **-v** オプションを使用して、スクリプト内に存在するスクリプト変数を設定することもできます。 次のスクリプト (ファイル名は `testscript.sql`) では、 `ColumnName` がスクリプト変数です。  
   
  `USE AdventureWorks2012;`  
   
@@ -65,7 +68,8 @@ ms.locfileid: "48113782"
   
  `FROM Person.Person x`  
   
- `WHERE c.`BusinessEntityID `< 5;`  
+ 
+  `WHERE c.`BusinessEntityID `< 5;`  
   
  その後、 `-v` オプションを使用して、取得する列の名前を指定できます。  
   
@@ -85,11 +89,13 @@ ms.locfileid: "48113782"
 -   スクリプト変数では、大文字と小文字が区別されません。  
   
     > [!NOTE]  
-    >  **sqlcmd** 環境変数に値が割り当てられていない場合、この変数は削除されます。 値を指定せずに **:setvar VarName** を使用すると、変数は削除されます。  
+    >  
+  **sqlcmd** 環境変数に値が割り当てられていない場合、この変数は削除されます。 値を指定せずに **:setvar VarName** を使用すると、変数は削除されます。  
   
  スクリプト変数に値を指定する場合は、次のガイドラインを考慮してください。  
   
--   **setvar** または **-v** オプションを使用して定義する変数値は、空白を含む文字列値の場合に引用符で囲む必要があります。  
+-   
+  **setvar** または **-v** オプションを使用して定義する変数値は、空白を含む文字列値の場合に引用符で囲む必要があります。  
   
 -   変数値に引用符が使用されている場合は、その引用符をエスケープする必要があります。 たとえば、`setvar MyVar "spac""e"`のように指定します。  
   
@@ -101,7 +107,8 @@ ms.locfileid: "48113782"
 -   変数値には空白文字または引用符を使用できます。  
   
 ## <a name="sqlcmd-scripting-variables"></a>sqlcmd スクリプト変数  
- **sqlcmd** で定義される変数はスクリプト変数と呼ばれます。 次の表は、 **sqlcmd** スクリプト変数の一覧です。  
+ 
+  **sqlcmd** で定義される変数はスクリプト変数と呼ばれます。 次の表は、 **sqlcmd** スクリプト変数の一覧です。  
   
 |変数|関連するオプション|R/W|既定|  
 |--------------|--------------------|----------|-------------|  
@@ -112,26 +119,27 @@ ms.locfileid: "48113782"
 |SQLCMDDBNAME|-d|R|""|  
 |SQLCMDLOGINTIMEOUT|-l|R/W|"8" (秒)|  
 |SQLCMDSTATTIMEOUT|-t|R/W|"0" = 無制限に待機|  
-|SQLCMDHEADERS|-H|R/W|"0"|  
-|SQLCMDCOLSEP|-S|R/W|" "|  
+|SQLCMDHEADERS|-h|R/W|"0"|  
+|SQLCMDCOLSEP|-s|R/W|" "|  
 |SQLCMDCOLWIDTH|-w|R/W|"0"|  
-|SQLCMDPACKETSIZE|-A|R|"4096"|  
-|SQLCMDERRORLEVEL|-M|R/W|"0"|  
+|SQLCMDPACKETSIZE|-a|R|"4096"|  
+|SQLCMDERRORLEVEL|-m|R/W|"0"|  
 |SQLCMDMAXVARTYPEWIDTH|-y|R/W|"256"|  
 |SQLCMDMAXFIXEDTYPEWIDTH|-y|R/W|"0" = 無制限|  
 |SQLCMDEDITOR||R/W|"edit.com"|  
 |SQLCMDINI||R|""|  
   
- \* SQLCMDUSER、SQLCMDPASSWORD および SQLCMDSERVER は、 **:Connect** が使用されるときに設定されます。  
+ \*SQLCMDUSER、SQLCMDUSER、および SQLCMDUSER は、 **: Connect**が使用されるときに設定されます。  
   
  R は、その値がプログラムの初期化時に一度だけ設定できることを示します。  
   
  R/W は、 **setvar** コマンドを使用して値を再設定できること、および後続のコマンドで新しい値が使用されることを示します。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
   
 ### <a name="a-using-the-setvar-command-in-a-script"></a>A. スクリプトでの setvar コマンドの使用  
- 多くの **sqlcmd** オプションは、スクリプトで **setvar** コマンドを使用して制御できます。 次の例では、スクリプト `test.sql` が作成されます。このスクリプトでは、変数 `SQLCMDLOGINTIMEOUT` が `60` 秒に設定され、別のスクリプト変数 `server`が `testserver`に設定されています。 `test.sql`のコードを次に示します。  
+ 多くの **sqlcmd** オプションは、スクリプトで **setvar** コマンドを使用して制御できます。 次の例では、スクリプト `test.sql` が作成されます。このスクリプトでは、変数 `SQLCMDLOGINTIMEOUT` が `60` 秒に設定され、別のスクリプト変数 `server`が `testserver`に設定されています。 
+  `test.sql`のコードを次に示します。  
   
  `:setvar SQLCMDLOGINTIMEOUT 60`  
   
@@ -188,7 +196,8 @@ ms.locfileid: "48113782"
  `4> GO`  
   
 ### <a name="d-using-user-level-environment-variables-within-sqlcmd"></a>D. sqlcmd 内でのユーザーレベル環境変数の使用  
- 次の例では、ユーザーレベル環境変数 `%Temp%` をコマンド プロンプトで設定し、 `sqlcmd` 入力ファイルに渡します。 ユーザーレベル環境変数を取得するには、 **[コントロール パネル]** の **[システム]** をダブルクリックします。 **[詳細設定]** タブをクリックし、 **[環境変数]** をクリックします。  
+ 次の例では、ユーザーレベル環境変数 `%Temp%` をコマンド プロンプトで設定し、 `sqlcmd` 入力ファイルに渡します。 ユーザーレベル環境変数を取得するには、 **[コントロール パネル]** の **[システム]** をダブルクリックします。 
+  **[詳細設定]** タブをクリックし、 **[環境変数]** をクリックします。  
   
  入力ファイル `c:\testscript.txt`のコードを次に示します。  
   
@@ -227,7 +236,8 @@ ms.locfileid: "48113782"
  `(4 rows affected)`  
   
 ### <a name="e-using-a-startup-script"></a>E. スタートアップ スクリプトの使用  
- **sqlcmd** スタートアップ スクリプトは、 **sqlcmd** の起動時に実行されます。 次の例では、環境変数 `SQLCMDINI`が設定されます。 以下の内容を次に示します: `init.sql.`  
+ 
+  **sqlcmd** スタートアップ スクリプトは、 **sqlcmd** の起動時に実行されます。 次の例では、環境変数 `SQLCMDINI`が設定されます。 以下の内容を次に示します: `init.sql.`  
   
  `SET NOCOUNT ON`  
   
@@ -268,7 +278,8 @@ ms.locfileid: "48113782"
  `>1 < user > is connected to < server > (9.00.2047.00)`  
   
 > [!NOTE]  
->  **-X** オプションを使用すると、スタートアップ スクリプト機能が無効になります。  
+>  
+  **-X** オプションを使用すると、スタートアップ スクリプト機能が無効になります。  
   
 ### <a name="f-variable-expansion"></a>F. 変数の拡張  
  次の例では、 **sqlcmd** 変数の形式でデータを使用する方法を示します。  
@@ -285,7 +296,8 @@ ms.locfileid: "48113782"
   
  `GO`  
   
- `Col1` の `dbo.VariableTest` に、値 `$(tablename)`を含む 1 行を挿入します。  
+ 
+  `Col1` の `dbo.VariableTest` に、値 `$(tablename)`を含む 1 行を挿入します。  
   
  `INSERT INTO AdventureWorks2012.dbo.VariableTest(Col1)`  
   
@@ -293,7 +305,8 @@ ms.locfileid: "48113782"
   
  `GO`  
   
- `sqlcmd` プロンプトで、 `$(tablename)`に変数を設定していない場合、次のステートメントでは行が返されます。  
+ 
+  `sqlcmd` プロンプトで、 `$(tablename)`に変数を設定していない場合、次のステートメントでは行が返されます。  
   
  `C:\> sqlcmd`  
   
@@ -341,9 +354,9 @@ ms.locfileid: "48113782"
   
  `>2 GO`  
   
-## <a name="see-also"></a>関連項目  
- [sqlcmd ユーティリティの使用](sqlcmd-use-the-utility.md)   
- [-b](../../tools/sqlcmd-utility.md)   
- [コマンド プロンプト ユーティリティ リファレンス &#40;データベース エンジン&#41;](../../tools/command-prompt-utility-reference-database-engine.md)  
+## <a name="see-also"></a>参照  
+ [Sqlcmd ユーティリティを使用する](sqlcmd-use-the-utility.md)   
+ [sqlcmd ユーティリティ](../../tools/sqlcmd-utility.md)   
+ [コマンドプロンプトユーティリティリファレンス &#40;データベースエンジン&#41;](../../tools/command-prompt-utility-reference-database-engine.md)  
   
   

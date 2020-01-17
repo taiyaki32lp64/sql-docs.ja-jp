@@ -14,11 +14,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 5c97c07d34de2b17b6966ab269004612c966b961
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48189252"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62856442"
 ---
 # <a name="stored-procedure-properties-general-page"></a>[ストアド プロシージャのプロパティ]\([全般] ページ)
   ストアド プロシージャに関する情報を表示します。 すべての情報は読み取り専用です。  

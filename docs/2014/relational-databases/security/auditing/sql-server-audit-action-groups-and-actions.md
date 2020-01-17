@@ -22,11 +22,11 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: e204a1865c2a928079fcd9b32b31a8ae0c0bd0a8
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48222992"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63238132"
 ---
 # <a name="sql-server-audit-action-groups-and-actions"></a>SQL Server 監査のアクション グループとアクション
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Audit 機能を使用すると、サーバー レベルおよびデータベース レベルのイベントのグループおよび個別のイベントを監査することができます。 詳しくは、「[SQL Server Audit &#40;データベース エンジン&#41;](sql-server-audit-database-engine.md)」を参照してください。  
@@ -80,8 +80,8 @@ ms.locfileid: "48222992"
 |DATABASE_CHANGE_GROUP|このイベントは、データベースが作成、変更、または削除されるときに発生します。 このイベントは、任意のデータベースが作成、変更、または削除されるたびに発生します。 [Audit Database Management Event Class](../../event-classes/audit-database-management-event-class.md)と同じです。|  
 |DATABASE_LOGOUT_GROUP|このイベントは、包含データベースのユーザーがデータベースをログアウトするときに発生します。 Database Logout Event Class と同じです。|  
 |DATABASE_MIRRORING_LOGIN_GROUP|このイベントは、データベース ミラーリングのトランスポート セキュリティに関する監査メッセージを報告するために発生します。 [Audit Database Mirroring Login Event Class](../../event-classes/audit-database-mirroring-login-event-class.md)と同じです。|  
-|DATABASE_OBJECT_ACCESS_GROUP|このイベントは、メッセージ型、アセンブリ、コントラクトなどのデータベース オブジェクトへのアクセスが行われるたびに発生します。<br /><br /> このイベントは、任意のデータベースへの任意のアクセスに対して発生します。 **注:** 大量の監査レコードにこの可能性があります。 <br /><br /> [Audit Database Object Access Event Class](../../event-classes/audit-database-object-access-event-class.md)と同じです。|  
-|DATABASE_OBJECT_CHANGE_GROUP|このイベントは、スキーマなどのデータベース オブジェクトで、CREATE、ALTER、または DROP ステートメントが実行されたときに発生します。 このイベントは、任意のデータベース オブジェクトが作成、変更、または削除されるたびに発生します。 **注:** 可能性が非常に大量の監査レコードにします。 <br /><br /> [Audit Database Object Management Event Class](../../event-classes/audit-database-object-management-event-class.md)と同じです。|  
+|DATABASE_OBJECT_ACCESS_GROUP|このイベントは、メッセージ型、アセンブリ、コントラクトなどのデータベース オブジェクトへのアクセスが行われるたびに発生します。<br /><br /> このイベントは、任意のデータベースへの任意のアクセスに対して発生します。 **注:** 大量の監査レコードにこの可能性があること。 <br /><br /> [Audit Database Object Access Event Class](../../event-classes/audit-database-object-access-event-class.md)と同じです。|  
+|DATABASE_OBJECT_CHANGE_GROUP|このイベントは、スキーマなどのデータベース オブジェクトで、CREATE、ALTER、または DROP ステートメントが実行されたときに発生します。 このイベントは、任意のデータベース オブジェクトが作成、変更、または削除されるたびに発生します。 **注:** 非常に大量の監査レコードにこの可能性があります。 <br /><br /> [Audit Database Object Management Event Class](../../event-classes/audit-database-object-management-event-class.md)と同じです。|  
 |DATABASE_OBJECT_OWNERSHIP_CHANGE_GROUP|このイベントは、データベース スコープ内のオブジェクトの所有者が変更されたときに発生します。 このイベントは、サーバー上の任意のデータベースの任意のオブジェクト所有権の変更に対して発生します。 [Audit Database Object Take Ownership Event Class](../../event-classes/audit-database-object-take-ownership-event-class.md)と同じです。|  
 |DATABASE_OBJECT_PERMISSION_CHANGE_GROUP|このイベントは、アセンブリやスキーマなどのデータベース オブジェクトに対して GRANT、REVOKE、または DENY が実行された場合に発生します。 このイベントは、サーバー上の任意のデータベースの任意のオブジェクト権限の変更に対して発生します。 [Audit Database Object GDR Event Class](../../event-classes/audit-database-object-gdr-event-class.md)と同じです。|  
 |DATABASE_OPERATION_GROUP|このイベントは、チェックポイントやクエリ通知のサブスクライブなど、データベースの操作が行われたときに発生します。 このイベントは、任意のデータベースの任意のデータベース操作に対して発生します。 [Audit Database Operation Event Class](../../event-classes/audit-database-operation-event-class.md)と同じです。|  
@@ -177,7 +177,7 @@ ms.locfileid: "48222992"
   
 |アクション グループ名|説明|  
 |-----------------------|-----------------|  
-|AUDIT_ CHANGE_GROUP|このイベントは、次のいずれかのコマンドが実行されるたびに発生します。<br /><br /> -サーバー監査を作成します。<br />-ALTER SERVER AUDIT<br />-サーバー監査を削除します。<br />-サーバー監査の仕様を作成します。<br />-サーバー監査の仕様を変更します。<br />-サーバー監査の仕様を削除します。<br />-データベース監査の仕様を作成します。<br />-ALTER データベース監査の仕様<br />-データベース監査の仕様を削除します。|  
+|AUDIT_ CHANGE_GROUP|このイベントは、次のいずれかのコマンドが実行されるたびに発生します。<br /><br /> -サーバー監査を作成します。<br />-ALTER SERVER AUDIT<br />-   DROP SERVER AUDIT<br />-サーバー監査の仕様を作成します。<br />-サーバー監査の仕様を変更します。<br />-   DROP SERVER AUDIT SPECIFICATION<br />-データベース監査の仕様を作成します。<br />-   ALTER DATABASE AUDIT SPECIFICATION<br />-   DROP DATABASE AUDIT SPECIFICATION|  
   
 ## <a name="related-content"></a>関連コンテンツ  
  [サーバー監査およびサーバー監査の仕様を作成する方法](create-a-server-audit-and-server-audit-specification.md)  

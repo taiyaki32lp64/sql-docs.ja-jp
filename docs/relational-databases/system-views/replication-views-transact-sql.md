@@ -22,24 +22,23 @@ helpviewer_keywords:
 ms.assetid: 93e5056d-0d93-4a48-ba33-72762eb995d8
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 5f90b60b13d9641771ce549bfccdba3f6fc5308a
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 51cc9434805fbd14204d74edae1594ae01c06bb2
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52816074"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68129565"
 ---
-# <a name="replication-views-transact-sql"></a>レプリケーション ビュー (Transact-SQL)
+# <a name="replication-views-transact-sql"></a>レプリケーション ビュー (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
-  これらのビューでのレプリケーションで使用される情報を含む[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]します。 ビュー内のデータに簡単にアクセスを有効にする[レプリケーション システム テーブル](../../relational-databases/system-tables/replication-tables-transact-sql.md)します。 データベースがパブリケーション データベースまたはサブスクリプション データベースとして有効な場合に、ビューはユーザー データベースで作成されます。 データベースがレプリケーション トポロジから削除されると、すべてのレプリケーション オブジェクトはユーザー データベースから削除されます。 使用してレプリケーション メタデータにアクセスするための推奨される方法は、[レプリケーションのストアド プロシージャ](../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)します。  
+  これらのビューでのレプリケーションで使用される情報を含む[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]します。 ビュー内のデータに簡単にアクセスを有効にする[レプリケーション システム テーブル](../../relational-databases/system-tables/replication-tables-transact-sql.md)します。 ビューは、そのデータベースはパブリケーションまたはサブスクリプション データベースとして有効にすると、ユーザー データベースで作成されます。 すべてのレプリケーション オブジェクトは、レプリケーション トポロジから、データベースが削除されると、ユーザー データベースから削除されます。 使用してレプリケーション メタデータにアクセスするための推奨される方法は、[レプリケーションのストアド プロシージャ](../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)します。  
   
 > [!IMPORTANT]  
->  ユーザーはシステム ビューを直接変更しないでください。  
+>  すべてのユーザーによって直接システム ビューを変更しないようにします。  
   
 ## <a name="replication-views"></a>レプリケーション ビュー  
- 次に、レプリケーションで使用するシステム ビューの一覧を、データベースごとにグループ化して示します。  
+ 次にデータベースでグループ化されたレプリケーションで使用されるシステム ビューの一覧を示します。  
   
 ### <a name="replication-views-in-the-msdb-database"></a>msdb データベースのレプリケーション ビュー  
   
@@ -71,7 +70,7 @@ ms.locfileid: "52816074"
 |[sysmergeextendedarticlesview &#40;TRANSACT-SQL&#41;](../../relational-databases/system-views/sysmergeextendedarticlesview-transact-sql.md)|[sysmergepartitioninfoview &#40;TRANSACT-SQL&#41;](../../relational-databases/system-views/sysmergepartitioninfoview-transact-sql.md)|  
 |[systranschemas &#40;TRANSACT-SQL&#41;](../../relational-databases/system-views/systranschemas-transact-sql.md)||  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [レプリケーション テーブル &#40;Transact-SQL&#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)  
   
   

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.sqlserverstudio.partitionproperties.selection.f1
@@ -13,12 +12,12 @@ ms.assetid: 29a7b556-2484-4f66-b74c-1c061b3ce25c
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 2b09e8e689f090feb2d823a13ac9329bee9bc3f2
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 7cfc9890bda35f1574c83b339495b996782b79b0
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48149352"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66069221"
 ---
 # <a name="selection-partition-properties-dialog-box-ssms"></a>[選択項目] ([パーティションのプロパティ] ダイアログ ボックス) (SSMS)
   SQL Server Management Studio の **[パーティションのプロパティ]** ダイアログ ボックスの **[選択項目]** ページを使用すると、 **[全般]** ペイン、 **[プロアクティブ キャッシュ]** ペイン、または **[エラーの構成]** ペインでプロパティを表示または変更するメジャー グループからパーティションを選択できます。  

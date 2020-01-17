@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/09/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 helpviewer_keywords:
 - scripts [Reporting Services]
@@ -20,15 +19,15 @@ helpviewer_keywords:
 - transferrng reports
 - reports [Reporting Services], migrating
 ms.assetid: d0416c9e-e3f9-456d-9870-2cfd2c49039b
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: bf378f94e8a3a010f2959a2c8ce1bd5e69f005bb
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: d0ea3b81f69b46fbb829879f9976cb45a11ab803
+ms.sourcegitcommit: a165052c789a327a3a7202872669ce039bd9e495
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56013703"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72783344"
 ---
 # <a name="script-deployment-and-administrative-tasks"></a>配置タスクおよび管理タスクのスクリプト作成
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] は、スクリプトを使用した日常的なインストール、配置、および管理タスクの自動化をサポートします。 レポート サーバーの配置は複数の段階を伴うプロセスです。 配置を構成するためには複数のツールとプロセスを使用する必要があります。すべての作業を自動化する単一のプログラムやアプローチは存在しません。  
@@ -53,9 +52,9 @@ ms.locfileid: "56013703"
 |レポート サーバー データベース接続を構成する。|接続文字列、アカウントまたはパスワード、認証の種類を変更する場合は、 **rsconfig** ユーティリティを実行して接続を構成します。 詳細については、「[レポート サーバー データベース接続の構成 &#40;SSRS 構成マネージャー&#41;](../../sql-server/install/configure-a-report-server-database-connection-ssrs-configuration-manager.md)」および「[rsconfig ユーティリティ &#40;SSRS&#41;](rsconfig-utility-ssrs.md)」を参照してください。<br /><br /> データベースの作成またはアップグレードに rsconfig.exe を使用することはできません。 データベースと RSExecRole が既に存在している必要があります。|  
 |スケールアウト配置を構成する。|スケールアウト配置を自動化するには、次のいずれかのアプローチを使用します。<br /><br /> rskeymgmt.exe ユーティリティを実行して、レポート サーバー インスタンスを既存の環境に追加する。 詳細については、「[スケールアウト配置に関する暗号化キーの追加と削除 &#40;SSRS構成マネージャー&#41;](../install-windows/add-and-remove-encryption-keys-for-scale-out-deployment.md)」を参照してください。<br /><br /> レポート サーバー WMI プロバイダーに対して実行するカスタム コードを作成する。|  
 |暗号化キーをバックアップする。|暗号化キーのバックアップを自動化するには、次のいずれかのアプローチを使用します。<br /><br /> rskeymgmt.exe ユーティリティを実行してキーをバックアップする。 詳細については、「 [Back Up and Restore Reporting Services Encryption Keys](../install-windows/ssrs-encryption-keys-back-up-and-restore-encryption-keys.md)」を参照してください。<br /><br /> レポート サーバー WMI プロバイダーに対して実行するカスタム コードを作成する。|  
-|レポート サーバーの電子メールを構成する。|[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] WMI プロバイダーに対して実行するカスタム コードを作成します。 プロバイダーでは、電子メールの構成設定のサブセットがサポートされています。<br /><br /> RSReportServer.config ファイルにはすべての設定が含まれていますが、このファイルの使用を自動化しないようにしてください。 特に、ファイルを別のレポート サーバーにコピーする場合は、バッチ ファイルを使用しないでください。 各構成ファイルには、現在のインスタンスに固有の値が含まれています。 これらの値は、別のレポート サーバー インスタンスでは無効になります。<br /><br /> 設定の詳細については、次を参照してください。[レポート サーバー電子メール配信用に構成&#40;SSRS 構成マネージャー&#41;](../../sql-server/install/configure-a-report-server-for-e-mail-delivery-ssrs-configuration-manager.md)します。|  
+|レポート サーバーの電子メールを構成する。|[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] WMI プロバイダーに対して実行するカスタム コードを作成します。 プロバイダーでは、電子メールの構成設定のサブセットがサポートされています。<br /><br /> RSReportServer.config ファイルにはすべての設定が含まれていますが、このファイルの使用を自動化しないようにしてください。 特に、ファイルを別のレポート サーバーにコピーする場合は、バッチ ファイルを使用しないでください。 各構成ファイルには、現在のインスタンスに固有の値が含まれています。 これらの値は、別のレポート サーバー インスタンスでは無効になります。<br /><br /> 設定の詳細については、「 [Configure a Report Server for E-Mail &#40;Delivery SSRS&#41;Configuration Manager](../../sql-server/install/configure-a-report-server-for-e-mail-delivery-ssrs-configuration-manager.md)」を参照してください。|  
 |自動実行アカウントを構成する。|自動実行アカウントの構成を自動化するには、次のいずれかのアプローチを使用します。<br /><br /> rsconfig.exe ユーティリティを実行してアカウントを構成する。 詳細については、「[自動実行アカウントを構成する &#40;SSRS 構成マネージャー&#41;](../install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md)」を参照してください。<br /><br /> レポート サーバー WMI プロバイダーを呼び出すカスタム コードを作成する。|  
-|既存のコンテンツを別のレポート サーバー上に配置する (フォルダー階層、ロールの割り当て、レポート、サブスクリプション、スケジュール、データ ソース、リソースなど)。|既存のレポート サーバー環境を再構築する最善の方法は、レポート サーバー データベースを新しいレポート サーバー インスタンスにコピーすることです。<br /><br /> カスタム コードを作成して、既存のレポート サーバーのコンテンツをプログラムによって再構築する方法もあります。 ただし、サブスクリプション、レポート スナップショット、レポート履歴は、プログラムによって再作成できないことに注意してください。<br /><br /> 場合によっては両者を組み合わせた方法も効果的です (つまり、レポート サーバー データベースを復元してから、カスタム コードによって、特定の環境に合わせてレポート サーバー データベースを更新します)。<br /><br /> 詳細な例については、「 [レポート サーバー間でコンテンツをコピーするサンプル Reporting Services rs.exe スクリプト](sample-reporting-services-rs-exe-script-to-copy-content-between-report-servers.md)」を参照してください。<br /><br /> レポート サーバー データベースの再配置の詳細については、「[別のコンピューターへのレポート サーバー データベースの移動 &#40;SSRS ネイティブ モード&#41;](../report-server/moving-the-report-server-databases-to-another-computer-ssrs-native-mode.md)」を参照してください。 レポート サーバー環境をプログラムによって構築する方法の詳細については、このトピックの「スクリプトを使用したレポート サーバー コンテンツとフォルダーの移行」を参照してください。|  
+|既存のコンテンツを別のレポート サーバー上に配置する (フォルダー階層、ロールの割り当て、レポート、サブスクリプション、スケジュール、データ ソース、リソースなど)。|既存のレポート サーバー環境を再構築する最善の方法は、レポート サーバー データベースを新しいレポート サーバー インスタンスにコピーすることです。<br /><br /> カスタム コードを作成して、既存のレポート サーバーのコンテンツをプログラムによって再構築する方法もあります。 ただし、サブスクリプション、レポート スナップショット、レポート履歴は、プログラムによって再作成できないことに注意してください。<br /><br /> 場合によっては両者を組み合わせた方法も効果的です (つまり、レポート サーバー データベースを復元してから、カスタム コードによって、特定の環境に合わせてレポート サーバー データベースを更新します)。<br /><br /> 詳細な例については、「 [Sample Reporting Services rs.exe Script to Migrate Content between Report Servers](sample-reporting-services-rs-exe-script-to-copy-content-between-report-servers.md)」を参照してください。<br /><br /> レポート サーバー データベースの再配置の詳細については、「[別のコンピューターへのレポート サーバー データベースの移動 &#40;SSRS ネイティブ モード&#41;](../report-server/moving-the-report-server-databases-to-another-computer-ssrs-native-mode.md)」を参照してください。 レポート サーバー環境をプログラムによって構築する方法の詳細については、このトピックの「スクリプトを使用したレポート サーバー コンテンツとフォルダーの移行」を参照してください。|  
   
 ## <a name="tools-and-technologies-for-automating-server-deployment"></a>サーバー配置を自動化するためのツールと技法  
  配置タスクとメンテナンス タスクを自動化するためのプログラムおよびインターフェイスを次に示します。  
@@ -75,7 +74,7 @@ ms.locfileid: "56013703"
 ## <a name="use-scripts-to-migrate-report-server-content-and-folders"></a>スクリプトを使用したレポート サーバー コンテンツとフォルダーの移行  
  レポート サーバー環境を別のレポート サーバー インスタンスに複製するためのスクリプトを作成できます。 配置スクリプトは、一般的には [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] で作成し、レポート サーバーのスクリプト ホスト ユーティリティで処理します。  
   
- 詳細な例については、「 [レポート サーバー間でコンテンツをコピーするサンプル Reporting Services rs.exe スクリプト](sample-reporting-services-rs-exe-script-to-copy-content-between-report-servers.md)」を参照してください。  
+ 詳細な例については、「 [Sample Reporting Services rs.exe Script to Migrate Content between Report Servers](sample-reporting-services-rs-exe-script-to-copy-content-between-report-servers.md)」を参照してください。  
   
  スクリプトを使用して、フォルダー、共有データ ソース、リソース、レポート、ロールの割り当て、および設定を、あるサーバーから別のサーバーにコピーします。 1 つのレポート サーバー インスタンス用のスクリプトを作成してから、そのスクリプトを別のサーバーで実行して、レポート サーバー名前空間を再作成します。 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] で、複数のレポート サーバーを配置している場合は、各サーバーで個別にスクリプトを実行して、すべてのサーバーを同様に構成できます。  
   
@@ -102,9 +101,9 @@ ms.locfileid: "56013703"
  スクリプトを使用するには、.rss 拡張子を持つファイルにスクリプトを保存し、rs.exe コマンド プロンプト ユーティリティを使用してレポート サーバー上でファイルを実行します。 スクリプトはコンパイルされないので [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]のインストールは不要です。 この例では、レポート サーバーをホストするローカル コンピューターに対する権限を持っていることを前提としています。 権限があるアカウントでログオンしていない場合は、追加のコマンド ライン引数を使用してアカウント情報を指定する必要があります。 詳細については、「[RS.exe ユーティリティ (SSRS)](rs-exe-utility-ssrs.md)」を参照してください。  
   
 > [!TIP]  
->  詳細な例については、「 [レポート サーバー間でコンテンツをコピーするサンプル Reporting Services rs.exe スクリプト](sample-reporting-services-rs-exe-script-to-copy-content-between-report-servers.md)」を参照してください。  
+>  詳細な例については、「 [Sample Reporting Services rs.exe Script to Migrate Content between Report Servers](sample-reporting-services-rs-exe-script-to-copy-content-between-report-servers.md)」を参照してください。  
   
-```  
+```vb
 Public Sub Main()  
         Dim props(0) As [Property]  
         Dim setProp As New [Property]  
@@ -125,11 +124,9 @@ End Sub
  [GenerateDatabaseCreationScript メソッド &#40;WMI MSReportServer_ConfigurationSetting&#41;](../wmi-provider-library-reference/configurationsetting-method-generatedatabasecreationscript.md)   
  [GenerateDatabaseRightsScript メソッド &#40;WMI MSReportServer_ConfigurationSetting&#41;](../wmi-provider-library-reference/configurationsetting-method-generatedatabaserightsscript.md)   
  [GenerateDatabaseUpgradeScript メソッド &#40;WMI MSReportServer_ConfigurationSetting&#41;](../wmi-provider-library-reference/configurationsetting-method-generatedatabaseupgradescript.md)   
- [コマンド プロンプトから SQL Server 2014 をインストールします。](../../database-engine/install-windows/install-sql-server-from-the-command-prompt.md)   
+ [コマンドプロンプトから SQL Server 2014 をインストール](../../database-engine/install-windows/install-sql-server-from-the-command-prompt.md)   
  [Reporting Services ネイティブ モードのレポート サーバーのインストール](../install-windows/install-reporting-services-native-mode-report-server.md)   
  [Reporting Services レポート サーバー (ネイティブ モード)](../report-server/reporting-services-report-server-native-mode.md)   
  [レポート サーバーのコマンド プロンプト ユーティリティ &#40;SSRS&#41;](report-server-command-prompt-utilities-ssrs.md)   
- [Reporting Services と Power View のブラウザー サポートの計画&#40;Reporting Services 2014&#41;](../browser-support-for-reporting-services-and-power-view.md)   
+ [Reporting Services と Power View のブラウザーサポート&#40;の計画 Reporting Services&#41; 2014](../browser-support-for-reporting-services-and-power-view.md)   
  [Reporting Services ツール](reporting-services-tools.md)  
-  
-  

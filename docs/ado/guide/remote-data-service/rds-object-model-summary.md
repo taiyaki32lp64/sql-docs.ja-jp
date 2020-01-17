@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 909f9af7-31db-4eec-ad52-650ce74dac2f
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: b19a138e9e4d479e7fb9cb3f8b4e140838b43e8a
-ms.sourcegitcommit: 1a5448747ccb2e13e8f3d9f04012ba5ae04bb0a3
+ms.openlocfilehash: 6c455d816b3ba5a9606d09e3b05e54583e11ca41
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51558409"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67922530"
 ---
 # <a name="rds-object-model-summary"></a>RDS オブジェクト モデルの概要
 > [!IMPORTANT]
@@ -31,7 +30,7 @@ ms.locfileid: "51558409"
 |[RDSServer.DataFactory](../../../ado/reference/rds-api/datafactory-object-rdsserver.md)|このオブジェクトは、既定のサーバー プログラムを表します。 既定の RDS のデータの取得と更新動作を実行します。<br /><br /> **DataFactory**オブジェクトは、スクリプトを実行することはありません。|  
 |[RDS.DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md)|このオブジェクトは自動的に呼び出すことができます、 **rds.DataSpace**と**RDSServer.DataFactory**オブジェクト。<br /><br /> このオブジェクトを使用して、既定の RDS のデータの取得や更新プログラムの動作を呼び出します。<br /><br /> このオブジェクトは、ビジュアル コントロールへのアクセス、返されたにするための手段も用意されています。 **Recordset**オブジェクト。<br /><br /> **DataControl**オブジェクトがスクリプトを実行します。|  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [RDS の基礎](../../../ado/guide/remote-data-service/rds-fundamentals.md)   
  [RDS のシナリオ](../../../ado/guide/remote-data-service/rds-scenario.md)   
  [RDS チュートリアル](../../../ado/guide/remote-data-service/rds-tutorial.md)   

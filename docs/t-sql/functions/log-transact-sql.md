@@ -17,16 +17,15 @@ helpviewer_keywords:
 - logarithm of expression
 - LOG function
 ms.assetid: f7c39511-cd84-4362-93ba-0d93655217ee
-author: MashaMSFT
-ms.author: mathoma
-manager: craigg
+author: MikeRayMSFT
+ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 70bfded9597cd7e0d8d8f54ecc3fa636e2d41d3f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 1d3cbf58a3a85d84daf5b0f83006a7cdcb24b589
+ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47704903"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "73982257"
 ---
 # <a name="log-transact-sql"></a>LOG (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -56,7 +55,7 @@ LOG ( float_expression )
  *base*  
  対数の底を設定するオプションの整数引数です。  
   
-**適用対象**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
+**適用対象**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 以降
   
 ## <a name="return-types"></a>戻り値の型  
  **float**  
@@ -66,7 +65,7 @@ LOG ( float_expression )
   
  自然対数は **e** を底とする対数です。ここで、**e** は 2.718281828 にほぼ等しい無理定数です。  
   
- 数値の指数の自然対数は、その数値自体になります。つまり LOG( EXP( *n* ) ) = *n* です。 また、数値の自然対数の指数は、その数値自体になります。つまり EXP( LOG( *n* ) ) = *n* です。  
+ 数値の指数の自然対数は、その数値自体になります。LOG( EXP( *n* ) ) = *n*。 また、数値の自然対数の指数は、その数値自体になります。EXP( LOG( *n* ) ) = *n*。  
   
 ## <a name="examples"></a>使用例  
   

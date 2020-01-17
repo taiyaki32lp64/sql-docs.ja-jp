@@ -15,15 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - STArea method
 ms.assetid: cfc0b0e0-7fde-431a-863f-d13f3b1b1bef
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: 299ccb67b03a654a348492f81ea62f086229efab
-ms.sourcegitcommit: 01e17c5f1710e7058bad8227c8011985a9888d36
+author: MladjoA
+ms.author: mlandzic
+ms.openlocfilehash: 817a6325b956f5fc4214597b0b8bc46f6aff49f3
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/14/2019
-ms.locfileid: "56265279"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68042514"
 ---
 # <a name="starea-geography-data-type"></a>STArea (geography データ型)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]

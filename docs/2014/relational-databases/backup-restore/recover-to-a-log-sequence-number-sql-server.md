@@ -22,11 +22,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 835057cdef6b7d2a336b64480515a5046cfde070
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54124252"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62875765"
 ---
 # <a name="recover-to-a-log-sequence-number-sql-server"></a>ログ シーケンス番号への復旧 (SQL Server)
   このトピックは、完全復旧モデルまたは一括ログ復旧モデルを使用するデータベースのみに関連しています。  
@@ -38,7 +38,7 @@ ms.locfileid: "54124252"
   
  トランザクション ログのすべてのレコードは、ログ シーケンス番号 (LSN) によって一意に識別されます。 LSN の順序は、LSN2 が LSN1 より大きい場合、LSN2 によって参照されるログ レコードで示される変更が、ログ レコード LSN1 で示される変更の後に行われたようになっています。  
   
- 重要なイベントが発生した時点のログ レコードの LSN を、正しい復元シーケンスの構築に役立てることができます。 LSN は順序付けられているので、等号または不等号 ( **\<**、 **>**、 **=**, **\<=**、 **>=**) を使用して比較できます。 このような比較は、復元シーケンスを構築するときに役立ちます。  
+ 重要なイベントが発生した時点のログ レコードの LSN を、正しい復元シーケンスの構築に役立てることができます。 LSN は順序付けられているので、等号または不等号 ( **\<** 、 **>** 、 **=** , **\<=** 、 **>=** ) を使用して比較できます。 このような比較は、復元シーケンスを構築するときに役立ちます。  
   
 > [!NOTE]  
 >  LSN は、データ型 `numeric`(25,0) の値です。 算術演算 (加算や減算など) は、意味が無いので LSN では行わないでください。  
@@ -64,11 +64,11 @@ ms.locfileid: "54124252"
 ## <a name="transact-sql-syntax-for-restoring-to-an-lsn"></a>LSN に復元するための Transact-SQL 構文  
  [RESTORE](/sql/t-sql/statements/restore-statements-transact-sql) ステートメントを使用して、次のように LSN または LSN の直前まで復元できます。  
   
--   WITH STOPATMARK **= '** lsn:_<lsn_number>_**'** 句を使用します。ここで、lsn:*<lsn_number\<* は、指定された LSN が含まれるログ レコードが復旧ポイントであることを指定する文字列です。  
+-   WITH STOPATMARK **= '** lsn: _<lsn_number>_ **'** 句を使用します。ここで、lsn: *<lsn_number\<* は、指定された LSN が含まれるログ レコードが復旧ポイントであることを指定する文字列です。  
   
      STOPATMARK によって LSN までロールフォワードされ、そのログ レコードがロールフォワードに含められます。  
   
--   WITH STOPBEFOREMARK **= '** lsn:_<lsn_number>_**'** 句を使用します。ここで、lsn:*\<lsnNumber>* は、指定した LSN 番号が含まれるログ レコードの直前のログ レコードが、復旧ポイントであることを指定する文字列です。  
+-   WITH STOPBEFOREMARK **= '** lsn: _<lsn_number>_ **'** 句を使用します。ここで、lsn: *\<lsnNumber>* は、指定した LSN 番号が含まれるログ レコードの直前のログ レコードが、復旧ポイントであることを指定する文字列です。  
   
      STOPBEFOREMARK では、LSN までロールフォワードされますが、指定されたログ レコードはロールフォワードから除外されます。  
   

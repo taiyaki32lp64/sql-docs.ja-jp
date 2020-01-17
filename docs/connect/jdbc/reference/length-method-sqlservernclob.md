@@ -1,5 +1,5 @@
 ---
-title: length メソッド (SQLServerNClob) |Microsoft Docs
+title: length メソッド (SQLServerNClob) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: dd1fb351-b4f2-4ebe-80a0-8bafb0637906
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 0f6a4dc147bad46017d772aeb02787091e904e9e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e32b559d43e44e75d4f87ecf99cfd871727c9934
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47713200"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67976852"
 ---
 # <a name="length-method-sqlservernclob"></a>length メソッド (SQLServerNClob)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -37,7 +36,7 @@ public long length()
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- この length メソッドは、java.sql.NClob インターフェイスの length メソッドによって指定されます。  
+ この長さのメソッドは、NClob インターフェイスの length メソッドによって指定されます。  
   
 ## <a name="see-also"></a>参照  
  [SQLServerNClob のメソッド](../../../connect/jdbc/reference/sqlservernclob-methods.md)   

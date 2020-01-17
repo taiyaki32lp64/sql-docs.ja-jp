@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: d112b9c9-be9f-435c-a9e6-d21b65778fb7
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 715effa0eb16a298f5064f08d2751df07bfa8677
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: c10c5b34f7a3364113062821aba99e11536cc2ee
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56020214"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67948040"
 ---
 # <a name="xml-data-type-methods"></a>xml データ型のメソッド
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -39,7 +38,7 @@ ms.locfileid: "56020214"
 |[XML データ内部のリレーショナル データのバインド](../../t-sql/xml/binding-relational-data-inside-xml-data.md)|XML 内部の XML 以外のデータをバインドする方法について説明します。|  
 |[xml データ型メソッドの使用に関するガイドライン](../../t-sql/xml/guidelines-for-using-xml-data-type-methods.md)|**xml** データ型メソッドの使用に関するガイドラインを示します。|  
   
- これらのメソッドは、ユーザー定義型メソッドの呼び出し構文を使用して呼び出します。 例 :  
+ これらのメソッドは、ユーザー定義型メソッドの呼び出し構文を使用して呼び出します。 例:  
   
 ```  
 SELECT XmlCol.query(' ... ')  
@@ -47,7 +46,7 @@ FROM   Table
 ```  
   
 > [!NOTE]  
->  **xml** データ型のメソッドである **query()**、**value()**、および **exist()** は、NULL の XML インスタンスに対して実行された場合 NULL を返します。 また、**modify()** は何も返しませんが、**nodes()** は NULL 入力以外の場合は行セットを、NULL 入力の場合は空の行セットを返します。  
+>  **xml** データ型のメソッドである **query()** 、**value()** 、および **exist()** は、NULL の XML インスタンスに対して実行された場合 NULL を返します。 また、**modify()** は何も返しませんが、**nodes()** は NULL 入力以外の場合は行セットを、NULL 入力の場合は空の行セットを返します。  
   
 ## <a name="see-also"></a>参照  
  [型指定された XML と型指定されていない XML の比較](../../relational-databases/xml/compare-typed-xml-to-untyped-xml.md)   

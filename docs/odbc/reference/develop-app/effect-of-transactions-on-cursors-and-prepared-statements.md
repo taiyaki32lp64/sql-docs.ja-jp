@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 523e22a2-7b53-4c25-97c1-ef0284aec76e
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 41c2c6b06744965144ca9d5feb27e9ea16d9903c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 83b693922d08f7298d0c5282fe2c7d1c20149d5b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47802030"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68046881"
 ---
 # <a name="effect-of-transactions-on-cursors-and-prepared-statements"></a>カーソルと準備されたステートメントでのトランザクションの影響
 コミットまたはロールバック トランザクションにカーソルとアクセス プランで、次の影響はあります。  
@@ -54,7 +53,7 @@ ms.locfileid: "47802030"
   
 -   **SQLBulkOperations**または**SQLSetPos**前の例では、たとえば、手順 4. で、アプリケーションを呼び出す**SQLSetPos**ステートメント 2 を実行する代わりに、SQL_UPDATE オプションを使用して、3 のステートメントで update ステートメントを配置します。 データ ソースが 1 と 2 は、ステートメントでカーソルをクローズして、その接続ですべてのアクセス プランを破棄このトランザクションをコミットします。  
   
--   **SQLCloseCursor**前の例では、たとえば、ユーザーは、別の販売注文を強調表示、ときに、アプリケーションが呼び出す**SQLCloseCursor**新しい売上の明細行の結果を作成する前にステートメント 2順序。 呼び出し**SQLCloseCursor**コミット、**選択**行の結果セットを作成し、データ ソースが、1 ステートメントでカーソルを閉じ、上のすべてのアクセス プランを破棄するステートメント接続します。  
+-   **SQLCloseCursor**前の例では、たとえば、ユーザーは、別の販売注文を強調表示、ときに、アプリケーションが呼び出す**SQLCloseCursor**新しい売上の明細行の結果を作成する前にステートメント 2順序。 呼び出し**SQLCloseCursor**コミット、**SELECT**行の結果セットを作成し、データ ソースが、1 ステートメントでカーソルを閉じ、上のすべてのアクセス プランを破棄するステートメント接続します。  
   
  アプリケーション、特にスクリーン ベースのアプリケーションでユーザーが、結果セットと更新プログラムの周囲をスクロールまたは行の削除は、この問題をコードに注意してくださいである必要があります。  
   

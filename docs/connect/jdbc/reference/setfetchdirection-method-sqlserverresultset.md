@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: 4ee82290-508d-4bff-a5c5-8a56338deef8
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: e725eb2bf07c587d04cf660917b9d0b70bf5cff3
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d801a0184259ae22f86ea5ec23391ef78b23ce38
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47695820"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67974268"
 ---
 # <a name="setfetchdirection-method-sqlserverresultset"></a>setFetchDirection メソッド (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -53,7 +52,7 @@ public void setFetchDirection(int direction)
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- この setFetchDirection メソッドは setFetchDirection メソッド java.sql.ResultSet インターフェイスで指定します。  
+ この setFetchDirection メソッドは、java. ResultSet インターフェイスの setFetchDirection メソッドによって指定されます。  
   
  このメソッドの初期値は、SQLServerResultSet オブジェクトを生成した [SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md) オブジェクトによって決定されます。 フェッチ方向はいつでも変更できます。  
   

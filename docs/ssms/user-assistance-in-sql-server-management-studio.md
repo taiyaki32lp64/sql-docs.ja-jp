@@ -11,15 +11,14 @@ helpviewer_keywords:
 - Help [SQL Server Management Studio]
 - SQL Server Management Studio [SQL Server], user assistance
 ms.assetid: 3c33a474-e507-4712-86fe-ae40e8370319
-author: stevestein
-ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 9db497d157ac6b48591fccb42c0eb6fd9dc34779
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 46393ffe47252be2d445647d1b3ebed45f72f946
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53208931"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68263392"
 ---
 # <a name="user-assistance-in-sql-server-management-studio"></a>SQL Server Management Studio のユーザー サポート
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -76,7 +75,7 @@ ms.locfileid: "53208931"
   
 4.  選択した検索プロバイダーの 1 つが **[Codezone コミュニティ]** の場合は、 **[Codezone コミュニティ]** 一覧で、必要に応じて各項目をオンまたはオフにします。  
   
-5.  [**OK**] をクリックします。  
+5.  **[OK]** をクリックします。  
   
 #### <a name="to-search-msdn-online-and-sql-server-focused-communities-from-the-search-page"></a>[検索] ページから MSDN オンラインと SQL Server コミュニティを検索するには  
   
@@ -96,7 +95,7 @@ ms.locfileid: "53208931"
   
 #### <a name="to-configure-help-and-sql-server-books-online-to-launch-inside-the-management-studio-window"></a>Management Studio のウィンドウ内でヘルプと SQL Server オンライン ブックを起動するための構成を行うには  
   
-1.  **[ツール]** メニューの **[オプション]** をクリックし、 **[環境]**、 **[ヘルプ]** の順に展開し、 **[全般]** をクリックします。  
+1.  **[ツール]** メニューの **[オプション]** をクリックし、 **[環境]** 、 **[ヘルプ]** の順に展開し、 **[全般]** をクリックします。  
   
 2.  **[次を使用してヘルプを表示する]** ボックスで **[統合ヘルプ ビューアー]** をクリックします。  
   

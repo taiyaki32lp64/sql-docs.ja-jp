@@ -7,16 +7,15 @@ ms.topic: hub-page
 ms.prod: sql
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
 ms.date: 12/15/2018
 featureFlags:
 - clicktale
-ms.openlocfilehash: fbffcdd5de49cadd3e18ab3db0a5da7ff6a042e9
-ms.sourcegitcommit: 769b71f01052ec9b4fc5eb02d9da9a1a58118029
+ms.openlocfilehash: 6de02348bd11c1fa48911668a8be5e7543b0373d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56319343"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68109739"
 ---
 <div id="main" class="v2">
     <div class="container">
@@ -97,7 +96,7 @@ ms.locfileid: "56319343"
                                                     </div>
                                                 </div>
                                                 <div class="cardText">
-                                                    <h3>フルテキスト検索 </h3>
+                                                    <h3>フルテキスト検索</h3>
                                                     <p>フルテキスト インデックスに含まれるのは、テーブル内の 1 つ以上の文字ベースの列です。フルテキスト検索ではそれらに対するクエリを実行できます。</p>
                                                 </div>
                                             </div>

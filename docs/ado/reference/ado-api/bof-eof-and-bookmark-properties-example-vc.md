@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: bd2b9d85-e75e-4fc8-a392-076582019caa
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 2e2b76cc255748f52feb2235296cc57070f8a9a4
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b0cc864aa298055796985dd58ec6595961a17841
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47659530"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67920361"
 ---
 # <a name="bof-eof-and-bookmark-properties-example-vc"></a>BOF、EOF、および Bookmark プロパティの例 (vc++)
 この例では、最初の関数を使用して、 [BOF](../../../ado/reference/ado-api/bof-eof-properties-ado.md)と[EOF](../../../ado/reference/ado-api/bof-eof-properties-ado.md)ユーザーでは、最初と最後のレコードのを越えて移動しようとすると、メッセージを表示するプロパティを[Recordset](../../../ado/reference/ado-api/recordset-object-ado.md)します。 使用して、[ブックマーク](../../../ado/reference/ado-api/bookmark-property-ado.md)ユーザーが内のレコードにフラグを設定できるプロパティ、**レコード セット**し、後で戻ります。  
@@ -198,7 +197,7 @@ void PrintProviderError(_ConnectionPtr pConnection) {
 25  
 ```  
   
-## <a name="sample-output"></a>サンプル出力  
+## <a name="sample-output"></a>出力例  
   
 ```  
 Authors with 25 percent royalty  
@@ -206,7 +205,7 @@ Authors with 25 percent royalty
 899-46-2035, Anne  Ringer  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [BOF、EOF プロパティ (ADO)](../../../ado/reference/ado-api/bof-eof-properties-ado.md)   
  [Bookmark プロパティ (ADO)](../../../ado/reference/ado-api/bookmark-property-ado.md)   
  [Recordset オブジェクト (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)

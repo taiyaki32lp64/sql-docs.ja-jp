@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 329c3a71-ba88-4009-b04f-2f52195a5957
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: ef18eb3d6251bc07ae25ef8cbc3445a87b8390b4
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 3b5c5709a63183bf4c92963dafecb2cf234e2d92
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47810520"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67918993"
 ---
 # <a name="dialect-property"></a>Dialect プロパティ
 言語を示します、 [CommandText](../../../ado/reference/ado-api/commandtext-property-ado.md)または[CommandStream](../../../ado/reference/ado-api/commandstream-property-ado.md)プロパティ。 言語仕様では、構文と、プロバイダーを使用して文字列またはストリームを解析するための一般的な規則を定義します。  
@@ -37,5 +36,5 @@ ms.locfileid: "47810520"
 ## <a name="applies-to"></a>適用対象  
  [Command オブジェクト (ADO)](../../../ado/reference/ado-api/command-object-ado.md)  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [Execute メソッド (ADO Command)](../../../ado/reference/ado-api/execute-method-ado-command.md)

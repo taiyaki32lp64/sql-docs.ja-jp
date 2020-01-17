@@ -15,11 +15,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 22cb73877dcea8fb880d4c565b809990e5ce7123
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52789954"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62664378"
 ---
 # <a name="brokerconnection-event-class"></a>Broker:Connection イベント クラス
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] は、 **Broker:Connection** イベントを生成し、Service Broker によって管理されているトランスポート接続のステータスを報告します。  
@@ -41,11 +41,11 @@ ms.locfileid: "52789954"
 |**IsSystem**|`int`|イベントがシステム プロセスとユーザー プロセスのどちらで発生したか。<br /><br /> 0 = ユーザー<br /><br /> 1 = システム|60|いいえ|  
 |**LoginSid**|`image`|ログイン ユーザーのセキュリティ ID 番号 (SID)。 各 SID はサーバーのログインごとに一意です。|41|はい|  
 |**NTDomainName**|`nvarchar`|ユーザーが属している Windows ドメイン。|7|はい|  
-|**NTUserName**|`nvarchar`|このイベントが生成された接続を所有するユーザーの名前。|6|はい|  
+|**NTUserName**|`nvarchar`|このイベントが生成された接続を所有するユーザーの名前。|6|[はい]|  
 |**ObjectName**|`nvarchar`|ダイアログのメッセージ交換ハンドル。|34|いいえ|  
 |**ServerName**|`nvarchar`|トレースされる [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスの名前。|26|いいえ|  
 |**SPID**|`int`|クライアントに関連付けられているプロセスに、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] によって割り当てられているサーバー プロセス ID。|12|はい|  
-|**StartTime**|`datetime`|イベントの開始時刻 (取得できた場合)。|14|はい|  
+|**StartTime**|`datetime`|イベントの開始時刻 (取得できた場合)。|14|[はい]|  
 |**TextData**|`ntext`|イベントに関係するエラー メッセージのテキスト。 エラーを報告しないイベントの場合、このフィールドは空です。 エラー メッセージは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のエラー メッセージか Windows のエラー メッセージです。|1|はい|  
 |**TransactionID**|`bigint`|トランザクションに対してシステムが割り当てた ID。|4|いいえ|  
   

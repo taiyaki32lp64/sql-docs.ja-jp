@@ -16,17 +16,20 @@ helpviewer_keywords:
 - SQL Server Integration Services, programming
 - packages [Integration Services], programming
 ms.assetid: 60fe148b-a7c4-4289-ae3e-2e949fc1886c
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: 99eb1ed68d2af04dce3106b2642fcdb068a55ef5
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 9fdcc10cd21714681578489fd1c71db607226086
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51641595"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71284394"
 ---
 # <a name="integration-services-developer-documentation"></a>Integration Services の開発者向けのドキュメント
+
+[!INCLUDE[ssis-appliesto](../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] には、完全に再記述されたオブジェクト モデルが含まれています。それは、多数の機能で強化されています。この結果、パッケージのプログラミングや拡張作業は、より簡単に、柔軟に、また強力に行えるようになりました。 開発者は、[!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] パッケージのほとんどすべての側面を拡張およびプログラミングできます。  
   
  [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] の開発者として、[!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] のプログラミングでは、次の 2 つの基本的な方法を採用できます。  

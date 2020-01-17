@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 helpviewer_keywords:
 - SharePoint integration [Reporting Services], viewing reports
@@ -13,15 +12,15 @@ helpviewer_keywords:
 - SharePoint integration [Reporting Services], Web Parts
 - Report Viewer Web Part [Reporting Services]
 ms.assetid: b6341a73-172f-4632-a9e9-cc79fed3f36b
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: c71070aa63716efd9773b00d304346935c635000
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: ba8b23c800718d289b2a7a633d5244261b5ab8a8
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56028313"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66103049"
 ---
 # <a name="report-viewer-web-part-on-a-sharepoint-site"></a>SharePoint サイトのレポート ビューアー Web パーツ
   レポート ビューアー Web パーツは、SharePoint 製品用 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] アドインによってインストールされるカスタム Web パーツです。 Web パーツを使用すると、統合モードで動作するように構成されたレポート サーバー上でレポートの表示、ナビゲーション、印刷、およびエクスポートを行うことができるようになります。 レポート ビューアー Web パーツは、 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] レポート サーバーによって処理されるレポート定義 (.rdl) ファイルに関連付けられます。 他のソフトウェア製品を使用して作成した他のレポート ドキュメントで、レポート ビューアー Web パーツを使用することはできません。  

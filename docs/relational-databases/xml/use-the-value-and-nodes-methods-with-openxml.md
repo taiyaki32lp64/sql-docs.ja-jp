@@ -12,15 +12,14 @@ helpviewer_keywords:
 - value method [XML in SQL Server]
 - nodes method [XML in SQL Server]
 ms.assetid: c73dbe55-d685-42eb-b0ee-9f3c5b9d97f3
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: f57a3a564318a0564b80596cc2220fce6d8fafd9
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: MightyPen
+ms.author: genemi
+ms.openlocfilehash: a511e977975ad0e23c9cf553de000b32bad24e69
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47749730"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68039139"
 ---
 # <a name="use-the-value-and-nodes-methods-with-openxml"></a>OPENXML での value() メソッドと nodes() メソッドの使用
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -28,7 +27,7 @@ ms.locfileid: "47749730"
   
  **nodes()** メソッドによって特別な **xml** データ型のインスタンスが生成され、それぞれのインスタンスのコンテキストは選択された個別のノードに設定されます。 このような XML インスタンスは、**query()** メソッド、**value()** メソッド、**nodes()** メソッド、および **exist()** メソッドをサポートし、**count(\*)** 集計で使用できます。 それ以外の使用方法ではエラーが発生します。  
   
-## <a name="example-using-nodes"></a>例 : nodes() の使用  
+## <a name="example-using-nodes"></a>例:nodes() の使用  
  名が "David" ではない著者の姓と名を抽出するとします。 2 つの列 FirstName および LastName から構成される行セットとしてこの情報を抽出します。 そのためには次に示すように、 **nodes()** メソッドと **value()** メソッドを使用します。  
   
 ```  
@@ -42,7 +41,7 @@ WHERE  nref.exist('first-name[. != "David"]') = 1
   
  SQL Server 2000 には、 **OpenXml()** を使用して XML インスタンスから行セットを生成する機能があります。 行セットにリレーショナル スキーマを指定し、その中の列に XML インスタンス内の値をどのようにマップするかを指定できます。  
   
-## <a name="example-using-openxml-on-the-xml-data-type"></a>例 : xml データ型での OpenXml() の使用  
+## <a name="example-using-openxml-on-the-xml-data-type"></a>例:xml データ型での OpenXml() の使用  
  上記の例のクエリは、 **OpenXml()** を使用して次のように書き換えることができます。 そのためには、各 XML インスタンスを読み取って XML 変数に代入し、OpenXML に渡すカーソルを作成します。  
   
 ```  

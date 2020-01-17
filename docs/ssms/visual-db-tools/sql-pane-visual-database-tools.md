@@ -12,15 +12,14 @@ helpviewer_keywords:
 - View Designer, SQL pane
 - SQL pane [Visual Database Tools]
 ms.assetid: dbabab18-0614-415b-a2ef-9bcd0d320d5c
-author: stevestein
-ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 5edc9e484002c27e906ee71e53289b93dfb3f033
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: ab19242401fb962152fcd9fbeef590922d104498
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47724780"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68265623"
 ---
 # <a name="sql-pane-visual-database-tools"></a>SQL ペイン (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

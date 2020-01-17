@@ -1,6 +1,7 @@
 ---
-title: トランスポート セキュリティ - データベース ミラーリング - AlwaysOn 可用性 | Microsoft Docs
-ms.custom: ''
+title: トランスポート セキュリティ:可用性グループとデータベース ミラーリング
+description: SQL Server でホストされている Always On 可用性グループまたはデータベース ミラーリング セッションに参加しているデータベース間で交換されるメッセージのトランスポートを、セキュリティで保護する方法について説明します。
+ms.custom: seo-lt-2019
 ms.date: 05/17/2016
 ms.prod: sql
 ms.prod_service: high-availability
@@ -19,13 +20,12 @@ helpviewer_keywords:
 ms.assetid: 49239d02-964e-47c0-9b7f-2b539151ee1b
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 19f3748634b86bcb4419f96a8abae36a72f20f88
-ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
+ms.openlocfilehash: 85ca560e24fac75897d0b65946121e3ca4251e20
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/18/2018
-ms.locfileid: "53589216"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75252750"
 ---
 # <a name="transport-security---database-mirroring---always-on-availability"></a>トランスポート セキュリティ - データベース ミラーリング - AlwaysOn 可用性
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -34,7 +34,7 @@ ms.locfileid: "53589216"
   
  **このトピックの内容**  
   
--   [[認証]](#Authentication)  
+-   [認証](#Authentication)  
   
 -   [データの暗号化](#DataEncryption)  
   
@@ -52,7 +52,7 @@ ms.locfileid: "53589216"
   
 -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスが (同じドメインまたは信頼関係のあるドメインの) 異なるドメイン アカウントでサービスとして実行される場合、他の各サーバー インスタンス上の **master** に各アカウントのログインを作成する必要があります。また、そのログインには、エンドポイントに対する CONNECT 権限を与える必要があります。  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスがネットワーク サービス アカウントとして実行される場合、他の各サーバー上の_master_**\\**_に各ホスト コンピューター アカウント (_ DomainName **ComputerName$** ) のログインを作成する必要があります。また、そのログインには、エンドポイントに対する CONNECT 権限を与える必要があります。 これは、ネットワーク サービス アカウントで実行されているサーバー インスタンスではホスト コンピューターのドメイン アカウントを使用して認証を行うためです。  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスがネットワーク サービス アカウントとして実行される場合、他の各サーバー上の_master_ **\\** _に各ホスト コンピューター アカウント (_ DomainName **ComputerName$** ) のログインを作成する必要があります。また、そのログインには、エンドポイントに対する CONNECT 権限を与える必要があります。 これは、ネットワーク サービス アカウントで実行されているサーバー インスタンスではホスト コンピューターのドメイン アカウントを使用して認証を行うためです。  
   
 > [!NOTE]  
 >  Windows 認証を使用したデータベース ミラーリング セッションの設定例については、「[Windows 認証を使用したデータベース ミラーリングの設定の例 &#40;Transact-SQL&#41;](../../database-engine/database-mirroring/example-setting-up-database-mirroring-using-windows-authentication-transact-sql.md)」を参照してください。  
@@ -60,7 +60,7 @@ ms.locfileid: "53589216"
 ### <a name="certificates"></a>証明書  
  サーバー インスタンスが信頼されたドメインに存在しない場合や、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] がローカル サービスとして実行されている場合など、一部の状況では Windows 認証を使用できません。 そのような場合には、接続要求を認証するときに、ユーザーの資格情報ではなく証明書が必要になります。 各サーバー インスタンスのミラーリング エンドポイントは、ローカルで作成された独自の証明書を使用して構成する必要があります。  
   
- 暗号化方法は、証明書の作成時に設定されます。 詳細については、「 [データベース ミラーリング エンドポイントで発信接続に証明書を使用できるようにする &#40;Transact-SQL&#41;](../../database-engine/database-mirroring/database-mirroring-use-certificates-for-outbound-connections.md)」を参照してください。 使用する証明書は慎重に管理してください。  
+ 暗号化方法は、証明書の作成時に設定されます。 詳細については、「 [データベース ミラーリング エンドポイントで発信接続に証明書を使用できるようにする &#40;Transact-SQL&#41;](../../database-engine/database-mirroring/database-mirroring-use-certificates-for-outbound-connections.md)を使用します。 使用する証明書は慎重に管理してください。  
   
  接続を設定するときに、サーバー インスタンスにより、独自の証明書の秘密キーを使用して ID が作成されます。 接続要求を受け取るサーバー インスタンスでは、送信者の証明書の公開キーを使用して送信者の ID を認証します。 たとえば、Server_A と Server_B という 2 つのサーバー インスタンスを考えてみます。 Server_A では、Server_B に接続要求を送信する前に、秘密キーを使用して接続ヘッダーを暗号化します。 Server_B では、Server_A の証明書の公開キーを使用して接続ヘッダーの暗号化を解除します。 暗号化が解除されたヘッダーが正しい場合、Server_B は、そのヘッダーが Server_A によって暗号化されていたので、接続は認証されると認識します。 暗号化が解除されたヘッダーが正しくない場合、Server_B は、接続要求が認証されないため、接続が拒否されると認識します。  
   
@@ -82,7 +82,7 @@ ms.locfileid: "53589216"
  接続するエンドポイントで 2 つのアルゴリズムが異なる順序で指定されている場合、接続を受け入れる側のエンドポイントの指定が優先されます。  
   
 > [!NOTE]  
->  RC4 アルゴリズムは、旧バージョンとの互換性のためにのみサポートされています。 データベース互換性レベルが 90 または 100 の場合、新しい素材は RC4 または RC4_128 を使用してのみ暗号化できます  (非推奨)。AES アルゴリズムのいずれかなど、新しいアルゴリズムを使用してください。 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 以降のバージョンでは、どの互換性レベルでも、RC4 または RC4_128 を使用して暗号化された素材を暗号化解除できます。  
+>  RC4 アルゴリズムは、旧バージョンとの互換性のためにのみサポートされています。 データベース互換性レベルが 90 または 100 の場合、新しい素材は RC4 または RC4_128 を使用してのみ暗号化できます (非推奨)。AES アルゴリズムのいずれかなど、新しいアルゴリズムを使用してください。 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 以降のバージョンでは、どの互換性レベルでも、RC4 または RC4_128 を使用して暗号化された素材を暗号化解除できます。  
 >   
 >  RC4 は、AES よりもかなり高速ですが、比較的弱いアルゴリズムです。それに対して、AES は比較的強いアルゴリズムです。 したがって、AES アルゴリズムを使用することをお勧めします。  
   
@@ -109,6 +109,6 @@ ms.locfileid: "53589216"
  [sys.database_mirroring_endpoints &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-mirroring-endpoints-transact-sql.md)   
  [sys.dm_db_mirroring_connections &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/database-mirroring-sys-dm-db-mirroring-connections.md)   
  [データベース ミラーリング構成のトラブルシューティング &#40;SQL Server&#41;](../../database-engine/database-mirroring/troubleshoot-database-mirroring-configuration-sql-server.md)   
- [Always On 可用性グループの構成のトラブルシューティング &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/troubleshoot-always-on-availability-groups-configuration-sql-server.md)  
+ [AlwaysOn 可用性グループの構成のトラブルシューティング &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/troubleshoot-always-on-availability-groups-configuration-sql-server.md)  
   
   

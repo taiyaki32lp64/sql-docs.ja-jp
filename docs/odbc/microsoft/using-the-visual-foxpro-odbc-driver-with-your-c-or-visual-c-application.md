@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: beb11a68-849e-4fe0-b217-d3722b1b1389
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 751e70345876967a534df0fb234ee8511cc09fe1
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 8d1fb400fec20017fc37a937b2ca5d911e8413bf
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47612270"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68087974"
 ---
 # <a name="use-the-visual-foxpro-odbc-driver-with-your-c-or-visual-c-application"></a>Visual FoxPro ODBC ドライバーを使用して、C または Visual C アプリケーション
 Visual FoxPro データを送信して通信、C または C++ アプリケーションを[SQLExecute](../../odbc/microsoft/sqlexecute-visual-foxpro-odbc-driver.md)または[SQLExecDirect](../../odbc/microsoft/sqlexecdirect-visual-foxpro-odbc-driver.md) Visual foxpro ステートメント。 このステートメントを次に含めることができます。  
@@ -35,7 +34,7 @@ Visual FoxPro データを送信して通信、C または C++ アプリケー�
   
  Visual foxpro ネイティブ SQL の詳細については、Visual FoxPro のドキュメントを参照してください。  
   
-## <a name="example-using-the-visual-foxpro-odbc-driver-with-your-c-or-c-application"></a>例: C または C++ アプリケーションでの Visual FoxPro ODBC ドライバーの使用  
+## <a name="example-using-the-visual-foxpro-odbc-driver-with-your-c-or-c-application"></a>例:Visual FoxPro ODBC ドライバーを使用して、C または C++ アプリケーション  
  次の例では、ODBC C API を使用して、TasTrade をという名前の Microsoft® Visual FoxPro サンプル データベース内の employee テーブルの姓のフィールドに格納されているデータを取得します。 このデータベースは、Visual FoxPro で提供されが既定では、次の場所にインストールされています。  
   
  `c:\vfp\samples\mainsamp\data\tastrade.dbc`  

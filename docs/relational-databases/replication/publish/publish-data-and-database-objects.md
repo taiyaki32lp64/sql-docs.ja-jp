@@ -41,16 +41,16 @@ helpviewer_keywords:
 ms.assetid: d986032c-3387-4de1-a435-3ec5e82185a2
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: e0f959c6bc5a34fe2c2a3aec08f87f1e703749cf
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
+ms.openlocfilehash: 7c0e87750bb408e617a94185ad85b101e8893711
+ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54129012"
+ms.lasthandoff: 08/03/2019
+ms.locfileid: "68769900"
 ---
 # <a name="publish-data-and-database-objects"></a>データとデータベース オブジェクトのパブリッシュ
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
   パブリケーションの作成時には、パブリッシュするテーブルやその他のデータベース オブジェクトを選択します。 レプリケーションを使用すると、以下のデータベース オブジェクトをパブリッシュできます。  
   
 |データベース オブジェクト|スナップショット レプリケーションおよびトランザクション レプリケーション|マージ レプリケーション|  
@@ -115,7 +115,7 @@ ms.locfileid: "54129012"
 ## <a name="publishing-views"></a>ビューのパブリッシュ  
  すべての種類のレプリケーションで、ビューをレプリケートできます。 ビュー (インデックス付きビューの場合は付属するインデックスも含む) はサブスクライバーにコピーできますが、ベース テーブルもレプリケートする必要があります。  
   
- トランザクション レプリケーションでは、インデックス付きビューをビューではなくテーブルとしてレプリケートできます。この場合、ベース テーブルをレプリケートする必要はありません。 これを行うには、インデックス付きビューをテーブルとしてレプリケートするには、「[sp_addarticle &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md)」の *@type* パラメーターに "indexed view logbased" のいずれかのオプションを指定します。 **sp_addarticle** の使用方法の詳細については、「[アーティクルの定義](../../../relational-databases/replication/publish/define-an-article.md)」を参照してください。  
+ トランザクション レプリケーションでは、インデックス付きビューをビューではなくテーブルとしてレプリケートできます。この場合、ベース テーブルをレプリケートする必要はありません。 これを行うには、インデックス付きビューをテーブルとしてレプリケートするには、[sp_addarticle &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md) の *\@type* パラメーターに "indexed view logbased" のいずれかのオプションを指定します。 **sp_addarticle** の使用方法の詳細については、「[アーティクルの定義](../../../relational-databases/replication/publish/define-an-article.md)」を参照してください。  
   
 ## <a name="publishing-user-defined-functions"></a>ユーザー定義関数のパブリッシュ  
  CLR 関数および [!INCLUDE[tsql](../../../includes/tsql-md.md)] 関数の CREATE FUNCTION ステートメントが各サブスクライバーにコピーされます。 CLR 関数の場合は、関連するアセンブリもコピーされます。 関数の変更はサブスクライバーにレプリケートされますが、関連するアセンブリの変更はレプリケートされません。  
@@ -153,7 +153,7 @@ ms.locfileid: "54129012"
 -   1 つまたは複数の他のデータベース オブジェクトに依存するデータベース オブジェクトをパブリッシュする場合、参照されているオブジェクトをすべてパブリッシュする必要があります。 たとえば、テーブルに依存しているビューをパブリッシュする場合は、そのテーブルもパブリッシュする必要があります。  
   
     > [!NOTE]  
-    >  マージ パブリケーションにアーティクルを追加する際に、その新しいアーティクルに既存のアーティクルが依存している場合は、 **@processing_order** 」の [sp_changemergearticle](../../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md) の [@processing_order](../../../relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql.md)」を参照してください。 たとえば、テーブルをパブリッシュし、テーブルが参照している関数はパブリッシュしない場合を考えます。 この関数をパブリッシュしないと、サブスクライバー側でテーブルを作成できないとします。 この場合は、この関数をパブリケーションに追加するときに、 **sp_addmergearticle** の **@processing_order** 」の **sp_changemergearticle**を指定し、 **sp_changemergearticle** の **@processing_order** 」の **@processing_order**を指定します。パラメーター **@article**」を参照してください。 この処理順序により、サブスクライバー側で関数に依存するテーブルを作成する前に、関数の作成が求められるようになります。 各アーティクルに使用する値は、関数の値がテーブルの値より小さければ、別の値でもかまいません。  
+    >  マージ パブリケーションにアーティクルを追加する際に、その新しいアーティクルに既存のアーティクルが依存している場合は、[sp_addmergearticle](../../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md) および [sp_changemergearticle](../../../relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql.md) の **\@processing_order** パラメーターを使用して、両方のアーティクルの処理順序を指定する必要があります。 たとえば、テーブルをパブリッシュし、テーブルが参照している関数はパブリッシュしない場合を考えます。 この関数をパブリッシュしないと、サブスクライバー側でテーブルを作成できないとします。 この場合は、この関数をパブリケーションに追加するときに、**sp_addmergearticle** の **\@processing_order** パラメーターに値 **1** を指定し、**sp_changemergearticle** の **\@processing_order** パラメーターに値 **2** を指定します。パラメーター **\@article** にはテーブル名を指定します。 この処理順序により、サブスクライバー側で関数に依存するテーブルを作成する前に、関数の作成が求められるようになります。 各アーティクルに使用する値は、関数の値がテーブルの値より小さければ、別の値でもかまいません。  
   
 -   パブリケーション名には、% * [ ] | : " ? を使用できません。 \ / < >.  
   
@@ -169,7 +169,7 @@ ms.locfileid: "54129012"
   
 -   [sp_bindefault &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-bindefault-transact-sql.md) で作成されたバインドされたデフォルトはレプリケートできません (バインドされたデフォルトは非推奨のため、ALTER TABLE または CREATE TABLE の DEFAULT オプションで作成されたデフォルトを使用してください)。  
   
--   ディストリビューション エージェントが配信を行う順序が原因で、インデックス付きビューに **NOEXPAND** ヒントを含む関数を、参照テーブルやインデックス付きビューと同じパブリケーション内でパブリッシュすることはできません。 この問題を回避するために、最初のパブリケーション内にテーブルとインデックス付きビューを配置し、インデックス付きビューに **NOEXPAND** ヒントを含む関数を、最初のパブリケーションが完了した後にパブリッシュする 2 番目のパブリケーションに追加します。 または、それらの関数に対応するスクリプトを作成し、 *@post_snapshot_script* 」の **@post_snapshot_script**」を参照してください。  
+-   ディストリビューション エージェントが配信を行う順序が原因で、インデックス付きビューに **NOEXPAND** ヒントを含む関数を、参照テーブルやインデックス付きビューと同じパブリケーション内でパブリッシュすることはできません。 この問題を回避するために、最初のパブリケーション内にテーブルとインデックス付きビューを配置し、インデックス付きビューに **NOEXPAND** ヒントを含む関数を、最初のパブリケーションが完了した後にパブリッシュする 2 番目のパブリケーションに追加します。 または、それらの関数に対応するスクリプトを作成し、**sp_addpublication** の *\@post_snapshot_script* パラメーターを使用してそれらのスクリプトを配信します。  
   
 ### <a name="schemas-and-object-ownership"></a>スキーマおよびオブジェクトの所有権  
  既定では、パブリケーションの新規作成ウィザードは、スキーマとオブジェクトの所有権に関して、以下のように動作します。  
@@ -182,7 +182,7 @@ ms.locfileid: "54129012"
   
 -   キャラクター モードのスナップショット ([!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 以外のバージョンのサブスクライバーや [!INCLUDE[ssEW](../../../includes/ssew-md.md)] サブスクライバーで使用されます) を使用するパブリケーションのアーティクルの場合。既定では、所有者は空白のままになります。 既定の所有者は、サブスクライバーに接続しているディストリビューション エージェントまたはマージ エージェントで使用されるアカウントに関連付けられている所有者になります。  
   
- オブジェクトの所有者は、**[アーティクルのプロパティ - \<**_Article_**>]** ダイアログ ボックスと、ストアド プロシージャ**sp_addarticle**、**sp_addmergearticle**、**sp_changearticle** および **sp_changemergearticle** で変更できます。 詳細については、「[View and Modify Publication Properties](../../../relational-databases/replication/publish/view-and-modify-publication-properties.md)」 (パブリケーション プロパティの表示および変更)、「[Define an Article](../../../relational-databases/replication/publish/define-an-article.md)」 (アーティクルの定義)、および「[View and Modify Article Properties](../../../relational-databases/replication/publish/view-and-modify-article-properties.md)」 (アーティクルのプロパティの表示および変更) を参照してください。  
+ オブジェクトの所有者は、 **[アーティクルのプロパティ - \<** _Article_ **>]** ダイアログ ボックスと、ストアド プロシージャ**sp_addarticle**、**sp_addmergearticle**、**sp_changearticle** および **sp_changemergearticle** で変更できます。 詳細については、「[View and Modify Publication Properties](../../../relational-databases/replication/publish/view-and-modify-publication-properties.md)」 (パブリケーション プロパティの表示および変更)、「[Define an Article](../../../relational-databases/replication/publish/define-an-article.md)」 (アーティクルの定義)、および「[View and Modify Article Properties](../../../relational-databases/replication/publish/view-and-modify-article-properties.md)」 (アーティクルのプロパティの表示および変更) を参照してください。  
   
 ### <a name="publishing-data-to-subscribers-running-previous-versions-of-sql-server"></a>以前のバージョンの SQL Server を実行するサブスクライバーへのデータのパブリッシュ  
   
@@ -193,9 +193,9 @@ ms.locfileid: "54129012"
 ### <a name="publishing-tables-in-more-than-one-publication"></a>複数のパブリケーションでのテーブルのパブリッシュ  
  レプリケーションでは、以下に示す制限付きで、アーティクルを複数のパブリケーションでパブリッシュできます (データの再パブリッシュを含む)。  
   
--   トランザクション パブリケーションおよびマージ パブリケーションでアーティクルをパブリッシュする場合は、マージ アーティクルの *@published_in_tran_pub* プロパティを TRUE に設定します。 プロパティの設定の詳細については、「[View and Modify Publication Properties](../../../relational-databases/replication/publish/view-and-modify-publication-properties.md)」 (パブリケーション プロパティの表示および変更)、「[View and Modify Article Properties](../../../relational-databases/replication/publish/view-and-modify-article-properties.md)」 (アーティクルのプロパティの表示および変更) を参照してください。  
+-   トランザクション パブリケーションおよびマージ パブリケーションでアーティクルをパブリッシュする場合は、マージ アーティクルの *\@published_in_tran_pub* プロパティを TRUE に設定します。 プロパティの設定の詳細については、「[View and Modify Publication Properties](../../../relational-databases/replication/publish/view-and-modify-publication-properties.md)」 (パブリケーション プロパティの表示および変更)、「[View and Modify Article Properties](../../../relational-databases/replication/publish/view-and-modify-article-properties.md)」 (アーティクルのプロパティの表示および変更) を参照してください。  
   
-     アーティクルがトランザクション サブスクリプションの一部であり、このアーティクルがマージ パブリケーションに含まれている場合は、 *@published_in_tran_pub* プロパティも設定する必要があります。 これに該当する場合、特に指定がなければ、トランザクション レプリケーションでは、サブスクライバー側のテーブルが読み取り専用として扱われるものと想定しているので、注意が必要です。マージ レプリケーションがトランザクション サブスクリプションに含まれるテーブルに対してデータ変更を行うと、データの非収束が発生する可能性があります。 この可能性を回避するため、マージ パブリケーションではこのようなテーブルをダウンロードのみとして指定することをお勧めします。 これはマージ サブスクライバーがテーブルにデータの変更をアップロードすることを防ぎます。 詳細については、「[ダウンロード専用アーティクルを使用したマージ レプリケーションのパフォーマンスの最適化](../../../relational-databases/replication/merge/optimize-merge-replication-performance-with-download-only-articles.md)」を参照してください。  
+     アーティクルがトランザクション サブスクリプションの一部であり、このアーティクルがマージ パブリケーションに含まれている場合は、 *\@published_in_tran_pub* プロパティも設定する必要があります。 これに該当する場合、特に指定がなければ、トランザクション レプリケーションでは、サブスクライバー側のテーブルが読み取り専用として扱われるものと想定しているので、注意が必要です。マージ レプリケーションがトランザクション サブスクリプションに含まれるテーブルに対してデータ変更を行うと、データの非収束が発生する可能性があります。 この可能性を回避するため、マージ パブリケーションではこのようなテーブルをダウンロードのみとして指定することをお勧めします。 これはマージ サブスクライバーがテーブルにデータの変更をアップロードすることを防ぎます。 詳細については、「[ダウンロード専用アーティクルを使用したマージ レプリケーションのパフォーマンスの最適化](../../../relational-databases/replication/merge/optimize-merge-replication-performance-with-download-only-articles.md)」を参照してください。  
   
 -   マージ パブリケーションおよびキュー更新サブスクリプションを使用するトランザクション パブリケーションのどちらも、アーティクルをパブリッシュすることはできません。  
   
@@ -205,10 +205,10 @@ ms.locfileid: "54129012"
   
     |プロパティ|sp_addarticle のパラメーター|  
     |--------------|---------------------------------|  
-    |ID 範囲の管理|**@auto_identity_range** (非推奨) および **@identityrangemangementoption**|  
-    |パブリッシャーの ID 範囲|**@pub_identity_range**|  
-    |ID 範囲|**@identity_range**|  
-    |ID 範囲のしきい値|**@threshold**|  
+    |ID 範囲の管理|**\@auto_identity_range** (非推奨) および **\@identityrangemangementoption**|  
+    |パブリッシャーの ID 範囲|**\@pub_identity_range**|  
+    |ID 範囲|**\@identity_range**|  
+    |ID 範囲のしきい値|**\@threshold**|  
   
      これらのパラメーターの詳細については、「[sp_addarticle &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md)」を参照してください。  
   
@@ -216,19 +216,19 @@ ms.locfileid: "54129012"
   
     |プロパティ|sp_addmergearticle のパラメーター|  
     |--------------|--------------------------------------|  
-    |列追跡|**@column_tracking**|  
-    |スキーマ オプション|**@schema_option**|  
-    |列のフィルター選択|**@vertical_partition**|  
-    |サブスクライバーのアップロード オプション|**@subscriber_upload_options**|  
-    |条件付き削除の追跡|**@delete_tracking**|  
-    |エラー補正|**@compensate_for_errors**|  
-    |ID 範囲の管理|**@auto_identity_range** (非推奨) および **@identityrangemangementoption**|  
-    |パブリッシャーの ID 範囲|**@pub_identity_range**|  
-    |ID 範囲|**@identity_range**|  
-    |ID 範囲のしきい値|**@threshold**|  
-    |[パーティションのオプション]|**@partition_options**|  
-    |BLOB 列のストリーミング|**@stream_blob_columns**|  
-    |フィルターの種類|**@filter_type** ( **sp_addmergefilter**のパラメーター)|  
+    |列追跡|**\@column_tracking**|  
+    |スキーマ オプション|**\@schema_option**|  
+    |列のフィルター選択|**\@vertical_partition**|  
+    |サブスクライバーのアップロード オプション|**\@subscriber_upload_options**|  
+    |条件付き削除の追跡|**\@delete_tracking**|  
+    |エラー補正|**\@compensate_for_errors**|  
+    |ID 範囲の管理|**\@auto_identity_range** (非推奨) および **\@identityrangemangementoption**|  
+    |パブリッシャーの ID 範囲|**\@pub_identity_range**|  
+    |ID 範囲|**\@identity_range**|  
+    |ID 範囲のしきい値|**\@threshold**|  
+    |[パーティションのオプション]|**\@partition_options**|  
+    |BLOB 列のストリーミング|**\@stream_blob_columns**|  
+    |フィルターの種類|**\@filter_type** (**sp_addmergefilter** のパラメーター)|  
   
      これらのパラメーターの詳細については、「[sp_addmergearticle &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md)」と「[sp_addmergefilter &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addmergefilter-transact-sql.md)」を参照してください。  
   

@@ -15,18 +15,17 @@ helpviewer_keywords:
 ms.assetid: d2894eaf-4450-4ace-aa51-c8b875fd3010
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: bcd2e4d2a3b84ef913954c1a1a2d7fa76393040c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 0ae822794b1b06a975e1cc3cd397b5a5f00036dc
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47625940"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67918256"
 ---
 # <a name="locktypeenum"></a>LockTypeEnum
 編集中に、レコードに適用されるロックの種類を指定します。  
   
-|定数|値|説明|  
+|定数|Value|説明|  
 |--------------|-----------|-----------------|  
 |**adLockBatchOptimistic**|4|オプティミスティックな一括更新を示します。 バッチ更新モードで必要です。|  
 |**adLockOptimistic**|3|レコードごとのオプティミスティック ロックを示します。 プロバイダーを使用してオプティミスティック ロックを呼び出した場合にのみ、レコードのロック、 [Update](../../../ado/reference/ado-api/update-method.md)メソッド。|  

@@ -19,25 +19,24 @@ helpviewer_keywords:
 ms.assetid: 73dae456-7044-4b00-b0bd-990ef810b356
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: d6957119fb21343c4b66c05948c72b8a8cc55d34
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 6b113044f46a09b54ed8c9d6f0fafdab2ec5b06c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47684170"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68061388"
 ---
-# <a name="syseventnotificationeventtypes-transact-sql"></a>sys.event_notification_event_types (Transact-SQL)
+# <a name="syseventnotificationeventtypes-transact-sql"></a>sys.event_notification_event_types (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  イベント通知を起動できるイベントまたはイベント グループごとに 1 行のデータを返します。  
+  各イベントまたはイベント通知を起動できるイベント グループの行を返します。  
   
 |列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
-|**type**|**int**|イベント通知を起動させるイベントまたはイベント グループの種類です。|  
-|**type_name**|**nvarchar(128)**|イベントまたはイベント グループの名前。 これは、FOR 句で指定できます、 [CREATE EVENT NOTIFICATION](../../t-sql/statements/create-event-notification-transact-sql.md)ステートメント。|  
-|**parent_type**|**int**|イベントまたはイベント グループの親イベント グループの種類。|  
+|**type**|**int**|イベントまたはイベント通知を発生させる原因となるイベント グループの種類。|  
+|**type_name**|**nvarchar(128)**|イベントまたはイベント グループの名前です。 これは、FOR 句で指定できます、 [CREATE EVENT NOTIFICATION](../../t-sql/statements/create-event-notification-transact-sql.md)ステートメント。|  
+|**parent_type**|**int**|イベントまたはイベント グループの親であるイベントのグループの種類。|  
   
 ## <a name="permissions"></a>アクセス許可  
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] 詳細については、「 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)」を参照してください。  

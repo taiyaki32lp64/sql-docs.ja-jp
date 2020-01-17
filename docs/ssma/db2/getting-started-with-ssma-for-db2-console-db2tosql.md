@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: f245c017-023e-4880-8721-8908d339525e
 author: Shamikg
 ms.author: Shamikg
-manager: craigg
-ms.openlocfilehash: 3b8417d75ab0a08532dd073b3ce7f803b3f7490c
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: fbb0a90d9cfd628e9251a55de3df8b66a22f1ef7
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51668301"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67989658"
 ---
 # <a name="getting-started-with-ssma--for-db2-console-db2tosql"></a>Ssma for DB2 コンソール (DB2ToSQL) 作業の開始
 このセクションを起動し、DB2 のコンソール アプリケーションを使用する手順について説明します。 一覧表示、ここで、規則で使用されます SSMA コンソールの一般的な出力ウィンドウ。  

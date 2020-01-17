@@ -17,11 +17,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 0a654932689785d96aaff049551faf19494c311a
-ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/18/2018
-ms.locfileid: "53589896"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62843736"
 ---
 # <a name="set-source-control-options"></a>ソース管理のオプションの設定
   [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] に組み込まれているソース管理機能を使用する前に、さまざまな作業環境に合わせて、ソース管理のオプションを設定する必要があります。  
@@ -86,11 +86,11 @@ ms.locfileid: "53589896"
      ソース管理ストアを更新するために項目をチェックインするときに項目がチェックアウト状態を保つようにすることを指定します。 特定のチェックインに対してこのオプションを変更する場合にクリックして、**オプション**の矢印、**チェックイン** ダイアログ ボックスと 消去、**チェック アウト状態を保持** チェック ボックス。  
   
      **チェックイン項目**  
-     チェックアウトされていない項目を編集しようとしたときの [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] の動作を指定するオプションの一覧を表示します。使用できるオプションを次の表に示します。  
+     指定するオプションの一覧を表示する方法[!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]チェック アウトされていないアイテムを編集しようとしたときに動作する必要があります。次の表では、使用可能なオプションについて説明します。  
   
      **保存しています**  
   
-    |アクション|説明|  
+    |操作|説明|  
     |------------|-----------------|  
     |**チェック アウトのプロンプト**|表示、**チェック アウト** ダイアログ ボックス。|  
     |**自動的にチェック アウト**|項目をチェック アウト、表示せず、**チェック アウト** ダイアログ ボックス。 既定のオプションです。|  
@@ -98,7 +98,7 @@ ms.locfileid: "53589896"
   
      **編集**  
   
-    |アクション|説明|  
+    |操作|説明|  
     |------------|-----------------|  
     |**チェック アウトのプロンプト**|表示、**チェック アウト** ダイアログ ボックス。|  
     |**排他チェック アウトのプロンプト**|表示、**チェック アウト** ダイアログ ボックス。|  
@@ -111,7 +111,7 @@ ms.locfileid: "53589896"
      **リセット**  
      ソース管理確認ダイアログ ボックスを既定の設定にリセットします。 例では、選択した場合、**次回からこのダイアログ ボックスを表示しない**ソース コントロールのダイアログ ボックスでは、チェック ボックスを選択すると、**リセット**オプションは、そのアクションを反転させます。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [ソース管理の基礎](../../2014/database-engine/source-control-basics.md)   
  [ソース管理接続の変更](../../2014/database-engine/change-source-control-connections.md)   
  [ソース管理からのファイルの除外](../../2014/database-engine/exclude-files-from-source-control.md)  

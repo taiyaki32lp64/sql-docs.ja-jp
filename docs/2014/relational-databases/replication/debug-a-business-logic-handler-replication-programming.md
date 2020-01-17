@@ -18,11 +18,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 90d1fc5d6dd4eb972e15ae942822418aba30573e
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54128762"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62721502"
 ---
 # <a name="debug-a-business-logic-handler-replication-programming"></a>ビジネス ロジック ハンドラーのデバッグ (レプリケーション プログラミング)
   マージ サブスクリプションの同期時にカスタム ビジネス ロジックを呼び出すには、ビジネス ロジック ハンドラーを使用します。 詳細については、「[Execute Business Logic During Merge Synchronization](merge/execute-business-logic-during-merge-synchronization.md)」(マージ同期中のビジネス ロジックの実行) をご覧ください。  
@@ -31,7 +31,7 @@ ms.locfileid: "54128762"
   
 ### <a name="to-debug-a-business-logic-handler-on-a-local-computer"></a>ローカル コンピューターでビジネス ロジック ハンドラーをデバッグするには  
   
-1.  パブリッシングとディストリビューションを構成し、パブリケーションを作成し、パブリケーションへのサブスクリプションを作成します。 詳細については、次を参照してください。 [Configure Publishing and Distribution](configure-publishing-and-distribution.md)と[Create a Publication](publish/create-a-publication.md)します。  
+1.  パブリッシングとディストリビューションを構成し、パブリケーションを作成し、パブリケーションへのサブスクリプションを作成します。 詳細については、「[パブリッシングおよびディストリビューションの構成](configure-publishing-and-distribution.md)」と「[パブリケーションの作成](publish/create-a-publication.md)」をご参照ください。  
   
 2.  ビジネス ロジック ハンドラーを作成して登録します。 詳細については、「 [マージ アーティクルのビジネス ロジック ハンドラーの実装](implement-a-business-logic-handler-for-a-merge-article.md)」を参照してください。  
   

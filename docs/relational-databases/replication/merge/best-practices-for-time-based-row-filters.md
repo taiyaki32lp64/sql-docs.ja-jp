@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 773c5c62-fd44-44ab-9c6b-4257dbf8ffdb
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 3a2b86b5f9b08e9915adae27132b6beb5647394f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 6182b480c83b8e6b2d0f0a50217823fd14f30c30
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47755884"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68033355"
 ---
 # <a name="best-practices-for-time-based-row-filters"></a>時間ベースの行フィルターの推奨事項
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 f1_keywords:
 - sql11.asvs.ssmsimbi.RestoreFromPP.f1
@@ -13,12 +12,12 @@ ms.assetid: 232ac8ed-77fe-47d8-acd3-59bc2fdfdf48
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 21b3c477c87861d224d72a52dcce89ceacf7bb3a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: f90ea08269e79e57c623af41fc2f0fbc09e2fb42
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48146652"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66066637"
 ---
 # <a name="restore-from-powerpivot"></a>PowerPivot から復元
   SQL Server Management Studio の PowerPivot から復元機能を使って、テーブル モードで実行されている Analysis Services インスタンス上に新しいテーブル モデル データベースを作成したり、PowerPivot ブック (.xlsx) から既存のデータベースに復元したりできます。  
@@ -49,7 +48,7 @@ ms.locfileid: "48146652"
 5.  **[オプション]** で、 **[セキュリティ情報を含める]** チェック ボックスをオンのままにします。 PowerPivot ブックから復元する場合は、この設定は適用されません。  
   
 ## <a name="see-also"></a>参照  
- [表形式モデル データベース&#40;SSAS 表形式&#41;](tabular-model-databases-ssas-tabular.md)   
+ [表形式モデルのデータベース (SSAS 表形式)](tabular-model-databases-ssas-tabular.md)   
  [PowerPivot からインポート&#40;SSAS 表形式&#41;](import-from-power-pivot-ssas-tabular.md)  
   
   

@@ -7,15 +7,15 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 24bd987e-164a-48fd-b4f2-cbe16a3cd95e
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: a9eb4de07ad7bd564578462b053637bb472b22f6
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 14de3fa15fa5a648c2d41824d237040b5aa085e5
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53353983"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62771578"
 ---
 # <a name="ssis-catalog"></a>SSIS カタログ
   `SSISDB`カタログが操作するための中心点[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)](SSIS) プロジェクトを展開している、[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]サーバー。 たとえば、プロジェクト パラメーターとパッケージ パラメーターの設定、パッケージに合わせたランタイム値を指定するための環境の構成、パッケージの実行およびトラブルシューティング、 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] サーバー操作の管理を行います。  
@@ -45,7 +45,7 @@ ms.locfileid: "53353983"
   
 -   フォルダー  
   
--   プロジェクト  
+-   Project  
   
 -   環境  
   
@@ -87,7 +87,7 @@ ms.locfileid: "53353983"
 -   2 番目以降の文字では、Unicode Standard 2.0 に定義されている文字または数字と、アンダースコア (_) を使用できます。  
   
 ## <a name="catalog-configuration"></a>カタログの構成  
- カタログ プロパティを調整することによって、カタログの動作を微調整します。 カタログ プロパティは、機微なデータを暗号化する方法と、操作およびプロジェクトのバージョン管理データを保持する方法を定義します。 カタログ プロパティを設定するには、**[カタログのプロパティ]** ダイアログ ボックスを使用するか、[catalog.configure_catalog (SSISDB データベース)](/sql/integration-services/system-stored-procedures/catalog-configure-catalog-ssisdb-database) ストアド プロシージャを呼び出します。 プロパティを表示するには、ダイアログ ボックスまたはクエリ [catalog.catalog_properties (SSISDB Database)](/sql/integration-services/system-views/catalog-catalog-properties-ssisdb-database) を使用します。 ダイアログ ボックスには、オブジェクト エクスプローラーで `SSISDB` を右クリックしてアクセスできます。  
+ カタログ プロパティを調整することによって、カタログの動作を微調整します。 カタログ プロパティは、機微なデータを暗号化する方法と、操作およびプロジェクトのバージョン管理データを保持する方法を定義します。 カタログ プロパティを設定するには、 **[カタログのプロパティ]** ダイアログ ボックスを使用するか、[catalog.configure_catalog (SSISDB データベース)](/sql/integration-services/system-stored-procedures/catalog-configure-catalog-ssisdb-database) ストアド プロシージャを呼び出します。 プロパティを表示するには、ダイアログ ボックスまたはクエリ [catalog.catalog_properties (SSISDB Database)](/sql/integration-services/system-views/catalog-catalog-properties-ssisdb-database) を使用します。 ダイアログ ボックスには、オブジェクト エクスプローラーで `SSISDB` を右クリックしてアクセスできます。  
   
 ### <a name="operations-and-project-version-cleanup"></a>操作とプロジェクト バージョンのクリーンアップ  
  カタログの多くの操作の状態データは、内部データベース テーブルに格納されます。 たとえば、カタログではパッケージの実行とプロジェクトの配置の状態が追跡されます。 操作データのサイズを維持するには、 **の** SSIS サーバー メンテナンス ジョブ [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] を使用して古いデータを削除します。 この [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェント ジョブは、 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] のインストール時に作成されます。  
@@ -139,7 +139,7 @@ ms.locfileid: "53353983"
   
  次の表では、 **[カタログのプロパティ]** ダイアログ ボックスに示されるプロパティ名と、データベース ビュー内の対応するプロパティについて説明します。  
   
-|プロパティ名 (**[カタログのプロパティ]** ダイアログ ボックス)|プロパティ名 (データベース ビュー)|  
+|プロパティ名 ( **[カタログのプロパティ]** ダイアログ ボックス)|プロパティ名 (データベース ビュー)|  
 |---------------------------------------------------------|-------------------------------------|  
 |暗号化アルゴリズムの名前|ENCRYPTION_ALGORITHM|  
 |ログを定期的に消去する|OPERATION_CLEANUP_ENABLED|  

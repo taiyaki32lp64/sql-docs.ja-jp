@@ -15,13 +15,12 @@ apitype: DLLExport
 ms.assetid: f95a9980-8bc0-426c-8aa1-e2660b6784cf
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: d04bc4e669faad149a4dccbfc1b40a82a9a1aae0
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: 04554c7aa9f891aab414ae5ae77f3c92bb86ac4b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52398175"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68036051"
 ---
 # <a name="localdbgetinstances-function"></a>LocalDBGetInstances 関数
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

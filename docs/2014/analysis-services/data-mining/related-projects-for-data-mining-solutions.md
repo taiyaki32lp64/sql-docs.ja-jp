@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: dc26489a-4c27-4b89-8215-6d245427c350
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 92384d07e258423e08793b08afe45b6d14253cff
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: af175693a93535b21b399cf4916ca4291fc94dfa
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52400656"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66082986"
 ---
 # <a name="related-projects-for-data-mining-solutions"></a>データ マイニング ソリューションの関連プロジェクト
   データ マイニング ソリューションに最低限必要なのは、データ ソース、データ ソース ビュー、マイニング構造、およびマイニング モデルを定義した、データ マイニング プロジェクトです。 ただし、データ マイニング モデルを日々の意志決定に使用する場合は、データ マイニングを予測分析ソリューションの他の部分と統合し、次のプロセスやコンポーネントを含めることが重要です。  
@@ -66,7 +65,7 @@ ms.locfileid: "52400656"
   
 -   [データ クレンジング](../../data-quality-services/data-cleansing.md)  
   
--   [データ マイニング クエリ タスク](../../integration-services/control-flow/data-mining-query-task.md)  
+-   [Data Mining Query Task](../../integration-services/control-flow/data-mining-query-task.md)  
   
 -   [データ プロファイル タスク](../../integration-services/control-flow/data-profiling-task.md)  
   

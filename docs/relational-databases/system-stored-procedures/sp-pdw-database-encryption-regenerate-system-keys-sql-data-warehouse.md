@@ -2,8 +2,7 @@
 title: sp_pdw_database_encryption_regenerate_system_keys (SQL Data Warehouse) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/03/2017
-ms.service: sql-data-warehouse
-ms.reviewer: ''
+ms.prod: sql
 ms.technology: system-objects
 ms.topic: language-reference
 dev_langs:
@@ -11,19 +10,20 @@ dev_langs:
 ms.assetid: bb13e323-a984-4462-8b6d-6019c38ddd9d
 author: ronortloff
 ms.author: rortloff
-manager: craigg
+ms.reviewer: ''
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 3b7ed226b3f56de3e4220fc9cc3a48230bf6b337
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 323b7602fd375bc393828663f1d2c749332dc9ac
+ms.sourcegitcommit: 9d3ece500fa0e4a9f4fefc88df4af1db9431c619
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56025504"
+ms.lasthandoff: 06/28/2019
+ms.locfileid: "67463476"
 ---
 # <a name="sppdwdatabaseencryptionregeneratesystemkeys-sql-data-warehouse"></a>sp_pdw_database_encryption_regenerate_system_keys (SQL データ ウェアハウス)
+
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
 
-  使用**sp_pdw_database_encryption_regenerate_system_keys**アプライアンス上 TDE が有効になっているときに暗号化されている内部データベースの証明書とデータベースの暗号化キーを回転させる。 これには、`tempdb` も含まれます。 これは、TDE が有効になっている場合にのみ成功します。  
+  使用**sp_pdw_database_encryption_regenerate_system_keys**アプライアンス上 TDE が有効になっているときに暗号化されている内部データベースの証明書とデータベースの暗号化キーを回転させる。 これが含まれています`tempdb`します。 これは、TDE が有効になっている場合にのみ成功します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -37,9 +37,9 @@ sp_pdw_database_encryption_regenerate_system_keys  ;
  **0** (成功) または**1** (失敗)  
   
 ## <a name="remarks"></a>コメント  
- プロシージャには、パラメーターがありません。  
+ プロシージャにパラメーターがありません。  
   
- アプライアンスのトラフィックが少ないときに、このプロシージャを使用する必要があります。  
+ アプライアンスのトラフィックが少ないときに、この手順を使用する必要があります。  
   
 ## <a name="permissions"></a>アクセス許可  
  メンバーシップが必要です、 **sysadmin**固定データベース ロール、または**CONTROL SERVER**権限。  

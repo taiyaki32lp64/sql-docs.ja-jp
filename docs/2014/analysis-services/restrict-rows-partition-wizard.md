@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.partitionwizard.typefilterexpression.f1
@@ -13,12 +12,12 @@ ms.assetid: eec8da8f-eab4-4ac4-a81d-995c814f88ca
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 2b86cfeedd76af51b5f9d8cc4633c73ed9cc17ea
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 59bff3eac690b7352b75d02bd7b266dfa8f303f8
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48131712"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66070211"
 ---
 # <a name="restrict-rows-partition-wizard"></a>[行の制限] (パーティション ウィザード)
   **[行の制限]** ページを使用すると、指定したテーブルから取得、集計されて、パーティションに含まれる行を制限できます。  
@@ -44,7 +43,7 @@ ms.locfileid: "48131712"
  **[確認]**  
  **[クエリ]** のステートメントが有効な SQL ステートメントであることを確認します。  
   
-## <a name="see-also"></a>参照  
- [パーティション&#40;Analysis Services - 多次元データ&#41;](multidimensional-models-olap-logical-cube-objects/partitions-analysis-services-multidimensional-data.md)  
+## <a name="see-also"></a>関連項目  
+ [パーティション (Analysis Services - 多次元データ)](multidimensional-models-olap-logical-cube-objects/partitions-analysis-services-multidimensional-data.md)  
   
   

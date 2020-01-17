@@ -1,5 +1,5 @@
 ---
-title: ServerSettingsGeneralFlag クラス |Microsoft Docs
+title: ServerSettingsGeneralFlag クラス
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 5676030b-bb84-4ac0-b68b-edb345a3a152
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: 70b5aad65da0ad026d0a854cbc7bb46c4b7034a6
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: dcc69f5dedb481f8e86d229740e39a7843c87765
+ms.sourcegitcommit: baa40306cada09e480b4c5ddb44ee8524307a2ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51670641"
+ms.lasthandoff: 11/06/2019
+ms.locfileid: "73659762"
 ---
 # <a name="serversettingsgeneralflag-class"></a>ServerSettingsGeneralFlag クラス
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -36,6 +35,6 @@ ms.locfileid: "51670641"
 -   フラグ値の表示および変更  
   
 ## <a name="see-also"></a>参照  
- [サーバー ネットワーク プロトコルとネットワーク ライブラリの構成](https://msdn.microsoft.com/library/ms177485\(v=sql.100\).aspx)  
+ [サーバーネットワークプロトコルと Net-library の構成](https://msdn.microsoft.com/library/ms177485\(v=sql.100\).aspx)  
   
   

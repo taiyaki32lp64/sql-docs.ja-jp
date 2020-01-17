@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 366c57cf-352f-4202-8074-6ddce44880d1
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: db9f2758c2df5585a4d9034df7b309ae4547e52c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 74d64aa0a5a93587997bc66d064d0c5c47ffb132
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47633940"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67993384"
 ---
 # <a name="how-to-send-and-retrieve-utf-8-data-using-built-in-utf-8-support"></a>方法: 組み込みの UTF-8 サポートを使用した UTF-8 データの送信と取得
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -222,7 +221,7 @@ sqlsrv_close( $conn);
 ## <a name="see-also"></a>参照  
 [データの取得](../../connect/php/retrieving-data.md)
 
-[Windows 以外の ASCII データの使用](../../connect/php/how-to-send-and-retrieve-ascii-data-in-linux-mac.md)
+[Windows 以外での ASCII データの操作](../../connect/php/how-to-send-and-retrieve-ascii-data-in-linux-mac.md)
 
 [データの更新 &#40;Microsoft Drivers for PHP for SQL Server&#41;](../../connect/php/updating-data-microsoft-drivers-for-php-for-sql-server.md)
 

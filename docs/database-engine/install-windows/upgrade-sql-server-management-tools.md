@@ -12,13 +12,12 @@ ms.assetid: 1dab50b9-d16c-49a1-9ecc-af72adb6c378
 author: stevestein
 ms.author: sstein
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-manager: craigg
-ms.openlocfilehash: b15e0448bb230ff209b17cbe5c0bc719686193f5
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.openlocfilehash: 332c513c7c7d76956fc5647d7e4cb96eeac633d7
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51600722"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67934703"
 ---
 # <a name="upgrade-sql-server-management-tools"></a>SQL Server 管理ツールのアップグレード
 

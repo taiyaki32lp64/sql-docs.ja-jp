@@ -1,20 +1,20 @@
 ---
-title: '[サーバーのプロパティ] ([詳細設定] ページ) - Reporting Services | Microsoft Docs'
-author: markingmyname
-ms.author: maghan
+title: '[サーバーのプロパティ] の [詳細設定] ページ - Reporting Services | Microsoft Docs'
+author: maggiesMSFT
+ms.author: maggies
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: tools
 ms.topic: conceptual
-ms.date: 01/15/2019
-ms.openlocfilehash: b041e4a7f672468f5c2959f8ecb86ddaa62f09fd
-ms.sourcegitcommit: a94cf79160e22fa8b4bafe3e6e50bb54e20b1bca
-ms.translationtype: HT
+ms.date: 11/05/2019
+ms.openlocfilehash: defadad0d3a2545ba3d794d5d9c38c5734d3e9af
+ms.sourcegitcommit: baa40306cada09e480b4c5ddb44ee8524307a2ab
+ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54805748"
+ms.lasthandoff: 11/06/2019
+ms.locfileid: "73638027"
 ---
-# <a name="server-properties-advanced-page---reporting-services"></a>[サーバーのプロパティ]\([詳細設定] ページ) - Reporting Services
+# <a name="server-properties-advanced-page---reporting-services"></a>[サーバーのプロパティ] の [詳細設定] ページ - Reporting Services
 
 [!INCLUDE[ssrs-appliesto](../../includes/ssrs-appliesto.md)] [!INCLUDE[ssrs-appliesto-2016-and-later](../../includes/ssrs-appliesto-2016-and-later.md)] [!INCLUDE[ssrs-appliesto-pbirsi](../../includes/ssrs-appliesto-pbirs.md)]
 
@@ -93,8 +93,9 @@ Web ポータルのページ タイトルに表示されるレポート サー�
 
 **AccessControlMaxAge** プリフライト要求の結果をキャッシュできる秒数を指定します。 既定値は 600 (10 分) です。
 
-**AllowedResourceExtensionsForUpload** ***(Power BI Report Server のみ)*** レポート サーバーにアップロードできるリソースの拡張子を設定します。 &ast;.rdl や &ast;.pbix のような組み込みのファイルの種類用の拡張子は含める必要はありません。 既定値は "&ast;、&ast;.xml、&ast;.xsd、&ast;.xsl、&ast;.png、&ast;.gif、&ast;.jpg、&ast;.tif、&ast;.jpeg、&ast;.tiff、&ast;.bmp、&ast;.pdf、&ast;.svg、&ast;.rtf、&ast;.txt、&ast;.doc、&ast;.docx、&ast;.pps、&ast;.ppt、&ast;.pptx" です。 
+**AllowedResourceExtensionsForUpload** (Power BI Report Server および Reporting Services 2017 以降のみ) レポート サーバーにアップロードできるリソースの拡張子を設定します。 &ast;.rdl や &ast;.pbix のような組み込みのファイルの種類用の拡張子は含める必要はありません。 既定値は "&ast;、&ast;.xml、&ast;.xsd、&ast;.xsl、&ast;.png、&ast;.gif、&ast;.jpg、&ast;.tif、&ast;.jpeg、&ast;.tiff、&ast;.bmp、&ast;.pdf、&ast;.svg、&ast;.rtf、&ast;.txt、&ast;.doc、&ast;.docx、&ast;.pps、&ast;.ppt、&ast;.pptx" です。
 
+**RestrictedResourceMimeTypeForUpload**ユーザーがコンテンツをアップロードすることが許可されていない mime の種類のセット。 制限付きの mime の種類で既に保存されているリソースは、ブラウザーによって開かれたり実行されたりするのではなく、アプリケーション/オクテットストリームとしてのみダウンロードできます。  既定では、この一覧には制限された項目はありませんが、セキュリティで保護されたエクスペリエンスを提供するために組織で設定することをお勧めします。
 
 **EditSessionCacheLimit**  
 レポート編集セッションでアクティブにできるデータ キャッシュ エントリの数を指定します。 既定の数は 5 です。  

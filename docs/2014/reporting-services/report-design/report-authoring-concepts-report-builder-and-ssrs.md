@@ -4,22 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 helpviewer_keywords:
 - concepts
 - terminology
 ms.assetid: 99311b36-5dc5-4039-ac93-4d2826701327
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: e27a9a73c966e1058ec273415f17b80142a582ae
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: 14ed49408c980b85e3a45902852f14f61534eec1
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56291630"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66105307"
 ---
 # <a name="report-authoring-concepts-report-builder-and-ssrs"></a>レポート作成の概念 (レポート ビルダーおよび SSRS)
   ここでは、レポート ビルダーとレポート デザイナーのドキュメントで使用する主要な概念について簡単に説明します。 特定の用語の定義については、「[用語集 &#40;レポート ビルダー&#41;](../report-builder/glossary-report-builder.md)」を参照してください。  

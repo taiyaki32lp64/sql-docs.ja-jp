@@ -9,15 +9,15 @@ ms.topic: conceptual
 f1_keywords:
 - sql12.ssis.designer.odbcsource.f1
 ms.assetid: abcf34eb-9140-4100-82e6-b85bccd22abe
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: b928b54236929238c404597f4ba1eeeddb427ccc
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: d125a725a9e1c0cab34c7066fd9554ef0099d6e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52790644"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62901107"
 ---
 # <a name="odbc-source"></a>ODBC 入力元
   ODBC 入力元は、データベース テーブル、ビュー、または SQL ステートメントを使用して、ODBC でサポートされているデータベースからデータを抽出します。  
@@ -37,9 +37,9 @@ ms.locfileid: "52790644"
 ## <a name="error-handling"></a>エラー処理  
  ODBC 入力元にはエラー出力があります。 コンポーネントのエラー出力には、次の出力列があります。  
   
--   **エラー コード**:現在のエラーに対応する番号。 エラーの一覧については、使用している ODBC でサポートされているデータベースのドキュメントを参照してください。 SSIS エラー コードの一覧については、「SSIS のエラー コードおよびメッセージ リファレンス」を参照してください。  
+-   **エラー コード**: 現在のエラーに対応する数字です。 エラーの一覧については、使用している ODBC でサポートされているデータベースのドキュメントを参照してください。 SSIS エラー コードの一覧については、「SSIS のエラー コードおよびメッセージ リファレンス」を参照してください。  
   
--   **エラー列**:(変換エラー) エラーを原因となるソース列。  
+-   **エラー列**: (変換エラーの) エラーの原因となるソース列。  
   
 -   標準出力データ列。  
   
@@ -51,9 +51,9 @@ ms.locfileid: "52790644"
 ## <a name="extract-options"></a>抽出オプション  
  ODBC 入力元は、 **バッチ** または **行ごと** のどちらかのモードで動作します。 使用するモードは、 **FetchMethod** プロパティによって決まります。 以下に、モードの説明を示します。  
   
--   **バッチ**:コンポーネントは、把握した ODBC プロバイダーの機能に基づいて、最も効率的なフェッチ方法を使用しようとします。 最新の ODBC プロバイダーの場合、これは配列バインドを使用する SQLFetchScroll です (このとき、配列のサイズは **BatchSize** プロパティによって決定します)。 **[バッチ]** を選択したが、この方法がプロバイダーでサポートされていない場合、ODBC 入力先は自動的に **[行ごと]** モードに切り替わります。  
+-   **バッチ**: コンポーネントは、把握した ODBC プロバイダーの機能に基づいて、最も効率的なフェッチ方法を使用します。 最新の ODBC プロバイダーの場合、これは配列バインドを使用する SQLFetchScroll です (このとき、配列のサイズは **BatchSize** プロパティによって決定します)。 **[バッチ]** を選択したが、この方法がプロバイダーでサポートされていない場合、ODBC 入力先は自動的に **[行ごと]** モードに切り替わります。  
   
--   **1 行ずつ**:コンポーネントは SQLFetch を使用して、一度に 1 行を取得します。  
+-   **行ごと**: コンポーネントは SQLFetch を使用して、一度に 1 行ずつ取得します。  
   
  **FetchMethod** プロパティの詳細については、「 [ODBC 入力元のカスタム プロパティ](odbc-source-custom-properties.md)」を参照してください。  
   

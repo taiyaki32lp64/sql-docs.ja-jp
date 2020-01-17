@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: cce0d8b5-e87b-4f7b-a8a0-37d5025a1f5d
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 30fcb14c39385c6e7e39ec8ac1556118a4d09f73
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.openlocfilehash: 8dde6e14283195ef3b56d545a58a95c307774223
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51605952"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67964529"
 ---
 # <a name="createrecordset-method-example-vbscript"></a>CreateRecordset メソッドの例 (VBScript)
 > [!IMPORTANT]
@@ -168,7 +167,7 @@ End Sub
 <!-- EndCreateRecordsetVBS -->  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [CreateRecordset メソッド (RDS)](../../../ado/reference/rds-api/createrecordset-method-rds.md)   
  [Recordset オブジェクト (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)
 

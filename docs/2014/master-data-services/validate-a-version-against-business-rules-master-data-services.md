@@ -12,15 +12,15 @@ helpviewer_keywords:
 - versions [Master Data Services], validating
 - business rules [Master Data Services], applying to all members
 ms.assetid: 5aee7901-6d05-41d4-8bbb-c6f26791d1df
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 7e3d554fe68eb488da90f4b6124c978e3430f2e8
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: e33526df02cff22adbd56bfbfc2f25cef1c1c052
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52793354"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65482309"
 ---
 # <a name="validate-a-version-against-business-rules-master-data-services"></a>ビジネス ルールに対してバージョンを検証する (マスター データ サービス)
   [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]では、ビジネス ルールをモデル バージョンのすべてのメンバーに適用するためにバージョンが検証されます。  
@@ -37,7 +37,7 @@ ms.locfileid: "52793354"
   
 -   モデル管理者である必要があります。 詳細については、「 [管理者 &#40;マスター データ サービス&#41;](../../2014/master-data-services/administrators-master-data-services.md)にアクセスすることなくグループに対してユーザーの追加または削除を行うことができます。  
   
--   バージョンの状態は、**[未処理]** または **[ロック済み]** である必要があります。  
+-   バージョンの状態は、 **[未処理]** または **[ロック済み]** である必要があります。  
   
 -   **[バージョンの検証]** ページに **[検証成功]** 以外の状態のメンバーが存在する必要があります。  
   
@@ -60,7 +60,7 @@ ms.locfileid: "52793354"
   
 -   [バージョンをロックする (マスター データ サービス)](../../2014/master-data-services/lock-a-version-master-data-services.md)  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [検証状態 (マスター データ サービス)](../../2014/master-data-services/validation-statuses-master-data-services.md)   
  [検証ストアド プロシージャ (マスター データ サービス)](validation-stored-procedure-master-data-services.md)   
  [バージョン (マスター データ サービス)](../../2014/master-data-services/versions-master-data-services.md)   

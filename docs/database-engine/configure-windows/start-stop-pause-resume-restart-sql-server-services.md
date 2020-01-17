@@ -40,13 +40,12 @@ helpviewer_keywords:
 ms.assetid: 32660a02-e5a1-411a-9e57-7066ca459df6
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 49a5a5681093c9a4f39f843d713aa286c86fc818
-ms.sourcegitcommit: a13256f484eee2f52c812646cc989eb0ce6cf6aa
+ms.openlocfilehash: 281d392bcb6c9bd6e46dbb6b41a85d080bb811f2
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/25/2019
-ms.locfileid: "56801996"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68038834"
 ---
 # <a name="start-stop-pause-resume-restart-sql-server-services"></a>SQL Server サービスの開始、停止、一時停止、再開、再起動
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -79,7 +78,7 @@ ms.locfileid: "56801996"
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] コンポーネントは、Windows サービスとして実行される実行可能プログラムです。 Windows サービスとして実行されるプログラムは、コンピューター画面にアクティビティを表示することなく動作を続行できます。  
   
  **[!INCLUDE[ssDE](../../includes/ssde-md.md)] サービス (service)**  
- [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]である実行可能プロセスです。 [!INCLUDE[ssDE](../../includes/ssde-md.md)] は、既定のインスタンス (1 台のコンピューターにつき 1 つのみ) にすることも、 [!INCLUDE[ssDE](../../includes/ssde-md.md)]の多数の名前付きインスタンスの 1 つにすることもできます。 コンピューターにインストールされている [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスを判別するには、 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 構成マネージャーを使用します。 既定のインスタンス (インストールした場合) は、**[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (MSSQLSERVER)** として表示されます。 名前付きインスタンス (インストールした場合) は、**[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (<instance_name>)** として表示されます。 既定では、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express は **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (SQLEXPRESS)** としてインストールされます。  
+ [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]である実行可能プロセスです。 [!INCLUDE[ssDE](../../includes/ssde-md.md)] は、既定のインスタンス (1 台のコンピューターにつき 1 つのみ) にすることも、 [!INCLUDE[ssDE](../../includes/ssde-md.md)]の多数の名前付きインスタンスの 1 つにすることもできます。 コンピューターにインストールされている [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスを判別するには、 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 構成マネージャーを使用します。 既定のインスタンス (インストールした場合) は、 **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (MSSQLSERVER)** として表示されます。 名前付きインスタンス (インストールした場合) は、 **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (<instance_name>)** として表示されます。 既定では、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express は **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (SQLEXPRESS)** としてインストールされます。  
   
  **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェント サービス**  
  ジョブおよび警告と呼ばれる管理タスクをスケジュールに従って実行する Windows サービスです。 詳しくは、「 [SQL Server Agent](../../ssms/agent/sql-server-agent.md)」をご覧ください。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェントは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のすべてのエディションで使用できるわけではありません。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]の各エディションでサポートされる機能の一覧については、「 [SQL Server 2016 の各エディションがサポートする機能](~/sql-server/editions-and-supported-features-for-sql-server-2016.md)」を参照してください。  
@@ -120,13 +119,13 @@ ms.locfileid: "56801996"
 ####  <a name="Permissions"></a> Permissions  
  サービスを開始、停止、一時停止、再開、または再起動できるのは、既定ではローカル管理者グループのメンバーだけです。 管理者以外のユーザーがサービスを管理できるようにする方法については、「 [[HOWTO] Windows Server 2003 でサービスを管理する権利をユーザーに付与する](https://support.microsoft.com/kb/325349)」をご覧ください (Windows の他のバージョンでも処理は同じです)。  
   
- [!INCLUDE[ssDE](../../includes/ssde-md.md)]の **SHUTDOWN** コマンドを使用して [!INCLUDE[tsql](../../includes/tsql-md.md)] を停止するには、 **sysadmin** 固定サーバー ロールまたは **serveradmin** 固定サーバー ロールのメンバーシップが必要です。この権限を譲渡することはできません。    
+ [!INCLUDE[ssDE](../../includes/ssde-md.md)]の **SHUTDOWN** コマンドを使用して [!INCLUDE[tsql](../../includes/tsql-md.md)] を停止するには、 **sysadmin** 固定サーバー ロールまたは **serveradmin** 固定サーバー ロールのメンバーシップが必要です。この権限を譲渡することはできません。  
   
 ##  <a name="SSCMProcedure"></a>[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 構成マネージャーの使用  
   
 #### <a name="starting-includessnoversionincludesssnoversion-mdmd-configuration-manager"></a>[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 構成マネージャーの開始  
   
-1.  **[スタート]** メニューで、 **[すべてのプログラム]**、[ [!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)]]、 **[構成ツール]** の順にポイントして、 **[SQL Server 構成マネージャー]** をクリックします。  
+1.  **[スタート]** メニューで、 **[すべてのプログラム]** 、[ [!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)]]、 **[構成ツール]** の順にポイントして、 **[SQL Server 構成マネージャー]** をクリックします。  
   
      [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 構成マネージャーは [!INCLUDE[msCoName](../../includes/msconame-md.md)] 管理コンソール プログラムのスナップインであり、スタンドアロン プログラムではないため、新しいバージョンの Windows では、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 構成マネージャーはアプリケーションとして表示されません。 最新の 4 つのバージョンへのパスを次に示します (Windows が C ドライブにインストールされている場合)。  
   
@@ -145,7 +144,7 @@ ms.locfileid: "56801996"
   
 3.  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 構成マネージャーの左側のペインで、 **[SQL Server のサービス]** をクリックします。  
   
-4.  結果ペインで **[SQL Server (MSSQLServer)]** または名前付きインスタンスを右クリックし、 **[開始]**、 **[停止]**、 **[一時停止]**、 **[再開]**、または **[再起動]** をクリックします。  
+4.  結果ペインで **[SQL Server (MSSQLServer)]** または名前付きインスタンスを右クリックし、 **[開始]** 、 **[停止]** 、 **[一時停止]** 、 **[再開]** 、または **[再起動]** をクリックします。  
   
 5.  **[OK]** をクリックし、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 構成マネージャーを閉じます。  
   
@@ -160,7 +159,7 @@ ms.locfileid: "56801996"
   
 3.  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 構成マネージャーの左側のペインで、 **[SQL Server のサービス]** をクリックします。  
   
-4.  結果ウィンドウで **[[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser]**、または **[[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェント (MSSQLServer)]** (名前付きインスタンスの場合には **[[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェント (<instance_name>)]**) を右クリックし、**[開始]**、**[停止]**、**[一時停止]**、**[再開]**、または **[再起動]** をクリックします。  
+4.  結果ウィンドウで **[[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser]** 、または **[[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェント (MSSQLServer)]** (名前付きインスタンスの場合には **[[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェント (<instance_name>)]** ) を右クリックし、 **[開始]** 、 **[停止]** 、 **[一時停止]** 、 **[再開]** 、または **[再起動]** をクリックします。  
   
 5.  **[OK]** をクリックし、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 構成マネージャーを閉じます。  
   
@@ -171,9 +170,9 @@ ms.locfileid: "56801996"
   
 #### <a name="to-start-stop-pause-resume-or-restart-the-an-instance-of-the-includessdenoversionincludesssdenoversion-mdmd"></a>インスタンスを開始、停止、一時停止、再開、または再起動するには [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]  
   
-1.  オブジェクト エクスプローラーで、 [!INCLUDE[ssDE](../../includes/ssde-md.md)]のインスタンスに接続し、開始する [!INCLUDE[ssDE](../../includes/ssde-md.md)] のインスタンスを右クリックし、 **[開始]**、 **[停止]**、 **[一時停止]**、 **[再開]**、または **[再起動]** をクリックします。  
+1.  オブジェクト エクスプローラーで、 [!INCLUDE[ssDE](../../includes/ssde-md.md)]のインスタンスに接続し、開始する [!INCLUDE[ssDE](../../includes/ssde-md.md)] のインスタンスを右クリックし、 **[開始]** 、 **[停止]** 、 **[一時停止]** 、 **[再開]** 、または **[再起動]** をクリックします。  
   
-     または、[登録済みサーバー] で、開始する [!INCLUDE[ssDE](../../includes/ssde-md.md)] のインスタンスを右クリックし、 **[サービス コントロール]** をポイントし、 **[開始]**、 **[停止]**、 **[一時停止]**、 **[再開]**、または **[再起動]** をクリックします。  
+     または、[登録済みサーバー] で、開始する [!INCLUDE[ssDE](../../includes/ssde-md.md)] のインスタンスを右クリックし、 **[サービス コントロール]** をポイントし、 **[開始]** 、 **[停止]** 、 **[一時停止]** 、 **[再開]** 、または **[再起動]** をクリックします。  
   
 2.  **[ユーザー アカウント制御]** ダイアログ ボックスが表示されたら、 **[はい]** をクリックします。  
   
@@ -181,7 +180,7 @@ ms.locfileid: "56801996"
   
 #### <a name="to-start-stop-or-restart-the-an-instance-of-the-includessnoversionincludesssnoversion-mdmd-agent"></a>[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェントのインスタンスを開始、停止、または再起動するには  
   
-1.  オブジェクト エクスプローラーで、 [!INCLUDE[ssDE](../../includes/ssde-md.md)]のインスタンスに接続し、 **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェント**を右クリックし、 **[開始]**、 **[停止]**、または **[再起動]** をクリックします。  
+1.  オブジェクト エクスプローラーで、 [!INCLUDE[ssDE](../../includes/ssde-md.md)]のインスタンスに接続し、 **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェント**を右クリックし、 **[開始]** 、 **[停止]** 、または **[再起動]** をクリックします。  
   
 2.  **[ユーザー アカウント制御]** ダイアログ ボックスが表示されたら、 **[はい]** をクリックします。  
   
@@ -196,7 +195,7 @@ ms.locfileid: "56801996"
   
      **net start "SQL Server (MSSQLSERVER)"**  
   
-     - または -  
+     \- または -  
   
      **net start MSSQLSERVER**  
   
@@ -206,7 +205,7 @@ ms.locfileid: "56801996"
   
      **net start "SQL Server (** *instancename* **)"**  
   
-     - または -  
+     \- または -  
   
      **net start MSSQL$** *instancename*  
   
@@ -216,7 +215,7 @@ ms.locfileid: "56801996"
   
      **net start "SQL Server (MSSQLSERVER)" /f /m**  
   
-     - または -  
+     \- または -  
   
      **net start MSSQLSERVER /f /m**  
   
@@ -229,7 +228,7 @@ ms.locfileid: "56801996"
   
      **net start "SQL Server Agent (MSSQLSERVER)"**  
   
-     - または -  
+     \- または -  
   
      **net start SQLSERVERAGENT**  
   
@@ -239,7 +238,7 @@ ms.locfileid: "56801996"
   
      **net start "SQL Server Agent(** *instancename* **)"**  
   
-     - または -  
+     \- または -  
   
      **net start SQLAgent$** *instancename*  
   
@@ -251,7 +250,7 @@ ms.locfileid: "56801996"
   
      **net start "SQL Server Browser"**  
   
-     - または -  
+     \- または -  
   
      **net start SQLBrowser**  
   

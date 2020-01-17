@@ -10,15 +10,15 @@ f1_keywords:
 - sql12.dts.designer.afpblobdltask.f1
 - sql11.dts.designer.afpblobdltask.f1
 ms.assetid: 8a63bf44-71be-456d-9a5c-be7c31aff065
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 06d3feab318f1610e5ccd5290acb2e3a839bb6ab
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: af99d5ba79919920b2fb1ff3dde8d0a134a8ef0c
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52756904"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62832927"
 ---
 # <a name="azure-blob-download-task"></a>Azure BLOB のダウンロード タスク
   Azure BLOB のダウンロード タスクを使うと、SSIS パッケージで Azure BLOB ストレージからファイルをダウンロードできます。   

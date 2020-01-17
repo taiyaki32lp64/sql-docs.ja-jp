@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: 2d1484b3-51d9-48a0-93d2-0c3e4ed22b87
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: cea836d49b46bd7931d7230d3d22824af9506961
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 9b24e99ac31b126888a1fa49f3ef5547a4f82dda
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53350869"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66079682"
 ---
 # <a name="schedule-ssas-administrative-tasks-with-sql-server-agent"></a>SQL Server エージェントで SSAS 管理タスクのスケジュール設定を行う
   SQL Server エージェント サービスを使用すると、 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] の管理タスクのスケジュールを設定して、必要なときに必要な順序で実行できます。 定期タスクは、一定の周期または指定した周期で実行されるプロセスを自動化するのに役立ちます。 キューブ処理などの管理タスクは、ビジネス活動が盛んでない時間帯に実行されるようにスケジュールできます。 また、SQL Server エージェント ジョブでジョブ ステップを作成することにより、タスクの実行順序を指定できます。 たとえば、キューブを処理した後でバックアップを実行できます。  
@@ -80,9 +79,9 @@ ms.locfileid: "53350869"
   
 5.  **[ページの選択]** で、 **[ステップ]** を選択し、 **[新規作成]** をクリックします。  
   
-6.  **[新しいジョブ ステップ]** ダイアログ ボックスで、**[ステップ名]** にステップ名を入力します。  
+6.  **[新しいジョブ ステップ]** ダイアログ ボックスで、 **[ステップ名]** にステップ名を入力します。  
   
-7.  **[サーバー]** で、[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] の既定のインスタンスの **localhost** と、名前付きインスタンスの **localhost\\**\<*インスタンス名*> を入力します。  
+7.  **[サーバー]** で、[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] の既定のインスタンスの **localhost** と、名前付きインスタンスの **localhost\\** \<*インスタンス名*> を入力します。  
   
      リモート コンピューターからジョブを実行する場合は、ジョブが実行されるサーバー名およびインスタンス名を使用します。 形式を使用して\<*サーバー名*> 既定のインスタンスと\<*サーバー名*>\\<*インスタンス名前*> 名前付きインスタンス。  
   
@@ -121,7 +120,7 @@ ms.locfileid: "53350869"
   
 4.  **[ディメンションの処理]** ダイアログ ボックスで、 **[キャンセル]** をクリックしてダイアログ ボックスを閉じます。  
   
-5.  **[キューブ]**、 **[Adventure Works]**、 **[メジャー グループ]**、 **[インターネット販売]**、 **[パーティション]** の順に展開し、一覧の最後のパーティションを右クリックして **[処理]** をクリックします。  
+5.  **[キューブ]** 、 **[Adventure Works]** 、 **[メジャー グループ]** 、 **[インターネット販売]** 、 **[パーティション]** の順に展開し、一覧の最後のパーティションを右クリックして **[処理]** をクリックします。  
   
 6.  **[パーティションの処理]** ダイアログ ボックスにある **[オブジェクト一覧]** の **[処理オプション]** 列で、この列のオプションが **[完全処理]** であることを確認します。  
   

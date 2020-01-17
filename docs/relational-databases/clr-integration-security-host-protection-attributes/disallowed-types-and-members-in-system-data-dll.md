@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: ee5f55e9-fbef-401a-be18-a2e5873c8720
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 5cba195d94a8a71050dcb0afedf5c048d0397c0c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 50f7f8aacfc61b55e969ea0d57f82d58e50e093b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47647180"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68028119"
 ---
 # <a name="disallowed-types-and-members-in-systemdatadll"></a>System.Data.dll の許可されない型およびメンバー
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

@@ -1,5 +1,5 @@
 ---
-title: SQLFetch |マイクロソフトのドキュメント
+title: SQLFetch |Microsoft Docs
 ms.custom: ''
 ms.date: 03/17/2017
 ms.prod: sql
@@ -12,25 +12,23 @@ helpviewer_keywords:
 ms.assetid: 69f0ec68-5857-4aec-9fbf-4bf592d3ab39
 author: MightyPen
 ms.author: genemi
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: c5a825a043666b4e66fdd0a39fae120d69a66a7b
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 16756848fba4daae357f430b6cac39bafaffc9f6
+ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51658271"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73786764"
 ---
 # <a name="sqlfetch"></a>SQLFetch
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-[!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
 
-  SQLFetch サポートには、日付と時刻の機能が強化されています。  
+  SQLFetch は、機能強化された日付と時刻をサポートしています。  
   
- 日付/時刻型の結果列の値に変換する方法については、次を参照してください。 [SQL から C への変換](../../relational-databases/native-client-odbc-date-time/datetime-data-type-conversions-from-sql-to-c.md)します。  
+ Date 型または time 型の結果列の値を変換する方法の詳細については、「 [SQL から C への変換](../../relational-databases/native-client-odbc-date-time/datetime-data-type-conversions-from-sql-to-c.md)」を参照してください。  
   
 ## <a name="sqlfetch-support-for-large-clr-udts"></a>SQLFetch による大きな CLR UDT のサポート  
- **SQLFetch**大きなの CLR ユーザー定義型 (Udt) をサポートしています。 詳細については、次を参照してください。 [Large CLR User-Defined 型&#40;ODBC&#41;](../../relational-databases/native-client/odbc/large-clr-user-defined-types-odbc.md)します。  
+ **Sqlfetch**は、大きな CLR ユーザー定義型 (udt) をサポートしています。 詳細については、「 [LARGE CLR ユーザー定義&#40;型&#41;ODBC](../../relational-databases/native-client/odbc/large-clr-user-defined-types-odbc.md)」を参照してください。  
   
 ## <a name="see-also"></a>参照  
  [SQLFetch](https://go.microsoft.com/fwlink/?LinkId=80703)   

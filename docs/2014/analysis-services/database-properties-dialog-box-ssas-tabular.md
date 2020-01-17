@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.ssmsimbi.DatabaseProperties.f1
@@ -13,12 +12,12 @@ ms.assetid: 0f0ec02f-7b55-40ea-8a04-ed0deb1efd7a
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 3f8204913babd9b52caf2edcaa2de8feae76c70d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 8361508d678e407be9bed6eb18e8c221364daf61
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48105692"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66082360"
 ---
 # <a name="database-properties-dialog-box-ssas---tabular"></a>[データベースのプロパティ] ダイアログ ボックス (SSAS - テーブル)
   このダイアログ ボックスは、タイムスタンプとその他の情報に加え、データベースがキャッシュされたデータを使用するかどうかを決定するカスタマイズ可能なプロパティを提供します。 他のカスタマイズ可能なプロパティには、データベース名の変更と権限借用オプションの指定が含まれます。  

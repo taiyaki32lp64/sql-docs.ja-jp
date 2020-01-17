@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 85ec53ed-d887-4d95-a028-08cb502a3356
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: 919d434b083900ad7c2b64d029a07865af38c044
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 00e2224c7af3fca8d33ddc7093cbc3353d6e8d8b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51662901"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68137840"
 ---
 # <a name="device-not-ready-error"></a>デバイス準備未完了エラー
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

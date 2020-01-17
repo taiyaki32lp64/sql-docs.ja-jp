@@ -4,21 +4,20 @@ ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 ms.assetid: 19a3f927-ea97-4f40-a5f8-cd5f2598e4da
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 20fd3bccea72f0869f267058ca6bf71acbb20425
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 661b4f3cc63eb0c19fddb53f872e940d1f9976e2
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56032313"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66108438"
 ---
-# <a name="lesson-5-design-the-child-report-using-the-report-wizard"></a>レッスン 5: レポート ウィザードを使用して、子レポートをデザインします。
+# <a name="lesson-5-design-the-child-report-using-the-report-wizard"></a>レッスン 5: レポート ウィザードを使用して子レポートを設計する
   子レポートのデータ接続とデータ テーブルを作成した後は、レポート デザイナーのレポート ウィザードを使用して子レポートを設計します。 レポート デザイナーの詳細については、「[レポート デザイナーを使用してレポートをデザインする &#40;SSRS&#41;](tools/design-reporting-services-paginated-reports-with-report-designer-ssrs.md)」を参照してください。  
   
 ### <a name="to-design-the-child-report-using-the-report-wizard"></a>レポート ウィザードを使用して子レポートを設計するには  
@@ -39,9 +38,9 @@ ms.locfileid: "56032313"
   
 6.  **[フィールドの配置]** ページで、次の操作を行います。  
   
-    1.  **[ProductID]**、 **[PurchaseOrderID]**、 **[PurchaseOrderDetailID]**、 **[OrderQty]**、 **[ReceivedQty]**、 **[RejectedQty]**、および **[StockedQty]** を、 **[使用できるフィールド]** から **[値]** ボックスにドラッグします。  
+    1.  **[ProductID]** 、 **[PurchaseOrderID]** 、 **[PurchaseOrderDetailID]** 、 **[OrderQty]** 、 **[ReceivedQty]** 、 **[RejectedQty]** 、および **[StockedQty]** を、 **[使用できるフィールド]** から **[値]** ボックスにドラッグします。  
   
-    2.  矢印をクリックして**Sum(ProductID)**、 **Sum(PurchaseOrderID)**、 **Sum(PurchaseOrderDetailID)**、 **Sum(OrderQty)**、 **Sum(ReceivedQty)**、 **Sum(RejectedQty)**、および**Sum(StockedQty)** をオフにし、**合計**選択します。  
+    2.  矢印をクリックして**Sum(ProductID)** 、 **Sum(PurchaseOrderID)** 、 **Sum(PurchaseOrderDetailID)** 、 **Sum(OrderQty)** 、 **Sum(ReceivedQty)** 、 **Sum(RejectedQty)** 、および**Sum(StockedQty)** をオフにし、**合計**選択します。  
   
 7.  をクリックして **[次へ]** 2 回クリックして**完了**を閉じる、**レポート ウィザード**します。  
   

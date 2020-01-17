@@ -1,7 +1,7 @@
 ---
 title: 更新数があるストアド プロシージャの使用 | Microsoft Docs
 ms.custom: ''
-ms.date: 07/11/2018
+ms.date: 08/12/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 64cf4877-5995-4bfc-8865-b7618a5c8d01
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: d2cc4cf802827239ffa32e5401e647bbbc61921c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 851974955b9311efc149ecdff310bfbb1d8869fc
+ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47680326"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "69026936"
 ---
 # <a name="using-a-stored-procedure-with-an-update-count"></a>更新数があるストアド プロシージャの使用
 
@@ -27,7 +26,7 @@ ms.locfileid: "47680326"
 SQLServerCallableStatement クラスを使用してストアド プロシージャに対する呼び出しを設定すると、[execute](../../connect/jdbc/reference/execute-method-sqlserverstatement.md) メソッドまたは [executeUpdate](../../connect/jdbc/reference/executeupdate-method-sqlserverstatement.md) メソッドのいずれかを使用して、ストアド プロシージャを呼び出すことができます。 executeUpdate メソッドではストアド プロシージャの影響を受けた行数を示す **int** 値が返されますが、execute メソッドではこの値が返されません。 execute メソッドを使用して影響を受けた行数を取得する場合は、ストアド プロシージャの実行後に [getUpdateCount](../../connect/jdbc/reference/getupdatecount-method-sqlserverstatement.md) メソッドを呼び出すことができます。
 
 > [!NOTE]  
-> JDBC ドライバで、発生した可能性があるすべてのトリガが返した更新数を含む、すべての更新数を返す場合、lastUpdateCount 接続文字列プロパティを "false" に設定します。 LastUpdateCount プロパティの詳細については、次を参照してください。[接続プロパティの設定](../../connect/jdbc/setting-the-connection-properties.md)します。
+> JDBC ドライバで、発生した可能性があるすべてのトリガが返した更新数を含む、すべての更新数を返す場合、lastUpdateCount 接続文字列プロパティを "false" に設定します。 LastUpdateCount プロパティの詳細については、「[接続プロパティの設定](../../connect/jdbc/setting-the-connection-properties.md)」を参照してください。
 
 たとえば、[!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal_md.md)] サンプル データベースで、次に示すテーブルおよびストアド プロシージャを作成し、サンプル データを挿入します。
 

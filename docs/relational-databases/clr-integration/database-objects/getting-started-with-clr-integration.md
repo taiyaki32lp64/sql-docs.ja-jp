@@ -24,13 +24,12 @@ helpviewer_keywords:
 ms.assetid: c73e628a-f54a-411a-bfe3-6dae519316cc
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: e49d95cb7a675985039969003d80872a0b9cbad3
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 15e4a750e2568598fc5db2bab175643b50310db2
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51661291"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68138605"
 ---
 # <a name="getting-started-with-clr-integration"></a>CLR 統合の概要
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -86,7 +85,7 @@ End Class
   
 ```  
   
- この簡単なプログラムには、パブリック クラスの静的メソッドが 1 つ含まれています。 このメソッドは、2 つの新しいクラスを使用して**[SqlContext](https://msdn.microsoft.com/library/microsoft.sqlserver.server.sqlcontext.aspx)** と **[SqlPipe](https://msdn.microsoft.com/library/microsoft.sqlserver.server.sqlpipe.aspx)** マネージを作成する、単純なテキストを出力するオブジェクトをデータベースメッセージ。 メソッドも割り当てます、文字列"Hello world!" out パラメーターの値。 このメソッドを [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] のストアド プロシージャとして宣言すれば、[!INCLUDE[tsql](../../../includes/tsql-md.md)] ストアド プロシージャと同じ方法で実行できます。  
+ この簡単なプログラムには、パブリック クラスの静的メソッドが 1 つ含まれています。 このメソッドは、2 つの新しいクラスを使用して **[SqlContext](https://msdn.microsoft.com/library/microsoft.sqlserver.server.sqlcontext.aspx)** と **[SqlPipe](https://msdn.microsoft.com/library/microsoft.sqlserver.server.sqlpipe.aspx)** マネージを作成する、単純なテキストを出力するオブジェクトをデータベースメッセージ。 メソッドも割り当てます、文字列"Hello world!" out パラメーターの値。 このメソッドを [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] のストアド プロシージャとして宣言すれば、[!INCLUDE[tsql](../../../includes/tsql-md.md)] ストアド プロシージャと同じ方法で実行できます。  
   
  ライブラリとしてこのプログラムをコンパイルに読み込んで[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]、ストアド プロシージャとして実行します。  
   
@@ -143,7 +142,7 @@ EXTERNAL NAME helloworld.HelloWorldProc.HelloWorld
 -- EXTERNAL NAME helloworld.[MyNS.HelloWorldProc].HelloWorld  
 ```  
   
- 作成したプロシージャは、[!INCLUDE[tsql](../../../includes/tsql-md.md)] で記述された通常のストアド プロシージャと同様に実行できます。 たとえば、次のコマンドを実行します。  
+ 作成したプロシージャは、[!INCLUDE[tsql](../../../includes/tsql-md.md)] で記述された通常のストアド プロシージャと同様に実行できます。 次のコマンドを実行します。  
   
 ```  
 DECLARE @J nchar(25)  

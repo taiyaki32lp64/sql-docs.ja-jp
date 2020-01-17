@@ -19,24 +19,23 @@ helpviewer_keywords:
 ms.assetid: 7c22f07e-36de-425b-aa67-e32a84afae92
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: edcffe36c0185276fae89f800e1bbcfc5bc33b33
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: 18bf7e3f66140ef92b520ea7c86b616ea7067b16
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53214523"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68016702"
 ---
 # <a name="configtranslator-function"></a>ConfigTranslator 関数
 **準拠**  
  バージョンが導入されました。ODBC 2.0  
   
- **まとめ**  
+ **概要**  
  **ConfigTranslator**トランスレーターの翻訳の既定のオプションを返します。 これは、トランスレーター DLL または別のセットアップ DLL に存在できます。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
   
 BOOL ConfigTranslator(  
      HWND     hwndParent,  

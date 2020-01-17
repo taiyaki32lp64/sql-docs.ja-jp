@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 838502de-80f1-4eeb-8838-dd3d9403e567
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 1b5bbc04c94d491c096db047d574cc3b5fd8ee38
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 992631b8fb3864b6d7404f86d2f65de222f0b1c8
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47783960"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67917416"
 ---
 # <a name="read-method"></a>Read メソッド
 バイナリから、指定したバイト数を読み取ります[Stream](../../../ado/reference/ado-api/stream-object-ado.md)オブジェクト。  
@@ -50,5 +49,5 @@ Variant = Stream.Read ( NumBytes)
 ## <a name="applies-to"></a>適用対象  
  [Stream オブジェクト (ADO)](../../../ado/reference/ado-api/stream-object-ado.md)  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [ReadText メソッド](../../../ado/reference/ado-api/readtext-method.md)

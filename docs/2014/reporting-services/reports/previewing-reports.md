@@ -1,27 +1,28 @@
 ---
 title: レポートのプレビュー
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
 ms.reviewer: ''
-ms.prod: reporting-services-2014, sql-server-2014
+ms.prod: sql-server-2014
+ms.technology: reporting-services
 ms.prod_service: reporting-services-native, reporting-services-sharepoint
 ms.topic: conceptual
 ms.custom: seodec18
 ms.date: 12/14/2018
-ms.openlocfilehash: 7746263fc015f7cf1d398c821ce94e49c134ba0f
-ms.sourcegitcommit: 2f5773f4bc02bfff4f2924226ac5651eb0c00924
+ms.openlocfilehash: 21928cd6637815000983e8a0fe05aa4e77d1c216
+ms.sourcegitcommit: 0a4879dad09c6c42ad1ff717e4512cfea46820e9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/18/2018
-ms.locfileid: "53553234"
+ms.lasthandoff: 06/27/2019
+ms.locfileid: "67412970"
 ---
-# <a name="preview-reports-in-sql-server-reporting-services-ssrs"></a>SQL Server Reporting Services (SSRS) でレポートをプレビュー
+# <a name="preview-reports-in-sql-server-reporting-services-ssrs"></a>SQL Server Reporting Services (SSRS) でレポートをプレビューする
 
   レポートをデザインするときに、そのレポートを実稼働環境にパブリッシュする前に表示することができます。 これを行うには、レポート デザイナーでプレビュー モードに切り替えるか、レポート デザイナーのプレビュー ウィンドウを使用するか、テスト環境のレポート サーバーにレポートをパブリッシュします。  
   
 > [!NOTE]  
-> レポートをプレビューすると、レポートのデータがローカル コンピューターのファイルにキャッシュされます。 同じレポートを、同じクエリ、パラメーター、および資格情報を使用して再びプレビューすると、レポート デザイナーはクエリを再実行する代わりにキャッシュされたコピーを表示します。 データ ファイルは *\<reportname>*.rdl.data として、レポート定義ファイルと同じディレクトリに保存されます。 レポート デザイナーを終了してもファイルは削除されません。  
+> レポートをプレビューすると、レポートのデータがローカル コンピューターのファイルにキャッシュされます。 同じレポートを、同じクエリ、パラメーター、および資格情報を使用して再びプレビューすると、レポート デザイナーはクエリを再実行する代わりにキャッシュされたコピーを表示します。 データ ファイルは *\<reportname>* .rdl.data として、レポート定義ファイルと同じディレクトリに保存されます。 レポート デザイナーを終了してもファイルは削除されません。  
   
 ## <a name="preview-mode"></a>プレビュー モード
 
@@ -50,11 +51,11 @@ ms.locfileid: "53553234"
   
  印刷プレビュー モードに切り替えることによって、表示を変更し、印刷されるレポートを表示できます。 プレビュー ツール バーの **[印刷プレビュー]** ボタンをクリックします。 レポートは、実際のページに近い状態で表示されます。 この表示は、画像表示拡張機能および PDF 表示拡張機能によって生成される出力と似ています。 印刷プレビューは画像または PDF ファイルではありませんが、レポートのレイアウトおよびページ割り当ては、それらの形式での出力と似ています。  
   
-## <a name="publish-to-a-test-server"></a>テスト サーバーに発行します。
+## <a name="publish-to-a-test-server"></a>テスト サーバーにパブリッシュする
 
  レポートのテストは、テスト サーバーにレポートをパブリッシュして行うこともできます。 テスト サーバーにレポートをパブリッシュする操作は、実稼働サーバーにレポートをパブリッシュする場合と同じです。 レポートのパブリッシュ方法の詳細については、「 [レポート サーバーへのレポートのパブリッシュ](publishing-reports-to-a-report-server.md)」を参照してください。  
   
-## <a name="next-steps"></a>次の手順
+## <a name="next-steps"></a>次のステップ
 
  - [レポートの印刷 &#40;レポート ビルダーおよび SSRS&#41;](../report-builder/print-reports-report-builder-and-ssrs.md)
  - [レポートの印刷 (レポート ビルダーおよび SSRS)](../report-builder/print-a-report-report-builder-and-ssrs.md)

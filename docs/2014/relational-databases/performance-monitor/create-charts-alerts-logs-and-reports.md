@@ -20,11 +20,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 8f36f1a3df7eae3fd363aa5e2bc4b5ae13f36ae2
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52780834"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63032407"
 ---
 # <a name="create-charts-alerts-logs-and-reports"></a>グラフ、警告、ログ、およびレポートの作成
   システム モニターを使用して、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のインスタンスを監視するためのグラフ、警告、ログ、およびレポートを作成できます。  
@@ -61,7 +61,7 @@ ms.locfileid: "52780834"
   
  グラフ、警告、ログ、およびレポートの作成、または Windows オブジェクトとカウンターの詳細については、Windows のマニュアルを参照してください。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [リソースの利用状況の監視 &#40;システム モニター&#41;](monitor-resource-usage-system-monitor.md)  
   
   

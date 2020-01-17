@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - forecasting [data mining]
@@ -14,12 +13,12 @@ ms.assetid: c5b33f75-42d4-4598-89e7-94815c142ce6
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 1ba2f28e4f2e66fd642273d06409eb128d219d8b
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: f0717d8a81cc89897de005144dd631d23da42137
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52543703"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66081031"
 ---
 # <a name="forecast-wizard-data-mining-add-ins-for-excel"></a>予測ウィザード (Excel 用データ マイニング アドイン)
   ![データ マイニング リボンの関連付けウィザード](media/dmc-forecast.gif "データ マイニング リボンのウィザードを関連付ける")  

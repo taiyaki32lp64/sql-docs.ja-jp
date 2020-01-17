@@ -16,13 +16,12 @@ ms.assetid: c50ad078-060b-4a8d-ad45-9e31a8d85729
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-manager: craigg
-ms.openlocfilehash: 5fbfc888698149c960f4555a5ec88e9483e46a9c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 336566cdcdedd378199716cc1369e148e0239863
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47609230"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67991050"
 ---
 # <a name="install-sql-server-replication"></a>SQL Server レプリケーションのインストール
 

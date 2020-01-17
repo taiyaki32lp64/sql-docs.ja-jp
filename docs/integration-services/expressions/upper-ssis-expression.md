@@ -13,17 +13,20 @@ helpviewer_keywords:
 - uppercase characters [Integration Services]
 - lowercase characters
 ms.assetid: d33985f7-1048-4023-83e4-274090acda78
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: 4cd598161348d47b7c59781059fe2dbbe187e676
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 2e5a444d6dea225f37b8640fd642d91ae83618d5
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47686170"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71297334"
 ---
 # <a name="upper-ssis-expression"></a>UPPER (SSIS 式)
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   小文字が大文字に変換された状態の文字式を返します。  
   
 ## <a name="syntax"></a>構文  

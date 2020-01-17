@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 85373b2e-d9fe-42ef-9653-6e22fe5ecab0
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: b76ea109f81b154e44460edbe87f1c3c1e64e4a4
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 40a651dc1fd89488d536b8e3c6d8959004424866
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51674101"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67940418"
 ---
 # <a name="detect-failed-input-and-output-requests"></a>I/O 要求失敗の検出
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

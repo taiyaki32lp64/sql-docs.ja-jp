@@ -26,13 +26,12 @@ helpviewer_keywords:
 ms.assetid: 2c4f3fc8-ff2c-4790-8b74-e7e8ef58f9a6
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: b01cdf350983bc24d6dda6efb8d6911027021264
-ms.sourcegitcommit: 1a5448747ccb2e13e8f3d9f04012ba5ae04bb0a3
+ms.openlocfilehash: 7dc31f0a7fde3e4ff73dbf6d1a927275a68f65d3
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51558669"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67941662"
 ---
 # <a name="set-showplantext-transact-sql"></a>SET SHOWPLAN_TEXT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -49,7 +48,7 @@ SET SHOWPLAN_TEXT { ON | OFF }
 ```  
   
 ## <a name="remarks"></a>Remarks  
- SET SHOWPLAN_TEXT は、解析時ではなく実行時に設定されます。  
+ SET SHOWPLAN_TEXT の設定は、解析時ではなく実行時に設定されます。  
   
  SET SHOWPLAN_TEXT が ON の場合、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントが実行されずに、各ステートメントの実行に関する情報が返されます。 返される情報は、このオプションが ON に設定されてから OFF に設定されるまでに発行されたすべての [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ステートメントに関する実行プラン情報です。 たとえば、SET SHOWPLAN_TEXT が ON のときに CREATE TABLE ステートメントが実行され、その後この同じテーブルを参照する SELECT ステートメントが発行されると、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では指定したテーブルが存在しないというエラー メッセージが返されます。 その後、このテーブルに対して行われる参照は失敗します。 SET SHOWPLAN_TEXT が OFF の場合は、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] は実行プラン情報に関するレポートを生成しないでステートメントを実行します。  
   
@@ -57,7 +56,7 @@ SET SHOWPLAN_TEXT { ON | OFF }
   
  SET SHOWPLAN_TEXT と SET SHOWPLAN_ALL は、ストアド プロシージャ内に指定できません。 またバッチ内で同時に他のステートメントを実行することもできません。  
   
- SET SHOWPLAN_TEXT では情報が行セットとして返されます。これは階層構造になっており、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] クエリ プロセッサで各ステートメントが実行されるときのステップを表しています。 出力結果には、ステートメントごとに、ステートメントのテキストを示す 1 行と、実行ステップの詳細を示す複数行が含まれます。 次の表に、出力結果に含まれる列を示します。  
+ SET SHOWPLAN_TEXT では情報が行セットとして返されます。これは階層構造になっており、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] クエリ プロセッサで各ステートメントが実行されるときのステップを表しています。 出力結果には、ステートメントごとに、ステートメントのテキストを示す 1 行と、実行ステップの詳細を示す複数行が含まれます。 次の表に、出力に含まれる列を示します。  
   
 |列名|[説明]|  
 |-----------------|-----------------|  
@@ -94,7 +93,7 @@ SET SHOWPLAN_TEXT OFF;
 GO  
 ```  
   
- Here is the result set:  
+ 結果セットは次のようになります。  
   
 ```  
 StmtText                                             
@@ -123,7 +122,7 @@ SET SHOWPLAN_TEXT OFF;
 GO  
 ```  
   
- Here is the result set:  
+ 結果セットは次のようになります。  
   
 ```  
 StmtText                                                                  

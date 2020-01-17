@@ -1,5 +1,5 @@
 ---
-title: 'SQL c: 時間から |Microsoft Docs'
+title: 'SQL から C へ: 時間 |Microsoft Docs'
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -14,15 +14,14 @@ helpviewer_keywords:
 ms.assetid: 6dc59973-7bb5-40f1-87c8-5bf68b3bf2ee
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: e028502bd7bc6ac1a81006d340b6ce606a0ae337
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 99f8219ef53f72b0d7ab1477bba5d24d441a3141
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47757696"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68065079"
 ---
-# <a name="sql-to-c-time"></a>SQL から C へ: 時刻
+# <a name="sql-to-c-time"></a>SQL から C へ: Time
 ODBC SQL データ型が時間の識別子。  
   
  SQL_TYPE_TIME  
@@ -33,7 +32,7 @@ ODBC SQL データ型が時間の識別子。
 |-----------------------|----------|------------------------|----------------------------|--------------|  
 |SQL_C_CHAR|*BufferLength* > バイト長の文字<br /><br /> *9* <= *BufferLength* < = バイト長の文字<br /><br /> *BufferLength* < 9|data<br /><br /> [A] 切り捨てられたデータ<br /><br /> 未定義。|バイト単位でデータの長さ<br /><br /> バイト単位でデータの長さ<br /><br /> 未定義。|n/a<br /><br /> 01004<br /><br /> 22003|  
 |SQL_C_WCHAR|*BufferLength* > 文字長<br /><br /> *9* <= *BufferLength* < = 文字の長さ<br /><br /> *BufferLength* < 9|data<br /><br /> [A] 切り捨てられたデータ<br /><br /> 未定義。|データの文字の長さ<br /><br /> データの文字の長さ<br /><br /> 未定義。|n/a<br /><br /> 01004<br /><br /> 22003|  
-|SQL_C_BINARY|データのバイト長 < = *BufferLength*<br /><br /> データのバイト長 > *BufferLength*|data<br /><br /> 未定義。|バイト単位でデータの長さ<br /><br /> 未定義。|n/a<br /><br /> 22003|  
+|SQL_C_BINARY|データのバイト長 < = *BufferLength*<br /><br /> データのバイト長 > *BufferLength*|データ<br /><br /> 未定義。|バイト単位でデータの長さ<br /><br /> 未定義。|n/a<br /><br /> 22003|  
 |SQL_C_TYPE_TIME|[なし] [b]|data|6 [d]|n/a|  
 |SQL_C_TYPE_TIMESTAMP|[なし] [b]|データ [c]|16 [d]|n/a|  
   

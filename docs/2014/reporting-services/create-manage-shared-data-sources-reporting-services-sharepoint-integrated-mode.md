@@ -4,22 +4,21 @@ ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 helpviewer_keywords:
 - SharePoint integration [Reporting Services], shared data sources
 - shared data sources [Reporting Services]
 ms.assetid: 2d3428e4-a810-4e66-a287-ff18e57fad76
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: fdfcdae32c4709a19833612e16a4956f76c78c5f
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: 5eedb74dd5a24f40469b3ee6a4a24e97e6e59174
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56295130"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66109632"
 ---
 # <a name="create-and-manage-shared-data-sources-reporting-services-in-sharepoint-integrated-mode"></a>共有データ ソースを作成および管理する (Reporting Services の SharePoint 統合モード)
   SharePoint ライブラリからレポートを実行する場合は、レポート内で、またはそのレポートにリンクされている外部ファイルで、接続情報を定義できます。 レポートに埋め込む接続情報をカスタム データ ソースと呼びます。 外部ファイル内で定義する接続情報を共有データ ソースと呼びます。 外部ファイルとしては、レポート サーバー データ ソース (.rsds) ファイルまたは Office データ接続 (.odc) ファイルを使用できます。  
@@ -34,7 +33,7 @@ ms.locfileid: "56295130"
   
 1.  ライブラリ リボンで、 **[ドキュメント]** タブをクリックします。  
   
-2.   **[新しいドキュメント]** メニューの **[レポート データ ソース]** をクリックします。  
+2.  **[新しいドキュメント]** メニューの **[レポート データ ソース]** をクリックします。  
   
     > [!NOTE]  
     >  メニューに **[レポート データ ソース]** アイテムが表示されない場合は、レポート データ ソースのコンテンツ タイプが有効化されていません。 詳細については、次を参照してください。[追加レポート サーバー コンテンツ タイプをライブラリに&#40;Reporting Services SharePoint 統合モードで&#41;](../../2014/reporting-services/add-reporting-services-content-types-to-a-sharepoint-library.md)します。  

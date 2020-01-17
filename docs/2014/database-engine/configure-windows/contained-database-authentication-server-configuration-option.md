@@ -16,12 +16,12 @@ ms.assetid: b80768d2-ac20-4035-a335-d9adb74b3f6e
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 60b0cca44cae7e71e538fe87d5912a044209d06d
-ms.sourcegitcommit: 04dd0620202287869b23cc2fde998a18d3200c66
+ms.openlocfilehash: d4efcddfb4c8cb53603614f3ffbdc3cb088990ff
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "52641383"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62782909"
 ---
 # <a name="contained-database-authentication-server-configuration-option"></a>contained database authentication サーバー構成オプション
   **contained database authentication** オプションを使用して、 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]のインスタンス上で包含データベースを有効にします。  
@@ -42,7 +42,7 @@ ms.locfileid: "52641383"
 ## <a name="examples"></a>使用例  
  次の例では、 [!INCLUDE[ssDE](../../includes/ssde-md.md)]のインスタンスで包含データベースを有効にします。  
   
-```tsql  
+```sql  
 sp_configure 'contained database authentication', 1;  
 GO  
 RECONFIGURE;  

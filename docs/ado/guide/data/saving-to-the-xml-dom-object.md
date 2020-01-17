@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 4d20fd28-aaf8-4232-83ce-f9d1e5f93dae
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 6f47f3c40ed85cf0b38615176309f47bfb6ce542
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: fe4790fa7fc1a2859013500f44dcd4a266719f39
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47650561"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67924312"
 ---
 # <a name="saving-to-the-xml-dom-object"></a>XML DOM オブジェクトへの保存
 次の Visual Basic コードに示すように、MSXML の DOM オブジェクトのインスタンスを XML 形式で、レコード セットを保存できます。  
@@ -36,5 +35,5 @@ rsXML.Save xDOM, adPersistADO   'Save Recordset directly into a DOM tree.
 ...  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [レコードを XML 形式で保持する](../../../ado/guide/data/persisting-records-in-xml-format.md)

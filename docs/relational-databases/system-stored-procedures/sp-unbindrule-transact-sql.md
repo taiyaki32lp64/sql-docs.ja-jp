@@ -17,15 +17,14 @@ helpviewer_keywords:
 ms.assetid: f54ee155-c3c9-4f1a-952e-632a8339f0cc
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: f35db2f08be985359de4723cdb9aa393ad608232
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b409b76d3a7c07ac03173346059f38ac616f5a87
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47624164"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68095857"
 ---
-# <a name="spunbindrule-transact-sql"></a>sp_unbindrule (Transact-SQL)
+# <a name="spunbindrule-transact-sql"></a>sp_unbindrule (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   現在のデータベース内の列または別名データ型のルールをバインド解除します。  
@@ -44,14 +43,12 @@ sp_unbindrule [ @objname = ] 'object_name'
 ```  
   
 ## <a name="arguments"></a>引数  
- [ **@objname=** ] **'***object_name***'**  
- ルールをバインド解除する、テーブルと列、または別名データ型の名前を指定します。 *object_name*は**nvarchar (776)**、既定値はありません。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、最初に列名に対して、次に別名データ型に対して、2 つの要素で構成される識別子の解決が試行されます。 別名データ型のルールをバインド解除すると、指定したデータ型の列のルールがすべてバインド解除されます。 ただし、同じデータ型でも、ルールが直接バインドされている列には影響はありません。  
+`[ @objname = ] 'object_name'` テーブルと列、または元のルールをバインド解除、別名データ型の名前です。 *object_name*は**nvarchar (776)** 、既定値はありません。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、最初に列名に対して、次に別名データ型に対して、2 つの要素で構成される識別子の解決が試行されます。 別名データ型からルールをバインド解除すると同じ規則が作成されたデータ型の列もバインドされています。 ただし、同じデータ型でも、ルールが直接バインドされている列には影響はありません。  
   
 > [!NOTE]  
 >  *object_name*角かっこを含めることができます **:operator[]** として識別子の区切り文字。 詳細については、「[データベース識別子](../../relational-databases/databases/database-identifiers.md)」を参照してください。  
   
- [ **@futureonly=** ] **'***futureonly_flag***'**  
- 別名データ型からルールをバインド解除する場合にのみ使用します。 *futureonly_flag*は**varchar (15)**、既定値は NULL です。 ときに*futureonly_flag*は**futureonly**、そのデータ型の既存の列には指定されたルールは解除されません。  
+`[ @futureonly = ] 'futureonly_flag'` 別名データ型からルールをバインド解除するときにのみ使用されます。 *futureonly_flag*は**varchar (15)** 、既定値は NULL です。 ときに*futureonly_flag*は**futureonly**、そのデータ型の既存の列には指定されたルールは解除されません。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  0 (成功) または 1 (失敗)  
@@ -64,18 +61,18 @@ sp_unbindrule [ @objname = ] 'object_name'
  別名データ型からルールをバインド解除すると、その別名データ型のすべての列からも該当するルールがバインド解除されます。 ルールは、データ型を持つが、ALTER TABLE ステートメントの ALTER COLUMN 句によって変更された後で列にバインドも可能性がありますを使用してこれらの列からルールをバインド解除する必要があります具体的には**sp_unbindrule**を指定して、列の名前。  
   
 ## <a name="permissions"></a>アクセス許可  
- テーブル列からルールをバインド解除するには、そのテーブルに対する ALTER 権限が必要です。 別名データ型からルールをバインド解除するには、そのデータ型に対する CONTROL 権限、またはそのデータ型が属するスキーマに対する ALTER 権限が必要です。  
+ テーブル列からルールをバインド解除するには、そのテーブルに対する ALTER 権限が必要です。 別名データから取得したルールをバインド解除するには、型は、型に対する CONTROL 権限または型が属するスキーマに対する ALTER 権限が必要です。  
   
 ## <a name="examples"></a>使用例  
   
-### <a name="a-unbinding-a-rule-from-a-column"></a>A. 列のルールをバインド解除する  
+### <a name="a-unbinding-a-rule-from-a-column"></a>A. 列からルールをバインド解除  
  次の例からルールをバインド解除、`startdate`の列、`employees`テーブル。  
   
 ```  
 EXEC sp_unbindrule 'employees.startdate';  
 ```  
   
-### <a name="b-unbinding-a-rule-from-an-alias-data-type"></a>B. 別名データ型からルールをバインド解除する  
+### <a name="b-unbinding-a-rule-from-an-alias-data-type"></a>B. 別名データ型からルールをバインド解除  
  次の例では、別名データ型 `ssn` からルールをバインド解除します。 既存および将来の型の列からルールがバインド解除します。  
   
 ```  
@@ -89,7 +86,7 @@ EXEC sp_unbindrule ssn;
 EXEC sp_unbindrule 'ssn', 'futureonly';  
 ```  
   
-### <a name="d-using-delimited-identifiers"></a>D. 区切られた識別子を使用する  
+### <a name="d-using-delimited-identifiers"></a>D. 区切られた識別子を使用します。  
  次の例で区切られた識別子を使用して、 *object_name*パラメーター。  
   
 ```  
@@ -105,7 +102,7 @@ GO
 EXEC sp_unbindrule '[t.4].c1';  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [システム ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
  [データベース エンジン ストアド プロシージャ&#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
  [CREATE RULE &#40;Transact-SQL&#41;](../../t-sql/statements/create-rule-transact-sql.md)   

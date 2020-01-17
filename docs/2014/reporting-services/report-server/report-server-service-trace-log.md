@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 helpviewer_keywords:
 - logs [Reporting Services], trace
@@ -13,15 +12,15 @@ helpviewer_keywords:
 - system information [Reporting Services]
 - versions [Reporting Services]
 ms.assetid: 2fde08b2-137d-4f4b-88e5-216030216e0d
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 1c04e3d642b267660b8527502a248a386c8ba93d
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: d69b2a3eeb28d5fe23eb6674c8a0ca0ee7628a75
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56010673"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66103407"
 ---
 # <a name="report-server-service-trace-log"></a>Report Server Service Trace Log
   [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] レポート サーバーのトレース ログは、レポート サーバー Web サービス、レポート マネージャー、およびバックグラウンド処理によって実行された操作を含め、レポート サーバー サービスの操作に関する詳細な情報が記録されている ASCII テキスト ファイルです。 トレース ログ ファイルには、他のログ ファイルに記録されている冗長な情報、およびトレース ログ以外からは入手できない追加情報が含まれています。 トレース ログ情報は、レポート サーバーを含むアプリケーションをデバッグしている場合、またはイベント ログや実行ログに書き込まれた特定の問題を調査している場合に役立ちます。  
@@ -53,7 +52,7 @@ ms.locfileid: "56010673"
 ##  <a name="bkmk_trace_configuration_settings"></a> トレースの構成設定  
  トレース ログの動作は構成ファイル **ReportingServicesrService.exe.config** で管理されています。構成ファイルは次のフォルダー パスにあります。  
   
- `\Program Files\Microsoft SQL Server\MSRS12.<instance name>\Reporting Services\ReportServer\bin` 。  
+ `\Program Files\Microsoft SQL Server\MSRS12.<instance name>\Reporting Services\ReportServer\bin`。  
   
  次の例では、`RStrace` の設定の XML 構造を示しています。 `DefaultTraceSwitch` の値によって、ログに追加される情報の種類が決まります。 `Components` 属性を除き、`RStrace` の値は構成ファイル間で同じになります。  
   
@@ -116,7 +115,7 @@ ms.locfileid: "56010673"
   
  トレース ログの情報を確認して、レポートが配信されたかどうか、レポートの受信者、および配信の試行回数を判断できます。 また、トレース ログには、レポートの処理中に有効なレポート実行操作および環境変数も記録されます。 トレース ログには、エラーおよび例外も記録されます。 たとえば、レポートのタイムアウト エラーが見つかる場合があります (`ThreadAbortExceptions` エントリとして表示されます)。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [Reporting Services のログ ファイルとソース](../report-server/reporting-services-log-files-and-sources.md)   
  [エラーとイベントのリファレンス (Reporting Services)](../troubleshooting/errors-and-events-reference-reporting-services.md)  
   

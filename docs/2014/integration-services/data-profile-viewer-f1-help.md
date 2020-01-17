@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.dataprofileviewer.f1
@@ -13,15 +12,15 @@ helpviewer_keywords:
 - Data Profile Viewer [Integration Services]
 - Data Profiling task [Integration Services], viewer
 ms.assetid: 3469c60a-8f4f-46ba-999a-cb9070197fea
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 8b91e91d726123a057ba6aa8850633d4d3656354
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 8572feb3e9eb3ac5ba7ba8a3d61abb2ad2dc1b5d
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48065142"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66059720"
 ---
 # <a name="data-profile-viewer-f1-help"></a>Data Profile Viewer の F1 ヘルプ
   Data Profile Viewer を使用すると、データ プロファイル タスクの出力を表示できます。  
@@ -55,10 +54,10 @@ ms.locfileid: "48065142"
  この列の最大の長さが表示されます。  
   
  **[先頭のスペースを無視する]**  
- このプロファイルが計算されたかどうかが表示されます、 `IgnoreLeadingSpaces` True または False の値。 このプロパティは、[データ プロファイル タスク エディター] の **[プロファイル要求]** ページで設定されています。  
+ `IgnoreLeadingSpaces` の値に True または False のいずれを使用してこのプロファイルが計算されたかが表示されます。 このプロパティは、[データ プロファイル タスク エディター] の **[プロファイル要求]** ページで設定されています。  
   
  **[末尾のスペースを無視する]**  
- このプロファイルが計算されたかどうかが表示されます、 `IgnoreTrailingSpaces` True または False の値。 このプロパティは、[データ プロファイル タスク エディター] の **[プロファイル要求]** ページで設定されています。  
+ `IgnoreTrailingSpaces` の値に True または False のいずれを使用してこのプロファイルが計算されたかが表示されます。 このプロパティは、[データ プロファイル タスク エディター] の **[プロファイル要求]** ページで設定されています。  
   
  **行数**  
  テーブルまたはビューの行数が表示されます。  

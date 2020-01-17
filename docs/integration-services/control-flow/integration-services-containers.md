@@ -14,17 +14,20 @@ helpviewer_keywords:
 - control flow [Integration Services], containers
 - SQL Server Integration Services containers
 ms.assetid: 1b725922-ec59-4a47-9d55-e079463058f3
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: 407716195293b4ff362019b3becf9887f3dffe82
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: b05b7ffa40bb5b44c9dd3a5fa0d320cfadba0a43
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47700660"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71294059"
 ---
 # <a name="integration-services-containers"></a>Integration Services コンテナー
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   コンテナーとは、パッケージに構造を提供し、タスクにサービスを提供する [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] のオブジェクトのことです。 コンテナーは、パッケージ内の制御フローの反復をサポートし、タスクおよびコンテナーを意味のある作業単位にグループ化します。 コンテナーには、タスクの他に別のコンテナーを含めることができます。  
   
  パッケージには、次の目的でコンテナーが使用されます。  
@@ -67,7 +70,7 @@ ms.locfileid: "47700660"
 |**LocaleID**|Microsoft Win32 ロケールです。 このプロパティの既定値は、ローカル コンピューター上のオペレーティング システムのロケールです。<br /><br /> 詳細については、「 <xref:Microsoft.SqlServer.Dts.Runtime.DtsContainer.LocaleID%2A>に評価されるまで、タスクを繰り返します。|  
 |**LoggingMode**|コンテナーのログ記録の動作を指定する値です。 値は、 **Disabled**、 **Enabled**、および **UseParentSetting**です。 このプロパティの既定値は **UseParentSetting**です。 詳細については、「 <xref:Microsoft.SqlServer.Dts.Runtime.DTSLoggingMode>に評価されるまで、タスクを繰り返します。|  
 |**MaximumErrorCount**|コンテナーが実行を停止するまでに発生が許可される、最大エラー数を示します。 このプロパティの既定値は **1**です。<br /><br /> 詳細については、「 <xref:Microsoft.SqlServer.Dts.Runtime.DtsContainer.MaximumErrorCount%2A>に評価されるまで、タスクを繰り返します。|  
-|**名前**|コンテナーの名前です。<br /><br /> 詳細については、「 <xref:Microsoft.SqlServer.Dts.Runtime.DtsContainer.Name%2A>に評価されるまで、タスクを繰り返します。|  
+|**[名前]**|コンテナーの名前です。<br /><br /> 詳細については、「 <xref:Microsoft.SqlServer.Dts.Runtime.DtsContainer.Name%2A>に評価されるまで、タスクを繰り返します。|  
 |**TransactionOption**|コンテナーに対するトランザクションの関与を示します。 値は、 **NotSupported**、 **Supported**、および **Required**です。 このプロパティの既定値は **Supported**です。 詳細については、「 <xref:Microsoft.SqlServer.Dts.Runtime.DTSTransactionOption>に評価されるまで、タスクを繰り返します。|  
   
  Foreach ループ、For ループ、シーケンス、およびタスク ホストの各コンテナーをプログラムで構成する際に使用できるすべてのプロパティの詳細については、以下の [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] API のトピックを参照してください。  

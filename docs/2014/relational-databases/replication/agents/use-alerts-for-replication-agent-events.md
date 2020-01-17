@@ -22,11 +22,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 3a670a78f6e906221638fb67c1cf5be8398b415b
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52762584"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68210735"
 ---
 # <a name="use-alerts-for-replication-agent-events"></a>レプリケーション エージェント イベントに対する警告の使用
   [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] および [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] エージェントでは、レプリケーション エージェント イベントなどのイベントを、警告を使用して監視する方法が用意されています。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] エージェントでは、警告に関連するイベントに対し、Windows アプリケーション ログを監視します。 このようなイベントが発生すると、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] エージェントは、定義されたタスクを実行したり、電子メールまたはポケットベルのメッセージを指定したオペレーターに送信することにより、自動的に応答します。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] には、タスクを実行したりオペレーターに通知するように設定できる、レプリケーション エージェントに対する一連の定義済みの警告が含まれます。 実行するタスクの定義の詳細については、このトピックの「警告への応答の自動化」を参照してください。  
@@ -39,9 +39,9 @@ ms.locfileid: "52762584"
 |14151|**レプリケーション: エージェントが失敗しました**|エージェントがエラーでシャットダウンされました。|はい|  
 |14152|**レプリケーション: エージェントを再試行します**|操作の再試行が成功せず、エージェントはシャットダウンされました (エージェントが、サーバーの利用不能、デッドロック、接続の失敗、タイムアウト障害などのエラーを検出しました)。|はい|  
 |14157|**レプリケーション: 有効期限の切れたサブスクリプションを削除しました**|有効期限の切れたサブスクリプションが削除されました。|いいえ|  
-|20572|**レプリケーション:サブスクリプションの検証の失敗後、再初期化**|応答ジョブ "データ検証で問題が見つかったサブスクリプションの再初期化" でサブスクリプションが正常に再初期化されました。|いいえ|  
-|20574|**レプリケーション:サブスクライバーのデータの検証に失敗しました**|ディストリビューション エージェントまたはマージ エージェントはデータの検証で問題が見つかりました。|はい|  
-|20575|**レプリケーション:サブスクライバーがデータ検証に合格しました。**|ディストリビューション エージェントまたはマージ エージェントはデータの検証を正常に終了しました。|はい|  
+|20572|**レプリケーション:データ検証で問題が見つかった後、サブスクリプションが再初期化されました**|応答ジョブ "データ検証で問題が見つかったサブスクリプションの再初期化" でサブスクリプションが正常に再初期化されました。|いいえ|  
+|20574|**レプリケーション:サブスクライバーでデータ検証の問題が見つかりました**|ディストリビューション エージェントまたはマージ エージェントはデータの検証で問題が見つかりました。|[はい]|  
+|20575|**レプリケーション:サブスクライバーでデータ検証を正常に終了しました**|ディストリビューション エージェントまたはマージ エージェントはデータの検証を正常に終了しました。|はい|  
 |20578|**レプリケーション: エージェントのカスタム シャットダウン**|||  
 |22815|**ピア ツー ピア競合検出の警告**|ピア ツー ピア ノードで変更を適用しようとしたときにディストリビューション エージェントで競合が検出されました。|はい|  
   
@@ -49,7 +49,7 @@ ms.locfileid: "52762584"
   
  **定義済みのレプリケーションの警告を構成するには**  
   
--   [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]:[定義済みのレプリケーションの警告を構成する&#40;SQL Server Management Studio&#41;](../administration/configure-predefined-replication-alerts-sql-server-management-studio.md)  
+-   [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] :[定義済みのレプリケーションの警告を構成する&#40;SQL Server Management Studio&#41;](../administration/configure-predefined-replication-alerts-sql-server-management-studio.md)  
   
 ## <a name="viewing-the-application-log-directly"></a>アプリケーション ログの直接表示  
  Windows アプリケーション ログを表示するには、 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Windows イベント ビューアーを使用します。 アプリケーション ログには [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] のエラー メッセージだけでなく、コンピューターのその他多くの利用状況に関するメッセージが含まれます。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] エラー ログとは異なり、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] を起動するたびに新しいアプリケーション ログが作成されることはありません (各 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] セッションでは、既存のアプリケーション ログに新しいイベントを書き込みます)。ただし、ログに記録されたイベントを保有する期間を指定できます。 Windows アプリケーション ログを表示するときに、特定のイベントのログをフィルター選択できます。 詳細については、Windows のマニュアルを参照してください。  
@@ -86,7 +86,7 @@ close hc
 deallocate hc  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [レプリケーション エージェントの管理](replication-agent-administration.md)   
  [Best Practices for Replication Administration](../administration/best-practices-for-replication-administration.md)   
  [監視 &#40;レプリケーション&#41;](../monitoring-replication.md)  

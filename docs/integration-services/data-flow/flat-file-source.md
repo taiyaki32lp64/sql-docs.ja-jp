@@ -18,17 +18,20 @@ helpviewer_keywords:
 - flat files
 - Flat File source
 ms.assetid: 4a64f7f3-f25d-4db0-93b3-a29496030e58
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: ea4388b453043cb380e7247d6688597300d51366
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 5af33c29f1c013937cff99f8d357b0b538b9ffdb
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51639689"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71292481"
 ---
 # <a name="flat-file-source"></a>フラット ファイル ソース
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   フラット ファイル ソースは、テキスト ファイルからデータを読み取ります。 テキスト ファイルには、Delimited 形式、FixedWidth 形式、または Mixed 形式を使用できます。  
   
 -   Delimited 形式では、列区切り記号と行区切り記号を使用して、列と行が定義されます。  
@@ -75,7 +78,7 @@ ms.locfileid: "51639689"
   
 -   ソースが複数フラット ファイルで、データ フロー タスクが For ループ コンテナーなどのループ コンテナーの内部にある場合は、複数フラット ファイル接続マネージャー。 コンテナーの各ループで、フラット ファイル ソースは、複数フラット ファイル接続マネージャーが提供する次のファイル名からデータを読み込みます。 詳細については、「 [複数フラット ファイル接続マネージャー](../../integration-services/connection-manager/multiple-flat-files-connection-manager.md)」を参照してください。  
   
-### <a name="options"></a>[変数]  
+### <a name="options"></a>オプション  
  **Flat file connection manager**  
  既存の接続マネージャーを一覧から選択するか、 **[新規作成]** をクリックして新しい接続マネージャーを作成します。  
   
@@ -94,7 +97,7 @@ ms.locfileid: "51639689"
 > [!NOTE]  
 >  フラット ファイル ソースの **FileNameColumnName** プロパティおよびその出力列の **FastParse** プロパティは、 **[フラット ファイル ソース エディター]** ではアクセスできませんが、 **[詳細エディター]** を使用して設定できます。 これらのプロパティの詳細については、「 [Flat File Custom Properties](../../integration-services/data-flow/flat-file-custom-properties.md)」の「フラット ファイル ソース」を参照してください。  
   
-### <a name="options"></a>[変数]  
+### <a name="options"></a>オプション  
  **使用できる外部列**  
  データ ソース内の使用できる外部列の一覧を表示します。 このテーブルを使用して列を追加または削除することはできません。  
   
@@ -107,7 +110,7 @@ ms.locfileid: "51639689"
 ## <a name="flat-file-source-editor-error-output-page"></a>[フラット ファイル ソース エディター]\ ([エラー出力] ページ)
   **[フラット ファイル ソース エディター]** ダイアログ ボックスの **[エラー出力]** ページでは、エラー処理オプションの選択や、エラー出力列に対するプロパティの設定を行えます。  
   
-### <a name="options"></a>[変数]  
+### <a name="options"></a>オプション  
  **[入力または出力]**  
  データ ソースの名前を表示します。  
   

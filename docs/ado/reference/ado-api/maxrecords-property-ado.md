@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 20c76571-8c9a-482c-a99e-726ab1d93f8b
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: ac5097a8692ed7a9e6566707354112547c5a619c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 5acd8997af6993a49ac4cbcca6e3b4c8bd26acfd
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47789400"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67932232"
 ---
 # <a name="maxrecords-property-ado"></a>MaxRecords プロパティ (ADO)
 返されるレコードの最大数を示す、 [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md)クエリから。  
@@ -37,6 +36,6 @@ ms.locfileid: "47789400"
 ## <a name="applies-to"></a>適用対象  
  [Recordset オブジェクト (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [MaxRecords プロパティの例 (VB)](../../../ado/reference/ado-api/maxrecords-property-example-vb.md)   
  [MaxRecords プロパティの例 (VC++)](../../../ado/reference/ado-api/maxrecords-property-example-vc.md)   

@@ -23,14 +23,13 @@ helpviewer_keywords:
 ms.assetid: 8c925924-a466-4c8b-aeb2-7e0d341f32db
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 63a985e2e69735151a684163e524868524fe7144
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d4dde0368b8ba81807dc42775ab089f5f5c99768
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47711110"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67913891"
 ---
 # <a name="set-ansinulldflton-transact-sql"></a>SET ANSI_NULL_DFLT_ON (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -54,15 +53,15 @@ SET ANSI_NULL_DFLT_ON ON
 ```
 
 ## <a name="remarks"></a>Remarks  
- この設定は、新しい列に対する NULL 値の許容にのみ影響を与えます。また、この影響が生じるのは、CREATE TABLE および ALTER TABLE ステートメントで、列に対して NULL 値の許容が設定されていない場合です。 SET ANSI_NULL_DFLT_ON が ON の場合、ALTER TABLE ステートメントと CREATE TABLE ステートメントを使用して作成した新しい列では、明示的に指定しない限り NULL 値が許容されます。 NULL または NOT NULL を明示的に指定して作成した列に対して、SET ANSI_NULL_DFLT_ON は影響しません。  
+ この設定は、新しい列に対する NULL 値の許容にのみ影響を与えます。また、この影響が生じるのは、CREATE TABLE および ALTER TABLE ステートメントで、列に対して NULL 値の許容が設定されていない場合です。 SET ANSI_NULL_DFLT_ON が ON の場合、ALTER TABLE ステートメントと CREATE TABLE ステートメントで作成される新しい列は、列の NULL 値の許容状態を明示的に指定しない場合に NULL 値が許可されます。 NULL または NOT NULL を明示的に指定して作成した列に対して、SET ANSI_NULL_DFLT_ON は影響しません。  
   
- SET ANSI_NULL_DFLT_OFF と SET ANSI_NULL_DFLT_ON の両方を同時に ON に設定することはできません。 いずれかのオプションを ON に設定すると、もう一方のオプションは OFF に設定されます。 したがって、SET ANSI_NULL_DFLT_OFF と SET ANSI_NULL_DFLT_ON はいずれかを ON に設定するか、両方を OFF に設定することだけが可能です。 いずれかのオプションを ON に設定した場合、その設定 (SET ANSI_NULL_DFLT_OFF または SET ANSI_NULL_DFLT_ON) が有効になります。 両方のオプションを OFF に設定した場合、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では [sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) カタログ ビューにある **is_ansi_null_default_on** 列の値が使用されます。  
+ ANSI_NULL_DFLT_ON と ANSI_NULL_DFLT_OFF の両方を同時に ON に設定することはできません。 一方のオプションが ON に設定されている場合、他方のオプションは OFF に設定されます。 つまり、SET ANSI_NULL_DFLT_OFF と ANSI_NULL_DFLT_ON のいずれか一方を ON に設定するか、または両方を OFF に設定することだけが可能です。 いずれかのオプションが ON の場合、その設定 (SET ANSI_NULL_DFLT_OFF または SET ANSI_NULL_DFLT_ON) が有効になります。 両方のオプションを OFF に設定した場合、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では [sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) カタログ ビューにある **is_ansi_null_default_on** 列の値が使用されます。  
   
  [!INCLUDE[tsql](../../includes/tsql-md.md)] スクリプトを、NULL 値の許容に関する設定が異なっているデータベースで使用する場合、このスクリプトによる動作の信頼性を高めるには、CREATE TABLE ステートメントと ALTER TABLE ステートメントで NULL または NOT NULL を指定することをお勧めします。  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC ドライバーおよび [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB Provider for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、接続時に自動的に ANSI_NULL_DFLT_ON が ON に設定されます。 DB-Library アプリケーションからの接続に対して、既定では SET ANSI_NULL_DFLT_ON は OFF に設定されています。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC ドライバーおよび [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB Provider for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、接続時に自動的に ANSI_NULL_DFLT_ON が ON に設定されます。 DB-Library アプリケーションからの接続に対しては、既定では SET ANSI_NULL_DFLT_ON は OFF に設定されています。  
   
- SET ANSI_DEFAULTS が ON の場合、SET ANSI_NULL_DFLT_ON は有効になります。  
+ SET ANSI_DEFAULTS が ON の場合には、SET ANSI_NULL_DFLT_ON は有効になります。  
   
  SET ANSI_NULL_DFLT_ON は、解析時ではなく実行時に設定されます。  
   

@@ -2,20 +2,20 @@
 title: '[ユーザー ロールのプロパティ] (Management Studio) | Microsoft Docs'
 ms.date: 03/01/2017
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: tools
 ms.topic: conceptual
 f1_keywords:
 - sql13.swb.reportserver.userroleproperties.f1
 ms.assetid: c8b22236-a8b1-4e15-b1ff-4e1909b602d3
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: d87d7a3975cff4f2ac7b9afd65cc4250325feef2
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: f7c663f1a6d13b910492e21b1bd05145dc2a5833
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47850530"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65575777"
 ---
 # <a name="user-role-properties-management-studio"></a>[ユーザー ロールのプロパティ]\(Management Studio)
   このページを使用すると、アイテムレベルのロールの定義に含まれるタスクを表示できます。 また、このページを使用して、タスク一覧を変更したりロールの説明を変更したりすることもできます。  
@@ -27,8 +27,8 @@ ms.locfileid: "47850530"
 > [!NOTE]  
 >  ユーザー ロールの割り当ては、ネイティブ モードで実行されているレポート サーバーでのみ使用されます。 レポート サーバーが SharePoint 統合モード用に構成されている場合、このページには、SharePoint サイトで定義されているロールと権限レベルに関する読み取り専用の情報が表示されます。  
   
-## <a name="options"></a>[変数]  
- **名前**  
+## <a name="options"></a>オプション  
+ **[名前]**  
  ロールの定義名を指定します。  
   
  **[説明]**  

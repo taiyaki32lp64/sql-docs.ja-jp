@@ -1,7 +1,7 @@
 ---
-title: 可用性グループの可用性モードの違い
+title: 可用性グループの可用性モード
 description: Always On 可用性グループの各種可用性モードの説明。
-ms.custom: seodec18
+ms.custom: seo-lt-2019
 ms.date: 10/16/2017
 ms.prod: sql
 ms.reviewer: ''
@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 10e7bac7-4121-48c2-be01-10083a8c65af
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 2e35d2acfca7bf226f5b6e4ffde3a2843d08024f
-ms.sourcegitcommit: 85bfaa5bac737253a6740f1f402be87788d691ef
+ms.openlocfilehash: df39ac4151bb5860db970d423edcbe7064178a08
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/17/2018
-ms.locfileid: "53206371"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75241780"
 ---
 # <a name="differences-between-availability-modes-for-an-always-on-availability-group"></a>Always On 可用性グループの可用性モードの違い
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -49,14 +48,14 @@ ms.locfileid: "53206371"
   
  次の図には、5 つの可用性レプリカがある可用性グループを示しています。 プライマリ レプリカおよびセカンダリ レプリカの 1 つには、自動フェールオーバーが指定された同期コミット モードが構成されています。 もう 1 つのセカンダリ レプリカは、計画的な手動フェールオーバーのみが指定された同期コミット モードで構成されています。残りの 2 つのセカンダリ レプリカは、強制手動フェールオーバー (通常は *強制フェールオーバー*と呼ばれます) のみをサポートする非同期コミット モードで構成されています。  
   
- ![レプリカの可用性およびフェールオーバー モード](../../../database-engine/availability-groups/windows/media/aoag-availabilityandfailovermodes.gif "レプリカの可用性およびフェールオーバー モード")  
+ ![レプリカの可用性モードとフェールオーバー モード](../../../database-engine/availability-groups/windows/media/aoag-availabilityandfailovermodes.gif "レプリカの可用性モードとフェールオーバー モード")  
   
  2 つの可用性レプリカ間の同期およびフェールオーバー動作は、両方のレプリカの可用性モードに依存します。 たとえば、同期コミットを発生させるには、現在のプライマリ レプリカとセカンダリ レプリカの両方で同期コミットが構成されている必要があります。 同様に、自動フェールオーバーを発生させるには、両方のレプリカで自動フェールオーバーが構成されている必要があります。 上の配置シナリオについて、それぞれのプライマリ レプリカでの動作を次の表に示します。  
   
 |現在のプライマリ レプリカ|自動フェールオーバー ターゲット|同期コミット モードの動作の対象|非同期コミット モードの動作の対象|自動フェールオーバー|  
 |-----------------------------|--------------------------------|--------------------------------------------|---------------------------------------------|---------------------------------|  
-|01|02|02 と 03|04|可|  
-|02|01|01 と 03|04|可|  
+|01|02|02 と 03|04|はい|  
+|02|01|01 と 03|04|はい|  
 |03||01 と 02|04|いいえ|  
 |04|||01、02、03|いいえ|  
   
@@ -120,7 +119,7 @@ ms.locfileid: "53206371"
  同期コミット モードでは、2 か所間のデータの同期を要求することによってデータを保護しますが、トランザクションの遅延が多少大きくなるというデメリットもあります。  
   
 ### <a name="SyncCommitWithManual"></a> 手動フェールオーバーのみを指定した同期コミット モード  
- これらのレプリカが接続され、データベースが同期されている場合、手動フェールオーバーがサポートされます。 セカンダリ レプリカがダウンしても、プライマリ レプリカは影響を受けません。 SYNCHRONIZED 状態のレプリカが存在しない場合、プライマリ レプリカは公開された状態で (つまり、データをセカンダリ レプリカに送信せずに) 実行されます。 プライマリ レプリカが利用できなくなると、セカンダリ レプリカが RESOLVING 状態になりますが、データベース所有者はセカンダリ レプリカへの強制フェールオーバーを実行できます (データを損失する可能性もあります)。 詳細については、このトピックの「 [フェールオーバーとフェールオーバー モード &#40;AlwaysOn 可用性グループ&#41;](../../../database-engine/availability-groups/windows/failover-and-failover-modes-always-on-availability-groups.md)」を参照してください。  
+ これらのレプリカが接続され、データベースが同期されている場合、手動フェールオーバーがサポートされます。 セカンダリ レプリカがダウンしても、プライマリ レプリカは影響を受けません。 SYNCHRONIZED 状態のレプリカが存在しない場合、プライマリ レプリカは公開された状態で (つまり、データをセカンダリ レプリカに送信せずに) 実行されます。 プライマリ レプリカが利用できなくなると、セカンダリ レプリカが RESOLVING 状態になりますが、データベース所有者はセカンダリ レプリカへの強制フェールオーバーを実行できます (データを損失する可能性もあります)。 詳細については、「 [フェールオーバーとフェールオーバー モード &#40;AlwaysOn 可用性グループ&#41;](../../../database-engine/availability-groups/windows/failover-and-failover-modes-always-on-availability-groups.md)、または PowerShell を使用して、AlwaysOn 可用性グループ上で計画的な手動フェールオーバーまたは強制手動フェールオーバー (強制フェールオーバー) を実行する方法について説明します。  
   
 ###  <a name="SyncCommitWithAuto"></a> 自動フェールオーバーを指定した同期コミット モード  
  自動フェールオーバーは、プライマリ レプリカが機能しなくなった後もデータベースをすぐに再度使用できるようにすることで、高可用性を実現します。 可用性グループを自動フェールオーバー用に構成するには、現在のプライマリ レプリカと少なくとも 1 つのセカンダリ レプリカの両方を、自動フェールオーバーを指定した同期コミット モードに設定する必要があります。 最大 3 つの自動フェールオーバー レプリカを所有することができます。  
@@ -166,7 +165,7 @@ ms.locfileid: "53206371"
   
 -   [sys.dm_hadr_availability_group_states &#40;Transact-SQL&#41;](../../../relational-databases/system-dynamic-management-views/sys-dm-hadr-availability-group-states-transact-sql.md)  
   
--   [sys.dm_hadr_availability_replica_states &#40;Transact-SQL&#41;](../../../relational-databases/system-dynamic-management-views/sys-dm-hadr-availability-replica-states-transact-sql.md)  
+-   [sys.dm_hadr_availability_group_states &#40;Transact-SQL&#41;](../../../relational-databases/system-dynamic-management-views/sys-dm-hadr-availability-replica-states-transact-sql.md)  
   
 -   [sys.dm_hadr_database_replica_states &#40;Transact-SQL&#41;](../../../relational-databases/system-dynamic-management-views/sys-dm-hadr-database-replica-states-transact-sql.md)  
   
@@ -178,7 +177,7 @@ ms.locfileid: "53206371"
   
 ## <a name="see-also"></a>参照  
  [AlwaysOn 可用性グループの概要 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   
- [フェールオーバーとフェールオーバー モード &#40;Always On 可用性グループ&#41;](../../../database-engine/availability-groups/windows/failover-and-failover-modes-always-on-availability-groups.md)   
+ [フェールオーバーとフェールオーバー モード &#40;AlwaysOn 可用性グループ&#41;](../../../database-engine/availability-groups/windows/failover-and-failover-modes-always-on-availability-groups.md)   
  [Windows Server フェールオーバー クラスタリング &#40;WSFC&#41; と SQL Server](../../../sql-server/failover-clusters/windows/windows-server-failover-clustering-wsfc-with-sql-server.md)  
   
   

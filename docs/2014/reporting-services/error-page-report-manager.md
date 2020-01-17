@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 ms.assetid: 8311ed32-00f3-451d-8279-946429f5fee1
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 43a591e8fa9f590550b53a16891f8c1880cbcf99
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: fc50a5b0516bcbf8221ce3ee130090f66a929c3e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56029233"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66109218"
 ---
 # <a name="error-page-report-manager"></a>[エラー] ページ (レポート マネージャー)
   [エラー] ページには、エラーの状況に関する詳細情報が表示されます。 このページで、サーバー ベースまたはセッション ベースのエラーが表示されます。 特定のページ コントロールに関連する検証エラーは、コントロールの横にインラインで表示されます。  
@@ -31,7 +30,7 @@ ms.locfileid: "56029233"
   
 -   リモート サーバーで発生するエラー状態に関する追加情報が返されるように、 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] レポート サーバーのサーバー プロパティを設定できます。 エラー メッセージが含まれる場合、テキスト「このエラーに関する詳細については、ローカル サーバー コンピューターでは、レポート サーバーに移動またはリモート エラーを有効にする」を参照してください。[リモート エラーを有効にする&#40;Reporting Services&#41;](report-server/enable-remote-errors-reporting-services.md)します。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [レポート マネージャーの構成 &#40;ネイティブ モード&#41;](report-server/configure-web-portal.md)   
  [エラーとイベントのリファレンス (Reporting Services)](troubleshooting/errors-and-events-reference-reporting-services.md)   
  [レポート マネージャー F1 ヘルプ](../../2014/reporting-services/report-manager-f1-help.md)  

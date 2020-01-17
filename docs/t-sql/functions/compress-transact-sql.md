@@ -13,15 +13,14 @@ f1_keywords:
 helpviewer_keywords:
 - COMPRESS function
 ms.assetid: c2bfe9b8-57a4-48b4-b028-e1a3ed5ece88
-author: MashaMSFT
-ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 8c2169a32c9d82cd32491b1dabe5a87436623c80
-ms.sourcegitcommit: a11e733bd417905150567dfebc46a137df85a2fa
+author: MikeRayMSFT
+ms.author: mikeray
+ms.openlocfilehash: 6fd94c5062e0f268e902c69c154834430bf9e6f4
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/03/2019
-ms.locfileid: "53991845"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67943127"
 ---
 # <a name="compress-transact-sql"></a>COMPRESS (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-asdw-xxx-md.md)]
@@ -56,7 +55,7 @@ A
 expression。 詳細については、「[式 &#40;Transact-SQL&#41;](../../t-sql/language-elements/expressions-transact-sql.md)」を参照してください。
   
 ## <a name="return-types"></a>戻り値の型
-圧縮された入力内容を表す **varbinary (max)**。
+圧縮された入力内容を表す **varbinary (max)** 。
   
 ## <a name="remarks"></a>Remarks  
 圧縮されたデータにインデックスを付けることはできません。

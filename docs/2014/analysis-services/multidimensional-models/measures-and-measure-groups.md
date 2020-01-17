@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - measure groups [Analysis Services]
@@ -21,12 +20,12 @@ ms.assetid: 4f0122f9-c3a5-4172-ada3-5bc5f7b1cc9a
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 68df3c4b4fa64b6c2fd07e9ed79e96115a2f7293
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 63b035bd0ce315ccf1334c53e7ee1718c7569dac
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48092632"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66073671"
 ---
 # <a name="measures-and-measure-groups"></a>メジャーおよびメジャー グループ
   キューブには、*メジャー グループ*内の*メジャー*、ビジネス ロジック、およびディメンションのコレクション (メジャーが提供する数値のデータを評価するためのコンテキストを指定する) が含まれます。 メジャーおよびメジャー グループはどちらも、キューブに不可欠なコンポーネントです。 キューブは、それぞれが少なくとも 1 つないと存在できません。  
@@ -35,7 +34,7 @@ ms.locfileid: "48092632"
   
 |**リンク**|**[説明]**|  
 |--------------|---------------------|  
-|[多次元モデル内のメジャーおよびメジャー グループを作成します。](create-measures-and-measure-groups-in-multidimensional-models.md)|メジャーとメジャー グループを作成するためのいくつかのアプローチのいずれかを選択します。|  
+|[多次元モデル内のメジャーおよびメジャー グループの作成](create-measures-and-measure-groups-in-multidimensional-models.md)|メジャーとメジャー グループを作成するためのいくつかのアプローチのいずれかを選択します。|  
 |[メジャーのプロパティの構成](configure-measure-properties.md)|キューブを開始するためにキューブ ウィザードを使用した場合、集計方法を変更し、データ形式を適用し、クライアント アプリケーションでのメジャーの表示/非表示を設定し、場合によっては値の集計前にデータを操作するためのメジャー式を追加する必要があります。|  
 |[メジャー グループのプロパティの構成](configure-measure-group-properties.md)|多次元モデルでは、メジャー グループはソースのデータ ウェアハウス内のファクト テーブルに相当します。 メジャー グループでのプロパティにより、キャッシュの動作、記憶域、メジャー グループ レベルでまとめて動作する処理ディレクティブを指定することができます。 パーティション構成の一部は、メジャー グループ オブジェクトに設定するプロパティによって決まります。|  
 |[集計関数の使用](use-aggregate-functions.md)|メジャーに割り当てることのできる集計メソッドを理解してください。|  
@@ -68,6 +67,6 @@ ms.locfileid: "48092632"
   
 ## <a name="see-also"></a>参照  
  [多次元モデルのキューブ](cubes-in-multidimensional-models.md)   
- [多次元モデル内のメジャーおよびメジャー グループを作成します。](create-measures-and-measure-groups-in-multidimensional-models.md)  
+ [多次元モデル内のメジャーおよびメジャー グループの作成](create-measures-and-measure-groups-in-multidimensional-models.md)  
   
   

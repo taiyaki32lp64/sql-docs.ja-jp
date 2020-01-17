@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 646d5f0b-df0c-47a6-a630-99cac1026a4c
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: b809aff14e75f41089f01345607f63f8c2dd9166
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 06f98cd40ee003a7e8805e6b83fdac0940526e49
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47758970"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67990634"
 ---
 # <a name="odbc-escape-sequences"></a>ODBC エスケープ シーケンス
 次のエスケープ シーケンスは、ODBC で使用されます。 このセクションでは、文法で定義されているいくつかの要素を使用して[要素は、SQL ステートメントで使用される](../../../odbc/reference/appendixes/elements-used-in-sql-statements.md)します。  

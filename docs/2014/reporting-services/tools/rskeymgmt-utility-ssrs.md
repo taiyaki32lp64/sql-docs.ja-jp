@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 helpviewer_keywords:
 - report servers [Reporting Services], encryption
@@ -19,15 +18,15 @@ helpviewer_keywords:
 - rskeymgmt utility
 - scale-out deployments [Reporting Services]
 ms.assetid: 53f1318d-bd2d-4c08-b19f-c8b698b5b3d3
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: cdd2e2bd7d668ca276cdc62d988f7334a6709e6b
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: c9b5ca361cbfb5de42341fad8625f10d7ce3c2fa
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56038263"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66099808"
 ---
 # <a name="rskeymgmt-utility-ssrs"></a>rskeymgmt ユーティリティ (SSRS)
   重要なレポート サーバー データを不正アクセスから保護するための対称キーを、抽出、復元、作成、および削除します。 また、このユーティリティは、レポート サーバー インスタンスをスケール アウト配置に追加する場合にも使用されます。 *レポート サーバーのスケール アウト配置* とは、複数のレポート サーバー インスタンスが 1 つのレポート サーバー データベースを共有する状態を表しています。  
@@ -148,9 +147,9 @@ rskeymgmt -j -m <remotecomputer> -n <namedreportserverinstance> -u <administrato
 >  レポート サーバーのスケール アウト配置とは、複数のレポート サーバー インスタンスが同じレポート サーバー データベースを共有する配置モデルのことです。 対称キーをデータベースに格納するレポート サーバー インスタンスであれば、レポート サーバー データベースを使用することができます。 たとえば、レポート サーバー データベースが 3 つのレポート サーバー インスタンスに対するキー情報を含んでいる場合、3 つすべてのインスタンスは、同じスケール アウト配置のメンバーと見なされます。  
   
 #### <a name="joining-report-server-instances-on-the-same-computer"></a>同じコンピューター上の複数のレポート サーバー インスタンスの追加  
- 同じコンピューターにインストールされている複数のレポート サーバー インスタンスから、スケール アウト配置を作成できます。 ローカルにインストールされているレポート サーバー インスタンスを追加する場合、`-u` および `-v` 引数は設定しないでください。 `-u` および `-v` 引数は、リモート コンピューターからインスタンスを追加する場合にのみ使用します。 これらの引数を指定すると、"ユーザー資格情報はローカル接続には使用できません" というエラーが返されます。  
+ 同じコンピューターにインストールされている複数のレポート サーバー インスタンスから、スケール アウト配置を作成できます。 ローカルにインストールされているレポート サーバー インスタンスを追加する場合、`-u` および `-v` 引数は設定しないでください。 `-u` および `-v` 引数は、リモート コンピューターからインスタンスを追加する場合にのみ使用します。 引数を指定する場合は、次のエラーが表示されます。「ユーザーの資格情報は、ローカル接続に使用することはできません」。  
   
- 次の例は、複数のローカル インスタンスを使用してスケール アウト配置を作成する構文です。 この例で、<`initializedinstance`> は、レポート サーバー データベースを使用するために初期化済みのインスタンスの名前であり、<`newinstance`> は配置に追加するインスタンスの名前です。  
+ 次の例は、複数のローカル インスタンスを使用してスケール アウト配置を作成する構文です。 この例で <`initializedinstance`> に、レポート サーバー データベースを使用して、既に初期化されているインスタンスの名前を指定し、<`newinstance`> 展開に追加するインスタンスの名前を指定します。  
   
 ```  
 rskeymgmt -j -i <initializedinstance> -m <computer name> -n <newinstance>  

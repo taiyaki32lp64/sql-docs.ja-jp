@@ -16,20 +16,19 @@ helpviewer_keywords:
 ms.assetid: c6bad147-1449-4e20-a42e-b51aed76963c
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: cd8520a26b28c16876163cf8f2c0f7a57b3c33ad
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: 0a4e0e62121d289f9eb897c79abb2991a57890a4
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54136032"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68043050"
 ---
 # <a name="cdcfncdcgetallchangesltcaptureinstancegt--transact-sql"></a>cdc.fn_cdc_get_all_changes_&lt;capture_instance&gt; (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   指定されたログ シーケンス番号 (LSN) の範囲内で、ソース テーブルに適用された各変更につき 1 行を返します。 該当する期間中、1 つのソース行に複数の変更が加えられた場合、返される結果セットには、それぞれの変更が格納されます。 返された変更データおよび 4 つのメタデータ列によって、他のデータ ソースにその変更を適用するために必要な情報を得ることができます。 結果セットとして返される行およびメタデータ列の内容は、行のフィルター選択オプションによって制御されます。 行のフィルター選択オプションに 'all' を指定した場合、それぞれの変更について、対応する 1 行が返されます。 'all update old' オプションを指定した場合、更新操作は、更新前と更新後のキャプチャ対象列の値を格納する 2 つの行で表されます。  
   
- この列挙関数は、ソース テーブルに対して変更データ キャプチャを有効にした時点で作成されます。 関数の名前は派生し、形式を使用して**cdc.fn_cdc_get_all_changes_**_capture_instance_場所*capture_instance*キャプチャ用に指定された値は、ソース テーブルが変更データ キャプチャの有効な場合はインスタンス。  
+ この列挙関数は、ソース テーブルに対して変更データ キャプチャを有効にした時点で作成されます。 関数の名前は派生し、形式を使用して**cdc.fn_cdc_get_all_changes_** _capture_instance_場所*capture_instance*キャプチャ用に指定された値は、ソース テーブルが変更データ キャプチャの有効な場合はインスタンス。  
   
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -83,7 +82,7 @@ cdc.fn_cdc_get_all_changes_capture_instance ( from_lsn , to_lsn , '<row_filter_o
 ## <a name="remarks"></a>コメント  
  指定した LSN 範囲が、キャプチャ インスタンスの変更追跡時間外に該当した場合、エラー 208 ("プロシージャまたは関数 cdc.fn_cdc_get_all_changes に指定された引数が不足しています。") が返されます。  
   
- データ型の列**イメージ**、**テキスト**、および**ntext**常に NULL が割り当てられている値と **_ _ $操作**= 1 または **_ _ $操作**= 3。 データ型の列**varbinary (max)**、 **varchar (max)**、または**nvarchar (max)** NULL が割り当てられている値と **_ _ $操作**3 を =しない限り、列が更新中に変更します。 ときに **_ _ $操作**= 1、これらの列には、削除時にその値が割り当てられます。 キャプチャ インスタンスに含まれる計算列の値は、常に NULL になります。  
+ データ型の列**イメージ**、**テキスト**、および**ntext**常に NULL が割り当てられている値と **_ _ $操作**= 1 または **_ _ $操作**= 3。 データ型の列**varbinary (max)** 、 **varchar (max)** 、または**nvarchar (max)** NULL が割り当てられている値と **_ _ $操作**3 を =しない限り、列が更新中に変更します。 ときに **_ _ $操作**= 1、これらの列には、削除時にその値が割り当てられます。 キャプチャ インスタンスに含まれる計算列の値は、常に NULL になります。  
   
 ## <a name="examples"></a>使用例  
  いくつか[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]テンプレートは、変更データ キャプチャ クエリ関数を使用する方法を示します。 これらのテンプレートでは、**ビュー**メニュー[!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]します。 詳細については、次を参照してください。[テンプレート エクスプ ローラー](../../ssms/template/template-explorer.md)します。  

@@ -1,52 +1,52 @@
 ---
-title: sys.database_service_objectives (Azure SQL データベース) |Microsoft Docs
-ms.custom: ''
-ms.date: 08/30/2016
+title: sys.database_service_objectives
+titleSuffix: Azure SQL Database
+ms.custom: seo-dt-2019
+ms.date: 03/21/2018
 ms.service: sql-database
 ms.prod_service: sql-database, sql-data-warehouse
 ms.reviewer: ''
 ms.topic: conceptual
 keywords:
-- エラスティック プール
-- エラスティック プールの管理
+- エラスティックプール
+- エラスティックプール, 管理
 f1_keywords:
 - DATABASE_SERVICE_OBJECTIVES_TSQL
 ms.assetid: cecd8c31-06c0-4aa7-85d3-ac590e6874fa
-author: CarlRabeler
-ms.author: carlrab
-manager: craigg
+author: stevestein
+ms.author: sstein
 monikerRange: = azuresqldb-current || = azure-sqldw-latest || = sqlallproducts-allversions
-ms.openlocfilehash: 7a073dba8a05aa6f098bdf2b2ce1666d4cc324be
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 465416e87966ba3a80c8e98394c0b1f2009f591b
+ms.sourcegitcommit: f688a37bb6deac2e5b7730344165bbe2c57f9b9c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56028523"
+ms.lasthandoff: 11/08/2019
+ms.locfileid: "73844457"
 ---
-# <a name="sysdatabaseserviceobjectives-azure-sql-database"></a>sys.database_service_objectives (Azure SQL データベース)
+# <a name="sysdatabase_service_objectives-azure-sql-database"></a>database_service_objectives (Azure SQL Database)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-asdw-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-asdw-xxx-md.md)]
 
-Azure SQL database または Azure SQL Data Warehouse に存在する場合は、edition (サービス層)、サービスの目標 (価格レベル) およびエラスティック プールの名前を返します。 Azure SQL Database サーバーの master データベースにログオンした場合は、すべてのデータベースに関する情報を返します。 Azure SQL Data Warehouse では、には、master データベースに接続する必要があります。  
+Azure SQL database または Azure SQL Data Warehouse について、エディション (サービスレベル)、サービス目標 (価格レベル)、およびエラスティックプール名 (存在する場合) を返します。 Azure SQL Database サーバーの master データベースにログオンしている場合は、すべてのデータベースに関する情報が返されます。 Azure SQL Data Warehouse には、master データベースに接続している必要があります。  
   
   
- 価格については、次を参照してください。 [SQL Database のオプションとパフォーマンス。SQL Database の価格](https://azure.microsoft.com/pricing/details/sql-database/)と[SQL Data Warehouse の価格](https://azure.microsoft.com/pricing/details/sql-data-warehouse/)します。  
+ 価格の詳細については、「 [SQL Database のオプションとパフォーマンス: SQL Database の価格](https://azure.microsoft.com/pricing/details/sql-database/)と[SQL Data Warehouse 価格](https://azure.microsoft.com/pricing/details/sql-data-warehouse/)」を参照してください。  
   
- サービスの設定を変更するを参照してください。 [ALTER DATABASE (Azure SQL データベース)](../../t-sql/statements/alter-database-azure-sql-database.md)と[ALTER DATABASE (Azure SQL Data Warehouse)](../../t-sql/statements/alter-database-azure-sql-data-warehouse.md)します。  
+ サービスの設定を変更するには、「 [ALTER database (Azure SQL Database)](../../t-sql/statements/alter-database-azure-sql-database.md) 」および「 [alter database (Azure SQL Data Warehouse)](https://docs.microsoft.com/sql/t-sql/statements/alter-database-transact-sql?view=azure-sqldw-latest)」を参照してください。  
   
- Sys.database_service_objectives ビューには、次の列が含まれています。  
+ Database_service_objectives ビューには、次の列が含まれています。  
   
 |列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
-|database_id|ssNoversion|Azure SQL Database サーバーのインスタンス内で一意で、データベースの ID。 結合可能な[sys.databases &#40;TRANSACT-SQL&#41;](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md)します。|  
-|のエディション|sysname|データベースまたはデータ ウェアハウスのサービス レベル:**基本的な**、**標準**、 **Premium**または**Data Warehouse**します。|  
-|service_objective|sysname|データベースの価格レベルです。 データベースがエラスティック プール内にある場合は、返す**ElasticPool**します。<br /><br /> **基本的な**階層を返します**基本的な**します。<br /><br /> **Standard サービス レベル内の単一データベース**次のいずれかを返します。S0、S1、S2、S3、S4、S6、S7、S9 または S12 します。<br /><br /> **Premium レベルで 1 つのデータベース**次を返します。P1、P2、P4、P6、P11 または P15 します。<br /><br /> **SQL Data Warehouse** DW10000c を通じて DW100 を返します。|  
-|elastic_pool_name|sysname|名前、[エラスティック プール](https://azure.microsoft.com/documentation/articles/sql-database-elastic-pool/)データベースが属しています。 返します**NULL**データベースが 1 つのデータベースまたはデータ warehoue 場合。|  
+|database_id|int|データベースの ID。 Azure SQL Database server のインスタンス内で一意です。 [SYS &#40;.sql&#41;](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md)に参加可能です。|  
+|エディション|sysname|データベースまたはデータウェアハウスのサービスレベル: **Basic**、 **Standard**、 **Premium** 、または**data warehouse**。|  
+|service_objective|sysname|データベースの価格レベル。 データベースがエラスティックプール内にある場合、は**ElasticPool**を返します。<br /><br /> **Basic**レベルでは、は**basic**を返します。<br /><br /> **Standard サービスレベルの単一データベースで**は、次のいずれかが返されます。 S0、S1、S2、S3、S4、S6、S7、S9、または S12。<br /><br /> **Premium レベルの単一のデータベース**は、次の値を返します: P1、P2、P4、P6、P11、または P15。<br /><br /> **SQL Data Warehouse**は DW30000C から DW100 を返します。<br /><br /> 詳細については、「[単一データベース](/azure/sql-database/sql-database-dtu-resource-limits-single-databases/)、[エラスティックプール](/azure/sql-database/sql-database-dtu-resource-limits-elastic-pools/)、[データウェアハウス](/azure/sql-data-warehouse/what-is-a-data-warehouse-unit-dwu-cdwu/)」を参照してください。|  
+|elastic_pool_name|sysname|データベースが属する[エラスティックプール](https://azure.microsoft.com/documentation/articles/sql-database-elastic-pool/)の名前。 データベースが単一データベースまたはデータ warehoue の場合は**NULL**を返します。|  
   
 ## <a name="permissions"></a>アクセス許可  
- 必要があります**dbManager** master データベースに対する権限。  データベース レベルでは、ユーザーは、作成者または所有者である必要があります。  
+ Master データベースに対する**dbManager**権限が必要です。  データベースレベルでは、ユーザーは作成者または所有者である必要があります。  
   
 ## <a name="examples"></a>使用例  
- この例は、master データベースで、またはユーザー データベースで実行できます。 クエリでは、名前、サービス、およびデータベースのパフォーマンス レベルの情報を返します。  
+ この例は、master データベースまたは Azure SQL Database ユーザーデータベースで実行できます。 このクエリでは、データベースの名前、サービス、およびパフォーマンスレベルの情報が返されます。  
   
 ```sql  
 SELECT  d.name,   

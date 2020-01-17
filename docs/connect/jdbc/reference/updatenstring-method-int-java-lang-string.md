@@ -1,5 +1,5 @@
 ---
-title: updateNString (int, java.lang.String) メソッド |Microsoft Docs
+title: updateNString メソッド (int, java lang.ini) |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 1bb909f1-4a96-4be1-adea-36c8d9703112
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: b307dd027f45c54d6bd00dfc5614c12ad496544a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 90aa44eda2af60ffdc73a65e01b3ae12b949d79f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47834130"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67998796"
 ---
 # <a name="updatenstring-method-int-javalangstring"></a>updateNString (int, java.lang.String) メソッド
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -36,17 +35,17 @@ public void updateNString(int columnIndex,
   
  列インデックスを示す **int** です。  
   
- *文字列*  
+ *nString*  
   
- A**文字列**オブジェクト。  
+ **文字列**オブジェクト。  
   
 ## <a name="exceptions"></a>例外  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- この updateNString メソッドは、java.sql.ResultSet インターフェイスの updateNString メソッドによって指定されます。  
+ この updateNString メソッドは、java.sql.ResultSet インターフェイスの updateNString メソッドで規定されています。  
   
- このメソッドは Java**文字列**に選択した**nchar**、 **nvarchar (max)**、 **ntext**、および**xml**列です。 このメソッドを他のデータ型の列で使用すると、例外がスローされます。  
+ このメソッドは、選択した**nchar**、 **nvarchar (max)** 、 **ntext**、および**xml**列に Java**文字列**を渡します。 このメソッドを他のデータ型の列で使用すると、例外がスローされます。  
   
 ## <a name="see-also"></a>参照  
  [updateNString メソッド &#40;SQLServerResultSet&#41;](../../../connect/jdbc/reference/updatenstring-method-sqlserverresultset.md)   

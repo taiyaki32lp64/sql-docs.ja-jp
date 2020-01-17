@@ -23,11 +23,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 23f45c0a2e47381b60fe8f6852f24fd8f5f200fc
-ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/18/2018
-ms.locfileid: "53591866"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68211017"
 ---
 # <a name="sqlservr-application"></a>sqlservr アプリケーション
   コマンド プロンプトから **sqlservr** アプリケーションを使用して、 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] のインスタンスを起動、停止、一時停止、または続行します。  
@@ -61,7 +61,7 @@ ms.locfileid: "53591866"
  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] のインスタンスを最小構成で起動します。 設定値によりサーバーが起動できないとき (たとえば使用できるメモリが不足している場合) などに便利です。  
   
  **-e** _error_log_path_  
- エラー ログ ファイルのフル パスを指定します。 指定しない場合、既定のインスタンスの既定の場所は *\<ドライブ>*:\Program Files\Microsoft SQL Server\MSSQL\Log\Errorlog で、名前付きインスタンスの既定の場所は *\<ドライブ>*:\Program Files\Microsoft SQL Server\MSSQL$*instance_name*\Log\Errorlog となります。 **-e** と *error_log_path*の間には空白を入れません。  
+ エラー ログ ファイルのフル パスを指定します。 指定しない場合、既定のインスタンスの既定の場所は *\<ドライブ>* :\Program Files\Microsoft SQL Server\MSSQL\Log\Errorlog で、名前付きインスタンスの既定の場所は *\<ドライブ>* :\Program Files\Microsoft SQL Server\MSSQL$*instance_name*\Log\Errorlog となります。 **-e** と *error_log_path*の間には空白を入れません。  
   
  **-l** _master_log_path_  
  **master** データベース トランザクション ログ ファイルの完全修飾パスを指定します。 **-l** と *master_log_path*の間には空白を入れません。  
@@ -73,10 +73,10 @@ ms.locfileid: "53591866"
  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]の名前付きインスタンスの起動を可能にします。 **-s** パラメーターを設定しない場合、既定のインスタンスが起動します。 **sqlservr.exe**を開始する前に、コマンド プロンプトで、インスタンスの適切な BINN ディレクトリに移動する必要があります。 たとえば、Instance1 がバイナリ用に \mssql$Instance1 を使用する場合、ユーザーは \mssql$Instance1\binn ディレクトリで **sqlservr.exe -s instance1**を起動する必要があります。 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] -n **オプションで** のインスタンスを起動する場合は、 **-e** オプションも使用してください。このオプションを指定しないと、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] のイベントは記録されません。  
   
  **-T** _trace#_  
- 指定された、有効なトレース フラグ ( [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] trace#*) を使用して*のインスタンスを起動します。 トレース フラグを使用してサーバーが起動すると、標準的な動作とは異なります。 詳細については、「[トレース フラグ &#40;Transact-SQL&#41;](/sql/t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql)」を参照してください。  
+ 指定された、有効なトレース フラグ ( [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] trace# *) を使用して*のインスタンスを起動します。 トレース フラグを使用してサーバーが起動すると、標準的な動作とは異なります。 詳細については、「[トレース フラグ &#40;Transact-SQL&#41;](/sql/t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql)」を参照してください。  
   
 > [!IMPORTANT]  
->  トレース フラグを指定するときは、 **-T** を使用してトレース フラグ番号を渡してください。 **では小文字の t (**-t [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]) も入力できますが、 **-t** では、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] のサポート エンジニアが必要とする他の内部トレース フラグが設定されます。  
+>  トレース フラグを指定するときは、 **-T** を使用してトレース フラグ番号を渡してください。 **では小文字の t (** -t [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]) も入力できますが、 **-t** では、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] のサポート エンジニアが必要とする他の内部トレース フラグが設定されます。  
   
  **-v**  
  サーバーのバージョン番号を表示します。  
@@ -89,11 +89,11 @@ ms.locfileid: "53591866"
   
  このオプションの使用はメモリの割り当ての調整に役立ちますが、オペレーティング システムによって構成されたアプリケーション用の仮想メモリの制限設定よりも、物理メモリの容量が大きい場合にのみ使用してください。 このオプションは、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] で必要とされるメモリ使用量が通常より多い大容量メモリ構成で、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] プロセスの仮想アドレス領域の全体が使用される場合に効果があります。 このオプションを誤って使用すると、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] が起動しないことや、実行時エラーが発生することがあります。  
   
- **エラー ログに次の警告が記録されない限り、** -g [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] パラメーターの既定値を使用してください。  
+ [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] のエラー ログに次の警告が記録されない限り、 **-g** パラメーターの既定値を使用してください。  
   
--   "失敗仮想バイトを割り当てます。FAIL_VIRTUAL_RESERVE\<サイズ >"  
+-   "Failed Virtual Allocate Bytes:FAIL_VIRTUAL_RESERVE \<size>"  
   
--   "失敗仮想バイトを割り当てます。FAIL_VIRTUAL_COMMIT\<サイズ >"  
+-   "Failed Virtual Allocate Bytes:FAIL_VIRTUAL_COMMIT \<size>"  
   
  これらのメッセージは、拡張ストアド プロシージャ .dll ファイルやオートメション オブジェクトなどのアイテムの格納領域を確保するために [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] が [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] メモリ プールの一部を解放しようとしていることを示している場合があります。 その場合は、 **-g**スイッチによって確保するメモリ量を増やすことを検討してください。  
   
@@ -105,7 +105,7 @@ ms.locfileid: "53591866"
 ## <a name="compatibility-support"></a>互換性サポート  
  **-h**  パラメーターは、 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]ではサポートされていません。 このパラメーターは、以前のバージョンの [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] の 32 ビットのインスタンスで AWE が有効になっている場合に、ホット アド メモリ メタデータ用の仮想メモリ アドレス空間を確保するために使用されていました。 詳細については、「[SQL Server 2014 で提供が中止された機能](../../2014/getting-started/discontinued-sql-server-features-in-sql-server-2014.md)」を参照してください。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [データベース エンジン サービスのスタートアップ オプション](../database-engine/configure-windows/database-engine-service-startup-options.md)  
   
   

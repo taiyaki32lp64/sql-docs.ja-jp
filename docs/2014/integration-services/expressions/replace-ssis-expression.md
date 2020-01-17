@@ -10,15 +10,15 @@ helpviewer_keywords:
 - replacing string expression
 - REPLACE function
 ms.assetid: a6837043-ea70-4c6a-9c7a-6868b02b2adc
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: ee88a12261d44c5090ae8d8f6ecac9f4b4ee216b
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: b1970fae04a4dff260fe9eafa30125e63e9cf1a1
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52754414"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62897476"
 ---
 # <a name="replace-ssis-expression"></a>REPLACE (SSIS 式)
   式に含まれている文字列を別の文字列または空の文字列で置き換えた文字式を返します。  

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.cubeeditor.partitions.partitiontableselection.f1
@@ -13,12 +12,12 @@ ms.assetid: 67d05389-81ae-4a6b-947b-986d37ec72b1
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 2e615df2adea50f2ee6d0d0741d6d885b87311ca
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 7f8ea36c8c3d49d4903379ed4450548fc760937a
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48093068"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66067866"
 ---
 # <a name="table-binding-detail-partition-source-dialog-box-analysis-services---multidimensional-data"></a>テーブル バインドの詳細 ([パーティション ソース] ダイアログ ボックス) (Analysis Services - 多次元データ)
   **[パーティション ソース]** ダイアログ ボックスの **[テーブル バインド]** オプションを使用すると、パーティション用のデータを提供するファクト テーブルを指定できます。 このペインを表示するには、 **[パーティション ソース]** ダイアログ ボックスの **[バインドの種類]** オプションで **[テーブル バインド]** を選択します。  

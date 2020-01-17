@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: a1a27b1e-45dd-4d7d-b6c0-2b608ed175f6
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 091bc3b0ab56006e12064f6b873d419b4e0c5a7d
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: a7d61b0e88dd2017218c74635b89f8207691c22a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51672381"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68133267"
 ---
 # <a name="ibm-db2-subscribers"></a>IBM DB2 サブスクライバー
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -116,7 +115,7 @@ ms.locfileid: "51672381"
 |**decimal(1-31, 0-31)**|DECIMAL(1-31, 0-31)|  
 |**decimal(32-38, 0-38)**|VARCHAR(41)|  
 |**float(53)**|DOUBLE|  
-|**float**|[FLOAT]|  
+|**float**|FLOAT|  
 |**geography**|IMAGE|  
 |**geometry**|IMAGE|  
 |**hierarchyid**|IMAGE|  

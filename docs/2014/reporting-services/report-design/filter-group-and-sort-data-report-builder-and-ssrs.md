@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 f1_keywords:
 - sql12.rtp.rptdesigner.categorygroupproperties.sorting.f1
@@ -17,15 +16,15 @@ f1_keywords:
 - sql12.rtp.rptdesigner.categorygroupproperties.general.f1
 - "10412"
 ms.assetid: 4dda2a7f-3f31-47e9-a88b-28d770ebd65e
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 776b240f17d40c64c63648175b2c5c15a532fb48
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: f25545a48a95082636fc3efa951e5eab42c94be7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56294690"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66105888"
 ---
 # <a name="filter-group-and-sort-data-report-builder-and-ssrs"></a>データのフィルター、グループ化、および並べ替え (レポート ビルダーおよび SSRS)
   レポートでは、式を使用してレポート データの制御、整理、および並べ替えを行うことができます。 既定では、データセットを作成してレポート レイアウトをデザインすると、データセット フィールドやパラメーターなど、レポート データ ペインに表示されるアイテムに基づいて、レポート アイテムのプロパティが式に自動的に設定されます。 グループまたはグループ内の行の並べ替え順序をユーザーが対話的に変更できるように、テーブルまたはマトリックスのセルに対話的な並べ替えボタンを追加することもできます。  
@@ -66,10 +65,8 @@ ms.locfileid: "56294690"
   
  レポートのデータをユーザーが制御しやすくするために、フィルター式にパラメーターを含めることができます。 詳細については、「[Parameters コレクションの参照 (レポート ビルダーおよび SSRS)](built-in-collections-parameters-collection-references-report-builder.md)」を参照してください。  
   
- ユーザーごとに表示をカスタマイズするには、組み込みのフィールド UserID への参照をフィルターに含めます。 詳細については、「[組み込み Globals および Users 参照 &#40;レポート ビルダーおよび SSRS&#41;](built-in-collections-built-in-globals-and-users-references-report-builder.md)」をご覧ください。  
-  
- ![[トップに戻る] リンクで使用される矢印アイコン](../../2014-toc/media/uparrow16x16.gif "[トップに戻る] リンクで使用される矢印アイコン") [トップに戻る](#BackToTop)  
-  
+ ユーザーごとに表示をカスタマイズするには、組み込みのフィールド UserID への参照をフィルターに含めます。 詳細については、「[組み込み Globals および Users 参照 &#40;レポート ビルダーおよび SSRS&#41;](built-in-collections-built-in-globals-and-users-references-report-builder.md)」をご覧ください。
+
 ##  <a name="Grouping"></a> レポートのデータのグループ化  
  グループを使用すると、レポートのデータを整理して表示したり、集計値を計算したりすることができます。 グループを定義して使用する方法を理解することは、簡潔なレポートの作成に役立ちます。  
   
@@ -103,21 +100,19 @@ ms.locfileid: "56294690"
 ### <a name="groups-and-scope-in-data-regions"></a>グループとデータ領域のスコープ  
  同じデータセットのデータを複数の形式で表示するには、各データ領域に同じグループ式を指定します。 たとえば、分類されたデータを表示するときに、すべての詳細データをテーブルで示し、データセット全体に対する各カテゴリの集計を円グラフで視覚化することができます。 詳細については、「 [同じデータセットへの複数のデータ領域のリンク (レポート ビルダーおよび SSRS)](linking-multiple-data-regions-to-the-same-dataset-report-builder-and-ssrs.md)」を参照してください。  
   
- テーブル、マトリックス、または一覧のセルでデータ領域を入れ子にすると、データのスコープは自動的にそのセルの最も内側のグループ メンバーシップになります。 たとえば、行グループと列グループの両方に存在するセルにグラフを追加するとします。 そのグラフで使用可能なデータは、実行時に最も内側の行グループ インスタンスと最も内側の列グループ インスタンスにスコープが設定されます。 詳細については、「 [合計、集計、および組み込みコレクションの式のスコープ (レポート ビルダーおよび SSRS)](expression-scope-for-totals-aggregates-and-built-in-collections.md)を表しています。  
-  
- ![[トップに戻る] リンクで使用される矢印アイコン](../../2014-toc/media/uparrow16x16.gif "[トップに戻る] リンクで使用される矢印アイコン") [トップに戻る](#BackToTop)  
-  
+ テーブル、マトリックス、または一覧のセルでデータ領域を入れ子にすると、データのスコープは自動的にそのセルの最も内側のグループ メンバーシップになります。 たとえば、行グループと列グループの両方に存在するセルにグラフを追加するとします。 そのグラフで使用可能なデータは、実行時に最も内側の行グループ インスタンスと最も内側の列グループ インスタンスにスコープが設定されます。 詳細については、「 [合計、集計、および組み込みコレクションの式のスコープ (レポート ビルダーおよび SSRS)](expression-scope-for-totals-aggregates-and-built-in-collections.md)」を参照してください。  
+
 ##  <a name="Sorting"></a> レポートのデータの並べ替え  
  レポートのデータの並べ替え順序を制御するには、データセット クエリのデータを並べ替えるか、データ領域またはグループの並べ替え式を定義します。 対話的な並べ替えボタンをテーブルおよびマトリックスに追加して、ユーザーが行の並べ替え順序を変更できるようにすることもできます。  
   
  同じレポート内で、3 種類すべての並べ替えを組み合わせて使用できます。 既定では、並べ替え順序は、データがデータセット クエリから返された順序によって決まります。 並べ替え式は、データ領域およびデータ領域グループで適用されます。 対話的な並べ替えは、並べ替え式の後に適用されます。  
   
- 集計関数を含む式の結果に並べ替え順序が影響することはほとんどありません。 次の集計関数の並べ替え順序が受ける戻り値。最初、最後に、および前。 詳細については、「 [集計関数リファレンス (レポート ビルダーおよび SSRS)](report-builder-functions-aggregate-functions-reference.md)」を参照してください。  
+ 集計関数を含む式の結果に並べ替え順序が影響することはほとんどありません。 次の集計関数の戻り値は並べ替え順序の影響を受けます:First、Last、Previous。 詳細については、「 [集計関数リファレンス (レポート ビルダーおよび SSRS)](report-builder-functions-aggregate-functions-reference.md)」を参照してください。  
   
 ### <a name="sorting-data-in-a-dataset-query"></a>データセット クエリのデータの並べ替え  
  データセット クエリで並べ替え順序を指定し、レポートのデータが取得される前にデータを事前に並べ替えます。 クエリのデータを並べ替えることによって、レポート プロセッサではなく、データ ソースによって並べ替えが実行されます。  
   
-  [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データ ソースの種類の場合、ORDER BY 句をデータセット クエリに追加できます。 たとえば、次の [!INCLUDE[tsql](../../../includes/tsql-md.md)] クエリは、 `SELECT Sales, Region FROM SalesOrders ORDER BY Sales DESC`のように、Sales 列および Region 列を Sales を基準にテーブル SalesOrders から降順で並べ替えます。 詳細については、 [SQL Server オンライン ブック](https://go.microsoft.com/fwlink/?linkid=98335)の「ORDER BY の使用による行の並べ替え」を参照してください。  
+ [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データ ソースの種類の場合、ORDER BY 句をデータセット クエリに追加できます。 たとえば、次の [!INCLUDE[tsql](../../../includes/tsql-md.md)] クエリは、 `SELECT Sales, Region FROM SalesOrders ORDER BY Sales DESC`のように、Sales 列および Region 列を Sales を基準にテーブル SalesOrders から降順で並べ替えます。 詳細については、 [SQL Server オンライン ブック](https://go.microsoft.com/fwlink/?linkid=98335)の「ORDER BY の使用による行の並べ替え」を参照してください。  
   
 > [!NOTE]  
 >  すべてのデータ ソースでクエリの並べ替え順序を指定できるわけではありません。  
@@ -168,9 +163,7 @@ FROM Production.Product
  テーブルまたはマトリックスでユーザーがレポート データの並べ替え順序を変更できるようにするには、列ヘッダーまたはグループ ヘッダーに対話的な並べ替えボタンを追加します。 ユーザーはそのボタンをクリックして、並べ替え順序を切り替えることができます。 対話的な並べ替えは、ユーザーとの対話が可能な HTML などの表示形式でサポートされています。  
   
  対話的な並べ替えボタンは、Tablix データ領域のセルのテキスト ボックスに追加します。 既定では、すべてのセルにテキスト ボックスが含まれています。 テキスト ボックス プロパティで、並べ替えるテーブルまたはマトリックスのデータ領域の部分 (親グループ値、子グループ値、または詳細行)、並べ替え基準、およびピア関係を持つ他のレポート アイテムに並べ替え式を適用するかどうかを指定します。 たとえば、同じデータセットのビューを表示するテーブルとグラフが四角形内に含まれている場合は、このテーブルとグラフはピア データ領域です。 ユーザーがテーブルの並べ替え順序を切り替えると、グラフの並べ替え順序も切り替わります。 詳細については、「[対話的な並べ替え (レポート ビルダーおよび SSRS)](interactive-sort-report-builder-and-ssrs.md)」を参照してください。  
-  
- ![[トップに戻る] リンクで使用される矢印アイコン](../../2014-toc/media/uparrow16x16.gif "[トップに戻る] リンクで使用される矢印アイコン") [トップに戻る](#BackToTop)  
-  
+
 ##  <a name="HowTo"></a> 操作方法に関するトピック  
  [レポートのスクロール時にヘッダーを表示したままにする (レポート ビルダーおよび SSRS)](keep-headers-visible-when-scrolling-through-a-report-report-builder-and-ssrs.md)  
   
@@ -218,5 +211,3 @@ FROM Production.Product
  [スパークラインとデータ バー (レポート ビルダーおよび SSRS)](sparklines-and-data-bars-report-builder-and-ssrs.md)   
  [ゲージ &#40;レポート ビルダーおよび SSRS&#41;](gauges-report-builder-and-ssrs.md)   
  [インジケーター (レポート ビルダーおよび SSRS)](indicators-report-builder-and-ssrs.md)  
-  
-  

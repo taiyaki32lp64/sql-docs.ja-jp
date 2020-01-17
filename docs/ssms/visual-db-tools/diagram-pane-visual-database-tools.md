@@ -13,15 +13,14 @@ helpviewer_keywords:
 - joins [SQL Server], Query and View Designer
 - Diagram pane [Visual Database Tools]
 ms.assetid: 399dfc7b-e2e7-47d3-bd11-163cbe0ce13c
-author: stevestein
-ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 66ae7b0d2c5b2f959e17720a37e679a2dec7cecc
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 00f4257a78b06d9f0ce3c21cb16ef04514eda76d
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47666820"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68263854"
 ---
 # <a name="diagram-pane-visual-database-tools"></a>ダイアグラム ペイン (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -37,7 +36,7 @@ ms.locfileid: "47666820"
   
 ダイアグラム ペインでは、各テーブルまたはテーブル値オブジェクトは、独立したウィンドウとして表示されます。 各ウィンドウ (四角形) のタイトル バーに表示されるアイコンは、その四角形に表示されているオブジェクトの種類を示しています。各アイコンの意味は次のとおりです。  
   
-## <a name="options"></a>[変数]  
+## <a name="options"></a>オプション  
 **テーブル**  
 ダイアグラム ペインに追加できるテーブルが一覧表示されます。 テーブルを追加するには、テーブルを選択して **[追加]** をクリックします。 複数のテーブルを一度に追加するには、それらのテーブルを選択して **[追加]** をクリックします。  
   

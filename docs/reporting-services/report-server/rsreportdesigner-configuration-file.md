@@ -2,21 +2,21 @@
 title: RSReportDesigner 構成ファイル | Microsoft Docs
 ms.date: 03/20/2017
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: report-server
 ms.topic: conceptual
 helpviewer_keywords:
 - Report Designer [Reporting Services], configuration file
 - RSReportDesigner configuration file
 ms.assetid: fdcc9c58-3bad-45b3-ba8e-c7816d64f14c
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: dff986f9007e721521a2bc4ac7094d0a72c1d4f5
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: a24b1a2f008c23adc5445ec5ed36c51ade181486
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47836160"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65581337"
 ---
 # <a name="rsreportdesigner-configuration-file"></a>RSReportDesigner 構成ファイル
   RSReportDesigner.config ファイルには、レポート デザイナーに利用できる表示拡張機能およびデータ処理拡張機能に関する設定が保存されています。 データ処理拡張機能の情報は、 **Data** 要素に保存されます。 表示拡張機能の情報は、 **Render** 要素に保存されます。 **Designer** 要素には、レポート デザイナーで使用されるクエリ ビルダーが列挙されます。  
@@ -67,6 +67,6 @@ ms.locfileid: "47836160"
   
 ## <a name="see-also"></a>参照  
  [Reporting Services 構成ファイル](../../reporting-services/report-server/reporting-services-configuration-files.md)   
- [SQL Server データ ツールのレポート デザイナーのクエリ デザイン ツール (SSRS)](../../reporting-services/report-data/query-design-tools-ssrs.md)  
+ [クエリ デザイン ツール &#40;SSRS&#41;](../../reporting-services/report-data/query-design-tools-ssrs.md)  
   
   

@@ -7,17 +7,17 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 9a77dd32-d8c2-4961-ad37-2a971f9d6043
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 88ee64782479e0ffed967485372dea8eae775430
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 0c6cd41be722d80baf442db907d6fdab9f334859
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53362664"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62891794"
 ---
-# <a name="step-2-adding-and-configuring-a-flat-file-connection-manager"></a>手順 2:追加して、フラット ファイル接続マネージャーの構成
+# <a name="step-2-adding-and-configuring-a-flat-file-connection-manager"></a>手順 2:フラット ファイル接続マネージャーの追加と構成
   この実習では、先ほど作成したパッケージにフラット ファイル接続マネージャーを追加します。 パッケージにフラット ファイル接続マネージャーを追加すると、フラット ファイルからデータを抽出できるようになります。 フラット ファイル接続マネージャーでは、フラット ファイルからデータを抽出するときに適用するファイルの名前と場所、ロケールとコード ページ、およびファイル形式を指定できます。また、列区切り記号も指定できます。 さらに、各列のデータ型を手動で指定できます。 **[列の型の予測]** ダイアログ ボックスを使用して、抽出したデータの列を [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] データ型に自動的にマップすることもできます。  
   
  通常は、操作する各フラット ファイルについて、新しいファイル インポート マネージャーを作成する必要があります。 ただし、このチュートリアルでは、データ形式がまったく同じである複数のフラット ファイルからデータを抽出するので、フラット ファイル接続マネージャーを 1 つだけパッケージに追加して、構成します。  
@@ -99,9 +99,9 @@ ms.locfileid: "53362664"
 4.  **[OK]** をクリックします。  
   
 ## <a name="next-task-in-lesson"></a>このレッスンの次の作業  
- [手順 3:追加して、OLE DB 接続マネージャーの構成](lesson-1-3-adding-and-configuring-an-ole-db-connection-manager.md)  
+ [ステップ 3:追加して、OLE DB 接続マネージャーの構成](lesson-1-3-adding-and-configuring-an-ole-db-connection-manager.md)  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [フラット ファイル接続マネージャー](connection-manager/file-connection-manager.md)   
  [Integration Services のデータ型](data-flow/integration-services-data-types.md)  
   

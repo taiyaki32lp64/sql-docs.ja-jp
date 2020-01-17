@@ -17,15 +17,15 @@ helpviewer_keywords:
 - connections [Integration Services]
 - SQL Server Integration Services packages, connections
 ms.assetid: 72f5afa3-d636-410b-9e81-2ffa27772a8c
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 33757a58353f962bf82a57a16039f92d64a8686d
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 78c3ba452d3ba681823e5c9f473d7a86f55809a1
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53356195"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62833789"
 ---
 # <a name="integration-services-ssis-connections"></a>Integration Services (SSIS) の接続
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] パッケージでは接続を使用して、各種のタスクの実行や [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 機能の実装を行います。  
@@ -78,7 +78,7 @@ ms.locfileid: "53356195"
 |FTP|FTP サーバーに接続します。|[FTP 接続マネージャー](ftp-connection-manager.md)|  
 |HTTP|Web サーバーに接続します。|[HTTP 接続マネージャー](http-connection-manager.md)|  
 |MSMQ (MSMQ)|メッセージ キューに接続します。|[MSMQ 接続マネージャー](msmq-connection-manager.md)|  
-|MSOLAP100| [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] のインスタンスまたは [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] プロジェクトに接続します。|[Analysis Services 接続マネージャー](analysis-services-connection-manager.md)|  
+|MSOLAP100|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] のインスタンスまたは [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] プロジェクトに接続します。|[Analysis Services 接続マネージャー](analysis-services-connection-manager.md)|  
 |MULTIFILE|複数のファイルおよびフォルダーに接続します。|[複数ファイル接続マネージャー](multiple-files-connection-manager.md)|  
 |MULTIFLATFILE|複数のデータ ファイルおよびフォルダーに接続します。|[複数フラット ファイル接続マネージャー](multiple-flat-files-connection-manager.md)|  
 |OLEDB|OLE DB プロバイダーを使用して、データ ソースに接続します。|[OLE DB 接続マネージャー](ole-db-connection-manager.md)|  

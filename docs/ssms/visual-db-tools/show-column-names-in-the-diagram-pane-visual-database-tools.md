@@ -13,15 +13,14 @@ helpviewer_keywords:
 - Diagram pane [Visual Database Tools]
 - names [SQL Server], columns
 ms.assetid: b866d107-6312-44f9-9195-d74bd43b7142
-author: stevestein
-ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 68ebbb8c9a4b0ed87e9ec522c9fa78eb75a84711
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 672157677f280f908f97467a9ced245f484e2c70
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47797330"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68256420"
 ---
 # <a name="show-column-names-in-the-diagram-pane-visual-database-tools"></a>ダイアグラム ペインでの列名の表示 (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

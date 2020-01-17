@@ -1,5 +1,5 @@
 ---
-title: 競合のマージ (マスター データ サービス) | Microsoft Docs
+title: 競合のマージ
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -8,15 +8,14 @@ ms.reviewer: ''
 ms.technology: master-data-services
 ms.topic: conceptual
 ms.assetid: 797219ad-5109-4666-94d3-dd1d59440a33
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 927990916440cc33c56a362b17b77adbb726620e
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
-ms.translationtype: HT
+ms.openlocfilehash: 028c1c20516d6f058e60dad6121aee0230d78817
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52779564"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73729030"
 ---
 # <a name="merge-conflicts-master-data-services"></a>競合のマージ (マスター データ サービス)
 
@@ -24,7 +23,7 @@ ms.locfileid: "52779564"
 
   [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]でパブリッシュしようとしているデータが他のユーザーによって変更されている場合、パブリッシュ操作は競合エラーで失敗します。 このエラーを解決するには、競合のマージを実行した後で変更を再パブリッシュします。  
   
-## <a name="prerequisites"></a>Prerequisites  
+## <a name="prerequisites"></a>前提条件  
  この手順を実行するには  
   
 -   **[エクスプローラー]** 機能領域にアクセスする権限が必要です。  
@@ -37,7 +36,7 @@ ms.locfileid: "52779564"
   
 2.  同じメンバー属性が別のユーザーによって変更されている場合、 **[Merge Conflicts]** (競合のマージ) ダイアログが表示されます。  
   
-3.  **[Merge Conflicts]** (競合のマージ) ダイアログでは、次の操作を行うことができます。  
+3.  **[競合のマージ]** ダイアログで、次のいずれかの操作を実行できます。  
   
     -   保留中の変更を元に戻し、サーバーから最新のバージョンを再び読み込む場合は、 **[最新]** を選択し、 **[適用]** をクリックします。  
   

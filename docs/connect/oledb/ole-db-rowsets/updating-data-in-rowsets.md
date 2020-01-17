@@ -1,6 +1,6 @@
 ---
-title: 行セットのデータの更新 |Microsoft Docs
-description: SQL Server の OLE DB ドライバーを使用して行セット内のデータを更新しています
+title: 行セット内のデータを更新する |Microsoft Docs
+description: OLE DB Driver for SQL Server を使用した行セットのデータの更新
 ms.custom: ''
 ms.date: 06/14/2018
 ms.prod: sql
@@ -17,13 +17,12 @@ helpviewer_keywords:
 - data updates [SQL Server], OLE DB
 author: pmasl
 ms.author: pelopes
-manager: craigg
-ms.openlocfilehash: 5d04dd365c3c25a91373c0d23a4acaaf77d204e3
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e19128d6defa2c154cc8bddbcc4bcaa761b58a2b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47809910"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68015339"
 ---
 # <a name="updating-data-in-rowsets"></a>行セット内のデータの更新
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -32,9 +31,9 @@ ms.locfileid: "47809910"
 
   SQL Server 用の OLE DB ドライバーでは、コンシューマーが [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] のデータを含む変更可能な行セットを更新するときに、該当するデータが更新されます。 コンシューマーが **IRowsetChange** インターフェイスまたは **IRowsetUpdate** インターフェイスのいずれかのサポートを要求すると、変更可能な行セットが作成されます。  
   
- すべて OLE DB Driver for SQL Server が変更可能な行セットの使用[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]行セットをサポートするカーソル。 行セット プロパティ DBPROP_LOCKMODE は、カーソルでの [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] のコンカレンシー制御動作を変更し、更新可能な行セット内の行をフェッチする動作や、その行セット内のデータの整合性に関するエラーを生成する動作を決定します。  
+ SQL Server 変更可能な行セットのすべての[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] OLE DB ドライバーは、カーソルを使用して行セットをサポートします。 行セット プロパティ DBPROP_LOCKMODE は、カーソルでの [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] のコンカレンシー制御動作を変更し、更新可能な行セット内の行をフェッチする動作や、その行セット内のデータの整合性に関するエラーを生成する動作を決定します。  
   
- OLE DB Driver for SQL Server では前に、または更新後の行の同期をサポートします。  
+ OLE DB Driver for SQL Server では、更新前または更新後の行の同期がサポートされています。  
   
 > [!NOTE]  
 >  IRowChange::SetColumns を使用して、行オブジェクトの 1 つ以上の名前付き列の値を設定できます。  

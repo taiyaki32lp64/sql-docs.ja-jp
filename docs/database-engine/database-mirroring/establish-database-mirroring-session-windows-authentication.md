@@ -1,6 +1,7 @@
 ---
-title: データベース ミラーリング セッションの確立 - Windows 認証 | Microsoft Docs
-ms.custom: ''
+title: データベース ミラーリングの設定 (Windows 認証)
+description: SQL Server Management Studio を使用して、Windows 認証でデータベース ミラーリング セッションを設定する方法について説明します。
+ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: high-availability
@@ -12,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 7cb418d6-dce1-4a0d-830e-9c5ccfe3bd72
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: a33e5f09ee0bda2bb1967b90902e47663f1846be
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: f59dc7745f63b208b1a2a55361913a6eb290e08e
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52522321"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75253581"
 ---
 # <a name="establish-database-mirroring-session---windows-authentication"></a>データベース ミラーリング セッションの確立 - Windows 認証
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -57,13 +57,13 @@ ms.locfileid: "52522321"
     > [!IMPORTANT]  
     >  エンドポイントを作成すると、データベース ミラーリング セキュリティ構成ウィザードでは、常に Windows 認証が使用されます。 証明書ベースの認証でウィザードを使用する前に、各サーバー インスタンスで証明書を使用するようにミラーリング エンドポイントを構成しておく必要があります。 また、ウィザードの **[サービス アカウント]** ダイアログ ボックスのフィールドはすべて空のままにしておく必要があります。 証明書を使用するデータベース ミラーリング エンドポイントの作成については、「[CREATE ENDPOINT &#40;Transact-SQL&#41;](../../t-sql/statements/create-endpoint-transact-sql.md)」をご覧ください。  
   
-6.  必要に応じて、動作モードを変更します。 特定の動作モードの可用性は、ミラーリング監視サーバーの TCP アドレスを指定したかどうかに依存します。 次のオプションがあります。  
+6.  必要に応じて、動作モードを変更します。 特定の動作モードの可用性は、ミラーリング監視サーバーの TCP アドレスを指定したかどうかに依存します。 次のようなオプションがあります。  
   
     |オプション|ミラーリング監視サーバー|説明|  
     |------------|--------------|-----------------|  
     |**[高パフォーマンス (非同期)]**|Null (存在しても使用されませんが、セッションにクォーラムが必要になります)|最適なパフォーマンスを提供するために、ミラー データベースが常にプリンシパル データベースから多少遅延されます。完全に時間差がなくなることはありません。 ただし、データベース間の時間差は、通常はわずかです。 パートナーの損失による影響は次のとおりです。<br /><br /> ミラー サーバー インスタンスが使用できなくなった場合は、引き続きプリンシパル サーバー インスタンスが使用されます。<br /><br /> プリンシパル サーバー インスタンスが使用できなくなると、ミラー サーバー インスタンスは停止しますが、セッションにミラーリング監視サーバーがない場合 (推奨) やミラーリング監視サーバーがミラー サーバーに接続されている場合、ミラー サーバーはウォーム スタンバイとしてアクセスできます。つまり、データベース所有者は、ミラー サーバー インスタンスにサービスを強制できます (データ損失の可能性があります)。<br /><br /> <br /><br /> 詳細については、「 [データベース ミラーリング セッション中の役割の交代 &#40;SQL Server&#41;](../../database-engine/database-mirroring/role-switching-during-a-database-mirroring-session-sql-server.md)をダウンロードしてください。|  
-    |**[自動フェールオーバーを伴わない高い安全性 (同期)]**|いいえ|コミットされているすべてのトランザクションは、ミラー サーバー上のディスクに書き込まれることが保証されています。<br /><br /> パートナーが相互に接続され、データベースが同期されると、手動フェールオーバーを開始できます。<br /><br /> パートナーの損失による影響は次のとおりです。<br /><br /> ミラー サーバー インスタンスが使用できなくなった場合は、引き続きプリンシパル サーバー インスタンスが使用されます。<br /><br /> プリンシパル サーバー インスタンスが使用できなくなると、ミラー サーバー インスタンスは停止しますが、ウォーム スタンバイとしてアクセスできます。データベース所有者は、ミラー サーバー インスタンスにサービスを強制できます (データ損失の可能性があります)。<br /><br /> <br /><br /> 詳細については、「 [データベース ミラーリング セッション中の役割の交代 &#40;SQL Server&#41;](../../database-engine/database-mirroring/role-switching-during-a-database-mirroring-session-sql-server.md)のすべてのエディションで使用できるわけではありません。|  
-    |**[自動フェールオーバーを伴う高い安全性 (同期)]**|指定あり (必須)|コミットされているすべてのトランザクションは、ミラー サーバー上のディスクに書き込まれることが保証されています。<br /><br /> 自動フェールオーバーをサポートするミラーリング監視サーバー インスタンスを含めることによって、可用性は最大限に高まります。 **[自動フェールオーバーを伴う高い安全性 (同期)]** オプションを選択できるのは、最初にミラーリング監視サーバーのアドレスを指定した場合のみです。<br /><br /> パートナーが相互に接続され、データベースが同期されると、手動フェールオーバーを開始できます。<br /><br /> ミラーリング監視サーバーが存在する場合、パートナーの損失による影響は次のとおりです。<br /><br /> プリンシパル サーバー インスタンスが使用できなくなった場合、自動フェールオーバーが発生します。 ミラー サーバー インスタンスはプリンシパル サーバー インスタンスの役割に切り替わり、ミラー データベースがプリンシパル データベースとして提供されます。<br /><br /> ミラー サーバー インスタンスが使用できなくなった場合は、引き続きプリンシパル サーバー インスタンスが使用されます。<br /><br /> <br /><br /> 詳細については、「 [データベース ミラーリング セッション中の役割の交代 &#40;SQL Server&#41;](../../database-engine/database-mirroring/role-switching-during-a-database-mirroring-session-sql-server.md)をダウンロードしてください。<br /><br /> **&#42;&#42; 重要 &#42;&#42;** ミラーリング監視サーバーが切断された場合、データベースを使用できるようにするには、パートナーが相互に接続されている必要があります。 詳細については、「[クォーラム: データベースの可用性にミラーリング監視サーバーが与える影響 &#40;Database Mirroring&#41;](../../database-engine/database-mirroring/quorum-how-a-witness-affects-database-availability-database-mirroring.md)」を参照してください。|  
+    |**[自動フェールオーバーを伴わない高い安全性 (同期)]**|いいえ|コミットされているすべてのトランザクションは、ミラー サーバー上のディスクに書き込まれることが保証されています。<br /><br /> パートナーが相互に接続され、データベースが同期されると、手動フェールオーバーを開始できます。<br /><br /> パートナーの損失による影響は次のとおりです。<br /><br /> ミラー サーバー インスタンスが使用できなくなった場合は、引き続きプリンシパル サーバー インスタンスが使用されます。<br /><br /> プリンシパル サーバー インスタンスが使用できなくなると、ミラー サーバー インスタンスは停止しますが、ウォーム スタンバイとしてアクセスできます。データベース所有者は、ミラー サーバー インスタンスにサービスを強制できます (データ損失の可能性があります)。<br /><br /> <br /><br /> 詳細については、「 [データベース ミラーリング セッション中の役割の交代 &#40;SQL Server&#41;](../../database-engine/database-mirroring/role-switching-during-a-database-mirroring-session-sql-server.md)をダウンロードしてください。|  
+    |**[自動フェールオーバーを伴う高い安全性 (同期)]**|指定あり (必須)|コミットされているすべてのトランザクションは、ミラー サーバー上のディスクに書き込まれることが保証されています。<br /><br /> 自動フェールオーバーをサポートするミラーリング監視サーバー インスタンスを含めることによって、可用性は最大限に高まります。 **[自動フェールオーバーを伴う高い安全性 (同期)]** オプションを選択できるのは、最初にミラーリング監視サーバーのアドレスを指定した場合のみです。<br /><br /> パートナーが相互に接続され、データベースが同期されると、手動フェールオーバーを開始できます。<br /><br /> ミラーリング監視サーバーが存在する場合、パートナーの損失による影響は次のとおりです。<br /><br /> プリンシパル サーバー インスタンスが使用できなくなった場合、自動フェールオーバーが発生します。 ミラー サーバー インスタンスはプリンシパル サーバー インスタンスの役割に切り替わり、ミラー データベースがプリンシパル データベースとして提供されます。<br /><br /> ミラー サーバー インスタンスが使用できなくなった場合は、引き続きプリンシパル サーバー インスタンスが使用されます。<br /><br /> <br /><br /> 詳細については、「 [データベース ミラーリング セッション中の役割の交代 &#40;SQL Server&#41;](../../database-engine/database-mirroring/role-switching-during-a-database-mirroring-session-sql-server.md)をダウンロードしてください。<br /><br /> **&#42;&#42; 重要 &#42;&#42;** ミラーリング監視サーバーが切断された場合、データベースを使用できるようにするには、パートナーが相互に接続されている必要があります。 詳細については、「[クォーラム: データベースの可用性にミラーリング監視サーバーが与える影響 (データベース ミラーリング)](../../database-engine/database-mirroring/quorum-how-a-witness-affects-database-availability-database-mirroring.md)」を参照してください。|  
   
 7.  次のすべての条件に当てはまる場合は、 **[ミラーリングの開始]** をクリックしてミラーリングを開始します。  
   
@@ -84,7 +84,7 @@ ms.locfileid: "52522321"
  [データベース ミラーリング セッション中の役割の交代 &#40;SQL Server&#41;](../../database-engine/database-mirroring/role-switching-during-a-database-mirroring-session-sql-server.md)   
  [ミラーリングのためのミラー データベースの準備 &#40;SQL Server&#41;](../../database-engine/database-mirroring/prepare-a-mirror-database-for-mirroring-sql-server.md)   
  [データベース プロパティ &#40;[ミラーリング] ページ&#41;](../../relational-databases/databases/database-properties-mirroring-page.md)   
- [データベース ミラーリング セッションを一時停止または再開する &#40;SQL Server&#41;](../../database-engine/database-mirroring/pause-or-resume-a-database-mirroring-session-sql-server.md)   
+ [データベース ミラーリング セッションを一時停止または再開する &#40;Transact-SQL&#41;](../../database-engine/database-mirroring/pause-or-resume-a-database-mirroring-session-sql-server.md)   
  [TRUSTWORTHY プロパティを使用するようにミラー データベースを設定する方法 &#40;Transact-SQL&#41;](../../database-engine/database-mirroring/set-up-a-mirror-database-to-use-the-trustworthy-property-transact-sql.md)   
  [データベース ミラーリングを削除する &#40;SQL Server&#41;](../../database-engine/database-mirroring/remove-database-mirroring-sql-server.md)   
  [役割の交代後のログインとジョブの管理 &#40;SQL Server&#41;](../../sql-server/failover-clusters/management-of-logins-and-jobs-after-role-switching-sql-server.md)   

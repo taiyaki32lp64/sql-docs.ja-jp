@@ -1,5 +1,5 @@
 ---
-title: 3.5 ドライバーをドライバー 3.8 にアップグレードする |Microsoft Docs
+title: 3\.5 ドライバーをドライバー 3.8 にアップグレードする |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: ffba36ac-d22e-40b9-911a-973fa9e10bd3
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: df2fa8df9af317bd76b2d7f10e50f7cc937e4660
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 97b100b1ade97e1e88cf1421f09a7723412c8b76
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47731040"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67915497"
 ---
 # <a name="upgrading-a-35-driver-to-a-38-driver"></a>ドライバー 3.5 をドライバー 3.8 にアップグレードする
 このトピックでは、ガイドラインと、ODBC 3.8 ドライバーに、ODBC 3.5 ドライバーをアップグレードするための考慮事項を提供します。  

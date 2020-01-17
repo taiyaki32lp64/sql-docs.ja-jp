@@ -1,20 +1,20 @@
 ---
-title: Hadoop 内の外部データにアクセスするように PolyBase を構成する | Microsoft Docs
-ms.custom: ''
-ms.date: 09/24/2018
+title: 外部データへのアクセス:Hadoop - PolyBase
+ms.date: 12/13/2019
 ms.prod: sql
-ms.reviewer: ''
 ms.technology: polybase
 ms.topic: conceptual
-author: rothja
-ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 38cdc41469112ed1bfab44e801e5e448b034a9c8
-ms.sourcegitcommit: 01e17c5f1710e7058bad8227c8011985a9888d36
+author: MikeRayMSFT
+ms.author: mikeray
+ms.reviewer: ''
+monikerRange: '>= sql-server-2016 || =sqlallproducts-allversions'
+ms.custom: seo-dt-2019
+ms.openlocfilehash: 1e5a45aa66d7d49f2c7499e0dcf975e5ebcb5b78
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/14/2019
-ms.locfileid: "56265249"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75255440"
 ---
 # <a name="configure-polybase-to-access-external-data-in-hadoop"></a>Hadoop 内の外部データにアクセスするように PolyBase を構成する
 
@@ -22,7 +22,7 @@ ms.locfileid: "56265249"
 
 この記事では、SQL Server インスタンス上で PolyBase を使用して、Hadoop 上の外部データに対してクエリを実行する方法について説明します。
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>前提条件
 
 - PolyBase をインストールしていない場合は、「[PolyBase のインストール](polybase-installation.md)」をご覧ください。 インストールに関する記事では、前提条件について説明します。
 
@@ -64,7 +64,7 @@ ms.locfileid: "56265249"
    - SQL Server PolyBase Data Movement Service  
    - SQL Server PolyBase エンジン  
   
-   ![services.msc での PolyBase サービスの停止と開始](../../relational-databases/polybase/media/polybase-stop-start.png "services.msc での PolyBase サービスの停止と開始")  
+   ![services.msc で PolyBase サービスを停止および開始する](../../relational-databases/polybase/media/polybase-stop-start.png "services.msc で PolyBase サービスを停止および開始する")  
   
 ## <a id="pushdown"></a> プッシュダウン計算を有効にする  
 
@@ -73,12 +73,12 @@ ms.locfileid: "56265249"
 1. SQL Server のインストール パスで **yarn-site.xml** というファイルを検索します。 通常、このパスは次のとおりです。  
 
    ```xml  
-   C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\MSSQL\Binn\PolyBaseHadoopconf  
+   C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\MSSQL\Binn\Polybase\Hadoop\conf\  
    ```  
 
 1. Hadoop コンピューターで、Hadoop 構成ディレクトリ内の対応するファイルを検索します。 このファイル内の構成キー yarn.application.classpath の値をコピーします。  
   
-1. SQL Server コンピューターで、 **yarn.site.xml ファイル** 内の **yarn.application.classpath** プロパティを検索します。 Hadoop コンピューターからこの値要素に値を貼り付けます。  
+1. SQL Server コンピューターで、**yarn.site.xml ファイル** 内の **yarn.application.classpath** プロパティを検索します。 Hadoop コンピューターからこの値要素に値を貼り付けます。  
   
 1. すべての CDH 5.X バージョンで、yarn.site.xml file の最後か mapred-site.xml file に mapreduce.application.classpath 構成パラメーターを追加する必要があります。 HortonWorks では、yarn.application.classpath 構成内にこれらの構成が含まれます。 例については、「[PolyBase の構成](../../relational-databases/polybase/polybase-configuration.md)」を参照してください。
 
@@ -174,7 +174,7 @@ ORDER BY CarSensor_Data.Speed DESC
 OPTION (FORCE EXTERNALPUSHDOWN);   -- or OPTION (DISABLE EXTERNALPUSHDOWN)  
 ```  
 
-### <a name="importing-data"></a>インポート、データ  
+### <a name="importing-data"></a>データのインポート  
 
 次のクエリでは、外部データを SQL Server にインポートします。 この例では、高速走行しているドライバーのデータを、さらに詳細な分析を実行するために SQL Server にインポートします。 パフォーマンスを向上させるために、列ストア テクノロジが活用されています。  
 
@@ -229,7 +229,7 @@ SSMS では、外部テーブルが別のフォルダー **[外部テーブル]*
   
 ![SSMS での PolyBase オブジェクト](media/polybase-management.png)  
 
-## <a name="next-steps"></a>次の手順
+## <a name="next-steps"></a>次のステップ
 
 次の記事を参照して、PolyBase を使用して監視するための方法をさらに調べます。
 

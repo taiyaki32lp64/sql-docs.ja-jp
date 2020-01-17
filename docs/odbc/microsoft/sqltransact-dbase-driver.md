@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 159ca21a-ccc4-45e2-97ca-2a9387efa7df
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: d29adab062e11be3e6a74b604a6e70453d5856ae
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 3f05be059bc374b7b8236453e7c46feed4b8a6bb
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47769523"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67948944"
 ---
 # <a name="sqltransact-dbase-driver"></a>SQLTransact (dBASE ドライバー)
 > [!NOTE]  

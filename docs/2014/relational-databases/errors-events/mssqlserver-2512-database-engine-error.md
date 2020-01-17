@@ -13,11 +13,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 4b964e1a3958ed57251b2b5cccc8ec4dfc13f9eb
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48118078"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62869212"
 ---
 # <a name="mssqlserver2512"></a>MSSQLSERVER_2512
     
@@ -30,7 +30,7 @@ ms.locfileid: "48118078"
 |イベント ソース|MSSQLSERVER|  
 |コンポーネント|SQLEngine|  
 |シンボル名|DBCC_DUPLICATE_KEYS|  
-|メッセージ テキスト|テーブル エラー : オブジェクト ID O_ID、インデックス ID I_ID、パーティション ID PN_ID、アロケーション ユニット ID A_ID (型 TYPE)。 ページ P_ID1 スロット SLOT1 とページ P_ID2 スロット SLOT2 でキーが重複しています。|  
+|メッセージ テキスト|テーブル エラー:オブジェクト ID O_ID、インデックス ID I_ID、パーティション ID PN_ID、アロケーション ユニット ID A_ID (型 TYPE) です。 ページ P_ID1 スロット SLOT1 とページ P_ID2 スロット SLOT2 でキーが重複しています。|  
   
 ## <a name="explanation"></a>説明  
  `uniqueifiers` を含めて、示されている 2 つのスロットのキーが同じです。  

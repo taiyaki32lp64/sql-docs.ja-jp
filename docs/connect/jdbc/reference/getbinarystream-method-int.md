@@ -1,5 +1,5 @@
 ---
-title: getBinaryStream (int) メソッド |Microsoft Docs
+title: getBinaryStream (int) メソッドMicrosoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: de22a6c4-1ba3-4ed0-91a2-bf235c2ceec3
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: ddd2f46d67285d95150f185319e0fb327d34e8dd
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e0add171861f2ea9e021b9f9342968baf1601557
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47826800"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67953707"
 ---
 # <a name="getbinarystream-method-int"></a>getBinaryStream (int) メソッド
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -47,7 +46,7 @@ public java.io.InputStream getBinaryStream(int columnIndex)
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- この getBinaryStream メソッドは、java.sql.ResultSet インターフェイスの getBinaryStream メソッドによって指定されます。  
+ この getBinaryStream メソッドは、java.sql.ResultSet インターフェイスの getBinaryStream メソッドで規定されています。  
   
  このメソッドを使用できる [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] データ型は、binary、varbinary、varbinary(max)、および image だけです。 他のデータ型で使用すると、例外がスローされます。  
   

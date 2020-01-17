@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - Table Analysis tools
@@ -15,12 +14,12 @@ ms.assetid: 54d7b4ce-7b79-407a-985c-aa655ad19280
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 672b68a1fda1013fc3ed46f9da1175ec038a8ffe
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: df6622abc3a507d917aefd2a8a5a1bf9505a2622
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52415559"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66062259"
 ---
 # <a name="analyze-key-influencers-table-analysis-tools-for-excel"></a>主要な影響元の分析 (Excel 用のテーブル分析ツール)
   ![リボンの [分析の主要な影響元ボタン](media/tat-aki.gif "リボンの分析の主要な影響元] ボタン")  

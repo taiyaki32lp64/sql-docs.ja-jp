@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: f417efd4-8c71-4f81-bc9c-af13bb4b88ad
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: bb3351abb75827c3eac7f48687823ffeed76986c
-ms.sourcegitcommit: 2e8783e6bedd9597207180941be978f65c2c2a2d
+ms.openlocfilehash: 625c6134c91a9b452b8df2b7e235b78126c1354e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/19/2019
-ms.locfileid: "54405612"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68026921"
 ---
 # <a name="sysdmdbuncontainedentities-transact-sql"></a>sys.dm_db_uncontained_entities (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -86,7 +85,7 @@ LEFT JOIN sys.objects AS SO
     ON UE.major_id = SO.object_id;  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [包含データベース](../../relational-databases/databases/contained-databases.md)  
   
   

@@ -12,17 +12,20 @@ f1_keywords:
 helpviewer_keywords:
 - Expression Builder dialog box
 ms.assetid: 4717ce33-bd4e-44bc-81e0-002de075b4d1
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: 9898ec238e8548f55f07b27bdca1fc512c55a413
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 885e45267e7527a63f04facd630b2ec72f8a00f8
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47804320"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71297608"
 ---
 # <a name="expression-builder"></a>[式ビルダー]
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   **[式ビルダー]** ダイアログ ボックスには、変数を一覧表示したり、 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 式の言語に含まれる関数、型キャスト、および演算子への組み込み参照を提供するグラフィカル ユーザー インターフェイスが用意されています。このグラフィカル ユーザー インターフェイスを使用して、プロパティ式の作成および編集や、変数の値を設定する式の作成を行えます。  
   
  プロパティ式とは、プロパティに割り当てられる式です。 式が評価されると、式の評価結果を使用してプロパティが動的に更新されます。 同様に、変数内で式を使用することにより、式の評価結果で変数値を更新することができます。  
@@ -37,7 +40,7 @@ ms.locfileid: "47804320"
   
  プロパティ式と式の作成の詳細については、「[パッケージでプロパティ式を使用する](../../integration-services/expressions/use-property-expressions-in-packages.md)」と「[Integration Services (SSIS) の式](../../integration-services/expressions/integration-services-ssis-expressions.md)」を参照してください。  
   
-## <a name="options"></a>[変数]  
+## <a name="options"></a>オプション  
   
 |項目|定義|  
 |----------|----------------|  
@@ -49,8 +52,8 @@ ms.locfileid: "47804320"
   
 ## <a name="see-also"></a>参照  
  [[式] ページ](../../integration-services/expressions/expressions-page.md)   
- [プロパティ式エディター](../../integration-services/expressions/property-expressions-editor.md)   
- [Integration Services &#40;SSIS&#41; の変数](../../integration-services/integration-services-ssis-variables.md)   
+ [[プロパティ式エディター]](../../integration-services/expressions/property-expressions-editor.md)   
+ [Integration Services (SSIS) の変数](../../integration-services/integration-services-ssis-variables.md)   
  [システム変数](../../integration-services/system-variables.md)  
   
   

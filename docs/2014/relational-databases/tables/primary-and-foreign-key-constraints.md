@@ -16,16 +16,16 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 45d4cd390e0369d8289ed9e58de01b7a02f752c5
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52770194"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68196745"
 ---
 # <a name="primary-and-foreign-key-constraints"></a>主キー制約と外部キー制約
   主キーと外部キーは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] テーブル内のデータに整合性を適用するために使用できる 2 種類の制約です。 これらは重要なデータベース オブジェクトです。  
   
- このトピックの内容は次のとおりです。  
+ このトピックは次のセクションで構成されます。  
   
  [主キー制約](../tables/primary-and-foreign-key-constraints.md#PKeys)  
   

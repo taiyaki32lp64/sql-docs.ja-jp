@@ -14,14 +14,13 @@ f1_keywords:
 ms.assetid: 09830897-cc10-46b8-95f5-e0e9681b668c
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 9e10bb43295df9fac711792f65ed22e4b55a1605
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 3ef1d3001078b4f1217bad60646d28a26319d80c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47628920"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68016244"
 ---
 # <a name="table-column-properties-sql-server-management-studio"></a>テーブル列のプロパティ (SQL Server Management Studio)
 [!INCLUDE[tsql-appliesto-ss2016-all-md](../../includes/tsql-appliesto-ss2016-all-md.md)]
@@ -32,9 +31,9 @@ ms.locfileid: "47628920"
 >  テーブルをレプリケーション用にパブリッシュする場合は、 [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメント [ALTER TABLE](../../t-sql/statements/alter-table-transact-sql.md) か [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 管理オブジェクト (SMO) を使用して、スキーマを変更する必要があります。 テーブル デザイナーまたはデータベース ダイアグラム デザイナーを使用してスキーマを変更するとき、テーブルはいったん削除されてから再作成されます。 パブリッシュされたオブジェクトは削除できないので、スキーマの変更は失敗します。  
   
  **全般**  
- 展開すると、 **[オブジェクト名]**、 **[Null を許容]**、 **[データ型]**、 **[既定値またはバインド]**、 **[長さ]**、 **[有効桁数]**、 **[小数点以下桁数]** が表示されます。  
+ 展開すると、 **[オブジェクト名]** 、 **[Null を許容]** 、 **[データ型]** 、 **[既定値またはバインド]** 、 **[長さ]** 、 **[有効桁数]** 、 **[小数点以下桁数]** が表示されます。  
   
- **名前**  
+ **[名前]**  
  選択した列の名前を表示します。  
   
  **[Null を許容]**  
@@ -80,7 +79,7 @@ ms.locfileid: "47628920"
  この列を説明するテキストを表示します。 説明を編集するには、プロパティを選択し、プロパティ値の右側にある省略記号 ([...]) をクリックします。次に、 **[説明のプロパティ]** ダイアログ ボックスで説明を編集します。  
   
  **決定的**  
- 選択した列のデータ型を明確に決定できるかどうかが表示されます   
+ 選択した列のデータ型を明確に決定できるかどうかが表示されます  
   
  **[DTS パブリッシュ済み]**  
  列が SSIS によりパブリッシュされているかどうかが表示されます ([データ変換サービスは非推奨](https://msdn.microsoft.com/library/cc707786(v=sql.130).aspx#Anchor_0))。 
@@ -100,7 +99,7 @@ ms.locfileid: "47628920"
  **[統計的セマンティクス]**  
  選択されている列に対する統計的セマンティック インデックスを有効にするかどうかを選択します。 詳細については、「[セマンティック検索 &#40;SQL Server&#41;](../../relational-databases/search/semantic-search-sql-server.md)」を参照してください。  
   
- **[統計的セマンティクス]** を選択する前に **[言語]** を選択した場合、選択した言語にセマンティック言語モデルが関連付けられていなければ、**[統計的セマンティクス]** オプションは **[いいえ]** に設定され、変更できません。 **[言語]** を選択する前に **[統計的セマンティクス]** オプションで **[はい]** を選択した場合、 **[言語]** 列で使用できる言語は、セマンティック言語モデルでサポートされているものだけに制限されます。  
+ **[統計的セマンティクス]** を選択する前に **[言語]** を選択した場合、選択した言語にセマンティック言語モデルが関連付けられていなければ、 **[統計的セマンティクス]** オプションは **[いいえ]** に設定され、変更できません。 **[言語]** を選択する前に **[統計的セマンティクス]** オプションで **[はい]** を選択した場合、 **[言語]** 列で使用できる言語は、セマンティック言語モデルでサポートされているものだけに制限されます。  
   
  **[SQL Server 以外のサブスクライバーがある]**  
  列を [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]サブスクライバー以外のサブスクライバーにレプリケートするかどうかを示します。  

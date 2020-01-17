@@ -4,28 +4,27 @@ ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 f1_keywords:
 - sql12.rtp.rptdesigner.components.f1
 ms.assetid: 0c34311d-05d6-4bd2-b452-545fa95f8e7f
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 9c8646e1fda1b36408276ec61272240b78bea74f
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: 2c696b87a8c8cf4688e24a0e3177948d339d7443
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56286330"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66105057"
 ---
 # <a name="report-parts-in-report-designer-ssrs"></a>レポート デザイナーでのレポート パーツ (SSRS)
   レポート デザイナーで、プロジェクトのテーブル、グラフ、および他のレポート アイテムを作成した後、それらを *レポート パーツ* として、レポート サーバーまたはレポート サーバーと統合されている SharePoint サイトにパブリッシュできます。これにより、自分や他のユーザーが、それらのレポート パーツを別のレポートで再利用できるようになります。  
   
  通常、レポート パーツはレポート デザイナーおよびレポート ビルダーで同じように機能します。 基本的な機能については、次を参照してください。[レポート パーツ&#40;レポート ビルダーおよび SSRS&#41; ](../report-parts-report-builder-and-ssrs.md)で、[レポート ビルダーに関するドキュメント](https://go.microsoft.com/fwlink/?LinkId=154494)msdn.microsoft.com します。  
   
- ただし、レポート デザイナーでのレポート パーツの機能の仕方には、大きく異なる点があります。 主な違いはワークフローです。 レポート ビルダーでは、コラボレーションによる作成を有効にします。レポート パーツを作成し、それを発行します。 別のユーザーがそのパーツを再利用して変更し、再パブリッシュすることができます。 レポート デザイナーでは、パブリッシュは一方向です。レポート デザイナーでは、レポート パーツをパブリッシュすることができ、再利用することができます。 しかし、既存のレポート パーツを、レポート デザイナーでレポートに再利用することはできません。 このトピックでは、レポート パーツの概要について説明した後、これらの違いについて詳述します。  
+ ただし、レポート デザイナーでのレポート パーツの機能の仕方には、大きく異なる点があります。 主な違いはワークフローです。 レポート ビルダーでは、コラボレーションによる作成が可能です。つまり、あるユーザーがレポート パーツを作成してパブリッシュすると、 別のユーザーがそのパーツを再利用して変更し、再パブリッシュすることができます。 レポート デザイナーでは、パブリッシュは一方向です。つまり、あるユーザーがレポート デザイナーからレポート パーツをパブリッシュすることができ、別のユーザーはそれを再利用することができます。 しかし、既存のレポート パーツを、レポート デザイナーでレポートに再利用することはできません。 このトピックでは、レポート パーツの概要について説明した後、これらの違いについて詳述します。  
   
 ##  <a name="ComponentWorkflow"></a> レポート パーツ パブリッシュのライフ サイクル  
  ![rs_ComponentCreation](../media/rs-componentcreation.gif "rs_ComponentCreation")  

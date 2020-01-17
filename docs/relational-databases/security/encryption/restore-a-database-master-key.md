@@ -9,15 +9,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - database master key [SQL Server], importing
 ms.assetid: 16897cc5-db8f-43bb-a38e-6855c82647cf
-author: aliceku
-ms.author: aliceku
-manager: craigg
-ms.openlocfilehash: 4e0e8afe9c46d6d1f4c5382152de8a0f66ac6e9e
-ms.sourcegitcommit: fa2f85b6deeceadc0f32aa7f5f4e2b6e4d99541c
+author: jaszymas
+ms.author: jaszymas
+ms.openlocfilehash: cf48b449fc10f0f6837c86768878a77f0727594f
+ms.sourcegitcommit: 39ea690996a7390e3d13d6fb8f39d8641cd5f710
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/03/2019
-ms.locfileid: "53997524"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "74957372"
 ---
 # <a name="restore-a-database-master-key"></a>データベース マスター キーの復元
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -51,7 +50,7 @@ ms.locfileid: "53997524"
 3. [標準] ツール バーの **[新しいクエリ]** をクリックします。  
   
 4. 次の例をコピーしてクエリ ウィンドウに貼り付け、 **[実行]** をクリックします。  
-  
+
     ```sql
     -- Restores the database master key of the AdventureWorks2012 database.  
     USE AdventureWorks2012;  

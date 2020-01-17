@@ -10,15 +10,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - FileTables [SQL Server], accessing files with T-SQL
 ms.assetid: 3c4a5ffb-c521-4696-99cb-2b03cffc9c02
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: 622bbe1c2d2d4f564ad6fff72fee4e286287a8f2
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: MikeRayMSFT
+ms.author: mikeray
+ms.openlocfilehash: c86ab8b3f29699e807c61b571832c106ab235710
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47844500"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68018893"
 ---
 # <a name="access-filetables-with-transact-sql"></a>Transact SQL を使用した FileTable へのアクセス
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

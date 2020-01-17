@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 05/24/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - Analysis Services deployments, Synchronize Database Wizard
@@ -16,12 +15,12 @@ ms.assetid: 6aeff68d-8470-43fb-a3ed-a4b9685332c2
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 3b80a13d61e1ddb1187f8114f756484dd608ad7b
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 0a561b348b30afcbfe5305681f56e4f8314fa510
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53352167"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66072850"
 ---
 # <a name="synchronize-analysis-services-databases"></a>Analysis Services データベースの同期
   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] に付属しているデータベースの同期機能は、同期元サーバー上のデータベースから同期先サーバー上のデータベースにデータおよびメタデータをコピーすることによって、2 つの [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] データベースを同一にします。 データベースの同期機能は、次のタスクを達成するために使用します。  
@@ -123,7 +122,7 @@ ms.locfileid: "53352167"
      **[サイズ (MB)]**  
      パーティションのサイズ (MB) が表示されます。  
   
-5.  必要に応じて、リモート パーティションの場所を変更します。**[リモート パーティションの場所を指定]** ページでは、同期元サーバー上の指定したデータベースによって管理されているリモート パーティションを同期するかどうかを決定し、選択したリモート パーティションを格納する同期先の [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] インスタンスおよびデータベースを指定します。  
+5.  必要に応じて、リモート パーティションの場所を変更します。 **[リモート パーティションの場所を指定]** ページでは、同期元サーバー上の指定したデータベースによって管理されているリモート パーティションを同期するかどうかを決定し、選択したリモート パーティションを格納する同期先の [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] インスタンスおよびデータベースを指定します。  
   
     > [!NOTE]  
     >  このページは、同期元の [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] インスタンスの指定されたデータベースによって 1 つ以上のリモート パーティションが管理されている場合にのみ表示されます。  

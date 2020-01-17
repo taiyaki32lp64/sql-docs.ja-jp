@@ -12,21 +12,20 @@ helpviewer_keywords:
 ms.assetid: 8102932a-88b3-49d8-bf7a-c766f54878c0
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: e0ae7b8eb0468dd401009ef58c83b87606b0679a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: da74bbb64a76f6c3ff6c55754798b975dab83826
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47628610"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68003333"
 ---
 # <a name="sqlgetfunctions-visual-foxpro-odbc-driver"></a>SQLGetFunctions (Visual FoxPro ODBC ドライバー)
 > [!NOTE]  
 >  このトピックでには、Visual FoxPro ODBC ドライバー固有の情報が含まれています。 この関数の詳細については、該当するトピックを参照してください。 [ODBC API リファレンス](../../odbc/reference/syntax/odbc-api-reference.md)します。  
   
- サポート: 完全な  
+ サポート:[完全]  
   
- レベル 1 の ODBC API 準拠:  
+ ODBC API 準拠:レベル 1  
   
  サポートされているすべての関数の場合は TRUE を返します。  
   

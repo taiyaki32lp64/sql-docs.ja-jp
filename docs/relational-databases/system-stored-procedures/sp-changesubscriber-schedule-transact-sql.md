@@ -1,5 +1,5 @@
 ---
-title: sp_changesubscriber_schedule (TRANSACT-SQL) |Microsoft Docs
+title: sp_changesubscriber_schedule (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -15,18 +15,17 @@ helpviewer_keywords:
 ms.assetid: ff84e8e2-d496-482c-b23e-38a6626596e6
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 83edeb0c94276e10528b05bc5a1cd8d9474d07aa
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: 22ecb1601108562607d1fdc550daaa945fe72910
+ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54127912"
+ms.lasthandoff: 08/03/2019
+ms.locfileid: "68770733"
 ---
 # <a name="spchangesubscriberschedule-transact-sql"></a>sp_changesubscriber_schedule (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
-  サブスクライバーのディストリビューション エージェントまたはマージ エージェントのスケジュールを変更します。 このストアド プロシージャは、任意のデータベース上のパブリッシャー側で実行されます。  
+  サブスクライバーのディストリビューション エージェントまたはマージ エージェントのスケジュールを変更します。 このストアドプロシージャは、パブリッシャー側で任意のデータベースに対して実行されます。  
   
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -49,59 +48,46 @@ sp_changesubscriber_schedule [ @subscriber = ] 'subscriber', [ @agent_type = ] t
 ```  
   
 ## <a name="arguments"></a>引数  
- [  **@subscriber=**] **'**_サブスクライバー_**'**  
- サブスクライバーの名前です。 *サブスクライバー*は**sysname**します。 サブスクライバーの名前は、データベース内で一意であること、既存の名前でないこと、NULL でないことが必要です。  
+`[ @subscriber = ] 'subscriber'`サブスクライバーの名前を指定します。 *サブスクライバー*は**sysname**です。 サブスクライバーの名前はデータベース内で一意である必要があり、存在しない場合は NULL にすることはできません。  
   
- [  **@agent_type=**]*型*  
- エージェントの種類を指定します。 *型*は**smallint**、既定値は**0**します。 **0**配布エージェントを示します。 **1**マージ エージェントを示します。  
+`[ @agent_type = ] type`エージェントの種類を示します。 *種類*は**smallint**,、既定値は**0**です。 **0**はディストリビューションエージェントを示します。 **1**はマージエージェントを示します。  
   
- [  **@frequency_type=**] *frequency_type*  
- ディストリビューション タスクをスケジュールに組み込む頻度を指定します。 *frequency_type*は**int**、既定値は**64**します。 スケジュール列は 10 列あります。  
+`[ @frequency_type = ] frequency_type`ディストリビューションタスクをスケジュールする頻度を指定します。 *frequency_type*は**int**,、既定値は**64**です。 スケジュール列は10個あります。  
   
- [  **@frequency_interval=**] *frequency_interval*  
- 設定した頻度に適用される値は、 *frequency_type*します。 *frequency_interval*は**int**、既定値は**1**します。  
+`[ @frequency_interval = ] frequency_interval`*Frequency_type*によって設定された頻度に適用される値を指定します。 *frequency_interval*は**int**,、既定値は**1**です。  
   
- [  **@frequency_relative_interval=**] *frequency_relative_interval*  
- ディストリビューション タスクを実施する日を指定します。 *frequency_relative_interval*は**int**、既定値は**1**します。  
+`[ @frequency_relative_interval = ] frequency_relative_interval`ディストリビューションタスクの日付を指定します。 *frequency_relative_interval*は**int**,、既定値は**1**です。  
   
- [  **@frequency_recurrence_factor=**] *frequency_recurrence_factor*  
- 使用される定期実行係数*frequency_type*します。 *frequency_recurrence_factor*は**int**、既定値は**0**します。  
+`[ @frequency_recurrence_factor = ] frequency_recurrence_factor`*Frequency_type*によって使用される定期実行係数を示します。 *frequency_recurrence_factor*は**int**,、既定値は**0**です。  
   
- [  **@frequency_subday=**] *frequency_subday*  
- 定義した期間にスケジュールを組み直す頻度を分単位で指定します。 *frequency_subday*は**int**、既定値は**4**します。  
+`[ @frequency_subday = ] frequency_subday`定義した期間にスケジュールを再設定する頻度を分単位で指定します。 *frequency_subday*は**int**,、既定値は**4**です。  
   
- [  **@frequency_subday_interval=**] *frequency_subday_interval*  
- 間隔は、 *frequency_subday*します。 *frequency_subday_interval*は**int**、既定値は**5**します。  
+`[ @frequency_subday_interval = ] frequency_subday_interval`*Frequency_subday*の間隔を指定します。 *frequency_subday_interval*は**int**,、既定値は**5**です。  
   
- [  **@active_start_time_of_day=**] *active_start_time_of_day*  
- ディストリビューション タスクを最初にスケジュール設定する時刻を指定します。 *active_start_time_of_day*は**int**、既定値は**0**します。  
+`[ @active_start_time_of_day = ] active_start_time_of_day`ディストリビューションタスクを最初にスケジュール設定する時刻を示します。 *active_start_time_of_day*は**int**,、既定値は**0**です。  
   
- [  **@active_end_time_of_day=**] *active_end_time_of_day*  
- ディストリビューション タスクのスケジュール設定を停止する時刻を指定します。 *active_end_time_of_day*は**int**、既定値は**235959**、つまり、午後 11時 59分: 59 午後 11 時 59 分 59 秒を意味します。  
+`[ @active_end_time_of_day = ] active_end_time_of_day`ディストリビューションタスクのスケジュール設定を停止する時刻を設定します。 *active_end_time_of_day*は**int**,、既定値は**235959**,、11:59:59 pm 午後 11 時 59 分 59 秒を意味します。  
   
- [  **@active_start_date=**] *active_start_date*  
- ディストリビューション タスクを最初にスケジュール設定する日付を YYYYMMDD 形式で指定します。 *active_start_date*は**int**、既定値は**0**します。  
+`[ @active_start_date = ] active_start_date`ディストリビューションタスクを最初にスケジュール設定する日付を YYYYMMDD 形式で指定します。 *active_start_date*は**int**,、既定値は**0**です。  
   
- [  **@active_end_date=**] *active_end_date*  
- ディストリビューション タスクのスケジュール設定を停止する日付を YYYYMMDD 形式で指定します。 *active_end_date*は**int**、既定値は**99991231**、9999 年 12 月 31 日。  
+`[ @active_end_date = ] active_end_date`ディストリビューションタスクのスケジュール設定を停止する日付を YYYYMMDD 形式で指定します。 *active_end_date*は**int**,、既定値は**99991231**,、9999年12月31日を意味します。  
   
- [ **@publisher**=] **'**_パブリッシャー_**'**  
- 以外を指定[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]パブリッシャーです。 *パブリッシャー*は**sysname**、既定値は NULL です。  
+`[ @publisher = ] 'publisher'`[!INCLUDE[msCoName](../../includes/msconame-md.md)] 以外[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のパブリッシャーを指定します。 *publisher*は**sysname**で、既定値は NULL です。  
   
 > [!NOTE]  
->  *パブリッシャー*でアーティクルのプロパティを変更する場合、使用されませんが、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]パブリッシャーです。  
+>  パブリッシャーでアーティクルの[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]プロパティを変更する場合は、パブリッシャーを使用しないでください。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  **0** (成功) または**1** (失敗)  
   
 ## <a name="remarks"></a>コメント  
- **sp_changesubscriber_schedule**はあらゆる種類のレプリケーションで使用します。  
+ **sp_changesubscriber_schedule**は、すべての種類のレプリケーションで使用されます。  
   
 ## <a name="permissions"></a>アクセス許可  
- メンバーのみ、 **sysadmin**固定サーバー ロールが実行できる**sp_changesubscriber_schedule**します。  
+ **Sp_changesubscriber_schedule**を実行できるのは、 **sysadmin**固定サーバーロールのメンバーだけです。  
   
-## <a name="see-also"></a>参照  
- [sp_addsubscriber_schedule &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addsubscriber-schedule-transact-sql.md)   
+## <a name="see-also"></a>関連項目  
+ [sp_addsubscriber_schedule &#40;transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-addsubscriber-schedule-transact-sql.md)   
  [システム ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

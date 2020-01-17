@@ -10,13 +10,12 @@ ms.technology: connectivity
 ms.topic: reference
 author: pmasl
 ms.author: pelopes
-manager: craigg
-ms.openlocfilehash: 5b678ee8bdd709583359fd2c6c9574676fe1c83f
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: 452ec857c43f40fcff8727ea652afcaba3950e90
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53210041"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67994756"
 ---
 # <a name="send-data-to-filestream---isequentialstream-bound-to-icommandtext"></a>FILESTREAM へのデータの送信 - ICommandText にバインドされた ISequentialStream
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -25,10 +24,10 @@ ms.locfileid: "53210041"
 
   このサンプルでは、ICommandText パラメーターにバインドされた ISequentialStream インターフェイスを使用して、4 MB ～ 4 GB のデータを filestream 列に送ります。  
   
- Filestream 機能の詳細については、次を参照してください。 [FILESTREAM のサポート](../../../oledb/features/filestream-support.md)します。  
+ Filestream 機能の詳細については、「 [filestream のサポート](../../../oledb/features/filestream-support.md)」を参照してください。  
   
 ## <a name="example"></a>例  
- コンパイルして、このサンプルを実行する前に、FILESTREAM のサポートを有効にする ([Enable and Configure FILESTREAM](../../../../relational-databases/blob/enable-and-configure-filestream.md))。  
+ このサンプルをコンパイルして実行する前に、FILESTREAM のサポートを有効にします ([filestream の有効化と構成](../../../../relational-databases/blob/enable-and-configure-filestream.md))。  
   
  INCLUDE 環境変数に、msoledbsql.h が保存されているディレクトリが含まれていることを確認します。  
   

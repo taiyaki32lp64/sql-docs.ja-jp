@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 4417e57c-31dd-475e-8fe9-eab00a459c80
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: db7dc5482347ad9b7f194b3c9c8c6cd7fc3f9f6a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 16e7e4d133fdfafd7a005c19b0a2943b2ea9ef6d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47677430"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68086454"
 ---
 # <a name="sqlfetchscroll-cursor-library"></a>SQLFetchScroll (カーソル ライブラリ)
 > [!IMPORTANT]  
@@ -62,7 +61,7 @@ ms.locfileid: "47677430"
 |カーソルの種類|フェッチの種類|  
 |-----------------|-----------------|  
 |順方向専用|SQL_FETCH_NEXT|  
-|静的|SQL_FETCH_NEXT<br /><br /> SQL_FETCH_PRIOR<br /><br /> SQL_FETCH_FIRST<br /><br /> SQL_FETCH_LAST<br /><br /> SQL_FETCH_RELATIVE<br /><br /> SQL_FETCH_ABSOLUTE<br /><br /> SQL_FETCH_BOOKMARK|  
+|スタティック|SQL_FETCH_NEXT<br /><br /> SQL_FETCH_PRIOR<br /><br /> SQL_FETCH_FIRST<br /><br /> SQL_FETCH_LAST<br /><br /> SQL_FETCH_RELATIVE<br /><br /> SQL_FETCH_ABSOLUTE<br /><br /> SQL_FETCH_BOOKMARK|  
   
 ## <a name="errors"></a>エラー  
  ときに**SQLFetchScroll**呼びますへの呼び出しの 1 つ**SQLFetch** SQL_ERROR、ライブラリのカーソル処理の進行状況を次のように返します。 次の手順が完了すると、カーソル ライブラリによって処理が続行されます。  

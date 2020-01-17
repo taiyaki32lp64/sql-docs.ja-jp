@@ -1,5 +1,5 @@
 ---
-title: sp_helparticledts (TRANSACT-SQL) |Microsoft Docs
+title: sp_helparticledts (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -15,18 +15,17 @@ helpviewer_keywords:
 ms.assetid: cd1aed60-e056-4ff3-86ee-62b19433d890
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 022a2c8df27afdd3a9766e447f4030cdede4af4f
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: a9c489a08291aea3d1c50a6418dc8e1e853dce12
+ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52813194"
+ms.lasthandoff: 08/03/2019
+ms.locfileid: "68771074"
 ---
-# <a name="sphelparticledts-transact-sql"></a>sp_helparticledts (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+# <a name="sphelparticledts-transact-sql"></a>sp_helparticledts (Transact-sql)
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual Basic を使って変換サブスクリプションを作成するときに使用する、正しいカスタム タスク名に関する情報を取得します。 このストアド プロシージャは、パブリッシャー側でパブリケーション データベースについて実行されます。  
+  Visual Basic を使用して[!INCLUDE[msCoName](../../includes/msconame-md.md)]変換サブスクリプションを作成するときに使用する、正しいカスタムタスク名に関する情報を取得するために使用します。 このストアド プロシージャは、パブリッシャー側でパブリケーション データベースについて実行されます。  
   
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -38,31 +37,29 @@ sp_helparticledts [ @publication = ] 'publication', [ @article = ] 'article'
 ```  
   
 ## <a name="arguments"></a>引数  
- [  **@publication =**] **'***パブリケーション***'**  
- パブリケーションの名前です。 *パブリケーション*は**sysname**、既定値はありません。  
+`[ @publication = ] 'publication'`パブリケーションの名前を指定します。 *パブリケーション* は **sysname** 、既定値はありません。  
   
- [  **@article=**] **'***記事***'**  
- パブリケーション内のアーティクルの名前を指定します。 *記事*は**sysname**、既定値はありません。  
+`[ @article = ] 'article'`パブリケーション内のアーティクルの名前を指定します。 *アーティクル*は**sysname**で、既定値はありません。  
   
 ## <a name="result-sets"></a>結果セット  
   
 |列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
-|**pre_script_ignore_error_task_name**|**sysname**|スナップショット データをコピーする前に発生するプログラミング タスクのタスク名。 スクリプト エラーが発生しても、プログラムはそのまま実行されます。|  
-|**pre_script_task_name**|**sysname**|スナップショット データをコピーする前に発生するプログラミング タスクのタスク名。 エラーが発生すると、プログラムの実行は中止します。|  
-|**transformation_task_name**|**sysname**|データ ドリブン クエリ タスクを使用する場合の、プログラミング タスクのタスク名。|  
+|**pre_script_ignore_error_task_name**|**sysname**|スナップショットデータがコピーされる前に発生するプログラミングタスクのタスク名。 スクリプト エラーが発生しても、プログラムはそのまま実行されます。|  
+|**pre_script_task_name**|**sysname**|スナップショットデータがコピーされる前に発生するプログラミングタスクのタスク名。 プログラムの実行はエラー発生時に停止します。|  
+|**transformation_task_name**|**sysname**|データドリブンクエリタスクを使用するときのプログラミングタスクのタスク名。|  
 |**post_script_ignore_error_task_name**|**sysname**|スナップショット データをコピーした後に発生するプログラミング タスクのタスク名。 スクリプト エラーが発生しても、プログラムはそのまま実行されます。|  
-|**post_script_task_name**|**sysname**|スナップショット データをコピーした後に発生するプログラミング タスクのタスク名。 エラーが発生すると、プログラムの実行は中止します。|  
+|**post_script_task_name**|**sysname**|スナップショット データをコピーした後に発生するプログラミング タスクのタスク名。 プログラムの実行はエラー発生時に停止します。|  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  **0** (成功) または**1** (失敗)  
   
 ## <a name="remarks"></a>コメント  
- **sp_helparticledts**スナップショット レプリケーションおよびトランザクション レプリケーションで使用されます。  
+ **sp_helparticledts**は、スナップショットレプリケーションおよびトランザクションレプリケーションで使用します。  
   
- レプリケーション データ変換サービス (DTS) プログラム内のタスクに名前を付ける場合は、レプリケーション エージェントで要求される名前付け規則に従う必要があります。 SQL 実行タスクなどのカスタム タスクの場合、その名前は、アーティクル名、プレフィックス、およびオプションの部分で構成される連結文字列です。 コードを記述するときには、この結果セットで正しいタスク名を確認できます。  
+ レプリケーション データ変換サービス (DTS) プログラム内のタスクに名前を付ける場合は、レプリケーション エージェントで要求される名前付け規則に従う必要があります。 SQL 実行タスクなどのカスタムタスクの場合、名前は、アーティクル名、プレフィックス、および省略可能な部分で構成される連結文字列になります。 コードを記述するときに、タスク名がわからない場合、結果セットには使用する必要があるタスク名が示されます。  
   
 ## <a name="permissions"></a>アクセス許可  
- メンバーのみ、 **sysadmin**固定サーバー ロールおよび**db_owner**固定データベース ロールが実行できる**sp_helparticledts**します。  
+ **Sp_helparticledts**を実行できるのは、 **sysadmin**固定サーバーロールおよび**db_owner**固定データベースロールのメンバーだけです。  
   
   

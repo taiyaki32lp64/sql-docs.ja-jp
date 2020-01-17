@@ -1,81 +1,80 @@
 ---
 title: よく寄せられる質問
 titleSuffix: Azure Data Studio
-description: Azure Data Studio についてよく寄せられる質問 (FAQ)。
-ms.custom: seodec18
-ms.date: 09/24/2018
+description: Azure Data Studio に関してよく寄せられる質問 (FAQ) について説明します。
 ms.prod: sql
 ms.technology: azure-data-studio
-ms.reviewer: alayu; sstein
 ms.topic: conceptual
-author: stevestein
-ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 129e7de66e896e1f452c5d68fc4891d9cc5eafa3
-ms.sourcegitcommit: 189a28785075cd7018c98e9625c69225a7ae0777
-ms.translationtype: MT
+author: markingmyname
+ms.author: maghan
+ms.reviewer: alayu; sstein
+ms.custom: seodec18
+ms.date: 09/24/2018
+ms.openlocfilehash: 1916a10a468fdc44c021e410eb1521cb7c219d58
+ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53030333"
+ms.lasthandoff: 07/25/2019
+ms.locfileid: "67959548"
 ---
 # <a name="includeazure-data-studioincludesname-sosmd-faq"></a>[!INCLUDE[Azure Data Studio](../includes/name-sos.md)] FAQ
 
-## <a name="what-is-azure-data-studio"></a>Azure Data Studio とは何ですか。
+## <a name="what-is-azure-data-studio"></a>Azure Data Studio とは?
 
-Azure Data Studio は新しいオープン ソース、オンプレミスでの Azure のデータのファミリを使用してデータのプロフェッショナル向けのクロスプラット フォーム対応のデスクトップ環境とクラウドの Windows、MacOS、Linux でのデータ プラットフォームです。 SQL Operations Studio のプレビューの名前でリリースされていた、Azure Data Studio プランの最新のエディターを使用したエクスペリエンス処理が非常に高速の IntelliSense、コード スニペット、ソース管理の統合、および統合ターミナルを。 これは設計されていますを考慮して、データ プラットフォームのユーザーとでクエリの結果セットとカスタマイズ可能なダッシュ ボードのグラフ作成で構築されました。
+Azure Data Studio とは、Windows、MacOS、Linux 上でオンプレミス プラットフォームおよびクラウド データ プラットフォームの Azure Data ファミリを使用するデータ プロフェッショナルを対象にした、新しいオープン ソースのクロスプラットフォーム デスクトップ環境です。 SQL Operations Studio というプレビュー名で以前にリリースされていた Azure Data Studio では、非常に高速な IntelliSense、コード スニペット、ソース管理の統合、統合されたターミナルを含む最新のエディター エクスペリエンスが提供されています。 これは、データ プラットフォームのユーザーを念頭に置いて設計されており、クエリ結果セットのグラフ化機能とカスタマイズ可能なダッシュボードが組み込まれています。
 
-調査によれば、ユーザーに費やす桁違い処理 SQL Server Management Studio で、他のタスクよりもクエリの編集に多くの時間。 そのため、Azure Data Studio は製品には、省略可能な拡張機能として利用できるその他のエクスペリエンスでは、最も使用される機能に深く集中に設計されています。 これにより、すべてのユーザーに最も頻繁に使用するワークフローをその環境をカスタマイズできます。
+調査によると、ユーザーはクエリの編集作業に、SQL Server Management Studio でのその他の作業よりもはるかに多くの時間を費やしています。 そのため、Azure Data Studio は、最も使用されている機能に重点を置いて設計されていて、オプションの拡張機能として利用できるようにしたエクスペリエンスが製品に追加されています。 これにより、すべてのユーザーは最も頻繁に使用しているワークフローに合わせて自分の環境をカスタマイズできます。
 
 
-## <a name="how-much-does-azure-data-studio-cost"></a>Azure Data Studio のコストはどれくらいか。
+## <a name="how-much-does-azure-data-studio-cost"></a>Azure Data Studio にはどれくらいのコストがかかりますか?
 
-Azure Data Studio は、プライベートまたは商用の使用の無料です。
+Azure Data Studio は、私的利用または商用利用で無料です。
 
-## <a name="who-should-use-azure-data-studio"></a>Azure データの Studio を使用している必要があります。
+## <a name="who-should-use-azure-data-studio"></a>どのような人が Azure Data Studio を使用すべきですか
 
-Azure Data Studio だれでも使用できます。 ただし、データベース開発者、データベース管理者、システム管理者、および独立系ソフトウェア ベンダーによって実行されるタスクを簡略化するために設計されています。
+だれでも Azure Data Studio を使用できます。 ただし、データベース開発者、データベース管理者、システム管理者、および独立系ソフトウェア ベンダーによって実行されるタスクを簡素化するように設計されています。
 
-## <a name="what-can-i-do-with-azure-data-studio"></a>Azure Data Studio では、どうすればでしょうか。
+## <a name="what-can-i-do-with-azure-data-studio"></a>Azure Data Studio で何ができますか?
 
-Data Studio の azure は、Visual Studio Code の上に構築されており、軽量、SQL Server、Azure SQL Database、Azure SQL DW を使用する場合、キーボードのフォーカスを最新のコード ワークフロー エクスペリエンス。 Azure のデータ Studio では、コア エクスペリエンスには、毎日複数タブのウィンドウ、豊富な SQL エディター、IntelliSense、キーワード補完、コード スニペットとコード ナビゲーションおよびソース管理の統合 (Git などの組み込みの機能を簡単に依存します。TFS) で変更します。 オンデマンド クエリを実行、表示 & テキスト、JSON、または Excel として結果を保存、データを編集、整理 &、お気に入りのデータベース接続を管理でき、使い慣れたオブジェクト ブラウジング操作でデータベース オブジェクトを参照できます。
+Azure Data Studio は Visual Studio Code の上に構築されていて、SQL Server、Azure SQL Database、Azure SQL DW を操作する際に、キーボードに重点を置いた簡易な最新のコード ワークフロー エクスペリエンスを利用できます。 Azure Data Studio では、ご自分が日々依存しているコア エクスペリエンスが、組み込み機能によってシンプルで使いやすくなっています。その組み込み機能には、複数のタブ ウィンドウ、充実した SQL エディター、IntelliSense、キーワード補完、コード スニペットとコード ナビゲーション、ソース管理の統合 (Git と TFS) などがあります。 オンデマンドでのクエリの実行、テキスト、JSON、または Excel としての結果の表示と保存、データの編集、お気に入りのデータベース接続の整理と管理、馴染みのあるオブジェクト閲覧エクスペリエンスでのデータベース オブジェクトの参照を行うことができます。
 
-お気に入りのコマンド ライン ツールを使用して (たとえば、Bash、PowerShell、sqlcmd、bcp、psql、ssh で接続)、Azure Data Studio ユーザー インターフェイス内で直接統合ターミナル ウィンドウでします。 簡単に生成し、作成を実行し、開発またはテスト目的でデータベースのコピーを作成するデータベース オブジェクトのスクリプトを挿入します。 スマートなコード スニペットと豊富なグラフィカルなエクスペリエンスを新しいデータベースとデータベース オブジェクト (テーブル、ビュー、ストアド プロシージャ、ユーザー、ログイン、ロールなど) などを作成または既存のデータベース オブジェクトを更新すると、生産性が向上します。 使用して豊富なカスタマイズ可能なダッシュ ボードを監視し、オンプレミスのデータベースで、Azure または任意のクラウドでのパフォーマンスのボトルネックを迅速にトラブルシューティングします。
+Azure Data Studio ユーザー インターフェイス内の [統合ターミナル] ウィンドウにあるお気に入りのコマンドライン ツール (Bash、PowerShell、sqlcmd、bcp、psql、ssh など) を使用できます。 開発目的またはテスト目的でご利用のデータベースのコピーを作成するために、データベース オブジェクトに対して CREATE および INSERT スクリプトを簡単に生成および実行することができます。 データベースおよびデータベース オブジェクト (テーブル、ビュー、ストアド プロシージャ、ユーザー、ログイン、ロールなど) を新規に作成したり、既存のデータベース オブジェクトを更新したりする場合に、スマートなコード スニペットや充実したグラフィカル エクスペリエンスを使用することで生産性を高めることができます。 充実したカスタマイズ可能なダッシュボードを使用することで、オンプレミスのデータベースや、Azure または任意のクラウド内のデータベースでのパフォーマンスに関するボトルネックを監視し、そのトラブルシューティングを迅速に行うことができます。
 
-Azure Data Studio は、バックアップし、復元、データベースを一貫したエクスペリエンスを提供します。 SQL Server Always-On 可用性グループの計画的なサポートにより、することが簡単に構成、監視、および、障害発生時にミッション クリティカルな SQL Server データベースと迅速にセカンダリ データベースへのフェールオーバーの Ag のトラブルシューティングを行います。 Azure Data Studio は、任意のオペレーティング システムで任意のデータベースの開発運用ライフ サイクルで生産性を向上させる設計されています。 結果としてを常にコントロール、およびリスクを減らすより速く、問題を解決および継続的に顧客の期待を超える値を提供します。
+Azure Data Studio では、ご利用のデータベースをバックアップおよび復元するための一貫したエクスペリエンスが提供されています。 SQL Server Always On 可用性グループの計画的なサポートにより、ご利用のミッションクリティカルな SQL Server データベース用の AG の構成、監視、トラブルシューティングを容易に行うことができ、障害発生時にはセカンダリ データベースに迅速にフェールオーバーすることができます。 Azure Data Studio は、任意のオペレーティングシステム上で選択したデータベースの DevOps ライフサイクルにおいて生産性が向上するように設計されています。 その結果、常に管理状態に置かれるので、リスクを軽減し、問題を迅速に解決し、顧客の期待を超える価値を継続的に提供することができます。
 
-## <a name="is-azure-data-studio-open-source"></a>Azure Data Studio のオープン ソースのですか。
+## <a name="is-azure-data-studio-open-source"></a>Azure Data Studio はオープンソースですか?
 
-Azure Data Studio とそのデータ プロバイダーのソース コードは GitHub で入手できます。 (これは、Visual Studio Code に基づきます) フロント エンドの Azure Data Studio のソース コードは、ソース コードを変更し、ソフトウェアの使用がない再配布、または権利をクラウド サービスでホストを提供する使用許諾契約書で使用可能なです。 データ プロバイダーのソース コードについては、[https://github.com/Microsoft/sqltoolsservice](https://github.com/Microsoft/sqltoolsservice) から MIT ライセンスの下でご利用いただけます。
+Azure Data Studio とそのデータ プロバイダーのソース コードは、GitHub で入手できます。 フロントエンド Azure Data Studio のソースコード (Visual Studio Code に基づく) は、ソース コード EULA の下で利用できます。この EULA では、ソフトウェアを変更および使用する権利が提供されますが、ソフトウェアを再配布したりクラウド サービス内でホストしたりすることはできません。 データ プロバイダーのソース コードは、MIT ライセンス ([https://github.com/Microsoft/sqltoolsservice](https://github.com/Microsoft/sqltoolsservice)) の下で利用できます。
 
-## <a name="do-we-plan-to-open-source-ssms"></a>オープン ソース SSMS 予定ですか。
+## <a name="do-we-plan-to-open-source-ssms"></a>オープン ソースの SSMS を計画していますか?
 
-No. ただし、次世代の複数 os と GUI の CLI ツールはオープン ソースです。 たとえば、VS Code、mssql スクリプト作成者および msql CLI mssql 拡張機能は、GitHub 上のすべてのオープン ソースです。 Azure Data Studio のソース コードは GitHub で入手できます。  
+不可。 ただし、次世代のマルチ OS CLI および GUI ツールはオープンソースです。 たとえば、VS Code、mssql-scripter、および msql CLI の mssql 拡張機能はすべて、GitHub のオープン ソースです。 Azure Data Studio のソース コードは、GitHub で入手できます。  
 
-## <a name="now-that-there-is-azure-data-studio-does-microsoft-plan-to-deprecate-ssms-and-ssdt"></a>Azure Data Studio は、これでは Microsoft 廃止を計画する SSMS と SSDT のでしょうか。 
+## <a name="now-that-there-is-azure-data-studio-does-microsoft-plan-to-deprecate-ssms-and-ssdt"></a>Azure Data Studio があるので、Microsoft は SSMS と SSDT を廃止する予定ですか? 
 
-No. に加えて、次世代の複数 os と複数のデータベースと GUI の CLI ツールの主要な Windows ツール (SSMS、SSDT、PowerShell など) への投資を続けます。 目的の任意のプラットフォームで必要なツールを使用して自分のシナリオの選択肢をお客様に提供することです。 Azure Data Studio がより緊密にクエリの編集に関するエクスペリエンスに重点を置いて、どの調査によれば、データの開発は桁違いによって SQL Server Management Studio で最も頻繁に使用される機能です。 バックアップ、復元、エージェント ジョブの管理、およびサーバーのプロファイルなどの追加の価値の高い管理機能では、Azure Data Studio の拡張機能として入手できます。 Azure データ Studio もクロス プラットフォーム、任意のプラットフォームで作業できるようにします。 ただし、SQL Server Management Studio は引き続き広範な管理機能を提供し、プラットフォームの管理タスクの主要なツールのまま。 
+不可。 主力の Windows ツール (SSMS、SSDT、PowerShell) への投資は、次世代のマルチ OS とマルチ DB CLI および GUI ツールに加えて継続されます。 目標は、お客様が自身のシナリオに合わせて選択したプラットフォーム上で希望するツールを選択できるようにすることです。 Azure Data Studio は、クエリの編集とデータ開発に関するエクスペリエンスにより重点を置いています。これらは、調査によれば、SQL Server Management Studio において桁違いに最も使用度の高い機能です。 Azure Data Studio では、拡張機能として、バックアップ、復元、エージェント ジョブ管理、サーバー プロファイリングなどのその他の重要度の高い管理機能を使用することもできます。 Azure Data Studio はクロスプラットフォームでもあるので、ユーザーは自分の選んだプラットフォームで作業を行うことができます。 ただし、SQL Server Management Studio では引き続き最も広範な管理機能が提供しており、これはプラットフォーム管理タスク用の主力ツールであり続けています。 
 
-## <a name="when-should-i-use-azure-data-studio-vs-sql-server-management-studio"></a>ときに SQL Server Management Studio の Azure データ Studio を使用して vs すればよいですか?
+## <a name="when-should-i-use-azure-data-studio-vs-sql-server-management-studio"></a>Azure Data Studio と SQL Server Management Studio は、どのような場合に使用する必要がありますか?
 
-*場合は、Azure Data Studio を使用します。*
+*Azure Data Studio は次のような場合に使用します。*
 
-- ほとんどの編集、またはクエリの実行時間を費やしてください。
-- すばやくグラフし、結果セットを視覚化する機能を必要があります。
-- Sqlcmd または Powershell を使用して、統合ターミナルを使用して、ほとんどの管理タスクを実行できます。
-- ウィザードのエクスペリエンスを最小限に抑える必要があります。
-- Deep 管理またはプラットフォームに関連する構成を行う必要はありません。
-- MacOS または Linux で実行する必要があります。
+- ほとんどの時間をクエリの編集や実行に使用している。
+- 結果セットをすばやくグラフ化して視覚化する機能が必要である。
+- sqlcmd または Powershell を使用して統合ターミナル経由でほとんどの管理タスクを実行することができる。
+- ウィザードのエクスペリエンスが最小限必要である。
+- 詳細な管理またはプラットフォームに関連する構成を行う必要はない。
+- macOS または Linux 上で実行する必要がある。
 
-*場合は、SQL Server Management Studio を使用します。*
+*SQL Server Management Studio は次の場合に使用します。*
 
-- データベース管理タスクには、ほとんどの時間を費やしてください。
-- 複雑な管理やプラットフォームの構成を行っています。
-- ユーザー管理、脆弱性評価、セキュリティ機能の構成など、セキュリティの管理を行っています。
-- 作成する必要がありますのパフォーマンス チューニング アドバイザーとダッシュ ボードを使用します。
-- データベース ダイアグラムおよびテーブル デザイナーを使用します。
-- Dacpac のインポート/エクスポートを行います。
-- 登録済みサーバーへのアクセスを必要があります。
-- Sqlcmd モードを使用して、ライブ クエリ統計、クライアント統計を作成します。
+- ほとんどの時間をデータベース管理タスクに費やしている。
+- 複雑な管理またはプラットフォームの構成を行っている。
+- ユーザー管理、脆弱性評価、セキュリティ機能の構成など、セキュリティ管理を行っている。
+- パフォーマンス チューニング アドバイザーとダッシュボードを使用する必要がある。
+- データベース ダイアグラムとテーブル デザイナーを使用する。
+- DACPAC のインポート/エクスポートを行っている。
+- 登録済みサーバーへのアクセスが必要である。
+- Sqlcmd モード、ライブクエリ統計、またはクライアント統計情報を利用する。
 
 ## <a name="feature-comparison"></a>機能の比較
 
@@ -90,14 +89,14 @@ No. に加えて、次世代の複数 os と複数のデータベースと GUI �
 |オブジェクト エクスプローラー|はい|はい|
 |オブジェクト スクリプト作成|はい|はい|
 |プロジェクト システム|はい||
-|テーブルから選択します|はい|はい|
+|テーブルからの選択|はい|はい|
 |ソース コード管理|はい||
-|作業ウィンドウ|はい||
+|タスク ウィンドウ|はい||
 |テーマ|はい||
 |ダーク モード|はい||
-|Azure リソース エクスプ ローラー|[プレビュー]||
+|Azure Resource Explorer|プレビュー||
 |スクリプト生成ウィザード||はい
-|DACPAC のインポート||はい|
+|DACPAC のインポート/エクスポート||はい|
 |オブジェクトのプロパティ||はい|
 |テーブル デザイナー (Table Designer)||はい|
 
@@ -106,17 +105,17 @@ No. に加えて、次世代の複数 os と複数のデータベースと GUI �
 |機能|Azure Data Studio|SSMS|
 |:---|:---|:---|
 |グラフ ビューアー|はい||
-|CSV、JSON、XLSX に結果をエクスポートします。|はい||
+|結果を CSV、JSON、.XLSX にエクスポート|はい||
 |IntelliSense|はい|はい|
 |スニペット|はい|はい|
-|プランを表示します。|[プレビュー]|はい|
+|プラン表示|プレビュー|はい|
 |クライアント統計||はい|
 |ライブ クエリ統計||はい|
 |[クエリ オプション]||はい|
 |[結果をファイルに出力]||はい|
 |[結果をテキストで表示]||はい|
 |空間ビューアー||はい|
-|SQLCMD||はい|
+|sqlcmd||はい|
 |T-SQL デバッガー||はい|
 
 ### <a name="operating-system-support"></a>オペレーティング システムのサポート
@@ -127,36 +126,36 @@ No. に加えて、次世代の複数 os と複数のデータベースと GUI �
 |macOS|はい||
 |Linux|はい||
 
-### <a name="data-engineering"></a>データ エンジニア リング
+### <a name="data-engineering"></a>Data Engineering
 
 |機能|Azure Data Studio|SSMS|
 |:---|:---|:---|
-|外部データ ウィザード|[プレビュー]||
-|HDFS の統合|[プレビュー]||
-|ノートブック|[プレビュー]||
+|外部データウィザード|プレビュー||
+|HDFS 統合|プレビュー||
+|ノートブック|プレビュー||
 
 ### <a name="database-administration"></a>データベースの管理
 
 |機能|Azure Data Studio|SSMS|
 |:---|:---|:---|
 |バックアップ/復元|はい|はい|
-|フラット ファイルのインポート|[プレビュー]|はい|
-|SQL エージェント|[プレビュー]|はい|
-|SQL Profiler|[プレビュー]|はい|
+|フラット ファイルのインポート|プレビュー|はい|
+|SQL エージェント|プレビュー|はい|
+|SQL Profiler|プレビュー|はい|
 |Always On||はい|
 |Always Encrypted||はい|
-|データのコピー ウィザード||はい|
-|チューニング アドバイザーのデータ||はい|
+|データ ウィザードのコピー||はい|
+|データ チューニング アドバイザー||はい|
 |データベース ダイアグラム||はい|
-|エラー ログの表示||はい|
+|エラー ログ ビューアー||はい|
 |メンテナンス プラン||はい|
-|マルチ サーバー クエリ||はい|
+|マルチサーバー クエリ||はい|
 |ポリシー ベースの管理||はい|
 |PolyBase||はい|
 |クエリ ストア||はい|
 |[登録済みサーバー]||はい|
 |のレプリケーション||はい|
-|セキュリティの管理||はい|
+|セキュリティ管理||はい|
 |Service Broker||はい|
 |SQL Mail||はい|
 |テンプレート エクスプローラー||はい|
@@ -164,30 +163,30 @@ No. に加えて、次世代の複数 os と複数のデータベースと GUI �
 |XEvent 管理||はい|
 
 
-## <a name="azure-data-studio-is-missing-a-feature-that-is-in-ssmsssdt-will-you-add-it"></a>Azure Data Studio には、SSMS または SSDT に含まれる機能がありません。 追加されますか?
+## <a name="azure-data-studio-is-missing-a-feature-that-is-in-ssmsssdt-will-you-add-it"></a>Azure Data Studio には、SSMS/SSDT にある機能がありません。 それを追加しますか?
 
-シナリオと顧客またはビジネスのニーズによって異なります。 優先順位の参考のために、[GitHub](https://github.com/microsoft/azuredatastudio/issues) で提案してください。
+それは、シナリオと顧客/ビジネス ニーズによって決まります。 優先順位を付けるために、[GitHub](https://github.com/microsoft/azuredatastudio/issues) に提案を提出してください。
 
-## <a name="i-understand-azure-data-studio-and-the-mssql-extension-for-vs-code-are-powered-by-a-new-tools-service-that-uses-smo-apis-under-the-covers-is-smo-available-on-linux-and-macos"></a>実際には、SMO Api を使用する新しいツールのサービスを Azure Data Studio と VS Code 用 mssql 拡張機能が利用を理解しました。 SMO は、Linux と macOS で使用できるでしょうか。
+## <a name="i-understand-azure-data-studio-and-the-mssql-extension-for-vs-code-are-powered-by-a-new-tools-service-that-uses-smo-apis-under-the-covers-is-smo-available-on-linux-and-macos"></a>Azure Data Studio と VS Code 用の mssql 拡張機能は、内部的に SMO API を使用する新しいツール サービスによって強化されていると理解しています。 SMO は Linux と macOS 上で利用できますか?
 
-SMO Api はまだ Linux または macOS で使用可能な消費できる方法で。 私たちとロードマップの一部として展開する予定に Azure Data Studio 必要な .NET Core に SMO Api のサブセットを移植できます。 SQL ツールのサービスは GitHub: [ https://github.com/Microsoft/sqltoolsservice](https://github.com/Microsoft/sqltoolsservice)します。
+SMO API は、Linux または macOS に対してまだ使いやすい方法で提供されていません。 Microsoft は Azure Data Studio で必要としていて、ロードマップの一環として拡張する予定である SMO API のサブセットを .NET Core に移植済みです。 SQL Tools Service は GitHub 上の次の場所にあります: [https://github.com/Microsoft/sqltoolsservice](https://github.com/Microsoft/sqltoolsservice)。
 
-## <a name="do-you-plan-to-port-the-dacfx-apis-andor-sqlpackageexe-andor-ssdt-to-linux-and-macos"></a>DACFx Api、sqlpackage.exe、Linux と macOS に SSDT を移植する予定ですか。
+## <a name="do-you-plan-to-port-the-dacfx-apis-andor-sqlpackageexe-andor-ssdt-to-linux-and-macos"></a>DACFx API、sqlpackage.exe、SSDT を Linux や macOS に移植する予定はありますか?
 
-長期的なロードマップ上にあります。 優先順位の参考のために、[GitHub](https://github.com/microsoft/azuredatastudio/issues) で提案してください。
+それは長期的なロードマップにあります。 優先順位を付けるために、[GitHub](https://github.com/microsoft/azuredatastudio/issues) に提案を提出してください。
 
-## <a name="will-sql-powershell-cmdlets-be-available-on-linux-and-macos"></a>SQL PowerShell コマンドレットは Linux と macOS で提供されますか。
+## <a name="will-sql-powershell-cmdlets-be-available-on-linux-and-macos"></a>SQL PowerShell コマンドレットは、Linux および macOS 上で利用できますか?
 
-SQL PowerShell は、現在 PowerShell ギャラリーで入手でき、Linux 上の SQL を含む任意の場所で実行されている SQL Server で作業するために Windows で使用できます。 Linux および macOS への SQL PowerShell コマンドレットの提供はロードマップに含まれます。 優先順位の参考のために、[GitHub](https://github.com/microsoft/azuredatastudio/issues) で提案してください。
+SQL PowerShell は、現在 PowerShell ギャラリーで入手できます。これを Windows 上で使用すれば、Linux 上の SQL など、あらゆる場所で実行されている SQL Server を操作できます。 Linux および macOS 用の SQL PowerShell コマンドレットを提供することは、ロードマップにあります。 優先順位を付けるために、[GitHub](https://github.com/microsoft/azuredatastudio/issues) に提案を提出してください。
 
-## <a name="who-usually-uses-azure-data-studio"></a>Azure Data Studio を使用するユーザーは、通常でしょうか。
+## <a name="who-usually-uses-azure-data-studio"></a>通常、だれが Azure Data Studio を使用しますか?
 
-開発者と Dba は、Azure Data Studio のユーザーでは通常です。
+開発者と DBA が通常は、Azure Data Studio のユーザーです。
 
-## <a name="does-azure-data-studio-integrate-with-azure-sql-data-warehouse"></a>Azure Data Studio では Azure SQL Data Warehouse と統合しますか。
+## <a name="does-azure-data-studio-integrate-with-azure-sql-data-warehouse"></a>Azure Data Studio は Azure SQL Data Warehouse に統合されていますか?
 
-可能。 データ Studio の Azure SQL Data Warehouse の azure のサポートは、Azure SQL Database マネージ インスタンス、および SQL Server 2019 のビッグ データのプレビューは現在です。
+可能。 Azure SQL Data Warehouse に対する Azure Data Studio のサポートは、Azure SQL Database Managed Instance および SQL Server 2019 Big Data と共に現在プレビュー段階にあります。
 
-## <a name="why-is-azure-data-studio-important-for-the-new-version-of-sql-server"></a>Azure Data Studio が新しいバージョンの SQL Server の重要な理由
+## <a name="why-is-azure-data-studio-important-for-the-new-version-of-sql-server"></a>新しいバージョンの SQL Server にとって Azure Data Studio が重要である理由は何ですか?
 
-サポートする新しいツールが必要なように SQL Server では、ビッグ データ領域には、その機能を拡張、ユース ケースです。 そのため、Azure Data Studio は今日出荷されて、新しいプレビュー エクスペリエンスを含む最初の SQL Server ビッグ データのサポートの SQL Server のツールセットおよびリモートの SQL からデータへのアクセスする新しい外部テーブルの作成ウィザードでこれまでノートブック エクスペリエンスServer、Oracle インスタンス簡単かつ高速です。
+SQL Server ではその機能が Big Data 領域にまで拡張されているので、それらのユースケースをサポートするために新しいツールが必要とされています。 そのため、Azure Data Studio では現在、SQL Server Big Data をサポートする新しいプレビュー エクスペリエンスが出荷されています。これには、SQL Server ツールセットで初めてのノートブック エクスペリエンスや、リモート SQL Server および Oracle インスタンスからデータへのアクセスを簡単かつ迅速にする新しい [外部テーブルを作成する] ウィザードが含まれます。

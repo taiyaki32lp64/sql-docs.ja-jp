@@ -19,14 +19,13 @@ helpviewer_keywords:
 ms.assetid: f8a8ea39-5a09-4662-801e-b43519467def
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: a1ce0082f409b303136f3523eb551bd2c24f5d94
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: f5f7d4c9c6bb44d978007170abfff5a7730b028a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47731780"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68095529"
 ---
 # <a name="sysviews-transact-sql"></a>sys.views (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -39,7 +38,7 @@ ms.locfileid: "47731780"
 |**is_replicated**|**bit**|1 = ビューはレプリケートされます。|  
 |**has_replication_filter**|**bit**|1 = ビューにレプリケーション フィルターがあります。|  
 |**has_opaque_metadata**|**bit**|1 = ビューに VIEW_METADATA オプションが指定されています。 詳細については、「[CREATE VIEW &#40;Transact-SQL&#41;](../../t-sql/statements/create-view-transact-sql.md)」を参照してください。|  
-|**has_unchecked_assembly_data**|**bit**|1 = ビューに、前回の ALTER ASSEMBLY 中に定義が変更されたアセンブリに依存する、持続データが含まれています。 このデータは、DBCC CHECKDB または DBCC CHECKTABLE が次回正常に終了した後、0 にリセットされます。|  
+|**has_unchecked_assembly_data**|**bit**|1 = ビューには、前回の ALTER ASSEMBLY 中にその定義が変更されたアセンブリに依存する持続データが含まれています。 このデータは、DBCC CHECKDB または DBCC CHECKTABLE が次回正常に終了した後、0 にリセットされます。|  
 |**with_check_option**|**bit**|1 = WITH CHECK OPTION がビュー定義に指定されています。|  
 |**is_date_correlation_view**|**bit**|1 = システムによって、datetime 列間の相関関係情報を格納するビューが自動的に作成されました。 DATE_CORRELATION_OPTIMIZATION が ON に設定され、このビューの作成が有効になっています。|  
   

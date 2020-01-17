@@ -18,11 +18,11 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: ec1c7205597224e5fca27942ca25ad4e197ec0d0
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54135762"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68198412"
 ---
 # <a name="create-a-server-audit-and-server-audit-specification"></a>サーバー監査およびサーバー監査の仕様を作成する方法
   このトピックでは、 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] で [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] または [!INCLUDE[tsql](../../../includes/tsql-md.md)]を使用して、サーバー監査またはサーバー監査仕様を作成する方法について説明します。 *のインスタンスや* データベースの [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 監査 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] では、システムで発生するイベントの追跡およびログ記録が行われます。 *SQL Server Audit* オブジェクトは、監視するサーバー レベルまたはデータベース レベルのアクションおよびアクションのグループの 1 つのインスタンスを収集します。 監査は [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] インスタンス レベルで行われます。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] のインスタンスごとに複数の監査を使用できます。 *サーバー監査の仕様* オブジェクトは監査に属しています。 サーバー監査の仕様は監査ごとに 1 つ作成できます。これは、サーバー監査の仕様も監査も [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] インスタンスのスコープで作成されるためです。 詳しくは、「[SQL Server Audit &#40;データベース エンジン&#41;](sql-server-audit-database-engine.md)」を参照してください。  
@@ -65,7 +65,7 @@ ms.locfileid: "54135762"
   
 1.  オブジェクト エクスプローラーで、 **[セキュリティ]** フォルダーを展開します。  
   
-2.  **[監査]** フォルダーを右クリックし、**[新しい監査]** を選択します。  
+2.  **[監査]** フォルダーを右クリックし、 **[新しい監査]** を選択します。  
   
      **[監査の作成]** ダイアログ ボックスの **[全般]** ページでは、次のオプションを使用できます。  
   
@@ -95,7 +95,7 @@ ms.locfileid: "54135762"
      **[監査の出力先]** にファイルが指定されている場合に、監査データが書き込まれるフォルダーの場所を指定します。  
   
      **省略記号 (...)**  
-     開く、**フォルダーの検索 -**_server_name_ファイル パスを指定したり監査ファイルの書き込み先フォルダーを作成 ダイアログ ボックス。  
+     開く、**フォルダーの検索 -** _server_name_ファイル パスを指定したり監査ファイルの書き込み先フォルダーを作成 ダイアログ ボックス。  
   
      **[監査ファイルの最大限度]**  
      **[ロールオーバー ファイルの最大数]**  
@@ -124,7 +124,7 @@ ms.locfileid: "54135762"
   
 1.  オブジェクト エクスプローラーで、プラス記号をクリックして **[セキュリティ]** フォルダーを展開します。  
   
-2.  **[サーバー監査の仕様]** フォルダーを右クリックし、**[新しいサーバー監査の仕様]** を選択します。  
+2.  **[サーバー監査の仕様]** フォルダーを右クリックし、 **[新しいサーバー監査の仕様]** を選択します。  
   
      **[サーバー監査の仕様の作成]** ダイアログ ボックスで、次のオプションを使用できます。  
   

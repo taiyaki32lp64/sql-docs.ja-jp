@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.dimensiondesigner.browsertab.levelsandmembers.f1
@@ -13,18 +12,18 @@ ms.assetid: 3f61e384-5b4e-4480-a7ed-b408de2fdea7
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 9a737b79944635af1a45dd4fc51a9ef2e2967a31
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: ad602710cab83e2be25a03a4da6cce0c3407493e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48209708"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66078108"
 ---
 # <a name="level-and-members-browser-tab-dimension-designer-analysis-services---multidimensional-data"></a>レベルとメンバー ([ブラウザー] タブ、ディメンション デザイナー) (Analysis Services - 多次元データ)
   このペインを使用すると、現在選択している階層と言語のメンバーを参照できます。 参照する階層または言語を選択するには、 **ツール バー** ペインの **[階層]** および **[言語]** オプションを使用します。 ツール バー ペインの詳細については、次を参照してください。[ツールバー&#40;ブラウザー タブ、ディメンション デザイナー&#41; &#40;Analysis Services - 多次元データ&#41;](toolbar-browser-tab-dimension-designer-analysis-services-multidimensional-data.md)します。  
   
 ## <a name="writeback-mode"></a>書き戻しモード  
- 書き戻しモードが有効な場合、このペインの機能は変わります。 選択したディメンションが書き込みが有効にする必要があります (つまり、`WriteEnabled`ディメンションのプロパティを設定する必要がありますを true に) にディメンションを展開する必要があります、[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]書き戻しモードを有効にするにはインスタンス。  
+ 書き戻しモードが有効な場合、このペインの機能は変わります。 書き戻しモードを有効にするには、選択したディメンションを書き込み可能にする (つまり、ディメンションの `WriteEnabled` プロパティを true に設定する) 必要があり、さらにディメンションを [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] インスタンスに配置する必要があります。  
   
  書き戻しモードを有効にするには、 **ツールバー** ペインで **[書き戻し]** を選択するか、 **レベルとメンバー** ペインを右クリックしてショートカット メニューから **[書き戻し]** を選択します。  
   
@@ -32,7 +31,7 @@ ms.locfileid: "48209708"
   
 |目的|実行内容|  
 |-----------|-------------|  
-|選択した階層に兄弟メンバーと子メンバーを作成する。|選択したメンバーを右クリックしてショートカット メニューを開き、兄弟メンバーを作成する場合は **[兄弟の作成]**、子メンバーを作成する場合は **[子の作成]** を選択します。|  
+|選択した階層に兄弟メンバーと子メンバーを作成する。|選択したメンバーを右クリックしてショートカット メニューを開き、兄弟メンバーを作成する場合は **[兄弟の作成]** 、子メンバーを作成する場合は **[子の作成]** を選択します。|  
 |階層の中で選択したメンバーを上または下に移動する。|選択したメンバーを適切な親メンバーまたは子メンバーにドラッグするか、 **ツール バー** ペインの **[インデント]** または **[インデント解除]** をクリックして、選択したメンバーの階層のレベルを上または下に移動します。|  
 |選択したメンバーの名前を変更する。|選択したメンバーを右クリックして **[名前の変更]** を選択するか、選択したメンバーをクリックします。|  
 |メンバーのプロパティの値を編集する。|選択したメンバーの選択したメンバー プロパティの値をダブルクリックして、値を編集します。|  

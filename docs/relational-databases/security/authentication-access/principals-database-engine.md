@@ -28,19 +28,18 @@ helpviewer_keywords:
 ms.assetid: 3f7adbf7-6e40-4396-a8ca-71cbb843b5c2
 author: VanMSFT
 ms.author: vanto
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 9bf4ae1f391a982294a14cb38bcdce879d0b2253
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: efc249be2368973bcd1f3a4692ed280c1a131ec6
+ms.sourcegitcommit: c1382268152585aa77688162d2286798fd8a06bb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47632703"
+ms.lasthandoff: 07/19/2019
+ms.locfileid: "68344600"
 ---
 # <a name="principals-database-engine"></a>プリンシパル (データベース エンジン)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
-  *プリンシパル* は、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] リソースを要求できるエンティティです。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] の承認モデルの他のコンポーネントと同様に、プリンシパルは階層内に配置できます。 プリンシパルの効力のスコープは、プリンシパルの定義のスコープ (Windows、サーバー、データベース) と、プリンシパルが分割できないアイテムであるかコレクションであるかによって異なります。 分割できないプリンシパルの例には Windows ログインがあり、コレクションであるプリンシパルの例には Windows グループがあります。 各プリンシパルには、1 つのセキュリティ識別子 (SID) があります。 このトピックは、すべてのバージョンの SQL Server に適用されますが、SQL データベースまたは SQL データ ウェアハウスではサーバー レベルのプリンシパルでいくつかの制約があります。 
+  *プリンシパル* は、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] リソースを要求できるエンティティです。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] の承認モデルの他のコンポーネントと同様に、プリンシパルは階層内に配置できます。 プリンシパルの効力のスコープは、プリンシパルの定義のスコープ (Windows、サーバー、データベース) と、プリンシパルが分割不可能かコレクションであるかによって異なります。 分割できないプリンシパルの例には Windows ログインがあり、コレクションであるプリンシパルの例には Windows グループがあります。 各プリンシパルには、1 つのセキュリティ識別子 (SID) があります。 このトピックは、すべてのバージョンの SQL Server に適用されますが、SQL データベースまたは SQL データ ウェアハウスではサーバー レベルのプリンシパルでいくつかの制約があります。 
   
 ## <a name="sql-server-level-principals"></a>SQL Server レベルのプリンシパル  
   
@@ -53,12 +52,12 @@ ms.locfileid: "47632703"
   
 ## <a name="database-level-principals"></a>データベースレベルのプリンシパル
   
-- データベース ユーザー (11 種類のユーザーがあります。 詳細については、「[CREATE USER](../../../t-sql/statements/create-user-transact-sql.md)」 (ユーザーの作成) を参照してください。)
+- データベース ユーザー (12 種類のユーザーがあります。 詳細については、「[CREATE USER](../../../t-sql/statements/create-user-transact-sql.md)」 (ユーザーの作成) を参照してください。)
 - データベース ロール
 - アプリケーション ロール
   
 ## <a name="sa-login"></a>sa ログイン  
- [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] `sa` ログインは、サーバー レベルのプリンシパルです。 このログインは、インスタンスのインストール時に既定で作成されます。 [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]より、sa の既定のデータベースは master です。 これは、以前のバージョンの [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]の動作から変更されています。 `sa` ログインは `sysadmin` 固定データベース ロールに属します。 `sa` ログインにはサーバーのすべてのアクセス許可が与えられ、制限できません。 `sa` ログインは削除できませんが、無効にすれば誰も利用できません。
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] `sa` ログインは、サーバー レベルのプリンシパルです。 このログインは、インスタンスのインストール時に既定で作成されます。 [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]より、sa の既定のデータベースは master です。 これは、以前のバージョンの [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]の動作から変更されています。 `sa` ログインは `sysadmin` 固定サーバーレベル ロールに属します。 `sa` ログインにはサーバーのすべてのアクセス許可が与えられ、制限できません。 `sa` ログインは削除できませんが、無効にすれば誰も利用できません。
 
 ## <a name="dbo-user-and-dbo-schema"></a>dbo ユーザーと dbo スキーマ
 

@@ -1,5 +1,5 @@
 ---
-title: sys.dm_db_log_stats (TRANSACT-SQL) |Microsoft Docs
+title: sys.dm_db_log_stats (Transact-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 05/17/2017
 ms.prod: sql
@@ -18,16 +18,15 @@ helpviewer_keywords:
 ms.assetid: ''
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: '>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 43e5b145122f5b2586d8eb976162afb0615f89d9
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b23eea391c7de1f02eacec7f8c8625211dfeea3d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47846320"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68004838"
 ---
-# <a name="sysdmdblogstats-transact-sql"></a>sys.dm_db_log_stats (TRANSACT-SQL)   
+# <a name="sysdm_db_log_stats-transact-sql"></a>sys.dm_db_log_stats (Transact-SQL)   
 [!INCLUDE[tsql-appliesto-2016sp2-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-2016sp2-asdb-xxxx-xxx-md.md)]
 
 データベースのトランザクション ログ ファイルに関する概要レベルの属性と情報を返します。 この情報を使用してトランザクション ログの正常性の監視と診断。   
@@ -44,7 +43,7 @@ ms.locfileid: "47846320"
 
 *database_id* | NULL | **DEFAULT**
 
-データベースの ID です。 `database_id` `int`します。 有効な値は、データベースの ID 番号`NULL`、または`DEFAULT`します。 既定値は `NULL` です。 `NULL` `DEFAULT`は現在のデータベースのコンテキストで同じ値になります。  
+データベースの ID です。 `database_id` は `int` です。 有効な値は、データベースの ID 番号`NULL`、または`DEFAULT`します。 既定値は `NULL` です。 `NULL` `DEFAULT`は現在のデータベースのコンテキストで同じ値になります。  
 組み込み関数[DB_ID](../../t-sql/functions/db-id-transact-sql.md)を指定できます。 使用する場合`DB_ID`データベース名を指定せず、現在のデータベースの互換性レベルを 90 以上にする必要があります。
 
   
@@ -100,9 +99,9 @@ FROM sys.databases AS s
 CROSS APPLY sys.dm_db_log_stats(s.database_id); 
 ```
 
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
 [動的管理ビューと動的管理関数 &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
-[データベース関連の動的管理ビュー &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/database-related-dynamic-management-views-transact-sql.md)   
+[データベース関連の動的管理ビュー &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/database-related-dynamic-management-views-transact-sql.md)   
 [sys.dm_db_log_space_usage &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-log-space-usage-transact-sql.md)   
 [sys.dm_db_log_info &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-log-info-transact-sql.md)    
   

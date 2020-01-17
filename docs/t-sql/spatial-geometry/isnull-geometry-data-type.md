@@ -14,15 +14,14 @@ dev_langs:
 helpviewer_keywords:
 - IsNull (geometry Data Type)
 ms.assetid: f95813a5-26c0-48aa-bfb8-56d2a0980788
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: 4b861d170316dbc9d66c7f8e7954910438031f1b
-ms.sourcegitcommit: 032273bfbc240fe22ac6c1f6601a14a6d99573f7
+author: MladjoA
+ms.author: mlandzic
+ms.openlocfilehash: d0b05e5d73c75e340535c3323a8219dedf5be76d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/01/2019
-ms.locfileid: "55513802"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68101233"
 ---
 # <a name="isnull-geometry-data-type"></a>IsNull (geometry データ型)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]

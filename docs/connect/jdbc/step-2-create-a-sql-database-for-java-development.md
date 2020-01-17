@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 7c9bfbc8-3ba6-491f-a7eb-380bb3d98b86
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: dab5eeefccaba484c610c923c1660b0a2c1514a8
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 91768d21b7de3bb04ab23a6cbda2d7751ed3c9ba
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47768445"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68004345"
 ---
 # <a name="step-2-create-a-sql-database-for-java-development"></a>ステップ 2: Java 開発用に SQL データベースを作成する
 [!INCLUDE[CreateDatabase](../../includes/createdatabase.md)]

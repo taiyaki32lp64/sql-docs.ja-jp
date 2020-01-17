@@ -1,5 +1,5 @@
 ---
-title: sp_check_dynamic_filters (TRANSACT-SQL) |Microsoft Docs
+title: sp_check_dynamic_filters (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -26,18 +26,17 @@ helpviewer_keywords:
 ms.assetid: dd7760db-a3a5-460f-bd97-b8d436015e19
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: b31249dda65f427ce53d3418e7a62f4bb0abf6d1
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: 82b333095adfaf50220e5d2392114e3ab74bf822
+ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54124132"
+ms.lasthandoff: 08/03/2019
+ms.locfileid: "68771287"
 ---
 # <a name="spcheckdynamicfilters-transact-sql"></a>sp_check_dynamic_filters (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
-  パブリケーションについて、パラメーター化された行フィルターのプロパティに関する情報を表示します。特に、パブリケーション用にフィルター選択されたデータ パーティションを生成するための関数についての情報や、事前計算済みパーティションをパブリケーションで使用できるかどうかを示します。 このストアド プロシージャは、パブリッシャー側でパブリケーション データベースについて実行されます。  
+  パブリケーションのパラメーター化された行フィルターのプロパティに関する情報を表示します。特に、パブリケーションに対してフィルター選択されたデータパーティションを生成するために使用される関数と、事前計算済みパーティションを使用するようにパブリケーションが適合するかどうかを示します。 このストアド プロシージャは、パブリッシャー側でパブリケーション データベースについて実行されます。  
   
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -49,36 +48,35 @@ sp_check_dynamic_filters [ @publication = ] 'publication'
 ```  
   
 ## <a name="arguments"></a>引数  
- [ **@publication**=] **'**_パブリケーション_**'**  
- パブリケーションの名前です。 *パブリケーション*は**sysname**、既定値はありません。  
+`[ @publication = ] 'publication'`パブリケーションの名前を指定します。 *パブリケーション* は **sysname** 、既定値はありません。  
   
 ## <a name="result-sets"></a>結果セット  
   
 |列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
-|**can_use_partition_groups**|**bit**|パブリケーションで事前計算済みパーティションを使用するためには場所**1**事前計算済みパーティションを使用できる、ことを意味し、 **0**が使用できないことを意味します。|  
-|**has_dynamic_filters**|**bit**|少なくとも 1 つのパラメーター化された行フィルターがパブリケーションで定義されてかどうかは、します。場所**1**は 1 つまたは複数のパラメーター化された行フィルターが存在することを意味し、 **0**動的フィルターが存在しないことを意味します。|  
-|**dynamic_filters_function_list**|**nvarchar(500)**|パブリケーション内にあるアーティクルをフィルター選択するための関数の一覧。各関数はセミコロン (;) で区切られます。|  
-|**validate_subscriber_info**|**nvarchar(500)**|パブリケーション内にあるアーティクルをフィルター選択するための関数の一覧。各関数はプラス記号 (+) で区切られます。|  
-|**uses_host_name**|**bit**|場合、 [HOST_NAME()](../../t-sql/functions/host-name-transact-sql.md)関数がパラメーター化された行フィルターで使用される、 **1**動的フィルター選択に対してこの関数を使用することを意味します。|  
-|**uses_suser_sname**|**bit**|場合、 [SUSER_SNAME()](../../t-sql/functions/suser-sname-transact-sql.md)関数がパラメーター化された行フィルターで使用される、 **1**動的フィルター選択に対してこの関数を使用することを意味します。|  
+|**can_use_partition_groups**|**bit**|パブリケーションが事前計算済みパーティションを使用するように修飾されているかどうかを示します。**1**は事前計算済みパーティションを使用できることを示し、 **0**は使用できないことを示します。|  
+|**has_dynamic_filters**|**bit**|1つ以上のパラメーター化された行フィルターがパブリケーションで定義されているかどうかを示します。**1**は、1つまたは複数のパラメーター化された行フィルターが存在することを示し、 **0**は動的フィルターが存在しないことを示します。|  
+|**dynamic_filters_function_list**|**nvarchar(500)**|パブリケーション内のアーティクルをフィルター処理するために使用される関数の一覧です。各関数はセミコロンで区切られます。|  
+|**validate_subscriber_info**|**nvarchar(500)**|パブリケーション内のアーティクルをフィルター処理するために使用される関数の一覧です。各関数は、正符号 (+) で区切られます。|  
+|**uses_host_name**|**bit**|[HOST_NAME ()](../../t-sql/functions/host-name-transact-sql.md)関数がパラメーター化された行フィルターで使用される場合、 **1**は、この関数が動的フィルター処理に使用されることを示します。|  
+|**uses_suser_sname**|**bit**|[SUSER_SNAME ()](../../t-sql/functions/suser-sname-transact-sql.md)関数がパラメーター化された行フィルターで使用されている場合、 **1**はこの関数が動的フィルター処理に使用されることを意味します。|  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  **0** (成功) または**1** (失敗)  
   
 ## <a name="remarks"></a>コメント  
- **sp_check_dynamic_filters**はマージ レプリケーションで使用します。  
+ **sp_check_dynamic_filters**は、マージレプリケーションで使用します。  
   
- パブリケーションが事前計算済みパーティションを使用する定義済みの場合**sp_check_dynamic_filters**事前計算済みパーティションの制限の違反を確認します。 違反が見つかった場合、エラーが返されます。 詳細については、「[事前計算済みパーティションによるパラメーター化されたフィルターのパフォーマンス最適化](../../relational-databases/replication/merge/parameterized-filters-optimize-for-precomputed-partitions.md)」を参照してください。  
+ 事前計算済みパーティションを使用するようにパブリケーションが定義されている場合、 **sp_check_dynamic_filters**は事前計算済みパーティションの制限に違反していないかどうかを確認します。 見つかった場合は、エラーが返されます。 詳細については、「[事前計算済みパーティションによるパラメーター化されたフィルターのパフォーマンス最適化](../../relational-databases/replication/merge/parameterized-filters-optimize-for-precomputed-partitions.md)」を参照してください。  
   
- パブリケーションにパラメーター化された行フィルターがあることが定義されていても、パラメーター化された行フィルターが見つからない場合は、エラーが返されます。  
+ パブリケーションがパラメーター化された行フィルターを持つように定義されているにもかかわらず、パラメーター化された行フィルターが見つからない場合は、エラーが返されます。  
   
 ## <a name="permissions"></a>アクセス許可  
- メンバーのみ、 **sysadmin**固定サーバー ロールまたは**db_owner**固定データベース ロールが実行できる**sp_check_dynamic_filters**します。  
+ **Sp_check_dynamic_filters**を実行できるのは、固定サーバーロール**sysadmin**または固定データベースロール**db_owner**のメンバーだけです。  
   
-## <a name="see-also"></a>参照  
- [パラメーター化されたフィルターによるマージ パブリケーションのパーティションを管理します。](../../relational-databases/replication/publish/manage-partitions-for-a-merge-publication-with-parameterized-filters.md)   
- [sp_check_join_filter &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-check-join-filter-transact-sql.md)   
- [sp_check_subset_filter &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-check-subset-filter-transact-sql.md)  
+## <a name="see-also"></a>関連項目  
+ [パラメーター化されたフィルターを使用してマージパブリケーションのパーティションを管理する](../../relational-databases/replication/publish/manage-partitions-for-a-merge-publication-with-parameterized-filters.md)   
+ [sp_check_join_filter &#40;transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-check-join-filter-transact-sql.md)   
+ [sp_check_subset_filter &#40;transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-check-subset-filter-transact-sql.md)  
   
   

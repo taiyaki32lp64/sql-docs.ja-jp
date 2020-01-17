@@ -1,5 +1,5 @@
 ---
-title: 変更の追跡 (マスター データ サービス) | Microsoft Docs
+title: 変更の追跡
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -10,15 +10,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - change tracking [SQL Server]
 ms.assetid: 5e879c65-0d38-454f-9a20-62a6e72c89f7
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 77b98b635ccc8cd8e04e0c84e402be9409b27cbd
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
-ms.translationtype: HT
+ms.openlocfilehash: 6519ea515b6552805aa5b97e38579082ddcfe15c
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52791851"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73729656"
 ---
 # <a name="change-tracking-master-data-services"></a>変更の追跡 (マスター データ サービス)
 
@@ -32,7 +31,7 @@ ms.locfileid: "52791851"
 > [!NOTE]  
 >  変更の追跡のビジネス ルールでは、ステージング (インポートされた) データが変更されるものと想定します。  
   
-## <a name="related-tasks"></a>Related Tasks  
+## <a name="related-tasks"></a>関連タスク  
   
 |タスクの説明|トピック|  
 |----------------------|-----------|  

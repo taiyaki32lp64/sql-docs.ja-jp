@@ -16,17 +16,20 @@ helpviewer_keywords:
 - data flow [Integration Services], Data Flow task
 - Integration Services, performance
 ms.assetid: c27555c4-208c-43c8-b511-a4de2a8a3344
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: 27976be0f3b6091450650f2bf3a73d1afbe42d20
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 6683cec953daf6146371d62e8db2e4add2bd42df
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52518470"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71298346"
 ---
 # <a name="data-flow-task"></a>[データ フロー タスク]
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   データ フロー タスクは、変換元と変換先との間でデータを移動するデータ フロー エンジンをカプセル化して、データの移動時にユーザーがデータを変換、クリーンアップ、および変更できるようにします。 データ フロー タスクをパッケージの制御フローに追加すると、パッケージでデータの抽出、変換、および読み込みを行うことができます。  
   
  データ フローは 1 つ以上のデータ フロー コンポーネントで構成されますが、通常は、データを抽出する変換元、データを変更、ルーティング、または集約する変換、およびデータを読み込む変換先のデータ フロー コンポーネントが連結されてセットになっています。  
@@ -89,7 +92,7 @@ ms.locfileid: "52518470"
   
  たとえば、次の表に含まれるメッセージ "行がデータ フロー コンポーネントに入力として指定されました。 :  : 1185 : OLE DB ソースの出力 : 1180 : 並べ替え : 1181 : 並べ替えの入力 : 76" は、列へと解析されています。 このメッセージは、OLE DB ソースから並べ替え変換に行が送信されるときに **OnPipelineRowsSent** イベントによって書き込まれました。  
   
-|[列]|[説明]|ReplTest1|  
+|[列]|[説明]|[値]|  
 |------------|-----------------|-----------|  
 |**PathID**|OLE DB ソースと並べ替え変換の間のパスの **ID** プロパティの値です。|1185|  
 |**PathName**|パスの **Name** プロパティの値です。|OLE DB ソースの出力|  

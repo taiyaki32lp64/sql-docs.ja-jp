@@ -15,18 +15,17 @@ helpviewer_keywords:
 ms.assetid: 84983238-dd7d-45bd-99bb-52c9d8e96a87
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: 7895158afd1f0302182ca7601cb138af4afc36f1
-ms.sourcegitcommit: c6e71ed14198da67afd7ba722823b1af9b4f4e6f
+ms.openlocfilehash: 47428ffc2ab1074ec2b4ce1789e679c184607a05
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/16/2019
-ms.locfileid: "54326333"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67914200"
 ---
 # <a name="revoke-system-object-permissions-transact-sql"></a>REVOKE (システム オブジェクトの権限の取り消し) (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  ストアド プロシージャ、拡張ストアド プロシージャ、関数、ビューなどのシステム オブジェクトに対する権限を、プリンシパルから取り消します。  
+  ストアド プロシージャ、拡張ストアド プロシージャ、関数、ビューなどのシステム オブジェクトに対する権限が、プリンシパルから取り消されます。  
   
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -42,7 +41,7 @@ REVOKE { SELECT | EXECUTE } ON [sys.]system_object FROM principal
  **sys** 修飾子は、カタログ ビューおよび動的カタログ ビューを指定する場合にのみ必要です。  
   
  *system_object*  
- 権限を取り消すオブジェクトを指定します。  
+ 権限を取り消すオブジェクトが指定されます。  
   
  *principal*  
  権限を取り消すプリンシパルを指定します。  

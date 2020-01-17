@@ -1,5 +1,5 @@
 ---
-title: getBigDecimal (int, int) メソッド |Microsoft Docs
+title: getBigDecimal (int, int) メソッドMicrosoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: d9351b35-7046-4852-a612-72d4c46b2bbb
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: db344ebec9a8e1f7aef74bad918a7145514d4881
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 77fa7092b7835e400b7ced8c7dbc0368188b0eb8
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47742890"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67954004"
 ---
 # <a name="getbigdecimal-method-int-int"></a>getBigDecimal (int, int) メソッド
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -55,7 +54,7 @@ public java.math.BigDecimal getBigDecimal(int index,
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- この getBigDecimal メソッドは、java.sql.CallableStatement インターフェイスに、getBigDecimal メソッドによって指定されます。  
+ この getBigDecimal メソッドは、java. sql. CallableStatement インターフェイスの getBigDecimal メソッドによって指定されます。  
   
 ## <a name="see-also"></a>参照  
  [getBigDecimal メソッド &#40;SQLServerCallableStatement&#41;](../../../connect/jdbc/reference/getbigdecimal-method-sqlservercallablestatement.md)   

@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 5c6fb445-92ae-4933-b77d-80230931c024
 author: Shamikg
 ms.author: Shamikg
-manager: craigg
-ms.openlocfilehash: 40a3cf9db1248292d66d2a296c25c53ccfda002d
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: 215833c96fae02ae7877e00173fb5a920a47ee0c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52408709"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67908986"
 ---
 # <a name="mapping-mysql-databases-to-sql-server-schemas-mysqltosql"></a>MySQL データベースの SQL Server スキーマへのマッピング (MySQLToSQL)
 既定では、SSMA for MySQL に移行する MySQL スキーマのすべてのオブジェクトを[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]または SQL Azure データベースのスキーマの名前します。 ただし、MySQL スキーマ間のマッピングをカスタマイズすることができますと[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]または SQL Azure データベース。  
@@ -69,7 +68,7 @@ MySQL スキーマと SQL Server スキーマ間のマッピングをカスタ�
 ## <a name="next-steps"></a>次の手順  
 SQL Server または SQL Azure のオブジェクトへの MySQL のオブジェクトの変換を分析する場合は、[変換レポートを作成する](assessing-mysql-databases-for-conversion-mysqltosql.md)できますそれ以外の場合[MySQL データベースのオブジェクトの定義の変換](converting-mysql-databases-mysqltosql.md)SQL にサーバーまたは SQL Azure のスキーマ  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
 [プロジェクトの設定&#40;変換&#41; &#40;MySQLToSQL&#41;](../../ssma/mysql/project-settings-conversion-mysqltosql.md)  
 [Azure SQL DB に接続する&#40;MySQLToSQL&#41;](../../ssma/mysql/connecting-to-azure-sql-db-mysqltosql.md)  
 [SQL Server - Azure SQL DB への移行 MySQL データベース&#40;MySQLToSql&#41;](../../ssma/mysql/migrating-mysql-databases-to-sql-server-azure-sql-db-mysqltosql.md)  

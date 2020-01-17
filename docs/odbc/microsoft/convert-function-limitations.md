@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 3c81fc58-57f0-4dd7-be16-2b146eb15cbc
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 7759221f579161424fdc08cc42d1357376efc60b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 65cc8fa7517d3093b7314cacdafd8f607d89bc3a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47806710"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68081995"
 ---
 # <a name="convert-function-limitations"></a>CONVERT 関数の制限事項
 型変換エラーが発生、影響を受ける列が NULL に設定されています。  

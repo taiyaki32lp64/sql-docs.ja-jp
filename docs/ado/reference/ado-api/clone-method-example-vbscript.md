@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 36b96e3d-8cb0-4b79-bd93-ea5e0eb5679f
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: b259eaf019bc3ac173bfd1a4c282b517b41b1394
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: cc82f72b175373d504b7fda658f1c7ed8eb7f1ad
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47783670"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67920005"
 ---
 # <a name="clone-method-example-vbscript"></a>Clone メソッドの例 (VBScript)
 この例では、[複製](../../../ado/reference/ado-api/clone-method-ado.md)のコピーを作成する方法、[レコード セット](../../../ado/reference/ado-api/recordset-object-ado.md)し、ユーザーの各コピーのレコード ポインターを個別に配置できるようにします。  
@@ -118,6 +117,6 @@ ms.locfileid: "47783670"
 <!-- EndCloneVBS -->  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [Clone メソッド (ADO)](../../../ado/reference/ado-api/clone-method-ado.md)   
  [Recordset オブジェクト (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)

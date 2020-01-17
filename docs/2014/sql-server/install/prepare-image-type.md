@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 ms.assetid: b61a6d14-eabb-4b09-ab18-683a037f8ca4
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 1706a5d953a46871e6e65484e757a4c45d764cd4
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: d2070ff33a17aaf690c3154a2aa16343e55405f6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48070539"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66093481"
 ---
 # <a name="prepare-image-type"></a>[イメージの種類の準備]
   **インストール ウィザードの** [イメージの種類の準備] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ページを使用して、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]の新しいインスタンスをインストールするか既存のインスタンスに機能を追加するかを指定します。  
@@ -26,7 +25,7 @@ ms.locfileid: "48070539"
   
 -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]の新しいインスタンスを準備する  
   
--   既存の準備済みインスタンスに機能を追加します。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
+-   既存の準備済み [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスに機能を追加する  
   
      既存のインスタンスに機能を追加するオプションを選択した場合、ドロップダウン リストを使用して、更新する [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の準備済みインスタンスを選択します。  
   

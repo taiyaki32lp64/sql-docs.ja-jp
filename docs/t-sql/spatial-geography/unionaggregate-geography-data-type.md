@@ -15,15 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - UnionAggregate method (geography)
 ms.assetid: 1a3aeef1-5b0e-4ae8-aeb7-c4aab22f42ab
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: b445c6ff9b5e182bed9f0b5860d6ac00b2634051
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: MladjoA
+ms.author: mlandzic
+ms.openlocfilehash: 17c5ec83217c072ada5d112bab1dd4f0105e0971
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47689580"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68120669"
 ---
 # <a name="unionaggregate-geography-data-type"></a>UnionAggregate (geography データ型)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]

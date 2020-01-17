@@ -1,5 +1,5 @@
 ---
-title: レッスン 1:データベースの基本的なナビゲーション エンジン チューニング アドバイザー |Microsoft Docs
+title: レッスン 1:データベース エンジン チューニング アドバイザーでの基本操作 | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,11 +13,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: fb0e6219d06b83de9311099189dd1cbab31dd2f7
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52823616"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63010749"
 ---
 # <a name="lesson-1-basic-navigation-in-database-engine-tuning-advisor"></a>レッスン 1:データベース エンジン チューニング アドバイザーでの基本操作
   データベース エンジン チューニング アドバイザーでは、グラフィカル ユーザー インターフェイス (GUI) を使用して、チューニング セッションやチューニング推奨設定レポートを表示できます。 このレッスンでは、このツールの起動方法および操作画面の構成方法を説明します。 このレッスンを終了すると、ツールの起動と画面の構成を複数の方法で行い、日常的に実行するチューニング タスクに活用できるようになります。  

@@ -13,11 +13,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: d88b7524874156d219dbb2529c260d8ce3e203bc
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48115052"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62913739"
 ---
 # <a name="mssqlserver7904"></a>MSSQLSERVER_7904
     
@@ -30,7 +30,7 @@ ms.locfileid: "48115052"
 |イベント ソース|MSSQLSERVER|  
 |コンポーネント|SQLEngine|  
 |シンボル名|DBCC2_FS_MISSING_FILE|  
-|メッセージ テキスト|テーブル エラー : オブジェクト ID O_ID、インデックス ID I_ID、パーティション ID PN_ID の列 ID C_ID、ROWGUID RG_ID に対する FileStream ファイルが見つかりませんでした。|  
+|メッセージ テキスト|テーブル エラー:Filestream ファイルの列 ID C_ID、ROWGUID RG_ID オブジェクト ID O_ID、インデックス ID I_ID、パーティション ID PN_ID は見つかりませんでした。|  
   
 ## <a name="explanation"></a>説明  
  対応する FILESTREAM 列ディレクトリに、パーティションの列値に一致する FILESTREAM ファイルがありません。  

@@ -1,5 +1,5 @@
 ---
-title: 大きな Udt のサポート |マイクロソフトのドキュメント
+title: 大きな Udt のサポート |Microsoft Docs
 ms.custom: ''
 ms.date: 03/17/2017
 ms.prod: sql
@@ -10,37 +10,35 @@ ms.topic: reference
 ms.assetid: 621b6d13-10f1-47d0-b63c-7adb6ab904e0
 author: MightyPen
 ms.author: genemi
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 11c0f2dd58d277f8736c3bab2038add94d1b3dd9
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: 7d8621aac563f9211f7d4ee0c9ebd8f557e33bea
+ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53205471"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73780477"
 ---
 # <a name="support-for-large-udts"></a>大きな UDT のサポート
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-[!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
 
   このサンプル ソリューションには 2 つのプロジェクトが含まれています。 1 つは、C# ソース コードからアセンブリ (DLL) を作成するプロジェクトです。 このアセンブリには、CLR 型が格納されます。 テーブルがデータベースに追加されます。 テーブルの列の型はアセンブリで定義されます。このサンプルでは、既定で master データベースを使用します。 もう 1 つのプロジェクトは、テーブルからデータを読み取るネイティブの C++ アプリケーションです。  
   
  このサンプルは、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] より前のバージョンの [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] では動作しません。  
   
- 大きな Udt のサポートの詳細については、次を参照してください。 [Large CLR User-Defined 型&#40;ODBC&#41;](../../relational-databases/native-client/odbc/large-clr-user-defined-types-odbc.md)します。  
+ 大きな Udt のサポートの詳細については、「 [LARGE CLR User Defined &#40;Types&#41;ODBC](../../relational-databases/native-client/odbc/large-clr-user-defined-types-odbc.md)」を参照してください。  
   
 ## <a name="example"></a>例  
  1 つ目のコード リストは C# ソース コードです。 LargeStringUDT.cs という名前のファイルに貼り付けて、DLL にコンパイルします。 LargeStringUDT.dll を C ドライブのルート ディレクトリにコピーします。  
   
- 2 番目 ( [!INCLUDE[tsql](../../includes/tsql-md.md)]) コード リストは、master データベースにアセンブリを作成します。  
+ 2番目の ([!INCLUDE[tsql](../../includes/tsql-md.md)]) コードリストは、アセンブリを master データベースに作成します。  
   
- odbc32.lib と user32.lib を使用して 3 つ目の (C++) コード リストをコンパイルします。 INCLUDE 環境変数には、sqlncli.h を含むディレクトリが含まれています。 を確認します。  
+ odbc32.lib と user32.lib を使用して 3 つ目の (C++) コード リストをコンパイルします。 INCLUDE 環境変数に、sqlncli を含むディレクトリが含まれていることを確認します。  
   
  このサンプルを 64 ビット オペレーティング システムで 32 ビット アプリケーションとしてビルドし、実行する場合、%windir%\SysWOW64\odbcad32.exe の ODBC アドミニストレーターを使用して ODBC データ ソースを作成する必要があります。  
   
  このサンプルでは、コンピューターの既定の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスに接続します。 名前付きインスタンスに接続するには、ODBC データ ソースの定義を変更し、server\namedinstance 形式でそのインスタンスを指定します。 [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] は、既定で名前付きインスタンスとしてインストールされます。  
   
- 4 番目の ( [!INCLUDE[tsql](../../includes/tsql-md.md)]) コード リストは、master データベースからアセンブリを削除します。  
+ 4つ目の ([!INCLUDE[tsql](../../includes/tsql-md.md)]) コードリストは、アセンブリを master データベースから削除します。  
   
 ```  
 // LargeStringUDT.cs  

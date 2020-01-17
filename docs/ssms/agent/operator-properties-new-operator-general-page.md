@@ -1,5 +1,5 @@
 ---
-title: '[オペレーターのプロパティ]/[新しいオペレーター] - ([全般] ページ) | Microsoft Docs'
+title: '[オペレーターのプロパティ] [新しいオペレーター] ([全般] ページ) | Microsoft Docs'
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -10,18 +10,17 @@ ms.topic: conceptual
 f1_keywords:
 - sql13.ag.operator.general.f1
 ms.assetid: c036d1c9-83d1-4a95-b67e-29d283b1a046
-author: stevestein
-ms.author: sstein
-manager: craigg
+author: markingmyname
+ms.author: maghan
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 253d1630db6cc6c16166226b89d6d8705d88a9ac
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 6ce0287cb4c1e56ba5ce50a91838367b3b1791ff
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47673200"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68260213"
 ---
-# <a name="operator-properties---new-operator-general-page"></a>[オペレーターのプロパティ]/[新しいオペレーター] - ([全般] ページ)
+# <a name="operator-properties---new-operator-general-page"></a>[オペレーターのプロパティ] [新しいオペレーター] ([全般] ページ)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
 > [!IMPORTANT]  
@@ -58,5 +57,5 @@ ms.locfileid: "47673200"
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェントがポケットベルへのメッセージ送信を終了する時刻を選択します。  
   
 ## <a name="see-also"></a>参照  
-[演算子](../../ssms/agent/operators.md)  
+[オペレーター](../../ssms/agent/operators.md)  
   

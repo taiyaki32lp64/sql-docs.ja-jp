@@ -8,17 +8,20 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 7e81f7e1-fac0-4b57-b145-8f1b9e4720bf
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: 475141eeda17f2460d5f3da466501a61626ce74c
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 8347b0b1860041c6bd2a9241e015e2bfd71e5135
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51641979"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71298146"
 ---
 # <a name="raw-file-custom-properties"></a>RAW ファイルのカスタム プロパティ
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   **変換元のカスタム プロパティ**  
   
  RAW ファイル ソースには、カスタム プロパティと、すべてのデータ フロー コンポーネントとの共通プロパティの両方があります。  

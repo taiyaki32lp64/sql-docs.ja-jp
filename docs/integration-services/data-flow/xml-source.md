@@ -17,17 +17,20 @@ helpviewer_keywords:
 - XML source [Integration Services]
 - XML Source Editor
 ms.assetid: 68c27ea5-e93d-4e26-bfb2-d967ca0a5282
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: 88c92298743eb9eec610b472f498186938d6b651
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: d766d6a36dbe8f91f2c2fd42433093b298935b48
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51640459"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71290840"
 ---
 # <a name="xml-source"></a>XML ソース
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   XML ソースは XML データ ファイルを読み取り、ソース出力の列にデータを設定します。  
   
  XML ファイルのデータには、多くの場合、階層リレーションシップが含まれます。 たとえば、XML データ ファイルはカタログおよびカタログ内のアイテムを表す場合があります。 データ フローにデータを入力できるようにするためには、XML データ ファイルの要素のリレーションシップを特定し、ファイル内部の各要素に対して出力を生成する必要があります。  
@@ -94,7 +97,7 @@ ms.locfileid: "51640459"
  **[データ アクセス モード]**  
  ソースからデータを選択する方法を指定します。  
   
-|ReplTest1|[説明]|  
+|[値]|[説明]|  
 |-----------|-----------------|  
 |[XML ファイルの場所]|XML ファイルからデータを取得します。|  
 |[変数からの XML ファイル]|XML ファイルの名前を変数で指定します。<br /><br /> **関連情報**: [パッケージで変数を使用する](https://msdn.microsoft.com/library/7742e92d-46c5-4cc4-b9a3-45b688ddb787)|  
@@ -132,7 +135,7 @@ ms.locfileid: "51640459"
 ## <a name="xml-source-editor-columns-page"></a>[XML ソース エディター] ([列] ページ)
   **[XML ソース エディター]** ダイアログ ボックスの **[列]** ノードを使用して、出力列を外部 (変換元) 列にマップします。  
   
-### <a name="options"></a>[変数]  
+### <a name="options"></a>オプション  
  **使用できる外部列**  
  データ ソース内の使用できる外部列の一覧を表示します。 このテーブルを使用して列を追加または削除することはできません。  
   
@@ -145,7 +148,7 @@ ms.locfileid: "51640459"
 ## <a name="xml-source-editor-error-output-page"></a>[XML ソース エディター] ([エラー出力] ページ)
   **[XML ソース エディター]** ダイアログ ボックスの **[エラー出力]** ページを使用すると、エラー処理オプションを選択したり、エラー出力列のプロパティを設定したりできます。  
   
-### <a name="options"></a>[変数]  
+### <a name="options"></a>オプション  
  **[入力または出力]**  
  データ ソースの名前を表示します。  
   

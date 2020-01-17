@@ -32,13 +32,12 @@ helpviewer_keywords:
 ms.assetid: 21f8e4d4-cd07-4856-98f0-9c9890ebbc82
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 144323deee0c84ac1be404869a0ca71197ffcd32
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: 95acac097d1c3ec5ffd4989058db0c2927441554
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54135582"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72907235"
 ---
 # <a name="configure-web-synchronization"></a>Web 同期の構成
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -52,7 +51,7 @@ ms.locfileid: "54135582"
 3.  Web 同期が許可されるようにマージ パブリケーションを構成します。  
   
 4.  Web 同期が使用されるように 1 つ以上のサブスクリプションを構成します。  
-  
+
 > [!NOTE]  
 >  大量のデータや **varchar(max)** などのサイズの大きなデータ型を含むデータをレプリケートする場合は、このトピックの「大量のデータのレプリケート」を参照してください。  
   
@@ -87,7 +86,7 @@ ms.locfileid: "54135582"
   
  **Web 同期用に IIS を構成するには**  
   
--   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)][ ] :[Web 同期用の IIS の構成](../../relational-databases/replication/configure-iis-for-web-synchronization.md)  
+-   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]:[Web 同期用の IIS の構成](../../relational-databases/replication/configure-iis-for-web-synchronization.md)  
   
 -   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)][ ] :[Web 同期用の IIS 7 の構成](../../relational-databases/replication/configure-iis-7-for-web-synchronization.md)  
   
@@ -136,7 +135,7 @@ ms.locfileid: "54135582"
   
 -   大量のデータをレプリケートする場合に、マージ エージェントのバッチ サイズの調整が必要になることがあります。  
   
- マージ レプリケーションのバッチ サイズは、アーティクルごとの変更のコレクションである *生成結果*で示されます。 1 つのバッチ内の生成結果の数は、マージ エージェントの –**DownloadGenerationsPerBatch** パラメーターと –**UploadGenerationsPerBatch** パラメーターを使用して指定します。 詳細については、「 [Replication Merge Agent](../../relational-databases/replication/agents/replication-merge-agent.md)」を参照してください。  
+ マージ レプリケーションのバッチ サイズは、アーティクルごとの変更のコレクションである *生成結果*で示されます。 1 つのバッチ内の生成結果の数は、マージ エージェントの -**DownloadGenerationsPerBatch** および -**UploadGenerationsPerBatch** パラメーターを使用して指定します。 詳細については、「 [Replication Merge Agent](../../relational-databases/replication/agents/replication-merge-agent.md)」を参照してください。  
   
  大量のデータを扱う場合は、バッチ処理の各パラメーターに小さい数を指定します。 最初は値を 10 にして、アプリケーションのニーズとパフォーマンスに応じて調整することをお勧めします。 通常、これらのパラメーターは、エージェント プロファイルで指定します。 プロファイルの詳細については、「 [Replication Agent Profiles](../../relational-databases/replication/agents/replication-agent-profiles.md)」を参照してください。  
   
@@ -156,7 +155,7 @@ ms.locfileid: "54135582"
   
      エージェントに必要な権限の詳細については、「 [Replication Agent Security Model](../../relational-databases/replication/security/replication-agent-security-model.md)」を参照してください。  
   
--   サブスクリプションの新規作成ウィザードの **[Web サーバー情報]** ページでアカウントとパスワードを指定するとき、または **@internet_url** 」および「 **@internet_login** および [@internet_login](../../relational-databases/system-stored-procedures/sp-addpullsubscription-agent-transact-sql.md)」を参照してください。 このアカウントには、スナップショット共有の読み取り権限が必要です。  
+-   サブスクリプションの新規作成ウィザードの **[Web サーバー情報]** ページでアカウントとパスワードを指定するとき、または [sp_addpullsubscription_agent](../../relational-databases/system-stored-procedures/sp-addpullsubscription-agent-transact-sql.md) の `@internet_url` および `@internet_login` パラメーターの値を指定するときに、マージ エージェントで使用されるドメイン アカウントと同じアカウントを指定します。 このアカウントには、スナップショット共有の読み取り権限が必要です。  
   
 -   各パブリケーションでは、IIS 用に個別の仮想ディレクトリを使用する必要があります。  
   

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - prediction queries [Analysis Services]
@@ -16,12 +15,12 @@ ms.assetid: abba4d24-3619-44c1-8279-88f27ad627d3
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 0273919410b5b182b535b805922ec39cdd82d6e6
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 9abaf092d00a8acaf6c0b3ef963c940199068ce9
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48195932"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66082708"
 ---
 # <a name="view-and-save-the-results-of-a-prediction-query"></a>予測クエリの結果の表示および保存
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] の予測クエリ ビルダーを使用してクエリを定義した後は、クエリ結果ビューに切り替えてクエリを実行し、結果を表示できます。  

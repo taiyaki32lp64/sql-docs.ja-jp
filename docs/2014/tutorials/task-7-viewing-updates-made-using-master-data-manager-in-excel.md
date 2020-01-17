@@ -7,15 +7,15 @@ ms.reviewer: ''
 ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: c2ff4972-cf18-4d5c-98cd-ec78861a63ce
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 544e61a95f4a2177e60c2b3fe11a91a5a23480e4
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: b3ae997dfc2ea9b601a0d7a41a0d24c4cb9c426b
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56016923"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65489687"
 ---
 # <a name="task-7-viewing-updates-made-using-master-data-manager-in-excel"></a>タスク 7:Excel でマスター データ マネージャーを使用して行った更新を表示する
   ここでは、Excel に MDS から更新されたデータが表示されることを確認します。  

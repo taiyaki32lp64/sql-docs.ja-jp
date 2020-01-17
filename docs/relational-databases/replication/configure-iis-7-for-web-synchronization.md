@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: c201fe2c-0a76-44e5-a233-05e14cd224a6
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: b7f9083bc5021415691d04da25d6e5e6297031a2
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b77faf60734e6aad7248c59d37033b26bb6b92e4
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47620137"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67903213"
 ---
 # <a name="configure-iis-7-for-web-synchronization"></a>Web 同期用の IIS 7 の構成
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -31,7 +30,7 @@ ms.locfileid: "47620137"
  構成プロセス全体の概要については、「[Configure Web Synchronization (Web 同期の構成)](../../relational-databases/replication/configure-web-synchronization.md)」をご覧ください。  
   
 > [!IMPORTANT]  
->  アプリケーションで [!INCLUDE[dnprdnlong](../../includes/dnprdnlong-md.md)] 以降のバージョンのみが使用されることと、 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] の以前のバージョンが IIS サーバーにインストールされていないことを確認します。 以前のバージョンの [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] があると、エラーが発生する可能性があります。たとえば、"Web 同期中のメッセージの形式が無効でした。 Web サーバーでレプリケーション コンポーネントが正しく構成されていることを確認してください。" というエラーなどです。  
+>  アプリケーションで [!INCLUDE[dnprdnlong](../../includes/dnprdnlong-md.md)] 以降のバージョンのみが使用されることと、 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] の以前のバージョンが IIS サーバーにインストールされていないことを確認します。 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] の以前のバージョンを使用すると、次のようなエラーが発生する可能性があります。"Web 同期中のメッセージの形式が無効でした。 Web サーバーでレプリケーション コンポーネントが正しく構成されていることを確認してください。" というエラーなどです。  
   
  Web 同期を使用するには、次の手順を完了して IIS を構成する必要があります。 ここでは、各手順を詳しく説明します。  
   
@@ -71,7 +70,7 @@ Web 同期は、バージョン 5.0 以降の IIS でサポートされます。
   
     2.  **[エイリアス]** に「 **SQLReplication**」と入力します。  
   
-    3.  **[物理パス]** に「**\<drive>:\Inetpub\SQLReplication\\**」と入力し、**[OK]** をクリックします。  
+    3.  **[物理パス]** に「 **\<drive>:\Inetpub\SQLReplication\\** 」と入力し、 **[OK]** をクリックします。  
   
 7.  replisapi.dll を実行できるように IIS を構成します。  
   
@@ -85,7 +84,7 @@ Web 同期は、バージョン 5.0 以降の IIS でサポートされます。
   
     5.  **[モジュール]** ボックスの一覧から **[IsapiModule]** を選択します。  
   
-    6.  **[実行可能ファイル]** に「**\<drive>:\Inetpub\SQLReplication\replisapi.dll**」と入力します。  
+    6.  **[実行可能ファイル]** に「 **\<drive>:\Inetpub\SQLReplication\replisapi.dll**」と入力します。  
   
     7.  **[名前]** に「 **Replisapi**」と入力します。  
   
@@ -160,7 +159,7 @@ Web 同期は、バージョン 5.0 以降の IIS でサポートされます。
   
 1.  **ternet formation Services (IIS) Manager**で、 **[既定の Web サイト].**  
   
-2.  **[アクション]** ペインで、**[Browse \*:443(https)]** をクリックします。  
+2.  **[アクション]** ペインで、 **[Browse \*:443(https)]** をクリックします。  
   
 3.  Internet Explorer が開き、"この Web サイトのセキュリティ証明書には問題があります" というメッセージが表示されます。 これは、関連付けられている証明書が既知の CA によって発行された証明書ではないために信頼できないことを通知する警告です。 これは予期されたとおりの警告なので、 **[このサイトの閲覧を続行する (推奨されません)]** をクリックします。  
   
@@ -203,7 +202,7 @@ Web 同期は、バージョン 5.0 以降の IIS でサポートされます。
   
 2.  アカウントを IIS_IUSRS グループに追加します。  
   
-    1.  **サーバー マネージャー**で、 **[構成]**、 **[ローカル ユーザーとグループ]** の順に展開し、 **[グループ]** をクリックします。  
+    1.  **サーバー マネージャー**で、 **[構成]** 、 **[ローカル ユーザーとグループ]** の順に展開し、 **[グループ]** をクリックします。  
   
     2.  **[IIS_IUSRS]** を右クリックし、 **[グループに追加]** をクリックします。  
   
@@ -213,7 +212,7 @@ Web 同期は、バージョン 5.0 以降の IIS でサポートされます。
   
     5.  **[場所を指定してください]** フィールドに、ドメインではなくローカル コンピューターの名前が表示されていることを確認します。 ローカル コンピューターの名前が表示されていない場合は、 **[場所]** をクリックします。 **[場所]** ダイアログ ボックスで、ローカル コンピューターを選択し、 **[OK]** をクリックします。  
   
-    6.  **[ユーザーの選択]** ダイアログ ボックスと **[IIS_IUSRS のプロパティ]** ダイアログ ボックスで、**[OK]** をクリックします。  
+    6.  **[ユーザーの選択]** ダイアログ ボックスと **[IIS_IUSRS のプロパティ]** ダイアログ ボックスで、 **[OK]** をクリックします。  
   
 3.  replisapi.dll が保存されているフォルダーに対する最小限の権限をアカウントに許可します。  
   
@@ -225,7 +224,7 @@ Web 同期は、バージョン 5.0 以降の IIS でサポートされます。
   
     4.  **[場所を指定してください]** フィールドに、ドメインではなくローカル コンピューターの名前が表示されていることを確認します。 ローカル コンピューターの名前が表示されていない場合は、 **[場所]** をクリックします。 **[場所]** ダイアログ ボックスで、ローカル コンピューターを選択し、 **[OK]** をクリックします。  
   
-    5.  アカウントには、**[読み取り]**、**[読み取りと実行]**、**[フォルダーの内容の一覧表示]** のみが許可されていることを確認します。  
+    5.  アカウントには、 **[読み取り]** 、 **[読み取りと実行]** 、 **[フォルダーの内容の一覧表示]** のみが許可されていることを確認します。  
   
     6.  ディレクトリにアクセスする必要がないユーザーまたはグループを選択し、 **[削除]** をクリックし、 **[OK]** をクリックします。  
   

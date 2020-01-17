@@ -7,15 +7,15 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: d9422412-8a3d-45ae-af7f-072c902a09ba
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 605c8f0fc1b198e4afc7034d2f5f15b8c259668b
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 9ce189688bd33f3cb63280e4fa44bb2284ee9e8d
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52771034"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62900038"
 ---
 # <a name="map-columns-to-composite-domains"></a>複合ドメインへの列のマップ
   複合ドメインは 2 つ以上の単一ドメインで構成されています。 ドメインに複数の列をマップすることも、区切られた値を含む単一の列をドメインにマップすることもできます。  
@@ -34,7 +34,7 @@ ms.locfileid: "52771034"
   
 4.  **[入力列]** フィールドにリストされている列ごとに、 **[ドメイン]** フィールドで単一ドメインを選択します。 複合ドメイン内の単一ドメインのみ選択します。  
   
-5.  必要に応じて、 **[ソースの別名]**、 **[出力の別名]**、および **[状態の別名]** の各フィールドに表示される名前を変更します。  
+5.  必要に応じて、 **[ソースの別名]** 、 **[出力の別名]** 、および **[状態の別名]** の各フィールドに表示される名前を変更します。  
   
 6.  必要に応じて、 **[詳細設定]** タブでプロパティを設定します。プロパティの詳細については、「 [[DQS クレンジング変換エディター] ダイアログ ボックス](../../dqs-cleansing-transformation-editor-dialog-box.md)」をご覧ください。  
   
@@ -48,7 +48,7 @@ ms.locfileid: "52771034"
   
 4.  **[入力列]** フィールドに表示されている列に対して、 **[ドメイン]** フィールドで複合ドメインを選択します。  
   
-5.  必要に応じて、 **[ソースの別名]**、 **[出力の別名]**、および **[状態の別名]** の各フィールドに表示される名前を変更します。  
+5.  必要に応じて、 **[ソースの別名]** 、 **[出力の別名]** 、および **[状態の別名]** の各フィールドに表示される名前を変更します。  
   
 6.  必要に応じて、 **[詳細設定]** タブでプロパティを設定します。プロパティの詳細については、「 [[DQS クレンジング変換エディター] ダイアログ ボックス](../../dqs-cleansing-transformation-editor-dialog-box.md)」をご覧ください。  
   

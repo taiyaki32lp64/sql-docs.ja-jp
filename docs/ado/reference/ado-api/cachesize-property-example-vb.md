@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: a237ffdb-6e5b-47c6-9901-d5cdbe8625f3
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: a29180fdaf90d7c9c43441f897820be69a9c009a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 7d88977844c415c43baa7b4b8669b7d8e13793fd
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47798890"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67920245"
 ---
 # <a name="cachesize-property-example-vb"></a>CacheSize プロパティの例 (VB)
 この例では、 [CacheSize](../../../ado/reference/ado-api/cachesize-property-ado.md)と 30 レコードのキャッシュなしに実行される操作のパフォーマンスの違いを表示するプロパティ。  
@@ -120,6 +119,6 @@ End Sub
 'EndCacheSizeVB  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [CacheSize プロパティ (ADO)](../../../ado/reference/ado-api/cachesize-property-ado.md)   
  [Recordset オブジェクト (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)

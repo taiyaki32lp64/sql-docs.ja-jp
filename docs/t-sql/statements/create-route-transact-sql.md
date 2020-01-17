@@ -26,14 +26,13 @@ helpviewer_keywords:
 ms.assetid: 7e695364-1a98-4cfd-8ebd-137ac5a425b3
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: a8c027df69ca11c88c82195c2d621ecd33f470d6
-ms.sourcegitcommit: 97340deee7e17288b5eec2fa275b01128f28e1b8
+ms.openlocfilehash: b70035a1fc54d4b59978a3256b2ed3040ba4e8f9
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55421150"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68006507"
 ---
 # <a name="create-route-transact-sql"></a>CREATE ROUTE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md )]
@@ -59,7 +58,7 @@ WITH
   
 ## <a name="arguments"></a>引数  
  *route_name*  
- 作成するルートの名前を指定します。 新しいルートが現在のデータベースで作成され、AUTHORIZATION 句で指定されるプリンシパルによって所有されます。 サーバー名、データベース名、スキーマ名は指定できません。 *route_name* は有効な **sysname** とする必要があります。  
+ 作成するルートの名前です。 新しいルートが現在のデータベースで作成され、AUTHORIZATION 句で指定されるプリンシパルによって所有されます。 サーバー名、データベース名、スキーマ名は指定できません。 *route_name* は有効な **sysname** とする必要があります。  
   
  AUTHORIZATION *owner_name*  
  ルートの所有者を、指定したデータベース ユーザーまたはロールに設定します。 現在のユーザーが **db_owner** 固定データベース ロールまたは **sysadmin** 固定サーバー ロールのメンバーである場合、*owner_name* には、任意の有効なユーザー名またはロール名を指定できます。 それ以外の場合、*owner_name* には、現在のユーザーの名前、現在のユーザーが IMPERSONATE 権限を持つユーザーの名前、または現在のユーザーが属するロールの名前を指定する必要があります。 この句を省略すると、ルートは現在のユーザーに属します。  
@@ -67,10 +66,10 @@ WITH
  WITH  
  作成されるルートを定義するための句を、WITH の後に指定します。  
   
- SERVICE_NAME = **'**_service\_name_**'**  
+ SERVICE_NAME = **'** _service\_name_ **'**  
  このルートが示すリモート サービスの名前を指定します。 *service_name* はリモート サービスで使用される名前と正確に一致する必要があります。 [!INCLUDE[ssSB](../../includes/sssb-md.md)] は *service_name* をバイト単位で照合します。 つまり、この比較では大文字と小文字が区別され、現在の照合順序は考慮されません。 SERVICE_NAME が省略されると、このルートはすべてのサービス名と照合されることになりますが、SERVICE_NAME が指定されたルートより照合の優先度が下がります。 **'SQL/ServiceBroker/BrokerConfiguration'** というサービス名を持つルートは、Broker Configuration Notice サービスへのルートです。 このサービスへのルートは、ブローカー インスタンスを指定できない場合があります。  
   
- BROKER_INSTANCE = **'**_broker\_instance\_identifier_**'**  
+ BROKER_INSTANCE = **'** _broker\_instance\_identifier_ **'**  
  発信先サービスをホストするデータベースを指定します。 *broker_instance_identifier* パラメーターは、リモート データベースのブローカー インスタンス識別子である必要があります。この識別子は選択したデータベースで、次のクエリを実行して取得できます。  
   
 ```  
@@ -81,15 +80,15 @@ WHERE database_id = DB_ID()
   
  BROKER_INSTANCE 句を省略すると、このルートはすべてのブローカー インスタンスと照合されます。 ブローカー インスタンスを指定しないメッセージ交換では、すべてのブローカー インスタンスと照合されるルートは、明示的なブローカー インスタンスを持つルートよりも照合の優先度が高くなります。 ブローカー インスタンスを指定するメッセージ交換では、ブローカー インスタンスを持つルートの方が、すべてのブローカー インスタンスと照合されるルートより優先度が高くなります。  
   
- LIFETIME **=**_route\_lifetime_  
+ LIFETIME **=** _route\_lifetime_  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] がルーティング テーブルにルートを保持する時間を秒単位で指定します。 有効期間が終了するとルートは期限切れとなり、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、新しいメッセージ交換用のルートを選択するときに、そのルートは考慮されなくなります。 この句を省略した場合、*route_lifetime* は NULL になり、ルートの有効期限が切れることはありません。  
   
- ADDRESS **='**_next\_hop\_address_**'**  
+ ADDRESS **='** _next\_hop\_address_ **'**  
 SQL Database マネージド インスタンスの場合、`ADDRESS` はローカルである必要があります。 
 
-ルート用のネットワーク アドレスを指定します。 *next_hop_address* の次の形式で TCP/IP アドレスを指定します。  
+このルート用のネットワーク アドレスを指定します。 *next_hop_address* の次の形式で TCP/IP アドレスを指定します。  
   
- **TCP://**{ *dns_name* | *netbios_name* | *ip_address* } **:**_port\_number_  
+ **TCP://** { *dns_name* | *netbios_name* | *ip_address* } **:** _port\_number_  
   
  指定した *port_number* は、指定したコンピューターにおける [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスの [!INCLUDE[ssSB](../../includes/sssb-md.md)] エンドポイント用のポート番号と一致する必要があります。 これは選択したデータベースで次のクエリを実行することにより取得できます。  
   
@@ -101,16 +100,16 @@ INNER JOIN sys.service_broker_endpoints AS ssbe
 WHERE ssbe.name = N'MyServiceBrokerEndpoint';  
 ```  
   
- ミラー化されたデータベースでサービスがホストされる場合、ミラー化されたデータベースをホストする別のインスタンスに対しても、MIRROR_ADDRESS を指定する必要があります。 それ以外の場合は、このルートはミラーに対してフェールオーバーしません。  
+ ミラー化されたデータベースでサービスがホストされる場合、ミラー化されたデータベースをホストする別のインスタンスに対して、MIRROR_ADDRESS を指定する必要もあります。 それ以外の場合は、このルートはミラーに対してフェールオーバーされません。  
   
  ルートの *next_hop_address* が **'LOCAL'** になっている場合、メッセージは現在の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンス内のサービスに配信されます。  
   
  ルートの *next_hop_address* が **'TRANSPORT'** になっている場合、ネットワーク アドレスは、サービス名の中にあるネットワーク アドレスに基づいて決まります。 **'TRANSPORT'** を指定するルートは、サービス名やブローカー インスタンスを指定できない場合があります。  
   
- MIRROR_ADDRESS **='**_next\_hop\_mirror\_address_**'**  
+ MIRROR_ADDRESS **='** _next\_hop\_mirror\_address_ **'**  
  *next_hop_address* でホストされているミラー化されたデータベースを 1 つ含んでいる、ミラー化されたデータベースのネットワーク アドレスを指定します。 *next_hop_mirror_address* は、次の形式で TCP/IP アドレスを指定します。  
   
- **TCP://**{ *dns_name* | *netbios_name* | *ip_address* } **:** *port_number*  
+ **TCP://** { *dns_name* | *netbios_name* | *ip_address* } **:** *port_number*  
   
  指定した *port_number* は、指定したコンピューターにおける [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスの [!INCLUDE[ssSB](../../includes/sssb-md.md)] エンドポイント用のポート番号と一致する必要があります。 これは選択したデータベースで次のクエリを実行することにより取得できます。  
   
@@ -131,7 +130,7 @@ WHERE ssbe.name = N'MyServiceBrokerEndpoint';
   
  ルートが *next_hop_address* に **'TRANSPORT'** を指定した場合、ネットワーク アドレスはサービスの名前に基づいて決定されます。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、*next_hop_address* のネットワーク アドレスが有効な形式であれば、このネットワーク アドレスで始まるサービス名が適切に処理されます。  
   
- ルートで指定されているサービス、ネットワーク アドレス、およびブローカー インスタンス識別子が同じであれば、ルーティング テーブルにはルートをいくつでも含めることができます。 このような場合、[!INCLUDE[ssSB](../../includes/sssb-md.md)] でルートを選択するときには、メッセージ交換で指定された情報とルーティング テーブル内の情報を照合して、最も正確に一致する情報を取得するためのプロシージャが使用されます。  
+ ルーティング テーブルには、同じサービス、ネットワーク アドレス、ブローカー インスタンス識別子を指定する、ルートをいくつでも含めることができます。 このような場合、[!INCLUDE[ssSB](../../includes/sssb-md.md)] でルートを選択するときには、メッセージ交換で指定された情報とルーティング テーブル内の情報を照合して、最も正確に一致する情報を取得するためのプロシージャが使用されます。  
   
  [!INCLUDE[ssSB](../../includes/sssb-md.md)] では、ルーティング テーブルから期限の切れたルートは削除されません。 期限の切れたルートは、ALTER ROUTE ステートメントを使用してアクティブにすることができます。  
   
@@ -218,7 +217,7 @@ CREATE ROUTE ExpenseRoute
 ```  
   
 ### <a name="h-creating-a-route-that-uses-the-service-name-for-routing"></a>H. ルーティング用のサービス名を使用するルートを作成する  
- 次の例では、メッセージの送信先となるネットワーク アドレスを判別するためにサービス名が使用されるルートを作成します。 ネットワーク アドレスとして `'TRANSPORT'` を指定するルートは、他のルートより照合の優先度が低いことに注意してください。  
+ 次の例では、メッセージの送信先となるネットワーク アドレスを決定するために、サービス名を使用するルートが作成されます。 ネットワーク アドレスとして `'TRANSPORT'` を指定するルートは、他のルートより照合の優先度が低いことに注意してください。  
   
 ```  
 CREATE ROUTE TransportRoute  

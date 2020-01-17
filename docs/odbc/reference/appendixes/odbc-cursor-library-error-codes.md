@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 9713480e-8744-4f37-a630-20871590d4a1
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 1fb077261eda4b2e013abd6d87e894637a29216a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a3fb86e1332e3b7e4d89003ccf6421151e5d9cec
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47691130"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68100669"
 ---
 # <a name="odbc-cursor-library-error-codes"></a>ODBC カーソル ライブラリのエラー コード
 > [!IMPORTANT]  
@@ -38,10 +37,10 @@ ms.locfileid: "47691130"
 |01000|カーソル ライブラリが使用されません。 不足しているドライバーのサポート。|**SQLBrowseConnect**<br /><br /> **SQLConnect**<br /><br /> **SQLDriverConnect**|  
 |01000|カーソル ライブラリが使用されません。 バージョンのドライバー マネージャーが一致しません。|**SQLBrowseConnect**<br /><br /> **SQLConnect**<br /><br /> **SQLDriverConnect**|  
 |01000|ドライバーには、SQL_SUCCESS_WITH_INFO が返されます。 警告メッセージが失われました。|**SQLFetch**<br /><br /> **SQLFetchScroll**|  
-|S1000|一般的なエラー: ファイルのバッファーを作成できません。|**SQLFetch**<br /><br /> **SQLFetchScroll**<br /><br /> **SQLGetData**|  
-|S1000|一般的なエラー: ファイルのバッファーから読み取ることができません。|**SQLFetch**<br /><br /> **SQLFetchScroll**<br /><br /> **SQLGetData**|  
-|S1000|一般的なエラー: ファイルのバッファーに書き込めませんでした。|**SQLFetch**<br /><br /> **SQLFetchScroll**<br /><br /> **SQLGetData**|  
-|S1000|一般的なエラー: を閉じるか、ファイル バッファーを削除できません。|**SQLFreeHandle**<br /><br /> **SQLFreeStmt**|  
+|S1000|一般的なエラー:ファイル バッファーを作成できません。|**SQLFetch**<br /><br /> **SQLFetchScroll**<br /><br /> **SQLGetData**|  
+|S1000|一般的なエラー:ファイル バッファーから読み取ることができません。|**SQLFetch**<br /><br /> **SQLFetchScroll**<br /><br /> **SQLGetData**|  
+|S1000|一般的なエラー:ファイル バッファーに書き込めませんでした。|**SQLFetch**<br /><br /> **SQLFetchScroll**<br /><br /> **SQLGetData**|  
+|S1000|一般的なエラー:閉じるか、ファイル バッファーを削除できません。|**SQLFreeHandle**<br /><br /> **SQLFreeStmt**|  
 |SL001|検索可能な列にバインドされていないために、位置指定の要求を実行できません。|**SQLExecDirect**<br /><br /> **SQLGetData**<br /><br /> **SQLPrepare**|  
 |SL002|結合条件によって結果セットが作成されたので、位置指定の要求を実行できませんでした。|**SQLExecute**<br /><br /> **SQLExecDirect**<br /><br /> **SQLGetData**|  
 |SL003|バインドされたバッファーは、最大セグメント サイズを超えています。|**SQLFetch**<br /><br /> **SQLFetchScroll**|  

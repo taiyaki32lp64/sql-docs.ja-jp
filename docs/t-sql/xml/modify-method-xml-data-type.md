@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 52430735-51f4-46d1-a308-9aecf8648fda
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: c636cda23d17dcb8379db22f7cbd97c15678e0b4
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 5c98ef9c726d2db5b5ec06d71a00de08288098a0
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56019113"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68051277"
 ---
 # <a name="modify-method-xml-data-type"></a>modify() メソッド (xml データ型)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]

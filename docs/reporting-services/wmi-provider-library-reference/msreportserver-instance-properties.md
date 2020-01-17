@@ -2,7 +2,7 @@
 title: MSReportServer_Instance プロパティ | Microsoft Docs
 ms.date: 03/01/2017
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: wmi-provider-library-reference
 ms.topic: conceptual
 apiname:
@@ -13,14 +13,14 @@ apitype: MOFDef
 helpviewer_keywords:
 - MSReportServer_Instance class
 ms.assetid: b494fd52-22f0-46af-be35-a1de8a138d95
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: c7e8f3fe4b47045a38d76b425b02d456ca6f97f1
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: d1b8de8961ef9001c7ef94356a2b82bb248271af
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47659550"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65569135"
 ---
 # <a name="msreportserverinstance-properties"></a>MSReportServer_Instance プロパティ
   MSReportServer_Instance クラスは、インストールされているレポート サーバーにクライアントが接続するために必要な基本情報を提供します。  

@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 136fdf6d-657f-447b-af41-49bbc6e0e93e
 author: Shamikg
 ms.author: Shamikg
-manager: craigg
-ms.openlocfilehash: e0a11a0b49589c3763b5af67623c9e819038c217
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: beb82f2fd894af71bb6f291dcc6f86a995f8dd85
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47713250"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68138325"
 ---
 # <a name="project-settings-type-mapping-mysqltosql"></a>プロジェクトの設定 (型のマッピング) (MySQLToSQL)
 プロジェクトの型マッピングの設定では、SSMA プロジェクトの既定の型マッピングを設定できます。  
@@ -34,13 +33,13 @@ ms.locfileid: "47713250"
 ##### <a name="target-type"></a>ターゲットの種類  
 ターゲット データベースのデータは、指定の MySQL のデータ型の型します。  
   
-##### <a name="add"></a>[追加]  
+##### <a name="add"></a>追加  
 データ型をマッピングの一覧に追加する をクリックします。  
   
 ##### <a name="edit"></a>編集  
 マッピングの一覧で選択したデータ型を編集する をクリックします。  
   
-##### <a name="remove"></a>[削除]  
+##### <a name="remove"></a>削除  
 マッピングの一覧から選択したデータ型のマッピングを削除する をクリックします。  
   
 ##### <a name="reset-to-default"></a>[既定値にリセット]  
@@ -54,7 +53,7 @@ SSMA の既定値に型マッピングのリストをリセットする をク�
 |**MySQL のデータ型**|**SQL Server データ型**|  
 |BIGINT|BIGINT|  
 |bigint [*..255]|BIGINT|  
-|binary|バイナリ [1]|  
+|バイナリ|バイナリ [1]|  
 |バイナリ [0..1]|バイナリ [1]|  
 |バイナリ [2..255]|バイナリ [*]|  
 |bit|バイナリ [1]|  
@@ -70,7 +69,7 @@ SSMA の既定値に型マッピングのリストをリセットする をク�
 |blob [0..1]|varbinary [1]|  
 |blob[2..8000]|varbinary [*]|  
 |blob [8001.. *]|varbinary(max)|  
-|[bool]|bit|  
+|bool|bit|  
 |boolean|bit|  
 |char|nchar [1]|  
 |char バイト|バイナリ [1]|  
@@ -100,15 +99,15 @@ SSMA の既定値に型マッピングのリストをリセットする をク�
 |FLOAT|float [24]|  
 |float [*..255] [\*..30]|数値 [*] [\*]|  
 |float [*..53]|float [53]|  
-|ssNoversion|ssNoversion|  
-|int [*..255]|ssNoversion|  
-|整数 (integer)|ssNoversion|  
-|整数 [*..255]|ssNoversion|  
+|int|int|  
+|int [*..255]|int|  
+|integer|int|  
+|整数 [*..255]|int|  
 |longblob|varbinary(max)|  
 |長いテキスト|nvarchar(max)|  
 |mediumblob|varbinary(max)|  
-|mediumint|ssNoversion|  
-|mediumint [*..255]|ssNoversion|  
+|mediumint|int|  
+|mediumint [*..255]|int|  
 |mediumtext|nvarchar(max)|  
 |national char|nchar [1]|  
 |national char [0..1]|nchar [1]|  
@@ -124,7 +123,7 @@ SSMA の既定値に型マッピングのリストをリセットする をク�
 |national varchar [0..1]|nvarchar [1]|  
 |national varchar [2..4000]|nvarchar [*]|  
 |national varchar [4001.. *]|nvarchar(max)|  
-|NCHAR|nchar [1]|  
+|nchar|nchar [1]|  
 |nchar varchar|nvarchar [1]|  
 |nchar varchar [0..1]|nvarchar [1]|  
 |nchar varchar [2..4000]|nvarchar [*]|  
@@ -174,15 +173,15 @@ SSMA の既定値に型マッピングのリストをリセットする をク�
 |符号なし int [*..255]|BIGINT|  
 |符号なし整数|BIGINT|  
 |符号なし整数 [*..255]|BIGINT|  
-|符号なしの mediumint|ssNoversion|  
-|符号なしの mediumint [*..255]|ssNoversion|  
-|符号なし数値|NUMERIC|  
+|符号なしの mediumint|int|  
+|符号なしの mediumint [*..255]|int|  
+|unsigned numeric|NUMERIC|  
 |符号なし数値 [*..65]|数値 [*] [0]|  
 |符号なし数値 [*..65] [\*..30]|数値 [*] [\*]|  
 |実際に符号なし|float [53]|  
 |実際に署名されていない [*..255 [\*..30]|数値 [*] [\*]|  
-|符号なしの smallint|ssNoversion|  
-|符号なしの smallint [*..255]|ssNoversion|  
+|符号なしの smallint|int|  
+|符号なしの smallint [*..255]|int|  
 |符号なしの tinyint|TINYINT|  
 |符号なしの tinyint [*..255]|TINYINT|  
 |varbinary [0..1]|varbinary [1]|  
@@ -191,17 +190,17 @@ SSMA の既定値に型マッピングのリストをリセットする をク�
 |varchar [0..1]|nvarchar [1]|  
 |varchar [2..4000]|nvarchar [*]|  
 |varchar [4001.. *]|nvarchar(max)|  
-|year|SMALLINT|  
+|年|SMALLINT|  
 |year [2..2]|SMALLINT|  
 |year [4..4]|SMALLINT|  
   
-##### <a name="add"></a>[追加]  
+##### <a name="add"></a>追加  
 データ型をマッピングの一覧に追加する をクリックします。  
   
 ##### <a name="edit"></a>編集  
 データ型マッピングのリストを編集する をクリックします。  
   
-##### <a name="remove"></a>[削除]  
+##### <a name="remove"></a>削除  
 マッピングの一覧から選択したデータ型のマッピングを削除する をクリックします。  
   
 ##### <a name="reset-to-default"></a>[既定値にリセット]  

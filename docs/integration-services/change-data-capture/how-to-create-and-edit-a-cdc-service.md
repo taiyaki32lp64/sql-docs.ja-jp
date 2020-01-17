@@ -8,17 +8,20 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 1b3d47a5-dc89-482d-bbc7-fff04f194c43
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: 8766fa37ca20543ac74535b161f0f12a16c8958c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 9df960fa5018ad8f4368c99a91c5aed3fe0aab15
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47728650"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71294788"
 ---
 # <a name="how-to-create-and-edit-a-cdc-service"></a>CDC Service を作成および編集する方法
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   この手順では、CDC Service 構成コンソールから新しい Oracle CDC Service を作成および編集する方法について説明します。  
   
  この手順を実行する Windows ユーザーには、Oracle CDC サービスが構成されているコンピューター上の管理者権限が必要です。  
@@ -63,6 +66,6 @@ ms.locfileid: "47728650"
   
 ## <a name="see-also"></a>参照  
  [Attunity の Change Data Capture Designer for Oracle](../../integration-services/change-data-capture/change-data-capture-designer-for-oracle-by-attunity.md)   
- [Oracle CDC Service の作成と編集](../../integration-services/change-data-capture/create-and-edit-an-oracle-cdc-service.md)  
+ [Create and Edit an Oracle CDC Service](../../integration-services/change-data-capture/create-and-edit-an-oracle-cdc-service.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: 実行時データ パラメーター (ODBC) を使用して、|Microsoft Docs
+title: 実行時データパラメーターの使用 (ODBC) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -12,18 +12,16 @@ helpviewer_keywords:
 ms.assetid: 2a738aef-c991-4f62-bdab-a5221c335f31
 author: MightyPen
 ms.author: genemi
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 728e404c5f64b137b8260da82846d97c8647a430
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: 9235d096be513e1480dab7e23672e14011c63f0a
+ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53215448"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73781209"
 ---
 # <a name="managing-text-and-image-columns---use-data-at-execution-parameters"></a>text 列と image 列の管理 - 実行時パラメーターの使用
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-[!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
 
     
 ### <a name="to-use-data-at-execution-text-ntext-or-image-parameters"></a>実行時データ text パラメーター、ntext パラメーター、または image パラメーターを使用するには  
@@ -47,15 +45,15 @@ ms.locfileid: "53215448"
 ## <a name="example"></a>例  
  このサンプルでは、SQLParamData と SQLPutData を使用して、SQL_LONG 変数の文字データを読み込む方法を示します。 このサンプルは IA64 ではサポートされていません。  
   
- AdventureWorks と呼ばれる ODBC データ ソース (既定のデータベースは AdventureWorks サンプル データベース) が必要です  (AdventureWorks サンプル データベースは、[Microsoft SQL Server のサンプルとコミュニティのプロジェクト](https://go.microsoft.com/fwlink/?LinkID=85384)のホーム ページからダウンロードできます)。このデータ ソースには、オペレーティング システムに用意されている ODBC ドライバーが使用されている必要があります (ドライバー名は "SQL Server")。 このサンプルを 64 ビット オペレーティング システムで 32 ビット アプリケーションとしてビルドし、実行する場合、%windir%\SysWOW64\odbcad32.exe の ODBC アドミニストレーターを使用して ODBC データ ソースを作成する必要があります。  
+ AdventureWorks と呼ばれる ODBC データ ソース (既定のデータベースは AdventureWorks サンプル データベース) が必要です (AdventureWorks サンプルデータベースは、 [Microsoft SQL Server のサンプルとコミュニティのプロジェクト](https://go.microsoft.com/fwlink/?LinkID=85384)のホームページからダウンロードできます)。このデータソースは、オペレーティングシステムによって提供される ODBC ドライバーに基づいている必要があります (ドライバー名は "SQL Server")。 このサンプルを 64 ビット オペレーティング システムで 32 ビット アプリケーションとしてビルドし、実行する場合、%windir%\SysWOW64\odbcad32.exe の ODBC アドミニストレーターを使用して ODBC データ ソースを作成する必要があります。  
   
  このサンプルでは、コンピューターの既定の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスに接続します。 名前付きインスタンスに接続するには、ODBC データ ソースの定義を変更し、server\namedinstance 形式でそのインスタンスを指定します。 [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] は、既定で名前付きインスタンスとしてインストールされます。  
   
- 最初の実行 ( [!INCLUDE[tsql](../../includes/tsql-md.md)]) コード リストをこのサンプルで使用されるテーブルを作成します。  
+ 最初の ([!INCLUDE[tsql](../../includes/tsql-md.md)]) コードリストを実行して、サンプルで使用するテーブルを作成します。  
   
  odbc32.lib を使用して 2 つ目の (C++) コード リストをコンパイルします。 次に、プログラムを実行します。  
   
- 3 つ目の実行 ( [!INCLUDE[tsql](../../includes/tsql-md.md)]) コード リストをこのサンプルで使用されるテーブルを削除します。  
+ 3番目の ([!INCLUDE[tsql](../../includes/tsql-md.md)]) コードリストを実行して、サンプルで使用されているテーブルを削除します。  
   
 ```  
 use AdventureWorks  
@@ -227,6 +225,6 @@ GO
 ```  
   
 ## <a name="see-also"></a>参照  
- [テキストとイメージの列の操作方法に関するトピックを管理する&#40;ODBC&#41;](https://msdn.microsoft.com/library/f97333ad-e2ab-4d26-9395-741ba25f2c28)  
+ [Text 列と image 列の管理方法に&#40;関するトピック (ODBC)&#41;](https://msdn.microsoft.com/library/f97333ad-e2ab-4d26-9395-741ba25f2c28)  
   
   

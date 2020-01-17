@@ -14,15 +14,14 @@ helpviewer_keywords:
 - Registered Servers [SQL Server], moving server or server group
 - groups [SQL Server], server
 ms.assetid: 4438ca98-3abe-4dea-a760-48a9dad63c2e
-author: stevestein
-ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 485fd7c854f04377fb92be7ea5d8de1a4871882c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 3d512660bddb5cd3090402e0cfb61ca88612a43e
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47711860"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68256171"
 ---
 # <a name="move-a-registered-server-or-registered-server-group"></a>登録済みサーバーまたは登録済みサーバー グループの移動
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

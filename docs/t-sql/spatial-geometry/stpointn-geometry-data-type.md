@@ -15,15 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - STPointN (geometry Data Type)
 ms.assetid: 8f0bb3b7-5cd9-42c2-b9f8-f04628653bd0
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: 8e4f4c40b4607a354f6ef1c29bf3c7f1dc448f4b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: MladjoA
+ms.author: mlandzic
+ms.openlocfilehash: 81808f6387942bd3ba8aa01f4eeaa5bd93b2dcba
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47727806"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68066409"
 ---
 # <a name="stpointn-geometry-data-type"></a>STPointN (geometry データ型)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -44,9 +43,9 @@ ms.locfileid: "47727806"
 ## <a name="return-types"></a>戻り値の型  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の戻り値の型: **geometry**  
   
- CLR の戻り値の型: **SqlGeometry**  
+ CLR の戻り値の型:**SqlGeometry**  
   
- Open Geospatial Consortium (OGC) の型: **Point**  
+ Open Geospatial Consortium (OGC) の型:**Point**  
   
 ## <a name="remarks"></a>Remarks  
  ユーザーが作成した **geometry** インスタンスの場合、`STPointN()` は、最初に入力した順序で地点を並べ替えることで、*expression* で指定された地点を返します。  

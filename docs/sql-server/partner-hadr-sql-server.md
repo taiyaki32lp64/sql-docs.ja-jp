@@ -1,20 +1,19 @@
 ---
-title: SQL Server の高可用性とディザスター リカバリーのパートナー | Microsoft Docs
+title: SQL Server の高可用性とディザスター リカバリーのパートナー
 description: サーバー監視のソリューションを提供しているサードパーティ パートナーの一覧を表示します。
 services: sql-server
 ms.topic: conceptual
-ms.custom: ''
+ms.custom: seo-dt-2019
 ms.date: 09/17/2017
 ms.prod: sql
 ms.author: mikeray
 author: MikeRayMSFT
-manager: craigg
-ms.openlocfilehash: 1849328d008a6b995d2242a1e00aa9c0040e8d05
-ms.sourcegitcommit: 0bb306da5374d726b1e681cd4b5459cb50d4a87a
+ms.openlocfilehash: e13efcf874b9f0d59cdc103626c1604b58757af8
+ms.sourcegitcommit: 15fe0bbba963d011472cfbbc06d954d9dbf2d655
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2018
-ms.locfileid: "53732049"
+ms.lasthandoff: 11/14/2019
+ms.locfileid: "74095558"
 ---
 # <a name="sql-server-high-availability-and-disaster-recovery-partners"></a>SQL Server の高可用性とディザスター リカバリーのパートナー
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -36,7 +35,7 @@ SQL Server サービスの高可用性とディザスター リカバリーを�
 |![Veeam][1] |**Veeam**<br>Veeam Backup & Replication は強力で使いやすく、手頃な価格のバックアップと可用性のソリューションです。 仮想化されたアプリケーションとデータの高速で柔軟な、信頼性の高い回復を提供し、単一のソフトウェア ソリューションで VM (仮想マシン) のバックアップとレプリケーションをまとめて行います。 Veeam Backup & Replication は、VMware vSphere および Microsoft Hyper-V の仮想環境に受賞歴のあるサポートを提供します。<br><br>SQL Server 2005 SP4 - Windows 上の SQL Server 2016 |[Web サイト][veeam_website]<br>[データシート][veeam_datasheet]<br>[Twitter][veeam_twitter]<br>[ビデオ][veeam_youtube]|
 
 ## <a name="next-steps"></a>次の手順
-その他のパートナーについて詳しくは、[監視][mon_partners]、[管理パートナー][management_partners]、[開発パートナー][dev_partners]に関するページをご覧ください。
+その他のパートナーの詳細については、[監視][mon_partners]、[管理パートナー][management_partners]、[開発パートナー][dev_partners]に関するページを参照してください。
 
 <!--Image references-->
 [1]: ./media/partner-hadr-sql-server/Veeam_green_logo.png
@@ -70,7 +69,7 @@ SQL Server サービスの高可用性とディザスター リカバリーを�
 [dh2i_datasheet]:https://dh2i.com/wp-content/uploads/DxE-Win-QuickFacts.pdf
 [hpe]:https://www.hpe.com/h20195/v2/default.aspx?cc=us&lc=en&oid=376220
 [necec_datasheet]: https://www.necam.com/docs/?id=0d9ef7a7-f935-4909-b6bb-20a47b3
-[azure_datasheet]: https://docs.microsoft.com/azure/site-recovery/site-recovery-sql#site-recovery-support
+[azure_datasheet]: /azure/site-recovery/vmware-physical-azure-support-matrix
 [sios_datasheet]: https://us.sios.com/solutions/high-availability-cluster-software-cloud/
 
 <!--Marketplace Links -->
@@ -85,7 +84,7 @@ SQL Server サービスの高可用性とディザスター リカバリーを�
 [idera_youtube]:https://www.idera.com/resourcecentral/videos/sql-safe-overview
 [azure_youtube]: https://mva.microsoft.com/en-US/training-courses/is-your-lack-of-a-disaster-recovery-site-keeping-you-up-at-night-8680?l=oF7YrFH1_7504984382
 [necec_youtube]: https://www.youtube.com/watch?v=9La3Cw1Q1Jk
-[portworx_youtube]: https://www.youtube.com/channel/UCSexpvQ9esSRgiS_Q9_3mLQ 
+[portworx_youtube]: https://www.youtube.com/channel/UCSexpvQ9esSRgiS_Q9_3mLQ
 [sios_youtube]: https://www.youtube.com/watch?v=U3M44gJNWQE
 
 <!--Twitter links-->

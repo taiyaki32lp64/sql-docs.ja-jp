@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 helpviewer_keywords:
 - displaying reports
@@ -36,12 +35,12 @@ ms.assetid: 4a3cb94a-a7ac-4cec-94c7-db26fcf6d161
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 0d8ec04baf292807120ed5a26360878ac7e20442
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: fc3a08e707f6b51059145c69fdee15f78c933135
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48070902"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66091229"
 ---
 # <a name="using-reports"></a>レポートの使用
   アップグレード アドバイザー分析ウィザードによってサーバー上で分析されたコンポーネントごとまたはインスタンスごとに、個別のレポートが生成されます。 レポートでは、アップグレードに影響する既知の問題の詳細を参照できます。 情報と特定された問題に対処するための推奨されるアクションへのリンクも提供します。  
@@ -83,10 +82,10 @@ ms.locfileid: "48070902"
  他のユーザーと情報を共有するには、XML レポートを他のユーザーに送信できます。 また、レポートをコンマ区切り形式のファイルにエクスポートすれば、スプレッドシート、テキスト ファイル、電子メール メッセージなどを別のアプリケーションで作成できます。  
   
 ## <a name="see-also"></a>参照  
- [方法: アップグレード アドバイザー レポートを表示します。](../../../2014/sql-server/install/how-to-view-an-upgrade-advisor-report.md)   
- [方法: レポートのエクスポート](../../../2014/sql-server/install/how-to-export-reports.md)   
- [方法: レポートをフィルター処理](../../../2014/sql-server/install/how-to-filter-reports.md)   
+ [方法:アップグレード アドバイザー レポートを表示します。](../../../2014/sql-server/install/how-to-view-an-upgrade-advisor-report.md)   
+ [方法:レポートのエクスポート](../../../2014/sql-server/install/how-to-export-reports.md)   
+ [方法:レポートのフィルター](../../../2014/sql-server/install/how-to-filter-reports.md)   
  [アップグレードの問題を解決します。](../../../2014/sql-server/install/resolving-upgrade-issues.md)   
- [SQL Server 2014 アップグレード アドバイザー&#91;新規&#93;](/sql/2014/sql-server/install/sql-server-2014-upgrade-advisor)  
+ [SQL Server 2014 アップグレード アドバイザー&#91;新規&#93;](sql-server-2014-upgrade-advisor.md)  
   
   

@@ -7,17 +7,17 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 5683a45d-9e73-4cd5-83ca-fae8b26b488c
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 3ff729a43f1dbc414ba6a67a0c80e9f17e4d0cc4
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 3dd2fd95b1ad2d239d055b2b49b991860a58d338
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52747924"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62891404"
 ---
-# <a name="step-3-adding-error-flow-redirection"></a>手順 3:エラー フロー リダイレクションの追加
+# <a name="step-3-adding-error-flow-redirection"></a>手順 3:エラー フロー リダイレクトの追加
   前の実習で学んだように、Lookup Currency Key 変換で壊れているサンプル フラット ファイルを処理しようとするとエラーが発生し、変換を行うことができません。 この変換ではエラー出力に既定の設定を使用するため、エラーが発生すると変換は失敗します。 変換が失敗すると、それ以降のパッケージも失敗します。  
   
  エラー出力を使用し、失敗した行を別の処理パスにリダイレクトするようにコンポーネントを構成することで、変換の失敗を回避できます。 別のエラー処理パスを使用すると、さまざまな処理が可能になります。 たとえば、データを消去した後に失敗した行を再処理できます。 失敗した行を詳細なエラー情報と共に保存し、後の検証や再処理に役立てることも可能です。  
@@ -30,7 +30,7 @@ ms.locfileid: "52747924"
   
 ### <a name="to-configure-an-error-output"></a>エラー出力を構成するには  
   
-1.  **[SSIS ツールボックス]** で **[共通]** を展開し、 **[スクリプト コンポーネント]** を **[データ フロー]** タブのデザイン画面にドラッグします。**[スクリプト]** を **[Lookup Currency Key]** 変換の右に配置します。  
+1.  **[SSIS ツールボックス]** で **[共通]** を展開し、 **[スクリプト コンポーネント]** を **[データ フロー]** タブのデザイン画面にドラッグします。 **[スクリプト]** を **[Lookup Currency Key]** 変換の右に配置します。  
   
 2.  **[スクリプト コンポーネントの種類を選択]** ダイアログ ボックスで、 **[変換]** をクリックし、 **[OK]** をクリックします。  
   
@@ -52,7 +52,7 @@ ms.locfileid: "52747924"
   
 10. **スクリプト** ページで、いることを確認、`LocaleID`プロパティに設定されて**英語 (米国。**  
   
-11.  **[スクリプトの編集]** をクリックして、 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] Tools for Applications (VSTA) を開きます。 `Input0_ProcessInputRow` メソッドに、次のコードを入力するか貼り付けます。  
+11. **[スクリプトの編集]** をクリックして、 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] Tools for Applications (VSTA) を開きます。 `Input0_ProcessInputRow` メソッドに、次のコードを入力するか貼り付けます。  
   
      [Visual Basic]  
   

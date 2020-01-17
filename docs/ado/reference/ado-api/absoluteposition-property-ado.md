@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 79f8ee5e-fc70-46d8-8c29-ebf943c66592
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 4444c54df6e3629e7f69e3fe0d54625f66c3e703
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 5b9795f962d0ead59a8d4f993e799a0ae4e2b750
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47813160"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67921692"
 ---
 # <a name="absoluteposition-property-ado"></a>AbsolutePosition プロパティ (ADO)
 序数位置を示す、 [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md)オブジェクトの現在のレコード。  
@@ -48,7 +47,7 @@ ms.locfileid: "47813160"
 ## <a name="applies-to"></a>適用対象  
  [Recordset オブジェクト (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [AbsolutePosition および CursorLocation プロパティの例 (VB)](../../../ado/reference/ado-api/absoluteposition-and-cursorlocation-properties-example-vb.md)   
  [AbsolutePosition および CursorLocation プロパティの例 (vc++)](../../../ado/reference/ado-api/absoluteposition-and-cursorlocation-properties-example-vc.md)   
  [AbsolutePage プロパティ (ADO)](../../../ado/reference/ado-api/absolutepage-property-ado.md)   

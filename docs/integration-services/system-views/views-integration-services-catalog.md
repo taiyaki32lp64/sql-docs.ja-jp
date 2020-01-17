@@ -10,24 +10,27 @@ ms.topic: language-reference
 helpviewer_keywords:
 - views [Integration Services]
 ms.assetid: d0294d43-4852-46dc-9afa-d0c19ea9aa03
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: 59019aa0923d30bf45f26259680e39cf8f8ed114
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 6e1f54ee39981785f17c4883ec5dd191ecf7ccbc
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47608670"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71295146"
 ---
 # <a name="views-integration-services-catalog"></a>ビュー (Integration Services カタログ)
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
   このセクションでは、[!INCLUDE[tsql](../../includes/tsql-md.md)] のインスタンスに配置されている [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] プロジェクトを管理できる [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ビューについて説明します。  
   
  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] ビューに対してクエリを実行すると、**SSISDB** カタログに格納されているオブジェクト、設定、および業務データを検査できます。  
   
- カタログの既定の名前は、SSISDB です。 カタログに格納されているオブジェクトには、プロジェクト、パッケージ、パラメーター、環境、および操作履歴があります。  
+ カタログの既定の名前は、SSISDB です。 カタログに格納されているオブジェクトには、プロジェクト、パッケージ、パラメーター、環境、操作履歴があります。  
   
  データベース ビューとストアド プロシージャを直接使用することも、マネージド API を呼び出すカスタム コードを記述することもできます。 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] およびマネージド API では、ビューに対してクエリを実行し、多くのタスクを実行するストアド プロシージャ (このセクションで説明) を呼び出します。  
   

@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 660e909f-61eb-406b-bbce-8864dd629ba0
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 7369d4793b803b538435267399b2deaff777ba21
-ms.sourcegitcommit: 97340deee7e17288b5eec2fa275b01128f28e1b8
+ms.openlocfilehash: e8c1447bfb5a4776430d24959267c7ec29aa48e0
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55421169"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68133601"
 ---
 # <a name="master-database"></a>master データベース
 
@@ -53,34 +52,34 @@ SQL Server と Azure SQL Database Managed Instance に向けた **master** デ�
 |データベース オプション|既定値|変更可否|  
 |---------------------|-------------------|---------------------|  
 |ALLOW_SNAPSHOT_ISOLATION|ON|いいえ|  
-|ANSI_NULL_DEFAULT|OFF|可|  
-|ANSI_NULLS|OFF|可|  
-|ANSI_PADDING|OFF|可|  
-|ANSI_WARNINGS|OFF|可|  
-|ARITHABORT|OFF|可|  
+|ANSI_NULL_DEFAULT|OFF|はい|  
+|ANSI_NULLS|OFF|はい|  
+|ANSI_PADDING|OFF|はい|  
+|ANSI_WARNINGS|OFF|はい|  
+|ARITHABORT|OFF|はい|  
 |AUTO_CLOSE|OFF|いいえ|  
-|AUTO_CREATE_STATISTICS|ON|可|  
+|AUTO_CREATE_STATISTICS|ON|はい|  
 |AUTO_SHRINK|OFF|いいえ|  
-|AUTO_UPDATE_STATISTICS|ON|可|  
-|AUTO_UPDATE_STATISTICS_ASYNC|OFF|可|  
+|AUTO_UPDATE_STATISTICS|ON|はい|  
+|AUTO_UPDATE_STATISTICS_ASYNC|OFF|はい|  
 |CHANGE_TRACKING|OFF|いいえ|  
-|CONCAT_NULL_YIELDS_NULL|OFF|可|  
-|CURSOR_CLOSE_ON_COMMIT|OFF|可|  
-|CURSOR_DEFAULT|GLOBAL|可|  
+|CONCAT_NULL_YIELDS_NULL|OFF|はい|  
+|CURSOR_CLOSE_ON_COMMIT|OFF|はい|  
+|CURSOR_DEFAULT|GLOBAL|はい|  
 |データベース可用性オプション|ONLINE<br /><br /> MULTI_USER<br /><br /> READ_WRITE|いいえ<br /><br /> いいえ<br /><br /> いいえ|  
-|DATE_CORRELATION_OPTIMIZATION|OFF|可|  
+|DATE_CORRELATION_OPTIMIZATION|OFF|はい|  
 |DB_CHAINING|ON|いいえ|  
 |ENCRYPTION|OFF|いいえ|  
 |MIXED_PAGE_ALLOCATION|ON|いいえ|  
-|NUMERIC_ROUNDABORT|OFF|可|  
-|PAGE_VERIFY|CHECKSUM|可|  
-|PARAMETERIZATION|SIMPLE|可|  
-|QUOTED_IDENTIFIER|OFF|可|  
+|NUMERIC_ROUNDABORT|OFF|はい|  
+|PAGE_VERIFY|CHECKSUM|はい|  
+|PARAMETERIZATION|SIMPLE|はい|  
+|QUOTED_IDENTIFIER|OFF|はい|  
 |READ_COMMITTED_SNAPSHOT|OFF|いいえ|  
-|RECOVERY|SIMPLE|可|  
-|RECURSIVE_TRIGGERS|OFF|可|  
+|RECOVERY|SIMPLE|はい|  
+|RECURSIVE_TRIGGERS|OFF|はい|  
 |Service Broker のオプション|DISABLE_BROKER|いいえ|  
-|TRUSTWORTHY|OFF|可|  
+|TRUSTWORTHY|OFF|はい|  
   
 これらのデータベース オプションの説明は、「[ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md)」を参照してください。  
   

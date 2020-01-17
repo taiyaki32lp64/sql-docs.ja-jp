@@ -20,16 +20,15 @@ helpviewer_keywords:
 - transactions [SQL Server], state
 - active transactions
 ms.assetid: e9300827-e793-4eb6-9042-ffa0204aeb50
-author: MashaMSFT
-ms.author: mathoma
-manager: craigg
+author: MikeRayMSFT
+ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: f72bda649e317b5c08638f959e6b7600aac72a88
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: c287300b9db48327f5d3ac72e11fcc78183ed88b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52530522"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67927426"
 ---
 # <a name="xactstate-transact-sql"></a>XACT_STATE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -54,7 +53,7 @@ XACT_STATE()
 |------------------|-------------|  
 |1|現在の要求にアクティブなユーザー トランザクションが存在する。 要求では、データ書き込み、トランザクションのコミットなど、任意の操作を実行できます。|  
 |0|現在の要求にアクティブなユーザー トランザクションが存在しない。|  
-|-1|現在の要求にアクティブなユーザー トランザクションが存在するが、コミットできないトランザクションとして分類されるエラーが発生した。 この場合、要求でトランザクションのコミットまたはセーブポイントへのロールバックは行えず、トランザクションの完全ロールバックだけを要求できます。 要求では、トランザクションをロールバックするまで書き込み操作は実行できず、 読み取り操作だけを実行できます。 トランザクションがロールバックされた後は、要求では読み取り、書き込み両方の操作を実行でき、新しいトランザクションを開始できます。<br /><br /> 外側のバッチの実行が完了すると、コミット不可能なトランザクションは、[!INCLUDE[ssDE](../../includes/ssde-md.md)] によって自動的にロールバックされます。 トランザクションがコミット不可能な状態になったときにエラー メッセージが送信されなかった場合、バッチが完了すると、エラー メッセージがクライアント アプリケーションに送信されます。 このメッセージは、コミット不可能なトランザクションが検出され、ロールバックされたことを示します。|  
+|-1|現在の要求にアクティブなユーザー トランザクションが存在するが、コミットできないトランザクションとして分類されるエラーが発生した。 要求でトランザクションのコミットまたはセーブポイントへのロールバックは行えず、トランザクションの完全ロールバックだけを要求できます。 要求では、トランザクションをロールバックするまで書き込み操作は実行できず、 読み取り操作だけを実行できます。 トランザクションがロールバックされた後は、要求では読み取り、書き込み両方の操作を実行でき、新しいトランザクションを開始できます。<br /><br /> 外側のバッチの実行が完了すると、コミット不可能なトランザクションは、[!INCLUDE[ssDE](../../includes/ssde-md.md)] によって自動的にロールバックされます。 トランザクションがコミット不可能な状態になったときにエラー メッセージが送信されなかった場合、バッチが完了すると、エラー メッセージがクライアント アプリケーションに送信されます。 このメッセージは、コミット不可能なトランザクションが検出され、ロールバックされたことを示します。|  
   
  現在の要求にアクティブなユーザー トランザクションがあるかどうかを検出するには、XACT_STATE 関数と @@TRANCOUNT 関数の両方を使用できます。 ただし、@@TRANCOUNT では、検出されたトランザクションがコミット不可能なトランザクションとして分類されているかどうかは判断できません。 また、XACT_STATE では、入れ子になったトランザクションが存在するかどうかは判断できません。  
   

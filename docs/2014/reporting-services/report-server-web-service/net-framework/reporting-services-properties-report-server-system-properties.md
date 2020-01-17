@@ -4,23 +4,21 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- docset-sql-devref
-- reporting-services-native
+ms.technology: reporting-services
 ms.topic: reference
 helpviewer_keywords:
 - report servers [Reporting Services], properties
 - system-specific properties [Reporting Services]
 ms.assetid: cd874117-00e5-4ae6-8629-eb9ba9f40478
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: be59ff45f9bf2457c81fc67568b1d578430ba893
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 935e60e0dadb55268fc31d92592d21b0c1df41cb
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56024133"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63260824"
 ---
 # <a name="report-server-system-properties"></a>レポート サーバーのシステム プロパティ
   次のシステム プロパティ名は予約されています。 同じ名前のユーザー定義プロパティは作成できません。 Web サービス メソッドを使用すると、これらのプロパティの多くの読み取りや修正ができます。  
@@ -43,7 +41,7 @@ ms.locfileid: "56024133"
 |EnableIntegratedSecurity|統合セキュリティをレポート データ ソース接続でサポートするかどうかを決定します。 既定値は `True` です。 有効な値は次のとおりです。<br /><br /> `True` = 統合セキュリティが有効になります。<br /><br /> `False` = 統合セキュリティが有効になりません。 統合セキュリティを使用するように構成されているレポート データ ソースは実行されません。|  
 |EnableRemoteErrors|リモート コンピューターからレポートを要求したユーザーに返されるエラー メッセージに、外部エラー情報 (レポート データ ソースに関するエラー情報など) を含めます。 有効値は `true` または `false` です。 既定値は `false` です。 詳細については、「[リモート エラーの有効化 (Reporting Services)](../../report-server/enable-remote-errors-reporting-services.md)」を参照してください。|  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  <xref:ReportService2010.ReportingService2010.GetSystemProperties%2A>   
  <xref:ReportService2010.ReportingService2010.SetSystemProperties%2A>   
  [Web サービスと .NET Framework を使用してのアプリケーションの構築](building-applications-using-the-web-service-and-the-net-framework.md)   

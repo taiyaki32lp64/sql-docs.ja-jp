@@ -1,7 +1,7 @@
 ---
 title: スパース列 | Microsoft Docs
 ms.custom: ''
-ms.date: 07/11/2018
+ms.date: 08/12/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 7d4237e0-818f-4639-9093-d5ac9683fc71
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: bb2d80b8906a43ab2e2ea056d3d3d4e9d2813555
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 328b25b4494ff69368147c9369a0949f3094108f
+ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47733740"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "69027723"
 ---
 # <a name="sparse-columns"></a>スパース列
 

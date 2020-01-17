@@ -16,16 +16,15 @@ helpviewer_keywords:
 - sys.dm_db_resource_stats
 - dm_db_resource_stats
 ms.assetid: 6e76b39f-236e-4bbf-b0b5-38be190d81e8
-author: CarlRabeler
-ms.author: carlrab
-manager: craigg
+author: julieMSFT
+ms.author: jrasnick
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: 074981f19f0eb74a7e7c7d4e82466957f0ff98b8
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 43063bb56607d1b5a21ae04b40ee4c7a17825521
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56022203"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67900135"
 ---
 # <a name="sysdmosjobobject-azure-sql-database"></a>sys.dm_os_job_object (Azure SQL データベース)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
@@ -52,7 +51,7 @@ ms.locfileid: "56022203"
 |peak_job_memory_used_mb|**bigint**|ピーク時のジョブ オブジェクトのすべてのプロセスは、ジョブ オブジェクトから累積的使用いたを mb 単位でのメモリ量が作成されました。|
   
 ## <a name="permissions"></a>アクセス許可  
-SQL Database マネージ インスタンスが必要です。`VIEW SERVER STATE`権限。 SQL Database が必要です、`VIEW DATABASE STATE`データベースの権限。  
+SQL Database マネージ インスタンスが必要です。`VIEW SERVER STATE`権限。 SQL Database では、データベースにおける `VIEW DATABASE STATE` アクセス許可が必要です。  
  
 ## <a name="see-also"></a>参照  
 

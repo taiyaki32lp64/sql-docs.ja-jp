@@ -10,12 +10,12 @@ ms.assetid: 55548cb2-77a8-4953-8b5a-f2778a4f13cf
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: fa8a92b3727bf4c06a5b5a85c8359f96b592cd44
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 9b8d6f35f8dedeb4539dc8299ca32f6566beb03f
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53359754"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63161953"
 ---
 # <a name="monitoring-performance-of-natively-compiled-stored-procedures"></a>ネイティブ コンパイル ストアド プロシージャのパフォーマンスの監視
   このトピックでは、ネイティブ コンパイル ストアド プロシージャのパフォーマンスを監視する方法を説明します。  
@@ -25,7 +25,7 @@ ms.locfileid: "53359754"
   
  拡張イベント内の `line_number` と `object_id` を組み合わせて使用し、クエリを調査することができます。 次のクエリを使用して、プロシージャの定義を取得することができます。 行番号を使用して、定義内のクエリを特定できます:  
   
-```tsql  
+```sql  
 select [definition] from sys.sql_modules where object_id=object_id  
 ```  
   
@@ -49,7 +49,7 @@ select [definition] from sys.sql_modules where object_id=object_id
   
  次のクエリは、統計コレクションを有効にした後、現在のデータベース内で実行されたネイティブ コンパイル ストアド プロシージャに関するプロシージャ名と実行の統計を返します。  
   
-```tsql  
+```sql  
 select object_id,  
        object_name(object_id) as 'object name',  
        cached_time,  
@@ -71,7 +71,7 @@ order by total_worker_time desc
   
  次のクエリは、統計コレクションが有効になっている現在のデータベースに対して実行されたネイティブ コンパイル ストアド プロシージャ内のすべてのクエリに対応するクエリ テキストと実行の統計を返し、合計ワーカー時間の降順に並べ替えます。  
   
-```tsql  
+```sql  
 select st.objectid,   
        object_name(st.objectid) as 'object name',   
        SUBSTRING(st.text, (qs.statement_start_offset/2) + 1, ((qs.statement_end_offset-qs.statement_start_offset)/2) + 1) as 'query text',   
@@ -100,7 +100,7 @@ order by qs.total_worker_time desc
   
  Showplan XML を取得するには、次の [!INCLUDE[tsql](../../includes/tsql-md.md)]を実行します。  
   
-```tsql  
+```sql  
 SET SHOWPLAN_XML ON  
 GO  
 EXEC my_proc   

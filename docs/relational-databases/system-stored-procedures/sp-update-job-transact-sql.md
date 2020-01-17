@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: cbdfea38-9e42-47f3-8fc8-5978b82e2623
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 5fd6986a245d960a96592c8c63c9744b741fa5ff
-ms.sourcegitcommit: 08b3de02475314c07a82a88c77926d226098e23f
+ms.openlocfilehash: 5428ae9130646db662c6c960f777c6a7dfe25000
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49119689"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68084892"
 ---
 # <a name="spupdatejob-transact-sql"></a>sp_update_job (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -57,65 +56,48 @@ sp_update_job [ @job_id =] job_id | [@job_name =] 'job_name'
 ```  
   
 ## <a name="arguments"></a>引数  
- [ **@job_id =**] *job_id*  
- 更新するジョブの識別番号を指定します。 *job_id*は**uniqueidentifier**します。  
+`[ @job_id = ] job_id` 更新するジョブの識別番号。 *job_id*は**uniqueidentifier**します。  
   
- [ **@job_name =**] **'***job_name***'**  
- ジョブの名前を指定します。 *job_name*は**nvarchar (128)** します。  
+`[ @job_name = ] 'job_name'` ジョブの名前。 *job_name*は**nvarchar (128)** します。  
   
-> **注:** か*job_id*または*job_name*指定する必要がありますが両方指定することはできません。  
+> **注:** いずれか*job_id*または*job_name*指定する必要がありますが、両方を指定することはできません。  
   
- [ **@new_name =**] **'***new_name***'**  
- ジョブの新しい名前を指定します。 *新しい名前*は**nvarchar (128)** します。  
+`[ @new_name = ] 'new_name'` ジョブの新しい名前。 *新しい名前*は**nvarchar (128)** します。  
   
- [ **@enabled =**] *enabled*  
- ジョブが有効になっているかどうかを指定します (**1**) または有効になっていません (**0**)。 *有効になっている*は**tinyint**します。  
+`[ @enabled = ] enabled` ジョブが有効になっているかどうかを指定します (**1**) または有効になっていません (**0**)。 *有効になっている*は**tinyint**します。  
   
- [  **@description =**] **'***説明***'**  
- ジョブの説明を指定します。 *説明*は**nvarchar (512)** します。  
+`[ @description = ] 'description'` ジョブの説明。 *説明*は**nvarchar (512)** します。  
   
- [ **@start_step_id =**] *step_id*  
- ジョブで実行する最初のステップの ID 番号を指定します。 *step_id*は**int**します。  
+`[ @start_step_id = ] step_id` ジョブで実行する最初のステップの識別番号。 *step_id*は**int**します。  
   
- [  **@category_name =**] **'***カテゴリ***'**  
- ジョブのカテゴリ。 *カテゴリ*は**nvarchar (128)** します。  
+`[ @category_name = ] 'category'` ジョブのカテゴリ。 *カテゴリ*は**nvarchar (128)** します。  
   
- [  **@owner_login_name =**] **'***ログイン***'**  
- ジョブを所有するログインの名前です。 *ログイン*は**nvarchar (128)** のメンバーのみ、 **sysadmin**固定サーバー ロールは、ジョブの所有権を変更できます。  
+`[ @owner_login_name = ] 'login'` ジョブを所有するログインの名前。 *ログイン*は**nvarchar (128)** のメンバーのみ、 **sysadmin**固定サーバー ロールは、ジョブの所有権を変更できます。  
   
- [ **@notify_level_eventlog =**] *eventlog_level*  
- 対象となるジョブのエントリをいつ Microsoft Windows アプリケーション ログに記録するかを指定します。 *eventlog_level*は**int**、これらの値のいずれかを指定できます。  
+`[ @notify_level_eventlog = ] eventlog_level` このジョブの Microsoft Windows アプリケーション ログにエントリを配置する場合を指定します。 *eventlog_level*は**int**、これらの値のいずれかを指定できます。  
   
-|値|説明 (動作)|  
+|[値]|説明 (動作)|  
 |-----------|----------------------------|  
-|**0**|Never|  
-|**1**|成功時|  
-|**2**|失敗時|  
-|**3**|毎回|  
+|**0**|しない|  
+|**1**|成功した場合|  
+|**2**|エラー発生時|  
+|**3**|常に|  
   
- [ **@notify_level_email =**] *email_level*  
- ジョブの完了時にメールが送信されるタイミングを指定します。 *email_level*は**int**します。*email_level*として同じ値を使用して*eventlog_level*します。  
+`[ @notify_level_email = ] email_level` このジョブの完了時に電子メールを送信するタイミングを指定します。 *email_level*は**int**します。*email_level*として同じ値を使用して*eventlog_level*します。  
   
- [ **@notify_level_netsend =**] *netsend_level*  
- ジョブの完了時にネットワーク メッセージが送信されるタイミングを指定します。 *netsend_level*は**int**します。*netsend_level*として同じ値を使用して*eventlog_level*します。  
+`[ @notify_level_netsend = ] netsend_level` このジョブの完了時にネットワーク メッセージを送信するタイミングを指定します。 *netsend_level*は**int**します。*netsend_level*として同じ値を使用して*eventlog_level*します。  
   
- [ **@notify_level_page =**] *page_level*  
- ジョブの完了時にポケットベルによる通知が送信されるタイミングを指定します。 *page_level*は**int**します。*page_level*として同じ値を使用して*eventlog_level*します。  
+`[ @notify_level_page = ] page_level` このジョブの完了時にページを送信するタイミングを指定します。 *page_level*は**int**します。*page_level*として同じ値を使用して*eventlog_level*します。  
   
- [  **@notify_email_operator_name =**] **'***operator_name***'**  
- 電子メールを送信するときにオペレーターの名前*email_level*に到達します。 *email_name*は**nvarchar (128)** します。  
+`[ @notify_email_operator_name = ] 'operator_name'` 電子メールを送信するときにオペレーターの名前*email_level*に到達します。 *email_name*は**nvarchar (128)** します。  
   
- [ **@notify_netsend_operator_name =**] **'***netsend_operator***'**  
- ネットワーク メッセージの送信先のオペレーター名を指定します。 *netsend_operator*は**nvarchar (128)** します。  
+`[ @notify_netsend_operator_name = ] 'netsend_operator'` ネットワーク メッセージを送信するオペレーターの名前。 *netsend_operator*は**nvarchar (128)** します。  
   
- [ **@notify_page_operator_name =**] **'***page_operator***'**  
- ポケットベルによる通知の送信先のオペレーター名を指定します。 *page_operator*は**nvarchar (128)** します。  
+`[ @notify_page_operator_name = ] 'page_operator'` ページを送信するオペレーターの名前。 *page_operator*は**nvarchar (128)** します。  
   
- [ **@delete_level =**] *delete_level*  
- ジョブが削除されるタイミングを指定します。 *delete_value*は**int**します。*delete_level*として同じ値を使用して*eventlog_level*します。  
+`[ @delete_level = ] delete_level` ジョブを削除するかを指定します。 *delete_value*は**int**します。*delete_level*として同じ値を使用して*eventlog_level*します。  
   
- [ **@automatic_post =**] *automatic_post*  
- 予約されています。  
+`[ @automatic_post = ] automatic_post` 予約されています。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  **0** (成功) または**1** (失敗)  
@@ -123,7 +105,7 @@ sp_update_job [ @job_id =] job_id | [@job_name =] 'job_name'
 ## <a name="remarks"></a>コメント  
  **sp_update_job**から実行する必要があります、 **msdb**データベース。  
   
- **sp_update_job**パラメーター値が提供される設定のみを変更します。 パラメーターを省略した場合は、現在の設定が保持されます。  
+ **sp_update_job**パラメーター値が提供される設定のみを変更します。 パラメーターを省略すると、現在の設定は保持されます。  
   
 ## <a name="permissions"></a>アクセス許可  
  既定では、このストアド プロシージャを実行できるのは、 **sysadmin** 固定サーバー ロールのメンバーです。 他のユーザーには、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] msdb **データベースの次のいずれかの** エージェント固定データベース ロールが許可されている必要があります。  
@@ -153,7 +135,7 @@ EXEC dbo.sp_update_job
 GO  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [sp_add_job &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-job-transact-sql.md)   
  [sp_delete_job &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-delete-job-transact-sql.md)   
  [sp_help_job &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-job-transact-sql.md)   

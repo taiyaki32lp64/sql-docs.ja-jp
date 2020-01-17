@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 9dfb6784-037d-4f9d-bb7f-b506b4498573
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: d409f874e9fcec059c01ddef91d83d8a70fdeb47
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 22286cbe571420475cf273ca377d16e79610fc3e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47694180"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67926565"
 ---
 # <a name="using-ado-with-microsoft-visual-basic-and-visual-basic-for-applications"></a>アプリケーションの Microsoft Visual Basic および Visual Basic と ADO の併用
 ADO のプロジェクトを設定し、ADO コードの記述は似ていますアプリケーションの Visual Basic または Visual Basic を使用するかどうか。 このトピックでは、ADO を Visual Basic と Visual Basic の両方のアプリケーションを使用してアドレスし、相違点をメモします。
@@ -31,7 +30,7 @@ ADO のプロジェクトを設定し、ADO コードの記述は似ています
 
 #### <a name="to-reference-ado-from-microsoft-visual-basic"></a>Microsoft Visual Basic から ADO を参照するには
 
-1.  Visual basic での**プロジェクト**メニューの **参照.**.
+1.  Visual basic での**プロジェクト**メニューの **参照.** .
 
 2.  選択**Microsoft ActiveX Data Objects x.x ライブラリ**一覧から。 以上であることを確認も、次のライブラリが選択されます。
 
@@ -51,7 +50,7 @@ ADO のプロジェクトを設定し、ADO コードの記述は似ています
 
 1.  Microsoft Access で選択するかからモジュールを作成、**モジュール** タブで、**データベース**ウィンドウ。
 
-2.  **ツール**メニューの **参照.**.
+2.  **ツール**メニューの **参照.** .
 
 3.  選択**Microsoft ActiveX Data Objects x.x ライブラリ**一覧から。 以上であることを確認も、次のライブラリが選択されます。
 
@@ -59,12 +58,12 @@ ADO のプロジェクトを設定し、ADO コードの記述は似ています
 
     -   Microsoft Access 8.0 オブジェクト ライブラリ (またはそれ以降)
 
-    -   3.5 DAO オブジェクト ライブラリ (またはそれ以降)
+    -   3\.5 DAO オブジェクト ライブラリ (またはそれ以降)
 
 4.  **[OK]** をクリックします。
 
 ## <a name="creating-ado-objects-in-visual-basic"></a>Visual Basic での ADO オブジェクトの作成
- Automation 変数と、その変数のオブジェクトのインスタンスを作成するには、2 つのメソッドを使用することができます: **Dim**または**CreateObject**します。
+ Automation 変数とをその変数のオブジェクトのインスタンスを作成するには、2 つのメソッドを使用できます。**Dim**または**CreateObject**します。
 
 ### <a name="dim"></a>Dim
  使用することができます、**新規**キーワード**Dim**宣言し、1 つの手順で ADO オブジェクトのインスタンスを作成します。

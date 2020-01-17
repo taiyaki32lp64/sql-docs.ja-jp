@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 04/27/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: analysis-services
 ms.topic: reference
 helpviewer_keywords:
 - registering assemblies
@@ -18,12 +16,12 @@ ms.assetid: a12ff02f-6d0b-4488-9846-3609fc0d0554
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: d2fe6b8670e8ca6f35b5e3d89dfcac653566417b
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 7beb77adf595b055a6c1e4a7543b428a06ce7640
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52506273"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62703089"
 ---
 # <a name="creating-stored-procedures"></a>ストアド プロシージャの作成
   ストアド プロシージャを使用するには、これを共通言語ランタイム (CLR) クラスまたはコンポーネント オブジェクト モデル (COM) クラスに関連付ける必要があります。 クラスは、の形式では、通常のサーバーにインストールする必要があります、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] ActiveX® ダイナミック リンク ライブラリ (DLL)、およびサーバー上またはアセンブリとして登録されている、[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]データベース。  

@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 399e1a64-8766-4c44-81ff-445399b7a1de
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 10e3726d26e03da2f9f731babc105244dbf1ff05
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 14499071bd180a7ea709fda3eb26aeae46f229c7
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52539781"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68077022"
 ---
 # <a name="data-returned-by-catalog-functions"></a>カタログ関数によって返されるデータ
 各カタログ関数では、データがその結果セットを返します。 この結果セットが他のすべての結果セットと変わりありません。 通常生成されるパラメーター化によって、定義済み**選択**ドライバーでハードコーディングまたはストアド プロシージャは、データ ソース内にあるステートメント。 結果セットからデータを取得する方法については、次を参照してください。[が、結果セットを作成しますか?](../../../odbc/reference/develop-app/was-a-result-set-created.md)します。  

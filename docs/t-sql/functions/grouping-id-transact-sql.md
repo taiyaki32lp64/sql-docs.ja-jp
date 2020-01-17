@@ -16,20 +16,19 @@ helpviewer_keywords:
 - GROUP BY clause, GROUPING_ID
 - GROUPING_ID function
 ms.assetid: c1050658-b19f-42ee-9a05-ecd6a73b896c
-author: MashaMSFT
-ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 91161ebc6e9f39f3b937b55961a2d8439f44a788
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: VanMSFT
+ms.author: vanto
+ms.openlocfilehash: 13680aea1d34b83d76647d39d0f40b84609b2e8c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47836830"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67910653"
 ---
 # <a name="groupingid-transact-sql"></a>GROUPING_ID (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  グループ化のレベルを計算する関数を指定します。 GROUPING_ID は、GROUP BY が指定されている場合に、SELECT \<select> リスト、HAVING 句、または ORDER BY 句でのみ使用できます。  
+  グループ化のレベルを計算する関数です。 GROUPING_ID は、GROUP BY が指定されている場合に、SELECT \<select> リスト、HAVING 句、または ORDER BY 句でのみ使用できます。  
   
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -51,7 +50,7 @@ GROUPING_ID ( <column_expression>[ ,...n ] )
  GROUPING_ID \<column_expression> は、GROUP BY リストの式と正確に一致させる必要があります。 たとえば、DATEPART (yyyy, \<*列名*>) でグループ化する場合は GROUPING_ID (DATEPART (yyyy, \<*列名*>)) を使用し、\<*列名* でグループ化する場合は GROUPING_ID (\<*列名*>) を使用します。  
   
 ## <a name="comparing-groupingid--to-grouping-"></a>GROUPING_ID () と GROUPING () の比較  
- GROUPING_ID (\<列式> [ **,**...*n* ]) は、列リストの各列に関して返される GROUPING (\<列式>) に相当する値を、0 と 1 の文字列として各出力行に入力します。 GROUPING_ID は、その文字列を基数 2 の数値として解釈し、同等の整数を返します。 たとえば、`SELECT a, b, c, SUM(d),``GROUPING_ID(a,b,c)``FROM T GROUP BY <group by list>` というステートメントがあるものとします。 GROUPING_ID () の入力値と出力値を次の表に示します。  
+ GROUPING_ID (\<列式> [ **,** ...*n* ]) は、列リストの各列に関して返される GROUPING (\<列式>) に相当する値を、0 と 1 の文字列として各出力行に入力します。 GROUPING_ID は、その文字列を基数 2 の数値として解釈し、同等の整数を返します。 たとえば、`SELECT a, b, c, SUM(d),``GROUPING_ID(a,b,c)``FROM T GROUP BY <group by list>` というステートメントがあるものとします。 GROUPING_ID () の入力値と出力値を次の表に示します。  
   
 |集計列|GROUPING_ID (a, b, c) の入力 = GROUPING(a) + GROUPING(b) + GROUPING(c)|GROUPING_ID () の出力|  
 |------------------------|---------------------------------------------------------------------------------------|------------------------------|  

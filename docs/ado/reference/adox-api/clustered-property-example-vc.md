@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: b993e357-3e2e-48a7-a627-76909160c97f
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 0df3ce437d97f2111aa4f980ce926b1fdaccbded
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 33ef2ac09d81d85c6b9170c84bffbc8491dbd995
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47827582"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67966944"
 ---
 # <a name="clustered-property-example-vc"></a>Clustered プロパティの例 (VC++)
 この例では、 [Clustered](../../../ado/reference/adox-api/clustered-property-adox.md)のプロパティ、[インデックス](../../../ado/reference/adox-api/index-object-adox.md)します。 エントリのため、この例を返す、Microsoft Jet データベースは、クラスター化インデックスがサポートされていない注**False**の**Clustered**のすべてのインデックスのプロパティ、 *Northwind*データベース。  
@@ -88,6 +87,6 @@ void ClusteredX() {
 }  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [Clustered プロパティ (ADOX)](../../../ado/reference/adox-api/clustered-property-adox.md)   
  [Index オブジェクト (ADOX)](../../../ado/reference/adox-api/index-object-adox.md)

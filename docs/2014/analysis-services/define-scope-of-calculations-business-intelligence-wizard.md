@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.biwizard.timeintelligence.selecttimehierarchy.f1
@@ -13,12 +12,12 @@ ms.assetid: 19c231bb-9a17-4369-ba14-79309603c727
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 8eb592c5921f2edc57fa1f77af4aea7e3793d896
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: e017a792f2554b757170a7669b83fada43dfb6a9
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48224234"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66082026"
 ---
 # <a name="define-scope-of-calculations-business-intelligence-wizard"></a>[計算範囲の定義] (ビジネス インテリジェンス ウィザード)
   **[計算範囲の定義]** ページを使用すると、新しい時間計算に個別のメジャーを関連付けることができます。  

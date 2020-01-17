@@ -1,6 +1,6 @@
 ---
 title: URL の予約と登録について (SSRS 構成マネージャー) | Microsoft Docs
-ms.date: 05/18/2016
+ms.date: 06/20/2019
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.topic: conceptual
@@ -9,26 +9,26 @@ helpviewer_keywords:
 - URL registration
 - Report Server service, URL reservations
 ms.assetid: c2c460c3-e749-4efd-aa02-0f8a98ddbc76
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 0e835d14bfb2684685f95f65dd1a16e7e4edb55e
-ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: dba8913c5aa5fa0aa8d93dd1c4dd639f85ac3081
+ms.sourcegitcommit: 3f2936e727cf8e63f38e5f77b33442993ee99890
+ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51814115"
+ms.lasthandoff: 06/21/2019
+ms.locfileid: "67314038"
 ---
 # <a name="about-url-reservations-and-registration--ssrs-configuration-manager"></a>URL の予約と登録について (SSRS 構成マネージャー)
-  Reporting Services アプリケーションの URL は、HTTP.SYS の URL 予約として定義されます。 URL 予約は、Web アプリケーションへの URL エンドポイントの構文を定義します。 レポート サーバーでアプリケーションを構成する際には、レポート サーバー Web サービスとレポート マネージャーの両方に対して URL 予約を定義します。 セットアップまたは [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 構成ツールで URL を構成すると、自動的に URL 予約が作成されます。  
+  Reporting Services アプリケーションの URL は、HTTP.SYS の URL 予約として定義されます。 URL 予約は、Web アプリケーションへの URL エンドポイントの構文を定義します。 レポート サーバー上でアプリケーションを構成する際には、レポート サーバー Web サービスと Web ポータルの両方に対して URL 予約を定義します。 セットアップまたは [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 構成ツールで URL を構成すると、自動的に URL 予約が作成されます。  
   
--   セットアップでは、既定値を使用して URL 予約が作成されます。 既定の構成でインストールすると、レポート サーバー Web サービスの URL とレポート マネージャーの URL の 2 つの URL が予約されます。 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 構成ツールを使用すると、URL をさらに追加したり、セットアップによって作成された既定の URL を変更したりできます。  
+-   セットアップでは、既定値を使用して URL 予約が作成されます。 セットアップで既定の構成をインストールすると、2 つの URL が予約されます: レポート サーバー Web サービス用に 1 つと、Web ポータル用に 1 つです。 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 構成ツールを使用すると、URL をさらに追加したり、セットアップによって作成された既定の URL を変更したりできます。  
   
 -   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 構成ツールでは、ツールの **[Web サービス URL]** ページまたは **[Web ポータル URL]** ページで指定した URL に基づいて URL 予約が作成されます。  
   
  いずれの場合も、さらに、レポート サーバー サービスへの URL に対する権限の割り当て、重複するインスタンスのチェック、および HTTP.SYS への URL 予約の追加が行われます。 HttpCfg.exe やその他のツールを使用して直接 Reporting Services の URL 予約を作成したり変更したりしないでください。 手順を省略したり無効な値を設定したりすると、診断や修正が困難な問題が発生する可能性があります。  
   
 > [!NOTE]  
->  HTTP.SYS は、ネットワーク要求をリッスンして要求キューにルーティングするオペレーティング システム コンポーネントです。 このリリースの [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]では、HTTP.SYS によって、レポート サーバー Web サービスとレポート マネージャーの要求キューが作成され、管理されます。 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] アプリケーションのホスティングやアクセスにインターネット インフォメーション サービス (IIS) は使用されなくなりました。 HTTP.SYS 機能の詳細については、MSDN の「 [HTTP サーバー API](https://go.microsoft.com/fwlink/?LinkId=92652) 」を参照してください。  
+> HTTP.SYS は、ネットワーク要求をリッスンして要求キューにルーティングするオペレーティング システム コンポーネントです。 このリリースの [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] では、HTTP.SYS によって、レポート サーバー Web サービスと Web ポータルの要求キューが作成され、管理されます。 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] アプリケーションのホスティングやアクセスにインターネット インフォメーション サービス (IIS) は使用されなくなりました。 HTTP.SYS 機能の詳細については、「[HTTP Server API (HTTP サーバー API)](https://go.microsoft.com/fwlink/?LinkId=92652)」をご覧ください。  
   
 ##  <a name="ReportingServicesURLs"></a> Reporting Services の URL  
  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] では、以下のツール、アプリケーション、およびアイテムに URL を通じてアクセスできます。  
@@ -42,10 +42,10 @@ ms.locfileid: "51814115"
  URL を指定できるその他のパブリッシュされるアイテム (共有データ ソースなど) には、URL を通じてスタンドアロンのアイテムとしてアクセスしないようにしてください。 これらのアイテムは、ブラウザー ウィンドウで表示しても意味のある形式で表示されません。  
   
 > [!NOTE]  
->  このトピックでは、レポート サーバーに保存されている特定のレポートへの URL アクセスについては説明していません。 これらのアイテムへの URL アクセスの詳細については、 [オンライン ブックの「](../../reporting-services/access-report-server-items-using-url-access.md) URL アクセスを使用したレポート サーバー アイテムへのアクセス [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 」を参照してください。  
+> この記事では、レポート サーバーに保存されている特定のレポートへの URL アクセスについては説明していません。 これらのアイテムへの URL アクセスについて詳しくは、「[URL アクセスを使用したレポート サーバー アイテムへのアクセス](../../reporting-services/access-report-server-items-using-url-access.md)」をご覧ください。  
   
 ##  <a name="URLreservation"></a> URL の予約と登録  
- URL 予約は、 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] アプリケーションへのアクセスに使用できる URL を定義します。 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] では、レポート サーバー Web サービスと [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)] の URL を HTTP.SYS で 1 つ以上予約して、サービスの起動時に登録します。 URL にパラメーターを追加することにより、Web サービスを通じてレポートを開くことができます。 予約と登録は、HTTP.SYS によって行われます。 詳細については、MSDN の「 [名前空間の予約、登録、およびルーティング](https://go.microsoft.com/fwlink/?LinkId=92653) 」を参照してください。  
+ URL 予約は、 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] アプリケーションへのアクセスに使用できる URL を定義します。 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] では、レポート サーバー Web サービスと [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)] の URL を HTTP.SYS で 1 つ以上予約して、サービスの起動時に登録します。 URL にパラメーターを追加することにより、Web サービスを通じてレポートを開くことができます。 予約と登録は、HTTP.SYS によって行われます。 詳細については、「[Namespace Reservations, Registration, and Routing (名前空間の予約、登録、およびルーティング)](https://go.microsoft.com/fwlink/?LinkId=92653)」をご覧ください。  
   
  *URL 予約* とは、Web アプリケーションへの URL エンドポイントを作成して HTTP.SYS に格納するプロセスです。 HTTP.SYS は、コンピューターで定義されているすべての URL 予約の共通リポジトリであり、URL 予約が一意であることを保証する一連の共通規則を定義します。  
   
@@ -64,7 +64,7 @@ ms.locfileid: "51814115"
  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] を既定の構成でインストールすると、レポート サーバー Web サービスと [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)]の URL が自動的に予約されます。 これらの既定値は、 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 構成ツールで URL 予約を定義するときにも使用できます。 [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] をインストールした場合や、 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] を名前付きインスタンスとしてインストールした場合は、既定の URL にインスタンス名が含まれます。  
   
 > [!IMPORTANT]  
->  インスタンスの文字はアンダースコア文字 (**_**) です。  
+> インスタンスの文字はアンダースコア文字 ( **_** ) です。  
   
  URL 予約にはポート番号が含まれます。 以下のオペレーティング システムでは、複数の Web アプリケーションで 1 つのポートを共有できます。  
   
@@ -90,11 +90,10 @@ ms.locfileid: "51814115"
 |SQL Server Express|Web ポータル|`https://<servername>/reports_SQLExpress`|`https://<servername>:80/reports_SQLExpress`|  
   
 ##  <a name="URLPermissionsAccounts"></a> Reporting Services の URL の認証とサービス ID  
- [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] の URL 予約では、レポート サーバー サービスのサービス アカウントが指定されます。 サービスが実行されているアカウントが、同じインスタンスで実行される [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] アプリケーションに対して作成されるすべての URL に対して使用されます。 レポート サーバー インスタンスのサービス ID は、RSReportServer.config ファイルに格納されます。  
+ [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] の URL 予約では、URL 予約のアカウントが表示されます。 仮想サービス アカウントが、同じインスタンスで実行される [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] アプリケーション用に作成されるすべての URL に対して使用されます。
   
- サービス アカウントには既定値はありません。 ただし、セットアップ時には (ファイルのみのモードでサーバーをインストールする場合でも) サービス アカウントを指定する必要があります。サービス アカウントは、RSReportServer.config の **URLReservation** に指定されます。 サービス アカウントの有効な値は、ドメイン ユーザー アカウント、 **LocalSystem**、および **NetworkService**です。  
-  
- 既定のセキュリティが **RSWindowsNegotiate**であるため、匿名アクセスは無効になっています。 イントラネット アクセスの場合、レポート サーバーの URL ではネットワーク コンピューターの名前が使用されます。 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] をインターネット接続用に構成する場合は、別の設定を使用する必要があります。 認証の詳細については、 [オンライン ブックで「](../../reporting-services/security/authentication-with-the-report-server.md) レポート サーバーでの認証 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 」を参照してください。  
+ 
+ 既定のセキュリティが **RSWindowsNegotiate**であるため、匿名アクセスは無効になっています。 イントラネット アクセスの場合、レポート サーバーの URL ではネットワーク コンピューターの名前が使用されます。 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] をインターネット接続用に構成する場合は、別の設定を使用する必要があります。 認証の詳細については、「[レポート サーバーでの認証](../../reporting-services/security/authentication-with-the-report-server.md)」をご覧ください。  
   
 ##  <a name="URLlocalAdmin"></a> ローカル管理用の URL  
  URL 予約に強いワイルドカードまたは弱いワイルドカードを指定した場合、`https://localhost/reportserver` または `https://localhost/reports` を使用できます。  
@@ -106,5 +105,4 @@ ms.locfileid: "51814115"
 ## <a name="see-also"></a>参照  
  [URL の構成 &#40;SSRS 構成マネージャー&#41;](../../reporting-services/install-windows/configure-a-url-ssrs-configuration-manager.md)   
  [URL 予約の構文 &#40;SSRS 構成マネージャー&#41;](../../reporting-services/install-windows/url-reservation-syntax-ssrs-configuration-manager.md)  
-  
   

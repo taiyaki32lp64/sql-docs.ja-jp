@@ -19,14 +19,13 @@ helpviewer_keywords:
 ms.assetid: 9da0da95-792e-48b4-9f60-47f0729c279c
 author: VanMSFT
 ms.author: vanto
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 80918c74613e0fb608a9d48c1e56ad2cf206b06e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 27a8f2ddee2e0ff0839317cf1652bcf353c0b66b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47791240"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67940298"
 ---
 # <a name="syscryptographicproviders-transact-sql"></a>sys.cryptographic_providers (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -35,12 +34,12 @@ ms.locfileid: "47791240"
     
 |列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
-|**provider_id**|**int**|暗号化サービス プロバイダーの ID 番号。|  
-|**name**|**sysname**|暗号プロバイダーの名前。|  
-|**guid**|**uniqueidentifier**|一意のプロバイダー GUID。|  
+|**provider_id**|**int**|暗号プロバイダーの id 番号。|  
+|**name**|**sysname**|暗号プロバイダーの名前です。|  
+|**guid**|**uniqueidentifier**|固有のプロバイダーの GUID です。|  
 |**version**|**nvarchar (50)**|形式でプロバイダーのバージョン '*aa.bb.cccc.dd*' です。|  
-|**dll_path**|**nvarchar(512)**|拡張キー管理 (EKM) アプリケーション プログラミング インターフェイス (API) を実装する DLL へのパス。|  
-|**is_enabled**|**bit**|サーバーでプロバイダーが有効になっているかどうか。<br /><br /> 0 = 有効ではない (既定)<br /><br /> 1 = 有効になっています。|  
+|**dll_path**|**nvarchar(512)**|拡張キー管理 (EKM) アプリケーション プログラム インターフェイス (API) を実装する DLL へのパス。|  
+|**is_enabled**|**bit**|サーバーでプロバイダーが有効になっているかどうか。<br /><br /> 0 = 無効 (既定値)<br /><br /> 1 = 有効になっています。|  
   
 ## <a name="remarks"></a>コメント  
  **Sys.cryptographic_providers**ビューは、パブリックに表示します。  
@@ -48,7 +47,7 @@ ms.locfileid: "47791240"
 ## <a name="permissions"></a>アクセス許可  
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] 詳細については、「 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)」を参照してください。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [セキュリティ カタログ ビュー &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/security-catalog-views-transact-sql.md)   
  [暗号化階層](../../relational-databases/security/encryption/encryption-hierarchy.md)   
  [拡張キー管理 &#40;EKM&#41;](../../relational-databases/security/encryption/extensible-key-management-ekm.md)   

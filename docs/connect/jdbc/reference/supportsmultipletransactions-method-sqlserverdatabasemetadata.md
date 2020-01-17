@@ -1,5 +1,5 @@
 ---
-title: supportsMultipleTransactions メソッド (SQLServerDatabaseMetaData) |Microsoft Docs
+title: supportsMultipleTransactions メソッド (SQLServerDatabaseMetaData) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: 34ff8dcb-5487-46d1-a4c1-25e33eb3eee4
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 5ab606d2898cd6792ad53dd3221e0c05f6f08b1e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e16b4f5590057424cfe67491cf4943399d54c01c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47810752"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67969184"
 ---
 # <a name="supportsmultipletransactions-method-sqlserverdatabasemetadata"></a>supportsMultipleTransactions メソッド (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -36,13 +35,13 @@ public boolean supportsMultipleTransactions()
 ```  
   
 ## <a name="return-value"></a>戻り値  
- **true**サポートされている場合。 それ以外の場合は、 **false**です。  
+ サポートされている場合は**true** 。 それ以外の場合は、 **false**です。  
   
 ## <a name="exceptions"></a>例外  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- この supportsMultipleTransactions メソッドは、java.sql.DatabaseMetaData インターフェイスで supportsMultipleTransactions メソッドによって指定されます。  
+ この Supports多重トランザクションメソッドは、java メタデータインターフェイスの Supports多重トランザクションメソッドによって指定されます。  
   
 ## <a name="see-also"></a>参照  
  [SQLServerDatabaseMetaData のメソッド](../../../connect/jdbc/reference/sqlserverdatabasemetadata-methods.md)   

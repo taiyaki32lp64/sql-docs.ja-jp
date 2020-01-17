@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: 89c11327-eae1-4178-9e26-4b484d521c65
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: ccd38f36f9ad009c433672c8a5d522eae61aa886
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ff0e29e95b321d912f19cece28fd1579aeff50a2
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47811760"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67982357"
 ---
 # <a name="getmaxcatalognamelength-method-sqlserverdatabasemetadata"></a>getMaxCatalogNameLength メソッド (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -36,13 +35,13 @@ public int getMaxCatalogNameLength()
 ```  
   
 ## <a name="return-value"></a>戻り値  
- 許容される最大文字数を示す **int**。  
+ 許容される最大文字数を示す **int** です。  
   
 ## <a name="exceptions"></a>例外  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- この getMaxCatalogNameLength メソッドは、java.sql.DatabaseMetaData インターフェイスで getMaxCatalogNameLength メソッドによって指定されます。  
+ この getMaxCatalogNameLength メソッドは、getMaxCatalogNameLength メソッドによって、java メタデータインターフェイスで指定されます。  
   
 ## <a name="see-also"></a>参照  
  [SQLServerDatabaseMetaData のメソッド](../../../connect/jdbc/reference/sqlserverdatabasemetadata-methods.md)   

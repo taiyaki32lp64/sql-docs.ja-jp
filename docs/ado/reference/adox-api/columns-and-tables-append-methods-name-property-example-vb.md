@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 678e5546-df5d-4cd0-bfe9-6cf13cb385c0
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 2bdd2643fdeb0f317e47c4d54b8b1ca62dec4109
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 898efdf4fe33ec3ce08028bd00b5654947048255
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47681527"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67966865"
 ---
 # <a name="columns-and-tables-append-methods-name-property-example-vb"></a>Columns および Tables Append メソッド、Name プロパティの例 (VB)
 次のコードでは、新しいテーブルを作成する方法を示します。  
@@ -67,7 +66,7 @@ End Sub
 ' EndCreateTableVB  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [Append メソッド (ADOX Columns)](../../../ado/reference/adox-api/append-method-adox-columns.md)   
  [Append メソッド (ADOX Tables)](../../../ado/reference/adox-api/append-method-adox-tables.md)   
  [列オブジェクト (ADOX)](../../../ado/reference/adox-api/column-object-adox.md)   

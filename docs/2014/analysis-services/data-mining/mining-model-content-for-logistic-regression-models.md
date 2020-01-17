@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - logistic regression [Analysis Services]
@@ -15,12 +14,12 @@ ms.assetid: 69cc0b86-e8bc-4d6c-903e-85724f5c0396
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 56bd850ac5da9353073d2cf4d75fd1980bb8a38b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: b463035cc83fafd2b283d85a577616fa962fcd1c
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48164512"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66083621"
 ---
 # <a name="mining-model-content-for-logistic-regression-models-analysis-services---data-mining"></a>ロジスティック回帰モデルのマイニング モデル コンテンツ (Analysis Services - データ マイニング)
   このトピックでは、Microsoft ロジスティック回帰アルゴリズムを使用するモデルに固有のマイニング モデル コンテンツについて説明します。 すべてのモデルの種類に共通の統計および構造を解釈する方法の説明、およびマイニング モデル コンテンツに関連する用語の一般的な定義については、「[マイニング モデル コンテンツ (Analysis Services - データ マイニング)](mining-model-content-analysis-services-data-mining.md)」を参照してください。  
@@ -41,7 +40,7 @@ ms.locfileid: "48164512"
 ## <a name="model-content-for-a-logistic-regression-model"></a>ロジスティック回帰モデルのモデル コンテンツ  
  ここでは、マイニング モデル コンテンツの列のうち、ロジスティック回帰に関連する列についてのみ詳細と例を紹介します。 このモデル コンテンツはニューラル ネットワーク モデルのものとほぼ同じなので、便宜上、この表にも、ニューラル ネットワーク モデルに当てはまる説明が記載されている場合があります。  
   
- ここに記載されていないスキーマ行セットの汎用の列 (MODEL_CATALOG や MODEL_NAME など) の詳細や、マイニング モデルの用語の説明については、「[マイニング モデル コンテンツ &#40;Analysis Services - データ マイニング&#41;](mining-model-content-analysis-services-data-mining.md)」を参照してください。  
+ ここに記載されていないスキーマ行セットの汎用の列 (MODEL_CATALOG や MODEL_NAME など) の詳細や、マイニング モデルの用語の説明については、「 [マイニング モデル コンテンツ (Analysis Services - データ マイニング)](mining-model-content-analysis-services-data-mining.md)」を参照してください。  
   
  MODEL_CATALOG  
  モデルが格納されているデータベースの名前。  
@@ -58,7 +57,7 @@ ms.locfileid: "48164512"
 |マージナル統計|空白|  
 |入力層|空白|  
 |入力ノード|入力属性名|  
-|非表示層|空白|  
+|hidden layer|空白|  
 |出力層|空白|  
 |出力ノード|出力属性名|  
   
@@ -114,7 +113,7 @@ ms.locfileid: "48164512"
 |マージナル統計|空白|  
 |入力層|空白|  
 |入力ノード|入力属性名|  
-|非表示層|空白|  
+|hidden layer|空白|  
 |出力層|空白|  
 |出力ノード|出力属性が連続属性の場合は、出力属性名が含まれます。<br /><br /> 出力属性が不連続属性または分離された属性の場合は、出力属性名と値が含まれます。|  
   
@@ -141,7 +140,7 @@ ms.locfileid: "48164512"
  親ノードからノードに到達する確率です。 ロジスティック回帰モデルでは常に 0 です。  
   
  NODE_DISTRIBUTION  
- ノードの統計情報を含む入れ子になったテーブル。 このテーブルの各ノードの種類のコンテンツに関する詳細についてで、NODE_DISTRIBUTION テーブルの理解、セクションを参照してください[ニューラル ネットワーク モデルのマイニング モデル コンテンツ&#40;Analysis Services - データ マイニング&#41;。](mining-model-content-for-neural-network-models-analysis-services-data-mining.md).  
+ ノードの統計情報を含む入れ子になったテーブル。 このテーブルのノードの種類ごとの内容の詳細については、「 [ニューラル ネットワーク モデルのマイニング モデル コンテンツ (Analysis Services - データ マイニング)](mining-model-content-for-neural-network-models-analysis-services-data-mining.md)」を参照してください。  
   
  NODE_SUPPORT  
  ロジスティック回帰モデルでは常に 0 です。  
@@ -186,7 +185,7 @@ ms.locfileid: "48164512"
   
 ## <a name="see-also"></a>参照  
  [Microsoft ロジスティック回帰アルゴリズム](microsoft-logistic-regression-algorithm.md)   
- [ニューラル ネットワーク モデルのマイニング モデル コンテンツ&#40;Analysis Services - データ マイニング&#41;](mining-model-content-for-neural-network-models-analysis-services-data-mining.md)   
+ [ニューラル ネットワーク モデルのマイニング モデル コンテンツ &#40;Analysis Services - データ マイニング&#41;](mining-model-content-for-neural-network-models-analysis-services-data-mining.md)   
  [ロジスティック回帰モデルのクエリ例](logistic-regression-model-query-examples.md)   
  [Microsoft ロジスティック回帰アルゴリズム テクニカル リファレンス](microsoft-logistic-regression-algorithm-technical-reference.md)  
   

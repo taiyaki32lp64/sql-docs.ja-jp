@@ -4,23 +4,22 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords:
 - events [Integration Services]
 - service [Integration Services], events
 - Integration Services service, events
 ms.assetid: 37e23946-10d1-4116-8568-8fd24067102e
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 887fa745a0f4fab9d7faf716fd7ad26fb3be1fb3
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 4be91309e4feb34bd8dfd85aee8e3e0cd1f82ffd
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48158472"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66054672"
 ---
 # <a name="view-events-for-the-integration-services-service"></a>Integration Services サービスのイベントを表示する
   [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] サービスのイベントを表示できるツールには、次の 2 つがあります。  
@@ -45,7 +44,7 @@ ms.locfileid: "48158472"
   
 ### <a name="to-view-service-events-for-integration-services-in-windows-event-viewer"></a>Windows イベント ビューアーで Integration Services のサービス イベントを表示するには  
   
-1.  **[コントロール パネル]** で、クラシック表示を使用している場合は **[管理ツール]**、カテゴリの表示を使用している場合は **[パフォーマンスとメンテナンス]** をクリックしてから **[管理ツール]** をクリックします。  
+1.  **[コントロール パネル]** で、クラシック表示を使用している場合は **[管理ツール]** 、カテゴリの表示を使用している場合は **[パフォーマンスとメンテナンス]** をクリックしてから **[管理ツール]** をクリックします。  
   
 2.  **[イベント ビューアー]** をクリックします。  
   
@@ -64,7 +63,7 @@ ms.locfileid: "48158472"
 9. **[ファイル]** メニューの **[終了]** をクリックして、 **[イベント ビューアー]** ダイアログ ボックスを閉じます。  
   
 ## <a name="see-also"></a>参照  
- [Integration Services サービスを管理します。](../../2014/integration-services/manage-the-integration-services-service.md)   
+ [Integration Services サービスを管理する](../../2014/integration-services/manage-the-integration-services-service.md)   
  [データ フロー パフォーマンス カウンターのログを追加する](performance/performance-counters.md)  
   
   

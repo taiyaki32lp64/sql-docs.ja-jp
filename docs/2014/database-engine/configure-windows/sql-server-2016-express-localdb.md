@@ -17,11 +17,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 224facf54b0cde09f97010be472e3cc28754e94b
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53368304"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62756992"
 ---
 # <a name="sql-server-2014-express-localdb"></a>SQL Server 2014 Express LocalDB
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssExpCurrent](../../includes/ssexpcurrent-md.md)] `LocalDB` 実行モードは、[!INCLUDE[ssExpress](../../includes/ssexpress-md.md)]プログラムの開発者を対象とします。 `LocalDB` インストールが開始に必要なファイルの最小限のセットをコピー、[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]します。 1 回`LocalDB`がインストールされている場合、開発者の接続を開始、特殊な接続文字列を使用しています。 接続時に、必要な [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インフラストラクチャが自動的に作成および開始されるため、複雑な、または時間のかかる構成タスクを行わなくてもアプリケーションでデータベースを使用できます。 開発者ツールによって、開発者は [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] を使用して [!INCLUDE[tsql](../../includes/tsql-md.md)] コードを記述してテストすることができ、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]の完全なサーバー インスタンスを管理する必要はありません。 インスタンス[!INCLUDE[ssExpress](../../includes/ssexpress-md.md)]`LocalDB`を使用して管理されている場合は、`SqlLocalDB.exe`ユーティリティ。 [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)]`LocalDB` 代わりに使用する必要があります、[!INCLUDE[ssExpress](../../includes/ssexpress-md.md)]ユーザー インスタンスの機能は非推奨とされます。  
@@ -50,7 +50,7 @@ ms.locfileid: "53368304"
  インスタンス`LocalDB`windows ファイル システム リダイレクト; のための管理状態に関する問題を持つことができます NT authority \system などのビルトイン アカウントによって所有されています。代わりに、所有者として通常の windows アカウントを使用します。  
   
 ### <a name="automatic-and-named-instances"></a>自動インスタンスと名前付きインスタンス  
- `LocalDB` 2 つの種類のインスタンスをサポートしています。自動インスタンスと名前付きインスタンスをサポートしています。  
+ `LocalDB` 2 つの種類のインスタンスをサポートしています。自動インスタンスと名前付きインスタンスがサポートされています。  
   
 -   自動インスタンス`LocalDB`はパブリックです。 ユーザーのために自動的に作成および管理され、任意のアプリケーションから使用できます。 自動インスタンスが 1 つ`LocalDB`のすべてのバージョンが存在する`LocalDB`ユーザーのコンピューターにインストールされています。 自動インスタンス`LocalDB`シームレスなインスタンス管理を提供します。 インスタンスを作成する必要はありません。それだけで動作します。 これにより、アプリケーションのインストールと別のコンピューターへの移行が簡単になります。 対象コンピューターに指定バージョンの `LocalDB` がインストールされている場合、その対象コンピューターでも同じバージョンの `LocalDB` の自動インスタンスを使用できます。 自動インスタンス`LocalDB`予約済み名前空間に属しているインスタンス名に特殊なパターンがあります。 こうことで名前付きインスタンスの名前の競合`LocalDB`します。 自動インスタンスの名前は **MSSQLLocalDB**です。  
   
@@ -90,14 +90,14 @@ REM Gather information about the instance of LocalDB
 |名前|"LocalDBApp1"|  
 |バージョン|\<現在のバージョン>|  
 |共有名|""|  
-|[所有者]|"\<Windows ユーザー>"|  
+|所有者|"\<Windows ユーザー>"|  
 |自動作成|いいえ|  
 |状態|実行|  
 |前回の開始時刻|\<日付と時刻>|  
 |インスタンス パイプ名|np:\\\\.\pipe\LOCALDB#F365A78E\tsql\query|  
   
 > [!NOTE]  
->  名前付きパイプに直接接続する場合は、アプリケーションで .net 4.0.2 より前に、のバージョンを使用する必要があります、`LocalDB`します。 インスタンス パイプ名の値は、名前付きパイプのインスタンス`LocalDB`がリッスンします。 LOCALDB # は各変更後にインスタンス パイプ名の一部のインスタンスの時間`LocalDB`が開始します。 インスタンスに接続する`LocalDB`を使用して[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]、インスタンス パイプ名を入力、**サーバー名**のボックス、**への接続[!INCLUDE[ssDE](../../includes/ssde-md.md)]**   ダイアログ ボックス。 インスタンスへの接続を確立するカスタム プログラム`LocalDB`ような接続文字列を使用します。 `SqlConnection conn = new SqlConnection(@"Server=np:\\.\pipe\LOCALDB#F365A78E\tsql\query");`  
+>  名前付きパイプに直接接続する場合は、アプリケーションで .net 4.0.2 より前に、のバージョンを使用する必要があります、`LocalDB`します。 インスタンス パイプ名の値は、名前付きパイプのインスタンス`LocalDB`がリッスンします。 LOCALDB # は各変更後にインスタンス パイプ名の一部のインスタンスの時間`LocalDB`が開始します。 インスタンスに接続する`LocalDB`を使用して[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]、インスタンス パイプ名を入力、**サーバー名**のボックス、**への接続[!INCLUDE[ssDE](../../includes/ssde-md.md)]**  ダイアログ ボックス。 インスタンスへの接続を確立するカスタム プログラム`LocalDB`ような接続文字列を使用します。 `SqlConnection conn = new SqlConnection(@"Server=np:\\.\pipe\LOCALDB#F365A78E\tsql\query");`  
   
 ### <a name="connecting-to-a-shared-instance-of-localdb"></a>LocalDB の共有インスタンスへの接続  
  共有インスタンスに接続する`LocalDB`追加 **.\\** (ドット + 円記号) を共有インスタンス用に予約されている名前空間を参照する接続文字列。 たとえばの共有インスタンスに接続するため`LocalDB`という名前`AppData`接続文字列を使用します。`(localdb)\.\AppData`接続文字列の一部として。 共有インスタンスに接続するユーザー`LocalDB`ユーザーが所有していないことと、Windows 認証が必要または[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]認証ログイン。  

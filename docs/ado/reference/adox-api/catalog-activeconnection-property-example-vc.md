@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 518905a9-6044-4194-af6c-84952d95939d
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 30f7f4f4165b608070fafa5464e64c9c238651c7
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d7808e685792fda9c6a6a6a468a275d9d10bb87f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47696791"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67967100"
 ---
 # <a name="catalog-activeconnection-property-example-vc"></a>Catalog ActiveConnection プロパティの例 (VC++)
 設定、 [ActiveConnection](../../../ado/reference/adox-api/activeconnection-property-adox.md)プロパティを開き、有効な接続「表示」カタログ。 開いているカタログからカタログ内に含まれるスキーマ オブジェクトにアクセスできます。  
@@ -112,5 +111,5 @@ void OpenConnectionWithStringX() {
 }  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [ActiveConnection プロパティ (ADOX)](../../../ado/reference/adox-api/activeconnection-property-adox.md)

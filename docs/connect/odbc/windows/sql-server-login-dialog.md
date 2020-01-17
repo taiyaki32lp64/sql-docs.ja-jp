@@ -1,5 +1,5 @@
 ---
-title: SQL Server ログイン ダイアログ ボックス (ODBC) |Microsoft Docs
+title: '[ログインの SQL Server] ダイアログボックス (ODBC) |Microsoft Docs'
 ms.custom: ''
 ms.date: 03/21/2018
 ms.prod: sql
@@ -10,23 +10,22 @@ ms.topic: conceptual
 ms.assetid: 76326eeb-1144-4b9f-85db-50524c655d30
 author: MightyPen
 ms.author: v-jizho2
-manager: craigg
-ms.openlocfilehash: 58248a2772377ccecba0c701d03276025785c964
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: fcfde122b978fa1e77baa690a1f3e09417dab1c0
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47698060"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67989426"
 ---
 # <a name="sql-server-login-dialog-box-odbc"></a>[SQL Server ログイン] ダイアログ ボックス (ODBC)
 
-ドライバーが SQL Server に接続するのに十分な情報を指定せずに ODBC 接続を呼び出すと、ODBC ドライバーにより、**[SQL Server ログイン]** ダイアログ ボックスが表示されます。
+ドライバーが SQL Server に接続するのに十分な情報を指定せずに ODBC 接続を呼び出すと、ODBC ドライバーにより、 **[SQL Server ログイン]** ダイアログ ボックスが表示されます。
 
-## <a name="options"></a>[変数]
+## <a name="options"></a>オプション
 
 ### <a name="server"></a>[サーバー]
 
-ネットワーク上には、SQL Server のインスタンスの名前。 一覧から server\instance 形式の名前を選択するか、**[サーバー]** ボックスに server\instance 形式の名前を入力します。 必要に応じて、**SQL Server 構成マネージャー**を使用してクライアント コンピューターでサーバーの別名を作成し、**[サーバー]** ボックスにその名前を入力することができます。
+ネットワーク上の SQL Server のインスタンスの名前。 一覧から server\instance 形式の名前を選択するか、 **[サーバー]** ボックスに server\instance 形式の名前を入力します。 必要に応じて、**SQL Server 構成マネージャー**を使用してクライアント コンピューターでサーバーの別名を作成し、 **[サーバー]** ボックスにその名前を入力することができます。
 
 SQL Server と同じコンピューターを使用している場合は、「(local)」と入力することができます。 その後、ネットワークに接続されていない SQL Server を実行している場合でも、SQL Server のローカル インスタンスに接続することができます。
 
@@ -35,13 +34,13 @@ SQL Server と同じコンピューターを使用している場合は、「(lo
 ### <a name="authentication-mode"></a>認証モード
 
 次のいずれかから認証モードを選択します。
-- **SQL Server**ログイン ID とパスワード
-- **Windows 統合**現在のログイン ユーザーのアカウントを使った認証
-- **Active Directory パスワード**ログイン ID とパスワード
-- **Active Directory 統合**現在のログイン ユーザーのアカウントを使った認証
+- ログイン ID とパスワードを使用した**SQL Server**
+- 現在ログインしているユーザーのアカウントを使用した**Windows 統合**認証
+- ログイン ID とパスワードを使用して**パスワードを Active Directory**
+- 現在ログインしているユーザーのアカウントを使用して統合認証を**Active Directory**する
 - ログイン ID を使用した **Active Directory 対話型**認証
 
-参照してください[データ ソース ウィザード画面 2](../../../connect/odbc/windows/dsn-wizard-2.md)認証モードの詳細についてはします。
+認証モードの詳細については、「[データソースウィザードの画面 2](../../../connect/odbc/windows/dsn-wizard-2.md) 」を参照してください。
 
 ### <a name="server-spn"></a>サーバー SPN
 
@@ -49,19 +48,19 @@ SQL Server と同じコンピューターを使用している場合は、「(lo
 
 ### <a name="login-id"></a>Login ID
 
-場合、接続に使用する SQL Server または Azure Active Directory のログイン ID を指定します**認証モード**に設定されている**SQL Server**または**Active Directory パスワード**または**Active Directory 対話型**します。 それ以外の場合、**ログイン ID**ボックスが無効になります。
+**認証モード**が**SQL Server**または**Active Directory Password**または**Active Directory Interactive**に設定されている場合に、接続に使用する SQL Server または Azure Active Directory のログイン ID を指定します。 それ以外の場合、 **[ログイン ID]** ボックスは無効になります。
 
 ### <a name="password"></a>パスワード
 
-場合に、接続に使用される SQL Server または Azure Active Directory のログイン ID のパスワードを指定します**認証モード**に設定されている**SQL Server**または**Active Directory パスワード**。 それ以外の場合、**パスワード**ボックスが無効になります。
+**認証モード**が**SQL Server**または**Active Directory パスワード**に設定されている場合に、接続に使用される SQL Server または Azure Active Directory ログイン ID のパスワードを指定します。 それ以外の場合、 **[パスワード]** ボックスは無効になります。
 
-### <a name="options"></a>[変数]
+### <a name="options"></a>オプション
 
-**[オプション]** グループを表示または非表示にします。 **[オプション]** ボタンは、**[サーバー]** に値が設定されている場合に有効になります。
+**[オプション]** グループを表示または非表示にします。 **[オプション]** ボタンは、 **[サーバー]** に値が設定されている場合に有効になります。
 
 ### <a name="change-password"></a>パスワードの変更
 
-このチェック ボックスをオンにすると、**[新しいパスワード]** ボックスと **[新しいパスワードの確認入力]** ボックスが表示されます。
+このチェック ボックスをオンにすると、 **[新しいパスワード]** ボックスと **[新しいパスワードの確認入力]** ボックスが表示されます。
 
 ### <a name="new-password"></a>[新しいパスワード]
 
@@ -97,11 +96,11 @@ SQL Server システム メッセージに使用する言語を指定します�
 
 ### <a name="use-strong-encryption-for-data"></a>[データに強力な暗号を使用する]
 
-選択した場合、接続を介して渡されるデータは暗号化されます。 このチェック ボックスがオフの場合でも、既定では、ログインが暗号化されます。
+オンにすると、接続を介して渡されるデータが暗号化されます。 このチェック ボックスがオフの場合でも、既定では、ログインが暗号化されます。
 
 ### <a name="trust-server-certificate"></a>[サーバー証明書を信頼する]
 
-このオプションは、該当する場合にのみ**強力な暗号化を使用して、データの**を有効にします。 選択した場合、サーバーの証明書は、サーバーの適切なホスト名があり、信頼された証明書機関から発行するのには検証されません。
+このオプションは **、[データに強力な暗号化を使用**する] が有効になっている場合にのみ適用されます。 この設定を選択した場合、サーバーの証明書は、サーバーの正しいホスト名を持っているか検証されず、信頼された証明機関によって発行されます。
 
 ## <a name="see-also"></a>参照
 

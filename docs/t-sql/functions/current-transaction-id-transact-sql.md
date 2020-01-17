@@ -15,17 +15,16 @@ f1_keywords:
 helpviewer_keywords:
 - CURRENT_TRANSACTION_ID function
 ms.assetid: 82cd9f92-d935-45a0-a433-620d6e15b467
-author: MashaMSFT
-ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: f348eee57b5df86b437a1ebd6a68544e7b4c7c31
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: MikeRayMSFT
+ms.author: mikeray
+ms.openlocfilehash: 6bd6cbe675fa5e9aba72fc545d1108c3aad6f930
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47604820"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68026344"
 ---
-# <a name="currenttransactionid-transact-sql"></a>CURRENT_TRANSACTION_ID (TRANSACT-SQL)
+# <a name="currenttransactionid-transact-sql"></a>CURRENT_TRANSACTION_ID (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
 この関数によって、現在のセッションの現在のトランザクションのトランザクション ID が返されます。

@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 631cec1b-66b7-4103-b9a7-ffd81da3c442
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 9bac3e235197838442a2cdde24926b37ac90524c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b3ccd07ad517b52a18dc25ddb3cb3882bd2eb61e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47656131"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68037834"
 ---
 # <a name="sqlstatistics-dbase-driver"></a>SQLStatistics (dBASE ドライバー)
 > [!NOTE]  

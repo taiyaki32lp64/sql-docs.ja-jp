@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: ac89dd1f-c565-47cc-8fa3-6fa5f80b5d63
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: bdb63e9610d00c0736f640b6f4c4d743f3335c7d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 65c23f41ea9176c460c8fb32ece5e74dfb803541
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47606240"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68065025"
 ---
 # <a name="sqlallocconnect-mapping"></a>SQLAllocConnect のマッピング
 アプリケーションを呼び出すと**SQLAllocConnect**を通じて、ODBC 3 *。x*ドライバーでは、呼び出し**SQLAllocConnect**(*henv*、 *phdbc*) にマップされて**SQLAllocHandle**次のようにします。  

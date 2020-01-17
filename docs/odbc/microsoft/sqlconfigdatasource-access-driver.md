@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 1b152fb7-fa12-46b9-b168-006bb1355e77
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: dd626d476bf1c4ac8b4f83f397584c367299904f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 85b515ed4c30d68e62a49e1044c4ddf6f5cc5ab1
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47637940"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67985235"
 ---
 # <a name="sqlconfigdatasource-access-driver"></a>SQLConfigDataSource (Access ドライバー)
 > [!NOTE]  
@@ -30,10 +29,10 @@ ms.locfileid: "47637940"
 |Keyword|説明|  
 |-------------|-----------------|  
 |COLLATINGSEQUENCE|シーケンスは、フィールドが並べ替えられます。<br /><br /> これは、と同じオプション設定**照合シーケンス**設定 ダイアログ ボックスをオンにします。|  
-|COMPACT_DB|データベース ファイルに対してデータ圧縮を実行します。 次の形式: COMPACT_DB = < path_name >< optionaL_sort_order >\<省略可能な暗号化のキーワード >。<br /><br /> COMPACT_DB キーワードを使用して、DSN キーワードを使用して同じステートメント内で、このドライバーは、DSN キーワードを無視します。 したがって、データベースを最適化して、DSN を指定することは、2 段階のプロセスです。|  
-|CREATE_DB|データベース ファイルを作成します。 次の形式: CREATE_DB = < path_name >\<optional_sort 順序 >< optional_ENCRYPT キーワード > パス名が Microsoft Access データベースへの完全パス。 エラーが、パス名が既存のデータベースを指定する場合に返されます。 並べ替え順序は、Microsoft へのアクセスのセットアップ ダイアログ ボックスで、作成 ボタンが押されたときに表示される新しいデータベース ダイアログ ボックスをセットとしてになります。 並べ替え順序が指定されていない場合は、[全般] が使用されます。<br /><br /> CREATE_DB キーワードを使用して、DSN キーワードを使用して同じステートメント内で、このドライバーは、DSN キーワードを無視します。 したがって、データベースを作成し、DSN を指定することは、2 段階のプロセスです。を作成する Microsoft Access データベースのパス名には、1 つ以上のスペースが含まれている場合の、CREATE_DB キーワードを使用する場合、パス名全体囲む必要があります、二重引用符で次の例に示すように。<br /><br /> "C:\PROGRAM files \common FILES files \ MyAccess.mdb"<br /><br /> "C:\PROGRAM FILES\Access2.mdb"<br /><br /> CREATE_DB=C:\TEMP\test.mdb (引用符は必要に応じて)|  
-|CREATE_SYSDB|システム データベース ファイルを作成します。 次の形式: CREATE_SYSDB =\<パス名 >\<省略可能な並べ替え順序 > パス名は、Microsoft Access データベースへの完全パスです。 エラーが、パス名が既存のデータベースを指定する場合に返されます。 並べ替え順序をセットのようになります、**新しいデータベース** ダイアログ ボックスが表示されるときに、**作成**のボタンがクリックされた、 **ODBC Microsoft アクセスのセットアップ** ダイアログ ボックス。 並べ替え順序が指定されていない場合は、[全般] が使用されます。|  
-|CREATE_V2DB|Microsoft Access の 2.0 と互換性があるデータベース ファイルを作成します。 次の形式: CREATE_V2DB =\<パス名 >\<省略可能な並べ替え順序 > パス名は、Microsoft Access データベースへの完全パスです。 エラーが、パス名が既存のデータベースを指定する場合に返されます。 並べ替え順序は、Microsoft へのアクセスのセットアップ ダイアログ ボックスで、作成 ボタンが押されたときに表示される新しいデータベース ダイアログ ボックスをセットとしてになります。 並べ替え順序が指定されていない場合は、[全般] が使用されます。<br /><br /> CREATE_V2DB キーワードを使用して、DSN キーワードを使用して同じステートメント内で、このドライバーは、DSN キーワードを無視します。 したがって、データベースを作成し、DSN を指定することは、2 段階のプロセスです。<br /><br /> を作成する Microsoft Access データベースのパス名には、1 つ以上のスペースが含まれている場合の、CREATE_V2DB キーワードを使用する場合、パス名全体囲む必要があります、二重引用符で次の例に示すように。<br /><br /> "C:\PROGRAM files \common FILES files \ MyAccess.mdb"<br /><br /> "C:\PROGRAM FILES\Access2.mdb"<br /><br /> CREATE_V2DB=C:\TEMP\test.mdb (引用符は必要に応じて)|  
+|COMPACT_DB|データベース ファイルに対してデータ圧縮を実行します。 次の形式があります。COMPACT_DB = < path_name >< optionaL_sort_order >\<省略可能な暗号化キーワード >。<br /><br /> COMPACT_DB キーワードを使用して、DSN キーワードを使用して同じステートメント内で、このドライバーは、DSN キーワードを無視します。 したがって、データベースを最適化して、DSN を指定することは、2 段階のプロセスです。|  
+|CREATE_DB|データベース ファイルを作成します。 次の形式があります。CREATE_DB = < path_name >\<optional_sort 順序 >< optional_ENCRYPT キーワード > パス名が Microsoft Access データベースへの完全パス。 エラーが、パス名が既存のデータベースを指定する場合に返されます。 並べ替え順序は、Microsoft へのアクセスのセットアップ ダイアログ ボックスで、作成 ボタンが押されたときに表示される新しいデータベース ダイアログ ボックスをセットとしてになります。 並べ替え順序が指定されていない場合は、[全般] が使用されます。<br /><br /> CREATE_DB キーワードを使用して、DSN キーワードを使用して同じステートメント内で、このドライバーは、DSN キーワードを無視します。 したがって、データベースを作成し、DSN を指定することは、2 段階のプロセスです。を作成する Microsoft Access データベースのパス名には、1 つ以上のスペースが含まれている場合の、CREATE_DB キーワードを使用する場合、パス名全体囲む必要があります、二重引用符で次の例に示すように。<br /><br /> "C:\PROGRAM files \common FILES files \ MyAccess.mdb"<br /><br /> "C:\PROGRAM FILES\Access2.mdb"<br /><br /> CREATE_DB=C:\TEMP\test.mdb (引用符は必要に応じて)|  
+|CREATE_SYSDB|システム データベース ファイルを作成します。 次の形式があります。CREATE_SYSDB =\<パス名 >\<並べ替え順序では省略可能 > パス名は、Microsoft Access データベースへの完全パスです。 エラーが、パス名が既存のデータベースを指定する場合に返されます。 並べ替え順序をセットのようになります、**新しいデータベース** ダイアログ ボックスが表示されるときに、**作成**のボタンがクリックされた、 **ODBC Microsoft アクセスのセットアップ** ダイアログ ボックス。 並べ替え順序が指定されていない場合は、[全般] が使用されます。|  
+|CREATE_V2DB|Microsoft Access の 2.0 と互換性があるデータベース ファイルを作成します。 次の形式があります。CREATE_V2DB =\<パス名 >\<並べ替え順序では省略可能 > パス名は、Microsoft Access データベースへの完全パスです。 エラーが、パス名が既存のデータベースを指定する場合に返されます。 並べ替え順序は、Microsoft へのアクセスのセットアップ ダイアログ ボックスで、作成 ボタンが押されたときに表示される新しいデータベース ダイアログ ボックスをセットとしてになります。 並べ替え順序が指定されていない場合は、[全般] が使用されます。<br /><br /> CREATE_V2DB キーワードを使用して、DSN キーワードを使用して同じステートメント内で、このドライバーは、DSN キーワードを無視します。 したがって、データベースを作成し、DSN を指定することは、2 段階のプロセスです。<br /><br /> を作成する Microsoft Access データベースのパス名には、1 つ以上のスペースが含まれている場合の、CREATE_V2DB キーワードを使用する場合、パス名全体囲む必要があります、二重引用符で次の例に示すように。<br /><br /> "C:\PROGRAM files \common FILES files \ MyAccess.mdb"<br /><br /> "C:\PROGRAM FILES\Access2.mdb"<br /><br /> CREATE_V2DB=C:\TEMP\test.mdb (引用符は必要に応じて)|  
 |DBQ|データベース ファイルの名前。<br /><br /> これは、と同じオプション設定**データベース**設定 ダイアログ ボックスをオンにします。|  
 |DEFAULTDIR|データベース ファイルへのパスの指定。|  
 |DESCRIPTION|データ ソース内のデータの説明。<br /><br /> これは、と同じオプション設定**説明**設定 ダイアログ ボックスをオンにします。|  

@@ -10,15 +10,15 @@ helpviewer_keywords:
 - '- (negative)'
 - negative operator (-)
 ms.assetid: f0118dfc-aced-4de2-953e-5ebf9c962b8d
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 587ac12e6628104613d8b1457b02088e1baf4998
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 1137fa6847cf851a6cb56ffd8a0da10032decc7a
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52799844"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62897418"
 ---
 # <a name="--negate-ssis-expression"></a>- (負数化) (SSIS 式)
   数値式を負数化します。  

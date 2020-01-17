@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 helpviewer_keywords:
 - Upgrade Advisor [SQL Server], running
@@ -16,12 +15,12 @@ ms.assetid: 7c83049b-9227-4723-9b7f-66288bc6bd1d
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 34f36ea3b27100510857a05cd5edffa68c5be74a
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: 997d637d109c04dbecb3105538f51fa6ece0518f
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54132392"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66092441"
 ---
 # <a name="running-upgrade-advisor-command-prompt"></a>アップグレード アドバイザーの実行 (コマンド プロンプト)
   使用して、 **UpgradeAdvisorWizardCmd**ユーティリティをコマンド プロンプトからアップグレード アドバイザーを実行します。 結果を XML 形式で受け取るか、コンマ区切り値のファイルで受け取るかを選択できます。  
@@ -43,24 +42,24 @@ where <server_info> is any combination of the following:
  **-?**  
  コマンドの構文を表示します。  
   
- **-Configfile** _ファイル名_  
+ **-ConfigFile** _filename_  
  実行するときに使用する設定を含む XML ファイルのファイル名とパスの名前には、 **UpgradeAdvisorWizardCmd**ユーティリティ。  
   
- *< server_info >*  
+ *<server_info>*  
  分析するコンピューターとインスタンスを指定します。 構成ファイルを使用していない場合に、これらのオプションを使用します。  
   
  *< server_info >* 次の 4 つの引数の組み合わせにすることができます。  
   
- **-サーバー** _server_name_  
+ **-Server** _server_name_  
  分析するコンピューターの名前を指定します。 ローカル コンピューター (既定値) またはリモート コンピューターのどちらでも指定できます。  
   
- **-インスタンス** _instance_name_  
+ **-Instance** _instance_name_  
  分析するインスタンスの名前を指定します。 既定値はありません。 このパラメーターを指定しない場合、[!INCLUDE[ssDE](../../includes/ssde-md.md)]はスキャンされません。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の既定のインスタンスの値は MSSQLSERVER です。 名前付きインスタンスの場合は、インスタンス名を使用します。  
   
- **-ASInstance**_AS_instance_name_   
+ **-ASInstance**  _AS_instance_name_  
  分析する [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] のインスタンスの名前を指定します。 既定値はありません。 この値を指定しない場合、[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] はスキャンされません。 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] の既定のインスタンスの値は MSSQLServerOLAPService です。 名前付きインスタンスの場合は、インスタンス名を使用します。  
   
- **-RSInstance**_RS_instance_name_   
+ **-RSInstance**  _RS_instance_name_  
  分析する [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] のインスタンスの名前を指定します。 既定値はありません。 この値を指定しない場合、[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] はスキャンされません。 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] の既定のインスタンスの値は ReportServer です。 名前付きインスタンスの場合は、インスタンス名を使用します。  
   
  **-SqlUser** _login_id_  
@@ -122,7 +121,7 @@ where <server_info> is any combination of the following:
   
 ## <a name="element-descriptions"></a>要素の説明  
   
-|タグ|定義|個数|  
+|Tag|定義|個数|  
 |---------|----------------|----------------|  
 |`Configuration`|アップグレード アドバイザー構成ファイルの親要素です。|必須。構成ファイルにつき 1 個。|  
 |`Server`|分析するサーバーの名前です。|省略可。構成ファイルにつき 1 個。 既定値はローカル コンピューターです。|  

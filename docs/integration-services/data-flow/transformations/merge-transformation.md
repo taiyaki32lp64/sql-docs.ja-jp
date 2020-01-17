@@ -17,17 +17,20 @@ helpviewer_keywords:
 - combining datasets
 - datasets [Integration Services], merging
 ms.assetid: cff8690c-07ac-46a0-aab5-20bd4848c677
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: 8be5561838f5a2072ad330c907d4fac49f8a96e5
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 5badfcd6c8b9603e30e2a413bb6486fcf9d2c6b8
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51638216"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71291231"
 ---
 # <a name="merge-transformation"></a>マージ変換
+
+[!INCLUDE[ssis-appliesto](../../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   マージ変換は、並べ替えられた 2 つのデータセットを 1 つのデータセットに結合します。 各データセットの行は、各キー列の値に基づいて出力に挿入されます。  
   
  データ フローにマージ変換を含めると、次のタスクを実行できます。  
@@ -77,7 +80,7 @@ ms.locfileid: "51638216"
 > [!IMPORTANT]  
 >  マージ変換では、入力データが並べ替えられている必要があります。 この重要な要件の詳細については、「 [マージ変換およびマージ結合変換用にデータを並べ替える](../../../integration-services/data-flow/transformations/sort-data-for-the-merge-and-merge-join-transformations.md)」を参照してください。  
   
-### <a name="options"></a>[変数]  
+### <a name="options"></a>オプション  
  **[出力列の名前]**  
  出力列の名前を指定します。  
   

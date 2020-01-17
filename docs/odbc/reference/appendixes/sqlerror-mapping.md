@@ -13,16 +13,15 @@ helpviewer_keywords:
 ms.assetid: 802ac711-7e5d-4152-9698-db0cafcf6047
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 4a278609ee53fe7898d32c1986da2650202b8a98
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: f24a305c2f22ef4cfacbbe4bcbcf498eab648f1c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47719210"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68064475"
 ---
 # <a name="sqlerror-mapping"></a>SQLError のマッピング
-アプリケーションを呼び出すと**SQLError**を通じて、ODBC 3 *.x*ドライバーへの呼び出し  
+アプリケーションを呼び出すと**SQLError** ODBC を通じて*3.x*ドライバーへの呼び出し  
   
 ```  
 SQLError(henv, hdbc, hstmt, szSqlState, pfNativeError, szErrorMsg, cbErrorMsgMax, pcbErrorMsg)   

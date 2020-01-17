@@ -11,15 +11,14 @@ helpviewer_keywords:
 - traces [SQL Server], replaying
 - replaying traces
 ms.assetid: 73fa339f-b71a-4be4-97ca-d4ae84c8b90b
-author: stevestein
-ms.author: sstein
-manager: craigg
-ms.openlocfilehash: c76f57d548ed0531920c968c30028083980777d6
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 1cfac7ed273cf43c2efc4a9751cdbf1ba8b8a2d4
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47652938"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67930104"
 ---
 # <a name="considerations-for-replaying-traces-sql-server-profiler"></a>トレースの再生に関する注意点 (SQL Server Profiler)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

@@ -1,42 +1,41 @@
 ---
-title: WideWorldImporters OLAP データベース - SQL Server の使用 |Microsoft Docs
+title: DW WideWorldImporters データベースの主機能
 ms.prod: sql
 ms.prod_service: sql
 ms.technology: samples
-ms.custom: ''
 ms.date: 08/04/2018
 ms.reviewer: ''
 ms.topic: conceptual
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
 monikerRange: '>=sql-server-2016||>=sql-server-linux-2017||=azure-sqldw-latest||>=aps-pdw-2016||=sqlallproducts-allversions||=azuresqldb-mi-current'
-ms.openlocfilehash: 57936009880849b3ca1e566110e688b699f6835b
-ms.sourcegitcommit: a2be75158491535c9a59583c51890e3457dc75d6
+ms.custom: seo-lt-2019
+ms.openlocfilehash: dfce2ce4a6f13a25687d668268f532893c1404e0
+ms.sourcegitcommit: d00ba0b4696ef7dee31cd0b293a3f54a1beaf458
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/07/2018
-ms.locfileid: "51269735"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "74056288"
 ---
-# <a name="wideworldimportersdw-use-of-sql-server-features-and-capabilities"></a>SQL Server の機能と機能の WideWorldImportersDW の使用
+# <a name="wideworldimportersdw-use-of-sql-server-features-and-capabilities"></a>SQL Server の機能の WideWorldImportersDW 使用方法
 [!INCLUDE[appliesto-ss-xxxx-asdw-pdw-md](../includes/appliesto-ss-xxxx-asdw-pdw-md.md)]
-データ ウェアハウスと分析に適している SQL Server の主な機能の多くを紹介することは、WideWorldImportersDW は設計されています。 次に SQL Server の機能と機能、および WideWorldImportersDW での使用方法の説明の一覧を示します。
+WideWorldImportersDW は、データウェアハウスと分析に適した SQL Server の主な機能の多くを紹介するように設計されています。 SQL Server の機能の一覧と、それらが WideWorldImportersDW でどのように使用されるかについての説明を次に示します。
 
 ## <a name="polybase"></a>PolyBase
 
-[SQL Server (2016 以降) に適用されます]
+[SQL Server に適用されます (2016 以降)]
 
-PolyBase を使用して、売上のさらに拡張するための役立つことがある都市を理解するには、人口統計データについてのパブリック データ セットで WideWorldImportersDW の売上情報を結合します。
+PolyBase を使用して、WideWorldImportersDW の売上情報と、人口統計に関するパブリックデータセットを結合し、売上をさらに拡大するために関心のある都市を把握します。
 
-PolyBase を使用してをサンプル データベースを有効にするがインストールされているかどうかを確認し、データベースで次のストアド プロシージャを実行します。
+サンプルデータベースで PolyBase を使用できるようにするには、PolyBase がインストールされていることを確認し、データベースで次のストアドプロシージャを実行します。
 
     EXEC [Application].[Configuration_ApplyPolyBase]
 
-これは外部テーブルを作成`dbo.CityPopulationStatistics`Azure blob ストレージでホストされている米国の都市の人口データを含むパブリック データ セットを参照します。 構成プロセスを理解するストアド プロシージャでコードを確認することが推奨されます。 Azure blob storage にデータをホストし、汎用パブリック アクセスから保護する場合は、追加の構成手順を実行する必要があります。 次のクエリでは、その外部データ セットからデータを返します。
+これにより、Azure blob storage でホストされている米国内の都市の人口データを含むパブリックデータセットを参照する外部テーブル `dbo.CityPopulationStatistics` が作成されます。 構成プロセスを理解するために、ストアドプロシージャのコードを確認することをお勧めします。 Azure blob storage で独自のデータをホストし、一般公開されているデータの安全性を維持するには、追加の構成手順を実行する必要があります。 次のクエリでは、その外部データセットからデータが返されます。
 
     SELECT CityID, StateProvinceCode, CityName, YearNumber, LatestRecordedPopulation FROM dbo.CityPopulationStatistics;
 
-さらに拡張するための関心のあるどの都市があります。 詳細については、次のクエリが都市の成長率で検索し、大幅な増加は、上位 100 件の最大規模の都市を返します場所、Wide World importers 社には販売の存在はありません。 クエリは、リモートのテーブル間の結合`dbo.CityPopulationStatistics`とローカル テーブル`Dimension.City`、およびローカル テーブルに関連するフィルター`Fact.Sales`します。
+次のクエリでは、さらに拡張するために関心がある都市を把握するために、都市の成長率を確認し、大幅に増加している上位100の都市を返します。また、大規模な輸入者には売上が存在しません。 このクエリでは、リモートテーブル `dbo.CityPopulationStatistics` とローカルテーブル `Dimension.City`との間の結合、およびローカルテーブル `Fact.Sales`を含むフィルターが関係しています。
 
     WITH PotentialCities
     AS
@@ -70,46 +69,46 @@ PolyBase を使用してをサンプル データベースを有効にするが�
 
 ## <a name="clustered-columnstore-indexes"></a>クラスター化列ストア インデックス
 
-(完全なバージョンのサンプル)
+(完全バージョンのサンプル)
 
-クラスター化列ストア インデックス (CCI) は、ストレージのフット プリントを削減し、クエリのパフォーマンスを向上させるすべてのファクト テーブルで使用されます。 CCI を使用するとは、ファクト テーブルの基本の記憶域は、列の圧縮を使用します。
+クラスター化列ストアインデックス (CCI) はすべてのファクトテーブルと共に使用され、ストレージフットプリントを削減し、クエリのパフォーマンスを向上させます。 CCI を使用すると、ファクトテーブルの基本ストレージでは列の圧縮が使用されます。
 
-非クラスター化インデックスは、主キーと外部キー制約を容易にするためにクラスター化列ストア インデックスに加えて使用されます。 これらの制約は、豊富な注意が必要ですから追加された - ETL プロセスの整合性を強制する制約があります WideWorldImporters データベースからデータのソースします。 主キーと外部キー制約、およびサポートのインデックスを削除すると、ファクト テーブルのストレージ フット プリントが低くなります。
+非クラスター化インデックスは、主キー制約と外部キー制約を容易にするために、クラスター化列ストアインデックスの上に使用されます。 これらの制約は、細心の注意を払って追加されました。 ETL プロセスは、整合性を適用するための制約がある WideWorldImporters データベースからデータを送信します。 Primary キー制約と foreign key 制約、およびそれらのサポートインデックスを削除すると、ファクトテーブルのストレージフットプリントが減少します。
 
-**データ サイズ**
+**データサイズ**
 
-サンプル データベースをダウンロードして、サンプルをインストールするは簡単にし、データのサイズが制限されています。 ただし、列ストア インデックスの実際のパフォーマンスの利点を表示するには、大きなデータ セットを使用するとします。
+サンプルデータベースには、サンプルを簡単にダウンロードしてインストールできるように、データサイズが制限されています。 ただし、列ストアインデックスの実際のパフォーマンス上の利点を確認するには、より大きなデータセットを使用することをお勧めします。
 
-サイズを増やすには、次のステートメントを実行することができます、`Fact.Sales`別の 12 の 100万行のサンプル データを挿入することでテーブル。 これらの行はすべて挿入 2012 年の ETL プロセスに干渉がないようにします。
+次のステートメントを実行すると、別の1200万行のサンプルデータを挿入して `Fact.Sales` テーブルのサイズを増やすことができます。 これらの行はすべて2012年に挿入され、ETL プロセスに干渉しないようになっています。
 
     EXECUTE [Application].[Configuration_PopulateLargeSaleTable]
 
-このステートメントを実行するまでに約 5 分になります。 1,200万件を超える行を挿入するには、このストアド プロシージャにパラメーターとして挿入する行の必要な数を渡します。
+このステートメントの実行には約5分かかります。 1200万を超える行を挿入するには、挿入する行の数をこのストアドプロシージャにパラメーターとして渡します。
 
-列ストアなしのクエリのパフォーマンスを比較するには、削除したり、クラスター化列ストア インデックスを再作成できます。
+列ストアの有無に関係なく、クエリのパフォーマンスを比較するには、クラスター化列ストアインデックスを削除または再作成します。
 
-インデックスを削除します。
+インデックスを削除するには、次のようにします。
 
     DROP INDEX [CCX_Fact_Order] ON [Fact].[Order]
 
-再作成します。
+再作成するには:
 
     CREATE CLUSTERED COLUMNSTORE INDEX [CCX_Fact_Order] ON [Fact].[Order]
 
 ## <a name="partitioning"></a>[パーティション分割]
 
-(完全なバージョンのサンプル)
+(完全バージョンのサンプル)
 
-Data Warehouse でのデータのサイズは非常に大きくなることができます。 そのために、パーティション分割を使用して、データベース内の大きなテーブルのストレージを管理するベスト プラクティスを勧めします。
+データウェアハウスのデータサイズが非常に大きくなることがあります。 そのため、データベース内の大きなテーブルのストレージを管理するには、パーティション分割を使用することをお勧めします。
 
-年では、すべての大規模なファクト テーブルがパーティション分割します。 唯一の例外は`Fact.Stock Holdings`日付に基づくが、ない場合が制限されたデータのサイズは、その他のファクト テーブルと比較します。
+より大きなファクトテーブルはすべて年でパーティション分割されます。 唯一の例外は `Fact.Stock Holdings`です。これは、日付ベースではなく、他のファクトテーブルと比較してデータサイズが制限されています。
 
-すべてのパーティション テーブルに使用されるパーティション関数は`PF_Date`、使用されているパーティション スキームが`PS_Date`します。
+すべてのパーティションテーブルに使用されるパーティション関数が `PF_Date`、使用されているパーティション構成が `PS_Date`ます。
 
 ## <a name="in-memory-oltp"></a>インメモリ OLTP
 
-(完全なバージョンのサンプル)
+(完全バージョンのサンプル)
 
-WideWorldImportersDW は、ステージング テーブルを SCHEMA_ONLY メモリ最適化テーブルを使用します。 すべて`Integration.` * `_Staging`テーブルは、SCHEMA_ONLY メモリ最適化テーブル。
+WideWorldImportersDW は、ステージングテーブルに SCHEMA_ONLY メモリ最適化テーブルを使用します。 すべての `Integration.`*`_Staging` テーブルは、メモリ最適化テーブル SCHEMA_ONLY ます。
 
-SCHEMA_ONLY テーブルの利点は記録されず、また、ディスク アクセスを必要としないことです。 これにより、ETL プロセスのパフォーマンスが向上します。 これらのテーブルがログインしていないため、障害が発生した場合は、その内容は失われます。 ただし、データ ソースが引き続き使用できますが、ETL プロセスは、障害が発生した場合に単に再起動させるようにします。
+SCHEMA_ONLY テーブルの利点は、ログに記録されず、ディスクにアクセスする必要がないことです。 これにより、ETL プロセスのパフォーマンスが向上します。 これらのテーブルはログに記録されないため、エラーが発生した場合、内容は失われます。 ただし、データソースは引き続き使用できるので、エラーが発生した場合は ETL プロセスを再起動するだけで済みます。

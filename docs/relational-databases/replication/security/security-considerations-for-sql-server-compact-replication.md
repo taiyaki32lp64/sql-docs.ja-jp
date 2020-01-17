@@ -1,6 +1,7 @@
 ---
-title: SQL Server Compact レプリケーションのセキュリティに関する注意点 | Microsoft Docs
-ms.custom: ''
+title: セキュリティに関する考慮事項 (Compact レプリケーション)
+description: SQL Server Compact レプリケーションのセキュリティに関する考慮事項について説明します。
+ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -12,17 +13,16 @@ helpviewer_keywords:
 ms.assetid: 09f591a1-cfae-4a08-b04d-50bd02e7b71a
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: bd638d9cb81cee86b35cc497725a34a420942625
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: bed264287d4e2aa6bdb8eabb0d846688fbf157c6
+ms.sourcegitcommit: 02d44167a1ee025ba925a6fefadeea966912954c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54125792"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75321659"
 ---
 # <a name="security-considerations-for-sql-server-compact-replication"></a>SQL Server Compact レプリケーションのセキュリティに関する注意点
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] データベース エンジンのインスタンスと [!INCLUDE[ssEW](../../../includes/ssew-md.md)] との間の接続をセキュリティで保護するには、Microsoft インターネット インフォメーション サービス (IIS) と [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]の両方のセキュリティを正しく構成しておく必要があります。  
+  [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] データベース エンジンのインスタンスと [!INCLUDE[ssEW](../../../includes/ssew-md.md)] との間の接続をセキュリティで保護するには、Microsoft インターネット インフォメーション サービス (IIS) と [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] の両方のセキュリティを正しく構成しておく必要があります。  
   
 ## <a name="see-also"></a>参照  
  [レプリケーションのセキュリティ設定の表示および変更](../../../relational-databases/replication/security/view-and-modify-replication-security-settings.md)   

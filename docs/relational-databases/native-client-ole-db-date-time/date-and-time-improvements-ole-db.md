@@ -1,6 +1,5 @@
 ---
-title: 日付と時刻の強化 (OLE DB) |マイクロソフトのドキュメント
-ms.custom: ''
+title: 日付と時刻の強化機能 (OLE DB)
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
@@ -13,43 +12,42 @@ helpviewer_keywords:
 ms.assetid: 71614aaf-0fa4-4fe0-b522-68e2e0b66f43
 author: MightyPen
 ms.author: genemi
-manager: craigg
+ms.custom: seo-dt-2019
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 6bec338184bdc88d04368d141ce15816af512566
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: 35b7629b6c31da805c8284c7c1a7c80d561fe7e3
+ms.sourcegitcommit: 15fe0bbba963d011472cfbbc06d954d9dbf2d655
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53202061"
+ms.lasthandoff: 11/14/2019
+ms.locfileid: "74095449"
 ---
 # <a name="date-and-time-improvements-ole-db"></a>日付と時刻の強化機能 (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-[!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
 
-  [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] では、新しい日付と時刻のデータ型が導入されています。 このセクションでは、拡張機能としてこれらの新しい型を公開する方法について説明します[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native Client。 概要については、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client、新しい日付と時刻のデータ型のサポートを参照してください[日付と時刻の強化](../../relational-databases/native-client/features/date-and-time-improvements.md)します。 サンプルについては、次を参照してください。[使用の強化された日付と時刻の機能&#40;OLE DB&#41;](../../relational-databases/native-client-ole-db-how-to/use-enhanced-date-and-time-features-ole-db.md)します。  
+  [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] では、新しい日付と時刻のデータ型が導入されています。 このセクションでは、これらの新しい型を [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client の拡張機能として公開する方法について説明します。 新しい日付と時刻のデータ型に対する [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client のサポートの概要については、「[日付と時刻の機能強化](../../relational-databases/native-client/features/date-and-time-improvements.md)」を参照してください。 サンプルについては、「拡張された[日付/時刻&#40;機能の&#41;使用 OLE DB](../../relational-databases/native-client-ole-db-how-to/use-enhanced-date-and-time-features-ole-db.md)」を参照してください。  
   
- 日付と時刻のデータ型についての一般的なは、次を参照してください。 [datetime &#40;TRANSACT-SQL&#41;](../../t-sql/data-types/datetime-transact-sql.md)します。  
+ 日付と時刻のデータ型に関する一般的な情報については、「 [datetime &#40;transact-sql&#41;](../../t-sql/data-types/datetime-transact-sql.md)」を参照してください。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
  [OLE DB の日付/時刻の強化に対するデータ型のサポート](../../relational-databases/native-client-ole-db-date-time/data-type-support-for-ole-db-date-and-time-improvements.md)  
- OLE DB の概要情報を提供します ( [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client) をサポートする型[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]日付と時刻のデータ型。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の日付と時刻のデータ型をサポートする OLE DB ([!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client) の型に関する情報を提供します。  
   
- [メタデータ&#40;OLE DB&#41;](https://msdn.microsoft.com/library/605e3be5-aeea-4573-9847-b866ed3c8bff)  
- DBBINDING 構造体に関する情報を格納**icommandwithparameters::getparameterinfo**、 **icommandwithparameters::setparameterinfo**、 **IColumnsRowset:。GetColumnsRowset**と**ColumnsInfo::GetColumnInfo**します。 また、OLE DB スキーマ行セットの更新についても説明します。  
+ [メタ&#40;データ OLE DB&#41;](https://msdn.microsoft.com/library/605e3be5-aeea-4573-9847-b866ed3c8bff)  
+ **ICommandWithParameters:: GetParameterInfo**、 **ICommandWithParameters:: setparameterinfo**、 **IColumnsRowset:: GetColumnsRowset**、I DBBINDING**info:: GetColumnInfo に関する情報が含まれています。** . また、OLE DB スキーマ行セットの更新についても説明します。  
   
  [バインドと変換 &#40;OLE DB&#41;](../../relational-databases/native-client-ole-db-date-time/conversions-ole-db.md)  
  既存の日付型と新しい日付型の両方を対象とした、サーバーとクライアント間における変換の規則について説明します。  
   
- [強化された日付と時刻型向けの一括コピー変更&#40;OLE DB および ODBC&#41;](../../relational-databases/native-client-odbc-date-time/bulk-copy-changes-for-enhanced-date-and-time-types-ole-db-and-odbc.md)  
+ [拡張された日付/時刻型&#40;OLE DB および ODBC の一括コピーの変更&#41;](../../relational-databases/native-client-odbc-date-time/bulk-copy-changes-for-enhanced-date-and-time-types-ole-db-and-odbc.md)  
  一括コピー操作をサポートする日付または時刻の機能強化について説明します。  
   
  [OLE DB API による機能強化された日付と時刻のサポート](../../relational-databases/native-client-ole-db-date-time/ole-db-api-support-for-date-and-time-enhancements.md)  
  機能強化された日付や時刻をサポートする OLE DB API について説明します。  
   
  [IRowsetFind での比較](../../relational-databases/native-client-ole-db-date-time/comparability-for-irowsetfind.md)  
- 日付/時刻型について説明しますと**IRowsetFind**します。  
+ 日付/時刻型と**IRowsetFind**について説明します。  
   
- [新しい日付と時刻の機能を以前のバージョンの SQL Server で&#40;OLE DB&#41;](../../relational-databases/native-client-ole-db-date-time/new-date-and-time-features-with-previous-sql-server-versions-ole-db.md)  
+ [以前の SQL Server バージョン&#40;を使用した新しい日付と時刻の機能 OLE DB&#41;](../../relational-databases/native-client-ole-db-date-time/new-date-and-time-features-with-previous-sql-server-versions-ole-db.md)  
  機能強化された日付や時刻を使用するクライアント アプリケーションが以前のバージョンの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] と通信する場合、および以前のバージョンの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client でコンパイルされたクライアントから、機能強化された日付や時刻をサポートするサーバーにコマンドを送信する場合に想定される動作について説明します。  
   
 ## <a name="see-also"></a>参照  

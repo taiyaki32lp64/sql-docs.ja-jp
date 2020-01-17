@@ -11,11 +11,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 5c76fda112acae7b8a9314d217f5c32d197e87f9
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53353212"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62775632"
 ---
 # <a name="upgrade-data-quality-services"></a>Data Quality Services のアップグレード
   このトピックでは、Data Quality Services (DQS) の既存のインストールを [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] CTP2 にアップグレードする方法を紹介します。 DQS 内の Data Quality サーバーを [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]にアップグレードする作業の一環として、DQS データベース スキーマもアップグレードする必要があります。  
@@ -70,7 +70,7 @@ ms.locfileid: "53353212"
     5.  DQS データベース スキーマのアップグレードが正常に完了すると、完了のメッセージが表示されます。  
   
 ##  <a name="Verify"></a> DQS データベース スキーマのアップグレードの確認  
- DQS データベース スキーマが正常にアップグレードされたことを確認するために、各データベース内の A_DB_VERSION テーブルに対してクエリを実行し、DQS_MAIN データベースと DQS_PROJECTS データベースの現在のバージョンを確認することができます。 次の手順に従います。  
+ DQS データベース スキーマが正常にアップグレードされたことを確認するために、各データベース内の A_DB_VERSION テーブルに対してクエリを実行し、DQS_MAIN データベースと DQS_PROJECTS データベースの現在のバージョンを確認することができます。 そのためには次を行います。  
   
 1.  SQL Server Management Studio を起動し、アップグレード後の DQS データベース スキーマを含む SQL Server インスタンスに接続します。  
   
@@ -88,7 +88,7 @@ ms.locfileid: "53353212"
     |1000|2013-08-11 05:26:39.567|1200|11.0.3000.0|\<DOMAIN\UserName>|2||  
     |1001|2013-09-19 15:09:37.750|1600|12.0.xxxx.0|\<DOMAIN\UserName>|2||  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [Data Quality Services のインストール](../../data-quality-services/install-windows/install-data-quality-services.md)   
  [Data Quality Server オブジェクトの削除](../../sql-server/install/remove-data-quality-server-objects.md)   
  [SQL Server 2014 へのアップグレード](upgrade-sql-server.md)  

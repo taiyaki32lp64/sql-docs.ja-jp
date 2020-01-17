@@ -1,24 +1,23 @@
 ---
-title: レポートをトラブルシューティングします。マップ レポート (レポート ビルダーおよび SSRS) |Microsoft Docs
+title: レポートのトラブルシューティング:マップ レポート (レポート ビルダーおよび SSRS) | Microsoft Docs
 ms.custom: ''
 ms.date: 12/29/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 ms.assetid: a690aec2-056b-40bc-8cab-c694bd2d6d62
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 0660eb1e4e9ae682e1a7c64005a767280c441445
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: 1d5a5bee68f328a5ba15ffb1480437fad92adff8
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56296240"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66104636"
 ---
-# <a name="troubleshoot-reports-map-reports-report-builder-and-ssrs"></a>レポートをトラブルシューティングします。マップ レポート (レポート ビルダーおよび SSRS)
+# <a name="troubleshoot-reports-map-reports-report-builder-and-ssrs"></a>レポートのトラブルシューティング:マップ レポート (レポート ビルダーおよび SSRS)
   レポートでマップの問題が発生しやすいのは、マップまたはマップ レイヤーをレポートに追加するときや、レポート内の既存のマップまたはマップ レイヤーをカスタマイズするとき、レポートのマップをプレビューするとき、またはマップを含んだレポートをパブリッシュするときです。 このトピックでは、このような問題のトラブルシューティングについて説明します。  
   
 > [!NOTE]  
@@ -141,7 +140,7 @@ ms.locfileid: "56296240"
   
 -   **透明度 :** 透明度は、各マップ レイヤーに対して別々に指定することができます。 透明度の既定値は、レイヤーの追加方法によって異なります。 透明度 0% は、そのレイヤーが不透明であり、他のレイヤー データは一切透けて見えないことを意味します。 既存のレイヤーをとおして他のデータが透けて見えるようにするには、思うような効果が得られるまで、このパーセンテージを大きくします。  
   
--   **表示 :** レイヤーの表示は、マップ ビューポートのズーム レベルに基づいて、 **[表示]**、 **[非表示]**、 or **[ZoomBased]**、 based on the zoom level of the map viewport. ズーム レベルには、最大と最小の範囲を指定することもできます。 いずれかの値に評価されるような式を使って表示を制御することができます。  
+-   **表示 :** レイヤーの表示は、マップ ビューポートのズーム レベルに基づいて、 **[表示]** 、 **[非表示]** 、 or **[ZoomBased]** 、 based on the zoom level of the map viewport. ズーム レベルには、最大と最小の範囲を指定することもできます。 いずれかの値に評価されるような式を使って表示を制御することができます。  
   
     > [!TIP]  
     >  マップ ペインでは各レイヤーの表示/非表示を切り替えることができます。 各レイヤーをデザインする際、それ以外のすべてのレイヤーをオフにすることで、問題の原因が個々のレイヤーにあるのか、レイヤー間の透明度の問題なのかを特定することができます。  

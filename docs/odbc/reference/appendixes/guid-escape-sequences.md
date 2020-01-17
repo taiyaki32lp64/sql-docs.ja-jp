@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 71d43ef9-4a31-493e-b9e0-f864e9ef3ce6
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: bf41671abc6393a18fad06e1debd297fed1f04c5
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a74ed9d4dfe0afb8bf59abb11220a0677d000bfb
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47654984"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67947582"
 ---
 # <a name="guid-escape-sequences"></a>GUID エスケープ シーケンス
 ODBC では、GUID リテラルのエスケープ シーケンスを使用します。 このエスケープ シーケンスの構文は次のとおりです。  
@@ -29,7 +28,7 @@ ODBC では、GUID リテラルのエスケープ シーケンスを使用しま
 {guid 'nnnnnnnn-nnnn-nnnn-nnnn-nnnnnnnnnnnn'}  
 ```  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>Remarks  
  BNF 表記では、構文がとおりです。  
   
  *ODBC のエスケープ guid* :: =  

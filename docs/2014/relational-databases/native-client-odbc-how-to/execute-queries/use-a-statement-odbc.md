@@ -13,11 +13,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 842e862dff7eca85a05df0222989c6ee6390ab89
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53361144"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63200329"
 ---
 # <a name="use-a-statement-odbc"></a>ステートメントの使用 (ODBC)
     
@@ -35,11 +35,11 @@ ms.locfileid: "53361144"
   
 5.  SQLExecDirect を使用してステートメントを直接実行します。  
   
-     \- または -  
+     \- - または -  
   
      ステートメントが準備されている場合は、[SQLExecute](https://go.microsoft.com/fwlink/?LinkId=58400) を使用してそのステートメントを複数回実行します。  
   
-     \- または -  
+     \- - または -  
   
      カタログ関数を呼び出すと、結果が返されます。  
   
@@ -47,11 +47,11 @@ ms.locfileid: "53361144"
   
      ステートメントの結果セットを一度に 1 行ずつフェッチします。  
   
-     \- または -  
+     \- - または -  
   
      ブロック カーソルを使用して一度に複数行の結果セットをフェッチします。  
   
-     \- または -  
+     \- - または -  
   
      [SQLRowCount](../../native-client-odbc-api/sqlrowcount.md) を呼び出して、INSERT、UPDATE、または DELETE ステートメントの影響を受ける行数を確認します。  
   

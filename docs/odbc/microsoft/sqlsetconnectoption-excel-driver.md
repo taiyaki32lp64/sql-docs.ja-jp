@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 528d21d1-4516-4497-9da4-7b87d77e622a
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 9e04623c42df58f920620299d9dce7094039a406
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 70bca38a81b59b7113f0873849609837bf8f48ec
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47745780"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68071732"
 ---
 # <a name="sqlsetconnectoption-excel-driver"></a>SQLSetConnectOption (Excel ドライバー)
 > [!NOTE]  

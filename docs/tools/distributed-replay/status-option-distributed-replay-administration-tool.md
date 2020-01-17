@@ -6,15 +6,14 @@ ms.reviewer: ''
 ms.technology: tools-other
 ms.topic: conceptual
 ms.assetid: ea89386e-1598-4412-8b37-680d14b2a5b6
-author: stevestein
-ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 09e8ad6b60dfc9afbb3fbed7ef450dc4fb1cc28a
-ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 6370d68b3575e80c4094aa2df82aa4bf6c0b4dd2
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/18/2018
-ms.locfileid: "53589206"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67949846"
 ---
 # <a name="status-option-distributed-replay-administration-tool"></a>status オプション (Distributed Replay 管理ツール)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

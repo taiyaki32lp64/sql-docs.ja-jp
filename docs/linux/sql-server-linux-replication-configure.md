@@ -1,51 +1,50 @@
 ---
-title: Linux 上の SQL Server レプリケーションの構成 |Microsoft Docs
-description: この記事では、Linux での SQL Server レプリケーションを構成する方法について説明します。
+title: Linux 上で SQL Server レプリケーションを構成する
+description: この記事では、Linux 上で SQL Server レプリケーションを構成する方法について説明します。
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
+ms.reviewer: vanto
 ms.date: 03/20/2018
 ms.topic: article
 ms.prod: sql
 ms.prod_service: database-engine
-ms.custom: sql-linux
 ms.technology: linux
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 7ab482a9c2a4bce9da7dc2b0a68cae6391759b92
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
-ms.translationtype: MT
+ms.openlocfilehash: d7e3f4d81b5b40db2be1e45fbf28d27411492f83
+ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52754454"
+ms.lasthandoff: 07/25/2019
+ms.locfileid: "67895935"
 ---
-# <a name="configure-sql-server-replication-on-linux"></a>Linux 上の SQL Server レプリケーションを構成します。
+# <a name="configure-sql-server-replication-on-linux"></a>Linux 上で SQL Server レプリケーションを構成する
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
-[!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] 紹介用の SQL Server レプリケーション Linux 上の SQL Server のインスタンス。
+[!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] では、SQL Server on Linux のインスタンス用に SQL Server レプリケーションが導入されています。
 
-レプリケーションの詳細については、次を参照してください。 [SQL Server レプリケーションのドキュメント](../relational-databases/replication/sql-server-replication.md)します。
+レプリケーションの詳細については、[SQL Server レプリケーションのドキュメント](../relational-databases/replication/sql-server-replication.md)を参照してください。
 
-SQL Server Management Studio (SSMS) または Transact SQL ストアド プロシージャのいずれかを使った Linux 上のレプリケーションを構成します。
+SQL Server Management Studio (SSMS) または Transact-SQL ストアド プロシージャを使用して、Linux 上でレプリケーションを構成します。
 
-* SSMS を使用して、この記事の手順に従います。
+* SSMS を使用するには、この記事の指示に従ってください。
 
-  Windows オペレーティング システム上の SSMS を使用して、SQL Server のインスタンスに接続します。 背景と手順については、次を参照してください。 [SSMS を使用した Linux 上の SQL Server の管理に](./sql-server-linux-manage-ssms.md)します。
+  Windows オペレーティング システム上で SSMS を使用して SQL Server のインスタンスに接続します。 背景と手順については、[SSMS を使用した SQL Server on Linux の管理](./sql-server-linux-manage-ssms.md)に関する記事を参照してください。
   
-* 次のストアド プロシージャなど、 [Linux 上の SQL Server の構成のレプリケーション](sql-server-linux-replication-tutorial-tsql.md)チュートリアル。
+* ストアド プロシージャの例については、[Linux での SQL Server レプリケーションの構成](sql-server-linux-replication-tutorial-tsql.md)に関するチュートリアルを参照してください。
 
-## <a name="prerequisites"></a>前提条件
+## <a name="prerequisites"></a>Prerequisites
 
-パブリッシャー、ディストリビューターおよびサブスクライバーを構成する前に、SQL Server インスタンスのいくつかの構成手順を完了する必要があります。
+パブリッシャー、ディストリビューター、およびサブスクライバーを構成する前に、SQL Server インスタンスの構成手順をいくつか完了する必要があります。
 
-1. レプリケーション エージェントを使用する SQL Server エージェントを有効にします。 すべての Linux サーバーで、ターミナルで次のコマンドを実行します。
+1. SQL Server エージェントがレプリケーション エージェントを使用できるようにします。 すべての Linux サーバー上で、ターミナルで次のコマンドを実行します。
 
   ```bash
   sudo /opt/mssql/bin/mssql-conf set sqlagent.enabled true
   sudo systemctl restart mssql-server
   ```
 
-1. レプリケーション用の SQL Server インスタンスを構成します。 レプリケーション用の SQL Server インスタンスを構成するには、実行`sys.sp_MSrepl_createdatatypemappings`レプリケーションに参加しているすべてのインスタンス。
+1. SQL Server インスタンスをレプリケーション用に構成します。 SQL Server インスタンスをレプリケーション用に構成するには、レプリケーションに参加しているすべてのインスタンス上で `sys.sp_MSrepl_createdatatypemappings` を実行します。
 
   ```sql
   USE msdb
@@ -54,9 +53,9 @@ SQL Server Management Studio (SSMS) または Transact SQL ストアド プロ�
   GO
   ```
 
-1. スナップショット フォルダーを作成します。 SQL Server エージェントでは、スナップショット フォルダーに対する読み取り/書き込みが必要です。 ディストリビューターでスナップショット フォルダーを作成します。
+1. スナップショット フォルダーを作成します。 SQL Server エージェントには、読み取り/書き込みを行うスナップショット フォルダーが必要です。 ディストリビューターにスナップショット フォルダーを作成します。
 
-  スナップショット フォルダーを作成し、へのアクセスを付与する`mssql`ユーザーは、次のコマンドを実行します。
+  スナップショット フォルダーを作成し、`mssql` ユーザーにアクセス権を付与するには、次のコマンドを実行します。
 
   ```bash
   sudo mkdir /var/opt/mssql/data/ReplData/
@@ -64,38 +63,38 @@ SQL Server Management Studio (SSMS) または Transact SQL ストアド プロ�
   sudo chgrp mssql /var/opt/mssql/data/ReplData/
   ```
 
-## <a name="configure-and-monitor-replication-with-sql-server-management-studio-ssms"></a>構成し、SQL Server Management Studio (SSMS) でのレプリケーションの監視
+## <a name="configure-and-monitor-replication-with-sql-server-management-studio-ssms"></a>SQL Server Management Studio (SSMS) を使用してレプリケーションを構成および監視する
 
 ### <a name="configure-the-distributor"></a>ディストリビューターの構成
   
-ディストリビューターを構成します。 
+ディストリビューターを構成するには: 
 
-1. SSMS オブジェクト エクスプ ローラーで SQL Server のインスタンスに接続します。
+1. SSMS 上のオブジェクト エクスプローラーで SQL Server のインスタンスに接続します。
 
-1. 右クリックして**レプリケーション**、 をクリック**ディストリビューションの構成.**.
+1. **[レプリケーション]** を右クリックし、 **[ディストリビューションを構成する]** をクリックします。
 
-1. 指示に従って、**ディストリビューションの構成ウィザード**します。
+1. **ディストリビューションの構成ウィザード**で次の手順を行います。
 
-### <a name="create-publication-and-articles"></a>パブリケーションとアーティクルを作成します。
+### <a name="create-publication-and-articles"></a>パブリケーションとアーティクルを作成する
 
-パブリケーションとアーティクルを作成します。
+パブリケーションとアーティクルを作成するには:
 
-1. オブジェクト エクスプ ローラーで次のようにクリックします**レプリケーション** > **ローカル パブリケーション**> **新しい公開しています。**.
+1. オブジェクト エクスプローラーで、 **[レプリケーション]**  >  **[ローカル パブリケーション]** >  **[新しいパブリケーション]** の順にクリックします。
 
-1. 手順に従い、**パブリケーションの新規作成ウィザード**レプリケーション、およびパブリケーションに属するアーティクルの種類を構成します。
+1. **パブリケーションの新規作成ウィザード**の指示に従って、レプリケーションの種類と、パブリケーションに属するアーティクルを構成します。
 
-### <a name="configure-the-subscription"></a>サブスクリプションを構成します。
+### <a name="configure-the-subscription"></a>サブスクリプションを構成する
 
-オブジェクト エクスプ ローラーで、サブスクリプションを構成する をクリックして**レプリケーション** > **ローカル サブスクリプション**> **新規サブスクリプション.**.
+オブジェクト エクスプローラーでサブスクリプションを構成するには、 **[レプリケーション]**  >  **[ローカル サブスクリプション]** >  **[新しいサブスクリプション]** の順にクリックします。
 
-### <a name="monitor-replication-jobs"></a>レプリケーション ジョブの監視
+### <a name="monitor-replication-jobs"></a>レプリケーション ジョブを監視する
 
-レプリケーション ジョブを監視するのにには、レプリケーション モニターを使用します。
+レプリケーション モニターを使用して、レプリケーション ジョブを監視します。
 
-オブジェクト エクスプ ローラーで右クリックして**レプリケーション**、 をクリック**レプリケーション モニターの起動**します。
+オブジェクト エクスプローラーで、 **[レプリケーション]** を右クリックし、 **[レプリケーション モニターの起動]** をクリックします。
 
 ## <a name="next-steps"></a>次の手順
 
-[概念:Linux 上の SQL Server レプリケーション](sql-server-linux-replication.md)
+[概念:Linux での SQL Server のレプリケーション](sql-server-linux-replication.md)
 
-[レプリケーション ストアド プロシージャ](../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)します。
+[レプリケーション ストアド プロシージャ](../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)。

@@ -13,11 +13,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 48c6ccac0692075db43e4a5c3a7010c541827d0a
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52752214"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63021794"
 ---
 # <a name="publication-type"></a>[パブリケーションの種類]
   レプリケーションにより、次の種類のパブリケーションが提供されます。  

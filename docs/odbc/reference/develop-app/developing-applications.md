@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 0dd1a3b6-69dc-462f-9290-12ebee2b4a2a
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 85cb08e40ddd98d01216707b954d46b924053fc1
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a9cdf20fa57da4b6085fc0e2fab61a23f3fed83e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47758900"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68039916"
 ---
 # <a name="developing-applications"></a>アプリケーションの開発
 このセクションには、ODBC インターフェイスとそれを実装するドライバーを使用するアプリケーションの開発に関する情報が含まれています。  
@@ -55,5 +54,5 @@ ms.locfileid: "47758900"
   
 -   [プログラミングの考慮事項](../../../odbc/reference/develop-app/programming-considerations.md)  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [ODBC プログラマー リファレンス](../../../odbc/reference/odbc-programmer-s-reference.md)

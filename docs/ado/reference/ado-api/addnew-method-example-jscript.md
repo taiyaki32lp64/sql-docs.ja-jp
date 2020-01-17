@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: eabdd278-6576-4be7-9315-fb79cb8ef678
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 13e0fc40945e6cd8c68591a8f94cd9a052cda76e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 91ed77c7ca8e04e346c87a32d38499a272ff5fb7
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47631256"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67921293"
 ---
 # <a name="addnew-method-example-jscript"></a>AddNew メソッドの例 (JScript)
 この例では、 [AddNew](../../../ado/reference/ado-api/addnew-method-ado.md)メソッドを指定した名前の新しいレコードを作成します。 切り取り、メモ帳または別のテキスト エディターに次のコードを貼り付けてととして保存**AddNewJS.asp**します。  
@@ -135,6 +134,6 @@ body {
 <!-- EndAddNewJS -->  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [AddNew メソッド (ADO)](../../../ado/reference/ado-api/addnew-method-ado.md)   
  [Recordset オブジェクト (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)

@@ -12,12 +12,12 @@ ms.assetid: ff921952-b935-4bb0-b587-bba6cd15a090
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 30a14fbc60de7f06ead34e85140a903e4206544e
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 9d349a21fdd522b5af299c3ad130cdce984f569c
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53364404"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63253169"
 ---
 # <a name="storage-system-input-output-time-out"></a>ストレージ システムの入出力のタイムアウト
   このルールでは、システム イベント ログの EventId 9 を確認します。 このメッセージは、ストレージ システムで I/O タイムアウトが発生したことを示します。  
@@ -30,6 +30,6 @@ ms.locfileid: "53364404"
 -   [サポート技術情報の資料 154690](https://go.microsoft.com/fwlink/?LinkId=117747)  
   
 ## <a name="for-more-information"></a>詳細情報  
- [SQL Server I/O Basics, Chapter 2](https://go.microsoft.com/fwlink/?LinkId=69370)  
+ [SQL Server I/O Basics, Chapter 2](/previous-versions/sql/sql-server-2005/administrator/cc917726(v=technet.10))  
   
   

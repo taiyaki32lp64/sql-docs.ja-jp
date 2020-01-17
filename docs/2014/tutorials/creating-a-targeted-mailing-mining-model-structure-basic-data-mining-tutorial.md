@@ -11,11 +11,11 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: 2bd2e9d0decc730a59b63ee600bec2d080cc85fb
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56030803"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62856163"
 ---
 # <a name="creating-a-targeted-mailing-mining-model-structure-basic-data-mining-tutorial"></a>絞り込みメール配信マイニング モデル構造の作成 (基本的なデータ マイニング チュートリアル)
   絞り込みメール配信シナリオを作成するには、まず、[!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] のデータ マイニング ウィザードを使用して、新しいマイニング構造とデシジョン ツリー マイニング モデルを作成します。  

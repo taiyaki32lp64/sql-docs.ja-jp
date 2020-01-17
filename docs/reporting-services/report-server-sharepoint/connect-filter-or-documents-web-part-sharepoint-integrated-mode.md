@@ -2,17 +2,17 @@
 title: フィルター Web パーツまたはドキュメント Web パーツを Reporting Services レポート ビューアー Web パーツと接続する | Microsoft Docs
 ms.date: 11/26/2018
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: report-server-sharepoint
 ms.topic: conceptual
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 89b237bffcbe8afc230ae2f29de11a6c018f89c1
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: d833e0b42a6bfdaf9754525740f9bb58df794fdb
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52410899"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65580027"
 ---
 # <a name="connect-filter-or-documents-web-part-with-a-reporting-services-report-viewer-web-part"></a>フィルター Web パーツまたはドキュメント Web パーツを Reporting Services レポート ビューアー Web パーツと接続する
 
@@ -27,7 +27,7 @@ SharePoint 製品を使用している場合、フィルター Web パーツま�
 
  フィルター Web パーツは、レポートで値を 1 つ以上のパラメーターに値を送信するために使用します。 フィルター Web パーツを使用するには、フィルター Web パーツによって送信される値、データ型、形式との互換性があるパラメーターをレポートに定義しておく必要があります。  
   
- ドキュメント Web パーツは、ホーム サイトのドキュメント ライブラリに関連付けられます。 ドキュメント ライブラリからアイテムを表示、追加、または削除するには、 **[すべてのサイト コンテンツの表示]** をクリックします。 ライブラリで、 **[ドキュメント]** をクリックします。 **[新規]**、 **[アップロード]**、および **[アクション]** メニューを使用してドキュメント ライブラリのアイテムを管理できます。  
+ ドキュメント Web パーツは、ホーム サイトのドキュメント ライブラリに関連付けられます。 ドキュメント ライブラリからアイテムを表示、追加、または削除するには、 **[すべてのサイト コンテンツの表示]** をクリックします。 ライブラリで、 **[ドキュメント]** をクリックします。 **[新規]** 、 **[アップロード]** 、および **[アクション]** メニューを使用してドキュメント ライブラリのアイテムを管理できます。  
   
 ## <a name="connect-a-filter-web-part"></a>フィルター Web パーツを接続する
   
@@ -37,17 +37,17 @@ SharePoint 製品を使用している場合、フィルター Web パーツま�
   
 3.  **[Web パーツの追加]** をクリックします。  
   
-4.  **[すべての Web パーツ]** の **[その他]** カテゴリで、**[SQL Server Reporting Services レポート ビューアー]** を選びます。  
+4.  **[すべての Web パーツ]** の **[その他]** カテゴリで、 **[SQL Server Reporting Services レポート ビューアー]** を選びます。  
   
 5.  **[追加]** をクリックします。 Web パーツがゾーンの一番上に追加されます。  
   
-6.  同一の Web パーツ ページまたはダッシュボードの別の領域で、**[Web パーツの追加]** をクリックします。  
+6.  同一の Web パーツ ページまたはダッシュボードの別の領域で、 **[Web パーツの追加]** をクリックします。  
   
 7.  **[すべての Web パーツ]** の **[フィルター]** セクションで、Web パーツを選びます。  
   
 8.  **[追加]** をクリックします。 Web パーツがゾーンの一番上に追加されます。  
   
-9. Web パーツを含むゾーンで、Web パーツの **[編集]** メニューの **[接続]** をクリックし、**[フィルター値の送信先]** をポイントして [**レポート ビューアー** - *レポート名*] を選びます。  
+9. Web パーツを含むゾーンで、Web パーツの **[編集]** メニューの **[接続]** をクリックし、 **[フィルター値の送信先]** をポイントして [**レポート ビューアー** - *レポート名*] を選びます。  
   
 10. 変更をチェックインし、ページを保存します。  
   
@@ -65,13 +65,13 @@ SharePoint 製品を使用している場合、フィルター Web パーツま�
   
 6.  ツール ペインの下部で **[適用]** をクリックし、 **[OK]** をクリックしてペインを閉じます。  
   
-7.  同一の Web パーツ ページまたはダッシュボードの別の領域で、**[Web パーツの追加]** をクリックします。  
+7.  同一の Web パーツ ページまたはダッシュボードの別の領域で、 **[Web パーツの追加]** をクリックします。  
   
-8.  **[すべての Web パーツ]** の **[その他]** カテゴリで、**[SQL Server Reporting Services レポート ビューアー]** を選びます。  
+8.  **[すべての Web パーツ]** の **[その他]** カテゴリで、 **[SQL Server Reporting Services レポート ビューアー]** を選びます。  
   
 9. **[追加]** をクリックします。 Web パーツがゾーンの一番上に追加されます。  
   
-10. Web パーツを含むゾーンで、Web パーツの **[編集]** メニューをクリックし、**[接続]** をポイントし、**[レポート定義の取得元]** をポイントして **[ドキュメント]** を選びます。  
+10. Web パーツを含むゾーンで、Web パーツの **[編集]** メニューをクリックし、 **[接続]** をポイントし、 **[レポート定義の取得元]** をポイントして **[ドキュメント]** を選びます。  
   
 11. 変更をチェックインし、ページを保存します。  
   

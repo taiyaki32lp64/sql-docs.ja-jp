@@ -11,11 +11,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: d2a01b9d9d13bf5e9135d287553beb8b87c2dcd5
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53361304"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62638843"
 ---
 # <a name="what39s-new-in-sql-server-native-client"></a>どのような&#39;s New in SQL Server Native Client
   [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] は、[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] Native Client をインストールします。 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Native Client は存在しません。  

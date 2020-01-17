@@ -20,15 +20,14 @@ helpviewer_keywords:
 - clearing distributed query cache
 - flushing distributed query cache
 ms.assetid: a256ba63-7e11-4d5e-abc0-1fa4ed072e63
-author: uc-msft
+author: pmasl
 ms.author: umajay
-manager: craigg
-ms.openlocfilehash: b5b501e8f56c8c294d7791771a953cdb77aabd1b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 6d77d5db4f53d7dc29a1bc2959feb4770e6899d7
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47702400"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68101840"
 ---
 # <a name="dbcc-freesessioncache-transact-sql"></a>DBCC FREESESSIONCACHE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

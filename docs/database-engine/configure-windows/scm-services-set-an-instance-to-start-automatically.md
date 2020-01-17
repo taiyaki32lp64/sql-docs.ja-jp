@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: aa2b6bde-e76d-4fea-a560-54a63745d9b1
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 08986df74a5df440bf1cfb589cbe39680bce8a56
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: fa56e918238d3f6b5309e923f899ce00b2ab5749
+ms.sourcegitcommit: 734529a6f108e6ee6bfce939d8be562d405e1832
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47788840"
+ms.lasthandoff: 09/02/2019
+ms.locfileid: "70212419"
 ---
 # <a name="scm-services---set-an-instance-to-start-automatically"></a>SCM サービス - インスタンスを自動的に起動するように設定する
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -44,7 +43,7 @@ ms.locfileid: "47788840"
   
 3.  詳細ペインで、自動的に開始するインスタンスの名前を右クリックし、 **[プロパティ]** をクリックします。  
   
-4.  **[SQL Server \<***instancename***> のプロパティ]** ダイアログ ボックスで、**[開始モード]** を **[自動]** に設定します。  
+4.  **[SQL Server \<**_インスタンス名_**> のプロパティ]** ダイアログ ボックスで、**[開始モード]** を **[自動]** に設定します。  
   
 5.  **[OK]** をクリックして [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 構成マネージャーを閉じます。  
   

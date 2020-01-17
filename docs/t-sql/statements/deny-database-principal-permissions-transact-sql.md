@@ -1,6 +1,8 @@
 ---
-title: DENY (データベース プリンシパルの権限の拒否) (Transact-SQL) | Microsoft Docs
-ms.custom: ''
+title: DENY (データベース プリンシパルのアクセス許可の拒否)
+description: データベース ユーザー、データベース ロール、またはアプリケーション ロールに対する権限を拒否します。
+titleSuffix: SQL Server (Transact-SQL)
+ms.custom: seo-lt-2019
 ms.date: 05/15/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -26,13 +28,12 @@ helpviewer_keywords:
 ms.assetid: e2429a5d-e9be-4c05-be20-414d1038a63a
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: 5bc7c5c22bdad37eee4e5a711b77555088404b0e
-ms.sourcegitcommit: c6e71ed14198da67afd7ba722823b1af9b4f4e6f
+ms.openlocfilehash: a3e9cb1d12dd65b813ae7cc6139a1d48925ab05f
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/16/2019
-ms.locfileid: "54327683"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75244581"
 ---
 # <a name="deny-database-principal-permissions-transact-sql"></a>DENY (データベース プリンシパルの権限の拒否) (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -71,15 +72,15 @@ DENY permission [ ,...n ]
  データベース プリンシパルで拒否できる権限を指定します。 権限の一覧については、後の「解説」を参照してください。  
   
  USER ::*database_user*  
- 権限を拒否するユーザーのクラスと名前を指定します。 スコープ修飾子 (**::**) が必要です。  
+ 権限を拒否するユーザーのクラスと名前を指定します。 スコープ修飾子 ( **::** ) が必要です。  
   
  ROLE ::*database_role*  
- 権限を拒否するロールのクラスと名前を指定します。 スコープ修飾子 (**::**) が必要です。  
+ 権限を拒否するロールのクラスと名前を指定します。 スコープ修飾子 ( **::** ) が必要です。  
   
  APPLICATION ROLE ::*application_role*  
- **適用対象**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]、[!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]。  
+ **適用対象**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 以降、[!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]。  
   
- 権限を拒否するアプリケーション ロールのクラスと名前を指定します。 スコープ修飾子 (**::**) が必要です。  
+ 権限を拒否するアプリケーション ロールのクラスと名前を指定します。 スコープ修飾子 ( **::** ) が必要です。  
   
  CASCADE  
  このプリンシパルによって権限が許可されている他のプリンシパルに対しても、同じ権限を拒否することを示します。  
@@ -94,7 +95,7 @@ DENY permission [ ,...n ]
  データベース ロールを指定します。  
   
  *Application_role*  
- **適用対象**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]、[!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]。  
+ **適用対象**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 以降、[!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]。  
   
  アプリケーション ロールを指定します。  
   
@@ -113,7 +114,7 @@ DENY permission [ ,...n ]
  *Database_user_with_no_login*  
  対応するサーバー レベルのプリンシパルがないデータベース ユーザーを指定します。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
   
 ## <a name="database-user-permissions"></a>データベース ユーザー権限  
  データベース ユーザーは、データベース レベルのセキュリティ保護可能なリソースで、権限の階層で親となっているデータベースに含まれています。 次の表に、データベース ユーザーで拒否できる権限のうち最も限定的なものを、それらを暗黙的に含む一般的な権限と共に示します。  
@@ -149,7 +150,7 @@ DENY permission [ ,...n ]
   
  db_owner 固定データベース ロールのメンバーなど、データベースに対する CONTROL 権限が許可されているユーザーは、データベース内のセキュリティ保護可能なリソースに対する権限を拒否できます。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
   
 ### <a name="a-denying-control-permission-on-a-user-to-another-user"></a>A. ユーザーの CONTROL 権限を別のユーザーに対して拒否する  
  次の例では、[!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] ユーザー `CONTROL` の `Wanida` 権限を、ユーザー `RolandX` に対して拒否します。  
@@ -173,7 +174,7 @@ GO
 ### <a name="c-denying-impersonate-permission-on-a-user-to-an-application-role"></a>C. ユーザーの IMPERSONATE 権限をアプリケーション ロールに対して拒否する  
  次の例では、ユーザー `IMPERSONATE` の `HamithaL` 権限を、[!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] のアプリケーション ロール `AccountsPayable17` に対して拒否します。  
   
-**適用対象**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]、[!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]。  
+**適用対象**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 以降、[!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]。  
   
 ```  
 USE AdventureWorks2012;  

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - mining structures [Analysis Services], columns
@@ -15,12 +14,12 @@ ms.assetid: 3f879344-9f66-4178-851a-e8c5ccccf4cb
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 954159ba298b47c1a10a5e7baef1cff523dcc4b5
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 85a713bb9da24a67ebe8fdd097535c5a9d5ac98e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48171252"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66086224"
 ---
 # <a name="add-columns-to-a-mining-structure"></a>マイニング構造への列の追加
   データ マイニング ウィザードで定義したマイニング構造に列を追加するには、 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] のデータ マイニング デザイナーを使用します。 マイニング構造の定義に使用したデータ ソース ビューに存在する列はどれでも追加できます。  

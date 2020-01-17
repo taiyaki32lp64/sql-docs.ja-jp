@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 f1_keywords:
 - SQL12.ASVS.BIDTOOLSET.TOPLEVSEMMODUIENTRY.F1
@@ -13,12 +12,12 @@ ms.assetid: 45735c57-2a95-4e45-8994-7242df6c9c5f
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 091f6d49c4cccbcba47d50bbde3b395d8ce9d260
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 223a8a300a4f3000512f8d75dfb7595cb52abc08
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53364274"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66067826"
 ---
 # <a name="tabular-model-designer-ssas-tabular"></a>テーブル モデル デザイナー (SSAS テーブル)
   テーブル モデル デザイナーの一部は、 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]、Microsoft と統合された[!INCLUDE[vsprvs](../includes/vsprvs-md.md)]2010 またはそれ以降、プロフェッショナルなテーブル モデル ソリューションを開発するには、具体的には追加のプロジェクトの種類のテンプレートとします。  
@@ -120,7 +119,7 @@ ms.locfileid: "53364274"
  Analysis Services プロジェクトは、選択したソース管理プラグインと統合されます。 ソース コントロールを使用するように Visual Studio を構成した場合は、ソリューション エクスプローラーからチェックインとチェックアウトを使用できます。 Team Foundation Server を使用するように構成するには、「 [Team Foundation バージョン管理を使用する Visual Studio の構成](https://msdn.microsoft.com/library/ms253064.aspx)」を参照してください。 多くのサード パーティ製ソース管理プラグインもサポートされます。  
   
  **フォント**  
- テーブル モデルでは [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 環境フォントを使用して表示フォントを制御します。 既定の [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] フォントに、対象の言語で必要なすべての Unicode 文字がない場合は、このフォントの変更が必要になることがあります。 フォントを変更するには、 **[ツール]** メニューをクリックし、 **[オプション]**、 **[フォントおよび色]** の順にクリックします。  
+ テーブル モデルでは [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 環境フォントを使用して表示フォントを制御します。 既定の [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] フォントに、対象の言語で必要なすべての Unicode 文字がない場合は、このフォントの変更が必要になることがあります。 フォントを変更するには、 **[ツール]** メニューをクリックし、 **[オプション]** 、 **[フォントおよび色]** の順にクリックします。  
   
  **キーボード ショートカット**  
  Analysis Services のキーボード ショートカットは、[ツール]  > [オプション] > [キーボード] ダイアログで構成/再マップできます。 テーブル モデル デザイナーのコンテキストでは、ビルド、保存、デバッグ、新しいプロジェクトなど、一部のグローバル [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] ショートカットがサポートされています。 その他のテーブル モデル デザイナーに固有のショートカットは Analysis Services コンテキストです。  

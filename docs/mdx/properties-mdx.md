@@ -1,5 +1,5 @@
 ---
-title: プロパティ (MDX) |Microsoft ドキュメント
+title: Properties (MDX) |Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -8,13 +8,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-manager: kfile
-ms.openlocfilehash: c29d9b29078d6097b512acb93ff47eef018592c8
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.openlocfilehash: 9a9aa2ab3fbfdbe10246e0dcf8758cfcf7732375
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34742701"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68893673"
 ---
 # <a name="properties-mdx"></a>Properties (MDX)
 
@@ -33,19 +32,19 @@ Member_Expression.Properties(Property_Name [, TYPED])
  メンバーを 1 つ返す有効な多次元式 (MDX) 式です。  
   
  *Property_Name*  
- メンバー プロパティの名前を表す有効な文字列式です。  
+ メンバープロパティ名の有効な文字列式です。  
   
 ## <a name="remarks"></a>コメント  
- **プロパティ**関数は、指定したメンバー プロパティの指定されたメンバーの値を返します。 メンバー プロパティがする固有メンバー プロパティのいずれかのように**名前**、 **ID**、**キー**、または**キャプション**、またはユーザー定義メンバー プロパティを指定できます。 詳細については、次を参照してください。[固有メンバー プロパティ&#40;MDX&#41; ](../analysis-services/multidimensional-models/mdx/mdx-member-properties-intrinsic-member-properties.md)と[ユーザー定義メンバー プロパティ&#40;MDX&#41;](../analysis-services/multidimensional-models/mdx/mdx-member-properties-user-defined-member-properties.md)です。  
+ **Properties**関数は、指定したメンバー プロパティの指定されたメンバーの値を返します。 メンバープロパティには、**名前**、 **ID**、**キー**、**キャプション**などの固有メンバープロパティを使用することも、ユーザー定義メンバープロパティを使用することもできます。 詳細については、「[固有&#40;メンバー&#41;プロパティ mdx](https://docs.microsoft.com/analysis-services/multidimensional-models/mdx/mdx-member-properties-intrinsic-member-properties) 」および「[ユーザー &#40;定義&#41;メンバープロパティ (mdx](https://docs.microsoft.com/analysis-services/multidimensional-models/mdx/mdx-member-properties-user-defined-member-properties))」を参照してください。  
   
- 既定では、強制的に文字列型の値が返されます。 場合**型指定された**を指定すると、戻り値が厳密に型指定します。  
+ 既定では、値は文字列に変換されます。 **型**指定された場合、戻り値は厳密に型指定されます。  
   
 -   プロパティの型が組み込み型の場合、この関数はメンバーの元の型を返します。  
   
--   戻り値の型と同じ戻り値の型は、プロパティの型が定義されているユーザーの場合、 **MemberValue**関数。  
+-   プロパティの型がユーザー定義の場合、戻り値の型は**membervalue**関数の戻り値の型と同じになります。  
   
 > [!NOTE]  
->  Key プロパティは、複合キーを除いて Key0 と同じ結果を返します。 Key プロパティは、複合キーに関しては NULL を返します。 キーを使用して*x*の例のように、複合キーの構文。 Key0 プロパティ、Key1 プロパティ、Key2 プロパティなどは、全体として複合キーを形成します。  
+>  プロパティ (' Key ') は、複合キーを除き、Key0 と同じ結果を返します。 プロパティ (' Key ') は、複合キーに対して null を返します。 例に示すように、複合キーには Key*x*構文を使用します。 プロパティ (' Key0 ')、プロパティ (' Key1 ')、プロパティ (' Key2 ') などは、全体が複合キーを形成します。  
   
 ## <a name="example"></a>例  
  次の例では、固有メンバー プロパティとユーザー定義メンバー プロパティを返しています。Day Name メンバー プロパティについては TYPED 引数を使用して、戻り値の型を厳密に指定しています。  
@@ -86,7 +85,7 @@ SELECT {Measures.MemberName
 FROM [Adventure Works]  
 ```  
   
- 次の例は、キーの使用を示しています。*x*プロパティです。  
+ 次の例は、KEY*x*プロパティの使用方法を示しています。  
   
 ```  
 WITH   
@@ -106,7 +105,7 @@ FROM [Adventure Works]
 ```  
   
 ## <a name="see-also"></a>参照  
- [メンバー プロパティを使用して&#40;MDX&#41;](../analysis-services/multidimensional-models/mdx/mdx-member-properties.md)   
- [MDX 関数リファレンス&#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
+ [メンバー プロパティの使用 &#40;MDX&#41;](https://docs.microsoft.com/analysis-services/multidimensional-models/mdx/mdx-member-properties)   
+ [MDX 関数リファレンス &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
   
   

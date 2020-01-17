@@ -11,15 +11,15 @@ dev_langs:
 helpviewer_keywords:
 - Script component [Integration Services], object model
 ms.assetid: 2a0aae82-39cc-4423-b09a-72d2f61033bd
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 73016278ce8455a57af78229703e2330bbbd0edf
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: e2bfa3fdf09dea1b088fb519b9782999bd20296b
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53370524"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62768438"
 ---
 # <a name="understanding-the-script-component-object-model"></a>スクリプト コンポーネントのオブジェクト モデルについて
   [コーディングとスクリプト コンポーネントのデバッグ] で説明したように (../extending-packages-scripting/data-flow-script-component/coding-and-debugging-the-script-component.md、スクリプト コンポーネント プロジェクトには、3 つのプロジェクト項目。  
@@ -113,7 +113,7 @@ public override void PreExecute()
 #### <a name="what-the-bufferwrapper-project-item-provides"></a>プロジェクト アイテム BufferWrapper が提供する機能  
  構成したコンポーネントの入力ごとに、プロジェクト アイテム `BufferWrapper` には、<xref:Microsoft.SqlServer.Dts.Pipeline.ScriptBuffer> から派生した、入力と同じ名前のクラスがあります。 各入力バッファー クラスには、次のプロパティ、関数、およびメソッドが含まれています。  
   
--   選択された各入力列の、型指定された名前付きのアクセサー プロパティ。 これらのプロパティが読み取り専用か読み取り/書き込み可能かどうかは、**[スクリプト変換エディター]** の **[入力列]** ページで、列に対して指定され **[使用法の種類]** によって決まります。  
+-   選択された各入力列の、型指定された名前付きのアクセサー プロパティ。 これらのプロパティが読み取り専用か読み取り/書き込み可能かどうかは、 **[スクリプト変換エディター]** の **[入力列]** ページで、列に対して指定され **[使用法の種類]** によって決まります。  
   
 -   選択された各入力列の **\<column>_IsNull** プロパティ。 このプロパティが読み取り専用か読み取り/書き込み可能かどうかも、列に対して指定された **[使用法の種類]** によって決まります。  
   
@@ -126,16 +126,16 @@ public override void PreExecute()
   
 -   `ProcessInput` メソッドをオーバーライドして実装したメソッド。 これは、データ フロー エンジンが実行時に `PreExecute` メソッドの次に呼び出すメソッドで、繰り返し呼び出される場合があります。 `ProcessInput` 処理を **\<inputbuffer > _ProcessInput**メソッド。 次に `ProcessInput` メソッドは入力バッファーが末尾に達しているかどうかを確認し、達している場合は、オーバーライド可能な `FinishOutputs` メソッドと private メソッド `MarkOutputsAsFinished` を呼び出します。 `MarkOutputsAsFinished` メソッドは、次に最後の出力バッファーの `SetEndOfRowset` を呼び出します。  
   
--   **\<inputbuffer>_ProcessInput** メソッドのオーバーライド可能な実装。 この既定の実装では、単に各入力行の間をループし、**\<inputbuffer>_ProcessInputRow** を呼び出します。  
+-   **\<inputbuffer>_ProcessInput** メソッドのオーバーライド可能な実装。 この既定の実装では、単に各入力行の間をループし、 **\<inputbuffer>_ProcessInputRow** を呼び出します。  
   
 -   **\<inputbuffer>_ProcessInputRow** メソッドのオーバーライド可能な実装。 既定の実装では、空のままです。 このメソッドは、カスタム データ処理コードを記述するために、通常はオーバーライドして使用します。  
   
 #### <a name="what-your-custom-code-should-do"></a>カスタム コードとして組み込むべき機能  
  `ScriptMain` クラスの入力を処理するには、次のメソッドを使用できます。  
   
--   入力行が渡されるたびにそのデータを処理するには、**\<inputbuffer>_ProcessInputRow** をオーバーライドします。  
+-   入力行が渡されるたびにそのデータを処理するには、 **\<inputbuffer>_ProcessInputRow** をオーバーライドします。  
   
--   入力行をループするときに追加の処理を行う必要がある場合にのみ、**\<inputbuffer>_ProcessInput** をオーバーライドします  (たとえば、すべての行が処理された後に他のアクションを実行するために `EndOfRowset` をテストする必要がある場合)。行の処理を実行するには、**\<inputbuffer>_ProcessInputRow** を呼び出します。  
+-   入力行をループするときに追加の処理を行う必要がある場合にのみ、 **\<inputbuffer>_ProcessInput** をオーバーライドします (たとえば、すべての行が処理された後に他のアクションを実行するために `EndOfRowset` をテストする必要がある場合)。行の処理を実行するには、 **\<inputbuffer>_ProcessInputRow** を呼び出します。  
   
 -   出力を閉じる前に、出力に対して何らかの処理を行う場合は、`FinishOutputs` をオーバーライドします。  
   
@@ -149,7 +149,7 @@ public override void PreExecute()
   
 -   各出力列の、名前付きで型指定された、書き込み専用のアクセサー プロパティ。  
   
--   書き込み専用**\<列 > _IsNull**プロパティに、列の値を設定するために使用できる各選択されている出力列の`null`します。  
+-   書き込み専用 **\<列 > _IsNull**プロパティに、列の値を設定するために使用できる各選択されている出力列の`null`します。  
   
 -   空の新しい行を出力バッファーに追加するための `AddRow` メソッド。  
   

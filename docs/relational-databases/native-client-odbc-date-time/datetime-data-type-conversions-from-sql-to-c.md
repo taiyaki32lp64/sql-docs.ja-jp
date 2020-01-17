@@ -12,18 +12,16 @@ helpviewer_keywords:
 ms.assetid: 059431e2-a65c-4587-ba4a-9929a1611e96
 author: MightyPen
 ms.author: genemi
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: b370d18c6c5c1a90be370aeef2f910713a51695b
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: 9795126f2cd7c39ebd23ed34fde73664388b235f
+ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52418583"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73783844"
 ---
 # <a name="datetime-data-type-conversions-from-sql-to-c"></a>datetime データ型の SQL から C への変換
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-[!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
 
   次の表に、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の日付型または時刻型から C の型に変換する際に考慮する問題を示します。  
   
@@ -32,21 +30,21 @@ ms.locfileid: "52418583"
 ||||||||||  
 |-|-|-|-|-|-|-|-|-|  
 ||SQL_C_DATE|SQL_C_TIME|SQL_C_TIMESTAMP|SQL_C_SS_TIME2|SQL_C_SS_TIMESTAMPOFFSET|SQL_C_BINARY|SQL_C_CHAR|SQL_C_WCHAR|  
-|SQL_CHAR|2,3,4,5|2,3,6,7,8|2,3,9,10,11|2,3,6,7|2,3,9,10,11|1|1|1|  
-|SQL_WCHAR|2,3,4,5|2,3,6,7,8|2,3,9,10,11|2,3,6,7|2,3,9,10,11|1|1|1|  
-|SQL_TYPE_DATE|[OK]|12|13|12|13,23|14|16|16|  
-|SQL_SS_TIME2|12|8|15|[OK]|10,23|17|16|16|  
-|SQL_TYPE_TIMESTAMP|18|7,8|[OK]|7|23|19|16|16|  
-|SQL_SS_TIMESTAMPOFFSET|18,22|7,8,20|20|7,20|[OK]|21|16|16|  
+|SQL_CHAR|2、3、4、5|2、3、6、7、8|2、3、9、10、11|2、3、6、7|2、3、9、10、11|1|1|1|  
+|SQL_WCHAR|2、3、4、5|2、3、6、7、8|2、3、9、10、11|2、3、6、7|2、3、9、10、11|1|1|1|  
+|SQL_TYPE_DATE|[OK]|12|13|12|13、23|14|16|16|  
+|SQL_SS_TIME2|12|8|15|[OK]|10、23|17|16|16|  
+|SQL_TYPE_TIMESTAMP|18|7、8|[OK]|7|23|19|16|16|  
+|SQL_SS_TIMESTAMPOFFSET|18、22|7、8、20|20|7、20|[OK]|21|16|16|  
   
 ## <a name="key-to-symbols"></a>記号の説明  
   
-|シンボル|説明|  
+|記号|意味|  
 |------------|-------------|  
 |[OK]|変換の問題は発生しません。|  
 |1|[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] より前の規則が適用されます。|  
 |2|先頭および末尾にあるスペースは無視されます。|  
-|3|文字列が日付、時刻、タイム ゾーン、またはタイム ゾーン オフセットに解析され、秒の小数部は 9 桁まで許容されます。 タイム ゾーン オフセットが解析されると、時刻はクライアントのタイム ゾーンに変換されます。 この変換中にエラーが発生した場合と「Datetime フィールド オーバーフロー」メッセージの SQLSTATE 22018 の診断レコードが生成されます。|  
+|3|文字列が日付、時刻、タイム ゾーン、またはタイム ゾーン オフセットに解析され、秒の小数部は 9 桁まで許容されます。 タイム ゾーン オフセットが解析されると、時刻はクライアントのタイム ゾーンに変換されます。 この変換中にエラーが発生した場合、"Datetime field overflow" というメッセージで SQLSTATE 22018 の診断レコードが生成されます。|  
 |4|値が日付、タイムスタンプ、またはタイムスタンプ オフセットの有効な値ではない場合、"キャストした文字コードが正しくありません" というメッセージで SQLSTATE 22018 の診断レコードが生成されます。|  
 |5|時刻が 0 以外の場合、"分数が切り捨てられました" というメッセージで SQLSTATE 01S07 の診断レコードが生成されます。|  
 |6|値が時刻、タイムスタンプ、またはタイムスタンプ オフセットの有効な値ではない場合、"キャストした文字コードが正しくありません" というメッセージで SQLSTATE 22018 の診断レコードが生成されます。|  
@@ -67,9 +65,9 @@ ms.locfileid: "52418583"
 |21|SQL_SS_TIMESTAMPOFFSET_STRUCT を格納するのにバッファーの大きさが十分である場合、値は SQL_SS_TIMESTAMPOFFSET_STRUCT として返されます。 それ以外の場合は、"数値が範囲を超えています" というメッセージで SQLSTATE 22003 の診断レコードが生成されます。|  
 |22|値がクライアントのタイム ゾーンに変換されてから、日付が抽出されます。 これにより、タイムスタンプ オフセットの種類によるその他の変換との一貫性が提供されます。 この変換中にエラーが発生すると、"Datetime フィールド オーバーフロー" というメッセージで SQLSTATE 22008 の診断レコードが生成されます。 これにより、単純な切り捨てによって取得された値とは異なる日付になることもあります。|  
   
- このトピックの表では、クライアントに返される型とバインドの型との間の変換について説明しています。 出力パラメーターでサーバーの種類が指定されている場合 SQLBindParameter がサーバー上の実際の型と一致せず、暗黙的な変換は、サーバーで実行するクライアントに返される型は SQLBindParameter を通じて指定された型に一致します。 これは、サーバーの変換の規則が上記の表に示したものとは異なると、予期しない変換結果につながることができます。 たとえば、既定の日付を指定する必要がある場合、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では現在の日付ではなく 1900-1-1 が使用されます。  
+ このトピックの表では、クライアントに返される型とバインドの型との間の変換について説明しています。 出力パラメーターの場合、SQLBindParameter で指定されたサーバーの型がサーバー上の実際の型と一致しないと、サーバーによって暗黙的な変換が実行され、クライアントに返される型は SQLBindParameter によって指定された型と一致します。 これにより、サーバーの変換規則が前の表に記載されているものと異なる場合に、予期しない変換結果が発生する可能性があります。 たとえば、既定の日付を指定する必要がある場合、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では現在の日付ではなく 1900-1-1 が使用されます。  
   
 ## <a name="see-also"></a>参照  
- [日付と時刻の強化&#40;ODBC&#41;](../../relational-databases/native-client-odbc-date-time/date-and-time-improvements-odbc.md)  
+ [日付と時刻の&#40;機能強化 ODBC&#41;](../../relational-databases/native-client-odbc-date-time/date-and-time-improvements-odbc.md)  
   
   

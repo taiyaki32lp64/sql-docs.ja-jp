@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: fb034f63-2532-4da8-a1b0-bc125734585a
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: cbe50ae21da22b7b05d8d52d6de0e6305a8917ff
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 1d05b367901aae7a37e10b0a2091a268c3a78a7b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47643982"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67954836"
 ---
 # <a name="executebatch-method-sqlserverstatement"></a>executeBatch メソッド (SQLServerStatement)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

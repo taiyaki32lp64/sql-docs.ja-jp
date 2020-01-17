@@ -16,18 +16,17 @@ helpviewer_keywords:
 ms.assetid: a616fce9-b4c1-49da-87a7-9d6f74911d8f
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 81cb60413aaf6846e2aed429464aae6b92a548be
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: fa6fde13ccf4941e61ec29c9a257aeff9ee214eb
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47668850"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68095730"
 ---
-# <a name="mapping-system-tables-to-system-views-transact-sql"></a>システム テーブルのシステム ビューへのマッピング (Transact-SQL)
+# <a name="mapping-system-tables-to-system-views-transact-sql"></a>システム ビュー (TRANSACT-SQL) をシステム テーブルのマッピング
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  ここでは、システム テーブルおよび関数とシステム ビューおよび関数の間のマッピングについて説明します。  
+  このトピックでは、システム テーブルおよび関数とシステム ビューおよび関数の間のマッピングを示します。  
   
  次の表は、システム テーブルと、対応するシステム ビューまたは [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] の関数とのマッピングです。  
   
@@ -75,7 +74,7 @@ ms.locfileid: "47668850"
 |sysusers|[sys.database_principals](../../relational-databases/system-catalog-views/sys-database-principals-transact-sql.md)|カタログ ビュー|  
 |sysfulltextcatalogs|[sys.fulltext_catalogs](../../relational-databases/system-catalog-views/sys-fulltext-catalogs-transact-sql.md)|カタログ ビュー|  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [カタログ ビュー &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
  [動的管理ビューと動的管理関数 &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
  [システム テーブル &#40;TRANSACT-SQL&#41;](../../relational-databases/system-tables/system-tables-transact-sql.md)  

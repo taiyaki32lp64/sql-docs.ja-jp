@@ -20,16 +20,15 @@ helpviewer_keywords:
 ms.assetid: a1742649-ca29-4d9b-9975-661cdbf18f78
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: f18a3d809be2302732fa4e4aaeaa1b1e19cbb2dd
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: f3c261b2cc8a29af74adba6e32c646a11e940070
+ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54130392"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "73982078"
 ---
-# <a name="alter-table-columndefinition-transact-sql"></a>ALTER TABLE column_definition (Transact-SQL)
+# <a name="alter-table-column_definition-transact-sql"></a>ALTER TABLE column_definition (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   [ALTER TABLE](../../t-sql/statements/alter-table-transact-sql.md) を使用してテーブルに追加される列のプロパティを指定します。  
@@ -85,7 +84,7 @@ column_name <data_type>
  *column_name*  
  変更、追加、または削除する列の名前を指定します。 *column_name* は 1 ～ 128 文字で指定できます。 timestamp データ型で作成される新しい列の場合は、*column_name* を省略できます。 **timestamp** データ型の列に対して *column_name* を指定しない場合には、名前 **timestamp** が使われます。  
   
- [ _type_schema_name_**.** ] *type_name*  
+ [ _type_schema_name_ **.** ] *type_name*  
  追加する列のデータ型と、それが属するスキーマを指定します。  
   
  *type_name* は次のいずれかです。  
@@ -100,7 +99,7 @@ column_name <data_type>
   
 -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のシステム データ型  
   
--   現在のデータベースにおける現在のユーザーの既定のスキーマ  
+-   現在のデータベースにおける現在のユーザーの既定のスキーマ。  
   
 -   現在のデータベースの **dbo** スキーマ。  
   
@@ -120,23 +119,23 @@ DOCUMENT
  *column_name* 内の **xml** データ型の各インスタンスは 1 つのトップレベル要素のみで構成できることを指定します。 DOCUMENT は、**xml** データ型のみに適用され、*xml_schema_collection* も指定されている場合にだけ指定できます。  
   
  *xml_schema_collection*  
- **適用対象**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]  
+ **適用対象**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 以降。  
   
  **xml** データ型にのみ適用されます。XML スキーマ コレクションとこのデータ型を関連付けるためのものです。 スキーマで **xml** 列を使用するには、まず、[CREATE XML SCHEMA COLLECTION](../../t-sql/statements/create-xml-schema-collection-transact-sql.md) を使用してデータベース内にスキーマを作成する必要があります。  
   
 FILESTREAM  
  必要に応じて、*type_name* が **varbinary(max)** の列に対して FILESTREAM ストレージ属性を指定します。  
   
- 列に対して FILESTREAM を指定した場合、ROWGUIDCOL 属性を持つ **uniqueidentifier** データ型の列がテーブルに存在する必要があります。 この列では、null 値は許可されず、UNIQUE または PRIMARY KEY 単一列制約を持つ必要があります。 列の GUID 値は、データの挿入時にアプリケーションによって、または NEWID () 関数を使用する DEFAULT 制約によって、提供する必要があります。  
+ 列に対して FILESTREAM を指定した場合、ROWGUIDCOL 属性を持つ **uniqueidentifier** データ型の列がテーブルに存在する必要があります。 この列では、null 値を許可してはならず、また UNIQUE、PRIMARY KEY のいずれかの単一列制約を持つ必要があります。 列の GUID 値は、データの挿入時にアプリケーションによって、または NEWID () 関数を使用する DEFAULT 制約によって、提供する必要があります。  
   
- テーブルに FILESTREAM 列が定義されているときは、ROWGUIDCOL 列を削除したり関連する制約を変更したりすることはできません。 ROWGUIDCOL 列は、最後の FILESTREAM 列が削除された後でのみ削除できます。  
+ テーブルに FILESTREAM 列が定義されている間は、ROWGUIDCOL 列を削除したり、関連する制約を変更したりすることはできません。 ROWGUIDCOL 列は、最後の FILESTREAM 列を削除した後にのみ削除できます。  
   
  列に対して FILESTREAM ストレージ属性を指定した場合、この列のすべての値がファイル システム上の FILESTREAM データ コンテナーに格納されます。  
   
  列定義の使用方法を示す例については、「[FILESTREAM &#40;SQL Server&#41;](../../relational-databases/blob/filestream-sql-server.md)」を参照してください。  
   
 COLLATE *collation_name*  
- 列の照合順序を指定します。 照合順序を指定しない場合、データベースの既定の照合順序が列に割り当てられます。 照合順序名には、Windows 照合順序名または SQL 照合順序名を指定できます。 一覧と詳細については、「[Windows 照合順序名 &#40;Transact-SQL&#41;](../../t-sql/statements/windows-collation-name-transact-sql.md)」と「[SQL Server 照合順序名 &#40;Transact-SQL&#41;](../../t-sql/statements/sql-server-collation-name-transact-sql.md)」を参照してください。  
+ 列の照合順序を指定します。 指定しない場合、データベースの既定の照合順序が列に割り当てられます。 照合順序名には、Windows 照合順序名または SQL 照合順序名を指定できます。 一覧と詳細については、「[Windows 照合順序名 &#40;Transact-SQL&#41;](../../t-sql/statements/windows-collation-name-transact-sql.md)」と「[SQL Server 照合順序名 &#40;Transact-SQL&#41;](../../t-sql/statements/sql-server-collation-name-transact-sql.md)」を参照してください。  
   
  COLLATE 句を使用して照合順序を指定できるのは、**char**、**varchar**、**nchar**、**nvarchar** データ型の列だけです。  
   
@@ -163,7 +162,7 @@ WITH VALUES
 IDENTITY  
  新しい列が ID 列であることを指定します。 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]は、列に一意な増分値を設定します。 既存のテーブルに ID 列を追加すると、テーブルの既存の行にシード値と増分値を持つ識別番号が追加されます。 行の更新順序は保証されません。 識別番号は、新しく追加された行に対しても生成されます。  
   
- ID 列は通常、PRIMARY KEY 制約と組み合わせて使用し、テーブルの一意な行識別子 (ROWID) の役割を果たします。 IDENTITY プロパティは、**tinyint**、**smallint**、**int**、**bigint**、**decimal(p,0)**、**numeric(p,0)** のいずれかの列に割り当てることができます。 ID 列は 1 つのテーブルにつき 1 つだけ作成できます。 DEFAULT キーワードとバインドされている既定値は、ID 列で使用できません。 seed と increment は両方指定するか、どちらも指定しないでください。 どちらも指定しない場合、既定値は (1,1) になります。  
+ ID 列は通常、PRIMARY KEY 制約と組み合わせて使用し、テーブルの一意な行識別子 (ROWID) の役割を果たします。 IDENTITY プロパティは、**tinyint**、**smallint**、**int**、**bigint**、**decimal(p,0)** 、**numeric(p,0)** のいずれかの列に割り当てることができます。 ID 列は 1 つのテーブルにつき 1 つだけ作成できます。 DEFAULT キーワードとバインドされている既定値は、ID 列で使用できません。 seed と increment は両方指定するか、どちらも指定しないでください。 どちらも指定しない場合、既定値は (1,1) になります。  
   
 > [!NOTE]  
 >  既存のテーブル列を変更して IDENTITY プロパティを追加することはできません。  
@@ -179,16 +178,16 @@ IDENTITY
  読み込まれている前の行の ID 値に加算される増分値を指定します。  
   
 NOT FOR REPLICATION  
- **適用対象**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]  
+ **適用対象**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 以降。  
   
  IDENTITY プロパティに対して指定できます。 IDENTITY プロパティに対してこの句を指定した場合、レプリケーション エージェントが挿入操作を実行するとき ID 列の値は増加しません。  
   
 ROWGUIDCOL  
- **適用対象**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]  
+ **適用対象**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 以降。  
   
  列が、行グローバル一意識別子列であることを指定します。 ROWGUIDCOL は、**uniqueidentifier** 列にのみ割り当てることができ、1 つのテーブルに 1 つの **uniqueidentifier** 列だけを ROWGUIDCOL 列として指定できます。 ROWGUIDCOL は、ユーザー定義データ型の列には割り当てできません。  
   
- ROWGUIDCOL では、列に格納される値の一意性は設定されません。 また、テーブルに新しい行を挿入しても値は自動的に生成されません。 各列に一意な値を生成するには、INSERT ステートメントで NEWID 関数を使用するか、列の既定値として NEWID 関数を指定します。 詳しくは、「[NEWID &#40;Transact-SQL&#41;](../../t-sql/functions/newid-transact-sql.md)」および「[INSERT &#40;Transact-SQL&#41;](../../t-sql/statements/insert-transact-sql.md)」をご覧ください。  
+ ROWGUIDCOL では、列に格納される値は一意である必要はありません。 また、ROWGUIDCOL はテーブルに新しい行を挿入しても値を自動的に生成しません。 各列に一意な値を生成するには、INSERT ステートメントで NEWID 関数を使用するか、列の既定値として NEWID 関数を指定します。 詳しくは、「[NEWID &#40;Transact-SQL&#41;](../../t-sql/functions/newid-transact-sql.md)」および「[INSERT &#40;Transact-SQL&#41;](../../t-sql/statements/insert-transact-sql.md)」をご覧ください。  
   
 SPARSE  
  列がスパース列であることを示します。 スパース列のストレージは NULL 値用に最適化されます。 スパース列を NOT NULL として指定することはできません。 スパース列のその他の制限事項と詳細については、「[スパース列の使用](../../relational-databases/tables/use-sparse-columns.md)」を参照してください。  
@@ -196,34 +195,34 @@ SPARSE
 \<column_constraint>  
  列制約の引数の定義については、「[column_constraint &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-column-constraint-transact-sql.md)」を参照してください。  
   
- 使用して暗号化  
+ ENCRYPTED WITH  
  [Always Encrypted](../../relational-databases/security/encryption/always-encrypted-database-engine.md) 機能を使って暗号化列を指定します。  
   
  COLUMN_ENCRYPTION_KEY = *key_name*  
  列の暗号化キーを指定します。 詳しくは、「[CREATE COLUMN ENCRYPTION KEY &#40;Transact-SQL&#41;](../../t-sql/statements/create-column-encryption-key-transact-sql.md)」をご覧ください。  
   
-ENCRYPTION_TYPE = {決定的 |ランダム化}  
- **確定的な暗号化** は常に任意のプレーン テキストを指定した値の場合は、同じ暗号化された値を生成するメソッドを使用します。 確定的な暗号化を使用すると、グループ化、および暗号化された値に基づいて、等しいかどうかの結合を使用して、テーブルへの参加の等値比較を使用して検索をできますも確認するには、暗号化された列のパターンについては、暗号化された値を推測する承認されていないユーザーを許可することができます。 確定的に暗号化された列に 2 つのテーブルを結合すると、両方の列が同じ列の暗号化キーを使用して暗号化されている場合にのみ可能なです。 明確な暗号化では、バイナリ 2 文字型の列の並べ替え順序を持つ列の照合順序を使用する必要があります。  
+ENCRYPTION_TYPE = { DETERMINISTIC | RANDOMIZED }  
+ **確定的な暗号化** は常に任意のプレーン テキストを指定した値の場合は、同じ暗号化された値を生成するメソッドを使用します。 決定論的な暗号化を使うことにより、等価比較を使った検索や、グループ化、暗号化された値に基づく等価結合を使ったテーブルの結合が可能になりますが、承認されていないユーザーが、暗号化された列のパターンを調べることで暗号化された値に関する情報を推測することも可能になります。 決定論的に暗号化された列で 2 つのテーブルを結合することができるのは、両方の列が同じ列暗号化キーを使って暗号化されている場合のみです。 明確な暗号化では、バイナリ 2 文字型の列の並べ替え順序を持つ列の照合順序を使用する必要があります。  
   
  **暗号化をランダム化** は低い予測可能な方法でデータを暗号化するためのメソッドを使用します。 ランダム化された暗号化は、より安全ですが、SQL Server インスタンスで[セキュア エンクレーブを使用する Always Encrypted](../../relational-databases/security/encryption/always-encrypted-enclaves.md) がサポートされる場合を除き、暗号化された列に対する計算とインデックス作成はすべて阻止されます。
   
- Always Encrypted (セキュア エンクレーブなし) を使用している場合、政府の ID 番号などのパラメーターまたはグループ化パラメーターで検索される列には、決定論的な暗号化を使用します。 ランダムな暗号化を使用して、クレジット カード番号などのデータ、これが、他のレコードとグループ化されたかテーブル、およびこれは検索されませんの (トランザクションの数) などの他の列を使用して、関心のある暗号化された列を含む行を検索するために参加するために使用します。  
+ Always Encrypted (セキュア エンクレーブなし) を使用している場合、政府の ID 番号などのパラメーターまたはグループ化パラメーターで検索される列には、決定論的な暗号化を使用します。 ランダム化された暗号化は、他のレコードとグループ化されたり、テーブルの結合に使用されたりせず、関心のある暗号化された列を含む行の検索には他の列 (トランザクション番号など) が使用されるため検索されることのない、クレジット カード番号などのデータに使用します。  
 
  セキュア エンクレーブを使用する Always Encrypted を使用する場合は、ランダム化された暗号化が推奨される暗号化の種類です。  
   
  列は、該当するデータ型である必要があります。  
   
 ALGORITHM  
-**適用対象**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]、[!INCLUDE[ssSDS](../../includes/sssds-md.md)]。  
+**適用対象**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 以降、[!INCLUDE[ssSDS](../../includes/sssds-md.md)]。  
 **'AEAD_AES_256_CBC_HMAC_SHA_256'** を指定する必要があります。  
   
  機能の制約などについて詳しくは、「[Always Encrypted &#40;データベース エンジン&#41;](../../relational-databases/security/encryption/always-encrypted-database-engine.md)」をご覧ください。  
   
    
 ADD MASKED WITH ( FUNCTION = ' *mask_function* ')  
- **適用対象**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]、[!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]。  
+ **適用対象**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 以降、[!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]。  
   
- 動的なデータのマスクを指定します。 *mask_function* マスキング関数は、適切なパラメーターの名前を指定します。 以下の関数を使用できます。  
+ 動的なデータ マスクを指定します。 *mask_function* マスキング関数は、適切なパラメーターの名前を指定します。 以下の関数を使用できます。  
   
 -   default()  
   

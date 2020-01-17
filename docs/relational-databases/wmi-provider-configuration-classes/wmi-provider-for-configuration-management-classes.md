@@ -1,5 +1,5 @@
 ---
-title: WMI Provider for Configuration Management のクラス |Microsoft Docs
+title: WMI Provider for Configuration Management のクラス
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: cb3311bd-394e-4a5e-a693-7b326f9ac777
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: 542f7f29b6067e6d833afbcf8caba91161c624cf
-ms.sourcegitcommit: 6c9d35d03c1c349bc82b9ed0878041d976b703c6
+ms.openlocfilehash: 60430a5bbc2d0309748a2099e9e9bd4f322f8264
+ms.sourcegitcommit: baa40306cada09e480b4c5ddb44ee8524307a2ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/06/2018
-ms.locfileid: "51215512"
+ms.lasthandoff: 11/06/2019
+ms.locfileid: "73658933"
 ---
 # <a name="wmi-provider-for-configuration-management-classes"></a>WMI Provider for Configuration Management のクラス
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

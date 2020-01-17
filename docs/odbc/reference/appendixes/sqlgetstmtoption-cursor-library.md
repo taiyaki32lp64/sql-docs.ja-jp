@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 986170b3-fba8-4323-9224-60b381c7effb
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: f4c7429bd4a3780caaf5bc7e0624d0e92ef4dd3f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 1f3749cf860463c79b5f489243544529498222a8
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47828911"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68073819"
 ---
 # <a name="sqlgetstmtoption-cursor-library"></a>SQLGetStmtOption (カーソル ライブラリ)
 > [!IMPORTANT]  

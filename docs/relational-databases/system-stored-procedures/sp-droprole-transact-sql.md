@@ -17,15 +17,14 @@ helpviewer_keywords:
 ms.assetid: 889ee074-00f8-40a9-bddb-d7d3ef0cbc19
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: a823427067ca1c6d06a6d26b6ab3553d17df9489
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 2573019948a326c9171fc83d62428e7e2f888eb5
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52535775"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67933817"
 ---
-# <a name="spdroprole-transact-sql"></a>sp_droprole (Transact-SQL)
+# <a name="spdroprole-transact-sql"></a>sp_droprole (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   現在のデータベースからデータベース ロールを削除します。  
@@ -43,8 +42,7 @@ sp_droprole [ @rolename= ] 'role'
 ```  
   
 ## <a name="arguments"></a>引数  
- [  **@rolename =** ] **'**_ロール_**'**  
- 現在のデータベースから削除するデータベース ロールの名前を指定します。 *ロール*は、 **sysname**、既定値はありません。 *ロール*現在のデータベースに既に存在する必要があります。  
+`[ @rolename = ] 'role'` 現在のデータベースから削除するデータベース ロールの名前です。 *ロール*は、 **sysname**、既定値はありません。 *ロール*現在のデータベースに既に存在する必要があります。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  0 (成功) または 1 (失敗)  
@@ -56,7 +54,7 @@ sp_droprole [ @rolename= ] 'role'
   
  固定ロールと**パブリック**ロールは削除できません。  
   
- ロールがセキュリティ保護可能なリソースを所有している場合、そのロールは削除できません。 セキュリティ保護可能なリソースを所有しているアプリケーション ロールを削除するには、先にセキュリティ保護可能なリソースの所有権を譲渡するか削除する必要があります。 削除禁止のオブジェクトの所有者を変更するには、ALTER AUTHORIZATION を使用します。  
+ 保護可能なアイテムが所有している場合、ロールを削除できません。 セキュリティ保護可能なリソースを所有しているアプリケーション ロールを削除するには、先にセキュリティ保護可能なリソースの所有権を譲渡するか削除する必要があります。 削除する必要がないオブジェクトの所有者を変更するのにには、ALTER AUTHORIZATION を使用します。  
   
  **sp_droprole**ユーザー定義のトランザクション内で実行することはできません。  
   
@@ -71,7 +69,7 @@ EXEC sp_droprole 'Sales';
 GO  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [セキュリティ ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md)   
  [sp_addrole &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addrole-transact-sql.md)   
  [DROP ROLE &#40;Transact-SQL&#41;](../../t-sql/statements/drop-role-transact-sql.md)   

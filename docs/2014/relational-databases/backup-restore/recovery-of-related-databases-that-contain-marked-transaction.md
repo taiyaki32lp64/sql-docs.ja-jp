@@ -23,11 +23,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 209bc81c63998cea299d2c377175955ee99470c4
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48187142"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62875719"
 ---
 # <a name="recovery-of-related--databases-that-contain-marked-transaction"></a>マークされたトランザクションを含む関連データベースの復旧
   このトピックは、マークされたトランザクションが含まれており、完全復旧モデルまたは一括ログ復旧モデルを使用するデータベースのみに関連しています。  
@@ -54,18 +54,18 @@ ms.locfileid: "48187142"
 BEGIN TRANSACTION Tx1 WITH MARK 'not the mark name, just a description'    
 ```  
   
- マーク名 (トランザクション名)、説明、データベース、ユーザー、トランザクション ログに記録`datetime`情報、およびログ シーケンス番号 (LSN)。 `datetime`情報は、マーク名と共に、マークを一意に識別するために使用されます。  
+ トランザクション ログには、マーク名 (トランザクション名)、説明、データベース、ユーザー、`datetime` 情報、および LSN (ログ シーケンス番号) が記録されます。 マーク名と共に `datetime` 情報を使用することで、マークが一意に識別されます。  
   
  複数のデータベースに関係するトランザクションにマークを挿入する方法については、「 [マークされたトランザクションを使用して関連するデータベースを一貫した状態に復元する方法 &#40;完全復旧モデル&#41;](use-marked-transactions-to-recover-related-databases-consistently.md)」を参照してください。  
   
 ## <a name="transact-sql-syntax-for-recovering-to-a-mark"></a>特定のマークの時点へ復旧するための Transact-SQL 構文  
- マークされたトランザクションを [RESTORE LOG](/sql/t-sql/statements/restore-statements-transact-sql) ステートメントで指定する場合、次のいずれかの句を使用して、マークに到達した時点またはマークの直前まで復旧できます。  
+ マークされたトランザクションを[RESTORE LOG](/sql/t-sql/statements/restore-statements-transact-sql)ステートメントで指定する場合、次のいずれかの句を使用して、マークに到達した時点またはマークの直前まで復旧できます。  
   
--   WITH STOPATMARK を使用して = **'*`<mark_name>`*'** マークされたトランザクションが復旧ポイントであることを指定する句。  
+-   WITH STOPATMARK を使用して = **' *`<mark_name>`* '** マークされたトランザクションが復旧ポイントであることを指定する句。  
   
      STOPATMARK では、マークまでロールフォワードされます。ロールフォワードには、マークされたトランザクションも含まれます。  
   
--   使用して、WITH STOPBEFOREMARK = **'*`<mark_name>`*'** ログを記録することを指定する句は、マークは、回復ポイントの直前。  
+-   使用して、WITH STOPBEFOREMARK = **' *`<mark_name>`* '** ログを記録することを指定する句は、マークは、回復ポイントの直前。  
   
      STOPBEFOREMARK では、マークまでロールフォワードされますが、マークされたトランザクションは含まれません。  
   
@@ -110,7 +110,7 @@ BEGIN TRANSACTION Tx1 WITH MARK 'not the mark name, just a description'
   
 6.  各データベースを復旧します。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [BEGIN TRANSACTION &#40;Transact-SQL&#41;](/sql/t-sql/language-elements/begin-transaction-transact-sql)   
  [RESTORE &#40;Transact-SQL&#41;](/sql/t-sql/statements/restore-statements-transact-sql)   
  [トランザクション ログ バックアップの適用 &#40;SQL Server&#41;](transaction-log-backups-sql-server.md)   

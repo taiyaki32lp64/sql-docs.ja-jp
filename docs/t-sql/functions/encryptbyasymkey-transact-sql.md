@@ -17,15 +17,14 @@ helpviewer_keywords:
 - encryption [SQL Server], asymmetric keys
 - asymmetric keys [SQL Server], ENCRYPTBYASYMKEY function
 ms.assetid: 86bb2588-ab13-4db2-8f3c-42c9f572a67b
-author: MashaMSFT
-ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: d6b961d0390e7b327f24b70cdd5e780a7c13d895
-ms.sourcegitcommit: bbdf51f0d56acfa6bcc4a5c4fe2c9f3cd4225edc
+author: VanMSFT
+ms.author: vanto
+ms.openlocfilehash: 1de142260dc0724656ca4cfdf286370d16def4b5
+ms.sourcegitcommit: a24f6e12357979f1134a54a036ebc58049484a4f
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56079378"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71314601"
 ---
 # <a name="encryptbyasymkey-transact-sql"></a>ENCRYPTBYASYMKEY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -47,7 +46,7 @@ EncryptByAsymKey ( Asym_Key_ID , { 'plaintext' | @plaintext } )
 *cleartext*  
 `ENCRYPTBYASYMKEY` が非対称キーで暗号化するデータの文字列。 *cleartext* のデータ型には
  
-+ **[バイナリ]**
++ **binary**
 + **char**
 + **nchar**
 + **nvarchar**
@@ -59,10 +58,10 @@ EncryptByAsymKey ( Asym_Key_ID , { 'plaintext' | @plaintext } )
  
 があります。  
   
-**@plaintext**  
-`ENCRYPTBYASYMKEY` が非対称キーで暗号化する値を保持する変数。 **@plaintext** のデータ型には
+**\@plaintext**  
+`ENCRYPTBYASYMKEY` が非対称キーで暗号化する値を保持する変数。 **\@plaintext** のデータ型には
   
-+ **[バイナリ]**
++ **binary**
 + **char**
 + **nchar**
 + **nvarchar**

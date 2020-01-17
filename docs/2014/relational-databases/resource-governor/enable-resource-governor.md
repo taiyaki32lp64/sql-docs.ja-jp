@@ -13,18 +13,18 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 5ef8d77de1df31387d33e6577fe84bd5ef9fa680
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52806184"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63216027"
 ---
 # <a name="enable-resource-governor"></a>リソース ガバナーの有効化
   リソース ガバナーは、既定ではオフになっています。 リソース ガバナーを有効にするには、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] または Transact-SQL を使用します。  
   
--   **作業を開始する準備:**[制限事項と制約](#LimitationsRestrictions)、[アクセス許可](#Permissions)  
+-   **作業を開始する準備:** [制限事項と制約事項](#LimitationsRestrictions)、[権限](#Permissions)  
   
--   **リソース ガバナーを有効にするを使用します。**[オブジェクト エクスプ ローラー](#RGOnObjEx)、[リソース ガバナーのプロパティ](#RGOnProp)、 [TRANSACT-SQL](#RGOnTSQL)  
+-   **リソース ガバナーの有効化に使用するもの:** [オブジェクト エクスプローラー](#RGOnObjEx)、[リソース ガバナーのプロパティ](#RGOnProp)、[Transact-SQL](#RGOnTSQL)  
   
 ##  <a name="BeforeYouBegin"></a> はじめに  
  リソース ガバナーを有効にすると、結果は次のようになります。  

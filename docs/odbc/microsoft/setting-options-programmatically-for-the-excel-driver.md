@@ -15,17 +15,16 @@ helpviewer_keywords:
 ms.assetid: b5ee3636-4591-427a-a65a-a2d5926fcc1a
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 271f61247b6083abd31657fe319bce234bc16f50
-ms.sourcegitcommit: 1e28f923cda9436a4395a405ebda5149202f8204
+ms.openlocfilehash: 47181fca07aff7b2a0d418b8852cfce47cf9e501
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/25/2019
-ms.locfileid: "55044339"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68063521"
 ---
 # <a name="setting-options-programmatically-for-the-excel-driver"></a>Excel ドライバーのプログラムでオプションの設定
 
-|オプション|説明|方法|  
+|OPTION|説明|メソッド|  
 |------------|-----------------|------------|  
 |Data Source Name|給与または担当者など、データ ソースを識別する名前。|このオプションを動的に設定するには、使用、 **DSN**への呼び出しでキーワード[SQLConfigDataSource](../../odbc/microsoft/odbc-jet-sqlconfigdatasource-excel-driver.md)します。|  
 |[データベース]|Microsoft Access データ ソースは、選択するか、データベースを作成することがなく設定できます。 セットアップ時にデータベースが指定されていない場合、ユーザーは、データ ソースに接続するときに、データベース ファイルを選択を求めます。|このオプションを動的に設定するには、使用、 **DBQ**への呼び出しでキーワード[SQLConfigDataSource](../../odbc/microsoft/odbc-jet-sqlconfigdatasource-excel-driver.md)します。|  

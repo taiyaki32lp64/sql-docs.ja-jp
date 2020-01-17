@@ -1,5 +1,5 @@
 ---
-title: sp_helptracertokenhistory (TRANSACT-SQL) |Microsoft Docs
+title: sp_helptracertokenhistory (Transact-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -15,18 +15,17 @@ helpviewer_keywords:
 ms.assetid: 96910d1c-be76-43eb-9c93-4477e6761749
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 04bd9a7d072f31fd6791e8cea7b17e14650e63c7
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: b8755bea5e318d1ded2631a2253134fd8721a421
+ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53215408"
+ms.lasthandoff: 08/03/2019
+ms.locfileid: "68771154"
 ---
-# <a name="sphelptracertokenhistory-transact-sql"></a>sp_helptracertokenhistory (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+# <a name="sp_helptracertokenhistory-transact-sql"></a>sp_helptracertokenhistory (Transact-SQL)
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
-  指定されたトレーサー トークンの詳細な待機時間情報を、各サブスクライバーに対して 1 行ずつ返します。 このストアド プロシージャは、パブリッシャー側でパブリケーション データベースについて実行されます。または、ディストリビューター側でディストリビューション データベースについて実行されます。  
+  指定されたトレーサー トークンの詳細な待機時間情報を、各サブスクライバーに対して 1 行ずつ返します。 このストアドプロシージャは、パブリッシャー側でパブリケーションデータベースに対して、またはディストリビューター側でディストリビューションデータベースに対して実行されます。  
   
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -41,49 +40,45 @@ sp_helptracertokenhistory [ @publication = ] 'publication'
 ```  
   
 ## <a name="arguments"></a>引数  
- [  **@publication=** ] **'***パブリケーション***'**  
- トレーサー トークンが挿入されたパブリケーションの名前です。 *パブリケーション*は**sysname**、既定値はありません。  
+`[ @publication = ] 'publication'`トレーサートークンが挿入されたパブリケーションの名前を指定します。 *パブリケーション* は **sysname** 、既定値はありません。  
   
- [  **@tracer_id=** ] *tracer_id*  
- におけるトレーサー トークンの id、 [MStracer_tokens &#40;TRANSACT-SQL&#41; ](../../relational-databases/system-tables/mstracer-tokens-transact-sql.md)テーブルの履歴の情報が返されます。 *tracer_id*は**int**、既定値はありません。  
+`[ @tracer_id = ] tracer_id`履歴情報が返される[MStracer_tokens &#40;transact-sql&#41; ](../../relational-databases/system-tables/mstracer-tokens-transact-sql.md)テーブル内のトレーサートークンの ID を指定します。 *tracer_id*は**int**,、既定値はありません。  
   
- [  **@publisher=** ] **'***パブリッシャー***'**  
- パブリッシャーの名前。 *パブリッシャー*は**sysname**、既定値は NULL です。  
+`[ @publisher = ] 'publisher'`パブリッシャーの名前です。 *publisher*は**sysname**で、既定値は NULL です。  
   
 > [!NOTE]
->  このパラメーターは、に対してのみ指定する必要があります以外[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]パブリッシャーです。  
+>  このパラメーターは、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]以外のパブリッシャーに対してのみ指定する必要があります。  
   
- [  **@publisher_db=** ] **'***publisher_db***'**  
- パブリケーション データベースの名前です。 *publisher_db*は**sysname**既定値は NULL です。 ストアド プロシージャがパブリッシャーで実行される場合、このパラメーターは無視されます。  
+`[ @publisher_db = ] 'publisher_db'`パブリケーションデータベースの名前です。 *publisher_db*は**sysname**,、既定値は NULL です。 ストアドプロシージャがパブリッシャーで実行される場合、このパラメーターは無視されます。  
   
 ## <a name="result-set"></a>結果セット  
   
 |列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
-|**distributor_latency**|**bigint**|トレーサー トークン レコードがパブリッシャーでコミットされてからディストリビューターでコミットされるまでの秒数です。|  
-|**サブスクライバー**|**sysname**|トレーサー トークンを受信したサブスクライバーの名前です。|  
-|**@subscriber_db**|**sysname**|トレーサー トークン レコードが挿入されるサブスクリプション データベースの名前です。|  
-|**subscriber_latency**|**bigint**|トレーサー トークン レコードがディストリビューターでコミットされてからサブスクライバーでコミットされるまでの秒数です。|  
-|**overall_latency**|**bigint**|トレーサー トークン レコードがパブリッシャーでコミットされてからサブスクライバーでコミットされるまでの秒数です。|  
+|**distributor_latency**|**bigint**|トレーサートークンレコードがパブリッシャーでコミットされてからディストリビューター側でコミットされるまでの秒数。|  
+|**subscriber**|**sysname**|トレーサートークンを受け取ったサブスクライバーの名前。|  
+|**subscriber_db**|**sysname**|トレーサートークンレコードが挿入されたサブスクリプションデータベースの名前。|  
+|**subscriber_latency**|**bigint**|トレーサートークンレコードがディストリビューター側でコミットされてからサブスクライバー側でコミットされるまでの秒数。|  
+|**overall_latency**|**bigint**|トレーサートークンレコードがパブリッシャーでコミットされてから、サブスクライバーでトークンレコードがコミットされるまでの秒数。|  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  **0** (成功) または**1** (失敗)  
   
 ## <a name="remarks"></a>コメント  
- **sp_helptracertokenhistory**はトランザクション レプリケーションで使用します。  
+ **sp_helptracertokenhistory**は、トランザクションレプリケーションで使用します。  
   
- 実行[sp_helptracertokens &#40;TRANSACT-SQL&#41; ](../../relational-databases/system-stored-procedures/sp-helptracertokens-transact-sql.md) 、パブリケーションのトレーサー トークンの一覧を取得します。  
+ [Sp_helptracertokens &#40;transact-sql&#41; ](../../relational-databases/system-stored-procedures/sp-helptracertokens-transact-sql.md)を実行して、パブリケーションのトレーサートークンの一覧を取得します。  
   
- 結果セットの値が NULL の場合は、待機時間の統計を計算することができません。 これは、トレーサー トークンが、ディストリビューターまたはいずれかのサブスクライバーで受信されなかったためです。  
+ 結果セットの値が NULL の場合は、待機時間の統計を計算できないことを意味します。 これは、トレーサートークンがディストリビューターまたはいずれかのサブスクライバーで受信されていないためです。  
   
 ## <a name="example"></a>例  
  [!code-sql[HowTo#sp_tracertokens](../../relational-databases/replication/codesnippet/tsql/sp-helptracertokenhistor_1.sql)]  
   
 ## <a name="permissions"></a>アクセス許可  
- メンバーのみ、 **sysadmin**固定サーバー ロール、 **db_owner** 、パブリケーション データベースの固定データベース ロールまたは**db_owner**固定データベースまたは**replmonitor**ディストリビューション データベース内のロールが実行できる**sp_helptracertokenhistory**します。  
+ 固定サーバーロール**sysadmin**のメンバー、パブリケーションデータベースの**db_owner**固定データベースロールのメンバー、またはディストリビューションデータベース内の**db_owner**固定データベースロールまたは**replmonitor**ロールのメンバーだけが、sp_ を実行できます。 **helptracertokenhistory**。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [トランザクション レプリケーションの待機時間の計測および接続の検証](../../relational-databases/replication/monitor/measure-latency-and-validate-connections-for-transactional-replication.md)   
- [sp_deletetracertokenhistory &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-deletetracertokenhistory-transact-sql.md)  
+ [sp_deletetracertokenhistory &#40;transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-deletetracertokenhistory-transact-sql.md)  
   
   

@@ -10,22 +10,22 @@ ms.assetid: f5f47c2a-38ea-40f8-9767-9bc138d14453
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: ed71e0fb889b0cff71937e78245bef1453e13a10
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: d5203a0a613bcd8af4b247058f3cb594be5d4c3f
+ms.sourcegitcommit: f912c101d2939084c4ea2e9881eb98e1afa29dad
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53371064"
+ms.lasthandoff: 10/23/2019
+ms.locfileid: "72797780"
 ---
 # <a name="troubleshoot-the-sql-server-utility"></a>SQL Server ユーティリティのトラブルシューティング
-  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] ユーティリティのトラブルシューティングの項目としては、UCP を使用した SQL Server インスタンスの登録処理の失敗の解決、データ収集の失敗 (UCP のマネージド インスタンスのリスト ビューで灰色のアイコンが表示される) に対するトラブルシューティング、パフォーマンス ボトルネックの緩和、リソースの正常性に関する問題の解決などがあります。 識別されるリソース正常性の問題を緩和する方法の詳細について、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] UCP を参照してください[のトラブルシューティングを行う SQL Server リソースの正常性&#40;SQL Server ユーティリティ&#41;](../relational-databases/manage/troubleshoot-sql-server-resource-health-sql-server-utility.md)します。  
+  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] ユーティリティのトラブルシューティングの項目としては、UCP を使用した SQL Server インスタンスの登録処理の失敗の解決、データ収集の失敗 (UCP のマネージド インスタンスのリスト ビューで灰色のアイコンが表示される) に対するトラブルシューティング、パフォーマンス ボトルネックの緩和、リソースの正常性に関する問題の解決などがあります。 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] UCP によって識別されるリソース正常性の問題の軽減の詳細については、「 [SQL Server Resource Health &#40;&#41;SQL Server ユーティリティのトラブルシューティング](../relational-databases/manage/troubleshoot-sql-server-resource-health-sql-server-utility.md)」を参照してください。  
   
 ## <a name="failed-operation-to-enroll-an-instance-of-sql-server-into-a-sql-server-utility"></a>SQL Server インスタンスを SQL Server ユーティリティに登録する処理の失敗  
  登録する [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] インスタンスに [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 認証を使用して接続し、UCP があるドメインとは異なる Active Directory ドメインに属するプロキシ アカウントを指定した場合、インスタンスの検証には成功しますが、次のエラー メッセージが表示されて登録処理に失敗します。  
   
  Transact-SQL ステートメントまたはバッチの実行中に例外が発生しました。 (Microsoft.SqlServer.ConnectionInfo)  
   
- 追加情報:Windows NT グループ/ユーザーに関する情報を取得できませんでした '\<DomainName\AccountName >'、エラー コード 0x5。 (Microsoft SQL Server、エラー。15404)  
+ 追加情報: Windows NT グループまたはユーザー '\<ドメイン名\アカウント名>' に関する情報を取得できませんでした。エラー コード 0x5。 (Microsoft SQL Server、エラー: 15404)  
   
  この問題は、次のようなシナリオで発生します。  
   
@@ -35,11 +35,11 @@ ms.locfileid: "53371064"
   
 3.  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] ユーティリティに登録する [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] インスタンスは、"Domain_1" のメンバーでもあります。  
   
-4.  登録時のインスタンスに接続します。 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] "sa"を使用して登録します。 "Domain_2" からのプロキシ アカウントを指定します。  
+4.  登録操作中に、[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] のインスタンスに接続して、"sa" を使用して登録します。 "Domain_2" からのプロキシ アカウントを指定します。  
   
 5.  検証に成功しますが、登録に失敗します。  
   
- インスタンスに接続する上記の例を使用して、この問題を回避するには[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]を登録する、[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]ユーティリティ"sa"を使用して"Domain_1。"から、プロキシ アカウントを提供します。  
+ 上記の例を使用してこの問題の回避策として、[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] のインスタンスに接続し、"sa" を使用して [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] ユーティリティに登録し、"Domain_1" からプロキシアカウントを指定します。  
   
 ## <a name="failed-wmi-validation"></a>WMI 検証の失敗  
  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]インスタンスで WMI が正しく構成されていない場合は、UCP の作成操作とマネージド インスタンスの登録操作で警告が表示されますが、操作はブロックされません。 また、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] エージェントが目的の WMI クラスに対する権限を持たないように [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] エージェント アカウントの構成を変更した場合、影響を受ける [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] のマネージド インスタンスでデータ収集を行うと UCP へのアップロードに失敗します。 この結果、UCP に灰色のアイコンが表示されます。  
@@ -48,9 +48,9 @@ ms.locfileid: "53371064"
   
  エラー メッセージの要約は次のとおりです。  
   
- シェル変数"ErrorActionPreference"が Stop に設定されているために、コマンドの実行が停止しました。アクセスが拒否されました。  
+ シェル変数 "ErrorActionPreference" が Stop に設定されているため、コマンドの実行が停止しました: アクセスが拒否されました。  
   
- ERROR:\<日付と時刻 (/MM/DD/YYYY HH:MM:SS) >:Cpu プロパティの収集中に例外が検出されました。  WMI クエリに失敗した可能性があります。  警告。  
+ エラー: \<の日付/時刻 (MM/DD/YYYY HH: MM: SS) >: cpu プロパティの収集中に例外が発生しました。  WMI クエリに失敗した可能性があります。  警告。  
   
  この問題を解決するには、次の構成設定を確認します。  
   
@@ -87,7 +87,7 @@ Get-WmiObject Win32_Volume -ErrorAction Stop | Out-Null
 Get-WmiObject Win32_LogicalDisk -ErrorAction Stop | Out-Null  
 ```  
   
- WMI のトラブルシューティングの詳細については、次を参照してください。 [WMI のトラブルシューティング](https://go.microsoft.com/fwlink/?LinkId=178250)します。 SQL Server ユーティリティのこれらの操作におけるクエリはローカルで実行されるので、DCOM およびリモート トラブルシューティングの内容は適用されません。  
+ WMI のトラブルシューティングの詳細については、「 [wmi のトラブルシューティング](https://go.microsoft.com/fwlink/?LinkId=178250)」を参照してください。 SQL Server ユーティリティのこれらの操作におけるクエリはローカルで実行されるので、DCOM およびリモート トラブルシューティングの内容は適用されません。  
   
 ## <a name="failed-data-collection"></a>データ収集の失敗  
  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] ユーティリティのデータ収集イベントが失敗した場合は、次の可能性を検討してください。  
@@ -102,7 +102,7 @@ Get-WmiObject Win32_LogicalDisk -ErrorAction Stop | Out-Null
   
 -   データ コレクションまたはデータ アップロードがタイムアウトの問題で失敗する場合は、MSDB データベースの dbo.fn_sysutility_mi_get_collect_script() 関数を更新します。 具体的には、"Invoke-BulkCopyCommand()" 関数に次の行を追加します。  
   
-    ```  
+    ```
     $bulkCopy.BulkCopyTimeout=180  
     ```  
   
@@ -114,9 +114,9 @@ Get-WmiObject Win32_LogicalDisk -ErrorAction Stop | Out-Null
   
     1.  SSMS の **オブジェクト エクスプローラー**で、 **[セキュリティ]** ノードを展開し、 **[資格情報]** ノードを展開します。  
   
-    2.  右クリックして**utilityagentproxycredential _\<GUID >** 選択**プロパティ**します。  
+    2.  **UtilityAgentProxyCredential_\<GUID >** を右クリックし、 **[プロパティ]** を選択します。  
   
-    3.  [資格情報のプロパティ] ダイアログで必要な資格情報を更新、 **utilityagentproxycredential _\<GUID >** 資格情報。  
+    3.  [資格情報のプロパティ] ダイアログボックスで、必要に応じて**UtilityAgentProxyCredential_\<GUID >** 資格情報を更新します。  
   
     4.  **[OK]** をクリックして変更を確認します。  
   
@@ -124,13 +124,13 @@ Get-WmiObject Win32_LogicalDisk -ErrorAction Stop | Out-Null
   
 -   UCP の SQL Server Browser サービスを開始して、自動的に開始するように構成する必要があります。 組織の方針で SQL Server Browser サービスを使用できない場合は、次の手順を実行して、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] のマネージド インスタンスから UCP に接続できるようにします。  
   
-    1.  マネージ インスタンス上の Windows タスク バー [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]、 をクリックして**開始**、 をクリックし、**を実行しています.**.  
+    1.  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]のマネージインスタンスの Windows タスクバーで、 **[スタート]** をクリックし、 **[実行]** をクリックします。  
   
     2.  該当するボックスに「cliconfg.exe」と入力し、 **[OK]** をクリックします。  
   
-    3.  "SQL クライアント設定ユーティリティ EXE" の起動を許可するように求めるメッセージが表示されたら、**[続行]** をクリックします。  
+    3.  "SQL クライアント設定ユーティリティ EXE" の起動を許可するように求めるメッセージが表示されたら、 **[続行]** をクリックします。  
   
-    4.  **SQL Server クライアント ネットワーク ユーティリティ**ダイアログ ボックスで、**エイリアス** タブの  をクリックし、**追加しています.**.  
+    4.  **[クライアントネットワークユーティリティの SQL Server]** ダイアログボックスで、 **[別名]** タブを選択し、 **[追加]** をクリックします。  
   
     5.  **[ネットワーク ライブラリ設定の追加]** ダイアログ ボックスで、次の操作を行います。  
   
@@ -154,7 +154,7 @@ Get-WmiObject Win32_LogicalDisk -ErrorAction Stop | Out-Null
   
 -   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] のマネージド インスタンスが Windows Server 2003 コンピューター上でホストされている場合、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] エージェント サービス アカウントは、Performance Monitor Users セキュリティ グループまたはローカルの Administrators グループに属している必要があります。 属していない場合は、アクセス拒否エラーが発生してデータ収集が失敗します。 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] エージェント サービス アカウントを Performance Monitor Users セキュリティ グループに追加するには、次の手順を実行します。  
   
-    1.  **[コンピューターの管理]** を開き、 **[ローカル ユーザーとグループ]**、 **[グループ]** の順に展開します。  
+    1.  **[コンピューターの管理]** を開き、 **[ローカル ユーザーとグループ]** 、 **[グループ]** の順に展開します。  
   
     2.  **[Performance Monitor Users]** を右クリックし、 **[グループに追加]** をクリックします。  
   
@@ -166,6 +166,4 @@ Get-WmiObject Win32_LogicalDisk -ErrorAction Stop | Out-Null
   
 ## <a name="see-also"></a>参照  
  [SQL Server ユーティリティの機能とタスク](../relational-databases/manage/sql-server-utility-features-and-tasks.md)   
- [SQL Server のリソース正常性のトラブルシューティング &#40;SQL Server ユーティリティ&#41;](../relational-databases/manage/troubleshoot-sql-server-resource-health-sql-server-utility.md)  
-  
-  
+ [SQL Server のリソース正常性のトラブルシューティング &#40;SQL Server ユーティリティ&#41;](../relational-databases/manage/troubleshoot-sql-server-resource-health-sql-server-utility.md)

@@ -1,28 +1,28 @@
 ---
-title: 既存の SQL トレース スクリプトから拡張イベント セッションへの変換 | Microsoft Docs
-ms.custom: ''
+title: SQL トレース スクリプトから拡張イベント セッションへの変換
 ms.date: 03/04/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
 ms.technology: xevents
-ms.topic: conceptual
+ms.topic: tutorial
 helpviewer_keywords:
 - SQL Trace, convert script to extended events
 - extended events [SQL Server], convert SQL Trace script
 ms.assetid: 4c8f29e6-0a37-490f-88b3-33493871b3f9
 author: MightyPen
 ms.author: genemi
-manager: craigg
+ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 855a61fe37f6b5d347e050687e73c894c227d1b6
-ms.sourcegitcommit: 98324d9803edfa52508b6d5d3554614d0350a0b9
+ms.openlocfilehash: b41947e50cd2cdd283af77a8d3ee4168f208f57e
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52321738"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75255755"
 ---
 # <a name="convert-an-existing-sql-trace-script-to-an-extended-events-session"></a>既存の SQL トレース スクリプトから拡張イベント セッションへの変換
+
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
   拡張イベント セッションに変換する SQL トレース スクリプトが既に手元にある場合は、このトピックの手順を使用して、等価な拡張イベント セッションを作成できます。 変換を実行するために必要な情報は、trace_xe_action_map および trace_xe_event_map システム テーブル内の情報を使用して収集できます。  
@@ -36,7 +36,7 @@ ms.locfileid: "52321738"
 3.  使用するフィルターおよび等価な拡張イベントのアクションを、fn_trace_getfilterinfo 関数を使用して特定します。  
   
 4.  拡張イベントにおける等価なイベント、アクション、および述語 (フィルター) を使用して、拡張イベント セッションを手動で作成します。  
-  
+
 ## <a name="to-obtain-the-trace-id"></a>トレース ID を取得するには  
   
 1.  クエリ エディターで SQL トレース スクリプトを開き、スクリプトを実行してトレース セッションを作成します。 この手順を実行するために必ずしもトレース セッションが実行されている必要はありません。  

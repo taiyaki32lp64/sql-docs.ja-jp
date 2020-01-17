@@ -2,18 +2,18 @@
 title: レポート データ ペインでのフィールドの追加、編集、更新 (レポート ビルダーおよび SSRS) | Microsoft Docs
 ms.date: 03/01/2017
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: report-data
 ms.topic: conceptual
 ms.assetid: 2e36f0fe-8100-4513-b169-14d611646f81
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 3e63393549db4601a8956e7a3c7b14248c069937
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: d22a5971d2becebec841c5e343e2361cbe2f26a9
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50021916"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66500503"
 ---
 # <a name="add-edit-refresh-fields-in-the-report-data-pane-report-builder-and-ssrs"></a>レポート データ ペインでのフィールドの追加、編集、更新 (レポート ビルダーおよび SSRS)
   データセット フィールドは、外部データ ソースにデータセット クエリを実行するときに返されるデータを表すフィールド名の組み込みのコレクションです。  
@@ -56,7 +56,7 @@ ms.locfileid: "50021916"
     > [!NOTE]  
     >  名前は、データセット内で一意でなければなりません。  
   
-4.  **[フィールド ソース]** ボックスに、フィールドの式を入力します。 式を作成するには、式 (**[fx]**) ボタンをクリックします。  
+4.  **[フィールド ソース]** ボックスに、フィールドの式を入力します。 式を作成するには、式 ( **[fx]** ) ボタンをクリックします。  
   
     > [!NOTE]  
     >  計算フィールドの式に、レポート アイテムに対する集計または参照を含めることはできません。  
@@ -92,6 +92,6 @@ ms.locfileid: "50021916"
  [レポート データセット (SSRS)](../../reporting-services/report-data/report-datasets-ssrs.md)   
  [レポート埋め込みデータセットと共有データセット &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)   
  [Reporting Services クエリ デザイナー](https://msdn.microsoft.com/library/07efd3f1-804f-45f7-b62a-3e727a3d9835)   
- [クエリ デザイナー (レポート ビルダー)](https://msdn.microsoft.com/library/553f0d4e-8b1d-4148-9321-8b41a1e8e1b9)  
+ [クエリ デザイン ツール &#40;SSRS&#41;](query-design-tools-ssrs.md)  
   
   

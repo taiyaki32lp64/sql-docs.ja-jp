@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: a5e3f966-3357-4827-afbc-6153682d26bc
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 7c0e4ccc55ce8fe35dc129c6dded889e2923b4f4
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 6424d7b6a6a48c36adb00ca877eadc6c69e064f2
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47695720"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67951835"
 ---
 # <a name="types-of-data-sources"></a>データ ソースの種類
 データ ソースの 2 種類があります。 コンピューターのデータ ソースとファイル データ ソース。 両方は、データのソースに関する同様の情報が含まれていますが、この情報の格納方法が異なります。 これらの違いにより若干異なる方法で使用されます。  

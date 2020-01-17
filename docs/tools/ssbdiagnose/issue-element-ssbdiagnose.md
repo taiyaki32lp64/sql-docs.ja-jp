@@ -12,15 +12,14 @@ helpviewer_keywords:
 - XML output file format [ssbdiagnose], issue element
 - ssbdiagnose
 ms.assetid: 2246a886-686b-44ca-9771-b155cedad8be
-author: stevestein
-ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 543ebeca0f18a5dee4136e8f505b5174f4c69c07
-ms.sourcegitcommit: 0f7cf9b7ab23df15624d27c129ab3a539e8b6457
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 3e4fff2c62073094805c075479724d3fc934ffca
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51291618"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67986172"
 ---
 # <a name="issue-element-ssbdiagnose"></a>Issue 要素 (ssbdiagnose)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

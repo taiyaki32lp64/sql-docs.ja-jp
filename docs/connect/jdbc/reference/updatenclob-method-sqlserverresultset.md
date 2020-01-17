@@ -1,5 +1,5 @@
 ---
-title: updateNClob メソッド (SQLServerResultSet) |Microsoft Docs
+title: updateNClob メソッド (SQLServerResultSet) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 0cb0d347-4449-4920-b382-05f88f2a3225
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 6a4d9fb9ef9173dcca7c0b7a49db1e8ba384a6d9
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 6520a5e6772ee837f8b47433b155e6b33baaa66f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47677210"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67998571"
 ---
 # <a name="updatenclob-method-sqlserverresultset"></a>updateNClob メソッド (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

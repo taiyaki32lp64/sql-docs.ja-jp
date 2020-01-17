@@ -1,6 +1,6 @@
 ---
 title: メタデータの検出 |Microsoft Docs
-description: OLE DB Driver for SQL Server でメタデータの検出
+description: OLE DB Driver for SQL Server でのメタデータの検出
 ms.custom: ''
 ms.date: 06/12/2018
 ms.prod: sql
@@ -10,13 +10,12 @@ ms.technology: connectivity
 ms.topic: reference
 author: pmasl
 ms.author: pelopes
-manager: craigg
-ms.openlocfilehash: 9c25ec01087c5a4808f7143f1e3d8706129c46ae
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 9891e5708110be83a4ef33cb2a142accaf93ffe2
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47842910"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67989063"
 ---
 # <a name="metadata-discovery"></a>メタデータの検出
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -36,11 +35,11 @@ ms.locfileid: "47842910"
   
 -   IColumnsRowset::GetColumnsRowset  
   
--   Icommandwithparameters::getparameterinfo (を参照してください[ICommandWithParameters](../../oledb/ole-db-interfaces/icommandwithparameters.md)詳細)  
+-   ICommandWithParameters:: GetParameterInfo (詳細については、 [ICommandWithParameters](../../oledb/ole-db-interfaces/icommandwithparameters.md)を参照してください)  
   
  IBCPSession::BCPSetBulkMode を使用してメタデータ形式を指定したときのパフォーマンスも向上しています。  
   
- 2 つのストアド プロシージャの追加により、OLE DB Driver for SQL Server で強化されたメタデータの検出が可能な[!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)]:  
+ で[!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)]は、次の2つのストアドプロシージャが追加されるため、OLE DB Driver for SQL Server でのメタデータ検出機能が向上しています。  
   
 -   sp_describe_first_result_set  
   

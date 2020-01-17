@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 2dc0372d-e74d-4d0f-9c8c-04e5a168c148
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: e75b79934022743ba806722427dd37ab733bc2f2
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 25db7fdb20ceb2dd24f819e1db7077d40f7e7e3f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52535550"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67926636"
 ---
 # <a name="microsoft-ole-db-provider-for-odbc-overview"></a>Microsoft OLE DB Provider for ODBC の概要
 ADO または RDS プログラマでは、理想的な世界はいずれかを指定すべてのデータ ソースが OLE DB インターフェイスを公開します。 ADO は、データ ソースに直接呼び出すことができるようにします。 ますます多くのデータベース ベンダーは、OLE DB インターフェイスを実装するは、一部のデータ ソースのこの方法はまだ公開されません。 ただし、今日のほとんどの DBMS システムは、ODBC を通じてアクセスできます。
@@ -65,7 +64,7 @@ MSDASQL
 
  プロバイダーは、ADO で定義されているだけでなく特定の接続パラメーターをサポートしていません。 ただし、プロバイダーは、ODBC ドライバー マネージャーを ADO 非接続パラメーターを渡します。
 
- 省略することができますので、**プロバイダー**パラメーター、ADO 接続文字列を同じデータ ソース用の ODBC 接続文字列と同じであるため作成できます。 同じパラメーター名を使用して (**ドライバー =**、**データベース =**、 **DSN =** など)、値とすると構文は、ODBC 接続文字列を作成するとき。 定義済みのデータ ソース名 (DSN) または FileDSN の有無を接続することができます。
+ 省略することができますので、**プロバイダー**パラメーター、ADO 接続文字列を同じデータ ソース用の ODBC 接続文字列と同じであるため作成できます。 同じパラメーター名を使用して (**ドライバー =** 、**データベース =** 、 **DSN =** など)、値とすると構文は、ODBC 接続文字列を作成するとき。 定義済みのデータ ソース名 (DSN) または FileDSN の有無を接続することができます。
 
 ## <a name="syntax-with-a-dsn-or-filedsn"></a>DSN、FileDSN の構文:
 
@@ -84,9 +83,9 @@ DATABASE=database; UID=MyUserID; PWD=MyPassword"
 ## <a name="remarks"></a>コメント
  使用する場合、 **DSN**または**FileDSN**、Windows コントロール パネルの ODBC データ ソース アドミニストレーターを定義する必要があります。 Microsoft Windows 2000 では、odbc データ ソース アドミニストレーターは管理ツールの下にあります。 Windows の以前のバージョンでは、という名前の ODBC アドミニストレーター アイコン**32 ビット ODBC**単**ODBC**します。
 
- 設定する代わりに、 **DSN**、ODBC ドライバーを指定することができます (**ドライバー =**)、"SQL Server;"など、サーバー名 (**SERVER =**); とデータベース名 (**データベース =**)。
+ 設定する代わりに、 **DSN**、ODBC ドライバーを指定することができます (**ドライバー =** )、"SQL Server;"など、サーバー名 (**SERVER =** ); とデータベース名 (**データベース =** )。
 
- ユーザー アカウント名を指定することもできます (**UID =**)、およびユーザー アカウントのパスワード (**PWD =**) ODBC に固有のパラメーターまたは標準の ADO 定義*ユーザー*と*パスワード*パラメーター。
+ ユーザー アカウント名を指定することもできます (**UID =** )、およびユーザー アカウントのパスワード (**PWD =** ) ODBC に固有のパラメーターまたは標準の ADO 定義*ユーザー*と*パスワード*パラメーター。
 
  **DSN**指定できますの定義は既にデータベースを指定して、 *、* *データベース*パラメーターに加え、 **DSN**接続するには別のデータベース。 常に含めることをお勧め *、* *データベース*パラメーターを使用する場合、 **DSN**します。 これは、確認した後、別のユーザーは、既定のデータベース パラメーターを変更する場合は、適切なデータベースに接続することにより、 **DSN**定義します。
 
@@ -101,7 +100,7 @@ DATABASE=database; UID=MyUserID; PWD=MyPassword"
 |ドライバー名 (KAGPROP_DRIVERNAME)|ODBC ドライバーのファイル名を示します。|
 |ドライバーの ODBC バージョン (KAGPROP_DRIVERODBCVER)|このドライバーをサポートする ODBC のバージョンを示します。|
 |ファイルの使用状況 (KAGPROP_FILEUSAGE)|ドライバーが、データ ソース内のファイルを処理する方法を示しますテーブル、またはカタログとして。|
-|Like エスケープ句 (KAGPROP_LIKEESCAPECLAUSE)|WHERE 句の LIKE 述語で、パーセント文字 (%) に、ドライバーが、定義とエスケープ文字の使用をサポートするかどうかと下線文字 (_) を示します。|
+|Like エスケープ句 (KAGPROP_LIKEESCAPECLAUSE)|ドライバーがパーセント記号 (%) の定義とエスケープ文字の使用をサポートするかどうかを示します下線文字 (_) を WHERE 句の LIKE 述語にします。|
 |(KAGPROP_MAXCOLUMNSINGROUPBY) によるグループ内の最大列|SELECT ステートメントの GROUP BY 句を記載されている列の最大数を示します。|
 |最大の列インデックス (KAGPROP_MAXCOLUMNSININDEX)|インデックスに含めることができる列の最大数を示します。|
 |Order By (KAGPROP_MAXCOLUMNSINORDERBY) で最大の列|SELECT ステートメントの ORDER BY 句を記載されている列の最大数を示します。|
@@ -199,30 +198,30 @@ DATABASE=database; UID=MyUserID; PWD=MyPassword"
 
  標準の ADO の可用性**Recordset**メソッド。
 
-|方法|ForwardOnly|動的|Keyset|スタティック|
+|メソッド|ForwardOnly|動的|Keyset|スタティック|
 |------------|-----------------|-------------|------------|------------|
-|[AddNew](../../../ado/reference/ado-api/addnew-method-ado.md)|はい|[はい]|[はい]|はい|
-|[Cancel](../../../ado/reference/ado-api/cancel-method-ado.md)|はい|[はい]|[はい]|はい|
-|[CancelBatch](../../../ado/reference/ado-api/cancelbatch-method-ado.md)|はい|[はい]|[はい]|はい|
+|[AddNew](../../../ado/reference/ado-api/addnew-method-ado.md)|[はい]|[はい]|[はい]|はい|
+|[Cancel](../../../ado/reference/ado-api/cancel-method-ado.md)|はい|[はい]|[はい]|[はい]|
+|[CancelBatch](../../../ado/reference/ado-api/cancelbatch-method-ado.md)|[はい]|[はい]|[はい]|はい|
 |[CancelUpdate](../../../ado/reference/ado-api/cancelupdate-method-ado.md)|はい|[はい]|[はい]|はい|
 |[Clone](../../../ado/reference/ado-api/clone-method-ado.md)|いいえ|いいえ|はい|はい|
 |[Close](../../../ado/reference/ado-api/close-method-ado.md)|はい|[はい]|[はい]|はい|
-|[削除](../../../ado/reference/ado-api/delete-method-ado-recordset.md)|はい|[はい]|[はい]|はい|
-|[GetRows](../../../ado/reference/ado-api/getrows-method-ado.md)|はい|[はい]|[はい]|はい|
+|[削除](../../../ado/reference/ado-api/delete-method-ado-recordset.md)|はい|[はい]|[はい]|[はい]|
+|[GetRows](../../../ado/reference/ado-api/getrows-method-ado.md)|はい|[はい]|[はい]|[はい]|
 |[Move](../../../ado/reference/ado-api/move-method-ado.md)|はい|[はい]|[はい]|はい|
-|[MoveFirst](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)|はい|[はい]|[はい]|はい|
+|[MoveFirst](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)|[はい]|[はい]|[はい]|はい|
 |[MoveLast](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)|いいえ|はい|[はい]|はい|
 |[MoveNext](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)|はい|[はい]|[はい]|はい|
-|[MovePrevious](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)|いいえ|はい|[はい]|はい|
+|[MovePrevious](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)|いいえ|はい|[はい]|[はい]|
 |[NextRecordset](../../../ado/reference/ado-api/nextrecordset-method-ado.md)*|はい|[はい]|[はい]|はい|
-|[Open](../../../ado/reference/ado-api/open-method-ado-recordset.md)|はい|[はい]|[はい]|はい|
+|[Open](../../../ado/reference/ado-api/open-method-ado-recordset.md)|[はい]|[はい]|[はい]|[はい]|
 |[Requery](../../../ado/reference/ado-api/requery-method.md)|はい|[はい]|[はい]|はい|
 |[Resync](../../../ado/reference/ado-api/resync-method.md)|いいえ|いいえ|はい|はい|
 |[Supports](../../../ado/reference/ado-api/supports-method.md)|はい|[はい]|[はい]|はい|
 |[Update](../../../ado/reference/ado-api/update-method.md)|はい|[はい]|[はい]|はい|
 |[UpdateBatch](../../../ado/reference/ado-api/updatebatch-method.md)|はい|[はい]|[はい]|はい|
 
- * Microsoft Access データベースはサポートされていません。
+ \* Microsoft Access データベースはサポートされていません。
 
 ## <a name="dynamic-properties"></a>動的プロパティ
  Microsoft OLE DB Provider for ODBC にいくつかの動的プロパティの挿入、**プロパティ**、開かれていないのコレクション[接続](../../../ado/reference/ado-api/connection-object-ado.md)、[レコード セット](../../../ado/reference/ado-api/recordset-object-ado.md)、および[コマンド](../../../ado/reference/ado-api/command-object-ado.md)オブジェクト。
@@ -256,7 +255,7 @@ DATABASE=database; UID=MyUserID; PWD=MyPassword"
 |分離レベル|DBPROP_SUPPORTEDTXNISOLEVELS|
 |分離の保持|DBPROP_SUPPORTEDTXNISORETAIN|
 |[Locale Identifier]|DBPROP_INIT_LCID|
-|場所|DBPROP_INIT_LOCATION|
+|Location|DBPROP_INIT_LOCATION|
 |インデックスの最大サイズ|DBPROP_MAXINDEXSIZE|
 |行の最大サイズ|DBPROP_MAXROWSIZE|
 |最大行サイズには、BLOB が含まれています。|DBPROP_MAXROWSIZEINCLUDESBLOB|
@@ -274,7 +273,7 @@ DATABASE=database; UID=MyUserID; PWD=MyPassword"
 |開いている行セットのサポート|DBPROP_OPENROWSETSUPPORT|
 |選択リストの ORDER BY 列|DBPROP_ORDERBYCOLUMNSINSELECT|
 |出力パラメーターの使用状況|DBPROP_OUTPUTPARAMETERAVAILABILITY|
-|パスワード|DBPROP_AUTH_PASSWORD|
+|Password|DBPROP_AUTH_PASSWORD|
 |Ref アクセサーを使って渡す|DBPROP_BYREFACCESSORS|
 |Persist Security Info|DBPROP_AUTH_PERSIST_SENSITIVE_AUTHINFO|
 |永続的な ID の種類|DBPROP_PERSISTENTIDTYPE|
@@ -431,5 +430,5 @@ DATABASE=database; UID=MyUserID; PWD=MyPassword"
 
  詳細については、特定の実装と機能について Microsoft OLE DB Provider for ODBC は、次を参照してください。、 [OLE DB プログラマーズ リファレンス](https://msdn.microsoft.com/3c5e2dd5-35e5-4a93-ac3a-3818bb43bbf8)か msdn データ アクセスおよびストレージ デベロッパー センター Web サイトを参照してください。
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
  [コマンド オブジェクト (ADO) を](../../../ado/reference/ado-api/command-object-ado.md) [CommandText プロパティ (ADO)](../../../ado/reference/ado-api/commandtext-property-ado.md) [接続オブジェクト (ADO)](../../../ado/reference/ado-api/connection-object-ado.md) [ConnectionString プロパティ (ADO)](../../../ado/reference/ado-api/connectionstring-property-ado.md) [実行メソッド (ADO Command)](../../../ado/reference/ado-api/execute-method-ado-command.md) [Open メソッド (ADO Recordset)](../../../ado/reference/ado-api/open-method-ado-recordset.md) [Parameters コレクション (ADO)](../../../ado/reference/ado-api/parameters-collection-ado.md) [プロパティのコレクション (ADO)](../../../ado/reference/ado-api/properties-collection-ado.md) [プロバイダー プロパティ (ADO)](../../../ado/reference/ado-api/provider-property-ado.md) [レコード セット オブジェクト (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md) [メソッドをサポートしています](../../../ado/reference/ado-api/supports-method.md)

@@ -15,18 +15,17 @@ helpviewer_keywords:
 ms.assetid: bff07eeb-dee3-4e4e-9b2d-d56061ea744d
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: f9df3fd695e9bf281133dabf436e5e8b5de7e0b1
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 819fb89d7f8c43e76ba9260a72fafa68084bf880
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47646620"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67933443"
 ---
 # <a name="connectoptionenum"></a>ConnectOptionEnum
 指定するかどうか、[オープン](../../../ado/reference/ado-api/open-method-ado-connection.md)のメソッド、[接続](../../../ado/reference/ado-api/connection-object-ado.md)(同期的に) 接続が確立された後、またはオブジェクトを返す必要があります (非同期)。  
   
-|定数|値|説明|  
+|定数|Value|説明|  
 |--------------|-----------|-----------------|  
 |**adAsyncConnect**|16|非同期的に接続を開きます。 [ConnectComplete](../../../ado/reference/ado-api/connectcomplete-and-disconnect-events-ado.md)イベントを使用して、接続が使用可能な場合があります。|  
 |**adConnectUnspecified**|-1|既定値です。 同期的に接続を開きます。|  

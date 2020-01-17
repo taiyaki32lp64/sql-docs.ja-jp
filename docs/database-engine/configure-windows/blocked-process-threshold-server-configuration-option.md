@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 3d46d143-bc6a-4220-8b55-6baa37547c25
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 2ffed36ec2a93a01cfc33317a40702022102965b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 84a94dc6b1d4f2f6f0c921f81746eb64f41d2f07
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47786990"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68013115"
 ---
 # <a name="blocked-process-threshold-server-configuration-option"></a>blocked process threshold サーバー構成オプション
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

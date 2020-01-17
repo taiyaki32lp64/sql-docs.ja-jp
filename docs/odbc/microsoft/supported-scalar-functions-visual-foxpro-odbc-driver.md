@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 6541192e-e562-4de0-9f20-40afa41fb84a
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: d82fa90f5dca5d9aee85ef3630b9d3a66d3c14e9
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d60205a3e1223a50b02d477d0e09dcce76749663
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47619026"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67939876"
 ---
 # <a name="supported-scalar-functions-visual-foxpro-odbc-driver"></a>サポートされているスカラー関数 (Visual FoxPro ODBC ドライバー)
 Visual FoxPro ODBC ドライバーは、ODBC SQL 文法で定義されているスカラー関数の 3 つの種類をサポートしています: 文字列、数値、および日付と時刻の関数。  

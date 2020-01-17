@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 2edf9b51-63e1-4c28-afdf-2d4af593d5f7
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: e7e59ca60471e89da883b9fbaa4cf269ac33a0e9
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: cee317d725b730f50eeef0502f63d7fca6d2c4b1
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47654800"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67997118"
 ---
 # <a name="updateblob-method-int-javaioinputstream-long"></a>updateBlob (int, java.io.InputStream, long) メソッド
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -49,7 +48,7 @@ public void updateBlob(int columnIndex,
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- この updateBlob メソッドは、java.sql.ResultSet インターフェイスの updateBlob メソッドによって指定されます。  
+ この updateBlob メソッドは、java.sql.ResultSet インターフェイスの updateBlob メソッドで規定されています。  
   
 ## <a name="see-also"></a>参照  
  [updateBlob メソッド &#40;SQLServerResultSet&#41;](../../../connect/jdbc/reference/updateblob-method-sqlserverresultset.md)   

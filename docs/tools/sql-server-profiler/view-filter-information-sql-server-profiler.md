@@ -1,5 +1,5 @@
 ---
-title: 表示フィルター情報 (SQL Server Profiler) |Microsoft Docs
+title: フィルター情報の表示 (SQL Server プロファイラー) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -14,15 +14,14 @@ helpviewer_keywords:
 - traces [SQL Server], filters
 - viewing filter information
 ms.assetid: 8d002dea-376a-452c-b3ca-3e93656ed75f
-author: stevestein
-ms.author: sstein
-manager: craigg
-ms.openlocfilehash: e194fa956ba1f43ae53ee37f3be15af2dfa7d4a8
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 94cdf7dcde876b18a6080eefb5afde8137d2e021
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47600400"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68059612"
 ---
 # <a name="view-filter-information-sql-server-profiler"></a>フィルター情報の表示 (SQL Server Profiler)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

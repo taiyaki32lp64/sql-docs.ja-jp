@@ -13,11 +13,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 89a988a5d664e460a3148cf910c0be31ba07a5dd
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52816334"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62916761"
 ---
 # <a name="security-best-practices-with-contained-databases"></a>包含データベースでのセキュリティのベスト プラクティス
   包含データベースには固有の脅威があるので、 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] の管理者はそれを理解し、危険性を軽減する必要があります。 脅威の多くは `USER WITH PASSWORD` 認証プロセスと関連しており、このプロセスでは認証の境界を[!INCLUDE[ssDE](../../includes/ssde-md.md)]のレベルからデータベースのレベルへと移します。  
@@ -85,7 +85,7 @@ ALTER DATABASE DB1 SET TRUSTWORTHY ON;
 ## <a name="denial-of-service-through-autoclose"></a>AUTO_CLOSE によるサービス拒否  
  包含データベースを自動終了するように構成しないでください。 自動終了すると、ユーザーの認証のためにデータベースを開くことで追加のリソースが消費されたり、サービス拒否攻撃が容易になったりします。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [包含データベース](contained-databases.md)   
  [部分的包含データベースへの移行](migrate-to-a-partially-contained-database.md)  
   

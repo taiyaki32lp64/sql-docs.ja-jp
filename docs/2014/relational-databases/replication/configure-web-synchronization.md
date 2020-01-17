@@ -24,11 +24,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 341066defb122e33e82cfde87a561bc9df1ed762
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52782844"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62721655"
 ---
 # <a name="configure-web-synchronization"></a>Web 同期の構成
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] マージ レプリケーションの Web 同期オプションを使用すると、インターネット経由で HTTPS プロトコルを使用してデータをレプリケートできます。 Web 同期を使用するには、最初に次の構成操作を実行する必要があります。  

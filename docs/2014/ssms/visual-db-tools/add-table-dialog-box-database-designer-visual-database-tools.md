@@ -14,11 +14,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: a301857168f7da4040df0195bc25c0ab54861eb7
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52812474"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63460143"
 ---
 # <a name="add-table-dialog-box-database-designer-visual-database-tools"></a>[テーブルの追加] ダイアログ ボックス (データベース デザイナー) (Visual Database Tools)
   データベース デザイナーでテーブルを追加するときに使用します。  
@@ -27,7 +27,7 @@ ms.locfileid: "52812474"
 >  テーブルをレプリケーションのためにパブリッシュする場合は、Transact-SQL ステートメントの [ALTER TABLE](/sql/t-sql/statements/alter-table-transact-sql) または SQL Server 管理オブジェクト (SMO) を使用してスキーマを変更する必要があります。 テーブル デザイナーまたはデータベース ダイアグラム デザイナーを使用してスキーマを変更するとき、テーブルはいったん削除されてから再作成されます。 パブリッシュされたオブジェクトは削除できないので、スキーマの変更は失敗します。  
   
 ## <a name="uielement-list"></a>UI 要素の一覧  
- **[更新]**  
+ **更新**  
  テーブルの一覧を更新し、現在のデータベースの状態を反映させます。  
   
  **[追加]**  

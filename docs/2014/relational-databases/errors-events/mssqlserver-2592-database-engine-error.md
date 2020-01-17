@@ -13,11 +13,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 1e8c6d2cc2803a222e831a32a3f3e803a0433068
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48058062"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62914349"
 ---
 # <a name="mssqlserver2592"></a>MSSQLSERVER_2592
     
@@ -30,7 +30,7 @@ ms.locfileid: "48058062"
 |イベント ソース|MSSQLSERVER|  
 |コンポーネント|SQLEngine|  
 |シンボル名|DBCC_REPAIR_INDEX_REBUILT|  
-|メッセージ テキスト|修復 : INDEX_TYPE インデックスは、データベース 'DATABASE' のオブジェクト OBJECT で正しく再構築されました。|  
+|メッセージ テキスト|修復:INDEX_TYPE インデックスは、データベース 'DATABASE' のオブジェクトをオブジェクトの再構築されました。|  
   
 ## <a name="explanation"></a>説明  
  REPAIR によってインデックスが再構築されたことを示しています。  

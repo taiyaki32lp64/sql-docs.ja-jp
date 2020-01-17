@@ -4,23 +4,21 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- docset-sql-devref
-- reporting-services-native
+ms.technology: reporting-services
 ms.topic: reference
 helpviewer_keywords:
 - custom report items, RDL
 - RDL [Reporting Services], custom report items
 ms.assetid: f18c5d8f-1d6b-4f0b-8657-c14896c2ce0d
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 5a5586ac74b77a6019d83a451a0b94fa2aa1bca2
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: b7fc20f857f42c854fcf01947c39ea88206bb5b8
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56012543"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63264893"
 ---
 # <a name="custom-report-item-class-libraries"></a>カスタム レポート アイテムのクラス ライブラリ
   カスタム レポート アイテムは、`Microsoft.ReportDesigner` 名前空間のクラスを使用します。 カスタム レポート アイテムを実装する際に使用するクラスは、2 つの主なカテゴリに分類できます。1 つは、カスタム レポート アイテム インフラストラクチャをサポートするためにデザインされた独自のクラス、もう 1 つは、関連するレポート定義言語 (RDL) 要素の機能をカプセル化するマネージド ラッパー クラスです。 これらのクラスの使用方法のコード サンプルについては、「[SQL Server Reporting Services Product Samples](https://go.microsoft.com/fwlink/?LinkId=177889)」 (SQL Server Reporting Services の製品サンプル) を参照してください。  
@@ -65,7 +63,7 @@ ms.locfileid: "56012543"
 |`OnPaint`|`Paint` イベントに応答して呼び出されます。|  
   
 ### <a name="microsoftreportdesignercustomreportitemattribute"></a>Microsoft.ReportDesigner.CustomReportItemAttribute  
- この属性は、カスタム レポート アイテムの種類を識別するために使用されます。 この名前は、レポート デザイナー構成ファイルの `ReportItem` 要素の <`Name`> 属性の値と一致している必要があります。  
+ この属性は、カスタム レポート アイテムの種類を識別するために使用されます。 名前の値に一致する必要があります、<`Name`> の属性、`ReportItem`レポート デザイナー構成ファイル内の要素。  
   
 #### <a name="public-methods"></a>パブリック メソッド  
   
@@ -123,7 +121,7 @@ ms.locfileid: "56012543"
 |`EditValue`|式エディターを呼び出して、渡されたオブジェクト値で初期化します。|  
   
 ### <a name="microsoftreportdesignerifieldsdataobject"></a>Microsoft.ReportDesigner.IFieldsDataObject  
- このクラスは [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] フィールドのコレクションであり、デザイン環境でドラッグ アンド ドロップ イベントをサポートするために使用されます。 `IReportItemDataObject` から継承されます。  
+ このクラスは [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] フィールドのコレクションであり、デザイン環境でドラッグ アンド ドロップ イベントをサポートするために使用されます。 `IReportItemDataObject`から継承します。  
   
 #### <a name="public-properties"></a>パブリック プロパティ  
   
@@ -133,7 +131,7 @@ ms.locfileid: "56012543"
 |`Fields`|ドロップされるフィールド (`Microsoft.ReportDesigner.Field`) のコレクション|  
   
 ## <a name="see-also"></a>参照  
- [レポート定義言語 &#40;SSRS&#41;](../reports/report-definition-language-ssrs.md)   
+ [レポート定義言語 (SSRS)](../reports/report-definition-language-ssrs.md)   
  [カスタム レポート アイテムの実行時コンポーネントの作成](creating-a-custom-report-item-run-time-component.md)   
  [カスタム レポート アイテムのデザイン時コンポーネントの作成](creating-a-custom-report-item-design-time-component.md)  
   

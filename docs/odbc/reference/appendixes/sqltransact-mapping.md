@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 8a01041f-3572-46f9-8213-b817f3cf929c
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: d5cf669883ce81528adbe1fbd8faeff2ed716218
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b2082a97b24284afcc879048bb08e86a7b2bb3ba
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47656186"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68070109"
 ---
 # <a name="sqltransact-mapping"></a>SQLTransact のマッピング
 **SQLTransact**置き換わっています**SQLEndTran**します。 2 つの関数の主な違いは**SQLEndTran**引数が含まれています*HandleType*、実行する作業のスコープを指定します。 *HandleType*引数は、環境または接続ハンドルを指定できます。 次の呼び出しに**SQLTransact**:  

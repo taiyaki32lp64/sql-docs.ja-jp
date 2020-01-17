@@ -13,17 +13,20 @@ f1_keywords:
 - sql13.dts.designer.odatasource.columns.f1
 - sql13.dts.designer.odatasource.erroroutput.f1
 ms.assetid: cc9003c9-638e-432b-867e-e949d50cec90
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: 820541da1699e2e74a9ec0b9a5f00f094a14f38c
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 3972714722b800cdd4400739f40d8eb8c6c3eff7
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51638660"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71298225"
 ---
 # <a name="odata-source"></a>OData ソース
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
 Open Data Protocol (OData) サービスからのデータを使用するには、SSIS パッケージの OData ソース コンポーネントを使用します。
 
 ## <a name="supported-protocols-and-data-formats"></a>サポートされるプロトコルとデータ形式
@@ -102,12 +105,12 @@ OData ソースは、次の単純なデータ型をサポートしています: 
   
 #### <a name="use-collection-or-resource-path--resource-path"></a>コレクションまたはリソースのパス = Resource Path を使用します。  
  **Resource path**  
- リソースのパスを入力します。 例: Employees  
+ リソースのパスを入力します。 例:Employees  
   
 ## <a name="odata-source-editor-columns-page"></a>[OData ソース エディター] ([列] ページ)
-  出力に含める外部 (変換元) 列を選択し、それらを出力列にマップするには、**[OData ソース エディター]** ダイアログ ボックスの **[列]** ページを使用します。  
+  出力に含める外部 (変換元) 列を選択し、それらを出力列にマップするには、 **[OData ソース エディター]** ダイアログ ボックスの **[列]** ページを使用します。  
   
-### <a name="options"></a>[変数]  
+### <a name="options"></a>オプション  
  **使用できる外部列**  
  データ ソース内にある使用可能なソース列の一覧を表示します。 ページの下部にあるテーブルに対して列を追加または削除するには、一覧にあるチェック ボックスを使用します。 選択した列が出力に追加されます。  
   
@@ -120,7 +123,7 @@ OData ソースは、次の単純なデータ型をサポートしています: 
 ## <a name="odata-source-editor-error-output-page"></a>[OData ソース エディター] ([エラー出力] ページ)
   **[OData ソース エディター]** ダイアログ ボックスの **[エラー出力]** ページを使用すると、エラー処理オプションを選択したり、エラー出力列のプロパティを設定したりできます。  
   
-### <a name="options"></a>[変数]  
+### <a name="options"></a>オプション  
  **[入力または出力]**  
  データ ソースの名前を表示します。  
   

@@ -1,5 +1,5 @@
 ---
-title: sys.service_queues (TRANSACT-SQL) |Microsoft Docs
+title: service_queues (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -19,33 +19,32 @@ helpviewer_keywords:
 ms.assetid: 9fd9fa76-6128-410c-896f-741e6050143a
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 073329c4c2da31e3defb6a2e2dcaa77d6109228e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 38b5ac732926ae544dbad2cc22006c45533702c3
+ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47762910"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "73982604"
 ---
-# <a name="sysservicequeues-transact-sql"></a>sys.service_queues (Transact-SQL)
+# <a name="sysservice_queues-transact-sql"></a>sys.service_queues (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  1 行で、サービス キューとなっているデータベース内の各オブジェクトのデータを含む**sys.objects.type** SQ を = です。  
+  データベース内のサービスキューであるオブジェクトごとに1行のデータを格納します。 **type** = SQ。  
   
-|列名|データ型|説明|  
+|列名|データ型|[説明]|  
 |-----------------|---------------|-----------------|  
-|**\<列を継承 >**||このビューが継承する列の一覧は、次を参照してください。 [sys.objects &#40;TRANSACT-SQL&#41;](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md)します。|  
+|**\<継承された列 >**||このビューが継承する列の一覧については、「 [sys &#40;transact-sql&#41;](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md)」を参照してください。|  
 |**max_readers**|**smallint**|キューで許可される同時読み取りの最大数です。|  
 |**activation_procedure**|**nvarchar(776)**|3 つの要素で構成されるアクティブ化プロシージャの名前です。|  
-|**execute_as_principal_id**|**int**|EXECUTE AS データベース プリンシパルの ID です。<br /><br /> 既定値または EXECUTE AS CALLER の場合は、NULL になります。<br /><br /> 指定したプリンシパルの ID AS SELF EXECUTE AS の実行\<プリンシパル >。<br /><br /> -2 = EXECUTE AS OWNER。|  
+|**execute_as_principal_id**|**int**|EXECUTE AS データベース プリンシパルの ID です。<br /><br /> 既定値または EXECUTE AS CALLER の場合は、NULL になります。<br /><br /> \<プリンシパル > として実行する場合は、指定されたプリンシパルの ID。<br /><br /> -2 = EXECUTE AS OWNER。|  
 |**is_activation_enabled**|**bit**|1 = アクティブ化は有効です。|  
 |**is_receive_enabled**|**bit**|1 = 受信は有効です。|  
 |**is_enqueue_enabled**|**bit**|1 = エンキューは有効です。|  
 |**is_retention_enabled**|**bit**|1 = ダイアログが終了するまでメッセージは保持されます。|  
-|**is_poison_message_handling_enabled**|**bit**|**適用対象**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]<br /><br /> 1 = 有害なメッセージの処理が有効です。|  
+|**is_poison_message_handling_enabled**|**bit**|**適用対象**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 以降。<br /><br /> 1 = 有害なメッセージの処理が有効です。|  
   
 ## <a name="permissions"></a>アクセス許可  
- [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] 詳細については、「 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)」を参照してください。  
+ [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] 詳細については、「 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)」をご覧ください。  
   
 ## <a name="see-also"></a>参照  
  [オブジェクト カタログ ビュー &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/object-catalog-views-transact-sql.md)   

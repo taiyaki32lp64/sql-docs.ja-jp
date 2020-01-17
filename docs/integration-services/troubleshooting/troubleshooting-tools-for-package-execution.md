@@ -14,17 +14,20 @@ helpviewer_keywords:
 - errors [Integration Services], troubleshooting
 - packages [Integration Services], troubleshooting
 ms.assetid: f18d6ff6-e881-444c-a399-730b52130e7c
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: 4aca92b322d3eb0a3b987300d88a877d29cf3cda
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 660ac899b1cf649bcc431bf10e2f9b18ca12cbc4
+ms.sourcegitcommit: baa40306cada09e480b4c5ddb44ee8524307a2ab
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51639029"
+ms.lasthandoff: 11/06/2019
+ms.locfileid: "73637945"
 ---
 # <a name="troubleshooting-tools-for-package-execution"></a>パッケージ実行のトラブルシューティング ツール
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] には、パッケージを完成して配置した後、そのパッケージの実行時のトラブルシューティングに使用できる機能とツールが含まれています。  
   
  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] には、デザイン時に、パッケージの実行を一時的に停止するブレイクポイント、進行状況ウィンドウ、およびデータ フロー全体でのデータの流れが追えるデータ ビューアーが用意されています。 ただし、既に配置されているパッケージを実行するときは、これらの機能を使用できません。 配置済みのパッケージのトラブルシューティングを行うための主な技法は次のとおりです。  
@@ -82,7 +85,7 @@ ms.locfileid: "51639029"
   
     3.  **行数データのキャプチャを検討する**。 行数情報用に別のテーブルを作成することを検討します。このテーブルでは、パッケージ実行の各インスタンスを ExecutionID で識別します。 行数変換を使用して、データ フロー内の重要な時点の行数を一連の変数に保存します。 データ フローの終了後、SQL 実行タスクを使用してこの一連の値をテーブルの行に挿入すると、後の分析やレポートに役立ちます。  
   
-     この方法の詳細については、[!INCLUDE[msCoName](../../includes/msconame-md.md)] のホワイト ペーパー「[プロジェクト REAL: ビジネス インテリジェンス ETL のデザイン方法](https://go.microsoft.com/fwlink/?LinkId=96602)」の「ETL の監査とログ記録」を参照してください。  
+     この方法の詳細については、[!INCLUDE[msCoName](../../includes/msconame-md.md)] のホワイト ペーパー「[Project REAL: Business Intelligence ETL Design Practices (プロジェクト REAL: ビジネス インテリジェンス ETL のデザイン方法)](https://www.microsoft.com/download/details.aspx?id=14582)」の「ETL Auditing and Logging (ETL の監査とログ記録)」をご覧ください。  
   
 ## <a name="troubleshoot-package-execution-by-using-debug-dump-files"></a>デバッグ ダンプ ファイルを使ったパッケージ実行のトラブルシューティング  
  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]では、パッケージの実行に関する情報を提供するデバッグ ダンプ ファイルを作成できます。 詳細については、「[パッケージ実行用のダンプ ファイルを生成する](../../integration-services/troubleshooting/generating-dump-files-for-package-execution.md)」を参照してください。  

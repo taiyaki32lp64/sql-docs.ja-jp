@@ -1,6 +1,5 @@
 ---
-title: 一括読み込みのセキュリティに関する考慮事項 (SQLXML 4.0) |Microsoft Docs
-ms.custom: ''
+title: 一括読み込みのセキュリティに関する考慮事項 (SQLXML)
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -15,20 +14,20 @@ helpviewer_keywords:
 ms.assetid: 192fc6d4-ecbc-4a4d-a5cb-55e1f64af318
 author: MightyPen
 ms.author: genemi
-manager: craigg
+ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: e881e774a01a7333c5d97005fa5188821b3ed4f9
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 817c8c4d0ff2a140033e99879c0720a63f81e5f4
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56037603"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75252524"
 ---
 # <a name="bulk-load-security-considerations-sqlxml-40"></a>一括読み込みのセキュリティに関する注意点 (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   次に、XML 一括読み込みを使用する場合のセキュリティに関するガイドラインを示します。  
   
--   一括読み込み操作がトランザクションとして実行するには、使用することを指定すると、 **TempFilePath**一時ファイルを作成するフォルダーを指定するプロパティ。  
+-   一括読み込み操作をトランザクションとして実行するように指定する場合は、 **Tempfilepath**プロパティを使用して、一時ファイルを作成するフォルダーを指定します。  
   
      一括読み込み処理では、次の権限付きの一時ファイルが作成されます。  
   
@@ -57,6 +56,6 @@ ms.locfileid: "56037603"
 -   ユーザーが、エラーを書き込む SQLXML のエラー ログ ファイルを設定した場合は、一括読み込みが実行されるたびに、最新の一括読み込み処理のデータでファイルの内容が上書きされます。  
   
 ## <a name="see-also"></a>参照  
- [XML データの一括読み込みを実行する&#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/bulk-load-xml/performing-bulk-load-of-xml-data-sqlxml-4-0.md)  
+ [XML データの一括読み込みを実行する &#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/bulk-load-xml/performing-bulk-load-of-xml-data-sqlxml-4-0.md)  
   
   

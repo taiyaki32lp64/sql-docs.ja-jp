@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.datasourceviewwizard.selecttablesandviews.f1
@@ -13,12 +12,12 @@ ms.assetid: ea7d1232-f213-46e9-90d9-0fd616ca003d
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: f18e9c5817de5e98ae21726b235d60d8d31e7d66
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: f4b940d5cb3c91cc8257ef1a3e6828286bc1c240
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48104012"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66069250"
 ---
 # <a name="select-tables-and-views-data-source-view-wizard-analysis-services"></a>[テーブルとビューの選択] (データ ソース ビュー ウィザード) (Analysis Services)
   **[テーブルとビューの選択]** ページを使用すると、データ ソース ビューに含めるテーブルまたはビューをデータ ソースから選択できます。  
@@ -34,7 +33,7 @@ ms.locfileid: "48104012"
   
  昇順または降順でリストを並べ替えるには、 **[名前]** または **[種類]** をクリックします。  
   
- **Assert**  
+ **[フィルター]**  
  **[使用できるオブジェクト]** にリストされるオブジェクトをフィルターします。 文字列を入力して **[フィルター]** ボタンをクリックすると、指定された文字列を含む名前のみが一覧表示されます。 正確な文字列を検索するには、文字列を二重引用符で囲みます。 大文字と小文字は区別されません。  
   
  次の表に一覧表示されているワイルドカード文字をフィルター文字列に含めることができます。  

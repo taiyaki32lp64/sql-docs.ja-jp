@@ -11,13 +11,13 @@ helpviewer_keywords:
 ms.assetid: d5d4903d-e296-4bbf-8780-63674c4d62d5
 author: Shamikg
 ms.author: Shamikg
-manager: v-thobro
-ms.openlocfilehash: 27e5c0ef0c834806351bda73eb69dbe783d78db2
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+manager: shamikg
+ms.openlocfilehash: fc295e108357040617bf6bdaa1af61fada2c97ee
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51666821"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68259678"
 ---
 # <a name="installing-ssma-for-oracle-client-oracletosql"></a>SSMA for Oracle クライアントのインストール (OracleToSQL)
 SSMA クライアントは、次のタスクを実行するプログラム ファイルで構成されます。  

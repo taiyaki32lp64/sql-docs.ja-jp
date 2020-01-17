@@ -11,18 +11,18 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: f57d691587d658e968cd79cf4f4ab4731db29915
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56027519"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63267477"
 ---
 # <a name="filtering-a-nested-table-in-a-mining-model-intermediate-data-mining-tutorial"></a>マイニング モデルでの入れ子になったテーブルのフィルター処理 (中級者向けデータ マイニング チュートリアル)
   モデルの作成と検証が完了したら、顧客データのサブセットに焦点を絞ります。 たとえば、特定の品目が入っているバスケットのみを分析したり、一定期間に何も購入しなかった顧客の人口統計を分析したりすることができます。  
   
  [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] を使用すると、マイニング モデルで使用されるデータをフィルター処理できます。 この機能は、さまざまなデータを使用する新しいデータ ソース ビューを設定する必要はありませんので便利です。 「基本的なデータ マイニング チュートリアル」では、ケース テーブルに条件を適用することでフラット テーブルのデータをフィルター処理する方法について学習しました。 ここでは、入れ子になったテーブルに適用するフィルターを作成します。  
   
-## <a name="filters-on-nested-vs-case-tables"></a>入れ子になったテーブルとケース テーブルでのフィルターの違い  
+## <a name="filters-on-nested-vs-case-tables"></a>入れ子になった vs でフィルターします。ケース テーブル  
  データ ソース ビューにケース テーブルと入れ子になったテーブルが含まれている場合は、アソシエーション モデルで使用されているデータ ソース ビューと同様に、ケース テーブルの値、入れ子になったテーブルでの値の有無、または両方の組み合わせをフィルター処理できます。  
   
  ここでは、まずアソシエーション モデルのコピーを作成し、関連する新しいモデルに IncomeGroup 属性と Region 属性を追加して、ケース テーブルでこれらの属性をフィルター処理できるようにします。  
@@ -109,7 +109,7 @@ ms.locfileid: "56027519"
 ## <a name="next-task-in-lesson"></a>このレッスンの次の作業  
  [アソシエーションを予測する&#40;中級者向けデータ マイニング チュートリアル&#41;](../../2014/tutorials/predicting-associations-intermediate-data-mining-tutorial.md)  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [モデル フィルターの構文と例 (Analysis Services - データ マイニング)](../../2014/analysis-services/data-mining/model-filter-syntax-and-examples-analysis-services-data-mining.md)   
  [マイニング モデルのフィルター &#40;Analysis Services - データ マイニング&#41;](../../2014/analysis-services/data-mining/filters-for-mining-models-analysis-services-data-mining.md)  
   

@@ -1,6 +1,5 @@
 ---
-title: 複合ドメインの管理 | Microsoft Docs
-ms.custom: ''
+title: 複合ドメインの管理
 ms.date: 07/31/2012
 ms.prod: sql
 ms.prod_service: data-quality-services
@@ -8,15 +7,14 @@ ms.reviewer: ''
 ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: 47821eff-800b-4053-8d36-e42bbc267f54
-author: leolimsft
-ms.author: lle
-manager: craigg
-ms.openlocfilehash: dca93e27cff81553539082aa388b9fc60cf30f6d
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
-ms.translationtype: HT
+author: swinarko
+ms.author: sawinark
+ms.openlocfilehash: bbffbbda18da28be0623c31f4608f5b25f21d2ea
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56028554"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75258451"
 ---
 # <a name="managing-a-composite-domain"></a>複合ドメインの管理
 
@@ -33,11 +31,11 @@ ms.locfileid: "56028554"
   
 |||  
 |-|-|  
-|解析されない複数の関連用語で構成されるデータ フィールドのセマンティック表現を作成します。|[複合ドメインを作成する](../data-quality-services/create-a-composite-domain.md)|  
-|複合データを複合ドメインにマッピングする場合は、区切り記号での解析に加えて、ナレッジに基づいてデータを解析できます。 DQS では最初に単一ドメインに関するナレッジを使用して、複合文字列の各部分が単一ドメインにどのように属しているか確認します。|[複合ドメインを作成する](../data-quality-services/create-a-composite-domain.md)|  
-|住所データを処理するサービスなどの参照データ サービスを複合ドメインにアタッチします。|[参照データにドメインまたは複合ドメインをアタッチする](../data-quality-services/attach-domain-or-composite-domain-to-reference-data.md)|  
-|複合ドメイン内の 1 つのドメインの値が別のドメインの値に影響する場合は、クロス ドメイン ルールを作成します。|[クロス ドメイン ルールを作成する](../data-quality-services/create-a-cross-domain-rule.md)|  
-|DQS で周波数が報告されるように値の組み合わせを指定します。|[複合ドメインで値のリレーションを使用する](../data-quality-services/use-value-relations-in-a-composite-domain.md)|  
+|解析されない複数の関連用語で構成されるデータ フィールドのセマンティック表現を作成します。|[複合ドメインの作成](../data-quality-services/create-a-composite-domain.md)|  
+|複合データを複合ドメインにマッピングする場合は、区切り記号での解析に加えて、ナレッジに基づいてデータを解析できます。 DQS では最初に単一ドメインに関するナレッジを使用して、複合文字列の各部分が単一ドメインにどのように属しているか確認します。|[複合ドメインの作成](../data-quality-services/create-a-composite-domain.md)|  
+|住所データを処理するサービスなどの参照データ サービスを複合ドメインにアタッチします。|[参照データへのドメインまたは複合ドメインのアタッチ](../data-quality-services/attach-domain-or-composite-domain-to-reference-data.md)|  
+|複合ドメイン内の 1 つのドメインの値が別のドメインの値に影響する場合は、クロス ドメイン ルールを作成します。|[クロス ドメイン ルールの作成](../data-quality-services/create-a-cross-domain-rule.md)|  
+|DQS で周波数が報告されるように値の組み合わせを指定します。|[複合ドメインでの値のリレーションの使用](../data-quality-services/use-value-relations-in-a-composite-domain.md)|  
   
 ## <a name="related-tasks"></a>Related Tasks  
   

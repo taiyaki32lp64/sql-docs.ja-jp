@@ -11,15 +11,14 @@ helpviewer_keywords:
 - computed columns, XML
 - XML [SQL Server], computed columns
 ms.assetid: 1313b889-69b4-4018-9868-0496dd83bf44
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: 6dcd690518c9db651440f73bbdacab291e352080
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: MightyPen
+ms.author: genemi
+ms.openlocfilehash: a90f68a55b10234e0397aba480b8d78a9cea1d9c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47744220"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68039120"
 ---
 # <a name="use-xml-in-computed-columns"></a>計算列での XML の使用
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

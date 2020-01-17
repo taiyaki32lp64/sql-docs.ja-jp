@@ -1,38 +1,37 @@
 ---
-title: 'レッスン 6: 計算列を作成する |Microsoft Docs'
+title: 'レッスン 6: 計算列の作成 |Microsoft Docs'
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: d126766a-5699-4e9f-8213-8c7eea0fc14e
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: adc7b7bf3335c8c9c7530d18f4d553492cfe9e1b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 58ba761f3e32f13ddcf81dc9875057195298c705
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48134044"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66078556"
 ---
 # <a name="lesson-6-create-calculated-columns"></a>レッスン 6: 計算列の作成
   このレッスンでは、計算列を追加して、モデル内に新しいデータを作成します。 計算列は、モデル内の既存のデータに基づいて機能します。 詳細については、「[計算列 (SSAS テーブル)](tabular-models/ssas-calculated-columns.md)」を参照してください。  
   
  このレッスンでは、3 つの異なるテーブル内に、5 つの新しい計算列を作成します。 手順は実習ごとに少しずつ異なります。 これは、新しい列を作成したり、それらの名前を変更したり、それらをテーブル内のさまざまな場所へ配置するのには、いくつかの方法があることを示すためです。  
   
- このレッスンの推定所要時間: **15 分**  
+ このレッスンを完了するまでに時間を推定するには。**15 分**  
   
 ## <a name="prerequisites"></a>前提条件  
- このトピックはテーブル モデリング チュートリアルの一部であり、チュートリアルでの順番に従って実行する必要があります。 このレッスンの実習を行う前に、前のレッスン「[レッスン 5: リレーションシップの作成](lesson-4-create-relationships.md)」を完了している必要があります。  
+ このトピックはテーブル モデリング チュートリアルの一部であり、チュートリアルでの順番に従って実行する必要があります。 このレッスンでは、タスクを実行する前に、前のレッスンを完了が必要があります。[レッスン 5: リレーションシップの作成](lesson-4-create-relationships.md)です。  
   
 ## <a name="create-calculated-columns"></a>計算列の作成  
   
 #### <a name="create-a-month-calendar-calculated-column-in-the-date-table"></a>Date テーブル内に Month Calendar 計算列を作成する  
   
-1.  [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)] で、**[モデル]** メニューをクリックし、**[モデル ビュー]** をポイントして、**[データ ビュー]** をクリックします。  
+1.  [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)] で、 **[モデル]** メニューをクリックし、 **[モデル ビュー]** をポイントして、 **[データ ビュー]** をクリックします。  
   
      計算列は、モデル デザイナーのデータ ビューでのみ作成できます。  
   
@@ -51,7 +50,7 @@ ms.locfileid: "48134044"
      すべての行の計算列に値が入力されます。 テーブルを下にスクロールすると、この列の行が、各行のデータに基づいて、異なる値を保持できることがわかります。  
   
     > [!NOTE]  
-    >  エラーが返された場合は、数式内の列名が、「[レッスン 3: 列名の変更](rename-columns.md)」で変更した列名と一致していることを確認してください。  
+    >  エラーが発生した場合、数式内の列名に変更した列名を一致することを確認[レッスン 3。列名の変更](rename-columns.md)します。  
   
 5.  この列の名前を変更`Month Calendar`します。  
   
@@ -127,6 +126,6 @@ ms.locfileid: "48134044"
  Margin 計算列は、各 (製品) 行の利益率を分析するために使用されます。  
   
 ## <a name="next-step"></a>次の手順  
- このチュートリアルを続行するには、次のレッスン「[レッスン 7: メジャーの作成](lesson-6-create-measures.md)」に進んでください。  
+ このレッスンを続行するには、次のレッスンに移動します。[レッスン 7: メジャーを作成](lesson-6-create-measures.md)です。  
   
   

@@ -1,5 +1,5 @@
 ---
-title: クライアントにサーバーから変換 |Microsoft Docs
+title: サーバーからクライアントへの変換 |Microsoft Docs
 description: サーバーからクライアントへの変換
 ms.custom: ''
 ms.date: 06/14/2018
@@ -12,13 +12,12 @@ helpviewer_keywords:
 - conversions [OLE DB], server to client
 author: pmasl
 ms.author: pelopes
-manager: craigg
-ms.openlocfilehash: d6e71a8175cdddf63ad5e55124a63b40117b3be0
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: 22f3b681f9c4256087c17bd1e74011c2ba0916fe
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52407049"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68015809"
 ---
 # <a name="conversions-performed-from-server-to-client"></a>サーバーからクライアントへの変換
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -28,9 +27,9 @@ ms.locfileid: "52407049"
   この記事では、[!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)] (以降) と OLE DB Driver for SQL Server を使用して作成されたクライアント アプリケーションとの間で実行される日付または時刻の変換について説明します。  
   
 ## <a name="conversions"></a>コンバージョン  
- 次の表では、クライアントに返される型とバインドの型との間の変換について説明しています。 Icommandwithparameters::setparameterinfo が呼び出され、型がで指定された場合、出力パラメーターの*して*サーバーによって実行される暗黙的な変換をサーバー上の実際の型と一致しません、と、クライアントに返される型の icommandwithparameters::setparameterinfo を通じて指定された型が一致します。 これにより、サーバーの変換規則がこの記事の内容と異なると、予期しない変換結果が発生する場合があります。 たとえば、既定の日付を指定する必要がある場合、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] では 1899-12-30 ではなく 1900-1-1 が使用されます。  
+ 次の表では、クライアントに返される型とバインドの型との間の変換について説明しています。 出力パラメーターの場合、ICommandWithParameters:: SetParameterInfo が呼び出され、 *pwszDataSourceType*で指定された型がサーバー上の実際の型と一致しない場合、サーバーによって暗黙的な変換が実行され、返された型が返されます。クライアントは、ICommandWithParameters:: SetParameterInfo によって指定された型と一致します。 これにより、サーバーの変換規則がこの記事の内容と異なると、予期しない変換結果が発生する場合があります。 たとえば、既定の日付を指定する必要がある場合、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] では 1899-12-30 ではなく 1900-1-1 が使用されます。  
   
-|変換先 -><br /><br /> From|[DATE]|DBDATE|DBTIME|DBTIME2|DBTIMESTAMP|DBTIMESTAMPOFFSET|FILETIME|BYTES|VARIANT|SSVARIANT|BSTR|STR|WSTR|  
+|To -><br /><br /> From|DATE|DBDATE|DBTIME|DBTIME2|DBTIMESTAMP|DBTIMESTAMPOFFSET|FILETIME|BYTES|VARIANT|SSVARIANT|BSTR|STR|WSTR|  
 |----------------------|----------|------------|------------|-------------|-----------------|-----------------------|--------------|-----------|-------------|---------------|----------|---------|----------|  
 |date|1、7|[OK]|-|-|1|1、3|1、7|-|[OK] \(VT_BSTR)|[OK]|[OK]|4|4|  
 |Time|5、6、7|-|9|[OK]|6|3、6|5、6|-|[OK] \(VT_BSTR)|[OK]|[OK]|4|4|  
@@ -48,10 +47,10 @@ ms.locfileid: "52407049"
   
 ## <a name="key-to-symbols"></a>記号の説明  
   
-|記号|意味|  
+|Symbol|意味|  
 |------------|-------------|  
 |[OK]|変換は必要ありません。|  
-|-|変換はサポートされていません。 Iaccessor::createaccessor が呼び出されたときに、バインドが検証されると、DBBINDSTATUS_UPSUPPORTEDCONVERSION がで返されます*rgStatus*します。 アクセサー検証が遅延する場合は、DBSTATUS_E_BADACCESSOR が設定されます。|  
+|-|変換はサポートされていません。 IAccessor:: CreateAccessor が呼び出されたときにバインディングが検証されると、DBBINDSTATUS_UPSUPPORTEDCONVERSION が*rgStatus*に返されます。 アクセサー検証が遅延する場合は、DBSTATUS_E_BADACCESSOR が設定されます。|  
 |1|時刻フィールドに 0 が設定されます。|  
 |2|DBSTATUS_E_CANTCONVERTVALUE が設定されます。|  
 |3|タイムゾーンは 0 に設定されます。|  

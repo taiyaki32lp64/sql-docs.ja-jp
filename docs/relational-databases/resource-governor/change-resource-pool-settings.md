@@ -12,22 +12,21 @@ helpviewer_keywords:
 ms.assetid: 49438285-a011-4dac-bd4f-f35cd90fda61
 author: julieMSFT
 ms.author: jrasnick
-manager: craigg
-ms.openlocfilehash: 1fcf2b3c6f6b516d34f2d1c8658acd61549650b6
-ms.sourcegitcommit: cebfa2610ea36e3c5ad510c214590035ecb499c2
+ms.openlocfilehash: 8549b5a3a1675353ad0adce42fc63a460f893cae
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/04/2019
-ms.locfileid: "55689865"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72905018"
 ---
 # <a name="change-resource-pool-settings"></a>リソース プールの設定の変更
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
   リソース プールの設定を変更するには、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] または [!INCLUDE[tsql](../../includes/tsql-md.md)]を使用します。  
   
--   **作業を開始する準備:**[制限事項と制約事項](#LimitationsRestrictions)、[権限](#Permissions)  
+-   **作業を開始する準備:** [制限事項と制約事項](#LimitationsRestrictions)、[権限](#Permissions)  
   
--   **リソース プールの設定変更に使用するもの:**[SQL Server Management Studio](#ChgRPProp)、[Transact-SQL](#ChgRPTSQL)  
+-   **リソース プールの設定変更に使用するもの:** [SQL Server Management Studio](#ChgRPProp)、[Transact-SQL](#ChgRPTSQL)  
   
 ##  <a name="BeforeYouBegin"></a> はじめに  
   
@@ -51,7 +50,7 @@ ms.locfileid: "55689865"
 4.  変更する行のセルをクリックまたはダブルクリックし、新しい値を入力します。  
   
 5.  変更を保存するには、 **[OK]** をクリックします。  
-  
+
 ##  <a name="ChgRPTSQL"></a> Transact-SQL を使用してリソース プールの設定を変更する  
  **リソース プールの設定を変更するには - [!INCLUDE[tsql](../../includes/tsql-md.md)]**  
   

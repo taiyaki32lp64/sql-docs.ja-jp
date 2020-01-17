@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: b93e9701-72a0-408e-958c-dc196872c040
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 07cf3d71690dd7f7b493970b62ac0130a8530b16
-ms.sourcegitcommit: 1a5448747ccb2e13e8f3d9f04012ba5ae04bb0a3
+ms.openlocfilehash: 4593a57ab3d6b0c4b5cfff067c0f34b87f50796c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51558559"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68137317"
 ---
 # <a name="copy-databases-with-backup-and-restore"></a>バックアップと復元によるデータベースのコピー
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -66,7 +65,7 @@ ms.locfileid: "51558559"
  エラーと好ましくない結果を回避するには、復元操作の前に、 [backupfile](../../relational-databases/system-tables/backupfile-transact-sql.md) 履歴テーブルを使用して、復元しようとしているバックアップ内のデータベースとログ ファイルを確認できます。  
   
 ## <a name="moving-the-database-files"></a>データベース ファイルの移動  
- データベース バックアップ内のファイルをコピー先コンピューターに復元できない場合は、復元のときにファイルを新しい場所に移動する必要があります。 例 :  
+ データベース バックアップ内のファイルをコピー先コンピューターに復元できない場合は、復元のときにファイルを新しい場所に移動する必要があります。 例:  
   
 -   以前のバージョンの既定の場所に作成されたバックアップからデータベースを復元する場合。  
   

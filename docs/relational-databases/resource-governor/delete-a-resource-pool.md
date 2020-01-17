@@ -12,22 +12,21 @@ helpviewer_keywords:
 ms.assetid: 3bdd348b-6582-4ffa-80ef-d49e50596ce5
 author: julieMSFT
 ms.author: jrasnick
-manager: craigg
-ms.openlocfilehash: 94a559d7486263d1edf50383e3a8af39fe93689d
-ms.sourcegitcommit: cebfa2610ea36e3c5ad510c214590035ecb499c2
+ms.openlocfilehash: ecd20f084aa682e7440a4ce2ea426a19141cbd0c
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/04/2019
-ms.locfileid: "55689805"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72903938"
 ---
 # <a name="delete-a-resource-pool"></a>リソース プールの削除
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
   リソース プールを削除にするには、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] または Transact-SQL を使用します。  
   
--   **作業を開始する準備:**[制限事項と制約事項](#LimitationsRestrictions)、[権限](#Permissions)  
+-   **作業を開始する準備:** [制限事項と制約事項](#LimitationsRestrictions)、[権限](#Permissions)  
   
--   **リソース プールの削除に使用するもの:**[SQL Server Management Studio](#DelRPSSMS)、[Transact-SQL](#DelRPTSQL)  
+-   **リソース プールの削除に使用するもの:** [SQL Server Management Studio](#DelRPSSMS)、[Transact-SQL](#DelRPTSQL)  
   
 ##  <a name="BeforeYouBegin"></a> はじめに  
  ワークロード グループが含まれている場合は、リソース プールを削除できません。  
@@ -46,7 +45,7 @@ ms.locfileid: "55689805"
 2.  削除するリソース プールを右クリックし、 **[削除]** をクリックします。  
   
 3.  **[オブジェクトの削除]** ウィンドウの **[削除されるオブジェクト]** ボックスの一覧に、リソース プールが表示されます。 リソース プールを削除するには、 **[OK]** をクリックします。  
-  
+
     > [!NOTE]  
     >  ワークロード グループが含まれているリソース プールを削除しようとすると失敗します。  
   

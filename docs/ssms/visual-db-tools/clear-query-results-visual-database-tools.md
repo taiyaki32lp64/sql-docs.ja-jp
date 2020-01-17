@@ -14,15 +14,14 @@ helpviewer_keywords:
 - Results pane
 - clearing query results
 ms.assetid: 4ed9692e-5170-47d4-8b0b-028c967d47ff
-author: stevestein
-ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 7367a3f3ce663966b583f6946923e3c312a5eb41
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 291bfbebcca9006b393fc5b50a746be14e21b283
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53213611"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68262580"
 ---
 # <a name="clear-query-results-visual-database-tools"></a>クエリ結果の消去 (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

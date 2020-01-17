@@ -14,15 +14,15 @@ helpviewer_keywords:
 - errors [Integration Services], troubleshooting
 - packages [Integration Services], troubleshooting
 ms.assetid: 08a019f5-8ba7-4527-97c1-e9846d4022ff
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 7cba8e2547f2e8d13a399038a887a6c1b97351bf
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 8bb86d738aed61743defa3261318e2eb7536aa84
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52792882"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62766165"
 ---
 # <a name="troubleshooting-tools-package-connectivity"></a>トラブルシューティング ツールのパッケージ接続
   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] には、パッケージと、パッケージがデータを抽出して読み込むデータ ソースとの接続のトラブルシューティングを行うための、機能とツールが用意されています。  
@@ -68,7 +68,7 @@ ms.locfileid: "52792882"
     ExternalRequest_post: 'IDbConnection.Close finished'. The external request has completed."  
     ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [パッケージ開発のトラブルシューティング ツール](troubleshooting-tools-for-package-development.md)   
  [パッケージ実行のトラブルシューティング ツール](troubleshooting-tools-for-package-execution.md)  
   

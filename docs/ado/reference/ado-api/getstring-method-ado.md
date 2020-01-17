@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 92452940-b2a7-456e-94fc-3780c71da33c
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 1570918c423291b6c4fdd212fcb82f518dfb766e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 72526eca57d08152d7eaa773be50d68d4b3688e1
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47708060"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67932470"
 ---
 # <a name="getstring-method-ado"></a>GetString メソッド (ADO)
 返します、 [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md)を文字列として。  
@@ -44,7 +43,7 @@ Variant = recordset.GetString(StringFormat, NumRows, ColumnDelimiter, RowDelimit
  *NumRows*  
  任意。 変換する行の数、 **Recordset**します。 場合*NumRows*が指定されていない、または内の行の合計数より大きい場合、**レコード セット**、し、すべての行で、**レコード セット**変換されます。  
   
- *ColumnDelimiter*  
+ *[列区切り記号]*  
  任意。 それ以外の場合、タブ文字を指定した場合、列の間で使用する区切り記号。  
   
  *RowDelimiter*  
@@ -61,5 +60,5 @@ Variant = recordset.GetString(StringFormat, NumRows, ColumnDelimiter, RowDelimit
 ## <a name="applies-to"></a>適用対象  
  [Recordset オブジェクト (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [GetString メソッドの例 (VB)](../../../ado/reference/ado-api/getstring-method-example-vb.md)

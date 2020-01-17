@@ -1,5 +1,5 @@
 ---
-title: getObject メソッド (SQLServerResultSet) |Microsoft Docs
+title: getObject メソッド (SQLServerResultSet) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: 924df406-14b2-40b8-a7bc-c2fd145d7d7c
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 93e85d2b7f9f329b130dcbbb09bdee93aecb3d49
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 7e37449fc991cc02fb1e15eb73719e9fef1bde83
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47736070"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67981066"
 ---
 # <a name="getobject-method-sqlserverresultset"></a>getObject メソッド (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

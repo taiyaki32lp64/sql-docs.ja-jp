@@ -12,23 +12,21 @@ helpviewer_keywords:
 ms.assetid: 147036a0-260e-4f81-8b3b-89209e023a32
 author: MightyPen
 ms.author: genemi
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 2c1d58b4c8e3b1b3af47a49873f5d3da6d42811c
-ms.sourcegitcommit: 0d6e4cafbb5d746e7d00fdacf8f3ce16f3023306
+ms.openlocfilehash: 69f7994848d02d6e5e0036aaf132e6294f8d5d90
+ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/11/2018
-ms.locfileid: "49085012"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73761624"
 ---
 # <a name="ole-db-table-valued-parameter-type-support"></a>OLE DB テーブル値パラメーターの型のサポート
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-[!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
 
   このトピックでは、テーブル値パラメーターに対する OLE DB 型のサポートについて説明します。  
   
 ## <a name="table-valued-parameter-rowset-object"></a>テーブル値パラメーターの行セット オブジェクト  
- テーブル値パラメーターの特殊な行セット オブジェクトを作成できます。 ITableDefinitionWithConstraints::CreateTableWithConstraints または iopenrowset::openrowset を使用して、テーブル値パラメーター行セット オブジェクトを作成します。 そのためには、*pTableID* パラメーターの *eKind* メンバーに DBKIND_GUID_NAME を設定し、CLSID_ROWSET_INMEMORY を *guid* メンバーとして指定します。 テーブル値パラメーターのサーバーの型名を指定する必要があります、 *pwszName*のメンバー *pTableID* iopenrowset::openrowset を使用する場合。 テーブル値パラメーターの行セット オブジェクトは、標準の SQL Server Native Client OLE DB プロバイダー オブジェクトと同様に動作します。  
+ テーブル値パラメーターの特殊な行セット オブジェクトを作成できます。 テーブル値パラメーターの行セットオブジェクトを作成するには、ITableDefinitionWithConstraints:: CreateTableWithConstraints または IOpenRowset:: OpenRowset を使用します。 そのためには、*pTableID* パラメーターの *eKind* メンバーに DBKIND_GUID_NAME を設定し、CLSID_ROWSET_INMEMORY を *guid* メンバーとして指定します。 IOpenRowset:: OpenRowset を使用する場合は、テーブル値パラメーターのサーバーの型名を*Ptableid*の*pwszName*メンバーに指定する必要があります。 テーブル値パラメーターの行セット オブジェクトは、標準の SQL Server Native Client OLE DB プロバイダー オブジェクトと同様に動作します。  
   
 ```  
 const GUID CLSID_ROWSET_TVP =   
@@ -47,7 +45,7 @@ CoType RowsetTVP
 };  
 ```  
   
-## <a name="dbtypetable"></a>DBTYPE_TABLE  
+## <a name="dbtype_table"></a>DBTYPE_TABLE  
  新しい型 DBTYPE_TABLE はテーブル型を表します。 この型は、DBTYPE を必要とするさまざまな OLE DB インターフェイスのテーブル値パラメーターを示します。  
   
 ```  
@@ -59,10 +57,10 @@ CoType RowsetTVP
  DBTYPE_TABLE とその他の型との間の変換はサポートされません。 IConvertType::CanConvert は、DBTYPE_TABLE から DBTYPE_TABLE への変換以外の要求に対するサポートされない変換について、S_FALSE を返します。 これは、Command オブジェクトの DBCONVERTFLAGS_PARAMETER を想定します。  
   
 ## <a name="methods"></a>メソッド  
- テーブル値パラメーターをサポートする OLE DB メソッドについては、次を参照してください。 [OLE DB Table-Valued パラメーター型のサポート&#40;メソッド&#41;](../../relational-databases/native-client-ole-db-table-valued-parameters/ole-db-table-valued-parameter-type-support-methods.md)します。  
+ テーブル値パラメーターをサポートする OLE DB メソッドの詳細については、「[テーブル値パラメーターの&#40;型&#41;のサポートメソッドの OLE DB](../../relational-databases/native-client-ole-db-table-valued-parameters/ole-db-table-valued-parameter-type-support-methods.md)」を参照してください。  
   
-## <a name="properties"></a>[プロパティ]  
- テーブル値パラメーターをサポートする OLE DB プロパティについては、次を参照してください。 [OLE DB Table-Valued パラメーター型のサポート&#40;プロパティ&#41;](../../relational-databases/native-client-ole-db-table-valued-parameters/ole-db-table-valued-parameter-type-support-properties.md)します。  
+## <a name="properties"></a>プロパティ  
+ テーブル値パラメーターをサポートする OLE DB プロパティの詳細については、「[テーブル値パラメーターの&#40;型&#41;サポートプロパティの OLE DB](../../relational-databases/native-client-ole-db-table-valued-parameters/ole-db-table-valued-parameter-type-support-properties.md)」を参照してください。  
   
 ## <a name="see-also"></a>参照  
  [テーブル値パラメーター &#40;OLE DB&#41;](../../relational-databases/native-client-ole-db-table-valued-parameters/table-valued-parameters-ole-db.md)   

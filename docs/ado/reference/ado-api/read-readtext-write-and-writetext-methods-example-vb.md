@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 699b73f7-04f9-4d46-94b2-6cb12be6de56
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 7cf21d0f932708b23978bb36db5c800358a6fa90
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: f77b2d395b76b537107ad87cf1487bb4d25a430c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47731005"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67931442"
 ---
 # <a name="read-readtext-write-and-writetext-methods-example-vb"></a>読み取り、ReadText、Write、および WriteText メソッドの例 (VB)
 この例では、両方のテキストにテキスト ボックスの内容を読み取る[Stream](../../../ado/reference/ado-api/stream-object-ado.md)とバイナリ**Stream**します。 その他のプロパティと示されているメソッドが含まれて[位置](../../../ado/reference/ado-api/position-property-ado.md)、[サイズ](../../../ado/reference/ado-api/size-property-ado-parameter.md)、 [Charset](../../../ado/reference/ado-api/charset-property-ado.md)、および[SetEOS](../../../ado/reference/ado-api/seteos-method.md)します。  
@@ -111,7 +110,7 @@ End Sub
 'EndReadVB  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [Charset プロパティ (ADO)](../../../ado/reference/ado-api/charset-property-ado.md)   
  [Position プロパティ (ADO)](../../../ado/reference/ado-api/position-property-ado.md)   
  [Read メソッド](../../../ado/reference/ado-api/read-method.md)   

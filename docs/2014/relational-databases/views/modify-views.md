@@ -16,11 +16,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: ef528fb128c81de1d2be07196dfe2a20ceaebba4
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54135082"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68196397"
 ---
 # <a name="modify-views"></a>ビューの変更
   [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] では、ビューの定義後にビューの削除や再作成を行わずに、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] または [!INCLUDE[tsql](../../includes/tsql-md.md)]を使用して、ビューの名前または定義を変更できます。  
@@ -66,7 +66,7 @@ ms.locfileid: "54135082"
   
     1.  追加または削除する要素のチェック ボックスをオンまたはオフにします。  
   
-    2.  ダイアグラム ペイン内で右クリックし、**[テーブルの追加]** を選択します。次に、**[テーブルの追加]** ダイアログ ボックスで、ビューに追加する列を選択します。  
+    2.  ダイアグラム ペイン内で右クリックし、 **[テーブルの追加]** を選択します。次に、 **[テーブルの追加]** ダイアログ ボックスで、ビューに追加する列を選択します。  
   
     3.  削除するテーブルのタイトル バーを右クリックし、 **[削除]** をクリックします。  
   

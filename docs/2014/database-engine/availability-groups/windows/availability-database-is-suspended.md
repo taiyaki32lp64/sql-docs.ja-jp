@@ -15,11 +15,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 21d788db62fe39b86eb801c028450c16cf845845
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53355423"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62815767"
 ---
 # <a name="availability-database-is-suspended"></a>可用性データベースが中断されている
     
@@ -28,7 +28,7 @@ ms.locfileid: "53355423"
 |||  
 |-|-|  
 |**ポリシー名**|可用性データベースの中断状態|  
-|**問題点**|可用性データベースが中断されています。|  
+|**問題**|可用性データベースが中断されています。|  
 |**カテゴリ**|**警告**|  
 |**ファセット**|可用性データベース|  
   

@@ -10,17 +10,17 @@ ms.assetid: 5880fbd9-a23e-464a-8b44-09750eeb2dad
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: f5d3a9786f2971abebd96624c5214f7717c450a1
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 9e70ab55fedcc5053cf82a78c040c850a23824eb
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48154722"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63075198"
 ---
 # <a name="native-compilation-of-tables-and-stored-procedures"></a>テーブルとストアド プロシージャのネイティブ コンパイル
   インメモリ OLTP により、ネイティブ コンパイルという概念が導入されています。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] はメモリ最適化テーブルにアクセスするストアド プロシージャをネイティブにコンパイルできます。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] はメモリ最適化テーブルをネイティブにコンパイルすることもできます。 ネイティブ コンパイルは、(従来の) 解釈された [!INCLUDE[tsql](../../includes/tsql-md.md)]よりも高速なデータ アクセスと効率的なクエリ実行を可能にします。 テーブルとストアド プロシージャのネイティブ コンパイルを実行すると DLL が生成されます。  
   
- メモリ最適化テーブル型のネイティブ コンパイルもサポートされています。 詳細については、次を参照してください。[メモリ最適化テーブル変数](../../database-engine/memory-optimized-table-variables.md)します。  
+ メモリ最適化テーブル型のネイティブ コンパイルもサポートされています。 詳しくは、「 [Memory-Optimized Table Variables](../../database-engine/memory-optimized-table-variables.md)」をご覧ください。  
   
  ネイティブ コンパイルとは、プログラミングの構造をネイティブ コードに変換する処理であり、追加のコンパイルまたは解釈を必要としないプロセッサ命令で構成されます。  
   
@@ -32,7 +32,7 @@ ms.locfileid: "48154722"
 ## <a name="maintenance-of-in-memory-oltp-dlls"></a>インメモリ OLTP DLL のメンテナンス  
  次のクエリは、サーバーのメモリに現在読み込まれているすべてのテーブルとストアド プロシージャ DLL を示します。  
   
-```tsql  
+```sql  
 SELECT name, description FROM sys.dm_os_loaded_modules  
 where description = 'XTP Native DLL'  
 ```  
@@ -50,7 +50,7 @@ where description = 'XTP Native DLL'
   
  データベースとメモリ最適化テーブルを作成する、次のサンプル スクリプトについて考えてみます。  
   
-```tsql  
+```sql  
 use master  
 go  
 create database db1  
@@ -84,7 +84,7 @@ go
   
  前の例のテーブル t1 に行を挿入する、次のサンプル ストアド プロシージャについて考えてみます。  
   
-```tsql  
+```sql  
 create procedure dbo.native_sp  
 with native_compilation, schemabinding, execute as owner  
 as  
@@ -134,6 +134,6 @@ go
   
 ## <a name="see-also"></a>参照  
  [メモリ最適化テーブル](memory-optimized-tables.md)   
- [ネイティブ コンパイル ストアド プロシージャ](natively-compiled-stored-procedures.md)  
+ [Natively Compiled Stored Procedures](natively-compiled-stored-procedures.md)  
   
   

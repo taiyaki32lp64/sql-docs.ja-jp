@@ -12,15 +12,14 @@ helpviewer_keywords:
 - queries [XML in SQL Server], nested FOR XML
 - nested FOR XML queries
 ms.assetid: 7604161a-a958-446d-b102-7dee432979d0
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: cb14ca08bdea68f307a0f455fd79707f64564ead
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: MightyPen
+ms.author: genemi
+ms.openlocfilehash: 91ba54ce9141cd0e891e442c5cb89aab02dec1f2
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47810442"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68001721"
 ---
 # <a name="use-nested-for-xml-queries"></a>入れ子になった FOR XML クエリの使用
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -85,7 +84,7 @@ SELECT  (SELECT ProductModelID, Name
 ```  
   
 ## <a name="returning-inner-for-xml-query-results-to-outer-queries-as-xml-type-instances"></a>内側の FOR XML クエリの結果を外側のクエリに xml 型インスタンスとして返す  
- 入れ子構造の `FOR XML` クエリを記述して、内側のクエリの結果を **xml** 型で外側のクエリに返すことができます。 例 :  
+ 入れ子構造の `FOR XML` クエリを記述して、内側のクエリの結果を **xml** 型で外側のクエリに返すことができます。 例:  
   
 ```  
 SELECT Col1,   

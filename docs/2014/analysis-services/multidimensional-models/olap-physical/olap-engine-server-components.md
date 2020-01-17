@@ -1,12 +1,10 @@
 ---
-title: OLAP エンジンのサーバー コンポーネント |Microsoft Docs
+title: OLAP エンジンサーバーコンポーネント |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: analysis-services
 ms.topic: reference
 helpviewer_keywords:
 - Analysis Services, architecture
@@ -17,15 +15,15 @@ ms.assetid: 5193c976-9dcd-459c-abba-8c3c44e7a7f2
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: a4121fb0ad30b7593fcca384235ac4990fc54979
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 0537be8bda9c367fc381140183b10ddf383cf16a
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48164782"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68889523"
 ---
 # <a name="olap-engine-server-components"></a>OLAP エンジンのサーバー コンポーネント
-  サーバー コンポーネント[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]は、 **msmdsrv.exe**アプリケーション、Windows サービスとして実行されます。 このアプリケーションは、セキュリティ コンポーネント、XML for Analysis (XMLA) リスナー コンポーネント、クエリ プロセッサ コンポーネント、および次の機能を実行するその他多くの内部コンポーネントで構成されています。  
+  の[!INCLUDE[msCoName](../../../includes/msconame-md.md)] サーバー[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]コンポーネントは、Windows サービスとして実行される msmdsrv.exe アプリケーションです。 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] このアプリケーションは、セキュリティ コンポーネント、XML for Analysis (XMLA) リスナー コンポーネント、クエリ プロセッサ コンポーネント、および次の機能を実行するその他多くの内部コンポーネントで構成されています。  
   
 -   クライアントから受信したステートメントの解析  
   
@@ -50,10 +48,10 @@ ms.locfileid: "48164782"
   
  次の図は、[!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] コンポーネントのアーキテクチャを示しており、[!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] インスタンス内で実行されるすべての主要な要素と、インスタンスと連携するすべてのユーザー コンポーネントを含んでいます。 また、この図は、XML for Analysis (XMLA) リスナーと、HTTP または TCP のいずれかを使用する以外に、インスタンスにアクセスする方法がないことも示しています。  
   
- ![Analysis Services システムのアーキテクチャ ダイアグラム](../../../analysis-services/dev-guide/media/analysisservicessystemarchitecture.gif "Analysis Services システムのアーキテクチャ ダイアグラム")  
+ ![Analysis Services システムのアーキテクチャの図](https://docs.microsoft.com/analysis-services/analysis-services/dev-guide/media/analysisservicessystemarchitecture.gif "Analysis Services システムのアーキテクチャの図")  
   
 ## <a name="xmla-listener"></a>XMLA リスナー  
- XMLA リスナー コンポーネントでは、 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] とそのクライアントの間のすべての XMLA 通信が処理されます。 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] `Port`いるポートを指定する、msmdsrv.ini ファイルで構成設定を使用できます、[!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]インスタンスがリッスンします。 このファイルの 0 の値は、 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] が既定のポートをリッスンすることを示します。 特に指定がなければ、 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] では次の既定の TCP ポートが使用されます。  
+ XMLA リスナー コンポーネントでは、 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] とそのクライアントの間のすべての XMLA 通信が処理されます。 Msmdsrv.exe ファイルの[!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]構成設定を使用して、インスタンスがリッスンするポートを指定できます。 `Port` [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] このファイルの 0 の値は、 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] が既定のポートをリッスンすることを示します。 特に指定がなければ、 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] では次の既定の TCP ポートが使用されます。  
   
 |Port|説明|  
 |----------|-----------------|  
@@ -61,11 +59,11 @@ ms.locfileid: "48164782"
 |2382|[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]の他のインスタンスのリダイレクターです。|  
 |サーバーの起動時に動的に割り当てられます。|[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]の名前付きインスタンスです。|  
   
- 参照してください[Analysis Services のアクセスを許可するための Windows ファイアウォールの構成](../../instances/configure-the-windows-firewall-to-allow-analysis-services-access.md)の詳細。  
+ 詳細については[、「Analysis Services アクセスを許可するための Windows ファイアウォールの構成」を](../../instances/configure-the-windows-firewall-to-allow-analysis-services-access.md)参照してください。  
   
-## <a name="see-also"></a>参照  
- [オブジェクトの名前付け規則&#40;Analysis Services&#41;](object-naming-rules-analysis-services.md)   
- [物理アーキテクチャ&#40;Analysis Services - 多次元データ&#41;](understanding-microsoft-olap-physical-architecture.md)   
- [論理アーキテクチャ&#40;Analysis Services - 多次元データ&#41;](../olap-logical/understanding-microsoft-olap-logical-architecture.md)  
+## <a name="see-also"></a>関連項目  
+ [オブジェクトの名前&#40;付け規則 Analysis Services&#41;](object-naming-rules-analysis-services.md)   
+ [物理アーキテクチャ &#40;Analysis Services - 多次元データ&#41;](understanding-microsoft-olap-physical-architecture.md)   
+ [論理アーキテクチャ&#40;Analysis Services-多次元データ&#41;](../olap-logical/understanding-microsoft-olap-logical-architecture.md)  
   
   

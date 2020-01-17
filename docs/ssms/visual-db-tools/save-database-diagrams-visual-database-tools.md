@@ -12,15 +12,14 @@ helpviewer_keywords:
 - database diagrams [SQL Server], saving
 - diagrams [SQL Server], saving
 ms.assetid: 747357f2-007c-4586-a371-c7fbe6a2c288
-author: stevestein
-ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 96adc8b3f44c69a66aca46d6061d6ae2a673f33b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 3ab8a504582e215507bb24366f1e847b3b94de7c
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47740030"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68266910"
 ---
 # <a name="save-database-diagrams-visual-database-tools"></a>データベース ダイアグラムの保存 (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -28,7 +27,7 @@ ms.locfileid: "47740030"
   
 ### <a name="to-save-the-database-diagram"></a>データベース ダイアグラムを保存するには  
   
-1.  **[ファイル]** メニューの **[\<**_tablename_**> を保存]** をクリックします。  
+1.  **[ファイル]** メニューの **[\<** _tablename_ **> を保存]** をクリックします。  
   
 2.  このダイアグラムを初めて保存する場合は、 **[名前を付けて保存]** ダイアログ ボックスが表示されます。 ダイアグラムの名前を入力します。  
   

@@ -4,23 +4,22 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 helpviewer_keywords:
 - Office Data Connection (.odc) files
 - SharePoint integration [Reporting Services], shared data sources
 - .odc files
 ms.assetid: e8d6896d-f886-4390-8b5d-96f0a50c250c
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 54082236bed728d81d060b73ecdc03fb53d82825
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 983f60396f48e488b20e25f18751f615ded799ff
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56016600"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66106960"
 ---
 # <a name="use-an-office-data-connection-odc-with-reports-reporting-services-in-sharepoint-integrated-mode"></a>レポートで Office Data Connection (.odc) を使用する (Reporting Services の SharePoint 統合モード)
   限られたシナリオでは、既存の Office データ接続 (.odc) ファイルを使用して、[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] レポートに接続情報を提供できます。 共有データ ソースの作成時には、.rsds ファイルの代わりに .odc ファイルを使用できます。 レポート サーバーでは、.rsds ファイルの場合と同様に .odc ファイルを使用して、データ ソースの種類、接続文字列、および資格情報をファイルから読み取ります。  
@@ -93,7 +92,7 @@ ms.locfileid: "56016600"
   
 10. レポートでカスタム データ ソース情報を使用する場合は、 **[共有]** をクリックします。  
   
-11. **[データ ソース リンク]** で、参照ボタン (**[...]**) をクリックします。  
+11. **[データ ソース リンク]** で、参照ボタン ( **[...]** ) をクリックします。  
   
 12. アップロードする .odc ファイルを選択します。  
   

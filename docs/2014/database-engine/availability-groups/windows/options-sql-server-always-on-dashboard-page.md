@@ -13,11 +13,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 8672a9ea9eab9cda291576cf2336f8f3e7ba6f2a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48211992"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62789248"
 ---
 # <a name="options-sql-server-alwayson-dashboard-page"></a>オプション (SQLServer AlwaysOn、ダッシュ ボード ページ)
   使用して、 **SQL Server AlwaysOn ダッシュ ボード**のページ、 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]**オプション**AlwaysOn ダッシュ ボードを構成するダイアログ ボックス。  
@@ -37,7 +37,7 @@ ms.locfileid: "48211992"
  **ユーザー定義 AlwaysOn ポリシーを有効にします。**  
  AlwaysOn ポリシーを定義している場合は、このオプションをクリックしてポリシーを有効にします。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [AlwaysOn ダッシュボードの使用 &#40;SQL Server Management Studio&#41;](use-the-always-on-dashboard-sql-server-management-studio.md)  
   
   

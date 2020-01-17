@@ -15,11 +15,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: cc959fa8406453230ee133bf6183fa3dc1ba51f1
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53355792"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63190340"
 ---
 # <a name="before-installing-failover-clustering"></a>フェールオーバー クラスタリングをインストールする前に
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] フェールオーバー クラスターをインストールする前に、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] を実行するハードウェアとオペレーティング システムを選択する必要があります。 また、Windows Server フェールオーバー クラスタリング (WSFC) を構成し、ネットワーク、セキュリティ、およびフェールオーバー クラスターで実行するその他のソフトウェアに関する考慮事項を見直す必要があります。  
@@ -47,9 +47,9 @@ ms.locfileid: "53355792"
   
     -   .NET Framework 3.5 SP1 は [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] セットアップでインストールされなくなりましたが、古い Windows オペレーティング システムに [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] をインストールする際に必要になる場合があります。 詳細については、 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)][リリース ノート](https://go.microsoft.com/fwlink/?LinkId=296445)をインストールするには、Windows PowerShell が必要です。  
   
-    -   **[!INCLUDE[msCoName](../../../includes/msconame-md.md)] 更新プログラム パッケージ。** セットアップ中に、.NET Framework 4 のインストールによるコンピューターの再起動を回避するために[!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]セットアップが必要です、[!INCLUDE[msCoName](../../../includes/msconame-md.md)]更新をコンピューターにインストールします。  [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)] を Windows 7 SP1 または [!INCLUDE[firstref_longhorn](../../../includes/firstref-longhorn-md.md)] SP2 にインストールする場合、この更新プログラムは含まれています。 それより前の Windows オペレーティング システムにインストールする場合は、 [Windows Vista および Windows Server 2008 の .NET Framework 4.0 用 Microsoft Update](https://go.microsoft.com/fwlink/?LinkId=198093)からダウンロードしてください。  
+    -   **[!INCLUDE[msCoName](../../../includes/msconame-md.md)] 更新パッケージ:** セットアップ時に .NET Framework 4 のインストールによるコンピューターの再起動を回避するには、[!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] セットアップで [!INCLUDE[msCoName](../../../includes/msconame-md.md)] の更新プログラムをコンピューターにインストールする必要があります。  [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)] を Windows 7 SP1 または [!INCLUDE[firstref_longhorn](../../../includes/firstref-longhorn-md.md)] SP2 にインストールする場合、この更新プログラムは含まれています。 それより前の Windows オペレーティング システムにインストールする場合は、 [Windows Vista および Windows Server 2008 の .NET Framework 4.0 用 Microsoft Update](https://go.microsoft.com/fwlink/?LinkId=198093)からダウンロードしてください。  
   
-    -   .NET framework 4:セットアップでは、クラスター化されたオペレーティング システムに .NET Framework 4 をインストールします。 インストール時間を短縮するには、セットアップを実行する前に .NET Framework 4 をインストールすることを検討してください。  
+    -   .NET Framework 4:セットアップでは、クラスター化されたオペレーティング システムに対して .NET Framework 4 がインストールされます。 インストール時間を短縮するには、セットアップを実行する前に .NET Framework 4 をインストールすることを検討してください。  
   
     -   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] セットアップ サポート ファイル。 これらのファイルは、 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] インストール メディアにある SqlSupport.msi を実行してインストールできます。  
   
@@ -190,7 +190,7 @@ ms.locfileid: "53355792"
   
 |[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] のエディション|[!INCLUDE[firstref_longhorn](../../../includes/firstref-longhorn-md.md)] Enterprise|[!INCLUDE[firstref_longhorn](../../../includes/firstref-longhorn-md.md)] Datacenter Server|[!INCLUDE[winserver2008r2](../../../includes/winserver2008r2-md.md)] Enterprise|[!INCLUDE[winserver2008r2](../../../includes/winserver2008r2-md.md)] Datacenter Server|  
 |---------------------------------------|------------------------------------------------|-------------------------------------------------------|----------------------------------------------|-----------------------------------------------------|  
-|[!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)] Enterprise (64 ビット) x64<sup>1</sup>|はい|はい|はい<sup>2</sup>|はい<sup>2</sup>|  
+|[!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)] Enterprise (64 ビット) x64<sup>1</sup>|[はい]|はい|はい<sup>2</sup>|はい<sup>2</sup>|  
 |[!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)] Enterprise (32 ビット)|はい|はい|||  
 |[!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] Developer (64 ビット)|はい|はい|はい <sup>2</sup>|はい <sup>2</sup>|  
 |[!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] Developer (32 ビット)|はい|はい|||  
@@ -264,7 +264,7 @@ ms.locfileid: "53355792"
   
   
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [Hardware and Software Requirements for Installing SQL Server 2014](../../install/hardware-and-software-requirements-for-installing-sql-server.md)   
  [システム構成チェッカーの検査パラメーター](../../../database-engine/install-windows/check-parameters-for-the-system-configuration-checker.md)   
  [フェールオーバー クラスター インスタンスの管理とメンテナンス](../windows/failover-cluster-instance-administration-and-maintenance.md)  

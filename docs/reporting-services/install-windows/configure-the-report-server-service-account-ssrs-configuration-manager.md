@@ -1,19 +1,18 @@
 ---
 title: レポート サーバー サービス アカウントの構成 (SSRS 構成マネージャー) | Microsoft Docs
-author: markingmyname
-ms.author: maghan
-manager: kfile
+author: maggiesMSFT
+ms.author: maggies
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.topic: conceptual
 ms.custom: seodec18
 ms.date: 12/10/2018
-ms.openlocfilehash: 06ac6b8fb0c24751439d955b32eb93d9447bdf7c
-ms.sourcegitcommit: 40c3b86793d91531a919f598dd312f7e572171ec
-ms.translationtype: HT
+ms.openlocfilehash: 3cf868f9fb89bf6daa20ae6977bf1111649d46c1
+ms.sourcegitcommit: 312b961cfe3a540d8f304962909cd93d0a9c330b
+ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53328842"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73594080"
 ---
 # <a name="configure-the-report-server-service-account-ssrs-configuration-manager"></a>レポート サーバー サービス アカウントの構成 (SSRS 構成マネージャー)
 
@@ -21,7 +20,7 @@ ms.locfileid: "53328842"
   
 ## <a name="initial-configuration"></a>初期構成
 
- レポート サーバー サービスのアカウントは、セットアップ時に定義されます。 このサービスは、ドメイン ユーザー アカウントまたは **Virtual Service Account**などのビルトイン アカウントで実行できます。 既定のアカウントはありません。インストール ウィザードの [**Service Accounts**] ページで指定するアカウントが、レポート サーバー サービスの初期アカウントになります。  
+ レポート サーバー サービスのアカウントは、セットアップ時に定義されます。 このサービスは、ドメイン ユーザー アカウントまたは **Virtual Service Account**などのビルトイン アカウントで実行できます。 既定のアカウントはありません。インストール ウィザードの **[Service Accounts]** ページで指定するアカウントが、レポート サーバー サービスの初期アカウントになります。  
   
 > [!IMPORTANT]  
 > レポート サーバー Web サービスと [!INCLUDE[ssRSWebPortal-Non-Markdown](../../includes/ssrswebportal-non-markdown-md.md)] は異なる [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] アプリケーションですが、同一のレポート サーバー プロセス ID の単一のサービス アーキテクチャで実行されます。
@@ -37,7 +36,7 @@ ms.locfileid: "53328842"
   
 - レポート サーバー データベースをホストするために使用される [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] インスタンスのログイン権限を自動的に更新します。 新しいアカウントは **RSExecRole**に追加されます。  
   
-     古いアカウントのデータベース ログインは自動的に削除されません。 使用されなくなったするアカウントは削除するようにしてください。 詳細については、SQL Server オンラインブックの「[レポート サーバー データベースの管理 &#40;SSRS ネイティブ モード&#41;](../../reporting-services/report-server/administer-a-report-server-database-ssrs-native-mode.md)」を参照してください。  
+     古いアカウントのデータベース ログインは自動的に削除されません。 使用されなくなったするアカウントは削除するようにしてください。 詳細については、「[レポートサーバーデータベース&#40;の SSRS ネイティブ&#41;モードの管理](../../reporting-services/report-server/administer-a-report-server-database-ssrs-native-mode.md)」を参照してください。  
   
      新しいサービス アカウントにデータベース権限が与えられるのは、そのサービス アカウントを最初に使用するようにレポート サーバー データベース接続を構成した場合に限られます。 ドメイン ユーザー アカウントまたは [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データベース ログインを使用するようにレポート サーバー データベース接続を構成した場合は、サービス アカウントを更新しても接続情報には影響しません。  
   
@@ -60,7 +59,7 @@ ms.locfileid: "53328842"
   
 5. 対称キーをバックアップするかどうかを確認するメッセージが表示されたら、対称キーのバックアップ用のファイル名と場所を入力し、ファイルをロックおよびロック解除するためのパスワードを入力して **[OK]** をクリックします。  
   
-6. レポート サーバーがサービス アカウントを使用してレポート サーバー データベースに接続する場合は、新しいアカウントまたはパスワードを使用するように接続情報が更新されます。 接続情報を更新するには、データベースに接続する必要があります。  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **[データベース接続]** ダイアログ ボックスが表示されたら、データベースに接続する権限を持つ資格情報を入力し、 **[OK]** などのビルトイン アカウントで実行できます。  
+6. レポート サーバーがサービス アカウントを使用してレポート サーバー データベースに接続する場合は、新しいアカウントまたはパスワードを使用するように接続情報が更新されます。 接続情報を更新するには、データベースに接続する必要があります。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **[データベース接続]** ダイアログ ボックスが表示されたら、データベースに接続する権限を持つ資格情報を入力し、 **[OK]** などのビルトイン アカウントで実行できます。  
   
 7. 対称キーを復元するかどうかを確認するメッセージが表示されたら、手順 5. で指定したパスワードを入力し、 **[OK]** をクリックします。  
   

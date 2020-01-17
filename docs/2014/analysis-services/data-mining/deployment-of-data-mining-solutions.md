@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - mining models [Analysis Services], deploying
@@ -17,12 +16,12 @@ ms.assetid: d83effc7-437d-42e9-8ac3-b65f79e27043
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 50cd0b4e2336b20ab12b8c5e6fda6615af03abd5
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 7dc221f6a81281970a9ad62ba7b16397e40e0648
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48087642"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66084721"
 ---
 # <a name="deployment-of-data-mining-solutions"></a>データ マイニング ソリューションの配置
   データ マイニング プロセスの最後の手順は、実稼働環境へのモデルの配置です。 配置は、モデルをユーザーが使用できるようにし、次のようなタスクを実行できるようになるという点で重要です。  
@@ -51,7 +50,7 @@ ms.locfileid: "48087642"
 ##  <a name="bkmk_Reqs"></a> データ マイニング ソリューションの配置の要件  
  ソリューションの配置先となる [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] のインスタンスは、多次元オブジェクトとデータ マイニング オブジェクトをサポートするモードで実行されている必要があります。つまり、テーブル モデルや PowerPivot データをホストするインスタンスにデータ マイニング オブジェクトを配置することはできません。  
   
- したがって、Visual Studio でデータ マイニング ソリューションを作成するときは、**[Analysis Services 多次元およびデータ マイニング プロジェクト]** テンプレートを必ず使用してください。  
+ したがって、Visual Studio でデータ マイニング ソリューションを作成するときは、 **[Analysis Services 多次元およびデータ マイニング プロジェクト]** テンプレートを必ず使用してください。  
   
  ソリューションを配置すると、データ マイニングに使用されるオブジェクトが、指定された [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] インスタンスに作成されます。作成先は、ソリューション ファイルと同じ名前のデータベースになります。  
   
@@ -78,13 +77,13 @@ ms.locfileid: "48087642"
   
  モデルがデータ ソースとしてキューブを使用している場合、モデルおよびそれをサポートしているキューブ データを移動する方法の詳細については、このトピックを参照してください。  
   
- [Analysis Services プロジェクトの配置&#40;SSDT&#41;](../multidimensional-models/deploy-analysis-services-projects-ssdt.md)  
+ [Analysis Services プロジェクトの配置 &#40;SSDT&#41;](../multidimensional-models/deploy-analysis-services-projects-ssdt.md)  
   
  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] プロジェクトの配置についての一般的な情報を提供し、プロジェクト構成の一部として設定できるプロパティについて説明しています。  
   
 ## <a name="see-also"></a>参照  
  [多次元モデル オブジェクトの処理](../multidimensional-models/processing-a-multidimensional-model-analysis-services.md)   
  [データ マイニング クエリ インターフェイス](data-mining-query-tools.md)   
- [処理の要件および注意事項&#40;データ マイニング&#41;](processing-requirements-and-considerations-data-mining.md)  
+ [処理の要件および注意事項 &#40;データ マイニング&#41;](processing-requirements-and-considerations-data-mining.md)  
   
   

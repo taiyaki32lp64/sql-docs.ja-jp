@@ -1,51 +1,51 @@
 ---
-title: Machine learning - SQL Server Machine Learning Services のデータ コレクションをトラブルシューティングします。
+title: データ収集のトラブルシューティング
+description: 問題を自分で、または Microsoft カスタマー サポートの支援を受けながら解決するときに使用する必要があるデータ収集方法について説明します。
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 02/28/2019
+ms.date: 07/30/2019
 ms.topic: conceptual
-author: HeidiSteen
-ms.author: heidist
-manager: cgronlun
-ms.openlocfilehash: edfacb2e4d519d4f709d352f52645526cb341fad
-ms.sourcegitcommit: 2533383a7baa03b62430018a006a339c0bd69af2
-ms.translationtype: MT
+author: dphansen
+ms.author: davidph
+ms.custom: seo-lt-2019
+monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
+ms.openlocfilehash: 15c570594f84bf8d1d61abac4bc4e4c372f18784
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57017938"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73727606"
 ---
-# <a name="troubleshoot-data-collection-for-machine-learning"></a>Machine learning のデータ コレクションをトラブルシューティングします。
+# <a name="troubleshoot-data-collection-for-machine-learning"></a>機械学習のためのデータ収集のトラブルシューティング
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-この記事では、自分で問題を解決または Microsoft の顧客のヘルプをサポートするときに使用する必要があります、データの収集手段について説明します。
+この記事では、問題を自分で、または Microsoft カスタマー サポートの支援を受けながら解決するときに使用する必要があるデータ収集方法について説明します。
 
-**適用対象:** SQL Server 2016 R Services、SQL Server 2017 の Machine Learning サービス (R および Python)
+## <a name="sql-server-version-and-edition"></a>SQL Server のバージョンおよびエディション
 
-## <a name="sql-server-version-and-edition"></a>SQL Server のバージョンとエディション
+SQL Server 2016 R Services は、R の統合サポートが含まれる SQL Server の最初のリリースです。 SQL Server 2016 Service Pack 1 (SP1) には、外部スクリプトを実行する機能など、いくつかの重要な機能強化が含まれています。 SQL Server 2016 を使用している場合は、SP1 以降をインストールすることを検討してください。
 
-SQL Server 2016 R Services は、R の統合サポートするように SQL Server の最初のリリースです。 SQL Server 2016 Service Pack 1 (SP1) では、外部スクリプトを実行する機能など、いくつかの主な強化されています。 SQL Server 2016 のカスタマーの場合は、SP1 のインストールを検討する必要がありますまたはそれ以降。
+SQL Server 2017 以降には Python 言語が統合されています。 以前のリリースでは、Python 機能を統合できません。
 
-SQL Server 2017 では、Python 言語の統合を追加します。 以前のリリースでは、Python 機能の統合を取得できません。
+エディションとバージョンの取得については、[SQL Server バージョン](https://social.technet.microsoft.com/wiki/contents/articles/783.sql-server-versions.aspx#Service_Pack_editions)ごとのビルド番号が一覧表示されている、こちらの記事を参照してください。
 
-エディションとバージョンでは、アシスタンスは、この記事では、それぞれのビルド番号の一覧を参照してください、 [SQL Server のバージョン](https://social.technet.microsoft.com/wiki/contents/articles/783.sql-server-versions.aspx#Service_Pack_editions)します。
+使用している SQL Server のエディションによっては、一部の機械学習機能が使用できないか、制限される場合があります。 次の記事では、Enterprise、Developer、Standard、および Express の各エディションの機械学習機能の一覧を示します。
 
-使用している SQL Server のエディション、によっては、使用不可能、または制限付きな機械学習機能可能性があります。 Enterprise、Developer、Standard、および Express エディションでの機械学習機能の次の記事の一覧。
-
-* [エディションと SQL Server のサポートされる機能](https://docs.microsoft.com/sql/sql-server/editions-and-components-of-sql-server-2016)
-* [SQL Server のエディションでの R と Python の機能](r/differences-in-r-features-between-editions-of-sql-server.md)
+* [SQL Server の各エディションとサポートされている機能](https://docs.microsoft.com/sql/sql-server/editions-and-components-of-sql-server-2016)
+* [SQL Server のエディションごとの R および Python の機能](r/differences-in-r-features-between-editions-of-sql-server.md)
 
 ## <a name="r-language-and-tool-versions"></a>R 言語とツールのバージョン
 
-一般に、R Services の機能または Machine Learning サービスの機能を選択するときにインストールされている Microsoft R のバージョンは、SQL Server のビルド番号によって決定されます。 アップグレードまたは SQL Server 修正プログラムを適用した場合のアップグレードまたはその R コンポーネントの修正プログラムを適用もする必要があります。
+一般に、R Services 機能または Machine Learning Services 機能を選択したときにインストールされる Microsoft R のバージョンは、SQL Server のビルド番号によって決まります。 SQL Server をアップグレードまたは修正する場合は、その R コンポーネントもアップグレードまたは修正する必要があります。
 
-リリースと R コンポーネントのダウンロードへのリンクの一覧は、次を参照してください。[インターネットへのアクセスなしで machine learning コンポーネントをインストール](https://docs.microsoft.com/sql/advanced-analytics/r/installing-ml-components-without-internet-access)します。 インターネットにアクセスできるコンピューターで R の必要なバージョンが識別され、自動的にインストールされます。
+R コンポーネントのダウンロードに関するリリースとリンクの一覧については、[インターネット アクセスを使用しない機械学習コンポーネントのインストール](https://docs.microsoft.com/sql/advanced-analytics/r/installing-ml-components-without-internet-access)に関する記事を参照してください。 インターネットにアクセスできるコンピューターでは、必要なバージョンの R が自動的に識別され、インストールされます。
 
-SQL Server データベース エンジンのバインドと呼ばれるプロセスでの R Server コンポーネントを個別にアップグレードすることになります。 そのため、SQL Server で R コードを実行するときに使用する R のバージョンがインストールされているバージョンの SQL Server と R の最新のバージョンに、サーバーを移行したかどうかに応じて異なる場合があります。
+バインドと呼ばれるプロセスでは、R Server コンポーネントを SQL Server データベース エンジンとは別にアップグレードすることができます。 そのため、SQL Server で R コードを実行するときに使用する R のバージョンは、インストールされている SQL Server のバージョンと、サーバーを最新の R バージョンに移行したかどうかによって異なる場合があります。
 
-### <a name="determine-the-r-version"></a>R のバージョンを確認します。
+### <a name="determine-the-r-version"></a>R バージョンを確認する
 
-R のバージョンを確認する最も簡単な方法では、次のステートメントを実行してランタイム プロパティを取得します。
+R バージョンを確認する最も簡単な方法は、次のようなステートメントを実行してランタイム プロパティを取得することです。
 
 ```sql
 exec sp_execute_external_script
@@ -68,9 +68,9 @@ WITH RESULT SETS ((PropertyName nvarchar(100), PropertyValue nvarchar(4000)));
 ```
 
 > [!TIP]
-> R Services が動作していない場合は、RGui から R スクリプトの部分のみを実行してください。
+> R Services が動作していない場合は、RGui から R スクリプトの部分のみを実行してみてください。
 
-最後の手段としてインストールされているバージョンを確認するサーバー上のファイルを開くことができます。 これを行うには、R ランタイムと現在の作業ディレクトリの場所を取得する、rlauncher.config ファイルを見つけます。 任意のプロパティを誤って変更しないように、ファイルのコピーを開くことをお勧めします。
+最後の手段として、サーバー上のファイルを開いて、インストールされているバージョンを確認できます。 これを行うには、rlauncher.config ファイルを見つけて、R ランタイムの場所と現在の作業ディレクトリを調べます。 プロパティを誤って変更しないように、ファイルのコピーを作成して開くことをお勧めします。
 
 * SQL Server 2016
   
@@ -80,7 +80,7 @@ WITH RESULT SETS ((PropertyName nvarchar(100), PropertyValue nvarchar(4000)));
   
   `C:\Program Files\Microsoft SQL Server\MSSQL14.<instance_name>\MSSQL\Binn\rlauncher.config`
 
-R バージョンと RevoScaleR のバージョンを取得するには、R コマンド プロンプトを開くか、インスタンスに関連付けられている RGui を開きます。
+R バージョンと RevoScaleR バージョンを調べるには、R のコマンド プロンプトを開くか、インスタンスに関連する RGui を開きます。
 
 * SQL Server 2016
   
@@ -90,7 +90,7 @@ R バージョンと RevoScaleR のバージョンを取得するには、R コ�
   
   `C:\Program Files\Microsoft SQL Server\MSSQL14.<instance_name>\R_SERVICES\bin\x64\RGui.exe`
 
-R コンソールには、起動時にバージョン情報が表示されます。 たとえば、次のバージョンは、SQL Server 2017 の既定の構成を表します。
+R コンソールには、スタートアップ時にバージョン情報が表示されます。 たとえば、次のバージョンは、SQL Server 2017 の既定の構成を表しています。
 
     *Microsoft R Open 3.3.3*
 
@@ -102,7 +102,7 @@ R コンソールには、起動時にバージョン情報が表示されます
 
 ## <a name="python-versions"></a>Python のバージョン
 
-Python バージョンを取得するいくつかの方法はあります。 最も簡単な方法は、Management Studio またはその他の SQL クエリ ツールからこのステートメントの実行には。
+Python のバージョンを調べるには、いくつかの方法があります。 最も簡単な方法は、Management Studio またはその他の SQL クエリ ツールからこのステートメントを実行することです。
 
 ```sql
 -- Get Python runtime properties:
@@ -119,46 +119,46 @@ OutputDataSet = pandas.DataFrame(
 with WITH RESULT SETS (SQL keywords) ((PropertyName nvarchar(100), PropertyValue nvarchar(4000)));
 ```
 
-Machine Learning サービスが実行されていない場合は、pythonlauncher.config ファイルを調べることで、インストールされた Python バージョンを指定できます。 任意のプロパティを誤って変更しないように、ファイルのコピーを開くことをお勧めします。
+Machine Learning Services が実行されていない場合は、pythonlauncher.config ファイルを参照して、インストールされている Python のバージョンを確認できます。 プロパティを誤って変更しないように、ファイルのコピーを作成して開くことをお勧めします。
 
-1. SQL server 2017 ののみ。 `C:\Program Files\Microsoft SQL Server\MSSQL14.<instance_name>\MSSQL\Log\ExtensibilityLog\pythonlauncher.config `
-2. 値を取得**PYTHONHOME**します。
+1. SQL Server 2017 の場合のみ: `C:\Program Files\Microsoft SQL Server\MSSQL14.<instance_name>\MSSQL\Log\ExtensibilityLog\pythonlauncher.config`
+2. **PYTHON HOME** の値を取得します。
 3. 現在の作業ディレクトリの値を取得します。
 
 > [!NOTE]
-> SQL Server 2017 に Python および R の両方をインストールする場合は、R と Python 言語用に作業ディレクトリとワーカー アカウントのプールが共有されます。
+> SQL Server 2017 に Python と R の両方をインストールした場合、作業ディレクトリとワーカー アカウントのプールは、R 言語と Python 言語で共有されます。
 
-## <a name="are-multiple-instances-of-r-or-python-installed"></a>R の複数のインスタンスまたは Python がインストールされているか。
+## <a name="are-multiple-instances-of-r-or-python-installed"></a>R または Python の複数のインスタンスがインストールされていますか?
 
-R ライブラリの 1 つ以上のコピーがコンピューターにインストールされているかどうかを確認します。 この重複は場合に発生します。
+R ライブラリの複数のコピーがコンピューターにインストールされているかどうかを確認します。 この重複は、次の場合に発生する可能性があります。
 
-* セットアップ時に、R Services (In-database) と R Server (スタンドアロン) の両方を選択します。
-* SQL Server だけでなく、Microsoft R Client をインストールするとします。
-* Visual Studio、R Studio、Microsoft R Client、または別の R IDE の R ツールを使用して、異なる一連の R ライブラリがインストールされました。
-* コンピューターは、SQL Server の複数のインスタンスをホストし、1 つ以上のインスタンスは、machine learning を使用します。
+* セットアップ中に、R Services (データベース内) と R Server (スタンドアロン) の両方を選択した。
+* SQL Server に加えて Microsoft R Client をインストールした。
+* R Tools for Visual Studio、R Studio、Microsoft R Client、または別の R IDE を使用して、別の R ライブラリ セットをインストールした。
+* コンピューターが SQL Server の複数のインスタンスをホストし、複数のインスタンスが機械学習を使用する。
 
-Python に同じ条件が適用されます。
+Python にも同じ条件が適用されます。
 
-複数のライブラリまたはランタイムがインストールされていることを確認する場合は、SQL Server インスタンスによって使用されている Python や R ランタイムに関連付けられているエラーのみが発生することを確認します。
+複数のライブラリまたはランタイムがインストールされていることが判明した場合は、SQL Server インスタンスで使用されている Python または R ランタイムに関連するエラーのみを取得してください。
 
 ## <a name="origin-of-errors"></a>エラーの発生元
 
-R コードを実行しようとしたときに表示されるエラーは、次のソースのいずれかから取得できます。
+R コードを実行しようとすると、次のいずれかのソースからエラーが発生する可能性があります。
 
-* ストアド プロシージャ sp_execute_external_script を含む、SQL Server データベース エンジン
-* SQL Server スタート パッドの信頼
-* Extensibility framework、R と Python ランチャー サテライト プロセスなどの他のコンポーネント
-* Microsoft のオープンなどのプロバイダーは、データベースに接続 (ODBC)
+* SQL Server データベース エンジン (ストアド プロシージャ sp_execute_external_script を含む)
+* SQL Server Trusted Launchpad
+* 拡張機能フレームワークのその他のコンポーネント (R および Python ランチャー、サテライト プロセスを含む)
+* Microsoft Open Database Connectivity (ODBC) などのプロバイダー
 * R 言語
 
-最初にサービスを使用する場合は、サービスから発信されたどのメッセージを通知する困難ができます。 メッセージが表示されていたコンテキストだけでなく、正確なメッセージ文字列をキャプチャすることをお勧めします。 クライアント ソフトウェアを使用して machine learning のコードを実行するのに注意してください。
+サービスを初めて使用するときは、どのメッセージがどのサービスから発信されたものかを判断するのが難しい場合があります。 正確なメッセージ テキストだけでなく、メッセージが表示されたコンテキストも取得することをお勧めします。 機械学習コードを実行するために使用しているクライアント ソフトウェアを確認します。
 
-* Management Studio を使用しているでしょうか。 外部のアプリケーションか。
-* ストアド プロシージャ内で直接またはリモート クライアントでは、R コードを実行する、ですか。
+* Management Studio を使用していますか? 外部アプリケーションですか?
+* R コードをリモート クライアントで実行していますか、それともストアド プロシージャで直接実行していますか?
 
-## <a name="sql-server-log-files"></a>SQL Server ログ ファイル
+## <a name="sql-server-log-files"></a>SQL Server のログ ファイル
 
-最新の SQL Server エラー ログを取得します。 エラー ログの完全なセットは、次の既定のログ ディレクトリからのファイルで構成されます。
+最新の SQL Server ERRORLOG を取得します。 エラー ログの完全なセットは、次の既定のログ ディレクトリのファイルで構成されます。
 
 * SQL Server 2016
   
@@ -171,13 +171,13 @@ R コードを実行しようとしたときに表示されるエラーは、次
 > [!NOTE]
 > 正確なフォルダー名は、インスタンス名によって異なります。
 
-## <a name="errors-returned-by-spexecuteexternalscript"></a>Sp_execute_external_script から返されるエラー
+## <a name="errors-returned-by-sp_execute_external_script"></a>sp_execute_external_script によって返されるエラー
 
-Sp_execute_external_script コマンドを実行するときに存在する場合、返されたエラーの完全なテキストを取得します。
+sp_execute_external_script コマンドの実行時に返されるエラー (存在する場合) の完全なテキストを取得します。
 
-R または Python の問題を考慮の対象から削除するには、このスクリプトは、R または Python のランタイムを起動し、データに前後へ渡すを実行できます。
+R または Python の問題を考慮の対象から除外するには、このスクリプトを実行します。これにより、R または Python ランタイムが起動し、データをやり取りします。
 
-**R 用**
+**R の場合**
 
 ```sql
 exec sp_execute_external_script @language =N'R',  
@@ -187,7 +187,7 @@ with result sets (([hello] int not null));
 go
 ```
 
-**Python 用**
+**Python の場合**
 
 ```sql
 exec sp_execute_external_script @language =N'Python',  
@@ -197,9 +197,9 @@ with result sets (([hello] int not null));
 go
 ```
 
-## <a name="errors-generated-by-the-extensibility-framework"></a>機能拡張フレームワークによって生成されたエラー
+## <a name="errors-generated-by-the-extensibility-framework"></a>拡張機能フレームワークによって生成されるエラー
 
-SQL Server では、外部スクリプト言語のランタイムに個別のログを生成します。 Python や R 言語によっては、これらのエラーは生成されません。 言語固有のランチャーとそのサテライト プロセスなど、SQL Server の機能拡張コンポーネントから生成されます。
+SQL Server では、外部スクリプト言語ランタイムごとに個別のログが生成されます。 これらのエラーは Python 言語または R 言語では生成されません。 これらは、言語固有のランチャーとそのサテライト プロセスなど、SQL Server の拡張機能コンポーネントから生成されます。
 
 これらのログは、次の既定の場所から取得できます。
 
@@ -209,99 +209,99 @@ SQL Server では、外部スクリプト言語のランタイムに個別のロ
 
 * SQL Server 2017
   
-  `C:\Program Files\Microsoft SQL Server\MSSQL14.<instance_name>\MSSQL\Log\ExtensibilityLog `
+  `C:\Program Files\Microsoft SQL Server\MSSQL14.<instance_name>\MSSQL\Log\ExtensibilityLog`
 
 > [!NOTE]
-> 正確なフォルダー名は、インスタンス名によって異なります。 構成によっては、別のドライブにフォルダーがあります。
+> 正確なフォルダー名は、インスタンス名によって異なります。 構成によっては、フォルダーが別のドライブにある場合があります。
 
-たとえば、次のログ メッセージに関連する機能拡張フレームワーク。
+たとえば、次のログ メッセージは拡張機能フレームワークに関連しています。
 
-* *MSSQLSERVER01 ユーザーの LogonUser に失敗しました*
+* *LogonUser Failed for user MSSQLSERVER01 (ユーザー MSSQLSERVER01 の LogonUser に失敗しました)*
   
-  外部スクリプトを実行しているワーカー アカウントが、インスタンスにアクセスできない可能性があります。
+  これは、外部スクリプトを実行するワーカー アカウントがインスタンスにアクセスできないことを示している可能性があります。
 
-* *InitializePhysicalUsersPool できませんでした。*
+* *InitializePhysicalUsersPool Failed (InitializePhysicalUsersPool が失敗しました)*
   
-  このメッセージは、セキュリティ設定が外部スクリプトを実行するために必要なワーカー アカウントのプールを作成してからセットアップを防止は可能性があります。
+  このメッセージは、セキュリティ設定が原因で、外部スクリプトを実行するために必要なワーカー アカウントのプールが作成されないことを意味している可能性があります。
 
-* *セキュリティ コンテキスト マネージャーの初期化に失敗しました*
+* *Security Context Manager initialization failed (セキュリティ コンテキスト マネージャーの初期化に失敗しました)*
 
-* *サテライトのセッション マネージャの初期化に失敗しました*
+* *Satellite Session Manager initialization failed (サテライト セッション マネージャーの初期化に失敗しました)*
 
 ## <a name="system-events"></a>システム イベント
 
-1. Windows イベント ビューアーを開き、検索、**システム イベント**文字列が含まれるメッセージについてログを*スタート パッド*します。
-2. ExtLaunchErrorlog ファイルを開くし、文字列を検索*ErrorCode*します。 ErrorCode に関連付けられているメッセージを確認します。
+1. Windows イベント ビューアーを開き、**システム イベント** ログで、文字列 *Launchpad* を含むメッセージを検索します。
+2. ExtLaunchErrorlog ファイルを開き、文字列 *ErrorCode* を探します。 ErrorCode に関連するメッセージを確認します。
 
-たとえば、次のメッセージには、SQL Server の機能拡張フレームワークに関連する一般的なシステム エラーは。
+たとえば、次のメッセージは SQL Server 拡張機能フレームワークに関連する一般的なシステム エラーです。
 
-* *SQL Server スタート パッド (MSSQLSERVER) サービスは、次のエラーのため開始できませんでした。  <text>*
+* *SQL Server Launchpad (MSSQLSERVER) サービスは次のエラーのため開始できませんでした: <text>*
 
-* *サービスは、適切なタイミングで開始または制御要求に応答しませんでした。*
+* *そのサービスは指定時間内に開始要求または制御要求に応答しませんでした。*
 
-* *タイムアウトは、SQL Server スタート パッド (MSSQLSERVER) サービスの接続の待機中に (120000 ミリ秒) に到達しました。*
+* *A timeout was reached (120000 milliseconds) while waiting for the SQL Server Launchpad (MSSQLSERVER) service to connect. (SQL Server Launchpad (MSSQLSERVER) サービスの接続待機中にタイムアウトになりました (120000 ミリ秒)。)*
 
 ## <a name="dump-files"></a>ダンプ ファイル
 
-デバッグに関する知識を持つ場合は、スタート パッドでのエラーを分析、ダンプ ファイルを使用することができます。
+デバッグに精通している場合は、ダンプ ファイルを使用して Launchpad のエラーを分析できます。
 
-1. SQL Server のセットアップ ブートス トラップのログを含むフォルダーを見つけます。 たとえば、SQL Server 2016 で、既定のパスは C:\Program files \microsoft SQL server \130\setup bootstrap \log でした。
-2. 拡張機能に固有のブートス トラップのログ サブフォルダーを開きます。
-3. サポート リクエストを送信する場合は、このフォルダーの内容全体を zip 形式のファイルに追加します。 たとえば、C:\Program files \microsoft SQL server \130\setup Bootstrap\Log\LOG\ExtensibilityLog です。
+1. SQL Server のセットアップ ブートストラップ ログが格納されているフォルダーを見つけます。 たとえば SQL Server 2016 では、既定のパスは C:\Program Files\Microsoft SQL Server\130\Setup Bootstrap\Log でした。
+2. 拡張機能に固有のブートストラップ ログ サブフォルダーを開きます。
+3. サポート リクエストを送信する必要がある場合は、このフォルダーの内容全体を ZIP ファイルに追加します。 たとえば、C:\Program Files\Microsoft SQL Server\130\Setup Bootstrap\Log\LOG\ExtensibilityLog です。
   
-正確な場所は、システムによって異なる場合があり、C ドライブ以外の場合があります。 Machine learning がインストールされているインスタンスのログを取得することを確認します。
+正確な場所はシステムによって異なる場合があり、C ドライブ以外のドライブに配置されている場合があります。 必ず機械学習がインストールされているインスタンスのログを取得してください。
 
 ## <a name="configuration-settings"></a>構成設定
 
-このセクションには、その他のコンポーネントまたは R または Python スクリプトを実行すると、エラーの原因ができるプロバイダーが一覧表示します。
+このセクションでは、R または Python スクリプトを実行したときにエラーの原因となる可能性がある追加のコンポーネントまたはプロバイダーを示します。
 
-### <a name="what-network-protocols-are-available"></a>どのようなネットワーク プロトコルが使用できるでしょうか。
+### <a name="what-network-protocols-are-available"></a>どのようなネットワーク プロトコルを使用できますか?
 
-Machine Learning サービスでは、拡張機能のコンポーネント間の内部通信用と外部の R または Python クライアントとの通信に次のネットワーク プロトコルが必要です。
+Machine Learning Services では、拡張機能コンポーネント間の内部通信、および外部の R クライアントまたは Python クライアントとの通信に次のネットワーク プロトコルが必要です。
 
 * 名前付きパイプ
 * TCP/IP
 
-インストールされている場合と、プロトコルがインストールされているかどうかを判断するが有効になっているかどうかを決定する SQL Server 構成マネージャーを開きます。
+SQL Server 構成マネージャーを開いて、プロトコルがインストールされているかどうかを確認し、インストールされている場合は有効になっているかどうかを確認します。
 
-### <a name="security-configuration-and-permissions"></a>セキュリティの構成とアクセス許可
+### <a name="security-configuration-and-permissions"></a>セキュリティの構成およびアクセス許可
 
-ワーカー アカウント。
+ワーカー アカウントの場合:
 
-1. コントロール パネルで、開く**ユーザーとグループ**、外部スクリプト ジョブを実行するために使用するグループを見つけます。 既定では、グループは**SQLRUserGroup**します。
-2. グループが存在して、少なくとも 1 つのワーカー アカウントが含まれていることを確認します。
-3. SQL Server Management studio で R または Python のジョブを実行するインスタンスを選択します。 選択**セキュリティ**、し SQLRUserGroup のログオンがあるかどうかを確認します。
+1. コントロール パネルで、 **[ユーザーとグループ]** を開き、外部スクリプト ジョブを実行するために使用するグループを探します。 既定では、そのグループは **SQLRUserGroup** です。
+2. そのグループが存在し、少なくとも 1 つのワーカー アカウントが含まれていることを確認してください。
+3. SQL Server Management Studio で、R ジョブまたは Python ジョブを実行するインスタンスを選択し、 **[セキュリティ]** を選択して、SQLRUserGroup のログオンがあるかどうかを確認します。
 4. ユーザー グループのアクセス許可を確認します。
 
-個々 のユーザー アカウント。
+個々のユーザー アカウントの場合:
 
-1. インスタンスが混合モード認証、SQL ログインまたは Windows 認証のみをサポートしているかどうかを決定します。 この設定の影響、R または Python コードの要件。
-2. R コードを実行する必要があるユーザーごとに、必要な場所 R からオブジェクトを書き込む、データにアクセスする、またはオブジェクトが作成される各データベースに対するアクセス許可レベルを決定します。
-3. スクリプトの実行を有効にするには、ロールの作成や、必要に応じて、次のロールにユーザーを追加します。
+1. インスタンスが混合モード認証、SQL ログインのみ、または Windows 認証のみのいずれをサポートするかを判断します。 この設定は、R または Python のコード要件に影響します。
+2. R コードを実行する必要があるユーザーごとに、R からオブジェクトが書き込まれる、データにアクセスする、またはオブジェクトが作成される各データベースで必要なアクセス許可のレベルを決定します。
+3. スクリプトの実行を有効にするには、必要に応じて、ロールを作成するか、次のロールにユーザーを追加します。
 
-   - すべてが*db_owner*:必要な任意の外部スクリプトを実行します。
+   - *db_owner* を除くすべて:EXECUTE ANY EXTERNAL SCRIPT が必要です。
    - *db_datawriter*:R または Python から結果を書き込む。
-   - *db_ddladmin*:新しいオブジェクトを作成します。
-   - *db_datareader*:R または Python コードで使用されるデータを読み取る。
-4. SQL Server 2016 をインストールしたときに、既定のスタートアップ アカウントを変更するかどうかに注意してください。
-5. 新しい R パッケージをインストールまたは他のユーザーがインストールされた R パッケージを使用して、ユーザーに必要な場合をインスタンス上のパッケージ管理を有効にし、追加のアクセス許可を割り当てる必要があります。 詳細については、次を参照してください。[を有効にするか、R パッケージの管理を無効にする](r/r-package-how-to-enable-or-disable.md)します。
+   - *db_ddladmin*:新しいオブジェクトを作成する。
+   - *db_datareader*:R または Python のコードによって使用されるデータを読み取る。
+4. SQL Server 2016 をインストールしたときに、既定のスタートアップ アカウントを変更したかどうかに注意してください。
+5. ユーザーが新しい R パッケージをインストールする必要がある場合、または他のユーザーによってインストールされた R パッケージを使用する必要がある場合は、インスタンスでパッケージ管理を有効にしてから、追加のアクセス許可を割り当てることが必要な場合があります。 詳細については、[R パッケージ管理の有効化または無効化](r/r-package-how-to-enable-or-disable.md)に関する記事を参照してください。
 
-### <a name="what-folders-are-subject-to-locking-by-antivirus-software"></a>どのようなフォルダーでは、ウイルス対策ソフトウェアによってロックされるでしょうか。
+### <a name="what-folders-are-subject-to-locking-by-antivirus-software"></a>ウイルス対策ソフトウェアによるロックの対象となるフォルダーは何ですか?
 
-ウイルス対策ソフトウェアは、セットアップの機械学習機能と成功したスクリプトの実行の両方を防ぐことが、フォルダーをロックできます。 SQL Server のツリー内のフォルダーがウイルス スキャンの対象がかどうかを決定します。
+ウイルス対策ソフトウェアによってフォルダーがロックされる可能性があり、それにより機械学習機能のセットアップとスクリプトの正常な実行の両方が妨げられます。 SQL Server ツリー内のフォルダーがウイルス スキャンの対象になるかどうかを判断してください。
 
-ただし、インスタンスで複数のサービスまたは機能をインストールすると、インスタンスによって使用されているすべての可能なフォルダーを列挙する困難ができます。 たとえば、新機能が追加されると、新しいフォルダーあり必要があります識別除外します。
+ただし、1 つのインスタンスに複数のサービスまたは機能がインストールされている場合、そのインスタンスで使用されている可能性のあるすべてのフォルダーを列挙することは困難な場合があります。 たとえば、新しい機能が追加されたときに、新しいフォルダーを識別して除外する必要があります。
 
-さらに、一部の機能は実行時に新しいフォルダーを動的に作成します。 たとえば、インメモリ OLTP テーブル、ストアド プロシージャ、および関数は、実行時に新しいディレクトリを作成します。 これらのフォルダー名は、Guid を含めることが多くの場合、および予測ことはできません。 SQL Server の信頼されたスタート パッドが R の新しい作業ディレクトリを作成し、ジョブ Python スクリプトを作成します。
+また、実行時に新しいフォルダーを動的に作成する機能もあります。 たとえば、インメモリ OLTP テーブル、ストアド プロシージャ、および関数はすべて、実行時に新しいディレクトリを作成します。 これらのフォルダー名には多くの場合 GUID が含まれており、予測できません。 SQL Server Trusted Launchpad は、R および Python のスクリプト ジョブ用の新しい作業ディレクトリを作成します。
 
-SQL Server のプロセスとその機能で必要なすべてのフォルダーを除外できない可能性があります、ために、SQL Server インスタンス ディレクトリ ツリー全体を除外することをお勧めします。
+SQL Server プロセスとその機能に必要なすべてのフォルダーを除外することはできない場合があるため、SQL Server インスタンス ディレクトリ ツリー全体を除外することをお勧めします。
 
-### <a name="is-the-firewall-open-for-sql-server-does-the-instance-support-remote-connections"></a>For SQL Server ファイアウォールを開くにはでしょうか。 インスタンスは、リモート接続をサポートしますか。
+### <a name="is-the-firewall-open-for-sql-server-does-the-instance-support-remote-connections"></a>ファイアウォールは SQL Server に対して開いていますか? インスタンスはリモート接続をサポートしていますか?
 
-1. SQL Server がリモート接続をサポートするかどうかを確認するのを参照してください。[リモート サーバー接続を構成する](../database-engine/configure-windows/view-or-configure-remote-server-connection-options-sql-server.md)します。
+1. SQL Server がリモート接続をサポートしているかどうかを判断するには、[リモート サーバー接続の構成](../database-engine/configure-windows/view-or-configure-remote-server-connection-options-sql-server.md)に関する記事を参照してください。
 
-2. SQL Server のファイアウォール規則が作成されたかどうかを決定します。 既定のインストールで、セキュリティ上の理由ができない可能性があります、インスタンスに接続するリモートの R または Python クライアントの。 詳細については、次を参照してください。 [SQL Server への接続のトラブルシューティング](../database-engine/configure-windows/troubleshoot-connecting-to-the-sql-server-database-engine.md)します。
+2. SQL Server に対してファイアウォール規則が作成されているかどうかを確認します。 セキュリティ上の理由から、既定のインストールでは、リモート R または Python クライアントがインスタンスに接続できない場合があります。 詳細については、[SQL Server への接続のトラブルシューティング](../database-engine/configure-windows/troubleshoot-connecting-to-the-sql-server-database-engine.md)に関する記事を参照してください。
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
-[SQL Server での machine learning をトラブルシューティングします。](machine-learning-troubleshooting-faq.md)
+[SQL Server での機械学習のトラブルシューティング](machine-learning-troubleshooting-faq.md)

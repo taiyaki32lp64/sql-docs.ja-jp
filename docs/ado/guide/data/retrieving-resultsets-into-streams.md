@@ -4,7 +4,7 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
-ms.date: 01/19/2017
+ms.date: 01/20/2017
 ms.reviewer: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 996c1321-c926-4f57-8297-85c8c20de974
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 45ba231b1523a74ac8b2c09f55e19c3dc287ef20
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 2f0c76a668c7191467e9f66ba48c486aceea16df
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47734960"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67924346"
 ---
 # <a name="retrieving-resultsets-into-streams"></a>ストリーム形式で結果セットを取得する
 従来の結果を受信するのではなく**Recordset**オブジェクト、ADO は代わりに、ストリームにクエリ結果を取得します。 ADO **Stream**オブジェクト (またはその他のオブジェクト、COM をサポートする**IStream** 、ASP などのインターフェイス**要求**と**応答**オブジェクト) これらの結果を含めるために使用できます。 この機能の 1 つの用途では、XML 形式で結果を取得します。 SQL Server では、たとえば、XML できます結果 SQL SELECT クエリで FOR XML 句を使用して、XPath クエリの使用など、複数の方法で。  
@@ -30,7 +29,7 @@ ms.locfileid: "47734960"
 ## <a name="for-xml-query-example"></a>FOR XML クエリの例  
  次の例は、VBScript に Northwind データベースに書き込まれます。  
   
-```  
+```html
 <!-- BeginRecordAndStreamVBS -->  
 <%@ LANGUAGE = VBScript %>  
 <%  Option Explicit      %>  
@@ -145,7 +144,7 @@ ms.locfileid: "47734960"
   
 ### <a name="for-xml-syntax"></a>XML 構文について  
   
-```  
+```syntax
 FOR XML [RAW|AUTO|EXPLICIT]  
 ```  
   
@@ -153,7 +152,7 @@ FOR XML [RAW|AUTO|EXPLICIT]
   
  SQL SELECT FOR XML ステートメントの例を次に示します。  
   
-```  
+```sql
 SELECT * FROM PRODUCTS ORDER BY PRODUCTNAME FOR XML AUTO  
 ```  
   
@@ -161,19 +160,19 @@ SELECT * FROM PRODUCTS ORDER BY PRODUCTNAME FOR XML AUTO
   
  XML テンプレートのクエリとして、FOR XML クエリは次のようです。  
   
-```  
+```xml
 <sql:query> SELECT * FROM PRODUCTS ORDER BY PRODUCTNAME FOR XML AUTO </sql:query>  
 ```  
   
  この例では、ASP を指定します。**応答**オブジェクト、**出力 Stream**プロパティ。  
   
-```  
+```vb
 adoCmd.Properties("Output Stream") = Response  
 ```  
   
  次に、指定**adExecuteStream**パラメーターの**Execute**します。 この例は、XML データ アイランドを作成する XML タグ内のストリームをラップします。  
   
-```  
+```vb
 Response.write "<XML ID=MyDataIsle>"  
 adoCmd.Execute , , adExecuteStream  
 Response.write "</XML>"  

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 f1_keywords:
 - SQL12.ASVS.SSMSIMBI.SERVERPROPERTIES.F1
@@ -16,15 +15,15 @@ ms.assetid: b01ec658-c191-49c9-a6cb-549b21a368ab
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: e9bcb19e10417c24b30b5ee6346d6d6a19d4bbcb
-ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
+ms.openlocfilehash: b32b0fa678df98494f91c1026adebe701d807342
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50145097"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66062620"
 ---
 # <a name="analysis-server-properties-dialog-box-analysis-services"></a>[分析サーバーのプロパティ] ダイアログ ボックス (Analysis Services)
-  [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] の **[分析サーバーのプロパティ]** ダイアログ ボックスを使用すると、[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] のインスタンスの全般的な設定、言語と照合順序の設定、およびセキュリティ設定を行うことができます。 **オブジェクト エクスプローラー**の [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] インスタンスを右クリックし、ショートカット メニューの **[プロパティ]** を選択することによって、**[分析サーバーのプロパティ]** ダイアログ ボックスを表示できます。 **[分析サーバーのプロパティ]** ダイアログ ボックスには、次のプロパティが含まれます。  
+  [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] の **[分析サーバーのプロパティ]** ダイアログ ボックスを使用すると、[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] のインスタンスの全般的な設定、言語と照合順序の設定、およびセキュリティ設定を行うことができます。 **オブジェクト エクスプローラー**の [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] インスタンスを右クリックし、ショートカット メニューの **[プロパティ]** を選択することによって、 **[分析サーバーのプロパティ]** ダイアログ ボックスを表示できます。 **[分析サーバーのプロパティ]** ダイアログ ボックスには、次のプロパティが含まれます。  
   
 ## <a name="information-properties"></a>情報プロパティ  
  このページを使用すると、サーバーのモード、バージョン、互換性レベルを表示できます。 各インスタンスは、テーブル サーバー モードまたは多次元サーバー モードでインストールされ、テーブル モデルまたは多次元モデルを読み込むことができます。 両方のモードをサポートする場合は、インスタンスを 2 つインストールする必要があります。  
@@ -72,7 +71,7 @@ ms.locfileid: "50145097"
      このオプションが選択されていない場合、 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] には関連する言語またはアルファベットの辞書で定義されている並べ替えおよび比較ルールが使用されます。  
   
     > [!NOTE]  
-    >  このオプションが選択されている場合、 **[大文字と小文字を区別する]**、 **[アクセントを区別する]**、 **[かなを区別する]**、および **[文字幅を区別する]** オプションは無効になります。  
+    >  このオプションが選択されている場合、 **[大文字と小文字を区別する]** 、 **[アクセントを区別する]** 、 **[かなを区別する]** 、および **[文字幅を区別する]** オプションは無効になります。  
   
 -   **[バイナリ 2]** 。このオプションを使用すると、文字ごとに定義されたビット パターンに基づいて Unicode データの並べ替えと比較を行います。 バイナリの並べ替え順では大文字と小文字が区別されるため、小文字は大文字より前に配置されます。また、アクセントも区別されます。 これは、最速の並べ替え順です。  
   
@@ -84,7 +83,7 @@ ms.locfileid: "50145097"
   
      このオプションが選択されていない場合、 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] はアクセント符号の付いた文字と付いていない文字を同じものと見なします。  
   
--   **[かなを区別する]** を使用すると、関連する言語またはアルファベットに適用される辞書のルールに基づいてデータの並べ替えと比較を行い、ひらがなとカタカナという日本語の 2 種類のかな文字を区別します。  
+-   **かなを区別する**を使用して、関連する言語またはアルファベットでは、2 つの種類の日本語のかな文字を区別する、指定された辞書のルールに基づいてデータを比較します。ひらがなとカタカナ。  
   
      このオプションが選択されていない場合、 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] はひらがなとカタカナを同じものと見なします。  
   

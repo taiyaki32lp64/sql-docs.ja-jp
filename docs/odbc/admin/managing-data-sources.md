@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 67cc4945-4850-4eb4-8da6-b835ddaeca4c
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 6a1f8893351ceb68ebd7c42e3ac82c876c01c10b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 9dc741321894ae69a9ffb59738576a01d47628f5
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47723262"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67901664"
 ---
 # <a name="managing-data-sources"></a>データ ソースの管理
 ドライバーのセットアップ プログラムから ODBC ドライバーをインストールした後は、その 1 つまたは複数のデータ ソースを定義できます。 データ ソース名 (DSN) では、データの一意の説明を提供する必要があります。たとえば、*給与*または*Accounts Payable*します。 現在インストールされているすべてのドライバーに定義されているユーザーおよびシステム データ ソースが記載されて、**ユーザー DSN**または**システム DSN**のタブ、 **ODBC データ ソース アドミニストレーター** ダイアログ ボックス。 指定されたディレクトリにファイル データ ソースが記載されて、**ファイル DSN**  タブに表示されるディレクトリが入力されて、**ファイルの場所**ボックスに、**ファイル DSN**タブ。  
@@ -30,7 +29,7 @@ ms.locfileid: "47723262"
 > [!NOTE]  
 >  64 ビット プラットフォームでの 32 ビット ドライバーに接続するデータ ソースを管理するには、c:\windows\sysWOW64\odbcad32.exe を使用します。 64 ビット ドライバーに接続するデータ ソースを管理するには、c:\windows\system32\odbcad32.exe を使用します。 **管理ツール**64 ビットの Windows 8 オペレーティング システムでは、32 ビットと 64 ビットの両方のアイコンは**ODBC データ ソース アドミニストレーター**  ダイアログ ボックス。  
   
- 場合は、64 ビット odbcad32.exe を使用して、構成や削除など、32 ビット ドライバーに接続する DSN**ドライバーは Microsoft Access (\*.mdb)**、次のエラー メッセージが表示されます。  
+ 場合は、64 ビット odbcad32.exe を使用して、構成や削除など、32 ビット ドライバーに接続する DSN**ドライバーは Microsoft Access (\*.mdb)** 、次のエラー メッセージが表示されます。  
   
 ```  
 The specified DSN contains an architecture mismatch between the Driver and Application  

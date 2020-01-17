@@ -16,15 +16,14 @@ helpviewer_keywords:
 - grid showing query options [SQL Server]
 - adding query options into grid
 ms.assetid: 6291affe-580e-482f-a7ff-45ce3837956a
-author: stevestein
-ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 9f6beffa273fbb08c8d4c4066eac3e08f52ed4c4
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: cf5d5f7a306b443fd01f9112b4197485ce3ce2ba
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52514051"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68263903"
 ---
 # <a name="criteria-pane-visual-database-tools"></a>抽出条件ペイン (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -55,14 +54,14 @@ ms.locfileid: "52514051"
   
 抽出条件ペインが表示されていない場合は、デザイナーを右クリックし、 **[ペイン]** をポイントして **[抽出条件]** をクリックします。  
   
-## <a name="options"></a>[変数]  
+## <a name="options"></a>オプション  
   
 |**列**|**[クエリの種類]**|**[説明]**|  
 |--------------|------------------|-------------------|  
 |[列]|All|クエリに使用されるデータ列の名前、または計算が必要な列の式が表示されます。 水平にスクロールしても常に表示されるよう、この列はロックされています。|  
 |別名|選択、結果の挿入、更新、テーブルの作成|列に対する別名、または計算列で使用できる名前を指定します。|  
 |テーブル|選択、結果の挿入、更新、テーブルの作成|対応するデータ列のテーブルまたはテーブル構造オブジェクトの名前を指定します。 計算列の場合は空白です。|  
-|[出力]|選択、結果の挿入、テーブルの作成|データ列をクエリの出力に表示するかどうかを指定します。<br /><br />注: データベースが対応している場合は、データ列を結果セットに表示せずに、並べ替えや検索の句として使用できます。|  
+|[出力]|選択、結果の挿入、テーブルの作成|データ列をクエリの出力に表示するかどうかを指定します。<br /><br />注:データベースが対応している場合は、データ列を結果セットに表示せずに、並べ替えや検索の句として使用できます。|  
 |[並べ替えの種類]|選択、結果の挿入|クエリ結果を並べ替えるために対応するデータ列を使用すること、および並べ替えが昇順であるか降順であるかを指定します。|  
 |[並べ替え順序]|選択、結果の挿入|結果セットの並べ替えに使用するデータ列の並べ替え優先順位を指定します。 データ列の並べ替え順序を変更すると、他のすべての列の並べ替え順序もその変更に従って更新されます。|  
 |[グループ化]|選択、結果の挿入、テーブルの作成|対応するデータ列を集計クエリの作成に使用することを指定します。 このグリッド列が表示されるのは、 **[ツール]** メニューの **[グループ化]** をクリックした場合、または SQL ペインに GROUP BY 句を追加した場合だけです。<br /><br />既定では、この列の値は **[グループ化]** に設定されていて、列は GROUP BY 句の中で使用されます。<br /><br />この列のセルに移動し、対応するデータ列に適用する集計関数を選択すると、既定では、結果として作成される式が、結果セットの出力列として追加されます。|  

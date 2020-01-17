@@ -1,7 +1,7 @@
 ---
-title: カーソルの種類 (PDO_SQLSRV ドライバー) |Microsoft Docs
+title: カーソルの種類 (PDO_SQLSRV ドライバー) | Microsoft Docs
 ms.custom: ''
-ms.date: 01/19/2017
+ms.date: 05/03/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,89 +10,88 @@ ms.topic: conceptual
 ms.assetid: 49ea6a6e-78d4-40f8-85eb-180b527f0537
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 621bfe1f20b9ca656bf442377b1f453503b86a8f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: c62c2a35123e77f5366dd5348fd51b3c50c85605
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47833470"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67993688"
 ---
 # <a name="cursor-types-pdosqlsrv-driver"></a>カーソルの種類 (PDO_SQLSRV ドライバー)
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
-PDO_SQLSRV ドライバーでは、複数のカーソルのいずれかのスクロール可能な結果セットを作成できます。  
-  
-PDO_SQLSRV ドライバーを使用してカーソルを指定する方法について、およびコード サンプルを参照してください。 [pdo::prepare](../../connect/php/pdo-prepare.md)します。  
-  
-## <a name="pdosqlsrv-and-server-side-cursors"></a>PDO_SQLSRV とサーバー側カーソル  
-バージョン 3.0 より前、 [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]、PDO_SQLSRV ドライバーを使用すると、サーバー側の前方参照専用、または静的カーソルを含む結果セットを作成します。 以降のバージョン 3.0 では、 [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]、キーセット カーソルと動的カーソルも利用できます。  
-  
-サーバー側カーソルの種類を指定するには、pdo::prepare または pdostatement::setattribute を使用して、カーソルの種類を選択します。  
-  
--   PDO::ATTR_CURSOR = &GT; PDO::CURSOR_FWDONLY  
-  
--   PDO::ATTR_CURSOR = &GT; PDO::CURSOR_SCROLL  
-  
-Pdo::attr_cursor を指定することで、キーセット カーソルまたは動的カーソルを要求することができます = > pdo::cursor_scroll および pdo::sqlsrv_attr_cursor_scroll_type をパス、適切な値。 Pdo::sqlsrv_attr_cursor_scroll_type を渡すことができる使用可能な値は次のとおりです。  
-  
--   PDO::SQLSRV_CURSOR_BUFFERED  
-  
--   PDO::SQLSRV_CURSOR_DYNAMIC  
-  
--   PDO::SQLSRV_CURSOR_KEYSET_DRIVEN  
-  
--   PDO::SQLSRV_CURSOR_STATIC  
-  
-## <a name="pdosqlsrv-and-client-side-cursors"></a>PDO_SQLSRV とクライアント側カーソル  
-クライアント側のカーソルは、のバージョン 3.0 で追加された、[!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]メモリ セット全体の結果をキャッシュすることができます。 利点の 1 つは、クエリの実行後に行の数が使用可能なことです。  
-  
-クライアント側のカーソルは、小規模から中規模の結果セットに対して使用する必要があります。 大きな結果セットには、サーバー側カーソルを使用する必要があります。  
-  
-クエリは、バッファーが結果をクライアント側のカーソルを使用する場合のセット全体を保持するために十分な大きさでない場合は false を返します。 PHP メモリの上限に達するまでバッファー サイズを増やすことができます。  
-  
-PDO::SQLSRV_ATTR_CLIENT_BUFFER_MAX_KB_SIZE 属性を使用して結果セットを保持するバッファーのサイズを構成する[pdo::setattribute](../../connect/php/pdo-setattribute.md)または[pdostatement::setattribute](../../connect/php/pdostatement-setattribute.md)します。 Pdo_sqlsrv.client_buffer_max_kb_size で php.ini ファイルの最大バッファー サイズを設定することもできます (たとえば、pdo_sqlsrv.client_buffer_max_kb_size = 1024)。  
-  
-Pdo::prepare または pdostatement::setattribute を使用してクライアント側カーソルを目的し、pdo::attr_cursor を選択することを示す = > pdo::cursor_scroll カーソルの種類。  Pdo::sqlsrv_attr_cursor_scroll_type を指定します = > PDO::SQLSRV_CURSOR_BUFFERED します。  
-  
-```  
-<?php  
-$database = "AdventureWorks";  
-$server = "(local)";  
-$conn = new PDO( "sqlsrv:server=$server ; Database = $database", "", "");  
-  
-$query = "select * from Person.ContactType";  
-$stmt = $conn->prepare( $query, array(PDO::ATTR_CURSOR => PDO::CURSOR_SCROLL, PDO::SQLSRV_ATTR_CURSOR_SCROLL_TYPE => PDO::SQLSRV_CURSOR_BUFFERED));  
-$stmt->execute();  
-print $stmt->rowCount();  
-  
-echo "\n";  
-  
-while ( $row = $stmt->fetch( PDO::FETCH_ASSOC ) ){  
-   print "$row[Name]\n";  
-}  
-echo "\n..\n";  
-  
-$row = $stmt->fetch( PDO::FETCH_BOTH, PDO::FETCH_ORI_FIRST );  
-print_r($row);  
-  
-$row = $stmt->fetch( PDO::FETCH_ASSOC, PDO::FETCH_ORI_REL, 1 );  
-print "$row[Name]\n";  
-  
-$row = $stmt->fetch( PDO::FETCH_NUM, PDO::FETCH_ORI_NEXT );  
-print "$row[1]\n";  
-  
-$row = $stmt->fetch( PDO::FETCH_NUM, PDO::FETCH_ORI_PRIOR );  
-print "$row[1]..\n";  
-  
-$row = $stmt->fetch( PDO::FETCH_NUM, PDO::FETCH_ORI_ABS, 0 );  
-print_r($row);  
-  
-$row = $stmt->fetch( PDO::FETCH_NUM, PDO::FETCH_ORI_LAST );  
-print_r($row);  
-?>  
-```  
-  
-## <a name="see-also"></a>参照  
-[カーソルの種類を指定し、行を選択する](../../connect/php/specifying-a-cursor-type-and-selecting-rows.md)  
-  
+PDO_SQLSRV ドライバーを使用すると、複数のカーソルの 1 つでスクロール可能な結果セットを作成できます。
+
+PDO_SQLSRV ドライバーを使用してカーソルを指定する方法と、コードのサンプルについては、「[pdo::prepare](../../connect/php/pdo-prepare.md)」を参照してください。
+
+## <a name="pdosqlsrv-and-server-side-cursors"></a>PDO_SQLSRV とサーバー側のカーソル
+バージョン 3.0 より前の [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] では、PDO_SQLSRV ドライバーを使用して、サーバー側の順方向専用または静的カーソルで結果セットを作成することができました。 バージョン 3.0 の [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] からは、キーセットと動的カーソルも利用できます。
+
+サーバー側のカーソルの種類は、[PDO::prepare](../../connect/php/pdo-prepare.md) を使用して次のいずれかのカーソルの種類を選択することで指定できます。
+
+-   `PDO::ATTR_CURSOR => PDO::CURSOR_FWDONLY`
+
+-   `PDO::ATTR_CURSOR => PDO::CURSOR_SCROLL`
+
+`PDO::ATTR_CURSOR => PDO::CURSOR_SCROLL` を指定し、その後適切な値を `PDO::SQLSRV_ATTR_CURSOR_SCROLL_TYPE` に渡すことで、動的、静的、またはキーセット カーソルを要求できます。 サーバー側のカーソル用に `PDO::SQLSRV_ATTR_CURSOR_SCROLL_TYPE` に渡すことができる値は、次のとおりです。
+
+-   `PDO::SQLSRV_CURSOR_DYNAMIC`
+
+-   `PDO::SQLSRV_CURSOR_STATIC`
+
+-   `PDO::SQLSRV_CURSOR_KEYSET`
+
+## <a name="pdosqlsrv-and-client-side-cursors"></a>PDO_SQLSRV とクライアント側のカーソル
+クライアント側のカーソルはバージョン 3.0 の [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] で追加されました。これを使用すると、結果セット全体をメモリにキャッシュすることができます。 利点の 1 つは、クエリの実行後に行数を使用できることです。
+
+クライアント側のカーソルは、小規模から中規模の結果セットに対して使用する必要があります。 大規模な結果セットの場合は、サーバー側のカーソルを使用する必要があります。
+
+クライアント側のカーソルを使用しているときにバッファーが結果セット全体を保持するために十分な大きさではない場合、クエリから false が返されます。 バッファーのサイズは PHP メモリの上限まで増やすことができます。
+
+[PDO::setAttribute](../../connect/php/pdo-setattribute.md) または [PDOStatement::setAttribute](../../connect/php/pdostatement-setattribute.md) の `PDO::SQLSRV_ATTR_CLIENT_BUFFER_MAX_KB_SIZE` の属性を使用すると、結果セットを保持するバッファーのサイズを構成することができます。 php.ini ファイルで pdo_sqlsrv.client_buffer_max_kb_size を使用して最大バッファー サイズを設定することもできます (たとえば、pdo_sqlsrv.client_buffer_max_kb_size = 1024)。
+
+[PDO::prepare](../../connect/php/pdo-prepare.md) を使用し、`PDO::ATTR_CURSOR => PDO::CURSOR_SCROLL` カーソルの種類を指定し、その後 `PDO::SQLSRV_ATTR_CURSOR_SCROLL_TYPE => PDO::SQLSRV_CURSOR_BUFFERED` を指定することで、クライアント側のカーソルを要求できます。
+
+## <a name="example"></a>例
+次の例は、バッファー処理されたカーソルを指定する方法を示しています。
+```
+<?php
+$database = "AdventureWorks";
+$server = "(local)";
+$conn = new PDO( "sqlsrv:server=$server ; Database = $database", "", "");
+
+$query = "select * from Person.ContactType";
+$stmt = $conn->prepare( $query, array(PDO::ATTR_CURSOR => PDO::CURSOR_SCROLL, PDO::SQLSRV_ATTR_CURSOR_SCROLL_TYPE => PDO::SQLSRV_CURSOR_BUFFERED));
+$stmt->execute();
+print $stmt->rowCount();
+
+echo "\n";
+
+while ( $row = $stmt->fetch( PDO::FETCH_ASSOC ) ){
+   print "$row[Name]\n";
+}
+echo "\n..\n";
+
+$row = $stmt->fetch( PDO::FETCH_BOTH, PDO::FETCH_ORI_FIRST );
+print_r($row);
+
+$row = $stmt->fetch( PDO::FETCH_ASSOC, PDO::FETCH_ORI_REL, 1 );
+print "$row[Name]\n";
+
+$row = $stmt->fetch( PDO::FETCH_NUM, PDO::FETCH_ORI_NEXT );
+print "$row[1]\n";
+
+$row = $stmt->fetch( PDO::FETCH_NUM, PDO::FETCH_ORI_PRIOR );
+print "$row[1]..\n";
+
+$row = $stmt->fetch( PDO::FETCH_NUM, PDO::FETCH_ORI_ABS, 0 );
+print_r($row);
+
+$row = $stmt->fetch( PDO::FETCH_NUM, PDO::FETCH_ORI_LAST );
+print_r($row);
+?>
+```
+
+## <a name="see-also"></a>参照
+[カーソルの種類を指定し、行を選択する](../../connect/php/specifying-a-cursor-type-and-selecting-rows.md)
+

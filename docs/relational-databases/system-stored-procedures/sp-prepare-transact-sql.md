@@ -17,14 +17,13 @@ helpviewer_keywords:
 ms.assetid: f328c9eb-8211-4863-bafa-347e1bf7bb3f
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 9b52f71577bed8a0433c8d516cdc9cbd877066e4
-ms.sourcegitcommit: f46fd79fd32a894c8174a5cb246d9d34db75e5df
+ms.openlocfilehash: acadb311dac786d9f1c5dbcc86fac9b2609fb959
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/26/2018
-ms.locfileid: "53785933"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68085804"
 ---
 # <a name="spprepare-transact-sql"></a>sp_prepare (Transact SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-pdw-md.md)]
@@ -50,14 +49,14 @@ sp_prepare handle OUTPUT, params, stmt, options
  カーソル結果セットを定義します。 *Stmt*パラメーターは必須でありの呼び出し、 **ntext**、 **nchar**、または**nvarchar**値を入力します。  
   
  *options*  
- カーソル結果セット列の説明を返す省略可能なパラメーターです。 *オプション*int の次の入力値が必要です。  
+ カーソルの結果の説明を返すオプションのパラメーターは、列を設定します。 *オプション*int の次の入力値が必要です。  
   
 |値|説明|  
 |-----------|-----------------|  
 |0x0001|RETURN_METADATA|  
   
 ## <a name="examples"></a>使用例  
-A. 次の例では、単純なステートメントを準備して実行します。  
+A. 次の例では、準備して、単純なステートメントを実行します。  
   
 ```sql  
 DECLARE @P1 int;  
@@ -107,7 +106,7 @@ EXEC sp_unprepare 1;
 GO
 ```
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [システム ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
 

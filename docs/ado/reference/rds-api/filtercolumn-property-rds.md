@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 0a5473e8-8ce6-4518-83fb-4920b827e285
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: aa590c0286f437efb80ad92503e5bfefb62692ce
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.openlocfilehash: 3e88cb6f8d563df66a8faaa84d5aeafaa9d359e8
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51606712"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67964068"
 ---
 # <a name="filtercolumn-property-rds"></a>FilterColumn プロパティ (RDS)
 フィルター条件の評価対象となる列を示します。  
@@ -47,7 +46,7 @@ DataControl.FilterColumn = String
 ## <a name="applies-to"></a>適用対象  
  [DataControl オブジェクト (RDS)](../../../ado/reference/rds-api/datacontrol-object-rds.md)  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [FilterColumn、FilterCriterion、FilterValue、SortColumn、SortDirection プロパティおよび Reset メソッドの例 (VBScript)](../../../ado/reference/rds-api/filter-column-criterion-value-sortcolumn-sortdirection-example-vbscript.md)   
  [FilterCriterion プロパティ (RDS)](../../../ado/reference/rds-api/filtercriterion-property-rds.md)   
  [FilterValue プロパティ (RDS)](../../../ado/reference/rds-api/filtervalue-property-rds.md)   

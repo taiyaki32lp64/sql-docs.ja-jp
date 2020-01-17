@@ -13,17 +13,16 @@ f1_keywords:
 ms.assetid: 85f666f6-14ee-4f19-b385-e5cc508aabe4
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 3b19c1a55e81973ee5f0ad196d6ba5c9cd89f8a4
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
+ms.openlocfilehash: 38570e910994e77084777bcc4245ccbb6033d39b
+ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54134652"
+ms.lasthandoff: 08/03/2019
+ms.locfileid: "68769427"
 ---
 # <a name="subscription-synchronization-history"></a>サブスクリプション、[同期の履歴]
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
   **[同期の履歴]** タブには、マージ エージェントの状態、アーティクル統計、履歴、情報メッセージ、エラー メッセージなど詳細情報が表示されます。  
   
 ## <a name="options"></a>オプション  
@@ -64,13 +63,13 @@ ms.locfileid: "54134652"
  **[アーティクル]**  
  パブリケーション内の各アーティクルの名前です。パブリケーション全体に対して以下の処理フェーズがあります。  
   
--   **[初期化]**。 マージ エージェントを開始することを示しています。スナップショットの適用が行われるサブスクリプションの初期化とは同期しません。  
+-   **[初期化]** 。 マージ エージェントを開始することを示しています。スナップショットの適用が行われるサブスクリプションの初期化とは同期しません。  
   
--   **[スキーマの変更と一括挿入]**。  
+-   **[スキーマの変更と一括挿入]** 。  
   
--   **[パブリッシャーへの変更のアップロード]**。  
+-   **[パブリッシャーへの変更のアップロード]** 。  
   
--   **[サブスクライバーへの変更のダウンロード]**。  
+-   **[サブスクライバーへの変更のダウンロード]** 。  
   
  これらのフェーズを含めることにより、選択されたセッションで各フェーズにかかった時間と合計時間に対する割合をグリッドに表示できます。  
   

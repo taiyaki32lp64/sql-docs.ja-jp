@@ -1,7 +1,7 @@
 ---
-title: SQL エスケープ シーケンスの使用 |Microsoft Docs
+title: SQL エスケープシーケンスの使用 |Microsoft Docs
 ms.custom: ''
-ms.date: 07/11/2018
+ms.date: 08/12/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 00f9e25a-088e-4ac6-aa75-43eacace8f03
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: f4c26b94f4aa681d5042b728c5c44e50269fbc31
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: da2ae6b5353448d5281910d94aeef05ee0999c6a
+ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47841730"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "69025893"
 ---
 # <a name="using-sql-escape-sequences"></a>SQL エスケープ シーケンスの使用
 
@@ -62,7 +61,7 @@ JDBC ドライバーは、次の構文で SQL ステートメント内の関数�
 {fn functionName}  
 ```
 
-`functionName` は、JDBC ドライバーでサポートされている関数です。 例 : 
+`functionName` は、JDBC ドライバーでサポートされている関数です。 例: 
 
 ```sql
 SELECT {fn UCASE(Name)} FROM Employee  
@@ -72,7 +71,7 @@ SELECT {fn UCASE(Name)} FROM Employee
   
 | 文字列関数                                                                                                                                                                                                                                                                                                                        | 数値関数                                                                                                                                                                                                                                                                                                                                                                                                   | 日付時刻関数                                                                                                                                                                                                                                                                                                                                             | システム関数                             |
 | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------- |
-| ASCII<br /><br /> CHAR<br /><br /> CONCAT<br /><br /> DIFFERENCE<br /><br /> INSERT<br /><br /> LCASE<br /><br /> [LEFT]<br /><br /> LENGTH<br /><br /> LOCATE<br /><br /> [LTRIM]<br /><br /> REPEAT<br /><br /> [REPLACE]<br /><br /> [RIGHT]<br /><br /> [RTRIM]<br /><br /> SOUNDEX<br /><br /> Space<br /><br /> [SUBSTRING]<br /><br /> UCASE | ABS<br /><br /> ACOS<br /><br /> ASIN<br /><br /> ATAN<br /><br /> ATAN2<br /><br /> CEILING<br /><br /> COS<br /><br /> COT<br /><br /> DEGREES<br /><br /> EXP<br /><br /> FLOOR<br /><br /> LOG<br /><br /> LOG10<br /><br /> [MOD]<br /><br /> PI<br /><br /> POWER<br /><br /> RADIANS<br /><br /> RAND<br /><br /> [ROUND]<br /><br /> SIGN<br /><br /> SIN<br /><br /> SQRT<br /><br /> TAN<br /><br /> TRUNCATE | CURDATE<br /><br /> CURTIME<br /><br /> DAYNAME<br /><br /> DAYOFMONTH<br /><br /> [DAYOFWEEK]<br /><br /> DAYOFYEAR<br /><br /> EXTRACT<br /><br /> [HOUR]<br /><br /> [MINUTE]<br /><br /> [MONTH]<br /><br /> MONTHNAME<br /><br /> [NOW]<br /><br /> [QUARTER]<br /><br /> [SECOND]<br /><br /> TIMESTAMPADD<br /><br /> TIMESTAMPDIFF<br /><br /> [WEEK]<br /><br /> [YEAR] | DATABASE<br /><br /> IFNULL<br /><br /> User |
+| ASCII<br /><br /> CHAR<br /><br /> CONCAT<br /><br /> DIFFERENCE<br /><br /> INSERT<br /><br /> LCASE<br /><br /> LEFT<br /><br /> LENGTH<br /><br /> LOCATE<br /><br /> [LTRIM]<br /><br /> REPEAT<br /><br /> [REPLACE]<br /><br /> RIGHT<br /><br /> [RTRIM]<br /><br /> SOUNDEX<br /><br /> SPACE<br /><br /> [SUBSTRING]<br /><br /> UCASE | ABS<br /><br /> ACOS<br /><br /> ASIN<br /><br /> ATAN<br /><br /> ATAN2<br /><br /> CEILING<br /><br /> COS<br /><br /> COT<br /><br /> DEGREES<br /><br /> EXP<br /><br /> FLOOR<br /><br /> LOG<br /><br /> LOG10<br /><br /> MOD<br /><br /> PI<br /><br /> POWER<br /><br /> RADIANS<br /><br /> RAND<br /><br /> [ROUND]<br /><br /> SIGN<br /><br /> SIN<br /><br /> SQRT<br /><br /> TAN<br /><br /> TRUNCATE | CURDATE<br /><br /> CURTIME<br /><br /> DAYNAME<br /><br /> DAYOFMONTH<br /><br /> [DAYOFWEEK]<br /><br /> DAYOFYEAR<br /><br /> EXTRACT<br /><br /> HOUR<br /><br /> MINUTE<br /><br /> MONTH<br /><br /> MONTHNAME<br /><br /> [NOW]<br /><br /> [QUARTER]<br /><br /> SECOND<br /><br /> TIMESTAMPADD<br /><br /> TIMESTAMPDIFF<br /><br /> [WEEK]<br /><br /> YEAR | DATABASE<br /><br /> IFNULL<br /><br /> User |
 
 > [!NOTE]  
 > データベースでサポートされていない関数を使用すると、エラーが発生します。  
@@ -93,14 +92,14 @@ SELECT {fn UCASE(Name)} FROM Employee
 | t            | Time        | hh:mm:ss [1]               |
 | ts           | TimeStamp   | yyyy-mm-dd hh:mm:ss[.f...] |
   
-例 :  
+例:  
 
 ```sql
 UPDATE Orders SET OpenDate={d '2005-01-31'}
 WHERE OrderID=1025  
 ```
 
-## <a name="stored-procedure-calls"></a>ストアド プロシージャ呼び出し
+## <a name="stored-procedure-calls"></a>ストアド プロシージャの呼び出し
 
 JDBC ドライバーでは、ストアド プロシージャ呼び出しについては、戻りパラメーターを処理する必要があるかどうかによって、`{? = call proc_name(?,...)}` および `{call proc_name(?,...)}` というエスケープ構文がサポートされています。  
   
@@ -112,7 +111,7 @@ JDBC ドライバーでは、ストアド プロシージャ呼び出しにつ�
 
 `procedure-name` にはストアド プロシージャの名前を指定し、`parameter` にはストアド プロシージャのパラメーターを指定します。  
   
-使用しての詳細については、`call`エスケープ シーケンスがストアド プロシージャでは、「[ストアド プロシージャを使用してステートメント](../../connect/jdbc/using-statements-with-stored-procedures.md)します。  
+ストアドプロシージャでのエスケープシーケンス`call`の使用の詳細については、「[ストアドプロシージャでのステートメントの使用](../../connect/jdbc/using-statements-with-stored-procedures.md)」を参照してください。  
 
 ## <a name="outer-joins"></a>外部結合
 
@@ -131,7 +130,7 @@ table-reference {LEFT | RIGHT | FULL} OUTER JOIN
 
 `table-reference` はテーブル名で、`search-condition` はテーブルで使用する結合条件です。  
   
-例 :  
+例:  
 
 ```sql
 SELECT Customers.CustID, Customers.Name, Orders.OrderID, Orders.Status

@@ -1,51 +1,51 @@
 ---
-title: 自動統計 (Analytics Platform System)
-description: Analytics Platform System AU7 で導入された自動統計機能をについて説明します。
+title: 自動統計
+description: Analytics Platform System AU7 で導入された自動統計機能について説明します。
 author: mzaman1
-manager: craigg
 ms.prod: sql
 ms.technology: data-warehouse
 ms.topic: conceptual
 ms.date: 06/27/2018
 ms.author: murshedz
 ms.reviewer: martinle
+ms.custom: seo-dt-2019
 monikerRange: '>= aps-pdw-2016-au7 || = sqlallproducts-allversions'
-ms.openlocfilehash: e48d40d78c25431fd6e5592dacfa410723b31f82
-ms.sourcegitcommit: c19696d3d67161ce78aaa5340964da3256bf602d
+ms.openlocfilehash: 7071c9cb46bde6e2d353293cec9f01451c0b4f67
+ms.sourcegitcommit: d587a141351e59782c31229bccaa0bff2e869580
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/29/2018
-ms.locfileid: "52617962"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74401283"
 ---
-# <a name="configure-auto-statistics"></a>統計の自動構成します。
+# <a name="configure-auto-statistics"></a>自動統計の構成
 
-作成と統計情報を自動的に更新の自動統計を使用する並列データ ウェアハウスを構成する方法について説明します。  クエリのプランを向上させるためにこの機能を使用し、クエリのパフォーマンスが向上します。
+自動統計を使用して統計を自動的に作成および更新するように並列データウェアハウスを構成する方法について説明します。  この機能を使用すると、クエリプランが向上し、クエリのパフォーマンスが向上します。
 
-**適用対象:** AP (2016 AU7 以降)
+**適用対象:** APS (2016 から開始) (AU7)
 
-## <a name="what-are-statistics"></a>統計情報とは
-クエリ最適化に関する統計は、テーブルの 1 つまたは複数の列の値の分布に関する統計情報が含まれているオブジェクトです。 クエリ オプティマイザーのカーディナリティの推定にこれらの統計情報を使用するや、クエリ内の行の数。 これらのカーディナリティの推定には、高品質のクエリ プランを作成するクエリ オプティマイザーが有効にします。 Ap、例としては、MPP クエリ オプティマイザーでは、カーディナリティの推定をランダム再生または複製そうと join 句で使用する 2 つのテーブルのうち、小さい方を選択するは、クエリのパフォーマンスを向上します。  詳細については、次を参照してください[統計](../relational-databases/statistics/statistics.md)と[DBCC show_statistics で。](../t-sql/database-console-commands/dbcc-show-statistics-transact-sql.md)
+## <a name="what-are-statistics"></a>統計とは何ですか。
+クエリ最適化の統計情報は、テーブルの1つまたは複数の列の値の分布に関する統計情報を含むオブジェクトです。 クエリ オプティマイザーでは、これらの統計を使用してクエリ結果のカーディナリティ、つまり行数を推定します。 これらのカーディナリティの推定に基づいて、クエリ オプティマイザーでは高品質なクエリ プランを作成できます。 たとえば、APS では、MPP クエリオプティマイザーはカーディナリティの推定を使用して、join 句で使用される2つのテーブルのうち小さい方のテーブルをシャッフルまたはレプリケートすることを選択します。これにより、クエリのパフォーマンスが向上します。  詳細については、「[統計](../relational-databases/statistics/statistics.md)と[DBCC SHOW_STATISTICS](../t-sql/database-console-commands/dbcc-show-statistics-transact-sql.md) 」を参照してください。
 
-## <a name="what-are-auto-statistics"></a>統計の自動とは
-自動統計は、クエリ オプティマイザーで作成し、クエリ プランを向上させるために自動的に更新する統計情報です。 統計で、読み込み後に期限切れになることができます、挿入、更新、および操作を削除します。 自動の統計のない列に必要な統計情報と統計情報を更新する必要がある場合を理解する独自の分析を行う必要があります。
+## <a name="what-are-auto-statistics"></a>自動統計とは何ですか。
+自動統計とは、クエリオプティマイザーによって自動的に作成および更新され、クエリプランを改善するための統計です。 読み込み、挿入、更新、削除の各操作の後、統計が古くなる可能性があります。 自動統計を使用しない場合は、統計が必要な列と統計を更新する必要があるかを理解するために、独自の分析を行う必要があります。
 
-自動統計には、次の 3 つの設定が含まれています。 
+自動統計には、次の3つの設定が含まれます。 
 
-### <a name="autocreatestatistics"></a>AUTO_CREATE_STATISTICS
-自動作成オプションの統計、AUTO_CREATE_STATISTICS が ON、クエリ オプティマイザーがクエリ プランのカーディナリティの推定を向上させるために、必要に応じて、クエリ述語内の個々 の列に関する統計を作成します。 これらの 1 列ずつの統計は、既存の統計オブジェクトにまだヒストグラムがない列について作成されます。
+### <a name="auto_create_statistics"></a>AUTO_CREATE_STATISTICS
+統計の自動作成オプション AUTO_CREATE_STATISTICS が ON の場合、クエリ プランのカーディナリティの推定を向上させるために、クエリ オプティマイザーによってクエリ述語内の個々の列に関する統計が必要に応じて作成されます。 これらの 1 列ずつの統計は、既存の統計オブジェクトにまだヒストグラムがない列について作成されます。
 
-### <a name="autoupdatestatistics"></a>AUTO_UPDATE_STATISTICS 
+### <a name="auto_update_statistics"></a>AUTO_UPDATE_STATISTICS 
 統計の自動更新オプション AUTO_UPDATE_STATISTICS がオンの場合、古くなっている可能性がある統計がクエリ オプティマイザーによって判断され、それらがクエリで使用されると更新されます。 挿入、更新、削除、またはマージの各操作によってテーブルまたはインデックス付きビューのデータの分布が変わると、統計は古くなったと判断されます。 クエリ オプティマイザーでは、統計が前回更新されてから発生したデータ変更の数をカウントし、その変更の数をしきい値と比較することで、統計が古くなっている可能性がないかを判断します。 このしきい値は、テーブルまたはインデックス付きビューの行数に基づいて決められます。
 
-### <a name="autoupdatestatisticsasync"></a>AUTO_UPDATE_STATISTICS_ASYNC
-統計の非同期更新オプション AUTO_UPDATE_STATISTICS_ASYNC によって、クエリ オプティマイザーで統計の同期更新と非同期更新のどちらを使用するかが決まります。 Ap、統計の非同期更新オプションは、既定で ON と、クエリ オプティマイザーが統計情報を非同期的に更新します。 AUTO_UPDATE_STATISTICS_ASYNC オプションは、インデックスに対して作成された統計オブジェクト、クエリ述語内の列に対して 1 列ずつ作成された統計オブジェクト、および CREATE STATISTICS ステートメントを使用して作成された統計に適用されます。
+### <a name="auto_update_statistics_async"></a>AUTO_UPDATE_STATISTICS_ASYNC
+統計の非同期更新オプション AUTO_UPDATE_STATISTICS_ASYNC によって、クエリ オプティマイザーで統計の同期更新と非同期更新のどちらを使用するかが決まります。 APS では、統計の非同期更新オプションが既定でオンになっており、クエリオプティマイザーによって統計が非同期的に更新されます。 AUTO_UPDATE_STATISTICS_ASYNC オプションは、インデックスに対して作成された統計オブジェクト、クエリ述語内の列に対して 1 列ずつ作成された統計オブジェクト、および CREATE STATISTICS ステートメントを使用して作成された統計に適用されます。
 
 ## <a name="configuration-settings-for-system-administrators"></a>システム管理者の構成設定
-APS AU7 へのアップグレード後は、自動統計は既定で有効にします。 システム管理者を有効または無効で統計の自動、[機能スイッチ](appliance-feature-switch.md)アプライアンス Configuration Manager でのオプション。  有効にすると、ユーザーは、データベースごとの統計情報の設定を変更できます。
-すべての機能スイッチの値を変更するには、AP 上、サービスの再起動が必要です。
+APS AU7 にアップグレードすると、既定で自動統計が有効になります。 システム管理者は、アプライアンス Configuration Manager の [[機能スイッチ](appliance-feature-switch.md)] オプションで自動統計を有効または無効にすることができます。  有効にすると、ユーザーはデータベースごとに統計設定を変更できます。
+機能スイッチの値を変更するには、APS でサービスを再起動する必要があります。
 
-## <a name="change-auto-statistics-settings-on-a-database"></a>データベースの自動統計設定を変更します。
-使用することができます、システム管理者によって自動統計を有効にする、 [ALTER DATABASE (並列データ ウェアハウス)](../t-sql/statements/alter-database-transact-sql.md?tabs=sqlpdw)データベースで統計情報の設定を変更します。 自動統計機能スイッチは、システム管理者によって有効になっている、AU7 へのアップグレード後に作成されたすべての新しいデータベースが自動統計が有効になります。 AU7 へのアップグレードの前に存在しているすべてのデータベースがある自動統計情報が無効になっています。 次の例で、既存のデータベース myPDW の自動統計。
+## <a name="change-auto-statistics-settings-on-a-database"></a>データベースの自動統計設定を変更する
+システム管理者によって自動統計が有効になっている場合は、 [ALTER database (並列データウェアハウス)](../t-sql/statements/alter-database-transact-sql.md?tabs=sqlpdw)を使用して、データベースの統計設定を変更できます。 自動統計機能スイッチがシステム管理者によって有効にされている場合、AU7 へのアップグレード後に新しく作成されたデータベースでは、自動統計が有効になります。 AU7 へのアップグレード前に存在していたすべてのデータベースで、自動統計が無効になっています。 次の例では、既存のデータベース myPDW で自動統計を有効にします。
 
 ```sql
 ALTER DATABASE myPDW SET AUTO_CREATE_STATISTICS ON
@@ -53,16 +53,16 @@ ALTER DATABASE myPDW SET AUTO_UPDATE_STATISTICS ON
 ALTER DATABASE myPDW SET AUTO_UPDATE_STATISTICS_ASYNC ON
 ```
  
-AUTO_UPDATE STATISTICS_ASYNC のオプションは、AUTO_UPDATE_STATISTICS が ON の場合にのみ機能します。  そのため、統計は更新されません AUTO_UPDATE_STATISTICS が OFF の場合と AUTO_UPDATE_STATISTICS_ASYNC は ON です。 
+AUTO_UPDATE STATISTICS_ASYNC オプションは AUTO_UPDATE_STATISTICS がオンの場合にのみ機能します。  そのため、AUTO_UPDATE_STATISTICS がオフで AUTO_UPDATE_STATISTICS_ASYNC がオンになっている場合、統計は更新されません。 
 
 ### <a name="error-messages"></a>エラー メッセージ
-「PDW では、このオプションはサポートされていません」エラー メッセージが表示する可能性があります。  このエラーは、システム管理者が統計の自動有効になっていないと、ALTER DATABASE の自動のいずれかの統計オプションを設定すると発生します。 
+"このオプションは PDW ではサポートされていません" というエラーメッセージが表示されることがあります。  このエラーは、システム管理者が自動統計を有効にせず、ALTER DATABASE で自動統計オプションを設定しようとした場合に発生します。 
 
 ### <a name="limitations-and-restrictions"></a>制限事項と制約事項
-自動統計は、テーブルの外部では機能しません。 
+自動統計は、外部テーブルでは機能しません。 
 
-### <a name="check-the-current-values"></a>現在の値を確認してください。
-次のクエリでは、すべてのデータベースの自動統計情報の設定の現在の値を返します。
+### <a name="check-the-current-values"></a>現在の値を確認する
+次のクエリは、すべてのデータベースの自動統計設定の現在の値を返します。
 
 ```sql
 SELECT NAME
@@ -73,7 +73,7 @@ FROM
     sys.databases;
 ```
 
-1 の設定には、戻り値が入っていて 0 は、設定がオフです。 
+戻り値1は、設定が on であることを意味し、0は設定がオフであることを意味します。 
 
 ## <a name="next-steps"></a>次の手順
-クエリの実行方法を確認するを参照してください[アクティブなクエリの監視。](monitoring-active-queries.md)
+クエリの実行方法を確認するには、「[アクティブなクエリの監視](monitoring-active-queries.md)」を参照してください。

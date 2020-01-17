@@ -12,15 +12,14 @@ helpviewer_keywords:
 - manual joins [SQL Server]
 - joins [SQL Server], self
 ms.assetid: 910ed516-cb84-481b-95d0-cba3e89afdba
-author: stevestein
-ms.author: sstein
-manager: craigg
-ms.openlocfilehash: cd175d4d66cfea79f1449ae7da9d06d5c9f247c3
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 5ef290600a71b502df47dc873ef68c941ee833bd
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52542280"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68264279"
 ---
 # <a name="create-self-joins-manually-visual-database-tools"></a>自己結合の手動作成 (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

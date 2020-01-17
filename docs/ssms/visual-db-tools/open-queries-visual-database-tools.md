@@ -11,15 +11,14 @@ helpviewer_keywords:
 - opening queries
 - queries [SQL Server], opening
 ms.assetid: 6d7ce59b-2ce6-42af-9330-84ce3dc1197e
-author: stevestein
-ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 00ca4a13d0bbd9eb1ed1534948085b24d4d91727
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: c3eec4d1a1d1923163c38af1e59a568715fb1109
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47704898"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68263286"
 ---
 # <a name="open-queries-visual-database-tools"></a>クエリを開く方法 (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

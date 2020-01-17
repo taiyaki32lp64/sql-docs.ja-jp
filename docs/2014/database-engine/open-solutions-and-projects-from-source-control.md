@@ -14,11 +14,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: dc6e728ff40d61f2139115c642e0841a3685207f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48061263"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62774782"
 ---
 # <a name="open-solutions-and-projects-from-source-control"></a>ソース管理からソリューションやプロジェクトを開く方法
   使用することができます[!INCLUDE[msCoName](../includes/msconame-md.md)][!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]をソース管理から直接ソリューションまたはプロジェクトを開きます。 ソース管理からソリューションを開くと、[!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] 環境によって自動的に最新バージョンのソリューションが取得され、指定した場所にそれがコピーされます。  

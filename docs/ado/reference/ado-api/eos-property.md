@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 57e08c5f-f3ed-4ecd-8c66-50b83b1031d1
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 47b3e48e612e0ee5595ada33127f016ee6b986f1
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 5a19856c957ee0c003e934ff8b2632aa28e32d33
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47650676"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67918926"
 ---
 # <a name="eos-property"></a>EOS プロパティ
 現在の位置がの末尾にあるかどうかを示す、[ストリーム](../../../ado/reference/ado-api/stream-object-ado.md)します。  
@@ -35,6 +34,6 @@ ms.locfileid: "47650676"
 ## <a name="applies-to"></a>適用対象  
  [Stream オブジェクト (ADO)](../../../ado/reference/ado-api/stream-object-ado.md)  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [EOS および LineSeparator プロパティの SkipLine メソッドの例 (VB)](../../../ado/reference/ado-api/eos-and-lineseparator-properties-and-skipline-method-example-vb.md)   
  [Stream オブジェクト (ADO)](../../../ado/reference/ado-api/stream-object-ado.md)

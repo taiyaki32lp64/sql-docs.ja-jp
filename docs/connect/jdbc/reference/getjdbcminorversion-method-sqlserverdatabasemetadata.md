@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: d9e153b5-51b7-4e44-b342-f147f04dbe19
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 70b9c85eed373387d566fd4d5fd096b7dd06c251
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 81c7c8e2014da4965222a9292c82ebcaed24ef24
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47844140"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67982635"
 ---
 # <a name="getjdbcminorversion-method-sqlserverdatabasemetadata"></a>getJDBCMinorVersion メソッド (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -42,7 +41,7 @@ public int getJDBCMinorVersion()
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- この getJDBCMinorVersion メソッドは、java.sql.DatabaseMetaData インターフェイスで getJDBCMinorVersion メソッドによって指定されます。  
+ この getJDBCMinorVersion メソッドは、getJDBCMinorVersion メソッドによって、java メタデータインターフェイスで指定されます。  
   
 ## <a name="see-also"></a>参照  
  [SQLServerDatabaseMetaData のメソッド](../../../connect/jdbc/reference/sqlserverdatabasemetadata-methods.md)   

@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: c9e43ff2-8117-4dca-982d-83c863d0c8e1
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: b56a2382759825fd296ea70ad2e52cfc858c7166
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: f5bfc0fb1d1a74131d0e8e71055356f958a9b508
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47781900"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67973104"
 ---
 # <a name="setresponsebuffering-method-sqlserverdatasource"></a>setResponseBuffering メソッド (SQLServerDataSource)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -45,7 +44,7 @@ public void setResponseBuffering(java.lang.String value)
   
  **adaptive** 値は、必要に応じて最小限のデータをバッファリングすることを示します。 既定のバッファリング モードは **adaptive** 値です。  
   
- 詳細については、応答バッファリング モードを使用して、次を参照してください。[アダプティブ バッファリングを使用して](../../../connect/jdbc/using-adaptive-buffering.md)します。  
+ 応答バッファリングモードの使用方法の詳細については、「[アダプティブバッファリングの使用](../../../connect/jdbc/using-adaptive-buffering.md)」を参照してください。  
   
 ## <a name="see-also"></a>参照  
  [SQLServerDataSource のメンバー](../../../connect/jdbc/reference/sqlserverdatasource-members.md)   

@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 1332035c-d6ed-424d-8234-46ad21168319
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 815c36297a6de0fcb263fc2f74b23c186dba5ee9
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: d8dfd76558b4cf6c476849c4f2a41bfdb1f6d28b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52502786"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68118562"
 ---
 # <a name="debugging-clr-database-objects"></a>CLR データベース オブジェクトのデバッグ
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -51,7 +50,7 @@ ms.locfileid: "52502786"
   
 1.  Microsoft Visual Studio を開き、新しい [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] プロジェクトを作成して、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスでデータベースへの接続を確立します。  
   
-2.  新しい型を作成します。 **ソリューション エクスプ ローラー**、プロジェクトを右クリックし、選択**追加**と**新しい項目.****新しい項目の追加**ウィンドウで、**ストアド プロシージャの**、**ユーザー定義関数**、**ユーザー定義型**、 **トリガー**、**集計**、または**クラス**します。 新しい型のソース ファイルの名前を指定し、クリックして**追加**します。  
+2.  新しい型を作成します。 **ソリューション エクスプ ローラー**、プロジェクトを右クリックし、選択**追加**と**新しい項目.** **新しい項目の追加**ウィンドウで、**ストアド プロシージャの**、**ユーザー定義関数**、**ユーザー定義型**、 **トリガー**、**集計**、または**クラス**します。 新しい型のソース ファイルの名前を指定し、クリックして**追加**します。  
   
 3.  テキスト エディターに新しい型のコードを追加します。 ストアド プロシージャの例のサンプル コードについては、後のセクションを参照してください。  
   

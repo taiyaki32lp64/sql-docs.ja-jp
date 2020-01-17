@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 8892f5a4-72ba-4406-8649-7a9d67f4c1d9
 author: Shamikg
 ms.author: Shamikg
-manager: craigg
-ms.openlocfilehash: fe66ff5b8902a737ff9a2ac0815069a4f01ea129
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 506b9a32b465c9006fe4030bd6fcbb8ba4d0f136
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47608947"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67938333"
 ---
 # <a name="assessing-db2-schemas-for-conversion-db2tosql"></a>変換 (DB2ToSQL) のための DB2 スキーマの評価
 オブジェクトを読み込むし、データを移行する前に[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]、複雑な移行されるとどれ時間だけを決定する必要があります、移行にかかる時間します。 SSMA は、正常に変換されるオブジェクトの割合を示す評価レポートを作成できます。 SSMA では、変換エラーが発生する特定の問題を表示することもできます。  
@@ -35,7 +34,7 @@ SSMA が選択した DB2 データベース オブジェクトに変換します
   
     SSMA は、ウィンドウの下部にあるステータス バーに進行状況が表示されます。 [出力] ペインが表示されている場合は、出力ウィンドウ内のメッセージも表示されます。  
   
-    評価が完了すると、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Migration Assistant for DB2: 評価レポート ウィンドウが表示されます。  
+    評価が完了すると、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Migration Assistant for DB2:評価レポート ウィンドウが表示されます。  
   
 ## <a name="using-assessment-reports"></a>評価レポートを使用します。  
 評価レポート ウィンドウには、3 つのペインが含まれています。  

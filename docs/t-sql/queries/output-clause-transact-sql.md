@@ -28,15 +28,14 @@ helpviewer_keywords:
 - displaying deleted rows
 - UPDATE statement [SQL Server], OUTPUT clause
 ms.assetid: 41b9962c-0c71-4227-80a0-08fdc19f5fe4
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: b4bef219ec0e9bd4526b8f7c015a1800d9753656
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+author: VanMSFT
+ms.author: vanto
+ms.openlocfilehash: 13afbab4c154b39fe7762d39c0d431ce17848213
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52529868"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67901873"
 ---
 # <a name="output-clause-transact-sql"></a>OUTPUT 句 (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -134,13 +133,13 @@ DELETE Sales.ShoppingCartItem
 ```  
   
  *column_name*  
- 明示的な列参照です。 変更するテーブルへのすべての参照は、たとえば INSERTED **.**_column\_name_ のように、INSERTED プレフィックスまたは DELETED プレフィックスで正しく修飾されている必要があります。  
+ 明示的な列参照です。 変更するテーブルへのすべての参照は、たとえばINSERTED **.** _column\_name_ のように、INSERTED プレフィックスまたは DELETED プレフィックスで正しく修飾されている必要があります。  
   
  $action  
- MERGE ステートメントでのみ使用できます。 MERGE ステートメントの OUTPUT 句に **nvarchar(10)** 型の列を指定します。この MERGE ステートメントは、行に対して実行されたアクションに従って 'INSERT'、'UPDATE'、'DELETE' のいずれかの値をそれぞれの行について返します。  
+ MERGE ステートメントでのみ使用できます。 MERGE ステートメントの OUTPUT 句に **nvarchar(10)** 型の列を指定します。この MERGE ステートメントは、行に対して実行されたアクションに従って、次のいずれかの値をそれぞれの行について返します。'INSERT'、'UPDATE'、または 'DELETE'。  
   
 ## <a name="remarks"></a>Remarks  
- OUTPUT \<dml_select_list> 句と OUTPUT \<dml_select_list> INTO { **\@**_table\_variable_ | _output\_table_ } 句を単一の INSERT ステートメント、UPDATE ステートメント、DELETE ステートメント、または MERGE ステートメントで定義することができます。  
+ OUTPUT \<dml_select_list> 句と OUTPUT \<dml_select_list> INTO { **\@** _table\_variable_ | _output\_table_ } 句を単一の INSERT ステートメント、UPDATE ステートメント、DELETE ステートメント、または MERGE ステートメントで定義することができます。  
   
 > [!NOTE]  
 >  特に指定しない限り、OUTPUT 句への参照は、OUTPUT 句と OUTPUT INTO 句の両方を参照します。  
@@ -227,7 +226,7 @@ DELETE Sales.ShoppingCartItem
  sp_configure オプション disallow results from triggers が設定されている場合に、INTO 句なしの OUTPUT 句をトリガー内で呼び出すと、ステートメントが失敗します。  
   
 ## <a name="data-types"></a>データ型  
- OUTPUT 句は、ラージ オブジェクト データ型 **nvarchar(max)**、**varchar(max)**、**varbinary(max)**、**text**、**ntext**、**image**、および **xml** をサポートしています。 UPDATE ステートメント内で .WRITE 句を使用して 、**nvarchar(max)**、**varchar(max)**、または **varbinary(max)** の列を変更すると、参照されていれば、値の完全な前イメージと後イメージが返されます。 TEXTPTR( ) 関数を、OUTPUT 句内の **text**、**ntext**、または **image** 列に対する式の一部として使用することはできません。  
+ OUTPUT 句は、ラージ オブジェクト データ型 **nvarchar(max)** 、**varchar(max)** 、**varbinary(max)** 、**text**、**ntext**、**image**、および **xml** をサポートしています。 UPDATE ステートメント内で .WRITE 句を使用して 、**nvarchar(max)** 、**varchar(max)** 、または **varbinary(max)** の列を変更すると、参照されていれば、値の完全な前イメージと後イメージが返されます。 TEXTPTR( ) 関数を、OUTPUT 句内の **text**、**ntext**、または **image** 列に対する式の一部として使用することはできません。  
   
 ## <a name="queues"></a>キュー  
  OUTPUT を、テーブルをキューとして使用するアプリケーションで使用したり、中間結果セットを保持するために使用することができます。 つまり、アプリケーションは、テーブルに対して、常に行の追加または削除を行っています。 次の例では、DELETE ステートメント内で OUTPUT 句を使用し、削除された行を呼び出し元アプリケーションに返します。  
@@ -511,7 +510,7 @@ GO
 ```  
   
 ### <a name="h-using-output-in-an-instead-of-trigger"></a>H. OUTPUT を INSTEAD OF トリガー内で使用する  
- 次の例では、トリガー内で `OUTPUT` 句を使用し、トリガー操作の結果を返しています。 まず、`ScrapReason` テーブルでビューを作成し、次にそのビューに対して `INSTEAD OF INSERT` トリガーを定義して、ユーザーがベース テーブルの `Name` 列しか変更できないようにします。 列 `ScrapReasonID` はベース テーブルの `IDENTITY` 列であるため、トリガーはユーザーが指定した値を無視します。 これにより、[!INCLUDE[ssDE](../../includes/ssde-md.md)]は正しい値を自動的に生成できるようになります。 また、ユーザーが `ModifiedDate` に指定した値も無視され、現在の日付が設定されます。 `OUTPUT` 句は、`ScrapReason` テーブルに実際に挿入された値を返します。  
+ 次の例では、トリガー内で `OUTPUT` 句を使用し、トリガー操作の結果を返しています。 まず、`ScrapReason` テーブルでビューを作成し、次にそのビューに対して `INSTEAD OF INSERT` トリガーを定義して、ユーザーがベース テーブルの `Name` 列しか変更できないようにします。 列 `ScrapReasonID` はベース テーブルの `IDENTITY` 列であるため、トリガーはユーザーが指定した値を無視します。 これにより、[!INCLUDE[ssDE](../../includes/ssde-md.md)] は正しい値を自動的に生成できるようになります。 また、ユーザーが `ModifiedDate` に指定した値も無視され、現在の日付が設定されます。 `OUTPUT` 句は、`ScrapReason` テーブルに実際に挿入された値を返します。  
   
 ```  
 USE AdventureWorks2012;  
@@ -629,7 +628,7 @@ GO
 ```  
   
 ### <a name="k-inserting-data-returned-from-an-output-clause"></a>K. OUTPUT 句から返されたデータを挿入する  
- 次の例では、`OUTPUT` ステートメントの `MERGE` 句から返されたデータをキャプチャし、そのデータを別のテーブルに挿入します。 `MERGE` ステートメントは、`Quantity` テーブル内で処理された注文に基づいて、`ProductInventory` テーブルの `SalesOrderDetail` 列を毎日更新します。 また、在庫が `0` 以下になった製品の行を削除します。 この例では、削除された行をキャプチャし、在庫がない製品を追跡する別のテーブル `ZeroInventory` に挿入します。  
+ 次の例では、`OUTPUT` ステートメントの `MERGE` 句から返されたデータをキャプチャし、そのデータを別のテーブルに挿入します。 `MERGE` ステートメントは、`SalesOrderDetail` テーブル内で処理された注文に基づいて、`ProductInventory` テーブルの `Quantity` 列を毎日更新します。 また、在庫が `0` 以下になった製品の行を削除します。 この例では、削除された行をキャプチャし、在庫がない製品を追跡する別のテーブル `ZeroInventory` に挿入します。  
   
 ```  
 USE AdventureWorks2012;  

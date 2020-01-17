@@ -10,20 +10,24 @@ ms.topic: conceptual
 ms.assetid: 6e005de0-3a77-4b91-b497-14cc0f9f6605
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: a35c519b2fa2085371ae07d35489d5417e885a59
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: af9f37bb0cc3508d1a421c75de4297b3f015f6a7
+ms.sourcegitcommit: 632ff55084339f054d5934a81c63c77a93ede4ce
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47755760"
+ms.lasthandoff: 08/20/2019
+ms.locfileid: "69634566"
 ---
 # <a name="configuring-storage-for-memory-optimized-tables"></a>メモリ最適化テーブルのストレージの構成
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   記憶域の容量と 1 秒間の入出力操作 (IOPS) を構成する必要があります。  
   
 ## <a name="storage-capacity"></a>記憶域の容量  
- [メモリ最適化テーブルのメモリ必要量の推定](../../relational-databases/in-memory-oltp/estimate-memory-requirements-for-memory-optimized-tables.md) の情報を使用して、データベースの持続性のあるメモリ最適化テーブルのメモリ内サイズを推定します。 インデックスはメモリ最適化テーブルに対して永続化されないため、インデックスのサイズは含めません。 サイズを確認した後には、持続性のあるメモリ内テーブルのサイズの 4 倍のディスク領域を提供する必要があります。  
+
+[メモリ最適化テーブルのメモリ必要量の推定](../../relational-databases/in-memory-oltp/estimate-memory-requirements-for-memory-optimized-tables.md) の情報を使用して、データベースの持続性のあるメモリ最適化テーブルのメモリ内サイズを推定します。 インデックスはメモリ最適化テーブルに対して永続化されないため、インデックスのサイズは含めません。 
+ 
+サイズを決定した後、新しく変更されたデータを格納するために使用される、チェックポイント ファイルを保持するのに十分なディスク領域を提供する必要があります。 格納されるデータには、インメモリ テーブルに追加された新しい行の内容だけでなく、既存の行の新しいバージョンも含まれます。 この記憶域は、行が挿入または更新されると大きくなります。 ログの切り捨てが発生すると、行バージョンはマージされ、記憶域は回収されます。 何らかの理由でログの切り捨てが遅れると、インメモリ OLTP ストアが大きくなります。
+
+この領域のストレージのサイズを設定する場合、最初は、持続性のあるインメモリ テーブルのサイズの 4 倍を予約することをお勧めします。 領域の使用量を監視し、必要に応じて使用可能な記憶域を拡張できるように準備します。
   
 ## <a name="storage-iops"></a>記憶域の IOPS  
  [!INCLUDE[hek_2](../../includes/hek-2-md.md)] は、ワークロードのスループットを大幅に上げることができます。 したがって、IO がボトルネックになっていないことを確認してください。  

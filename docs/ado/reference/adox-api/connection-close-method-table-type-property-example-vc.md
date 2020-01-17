@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: d0e250aa-fc57-4fd3-9610-d64f50c5507f
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 133e0c86db9216d4959d8ee81fdc48f62c64d4fa
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 4ff8cf50279d9be6b3ed334982e2140f0bd41f4d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47837870"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67966698"
 ---
 # <a name="connection-close-method-table-type-property-example-vc"></a>Connection Close メソッド、Table Type プロパティの例 (VC++)
 設定、 [ActiveConnection](../../../ado/reference/adox-api/activeconnection-property-adox.md)プロパティを**Nothing**閉じる必要があります""カタログ。 関連付けられたコレクションは空になります。 カタログ内のスキーマ オブジェクトから作成されたすべてのオブジェクトは孤立します。 キャッシュされているこれらのオブジェクトのプロパティはいずれも使用できなくなりますが、プロバイダーの呼び出しを必要とするプロパティの読み取りを試みたが失敗します。  
@@ -143,5 +142,5 @@ void CloseConnectionX() {
 }  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [ActiveConnection プロパティ (ADOX)](../../../ado/reference/adox-api/activeconnection-property-adox.md)

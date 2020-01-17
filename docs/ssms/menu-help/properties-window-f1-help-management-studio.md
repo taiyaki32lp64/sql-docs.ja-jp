@@ -21,15 +21,14 @@ helpviewer_keywords:
 - Properties window [SQL Server Management Studio]
 - SQL Server Management Studio Help [SQL Server], properties window
 ms.assetid: f682ff0d-0161-4b42-a689-26eeb077d9e9
-author: stevestein
-ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 52ca965ad55ede40b3e5dc6daf1864b532604056
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 19a7cd6251165db2843a7afb691ad23ccf75fbda
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47682140"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68257063"
 ---
 # <a name="properties-window-f1-help-management-studio"></a>[プロパティ] ウィンドウの F1 ヘルプ (Management Studio)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -37,12 +36,12 @@ ms.locfileid: "47682140"
   
 **[プロパティ]** ウィンドウには、さまざまな種類の編集フィールドが表示されます。表示されるフィールドは、特定のプロパティで必要となる内容に応じて異なります。 淡色で表示されているプロパティは変更できません。  
   
-## <a name="options"></a>[変数]  
+## <a name="options"></a>オプション  
 **オブジェクト名です。**  
 現在選択している 1 つまたは複数のオブジェクトを一覧に表示します。 アクティブなエディターまたはデザイナーのオブジェクトのみが表示されます。  
   
 **項目別**  
-選択したオブジェクトのすべてのプロパティおよびプロパティ値を項目別に表示します。 項目を折りたたんで、表示するプロパティの数を少なくすることができます。 カテゴリの展開したり折りたたんだりすると、各カテゴリ名の左側に正符号 (**+**) または負符号 (**-**) が表示されます。 項目はアルファベット順に表示されます。  
+選択したオブジェクトのすべてのプロパティおよびプロパティ値を項目別に表示します。 項目を折りたたんで、表示するプロパティの数を少なくすることができます。 カテゴリの展開したり折りたたんだりすると、各カテゴリ名の左側に正符号 ( **+** ) または負符号 ( **-** ) が表示されます。 項目はアルファベット順に表示されます。  
   
 **アルファベット順**  
 選択したオブジェクトのデザイン時のすべてのプロパティおよびイベントをアルファベット順に並べ替えます。  

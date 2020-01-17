@@ -12,15 +12,14 @@ dev_langs:
 helpviewer_keywords:
 - Aggregate Geography Methods [SQL Server]
 ms.assetid: 38e8146d-86bf-48c9-a436-2269bdadb27d
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: 157347e9eebe108396e908b017b8103cff5b7a9b
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+author: MladjoA
+ms.author: mlandzic
+ms.openlocfilehash: 0eeb0558d898c4f12e1d3848e7220c7b7143c996
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52502313"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68042494"
 ---
 # <a name="static-aggregate-geography-methods"></a>静的集計地理メソッド
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
@@ -30,7 +29,7 @@ ms.locfileid: "52502313"
 > [!NOTE]  
 >  これらの集計メソッドは、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] だけで公開されています。 Microsoft.SqlServer.Types アセンブリでは公開されていません。  
   
- OGC 仕様の詳細については、以下を参照してください。  
+ OGC 仕様の詳細については、以下のリソースを参照してください。  
   
  [OGC の仕様、簡易機能アクセス Part 1 - 共通アーキテクチャ](https://go.microsoft.com/fwlink/?LinkId=93627)  
   

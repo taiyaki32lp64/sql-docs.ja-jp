@@ -12,19 +12,18 @@ helpviewer_keywords:
 ms.assetid: 0bdd236b-edff-4aac-94c3-93e1465ca6c5
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: be7123595b823434dd6b9f4a369115d83c0d68ec
-ms.sourcegitcommit: 1a5448747ccb2e13e8f3d9f04012ba5ae04bb0a3
+ms.openlocfilehash: 84b90e2c1338c38538d0c33779fb8e3f5cf2af79
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51558499"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67922954"
 ---
 # <a name="basic-rds-programming-model"></a>RDS の基本プログラミング モデル
 > [!IMPORTANT]
 >  Windows 8 および Windows Server 2012 以降、RDS サーバー コンポーネントに含まれていない、Windows オペレーティング システム (Windows 8 を参照してくださいと[Windows Server 2012 の互換性クックブック](https://www.microsoft.com/download/details.aspx?id=27416)の詳細)。 RDS クライアント コンポーネントは、Windows の将来のバージョンで削除されます。 新規の開発作業ではこの機能を使用しないようにし、現在この機能を使用しているアプリケーションは修正することを検討してください。 RDS を使用するアプリケーションに移行する必要があります[WCF Data Service](https://go.microsoft.com/fwlink/?LinkId=199565)します。  
   
- Rds は、次の環境に存在するアプリケーション: クライアント アプリケーションが、サーバーおよび必要な情報を返すために必要なパラメーターで実行するプログラムを指定します。 指定されたデータ ソースへのサーバーがアクセスに対して呼び出されたプログラム情報を取得するには、必要に応じて、データを処理および簡単に使用できる形式でクライアント アプリケーションに、結果の情報を返します。 RDS は、次の一連のアクションを実行するための手段を提供します。  
+ Rds は、次の環境に存在するアプリケーション。クライアント アプリケーションでは、サーバーおよび必要な情報を返すために必要なパラメーターで実行するプログラムを指定します。 指定されたデータ ソースへのサーバーがアクセスに対して呼び出されたプログラム情報を取得するには、必要に応じて、データを処理および簡単に使用できる形式でクライアント アプリケーションに、結果の情報を返します。 RDS は、次の一連のアクションを実行するための手段を提供します。  
   
 -   サーバーで、呼び出されるプログラムを指定し、クライアントからそれを参照する方法を取得します。 (この参照が呼び出される場合があります、*プロキシ*します。 リモート サーバーのプログラムを表します。 クライアント アプリケーションは"call"のプロキシと場合、ローカルのプログラムが実際には、リモート サーバーのプログラムを呼び出します。)  
   
@@ -44,7 +43,7 @@ ms.locfileid: "51558499"
   
  最後に場合は、ニーズの場所間に、ADO サポート既定のサーバー プログラムの動作をカスタマイズします。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [RDS のプログラミング モデルの詳細](../../../ado/guide/remote-data-service/rds-programming-model-in-detail.md)   
  [RDS のシナリオ](../../../ado/guide/remote-data-service/rds-scenario.md)   
  [RDS チュートリアル](../../../ado/guide/remote-data-service/rds-tutorial.md)   

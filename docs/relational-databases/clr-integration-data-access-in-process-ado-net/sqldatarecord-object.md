@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 2ed667fb-749c-4280-a8fb-650643683c8f
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 228373406a8b94705dce39dd1ed2716748cb5704
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 76f89af5ea6a7b1ab7a01bda14cce391a1b4b750
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47721997"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68122772"
 ---
 # <a name="sqldatarecord-object"></a>SqlDataRecord オブジェクト
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -88,7 +87,7 @@ Public Shared Sub  CreateNewRecordVBProc ()
 End Sub  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [SqlPipe オブジェクト](../../relational-databases/clr-integration-data-access-in-process-ado-net/sqlpipe-object.md)  
   
   

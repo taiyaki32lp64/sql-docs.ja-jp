@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 0abc00fe-ee09-4c8e-b1f2-48ee9c5f3329
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: b0e96900fdac55e97e3481ba5198e0f51d659877
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: c8439f7d8fabc5675e43fca5bba006b22574b992
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47713760"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67931046"
 ---
 # <a name="skipline-method"></a>SkipLine メソッド
 テキストを読み取るときに、1 つの行全体をスキップ[Stream](../../../ado/reference/ado-api/stream-object-ado.md)します。  

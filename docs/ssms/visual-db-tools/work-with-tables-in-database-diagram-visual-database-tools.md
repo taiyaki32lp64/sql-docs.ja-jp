@@ -13,15 +13,14 @@ helpviewer_keywords:
 - tables [SQL Server], database diagrams
 - database diagrams [SQL Server], Table Designer
 ms.assetid: ee2c5d84-22bf-4597-ac70-a27ed8cc94f4
-author: stevestein
-ms.author: sstein
-manager: craigg
-ms.openlocfilehash: fb21f08c5762cc89534a1d79e047ac4b301dbc27
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 358d9940227e9034cdd3155d521d1782abb95360
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47825820"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68262479"
 ---
 # <a name="work-with-tables-in-database-diagram-visual-database-tools"></a>データベース ダイアグラムでのテーブルの操作 (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

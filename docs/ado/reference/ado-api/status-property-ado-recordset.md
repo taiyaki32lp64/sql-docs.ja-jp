@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 41d70d89-880f-4850-9d17-19d9790cc8eb
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 5847300af48b39dc12ccb65f5e03f1fdc6f8e795
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 1d91c3e92be7679ad6fbbb4a4ee7bd1bb6a48422
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47822085"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67916839"
 ---
 # <a name="status-property-ado-recordset"></a>Status プロパティ (ADO Recordset)
 バッチ更新プログラムに関して現在のレコードやその他の一括操作の状態を示します。  
@@ -36,6 +35,6 @@ ms.locfileid: "47822085"
 ## <a name="applies-to"></a>適用対象  
  [Recordset オブジェクト (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [Status プロパティの例 (Recordset) (VB)](../../../ado/reference/ado-api/status-property-example-recordset-vb.md)   
  [Status プロパティの例 (VC++)](../../../ado/reference/ado-api/status-property-example-vc.md)   

@@ -11,15 +11,14 @@ helpviewer_keywords:
 - copying queries
 - queries [SQL Server], copying
 ms.assetid: 46cd1557-cf3d-40b8-b489-8446e0984e0f
-author: stevestein
-ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 3fc04a00d78460915a8509ac01dd8dfd74034250
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 93e03092b17206117946f87c546c3d9d8ec9476c
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47793030"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68264949"
 ---
 # <a name="copy-queries-visual-database-tools"></a>クエリのコピー (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

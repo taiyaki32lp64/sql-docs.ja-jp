@@ -20,17 +20,20 @@ helpviewer_keywords:
 - custom user interface [Integration Services], custom data flow component
 - editors [Integration Services]
 ms.assetid: 10b829a1-609b-42e3-9070-cfe5a2bb698c
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: abd99051ddd130a2f3f570dc571f59320f4ae33b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 21bc28f99768c7b31d6ba5b18170140a23400853
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47769537"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71287777"
 ---
 # <a name="developing-a-user-interface-for-a-data-flow-component"></a>データ フロー コンポーネント用ユーザー インターフェイスの開発
+
+[!INCLUDE[ssis-appliesto](../../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   コンポーネント開発者は、コンポーネント用のカスタム ユーザー インターフェイスを作成し、コンポーネントを編集するときに [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)] に表示させることができます。 カスタム ユーザー インターフェイスを実装すると、データ フロー タスクでコンポーネントが追加または削除されたとき、またはコンポーネントに関するヘルプが要求されたときに通知されます。  
   
  コンポーネント用のカスタム ユーザー インターフェイスを提供しない場合でも、ユーザーは、詳細エディターを使用することで、コンポーネントおよびそのカスタム プロパティを構成することができます。 詳細エディターでユーザーがカスタム プロパティ値を適切に変更できるようにするには、必要に応じて、<xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSCustomProperty100.TypeConverter%2A> の <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSCustomProperty100.UITypeEditor%2A> および <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSCustomProperty100> プロパティを使用します。 詳細については、「[データ フロー コンポーネントのデザイン時のメソッド](../../../integration-services/extending-packages-custom-objects/data-flow/design-time-methods-of-a-data-flow-component.md)」の「カスタム プロパティの作成」を参照してください。  

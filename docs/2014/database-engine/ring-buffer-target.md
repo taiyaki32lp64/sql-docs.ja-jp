@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 helpviewer_keywords:
 - targets [SQL Server extended events], ring buffer target
@@ -14,12 +13,12 @@ ms.assetid: 54494e11-b56b-43b7-aa5e-c8724e56b251
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: d042ef49a82d16eb33cb27d80c8083a68ea69092
-ms.sourcegitcommit: 4b5ea5fa3253fea028e1adbd46bd18b89f0a115b
+ms.openlocfilehash: 920cc72a9d99da61575249559661c01826b0e89b
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2019
-ms.locfileid: "55905657"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66088957"
 ---
 # <a name="ring-buffer-target"></a>リング バッファー ターゲット
   リング バッファー ターゲットは、メモリにイベント データを一時的に保持します。 このターゲットでは、2 種類のモードのいずれかでイベントを管理できます。  
@@ -75,7 +74,7 @@ WHERE xe.name = 'session_name'
 ```
 
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 - [SQL Server 拡張イベント ターゲット](../../2014/database-engine/sql-server-extended-events-targets.md)
 - [sys.dm_xe_session_targets &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-xe-session-targets-transact-sql?view=sql-server-2016)

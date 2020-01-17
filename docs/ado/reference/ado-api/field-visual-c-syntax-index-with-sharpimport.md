@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 90cb636a-9416-48a4-b4eb-bb11bbd40950
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: a2f442f665f6292c529b4d2360494869d9a0b2c4
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 587be8f0686cd7b2498080984d40e79c80bde898
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47705590"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67932694"
 ---
 # <a name="field-visual-c-syntax-index-with-import"></a>フィールド (Visual C 構文のインデックスで #import)
 ## <a name="methods"></a>メソッド  
@@ -32,7 +31,7 @@ HRESULT AppendChunk( const _variant_t & Data );
 _variant_t GetChunk( long Length );  
 ```  
   
-## <a name="properties"></a>[プロパティ]  
+## <a name="properties"></a>Properties  
   
 ```  
 long GetActualSize( );  
@@ -80,5 +79,5 @@ void PutValue( const _variant_t & pvar );
 __declspec(property(get=GetValue,put=PutValue)) _variant_t Value;  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [Field オブジェクト](../../../ado/reference/ado-api/field-object.md)

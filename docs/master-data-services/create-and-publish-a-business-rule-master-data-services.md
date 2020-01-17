@@ -1,5 +1,5 @@
 ---
-title: ビジネス ルールを作成しパブリッシュする (マスター データ サービス) | Microsoft Docs
+title: ビジネス ルールを作成しパブリッシュする
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -11,15 +11,14 @@ helpviewer_keywords:
 - business rules [Master Data Services], creating
 - creating business rules [Master Data Services]
 ms.assetid: 6961d636-4d69-468e-81f7-8d0be6a4a039
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 401dc7a80db0a1499943802671866ebef0eef901
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
-ms.translationtype: HT
+ms.openlocfilehash: e8deee97bd80404df5851f0845aa02b51bfe0cfc
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52777344"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73729445"
 ---
 # <a name="create-and-publish-a-business-rule-master-data-services"></a>ビジネス ルールを作成しパブリッシュする (マスター データ サービス)
 
@@ -32,7 +31,7 @@ ms.locfileid: "52777344"
   
 -   **[システム管理]** 機能領域にアクセスする権限が必要です。  
   
--   モデル管理者である必要があります。 詳細については、「 [管理者 (マスター データ サービス)](../master-data-services/administrators-master-data-services.md)にアクセスすることなくグループに対してユーザーの追加または削除を行うことができます。  
+-   モデル管理者である必要があります。 詳細については、「[Administrators &#40;Master Data Services&#41; (管理者 &#40;マスター データ サービス&#41;)](../master-data-services/administrators-master-data-services.md)」を参照してください。  
   
 ### <a name="to-create-and-publish-a-business-rule"></a>ビジネス ルールを作成してパブリッシュするには  
   
@@ -59,7 +58,7 @@ ms.locfileid: "52777344"
   
 10. **If** ブロックの下で **[追加]** をクリックします。 パネルが表示されます。  
   
-11. **[属性]** ボックスの一覧から、属性を選択します。  
+11. **[属性]** ドロップダウン リストから、属性を選択します。  
   
 12. **[演算子]** ドロップダウン リストから、条件を選択します。  
   
@@ -70,7 +69,7 @@ ms.locfileid: "52777344"
     > [!TIP]  
     >  ビジネス ルールからアイテムを削除するには、各項目を右クリックして **[削除]** をクリックします。  
   
-15. オプションで、ビジネス ルールに複数の条件を追加します。 詳細については、「 [ビジネス ルールに複数の条件を追加する (マスター データ サービス)](../master-data-services/add-multiple-conditions-to-a-business-rule-master-data-services.md)」を参照してください。  
+15. オプションで、ビジネス ルールに複数の条件を追加します。 詳細については、「[ビジネス ルールに複数の条件を追加する (マスター データ サービス)](../master-data-services/add-multiple-conditions-to-a-business-rule-master-data-services.md)」を参照してください。  
   
 16. **Then** ブロックの下で **[追加]** をクリックします。 パネルが表示されます。  
   
@@ -105,7 +104,7 @@ ms.locfileid: "52777344"
   
 |[オブジェクト名]|[説明]|  
 |----------|-----------------|  
-|状態|**[保存]** をクリックすると、ビジネス ルールが更新中であることを示す次のイメージが表示されます。<br /><br /> ![mds_BR_refresh](../master-data-services/media/mds-br-refresh.png "mds_BR_refresh")<br /><br /> ビジネス ルールの作成または編集中にエラーが発生すると、次のイメージが表示されます。<br /><br /> ![mds_br_error](../master-data-services/media/mds-br-error.png "mds_br_error")<br /><br /> 適切な状態の場合は、次のイメージが表示されます。<br /><br /> ![mds_BR_success](../master-data-services/media/mds-br-success.png "mds_BR_success")|  
+|[状態]|**[保存]** をクリックすると、ビジネス ルールが更新中であることを示す次のイメージが表示されます。<br /><br /> ![mds_BR_refresh](../master-data-services/media/mds-br-refresh.png "mds_BR_refresh ")<br /><br /> ビジネス ルールの作成または編集中にエラーが発生すると、次のイメージが表示されます。<br /><br /> ![mds_br_error](../master-data-services/media/mds-br-error.png "mds_br_error ")<br /><br /> 適切な状態の場合は、次のイメージが表示されます。<br /><br /> ![mds_BR_success](../master-data-services/media/mds-br-success.png "mds_BR_success ")|  
 |[オブジェクト名]|ビジネス ルール名。|  
 |[説明]|ビジネス ルールの説明。|  
 |[ビジネス ルールの状態]|次のビジネス ルールの状態のいずれか: ルール未定義、アクティブ、除外、保留中の変更、保留中の実行、保留中の削除。|  

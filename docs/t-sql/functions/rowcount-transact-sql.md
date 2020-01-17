@@ -19,15 +19,14 @@ helpviewer_keywords:
 - statements [SQL Server], last statement
 - counting rows
 ms.assetid: 97a47998-81d9-4331-a244-9eb8b6fe4a56
-author: MashaMSFT
-ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 3f3919729fc29933d348f8ef0e10d697c5e00646
-ms.sourcegitcommit: a94cf79160e22fa8b4bafe3e6e50bb54e20b1bca
+author: MikeRayMSFT
+ms.author: mikeray
+ms.openlocfilehash: 5baec7bb0328f6765bc4d4e1a04993074ad62999
+ms.sourcegitcommit: f688a37bb6deac2e5b7730344165bbe2c57f9b9c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54805708"
+ms.lasthandoff: 11/08/2019
+ms.locfileid: "73843523"
 ---
 # <a name="x40x40rowcount-transact-sql"></a>&#x40;&#x40;ROWCOUNT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -48,7 +47,7 @@ ms.locfileid: "54805708"
 ## <a name="remarks"></a>Remarks  
  [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントでは、次の方法で @@ROWCOUNT に値を設定できます。  
   
--   @@ROWCOUNT に、影響を受ける行または読み取られる行の数を設定します。 行はクライアントに送信しても、送信しなくてもかまいません。  
+-   @@ROWCOUNT に、影響を受ける行または読み取られる行の数を設定します。 行はクライアントに送信される場合と、送信されない場合があります。  
   
 -   前にステートメントを実行したときの @@ROWCOUNT を保存します。  
   
@@ -83,7 +82,7 @@ GO
 ```  
   
 ## <a name="see-also"></a>参照  
- [システム関数 &#40;Transact-SQL&#41;](../../relational-databases/system-functions/system-functions-for-transact-sql.md)   
+ [システム関数 &#40;Transact-SQL&#41;](../../relational-databases/system-functions/system-functions-category-transact-sql.md)   
  [SET ROWCOUNT &#40;Transact-SQL&#41;](../../t-sql/statements/set-rowcount-transact-sql.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: ユーザーのアクセス許可のテスト (マスター データ サービス) | Microsoft Docs
+title: ユーザー&#39;のアクセス許可をテストする
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -8,15 +8,14 @@ ms.reviewer: ''
 ms.technology: master-data-services
 ms.topic: conceptual
 ms.assetid: 83a03b85-ea7f-4b4a-b19b-f7eca534ffae
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: ad4ee1957f295bf13d0346590f621ca87dc6387f
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
-ms.translationtype: HT
+ms.openlocfilehash: 2890487c4bbdf23ca4f1d7fa13aa15764f8029d8
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52823406"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73728874"
 ---
 # <a name="test-a-user39s-permissions-master-data-services"></a>ユーザーのアクセス許可のテスト (マスター データ サービス)
 
@@ -26,7 +25,7 @@ ms.locfileid: "52823406"
   
 ### <a name="to-test-a-users-security"></a>ユーザーのセキュリティをテストするには  
   
-1.  Internet Explorer 7 以降で、 **[ツール]**、 **[インターネット オプション]** の順にクリックして、 **[セキュリティ]** タブをクリックします。  
+1.  Internet Explorer 7 以降で、 **[ツール]** 、 **[インターネット オプション]** の順にクリックして、 **[セキュリティ]** タブをクリックします。  
   
 2.  **[ローカル イントラネット]** をクリックして、 **[レベルのカスタマイズ]** ボタンをクリックします。  
   

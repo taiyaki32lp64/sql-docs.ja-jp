@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: 6617b2a2-9f69-433e-89e0-4c5dc92982cf
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 340accda9321eb8732f909e73729ccaf5193e9a6
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: b7eb3fe1157ba40466cc619f504255084aa845fa
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48146000"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66080616"
 ---
 # <a name="import-data-ssas-tabular"></a>データのインポート (SSAS テーブル)
   テーブル モデルにはさまざまなソースからデータをインポートできます。 このセクションの各トピックでは、データ インポート ウィザードを使用してデータ ソースに接続し、モデル プロジェクトにインポートするデータを選択する方法について説明します。  
@@ -43,6 +42,6 @@ ms.locfileid: "48146000"
 |[多次元データ ソースからのインポート&#40;SSAS 表形式&#41;](import-from-a-multidimensional-data-source-ssas-tabular.md)|多次元の SQL Server Analysis Services キューブからデータをインポートする方法について説明します。|  
 |[データ フィードからのインポート&#40;SSAS 表形式&#41;](import-from-a-data-feed-ssas-tabular.md)|Microsoft Reporting Services レポートや Azure Data Market データセットなどのデータ フィードからデータをインポートする方法について説明します。|  
 |[テキスト ファイルからインポート&#40;SSAS 表形式&#41;](import-from-a-text-file-ssas-tabular.md)|Microsoft Excel ブックやテキスト ファイルからデータをインポートする方法について説明します。|  
-|[データ コピーして貼り付け&#40;SSAS 表形式&#41;](copy-and-paste-data-ssas-tabular.md)|モデル デザイナーで [貼り付け] および [貼り付け追加] を使用し既存のテーブルにデータを追加する方法について説明します。|  
+|[データのコピーと貼り付け &#40;SSAS テーブル&#41;](copy-and-paste-data-ssas-tabular.md)|モデル デザイナーで [貼り付け] および [貼り付け追加] を使用し既存のテーブルにデータを追加する方法について説明します。|  
   
   

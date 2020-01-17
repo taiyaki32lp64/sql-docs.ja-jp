@@ -15,15 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - STGeomCollFromText (geometry Data Type)
 ms.assetid: 19e757b3-cb2e-4852-87b9-40a815ab707e
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: a5305ccc5c6a1fa8e6011f3ab87026c03a721b9e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: MladjoA
+ms.author: mlandzic
+ms.openlocfilehash: 7b4398107b11ff0bb1764dc70e4af24af082aeb4
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47817090"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68107715"
 ---
 # <a name="stgeomcollfromtext-geometry-data-type"></a>STGeomCollFromText (geometry データ型)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -47,7 +46,7 @@ STGeomCollFromText ( 'geometrycollection_tagged_text' , SRID )
 ## <a name="return-types"></a>戻り値の型  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の戻り値の型: **geometry**  
   
- CLR 戻り値の型: **SqlGeometry**  
+ CLR の戻り値の型:**SqlGeometry**  
   
 ## <a name="remarks"></a>Remarks  
  `STGeomCollFromText()` によって返された **geometry** インスタンスの OGC 型は、対応する WKT 入力に設定されます。  

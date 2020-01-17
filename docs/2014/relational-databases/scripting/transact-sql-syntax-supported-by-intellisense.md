@@ -1,11 +1,10 @@
 ---
-title: IntelliSense でサポートされている Transact-SQL 構文 | Microsoft Docs
-ms.custom: ''
+title: IntelliSense でサポートされている Transact-SQL 構文
+ms.custom: seo-lt-2019
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 dev_langs:
 - TSQL
@@ -16,24 +15,26 @@ ms.assetid: 194e8f4f-fd7e-4f32-a169-f23531128004
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: ec0b3ead95fe196f75b003d2fd844bbf2520ced9
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 2db2ac49f1caa455c8c05529437a385d360ecaf6
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48092512"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75243002"
 ---
 # <a name="transact-sql-syntax-supported-by-intellisense"></a>IntelliSense でサポートされている Transact-SQL 構文
   このトピックでは、 [!INCLUDE[tsql](../../includes/tsql-md.md)] の IntelliSense でサポートされる [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]ステートメントと構文要素について説明します。  
   
 ## <a name="statements-supported-by-intellisense"></a>IntelliSense でサポートされるステートメント  
- [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]の IntelliSense では、特に一般的な [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントのみがサポートされます。 いくつかの一般的な[!INCLUDE[ssDE](../../includes/ssde-md.md)] クエリ エディターの状態が原因で IntelliSense が動作しなくなる場合があります。 詳細については、「[IntelliSense のトラブルシューティング &#40;SQL Server Management Studio&#41;](troubleshooting-intellisense.md)」を参照してください。  
+ 
+  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]の IntelliSense では、特に一般的な [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントのみがサポートされます。 いくつかの一般的な [!INCLUDE[ssDE](../../includes/ssde-md.md)] クエリ エディターの状態が原因で IntelliSense が動作しなくなる場合があります。 詳細については、「[IntelliSense のトラブルシューティング &#40;SQL Server Management Studio&#41;](troubleshooting-intellisense.md)」を参照してください。  
   
 > [!NOTE]  
 >  IntelliSense は、暗号化されたデータベース オブジェクト (たとえば暗号化されたストアド プロシージャまたはユーザー定義関数) に対しては利用できません。 拡張されたストアド プロシージャおよび CLR 統合のユーザー定義型のパラメーターに対しては、パラメーターのヘルプおよびクイック ヒントを利用できません。  
   
 ### <a name="select-statement"></a>SELECT ステートメント  
- [!INCLUDE[ssDE](../../includes/ssde-md.md)] クエリ エディターでは、IntelliSense によって、SELECT ステートメント内の次の構文要素がサポートされます。  
+ 
+  [!INCLUDE[ssDE](../../includes/ssde-md.md)] クエリ エディターでは、IntelliSense によって、SELECT ステートメント内の次の構文要素がサポートされます。  
   
 |||  
 |-|-|  
@@ -44,21 +45,23 @@ ms.locfileid: "48092512"
 |TOP|OPTION (hint)|  
   
 ### <a name="additional-transact-sql-statements-that-are-supported"></a>サポートされているその他の Transact-SQL ステートメント  
- [!INCLUDE[ssDE](../../includes/ssde-md.md)] クエリ エディターでは、IntelliSense によって、次の表に示す [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントもサポートされています。  
+ 
+  [!INCLUDE[ssDE](../../includes/ssde-md.md)] クエリ エディターでは、IntelliSense によって、次の表に示す [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントもサポートされています。  
   
 |Transact-SQL ステートメント|サポートされている構文|  
 |-----------------------------|----------------------|  
-|[INSERT](/sql/t-sql/statements/insert-transact-sql)|*execute_statement* 句を除くすべての構文。|  
+|[INSERT](/sql/t-sql/statements/insert-transact-sql)|
+  *execute_statement* 句を除くすべての構文。|  
 |[UPDATE](/sql/t-sql/queries/update-transact-sql)|すべての構文。|  
-|[DELETE](/sql/t-sql/statements/delete-transact-sql)|すべての構文。|  
-|[DECLARE @local_variable](/sql/t-sql/language-elements/declare-local-variable-transact-sql)|すべての構文。|  
-|[SET @local_variable](/sql/t-sql/language-elements/set-local-variable-transact-sql)|すべての構文。|  
-|[EXECUTE](/sql/t-sql/language-elements/execute-transact-sql)|ユーザー定義ストアド プロシージャ、システム ストアド プロシージャ、ユーザー定義関数、およびシステム関数の実行。|  
+|[デリート](/sql/t-sql/statements/delete-transact-sql)|すべての構文。|  
+|[体@local_variable](/sql/t-sql/language-elements/declare-local-variable-transact-sql)|すべての構文。|  
+|[一連@local_variable](/sql/t-sql/language-elements/set-local-variable-transact-sql)|すべての構文。|  
+|[おい](/sql/t-sql/language-elements/execute-transact-sql)|ユーザー定義ストアド プロシージャ、システム ストアド プロシージャ、ユーザー定義関数、およびシステム関数の実行。|  
 |[CREATE TABLE](/sql/t-sql/statements/create-table-transact-sql)|すべての構文。|  
-|[CREATE VIEW](/sql/t-sql/statements/create-view-transact-sql)|すべての構文。|  
-|[CREATE PROCEDURE](/sql/t-sql/statements/create-procedure-transact-sql)|すべての構文。ただし、次の例外があります。<br /><br /> IntelliSense では EXTERNAL NAME 句をサポートしていません。<br /><br /> AS 句では、このトピックに記載されているステートメントと構文のみが IntelliSense によってサポートされます。|  
+|[ビューの作成](/sql/t-sql/statements/create-view-transact-sql)|すべての構文。|  
+|[プロシージャの作成](/sql/t-sql/statements/create-procedure-transact-sql)|すべての構文。ただし、次の例外があります。<br /><br /> IntelliSense では EXTERNAL NAME 句をサポートしていません。<br /><br /> AS 句では、このトピックに記載されているステートメントと構文のみが IntelliSense によってサポートされます。|  
 |[ALTER PROCEDURE](/sql/t-sql/statements/alter-procedure-transact-sql)|すべての構文。ただし、次の例外があります。<br /><br /> IntelliSense では EXTERNAL NAME 句をサポートしていません。<br /><br /> AS 句では、このトピックに記載されているステートメントと構文のみが IntelliSense によってサポートされます。|  
-|[USE](/sql/t-sql/language-elements/use-transact-sql)|すべての構文。|  
+|[使用](/sql/t-sql/language-elements/use-transact-sql)|すべての構文。|  
   
 ## <a name="intellisense-in-supported-statements"></a>サポートされているステートメントでの IntelliSense  
  次の構文要素は、サポートされている [!INCLUDE[ssDE](../../includes/ssde-md.md)] ステートメントのいずれかで使用されている場合、 [!INCLUDE[tsql](../../includes/tsql-md.md)] クエリ エディターの IntelliSense によってサポートされます。  
@@ -73,7 +76,7 @@ ms.locfileid: "48092512"
   
     -   テーブル、ビュー、テーブル値関数、およびテーブル式  
   
-    -   [列]  
+    -   列  
   
     -   プロシージャおよびプロシージャ パラメーター  
   
@@ -94,8 +97,9 @@ ms.locfileid: "48092512"
   
  前に示した要素が他の [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメント内で使用されている場合、IntelliSense は提供されません。 たとえば、SELECT ステートメント内で使用されている列名に対しては IntelliSense のサポートがありますが、CREATE FUNCTION ステートメント内で使用されている列に対してはサポートがありません。  
   
-## <a name="examples"></a>使用例  
- [!INCLUDE[tsql](../../includes/tsql-md.md)] のスクリプトまたはバッチ内では、このトピックに記載されているステートメントと構文のみが [!INCLUDE[ssDE](../../includes/ssde-md.md)] クエリ エディターの IntelliSense によってサポートされています。 IntelliSense でサポートされるステートメントと構文要素を次の [!INCLUDE[tsql](../../includes/tsql-md.md)] のコード例に示します。 たとえば、次のバッチにおいて、 `SELECT` ステートメントが単独で記述されているときは IntelliSense を利用できますが、 `SELECT` が `CREATE FUNCTION` ステートメントに含まれているときは IntelliSense を利用できません。  
+## <a name="examples"></a>例  
+ 
+  [!INCLUDE[tsql](../../includes/tsql-md.md)] のスクリプトまたはバッチ内では、このトピックに記載されているステートメントと構文のみが [!INCLUDE[ssDE](../../includes/ssde-md.md)] クエリ エディターの IntelliSense によってサポートされています。 IntelliSense でサポートされるステートメントと構文要素を次の [!INCLUDE[tsql](../../includes/tsql-md.md)] のコード例に示します。 たとえば、次のバッチにおいて、 `SELECT` ステートメントが単独で記述されているときは IntelliSense を利用できますが、 `SELECT` が `CREATE FUNCTION` ステートメントに含まれているときは IntelliSense を利用できません。  
   
 ```  
 USE AdventureWorks2012;  
@@ -118,7 +122,8 @@ RETURN
   
  この機能は、CREATE PROCEDURE ステートメントまたは ALTER PROCEDURE ステートメントの AS 句に含まれる [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントのセットにも適用されます。  
   
- [!INCLUDE[tsql](../../includes/tsql-md.md)] のスクリプトまたはバッチ内では、IntelliSense によって、CREATE ステートメントまたは ALTER ステートメントに指定されているオブジェクトがサポートされます。ただし、これらのオブジェクトは、ステートメントが実行されていないためデータベースに存在しません。 たとえば、クエリ エディターで次のコードを入力します。  
+ 
+  [!INCLUDE[tsql](../../includes/tsql-md.md)] のスクリプトまたはバッチ内では、IntelliSense によって、CREATE ステートメントまたは ALTER ステートメントに指定されているオブジェクトがサポートされます。ただし、これらのオブジェクトは、ステートメントが実行されていないためデータベースに存在しません。 たとえば、クエリ エディターで次のコードを入力します。  
   
 ```  
 USE MyTestDB;  

@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 ms.assetid: a67dc03e-f838-4ec2-9ef6-f04895bab3c7
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 4a02db047e17c7bacf7183a10a0db93d8ac905e9
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 9b597f8aab58d2fd9a4dd44e9361469656bec32c
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56031385"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66101268"
 ---
 # <a name="shared-dataset-selection-page-report-manager"></a>[共有データセットの選択] ページ (レポート マネージャー)
   [共有データセットの選択] ページでは、現在レポートに関連付けられている共有データセットを確認および変更できます。  

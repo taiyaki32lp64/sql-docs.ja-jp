@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 ms.assetid: ef19d96e-9f00-4434-950e-152dda9c1ced
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 3dc1cfa85fde084327567e36fea728d9c76ef3f6
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 927a9fc96e11bffdcacf7a12f09ee93d25f153fd
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56028253"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66102315"
 ---
 # <a name="schedules-page-report-manager"></a>[スケジュール] ページ (レポート マネージャー)
   [スケジュール] ページでは、共有スケジュールを作成、変更、削除、一時停止、または再開できます。 共有スケジュールとは、レポート、サブスクリプション、およびスケジュール情報を利用するその他のプロセスとは別に作成および管理できる名前付きのスケジュールです。 追加した共有スケジュールは、全ユーザーが選択できます。  
@@ -50,7 +49,7 @@ ms.locfileid: "56028253"
  **[再開]**  
  共有スケジュールを再度設定する場合にクリックします。 スケジュールを一時停止している間に実行される予定だった無効になった処理は、破棄されます。  
   
- **[スケジュール]**  
+ **スケジュール**  
  現在定義されている共有スケジュールが表示されます。 頻度に関する情報を表示または編集するには、共有スケジュールをクリックします。  
   
  **Creator**  
@@ -62,7 +61,7 @@ ms.locfileid: "56028253"
  **ステータス**  
  共有スケジュールが一時停止されているか、稼動中かが表示されます。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [Create, Modify, and Delete Schedules](subscriptions/create-modify-and-delete-schedules.md)   
  [レポート マネージャー F1 ヘルプ](../../2014/reporting-services/report-manager-f1-help.md)  
   

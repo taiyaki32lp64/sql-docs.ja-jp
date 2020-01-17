@@ -7,15 +7,15 @@ ms.reviewer: ''
 ms.technology: master-data-services
 ms.topic: conceptual
 ms.assetid: d2e0a8c3-4c2e-407c-856e-68d95ebda9ed
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: d5089921156f97509e157f771dbe20e1c33cf569
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 7c824c1298a9bd5c0fd0564688ea76c48e8975c8
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53355572"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65480079"
 ---
 # <a name="business-rule-conditions-master-data-services"></a>ビジネス ルール条件 (マスター データ サービス)
   [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]では、1 つまたは複数のアクションの実行にあたって true になることが必須の条件が、ビジネス ルールの条件によって判定されます。  

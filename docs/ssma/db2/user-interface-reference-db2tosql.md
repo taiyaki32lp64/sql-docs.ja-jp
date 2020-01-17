@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 98ecc4ff-9416-48a2-af0f-86852cf69dab
 author: Shamikg
 ms.author: Shamikg
-manager: craigg
-ms.openlocfilehash: 094ceed90543e61bf0577131508612244393cead
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: c0332efca72c216ac6ecbb2f5f397fbf57e8b7cf
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51671675"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68059958"
 ---
 # <a name="user-interface-reference-db2tosql"></a>ユーザー インターフェイス リファレンス (DB2ToSQL)
 このセクションには、ヘルプ トピックが含まれています。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Migration Assistant (SSMA) for DB2 です。  
@@ -47,7 +46,7 @@ SSMA のダイアログ ボックスを次の表に示します。
 |[データベースからの更新&#40;DB2ToSQL&#41;](../../ssma/db2/refresh-from-database-db2tosql.md)|使用して、**データベースからの更新** ダイアログ ボックスの DB2 データベースから更新するオブジェクトを選択します。|  
 |[メタデータの保存&#40;DB2ToSQL&#41;](../../ssma/db2/save-metadata-db2tosql.md)|**メタデータの保存**メタデータが不足しているプロジェクトを保存するときに、ダイアログ ボックスが表示されます。|  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
 [Ssma for DB2 作業の開始&#40;DB2ToSQL&#41;](../../ssma/db2/getting-started-with-ssma-for-db2-db2tosql.md)  
 [SQL Server にデータベースを移行する DB2 &#40;DB2ToSQL&#41;](../../ssma/db2/migrating-db2-databases-to-sql-server-db2tosql.md)  
   

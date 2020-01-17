@@ -19,16 +19,15 @@ helpviewer_keywords:
 - data types [SQL Server], names
 - TYPE_NAME function
 ms.assetid: e4075a2e-5f70-440f-986b-9ec8434e07c1
-author: MashaMSFT
-ms.author: mathoma
-manager: craigg
+author: MikeRayMSFT
+ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 4252f3511baadc5536823323c026811ee53dd201
-ms.sourcegitcommit: bfa10c54e871700de285d7f819095d51ef70d997
+ms.openlocfilehash: 33f282c79c15a8b9548d799ef86e026fd7357d00
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/14/2019
-ms.locfileid: "54257177"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68098700"
 ---
 # <a name="typename-transact-sql"></a>TYPE_NAME (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -45,7 +44,7 @@ TYPE_NAME ( type_id )
   
 ## <a name="arguments"></a>引数  
  *type_id*  
- 使用する型の ID を指定します。 *type_id* のデータ型は **int** です。呼び出し元がアクセス権を所有しているスキーマの型を参照できます。  
+ 使用する型の ID です。 *type_id* のデータ型は **int** です。呼び出し元がアクセス権を所有しているスキーマの型を参照できます。  
   
 ## <a name="return-types"></a>戻り値の型  
  **sysname**  
@@ -58,7 +57,7 @@ TYPE_NAME ( type_id )
 ## <a name="remarks"></a>Remarks  
  *type_id* が無効であるか、呼び出し元が型の参照に必要な権限を所有していない場合、TYPE_NAME では NULL が返されます。  
   
- TYPE_NAME は、システム データ型と、ユーザー定義データ型にも使用できます。 型が含まれるスキーマはあらゆるスキーマが対象になりますが、常に修飾なしの名前が返されます。 つまり、名前に _schema_**.** プレフィックスは含まれません。  
+ TYPE_NAME は、システム データ型と、ユーザー定義データ型にも使用できます。 型が含まれるスキーマはあらゆるスキーマが対象になりますが、常に修飾なしの名前が返されます。 つまり、名前に _schema_ **.** プレフィックスは含まれません。  
   
  システム関数は、選択リストの中、WHERE 句の中、また、式を使える所ならどこにでも使用できます。 詳しくは、「[式 &#40;Transact-SQL&#41;](../../t-sql/language-elements/expressions-transact-sql.md)」および「[WHERE &#40;Transact-SQL&#41;](../../t-sql/queries/where-transact-sql.md)」をご覧ください。  
   
@@ -111,7 +110,7 @@ GO
  [TYPE_ID &#40;Transact-SQL&#41;](../../t-sql/functions/type-id-transact-sql.md)   
  [TYPEPROPERTY &#40;Transact-SQL&#41;](../../t-sql/functions/typeproperty-transact-sql.md)   
  [sys.types &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-types-transact-sql.md)   
- [メタデータ関数 (&) #40 です。TRANSACT-SQL と #41 です。](../../t-sql/functions/metadata-functions-transact-sql.md)  
+ [メタデータ関数 &#40;Transact-SQL&#41;](../../t-sql/functions/metadata-functions-transact-sql.md)  
   
   
 

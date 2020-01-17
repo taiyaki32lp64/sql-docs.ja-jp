@@ -20,15 +20,14 @@ helpviewer_keywords:
 - IDs [SQL Server], asymmetric keys
 - cryptography [SQL Server], asymmetric keys
 ms.assetid: d697daf8-2106-4ebb-b09a-ca0be465d747
-author: MashaMSFT
-ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 1ae017411f8f988186eb6e0ca7273531e2dcefb6
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: VanMSFT
+ms.author: vanto
+ms.openlocfilehash: b1dc7454ecd042f06654f8a269332f8ae7f305ab
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47809210"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68040251"
 ---
 # <a name="asymkeyid-transact-sql"></a>ASYMKEY_ID (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -66,11 +65,11 @@ GO
 [ALTER ASYMMETRIC KEY &#40;Transact-SQL&#41;](../../t-sql/statements/alter-asymmetric-key-transact-sql.md)  
 [DROP ASYMMETRIC KEY &#40;Transact-SQL&#41;](../../t-sql/statements/drop-asymmetric-key-transact-sql.md)  
 [SIGNBYASYMKEY &#40;Transact-SQL&#41;](../../t-sql/functions/signbyasymkey-transact-sql.md)  
-[VERIFYSIGNEDBYASYMKEY (&) #40 です。TRANSACT-SQL と #41 です。](../../t-sql/functions/verifysignedbyasymkey-transact-sql.md)  
+[VERIFYSIGNEDBYASYMKEY &#40;Transact-SQL&#41;](../../t-sql/functions/verifysignedbyasymkey-transact-sql.md)  
 [暗号化階層](../../relational-databases/security/encryption/encryption-hierarchy.md)  
-[sys.asymmetric_keys (&) #40 です。TRANSACT-SQL と #41 です。](../../relational-databases/system-catalog-views/sys-asymmetric-keys-transact-sql.md)  
+[sys.asymmetric_keys &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-asymmetric-keys-transact-sql.md)  
 [セキュリティ カタログ ビュー &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/security-catalog-views-transact-sql.md)  
-[ASYMKEYPROPERTY (&) #40 です。TRANSACT-SQL と #41 です。](../../t-sql/functions/asymkeyproperty-transact-sql.md)  
-[#40; key_id を指定する (& a)TRANSACT-SQL と #41 です。](../../t-sql/functions/key-id-transact-sql.md)
+[ASYMKEYPROPERTY &#40;Transact-SQL&#41;](../../t-sql/functions/asymkeyproperty-transact-sql.md)  
+[KEY_ID &#40;Transact-SQL&#41;](../../t-sql/functions/key-id-transact-sql.md)
   
   

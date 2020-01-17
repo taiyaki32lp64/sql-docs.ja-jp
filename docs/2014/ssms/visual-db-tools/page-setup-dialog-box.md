@@ -13,11 +13,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: cf05de13f0aada12da055f2e9c1e5a3a0db1d1df
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52780474"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63195021"
 ---
 # <a name="page-setup-dialog-box"></a>[ページ設定] ダイアログ ボックス
   **[ページ設定]** ダイアログ ボックスでオプションを選択して、ページのデザインをカスタマイズできます。 インストールされている言語、および編集が有効になっている言語によっては、使用できないオプションもあります。  
@@ -46,7 +46,7 @@ ms.locfileid: "52780474"
  TOP  
  ページの上端とページの先頭行の上部との距離を設定します。  
   
- [下]  
+ Bottom  
  ページの下端とページの最終行の下部との距離を設定します。  
   
 ## <a name="other"></a>その他  

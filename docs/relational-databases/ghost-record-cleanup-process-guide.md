@@ -13,13 +13,12 @@ helpviewer_keywords:
 - ghost clean up process
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: b01e6cc26d2dfbcf897a49e971d429961144321f
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 34be16d305bbb42a23c686e9b2befdd83792d523
+ms.sourcegitcommit: bb56808dd81890df4f45636b600aaf3269c374f2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51669321"
+ms.lasthandoff: 10/24/2019
+ms.locfileid: "72890487"
 ---
 # <a name="ghost-cleanup-process-guide"></a>ゴースト クリーンアップ プロセスのガイド
 
@@ -39,7 +38,7 @@ ms.locfileid: "51669321"
 
  ```sql
  SELECT sum(ghost_record_count) total_ghost_records, db_name(database_id) 
- FROM sys.dm_db_index_physical_stats (NULL, NULL, NULL, NULL, NULL)
+ FROM sys.dm_db_index_physical_stats (NULL, NULL, NULL, NULL, 'SAMPLED')
  group by database_id
  order by total_ghost_records desc
 ```

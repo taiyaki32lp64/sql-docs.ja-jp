@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: e9eb38d8-f9db-4401-8c62-aa394054cbbf
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 16d0590d3297b52891bf399822ce984674022583
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a456db12ddb2594dc7b4c9e4f5c26e9cb4245621
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47808932"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67947594"
 ---
 # <a name="interval-data-type-length"></a>Interval データ型の長さ
 次の規則は、文字間隔のデータ型の長さを決定に使用されます。 長さは、文字数で表されます。 バイト数は、文字セットに依存します。 長さには、次の値一緒に追加にはが含まれています。  

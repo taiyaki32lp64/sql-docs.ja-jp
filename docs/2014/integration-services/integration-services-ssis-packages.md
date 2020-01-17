@@ -17,15 +17,15 @@ helpviewer_keywords:
 - Integration Services packages, about packages
 - Integration Services packages
 ms.assetid: 9266bc64-7e1a-4e78-913b-a8deaa9843bf
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: ee169caab78d3b83d647a1a9cd20a2e88507fde2
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: dccae9216609e80b0eb87582a78b94cd6e7b2f0c
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53377624"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62767691"
 ---
 # <a name="integration-services-ssis-packages"></a>Integration Services (SSIS) パッケージ
   パッケージは、接続、制御フロー要素、データ フロー要素、イベント ハンドラー、変数、パラメーター、および構成の組み合わせとして構成されています。パッケージは、[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] に用意されているグラフィカル デザイン ツールを使用して作成するか、プログラムによって構築します。  完成したパッケージは、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]、 [!INCLUDE[ssIS](../includes/ssis-md.md)] パッケージ ストア、またはファイル システムに保存します。または、ssISnoversion プロジェクトを [!INCLUDE[ssIS](../includes/ssis-md.md)] サーバーに配置することができます。 パッケージとは、取得、実行、および保存の対象となる作業単位のことです。  
@@ -102,7 +102,7 @@ ms.locfileid: "53377624"
   
  [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]を使用してこれらのプロパティを設定する方法については、「 [パッケージのプロパティを設定する](set-package-properties.md)」を参照してください。  
   
- プログラムによってこれらのプロパティを設定する方法については、 <xref:Microsoft.SqlServer.Dts.Runtime.Package>」を参照してください。  
+ これらのプロパティのプログラムでの設定については、「 <xref:Microsoft.SqlServer.Dts.Runtime.Package>」を参照してください。  
   
 ## <a name="related-tasks"></a>Related Tasks  
  [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] には、パッケージを作成するための [!INCLUDE[ssIS](../includes/ssis-md.md)] オブジェクト モデルのほかに、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] デザイナーと [!INCLUDE[ssIS](../includes/ssis-md.md)] インポートおよびエクスポート ウィザードの、2 つのグラフィック ツールが含まれています。 詳細については、以下のトピックを参照してください。  
@@ -112,11 +112,6 @@ ms.locfileid: "53377624"
 -   [SQL Server データ ツールでのパッケージの作成](create-packages-in-sql-server-data-tools.md)  
   
 -   開発者ガイドの「**プログラムによるパッケージの作成**」を参照してください。  
-  
-## <a name="related-content"></a>関連コンテンツ  
-  
--   [Microsoft Dynamics Mobile での SQL Server Integration Services を実装します。](https://msdn.microsoft.com/library/cc563950)  
-  
--   [操作方法：Microsoft Dynamics AX 用 SQL Server Integration Services パッケージを構成します。](https://msdn.microsoft.com/library/bb986852)  
+
   
   

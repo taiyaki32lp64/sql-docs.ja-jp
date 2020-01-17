@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 6b8f759a-ce5d-41b2-b6cc-24a3ab299f1f
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 3a24749da4854146d42a8515879aabd91d6c4258
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e5fd7344227bdaa2ba7f0dccb1dd823d210b66ad
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47811770"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67999216"
 ---
 # <a name="updateclob-method-javalangstring-javaioreader-long"></a>updateClob (java.lang.String, java.io.Reader, long) メソッド
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -39,7 +38,7 @@ public void updateClob(java.lang.String columnLabel,
   
  *reader*  
   
- リーダー オブジェクト。  
+ リーダーオブジェクト。  
   
  *length*  
   
@@ -49,7 +48,7 @@ public void updateClob(java.lang.String columnLabel,
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- この updateClob メソッドは、java.sql.ResultSet インターフェイスの updateClob メソッドによって指定されます。  
+ この updateClob メソッドは、java.sql.ResultSet インターフェイスの updateClob メソッドで規定されています。  
   
 ## <a name="see-also"></a>参照  
  [updateClob メソッド &#40;SQLServerResultSet&#41;](../../../connect/jdbc/reference/updateclob-method-sqlserverresultset.md)   

@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 8876cdbe-c84a-43ae-a146-06974b4576e8
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: fc7c57172b4f824794f20710105b9d2f49d91c8b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 979cfc6dc9c6d9c10a81fb006c95865cd03bf1ad
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47643810"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68026092"
 ---
 # <a name="set-working-set-size-server-configuration-option"></a>set working set size サーバー構成オプション
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

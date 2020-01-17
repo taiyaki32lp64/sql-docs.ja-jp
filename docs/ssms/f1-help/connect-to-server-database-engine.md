@@ -15,15 +15,14 @@ f1_keywords:
 - sql13.swb.connection.login.sqlserver.f1
 - sql13.swb.manageSS2k.f1
 ms.assetid: ee9017b4-8a19-4360-9003-9e6484082d41
-author: stevestein
-ms.author: sstein
-manager: craigg
-ms.openlocfilehash: b408b3f4d71f80bb2317a58ddd0ff0f578807946
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 473362544549206a2cfa4183c8e51cd8a399f06e
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53202811"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68265112"
 ---
 # <a name="connect-to-server-database-engine"></a>[サーバーへの接続] \(データベース エンジン)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -43,7 +42,9 @@ ms.locfileid: "53202811"
   
 > [!NOTE]  
 > [!INCLUDE[ssExpress](../../includes/ssexpress_md.md)] のアクティブなユーザー インスタンスに接続するには、`np:\\.\pipe\3C3DF6B1-2262-47\tsql\query` などの、パイプ名を指定する名前付きパイプ プロトコルを使用して接続します。 詳細については、[!INCLUDE[ssExpress](../../includes/ssexpress_md.md)] のドキュメントを参照してください。  
-  
+> [!NOTE]  
+> 接続は、通常、"最近使用した (MRU)" の履歴で保持されます。 MRU からエントリを削除するには、 **[サーバー名]** コンボ ボックス上をクリックし、削除するサーバーの名前を選択し、**DEL** キーを押すだけです。  
+   
 **[認証]**  
 SSMS の現在のバージョンでは、[!INCLUDE[ssDE](../../includes/ssde_md.md)] のインスタンスへの接続時に 5 つの認証モードを用意しています。 認証ダイアログ ボックスが次の一覧と一致しない場合は、[SQL Server Management Studio (SSMS) のダウンロード](../download-sql-server-management-studio-ssms.md) から SSMS の最新のバージョンをダウンロードします。  
 

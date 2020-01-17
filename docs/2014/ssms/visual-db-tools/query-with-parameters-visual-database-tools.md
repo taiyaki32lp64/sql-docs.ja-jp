@@ -15,11 +15,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 9167f4ec0f62c34ddf6bae5838b36dcf4bdb6967
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52791244"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63010717"
 ---
 # <a name="query-with-parameters-visual-database-tools"></a>パラメーターを使用したクエリ (Visual Database Tools)
   多くの場合、アプリケーションで何度も使用でき、実行のたびに入力値を変えることができるクエリを作成すると便利です。 このセクションでは、汎用的なパラメーター クエリを作成する方法について説明します。  

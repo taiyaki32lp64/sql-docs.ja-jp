@@ -11,15 +11,14 @@ helpviewer_keywords:
 - Options [SQL Server Management Studio], dialog boxes
 - Options [SQL Server Management Studio]
 ms.assetid: b98d2631-530a-43b4-8491-f724f8e4a23a
-author: stevestein
-ms.author: sstein
-manager: craigg
-ms.openlocfilehash: f94fbfc6a41baf4431369ee856de50a826e93a29
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: b22a11c4538ccdcd353c558d57263c65688ec0a8
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51699566"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68257263"
 ---
 # <a name="options-dialog-boxes-f1-help"></a>[オプション] ダイアログ ボックスの F1 ヘルプ
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

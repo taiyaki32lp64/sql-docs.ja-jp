@@ -12,15 +12,14 @@ helpviewer_keywords:
 - projects [SQL Server Management Studio], item removal
 - removing project items
 ms.assetid: 3fd92434-70f5-466e-bef0-7e0fd73ddb1c
-author: stevestein
-ms.author: sstein
-manager: craigg
-ms.openlocfilehash: a94e6cf1ca6c550d2229b198fbfd18ab7d714f12
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: a19a4bf8c91eb118af246a0e0bc0b3458833af7c
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47804950"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68265361"
 ---
 # <a name="remove-or-delete-an-item-or-project"></a>アイテムやプロジェクトのクリアまたは削除
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

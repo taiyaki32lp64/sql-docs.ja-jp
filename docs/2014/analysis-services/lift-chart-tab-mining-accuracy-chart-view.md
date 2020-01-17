@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dm.miningmodeleditor.accuracychart.liftchart.f1
@@ -13,12 +12,12 @@ ms.assetid: f1674e2e-d38e-40c7-b8d1-5585ce9a0168
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 0cbd4465152e3f862d53dec66bd7888c70b393a5
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 66f0d74a3ced6b803249afb93eac85f2681eca6c
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48168132"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66078101"
 ---
 # <a name="lift-chart-tab-mining-accuracy-chart-view"></a>[リフト チャート] タブ ([マイニング精度チャート] ビュー)
   **[リフト チャート]** ペインを使用すると、選択されたマイニング構造に含まれている、選択されたすべてのマイニング モデルを比較するグラフを表示できます。  
@@ -40,12 +39,12 @@ ms.locfileid: "48168132"
   
  利益チャートは、 **[列マッピング]** タブで連続した予測可能列が選択されている場合は、使用できません。  
   
- **[コピー]**  
+ **コピー**  
  グラフをクリップボードにコピーします。  
   
 ## <a name="see-also"></a>参照  
  [マイニング精度チャート デザイナー&#40;データ マイニング&#41;](mining-accuracy-chart-designer-data-mining.md)   
  [テスト、検証タスク、および操作方法&#40;データ マイニング&#41;](data-mining/testing-and-validation-tasks-and-how-tos-data-mining.md)   
- [テストと検証&#40;データ マイニング&#41;](data-mining/testing-and-validation-data-mining.md)  
+ [テストおよび検証 (データ マイニング)](data-mining/testing-and-validation-data-mining.md)  
   
   

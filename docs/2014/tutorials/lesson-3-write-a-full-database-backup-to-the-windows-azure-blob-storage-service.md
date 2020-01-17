@@ -1,5 +1,5 @@
 ---
-title: 'レッスン 3: Windows Azure Blob ストレージ サービスに対するデータベースの完全バックアップの書き込み |Microsoft Docs'
+title: 'レッスン 3: Azure Blob Storage サービスにデータベースの完全バックアップを書き込む |Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -10,17 +10,17 @@ ms.assetid: 454c8296-64e9-46ed-b141-5ebfbc8a4fe2
 author: VanMSFT
 ms.author: vanto
 manager: craigg
-ms.openlocfilehash: 242e32b08ec6346c39e149628e773b33554c95d4
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 1d5a749c61a3bc97de841e1149dd1539cbc990f2
+ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56029793"
+ms.lasthandoff: 08/29/2019
+ms.locfileid: "70153476"
 ---
-# <a name="lesson-3-write-a-full-database-backup-to-the-windows-azure-blob-storage-service"></a>レッスン 3: Windows Azure Blob ストレージ サービスに対するデータベースの完全バックアップを書き込み
-  このレッスンでは、TSQL ステートメントを使用して Windows Azure BLOB ストレージ サービスにデータベースの完全バックアップを実行する方法を紹介します。  
+# <a name="lesson-3-write-a-full-database-backup-to-the-azure-blob-storage-service"></a>レッスン 3: Azure Blob Storage サービスにデータベースの完全バックアップを書き込む
+  このレッスンでは、tsql ステートメントを使用して、Azure Blob ストレージサービスへのデータベースの完全バックアップを実行する方法を示します。  
   
-## <a name="perform-a-full-database-backup-to-the-windows-azure-blob-storage-service"></a>Windows Azure BLOB ストレージ サービスに対するデータベースの完全バックアップの実行  
+## <a name="perform-a-full-database-backup-to-the-azure-blob-storage-service"></a>Azure Blob Storage サービスへのデータベースの完全バックアップを実行する  
  データベースの完全バックアップを実行するには、次の手順を実行します。  
   
 1.  [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]に接続します。  
@@ -44,6 +44,6 @@ ms.locfileid: "56029793"
 5.  オブジェクト エクスプローラーで、Azure ストレージに接続します。 コンテナーと、新しく作成したバックアップ ファイルを参照して指定します。  
   
 ## <a name="next-lesson"></a>次のレッスン  
- [レッスン 4:データベースの完全バックアップから復元を実行](../../2014/tutorials/lesson-4-perform-a-restore-from-a-full-database-backup.md)します。  
+ [レッスン 4:データベースの完全バックアップ](../../2014/tutorials/lesson-4-perform-a-restore-from-a-full-database-backup.md)から復元を実行します。  
   
   

@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 54a39f5e-9250-4387-a3ae-eae47c799811
 author: Shamikg
 ms.author: Shamikg
-manager: craigg
-ms.openlocfilehash: c358b0b4285a6512b2c0ac5db101bd7eed0f2ba5
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: 28a07c08fd801a9d5fdcdde4206f7aa6fe7b926f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52409909"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68028837"
 ---
 # <a name="migrating-sybase-ase-data-into-sql-server---azure-sql-db--sybasetosql"></a>移行の Sybase ASE データの SQL Server - Azure SQL DB (SybaseToSQL)
 Sybase Adaptive Server Enterprise (ASE) のデータベース オブジェクトを正常に読み込んだ後[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]または Azure SQL DB では、データを移行する ASE から[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]または Azure SQL DB します。  
@@ -64,7 +63,7 @@ Sybase Adaptive Server Enterprise (ASE) のデータベース オブジェクト
   
 **データを移行するには**  
   
-1.  次を確認します。  
+1.  次のことを検証します。  
   
     -   ASE のプロバイダーは、SSMA を実行しているコンピューターにインストールされます。  
   

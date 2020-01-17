@@ -20,18 +20,17 @@ helpviewer_keywords:
 - identification numbers [SQL Server], logins
 - user IDs [SQL Server]
 ms.assetid: 348911ab-b0b6-4867-aee7-e6f42e053a4a
-author: MashaMSFT
-ms.author: mathoma
-manager: craigg
+author: VanMSFT
+ms.author: vanto
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: 88efca93ef076d726d090c0a4d376ab779cdbfd7
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e9bad34cf3d195e4038d794fac913bdb3d16bc91
+ms.sourcegitcommit: f688a37bb6deac2e5b7730344165bbe2c57f9b9c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47618454"
+ms.lasthandoff: 11/08/2019
+ms.locfileid: "73843560"
 ---
-# <a name="suserid-transact-sql"></a>SUSER_ID (Transact-SQL)
+# <a name="suser_id-transact-sql"></a>SUSER_ID (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
 
   ユーザーのログイン ID 番号を返します。  
@@ -56,7 +55,7 @@ SUSER_ID ( [ 'login' ] )
  **int**  
   
 ## <a name="remarks"></a>Remarks  
- SUSER_ID は、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 内に明示的に展開されているログインに対してのみ、ID 番号を返します。 この ID は、所有権と権限を追跡するために、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 内で使用されます。 この ID は、SUSER_SID によって返されるログインの SID と等価ではありません。 *login* が SQL Server ログインの場合、SID は GUID にマップされます。 *login* が Windows ログインまたは Windows グループの場合、SID は Windows セキュリティ識別子にマップされます。  
+ SUSER_ID は、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 内に明示的に展開されているログインに対してのみ、ID 番号を返します。 この ID は、所有権と権限を追跡するために、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 内で使用されます。 この ID は、SUSER_SID から返されるログインの SID と等しくありません。 *login* が SQL Server ログインの場合、SID は GUID にマップされます。 *login* が Windows ログインまたは Windows グループの場合、SID は Windows セキュリティ識別子にマップされます。  
   
  SUSER_SID は、**syslogins** システム テーブルにエントリを持つログインに対してのみ SUID を返します。  
   
@@ -72,6 +71,6 @@ SELECT SUSER_ID('sa');
 ## <a name="see-also"></a>参照  
  [sys.server_principals &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-server-principals-transact-sql.md)   
  [SUSER_SID &#40;Transact-SQL&#41;](../../t-sql/functions/suser-sid-transact-sql.md)   
- [システム関数 &#40;Transact-SQL&#41;](../../relational-databases/system-functions/system-functions-for-transact-sql.md)  
+ [システム関数 &#40;Transact-SQL&#41;](../../relational-databases/system-functions/system-functions-category-transact-sql.md)  
   
   

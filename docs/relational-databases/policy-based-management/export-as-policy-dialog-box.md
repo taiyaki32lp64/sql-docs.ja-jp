@@ -12,19 +12,18 @@ f1_keywords:
 ms.assetid: f19a8450-2a28-40a6-8a7d-9f4eaea0447d
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: ca9de3172458d22d13ac6260138aa9895bdeff72
-ms.sourcegitcommit: ef6e3ec273b0521e7c79d5c2a4cb4dcba1744e67
+ms.openlocfilehash: 14333d96ce4a1022979a2998cb808bfa16cd7a0e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51511909"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68087381"
 ---
 # <a name="export-as-policy-dialog-box"></a>[ポリシーとしてエクスポート] ダイアログ ボックス
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   このダイアログ ボックスを使用すると、ポリシー ベースの管理ファセットのプロパティ セットをポリシーとしてエクスポートできます。 ポリシーは、XML ファイルで保存することも、 [!INCLUDE[ssDE](../../includes/ssde-md.md)]の現在のインスタンスに直接保存することもできます。  
   
-## <a name="options"></a>[変数]  
+## <a name="options"></a>オプション  
  **[ポリシー定義名]**  
  ポリシーの名前を入力します。  
   
@@ -35,7 +34,7 @@ ms.locfileid: "51511909"
  ローカル サーバー インスタンスにポリシーを保存する場合に選択します。  
   
  **[ファイルへ]**  
- ポリシーを XML ファイルとして保存するには、ファイルのパスと名前を入力するか、参照ボタン (**[...]**) を使用します。  
+ ポリシーを XML ファイルとして保存するには、ファイルのパスと名前を入力するか、参照ボタン ( **[...]** ) を使用します。  
   
 ## <a name="see-also"></a>参照  
  [ポリシー ベースの管理を使用したサーバーの管理](../../relational-databases/policy-based-management/administer-servers-by-using-policy-based-management.md)  

@@ -1,5 +1,5 @@
 ---
-title: DrillupLevel (MDX) |Microsoft ドキュメント
+title: DrillupLevel (MDX) |Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -8,13 +8,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-manager: kfile
-ms.openlocfilehash: e00851557b502bda3a98763eff4bac9c3abdccff
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.openlocfilehash: ef2f94eb843b3ffbfbb67eb6ca01f2114522e024
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34740861"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68049221"
 ---
 # <a name="drilluplevel-mdx"></a>DrillupLevel (MDX)
 
@@ -33,12 +32,12 @@ DrillupLevel(Set_Expression [ , Level_Expression ] )
  セットを返す有効な多次元式 (MDX) です。  
   
  *Level_Expression*  
- レベルを返す有効な多次元式 (MDX) 式です。  
+ レベルを返す有効な多次元式 (MDX) 式。  
   
 ## <a name="remarks"></a>コメント  
- **DrillupLevel**指定したセットに含まれるメンバーに基づいて階層的に編成されたメンバーのセット関数を返します。 指定されたセット内のメンバーの順序は保持されます。  
+ **DrillupLevel**指定されたセットに含まれるメンバーに基づいて、関数の戻り値のメンバーのセットは階層化されています。 順序指定されたセット内のメンバーは保持されます。  
   
- レベル式が指定されている場合、 **DrillupLevel**関数は、指定されたレベルより上位にあるメンバーのみを取得してセットを構築します。 レベル式が指定された、指定されたセット内の指定されたレベルのメンバーが存在しない場合は、指定したセットが返されます。  
+ レベル式が指定されている場合、 **DrillupLevel**関数は、指定されたレベルより上位にあるメンバーのみを取得してセットを構築します。 レベル式が指定されて、指定されたセットで表される、指定されたレベルのメンバーが存在しない場合は、指定したセットが返されます。  
   
  レベル式が指定されていない場合、指定されたセット内で参照されている最初のディメンションの最下位レベルより 1 つ上のレベルにあるメンバーだけを取得してセットを構築します。  
   
@@ -57,7 +56,7 @@ SELECT DrillUpLevel
   WHERE [Measures].[Internet Order Quantity]  
 ```  
   
-## <a name="see-also"></a>参照  
- [MDX 関数リファレンス&#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
+## <a name="see-also"></a>関連項目  
+ [MDX 関数リファレンス &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
   
   

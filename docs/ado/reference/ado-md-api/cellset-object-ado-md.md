@@ -15,25 +15,24 @@ helpviewer_keywords:
 ms.assetid: 5e2452c0-cac0-49b2-8099-836c35794d50
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 57b570b93d4e8a6cf10d879659f0886e1c6f0c8e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 9524e9801f284d3dff3125b850cdd1fd32a361a3
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47601670"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67928644"
 ---
 # <a name="cellset-object-ado-md"></a>CellSet オブジェクト (ADO MD)
 多次元クエリの結果を表します。 これは、キューブまたはその他のセルセットから選択したセルのコレクションです。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>コメント  
  内のデータを**セルセット**、直接の配列に似たアクセスを使用して取得されます。 そのメンバーに関するデータを取得する特定のメンバーをドリルダウンすることができます。 たとえば、次のコード キャプションを返します最初のメンバーの最初の位置でセルセットという名前の最初の軸で`cst`:  
   
 ```  
 cst.Axes(0).Positions(0).Members(0).Caption  
 ```  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>コメント  
  セル セット内の現在のセルの概念はありません。 代わりに、[項目](../../../ado/reference/ado-md-api/item-property-ado-md-cellset.md)プロパティ取得[セル](../../../ado/reference/ado-md-api/cell-object-ado-md.md)セルセットからオブジェクト。 引数、**項目**プロパティを決定するセルを取得します。 セルの序数に基づく一意の値を指定することができます。 セルはセル セットの各軸の位置番号を使用して取得することもできます。 セルを取得する方法についての詳細については、次を参照してください。、[項目](../../../ado/reference/ado-md-api/item-property-ado-md-cellset.md)プロパティ。  
   
  コレクション、メソッド、およびプロパティの使用、**セルセット**オブジェクトを次を行うことができます。  

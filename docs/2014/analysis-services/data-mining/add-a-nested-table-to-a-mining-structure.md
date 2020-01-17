@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - tables [Analysis Services], nested
@@ -16,12 +15,12 @@ ms.assetid: 6cf9c701-9cff-4fae-94c2-73796c24ef59
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 00ac2368cdba8d1f84141cf7881bc97563bab684
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 86894159dd702466823bed8f2185caaa4295b3ff
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48066102"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66086363"
 ---
 # <a name="add-a-nested-table-to-a-mining-structure"></a>マイニング構造への入れ子になったテーブルの追加
   データ マイニング ウィザードによって作成されたマイニング構造に入れ子になったテーブルを追加するには、データ マイニング デザイナーを使用します。  
@@ -40,11 +39,11 @@ ms.locfileid: "48066102"
   
 5.  **[基になる列]** で、入れ子になったテーブルのキー列を選択します。  
   
-6.  **[OK]** をクリックします。  
+6.  [**OK**] をクリックします。  
   
      キー列を含んでいる新しいテーブル列がマイニング構造に追加されます。 列を追加する方法については、「 [マイニング構造への列の追加](add-columns-to-a-mining-structure.md)」を参照してください。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [マイニング構造のタスクと操作方法](mining-structure-tasks-and-how-tos.md)  
   
   

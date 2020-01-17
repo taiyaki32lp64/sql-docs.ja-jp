@@ -10,15 +10,15 @@ helpviewer_keywords:
 - entities [Master Data Services], about entities
 - entities [Master Data Services]
 ms.assetid: 0af057d5-6b73-472b-99eb-9f5eb61a9b5b
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: bb54250b1be15916055dd59a3f2e6d37330d5d93
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 87e5446d4d6c9c0997dadbd2d3f9964b8d4271ab
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52800914"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65483900"
 ---
 # <a name="entities-master-data-services"></a>エンティティ (Master Data Services)
   エンティティは、 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] モデルに含まれるオブジェクトです。 各エンティティには、管理対象のマスター データの行であるメンバーが含まれています。  
@@ -49,7 +49,7 @@ ms.locfileid: "52800914"
  関連するモデル オブジェクトを含む、エンティティに対する権限をユーザーに付与できます。 詳細については、「[エンティティ権限 (マスター データ サービス)](../../2014/master-data-services/entity-permissions-master-data-services.md)」を参照してください。  
   
 ## <a name="entity-examples"></a>エンティティの例  
- 次の例は、これらの属性を持つエンティティを示しています。Name、Code、Subcategory、StandardCost、ListPrice、および FilePhoto します。 これらの属性はメンバーを表します。 各メンバーは、属性値の 1 行で表されます。  
+ 次の例では、エンティティに Name、Code、Subcategory、StandardCost、ListPrice、FilePhoto という属性があることを示しています。 これらの属性はメンバーを表します。 各メンバーは、属性値の 1 行で表されます。  
   
  ![自転車製品エンティティ テーブル](../../2014/master-data-services/media/mds-conc-entity-table-w-data.gif "自転車製品エンティティ テーブル")  
   

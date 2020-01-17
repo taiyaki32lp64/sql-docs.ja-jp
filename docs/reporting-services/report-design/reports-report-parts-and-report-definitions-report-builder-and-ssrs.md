@@ -2,21 +2,21 @@
 title: レポート、レポート パーツ、およびレポート定義 (レポート ビルダーおよび SSRS) | Microsoft Docs
 ms.date: 05/24/2018
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: report-design
 ms.topic: conceptual
 helpviewer_keywords:
 - report definitions
 - reports
 ms.assetid: 2d746550-f8cc-4e97-8a06-d0f03cffc18d
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: ff7bc69b5d2277d8ee0c87978c27c531a794daec
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 640cd9bfd39b272e7829cc25b51ee50a82176a65
+ms.sourcegitcommit: c40f663d4486e574fd749f2c8e84c98d41970352
+ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56292030"
+ms.lasthandoff: 06/12/2019
+ms.locfileid: "67037875"
 ---
 # <a name="reports-report-parts-and-report-definitions-report-builder-and-ssrs"></a>レポート、レポート パーツ、およびレポート定義 (レポート ビルダーおよび SSRS)
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 初期定義、パブリッシュされたレポート、ユーザーに表示される表示レポートなど、改ページ調整されたレポートの異なる状態を示すさまざまな用語が使用されます。  
@@ -63,8 +63,7 @@ ms.locfileid: "56292030"
  レポートをサブスクライブします。このレポートは、指定した出力形式で電子メールの受信トレイまたはファイル共有に配信されます。 レポートの既定の表示形式は HTML 4.0 です。 HTML に加えて、Excel、Word、XML、PDF、TIFF、CSV などのさまざまな出力形式でレポートを表示できます。 パブリッシュされたレポートと同様に、表示レポートは、レポート サーバーに戻って編集したり保存することはできません。 詳細については、「 [レポートのエクスポート &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-builder/export-reports-report-builder-and-ssrs.md)」を参照してください。  
   
 ## <a name="see-also"></a>参照  
- [レポート作成の概念 &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/report-authoring-concepts-report-builder-and-ssrs.md)   
- [SQL Server のレポート ビルダー](../../reporting-services/report-builder/report-builder-in-sql-server-2016.md)   
+ [Reporting Services の概念 (SSRS)](../reporting-services-concepts-ssrs.md) [SQL Server のレポート ビルダー](../../reporting-services/report-builder/report-builder-in-sql-server-2016.md)   
  [レポートの検索、表示、管理 (レポート ビルダーおよび SSRS)](../../reporting-services/report-builder/finding-viewing-and-managing-reports-report-builder-and-ssrs.md)   
  [レポートのエクスポート &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-builder/export-reports-report-builder-and-ssrs.md)  
   

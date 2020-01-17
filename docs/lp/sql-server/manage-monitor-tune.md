@@ -7,16 +7,15 @@ ms.topic: hub-page
 ms.prod: sql
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
 ms.date: 12/15/2018
 featureFlags:
 - clicktale
-ms.openlocfilehash: 5beff15b746c26520c8d95048a9849fe2f710aca
-ms.sourcegitcommit: 769b71f01052ec9b4fc5eb02d9da9a1a58118029
+ms.openlocfilehash: 001c39b6c8b6b10c3329881a8e07c7e298457c15
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56319293"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68131872"
 ---
 <div id="main" class="v2">
     <div class="container">
@@ -88,7 +87,7 @@ ms.locfileid: "56319293"
                         <ul class="cardsD panelContent singlePanelContent" id="products1" style="margin-top: 0px; display: flex;">
                             <li class="fullSpan">
                                 <div class="container intro">
-                                <h2>[管理]</h2>
+                                <h2>管理する</h2>
                             </li>
                             <li>
                                 <a href="/sql/relational-databases/database-lifecycle-management/">

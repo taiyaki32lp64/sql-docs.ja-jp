@@ -15,20 +15,19 @@ helpviewer_keywords:
 ms.assetid: 33fd7b65-2ec8-4f62-91a7-630b5dab1aa2
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 91b4d64095c02fbf3f969248fc78d375a191fe72
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 12d960e8fcd5e1f27ea8198ce52e080f6fddf7c2
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47762744"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67921412"
 ---
 # <a name="adcpropupdatecriteriaenum"></a>ADCPROP_UPDATECRITERIA_ENUM
 オプティミスティックを持つデータ ソースの行の更新中に競合を検出するために使用できるフィールドに指定する[Recordset](../../../ado/reference/ado-api/recordset-object-ado.md)オブジェクト。  
   
  これらの定数を使用して、**レコード セット**"**更新基準**"で参照されている、動的なプロパティ、 [ADO Dynamic プロパティ インデックス](../../../ado/reference/ado-api/ado-dynamic-property-index.md)に記載されていると[OLE DB 用の Microsoft カーソル サービス](../../../ado/guide/appendixes/microsoft-cursor-service-for-ole-db-ado-service-component.md)ドキュメント。  
   
-|定数|値|説明|  
+|定数|Value|説明|  
 |--------------|-----------|-----------------|  
 |**adCriteriaAllCols**|1|データ ソースの行の任意の列が変更されている場合は、競合を検出します。|  
 |**adCriteriaKey**|0|競合の場合は、キー列のデータのソース行が変更されている行が削除されていることを検出します。|  

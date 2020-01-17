@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 0bd1cff4-ceff-4095-9ae4-e1e65a80f5d6
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: faf9af4fee3d49dfacaea9ab6e73daef0d56465f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 98907614a132cfafd297e48f0ef625bc8eb4155d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47714880"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68107903"
 ---
 # <a name="spoadestroy-transact-sql"></a>sp_OADestroy (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -52,7 +51,7 @@ sp_OADestroy objecttoken
  場合**sp_OADestroy**が呼び出されない、作成した OLE オブジェクトは、バッチの最後に自動的に破棄されます。  
   
 ## <a name="permissions"></a>アクセス許可  
- **sysadmin** 固定サーバー ロールのメンバーシップが必要です。  
+ メンバーシップが必要です、 **sysadmin**固定サーバー ロールまたはアクセス許可をこのストアド プロシージャを直接実行します。 `Ole Automation Procedures` 構成でなければなりません**有効になっている**OLE オートメーションに関連するすべてのシステム プロシージャを使用します。  
   
 ## <a name="examples"></a>使用例  
  次の例では、破棄、以前に作成した**SQLServer**オブジェクト。  

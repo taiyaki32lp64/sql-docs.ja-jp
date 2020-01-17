@@ -23,13 +23,12 @@ helpviewer_keywords:
 ms.assetid: 1aee3933-a11c-4b87-91b7-32f5ea38c87f
 author: julieMSFT
 ms.author: jrasnick
-manager: craigg
-ms.openlocfilehash: 84f05928f5033895e0d6b25a6461231e5a350267
-ms.sourcegitcommit: 0c1d552b3256e1bd995e3c49e0561589c52c21bf
+ms.openlocfilehash: b7ec7d6142bae4a6a0ad21a7f68413b257764e06
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/14/2018
-ms.locfileid: "53379069"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68091007"
 ---
 # <a name="monitor-memory-usage"></a>メモリ使用率の監視
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -45,7 +44,7 @@ ms.locfileid: "53379069"
   
  **Available Bytes** カウンターの値が低い場合、コンピューターのメモリが全体的に不足しているか、アプリケーションがメモリを解放していないことが考えられます。 **Pages/sec** カウンターの値が高い場合、ページングが過剰であることが考えられます。 ディスク利用状況がページングによるものかどうかを確認するには、**Memory:Page Faults/sec** カウンターを監視します。  
   
- コンピューターに十分なメモリがある場合でも、ページングとページ フォールトが低い率で発生することは問題ではありません。 Microsoft Windows Virtual Memory Manager (VMM) では、プロセスの作業セットのサイズを小さくするときに、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] と他のプロセスからページを取得します。 この VMM の動作が、ページ フォールトの原因になる場合があります。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] または他のプロセスが過剰なページングの原因であるかどうかを判断するには、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] プロセス インスタンスの **Process: Page Faults/sec** カウンターを監視します。  
+ コンピューターに十分なメモリがある場合でも、ページングとページ フォールトが低い率で発生することは問題ではありません。 Microsoft Windows Virtual Memory Manager (VMM) では、プロセスの作業セットのサイズを小さくするときに、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] と他のプロセスからページを取得します。 この VMM の動作が、ページ フォールトの原因になる場合があります。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] または他のプロセスが過剰なページングの原因であるかどうかを判断するには、**Process:Page Faults/sec** カウンター ([!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] プロセス インスタンス) を監視します。  
   
  過剰なページングの解決方法の詳細については、Windows オペレーティング システムのマニュアルを参照してください。  
   

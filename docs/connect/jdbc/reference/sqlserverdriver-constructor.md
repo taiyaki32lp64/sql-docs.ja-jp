@@ -1,5 +1,5 @@
 ---
-title: SQLServerDriver コンス トラクター () |Microsoft Docs
+title: SQLServerDriver コンストラクター () |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: 6dc1273c-bb42-414f-8e11-bb4673e7423a
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: d6ce707ccd84d67d35c242278b33f4cf23330f0a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: f8e01c04e8d64ea73a9c89783781c54f40f2d517
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47684300"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67971267"
 ---
 # <a name="sqlserverdriver-constructor-"></a>SQLServerDriver () コンストラクター
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

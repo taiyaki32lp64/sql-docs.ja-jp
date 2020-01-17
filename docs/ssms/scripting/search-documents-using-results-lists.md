@@ -12,16 +12,15 @@ helpviewer_keywords:
 - searches [SQL Server Management Studio], multiple files
 - Query Editor [SQL Server Management Studio], search multiple files
 ms.assetid: 275e1b6c-fbd0-4408-af77-35903f90657c
-author: stevestein
-ms.author: sstein
-manager: craigg
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: b23df8108ef95822447e6da22ad944c465b11d06
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: cc59fb8f6771f2fc11eb940b98396edd09ad6e26
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51643837"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68264182"
 ---
 # <a name="search-documents-using-results-lists"></a>結果一覧を使用してドキュメントを検索する方法
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -33,7 +32,7 @@ ms.locfileid: "51643837"
   
 2.  **[検索する文字列]** テキスト ボックスに検索テキストを入力します。  
   
-3.  **[検索対象]** 一覧で、 **[すべての開かれているドキュメント]**、 **[現在のプロジェクト]**、 **[ソリューション全体]** のいずれかをクリックするか、ディレクトリ パスを入力します。  
+3.  **[検索対象]** 一覧で、 **[すべての開かれているドキュメント]** 、 **[現在のプロジェクト]** 、 **[ソリューション全体]** のいずれかをクリックするか、ディレクトリ パスを入力します。  
   
 4.  **[次のファイルの種類を参照]** 一覧で、表示されているファイル拡張子のセットのいずれかを選択するか、検索対象のファイルの種類を示す拡張子をセミコロンで区切って入力します。 **[検索対象]** ドロップダウン リストに表示されているディレクトリ内のすべてのファイルを検索する場合は、\*.\* を使います。  
   
@@ -51,7 +50,7 @@ ms.locfileid: "51643837"
   
 3.  **[置換後の文字列]** ボックスに置換後のテキストを入力します。  
   
-4.  **[検索対象]** 一覧で、 **[すべての開かれているドキュメント]**、 **[現在のプロジェクト]**、 **[ソリューション全体]** のいずれかをクリックするか、ディレクトリ パスを入力します。  
+4.  **[検索対象]** 一覧で、 **[すべての開かれているドキュメント]** 、 **[現在のプロジェクト]** 、 **[ソリューション全体]** のいずれかをクリックするか、ディレクトリ パスを入力します。  
   
 5.  **[置換]** をクリックすると、現在の検索一致項目が **[置換後の文字列]** ボックス内のテキストに置換されます。 1 つの一致項目をスキップする場合は **[次を検索]** をクリックし、ファイル全体をスキップする場合は **[ファイルのスキップ]** をクリックします。  
   

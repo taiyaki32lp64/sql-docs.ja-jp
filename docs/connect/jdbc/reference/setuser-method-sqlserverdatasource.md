@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: d2ea7906-2d10-438d-aa51-f576eea923c7
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 3f3953763dc1b8a0d24e4c335b5b465c49707174
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 945033f96b5c8c36ea7b3d4c75aafa382a057164
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47784160"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67972073"
 ---
 # <a name="setuser-method-sqlserverdatasource"></a>setUser メソッド (SQLServerDataSource)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

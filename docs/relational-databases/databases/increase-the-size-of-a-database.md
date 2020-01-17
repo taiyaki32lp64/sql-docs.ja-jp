@@ -15,14 +15,13 @@ helpviewer_keywords:
 ms.assetid: 14f4206d-3afa-4ba9-9849-23e81d63306d
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: d75e02c1056ff7409d12a1e4454cd61c246895f5
-ms.sourcegitcommit: 1a5448747ccb2e13e8f3d9f04012ba5ae04bb0a3
+ms.openlocfilehash: de8ba9cd3ea509ae2962d424fa36852f00c9cca5
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51560019"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72909015"
 ---
 # <a name="increase-the-size-of-a-database"></a>データベースのサイズを大きくする
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -34,7 +33,7 @@ ms.locfileid: "51560019"
   
      [制限事項と制約事項](#Restrictions)  
   
-     [Security](#Security)  
+     [セキュリティ](#Security)  
   
 -   **以下を使用してデータベースのサイズを大きくするには:**  
   
@@ -59,7 +58,7 @@ ms.locfileid: "51560019"
   
 1.  **オブジェクト エクスプローラー**で、 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]のインスタンスに接続し、そのインスタンスを展開します。  
   
-2.  **[データベース]** を展開し、サイズを大きくするデータベースを右クリックして、**[プロパティ]** をクリックします。  
+2.  **[データベース]** を展開し、サイズを大きくするデータベースを右クリックして、 **[プロパティ]** をクリックします。  
   
 3.  **[データベースのプロパティ]** ダイアログ ボックスで、 **[ファイル]** ページをクリックします。  
   
@@ -68,7 +67,7 @@ ms.locfileid: "51560019"
 5.  新しいファイルを追加してデータベースのサイズを大きくするには、 **[追加]** をクリックして、新しいファイルの値を入力します。 詳細については、「 [データベースに対するデータ ファイルまたはログ ファイルの追加](../../relational-databases/databases/add-data-or-log-files-to-a-database.md)」をご覧ください。  
   
 6.  **[OK]** をクリックします。  
-  
+
 ##  <a name="TsqlProcedure"></a> Transact-SQL の使用  
   
 #### <a name="to-increase-the-size-of-a-database"></a>データベースのサイズを大きくするには  

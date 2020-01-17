@@ -13,11 +13,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: b021cb21df1b3c27e7f43c3ef92650eda4c2cf86
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52797484"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63151198"
 ---
 # <a name="database-engine-tuning-advisor"></a>Database Engine Tuning Advisor
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] データベース エンジン チューニング アドバイザー (DTA) は、データベースを分析し、クエリ パフォーマンスを最適化する手助けをします。 データベース エンジン チューニング アドバイザーを使用すると、データベースの構造や [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]の内部構造に関する専門的な知識がなくても、インデックス、インデックス付きビュー、テーブル パーティション分割の最適な組み合わせを選択して作成することができます。 DTA を使用して、次の作業を実行できます。  

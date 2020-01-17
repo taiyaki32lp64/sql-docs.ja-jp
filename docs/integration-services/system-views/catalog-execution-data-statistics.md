@@ -8,17 +8,20 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: language-reference
 ms.assetid: 6f51407e-0e4e-4b44-af33-db14c9d40ded
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: f413b5d7d5cb3480adfa8ee37b8fd4af520d6a61
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 97d78f4a96a87b6ffe373335167b796ea5a2de3d
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47721351"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71296586"
 ---
-# <a name="catalogexecutiondatastatistics"></a>catalog.execution_data_statistics
+# <a name="catalogexecution_data_statistics"></a>catalog.execution_data_statistics 
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
   このビューは、特定のパッケージ実行で、データ フロー コンポーネントが下流コンポーネントへデータを送信するたびに 1 行を表示します。 このビューの情報が使用して、コンポーネントのデータ スループットを計算できます。  

@@ -10,17 +10,20 @@ ms.topic: conceptual
 helpviewer_keywords:
 - incremental load [Integration Services],creating function
 ms.assetid: 55dd0946-bd67-4490-9971-12dfb5b9de94
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: fc5fb2da6ab1d276ac4a5397b8ea9832878b1c5a
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 43809c2be4dca62d150be31f62b833b08a2569b7
+ms.sourcegitcommit: c426c7ef99ffaa9e91a93ef653cd6bf3bfd42132
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52418033"
+ms.lasthandoff: 10/10/2019
+ms.locfileid: "72251985"
 ---
 # <a name="create-the-function-to-retrieve-the-change-data"></a>変更データを取得する関数を作成する
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   変更データの増分読み込みを実行する [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] パッケージの制御フローが完了したので、次の作業では、変更データを取得するテーブル値関数を作成します。 この関数は、最初の増分読み込みの前に一度作成するだけで済みます。  
   
 > [!NOTE]  
@@ -77,7 +80,7 @@ ms.locfileid: "52418033"
 > [!NOTE]  
 >  このストアド プロシージャの構文とそのパラメーターの詳細については、「[sys.sp_cdc_generate_wrapper_function (Transact-SQL)](../../relational-databases/system-stored-procedures/sys-sp-cdc-generate-wrapper-function-transact-sql.md)」をご覧ください。  
   
- ストアド プロシージャでは、常に、各キャプチャ インスタンスからすべての変更を返すラッパー関数が生成されます。 キャプチャ インスタンスの作成時に *@supports_net_changes* パラメーターを設定した場合は、該当する各キャプチャ インスタンスから差分変更を返すラッパー関数も生成されます。  
+ ストアド プロシージャでは、常に、各キャプチャ インスタンスからすべての変更を返すラッパー関数が生成されます。 キャプチャ インスタンスの作成時に *\@supports_net_changes* パラメーターを設定した場合は、該当する各キャプチャ インスタンスから差分変更を返すラッパー関数も生成されます。  
   
  このストアド プロシージャによって返される結果セットには、次の 2 つの列が含まれています。  
   
@@ -109,7 +112,7 @@ deallocate #hfunctions
 ```  
   
 ### <a name="understanding-and-using-the-functions-created-by-the-stored-procedure"></a>ストアド プロシージャによって作成される関数の概要と使用方法  
- キャプチャした変更データのタイムラインを体系的に進めるために、生成されたラッパー関数では、ある期間の *@end_time* パラメーターがその次の期間の *@start_time* パラメーターになることを想定しています。 この規則に従うと、生成されたラッパー関数では次のタスクを実行できます。  
+ キャプチャした変更データのタイムラインを体系的に進めるために、生成されたラッパー関数では、ある期間の *\@end_time* パラメーターがその次の期間の *\@start_time* パラメーターになることを想定しています。 この規則に従うと、生成されたラッパー関数では次のタスクを実行できます。  
   
 -   内部で使用される LSN 値に日付/時刻値をマップします。  
   
@@ -127,15 +130,15 @@ deallocate #hfunctions
   
 -   期間の開始日時の値と終了日時の値。 ラッパー関数では、クエリ範囲のエンドポイントとして日付/時刻値が使用されますが、変更データ キャプチャ関数では、エンドポイントとして 2 つの LSN 値が使用されます。  
   
--   行フィルター。 ラッパー関数でも変更データ キャプチャ関数でも、 *@row_filter_option* パラメーターは同じものが使用されます。 詳細については、「[cdc.fn_cdc_get_all_changes_&#60;capture_instance&#62; (Transact-SQL)](../../relational-databases/system-functions/cdc-fn-cdc-get-all-changes-capture-instance-transact-sql.md)」および「[cdc.fn_cdc_get_net_changes_&#60;capture_instance&#62; (Transact-SQL)](../../relational-databases/system-functions/cdc-fn-cdc-get-net-changes-capture-instance-transact-sql.md)」をご覧ください。  
+-   行フィルター。 ラッパー関数でも変更データ キャプチャ関数でも、 *\@row_filter_option* パラメーターは同じものが使用されます。 詳細については、「[cdc.fn_cdc_get_all_changes_&#60;capture_instance&#62; (Transact-SQL)](../../relational-databases/system-functions/cdc-fn-cdc-get-all-changes-capture-instance-transact-sql.md)」および「[cdc.fn_cdc_get_net_changes_&#60;capture_instance&#62; (Transact-SQL)](../../relational-databases/system-functions/cdc-fn-cdc-get-net-changes-capture-instance-transact-sql.md)」をご覧ください。  
   
  ラッパー関数から返される結果セットには、次のデータが含まれます。  
   
 -   変更データの要求されたすべての列。  
   
--   行に関連付けられている操作を示すために 1 文字または 2 文字のフィールドを使用する、__CDC_OPERATION という名前の列。 このフィールドに有効な値は、'I' (挿入)、'D' (削除)、'UO' (古い値の更新)、および 'UN' (新しい値の更新) です。  
+-   行に関連付けられている操作を示すために 1 文字または 2 文字のフィールドを使用する、__CDC_OPERATION という名前の列。 このフィールドに有効な値は、'I' (挿入)、'D' (削除)、'UO' (古い値の更新)、'UN' (新しい値の更新) です。  
   
--   操作コードの後に、 *@update_flag_list* パラメーターで指定された順にビット列として表示される更新フラグ (要求時)。 これらの列には、関連する列名に '_uflag' が追加された名前が付けられています。  
+-   操作コードの後に、 *\@update_flag_list* パラメーターで指定された順にビット列として表示される更新フラグ (要求時)。 これらの列には、関連する列名に '_uflag' が追加された名前が付けられています。  
   
  パッケージで、すべての変更に対してクエリを実行するラッパー関数を呼び出すと、そのラッパー関数は __CDC_STARTLSN 列と \__CDC_SEQVAL 列も返します。 この 2 つの列はそれぞれ、結果セットの 1 番目の列と 2 番目の列になります。 また、ラッパー関数は、この 2 つの列に基づいて結果セットを並べ替えます。  
   

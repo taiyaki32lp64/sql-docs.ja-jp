@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 8c57f35e-3c04-4f17-bf3e-3ad053951530
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 6e23f7b373eb0b1f089c2c38eb28027dedc48849
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 83d9430dc368a3dc9eb93719f9698b0d39b1385b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47772930"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67925164"
 ---
 # <a name="handling-errors-in-other-languages"></a>他の言語でエラーを処理する
 ここまでは、このセクションでは、Microsoft® Visual Basic® の観点からのエラーについて説明しました。 このセクションの残りの部分では、Visual Basic 以外の言語でのエラー処理の概要を説明します。  

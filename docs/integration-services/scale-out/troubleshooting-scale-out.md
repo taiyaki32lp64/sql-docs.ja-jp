@@ -10,15 +10,18 @@ ms.technology: integration-services
 ms.topic: conceptual
 author: haoqian
 ms.author: haoqian
-manager: craigg
-ms.openlocfilehash: c1afc1a2fbb8777df0c4bf5a488cde951fd4e32c
-ms.sourcegitcommit: 1f53b6a536ccffd701fc87e658ddac714f6da7a2
+ms.openlocfilehash: 87f5ab815fc7d3a5df23aa3675e92ffa206bfcdf
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/10/2019
-ms.locfileid: "54206328"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67896153"
 ---
 # <a name="troubleshoot-scale-out"></a>Scale Out のトラブルシューティング
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
 
 SSIS Scale Out には、SSIS カタログ データベース `SSISDB`、Scale Out Master サービス、Scale Out Worker サービス間の通信が含まれます。 この通信は、構成の誤り、アクセス許可がない、およびその他の理由により中断する場合があります。 この記事は、Scale Out 構成に関する問題のトラブルシューティングに役立ちます。
 
@@ -36,7 +39,7 @@ SSIS Scale Out には、SSIS カタログ データベース `SSISDB`、Scale Ou
 ### <a name="solution"></a>解決方法
 1.  Scale Out が有効になっているかどうかを確認します。
 
-    SSMS のオブジェクト エクスプローラーで **[SSISDB]** を右クリックして、**[Scale Out 機能が有効です]** を確認します。
+    SSMS のオブジェクト エクスプローラーで **[SSISDB]** を右クリックして、 **[Scale Out 機能が有効です]** を確認します。
 
     ![Scale Out が有効になっているか](media/isenabled.PNG)
 
@@ -62,7 +65,7 @@ SSIS Scale Out には、SSIS カタログ データベース `SSISDB`、Scale Ou
 
 ### <a name="symptoms"></a>現象
 
-*"System.ServiceModel.EndpointNotFoundException: メッセージを受信できる https://*[MachineName]:[Port]*/ClusterManagement/ でリッスンしているエンドポイントがありませんでした。"*
+*"System.ServiceModel.EndpointNotFoundException: メッセージを受信できる https://* [MachineName]:[Port] */ClusterManagement/ でリッスンしているエンドポイントがありませんでした。"*
 
 ### <a name="solution"></a>解決方法
 
@@ -173,7 +176,7 @@ winhttpcertcfg.exe -g -c LOCAL_MACHINE\My -s {CN of the worker certificate} -a {
 ## <a name="cannot-open-certificate-store"></a>証明書ストアを開けない
 
 ### <a name="symptoms"></a>現象
-Scale Out Manager で Scale Out Worker を Scale Out Master に接続したときに、*"マシン上で証明書ストアを開けません"* というエラー メッセージが表示され、検証が失敗する。
+Scale Out Manager で Scale Out Worker を Scale Out Master に接続したときに、 *"マシン上で証明書ストアを開けません"* というエラー メッセージが表示され、検証が失敗する。
 
 ### <a name="solution"></a>解決方法
 

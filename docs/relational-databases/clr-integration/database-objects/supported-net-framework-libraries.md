@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 417544ff-c25c-496e-add4-2f278f8a4911
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: c32b779370341be7b6026cf6d12cccbf3cc97b8a
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: faace3cf7e03afe18d2298580c45470f0b32b580
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51663852"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68140882"
 ---
 # <a name="supported-net-framework-libraries"></a>サポートされている .NET Framework ライブラリ
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

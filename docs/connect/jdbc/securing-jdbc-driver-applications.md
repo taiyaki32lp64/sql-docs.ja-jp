@@ -1,7 +1,7 @@
 ---
-title: JDBC ドライバー アプリケーションのセキュリティ保護 |Microsoft Docs
+title: JDBC driver アプリケーションのセキュリティ保護 |Microsoft Docs
 ms.custom: ''
-ms.date: 01/19/2017
+ms.date: 08/12/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 90724ec6-a9cb-43ef-903e-793f89410bc0
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 42fed21bd2857ea9305b1b8f8771aff80ee9f2ea
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 61a17b302499f87d552ec61c90208effc688e164
+ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47600410"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "69027755"
 ---
 # <a name="securing-jdbc-driver-applications"></a>JDBC ドライバー アプリケーションのセキュリティ保護
 
@@ -34,7 +33,7 @@ ms.locfileid: "47600410"
 | [ユーザー入力の検証](../../connect/jdbc/validating-user-input.md)             | ユーザー入力を検証する方法について説明します。                                                                                                                          |
 | [アプリケーション セキュリティ](../../connect/jdbc/application-security.md)               | Java のポリシー アクセス許可を使用して、JDBC ドライバー アプリケーションをセキュリティで保護する方法について説明します。                                                                                |
 | [SSL 暗号化の使用](../../connect/jdbc/using-ssl-encryption.md)               | SSL (Secure Sockets Layer) を使用して [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データベースとの通信チャネルを確立する方法について説明します。 |
-| [FIPS モード](../../connect/jdbc/fips-mode.md)                                     | FIPS 準拠モードでは、JDBC ドライバーを使用する方法について説明します。                                                                                                              |
+| [FIPS モード](../../connect/jdbc/fips-mode.md)                                     | FIPS 準拠モードで JDBC driver を使用する方法について説明します。                                                                                                              |
   
 ## <a name="see-also"></a>参照  
 

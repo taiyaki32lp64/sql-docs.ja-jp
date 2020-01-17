@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: ceb3b2bc-0cc4-48d8-9bdc-6a809556e35f
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 189861d10e308b79862f2485413aabf37a1b6aff
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 905ec9c26fe84ceaf1230665c3ff13e2e7ffe9f6
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47716340"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68108032"
 ---
 # <a name="spmsxenlist-transact-sql"></a>sp_msx_enlist (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -44,11 +43,9 @@ sp_msx_enlist [@msx_server_name =] 'msx_server'
 ```  
   
 ## <a name="arguments"></a>引数  
- [ **@msx_server_name =**] **'***msx_server***'**  
- マルチサーバー管理 (マスター) サーバーの名前です。 *msx_server*は**sysname**、既定値はありません。  
+`[ @msx_server_name = ] 'msx_server'` マルチ サーバー管理 (マスター) サーバーの名前。 *msx_server*は**sysname**、既定値はありません。  
   
- [  **@location =**] **'***場所***'**  
- 追加するターゲット サーバーの場所です。 *場所*は**nvarchar (100)**、既定値は NULL です。  
+`[ @location = ] 'location'` 追加する対象サーバーの場所。 *場所*は**nvarchar (100)** 、既定値は NULL です。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  **0** (成功) または**1** (失敗)  

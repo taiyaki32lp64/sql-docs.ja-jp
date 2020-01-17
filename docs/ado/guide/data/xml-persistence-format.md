@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 6e146738-ac4d-47bb-b6cd-d87b2260aead
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 2330703450e42e8ddf9bfeed536dd3649d65edf8
-ms.sourcegitcommit: bfa10c54e871700de285d7f819095d51ef70d997
+ms.openlocfilehash: e2d1c30546a8466ba9950f31cffdfb9447bd89ed
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/14/2019
-ms.locfileid: "54255687"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67923388"
 ---
 # <a name="xml-persistence-format"></a>XML 保存形式
 ADO では、utf-8 が保持する XML ストリームのエンコードを使用します。  
@@ -71,5 +70,5 @@ xmlns:z="#RowsetSchema">
   
  [データ] セクションでは、運送会社に関する情報を含む 3 つの行があります。 [データ] セクションが空である空の行セットが、 \<rs: データ > タグが存在する必要があります。 データのない、書き込めるのタグの短縮形単に\<rs: データ/>。 "Rs"の付いた任意のタグは、urn: スキーマによって定義された名前空間内にあることを示します-microsoft-com:rowset します。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [レコードを XML 形式で保持する](../../../ado/guide/data/persisting-records-in-xml-format.md)

@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: b8d4e1f7-14fc-4590-af98-1eda30d2ca6d
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: b8ab9cae1f0cd0d9135b86a5281410f58187cab0
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: d97ed3360db0d1a81f71225e4664c6624cb9da37
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53201341"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67974701"
 ---
 # <a name="setcharacterstream-method-int-javaioreader"></a>setCharacterStream (int, java.io.Reader) メソッド
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -47,7 +46,7 @@ public final void setCharacterStream(int parameterIndex,
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- この setCharacterStream メソッドは、java.sql.PreparedStatement インターフェイスの setCharacterStream メソッドによって指定されます。  
+ この setCharacterStream メソッドは、java.sql.PreparedStatement インターフェイスの setCharacterStream メソッドで規定されています。  
   
 ## <a name="see-also"></a>参照  
  [setCharacterStream &#40;SQLServerPreparedStatement&#41; メソッド](../../../connect/jdbc/reference/setcharacterstream-method-sqlserverpreparedstatement.md)   

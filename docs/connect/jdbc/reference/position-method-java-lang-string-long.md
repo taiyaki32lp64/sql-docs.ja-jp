@@ -1,5 +1,5 @@
 ---
-title: position メソッド (java.lang.String, long) |Microsoft Docs
+title: position メソッド (java. System.string, long) |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: 86fad8ed-375a-42e1-b40e-1fa085957a2c
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: adeaffc4753d79475a39a4f743569c900d16aea8
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ed0a62940fc29e2d909678dabec784a906c02515
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47692680"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67976442"
 ---
 # <a name="position-method-javalangstring-long"></a>position (java.lang.String, long) メソッド
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -39,7 +38,7 @@ public long position(java.lang.String searchstr,
 #### <a name="parameters"></a>パラメーター  
  *searchstr*  
   
- 検索する部分文字列。  
+ 検索対象の部分文字列。  
   
  *start*  
   
@@ -52,7 +51,7 @@ public long position(java.lang.String searchstr,
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- この位置のメソッドは、java.sql.Clob インターフェイスでの位置のメソッドによって指定されます。  
+ この位置メソッドは、java. .sql. Clob インターフェイスの position メソッドによって指定されます。  
   
 ## <a name="see-also"></a>参照  
  [position メソッド&#40;SQLServerClob&#41;](../../../connect/jdbc/reference/position-method-sqlserverclob.md)   

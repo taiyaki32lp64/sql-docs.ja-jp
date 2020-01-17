@@ -1,11 +1,10 @@
 ---
-title: 'オプション (テキスト エディター: エディターのタブとステータス バー ページ) |Microsoft Docs'
+title: オプション (テキスト エディター:エディターのタブとステータス バー ページ) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 f1_keywords:
 - sql12.swb.sqleditors.editorcontextsettings
@@ -14,15 +13,15 @@ ms.assetid: e4815678-7885-4631-878f-c6a2b857ee05
 author: craigg-msft
 ms.author: craigg
 manager: craigg
-ms.openlocfilehash: 241a74861a7f634389324276daf9b03a8590e64d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 01098f2181085f17788429608afb7bdda15fb504
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48055452"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66089242"
 ---
-# <a name="options-text-editor-editor-tab-and-status-bar-page"></a>オプション ([テキスト エディター]: [エディターのタブとステータス バー] ページ)
-  **[エディターのタブとステータス バー]** ページでは、[!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] クエリ エディターによって表示される情報をカスタマイズできます。 クエリ エディター ウィンドウのタブおよびステータス バーに表示される情報のレベル、およびステータス バーをエディター ウィンドウの上部と下部のどちらに表示するかを指定することができます。  
+# <a name="options-text-editor-editor-tab-and-status-bar-page"></a>オプション ([テキスト エディター]:[エディターのタブとステータス バー] ページ)
+  **[エディターのタブとステータス バー]** ページでは、 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] クエリ エディターによって表示される情報をカスタマイズできます。 クエリ エディター ウィンドウのタブおよびステータス バーに表示される情報のレベル、およびステータス バーをエディター ウィンドウの上部と下部のどちらに表示するかを指定することができます。  
   
 ## <a name="option-settings-by-editor"></a>エディターのオプション設定  
  エディターのタブとステータス バーはすべての [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] エディターで使用できますが、機能のレベルには差があります。  
@@ -35,7 +34,7 @@ ms.locfileid: "48055452"
  **実行時間を表示**  
  スクリプトの実行時間を含めます。 設定は次のとおりです。  
   
- **なし**  
+ **None**  
  ステータス バーには時間の情報が表示されません。  
   
  **終わり**  
@@ -93,7 +92,7 @@ ms.locfileid: "48055452"
  サーバー名を含めます。 ローカル接続の場合、これはインスタンス名です。 リモート接続の場合、これはリモート コンピューター名とインスタンス名です。  
   
 ## <a name="see-also"></a>参照  
- [オプション&#40;環境: フォントおよび色 ページ&#41;](../ssms/menu-help/options-environment-fonts-and-colors-page.md)   
+ [オプション&#40;環境。フォントおよび色 ページ&#41;](../ssms/menu-help/options-environment-fonts-and-colors-page.md)   
  [クエリ エディターでのコードの色分け](../relational-databases/scripting/color-coding-in-query-editors.md)  
   
   

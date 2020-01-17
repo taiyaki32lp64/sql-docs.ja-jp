@@ -4,22 +4,21 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.topic: conceptual
 helpviewer_keywords:
 - entities [Master Data Services], enabling for collections
 - entities [Master Data Services], enabling for explicit hierarchies
 ms.assetid: 380e77e5-ad60-43d4-9605-34a84525f5dd
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 6802a5950a8b366fe8989137da4ec4de70e9e605
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 113f73bd363ca866f45e439eb5d599b177a910ce
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56039103"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66054147"
 ---
 # <a name="enable-an-entity-for-explicit-hierarchies-and-collections-master-data-services"></a>明示的階層とコレクションに対してエンティティを有効にする (マスター データ サービス)
   [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] で明示的階層とコレクションに対してエンティティを有効にすると、エンティティに明示的階層とコレクションを作成できます。  

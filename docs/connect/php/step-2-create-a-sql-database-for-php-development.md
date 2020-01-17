@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 91046e09-837d-4c4a-9f4f-3a10042f1c19
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 117c388f17c06d2d80b1e518a63d05b0864adc7d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 81a499cb80b11ae695267760726f97d48e3517e7
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47743870"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67992642"
 ---
 # <a name="step-2-create-a-sql-database-for-php-development"></a>ステップ 2: PHP 開発用の SQL データベースを作成する
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]

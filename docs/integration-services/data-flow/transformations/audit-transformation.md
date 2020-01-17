@@ -14,17 +14,20 @@ helpviewer_keywords:
 - environment data in packages [Integration Services]
 - Audit transformation
 ms.assetid: 8c143682-9c81-4150-83d6-1d9678151d37
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: 1c9498c837f2afa6d88dd5fbc31842b9d712b64f
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 76ce8959e9b9cedb9a1e8a096913a3d6257cfd2d
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51640119"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71298015"
 ---
 # <a name="audit-transformation"></a>監査変換
+
+[!INCLUDE[ssis-appliesto](../../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   監査変換により、パッケージが実行される環境に関するデータをパッケージ内のデータ フローに含めることができます。 たとえば、パッケージ、コンピューター、および演算子の名前をデータ フローに追加できます。 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] には、この情報を提供するシステム変数が含まれています。  
   
 ## <a name="system-variables"></a>システム変数  
@@ -60,14 +63,14 @@ ms.locfileid: "51640119"
 ## <a name="audit-transformation-editor"></a>監査変換エディター
   監査変換により、パッケージが実行される環境に関するデータをパッケージ内のデータ フローに含めることができます。 たとえば、パッケージ、コンピューター、および演算子の名前をデータ フローに追加できます。 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] には、この情報を提供するシステム変数が含まれています。  
   
-### <a name="options"></a>[変数]  
+### <a name="options"></a>オプション  
  **[出力列の名前]**  
  監査情報を格納する、新しい出力列の名前を入力します。  
   
  **[監査の種類]**  
  監査情報を得るために使用できるシステム変数を選択します。  
   
-|ReplTest1|[説明]|  
+|[値]|[説明]|  
 |-----------|-----------------|  
 |**[実行インスタンスの GUID]**|パッケージの実行インスタンスを個別に識別する GUID を挿入します。|  
 |**[パッケージ ID]**|パッケージを個別に識別する GUID を挿入します。|  

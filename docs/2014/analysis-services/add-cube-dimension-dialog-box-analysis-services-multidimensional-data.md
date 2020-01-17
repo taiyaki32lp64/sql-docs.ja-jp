@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.cubeeditor.addcubedimensiondialog.f1
@@ -15,12 +14,12 @@ ms.assetid: 625a3b1f-183b-445f-9bb7-96945c324767
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 2115fe7f5faf5c68f72b9eaaef452961da3d02fc
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: f147c438e16c00e0e1b979f2d3e2fe6e16cf7428
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48148818"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66062944"
 ---
 # <a name="add-cube-dimension-dialog-box-analysis-services---multidimensional-data"></a>[キューブ ディメンションの追加] ダイアログ ボックス (Analysis Services - 多次元データ)
   **の** [キューブ ディメンションの追加] [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] ダイアログ ボックスを使用すると、キューブにデータベース ディメンションへの参照を追加できます。 **[キューブ ディメンションの追加]** ダイアログ ボックスは、次のいずれかの操作で表示できます。  
@@ -41,7 +40,7 @@ ms.locfileid: "48148818"
 > [!NOTE]  
 >  同じデータベース ディメンションに基づく複数のキューブ ディメンションがキューブに追加される場合、追加されるキューブ ディメンションは多様ディメンションと呼ばれます。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [Analysis Services のデザイナーおよびダイアログ ボックス&#40;多次元データ&#41;](analysis-services-designers-and-dialog-boxes-multidimensional-data.md)  
   
   

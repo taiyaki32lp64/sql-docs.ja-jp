@@ -15,11 +15,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: f6ce753ceaa0cc0ee16b395918390a4402cf5f39
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52788770"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62827386"
 ---
 # <a name="plan-guide-unsuccessful-event-class"></a>Plan Guide Unsuccessful イベント クラス
   Plan Guide Unsuccessful イベント クラスは、プラン ガイドを含むクエリまたはバッチに対する実行プランを [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] が生成できなかったことを示します。 この場合、プラン ガイドは使用されずにプランがコンパイルされています。 このイベントは、次の条件に該当する場合に発生します。  

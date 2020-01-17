@@ -7,15 +7,15 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 7a6c719a-3735-43b7-b3ab-dfadd325eca2
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: b2d15f17b867cd02d700ce6c749edddaa2c65083
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 96604a09811626a304502dc05ef4f7e9edcd0359
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52772944"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62771230"
 ---
 # <a name="how-to-edit-the-cdc-instance-properties"></a>CDC インスタンスのプロパティを編集する方法
   この手順では、CDC デザイナー コンソールを使用して CDC インスタンスの構成プロパティを編集する方法について説明します。  
@@ -34,19 +34,19 @@ ms.locfileid: "52772944"
   
 5.  プロパティ エディターで、次のタブのプロパティを編集します。  
   
-    -   **Oracle**:使用して、 **Oracle**  タブで、新しいインスタンス ウィザードで作成する CDC データベース ページで指定した説明を変更して、Oracle ログ マイニング データベースの接続情報を変更するのには、プロパティ エディター。  
+    -   **[Oracle]** : プロパティ エディターの **[Oracle]** タブを使用して、新しいインスタンス ウィザードの [CDC データベースの作成] ページで指定した説明を変更し、Oracle ログ マイニング データベースの接続情報を変更します。  
   
          このタブで編集できる内容の詳細については、「 [Edit the Oracle Database Properties](edit-the-oracle-database-properties.md)」を参照してください。  
   
-    -   **テーブル**:Oracle ソース データベースから選択したテーブルおよび列を変更するには、 **[テーブル]** タブを使用します。  
+    -   **[テーブル]** : Oracle ソース データベースから選択したテーブルおよび列を変更するには、 **[テーブル]** タブを使用します。  
   
          このタブで編集できる内容の詳細については、「 [Edit Tables](edit-tables.md)」を参照してください。  
   
-    -   **スクリプト**:使用して、**スクリプト**補足ログを設定する Oracle ソース データベースでスクリプトを再実行または実行するには、タブ。  
+    -   **[ スクリプト]** : 補足ログを設定する Oracle ソース データベースでスクリプトを実行または再実行するには、 **[スクリプト]** タブを使用します。  
   
          このタブで実行できる内容の詳細については、「 [Review and Generate Supplemental Logging Scripts](review-and-generate-supplemental-logging-scripts.md)」を参照してください。  
   
-    -   **[詳細設定]**:**[詳細設定]** タブを使用すると、CDC インスタンスに特殊なプロパティを追加できます。  
+    -   **[詳細設定]** : **[詳細設定]** タブを使用すると、CDC インスタンスに特殊なプロパティを追加できます。  
   
          このタブで実行できる内容の詳細については、「 [Edit the Advanced Properties](edit-the-advanced-properties.md)」を参照してください。  
   

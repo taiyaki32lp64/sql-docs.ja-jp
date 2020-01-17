@@ -16,11 +16,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 6dc94409e607c91944a2263ac5dfb3e8a3f4ce54
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48168642"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62920688"
 ---
 # <a name="transaction-log-backups-sql-server"></a>トランザクション ログのバックアップ (SQL Server)
   このトピックは、完全復旧モデルまたは一括ログ復旧モデルを使用する [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データベースのみに関連しています。 このトピックでは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データベースのトランザクション ログのバックアップについて説明します。  
@@ -40,7 +40,7 @@ ms.locfileid: "48168642"
 ##  <a name="LogBackupSequence"></a> ログ バックアップのシーケンスのしくみ  
  トランザクション ログのバックアップの *ログ チェーン* のシーケンスは、データのバックアップとは関連がありません。 たとえば、次の一連のイベントが発生したとします。  
   
-|[時刻]|イベント|  
+|Time|イベント|  
 |----------|-----------|  
 |午前 8 時|データベースのバックアップ。|  
 |正午|トランザクション ログのバックアップ。|  
@@ -70,7 +70,7 @@ ms.locfileid: "48168642"
 ##  <a name="RelatedContent"></a> 関連コンテンツ  
  [なし] :  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [トランザクション ログ &#40;SQL Server&#41;](../logs/the-transaction-log-sql-server.md)   
  [SQL Server データベースのバックアップと復元](back-up-and-restore-of-sql-server-databases.md)   
  [ログ末尾のバックアップ &#40;SQL Server&#41;](tail-log-backups-sql-server.md)   

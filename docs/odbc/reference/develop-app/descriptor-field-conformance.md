@@ -15,64 +15,63 @@ helpviewer_keywords:
 ms.assetid: 6c29d93b-696c-4960-bff3-4d6bc41bc513
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 193bdadaf36e975b1f79327bfef161daaaed427b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: afdb1f18ad641224d13373436dd58f1919a3d280
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47642310"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67952346"
 ---
 # <a name="descriptor-field-conformance"></a>記述子フィールドの適合性
 次の表では、各 ODBC 記述子のヘッダー フィールド、これは適切に定義されたの準拠レベルを示します。  
   
-|機能|準拠レベル|  
+|関数|準拠レベル|  
 |--------------|-----------------------|  
-|SQL_DESC_ALLOC_TYPE|コア|  
-|SQL_DESC_ARRAY_SIZE|コア|  
+|SQL_DESC_ALLOC_TYPE|Core|  
+|SQL_DESC_ARRAY_SIZE|Core|  
 |SQL_DESC_ARRAY_STATUS_PTR|(APD、IPR とコア IRD)。レベル 1 (ARD)|  
-|SQL_DESC_BIND_OFFSET_PTR|コア|  
-|SQL_DESC_BIND_TYPE|コア|  
-|SQL_DESC_COUNT|コア|  
-|SQL_DESC_ROWS_PROCESSED_PTR|コア|  
+|SQL_DESC_BIND_OFFSET_PTR|Core|  
+|SQL_DESC_BIND_TYPE|Core|  
+|SQL_DESC_COUNT|Core|  
+|SQL_DESC_ROWS_PROCESSED_PTR|Core|  
   
  次の表では、各 ODBC 記述子レコード フィールド、これは適切に定義されたの準拠レベルを示します。  
   
-|機能|準拠レベル|  
+|関数|準拠レベル|  
 |--------------|-----------------------|  
-|SQL_DESC_AUTO_UNIQUE_VALUE|[レベル 2]|  
-|SQL_DESC_BASE_COLUMN_NAME|コア|  
-|SQL_DESC_BASE_TABLE_NAME|[レベル 1]|  
-|SQL_DESC_CASE_SENSITIVE|コア|  
-|SQL_DESC_CATALOG_NAME|[レベル 2]|  
-|SQL_DESC_CONCISE_TYPE|コア|  
-|SQL_DESC_DATA_PTR|コア|  
+|SQL_DESC_AUTO_UNIQUE_VALUE|レベル 2|  
+|SQL_DESC_BASE_COLUMN_NAME|Core|  
+|SQL_DESC_BASE_TABLE_NAME|レベル 1|  
+|SQL_DESC_CASE_SENSITIVE|Core|  
+|SQL_DESC_CATALOG_NAME|レベル 2|  
+|SQL_DESC_CONCISE_TYPE|Core|  
+|SQL_DESC_DATA_PTR|Core|  
 |SQL_DESC_DATETIME_INTERVAL_ コード|[1] のコア|  
 |SQL_DESC_DATETIME_INTERVAL_ 精度|[1] のコア|  
-|SQL_DESC_DISPLAY_SIZE|コア|  
-|SQL_DESC_FIXED_PREC_SCALE|コア|  
-|SQL_DESC_INDICATOR_PTR|コア|  
-|SQL_DESC_LABEL|[レベル 2]|  
-|SQL_DESC_LENGTH|コア|  
-|SQL_DESC_LITERAL_PREFIX|コア|  
-|SQL_DESC_LITERAL_SUFFIX|コア|  
-|SQL_DESC_LOCAL_TYPE_NAME|コア|  
-|SQL_DESC_NAME|コア|  
-|SQL_DESC_NULLABLE|コア|  
-|SQL_DESC_OCTET_LENGTH|コア|  
-|SQL_DESC_OCTET_LENGTH_PTR|コア|  
+|SQL_DESC_DISPLAY_SIZE|Core|  
+|SQL_DESC_FIXED_PREC_SCALE|Core|  
+|SQL_DESC_INDICATOR_PTR|Core|  
+|SQL_DESC_LABEL|レベル 2|  
+|SQL_DESC_LENGTH|Core|  
+|SQL_DESC_LITERAL_PREFIX|Core|  
+|SQL_DESC_LITERAL_SUFFIX|Core|  
+|SQL_DESC_LOCAL_TYPE_NAME|Core|  
+|SQL_DESC_NAME|Core|  
+|SQL_DESC_NULLABLE|Core|  
+|SQL_DESC_OCTET_LENGTH|Core|  
+|SQL_DESC_OCTET_LENGTH_PTR|Core|  
 |SQL_DESC_PARAMETER_TYPE|コア/レベル 2 [2]|  
-|SQL_DESC_PRECISION|コア|  
-|SQL_DESC_ROWVER|[レベル 1]|  
-|SQL_DESC_SCALE|コア|  
-|SQL_DESC_SCHEMA_NAME|[レベル 1]|  
-|SQL_DESC_SEARCHABLE|コア|  
-|SQL_DESC_TABLE_NAME|[レベル 1]|  
-|SQL_DESC_TYPE|コア|  
-|SQL_DESC_TYPE_NAME|コア|  
-|SQL_DESC_UNNAMED|コア|  
-|SQL_DESC_UNSIGNED|コア|  
-|SQL_DESC_UPDATABLE|コア|  
+|SQL_DESC_PRECISION|Core|  
+|SQL_DESC_ROWVER|レベル 1|  
+|SQL_DESC_SCALE|Core|  
+|SQL_DESC_SCHEMA_NAME|レベル 1|  
+|SQL_DESC_SEARCHABLE|Core|  
+|SQL_DESC_TABLE_NAME|レベル 1|  
+|SQL_DESC_TYPE|Core|  
+|SQL_DESC_TYPE_NAME|Core|  
+|SQL_DESC_UNNAMED|Core|  
+|SQL_DESC_UNSIGNED|Core|  
+|SQL_DESC_UPDATABLE|Core|  
   
  [これらのレコードのフィールドのサポート 1] は、ドライバーは、該当するデータ型をサポートしている場合にのみ必要です。  
   

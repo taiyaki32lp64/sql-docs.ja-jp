@@ -4,33 +4,32 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.transferdatabasetask.database.f1
 helpviewer_keywords:
 - Transfer Database Task Editor
 ms.assetid: ccdb74d0-4bea-420c-a726-2e0eb8957e0a
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 69a3c17a5b247c3c1ccefa5887404ad0865c673e
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 8d93d2e95f6a18174a6d9b2f05e434a5443701ed
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48070642"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66055108"
 ---
 # <a name="transfer-database-task-editor-databases-page"></a>[データベース転送タスク エディター] ([データベース] ページ)
   **[データベース転送タスク エディター]** ダイアログ ボックスの **[データベース]** ページを使用すると、データベース転送タスクに使用される転送元および転送先のデータベースのプロパティを指定できます。 データベース転送タスクは、2 つの [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] インスタンスの間で [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]データベースをコピーまたは移動します。 このタスクを使用して、同じサーバー内でデータベースをコピーすることもできます。 このタスクの詳細については、「 [データベース転送タスク](control-flow/transfer-database-task.md)」を参照してください。  
   
 ## <a name="options"></a>および  
  **SourceConnection**  
- SMO 接続マネージャーを一覧から選択するか、**\<[新しい接続...]>** をクリックしてコピー元のサーバーへの新しい接続を作成します。  
+ SMO 接続マネージャーを一覧から選択するか、 **\<[新しい接続...]>** をクリックしてコピー元のサーバーへの新しい接続を作成します。  
   
  **DestinationConnection**  
- SMO 接続マネージャーを一覧から選択するか、**\<[新しい接続...]>** をクリックしてコピー先のサーバーへの新しい接続を作成します。  
+ SMO 接続マネージャーを一覧から選択するか、 **\<[新しい接続...]>** をクリックしてコピー先のサーバーへの新しい接続を作成します。  
   
  **[DestinationDatabaseName]**  
  転送先サーバーの [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] データベースの名前を指定します。  
@@ -42,9 +41,9 @@ ms.locfileid: "48070642"
  **[DestinationDatabaseFiles]**  
  転送先サーバーにおけるデータベース ファイルの名前と場所を指定します。  
   
- このフィールドにソース データベース ファイルの名前と場所を自動的に入力するには、 **[SourceConnection]**、 **[SourceDatabaseName]**、 **[SourceDatabaseFiles]** を先に指定します。  
+ このフィールドにソース データベース ファイルの名前と場所を自動的に入力するには、 **[SourceConnection]** 、 **[SourceDatabaseName]** 、 **[SourceDatabaseFiles]** を先に指定します。  
   
- データベース ファイルの名前を変更するか、転送先サーバー上の新しい場所を指定するには、このフィールドにソース データベースの情報を入力した後、参照ボタンをクリックします。 **[転送先データベース ファイル]** ダイアログ ボックスで、 **[転送先ファイル]**、 **[転送先フォルダー]**、または **[ネットワーク ファイル共有]** を編集します。  
+ データベース ファイルの名前を変更するか、転送先サーバー上の新しい場所を指定するには、このフィールドにソース データベースの情報を入力した後、参照ボタンをクリックします。 **[転送先データベース ファイル]** ダイアログ ボックスで、 **[転送先ファイル]** 、 **[転送先フォルダー]** 、または **[ネットワーク ファイル共有]** を編集します。  
   
 > [!NOTE]  
 >  参照ボタンを使用してデータベース ファイルを指定した場合、ファイルの場所はローカル ドライブの表記 (c:\\など) を使用して入力されます。 これをコンピューター名と共有名を含むネットワーク共有の表記に変える必要があります。 既定の管理共有を使用する場合、$ 表記を使用し、その共有に対する管理アクセスを行える必要があります。  
@@ -91,7 +90,7 @@ ms.locfileid: "48070642"
 ## <a name="see-also"></a>参照  
  [Integration Services のエラーおよびメッセージのリファレンス](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [Integration Services タスク](control-flow/integration-services-tasks.md)   
- [データベース転送タスク エディター &#40;[全般] ページ&#41;](general-page-of-integration-services-designers-options.md)   
+ [[データベース転送タスク エディター] &#40;[全般] ページ&#41;](general-page-of-integration-services-designers-options.md)   
  [[式] ページ](expressions/expressions-page.md)   
  [SMO 接続マネージャー](connection-manager/smo-connection-manager.md)  
   

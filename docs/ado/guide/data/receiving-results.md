@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 791aa26e-7aae-477e-9f05-5cd46e1de095
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 648fd220988a0b32837ddcdf2b4c1c23de5e9f69
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 2b861553e9a71ce56377f8d87bba0f9e26e929c2
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47657110"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67924522"
 ---
 # <a name="receiving-results"></a>結果の受信
 ADO ではほとんどのコマンドは、呼び出し元に返される情報はいくつかの結果します。 行セットを返すコマンドの結果を受信してで、**レコード セット**でおそらく、最も使用されている ADO オブジェクトのあるオブジェクト。  

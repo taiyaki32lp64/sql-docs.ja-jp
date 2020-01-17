@@ -15,15 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - semantickeyphrasetable function
 ms.assetid: d33b973a-2724-4d4b-aaf7-67675929c392
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: 1ac666af5ed24d526953dd8aa57c76871d2064f6
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+author: MikeRayMSFT
+ms.author: mikeray
+ms.openlocfilehash: bfde3ee5d26557759bd881bce34a69b6ecf98dd1
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52414489"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68140567"
 ---
 # <a name="semantickeyphrasetable-transact-sql"></a>semantickeyphrasetable (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -92,7 +91,7 @@ SEMANTICKEYPHRASETABLE
   
 ## <a name="examples"></a>使用例  
   
-###  <a name="HowToTopPhrases"></a> 例 1:特定のドキュメント内の最上位のキー フレーズを検索します。  
+###  <a name="HowToTopPhrases"></a> 例 1: 特定のドキュメント内の最上位のキー フレーズを検索します。  
  次の例では、AdventureWorks サンプル データベースの Production.Document テーブルの Document 列にある、@DocumentId 変数で指定されたドキュメントから、上位 10 個のキー フレーズを取得します。 @DocumentId 変数は、フルテキスト インデックスのキー列の値を表します。 **SEMANTICKEYPHRASETABLE** 関数は、テーブル スキャンではなくインデックス シークを使用してこれらの結果を効率的に取得します。 この例では、フルテキストとセマンティック インデックスに対して列が設定されます。  
   
 ```sql  
@@ -107,7 +106,7 @@ ORDER BY KEYP_TBL.score DESC;
   
 ```  
   
-###  <a name="HowToTopDocuments"></a> 例 2:特定のキー フレーズを含む上位のドキュメントを検索します。  
+###  <a name="HowToTopDocuments"></a> 例 2: 特定のキー フレーズを含む上位のドキュメントを検索します。  
  次の例では、AdventureWorks サンプル データベースの Production.Document テーブルの Document 列から、キー フレーズ "Bracket" を含む上位 25 個のドキュメントを取得します。 この例では、フルテキストとセマンティック インデックスに対して列が設定されます。  
   
 ```sql  

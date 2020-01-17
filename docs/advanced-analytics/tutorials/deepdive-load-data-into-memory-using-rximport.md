@@ -1,32 +1,33 @@
 ---
-title: RevoScaleR rxImport - SQL Server Machine Learning を使用してメモリにデータを読み込む
-description: SQL Server で R 言語を使用してデータを読み込む方法のチュートリアル。
+title: rxImport を使用したデータの読み込み
+description: SQL Server で R 言語を使用してデータを読み込む方法についてのチュートリアルです。
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 11/27/2018
 ms.topic: tutorial
-author: HeidiSteen
-ms.author: heidist
-manager: cgronlun
-ms.openlocfilehash: f1a2cfd889fd8ff594b5ead48a9bd391955158f8
-ms.sourcegitcommit: ee76332b6119ef89549ee9d641d002b9cabf20d2
-ms.translationtype: MT
+author: dphansen
+ms.author: davidph
+ms.custom: seo-lt-2019
+monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
+ms.openlocfilehash: ee0a1ddf8ccfdaf9c2b7b4f2ba5724451e7d71b8
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/20/2018
-ms.locfileid: "53645197"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73727229"
 ---
-# <a name="load-data-into-memory-using-rximport-sql-server-and-revoscaler-tutorial"></a>RxImport (SQL Server と RevoScaleR チュートリアル) を使用してメモリにデータを読み込む
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+# <a name="load-data-into-memory-using-rximport-sql-server-and-revoscaler-tutorial"></a>rxImport を使用したメモリへのデータの読み込み (SQL Server と RevoScaleR のチュートリアル)
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-このレッスンの一部である、 [RevoScaleR チュートリアル](deepdive-data-science-deep-dive-using-the-revoscaler-packages.md)を使用する方法の[RevoScaleR 関数](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler)と SQL Server。
+このレッスンは、SQL Server で [RevoScaleR 関数](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler)を使用する方法についての [RevoScaleR チュートリアル](deepdive-data-science-deep-dive-using-the-revoscaler-packages.md)の一部です。
 
-[RxImport](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rximport)セッションのメモリ内のデータ フレームに、またはディスク上の XDF ファイルには、データ ソースからデータを移動する関数を使用できます。 移動先としてファイルを指定しない場合、データはデータ フレームとしてメモリに格納されます。
+[rxImport](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rximport) 関数を使用すると、データ ソースからセッション メモリ内のデータ フレームに、またはディスク上の XDF ファイルにデータを移動できます。 移動先としてファイルを指定しない場合、データはデータ フレームとしてメモリに格納されます。
 
-この手順でデータを取得する方法を学習します[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]、しを使用して、 **rxImport**ローカル ファイルに関心のあるデータを格納する関数。 この方法を利用すると、データベースに対して再クエリすることなく、ローカルの計算コンテキストでデータを繰り返し分析できます。
+この手順では、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] からデータを取得し、**rxImport** 関数を使用して目的のデータをローカル ファイルに保存する方法について説明します。 この方法を利用すると、データベースに対して再クエリすることなく、ローカルの計算コンテキストでデータを繰り返し分析できます。
 
-## <a name="extract-a-subset-of-data-from-sql-server-to-local-memory"></a>SQL Server からローカル メモリにデータのサブセットを抽出します。
+## <a name="extract-a-subset-of-data-from-sql-server-to-local-memory"></a>SQL Server のデータのサブセットをローカル メモリに抽出する
 
-さらに詳しく危険度の高い個人のみを確認すると判断しました。 ソース テーブル[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]サイズが大きいので、危険度の高い顧客のみに関する情報を取得します。 そのデータは、ローカル ワークステーションのメモリ内のデータ フレームに読み込みます。
+リスクの高い個人のみを精査することになった場合を例に説明します。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のソース テーブルが大きいため、リスクの高い顧客に関する情報のみを取得する必要があります。 その後、そのデータをローカル ワークステーションのメモリ内のデータ フレームに読み込みます。
 
 1. 計算コンテキストをローカル ワークステーションにリセットします。
 
@@ -43,15 +44,15 @@ ms.locfileid: "53645197"
         connectionString = sqlConnString)
     ```
 
-3. 関数を呼び出す[rxImport](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rximport)をローカルの R セッションでデータ フレームにデータを読み取る。
+3. 関数 [rxImport](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rximport) を呼び出して、ローカル R セッションのデータ フレームにデータを読み取ります。
 
     ```R
     highRisk <- rxImport(sqlServerProbDS)
     ```
 
-    操作が成功した場合は、次のようなステータス メッセージが表示されます。"の読み取り行数。処理された合計行は、35:35、チャンクの合計時間:0.036 seconds"
+    操作が成功した場合は、次のようなステータス メッセージが表示されます。"Rows Read (読み取られた行) :35, Total Rows Processed (処理された行数の合計) :35, Total Chunk Time (合計チャンク時間) :0.036 seconds (0.036 秒) "
 
-4. これで、危険度の高い観察では、インメモリ データ フレームには、データ フレームを操作するのにさまざまな R 関数を使用できます。 たとえば、リスク スコアで顧客を並べ替えおよび、高いリスクをもたらしている顧客の一覧を印刷できます。
+4. これで、高いリスクの観測対象がイン メモリ データ フレームに格納され、さまざまな R 関数を使用してデータ フレームを操作できるようになりました。 この例では、リスク スコアで顧客を並べ替え、高いリスクがあると考えられる顧客の一覧を印刷できます。
 
     ```R
     orderedHighRisk <- highRisk[order(-highRisk$ccFraudProb),]
@@ -75,7 +76,7 @@ ccFraudLogitScore   state gender cardholder balance numTrans numIntlTrans credit
 
 **rxImport** は、データの移動だけでなく、読み取りプロセスでデータを変換する場合にも使用できます。 たとえば、幅が固定された列の文字数を指定する、変数の説明を指定する、要素列のレベルを設定する、さらにはインポート後に使用する新しいレベルを作成することもできます。
 
-**RxImport**関数は、インポート プロセス中に、列を変数名を割り当てますを使用して新しい変数名を指定することができます、 *colInfo*パラメーター、または、を使用してデータ型を変更*colClasses*パラメーター。
+**rxImport** 関数は、インポート プロセス時に変数名を列に割り当てますが、*colInfo* パラメーターを使用して新しい変数名を指定したり、*colClasses* パラメーターを使用してデータ型を変更したりすることができます。
 
 *transforms* パラメーターで追加の操作を指定すると、読み取り対象の各データ群に対して基本的な処理を実行できます。
 

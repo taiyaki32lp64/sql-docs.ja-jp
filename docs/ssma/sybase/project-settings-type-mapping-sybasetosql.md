@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 2698fb3a-f9e6-4e04-94e0-dad289d7ed0a
 author: Shamikg
 ms.author: Shamikg
-manager: craigg
-ms.openlocfilehash: 148180d95bcbff1626069e72fb66dd9a3ca859c9
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d7b16bdf3717fa14f91af41663cbd65365eac52a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47708640"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68028660"
 ---
 # <a name="project-settings-type-mapping-sybasetosql"></a>プロジェクトの設定 (型のマッピング) (SybaseToSQL)
 [型マッピング] ページ、**プロジェクト設定** ダイアログ ボックスには、SSMA に Sybase Adaptive Server Enterprise (ASE) のデータ型に変換する方法をカスタマイズする設定が含まれています。[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]データ型。  
@@ -59,31 +58,31 @@ SSMA の既定値に型マッピングのリストをリセットする をク�
 |**bit**|**bit**|  
 |**char**|**char**|  
 |**char varying**|**varchar**|  
-|**char のさまざまな [\*..8000]**|**varchar[\*]**|  
-|**char のさまざまな [8001...\*]**|**varchar(max)**|  
+|**character varying [\*..8000]**|**varchar[\*]**|  
+|**character varying [8001...\*]**|**varchar(max)**|  
 |**char [\*..8000]**|**char[\*]**|  
-|**char [8001...\*;]**|**varchar(max)**|  
+|**char[8001..\*;]**|**varchar(max)**|  
 |**character**|**char**|  
-|**文字がさまざまな**|**varchar**|  
-|**文字がさまざまな [\*..8000]**|**varchar[\*]**|  
-|**文字がさまざまな [8001...\*]**|**varchar(max)**|  
-|**文字 [\*..8000]**|**char[\*]**|  
+|**character varying**|**varchar**|  
+|**character varying [\*..8000]**|**varchar[\*]**|  
+|**character varying [8001...\*]**|**varchar(max)**|  
+|**character[\*..8000]**|**char[\*]**|  
 |**character[8001..\*]**|**varchar(max)**|  
 |**date**|**date**|  
 |**datetime**|**datetime2[3]**|  
 |**dec**|**decimal**|  
 |**dec[\*..\*]**|**decimal[\*]**|  
-|**dec [\*..\*][\*..\*]**|**decimal[\*][\*]**|  
+|**dec[\*..\*][\*..\*]**|**decimal[\*][\*]**|  
 |**decimal**|**decimal**|  
 |**decimal[\*..\*]**|**decimal[\*]**|  
 |**decimal [\*..\*][\*..\*]**|**decimal[\*][\*]**|  
-|**倍精度**|**float[53]**|  
+|**double precision**|**float[53]**|  
 |**float**|**float[53]**|  
-|**float [\*..15]**|**float[24]**|  
+|**float[\*..15]**|**float[24]**|  
 |**float [16..\*]**|**float[53]**|  
 |**image**|**image**|  
 |**int**|**int**|  
-|**整数 (integer)**|**int**|  
+|**integer**|**int**|  
 |**longsysname**|**nvarchar[255]**|  
 |**money**|**money**|  
 |**national char**|**nchar**|  
@@ -92,19 +91,19 @@ SSMA の既定値に型マッピングのリストをリセットする をク�
 |**varying、national char [\*..4000]**|**nvarchar[\*]**|  
 |**varying、national char [4001...\*]**|**nvarchar(max)**|  
 |**national char [4001...\*]**|**nvarchar(max)**|  
-|**各国語文字**|**nchar**|  
-|**各国語文字 [\*..4000]**|**nchar[\*]**|  
-|**各国語文字 [4001...\*]**|**nvarchar(max)**|  
-|**各国語文字がさまざまな**|**nvarchar**|  
-|**各国語文字がさまざまな [\*..4000]**|**nvarchar[\*]**|  
-|**各国語文字がさまざまな [4001...\*]**|**nvarchar(max)**|  
+|**national character**|**nchar**|  
+|**national character [\*..4000]**|**nchar[\*]**|  
+|**national character [4001...\*]**|**nvarchar(max)**|  
+|**national character varying**|**nvarchar**|  
+|**national character varying [\*..4000]**|**nvarchar[\*]**|  
+|**national character varying [4001...\*]**|**nvarchar(max)**|  
 |**national varchar**|**nvarchar**|  
 |**national varchar [\*..4000]**|**nvarchar[\*]**|  
 |**national varchar [4001...\*]**|**nvarchar(max)**|  
 |**nchar**|**nchar**|  
-|**nchar の変化**|**nvarchar**|  
-|**nchar のさまざまな [\*..4000]**|**nvarchar[\*]**|  
-|**nchar のさまざまな [4001...\*]**|**nvarchar(max)**|  
+|**nchar varying**|**nvarchar**|  
+|**nchar varying [\*..4000]**|**nvarchar[\*]**|  
+|**nchar varying [4001...\*]**|**nvarchar(max)**|  
 |**nchar[\*..4000]**|**nchar[\*]**|  
 |**nchar[4001..\*]**|**nvarchar(max)**|  
 |**numeric**|**numeric**|  
@@ -117,26 +116,26 @@ SSMA の既定値に型マッピングのリストをリセットする をク�
 |**smalldatetime**|**smalldatetime**|  
 |**smallint**|**smallint**|  
 |**smallmoney**|**smallmoney**|  
-|**sysname**|**nvarchar [128]**|  
+|**sysname**|**nvarchar[128]**|  
 |**sysname[\*..\*]**|**nvarchar[255]**|  
 |**text**|**text**|  
 |**time**|**time[3]**|  
 |**timestamp**|**rowversion**|  
 |**tinyint**|**tinyint**|  
 |**unichar**|**nchar**|  
-|**unichar 可変**|**nvarchar**|  
-|**unichar がさまざまな [\*..4000]**|**nvarchar[\*]**|  
-|**unichar がさまざまな [4001...\*]**|**nvarchar(max)**|  
+|**unichar varying**|**nvarchar**|  
+|**unichar varying [\*..4000]**|**nvarchar[\*]**|  
+|**unichar varying [4001....\*]**|**nvarchar(max)**|  
 |**unichar[\*..4000]**|**nchar[\*]**|  
 |**unichar[4001..\*]**|**nvarchar(max)**|  
 |**unitext**|**nvarchar(max)**|  
 |**univarchar**|**nvarchar**|  
 |**univarchar[\*..4000]**|**nvarchar[\*]**|  
 |**univarchar[4001..\*]**|**nvarchar(max)**|  
-|**符号なし bigint**|**numeric[20][0]**|  
+|**unsigned bigint**|**numeric[20][0]**|  
 |**unsigned int**|**bigint**|  
 |**unsigned smallint**|**int**|  
-|**符号なしの tinyint**|**tinyint**|  
+|**unsigned tinyint**|**tinyint**|  
 |**varbinary**|**varbinary**|  
 |**varbinary[\*..8000]**|**varbinary[\*]**|  
 |**varbinary[8001..\*]**|**varbinary(max)**|  

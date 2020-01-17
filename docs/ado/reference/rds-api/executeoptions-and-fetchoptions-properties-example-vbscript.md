@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 753a4a3d-0fba-40b8-86e7-50b34182ca69
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 7450e2e64d7054749aa4b980e1e36b7cf09ff022
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 782b76ca40418cd7fb8313c2b22da3a6ddd3978a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52542985"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67964192"
 ---
 # <a name="executeoptions-and-fetchoptions-properties-example-vbscript"></a>ExecuteOptions と FetchOptions プロパティの例 (VBScript)
 > [!IMPORTANT]
@@ -170,7 +169,7 @@ End Sub
 <!-- EndExecuteOptionsRuntimeVBS -->  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [ExecuteOptions プロパティ (RDS)](../../../ado/reference/rds-api/executeoptions-property-rds.md)   
  [FetchOptions プロパティ (RDS)](../../../ado/reference/rds-api/fetchoptions-property-rds.md)
 

@@ -9,13 +9,13 @@ ms.topic: conceptual
 ms.assetid: fc208cdb-7373-4f6b-8f6c-cdff9d3dcd02
 author: Shamikg
 ms.author: Shamikg
-manager: v-thobro
-ms.openlocfilehash: 537865967d0e43b7dd9501f9fbb7b9605f5b9367
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: shamikg
+ms.openlocfilehash: 79d3905c130e37c973a79a40369f97ae8f30ac5b
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47696751"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68266549"
 ---
 # <a name="running-test-cases-oracletosql"></a>テスト ケースの実行 (OracleToSQL)
 SSMA のテスト担当者がテスト_ケースを実行すると、テスト用に選択されたオブジェクトを実行し、検証結果に関するレポートを作成します。 結果が両方のプラットフォームで同一の場合、テストは成功しました。 Oracle の間でオブジェクトの対応と[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]SSMA プロジェクトを現在のスキーマ マッピングの設定に従って決定されます。  
@@ -33,7 +33,7 @@ SSMA のテスト担当者がテスト_ケースを実行すると、テスト�
   
 ## <a name="test-case-execution-steps"></a>テスト_ケースの実行ステップ  
   
-### <a name="prerequisites"></a>前提条件  
+### <a name="prerequisites"></a>必須コンポーネント  
 SSMA のテスト担当者は、テストの実行を開始する前に、テストのすべての前提条件が満たされたかどうかを確認します。 いくつかの条件が満たされない場合、エラー メッセージが表示されます。  
   
 ### <a name="initialization"></a>初期化  
@@ -47,10 +47,10 @@ SSMA のテスト担当者は、テストの実行を開始する前に、テス
 |USER_TABLE$ Trg|トリガー (trigger)|検証済みのテーブルで変更の監査をトリガーします。|  
 |USER_TABLE$ AUD|テーブル|テーブルな行を削除し、上書きを保存する場所です。|  
 |USER_TABLE$ AUDID|テーブル|追加または変更された行が保存されているテーブル。|  
-|USER_TABLE|view|テーブルの変更の簡略化された表現。|  
-|USER_TABLE $ 新規|view|行の挿入と上書きの簡略化された表現。|  
-|USER_TABLE$ NEW_ID|view|挿入および変更された行の id です。|  
-|USER_TABLE$ 古い|view|行の削除と上書きの簡略化された表現。|  
+|USER_TABLE|ビュー|テーブルの変更の簡略化された表現。|  
+|USER_TABLE $ 新規|ビュー|行の挿入と上書きの簡略化された表現。|  
+|USER_TABLE$ NEW_ID|ビュー|挿入および変更された行の id です。|  
+|USER_TABLE$ 古い|ビュー|行の削除と上書きの簡略化された表現。|  
   
 次のオブジェクトで検証済みのテーブルのスキーマに作成されます[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]します。  
   
@@ -66,10 +66,10 @@ SSMA のテスト担当者は、テストの実行を開始する前に、テス
 |名前|型|説明|  
 |USER_TABLE$ Aud|テーブル|テーブルな行を削除し、上書きを保存する場所です。|  
 |USER_TABLE$AudID|テーブル|追加または変更された行が保存されているテーブル。|  
-|USER_TABLE|view|テーブルの変更の簡略化された表現。|  
-|USER_TABLE$new|view|行の挿入と上書きの簡略化された表現。|  
-|USER_TABLE$new_id|view|挿入および変更された行の id です。|  
-|USER_TABLE$old|view|行の削除と上書きの簡略化された表現。|  
+|USER_TABLE|ビュー|テーブルの変更の簡略化された表現。|  
+|USER_TABLE$new|ビュー|行の挿入と上書きの簡略化された表現。|  
+|USER_TABLE$new_id|ビュー|挿入および変更された行の id です。|  
+|USER_TABLE$old|ビュー|行の削除と上書きの簡略化された表現。|  
   
 ### <a name="test-object-calls"></a>オブジェクトの呼び出しをテストします。  
 この手順では、SSMA テスト担当者は、テスト用に選択した各オブジェクトを呼び出し、結果を比較しますをレポートが表示されます。  
@@ -80,7 +80,7 @@ SSMA のテスト担当者がで作成された補助オブジェクトをクリ
 ## <a name="next-step"></a>次の手順  
 [テスト_ケースのレポートを表示する&#40;OracleToSQL&#41;](../../ssma/oracle/viewing-test-case-reports-oracletosql.md)  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
 [選択し、テストするオブジェクトを構成する&#40;OracleToSQL&#41;](../../ssma/oracle/selecting-and-configuring-objects-to-test-oracletosql.md)  
 [影響を受けるオブジェクトの選択と構成&#40;OracleToSQL&#41;](../../ssma/oracle/selecting-and-configuring-affected-objects-oracletosql.md)  
 [移行されたデータベース オブジェクトのテスト&#40;OracleToSQL&#41;](../../ssma/oracle/testing-migrated-database-objects-oracletosql.md)  

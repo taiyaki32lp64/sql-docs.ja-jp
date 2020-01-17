@@ -14,16 +14,16 @@ helpviewer_keywords:
 ms.assetid: 39b92198-c3f6-4f25-8560-095848ad652d
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 9646f61d6cb8d9a277f08711dc8326f34064c5ad
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
+ms.openlocfilehash: 89f992afc1a419f5d2fa5aa172d9e5e930a8a21b
+ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54124602"
+ms.lasthandoff: 08/03/2019
+ms.locfileid: "68769680"
 ---
 # <a name="replication-monitor"></a>レプリケーション モニター
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
   ここでは、レプリケーション モニターに関する情報を紹介します。 モニターに表示されるページとダイアログ ボックスは、レプリケーションの種類と、監視の対象となる [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のバージョンに応じて変わります。  
   
 -   [レプリケーション モニター、メイン ページ](../../relational-databases/replication/replication-monitor-main-page.md)  

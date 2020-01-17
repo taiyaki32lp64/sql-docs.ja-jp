@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: e84a14b1-3c2a-4f7d-a966-9e08a93948df
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 808c63575b93f9e4fa3b6459d2111637021218c1
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ef68a36f64fbaf72f18af9fba6f2e2781422574c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47759857"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67925857"
 ---
 # <a name="command-object-overview"></a>Command オブジェクトの概要
 **コマンド**オブジェクトを次を行うことができます。  

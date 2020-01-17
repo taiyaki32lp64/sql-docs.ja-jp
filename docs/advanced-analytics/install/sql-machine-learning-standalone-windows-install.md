@@ -1,53 +1,58 @@
 ---
-title: 'R Server または SQL Server のセットアップ: SQL Server Machine Learning を使用して Machine Learning Server (スタンドアロンを) インストールします。'
-description: RevoScaleR、revoscalepy、MicrosoftML、およびその他のパッケージを使用して、R と Python の開発インスタンス非対応のスタンドアロンの machine learning server をセットアップします。
+title: Machine Learning Server のインストール (スタンドアロン)
+description: RevoScaleR、revoscalepy、MicrosoftML、およびその他のパッケージを使用した R および Python 開発用に、インスタンス対応でないスタンドアロンの機械学習サーバーをセットアップします。
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 08/28/2018
+ms.date: 11/04/2019
 ms.topic: conceptual
-author: HeidiSteen
-ms.author: heidist
-manager: cgronlun
+author: dphansen
+ms.author: davidph
+ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: a00a91564cff37669f92cdfb4cba04fb3ada26fd
-ms.sourcegitcommit: 0bb306da5374d726b1e681cd4b5459cb50d4a87a
-ms.translationtype: MT
+ms.openlocfilehash: 02df024801dad815b640f4ef4222a0c8face485b
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2018
-ms.locfileid: "53732059"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73727641"
 ---
-# <a name="install-machine-learning-server-standalone-or-r-server-standalone-using-sql-server-setup"></a>Machine Learning Server (スタンドアロン) または SQL Server セットアップを使用して R Server (スタンドアロンを) インストールします。
+# <a name="install-machine-learning-server-standalone-or-r-server-standalone-using-sql-server-setup"></a>SQL Server セットアップを使用して Machine Learning Server (スタンドアロン) または R Server (スタンドアロン) をインストールする
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-SQL Server セットアップが含まれています、**共有機能**インスタンスに対応していない、インストールするためのオプション SQL Server 外で実行されるスタンドアロン machine learning server。 SQL Server 2016 では、この機能は呼**R Server (スタンドアロン)** します。 SQL Server 2017 で呼び出されます**Machine Learning Server (スタンドアロン)** R と Python が含まれています。 
+::: moniker range=">=sql-server-2017||=sqlallproducts-allversions"
+SQL Server セットアップには、SQL Server の外部で実行される、インスタンス対応でないスタンドアロンの機械学習サーバーをインストールするための**共有機能**オプションが含まれています。 これは **Machine Learning Server (スタンドアロン)** と呼ばれ、R と Python が含まれています。 
+::: moniker-end
+::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
+SQL Server セットアップには、SQL Server の外部で実行される、インスタンス対応でないスタンドアロンの機械学習サーバーをインストールするための**共有機能**オプションが含まれています。 SQL Server 2016 では、この機能は **R Server (スタンドアロン)** と呼ばれます。  
+::: moniker-end
 
-SQL Server セットアップによってインストールは、スタンドアロン サーバーは機能的には、SQL のブランド化されていないバージョンの[Microsoft Machine Learning Server](https://docs.microsoft.com/machine-learning-server/what-is-machine-learning-server)ケースやシナリオなどを使用して、同じサポートします。
+SQL Server セットアップによってインストールされるスタンドアロン サーバーは、[Microsoft Machine Learning Server](https://docs.microsoft.com/machine-learning-server/what-is-machine-learning-server) の非 SQL ブランド バージョンと機能的に同等であり、次のような同じユース ケースとシナリオがサポートされています。
 
-+ リモート実行、同じコンソールで、ローカルおよびリモート セッション間の切り替え
-+ Web ノードとコンピューティング ノードの運用化
-+ Web サービスの配置: R と Python スクリプトを web サービスにパッケージ化する機能
-+ R と Python の関数ライブラリの完全なコレクション
++ リモート実行、同じコンソールでのローカル セッションとリモート セッションの切り替え
++ Web ノードとコンピューティング ノードを使用した運用可能化
++ Web サービスの配置: R および Python スクリプトを Web サービスにパッケージ化する機能
++ R および Python 関数ライブラリの完全なコレクション
 
-SQL Server から切り離されて独立したサーバーと、R と Python 環境が構成された、セキュリティ保護、および基になるオペレーティング システムと SQL サーバーではなく、スタンドアロン サーバーで提供されるツールを使用してアクセスします。
+SQL Server から切り離された独立したサーバーとしての R と Python の環境は、SQL Server ではなく、スタンドアロン サーバー上に用意された基盤のオペレーティング システムとツールを使用して構成、セキュリティ保護、およびアクセスされます。
 
-SQL Server の補助としてスタンドアロン サーバーが高パフォーマンスの機械学習のサポートされているデータ プラットフォームの完全な範囲に、リモート計算コンテキストを使用できるソリューションを開発する必要がある場合に便利です。 Spark クラスターで、または別の SQL Server インスタンスで、リモートの Machine Learning Server にローカル サーバーから実行を切り替えることができます。
+スタンドアロン サーバーは、SQL Server を補完するものとして、サポートされているすべてのデータ プラットフォームに対してリモート コンピューティング コンテキストを使用できる、ハイ パフォーマンスの機械学習ソリューションを開発する必要がある場合に役立ちます。 ローカル サーバーから、Spark クラスター上または別の SQL Server インスタンス上のリモートの機械学習サーバーに実行をシフトできます。
 
 <a name="bkmk_prereqs"> </a>
 
 ## <a name="pre-install-checklist"></a>インストール前のチェックリスト
 
-SQL Server 2016 R Server (スタンドアロン) または Microsoft R Server などの以前のバージョンをインストールする場合は、続行する前に、既存のインストールをアンインストールします。
+SQL Server 2016 R Server (スタンドアロン) や Microsoft R Server などの以前のバージョンをインストール済みである場合は、続行する前に既存のインストールをアンインストールしてください。
 
-一般的な規則としてをスタンドアロン サーバーとデータベース エンジン インスタンスに対応したインストールとして相互に排他的リソースの競合を回避するために扱うことが禁止その両方をインストールする対象がない場合、十分なリソースがある場合は、お勧めの同じ物理コンピューター。
+一般的なルールとして、スタンドアロン サーバーのインストールとデータベース エンジンのインスタンス対応インストールは、リソースの競合を避けるために相互に排他的なものとして扱うことをお勧めしますが、十分なリソースがある場合は、同じ物理コンピューター上に両方をインストールすることは禁止されていません。
 
-コンピューターのスタンドアロン サーバーがあることができますのみ: SQL Server 2017 Machine Learning Server または SQL Server 2016 R Server (スタンドアロン) のいずれか。 新しいものを追加する前に 1 つのバージョンをアンインストールしてください。
+そのコンピューターには、SQL Server Machine Learning Server (スタンドアロン) または SQL Server R Server (スタンドアロン) のいずれかのスタンドアロン サーバーを 1 つだけセットアップできます。 必ず 1 つのバージョンをアンインストールしてから、新しいバージョンを追加してください。
 
 ::: moniker range="=sql-server-2016"
 <a name="bkmk_ga_instalpatch"></a> 
 
  ###  <a name="install-patch-requirement"></a>インストールのパッチ要件 
 
-SQL server 2016 ののみ。SQL Server の前提条件としてインストールされる特定のバージョンの Microsoft VC++ 2013 ランタイム バイナリに問題が見つかりました。 VC ランタイム バイナリに対するこの更新プログラムをインストールしないと、特定のシナリオにおいて、SQL Server で安定性の問題が発生する可能性があります。 SQL Server をインストールする前に、「[SQL Server リリース ノート](../../sql-server/sql-server-2016-release-notes.md#bkmk_ga_instalpatch)」にある手順に従って、ご使用のコンピューターに VC ランタイム バイナリのパッチが必要かどうかを確認してください。  
+SQL Server 2016 の場合のみ:SQL Server の前提条件としてインストールされる特定のバージョンの Microsoft VC++ 2013 ランタイム バイナリに問題が見つかりました。 VC ランタイム バイナリに対するこの更新プログラムをインストールしないと、特定のシナリオにおいて、SQL Server で安定性の問題が発生する可能性があります。 SQL Server をインストールする前に、「[SQL Server リリース ノート](../../sql-server/sql-server-2016-release-notes.md#bkmk_ga_instalpatch)」にある手順に従って、ご使用のコンピューターに VC ランタイム バイナリのパッチが必要かどうかを確認してください。  
 ::: moniker-end
 
 ## <a name="get-the-installation-media"></a>インストール メディアを入手する
@@ -59,38 +64,50 @@ SQL server 2016 ののみ。SQL Server の前提条件としてインストー�
 
 ローカル インストールの場合は、セットアップを管理者として実行する必要があります。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] をリモート共有からインストールする場合は、そのリモート共有に対する読み取り権限と実行権限を持つドメイン アカウントを使用する必要があります。
 
-1. インストール ウィザードを起動します。
+1. インストール ウィザードを開始します。
 
-2. をクリックして、**インストール**タブをクリックし、選択**Machine Learning Server (スタンドアロン) の新規インストール**します。
+2. **[インストール]** タブをクリックし、 **[Machine Learning Server (スタンドアロン) の新規インストール]** を選択します。
     
-     ![Machine Learning Server スタンドアロン インストール](media/2017setup-installation-page-mlsvr.png "Machine Learning Server スタンドアロンのインストールを開始")
+   ::: moniker-end
+   ::: moniker range="=sql-server-2017||=sqlallproducts-allversions"
+   ![Machine Learning Server スタンドアロンのインストール](media/2017setup-installation-page-mlsvr.png "Machine Learning Server スタンドアロンのインストールを開始する")
+   ::: moniker-end
+   ::: moniker range="=sql-server-ver15||=sqlallproducts-allversions"
+   ![Machine Learning Server スタンドアロンのインストール](media/2019setup-installation-page-mlsvr.png "Machine Learning Server スタンドアロンのインストールを開始する")
+   ::: moniker-end
+   ::: moniker range=">=sql-server-2017||=sqlallproducts-allversions"
 
-3. ルールのチェックが完了した後は、SQL Server のライセンス条項に同意し、新しいインストールを選択します。
+3. ルール チェックが完了したら、SQL Server ライセンス条項に同意し、新規インストールを選択します。
 
-4. **機能の選択**ページで、次のオプションは既に選択されている必要があります。
+4. **[機能の選択]** ページで、次のオプションが既に選択されています。
 
-    - Microsoft Machine Learning Server (スタンドアロン)
+    - **Microsoft Machine Learning Server (スタンドアロン)**
 
-    - R と Python 既定で選択します。 いずれかの言語の選択を解除することができますが、少なくとも 1 つのサポートされている言語をインストールすることをお勧めします。
+    - **R** と **Python** の両方が既定で選択されています。 どちらの言語も選択解除できますが、サポートされている言語の少なくとも 1 つをインストールすることをお勧めします。
 
-     ![R または Python の機能の選択](media/2017setup-features-page-mlsvr-rpy.png "Machine Learning Server スタンドアロンのインストールを開始")
+   ::: moniker-end
+   ::: moniker range="=sql-server-2017||=sqlallproducts-allversions"
+   ![R または Python の機能の選択](media/2017setup-features-page-mlsvr-rpy.png "Machine Learning Server スタンドアロンのインストールを開始する")
+   ::: moniker-end
+   ::: moniker range="=sql-server-ver15||=sqlallproducts-allversions"
+   ![R または Python の機能の選択](media/2019setup-features-page-mlsvr-rpy.png "Machine Learning Server スタンドアロンのインストールを開始する")
+   ::: moniker-end
+   ::: moniker range=">=sql-server-2017||=sqlallproducts-allversions"
     
-    その他のオプションはすべて無視します。 
+   その他のオプションはすべて無視します。 
     
-    > [!NOTE]
-    > インストールしないように、**共有機能**コンピューターで既に Machine Learning サービスが SQL Server データベース内分析用にインストールされたかどうか。 これには、重複するライブラリが作成されます。
-    > 
-    > また、他のデータベース エンジン サービスで使用されるメモリと競合にならないように SQL Server で、SQL Server で実行されている R または Python スクリプトの管理はスタンドアロンの machine learning server、このような制約がないと他のデータベース操作に干渉することができます. 最後に、運用化のよく使用されている RDP セッションを介したリモート アクセスはデータベース管理者によって通常ブロックされます。
-    > 
-    > これらの理由から、一般的な推奨 SQL Server Machine Learning サービスから別のコンピューターには、Machine Learning Server (スタンドアロン) をインストールすることです。
+   > [!NOTE]
+   > コンピューターに SQL Server データベース内分析用の Machine Learning Services が既にインストールされている場合、**共有機能**のインストールは行わないようにしてください。 これを行うと、重複するライブラリが作成されます。
+   > 
+   > また、SQL Server で実行される R または Python スクリプトは、他のデータベース エンジン サービスで使用されるメモリと競合しないように SQL Server によって管理されますが、スタンドアロンの機械学習サーバーにはそのような制約がないため、他のデータベース操作の妨げになる可能性があります。 最後に、RDP セッション経由のリモート アクセス (運用可能化によく使用される) は、通常、データベース管理者によってブロックされます。
+   > 
+   > このような理由から、通常は SQL Server Machine Learning Services とは別のコンピューターに Machine Learning Server (スタンドアロン) をインストールすることをお勧めします。
 
-5.  ダウンロードとインストール ベース言語のディストリビューションに関するライセンス条項に同意します。 **[同意する]** ボタンが使用できない状態になっている場合は、**[次へ]** をクリックします。 
+5. 基本言語ディストリビューションのダウンロードとインストールに関するライセンス条項に同意します。 **[同意する]** ボタンが使用できない状態になっている場合は、 **[次へ]** をクリックします。 
 
-     ![Python の使用許諾契約書](media/2017setup-python-license.png "Python の使用許諾契約書")
+6. **[インストールの準備完了]** ページで、選択内容を確認し、 **[インストール]** をクリックします。
 
-6.  **[インストールの準備完了]** ページで、選択内容を確認し、**[インストール]** をクリックします。
-
-インストールが完了したらを参照してください。 [for SQL Server R Services のカスタム レポート](../r/monitor-r-services-using-custom-reports-in-management-studio.md)エラーまたは警告については、次を参照してください。[アップグレードとインストールに関する FAQ - Machine Learning サービス](../r/upgrade-and-installation-faq-sql-server-r-services.md)します。
+インストールが完了したら、[SQL Server R Services のカスタム レポート](../r/monitor-r-services-using-custom-reports-in-management-studio.md)に関するページを参照してください。エラーと警告については、[アップグレードとインストールに関する FAQ - Machine Learning Services](../r/upgrade-and-installation-faq-sql-server-r-services.md) のページを参照してください。
 ::: moniker-end
 
 ::: moniker range="=sql-server-2016"
@@ -98,46 +115,46 @@ SQL server 2016 ののみ。SQL Server の前提条件としてインストー�
 
 ローカル インストールの場合は、セットアップを管理者として実行する必要があります。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] をリモート共有からインストールする場合は、そのリモート共有に対する読み取り権限と実行権限を持つドメイン アカウントを使用する必要があります。
 
-1. インストール ウィザードを起動します。
+1. インストール ウィザードを開始します。
 
-2. **インストール**] タブで [ **R Server (スタンドアロン) の新規インストール**します。
+2. **[インストール]** タブで、 **[新規 R サーバー (スタンドアロン) のインストール]** をクリックします。
     
-     ![スタンドアロンの R Server のセットアップを開始](media/2016-setup-installation-rsvr.png "スタンドアロンの R Server のセットアップを開始")
+   ![R Server スタンドアロンのセットアップを開始する](media/2016-setup-installation-rsvr.png "R Server スタンドアロンのセットアップを開始する")
 
-3. ルールのチェックが完了した後は、SQL Server のライセンス条項に同意し、新しいインストールを選択します。
+3. ルール チェックが完了したら、SQL Server ライセンス条項に同意し、新規インストールを選択します。
 
-4.  **[機能の選択]** ページで、次のオプションが既に選択されています。
+4. **[機能の選択]** ページで、次のオプションが既に選択されています。
     
-    **R Server (スタンドアロン)**  
+   - **R Server (スタンドアロン)**  
     
-    ![機能の選択を R Server のスタンドアロン](media/2016setup-rserver-features.png "機能のスタンドアロンの R Server の選択")
+   ![R Server スタンドアロンの機能の選択](media/2016setup-rserver-features.png "R Server スタンドアロンの機能の選択")
     
-    その他のすべてのオプションは無視できます。 
+   その他のすべてのオプションは無視できます。 
     
-    > [!NOTE]
-    > インストールしないように、**共有機能**SQL Server データベース内分析に R Services が既にインストールされているコンピューターでセットアップを実行している場合。 これには、重複するライブラリが作成されます。
-    > 
-    > 他のデータベース エンジン サービスで使用されるメモリと競合にならないように SQL Server で、SQL Server で実行されている R スクリプトの管理は、スタンドアロン R Server は、このような制約がないので、他のデータベース操作に干渉することができます。
-    > 
-    > 一般的な推奨 R Server (スタンドアロン) をインストールする別のコンピューターから SQL Server R Services (In-database)。
+   > [!NOTE]
+   > SQL Server のデータベース内分析用に R Services が既にインストールされているコンピューター上でセットアップを実行している場合、**共有機能**のインストールは行わないようにしてください。 これを行うと、重複するライブラリが作成されます。
+   > 
+   > SQL Server で実行される R スクリプトは、他のデータベース エンジン サービスで使用されるメモリと競合しないように SQL Server によって管理されますが、スタンドアロンの R Server にはそのような制約がないため、他のデータベース操作の妨げになる可能性があります。
+   > 
+   > 通常、R Server (スタンドアロン) は、SQL Server R Services (データベース内) とは別のコンピューターにインストールすることをお勧めします。
 
-5.  ダウンロードとインストール ベース言語のディストリビューションに関するライセンス条項に同意します。 **[同意する]** ボタンが使用できない状態になっている場合は、**[次へ]** をクリックします。 
+5. 基本言語ディストリビューションのダウンロードとインストールに関するライセンス条項に同意します。 **[同意する]** ボタンが使用できない状態になっている場合は、 **[次へ]** をクリックします。 
 
-6.  **[インストールの準備完了]** ページで、選択内容を確認し、**[インストール]** をクリックします。
+6. **[インストールの準備完了]** ページで、選択内容を確認し、 **[インストール]** をクリックします。
 
-インストールが完了したらを参照してください。 [for SQL Server R Services のカスタム レポート](../r/monitor-r-services-using-custom-reports-in-management-studio.md)エラーまたは警告については、次を参照してください。[アップグレードとインストールに関する FAQ - Machine Learning サービス](../r/upgrade-and-installation-faq-sql-server-r-services.md)します。
+インストールが完了したら、[SQL Server R Services のカスタム レポート](../r/monitor-r-services-using-custom-reports-in-management-studio.md)に関するページを参照してください。エラーと警告については、[アップグレードとインストールに関する FAQ - Machine Learning Services](../r/upgrade-and-installation-faq-sql-server-r-services.md) のページを参照してください。
 ::: moniker-end
 
-## <a name="set-environment-variables"></a>環境変数な設定
+## <a name="set-environment-variables"></a>環境変数の設定
 
-R の機能統合のみに設定する必要があります、 **MKL_CBWR**環境変数を[出力を一貫性のある](https://software.intel.com/articles/introduction-to-the-conditional-numerical-reproducibility-cnr)Intel 数値演算ライブラリ (MKL) 計算から。
+R 機能の統合のみの場合、**MKL_CBWR** 環境変数を設定して、Intel Math Kernel Library (MKL) 計算からの[一貫した出力を保証](https://software.intel.com/articles/introduction-to-the-conditional-numerical-reproducibility-cnr)する必要があります。
 
-1. コントロール パネルで、次のようにクリックします**システムとセキュリティ** > **システム** > **システムの詳細設定** >   **。環境変数**します。
+1. コントロール パネルで、 **[システムとセキュリティ]**  >  **[システム]**  >  **[システムの詳細設定]**  >  **[環境変数]** の順にクリックします。
 
-2. 新しいユーザーまたはシステム変数を作成します。 
+2. 新しいユーザー変数またはシステム変数を作成します。 
 
-  + セットを変数名を指定 `MKL_CBWR`
-  + 変数の値に設定します。 `AUTO`
+  + 変数名を `MKL_CBWR` に設定する
+  + 変数値を `AUTO` に設定する
 
 3. サーバーを再起動します。
 
@@ -145,55 +162,59 @@ R の機能統合のみに設定する必要があります、 **MKL_CBWR**環�
 
 ### <a name="default-installation-folders"></a>既定のインストール フォルダー
 
-R と Python の開発では、同じコンピューター上の複数のバージョンが一般的なります。 SQL Server セットアップによってインストール、ベースの配布は、セットアップに使用した SQL Server のバージョンに関連付けられているフォルダーにインストールされます。
+R と Python の開発では、同じコンピューター上に複数のバージョンがあることが一般的です。 SQL Server セットアップによってインストールされるように、基本ディストリビューションは、セットアップに使用した SQL Server バージョンに関連付けられているフォルダーにインストールされます。
 
-次の表では、Microsoft インストーラーによって作成された R および Python のディストリビューションのパスを示します。 完全を期すため、テーブルには、Microsoft Machine Learning Server のスタンドアロンのインストーラーと同様に SQL Server セットアップによって生成されたパスが含まれます。
+次の表は、Microsoft インストーラーによって作成される R および Python ディストリビューションのパスを示しています。 完全を期すために、この表には、SQL Server セットアップと Microsoft Machine Learning Server のスタンドアロン インストーラーによって生成されるパスが含まれています。
 
-|バージョン| インストール方法 | 既定のフォルダー|
+|Version| インストール方法 | 既定のフォルダー|
 |----|----|----|
+|SQL Server 2019 Machine Learning Server (スタンドアロン) |  SQL Server 2019 セットアップ ウィザード |`C:\Program Files\Microsoft SQL Server\150\R_SERVER` <br/>`C:\Program Files\Microsoft SQL Server\150\PYTHON_SERVER`|
 |SQL Server 2017 Machine Learning Server (スタンドアロン) |  SQL Server 2017 セットアップ ウィザード |`C:\Program Files\Microsoft SQL Server\140\R_SERVER` <br/>`C:\Program Files\Microsoft SQL Server\140\PYTHON_SERVER`|
 |Microsoft Machine Learning Server (スタンドアロン) |  Windows スタンドアロン インストーラー |`C:\Program Files\Microsoft\ML Server\R_SERVER`<br/>`C:\Program Files\Microsoft\ML Server\PYTHON_SERVER`|
-|SQL Server 2017 Machine Learning サービス (データベース) |R 言語のオプションを使用して、SQL Server 2017 セットアップ ウィザード|`C:\Program Files\Microsoft SQL Server\MSSQL14.<instance_name>\R_SERVICES`  <br/>`C:\Program Files\Microsoft SQL Server\MSSQL14.<instance_name>\PYTHON_SERVICES` |
+|SQL Server Machine Learning Services (データベース内) |R 言語オプションを含む SQL Server 2019 セットアップ ウィザード|`C:\Program Files\Microsoft SQL Server\MSSQL15.<instance_name>\R_SERVICES`  <br/>`C:\Program Files\Microsoft SQL Server\MSSQL15.<instance_name>\PYTHON_SERVICES` |
+|SQL Server Machine Learning Services (データベース内) |R 言語オプションを含む SQL Server 2017 セットアップ ウィザード|`C:\Program Files\Microsoft SQL Server\MSSQL14.<instance_name>\R_SERVICES`  <br/>`C:\Program Files\Microsoft SQL Server\MSSQL14.<instance_name>\PYTHON_SERVICES` |
 |SQL Server 2016 R Server (スタンドアロン) |  SQL Server 2016 セットアップ ウィザード |`C:\Program Files\Microsoft SQL Server\130\R_SERVER`|
-|SQL Server 2016 R Services (In-database) |SQL Server 2016 セットアップ ウィザード|`C:\Program Files\Microsoft SQL Server\MSSQL13.<instance_name>\R_SERVICES`|
+|SQL Server 2016 R Services (データベース内) |SQL Server 2016 セットアップ ウィザード|`C:\Program Files\Microsoft SQL Server\MSSQL13.<instance_name>\R_SERVICES`|
 
 <a name="apply-cu"></a>
 
-## <a name="apply-updates"></a>更新プログラムを適用します。
+## <a name="apply-updates"></a>更新プログラムの適用
 
-データベース エンジンと machine learning のコンポーネントの両方に、最新の累積的な更新プログラムを適用することをお勧めします。 累積的更新プログラムは、セットアップ プログラムを通じてインストールされます。 
+最新の累積的な更新プログラムをデータベース エンジンと機械学習コンポーネントの両方に適用することをお勧めします。 累積的な更新プログラムは、セットアップ プログラムによってインストールされます。 
 
-インターネットに接続されたデバイスでは、自己解凍実行可能ファイルをダウンロードできます。 データベース エンジンの更新プログラムを自動的に適用することで既存の R と Python の機能の累積的更新プログラムを取得します。 
+インターネットに接続されたデバイスでは、自己解凍形式の実行可能ファイルをダウンロードできます。 データベース エンジンの更新プログラムを適用すると、既存の R および Python の機能の累積的な更新内容が自動的に取り込まれます。 
 
-切断されたサーバーは、追加の手順が必要です。 データベース エンジンの累積更新プログラムおよび machine learning 機能用の CAB ファイルを取得する必要があります。 すべてのファイルは、分離されたサーバーに転送し、手動で適用する必要があります。
+接続されていないサーバーでは、追加の手順が必要です。 データベース エンジンの累積的な更新プログラムと、機械学習機能の CAB ファイルを入手する必要があります。 すべてのファイルを分離されたサーバーに転送し、手動で適用する必要があります。
 
-1. ベースラインのインスタンスを起動します。 累積的更新プログラムは、既存のインストールにのみ適用できます。
+1. ベースライン インスタンスを使用して開始します。 累積的な更新プログラムは、既存のインストールのみに適用できます。
 
-  + SQL Server 2017 の最初のリリースからの machine Learning Server (スタンドアロン)
-  + 最初のリリースの SQL Server 2016、SQL Server 2016 SP 1、または SQL Server 2016 SP 2 からの R Server (スタンドアロン)
+  + SQL Server 2019 初回リリースの Machine Learning Server (スタンドアロン)
+  + SQL Server 2017 初回リリースの Machine Learning Server (スタンドアロン)
+  + SQL Server 2016 初回リリース、SQL Server 2016 SP 1、または SQL Server 2016 SP 2 の R Server (スタンドアロン)
 
-2. R または Python の開いているセッションを閉じ、システムで実行されているプロセスを停止します。
+2. 開いている R または Python セッションがあれば終了し、システムでまだ実行中のプロセスがあれば停止します。
 
-3. Web ノードと web サービスのデプロイ用のコンピューティング ノードとして実行する運用化を有効にした場合のバックアップ、 **AppSettings.json**念のためのファイル。 SQL Server 2017 CU13 またはこのファイルは、後で revises を適用するため、元のバージョンを保持するためにバックアップ コピーを作成する場合があります。
+3. Web サービスの配置用の Web ノードとコンピューティング ノードとして実行するために運用可能化を有効にした場合は、**AppSettings.json** ファイルを念のためにバックアップします。 SQL Server 2017 CU13 以降を適用すると、このファイルが改訂されるため、元のバージョンを保持するためにバックアップ コピーが必要になる場合があります。
 
-4. インターネット接続されているデバイスには、SQL Server のバージョンの累積更新プログラムのリンクをクリックします。
+4. インターネットに接続されているデバイスで、使用しているバージョンの SQL Server 用の累積更新プログラムのリンクをクリックします。
 
+  + SQL Server 2019 更新プログラム *(利用可能な更新プログラムはまだありません)*
   + [SQL Server 2017 更新プログラム](https://sqlserverupdates.com/sql-server-2017-updates/)
   + [SQL Server 2016 更新プログラム](https://sqlserverupdates.com/sql-server-2016-updates/)
 
-5. 最新の累積的な更新プログラムをダウンロードします。 実行可能ファイルになります。
+5. 最新の累積的な更新プログラムをダウンロードします。 それは実行可能ファイルです。
 
-6. インターネットに接続されたデバイスで、ライセンス条項に同意し、影響を受ける機能を確認し、完了するまでの進行状況の監視ウィザードでセットアップを実行する .exe をダブルクリックします。
+6. インターネットに接続されているデバイスで、.exe をダブルクリックしてセットアップを実行し、ウィザードの手順に従ってライセンス条項に同意し、影響を受ける機能を確認して、完了するまで進行状況を監視します。
 
-7. インターネット接続のないサーバー。
+7. インターネットに接続されていないサーバーの場合:
 
-   + R と Python の対応する CAB ファイルを取得します。 ダウンロード リンクは、次を参照してください。[インスタンス SQL Server データベース内分析に累積的更新プログラム用 CAB のダウンロード](sql-ml-cab-downloads.md)します。
+   + R および Python 用の対応する CAB ファイルを入手します。 ダウンロード リンクについては、「[SQL Server データベース内分析インスタンスの累積的な更新プログラムの CAB ダウンロード](sql-ml-cab-downloads.md)」を参照してください。
 
-   + すべてのファイル、メイン実行可能ファイルと、オフラインのコンピューター上のフォルダーに、CAB ファイルを転送します。
+   + すべてのファイル (メインの実行可能ファイルと CAB ファイル) をオフライン コンピューター上のフォルダーに転送します。
 
-   + セットアップを実行する .exe をダブルクリックします。 インターネット接続のないをサーバーに累積更新プログラムをインストールする場合は、R と Python の .cab ファイルの場所を選択するように求められます。
+   + .exe ファイルをダブルクリックしてセットアップを実行します。 インターネットに接続されていないサーバーに累積的な更新プログラムをインストールする場合は、R と Python の .cab ファイルの場所を選択するように求められます。
 
-8. Web ノードとコンピューティング ノードの運用化が有効にするサーバー上のインストール後の編集**AppSettings.json**、"MMLNativePath"のすぐ下の"MMLResourcePath"エントリを追加します。
+8. インストール後、Web ノードとコンピューティング ノードを使用した運用可能化を有効にしたサーバーで **AppSettings.json** を編集し、"MMLNativePath" のすぐ下に "MMLResourcePath" エントリを追加します。 例:
 
     ```json
     "ScorerParameters": {
@@ -202,24 +223,24 @@ R と Python の開発では、同じコンピューター上の複数のバー�
     }
     ```
 
-9. [管理者の CLI ユーティリティを実行して](https://docs.microsoft.com/machine-learning-server/operationalize/configure-admin-cli-launch)web を再起動し、コンピューティング ノード。 手順と構文は、次を参照してください。[モニター、開始、および web およびコンピューティング ノードを停止](https://docs.microsoft.com/machine-learning-server/operationalize/configure-admin-cli-stop-start)します。
+9. [管理 CLI ユーティリティを実行](https://docs.microsoft.com/machine-learning-server/operationalize/configure-admin-cli-launch)して、Web ノードとコンピューティング ノードを再起動します。 手順と構文については、「[Web ノードとコンピューティング ノードの監視、開始、停止](https://docs.microsoft.com/machine-learning-server/operationalize/configure-admin-cli-stop-start)」を参照してください。
 
 ## <a name="development-tools"></a>開発ツール
 
-開発 IDE はセットアップの一部としてインストールされていません。 開発環境を構成する方法の詳細については、次を参照してください。 [R tools セットアップ](../r/set-up-a-data-science-client.md)と[Python ツールのセットアップ](../python/setup-python-client-tools-sql.md)します。
+開発 IDE は、セットアップの段階でインストールされません。 開発環境の構成の詳細については、[R ツールのセットアップ](../r/set-up-a-data-science-client.md)に関するページと [Python ツールのセットアップ](../python/setup-python-client-tools-sql.md)に関するページを参照してください。
 
 ## <a name="next-steps"></a>次の手順
 
-R 開発者は、簡単な例で作業を開始し、SQL Server での R の動作の基本を学習します。 次の手順で、次のリンクを参照してください。
+R 開発者はいくつかの簡単な例を試して、SQL Server での R の動作方法の基本を確認できます。 次の手順については、以下のリンクをご覧ください。
 
-+ [チュートリアル:T-SQL での R を実行します。](../tutorials/rtsql-using-r-code-in-transact-sql-quickstart.md)
-+ [チュートリアル:R の開発者向けのデータベース内分析](../tutorials/sqldev-in-database-r-for-sql-developers.md)
++ [チュートリアル: T-SQL での R の実行](../tutorials/quickstart-r-create-script.md)
++ [チュートリアル: R 開発者向けのデータベース内分析](../tutorials/sqldev-in-database-r-for-sql-developers.md)
 
 ::: moniker range=">=sql-server-2017||=sqlallproducts-allversions"
-Python の開発者は、これらのチュートリアルに従って、SQL Server で Python を使用する方法を学ぶことができます。
+Python 開発者は、次のチュートリアルに従って、SQL Server で Python を使用する方法を学習できます。
 
-+ [チュートリアル:T-SQL での Python を実行します。](../tutorials/run-python-using-t-sql.md)
-+ [チュートリアル:Python 開発者向けのデータベース内分析](../tutorials/sqldev-in-database-python-for-sql-developers.md)
++ [チュートリアル: T-SQL での Python の実行](../tutorials/run-python-using-t-sql.md)
++ [チュートリアル: Python 開発者向けのデータベース内分析](../tutorials/sqldev-in-database-python-for-sql-developers.md)
 ::: moniker-end
 
-実際のシナリオに基づく機械学習の例を表示するを参照してください。 [Machine learning のチュートリアル](../tutorials/machine-learning-services-tutorials.md)します。
+実際のシナリオに基づいた機械学習の例については、[機械学習のチュートリアル](../tutorials/machine-learning-services-tutorials.md)を参照してください。

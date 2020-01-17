@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: 39d6461f-0d24-4b7d-a723-843ade15ad73
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: dc655740701822d8c6ff9595327b906ee9a67026
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: f15b5e8eb6eb7c63ab771030f0c31e8c9ff92724
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47834780"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68135683"
 ---
 # <a name="applications"></a>[アプリケーション]
 *アプリケーション*はデータにアクセスする、ODBC API を呼び出すプログラムです。 さまざまな種類のアプリケーションのほとんどが、このガイドで説明する例として使用されている 3 つのカテゴリに分類されます。  

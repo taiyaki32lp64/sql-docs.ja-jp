@@ -1,5 +1,5 @@
 ---
-title: Wide World Importers - SQL のサンプル データベース |Microsoft Docs
+title: Wide World のインポーター-SQL のサンプルデータベース |Microsoft Docs
 ms.prod: sql
 ms.prod_service: sql
 ms.technology: samples
@@ -9,60 +9,59 @@ ms.reviewer: ''
 ms.topic: conceptual
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: db3d3720291ee80c3e5889ff80ed23edaea3df34
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: 872892d307883bb7df31b08de701b2030d9aeb1f
+ms.sourcegitcommit: bcc3b2c7474297aba17b7a63b17c103febdd0af9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52402187"
+ms.lasthandoff: 08/05/2019
+ms.locfileid: "68794608"
 ---
-# <a name="wide-world-importers-sample-databases-for-microsoft-sql"></a>Microsoft SQL の wide World Importers のサンプル データベース
+# <a name="wide-world-importers-sample-databases-for-microsoft-sql"></a>Microsoft SQL 用の大規模なインポーターのサンプルデータベース
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-これは、架空の会社の Wide World importers 社と SQL Server と Azure SQL Database の WideWorldImporters サンプル データベースに送られるワークフローの概要です。  
+これは、架空の会社全体のインポーターと、SQL Server および Azure SQL Database 用の WideWorldImporters サンプルデータベースで対処されているワークフローの概要です。  
 
-Wide World importers 社 (WWI) とは、卸売り新奇商品インポーターと San Francisco ベイ領域から運用をディストリビューターです。
+Wide World のインポーター (WWI) は、サンフランシスコベイ領域からの卸売分野商品インポーターおよびディストリビューターです。
 
-WWI の顧客、卸売業者の個人に再販企業ほとんどの場合があります。 WWI 顧客に販売小売などの専門的なストアでは、スーパー マーケットでは、米国ストア、観光引き寄せる力ショップ、および一部のユーザーを計算します。 WWI も、WWI の代わりに製品を推進しているエージェントのネットワーク経由で他の卸売を販売しています。 米国の州ベース WWI の顧客のすべての現在は、会社がその他の国に拡張するためにプッシュしようとします。
+WWI の顧客は、卸売業者として、ほとんどの場合、個人を再販する企業です。 WWI は、専門ストア、supermarkets、コンピューティングストア、tourist 引力ショップ、および一部の個人を含む米国全体の小売顧客に販売します。 また、WWI は、WWI の代理で製品を宣伝するエージェントのネットワークを介して、他の卸売に販売しています。 WWI のすべての顧客は現在米国に基づいていますが、会社は他の国に拡張するためにプッシュするつもりです。
 
-WWI など新奇と玩具メーカー、およびその他の新奇卸売業者からの商品を購入します。 WWI ウェアハウスし、サプライヤーから並べ替え商品は、顧客の注文を満たすために必要に応じて、ストックします。 膨大な量の資料、パッケージ化の購入や利便性のため、顧客を販売するこれら小さい数にもします。
+WWI は、分野、おもちゃの製造元、その他の分野卸売などのサプライヤーから商品を購入します。 顧客の注文を満たすためするために、WWI warehouse に商品を保管し、必要に応じてサプライヤーから注文を受けます。 また、大量の梱包材を購入し、お客様の利便性を高めるために、これらの製品をより小さな数量で販売します。
 
-最近 WWI は、活用 novelties chilli などのさまざまなチョコレートの販売を開始しました。  会社以前がありませんでした chilled 項目を処理します。 ここで、食品の処理の要件を満たすためには、その冷却装置ルームおよびを持つ chiller のセクションでは、トラックのいずれかで温度を監視する必要があります。
+最近では、chilli チョコレートなどのさまざまな WWI novelties の販売を開始しました。  以前は、会社は chilled の項目を処理する必要がありませんでした。 ここで、食品取り扱いの要件を満たすために、chiller 室の気温と、chiller セクションを持つトラックを監視する必要があります。
 
-## <a name="workflow-for-warehouse-stock-items"></a>倉庫の品目の在庫のワークフロー
+## <a name="workflow-for-warehouse-stock-items"></a>倉庫の在庫品目のワークフロー
 
-品目の在庫し、分散の方法の一般的なフローは次のとおりです。
+項目の在庫と分散の一般的なフローは次のとおりです。
 - WWI は発注書を作成し、仕入先に送信します。
-- アイテムをサプライヤーに送信、WWI がそれらを受け取るし、倉庫の在庫にします。
-- WWI 顧客注文項目
-- WWI がウェアハウスの株式の項目を含む顧客の注文を入力し、仕入先から追加の在庫を注文するための十分な在庫がいないときにします。
-- 一部のお客様は、在庫がない項目を待機しません。 5 つの異なる注文と品目を在庫と 4 が利用可能な 4 つの項目と受注残残りの項目を受信します。 アイテムに個別の出荷で後で送信されるとします。
-- WWI 請求書に順序を変換することによって通常品目を在庫の顧客を請求します。
-- 在庫がないアイテムを注文する場合があります。 これらのアイテムは、取り寄せ注文中です。
-- WWI 品目の在庫を独自の配信 van またはその他のクーリエまたは運賃メソッドを使用して顧客に配信します。
-- お客様は、WWI に請求書をお支払い。
-- 定期的に、WWI は、注文書の品目のサプライヤーを支払います。 これは多くの場合、いずれかの時点、商品を受信した後です。
+- サプライヤーは、項目を送信し、WWI を受け取り、倉庫で在庫します。
+- 顧客が WWI から品目を注文する
+- WWI は倉庫の在庫品目に顧客の注文を入力します。在庫が十分でない場合は、サプライヤーから追加の在庫を注文します。
+- 在庫されていない項目を待機したくないお客様もいます。 5つの異なる在庫品目を注文し、4つの商品を使用できる場合は、4つの項目を受け取り、残りの項目を順番に受注します。 この項目は、後で別の出荷で送信されます。
+- WWI は、通常、注文を請求書に変換することによって、在庫品目の顧客を請求します。
+- 在庫されていない商品を注文する場合があります。 これらの項目は入荷待ちです。
+- WWI は、独自の配送 van を通じて、または他の couriers または運賃方法を使用して、顧客に商品を配信します。
+- お客様は請求書を WWI に支払います。
+- 定期的に、WWI は注文書にあった商品の仕入先を支払います。 これは、多くの場合、商品を受け取った後に発生します。
 
-## <a name="data-warehouse-and-analysis-workflow"></a>データ ウェアハウスと分析のワークフロー
+## <a name="data-warehouse-and-analysis-workflow"></a>データウェアハウスと分析のワークフロー
 
-WWI のチームでは、WideWorldImporters データベースから運用レポートを生成する SQL Server Reporting Services を使用して、それらのデータを分析を行い、戦略的なレポートを生成する必要がある必要があります。 チームは、データベース WideWorldImportersDW の次元のデータ モデルを作成しました。 このデータベースは、Integration Services パッケージによって設定されます。
+WWI のチームは、WideWorldImporters データベースから運用レポートを生成するために SQL Server Reporting Services を使用しますが、データに対して分析を実行し、戦略的なレポートを生成する必要もあります。 チームは、データベース WideWorldImportersDW にディメンションデータモデルを作成しました。 このデータベースには、Integration Services パッケージが設定されます。
 
-SQL Server Analysis Services を使用して、次元のデータ モデル内のデータから分析データ モデルを作成します。 SQL Server Reporting Services は、次元のデータ モデルから直接、分析、モデルからも、戦略的なレポートを生成するために使用します。 Power BI を使用して、同じデータからダッシュ ボードを作成します。 ダッシュ ボードは、web サイト、および携帯電話とタブレットで使用されます。 *注: これらのデータ モデルとレポートはまだ使用可能です*
+SQL Server Analysis Services は、ディメンションデータモデルのデータから分析データモデルを作成するために使用されます。 SQL Server Reporting Services は、ディメンションデータモデルから直接、または分析モデルから、戦略的レポートを生成するために使用されます。 Power BI は、同じデータからダッシュボードを作成するために使用されます。 ダッシュボードは、web サイト、携帯電話、タブレットで使用されます。 *注: これらのデータモデルとレポートはまだ使用できません*
 
 ## <a name="additional-workflows"></a>追加のワークフロー
 
-これらは、追加のワークフローです。
-- WWI 問題貸方票ときに、顧客は、何らかの理由で、または商品が障害のある、good を受信しません。 これらは、請求書が負の値として扱われます。
-- WWI は定期的に在庫の数量がシステムに利用可能な表示が正確であることを確認する品目の在庫の手持ち数量をカウントします。 (これを行うプロセスが呼び出されます、stocktake)。
-- コールド部屋の温度。 Perishable 商品は、冷蔵ルームに格納されます。 これらの部屋からのセンサー データは、データベースの監視と分析のために取り込まれます。
-- 車両の場所の追跡。 WWI の商品を配送車両には、場所を追跡するセンサーが含まれます。 この場所は、もう一度の監視と分析をさらに、データベースに取り込まれます。
+これらは追加のワークフローです。
+- WWI は、何らかの理由でお客様が適切な情報を得られない場合、または商品に欠陥がある場合にクレジットメモを発行します。 これらは負の請求書として扱われます。
+- WWI は、在庫品目の手持ち数量を定期的にカウントし、システムで使用可能な在庫数量が正確であることを確認します。 (これを行うプロセスは、stocktake と呼ばれます)。
+- コールドルーム温度。 Perishable 商品は refrigerated ルームに格納されています。 これらのルームからのセンサーデータは、監視と分析を目的としてデータベースに取り込まれたされます。
+- 車両位置の追跡。 WWI の商品を輸送する車両には、場所を追跡するセンサーが含まれています。 この場所は、監視とその他の分析のためにデータベースに再び取り込まれたされます。
 
 ## <a name="fiscal-year"></a>会計年度
 
-会社は、11 月 1 日に開始される事業年度で動作します。
+この会社は、11月1日に開始する財務年度を操作します。
 
-## <a name="terms-of-use"></a>使用条件
+## <a name="terms-of-use"></a>利用規約
 
-ここで、サンプル データベースとサンプル コードのライセンスは説明: [license.txt](https://github.com/Microsoft/sql-server-samples/blob/master/license.txt)
+サンプルデータベースとサンプルコードのライセンスについては、「 [license.txt](https://github.com/Microsoft/sql-server-samples/blob/master/license.txt) 」を参照してください。
 
-サンプル データベースには、data.gov と自然 EarthData から読み込まれているパブリック データが含まれています。 使用条件は、ここでは。 [https://www.naturalearthdata.com/about/terms-of-use/](https://www.naturalearthdata.com/about/terms-of-use/)
+サンプルデータベースには、data.gov および自然 EarthData から読み込まれたパブリックデータが含まれています。 使用条件は次のとおりです。[https://www.naturalearthdata.com/about/terms-of-use/](https://www.naturalearthdata.com/about/terms-of-use/)

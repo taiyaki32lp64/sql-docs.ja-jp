@@ -14,17 +14,20 @@ helpviewer_keywords:
 - copying packages
 - regenerating package GUID
 ms.assetid: 08f723bf-15b5-44bd-9a46-04e8781bfbfb
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: daaf8c7fcd44ac814bceeaba61a6d152e7051d99
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 18252987543528f41b4c0f64c2954138b7a5d13c
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51637499"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71282492"
 ---
 # <a name="reuse-of-package-objects"></a>パッケージ オブジェクトの再利用
+
+[!INCLUDE[ssis-appliesto](../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   多くの場合、パッケージには、再利用できるような機能が含まれています。 たとえば、一連のタスクを作成した場合、それらのアイテムを合わせてグループとして再利用したり、別の [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] プロジェクトで作成した接続マネージャーのように、1 つのアイテムを再利用したりすることができます。  
   
 ## <a name="copy-and-paste"></a>コピーと貼り付け  

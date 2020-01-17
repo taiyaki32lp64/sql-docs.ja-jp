@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: bd11fd50-f092-43a0-a6bc-c63e70cff8da
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 7d90820c5fdcbc2376be732c409c265536ce2498
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: bda879ceba5c6f1193ecdfa09995e851c2bcd6e0
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47785524"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67973149"
 ---
 # <a name="setreadonly-method-sqlserverconnection"></a>setReadOnly メソッド (SQLServerConnection)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -47,7 +46,7 @@ public void setReadOnly(boolean readOnly)
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- この setReadOnly メソッドは、java.sql.Connection インターフェイスの setReadOnly メソッドによって指定されます。  
+ この setReadOnly メソッドは、java. .sql. 接続インターフェイスの setReadOnly メソッドによって指定されます。  
   
 ## <a name="see-also"></a>参照  
  [SQLServerConnection のメンバー](../../../connect/jdbc/reference/sqlserverconnection-members.md)   

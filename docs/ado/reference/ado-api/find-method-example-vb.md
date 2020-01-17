@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: bbf27dcc-9815-4e2f-8ea8-b8c9fe6dedd6
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: e7e2d3c0c306cf9004f42b7d58beb160e8180516
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 6513daf2a2d57b0ed2b9d68f6232112d238de037
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47615620"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67932624"
 ---
 # <a name="find-method-example-vb"></a>Find メソッドの例 (VB)
 この例では、 [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md)オブジェクトの[検索](../../../ado/reference/ado-api/find-method-ado.md)見つけてビジネス タイトルの数をカウントするメソッド、 ***Pubs***データベース。 例では、基になるプロバイダーが同様の機能をサポートしていませんを前提としています。  
@@ -100,6 +99,6 @@ End Sub
 'EndFindVB  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [Find メソッド (ADO)](../../../ado/reference/ado-api/find-method-ado.md)   
  [Recordset オブジェクト (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)

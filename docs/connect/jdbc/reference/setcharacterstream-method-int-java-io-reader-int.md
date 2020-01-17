@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: 139a5b74-8d7d-41cf-991a-a142349c58f6
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 06e959f6fa9144c62ef79d60c6264ac5445febd6
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 3002c3375f14eb4c33554c960c567e4a3d8526b0
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47652220"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67974777"
 ---
 # <a name="setcharacterstream-method-int-javaioreader-int"></a>setCharacterStream (int, java.io.Reader, int) メソッド
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -44,7 +43,7 @@ public final void setCharacterStream(int n,
   
  *reader*  
   
- リーダー オブジェクト。  
+ リーダーオブジェクト。  
   
  *length*  
   
@@ -54,7 +53,7 @@ public final void setCharacterStream(int n,
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- この setCharacterStream メソッドは、java.sql.PreparedStatement インターフェイスの setCharacterStream メソッドによって指定されます。  
+ この setCharacterStream メソッドは、java.sql.PreparedStatement インターフェイスの setCharacterStream メソッドで規定されています。  
   
  ストリームの長さが、*length* パラメーターで指定された長さと異なる場合は、行の更新または挿入時に JDBC ドライバーが例外をスローします。  
   

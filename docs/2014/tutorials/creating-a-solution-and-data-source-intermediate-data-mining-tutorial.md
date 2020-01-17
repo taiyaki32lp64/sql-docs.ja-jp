@@ -1,5 +1,5 @@
 ---
-title: ソリューションとデータ ソース (中級者向けデータ マイニング チュートリアル) の作成 |Microsoft Docs
+title: ソリューションとデータソースの作成 (中級者向けデータマイニングチュートリアル) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -10,19 +10,19 @@ ms.assetid: 0488b231-1045-4169-aabb-c1005d86ca30
 author: minewiskan
 ms.author: owend
 manager: kfile
-ms.openlocfilehash: 2f089f487586b6def3d2ddd4eecdbbde1532952b
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 21bedc825f5890e3eb6551818dc5dc10724d2bf8
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56020601"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68891438"
 ---
 # <a name="creating-a-solution-and-data-source-intermediate-data-mining-tutorial"></a>ソリューションとデータ ソースの作成 (中級者向けデータ マイニング チュートリアル)
   データ マイニングを使用するには、最初に [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] で **[Analysis Services 多次元およびデータ マイニング プロジェクト]** テンプレートを使用して、プロジェクトを作成する必要があります。 テンプレートを開くと、データ ソース、マイニング構造、マイニング モデル、さらにマイニング構造で多次元データが使用される場合はキューブまで、データ マイニングに必要なすべてのスキーマがデザイナーに読み込まれます。  
   
  プロジェクトを作成すると、ソリューションは配置されるまでローカル ファイルとして保存されます。 ソリューションを配置すると、プロジェクトのプロパティに指定された [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] サーバーが [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] によって検索され、プロジェクトと同じ名前の新しい [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] データベースが作成されます。 既定では、 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] は新しいプロジェクトに対して **localhost** インスタンスを使用します。 名前付きインスタンスを使用している場合、または既定のインスタンスに別の名前を指定した場合は、プロジェクトの配置データベース プロパティを、データ マイニング オブジェクトを作成する場所に変更する必要があります。  
   
- 詳細については[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]プロジェクトを参照してください[Analysis Services プロジェクトの作成&#40;SSDT&#41;](../analysis-services/multidimensional-models/create-an-analysis-services-project-ssdt.md)します。  
+ [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]プロジェクトの詳細については、「 [Create a &#40;Analysis Services&#41;Project SSDT](https://docs.microsoft.com/analysis-services/multidimensional-models/create-an-analysis-services-project-ssdt)」を参照してください。  
   
 ### <a name="to-create-a-new-analysis-services-project-for-this-tutorial"></a>このチュートリアル用の新しい Analysis Services プロジェクトを作成するには  
   
@@ -61,7 +61,7 @@ ms.locfileid: "56020601"
   
 #### <a name="to-create-a-data-source"></a>データ ソースを作成するには  
   
--   [データ ソースを作成する&#40;基本的なデータ マイニング チュートリアル&#41;](../../2014/tutorials/creating-a-data-source-basic-data-mining-tutorial.md)  
+-   [データソース&#40;の作成基本的なデータマイニングチュートリアル&#41;](../../2014/tutorials/creating-a-data-source-basic-data-mining-tutorial.md)  
   
  1 つのデータ ソースで複数のデータ ソース ビューをサポートできます。また、各データ ソース ビューには複数のテーブルを含めることができます。 ただし、データ ソースおよびデータ ソース ビューは、作成するデータ マイニング モデルと共に [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] データベースに配置されるため、各データ ソース ビューにはデータ マイニング モデルまたはモデルのグループごとに必要なテーブルのみを含めるようにしてください。  
   
@@ -69,16 +69,16 @@ ms.locfileid: "56020601"
   
 |シナリオ|データ ソース ビューに含まれているデータ|  
 |--------------|-------------------------------------------|  
-|[レッスン 2:予測シナリオの作成&#40;中級者向けデータ マイニング チュートリアル&#41;](../../2014/tutorials/lesson-2-building-a-forecasting-scenario-intermediate-data-mining-tutorial.md)|単一のビューとして収集された、各地域での各自転車モデルの月間の売上レポート。|  
-|[レッスン 3:マーケット バスケット シナリオの作成&#40;中級者向けデータ マイニング チュートリアル&#41;](../../2014/tutorials/lesson-3-building-a-market-basket-scenario-intermediate-data-mining-tutorial.md)|顧客注文の一覧を含むテーブルと、各顧客の購入記録を示す入れ子になったテーブル。|  
-|[レッスン 4:シーケンス クラスター シナリオの構築&#40;中級者向けデータ マイニング チュートリアル&#41;](../../2014/tutorials/lesson-4-build-sequence-clustering-scenario-intermediate-data-mining.md)|マーケット バスケット分析に使用したものと同じデータに、品目の購入順序を示す識別子が追加されています。|  
-|[レッスン 5: ニューラル ネットワーク モデルとロジスティック回帰モデルを構築&#40;中級者向けデータ マイニング チュートリアル&#41;](../../2014/tutorials/lesson-5-build-models-intermediate-data-mining-tutorial.md)|コール センターのいくつかの事前パフォーマンス追跡データを含む単一のテーブル。|  
+|[レッスン 2:予測シナリオ&#40;の構築中級者向けデータマイニングチュートリアル&#41;](../../2014/tutorials/lesson-2-building-a-forecasting-scenario-intermediate-data-mining-tutorial.md)|単一のビューとして収集された、各地域での各自転車モデルの月間の売上レポート。|  
+|[レッスン 3:マーケットバスケットシナリオ&#40;の構築中級者向けデータマイニングチュートリアル&#41;](../../2014/tutorials/lesson-3-building-a-market-basket-scenario-intermediate-data-mining-tutorial.md)|顧客注文の一覧を含むテーブルと、各顧客の購入記録を示す入れ子になったテーブル。|  
+|[レッスン 4:シーケンスクラスターシナリオ&#40;の構築中級者向けデータマイニングチュートリアル&#41;](../../2014/tutorials/lesson-4-build-sequence-clustering-scenario-intermediate-data-mining.md)|マーケット バスケット分析に使用したものと同じデータに、品目の購入順序を示す識別子が追加されています。|  
+|[レッスン 5: ニューラルネットワークとロジスティック回帰モデル&#40;の構築中級者向けデータマイニングチュートリアル&#41;](../../2014/tutorials/lesson-5-build-models-intermediate-data-mining-tutorial.md)|コール センターのいくつかの事前パフォーマンス追跡データを含む単一のテーブル。|  
   
 ## <a name="next-lesson"></a>次のレッスン  
- [レッスン 2:予測シナリオの作成&#40;中級者向けデータ マイニング チュートリアル&#41;](../../2014/tutorials/lesson-2-building-a-forecasting-scenario-intermediate-data-mining-tutorial.md)  
+ [レッスン 2:予測シナリオ&#40;の構築中級者向けデータマイニングチュートリアル&#41;](../../2014/tutorials/lesson-2-building-a-forecasting-scenario-intermediate-data-mining-tutorial.md)  
   
-## <a name="see-also"></a>参照  
- [データ マイニング プロジェクト](../../2014/analysis-services/data-mining/data-mining-projects.md)   
- [多次元モデルのデータ ソース ビュー](../analysis-services/multidimensional-models/data-source-views-in-multidimensional-models.md)  
+## <a name="see-also"></a>関連項目  
+ [データマイニングプロジェクト](../../2014/analysis-services/data-mining/data-mining-projects.md)   
+ [多次元モデルのデータ ソース ビュー](https://docs.microsoft.com/analysis-services/multidimensional-models/data-source-views-in-multidimensional-models)  
   
   

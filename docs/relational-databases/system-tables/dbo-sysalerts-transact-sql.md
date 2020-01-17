@@ -19,52 +19,51 @@ helpviewer_keywords:
 ms.assetid: a2c2f50d-61f3-4951-996a-add5ad092cc2
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 7bad6fbd9229547318a060f08eeb102b21cda9bb
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 4645b586c07635a405b2e678b84c4846762f7582
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47855042"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68084685"
 ---
-# <a name="dbosysalerts-transact-sql"></a>dbo.sysalerts (Transact-SQL)
+# <a name="dbosysalerts-transact-sql"></a>dbo.sysalerts (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  警告 1 件につき 1 行のデータを格納します。 警告は、イベントに応答して送信されるメッセージです。 警告メッセージは [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 環境の外に転送でき、電子メールやポケットベルのメッセージとして送信することもできます。 また、警告でタスクを生成することもできます。  このテーブルに格納されます、 **msdb**データベース。
+  警告 1 件につき 1 行のデータを格納します。 アラートは、イベントに応答して送信されるメッセージです。 警告メッセージは [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 環境の外に転送でき、電子メールやポケットベルのメッセージとして送信することもできます。 また、警告でタスクを生成することもできます。  このテーブルに格納されます、 **msdb**データベース。
   
 |列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
 |**id**|**int**|警告 ID。|  
-|**name**|**sysname**|警告名。|  
+|**name**|**sysname**|アラートの名前。|  
 |**event_source**|**nvarchar(100)**|イベントのソース ([!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)])。|  
 |**event_category_id**|**int**|将来使用するために予約されています。|  
 |**event_id**|**int**|将来使用するために予約されています。|  
 |**message_id**|**int**|ユーザー定義メッセージの ID またはへの参照を**sysmessages**このアラートをトリガーするメッセージ。|  
-|**severity**|**int**|警告の重大度。|  
-|**enabled**|**tinyint**|警告の状態。<br /><br /> **0** = 無効になっています。<br /><br /> **1** = 有効にします。|  
-|**delay_between_responses**|**int**|警告の通知間隔 (秒単位)。|  
-|**last_occurrence_date**|**int**|前回の警告発生日。|  
+|**severity**|**int**|このアラートをトリガーする重大度。|  
+|**enabled**|**tinyint**|アラートの状態:<br /><br /> **0** = 無効になっています。<br /><br /> **1** = 有効にします。|  
+|**delay_between_responses**|**int**|このアラートを通知する間隔 (秒) には、期間、待機します。|  
+|**last_occurrence_date**|**int**|アラートの最後に見つかった (日付)。|  
 |**last_occurrence_time**|**int**|前回の警告発生時刻。|  
 |**last_response_date**|**int**|前回の警告通知日。|  
-|**last_response_time**|**int**|前回の警告通知時刻。|  
-|**notification_message**|**nvarchar(512)**|警告と一緒に送信された追加情報。|  
+|**last_response_time**|**int**|前回のアラートの通知 (1 日の時刻)。|  
+|**notification_message**|**nvarchar(512)**|追加情報が、アラートを送信します。|  
 |**include_event_description**|**tinyint**|イベントの説明は、電子メール、ポケットベル、または Net send によって送信されるかどうかを表すビットマスク。 値の下のグラフを参照してください。|  
-|**database_name**|**nvarchar(512)**|警告を発生したと考えられるデータベース。|  
-|**event_description_keyword**|**nvarchar(100)**|警告が発生するときのエラー パターン。|  
+|**database_name**|**nvarchar(512)**|データベースがこの警告がこのアラートが発生する必要があります。|  
+|**event_description_keyword**|**nvarchar(100)**|エラーのパターンは、アラートをトリガーするために一致する必要があります。|  
 |**occurrence_count**|**int**|警告の発生回数。|  
 |**count_reset_date**|**int**|Day (日) のカウントをリセットする**0**します。|  
 |**count_reset_time**|**int**|指定された日数の時間にリセットする**0**します。|  
 |**job_id**|**uniqueidentifier**|警告が発生したときに実行するタスクの ID。|  
-|**has_notification**|**int**|警告が発生したときに電子メール通知を受け取るオペレーターの人数。|  
-|**flags**|**int**|予約されています。|  
-|**performance_condition**|**nvarchar(512)**|予約されています。|  
-|**category_id**|**int**|予約されています。|  
+|**has_notification**|**int**|アラート発生時に電子メール通知を受信するオペレーターの数。|  
+|**flags**|**int**|予約済み。|  
+|**performance_condition**|**nvarchar(512)**|予約済み。|  
+|**category_id**|**int**|予約済み。|  
   
  ## <a name="remarks"></a>コメント
 
 次の表では、include_event_description ビットマスクの値を示します。 Dbo.sysalerts 10 進数の値が返されます。 
 
-|Decimal | binary | 意味 |
+|Decimal | バイナリ | 意味 |
 |------|------|------|
 |0 |0000 |メッセージはありません。 |
 |1 |0001 |電子メール |

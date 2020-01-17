@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - unattended data refresh [Analysis Services with SharePoint]
@@ -15,12 +14,12 @@ ms.assetid: 01b54e6f-66e5-485c-acaa-3f9aa53119c9
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: c3d385ae733c44e403ba9de412c0c2a3e0eacd3c
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 04dea4a32303e06d7f0e6c015eef38ba6d267a30
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53365554"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66070847"
 ---
 # <a name="powerpivot-data-refresh-with-sharepoint-2010"></a>SharePoint 2010 での PowerPivot データ更新
   [!INCLUDE[ssGemini](../includes/ssgemini-md.md)] のデータ更新は、外部データ ソースにクエリを実行して、コンテンツ ライブラリに保存されている Excel 2010 ブック内の埋め込み [!INCLUDE[ssGemini](../includes/ssgemini-md.md)] データを更新する、スケジュールされたサーバー側の操作です。  
@@ -38,7 +37,7 @@ ms.locfileid: "53365554"
   
  [手順 2:サポートしない資格情報オプションをオフにします。](#bkmk_creds)  
   
- [手順 3:データ更新で使用される資格情報を格納する対象のアプリケーションを作成します。](#bkmk_stored)  
+ [ステップ 3:データ更新で使用される資格情報を格納する対象のアプリケーションを作成します。](#bkmk_stored)  
   
  [手順 4:スケーラブルなデータ更新のサーバーを構成します。](#bkmk_scale)  
   
@@ -58,7 +57,7 @@ ms.locfileid: "53365554"
   
  サーバー環境と権限が構成されていることを確認したら、データ更新を使用できる状態になります。 SharePoint ユーザーがデータ更新を使用するには、データ更新の実行頻度を指定したスケジュールを PowerPivot ブックに対して作成します。 スケジュールの作成は一般的に、ファイルを SharePoint にパブリッシュしたユーザーである、ブックの所有者または作成者が行います。 このユーザーが、自分が所有するブックのデータ更新スケジュールを作成し、管理します。 詳細については、次を参照してください。[データ更新のスケジュール&#40;PowerPivot for SharePoint&#41;](schedule-a-data-refresh-powerpivot-for-sharepoint.md)します。  
   
-##  <a name="bkmk_services"></a> 手順 1:Secure Store Service の有効化とマスター キーの生成  
+##  <a name="bkmk_services"></a> ステップ 1:Secure Store Service の有効化とマスター キーの生成  
  PowerPivot のデータ更新は、Secure Store Service に依存して、データ更新ジョブの実行および保存された資格情報を使用する外部データ ソースへの接続に使用する資格情報を提供します。  
   
  [新しいサーバー] オプションを使用して PowerPivot for SharePoint をインストールした場合は、Secure Store Service が構成されています。 その他のすべてのインストール シナリオに対しては、サービス アプリケーションを作成して構成し、Secure Store Service 用のマスター暗号化キーを生成する必要があります。  
@@ -98,7 +97,7 @@ ms.locfileid: "53365554"
   
  トラブルシューティングの目的に役立つ Store Service 操作の監査ログを使用可能にするには、事前にこの監査ログを有効にしておく必要があります。 詳細ログ記録を有効にする方法については、次を参照してください。 [Secure Store Service を構成する (SharePoint 2010)](https://go.microsoft.com/fwlink/p/?LinkID=223294)します。  
   
-##  <a name="bkmk_creds"></a> 手順 2:サポートしない資格情報オプションをオフにします。  
+##  <a name="bkmk_creds"></a> ステップ 2:サポートしない資格情報オプションをオフにします。  
  PowerPivot データ更新には、データ更新スケジュールに 3 つの資格情報オプションが用意されています。 ブックの所有者がデータ更新をスケジュールする際には、これらのオプションの 1 つを選択して、データ更新ジョブの実行に使用するアカウントを指定します。 管理者は、スケジュールの所有者がどの資格情報オプションを使用できるかを決定できます。  
   
  データ更新が動作するためには、少なくとも 1 つのオプションが使用可能になっている必要があります。  
@@ -139,7 +138,7 @@ ms.locfileid: "53365554"
   
      ![SSAS_PowerPivotDatarefreshOptions_AllowUser](media/ssas-powerpivotdatarefreshoptions-allowuser.gif "SSAS_PowerPivotDatarefreshOptions_AllowUser")  
   
-##  <a name="bkmk_stored"></a> 手順 3:データ更新で使用される資格情報を格納する対象のアプリケーションを作成します。  
+##  <a name="bkmk_stored"></a> ステップ 3:データ更新で使用される資格情報を格納する対象のアプリケーションを作成します。  
  Secure Store Service が構成されると、SharePoint 管理者は、保存された資格情報をデータ更新に使用できるようにする対象アプリケーションを作成できます。この資格情報には、PowerPivot 自動データ更新アカウントや、ジョブの実行または外部データ ソースへの接続に使用されるその他のアカウントが含まれます。  
   
  前のセクションで説明したように、特定の資格情報オプションを使用可能にするには対象アプリケーションを作成する必要があります。 具体的には、PowerPivot 自動データ更新アカウント用の対象アプリケーションに加えて、データ更新操作で使用する追加の保存された資格情報を作成する必要があります。  
@@ -205,7 +204,7 @@ ms.locfileid: "53365554"
   
  表示された場合**Integrated Security = SSPI**接続文字列では、接続文字列の資格情報をオーバーライドすることはできません。 接続では常に現在のユーザーが使用されます。 指定した資格情報は無視されます。  
   
- 表示された場合**Persist Security Info = False, Password =\* \* \* \* \* \* \* \* \* \* \*、UserID =\<userlogin >**、接続文字列、資格情報のオーバーライドを許可する必要があります。 接続文字列に表示される資格情報 (UserID や Password など) は、Windows 資格情報ではなく、対象のデータ ソースに対して有効なデータベース ログインまたはその他のサインイン アカウントです。  
+ 表示された場合**Persist Security Info = False, Password =\* \* \* \* \* \* \* \* \* \* \*、UserID =\<userlogin >** 、接続文字列、資格情報のオーバーライドを許可する必要があります。 接続文字列に表示される資格情報 (UserID や Password など) は、Windows 資格情報ではなく、対象のデータ ソースに対して有効なデータベース ログインまたはその他のサインイン アカウントです。  
   
  **接続文字列の資格情報を上書きする方法**  
   

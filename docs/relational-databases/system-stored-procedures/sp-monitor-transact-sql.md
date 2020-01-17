@@ -17,15 +17,14 @@ helpviewer_keywords:
 ms.assetid: cb628496-2f9b-40e4-b018-d0831c4cb018
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 5312413386dae9915b9ac6649b4210541d45b1db
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d91f774973588096ea73675d9b0e9ebf6368f1ae
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47644430"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68022319"
 ---
-# <a name="spmonitor-transact-sql"></a>sp_monitor (Transact-SQL)
+# <a name="sp_monitor-transact-sql"></a>sp_monitor (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   に関する統計情報を表示します。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]します。  
@@ -54,7 +53,7 @@ sp_monitor
 |**アイドル状態します。**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] がアイドル状態だった秒数|  
 |**packets_received**|入力パケットの数によって読み取られた[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]します。|  
 |**packets_sent**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] が書き込んだ出力パケット数|  
-|**@packet_errors**|発生したエラーの数[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]パケットを読み書き中にします。|  
+|**\@packet_errors**|発生したエラーの数[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]パケットを読み書き中にします。|  
 |**total_read**|読み取り回数[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]します。|  
 |**total_write**|書き込み回数[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]します。|  
 |**total_errors**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の読み書き中に発生したエラー数|  
@@ -86,11 +85,11 @@ EXEC sp_monitor
 ||||  
 |-|-|-|  
 |**cpu_busy**|**io_busy**|**アイドル状態します。**|  
-|190(0)-0%|187(0)-0%|148(556)-99%|  
+|190 (0)-0%|187 (0)-0%|148 (556) ~ 99%|  
   
 ||||  
 |-|-|-|  
-|**packets_received**|**packets_sent**|**@packet_errors**|  
+|**packets_received**|**packets_sent**|**\@packet_errors**|  
 |16(1)|20(2)|0(0)|  
   
 |||||  
@@ -98,7 +97,7 @@ EXEC sp_monitor
 |**total_read**|**total_write**|**total_errors**|**接続**|  
 |141(0)|54920(127)|0(0)|4(0)|  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [sp_who &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-who-transact-sql.md)   
  [システム ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   

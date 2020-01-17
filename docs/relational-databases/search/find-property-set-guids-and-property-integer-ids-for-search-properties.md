@@ -1,26 +1,25 @@
 ---
-title: 検索プロパティのプロパティ セット GUID およびプロパティ整数 ID の取得 | Microsoft Docs
-ms.custom: ''
+title: 検索プロパティのプロパティ セット GUID およびプロパティ整数 ID の検索
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: search, sql-database
-ms.reviewer: ''
 ms.technology: search
 ms.topic: conceptual
 helpviewer_keywords:
 - full-text search [SQL Server], search property lists
 - search property lists [SQL Server], configuring
 ms.assetid: 7db79165-8bcc-4be6-8d40-12d44deda79f
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
+author: pmasl
+ms.author: pelopes
+ms.reviewer: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: bb9628196ae08e94b9076e9e1bb422eaad0331e0
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.custom: seo-lt-2019
+ms.openlocfilehash: 3b950557c3c5c22968cffa4be0b4565ddedb293c
+ms.sourcegitcommit: d00ba0b4696ef7dee31cd0b293a3f54a1beaf458
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52532138"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "74056517"
 ---
 # <a name="find-property-set-guids-and-property-integer-ids-for-search-properties"></a>検索プロパティのプロパティ セット GUID およびプロパティ整数 ID の取得
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -63,7 +62,7 @@ ms.locfileid: "52532138"
   
  **filtdump.exe** はコマンド プロンプトから実行し、1 つの引数を指定します。 この引数は、インストールした IFilter が対象とする種類のファイルの個別の名前です。 このユーティリティは、IFilter で検出された、ドキュメント内のすべてのプロパティと、そのプロパティ セット GUID、整数 ID、および追加情報の一覧を表示します。  
   
- このソフトウェアをインストールする方法の詳細については、「 [Windows 7 および .NET Framework 4 用 Microsoft Windows SDK](https://go.microsoft.com/fwlink/?LinkId=212980)」を参照してください。 SDK をダウンロードしてインストールした後、以下のフォルダーで filtdump.exe ユーティリティを見つけてください。  
+ このソフトウェアをインストールする方法の詳細については、「 [Windows 7 および .NET Framework 4 用 Microsoft Windows SDK](https://www.microsoft.com/download/details.aspx?id=8279)」を参照してください。 SDK をダウンロードしてインストールした後、以下のフォルダーで filtdump.exe ユーティリティを見つけてください。  
   
 -   64 ビット バージョンの場合は、 `C:\Program Files\Microsoft SDKs\Windows\v7.1\Bin\x64`にあります。  
   

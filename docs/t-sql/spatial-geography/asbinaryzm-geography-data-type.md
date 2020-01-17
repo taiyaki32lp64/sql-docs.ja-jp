@@ -16,15 +16,14 @@ helpviewer_keywords:
 - AsBinaryZM, geography
 - AsBinaryZM
 ms.assetid: 37246adb-814d-4113-9983-4d336de8182c
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: 045068e39fdfd5ed4a5e875f4be55a9c5385b1ba
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: MladjoA
+ms.author: mlandzic
+ms.openlocfilehash: c617d4303593588b6e86a5b9b7662a5ec690c577
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47825420"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67948074"
 ---
 # <a name="asbinaryzm-geography-data-type"></a>AsBinaryZM (geography データ型)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
@@ -41,7 +40,7 @@ ms.locfileid: "47825420"
 ## <a name="return-types"></a>戻り値の型  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 戻り値の型: **varbinary(max)**  
   
- CLR 戻り値の型: **SqlBytes**  
+ CLR の戻り値の型:**SqlBytes**  
   
 ## <a name="remarks"></a>Remarks  
   

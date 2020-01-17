@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 2440b6ff-2536-497c-a5f4-41db0cf1945e
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: a89f017bba11b5c0ae42df49e54be3ea6b2f14ac
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 04000b62ea8d48b78d7673444003564ae0701193
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47613250"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67938696"
 ---
 # <a name="version-property-example-vc"></a>Version プロパティの例 (VC++)
 この例では、[バージョン](../../../ado/reference/ado-api/version-property-ado.md)のプロパティを[接続](../../../ado/reference/ado-api/connection-object-ado.md)ADO の現在のバージョンを表示するオブジェクト。 表示するいくつかの動的プロパティを使用します。  
@@ -135,6 +134,6 @@ void PrintComError(_com_error &e) {
 }  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [接続オブジェクト (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)   
  [Version プロパティ (ADO)](../../../ado/reference/ado-api/version-property-ado.md)

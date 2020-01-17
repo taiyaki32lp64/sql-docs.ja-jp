@@ -15,11 +15,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: f6c73db809e81cc9b6d1ee182227078a83688384
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52767604"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63273427"
 ---
 # <a name="server-element-dta"></a>Server 要素 (DTA)
   チューニングするデータベースが置かれているサーバーの識別情報が含まれます。  
@@ -70,7 +70,7 @@ ms.locfileid: "52767604"
 </Server  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [XML 入力ファイル リファレンス &#40;データベース エンジン チューニング アドバイザー&#41;](xml-input-file-reference-database-engine-tuning-advisor.md)  
   
   

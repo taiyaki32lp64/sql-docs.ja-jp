@@ -1,7 +1,7 @@
 ---
-title: データベース互換性レベルの変更とクエリ ストアの使用 | Microsoft Docs
-ms.custom: ''
-ms.date: 02/06/2019
+title: アップグレード後のクエリ ストアの使用
+ms.custom: seo-lt-2019
+ms.date: 12/13/2019
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: install
@@ -14,19 +14,18 @@ ms.assetid: 7e02a137-6867-4f6a-a45a-2b02674f7e65
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-manager: craigg
-ms.openlocfilehash: 995679ad24d1be79849b6b586964a206d4c70d7d
-ms.sourcegitcommit: f8ad5af0f05b6b175cd6d592e869b28edd3c8e2c
+ms.openlocfilehash: cdb24eff5efa62058aa2c20ecec0a85d43c83ae0
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/07/2019
-ms.locfileid: "55807398"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75251546"
 ---
 # <a name="change-the-database-compatibility-level-and-use-the-query-store"></a>データベース互換性レベルの変更とクエリ ストアの使用
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] では、一部の変更は、[データベースの互換性レベル](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md)が変更された後に有効になります。 これは、次の理由のためです。  
+[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 以降では、一部の変更は、[データベースの互換性レベル](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md)が変更された後に有効になります。 これは、次の理由のためです。  
   
 - アップグレードは一方向の操作である (ファイル形式をダウン グレードできない) ため、データベース内で新機能を有効にする操作を別の操作に分離することが重要です。 以前のデータベース互換性レベルに設定を戻すことができます。  新しいモデルでは、停止期間中に発生する処理の数が減ります。  
   
@@ -46,7 +45,7 @@ ms.locfileid: "55807398"
   
 以下のような、クエリ プロセッサを最新バージョンのコードにアップグレード場合に推奨されるワークフローについては、「[新しい SQL Server にアップグレードするときにパフォーマンスの安定性を維持する](../../relational-databases/performance/query-store-usage-scenarios.md#CEUpgrade)」を参照してください。  
   
-![query-store-usage-5](../../relational-databases/performance/media/query-store-usage-5.png "query-store-usage-5") 
+![query-store-usage-5](../../relational-databases/performance/media/query-store-usage-5.png "|::ref1::|") 
 
 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] v18 以降では、ユーザーはクエリ調整アシスタントを使用して、推奨されるワークフローのガイドを得ることができます。 詳細については、「[クエリ調整アシスタントを使用したデータベースのアップグレード](../../relational-databases/performance/upgrade-dbcompat-using-qta.md)」を参照してください。
  

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 helpviewer_keywords:
 - connections [Reporting Services], configuring
@@ -14,15 +13,15 @@ helpviewer_keywords:
 - authentication [Reporting Services]
 - Forms authentication
 ms.assetid: 753c2542-0e97-4d8f-a5dd-4b07a5cd10ab
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 61d397edfe1bb9125c702ad3d568a4425f1c54e3
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: decf2cbed48af0dcc00867a5f4d68b5d7c8958de
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56043303"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66102188"
 ---
 # <a name="authentication-with-the-report-server"></a>レポート サーバーでの認証
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] (SSRS) には、レポート サーバーに対してユーザーおよびクライアント アプリケーションを認証するための構成可能なオプションがいくつか用意されています。 既定では、レポート サーバーは Windows 統合認証を使用し、クライアントとネットワーク リソースが同じドメインまたは信頼されているドメインに属している場合は、信頼関係があると見なされます。 ネットワーク トポロジおよび組織のニーズに応じて、Windows 統合認証に使用される認証プロトコルをカスタマイズしたり、基本認証を使用したり、自分で提供したカスタムのフォームベースの認証拡張機能を使用したりすることができます。 認証の種類ごとに、個別にオンとオフを切り替えることができます。 レポート サーバーで複数の種類の要求を受け入れる場合は、複数の種類の認証を有効にすることができます。  

@@ -1,5 +1,5 @@
 ---
-title: sp_update_proxy (TRANSACT-SQL) |Microsoft Docs
+title: sp_update_proxy (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -18,15 +18,14 @@ helpviewer_keywords:
 ms.assetid: 864fd0e6-9d61-4f07-92ef-145318d2f881
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: 06520164758a50d604b2effbdae23f73dde7128c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ec6c40abd080c86722565762fab3b4f9d30bd0c0
+ms.sourcegitcommit: 43c3d8939f6f7b0ddc493d8e7a643eb7db634535
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47763526"
+ms.lasthandoff: 10/14/2019
+ms.locfileid: "72305307"
 ---
-# <a name="spupdateproxy-transact-sql"></a>sp_update_proxy (Transact-SQL)
+# <a name="sp_update_proxy-transact-sql"></a>sp_update_proxy (Transact-sql)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   既存のプロキシのプロパティを変更します。  
@@ -48,39 +47,32 @@ sp_update_proxy
 ```  
   
 ## <a name="arguments"></a>引数  
- [ **@proxy_id**=] *id*  
- 変更するプロキシのプロキシ識別番号を指定します。 *Proxy_id*は**int**、既定値は NULL です。  
+変更するプロキシのプロキシ識別番号を `[ @proxy_id = ] id` します。 *Proxy_id*は**int**,、既定値は NULL です。  
   
- [ **@proxy_name**= ] **'***proxy_name***'**  
- 変更するプロキシの名前を指定します。 *Proxy_name*は**sysname**、既定値は NULL です。  
+変更するプロキシの名前 `[ @proxy_name = ] 'proxy_name'` ます。 *Proxy_name*は**sysname**で、既定値は NULL です。  
   
- [ **@credential_name** =] **'***credential_name***'**  
- プロキシの新しい資格情報の名前を指定します。 *Credential_name*は**sysname**、既定値は NULL です。 いずれか*credential_name*または*credential_id*指定することがあります。  
+プロキシの新しい資格情報の名前 `[ @credential_name = ] 'credential_name'` ます。 *Credential_name*は**sysname**で、既定値は NULL です。 *Credential_name*または*credential_id*のいずれかを指定できます。  
   
- [ **@credential_id** =] *credential_id*  
- プロキシの新しい資格情報の識別番号を指定します。 *Credential_id*は**int**、既定値は NULL です。 いずれか*credential_name*または*credential_id*指定することがあります。  
+プロキシの新しい資格情報の識別番号を `[ @credential_id = ] credential_id` します。 *Credential_id*は**int**,、既定値は NULL です。 *Credential_name*または*credential_id*のいずれかを指定できます。  
   
- [ **@new_name**=] **'***new_name***'**  
- プロキシの新しい名前を指定します。 *New_name*は**sysname**、既定値は NULL です。 プロシージャが変更するプロキシの名前で指定した場合、 *new_name*します。 この引数が NULL の場合、プロキシの名前は変更されません。  
+プロキシの新しい名前を `[ @new_name = ] 'new_name'` します。 *New_name*は**sysname**で、既定値は NULL です。 このプロシージャを指定すると、プロキシの名前が*new_name*に変更されます。 この引数が NULL の場合、プロキシの名前は変更されません。  
   
- [ **@enabled** =] *is_enabled*  
- プロキシが有効になっているかどうか。 *Is_enabled*フラグが**tinyint**、既定値は NULL です。 ときに*is_enabled*は**0**プロキシが有効でないと、ジョブ ステップでは使用できません。 この引数が NULL の場合、プロキシの状態は変更されません。  
+プロキシが有効になっているかどうか `[ @enabled = ] is_enabled` ます。 *Is_enabled*フラグは**tinyint**,、既定値は NULL です。 *Is_enabled*が**0**の場合、プロキシは有効ではなく、ジョブステップでは使用できません。 この引数が NULL の場合、プロキシの状態は変更されません。  
   
- [ **@description**=] **'***説明***'**  
- プロキシの新しい説明を指定します。 *説明*は**nvarchar (512)**、既定値は NULL です。 この引数が NULL の場合、プロキシの説明は変更されません。  
+プロキシの新しい説明を `[ @description = ] 'description'` します。 *説明*は**nvarchar (512)** ,、既定値は NULL です。 この引数が NULL の場合、プロキシの説明は変更されません。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  **0** (成功) または**1** (失敗)  
   
-## <a name="remarks"></a>コメント  
- いずれか**@proxy_name**または**@proxy_id**指定する必要があります。 両方の引数を指定する場合は、両方とも同じプロキシを参照する必要があります。異なるプロキシを参照する場合、ストアド プロシージャは失敗します。  
+## <a name="remarks"></a>Remarks  
+ **\@proxy_name**または **\@proxy_id**のいずれかを指定する必要があります。 両方の引数を指定する場合は、両方とも同じプロキシを参照する必要があります。異なるプロキシを参照する場合、ストアド プロシージャは失敗します。  
   
- いずれか**@credential_name**または**@credential_id**プロキシの資格情報を変更するのには指定する必要があります。 両方の引数を指定する場合は、両方とも同じ資格情報を参照する必要があります。異なる資格情報を参照する場合、ストアド プロシージャは失敗します。  
+ プロキシの資格情報を変更するには、 **\@credential_name**または **\@credential_id**のいずれかを指定する必要があります。 両方の引数を指定する場合は、両方とも同じ資格情報を参照する必要があります。異なる資格情報を参照する場合、ストアド プロシージャは失敗します。  
   
- このプロシージャでプロキシが変更されますが、プロキシへのアクセスは変更されません。 プロキシにアクセスを変更するには、使用**sp_grant_login_to_proxy**と**sp_revoke_login_from_proxy**します。  
+ このプロシージャでプロキシが変更されますが、プロキシへのアクセスは変更されません。 プロキシへのアクセスを変更するには、 **sp_grant_login_to_proxy**と**sp_revoke_login_from_proxy**を使用します。  
   
 ## <a name="permissions"></a>アクセス許可  
- メンバーのみ、 **sysadmin**固定セキュリティ ロールは、このプロシージャを実行できます。  
+ このプロシージャを実行できるのは、 **sysadmin**固定セキュリティロールのメンバーだけです。  
   
 ## <a name="examples"></a>使用例  
  次の例では、プロキシ `Catalog application proxy` の enabled の値を `0` に設定します。  
@@ -96,11 +88,11 @@ GO
 ```  
   
 ## <a name="see-also"></a>参照  
- [SQL Server エージェント ストアド プロシージャ&#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sql-server-agent-stored-procedures-transact-sql.md)   
- [SQL Server エージェントのセキュリティを実装します。](../../ssms/agent/implement-sql-server-agent-security.md)   
- [sp_add_proxy &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-proxy-transact-sql.md)   
- [sp_delete_proxy &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-delete-proxy-transact-sql.md)   
- [sp_grant_login_to_proxy &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-grant-login-to-proxy-transact-sql.md)   
- [sp_revoke_login_from_proxy &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-revoke-login-from-proxy-transact-sql.md)  
+ [ストアドプロシージャ&#40;transact-sql &#41;の SQL Server エージェント](../../relational-databases/system-stored-procedures/sql-server-agent-stored-procedures-transact-sql.md)  
+ [SQL Server エージェントセキュリティ](../../ssms/agent/implement-sql-server-agent-security.md)  を実装する  
+ [transact-sql &#40;  の&#41; sp_add_proxy](../../relational-databases/system-stored-procedures/sp-add-proxy-transact-sql.md)  
+ [transact-sql &#40;  の&#41; sp_delete_proxy](../../relational-databases/system-stored-procedures/sp-delete-proxy-transact-sql.md)  
+ [transact-sql &#40;  の&#41; sp_grant_login_to_proxy](../../relational-databases/system-stored-procedures/sp-grant-login-to-proxy-transact-sql.md)  
+ [sp_revoke_login_from_proxy &#40;transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-revoke-login-from-proxy-transact-sql.md)  
   
   

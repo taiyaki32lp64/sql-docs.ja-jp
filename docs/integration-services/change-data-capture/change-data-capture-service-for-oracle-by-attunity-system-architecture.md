@@ -8,17 +8,20 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 1db6c737-3c60-4066-a0a3-3611e1c83e4e
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: 1961b787023e995a6d3735559d35a13607727853
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 8c6c809aaa32bd8f953061c48bde6bf43d012aa4
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47829460"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71294850"
 ---
 # <a name="change-data-capture-service-for-oracle-by-attunity-system-architecture"></a>Change Data Capture Service for Oracle by Attunity のシステム アーキテクチャ
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   CDC Service for Oracle は、1 つ以上のソース Oracle データベースの選択したテーブルに加えられた変更を、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスにある [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] CDC データベースにキャプチャします。 次の図に、CDC Service for Oracle を構成するコンポーネントを示します。  
   
  ![サービスのアーキテクチャ](../../integration-services/change-data-capture/media/service-architecture.gif "サービスのアーキテクチャ")  
@@ -29,7 +32,7 @@ ms.locfileid: "47829460"
   
 -   Oracle データベース: Oracle データベースのサポート対象バージョンが実行される任意のコンピューターです。 これには、Windows、Linux、またはインストールされた Oracle データベースのバージョンがサポートする他の任意のオペレーティング システムを実行するコンピューターが含まれます。 このプラットフォームは図で複数示されています。これは、単一の Oracle CDC Service で複数のソース Oracle データベースの変更をキャプチャできるためです。  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]: 対象の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データベース ( [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]のサポート対象の SKU) が実行される任意のコンピューターです。 Oracle CDC Service は、変更テーブルおよびサービス構成を格納する 1 つの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ターゲットをサポートします。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] プラットフォームは、 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] のクラスター化されたインスタンスまたは [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] の **Always On** 機能を使用してミラー化されたインスタンスを表す場合もあります。  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]: 対象の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データベース ([!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] のサポート対象の SKU) が実行される任意のコンピューターです。 Oracle CDC Service は、変更テーブルおよびサービス構成を格納する 1 つの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ターゲットをサポートします。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] プラットフォームは、 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] のクラスター化されたインスタンスまたは [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] の **Always On** 機能を使用してミラー化されたインスタンスを表す場合もあります。  
   
 -   Oracle CDC デザイナー: ソースの Oracle データベースと対象の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データベースにアクセスできる任意のサポート対象 Windows コンピューターです。  
   
@@ -40,8 +43,8 @@ ms.locfileid: "47829460"
 |Oracle CDC Service: 変更データ キャプチャ操作が実行される Windows サービスです。|Oracle CDC インスタンス: 単一のソース Oracle データベースに対する変更データ キャプチャ操作を処理する、Oracle CDC Service のサブプロセスです (ソース Oracle データベースごとに 1 つの Oracle CDC インスタンスが存在します)。|  
 ||Oracle ログ リーダー: Oracle クライアントを使用して Oracle トランザクション ログを読み取ります。|  
 ||Oracle クライアント: Oracle との通信に使用される Oracle Instant Client です。 これは、Oracle CDC Service をインストールする前に Oracle から入手してインストールする必要がある必須ソフトウェアです。|  
-||[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 変更ライター: キャプチャされた Oracle テーブルに加えられたコミット済みの変更を [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]変更テーブルに書き込みます。 また、このコンポーネントはキャプチャ状態を対象の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データベース内に維持します。|  
-||[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]ODBC クライアント: [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]用のマイクロソフトのネイティブ クライアントです。 これは、Oracle CDC Service をインストールする前にマイクロソフトから入手してインストールする必要がある必須コンポーネントです。|  
+||[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 変更ライター: キャプチャされた Oracle テーブルに加えられたコミット済みの変更を [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 変更テーブルに書き込みます。 また、このコンポーネントはキャプチャ状態を対象の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データベース内に維持します。|  
+||[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]ODBC クライアント: [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 用のマイクロソフトのネイティブ クライアントです。 これは、Oracle CDC Service をインストールする前にマイクロソフトから入手してインストールする必要がある必須コンポーネントです。|  
 |Oracle CDC Service 構成: Windows サービスを作成してその構成を設定する Microsoft 管理コンソール スナップインです。|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] クライアント: .NET Framework Version 4 に付属する SQL ADO.NET クライアントです。|  
 |Oracle データベース: 選択したテーブルへの変更をキャプチャするソース Oracle データベースです。|ログ マイナー: Oracle トランザクション ログの読み取りに使用される Oracle コンポーネントです。|  
 ||トランザクション ログ: データベースでトランザクションをロールバックし、障害から復元できるようにするために (この場合、Oracle データベースをアーカイブログ モードで運用する必要があります)、Oracle によって使用されるオンラインまたはアーカイブされた Oracle 再実行ログです。|  

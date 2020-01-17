@@ -1,5 +1,5 @@
 ---
-title: StdevP (MDX) |Microsoft ドキュメント
+title: StdevP (MDX) |Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -8,13 +8,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-manager: kfile
-ms.openlocfilehash: 14117ed4a3e3e7afc0152c5e659d1c7f040957e9
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.openlocfilehash: d4560ecbecd5db2e0f93e6910239fde27d54c028
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34742931"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68036867"
 ---
 # <a name="stdevp-mdx"></a>StdevP (MDX)
 
@@ -33,7 +32,7 @@ StdevP(Set_Expression [ ,Numeric_Expression ] )
  セットを返す有効な多次元式 (MDX) です。  
   
  *Numeric_Expression*  
- 有効な数値式です。通常は、数値を返すセル座標の多次元式 (MDX) 式です。  
+ 有効な数値式は、通常、数値を返すセル座標の多次元式 (MDX) 式です。  
   
 ## <a name="remarks"></a>コメント  
  **StdevP**関数は、バイアスをかけた母集団を使用しているときに、数式、 [Stdev](../mdx/stdev-mdx.md)関数は、バイアスをかけない母集団の公式を使用します。  
@@ -52,7 +51,7 @@ SELECT Measures.x ON 0
 FROM [Adventure Works]  
 ```  
   
-## <a name="see-also"></a>参照  
- [MDX 関数リファレンス&#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
+## <a name="see-also"></a>関連項目  
+ [MDX 関数リファレンス &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
   
   

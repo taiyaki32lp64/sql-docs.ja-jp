@@ -9,13 +9,13 @@ ms.topic: conceptual
 ms.assetid: 4acc0f2a-85ba-4c99-856a-89030f5c418e
 author: Shamikg
 ms.author: Shamikg
-manager: v-thobro
-ms.openlocfilehash: 0cbe66e8298053ef1682e25e97024fa0a96e9abb
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: shamikg
+ms.openlocfilehash: f7e421774d3a09622835b181d5c053c994e905ee
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47679320"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68264410"
 ---
 # <a name="global-settings-tester-oracletosql"></a>グローバル設定 (テスター) (OracleToSQL)
 テスト担当者のページを使用して、**グローバル設定**SSMA テスト担当者の設定を指定 ダイアログ ボックス。  
@@ -28,7 +28,7 @@ ms.locfileid: "47679320"
   
 この設定は次のオプションです。  
   
-1.  はい  
+1.  [はい]  
   
 2.  いいえ  
   
@@ -43,7 +43,7 @@ ms.locfileid: "47679320"
   
 4.  テーブルの比較が失敗したかどうかにユーザーを要求します。  
   
-既定のオプション セット:**をいつでも削除**します。  
+既定のオプション セットは次のとおりです。**いつでも削除**します。  
   
 **データのロールバックを実行します。**  
 この設定では、各テスト・ケースを実行した後、ロールバック操作を実行するかどうかを指定します。 既定のオプション セットは**いいえ**します。  
@@ -63,6 +63,6 @@ ms.locfileid: "47679320"
   
 2.  いいえ  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
 [テスト_ケースの準備の終了&#40;OracleToSQL&#41;](../../ssma/oracle/finishing-test-case-preparation-oracletosql.md)  
   

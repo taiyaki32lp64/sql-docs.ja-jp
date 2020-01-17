@@ -14,11 +14,11 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: 1b3c24b5c3f86e26d8a98e0c1ec59e10e441c5cc
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53359234"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62843796"
 ---
 # <a name="sql-server-database-engine"></a>SQL Server データベース エンジン
   [!INCLUDE[ssDE](../includes/ssde-md.md)]は、データの格納、処理、セキュリティ確保のための中心的なサービスです。 [!INCLUDE[ssDE](../includes/ssde-md.md)]は、アクセス制御と高速トランザクション処理を提供しており、これらを活用すれば、企業内で最も大規模なデータ処理アプリケーションの要件にも対応できます。  

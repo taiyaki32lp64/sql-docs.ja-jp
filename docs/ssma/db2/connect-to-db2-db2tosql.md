@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 9d485fd0-ab5d-402a-a59a-e9982a61b7de
 author: Shamikg
 ms.author: Shamikg
-manager: craigg
-ms.openlocfilehash: ab734e93743d3a3158feb16dba044b58e7f48f23
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 2a14b3a5de4292b01fd6fdb2df67bd4839d1a8d9
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51670521"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68141093"
 ---
 # <a name="connect-to-db2-db2tosql"></a>DB2 への接続 (DB2ToSQL)
 使用して、 **DB2 への接続**を移行する DB2 データベースに接続するためのダイアログ ボックス。  

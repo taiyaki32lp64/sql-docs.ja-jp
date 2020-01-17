@@ -1,25 +1,24 @@
 ---
-title: オブジェクト エクスプローラーでのイベント セッションの管理 | Microsoft Docs
-ms.custom: ''
+title: オブジェクト エクスプローラーでのイベント セッションの管理
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
 ms.technology: xevents
-ms.topic: conceptual
+ms.topic: tutorial
 ms.assetid: 16849e38-d3fb-414d-8dcb-797b5ffce6ee
 author: MightyPen
 ms.author: genemi
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 4068946d131934aede88e6801da97d8f63f8aee3
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 2d7019b369999afe8c28660a6a533e61b1d01c29
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52531907"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75234530"
 ---
 # <a name="manage-event-sessions-in-the-object-explorer"></a>オブジェクト エクスプローラーでのイベント セッションの管理
+
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
   このトピックでは、拡張イベントに影響する **オブジェクト エクスプローラー** で実行できる操作について説明します。  
@@ -120,7 +119,7 @@ STATE = STOP
 ## <a name="script-an-event-session-definition-using-includetsqlincludestsql-mdmd"></a>を使用したイベント セッション定義のスクリプト化 [!INCLUDE[tsql](../../includes/tsql-md.md)]  
  新規セッション ウィザードおよび [新しいセッション] ダイアログの両方に、拡張イベント セッションを定義する [!INCLUDE[tsql](../../includes/tsql-md.md)] を生成するスクリプト オプションがあります。  
   
- セッション名を右クリックし、 [!INCLUDE[tsql](../../includes/tsql-md.md)] [セッションをスクリプト化] **をポイントし、**[CREATE] **をクリックして、既存の拡張イベント セッションの**にアクセスできます。  
+ セッション名を右クリックし、 [!INCLUDE[tsql](../../includes/tsql-md.md)] [セッションをスクリプト化] **をポイントし、** [CREATE] **をクリックして、既存の拡張イベント セッションの**にアクセスできます。  
   
 ## <a name="delete-an-extended-events-session"></a>拡張イベント セッションの削除  
  次の方法で拡張イベント セッションを削除できます。  

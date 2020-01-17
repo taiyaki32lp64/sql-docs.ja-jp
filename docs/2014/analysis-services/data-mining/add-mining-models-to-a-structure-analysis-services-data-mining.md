@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - mining structures [Analysis Services], creating
@@ -15,12 +14,12 @@ ms.assetid: a175daa5-58ea-474c-a82f-9648c5155dc8
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 06a5b4261ecde623dc8c31c7b8045042513a8da2
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: bd25682f12ce0a3ddad5e8f135d82aaf08115762
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52509968"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66086249"
 ---
 # <a name="add-mining-models-to-a-structure-analysis-services---data-mining"></a>マイニング モデルを構造に追加する (Analysis Services - データ マイニング)
   1 つのマイニング構造で複数のマイニング モデルをサポートできるようになっています。 そのため、ウィザードの完了後、構造を開いて新しいマイニング モデルを追加できます。 作成した各モデルで、別のアルゴリズムの使用、パラメーターの変更、または別のデータのサブセットを使用するためのフィルターの適用が可能です。  

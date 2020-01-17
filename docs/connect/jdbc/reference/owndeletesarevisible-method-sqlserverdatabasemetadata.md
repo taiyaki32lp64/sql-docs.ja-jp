@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: 2dd6d976-9f8f-4a24-9354-ff239cfd4364
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 74bc5fcd815550199f0e298e232e93e4840a3003
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ecb8ca48f9f4b76a9d3bf22aff3930eec63667dc
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47712386"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67976553"
 ---
 # <a name="owndeletesarevisible-method-sqlserverdatabasemetadata"></a>ownDeletesAreVisible メソッド (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -65,7 +64,7 @@ public boolean ownDeletesAreVisible(int type)
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- この ownDeletesAreVisible メソッドは、java.sql.DatabaseMetaData インターフェイスで ownDeletesAreVisible メソッドによって指定されます。  
+ この ownDeletesAreVisible メソッドは、ownDeletesAreVisible メソッドによって、java メタデータインターフェイスで指定されます。  
   
 ## <a name="see-also"></a>参照  
  [SQLServerDatabaseMetaData のメソッド](../../../connect/jdbc/reference/sqlserverdatabasemetadata-methods.md)   

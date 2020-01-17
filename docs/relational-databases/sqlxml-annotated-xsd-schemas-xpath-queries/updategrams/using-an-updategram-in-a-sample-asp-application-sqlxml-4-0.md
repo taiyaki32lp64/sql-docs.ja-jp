@@ -1,6 +1,5 @@
 ---
-title: サンプル ASP アプリケーション (SQLXML 4.0) で、アップデート グラムを使用します。マイクロソフトのドキュメント
-ms.custom: ''
+title: サンプル ASP アプリケーションでのアップデートグラムの使用 (SQLXML)
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -14,14 +13,14 @@ helpviewer_keywords:
 ms.assetid: 10eff799-4c39-4b52-8b38-7ea6f68454a8
 author: MightyPen
 ms.author: genemi
-manager: craigg
+ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: df2b73b8c3289844f8660d46629449d570a44ec5
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 7b6c69fe48cf64010d530af8a2cda621814cf4ba
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56024753"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75246093"
 ---
 # <a name="using-an-updategram-in-a-sample-asp-application-sqlxml-40"></a>サンプル ASP アプリケーションでのアップデートグラムの使用 (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -35,7 +34,7 @@ ms.locfileid: "56024753"
   
  この後、ユーザーは連絡先に関する情報を更新できますが、連絡先 ID の更新は、ContactID が主キーであるため行えません。 ユーザーが情報を送信すると、アップデートグラムが実行され、すべての form パラメーターがアップデートグラムに渡されます。  
   
- 次のテンプレートは、最初のテンプレート (GetContact.xml) です。 このテンプレートの仮想名に関連付けられているディレクトリに保存**テンプレート**型。  
+ 次のテンプレートは、最初のテンプレート (GetContact.xml) です。 **テンプレート**の種類の仮想名に関連付けられているディレクトリにこのテンプレートを保存します。  
   
 ```  
 <root xmlns:sql="urn:schemas-microsoft-com:xml-sql">  
@@ -51,7 +50,7 @@ ms.locfileid: "56024753"
 </root>  
 ```  
   
- 次のテンプレートは、2 番目のテンプレート (UpdateContact.xml) です。 このテンプレートの仮想名に関連付けられているディレクトリに保存**テンプレート**型。  
+ 次のテンプレートは、2 番目のテンプレート (UpdateContact.xml) です。 **テンプレート**の種類の仮想名に関連付けられているディレクトリにこのテンプレートを保存します。  
   
 ```  
 <ROOT xmlns:updg="urn:schemas-microsoft-com:xml-updategram">  
@@ -79,7 +78,8 @@ ms.locfileid: "56024753"
 </ROOT>  
 ```  
   
- 次のコードは、ASP アプリケーション (SampleASP.asp) です。 このコードを、仮想ルートが関連付けられているディレクトリに保存します。仮想ルートはインターネット サービス マネージャー ユーティリティを使って作成します。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 用の IIS 仮想ディレクトリ管理ユーティリティは使用しません。[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 用の IIS 仮想ディレクトリ管理ユーティリティでは、ASP アプリケーションにアクセスしたり、このアプリケーションを識別したりできません。  
+ 次のコードは、ASP アプリケーション (SampleASP.asp) です。 このコードを、仮想ルートが関連付けられているディレクトリに保存します。仮想ルートはインターネット サービス マネージャー ユーティリティを使って作成します。 
+  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 用の IIS 仮想ディレクトリ管理ユーティリティは使用しません。[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 用の IIS 仮想ディレクトリ管理ユーティリティでは、ASP アプリケーションにアクセスしたり、このアプリケーションを識別したりできません。  
   
 > [!NOTE]  
 >  コードでは、"ServerName" に Microsoft インターネット インフォメーション サービス (IIS) を実行するサーバーの名前を指定する必要があります。  
@@ -162,6 +162,6 @@ You may update customer information below.<br><br>
 ```  
   
 ## <a name="see-also"></a>参照  
- [アップデート グラムのセキュリティに関する考慮事項&#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/security/updategram-security-considerations-sqlxml-4-0.md)  
+ [SQLXML 4.0&#41;&#40;アップデートグラムのセキュリティに関する考慮事項](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/security/updategram-security-considerations-sqlxml-4-0.md)  
   
   

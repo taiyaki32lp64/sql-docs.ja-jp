@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: ff921952-b935-4bb0-b587-bba6cd15a090
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: 41ec2e47e14085e7e008777b863fba09f95be13c
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 594b725b873124042dfa8afdc9253499d703999b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51667693"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68021624"
 ---
 # <a name="storage-system-input-output-time-out"></a>ストレージ システムの入出力のタイムアウト
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -32,6 +31,6 @@ ms.locfileid: "51667693"
 -   [サポート技術情報の資料 154690](https://go.microsoft.com/fwlink/?LinkId=117747)  
   
 ## <a name="for-more-information"></a>詳細情報  
- [SQL Server I/O Basics, Chapter 2](https://go.microsoft.com/fwlink/?LinkId=69370)  
+ [SQL Server I/O Basics, Chapter 2](/previous-versions/sql/sql-server-2005/administrator/cc917726(v=technet.10))  
   
   

@@ -15,18 +15,18 @@ dev_langs:
 helpviewer_keywords:
 - TRY_PARSE function
 ms.assetid: 292bac1d-edd8-468c-8ff1-8c7de625bc55
-author: MashaMSFT
-ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 9968c95f42d2256054d472b53d5c9039c26c1865
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: MikeRayMSFT
+ms.author: mikeray
+monikerRange: = azuresqldb-current||>= sql-server-2016||>= sql-server-linux-2017||= sqlallproducts-allversions||=azure-sqldw-latest
+ms.openlocfilehash: 3533d69ebaac7cf535de0e835bdbfdef9c5fbb4b
+ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47785558"
+ms.lasthandoff: 08/29/2019
+ms.locfileid: "70152054"
 ---
-# <a name="tryparse-transact-sql"></a>TRY_PARSE (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
+# <a name="try_parse-transact-sql"></a>TRY_PARSE (Transact-SQL)
+[!INCLUDE[tsql-appliesto-ss2012-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-asdw-xxx-md.md)]
 
   式の結果を、要求されたデータ型に変換して返します。[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] でキャストに失敗した場合は NULL を返します。 TRY_PARSE は、文字列型から日付/時刻型および数値型への変換にのみ使用します。  
   
@@ -57,7 +57,7 @@ TRY_PARSE ( string_value AS data_type [ USING culture ] )
  式の結果を、要求されたデータ型に変換して返します。キャストに失敗した場合は、NULL を返します。  
   
 ## <a name="remarks"></a>Remarks  
- TRY_PARSE は、文字列型から日付/時刻型および数値型への変換にのみ使用します。 一般的な型変換では、引き続き CAST または CONVERT を使用します。 一定のパフォーマンス オーバーヘッドが文字列値を解析中に注意してください。  
+ TRY_PARSE は、文字列型から日付/時刻型および数値型への変換にのみ使用します。 一般的な型変換では、引き続き CAST または CONVERT を使用します。 文字列値の解析には一定のパフォーマンス オーバーヘッドがあることに注意してください。  
   
  TRY_PARSE は、.NET Framework の共通言語ランタイム (CLR) の存在に依存しています。  
   
@@ -70,16 +70,16 @@ TRY_PARSE ( string_value AS data_type [ USING culture ] )
 |カテゴリ|型|.NET の種類|使用されるスタイル|  
 |--------------|----------|---------------|-----------------|  
 |数値|BIGINT|Int64|NumberStyles.Number|  
-|数値|ssNoversion|Int32|NumberStyles.Number|  
+|数値|INT|Int32|NumberStyles.Number|  
 |数値|SMALLINT|Int16|NumberStyles.Number|  
 |数値|TINYINT|Byte|NumberStyles.Number|  
 |数値|Decimal|Decimal|NumberStyles.Number|  
 |数値|NUMERIC|Decimal|NumberStyles.Number|  
 |数値|FLOAT|Double|NumberStyles.Float|  
 |数値|REAL|Single|NumberStyles.Float|  
-|数値|smallmoney|Decimal|NumberStyles.Currency|  
+|数値|SMALLMONEY|Decimal|NumberStyles.Currency|  
 |数値|money|Decimal|NumberStyles.Currency|  
-|日時|日付|DateTime|DateTimeStyles.AllowWhiteSpaces &#124; DateTimeStyles.AssumeUniversal|  
+|日時|date|DateTime|DateTimeStyles.AllowWhiteSpaces &#124; DateTimeStyles.AssumeUniversal|  
 |日時|time|TimeSpan|DateTimeStyles.AllowWhiteSpaces &#124; DateTimeStyles.AssumeUniversal|  
 |日時|DATETIME|DateTime|DateTimeStyles.AllowWhiteSpaces &#124; DateTimeStyles.AssumeUniversal|  
 |日時|smalldatetime|DateTime|DateTimeStyles.AllowWhiteSpaces &#124; DateTimeStyles.AssumeUniversal|  
@@ -92,43 +92,43 @@ TRY_PARSE ( string_value AS data_type [ USING culture ] )
   
 |完全名|別名|LCID (LCID)|特定のカルチャ|  
 |---------------|-----------|----------|----------------------|  
-|us_english|英語|1033|en-US|  
-|Deutsch|ドイツ語|1031|de-DE|  
-|Français|フランス語|1036|fr-FR|  
-|日本語|日本語|1041|ja-JP|  
-|Dansk|デンマーク語|1030|da-DK|  
-|Español|スペイン語|3082|es-ES|  
-|Italiano|イタリア語|1040|it-IT|  
-|Nederlands|オランダ語|1043|nl-NL|  
+|us_english|English|1033|en-US|  
+|Deutsch|German|1031|de-DE|  
+|Français|French|1036|fr-FR|  
+|Japanese|Japanese|1041|ja-JP|  
+|Dansk|Danish|1030|da-DK|  
+|Español|Spanish|3082|es-ES|  
+|Italiano|Italian|1040|it-IT|  
+|Nederlands|Dutch|1043|nl-NL|  
 |Norsk|ノルウェー語|2068|nn-NO|  
-|Português|ポルトガル語|2070|pt-PT|  
-|Suomi|フィンランド語|1035|fi|  
-|Svenska|スウェーデン語|1053|sv-SE|  
-|Čeština|チェコ語|1029|Cs-CZ|  
-|magyar|ハンガリー語|1038|Hu-HU|  
-|polski|ポーランド語|1045|Pl-PL|  
-|română|ルーマニア語|1048|Ro-RO|  
-|hrvatski|クロアチア語|1050|hr-HR|  
-|slovenčina|スロバキア語|1051|Sk-SK|  
-|slovenski|スロベニア語|1060|Sl-SI|  
-|ΕΛΛΗΝΙΚΆ|ギリシャ語|1032|El-GR|  
-|БЪЛГАРСКИ|ブルガリア語|1026|bg-BG|  
-|РУССКИЙ|ロシア語|1049|Ru-RU|  
-|Türkçe|トルコ語|1055|Tr-TR|  
+|Português|Portuguese|2070|pt-PT|  
+|Suomi|Finnish|1035|fi-FI|  
+|Svenska|Swedish|1053|sv-SE|  
+|čeština|Czech|1029|Cs-CZ|  
+|magyar|Hungarian|1038|Hu-HU|  
+|polski|Polish|1045|Pl-PL|  
+|română|Romanian|1048|Ro-RO|  
+|hrvatski|Croatian|1050|hr-HR|  
+|slovenčina|Slovak|1051|Sk-SK|  
+|slovenski|Slovenian|1060|Sl-SI|  
+|ελληνικά|Greek|1032|El-GR|  
+|български|Bulgarian|1026|bg-BG|  
+|русский|Russian|1049|Ru-RU|  
+|Türkçe|Turkish|1055|Tr-TR|  
 |British|英語 (U.K.)|2057|en-GB|  
-|eesti|エストニア語|1061|Et-EE|  
-|latviešu|ラトビア語|1062|lv-LV|  
-|lietuvių|リトアニア語|1063|lt-LT|  
-|ポルトガル語 (ブラジル)|ブラジル|1046|pt-BR|  
-|繁體中文|繁体字中国語|1028|zh-TW|  
-|한국어|韓国語|1042|Ko-KR|  
-|简体中文|簡体字中国語|2052|zh-CN|  
+|eesti|Estonian|1061|Et-EE|  
+|latviešu|Latvian|1062|lv-LV|  
+|lietuvių|Lithuanian|1063|lt-LT|  
+|Português (Brasil)|Brazilian|1046|pt-BR|  
+|繁體中文|Traditional Chinese|1028|zh-TW|  
+|한국어|Korean|1042|Ko-KR|  
+|简体中文|Simplified Chinese|2052|zh-CN|  
 |アラビア語|アラビア語|1025|ar-SA|  
-|ไทย|タイ語|1054|Th-TH|  
+|ไทย|Thai|1054|Th-TH|  
   
 ## <a name="examples"></a>使用例  
   
-### <a name="a-simple-example-of-tryparse"></a>A. TRY_PARSE の簡単な使用例  
+### <a name="a-simple-example-of-try_parse"></a>A. TRY_PARSE の簡単な使用例  
   
 ```  
 SELECT TRY_PARSE('Jabberwokkie' AS datetime2 USING 'en-US') AS Result;  
@@ -144,7 +144,7 @@ NULL
 (1 row(s) affected)  
 ```  
   
-### <a name="b-detecting-nulls-with-tryparse"></a>B. TRY_PARSE で NULL 値を検出する  
+### <a name="b-detecting-nulls-with-try_parse"></a>B. TRY_PARSE で NULL 値を検出する  
   
 ```  
 SELECT  
@@ -165,7 +165,7 @@ True
 (1 row(s) affected)  
 ```  
   
-### <a name="c-using-iif-with-tryparse-and-implicit-culture-setting"></a>C. TRY_PARSE と暗黙のカルチャ設定を指定した IIF を使用する  
+### <a name="c-using-iif-with-try_parse-and-implicit-culture-setting"></a>C. TRY_PARSE と暗黙のカルチャ設定を指定した IIF を使用する  
   
 ```  
 SET LANGUAGE English;  

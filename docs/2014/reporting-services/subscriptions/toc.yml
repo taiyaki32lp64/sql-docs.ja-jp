@@ -33,7 +33,7 @@
   href: monitor-reporting-services-subscriptions.md
 - name: Use PowerShell to Change and List Reporting Services Subscription Owners and Run a subscription
   href: manage-subscription-owners-and-run-subscription-powershell.md
-- name: Schedules
+- name: スケジュール
   href: schedules.md
   items:
     - name: 'Create, Modify, and Delete Schedules'

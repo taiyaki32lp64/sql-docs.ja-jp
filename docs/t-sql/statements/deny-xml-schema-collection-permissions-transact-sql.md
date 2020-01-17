@@ -1,6 +1,8 @@
 ---
-title: DENY (XML スキーマ コレクションの権限の許可) (Transact-SQL) | Microsoft Docs
-ms.custom: ''
+title: DENY (XML スキーマ コレクションのアクセス許可の拒否)
+description: XML スキーマ コレクションに対する権限を拒否します。
+titleSuffix: SQL Server (Transact-SQL)
+ms.custom: seo-lt-2019
 ms.date: 06/09/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -17,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: 159969a7-8313-41bc-bb19-c55af76597e6
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: f5938d06c836e4b523c1e21df91c449db88bc7f4
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 3996a89355ba9a3346c9751f011db24ae6757fb9
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56023077"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75244539"
 ---
 # <a name="deny-xml-schema-collection-permissions-transact-sql"></a>DENY (XML スキーマ コレクションの権限の拒否) (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -58,7 +59,7 @@ DENY permission  [ ,...n ] ON
  *permission*  
  XML スキーマ コレクションで拒否できる権限を指定します。 権限の一覧については、後の「解説」を参照してください。  
   
- ON XML SCHEMA COLLECTION :: [ _schema_name_**.** ] *XML_schema_collection_name*  
+ ON XML SCHEMA COLLECTION :: [ _schema_name_ **.** ] *XML_schema_collection_name*  
  権限を拒否する XML スキーマ コレクションを指定します。 スコープ修飾子 (::) が必要です。 *schema_name* が指定されていない場合、既定のスキーマが使用されます。 *schema_name* が指定されている場合、スキーマのスコープ修飾子 (.) が必要です。  
   
  TO \<database_principal>  
@@ -94,7 +95,7 @@ DENY permission  [ ,...n ] ON
  *Database_user_with_no_login*  
  対応するサーバー レベルのプリンシパルがないデータベース ユーザーを指定します。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  XML スキーマ コレクションに関する情報は、[sys.xml_schema_collections](../../relational-databases/system-catalog-views/sys-xml-schema-collections-transact-sql.md) カタログ ビューで確認できます。  
   
  XML スキーマ コレクションは、スキーマ レベルのセキュリティ保護可能なリソースで、権限の階層で親となっているスキーマに含まれています。 次の表に、XML スキーマ コレクションで拒否できる権限のうち最も限定的なものを、それらを暗黙的に含む一般的な権限と共に示します。  
@@ -111,7 +112,7 @@ DENY permission  [ ,...n ] ON
 ## <a name="permissions"></a>アクセス許可  
  XML スキーマ コレクションに対する CONTROL 権限が必要です。 AS オプションを使用する場合は、指定したプリンシパルが XML スキーマ コレクションを所有している必要があります。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
  次の例では、XML スキーマ コレクション `Invoices4` の `EXECUTE` 権限を、ユーザー `Wanida` に対して拒否します。 XML スキーマ コレクション `Invoices4` は、`AdventureWorks2012` データベースの `Sales` スキーマ内にあります。  
   
 ```  

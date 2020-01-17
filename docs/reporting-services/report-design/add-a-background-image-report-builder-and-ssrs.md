@@ -2,18 +2,18 @@
 title: 背景画像の追加 (レポート ビルダーおよび SSRS) | Microsoft Docs
 ms.date: 03/01/2017
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: report-design
 ms.topic: conceptual
 ms.assetid: c777fefb-8695-44a7-b5cd-a18c587583f2
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 97abc94c1bd5181e3ef97a614e40bf70700a81a7
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 5472406acc011ea654ff4eb73bc25c73c0475e04
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56288040"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65575108"
 ---
 # <a name="add-a-background-image-report-builder-and-ssrs"></a>背景画像の追加 (レポート ビルダーおよび SSRS)
   四角形、テキスト ボックス、一覧、マトリックス、テーブル、グラフの一部などのレポート アイテム、またはページ ヘッダー、ページ フッター、レポート本文などのレポート セクションに背景画像を追加できます。 背景画像は、レポート デザイン画面で選択された任意のアイテムでプロパティ ペインに **[BackgroundImage]** が表示されるものに対して定義できます。 他の画像と同様に、背景画像は、レポート サーバー上の画像、データセット フィールドからの画像、またはレポート定義に埋め込まれた画像などへの URL である場合があります。 レポートに埋め込まれた画像を使用するには、その画像をデザイン画面に追加する前に、それをレポート定義に追加する必要があります。  
@@ -56,14 +56,14 @@ ms.locfileid: "56288040"
   
          **[値]** に、レポート データセット内のフィールドの名前を設定します。 詳細については、「[データバインド画像の追加 (レポート ビルダーおよび SSRS)](../../reporting-services/report-design/add-a-data-bound-image-report-builder-and-ssrs.md)」を参照してください。  
   
-         **[MIMEType]**、またはファイル形式には、画像に適切な MIME の種類を選択します (bmp など)。  
+         **[MIMEType]** 、またはファイル形式には、画像に適切な MIME の種類を選択します (bmp など)。  
   
         > [!NOTE]  
         >  **[Source]** プロパティが **[Database]** に設定されている場合にのみ、[MIMEType] が適用されます。 **[Source]** プロパティが **[External]** または **[Embedded]** に設定されている場合、 **[MIMEType]** の値は無視されます。  
   
-    -   **[BackgroundRepeat]** で、式、 **[Default]**、 **[Repeat]**、 **[RepeatX]** または **[RepeatY]**、または **[Clip]** を選択します。  
+    -   **[BackgroundRepeat]** で、式、 **[Default]** 、 **[Repeat]** 、 **[RepeatX]** または **[RepeatY]** 、または **[Clip]** を選択します。  
   
-         グラフ内の背景画像の場合は、 **[BackgroundRepeat]** を **[Default]**、 **[Repeat]**、 **[Fit]**、および **[Clip]** に設定できますが、 **[RepeatX]** または **[RepeatY]** には設定できません。  
+         グラフ内の背景画像の場合は、 **[BackgroundRepeat]** を **[Default]** 、 **[Repeat]** 、 **[Fit]** 、および **[Clip]** に設定できますが、 **[RepeatX]** または **[RepeatY]** には設定できません。  
   
 ## <a name="see-also"></a>参照  
  [画像 &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/images-report-builder-and-ssrs.md)   

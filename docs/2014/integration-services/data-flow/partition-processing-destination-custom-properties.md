@@ -7,15 +7,15 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 3eac4413-0c90-4b06-8f7e-d0d72f4d869d
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 599f3af6c579a8e9a217df31386b1e799d922f98
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 3dbab24f756498d7427f9961e4176249daac8dfb
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52771114"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62770948"
 ---
 # <a name="partition-processing-destination-custom-properties"></a>パーティション処理変換先のカスタム プロパティ
   パーティション処理変換先には、カスタム プロパティと、すべてのデータ フロー コンポーネントとの共通プロパティの両方があります。  
@@ -40,7 +40,7 @@ ms.locfileid: "52771114"
   
  詳細については、「 [パーティション処理変換先](partition-processing-destination.md)」を参照してください。  
   
-## <a name="see-also"></a>参照  
- [Common Properties](../common-properties.md)  
+## <a name="see-also"></a>関連項目  
+ [共通プロパティ](../common-properties.md)  
   
   

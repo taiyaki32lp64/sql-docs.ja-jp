@@ -11,11 +11,11 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 7cec72a2f70db07e5653d095ce586b50604d6412
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52813414"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62917666"
 ---
 # <a name="database-features"></a>データベース機能
   このセクションでは、データベース、データベース オブジェクト、データ型、およびデータの操作や管理に使用されるメカニズムに関連する機能およびタスクついて説明します。  

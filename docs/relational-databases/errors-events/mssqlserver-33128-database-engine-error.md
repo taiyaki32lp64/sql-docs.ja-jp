@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 12c1096f-d120-439b-85f3-f794859503c9
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 35e3b5d32676526f696d8b95b6894c8edb411ead
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 493513f21fbf61dd516160e61a7afb9e71e477fc
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47754547"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67908432"
 ---
 # <a name="mssqlserver33128"></a>MSSQLSERVER_33128
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -34,7 +33,7 @@ ms.locfileid: "47754547"
 |メッセージ テキスト|暗号化は失敗しました。 キーでは非推奨のアルゴリズム '%.*ls' が使用されていますが、このアルゴリズムはサポートされていません。|  
   
 ## <a name="explanation"></a>説明  
-このメッセージは、RC4 (または RC4_128) 暗号化アルゴリズムを参照した場合に表示されます。 RC4 および RC4_128 は、弱いアルゴリズムなので非推奨とされます。 AES アルゴリズムのいずれかなど、強力なアルゴリズムを使用してください   
+このメッセージは、RC4 (または RC4_128) 暗号化アルゴリズムを参照した場合に表示されます。 RC4 および RC4_128 は、弱いアルゴリズムなので非推奨とされます。 AES アルゴリズムのいずれかなど、強力なアルゴリズムを使用してください  
   
 データベースの互換性レベルが 90 または 100 の場合、操作は成功し、今後廃止予定のイベントが発生し、メッセージがリング バッファーにのみ表示されます。  
   
@@ -57,7 +56,7 @@ ms.locfileid: "47754547"
 |10|RC4 対称キーは、EKM キーを使用して暗号化解除されています。 このメッセージは、リング バッファーにのみ表示されます。|  
   
 ## <a name="user-action"></a>ユーザーの操作  
-AES アルゴリズムのいずれかなど、強力なアルゴリズムを使用してください  (推奨)  
+AES アルゴリズムのいずれかなど、強力なアルゴリズムを使用してください (推奨)  
   
-ALTER DATABASE SET COMPATIBILITY_LEVEL を使用して、データベースの互換性レベルを 100 に設定してください  (非推奨)。  
+ALTER DATABASE SET COMPATIBILITY_LEVEL を使用して、データベースの互換性レベルを 100 に設定してください (非推奨)。  
   

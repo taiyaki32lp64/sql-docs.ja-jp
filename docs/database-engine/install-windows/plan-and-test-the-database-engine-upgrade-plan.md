@@ -10,13 +10,12 @@ ms.assetid: 19c5b725-7400-4881-af8f-fd232ca28234
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-manager: craigg
-ms.openlocfilehash: 6cca82f3b87fe8d76a5075f2530fe3d9cec1b253
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 0476871b5788e47648e96abe2f9c12d2ee98e2d4
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47748632"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67990869"
 ---
 # <a name="plan-and-test-the-database-engine-upgrade-plan"></a>データベース エンジンのアップグレード計画の策定およびテスト
 
@@ -32,9 +31,9 @@ ms.locfileid: "47748632"
 - 「[SQL Server データベース エンジンの旧バージョンとの互換性](../../database-engine/sql-server-database-engine-backward-compatibility.md)」の記事。  
   
 ## <a name="pre-upgrade-planning-checklist"></a>アップグレード前の計画チェックリスト  
- [!INCLUDE[ssDE](../../includes/ssde-md.md)]をアップグレードする前に、次のチェックリストと関連する記事を確認します。 これらの記事は、アップグレードの方法に関係なく、すべてのアップグレードに適用され、ローリング アップグレード、新しいインストールのアップグレード、またはインプレース アップグレードの中から最適なアップグレード方法を決定するのに役立ちます。 たとえば、オペレーティング システムのアップグレード、SQL Server 2005 からのアップグレード、または SQL Server の 32 ビット バージョンからアップグレードの場合、インプレース アップグレードまたはローリング アップグレードは実行できない場合があります。 デシジョン ツリーについては、「 [Choose a Database Engine Upgrade Method](../../database-engine/install-windows/choose-a-database-engine-upgrade-method.md)」を参照してください。  
+ [!INCLUDE[ssDE](../../includes/ssde-md.md)]をアップグレードする前に、次のチェックリストと関連する記事を確認します。 これらの記事は、アップグレードの方法に関係なく、すべてのアップグレードに適用され、次の中から最適なアップグレード方法を決定するのに役立ちます: ローリング アップグレード、新しいインストールのアップグレード、またはインプレース アップグレード。 たとえば、オペレーティング システムのアップグレード、SQL Server 2005 からのアップグレード、または SQL Server の 32 ビット バージョンからアップグレードの場合、インプレース アップグレードまたはローリング アップグレードは実行できない場合があります。 デシジョン ツリーについては、「 [Choose a Database Engine Upgrade Method](../../database-engine/install-windows/choose-a-database-engine-upgrade-method.md)」を参照してください。  
   
--   **ハードウェアとソフトウェアの要件:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]をインストールするためのハードウェアおよびソフトウェア要件を確認してください。 これらの要件は、「[SQL Server のインストールに必要なハードウェアおよびソフトウェア](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md)」に掲載されています。 アップグレードの計画サイクルの一環として、ハードウェアのアップグレード (ハードウェアが新しくなると、速度も速くなり、またプロセッサ数の不足またはデータベースとサーバーの統合が原因でライセンス処理が低下する場合があります) およびオペレーティング システムのアップグレードを検討する必要があります。 この種のハードウェアとソフトウェアの変更は、アップグレード方法の種類の選定に影響を与えます。  
+-   **ハードウェアとソフトウェアの要件:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] をインストールするためのハードウェアとソフトウェアの要件を確認します。 これらの要件は、「[SQL Server のインストールに必要なハードウェアおよびソフトウェア](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md)」で確認できます。 アップグレードの計画サイクルの一環として、ハードウェアのアップグレード (ハードウェアが新しくなると、速度も速くなり、またプロセッサ数の不足またはデータベースとサーバーの統合が原因でライセンス処理が低下する場合があります) およびオペレーティング システムのアップグレードを検討する必要があります。 この種のハードウェアとソフトウェアの変更は、アップグレード方法の種類の選定に影響を与えます。  
   
 -   **現在の環境:** 現在の環境を調査して、使用されている [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] コンポーネントと、実際の環境に接続されているクライアントを把握します。  
   
@@ -58,7 +57,7 @@ ms.locfileid: "47748632"
 -   **エディション:** アップグレードで必要な [!INCLUDE[ssCurrent](../../includes/ssnoversion-md.md)] の適切なエディションを決定し、アップグレードのための有効なアップグレード パスを決定します。 詳細については、「 [Supported Version and Edition Upgrades](../../database-engine/install-windows/supported-version-and-edition-upgrades.md)」をご覧ください。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のいずれかのエディションから別のエディションへアップグレードする前に、現在使用している機能がアップグレード先のエディションでサポートされているかどうかを確認します。  
   
     > [!NOTE]  
-    >  以前のバージョンの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Enterprise Edition から [!INCLUDE[ssCurrent](../../includes/ssnoversion-md.md)] をアップグレードする場合は、"Enterprise Edition: コアベースのライセンス" または "Enterprise Edition" を選択してください。 これらの Enterprise エディションは、ライセンス モードのみが異なります。 詳細については、「 [Compute Capacity Limits by Edition of SQL Server](../../sql-server/compute-capacity-limits-by-edition-of-sql-server.md)」を参照してください。  
+    >  [!INCLUDE[ssCurrent](../../includes/ssnoversion-md.md)] を前のバージョンの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Enterprise エディションからアップグレードする場合は、Enterprise エディションとコアベース ライセンスの Enterprise エディションのいずれかを選ぶことができます。 これらの Enterprise エディションは、ライセンス モードのみが異なります。 詳細については、「 [Compute Capacity Limits by Edition of SQL Server](../../sql-server/compute-capacity-limits-by-edition-of-sql-server.md)」を参照してください。  
   
 -   **下位互換性:** [!INCLUDE[ssCurrent](../../includes/ssnoversion-md.md)] データベース エンジンの下位互換性に関する記事を参照して、[!INCLUDE[ssCurrent](../../includes/ssnoversion-md.md)] とアップグレード対象の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] バージョンとの間の動作の違いについて確認します。 「 [SQL Server Database Engine Backward Compatibility](../../database-engine/sql-server-database-engine-backward-compatibility.md)」を参照してください。  
   
@@ -86,7 +85,7 @@ ms.locfileid: "47748632"
 ## <a name="develop-and-test-the-upgrade-plan"></a>アップグレード計画の作成とテスト  
  最良の手法は、IT プロジェクトの場合と同様に、アップグレードを処理することです。 アップグレードを行う上で必要なスキル (データベース管理、ネットワーク、抽出、変換、読み込み (ETL) など) を備えたアップグレード チームを編成してください。 チームは次のことを行う必要があります。  
   
--   **アップグレード方法を選択する:** 「 [データベース エンジンのアップグレード方法の選択](../../database-engine/install-windows/choose-a-database-engine-upgrade-method.md)」を参照してください。  
+-   **アップグレード方法を選択する:** 「[データベース エンジンのアップグレード方法の選択](../../database-engine/install-windows/choose-a-database-engine-upgrade-method.md)」を参照してください。  
   
 -   **ロールバック計画を作成する:** ロールバックする必要がある場合、この計画を実行すると、元の環境を復元できます。  
   

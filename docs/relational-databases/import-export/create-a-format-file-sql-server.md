@@ -10,16 +10,15 @@ ms.topic: conceptual
 helpviewer_keywords:
 - format files [SQL Server], creating
 ms.assetid: f680b4a0-630f-4052-9c79-d348c1076f7b
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
+author: MashaMSFT
+ms.author: mathoma
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: a32e66e87d3e2cdcf9c8f0498ec845c2b8921825
-ms.sourcegitcommit: bfa10c54e871700de285d7f819095d51ef70d997
+ms.openlocfilehash: fb0199e5ec3bc083d7a6e2087ec86c04c233436b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/14/2019
-ms.locfileid: "54255017"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68035819"
 ---
 # <a name="create-a-format-file-sql-server"></a>フォーマット ファイルの作成 (SQL Server)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -32,7 +31,7 @@ ms.locfileid: "54255017"
 > [!NOTE]  
 >  フォーマット ファイルの読み取りに使用される **bcp** ユーティリティ (Bcp.exe) のバージョンは、フォーマット ファイルの作成に使用されたバージョン、またはそれ以降のバージョンである必要があります。 たとえば、[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] の **bcp** では、[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] の **bcp** によって生成されるバージョン 10.0 のフォーマット ファイルを読み取ることができますが、[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] の **bcp** では、[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] の **bcp** によって生成されるバージョン 11.0 のフォーマット ファイルを読み取ることができません。  
   
- このトピックでは、 [bcp ユーティリティ](../../tools/bcp-utility.md) を使用して、特定のテーブルのフォーマット ファイルを作成する方法について説明します。 フォーマット ファイルは、指定されたデータ型のオプション (**-n**、 **-c**、 **-w**、または **-N**)、およびテーブルやビューの区切り記号から構成されます。  
+ このトピックでは、 [bcp ユーティリティ](../../tools/bcp-utility.md) を使用して、特定のテーブルのフォーマット ファイルを作成する方法について説明します。 フォーマット ファイルは、指定されたデータ型のオプション ( **-n**、 **-c**、 **-w**、または **-N**)、およびテーブルやビューの区切り記号から構成されます。  
   
 ## <a name="creating-a-non-xml-format-file"></a>XML 以外のフォーマット ファイルの作成  
  **bcp** コマンドを使用してフォーマット ファイルを作成するには、 **format** 引数を指定し、データ ファイルのパスの代わりに **nul** を使用します。 **format** オプションには、次に示す **-f** オプションが必要です。  
@@ -40,7 +39,7 @@ ms.locfileid: "54255017"
  **bcp** _table_or_view_ **format** nul **-f**_format_file_name_  
   
 > [!NOTE]  
->  XML 以外のフォーマット ファイルであることを区別するには、MyTable.fmt のように、ファイル名拡張子として .fmt を使用することをお勧めします。  
+> XML 以外のフォーマット ファイルであることを区別するには、MyTable.fmt のように、ファイル名拡張子として .fmt を使用することをお勧めします。  
   
  XML 以外のフォーマット ファイルの構造およびフィールドについては、「 [XML 以外のフォーマット ファイル &#40;SQL Server&#41;](../../relational-databases/import-export/non-xml-format-files-sql-server.md)でサポートされる従来のフォーマットです。  
   
@@ -172,7 +171,7 @@ bcp コマンドを使用して (つまり `bcp format` を使用して) フォ�
  **bcp** _table_or_view_ **format nul-f** _format_file_name_ **-x**  
   
 > [!NOTE]  
->  XML フォーマット ファイルであることを区別するには、MyTable.xml のように、ファイル名拡張子として .xml を使用することをお勧めします。  
+> XML フォーマット ファイルであることを区別するには、MyTable.xml のように、ファイル名拡張子として .xml を使用することをお勧めします。  
   
  XML フォーマット ファイルの構造およびフィールドについては、「 [XML フォーマット ファイル &#40;SQL Server&#41;](../../relational-databases/import-export/xml-format-files-sql-server.md)でサポートされる従来のフォーマットです。  
   
@@ -180,7 +179,6 @@ bcp コマンドを使用して (つまり `bcp format` を使用して) フォ�
  ここでは、 **bcp** コマンドを使用して XML フォーマット ファイルを作成する方法を示す次の例について説明します。  
   
 -   A. 文字データ用の XML フォーマット ファイルの作成  
-  
 -   B. ネイティブ データ用の XML フォーマット ファイルの作成  
   
  この例では、 `HumanResources.Department` サンプル データベースの [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] テーブルを使用しています。 `HumanResources.Department` テーブルには、 `DepartmentID`、 `Name`、 `GroupName`、および `ModifiedDate`の 4 つの列があります。  
@@ -197,13 +195,13 @@ bcp コマンドを使用して (つまり `bcp format` を使用して) フォ�
 |----------------|-----------------|  
 |**formatnul-f** _format_file_ **-x**|XML フォーマット ファイルを指定します。|  
 |**-c**|文字データを指定します。|  
-|**-t** `,`|コンマ (**,**) をフィールド ターミネータとして指定します。<br /><br /> 注: データ ファイルで既定のフィールド ターミネータ (`\t`) が使用されている場合、**-t** スイッチは不要です。|  
+|**-t** `,`|コンマ ( **,** ) をフィールド ターミネータとして指定します。<br /><br /> 注: データ ファイルで既定のフィールド ターミネータ (`\t`) が使用されている場合、 **-t** スイッチは不要です。|  
 |**-T**|**bcp** ユーティリティが統合セキュリティを使用した信頼関係接続を使用して [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] に接続することを指定します。 **-T** を指定しない場合、正常にログインするには **-U** や **-P** を指定する必要があります。|  
   
  Windows コマンド プロンプトで、次の `bcp` コマンドを入力します。  
   
 ```cmd
-bcp AdventureWorks2012.HumanResources.Department format nul -c -x -f Department-c..xml -t, -T  
+bcp AdventureWorks2012.HumanResources.Department format nul -c -x -f Department-c.xml -t, -T  
 ```  
   
  生成されるフォーマット ファイル `Department-c.xml`には、次の XML 要素が含まれます。  
@@ -242,7 +240,7 @@ bcp AdventureWorks2012.HumanResources.Department format nul -c -x -f Department-
  Windows コマンド プロンプトで、次の `bcp` コマンドを入力します。  
   
 ```cmd
-bcp AdventureWorks2012.HumanResources.Department format nul -x -f Department-n..xml -n -T  
+bcp AdventureWorks2012.HumanResources.Department format nul -x -f Department-n.xml -n -T  
 ```  
   
  生成されるフォーマット ファイル `Department-n.xml`には、次の XML 要素が含まれます。  

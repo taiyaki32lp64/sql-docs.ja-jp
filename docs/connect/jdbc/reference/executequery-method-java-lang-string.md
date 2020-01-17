@@ -1,5 +1,5 @@
 ---
-title: executeQuery (java.lang.String) メソッド |Microsoft Docs
+title: executeQuery メソッド (java.lang.String) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: 610205c2-6bcd-426c-ad6f-9682551efdec
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 4d266af1e09c457db4742d6aca06df65acfd505a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 38e5a31ccaf493a8800f0e15abd1c21424db07c7
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47774375"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67954818"
 ---
 # <a name="executequery-method-javalangstring"></a>executeQuery (java.lang.String) メソッド
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -38,7 +37,7 @@ public final java.sql.ResultSet executeQuery(java.lang.String sql)
 #### <a name="parameters"></a>パラメーター  
  *sql*  
   
- A**文字列**SQL ステートメントを格納しています。  
+ SQL ステートメントを含む**文字列**です。  
   
 ## <a name="return-value"></a>戻り値  
  SQLServerResultSet オブジェクトです。  

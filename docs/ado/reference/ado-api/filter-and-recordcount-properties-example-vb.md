@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: e8bc63c7-8967-438a-9a49-512478a87a15
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 9038609907c7649755a46002927ccafb71090754
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 6f94440d9ddd0d0b5091f2a106f603397147ebda
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47675420"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67918639"
 ---
 # <a name="filter-and-recordcount-properties-example-vb"></a>Filter および RecordCount プロパティの例 (VB)
 この例のオープン、[レコード セット](../../../ado/reference/ado-api/recordset-object-ado.md)で発行元のテーブルで、 ***Pubs***データベース。 次を使用して、[フィルター](../../../ado/reference/ado-api/filter-property.md)プロパティを特定の国/地域のパブリッシャーに対して表示されるレコードの数を制限します。 **RecordCount**プロパティを使用してフィルター処理されたとフィルター処理されていないレコード セットの間の差分を表示します。  
@@ -115,7 +114,7 @@ End Sub
 Attribute VB_Name = "Filter"  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [プロパティをフィルター処理します。](../../../ado/reference/ado-api/filter-property.md)   
  [RecordCount プロパティ (ADO)](../../../ado/reference/ado-api/recordcount-property-ado.md)   
  [Recordset オブジェクト (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)

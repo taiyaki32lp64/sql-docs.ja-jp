@@ -1,7 +1,7 @@
 ---
-title: SQL Server トランザクション ログのアーキテクチャと管理ガイド | Microsoft Docs
+title: トランザクション ログのアーキテクチャと管理ガイド
 ms.custom: ''
-ms.date: 01/05/2018
+ms.date: 10/23/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -20,14 +20,13 @@ helpviewer_keywords:
 ms.assetid: 88b22f65-ee01-459c-8800-bcf052df958a
 author: rothja
 ms.author: jroth
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 262e55ab61f3e4ee68e905ea264ae15f450b58ed
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 82ee5bbda78f41796134a2d1ad3a639f76748bcd
+ms.sourcegitcommit: 15fe0bbba963d011472cfbbc06d954d9dbf2d655
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51658074"
+ms.lasthandoff: 11/14/2019
+ms.locfileid: "74095655"
 ---
 # <a name="sql-server-transaction-log-architecture-and-management-guide"></a>SQL Server トランザクション ログのアーキテクチャと管理ガイド
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -36,7 +35,7 @@ ms.locfileid: "51658074"
 
   
 ##  <a name="Logical_Arch"></a> トランザクション ログの論理アーキテクチャ  
- [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] のトランザクション ログは、論理的にはトランザクション ログが一続きのログ レコードから構成されているものとして機能します。 それぞれのログ レコードは、LSN (ログ シーケンス番号) によって識別されます。 新しい各ログ レコードは、ログの論理上の末尾に前レコードの LSN より大きな LSN を付けて書き込まれます。 ログ レコードは、作成された順で連続して保管されます。 各ログ レコードにはトランザクション ID が含まれ、どのトランザクションについてのレコードかを示します。 各トランザクションに関連付けられているログ レコードはすべて、逆方向のポインターを使用して連鎖的にリンクされており、これによってトランザクションのロールバックをスピードアップできます。  
+ [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] のトランザクション ログは、論理的にはトランザクション ログが一続きのログ レコードから構成されているものとして機能します。 それぞれのログ レコードは、LSN (ログ シーケンス番号) によって識別されます。 新しい各ログ レコードは、ログの論理上の末尾に前レコードの LSN より大きな LSN を付けて書き込まれます。 ログ レコードは、作成された順で連続して保管されます。LSN2 が LSN1 より大きい場合、LSN2 によって参照されるログ レコードで示される変更は、ログ レコード LSN1 で示される変更の後に行われます。 各ログ レコードにはトランザクション ID が含まれ、どのトランザクションについてのレコードかを示します。 各トランザクションに関連付けられているログ レコードはすべて、逆方向のポインターを使用して連鎖的にリンクされており、これによってトランザクションのロールバックをスピードアップできます。  
   
  データ変更のログ レコードには、実行した論理操作の記録または変更したデータの前後のイメージの記録が行われます。 前イメージは、操作が実行される前のデータのコピーです。後イメージは、操作を実行した後のデータのコピーです。  
   
@@ -66,7 +65,9 @@ ms.locfileid: "51658074"
   
  ロールバック操作も記録されます。 トランザクションごとにトランザクション ログの領域が予約されるので、明示的にロールバック ステートメントを実行したときやエラーが発生したときのロールバックに備え、十分なログ領域が確保されます。 予約領域のサイズは、トランザクションで実行される操作によって変わりますが、一般には各操作を記録するために使用される領域のサイズと同じです。 この予約領域は、トランザクションが完了したときに解放されます。  
   
-<a name="minlsn"></a> ログ ファイルの中で、データベース全体を正常にロールバックするために必要な最初のログ レコードから最後に書き込まれたログ レコードまでの部分を、ログのアクティブな部分、または*アクティブ ログ*といいます。 これは、データベースの完全復旧を実行するために必要なログのセクションです。 アクティブなログはどの部分も切り捨てることができません。 この先頭ログ レコードの[ログ シーケンス番号 (LSN)](../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#Logical_Arch) は、**最小復旧 LSN (*MinLSN*)** と呼ばれます。  
+<a name="minlsn"></a> ログ ファイルの中で、データベース全体を正常にロールバックするために必要な最初のログ レコードから、最後に書き込まれたログ レコードまでの部分を、ログのアクティブな部分、"*アクティブ ログ*"、または "*ログの末尾*" と呼びます。 これは、データベースの完全[復旧](../relational-databases/backup-restore/restore-and-recovery-overview-sql-server.md#TlogAndRecovery)を実行するために必要なログの部分です。 アクティブなログはどの部分も切り捨てることができません。 この最初のログ レコードのログ シーケンス番号 (LSN) は、**最小復旧 LSN (*MinLSN*)** と呼ばれています。 トランザクション ログでサポートされている操作について詳しくは、「[トランザクション ログ (SQL Server)](../relational-databases/logs/the-transaction-log-sql-server.md)」をご覧ください。  
+
+差分バックアップとログ バックアップの場合、復元されるデータベースは LSN が大きい方、つまり、より後の時点に向かって進められます。 
   
 ##  <a name="physical_arch"></a> トランザクション ログの物理アーキテクチャ  
 データベースのトランザクション ログは、1 つ以上の物理ファイルにマップされます。 概念的には、ログ ファイルは一続きのログ レコードです。 物理的には、一連のログ レコードは、トランザクション ログを実装する一連の物理ファイルに効率的に格納されます。 1 つのデータベースにトランザクション ログ ファイルが少なくとも 1 つ必要です。  
@@ -232,14 +233,14 @@ CHECKPOINT ステートメントでは、チェックポイントが終了する
 LSN 148 はトランザクション ログの最後のレコードです。 LSN 147 に記録されたチェックポイントが処理された時点では、Tran 1 は既にコミットされており、Tran 2 だけがアクティブなトランザクションでした。 このため、Tran 2 の最初のログ レコードが、前回のチェックポイントの時点でアクティブなトランザクションの最も古いログ レコードになります。 したがって LSN 142、つまり Tran 2 の Begin トランザクション レコードが MinLSN になります。
 
 ### <a name="long-running-transactions"></a>長時間トランザクション
-
-アクティブなログには、コミットされていないすべてのトランザクションのあらゆる部分が含まれている必要があります。 トランザクションを開始したアプリケーションによりトランザクションがコミットまたはロールバックされないと、データベース エンジンでは MinLSN を進めることができません。 このことが原因で、次の 2 つの問題が発生します。
+アクティブなログには、コミットされていないすべてのトランザクションのあらゆる部分が含まれている必要があります。 トランザクションを開始したアプリケーションによりトランザクションがコミットまたはロールバックされないと、[!INCLUDE[ssde_md](../includes/ssde_md.md)] では MinLSN を進めることができません。 このことが原因で、次の 2 つの問題が発生します。
 
 * トランザクションにより多くの変更が加えられ、これをコミットせずにシステムをシャットダウンした場合、次にシステムを再起動したときの復旧フェーズは **[復旧間隔]** オプションで指定した時間よりもかなり長くかかることがあります。
 * ログは MinLSN を超えた位置で切り捨てることができないので、ログのサイズが非常に大きくなることがあります。 この現象は、自動チェックポイントのたびに通常はトランザクション ログが切り捨てられる単純復旧モデルをデータベースで使用している場合でも発生します。
 
-### <a name="replication-transactions"></a>レプリケーションのトランザクション
+[!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] 以降と [!INCLUDE[ssSDSfull](../includes/sssdsfull-md.md)] では、長時間トランザクションの復旧と上記の問題は、[高速データベース復旧](../relational-databases/backup-restore/restore-and-recovery-overview-sql-server.md#adr)を使うことで回避できます。  
 
+### <a name="replication-transactions"></a>レプリケーションのトランザクション
 ログ リーダー エージェントは、トランザクション レプリケーション用に構成した各データベースのトランザクション ログを監視し、レプリケーションのマークが付けられたトランザクションをトランザクション ログからディストリビューション データベースにコピーします。 アクティブなログには、レプリケーション用にマークされていて、まだディストリビューション データベースに配信されていないすべてのトランザクションが含まれている必要があります。 これらのトランザクションが時間どおりにレプリケートされない場合、そのことが原因でログを切り捨てられなくなる場合もあります。 詳細については、「 [Transactional Replication](../relational-databases/replication/transactional/transactional-replication.md)」 (トランザクション レプリケーション) を参照してください。
 
 ## <a name="see-also"></a>参照 
@@ -250,6 +251,7 @@ LSN 148 はトランザクション ログの最後のレコードです。 LSN 
 [トランザクション ログのバックアップ &#40;SQL Server&#41;](../relational-databases/backup-restore/transaction-log-backups-sql-server.md)   
 [データベース チェックポイント &#40;SQL Server&#41;](../relational-databases/logs/database-checkpoints-sql-server.md)   
 [recovery interval サーバー構成オプションの構成](../database-engine/configure-windows/configure-the-recovery-interval-server-configuration-option.md)    
+[高速データベース復旧](../relational-databases/backup-restore/restore-and-recovery-overview-sql-server.md#adr)       
 [sys.dm_db_log_info &#40;Transact-SQL&#41;](../relational-databases/system-dynamic-management-views/sys-dm-db-log-info-transact-sql.md)   
 [sys.dm_db_log_space_usage &#40;Transact-SQL&#41;](../relational-databases/system-dynamic-management-views/sys-dm-db-log-space-usage-transact-sql.md)    
 [SQL Server のログ記録と復旧について (著者: Paul Randal)](https://technet.microsoft.com/magazine/2009.02.logging.aspx)    

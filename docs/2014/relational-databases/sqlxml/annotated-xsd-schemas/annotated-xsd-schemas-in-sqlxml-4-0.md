@@ -14,15 +14,15 @@ helpviewer_keywords:
 - XSD schemas [SQLXML], annotations
 - schemas [SQLXML]
 ms.assetid: eecd0d5f-d3dd-4d20-9586-19820410ad47
-author: douglaslMS
-ms.author: douglasl
+author: MightyPen
+ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 85142b248fe8e734aeb1700d8eee353df1684d51
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: b5eecc52bb683f19582a539992b0668d3fe6e175
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52810864"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66014516"
 ---
 # <a name="annotated-xsd-schemas-in-sqlxml-40"></a>SQLXML 4.0 における注釈付き XSD スキーマ
   ここでは、SQLXML 4.0 での注釈付き XSD スキーマの使用について、情報を提供します。 以前のバージョンの SQLXML では、同様の機能が XML-Data Reduced (XDR) スキーマで提供されていました。 ここではレガシ アプリケーション用の XDR に関する情報も提供します。  

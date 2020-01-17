@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 0e08af60-f668-4092-8b6a-9e8b6db90448
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: b9a158f5f31239a9e8c3dc791a86e4fdacceb8c5
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 5ad0cfea4762dc1e6e757a0fe6182505927b70c8
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47666236"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67932096"
 ---
 # <a name="move-method-example-vc"></a>Move メソッドの例 (VC++)
 この例では、[移動](../../../ado/reference/ado-api/move-method-ado.md)ユーザー入力に基づいてメソッドをレコード ポインターの位置します。  
@@ -242,7 +241,7 @@ void PrintComError(_com_error &e) {
 0  
 ```  
   
-## <a name="sample-output"></a>サンプル出力  
+## <a name="sample-output"></a>出力例  
   
 ```  
 Record 1 of 23  
@@ -258,5 +257,5 @@ Enter number of records to Move
 (positive or negative, Enter to quit):  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [Move メソッド (ADO)](../../../ado/reference/ado-api/move-method-ado.md)

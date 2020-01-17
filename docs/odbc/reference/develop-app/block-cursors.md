@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 1a92b5d8-7c6e-4ce5-8c99-600a387026aa
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: dc62e7b5225c434bac33630f2f0cf8f39c72bfc9
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 3e0ea6ff655140c979f400f67a59cd7259bac9e5
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52504684"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68118818"
 ---
 # <a name="block-cursors"></a>ブロック カーソル
 多くのアプリケーションでは、かなりのネットワーク経由でデータを取り込む時間を費やしています。 この時間の一部では、実際には、ネットワーク経由でデータを取り込むに費やされ、行のデータを要求する、ドライバーによって行われた呼び出しなどの一部がネットワークのオーバーヘッドに費やされました。 アプリケーションが効率的に使用した場合、後者の時間を短縮できます。*ブロック、* または*fat、* *カーソル、* を一度に 1 つ以上の行を返すことができます。  

@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 093c5208-bf7a-49f4-a546-72b48197cadf
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 78517d525165c7186c1ecccb2c1fc3561a7f3f45
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: d2f9c6101be3dba631a9e0cbebdfedc3444c72d5
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53203741"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67991473"
 ---
 # <a name="always-on-availability-group-is-offline"></a>Always On 可用性グループがオフライン
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

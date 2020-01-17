@@ -4,23 +4,22 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 f1_keywords:
 - sql12.rtp.rptdesigner.layoutview.f1
 helpviewer_keywords:
 - Layout View dialog box
 ms.assetid: 6fa378aa-442f-4d2f-beab-02a0fb5cd3ce
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 6d703bc03c6ad715efad06612b06210f8bad4bc1
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 63ac5bf29ca441a18be4bc5e46448475b56104bc
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56010424"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66100294"
 ---
 # <a name="design-view"></a>[デザイン] ビュー
   [デザイン] ビューを使用すると、レポートにレポート アイテムを配置できます。 [デザイン] ビューは、デザイン画面またはレイアウト ビューと呼ばれることもあります。  

@@ -23,17 +23,20 @@ helpviewer_keywords:
 - version properties [Integration Services]
 - SQL Server Integration Services packages, properties
 ms.assetid: 13f81c3e-2b18-4f83-b445-a2f4a2c560aa
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: bb7ed2c7f9989344a44a2ad2de9a59d2c4a2e1fa
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: b6f3217854bf72f3c7300c87aefceab24220401a
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52525261"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71281936"
 ---
 # <a name="set-package-properties"></a>パッケージのプロパティを設定する
+
+[!INCLUDE[ssis-appliesto](../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] のグラフィカル インターフェイスを使用して [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] のパッケージを作成する場合、パッケージ オブジェクトのプロパティは [プロパティ] ウィンドウで設定します。  
   
  **[プロパティ]** ウィンドウでは、プロパティが分類され、アルファベット順で一覧が提供されます。 **[プロパティ]** ウィンドウの表示をカテゴリ別に並べ替えるには、[項目別] アイコンをクリックします。  
@@ -50,7 +53,7 @@ ms.locfileid: "52525261"
   
 -   [その他](#Misc)  
   
--   [Security](#Security)  
+-   [セキュリティ](#Security)  
   
 -   [トランザクション](#Transactions)  
   
@@ -110,7 +113,7 @@ ms.locfileid: "52525261"
 |**CreatorName**|パッケージの作成者の名前です。|  
 |**[説明]**|パッケージ機能の説明です。|  
 |**ID**|パッケージ GUID です。パッケージが作成されるときに割り当てられます。 このプロパティは読み取り専用です。 **ID** プロパティの新しい値をランダムに生成するには、ドロップダウン リストで **[\<新しい ID の設定\>]** を選択します。|  
-|**名前**|パッケージの名前です。|  
+|**[名前]**|パッケージの名前です。|  
 |**PackageType**|パッケージの種類です。 値は、 **Default**、 **DTSDesigner**、 **DTSDesigner100**、 **DTSWizard**、 **SQLDBMaint**、および **SQLReplication**です。 このプロパティの既定値は **Default**です。 詳細については、「 <xref:Microsoft.SqlServer.Dts.Runtime.DTSPackageType>」を参照してください。|  
   
 ###  <a name="Misc"></a> その他  
@@ -140,7 +143,7 @@ ms.locfileid: "52525261"
   
 |プロパティ|[説明]|  
 |--------------|-----------------|  
-|**IsolationLevel**|パッケージ トランザクションの分離レベルです。 値は、 **Unspecified**、 **Chaos**、 **ReadUncommitted**、 **ReadCommitted**、 **RepeatableRead**、 **Serializable**、および **Snapshot**です。 このプロパティの既定値は **Serializable**です。<br /><br /> 注: **IsolationLevel** プロパティの値 **Snapshot** は、パッケージ トランザクションと互換性がありません。 したがって、 **IsolationLevel** プロパティを使用して、パッケージ トランザクションの分離レベルを **Shapshot**に設定することはできません。 SQL クエリを使用して、パッケージ トランザクションを **Snapshot**に設定してください。 詳細については、「[SET TRANSACTION ISOLATION LEVEL &#40;Transact-SQL&#41;](../t-sql/statements/set-transaction-isolation-level-transact-sql.md)」を参照してください。<br /><br /> **IsolationLevel** プロパティは、 **TransactionOption** プロパティの値が **Required**の場合にのみ、パッケージ トランザクションに適用されます。<br /><br /> 子コンテナーによって要求された **IsolationLevel** プロパティの値は、以下の場合には無視されます。<br />子コンテナーの **TransactionOption** プロパティの値が **Supported**である場合。<br />子コンテナーが親コンテナーのトランザクションに参加する場合。<br /><br /> コンテナーによって要求された **IsolationLevel** プロパティの値は、コンテナーが新しいトランザクションを開始する場合にのみ利用されます。 コンテナーは、次の場合に新しいトランザクションを開始します。<br />コンテナーの **TransactionOption** プロパティの値が **Required**である場合。<br />親がまだトランザクションを開始していない場合。<br /><br /> <br /><br /> 詳細については、「 <xref:Microsoft.SqlServer.Dts.Runtime.DtsContainer.IsolationLevel%2A>」を参照してください。|  
+|**IsolationLevel**|パッケージ トランザクションの分離レベルです。 値は、 **Unspecified**、 **Chaos**、 **ReadUncommitted**、 **ReadCommitted**、 **RepeatableRead**、 **Serializable**、および **Snapshot**です。 このプロパティの既定値は **Serializable**です。<br /><br /> 注:**IsolationLevel** プロパティの値 **Snapshot** は、パッケージ トランザクションと互換性がありません。 したがって、 **IsolationLevel** プロパティを使用して、パッケージ トランザクションの分離レベルを **Shapshot**に設定することはできません。 SQL クエリを使用して、パッケージ トランザクションを **Snapshot**に設定してください。 詳細については、「[SET TRANSACTION ISOLATION LEVEL &#40;Transact-SQL&#41;](../t-sql/statements/set-transaction-isolation-level-transact-sql.md)」を参照してください。<br /><br /> **IsolationLevel** プロパティは、 **TransactionOption** プロパティの値が **Required**の場合にのみ、パッケージ トランザクションに適用されます。<br /><br /> 子コンテナーによって要求された **IsolationLevel** プロパティの値は、以下の場合には無視されます。<br />子コンテナーの **TransactionOption** プロパティの値が **Supported**である場合。<br />子コンテナーが親コンテナーのトランザクションに参加する場合。<br /><br /> コンテナーによって要求された **IsolationLevel** プロパティの値は、コンテナーが新しいトランザクションを開始する場合にのみ利用されます。 コンテナーは、次の場合に新しいトランザクションを開始します。<br />コンテナーの **TransactionOption** プロパティの値が **Required**である場合。<br />親がまだトランザクションを開始していない場合。<br /><br /> <br /><br /> 詳細については、「 <xref:Microsoft.SqlServer.Dts.Runtime.DtsContainer.IsolationLevel%2A>」を参照してください。|  
 |**TransactionOption**|パッケージに対するトランザクションの関与を示します。 値は、 **NotSupported**、 **Supported**、および **Required**です。 このプロパティの既定値は **Supported**です。 詳細については、「 <xref:Microsoft.SqlServer.Dts.Runtime.DTSTransactionOption>」を参照してください。|  
   
 ###  <a name="Version"></a> バージョン  

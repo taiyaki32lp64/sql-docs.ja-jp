@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 4a798921-d7bb-47c9-a252-550fd9463ec9
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 74ea4a208cad079933b27a7305a5ce0462e08515
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 0b5afe84664719da5a1dbc7777aef524be28c459
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47639200"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67925335"
 ---
 # <a name="filtering-for-updated-records"></a>更新されたレコードのフィルター処理
 UpdateBatch を呼び出す前に、レコード セットを開いた後に変更されているレコードだけを表示するレコード セットのフィルター プロパティまたは UpdateBatch の最後の呼び出しを使用できます。 これを行うには、等しい、次のセクションのコード例で示すように、レコードの数が更新されますを判断するには、行と列にフィルターを設定します。  
@@ -55,5 +54,5 @@ UpdateBatch を呼び出す前に、レコード セットを開いた後に変�
 'EndFilterPend  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [バッチ モード](../../../ado/guide/data/batch-mode.md)

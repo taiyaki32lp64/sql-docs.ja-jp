@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: analysis-services
 ms.topic: reference
 helpviewer_keywords:
 - regular attributes [Analysis Services]
@@ -24,12 +22,12 @@ ms.assetid: 59de1ea2-e7a9-4a53-9ee0-14be52e95643
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: a42447bb508fee0510dc1d4543828475f584ed76
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 6c1f1c6644e14beaee7bdcab9e3f50129f73b7bc
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48165872"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62727396"
 ---
 # <a name="attributes-and-attribute-hierarchies"></a>属性と属性階層
   ディメンションとは属性のコレクションで、これらの属性はデータ ソース ビュー内のテーブルまたはビューの 1 つ以上の列にバインドされています。  
@@ -49,7 +47,7 @@ ms.locfileid: "48165872"
  スター スキーマでは既定ですべての属性がキー属性に直接関連付けられます。したがってユーザーはディメンション内の任意の属性階層に基づいてキューブ内のファクトを参照できます。 スノーフレーク スキーマでは、基になるテーブルをファクト テーブルに直接リンクしている場合、属性はキー属性に直接リンクされます。または、直接リンクしているテーブルにスノーフレーク テーブルをリンクする、基になるテーブルのキーにバインドされた属性によって間接的にリンクされます。  
   
 ## <a name="see-also"></a>関連項目  
- [ユーザー定義階層を作成します。](../multidimensional-models/user-defined-hierarchies-create.md)   
+ [ユーザー定義階層の作成](../multidimensional-models/user-defined-hierarchies-create.md)   
  [属性リレーションシップを定義します。](../multidimensional-models/attribute-relationships-define.md)   
  [ディメンションの属性のプロパティの参照](../multidimensional-models/dimension-attribute-properties-reference.md)  
   

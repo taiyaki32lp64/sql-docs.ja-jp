@@ -15,18 +15,17 @@ helpviewer_keywords:
 ms.assetid: 9e1cb96e-5889-4f97-88cd-f60cf313ce68
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 74aa782a7dcf6abdc71ca82dc104406948f21989
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: b675b07466464f706b6503f3d017acd34822b2c8
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52802304"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67933901"
 ---
 # <a name="spdropmergepublication-transact-sql"></a>sp_dropmergepublication (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  マージ パブリケーションおよびこれと関連するスナップショット エージェントを削除します。 マージ パブリケーションを削除する前に、すべてのサブスクリプションを削除しておく必要があります。 パブリケーション内のアーティクルは自動的に削除されます。 このストアド プロシージャは、パブリッシャー側でパブリケーション データベースについて実行されます。  
+  マージ パブリケーションとその関連するスナップショット エージェントを削除します。 マージ パブリケーションを削除する前に、すべてのサブスクリプションを削除しておく必要があります。 パブリケーションのアーティクルが自動的に削除されます。 このストアド プロシージャは、パブリッシャー側でパブリケーション データベースについて実行されます。  
   
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -41,17 +40,13 @@ sp_dropmergepublication [ @publication= ] 'publication'
 ```  
   
 ## <a name="arguments"></a>引数  
- [ **@publication=**] **'***publication***'**  
- 削除するパブリケーションの名前です。 *パブリケーション*は**sysname**、既定値はありません。 場合**すべて**、それらに関連付けられているスナップショット エージェント ジョブおよびすべての既存のマージ パブリケーションが削除されます。 特定の値を指定する場合*パブリケーション*、そのパブリケーションのみとその関連付けられているスナップショット エージェント ジョブが削除されます。  
+`[ @publication = ] 'publication'` 削除するパブリケーションの名前です。 *パブリケーション* は **sysname** 、既定値はありません。 場合**すべて**、それらに関連付けられているスナップショット エージェント ジョブおよびすべての既存のマージ パブリケーションが削除されます。 特定の値を指定する場合*パブリケーション*、そのパブリケーションのみとその関連付けられているスナップショット エージェント ジョブが削除されます。  
   
- [  **@ignore_distributor =**] *ignore_distributor*  
- ディストリビューター側でクリーンアップを行わずに、パブリケーションを削除する場合に使用します。 *ignore_distributor*は**ビット**、既定値は**0**します。 このパラメーターは、ディストリビューターを再インストールするときにも使用します。  
+`[ @ignore_distributor = ] ignore_distributor` ディストリビューターでクリーンアップ タスクを実行せず、パブリケーションを削除するために使用します。 *ignore_distributor*は**ビット**、既定値は**0**します。 このパラメーターは、ディストリビューターを再インストールするときにも使用されます。  
   
- [  **@reserved=**]*予約済み*  
- 将来の使用に備えて予約されています。 *予約済み*は**ビット**、既定値は**0**します。  
+`[ @reserved = ] reserved` 将来使用するために予約されています。 *予約済み*は**ビット**、既定値は**0**します。  
   
- [  **@ignore_merge_metadata=** ] *ignore_merge_metadata*  
- 内部使用のみです。  
+`[ @ignore_merge_metadata = ] ignore_merge_metadata` 内部でのみ使用します。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  **0** (成功) または**1** (失敗)  
@@ -59,7 +54,7 @@ sp_dropmergepublication [ @publication= ] 'publication'
 ## <a name="remarks"></a>コメント  
  **sp_dropmergepublication**はマージ レプリケーションで使用します。  
   
- **sp_dropmergepublication**再帰的には、パブリケーションに関連付けられているすべてのアーティクルを削除し、後、パブリケーション自体が削除されます。 1 つでもサブスクリプションがあると、パブリケーションを削除することはできません。 サブスクリプションを削除する方法については、次を参照してください。 [Delete a Push Subscription](../../relational-databases/replication/delete-a-push-subscription.md)と[Delete a Pull Subscription](../../relational-databases/replication/delete-a-pull-subscription.md)します。  
+ **sp_dropmergepublication**再帰的には、パブリケーションに関連付けられているすべてのアーティクルを削除し、後、パブリケーション自体が削除されます。 1 つまたは複数のサブスクリプションがある場合、パブリケーションを削除できません。 サブスクリプションを削除する方法については、次を参照してください。 [Delete a Push Subscription](../../relational-databases/replication/delete-a-push-subscription.md)と[Delete a Pull Subscription](../../relational-databases/replication/delete-a-pull-subscription.md)します。  
   
  実行**sp_dropmergepublication**パブリケーションを削除するオブジェクトは削除されませんパブリッシュされたパブリケーション データベースまたはサブスクリプション データベースから対応するオブジェクト。 ドロップを使用して\<オブジェクト > に必要な場合は、これらのオブジェクトを手動で削除します。  
   

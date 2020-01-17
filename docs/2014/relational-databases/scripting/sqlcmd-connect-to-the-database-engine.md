@@ -1,11 +1,10 @@
 ---
-title: sqlcmd によるデータベース エンジンへの接続 | Microsoft Docs
-ms.custom: ''
+title: sqlcmd によるデータベース エンジンへの接続
+ms.custom: seo-lt-2019
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 helpviewer_keywords:
 - sqlcmd utility, Database Engine connections
@@ -19,17 +18,18 @@ ms.assetid: 74b0fb71-7f8e-4171-9431-d07528532524
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 1458e1e7fa43b69d771bfcadcc1c0fa039a97c09
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 94025942a6e06f4dfb7b0eeab43487e4a6308e4f
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48073228"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75243259"
 ---
 # <a name="connect-to-the-database-engine-with-sqlcmd"></a>sqlcmd によるデータベース エンジンへの接続
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] TCP/IP ネットワーク プロトコル (既定) および名前付きパイプ プロトコルを使用したクライアント通信をサポートしています。 クライアントが、同じコンピューター上で [!INCLUDE[ssDE](../../includes/ssde-md.md)] のインスタンスに接続している場合は、共有メモリ プロトコルも使用できます。 プロトコルの選択には、3 つの一般的な方法があります。 **sqlcmd** ユーティリティで使用されるプロトコルは、次の順序で決定されます。  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]では、TCP/IP ネットワークプロトコル (既定) と名前付きパイププロトコルを使用したクライアント通信がサポートされています。 クライアントが、同じコンピューター上で[!INCLUDE[ssDE](../../includes/ssde-md.md)]のインスタンスに接続している場合は、共有メモリ プロトコルも使用できます。 プロトコルの選択には、3 つの一般的な方法があります。 
+  **sqlcmd** ユーティリティで使用されるプロトコルは、次の順序で決定されます。  
   
--   **sqlcmd** では、下に示す接続文字列の一部として指定されているプロトコルが使用されます。  
+-   **sqlcmd**では、次に示すように、接続文字列の一部として指定されたプロトコルを使用します。  
   
 -   接続文字列でプロトコルが指定されていない場合、 **sqlcmd** では、接続先の別名の一部として定義されているプロトコルが使用されます。 別名を作成して特定のネットワーク プロトコルを使用するように **sqlcmd** を構成するには、「[クライアントが使用するサーバーの別名の作成または削除 &#40;SQL Server 構成マネージャー&#41;](../../database-engine/configure-windows/create-or-delete-a-server-alias-for-use-by-a-client.md)」を参照してください。  
   

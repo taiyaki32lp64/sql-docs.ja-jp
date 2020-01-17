@@ -1,5 +1,5 @@
 ---
-title: 要素をデータベース サーバー (DTA) |Microsoft Docs
+title: Server の Database 要素 (DTA) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -12,15 +12,14 @@ dev_langs:
 helpviewer_keywords:
 - Database element
 ms.assetid: 5cd9a87a-af4b-45f3-8c18-f7fd7e7d3064
-author: stevestein
-ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 23e6563cf5d42ce86cf7598414d224d9200efce9
-ms.sourcegitcommit: 0f7cf9b7ab23df15624d27c129ab3a539e8b6457
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 5817a6d32ff94aaba7e4c0a573e6cd6a5fd586dc
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51292998"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68116931"
 ---
 # <a name="database-element-for-server-dta"></a>Server の Database 要素 (DTA)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

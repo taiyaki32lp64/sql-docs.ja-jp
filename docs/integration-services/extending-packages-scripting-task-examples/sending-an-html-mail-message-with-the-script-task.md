@@ -14,17 +14,20 @@ helpviewer_keywords:
 - Script task [Integration Services], examples
 - Script task [Integration Services], HTML mail message
 ms.assetid: dd2b1eef-b04f-4946-87ab-7bc56bb525ce
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: 583d79e28c615d5b094676a350adcd54215a85e2
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: eb1de7efdc8592551343a9424e4ab3b1dd1f69f9
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47819850"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71286744"
 ---
 # <a name="sending-an-html-mail-message-with-the-script-task"></a>スクリプト タスクによる HTML メール メッセージの送信
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] の SendMail タスクでは、プレーン テキスト形式のメール メッセージのみがサポートされています。 ただし、.NET Framework のスクリプト タスクとメール機能を使用して、HTML メール メッセージを簡単に送信できます。  
   
 > [!NOTE]  
@@ -37,7 +40,7 @@ ms.locfileid: "47819850"
   
 1.  `HtmlEmailTo`、`HtmlEmailFrom`、および `HtmlEmailSubject` という名前の文字列変数を作成し、これらに適切な値を割り当てて、有効なテスト メッセージを用意します。  
   
-2.  `HtmlEmailBody` という名前の文字列変数を作成し、HTML マークアップの文字列を割り当てます。 例 :  
+2.  `HtmlEmailBody` という名前の文字列変数を作成し、HTML マークアップの文字列を割り当てます。 例:  
   
     ```  
     <html><body><h1>Testing</h1><p>This is a <b>test</b> message.</p></body></html>  

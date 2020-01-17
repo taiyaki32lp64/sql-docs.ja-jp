@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 ms.assetid: ccf03e32-6bd9-43c0-b9b6-9fe0d9163339
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: e8b179d54ff39ffbb67193f88cd192aac6992d7d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 3eb00922b4f6e21dd4cfc8a46d8c0c27ed9a5be1
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48112792"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66095474"
 ---
 # <a name="distributed-replay-client-configuration"></a>分散再生クライアントの構成
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インストール ウィザードの **[分散再生クライアントの構成]** ページを使用して、分散再生クライアント サービスに対する管理権限を付与するユーザーを指定します。  

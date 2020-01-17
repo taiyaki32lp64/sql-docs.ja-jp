@@ -1,5 +1,5 @@
 ---
-title: 分散再生 - 概要のインストール |Microsoft Docs
+title: 分散再生のインストール-概要 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 7ab77d42-8e84-4396-aa7f-47e2b84d59b2
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: c75e4ef92a6410fa07fdc17b899a52b24d7804cc
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 72fde1ec93e60195f92c2ee167e5c5c9e3a8d6c2
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47836010"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68039047"
 ---
 # <a name="install-distributed-replay---overview"></a>分散再生のインストール - 概要
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

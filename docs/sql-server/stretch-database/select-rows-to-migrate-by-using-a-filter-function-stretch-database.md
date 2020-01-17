@@ -1,5 +1,5 @@
 ---
-title: フィルター関数を使用して移行する行を選択する (Stretch Database) | Microsoft Docs
+title: フィルター関数を使用して移行する行を選択する
 ms.date: 06/27/2016
 ms.service: sql-server-stretch-database
 ms.reviewer: ''
@@ -12,13 +12,13 @@ helpviewer_keywords:
 ms.assetid: 090890ee-7620-4a08-8e15-d2fbc71dd12f
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 6a3099541a4eb83e321c0a73422c98b303c375e6
-ms.sourcegitcommit: ec1f01b4bb54621de62ee488decf9511d651d700
+ms.custom: seo-dt-2019
+ms.openlocfilehash: f744dbde25bf5f7b307ccb44e03de70c1b60cc66
+ms.sourcegitcommit: f688a37bb6deac2e5b7730344165bbe2c57f9b9c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/14/2019
-ms.locfileid: "56240856"
+ms.lasthandoff: 11/08/2019
+ms.locfileid: "73844550"
 ---
 # <a name="select-rows-to-migrate-by-using-a-filter-function-stretch-database"></a>フィルター関数を使用して移行する行を選択する (Stretch Database)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md-winonly](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md-winonly.md)]
@@ -152,7 +152,7 @@ RETURN  SELECT 1 AS is_eligible
  サブクエリや非決定論的関数 (RAND() や GETDATE() など) は使用できません。  
   
 ## <a name="add-a-filter-function-to-a-table"></a>フィルター関数をテーブルに追加する  
- **ALTER TABLE** ステートメントを実行し、 **FILTER_PREDICATE** パラメーターの値として既存のインライン テーブル値関数を指定して、テーブルにフィルター関数を追加します。 例 :  
+ **ALTER TABLE** ステートメントを実行し、 **FILTER_PREDICATE** パラメーターの値として既存のインライン テーブル値関数を指定して、テーブルにフィルター関数を追加します。 例:  
   
 ```sql  
 ALTER TABLE stretch_table_name SET ( REMOTE_DATA_ARCHIVE = ON (  
@@ -484,7 +484,7 @@ COMMIT ;
     ```  
   
 ## <a name="how-stretch-database-applies-the-filter-function"></a>Stretch Database がフィルター関数を適用するしくみ  
- Stretch Database では、CROSS APPLY 演算子を使用してテーブルにフィルター関数を適用し、対象となる行を決定します。 例 :  
+ Stretch Database では、CROSS APPLY 演算子を使用してテーブルにフィルター関数を適用し、対象となる行を決定します。 例:  
   
 ```sql  
 SELECT * FROM stretch_table_name CROSS APPLY fn_stretchpredicate(column1, column2)  
@@ -493,7 +493,7 @@ SELECT * FROM stretch_table_name CROSS APPLY fn_stretchpredicate(column1, column
  関数から行の空ではない結果が返された場合、その行は移行の対象になります。  
   
 ## <a name="replacePredicate"></a>既存のフィルター関数の置き換え  
- 以前に指定したフィルター関数を置き換えるには、 **ALTER TABLE** ステートメントをもう一度実行し、 **FILTER_PREDICATE** パラメーターに新しい値を指定します。 例 :  
+ 以前に指定したフィルター関数を置き換えるには、 **ALTER TABLE** ステートメントをもう一度実行し、 **FILTER_PREDICATE** パラメーターに新しい値を指定します。 例:  
   
 ```sql  
 ALTER TABLE stretch_table_name SET ( REMOTE_DATA_ARCHIVE = ON (  
@@ -588,7 +588,7 @@ GO
 ```  
   
 ## <a name="remove-a-filter-function-from-a-table"></a>テーブルからのフィルター関数の削除  
- 選択した行ではなく、テーブル全体を移行するには、 **FILTER_PREDICATE**  を null に設定して既存の関数を削除します。 例 :  
+ 選択した行ではなく、テーブル全体を移行するには、 **FILTER_PREDICATE**  を null に設定して既存の関数を削除します。 例:  
   
 ```sql  
 ALTER TABLE stretch_table_name SET ( REMOTE_DATA_ARCHIVE = ON (  

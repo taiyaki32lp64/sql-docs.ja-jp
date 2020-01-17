@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 5463be22-ca50-43ea-9c92-468fc8eda280
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 01be10781c0925683ed2da9fdff24190d175fca6
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a8e6f6a7cb749ff2b22a1f7563b43ce07e060aab
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47611410"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67911551"
 ---
 # <a name="childcount-property-ado-md"></a>ChildCount プロパティ (ADO MD)
 対象のメンバーの数を示す現在[メンバー](../../../ado/reference/ado-md-api/member-object-ado-md.md)オブジェクト階層の親であります。  
@@ -40,7 +39,7 @@ ms.locfileid: "47611410"
 ## <a name="applies-to"></a>適用対象  
  [Member オブジェクト (ADO MD)](../../../ado/reference/ado-md-api/member-object-ado-md.md)  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [Children プロパティ (ADO MD)](../../../ado/reference/ado-md-api/children-property-ado-md.md)   
  [Count プロパティ (ADO)](../../../ado/reference/ado-api/count-property-ado.md)   
  [Members コレクション (ADO MD)](../../../ado/reference/ado-md-api/members-collection-ado-md.md)

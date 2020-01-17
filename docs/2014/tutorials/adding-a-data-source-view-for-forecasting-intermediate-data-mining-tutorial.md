@@ -11,11 +11,11 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: f60ea2b2a642cf9435ed8366c42e43abb927e426
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56034803"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62823132"
 ---
 # <a name="adding-a-data-source-view-for-forecasting-intermediate-data-mining-tutorial"></a>予測用のデータ ソース ビューの追加 (中級者向けデータ マイニング チュートリアル)
   この作業では、予測シナリオに使用するデータ ソース ビューを追加します。 予測モデルでは、時系列内のステップを識別するための列がデータに含まれている必要があります。 複数の系列のデータを分析する場合は、すべての系列が終了する日付または時間ステップが同じである必要があります。  

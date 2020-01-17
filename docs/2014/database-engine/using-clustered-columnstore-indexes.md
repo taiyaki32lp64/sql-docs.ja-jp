@@ -11,11 +11,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 1e65c3e277eb9a3e5e3703525b9c1ac06b423c96
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52502700"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62773741"
 ---
 # <a name="using-clustered-columnstore-indexes"></a>クラスター化列ストア インデックスの使用
   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] のクラスター化 columnstore インデックスを使用するタスクです。  
@@ -84,8 +84,8 @@ GO
 |-----------------------|-----------------------------------|----------------------------------|  
 |102,000|0|102,000|  
 |145,000|145,000<br /><br /> 行グループのサイズ:145,000|0|  
-|1,048,577|1,048,576<br /><br /> 行グループのサイズ:1,048, 576 です。|1|  
-|2,252,152|2,252,152<br /><br /> 行グループのサイズ:1,048, 576、1,048, 576、155,000 できます。|0|  
+|1,048,577|1,048,576<br /><br /> 行グループのサイズ:1,048,576|1|  
+|2,252,152|2,252,152<br /><br /> 行グループのサイズ:1,048,576、1,048,576、155,000|0|  
   
  次の例は、1,048,577 個の行をパーティションに読み込んだ結果を示しています。 この結果では、列ストアに 1 つの圧縮された行グループ (圧縮された列セグメントとして)、およびデルタストアに 1 行があります。  
   
@@ -102,13 +102,13 @@ SELECT * FROM sys.column_store_row_groups
   
  使用[挿入&#40;TRANSACT-SQL&#41; ](/sql/t-sql/statements/insert-transact-sql)行を挿入します。 行はデルタストアに追加されます。  
   
-  [DELETE &#40;Transact-SQL&#41;](/sql/t-sql/statements/delete-transact-sql) を使用して行を削除します。  
+ [DELETE &#40;Transact-SQL&#41;](/sql/t-sql/statements/delete-transact-sql) を使用して行を削除します。  
   
 -   行が列ストアにある場合、[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] は行を論理的に削除されたとしてマークしますが、インデックスが再構築されるまで行の物理ストレージを再確保することはありません。  
   
 -   行がデルタストアにある場合、[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] は論理的および物理的に行を削除します。  
   
-  [UPDATE &#40;Transact-SQL&#41;](/sql/t-sql/queries/update-transact-sql) を使用して行を更新します。  
+ [UPDATE &#40;Transact-SQL&#41;](/sql/t-sql/queries/update-transact-sql) を使用して行を更新します。  
   
 -   行が列ストアにある場合、[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] は行を論理的に削除されたとしてマークし、更新された行をデルタストアに挿入します。  
   

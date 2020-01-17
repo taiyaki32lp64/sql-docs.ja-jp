@@ -4,23 +4,22 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords:
 - digital signatures [Integration Services]
 - signing packages [Integration Services]
 - signatures [Integration Services]
 ms.assetid: 182b115e-0fe2-4717-8dff-183f9eb6e397
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: c7a971b96de66cf766541b741c48f5477cf9db65
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 31da686dbf25922205ea4d1b03ecaa3758457573
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53350436"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66055621"
 ---
 # <a name="sign-a-package-by-using-a-digital-certificate"></a>デジタル証明書を使用してパッケージに署名する
   このトピックでは、デジタル証明書を使用して [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] パッケージに署名する方法について説明します。 デジタル署名を他の設定と共に使用して、有効でないパッケージの読み込みや実行を防ぐことができます。  

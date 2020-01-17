@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 7e15353cd9f4c4a837fe5978d00259ad5460d50d
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53358554"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63046627"
 ---
 # <a name="sqlputdata"></a>SQLPutData
   SQLPutData を使用して、65,535 バイトを超えるデータを送信するときに、次の制限が適用されます (の[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]4.21) または 400 KB を sql_longvarchar (SQL Server バージョン 6.0 以降) 用のデータを (`text`)、SQL_WLONGVARCHAR (`ntext`) またはSQL_LONGVARBINARY (`image`) 列。  

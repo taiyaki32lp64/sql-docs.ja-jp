@@ -12,16 +12,15 @@ f1_keywords:
 helpviewer_keywords:
 - Pick Schedule for Job dialog box
 ms.assetid: 6de2025d-c25c-47b9-9a25-18c294935c15
-author: stevestein
-ms.author: sstein
-manager: craigg
+author: markingmyname
+ms.author: maghan
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 38a26cecb2915f992578e49dc48ad6447f8d4223
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 12ed11bb3a4f475c79f2d2dc14532130a3b95280
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47635990"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68266828"
 ---
 # <a name="pick-schedule-for-job"></a>[ジョブのスケジュール選択]
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -31,11 +30,11 @@ ms.locfileid: "47635990"
 
 このダイアログを使用すると、[!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェント ジョブの既存のスケジュールを選択できます。  
   
-## <a name="options"></a>[変数]  
+## <a name="options"></a>オプション  
 **[利用可能なスケジュール]**  
 このジョブで利用可能なスケジュールの一覧を表示します。 ジョブとスケジュールの所有者は同じである必要があるので、この一覧には、このジョブの所有者が所有しているスケジュールだけが表示されます。  
   
-**名前**  
+**[名前]**  
 スケジュールの名前を表示します。  
   
 **有効**  

@@ -4,21 +4,20 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 f1_keywords:
 - "10018"
 ms.assetid: b956f43a-8426-4679-acc1-00f405d5ff5b
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 977a7dcb943b3479dd5649cfcf842aefcf469e90
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: 7bedf016dce02928bbd47dbfce60943ec667a824
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56285720"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66109466"
 ---
 # <a name="data-source-properties-dialog-box-general-report-builder"></a>[全般] ([データ ソースのプロパティ] ダイアログ ボックス) (レポート ビルダー)
   レポート サーバーから共有データ ソースを選択する場合や、レポートに埋め込まれたデータ ソースの接続情報を作成または変更する場合は、 **[データ ソースのプロパティ]** ダイアログ ボックスの **[全般]** を選択します。  
@@ -56,7 +55,7 @@ ms.locfileid: "56285720"
  データ処理拡張機能を選択します。 一覧には、登録されているすべての拡張機能が表示されます。  
   
  **[接続文字列]**  
- データ ソースの接続文字列を入力します。 **[構築]** をクリックして、 **[接続のプロパティ]** ダイアログ ボックスで接続文字列を生成します。 式を編集するには、 **式** (*[fx]*) ボタンをクリックします。  
+ データ ソースの接続文字列を入力します。 **[構築]** をクリックして、 **[接続のプロパティ]** ダイアログ ボックスで接続文字列を生成します。 式を編集するには、 **式** ( *[fx]* ) ボタンをクリックします。  
   
  **クエリの処理時に、1 つのトランザクションを使用します。**  
  このデータ ソースを使用するデータセットが、データベースに対する単一のトランザクションで処理されるように指定する場合は、このオプションを選択します。 同じデータ ソースを使用するサブレポートのトランザクションを含めるには、そのサブレポートを選択し、[プロパティ] ペインで **[MergeTransactions]** を **[True]** に設定します。  

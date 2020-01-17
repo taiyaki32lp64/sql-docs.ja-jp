@@ -13,11 +13,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 427223e6c11d47091741e032dc79b0ecafef1d00
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48130212"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62913491"
 ---
 # <a name="mssqlserver7910"></a>MSSQLSERVER_7910
     
@@ -30,7 +30,7 @@ ms.locfileid: "48130212"
 |イベント ソース|MSSQLSERVER|  
 |コンポーネント|SQLEngine|  
 |シンボル名|DBCC2_REPAIR_PAGE_ALLOCATED|  
-|メッセージ テキスト|修復 : ページ P_ID が、オブジェクト ID O_ID、インデックス ID I_ID、パーティション ID PN_ID、アロケーション ユニット ID A_ID (型 TYPE) に割り当てられました。|  
+|メッセージ テキスト|修復:ページ P_ID がオブジェクト ID O_ID、インデックス ID I_ID、パーティション ID PN_ID、アロケーション ユニット ID A_ID (型 TYPE) に割り当てられました。|  
   
 ## <a name="explanation"></a>説明  
  単一ページ スロット配列の IAM (Index Allocation Map) ページに 1 ページが割り当てられたことを示す、REPAIR からの情報メッセージです。  

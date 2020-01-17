@@ -12,13 +12,12 @@ f1_keywords:
 ms.assetid: 5377c59f-2e25-4852-a306-c87ae3dca9fd
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: edd8ea9a11a06182dced486ed1b03f1b916e15e4
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 1fcb84fe69c617cacc183910e3446400a172ea6d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47793260"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67903118"
 ---
 # <a name="configure-topology-peer-to-peer-replication"></a>[トポロジの構成] \(ピア ツー ピア レプリケーション)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -27,7 +26,7 @@ ms.locfileid: "47793260"
 > [!NOTE]  
 >  ピア ツー ピア トポロジ構成ウィザードでは、ウィザードの終了時にトポロジ情報が要求されます。 すべてのノードが情報の要求に応答する前にウィザードを閉じて再度開くと、ウィザードに不完全なネットワークが表示される場合があります。  
   
-## <a name="options"></a>[変数]  
+## <a name="options"></a>オプション  
  **[トポロジの構成]** ページには、要素を右クリックすると表示されるインターフェイス要素およびオプションがあります。 次の表では、各インターフェイス要素を説明します。  
   
 |インターフェイス要素|[説明]|  
@@ -35,7 +34,7 @@ ms.locfileid: "47793260"
 |デザイン画面|その他のインターフェイス要素を表示します。 要素を追加するには、デザイン画面を右クリックします。|  
 |![トポロジ内の最初のノード](../../relational-databases/replication/media/p2pwizard-firstnode.gif "トポロジ内の最初のノード")|トポロジの元のノード。 元のノードのパブリケーション データベースのコピーを使用して、新しいノードが初期化されます。|  
 |![完全な情報があるノード](../../relational-databases/replication/media/p2pwizard-complete.gif "完全な情報があるノード")|[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 以降のバージョンのインスタンスを実行しており、レプリケーションに含まれている情報が完全なノード。 構成オプションを指定するには、ノードを右クリックします。|  
-|![情報が不完全なノード](../../relational-databases/replication/media/p2pwizard-incomplete.gif "情報が不完全なノード")|レプリケーションに含まれている情報が不完全なノード。 構成オプションを指定するには、ノードを右クリックします。<br /><br /> レプリケーションに含まれている情報は、次のいずれかの理由で不完全になっています。<br /><br /> - ウィザードで必要なメタデータが一部格納されない [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]のインスタンスがノードで実行されている。<br /><br /> - [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]の最新バージョンがノードで実行されているが、レプリケーションがノードからサブスクリプション情報を取得できない。 このような場合は、次の方法で対処してください。<br /><br /> ノードのデータベースがオンラインであること、およびノードに接続するディストリビューション エージェントと同じ資格情報を使用してデータベースに接続できることを確認します。<br /><br /> ノードに接続するログ リーダー エージェントおよびすべてのディストリビューション エージェントが実行されていることを確認します。<br /><br /> すべてのトポロジ情報を収集できるように更新のタイムアウトが十分高く設定されていることを確認します。 タイムアウトを設定するには、デザイン画面を右クリックして **[更新のタイムアウトの設定]** をクリックします。|  
+|![情報が不完全なノード](../../relational-databases/replication/media/p2pwizard-incomplete.gif "情報が不完全なノード")|レプリケーションに含まれている情報が不完全なノード。 構成オプションを指定するには、ノードを右クリックします。<br /><br /> レプリケーションに含まれている情報は、次のいずれかの理由で不完全になっています。<br /><br /> \- ウィザードで必要なメタデータが一部格納されない [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]のインスタンスがノードで実行されている。<br /><br /> \- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]の最新バージョンがノードで実行されているが、レプリケーションがノードからサブスクリプション情報を取得できない。 このような場合は、次の方法で対処してください。<br /><br /> ノードのデータベースがオンラインであること、およびノードに接続するディストリビューション エージェントと同じ資格情報を使用してデータベースに接続できることを確認します。<br /><br /> ノードに接続するログ リーダー エージェントおよびすべてのディストリビューション エージェントが実行されていることを確認します。<br /><br /> すべてのトポロジ情報を収集できるように更新のタイムアウトが十分高く設定されていることを確認します。 タイムアウトを設定するには、デザイン画面を右クリックして **[更新のタイムアウトの設定]** をクリックします。|  
 |矢印の付いた灰色の線|2 つのノード間の接続。 接続を追加するには、接続するノードのいずれかを右クリックします。 接続を削除するには、接続を右クリックします。<br /><br /> 線に付いている矢印が単一の場合、レプリケーションに含まれているいずれかのノードの情報が不完全です。|  
   
 ### <a name="options-for-the-design-surface"></a>デザイン画面のオプション  
@@ -64,7 +63,7 @@ ms.locfileid: "47793260"
   
 ### <a name="options-for-each-node"></a>各ノードのオプション  
  **[新しいピア接続の追加]**  
- 2 つのノード間の接続を追加します。 たとえば、ノード A とノード B 間の接続を追加すると、レプリケーションによって 2 つのサブスクリプションが追加されます。最初のサブスクリプションによってノード A がノード B のパブリケーションから変更を受信できるようになり、2 番目のサブスクリプションによってノード B がノード A のパブリケーションから変更を受信できるようになります。  
+ 2 つのノード間の接続を追加します。 たとえば、ノード A とノード B 間の接続を追加すると、レプリケーションによって次の 2 つのサブスクリプションが追加されます。1 つ目によってノード A がノード B のパブリケーションから変更を受信できるようになり、2 つ目によってノード B がノード A のパブリケーションから変更を受信できるようになります。  
   
  **[ピア ノードの削除]**  
  トポロジからノードを削除します。 たとえば、ノード C を削除すると、そのノードのパブリケーションが削除されます。 ノード A とノード C、およびノード B とノード C 間のサブスクリプションも削除されます。 ノード C のデータベースは削除されず、パブリッシングおよびディストリビューションは無効になりません。  
@@ -85,6 +84,6 @@ ms.locfileid: "47793260"
 ## <a name="see-also"></a>参照  
  [パブリッシングとディストリビューションの構成](../../relational-databases/replication/configure-publishing-and-distribution.md)   
  [ピア ツー ピア トポロジの管理 &#40;レプリケーション Transact-SQL プログラミング&#41;](../../relational-databases/replication/administration/administer-a-peer-to-peer-topology-replication-transact-sql-programming.md)   
- [@loopback_detection](../../relational-databases/replication/transactional/peer-to-peer-transactional-replication.md)  
+ [ピア ツー ピア トランザクション レプリケーション](../../relational-databases/replication/transactional/peer-to-peer-transactional-replication.md)  
   
   

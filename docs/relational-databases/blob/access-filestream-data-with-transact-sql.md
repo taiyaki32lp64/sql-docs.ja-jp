@@ -10,15 +10,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - FILESTREAM [SQL Server], Transact-SQL
 ms.assetid: a6bf0ce7-7e5e-4a07-8917-ee526c9d0a05
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: 1bda35ca1d80c7513c1bab71e1f814cb6060a6fe
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: MikeRayMSFT
+ms.author: mikeray
+ms.openlocfilehash: 8e2a9ede7817eb504a5926ee1a7bb6be2019f0b1
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47657280"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68041235"
 ---
 # <a name="access-filestream-data-with-transact-sql"></a>Transact-SQL による FILESTREAM データへのアクセス
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

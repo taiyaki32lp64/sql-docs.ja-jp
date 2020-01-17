@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: 94e6c3e5-1f09-4616-9da2-4e44d066d494
 author: julieMSFT
 ms.author: jrasnick
-manager: craigg
-ms.openlocfilehash: 7556ef2e67eafe541558bd6a6033f4aa3c875d5d
-ms.sourcegitcommit: 40c3b86793d91531a919f598dd312f7e572171ec
+ms.openlocfilehash: a1cf7a4bb37abd60f7067381ba4da6a2d44328ee
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53328722"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67946984"
 ---
 # <a name="considerations-for-using-test-servers"></a>テスト サーバーの使用に関する注意点
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

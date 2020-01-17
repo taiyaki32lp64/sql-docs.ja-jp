@@ -8,13 +8,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-manager: kfile
-ms.openlocfilehash: d42a94ce4e878a3f4ac0ef14a48872bf5d32a144
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 77731495eb058da05f6c61be391591a40725e579
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52542458"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68088395"
 ---
 # <a name="nametoset-mdx"></a>NameToSet (MDX)
 

@@ -1,5 +1,5 @@
 ---
-title: updateBoolean メソッド (SQLServerResultSet) |Microsoft Docs
+title: updateBoolean メソッド (SQLServerResultSet) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: 524ecc30-1587-47e1-812d-ddbc75163266
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: f2e5f6c5b835c0f759fc2dd0a9ec6484f7e2cd67
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: eb459d663bd48bd5d2a0f6a63667e37fb55e90f5
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47827820"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67996948"
 ---
 # <a name="updateboolean-method-sqlserverresultset"></a>updateBoolean メソッド (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

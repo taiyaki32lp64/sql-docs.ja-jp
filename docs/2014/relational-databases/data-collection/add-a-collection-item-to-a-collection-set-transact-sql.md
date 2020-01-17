@@ -13,12 +13,12 @@ ms.assetid: 9fe6454e-8c0e-4b50-937b-d9871b20fd13
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 1bcaade651e2e63bb2cabf6f0a8fc016781ba45b
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 9f3e7c74fcaebb0aaaf246cba94e32c6b602b6e5
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52748975"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62873588"
 ---
 # <a name="add-a-collection-item-to-a-collection-set-transact-sql"></a>コレクション アイテムをコレクション セットに追加する (Transact-SQL)
   データ コレクターに備わっているストアド プロシージャを使用して、コレクション アイテムを既存のコレクション セットに追加できます。  
@@ -29,7 +29,7 @@ ms.locfileid: "52748975"
   
 1.  **sp_syscollector_stop_collection_set** ストアド プロシージャを実行して、アイテムを追加するコレクション セットを停止します。 たとえば、"Test Collection Set" という名前のコレクション セットを停止するには、次のステートメントを実行します。  
   
-    ```tsql  
+    ```sql  
     USE msdb  
     DECLARE @csid int  
     SELECT @csid = collection_set_id  
@@ -44,7 +44,7 @@ ms.locfileid: "52748975"
   
 2.  コレクション アイテムを追加するコレクション セットを宣言します。 次のコードは、コレクション セット ID を宣言する例です。  
   
-    ```tsql  
+    ```sql  
     DECLARE @collection_set_id_1 int  
     SELECT @collection_set_id_1 = collection_set_id FROM [msdb].[dbo].[syscollector_collection_sets]  
     WHERE name = N'Test Collection Set'; -- name of collection set  
@@ -52,7 +52,7 @@ ms.locfileid: "52748975"
   
 3.  コレクター型を宣言します。 次のコードは、ジェネリック T-SQL Query コレクター型を宣言する例です。  
   
-    ```tsql  
+    ```sql  
     DECLARE @collector_type_uid_1 uniqueidentifier  
     SELECT @collector_type_uid_1 = collector_type_uid FROM [msdb].[dbo].[syscollector_collector_types]   
        WHERE name = N'Generic T-SQL Query Collector Type';  
@@ -60,7 +60,7 @@ ms.locfileid: "52748975"
   
      次のコードを実行して、インストールされているコレクター型の一覧を取得できます。  
   
-    ```tsql  
+    ```sql  
     USE msdb  
     SELECT * from syscollector_collector_types  
     GO  
@@ -68,7 +68,7 @@ ms.locfileid: "52748975"
   
 4.  **sp_syscollector_create_collection_item** ストアド プロシージャを実行してコレクション アイテムを作成します。 コレクション アイテムが目的のコレクター型に必要なスキーマにマップされるように、コレクション アイテムのスキーマを宣言する必要があります。 ジェネリック T-SQL Query の入力スキーマを使用する例を次に示します。  
   
-    ```tsql  
+    ```sql  
     DECLARE @collection_item_id int;  
     EXEC [msdb].[dbo].[sp_syscollector_create_collection_item]   
     @name=N'OS Wait Stats', --name of collection item  
@@ -97,7 +97,7 @@ ms.locfileid: "52748975"
   
      コレクション セットとそのコレクション アイテムは、 **[結果]** タブに表示されます。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [ジェネリック T-SQL Query コレクター型を使用するカスタム コレクション セットの作成 &#40;Transact-SQL&#41;](create-custom-collection-set-generic-t-sql-query-collector-type.md)   
  [データ コレクター ストアド プロシージャ &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/data-collector-stored-procedures-transact-sql)  
   

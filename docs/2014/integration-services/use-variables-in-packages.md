@@ -4,33 +4,32 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords:
 - user-defined variables [Integration Services]
 - variables [Integration Services], use scenarios
 - system variables [Integration Services]
 ms.assetid: 7742e92d-46c5-4cc4-b9a3-45b688ddb787
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: e309a50dcc47ff4e05335222f9bac6532658ffdd
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 96bfbf87789aa1d683b6368f210539a191f7ee95
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48145602"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66054689"
 ---
 # <a name="use-variables-in-packages"></a>パッケージで変数を使用する
   変数は、[!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] パッケージに追加できる便利で柔軟な機能です。変数を使用すると、パッケージのオブジェクト間、および親パッケージと子パッケージとの間で情報を交換できます。 また、変数は式やスクリプトでも使用できます。  
   
 ## <a name="user-defined-variables-and-system-variables"></a>ユーザー定義変数とシステム変数  
- [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] システム変数を提供し、ユーザー定義変数をサポートします。 新しいパッケージを作成した場合、コンテナーやタスクをパッケージに追加した場合、またはイベント ハンドラーを作成した場合、 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] によってコンテナーに一連のシステム変数が追加されます。 システム変数には、パッケージ、コンテナー、タスク、またはイベント ハンドラーに関する有益な情報が含まれています。 たとえば、パッケージの実行時に、 **MachineName** システム変数にはパッケージを実行しているコンピューターの名前が含まれ、 **StartTime** にはパッケージの実行が開始された時刻が含まれます。 システム変数は読み取り専用です。 詳細については、「 [システム変数](system-variables.md)」を参照してください。  
+ [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] ではシステム変数が用意されているほか、ユーザー定義変数をサポートします。 新しいパッケージを作成した場合、コンテナーやタスクをパッケージに追加した場合、またはイベント ハンドラーを作成した場合、 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] によってコンテナーに一連のシステム変数が追加されます。 システム変数には、パッケージ、コンテナー、タスク、またはイベント ハンドラーに関する有益な情報が含まれています。 たとえば、パッケージの実行時に、 **MachineName** システム変数にはパッケージを実行しているコンピューターの名前が含まれ、 **StartTime** にはパッケージの実行が開始された時刻が含まれます。 システム変数は読み取り専用です。 詳細については、「 [システム変数](system-variables.md)」を参照してください。  
   
  ユーザー定義変数を作成して、パッケージで使用できます。 ユーザー定義変数は、 [!INCLUDE[ssIS](../includes/ssis-md.md)]の優先順位制約、For ループ コンテナー、派生列変換、および条件分割変換で使用される式、スクリプト、およびプロパティの値を更新するプロパティ式など、多くの方法で使用できます。  
   
- たとえば、For ループ コンテナーの評価条件でユーザー定義変数を使用できます。 また、Foreach ループ コンテナーの列挙子コレクション値を変数にマップしたり、SQL 実行タスクがパラメーター化された SQL ステートメントを使用する場合にステートメントのパラメーターを変数にマップしたりできます。 詳細については、「[Integration Services (SSIS) の変数](integration-services-ssis-variables.md)」を参照してください。  
+ たとえば、For ループ コンテナーの評価条件でユーザー定義変数を使用できます。 また、Foreach ループ コンテナーの列挙子コレクション値を変数にマップしたり、SQL 実行タスクがパラメーター化された SQL ステートメントを使用する場合にステートメントのパラメーターを変数にマップしたりできます。 詳細については、「 [Integration Services &#40;SSIS&#41; の変数](integration-services-ssis-variables.md)」を参照してください。  
   
 ## <a name="variables-usage-scenarios"></a>変数の使用法のシナリオ  
  [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] パッケージでは、変数をさまざまな方法で使用します。 パッケージにユーザー定義変数を追加して、ソリューションに必要な柔軟性と管理性を実装しないと、パッケージ開発があまり進まない場合もあります。 シナリオによっては、システム変数もよく使用します。  

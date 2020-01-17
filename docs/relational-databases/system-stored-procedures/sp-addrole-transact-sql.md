@@ -17,15 +17,14 @@ helpviewer_keywords:
 ms.assetid: e8a21642-8440-419a-8585-93d3d9d44f00
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: f51d462e46a86a3c824a7e37aeb1f30ba28d987b
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: 1711ec3941a5fced5ef9e0c32808d6153b673e2b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53212921"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68030922"
 ---
-# <a name="spaddrole-transact-sql"></a>sp_addrole (Transact-SQL)
+# <a name="spaddrole-transact-sql"></a>sp_addrole (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   現在のデータベースに新しいデータベース ロールを作成します。  
@@ -43,19 +42,17 @@ sp_addrole [ @rolename = ] 'role' [ , [ @ownername = ] 'owner' ]
 ```  
   
 ## <a name="arguments"></a>引数  
- [  **@rolename =** ] **'***ロール***'**  
- 新しいデータベース ロールの名前を指定します。 *ロール*は、 **sysname**、既定値はありません。 *ロール*有効な識別子 (ID) である必要があり、現在のデータベースに既に存在する必要があります。  
+`[ @rolename = ] 'role'` 新しいデータベース ロールの名前です。 *ロール*は、 **sysname**、既定値はありません。 *ロール*有効な識別子 (ID) である必要があり、現在のデータベースに既に存在する必要があります。  
   
- [  **@ownername =**] **'***所有者***'**  
- 新しいデータベース ロールの所有者を指定します。 *所有者*は、 **sysname**、現在実行しているユーザーの既定値。 *所有者*データベース ユーザーまたはデータベース ロール、現在のデータベースである必要があります。  
+`[ @ownername = ] 'owner'` 新しいデータベース ロールの所有者です。 *所有者*は、 **sysname**、現在実行しているユーザーの既定値。 *所有者*データベース ユーザーまたはデータベース ロール、現在のデータベースである必要があります。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  0 (成功) または 1 (失敗)  
   
 ## <a name="remarks"></a>コメント  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データベース ロールは 1 ～ 128 文字で指定でき、英数字と記号を含めることができます。 データベース ロールの名前のことはできません。 円記号を含める (\\)、null 値、または空の文字列 (**''**)。  
+ 名前[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]データベース ロールは、1 ~ 128 文字、文字、記号、および数字を含めることができます。 データベース ロールの名前のことはできません。 円記号を含める (\\)、null 値、または空の文字列 ( **''** )。  
   
- データベース ロールに追加した後を使用して、 [sp_addrolemember &#40;TRANSACT-SQL&#41; ](../../relational-databases/system-stored-procedures/sp-addrolemember-transact-sql.md) 、ロールにプリンシパルを追加します。 GRANT、DENY、または REVOKE ステートメントを使用して権限をデータベース ロールに適用すると、そのデータベース ロールのメンバーには、それぞれのアカウントに直接適用した場合と同様に、権限が継承されます。  
+ データベース ロールに追加した後を使用して、 [sp_addrolemember &#40;TRANSACT-SQL&#41; ](../../relational-databases/system-stored-procedures/sp-addrolemember-transact-sql.md) 、ロールにプリンシパルを追加します。 GRANT、DENY、または REVOKE ステートメントを使用して、データベース ロールにアクセス許可を適用するときにデータベース ロールのメンバーは、アクセス許可が自分のアカウントに直接適用されたかのようにこれらのアクセス許可を継承します。  
   
 > [!NOTE]  
 >  新しいサーバー ロールを作成することはできません。 ロールは、データベース レベルでのみ作成できます。  
@@ -63,7 +60,7 @@ sp_addrole [ @rolename = ] 'role' [ , [ @ownername = ] 'owner' ]
  **sp_addrole**ユーザー定義のトランザクション内で使用することはできません。  
   
 ## <a name="permissions"></a>アクセス許可  
- データベースに対する CREATE ROLE 権限が必要です。 スキーマを作成する場合は、データベースに対する CREATE SCHEMA 権限が必要です。 場合*所有者*ユーザーまたはグループとして指定すると、そのユーザーまたはグループに対する impersonate 権限が必要です。 場合*所有者*ロールとして指定すると、そのロールまたはそのロールのメンバーに対する ALTER 権限が必要です。 所有者をアプリケーション ロールとして指定する場合は、そのアプリケーション ロールに対する ALTER 権限が必要です。  
+ データベースに対する CREATE ROLE 権限が必要です。 スキーマを作成する場合は、データベースのスキーマの作成が必要です。 場合*所有者*ユーザーまたはグループとして指定すると、そのユーザーまたはグループに対する impersonate 権限が必要です。 場合*所有者*ロールとして指定すると、そのロールまたはそのロールのメンバーに対する ALTER 権限が必要です。 所有者は、アプリケーション ロールを指定した場合に、そのアプリケーション ロールに対する ALTER 権限が必要です。  
   
 ## <a name="examples"></a>使用例  
  次の例では、`Managers` という新しいロールを現在のデータベースに追加します。  
@@ -72,7 +69,7 @@ sp_addrole [ @rolename = ] 'role' [ , [ @ownername = ] 'owner' ]
 EXEC sp_addrole 'Managers';  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [システム ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
  [セキュリティ ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md)   
  [CREATE ROLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-role-transact-sql.md)  

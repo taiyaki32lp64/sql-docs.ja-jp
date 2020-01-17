@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 390c8abf-133e-40da-8b99-8f748a983e4f
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 35646314a5c52e86284326ee91776b5afe2a0d17
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 0212f3b4cb663bd56adaa1bdbc3ab6675c3ce888
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47625080"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67932268"
 ---
 # <a name="marshaloptions-property-ado"></a>MarshalOptions プロパティ (ADO)
 レコードのことを示します、 [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md)サーバーにマーシャ リングされます。  
@@ -38,6 +37,6 @@ ms.locfileid: "47625080"
 ## <a name="applies-to"></a>適用対象  
  [Recordset オブジェクト (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [MarshalOptions プロパティの例 (VB)](../../../ado/reference/ado-api/marshaloptions-property-example-vb.md)   
  [MarshalOptions プロパティの例 (VC++)](../../../ado/reference/ado-api/marshaloptions-property-example-vc.md)   

@@ -17,15 +17,14 @@ helpviewer_keywords:
 ms.assetid: 82fbb48b-603a-4016-a7fb-1ce17fb76919
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 12058e9c599428b6f0ba6c3014b8aab8b9ae5f61
-ms.sourcegitcommit: 78e32562f9c1fbf2e50d3be645941d4aa457e31f
+ms.openlocfilehash: a1641685bfe017ab7bc3adfda5c667684a70b786
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/08/2019
-ms.locfileid: "54100867"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68130648"
 ---
-# <a name="spdeletejobschedule-transact-sql"></a>sp_delete_jobschedule (Transact-SQL)
+# <a name="spdeletejobschedule-transact-sql"></a>sp_delete_jobschedule (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   ジョブのスケジュールを削除します。  
@@ -34,7 +33,7 @@ ms.locfileid: "54100867"
   
   
 ## <a name="remarks"></a>コメント  
- ジョブ スケジュールはジョブとは別々に管理できます。 ジョブからスケジュールを削除するには使用**sp_detach_schedule**します。 スケジュールを削除するには使用**sp_delete_schedule**します。  
+ ジョブのスケジュールは、ジョブとは無関係に管理できるようにします。 ジョブからスケジュールを削除するには使用**sp_detach_schedule**します。 スケジュールを削除するには使用**sp_delete_schedule**します。  
   
 > **注: sp_delete_jobschedule**は複数のジョブにアタッチされているスケジュールをサポートしていません。 既存のスクリプトを呼び出す場合**sp_delete_jobschedule**を 1 つ以上のジョブに関連付けられているスケジュールを削除する手順には、エラーが返されます。  
   
@@ -51,7 +50,7 @@ ms.locfileid: "54100867"
   
  メンバー、 **sysadmin**ロールは、任意のジョブ スケジュールを削除できます。 以外のユーザーがメンバーの**sysadmin**ロールは、自分が所有するジョブ スケジュールのみを削除できます。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [sp_delete_schedule &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-delete-schedule-transact-sql.md)   
  [sp_detach_schedule &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-detach-schedule-transact-sql.md)   
  [表示またはジョブの変更](../../ssms/agent/view-or-modify-jobs.md)   

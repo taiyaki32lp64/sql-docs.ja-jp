@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 13189359-73ff-45cf-8225-2a8f7194accc
 author: Shamikg
 ms.author: Shamikg
-manager: craigg
-ms.openlocfilehash: 9879a065db11bb8e8b8ddff9c57376faf36fe151
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 8937eb796d75afdc404ef4815918245cda7f13a5
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47614516"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68074149"
 ---
 # <a name="menu-commands-and-other-shortcut-keys-db2tosql"></a>メニュー コマンドやその他のショートカット キー (DB2ToSQL)
 次のセクションでは、メニュー コマンドや DB2 アプリケーションの SSMA のさまざまなダイアログ ボックスで使用されるその他のショートカット キーにアクセスするキーボード ショートカットについて説明します。  
@@ -180,6 +179,6 @@ ms.locfileid: "47614516"
 |クイック ヒントを起動します。|CTRL + SHIFT + スペース|  
 |宣言に移動します。|F12|  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
 [ショートカット キー &#40;DB2ToSQL&#41;](../../ssma/db2/shortcut-keys-db2tosql.md)  
   

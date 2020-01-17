@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.dimensionwizard.accountintelligencetypemapping.f1
@@ -13,12 +12,12 @@ ms.assetid: cbcff072-3a7e-4e98-858f-1b4265461561
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 927442d1fe46fc42998643d4f7de47b438cbaa49
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: e7bbc2b890c61e2864aa727f42276f01c87e94a7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48179972"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66082158"
 ---
 # <a name="define-account-intelligence-dimension-wizard"></a>[勘定科目インテリジェンスの定義] (ディメンション ウィザード)
   **[勘定科目インテリジェンスの定義]** ページを使用すると、 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] インスタンスで定義された勘定科目の種類を、ディメンションの **[勘定科目の種類]** の属性の種類に関連付けられた、ディメンションの属性で定義された勘定科目の種類にマップできます。  

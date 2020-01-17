@@ -1,5 +1,5 @@
 ---
-title: sp_add_alert (TRANSACT-SQL) |Microsoft Docs
+title: sp_add_alert (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -17,18 +17,17 @@ helpviewer_keywords:
 ms.assetid: d9b41853-e22d-4813-a79f-57efb4511f09
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 4193e073f4ad4c52d6b2c7f6b82c6246107e85a1
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: 848f3cffb3c05f16b339233c89892396b5443e4f
+ms.sourcegitcommit: 0ea19d8e3bd9d91a416311e00a5fb0267d41949e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54127072"
+ms.lasthandoff: 09/20/2019
+ms.locfileid: "71174262"
 ---
-# <a name="spaddalert-transact-sql"></a>sp_add_alert (Transact-SQL)
+# <a name="sp_add_alert-transact-sql"></a>sp_add_alert (Transact-sql)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  警告を作成します。  
+  アラートを作成します。  
   
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -54,121 +53,105 @@ sp_add_alert [ @name = ] 'name'
 ```  
   
 ## <a name="arguments"></a>引数  
- [  **@name =** ] **'**_名前_**'**  
- 警告の名前を指定します。 この名前は、警告に対する応答として送信される電子メールまたはポケットベルのメッセージに表示されます。 一意であり、割合を含めることができます (**%**) 文字。 *名前*は**sysname**、既定値はありません。  
+`[ @name = ] 'name'` アラートの名前を指定します。 この名前は、警告に対する応答として送信される電子メールまたはポケットベルのメッセージに表示されます。 一意である必要があり、パーセント ( **%** ) 文字を含めることができます。 *名前*は**sysname**,、既定値はありません。  
   
- [ **@message_id =** ] *message_id*  
- 警告を定義するメッセージ エラー番号を指定します。 (通常、エラー番号に対応して、 **sysmessages**テーブルです)。*message_id*は**int**、既定値は**0**します。 場合*重大度*、警告を定義するために使用*message_id*あります**0**または NULL。  
+警告を定義するメッセージエラー番号を `[ @message_id = ] message_id` します。 (通常、 **sysmessages**テーブルのエラー番号に対応しています)。*message_id*は**int**,、既定値は**0**です。 *重大度*を使用して警告を定義する場合は、 *message_id*を**0**または NULL にする必要があります。  
   
 > [!NOTE]  
->  のみ**sysmessages** Microsoft Windows アプリケーション ログに書き込まれたエラーが原因で、アラートを送信します。  
+>  Microsoft Windows アプリケーションログに書き込まれた**sysmessages**エラーのみが、アラートを送信する可能性があります。  
   
- [ **@severity =** ] *severity*  
- 重大度レベル (から**1**を通じて**25**)、アラートを定義します。 すべて[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]にメッセージが格納されている、 **sysmessages**テーブルに送信される、[!INCLUDE[msCoName](../../includes/msconame-md.md)]指定された重大度を持つ Windows アプリケーション ログと警告を送信します。 *重大度*は**int**、既定値は 0。 場合*message_id* 、警告を定義するために使用*重大度*あります**0**します。  
+アラートを定義する重大度レベル ( **1** ~ **25**) `[ @severity = ] severity` ます。 **Sysmessages**テーブルに格納されている [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] メッセージは、指定された重大度で [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows アプリケーションログに送信されると、アラートが送信されます。 *重大度*は**int**,、既定値は0です。 警告を定義するために*message_id*を使用する場合は、*重大度*を**0**にする必要があります。  
   
- [ **@enabled =** ] *enabled*  
- 警告の現在の状態を示します。 *有効になっている*は**tinyint**、既定値は 1 (有効)。 場合**0**アラートが有効でないとは発生しません。  
+`[ @enabled = ] enabled` は、警告の現在の状態を示します。 *有効*になっているは**tinyint**,、既定値は 1 (有効) です。 **0**の場合、警告は無効になり、起動されません。  
   
- [ **@delay_between_responses =** ] *delay_between_responses*  
- 警告に対する応答から次の応答までの待機時間を秒単位で指定します。 *delay_between_responses*は**int**、既定値は**0**、つまりが発生するたび、アラートの応答) 間の待機中ではありません。 応答は、次のいずれかまたは両方の方法で行うことができます。  
+警告への応答間の待機時間を秒単位で `[ @delay_between_responses = ] delay_between_responses` します。 *delay_between_responses*は**int**,、既定値は**0**です。これは、応答の間 (アラートが発生するたびに応答が生成される) の待機がないことを意味します。 応答は、次のいずれかまたは両方の形式で指定できます。  
   
--   1 つ以上の通知を電子メールまたはポケットベルで送信する。  
+-   電子メールまたはポケットベルを使用して送信された1つ以上の通知。  
   
--   ジョブを実行する。  
+-   実行するジョブ。  
   
- この値を設定すると、たとえば短時間に繰り返し警告が発生したとき、不要な電子メール メッセージの送信を防止できます。  
+ この値を設定することにより、たとえば、短時間にアラートが繰り返し発生した場合に、不要な電子メールメッセージが送信されないようにすることができます。  
   
- [  **@notification_message =** ] **'**_このパラメーター_**'**  
- 電子メールの一部としてオペレーターに送信される追加の省略可能なメッセージ**net send**、またはポケットベル通知します。 *このパラメーター*は**nvarchar (512)**、既定値は NULL です。 指定する*このパラメーター*は書き加えるなど特別な注意を追加するために便利です。  
+`[ @notification_message = ] 'notification_message'` は、電子メール、 **net send**、またはポケットベルによる通知の一部としてオペレーターに送信されるオプションの追加メッセージです。 *notification_message*は**nvarchar (512)** ,、既定値は NULL です。 *Notification_message*を指定すると、修復プロシージャなどの特別なメモを追加する場合に便利です。  
   
- [  **@include_event_description_in =** ] *include_event_description_in*  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エラーに関する説明を通知メッセージに含めるかどうかを指定します。 *include_event_description_in*は**tinyint**、既定値は**5** (電子メールと**net send**)、およびは 1 つまたはと共にこれらの値の詳細は、**または**論理演算子です。  
+`[ @include_event_description_in = ] include_event_description_in` [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エラーの説明を通知メッセージの一部として含めるかどうかを指定します。 *include_event_description_in*は**tinyint**で、既定値は**5** (電子メールと**net send**) です。また、これらの値の1つ以上を**or**論理演算子と組み合わせて使用することもできます。  
   
 > [!IMPORTANT]
 >  今後のバージョンの **では、** エージェントからポケットベル オプションと [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] net send [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]オプションが削除される予定です。 新しい開発作業では、これらの機能の使用を避け、現在これらの機能を使用しているアプリケーションは修正するようにしてください。  
   
-|値|説明|  
+|ReplTest1|[説明]|  
 |-----------|-----------------|  
-|**0**|なし|  
+|**0**|[InclusionThresholdSetting]|  
 |**1**|[電子メール]|  
-|**2**|[ポケットベル]|  
+|**2**|ポケットベル|  
 |**4**|**net send**|  
   
- [  **@database_name =** ] **'**_データベース_**'**  
- どのデータベースでエラーが発生したときに警告を起動するかを指定します。 場合*データベース*が指定されていない、エラーの発生場所に関係なく警告が発生します。 *データベース*は**sysname**します。 角かっこ ([ ]) で囲まれた名前は使用できません。 既定値は NULL になります。  
+警告が発生する必要があるデータベースを `[ @database_name = ] 'database'` します。 *データベース*が指定されていない場合は、エラーが発生した場所に関係なく警告が発生します。 *データベース*は**sysname**です。 角かっこ ([]) で囲まれた名前は使用できません。 既定値は NULL です。  
   
- [  **@event_description_keyword =** ] **'**_event_description_keyword_pattern_**'**  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エラーの説明に、どのような文字のシーケンスが含まれている必要があるかを指定します。 [!INCLUDE[tsql](../../includes/tsql-md.md)] LIKE 式のパターン検索文字を使用できます。 *event_description_keyword_pattern*は**nvarchar (100)**、既定値は NULL です。 このパラメーターはオブジェクト名をフィルター処理するために役立ちます (たとえば、 **%customer_table%**)。  
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エラーの説明が似ている必要がある文字シーケンスを `[ @event_description_keyword = ] 'event_description_keyword_pattern'` します。 [!INCLUDE[tsql](../../includes/tsql-md.md)] LIKE 式パターン一致文字を使用できます。 *event_description_keyword_pattern*は**nvarchar (100)** ,、既定値は NULL です。 このパラメーターは、オブジェクト名 ( **% customer_table%** など) をフィルター処理する場合に便利です。  
   
- [ **@job_id =** ] *job_id*  
- 対象となる警告に対する応答として実行するジョブのジョブ ID 番号を指定します。 *job_id*は**uniqueidentifier**、既定値は NULL です。  
+このアラートに応答して実行するジョブのジョブ識別番号を `[ @job_id = ] job_id` します。 *job_id*は**uniqueidentifier**,、既定値は NULL です。  
   
- [  **@job_name =** ] **'**_job_name_**'**  
- この警告への応答として実行するジョブの名前を指定します。 *job_name*は**sysname**、既定値は NULL です。  
+この警告に応答して実行されるジョブの名前を `[ @job_name = ] 'job_name'` します。 *job_name*は**sysname**,、既定値は NULL です。  
   
 > [!NOTE]  
->  いずれか*job_id*または*job_name*指定する必要がありますが、両方を指定することはできません。  
+>  *Job_id*または*job_name*のいずれかを指定する必要がありますが、両方を指定することはできません。  
   
- [ **@raise_snmp_trap =** ] *raise_snmp_trap*  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Version 7.0 では実装されていません。 *raise_snmp_trap*は**tinyint**、既定値は 0。  
+`[ @raise_snmp_trap = ] raise_snmp_trap` [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] バージョン7.0 では実装されていません。 *raise_snmp_trap*は**tinyint**,、既定値は0です。  
   
- [  **@performance_condition =** ] **'**_performance_condition_**'**  
- 形式で表される値は、'*itemcomparatorvalue*'。 *performance_condition*は**nvarchar (512)** 既定値は null の場合、これらの要素で構成されています。  
+`[ @performance_condition = ] 'performance_condition'` は、'*itemcomparatorvalue*' の形式で表現された値です。 *performance_condition*は**nvarchar (512)** で、既定値は NULL です。これらの要素で構成されます。  
   
-|形式の要素|説明|  
+|要素の書式設定|[説明]|  
 |--------------------|-----------------|  
 |*アイテム*|パフォーマンス オブジェクト、パフォーマンス カウンター、またはカウンターの名前付きインスタンス。|  
-|*比較演算子*|演算子 >、<、または = のいずれか。|  
-|*[値]*|カウンターの数値。|  
+|*演算子*|>、<、または = のいずれかの演算子|  
+|*Value*|カウンターの数値|  
   
- [  **@category_name =** ] **'**_カテゴリ_**'**  
- 警告カテゴリの名前を指定します。 *カテゴリ*は**sysname**、既定値は NULL です。  
+警告カテゴリの名前 `[ @category_name = ] 'category'` ます。 *category*は**sysname**,、既定値は NULL です。  
   
- [ **@wmi_namespace**=] **'**_wmi_namespace_**'**  
- イベントのクエリに対する WMI 名前空間を指定します。 *wmi_namespace*は**sysname**、既定値は NULL です。 サポートされるのはローカル サーバーの名前空間だけです。  
+イベントを照会する WMI 名前空間を `[ @wmi_namespace = ] 'wmi_namespace'` します。 *wmi_namespace*は**sysname**,、既定値は NULL です。 サポートされるのはローカル サーバーの名前空間だけです。  
   
- [ **@wmi_query**=] **'**_wmi_query_**'**  
- 警告に対する WMI イベントを指定するクエリを指定します。 *wmi_query*は**nvarchar (512)**、既定値は NULL です。  
+警告の WMI イベントを指定するクエリを `[ @wmi_query = ] 'wmi_query'` します。 *wmi_query*は**nvarchar (512)** ,、既定値は NULL です。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  **0** (成功) または**1** (失敗)  
   
 ## <a name="result-sets"></a>結果セット  
- なし  
+ [InclusionThresholdSetting]  
   
-## <a name="remarks"></a>コメント  
- **sp_add_alert**から実行する必要があります、 **msdb**データベース。  
+## <a name="remarks"></a>Remarks  
+ **sp_add_alert**は、 **msdb**データベースから実行する必要があります。  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] および [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のアプリケーションで生成されたエラーやメッセージが Windows のアプリケーション ログに送られます。したがって、警告を起動できるのは次の場合です。  
+ このような状況では、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] および [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] アプリケーションによって生成されたエラーやメッセージが Windows アプリケーションログに送信されるため、アラートが発生する可能性があります。  
   
--   重大度が 19 以上**sys.messages**エラー  
+-   重大度19以上の**sys. メッセージ**エラー  
   
--   WITH LOG 構文で RAISERROR ステートメントが呼び出された場合。  
+-   With LOG 構文を使用して呼び出された RAISERROR ステートメント  
   
--   すべて**sys.messages**エラーは、変更またはを使用して作成**sp_altermessage**  
+-   **Sp_altermessage**を使用して変更または作成されたすべての**sys. メッセージ**エラー  
   
--   すべてのイベントを使用してログに記録**xp_logevent**  
+-   **Xp_logevent**を使用してログに記録されたイベント  
   
  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] は、警告システム全体を簡単に管理できるグラフィカルなツールです。警告の基本構成を設定するには、SQL Server Management Studio を使用することをお勧めします。  
   
  警告が正常に動作しないときは、次のことを確認してください。  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェントのサービスが実行されていること。  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェントサービスが実行されています。  
   
 -   Windows アプリケーション ログにイベントが表示されること。  
   
--   警告が有効になっていること。  
+-   アラートが有効になっています。  
   
--   **xp_logevent** で生成されたイベントは master データベースで発生します。 このため、 **xp_logevent** では、警告の **@database_name** が **'master'** または NULL になっていないと、警告が起動されません。  
+-   **xp_logevent** で生成されたイベントは master データベースで発生します。 このため、**xp_logevent** では、警告の **\@database_name** が **'master'** または NULL になっていないと、警告はトリガーされません。  
   
 ## <a name="permissions"></a>アクセス許可  
- 既定では、 **sp_add_alert** を実行できるのは、 **sysadmin**固定サーバー ロールのメンバーだけです。  
+ 既定では、**sp_add_alert** を実行できるのは、**sysadmin** 固定サーバー ロールのメンバーだけです。  
   
 ## <a name="examples"></a>使用例  
  次の例では、警告発生時にジョブ `Back up the AdventureWorks2012 Database` を実行する Test Alert という警告を追加します。  
   
 > [!NOTE]  
->  この例では、メッセージ 55001 と、ジョブ `Back up the AdventureWorks2012 Database` が既に存在することを前提としています。 この例は、説明の目的でのみが表示されます。  
+>  この例では、メッセージ55001と `Back up the AdventureWorks2012 Database` ジョブが既に存在していることを前提としています。 この例は、説明のためだけに示しています。  
   
 ```  
 USE msdb ;  
@@ -184,12 +167,12 @@ GO
 ```  
   
 ## <a name="see-also"></a>参照  
- [sp_add_notification &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-notification-transact-sql.md)   
- [sp_altermessage &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-altermessage-transact-sql.md)   
- [sp_delete_alert &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-delete-alert-transact-sql.md)   
- [sp_help_alert &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-alert-transact-sql.md)   
- [sp_update_alert &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-update-alert-transact-sql.md)   
- [sys.sysperfinfo &#40;TRANSACT-SQL&#41;](../../relational-databases/system-compatibility-views/sys-sysperfinfo-transact-sql.md)   
+ [transact-sql &#40;  の&#41; sp_add_notification](../../relational-databases/system-stored-procedures/sp-add-notification-transact-sql.md)  
+ [transact-sql &#40;  の&#41; sp_altermessage](../../relational-databases/system-stored-procedures/sp-altermessage-transact-sql.md)  
+ [transact-sql &#40;  の&#41; sp_delete_alert](../../relational-databases/system-stored-procedures/sp-delete-alert-transact-sql.md)  
+ [transact-sql &#40;  の&#41; sp_help_alert](../../relational-databases/system-stored-procedures/sp-help-alert-transact-sql.md)  
+ [transact-sql &#40;  の&#41; sp_update_alert](../../relational-databases/system-stored-procedures/sp-update-alert-transact-sql.md)  
+ [sysperfinfo &#40;transact-sql&#41; ](../../relational-databases/system-compatibility-views/sys-sysperfinfo-transact-sql.md)   
  [システム ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.sqlserverstudio.databaseproperties.f1
@@ -13,12 +12,12 @@ ms.assetid: 70f000b7-917f-4699-b142-7a0d13ff767c
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: a18669d646dcf6e46f609faeb0861e5fa9732850
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: be4133aa143ecf0e1fb9b50c40a38a73b4207f30
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48196732"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66082318"
 ---
 # <a name="database-properties-dialog-box-ssas---multidimensional"></a>[データベースのプロパティ] ダイアログ ボックス (SSAS - 多次元)
   **の** [データベースのプロパティ] [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] ダイアログ ボックスを使用すると、 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] データベースのプロパティを設定できます。 **[データベースのプロパティ]** ダイアログ ボックスを表示するには、オブジェクト エクスプローラーでデータベースを右クリックし、 **[プロパティ]** を選択します。  
@@ -38,8 +37,8 @@ ms.locfileid: "48196732"
 |**推定サイズ**|データベースの推定サイズが表示されます。|  
 |**記憶域の場所**|データベースの場所を指定します。 データベースが既定のデータ ディレクトリにある場合は、この値は空になります。|  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [Analysis Services のデザイナーおよびダイアログ ボックス&#40;多次元データ&#41;](analysis-services-designers-and-dialog-boxes-multidimensional-data.md)   
- [多次元モデル データベース&#40;SSAS&#41;](multidimensional-models/multidimensional-model-databases-ssas.md)  
+ [多次元モデル データベース (SSAS)](multidimensional-models/multidimensional-model-databases-ssas.md)  
   
   

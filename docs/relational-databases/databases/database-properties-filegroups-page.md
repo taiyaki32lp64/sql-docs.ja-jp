@@ -12,13 +12,12 @@ f1_keywords:
 ms.assetid: 8d06e859-73dd-4019-b6e8-99c5c5297697
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 94a6520e5d7dcc21bdf4ad0c816b26597d24f587
-ms.sourcegitcommit: 96b2355d54dfad259826e88bdff91cc9344e16f2
+ms.openlocfilehash: fd94228e072f670e2bf32a46281f195bdf9b80ef
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51350346"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68099617"
 ---
 # <a name="database-properties-filegroups-page"></a>[データベースのプロパティ] \([ファイル グループ] ページ)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -33,7 +32,7 @@ ms.locfileid: "51350346"
  データベースに 1 つ以上のメモリ最適化テーブルを含めるには、メモリ最適化ファイル グループが必要です。  
   
 ## <a name="row-and-filestream-data-filegroup-options"></a>ROW および FILESTREAM データ ファイル グループのオプション  
- **名前**  
+ **[名前]**  
  ファイル グループの名前を入力します。  
   
  **[ファイル]**  
@@ -52,7 +51,7 @@ ms.locfileid: "51350346"
  選択されたファイル グループ行をグリッドから削除します。  
   
 ## <a name="memory-optimized-data-filegroup-options"></a>メモリ最適化データ ファイル グループのオプション  
- **名前**  
+ **[名前]**  
  メモリ最適化ファイル グループの名前を入力します。  
   
  **[FILESTREAM ファイル]**  

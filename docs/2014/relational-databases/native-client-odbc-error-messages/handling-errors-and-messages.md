@@ -20,11 +20,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: a4a4d87ccae235aee1a11e58aff60fe8e34d6205
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53376384"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68207094"
 ---
 # <a name="handling-errors-and-messages"></a>エラーとメッセージの処理
   アプリケーションが ODBC 関数を呼び出すときに、ドライバーは関数を実行し、2 つの方法で診断情報を返します。リターン コードは、全体的な成功または失敗の ODBC 関数を示し、診断レコードが、関数に関する詳細情報を提供します。 診断レコードは、ヘッダー レコードと状態レコードから構成されます。 関数が成功した場合でも、少なくとも 1 つの診断レコード、つまりヘッダー レコードが返されます。  
@@ -53,7 +53,7 @@ ms.locfileid: "53376384"
   
 -   [エラー メッセージ](error-messages.md)  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [SQL Server Native Client &#40;ODBC&#41;](../native-client/odbc/sql-server-native-client-odbc.md)  
   
   

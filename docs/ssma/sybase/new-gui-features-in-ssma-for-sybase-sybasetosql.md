@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: d3c60e8c-f0a7-4590-8ece-c68ceaeaea4a
 author: Shamikg
 ms.author: Shamikg
-manager: craigg
-ms.openlocfilehash: 1068811d987745b5c4404079230a1a625deb9316
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 6081551a19b832e4fb518f80dcd85c04ec54c8f4
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47600740"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68028822"
 ---
 # <a name="new-gui-features-in-ssma-for-sybase-sybasetosql"></a>SSMA For Sybase (SybaseToSQL) で、GUI の新機能
 この章では、SSMA ユーザー インターフェイスの新機能について説明します。  

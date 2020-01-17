@@ -16,15 +16,14 @@ helpviewer_keywords:
 - identifiers [SQL Server], PowerShell
 - Cmdlets [SQL Server], Decode-Sqlname
 ms.assetid: 651099b0-33b4-453a-a864-b067f21eb8b9
-author: stevestein
-ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 654bd3d29de94401fc95d1a5d4d580f299b95297
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: f2f37cc56a0d485abc89909e4d02a076b4474c63
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47824340"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67912233"
 ---
 # <a name="sql-server-identifiers-in-powershell"></a>PowerShell での SQL Server 識別子
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -62,7 +61,7 @@ SQLSERVER:\SQL\MyComputer\DEFAULT\Databases\AdventureWorks2012\Tables\Purchasing
 |Windows PowerShell のパスでサポートされない文字にエスケープ文字を使用する方法について説明します。|[SQL Server 識別子のエスケープ](escape-sql-server-identifiers.md)|  
   
 ## <a name="see-also"></a>参照  
- [SQL Server PowerShell Provider](sql-server-powershell-provider.md)   
+ [SQL Server PowerShell プロバイダー](sql-server-powershell-provider.md)   
  [SQL Server PowerShell](sql-server-powershell.md)   
  [データベース識別子](../relational-databases/databases/database-identifiers.md)  
   

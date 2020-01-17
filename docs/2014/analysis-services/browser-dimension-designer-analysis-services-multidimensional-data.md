@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.dimensiondesigner.browsedim.view.f1
@@ -15,12 +14,12 @@ ms.assetid: c7772d73-31c9-4b22-a899-bac424d603bb
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 9672408d1a63729f21395184644ca6a92d091e46
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 1b3448891baed6fe91bb0339030f74569a096377
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48185842"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66064628"
 ---
 # <a name="browser-dimension-designer-analysis-services---multidimensional-data"></a>[ブラウザー] (ディメンション デザイナー) (Analysis Services - 多次元データ)
   ディメンション デザイナーの **[ブラウザー]** タブを使用すると、ディメンションのディメンション データとメタデータを参照できます。 現在選択しているディメンションで、ディメンションの書き戻しが可能な場合は、このビューを使用してディメンションのメンバー データを変更します。  
@@ -28,7 +27,7 @@ ms.locfileid: "48185842"
 ## <a name="panes"></a>ペイン  
  **[ブラウザー]** タブには、次のペインがあります。  
   
- [ツールバー](toolbar-browser-tab-dimension-designer-analysis-services-multidimensional-data.md)  
+ [[ツール バー]](toolbar-browser-tab-dimension-designer-analysis-services-multidimensional-data.md)  
  ツール バーを使用して、ディメンション デザイナーの **[ブラウザー]** タブで一般的なアクションを実行します。  
   
  [レベルとメンバー](level-members-dimension-designer-analysis-services-multidimensional-data.md)  

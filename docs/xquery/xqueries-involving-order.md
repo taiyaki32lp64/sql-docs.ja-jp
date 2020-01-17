@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 4f1266c5-93d7-402d-94ed-43f69494c04b
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 49f7c204dd5c8fd74c1e2fe1c1c57adb38e60d69
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 4fc30086978e26f53f7a4fdbab8a731ac2334181
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52524071"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67946114"
 ---
 # <a name="xqueries-involving-order"></a>順序に関係する XQuery
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]

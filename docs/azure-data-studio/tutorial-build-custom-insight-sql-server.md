@@ -1,50 +1,49 @@
 ---
-title: チュートリアル:カスタム インサイト ウィジェットをビルドします。
+title: チュートリアル:カスタムの分析情報ウィジェットを構築する
 titleSuffix: Azure Data Studio
-description: このチュートリアルでは、カスタムの洞察のウィジェットをビルドして Azure Data Studio でのデータベースとサーバーのダッシュ ボードに追加する方法について説明します。
-ms.custom: seodec18
-ms.date: 09/24/2018
+description: このチュートリアルでは、カスタムの分析情報ウィジェットを構築し、Azure Data Studio のデータベースとサーバー ダッシュボードに追加する方法について説明します。
 ms.prod: sql
 ms.technology: azure-data-studio
-ms.reviewer: alayu; sstein
 ms.topic: tutorial
-author: stevestein
-ms.author: sstein
-manager: craigg
-ms.openlocfilehash: ab545d4d058780503778fb470bc5802ecae9d077
-ms.sourcegitcommit: 189a28785075cd7018c98e9625c69225a7ae0777
-ms.translationtype: MT
+author: markingmyname
+ms.author: maghan
+ms.reviewer: alayu; sstein
+ms.custom: seodec18
+ms.date: 09/24/2018
+ms.openlocfilehash: 34ee9c23569897247f05d6b9b5f9f2610f5d68fc
+ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53030036"
+ms.lasthandoff: 07/25/2019
+ms.locfileid: "67959097"
 ---
-# <a name="tutorial-build-a-custom-insight-widget"></a>チュートリアル:カスタム インサイト ウィジェットをビルドします。
+# <a name="tutorial-build-a-custom-insight-widget"></a>チュートリアル:カスタムの分析情報ウィジェットを構築する
 
-このチュートリアルでは、独自の分析クエリを使用して、カスタムの洞察のウィジェットを構築する方法を示します。
+このチュートリアルでは、独自の分析情報クエリを使用してカスタムの分析情報ウィジェットを構築する方法について説明します。
 
-このチュートリアルの中に確認する方法。
+このチュートリアルでは、次の方法を学習します。
 > [!div class="checklist"]
-> * 独自のクエリを実行し、グラフで表示
-> * カスタム インサイト ウィジェット グラフからを構築します。
-> * サーバーまたはデータベースのダッシュ ボードにグラフを追加します。
-> * 詳細、カスタム インサイト ウィジェットを追加します。
+> * 独自のクエリを実行し、それをグラフで表示する
+> * グラフからカスタムの分析情報ウィジェットを構築する
+> * サーバーまたはデータベース ダッシュボードにグラフを追加する
+> * カスタムの分析情報ウィジェットに詳細を追加する
 
 ## <a name="prerequisites"></a>Prerequisites
 
-このチュートリアルでは、SQL Server または Azure SQL Database に *TutorialDB* が必要です。 *TutorialDB* データベースを作成するには、次のクイック スタートのいずれかを行います。
+このチュートリアルには、SQL Server か Azure SQL Database *TutorialDB* が必要です。 *TutorialDB* データベースを作成するには、次のクイックスタートのいずれかを実行します。
 
-- [[!INCLUDE[name-sos-short](../includes/name-sos-short.md)] を使用して、SQL Server に接続し、クエリを実行する](quickstart-sql-server.md)
-- [[!INCLUDE[name-sos-short](../includes/name-sos-short.md)] を使用して、Azure SQL Database に接続し、クエリを実行する](quickstart-sql-database.md)
+- [[!INCLUDE[name-sos-short](../includes/name-sos-short.md)] を使用して SQL Server に接続し、クエリを実行する](quickstart-sql-server.md)
+- [[!INCLUDE[name-sos-short](../includes/name-sos-short.md)] を使用して Azure SQL Database に接続し、クエリを実行する](quickstart-sql-database.md)
 
 
-## <a name="run-your-own-query-and-view-the-result-in-a-chart-view"></a>独自のクエリを実行し、結果をグラフ ビューで表示
-この手順では、現在アクティブなセッションを照会する sql スクリプトを実行します。
+## <a name="run-your-own-query-and-view-the-result-in-a-chart-view"></a>独自のクエリを実行し、グラフ ビューに結果を表示する
+この手順では、SQL スクリプトを実行し、現在アクティブになっているセッションにクエリを実行します。
 
-1. 新しいエディターを開くには、キーを押して**Ctrl + N**します。 
+1. 新しいエディターを開くには、**Ctrl + N** を押します。 
 
-2. 接続コンテキストを変更する**TutorialDB**します。
+2. 接続コンテキストを **TutorialDB** に変更します。
 
-3. クエリ エディターには、次のクエリを貼り付けます。
+3. 次のクエリをクエリ エディターに貼り付けます。
 
    ```sql
    SELECT count(session_id) as [Active Sessions]
@@ -52,31 +51,31 @@ ms.locfileid: "53030036"
    WHERE status = 'running'
    ```
 
-4. エディターでクエリを保存、 \*.sql ファイル。 このチュートリアルでは、スクリプトとして保存*activeSession.sql*します。
+4. エディターのクエリを \*.sql ファイルに保存します。 このチュートリアルでは、スクリプトを *activeSession.sql* を保存します。
 
-5. クエリを実行するキーを押して**F5**します。
+5. クエリを実行するには、**F5** を押します。
 
-6. クエリの結果が表示されたら、クリックして**グラフとして表示**、 をクリックし、**グラフ ビューアー**  タブ。
+6. 結果が表示されたら、 **[View as Chart]\(グラフとして表示\)** をクリックし、 **[Chart Viewer]\(グラフ ビューアー\)** タブをクリックします。
 
-7. 変更**グラフの種類**に**カウント**します。 これらの設定は、カウントのグラフを表示します。
+7. **[グラフの種類]** を **[カウント]** に変更します。 以上の設定によりカウント グラフがレンダリングされます。
 
-## <a name="add-the-custom-insight-to-the-database-dashboard"></a>データベース ダッシュ ボードにカスタム インサイトを追加します。
+## <a name="add-the-custom-insight-to-the-database-dashboard"></a>カスタムの分析情報をデータベース ダッシュボードに追加する
 
-1. Insight ウィジェットの構成を開くには、*グラフ ビューアー* で **作成洞察** をクリックします:
+1. 分析情報ウィジェット構成を開き、 *[Chart Viewer]\(グラフ ビューアー\)* で **[Create Insight]\(分析情報の作成\)** をクリックします。
 
    ![構成](./media/tutorial-build-custom-insight-sql-server/create-insight.png)
    
-2. インサイトの構成 (JSON データ) をコピーします。 
+2. 分析情報構成 (JSON データ) をコピーします。 
 
-3. キーを押して**Ctrl + コンマ**を開く*ユーザー設定*します。
+3. **Ctrl** を押しながらコンマ キーを押し、 *[ユーザー設定]* を開きます。
 
-4. 型*ダッシュ ボード*で*検索設定*します。
+4. *[検索の設定]* に「*dashboard*」と入力します。
 
-5. クリックして**編集**の*dashboard.database.widgets*します。
+5. *dashboard.database.widgets* の **[編集]** をクリックします。
 
-   ![ダッシュ ボードの設定](./media/tutorial-build-custom-insight-sql-server/dashboard-settings.png)
+   ![ダッシュボード設定](./media/tutorial-build-custom-insight-sql-server/dashboard-settings.png)
 
-6. インサイトの構成 JSON を貼り付けますに*dashboard.database.widgets*します。 ダッシュ ボードの設定が、次のようにデータベースします。
+6. 分析情報構成 JSON を *dashboard.database.widgets* に貼り付けます。 データベース ダッシュボードの設定は次のようになります。
 
    ```json
     "dashboard.database.widgets": [
@@ -104,17 +103,17 @@ ms.locfileid: "53030036"
     ]
    ```
 
-7. 保存、*ユーザー設定*ファイルを探して開きます、 *TutorialDB*データベースのダッシュ ボードは、アクティブなセッションのウィジェットを参照してください。
+7. *[ユーザー設定]* ファイルを保存し、*TutorialDB* データベース ダッシュボードを開き、アクティブになっているセッション ウィジェットを表示します。
 
-   ![activesession insight](./media/tutorial-build-custom-insight-sql-server/insight-activesession-dashboard.png)
+   ![activesession 分析情報](./media/tutorial-build-custom-insight-sql-server/insight-activesession-dashboard.png)
 
-## <a name="add-details-to-custom-insight"></a>詳細カスタム インサイトを追加します。
+## <a name="add-details-to-custom-insight"></a>詳細をカスタムの分析情報に追加する
 
-1. 新しいエディターを開くには、キーを押して**Ctrl + N**します。
+1. 新しいエディターを開くには、**Ctrl + N** を押します。
 
-2. 接続コンテキストを変更する**TutorialDB**します。
+2. 接続コンテキストを **TutorialDB** に変更します。
 
-3. クエリ エディターには、次のクエリを貼り付けます。
+3. 次のクエリをクエリ エディターに貼り付けます。
 
    ```sql
     SELECT session_id AS [SID], login_time AS [Login Time], host_name AS [Host Name], program_name AS [Program Name], login_name AS [Login Name]
@@ -122,11 +121,11 @@ ms.locfileid: "53030036"
     WHERE status = 'running'
    ```
 
-4. エディターでクエリを保存、 \*.sql ファイル。 このチュートリアルでは、スクリプトとして保存*activeSessionDetail.sql*します。
+4. エディターのクエリを \*.sql ファイルに保存します。 このチュートリアルでは、スクリプトを *activeSessionDetail.sql* として保存します。
 
-5. キーを押して**Ctrl + コンマ**を開く*ユーザー設定*します。
+5. **Ctrl** を押しながらコンマ キーを押し、 *[ユーザー設定]* を開きます。
 
-6. 既存の編集*dashboard.database.widgets*設定ファイル内のノード。
+6. 設定ファイルの既存の *dashboard.database.widgets* ノードを編集します。
 
    ```json
     "dashboard.database.widgets": [
@@ -159,19 +158,19 @@ ms.locfileid: "53030036"
     ]
    ```
 
-7. 保存、*ユーザー設定*ファイルを探して開きます、 *TutorialDB*データベース ダッシュ ボード。 次に省略記号 (...) ボタンをクリックして*マイ ウィジェット*詳細を表示します。
+7. *[ユーザー設定]* ファイルを保存し、*TutorialDB* データベース ダッシュボードを開きます。 *[My-Widget]\(マイ ウィジェット\)* の隣にある省略記号 (...) をクリックすると、詳細が表示されます。
 
-    ![activesession insight](./media/tutorial-build-custom-insight-sql-server/insight-activesession-detail.png)
+    ![activesession 分析情報](./media/tutorial-build-custom-insight-sql-server/insight-activesession-detail.png)
 
 ## <a name="next-steps"></a>次の手順
-このチュートリアルでは、以下の使用方法を学習しました:
+このチュートリアルでは、次の方法を学習しました。
 > [!div class="checklist"]
-> * 独自のクエリを実行し、グラフで表示
-> * カスタム インサイト ウィジェット グラフからを構築します。
-> * サーバーまたはデータベースのダッシュ ボードにグラフを追加します。
-> * 詳細、カスタム インサイト ウィジェットを追加します。
+> * 独自のクエリを実行し、それをグラフで表示する
+> * グラフからカスタムの分析情報ウィジェットを構築する
+> * サーバーまたはデータベース ダッシュボードにグラフを追加する
+> * カスタムの分析情報ウィジェットに詳細を追加する
 
-バックアップおよびデータベースを復元する方法については、するには、次のチュートリアルを行います。
+データベースをバックアップし、復元する方法については、次のチュートリアルを完了してください。
 
 > [!div class="nextstepaction"]
-> [バックアップおよびデータベースを復元](tutorial-backup-restore-sql-server.md)します。
+> [データベースのバックアップと復元](tutorial-backup-restore-sql-server.md)。

@@ -11,15 +11,14 @@ helpviewer_keywords:
 ms.assetid: c5b1c2f4-f591-4cc1-aa17-204636a27f29
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 7974805b2756ed1b160a254cfda94261a625824c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 99add77f12934928a72354e40e87b5025bdd6ec7
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47721890"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72908635"
 ---
-# <a name="mssqlserver1222"></a>MSSQLSERVER_1222
+# <a name="mssqlserver_1222"></a>MSSQLSERVER_1222
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   
 ## <a name="details"></a>詳細  
@@ -44,6 +43,6 @@ ms.locfileid: "47721890"
 2.  トランザクションがロックをまだ保持している場合は、必要に応じてこのトランザクションを中止します。  
   
 3.  クエリを再実行します。  
-  
+
 このエラーが頻繁に発生する場合は、ロック要求のタイムアウト時間を変更するか、原因となっているトランザクションを修正してロックの拘束時間を短くします。  
   

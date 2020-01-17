@@ -13,15 +13,18 @@ f1_keywords:
 ms.assetid: eef82c89-228a-4dc7-9bd0-ea00f57692f5
 author: Lingxi-Li
 ms.author: lingxl
-manager: craigg
-ms.openlocfilehash: c2073da82b19cc9e8d9d1fdbc87beb9b2ef89595
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 584bd3a22c24dfccf8fab562202d66ce8689b55b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47710620"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67947195"
 ---
 # <a name="azure-sql-dw-upload-task"></a>Azure SQL DW アップロード タスク
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
 
 **Azure SQL DW アップロード タスク**により、SSIS パッケージはファイル システムまたは Azure Blob Storage から Azure SQL Data Warehouse (DW) に表形式データをコピーできます。
 「[Azure SQL Data Warehouse Loading Patterns and Strategies](https://blogs.msdn.microsoft.com/sqlcat/2017/05/17/azure-sql-data-warehouse-loading-patterns-and-strategies/)」(Azure SQL Data Warehouse の読み込みパターンと戦略) で説明されているように、このタスクはパフォーマンス向上のために PolyBase を利用します。
@@ -58,7 +61,7 @@ RetainFiles|Azure Storage にアップロードしたファイルを保持する
 CompressionType|Azure Storage にファイルをアップロードするときに使用する圧縮形式を指定します。 ローカル ソースは影響を受けません。
 CompressionLevel|圧縮形式に使用する圧縮レベルを指定します。
 AzureDwConnection|Azure SQL DW の ADO.NET 接続マネージャーを指定します。
-TableName|アップロード先のテーブルの名前を指定します。 既存のテーブル名を選択するか、**[\<新しいテーブル...>]** を選択して新規作成します。
+TableName|アップロード先のテーブルの名前を指定します。 既存のテーブル名を選択するか、 **[\<新しいテーブル...>]** を選択して新規作成します。
 TableDistribution|新しいテーブルの配布方法を指定します。 **TableName**に新しいテーブル名が指定されている場合に適用されます。
 HashColumnName|ハッシュ テーブル配分に使用される列を指定します。 **TableDistribution** に **HASH**が指定されている場合に適用されます。
 
@@ -73,7 +76,7 @@ BlobDirectory|ソース データが存在する BLOB ディレクトリ (仮想
 [列区切り記号]|各列の終わりに印を付ける 1 つ以上の文字を指定します。 例: &#124; (パイプ)、\t (タブ)、' (単一引用符)、" (二重引用符)、および 0x5c (バック スラッシュ)。
 CompressionType|ソース データに使用される圧縮形式を指定します。
 AzureDwConnection|Azure SQL DW の ADO.NET 接続マネージャーを指定します。
-TableName|アップロード先のテーブルの名前を指定します。 既存のテーブル名を選択するか、**[\<新しいテーブル...>]** を選択して新規作成します。
+TableName|アップロード先のテーブルの名前を指定します。 既存のテーブル名を選択するか、 **[\<新しいテーブル...>]** を選択して新規作成します。
 TableDistribution|新しいテーブルの配布方法を指定します。 **TableName**に新しいテーブル名が指定されている場合に適用されます。
 HashColumnName|ハッシュ テーブル配分に使用される列を指定します。 **TableDistribution** に **HASH**が指定されている場合に適用されます。
 

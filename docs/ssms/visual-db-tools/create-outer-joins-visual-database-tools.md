@@ -11,15 +11,14 @@ helpviewer_keywords:
 - outer joins
 - joins [SQL Server], outer
 ms.assetid: 18de47b1-f936-427d-b852-fe6d20334f71
-author: stevestein
-ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 0cfbe964783408fddf88ff3737de8346ae388bf8
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: d107e8c4f7bd148bc4dddc3b598636bfcd7a635e
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47813750"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68264344"
 ---
 # <a name="create-outer-joins-visual-database-tools"></a>外部結合の作成 (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -31,7 +30,7 @@ ms.locfileid: "47813750"
   
 1.  結合を自動または手動で作成します。 詳細については、「[テーブルの自動結合 (Visual Database Tools)](../../ssms/visual-db-tools/join-tables-automatically-visual-database-tools.md)」または「[手動でのテーブルの結合 (Visual Database Tools)](../../ssms/visual-db-tools/join-tables-manually-visual-database-tools.md)」を参照してください。  
   
-2.  ダイアグラム ペインで結合線を選択し、**[クエリ デザイナー]** メニューの **[<tablename> からすべての行を選択]** をクリックして、結合する行が含まれるテーブルを結合するコマンドを実行します。  
+2.  ダイアグラム ペインで結合線を選択し、 **[クエリ デザイナー]** メニューの **[<tablename> からすべての行を選択]** をクリックして、結合する行が含まれるテーブルを結合するコマンドを実行します。  
   
     -   左外部結合を作成するには、最初のテーブルを選択します。  
   

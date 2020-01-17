@@ -2,20 +2,20 @@
 title: アイテム レベルのタスク | Microsoft Docs
 ms.date: 03/01/2017
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: security
 ms.topic: conceptual
 helpviewer_keywords:
 - item-level tasks [Reporting Services]
 ms.assetid: fdeb7bc3-167a-4342-84e3-32e3faa1fa39
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 8dc24ff10be5f9621f01ba8ec71e97cce7680074
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 7224b99b721a48f14467da7479137fb4c61d4da9
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47792857"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65570276"
 ---
 # <a name="tasks-and-permissions---item-level-tasks"></a>タスクおよびアクセス許可 - アイテム レベルのタスク
   アイテムレベルのタスクとは、レポート、フォルダー、レポート モデル、リソース、共有データ ソースに関連する権限を集めたものです [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] には、レポート サーバー サイト全体に適用されるシステムレベル タスクもあります。 詳細については、「 [システムレベルのタスク](../../reporting-services/security/tasks-and-permissions-system-level-tasks.md)」を参照してください。 一般的なタスクおよび権限の詳細については、「 [タスクと権限](../../reporting-services/security/tasks-and-permissions.md)」を参照してください。  

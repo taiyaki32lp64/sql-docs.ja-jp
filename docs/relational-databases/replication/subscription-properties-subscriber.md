@@ -13,17 +13,16 @@ f1_keywords:
 ms.assetid: db2be511-c76e-4f21-8be4-6a8c60a50d30
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 43268755a3de5cf3a8a84547bafe5dc66ad1ac48
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+monikerRange: =azuresqldb-current||>=sql-server-2014||=sqlallproducts-allversions
+ms.openlocfilehash: 7793c64a6c7d5dc404c24f502a45067d2e95fcca
+ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54134082"
+ms.lasthandoff: 08/03/2019
+ms.locfileid: "68769460"
 ---
 # <a name="sql-server-replication-subscription-properties-dialog-box"></a>SQL Server レプリケーションの [サブスクリプションのプロパティ] ダイアログ ボックス 
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md.md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
 ### <a name="publisher-properties"></a>パブリッシャーのプロパティ
 パブリッシャーの **[サブスクリプションのプロパティ]** ダイアログ ボックスを使用すると、プッシュ サブスクリプションのプロパティを表示したり設定したりできます。 プル サブスクリプションのいくつかのプロパティを表示することもできますが、サブスクリプションの **[サブスクリプションのプロパティ]** ダイアログ ボックスではさらに多くのプロパティが表示され、プロパティを変更することができます。  
@@ -47,11 +46,12 @@ ms.locfileid: "54134082"
  読み取り専用として表示されているオプションの場合、サブスクリプションが作成されている場合にのみ設定できます。 サブスクリプションの新規作成ウィザードで使用することのできないオプションを設定する場合は、サブスクリプションをストアド プロシージャで作成します。 詳細については、「 [Create a Pull Subscription](../../relational-databases/replication/create-a-pull-subscription.md) 」および「 [Create a Push Subscription](../../relational-databases/replication/create-a-push-subscription.md)」を参照してください。  
   
 > [!NOTE]  
->  ディストリビューション エージェントまたはマージ エージェントのジョブがサブスクリプションに対してまだ作成されていない場合、ほとんどのサブスクリプション プロパティは表示されません。 プル サブスクリプションのエージェント ジョブを作成するには、[sp_addpullsubscription_agent &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addpullsubscription-agent-transact-sql.md) (スナップショットまたはトランザクション パブリケーションへのサブスクリプションの場合) または [sp_addmergepullsubscription_agent &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addmergepullsubscription-agent-transact-sql.md) (マージ パブリケーションへのサブスクリプションの場合) を実行します。  
+>  - ディストリビューション エージェントまたはマージ エージェントのジョブがサブスクリプションに対してまだ作成されていない場合、ほとんどのサブスクリプション プロパティは表示されません。 プル サブスクリプションのエージェント ジョブを作成するには、[sp_addpullsubscription_agent &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addpullsubscription-agent-transact-sql.md) (スナップショットまたはトランザクション パブリケーションへのサブスクリプションの場合) または [sp_addmergepullsubscription_agent &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addmergepullsubscription-agent-transact-sql.md) (マージ パブリケーションへのサブスクリプションの場合) を実行します。  
+> - Azure SQL Database マネージド インスタンスは、スナップショットおよびトランザクション レプリケーションのパブリッシャー、ディストリビューター、およびサブスクライバーの可能性があります。 Azure SQL Database のシングル データベースとプール データベースは、スナップショットとトランザクション レプリケーションのプッシュ サブスクライバーの可能性しかありません。 詳細については、[Azure SQL Database を使用したトランザクションのレプリケーション](/azure/sql-database/sql-database-managed-instance-transactional-replication)に関する記事を参照してください。 
   
 ## <a name="publisher-options-for-all-subscriptions"></a>すべてのサブスクリプションに対するパブリッシャーのオプション  
  **セキュリティ**  
- **[エージェント プロセス アカウント]** 行をクリックしてプロパティ ボタン (**[...]**) をクリックし、ディストリビューション エージェントまたはマージ エージェントがディストリビューターで実行されるアカウントを変更します。 ディストリビューション エージェントまたはマージ エージェントがサブスクライバーへの接続を作成するアカウントを変更するには、 **[サブスクライバー接続]** をクリックしてプロパティ ボタン (**[...]**) をクリックします。  
+ **[エージェント プロセス アカウント]** 行をクリックしてプロパティ ボタン ( **[...]** ) をクリックし、ディストリビューション エージェントまたはマージ エージェントがディストリビューターで実行されるアカウントを変更します。 ディストリビューション エージェントまたはマージ エージェントがサブスクライバーへの接続を作成するアカウントを変更するには、 **[サブスクライバー接続]** をクリックしてプロパティ ボタン ( **[...]** ) をクリックします。  
   
  各エージェントに必要な権限の詳細については、「 [Replication Agent Security Model](../../relational-databases/replication/security/replication-agent-security-model.md)」を参照してください。  
   
@@ -82,13 +82,13 @@ ms.locfileid: "54134082"
  **[スナップショットの場所]**  
  初期化または再初期化の際にアクセスするスナップショット ファイルの場所を決定します。 場所は次の値のいずれかです。  
   
--   **[既定の場所]**: ディストリビューターの構成時に定義される既定の場所です。 詳細については、[スナップショット オプションの指定](../../relational-databases/replication/snapshot-options.md)に関する記事を参照してください。  
+-   **[既定の場所]** : ディストリビューターの構成時に定義される既定の場所です。 詳細については、[スナップショット オプションの指定](../../relational-databases/replication/snapshot-options.md)に関する記事を参照してください。  
   
--   **[代替フォルダー]**: **[パブリケーションのプロパティ]** ダイアログ ボックスで指定することができる代替の場所です。 詳細については、[スナップショット オプションの指定](../../relational-databases/replication/snapshot-options.md)に関する記事を参照してください。  
+-   **[代替フォルダー]** : **[パブリケーションのプロパティ]** ダイアログ ボックスで指定することができる代替の場所です。 詳細については、[スナップショット オプションの指定](../../relational-databases/replication/snapshot-options.md)に関する記事を参照してください。  
   
--   **[動的スナップショット フォルダー]**: パラメーター化された行フィルターを使用するマージ パブリケーションのスナップショットの場所です。 詳しくは、「 [Snapshots for Merge Publications with Parameterized Filters](../../relational-databases/replication/create-a-snapshot-for-a-merge-publication-with-parameterized-filters.md)」をご覧ください。  
+-   **[動的スナップショット フォルダー]** : パラメーター化された行フィルターを使用するマージ パブリケーションのスナップショットの場所です。 詳しくは、「 [Snapshots for Merge Publications with Parameterized Filters](../../relational-databases/replication/create-a-snapshot-for-a-merge-publication-with-parameterized-filters.md)」をご覧ください。  
   
--   **[FTP フォルダー]**: FTP (ファイル転送プロトコル) サーバーにアクセスできるフォルダーです。 詳細については、「[FTP でのスナップショットの配信](../../relational-databases/replication/publish/deliver-a-snapshot-through-ftp.md)」を参照してください。  
+-   **[FTP フォルダー]** : FTP (ファイル転送プロトコル) サーバーにアクセスできるフォルダーです。 詳細については、「[FTP でのスナップショットの配信](../../relational-databases/replication/publish/deliver-a-snapshot-through-ftp.md)」を参照してください。  
   
  **[スナップショット フォルダー]**  
  **[スナップショットの場所]** オプションに対して **[既定の場所]** 以外の値を選択した場合、そのスナップショット フォルダーへのパスを指定する必要があります。  
@@ -97,13 +97,13 @@ ms.locfileid: "54134082"
  [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 同期マネージャーを使用して、サブスクリプションを同期化できるかどうかを決定します。  
   
  **セキュリティ**  
- **[エージェント プロセス アカウント]** 行をクリックしてプロパティ ボタン (**[...]**) をクリックし、ディストリビューション エージェントまたはマージ エージェントがサブスクライバーで実行されるアカウントを変更します。 接続に関するセキュリティ オプションは、サブスクリプションの種類によって異なります。  
+ **[エージェント プロセス アカウント]** 行をクリックしてプロパティ ボタン ( **[...]** ) をクリックし、ディストリビューション エージェントまたはマージ エージェントがサブスクライバーで実行されるアカウントを変更します。 接続に関するセキュリティ オプションは、サブスクリプションの種類によって異なります。  
   
--   トランザクション パブリケーションへのサブスクリプションの場合、ディストリビューション エージェントがディストリビューターへの接続を作成するアカウントを変更するには、 **[ディストリビューター接続]** をクリックしてプロパティ ボタン (**[...]**) をクリックします。  
+-   トランザクション パブリケーションへのサブスクリプションの場合、ディストリビューション エージェントがディストリビューターへの接続を作成するアカウントを変更するには、 **[ディストリビューター接続]** をクリックしてプロパティ ボタン ( **[...]** ) をクリックします。  
   
--   トランザクション パブリケーションへの即時更新サブスクリプションの場合、上記のディストリビューター接続に加え、サブスクライバーからパブリッシャーに変更を伝達するのに使用する方法を変更することができます。これを行うには、 **[パブリッシャー接続]** をクリックしてプロパティ ボタン (**[...]**) をクリックします。  
+-   トランザクション パブリケーションへの即時更新サブスクリプションの場合、上記のディストリビューター接続に加え、サブスクライバーからパブリッシャーに変更を伝達するのに使用する方法を変更することができます。これを行うには、 **[パブリッシャー接続]** をクリックしてプロパティ ボタン ( **[...]** ) をクリックします。  
   
--   マージ パブリケーションへのサブスクリプションの場合、 **[パブリッシャー接続]** をクリックしてプロパティ ボタン (**[...]**) をクリックします。  
+-   マージ パブリケーションへのサブスクリプションの場合、 **[パブリッシャー接続]** をクリックしてプロパティ ボタン ( **[...]** ) をクリックします。  
   
  各エージェントに必要な権限の詳細については、「 [Replication Agent Security Model](../../relational-databases/replication/security/replication-agent-security-model.md)」を参照してください。  
   
@@ -129,7 +129,7 @@ ms.locfileid: "54134082"
  **[Web 同期を使用]** に **[True]** を選択した場合、次の手順に従います。  
   
 -   **[Web サーバー アドレス]** に IIS サーバーのフル アドレスを入力します。    
--   サブスクライバーが IIS サーバーに接続されるアカウントを設定または変更するには、 **[Web サーバー接続]** 行をクリックしてプロパティ ボタン (**[...]**) をクリックします。    
+-   サブスクライバーが IIS サーバーに接続されるアカウントを設定または変更するには、 **[Web サーバー接続]** 行をクリックしてプロパティ ボタン ( **[...]** ) をクリックします。    
 -   必要であれば、 **[Web サーバーのタイムアウト]** を変更します。 タイムアウトは Web 同期要求の期限が切れるまでの期間 (秒単位) です。 
 
  

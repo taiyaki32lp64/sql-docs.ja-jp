@@ -14,20 +14,19 @@ helpviewer_keywords:
 - mathematical functions [SQL Server]
 - functions [SQL Server], mathematical
 ms.assetid: 46495a2e-81d0-4677-9d72-9db083cd1023
-author: MashaMSFT
-ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 0da60eeb02d2bbe5a4ac34a6b6ae3f0e48d0daf3
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: MikeRayMSFT
+ms.author: mikeray
+ms.openlocfilehash: 328a6e21d32bf5c0eaa029fcb0cf6586533cac19
+ms.sourcegitcommit: c98c6e33d04d4a1888db7dbe89cb0b1bb3a66418
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47676117"
+ms.lasthandoff: 11/20/2019
+ms.locfileid: "74249785"
 ---
 # <a name="mathematical-functions-transact-sql"></a>数学関数 (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-  以下のスカラー関数は、通常は引数として渡された入力値に基づいて計算を実行し、数値を返します。  
+  次のスカラー関数では、通常、引数として提供される入力値に基づいて計算を実行し、数値を返します。  
   
 ||||  
 |-|-|-|  
@@ -41,9 +40,9 @@ ms.locfileid: "47676117"
 |[COT](../../t-sql/functions/cot-transact-sql.md)|[RADIANS](../../t-sql/functions/radians-transact-sql.md)||  
   
 > [!NOTE]  
->  ABS、CEILING、DEGREES、FLOOR、POWER、RADIANS、SIGN などの算術関数は、入力値と同じデータ型の値を返します。 EXP、LOG、LOG10、SQUARE、SQRT などの三角関数やその他の関数は、その入力値を**float** 型にキャストし、**float** 型の値を返します。  
+>  ABS、CEILING、DEGREES、FLOOR、POWER、RADIANS、SIGN などの算術関数では、入力値と同じデータ型の値を返します。 EXP、LOG、LOG10、SQUARE、SQRT などの三角関数やその他の関数は、その入力値を**float** 型にキャストし、**float** 型の値を返します。  
   
- RAND を除くすべての数学関数は決定的です。 つまり、特定の一連の入力値を使用して呼び出されるたびに、同じ結果を返します。 RAND は、シード パラメーターが指定されている場合にのみ決定的です。 関数の決定性の詳細については、次を参照してください。[決定的関数と非決定的関数です](../../relational-databases/user-defined-functions/deterministic-and-nondeterministic-functions.md)。  
+ RAND を除く、すべての数学関数が決定論的関数です。 これは、特定の入力値のセットを使用して呼び出されるたびに、同じ結果を返すことを意味します。 RAND は、seed パラメーターが指定されている場合にのみ決定的です。 関数の決定性の詳細については、次を参照してください。[決定的関数と非決定的関数です](../../relational-databases/user-defined-functions/deterministic-and-nondeterministic-functions.md)。  
   
 ## <a name="see-also"></a>参照  
   [算術演算子 &#40;Transact-SQL&#41;](../../t-sql/language-elements/arithmetic-operators-transact-sql.md)  

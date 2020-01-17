@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: bcd945ba-5d81-4124-9a2b-d87491c2a369
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: b8cf91274210e10fa4e46f2c4b9bd90486a28e6b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a0c867d9acba6542d90f72595fa0f71ab6d62e64
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47651270"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68026056"
 ---
 # <a name="smo-and-dmo-xps-server-configuration-option"></a>SMO and DMO XPs サーバー構成オプション
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -27,7 +26,7 @@ ms.locfileid: "47651270"
   
  次の表に、このオプションで使用可能な値を示します。  
   
-|ReplTest1|意味|  
+|[値]|意味|  
 |-----------|-------------|  
 |0|SMO 拡張ストアド プロシージャ (XP) を使用できません。|  
 |1|SMO 拡張ストアド プロシージャ (XP) を使用できます。 これは既定値です。|  

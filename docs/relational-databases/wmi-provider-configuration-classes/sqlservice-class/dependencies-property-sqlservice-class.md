@@ -1,6 +1,6 @@
 ---
-title: 依存関係プロパティ (SqlService クラス) |Microsoft Docs
-ms.custom: ''
+title: Dependencies プロパティ (SqlService)
+ms.custom: seo-lt-2019
 ms.date: 03/04/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 92d54b7e-de2f-4978-b601-0196e37cbb41
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: f68d02aa82033f9f5ff4fde3c62e153bb919676b
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 993c922562773648aac5460116ba6e343a72132f
+ms.sourcegitcommit: baa40306cada09e480b4c5ddb44ee8524307a2ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51660841"
+ms.lasthandoff: 11/06/2019
+ms.locfileid: "73659285"
 ---
 # <a name="dependencies-property-sqlservice-class"></a>Dependencies プロパティ (SqlService クラス)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -43,9 +42,9 @@ object.Dependencies [= value]
 ## <a name="property-valuereturn-value"></a>プロパティ値/戻り値  
  参照されたサービスに依存するサービスのリストを格納する string[] 配列。  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>解説  
   
 ## <a name="see-also"></a>参照  
- [開始とサービスの停止](https://technet.microsoft.com/library/ms174886\(v=sql.105\).aspx)  
+ [サービスの開始と停止](https://technet.microsoft.com/library/ms174886\(v=sql.105\).aspx)  
   
   

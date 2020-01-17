@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - prediction queries [Analysis Services]
@@ -14,12 +13,12 @@ ms.assetid: e02836e5-dd8c-4c97-a078-840ae79d3660
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 6a3211e342528cea6b26630d06ae7b42baf5a6c4
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 73a3058b0e7836c96f15e876f5cf4b5f2cf8bedc
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48189692"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66085347"
 ---
 # <a name="create-a-prediction-query-using-the-prediction-query-builder"></a>予測クエリ ビルダーを使用した予測クエリの作成
   予測クエリは、BI Development Studio でデータ マイニング ソリューションを構築しているときに作成できます。また、SQL Server Management Studio で既存のマイニング モデルを右クリックし、**[予測クエリの作成]** オプションを選択して、作成することもできます。  
@@ -92,7 +91,7 @@ ms.locfileid: "48189692"
 8.  **[マイニング モデル予測]** タブのツール バーにある最初のボタンをクリックし、 **[結果]** を選択して、クエリを実行します。  
   
 ## <a name="see-also"></a>参照  
- [データ マイニング デザイナーで単一クエリを作成します。](create-a-singleton-query-in-the-data-mining-designer.md)   
+ [データ マイニング デザイナーでの単一クエリの作成](create-a-singleton-query-in-the-data-mining-designer.md)   
  [データ マイニング クエリ](data-mining-queries.md)  
   
   

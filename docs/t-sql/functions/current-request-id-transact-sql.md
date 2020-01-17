@@ -15,15 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - CURRENT_REQUEST_ID
 ms.assetid: 949f6e5f-bf5f-49d6-a763-c443d1d51fe2
-author: MashaMSFT
-ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: aeac77c2d32ce06c95bddc8518a27e2d650b257f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: MikeRayMSFT
+ms.author: mikeray
+ms.openlocfilehash: 1880ef3ea67ddac948653054a8d5678787c17dcd
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47744270"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68026427"
 ---
 # <a name="currentrequestid-transact-sql"></a>CURRENT_REQUEST_ID (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

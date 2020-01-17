@@ -19,16 +19,15 @@ helpviewer_keywords:
 - IDs [SQL Server], schemas
 - default schema IDs
 ms.assetid: c8e34df5-3eea-459f-ae40-050909ce9fda
-author: MashaMSFT
-ms.author: mathoma
-manager: craigg
+author: MikeRayMSFT
+ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: c84ce46439a131fe7699819928da46d138449923
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 5882a98a856916ebeaa0ad30d545d29cdf21071c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47661560"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68089876"
 ---
 # <a name="schemaid-transact-sql"></a>SCHEMA_ID (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -47,7 +46,7 @@ SCHEMA_ID ( [ schema_name ] )
   
 |項目|定義|  
 |----------|----------------|  
-|*schema_name*|スキーマの名前を指定します。 *schema_name* は、 **sysname**です。 場合 *schema_name* が指定されていない、SCHEMA_ID は、呼び出し元の既定のスキーマの ID を返します。|  
+|*schema_name*|スキーマの名前です。 *schema_name* は、 **sysname**です。 場合 *schema_name* が指定されていない、SCHEMA_ID は、呼び出し元の既定のスキーマの ID を返します。|  
   
 ## <a name="return-types"></a>戻り値の型  
  **int**  

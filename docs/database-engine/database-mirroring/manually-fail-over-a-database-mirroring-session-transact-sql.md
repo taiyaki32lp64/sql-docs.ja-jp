@@ -1,6 +1,7 @@
 ---
-title: データベース ミラーリング セッションを手動でフェールオーバーする方法 (Transact-SQL) | Microsoft Docs
-ms.custom: ''
+title: データベース ミラーをパートナーに手動でフェールオーバーする
+description: Transact-SQL (T-SQL) を使用して、プリンシパル データベース ミラーをセカンダリ パートナーに手動でフェールオーバーする手順。
+ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: high-availability
@@ -14,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 36218d61-b5f5-4194-905a-608e0e903db4
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 10b4ac5e992e39c9c45f82ab0a1c720ec759100a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 92f9040cdc8181b1546d7a04e9b0eaf265fc7012
+ms.sourcegitcommit: f8cf8cc6650a22e0b61779c20ca7428cdb23c850
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47703740"
+ms.lasthandoff: 12/04/2019
+ms.locfileid: "74822107"
 ---
 # <a name="manually-fail-over-a-database-mirroring-session-transact-sql"></a>データベース ミラーリング セッションを手動でフェールオーバーする方法 (Transact-SQL)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -36,7 +36,7 @@ ms.locfileid: "47703740"
   
 3.  プリンシパル サーバーで次のステートメントを実行します。  
   
-     [ALTER DATABASE](../../t-sql/statements/alter-database-transact-sql-database-mirroring.md) *database_name* SET PARTNER FAILOVER ( *database_name* はミラー データベースの名前です)。  
+     [ALTER DATABASE](../../t-sql/statements/alter-database-transact-sql-database-mirroring.md) *database_name* SET PARTNER FAILOVER (*database_name* はミラー化されたデータベースです)。  
   
      これにより、プリンシパル ロールへのミラー サーバーの移行がすぐに開始されます。  
   

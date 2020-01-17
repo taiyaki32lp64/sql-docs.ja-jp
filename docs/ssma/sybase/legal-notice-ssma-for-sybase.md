@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: fe086e53-e2a9-4bb8-9534-94369d32ab41
 author: Shamikg
 ms.author: Shamikg
-manager: craigg
-ms.openlocfilehash: 6857a18ca740c399feb5e8fd65dae4ec9a7d7dd6
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: c65cc8fa51061ba9f8886bf81e0fa80d53781f91
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52531458"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68028951"
 ---
 # <a name="legal-notice-ssma-for-sybase"></a>法的通知 (SSMA for Sybase)
 このソフトウェアおよびマニュアルに記載されている参照用のアプリケーションを含んだ内容は、情報の提供のみを目的としており、明示または黙示にかかわらず、このマニュアルは保証なしで提供されます。 このソフトウェアの仕様およびマニュアルに記載されている事柄は、将来予告なしに変更することがあります。 お客様が本製品を運用した結果の影響については、お客様が負うものとします。  

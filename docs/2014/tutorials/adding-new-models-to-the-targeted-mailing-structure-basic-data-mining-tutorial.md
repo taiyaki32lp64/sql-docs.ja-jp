@@ -11,11 +11,11 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: 285ee82110ffdef521d75fb43343f4889663e981
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56015457"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62822641"
 ---
 # <a name="adding-new-models-to-the-targeted-mailing-structure-basic-data-mining-tutorial"></a>絞り込みメール配信構造への新しいモデルの追加 (基本的なデータ マイニング チュートリアル)
   このタスクを使用して追加の 2 つのモデルを定義、**マイニング モデル**データ マイニング デザイナーのタブ。 モデルの作成には、Microsoft クラスタリング アルゴリズムと Microsoft Naive Bayes アルゴリズムを使用します。 この 2 つのアルゴリズムを選択する理由は、不連続値 (自転車の購入) を予測できるためです。 これらのアルゴリズムの詳細については、次を参照してください[Microsoft クラスタ リング アルゴリズム](../../2014/analysis-services/data-mining/microsoft-clustering-algorithm.md)と[Microsoft Naive Bayes アルゴリズム。](../../2014/analysis-services/data-mining/microsoft-naive-bayes-algorithm.md)  

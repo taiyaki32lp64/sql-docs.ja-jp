@@ -15,18 +15,17 @@ apitype: Assembly
 ms.assetid: 7a77d8ef-2211-4bf8-af35-020fc896c073
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 5db83b67bf5abffd0ada384eedc0fd0ba8db24f8
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 1adddf442f9d2b6ff84f955cf4e448a31e6741da
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47700800"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67974083"
 ---
 # <a name="setlogwriter-method-sqlserverdatasource"></a>setLogWriter メソッド (SQLServerDataSource)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  このメソッドは、内部でのみ使用されます。 ログ記録の詳細については、次を参照してください。 [Tracing Driver Operation](../../../connect/jdbc/tracing-driver-operation.md)します。  
+  このメソッドは、内部でのみ使用されます。 ログ記録の詳細については、「[ドライバー操作のトレース](../../../connect/jdbc/tracing-driver-operation.md)」を参照してください。  
   
 ## <a name="syntax"></a>構文  
   
@@ -38,10 +37,10 @@ public void setLogWriter(java.io.PrintWriter out)
 #### <a name="parameters"></a>パラメーター  
  *out*  
   
- PrintWriter オブジェクト。  
+ PrintWriter オブジェクトです。  
   
 ## <a name="remarks"></a>Remarks  
- この setLogWriter メソッドは、javax.sql.DataSource インターフェイスで setLogWriter メソッドによって指定されます。  
+ この setLogWriter メソッドは、javax.mail インターフェイスの setLogWriter メソッドによって指定されます。  
   
 ## <a name="see-also"></a>参照  
  [SQLServerDataSource のメンバー](../../../connect/jdbc/reference/sqlserverdatasource-members.md)   

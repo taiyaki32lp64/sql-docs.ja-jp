@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - displaying data mining models
@@ -19,12 +18,12 @@ ms.assetid: 14c8e656-f63c-4e8a-a3af-1d580e823d28
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: adbed9b575be07354cfe1d1a3bf5f2c0526f458c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 659b8c0afd91a60389a2cacf9a3063ff65164dd1
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48068862"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66085046"
 ---
 # <a name="data-mining-model-viewers"></a>データ マイニング モデル ビューアー
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]でデータ マイニング モデルをトレーニングした後、そのモデルを調査して、興味深い傾向を探すことができます。 マイニング モデルの結果は複雑で、生データの形式では理解しにくいので、通常は視覚的なデータを調査することで、アルゴリズムによってデータ内で発見されたルールや関係を最も簡単に理解できます。  
@@ -38,7 +37,7 @@ ms.locfileid: "48068862"
   
  次の図は、同じモデルでカスタム ビューアーを選択した場合と汎用ビューアーを選択した場合の違いを示しています。  
   
-1.  最初に、Microsoft タイム シリーズ アルゴリズムに基づくマイニング モデルを選択すると表示されるカスタム ビューアーを示します。  
+1.  最初に、Microsoft Time Series アルゴリズムに基づくマイニング モデルを選択すると表示されるカスタム ビューアーを示します。  
   
      この特定のカスタム ビューアーによってタイム シリーズのグラフが自動的に作成され、5 つの予測が提供されます。  
   
@@ -83,7 +82,7 @@ ms.locfileid: "48068862"
  すべてのデータ マイニング モデルの汎用ビューアーで確認できる詳細情報について説明します。また、各アルゴリズムの情報を解釈する方法の例を示します。  
   
 ## <a name="see-also"></a>参照  
- [データ マイニング アルゴリズム&#40;Analysis Services - データ マイニング&#41;](data-mining-algorithms-analysis-services-data-mining.md)   
+ [データ マイニング アルゴリズム (Analysis Services - データ マイニング)](data-mining-algorithms-analysis-services-data-mining.md)   
  [データ マイニング デザイナー](data-mining-designer.md)  
   
   

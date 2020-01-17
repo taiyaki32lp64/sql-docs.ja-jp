@@ -1,5 +1,5 @@
 ---
-title: updateArray (int, java.sql.Array) メソッド |Microsoft Docs
+title: updateArray (int, java .sql. Array) メソッド |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: 464f7e3f-3e8a-4b2d-aebd-1c040583d52c
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 2bdd281ed4e122e6710b2f82693aa9975505916b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: cf9dc7a5e2bf04e33f9fb1ea96a0c62f41378f3b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47679700"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67985587"
 ---
 # <a name="updatearray-method-int-javasqlarray"></a>updateArray (int, java.sql.Array) メソッド
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -43,13 +42,13 @@ public void updateArray(int columnIndex,
   
  *x*  
   
- 配列オブジェクト。  
+ Array オブジェクトです。  
   
 ## <a name="exceptions"></a>例外  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- この updateArray メソッドは、java.sql.ResultSet インターフェイスの updateArray メソッドによって指定されます。  
+ この updateArray メソッドは、java.sql.ResultSet インターフェイスの updateArray メソッドで規定されています。  
   
 ## <a name="see-also"></a>参照  
  [updateArray メソッド &#40;SQLServerResultSet&#41;](../../../connect/jdbc/reference/updatearray-method-sqlserverresultset.md)   

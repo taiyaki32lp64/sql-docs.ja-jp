@@ -1,50 +1,50 @@
 ---
-title: ウイルス対策ソフトウェア、Analytics Platform System |Microsoft Docs
-description: データ センターには、ウイルス対策ソフトウェアが必要とする場合は、次のガイドラインを使用して、Analytics Platform System にウイルス対策ソフトウェアをインストールします。 データ センターの確実な要件である場合を除き、ウイルス対策ソフトウェアをインストールしないことをお勧めします。
+title: ウイルス対策ソフトウェア
+description: データセンターにウイルス対策ソフトウェアが必要な場合は、次のガイドラインに従って、Analytics Platform System (APS) にウイルス対策ソフトウェアをインストールしてください。 データセンターの要件が十分でない場合は、ウイルス対策ソフトウェアをインストールしないことをお勧めします。
 author: mzaman1
-manager: craigg
 ms.prod: sql
 ms.technology: data-warehouse
 ms.topic: conceptual
 ms.date: 04/24/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: c5b9a1eddf8bf06a9d9e5b59754b2c6a34b94267
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.custom: seo-dt-2019
+ms.openlocfilehash: c3687b839e52e64350591402c3aa19e9c2c54ac7
+ms.sourcegitcommit: d587a141351e59782c31229bccaa0bff2e869580
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52524469"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74401472"
 ---
-# <a name="antivirus-software-for-analytics-platform-system"></a>Analytics Platform System のウイルス対策ソフトウェア
-データ センターには、ウイルス対策ソフトウェアが必要とする場合は、次のガイドラインを使用して、Analytics Platform System にウイルス対策ソフトウェアをインストールします。 データ センターの確実な要件である場合を除き、ウイルス対策ソフトウェアをインストールしないことをお勧めします。  
+# <a name="antivirus-software-for-analytics-platform-system-aps"></a>Analytics Platform System (APS) 用ウイルス対策ソフトウェア
+データセンターでウイルス対策ソフトウェアが必要な場合は、次のガイドラインに従って、Analytics Platform System にウイルス対策ソフトウェアをインストールしてください。 データセンターの要件が十分でない場合は、ウイルス対策ソフトウェアをインストールしないことをお勧めします。  
   
 > [!WARNING]  
-> 個別に各コンピューターと、全体として、Analytics Platform System は、セキュリティ上のリスクを評価して、各コンピューターのセキュリティ上のリスク レベルの適切なツールを選択することを強くお勧めします。 また、ウイルス対策、プロジェクトをロールアウトする前に、安定性とパフォーマンスのすべての変更を測定する完全な負荷の下でシステム全体をテストすることをお勧めします。  
+> 各コンピューターのセキュリティリスクと分析プラットフォームシステム全体を個別に評価し、各コンピューターのセキュリティリスクレベルに適したツールを選択することを強くお勧めします。 また、ウイルス対策プロジェクトを展開する前に、システム全体を完全な負荷でテストして、安定性とパフォーマンスの変化を測定することをお勧めします。  
 >   
-> ウイルス対策ソフトウェアでは、一部のシステム リソースを実行する必要があります。 Analytics Platform System のパフォーマンスに影響があるかどうかを判断するウイルス対策ソフトウェアをインストールした後と前にテストを実行する必要があります。  
+> ウイルス対策ソフトウェアを実行するには、いくつかのシステムリソースが必要です。 分析プラットフォームシステムにパフォーマンス上の影響があるかどうかを判断するには、ウイルス対策ソフトウェアをインストールする前と後にテストを実行する必要があります。  
   
-このトピックではガイダンスに基づいて[SQL Server を実行しているコンピューターで実行するウイルス対策ソフトウェアを選択する方法](https://support.microsoft.com/kb/309422)と[サポート技術情報の記事 961804](https://support.microsoft.com/kb/961804/en-us)します。  
+このトピックの内容は、SQL Server および[サポート技術情報の記事 961804](https://support.microsoft.com/kb/961804/en-us)を実行している[コンピューターでウイルス対策ソフトウェアを選択して実行する方法](https://support.microsoft.com/kb/309422)に関するガイドに基づいています。  
   
-## <a name="exclusion-list-for-physical-hosts"></a>物理ホストの除外リスト  
-物理ホスト上のウイルス対策ソフトウェアをインストールするには、ディレクトリとプロセスの次のリストを除外します。 これらは、ウイルス対策ソフトウェアによってスキャンされませんする必要があります。  
+## <a name="exclusion-list-for-physical-hosts"></a>物理ホストの除外一覧  
+物理ホストにウイルス対策ソフトウェアをインストールするには、次のディレクトリとプロセスの一覧を除外します。 ウイルス対策ソフトウェアによってスキャンされないようにする必要があります。  
   
-**これらのディレクトリを除外するには。**  
+**次のディレクトリを除外:**  
   
--   C:\ProgramData\Microsoft\Windows\Hyper-V - 仮想マシンの構成ディレクトリ  
+-   C:\ProgramData\Microsoft\Windows\Hyper-V-仮想マシンの構成ディレクトリ  
   
--   C:\Users\Public\Documents\Hyper-V\Virtual のハード ディスクの既定の仮想ハード ディスク ドライブのディレクトリ  
+-   C:\Users\Public\Documents\Hyper-V\Virtual ハードディスク-既定の仮想ハードディスクドライブディレクトリ  
   
--   C:\clusterStorage - 仮想ハード ディスク ドライブのディレクトリ  
+-   C:\: 記憶域-仮想ハードディスクドライブディレクトリ  
   
-**これらのプロセスを除外するには。**  
+**次のプロセスを除外する:**  
   
--   仮想マシンの管理 (Vmms.exe)  
+-   バーチャルマシンの管理 (Vmms)  
   
--   仮想マシン ワーカー プロセス (Vmwp.exe)  
+-   仮想マシンの作業プロセス (Vmwp .exe)  
   
-## <a name="exclusion-list-for-virtual-machines-vms"></a>仮想マシン (Vm) の除外リスト  
-Vm 上のウイルス対策ソフトウェアをインストールするには、ディレクトリおよびファイルの次の一覧を除外します。 これらは、ウイルス対策ソフトウェアによってスキャンされませんする必要があります。  
+## <a name="exclusion-list-for-virtual-machines-vms"></a>Virtual Machines (Vm) の除外一覧  
+Vm にウイルス対策ソフトウェアをインストールするには、次のディレクトリとファイルの一覧を除外します。 ウイルス対策ソフトウェアによってスキャンされないようにする必要があります。  
   
 **_PDW_region_-CTL01**  
   
@@ -52,17 +52,17 @@ Vm 上のウイルス対策ソフトウェアをインストールするには�
   
 -   G:\  
   
-**_appliance_domain_-AD01**と **_appliance_domain_-AD02**  
+**_appliance_domain_-AD01**および** _appliance_domain_-AD02**  
   
 -   制限なし  
   
-**コンピューティング ノード Vm**  
+**コンピューティングノード Vm**  
   
 -   C:\windows\cluster\  
   
 -   G:\  
   
-**_appliance_domain_VMM**  
+**_appliance_domain_-VMM**  
   
 -   制限なし  
   
@@ -75,5 +75,5 @@ Vm 上のウイルス対策ソフトウェアをインストールするには�
 -   C:\iscsitarget  
   
 ## <a name="see-also"></a>参照  
-[アプライアンスの管理タスク&#40;Analytics Platform System&#41;](appliance-management-tasks.md)  
+[アプライアンス管理タスク &#40;Analytics Platform System&#41;](appliance-management-tasks.md)  
   

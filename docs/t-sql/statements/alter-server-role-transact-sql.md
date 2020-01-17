@@ -18,14 +18,13 @@ helpviewer_keywords:
 ms.assetid: 7a4db7bb-c442-4e12-9a8a-114da5bc7710
 author: VanMSFT
 ms.author: vanto
-manager: craigg
 monikerRange: '>=aps-pdw-2016||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: df9cc3231b9e883857563b2f7ed0bf8bc8d1a2f3
-ms.sourcegitcommit: c6e71ed14198da67afd7ba722823b1af9b4f4e6f
+ms.openlocfilehash: 2307a80d3a40599aed4762077b188baac0533967
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/16/2019
-ms.locfileid: "54327333"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68070271"
 ---
 # <a name="alter-server-role-transact-sql"></a>ALTER SERVER ROLE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-pdw-md.md)]
@@ -65,7 +64,7 @@ ADD MEMBER *server_principal*
 DROP MEMBER *server_principal*  
 指定されたサーバー プリンシパルをサーバー ロールから削除します。 *server_principal* には、ログインまたはユーザー定義サーバー ロールを指定できます。 *server_principal* に、固定サーバー ロール、データベース ロール、または sa を指定することはできません。  
   
-WITH NAME **=**_new_server_role_name_  
+WITH NAME **=** _new_server_role_name_  
 ユーザー定義サーバー ロールの新しい名前を指定します。 サーバー内に存在しない名前を指定してください。  
   
 ## <a name="remarks"></a>Remarks  
@@ -92,7 +91,7 @@ WITH NAME **=**_new_server_role_name_
 ユーザー定義サーバー ロールにメンバーを追加するには、`sysadmin` 固定サーバー ロールのメンバーであるか、`CONTROL SERVER` または `ALTER ANY SERVER ROLE` 権限を持っている必要があります。 または、そのロールに対する `ALTER` 権限を持っている必要があります。  
   
 > [!NOTE]  
->  固定サーバー ロールとは異なり、ユーザー定義サーバー ロールのメンバーは、同じロールにメンバーを追加する権限がもともとありません。  
+>  固定サーバー ロールとは異なり、ユーザー定義サーバー ロールのメンバーには、同じロールにメンバーを追加する権限がもともとありません。  
   
 ## <a name="examples"></a>使用例  
   

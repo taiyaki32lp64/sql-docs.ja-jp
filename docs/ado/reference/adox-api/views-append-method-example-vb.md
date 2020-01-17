@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: b5b4c082-ac29-4f49-a8b8-e21b554c9b0d
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 5651edc56fbffd1c49373374123e8a030be675dc
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 50b24a21c54fcf23dba0748dfba31a99b5bbb1ce
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47681670"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67964792"
 ---
 # <a name="views-append-method-example-vb"></a>Views Append メソッドの例 (VB)
 次のコードを使用する方法を示します、[コマンド](../../../ado/reference/ado-api/command-object-ado.md)オブジェクトと[ビュー](../../../ado/reference/adox-api/views-collection-adox.md)コレクション[Append](../../../ado/reference/adox-api/append-method-adox-views.md)基になるデータ ソースで新しいビューを作成するメソッド。  
@@ -62,7 +61,7 @@ End Sub
 ' EndCreateViewVB  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [ActiveConnection プロパティ (ADOX)](../../../ado/reference/adox-api/activeconnection-property-adox.md)   
  [Append メソッド (ADOX Views)](../../../ado/reference/adox-api/append-method-adox-views.md)   
  [Catalog オブジェクト (ADOX)](../../../ado/reference/adox-api/catalog-object-adox.md)   

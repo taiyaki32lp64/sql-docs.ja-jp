@@ -10,15 +10,15 @@ f1_keywords:
 - sql12.dts.designer.afpblobuptask.f1
 - sql11.dts.designer.afpblobuptask.f1
 ms.assetid: 6ea068b0-4cd8-45b5-b89d-09b8f25040c0
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: b544d2783e91de19b9745ed27b443f38928b5667
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 392fcbf3a46b48b2032b5792321e9a22b3027341
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52758044"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62832786"
 ---
 # <a name="azure-blob-upload-task"></a>Azure BLOB のアップロード タスク
   Azure Blob アップロード タスクにより、SSIS パッケージを Azure blob ストレージにファイルをアップロードします。   

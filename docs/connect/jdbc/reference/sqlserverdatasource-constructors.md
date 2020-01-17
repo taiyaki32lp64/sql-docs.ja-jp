@@ -1,5 +1,5 @@
 ---
-title: SQLServerDataSource のコンス トラクター |Microsoft Docs
+title: SQLServerDataSource コンストラクター |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -10,18 +10,17 @@ ms.topic: conceptual
 ms.assetid: 2cc40f53-0c28-47b8-992f-713f82f44de8
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 5d4f4ea06312a89861cc950dbc7bead032b0d56b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: c19122f9e98eb6e221813b89374c15a38946d77f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47646698"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67971443"
 ---
 # <a name="sqlserverdatasource-constructors"></a>SQLServerDataSource のコンストラクター
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  SQLServerDataSource のコンス トラクターの詳細については、次を参照してください。 [SQLServerDataSource のメンバー](../../../connect/jdbc/reference/sqlserverdatasource-members.md)します。  
+  SQLServerDataSource コンストラクターの詳細については、「 [SQLServerDataSource Members](../../../connect/jdbc/reference/sqlserverdatasource-members.md)」を参照してください。  
   
 ## <a name="see-also"></a>参照  
  [SQLServerDataSource クラス](../../../connect/jdbc/reference/sqlserverdatasource-class.md)  

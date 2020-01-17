@@ -8,17 +8,20 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: tutorial
 ms.assetid: 9aee7acf-797b-46f2-830d-80ab64a9f0b6
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: dde0ffe53ab5763230cafa752d687ab42d3a60c5
-ms.sourcegitcommit: dd794633466b1da8ead9889f5e633bdf4b3389cd
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: ec7514eeb2e614c1313fba81c4a48b8803f0c29d
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54143222"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71296089"
 ---
 # <a name="lesson-1-9-test-the-lesson-1-package"></a>レッスン 1 から 9:レッスン 1 のパッケージをテストする
+
+[!INCLUDE[ssis-appliesto](../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
 
 このチュートリアルでは、次の作業を行いました。  
   
@@ -46,9 +49,9 @@ ms.locfileid: "54143222"
   
 1.  **[デバッグ]** メニューの **[デバッグの開始]** を選択します。  
   
-    パッケージが実行され、その結果、**AdventureWorksDW2012** の **NewFactCurrencyRate** ファクト テーブルに 1,097 行が正常に追加されます。 この結果を確認するには、**[データ フロー]** タブを選択します。
+    パッケージが実行され、その結果、**AdventureWorksDW2012** の **NewFactCurrencyRate** ファクト テーブルに 1,097 行が正常に追加されます。 この結果を確認するには、 **[データ フロー]** タブを選択します。
   
-2.  パッケージの実行が完了したら、**[デバッグ]** メニューの **[デバッグの停止]** を選択します。  
+2.  パッケージの実行が完了したら、 **[デバッグ]** メニューの **[デバッグの停止]** を選択します。  
   
 ## <a name="go-to-next-lesson"></a>次のレッスンに進む
 [レッスン 2:SSIS でのループの追加](../integration-services/lesson-2-adding-looping-with-ssis.md)  

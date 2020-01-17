@@ -11,11 +11,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 085afa47a00875f5311e6996502e9030b6070920
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52763064"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68211222"
 ---
 # <a name="visual-database-tools"></a>Visual Database Tools
   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] には、 [!INCLUDE[tsql](../../includes/tsql-md.md)] クエリやテーブルを構築したり、データベース ダイアグラムを作成したりするためのビジュアル デザイナーが備わっています。  

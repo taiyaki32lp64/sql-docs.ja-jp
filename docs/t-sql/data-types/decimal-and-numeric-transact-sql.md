@@ -1,7 +1,7 @@
 ---
 title: decimal 型と numeric 型 (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 07/23/2017
+ms.date: 09/10/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -22,29 +22,25 @@ helpviewer_keywords:
 ms.assetid: 9d862a90-e6b7-4692-8605-92358dccccdf
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 5238c7dba330074f9802fa30b631edba09d3b552
-ms.sourcegitcommit: 009bee6f66142c48477849ee03d5177bcc3b6380
+ms.openlocfilehash: c2836dc2d57ef5844463c303c6432698bf05a4d1
+ms.sourcegitcommit: 445842da7c7d216b94a9576e382164c67f54e19a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/13/2019
-ms.locfileid: "56231049"
+ms.lasthandoff: 09/30/2019
+ms.locfileid: "71682102"
 ---
 # <a name="decimal-and-numeric-transact-sql"></a>decimal 型と numeric 型 (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-> [!div class="nextstepaction"]
-> [SQL ドキュメントの目次に関するご意見を共有してください。](https://aka.ms/sqldocsurvey)
-
-固定長の有効桁数と小数点以下桁数を持つ数値データ型です。 decimal と numeric は同義であり、どちらを使ってもかまいません。
+固定長の有効桁数と小数点以下保持桁数を持つ数値データ型です。 decimal と numeric は同義であり、どちらを使ってもかまいません。
   
 ## <a name="arguments"></a>引数  
-**decimal**[ **(**_p_[ **,**_s_] **)**] and **numeric**[ **(**_p_[ **,**_s_] **)**]  
-固定長の有効桁数と小数点以下桁数を持つ数値です。 最大有効桁数を使用した場合、有効値は - 10^38 +1 ～ 10^38 - 1 です。 **decimal** の ISO のシノニムは、**dec** および **dec(**_p_, _s_**)** です。 **numeric** は機能的には **decimal** と同じです。
+**decimal**[ **(** _p_[ **,** _s_] **)** ] and **numeric**[ **(** _p_[ **,** _s_] **)** ]  
+固定長の有効桁数と小数点以下保持桁数です。 最大有効桁数を使用した場合、有効値は - 10^38 +1 から 10^38 - 1 です。 **decimal** の ISO のシノニムは、**dec** および **dec(** _p_, _s_ **)** です。 **numeric** は機能的には **decimal** と同じです。
   
 p (precision)  
-格納される 10 進数の桁数の最大合計数。 この数には、小数点の左側と右側の両方が含まれます。 有効桁数の値は、1 ～ 38 (最大有効桁数) にする必要があります。 既定の有効桁数は 18 です。
+格納される 10 進数の桁数の最大合計数。 この数には、小数点の左側と右側の両方が含まれます。 有効桁数の値は、1 - 38 (最大有効桁数) にする必要があります。 既定の有効桁数は 18 です。
   
 > [!NOTE]  
 >  Informatica では、有効桁数と小数点以下桁数の指定に関係なく、16 の有効桁数のみサポートされます。  
@@ -52,12 +48,12 @@ p (precision)
 *s* (scale)  
 小数点の右側の保存される桁数です。 この数値が *p* から差し引かれ、小数点の左側の最大桁数が判別されます。 小数点以下桁数は、0 から *p* の範囲の値である必要があり、有効桁数が指定されている場合にのみ指定できます。 既定の小数点以下桁数は 0 です。したがって、0 <= *s* \<= *p* になります。 ストレージの最大サイズは有効桁数によって異なります。
   
-|有効桁数|ストレージのバイト サイズ|  
+|有効桁数|ストレージのバイト数|  
 |---|---|
 |1 - 9|5|  
-|10-19|9|  
-|20-28|13|  
-|29-38|17|  
+|10 から 19|9|  
+|20 から 28|13|  
+|29 から 38|17|  
   
 > [!NOTE]  
 >  Informatica (SQL Server PDW Informatica コネクタをによって接続されます) は、有効桁数と小数点以下桁数の指定に関係なく、16 桁の有効桁数のみをサポートします。  
@@ -71,7 +67,7 @@ p (precision)
   
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、既定で、数値を **decimal** 型または **numeric** 型の値に変換する場合、有効桁数と小数点以下桁数が少なくなって丸められます。 反対に、SET ARITHABORT オプションが ON に設定されている場合は、オーバーフローが起こると [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ではエラーが生成されます。 有効桁数と小数点以下桁数が失われただけではエラーは生成されません。
   
-浮動小数値または実数値を小数値または数値に変換する場合、小数値が 17 桁を超えることはありません。 すべての浮動小数値 < 5E-18 は常に 0 として変換されます。
+[!INCLUDE[ssSQL16](../../includes/sssql16-md.md)] より前では、**float** 値から **decimal** または **numeric** への変換は、有効桁数 17 桁までの値に制限されます。 5E-18 未満の **float** 値はすべて (5E-18 の科学的記数法または 0.0000000000000000050000000000000005 の小数点表記のいずれかを使用して設定されている場合) 0 に丸められます。 これは [!INCLUDE[ssSQL16](../../includes/sssql16-md.md)] の時点で制限がなくなりました。
   
 ## <a name="examples"></a>使用例  
 次の例では、**decimal** および **numeric** データ型を使用してテーブルを作成します。  各列に値が挿入されます。 結果は、SELECT ステートメントを使用して返されます。

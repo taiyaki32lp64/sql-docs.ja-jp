@@ -17,17 +17,20 @@ helpviewer_keywords:
 - viewing package objects
 - SQL Server Integration Services packages, properties
 ms.assetid: a85c0245-0a68-4eb0-83b1-9b11df80bd10
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: d25f5360e2582cb752dfdc5c92be928da437e06e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 28393d15ade12562dbcaa4af457bf0de0e51948b
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47664490"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71295020"
 ---
 # <a name="view-package-objects"></a>パッケージ オブジェクトを表示する
+
+[!INCLUDE[ssis-appliesto](../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   [!INCLUDE[ssIS](../includes/ssis-md.md)] デザイナーでは、 **[パッケージ エクスプローラー]** タブで、パッケージをエクスプローラー表示できます。 この表示には、 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] アーキテクチャのコンテナー階層が反映されます。 パッケージ コンテナーはこの階層の最上層にあり、パッケージを展開すると、そのパッケージ内にある接続、実行可能ファイル、イベント ハンドラー、ログ プロバイダー、優先順位制約、および変数が表示されます。  
   
  実行可能ファイルとは、パッケージ内のコンテナーおよびタスクのことで、イベント ハンドラー、優先順位制約、および変数を含めることができます。 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] では、入れ子構造の階層のコンテナーがサポートされているため、For ループ コンテナー、Foreach ループ コンテナー、およびシーケンス コンテナーは他の実行可能ファイルを含めることができます。  
@@ -46,7 +49,7 @@ ms.locfileid: "47664490"
   
 2.  **[パッケージ エクスプローラー]** タブをクリックします。  
   
-3.  **[変数]**、 **[優先順位制約]**、 **[イベント ハンドラー]**、 **[接続マネージャー]**、 **[ログ プロバイダー]**、または **[実行可能ファイル]** フォルダーの内容を表示するには、各フォルダーを展開します。  
+3.  **[変数]** 、 **[優先順位制約]** 、 **[イベント ハンドラー]** 、 **[接続マネージャー]** 、 **[ログ プロバイダー]** 、または **[実行可能ファイル]** フォルダーの内容を表示するには、各フォルダーを展開します。  
   
 4.  パッケージの構造に基づき、次の任意のレベルのフォルダーを展開します。  
   
@@ -62,8 +65,8 @@ ms.locfileid: "47664490"
  [Integration Services タスク](../integration-services/control-flow/integration-services-tasks.md)   
  [Integration Services コンテナー](../integration-services/control-flow/integration-services-containers.md)   
  [優先順位制約](../integration-services/control-flow/precedence-constraints.md)   
- [Integration Services &#40;SSIS&#41; の変数](../integration-services/integration-services-ssis-variables.md)   
- [Integration Services &#40;SSIS&#41; のイベント ハンドラー](../integration-services/integration-services-ssis-event-handlers.md)   
+ [Integration Services (SSIS) の変数](../integration-services/integration-services-ssis-variables.md)   
+ [Integration Services (SSIS) のイベント ハンドラー](../integration-services/integration-services-ssis-event-handlers.md)   
  [Integration Services &#40;SSIS&#41; のログ記録](../integration-services/performance/integration-services-ssis-logging.md)  
   
   

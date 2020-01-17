@@ -9,13 +9,12 @@ ms.topic: reference
 ms.assetid: 626b73d3-a257-4b45-82fb-c6299faa0001
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 856b7112cc9f569372e11c8caabd091319f5e872
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 365db92740bb7d6f0915201d6d3680a68d7274ca
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47840813"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67995987"
 ---
 # <a name="localdberrorcannotcreateinstancefolder"></a>LOCALDB_ERROR_CANNOT_CREATE_INSTANCE_FOLDER
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

@@ -15,11 +15,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: e92b8dacf3f1d4c9bf4992739acc7592f2135386
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52795191"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62912196"
 ---
 # <a name="audit-broker-conversation-event-class"></a>Audit Broker Conversation イベント クラス
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、 **Audit Broker Conversation** イベントを作成して、Service Broker のダイアログ セキュリティに関連した監査メッセージを報告します。  
@@ -39,7 +39,7 @@ ms.locfileid: "52795191"
 |**GUID**|**uniqueidentifier**|ダイアログのメッセージ交換 ID。 この ID はメッセージの一部として転送され、メッセージ交換の両側で共有されます。|54|いいえ|  
 |**HostName**|**nvarchar**|クライアントが実行しているコンピューターの名前。 このデータ列には、クライアントがホスト名を指定している場合にデータが格納されます。 ホスト名を指定するには、 **HOST_NAME** 関数を使用します。|8|はい|  
 |**IntegerData**|**int**|メッセージのフラグメント番号。|25|いいえ|  
-|**NTDomainName**|**nvarchar**|ユーザーが属している Windows ドメイン。|7|はい|  
+|**NTDomainName**|**nvarchar**|ユーザーが属している Windows ドメイン。|7|[はい]|  
 |**NTUserName**|**nvarchar**|このイベントが生成された接続を所有するユーザーの名前。|6|はい|  
 |**ObjectId**|**int**|対象サービスのユーザー ID。|22|いいえ|  
 |**RoleName**|**nvarchar**|メッセージ交換ハンドルのロール。 **initiator** または **target**のいずれかです。|38|いいえ|  

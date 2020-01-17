@@ -1,5 +1,5 @@
 ---
-title: SecurityCertificate クラス |Microsoft Docs
+title: SecurityCertificate クラス
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -17,19 +17,18 @@ helpviewer_keywords:
 ms.assetid: d772da67-e04e-4499-9f80-7a5e94829b5c
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: 52a1b24376bc5636b2736152bf80bf78faa0fbd5
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: cc6bad2dc55c611d45b728de4a23cf60c4b151cc
+ms.sourcegitcommit: baa40306cada09e480b4c5ddb44ee8524307a2ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47746570"
+ms.lasthandoff: 11/06/2019
+ms.locfileid: "73660449"
 ---
 # <a name="securitycertificate-class"></a>SecurityCertificate クラス
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
-  [SecurityCertificate クラス](../../../relational-databases/wmi-provider-configuration-classes/securitycertificate-class/securitycertificate-class.md)セキュリティ証明書を表します。 証明書の公開キーの値のインスタンスにバインドするデジタル署名されたステートメントは、 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]、対応する秘密キーが格納されます。 証明書は証明機関から発行されます。  
+  [Securitycertificate クラス](../../../relational-databases/wmi-provider-configuration-classes/securitycertificate-class/securitycertificate-class.md)は、セキュリティ証明書を表します。 証明書は、公開キーの値を、対応する秘密キーを保持する [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]のインスタンスにバインドする、デジタル署名されたステートメントです。 証明書は証明機関から発行されます。  
   
- [SecurityCertificate クラス](../../../relational-databases/wmi-provider-configuration-classes/securitycertificate-class/securitycertificate-class.md)、次のタスクを実行することができます。  
+ [Securitycertificate クラス](../../../relational-databases/wmi-provider-configuration-classes/securitycertificate-class/securitycertificate-class.md)を使用すると、次のタスクを実行できます。  
   
 -   セキュリティ証明書のプロパティの表示  
   

@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: d90763b8-ba3f-48f8-95b2-e6a0e52296e1
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 9c1481faee1574f74e786a561c25ceb2ce8c4876
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 63c43cb220bc58f83da13fde7af83893a8316c4b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47691310"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67930482"
 ---
 # <a name="caption-property-ado-md"></a>Caption プロパティ (ADO MD)
 表示するときに使用するテキスト キャプションを示す、[レベル](../../../ado/reference/ado-md-api/level-object-ado-md.md)または[メンバー](../../../ado/reference/ado-md-api/member-object-ado-md.md)オブジェクト。  
@@ -37,6 +36,6 @@ ms.locfileid: "47691310"
 |-|-|  
 |[Level オブジェクト (ADO MD)](../../../ado/reference/ado-md-api/level-object-ado-md.md)|[Member オブジェクト (ADO MD)](../../../ado/reference/ado-md-api/member-object-ado-md.md)|  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [セルセットの例 (VB)](../../../ado/reference/ado-md-api/cellset-example-vb.md)   
  [Description プロパティ (ADO MD)](../../../ado/reference/ado-md-api/description-property-ado-md.md)

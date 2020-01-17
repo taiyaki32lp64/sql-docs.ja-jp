@@ -1,5 +1,5 @@
 ---
-title: sp_helparticlecolumns (TRANSACT-SQL) |Microsoft Docs
+title: sp_helparticlecolumns (Transact-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -15,18 +15,17 @@ helpviewer_keywords:
 ms.assetid: 9ea55df3-2e99-4683-88ad-bde718288bc7
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 7ff0ca57ba2e6e77854bab011fa83dc2001337a3
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: e87e542395c00797ce50b220ad8a6c981f43605a
+ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53205931"
+ms.lasthandoff: 08/03/2019
+ms.locfileid: "68771091"
 ---
-# <a name="sphelparticlecolumns-transact-sql"></a>sp_helparticlecolumns (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+# <a name="sp_helparticlecolumns-transact-sql"></a>sp_helparticlecolumns (Transact-SQL)
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
-  基になるテーブルのすべての列を返します。 このストアド プロシージャは、パブリッシャー側でパブリケーション データベースについて実行されます。 Oracle パブリッシャーの場合、このストアド プロシージャは、ディストリビューター側で任意のデータベースについて実行されます。  
+  基になるテーブルのすべての列を返します。 このストアド プロシージャは、パブリッシャー側でパブリケーション データベースについて実行されます。 Oracle パブリッシャーの場合、このストアドプロシージャは、ディストリビューター側の任意のデータベースで実行されます。  
   
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -40,46 +39,43 @@ sp_helparticlecolumns [ @publication = ] 'publication'
 ```  
   
 ## <a name="arguments"></a>引数  
- [  **@publication =**] **'***パブリケーション***'**  
- 目的のアーティクルを含むパブリケーションの名前を指定します。 *パブリケーション*は**sysname**、既定値はありません。  
+`[ @publication = ] 'publication'`アーティクルを含むパブリケーションの名前を指定します。 *パブリケーション* は **sysname** 、既定値はありません。  
   
- [  **@article=**] **'***記事***'**  
- 列を返すアーティクルの名前を指定します。 *記事*は**sysname**、既定値はありません。  
+`[ @article = ] 'article'`返される列が含まれているアーティクルの名前を指定します。 *アーティクル*は**sysname**で、既定値はありません。  
   
- [ **@publisher**=] **'***パブリッシャー***'**  
- 以外を指定[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]パブリッシャーです。 *パブリッシャー*は**sysname**、既定値は NULL です。  
+`[ @publisher = ] 'publisher'`[!INCLUDE[msCoName](../../includes/msconame-md.md)] 以外[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のパブリッシャーを指定します。 *publisher*は**sysname**で、既定値は NULL です。  
   
 > [!NOTE]  
->  *パブリッシャー*によって要求された記事が公開されると指定しないで、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]パブリッシャーです。  
+>  要求されたアーティクルが[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]パブリッシャーによってパブリッシュされている場合、パブリッシャーを指定することはできません。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
- **0** (列がパブリッシュされていない) または**1** (パブリッシュされる列)  
+ **0** (パブリッシュされていない列) または**1** (パブリッシュされた列)  
   
 ## <a name="result-sets"></a>結果セット  
   
 |列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
-|**列 id**|**int**|列の識別子です。|  
+|**column id**|**int**|列の識別子です。|  
 |**column**|**sysname**|列の名前です。|  
-|**公開**|**bit**|列をパブリッシュしたかどうかを示します。<br /><br /> **0** = いいえ<br /><br /> **1** = はい|  
-|**パブリッシャーの種類**|**sysname**|パブリッシャー側の列のデータ型です。|  
-|**サブスクライバーの種類**|**sysname**|サブスクライバー側の列のデータ型です。|  
+|**published**|**bit**|列をパブリッシュしたかどうかを示します。<br /><br /> **0** = いいえ<br /><br /> **1** = はい|  
+|**publisher type**|**sysname**|パブリッシャー側の列のデータ型。|  
+|**subscriber type**|**sysname**|サブスクライバー側の列のデータ型。|  
   
 ## <a name="remarks"></a>コメント  
- **sp_helparticlecolumns**スナップショットおよびトランザクション レプリケーションで使用されます。  
+ **sp_helparticlecolumns**は、スナップショットレプリケーションおよびトランザクションレプリケーションで使用します。  
   
- **sp_helparticlecolumns**垂直方向のパーティションを調べるときに便利です。  
+ **sp_helparticlecolumns**は、列方向のパーティションをチェックする場合に便利です。  
   
 ## <a name="permissions"></a>アクセス許可  
- メンバーのみ、 **sysadmin**固定サーバー ロール、 **db_owner**固定データベース ロール、または現在のパブリケーションのパブリケーション アクセス リストが実行できる**sp_helparticlecolumns**.  
+ **Sp_helparticlecolumns**を実行できるのは、 **sysadmin**固定サーバーロール、 **db_owner**固定データベースロール、または現在のパブリケーションのパブリケーションアクセスリストのメンバーだけです。  
   
-## <a name="see-also"></a>参照  
- [Define and Modify a Column Filter](../../relational-databases/replication/publish/define-and-modify-a-column-filter.md)   
- [sp_addarticle &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md)   
+## <a name="see-also"></a>関連項目  
+ [列フィルターを定義および変更する](../../relational-databases/replication/publish/define-and-modify-a-column-filter.md)   
+ [sp_addarticle &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md)   
  [sp_articlecolumn (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-articlecolumn-transact-sql.md)   
  [sp_changearticle (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-changearticle-transact-sql.md)   
  [sp_droparticle (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-droparticle-transact-sql.md)   
- [sp_droppublication &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-droppublication-transact-sql.md)   
+ [sp_droppublication &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-droppublication-transact-sql.md)   
  [システム ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

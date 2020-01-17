@@ -12,15 +12,14 @@ helpviewer_keywords:
 - collapsing rows
 - row collapsing [SQL Server]
 ms.assetid: 7338dad0-965d-44ba-8c1a-b993acb7156d
-author: stevestein
-ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 8a40eefb6b60b21387c90b84e7bffdc423b7d798
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: ea7a38c8030323b85c7198f0c6a12165b9d843d5
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52503966"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68262574"
 ---
 # <a name="collapse-groups-of-rows-visual-database-tools"></a>行グループの集約 (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

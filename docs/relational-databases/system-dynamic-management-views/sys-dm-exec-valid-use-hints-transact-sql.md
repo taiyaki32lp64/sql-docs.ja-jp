@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: 65d50589-39c2-4046-92b6-0c4587d8c593
 author: pmasl
 ms.author: pelopes
-manager: craigg
-ms.openlocfilehash: 628ef2cde5b345366a7ba0fb7ffff6c8e5143a0c
-ms.sourcegitcommit: 70e47a008b713ea30182aa22b575b5484375b041
+ms.openlocfilehash: c6fcaa491f7d42e255ed329a8e16798437aa2c7a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49806692"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67936790"
 ---
 # <a name="sysdmexecvalidusehints-transact-sql"></a>sys.dm_exec_valid_use_hints (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -41,7 +40,7 @@ ms.locfileid: "49806692"
 
 導入された[!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)]SP1。
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
     
  [動的管理ビューと動的管理関数 &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
  [データベース関連の動的管理ビュー &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/database-related-dynamic-management-views-transact-sql.md)  

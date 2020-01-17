@@ -33,11 +33,11 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: 7b28043d797585496686dea6fd0c5fad276f16b9
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48049994"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63187967"
 ---
 # <a name="password-policy"></a>パスワード ポリシー
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Windows のパスワード ポリシー メカニズムに対応しています。 パスワード ポリシーは [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 認証を使用するログインに適用され、パスワードを持つ包含データベース ユーザーに適用されます。  
@@ -75,7 +75,7 @@ ms.locfileid: "48049994"
   
     -   パスワードの履歴が、現在のパスワード ハッシュの値に初期化されます。  
   
-    -   **[アカウント ロックアウトの期間]**、 **[アカウント ロックアウトのしきい値]**、および **[ロックアウト カウンターのリセット]** も有効になります。  
+    -   **[アカウント ロックアウトの期間]** 、 **[アカウント ロックアウトのしきい値]** 、および **[ロックアウト カウンターのリセット]** も有効になります。  
   
 -   CHECK_POLICY を OFF に変更した場合、次の動作が行われます。  
   

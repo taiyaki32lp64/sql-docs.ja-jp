@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 8269ea29-912a-4d20-9360-f48b3746081f
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 00eaea347c379a64863b095a17f9518e5d1897a5
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e8d189646cc421eb05d9f49d2da08dfe39d9cb34
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47632220"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67921633"
 ---
 # <a name="activecommand-property-example-vc"></a>ActiveCommand プロパティの例 (VC++)
 この例では、 [ActiveCommand](../../../ado/reference/ado-api/activecommand-property-ado.md)プロパティ。  
@@ -213,7 +212,7 @@ void PrintComError(_com_error &e) {
 Ringer  
 ```  
   
-## <a name="sample-output"></a>サンプル出力  
+## <a name="sample-output"></a>出力例  
   
 ```  
 Command text = 'SELECT * FROM authors WHERE au_lname = ?'  
@@ -221,6 +220,6 @@ Parameter = 'Ringer'
 Name = 'Anne  Ringer'  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [ActiveCommand プロパティ (ADO)](../../../ado/reference/ado-api/activecommand-property-ado.md)   
  [Recordset オブジェクト (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)

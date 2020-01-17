@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 9ae2d9b5-365f-4f0a-9116-defe9498b401
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 17058af1d7f0ab1e35c2d6b31c0337daed4c9e01
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: c0096dad8fbb4cf9847385759702e39ac074c4c6
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47817470"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68112050"
 ---
 # <a name="descriptors-and-desktop-database-drivers"></a>記述子およびデスクトップ データベース ドライバー
 記述子は、列のデータまたは動的パラメーターのいずれかに関する情報を保持するデータ構造です。 **SQLGetDescField**以下に、サポートされている記述子を取得するために使用できます。 実装パラメーター記述子 (IPD) が自動的に作成されないため、 **SQLDescribeParam**はサポートされていません。 しない (SQL_DESC_BASE_TABLE_NAME) などの Jet を介して利用できる記述子フィールドもサポートされません。  

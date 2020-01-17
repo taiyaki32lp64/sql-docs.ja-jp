@@ -21,13 +21,12 @@ helpviewer_keywords:
 ms.assetid: 2b9ef441-993c-44d4-8f87-fac0979dac1d
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 059bb0e945875d36582d08f8018bad485475639d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ba441a52958e423308e648f15dd36e14d6d1d895
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47704940"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67918478"
 ---
 # <a name="helpcontext-helpfile-properties"></a>HelpContext、HelpFile プロパティ
 ヘルプ ファイルと関連付けられているトピックを示します、[エラー](../../../ado/reference/ado-api/error-object.md)オブジェクト。  

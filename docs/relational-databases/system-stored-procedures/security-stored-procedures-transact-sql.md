@@ -16,20 +16,19 @@ helpviewer_keywords:
 ms.assetid: 62b72907-7e95-4c97-9891-0c45d5b678ce
 author: VanMSFT
 ms.author: vanto
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 8761bf7f14e662ce8a0944c0d4f8b2c6d3605e08
-ms.sourcegitcommit: 480961f14405dc0b096aa8009855dc5a2964f177
+ms.openlocfilehash: 94fdd6946cbc2800a8f0f16e706e784ff0933f73
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/22/2019
-ms.locfileid: "54419987"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67941855"
 ---
-# <a name="security-stored-procedures-transact-sql"></a>セキュリティ ストアド プロシージャ (Transact-SQL)
+# <a name="security-stored-procedures-transact-sql"></a>ストアド プロシージャ (Transact SQL) のセキュリティ
 
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] サポート次のシステムでは、セキュリティを管理するために使用されるプロシージャが格納されます。 これらのストアド プロシージャのいくつかは推奨されていませんが、下位互換性をサポートするために続けます。 非推奨のプロシージャのトピックでは、代替手段が示されています。  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] サポート次のシステムでは、セキュリティを管理するために使用されるプロシージャが格納されます。 これらのストアド プロシージャのいくつかは推奨されていませんが、下位互換性をサポートするために続けます。 推奨手順についてのトピックには、後任者が表示されます。  
 
 |||  
 |-|-|  
@@ -66,7 +65,7 @@ ms.locfileid: "54419987"
 
  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [システム ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
  [セキュリティ関数 &#40;Transact-SQL&#41;](../../t-sql/functions/security-functions-transact-sql.md)  
   

@@ -1,5 +1,5 @@
 ---
-title: '[SQL Server エージェントのプロパティ] - ([接続] ページ) | Microsoft Docs'
+title: '[SQL Server エージェントのプロパティ] ([接続] ページ) | Microsoft Docs'
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -10,18 +10,17 @@ ms.topic: conceptual
 f1_keywords:
 - sql13.ag.agent.connection.f1
 ms.assetid: d6a677ff-60ad-47ba-a0cb-df4193b165e0
-author: stevestein
-ms.author: sstein
-manager: craigg
+author: markingmyname
+ms.author: maghan
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: e243186d8c5a5747e73eb2098cae5c5c041134ae
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 115099a4bc177320be367e3c397444322383df2c
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47845740"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68265279"
 ---
-# <a name="sql-server-agent-properties-connection-page"></a>[SQL Server エージェントのプロパティ] - ([接続] ページ)
+# <a name="sql-server-agent-properties-connection-page"></a>[SQL Server エージェントのプロパティ] ([接続] ページ)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
 > [!IMPORTANT]  

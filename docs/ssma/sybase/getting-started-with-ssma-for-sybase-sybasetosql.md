@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: c4098516-f0fc-4690-97bb-3766dfd43156
 author: Shamikg
 ms.author: Shamikg
-manager: craigg
-ms.openlocfilehash: 7e308589ab565b5702bbf2cba939835a50c08d8e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: f07f230f52fee5707084c01060e92220b35cb75c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47678370"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68029125"
 ---
 # <a name="getting-started-with-ssma-for-sap-ase-sybasetosql"></a>SSMA で SAP ASE (SybaseToSQL) の概要
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Migration Assistant (SSMA) の SAP ASE を使用する簡単に変換する SAP Adaptive Server Enterprise (ASE) のデータベース スキーマ[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]、Azure SQL Database スキーマへの結果として得られるスキーマのアップロードまたは[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]や Azure SQL Database からデータを移行し、SAP ASE を[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]または Azure SQL Database。  
@@ -64,7 +63,7 @@ Sybase メタデータ エクスプ ローラーを使用すると、次のタ�
 詳細については、次を参照してください。[を SQL Server に変換されたデータベース オブジェクトの読み込み&#40;SybaseToSQL&#41;](../../ssma/sybase/loading-converted-database-objects-into-sql-server-sybasetosql.md)します。  
   
 ### <a name="metadata"></a>メタデータ  
-各メタデータ エクスプ ローラーの右側には、選択したオブジェクトを記述するタブが。 たとえば、Sybase メタデータ エクスプ ローラーでテーブルを選択する場合は、6 つのタブが表示されます:**テーブル**、 **SQL**、**型マッピングの**、**データ**、 。**プロパティ**、および**レポート**します。 **レポート** タブには、選択したオブジェクトを含むレポートを作成した後にのみ情報が含まれます。 内のテーブルを選択した場合[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]または SQL Azure メタデータ エクスプ ローラー、3 つのタブが表示されます:**テーブル**、 **SQL**、および**データ**します。  
+各メタデータ エクスプ ローラーの右側には、選択したオブジェクトを記述するタブが。 たとえば、Sybase メタデータ エクスプ ローラーでテーブルを選択する場合、6 つのタブが表示されます。**テーブル**、 **SQL**、**の種類のマッピング**、**データ**、**プロパティ**、および**レポート**します。 **レポート** タブには、選択したオブジェクトを含むレポートを作成した後にのみ情報が含まれます。 内のテーブルを選択した場合[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]または SQL Azure メタデータ エクスプ ローラー、3 つのタブが表示されます。**テーブル**、 **SQL**、および**データ**します。  
   
 ほとんどのメタデータの設定とは、読み取り専用です。 ただし、次のメタデータを変更できます。  
   

@@ -4,21 +4,20 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords:
 - paths [Integration Services], properties
 ms.assetid: 512249a4-83a6-4087-980d-a4344da48371
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 2f428caba9622ce3ec1c153fa8764a975d6ddefc
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 1172143ebfa44deb19d15bf596db1df0e9399ed0
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48111262"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66055731"
 ---
 # <a name="set-the-properties-of-a-path-by-using-the-data-flow-path-editor"></a>データ フロー パス エディターを使用してパスのプロパティを設定する
   パスは、2 つのデータ フロー コンポーネントを連結します。 パスのプロパティを設定する場合、データ フローには、2 つ以上の連結されたデータ フロー コンポーネントをあらかじめ含めておく必要があります。 詳細については、「 [データ フローでコンポーネントを追加または削除する](data-flow/add-or-delete-a-component-in-a-data-flow.md) 」と「 [データ フロー内でコンポーネントを連結する](data-flow/connect-components-in-a-data-flow.md)」を参照してください。  

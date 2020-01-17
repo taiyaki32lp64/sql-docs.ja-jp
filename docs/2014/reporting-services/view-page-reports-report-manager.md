@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 ms.assetid: 4874ba29-429b-4dd4-a8cb-d4f087237dc2
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 057d2c4c75bbc0d7070992571a80907e811d354e
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: c8731c1d0f79d99919c4a087521565a6ec590278
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56031633"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66098741"
 ---
 # <a name="view-page-reports-report-manager"></a>[表示] ページ、レポート (レポート マネージャー)
   レポートの [表示] ページではレポートを参照できます。 レポートをレポート マネージャーで最初に開くと、HTML で書式設定されます。 HTML レポートの場合、レポートの一番上に [レポート] ツール バーが表示されます。このツール バーを使用すると、レポート ページ間の移動、レポート内の検索、または異なる形式でのレポートの表示が可能になります。 次の図は、[レポート] ツール バーを示しています。  
@@ -38,7 +37,7 @@ ms.locfileid: "56031633"
 > [!NOTE]  
 >  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]のどのエディションでも、レポート実行スナップショットおよび一部のエクスポート形式は使用できません。 詳しくは「 [Features Supported by the Editions of SQL Server 2014](../../2014/getting-started/features-supported-by-the-editions-of-sql-server-2014.md)」をご覧ください。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [レポート マネージャー &#40;SSRS ネイティブ モード&#41;](../../2014/reporting-services/report-manager-ssrs-native-mode.md)   
  [レポート マネージャー F1 ヘルプ](../../2014/reporting-services/report-manager-f1-help.md)  
   

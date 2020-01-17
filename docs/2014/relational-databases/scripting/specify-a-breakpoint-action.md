@@ -1,11 +1,10 @@
 ---
-title: ブレークポイント アクションの指定 | Microsoft Docs
-ms.custom: ''
+title: ブレークポイント アクションの指定
+ms.custom: seo-lt-2019
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 helpviewer_keywords:
 - Transact-SQL debugger, breakpoint action
@@ -14,22 +13,23 @@ ms.assetid: f97f0097-6f51-40c1-b2e0-294a93ce1e1b
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 92ac0e98924b54a20ad16c183386dd407fc7604c
-ms.sourcegitcommit: 40c3b86793d91531a919f598dd312f7e572171ec
+ms.openlocfilehash: 08df1a4c00bf3b019cf45f168aeeaaf27fdb751c
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53328992"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75243244"
 ---
 # <a name="specify-a-breakpoint-action"></a>ブレークポイント アクションの指定
-  ブレークポイント **ヒット時** アクションは、ブレークポイントに対して [!INCLUDE[tsql](../../includes/tsql-md.md)] デバッガーが実行するカスタム タスクを指定します。 指定したヒット カウントに達し、指定したブレークポイントの条件が満たされると、ブレークポイントに指定されたアクションがデバッガーによって実行されます。  
+  ブレークポイント**ヒット**アクションは、デバッガーが[!INCLUDE[tsql](../../includes/tsql-md.md)]ブレークポイントに対して実行するカスタムタスクを指定します。 指定したヒット カウントに達し、指定したブレークポイントの条件が満たされると、ブレークポイントに指定されたアクションがデバッガーによって実行されます。  
   
-##  <a name="BKMK_ActionConsiderations"></a> アクションに関する注意点  
- ブレークポイントの既定のアクションでは、ヒット カウントとブレークポイントの条件の両方が満たされたときに、実行が中断されます。 **デバッガーでの** ヒット時 [!INCLUDE[tsql](../../includes/tsql-md.md)] アクションの主な用途は、出力メッセージを指定して、デバッガーの **[出力]** ウィンドウに情報を出力することです。  
+##  <a name="BKMK_ActionConsiderations"></a>アクションに関する考慮事項  
+ ブレークポイントの既定のアクションでは、ヒット カウントとブレークポイントの条件の両方が満たされたときに、実行が中断されます。 
+  **デバッガーでの** ヒット時 [!INCLUDE[tsql](../../includes/tsql-md.md)] アクションの主な用途は、出力メッセージを指定して、デバッガーの **[出力]** ウィンドウに情報を出力することです。  
   
  出力メッセージは、デバッグ対象の **からの情報を格納した式を含むテキスト文字列として、** [メッセージを表示する] [!INCLUDE[tsql](../../includes/tsql-md.md)] オプションで指定します。 式には、次の内容が含まれます。  
   
--   中かっこ ({}) に囲まれた [!INCLUDE[tsql](../../includes/tsql-md.md)] 式。 式には、 [!INCLUDE[tsql](../../includes/tsql-md.md)] 変数、パラメーター、および組み込み関数を含めることができます。 例としては、{@MyVariable}、{@NameParameter}、{@@SPID}、{SERVERPROPERTY('ProcessID')} などがあります。  
+-   中かっこ ([!INCLUDE[tsql](../../includes/tsql-md.md)]) に囲まれた {} 式。 式には、 [!INCLUDE[tsql](../../includes/tsql-md.md)] 変数、パラメーター、および組み込み関数を含めることができます。 例としては、{@MyVariable}、{@NameParameter}、{@@SPID}、{SERVERPROPERTY('ProcessID')} などがあります。  
   
 -   次のキーワードのいずれかになります。  
   
@@ -51,19 +51,23 @@ ms.locfileid: "53328992"
   
 1.  エディター ウィンドウで、ブレークポイント グリフを右クリックし、ショートカット メニューの **[ヒット時]** をクリックします。  
   
-     - または -  
+     または  
   
-     **[ブレークポイント]** ウィンドウで、ブレークポイント グリフを右クリックし、ショートカット メニューの **[ヒット時]** をクリックします。  
+     
+  **[ブレークポイント]** ウィンドウで、ブレークポイント グリフを右クリックし、ショートカット メニューの **[ヒット時]** をクリックします。  
   
-2.  **[ブレークポイントのヒット時]** ダイアログ ボックスで、目的の動作を選択します。  
+2.  
+  **[ブレークポイントのヒット時]** ダイアログ ボックスで、目的の動作を選択します。  
   
     1.  ブレークポイントにヒットしたときにデバッガーの出力ウィンドウにメッセージを出力するには、 **[メッセージを表示する]** を選択します。  
   
-    2.  **[マクロを実行する]** オプションは、 [!INCLUDE[tsql](../../includes/tsql-md.md)] デバッガーでは使用できないため、グレーで表示されます。  
+    2.  
+  **[マクロを実行する]** オプションは、 [!INCLUDE[tsql](../../includes/tsql-md.md)] デバッガーでは使用できないため、グレーで表示されます。  
   
     3.  ブレークポイントの実行を中断したくない場合は、 **[続けて実行する]** を選択します。 このオプションは、 **[メッセージを表示する]** オプションを選択した場合にのみ有効です。  
   
-3.  **[OK]** をクリックして変更を適用するか、 **[キャンセル]** をクリックして変更を適用せずに終了します。  
+3.  
+  **[OK]** をクリックして変更を適用するか、 **[キャンセル]** をクリックして変更を適用せずに終了します。  
   
 ## <a name="see-also"></a>参照  
  [ブレークポイント条件の指定](specify-a-breakpoint-condition.md)   

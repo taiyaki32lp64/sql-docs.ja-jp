@@ -11,13 +11,13 @@ helpviewer_keywords:
 ms.assetid: 29fb6542-5c1f-4b14-a822-87700beb7623
 author: Shamikg
 ms.author: Shamikg
-manager: v-thobro
-ms.openlocfilehash: d568d1749cd54796072a108e438e448bf2a74578
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: shamikg
+ms.openlocfilehash: e0a8e7650534d50c5e5d7c3b02f2857764d9c2ca
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47705177"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68264641"
 ---
 # <a name="selecting-and-configuring-objects-to-test-oracletosql"></a>テストするオブジェクトの選択と構成 (OracleToSQL)
 この手順では、テスト、およびプロシージャの関数の出力パラメーターと関数の戻り値を比較するための設定を構成するオブジェクトを選択します。  
@@ -82,6 +82,6 @@ SSMA のテスト担当者が、いずれかのテスト用に選択されたオ
 ## <a name="next-step"></a>次の手順  
 [影響を受けるオブジェクトの選択と構成&#40;OracleToSQL&#41;](../../ssma/oracle/selecting-and-configuring-affected-objects-oracletosql.md)  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
 [移行されたデータベース オブジェクトのテスト&#40;OracleToSQL&#41;](../../ssma/oracle/testing-migrated-database-objects-oracletosql.md)  
   

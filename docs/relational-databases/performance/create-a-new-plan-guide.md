@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: e1ad78bb-4857-40ea-a0c6-dcf5c28aef2f
 author: julieMSFT
 ms.author: jrasnick
-manager: craigg
-ms.openlocfilehash: 0bcd57b8f3a2c9d136968fd2903a7e591cc777e2
-ms.sourcegitcommit: dd794633466b1da8ead9889f5e633bdf4b3389cd
+ms.openlocfilehash: 5f37f0189df126054626fdd4820368911b1fa5cc
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54143522"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67946965"
 ---
 # <a name="create-a-new-plan-guide"></a>新しいプラン ガイドの作成
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -29,7 +28,7 @@ ms.locfileid: "54143522"
 プラン ガイドは固定クエリ プランまたはクエリ ヒントをクエリに適用します。
   
 ##  <a name="Restrictions"></a> 制限事項と制約事項  
--   sp_create_plan_guide の引数は、表示される順序で指定する必要があります。 **sp_create_plan_guide**のパラメーターに値を指定する場合、パラメーター名はすべて明示的に指定するか、すべて指定しないかのいずれかにする必要があります。 たとえば、**@name =** を指定する場合は、**@stmt =**、**@type =** なども指定する必要があります。 同様に、**@name =** を省略してパラメーター値だけを指定する場合は、その他のパラメーター名も省略し、値だけを指定する必要があります。 引数の名前は、構文を理解しやすくするための説明目的のものです。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、指定したパラメーター名と、その名前が使用されている位置にあるパラメーターの名前が一致しているかどうかは確認されません。  
+-   sp_create_plan_guide の引数は、表示される順序で指定する必要があります。 **sp_create_plan_guide**のパラメーターに値を指定する場合、パラメーター名はすべて明示的に指定するか、すべて指定しないかのいずれかにする必要があります。 たとえば、 **@name =** を指定する場合は、 **@stmt =** 、 **@type =** なども指定する必要があります。 同様に、 **@name =** を省略してパラメーター値だけを指定する場合は、その他のパラメーター名も省略し、値だけを指定する必要があります。 引数の名前は、構文を理解しやすくするための説明目的のものです。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、指定したパラメーター名と、その名前が使用されている位置にあるパラメーターの名前が一致しているかどうかは確認されません。  
   
 -   同一のクエリとバッチまたはモジュールに対し、複数の OBJECT または SQL プラン ガイドを作成できます。 ただし、有効にできるプラン ガイドは常に 1 つだけです。  
   
@@ -43,7 +42,7 @@ ms.locfileid: "54143522"
 ##  <a name="SSMSProcedure"></a> SSMS を使用してプラン ガイドを作成する  
 1.  プラス記号をクリックして、作成するプラン ガイドのあるデータベースを展開し、プラス記号をクリックして **[プログラミング]** フォルダーを展開します。  
   
-2.  **[プラン ガイド]** フォルダーを右クリックし、**[新しいプラン ガイド...]** をクリックします。 ![select_plan_guide](../../relational-databases/performance/media/select-plan-guide.png)
+2.  **[プラン ガイド]** フォルダーを右クリックし、 **[新しいプラン ガイド...]** をクリックします。 ![select_plan_guide](../../relational-databases/performance/media/select-plan-guide.png)
   
 3.  **[新しいプラン ガイド]** ダイアログ ボックスの **[名前]** ボックスに、プラン ガイドの名前を入力します。  
   

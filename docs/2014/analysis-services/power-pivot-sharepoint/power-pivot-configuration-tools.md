@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: f934c51d-01fe-4e67-971d-cd87d7d7ee51
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 133f5db597dfd56464678c52273e576e3493f172
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: 88f8937658fd7330148f8bcf4e0f5e4db5463e7f
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53210871"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66071348"
 ---
 # <a name="powerpivot-configuration-tools"></a>PowerPivot Configuration Tools
   PowerPivot 構成ツールを使用して、 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] を構成、修復、または削除します。  
@@ -90,9 +89,9 @@ ms.locfileid: "53210871"
   
 ##  <a name="bmkm_start_tool"></a> PowerPivot 構成ツールのいずれかを開始します。  
   
-1.  **開始**画面で「 `powerpivot`  
+1.  **開始**画面で `powerpivot`  
   
-     **開始**画面で[`powerpivot`かまたは、**開始**] メニューの [] をクリックして**すべてのプログラム** をクリック[!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)]、 をクリックして**構成ツール**次のいずれかをクリックします。  
+     **開始**画面で`powerpivot`かまたは、**開始** メニューの [] をクリックして**すべてのプログラム** をクリック[!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)]、をクリックして**構成ツール**次のいずれかをクリックします。  
   
     -   **PowerPivot 構成ツール**  
   

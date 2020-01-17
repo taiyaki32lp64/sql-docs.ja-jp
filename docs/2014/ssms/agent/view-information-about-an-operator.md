@@ -18,11 +18,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 9d1cab01b6fc496de90975966bfcf29b70e041fa
-ms.sourcegitcommit: 78e32562f9c1fbf2e50d3be645941d4aa457e31f
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/08/2019
-ms.locfileid: "54100327"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68188742"
 ---
 # <a name="view-information-about-an-operator"></a>View Information About an Operator
   このトピックでは、[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] で [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] または [!INCLUDE[tsql](../../includes/tsql-md.md)] を使用して、[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェント オペレーターに関する情報の表示方法について説明します。  
@@ -64,7 +64,7 @@ ms.locfileid: "54100327"
   
 3.  プラス記号をクリックして **[オペレーター]** フォルダーを展開します。  
   
-4.  表示するオペレーターを右クリックし、**[プロパティ]** をクリックします。  
+4.  表示するオペレーターを右クリックし、 **[プロパティ]** をクリックします。  
   
      _operator_name_**のプロパティ** ダイアログ ボックスに表示される使用可能なオプションの詳細については、以下を参照してください。  
   

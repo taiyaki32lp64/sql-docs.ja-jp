@@ -22,19 +22,18 @@ helpviewer_keywords:
 ms.assetid: 257f3b8d-93c0-4444-87f1-ea211bd8cad0
 author: rothja
 ms.author: jroth
-manager: craigg
 monikerRange: '>=aps-pdw-2016||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 26de4490469a0c5655e8af336cc980cb879d477f
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: da218e1afeec389d69b1727160a420c889225783
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53204961"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68059189"
 ---
-# <a name="sysfnvirtualservernodes-transact-sql"></a>sys.fn_virtualservernodes (Transact-SQL)
+# <a name="sysfnvirtualservernodes-transact-sql"></a>sys.fn_virtualservernodes (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-pdw-md.md)]
 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスを実行できるフェールオーバー クラスター インスタンス ノードの一覧を返します。 この情報は、フェールオーバー クラスタリング環境で役立ちます。  
+  これでフェールオーバー クラスター インスタンス ノードの一覧を返しますのインスタンス[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]を実行できます。 この情報は、フェールオーバー クラスタリング環境で役立ちます。  
   
 > [!IMPORTANT]
 >  これは、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]システム関数は、旧バージョンとの互換性のために含まれています。 使用することをお勧めします。 [sys.dm_os_cluster_nodes &#40;TRANSACT-SQL&#41; ](../../relational-databases/system-dynamic-management-views/sys-dm-os-cluster-nodes-transact-sql.md)代わりにします。  
@@ -57,7 +56,7 @@ fn_virtualservernodes()
  ユーザーがのインスタンスに対する VIEW SERVER STATE 権限がある必要があります[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]します。  
   
 ## <a name="examples"></a>使用例  
- 次の例では、`fn_virtualservernodes` を使用して、クラスター化されたサーバー インスタンスでクエリを実行します。  
+ 次の例では`fn_virtualservernodes`クラスター化されたサーバー インスタンスに対してクエリを実行します。  
   
 ```  
 SELECT * FROM fn_virtualservernodes();  
@@ -69,11 +68,11 @@ SELECT * FROM fn_virtualservernodes();
   
  -------\-  
   
- SS3-CLUSN1  
+ SS3 CLUSN1  
   
- SS3-CLUSN2  
+ SS3 CLUSN2  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [sys.dm_os_cluster_nodes &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-cluster-nodes-transact-sql.md)   
  [sys.fn_servershareddrives &#40;TRANSACT-SQL&#41;](../../relational-databases/system-functions/sys-fn-servershareddrives-transact-sql.md)  
   

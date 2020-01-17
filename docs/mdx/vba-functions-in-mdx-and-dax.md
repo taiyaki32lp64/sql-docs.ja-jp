@@ -1,5 +1,5 @@
 ---
-title: MDX および DAX での VBA 関数 |Microsoft ドキュメント
+title: MDX および DAX での VBA 関数 |Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -8,22 +8,21 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-manager: kfile
-ms.openlocfilehash: 327a801ce725987d68236efcfddbf8a4e7231ea9
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.openlocfilehash: 39a0db181f3b1d1a40af1a5fa27ba78366a9d2b3
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34743891"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68135020"
 ---
 # <a name="vba-functions-in-mdx-and-dax"></a>MDX および DAX での VBA 関数
 
 
-  このドキュメントには、交差で使用できるすべての VBA 関数の参照が含まれています[アプリケーション関数の Visual Basic](https://msdn.microsoft.com/vba/language-reference-vba/articles/functions-visual-basic-for-applications) MDX でサポートされている; も、リストでは、DAX 言語で同等の機能がある場合に、ノートが含まれています.  
+  このドキュメントには、交差で使用できるすべての VBA 関数の参照が含まれています[Visual Basic for Applications の関数](https://msdn.microsoft.com/vba/language-reference-vba/articles/functions-visual-basic-for-applications)MDX でサポートされている; も、一覧では、DAX 言語で同等の機能がある場合に、メモが含まれています.  
   
 ## <a name="visual-basic-for-applications-functions-reference"></a>Visual Basic for Applications 関数リファレンス  
   
-|関数名|Supported|注|  
+|関数名|Supported|メモ|  
 |-------------------|---------------|-----------|  
 |Abs|DAX、MDX||  
 |Array|サポートされていません||  
@@ -43,7 +42,7 @@ ms.locfileid: "34743891"
 |CLng|MDX のみ||  
 |CLngLng|サポートされていません||  
 |CLngPtr|サポートされていません||  
-|コマンド|サポートされていません||  
+|Command|サポートされていません||  
 |Cos|MDX のみ||  
 |CreateObject|サポートされていません||  
 |CSng|MDX のみ||  
@@ -52,23 +51,23 @@ ms.locfileid: "34743891"
 |CVar|MDX のみ||  
 |CVErr|サポートされていません||  
 |date|MDX のみ|**警告**DAX が同じで別の関数を実装する名前は、DATE (Year, Month, Day) 関数は、指定された引数から日付型の値を生成するために使用|  
-|DateAdd|MDX のみ|**警告**DAX が同じで別の関数を実装する名前; DATEADD (\<日付 >、< number_of_intervals >\<間隔 >) の数で指定された日付をシフトするために使用されている関数の間隔を指定|  
-|DateDiff]|MDX のみ||  
+|DateAdd|MDX のみ|**警告**DAX が同じで別の関数を実装する名前の dateadd (\<日付 >、< number_of_intervals >\<間隔 >) の数で指定された日付をシフトするために使用されている関数の間隔を指定|  
+|DateDiff|MDX のみ||  
 |DatePart|MDX のみ||  
 |DateSerial|MDX のみ||  
-|DateValue]|DAX、MDX||  
-|日|DAX、MDX||  
+|DateValue|DAX、MDX||  
+|Day|DAX、MDX||  
 |DDB|MDX のみ||  
 |Dir|サポートされていません||  
 |DoEvents|サポートされていません||  
 |Environ|サポートされていません||  
 |EOF|サポートされていません||  
-|[エラー]|サポートされていません||  
+|Error|サポートされていません||  
 |Exp|DAX、MDX||  
 |FileAttr|サポートされていません||  
 |FileDateTime|サポートされていません||  
 |FileLen|サポートされていません||  
-|Assert|サポートされていません|**警告**MDX が同じ名前の別の関数を実装する以外の場合は、FILTER (Set_Expression, Logical_Expression) 関数には、指定された引数から、検索条件に基づいて、指定されたセットをフィルター処理を実行した結果セットが返されます。<br /><br /> **警告**DAX が同じで別の関数を実装する名前の FILTER (\<テーブル >、\<フィルター >) を別のテーブルまたは指定された引数から式のサブセットを表すテーブルを返す関数|  
+|Assert|サポートされていません|**警告**MDX 実装と同じ名前の別の関数は FILTER (Set_Expression, Logical_Expression) 関数は、指定された引数から検索条件に基づいて、指定されたセットをフィルター処理の結果セットを返します<br /><br /> **警告**DAX が同じで別の関数を実装する名前の FILTER (\<テーブル >、\<フィルター >) 関数は、別のテーブルまたは指定された引数から式のサブセットを表すテーブルを返します。|  
 |Fix|MDX のみ||  
 |Format (Visual Basic for Applications)|DAX、MDX||  
 |FormatCurrency|サポートされていません||  
@@ -83,7 +82,7 @@ ms.locfileid: "34743891"
 |GetSetting|サポートされていません||  
 |Hex|MDX のみ||  
 |Hour|DAX、MDX||  
-|Iif|MDX のみ|**警告**DAX が名前を持つ同様の機能を実装する: IF (logical_test、value_if_true, value_if_false) 関数です。|  
+|Iif 関数|MDX のみ|**警告**DAX は、名前を持つような関数を実装します。IF (logical_test、value_if_true, value_if_false) 関数。|  
 |IMEStatus|サポートされていません||  
 |入力|サポートされていません||  
 |InputBox|サポートされていません||  
@@ -103,11 +102,11 @@ ms.locfileid: "34743891"
 |Join|サポートされていません||  
 |LBound|サポートされていません||  
 |LCase|MDX のみ||  
-|[左]|DAX、MDX||  
+|Left|DAX、MDX||  
 |Len|DAX、MDX||  
 |Loc|サポートされていません||  
 |LOF|サポートされていません||  
-|Log|MDX のみ|**重要な**DAX が同じで別の関数を実装する名前は、ログ (番号が、基本) 関数です。 この関数は、指定された引数からの指定された数を底とする対数を返します。|  
+|Log|MDX のみ|**重要な**DAX が同じで別の関数を実装する名前は、LOG (number, base) 関数。 指定された引数から指定されたベースに数値の対数を返します。|  
 |LTrim|MDX のみ||  
 |MacID|サポートされていません||  
 |MacScript|サポートされていません||  
@@ -117,23 +116,23 @@ ms.locfileid: "34743891"
 |Month|DAX、MDX||  
 |MonthName|サポートされていません||  
 |MsgBox|サポートされていません||  
-|[今]|DAX、MDX||  
-|[期間]|MDX のみ||  
+|Now|DAX、MDX||  
+|NPer|MDX のみ||  
 |NPV|MDX のみ||  
 |Oct|MDX のみ||  
-|パーティション|MDX のみ||  
+|Partition|MDX のみ||  
 |Pmt|MDX のみ||  
 |PPmt|MDX のみ||  
 |PV|MDX のみ||  
 |QBColor|MDX のみ||  
 |Rate|MDX のみ||  
-|[置換]|サポートされていません||  
+|Replace|サポートされていません||  
 |RGB|MDX のみ||  
-|[右]|DAX、MDX||  
+|Right|DAX、MDX||  
 |Rnd|MDX のみ||  
-|四捨五入|DAX、MDX||  
+|Round|DAX、MDX||  
 |RTrim|MDX のみ||  
-|第 2 週|DAX、MDX||  
+|Second|DAX、MDX||  
 |Seek|サポートされていません||  
 |Sgn|DAX、MDX||  
 |Shell|サポートされていません||  
@@ -141,22 +140,22 @@ ms.locfileid: "34743891"
 |SLN|MDX のみ||  
 |Space|MDX のみ||  
 |Spc|サポートされていません||  
-|分割|サポートされていません||  
+|Split|サポートされていません||  
 |Sqr|MDX のみ||  
 |Str|MDX のみ||  
 |StrComp|MDX のみ||  
 |StrConv|MDX のみ||  
-|[文字列]|MDX のみ||  
+|String|MDX のみ||  
 |StrReverse|サポートされていません||  
-|スイッチ|MDX のみ||  
+|Switch|MDX のみ||  
 |SYD|MDX のみ||  
-|タブ|サポートされていません||  
+|Tab|サポートされていません||  
 |Tan|MDX のみ||  
-|[時刻]|サポートされていません||  
+|Time|サポートされていません||  
 |Timer|MDX のみ||  
 |TimeSerial|MDX のみ||  
 |TimeValue|DAX、MDX||  
-|トリム]|DAX、MDX||  
+|Trim|DAX、MDX||  
 |TypeName|MDX のみ||  
 |UBound|サポートされていません||  
 |UCase|MDX のみ||  
@@ -164,6 +163,6 @@ ms.locfileid: "34743891"
 |VarType|サポートされていません||  
 |Weekday|DAX、MDX||  
 |WeekdayName|サポートされていません||  
-|年|DAX、MDX||  
+|Year|DAX、MDX||  
   
   

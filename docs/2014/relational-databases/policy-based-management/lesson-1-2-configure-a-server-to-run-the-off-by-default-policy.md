@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 ms.assetid: 41c3022d-ab13-443e-ac64-ba1d64584f79
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 82cf55e1fa3fa9bda5a625ef89335a9f81ed5505
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 8beb6998d78ad9a113ce18323133de7ed39ead56
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48147882"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66090638"
 ---
 # <a name="configure-a-server-to-run-the-off-by-default-policy"></a>"既定でオフ" ポリシーを実行するためのサーバーの構成
   "既定でオフ" という名前のポリシーがあります。 この実習では、このポリシーの要件にサーバーが準拠しているかどうかを確認します。  
@@ -44,6 +43,6 @@ ms.locfileid: "48147882"
 10. **[結果の詳細ビュー]** と **[ポリシーの評価]** の両方のダイアログ ボックスを閉じます。  
   
 ## <a name="next-lesson"></a>次のレッスン  
- [レッスン 2: 名前付け基準ポリシーの作成と適用](lesson-2-create-and-apply-a-naming-standards-policy.md)  
+ [レッスン 2:名前付け基準ポリシーの作成と適用](lesson-2-create-and-apply-a-naming-standards-policy.md)  
   
   

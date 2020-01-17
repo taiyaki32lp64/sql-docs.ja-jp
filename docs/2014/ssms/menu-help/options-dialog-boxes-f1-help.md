@@ -14,11 +14,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: ff1ba97de1c7698a1f2fde73b8ba8d592d8fccab
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52772824"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62662083"
 ---
 # <a name="options-dialog-boxes-f1-help"></a>[オプション] ダイアログ ボックスの F1 ヘルプ
   ここでは、 **の** [ツール] **メニューの** [オプション] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]をクリックして表示されるダイアログ ボックスの F1 ヘルプについて紹介します。  

@@ -1,7 +1,7 @@
 ---
-title: フォーマット ファイル (ODBC) を使用して一括コピー |マイクロソフトのドキュメント
+title: フォーマットファイルを使用した一括コピー (ODBC) |Microsoft Docs
 ms.custom: ''
-ms.date: 06/13/2017
+ms.date: 10/18/2019
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.technology: native-client
@@ -13,12 +13,12 @@ ms.assetid: 970fd3af-f918-4fc3-a5b1-92596515d4de
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: d8fe601413985cd61cb3c1c7c1fb61a65cdc49de
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: a2dc0ac57b132a0e681337b358a951a0e33f56db
+ms.sourcegitcommit: 82a1ad732fb31d5fa4368c6270185c3f99827c97
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53354323"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72688906"
 ---
 # <a name="bulk-copy-by-using-a-format-file-odbc"></a>フォーマット ファイルを使用した一括コピー (ODBC)
   このサンプルでは、ODBC bcp_init 関数をフォーマット ファイルと共に使用する方法を示します。  
@@ -29,9 +29,9 @@ ms.locfileid: "53354323"
   
 2.  一括コピー操作が有効になるように SQL_COPT_SS_BCP および SQL_BCP_ON を設定します。  
   
-3.  Microsoft に接続します。 SQL Server。  
+3.  Microsoft SQL Server に接続します。  
   
-4.  呼び出す[bcp_init](../../native-client-odbc-extensions-bulk-copy-functions/bcp-init.md)次の情報を設定します。  
+4.  [Bcp_init](../../native-client-odbc-extensions-bulk-copy-functions/bcp-init.md)を呼び出して、次の情報を設定します。  
   
     -   一括コピー操作の対象になるテーブルまたはビューの名前  
   
@@ -39,20 +39,20 @@ ms.locfileid: "53354323"
   
     -   一括コピー エラー メッセージを受信するデータ ファイルの名前 (メッセージ ファイルが不要な場合は NULL を指定)。  
   
-    -   コピーの方向:テーブルまたはビューに、ファイルから DB_IN します。  
+    -   コピーの方向 (ファイルからテーブルまたはビューへのコピーの場合は DB_IN)  
   
-5.  呼び出す[bcp_readfmt](../../native-client-odbc-extensions-bulk-copy-functions/bcp-readfmt.md)を一括コピー操作で使用されるデータ ファイルを記述したフォーマット ファイルを読み取る。  
+5.  [Bcp_readfmt](../../native-client-odbc-extensions-bulk-copy-functions/bcp-readfmt.md)を呼び出して、一括コピー操作で使用されるデータファイルを記述するフォーマットファイルを読み取ります。  
   
-6.  呼び出す[bcp_exec](../../native-client-odbc-extensions-bulk-copy-functions/bcp-exec.md)一括コピー操作を実行します。  
+6.  [Bcp_exec](../../native-client-odbc-extensions-bulk-copy-functions/bcp-exec.md)を呼び出して、一括コピー操作を実行します。  
   
 ## <a name="example"></a>例  
  このサンプルは IA64 ではサポートされていません。  
   
- AdventureWorks と呼ばれる ODBC データ ソース (既定のデータベースは AdventureWorks サンプル データベース) が必要です  (AdventureWorks サンプル データベースは、[Microsoft SQL Server のサンプルとコミュニティのプロジェクト](https://go.microsoft.com/fwlink/?LinkID=85384)のホーム ページからダウンロードできます)。このデータ ソースには、オペレーティング システムに用意されている ODBC ドライバーが使用されている必要があります (ドライバー名は "SQL Server")。 このサンプルを 64 ビット オペレーティング システムで 32 ビット アプリケーションとしてビルドし、実行する場合、%windir%\SysWOW64\odbcad32.exe の ODBC アドミニストレーターを使用して ODBC データ ソースを作成する必要があります。  
+ AdventureWorks と呼ばれる ODBC データ ソース (既定のデータベースは AdventureWorks サンプル データベース) が必要です (AdventureWorks サンプルデータベースは、 [Microsoft SQL Server のサンプルとコミュニティのプロジェクト](https://go.microsoft.com/fwlink/?LinkID=85384)のホームページからダウンロードできます)。このデータソースは、オペレーティングシステムによって提供される ODBC ドライバーに基づいている必要があります (ドライバー名は "SQL Server")。 このサンプルを 64 ビット オペレーティング システムで 32 ビット アプリケーションとしてビルドし、実行する場合、%windir%\SysWOW64\odbcad32.exe の ODBC アドミニストレーターを使用して ODBC データ ソースを作成する必要があります。  
   
  このサンプルでは、コンピューターの既定の [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] インスタンスに接続します。 名前付きインスタンスに接続するには、ODBC データ ソースの定義を変更し、server\namedinstance 形式でそのインスタンスを指定します。 [!INCLUDE[ssExpress](../../../includes/ssexpress-md.md)] は、既定で名前付きインスタンスとしてインストールされます。  
   
- 最初の実行 ([!INCLUDE[tsql](../../../includes/tsql-md.md)]) コード リストをサンプルを使用するテーブルを作成します。  
+ 最初の ([!INCLUDE[tsql](../../../includes/tsql-md.md)]) コードリストを実行して、サンプルで使用するテーブルを作成します。  
   
  2 つ目のコード リストをコピーし、Bcpfmt.fmt という名前のファイルに貼り付けます。 テーブルの各列はタブ文字で区切られています。  
   
@@ -62,7 +62,7 @@ ms.locfileid: "53354323"
   
  5 つ目の ([!INCLUDE[tsql](../../../includes/tsql-md.md)]) コード リストを実行して、サンプルで使用したテーブルを削除します。  
   
-```  
+```sql
 use AdventureWorks  
 CREATE TABLE BCPDate (cola int, colb datetime)  
 ```  
@@ -77,10 +77,9 @@ CREATE TABLE BCPDate (cola int, colb datetime)
 ```  
 1  
 2  
-  
 ```  
   
-```  
+```cpp
 // compile with: odbc32.lib odbcbcp.lib  
 #include <stdio.h>  
 #include <windows.h>  
@@ -177,7 +176,7 @@ int main() {
 }  
 ```  
   
-```  
+```sql
 use AdventureWorks  
 IF EXISTS (SELECT name FROM sysobjects WHERE name = 'BCPDate')  
      DROP TABLE BCPDate  
@@ -185,7 +184,7 @@ GO
 ```  
   
 ## <a name="see-also"></a>参照  
- [一括コピーの SQL Server ODBC ドライバーの操作について&#40;ODBC&#41;](bulk-copying-with-the-sql-server-odbc-driver-how-to-topics-odbc.md)   
+ [SQL Server odbc ドライバーを使用した一括コピーの操作&#40;方法&#41;に関するトピック odbc](bulk-copying-with-the-sql-server-odbc-driver-how-to-topics-odbc.md)   
  [データ ファイルとフォーマット ファイルの使用](../../native-client-odbc-bulk-copy-operations/using-data-files-and-format-files.md)  
   
   

@@ -1,7 +1,7 @@
 ---
-title: Azure SQL database への接続 |Microsoft Docs
+title: Azure SQL database に接続する |Microsoft Docs
 ms.custom: ''
-ms.date: 01/21/2019
+ms.date: 08/12/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 49645b1f-39b1-4757-bda1-c51ebc375c34
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: d948e4a790933e6f703232e3f642241395bbb410
-ms.sourcegitcommit: 879a5c6eca99e0e9cc946c653d4ced165905d9c6
+ms.openlocfilehash: 58a0b6f11fa28dca0e8aae98cb1794b12e3fc227
+ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/05/2019
-ms.locfileid: "55736983"
+ms.lasthandoff: 08/29/2019
+ms.locfileid: "70155108"
 ---
 # <a name="connecting-to-an-azure-sql-database"></a>Azure SQL Database への接続
 
@@ -32,8 +31,8 @@ ms.locfileid: "55736983"
   
 ## <a name="details"></a>詳細
 
-接続するとき、[!INCLUDE[ssAzure](../../includes/ssazure_md.md)]を呼び出す、master データベースに接続する必要があります**SQLServerDatabaseMetaData.getCatalogs**します。  
-[!INCLUDE[ssAzure](../../includes/ssazure_md.md)] では、ユーザー データベースからカタログ全体を返すことがサポートされていません。 **SQLServerDatabaseMetaData.getCatalogs** sys.databases ビューを使用して、カタログを取得します。 権限に関する情報を参照してください[sys.databases (SQL Azure データベース)](https://go.microsoft.com/fwlink/?LinkId=217396)を理解しておく**SQLServerDatabaseMetaData.getCatalogs**での動作を[!INCLUDE[ssAzure](../../includes/ssazure_md.md)]します。  
+に[!INCLUDE[ssAzure](../../includes/ssazure_md.md)]接続するときは、master データベースに接続して SQLServerDatabaseMetaData を呼び出す必要があり**ます**。  
+[!INCLUDE[ssAzure](../../includes/ssazure_md.md)] では、ユーザー データベースからカタログ全体を返すことがサポートされていません。 **SQLServerDatabaseMetaData**は、カタログを取得するために、データベースビューを使用します。 での**SQLServerDatabaseMetaData**の[!INCLUDE[ssAzure](../../includes/ssazure_md.md)]動作を理解するには、「データベースのアクセス許可[(transact-sql)](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) 」を参照してください。  
   
 ## <a name="connections-dropped"></a>接続のドロップ
 
@@ -49,11 +48,11 @@ ms.locfileid: "55736983"
 |----------------------|-----------------------|  
 |HKEY_LOCAL_MACHINE \ SYSTEM \ CurrentControlSet \ Services \ Tcpip \ Parameters \ KeepAliveTime|30000|  
 |HKEY_LOCAL_MACHINE \ SYSTEM \ CurrentControlSet \ Services \ Tcpip \ Parameters \ KeepAliveInterval|1000|  
-|HKEY_LOCAL_MACHINE \ SYSTEM \ CurrentControlSet \ Services \ Tcpip \ パラメーター \ TcpMaxDataRetransmissions|10|  
+|HKEY_LOCAL_MACHINE \ SYSTEM \ CurrentControlSet \ Services \ Tcpip \ Parameters \ TcpMaxDataRetransmissions|10|  
   
 設定後にコンピューターを再起動して、レジストリ設定を有効にします。  
 
-Windows Azure の実行時にこの操作を行うには、スタートアップ タスクを作成してこれらのレジストリ キーを追加します。  たとえば、次のスタートアップ タスクをサービス定義ファイルに追加します。  
+Azure で実行している場合にこれを行うには、スタートアップ タスクを作成してこれらのレジストリ キーを追加します。  たとえば、次のスタートアップ タスクをサービス定義ファイルに追加します。  
 
 ```xml
 <Startup>  
@@ -75,15 +74,15 @@ shutdown /r /t 1
 :done  
 ```
 
-## <a name="appending-the-server-name-to-the-userid-in-the-connection-string"></a>接続文字列内の UserId へのサーバー名の追加  
+## <a name="appending-the-server-name-to-the-userid-in-the-connection-string"></a>接続文字列内の userId へのサーバー名の追加  
 
-Version 4.0 より前の [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] では、[!INCLUDE[ssAzure](../../includes/ssazure_md.md)] に接続する際に、接続文字列内の UserId にサーバー名を追加する必要がありました。 たとえば、user@servername のようにします。 Version 4.0 以降の [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] では、接続文字列内の UserId に @servername を追加する必要がなくなりました。  
+Version 4.0 より前の [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] では、[!INCLUDE[ssAzure](../../includes/ssazure_md.md)] に接続する際に、接続文字列内の UserId にサーバー名を追加する必要がありました。 たとえば、user@servername のようになります。 Version 4.0 以降の [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] では、接続文字列内の UserId に @servername を追加する必要がなくなりました。  
 
 ## <a name="using-encryption-requires-setting-hostnameincertificate"></a>暗号化の使用に必要な hostNameInCertificate の設定
 
-7.2 バージョンの前に、[!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)]に接続するときに、[!INCLUDE[ssAzure](../../includes/ssazure_md.md)]を指定する必要があります**hostNameInCertificate**を指定する場合**暗号化 = true** (この場合、サーバー接続の名前文字列が*shortName*.*domainName*、設定、 **hostNameInCertificate**プロパティを\*.*domainName*。)。 このプロパティは、ドライバーのバージョン 7.2 の時点で省略可能です。
+[!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)]の7.2 バージョンより前では[!INCLUDE[ssAzure](../../includes/ssazure_md.md)]、に接続するときに、 **encrypt = true** (接続文字列のサーバー名が*shortName*の場合) を指定すると、 **hostNameInCertificate**を指定する必要があります。*domainName*、 **hostNameInCertificate**プロパティをに\*設定します。*domainName*.)。 ドライバーのバージョン7.2 では、このプロパティは省略可能です。
 
-例 :
+例:
 
 ```java
 jdbc:sqlserver://abcd.int.mscds.com;databaseName=myDatabase;user=myName;password=myPassword;encrypt=true;hostNameInCertificate=*.int.mscds.com;

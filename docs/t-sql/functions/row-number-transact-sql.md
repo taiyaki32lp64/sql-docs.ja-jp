@@ -18,22 +18,18 @@ helpviewer_keywords:
 - row numbers [SQL Server]
 - sequential row numbers [SQL Server]
 ms.assetid: 82fa9016-77db-4b42-b4c8-df6095b81906
-author: MashaMSFT
-ms.author: mathoma
-manager: craigg
+author: MikeRayMSFT
+ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 2992aa204320379866c32e02ac2a57c68b59be40
-ms.sourcegitcommit: 96032813f6bf1cba680b5e46d82ae1f0f2da3d11
+ms.openlocfilehash: e73d13927ff4618f0c0ea0b7246df0d722340a1a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/15/2019
-ms.locfileid: "54299189"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68095381"
 ---
 # <a name="rownumber-transact-sql"></a>ROW_NUMBER (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
-
-> [!div class="nextstepaction"]
-> [SQL ドキュメントの目次に関するご意見を共有してください。](https://aka.ms/sqldocsurvey)
 
 結果セットの出力に番号を設定します。 具体的には、結果セットのパーティション内の行について、各パーティションの最初の行を 1 とした連続する数値を返します。 
   
@@ -57,7 +53,7 @@ ROW_NUMBER ( )
  [FROM](../../t-sql/queries/from-transact-sql.md) 句で生成された結果セットを、ROW_NUMBER 関数が適用されるパーティションに分割します。 *value_expression* は、結果セットをパーティションに分割するときに使用する列を指定します。 `PARTITION BY` を指定しない場合、関数ではクエリ結果セットのすべての行を 1 つのグループとして扱います。 詳しくは、[OVER 句 &#40;Transact-SQL&#41;](../../t-sql/queries/select-over-clause-transact-sql.md) に関する記事をご覧ください。  
   
  *order_by_clause*  
- `ORDER BY` 句は、指定したパーティション内の行に一意の `ROW_NUMBER` を割り当てる順序を決定します。 この引数は必須です。 詳細については、を参照してください。 [経由句 (&) #40 です。TRANSACT-SQL と #41;](../../t-sql/queries/select-over-clause-transact-sql.md).  
+ `ORDER BY` 句は、指定したパーティション内の行に一意の `ROW_NUMBER` を割り当てる順序を決定します。 この引数は必須です。 詳細については、[OVER 句 &#40;Transact-SQL&#41;](../../t-sql/queries/select-over-clause-transact-sql.md)を参照してください。  
   
 ## <a name="return-types"></a>戻り値の型  
  **bigint**  

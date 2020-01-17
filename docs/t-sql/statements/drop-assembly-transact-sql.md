@@ -22,13 +22,12 @@ helpviewer_keywords:
 ms.assetid: 452d181a-a8e6-44a3-975d-29966d01b18d
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: 356fd02aad93f523aa621927997fb50182730a05
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: 6b5b788ef8978ce88fdb3d8aa0567724023fd5cc
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53204331"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67984287"
 ---
 # <a name="drop-assembly-transact-sql"></a>DROP ASSEMBLY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -52,13 +51,13 @@ DROP ASSEMBLY [ IF EXISTS ] assembly_name [ ,...n ]
  条件付きでは既に存在する場合にのみ、アセンブリを削除します。  
   
  *assembly_name*  
- 削除するアセンブリの名前を指定します。  
+ 削除するアセンブリの名前です。  
   
  WITH NO DEPENDENTS  
  指定した場合、*assembly_name* だけが削除され、アセンブリで参照される依存アセンブリは削除されません。 指定しない場合、DROP ASSEMBLY では *assembly_name* とすべての依存アセンブリが削除されます。  
   
 ## <a name="remarks"></a>Remarks  
- アセンブリを削除すると、ソース コードやデバッグ ファイルなど、アセンブリに関連するファイルもデータベースから削除されます。  
+ アセンブリを削除すると、データベースからアセンブリと、ソース コードやデバッグ ファイルなどのアセンブリに関連するファイルが削除されます。  
   
  WITH NO DEPENDENTS を指定しない場合、DROP ASSEMBLY では *assembly_name* とすべての依存アセンブリが削除されます。 依存アセンブリの削除に失敗した場合、DROP ASSEMBLY ではエラーが返されます。  
   

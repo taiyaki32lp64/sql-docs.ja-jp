@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 11f6f896-d69c-44a4-94cd-d54c93140e4a
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 903610da6a4907271b895b15728d58dde9172010
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b791803b828852a1861e55dd8ec6ef189ea6e84b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47827660"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67930376"
 ---
 # <a name="catalog-object-ado-md"></a>Catalog オブジェクト (ADO MD)
 多次元データ プロバイダー (MDP) に固有の多次元スキーマ情報 (つまり、キューブと基になるディメンション、階層、レベル、およびメンバー) が含まれています。  
@@ -39,7 +38,7 @@ ms.locfileid: "47827660"
   
 -   [プロパティ、メソッド、およびイベント](../../../ado/reference/ado-md-api/catalog-object-properties-methods-and-events-ado-md.md)  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [カタログの例 (VB)](../../../ado/reference/ado-md-api/catalog-example-vb.md)   
  [接続オブジェクト (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)   
  [CubeDefs コレクション (ADO MD)](../../../ado/reference/ado-md-api/cubedefs-collection-ado-md.md)

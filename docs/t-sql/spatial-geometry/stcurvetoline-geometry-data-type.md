@@ -12,15 +12,14 @@ dev_langs:
 helpviewer_keywords:
 - STCurveToLine method (geometry)
 ms.assetid: abc80b32-4152-4e10-b816-798b901e0ac5
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: d657869e71b93d5cb5d915ab15b2751c88e6eacf
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: MladjoA
+ms.author: mlandzic
+ms.openlocfilehash: 5bc1bdb1ece65113422af1e9a8ebe09de0db1fa1
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47689420"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67930308"
 ---
 # <a name="stcurvetoline-geometry-data-type"></a>STCurveToLine (geometry データ型)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
@@ -37,7 +36,7 @@ ms.locfileid: "47689420"
 ## <a name="return-types"></a>戻り値の型  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の戻り値の型: **geometry**  
   
- CLR 戻り値の型: **SqlGeometry**  
+ CLR の戻り値の型:**SqlGeometry**  
   
 ## <a name="remarks"></a>Remarks  
  空の **geometry** インスタンス変数に空の **GeometryCollection** インスタンスを返し、初期化されていない **geometry** 変数に **NULL** を返します。  

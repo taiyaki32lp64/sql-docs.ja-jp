@@ -3,27 +3,29 @@ title: 列マッピング (SQL Server インポートおよびエクスポート
 ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
-ms.prod_service: integration-services
 ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql13.dts.impexpwizard.columnmapandtransform.f1
 ms.assetid: eadc54a6-f936-4ffc-91d7-fbfd2bdcab93
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: 790542daa3cf69f5d1cd149a3356545fe69b03e2
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: a16e270acae2a2685bcaf53045883eaa078ab03d
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47733870"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71285931"
 ---
 # <a name="column-mappings-sql-server-import-and-export-wizard"></a>[列マッピング]\(SQL Server インポートおよびエクスポート ウィザード)
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   指定したクエリをコピーまたは確認する既存のテーブルやビューを選択した後、 **[マッピングの編集]** をクリックすると、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインポートおよびエクスポート ウィザードに **[列マッピング]** ダイアログ ボックスが表示されます。 このページでは、コピー元の列からコピーしたデータを受け取るためのコピー先列を指定し、構成します。 多くの場合、このページでは何も変更する必要はありません。
   
-選択したテーブル内のすべての列をコピーしない場合、このページでできることは、不要な列を除外することだけです。 コピーしない列については、**[マッピング]** リストの **[変換先]** 列で **[無視]** を選択します。
+選択したテーブル内のすべての列をコピーしない場合、このページでできることは、不要な列を除外することだけです。 コピーしない列については、 **[マッピング]** リストの **[変換先]** 列で **[無視]** を選択します。
  
 ## <a name="screen-shot-of-the-column-mappings-page"></a>[列マッピング] ページのスクリーン ショット 
  次のスクリーン ショットは、ウィザードの **[列マッピング]** ダイアログ ボックスの例を示しています。 
@@ -53,9 +55,9 @@ ms.locfileid: "47733870"
 ### <a name="sometimes-these-options-are-disabled"></a>これらのオプションが無効になっている場合がある
 **[変換先テーブル/ファイルの作成]** オプションと **[SQL の編集]** ボタンは、自動的に有効または自動的に無効になります。
 
--   **有効。** **[コピー元のテーブルおよびビューを選択]** ページで**新しい**変換先テーブルを指定した場合は、**[変換先テーブルの作成]** オプションが自動的に選択され、**[SQL の編集]** ボタンが有効になります。
+-   **有効。** **[コピー元のテーブルおよびビューを選択]** ページで**新しい**変換先テーブルを指定した場合は、 **[変換先テーブルの作成]** オプションが自動的に選択され、 **[SQL の編集]** ボタンが有効になります。
 
--   **無効。** **[コピー元のテーブルおよびビューを選択]** ページで**既存の**変換先テーブルを選択した場合は、**[変換先テーブルの作成]** オプションと **[SQL の編集]** ボタンが無効になります。 新しい変換先テーブルを作成する場合は、**[コピー元のテーブルおよびビューを選択]** ページに戻り、**[変換先]** 列に**新しい**テーブルの名前を入力します。  
+-   **無効。** **[コピー元のテーブルおよびビューを選択]** ページで**既存の**変換先テーブルを選択した場合は、 **[変換先テーブルの作成]** オプションと **[SQL の編集]** ボタンが無効になります。 新しい変換先テーブルを作成する場合は、 **[コピー元のテーブルおよびビューを選択]** ページに戻り、 **[変換先]** 列に**新しい**テーブルの名前を入力します。  
 
 ## <a name="what-about-existing-data-in-the-destination"></a>変換先の既存のデータについて
 ![[列マッピング] ページ、オプション セクション](../../integration-services/import-export-data/media/column-mappings-page-options-section.png)
@@ -76,7 +78,7 @@ ms.locfileid: "47733870"
 > 既存のプライマリ キーが id 列、autonumber 列、または同等の列である場合、既存のプライマリ キー値を保持するには、通常、このオプションを選択する必要があります。  その他の場合、変換先の ID 列には通常、新しい値が割り当てられます。  
 
 ## <a name="keep-your-autonumber-or-identity-values"></a>autonumber または ID 値を保持する
-autonumber 列または ID 列があるデータをエクスポートする場合 (たとえば、Microsoft Access からエクスポートする場合)、すぐ上で説明したように、**[ID 挿入を許可する]** を忘れずに選択します。
+autonumber 列または ID 列があるデータをエクスポートする場合 (たとえば、Microsoft Access からエクスポートする場合)、すぐ上で説明したように、 **[ID 挿入を許可する]** を忘れずに選択します。
 
 ## <a name="review-column-mappings"></a>列マッピングの確認
 ![[列マッピング] ページ、マッピング セクション](../../integration-services/import-export-data/media/column-mappings-page-mappings-section.png)
@@ -94,7 +96,7 @@ autonumber 列または ID 列があるデータをエクスポートする場�
     
     ソース テーブルからすべての列をコピーする必要はありません。 コピーしない列については、 **[変換先]** を選択すると、列のサブセットのみをコピーできます。 列をマップする前に、マップされないすべての列を無視する必要があります。  
   
--   **型**  
+-   **Type**  
     変換先列のデータ型を確認するか、別のデータ型を選択します。
   
 -   **NULL 値の使用**  
@@ -110,7 +112,7 @@ autonumber 列または ID 列があるデータをエクスポートする場�
     小数点以下の桁数を参照して、変換先列での数値データの小数点以下の精度を指定します (該当する場合)。  
   
 ## <a name="whats-next"></a>次の操作  
- ソース列からコピーしたデータを受け取る変換先列を確認して構成した後、**[OK]** をクリックすると、**[列マッピング]** ダイアログ ボックスの表示が **[コピー元のテーブルおよびビューを選択]** ページまたは **[フラット ファイルの変換先の構成]** ページに戻ります。 詳細については、「 [[コピー元のテーブルおよびビューを選択]](../../integration-services/import-export-data/select-source-tables-and-views-sql-server-import-and-export-wizard.md) 」または「 [[フラット ファイルの変換先の構成]](../../integration-services/import-export-data/configure-flat-file-destination-sql-server-import-and-export-wizard.md)」を参照してください。  
+ ソース列からコピーしたデータを受け取る変換先列を確認して構成した後、 **[OK]** をクリックすると、 **[列マッピング]** ダイアログ ボックスの表示が **[コピー元のテーブルおよびビューを選択]** ページまたは **[フラット ファイルの変換先の構成]** ページに戻ります。 詳細については、「 [[コピー元のテーブルおよびビューを選択]](../../integration-services/import-export-data/select-source-tables-and-views-sql-server-import-and-export-wizard.md) 」または「 [[フラット ファイルの変換先の構成]](../../integration-services/import-export-data/configure-flat-file-destination-sql-server-import-and-export-wizard.md)」を参照してください。  
   
  指定したマッピングが **[マッピング]** 一覧で成功しない可能性がある場合は、 **[列マッピング]** ダイアログ ボックスに **[データ型マッピングの確認]** ページが表示されます。 このページでは、警告を確認し、変換オプションを指定して、エラーの処理方法も指定します。 詳しくは、「 [[データ型マッピングの確認]](../../integration-services/import-export-data/review-data-type-mapping-sql-server-import-and-export-wizard.md)」をご覧ください。  
  

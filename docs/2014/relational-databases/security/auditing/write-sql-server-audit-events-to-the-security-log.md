@@ -16,11 +16,11 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: bd272abda4b22f220e3fc599111d10cb4979f42e
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48056782"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68211978"
 ---
 # <a name="write-sql-server-audit-events-to-the-security-log"></a>セキュリティ ログへの SQL サーバー監査イベントの書き込み
   高度なセキュリティ環境では、オブジェクト アクセスを記録するイベントを書き込むのに適切な場所は Windows セキュリティ ログです。 他の監査場所は、サポートされていますが、改ざんされる可能性が高くなります。  
@@ -55,10 +55,10 @@ ms.locfileid: "48056782"
   
      [secpol を使用した "セキュリティ監査の生成" 権限のアカウントへの許可](#secpolPermission)  
   
-##  <a name="BeforeYouBegin"></a> 作業を開始する準備  
+##  <a name="BeforeYouBegin"></a> はじめに  
   
 ###  <a name="Restrictions"></a> 制限事項と制約事項  
- [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] コンピューターの管理者は、セキュリティ ログのローカル設定がドメイン ポリシーによって上書きされることを理解している必要があります。 この場合、ドメイン ポリシーによってサブカテゴリ設定 (**auditpol /get /subcategory:"application generated"**) が上書きされる可能性があります。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] の監査対象であるイベントが記録されないことを検出する方法がない場合、これがイベントをログに記録する [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] の機能に影響します。  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] コンピューターの管理者は、セキュリティ ログのローカル設定がドメイン ポリシーによって上書きされることを理解している必要があります。 この場合、ドメイン ポリシーによってサブカテゴリ設定 (**auditpol /get /subcategory:"application generated"** ) が上書きされる可能性があります。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] の監査対象であるイベントが記録されないことを検出する方法がない場合、これがイベントをログに記録する [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] の機能に影響します。  
   
 ###  <a name="Security"></a> セキュリティ  
   
@@ -69,7 +69,7 @@ ms.locfileid: "48056782"
   
 1.  管理権限を使用してコマンド プロンプトを開きます。  
   
-    1.  **[スタート]** ボタンをクリックし、 **[すべてのプログラム]**、 **[アクセサリ]** の順にポイントします。次に、 **[コマンド プロンプト]** を右クリックし、 **[管理者として実行]** をクリックします。  
+    1.  **[スタート]** ボタンをクリックし、 **[すべてのプログラム]** 、 **[アクセサリ]** の順にポイントします。次に、 **[コマンド プロンプト]** を右クリックし、 **[管理者として実行]** をクリックします。  
   
     2.  **[ユーザー アカウント制御]** ダイアログ ボックスが表示されたら、 **[続行]** をクリックします。  
   
@@ -87,7 +87,7 @@ ms.locfileid: "48056782"
   
 2.  「 **secpol.msc** 」と入力し、 **[OK]** をクリックします。 **[ユーザー アクセス制御]** ダイアログ ボックスが表示されたら、 **[続行]** をクリックします。  
   
-3.  ローカル セキュリティ ポリシー ツールで、 **[セキュリティの設定]**、 **[ローカル ポリシー]** の順に展開し、 **[ユーザー権利の割り当て]** をクリックします。  
+3.  ローカル セキュリティ ポリシー ツールで、 **[セキュリティの設定]** 、 **[ローカル ポリシー]** の順に展開し、 **[ユーザー権利の割り当て]** をクリックします。  
   
 4.  結果ペインで **[セキュリティ監査の生成]** をダブルクリックします。  
   
@@ -107,7 +107,7 @@ ms.locfileid: "48056782"
   
 2.  「 **secpol.msc** 」と入力し、 **[OK]** をクリックします。 **[ユーザー アクセス制御]** ダイアログ ボックスが表示されたら、 **[続行]** をクリックします。  
   
-3.  ローカル セキュリティ ポリシー ツールで、 **[セキュリティの設定]**、 **[ローカル ポリシー]** の順に展開し、 **[監査ポリシー]** をクリックします。  
+3.  ローカル セキュリティ ポリシー ツールで、 **[セキュリティの設定]** 、 **[ローカル ポリシー]** の順に展開し、 **[監査ポリシー]** をクリックします。  
   
 4.  結果ペインで、 **[オブジェクト アクセスの監査]** をダブルクリックします。  
   
@@ -117,7 +117,7 @@ ms.locfileid: "48056782"
   
 7.  セキュリティ ポリシー ツールを閉じます。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [SQL Server Audit &#40;データベース エンジン&#41;](sql-server-audit-database-engine.md)  
   
   

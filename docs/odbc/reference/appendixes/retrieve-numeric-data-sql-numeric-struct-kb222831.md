@@ -1,6 +1,6 @@
 ---
 title: SQL_NUMERIC_STRUCT で数値データの取得 |Microsoft Docs
-description: ODBC を使用した C/C++ では、SQL_C_NUMERIC に関連する SQL_NUMERIC_STRUCT を使用して SQL Server の数値データ型を取得します。
+description: C/C++ SQL_NUMERIC_STRUCT、SQL_C_NUMERIC に関連するを使用して、SQL Server の数値データ型を取得する ODBC を使用します。
 editor: ''
 ms.prod: sql
 ms.technology: ''
@@ -9,14 +9,13 @@ ms.topic: conceptual
 ms.custom: ''
 ms.date: 07/13/2017
 ms.author: genemi
-authors: MightyPen
-manager: craigg
-ms.openlocfilehash: 256a8f87445dd7bcc581e1bc0e5d55e9b5700ffb
-ms.sourcegitcommit: 0bb306da5374d726b1e681cd4b5459cb50d4a87a
+author: MightyPen
+ms.openlocfilehash: 296a6bd9b5e0ab64fe7ecc7d78924a02e5fda9cf
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2018
-ms.locfileid: "53731939"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68057189"
 ---
 # <a name="retrieve-numeric-data-with-sqlnumericstruct"></a>SQL を使用した数値のデータの取得\_数値\_構造体
 
@@ -35,7 +34,7 @@ ms.locfileid: "53731939"
 SQL\_数値\_構造体が、sqltypes.h ヘッダー ファイルで次のように定義されています。
 
 
-``` C
+```c
 #define SQL_MAX_NUMERIC_LEN    16
 typedef struct tagSQL_NUMERIC_STRUCT
 {
@@ -64,7 +63,7 @@ typedef struct tagSQL_NUMERIC_STRUCT
 >
 > Microsoft では、なし、いかなる保証も、明示または黙示にかかわらず、商品性や特定目的に対する適合性の黙示の保証を行いません"現状有姿の次のコード サンプルを提供します。
 
-``` C
+```c
 #include <stdio.h>
 #include <string.h>
 #include <conio.h>
@@ -217,7 +216,7 @@ while((retcode =SQLFetch(hstmt1)) != SQL_NO_DATA)
 ### <a name="interim-results"></a>中間結果:
 
 
-```
+```console
 //  C  ==> 12 * 1    =     12
 //  7  ==> 07 * 16   =    112
 //  2  ==> 02 * 256  =    512
@@ -240,7 +239,7 @@ while((retcode =SQLFetch(hstmt1)) != SQL_NO_DATA)
 リトル エンディアン モードから位取り整数への変換を実装するコードです。 この機能を実装するために、アプリケーション開発者の責任です。 次のコード例は、さまざまな方法が 1 つにすぎません。
 
 
-``` C
+```c
 long strtohextoval()
 {
     long val=0,value=0;
@@ -283,7 +282,7 @@ long strtohextoval()
 このプログラムの実行に使用する ODBC ドライバーでは、ODBC 3.0 の機能をサポートする必要があります。
 
 
-``` C
+```c
 #include <windows.h>
 #include <sql.h>
 #include <sqlext.h>

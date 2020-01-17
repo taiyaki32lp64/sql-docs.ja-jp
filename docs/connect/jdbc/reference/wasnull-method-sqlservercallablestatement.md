@@ -1,5 +1,5 @@
 ---
-title: wasNull メソッド (SQLServerCallableStatement) |Microsoft Docs
+title: wasNull メソッド (SQLServerCallableStatement) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: 1a27b2fe-ae12-46a9-9bca-2c5ca66b9eb3
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: caf975c253ec6765a1b0810cf593787db19fe033
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 03e2ba3f7721c0322e54686cef0a53d93a9bf79c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47827810"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68001549"
 ---
 # <a name="wasnull-method-sqlservercallablestatement"></a>wasNull メソッド (SQLServerCallableStatement)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

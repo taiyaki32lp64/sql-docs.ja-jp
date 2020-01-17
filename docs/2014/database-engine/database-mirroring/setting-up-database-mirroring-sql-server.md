@@ -13,11 +13,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: c6b7fcdc3f50b941feac4958daa6dad49fde9eac
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48065992"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62754452"
 ---
 # <a name="setting-up-database-mirroring-sql-server"></a>データベース ミラーリングの設定 (SQL Server)
   ここでは、データベース ミラーリングを設定するための前提条件、推奨事項、および手順について説明します。 データベース ミラーリングの概要については、「 [データベース ミラーリング &#40;SQL Server&#41;](database-mirroring-sql-server.md)」を参照してください。  
@@ -90,12 +90,12 @@ ms.locfileid: "48065992"
          自動フェールオーバーを行わず、高可用性よりパフォーマンスを重視する場合は、トランザクションの安全性を無効にします。 詳細については、「[データベース ミラーリング セッションでのトランザクションの安全性の変更 &#40;Transact-SQL&#41;](change-transaction-safety-in-a-database-mirroring-session-transact-sql.md)」を参照してください。  
   
         > [!NOTE]  
-        >  高パフォーマンス モードでは、WITNESS を OFF に設定する必要があります。 詳細については、「[クォーラム: データベースの可用性にミラーリング監視サーバーが与える影響 &#40;Database Mirroring&#41;](quorum-how-a-witness-affects-database-availability-database-mirroring.md)」を参照してください。  
+        >  高パフォーマンス モードでは、WITNESS を OFF に設定する必要があります。 詳細については、「[クォーラム: データベースの可用性にミラーリング監視サーバーが与える影響 (データベース ミラーリング)](quorum-how-a-witness-affects-database-availability-database-mirroring.md)」を参照してください。  
   
 > [!NOTE]  
->  [!INCLUDE[tsql](../../includes/tsql-md.md)] での Microsoft Windows 認証を使用したデータベース ミラーリングの完全な設定例については、「[Windows 認証を使用したデータベース ミラーリングの設定の例 &#40;Transact-SQL&#41;](example-setting-up-database-mirroring-using-windows-authentication-transact-sql.md)」を参照してください。  
+>  [!INCLUDE[tsql](../../includes/tsql-md.md)] での Microsoft Windows 認証を使用したデータベース ミラーリングの設定例については、「[Windows 認証を使用したデータベース ミラーリングの設定の例 &#40;Transact-SQL&#41;](example-setting-up-database-mirroring-using-windows-authentication-transact-sql.md)」を参照してください。  
 >   
->  [!INCLUDE[tsql](../../includes/tsql-md.md)] での証明書ベースのセキュリティを使用したデータベース ミラーリングの完全な設定例については、「[証明書を使用したデータベース ミラーリングの設定の例 &#40;Transact-SQL&#41;](example-setting-up-database-mirroring-using-certificates-transact-sql.md)」を参照してください。  
+>  [!INCLUDE[tsql](../../includes/tsql-md.md)] での証明書ベースのセキュリティを使用したデータベース ミラーリングの設定例については、「[証明書を使用したデータベース ミラーリングの設定の例 &#40;Transact-SQL&#41;](example-setting-up-database-mirroring-using-certificates-transact-sql.md)」を参照してください。  
   
  
   
@@ -112,10 +112,10 @@ ms.locfileid: "48065992"
  [Windows 認証を使用してデータベース ミラーリング セッションを確立する方法 &#40;Transact-SQL&#41;](database-mirroring-establish-session-windows-authentication.md)  
  データベース ミラーリングを設定するための [!INCLUDE[tsql](../../includes/tsql-md.md)] の手順について説明します。  
   
- [Windows 認証を使用したデータベース ミラーリングの設定の例 &#40;Transact-SQL&#41;](example-setting-up-database-mirroring-using-windows-authentication-transact-sql.md)  
+ [例:Windows 認証を使用したデータベース ミラーリングの設定 &#40;Transact-SQL&#41;](example-setting-up-database-mirroring-using-windows-authentication-transact-sql.md)  
  Windows 認証を使用してミラーリング監視サーバーを利用するデータベース ミラーリング セッションを作成する場合に必要なすべての段階の例を示します。  
   
- [証明書を使用したデータベース ミラーリングの設定の例 &#40;Transact-SQL&#41;](example-setting-up-database-mirroring-using-certificates-transact-sql.md)  
+ [例:証明書を使用したデータベース ミラーリングの設定 &#40;Transact-SQL&#41;](example-setting-up-database-mirroring-using-certificates-transact-sql.md)  
  証明書ベースの認証を使用してミラーリング監視サーバーを利用するデータベース ミラーリング セッションを作成する場合に必要なすべての段階の例を示します。  
   
  [ログイン アカウントのデータベース ミラーリングまたは AlwaysOn 可用性グループ セットアップ&#40;SQL Server&#41;](set-up-login-accounts-database-mirroring-always-on-availability.md)  

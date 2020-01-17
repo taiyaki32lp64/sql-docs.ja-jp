@@ -1,8 +1,8 @@
 ---
-title: アップグレード オンプレミス SQL Server または SQL Server Data Migration Assistant を使用して Azure Vm 上に SQL Server |Microsoft Docs
-description: Data Migration Assistant を使用して、以降のバージョンの SQL Server または Azure Vm 上の SQL Server には、オンプレミスの SQL Server をアップグレードする方法について説明します
-ms.custom: ''
-ms.date: 10/20/2018
+title: Data Migration Assistant を使用した SQL Server のアップグレード
+description: Data Migration Assistant を使用して、オンプレミスの SQL Server を新しいバージョンの SQL Server にアップグレードする方法、または Azure Vm に SQL Server する方法について説明します。
+ms.custom: seo-lt-2019
+ms.date: 05/18/2019
 ms.prod: sql
 ms.prod_service: dma
 ms.reviewer: ''
@@ -12,104 +12,103 @@ keywords: ''
 helpviewer_keywords:
 - Data Migration Assistant, on-premises SQL Server
 ms.assetid: ''
-author: pochiraju
-ms.author: rajpo
-manager: craigg
-ms.openlocfilehash: 3c16c87ea79e3c80de9f93bc3571a46d0610b22d
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+author: HJToland3
+ms.author: jtoland
+ms.openlocfilehash: fc78354e3b422342e376bd7ebe75233dcd3ffaee
+ms.sourcegitcommit: d00ba0b4696ef7dee31cd0b293a3f54a1beaf458
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52395425"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "74056532"
 ---
-# <a name="upgrade-on-premises-sql-server-to-sql-server-or-sql-server-on-azure-vms-using-the-data-migration-assistant"></a>SQL Server または Data Migration Assistant を使用して Azure Vm 上の SQL Server にオンプレミスの SQL Server のアップグレードします。
+# <a name="upgrade-sql-server-using-the-data-migration-assistant"></a>Data Migration Assistant を使用した SQL Server のアップグレード
 
-Data Migration Assistant は、Azure Vm または Azure SQL Database で SQL Server オンプレミスと以降のバージョンの SQL Server へのアップグレードまたは SQL Server への移行のシームレスな評価を提供します。
+Data Migration Assistant は、オンプレミスの SQL Server と、それ以降のバージョンの SQL Server へのアップグレード、または Azure Vm または Azure SQL Database での SQL Server への移行をシームレスに評価します。
 
-この記事では、Data Migration Assistant を使用して、オンプレミス SQL Server 以降のバージョンの SQL Server または Azure Vm 上の SQL Server をアップグレードするための詳細な手順を説明します。   
+この記事では、Data Migration Assistant を使用して、オンプレミスの SQL Server の SQL Server を以降のバージョンにアップグレードしたり、Azure Vm で SQL Server したりする手順について説明します。
 
-## <a name="create-a-new-migration-project"></a>新しい移行プロジェクトを作成します。
+## <a name="create-a-new-migration-project"></a>新しい移行プロジェクトを作成する
 
-1. 左側のウィンドウで次のように選択します。**新規**(+) をクリックし、**移行**プロジェクトの種類。
+1. 左側のウィンドウで、 **[新規]** (+) を選択し、**移行**プロジェクトの種類を選択します。
 
-2. ソースとターゲット サーバーの種類を設定**SQL Server**オンプレミスの SQL Server の新しいバージョンに、オンプレミスの SQL Server をアップグレードしているかどうか。
+2. オンプレミスの SQL Server をオンプレミスの SQL Server の新しいバージョンにアップグレードする場合は、ソースとターゲットのサーバーの種類を**SQL Server**に設定します。
 
 3. **[作成]** を選択します。
 
-   ![移行プロジェクトを作成します。](../dma/media/NewCreate.png)
+   ![移行プロジェクトの作成](../dma/media/NewCreate.png)
 
-## <a name="specify-the-source-and-target"></a>ソースとターゲットを指定します。
+## <a name="specify-the-source-and-target"></a>ソースとターゲットを指定する
 
-1. ソースの SQL Server インスタンス名を入力します。、**サーバー名**フィールドに、**ソース サーバーの詳細**セクション。 
+1. ソース で、**ソースサーバーの詳細** セクションの **サーバー名** フィールドに SQL Server インスタンス名を入力します。 
 
-2. 選択、**認証の種類**ソース SQL Server のインスタンスによってサポートされています。
+2. ソース SQL Server インスタンスでサポートされている**認証の種類**を選択します。
 
-3. ターゲットでの SQL Server インスタンス名を入力、**サーバー名**フィールドに、**対象のサーバーの詳細**セクション。 
+3. ターゲットの場合は、 **[対象サーバーの詳細]** セクションの **[サーバー名]** フィールドに SQL Server インスタンス名を入力します。 
 
-4. 選択、**認証の種類**ターゲット SQL Server のインスタンスによってサポートされています。
+4. ターゲット SQL Server インスタンスでサポートされている**認証の種類**を選択します。
 
-5. 選択して、接続を暗号化することをお勧め**接続を暗号化**で、**接続プロパティ**セクション。
+5. 接続は、 **[接続プロパティ]** セクションの **[暗号化接続]** を選択して暗号化することをお勧めします。
 
 6. **[次へ]** をクリックします。
 
-   ![ソースとターゲットのページを指定します。](../dma/media/SourceTarget.png)
+   ![[ソースとターゲットの指定] ページ](../dma/media/SourceTarget.png)
 
-## <a name="add-databases"></a>データベースを追加します。
+## <a name="add-databases"></a>データベースの追加
 
-1. のみの左側のウィンドウで、これらのデータベースを選択して移行する特定のデータベースの選択、**データベースを追加**ページ。
+1. **[データベースの追加]** ページの左ペインで、これらのデータベースを選択するだけで、移行する特定のデータベースを選択します。
 
-   移行のため既定では、ソース SQL Server インスタンス上のすべてのユーザー データベースの選択します。
+   既定では、ソース SQL Server インスタンスのすべてのユーザーデータベースが移行対象として選択されます。
 
-2. ページの右側にある移行の設定を使用すると、次の手順に従って、データベースに適用されている移行オプションを設定できます。
+2. ページの右側にある [移行] 設定を使用して、次の手順に従って、データベースに適用される移行オプションを設定します。
 
    > [!NOTE]
-   > 左側のウィンドウで、サーバーを選択して、移行するすべてのデータベースには、移行の設定を適用できます。 左側のウィンドウで、データベースを選択して、個々 のデータベース固有の設定で構成することもできます。
+   > 移行するすべてのデータベースに移行設定を適用するには、左側のウィンドウでサーバーを選択します。 左側のウィンドウでデータベースを選択して、特定の設定で個々のデータベースを構成することもできます。
 
-    A. 指定、**ソースとターゲットの SQL サーバーのバックアップ操作でアクセスできる場所を共有**します。 サービス アカウントが実行されているソース SQL Server のインスタンスが書き込み共有の場所での特権と、ターゲット サービス アカウントに読み取り、共有の場所での特権があることを確認してください。
+    a. **バックアップ操作のためにソースとターゲットの SQL server がアクセスできる共有場所**を指定します。 ソース SQL Server インスタンスを実行しているサービスアカウントが、共有の場所に対する書き込み権限を持っていて、ターゲットサービスアカウントに共有場所に対する読み取り権限があることを確認します。
 
-    B. データと対象サーバー上のトランザクションのログ ファイルを復元する場所を指定します。
+    b. 対象サーバー上のデータファイルとトランザクションログファイルを復元する場所を指定します。
 
-    ![[データベース] ページを追加します。](../dma/media/AddDatabases.png)
+    ![[データベースの追加] ページ](../dma/media/AddDatabases.png)
 
-3. ソースとターゲットの SQL Server インスタンスがあるへのアクセス、共有の場所を入力、**共有場所のオプション**ボックス。
+3. [**共有の場所] オプション**ボックスで、ソースとターゲットの SQL Server インスタンスがアクセスできる共有の場所を入力します。
 
-4. 選択へのアクセスをそのソースとターゲットの両方の SQL サーバーがある共有の場所を提供できない場合**ターゲット サーバーが読み取りし、からの復元を別の場所にデータベースのバックアップをコピー**します。 値を入力し、**復元オプションのバックアップの場所**ボックス。 
+4. ソースとターゲットの両方の SQL Server がアクセスできる共有の場所を指定できない場合は、 **[データベースのバックアップを、対象サーバーの読み取りと復元が可能な別の場所にコピーする]** を選択します。 次に、[**復元するバックアップの場所]** ボックスに値を入力します。 
 
-   Data Migration Assistant を実行しているユーザー アカウントに読み取り、バックアップの場所に特権があるかどうかを確認し、ターゲット サーバーの復元元の場所に特権を記述します。
+   Data Migration Assistant を実行しているユーザーアカウントが、バックアップの場所に対する読み取り権限を持っていること、および対象サーバーの復元元の場所に対する書き込み権限を持っていることを確認してください。
 
    ![データベースのバックアップを別の場所にコピーするオプション](../dma/media/CopyDatabaseDifferentLocation.png)
 
 5. **[次へ]** を選択します。
 
-Data Migration Assistant は、バックアップ フォルダー、データ、およびログ ファイルの場所での検証を実行します。 いずれかの検証に失敗した場合、オプションを修正し、**次**します。
+Data Migration Assistant は、バックアップフォルダー、データ、およびログファイルの場所に対して検証を実行します。 検証が失敗した場合は、オプションを修正し、 **[次へ]** を選択します。
 
-## <a name="select-logins"></a>ログインを選択します。
+## <a name="select-logins"></a>ログインの選択
 
-1. 特定のログインの移行を選択します。
+1. 移行する特定のログインを選択します。
 
    > [!IMPORTANT]
-   > 移行用に選択されたデータベース内の 1 つまたは複数のユーザーにマップされるログインを選択してください。   
+   > 移行用に選択したデータベース内の1人以上のユーザーにマップされているログインを選択してください。   
 
-   既定では、移行の移行の対象にするすべての SQL Server と Windows のログインが選択されます。
+   既定では、移行の対象となるすべての SQL Server および Windows ログインが、移行の対象として選択されます。
 
-2. 選択**移行を開始**します。
+2. **[移行の開始]** を選択します。
 
-   ![ログインを選択して、移行を開始](../dma/media/SelectLogins.png)
+   ![ログインを選択して移行を開始します](../dma/media/SelectLogins.png)
 
-## <a name="view-results"></a>結果を表示します。
+## <a name="view-results"></a>結果の表示
 
-移行の進行状況を監視することができます、**結果を表示**ページ。
+**[結果の表示]** ページで移行の進行状況を監視できます。
 
-![ビューの結果 ページ](../dma/media/ViewResults.png)
+![[結果の表示] ページ](../dma/media/ViewResults.png)
 
-## <a name="export-migration-results"></a>移行の結果をエクスポートします。
+## <a name="export-migration-results"></a>移行結果のエクスポート
 
-1. クリックして**レポートをエクスポート**の下部にある、**結果を表示**移行結果を CSV ファイルに保存するページ。
+1. **[結果の表示]** ページの下部にある **[レポートのエクスポート]** をクリックして、移行結果を CSV ファイルに保存します。
 
-2. 詳細については、ログインの移行では、保存したファイルを確認し、変更を確認します。
+2. ログインの移行の詳細については、保存したファイルを確認してから、変更を確認してください。
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - [Data Migration Assistant (DMA)](../dma/dma-overview.md)
-- [Data Migration Assistant:構成設定](../dma/dma-configurationsettings.md)
-- [Data Migration Assistant:ベスト プラクティス](../dma/dma-bestpractices.md)
+- [Data Migration Assistant: 構成設定](../dma/dma-configurationsettings.md)
+- [Data Migration Assistant: ベストプラクティス](../dma/dma-bestpractices.md)

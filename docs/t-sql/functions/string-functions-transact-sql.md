@@ -15,25 +15,20 @@ helpviewer_keywords:
 - string functions
 - strings [SQL Server]
 ms.assetid: 6940a83d-5374-4af3-bb27-5d89c8af83ac
-author: MashaMSFT
-ms.author: mathoma
-manager: craigg
+author: MikeRayMSFT
+ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 34cb5a8bb16e86215217263f956e5d8111c56785
-ms.sourcegitcommit: 96032813f6bf1cba680b5e46d82ae1f0f2da3d11
+ms.openlocfilehash: 562db45e1edfee521bed91b7a4137cd0bf6fa7b0
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/15/2019
-ms.locfileid: "54299999"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67906842"
 ---
 # <a name="string-functions-transact-sql"></a>文字列関数 (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-> [!div class="nextstepaction"]
-> [SQL ドキュメントの目次に関するご意見を共有してください。](https://aka.ms/sqldocsurvey)
-
-
-以下のスカラー関数は、文字列型の入力値に対して操作を行い、文字列値または数値を返します。  
+以下のスカラー関数では、文字列型の入力値に対して操作が行われ、文字列値または数値が返されます。  
   
 ||||  
 |-|-|-| 
@@ -53,7 +48,7 @@ ms.locfileid: "54299999"
   
  `FORMAT` 以外の組み込みの文字列関数はすべて、決定的です。 つまり、特定の一連の入力値を使用して呼び出されるたびに、同じ値を返します。 関数の決定性の詳細については、次を参照してください。[決定的関数と非決定的関数です](../../relational-databases/user-defined-functions/deterministic-and-nondeterministic-functions.md)。  
   
- 文字列関数に文字列値以外の引数を渡すと、暗黙的に入力型が text データ型に変換されます。 詳細については、次を参照してください[ データ型の変換 (&) #40";"データベース エンジン"&"#41;](../../t-sql/data-types/data-type-conversion-database-engine.md)。  
+ 文字列関数に文字列値以外の引数を渡すと、暗黙的に入力型が text データ型に変換されます。 詳細については、[データ型の変換 &#40;データベース エンジン&#41;](../../t-sql/data-types/data-type-conversion-database-engine.md)を参照してください。  
   
 ## <a name="see-also"></a>参照  
  [組み込み関数 &#40;Transact-SQL&#41;](~/t-sql/functions/functions.md)  

@@ -1,5 +1,5 @@
 ---
-title: 手順 1:配置バンドルのコピー |Microsoft Docs
+title: 手順 1:配置バンドルのコピー | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -7,15 +7,15 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: b6ef1e56-d278-4a24-afd3-68d8e0595cbb
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: cacb3c9e14e49ef4f755d9c19f3782aa62c69c9d
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 1d28a85e4dccaa6165d96046848513879998136f
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53375444"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62891711"
 ---
 # <a name="step-1-copying-the-deployment-bundle"></a>手順 1:配置バンドルのコピー
   このタスクでは、配置先コンピューターに配置バンドルをコピーします。  
@@ -28,9 +28,9 @@ ms.locfileid: "53375444"
   
      既定の場所を使用した場合、配置バンドルは Deployment Tutorial フォルダーの Bin\Deployment フォルダーにあります。  
   
-2.  Deployment フォルダーを右クリックし、**[コピー]** をクリックします。  
+2.  Deployment フォルダーを右クリックし、 **[コピー]** をクリックします。  
   
-3.  ターゲット コンピューターで、フォルダーをコピーするパブリック共有を探し、**[貼り付け]** をクリックします。  
+3.  ターゲット コンピューターで、フォルダーをコピーするパブリック共有を探し、 **[貼り付け]** をクリックします。  
   
 ## <a name="next-task-in-lesson"></a>このレッスンの次の作業  
  [手順 2:パッケージ インストール ウィザードの実行](../integration-services/lesson-3-2-running-the-package-installation-wizard.md)  

@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: d61f49c5-efaa-4455-98f2-8c293fa50046
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: a80e362c97df74773d303a4b022d376fff40fb70
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 350aadcdd44dcc4424b94792286a7421e2613b2e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53360344"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66087387"
 ---
 # <a name="configure-or-repair-powerpivot-for-sharepoint-2010-powerpivot-configuration-tool"></a>PowerPivot for SharePoint 2010 の構成または修復 (PowerPivot 構成ツール)
   [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] PowerPivot for SharePoint 2010 のインストールを構成または修復するには、PowerPivot 構成ツールを使用します。 構成ツールはまずシステムをスキャンし、インストールを完了または修復するために必要なアクションの一覧を返します。 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]セットアップ ウィザードは、SharePoint 2010 用 PowerPivot 構成ツールと SharePoint 2013 用 PowerPivot 構成ツールがインストールされます。 このトピックでは、SharePoint 2010 用 PowerPivot 構成ツールについて説明します。 SharePoint 2010 の詳細については、次を参照してください。[構成または修復の PowerPivot for SharePoint 2013 &#40;PowerPivot 構成ツール&#41;](power-pivot-sharepoint/configure-or-repair-power-pivot-for-sharepoint-2013.md)します。  
@@ -57,9 +56,9 @@ ms.locfileid: "53360344"
   
 2.  **[PowerPivot for SharePoint の構成または修復]** をクリックします。  
   
-3.  ウィンドウを最大化します。 ウィンドウの下部に **[検証]**、 **[実行]**、および **[終了]** の各コマンドを含むボタン バーが表示されます。  
+3.  ウィンドウを最大化します。 ウィンドウの下部に **[検証]** 、 **[実行]** 、および **[終了]** の各コマンドを含むボタン バーが表示されます。  
   
-4.  **既定のアカウント:**[パラメーター] タブのドメイン ユーザー アカウントを入力、**アカウントのユーザー名の既定の**します。 このアカウントは、PowerPivot サービス アプリケーション プールなどの重要なサービスを準備する場合に使用されます。 Network Service や Local System などのビルトイン アカウントは指定しないでください。 ビルトイン アカウントを指定する構成はブロックされます。  
+4.  **既定のアカウント:** [パラメーター] タブのドメイン ユーザー アカウントを入力、**アカウントのユーザー名の既定の**します。 このアカウントは、PowerPivot サービス アプリケーション プールなどの重要なサービスを準備する場合に使用されます。 Network Service や Local System などのビルトイン アカウントは指定しないでください。 ビルトイン アカウントを指定する構成はブロックされます。  
   
      **パスフレーズ:** パスフレーズを入力します。 新しい SharePoint ファームでは、SharePoint ファームに新しいサーバーまたはアプリケーションを追加するたびにこのパスフレーズが使用されます。 既存のファームの場合、ファームにサーバー アプリケーションを追加するためのパスフレーズを入力します。  
   
@@ -182,7 +181,7 @@ ms.locfileid: "53360344"
  後でデータ ストレージや処理能力を追加する必要が生じた場合は、ファームに 2 つ目の PowerPivot for SharePoint サーバー インスタンスを追加することができます。 手順については、次を参照してください。[展開のチェックリスト。SharePoint 2010 ファームに PowerPivot サーバーの追加によるスケール アウト](../../2014/sql-server/install/deployment-checklist-scale-out-adding-powerpivot-servers-sharepoint-2010-farm.md)します。  
   
 ## <a name="additional-resources"></a>その他のリソース  
- ![SharePoint の設定](media/as-sharepoint2013-settings-gear.gif "SharePoint 設定")[フィードバックや連絡先の情報を Microsoft SQL Server の接続を介して送信](https://connect.microsoft.com/SQLServer/Feedback)(https://connect.microsoft.com/SQLServer/Feedback)します。  
+ ![SharePoint の設定](media/as-sharepoint2013-settings-gear.gif "SharePoint 設定")[フィードバックや連絡先の情報を Microsoft SQL Server の接続を介して送信](https://connect.microsoft.com/SQLServer/Feedback)(https://connect.microsoft.com/SQLServer/Feedback) します。  
   
 ## <a name="see-also"></a>参照  
  [PowerPivot 構成ツール](power-pivot-sharepoint/power-pivot-configuration-tools.md)   

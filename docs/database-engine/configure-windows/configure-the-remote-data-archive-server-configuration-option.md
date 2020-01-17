@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: b5817b5a-f39a-4faf-b11e-a47b54fd9f32
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 0aa939d36a97f6d4b7f0587bd06470189b91ff3b
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: fda2594b2dc61a78eb5900ef6d1b735dac5b44e4
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56017994"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68012331"
 ---
 # <a name="configure-the-remote-data-archive-server-configuration-option"></a>remote data archive サーバー構成オプションの構成
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

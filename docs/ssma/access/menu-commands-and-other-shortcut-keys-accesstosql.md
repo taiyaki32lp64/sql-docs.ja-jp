@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 04bba43a-7bed-4d3c-bb62-8e9ab2adf9e3
 author: Shamikg
 ms.author: Shamikg
-manager: craigg
-ms.openlocfilehash: 10cf92089a87f2d57fc303d8b722df70941fb455
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: cbfb9aa200560cf8d2b4ae42486f8a39b179e88b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47819500"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67907129"
 ---
 # <a name="menu-commands-and-other-shortcut-keys-accesstosql"></a>メニュー コマンドやその他のショートカット キー (AccessToSQL)
 次のセクションでは、メニュー コマンドや Access アプリケーションの SSMA のさまざまなダイアログ ボックスで使用されるその他のショートカット キーにアクセスするキーボード ショートカットについて説明します。  
@@ -189,6 +188,6 @@ ms.locfileid: "47819500"
 |クイック ヒントを起動します。|CTRL + SHIFT + スペース|  
 |宣言に移動します。|F12|  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
 [ショートカット キー &#40;AccessToSQL&#41;](../../ssma/access/shortcut-keys-accesstosql.md)  
   

@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 7cc01544-e814-403b-bbfe-a2750bf921bd
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: db77de95e83e596a8a301fa65885ee640c742a71
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 00c89272d121898b6ac5af75022344acf1dceb28
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52543562"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67923854"
 ---
 # <a name="types-of-cursors-ado"></a>カーソルの種類 (ADO)
 一般的な規則として、アプリケーションに必要なデータ アクセスを提供する最も簡単なカーソルを使用する必要があります。 基本の (順方向専用、読み取り専用、static、スクロール、バッファリングされていない) 場合は、各追加カーソル特性には、クライアントのメモリ、ネットワークの負荷、またはパフォーマンスの価格 - があります。 多くの場合は、既定のカーソル オプションは、アプリケーションが実際に必要以上より複雑なカーソルを生成します。  
@@ -45,7 +44,7 @@ ms.locfileid: "52543562"
   
 -   [動的カーソル](../../../ado/guide/data/dynamic-cursors.md)  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [順方向専用カーソル](../../../ado/guide/data/forward-only-cursors.md)   
  [静的カーソル](../../../ado/guide/data/static-cursors.md)   
  [Keyset カーソル](../../../ado/guide/data/keyset-cursors.md)   

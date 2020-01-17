@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: cf19fbbb-7158-45f2-8778-8f3cad7f574a
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 031ce30ab9eb677c5b9e846d5e7aec76f2a60248
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b379a690019121ea98ff8e8b001f18814dbf6ebe
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47641650"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67951505"
 ---
 # <a name="mssqlserver7905"></a>MSSQLSERVER_7905
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -31,7 +30,7 @@ ms.locfileid: "47641650"
 |イベント ソース|MSSQLSERVER|  
 |コンポーネント|SQLEngine|  
 |シンボル名|DBCC2_FS_INVALID_ROWSET_DIRECTORY|  
-|メッセージ テキスト|データベース エラー : ディレクトリ 'DIRECTORY' は有効な FileStream ディレクトリではありません。|  
+|メッセージ テキスト|データベース エラー:ディレクトリ 'DIRECTORY' は有効な FileStream ディレクトリではありません。|  
   
 ## <a name="explanation"></a>説明  
 'ghost' などの特殊な行セット ディレクトリ名を除いて、行セット ディレクトリの名前はパーティションのパーティション ID です。 行セット ディレクトリ名をパーティション ID に変換できない場合、このディレクトリは有効な行セット ディレクトリではありません。  

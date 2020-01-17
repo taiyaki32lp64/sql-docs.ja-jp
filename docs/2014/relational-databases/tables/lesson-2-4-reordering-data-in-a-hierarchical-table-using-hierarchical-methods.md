@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 helpviewer_keywords:
 - HierarchyID
@@ -13,17 +12,17 @@ ms.assetid: 7b8064c7-62c6-488d-84d2-57a5828fb907
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: d29af64209dfe11ed703f1cc42314fd6d849e771
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 5f289257d64a691a93d44d63d2a30991227802e1
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48160142"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66110110"
 ---
 # <a name="reordering-data-in-a-hierarchical-table-using-hierarchical-methods"></a>階層的な手法を使用した階層テーブルのデータの並べ替え
   階層の再編成は、一般的なメンテナンス タスクです。 ここでは、UPDATE ステートメントを [GetReparentedValue](/sql/t-sql/data-types/getreparentedvalue-database-engine) メソッドと共に使用して、まず 1 つの行を階層内の新しい位置に移動します。 次に、サブツリー全体を新しい場所に移動します。  
   
- `GetReparentedValue` メソッドは 2 つの引数を受け取ります。 最初の引数は、変更する階層の一部を表します。 たとえば、階層が **/1/4/2/3/** の場合に、最後の 2 つのノード ( **2/3/** ) はそのままで、 **/1/4/** セクションを変更して階層を **/2/1/2/3/** にするときは、変更するノード (**/1/4/**) を最初の引数として指定する必要があります。 2 番目の引数には、新しい階層レベルを指定します。この例では、 **/2/1/** です。 2 つの引数には、異なるレベル数を指定することもできます。  
+ `GetReparentedValue` メソッドは 2 つの引数を受け取ります。 最初の引数は、変更する階層の一部を表します。 たとえば、階層が **/1/4/2/3/** の場合に、最後の 2 つのノード ( **2/3/** ) はそのままで、 **/1/4/** セクションを変更して階層を **/2/1/2/3/** にするときは、変更するノード ( **/1/4/** ) を最初の引数として指定する必要があります。 2 番目の引数には、新しい階層レベルを指定します。この例では、 **/2/1/** です。 2 つの引数には、異なるレベル数を指定することもできます。  
   
 ### <a name="to-move-a-single-row-to-a-new-location-in-the-hierarchy"></a>1 つの行を階層内の新しい位置に移動するには  
   
@@ -124,6 +123,6 @@ Text_OrgNode OrgNode OrgLevel EmployeeID EmpName Title
  階層のセクションを再編成するストアド プロシージャについては、「 [サブツリーの移動](../hierarchical-data-sql-server.md#BKMK_MovingSubtrees)」の「サブツリーの移動」を参照してください。  
   
 ## <a name="next-task-in-lesson"></a>このレッスンの次の作業  
- [まとめ : 階層テーブルでのデータの管理](lesson-2-5-summary-managing-data-in-a-hierarchical-table.md)  
+ [概要:階層テーブルでデータを管理します。](lesson-2-5-summary-managing-data-in-a-hierarchical-table.md)  
   
   

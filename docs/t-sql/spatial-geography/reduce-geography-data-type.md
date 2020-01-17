@@ -15,15 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - Reduce method
 ms.assetid: c5dfa8c1-6764-41d8-9150-f3cb30633d3e
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: 4862760d8061ad21ac12ad2e2968b5bfde5ad706
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: MladjoA
+ms.author: mlandzic
+ms.openlocfilehash: 0713ba46d6d99a8ed325d37d11396b46618f92ab
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47612850"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68101770"
 ---
 # <a name="reduce-geography-data-type-"></a>Reduce (geography データ型)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -49,7 +48,7 @@ ms.locfileid: "47612850"
 ## <a name="return-types"></a>戻り値の型  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 戻り値の型: **geography**  
   
- CLR の戻り値の型: **SqlGeography**  
+ CLR の戻り値の型:**SqlGeography**  
   
 ## <a name="remarks"></a>Remarks  
  コレクション型の場合、このアルゴリズムはインスタンスに含まれている **geography** ごとに個別に実行されます。 このアルゴリズムによって、**Point** インスタンスが変更されることはありません。  

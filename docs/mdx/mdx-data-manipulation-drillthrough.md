@@ -1,5 +1,5 @@
 ---
-title: DRILLTHROUGH ステートメント (MDX) |Microsoft ドキュメント
+title: ドリルスルーステートメント (MDX) |Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -8,13 +8,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-manager: kfile
-ms.openlocfilehash: 82dd8a9527b85350cae31396ad4d238ef1c8c850
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.openlocfilehash: ee90d2c367fa289e8255a84e4eb6da19b37933e0
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34742281"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68891203"
 ---
 # <a name="mdx-data-manipulation---drillthrough"></a>MDX データ操作 - DRILLTHROUGH
 
@@ -40,28 +39,28 @@ DRILLTHROUGH[MAXROWSUnsigned_Integer]
  任意の有効な多次元式 (MDX) 式の SELECT ステートメントです。  
   
  *Set_of_Attributes_and_Measures*  
- ディメンションの属性とメジャーのコンマ区切りのリストです。  
+ ディメンションの属性とメジャーのコンマ区切りの一覧です。  
   
 ## <a name="remarks"></a>コメント  
- ドリルスルーとは、エンド ユーザーが詳細情報を取得するためにキューブから 1 つのセルを選択してそのセルのソース データから結果セットを取得する操作です。 既定では、ドリルスルーの結果セットは、選択したキューブ セルの値を計算するために評価されたテーブル行から導き出されます。 エンド ユーザーがドリルスルーを行う場合は、クライアント アプリケーションでこの機能がサポートされている必要があります。 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]、ROLAP パーティションまたはディメンションは、クエリを実行しない限り、MOLAP ストレージから直接、結果が取得されます。  
+ ドリルスルーとは、エンドユーザーがキューブから1つのセルを選択し、より詳細な情報を取得するためにそのセルのソースデータから結果セットを取得する操作です。 既定では、ドリルスルーの結果セットは、選択したキューブ セルの値を計算するために評価されたテーブル行から導き出されます。 エンドユーザーがドリルスルーを行うには、クライアントアプリケーションがこの機能をサポートしている必要があります。 で[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]は、ROLAP パーティションまたはディメンションに対してクエリを実行しない限り、結果は MOLAP ストレージから直接取得されます。  
   
 > [!IMPORTANT]  
->  ドリルスルーのセキュリティは、キューブで定義された全般的なセキュリティ オプションに基づいています。 ユーザーが MDX を使用して一部のデータを取得できない場合、そのユーザーはドリルスルーでも同様の制限を受けます。  
+>  ドリルスルーのセキュリティは、キューブで定義された全般的なセキュリティ オプションに基づいています。 ユーザーが MDX を使用して一部のデータを取得できない場合、ドリルスルーでも同じ方法でユーザーが制限されます。  
   
- 対象のセルは、MDX ステートメントによって指定します。 指定された値、 **MAXROWS**引数は、結果の行セットによって返される行の最大数を示します。  
+ 対象のセルは、MDX ステートメントによって指定します。 **MAXROWS**引数で指定された値は、結果の行セットによって返される行の最大数を示します。  
   
- 既定では、返される最大行数は 10,000 行です。 つまり、このままにした場合**MAXROWS**指定しないと、表示される行数は 10,000 行以下です。 この値が小さすぎる、シナリオの場合は、設定**MAXROWS**数値は高いほどなど`MAXROWS 20000`です。 低すぎる全体的なである場合は、変更することで既定値を増やすことができます、 **olap \query\defaultdrillthroughmaxrows**サーバー プロパティです。 このプロパティの変更の詳細については、次を参照してください。 [Server Properties in Analysis Services](../analysis-services/server-properties/server-properties-in-analysis-services.md)です。  
+ 既定では、返される行の最大数は1万行です。 つまり、 **MAXROWS**を指定しないままにした場合、1万行以下になります。 この値がシナリオに対して小さすぎる場合は、 **MAXROWS**をなどのより大きい数値`MAXROWS 20000`に設定できます。 全体が少なすぎる場合は、 **OLAP\Query\DefaultDrillthroughMaxRows**サーバーのプロパティを変更することで、既定値を増やすことができます。 このプロパティの変更の詳細については、「 [Analysis Services のサーバープロパティ](https://docs.microsoft.com/analysis-services/server-properties/server-properties-in-analysis-services)」を参照してください。  
   
- 特に指定しない限り、返される列には、指定したメジャーのメジャー グループに関連するすべてのディメンション (多対多ディメンションを除く) に対応する粒度属性がすべて含められます。 ディメンションとメジャー グループを区別するために、キューブ ディメンションの先頭には $ が付いています。 **RETURN**句を使用して、ドリルスルー クエリで返される列を指定します。 次の関数が 1 つの属性に適用できるまたはによってメジャー、**RETURN**句。  
+ 特に指定しない限り、返される列には、多対多ディメンション以外の、指定したメジャーのメジャーグループに関連付けられているすべてのディメンションのすべての粒度属性が含まれます。 ディメンションとメジャーグループを区別するために、キューブディメンションの前に $ が付きます。 **RETURN**句を使用して、ドリルスルー クエリで返される列を指定します。 次の関数が 1 つの属性に適用できるまたはによってメジャー、**RETURN**句。  
   
  Name(attribute_name)  
  指定された属性メンバーの名前を返します。  
   
- UniqueName(attribute_name)  
- 指定された属性メンバーの一意名を返します。  
+ UniqueName (attribute_name)  
+ 指定された属性メンバーの一意の名前を返します。  
   
- Key(attribute_name[, N])  
- 指定された属性メンバーのキーを返します。N は、複合キーの列 (存在する場合) を指定します。 N の既定値は 1 です。  
+ キー (attribute_name [, N])  
+ 指定された属性メンバーのキーを返します。N は、複合キーの列 (存在する場合) を指定します。 N の既定値は1です。  
   
  Caption(attribute_name)  
  指定された属性メンバーのキャプションを返します。  
@@ -69,17 +68,17 @@ DRILLTHROUGH[MAXROWSUnsigned_Integer]
  MemberValue(attribute_name)  
  指定された属性メンバーのメンバー値を返します。  
   
- CustomRollup(attribute_name)  
+ CustomRollup (attribute_name)  
  指定された属性メンバーのカスタム ロールアップ式を返します。  
   
- CustomRollupProperties(attribute_name)  
+ CustomRollupProperties (attribute_name)  
  指定された属性メンバーのカスタム ロールアップ プロパティを返します。  
   
  UnaryOperator(attribute_name)  
  指定された属性メンバーの単項演算子を返します。  
   
 ## <a name="example"></a>例  
- 次の例では、Australia の Reseller Sales Amount メジャー (既定のメジャー) に対応する 2007 年 7 月のセルを指定しています。 RETURN 句では、このセルの基になる各売上の日付、製品モデルの名前、従業員名、売上高、税額、および製品原価が返されるように指定しています。  
+ 次の例では、オーストラリアの国の再販業者 sales amount メジャー (既定のメジャー) に2007年7月のセルを指定しています。 RETURN 句では、このセルの基になる各販売日、製品モデル名、従業員名、販売金額、税金額、および製品コストの値を指定します。  
   
 ```  
 DRILLTHROUGH  
@@ -97,7 +96,7 @@ RETURN
   ,[Reseller Sales].[Reseller Standard Product Cost]  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [MDX データ操作ステートメント&#40;MDX&#41;](../mdx/mdx-data-manipulation-statements-mdx.md)  
   
   

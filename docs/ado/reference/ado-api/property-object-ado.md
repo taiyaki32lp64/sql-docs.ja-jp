@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: b2a4767c-03c7-4935-a3bc-df3e1a38a009
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 5abbc13ac3ba9690f341e365ee14b0b72fcc6ca8
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 43bfa816a9ca8a93cdc1188a98e54d3e0d9111b1
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47695650"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67917554"
 ---
 # <a name="property-object-ado"></a>Property オブジェクト (ADO)
 プロバイダーによって定義されている ADO オブジェクトの動的な特性を表します。  
@@ -49,7 +48,7 @@ ms.locfileid: "47695650"
   
 -   [Property オブジェクトのプロパティ、メソッド、およびイベント](../../../ado/reference/ado-api/property-object-properties-methods-and-events.md)  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [コマンド オブジェクト (ADO)](../../../ado/reference/ado-api/command-object-ado.md)   
  [接続オブジェクト (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)   
  [Field オブジェクト](../../../ado/reference/ado-api/field-object.md)   

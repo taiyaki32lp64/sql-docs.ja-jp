@@ -2,18 +2,18 @@
 title: グラフでのグループの追加または削除 (レポート ビルダーおよび SSRS) | Microsoft Docs
 ms.date: 03/03/2017
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: report-design
 ms.topic: conceptual
 ms.assetid: 0445b0ac-acae-4462-80fb-fe9735ac66db
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 3d095e1b064fdc8b53e9061cf7d1b6f9d3f84069
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: b9c8e747ca0ca003e531381a6713b1a083a47d57
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56296475"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65581970"
 ---
 # <a name="add-or-delete-a-group-in-a-chart-report-builder-and-ssrs"></a>グラフでのグループの追加または削除 (レポート ビルダーおよび SSRS)
 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 改ページ調整されたレポートで、グラフ データ領域をクリックすると、 **グラフ データ** ペインが表示されます。 データセット フィールドを **[カテゴリ グループ]** 領域と **[系列グループ]** 領域にドラッグすると、グループが作成されます。 入れ子になったグループを追加するには、複数のフィールドを領域に追加します。  

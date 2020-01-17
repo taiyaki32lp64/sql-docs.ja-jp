@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dm.miningmodeleditor.viewers.f1
@@ -13,12 +12,12 @@ ms.assetid: 4ba391d5-c97b-4848-ba7c-7d096fa4b7dd
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 7890360221f3adae73efef7a58ae1179e19760a1
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 67cd89f4cf857f11f08f69769ff54a22fd83760f
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48152808"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66077741"
 ---
 # <a name="mining-model-viewers-data-mining-model-designer"></a>マイニング モデル ビューアー (データ マイニング モデル デザイナー)
   **[マイニング モデル ビューアー]** タブでは、マイニング構造に含まれているマイニング モデルを調べることができます。  
@@ -39,7 +38,7 @@ ms.locfileid: "48152808"
   
  次の図は、同じモデルに対するカスタム ビューアーと汎用ビューアーを示しています。  
   
--   上の図では、Microsoft タイム シリーズ アルゴリズムに基づくマイニング モデルのビューアーを示しています。 この特定のカスタム ビューアーによってタイム シリーズのグラフが自動的に作成され、5 つの予測が提供されます。  
+-   上の図では、Microsoft Time Series アルゴリズムに基づくマイニング モデルのビューアーを示しています。 この特定のカスタム ビューアーによってタイム シリーズのグラフが自動的に作成され、5 つの予測が提供されます。  
   
 -   下の図では、 **Microsoft 汎用コンテンツ ツリー ビューアー**を使用して表示される同じモデルを示しています。 このビューアーは、標準スキーマに従ってマイニング モデルのコンテンツを表示します。 詳細については、「[Microsoft 汎用コンテンツ ツリー ビューアー (データ マイニング)](microsoft-generic-content-tree-viewer-data-mining.md)」を参照してください。  
   
@@ -134,7 +133,7 @@ ms.locfileid: "48152808"
   
     -   [シーケンス クラスターの状態遷移 タブをクラスター&#40;マイニング モデル ビューアー&#41;](sequence-clustering-cluster-transition-tab-mining-model-viewer.md)  
   
-### <a name="microsoft-time-series-algorithm"></a>Microsoft タイム シリーズ アルゴリズム  
+### <a name="microsoft-time-series-algorithm"></a>Microsoft Time Series アルゴリズム  
   
 -   [Microsoft タイム シリーズ ビューアーを使用したモデルの参照](data-mining/browse-a-model-using-the-microsoft-time-series-viewer.md)  
   
@@ -144,7 +143,7 @@ ms.locfileid: "48152808"
   
     -   [[マイニング凡例] ダイアログ ボックス&#40;マイニング モデル ビューアー&#41;](mining-legend-dialog-box-mining-model-viewer.md)  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [マイニング モデル ビュー&#40;データ マイニング モデル デザイナー&#41;](mining-models-view-data-mining-model-designer.md)   
  [マイニング構造 ビュー&#40;データ マイニング モデル デザイナー&#41;](mining-structure-view-data-mining-model-designer.md)   
  [マイニング精度チャート デザイナー&#40;データ マイニング&#41;](mining-accuracy-chart-designer-data-mining.md)   

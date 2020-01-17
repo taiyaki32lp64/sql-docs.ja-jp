@@ -1,5 +1,5 @@
 ---
-title: rollback (java.sql.Savepoint) メソッド |Microsoft Docs
+title: rollback メソッド (java .sql. Savepoint) |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: d5dbd9ef-194f-4130-bfcc-7901a4fa8ded
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 255f8ff45c4f904fc3fe0b0c864c188acd3adbf4
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: f4aad09c11a3003a286e27ecd144cefc22e4bb9d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47650050"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67975732"
 ---
 # <a name="rollback-method-javasqlsavepoint"></a>rollback (java.sql.Savepoint) メソッド
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -38,13 +37,13 @@ public void rollback(java.sql.Savepoint s)
 #### <a name="parameters"></a>パラメーター  
  *s*  
   
- セーブポイントにロールバックするオブジェクト。  
+ ロールバック先の SavePoint オブジェクト。  
   
 ## <a name="exceptions"></a>例外  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- このロールバック メソッドは、java.sql.Connection インターフェイスの rollBack メソッドによって指定されます。  
+ このロールバックメソッドは、java. .sql. 接続インターフェイスの rollBack メソッドによって指定されます。  
   
  このメソッドは、自動コミット モードが無効になっている場合にのみ使用してください。  
   

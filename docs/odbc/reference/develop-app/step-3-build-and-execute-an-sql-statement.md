@@ -1,5 +1,5 @@
 ---
-title: '手順 3: ビルドし、SQL ステートメントの実行 |Microsoft Docs'
+title: 手順 3:ビルドおよび SQL ステートメントの実行 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -13,15 +13,14 @@ helpviewer_keywords:
 ms.assetid: 133b8bd4-a3c8-4f7e-93c5-c05283c8e96f
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: a3427057e70ee27fe1108fde71c833f0c511836b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: f0e369b74ef629c5fd7136b9098f579b5ad2b1b4
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47801370"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68114259"
 ---
-# <a name="step-3-build-and-execute-an-sql-statement"></a>ステップ 3: SQL ステートメントのビルドと実行
+# <a name="step-3-build-and-execute-an-sql-statement"></a>手順 3:SQL ステートメントのビルドと実行
 3 番目の手順は、次の図に示すようをビルドして、SQL ステートメントを実行します。 この手順を実行するために使用するメソッドは、非常に異なる可能性があります。 アプリケーションは、SQL ステートメントを入力し、ユーザーの入力に基づいて、SQL ステートメントを作成するように求めるか、ハード コーディングされた SQL ステートメントを使用して可能性があります。 詳細については、次を参照してください。 [SQL ステートメントを構築する](../../../odbc/reference/develop-app/constructing-sql-statements.md)します。  
   
  ![構築と、SQL ステートメントの実行を示しています](../../../odbc/reference/develop-app/media/pr13.gif "pr13")  
@@ -36,6 +35,6 @@ ms.locfileid: "47801370"
   
 |SQL ステートメントの種類|続行するには|  
 |---------------------------|----------------|  
-|**選択**またはカタログに関数|[ステップ 4a: 結果のフェッチ](../../../odbc/reference/develop-app/step-4a-fetch-the-results.md)|  
-|**UPDATE**、**削除**、または**挿入**|[ステップ 4b: 行数のフェッチ](../../../odbc/reference/develop-app/step-4b-fetch-the-row-count.md)|  
-|その他のすべての SQL ステートメント|手順 3: ビルドして (このトピックの) SQL ステートメントを実行または[手順 5: トランザクションをコミットします](../../../odbc/reference/develop-app/step-5-commit-the-transaction.md)|
+|**選択**またはカタログに関数|[手順 4 a:結果をフェッチします。](../../../odbc/reference/develop-app/step-4a-fetch-the-results.md)|  
+|**UPDATE**、**削除**、または**挿入**|[手順 4 b:行数をフェッチします。](../../../odbc/reference/develop-app/step-4b-fetch-the-row-count.md)|  
+|その他のすべての SQL ステートメント|手順 3:ビルドして (このトピックの) SQL ステートメントを実行または[手順 5。トランザクションをコミットします。](../../../odbc/reference/develop-app/step-5-commit-the-transaction.md)|

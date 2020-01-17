@@ -4,23 +4,22 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 helpviewer_keywords:
 - Reporting Services Configuration tool
 - configuration options [Reporting Services]
 - report servers [Reporting Services], configuring
 ms.assetid: 6ca03a09-d6a8-4c93-ba12-1c99dcbfb618
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 8a3ee59a669d08d495b55d5c36699fd9ef2f42a9
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: da2eb97e5ce57a2e6a82dda3e264b33e1e3a3b11
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56023023"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66103788"
 ---
 # <a name="manage-a-reporting-services-native-mode-report-server"></a>Reporting Services ネイティブ モードのレポート サーバーの管理
   ここでは、Reporting Services 構成マネージャーを使用してネイティブ モードのレポート サーバー インスタンスを構成する手順について説明します。  
@@ -66,7 +65,7 @@ ms.locfileid: "56023023"
  [リモート エラーの有効化 (Reporting Services)](enable-remote-errors-reporting-services.md)  
  リモート サーバーで発生するエラー状態に関する追加情報を返すように、レポート サーバーのサーバー プロパティを設定する方法について説明します。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [レポート サーバーを構成および管理する &#40;SSRSネイティブ モード&#41;](configure-and-administer-a-report-server-ssrs-native-mode.md)   
  [レポート サーバーの構成と管理 (Reporting Services SharePoint モード)](../configure-administer-report-server-reporting-services-sharepoint-mode.md)  
   

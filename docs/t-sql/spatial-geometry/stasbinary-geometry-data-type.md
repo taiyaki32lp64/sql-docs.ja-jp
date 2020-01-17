@@ -15,15 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - STAsBinary (geometry Data Type)
 ms.assetid: 65353777-e3e6-461c-9504-ea4d83312692
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: 70cb2b47489146e93c4a5e7181e4a280e80866db
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: MladjoA
+ms.author: mlandzic
+ms.openlocfilehash: 2b80156459988793ae4733c9617562b5b6120ae5
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47648770"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68100981"
 ---
 # <a name="stasbinary-geometry-data-type"></a>STAsBinary (geometry データ型)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -40,7 +39,7 @@ ms.locfileid: "47648770"
 ## <a name="return-types"></a>戻り値の型  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 戻り値の型: **varbinary(max)**  
   
- CLR 戻り値の型: **SqlBytes**  
+ CLR の戻り値の型:**SqlBytes**  
   
 ## <a name="examples"></a>使用例  
  次の例では、(0,0) から (2,3) までの `LineString` geometry インスタンスをテキストから作成します。 `STAsBinary()` は結果を WKB で返します。  

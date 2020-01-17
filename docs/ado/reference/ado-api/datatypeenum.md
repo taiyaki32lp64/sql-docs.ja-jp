@@ -15,18 +15,17 @@ helpviewer_keywords:
 ms.assetid: 2c57eca6-9336-4b06-ba10-9fef5926b1d0
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: cc18212852954accfddd9f3082b5c8f8a5485b58
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 27386894ce6d1d393505d49b4863a0ba9bf3320b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47615290"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67933221"
 ---
 # <a name="datatypeenum"></a>DataTypeEnum
 データ型を指定します、[フィールド](../../../ado/reference/ado-api/field-object.md)、[パラメーター](../../../ado/reference/ado-api/parameter-object.md)、または[プロパティ](../../../ado/reference/ado-api/property-object-ado.md)します。 次の表の説明 列では、かっこは、対応する OLE DB 型インジケーターに表示されます。  
   
-|定数|値|説明|  
+|定数|Value|説明|  
 |--------------|-----------|-----------------|  
 |**AdArray**|0x2000|フラグの値は、常に別のデータ型定数は、その他のデータ型の配列を示すと組み合わせます。 ADOX には適用されません。|  
 |**adBigInt**|20|8 バイト符号付き整数 (DBTYPE_I8) を示します。|  

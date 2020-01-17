@@ -20,16 +20,15 @@ helpviewer_keywords:
 - viewing user-defined messages
 - conditionally returning messages [SQL Server]
 ms.assetid: 32ba0729-c4b5-4cfb-a5aa-e8b9402be028
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
+author: rothja
+ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: b713866cc1300f86ed3cdf0786991739e9b002a7
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: cc83aca49b6147835353538d809be121756ecda6
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47705800"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68072398"
 ---
 # <a name="print-transact-sql"></a>PRINT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -49,7 +48,7 @@ PRINT msg_str | @local_variable | string_expr
  文字列または Unicode 文字列の定数です。 詳細については、「[定数 &#40;Transact-SQL&#41;](../../t-sql/data-types/constants-transact-sql.md)」を参照してください。  
   
  **@** *local_variable*  
- 任意の有効な文字型の変数を指定します。 **@**_local\_variable_ は、**char**、**nchar**、**varchar**、または **nvarchar** であるか、これらのデータ型に暗黙的に変換できる必要があります。  
+ 任意の有効な文字型の変数を指定します。 **@** _local\_variable_ は、**char**、**nchar**、**varchar**、または **nvarchar** であるか、これらのデータ型に暗黙的に変換できる必要があります。  
   
  *string_expr*  
  文字列を返す式を指定します。 連結したリテラル値、関数、および変数を含むことができます。 詳細については、「[式 &#40;Transact-SQL&#41;](../../t-sql/language-elements/expressions-transact-sql.md)」を参照してください。  

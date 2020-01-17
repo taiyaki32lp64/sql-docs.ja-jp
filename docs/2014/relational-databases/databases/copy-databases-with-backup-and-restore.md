@@ -19,11 +19,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 5a35156a465e521ceea60fa090142836da6a4c1a
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52787834"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62917469"
 ---
 # <a name="copy-databases-with-backup-and-restore"></a>バックアップと復元によるデータベースのコピー
   [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] では、[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 以降のバージョンを使用して作成したユーザー データベースのバックアップを復元して、新しいデータベースを作成できます。 ただし、以前のバージョンの **を使用して作成された**master **、** model **、および** msdb [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のバックアップを [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]で復元することはできません。 また、 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] のバックアップを以前のバージョンの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]で復元することもできません。  
@@ -62,7 +62,7 @@ ms.locfileid: "52787834"
  エラーと、復元操作の前に、意図しない結果を回避するために使用することができます、 [backupfile](/sql/relational-databases/system-tables/backupfile-transact-sql)履歴テーブルを復元するバックアップにデータベースとログ ファイルを確認します。  
   
 ## <a name="moving-the-database-files"></a>データベース ファイルの移動  
- 前に示した理由によりデータベース バックアップ内のファイルをコピー先コンピューターに復元できない場合は、復元のときにファイルを新しい場所に移動する必要があります。 以下に例を示します。  
+ 前に示した理由によりデータベース バックアップ内のファイルをコピー先コンピューターに復元できない場合は、復元のときにファイルを新しい場所に移動する必要があります。 例 :  
   
 -   以前のバージョンの既定の場所に作成されたバックアップからデータベースを復元する場合。  
   
@@ -130,7 +130,7 @@ ms.locfileid: "52787834"
   
 -   <xref:Microsoft.SqlServer.Management.Smo.Restore>  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [他のサーバーへのデータベースのコピー](copy-databases-to-other-servers.md)   
  [SQL Server の既定のインスタンスおよび名前付きインスタンスのファイルの場所](../../sql-server/install/file-locations-for-default-and-named-instances-of-sql-server.md)   
  [RESTORE FILELISTONLY &#40;Transact-SQL&#41;](/sql/t-sql/statements/restore-statements-filelistonly-transact-sql)   

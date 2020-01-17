@@ -2,18 +2,18 @@
 title: レポート デザインに関するヒント (レポート ビルダーおよび SSRS) | Microsoft Docs
 ms.date: 03/01/2017
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: report-design
 ms.topic: conceptual
 ms.assetid: c1490ff0-5b8a-43c1-8d22-e459395db4f6
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 0151fd3fa25a52e8868c17c892878bcc6b04b0e1
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 5a40360a1bf00e2fcbe933db74604b93ac20a9a8
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56284942"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65576776"
 ---
 # <a name="report-design-tips-report-builder-and-ssrs"></a>レポート デザインに関するヒント (レポート ビルダーおよび SSRS)
   ここでは、 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] のページ分割されたレポートをデザインする際のヒントを紹介します。  

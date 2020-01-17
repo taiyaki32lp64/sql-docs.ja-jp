@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 6e6bac39-45af-428c-bc32-f773482562ee
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 138f2f235ce810980f08ee7f253cefc6656db9d4
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 8475944b4167184a6a2ef4a71d8751b2cd320fe1
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47628100"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68014966"
 ---
 # <a name="sqlsrvrollback"></a>sqlsrv_rollback
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]

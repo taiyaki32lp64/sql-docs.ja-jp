@@ -13,17 +13,20 @@ helpviewer_keywords:
 - data flow components [Integration Services], synchronous and asynchronous
 - synchronous transformations [Integration Services]
 ms.assetid: 0bc2bda5-3f8a-49c2-aaf1-01dbe4c3ebba
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: f08c85b55f25d1caaf9a02ea86340b14bd361e4a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 81ce27c94fbad5e326f636bfcefb633dbf5ebc52
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47698210"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71296476"
 ---
 # <a name="understanding-synchronous-and-asynchronous-transformations"></a>同期および非同期変換について
+
+[!INCLUDE[ssis-appliesto](../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] の同期変換と非同期変換の相違点を理解するには、まず同期変換を理解するのが最も簡単な方法です。 同期変換がニーズに合わない場合は、デザインに非同期変換が必要になることがあります。  
   
 ## <a name="synchronous-transformations"></a>同期変換  
@@ -42,7 +45,7 @@ ms.locfileid: "47698210"
   
 -   入力行と出力行の間に 1 対 1 の対応がない場合。 たとえば、集計変換です。この変換では、コンポーネントは出力に行を追加し、計算された集計値を保持する必要があります。  
   
- [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] のスクリプトとプログラミングでは、コンポーネントの出力の **SynchronousInputID** プロパティに 0 の値を割り当てることによって、非同期変換を指定します。 のインスタンスにアクセスするたびに SQL Server ログインを指定する必要はありません。 これにより、出力に各行を自動的に送信しないようにデータ フロー エンジンに指示します。 次に、非同期変換の出力用に作成される新しい出力バッファーに各行を追加することによって、各行を適切な出力に明示的に送信するためのコードを記述する必要があります。  
+ [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] のスクリプトとプログラミングでは、コンポーネントの出力の **SynchronousInputID** プロパティに 0 の値を割り当てることによって、非同期変換を指定します。 。 これにより、出力に各行を自動的に送信しないようにデータ フロー エンジンに指示します。 次に、非同期変換の出力用に作成される新しい出力バッファーに各行を追加することによって、各行を適切な出力に明示的に送信するためのコードを記述する必要があります。  
   
 > [!NOTE]  
 >  変換元コンポーネントはデータ ソースから読み取った各行を出力バッファーに明示的に追加する必要もあるため、変換元では変換を非同期出力のように表示します。  

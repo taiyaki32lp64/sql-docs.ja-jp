@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 1a46196e-839f-4734-a59e-2c64609ffb9e
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: c522a8d278080d9249761309d29f465befe217d8
-ms.sourcegitcommit: bfa10c54e871700de285d7f819095d51ef70d997
+ms.openlocfilehash: 2606733b3efc5a9641f8de0f544b3cff7c7e9a31
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/14/2019
-ms.locfileid: "54255057"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67923342"
 ---
 # <a name="xslt-transformations"></a>XSLT 変換
 XSLT は、別の形式に変換して、生成される XML に適用できます。 ADO での XML 形式を理解することよりユーザー フレンドリな形式に変換する XSLT テンプレートの開発に役立ちます。  
@@ -53,5 +52,5 @@ XSLT は、別の形式に変換して、生成される XML に適用できま�
   
  XSLT では、テーブルの見出しとレコード セットの各フィールドを表示する HTML テーブルに、ADO の Save メソッドによって生成される XML ストリームに変換します。 テーブルの見出しおよび行も割り当てられているさまざまなフォントおよび色。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [レコードを XML 形式で保持する](../../../ado/guide/data/persisting-records-in-xml-format.md)

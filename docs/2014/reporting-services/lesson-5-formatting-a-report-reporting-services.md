@@ -1,24 +1,23 @@
 ---
-title: 'レッスン 5: レポート (Reporting Services) の書式設定 |Microsoft Docs'
+title: 'レッスン 5: レポートの書式設定 (Reporting Services) | Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 ms.assetid: ae46efa9-6e04-48ec-afb4-5a2314dcb05a
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 0d97e0b74455e9ff7788d96303f7499001f7f3f7
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: f1acd7bf033ca2170a2a2b0cb1f701606510bf14
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56292570"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66108432"
 ---
-# <a name="lesson-5-formatting-a-report-reporting-services"></a>レッスン 5: レポート (Reporting Services) の書式設定
+# <a name="lesson-5-formatting-a-report-reporting-services"></a>レッスン 5: レポートの書式設定 (Reporting Services)
   Sales Orders レポートに 1 つのデータ領域といくつかのフィールドを追加した後、日付および通貨のフィールド、および列ヘッダーを書式設定できます。  
   
  このトピックの内容  
@@ -36,7 +35,7 @@ ms.locfileid: "56292570"
   
 1.  **[デザイン]** タブをクリックします。  
   
-2.  `[Date]` フィールド式が入力されているセルを右クリックし、**[テキスト ボックスのプロパティ]** をクリックします。  
+2.  `[Date]` フィールド式が入力されているセルを右クリックし、 **[テキスト ボックスのプロパティ]** をクリックします。  
   
 3.  クリックして**数**、し、**カテゴリ**フィールドで、`Date`します。  
   
@@ -51,13 +50,13 @@ ms.locfileid: "56292570"
   
 #### <a name="to-format-a-currency-field"></a>通貨フィールドを書式設定するには  
   
-1.  `[LineTotal]` フィールド式が入力されているセルを右クリックし、**[テキスト ボックスのプロパティ]** をクリックします。  
+1.  `[LineTotal]` フィールド式が入力されているセルを右クリックし、 **[テキスト ボックスのプロパティ]** をクリックします。  
   
 2.  **[数値]** をクリックし、 **[Category]** フィールドで **[通貨]** を選択します。  
   
 3.  地域設定が英語 (米国) の場合、既定値は次のようになります。  
   
-    -   **小数点以下桁数。2**  
+    -   **小数点以下の桁数 :2**  
   
     -   **負の数値 : ($12345.00)**  
   
@@ -65,7 +64,7 @@ ms.locfileid: "56292570"
   
 4.  [ **位取り区切り記号 (,) を使用する]** を選択します。  
   
-     "**$12,345.00**" というサンプル テキストが表示されている場合、正しい設定が行われています。  
+     " **$12,345.00**" というサンプル テキストが表示されている場合、正しい設定が行われています。  
   
 5.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
@@ -93,9 +92,9 @@ ms.locfileid: "56292570"
 5.  **[ファイル]** メニューの **[すべてを保存]** をクリックして、レポートを保存します。  
   
 ## <a name="next-steps"></a>次の手順  
- ここでは、列ヘッダー、日付値、および通貨値を書式設定しました。 次に、レポートにグループ化および合計を追加します。 参照してください[レッスン 6。グループ化と合計の追加&#40;Reporting Services&#41;](../reporting-services/lesson-6-adding-grouping-and-totals-reporting-services.md)します。  
+ ここでは、列ヘッダー、日付値、および通貨値を書式設定しました。 次に、レポートにグループ化および合計を追加します。 「[レッスン 6:グループと合計の追加 &#40;Reporting Services&#41;](../reporting-services/lesson-6-adding-grouping-and-totals-reporting-services.md)」を参照してください。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [数値と日付の書式設定 &#40;レポート ビルダーおよび SSRS&#41;](report-design/formatting-numbers-and-dates-report-builder-and-ssrs.md)   
  [レンダリングの動作 &#40;レポート ビルダーおよび SSRS&#41;](report-design/rendering-behaviors-report-builder-and-ssrs.md)  
   

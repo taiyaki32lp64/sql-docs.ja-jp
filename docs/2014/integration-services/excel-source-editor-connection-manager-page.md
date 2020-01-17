@@ -4,23 +4,22 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.excelsourceadapter.connection.f1
 helpviewer_keywords:
 - Excel Source Editor
 ms.assetid: 428e04e0-ad98-45d0-8345-12ec1b67b2eb
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: a247233157dbf83fe29089eff9c67442e00b8809
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: c3132bd65bb6f3092cc950758d4f346b5c4cd8fd
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48157732"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66059166"
 ---
 # <a name="excel-source-editor-connection-manager-page"></a>[Excel ソース エディター] ([接続マネージャー] ページ)
   **[Excel ソース エディター]** ダイアログ ボックスの **[接続マネージャー]** ノードを使用すると、変換元として [!INCLUDE[ofprexcel](../includes/ofprexcel-md.md)] ブックを選択して使用できます。 Excel ソースは、既存のブックのワークシートまたは名前付き範囲からデータを読み取ります。  
@@ -43,7 +42,7 @@ ms.locfileid: "48157732"
 |値|説明|  
 |-----------|-----------------|  
 |[テーブルまたはビュー]|Excel ファイルのワークシートまたは名前付き範囲からデータを取得します。|  
-|[テーブル名またはビュー名の変数]|ワークシートまたは範囲の名前を変数に指定します。<br /><br /> **関連情報:** [パッケージで変数を使用する](../../2014/integration-services/use-variables-in-packages.md)|  
+|[テーブル名またはビュー名の変数]|ワークシートまたは範囲の名前を変数に指定します。<br /><br /> **関連情報**: [パッケージで変数を使用する](../../2014/integration-services/use-variables-in-packages.md)|  
 |[SQL コマンド]|SQL クエリを使用して、Excel ファイルからデータを取得します。 クエリ構文の詳細については、「 [Excel ソース](data-flow/excel-source.md)」を参照してください。|  
 |[変数からの SQL コマンド]|SQL クエリ テキストを変数で指定します。|  
   
@@ -82,8 +81,8 @@ ms.locfileid: "48157732"
   
 ## <a name="see-also"></a>参照  
  [Integration Services のエラーおよびメッセージのリファレンス](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [[Excel ソース エディター&#40;列] ページ&#41;](../../2014/integration-services/excel-source-editor-columns-page.md)   
- [[Excel ソース エディター&#40;エラー出力] ページ&#41;](../../2014/integration-services/excel-source-editor-error-output-page.md)   
+ [[Excel ソース エディター] ([列] ページ)](../../2014/integration-services/excel-source-editor-columns-page.md)   
+ [[Excel ソース エディター] ([エラー出力] ページ)](../../2014/integration-services/excel-source-editor-error-output-page.md)   
  [Excel 接続マネージャー](connection-manager/excel-connection-manager.md)   
  [Foreach ループ コンテナーを使用して Excel のファイルおよびテーブルをループ処理する](control-flow/foreach-loop-container.md)  
   

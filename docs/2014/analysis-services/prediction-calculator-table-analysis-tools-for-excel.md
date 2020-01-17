@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - mining model, regression
@@ -17,12 +16,12 @@ ms.assetid: 8bb8c318-e85f-4fd6-b32b-4cdfb13ca1b5
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 330e302d1832f8ec5c3e76f961e4e68cf16726af
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: e57aee7142da5c256a213ddd2eb0390a0f3b042a
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48060022"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66070860"
 ---
 # <a name="prediction-calculator-table-analysis-tools-for-excel"></a>予測計算 (Excel 用のテーブル分析ツール)
   ![予測計算ツール](media/tat-predcal.gif "予測計算ツール")  
@@ -132,7 +131,7 @@ ms.locfileid: "48060022"
 |---------------|-----------|---------------------|  
 |Marital Status|Married|0|  
 |Gender|Male|0|  
-|Income|39050-71062|117|  
+|Income|39050 - 71062|117|  
 |Children|0|157|  
 |Education|Bachelors|22|  
 |Occupation|Skilled Manual|33|  
@@ -140,7 +139,7 @@ ms.locfileid: "48060022"
 |Cars|2|50|  
 |Commute Distance|0-1 Miles|99|  
 |Region|North America|0|  
-|Age|37 46|5|  
+|Age|37 - 46|5|  
 |Total||491|  
 |Prediction for 'Yes'||FALSE|  
   

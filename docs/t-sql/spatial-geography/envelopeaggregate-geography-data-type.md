@@ -15,15 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - EnvelopeAggregate method (geography)
 ms.assetid: 4947797f-edb8-490f-beca-37df9ec06954
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: e93ac828041c45a00bec2465e18b6e8306ce8f87
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: MladjoA
+ms.author: mlandzic
+ms.openlocfilehash: 896a328f0f11570034b71f57e912ec3f460d73e0
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47855790"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68066452"
 ---
 # <a name="envelopeaggregate-geography-data-type"></a>EnvelopeAggregate (geography データ型)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]

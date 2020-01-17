@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 f1_keywords:
 - Instance to upgrade, Setup
@@ -13,12 +12,12 @@ ms.assetid: 79d5989f-2fb1-424b-be50-d89c8e39c51b
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 87f2ed4ff5bac29d65e9fe6132b2593580aa6639
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: e5e74eba3479bdc722fdd45c99eb78592d6e8007
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52511551"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66092350"
 ---
 # <a name="select-instance"></a>インスタンスの選択
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インストール ウィザードの [インスタンスの選択] ページを使用すると、 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]にアップグレードする [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]、 [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]、 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 、または [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]のインスタンスを指定できます。  

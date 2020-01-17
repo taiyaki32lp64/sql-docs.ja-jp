@@ -12,20 +12,19 @@ helpviewer_keywords:
 - error list window
 - SQL Server Management Studio [SQL Server], error list window
 ms.assetid: fae6327d-e268-44ae-a474-4a8f8f843129
-author: stevestein
-ms.author: sstein
-manager: craigg
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 0218602b8f46d15f4d2d809df95e0500b51180ab
-ms.sourcegitcommit: 40c3b86793d91531a919f598dd312f7e572171ec
+ms.openlocfilehash: dcf0886a58e1e735e95ed0383313769f4796bd24
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53328292"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68253633"
 ---
 # <a name="transact-sql-debugger---error-list-window"></a>Transact-SQL デバッガー - [エラー一覧] ウィンドウ
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] **[エラー一覧]** には、 [!INCLUDE[ssDE](../../includes/ssde-md.md)] クエリ エディターの IntelliSense コードによって生成された構文エラーとセマンティック エラーが表示されます。  
+  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] **[エラー一覧]** には、 [!INCLUDE[ssDE](../../includes/ssde-md.md)] クエリ エディターの IntelliSense コードによって生成された構文エラーとセマンティック エラーが表示されます。  
   
 ## <a name="features-of-the-error-list"></a>[エラー一覧] の機能  
  **[エラー一覧]** は、次の機能を提供します。  

@@ -9,15 +9,15 @@ ms.topic: conceptual
 f1_keywords:
 - sql12.dts.impexpwizard.welcome.f1
 ms.assetid: 8a56d80d-8e31-4542-87cc-a41b3fdd5a7d
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: fe4b32fd32dd9761e42da30bf29b12c30b843d7d
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: a26192eb47faddfb8776fb873e9c19253969d1e8
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52764324"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62767774"
 ---
 # <a name="welcome-to-sql-server-import-and-export-wizard"></a>[SQL Server インポートおよびエクスポート ウィザードへようこそ]
   使用して、 **SQL Server インポートおよびエクスポート ウィザード**をコピーして、サポートされるデータ ソースおよび変換先の間でデータを変換します。  

@@ -4,23 +4,22 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 helpviewer_keywords:
 - opening reports
 - closing reports
 - reports [Reporting Services], opening
 ms.assetid: a9db1caf-1e7d-41ee-9aed-e09fd0712f9b
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 41d67805a939cd6b5826dd227cc02e348e48dc32
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 7a1c799ec4fc37fa5cdbd6f3bcc72fad7f4c45ed
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56034400"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66102588"
 ---
 # <a name="open-and-close-a-report-report-manager"></a>レポートを開閉する (レポート マネージャー)
   レポート サーバーにパブリッシュされたレポートは、レポート マネージャーを使って閲覧できます。 既定では、すべてのレポートが HTML 形式で表示されます。 開いたレポートをエクスポートすることにより、他のアプリケーションの形式で閲覧することもできます。 対話機能を持ったレポートや対話型データを含んだレポート ビルダーのレポートでは、リンクをクリックして追加のレポートまたはデータを閲覧できます。  

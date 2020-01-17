@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 helpviewer_keywords:
 - Filter Web Part [Reporting Services]
@@ -13,22 +12,22 @@ helpviewer_keywords:
 - Report Viewer Web Part [Reporting Services]
 - Documents Web Part [Reporting Services]
 ms.assetid: 6a303135-c0ef-44cd-a423-1cea8df3dcf3
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 4da46abbfb586a2968f92a04538f5a82e06898c6
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 062733f1ee68cd90ccc1b9a15d0cadc06b7e6f89
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56031223"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66109715"
 ---
 # <a name="connect-filter-or-documents-web-part-reporting-services-in-sharepoint-integrated-mode"></a>フィルター Web パーツまたはドキュメント Web パーツの接続 (Reporting Services の SharePoint 統合モード)
   SharePoint 製品を使用している場合、フィルター Web パーツまたはドキュメント Web パーツとレポート ビューアー Web パーツを含む、ダッシュボードや Web パーツ ページを作成できます。 サポートされているバージョンは [!INCLUDE[SPF2010](../includes/spf2010-md.md)] または [!INCLUDE[SPS2010](../includes/sps2010-md.md)]です。 [!INCLUDE[winSPServ3](../includes/winspserv3-md.md)] または [!INCLUDE[offSPServ](../includes/offspserv-md.md)] 2007 もサポートされています。 フィルター Web パーツを接続することによって、フィルター値をフィルター Web パーツで選択するユーザーは、同じページでパラメーター化されたレポートに値を送信できるようになります。 ドキュメント Web パーツを接続することによって、ドキュメント ライブラリでレポートをクリックするユーザーは、隣接するレポート ビューアー Web パーツでレポートを表示できるようになります。  
   
  フィルター Web パーツは、レポートで値を 1 つ以上のパラメーターに送信するために使用します。 フィルター Web パーツを使用するには、この Web パーツによって送信される値、データ型、および形式との互換性がある、この Web パーツ用のパラメーターをレポートに定義しておく必要があります。  
   
- ドキュメント Web パーツは、ホーム サイトのドキュメント ライブラリに関連付けられます。 ドキュメント ライブラリからアイテムを表示、追加、または削除するには、 **[すべてのサイト コンテンツの表示]** をクリックします。 ライブラリで、 **[ドキュメント]** をクリックします。 **[新規]**、 **[アップロード]**、および **[アクション]** メニューを使用してドキュメント ライブラリのアイテムを管理できます。  
+ ドキュメント Web パーツは、ホーム サイトのドキュメント ライブラリに関連付けられます。 ドキュメント ライブラリからアイテムを表示、追加、または削除するには、 **[すべてのサイト コンテンツの表示]** をクリックします。 ライブラリで、 **[ドキュメント]** をクリックします。 **[新規]** 、 **[アップロード]** 、および **[アクション]** メニューを使用してドキュメント ライブラリのアイテムを管理できます。  
   
 ### <a name="to-connect-a-filter-web-part"></a>フィルター Web パーツを接続するには  
   
@@ -60,7 +59,7 @@ ms.locfileid: "56031223"
   
 3.  **[Web パーツの追加]** をクリックします。  
   
-4.   **[すべての Web パーツ]** の **[リストまたはライブラリ]** セクションで **[ドキュメント]** をクリックします。  
+4.  **[すべての Web パーツ]** の **[リストまたはライブラリ]** セクションで **[ドキュメント]** をクリックします。  
   
 5.  **[追加]** をクリックします。 Web パーツが、ゾーンの一番上に追加されます。  
   
@@ -68,7 +67,7 @@ ms.locfileid: "56031223"
   
 7.  同一の Web パーツ ページまたはダッシュボードの別の領域で、 **[Web パーツの追加]** をクリックします。  
   
-8.   **[すべての Web パーツ]** の **[その他]** カテゴリで、 **[SQL Server Reporting Services レポート ビューアー].**  
+8.  **[すべての Web パーツ]** の **[その他]** カテゴリで、 **[SQL Server Reporting Services レポート ビューアー].**  
   
 9. **[追加]** をクリックします。 Web パーツが、ゾーンの一番上に追加されます。  
   

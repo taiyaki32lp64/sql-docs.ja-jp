@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: a6150940-4d1c-4bff-a8f9-eda667fc45eb
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 6988b6326af34f13cfaa8a56ecab3744645ff04f
-ms.sourcegitcommit: 0f7cf9b7ab23df15624d27c129ab3a539e8b6457
+ms.openlocfilehash: 1f136f07b500a52a5382fff6f4388840d2007892
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51291088"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67946024"
 ---
 # <a name="xquery-expressions"></a>XQuery 式
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -31,45 +30,45 @@ ms.locfileid: "51291088"
   
 
  [一次式&#40;XQuery&#41;](../xquery/primary-expressions-xquery.md)  
- XQuery 原始式について説明します。 XQuery 原始式には、リテラル、変数参照、コンテキスト アイテム式、コンストラクター、および関数呼び出しがあります。  
+ XQuery 原始式をについて説明します。 XQuery 原始式には、リテラル、変数参照、コンテキスト アイテム式、コンストラクター、および関数呼び出しがあります。  
   
  [パス式&#40;XQuery&#41;](../xquery/path-expressions-xquery.md)  
- XQuery パス式について説明します。 XQuery パス式では、ドキュメント内の要素、属性、テキストなど、ノードの位置が特定されます。  
+ XQuery パス式をについて説明します。 これらは、ドキュメントの要素、属性、およびテキストなど、ノードを見つけます。  
   
  [シーケンス式&#40;XQuery&#41;](../xquery/sequence-expressions-xquery.md)  
- 数字のシーケンスを操作する XQuery 演算子について説明します。  
+ 数値のシーケンスを操作する XQuery 演算子について説明します。  
   
  [算術式&#40;XQuery&#41;](../xquery/arithmetic-expressions-xquery.md)  
- XQuery における算術式の使用方法について説明します。  
+ XQuery における算術式の使用について説明します。  
   
  [比較式&#40;XQuery&#41;](../xquery/comparison-expressions-xquery.md)  
- XQuery でサポートされる比較式について説明します。 一般比較式、値比較式、ノード比較式、およびノード型比較式がサポートされます。  
+ XQuery でサポートされる比較式をについて説明します。 一般比較式、値比較式、ノード比較式、およびノード型比較式がサポートされます。  
   
  [論理式&#40;XQuery&#41;](../xquery/logical-expressions-xquery.md)  
  XQuery でサポートされる論理を説明します。**と**と**または**演算子。  
   
  [XML の構築&#40;XQuery&#41;](../xquery/xml-construction-xquery.md)  
- クエリ内に XML を作成できるようにする XQuery コンストラクターについて説明します。  
+ クエリ内で XML を構築するための XQuery コンス トラクターについて説明します。  
   
  [FLWOR ステートメントおよびイテレーション&#40;XQuery&#41;](../xquery/flwor-statement-and-iteration-xquery.md)  
- FLOWR 繰り返し構文について説明します。 FLOWR は FOR、LET、WHERE、ORDER BY、および RETURN を表します。 LET はサポートされていません。  
+ FLOWR 繰り返し構文をについて説明します。 FLOWR は FOR、LET、WHERE、ORDER BY、および RETURN を表します。 LET はサポートされていません。  
   
  [順序付けられ、式を順不同&#40;XQuery&#41;](../xquery/ordered-and-unordered-expressions-xquery.md)  
- XQuery 操作の並べ替えモードについて説明します。 既定では、順序付けのモードに設定**注文**します。  
+ XQuery 操作の順序付けのモードについて説明します。 既定では、順序付けのモードに設定**注文**します。  
   
  [条件式&#40;XQuery&#41;](../xquery/conditional-expressions-xquery.md)  
  XQuery でサポートされる条件について説明します**if then else**ステートメント。  
   
  [量化式&#40;XQuery&#41;](../xquery/quantified-expressions-xquery.md)  
- XQuery における存在量化子および全称量化子について説明します。  
+ XQuery における存在およびユニバーサル量指定子をについて説明します。  
   
  [SequenceType 式&#40;XQuery&#41;](../xquery/sequencetype-expressions-xquery.md)  
- XQuery における SequenceType 構文について説明します。  
+ XQuery における SequenceType 構文をについて説明します。  
   
  [バリデート式&#40;XQuery&#41;](../xquery/validate-expressions-xquery.md)  
  **検証**式はサポートされていません。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [XQuery 言語リファレンス &#40;SQL Server&#41;](../xquery/xquery-language-reference-sql-server.md)  
   
   

@@ -10,12 +10,12 @@ ms.assetid: c626dcac-0474-432d-acc0-cfa643345372
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 4238e512975d2f333ac066e6b0183c60ead7d97d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 1969a3e30b31a21c380559a3e8898f87eb8848b1
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48118172"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62786737"
 ---
 # <a name="collations-and-code-pages"></a>照合順序とコード ページ
   [!INCLUDE[hek_2](../includes/hek-2-md.md)] には、メモリ最適化テーブルの (var)char 型の列のサポートされているコード ページと、インデックスおよびネイティブ コンパイル ストアド プロシージャで使用されるサポートされている照合順序に関して制限事項があります。  
@@ -31,7 +31,7 @@ ms.locfileid: "48118172"
 > [!IMPORTANT]  
 >  BIN2 照合順序を使用しないインデックス文字列の列に対して、order by や group by を使用することはできません。  
   
-```tsql  
+```sql  
 CREATE DATABASE IMOLTP  
   
 ALTER DATABASE IMOLTP ADD FILEGROUP IMOLTP_mod CONTAINS MEMORY_OPTIMIZED_DATA  
@@ -60,7 +60,7 @@ GO
   
 -   メモリ最適化テーブルの (var)char 型の列では、コード ページ 1252 照合順序を使用する必要があります。 この制限は、n(var)char 型の列には適用されません。 次のコードは、すべての 1252 照合順序を取得します。  
   
-    ```tsql  
+    ```sql  
     -- all supported collations for (var)char columns in memory-optimized tables  
     select * from sys.fn_helpcollations()  
     where collationproperty(name, 'codepage') = 1252;  
@@ -70,7 +70,7 @@ GO
   
 -   (n)(var)char 型の列のインデックスは、BIN2 照合順序でのみ指定できます (最初の例を参照してください)。 次のクエリは、すべてのサポートされている BIN2 照合順序を取得します。  
   
-    ```tsql  
+    ```sql  
     -- all supported collations for indexes on memory-optimized tables and   
     -- comparison/sorting in natively compiled stored procedures  
     select * from sys.fn_helpcollations() where name like '%BIN2'  
@@ -84,7 +84,7 @@ GO
   
 -   ネイティブ コンパイル ストアド プロシージャ内では、UTF-16 データの切り捨てはサポートされません。 つまり、n (var) char (*n*) 値は n (var) char 型に変換することはできません (*は*) 場合は、*は* < *n*場合、照合順序では、_SC プロパティがあります。 たとえば、次の操作はサポートされません。  
   
-    ```tsql  
+    ```sql  
     -- column definition using an _SC collation  
      c2 nvarchar(200) collate Latin1_General_100_CS_AS_SC not null   
     -- assignment to a smaller variable, requiring truncation  
@@ -98,7 +98,7 @@ GO
   
  次の例に、インメモリ OLTP での照合順序の制限の影響と回避策を示します。 この例では、前の例で指定した Employees テーブルを使用しています。 このサンプルは、すべての従業員を一覧表示します。 LastName については、バイナリ照合順序に基づいて、大文字の名前が小文字の名前の前に並べ替えられます。 したがって、"Thomas" は "nolan" の前に来ます。これは、大文字のコード ポイントの方が小さいためです。 FirstName には、大文字と小文字が区別されない照合順序が設定されています。 したがって、並べ替えは、文字のコード ポイントではなくアルファベット順に基づいて行われます。  
   
-```tsql  
+```sql  
 -- insert a number of values  
 INSERT Employees VALUES (1,'thomas', 'john')  
 INSERT Employees VALUES (2,'Thomas', 'rupert')  
@@ -142,7 +142,7 @@ EXEC usp_EmployeeByName 'thomas', 'John'
 EXEC usp_EmployeeByName 'thomas', 'john'  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [インメモリ OLTP &#40;インメモリ最適化&#41;](../relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md)  
   
   

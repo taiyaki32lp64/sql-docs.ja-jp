@@ -18,12 +18,12 @@ ms.assetid: d0637fc4-27cc-4046-98ea-dc86b7a3bd75
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 2101277aecd3ca9c844fb447f5ab772847d77020
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 7e7fb32de254729c4173fab260e5797db5f2cc2f
+ms.sourcegitcommit: 56b963446965f3a4bb0fa1446f49578dbff382e0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52776554"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67793299"
 ---
 # <a name="initialize-a-transactional-subscription-from-a-backup-replication-transact-sql-programming"></a>トランザクション サブスクリプションのバックアップからの初期化 (レプリケーション Transact-SQL プログラミング)
   トランザクション パブリケーションのサブスクリプションは通常、スナップショットを使用して初期化されますが、レプリケーション ストアド プロシージャを使用して、バックアップからサブスクリプションを初期化することもできます。 詳細については、「 [Initialize a Transactional Subscription Without a Snapshot](initialize-a-transactional-subscription-without-a-snapshot.md)を使用して、サブスクリプションを手動で初期化する方法について説明します。  
@@ -34,7 +34,7 @@ ms.locfileid: "52776554"
   
     -   この値が **1**の場合、パブリケーションはこの機能をサポートしています。  
   
-    -   この値が **0** の場合、パブリッシャー側のパブリケーション データベースに対して [sp_changepublication &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-changepublication-transact-sql) を実行します。 値を指定**allow_initialize_from_backup**の**@property**の値と`true`の **@value**します。  
+    -   この値が **0** の場合、パブリッシャー側のパブリケーション データベースに対して [sp_changepublication &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-changepublication-transact-sql) を実行します。 値を指定**allow_initialize_from_backup**の **\@プロパティ**の値と`true`の **\@値**します。  
   
 2.  新しいパブリケーションの場合、パブリッシャー側のパブリケーション データベースに対して [sp_addpublication &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addpublication-transact-sql) を実行します。 値を指定`true`の**allow_initialize_from_backup**します。 詳細については、「 [Create a Publication](publish/create-a-publication.md)」を参照してください。  
   
@@ -47,29 +47,29 @@ ms.locfileid: "52776554"
   
 5.  パブリッシャー側のパブリケーション データベースに対して、ストアド プロシージャ [sp_addsubscription &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addsubscription-transact-sql) を実行します。 次のパラメーターを指定します。  
   
-    -   **@sync_type** - **initialize with backup**」をご覧ください。  
+    -   **\@sync_type** -の値**バックアップを使用して初期化**します。  
   
-    -   **@backupdevicetype** - バックアップ デバイスの種類として、 **logical** (既定値)、 **disk**、 **tape**」をご覧ください。  
+    -   **\@backupdevicetype** -バックアップ デバイスの種類:**論理**(既定)、**ディスク**、または**テープ**します。  
   
-    -   **@backupdevicename** - 復元に使用する論理バックアップ デバイスまたは物理バックアップ デバイスを指定します。  
+    -   **\@backupdevicename** -復元に使用する論理または物理バックアップ デバイス。  
   
          論理デバイスの場合は、 **sp_addumpdevice** を使ってデバイスを作成する際に指定したバックアップ デバイスの名前を指定します。  
   
          物理デバイスの場合は、「 `DISK = 'C:\Program Files\Microsoft SQL Server\MSSQL12.MSSQLSERVER\BACKUP\Mybackup.dat'` 」または「 `TAPE = '\\.\TAPE0'`」のように、完全なパスとファイル名を指定します。  
   
-    -   (省略可) **@password** - バックアップ セットの作成時に指定したパスワードを指定します。  
+    -   (省略可能) **\@パスワード**-バックアップ セットの作成時に提供されたパスワード。  
   
-    -   (省略可) **@mediapassword** - メディア セットのフォーマット時に指定したパスワードを指定します。  
+    -   (省略可能) **\@mediapassword** -メディア セットのフォーマット時に指定されたパスワード。  
   
-    -   (省略可) **@fileidhint** - 復元するバックアップ セットの識別子を指定します。 たとえば、 **1** はバックアップ メディアの 1 番目のバックアップ セットを示し、 **2** は 2 番目のバックアップ セットを示します。  
+    -   (省略可能) **\@fileidhint** -復元するバックアップ セットの識別子。 たとえば、 **1** はバックアップ メディアの 1 番目のバックアップ セットを示し、 **2** は 2 番目のバックアップ セットを示します。  
   
-    -   (テープ デバイスの場合は省略可) **@unload** - 復元が完了した後にテープをドライブからアンロードする場合は **1** (既定値) を、テープをアンロードしない場合は **0** を指定します。  
+    -   (テープ デバイスは省略可能) **\@アンロード**-の値を指定**1** (既定) 場合は、復元が完了した後にテープがドライブから読み込まれたにするか、 **0**アンロードする場合.  
   
-6.  (省略可能) プル サブスクリプションの場合は、サブスクライバーのサブスクリプション データベースで [sp_addpullsubscription &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addpullsubscription-transact-sql) と [sp_addpullsubscription_agent &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addpullsubscription-agent-transact-sql) を実行します。 詳細については、「 [プル サブスクリプションの作成](create-a-pull-subscription.md)」をご覧ください。  
+6.  (省略可能) プル サブスクリプションの場合は、サブスクライバーのサブスクリプション データベースで [sp_addpullsubscription &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addpullsubscription-transact-sql) と [sp_addpullsubscription_agent &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addpullsubscription-agent-transact-sql) を実行します。 詳細については、「 [Create a Pull Subscription](create-a-pull-subscription.md)」を参照してください。  
   
 7.  (省略可) ディストリビューション エージェントを起動します。 詳細については、「 [Synchronize a Pull Subscription](synchronize-a-pull-subscription.md) 」または「 [Synchronize a Push Subscription](synchronize-a-push-subscription.md)」を参照してください。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [バックアップと復元によるデータベースのコピー](../databases/copy-databases-with-backup-and-restore.md)   
  [SQL Server データベースのバックアップと復元](../backup-restore/back-up-and-restore-of-sql-server-databases.md)  
   

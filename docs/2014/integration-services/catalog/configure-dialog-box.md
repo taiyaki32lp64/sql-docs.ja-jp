@@ -11,15 +11,15 @@ f1_keywords:
 - SQL12.SSIS.SSMS.ISPROJECTPROP.REFERENCES.F1
 - sql12.dts.designer.configure.f1
 ms.assetid: 10183c8d-b1be-420f-972a-96ea97d4f4d8
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 2a4175429222306ac006122a3d36ee5ae97453ad
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 9361e08722ae832c9e671cd8b83caa51bddaf4f4
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52793501"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62836114"
 ---
 # <a name="configure-dialog-box"></a>[構成] ダイアログ ボックス
   パッケージとプロジェクトのパラメーター、接続マネージャー、および環境への参照を構成するには、 **[構成]** ダイアログ ボックスを使用します。  

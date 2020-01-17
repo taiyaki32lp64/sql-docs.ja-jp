@@ -4,23 +4,22 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.smoconnection.f1
 helpviewer_keywords:
 - SMO Connection Manager Editor
 ms.assetid: bed52d80-ed2a-4bf4-bf7c-481b6e228ca4
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 21b444376ce04c2a61f6b9f7c0b4ce3bbdb0fa23
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: dff18b4aac5a97e7bfa12daed107662790fa854a
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48204032"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66055594"
 ---
 # <a name="smo-connection-manager-editor"></a>SMO 接続マネージャー エディター
   **[SMO 接続マネージャー エディター]** を使用して、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] オブジェクトを転送するさまざまなタスクで使用される [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 接続を構成します。  
@@ -31,7 +30,7 @@ ms.locfileid: "48204032"
  **サーバー名**  
  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] インスタンスの名前を入力するか、サーバーを一覧から選択します。  
   
- **[更新]**  
+ **更新**  
  ネットワークで検出できる利用可能な [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] インスタンスの一覧を更新します。  
   
  **[Windows 認証を使用する]**  
@@ -50,6 +49,6 @@ ms.locfileid: "48204032"
  構成されたとおりに接続をテストします。  
   
 ## <a name="see-also"></a>参照  
- [Integration Services のエラーとメッセージのリファレンス](../../2014/integration-services/integration-services-error-and-message-reference.md)  
+ [Integration Services のエラーおよびメッセージのリファレンス](../../2014/integration-services/integration-services-error-and-message-reference.md)  
   
   

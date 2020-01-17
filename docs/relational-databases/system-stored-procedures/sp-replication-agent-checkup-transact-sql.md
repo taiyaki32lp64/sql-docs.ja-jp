@@ -1,5 +1,5 @@
 ---
-title: sp_replication_agent_checkup (TRANSACT-SQL) |Microsoft Docs
+title: sp_replication_agent_checkup (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
@@ -15,18 +15,17 @@ helpviewer_keywords:
 ms.assetid: 50357c2e-71aa-4e13-9e2e-0977a3655cc9
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: c35b08bf98079af5f72c48c3912613cca6ec7db0
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: b434d4bda50cf03442020ba2f0c029aaa1e09cd9
+ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52789244"
+ms.lasthandoff: 08/03/2019
+ms.locfileid: "68771230"
 ---
 # <a name="spreplicationagentcheckup-transact-sql"></a>sp_replication_agent_checkup (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
-  実行中であるが、指定された期間内に履歴をログに記録していないレプリケーション エージェントがあるかどうか、各ディストリビューション データベースを調べます。 このストアド プロシージャは、ディストリビューター側で任意のデータベースについて実行されます。  
+  各ディストリビューションデータベースで、実行中のレプリケーションエージェントがあるかどうかを確認します。ただし、指定されたハートビート間隔内に履歴が記録されていません。 このストアドプロシージャは、ディストリビューター側で任意のデータベースに対して実行されます。  
   
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -38,19 +37,18 @@ sp_replication_agent_checkup [ [ @heartbeat_interval = ] heartbeat_interval ]
 ```  
   
 ## <a name="arguments"></a>引数  
- [ **@heartbeat_interval** =] **'***heartbeat_interval***'**  
- エージェントが進捗状況を示すメッセージをログに記録しなくてもよい最大時間を分単位で示します。 *heartbeat_interval*は**int**、既定値は 10 分です。  
+`[ @heartbeat_interval = ] 'heartbeat_interval'`エージェントが進行状況メッセージをログに記録しなくてもよい最大時間を分単位で指定します。 *heartbeat_interval*は**int**,、既定値は10分です。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
- **sp_replication_agent_checkup** suspect として検出された各エージェントに対してエラー 14151 を発生させます。 また、これらのエージェントに関する障害履歴メッセージをログに記録します。  
+ **sp_replication_agent_checkup**は、問題として検出された各エージェントに対してエラー14151を発生させます。 また、これらのエージェントに関する障害履歴メッセージをログに記録します。  
   
 ## <a name="remarks"></a>コメント  
- **sp_replication_agent_checkup**はスナップショット レプリケーション、トランザクション レプリケーション、およびマージ レプリケーションで使用します。  
+ **sp_replication_agent_checkup**は、スナップショットレプリケーション、トランザクションレプリケーション、およびマージレプリケーションで使用します。  
   
 ## <a name="permissions"></a>アクセス許可  
- メンバーのみ、 **sysadmin**固定サーバー ロールが実行できる**sp_replication_agent_checkup**します。  
+ **Sp_replication_agent_checkup**を実行できるのは、 **sysadmin**固定サーバーロールのメンバーだけです。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [システム ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

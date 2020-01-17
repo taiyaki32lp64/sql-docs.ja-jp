@@ -16,16 +16,15 @@ helpviewer_keywords:
 ms.assetid: a8fcdd00-6cb3-4871-9489-6018b3d0d65f
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 4d425a6896a64f06bf1610ed8f6be87dd60af25d
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 74c9a97c2511bc9c9a738b9e63548a9179552489
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52507428"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68086343"
 ---
-# <a name="new-features"></a>新しい機能
-ODBC 3 で、次の新機能が導入されました。*x*します。 ODBC 3。*x*アプリケーションは、ODBC 2 *.x*ドライバーでは、この機能を使用できません。 ODBC 3。*x* ODBC 2 を使用する場合に、ドライバー マネージャーでこれらの機能がマップされていない *.x*ドライバー。  
+# <a name="new-features"></a>新機能
+ODBC では、次の新しい機能が導入されました*3.x*します。 ODBC *3.x* odbc 作業アプリケーション*2.x*ドライバーでは、この機能を使用できません。 ODBC *3.x* ODBC を使用する場合に、ドライバー マネージャーでこれらの機能がマップされていない*2.x*ドライバー。  
   
 -   記述子を受け取る関数は、引数として処理します。**Sqlsetdescfield による**、 **SQLGetDescField**、 **SQLSetDescRec**、 **SQLGetDescRec**、および**SQLCopyDesc**します。  
   
@@ -81,7 +80,7 @@ ODBC 3 で、次の新機能が導入されました。*x*します。 ODBC 3。
   
 -   名前付きパラメーター。  
   
--   ODBC 3 のいずれか。*x*-特定**SQLGetInfo**オプション。 (ODBC 3 場合。*x* ODBC 2 を使用するアプリケーション *。x*ドライバーは、いくつかの ODBC 2 は置き換えられて SQL_XXX_CURSOR_ATTRIBUTES1 の情報の種類を呼び出します *。x*情報の種類は、信頼性が高く、一部の情報がありますが、信頼性の高いものがあります。 詳細については、次を参照してください[SQLGetInfo](../../../odbc/reference/syntax/sqlgetinfo-function.md)。)。  
+-   ODBC のいずれかの*3.x*-特定**SQLGetInfo**オプション。 (場合、ODBC *3.x* odbc 作業アプリケーション*2.x*ドライバーは、いくつかの ODBC に置き換えられている SQL_XXX_CURSOR_ATTRIBUTES1 の情報の種類を呼び出す*2.x*情報の種類、一部の情報は、信頼性が高く、かもしれませんが信頼性の高いものがあります。 詳細については、次を参照してください[SQLGetInfo](../../../odbc/reference/syntax/sqlgetinfo-function.md)。)。  
   
 -   オフセットをバインドします。  
   
@@ -103,7 +102,7 @@ ODBC 3 で、次の新機能が導入されました。*x*します。 ODBC 3。
   
 -   使用**SQLDescribeCol**と**SQLColAttribute**列 0 にします。  
   
--   任意の ODBC 3 を使用します。*x*-特定の列の属性への呼び出しで**SQLColAttribute**します。  
+-   任意の ODBC を使用*3.x*-特定の列の属性への呼び出しで**SQLColAttribute**します。  
   
 -   複数の環境ハンドルを使用します。  
   

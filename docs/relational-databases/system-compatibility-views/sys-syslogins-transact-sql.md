@@ -20,23 +20,22 @@ helpviewer_keywords:
 ms.assetid: 4cb34f17-a4bb-469f-a218-71f074e6308f
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 54372511cab4cbcc3ecd7d2afe875325e105163d
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: 5745d3f98741d4a414c7bb69d8f9865258d47e34
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53204235"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68020007"
 ---
-# <a name="syssyslogins-transact-sql"></a>sys.syslogins (Transact-SQL)
+# <a name="syssyslogins-transact-sql"></a>sys.syslogins (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  ログイン アカウントごとに 1 行のデータを保持します。  
+  ログイン アカウントごとに 1 つの行が含まれています。  
   
 > [!IMPORTANT]  
 >  [!INCLUDE[ssnoteCompView](../../includes/ssnotecompview-md.md)]  
   
-**適用対象**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]を通じて[現在のバージョン](https://go.microsoft.com/fwlink/p/?LinkId=299658))。  
+**適用対象**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] から[現在のバージョン](https://go.microsoft.com/fwlink/p/?LinkId=299658)まで)。  
   
 |列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
@@ -51,12 +50,12 @@ ms.locfileid: "53204235"
 |**timelimit**|**int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**resultlimit**|**int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**name**|**sysname**|ユーザーのログイン名です。|  
-|**dbname**|**sysname**|接続が確立されたときの、ユーザーの既定のデータベースの名前です。|  
+|**dbname**|**sysname**|接続が確立されているときに、ユーザーの既定のデータベースの名前です。|  
 |**password**|**nvarchar(128)**|NULL を返します。|  
-|**言語**|**sysname**|ユーザーの既定の言語です。|  
+|**language**|**sysname**|ユーザーの既定の言語です。|  
 |**denylogin**|**int**|1 = ログインは [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows ユーザーまたはグループであり、アクセスは拒否されました。|  
-|**hasaccess**|**int**|1 = ログインにサーバーへのアクセスが許可されています。|  
-|**isntname**|**int**|1 = ログインは Windows ユーザーまたはグループです。<br /><br /> 0 = ログインは [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ログインです。|  
+|**hasaccess**|**int**|1 = ログインにサーバーへのアクセスが付与されています。|  
+|**isntname**|**int**|1 = ログインは Windows ユーザーまたはグループ。<br /><br /> 0 = ログインは [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ログインです。|  
 |**isntgroup**|**int**|1 = ログインは Windows グループです。|  
 |**isntuser**|**int**|1 = ログインは Windows ユーザーです。|  
 |**sysadmin**|**int**|1 = ログインのメンバーである、 **sysadmin**サーバーの役割。|  
@@ -69,7 +68,7 @@ ms.locfileid: "53204235"
 |**bulkadmin**|**int**|1 = ログインのメンバーである、 **bulkadmin**固定サーバー ロール。|  
 |**loginname**|**nvarchar(128)**|ユーザーのログイン名です。 これは旧バージョンとの互換性のために用意されています。|  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [システム ビューへのシステム テーブルのマッピング&#40;TRANSACT-SQL&#41;](../../relational-databases/system-tables/mapping-system-tables-to-system-views-transact-sql.md)   
  [互換性ビュー &#40;Transact-SQL&#41;](~/relational-databases/system-compatibility-views/system-compatibility-views-transact-sql.md)  
   

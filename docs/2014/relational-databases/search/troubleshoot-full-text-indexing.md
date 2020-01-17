@@ -11,15 +11,15 @@ helpviewer_keywords:
 - troubleshooting [SQL Server], full-text search
 - troubleshooting [full-text search]
 ms.assetid: 964c43a8-5019-4179-82aa-63cd0ef592ef
-author: douglaslMS
-ms.author: douglasl
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 33fe6bd04e59f91588f651877295ea265d523635
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: cd7ce157e831d32272f6ff2531c39f789a01e901
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48200372"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66015090"
 ---
 # <a name="troubleshoot-full-text-indexing"></a>フルテキスト インデックスの作成のトラブルシューティング
      
@@ -55,7 +55,7 @@ ms.locfileid: "48200372"
 
   
 ##  <a name="state"></a> トランザクション ログの復元後のフルテキスト インデックスの一貫性の喪失  
- データベースのトランザクション ログを復元する場合、フルテキスト インデックスの状態に一貫性がないという警告が表示されることがあります。 この警告の原因は、データベースのバックアップ後にテーブルのフルテキスト インデックスが変更されたことにあります。 フルテキスト インデックスを一貫性のある状態に戻すには、テーブルに対してすべてのカタログの作成 (クロール) を実行します。 詳細については、「 [フルテキスト インデックスの作成](../indexes/indexes.md)」を参照してください。  
+ データベースのトランザクション ログを復元する場合、フルテキスト インデックスの状態に一貫性がないという警告が表示されることがあります。 この警告の原因は、データベースのバックアップ後にテーブルのフルテキスト インデックスが変更されたことにあります。 フルテキスト インデックスを一貫性のある状態に戻すには、テーブルに対してすべてのカタログの作成 (クロール) を実行します。 詳細については、「 [フルテキスト インデックスの作成](../indexes/indexes.md)」をご覧ください。  
   
 
   

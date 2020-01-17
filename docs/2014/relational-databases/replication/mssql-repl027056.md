@@ -13,11 +13,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: fd6f1d63b0de5e8ce0fda7ab4fbc727c70f67bbd
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52794374"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63022733"
 ---
 # <a name="mssqlrepl027056"></a>MSSQL_REPL027056
     
@@ -48,9 +48,9 @@ ms.locfileid: "52794374"
   
 2.  パブリケーションの保有期間をできるだけ短く設定します。 詳細については、「 [Subscription Expiration and Deactivation](subscription-expiration-and-deactivation.md)」を参照してください。  
   
-3.  マージ レプリケーションのメンテナンスの一環として、マージ レプリケーションに関連付けられているシステム テーブルの増加を必要に応じて確認します。**MSmerge_contents**、 **MSmerge_genhistory**、および**MSmerge_tombstone**、 **MSmerge_current_partition_mappings**、および**MSmerge_past_partition_mappings**します。 定期的にこれらのテーブルのインデックスを再設定します。 詳細については、「 [インデックスの再編成と再構築](../indexes/indexes.md)」を参照してください。  
+3.  マージ レプリケーションのメンテナンスの一環として、マージ レプリケーションと関連するシステム テーブルが拡大しているかを時々確認してください(**MSmerge_contents**、**MSmerge_genhistory**、**MSmerge_tombstone**、**MSmerge_current_partition_mappings**、および **MSmerge_past_partition_mappings**)。 定期的にこれらのテーブルのインデックスを再設定します。 詳細については、「 [インデックスの再編成と再構築](../indexes/indexes.md)」を参照してください。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [エラーとイベントのリファレンス &#40;レプリケーション&#41;](errors-and-events-reference-replication.md)  
   
   

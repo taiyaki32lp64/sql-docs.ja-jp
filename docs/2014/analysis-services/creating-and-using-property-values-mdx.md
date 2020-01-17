@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - property values [MDX]
@@ -16,12 +15,12 @@ ms.assetid: 0cafb269-03c8-4183-b6e9-220f071e4ef2
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 73215fc788e558e8bbbc006eb45f43b2514d21aa
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 1be27b268e46a874678618104c199ae294f392f9
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48196002"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66086688"
 ---
 # <a name="creating-and-using-property-values-mdx"></a>プロパティ値の作成および使用 (MDX)
   多次元式 (MDX) では、ディメンション、レベル、メンバー、およびセルの固有プロパティとユーザー定義プロパティがサポートされています。 固有プロパティでは、一意な名前、キャプション、および書式やフォント サイズを、個別のセルに対して設定できます。 一方、ユーザー定義プロパティを使用すると、ほぼどんな属性でもメンバーに追加指定できます。  
@@ -38,7 +37,7 @@ ms.locfileid: "48196002"
   
  メンバー プロパティとその使用方法については、「[セル プロパティの使用 (MDX)](multidimensional-models/mdx/mdx-cell-properties-using-cell-properties.md)」を参照してください。  
   
-## <a name="see-also"></a>参照  
- [MDX クエリの基礎&#40;Analysis Services&#41;](multidimensional-models/mdx/mdx-query-fundamentals-analysis-services.md)  
+## <a name="see-also"></a>関連項目  
+ [MDX クエリの基礎 &#40;Analysis Services&#41;](multidimensional-models/mdx/mdx-query-fundamentals-analysis-services.md)  
   
   

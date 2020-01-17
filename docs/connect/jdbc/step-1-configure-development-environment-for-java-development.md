@@ -10,18 +10,17 @@ ms.topic: conceptual
 ms.assetid: a59cac14-32f5-4fa3-ad38-81a3e1e9d29c
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 64cd3fc21a318d0e617cfeeff858c87648501bf5
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 0e9e7a1d440a724ed7c6415a3499bbc6db5688e2
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47615240"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68004354"
 ---
 # <a name="step-1-configure-development-environment-for-java-development"></a>ステップ 1: Java 開発用に開発環境を構成する
   
 ## <a name="windows"></a>Windows  
   
-* 特定の使用は、JDBC ドライバーのバージョン、ここで説明したように、環境内に基づく: [JDBC Driver のシステム要件](../../connect/jdbc/system-requirements-for-the-jdbc-driver.md)  
-* 該当する JDBC ドライバーがここでダウンロードしてインストール: [Microsoft JDBC Driver for SQL Server ダウンロード](../../connect/jdbc/download-microsoft-jdbc-driver-for-sql-server.md)  
-* クラス パスの設定は、ここで説明したようにドライバーのバージョンに基づく: [JDBC ドライバーの使用](../../connect/jdbc/using-the-jdbc-driver.md)
+* 「 [Jdbc driver のシステム要件](../../connect/jdbc/system-requirements-for-the-jdbc-driver.md)」に記載されているように、使用する jdbc driver のバージョンを環境に基づいて特定します。  
+* 該当する JDBC Driver をダウンロードしてインストールします。 [MICROSOFT Jdbc driver for SQL Server をダウンロード](../../connect/jdbc/download-microsoft-jdbc-driver-for-sql-server.md)してください  
+* 「 [JDBC ドライバーの使用](../../connect/jdbc/using-the-jdbc-driver.md)」に記載されているように、ドライバーのバージョンに基づいてクラスパスを設定します。

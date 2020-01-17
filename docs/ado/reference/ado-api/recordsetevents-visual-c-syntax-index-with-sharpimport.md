@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: b7021f11-8242-4e9f-92e9-1a4472673fb1
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 8c13d577dbe818038af51a9b736595eb83328b6b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: bd512cbb01ace33bad275981be4c895591cd229d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47744130"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67917324"
 ---
 # <a name="recordsetevents-visual-c-syntax-index-with-import"></a>RecordsetEvents (Visual C 構文のインデックスで #import)
 ## <a name="events"></a>イベント  

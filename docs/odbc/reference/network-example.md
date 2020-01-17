@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: e14ae90f-87b3-4bcf-b69a-1773e2c2a1c5
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 1d2a3b80fd34aa93fad4735edb623a154e6fa225
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 3454fab31de20a7d72f99a50c7dd3781ea2bc2be
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47617120"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67937987"
 ---
 # <a name="network-example"></a>ネットワークの例
 この図は、1 つのネットワークで表示でしたの前の構成方法を示しています。  

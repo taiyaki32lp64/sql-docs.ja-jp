@@ -1,5 +1,5 @@
 ---
-title: free メソッド (SQLServerClob) |Microsoft Docs
+title: free メソッド (SQLServerClob) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: f3845548-5186-4986-953c-ddce14057ec1
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: d3dcaed0fecbb52b62f02b0c51046598979ee8dd
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 8bfbd2cd3bbde4f9ee5750c28d705ee27072d419
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47769536"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67954463"
 ---
 # <a name="free-method-sqlserverclob"></a>free メソッド (SQLServerClob)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

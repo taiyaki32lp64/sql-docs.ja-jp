@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: 29a00a41-5b0d-44b2-8a86-1b16fe507768
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 95785ceee0db65aef6f61281cb5e6079c76bc1f9
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 9b6516c427f15c960c6bfb459c4fc375e798b798
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53377604"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "67046674"
 ---
 # <a name="connection-string-properties-analysis-services"></a>接続文字列プロパティ (Analysis Services)
   このトピックでは、接続文字列プロパティについて説明します。接続文字列プロパティは、いずれかのデザイナー ツールまたは管理ツールで設定できます。また、Analysis Services データに接続および照会するクライアント アプリケーションによって作成された接続文字に表示されることもあります。 そのため、使用できるプロパティのサブセットについてのみ説明します。 完全な一覧には、多くのサーバー プロパティおよびデータベース プロパティが含まれます。それらを使用すると、サーバーでインスタンスまたはデータベースを構成している方法に関係なく、特定のアプリケーションの接続をカスタマイズできます。  
@@ -63,7 +62,7 @@ ms.locfileid: "53377604"
   
 |プロパティ|説明|  
 |--------------|-----------------|  
-|`EffectiveUserName`|サーバーでエンド ユーザー ID の権限を借用する必要がある場合に使用します。 アカウントを domain\user という形式で指定します。 このプロパティを使用するには、呼び出し元に Analysis Services に対する管理権限が必要です。 SharePoint から Excel ブックのこのプロパティを使用する方法の詳細については、「 [SharePoint Server 2013 で Analysis Services の EffectiveUserName を使用する](https://go.microsoft.com/fwlink/?LinkId=311905)」をご覧ください。 Reporting Services でこのプロパティを使用する方法の詳細については、「 [SSAS での EffectiveUserName を使用した権限の借用](https://go.microsoft.com/fwlink/?LinkId=301385)」をご覧ください。<br /><br /> `EffectiveUserName` は、PowerPivot for SharePoint のインストールで使用情報を取得する場合に使用します。 ユーザー ID を含むイベントまたはエラーをログ ファイルに記録できるように、ユーザー ID がサーバーに渡されます。 PowerPivot の場合、承認には使用されません。|  
+|`EffectiveUserName`|サーバーでエンド ユーザー ID の権限を借用する必要がある場合に使用します。 アカウントを domain\user という形式で指定します。 このプロパティを使用するには、呼び出し元に Analysis Services に対する管理権限が必要です。 SharePoint から Excel ブックのこのプロパティを使用する方法の詳細については、「 [SharePoint Server 2013 で Analysis Services の EffectiveUserName を使用する](https://go.microsoft.com/fwlink/?LinkId=311905)」をご覧ください。 Reporting Services でこのプロパティを使用する方法の詳細については、「 [SSAS での EffectiveUserName を使用した権限の借用](https://www.artisconsulting.com/blogs/greggalloway/2010/4/1/using-effectiveusername-to-impersonate-in-ssas)」をご覧ください。<br /><br /> `EffectiveUserName` は、PowerPivot for SharePoint のインストールで使用情報を取得する場合に使用します。 ユーザー ID を含むイベントまたはエラーをログ ファイルに記録できるように、ユーザー ID がサーバーに渡されます。 PowerPivot の場合、承認には使用されません。|  
 |**Encrypt Password**|ローカル キューブを暗号化するためにローカル パスワードを使用するかどうかを指定します。 有効な値は True または False です。 既定値は False です。|  
 |`Encryption Password`|暗号化されたローカル キューブの暗号化を解除するために使用するパスワード。 既定値は空です。 この値は、ユーザーが明示的に設定する必要があります。|  
 |`Impersonation Level`|サーバーがクライアントの権限を借用するときに使用できる権限借用レベルを示します。 有効な値は次のとおりです。<br /><br /> **匿名**:クライアントはサーバーに対して匿名です。 サーバー プロセスではクライアントに関する情報を取得できず、クライアントの権限を借用できません。<br /><br /> **識別**:サーバー プロセスではクライアント ID を取得できます。 また、サーバーでは承認のためにクライアント ID の権限を借用できますが、クライアントとしてシステム オブジェクトにアクセスすることはできません。<br /><br /> **権限を借用**:これが既定値です。 クライアント ID の権限を借用できますが、接続を確立する場合に限られ、すべての呼び出しで借用できるわけではありません。<br /><br /> **デリゲート**:サーバー プロセスでは、クライアントに代わって機能を実行するときに、クライアントのセキュリティ コンテキストの権限を借用できます。 また、他のサーバーに対する呼び出しを送信することもできます。|  
@@ -83,7 +82,7 @@ ms.locfileid: "53377604"
   
 |プロパティ|説明|  
 |--------------|-----------------|  
-|`Application Name`|接続に関連付けられたアプリケーションの名前を設定します。 この値は、トレース イベントを監視する場合 (特に、同じデータベースにアクセスするアプリケーションが複数ある場合) に役立ちます。 たとえば、アプリケーション名を追加 = 'test'、接続文字列 'test' を SQL Server Profiler トレースに表示する次のスクリーン ショットに示すようにします。<br /><br /> ![SSAS_AppNameExcample](../media/ssas-appnameexcample.gif "SSAS_AppNameExcample")<br /><br /> このプロパティの別名には、`sspropinitAppName` および `AppName` があります。 詳細については、「 [SQL Server に接続する場合の Application Name パラメーターの使用](https://go.microsoft.com/fwlink/?LinkId=301699)」をご覧ください。|  
+|`Application Name`|接続に関連付けられたアプリケーションの名前を設定します。 この値は、トレース イベントを監視する場合 (特に、同じデータベースにアクセスするアプリケーションが複数ある場合) に役立ちます。 たとえば、アプリケーション名を追加 = 'test'、接続文字列 'test' を SQL Server Profiler トレースに表示する次のスクリーン ショットに示すようにします。<br /><br /> ![SSAS_AppNameExcample](../media/ssas-appnameexcample.gif "SSAS_AppNameExcample")<br /><br /> このプロパティの別名には、`sspropinitAppName` および `AppName` があります。 詳細については、「 [SQL Server に接続する場合の Application Name パラメーターの使用](https://www.connectionstrings.com/use-application-name-sql-server/)」をご覧ください。|  
 |`AutoSyncPeriod`|クライアントとサーバーのキャッシュを同期する頻度 (ミリ秒単位) を設定します。 ADOMD.NET には、最小限のメモリ オーバーヘッドが発生する、よく使用されるオブジェクトのために、クライアント キャッシュが用意されています。 これは、サーバーへのラウンド トリップを減らすのに役立ちます。 既定値は 10,000 ミリ秒 (10 秒) です。 null または 0 に設定した場合、自動同期は無効になります。|  
 |`Character Encoding`|要求での文字をエンコードする方法を定義します。 有効な値は、Default または UTF-8 (これらは同じです) と、UTF-16 です。|  
 |`CompareCaseSensitiveStringFlags`|指定されたロケールの大文字と小文字を区別する文字列の比較を調整します。 このプロパティの設定の詳細については、「 [CompareCaseSensitiveStringFlags プロパティ](https://msdn.microsoft.com/library/aa237459\(v=sql.80\).aspx)」をご覧ください。|  

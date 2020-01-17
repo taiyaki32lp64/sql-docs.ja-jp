@@ -1,7 +1,7 @@
 ---
-title: 考えられる可用性レプリカ間の接続エラーの原因を判断する
+title: 可用性レプリカ間の接続エラーの原因
 description: このトピックでは、Always On 可用性グループに参加しているレプリカ間の接続エラーで考えられるさまざまな原因について説明します。
-ms.custom: seodec18
+ms.custom: seo-lt-2019
 ms.date: 05/17/2016
 ms.prod: sql
 ms.reviewer: ''
@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: cd613898-82d9-482f-a255-0230a6c7d6fe
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 83db89086fe8370669600610695737c940f3468e
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: 501ec8bc3e7ad039e3864ce8a9a1767c6961848c
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53211561"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75235654"
 ---
 # <a name="determine-possible-reason-for-connectivity-failures-between-availability-replicas"></a>考えられる可用性レプリカ間の接続エラーの原因を判断する
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -77,7 +76,7 @@ ms.locfileid: "53211561"
   
 -   TCP リンクのタイムアウト、パケットの紛失または破損、不正な順序のパケットなどのネットワーク エラー。  
   
--   オペレーティング システム、サーバー、またはデータベースの停止状態。  
+-   オペレーティング システム、サーバー、またはデータベースの応答の停止。  
   
 -   Windows サーバーのタイムアウト。  
   
@@ -103,6 +102,6 @@ ms.locfileid: "53211561"
 -   「[sys.availability_replicas &#40;Transact-SQL&#41;](../../../relational-databases/system-catalog-views/sys-availability-replicas-transact-sql.md)」で **session_timeout** クエリを実行します。  
   
 ## <a name="see-also"></a>参照  
- [AlwaysOn 可用性グループの概要 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)  
+ [Always On 可用性グループの概要 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)  
   
   

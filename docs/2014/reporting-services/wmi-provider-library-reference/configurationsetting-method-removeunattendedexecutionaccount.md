@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 api_name:
 - RemoveUnattendedExecutionAccount (WMI MSReportServer_ConfigurationSetting Class)
@@ -16,15 +15,15 @@ topic_type:
 helpviewer_keywords:
 - RemoveUnattendedExecutionAccount method
 ms.assetid: 77e371c1-7c26-44f9-9119-7c8dc838db32
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: ed69a02ddf8a02c1256c8f468e9ee75c573c2797
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: efe0523c9aa13315399c043367ef05a63da46e91
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56031673"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66098155"
 ---
 # <a name="removeunattendedexecutionaccount-method-wmi-msreportserverconfigurationsetting"></a>RemoveUnattendedExecutionAccount メソッド (WMI MSReportServer_ConfigurationSetting)
   レポート サーバー構成ファイルから自動実行用アカウント エントリを削除します。  

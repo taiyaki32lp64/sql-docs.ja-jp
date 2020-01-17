@@ -15,15 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - Z (geometry Data Type)
 ms.assetid: a62ed736-44df-4591-9109-ce90e1df9bd3
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: f48bfcf74a53cec829dba8171c9c66abc3c0254b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: MladjoA
+ms.author: mlandzic
+ms.openlocfilehash: e5932235ea8d97f67b17b481cff4e2d39b0c524a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47607684"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68127329"
 ---
 # <a name="z-geometry-data-type"></a>Z (geometry データ型)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -40,7 +39,7 @@ ms.locfileid: "47607684"
 ## <a name="return-types"></a>戻り値の型  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の型: **float**  
   
- CLR の型: **SqlDouble**  
+ CLR の型:**SqlDouble**  
   
 ## <a name="remarks"></a>Remarks  
  geometry インスタンスが Point ではない場合や、**Point** インスタンスにこのプロパティの値が設定されていない場合は、このプロパティの値は null になります。  

@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 4ade106d-063d-486e-bc4d-a1a6b6e0bea9
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 6f9d9e3d21d309d237bdcf376270e285da319919
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.openlocfilehash: 764a99faf40450bfd550dfe3f96789e705e8624a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51604162"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67964726"
 ---
 # <a name="cancel-method-example-vbscript"></a>Cancel メソッドの例 (VBScript)
 > [!IMPORTANT]
@@ -69,7 +68,7 @@ End Sub
 <!-- EndCancelVBS -->  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [Cancel メソッド (ADO)](../../../ado/reference/ado-api/cancel-method-ado.md)
 
 

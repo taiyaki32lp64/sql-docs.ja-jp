@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 helpviewer_keywords:
 - viewing events
@@ -14,12 +13,12 @@ ms.assetid: 9a90b1a2-aa69-43f6-bdeb-cc5f57a26c6f
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 8a57f978f4be3a8e4ec163b7bb5bcef2bb300aa6
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 1156a7272edc8ad1ecfb8e173f81bc678800c855
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48106431"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66089629"
 ---
 # <a name="view-the-events-for-registered-packages"></a>登録パッケージのイベントの表示
   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 拡張イベント セッションを作成する前に、登録パッケージで提供されているイベントを確認すると役立つことがあります。 詳細については、「 [SQL Server 拡張イベント パッケージ](../relational-databases/extended-events/sql-server-extended-events-packages.md)」を参照してください。  

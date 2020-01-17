@@ -20,15 +20,14 @@ helpviewer_keywords:
 - Visual Database Tools [SQL Server], queries
 - limiting rows returned
 ms.assetid: 25fb4e31-6dbf-4cf6-8e47-0dd0998c836c
-author: stevestein
-ms.author: sstein
-manager: craigg
-ms.openlocfilehash: c51cae7794c6306e0e48933edd18c86482e1d754
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: f3cef20ba9e4d841e74a8deaed47fab2f8b6b193
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47846962"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68263537"
 ---
 # <a name="specify-search-criteria-visual-database-tools"></a>検索基準の指定 (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

@@ -1,6 +1,5 @@
 ---
-title: クエリ (SQLXML 4.0) での XSD スキーマを使用して注釈が付けられた |Microsoft Docs
-ms.custom: ''
+title: クエリでの注釈付き XSD スキーマの使用 (SQLXML)
 ms.date: 01/11/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -21,22 +20,22 @@ helpviewer_keywords:
 ms.assetid: 927a30a2-eae8-420d-851d-551c5f884f3c
 author: MightyPen
 ms.author: genemi
-manager: craigg
+ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 9af0e0c5a843ecf475b28dd873ecfedc5d2f6472
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: a53e53f27b9b0c9c94519cb55aa136349f6ff7c5
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56036413"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75246997"
 ---
 # <a name="using-annotated-xsd-schemas-in-queries-sqlxml-40"></a>クエリでの注釈付き XSD スキーマの使用 (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   注釈付きスキーマに対してクエリを指定し、XSD スキーマに対してテンプレートで XPath クエリを指定して、データベースからデータを取得することができます。  
   
-  **\<Sql:xpath-クエリ >** 要素では、注釈付きスキーマで定義されている XML ビューに対して XPath クエリを指定することができます。 使用して実行するのには、XPath クエリ対象となる注釈付きスキーマが識別される、**マッピング スキーマ**の属性、  **\<sql:xpath-クエリ >** 要素。  
+ **Sql: xpath クエリ>要素を使用すると、注釈付きスキーマで定義されている XML ビューに対して xpath クエリを指定できます。 \<** Xpath クエリの実行対象となる注釈付きスキーマは、 ** \<sql: xpath クエリ>** 要素の**mapping-schema**属性を使用して識別されます。  
   
- テンプレートは、1 つ以上のクエリを含む有効な XML ドキュメントです。 FOR XML クエリと XPath クエリでは、ドキュメント フラグメントが返されますが、 テンプレートは、ドキュメント フラグメントのコンテナーとして機能します。テンプレートは、そのため、1 つの最上位の要素を指定する方法を提供します。  
+ テンプレートは、1 つ以上のクエリを含む有効な XML ドキュメントです。 FOR XML クエリと XPath クエリでは、ドキュメント フラグメントが返されますが、 テンプレートは、ドキュメントフラグメントのコンテナーとして機能します。そのため、1つの最上位要素を指定する方法が用意されています。  
   
  このトピックの例では、テンプレートを使用して注釈付きスキーマに対する XPath クエリを指定し、データベースからデータを取得します。  
   
@@ -65,12 +64,12 @@ ms.locfileid: "56036413"
 </sql:xpath-query>  
 ```  
   
- SQLXML 4.0 のテスト スクリプト (Sqlxml4test.vbs) を作成し、それを使用すると、テンプレート ファイルの一部としてクエリを実行できます。 詳細については、次を参照してください。[注釈付き XDR スキーマ&#40;SQLXML 4.0 では非推奨&#41;](../../../relational-databases/sqlxml/annotated-xsd-schemas/annotated-xdr-schemas-deprecated-in-sqlxml-4-0.md)します。  
+ SQLXML 4.0 のテスト スクリプト (Sqlxml4test.vbs) を作成し、それを使用すると、テンプレート ファイルの一部としてクエリを実行できます。 詳細については、「 [SQLXML 4.0&#41;で非推奨とされた注釈付き XDR スキーマ &#40;](../../../relational-databases/sqlxml/annotated-xsd-schemas/annotated-xdr-schemas-deprecated-in-sqlxml-4-0.md)」を参照してください。  
   
 ## <a name="using-inline-mapping-schemas"></a>インライン マッピング スキーマの使用  
  注釈付きスキーマはテンプレートに直接含めることができます。このテンプレートで、インライン スキーマに対する XPath クエリを指定できます。 テンプレートはアップデートグラムとしても使用できます。  
   
- テンプレートには複数のインライン スキーマを含めることができます。 テンプレートに含まれているインライン スキーマを使用する指定、 **id**属性の一意の値に、  **\<xsd:schema >** 要素、およびしを使用して **#idvalue**インライン スキーマを参照します。 **Id**属性の動作と同じですが、 **sql:id** ({urn: スキーマ-microsoft-'http://www.w3.org/2001/xmlschema'-sql} id) XDR スキーマで使用します。  
+ テンプレートには複数のインライン スキーマを含めることができます。 テンプレートに含まれているインラインスキーマを使用するには、 ** \<xsd: schema>** 要素で一意の値を持つ**id**属性を指定し、 **#idvalue**を使用してインラインスキーマを参照します。 **Id**属性は、XDR スキーマで使用される**sql: id** ({urn: schema-microsoft-com: xml} id) と同じ動作です。  
   
  たとえば、次のテンプレートでは、2 つのインライン注釈付きスキーマを指定しています。  
   
@@ -117,23 +116,23 @@ ms.locfileid: "56036413"
 </ROOT>  
 ```  
   
- このテンプレートでは 2 つの XPath クエリも指定しています。 各、  **\<xpath クエリ >** を指定して、マッピング スキーマを一意に識別する要素、**マッピング スキーマ**属性。  
+ このテンプレートでは 2 つの XPath クエリも指定しています。 各** \<xpath クエリ>** 要素は、**マッピング**スキーマ属性を指定することによって、マッピングスキーマを一意に識別します。  
   
- テンプレートでは、インライン スキーマを指定するときに、 **sql: はマッピング スキーマ**注釈はでも指定する必要があります、  **\<xsd:schema >** 要素。 **Sql: はマッピング スキーマ**はブール値 (0 = false、1 = true)。 インライン スキーマ**sql: はマッピング スキーマ =「1」** はインライン注釈付きスキーマとして扱われ、XML ドキュメントでは返されません。  
+ テンプレートでインラインスキーマを指定する場合は、 ** \<xsd: schema>** 要素で**sql:: mapping-schema**注釈も指定する必要があります。 **Sql: のマッピングスキーマ**はブール値 (0 = false、1 = true) を取ります。 **Sql:-mapping-schema = "1"** のインラインスキーマは、インライン注釈が付けられたスキーマとして扱われ、XML ドキュメントでは返されません。  
   
- **Sql: はマッピング スキーマ**注釈は、テンプレートの名前空間に属する **urn:schemas-microsoft-com:xml-sql** します。  
+ **Sql: マッピングスキーマ**の注釈は、テンプレート名前空間**urn: schema-microsoft-com: xml**に属しています。  
   
- この例をテストするには、テンプレート (InlineSchemaTemplate.xml) をローカルのディレクトリに保存した後、SQLXML 4.0 テスト スクリプト (Sqlxml4test.vbs) を作成し、それを使用してテンプレートを実行します。 詳細については、次を参照してください。 [SQLXML 4.0 クエリの実行に ADO を使用する](../../../relational-databases/sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md)します。  
+ この例をテストするには、テンプレート (InlineSchemaTemplate.xml) をローカルのディレクトリに保存した後、SQLXML 4.0 テスト スクリプト (Sqlxml4test.vbs) を作成し、それを使用してテンプレートを実行します。 詳細については、「ADO を使用した[SQLXML 4.0 クエリの実行](../../../relational-databases/sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md)」を参照してください。  
   
- 指定するだけでなく、**マッピング スキーマ**属性を **\<sql:xpath-クエリ >** 要素 (XPath クエリがある) 場合のテンプレート、または **\<updg:sync >** 要素、アップデート グラムで、次を行うことができます。  
+ テンプレート内の** \<sql: xpath クエリ>** 要素、またはアップデートグラムの** \<updg: sync>** 要素に対して**マッピングスキーマ**属性を指定することに加えて、次の操作を実行できます。  
   
--   指定、**マッピング スキーマ**属性を**\<ルート >** テンプレート内の要素 (グローバル宣言)。 このマッピング スキーマになりますが、明示的なすべての XPath およびアップデート グラムのノードで使用される既定のスキーマ**マッピング スキーマ**注釈。  
+-   テンプレートの** \<ルート>** 要素 (グローバル宣言) で**マッピングスキーマ**属性を指定します。 このマッピングスキーマは、明示的な**マッピングスキーマ**の注釈がないすべての XPath およびアップデートグラムノードで使用される既定のスキーマになります。  
   
--   指定、**マッピング スキーマ**、ADO を使用して属性**コマンド**オブジェクト。  
+-   ADO**コマンド**オブジェクトを使用して、**マッピングスキーマ**の属性を指定します。  
   
- **マッピング スキーマ**属性で指定されている、  **\<xpath クエリ >** または **\<updg:sync >** 要素が一番多いも優先されます。ADO**コマンド**オブジェクトには最低の優先順位。  
+ Xpath クエリ>または** \<updg: sync>** 要素で指定されている**マッピングスキーマ**属性が最も優先順位が高くなります。 ** \<** ADO**コマンド**オブジェクトの優先順位は最も低くなります。  
   
- テンプレートの XPath クエリを指定し、XPath クエリの実行対象となるマッピング スキーマを指定しない場合、XPath クエリとして扱われます、 **dbobject**型のクエリ。 たとえば、次のテンプレートを考えてみます。  
+ テンプレートで XPath クエリを指定し、XPath クエリの実行対象となるマッピングスキーマを指定しない場合、XPath クエリは**dbobject**型クエリとして扱われることに注意してください。 たとえば、次のテンプレートを考えてみます。  
   
 ```  
 <sql:xpath-query   
@@ -142,6 +141,6 @@ ms.locfileid: "56036413"
 </sql:xpath-query>  
 ```  
   
- このテンプレートでは、XPath クエリが指定されていますが、マッピング スキーマが指定されていません。 したがって、このクエリとして扱う、 **dbobject**を Production.ProductPhoto はテーブル名の種類のクエリと@ProductPhotoID= '100' は ID 値 100 の製品の写真を検索する述語です。 @LargePhoto 元の値を取得する列です。  
+ このテンプレートでは、XPath クエリが指定されていますが、マッピング スキーマが指定されていません。 したがって、このクエリは**dbobject**型クエリとして扱われます。 productphoto はテーブル名、 @ProductPhotoID= ' 100 ' は、ID 値が100の製品写真を検索する述語です。 @LargePhoto値の取得元の列を指定します。  
   
   

@@ -1,5 +1,5 @@
 ---
-title: getTimestamp (int) メソッド |Microsoft Docs
+title: getTimestamp (int) メソッドMicrosoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: a9fd6496-c72e-4cc6-b46a-4aa9f13f90ff
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 578029a1800ff00b1c02dfeb3f1d88a42db1537a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 5b9a349122b907ff535de8ba3f90e0746465d244
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47733220"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67978825"
 ---
 # <a name="gettimestamp-method-int"></a>getTimestamp (int) メソッド
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -41,7 +40,7 @@ public java.sql.Timestamp getTimestamp(int index)
  パラメーターのインデックスを示す **int** です。  
   
 ## <a name="return-value"></a>戻り値  
- タイムスタンプのオブジェクト。  
+ タイムスタンプオブジェクト。  
   
 ## <a name="exceptions"></a>例外  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  

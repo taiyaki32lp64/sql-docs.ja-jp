@@ -16,11 +16,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 5c3a004d30a5edb20da77e6f93bf51a94472419b
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52807324"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63192162"
 ---
 # <a name="calling-methods"></a>メソッドの呼び出し
   メソッドは、発行など、オブジェクトに関連する特定のタスクを実行する`Checkpoint`データベースまたはインスタンスのログオンの列挙リストの要求で[!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]します。  

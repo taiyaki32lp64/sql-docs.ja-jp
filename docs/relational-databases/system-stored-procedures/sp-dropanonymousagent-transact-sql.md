@@ -14,34 +14,32 @@ helpviewer_keywords:
 - sp_dropanonymousagent
 ms.assetid: 4cb96efa-9358-44a3-a8ee-a7e181bed089
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: dc5cc9c4d7bb7ca9b2d758e33142d140bf6fc6fa
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+author: VanMSFT
+ms.openlocfilehash: 7e82023ed750c77d87a2536debfb5fceb7321db4
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52818984"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67911951"
 ---
-# <a name="spdropanonymousagent-transact-sql"></a>sp_dropanonymousagent (Transact-SQL)
+# <a name="spdropanonymousagent-transact-sql"></a>sp_dropanonymousagent (TRANSACT-SQL)
+
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  ディストリビューターにおけるレプリケーション モニター用の匿名エージェントをパブリッシャーから削除します。 このストアド プロシージャは、任意のデータベース上のパブリッシャー側で実行されます。  
+  パブリッシャーからディストリビューターのレプリケーションの監視用の匿名エージェントを削除します。 このストアド プロシージャは、任意のデータベースのパブリッシャーで実行されます。  
   
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>構文  
   
 ```  
-  
 sp_dropanonymousagent [ @subid= ] sub_id    , [ @type= ] type  
 ```  
   
 ## <a name="arguments"></a>引数  
- [  **@subid=**] *sub_id*  
- 匿名サブスクリプションのグローバル識別子を指定します。 *sub_id*は**uniqueidentifier**、既定値はありません。 サブスクライバーで取得できるこの識別子を使用して**sp_helppullsubscription**します。 値、 **subid**返された結果セットのフィールドはこのグローバル識別子。  
+`[ @subid = ] sub_id` 匿名サブスクリプションのグローバル識別子です。 *sub_id*は**uniqueidentifier**、既定値はありません。 サブスクライバーで取得できるこの識別子を使用して**sp_helppullsubscription**します。 値、 **subid**返された結果セットのフィールドはこのグローバル識別子。  
   
- [  **@type=**]*型*  
- サブスクリプションの種類を指定します。 *型*は**int**、既定値はありません。 有効な値は**1**または**2**します。 指定**1**、スナップショット レプリケーションまたはトランザクション レプリケーションのディストリビューション エージェントを使用する場合。 指定**2**場合は、マージ レプリケーション マージ エージェントを使用します。  
+`[ @type = ] type` サブスクリプションの種類です。 *型*は**int**、既定値はありません。 有効な値は**1**または**2**します。 指定**1**、スナップショット レプリケーションまたはトランザクション レプリケーションのディストリビューション エージェントを使用する場合。 指定**2**場合は、マージ レプリケーション マージ エージェントを使用します。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  **0** (成功) または**1** (失敗)  
@@ -49,12 +47,12 @@ sp_dropanonymousagent [ @subid= ] sub_id    , [ @type= ] type
 ## <a name="remarks"></a>コメント  
  **sp_dropanonymousagent**はあらゆる種類のレプリケーションで使用します。  
   
- このストアド プロシージャは、匿名サブスクリプション エージェントを削除するときのみ使用します。このストアド プロシージャを使用して、既知のサブスクリプションを削除することはできません。  
+ このストアド プロシージャでは、匿名サブスクリプション エージェントのみを削除するために使用し、よく知られているサブスクリプションを使用することはできません。  
   
 ## <a name="permissions"></a>アクセス許可  
  メンバーのみ、 **db_owner**ディストリビューション データベースの固定データベース ロールが実行できる**sp_dropanonymousagent**します。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [レプリケーション ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)  
   
   

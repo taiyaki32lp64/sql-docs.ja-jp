@@ -1,5 +1,5 @@
 ---
-title: MSmerge_genhistory (TRANSACT-SQL) |Microsoft Docs
+title: MSmerge_genhistory (Transact-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
@@ -17,32 +17,31 @@ helpviewer_keywords:
 ms.assetid: 475d08ae-eb8b-49de-afd6-33c96ab8004d
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 4a56efcc95965d3af9d01f618baba416a65226ce
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: bf9c38fe71c1282b19b947fc1771714dd138c45a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52807884"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68017702"
 ---
-# <a name="msmergegenhistory-transact-sql"></a>MSmerge_genhistory (Transact-SQL)
+# <a name="msmerge_genhistory-transact-sql"></a>MSmerge_genhistory (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  **MSmerge_genhistory**テーブルには、サブスクライバーが保有期間) 以内について認識している各ジェネレーションの 1 つの行が含まれます。 これは、変換中に共通する generation 値を送信することを防ぎ、バックアップから復元するサブスクライバーを再同期するために使用されます。 このテーブルは、パブリケーション データベースとサブスクリプション データベースに保存されます。  
+  **MSmerge_genhistory**テーブルには、サブスクライバーが保有期間) 以内について認識している各ジェネレーションの 1 つの行が含まれます。 交換中に共通する generation が送信されないようにして、バックアップから復元するサブスクライバーを再同期に使用されます。 このテーブルは、パブリケーション データベースとサブスクリプション データベースに保存されます。  
   
 |列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
 |**guidsrc**|**uniqueidentifier**|サブスクライバーの generation 値によって識別される変更のグローバル識別子です。|  
-|**pubid**|**uniqueidentifier**|パブリケーション識別子です。|  
-|**生成**|**bigint**|generation 値です。|  
+|**pubid**|**uniqueidentifier**|パブリケーションの識別子です。|  
+|**generation**|**bigint**|Generation 値です。|  
 |**art_nick**|**int**|アーティクルのニックネームです。|  
-|**ニックネーム**|**varbinary(1001)**|この generation 値を持っていることが既に認識されている他のサブスクライバーのニックネームの一覧です。 その変更を既に認識しているサブスクライバーに、generation 値を送信することを防ぐために使用します。 ニックネーム一覧内のニックネームは、検索をより効率化するために並べ替えて管理されます。 このフィールドの範囲を超えるニックネームがある場合、この最適化による恩恵を受けることはありません。|  
+|**nicknames**|**varbinary(1001)**|この generation 値を持っていることが既に認識されている他のサブスクライバーのニックネームの一覧です。 その変更を既に認識しているサブスクライバーに、generation 値を送信することを防ぐために使用します。 ニックネーム一覧内のニックネームは、検索をより効率的に並べ替えられた順序で保持されます。 このフィールドに収まるを超えるニックネームがある場合は、この最適化からいない活用します。|  
 |**coldate**|**datetime**|現在の generation 値がテーブルに追加された日付です。|  
-|**genstatus**|**tinyint**|generation の状態です。次のいずれかの値をとります。<br /><br /> **0**開くを = です。<br /><br /> **1** = 終了します。<br /><br /> **2** = クローズし、別のサブスクライバーで発生します。|  
-|**これは changecount**|**int**|指定の generation に反映された変更の数です。|  
+|**genstatus**|**tinyint**|次のように、世代の状態:<br /><br /> **0**開くを = です。<br /><br /> **1** = 終了します。<br /><br /> **2** = クローズし、別のサブスクライバーで発生します。|  
+|**changecount**|**int**|特定のジェネレーションに反映される変更の数|  
   
-## <a name="see-also"></a>参照  
- [レプリケーション テーブル &#40; です。TRANSACT-SQL と &#41; です。](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
+## <a name="see-also"></a>関連項目  
+ [レプリケーション テーブル &#40;Transact-SQL&#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
  [レプリケーション ビュー &#40;Transact-SQL&#41;](../../relational-databases/system-views/replication-views-transact-sql.md)  
   
   

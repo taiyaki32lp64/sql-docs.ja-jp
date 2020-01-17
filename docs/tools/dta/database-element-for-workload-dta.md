@@ -1,5 +1,5 @@
 ---
-title: 要素をデータベースのワークロード (DTA) |Microsoft Docs
+title: ワークロードの Database 要素 (DTA) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -12,15 +12,14 @@ dev_langs:
 helpviewer_keywords:
 - Database element
 ms.assetid: 112fca2a-37e5-4162-b2e7-b56eb8ab0c6f
-author: stevestein
-ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 880edbcbf109e57e043e52b7d6e180edd2b7b00b
-ms.sourcegitcommit: 0f7cf9b7ab23df15624d27c129ab3a539e8b6457
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: d34a50490c41d9d5611c2b9aaf157e4351d49858
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51292718"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68116921"
 ---
 # <a name="database-element-for-workload-dta"></a>Workload の Database 要素 (DTA)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

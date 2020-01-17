@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 7947efc3-ca86-4ec5-87ce-7603059c75a0
 author: Shamikg
 ms.author: Shamikg
-manager: craigg
-ms.openlocfilehash: d509ad58491bca379e3ab86e07aee63e8a5d3946
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 7a16a28a163acece321cc2229e9988cf7ab01f9e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52520669"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67989865"
 ---
 # <a name="converting-db2-schemas-db2tosql"></a>DB2 スキーマ (DB2ToSQL) の変換
 DB2 に接続すると後に、接続されている[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]、プロジェクトの設定とデータ マッピング オプションでは、DB2 データベース オブジェクトを変換できますと[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]データベース オブジェクト。  
@@ -74,7 +73,7 @@ DB2 からオブジェクトの定義は、データベース オブジェクト
 |ニックネーム|部分的なマッピング。 手動で処理が基になるオブジェクトに必要です。|  
 |シノニム|マップされます。|  
 |DB2 での標準的な関数|SSMA では、同等の関数は、SQL Server で使用できるときに、DB2 の標準的な関数がマップされます。|  
-|承認|マップされていません。|  
+|Authorization|マップされていません。|  
 |述語|マップされます。|  
 |SELECT INTO ステートメント|マップされていません。|  
 |値 INTO ステートメント|マップされていません。|  

@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 80676831-6488-4dad-a558-c47c52256a22
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 5e3b29fd5f4fab7e487be5be18752ac7de892537
-ms.sourcegitcommit: 1a5448747ccb2e13e8f3d9f04012ba5ae04bb0a3
+ms.openlocfilehash: d1aa5b628bec9399374b94a2cd78090207bf09b7
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51560299"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67922985"
 ---
 # <a name="address-book-command-buttons"></a>アドレス帳のコマンド ボタン
 アドレス帳アプリケーションには、次のコマンド ボタンが含まれます。  
@@ -85,7 +84,7 @@ End Sub
   
  ときに`DC1.CancelUpdate`実行されると、ユーザーが行ったデータ グリッドで従業員レコードを最後のクエリまたは更新後の編集を破棄します。 元の値が復元されます。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [アドレス帳のナビゲーション ボタン](../../../ado/guide/remote-data-service/address-book-navigation-buttons.md)   
  [DataControl オブジェクト (RDS)](../../../ado/reference/rds-api/datacontrol-object-rds.md)
 

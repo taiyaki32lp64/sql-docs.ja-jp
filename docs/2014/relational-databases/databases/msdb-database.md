@@ -16,11 +16,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: cee4c5d802447488930ffd04d698edcd2015e86b
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52811894"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62871713"
 ---
 # <a name="msdb-database"></a>msdb データベース
   **msdb** データベースは、警告やジョブのスケジュール設定のために [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェントによって使用されます。また、その他の [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]、[!INCLUDE[ssSB](../../includes/sssb-md.md)]、データベース メールなどの機能でも使用されます。  
@@ -52,7 +52,7 @@ ms.locfileid: "52811894"
 |ANSI_NULLS|OFF|はい|  
 |ANSI_PADDING|OFF|はい|  
 |ANSI_WARNINGS|OFF|はい|  
-|ARITHABORT|OFF|はい|  
+|ARITHABORT|OFF|[はい]|  
 |AUTO_CLOSE|OFF|はい|  
 |AUTO_CREATE_STATISTICS|ON|はい|  
 |AUTO_SHRINK|OFF|はい|  
@@ -62,7 +62,7 @@ ms.locfileid: "52811894"
 |CONCAT_NULL_YIELDS_NULL|OFF|はい|  
 |CURSOR_CLOSE_ON_COMMIT|OFF|はい|  
 |CURSOR_DEFAULT|GLOBAL|はい|  
-|データベース可用性オプション|ONLINE<br /><br /> MULTI_USER<br /><br /> READ_WRITE|いいえ<br /><br /> はい<br /><br /> はい|  
+|データベース可用性オプション|ONLINE<br /><br /> MULTI_USER<br /><br /> READ_WRITE|いいえ<br /><br /> はい<br /><br /> [はい]|  
 |DATE_CORRELATION_OPTIMIZATION|OFF|はい|  
 |DB_CHAINING|ON|はい|  
 |ENCRYPTION|OFF|いいえ|  
@@ -72,7 +72,7 @@ ms.locfileid: "52811894"
 |QUOTED_IDENTIFIER|OFF|はい|  
 |READ_COMMITTED_SNAPSHOT|OFF|いいえ|  
 |RECOVERY|SIMPLE|はい|  
-|RECURSIVE_TRIGGERS|OFF|はい|  
+|RECURSIVE_TRIGGERS|OFF|[はい]|  
 |Service Broker のオプション|ENABLE_BROKER|はい|  
 |TRUSTWORTHY|ON|はい|  
   

@@ -14,11 +14,11 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: a1457a6d407b2b20c28e93c0ed681ab1dc8109d4
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54127462"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62721159"
 ---
 # <a name="lesson-1-creating-windows-accounts-for-replication"></a>レッスン 1:レプリケーション用アカウントの Windows の作成
   このレッスンでは、レプリケーション エージェントを実行するための Windows アカウントを作成します。 また、次のエージェントを実行するための別の Windows アカウントをローカル サーバー上に作成します。  
@@ -62,9 +62,9 @@ ms.locfileid: "54127462"
 6.  **[閉じる]** をクリックします。  
   
 ## <a name="next-steps"></a>次の手順  
- ここでは、レプリケーション エージェントを実行するための Windows アカウントを作成しました。 次はスナップショット フォルダーを設定します。 参照してください[レッスン 2。スナップショット フォルダーの準備](lesson-2-preparing-the-snapshot-folder.md)します。  
+ ここでは、レプリケーション エージェントを実行するための Windows アカウントを作成しました。 次はスナップショット フォルダーを設定します。 「[レッスン 2:スナップショット フォルダーの準備](lesson-2-preparing-the-snapshot-folder.md)します。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [レプリケーション エージェントの概要](agents/replication-agents-overview.md)  
   
   

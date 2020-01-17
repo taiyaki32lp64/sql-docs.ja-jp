@@ -1,5 +1,5 @@
 ---
-title: 属性名とデータ型を変更する (マスター データ サービス) | Microsoft Docs
+title: 属性名とデータ型を変更する
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -10,21 +10,21 @@ ms.topic: conceptual
 helpviewer_keywords:
 - attributes [Master Data Services], changing name
 ms.assetid: d348f238-f59d-41c7-ad20-3ccd55bfd9e5
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: erikre
-ms.openlocfilehash: 6348cc9a2b64501f7a639d480a7112bf28923585
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
-ms.translationtype: HT
+ms.openlocfilehash: c5885c2aebb718f212ac22bee8773ceab2df2f6e
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52785278"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73729680"
 ---
 # <a name="change-an-attribute-name-and-data-type-master-data-services"></a>属性名とデータ型を変更する (マスター データ サービス)
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-  [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]では、属性の名前を変更できます。  
+  [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] では、属性の名前を変更できます。  
   
 ## <a name="prerequisites"></a>Prerequisites  
  この手順を実行するには  

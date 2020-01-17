@@ -3,22 +3,24 @@ title: Oracle データ ソースに接続する (SQL Server インポートお�
 ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
-ms.prod_service: integration-services
 ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: b0bd1f5a-34dd-4be3-9ac8-f9f87727781b
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: 9bbb8092756cd12599c17d8dd7abeaba774689f2
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: faa8517c24a3db78ee7e7b53ff0151be93a87ba2
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47761900"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71285433"
 ---
 # <a name="connect-to-an-oracle-data-source-sql-server-import-and-export-wizard"></a>Oracle データ ソースに接続する (SQL Server インポートおよびエクスポート ウィザード)
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
 このトピックでは、SQL Server インポートおよびエクスポート ウィザードの **[データ ソースの選択]** ページまたは **[変換先の選択]** ページから **Oracle** データ ソースに接続する方法を説明します。 Oracle への接続に使用できるいくつかのデータ プロバイダーがあります。
 
 > [!IMPORTANT]
@@ -62,7 +64,7 @@ ODBC ドライバーの名前、**Oracle 用 Microsoft ODBC**。
 **[サーバー]**  
 Oracle サーバーの名前。 
 
-**[Uid]** と **[Pwd]**   
+**[Uid]** と **[Pwd]**    
 接続するユーザー ID とパスワード。
 
 ### <a name="connection-string-format"></a>接続文字列の形式
@@ -73,7 +75,7 @@ Oracle サーバーの名前。
     ```
 
 ### <a name="enter-the-connection-string"></a>接続文字列を入力する
-**[データ ソースの選択]** ページまたは **[変換先の選択]** ページで、**[ConnectionString]** フィールドに接続文字列を入力するか、**[Dsn]** フィールドに DSN 名を入力します。 接続文字列を入力すると、ウィザードによって文字列が解析され、個々のプロパティとその値が一覧に表示されます。
+**[データ ソースの選択]** ページまたは **[変換先の選択]** ページで、 **[ConnectionString]** フィールドに接続文字列を入力するか、 **[Dsn]** フィールドに DSN 名を入力します。 接続文字列を入力すると、ウィザードによって文字列が解析され、個々のプロパティとその値が一覧に表示されます。
 
 接続文字列を入力した後に表示される画面を次に示します。
 

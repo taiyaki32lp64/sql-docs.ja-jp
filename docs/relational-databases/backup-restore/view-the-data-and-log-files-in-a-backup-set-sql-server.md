@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: abb6420c-f809-426e-aeb4-d0a74989cf39
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 1bd62b9ac8b00eff554556f09c56437a31c664a2
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 7b1fa3ed90caa1e7791aff61ca5394a77d72b384
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47664850"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72908797"
 ---
 # <a name="view-the-data-and-log-files-in-a-backup-set-sql-server"></a>バックアップ セットに含まれているデータ ファイルおよびログ ファイルの表示
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -34,7 +33,7 @@ ms.locfileid: "47664850"
   
 -   **作業を開始する準備:**  
   
-     [Security](#Security)  
+     [セキュリティ](#Security)  
   
 -   **バックアップ セットに含まれているデータ ファイルおよびログ ファイルを表示する方法:**  
   
@@ -42,7 +41,7 @@ ms.locfileid: "47664850"
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> 作業を開始する準備  
+##  <a name="BeforeYouBegin"></a> はじめに  
   
 ###  <a name="Security"></a> セキュリティ  
  セキュリティについては、「[RESTORE FILELISTONLY &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-filelistonly-transact-sql.md)」を参照してください。  
@@ -63,7 +62,7 @@ ms.locfileid: "47664850"
 4.  **[ページの選択]** ペインの **[ファイル]** をクリックします。  
   
 5.  **[データベース ファイル]** グリッドでデータとログ ファイルの一覧およびプロパティを確認します。  
-  
+
 ##  <a name="TsqlProcedure"></a> Transact-SQL の使用  
   
 #### <a name="to-view-the-data-and-log-files-in-a-backup-set"></a>バックアップ セットに含まれているデータ ファイルおよびログ ファイルを表示するには  

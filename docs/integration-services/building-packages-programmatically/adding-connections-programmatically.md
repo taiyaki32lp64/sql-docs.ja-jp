@@ -22,17 +22,20 @@ helpviewer_keywords:
 - SSIS connection managers
 - adding package connections
 ms.assetid: d90716d1-4c65-466c-b82c-4aabbee1e3e5
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: 6265e8db01c2b2baf26b7e0f9af4679dcec3b119
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: dbeccf07c052eb99c3a110cc5f3d8811cf9529ce
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51642259"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71299095"
 ---
 # <a name="adding-connections-programmatically"></a>プログラムによる接続の追加
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager> クラスは、外部データ ソースへの物理接続を表します。 <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager> クラスは、ランタイムから接続の実装詳細を分離します。 これにより、ランタイムは、一貫した予測可能な方法でそれぞれの接続マネージャーとやり取りを行うことができます。 接続マネージャーには、<xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager.Name%2A>、<xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager.ID%2A>、<xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager.Description%2A>、および <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager.ConnectionString%2A> など、すべての接続に共通のストック プロパティのセットが含まれています。 ただし、接続マネージャーを構成するために必要なプロパティは、通常 <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager.ConnectionString%2A> および <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager.Name%2A> プロパティのみです。 接続クラスが **Open** や **Connect** などのメソッドを公開して物理的にデータ ソースへの接続を確立する他のプログラミング パラダイムと異なり、ランタイム エンジンは、パッケージの実行中にそのパッケージのすべての接続を管理します。  
   
  <xref:Microsoft.SqlServer.Dts.Runtime.Connections> クラスは、パッケージに追加されて実行時に使用できる接続マネージャーのコレクションです。 コレクションの <xref:Microsoft.SqlServer.Dts.Runtime.Connections.Add%2A> メソッドを使用し、接続マネージャーの種類を示す文字列を指定することによって、接続マネージャーをコレクションに追加できます。 <xref:Microsoft.SqlServer.Dts.Runtime.Connections.Add%2A> メソッドは、パッケージに追加された <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager> のインスタンスを返します。  

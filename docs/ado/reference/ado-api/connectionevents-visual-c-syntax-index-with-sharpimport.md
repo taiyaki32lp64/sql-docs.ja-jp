@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: dd052d36-7730-4400-822b-0544fb1992b4
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: a75f086a4e86ec88888967879c5dca119769ffbd
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e813759c6500d8982145d12bac57f75448a9574d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47709452"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67919463"
 ---
 # <a name="connectionevents-visual-c-syntax-index-with-import"></a>ConnectionEvents (Visual C 構文のインデックスで #import)
 ## <a name="events"></a>イベント  

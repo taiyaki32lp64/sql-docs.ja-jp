@@ -10,15 +10,15 @@ helpviewer_keywords:
 - / (divide)
 - divide operator (/)
 ms.assetid: 5bde9223-872d-443e-8a27-57735e1d8f3d
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: bf72606d04d02cda0ec656509f56fc636ee1f6e5
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: af4f0f53a1822d2fd45fdbaacfd9ab05d783c237
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52810194"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62769329"
 ---
 # <a name="divide-ssis-expression"></a>除算 (SSIS 式)
   最初の数値式を 2 番目の数値式で除算します。  
@@ -65,7 +65,7 @@ dividend / divisor
 ListPrice / StandardCost  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [演算子の優先順位と結合規則](operator-precedence-and-associativity.md)   
  [演算子 &#40;SSIS 式&#41;](operators-ssis-expression.md)  
   

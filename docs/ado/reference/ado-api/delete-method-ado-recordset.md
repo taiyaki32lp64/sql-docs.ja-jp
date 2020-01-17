@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 1eb9209c-602c-4507-b0c2-6527a599b67d
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 272b953a39a9ccbb01d94acc59d374304bda3ad0
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b978e3d885e3ff06dda18859384f88eb4c564254
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47770346"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67919123"
 ---
 # <a name="delete-method-ado-recordset"></a>Delete メソッド (ADO Recordset)
 現在のレコードまたはレコードのグループを削除します。  
@@ -57,7 +56,7 @@ recordset.Delete AffectRecords
 ## <a name="applies-to"></a>適用対象  
  [Recordset オブジェクト (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [Delete メソッドの例 (VB)](../../../ado/reference/ado-api/delete-method-example-vb.md)   
  [Delete メソッドの例 (VBScript)](../../../ado/reference/ado-api/delete-method-example-vbscript.md)   
  [Delete メソッドの例 (vc++)](../../../ado/reference/ado-api/delete-method-example-vc.md)   

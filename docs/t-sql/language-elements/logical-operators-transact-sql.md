@@ -17,15 +17,14 @@ helpviewer_keywords:
 - "FALSE"
 - logical operators [SQL Server], Transact-SQL
 ms.assetid: edd92f08-76fb-4fd7-a4b6-8520d6a81df1
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: 75f5bc7221b5f73eeac9328ef60652735770877a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: a26896076c0c9ee12eae61a3e324090379b10df2
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47658770"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68122126"
 ---
 # <a name="logical-operators-transact-sql"></a>論理演算子 (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]

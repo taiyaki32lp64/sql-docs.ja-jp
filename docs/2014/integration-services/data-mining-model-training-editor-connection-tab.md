@@ -4,23 +4,22 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.dmmtrainingtransformation.connection.f1
 helpviewer_keywords:
 - Data Mining Model Training Editor
 ms.assetid: 098fbb1a-2a26-4288-9f68-d6233cb388ad
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 635e98ed9ad3f365f30f96653ad77a906ca0d81a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 64b31656796c1875d11c6ab1aa9524f4b149d7ee
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48201294"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66059876"
 ---
 # <a name="data-mining-model-training-editor-connection-tab"></a>[データ マイニング モデル トレーニング エディター] ([接続] タブ)
   **[データ マイニング モデル トレーニング エディター]** ダイアログ ボックスの **[接続]** ページを使用すると、トレーニング用のマイニング モデルを選択できます。  
@@ -45,6 +44,6 @@ ms.locfileid: "48201294"
   
 ## <a name="see-also"></a>参照  
  [Integration Services のエラーおよびメッセージのリファレンス](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [データ マイニング モデル トレーニング エディター&#40;列 タブ&#41;](../../2014/integration-services/data-mining-model-training-editor-columns-tab.md)  
+ [データ マイニング モデル トレーニング エディター ([列] タブ)](../../2014/integration-services/data-mining-model-training-editor-columns-tab.md)  
   
   

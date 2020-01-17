@@ -7,15 +7,15 @@ ms.reviewer: ''
 ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: eaeafd65-d0d4-4a7d-a3ad-110ef644e90b
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: aab1eff896ba602f118606b8f80894260e26f7ec
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 3c690becefb71b71c154131b6957c1063872b540
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56028923"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65489126"
 ---
 # <a name="task-5-exporting-cleansing-results-to-an-excel-file"></a>タスク 5:Excel ファイルにクレンジングの結果をエクスポートする
   ここでは、クレンジング アクティビティから Excel ファイルに結果をエクスポートします。 参照してください[エクスポート ステージ](https://msdn.microsoft.com/library/hh213061.aspx#Export)詳細についてはトピック。  
@@ -42,7 +42,7 @@ ms.locfileid: "56028923"
   
     3.  検索**Los Angeles**ことを確認し、**状態**に設定されている**CA**します。  
   
-    4.  条件がないことを確認します。 **co.**、 **Corp.**、と**Inc.** します。  
+    4.  条件がないことを確認します。 **co.** 、 **Corp.** 、と**Inc.** します。  
   
     5.  削除、 **Address Validation**列、スプレッドシートから、excel ファイルを保存します。 この追加列は Address Validation 複合ドメインに対応します。  
   

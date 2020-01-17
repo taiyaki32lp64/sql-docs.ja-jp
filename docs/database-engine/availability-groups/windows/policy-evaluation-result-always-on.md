@@ -1,6 +1,6 @@
 ---
-title: ポリシー評価の結果ページ (Always On ダッシュボード) | Microsoft Docs
-description: SQL Server Management Studio の [Always On ダッシュボード] 内にある [ポリシー評価の結果ページ] の説明。
+title: ポリシー評価の結果ページ (Always On ダッシュボード)
+description: SQL Server Management Studio (SSMS) の [Always On ダッシュボード] 内にある [ポリシー評価の結果ページ] の説明。
 ms.custom: seodec18
 ms.date: 05/17/2016
 ms.prod: sql
@@ -13,35 +13,28 @@ f1_keywords:
 ms.assetid: 703e947f-d345-4506-be21-34bfbfa7bca6
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 907be803cc448a5b8424adf4e968cb4520c52cd3
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: ff428ab60ad51cfdf2cd19454c34e90644f30b5d
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53201931"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75235437"
 ---
 # <a name="policy-evaluation-result-page-always-on-dashboard"></a>ポリシー評価の結果ページ (Always On ダッシュボード)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
   AlwaysOn ダッシュボードの **[ポリシー評価の結果]** ページは、現在のポリシーの問題を表示するために使用します。  
-  
- **このトピックの内容**  
-  
--   [ダイアログ ボックスのオプション](#Options)  
-  
--   [関連タスク](#RelatedTasks)  
-  
+    
 ##  <a name="Options"></a> ダイアログ ボックスのオプション  
  **[検出された問題]**  
  検出された各問題の行を表示します。 問題に関連付けられているアイコンでは、次のように問題の重大度が視覚的に示されます。  
   
-|アイコン|Severity|  
+|アイコン|重大度|  
 |----------|--------------|  
-|![UI アイコン: エラー](../../../database-engine/availability-groups/windows/media/repl-icon-error.gif "UI アイコン: エラー")|重大|  
+|![UI アイコン: エラー](../../../database-engine/availability-groups/windows/media/repl-icon-error.gif "UI アイコン: エラー")|Critical|  
 |![UI アイコン: 警告](../../../database-engine/availability-groups/windows/media/repl-icon-warn.gif "UI アイコン: 警告")|警告|  
   
- **[説明]**  
+ **説明**  
  このグリッドには、選択した問題の簡単な説明が表示されます。  
   
  **その他の情報**  

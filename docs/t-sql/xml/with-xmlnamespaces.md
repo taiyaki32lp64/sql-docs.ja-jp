@@ -20,13 +20,12 @@ helpviewer_keywords:
 ms.assetid: 3b32662b-566f-454d-b7ca-e247002a9a0b
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: ee0c340ebc917d7ced83b453d1cfd6126ff42f2e
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 86bdd12d5dabd7ad74662cd47b2004594328a6c0
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56026603"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68048139"
 ---
 # <a name="with-xmlnamespaces"></a>WITH XMLNAMESPACES
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -87,7 +86,7 @@ DEFAULT <xml_namespace_uri>
   
 -   クエリで ELEMENTS XSINIL ディレクティブが使用されている場合、XML 名前空間プレフィックス `xsi` は再宣言できません。  
 
--   xsi 標準名前空間を使用するために 'http://www.w3.org/2001/XMLSchema-instance' を宣言する必要はありません。 'http://www.w3.org/2001/XMLSchema-instance' スキーマが xml ドキュメントで正しく宣言されている限り、未指定の場合は XML/XPATH プロセッサによって暗黙的に追加され、xpath 式で xsi プレフィックスを使用できます。
+-   xsi 標準名前空間を使用するために 'http://www.w3.org/2001/XMLSchema-instance ' を宣言する必要はありません。 'http://www.w3.org/2001/XMLSchema-instance ' スキーマが xml ドキュメントで正しく宣言されている限り、未指定の場合は XML/XPATH プロセッサによって暗黙的に追加され、xpath 式で xsi プレフィックスを使用できます。
 
 -   URI 文字列値は、現在のデータベースの照合順序のコード ページに基づいてエンコードされ、内部で Unicode に変換されます。  
   

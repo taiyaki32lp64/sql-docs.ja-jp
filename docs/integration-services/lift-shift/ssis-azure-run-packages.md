@@ -9,16 +9,19 @@ ms.custom: ''
 ms.technology: integration-services
 author: swinarko
 ms.author: sawinark
-ms.reviewer: douglasl
-manager: craigg
-ms.openlocfilehash: 129b2b760f755985028de214a1f18b00be004cd2
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.reviewer: maghan
+ms.openlocfilehash: 3469a162645816a3b90657b0c2a3b81b37e6cade
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47758150"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68054627"
 ---
 # <a name="run-sql-server-integration-services-ssis-packages-deployed-in-azure"></a>Azure でデプロイされている SQL Server Integration Services (SSIS) パッケージを実行する
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
 
 この記事で説明する方法の 1 つを選択することで、Azure SQL Database サーバーで SSISDB カタログにデプロイされている SSIS パッケージを実行できます。 パッケージは直接実行するか、Azure Data Factory パイプラインの一部として実行できます。 Azure 上の SSIS の概要については、「[Azure で SSIS パッケージをデプロイし、実行する](ssis-azure-lift-shift-ssis-packages-overview.md)」を参照してください。
 
@@ -41,15 +44,15 @@ ms.locfileid: "47758150"
 
 ## <a name="ssms"></a> SSMS でのパッケージの実行
 
-SQL Server Management Studio (SSMS) では、SSIS カタログ データベース SSISDB にデプロイされたパッケージを右クリックして **[実行]** を選択することで、**[パッケージの実行]** ダイアログ ボックスを開くことができます。 詳細については、「[SQL Server Management Studio (SSMS) を使用して SSIS プロジェクトを配置する](../ssis-quickstart-run-ssms.md)」を参照してください。
+SQL Server Management Studio (SSMS) では、SSIS カタログ データベース SSISDB にデプロイされたパッケージを右クリックして **[実行]** を選択することで、 **[パッケージの実行]** ダイアログ ボックスを開くことができます。 詳細については、「[SQL Server Management Studio (SSMS) を使用して SSIS プロジェクトを配置する](../ssis-quickstart-run-ssms.md)」を参照してください。
 
 ## <a name="sproc"></a> ストアド プロシージャでパッケージを実行する
 
 Azure SQL Database に接続し、Transact-SQL コードを実行できるあらゆる環境で、次のストアド プロシージャを呼び出すことでパッケージを実行できます。
 
-1. **[catalog].[create_execution]**. 詳細については、「[catalog.create_execution](../system-stored-procedures/catalog-create-execution-ssisdb-database.md)」を参照してください。
+1. **[catalog].[create_execution]** . 詳細については、「[catalog.create_execution](../system-stored-procedures/catalog-create-execution-ssisdb-database.md)」を参照してください。
 
-2. **[catalog].[set_execution_parameter_value]**. 詳細については、「[catalog.set_execution_parameter_value](../system-stored-procedures/catalog-set-execution-parameter-value-ssisdb-database.md)」を参照してください。
+2. **[catalog].[set_execution_parameter_value]** . 詳細については、「[catalog.set_execution_parameter_value](../system-stored-procedures/catalog-set-execution-parameter-value-ssisdb-database.md)」を参照してください。
 
 3. **[catalog].[start_execution]** 詳細については、「[catalog.start_execution](../system-stored-procedures/catalog-start-execution-ssisdb-database.md)」を参照してください。
 

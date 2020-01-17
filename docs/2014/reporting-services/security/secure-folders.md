@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 helpviewer_keywords:
 - high-security folders [Reporting Services]
@@ -13,15 +12,15 @@ helpviewer_keywords:
 - folders [Reporting Services], security
 - security [Reporting Services], folders
 ms.assetid: 0fd91f77-0143-476b-9af0-87293be78e44
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 055c0b60ae13f1933d0de753a3096f9b48786aa2
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 201facc6500339eb8804f3de22d25337dcc07089
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56034823"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66101709"
 ---
 # <a name="secure-folders"></a>フォルダーをセキュリティで保護する
   フォルダーのセキュリティは、レポート サーバーのすべてのコンテンツをセキュリティで保護するための基盤となります。 セキュリティはフォルダー階層全体に継承されるので、フォルダー階層の大きさにかかわらず、特定のアクセス権を許可することができます。  

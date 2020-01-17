@@ -19,11 +19,11 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: ea37fdca56c222cbebbdcb00956938a92fe2c203
-ms.sourcegitcommit: 78e32562f9c1fbf2e50d3be645941d4aa457e31f
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/08/2019
-ms.locfileid: "54100557"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68211682"
 ---
 # <a name="view-user-defined-functions"></a>ユーザー定義関数の表示
   [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] のユーザー定義関数の定義またはプロパティに関する情報は、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] または [!INCLUDE[tsql](../../includes/tsql-md.md)]を使用して取得できます。 関数のデータが元のテーブルからどのように抽出されているのかを理解したり、関数で定義されているデータを確認するために、関数の定義を調べたい場合があります。  
@@ -76,7 +76,7 @@ ms.locfileid: "54100557"
      **[サーバー]**  
      現在のサーバー インスタンスの名前です。  
   
-     **ユーザー**  
+     **User**  
      この接続のユーザーの名前です。  
   
      **[作成日]**  

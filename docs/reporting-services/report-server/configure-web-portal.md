@@ -8,14 +8,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - the web portal [Reporting Services], configuring
 ms.assetid: e918986c-af15-48f6-8178-256aed829c6a
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 01c235ec53d0b8f70611b8523a4286790623d990
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 962ab17170c69b6225f852f0b625a6cd50fa20d3
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52415409"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63308398"
 ---
 # <a name="configure-the-web-portal"></a>Web ポータルの構成
 
@@ -44,7 +44,7 @@ Web ポータルは、ユーザーが Web ブラウザーでアクセスする W
 
 1. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 構成ツールを起動して、レポート サーバー インスタンスに接続します。
 
-2. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 構成ツールで、**[Web ポータル URL]** を選択して、URL を構成するページを開きます。
+2. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 構成ツールで、 **[Web ポータル URL]** を選択して、URL を構成するページを開きます。
 
 3. Web ポータルの一意の仮想ディレクトリ名を入力します。
 
@@ -80,7 +80,7 @@ Web ポータルは、ユーザーが Web ブラウザーでアクセスする W
 
 2. Internet Explorer を開きます。
 
-3. Web ポータルの URLを入力します。 既定では、 https://\<**your-server-name**>/reports ですが、Reporting Services を名前付きインスタンスとしてインストールした場合、既定の URL は https://\<**your-server-name**>/reports\<**_instancename**> になります。
+3. Web ポータルの URLを入力します。 既定では、 https://\<**your-server-name**>/reports ですが、Reporting Services を名前付きインスタンスとしてインストールした場合、既定の URL は https://\<**your-server-name**>/reports\< **_instancename**> になります。
 
 4. **[サイトの設定]** を選択します。
 

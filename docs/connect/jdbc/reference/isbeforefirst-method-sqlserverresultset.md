@@ -1,5 +1,5 @@
 ---
-title: isBeforeFirst メソッド (SQLServerResultSet) |Microsoft Docs
+title: isBeforeFirst メソッド (SQLServerResultSet) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: e0e2bd28-6949-47dc-b9dd-145ffb337069
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 77ff7c0808f2d6e53fc15814612352abe3ad2479
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ffe17993b3a03563ec20e8f509e6eae2f6ed47cb
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47783910"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67977793"
 ---
 # <a name="isbeforefirst-method-sqlserverresultset"></a>isBeforeFirst メソッド (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -36,13 +35,13 @@ public boolean isBeforeFirst()
 ```  
   
 ## <a name="return-value"></a>戻り値  
- **true**最初の行の前にカーソルがある場合。 **false**カーソルがそれ以外の場所にある場合、または結果セットに行が含まれていない場合。  
+ カーソルが最初の行の前にある場合は**true** 。 カーソルが他の位置にある場合、または結果セットに行が含まれていない場合は**false** 。  
   
 ## <a name="exceptions"></a>例外  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- この isBeforeFirst メソッドは、java.sql.ResultSet インターフェイスの isBeforeFirst メソッドによって指定されます。  
+ この isBeforeFirst メソッドは、java. ResultSet インターフェイスの isBeforeFirst メソッドによって指定されます。  
   
  このメソッドが動的カーソル (順方向専用、読み取り専用カーソルを含む) で使用され、selectMethod 接続プロパティが "cursor" に設定されている場合は、例外が発生します。  
   

@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: 07f3f645-f643-4d39-9a10-70a72f24e608
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 9e0db81314355b987d139b678d292f5cfe293a7e
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: 58f69b9f3088c063faa39da677f2865abdfc6476
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53206481"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68003011"
 ---
 # <a name="sqlforeignkeys-function"></a>SQLForeignKeys 関数
 **準拠**  
@@ -42,7 +41,7 @@ ms.locfileid: "53206481"
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
   
 SQLRETURN SQLForeignKeys(  
      SQLHSTMT       StatementHandle,  
@@ -219,7 +218,7 @@ SQLRETURN SQLForeignKeys(
 |-------------------|--------------------|-------------------|--------------------|--------------|  
 |顧客|CUSTID|ORDERS|CUSTID|1|  
   
-```  
+```cpp  
 #define TAB_LEN SQL_MAX_TABLE_NAME_LEN + 1  
 #define COL_LEN SQL_MAX_COLUMN_NAME_LEN + 1  
   

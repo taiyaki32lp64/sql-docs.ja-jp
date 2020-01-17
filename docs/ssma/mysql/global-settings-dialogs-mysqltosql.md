@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 6df20fbb-e92d-475f-a94d-aaf70b06eb9b
 author: Shamikg
 ms.author: Shamikg
-manager: craigg
-ms.openlocfilehash: bdcb3a3f5106a3a674ba8247b0315cf5461c3881
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 702f7b5ec8ea1fc5eeea7ce95fae84bdcb17418a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47764400"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68075427"
 ---
 # <a name="global-settings-dialogs-mysqltosql"></a>グローバル設定 (ダイアログ ボックス) (MySQLToSQL)
 ダイアログ ボックスのページを使用して、**グローバル設定** ダイアログ ボックスで、既定のユーザー アクションと SSMA に対する警告の設定を指定します。  

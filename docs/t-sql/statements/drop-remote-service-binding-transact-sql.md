@@ -21,13 +21,12 @@ helpviewer_keywords:
 ms.assetid: 377789b4-bf94-488f-8c20-687d0bae447a
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: 6abe725d180b36de3eeea53c59666da1322214bf
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 54890859e9ec27ebfb91009632245d4807f6897a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47666050"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68044044"
 ---
 # <a name="drop-remote-service-binding-transact-sql"></a>DROP REMOTE SERVICE BINDING (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -49,7 +48,7 @@ DROP REMOTE SERVICE BINDING binding_name
  削除するリモート サービス バインドの名前を指定します。 サーバー名、データベース名、スキーマ名は指定できません。  
   
 ## <a name="permissions"></a>アクセス許可  
- リモート サービス バインドを削除する権限は、既定では、リモート サービス バインドの所有者、db_owner 固定データベース ロールのメンバー、sysadmin 固定サーバー ロールのメンバーに与えられています。  
+ リモート サービス バインドを削除する権限は、既定で、リモート サービス バインドの所有者、db_owner 固定データベース ロールのメンバー、sysadmin 固定サーバー ロールのメンバーに与えられています。  
   
 ## <a name="examples"></a>使用例  
  次の例では、データベースからリモート サービス バインド `APBinding` を削除します。  

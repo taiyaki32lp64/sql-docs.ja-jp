@@ -11,15 +11,14 @@ helpviewer_keywords:
 - database diagrams [SQL Server], properties
 - diagrams [SQL Server], properties
 ms.assetid: 862b7c83-7878-49ad-84f0-67288d658ea8
-author: stevestein
-ms.author: sstein
-manager: craigg
-ms.openlocfilehash: b3090e9bea5af4205e125150d9cf94e4e6ff588d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 6d65dedfb6d2d1f3a2002c358a9ec7c65d0d54d5
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47747530"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68266864"
 ---
 # <a name="show-diagram-properties-visual-database-tools"></a>ダイアグラムのプロパティの表示 (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

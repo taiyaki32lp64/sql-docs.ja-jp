@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - QueryLogFileSize property
@@ -54,12 +53,12 @@ ms.assetid: 33fd90ee-cead-48f0-8ff9-9b458994c766
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: da1f12da9dc3ff3145e2fc1ea9f592e70cfe0c3c
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 81653d9b93a7dc8ec71a88e70cee8b2d68f33a8e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53374594"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66068916"
 ---
 # <a name="log-properties"></a>ログのプロパティ
   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] では、次の表に示すログ サーバー プロパティがサポートされています。 その他のサーバー プロパティとその設定方法の詳細については、「 [Configure Server Properties in Analysis Services](server-properties-in-analysis-services.md)」を参照してください。  
@@ -172,7 +171,7 @@ ms.locfileid: "53374594"
  このプロパティの既定値は空白です。その場合、既定で使用されるファイル名は FlightRecorderTraceDef.xml になります。  
   
 ## <a name="query-log"></a>クエリ ログ  
- **適用対象:** 多次元サーバー モードの場合のみ  
+ **適用対象:** 多次元サーバー モードのみ  
   
  **QueryLog\QueryLogFileName**  
  クエリ ログ ファイルの名前を指定する文字列プロパティです。 このプロパティは、データベース テーブル (既定の動作) ではなく、ディスク ファイルがログ記録に使用される場合にのみ適用されます。  
@@ -199,7 +198,7 @@ ms.locfileid: "53374594"
  このプロパティの既定値は False であり、サーバーによってログ テーブルが自動的に作成されず、クエリ イベントがログ記録されないことを示します。  
   
 > [!NOTE]  
->  クエリ ログの構成の詳細については、「 [Analysis Services クエリ ログの構成](https://go.microsoft.com/fwlink/?LinkId=81890)」を参照してください。  
+>  クエリ ログの構成の詳細については、次を参照してください。 [Analysis Services での操作を記録](../instances/log-operations-in-analysis-services.md)します。  
   
 ## <a name="trace"></a>Trace  
  **Trace\TraceBackgroundDistributionPeriod**  

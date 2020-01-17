@@ -1,22 +1,21 @@
 ---
-title: Services チュートリアル プロジェクトの分析の変更後のバージョンを使用して |Microsoft Docs
+title: 変更したバージョンの Analysis Services チュートリアルプロジェクトを使用する |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: 685aa217-de1b-4df2-bf22-095228c40775
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 763b1170ad0201c737e06e19c3dac8d58c6712ee
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 3f8a31fd2e6659f4d971ebb30bad7b2876dafa6f
+ms.sourcegitcommit: f5807ced6df55dfa78ccf402217551a7a3b44764
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53368884"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69493938"
 ---
 # <a name="using-a-modified-version-of-the-analysis-services-tutorial-project"></a>Analysis Services チュートリアル プロジェクトの修正バージョンの使用
   このチュートリアルの残りのレッスンでは、最初の 3 つのレッスンで作成した [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Tutorial プロジェクトの修正版を使用します。 まず、新しいテーブルと名前付き計算が **Adventure Works DW 2012** データ ソース ビューに追加されています。次に、新しいディメンションがプロジェクトおよび [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Tutorial キューブに追加されています。 そして、2 つ目のメジャー グループが追加されています。このメジャー グループには、2 番目のファクト テーブルのメジャーが含まれています。 修正されたこのプロジェクトを使用すれば、これまでに習得したスキルを繰り返し使用せずに、ビジネス インテリジェンス アプリケーションに機能を追加する方法を学習していくことができます。  
@@ -41,7 +40,7 @@ ms.locfileid: "53368884"
   
 ## <a name="loading-and-processing-the-enhanced-project"></a>修正したプロジェクトの読み込みと処理  
   
-1.  [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]の**ファイル**メニューのをクリックして**ソリューションを閉じる**を使用しないファイルを閉じます。  
+1.  [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]の**ファイル** メニューのをクリックして**ソリューションを閉じる**を使用しないファイルを閉じます。  
   
 2.  **[ファイル]** メニューの **[開く]** をポイントし、 **[プロジェクト/ソリューション]** をクリックします。  
   
@@ -57,7 +56,7 @@ ms.locfileid: "53368884"
 ### <a name="data-source-view"></a>[データ ソース ビュー]  
  修正したプロジェクトのデータ ソース ビューには、 [!INCLUDE[ssSampleDBDWobject](../includes/sssampledbdwobject-md.md)] データベースから取得された 1 つのファクト テーブルと 4 つのディメンション テーブルが追加されています。  
   
- 10 個のテーブルのデータ ソース ビュー、\<すべてのテーブル > ダイアグラムは整理します。 このため、テーブル間のリレーションシップがわかりにくく、簡単には特定のテーブルを探すことができません。 この問題を解決するために、テーブルを 2 つの論理ダイアグラムに整理します。2 つのダイアグラムとは、 **Internet Sales** ダイアグラムと **Reseller Sales** ダイアグラムです。 1 つのファクト テーブルに対し、これらのダイアグラムを 1 つずつ構成します。 1 つのダイアグラムにテーブルやそのリレーションシップをすべて表示しなくとも、論理ダイアグラムを作成することにより、複数のテーブルから特定のサブセットのみをデータ ソース ビューに表示し、操作できます。  
+ データソースビューにテーブルが10個ある場合\<は、ダイアグラム > ダイアグラムがすべていっぱいになっていることに注意してください。 このため、テーブル間のリレーションシップがわかりにくく、簡単には特定のテーブルを探すことができません。 この問題を解決するために、テーブルを 2 つの論理ダイアグラムに整理します。2 つのダイアグラムとは、 **Internet Sales** ダイアグラムと **Reseller Sales** ダイアグラムです。 1 つのファクト テーブルに対し、これらのダイアグラムを 1 つずつ構成します。 1 つのダイアグラムにテーブルやそのリレーションシップをすべて表示しなくとも、論理ダイアグラムを作成することにより、複数のテーブルから特定のサブセットのみをデータ ソース ビューに表示し、操作できます。  
   
 #### <a name="internet-sales-diagram"></a>Internet Sales ダイアグラム  
  **Internet Sales** ダイアグラムには、インターネット経由で直接顧客に販売された、 [!INCLUDE[ssSampleDBCoShort](../includes/sssampledbcoshort-md.md)] 製品の売上に関連するテーブルが含まれています。 このダイアグラムには、レッスン 1 で **Adventure Works DW 2012** データ ソース ビューに追加した、4 つのディメンション テーブルと 1 つのファクト テーブルがあります。 これらのテーブルを以下に示します。  
@@ -117,7 +116,7 @@ ms.locfileid: "53368884"
 ## <a name="next-task-in-lesson"></a>このレッスンの次の作業  
  [親子階層の親属性プロパティの定義](lesson-4-2-defining-parent-attribute-properties-in-a-parent-child-hierarchy.md) 
   
-## <a name="see-also"></a>参照  
- [Analysis Services プロジェクトの配置](../analysis-services/lesson-2-5-deploying-an-analysis-services-project.md)  
+## <a name="see-also"></a>関連項目  
+ [Analysis Services プロジェクトの配置](lesson-2-5-deploying-an-analysis-services-project.md)  
   
   

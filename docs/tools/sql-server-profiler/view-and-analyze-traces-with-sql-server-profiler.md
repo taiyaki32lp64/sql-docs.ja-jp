@@ -17,15 +17,14 @@ helpviewer_keywords:
 - Profiler [SQL Server Profiler], troubleshooting
 - traces [SQL Server], events
 ms.assetid: 17e821ca-a12e-4192-acc1-96765d9ae266
-author: stevestein
-ms.author: sstein
-manager: craigg
-ms.openlocfilehash: c299b42cd29d0e52ba6996e787a9e8ffc0c19718
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 02c30e9b80611753db7194b4114b967f4a286c07
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47827890"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68059641"
 ---
 # <a name="view-and-analyze-traces-with-sql-server-profiler"></a>SQL Server Profiler を使用したトレースの表示と分析
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -34,7 +33,7 @@ ms.locfileid: "47827890"
  [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]を使用してトレースを開くとき、そのトレース ファイルが [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] または SQL トレース システムのストアド プロシージャによって作成されている場合は、トレース ファイルに .trc というファイル拡張子が付いている必要はありません。  
   
 > [!NOTE]  
->  [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] は、SQL トレース .log ファイルと汎用 SQL スクリプト ファイルも読み取ることができます。 ファイル拡張子 .log がない SQL トレース ファイル、たとえば trace.txt を開く場合は、ファイル形式として **SQLTrace_Log** を指定します。  
+>  [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] は、SQL トレース ファイル (.log) と汎用 SQL スクリプト ファイルも読み取ることができます。 ファイル拡張子 .log がない SQL トレース ファイル、たとえば trace.txt を開く場合は、ファイル形式として **SQLTrace_Log** を指定します。  
   
  [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] の日付および時刻の表示形式は、トレース分析を行いやすいように設定できます。  
   

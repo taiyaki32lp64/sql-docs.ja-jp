@@ -17,16 +17,15 @@ helpviewer_keywords:
 - RIGHT function
 - character strings [SQL Server], RIGHT
 ms.assetid: 43f1fe1f-aa18-47e3-ba20-e03e32254a6d
-author: MashaMSFT
-ms.author: mathoma
-manager: craigg
+author: MikeRayMSFT
+ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 071cca59b0c0decd9dddceb26c7c1bf8ee944489
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 66627b7b430d15afe73ec823c0af90e2d19d9a39
+ms.sourcegitcommit: a1ddeabe94cd9555f3afdc210aec5728f0315b14
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47670240"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70123183"
 ---
 # <a name="right-transact-sql"></a>RIGHT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -58,7 +57,7 @@ RIGHT ( character_expression , integer_expression )
   
 ## <a name="examples"></a>使用例  
   
-### <a name="a-using-right-with-a-column"></a>A. 列を指定して RIGHT を使用する  
+### <a name="a-using-right-with-a-column"></a>A:列を指定して RIGHT を使用する  
  次の例では、[!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] データベース内の各担当者の名前の右端から 5 文字が返されます。  
   
 ```  
@@ -111,9 +110,7 @@ lters
  次の例では、`RIGHT` を使用して `abcdefg` という文字列の右端の 2 文字を返します。  
   
 ```  
--- Uses AdventureWorks  
-  
-SELECT TOP(1) RIGHT('abcdefg',2) FROM dbo.DimProduct;  
+SELECT RIGHT('abcdefg', 2); 
 ```  
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  

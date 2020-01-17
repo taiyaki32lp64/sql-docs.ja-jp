@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: b00ab550-5308-4cb8-8330-483cd1d25654
 author: julieMSFT
 ms.author: jrasnick
-manager: craigg
-ms.openlocfilehash: 3e102f509d289c4bc0e3a4a4100ec7c091636acd
-ms.sourcegitcommit: dd794633466b1da8ead9889f5e633bdf4b3389cd
+ms.openlocfilehash: 6ebda9e472f2b276b66d393a808aaac3e8b595b1
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54143412"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72907625"
 ---
 # <a name="enable-or-disable-a-plan-guide"></a>プラン ガイドの有効化または無効化
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -64,7 +63,7 @@ ms.locfileid: "54143412"
 3.  無効化または有効化するプラン ガイドを右クリックし、 **[無効化]** または **[有効化]** を選択します。  
   
 4.  **[プラン ガイドの無効化]** または **[プラン ガイドの有効化]** ダイアログ ボックスで、選択した動作が成功したことを確認し、 **[閉じる]** をクリックします。  
-  
+
 #### <a name="to-disable-or-enable-all-plan-guides-in-a-database"></a>データベース内のすべてのプラン ガイドを無効化または有効化するには  
   
 1.  プラス記号をクリックして、無効化または有効化するプラン ガイドのあるデータベースを展開し、プラス記号をクリックして **[プログラミング]** フォルダーを展開します。  

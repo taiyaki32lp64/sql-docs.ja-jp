@@ -26,17 +26,20 @@ helpviewer_keywords:
 - data cleaning [Integration Services]
 - duplicate data [Integration Services]
 ms.assetid: e43f17bd-9d13-4a8f-9f29-cce44cac1025
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: 48b6e5a48822401f543a494b8fd59638c4ea9609
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: e8cec010923591d3fc05ef2920578bdebc4f9f5c
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52540884"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71297937"
 ---
 # <a name="fuzzy-grouping-transformation"></a>あいまいグループ化変換
+
+[!INCLUDE[ssis-appliesto](../../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   あいまいグループ化変換は、重複部分と考えられるデータの行を識別し、データを標準化するときに使用するデータの正規行を選択することで、データ クリーニング タスクを実行します。  
   
 > [!NOTE]  
@@ -104,7 +107,7 @@ ms.locfileid: "52540884"
 > [!NOTE]  
 >  接続によって指定されるサーバーでは、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]が実行されている必要があります。 あいまいグループ化変換では、変換に対する完全な入力と同じサイズの一時データ オブジェクトが tempdb に作成されます。 変換の実行中は、これらの一時オブジェクトに対してサーバー クエリが発行されます。 この操作は、サーバーの全体のパフォーマンスに影響を与える可能性があります。  
   
-### <a name="options"></a>[変数]  
+### <a name="options"></a>オプション  
  **[キャッシュなし]**  
  既存の OLE DB 接続マネージャーを一覧から選択するか、 **[新規作成]** をクリックして新しい接続を作成します。  
   
@@ -114,11 +117,11 @@ ms.locfileid: "52540884"
 ## <a name="fuzzy-grouping-transformation-editor-columns-tab"></a>[あいまいグループ化変換エディター] ([列] タブ)
   **[あいまいグループ化変換エディター]** ダイアログ ボックスの **[列]** タブを使用すると、重複する値を持つ行をグループ化するための列を指定できます。  
   
-### <a name="options"></a>[変数]  
+### <a name="options"></a>オプション  
  **使用できる入力列**  
  重複する値を持つ行をグループ化するために使用する入力列を、この一覧から選択します。  
   
- **名前**  
+ **[名前]**  
  使用できる入力列の名前を表示します。  
   
  **[パススルー]**  
@@ -145,7 +148,7 @@ ms.locfileid: "52540884"
  **[数字]**  
  列データを比較する際の先頭および末尾の数字の有意性を指定します。 たとえば、先頭の数字が有意である場合、"123 Main Street" は "456 Main Street" と同じグループとは見なされません。  
   
-|ReplTest1|[説明]|  
+|[値]|[説明]|  
 |-----------|-----------------|  
 |**[Neither]**|先頭および末尾の数字は考慮されません。|  
 |**[Leading]**|先頭の数字のみが考慮されます。|  
@@ -161,7 +164,7 @@ ms.locfileid: "52540884"
 > [!NOTE]  
 >  あいまいグループ化変換の **Exhaustive** プロパティおよび **MaxMemoryUsage** プロパティは、 **[あいまいグループ化変換エディター]** ではアクセスできませんが、 **[詳細エディター]** を使用して設定できます。 これらのプロパティの詳細については、「 [Transformation Custom Properties](../../../integration-services/data-flow/transformations/transformation-custom-properties.md)」の「あいまいグループ化変換」を参照してください。  
   
-### <a name="options"></a>[変数]  
+### <a name="options"></a>オプション  
  **[入力キー列名]**  
  各入力行の一意の識別子を含む、出力列の名前を指定します。 **[_key_in]** 列は各行を一意に識別する値を持ちます。  
   

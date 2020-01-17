@@ -1,33 +1,34 @@
 ---
 title: PowerShell を使用した Always Encrypted の構成 | Microsoft Docs
 ms.custom: ''
-ms.date: 05/17/2017
+ms.date: 10/01/2019
 ms.prod: sql
 ms.reviewer: vanto
 ms.technology: security
 ms.topic: conceptual
 ms.assetid: 12f2bde5-e100-41fa-b474-2d2332fc7650
-author: VanMSFT
-ms.author: vanto
-manager: craigg
+author: jaszymas
+ms.author: jaszymas
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 529aaf3e6de3d748ee998b4b345bf90e84a885f1
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: 5c90ea22849dd1d0437cdf058f639bbe546ccab9
+ms.sourcegitcommit: 312b961cfe3a540d8f304962909cd93d0a9c330b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52407989"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73594413"
 ---
 # <a name="configure-always-encrypted-using-powershell"></a>Configure Always Encrypted using PowerShell
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
-SqlServer PowerShell モジュールは、Azure SQL Database および SQL Server 2016 両方で [Always Encrypted](../../../relational-databases/security/encryption/always-encrypted-database-engine.md) を構成するコマンドレットを提供します。
+SqlServer PowerShell モジュールによって、[!INCLUDE[ssSDSFull](../../../includes/sssdsfull-md.md)] と [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] の両方で、[Always Encrypted](../../../relational-databases/security/encryption/always-encrypted-database-engine.md) を構成するためのコマンドレットが提供されます。
 
-SqlServer モジュールの Always Encrypted コマンドレットはキーまたは機密データを操作するので、安全なコンピューターでコマンドレットを実行することが重要です。 Always Encrypted を管理するときは、SQL Server インスタンスをホストするコンピューターとは異なるコンピューターからコマンドレットを実行します。
+## <a name="security-considerations-when-using-powershell-to-configure-always-encrypted"></a>PowerShell を使用して Always Encrypted を構成するときのセキュリティに関する考慮事項
 
-Always Encrypted の主な目的は、データベース システムが侵害されても、暗号化された機密データが確実に保護されるようにすることにあるので、SQL Server コンピューター上でキーまたは機密データを処理する PowerShell スクリプトが実行されると、機能の効果が低下したり無効になったりするおそれがあります。 セキュリティ関連のその他の推奨事項については、 [Security Considerations for Key Management](../../../relational-databases/security/encryption/overview-of-key-management-for-always-encrypted.md#SecurityForKeyManagement)(キー管理でのセキュリティに関する考慮事項) をご覧ください。
+Always Encrypted の主な目的は、データベース システムが侵害されても、暗号化された機密データが確実に保護されるようにすることにあるので、SQL Server コンピューター上でキーまたは機密データを処理する PowerShell スクリプトが実行されると、機能の効果が低下したり無効になったりするおそれがあります。 セキュリティ関連のその他の推奨事項については、 [Security Considerations for Key Management](overview-of-key-management-for-always-encrypted.md#security-considerations-for-key-management)(キー管理でのセキュリティに関する考慮事項) をご覧ください。
 
-個々のコマンドレットに関する記事へのリンクは [このページの下](#aecmdletreference)にあります。
+PowerShell を使うと、役割の分離を有効または無効にして、Always Encrypted キーを管理することができ、キー ストアの実際の暗号鍵にアクセスするユーザーと、データベースにアクセスできるユーザーを制御できます。
+
+ 追加の推奨事項については、 [Security Considerations for Key Management](overview-of-key-management-for-always-encrypted.md#security-considerations-for-key-management)(キー管理でのセキュリティに関する考慮事項) を参照してください。
 
 ## <a name="prerequisites"></a>Prerequisites
 
@@ -51,14 +52,43 @@ Import-Module "SqlServer"
 ## <a name="connectingtodatabase"></a> データベースに接続する
 
 一部の Always Encrypted コマンドレットはデータベースのデータまたはメタデータを操作するので、最初にデータベースに接続する必要があります。 SqlServer モジュールを使用して Always Encrypted を構成するときに推奨されるデータベース接続方法は次の 2 つです。 
-1. SQL Server PowerShell を使用して接続します。
-2. SQL Server 管理オブジェクト (SMO) を使用して接続します。
+1. **Get-SqlDatabase** コマンドレットを使用して接続します。
+2. SQL Server PowerShell プロバイダーを使用して接続します。
+
+[!INCLUDE[freshInclude](../../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
+### <a name="using-get-sqldatabase"></a>Get-SqlDatabase の使用
+**Get SqlDatabase** コマンドレットを使うと、SQL Server または Azure SQL Database 内のデータベースに接続できます。 それによって返されるデータベース オブジェクトを、データベースに接続するコマンドレットの **InputObject** パラメーター使って渡すことができます。 
 
 ### <a name="using-sql-server-powershell"></a>SQL Server PowerShell の使用
 
-この方法は SQL Server の場合にのみ使用できます (Azure SQL Database では使用できません)。
+```
+# Import the SqlServer module
+Import-Module "SqlServer"  
 
-SQL Server PowerShell では、ファイル システムのパスの操作に一般的に使用されているコマンドと同様の Windows PowerShell の別名を使用して、パスを操作できます。 ターゲットのインスタンスおよびデータベースに移動した後、後続のコマンドレットは次の例で示すようにそのデータベースをターゲットにします。
+# Connect to your database
+# Set the valid server name, database name and authentication keywords in the connection string
+$serverName = "<Azure SQL server name>.database.windows.net"
+$databaseName = "<database name>"
+$connStr = "Server = " + $serverName + "; Database = " + $databaseName + "; Authentication = Active Directory Integrated"
+$database = Get-SqlDatabase -ConnectionString $connStr
+
+# List column master keys for the specified database.
+Get-SqlColumnMasterKey -InputObject $database
+```
+
+代わりに、パイプを使用することもできます。
+
+
+```
+$database | Get-SqlColumnMasterKey
+```
+
+### <a name="using-sql-server-powershell-provider"></a>SQL Server PowerShell プロバイダーの使用
+[SQL Server PowerShell プロバイダー](../../../powershell/sql-server-powershell-provider.md)を使うと、ファイル システム パスと同様のパスで SQL Server オブジェクトの階層が公開されます。 SQL Server PowerShell では、ファイル システムのパスの操作に一般的に使用されているコマンドと同様の Windows PowerShell の別名を使用して、パスを操作できます。 ターゲットのインスタンスおよびデータベースに移動した後、後続のコマンドレットでは次の例で示すようにそのデータベースがターゲットにされます。 
+
+> [!NOTE]
+> このデータベース接続方法は、SQL Server に対してのみ動作します (Azure SQL Database ではサポートされていません)。
 
 ```
 # Import the SqlServer module.
@@ -80,43 +110,11 @@ Import-Module "SqlServer"
 Get-SqlColumnMasterKey -Path SQLSERVER:\SQL\servercomputer\DEFAULT\Databases\yourdatabase
 ```
  
-### <a name="using-smo"></a>SMO の使用
-
-この方法は、Azure SQL Database と SQL Server の両方に使用できます。
-SMO では、 [データベース クラス](https://msdn.microsoft.com/library/microsoft.sqlserver.management.smo.database.aspx)のオブジェクトを作成した後、コマンドレットの **InputObject** パラメーターを使用してデータベースに接続するオブジェクトを渡すことができます。
-
-
-```
-# Import the SqlServer module
-Import-Module "SqlServer"  
-
-# Connect to your database (Azure SQL database).
-$serverName = "<Azure SQL server name>.database.windows.net"
-$databaseName = "<database name>"
-$connStr = "Server = " + $serverName + "; Database = " + $databaseName + "; Authentication = Active Directory Integrated"
-$connection = New-Object Microsoft.SqlServer.Management.Common.ServerConnection
-$connection.ConnectionString = $connStr
-$connection.Connect()
-$server = New-Object Microsoft.SqlServer.Management.Smo.Server($connection)
-$database = $server.Databases[$databaseName] 
-
-# List column master keys for the specified database.
-Get-SqlColumnMasterKey -InputObject $database
-```
-
-
-代わりに、パイプを使用することもできます。
-
-
-```
-$database | Get-SqlColumnMasterKey
-```
-
 ## <a name="always-encrypted-tasks-using-powershell"></a>PowerShell を使用した Always Encrypted のタスク
 
-- [PowerShell を使用して Always Encrypted キーの構成](../../../relational-databases/security/encryption/configure-always-encrypted-keys-using-powershell.md) 
+- [PowerShell を使用して Always Encrypted キーをプロビジョニングする](configure-always-encrypted-keys-using-powershell.md)
 - [PowerShell を使用した Always Encrypted キーの交換](../../../relational-databases/security/encryption/rotate-always-encrypted-keys-using-powershell.md)
-- [PowerShell を使用した列の暗号化の構成](../../../relational-databases/security/encryption/configure-column-encryption-using-powershell.md)
+- [PowerShell を使用して Always Encrypted で列を暗号化、再暗号化、復号化解除する](configure-column-encryption-using-powershell.md)
 
 
 ##  <a name="aecmdletreference"></a> Always Encrypted コマンドレット リファレンス
@@ -146,11 +144,9 @@ Always Encrypted では次の PowerShell コマンドレットを使用できま
 
 
 
-## <a name="additional-resources"></a>その他のリソース
+## <a name="see-also"></a>参照
 
-- [Always Encrypted (データベース エンジン)](../../../relational-databases/security/encryption/always-encrypted-database-engine.md)
+- [Always Encrypted](../../../relational-databases/security/encryption/always-encrypted-database-engine.md)
 - [Always Encrypted のキー管理の概要](../../../relational-databases/security/encryption/overview-of-key-management-for-always-encrypted.md)
-- [Always Encrypted と .NET Framework Data Provider for SQL Server を使用する](../../../relational-databases/security/encryption/always-encrypted-client-development.md)
 - [SQL Server Management Studio を使用した Always Encrypted の構成](../../../relational-databases/security/encryption/configure-always-encrypted-using-sql-server-management-studio.md)
-
-
+- [Always Encrypted を使用したアプリケーションの開発](always-encrypted-client-development.md)

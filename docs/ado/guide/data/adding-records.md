@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: dd34669e-6f06-403b-9241-1c85c82aecc2
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: a17e09df7c7235e1361aae79bd89152c290b1bdb
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 1f4ec0934fbf75de18f460abae84b8117e99f452
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47850410"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67926265"
 ---
 # <a name="adding-records-to-a-recordset"></a>レコードをレコード セットに追加します。
 使用して、 **AddNew**メソッドを作成し、既存の新しいレコードの初期化を**Recordset**します。 使用することができます、**サポート**メソッドを**CursorOptionEnum**の値**adAddNew**を現在のレコードを追加できるかどうかを確認する**レコードセット**オブジェクト。

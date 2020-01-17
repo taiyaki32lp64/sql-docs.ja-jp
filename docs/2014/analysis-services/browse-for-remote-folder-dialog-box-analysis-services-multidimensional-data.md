@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.browseforremotepartition.f1
@@ -13,17 +12,17 @@ ms.assetid: 1438c355-6a2c-4cf8-9b1d-19116fab45e7
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 691214181386bb5ec82394dfb6aadc1b0b76bf1f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 23b0125ab578ebb4fb8837c95ec61db900880ec6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48060055"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66064529"
 ---
 # <a name="browse-for-remote-folder-dialog-box-analysis-services---multidimensional-data"></a>[リモート フォルダーの参照] ダイアログ ボックス (Analysis Services - 多次元データ)
   **[リモート フォルダーの参照]** ダイアログ ボックスには、 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]のインスタンスに定義されている使用可能なログとデータ フォルダーが一覧表示されます。 一覧からフォルダーを選択するか、必要であれば別のフォルダーを指定します。 **[リモート フォルダーの参照]** ダイアログ ボックスを表示するには、次のいずれかの手順を行います。  
   
--   パーティション ウィザードの **[処理およびストレージの場所]** ページで、**[...]** ボタンをクリックします。  
+-   パーティション ウィザードの **[処理およびストレージの場所]** ページで、 **[...]** ボタンをクリックします。  
   
 -   **[データベースの復元]** ダイアログ ボックスの **[パーティション]** ページで、 **[別の場所を選択する]** オプションの **[同期先フォルダー]** 列にある **[...]** ボタンをクリックします。  
   
@@ -38,7 +37,7 @@ ms.locfileid: "48060055"
  **選択したパス**  
  入力して、 **[フォルダーの選択]** で選択したパスを変更するか、 **[フォルダーの選択]** に表示されていないフォルダーを選択します。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [Analysis Services のデザイナーおよびダイアログ ボックス&#40;多次元データ&#41;](analysis-services-designers-and-dialog-boxes-multidimensional-data.md)   
  [処理およびストレージの場所&#40;パーティション ウィザード&#41;](processing-and-storage-locations-partition-wizard.md)   
  [パーティション&#40;データベースの復元 ダイアログ ボックス&#41; &#40;Analysis Services - 多次元データ&#41;](partitions-restore-database-dialog-box-analysis-services-multidimensional-data.md)   

@@ -7,15 +7,15 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: f4088de3-16d8-419c-96a1-a2cd005d0a5b
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: c43885de9e2a6945a8a24263765df8ee8e26920a
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 3a1dd63030601ad05e0e2f3ccce09425c5aa829c
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52823376"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62767374"
 ---
 # <a name="step-4-adding-a-flat-file-destination"></a>手順 4:フラット ファイル変換先の追加
   Lookup Currency Key 変換のエラー出力では、参照操作に失敗したデータ行がスクリプト変換にリダイレクトされます。 スクリプト変換ではスクリプトが実行され、発生したエラーに関するさらに詳しい情報を記述したエラーの説明が取得されます。  
@@ -46,7 +46,7 @@ ms.locfileid: "52823376"
   
 11. [オプション] ペインで、 **[列]** をクリックします。  
   
-     ソース データ ファイルからの列に加え、いることを確認、3 つの新しい列が存在します。ErrorCode、ErrorColumn、および ErrorDescription です。 これらの列は、Lookup Currency Key 変換のエラー出力と Get Error Description 変換のスクリプトによって生成されたものです。これらの列は、失敗した行の問題を解決するために使用できます。  
+     ソース データ ファイルからの列に加え、いることを確認、3 つの新しい列が存在します。ErrorCode、ErrorColumn、ErrorDescription があります。 これらの列は、Lookup Currency Key 変換のエラー出力と Get Error Description 変換のスクリプトによって生成されたものです。これらの列は、失敗した行の問題を解決するために使用できます。  
   
 12. **[OK]** をクリックします。  
   

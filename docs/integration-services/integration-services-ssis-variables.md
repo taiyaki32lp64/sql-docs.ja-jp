@@ -16,17 +16,20 @@ helpviewer_keywords:
 - variables [Integration Services], about variables
 - values [Integration Services]
 ms.assetid: c1e81ad6-628b-46d4-9b09-d2866517b6ca
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: 35b990e553116d88764f4fa995935bc4ba90b22d
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 973e5e1449205d5e72abfa03068db3c8c3e98f87
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52512900"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71296161"
 ---
 # <a name="integration-services-ssis-variables"></a>Integration Services (SSIS) の変数
+
+[!INCLUDE[ssis-appliesto](../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   変数には、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] パッケージと、パッケージに含まれるコンテナー、タスク、およびイベント ハンドラーで、実行時に使用できる値が格納されます。 スクリプト タスクおよびスクリプト コンポーネント内のスクリプトも、変数を使用できます。 タスクとコンテナーにワークフロー内での順位を付ける優先順位制約では、制約の定義に式を含める場合に変数を使用できます。  
   
  変数は、次の目的で [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] パッケージ内で使用できます。  
@@ -132,7 +135,7 @@ ms.locfileid: "52512900"
 
 | データ型 | 既定値 |
 |---|---|
-| ブール値 | False |
+| Boolean | False |
 | 数値データ型とバイナリ データ型 | 0 (ゼロ) |
 | Char データ型と文字列データ型 | (空の文字列) |
 | Object | System.Object |
@@ -192,11 +195,11 @@ ms.locfileid: "52512900"
 ### <a name="add-variable-dialog-box"></a>[変数の追加] ダイアログ ボックス
 **[変数の追加]** ダイアログ ボックスを使用すると、新しい変数のプロパティを指定できます。  
   
-#### <a name="options"></a>[変数]  
+#### <a name="options"></a>オプション  
  **コンテナー**  
  一覧からコンテナーを選択します。 コンテナーにより、変数の有効範囲が定義されます。 パッケージまたはパッケージ内の実行可能ファイルがコンテナーになります。  
   
- **名前**  
+ **[名前]**  
  変数名を入力します。  
   
  **Namespace**  
@@ -221,7 +224,7 @@ ms.locfileid: "52512900"
   
 4.  削除する変数を選択し、 **[変数の削除]** をクリックします。  
   
-     [変数] ウィンドウに変数が表示されない場合は、**[グリッドのオプション]** をクリックし、**[すべてのスコープの変数を表示する]** を選択します。  
+     [変数] ウィンドウに変数が表示されない場合は、 **[グリッドのオプション]** をクリックし、 **[すべてのスコープの変数を表示する]** を選択します。  
   
 5.  **[変数の削除の確認]** ダイアログ ボックスが開いた場合は、 **[はい]** をクリックして確定します。  
   
@@ -237,7 +240,7 @@ ms.locfileid: "52512900"
   
 4.  変数を選択して、 **[変数の移動]** をクリックします。  
   
-     [変数] ウィンドウに変数が表示されない場合は、**[グリッドのオプション]** をクリックし、**[すべてのスコープの変数を表示する]** を選択します。  
+     [変数] ウィンドウに変数が表示されない場合は、 **[グリッドのオプション]** をクリックし、 **[すべてのスコープの変数を表示する]** を選択します。  
   
 5.  **[新しいスコープの選択]** ダイアログ ボックスで、パッケージまたはパッケージ内のコンテナー、タスク、またはイベント ハンドラーを選択して、変数のスコープを変更します。  
   
@@ -248,7 +251,7 @@ ms.locfileid: "52512900"
   
 -   [変数] ウィンドウ。  
   
--   [プロパティ] ウィンドウ。 **[プロパティ]** ウィンドウには、 **[変数]** ウィンドウでは使用できない変数 (Description、EvaluateAsExpression、Expression、ReadOnly、ValueType、および IncludeInDebugDump) を構成するためのプロパティが一覧表示されています。  
+-   [プロパティ] ウィンドウ。 **[プロパティ]** ウィンドウには、 **[変数]** ウィンドウでは使用できない変数を構成するための次のプロパティが一覧表示されています: Description、EvaluateAsExpression、Expression、ReadOnly、ValueType、IncludeInDebugDump。  
   
 > [!NOTE]  
 >  [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] には、RaiseChangedEvent プロパティを除き、更新できないプロパティを持つ一連のシステム変数もあります。  
@@ -289,7 +292,7 @@ ms.locfileid: "52512900"
   
 4.  必要に応じて、 **[変数]** ウィンドウで **[グリッドのオプション]** をクリックして、 **[変数]** ウィンドウに表示する列を選択したり、変数の一覧に適用するフィルターを選択したりします。  
   
-5.  一覧から変数を選択し、 **[名前]**、 **[データ型]**、 **[値]**、 **[名前空間]**、 **[Raise Change Event (変更イベントの発生)]**、 **[説明]** 、 **[式]** の各列の値を更新します。  
+5.  一覧から変数を選択し、 **[名前]** 、 **[データ型]** 、 **[値]** 、 **[名前空間]** 、 **[Raise Change Event (変更イベントの発生)]** 、 **[説明]** 、 **[式]** の各列の値を更新します。  
   
 6.  一覧で変数を選択し、 **[変数の移動]** をクリックしてスコープを変更します。  
   

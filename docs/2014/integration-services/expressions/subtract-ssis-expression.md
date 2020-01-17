@@ -10,15 +10,15 @@ helpviewer_keywords:
 - '- (subtract)'
 - subtract operator (-)
 ms.assetid: b48da086-37dd-460a-8a4b-912f52c9b158
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 7d23203fece79af9b52c363bc51b9e7442d82158
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 03ede2272de2c574909ed44bb0291b3c56911f0b
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52810414"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62768734"
 ---
 # <a name="--subtract-ssis-expression"></a>- (減算) (SSIS 式)
   最初の数値式から 2 番目の数値式を減算します。  

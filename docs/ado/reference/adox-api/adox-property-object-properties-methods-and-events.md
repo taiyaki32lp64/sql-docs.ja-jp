@@ -12,16 +12,15 @@ helpviewer_keywords:
 ms.assetid: 640780dc-5733-4f0c-9c11-6f43c1db5901
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 2c2ec51480d122f7db92ae4b8c217167cbfdfea2
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ebf2fdef9d526cf2ca991a4b123f8e20db358497
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47657770"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67930352"
 ---
 # <a name="adox-property-object-properties-methods-and-events"></a>ADOX Property オブジェクトのプロパティ、メソッド、およびイベント
-## <a name="properties"></a>[プロパティ]  
+## <a name="properties"></a>Properties  
  [Attributes プロパティ (ADOX)](../../../ado/reference/adox-api/attributes-property-adox.md)  
   
  [Name プロパティ (ADOX)](../../../ado/reference/adox-api/name-property-adox.md)  

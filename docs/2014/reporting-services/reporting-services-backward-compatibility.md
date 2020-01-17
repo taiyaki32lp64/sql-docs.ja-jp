@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 helpviewer_keywords:
 - Reporting Services, backward compatibility
@@ -13,15 +12,15 @@ helpviewer_keywords:
 - SQL Server Reporting Services, backward compatibility
 - backward compatibility [Reporting Services]
 ms.assetid: 675b0e0e-cfee-4790-9675-80fc3ea6d30f
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: b36b196f28bf029d68729c6c8e88116646829705
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 7203740ba7f52dfc2cd3793a20fed9fecf5f9468
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56010543"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66102994"
 ---
 # <a name="reporting-services-backward-compatibility"></a>Reporting Services の旧バージョンとの互換性
   ここでは、[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] のバージョン間での動作の変更について説明します。 使用できなくなる機能や、将来のリリースで削除される予定の機能の情報を提供します。 また、[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 機能を含むカスタム アプリケーションを使用できなくなるような、製品の根本的な変更についても説明します。  
@@ -35,7 +34,7 @@ ms.locfileid: "56010543"
 |[SQL Server 2014 における SQL Server Reporting Services における重大な変更](breaking-changes-in-sql-server-reporting-services-in-sql-server-2016.md)|[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]をアップグレードする場合に発生する可能性のある問題について説明します。|  
 |[SQL Server 2014 における SQL Server Reporting Services の動作変更](behavior-changes-to-sql-server-reporting-services-in-sql-server-2016.md)|[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]で変更されている機能について説明します。|  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [旧バージョンとの互換性](../../2014/getting-started/backward-compatibility.md)   
  [Analysis Services の旧バージョンとの互換性](../../2014/analysis-services/analysis-services-backward-compatibility.md)  
   

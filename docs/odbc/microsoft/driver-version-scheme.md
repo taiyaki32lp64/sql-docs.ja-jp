@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: e4a8d9d7-8aba-48ab-8be6-1a6129adfb8f
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: e6c76b1a931101fce366cc6d3b20d4aa74de23e5
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d8a155f5d76e8a250c64d3d59e160fbb5863414f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47806530"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68071854"
 ---
 # <a name="driver-version-scheme"></a>ドライバー バージョン スキーム
 > [!IMPORTANT]  
@@ -26,7 +25,7 @@ ms.locfileid: "47806530"
   
  次の表は、Microsoft ODBC Driver for Oracle のすべてのリリース バージョンを一覧表示します。  
   
-|ドライバーのバージョン|ビルド番号|可用性の履歴|  
+|ドライバーのバージョン|［ビルド番号］|可用性の履歴|  
 |--------------------|------------------|--------------------------|  
 |1.0|2.00.6235|Visual C 4.2 および Visual Basic 5.0、Enterprise Edition|  
 |2.0|2.73.7269|Visual Studio 97 と MDAC 1.5 a|  

@@ -1,24 +1,23 @@
 ---
-title: レッスン 6:計算の定義 |Microsoft Docs
+title: 'レッスン 6: 計算の定義 |Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: e0a1e354-e879-4eb8-bb2b-6c3809e32cb6
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 7437296543aa762ce51f5a31592a724cd0004419
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 8f61e0e04c5ca96da69098b58c38b1ef73eba206
+ms.sourcegitcommit: 187f6d327421e64f1802a3085f88bbdb0c79b707
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53361387"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69530840"
 ---
-# <a name="lesson-6-defining-calculations"></a>レッスン 6:計算の定義
+# <a name="lesson-6-defining-calculations"></a>レッスン 6: 計算の定義
   このレッスンでは、多次元式 (MDX) の式またはスクリプトである計算を定義する方法について学習します。 計算を使用すると、計算されるメンバーや名前付きセットを定義できます。また、 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] キューブの機能を拡張するさまざまなスクリプト コマンドを実行できます。 たとえば、サブキューブを定義し、計算をサブキューブ内のセルに割り当てるスクリプト コマンドを実行できます。  
   
  新しい計算をキューブ デザイナーで定義すると、その計算はキューブ デザイナーの **[計算]** タブの **[スクリプト オーガナイザー]** ペインに追加され、特定の計算の種類に対応するフィールドが **計算式** ペインの計算フォームに表示されます。 複数の計算は、 **[スクリプト オーガナイザー]** ペイン内に表示されている順番で実行されます。 計算の順序を変えるには、特定の計算を右クリックして **[上へ移動]** または **[下へ移動]** をクリックします。または、特定の計算をクリックし、 **[計算]** タブのツール バーにある **[上へ移動]** または **[下へ移動]** アイコンをクリックします。  
@@ -46,19 +45,19 @@ ms.locfileid: "53361387"
   
  このレッスンの内容は次のとおりです。  
   
- [計算されるメンバーの定義](../analysis-services/lesson-6-1-defining-calculated-members.md)  
+ [計算されるメンバーの定義](lesson-6-1-defining-calculated-members.md)  
  ここでは、計算されるメンバーを定義する方法について学習します。  
   
- [名前付きセットの定義](../analysis-services/lesson-6-2-defining-named-sets.md)  
+ [名前付きセットの定義](lesson-6-2-defining-named-sets.md)  
  この作業では、名前付きセットを定義する方法について学習します。  
   
 ## <a name="next-lesson"></a>次のレッスン  
- [レッスン 7:主要業績評価指標を定義する&#40;Kpi&#41;](../analysis-services/lesson-7-defining-key-performance-indicators-kpis.md)  
+ [レッスン 7: 主要業績評価指標&#40;kpi の定義&#41;](lesson-7-defining-key-performance-indicators-kpis.md)  
   
-## <a name="see-also"></a>参照  
- [Analysis Services のチュートリアル シナリオ](../analysis-services/analysis-services-tutorial-scenario.md)   
- [多次元モデリング&#40;Adventure Works チュートリアル&#41;](../analysis-services/multidimensional-modeling-adventure-works-tutorial.md)   
- [名前付きセットを作成します。](multidimensional-models/create-named-sets.md)   
+## <a name="see-also"></a>関連項目  
+ [Analysis Services チュートリアルのシナリオ](analysis-services-tutorial-scenario.md)   
+ [多次元モデリング&#40;の Adventure works チュートリアル&#41;](multidimensional-modeling-adventure-works-tutorial.md)   
+ [名前付きセットの作成](multidimensional-models/create-named-sets.md)   
  [計算されるメンバーの作成](multidimensional-models/create-calculated-members.md)  
   
   

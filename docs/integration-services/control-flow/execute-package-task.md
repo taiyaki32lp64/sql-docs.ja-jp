@@ -17,17 +17,20 @@ helpviewer_keywords:
 - child packages
 - parent packages [Integration Services]
 ms.assetid: 042d4ec0-0668-401c-bb3a-a25fe2602eac
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: 2148cf2e25e6cdddab20a29751cea82238159668
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: dcd1e0912f1bf0adcbae79da1f1d34f92233f467
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52535705"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71294187"
 ---
 # <a name="execute-package-task"></a>パッケージ実行タスク
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   パッケージ実行タスクは、パッケージのワークフローの一部として他のパッケージを実行できるようにすることで、[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] のエンタープライズ用機能を拡張します。  
   
  パッケージ実行タスクは、次の目的で使用されます。  
@@ -141,7 +144,7 @@ ms.locfileid: "52535705"
 2.  SSIS デザイナーでタスクを右クリックし、 **[編集]** をクリックします。  
   
 ###  <a name="general"></a> [全般] ページのオプションを設定する  
- **名前**  
+ **[名前]**  
  パッケージ実行タスクの一意な名前を指定します。 この名前は、タスク アイコンのラベルとして使用されます。  
   
 > [!NOTE]  
@@ -188,7 +191,7 @@ ms.locfileid: "52535705"
   
 ##### <a name="location--sql-server"></a>Location = SQL Server  
  **[接続]**  
- OLE DB 接続マネージャーを一覧から選択するか、[\<**新しい接続...>**] をクリックして新しい接続マネージャーを作成します。  
+ OLE DB 接続マネージャーを一覧から選択するか、[\<**新しい接続...>** ] をクリックして新しい接続マネージャーを作成します。  
   
  **関連トピック:** [OLE DB 接続マネージャー](../../integration-services/connection-manager/ole-db-connection-manager.md)  
   
@@ -197,9 +200,9 @@ ms.locfileid: "52535705"
   
 ##### <a name="location--file-system"></a>Location = ファイル システム  
  **[接続]**  
- ファイル接続マネージャーを一覧から選択するか、\<**[新しい接続...]** をクリックして新しい接続マネージャーを作成します。  
+ ファイル接続マネージャーを一覧から選択するか、\< **[新しい接続...]** をクリックして新しい接続マネージャーを作成します。  
   
- **関連トピック:** [[ファイル接続マネージャー エディター]](../../integration-services/connection-manager/file-connection-manager.md)  
+ **関連トピック:** [ファイル接続マネージャー](../../integration-services/connection-manager/file-connection-manager.md)  
   
  **PackageNameReadOnly**  
  パッケージ名が表示されます。  

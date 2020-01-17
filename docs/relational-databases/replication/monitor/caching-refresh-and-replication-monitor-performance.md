@@ -1,6 +1,7 @@
 ---
-title: キャッシュ、更新、およびレプリケーション モニターのパフォーマンス | Microsoft Docs
-ms.custom: ''
+title: キャッシュ、更新、およびレプリケーション モニターのパフォーマンス
+description: SQL Server Management Studio (SSMS) でレプリケーション モニターのパフォーマンスをキャッシュ、更新、および最適化する方法について説明します。
+ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -16,16 +17,16 @@ helpviewer_keywords:
 ms.assetid: a2d8b666-ed41-4f86-b2b8-c8e118416ab7
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: afa70f42c2ea5602bf549a4d5596bff2c8bbff66
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
+ms.openlocfilehash: 0661822f2c39d197460d19bb01adc847151dfa35
+ms.sourcegitcommit: 02d44167a1ee025ba925a6fefadeea966912954c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54123882"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75320637"
 ---
 # <a name="caching-refresh-and-replication-monitor-performance"></a>キャッシュ、更新、およびレプリケーション モニターのパフォーマンス
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
   [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] レプリケーション モニターは、運用システム内の多数のコンピューターを効率的に監視することを目的に設計されています。 計算の実行、およびデータの収集のためにレプリケーション モニターによって使用されるクエリは、定期的にキャッシュおよび更新されます。 キャッシュによってレプリケーション モニターでさまざまなページを表示する際に必要なクエリと計算の数が削減され、監視のスケーラビリティが向上し、複数のユーザーに対応できるようになります。  
   
  キャッシュの更新は、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] エージェント ジョブである **ディストリビューションのレプリケーション モニターの状態更新機能**によって処理されます。 このジョブは継続的に実行されますが、キャッシュの更新スケジュールは、前回の更新後の待機時間に基づいて設定されます。  

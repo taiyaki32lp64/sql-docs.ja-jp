@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: cf12cbd1-25f7-4bb5-aa94-0fe823b3b6d6
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 1c97a8495b1877c8c72dcacba25943c04934abca
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 49a82682e619bb2a33e5c04e049b40ac4733f427
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47851100"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67919870"
 ---
 # <a name="command-ado-for-visual-c-syntax"></a>Command (Visual C++ 構文用の ADO)
 ## <a name="methods"></a>メソッド  
@@ -32,7 +31,7 @@ CreateParameter(BSTR Name, DataTypeEnum Type, ParameterDirectionEnum Direction, 
 Execute(VARIANT *RecordsAffected, VARIANT *Parameters, long Options, _ADORecordset **ppirs)  
 ```  
   
-## <a name="properties"></a>[プロパティ]  
+## <a name="properties"></a>Properties  
   
 ```  
 get_ActiveConnection(_ADOConnection **ppvObject)  
@@ -52,5 +51,5 @@ get_State(LONG *plObjState)
 get_Parameters(ADOParameters **ppvObject)  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [Command オブジェクト (ADO)](../../../ado/reference/ado-api/command-object-ado.md)

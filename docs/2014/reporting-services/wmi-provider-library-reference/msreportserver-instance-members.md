@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 api_name:
 - MSReportServer_Instance Members
@@ -16,15 +15,15 @@ topic_type:
 helpviewer_keywords:
 - MSReportServer_Instance class
 ms.assetid: 154b78e6-59cc-44eb-a7d9-34908d1b6b1a
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 6c8f74713a07969ba724ccf2679d7f7bf17fb7ad
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 44537263a785ed32a9618f352cdd402d412dc3b4
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56024364"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66097198"
 ---
 # <a name="msreportserverinstance-members"></a>MSReportServer_Instance メンバー
   MSReportServer_Instance クラスは、インストールされているレポート サーバーにクライアントが接続するために必要な基本情報を提供します。  

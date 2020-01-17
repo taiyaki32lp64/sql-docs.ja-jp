@@ -23,7 +23,7 @@
   items:
     - name: '[オプション] ([環境]-[全般] ページ)'
       href: options-environment-general-page.md
-    - name: '[オプション] ([環境]: [フォントおよび色] ページ)'
+    - name: '[オプション] ([環境]:[フォントおよび色] ページ)'
       href: options-environment-fonts-and-colors-page.md
     - name: '[オプション] ([環境]/[キーボード] ページ)'
       href: options-environment-keyboard-page.md

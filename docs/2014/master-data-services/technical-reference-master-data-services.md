@@ -7,15 +7,15 @@ ms.reviewer: ''
 ms.technology: master-data-services
 ms.topic: conceptual
 ms.assetid: 54865b00-563a-4932-ad4d-cbfd36b1e6c5
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 68ad3e3663527d6a3074d5196a9f418e092edb9d
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 3594c866e2b55d4ae6a7fb8b014b15a5378b531f
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52784144"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65482785"
 ---
 # <a name="technical-reference-master-data-services"></a>テクニカル リファレンス (マスター データ サービス)
   [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] コンポーネントに関するテクニカル リファレンス情報を参照してください。  

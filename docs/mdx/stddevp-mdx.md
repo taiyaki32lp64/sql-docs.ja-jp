@@ -1,5 +1,5 @@
 ---
-title: StddevP (MDX) |Microsoft ドキュメント
+title: StddevP (MDX) |Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -8,20 +8,19 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-manager: kfile
-ms.openlocfilehash: ac6d625c1cef2d0650b94bb7babfdb88541595ab
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.openlocfilehash: 8ceb37a1802fc39c6d99a1e12cbbe51f299374d9
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34742961"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68036898"
 ---
 # <a name="stddevp-mdx"></a>StddevP (MDX)
 
 
   別名、 [StdevP](../mdx/stdevp-mdx.md)関数  
   
-## <a name="see-also"></a>参照  
- [MDX 関数リファレンス&#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
+## <a name="see-also"></a>関連項目  
+ [MDX 関数リファレンス &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
   
   

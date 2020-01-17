@@ -17,20 +17,19 @@ helpviewer_keywords:
 - encryption [SQL Server], symmetric keys
 - symmetric keys [SQL Server], ENCRYPTBYPASSPHRASE function
 ms.assetid: f8dbb9e6-94d6-40d7-8b38-6833a409d597
-author: MashaMSFT
-ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 1548684a3c2e749e20b6bd9b8a01be272fabb196
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: VanMSFT
+ms.author: vanto
+ms.openlocfilehash: 8aefacd470b045caafc73474126468fc01658276
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47681150"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67904359"
 ---
 # <a name="encryptbypassphrase-transact-sql"></a>ENCRYPTBYPASSPHRASE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  キーの長さが 128 ビットの TRIPLE DES アルゴリズムを使用して、パスフレーズでデータを暗号化します。  
+  128 キービット長の TRIPLE DES アルゴリズムを使用して、パスフレーズでデータを暗号化します。  
   
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -52,13 +51,13 @@ EncryptByPassPhrase ( { 'passphrase' | @passphrase }
  対象キーを生成するパスフレーズを含む **nvarchar**、**char**、**varchar**、**binary**、**varbinary**、または **nchar** 型の変数です。  
   
  *cleartext*  
- 暗号化するクリア テキストを指定します。  
+ 暗号化されるクリア テキスト。  
   
  @cleartext  
  クリア テキストを含む **nvarchar**、**char**、**varchar**、**binary**、**varbinary**、または **nchar** 型の変数です。 最大サイズは 8,000 バイトです。  
   
  *add_authenticator*  
- クリア テキストと共に認証子を暗号化するかどうかを指定します。 認証子を追加する場合は 1 を指定します。 **int**.  
+ クリア テキストと共に認証子を暗号化するかどうかを指定します。 認証子を追加する場合は 1。 **int**.  
   
  @add_authenticator  
  クリア テキストと共にハッシュを暗号化するかどうかを指定します。  
@@ -73,9 +72,9 @@ EncryptByPassPhrase ( { 'passphrase' | @passphrase }
  **varbinary** 最大サイズが 8,000 バイトです。  
   
 ## <a name="remarks"></a>Remarks  
- パス フレーズは空白を含むパスワードです。 パスフレーズを使用する利点は、比較的長い文字列を覚えるより、意味のある句やセンテンスを覚える方が簡単であるという点です。  
+ パス フレーズは空白を含むパスワードです。 パスフレーズを使用する利点は、比較的長い文字列を覚えるよりも意味のある句や文を覚える方が簡単だというところにあります。  
   
- この関数ではパスワードの複雑性はチェックされません。  
+ この関数では、パスワードの複雑さはチェックされません。  
   
 ## <a name="examples"></a>使用例  
  次の例では、`SalesCreditCard` テーブルのレコードを更新し、認証子として主キーを使用して、列 `CardNumber_EncryptedbyPassphrase` に格納されるクレジット カードの番号を暗証化します。  
@@ -102,7 +101,7 @@ GO
 ```  
   
 ## <a name="see-also"></a>参照  
- [DECRYPTBYPASSPHRASE (&) #40 です。TRANSACT-SQL と #41 です。](../../t-sql/functions/decryptbypassphrase-transact-sql.md)   
+ [DECRYPTBYPASSPHRASE &#40;Transact-SQL&#41;](../../t-sql/functions/decryptbypassphrase-transact-sql.md)   
  [暗号化階層](../../relational-databases/security/encryption/encryption-hierarchy.md)  
   
   

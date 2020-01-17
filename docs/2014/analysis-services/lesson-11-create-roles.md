@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: 984face4-00fc-46d3-8ae1-9755bf737bdf
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 4eec5e4f93a085ab784135593c139410f5911e1e
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: ec4bad8ef036e8f19ce0a856f3d9c04bafd0e7c5
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52506773"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66079266"
 ---
 # <a name="lesson-12-create-roles"></a>レッスン 12:ロールの作成
   このレッスンでは、ロールを作成します。 ロールを使用すると、ロール メンバーである Windows ユーザーのみにアクセスを制限することで、モデル データベース オブジェクトとデータにセキュリティを提供できます。 1 つのアクセス許可を持つ各ロールが定義されます。なし、読み取り、読み取りとプロセス、プロセス、または管理者です。 モデルのロールは、モデルの作成時に [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]の [ロール マネージャー] ダイアログ ボックスを使用して定義できます。 モデルを配置した後は、[!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] を使用してロールを管理できます。 詳細については、「[ロール (SSAS テーブル)](tabular-models/roles-ssas-tabular.md)」 を参照してください。  
@@ -53,7 +52,7 @@ ms.locfileid: "52506773"
   
 4.  **[権限]** 列で、ドロップダウン リストをクリックし、 **[読み取り]** 権限を選択します。  
   
-5.  省略可能:**[メンバー]** タブをクリックし、 **[追加]** をクリックします。  
+5.  省略可能: **[メンバー]** タブをクリックし、 **[追加]** をクリックします。  
   
 6.  **[ユーザーまたはグループの選択]** ダイアログ ボックスで、ロールに含める組織の Windows ユーザーまたはグループを入力します。  
   
@@ -79,7 +78,7 @@ ms.locfileid: "52506773"
   
      数式の入力が終了したら、Enter キーを押します。  
   
-6.  省略可能:**[メンバー]** タブをクリックし、 **[追加]** をクリックします。  
+6.  省略可能: **[メンバー]** タブをクリックし、 **[追加]** をクリックします。  
   
 7.  **[ユーザーまたはグループの選択]** ダイアログ ボックスで、ロールに含める組織の Windows ユーザーまたはグループを入力します。  
   
@@ -95,7 +94,7 @@ ms.locfileid: "52506773"
   
 4.  **[メンバー]** タブをクリックし、 **[追加]** をクリックします。  
   
-5.  省略可能:**[ユーザーまたはグループの選択]** ダイアログ ボックスで、ロールに含める組織の Windows ユーザーまたはグループを入力します。  
+5.  省略可能: **[ユーザーまたはグループの選択]** ダイアログ ボックスで、ロールに含める組織の Windows ユーザーまたはグループを入力します。  
   
 6.  選択内容を確認し、 **[OK]** をクリックします。  
   

@@ -1,0 +1,225 @@
+### YamlMime:Hub
+title: Microsoft SQL ドキュメント
+summary: Microsoft SQL Server を使用してオンプレミスとクラウドの両方でデータベースのニーズに対応する方法について説明します。
+brand: sql
+metadata:
+  title: Microsoft SQL ドキュメント | Microsoft Docs
+  description: Microsoft SQL Server を使用してオンプレミスとクラウドの両方でデータベースのニーズを管理する方法について説明します。
+  ms.topic: hub-page
+  ms.openlocfilehash: b1e77857e3b4a9b5159a20c10eec5fdb5a403f85
+  ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
+  ms.translationtype: HT
+  ms.contentlocale: ja-JP
+  ms.lasthandoff: 11/07/2019
+  ms.locfileid: "73757211"
+highlightedContent:
+  items:
+  - title: SQL Server 2019 をお試しください
+    itemType: download
+    url: https://www.microsoft.com/evalcenter/evaluate-sql-server-2019
+  - title: Azure VM と SQL Server の入手
+    itemType: overview
+    url: https://azure.microsoft.com/services/virtual-machines/sql-server/?wt.mc_id=sqL16_vm
+  - title: クエリ データ ツールのダウンロード
+    itemType: download
+    url: tools/overview-sql-tools.md
+  - title: SQL Server 教育センター
+    itemType: learn
+    url: lp/sql-server/sql-education-center.md
+productDirectory:
+  items:
+  - title: Azure 上の SQL
+    imageSrc: media/index/azure.png
+    links:
+    - url: https://docs.microsoft.com/azure/sql-database/
+      text: Azure SQL データベース
+    - url: https://docs.microsoft.com/azure/sql-data-warehouse/sql-data-warehouse-overview-what-is/
+      text: Azure Synapse Analytics (SQL DW)
+  - title: Windows 上の SQL Server
+    imageSrc: media/index/windows.png
+    links:
+    - url: sql-server/index.yml
+      text: オンプレミス
+    - url: https://docs.microsoft.com/azure/virtual-machines/windows/sql/virtual-machines-windows-sql-server-iaas-overview/
+      text: Azure VM 上
+    - url: https://docs.microsoft.com/previous-versions/sql/
+      text: 以前のバージョン (SQL 2005-2012)
+  - title: Linux 上の SQL Server
+    imageSrc: media/index/linux.png
+    links:
+    - url: linux/sql-server-linux-overview.md
+      text: オンプレミス
+    - url: linux/quickstart-install-connect-clouds.md
+      text: Azure VM 上
+conceptualContent:
+  items:
+  - title: 作業の開始
+    links:
+    - text: 接続およびクエリ (Azure Data Studio)
+      url: azure-data-studio/quickstart-sql-server.md
+      itemType: quickstart
+    - text: 接続およびクエリ (SSMS)
+      url: ssms/tutorials/connect-query-sql-server.md
+      itemType: quickstart
+    - text: Transact-SQL の記述
+      url: t-sql/tutorial-writing-transact-sql-statements.md
+      itemType: quickstart
+    - text: SQL Server Docker コンテナー
+      url: linux/quickstart-install-connect-docker.md
+      itemType: quickstart
+    - text: SQL ドキュメントのナビゲーションに関するヒント
+      url: sql-server/sql-docs-navigation-guide.md
+      itemType: get-started
+  - title: 新機能
+    links:
+    - text: SQL Server 2019
+      url: https://docs.microsoft.com/sql/sql-server/what-s-new-in-sql-server-ver15?view=sql-server-ver15
+      itemType: whats-new
+    - text: SQL Server ビッグ データ クラスター
+      url: https://docs.microsoft.com/sql/big-data-cluster/big-data-cluster-overview?view=sql-server-ver15
+      itemType: whats-new
+    - text: Azure Data Studio
+      url: azure-data-studio/what-is.md
+      itemType: whats-new
+    - text: Azure Database Migration Service
+      url: https://docs.microsoft.com/azure/dms/dms-overview
+      itemType: whats-new
+    - text: SQL Machine Learning Services
+      url: advanced-analytics/index.yml
+      itemType: whats-new
+  - title: インストール
+    links:
+    - text: SQL Server
+      url: database-engine/install-windows/install-sql-server.md
+      itemType: deploy
+    - text: SQL Server Management Studio (SSMS)
+      url: ssms/download-sql-server-management-studio-ssms.md
+      itemType: deploy
+    - text: Analysis Services (SSAS)
+      url: https://docs.microsoft.com/analysis-services/instances/install-windows/install-analysis-services/
+      itemType: deploy
+    - text: Integration Services (SSIS)
+      url: integration-services/install-windows/install-integration-services.md
+      itemType: deploy
+    - text: Reporting Services (SSRS)
+      url: reporting-services/install-windows/install-reporting-services.md
+      itemType: deploy
+    footerLink:
+      text: 詳細情報
+      url: lp/sql-server/install-sql-and-services.md
+  - title: 移行
+    links:
+    - text: データ移行ガイド
+      url: https://datamigration.microsoft.com/
+      itemType: overview
+    - text: データ互換性証明書
+      url: https://aka.ms/dbcompat
+      itemType: overview
+    - text: Azure Database Migration Service (DMS)
+      url: https://docs.microsoft.com/azure/dms/dms-overview
+      itemType: overview
+    - text: Database Migration Assistant (DMA)
+      url: dma/dma-overview.md
+      itemType: overview
+    - text: Database Experimentation Assistant (DEA)
+      url: dea/database-experimentation-assistant-overview.md
+      itemType: overview
+    - text: SQL Server Migration Assistant (SSMA)
+      url: ssma/sql-server-migration-assistant.md
+      itemType: overview
+    footerLink:
+      text: 詳細情報
+      url: lp/sql-server/load-move-data.md
+additionalContent:
+  sections:
+  - items:
+    - title: 管理
+      links:
+      - text: 動的管理ビュー (DMV)
+        url: relational-databases/system-dynamic-management-views/system-dynamic-management-views.md
+      - text: システム カタログ ビュー
+        url: relational-databases/system-catalog-views/catalog-views-transact-sql.md
+      - text: 拡張イベント
+        url: relational-databases/extended-events/quick-start-extended-events-in-sql-server.md
+      - text: SQL Server の保護
+        url: relational-databases/security/securing-sql-server.md
+      - text: SQL PowerShell
+        url: powershell/sql-server-powershell.md
+      - text: Azure SQL REST API
+        url: https://docs.microsoft.com/rest/api/sql/
+      - text: Azure SQL PowerShell
+        url: https://docs.microsoft.com/powershell/module/az.sql/
+    - title: セキュリティとプライバシー
+      links:
+      - text: SQL Server 監査
+        url: relational-databases/security/auditing/sql-server-audit-database-engine.md
+      - text: Azure SQL Database の監査
+        url: https://docs.microsoft.com/azure/sql-database/sql-database-auditing
+      - text: データ分類
+        url: relational-databases/security/sql-data-discovery-and-classification.md
+      - text: Always Encrypted
+        url: relational-databases/security/encryption/always-encrypted-database-engine.md
+    - title: 開発
+      links:
+      - text: SQL Server を使用したアプリのビルド
+        url: https://www.microsoft.com/sql-server/developer-get-started/
+      - text: SQL Server を使用する DevOps
+        url: https://www.microsoft.com/sql-server/developer-get-started/sql-devops/
+      - text: SQL Server のセキュリティ
+        url: https://docs.microsoft.com/dotnet/framework/data/adonet/sql/overview-of-sql-server-security
+      - text: Azure SQL DB アプリケーション
+        url: https://docs.microsoft.com/azure/sql-database/sql-database-develop-overview
+      - text: Azure SQL DB 接続ライブラリ
+        url: https://docs.microsoft.com/azure/sql-database/sql-database-connect-query#libraries
+      - text: SQL Server クライアント接続
+        url: connect/homepage-sql-connection-programming.md
+      - text: Transact-SQL (T-SQL)
+        url: t-sql/language-reference.md
+      - text: データベースのサンプル
+        url: samples/sql-samples-where-are.md
+    - title: レポートと機械学習
+      links:
+      - text: Power BI レポート サーバー
+        url: https://docs.microsoft.com/power-bi/report-server/get-started
+      - text: Power BI サービス
+        url: https://docs.microsoft.com/power-bi/service-get-started
+      - text: SQL Server Reporting Services (SSRS)
+        url: reporting-services/create-deploy-and-manage-mobile-and-paginated-reports.md
+      - text: Azure Machine Learning
+        url: https://docs.microsoft.com/azure/machine-learning/
+      - text: SQL Machine Learning Services (R および Python)
+        url: advanced-analytics/index.yml
+      - text: SQL Server R Services
+        url: advanced-analytics/r/sql-server-r-services.md
+    - title: ビッグ データ
+      links:
+      - text: SQL Server 2019 ビッグ データ クラスター
+        url: https://docs.microsoft.com/sql/big-data-cluster/big-data-cluster-overview?view=sql-server-ver15
+      - text: Polybase によるデータ仮想化
+        url: relational-databases/polybase/polybase-guide.md
+      - text: Azure Synapse Analytics (SQL DW)
+        url: https://docs.microsoft.com/azure/sql-data-warehouse/sql-data-warehouse-overview-what-is/
+      - text: Azure SQL Database Hyperscale
+        url: https://docs.microsoft.com/azure/sql-database/sql-database-service-tier-hyperscale
+      - text: Azure Analysis Services
+        url: https://docs.microsoft.com/azure/analysis-services/
+      - text: SQL Server Analysis Services (SSAS)
+        url: https://docs.microsoft.com/analysis-services/analysis-services-overview
+      - text: Microsoft Analytics Platform System
+        url: analytics-platform-system/index.md
+    - title: ツール
+      links:
+      - text: Azure Data Studio
+        url: azure-data-studio/download.md
+      - text: SQL Server Management Studio (SSMS)
+        url: ssms/download-sql-server-management-studio-ssms.md
+      - text: mssql-cli
+        url: tools/mssql-cli.md
+      - text: Azure SQL CLI
+        url: https://docs.microsoft.com/cli/azure/sql
+      - text: SQL Server Data Tools (SSDT)
+        url: ssdt/download-sql-server-data-tools-ssdt.md
+      - text: 分散再生
+        url: tools/distributed-replay/sql-server-distributed-replay.md
+      - text: その他のツールを見る
+        url: tools/overview-sql-tools.md

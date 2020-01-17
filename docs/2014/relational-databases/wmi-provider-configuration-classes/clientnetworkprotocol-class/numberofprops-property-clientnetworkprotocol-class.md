@@ -19,11 +19,11 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: e0d2245dbba51d69d6dd31fd91044d3efd5b07b0
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53366224"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63192027"
 ---
 # <a name="numberofprops-property-clientnetworkprotocol-class"></a>NumberOfProps プロパティ (ClientNetworkProtocol クラス)
   取得、クライアントのプロパティの数のネットワークによって指定されたプロトコル、 [SetOrderValue メソッド (ClientNetworkProtocol クラス)](clientnetworkprotocol-class.md)します。  

@@ -11,11 +11,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: b334a62c56d4fb62337204eae91f83eed290b641
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52775994"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62519410"
 ---
 # <a name="localdberrorinstancebusy"></a>LOCALDB_ERROR_INSTANCE_BUSY
     

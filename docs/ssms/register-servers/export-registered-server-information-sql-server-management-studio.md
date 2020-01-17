@@ -14,15 +14,14 @@ helpviewer_keywords:
 - exporting registered server information
 - transferring registered server information
 ms.assetid: b65e168f-b6bf-489c-b8ad-3b8644acf0b6
-author: stevestein
-ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 7c7cb82f12c5a69936c3b75986901c29fb7d8a5b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: bb3b4001453ce7c7c256c101244970ff788310b0
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47635800"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68264740"
 ---
 # <a name="export-registered-server-information-sql-server-management-studio"></a>登録済みサーバー情報のエクスポート (SQL Server Management Studio)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -50,7 +49,7 @@ ms.locfileid: "47635800"
      サーバー グループには、現在の登録済みサーバー ツリーのサーバー グループだけが表示されます。  
   
      **[エクスポート ファイル]**  
-     テキスト ボックスにエクスポート ファイルの名前を入力するか、参照ボタン (**[...]**) を使用してクライアント コンピューター内のエクスポート ファイルを選択します。 既存のファイルを選択した場合は、登録済みサーバー情報がファイルに追加されます。 .regsrvr 拡張子を使用します。 登録済みサーバーの情報を他のユーザーまたはコンピューターが利用できるようにする場合は、ネットワーク上にファイルを保存できます。 他のユーザーは、そのファイルにアクセスし、一部またはすべての登録済みサーバーの情報をインポートできます。 既存のファイルをエクスポート ファイルとして選択した場合、そのファイルの内容はサーバーの登録情報で上書きされます。  
+     テキスト ボックスにエクスポート ファイルの名前を入力するか、参照ボタン ( **[...]** ) を使用してクライアント コンピューター内のエクスポート ファイルを選択します。 既存のファイルを選択した場合は、登録済みサーバー情報がファイルに追加されます。 .regsrvr 拡張子を使用します。 登録済みサーバーの情報を他のユーザーまたはコンピューターが利用できるようにする場合は、ネットワーク上にファイルを保存できます。 他のユーザーは、そのファイルにアクセスし、一部またはすべての登録済みサーバーの情報をインポートできます。 既存のファイルをエクスポート ファイルとして選択した場合、そのファイルの内容はサーバーの登録情報で上書きされます。  
   
      **[エクスポート ファイルにユーザー名とパスワードを含めない]**  
      ファイルをエクスポートするときにユーザー名を除外します。  

@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: bd5c5afa-d301-4899-acda-40f98a6afa4d
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 2e44bc264b5fd3e21e35042243ee81f7834c60b2
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 26caf2b54b4f0affbbe7cdc58fa2bf742f0d4101
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47718790"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67925367"
 ---
 # <a name="event-parameters"></a>イベント パラメーター
 すべてのイベント ハンドラーでは、イベント ハンドラーを制御する状態パラメーターがあります。 完全なイベントは、このパラメーターもイベントを生成する操作の成否を示すために使用されます。 最も包括的なイベントは、エラーが発生した場合をし、操作を実行するために使用する ADO オブジェクトを参照する 1 つまたは複数のオブジェクトのパラメーターに関する情報を提供するエラー パラメーターを指定します。 たとえば、 [ExecuteComplete](../../../ado/reference/ado-api/executecomplete-event-ado.md)イベントにはオブジェクトのパラメーターが含まれています、**コマンド**、**レコード セット**、および**接続**オブジェクトイベントに関連付けられています。 Microsoft® Visual Basic® の次の例では、pCommand、pRecordset、および表す pConnection オブジェクトを参照できます、**コマンド**、 **Recordset**、および**の接続**オブジェクトによって使用される、 **Execute**メソッド。  
@@ -87,7 +86,7 @@ End Sub
   
  設定する必要がこれに対し、 *adStatus*に**adStatusUnwantedEvent**を要求に 1 回だけことがなく、イベント ハンドラー、 **adReason**パラメーター停止の受信イベント通知します。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [ADO イベント ハンドラーの概要](../../../ado/guide/data/ado-event-handler-summary.md)   
  [言語で ADO イベントのインスタンス化](../../../ado/guide/data/ado-event-instantiation-by-language.md)   
  [イベント ハンドラーの連携](../../../ado/guide/data/how-event-handlers-work-together.md)   

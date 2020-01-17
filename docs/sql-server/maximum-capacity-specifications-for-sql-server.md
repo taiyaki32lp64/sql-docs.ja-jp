@@ -1,6 +1,6 @@
 ---
 title: SQL Server の最大容量仕様 | Microsoft Docs
-ms.date: 11/06/2017
+ms.date: 10/07/2019
 ms.prod: sql
 ms.reviewer: ''
 ms.custom: ''
@@ -20,13 +20,12 @@ helpviewer_keywords:
 ms.assetid: 13e95046-0e76-4604-b561-d1a74dd824d7
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 6cb5b9ecbcc187a059747e9d3121ac50611a0418
-ms.sourcegitcommit: 769b71f01052ec9b4fc5eb02d9da9a1a58118029
+ms.openlocfilehash: 0fae5c47de0b8017d3f374afe18e926eea9818cc
+ms.sourcegitcommit: 84e6922a57845a629391067ca4803e8d03e0ab90
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56319403"
+ms.lasthandoff: 10/07/2019
+ms.locfileid: "72008437"
 ---
 # <a name="maximum-capacity-specifications-for-sql-server"></a>SQL Server の最大容量仕様
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -53,21 +52,21 @@ ms.locfileid: "56319403"
 |メモリ最適化テーブルのインデックス キーごとのバイト数||1 つの非クラスター化インデックスにつき 2,500 バイト。 すべてのインデックス キーが行内に収まる限り、ハッシュ インデックスに制限はなし。|メモリ最適化テーブルでは、非クラスター化インデックスは、宣言された最大サイズが 2,500 バイトを超えるキー列を持つことはできません。 キー列の実際のデータが、宣言されている最大サイズよりも小さいかどうかには関係ありません。<br /><br /> ハッシュ インデックス キーの場合、サイズにハード リミットはありません。<br /><br /> メモリ最適化テーブルのインデックスの場合、すべてのインデックスがすべての列を本質的にカバーするため、付加列の概念はありません。<br /><br /> メモリ最適化テーブルの場合、行のサイズが 8,060 バイトでも、一部の可変長列をこの 8,060 バイトの外側に物理的に保存できます。 ただし、テーブルのすべてのインデックスのすべてのキー列の宣言された最大サイズと、テーブル内の追加の固定長列のすべてが、8,060 バイトに収まる必要があります。|  
 |外部キーごとのバイト数||900||  
 |主キーごとのバイト数||900||  
-|行ごとのバイト数||8,060|[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 行オーバーフロー ストレージがサポートされています。これにより、可変長列の行外への移動が可能になります。 行外に移動される可変長列のうち、ルートの 24 バイトだけが本体のレコードに格納されます。これにより、実際の行制限は、以前のリリースの [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]よりも大きい値になります。 詳細については、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] オンライン ブックの「8 KB を超える場合の行オーバーフロー データ」を参照してください。|  
+|行ごとのバイト数||8,060|[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 行オーバーフロー ストレージがサポートされています。これにより、可変長列の行外への移動が可能になります。 行外に移動される可変長列のうち、ルートの 24 バイトだけが本体のレコードに格納されます。これにより、実際の行制限は、以前のリリースの [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]よりも大きい値になります。 詳細については、[大量の行のサポート](../relational-databases/pages-and-extents-architecture-guide.md#large-row-support)に関する記事を参照してください。|  
 |メモリ最適化テーブル内の行ごとのバイト数||8,060|[!INCLUDE[ssSQL15](../includes/sssql15-md.md)] から、メモリ最適化テーブルで行外ストレージがサポートされます。 テーブル内のすべての列の最大サイズが 8,060 バイトを超える場合、可変長列が行外に押し出されます。コンパイル時の決定です。 行外に保存された列用に、8 バイトの参照だけが行内に保存されます。 詳細については、「 [メモリ最適化テーブルのテーブルと行のサイズ](../relational-databases/in-memory-oltp/table-and-row-size-in-memory-optimized-tables.md)」を参照してください。|  
 |ストアド プロシージャのソース テキスト内のバイト数||バッチ サイズまたは 250 MB のいずれか小さい方||  
-|**varchar (max)**、 **varbinary (max)**、 **xml**、 **テキスト**、または **イメージ** あたりのバイト数||2^31-1||  
+|**varchar (max)** 、 **varbinary (max)** 、 **xml**、 **テキスト**、または **イメージ** あたりのバイト数||2^31-1||  
 |**ntext** または **nvarchar (max)** あたりの文字数||2^30-1||  
 |テーブルごとのクラスター化インデックス数||1||  
 |GROUP BY、ORDER BY の列数||バイト数のみによって制限されます。||  
 |GROUP BY WITH CUBE または WITH ROLLUP ステートメント内の列または式の数||10||  
 |インデックス キーごとの列数||32|テーブルに 1 つ以上の XML インデックスが含まれている場合は、XML 列がプライマリ XML インデックスのクラスター化キーに追加されるため、ユーザー テーブルのクラスター化キーが 31 列までに制限されます。 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]では、キー列数が最大キー列数制限の 32 を越えないように、非クラスター化インデックスに非キー列を含めることができます。 詳細については、「 [付加列インデックスの作成](../relational-databases/indexes/create-indexes-with-included-columns.md)」を参照してください。|  
-|外部キーごとの列数||32||  
-|主キーごとの列数||32||  
-|幅の狭いテーブルごとの列数||1,024||  
-|幅の広いテーブルごとの列数||30,000||  
-|SELECT ステートメントごとの列数||4,096||  
-|INSERT ステートメントごとの列数||4,096||  
+|外部キーまたは主キーごとの列数||32||  
+|`INSERT` ステートメントごとの列数||4,096||  
+|`SELECT` ステートメントごとの列数||4,096||  
+|テーブルごとの列数||1,024|スパース列セットを含むテーブルには、最大 30,000 列が含まれます。 「[スパース列セット](../relational-databases/tables/use-column-sets.md)」を参照してください。|  
+|`UPDATE` ステートメントごとの列数||4,096|[スパース列セット](../relational-databases/tables/use-column-sets.md)には、異なる制限が適用されます。|  
+|ビューごとの列数||1,024||  
 |クライアントごとの接続数||構成した接続の最大値||  
 |データベース サイズ||524,272 テラバイト||  
 |インスタンスごとのデータベース数 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]||32,767||  
@@ -86,7 +85,8 @@ ms.locfileid: "56319403"
 |接続ごとのロック数||サーバーごとの最大ロック数||  
 |のインスタンスごとのロック数 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]||メモリのみによって制限されます。|これは静的ロック割り当てに対する値です。 動的ロックの場合は、メモリのみによって制限されます。|  
 |ストアド プロシージャの入れ子レベル数||32|ストアド プロシージャが 65 個以上のデータベースにアクセスするか、またはインターリーブ時に 3 つ以上のデータベースにアクセスすると、エラーが返されます。|  
-|入れ子にしたサブクエリの数||32||  
+|入れ子にしたサブクエリの数||32||    
+|入れ子構造のトランザクション||4,294,967,296||     
 |トリガーの入れ子レベル数||32||  
 |テーブルごとの非クラスター化インデックス数||999||  
 |次のいずれかが存在する場合の、GROUP BY 句に含まれる個別の式の数:CUBE、ROLLUP、GROUPING SETS、WITH CUBE、WITH ROLLUP||32||  
@@ -100,7 +100,6 @@ ms.locfileid: "56319403"
 |インデックス付けされていない列の統計||30,000|| 
 |SELECT ステートメントごとのテーブル数||使用可能なリソースのみによって制限されます。||  
 |テーブルごとのトリガー数||データベース内のオブジェクト数によって制限されます。|データベース オブジェクトには、テーブル、ビュー、ストアド プロシージャ、ユーザー定義関数、トリガー、ルール、デフォルト、制約などのオブジェクトが含まれます。 1 つのデータベース内のオブジェクトの合計数は 2,147,483,647 以下にする必要があります。|  
-|UPDATE ステートメント (幅の広いテーブル) ごとの列数||4096||  
 |ユーザー接続数||32,767||  
 |XML インデックス数||249||  
   
@@ -119,7 +118,7 @@ ms.locfileid: "56319403"
 |データベースごとのログ ファイル数||1|  
 |コンピューターごとのボリューム数||3|  
   
- * [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] ユーティリティでサポートされる [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] のマネージド インスタンスの最大数は、サーバーのハードウェア構成によって異なる場合があります。 概要情報については、「 [SQL Server ユーティリティの機能とタスク](../relational-databases/manage/sql-server-utility-features-and-tasks.md)」を参照してください。 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] ユーティリティ コントロール ポイントは、 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]のすべてのエディションで使用できるわけではありません。 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]の各エディションでサポートされる機能の一覧については、「 [SQL Server 2016 の各エディションがサポートする機能](https://msdn.microsoft.com/library/cc645993.aspx)」を参照してください。    
+ \* [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] ユーティリティでサポートされる [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] のマネージド インスタンスの最大数は、サーバーのハードウェア構成によって異なる場合があります。 概要情報については、「 [SQL Server ユーティリティの機能とタスク](../relational-databases/manage/sql-server-utility-features-and-tasks.md)」を参照してください。 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] ユーティリティ コントロール ポイントは、 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]のすべてのエディションで使用できるわけではありません。 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]の各エディションでサポートされる機能の一覧については、「 [SQL Server 2016 の各エディションがサポートする機能](https://msdn.microsoft.com/library/cc645993.aspx)」を参照してください。    
   
 ##  <a name="DAC"></a> [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] データ層アプリケーション オブジェクト  
  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] データ層アプリケーション (DAC) でテストされた各種オブジェクトの最大サイズと最大数。  

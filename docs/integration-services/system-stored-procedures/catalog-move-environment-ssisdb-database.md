@@ -8,17 +8,20 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: language-reference
 ms.assetid: b3fb5242-3c4c-4a87-b3e5-beb22fbab053
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: f63d78418c087fe4d6da526ac28c86932674592b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: bc0bc77fda49e715879dceec60d616143952c265
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47620770"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71296835"
 ---
-# <a name="catalogmoveenvironment-ssisdb-database"></a>catalog.move_environment (SSISDB データベース)
+# <a name="catalogmove_environment-ssisdb-database"></a>catalog.move_environment (SSISDB データベース)
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
   特定のフォルダーの環境を [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] カタログ内の別のフォルダーに移動します。  
@@ -33,7 +36,7 @@ catalog.move_environment [ @source_folder = ] source_folder
   
 ## <a name="arguments"></a>引数  
  [ @source_folder = ] *source_folder*  
- 環境が、移動前に配置されていたソース フォルダーの名前。 *source_folder* は **nvarchar(128)** です。  
+ 環境が移動前に配置されていたソース フォルダーの名前。 *source_folder* は **nvarchar(128)** です。  
   
  [ @environment_name = ] *environment_name*  
  移動される環境の名前。 *Environment_name* は **nvarchar(128)** です。  

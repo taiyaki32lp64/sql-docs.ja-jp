@@ -1,7 +1,7 @@
 ---
-title: Pdo::setattribute |Microsoft Docs
+title: PDO::setAttribute | Microsoft Docs
 ms.custom: ''
-ms.date: 02/11/2019
+ms.date: 04/22/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 56f9ee96-e1d2-46cc-b137-38f06a251863
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 9b0109eef02bc3649617b4f1f414406665c16ba9
-ms.sourcegitcommit: 958cffe9288cfe281280544b763c542ca4025684
+ms.openlocfilehash: 091cdf12600ca5244a6feef8062522b903edf787
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/23/2019
-ms.locfileid: "56744652"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67993160"
 ---
 # <a name="pdosetattribute"></a>PDO::setAttribute
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -25,8 +24,7 @@ ms.locfileid: "56744652"
   
 ## <a name="syntax"></a>構文  
   
-```  
-  
+```
 bool PDO::setAttribute ( $attribute, $value );  
 ```  
   
@@ -48,13 +46,13 @@ bool PDO::setAttribute ( $attribute, $value );
 |PDO::ATTR_ORACLE_NULLS|PDO|PDO のドキュメントを参照してください。|null を返す方法を指定します。<br /><br />PDO::NULL_NATURAL は変換を行いません。<br /><br />PDO::NULL_EMPTY_STRING は空の文字列を null に変換します。<br /><br />PDO::NULL_TO_STRING は null を空の文字列に変換します。|  
 |PDO::ATTR_STATEMENT_CLASS|PDO|PDO のドキュメントを参照してください。|PDOStatement から誘導されたユーザー指定のステートメント クラスを設定します。<br /><br />`array(string classname, array(mixed constructor_args))`を必要とします。<br /><br />詳細については、PDO のドキュメントを参照してください。|  
 |PDO::ATTR_STRINGIFY_FETCHES|PDO|true または false|データの取得時に数値を文字列に変換します。|  
-|PDO::SQLSRV_ATTR_CLIENT_BUFFER_MAX_KB_SIZE|[!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]|PHP メモリの制限に 1。|クライアント側カーソルを使用するときに結果セットを保持するバッファーのサイズを設定します。<br /><br />デフォルトは 10240 KB ですがない場合、php.ini ファイルで指定します。<br /><br />ゼロおよび負の数値は許可できません。<br /><br />クライアント側カーソルを作成するクエリの詳細については、「[カーソルの種類 &#40;PDO_SQLSRV ドライバー&#41;](../../connect/php/cursor-types-pdo-sqlsrv-driver.md)」を参照してください。|  
-|PDO::SQLSRV_ATTR_DECIMAL_PLACES|[!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]|0 ~ 4 の (範囲) の整数|フェッチされる money 値を書式設定時に、小数点以下桁数の数を指定します。<br /><br />任意の負の整数値または値が 4 よりも詳細は無視されます。<br /><br />このオプションは、PDO::SQLSRV_ATTR_FORMAT_DECIMALS が true の場合にのみ機能します。<br /><br />このオプションをステートメント レベルの設定もできます。 そうである場合、ステートメント レベルのオプションはこの 1 つをオーバーライドします。<br /><br />詳細については、次を参照してください。 [10 進数値文字列の書式設定および通貨値 (PDO_SQLSRV ドライバー)](../../connect/php/formatting-decimals-pdo-sqlsrv-driver.md)します。|
+|PDO::SQLSRV_ATTR_CLIENT_BUFFER_MAX_KB_SIZE|[!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]|PHP メモリの制限に 1。|クライアント側カーソルを使用するときに結果セットを保持するバッファーのサイズを設定します。<br /><br />php.ini ファイルで指定されていない限り、既定値は 10240 KB です。<br /><br />ゼロおよび負の数値は許可できません。<br /><br />クライアント側カーソルを作成するクエリの詳細については、「[カーソルの種類 &#40;PDO_SQLSRV ドライバー&#41;](../../connect/php/cursor-types-pdo-sqlsrv-driver.md)」を参照してください。|  
+|PDO::SQLSRV_ATTR_DECIMAL_PLACES|[!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]|0 から 4 までの整数|フェッチされた通貨値の書式設定時に、小数点以下の桁数を指定します。<br /><br />負の整数値または 4 を超える値は無視されます。<br /><br />このオプションは、PDO::SQLSRV_ATTR_FORMAT_DECIMALS が true の場合にのみ機能します。<br /><br />このオプションは、ステートメント レベルでも設定されている場合があります。 その場合、このオプションはステートメント レベルのオプションによりオーバーライドされます。<br /><br />詳細については、「[10 進数文字列と金額の書式設定 (PDO_SQLSRV ドライバー)](../../connect/php/formatting-decimals-pdo-sqlsrv-driver.md)」を参照してください。|
 |PDO::SQLSRV_ATTR_DIRECT_QUERY|[!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]|true または false|クエリの直接実行または準備された実行を指定します。 詳細については、「 [Direct Statement Execution and Prepared Statement Execution in the PDO_SQLSRV Driver](../../connect/php/direct-statement-execution-prepared-statement-execution-pdo-sqlsrv-driver.md)」 (PDO_SQLSRV ドライバーでの直接ステートメント実行と準備されたステートメントの実行) を参照してください。|  
 |PDO::SQLSRV_ATTR_ENCODING|[!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]|PDO::SQLSRV_ENCODING_UTF8<br /><br />PDO::SQLSRV_ENCODING_SYSTEM.|ドライバーがサーバーとの通信に使用する文字セット エンコーディングを設定します。<br /><br />PDO::SQLSRV_ENCODING_BINARY はサポートされていません。<br /><br />既定値は PDO::SQLSRV_ENCODING_UTF8 です。|  
-|PDO::SQLSRV_ATTR_FETCHES_DATETIME_TYPE|[!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]|true または false|日付と時刻の型として取得するかどうかを指定します[PHP DateTime](http://php.net/manual/en/class.datetime.php)オブジェクト。 False のままにした場合、既定の動作では、文字列として返すことです。<br /><br />このオプションをステートメント レベルの設定もできます。 そうである場合、ステートメント レベルのオプションはこの 1 つをオーバーライドします。<br /><br />詳細については、次を参照してください。[方法: 取得日付と時刻型として PHP DateTime オブジェクトを使用して、PDO_SQLSRV ドライバー](../../connect/php/how-to-retrieve-datetime-objects-using-pdo-sqlsrv-driver.md)します。|  
-|PDO::SQLSRV_ATTR_FETCHES_NUMERIC_TYPE|[!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]|true または false|(ビット、整数、smallint、tinyint、float または real) の数値の SQL 型の列からの数値のフェッチを処理します。<br /><br />接続オプション フラグ ATTR_STRINGIFY_FETCHES が on の場合、SQLSRV_ATTR_FETCHES_NUMERIC_TYPE がある場合でも、戻り値では文字列が使用します。<br /><br />バインド列で返される PDO 型 PDO_PARAM_INT が SQLSRV_ATTR_FETCHES_NUMERIC_TYPE がオフの場合でも、整数型の列からの戻り値は int が。|  
-|PDO::SQLSRV_ATTR_FORMAT_DECIMALS|[!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]|true または false|該当する場合に、10 進数値の文字列に先頭のゼロを追加するかどうかを指定します。 場合、このオプションを設定では、PDO::SQLSRV_ATTR_DECIMAL_PLACES の money 型の書式設定オプションを有効します。 False のままにした場合は、正確な有効桁数を返すと、先頭の値が 1 未満のゼロを省略すると、既定の動作が使用されます。<br /><br />このオプションをステートメント レベルの設定もできます。 そうである場合、ステートメント レベルのオプションはこの 1 つをオーバーライドします。<br /><br />詳細については、次を参照してください。 [10 進数値文字列の書式設定および通貨値 (PDO_SQLSRV ドライバー)](../../connect/php/formatting-decimals-pdo-sqlsrv-driver.md)します。| 
+|PDO::SQLSRV_ATTR_FETCHES_DATETIME_TYPE|[!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]|true または false|日付型と時刻型を [PHP DateTime](http://php.net/manual/en/class.datetime.php) オブジェクトを使用して取得するかどうかを指定します。 false のままにすると、文字列として返すことが既定の動作となります。<br /><br />このオプションは、ステートメント レベルでも設定されている場合があります。 その場合、このオプションはステートメント レベルのオプションによりオーバーライドされます。<br /><br />詳細については、「[方法: PDO_SQLSRV ドライバーを使用して日付/時刻型を PHP DateTime オブジェクトとして取得する](../../connect/php/how-to-retrieve-datetime-objects-using-pdo-sqlsrv-driver.md)」を参照してください。|  
+|PDO::SQLSRV_ATTR_FETCHES_NUMERIC_TYPE|[!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]|true または false|数値の SQL 型 (bit、integer、smallint、tinyint、float、または real) の列からの数値フェッチを処理します。<br /><br />接続オプション フラグ ATTR_STRINGIFY_FETCHES がオンの場合、SQLSRV_ATTR_FETCHES_NUMERIC_TYPE がオンであっても戻り値は文字列となります。<br /><br />バインド列の戻された PDO 型が PDO_PARAM_INT の場合、整数列からの戻り値は、SQLSRV_ATTR_FETCHES_NUMERIC_TYPE がオフであっても int となります。|  
+|PDO::SQLSRV_ATTR_FORMAT_DECIMALS|[!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]|true または false|該当する場合に 10 進文字列の前にゼロを追加するかどうかを指定します。 このオプションを設定すると、PDO::SQLSRV_ATTR_DECIMAL_PLACES オプションが money 型の書式設定用に有効となります。 false のままにすると、正確な有効桁数を戻し、1 未満の値の前にあるゼロを省略するという既定の動作が使用されます。<br /><br />このオプションは、ステートメント レベルでも設定されている場合があります。 その場合、このオプションはステートメント レベルのオプションによりオーバーライドされます。<br /><br />詳細については、「[10 進数文字列と金額の書式設定 (PDO_SQLSRV ドライバー)](../../connect/php/formatting-decimals-pdo-sqlsrv-driver.md)」を参照してください。| 
 |PDO::SQLSRV_ATTR_QUERY_TIMEOUT|[!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]|整数 (integer)|クエリのタイムアウト (秒単位) を設定します。<br /><br />既定値は 0 であり、ドライバーは結果をいつまでも待ちます。<br /><br />負の数値は許可できません。|  
   
 一部の定義済み属性は PDO で処理されますが、他の属性はドライバーで処理する必要があります。 カスタム属性と接続オプションはすべてドライバーにより処理されます。 サポートされない属性、接続オプション、サポートされない値は PDO::ATTR_ERRMODE の設定に基づいて報告されます。  

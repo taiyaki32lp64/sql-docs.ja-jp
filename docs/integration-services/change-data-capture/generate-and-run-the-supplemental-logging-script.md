@@ -10,17 +10,20 @@ ms.topic: conceptual
 f1_keywords:
 - supLog
 ms.assetid: 6e940d93-12c6-4cda-9333-5489b245f0e4
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: 3b65fc0ee3a390f52ac7d44263967a81f8b5f146
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: ebf080b38e618a807ff9b3b48711ee89f0e56028
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47773460"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71298746"
 ---
 # <a name="generate-and-run-the-supplemental-logging-script"></a>補足ログ スクリプトの生成および実行
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   補足ログを設定する Oracle ソース データベースでスクリプトを実行するには、[変更をキャプチャするためのテーブルの設定] ページを使用します。  
   
  **補足ログ スクリプトを実行するには**  

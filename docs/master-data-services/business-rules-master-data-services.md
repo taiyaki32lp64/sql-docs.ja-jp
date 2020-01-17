@@ -1,5 +1,5 @@
 ---
-title: ビジネス ルール (マスター データ サービス) | Microsoft Docs
+title: ビジネス ルール
 ms.custom: ''
 ms.date: 03/18/2017
 ms.prod: sql
@@ -11,15 +11,14 @@ helpviewer_keywords:
 - business rules [Master Data Services], about business rules
 - business rules [Master Data Services]
 ms.assetid: a9f9e41a-2461-4845-b947-58b3a205543f
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 2ccf168740618085f07d0a5f6ce96a86321e0ca6
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
-ms.translationtype: HT
+ms.openlocfilehash: 1c66914b4b661ea3485ae0354c267e7682f5a6a2
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52760774"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73728691"
 ---
 # <a name="business-rules-master-data-services"></a>ビジネス ルール (マスター データ サービス)
 
@@ -72,7 +71,7 @@ ms.locfileid: "52760774"
 ## <a name="system-settings"></a>システム設定  
  [!INCLUDE[ssMDScfgmgr](../includes/ssmdscfgmgr-md.md)] には、ビジネス ルールに影響する設定が 2 つあります。 これらの設定は、 [!INCLUDE[ssMDScfgmgr](../includes/ssmdscfgmgr-md.md)] で調整するかSystem Settings テーブルで直接調整することができます。 詳細については、「[システム設定 &#40;マスター データ サービス&#41;](../master-data-services/system-settings-master-data-services.md)」を参照してください。  
   
-## <a name="related-tasks"></a>Related Tasks  
+## <a name="related-tasks"></a>関連タスク  
   
 |タスクの説明|トピック|  
 |----------------------|-----------|  

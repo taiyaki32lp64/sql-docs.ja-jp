@@ -1,5 +1,5 @@
 ---
-title: 設定のプロパティ - SMO |Microsoft Docs
+title: 設定のプロパティ-SMO |Microsoft Docs
 ms.custom: ''
 ms.date: 08/06/2017
 ms.prod: sql
@@ -12,28 +12,27 @@ helpviewer_keywords:
 - SQL Server Management Objects, properties
 - properties [SMO]
 ms.assetid: 342569ba-d2f7-44d2-8f3f-ae9c701c7f0f
-author: stevestein
-ms.author: sstein
-manager: craigg
+author: markingmyname
+ms.author: maghan
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 41595e6aeee31c5503531f2eb13e9e50c13430b4
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 6ffcdda8e1c6a3c85703ad7f3d6ed94ca0ca91fe
+ms.sourcegitcommit: f3f83ef95399d1570851cd1360dc2f072736bef6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47790860"
+ms.lasthandoff: 08/13/2019
+ms.locfileid: "70148714"
 ---
 # <a name="setting-properties---smo"></a>プロパティの設定 - SMO
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
 
-  プロパティとは、オブジェクトに関する説明情報を格納する値のことです。 たとえば、 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]構成オプションがによって表される、<xref:Microsoft.SqlServer.Management.Smo.Server.Configuration%2A>オブジェクトのプロパティ。 プロパティは、直接、またはプロパティ コレクションを使用して間接的にアクセスすることができます。 プロパティへの直接アクセス時には、次の構文を使用します。  
+  プロパティとは、オブジェクトに関する説明情報を格納する値のことです。 たとえば、 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]構成オプションは、オブジェクトのプロパティによって表されます。<xref:Microsoft.SqlServer.Management.Smo.Server.Configuration%2A> プロパティは、直接、またはプロパティ コレクションを使用して間接的にアクセスすることができます。 プロパティへの直接アクセス時には、次の構文を使用します。  
   
  `objInstance.PropertyName`  
   
  プロパティ値は、そのプロパティが読み取り/書き込みアクセスまたは読み取り専用アクセスのどちらであるかに応じて、変更または取得を行うことができます。 また、オブジェクトを作成する前に、特定のプロパティを設定する必要もあります。 詳細については、SMO 参考資料で特定のオブジェクトを参照してください。  
   
 > [!NOTE]  
->  子オブジェクトのコレクションは、オブジェクトのプロパティとして表現されます。 たとえば、 **Tables** コレクションは、 **Server** オブジェクトのプロパティとなります。 詳細については、次を参照してください。[を使用してコレクション](../../../relational-databases/server-management-objects-smo/create-program/using-collections.md)します。  
+>  子オブジェクトのコレクションは、オブジェクトのプロパティとして表現されます。 たとえば、 **Tables** コレクションは、 **Server** オブジェクトのプロパティとなります。 詳しくは、「 [Using Collections](../../../relational-databases/server-management-objects-smo/create-program/using-collections.md)」をご覧ください。  
   
  オブジェクトのプロパティは、Properties コレクションのメンバーです。 Properties コレクションを使用して、オブジェクトの各プロパティを反復処理することができます。  
   
@@ -41,7 +40,7 @@ ms.locfileid: "47790860"
   
 -   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] の以前のバージョンで、新しい [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 機能を表すプロパティにアクセスしようとするなど、サーバーのバージョンがプロパティをサポートしていない場合。  
   
--   サーバーはデータを提供しません、プロパティの場合にしようとするなどを表すプロパティにアクセスする、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]コンポーネントがインストールされていないです。  
+-   インストールされていない [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] コンポーネントを表すプロパティにアクセスしようとするなど、サーバーがプロパティのデータを提供しない場合。  
   
  <xref:Microsoft.SqlServer.Management.Smo.UnknownPropertyException> および <xref:Microsoft.SqlServer.Management.Smo.PropertyCannotBeRetrievedException> の SMO 例外をキャッチすることによって、これらの状況に対処することができます。  
   
@@ -52,18 +51,18 @@ ms.locfileid: "47790860"
   
 2.  完全読み込み。 いずれかのプロパティが参照されたとき、すぐに読み込まれた残りのプロパティが初期化されて使用可能になります。  
   
-3.  大量のメモリを使用するプロパティ。 使用できないその他のプロパティが大量のメモリを使用していて、<xref:Microsoft.SqlServer.Management.Smo.Property.Expensive%2A>プロパティ値が true の (など<xref:Microsoft.SqlServer.Management.Smo.Database.DataSpaceUsage%2A>)。 これらのプロパティは、明示的に参照された場合にのみ読み込まれます。  
+3.  大量のメモリを使用するプロパティ。 これ以外の、多くのメモリを使用し、<xref:Microsoft.SqlServer.Management.Smo.Property.Expensive%2A> プロパティ値 (<xref:Microsoft.SqlServer.Management.Smo.Database.DataSpaceUsage%2A> など) の値が true であるプロパティは読み込まれません。 これらのプロパティは、明示的に参照された場合にのみ読み込まれます。  
   
- 部分的に読み込まれた状態で提供されたプロパティだけでなく、それ以外のプロパティもアプリケーションによってフェッチされる場合、これらの追加のプロパティを取得するクエリが送信され、完全に読み込まれた状態にスケール アップされます。 これにより、クライアントとサーバーの間に不要なトラフィックが発生する場合があります。 さらに最適化を呼び出すことで実現できる、<xref:Microsoft.SqlServer.Management.Smo.Server.SetDefaultInitFields%2A>メソッド。 <xref:Microsoft.SqlServer.Management.Smo.Server.SetDefaultInitFields%2A> メソッドを使用すると、オブジェクトの初期化時に読み込まれるプロパティを指定することができます。  
+ 部分的に読み込まれた状態で提供されたプロパティだけでなく、それ以外のプロパティもアプリケーションによってフェッチされる場合、これらの追加のプロパティを取得するクエリが送信され、完全に読み込まれた状態にスケール アップされます。 これにより、クライアントとサーバーの間に不要なトラフィックが発生する場合があります。 <xref:Microsoft.SqlServer.Management.Smo.Server.SetDefaultInitFields%2A> メソッドを呼び出すことにより、さらに最適化を行うことができます。 <xref:Microsoft.SqlServer.Management.Smo.Server.SetDefaultInitFields%2A> メソッドを使用すると、オブジェクトの初期化時に読み込まれるプロパティを指定することができます。  
   
- <xref:Microsoft.SqlServer.Management.Smo.Server.SetDefaultInitFields%2A> メソッドでは、アプリケーションの残り部分に対して、またはリセットされるまでの、プロパティの読み込み動作を設定することができます。 使用して、元の動作を保存することができます、<xref:Microsoft.SqlServer.Management.Smo.Server.GetDefaultInitFields%2A>メソッドと、必要に応じて復元されます。  
+ <xref:Microsoft.SqlServer.Management.Smo.Server.SetDefaultInitFields%2A> メソッドでは、アプリケーションの残り部分に対して、またはリセットされるまでの、プロパティの読み込み動作を設定することができます。 <xref:Microsoft.SqlServer.Management.Smo.Server.GetDefaultInitFields%2A> メソッドを使用して、元の動作を保存し、必要に応じて復元することができます。  
   
 ## <a name="examples"></a>使用例  
-提供されているコード例を使用するには、アプリケーションを作成するプログラミング環境、プログラミング テンプレート、およびプログラミング言語を選択する必要があります。 詳細については、次を参照してください。 [Visual C の作成&#35;Visual Studio .NET での SMO プロジェクト](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md)します。  
+提供されているコード例を使用するには、アプリケーションを作成するプログラミング環境、プログラミング テンプレート、およびプログラミング言語を選択する必要があります。 詳細については、「 [Visual Studio&#35; .Net での Visual C SMO プロジェクトの作成](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md)」を参照してください。  
 
   
 ## <a name="getting-and-setting-a-property-in-visual-basic"></a>Visual Basic でのプロパティの取得および設定  
- このコード例は、取得する方法を示します、<xref:Microsoft.SqlServer.Management.Smo.Information.Edition%2A>のプロパティ、<xref:Microsoft.SqlServer.Management.Smo.Information>オブジェクトおよび設定する方法、<xref:Microsoft.SqlServer.Management.Common.ServerConnection.SqlExecutionModes%2A>のプロパティ、<xref:Microsoft.SqlServer.Management.Smo.Server.ConnectionContext%2A>プロパティを**ExecuteSql**のメンバー、<xref:Microsoft.SqlServer.Management.Common.SqlExecutionModes>列挙入力します。  
+ <xref:Microsoft.SqlServer.Management.Smo.Information.Edition%2A>このコード例<xref:Microsoft.SqlServer.Management.Smo.Information> <xref:Microsoft.SqlServer.Management.Smo.Server.ConnectionContext%2A> では<xref:Microsoft.SqlServer.Management.Common.SqlExecutionModes> 、オブジェクトのプロパティを取得する方法と、プロパティのプロパティを列挙型のExecuteSqlメンバーに設定する方法を示し<xref:Microsoft.SqlServer.Management.Common.ServerConnection.SqlExecutionModes%2A>ます。  
   
 ```VBNET
 'Connect to the local, default instance of SQL Server.
@@ -76,7 +75,7 @@ srv.ConnectionContext.SqlExecutionModes = SqlExecutionModes.ExecuteSql
 ```
   
 ## <a name="getting-and-setting-a-property-in-visual-c"></a>Visual C# でのプロパティの取得および設定  
- このコード例は、取得する方法を示します、<xref:Microsoft.SqlServer.Management.Smo.Information.Edition%2A>のプロパティ、<xref:Microsoft.SqlServer.Management.Smo.Information>オブジェクトおよび設定する方法、<xref:Microsoft.SqlServer.Management.Common.ServerConnection.SqlExecutionModes%2A>のプロパティ、<xref:Microsoft.SqlServer.Management.Smo.Server.ConnectionContext%2A>プロパティを**ExecuteSql**のメンバー、<xref:Microsoft.SqlServer.Management.Common.SqlExecutionModes>列挙入力します。  
+ <xref:Microsoft.SqlServer.Management.Smo.Information.Edition%2A>このコード例<xref:Microsoft.SqlServer.Management.Smo.Information> <xref:Microsoft.SqlServer.Management.Smo.Server.ConnectionContext%2A> では<xref:Microsoft.SqlServer.Management.Common.SqlExecutionModes> 、オブジェクトのプロパティを取得する方法と、プロパティのプロパティを列挙型のExecuteSqlメンバーに設定する方法を示し<xref:Microsoft.SqlServer.Management.Common.ServerConnection.SqlExecutionModes%2A>ます。  
   
 ```csharp  
 {   
@@ -91,7 +90,7 @@ srv.ConnectionContext.SqlExecutionModes = SqlExecutionModes.ExecuteSql;
 ```  
   
 ## <a name="setting-various-properties-before-an-object-is-created-in-visual-basic"></a>Visual Basic でのオブジェクト作成前のさまざまなプロパティの設定  
- このコード例は、直接設定する方法を示します、<xref:Microsoft.SqlServer.Management.Smo.Table.AnsiNullsStatus%2A>のプロパティ、<xref:Microsoft.SqlServer.Management.Smo.Table>オブジェクト、および作成し、作成する前に、列を追加する方法、<xref:Microsoft.SqlServer.Management.Smo.Table>オブジェクト。  
+ このコード例では、<xref:Microsoft.SqlServer.Management.Smo.Table.AnsiNullsStatus%2A> オブジェクトを作成する前に、<xref:Microsoft.SqlServer.Management.Smo.Table> オブジェクトの <xref:Microsoft.SqlServer.Management.Smo.Table> プロパティを直接設定する方法、および列の作成と追加を行う方法を示します。  
   
 ```VBNET
 'Connect to the local, default instance of SQL Server.
@@ -122,7 +121,7 @@ tb.Create()
 ```
   
 ## <a name="setting-various-properties-before-an-object-is-created-in-visual-c"></a>Visual C# でのオブジェクト作成前のさまざまなプロパティの設定  
- このコード例は、直接設定する方法を示します、<xref:Microsoft.SqlServer.Management.Smo.Table.AnsiNullsStatus%2A>のプロパティ、<xref:Microsoft.SqlServer.Management.Smo.Table>オブジェクト、および作成し、作成する前に、列を追加する方法、<xref:Microsoft.SqlServer.Management.Smo.Table>オブジェクト。  
+ このコード例では、<xref:Microsoft.SqlServer.Management.Smo.Table.AnsiNullsStatus%2A> オブジェクトを作成する前に、<xref:Microsoft.SqlServer.Management.Smo.Table> オブジェクトの <xref:Microsoft.SqlServer.Management.Smo.Table> プロパティを直接設定する方法、および列の作成と追加を行う方法を示します。  
   
 ```csharp  
 {   
@@ -155,9 +154,9 @@ tb.Create();
 ```  
   
 ## <a name="iterating-through-all-properties-of-an-object-in-visual-basic"></a>Visual Basic でのオブジェクトのすべてのプロパティの反復処理  
- このコード例を反復処理、**プロパティ**のコレクション、<xref:Microsoft.SqlServer.Management.Smo.StoredProcedure>オブジェクトし、で表示する、[!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)]出力画面。  
+ このコード例では<xref:Microsoft.SqlServer.Management.Smo.StoredProcedure> 、オブジェクトの**Properties**コレクションを反復処理し、 [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)]出力画面に表示します。  
   
- 例では、<xref:Microsoft.SqlServer.Management.Smo.Property>オブジェクトが設定されている角かっこでもあるため、[!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)]キーワード。  
+ この例では、<xref:Microsoft.SqlServer.Management.Smo.Property> オブジェクトは [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)] のキーワードでもあるため、角かっこで囲まれています。  
   
 ```VBNET
 'Connect to the local, default instance of SQL Server.
@@ -179,7 +178,7 @@ Next
 ```
   
 ## <a name="iterating-through-all-properties-of-an-object-in-visual-c"></a>Visual C# でのオブジェクトのすべてのプロパティの反復処理  
- このコード例を反復処理、**プロパティ**のコレクション、<xref:Microsoft.SqlServer.Management.Smo.StoredProcedure>オブジェクトし、で表示する、[!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)]出力画面。  
+ このコード例では<xref:Microsoft.SqlServer.Management.Smo.StoredProcedure> 、オブジェクトの**Properties**コレクションを反復処理し、 [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)]出力画面に表示します。  
   
 ```csharp  
 {   
@@ -202,7 +201,7 @@ sp.QuotedIdentifierStatus = false;
 ```  
   
 ## <a name="setting-default-initialization-fields-in-visual-basic"></a>Visual Basic での既定の初期化フィールドの設定  
- このコード例では、SMO プログラムで初期化されるオブジェクト プロパティの数を最小にする方法を示します。 含める必要がある、 `using System.Collections.Specialized`; を使用してステートメント、<xref:System.Collections.Specialized.StringCollection>オブジェクト。  
+ このコード例では、SMO プログラムで初期化されるオブジェクト プロパティの数を最小にする方法を示します。 <xref:System.Collections.Specialized.StringCollection> オブジェクトを使用するには、`using System.Collections.Specialized` ステートメントを含める必要があります。  
   
  [!INCLUDE[ssSqlProfiler](../../../includes/sssqlprofiler-md.md)] を使用すれば、この最適化によって [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] のインスタンスに送信されるステートメントの数を比較することができます。  
   
@@ -234,7 +233,7 @@ srv.SetDefaultInitFields(typ, sc)
 ```
   
 ## <a name="setting-default-initialization-fields-in-visual-c"></a>Visual C# での既定の初期化フィールドの設定  
- このコード例では、SMO プログラムで初期化されるオブジェクト プロパティの数を最小にする方法を示します。 含める必要がある、 `using System.Collections.Specialized`; を使用してステートメント、<xref:System.Collections.Specialized.StringCollection>オブジェクト。  
+ このコード例では、SMO プログラムで初期化されるオブジェクト プロパティの数を最小にする方法を示します。 <xref:System.Collections.Specialized.StringCollection> オブジェクトを使用するには、`using System.Collections.Specialized` ステートメントを含める必要があります。  
   
  [!INCLUDE[ssSqlProfiler](../../../includes/sssqlprofiler-md.md)] を使用すれば、この最適化によって [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] のインスタンスに送信されるステートメントの数を比較することができます。  
   

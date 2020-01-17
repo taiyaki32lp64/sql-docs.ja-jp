@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 2ddf19e4-312e-4d21-8053-a6fc4b738ad4
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 176afb0ed710087ec150838e1e6bc6c49eb9e908
-ms.sourcegitcommit: 1e28f923cda9436a4395a405ebda5149202f8204
+ms.openlocfilehash: 32a36388b1be6dc7f5bab6bbb0bd9f97b01aac46
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/25/2019
-ms.locfileid: "55044666"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67910608"
 ---
 # <a name="adox-properties"></a>ADOX のプロパティ
 
@@ -50,6 +49,6 @@ ms.locfileid: "55044666"
 |[[一意]](../../../ado/reference/adox-api/unique-property-adox.md)|インデックス キーが一意である必要があるかどうかを示します。|  
 |[UpdateRule](../../../ado/reference/adox-api/updaterule-property-adox.md)|主キーが更新されたときに実行されるアクションを示します。|  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [ADOX の API リファレンス](../../../ado/reference/adox-api/adox-api-reference.md)   
  [データ定義言語とセキュリティの ADO 拡張機能 (ADOX)](../../../ado/guide/extensions/ado-extensions-for-data-definition-language-and-security-adox.md)

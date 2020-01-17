@@ -1,5 +1,5 @@
 ---
-title: ビジネス ルールの拡張機能 (マスター データ サービス) | Microsoft Docs
+title: ビジネス ルールの拡張機能
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -8,21 +8,20 @@ ms.reviewer: ''
 ms.technology: master-data-services
 ms.topic: conceptual
 ms.assetid: 4c18be5f-a3fa-45a8-9be6-0f45f58bbc9e
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 49145808ae875b6c4fa66a52c4972a8f7a392a7a
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
-ms.translationtype: HT
+ms.openlocfilehash: 24df0fcbece66a86786550e81f3e385d6454f4b5
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52759180"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73728677"
 ---
 # <a name="business-rules-extension-master-data-services"></a>ビジネス ルールの拡張機能 (マスター データ サービス)
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-  [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]では、ユーザー定義の SQL スクリプトを、事前に定義された条件とアクションの拡張機能として適用できます。  
+  [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] では、ユーザー定義の SQL スクリプトを、事前に定義された条件とアクションの拡張機能として適用できます。  
   
 > [!NOTE]  
 >  すべてのスクリプトは、[usr] スキーマに定義する必要があります。  
@@ -66,7 +65,7 @@ CREATE PROCEDURE [usr].[YourAction]
   
 |||  
 |-|-|  
-|**[スキーマ]**|**Permissions**|  
+|**スキーマ**|**Permissions**|  
 |mdm|SELECT|  
 |stg|SELECT、UPDATE、DELETE、EXECUTE、INSERT|  
 |ユーザー|FULL|  

@@ -8,17 +8,20 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: ec611374-16bf-4a56-8fd9-45d3ddd7befc
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: 49252f4743f3235275c93f504b44f4419941029d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 91524408998df8be0df4ee5d4ede0b641dbaa2a4
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47797470"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71287224"
 ---
 # <a name="support-multi-targeting-in-your-custom-components"></a>カスタム コンポーネントの複数バージョン対応のサポート
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
  SQL Server Data Tools (SSDT) で SSIS デザイナーを使用して、SQL Server 2016、SQL Server 2014、または SQL Server 2012 をターゲットとするパッケージを作成、管理、および実行できるようになりました。 Visual Studio 2015 用の SSDT を入手する方法については、「[最新の SQL Server Data Tools のダウンロード](../../ssdt/download-sql-server-data-tools-ssdt.md)」を参照してください。 
 
  ソリューション エクスプローラーで Integration Services プロジェクトを右クリックし、 **[プロパティ]** を選択すると、そのプロジェクトのプロパティ ページが開きます。 **[構成プロパティ]** の **[全般]** タブで、 **[TargetServerVersion]** プロパティを選択した後、[SQL Server 2016]、[SQL Server 2014]、または [SQL Server 2012] を選択します。  
@@ -34,7 +37,7 @@ SSIS カスタム拡張機能の 5 種類すべてで、複数バージョン対
 -   ログ プロバイダー
 -   データ フロー コンポーネント
 
-マネージド拡張機能の場合、SSIS デザイナーが、指定されたターゲット バージョンの拡張機能のバージョンを読み込みます。 例 :
+マネージド拡張機能の場合、SSIS デザイナーが、指定されたターゲット バージョンの拡張機能のバージョンを読み込みます。 例:
 -   対応バージョンが SQL Server 2012 の場合、デザイナーは、拡張機能の2012 バージョンを読み込みます。
 -   対応バージョンが SQL Server 2016 の場合、デザイナーは、拡張機能の2016 バージョンを読み込みます。
 
@@ -96,7 +99,7 @@ public override void PerformDowngrade(int pipelineVersion, DTSTargetServerVersio
 
 **エラー メッセージ。** 型 'System.__ComObject' の COM オブジェクトをインターフェイス型 'Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100' にキャストできません。 IID '{BE8C48A3-155B-4810-BA5C-BDF68A659E9E}' が指定されたインターフェイスの COM コンポーネント上での QueryInterface 呼び出しのときに次のエラーが発生したため、この操作に失敗しました: インターフェイスがサポートされていません。(HRESULT からの例外: 0x80004002 (E_NOINTERFACE))。 (Microsoft.SqlServer.DTSPipelineWrap)。
 
-**解決方法。** カスタム拡張機能が、Microsoft.SqlServer.DTSPipelineWrap や Microsoft.SqlServer.DTSRuntimeWrap などの SSIS 相互運用機能アセンブリを参照する場合、**[相互運用機能型の埋め込み]** プロパティの値を **False** に設定します。
+**解決方法。** カスタム拡張機能が、Microsoft.SqlServer.DTSPipelineWrap や Microsoft.SqlServer.DTSRuntimeWrap などの SSIS 相互運用機能アセンブリを参照する場合、 **[相互運用機能型の埋め込み]** プロパティの値を **False** に設定します。
 
 ![相互運用機能型の埋め込み](../../integration-services/extending-packages-custom-objects/media/embed-interop-types.png)
 

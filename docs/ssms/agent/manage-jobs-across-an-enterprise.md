@@ -14,16 +14,15 @@ helpviewer_keywords:
 - SQL Server Agent jobs, modifying
 - target servers [SQL Server], job changes
 ms.assetid: 4fe7f6c6-f89b-4430-979c-4994a5dcf7a6
-author: stevestein
-ms.author: sstein
-manager: craigg
+author: markingmyname
+ms.author: maghan
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 225f3405ff8e3fbff969ed14b7dbef9663cd8e3c
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: 6044edea68f00b27ed7be61b87d9438df7b72c18
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51696468"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68257775"
 ---
 # <a name="manage-jobs-across-an-enterprise"></a>エンタープライズ全体におけるジョブの管理
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -31,13 +30,13 @@ ms.locfileid: "51696468"
 > [!IMPORTANT]  
 > [Azure SQL Database Managed Instance](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance) では現在、すべてではありませんがほとんどの SQL Server エージェントの機能がサポートされています。 詳細については、「[Azure SQL Database Managed Instance と SQL Server の T-SQL の相違点](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent)」を参照してください。
 
-[!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] を使用せずにマルチサーバー ジョブ定義を変更した場合は、対象サーバーが更新済みジョブを再びダウンロードできるように、その変更をダウンロード一覧に通知する必要があります。 対象サーバーが最新のジョブ定義を確実に持つように、マルチサーバー ジョブを更新した後で INSERT 命令を次のように通知します。  
+[!INCLUDE[msCoName](../../includes/msconame_md.md)][!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]を使用せずにマルチサーバー ジョブ定義を変更した場合は、ターゲット サーバーが更新済みジョブを再びダウンロードできるように、その変更をダウンロード一覧に通知する必要があります。 ターゲット サーバーが最新のジョブ定義を確実に持つように、マルチサーバー ジョブを更新した後で INSERT 命令を次のように通知します。  
   
 ```  
 EXECUTE sp_post_msx_operation 'INSERT', 'JOB', '<job id>'  
 ```  
   
-マルチサーバー ジョブが変更されたことを対象サーバーに通知するには、次のいずれかのプロシージャを使用した後で前述のコマンドを呼び出す必要があります。  
+マルチサーバー ジョブが変更されたことをターゲット サーバーに通知するには、次のいずれかのプロシージャを使用した後で前述のコマンドを呼び出す必要があります。  
   
 -   [sp_add_jobstep (Transact-SQL)](https://msdn.microsoft.com/97900032-523d-49d6-9865-2734fba1c755)  
   
@@ -54,13 +53,13 @@ EXECUTE sp_post_msx_operation 'INSERT', 'JOB', '<job id>'
   
 エンタープライズ全体でジョブを管理するための一般的なタスクは次のとおりです。  
   
-**対象サーバーの状態を確認するには**  
+**ターゲット サーバーの状態を確認するには**  
   
 -   [Transact-SQL](https://msdn.microsoft.com/f841d3bd-901a-4980-ad0b-1c6eeba3f717)  
   
 -   [SQL Server 管理オブジェクト (SMO)](https://msdn.microsoft.com/4cde2b85-2a31-4cac-8d16-7a4196066193)  
   
-**ジョブの対象サーバーを変更するには**  
+**ジョブのターゲット サーバーを変更するには**  
   
 -   [SQL Server Management Studio](../../ssms/agent/modify-the-target-servers-for-a-job.md)  
   
@@ -68,7 +67,7 @@ EXECUTE sp_post_msx_operation 'INSERT', 'JOB', '<job id>'
   
 -   [SQL Server 管理オブジェクト (SMO)](https://msdn.microsoft.com/4cde2b85-2a31-4cac-8d16-7a4196066193)  
   
-**対象サーバーの場所を変更するには**  
+**ターゲット サーバーの場所を変更するには**  
   
 -   [SQL Server Management Studio](../../ssms/agent/specify-a-target-server-s-location-sql-server-management-studio.md)  
   
@@ -76,13 +75,13 @@ EXECUTE sp_post_msx_operation 'INSERT', 'JOB', '<job id>'
   
 -   [SQL Server 管理オブジェクト (SMO)](https://msdn.microsoft.com/4cde2b85-2a31-4cac-8d16-7a4196066193)  
   
-**対象サーバーのクロックの同期をとるには**  
+**ターゲット サーバーのクロックを同期するには**  
   
 -   [SQL Server Management Studio](../../ssms/agent/synchronize-target-server-clocks-sql-server-management-studio.md)  
   
 -   [Transact-SQL](https://msdn.microsoft.com/40e44df7-d3e3-44ee-b149-08aba629a21f)  
   
-**対象サーバーからマスター サーバーにポーリングさせるには**  
+**ターゲット サーバーからマスター サーバーにポーリングさせるには**  
   
 -   [SQL Server Management Studio](../../ssms/agent/force-a-target-server-to-poll-the-master-server.md)  
   

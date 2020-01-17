@@ -17,12 +17,12 @@ ms.assetid: 1fd8c0f5-03e1-449a-af45-b8cacb479d9c
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 0d0abed3b23b563c6b2620ad93d3f59d58bebd67
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: ffda3be2194b26b46f9633c3bdf76d60d36ce73c
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52789045"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62871924"
 ---
 # <a name="delete-a-database"></a>データベースの削除
   このトピックでは、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] の [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] で [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] または [!INCLUDE[tsql](../../includes/tsql-md.md)]を使用して、ユーザー定義のデータベースを削除する方法について説明します。  
@@ -45,7 +45,7 @@ ms.locfileid: "52789045"
   
      [Transact-SQL](#TsqlProcedure)  
   
--   **補足情報:**[データベースを削除した後](#FollowUp)  
+-   **補足情報:** [データベースを削除した後](#FollowUp)  
   
 ##  <a name="BeforeYouBegin"></a> はじめに  
   
@@ -90,14 +90,14 @@ ms.locfileid: "52789045"
   
 3.  次の例をコピーしてクエリ ウィンドウに貼り付け、 **[実行]** をクリックします。 この例では、 `Sales` データベースと `NewSales` データベースを削除します。  
   
-```tsql  
+```sql  
 USE master ;  
 GO  
 DROP DATABASE Sales, NewSales ;  
 GO  
 ```  
   
-##  <a name="FollowUp"></a> フォローしてください：データベースを削除した後  
+##  <a name="FollowUp"></a>補足情報: データベースを削除した後  
  **master** データベースをバックアップします。 **master** データベースを復元する必要がある場合、 **master** データベースが最後にバックアップされてから削除されたデータベースがあると、システム カタログ ビュー内にそのデータベースの参照が残っているので、エラー メッセージが表示されることがあります。  
   
 ## <a name="see-also"></a>参照  

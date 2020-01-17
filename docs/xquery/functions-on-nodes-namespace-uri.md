@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 9b48d216-26c8-431d-9ab4-20ab187917f4
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: a21c38506d44c687d639b13ca452e155a97adcef
-ms.sourcegitcommit: bfa10c54e871700de285d7f819095d51ef70d997
+ms.openlocfilehash: 05412c69aa121b9de14f2bab16555db2a8a4fdb4
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/14/2019
-ms.locfileid: "54255107"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67929944"
 ---
 # <a name="functions-on-nodes---namespace-uri"></a>ノードの関数 - namespace-uri
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -43,7 +42,7 @@ fn:namespace-uri($arg as node()?) as xs:string
   
 -   引数が省略された場合、既定値はコンテキスト ノードです。  
   
--   SQL Server で**fn:namespace-uri()** せず、引数は、コンテキストに依存する述語のコンテキストでのみ使用できます。 具体的には、角かっこ ([ ]) 内でしか使用できません。  
+-   SQL Server で**fn:namespace-uri()** せず、引数は、コンテキストに依存する述語のコンテキストでのみ使用できます。 具体的にのみ使用できます角かっこ () 内で。  
   
 -   場合 *$arg*空のシーケンスでは、長さ 0 の文字列が返されます。  
   
@@ -53,16 +52,16 @@ fn:namespace-uri($arg as node()?) as xs:string
  このトピックではさまざまなに格納されている XML インスタンスに対して XQuery の例について**xml**型の列には、AdventureWorks データベース。  
   
 ### <a name="a-retrieve-namespace-uri-of-a-specific-node"></a>A. 特定のノードの名前空間 URI を取得する  
- 次のクエリは、型指定されていない XML インスタンスに対して指定されています。 クエリ式 `namespace-uri(/ROOT[1])` によって、指定されたのノードの名前空間 URI 部分が取得されます。  
+ 型指定されていない XML インスタンスに対しては、次のクエリを指定します。 クエリ式 `namespace-uri(/ROOT[1])` によって、指定されたのノードの名前空間 URI 部分が取得されます。  
   
 ```  
 set @x='<ROOT><a>111</a></ROOT>'  
 SELECT @x.query('namespace-uri(/ROOT[1])')  
 ```  
   
- 指定された QName には名前空間 URI 部分がなく、ローカル名部分しかないため、結果は長さゼロの文字列となります。  
+ 指定された QName に名前空間 URI 部分が、ローカル名部分のみがないため、結果は、長さ 0 の文字列です。  
   
- 次のクエリは型指定された手順に対して指定**xml**列。 式 `namespace-uri(/AWMI:root[1]/AWMI:Location[1])` によって、<`root`> 要素の最初の <`Location`> 子要素の名前空間 URI が返されます。  
+ 次のクエリは型指定された手順に対して指定**xml**列。 式では、 `namespace-uri(/AWMI:root[1]/AWMI:Location[1])`、名前空間の最初の URI を返します <`Location`> の子要素、<`root`> 要素。  
   
 ```  
 SELECT Instructions.query('  
@@ -72,14 +71,14 @@ FROM Production.ProductModel
 WHERE ProductModelID=7  
 ```  
   
- これは、結果です。  
+ 結果を次に示します。  
   
 ```  
 https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions  
 ```  
   
 ### <a name="b-using-namespace-uri-without-argument-in-a-predicate"></a>B. 述語で引数を指定せずに namespace-uri() を使用する  
- 次のクエリは、CatalogDescription 型が指定された xml 列に対して指定されています。 この式によって、名前空間 URI が `https://www.adventure-works.com/schemas/OtherFeatures` であるすべての要素ノードが返されます。 名前空間 -**uri()** 関数で、引数なしで指定された、コンテキスト ノードを使用します。  
+ CatalogDescription 列に対する型指定された xml に対しては、次のクエリを指定します。 式は名前空間 URI を持つすべての要素ノードを返しますが`https://www.adventure-works.com/schemas/OtherFeatures`します。 名前空間 -**uri()** 関数で、引数なしで指定された、コンテキスト ノードを使用します。  
   
 ```  
 SELECT CatalogDescription.query('  
@@ -99,14 +98,14 @@ WHERE ProductModelID=19
 ...  
 ```  
   
- 上のクエリの名前空間 URI は `https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelWarrAndMain` に変更できます。 その場合、展開された QName の URI 名前空間部分が `https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelWarrAndMain` である <`ProductDescription`> 要素のすべての子要素ノードが取得されます。  
+ 上のクエリの名前空間 URI は `https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelWarrAndMain` に変更できます。 すべての要素ノードの子が表示されますし、<`ProductDescription`> 要素が展開された QName の名前空間 URI 部分が`https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelWarrAndMain`します。  
   
 ### <a name="implementation-limitations"></a>実装の制限事項  
  制限事項を次に示します。  
   
 -   **Namespace-uri()** 関数は、xs:anyURI ではなく xs:string 型のインスタンスを返します。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [ノードの関数](https://msdn.microsoft.com/library/09a8affa-3341-4f50-aebc-fdf529e00c08)   
  [local-name 関数&#40;XQuery&#41;](../xquery/functions-on-nodes-local-name.md)  
   

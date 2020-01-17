@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 helpviewer_keywords:
 - subscriptions [Reporting Services], inactive
@@ -14,15 +13,15 @@ helpviewer_keywords:
 - status information [Reporting Services]
 - inactive subscriptions [Reporting Services]
 ms.assetid: 054c4a87-60bf-4556-9a8c-8b2d77a534e6
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 3304506d1898123161bf226f8396f05cee7db10d
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: 998a7823721b8c978e2b8bfd21b6308507a8963c
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56295459"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66100759"
 ---
 # <a name="monitor-reporting-services-subscriptions"></a>Reporting Services のサブスクリプションを監視する
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] サブスクリプションの監視は、ユーザー インターフェイス、Windows PowerShell、またはログ ファイルから行うことができます。 監視のために使用できるオプションは、実行しているレポート サーバーのモードによって異なります。  
@@ -49,7 +48,7 @@ ms.locfileid: "56295459"
 |状態|説明|  
 |------------|-----------------|  
 |新しいサブスクリプション|初めてサブスクリプションを作成するときに表示されます。|  
-|無効|サブスクリプションを処理できないときに表示されます。 詳細については、このトピックの「無効なサブスクリプションの管理」を参照してください。|  
+|Inactive|サブスクリプションを処理できないときに表示されます。 詳細については、このトピックの「無効なサブスクリプションの管理」を参照してください。|  
 |完了: 合計 \<*number*> 件のうち、処理済み \<*number*> 件; エラー \<*number*> 件です。|データ ドリブン サブスクリプション実行の状態を表示します。このメッセージはスケジュールおよび配信のプロセッサで作成されます。|  
 |\<*number*> 処理済み|スケジュールおよび配信のプロセッサが正常に配信した通知、または配信の試行が行われなくなった通知の件数です。 データ ドリブンの配信が完了したとき、処理された通知の件数と生成された通知の合計件数が等しくなる必要があります。|  
 |\<*number*> 合計|最後にサブスクリプションを配信したときに生成されたサブスクリプションの通知の合計件数です。|  
@@ -79,7 +78,7 @@ ms.locfileid: "56295459"
   
  サブスクリプションに関連するトレース ログ ファイルのサンプル エラー メッセージを次に示します。  
   
--   ライブラリです。WindowsService_7! b60! 05/20/2014-22: 34:36:: i 情報。サーバー システム properties.emailextension で指定されているとおり、EnableExecutionLogging を 'True' に初期化!WindowsService_7! b60! 05/20/2014-22: 34:41:: e エラー。**メールの送信エラー**します。 Exception:System.Net.Mail.SmtpException:The SMTP server requires a secure connection or the client was not authenticated. The server response was:5.7.1 Client was not authenticated   at System.Net.Mail.MailCommand.CheckResponse(SmtpStatusCode statusCode, String response)  
+-   library!WindowsService_7!b60!05/20/2014-22:34:36:: i INFO:Initializing EnableExecutionLogging to 'True'  as specified in Server system properties.emailextension!WindowsService_7!b60!05/20/2014-22:34:41:: e ERROR:**Error sending email**. 例外:System.Net.Mail.SmtpException:SMTP サーバーには、セキュリティで保護された接続が必要です。 または、クライアントは認証されていません。 サーバーの応答は次のとおりでした。5.7.1 Client was not authenticated   at System.Net.Mail.MailCommand.CheckResponse(SmtpStatusCode statusCode, String response)  
   
  ログ ファイルには、レポートが開かれているかどうか、または実際に配信が成功したかどうかに関する情報は含まれません。 配信が成功するということは、スケジュールおよび配信のプロセッサでエラーが生成されず、レポート サーバーがメール サーバーに接続したことを意味します。 電子メールがユーザーのメールボックスで配信不能なメッセージ エラーとなった場合、その情報はログ ファイルに含まれません。 ログ ファイルの詳細については、「 [Reporting Services のログ ファイルとソース](../report-server/reporting-services-log-files-and-sources.md)」を参照してください。  
   
@@ -99,8 +98,8 @@ ms.locfileid: "56295459"
   
 ||||||||  
 |-|-|-|-|-|-|-|  
-|date|Process|領域|カテゴリ|Level|Correlation|メッセージ|  
-|5/21/2014 14:34:06:15|アプリケーション プール： a0ba039332294f40bc4a81544afde01d|SQL Server Reporting Services (SQL Server Reporting Services)|レポート サーバー電子メール拡張機能|Unexpected|(空)|**Error sending email.** Exception:System.Net.Mail.SmtpException:Mailbox unavailable. The server response was:5.7.1 Client does not have permissions to send as this sender  at System.Net.Mail.DataStopCommand.CheckResponse(SmtpStatusCode statusCode, String serverResponse)  at System.Net.Mail.DataStopCommand.Send(SmtpConnection conn)  at System.Net.Mail.SmtpClient.Send(MailMessage message)  at Microsoft.ReportingServices.EmailDeliveryProvider.EmailProvider.Deliver(Notification notification)|  
+|date|[処理]|領域|カテゴリ|Level|Correlation|メッセージ|  
+|5/21/2014 14:34:06:15|アプリケーション プール： a0ba039332294f40bc4a81544afde01d|SQL Server Reporting Services (SQL Server Reporting Services)|レポート サーバー電子メール拡張機能|Unexpected|(空)|**Error sending email.** 例外:System.Net.Mail.SmtpException:メールボックスが使用できません。 サーバーの応答は次のとおりでした。5.7.1 クライアントは位置がありません (SmtpStatusCode statusCode, String serverResponse) 次の場所で、この送信者として送信するアクセス許可で System.net.mail.datastopcommand.send(smtpconnection conn)Microsoft.ReportingServices.EmailDeliveryProvider.EmailProvider.Deliver (通知の通知) で System.Net.Mail.SmtpClient.Send (MailMessage メッセージ)|  
   
 ##  <a name="bkmk_use_powershell"></a> PowerShell を使用してサブスクリプションを監視する  
  ネイティブ モードまたは SharePoint モードのサブスクリプションの状態を確認するために使用できる PowerShell スクリプトの例は、「 [Use PowerShell to Change and List Reporting Services Subscription Owners and Run a Subscription](manage-subscription-owners-and-run-subscription-powershell.md)」を参照してください。  

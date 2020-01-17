@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 5ea8029b-eda4-490b-ae84-2ad036fb582f
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 9ea31baf4b215a6a516c13b438b526b8e9d8b612
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a81eb6ee58d942547a159728b9c3edf9a30f1ece
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47606580"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67917670"
 ---
 # <a name="parentrow-property-ado"></a>ParentRow プロパティ (ADO)
 OLE DB のコンテナーを設定します**行**上のオブジェクト、 **ADORecordConstruction**オブジェクト、行の親が ADO に変換されるよう**レコード**オブジェクト。  

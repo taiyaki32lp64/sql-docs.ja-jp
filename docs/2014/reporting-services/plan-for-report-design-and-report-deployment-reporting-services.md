@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 ms.assetid: 1c1e265e-52a2-4de3-96fd-ca4abae01c02
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 59b1574f7c302a5cf3adc3bee04881eefd176080
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: c6104bfc97d2f66652ffa9b16e9ff0ae8f9b0550
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56032013"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66108047"
 ---
 # <a name="plan-for-report-design-and-report-deployment-reporting-services-2014"></a>レポート デザインとレポート配置の計画 (Reporting Services 2014)
   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 作成とレポートの配置に関していくつかのアプローチを提供します。 このトピックは、使用するレポート作成環境とレポート サーバーの組み合わせを計画するために役立ちます。 このトピックでは、 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] のコンポーネントでサポートされているレポート定義の概要を示します。 レポート定義は、レポート定義言語 (RDL : Report Definition Language) またはクライアント向けレポート定義言語 (RDLC : Report Definition Language for Clients) で記述された XML ファイルです。 どちらのレポート定義も、そのファイルの冒頭に指定された特定のスキーマ バージョンに準拠しています。  
@@ -62,9 +61,9 @@ ms.locfileid: "56032013"
   
 -   **レポート マネージャー:** レポート マネージャーからネイティブ モード レポート サーバーにレポートをアップロードします。  
   
--   **SharePoint の場合:** SharePoint モード レポート サーバーで構成された SharePoint サイトにレポートをアップロードします。  
+-   **SharePoint の場合:** SharePoint モードのレポート サーバーで構成されている SharePoint サイトにレポートをアップロードします。  
   
--   **プログラムを使用します。** プログラムから SOAP API インターフェイスを使用してレポート サーバーにレポートを発行します。 詳細については、「 [Report Server Web Service](report-server-web-service/report-server-web-service.md)」を参照してください。  
+-   **プログラムを使用します。** プログラムによってレポート サーバーに SOAP API インターフェイスを使用してレポートをパブリッシュします。 詳細については、「 [Report Server Web Service](report-server-web-service/report-server-web-service.md)」を参照してください。  
   
  次の表は、サポートされる RDL スキーマのバージョンをレポート サーバーのバージョン別に示したものです。  
   
@@ -117,7 +116,7 @@ ms.locfileid: "56032013"
   
 -   [ReportViewer コントロールの追加と構成](https://msdn.microsoft.com/library/ms252104.aspx)  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [レポート、レポート パーツ、およびレポート定義 (レポート ビルダーおよび SSRS)](report-design/reports-report-parts-and-report-definitions-report-builder-and-ssrs.md)   
  [Reporting Services ツール](tools/reporting-services-tools.md)   
  [レポート定義言語 (SSRS)](reports/report-definition-language-ssrs.md)  

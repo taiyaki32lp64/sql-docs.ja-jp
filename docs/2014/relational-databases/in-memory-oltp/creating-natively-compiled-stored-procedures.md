@@ -10,12 +10,12 @@ ms.assetid: e6b34010-cf62-4f65-bbdf-117f291cde7b
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 22530fafb9c41ec7bee87c43589f6eaba0fa3f70
-ms.sourcegitcommit: c7febcaff4a51a899bc775a86e764ac60aab22eb
+ms.openlocfilehash: 9525ef65973baa38ae19ba4681e4a93f949c004a
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "52712463"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63071822"
 ---
 # <a name="creating-natively-compiled-stored-procedures"></a>ネイティブ コンパイル ストアド プロシージャの作成
   ネイティブ コンパイル ストアド プロシージャには、 [!INCLUDE[tsql](../../includes/tsql-md.md)] のプログラミングとクエリのセキュリティ構成が完全には実装されていません。 ネイティブ コンパイル ストアド プロシージャ内部で使用できない特定の [!INCLUDE[tsql](../../includes/tsql-md.md)] 構造が存在します。 詳細については、次を参照してください。[ネイティブ コンパイル ストアド プロシージャでサポートされる構造](../in-memory-oltp/supported-features-for-natively-compiled-t-sql-modules.md)します。  
@@ -30,7 +30,7 @@ ms.locfileid: "52712463"
   
  ネイティブ コンパイル ストアド プロシージャは、[CREATE PROCEDURE &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-procedure-transact-sql) を使用して作成します。 次の例は、メモリ最適化テーブルと、このテーブルに行を挿入するために使用されるネイティブ コンパイル ストアド プロシージャを示します。  
   
-```tsql  
+```sql  
 create table dbo.Ord  
 (OrdNo integer not null primary key nonclustered,   
  OrdDate datetime not null,   
@@ -98,7 +98,7 @@ go
   
      ラッパー (ディスク ベース) ストアド プロシージャを使用し、SP_Vnew を指すようにそのプロシージャを変更します。 この方法の欠点は、間接指定によってパフォーマンスに影響することです。  
   
-    ```tsql  
+    ```sql  
     ALTER PROCEDURE dbo.SP p1,...,pn  
     AS  
       EXEC dbo.SP_Vnew p1,...,pn  

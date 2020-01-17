@@ -21,13 +21,12 @@ helpviewer_keywords:
 ms.assetid: 08475db4-7d90-486a-814c-01a99d783d41
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: 230a87a1138bf2b97ece66246d86a8264341446c
-ms.sourcegitcommit: c61c7b598aa61faa34cd802697adf3a224aa7dc4
+ms.openlocfilehash: 0d6b786725dfb50fceb1376fd104a4b5e5afbc76
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56154707"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67902847"
 ---
 # <a name="create-default-transact-sql"></a>CREATE DEFAULT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -52,13 +51,13 @@ AS constant_expression [ ; ]
  デフォルトが所属するスキーマの名前を指定します。  
   
 *default_name*  
- デフォルトの名前。 デフォルトの名前は、[識別子](../../relational-databases/databases/database-identifiers.md)のルールに従っている必要があります。 デフォルトの所有者名の指定は省略可能です。  
+ デフォルトの名前。 デフォルトの名前は、[識別子](../../relational-databases/databases/database-identifiers.md)のルールに従っている必要があります。 既定の所有者名の指定は省略可能です。  
   
 *constant_expression*  
-定数値のみを含む[式](../../t-sql/language-elements/expressions-transact-sql.md) (列名や他のデータベース オブジェクト名を含めることはできません)。 任意の定数、組み込み関数、または数式を使用できます。別名データ型を含むものは使用できません。 ユーザー定義関数は使用できません。 文字および日付定数は単一引用符 (**'**) で囲んでください。金額、整数、および浮動小数点定数には引用符は必要ありません。 binary 型データには先頭に 0x を、金額には先頭に円記号 (\) を指定します。 既定値と列のデータ型には互換性があることが必要です。  
+定数値のみを含む[式](../../t-sql/language-elements/expressions-transact-sql.md) (列名や他のデータベース オブジェクト名を含めることはできません)。 任意の定数、組み込み関数、または数式を使用できます。別名データ型を含むものは使用できません。 ユーザー定義関数は使用できません。 文字および日付定数は単一引用符 ( **'** ) で囲んでください。金額、整数、および浮動小数点定数には引用符は必要ありません。 バイナリ データの前には 0x を付ける必要があり、通貨データの前にはドル記号 ($) を付ける必要があります。 既定値は、列のデータ型と互換性がある必要があります。  
   
 ## <a name="remarks"></a>Remarks  
- デフォルト名は現在のデータベース内にのみ作成できます。 データベース内では、デフォルトの名前はスキーマごとに一意であることが必要です。 デフォルトを作成したら、**sp_bindefault** を使用してデフォルトを列または別名データ型にバインドします。  
+ デフォルト名は現在のデータベース内にのみ作成できます。 データベース内で、既定の名前はスキーマにより一意である必要があります。 デフォルトを作成したら、**sp_bindefault** を使用してデフォルトを列または別名データ型にバインドします。  
   
  デフォルトとバインド先の列に互換性がない場合、既定値の挿入を試みると [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] によってエラー メッセージが生成されます。 たとえば、**numeric** 型の列のデフォルトとして N/A を使用することはできません。  
   
@@ -70,18 +69,18 @@ AS constant_expression [ ; ]
   
  列が既定値とそれに関連するルールの両方を持つ場合、既定値はそのルールに従っている必要があります。 ルールに矛盾するデフォルトは挿入できません。挿入を試行すると、そのたびに [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ではエラー メッセージが表示されます。  
   
- 列にバインドされているとき、既定値は次の場合に挿入されます。  
+ 列にバインドすると、次の場合に既定値が挿入されます。  
   
 -   値が明示的に挿入されない場合。  
   
--   DEFAULT VALUES キーワードまたは DEFAULT キーワードを INSERT と組み合わせて使用し、既定値を挿入した場合。  
+-   DEFAULT VALUES または DEFAULT のいずれかのキーワードは、既定値を挿入するために INSERT と共に使用されます。  
   
- 列の作成時に NOT NULL が指定され、その列のデフォルトが作成されていない場合、ユーザーがその列に入力を行わないとエラー メッセージが生成されます。 次の表は、デフォルトの有無と、NULL または NOT NULL として定義された列の関係を示しています。 表中の各エントリは結果を示しています。  
+ 列の作成時に NOT NULL が指定され、その列のデフォルトが作成されていない場合、ユーザーがその列に入力を行わないとエラー メッセージが生成されます。 次の表は、デフォルトの有無と、NULL または NOT NULL として定義された列の関係を示しています。 テーブル内のエントリに結果が表示されます。  
   
-|列の定義|入力なし、デフォルトなし|入力なし、デフォルトあり|NULL を入力、デフォルトなし|NULL を入力、デフォルトあり|  
+|列の定義|入力なし、既定値なし|入力なし、デフォルトあり|NULL を入力、デフォルトなし|NULL を入力、既定値あり|  
 |-----------------------|--------------------------|-----------------------|----------------------------|-------------------------|  
 |**NULL**|NULL|既定値 (default)|NULL|NULL|  
-|**NOT NULL**|エラー|既定値 (default)|エラー|エラー|  
+|**NOT NULL**|Error|既定値 (default)|error|error|  
   
  デフォルトの名前を変更するには、**sp_rename** を使用します。 デフォルトに関するレポートを表示するには、**sp_help** を使用します。  
   
@@ -90,7 +89,7 @@ AS constant_expression [ ; ]
   
 ## <a name="examples"></a>使用例  
   
-### <a name="a-creating-a-simple-character-default"></a>A. 単純な文字のデフォルトを作成する  
+### <a name="a-creating-a-simple-character-default"></a>A. シンプルな文字の既定値を作成する  
  次の例では、"`unknown`" という文字のデフォルトを作成します。  
   
 ```sql  
@@ -99,13 +98,13 @@ GO
 CREATE DEFAULT phonedflt AS 'unknown';  
 ```  
   
-### <a name="b-binding-a-default"></a>B. デフォルトをバインドする  
+### <a name="b-binding-a-default"></a>B. 既定値をバインドする  
  次の例では、例 A で作成したデフォルトをバインドします。デフォルトが有効になるのは、`Contact` テーブルの `Phone` 列にエントリが指定されていない場合のみです。 
  
  > [!Note] 
  >  任意のエントリを省略することは、INSERT ステートメントで NULL を明示的に示すこととは異なります。  
   
- `phonedflt` という名前のデフォルトは存在しないので、次の [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントは失敗します。 次の例は、説明用のものです。  
+ `phonedflt` という名前のデフォルトは存在しないので、次の [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントは失敗します。 これは例示のみを目的としています。  
   
 ```sql  
 USE AdventureWorks2012;  

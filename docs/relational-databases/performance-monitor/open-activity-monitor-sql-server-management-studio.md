@@ -1,6 +1,7 @@
 ---
-title: 利用状況モニターを開く方法 (SQL Server Management Studio) | Microsoft Docs
-ms.custom: ''
+title: 利用状況モニターを開く (SSMS)
+description: SQL Server Management Studio (SSMS) で利用状況モニターを開く方法。
+ms.custom: seo-dt-2019
 ms.date: 08/05/2016
 ms.prod: sql
 ms.prod_service: database-engine
@@ -15,15 +16,14 @@ helpviewer_keywords:
 ms.assetid: 0a6eeb16-f02b-479d-9a60-543e40ebf46b
 author: julieMSFT
 ms.author: jrasnick
-manager: craigg
-ms.openlocfilehash: 7f867024e3dbfa005fdf04e7052c4993fa9ce2c3
-ms.sourcegitcommit: 0c1d552b3256e1bd995e3c49e0561589c52c21bf
+ms.openlocfilehash: 0af1ae6d145836a313df8ba6e77f965aa17e0e9a
+ms.sourcegitcommit: f018eb3caedabfcde553f9a5fc9c3e381c563f1a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/14/2018
-ms.locfileid: "53379774"
+ms.lasthandoff: 11/18/2019
+ms.locfileid: "74165530"
 ---
-# <a name="open-activity-monitor-sql-server-management-studio"></a>利用状況モニターを開く方法 (SQL Server Management Studio)
+# <a name="open-activity-monitor-in-sql-server-management-studio-ssms"></a>SQL Server Management Studio (SSMS) で利用状況モニターを開く
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
    
  利用状況モニターでは、監視対象となるインスタンスでクエリを実行し、[利用状況モニター] 表示ペインに表示する情報を取得します。 更新間隔を 10 秒未満に設定すると、これらのクエリを実行する時間がサーバーのパフォーマンスに影響を与える可能性があります。  
@@ -42,7 +42,7 @@ ms.locfileid: "53379774"
 
  >**ヒント!** SSMS のアイコンにマウスを移動すると、説明と、実行するキーボード ショートカットが表示されます。
 
-### <a name="toolbar"></a>[ツール バー]
+### <a name="toolbar"></a>ツール バー
 
 [標準] ツール バーの **[利用状況モニター]** アイコンをクリックします。 中央の [元に戻す]/[やり直し] ボタンの右にあります。
 ![Activity_Monitor_icon](../../relational-databases/performance-monitor/media/activity-monitor-icon.png)  
@@ -58,7 +58,7 @@ ms.locfileid: "53379774"
 3.  **[スタートアップ時]** ドロップダウン リストで **[オブジェクト エクスプローラーと利用状況モニターを開く]** をクリックします。  
 
 4.  **[OK]** をクリックします。
-  
+
 ![open_object_explorer](../../relational-databases/performance-monitor/media/open-object-explorer.png)
   
   

@@ -21,11 +21,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 9dfe88f11cc26d4a9711b7f21caf4c4475ec954b
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53351323"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68206738"
 ---
 # <a name="binding-parameters"></a>パラメーターのバインド
   SQL ステートメントの各パラメーター マーカーは、ステートメントを実行する前にアプリケーション内の変数に関連付ける、つまりバインドする必要があります。 これは、呼び出すことで、 [SQLBindParameter](../native-client-odbc-api/sqlbindparameter.md)関数。 **SQLBindParameter**ドライバーにプログラム変数 (アドレス、C データ型など) について説明します。 また、序数値を示すことでパラメーター マーカーを識別してから、そのパラメーター マーカーが表す SQL オブジェクト表現 (SQL データ型、有効桁数など) を記述します。  

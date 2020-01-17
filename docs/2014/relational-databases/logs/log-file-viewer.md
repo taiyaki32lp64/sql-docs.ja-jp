@@ -13,11 +13,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: f72f8e40374198a5230e32b8ec5b3974fdb6b971
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52806604"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63144644"
 ---
 # <a name="log-file-viewer"></a>ログ ファイルの表示
   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] の [ログ ファイルの表示] を使用して、ログ ファイルに記録されたエラーおよびイベントに関する情報にアクセスできます。  
@@ -51,7 +51,7 @@ ms.locfileid: "52806604"
 |登録済みサーバーを通じてオフラインのログ ファイルを表示する方法と、WMI 権限を確認する方法について説明します。|[オフライン ログ ファイルの表示](view-offline-log-files.md)|  
 |[ログ ファイルの表示] の F1 ヘルプを提供します。|[[ログ ファイルの表示] の F1 ヘルプ](log-file-viewer-f1-help.md)|  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [SQL Server Audit &#40;Database Engine&#41;](../security/auditing/sql-server-audit-database-engine.md)   
  [SQL Server エージェント エラー ログ](../../ssms/agent/sql-server-agent-error-log.md)  
   

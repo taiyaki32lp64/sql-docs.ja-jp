@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 9223e474-f224-4907-a4f2-081e11db58f5
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 6b29e94e129cf674beee7d9ca2b784203c753c79
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 814bfdd9c44170cc25f8dbd7eabcfd78ebde2a7d
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47826400"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72908554"
 ---
 # <a name="view-offline-log-files"></a>オフライン ログ ファイルの表示
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -47,7 +46,7 @@ ms.locfileid: "47826400"
   
 -   [SqlErrorLogFile Class](../../relational-databases/wmi-provider-configuration-classes/sqlerrorlogfile-class.md) (このトピックでは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の指定されたインスタンス上のすべての [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]ログ ファイルに関する情報を取得する方法について説明しています。)  
   
-##  <a name="BeforeYouBegin"></a> 権限  
+##  <a name="BeforeYouBegin"></a> Permissions  
  オフラインのログ ファイルに接続するには、ローカルおよびリモートの両方のコンピューターで次の権限が必要です。  
   
 -   **Root\Microsoft\SqlServer\ComputerManagement12** WMI 名前空間への読み取りアクセス。 既定では、すべてのユーザーがアカウントの有効化権限による読み取りアクセスを持ちます。 詳細については、このセクションで後述する「WMI 権限を確認するには」を参照してください。  
@@ -62,7 +61,7 @@ ms.locfileid: "47826400"
   
 1.  WMI コントロール スナップインを開きます。 これを行うには、次のいずれかの操作を実行します (オペレーティング システムによって異なります)。  
   
-    -   **[スタート]** ボタンをクリックし、**[検索の開始]** ボックスに「 **wmimgmt.msc** 」と入力して Enter キーを押します。  
+    -   **[スタート]** ボタンをクリックし、 **[検索の開始]** ボックスに「 **wmimgmt.msc** 」と入力して Enter キーを押します。  
   
     -   **[スタート]** ボタンをクリックし、 **[ファイル名を指定して実行]** をクリックします。「 **wmimgmt.msc**」と入力して Enter キーを押します。  
   
@@ -76,7 +75,7 @@ ms.locfileid: "47826400"
   
     3.  リモート コンピューター名を入力し、 **[OK]** をクリックします。  
   
-3.  **[WMI コントロール (ローカル)]** または **[WMI コントロール (***RemoteComputerName***)]** を右クリックして、**[プロパティ]** をクリックします。  
+3.  **[WMI コントロール (ローカル)]** または **[WMI コントロール (** _RemoteComputerName_ **)]** を右クリックして、 **[プロパティ]** をクリックします。  
   
 4.  **[WMI コントロールのプロパティ]** ダイアログ ボックスで、 **[セキュリティ]** タブをクリックします。  
   
@@ -87,7 +86,7 @@ ms.locfileid: "47826400"
 6.  **[セキュリティ]** をクリックします。  
   
 7.  使用するアカウントに **[アカウントの有効化]** 権限があることを確認します。 この権限により、WMI オブジェクトへの読み取りアクセスが許可されます。  
-  
+
 ### <a name="view-log-files"></a>ログ ファイルの表示  
  次の手順は、登録済みサーバーを使用してオフラインのログ ファイルを表示する方法を示します。 この手順の前提条件は次のとおりです。  
   

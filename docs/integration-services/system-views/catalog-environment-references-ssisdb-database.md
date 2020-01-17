@@ -8,17 +8,20 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: language-reference
 ms.assetid: efec53ef-3e5a-4b76-b71d-a0cf9e11ac00
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: d8f1a844d015238d1b8d80c6af601299f02572af
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 848e337ecfacd16df1b34a60e392b572b612735d
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47710800"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71295195"
 ---
-# <a name="catalogenvironmentreferences-ssisdb-database"></a>catalog.environment_references (SSISDB データベース)
+# <a name="catalogenvironment_references-ssisdb-database"></a>catalog.environment_references (SSISDB データベース)
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
   **SSISDB** カタログのすべてのプロジェクトに対する環境参照を表示します。  

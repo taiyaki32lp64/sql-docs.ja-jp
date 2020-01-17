@@ -10,16 +10,16 @@ ms.topic: language-reference
 ms.assetid: 605eb49a-225c-4186-a341-e90403c82b60
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: e464a93328469953818c5ba5d8e9202b28f7320a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
+ms.openlocfilehash: 5206158bf84280fc84f6ad43edb3b09c5fce2796
+ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47646390"
+ms.lasthandoff: 08/03/2019
+ms.locfileid: "68769688"
 ---
 # <a name="replication-language-reference"></a>レプリケーション言語リファレンス
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
   レプリケーション言語リファレンスの内容は次のとおりです。  
   

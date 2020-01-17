@@ -13,15 +13,14 @@ helpviewer_keywords:
 - compound operators
 - compound operators, described
 ms.assetid: 5072fe91-02d3-42a7-831f-756eff714a17
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: bdd527404381156dbe23db1554b081bdd40e6620
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: e81ef89165b3af5af0f8c48ca0338086c5c934a9
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47835080"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67929537"
 ---
 # <a name="compound-operators-transact-sql"></a>複合演算子 (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]

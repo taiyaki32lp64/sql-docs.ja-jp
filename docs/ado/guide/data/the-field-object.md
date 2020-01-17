@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 7d1c4ad5-4be3-42ab-b516-e7133ca300bc
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: e152c3147ab7c316494c6891424c0a7c8173f002
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 80e6576b236db44452c4e89b1d8f3bb8976ab120
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52516533"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67923982"
 ---
 # <a name="the-field-object"></a>Field オブジェクト
 各**フィールド**オブジェクトは、通常、データベース テーブル内の列に対応します。 ただし、**フィールド**を別のポインターを表すことができますも**レコード セット**チャプターと呼ばれます。 チャプター列などの例外は、このガイドの後半で取り上げます。  

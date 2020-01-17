@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 410c5a6e-e957-4ecc-9e2d-e591cbc0bc4f
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: b6f0e23abd31661210282967fa35080376eaaaf3
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 9f8addb9b4c7c200ee8f213bdd959067039ccfff
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47765636"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68063671"
 ---
 # <a name="set-null-command"></a>SET NULL コマンド
 決定方法によって、ALTER TABLE - SQL、CREATE TABLE - SQL、および INSERT の null 値がサポートされている SQL コマンド。  
@@ -44,7 +43,7 @@ SET NULL ON | OFF
 ## <a name="remarks"></a>コメント  
  NULL に設定の影響のみ方法に null 値は、ALTER TABLE、CREATE TABLE、および INSERT - SQL でサポートされます。 その他のコマンドは、SET NULL による影響を受けません。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [ALTER TABLE - SQL コマンド](../../odbc/microsoft/alter-table-sql-command.md)   
  [CREATE TABLE - SQL コマンド](../../odbc/microsoft/create-table-sql-command.md)   
  [INSERT - SQL コマンド](../../odbc/microsoft/insert-sql-command.md)

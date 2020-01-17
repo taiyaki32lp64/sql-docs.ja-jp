@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: 42c896ee-e5ee-4017-b66e-31d1fe66d369
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 2ff75840ba60d8ab93a3adeeeef949263e607b35
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: f28d0503497fd066de2d328e75813f7b77026b2f
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48145882"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66085238"
 ---
 # <a name="create-drillthrough-queries-using-dmx"></a>DMX を使用したドリルスルー クエリの作成
   ドリルスルーをサポートするすべてのモデルでは、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] または DMX をサポートするその他のクライアントで DMX クエリを作成することで、ケース データと構造データを取得できます。  
@@ -44,8 +43,8 @@ WHERE [Model Region] = 'M200 Pacific'
   
  この例では、別名を使用して構造列の名前が変更されています。 構造列に別名を割り当てないと、'Expression' という名前で列が返されます。 これはすべての名前のない列に対する既定の動作です。  
   
-## <a name="see-also"></a>参照  
- [ドリルスルー クエリ&#40;データ マイニング&#41;](drillthrough-queries-data-mining.md)   
+## <a name="see-also"></a>関連項目  
+ [ドリルスルー クエリ (データ マイニング)](drillthrough-queries-data-mining.md)   
  [マイニング構造でのドリルスルー](drillthrough-on-mining-structures.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: getBlob メソッド (SQLServerResultSet) |Microsoft Docs
+title: getBlob メソッド (SQLServerResultSet) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: 2a43d1c8-ec8a-43de-b51e-b9108f4e3eae
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 7bf984e1b8fd71fa7e56edb7b8b51747907badb8
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: c17e74c6844fa794dadb09e30f0be6822b66eb69
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47667290"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67953734"
 ---
 # <a name="getblob-method-sqlserverresultset"></a>getBlob メソッド (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

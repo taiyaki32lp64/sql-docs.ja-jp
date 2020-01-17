@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 helpviewer_keywords:
 - synchronous event counter target [SQL Server extended events]
@@ -14,12 +13,12 @@ ms.assetid: 342e08d1-dcca-4a71-ae64-cb61b55b85bc
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 8f701ff8a1648a3f90f7e04c71f159081ac7a3da
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: ddf153da7af2906fe7167c8cb2b77d9100d1154f
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48101182"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66064919"
 ---
 # <a name="event-counter-target"></a>イベント カウンター ターゲット
   イベント カウンター ターゲットは、拡張イベント セッション中に発生したすべてのイベントをカウントします。 イベント カウンター ターゲットを使用すると、完全なイベント コレクションのオーバーヘッドを追加することなく負荷の特性に関する情報を取得できます。 このターゲットには、カスタマイズ可能なパラメーターはありません。  

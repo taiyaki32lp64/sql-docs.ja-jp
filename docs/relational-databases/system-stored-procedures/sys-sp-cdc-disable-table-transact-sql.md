@@ -21,18 +21,17 @@ helpviewer_keywords:
 ms.assetid: da2156c0-504e-4d76-b9a0-4448becf9bda
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: b797301b5b778bea34ad1552152e7e3e147dde37
-ms.sourcegitcommit: fc6a6eedcea2d98c93e33d39c1cecd99fbc9a155
+ms.openlocfilehash: 693c449679433b733cfc3a45e2bbedf3f1d92185
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49169172"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68106509"
 ---
-# <a name="sysspcdcdisabletable-transact-sql"></a>sys.sp_cdc_disable_table (Transact-SQL)
+# <a name="sysspcdcdisabletable-transact-sql"></a>sys.sp_cdc_disable_table (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  現在のデータベース内の指定したソース テーブルおよびキャプチャ インスタンスを対象に、変更データ キャプチャを無効にします。 変更データ キャプチャは、 [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のすべてのエディッションで使用できるわけではありません。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]の各エディションでサポートされる機能の一覧については、「 [SQL Server 2016 の各エディションがサポートする機能](~/sql-server/editions-and-supported-features-for-sql-server-2016.md)」を参照してください。  
+  変更データ キャプチャの現在のデータベース内の指定したソース テーブルとキャプチャ インスタンスを無効にします。 変更データ キャプチャは、 [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のすべてのエディッションで使用できるわけではありません。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]の各エディションでサポートされる機能の一覧については、「 [SQL Server 2016 の各エディションがサポートする機能](~/sql-server/editions-and-supported-features-for-sql-server-2016.md)」を参照してください。  
   
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -47,18 +46,15 @@ sys.sp_cdc_disable_table
 ```  
   
 ## <a name="arguments"></a>引数  
- [  **@source_schema=** ] **'**_ソース\_スキーマ_**'**  
- ソース テーブルが含まれるスキーマの名前です。 *source_schema*は**sysname**、既定値はありません、NULL にすることはできません。  
+`[ @source_schema = ] 'source\_schema'` ソース テーブルが含まれているスキーマの名前です。 *source_schema*は**sysname**、既定値はありません、NULL にすることはできません。  
   
  *source_schema*現在のデータベースに存在する必要があります。  
   
- [  **@source_name=** ] **'**_ソース\_名前_**'**  
- 変更データ キャプチャを無効にするソース テーブルの名前です。 *source_name*は**sysname**、既定値はありません、NULL にすることはできません。  
+`[ @source_name = ] 'source\_name'` 変更データ キャプチャが無効にするのには、ソース テーブルの名前です。 *source_name*は**sysname**、既定値はありません、NULL にすることはできません。  
   
  *source_name*現在のデータベースに存在する必要があります。  
   
- [  **@capture_instance=** ] **'**_キャプチャ\_インスタンス_**'** | **'** すべて **'**  
- 指定されたソース テーブルで無効にするキャプチャ インスタンスの名前を指定します。 *capture_instance*は**sysname** NULL にすることはできません。  
+`[ @capture_instance = ] 'capture\_instance' | 'all'` 指定したソース テーブルで無効にするキャプチャ インスタンスの名前です。 *capture_instance*は**sysname** NULL にすることはできません。  
   
  'All' を指定した場合、すべてのキャプチャ インスタンスに対して定義されている*source_name*は無効になります。  
   
@@ -75,7 +71,7 @@ sys.sp_cdc_disable_table
  メンバーシップが必要です、 **db_owner**固定データベース ロール。  
   
 ## <a name="examples"></a>使用例  
- 次の例では、`HumanResources.Employee` テーブルの変更データ キャプチャを無効にします。  
+ 次の例を無効に変更データ キャプチャを`HumanResources.Employee`テーブル。  
   
 ```  
 USE AdventureWorks2012;  
@@ -86,7 +82,7 @@ EXECUTE sys.sp_cdc_disable_table
     @capture_instance = N'HumanResources_Employee';  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [sys.sp_cdc_enable_table &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-cdc-enable-table-transact-sql.md)  
   
   

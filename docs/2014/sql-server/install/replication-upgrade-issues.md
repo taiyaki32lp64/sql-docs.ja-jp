@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 helpviewer_keywords:
 - replication upgrade issues
@@ -14,12 +13,12 @@ ms.assetid: 18898388-5158-407b-9774-639af99e8f07
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 5ec1e3b914a5dd0a3df05e181b7f11d5bef6c30b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 619cd537b5ecb45afe2dce3467caa64fc1e9a499
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48158942"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66092746"
 ---
 # <a name="replication-upgrade-issues"></a>レプリケーションのアップグレードに関する問題
   次のトピックでは、[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] へのアップグレードに影響する可能性があるレプリケーションに関する問題について説明します。 トピックでは、環境内でこれらの変更の影響を軽減するために行える操作について説明します。  

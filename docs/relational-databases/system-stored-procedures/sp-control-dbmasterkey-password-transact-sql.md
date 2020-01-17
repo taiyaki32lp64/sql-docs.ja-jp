@@ -17,18 +17,17 @@ helpviewer_keywords:
 ms.assetid: 63979a87-42a2-446e-8e43-30481faaf3ca
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: af6e23ba3cce2ef4dfaa6901f51a9d6c0b034e60
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 0af97dacdf5927428042d8e67593a0c6ee78542d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47659910"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68108774"
 ---
 # <a name="spcontroldbmasterkeypassword-transact-sql"></a>sp_control_dbmasterkey_password (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  データベースのマスター キーを開くときに必要とされるパスワードを含む資格情報を追加または削除します。  
+  追加するか、データベース マスター_キーを開くために必要なパスワードを格納している資格情報を削除します。  
   
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -42,7 +41,7 @@ sp_control_dbmasterkey_password @db_name = 'database_name,
   
 ## <a name="arguments"></a>引数  
  @db_name=N'*database_name*'  
- 資格情報に関連付けられているデータベースの名前を指定します。 システム データベースは指定できません。 *database_name*は**nvarchar**します。  
+ この資格情報に関連付けられているデータベースの名前を指定します。 システム データベースにすることはできません。 *database_name*は**nvarchar**します。  
   
  @password= N'*パスワード*'  
  マスター キーのパスワードを指定します。 *パスワード*は**nvarchar**します。  
@@ -57,9 +56,9 @@ sp_control_dbmasterkey_password @db_name = 'database_name,
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] で、キーの暗号化解除や暗号化にデータベースのマスター キーが必要となる場合、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ではインスタンスのサービス マスター キーを使用して、データベースのマスター キーの暗号化解除が試行されます。 復号化に失敗した場合、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のマスター _ キー資格情報をマスター _ キーを必要なデータベースと同じファミリ GUID を持つ資格情報ストアを検索します。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、次に、一致した資格情報を順に使用してデータベースのマスター キーの暗号化解除が試行されます。これは暗号化解除が成功するか、資格情報がなくなった時点で終了します。  
   
 > [!CAUTION]  
->  sa やその他の高位の権限を持つサーバー プリンシパルに対してデータベースへのアクセスを禁止する場合は、データベースのマスター キー資格情報を作成しないでください。 データベースのキー階層をサービス マスター キーで暗号化解除できないようにデータベースを構成できます。 この機能は、sa または高位の権限を持つサーバー プリンシパルに対して、データベースに含まれる暗号化情報へのアクセスを禁止するための、多重の防御としてサポートされているものです。 このようなデータベースに対してマスター キー資格情報を作成すると、この多重の防御が無効になり、sa およびその他の高位の権限を持つサーバー プリンシパルがデータベースの暗号化を解除できるようになります。  
+>  Sa およびその他の高い権限を持つサーバー プリンシパルにアクセス可能にする必要があるデータベースのマスター_キー資格情報を作成できません。 データベースのキー階層をサービス マスター キーで暗号化解除できないようにデータベースを構成できます。 このオプションは、- 防御は sa またはその他の高い特権を持つサーバー プリンシパルにアクセスできない暗号化された情報を含むのデータベースとしてサポートされます。 そのようなデータベースのマスター_キー資格情報を作成するには、この防御、データベースの暗号化を解除するには、sa およびその他の高い特権を持つサーバー プリンシパルの有効化が削除されます。  
   
- Sp_control_dbmasterkey_password を使用して作成される資格情報は、 [sys.master_key_passwords](../../relational-databases/system-catalog-views/sys-master-key-passwords-transact-sql.md)カタログ ビューです。 データベース マスター _ キー、次の形式を指定することで作成された資格情報の名前:`##DBMKEY_<database_family_guid>_<random_password_guid>##`します。 パスワードは、資格情報シークレットとして格納されています。 sys.credentials には、資格情報ストアに追加されたパスワードごとに 1 行のデータが格納されます。  
+ Sp_control_dbmasterkey_password を使用して作成される資格情報は、 [sys.master_key_passwords](../../relational-databases/system-catalog-views/sys-master-key-passwords-transact-sql.md)カタログ ビューです。 データベース マスター _ キー、次の形式を指定することで作成された資格情報の名前:`##DBMKEY_<database_family_guid>_<random_password_guid>##`します。 パスワードは、資格情報シークレットとして格納されます。 sys.credentials には、資格情報ストアに追加されたパスワードごとに 1 行のデータが格納されます。  
   
  sp_control_dbmasterkey_password を使用して、システム データベース master、model、msdb、または tempdb の資格情報を作成することはできません。  
   
@@ -73,16 +72,16 @@ sp_control_dbmasterkey_password @db_name = 'database_name,
  sp_control_dbmasterkey_password に渡されるパラメーターは、トレースには表示されません。  
   
 > [!NOTE]  
->  sp_control_dbmasterkey_password を使用して追加された資格情報を使ってデータベース マスター キーを開く場合、そのデータベース マスター キーはサービス マスター キーによって再暗号化されます。 データベースが読み取り専用モードの場合、再暗号化操作は失敗し、データベース マスター キーは暗号化されません。 それ以降、データベース マスター キーにアクセスする場合は、OPEN MASTER KEY ステートメントおよびパスワードを使用する必要があります。 パスワードの使用を避けるには、データベースを読み取り専用モードに移行する前に、資格情報を作成するようにしてください。  
+>  sp_control_dbmasterkey_password を使用して追加された資格情報を使ってデータベース マスター キーを開く場合、そのデータベース マスター キーはサービス マスター キーによって再暗号化されます。 データベースが読み取り専用モードの場合は、再暗号化操作は失敗し、データベース マスター _ キーは暗号化されません。 後続のアクセスをデータベース マスター _ キーでは、OPEN MASTER KEY ステートメントとパスワードを使用する必要があります。 パスワードの使用を避けるには、データベースを読み取り専用モードに移行する前に、資格情報を作成するようにしてください。  
   
- **潜在的な旧バージョンと互換性の問題:** 現時点では、ストアド プロシージャをチェックしません、マスター _ キーが存在するかどうか。 これは下位互換性を確保するために許容されていますが、警告が表示されます。 ただし、この動作は非推奨とされます。 マスター _ キーが存在する必要があります、将来のリリースと、ストアド プロシージャで使用されるパスワード**sp_control_dbmasterkey_password**データベース マスター _ キーの暗号化に使用されるパスワードの 1 つとして同じパスワードをする必要があります。  
+ **潜在的な下位互換性の問題点:** 現時点では、ストアド プロシージャでは、マスター _ キーが存在するかどうかは調べません。 これは下位互換性を確保するために許容されていますが、警告が表示されます。 ただし、この動作は非推奨とされます。 マスター _ キーが存在する必要があります、将来のリリースと、ストアド プロシージャで使用されるパスワード**sp_control_dbmasterkey_password**データベース マスター _ キーの暗号化に使用されるパスワードの 1 つとして同じパスワードをする必要があります。  
   
 ## <a name="permissions"></a>アクセス許可  
  データベースに対する CONTROL 権限が必要です。  
   
 ## <a name="examples"></a>使用例  
   
-### <a name="a-creating-a-credential-for-the-adventureworks2012-master-key"></a>A. AdventureWorks2012 マスター キーの資格情報を作成する  
+### <a name="a-creating-a-credential-for-the-adventureworks2012-master-key"></a>A. AdventureWorks2012 マスター_キーの資格情報の作成  
  次の例では、`AdventureWorks2012` データベースのマスター キーの資格情報を作成し、マスター キーのパスワードをシークレットとして資格情報に保存します。 ため、すべてのパラメーターに渡される`sp_control_dbmasterkey_password`データ型でなければなりません**nvarchar**、テキスト文字列はキャスト演算子により変換されます`N`します。  
   
 ```  
@@ -92,7 +91,7 @@ GO
 ```  
   
 ### <a name="b-dropping-a-credential-for-a-database-master-key"></a>B. データベースのマスター キーの資格情報を削除する  
- 次の例では、例 A で作成した資格情報を削除します。ここではパスワードを含め、すべてのパラメーターが必須です。  
+ 次の例では、A. は、すべてのパラメーターが必要ですが、パスワードを含むことに注意してください。 例で作成した資格情報を削除します。  
   
 ```  
 EXEC sp_control_dbmasterkey_password @db_name = N'AdventureWorks2012',   
@@ -100,7 +99,7 @@ EXEC sp_control_dbmasterkey_password @db_name = N'AdventureWorks2012',
 GO  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [暗号化されたミラー データベースの設定](../../database-engine/database-mirroring/set-up-an-encrypted-mirror-database.md)   
  [セキュリティ ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md)   
  [システム ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   

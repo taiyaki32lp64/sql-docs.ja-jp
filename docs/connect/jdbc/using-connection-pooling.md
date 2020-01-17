@@ -1,7 +1,7 @@
 ---
-title: 接続プールを使用して |Microsoft Docs
+title: 接続プールを使用する |Microsoft Docs
 ms.custom: ''
-ms.date: 01/19/2017
+ms.date: 08/12/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 699d4e8a-34bf-4c60-b0d5-4a10dad6084a
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 79ad5b79ff9cdf59af19cd4cf9092baa5a6689d7
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 69aa4d7f29d8c7963f9b300f868bc8265cde2fd0
+ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47677522"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "69026371"
 ---
 # <a name="using-connection-pooling"></a>接続プールの使用
 

@@ -13,11 +13,11 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: 67b7e72e0c4b248e8951667561eaf7548bfba1b5
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48141642"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62778857"
 ---
 # <a name="full-text-index-properties-columns-page"></a>[フルテキスト インデックスのプロパティ] ([列] ページ)
   **表示または変更、フルテキスト インデックスのプロパティ**  
@@ -39,7 +39,7 @@ ms.locfileid: "48141642"
 |**使用可能な列**|列名。|  
 |**ワード ブレーカーの言語**|すべてのフルテキスト インデックス データに対する言語分析を実行するワード ブレーカーおよびステミング機能を含む言語。<br /><br /> 詳細については、次を参照してください。[ワード ブレーカーの管理と検索のステミング機能の構成と](../relational-databases/search/configure-and-manage-word-breakers-and-stemmers-for-search.md)と[、フルテキスト インデックスを作成時の言語を選択](../relational-databases/search/choose-a-language-when-creating-a-full-text-index.md)します。|  
 |**型**|選択された列のドキュメント型を保持するテーブル列の名前。 これは、読み取り専用プロパティです。|  
-|**[統計的セマンティクス]**|選択されている列に対するセマンティック インデックスを有効にするかどうかを選択します。 詳細については、「[セマンティック検索 &#40;SQL Server&#41;](../relational-databases/search/semantic-search-sql-server.md)」を参照してください。<br /><br /> **[統計的セマンティクス]** を選択する前に **[言語]** を選択した場合、選択した言語にセマンティック言語モデルが関連付けられていなければ、**[統計的セマンティクス]** チェック ボックスは無効になります。 **[言語]** を選択する前に **[統計的セマンティクス]** を選択した場合、ドロップダウン コンボ ボックスで使用できる言語は、セマンティック言語モデルでサポートされているものだけに制限されます。|  
+|**[統計的セマンティクス]**|選択されている列に対するセマンティック インデックスを有効にするかどうかを選択します。 詳細については、「[セマンティック検索 &#40;SQL Server&#41;](../relational-databases/search/semantic-search-sql-server.md)」を参照してください。<br /><br /> **[統計的セマンティクス]** を選択する前に **[言語]** を選択した場合、選択した言語にセマンティック言語モデルが関連付けられていなければ、 **[統計的セマンティクス]** チェック ボックスは無効になります。 **[言語]** を選択する前に **[統計的セマンティクス]** を選択した場合、ドロップダウン コンボ ボックスで使用できる言語は、セマンティック言語モデルでサポートされているものだけに制限されます。|  
   
 ## <a name="see-also"></a>参照  
  [フルテキスト インデックスの作成](../relational-databases/search/populate-full-text-indexes.md)  

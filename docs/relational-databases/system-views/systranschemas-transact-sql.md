@@ -1,5 +1,5 @@
 ---
-title: systranschemas (TRANSACT-SQL) |Microsoft Docs
+title: systranschemas (Transact-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: sql
@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 864c3966-cb61-4f2b-8939-ccda112de853
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 3339cf1731c712cdfee7145390d5cc955c748a98
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: e2a80729738986d69f2eb78b16d119072d6e9e11
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52760704"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68094755"
 ---
 # <a name="systranschemas-transact-sql"></a>systranschemas (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -32,12 +31,12 @@ ms.locfileid: "52760704"
   
 |列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
-|**tabid**|**int**|スキーマ変更が発生するテーブル アーティクルを指定します。|  
-|**startlsn**|**[バイナリ]**|スキーマ変更開始時の LSN 値です。|  
-|**endlsn**|**[バイナリ]**|スキーマ変更終了時の LSN 値です。|  
+|**tabid**|**int**|スキーマの変更が発生したテーブル アーティクルを識別します。|  
+|**startlsn**|**binary**|スキーマ変更開始時の LSN 値です。|  
+|**endlsn**|**binary**|スキーマ変更の最後の LSN 値です。|  
 |**typeid**|**int**|スキーマ変更のタイプです。|  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [レプリケーション テーブル &#40;Transact-SQL&#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)  
   
   

@@ -16,11 +16,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 98b337c235363035d5cc5324257f51862f3f9a64
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52760644"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62823789"
 ---
 # <a name="properties-window-management-studio"></a>[プロパティ] ウィンドウ (Management Studio)
   このウィンドウを使用して、選択した要素のプロパティを表示します。 また、[プロパティ] ウィンドウでは、ファイル、プロジェクト、およびソリューションのプロパティを表示することもできます。 [プロパティ] ウィンドウは、 **[表示]** メニューの **[プロパティ ウィンドウ]** をクリックすると表示されます。  

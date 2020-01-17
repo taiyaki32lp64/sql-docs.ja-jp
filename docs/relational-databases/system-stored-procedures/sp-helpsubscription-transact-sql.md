@@ -1,5 +1,5 @@
 ---
-title: sp_helpsubscription (TRANSACT-SQL) |Microsoft Docs
+title: sp_helpsubscription (Transact-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -15,18 +15,17 @@ helpviewer_keywords:
 ms.assetid: ff96bcbf-e2b9-4da8-8515-d80d4ce86c16
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 90705da83013de65423aa2984293f8f780194de0
-ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
+ms.openlocfilehash: bf7712ceb55fc368d493be9999cd0b8d4d9f474c
+ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/18/2018
-ms.locfileid: "53588936"
+ms.lasthandoff: 08/03/2019
+ms.locfileid: "68771566"
 ---
-# <a name="sphelpsubscription-transact-sql"></a>sp_helpsubscription (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+# <a name="sp_helpsubscription-transact-sql"></a>sp_helpsubscription (Transact-SQL)
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
-  特定のパブリケーション、アーティクル、サブスクライバー、またはサブスクリプションの集合に関連付けられたサブスクリプション情報を一覧表示します。 このストアド プロシージャは、パブリッシャー、パブリケーション データベースに対して実行されます。  
+  特定のパブリケーション、アーティクル、サブスクライバー、またはサブスクリプションのセットに関連付けられているサブスクリプション情報を一覧表示します。 このストアドプロシージャは、パブリッシャー側のパブリケーションデータベースで実行されます。  
   
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -43,77 +42,71 @@ sp_helpsubscription [ [ @publication = ] 'publication' ]
 ```  
   
 ## <a name="arguments"></a>引数  
- [  **@publication =** ] **'**_パブリケーション_**'**  
- 関連付けられているパブリケーションの名前を指定します。 *パブリケーション*は**sysname**、既定値は**%**、このサーバーのすべてのサブスクリプション情報が返されます。  
+`[ @publication = ] 'publication'`関連付けられているパブリケーションの名前を指定します。 *publication*のデータ型は**sysname**で、 **%** 既定値はです。この場合、このサーバーのすべてのサブスクリプション情報が返されます。  
   
- [  **@article=** ] **'**_記事_**'**  
- アーティクルの名前を指定します。 *記事*は**sysname**、既定値は**%**、選択したパブリケーションとサブスクライバーに関するすべてのサブスクリプション情報が返されます。 場合**すべて**パブリケーションの完全版のサブスクリプションの 1 つのエントリが返されます。  
+`[ @article = ] 'article'`アーティクルの名前を指定します。 *アーティクル*は**sysname**で、既定値 **%** はです。これにより、選択したパブリケーションとサブスクライバーのすべてのサブスクリプション情報が返されます。 **All**の場合、パブリケーションの完全なサブスクリプションに対して1つのエントリのみが返されます。  
   
- [  **@subscriber=** ] **'**_サブスクライバー_**'**  
- サブスクリプション情報を取得するサブスクライバーの名前を指定します。 *サブスクライバー*は**sysname**、既定値は**%**、選択したパブリケーションとアーティクルに関するすべてのサブスクリプション情報が返されます。  
+`[ @subscriber = ] 'subscriber'`サブスクリプション情報を取得するサブスクライバーの名前を指定します。 *サブスクライバー*のデータ型は**sysname**で、 **%** 既定値はです。これにより、選択したパブリケーションとアーティクルのすべてのサブスクリプション情報が返されます。  
   
- [  **@destination_db=** ] **'**_destination_db_**'**  
- 対象データベース名を指定します。 *destination_db*は**sysname**、既定値は **%** します。  
+`[ @destination_db = ] 'destination_db'`転送先データベースの名前を指定します。 *destination_db*は**sysname**,、既定値 **%** はです。  
   
- [  **@found=** ] **'**_見つかった_**'** 出力  
- 行を返すことを示すフラグです。 *見つかった*は**int**は出力パラメーターで、既定値は 23456 です。  
+`[ @found = ] 'found'OUTPUT`は、行を返すことを示すフラグです。 *見つかった*は**int**と出力パラメーターで、既定値は23456です。  
   
- **1**パブリケーションが見つかったことを示します。  
+ **1**は、パブリケーションが見つかったことを示します。  
   
- **0**パブリケーションが見つからないことを示します。  
+ **0**は、パブリケーションが見つからないことを示します。  
   
- [ **@publisher**=] **'**_パブリッシャー_**'**  
- パブリッシャーの名前です。 *パブリッシャー*は**sysname**、および既定値は、現在のサーバーの名前。  
+`[ @publisher = ] 'publisher'`パブリッシャーの名前を指定します。 *publisher*は**sysname**で、既定値は現在のサーバーの名前です。  
   
 > [!NOTE]  
->  *パブリッシャー* Oracle パブリッシャーの場合を除き、指定するされません。  
+>  Oracle パブリッシャーの場合を除き、*パブリッシャー*を指定することはできません。  
   
 ## <a name="result-sets"></a>結果セット  
   
 |列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
-|**サブスクライバー**|**sysname**|サブスクライバーの名前です。|  
-|**パブリケーション**|**sysname**|パブリケーションの名前。|  
+|**subscriber**|**sysname**|サブスクライバーの名前。|  
+|**publication**|**sysname**|パブリケーションの名前。|  
 |**article**|**sysname**|アーティクルの名前。|  
-|**転送先データベース**|**sysname**|レプリケートされたデータの格納先のデータベースの名前。|  
-|**サブスクリプションの状態**|**tinyint**|サブスクリプションの状態:<br /><br /> **0** = 非アクティブ<br /><br /> **1** = サブスクライブ<br /><br /> **2** = アクティブ|  
-|**同期の種類**|**tinyint**|サブスクリプションの同期の種類。<br /><br /> **1** = 自動<br /><br /> **2** = なし|  
-|**サブスクリプションの種類**|**int**|サブスクリプションの種類。<br /><br /> **0**プッシュを =<br /><br /> **1** = プル<br /><br /> **2** = 匿名|  
-|**完全なサブスクリプション**|**bit**|サブスクリプションがパブリケーション内のすべてのアーティクルを対象としているかどうかを示します。<br /><br /> **0** = いいえ<br /><br /> **1** = はい|  
-|**サブスクリプション名**|**nvarchar (255)**|サブスクリプションの名前。|  
-|**更新モード**|**int**|**0** = 読み取り専用<br /><br /> **1** = 即時更新サブスクリプション|  
-|**ディストリビューション ジョブ id**|**binary(16)**|ディストリビューション エージェントのジョブ ID。|  
-|**loopback_detection**|**bit**|ディストリビューション エージェントが、サブスクライバーで発生したトランザクションをサブスクライバーに戻すかどうかを示します。<br /><br /> **0** = 戻す。<br /><br /> **1** = は送信しません。<br /><br /> 双方向トランザクション レプリケーションで使用されます。 詳細については、「 [Bidirectional Transactional Replication](../../relational-databases/replication/transactional/bidirectional-transactional-replication.md)」を参照してください。|  
-|**offload_enabled**|**bit**|レプリケーション エージェントのオフロードするために、サブスクライバーで実行設定されているかどうかを指定します。<br /><br /> 場合**0**エージェントがパブリッシャーで実行します。<br /><br /> 場合**1**サブスクライバーでエージェントを実行します。|  
-|**offload_server**|**sysname**|エージェントをリモートから起動するときに使用できるサーバーの名前。 NULL の場合、現在の offload_server に一覧表示[MSdistribution_agents](../../relational-databases/system-tables/msdistribution-agents-transact-sql.md)テーブルが使用されます。|  
-|**dts_package_name**|**sysname**|データ変換サービス (DTS) パッケージの名前。|  
-|**dts_package_location**|**int**|DTS パッケージがサブスクリプションに割り当てられている場合の、DTS パッケージの場所。 パッケージの値がある場合**0**でパッケージの場所を指定します、**ディストリビューター**します。 値**1**を指定します、**サブスクライバー**します。|  
-|**subscriber_security_mode**|**smallint**|セキュリティ モードをサブスクライバーで、場所**1** Windows 認証では、ことを意味と**0**意味[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]認証します。|  
-|**subscriber_login**|**sysname**|サブスクライバーのログイン名です。|  
-|**@subscriber_password**||実際のサブスクライバー パスワードは返されません。 によってマスクされる結果は、"**&#42;&#42;&#42;&#42;&#42;&#42;**"文字列。|  
-|**job_login**|**sysname**|ディストリビューション エージェントが実行される Windows アカウントの名前。|  
-|**job_password**||実際のジョブ パスワードは返されません。 によってマスクされる結果は、"**&#42;&#42;&#42;&#42;&#42;&#42;**"文字列。|  
-|**distrib_agent_name**|**nvarchar(100)**|サブスクリプションと同期するエージェント ジョブの名前。|  
-|**subscriber_type**|**tinyint**|サブスクライバーの種類。次のいずれかになります。<br /><br /> **0** = SQL Server サブスクライバー<br /><br /> **1** = ODBC データ ソース サーバー<br /><br /> **2** = Microsoft JET データベース (非推奨)<br /><br /> **3** = OLE DB プロバイダー|  
-|**subscriber_provider**|**sysname**|SQL Server 以外のデータ ソース用の OLE DB プロバイダーを登録するときに使用される、一意なプログラム識別子 (PROGID)。|  
+|**destination database**|**sysname**|レプリケートされたデータの格納先のデータベースの名前。|  
+|**subscription status**|**tinyint**|サブスクリプションの状態:<br /><br /> **0** = 非アクティブ<br /><br /> **1** = サブスクライブ済み<br /><br /> **2** = アクティブ|  
+|**synchronization type**|**tinyint**|サブスクリプションの同期の種類:<br /><br /> **1** = 自動<br /><br /> **2** = なし|  
+|**subscription type**|**int**|サブスクリプションの種類:<br /><br /> **0** = プッシュ<br /><br /> **1** = プル<br /><br /> **2** = 匿名|  
+|**full subscription**|**bit**|サブスクリプションがパブリケーション内のすべてのアーティクルを対象としているかどうかを示します。<br /><br /> **0** = いいえ<br /><br /> **1** = はい|  
+|**subscription name**|**nvarchar (255)**|サブスクリプションの名前。|  
+|**update mode**|**int**|**0** = 読み取り専用<br /><br /> **1** = 即時更新サブスクリプション|  
+|**distribution job id**|**binary(16)**|ディストリビューション エージェントのジョブ ID。|  
+|**loopback_detection**|**bit**|ディストリビューション エージェントが、サブスクライバーで発生したトランザクションをサブスクライバーに戻すかどうかを示します。<br /><br /> **0** = 返送します。<br /><br /> **1** = を返しません。<br /><br /> 双方向トランザクション レプリケーションで使用されます。 詳細については、「 [Bidirectional Transactional Replication](../../relational-databases/replication/transactional/bidirectional-transactional-replication.md)」を参照してください。|  
+|**offload_enabled**|**bit**|レプリケーションエージェントのオフロード実行がサブスクライバーで実行されるように設定されているかどうかを指定します。<br /><br /> **0**の場合、エージェントはパブリッシャーで実行されます。<br /><br /> **1**の場合、エージェントはサブスクライバーで実行されます。|  
+|**offload_server**|**sysname**|リモートエージェントのアクティブ化が有効になっているサーバーの名前。 NULL の場合は、 [MSdistribution_agents](../../relational-databases/system-tables/msdistribution-agents-transact-sql.md) table に示されている現在の offload_server が使用されます。|  
+|**dts_package_name**|**sysname**|データ変換サービス (DTS) パッケージの名前を指定します。|  
+|**dts_package_location**|**int**|DTS パッケージの場所 (サブスクリプションに割り当てられている場合)。 パッケージがある場合、値**0**は**ディストリビューター**でのパッケージの場所を指定します。 値**1**は**サブスクライバー**を指定します。|  
+|**subscriber_security_mode**|**smallint**|サブスクライバーのセキュリティモードを指定します。 **1**は Windows 認証を、 **0**は[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]認証を意味します。|  
+|**subscriber_login**|**sysname**|サブスクライバーのログイン名を指定します。|  
+|**subscriber_password**||実際のサブスクライバーパスワードは返されません。 結果は " **&#42;&#42;&#42;&#42;&#42;&#42;** " という文字列でマスクされます。|  
+|**job_login**|**sysname**|ディストリビューションエージェントの実行に使用する Windows アカウントの名前。|  
+|**job_password**||実際のジョブ パスワードは返されません。 結果は " **&#42;&#42;&#42;&#42;&#42;&#42;** " という文字列でマスクされます。|  
+|**distrib_agent_name**|**nvarchar(100)**|サブスクリプションを同期するエージェントジョブの名前。|  
+|**subscriber_type**|**tinyint**|サブスクライバーの種類。次のいずれかを指定できます。<br /><br /> **0** = SQL Server サブスクライバー<br /><br /> **1** = ODBC データソースサーバー<br /><br /> **2** = Microsoft JET データベース (非推奨)<br /><br /> **3** = OLE DB プロバイダー|  
+|**subscriber_provider**|**sysname**|SQL Server 以外のデータソースの OLE DB プロバイダーが登録されている一意のプログラム識別子 (PROGID)。|  
 |**subscriber_datasource**|**nvarchar (4000)**|OLE DB プロバイダーで認識されるデータ ソースの名前。|  
-|**subscriber_providerstring**|**nvarchar (4000)**|データ ソースを識別する、OLE DB プロバイダー固有の接続文字列。|  
-|**subscriber_location**|**nvarchar (4000)**|OLE DB プロバイダーで認識されるデータベースの場所|  
-|**対応します。**|**sysname**|OLE DB プロバイダーに接続するときに使用されるカタログ。|  
+|**subscriber_providerstring**|**nvarchar (4000)**|データソースを識別する OLE DB プロバイダー固有の接続文字列。|  
+|**subscriber_location**|**nvarchar (4000)**|OLE DB プロバイダーによって認識されるデータベースの場所|  
+|**subscriber_catalog**|**sysname**|OLE DB プロバイダーに接続するときに使用するカタログ。|  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  **0** (成功) または**1** (失敗)  
   
 ## <a name="remarks"></a>コメント  
- **sp_helpsubscription**スナップショットおよびトランザクション レプリケーションで使用されます。  
+ **sp_helpsubscription**は、スナップショットレプリケーションおよびトランザクションレプリケーションで使用します。  
   
 ## <a name="permissions"></a>アクセス許可  
- アクセス許可は既定の実行、**パブリック**ロール。 ユーザーに返されるのは、ユーザーが自分で作成したサブスクリプションの情報だけです。 メンバーにすべてのサブスクリプションに関する情報が返されます、 **sysadmin**固定サーバー ロールのメンバー、または発行元、 **db_owner**パブリケーション データベースの固定データベース ロール。  
+ 実行権限は、既定で**public**ロールに設定されています。 ユーザーに返されるのは、ユーザーが自分で作成したサブスクリプションの情報だけです。 すべてのサブスクリプションに関する情報は、パブリッシャーの**sysadmin**固定サーバーロールのメンバー、またはパブリケーションデータベースの**db_owner**固定データベースロールのメンバーに返されます。  
   
-## <a name="see-also"></a>参照  
- [sp_addsubscription &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addsubscription-transact-sql.md)   
- [sp_changesubstatus &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-changesubstatus-transact-sql.md)   
- [sp_dropsubscription &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropsubscription-transact-sql.md)   
+## <a name="see-also"></a>関連項目  
+ [sp_addsubscription &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-addsubscription-transact-sql.md)   
+ [sp_changesubstatus &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-changesubstatus-transact-sql.md)   
+ [sp_dropsubscription &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-dropsubscription-transact-sql.md)   
  [システム ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

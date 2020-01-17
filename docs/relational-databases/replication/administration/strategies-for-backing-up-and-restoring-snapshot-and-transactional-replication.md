@@ -20,25 +20,25 @@ helpviewer_keywords:
 ms.assetid: a8afcdbc-55db-4916-a219-19454f561f9e
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 148fdfd642c18a2cc4e583edab73778cffa5c71e
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+monikerRange: =azuresqldb-current||>=sql-server-2014||=sqlallproducts-allversions
+ms.openlocfilehash: 94135f0fea3373dbab2b1bfba363e9cd9e8385e8
+ms.sourcegitcommit: 8732161f26a93de3aa1fb13495e8a6a71519c155
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54125272"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71710338"
 ---
 # <a name="strategies-for-backing-up-and-restoring-snapshot-and-transactional-replication"></a>スナップショット レプリケーションおよびトランザクション レプリケーションのバックアップと復元の方式
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md.md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   スナップショット レプリケーションおよびトランザクション レプリケーションのバックアップと復元の方式を計画する場合には、以下の 3 点を考慮する必要があります。  
   
--   バックアップ対象のデータベース  
-  
--   トランザクション レプリケーションのバックアップ設定  
-  
+-   バックアップ対象のデータベース
+-   トランザクション レプリケーションのバックアップ設定
 -   データベースを復元するために必要な手順。 この手順は、レプリケーションの種類と選択したオプションによって異なります。  
   
  このトピックでは、これらの各項目について、以下の 3 つのセクションで説明します。 Oracle パブリッシングのバックアップと復元については、「[Oracle パブリッシャーのバックアップと復元](../../../relational-databases/replication/non-sql/backup-and-restore-for-oracle-publishers.md)」を参照してください。  
+
+[!INCLUDE[azure-sql-db-replication-supportability-note](../../../includes/azure-sql-db-replication-supportability-note.md)]
   
 ## <a name="backing-up-databases"></a>データベースのバックアップ  
  スナップショット レプリケーションおよびトランザクション レプリケーションの場合は、以下のデータベースを定期的にバックアップする必要があります。  
@@ -207,19 +207,19 @@ ms.locfileid: "54125272"
   
     1.  データベース **B** でパブリケーションを再作成します。手順 b. に進みます。  
   
-    2.  データベース **B** のパブリケーションに対するサブスクリプションをデータベース **A**で再作成します。その際に、バックアップを使用してサブスクリプションを初期化するように指定します ( **sp_addsubscription** の **@sync_type** パラメーターの値を " [initialize with backup](../../../relational-databases/system-stored-procedures/sp-addsubscription-transact-sql.md)" に指定します)。 手順 c. に進みます。  
+    2.  データベース **B** で、データベース **A** でのパブリケーションに対するサブスクリプションを再作成します。そのとき、サブスクリプションをバックアップで初期化するように指定します ([sp_addsubscription](../../../relational-databases/system-stored-procedures/sp-addsubscription-transact-sql.md) の `@sync_type` パラメーターに対して値 " **initialize with backup**" を指定)。 手順 c. に進みます。  
   
-    3.  データベース **A** のパブリケーションに対するサブスクリプションをデータベース **B**で再作成します。その際に、サブスクライバーにデータが格納済みであることを指定します ( **sp_addsubscription** の **@sync_type** パラメーターの値を " [initialize with backup](../../../relational-databases/system-stored-procedures/sp-addsubscription-transact-sql.md)" に指定します)。 手順 8 に進みます。  
+    3.  データベース **A** で、データベース **B** でのパブリケーションに対するサブスクリプションを再作成します。そのとき、サブスクライバーに既にデータがあることを指定します ([sp_addsubscription](../../../relational-databases/system-stored-procedures/sp-addsubscription-transact-sql.md) の `@sync_type` パラメーターに対して値 " **replication support only**" を指定)。 手順 8 に進みます。  
   
 8.  ディストリビューション エージェントを実行して、データベース **A** およびデータベース **B** のサブスクリプションを同期します。パブリッシュされたテーブルに ID 列がある場合は、手順 9. に進みます。 それ以外の場合は、手順 10 に進みます。  
   
 9. 復元後、データベース **A** の各テーブルに割り当てた ID 範囲は、データベース **B** でも使用されます。データベース **B** の障害発生後、データベース **A** およびデータベース **C** に反映されたすべての変更を復元されたデータベース **B** に適用し、その後、各テーブルの ID 範囲を再作成します。  
   
-    1.  データベース [B](../../../relational-databases/system-stored-procedures/sp-requestpeerresponse-transact-sql.md) のバックアップをデータベース **B** を実行し、出力パラメーター **@request_id**」を参照してください。 手順 b. に進みます。  
+    1.  データベース **B** で [sp_requestpeerresponse](../../../relational-databases/system-stored-procedures/sp-requestpeerresponse-transact-sql.md) を実行し、出力パラメーター `@request_id` を取得します。 手順 b. に進みます。  
   
     2.  既定では、ディストリビューション エージェントが連続的に実行されるように設定されているため、すべてのノードに自動的にトークンが送信されます。 ディストリビューション エージェントが連続モードで実行されていない場合は、エージェントを実行します。 詳細については、「[レプリケーション エージェント実行可能ファイルの概念](../../../relational-databases/replication/concepts/replication-agent-executables-concepts.md)」または「[レプリケーション エージェントを起動および停止する &#40;SQL Server Management Studio&#41;](../../../relational-databases/replication/agents/start-and-stop-a-replication-agent-sql-server-management-studio.md)」を参照してください。 手順 c. に進みます。  
   
-    3.  データベース [@request_id](../../../relational-databases/system-stored-procedures/sp-helppeerresponses-transact-sql.md)値を指定して **@request_id** を実行します。 すべてのノードがピア要求を受信するまで待機します。 手順 d. に進みます。  
+    3.  手順 b で取得した値 `@request_id` を指定して、[sp_helppeerresponses](../../../relational-databases/system-stored-procedures/sp-helppeerresponses-transact-sql.md) を実行します。 すべてのノードがピア要求を受信するまで待機します。 手順 d. に進みます。  
   
     4.  [DBCC CHECKIDENT](../../../t-sql/database-console-commands/dbcc-checkident-transact-sql.md) を使用してデータベース **B** の各テーブルを再作成し、適切な範囲が使用されていることを確認します。 手順 10 に進みます。  
   
@@ -231,11 +231,11 @@ ms.locfileid: "54125272"
   
     1.  ピア ツー ピア トポロジ内のパブリッシュされたテーブルの処理をすべて停止します。 手順 b. に進みます。  
   
-    2.  データベース [B](../../../relational-databases/system-stored-procedures/sp-requestpeerresponse-transact-sql.md) のバックアップをデータベース **B** を実行し、出力パラメーター **@request_id**」を参照してください。 手順 c. に進みます。  
+    2.  データベース **B** で [sp_requestpeerresponse](../../../relational-databases/system-stored-procedures/sp-requestpeerresponse-transact-sql.md) を実行し、出力パラメーター `@request_id` を取得します。 手順 c. に進みます。  
   
     3.  既定では、ディストリビューション エージェントが連続的に実行されるように設定されているため、すべてのノードに自動的にトークンが送信されます。 ディストリビューション エージェントが連続モードで実行されていない場合は、エージェントを実行します。 手順 d. に進みます。  
   
-    4.  データベース [@request_id](../../../relational-databases/system-stored-procedures/sp-helppeerresponses-transact-sql.md)値を指定して **@request_id** を実行します。 すべてのノードがピア要求を受信するまで待機します。 手順 e. に進みます。  
+    4.  手順 b で取得した値 `@request_id` を指定して、[sp_helppeerresponses](../../../relational-databases/system-stored-procedures/sp-helppeerresponses-transact-sql.md) を実行します。 すべてのノードがピア要求を受信するまで待機します。 手順 e. に進みます。  
   
     5.  データベース **C** のパブリケーションに対するサブスクリプションをデータベース **B**で再作成します。その際に、サブスクライバーにデータが格納済みであることを指定します。 手順 b. に進みます。  
   
@@ -245,7 +245,7 @@ ms.locfileid: "54125272"
   
     1.  データベース **B**で [MSpeer_lsns](../../../relational-databases/system-tables/mspeer-lsns-transact-sql.md) テーブルにクエリを実行して、データベース **B** がデータベース **C**から受信した最新のトランザクションのログ シーケンス番号 (LSN) を取得します。  
   
-    2.  データベース **B** のパブリケーションに対するサブスクリプションをデータベース **C**で再作成します。その際に、LSN に基づいてサブスクリプションを初期化するように指定します ( **sp_addsubscription** の **@sync_type** パラメーターの値を " [initialize with backup](../../../relational-databases/system-stored-procedures/sp-addsubscription-transact-sql.md)" に指定します)。 手順 b. に進みます。  
+    2.  データベース **B** で、データベース **C** でのパブリケーションに対するサブスクリプションを再作成します。そのとき、LSN に基づいてサブスクリプションを初期化する必要があることを指定します ([sp_addsubscription](../../../relational-databases/system-stored-procedures/sp-addsubscription-transact-sql.md) の `@sync_type` パラメーターに対して値 " **initialize from lsn**" を指定)。 手順 b. に進みます。  
   
     3.  データベース **B** のパブリケーションに対するサブスクリプションをデータベース **C**で再作成します。その際に、サブスクライバーにデータが格納済みであることを指定します。 手順 13 に進みます。  
   

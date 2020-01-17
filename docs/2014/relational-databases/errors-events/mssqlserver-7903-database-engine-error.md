@@ -13,11 +13,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 049f6e04dd8d0a81c81a16ee294ffe1c44553095
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48092812"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62762784"
 ---
 # <a name="mssqlserver7903"></a>MSSQLSERVER_7903
     
@@ -30,7 +30,7 @@ ms.locfileid: "48092812"
 |イベント ソース|MSSQLSERVER|  
 |コンポーネント|SQLEngine|  
 |シンボル名|DBCC2_FS_ORPHANED_FILE|  
-|メッセージ テキスト|テーブル エラー : 孤立したファイル 'FILE' が、オブジェクト ID O_ID、インデックス ID I_ID、パーティション ID PN_ID、列 ID C_ID の FileStream ディレクトリに見つかりました。|  
+|メッセージ テキスト|テーブル エラー:孤立したファイル 'FILE' は、オブジェクト ID O_ID、インデックス ID I_ID、パーティション ID PN_ID、列 ID C_ID の Filestream ディレクトリが見つかりました。|  
   
 ## <a name="explanation"></a>説明  
  FILESTREAM 列ディレクトリ内で FILESTREAM ファイルが検出されましたが、パーティション内の対応する列値がありません。  

@@ -15,11 +15,11 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: d434df95a26485d4d7795d3ab960b8d2457b8ff6
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56033683"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63185576"
 ---
 # <a name="basic-data-mining-tutorial"></a>基本的なデータ マイニング チュートリアル
   ようこそ、 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]基本的なデータ マイニングのチュートリアル。 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] データ マイニング モデルを作成および予測を行うのための統合環境を提供します。 このチュートリアルでは、分析し、顧客の購買行動を予測する機械学習を使用するターゲット メーリング キャンペーンのシナリオを完了します。 このチュートリアルでは、クラスタリング、デシジョン ツリー、Naive Bayes (ナイーブ ベイズ) という非常に重要な 3 つのデータ マイニング アルゴリズムを使用する方法を示します。 マイニング モデル ビューアーを使用して結果の分析、予測と精度のグラフに含まれているデータ マイニング ツールを使用して作成する方法も学習[!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]します。 すべての例で、架空の企業である [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)] を使用します。  
@@ -75,12 +75,12 @@ ms.locfileid: "56033683"
   
 -   [!INCLUDE[ssSampleDBDWobject](../includes/sssampledbdwobject-md.md)] データベース。  
   
- セキュリティ強化のため、サンプル データベースは [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] と一緒にインストールされません。 公式データベースをインストールする[!INCLUDE[msCoName](../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]を参照してください、 [Microsoft SQL Sample Databases](https://go.microsoft.com/fwlink/?LinkId=88417) ページ[!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]します。  
+ セキュリティ強化のため、サンプル データベースは [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] と一緒にインストールされません。 公式データベースをインストールする[!INCLUDE[msCoName](../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]を参照してください、 [Microsoft SQL Sample Databases](https://go.microsoft.com/fwlink/?LinkId=88417) ] ページ[!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]します。  
   
 > [!NOTE]  
 >  のチュートリアルに従って作業しているときにした方を追加する場合、手順の間で双方向に移動しやすく、**次のトピック**と**前のトピック**ドキュメント ビューアーのツールバーのボタン。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [データ マイニング ソリューション](../../2014/analysis-services/data-mining/data-mining-solutions.md)   
  [マイニング モデル タスクと操作方法](../../2014/analysis-services/data-mining/mining-model-tasks-and-how-tos.md)   
  [DMX を使用したデータ マイニング モデルのクエリの作成と:チュートリアル&#40;Analysis Services - データ マイニング&#41;](../../2014/tutorials/create-query-data-mining-models-dmx-tutorials.md)  

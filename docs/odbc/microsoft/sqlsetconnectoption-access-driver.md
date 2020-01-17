@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 58399bc4-d0b1-4eaa-a474-c92b2d5855ea
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 18950d49afdab8517b95c59df8841c33b5d3d086
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: bea124a78e2a180180c59de3577fe1db7637e110
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47706880"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67897783"
 ---
 # <a name="sqlsetconnectoption-access-driver"></a>SQLSetConnectOption (Access ドライバー)
 > [!NOTE]  

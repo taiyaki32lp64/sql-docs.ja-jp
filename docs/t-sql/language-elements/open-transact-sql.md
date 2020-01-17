@@ -19,15 +19,14 @@ helpviewer_keywords:
 - OPEN statement
 - Transact-SQL cursors, opening
 ms.assetid: fd1c5e3b-6045-4a42-b646-3fca76e874c1
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: 3ecf65b0aa058bca7869cee14f2d91a5fa9004a0
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 70f3b23244095b79dc8340d3060e6d30d5009a2a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47712640"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68121934"
 ---
 # <a name="open-transact-sql"></a>OPEN (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -87,6 +86,6 @@ DEALLOCATE Employee_Cursor;
  [@@CURSOR_ROWS &#40;Transact-SQL&#41;](../../t-sql/functions/cursor-rows-transact-sql.md)   
  [DEALLOCATE &#40;Transact-SQL&#41;](../../t-sql/language-elements/deallocate-transact-sql.md)   
  [DECLARE CURSOR &#40;Transact-SQL&#41;](../../t-sql/language-elements/declare-cursor-transact-sql.md)   
- [フェッチ (&) #40 です。TRANSACT-SQL と #41 です。](../../t-sql/language-elements/fetch-transact-sql.md)  
+ [FETCH &#40;Transact-SQL&#41;](../../t-sql/language-elements/fetch-transact-sql.md)  
   
   

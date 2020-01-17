@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 113e1c9a-8333-4805-86f2-e4b57ab816a5
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 1e6201b83b909573476b043cdb1a10543f894def
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 7e0044a2e2efbf0d8921a07ed4679806ba50bcd1
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51661811"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68087562"
 ---
 # <a name="unicode"></a>Unicode
 Unicode では、多くの言語での文字のエンコードを定義します。  

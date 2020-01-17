@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: a9874cac-cded-4145-9c38-8aafd267dbee
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: b31d51d0f1e43fd14153753d80d8e3909b5cc669
-ms.sourcegitcommit: 6c9d35d03c1c349bc82b9ed0878041d976b703c6
+ms.openlocfilehash: bbba27f582b65fdcc99ed8fda4d892b9a92eebb6
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/06/2018
-ms.locfileid: "51216560"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68115559"
 ---
 # <a name="shrink-database-task-maintenance-plan"></a>[データベースの圧縮タスク]\(メンテナンス プラン)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -35,7 +34,7 @@ ms.locfileid: "51216560"
   
  このタスクでは、DBCC SHRINKDATABASE ステートメントが実行されます。  
   
-## <a name="options"></a>[変数]  
+## <a name="options"></a>オプション  
  **[接続]**  
  このタスクを実行するときに使用するサーバー接続を選択します。  
   
@@ -98,7 +97,7 @@ ms.locfileid: "51216560"
  **User name**  
  認証に使用する [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ログインを指定します。 このオプションは利用できません。  
   
- **Password**  
+ **パスワード**  
  認証に使用するパスワードを指定します。 このオプションは利用できません。  
   
 ## <a name="see-also"></a>参照  

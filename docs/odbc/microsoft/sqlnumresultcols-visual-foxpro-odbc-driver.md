@@ -12,21 +12,20 @@ helpviewer_keywords:
 ms.assetid: a83d826c-6908-4115-b6e6-4d0615ff1738
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 23a96b13c05122ee189cef7225c216ed6a9a89b7
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: bfd6dcec9295f6d0c0874b60c32e8a552b56c065
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47801720"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68002273"
 ---
 # <a name="sqlnumresultcols-visual-foxpro-odbc-driver"></a>SQLNumResultCols (Visual FoxPro ODBC ドライバー)
 > [!NOTE]  
 >  このトピックでには、Visual FoxPro ODBC ドライバー固有の情報が含まれています。 この関数の詳細については、該当するトピックを参照してください。 [ODBC API リファレンス](../../odbc/reference/syntax/odbc-api-reference.md)します。  
   
- サポート: 完全な  
+ サポート:[完全]  
   
- ODBC API 準拠: コア レベル  
+ ODBC API 準拠:コア レベル  
   
  結果セットのカーソルでは、列の数を返します。  
   

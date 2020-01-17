@@ -9,20 +9,19 @@ ms.topic: conceptual
 ms.assetid: e88038c6-fd35-479c-a76f-aabd42d2efef
 author: Shamikg
 ms.author: Shamikg
-manager: craigg
-ms.openlocfilehash: ff0ef803274b23a54e3964ae2822dc351a3ce784
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e0ab2e7721522e0671d195ec79a35bba72d462c3
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47700250"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68059972"
 ---
 # <a name="troubleshooting-db2tosql"></a>トラブルシューティング (DB2ToSQL)
 コンソールのスクリプトまたはコマンドを実行する移行の問題の途中に実行することは珍しくありません。  
   
 修正可能であるエラーの関連する可能性があります。  
   
-1.  機能  
+1.  関数  
   
 2.  手順  
   

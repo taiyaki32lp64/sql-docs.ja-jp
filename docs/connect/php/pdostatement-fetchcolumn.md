@@ -1,5 +1,5 @@
 ---
-title: PDOStatement::fetchColumn |Microsoft Docs
+title: 'PDOStatement:: fetchColumn |Microsoft Docs'
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 6ebf385c-ddb0-4c53-9dc6-7df0d3740b04
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 0ab2eaab547e582df30375a4caadbc96a11f4396
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.openlocfilehash: 4021a6a5c550ea9674c0bf699462eece1d9c2f9b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51603082"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67993037"
 ---
 # <a name="pdostatementfetchcolumn"></a>PDOStatement::fetchColumn
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]

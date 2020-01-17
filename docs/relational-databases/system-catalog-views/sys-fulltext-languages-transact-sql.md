@@ -1,10 +1,9 @@
 ---
-title: sys.fulltext_languages (TRANSACT-SQL) |Microsoft Docs
+title: fulltext_languages (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.reviewer: ''
 ms.technology: system-objects
 ms.topic: language-reference
 f1_keywords:
@@ -18,26 +17,26 @@ helpviewer_keywords:
 - languages [full-text search]
 - sys.fulltext_languages catalog view
 ms.assetid: 2ed6b53d-1cf2-4763-9d58-36ea24a610ef
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
+author: pmasl
+ms.author: pelopes
+ms.reviewer: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: f3fac82c2fd669bb1a7dd3f45b5a614738fdf189
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: e5af224150508f048d91345cba595517209f824d
+ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52529894"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "73981777"
 ---
-# <a name="sysfulltextlanguages-transact-sql"></a>sys.fulltext_languages (Transact-SQL)
+# <a name="sysfulltext_languages-transact-sql"></a>fulltext_languages (Transact-sql)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  このカタログ ビューには、ワード ブレーカーが [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] に登録された言語ごとに 1 行のデータが格納されます。 各行には、LCID と言語の名前が表示されます。 言語、その他の言語リソースのステミング機能、ノイズ ワード (ストップ ワード)、および類義語辞典のファイルになるのワード ブレーカーの登録時に、フルテキスト インデックス/クエリ操作に使用できます。 値**名前**または**lcid** 、フルテキスト クエリとフルテキスト インデックスで指定できます[!INCLUDE[tsql](../../includes/tsql-md.md)]ステートメント。  
+  このカタログビューには、ワードブレーカーが [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]に登録されている言語ごとに1行が含まれています。 各行には、言語の LCID と名前が表示されます。 言語のワードブレーカーが登録されている場合、その他の言語リソース (ステミング機能、ノイズワード (ストップワード)、および類義語辞典ファイル) は、フルテキストインデックス作成またはクエリ操作で使用できるようになります。 **名前**または**lcid**の値は、フルテキストクエリとフルテキストインデックスの [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントで指定できます。  
    
-|[列]|データ型|説明|  
+|列|データ型|[説明]|  
 |------------|---------------|-----------------|  
 |**lcid**|**int**|言語の [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows ロケール識別子 (LCID) です。|  
-|**name**|**sysname**|内の別名のいずれかの値は、 [sys.syslanguages](../../relational-databases/system-compatibility-views/sys-syslanguages-transact-sql.md)の値に対応する**lcid**または LCID の数値の文字列表現。|  
+|**name**|**sysname**|**Lcid**の値に対応する[sys.syslanguages](../../relational-databases/system-compatibility-views/sys-syslanguages-transact-sql.md)のエイリアスの値か、または数値の lcid の文字列表現です。|  
   
 ## <a name="values-returned-for-default-languages"></a>既定の言語の戻り値  
  次の表に、ワード ブレーカーが既定で登録されている言語の値を示します。  
@@ -59,7 +58,7 @@ ms.locfileid: "52529894"
 |英語|1033|  
 |フランス語|1036|  
 |ドイツ語|1031|  
-|**適用対象**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]<br /><br /> ギリシャ語|1032|  
+|**適用対象**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 以降。<br /><br /> ギリシャ語|1032|  
 |グジャラート語|1095|  
 |ヘブライ語|1037|  
 |ヒンディー語|1081|  
@@ -76,7 +75,7 @@ ms.locfileid: "52529894"
 |マラーティー語|1102|  
 |ニュートラル|0|  
 |ノルウェー語 (ブークモール)|1044|  
-|**適用対象**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]<br /><br /> ポーランド語|1045|  
+|**適用対象**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 以降。<br /><br /> ポーランド語|1045|  
 |ポルトガル語 (ブラジル)|1046|  
 |ポルトガル語 (ポルトガル)|2070|  
 |パンジャーブ語|1094|  
@@ -84,7 +83,7 @@ ms.locfileid: "52529894"
 |ロシア語|1049|  
 |セルビア語 (キリル)|3098|  
 |セルビア語 (ラテン)|2074|  
-|簡体字中国語|2052|  
+|Simplified Chinese|2052|  
 |スロバキア語|1051|  
 |スロベニア語|1060|  
 |スペイン語|3082|  
@@ -93,22 +92,22 @@ ms.locfileid: "52529894"
 |テルグ語|1098|  
 |タイ語|1054|  
 |繁体字中国語|1028|  
-|**適用対象**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]<br /><br /> トルコ語|1055|  
+|**適用対象**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 以降。<br /><br /> トルコ語|1055|  
 |ウクライナ語|1058|  
 |ウルドゥ語|1056|  
 |ベトナム語|1066|  
   
-## <a name="remarks"></a>コメント  
- フルテキスト検索に登録された言語の一覧を更新する[sp_fulltext_service](../../relational-databases/system-stored-procedures/sp-fulltext-service-transact-sql.md)'**update_languages**'。  
+## <a name="remarks"></a>Remarks  
+ フルテキスト検索に登録されている言語の一覧を更新するには、 [sp_fulltext_service](../../relational-databases/system-stored-procedures/sp-fulltext-service-transact-sql.md)'**update_languages**' を使用します。  
   
 ## <a name="permissions"></a>アクセス許可  
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)]  
   
 ## <a name="see-also"></a>参照  
- [sp_fulltext_load_thesaurus_file &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-fulltext-load-thesaurus-file-transact-sql.md)   
+ [transact-sql &#40;  の&#41; sp_fulltext_load_thesaurus_file](../../relational-databases/system-stored-procedures/sp-fulltext-load-thesaurus-file-transact-sql.md)  
  [sp_fulltext_service &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-fulltext-service-transact-sql.md)   
  [検索用のワード ブレーカーとステミング機能の構成と管理](../../relational-databases/search/configure-and-manage-word-breakers-and-stemmers-for-search.md)   
- [構成して、フルテキスト検索の類義語辞典ファイルを管理](../../relational-databases/search/configure-and-manage-thesaurus-files-for-full-text-search.md)   
+ [フルテキスト検索のための類義語辞典ファイルの構成と管理](../../relational-databases/search/configure-and-manage-thesaurus-files-for-full-text-search.md)   
  [フルテキスト検索に使用するストップワードとストップリストの構成と管理](../../relational-databases/search/configure-and-manage-stopwords-and-stoplists-for-full-text-search.md)   
  [フルテキスト検索のアップグレード](../../relational-databases/search/upgrade-full-text-search.md)  
   

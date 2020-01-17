@@ -1,5 +1,5 @@
 ---
-title: updateNCharacterStream メソッド (SQLServerResultSet) |Microsoft Docs
+title: updateNCharacterStream メソッド (SQLServerResultSet) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: d6a21d01-6d8e-4449-9fdf-ddb09bd4fdb8
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: ad67a18ceda3e7ee781c29fee2673359c09c03f3
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 9ccaa98c30f3e50de8fe3858246d274f59a83462
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47675380"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67998773"
 ---
 # <a name="updatencharacterstream-method-sqlserverresultset"></a>updateNCharacterStream メソッド (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

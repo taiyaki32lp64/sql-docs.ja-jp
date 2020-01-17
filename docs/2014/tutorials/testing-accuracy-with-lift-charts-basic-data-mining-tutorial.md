@@ -11,11 +11,11 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: 06cefcdac192b715fe843f842088456f769cdd24
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56033923"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63042667"
 ---
 # <a name="testing-accuracy-with-lift-charts-basic-data-mining-tutorial"></a>リフト チャートを使用した精度テスト (基本的なデータ マイニング チュートリアル)
   **マイニング精度チャート**タブ データ マイニング デザイナーの各は、モデルの予測は、どの程度を計算し、他のモデルの結果に対して直接には、各モデルの結果を比較します。 このメソッドの比較と呼ばれます、*リフト チャート*します。 通常、マイニング モデルの予測精度は、リフトまたは分類の精度によって測定します。 このチュートリアルでは、リフト チャートのみを使用します。  

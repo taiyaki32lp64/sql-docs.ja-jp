@@ -9,16 +9,19 @@ ms.custom: ''
 ms.technology: integration-services
 author: swinarko
 ms.author: sawinark
-ms.reviewer: douglasl
-manager: craigg
-ms.openlocfilehash: bd2d91d38c964bc2795294a1ca4a4617fe2a0a48
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.reviewer: maghan
+ms.openlocfilehash: 0a402c50e8a7f1c2467b00fbbaa599d6c289ebab
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47829679"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67896180"
 ---
 # <a name="lift-and-shift-sql-server-integration-services-workloads-to-the-cloud"></a>SQL Server Integration Services ワークロードをクラウドにリフト アンド シフトする
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
 SQL Server Integration Services (SSIS) プロジェクト、パッケージ、ワークロードを Azure クラウドに移動できるようになりました。 SQL Server Management Studio (SSMS) などのよく使われるツールを利用して、SSIS プロジェクトとパッケージを Azure SQL Database の SSIS カタログ (SSISDB) または SQL Database Managed Instance でデプロイ、実行、管理します。
 
 ## <a name="benefits"></a>利点
@@ -42,9 +45,9 @@ SQL Server Integration Services (SSIS) プロジェクト、パッケージ、�
 
 **プロビジョニング**。 Azure で SSIS パッケージをデプロイして実行するには、事前に SSIS カタログ (SSISDB) と Azure SSIS Integration Runtime をプロビジョニングする必要があります。
 
--   Azure portal で Azure に SSIS をプロビジョニングするには、「[Azure Data Factory に Azure-SSIS 統合ランタイムをプロビジョニングする](https://docs.microsoft.com/azure/data-factory/tutorial-deploy-ssis-packages-azure)」のプロビジョニング手順に従ってください。 
+-   Azure portal で Azure 上に SSIS をプロビジョニングするには、次の記事に記載されているプロビジョニング手順に従ってください:「[Azure Data Factory に Azure-SSIS 統合ランタイムをプロビジョニングする](https://docs.microsoft.com/azure/data-factory/tutorial-deploy-ssis-packages-azure)」。 
 
--   PowerShell を使って Azure に SSIS をプロビジョニングするには、「[PowerShell を使用して Azure-SSIS 統合ランタイムを Azure Data Factory にプロビジョニングする](https://docs.microsoft.com/azure/data-factory/tutorial-deploy-ssis-packages-azure-powershell)」のプロビジョニング手順に従ってください。
+-   PowerShell を使って Azure 上に SSIS をプロビジョニングするには、次の記事に記載されているプロビジョニング手順に従ってください:「[PowerShell を使用して Azure-SSIS 統合ランタイムを Azure Data Factory にプロビジョニングする](https://docs.microsoft.com/azure/data-factory/tutorial-deploy-ssis-packages-azure-powershell)」。
 
 Azure SSIS IR は 1 回だけプロビジョニングを行う必要があります。 その後は、SQL Server Data Tools (SSDT) や SQL Server Management Studio (SSMS) などの使い慣れたツールを使用して、パッケージの配置、構成、実行、監視、スケジュール、および管理ができます。
 
@@ -88,7 +91,7 @@ Azure SQL Database では、エラスティック トランザクションのみ
 
 ## <a name="deploy-and-run-packages"></a>パッケージの配置と実行
 
-始めるには、「[チュートリアル: Azure で SQL Server Integration Services (SSIS) パッケージをデプロイし、実行する](ssis-azure-deploy-run-monitor-tutorial.md)」をご覧ください。
+開始するには、「[チュートリアル:Azure で SQL Server Integration Services (SSIS) パッケージをデプロイし、実行する](ssis-azure-deploy-run-monitor-tutorial.md)」をご覧ください。
 
 ### <a name="prerequisites"></a>Prerequisites
 
@@ -112,7 +115,7 @@ Azure でプロジェクトをデプロイするには、次の使い慣れた�
 
 デプロイ プロセスでは、パッケージが Azure SSIS Integration Runtime で実行できることを確認するための検証が行われます。 詳しくは、「[Azure にデプロイされた SQL Server Integration Services (SSIS) パッケージを検証する](ssis-azure-validate-packages.md)」をご覧ください。
 
-SSMS と Integration Services デプロイ ウィザードを使用するデプロイの例については、「[チュートリアル: Azure で SQL Server Integration Services (SSIS) パッケージをデプロイし、実行する](ssis-azure-deploy-run-monitor-tutorial.md)」をご覧ください。
+SSMS と Integration Services デプロイ ウィザードを使用するデプロイの例については、「[チュートリアル:Azure で SQL Server Integration Services (SSIS) パッケージをデプロイし、実行する](ssis-azure-deploy-run-monitor-tutorial.md)」をご覧ください。
 
 ### <a name="version-support"></a>バージョンのサポート
 
@@ -131,8 +134,8 @@ SSIS パッケージの実行アクティビティを使って Data Factory パ�
 ## <a name="monitor-packages"></a>パッケージの監視
 
 実行中のパッケージを監視するには、SSMS で次のレポート オプションを使います。
--   **[SSISDB]** を右クリックし、**[アクティブな操作]** を選択して、**[アクティブな操作]** ダイアログ ボックスを開きます。
--   オブジェクト エクスプローラーでパッケージを選択し、右クリックして **[レポート]** を選択し、**[標準レポート]**、**[すべての実行]** の順に選択します。
+-   **[SSISDB]** を右クリックし、 **[アクティブな操作]** を選択して、 **[アクティブな操作]** ダイアログ ボックスを開きます。
+-   オブジェクト エクスプローラーでパッケージを選択し、右クリックして **[レポート]** を選択し、 **[標準レポート]** 、 **[すべての実行]** の順に選択します。
 
 Azure SSIS 統合ランタイムを監視するには、[Azure SSIS 統合ランタイムの監視](https://docs.microsoft.com/azure/data-factory/monitor-integration-runtime#azure-ssis-integration-runtime)に関するページを参照してください。
 

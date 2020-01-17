@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: f48f6f7b-219f-463a-bf36-bc10f21afaeb
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 7c28685843884275261909cd54309a83e5d3d1e2
-ms.sourcegitcommit: c61c7b598aa61faa34cd802697adf3a224aa7dc4
+ms.openlocfilehash: a8eb8570d260b1e30d3c0ecafa0f3bfd15065983
+ms.sourcegitcommit: 710d60e7974e2c4c52aebe36fceb6e2bbd52727c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56154767"
+ms.lasthandoff: 10/11/2019
+ms.locfileid: "72278163"
 ---
 # <a name="query-method-xml-data-type"></a>query() メソッド (xml データ型)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -42,7 +41,7 @@ XML インスタンス内の XML ノード (要素や属性など) をクエリ�
 このセクションでは、**xml** データ型の query() メソッドの使用例について説明します。  
   
 ### <a name="a-using-the-query-method-against-an-xml-type-variable"></a>A. xml 型変数に対する query() メソッドの使用  
-次の例では、**xml** 型の変数 **@myDoc** を宣言し、XML インスタンスをこれに代入します。 その後 **query()** メソッドを使用して、ドキュメントに対して XQuery を指定します。  
+次の例では、**xml** 型の変数 **\@myDoc** を宣言し、XML インスタンスをこれに代入します。 その後 **query()** メソッドを使用して、ドキュメントに対して XQuery を指定します。  
   
 次のクエリは、<`ProductDescription`> 要素の <`Features`> 子要素を取得します。  
   

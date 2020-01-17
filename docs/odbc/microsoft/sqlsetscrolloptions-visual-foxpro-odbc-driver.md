@@ -12,21 +12,20 @@ helpviewer_keywords:
 ms.assetid: 693e6e28-a845-41b1-9622-5058b0d87229
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 8c2d78e26309d5ea7dc5e6eed5a04e84a1651b33
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b3746d9cea2ce5ffb7d03424d7cda4fa1889aabc
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47622632"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67905380"
 ---
 # <a name="sqlsetscrolloptions-visual-foxpro-odbc-driver"></a>SQLSetScrollOptions (Visual FoxPro ODBC ドライバー)
 > [!NOTE]  
 >  このトピックでには、Visual FoxPro ODBC ドライバー固有の情報が含まれています。 この関数の詳細については、該当するトピックを参照してください。 [ODBC API リファレンス](../../odbc/reference/syntax/odbc-api-reference.md)します。  
   
- サポート: 部分  
+ サポート:Partial  
   
- ODBC API 準拠: レベル 2  
+ ODBC API 準拠:レベル 2  
   
  ステートメント ハンドルに関連付けられているカーソルの動作を制御するオプションを設定*hstmt*します。  
   

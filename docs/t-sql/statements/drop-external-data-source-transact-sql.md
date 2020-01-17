@@ -12,16 +12,15 @@ dev_langs:
 ms.assetid: 3f65a2f5-a6c6-4be5-8ca4-6057078fe10e
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: a86e48453b8d4d64a2f22fa84293a65554a8cf82
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 54922dc96874142d216e7aedb8c80a44ce40ab31
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47723220"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67898035"
 ---
-# <a name="drop-external-data-source-transact-sql"></a>外部データ ソースの削除 (TRANSACT-SQL)
+# <a name="drop-external-data-source-transact-sql"></a>DROP EXTERNAL DATA SOURCE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2016-xxxx-asdw-pdw-md.md)]
 
   PolyBase の外部データ ソースを削除します。  
@@ -41,24 +40,24 @@ DROP EXTERNAL DATA SOURCE external_data_source_name
  削除する外部データ ソースの名前です。  
   
 ## <a name="metadata"></a>メタデータ  
- 外部データの一覧を表示するのには、ソースは、sys.external_data_sources のシステム ビューを使用します。  
+ 外部データ ソースの一覧を表示するのには、sys.external_data_sources のシステム ビューを使用します。  
   
 ```  
 SELECT * FROM sys.external_data_sources;  
 ```  
   
 ## <a name="permissions"></a>アクセス許可  
- 必要です、外部データ ソースを変更します。  
+ ALTER ANY EXTERNAL DATA SOURCE が必要です。  
   
 ## <a name="locking"></a>ロック  
- 外部データ ソースのオブジェクトには、共有ロックを取得します。  
+ 外部データ ソースのオブジェクトに対して共有ロックを取得します。  
   
 ## <a name="general-remarks"></a>全般的な解説  
- 外部データ ソースを削除しても、外部のデータは削除されません。  
+ 外部データ ソースを削除しても、外部データは削除されません。  
   
 ## <a name="examples"></a>使用例  
   
-### <a name="a-using-basic-syntax"></a>A. 基本的な構文を使用します。  
+### <a name="a-using-basic-syntax"></a>A. 基本的な構文を使用します  
   
 ```  
 DROP EXTERNAL DATA SOURCE mydatasource;  

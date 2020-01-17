@@ -18,16 +18,15 @@ helpviewer_keywords:
 ms.assetid: a8d68d72-0f4d-4ecb-ae86-1235b962f646
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: ef37233326597dc2a83f3089590e07f7b6efe51f
-ms.sourcegitcommit: a13256f484eee2f52c812646cc989eb0ce6cf6aa
+ms.openlocfilehash: a548597b42bacdf5afaf7a2dc024156bd4ec3ad3
+ms.sourcegitcommit: 40f3b1f2340098496d8428f50616095a190ae94b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/25/2019
-ms.locfileid: "56803167"
+ms.lasthandoff: 07/17/2019
+ms.locfileid: "68290352"
 ---
-# <a name="spexecutesql-transact-sql"></a>sp_executesql (TRANSACT-SQL)
+# <a name="sp_executesql-transact-sql"></a>sp_executesql (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   何回も再利用可能な、または動的に作成した [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントやバッチを実行します。 [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントやバッチには、埋め込みパラメーターを含めることができます。  
@@ -50,22 +49,22 @@ sp_executesql [ @stmt = ] statement
 ```  
   
 ## <a name="arguments"></a>引数  
- [ \@stmt= ] *statement*  
- 含む Unicode 文字列には、[!INCLUDE[tsql](../../includes/tsql-md.md)]ステートメントまたはバッチです。 \@stmt は、Unicode 定数または Unicode 変数のいずれかである必要があります。 + 演算子で 2 つの文字列を連結するなどの複雑な Unicode 式は使用できません。 文字定数も使用できません。 Unicode 定数が指定されている場合に付ける必要があります、 **N**します。Unicode 定数など**N 'sp_who'** が有効で、文字定数 **'sp_who'** はありません。 文字列のサイズは、使用可能なデータベース サーバーのメモリによってのみ制限されます。 64 ビット サーバーで、文字列のサイズが 2 GB の最大サイズに制限、 **nvarchar (max)** します。  
+ [ \@stmt =]*ステートメント*  
+ 含む Unicode 文字列には、[!INCLUDE[tsql](../../includes/tsql-md.md)]ステートメントまたはバッチです。 \@stmt は、Unicode 定数または Unicode 変数のいずれかである必要があります。 \+ 演算子で 2 つの文字列を連結するなどの複雑な Unicode 式は使用できません。 文字定数も使用できません。 Unicode 定数が指定されている場合に付ける必要があります、 **N**します。Unicode 定数など**N 'sp_who'** が有効で、文字定数 **'sp_who'** はありません。 文字列のサイズは、使用可能なデータベース サーバーのメモリによってのみ制限されます。 64 ビット サーバーで、文字列のサイズが 2 GB の最大サイズに制限、 **nvarchar (max)** します。  
   
 > [!NOTE]  
 >  \@stmt には、たとえば、名前の変数と同じ形式を持つパラメーターを含めることができます。 `N'SELECT * FROM HumanResources.Employee WHERE EmployeeID = @IDParameter'`  
   
  含まれる各パラメーター \@stmt では、両方に対応するエントリがあります、 \@params パラメーター定義リストとパラメーター値の一覧。  
   
- [ \@params= ] N'\@*parameter_name**data_type* [ ,... *n* ] '  
- 1 つの文字列に埋め込まれたすべてのパラメーターの定義を含む\@stmt します。文字列は、Unicode 定数または Unicode 変数のいずれかである必要があります。 各パラメーター定義は、パラメーター名とデータ型で構成されます。 *n*は追加のパラメーター定義を示すプレース ホルダーです。 すべてのパラメーターで指定された\@で stmt を定義する必要があります\@params します。 場合、[!INCLUDE[tsql](../../includes/tsql-md.md)]ステートメントまたはバッチに\@stmt にパラメーターが含まれていない\@params は必要ありません。 このパラメーターの既定値は、NULL です。  
+ [ \@params =] N'\@*parameter_name* *data_type* [,...*n* ] '  
+ 1 つの文字列に埋め込まれたすべてのパラメーターの定義を含む\@stmt します。この文字列は Unicode 定数または Unicode 変数にする必要があります。 各パラメーター定義は、パラメーター名とデータ型で構成されます。 *n*は追加のパラメーター定義を示すプレース ホルダーです。 すべてのパラメーターで指定された\@で stmt を定義する必要があります\@params します。 場合、[!INCLUDE[tsql](../../includes/tsql-md.md)]ステートメントまたはバッチに\@stmt にパラメーターが含まれていない\@params は必要ありません。 このパラメーターの既定値は、NULL です。  
   
- [ \@param1= ] '*value1*'  
+ [ \@param1 =] '*value1*'  
  パラメーター文字列に定義する最初のパラメーターの値を指定します。 Unicode 定数または Unicode 変数を指定できます。 含まれるすべてのパラメーターに指定されたパラメーター値が必要がある\@stmt します。ときに、値は必要ありません、[!INCLUDE[tsql](../../includes/tsql-md.md)]ステートメントまたはバッチに\@stmt にパラメーターがありません。  
   
  [ OUT | OUTPUT ]  
- パラメーターが出力パラメーターであることを示します。 **テキスト**、 **ntext**、および**イメージ**パラメーターは、プロシージャが共通言語ランタイム (CLR) プロシージャでない限り、OUTPUT パラメーターとして使用できます。 OUTPUT キーワードを使用する出力パラメーターは、プロシージャが CLR プロシージャでない限り、カーソルのプレースホルダーにできます。  
+ パラメーターが出力パラメーターであることを示します。 **text**、 **ntext**、および**image**パラメーターは、プロシージャが共通言語ランタイム (CLR) プロシージャでない限り、OUTPUT パラメーターとして使用できます。 OUTPUT キーワードを使用する出力パラメーターは、プロシージャが CLR プロシージャでない限り、カーソルのプレースホルダーにできます。  
   
  *n*  
  追加のパラメーターの値のプレース ホルダー。 定数または変数のみを指定できます。 値は、関数などのより複雑な式または演算子を使用して作成された式にすることはできません。  
@@ -136,7 +135,7 @@ SELECT @max_title;
 -   整数パラメーターはネイティブ形式で指定します。 Unicode にキャストする必要はありません。  
   
 ## <a name="permissions"></a>アクセス許可  
- パブリック ロールのメンバーシップが必要です。  
+ public ロールのメンバーシップが必要です。  
   
 ## <a name="examples"></a>使用例  
   
@@ -250,9 +249,7 @@ EXECUTE sp_executesql
           @level = 109;  
 ```  
   
- その他の例では、次を参照してください。 [sp_executesql (TRANSACT-SQL)](https://msdn.microsoft.com/library/ms188001.aspx)します。  
-  
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [EXECUTE &#40;Transact-SQL&#41;](../../t-sql/language-elements/execute-transact-sql.md)   
  [システム ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   

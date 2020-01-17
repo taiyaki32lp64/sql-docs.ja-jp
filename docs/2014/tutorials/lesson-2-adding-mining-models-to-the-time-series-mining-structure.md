@@ -11,13 +11,13 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: ae0bb91fafb53c0c077a4e0d82558b550d0e6070
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56022263"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62855715"
 ---
-# <a name="lesson-2-adding-mining-models-to-the-time-series-mining-structure"></a>レッスン 2:時系列マイニング構造にマイニング モデルの追加
+# <a name="lesson-2-adding-mining-models-to-the-time-series-mining-structure"></a>レッスン 2:時系列マイニング構造へのマイニング モデルの追加
   このレッスンで作成したマイニング構造に新しいマイニング モデルを追加[レッスン 1。タイム シリーズ マイニング モデルとマイニング構造を作成する](../../2014/tutorials/lesson-1-creating-a-time-series-mining-model-and-mining-structure.md)します。  
   
 ## <a name="alter-mining-structure-statement"></a>ALTER MINING STRUCTURE ステートメント  
@@ -95,7 +95,7 @@ WITH DRILLTHROUGH
   
 #### <a name="to-add-an-arima-time-series-mining-model"></a>ARIMA 時系列マイニング モデルを追加するには  
   
-1.  **オブジェクト エクスプ ローラー**のインスタンスを右クリックして[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]、 をポイント**新しいクエリ**、 をクリックし、 **DMX**クエリ エディターと新しい空のクエリを開きます。  
+1.  **オブジェクト エクスプ ローラー**のインスタンスを右クリックして[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]、をポイント**新しいクエリ**、をクリックし、 **DMX**クエリ エディターと新しい空のクエリを開きます。  
   
 2.  上の ALTER MINING STRUCTURE ステートメントの汎用例を空のクエリにコピーします。  
   

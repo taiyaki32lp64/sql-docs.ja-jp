@@ -1,11 +1,10 @@
 ---
-title: 固定サーバー ロールの名前と一致するログインの名前を変更する |Microsoft Docs
+title: 固定サーバーロール名と一致するログイン名を変更する |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 helpviewer_keywords:
 - user-defined login names [SQL Server]
@@ -16,12 +15,12 @@ ms.assetid: 10a1d77c-3153-474f-a6a0-969556794467
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: c5c46c934dff0e882b50dcf7520ba231ba5187eb
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: df9d9e51846e286c67a4773823207524755d15dc
+ms.sourcegitcommit: 710d60e7974e2c4c52aebe36fceb6e2bbd52727c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48181928"
+ms.lasthandoff: 10/11/2019
+ms.locfileid: "72278215"
 ---
 # <a name="rename-logins-matching-fixed-server-role-names"></a>固定サーバー ロール名と一致するログイン名を変更する
   アップグレード アドバイザーによって、固定サーバー ロール名と一致する 1 つ以上のユーザー定義ログイン名が検出されました。 固定サーバー ロール名は予約されています。 アップグレードする前に、ログイン名を変更してください。  
@@ -29,7 +28,7 @@ ms.locfileid: "48181928"
 ## <a name="component"></a>コンポーネント  
  [!INCLUDE[ssDE](../../includes/ssde-md.md)]  
   
-## <a name="description"></a>説明  
+## <a name="description"></a>[説明]  
  以下の固定サーバー ロール名は予約されているため、ユーザー定義ログイン名として使用できません。  
   
 -   **sysadmin**  
@@ -61,10 +60,10 @@ ms.locfileid: "48181928"
   
 2.  ログイン名を削除します。  
   
-3.  使用して、 **sp_addlogin**システム プロシージャを新しいログインを作成します。 手順 1. で返された SID を指定、 **@sid**対応するログインごとのパラメーター。  
+3.  新しいログインを作成するには、 **sp_addlogin**システムプロシージャを使用します。 対応する各ログインの **\@sid**パラメーターで、手順 1. で返された sid を指定します。  
   
 ## <a name="see-also"></a>参照  
- [データベース エンジンのアップグレードに関する問題](../../../2014/sql-server/install/database-engine-upgrade-issues.md)   
- [SQL Server 2014 アップグレード アドバイザー&#91;新規&#93;](/sql/2014/sql-server/install/sql-server-2014-upgrade-advisor)  
+ [データベースエンジンのアップグレードに関する問題](../../../2014/sql-server/install/database-engine-upgrade-issues.md)   
+ [SQL Server 2014 Upgrade Advisor &#91;新規&#93;](sql-server-2014-upgrade-advisor.md)  
   
   

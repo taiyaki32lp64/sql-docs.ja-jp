@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: 0bbd6842-7210-432a-bef4-e15a63f5cc96
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: e04dc2dc4de80c7f2c1bc6ad91d6cb56c9e591e5
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 4c9c73652c1c0b512c24e2d592323833390c7b0d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47616930"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67953330"
 ---
 # <a name="getcatalogseparator-method-sqlserverdatabasemetadata"></a>getCatalogSeparator メソッド (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -42,7 +41,7 @@ public java.lang.String getCatalogSeparator()
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- この getCatalogSeparator メソッドは、java.sql.DatabaseMetaData インターフェイスで getCatalogSeparator メソッドによって指定されます。  
+ この getCatalogSeparator メソッドは、java.sql.DatabaseMetaData インターフェイスの getCatalogSeparator メソッドで規定されています。  
   
  [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)] を [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] データベースと共に使用している場合、このメソッドではカタログの区切り記号としてピリオド (.) が返されます。  
   

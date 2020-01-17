@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.cubewizard.datasourcebrowse.f1
@@ -16,12 +15,12 @@ ms.assetid: 16f077bd-9366-4964-8778-92ea0eddb8bb
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 14fcc55e8e50892ce2aa54326f9f82a195aa66e4
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 49a98b2710cf1af3a936ba7fa7fe244bb7675bd9
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48163622"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66064458"
 ---
 # <a name="browse-data-source-view-dialog-box-analysis-services---multidimensional-data"></a>[データ ソース ビューの参照] ダイアログ ボックス (Analysis Services - 多次元データ)
   データ ソース ビューの参照ダイアログ ボックスには、選択したデータ ソース ビューの簡単なダイアグラムがグラフィカルに表示されます。 また、データ ソース ビューの名前がダイアログ ボックスのタイトルとして表示されます。  

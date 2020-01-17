@@ -12,15 +12,14 @@ dev_langs:
 helpviewer_keywords:
 - ShortestLineTo method (geometry)
 ms.assetid: 39a2d0e4-4f93-4e94-a27e-6ad9537cfe74
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: f2d92d90c363cd17844d905a7d0108b0f148a007
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: MladjoA
+ms.author: mlandzic
+ms.openlocfilehash: 4bb425d07d566f4bb06d18a8f74f493a649fa8b4
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47631850"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68101023"
 ---
 # <a name="shortestlineto-geometry-data-type"></a>ShortestLineTo (geometry データ型)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
@@ -41,7 +40,7 @@ ms.locfileid: "47631850"
 ## <a name="return-types"></a>戻り値の型  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の戻り値の型: **geometry**  
   
- CLR 戻り値の型: **SqlGeometry**  
+ CLR の戻り値の型:**SqlGeometry**  
   
 ## <a name="remarks"></a>Remarks  
  このメソッドでは、比較対象の 2 つの交差しない **geometry** インスタンスの境界上にあるエンドポイントを持つ **LineString** インスタンスが返されます。 返される **LineString** インスタンスの長さは、2 つの **geometry** インスタンスの間の最短距離です。 2 つの **geometry** インスタンスが相互に交差しているとき、空の **LineString** インスタンスが返されます。  

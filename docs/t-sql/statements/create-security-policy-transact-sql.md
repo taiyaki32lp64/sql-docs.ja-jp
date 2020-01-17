@@ -25,15 +25,14 @@ helpviewer_keywords:
 ms.assetid: d6ab70ee-0fa2-469c-96f6-a3c16d673bc8
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: f5732c63ae381c0ca9c120b64aef3915dc6db926
-ms.sourcegitcommit: c6e71ed14198da67afd7ba722823b1af9b4f4e6f
+ms.openlocfilehash: 8cf0332d2a82113145e549d9419b855a222f7441
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/16/2019
-ms.locfileid: "54326083"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68117294"
 ---
-# <a name="create-security-policy-transact-sql"></a>セキュリティ ポリシー (TRANSACT-SQL) の作成します。
+# <a name="create-security-policy-transact-sql"></a>CREATE SECURITY POLICY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
   行レベルのセキュリティのセキュリティ ポリシーを作成します。  
@@ -63,8 +62,8 @@ CREATE SECURITY POLICY [schema_name. ] security_policy_name
  *schema_name*  
  セキュリティ ポリシーが属するスキーマの名前。 *schema_name* はスキーマのバインドのために必要です。  
   
- [フィルター | ブロック]  
- 対象のテーブルにバインドされている関数のセキュリティの述語の型。 サイレント モードで、フィルター述語には、読み取り操作に使用できる行がフィルター処理します。 ブロックは述語述語の関数に違反しているブロックの書き込み操作では明示的にします。  
+ [ FILTER | BLOCK ]  
+ 対象のテーブルにバインドされている関数のセキュリティの述語の型。 FILTER 述語は、読み取り操作が可能な行を通知なしにフィルター処理します。 BLOCK 述語は、その述語関数に違反する書き込み操作を明示的に禁止します。  
   
  *tvf_schema_name.security_predicate_function_name*  
  述語として使用され、ターゲット テーブルに対するクエリで実施されるインライン テーブル値関数。 特定のテーブルの特定の DML 操作に対して定義できるセキュリティ述語の数は 1 つです。 インライン テーブル値関数は、SCHEMABINDING オプションを使用して作成する必要があります。  
@@ -73,15 +72,15 @@ CREATE SECURITY POLICY [schema_name. ] security_policy_name
  セキュリティ述語関数のパラメーターとして使用される列名または式。 ターゲット テーブルの任意の列を使用できます。 [expression](../../t-sql/language-elements/expressions-transact-sql.md) には、定数、組み込みのスカラー関数、演算子、およびターゲット テーブルの列のみを含めることができます。 関数の各パラメーターに列名または式を指定する必要があります。  
   
  *table_schema_name.table_name*  
- セキュリティ述語の適用先となるターゲット テーブル。 複数のセキュリティを無効になっているポリシーの特定の DML 操作では、1 つのテーブルを対象にできますが、任意の時点で、1 つのみを有効にすることができます。  
+ セキュリティ述語の適用先となるターゲット テーブル。 セキュリティが無効になっている複数のポリシーでは、特定の DML 操作に対して、1 つのテーブルを対象にできますが、有効にできるのはどの時点でも 1 つだけです。  
   
- *\<block_dml_operation>* ブロック述語が適用される特定の DML 操作。 結局、DML 操作が実行される (INSERT または UPDATE) 後に、述語、行の値に評価することを指定します。 前に、DML の操作が実行される (更新または削除) する前に、述語は、行の値に評価することを指定します。 操作が指定されていない場合、述語は、すべての操作に適用されます。  
+ *\<block_dml_operation>* ブロック述語が適用される特定の DML 操作。 AFTER は、DML 操作 (INSERT または UPDATE) が実行された後に、行の値に対して述語が評価されることを指定します。 BEFORE は、DML 操作 (UPDATE または DELETE) が実行される前に、行の値に対して述語が評価されることを指定します。 操作が指定されていない場合、述語は、すべての操作に適用されます。  
   
  [ STATE = { ON | **OFF** } ]  
  セキュリティ ポリシーによるターゲット テーブルに対するセキュリティ述語の実施を有効または無効にします。 指定しないと、作成されているセキュリティ ポリシーは有効になります。  
   
  [SCHEMABINDING = {ON |OFF}]  
- SCHEMABINDING オプションを使用して、ポリシー内のすべての述語関数を作成する必要があるかどうかを示します。 既定では、schemabinding を指定してすべての関数を作成する必要があります。  
+ SCHEMABINDING オプションを使用して、ポリシー内のすべての述語関数を作成する必要があるかどうかを示します。 既定では、SCHEMABINDING を指定してすべての関数を作成する必要があります。  
   
  NOT FOR REPLICATION  
  レプリケーション エージェントがターゲット オブジェクトを変更するときにセキュリティ ポリシーを実行すべきではないことを示します。 詳細については、「[同期中にトリガと制約の動作を制御する方法 &#40;レプリケーション Transact-SQL プログラミング&#41;](../../relational-databases/replication/control-behavior-of-triggers-and-constraints-in-synchronization.md)」を参照してください。  
@@ -92,7 +91,7 @@ CREATE SECURITY POLICY [schema_name. ] security_policy_name
 ## <a name="remarks"></a>Remarks  
  メモリ最適化テーブルで述語関数を使用する場合、**SCHEMABINDING** を含め、**WITH NATIVE_COMPILATION** コンパイル ヒントを使う必要があります。  
   
- ブロックの述語は、対応する DML 操作を実行した後に評価されます。 そのため、READ UNCOMMITTED のクエリでは、ロールバックは一時的な値を確認できます。  
+ ブロック述語は、対応する DML 操作を実行した後に評価されます。 そのため、READ UNCOMMITTED のクエリでは、ロールバックされる一時的な値を確認できます。  
   
 ## <a name="permissions"></a>アクセス許可  
  スキーマに対する ALTER ANY SECURITY POLICY 権限と ALTER 権限が必要です。  
@@ -131,7 +130,7 @@ ADD FILTER PREDICATE [rls].[fn_securitypredicate2]([WingId])
 WITH (STATE = ON);  
 ```  
   
-### <a name="c-creating-a-policy-with-multiple-types-of-security-predicates"></a>C. 複数の種類のセキュリティの述語でポリシーを作成します。  
+### <a name="c-creating-a-policy-with-multiple-types-of-security-predicates"></a>C. 複数の種類のセキュリティの述語でポリシーを作成する  
  フィルター述語とブロックの述語の両方を Sales テーブルに追加します。  
   
 ```  

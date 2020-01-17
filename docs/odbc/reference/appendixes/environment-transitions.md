@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 9d11b1ab-f4c8-48ca-9812-8c04303f939d
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 3ed2bbf40ac333db34d3920b2ed2ec688c344bfe
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 6b1de2f2147357f9e2ed4f71657b9298c4a13684
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47844370"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67910433"
 ---
 # <a name="environment-transitions"></a>環境の遷移
 ODBC 環境では、次の 3 つの状態があります。  

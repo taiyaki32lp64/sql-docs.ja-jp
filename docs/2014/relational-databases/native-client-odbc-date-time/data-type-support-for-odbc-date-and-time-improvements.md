@@ -14,11 +14,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 1823e1416f546105205782d313f75e148e0aa848
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48052702"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63206995"
 ---
 # <a name="data-type-support-for-odbc-date-and-time-improvements"></a>ODBC の日付/時刻の強化に対するデータ型のサポート
   このトピックでは、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の日付と時刻のデータ型をサポートする ODBC 型について説明します。  
@@ -52,7 +52,7 @@ ms.locfileid: "48052702"
   
  SQL_C_BINARY バインドを指定すると、配置チェックが実行され、配置が正しくない場合はエラーが報告されます。 このエラーの SQLSTATE は IM016 で、メッセージは "構造体の配置が正しくありません" です。  
   
-## <a name="data-formats-strings-and-literals"></a>データ形式 : 文字列とリテラル  
+## <a name="data-formats-strings-and-literals"></a>データ形式:文字列とリテラル  
  次の表に、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データ型、ODBC データ型、ODBC 文字列リテラルの間のマッピングを示します。  
   
 |SQL Server データ型|ODBC データ型|クライアントで変換した場合の文字列の形式|  
@@ -76,7 +76,7 @@ ms.locfileid: "48052702"
   
  現在は、句読点の前後に空白を追加することができ、時間とタイム ゾーン オフセットの間の空白は省略可能です。 ただし、これは将来のリリースで変更される可能性があるので、アプリケーションは現在の動作に依存しないようにしてください。  
   
-## <a name="data-formats-data-structures"></a>データ形式 : データ構造体  
+## <a name="data-formats-data-structures"></a>データ形式:データ構造体  
  後述の構造体では、ODBC によって次の制約が定められています。これらはグレゴリオ暦を取り入れたものです。  
   
 -   月の範囲は 1 ～ 12 です。  

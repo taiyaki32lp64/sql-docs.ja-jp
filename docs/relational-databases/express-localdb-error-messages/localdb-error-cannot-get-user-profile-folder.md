@@ -9,13 +9,12 @@ ms.topic: reference
 ms.assetid: 3625c9cb-579c-4b4b-be74-0d4de7b64bb6
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: aa7abd6a155fd2ed125294da00df787a35f32869
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 09a3e7539b6248a8d8df515bd2765232834da183
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47642930"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67995899"
 ---
 # <a name="localdberrorcannotgetuserprofilefolder"></a>LOCALDB_ERROR_CANNOT_GET_USER_PROFILE_FOLDER
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

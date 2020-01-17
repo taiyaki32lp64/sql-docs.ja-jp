@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: be09e2af-ba31-4168-8ccd-2461bb24e49a
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 3e9f7dfa941d02ac86f31f8d5d93fa55be6130ab
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 6ad96904c913cadc451bc7d4c67fb5e4f8c59c70
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47617230"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67921663"
 ---
 # <a name="activecommand-property-example-jscript"></a>ActiveCommand プロパティの例 (JScript)
 この例では、 [ActiveCommand](../../../ado/reference/ado-api/activecommand-property-ado.md)プロパティ。 切り取り、メモ帳または別のテキスト エディターに次のコードを貼り付けてととして保存**ActiveCommandJS.asp**します。  
@@ -126,7 +125,7 @@ if (strName.length > 0)
 <!-- EndActiveCommandJS -->  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [ActiveCommand プロパティ (ADO)](../../../ado/reference/ado-api/activecommand-property-ado.md)   
  [コマンド オブジェクト (ADO)](../../../ado/reference/ado-api/command-object-ado.md)   
  [Recordset オブジェクト (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)

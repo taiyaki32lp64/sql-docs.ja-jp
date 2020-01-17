@@ -1,6 +1,7 @@
 ---
-title: レプリケーション エージェント コマンド プロンプト パラメーターの表示および変更 | Microsoft Docs
-ms.custom: ''
+title: エージェント コマンド プロンプト パラメーターの表示および変更
+description: SQL Server のさまざまなレプリケーション エージェントによって使用されるコマンド プロンプト パラメーターを表示および変更する方法について説明します。
+ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -12,22 +13,21 @@ helpviewer_keywords:
 ms.assetid: 45f2e781-c21d-4b44-8992-89f60fb3d022
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 1137138911519b2e6497525acb39b7de87a4fd63
-ms.sourcegitcommit: bfa10c54e871700de285d7f819095d51ef70d997
+ms.openlocfilehash: 6c72c58b0a23f8215d303addfbb2ec9fb65c4489
+ms.sourcegitcommit: 02d44167a1ee025ba925a6fefadeea966912954c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/14/2019
-ms.locfileid: "54254897"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75321637"
 ---
 # <a name="view-and-modify-replication-agent-command-prompt-parameters"></a>レプリケーション エージェント コマンド プロンプト パラメーターの表示および変更
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  レプリケーション エージェントは、コマンド ライン パラメーターを使用できる実行可能ファイルです。 既定では、エージェントは [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] エージェント ジョブ ステップで実行されるため、これらのパラメーターは **[ジョブのプロパティ - \<Job>]** ダイアログ ボックスを使用して表示および変更できます。 このダイアログ ボックスは、 **の** [ジョブ] [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] フォルダーおよびレプリケーション モニター内の **[エージェント]** タブからアクセスできます。 レプリケーション モニターの起動の詳細については、「[Start the Replication Monitor (レプリケーション モニターの開始)](../../../relational-databases/replication/monitor/start-the-replication-monitor.md)」を参照してください。  
+  レプリケーション エージェントは、コマンド ライン パラメーターを使用できる実行可能ファイルです。 既定では、エージェントは [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] エージェント ジョブ ステップで実行されるため、これらのパラメーターは、 **[ジョブのプロパティ - \<Job>]** ダイアログ ボックスを使用して表示および変更できます。 このダイアログ ボックスは、 **の** [ジョブ] [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] フォルダーおよびレプリケーション モニター内の **[エージェント]** タブからアクセスできます。 レプリケーション モニターの起動の詳細については、「[Start the Replication Monitor](../../../relational-databases/replication/monitor/start-the-replication-monitor.md)」 (レプリケーション モニターの開始) を参照してください。  
   
 > [!NOTE]  
 >  エージェント パラメーターの変更は、エージェントの次回起動時に反映されます。 エージェントを継続して実行している場合は、そのエージェントを停止して再起動する必要があります。  
   
- パラメーターは直接変更することもできますが、エージェント プロファイルを使用して変更する方が一般的です。 詳細については、「 [Replication Agent Profiles](../../../relational-databases/replication/agents/replication-agent-profiles.md)」を参照してください。  
+ パラメーターは直接変更することもできますが、エージェント プロファイルを使用して変更する方が一般的です。 詳しくは、「 [レプリケーション エージェント プロファイル](../../../relational-databases/replication/agents/replication-agent-profiles.md)」をご覧ください。  
   
  **[ジョブ]** フォルダーからエージェント ジョブにアクセスする場合は、次の表を使用して、各エージェントで使用できるエージェント ジョブ名とパラメーターを決定してください。  
   
@@ -37,15 +37,15 @@ ms.locfileid: "54254897"
 |マージ パブリケーション パーティションに対するスナップショット エージェント|**Dyn_\<パブリッシャー>-\<PublicationDatabase>-\<パブリケーション>-\<GUID>**|[Replication Snapshot Agent](../../../relational-databases/replication/agents/replication-snapshot-agent.md)|  
 |ログ リーダー エージェント (Log Reader Agent)|**\<パブリッシャー>-\<PublicationDatabase>-\<整数>**|[レプリケーション ログ リーダー エージェント](../../../relational-databases/replication/agents/replication-log-reader-agent.md)|  
 |プル サブスクリプションに対するマージ エージェント|**\<パブリッシャー>-\<PublicationDatabase>-\<パブリケーション>-\<サブスクライバー>-\<SubscriptionDatabase>-\<整数>**|[Replication Merge Agent](../../../relational-databases/replication/agents/replication-merge-agent.md)|  
-|プッシュ サブスクリプションに対するマージ エージェント|**\<パブリッシャー>-\<PublicationDatabase>-\<パブリケーション>-\<サブスクライバー>-\<整数>**|[Replication Merge Agent](../../../relational-databases/replication/agents/replication-merge-agent.md)|  
+|プッシュ サブスクリプションに対するマージ エージェント|**\<パブリッシャー>-\<パブリケーション データベース>-\<パブリケーション>-\<サブスクライバー>-\<整数>**|[Replication Merge Agent](../../../relational-databases/replication/agents/replication-merge-agent.md)|  
 |プッシュ サブスクリプションに対するディストリビューション エージェント|**\<パブリッシャー>-\<パブリケーション データベース>-\<パブリケーション>-\<サブスクライバー>-\<整数>**|[Replication Distribution Agent](../../../relational-databases/replication/agents/replication-distribution-agent.md)|  
 |プル サブスクリプションに対するディストリビューション エージェント|**\<パブリッシャー>-\<PublicationDatabase>-\<パブリケーション>-\<サブスクライバー>-\<SubscriptionDatabase>-\<GUID>**|[Replication Distribution Agent](../../../relational-databases/replication/agents/replication-distribution-agent.md)|  
 |SQL Server 以外のサブスクライバーへのプッシュ サブスクリプションに対するディストリビューション エージェント|**\<パブリッシャー>-\<パブリケーション データベース>-\<パブリケーション>-\<サブスクライバー>-\<整数>**|[Replication Distribution Agent](../../../relational-databases/replication/agents/replication-distribution-agent.md)|  
 |キュー リーダー エージェント (Queue Reader Agent)|**[\<ディストリビューター>].\<整数>**|[レプリケーション キュー リーダー エージェント](../../../relational-databases/replication/agents/replication-queue-reader-agent.md)|  
   
- \*Oracle パブリケーションに対するプッシュ サブスクリプションの場合は、**\<Publisher>-\<PublicationDatabase>** ではなく、**\<Publisher>-\<Publisher**> になります  
+ \*Oracle パブリケーションに対するプッシュ サブスクリプションの場合は、 **\<Publisher>-\<PublicationDatabase>** ではなく、 **\<Publisher>-\<Publisher**> になります  
   
- \*\*Oracle パブリケーションに対するプル サブスクリプションの場合は、**\<Publisher>-\<PublicationDatabase>** ではなく **\<Publisher>-\<DistributionDatabase**> になります  
+ \*\*Oracle パブリケーションに対するプル サブスクリプションの場合は、 **\<Publisher>-\<PublicationDatabase>** ではなく **\<Publisher>-\<DistributionDatabase**> になります  
   
 ### <a name="to-view-and-modify-replication-agent-command-line-parameters-from-management-studio"></a>Management Studio からレプリケーション エージェント コマンド ライン パラメーターを表示または変更するには  
   
@@ -59,7 +59,7 @@ ms.locfileid: "54254897"
   
 3.  ジョブを右クリックし、 **[プロパティ]** をクリックします。  
   
-4.  **[ジョブのプロパティ - \<Job>]** ダイアログ ボックスの **[ステップ]** ページで、ステップ **[エージェントを実行します]** を選択し、**[編集]** をクリックします。  
+4.  **[ジョブのプロパティ - \<Job>]** ダイアログ ボックスの **[ステップ]** ページで、ステップ **[エージェントを実行します]** を選択し、 **[編集]** をクリックします。  
   
 5.  **[ジョブ ステップのプロパティ - エージェントを実行します]** ダイアログ ボックスで、 **[コマンド]** フィールドを編集します。  
   
@@ -73,9 +73,9 @@ ms.locfileid: "54254897"
   
 3.  サブスクリプションを右クリックし、 **[詳細表示]** をクリックします。  
   
-4.  **[サブスクリプション < SubscriptionName>]** ウィンドウで、**[アクション]** をクリックし、**[\<AgentName> ジョブのプロパティ]** をクリックします。  
+4.  **[サブスクリプション <SubscriptionName>]** ウィンドウで、 **[アクション]** をクリックし、 **[\<AgentName> ジョブのプロパティ]** をクリックします。  
   
-5.  **[ジョブのプロパティ - \<Job>]** ダイアログ ボックスの **[ステップ]** ページで、ステップ **[エージェントを実行します]** を選択し、**[編集]** をクリックします。  
+5.  **[ジョブのプロパティ - \<Job>]** ダイアログ ボックスの **[ステップ]** ページで、ステップ **[エージェントを実行します]** を選択し、 **[編集]** をクリックします。  
   
 6.  **[ジョブ ステップのプロパティ - エージェントを実行します]** ダイアログ ボックスで、 **[コマンド]** フィールドを編集します。  
   
@@ -89,7 +89,7 @@ ms.locfileid: "54254897"
   
 3.  グリッド内のエージェントを右クリックし、 **[プロパティ]** をクリックします。  
   
-4.  **[ジョブのプロパティ - \<Job>]** ダイアログ ボックスの **[ステップ]** ページで、ステップ **[エージェントを実行します]** を選択し、**[編集]** をクリックします。  
+4.  **[ジョブのプロパティ - \<Job>]** ダイアログ ボックスの **[ステップ]** ページで、ステップ **[エージェントを実行します]** を選択し、 **[編集]** をクリックします。  
   
 5.  **[ジョブ ステップのプロパティ - エージェントを実行します]** ダイアログ ボックスで、 **[コマンド]** フィールドを編集します。  
   
@@ -98,6 +98,6 @@ ms.locfileid: "54254897"
 ## <a name="see-also"></a>参照  
  [レプリケーション エージェントの管理](../../../relational-databases/replication/agents/replication-agent-administration.md)   
  [レプリケーション エージェント実行可能ファイルの概念](../../../relational-databases/replication/concepts/replication-agent-executables-concepts.md)   
- [Replication Agents Overview](../../../relational-databases/replication/agents/replication-agents-overview.md)  
+ [レプリケーション エージェントの概要](../../../relational-databases/replication/agents/replication-agents-overview.md)  
   
   

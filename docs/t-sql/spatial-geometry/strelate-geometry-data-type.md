@@ -15,15 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - STRelate (geometry Data Type)
 ms.assetid: 9dcb5f58-35ab-4bb3-86ee-2d29eefba6d3
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: 9c54da346320a8d4472b64df9bd879ceffac11bf
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: MladjoA
+ms.author: mlandzic
+ms.openlocfilehash: 1e50ca09fc8ac7c9c61c17227448deebe8c69bc8
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47721920"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68066312"
 ---
 # <a name="strelate-geometry-data-type"></a>STRelate (geometry データ型)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
@@ -50,7 +49,7 @@ ms.locfileid: "47721920"
 ## <a name="return-types"></a>戻り値の型  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 戻り値の型: **bit**  
   
- CLR の戻り値の型: **SqlBoolean**  
+ CLR の戻り値の型:**SqlBoolean**  
   
 ## <a name="examples"></a>使用例  
  `STRelate()` を使用して、空間的に連結されていない 2 つの **geometry** インスタンスが明示的に DE-9IM パターンを使用しているかどうかをテストする例を次に示します。  

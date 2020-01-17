@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.bidevstudio.assembly.registerassembly.f1
@@ -13,12 +12,12 @@ ms.assetid: 0c07cc87-fc94-456f-b878-7b23e39772b9
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: aad57083bdcd8337e9320e81a662bef12888011e
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: 06647219ca5768495620bb1db60cf34910844f25
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52416753"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66070470"
 ---
 # <a name="register-database-assembly-dialog-box-analysis-services---multidimensional-data"></a>[データベース アセンブリの登録] ダイアログ ボックス (Analysis Services - 多次元データ)
   **の** [サーバー アセンブリの登録] [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] ダイアログ ボックスを使用すると、 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] データベースのアセンブリ参照のプロパティを設定できます。 **[サーバー アセンブリの登録]** ダイアログ ボックスを表示するには、 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] オブジェクト エクスプローラー **で** インスタンスまたはデータベースの [アセンブリ] フォルダーを右クリックし、 **[新しいアセンブリ]** を選択します。  
@@ -30,7 +29,7 @@ ms.locfileid: "52416753"
 |**型**|アセンブリ参照の種類を選択します。 次の値を指定できます。<br /><br /> **.NET アセンブリ**: <br />                      アセンブリ参照は [!INCLUDE[msCoName](../includes/msconame-md.md)] .NET Framework アセンブリを参照します。<br /><br /> **COM DLL**: <br />                      アセンブリ参照は COM ライブラリを参照します。<br /><br /> <br /><br /> **\*\* セキュリティに関する注意\* \***  COM アセンブリがセキュリティ リスクをもたらす可能性があります。 このリスクやその他の考慮事項により、[!INCLUDE[ssASversion10](../includes/ssasversion10-md.md)] では、COM アセンブリが非推奨とされました。 COM アセンブリは、今後のリリースではサポートされない可能性があります。|  
 |**[ファイル名]**|.NET アセンブリまたは COM ライブラリの完全なパスとファイル名を入力します。|  
 |**[...]**|クリックすると **[ファイルを開く]** ダイアログ ボックスが表示され、.NET アセンブリまたは COM ライブラリの完全なパスとファイル名を選択できます。|  
-|**アセンブリ名**|アセンブリ参照の名前を入力して設定します。<br /><br /> 注:この値を変更しても、アセンブリ参照が参照するアセンブリの名前は変更されませんが、アセンブリ参照を参照する際に [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] インスタンスまたはデータベースが使用する名前が変更されます。|  
+|**アセンブリ名**|アセンブリ参照の名前を入力して設定します。<br /><br /> 注:この値を変更するアセンブリの参照によって参照されるアセンブリの名前は変更されませんが、代わりに使用される名前を変更、によって、[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]インスタンスまたはデータベースのアセンブリ参照を参照するときにします。|  
 |**デバッグ情報を含める**|このオプションを選択すると、.NET アセンブリまたは COM ライブラリのデバッグ情報 (存在する場合) が含まれます。|  
 |**[タイムスタンプの作成]**|アセンブリ参照が作成された日時を表示します。|  
 |**[スキーマの最終更新]**|アセンブリ参照のメタデータが最後に更新された日時を表示します。|  
@@ -43,10 +42,10 @@ ms.locfileid: "52416753"
 |**Password**|選択した [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] オブジェクトで使用するユーザー アカウントのドメインと名前を入力します。|  
 |**[サービス アカウントを使用する]**|このオプションを選択すると、 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] オブジェクトを管理する [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] サービスに関連付けられているセキュリティ資格情報が使用されます。|  
 |**[現在のユーザーの資格情報を使用する]**|このオプションを選択すると、 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] オブジェクトでは現在のユーザーのセキュリティ資格情報が使用されます。|  
-|**Default**|このオプションを選択すると、 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]の既定のユーザー アカウントが使用されます。 このオプションを選択することは、 **[現在のユーザーの資格情報を使用する]** オプションを選択することと同じです。|  
+|**[Default]**|このオプションを選択すると、 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]の既定のユーザー アカウントが使用されます。 このオプションを選択することは、 **[現在のユーザーの資格情報を使用する]** オプションを選択することと同じです。|  
 |**[説明]**|アセンブリ参照の説明を入力して設定します。|  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [Analysis Services のデザイナーおよびダイアログ ボックス&#40;多次元データ&#41;](analysis-services-designers-and-dialog-boxes-multidimensional-data.md)   
  [多次元モデルのアセンブリの管理](multidimensional-models/multidimensional-model-assemblies-management.md)  
   

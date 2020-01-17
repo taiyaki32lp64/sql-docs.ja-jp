@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: dd323f83-f415-4fa4-8457-89dad6d321d0
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: e2d5ca8ca21765725a240f78d2a405c13fc81830
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 93bad991b56928db0d7b872b13904385d79ae788
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47670840"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68014842"
 ---
 # <a name="updating-data-microsoft-drivers-for-php-for-sql-server"></a>データの更新 (Microsoft Drivers for PHP for SQL Server)
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -42,5 +41,5 @@ ms.locfileid: "47670840"
 ## <a name="see-also"></a>参照  
 [サンプル アプリケーション &#40;SQLSRV ドライバー&#41;](../../connect/php/example-application-sqlsrv-driver.md)
 
-[For PHP for SQL Server のプログラミング、Microsoft ドライバーのガイド](../../connect/php/programming-guide-for-php-sql-driver.md)
+[SQL Server 用 Microsoft Drivers for PHP のためのプログラミング ガイド](../../connect/php/programming-guide-for-php-sql-driver.md)
   

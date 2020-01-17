@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 63a4ec6e-ce79-4bf1-9d37-5ac88f8d6beb
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 7f5bb18d06fd8ab9545825174cba0723f0d553ee
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: e1af3aad1f66f3de7dd2fce44990718980018d3e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52791524"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68111944"
 ---
 # <a name="spdeletepeerrequesthistory-transact-sql"></a>sp_deletepeerrequesthistory (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -40,14 +39,11 @@ sp_deletepeerrequesthistory [ @publication = ] 'publication'
 ```  
   
 ## <a name="arguments"></a>引数  
- [  **@publication=** ] **'***パブリケーション***'**  
- 状態要求が行われたパブリケーションの名前。 *パブリケーション*は**sysname**、既定値はありません。  
+`[ @publication = ] 'publication'` 状態要求が行われたパブリケーションの名前です。 *パブリケーション* は **sysname** 、既定値はありません。  
   
- [  **@request_id=** ] *request_id*  
- 状態要求に対するすべての応答を削除するため、状態要求を個別に指定します。 *request_id*は**int**既定値は NULL です。  
+`[ @request_id = ] request_id` この要求に応答するすべてが削除されるように、個々 の状態要求を指定します。 *request_id*は**int**既定値は NULL です。  
   
- [  **@cutoff_date=** ] *cutoff_date*  
- 終了日を指定します。それ以前のすべての応答レコードが削除されます。 *cutoff_date*は**datetime**既定値は NULL です。  
+`[ @cutoff_date = ] cutoff_date` 以前のすべての応答レコードが削除される前に、終了日を指定します。 *cutoff_date*は**datetime**既定値は NULL です。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  **0** (成功) または**1** (失敗)  
@@ -60,7 +56,7 @@ sp_deletepeerrequesthistory [ @publication = ] 'publication'
 ## <a name="permissions"></a>アクセス許可  
  メンバーのみ、 **sysadmin**固定サーバー ロールまたは**db_owner**固定データベース ロールが実行できる**sp_deletepeerrequesthistory**します。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [sp_helppeerrequests &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helppeerrequests-transact-sql.md)   
  [sp_helppeerresponses &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helppeerresponses-transact-sql.md)   
  [sp_requestpeerresponse &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-requestpeerresponse-transact-sql.md)  

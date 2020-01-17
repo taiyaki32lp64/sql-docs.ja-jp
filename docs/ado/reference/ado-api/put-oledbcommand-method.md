@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: ca6a5804-bf5c-4afc-99db-22904bc0b33d
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 3dc19da014bc0909e44180ff4176adf1902694b0
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e182792a78d07cd6423b4409be95872c707791d8
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47828746"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67917421"
 ---
 # <a name="putoledbcommand-method"></a>put_OLEDBCommand メソッド
 このメソッドは、演算を実行しないと、常に S_OK を返します。  

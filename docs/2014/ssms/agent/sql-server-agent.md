@@ -14,11 +14,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 0f434c5d323f2203965fd0584dbc1dbc8bd89563
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52783884"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68188828"
 ---
 # <a name="sql-server-agent"></a>SQL Server エージェント
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェントは、 *の* ジョブ [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]と呼ばれる管理タスクをスケジュールに従って実行する Microsoft Windows サービスです。  
@@ -42,7 +42,7 @@ ms.locfileid: "52783884"
 ##  <a name="Components"></a> SQL Server エージェント コンポーネント  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェントでは、次のコンポーネントを使用して、実行するタスク、タスクを実行する時期、タスクの成功/失敗の報告方法を定義します。  
   
-### <a name="jobs"></a>Jobs  
+### <a name="jobs"></a>ジョブ  
  *ジョブ* とは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェントで実行される特定の一連の処理のことです。 ジョブを使用して一度管理タスクを定義すると、そのタスクを何度も実行したり、それが正常に終了したかどうかを監視できます。 ジョブは 1 つのローカル サーバーで実行することも、複数のリモート サーバーで実行することもできます。  
   
 > [!IMPORTANT]  
@@ -60,7 +60,7 @@ ms.locfileid: "52783884"
   
  各ジョブ ステップは、特定のセキュリティ コンテキストで実行されます。 [!INCLUDE[tsql](../../includes/tsql-md.md)]を使用するジョブ ステップでは、EXECUTE AS ステートメントを使用して、ジョブ ステップにセキュリティ コンテキストを設定します。 その他のジョブ ステップでは、プロキシ アカウントを使用して、ジョブ ステップにセキュリティ コンテキストを設定します。  
   
-### <a name="schedules"></a>Schedules  
+### <a name="schedules"></a>スケジュール  
  *スケジュール* では、ジョブを実行する時期を指定します。 複数のジョブを同じスケジュールで実行したり、1 つのジョブに複数のスケジュールを割り当てることができます。 スケジュールでは、ジョブを実行する時期について次の条件を定義できます。  
   
 -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェントが開始されるたびに、ジョブを実行する。  
@@ -73,7 +73,7 @@ ms.locfileid: "52783884"
   
  詳細については、「 [スケジュールの作成とジョブへのアタッチ](create-and-attach-schedules-to-jobs.md)」を参照してください。  
   
-### <a name="alerts"></a>オブジェクト エクスプローラーには  
+### <a name="alerts"></a>警告  
  *警告* とは、特定のイベントに対する自動応答のことです。 たとえば、ジョブが開始されたり、システム リソースが特定のしきい値に達したときなどがイベントと見なされます。 警告では、それが発生する条件を定義します。  
   
  警告は、次のいずれかの条件に対して生成できます。  
@@ -92,12 +92,12 @@ ms.locfileid: "52783884"
   
  詳細については、「 [警告](alerts.md)」を参照してください。  
   
-### <a name="operators"></a>演算子  
+### <a name="operators"></a>オペレーター  
  *オペレーター* は、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]の 1 つの以上のインスタンスについて、そのメンテナンスを担当する管理責任者の連絡先情報を定義します。 一部の企業では、オペレーターの責任は 1 人に割り当てられます。 サーバーを複数台使用している企業では、多数の担当者がオペレーターの責任を共有します。 オペレーターにはセキュリティ情報を指定せず、セキュリティ プリンシパルを定義しません。  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] からオペレーターに警告を通知できます。  
   
--   [電子メール]  
+-   電子メール  
   
 -   電子メール経由のポケットベル  
   
@@ -107,7 +107,7 @@ ms.locfileid: "52783884"
 >  **net send**を使用して通知を送信するには、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェントが置かれているコンピューターで Windows Messenger サービスを開始する必要があります。  
   
 > [!IMPORTANT]  
->  今後のバージョンの **では、** エージェントからポケットベル オプションと [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] net send [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]オプションが削除される予定です。 新しい開発作業では、これらの機能の使用を避け、現在これらの機能を使用しているアプリケーションは修正するようにしてください。  
+>  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の今後のバージョンでは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェントからポケットベル オプションと **net send** オプションが削除される予定です。 新しい開発作業では、これらの機能の使用を避け、現在これらの機能を使用しているアプリケーションは修正するようにしてください。  
   
  電子メールまたはポケットベルを使用してオペレーターに通知を送信するには、データベース メールを使用するように [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェントを構成する必要があります。 詳細については、「 [Database Mail](../../relational-databases/database-mail/database-mail.md)」を参照してください。  
   
@@ -146,9 +146,9 @@ ms.locfileid: "52783884"
 ### <a name="proxies"></a>プロキシ  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェントは、プロキシを使用してセキュリティ コンテキストを管理します。 プロキシは、複数のジョブ ステップで使用できます。 メンバー、`sysadmin`固定サーバー ロールは、プロキシを作成できます。  
   
- 各プロキシには対応するセキュリティ資格情報が 1 つあります。 各プロキシは、一連のサブシステムや一連のログインに関連付けることができます。 プロキシは、そのプロキシに関連付けられているサブシステムを使用するジョブ ステップにのみ使用できます。 特定のプロキシを使用するジョブ ステップを作成するには、ジョブの所有者がそのプロキシに関連付けられているログインを使用しているか、プロキシへ制限なしにアクセスできるロールのメンバーである必要があります。 メンバー、`sysadmin`プロキシに無制限のアクセスに固定サーバー ロール。 **SQLAgentUserRole**、 **SQLAgentReaderRole**、または **SQLAgentOperatorRole** のメンバーは、特定のアクセスが許可されているプロキシしか使用できません。 これらの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェント固定データベース ロールのメンバーであるユーザーが特定のプロキシを使用するジョブ ステップを作成するには、ユーザーごとにこれらの特定のプロキシへのアクセスが許可されている必要があります。  
+ 各プロキシには対応するセキュリティ資格情報が 1 つあります。 各プロキシは、一連のサブシステムや一連のログインに関連付けることができます。 プロキシは、そのプロキシに関連付けられているサブシステムを使用するジョブ ステップにのみ使用できます。 特定のプロキシを使用するジョブ ステップを作成するには、ジョブの所有者がそのプロキシに関連付けられているログインを使用しているか、プロキシへ制限なしにアクセスできるロールのメンバーである必要があります。 メンバー、`sysadmin`プロキシに無制限のアクセスに固定サーバー ロール。 **SQLAgentUserRole**、 **SQLAgentReaderRole**、または **SQLAgentOperatorRole** のメンバーは、特定のアクセスが許可されているプロキシしか使用できません。 これらの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェントの固定データベース ロールのメンバーであるユーザーが特定のプロキシを使用するジョブ ステップを作成するには、ユーザーごとにこれらの特定のプロキシへのアクセスが許可されている必要があります。  
   
-## <a name="related-tasks"></a>Related Tasks  
+## <a name="related-tasks"></a>関連タスク  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 管理を自動化するように [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェントを構成するには、次の手順に従ってください。  
   
 1.  定期的に発生する管理タスクまたはサーバー イベントを確定し、それらをプログラムによって管理できるかどうかも確定します。 手順の順序が予測可能で、特定の時刻または特定のイベントに対する応答として行われるタスクは、自動化に適しています。  
@@ -176,7 +176,7 @@ ms.locfileid: "52783884"
 |メンテナンス プラン ウィザードについて説明します。メンテナンス プラン ウィザードは、SQL Server のインスタンスを自動管理するために、ジョブ、警告、およびオペレーターを作成するのに役立つユーティリティです。|[メンテナンス プラン ウィザードの使用](../../relational-databases/maintenance-plans/use-the-maintenance-plan-wizard.md)|  
 |SQL Server エージェントを使用して管理タスクを自動化する方法について説明します。|[管理タスクの自動化 &#40;SQL Server エージェント&#41;](automated-administration-tasks-sql-server-agent.md)|  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [セキュリティ構成](../../relational-databases/security/surface-area-configuration.md)  
   
   

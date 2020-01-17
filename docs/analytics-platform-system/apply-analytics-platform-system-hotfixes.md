@@ -1,69 +1,69 @@
 ---
-title: Analytics Platform System の修正プログラムの適用 |Microsoft Docs
-description: この記事では、Analytics Platform System のソフトウェアに修正プログラムを適用する方法について説明します。
+title: Analytics Platform System の修正プログラムの適用
+description: この記事では、Analytics Platform システムソフトウェアに修正プログラムを適用する方法について説明します。
 author: mzaman1
-manager: craigg
 ms.prod: sql
 ms.technology: data-warehouse
 ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: b4b72017bb23ae44da9c5884f0ebf2a8b099fd3e
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.custom: seo-dt-2019
+ms.openlocfilehash: fd62413ec8542aba9f3973d0e8483cb9c5c9128a
+ms.sourcegitcommit: d587a141351e59782c31229bccaa0bff2e869580
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52531655"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74401371"
 ---
 # <a name="apply-analytics-platform-system-hotfixes"></a>Analytics Platform System の修正プログラムの適用
-この記事では、Analytics Platform System のソフトウェアに修正プログラムを適用する方法について説明します。  
+この記事では、Analytics Platform システムソフトウェアに修正プログラムを適用する方法について説明します。  
   
-## <a name="before-you-begin"></a>はじめに  
-  
-> [!WARNING]  
-> アプライアンスまたはアプライアンス コンポーネントがダウンしているかで、失敗した場合は、Analytics Platform System の修正プログラムを適用しないで状態にします。 その場合は、についてサポートに問い合わせてください。  
+## <a name="before-you-begin"></a>開始する前に  
   
 > [!WARNING]  
-> アプライアンスを使用中に、Analytics Platform System の修正プログラムは適用されません。 修正プログラムを適用すると、アプライアンスのノードを再起動する可能性があります。 アプライアンスが使用されていないときに、メンテナンス期間中に、修正プログラムを適用する必要があります。  
+> アプライアンスまたはアプライアンスのコンポーネントがダウンしているか、またはフェールオーバーされた状態である場合は、Analytics Platform System の修正プログラムを適用しないようにしてください。 その場合は、サポートにお問い合わせください。  
+  
+> [!WARNING]  
+> アプライアンスの使用中は、Analytics Platform System の修正プログラムを適用しないでください。 修正プログラムを適用すると、アプライアンスノードが再起動される可能性があります。 アプライアンスが使用されていない場合は、メンテナンス期間中に修正プログラムを適用する必要があります。  
   
 ### <a name="prerequisites"></a>前提条件  
-次の手順を実行するには、必要があります。  
+これらの手順を実行するには、次のものが必要です。  
   
--   アプライアンスの状態を監視する管理コンソールにアクセスする権限を持つ、Analytics Platform System ログインします。 <!-- MISSING LINKS See [Grant Permissions to Use the Admin Console &#40;SQL Server PDW&#41;](../sqlpdw/grant-permissions-to-use-the-admin-console-sql-server-pdw.md).  -->  
+-   アプライアンスの状態を監視するために管理コンソールにアクセスするためのアクセス許可を持つ Analytics Platform システムログイン。 <!-- MISSING LINKS See [Grant Permissions to Use the Admin Console &#40;SQL Server PDW&#41;](../sqlpdw/grant-permissions-to-use-the-admin-console-sql-server-pdw.md).  -->  
   
--   接続に Fabric ドメイン管理者アカウントのサポート技術情報、 _< domain_name >_**-HST01**ノード。  
+-   _<domain_name>_ **-HST01**ノードに接続するためのファブリックドメイン管理者アカウントの情報。  
   
-## <a name="HowToInstallPDW"></a>Analytics Platform System の修正プログラムを適用するには  
-Microsoft 更新プログラムとは異なり、Analytics Platform System のソフトウェアの修正プログラムが WSUS を介しては処理されません。 別のワークフローがあり、修正プログラム パッケージを実行してインストールされます。  
+## <a name="HowToInstallPDW"></a>Analytics Platform System 修正プログラムを適用するには  
+Microsoft の更新プログラムとは異なり、Analytics プラットフォームシステムソフトウェアの修正プログラムは WSUS では処理されません。 これらのユーザーには、ワークフローが異なり、修正プログラムパッケージを実行してインストールされます。  
   
 1.  **アプライアンスの状態インジケーターを確認します。**  
   
-    1.  管理コンソールを開き、アプライアンスの状態 ページに移動します。 詳細については、次を参照してください[アプライアンスの監視、管理コンソールを使用して&#40;Analytics Platform System。&#41;](monitor-the-appliance-by-using-the-admin-console.md)  
+    1.  管理コンソールを開き、[アプライアンスの状態] ページに移動します。 詳細については、「[管理コンソールを使用したアプライアンスの監視 &#40;Analytics Platform System](monitor-the-appliance-by-using-the-admin-console.md) 」を参照してください&#41;  
   
-    2.  次の手順に進む前に、すべての赤または黄色のインジケーターを解決する必要があります。 これにはいくつかの例外があります。  
+    2.  次の手順に進む前に、すべての赤または黄色のインジケーターを解決する必要があります。 これには次のようないくつかの例外があります。  
   
-        -   ディスク障害がある場合は、管理者コンソール [アラート] ページを使用して、各サーバーまたは SAN 配列内で複数のディスク障害が発生したことを確認します。 各サーバーまたは SAN 配列内の複数のディスク障害がある場合、ディスク エラーを修正する前に次の手順に進むことができます。 できるだけ早くディスク エラーを解決する Microsoft サポートに連絡してください。  
+        -   ディスクエラーが発生した場合は、管理コンソールの [アラート] ページを使用して、各サーバーまたは SAN アレイ内に1つ以上のディスク障害が発生していないことを確認します。 各サーバーまたは SAN アレイ内に1つ以上のディスク障害が発生していない場合は、次の手順に進み、ディスク障害を修正することができます。 できるだけ早くディスクエラーを修正するには、Microsoft サポートにお問い合わせください。  
   
-        -   C:\ ドライブではないに重大でない (黄色) のディスク ボリューム エラーがある場合、ディスク ボリュームのエラーを解決する前に、次の手順に進むことができます。  
+        -   C:\ にない、重大でない (黄色の) ディスクボリュームエラーがある場合ディスクボリュームのエラーを解決する前に、次の手順に進むことができます。  
   
-2.  **Analytics Platform System の修正プログラムをインストールします。**  
+2.  **Analytics Platform System 修正プログラムをインストールする**  
   
-    1.  ログインに、<*appliance_domain*>-ドメイン管理者として HST01 ノード。  
+    1.  ドメイン管理者として <*appliance_domain*>-HST01 ノードにログインします。  
   
-    2.  使用して、**管理者として実行**オプションをコマンド プロンプトを開きます。  
+    2.  [**管理者として実行**] オプションを使用して、コマンドプロンプトを開きます。  
   
-    3.  次のコマンドを実行して交換*<HotfixPackageName>* 修正プログラムの実行可能パッケージ、および他の項目のプレース ホルダーを置き換えるの名前を持つ *< >* 適切な情報。  
+    3.  次のコマンドを実行し*<HotfixPackageName>* ます。を修正プログラムの実行可能パッケージの名前に置き換え、他のプレースホルダー項目 *<  >* を適切な情報に置き換えます。  
   
         ```  
         <HotfixPackageName> /DomainAdminPassword="<password>"  
         ```  
   
-    4.  修正プログラム パッケージによって表される手順に従います。  
+    4.  修正プログラムパッケージに記載されている手順に従います。  
   
 ## <a name="see-also"></a>参照  
-[ダウンロードして Microsoft 更新プログラムを適用して&#40;Analytics Platform System&#41;](download-and-apply-microsoft-updates.md)  
-[Microsoft 更新プログラムのアンインストール&#40;Analytics Platform System&#41;](uninstall-microsoft-updates.md)  
-[Analytics Platform System の修正プログラムのアンインストール&#40;Analytics Platform System&#41;](uninstall-analytics-platform-system-hotfixes.md)  
-[ソフトウェアのサービス&#40;Analytics Platform System&#41;](software-servicing.md)  
+[Microsoft Update &#40;Analytics Platform System&#41;をダウンロードして適用します](download-and-apply-microsoft-updates.md)  
+[Microsoft 更新プログラムのアンインストール &#40;Analytics Platform System&#41;](uninstall-microsoft-updates.md)  
+[Analytics platform system の修正プログラム &#40;Analytics Platform System&#41;をアンインストールする](uninstall-analytics-platform-system-hotfixes.md)  
+[ソフトウェアサービス &#40;Analytics Platform System&#41;](software-servicing.md)  
   

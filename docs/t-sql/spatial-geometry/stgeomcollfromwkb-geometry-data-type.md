@@ -15,15 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - STGeomCollFromWKB (geometry Data Type)
 ms.assetid: 6c55032c-7f5e-4181-8e67-c0265032db63
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: 5693d4673cc589507e7dde73dbdf68198a03cf0e
-ms.sourcegitcommit: 009bee6f66142c48477849ee03d5177bcc3b6380
+author: MladjoA
+ms.author: mlandzic
+ms.openlocfilehash: 09e6d37f95832ed2b3e9a51ef351e6f62e464b74
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/13/2019
-ms.locfileid: "56230939"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67950214"
 ---
 # <a name="stgeomcollfromwkb-geometry-data-type"></a>STGeomCollFromWKB (geometry データ型)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]

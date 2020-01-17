@@ -7,15 +7,15 @@ ms.reviewer: ''
 ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: 6bbbcbff-1ecd-456c-947f-c445c8da673c
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 275b7cd57336c22b6d1f67206d1e1cdb0b7d2abd
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 7515c259d8ee978f60ddd8e09ce817f133670cd6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56035483"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65481344"
 ---
 # <a name="task-1-creating-suppliers-model-using-master-data-manager"></a>タスク 1:マスター データ マネージャーを使用して Suppliers モデルを作成する
   このタスクでという名前のモデルを作成する**Suppliers** MDS を使用して**マスター データ マネージャー**します。  
@@ -41,6 +41,6 @@ ms.locfileid: "56035483"
 6.  クリックして**モデルの保存**ツールバーのボタンをクリックします。  
   
 ## <a name="next-step"></a>次の手順  
- [タスク 2:Excel 用 MDS アドインを使用して MDS に仕入先データをアップロード](../../2014/tutorials/task-2-uploading-supplier-data-to-mds-using-mds-add-in-for-excel.md)  
+ [タスク 2: Excel 用 MDS アドインを使用して MDS に仕入先データをアップロード](../../2014/tutorials/task-2-uploading-supplier-data-to-mds-using-mds-add-in-for-excel.md)  
   
   

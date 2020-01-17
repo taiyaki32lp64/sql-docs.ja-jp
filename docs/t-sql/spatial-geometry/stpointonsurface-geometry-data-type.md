@@ -15,15 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - STPointOnSurface (geometry Data Type)
 ms.assetid: 23b2b8eb-4176-49fb-ace0-92398928d60e
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: cb68991bddc792fa487a9c5ad380d9b029b6186a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: MladjoA
+ms.author: mlandzic
+ms.openlocfilehash: b1a820bc4f951fcbe294060825979d83a34f8969
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47823670"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68066374"
 ---
 # <a name="stpointonsurface-geometry-data-type"></a>STPointOnSurface (geometry データ型)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -40,9 +39,9 @@ ms.locfileid: "47823670"
 ## <a name="return-types"></a>戻り値の型  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の戻り値の型: **geometry**  
   
- CLR の戻り値の型: **SqlGeometry**  
+ CLR の戻り値の型:**SqlGeometry**  
   
- Open Geospatial Consortium (OGC) の型: **Point**  
+ Open Geospatial Consortium (OGC) の型:**Point**  
   
 ## <a name="remarks"></a>Remarks  
  インスタンスが空の場合、このメソッドは NULL を返します。  

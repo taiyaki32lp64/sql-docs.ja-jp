@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: dff6d19b-765c-4df9-afff-9a0e7be9b91b
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 44ab042814b95886faa9f632fb58d7a809c9e458
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 31a52f86692d5769fe22f4cf0b5a04ad324c3ac0
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51666961"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67930115"
 ---
 # <a name="functions-on-nodes---number"></a>ノードの関数 - number
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -38,10 +37,10 @@ fn:number($arg as node()?) as xs:double?
   
 ## <a name="arguments"></a>引数  
  *$arg*  
- 数値として値が返されるノード。  
+ ノードの値は数値として返されます。  
   
 ## <a name="remarks"></a>コメント  
- 場合 *$arg*が指定されていない、double 型に変換された、コンテキスト ノードの数値の値が返されます。 SQL Server で**fn:number()** せず、引数は、コンテキストに依存する述語のコンテキストでのみ使用できます。 具体的には、角かっこ ([ ]) 内でしか使用できません。 たとえば、次の式では <`ROOT`> 要素が返されます。  
+ 場合 *$arg*が指定されていない、double 型に変換された、コンテキスト ノードの数値の値が返されます。 SQL Server で**fn:number()** せず、引数は、コンテキストに依存する述語のコンテキストでのみ使用できます。 具体的にのみ使用できます角かっこ () 内で。 たとえば、次の式を返します、<`ROOT`> 要素。  
   
 ```  
 declare @x xml  
@@ -54,8 +53,8 @@ select @x.query('/ROOT[number()=111]')
 ## <a name="examples"></a>使用例  
  このトピックではさまざまなに格納されている XML インスタンスに対して XQuery の例について**xml**型の列には、AdventureWorks データベース。  
   
-### <a name="a-using-the-number-xquery-function-to-retrieve-the-numeric-value-of-an-attribute"></a>A. number() XQuery 関数を使用して属性の数値を取得する  
- 次のクエリでは、製造モデル 7 の製造プロセスに含まれる最初のワーク センター拠点から、ロット サイズ属性の数値が取得されます。  
+### <a name="a-using-the-number-xquery-function-to-retrieve-the-numeric-value-of-an-attribute"></a>A. Number() XQuery 関数を使用して、属性の数値の値を取得するには  
+ 次のクエリでは、製品モデル 7 の製造プロセス内で最初の作業のセンターの場所から、ロット サイズ属性の数値の値を取得します。  
   
 ```  
 SELECT ProductModelID, Instructions.query('  
@@ -99,7 +98,7 @@ ProductModelID   Result
   
 -   値は、数値として返すことができないときに、 **number()** 関数が NaN ではなく空のシーケンスを返します。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [xml データ型に対する XQuery 関数](../xquery/xquery-functions-against-the-xml-data-type.md)  
   
   

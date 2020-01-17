@@ -1,7 +1,7 @@
 ---
 title: バッチ操作の実行 |Microsoft Docs
 ms.custom: ''
-ms.date: 07/11/2018
+ms.date: 08/12/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 1a576d95-7da6-4b7b-8b32-59e5b4d354c4
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: e2ed699e9c3eabfb2df1317794d8343d637244c0
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a77816598e7c8e3f0589f71cb5c02e40e0e17317
+ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47693290"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "69027926"
 ---
 # <a name="performing-batch-operations"></a>バッチ操作の実行
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -25,7 +24,7 @@ ms.locfileid: "47693290"
   
  [SQLServerStatement](../../connect/jdbc/reference/sqlserverstatement-class.md)、[SQLServerPreparedStatement](../../connect/jdbc/reference/sqlserverpreparedstatement-class.md)、および [SQLServerCallableStatement](../../connect/jdbc/reference/sqlservercallablestatement-class.md) クラスはすべて、バッチ更新を送信するために使用できます。 [addBatch](../../connect/jdbc/reference/addbatch-method-sqlserverpreparedstatement.md) メソッドは、コマンドを追加するために使用します。 [clearBatch](../../connect/jdbc/reference/clearbatch-method-sqlserverpreparedstatement.md) メソッドは、コマンドのリストをクリアするために使用します。 [executeBatch](../../connect/jdbc/reference/executebatch-method-sqlserverstatement.md) メソッドは、すべてのコマンドを送信して処理するために使用します。 バッチの一部として実行できるのは、単純に更新数を返すデータ操作言語 (DML) ステートメントおよびデータ定義言語 (DDL) ステートメントだけです。  
   
- executeBatch メソッドは、各コマンドの更新数に対応する **int** 値の配列を返します。 コマンドのいずれかが失敗した場合を BatchUpdateException がスローされ、BatchUpdateException クラスの getUpdateCounts メソッドを使用して、更新数の配列を取得する必要があります。 いずれかのコマンドが失敗した場合、JDBC ドライバーでは残りのコマンドの処理は続行されます。 ただし、コマンドに構文エラーがある場合は、バッチ内のステートメントが失敗します。  
+ executeBatch メソッドは、各コマンドの更新数に対応する **int** 値の配列を返します。 いずれかのコマンドが失敗した場合は、BatchUpdateException がスローされます。そのため、BatchUpdateException クラスの getUpdateCounts メソッドを使用して、更新数の配列を取得する必要があります。 いずれかのコマンドが失敗した場合、JDBC ドライバーでは残りのコマンドの処理は続行されます。 ただし、コマンドに構文エラーがある場合は、バッチ内のステートメントが失敗します。  
   
 > [!NOTE]  
 >  更新数を使用する必要がない場合は、最初に [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] に対して SET NOCOUNT ON ステートメントを発行できます。 これによりネットワーク トラフィックが減少し、アプリケーションのパフォーマンスがさらに強化されます。  

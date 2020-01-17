@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: 568f5252-d069-4d99-a01b-2ada87ad1304
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: d1466b8f718318d8224ec2c7dcf3e873139fffed
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 448270ddf0e8cd7efb5ec39a93d4ff993360730e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47752770"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67919579"
 ---
 # <a name="connectcomplete-and-disconnect-events-ado"></a>ConnectComplete および Disconnect イベント (ADO)
 **ConnectComplete**接続が開始した後にイベントが呼び出されます。 **切断**接続が終了した後にイベントが呼び出されます。  
@@ -52,6 +51,6 @@ Disconnect adStatus, pConnection
  *pConnection*  
  **接続**オブジェクトをこのイベントが適用されます。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [ADO イベント モデルの例 (vc++)](../../../ado/reference/ado-api/ado-events-model-example-vc.md)   
  [ADO イベント ハンドラーの概要](../../../ado/guide/data/ado-event-handler-summary.md)

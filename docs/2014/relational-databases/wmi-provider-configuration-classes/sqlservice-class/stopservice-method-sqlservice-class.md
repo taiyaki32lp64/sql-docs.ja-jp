@@ -19,11 +19,11 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: 56356fbf40939694a46f08c1cef5edc99049835e
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53349586"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62911673"
 ---
 # <a name="stopservice-method-sqlservice-class"></a>StopService メソッド (SqlService クラス)
   サービスを停止状態にする動作を試行します。  
@@ -46,7 +46,7 @@ object
   
 ## <a name="remarks"></a>解説  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [開始とサービスの停止](https://technet.microsoft.com/library/ms174886\(v=sql.105\).aspx)  
   
   

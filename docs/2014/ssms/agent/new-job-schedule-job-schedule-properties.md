@@ -1,5 +1,5 @@
 ---
-title: 新しいジョブ スケジュール:ジョブ スケジュールのプロパティ |Microsoft Docs
+title: '[新しいジョブ スケジュール]:ジョブ スケジュールのプロパティ |Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -14,13 +14,13 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 65adf53cc7401053b66b8c77839b267e7d20406a
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52822406"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62704623"
 ---
-# <a name="new-job-schedule-job-schedule-properties"></a>新しいジョブ スケジュール:ジョブ スケジュールのプロパティ
+# <a name="new-job-schedule-job-schedule-properties"></a>[新しいジョブ スケジュール]:[ジョブ スケジュールのプロパティ]
   このページを使用すると、スケジュールのプロパティを表示したり、変更したりできます。  
   
 ## <a name="options"></a>および  
@@ -33,7 +33,7 @@ ms.locfileid: "52822406"
  **[スケジュールの種類]**  
  スケジュールの種類を選択します。  
   
- **Enabled**  
+ **有効**  
  スケジュールを有効または無効にします。  
   
 ## <a name="recurring-schedule-types-options"></a>定期スケジュールのオプション  

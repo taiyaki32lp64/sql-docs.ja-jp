@@ -8,13 +8,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-manager: kfile
-ms.openlocfilehash: 5f07e71e5b8314320f76be4496744da5a9d9e81a
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: d6cde1f60274d1437517d89e48b111e9e7298b9d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52535252"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68097371"
 ---
 # <a name="tupletostr-mdx"></a>TupleToStr (MDX)
 
@@ -36,7 +35,7 @@ TupleToStr(Tuple_Expression)
  この関数は、解析用に組の文字列表記を外部関数に転送する場合に使用します。 返される文字列は中かっこで囲まれた{}明示的に 1 つ以上が、タプルで定義されている場合、各メンバーがコンマで区切られたとします。  
   
 ## <a name="examples"></a>使用例  
- 次の例は、文字列 ([Date].[Calendar Year].&[2001],[Geography].[Geography].[Country].&[United States]) を返します。  
+ 次の例は、文字列を返します ([Date] です [。Calendar Year] です。 (&) [2001], [Geography] です。[Geography] です。[Country] です。 (& a) [United States])。  
   
 ```  
 WITH MEMBER Measures.x AS TupleToStr   
@@ -63,7 +62,7 @@ SELECT Measures.x ON 0
 FROM [Adventure Works]  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [MDX 関数リファレンス &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
   
   

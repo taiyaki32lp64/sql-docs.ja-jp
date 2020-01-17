@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - logical regression algorithms [Analysis Services]
@@ -16,12 +15,12 @@ ms.assetid: 3dd54d07-1c3b-4b87-b7f0-b962ed8cf844
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 577ab402178272c5f20f3a17f167c8dadb4fe7fd
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 14e86ac2dd32f2a3e1384e08aca597794ee4bc71
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48179392"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66083955"
 ---
 # <a name="microsoft-logistic-regression-algorithm"></a>Microsoft ロジスティック回帰アルゴリズム
   ロジスティック回帰は、バイナリ結果のモデリングに使用される代表的な統計手法です。  
@@ -80,7 +79,7 @@ ms.locfileid: "48179392"
 -   Predictive Model Markup Language (PMML) を使用したマイニング モデルの作成はサポートされていません。  
   
 ## <a name="see-also"></a>参照  
- [ロジスティック回帰モデルのマイニング モデル コンテンツ&#40;Analysis Services - データ マイニング&#41;](mining-model-content-for-logistic-regression-models.md)   
+ [ロジスティック回帰モデルのマイニング モデル コンテンツ (Analysis Services - データ マイニング)](mining-model-content-for-logistic-regression-models.md)   
  [Microsoft ロジスティック回帰アルゴリズム テクニカル リファレンス](microsoft-logistic-regression-algorithm-technical-reference.md)   
  [ロジスティック回帰モデルのクエリ例](logistic-regression-model-query-examples.md)  
   

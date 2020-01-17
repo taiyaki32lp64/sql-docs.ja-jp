@@ -1,5 +1,5 @@
 ---
-title: sp_restoredbreplication (TRANSACT-SQL) |Microsoft Docs
+title: sp_restoredbreplication (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
@@ -15,18 +15,17 @@ helpviewer_keywords:
 ms.assetid: a2c5ee32-e6d9-46e9-8031-8ff13c20acf7
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 383c37219a0c1e901f58bcee7ccc436c36973d1c
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 92d0b6390e630e3dea33c603bab11e8649444ab1
+ms.sourcegitcommit: 71fac5fee00e0eca57e555f44274dd7e08d47e1e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52775274"
+ms.lasthandoff: 08/29/2019
+ms.locfileid: "70160716"
 ---
-# <a name="sprestoredbreplication-transact-sql"></a>sp_restoredbreplication (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+# <a name="sp_restoredbreplication-transact-sql"></a>sp_restoredbreplication (Transact-SQL)
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
-  バックアップ元以外のサーバー、データベース、またはシステムにデータベースを復元するとき、レプリケーション プロセスを実行できない場合に、レプリケーションの設定を削除します。 レプリケートされたデータベースを、バックアップが作成されたサーバーやデータベースとは別のサーバーまたはデータベースに復元する場合、レプリケーションの設定は保持できません。 復元には、サーバーを呼び出す**sp_restoredbreplication**自動的に復元されたデータベースからレプリケーション メタデータを削除するには、直接します。  
+  バックアップ元以外のサーバー、データベース、またはシステムにデータベースを復元するとき、レプリケーション プロセスを実行できない場合に、レプリケーションの設定を削除します。 レプリケートされたデータベースを、バックアップが作成されたサーバーやデータベースとは別のサーバーまたはデータベースに復元する場合、レプリケーションの設定は保持できません。 復元時に、サーバーは**sp_restoredbreplication**を直接呼び出して、復元されたデータベースからレプリケーションメタデータを自動的に削除します。  
   
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -41,28 +40,28 @@ sp_restoredbreplication [ @srv_orig = ] 'original_server_name'
 ```  
   
 ## <a name="arguments"></a>引数  
- [  **@srv_orig =** ] **'***original_server_name***'**  
- バックアップが作成されたサーバーの名前を指定します。 *original_server_name*は**sysname**、既定値はありません。  
+`[ @srv_orig = ] 'original_server_name'`  
+ バックアップが作成されたサーバーの名前を指定します。 *original_server_name*は**sysname**,、既定値はありません。  
   
- [  **@db_orig =** ] **'***original_database_name***'**  
- バックアップされたデータベースの名前。 *original_database_name*は**sysname**、既定値はありません。  
+`[ @db_orig = ] 'original_database_name'`  
+ バックアップされたデータベースの名前。 *original_database_name*は**sysname**,、既定値はありません。  
   
- [  **@keep_replication =** ] *keep_replication*  
+`[ @keep_replication = ] keep_replication`  
  [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
   
- [  **@perform_upgrade=** ] *perform_upgrade*  
+`[ @perform_upgrade = ] perform_upgrade`  
  [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  **0** (成功) または**1** (失敗)  
   
 ## <a name="remarks"></a>コメント  
- **sp_restoredbreplication**はあらゆる種類のレプリケーションで使用します。  
+ **sp_restoredbreplication**は、すべての種類のレプリケーションで使用されます。  
   
 ## <a name="permissions"></a>アクセス許可  
- メンバーのみ、 **sysadmin**または**dbcreator**固定サーバー ロールまたは**dbo**データベース スキーマが実行できる**sp_restoredbreplication**.  
+ **Sp_restoredbreplication**を実行できるのは、 **sysadmin**または**dbcreator**固定サーバーロールまたは**dbo**データベーススキーマのメンバーだけです。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [レプリケーション ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)  
   
   

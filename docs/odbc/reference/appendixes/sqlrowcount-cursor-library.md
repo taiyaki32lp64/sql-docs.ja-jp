@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 781cf5a5-325e-4523-8633-d96d9e98277c
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 9b3dcd9c348d83dad1e295e253cb37768fbb0abb
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: be902866cfcf98a10af2c3741926de8b7541bb79
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52526725"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68125597"
 ---
 # <a name="sqlrowcount-cursor-library"></a>SQLRowCount (カーソル ライブラリ)
 > [!IMPORTANT]  

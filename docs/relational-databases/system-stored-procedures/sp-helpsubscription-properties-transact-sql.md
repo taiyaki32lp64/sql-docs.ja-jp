@@ -1,5 +1,5 @@
 ---
-title: sp_helpsubscription_properties (TRANSACT-SQL) |Microsoft Docs
+title: sp_helpsubscription_properties (Transact-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -15,18 +15,17 @@ helpviewer_keywords:
 ms.assetid: 7a76a645-97eb-47ac-b3ea-e2d75012cbed
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: c81f2878c5573174b7f50f15f2ef2adf9329021a
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 28305f4676c9323b364703feb0b668615a159e6b
+ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52808284"
+ms.lasthandoff: 08/03/2019
+ms.locfileid: "68771564"
 ---
-# <a name="sphelpsubscriptionproperties-transact-sql"></a>sp_helpsubscription_properties (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+# <a name="sp_helpsubscription_properties-transact-sql"></a>sp_helpsubscription_properties (Transact-SQL)
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
-  セキュリティ情報を取得、 [MSsubscription_properties](../../relational-databases/system-tables/mssubscription-properties-transact-sql.md)テーブル。 このストアド プロシージャはサブスクライバー側で実行されます。  
+  [MSsubscription_properties](../../relational-databases/system-tables/mssubscription-properties-transact-sql.md)テーブルからセキュリティ情報を取得します。 このストアドプロシージャは、サブスクライバー側で実行されます。  
   
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -41,19 +40,15 @@ sp_helpsubscription_properties [ [ @publisher = ] 'publisher' ]
 ```  
   
 ## <a name="arguments"></a>引数  
- [ **@publisher=**] **'***publisher***'**  
- パブリッシャーの名前です。 *パブリッシャー*は**sysname**、既定値は**%**、すべてのパブリッシャーに関する情報を返します。  
+`[ @publisher = ] 'publisher'`パブリッシャーの名前を指定します。 *publisher*のデータ型は**sysname**で、 **%** 既定値はです。これにより、すべてのパブリッシャーに関する情報が返されます。  
   
- [ **@publisher_db=**] **'***publisher_db***'**  
- パブリッシャー データベースの名前です。 *publisher_db*は**sysname**、既定値は**%**、すべてのパブリッシャー データベースに関する情報を返します。  
+`[ @publisher_db = ] 'publisher_db'`パブリッシャーデータベースの名前を指定します。 *publisher_db*のデータ型は**sysname**で、 **%** 既定値はで、すべてのパブリッシャーデータベースに関する情報を返します。  
   
- [ **@publication=**] **'***publication***'**  
- パブリケーションの名前です。 *パブリケーション*は**sysname**、既定値は**%**、すべてのパブリケーションに関する情報を返します。  
+`[ @publication = ] 'publication'`パブリケーションの名前を指定します。 *publication*のデータ型は**sysname**で、 **%** 既定値はです。これにより、すべてのパブリケーションに関する情報が返されます。  
   
- [  **@publication_type=**] *publication_type*  
- パブリケーションの種類です。*publication_type*は**int**、既定値は NULL です。 指定した場合、 *publication_type*値は次のいずれかを指定する必要があります。  
+`[ @publication_type = ] publication_type`パブリケーションの種類を示します。*publication_type*は**int**,、既定値は NULL です。 指定する場合、 *publication_type*には次のいずれかの値を指定する必要があります。  
   
-|値|説明|  
+|[値]|説明|  
 |-----------|-----------------|  
 |**0**|トランザクション パブリケーション|  
 |**1**|スナップショット パブリケーション|  
@@ -63,48 +58,48 @@ sp_helpsubscription_properties [ [ @publisher = ] 'publisher' ]
   
 |列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
-|**パブリッシャー**|**sysname**|パブリッシャーの名前。|  
-|**publisher_db**|**sysname**|パブリッシャー データベースの名前です。|  
-|**パブリケーション**|**sysname**|パブリケーションの名前。|  
-|**publication_type**|**int**|パブリケーションの種類です。<br /><br /> **0** = トランザクション<br /><br /> **1** = スナップショット<br /><br /> **2**マージを =|  
-|**publisher_login**|**sysname**|パブリッシャーで使用する [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 認証用のログイン ID。|  
-|**publisher_password**|**nvarchar (524)**|パブリッシャーで使用する [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 認証用の (暗号化されている) パスワードです。|  
-|**publisher_security_mode**|**int**|パブリッシャーで使用されているセキュリティ モードです。<br /><br /> **0**  =  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]認証<br /><br /> **1** = Windows 認証|  
-|**ディストリビューター**|**sysname**|ディストリビューターの名前。|  
-|**distributor_login**|**sysname**|ディストリビューター ログイン。|  
-|**distributor_password**|**nvarchar (524)**|暗号化されたディストリビューター パスワードです。|  
-|**distributor_security_mode**|**int**|ディストリビューターで使用されているセキュリティ モードです。<br /><br /> **0**  =  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]認証<br /><br /> **1** = Windows 認証|  
-|**ftp_address**|**sysname**|これは旧バージョンとの互換性のためにだけ用意されています。 ディストリビューター用ファイル転送プロトコル (FTP) サービスのネットワーク アドレス。|  
+|**publisher**|**sysname**|パブリッシャーの名前。|  
+|**publisher_db**|**sysname**|パブリッシャーデータベースの名前。|  
+|**publication**|**sysname**|パブリケーションの名前。|  
+|**publication_type**|**int**|パブリケーションの種類です。<br /><br /> **0** = トランザクション<br /><br /> **1** = スナップショット<br /><br /> **2** = マージ|  
+|**publisher_login**|**sysname**|パブリッシャーで認証に[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]使用されるログイン ID。|  
+|**publisher_password**|**nvarchar(524)**|パブリッシャーで認証 (暗号化) [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のために使用されるパスワード。|  
+|**publisher_security_mode**|**int**|パブリッシャーで使用されているセキュリティ モードです。<br /><br /> **0**  = 認証[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]<br /><br /> **1** = Windows 認証|  
+|**distributor**|**sysname**|ディストリビューターの名前。|  
+|**distributor_login**|**sysname**|ディストリビューターログイン。|  
+|**distributor_password**|**nvarchar(524)**|ディストリビューターパスワード (暗号化)。|  
+|**distributor_security_mode**|**int**|ディストリビューターで使用されるセキュリティモード:<br /><br /> **0**  = 認証[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]<br /><br /> **1** = Windows 認証|  
+|**ftp_address**|**sysname**|これは旧バージョンとの互換性のためにだけ用意されています。 ディストリビューターのファイル転送プロトコル (FTP) サービスのネットワークアドレス。|  
 |**ftp_port**|**int**|これは旧バージョンとの互換性のためにだけ用意されています。 ディストリビューター用 FTP サービスのポート番号。|  
-|**ftp_login**|**sysname**|これは旧バージョンとの互換性のためにだけ用意されています。 FTP サービスへの接続に使用されるユーザー名です。|  
-|**ftp_password**|**nvarchar (524)**|これは旧バージョンとの互換性のためにだけ用意されています。 FTP サービスへの接続に使用されるユーザー パスワードです。|  
+|**ftp_login**|**sysname**|これは旧バージョンとの互換性のためにだけ用意されています。 FTP サービスへの接続に使用するユーザー名。|  
+|**ftp_password**|**nvarchar(524)**|これは旧バージョンとの互換性のためにだけ用意されています。 FTP サービスへの接続に使用するユーザーパスワード。|  
 |**alt_snapshot_folder**|**nvarchar (255)**|スナップショットの代替フォルダーの場所を指定します。|  
 |**working_directory**|**nvarchar (255)**|データ ファイルとスキーマ ファイルを保存するために使用する作業ディレクトリ名です。|  
-|**@use_ftp**|**bit**|標準のプロトコルの代わりに FTP を使用してスナップショットを取得します。 場合**1**FTP を使用します。|  
-|**dts_package_name**|**sysame**|データ変換サービス (DTS) パッケージの名前。|  
-|**dts_package_password**|**nvarchar (524)**|パッケージのパスワード (ある場合) を指定します。|  
-|**dts_package_location**|**int**|DTS パッケージが格納されている場所です。<br /><br /> **0**パッケージの場所は、ディストリビューター側では。<br /><br /> **1**パッケージの場所はサブスクライバーです。|  
-|**offload_agent**|**bit**|エージェントをリモートから起動できるかどうかを指定します。 場合**0**エージェントをリモートでアクティブにできません。|  
-|**offload_server**|**sysname**|リモートからのアクティブ化に使用するサーバーのネットワーク名。|  
-|**dynamic_snapshot_location**|**nvarchar (255)**|スナップショット ファイルが保存されるフォルダーへのパス。|  
-|**@use_web_sync**|**bit**|HTTPS 経由でサブスクリプションを同期することができるかどうかの値が指定**1**この機能が有効になっていることを意味します。|  
-|**internet_url**|**nvarchar(260)**|Web 同期中にレプリケーション リスナーの位置を表す URL です。|  
-|**internet_login**|**nvarchar(128)**|基本認証を使用して Web 同期をホストしている Web サーバーに接続するときにマージ エージェントが使用するログインです。|  
-|**internet_password**|**nvarchar (524)**|基本認証を使用して Web 同期をホストしている Web サーバーに接続するときにマージ エージェントが使用するログインのパスワードです。|  
-|**internet_security_mode**|**int**|値が、Web 同期をホストしている Web サーバーに接続するときに使用する認証モード**1** 、Windows 認証を示し、値の**0**基本認証を意味します。|  
-|**internet_timeout**|**int**|Web 同期要求が期限切れとなるまでの時間 (秒単位)。|  
-|**ホスト名**|**nvarchar(128)**|この関数が WHERE 句のパラメーター化された行フィルターで使用される場合の HOST_NAME() の値を指定します。|  
+|**use_ftp**|**bit**|スナップショットを取得するために通常のプロトコルではなく FTP を使用することを指定します。 **1**の場合、FTP が使用されます。|  
+|**dts_package_name**|**sysame**|データ変換サービス (DTS) パッケージの名前を指定します。|  
+|**dts_package_password**|**nvarchar(524)**|パッケージのパスワードを指定します (存在する場合)。|  
+|**dts_package_location**|**int**|DTS パッケージが格納されている場所。<br /><br /> **0** = パッケージの場所はディストリビューターです。<br /><br /> **1** = パッケージの場所はサブスクライバーです。|  
+|**offload_agent**|**bit**|エージェントをリモートでアクティブ化できるかどうかを指定します。 **0**の場合、エージェントをリモートでアクティブにすることはできません。|  
+|**offload_server**|**sysname**|リモートからのアクティブ化に使用するサーバーのネットワーク名を指定します。|  
+|**dynamic_snapshot_location**|**nvarchar (255)**|スナップショットファイルを保存するフォルダーへのパスを指定します。|  
+|**use_web_sync**|**bit**|サブスクリプションを HTTPS で同期できるかどうかを指定します。値**1**は、この機能が有効になっていることを意味します。|  
+|**internet_url**|**nvarchar(260)**|Web 同期用のレプリケーションリスナーの場所を表す URL。|  
+|**internet_login**|**nvarchar(128)**|基本認証を使用して Web 同期をホストしている Web サーバーに接続するときにマージエージェントが使用するログインです。|  
+|**internet_password**|**nvarchar(524)**|基本認証を使用して Web 同期をホストしている Web サーバーに接続するときにマージエージェントが使用するログインのパスワード。|  
+|**internet_security_mode**|**int**|Web 同期をホストしている Web サーバーに接続するときに使用される認証モード。値**1**は Windows 認証を意味し、値**0**は基本認証を意味します。|  
+|**internet_timeout**|**int**|Web 同期要求が期限切れになるまでの時間の長さ (秒単位)。|  
+|**hostname**|**nvarchar(128)**|この関数が WHERE 句のパラメーター化された行フィルターで使用される場合の HOST_NAME () の値を指定します。|  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  **0** (成功) または**1** (失敗)  
   
 ## <a name="remarks"></a>コメント  
- **sp_helpsubscription_properties**はスナップショット レプリケーション、トランザクション レプリケーション、およびマージ レプリケーションで使用します。  
+ **sp_helpsubscription_properties**は、スナップショットレプリケーション、トランザクションレプリケーション、およびマージレプリケーションで使用します。  
   
 ## <a name="permissions"></a>アクセス許可  
- メンバーのみ、 **sysadmin**固定サーバー ロールまたは**db_owner**固定データベース ロールが実行できる**sp_helpsubscription_properties**します。  
+ **Sp_helpsubscription_properties**を実行できるのは、固定サーバーロール**sysadmin**または固定データベースロール**db_owner**のメンバーだけです。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [システム ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

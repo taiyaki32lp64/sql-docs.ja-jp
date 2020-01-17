@@ -1,5 +1,5 @@
 ---
-title: updateDouble メソッド (java.lang.String, double) |Microsoft Docs
+title: updateDouble メソッド (java. System.string, double) |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: f70971d5-34cc-4f70-8a91-5d46356b24ae
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: a562f227b3e4fb61735ca73884bb8b4a2c184c6d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 15617e1d5dda6315547228e07853c373f9eb1a37
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47709150"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67999034"
 ---
 # <a name="updatedouble-method-javalangstring-double"></a>updateDouble (java.lang.String, double) メソッド
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -43,13 +42,13 @@ public void updateDouble(java.lang.String columnName,
   
  *x*  
   
- A**二重**値。  
+ **Double**値。  
   
 ## <a name="exceptions"></a>例外  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- この updateDouble メソッドは、java.sql.ResultSet インターフェイスの updateDouble メソッドによって指定されます。  
+ この updateDouble メソッドは、updateDouble インターフェイスのメソッドによって指定されます。  
   
 ## <a name="see-also"></a>参照  
  [updateDouble メソッド &#40;SQLServerResultSet&#41;](../../../connect/jdbc/reference/updatedouble-method-sqlserverresultset.md)   

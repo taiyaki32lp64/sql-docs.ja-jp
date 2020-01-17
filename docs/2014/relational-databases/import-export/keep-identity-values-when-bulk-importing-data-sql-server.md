@@ -11,15 +11,15 @@ helpviewer_keywords:
 - data formats [SQL Server], identity values
 - bulk importing [SQL Server], identity values
 ms.assetid: 45894a3f-2d8a-4edd-9568-afa7d0d3061f
-author: douglaslMS
-ms.author: douglasl
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: c994a04f41b548599deff4ff5a0a99ba89be6c7f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 5bb2fbd3129475c5d712cd4d1fce8bbe29ea096f
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48159632"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66011907"
 ---
 # <a name="keep-identity-values-when-bulk-importing-data-sql-server"></a>データの一括インポート時の ID 値の保持 (SQL Server)
   ID 値を含んでいるデータ ファイルを [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスに一括インポートできます。 既定では、インポートされたデータ ファイルの ID 列の値は無視され、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] によって固有の値が自動的に割り当てられます。 固有の値は、テーブル作成時に指定されたシード値と増分値に基づいています。  
@@ -74,7 +74,7 @@ bcp AdventureWorks.HumanResources.Department format nul -n -x -f myDepartment-f-
  フォーマット ファイルの作成方法の詳細については、「[フォーマット ファイルの作成 &#40;SQL Server&#41;](create-a-format-file-sql-server.md)」を参照してください。  
   
 ### <a name="a-using-bcp-and-keeping-identity-values"></a>A. bcp を使用して ID 値を保持する方法  
- 次の例では、`bcp` を使用してデータを一括インポートするときに ID 値を保持する方法について説明します。 `bcp`コマンドは、フォーマット ファイルを使用して`myDepartment-f-n-x.Xml`、次のスイッチが含まれています。  
+ 次の例では、`bcp` を使用してデータを一括インポートするときに ID 値を保持する方法について説明します。 `bcp` コマンドは、フォーマット ファイル `myDepartment-f-n-x.Xml` を使用し、次のスイッチを含んでいます。  
   
 |修飾子|説明|  
 |----------------|-----------------|  

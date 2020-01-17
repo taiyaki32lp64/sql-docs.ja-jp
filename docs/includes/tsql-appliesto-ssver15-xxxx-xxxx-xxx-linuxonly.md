@@ -1,1 +1,1 @@
-<Token>**このトピックの対象:**![はい](media/yes.png)(Linux のみである 2019年以降)、SQL Server![ありません](media/no.png)Azure SQL Database![ありません](media/no.png)Azure SQL Data Warehouse![なし](media/no.png)Parallel Data Warehouse </Token>
+<Token>**このトピックの適用対象:** ![yes](media/yes.png)SQL Server (Linux only) ![no](media/no.png)Azure SQL Database![no](media/no.png)Azure Synapse Analytics (SQL DW) ![no](media/no.png)Parallel Data Warehouse </Token>

@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 1ca622b2-55d8-4666-b80a-8d9791cd3d3b
 author: Shamikg
 ms.author: Shamikg
-manager: craigg
-ms.openlocfilehash: ad27017466429bba36b062a86ed4c39ff1293885
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ea6081cb68d084bf51132824a143fc6fdd544399
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47670330"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68028885"
 ---
 # <a name="menu-commands-and-other-shortcut-keys-sybase-to-sql"></a>メニュー コマンドやその他のショートカット キー (SybaseToSQL)
 次のセクションでは、メニュー コマンドや Sybase アプリケーションの SSMA のさまざまなダイアログ ボックスで使用されるその他のショートカット キーにアクセスするキーボード ショートカットについて説明します。  
@@ -197,6 +196,6 @@ ms.locfileid: "47670330"
 |クイック ヒントを起動します。|CTRL + SHIFT + スペース|  
 |宣言に移動します。|F12|  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
 [ショートカット キー&#40;To SQL の Sybase&#41;](../../ssma/sybase/shortcut-keys-sybase-to-sql.md)  
   

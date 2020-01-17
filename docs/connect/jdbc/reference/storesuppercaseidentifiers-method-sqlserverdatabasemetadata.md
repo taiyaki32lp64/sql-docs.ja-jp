@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: a622b748-d10b-4f02-afe3-fba4a5bca17b
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 87093982fc165a6e1a2ad60fb83e554d7e35c5dd
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 17b42f50fe28ba9d727ea6c897280dcd36034038
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47731930"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67969888"
 ---
 # <a name="storesuppercaseidentifiers-method-sqlserverdatabasemetadata"></a>storesUpperCaseIdentifiers メソッド (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -42,7 +41,7 @@ public boolean storesUpperCaseIdentifiers()
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- この storesUpperCaseIdentifiers メソッドは、java.sql.DatabaseMetaData インターフェイスで storesUpperCaseIdentifiers メソッドによって指定されます。  
+ この storesUpperCaseIdentifiers メソッドは、storesUpperCaseIdentifiers メソッドによって、java メタデータインターフェイスで指定されます。  
   
 ## <a name="see-also"></a>参照  
  [SQLServerDatabaseMetaData のメソッド](../../../connect/jdbc/reference/sqlserverdatabasemetadata-methods.md)   

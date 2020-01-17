@@ -21,17 +21,20 @@ helpviewer_keywords:
 - connections [Integration Services]
 - SQL Server Integration Services packages, connections
 ms.assetid: 72f5afa3-d636-410b-9e81-2ffa27772a8c
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: 4efe82fa71303bdaf4f8615c80ce45ae3dfda857
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 3ed4c8c8feacdd41d2e806a4d2d663f639633e07
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52514123"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71294427"
 ---
 # <a name="integration-services-ssis-connections"></a>Integration Services (SSIS) の接続
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] パッケージでは接続を使用して、各種のタスクの実行や [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 機能の実装を行います。  
   
 -   テキスト、XML、Excel ブック、リレーショナル データベースなど、変換元および変換先のデータ ストアに接続し、データの抽出と読み込みを行います。  
@@ -122,12 +125,12 @@ ms.locfileid: "52514123"
   
  新しいパッケージを作成する際に接続マネージャーを自動的に作成して構成する場合は、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インポートおよびエクスポート ウィザードを使用できます。 このウィザードは、接続マネージャーを使用する変換元および変換先の作成と構成を行う場合に役立ちます。 詳細については、「 [SQL Server データ ツールでのパッケージの作成](../../integration-services/create-packages-in-sql-server-data-tools.md)」を参照してください。  
   
- 手動で新しい接続マネージャーを作成して既存のパッケージに追加するには、[!INCLUDE[ssIS](../../includes/ssis-md.md)] デザイナーの **[制御フロー]** タブ、**[データ フロー]** タブ、および **[イベント ハンドラー]** タブに表示される **[接続マネージャー]** 領域を使用します。 **[接続マネージャー]** 領域で、作成する接続マネージャーの種類を選択し、[!INCLUDE[ssIS](../../includes/ssis-md.md)] デザイナーで用意されているダイアログ ボックスを使用して、接続マネージャーのプロパティを設定します。 詳細については、後の「[接続マネージャー] 領域の使用」を参照してください。  
+ 手動で新しい接続マネージャーを作成して既存のパッケージに追加するには、[!INCLUDE[ssIS](../../includes/ssis-md.md)] デザイナーの **[制御フロー]** タブ、 **[データ フロー]** タブ、および **[イベント ハンドラー]** タブに表示される **[接続マネージャー]** 領域を使用します。 **[接続マネージャー]** 領域で、作成する接続マネージャーの種類を選択し、[!INCLUDE[ssIS](../../includes/ssis-md.md)] デザイナーで用意されているダイアログ ボックスを使用して、接続マネージャーのプロパティを設定します。 詳細については、後の「[接続マネージャー] 領域の使用」を参照してください。  
   
  パッケージに接続マネージャーを追加すると、タスク、Foreach ループ コンテナー、変換元、変換、および変換先で使用できます。 詳細については、「[Integration Services タスク](../../integration-services/control-flow/integration-services-tasks.md)」、「[Foreach ループ コンテナー](../../integration-services/control-flow/foreach-loop-container.md)」、および「[データ フロー](../../integration-services/data-flow/data-flow.md)」を参照してください。  
   
 ### <a name="using-the-connection-managers-area"></a>[接続マネージャー] 領域の使用  
- 接続マネージャーは、[!INCLUDE[ssIS](../../includes/ssis-md.md)] デザイナーの **[制御フロー]** タブ、**[データ フロー]** タブ、または **[イベント ハンドラー]** タブがアクティブなときに作成できます。  
+ 接続マネージャーは、[!INCLUDE[ssIS](../../includes/ssis-md.md)] デザイナーの **[制御フロー]** タブ、 **[データ フロー]** タブ、または **[イベント ハンドラー]** タブがアクティブなときに作成できます。  
   
  次の図は、[!INCLUDE[ssIS](../../includes/ssis-md.md)] デザイナーの **[制御フロー]** タブ上にある **[接続マネージャー]** 領域を示しています。  
   
@@ -159,13 +162,13 @@ ms.locfileid: "52514123"
   
     -   パッケージに追加する接続マネージャーの種類をクリックします。  
   
-         - または -  
+         \- または -  
   
     -   追加する種類が一覧にない場合は、 **[新しい接続]** をクリックして **[SSIS 接続マネージャーの追加]** ダイアログ ボックスを開き、接続マネージャーの種類を選択してから **[OK]** をクリックします。  
   
      選択した接続マネージャーの種類に応じたカスタム ダイアログ ボックスが開きます。 接続マネージャーの種類と設定可能なオプションの詳細については、次のオプションの表を参照してください。  
   
-    |[ODBC 入力元エディター]|[変数]|  
+    |[ODBC 入力元エディター]|オプション|  
     |------------------------|-------------|  
     |[ADO 接続マネージャー](../../integration-services/connection-manager/ado-connection-manager.md)|[[OLE DB 接続マネージャーの構成]](../../integration-services/connection-manager/configure-ole-db-connection-manager.md)|  
     |[ADO.NET 接続マネージャー](../../integration-services/connection-manager/ado-net-connection-manager.md)|[[ADO.NET の接続マネージャーの構成]](../../integration-services/connection-manager/configure-ado-net-connection-manager.md)|  
@@ -201,7 +204,7 @@ ms.locfileid: "52514123"
   
      選択した接続マネージャーの種類に応じたカスタム ダイアログ ボックスが開きます。 接続マネージャーの種類と設定可能なオプションの詳細については、次のオプションの表を参照してください。  
   
-    |[ODBC 入力元エディター]|[変数]|  
+    |[ODBC 入力元エディター]|オプション|  
     |------------------------|-------------|  
     |[ADO 接続マネージャー](../../integration-services/connection-manager/ado-connection-manager.md)|[[OLE DB 接続マネージャーの構成]](../../integration-services/connection-manager/configure-ole-db-connection-manager.md)|  
     |[ADO.NET 接続マネージャー](../../integration-services/connection-manager/ado-net-connection-manager.md)|[[ADO.NET の接続マネージャーの構成]](../../integration-services/connection-manager/configure-ado-net-connection-manager.md)|  
@@ -233,7 +236,7 @@ ms.locfileid: "52514123"
   
  接続マネージャーの詳細については、「[Integration Services &#40;SSIS&#41; の接続](../../integration-services/connection-manager/integration-services-ssis-connections.md)」を参照してください。  
   
-#### <a name="options"></a>[変数]  
+#### <a name="options"></a>オプション  
  **[接続マネージャーの種類]**  
  エディターを使用して接続の種類の接続プロパティを指定するには、接続の種類を選択して **[追加]** をクリックするか、接続の種類をダブルクリックします。  
   
@@ -310,7 +313,7 @@ ms.locfileid: "52514123"
   
 4.  **[接続マネージャー]** 領域で接続マネージャーをダブルクリックして、 **[接続マネージャー]** ダイアログ ボックスを開きます。 特定の種類の接続マネージャーおよび各種類で使用するオプションの詳細については、次の表を参照してください。  
   
-    |[接続マネージャー]|[変数]|  
+    |[接続マネージャー]|オプション|  
     |------------------------|-------------|  
     |[ADO 接続マネージャー](../../integration-services/connection-manager/ado-connection-manager.md)|[[OLE DB 接続マネージャーの構成]](../../integration-services/connection-manager/configure-ole-db-connection-manager.md)|  
     |[ADO.NET 接続マネージャー](../../integration-services/connection-manager/ado-net-connection-manager.md)|[[ADO.NET の接続マネージャーの構成]](../../integration-services/connection-manager/configure-ado-net-connection-manager.md)|  

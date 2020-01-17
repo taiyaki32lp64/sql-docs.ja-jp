@@ -1,7 +1,7 @@
 ---
 title: 接続文字列のセキュリティ保護 |Microsoft Docs
 ms.custom: ''
-ms.date: 01/19/2017
+ms.date: 08/12/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 69ce8557-5260-4ea4-81b8-d0c5481f0868
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: d9e38b9e58bcfb9d9d75b62e73850cb4e72370e3
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 1483beed275649156ab84c370facc716818fb974
+ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47637410"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "69027741"
 ---
 # <a name="securing-connection-strings"></a>接続文字列のセキュリティ保護
 

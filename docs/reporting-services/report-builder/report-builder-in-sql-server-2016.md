@@ -1,8 +1,8 @@
 ---
 title: SQL Server のレポート ビルダー | Microsoft Docs
-ms.date: 11/29/2018
+ms.date: 05/10/2019
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: report-builder
 ms.topic: conceptual
 f1_keywords:
@@ -11,17 +11,20 @@ helpviewer_keywords:
 - overview of Report Builder
 - getting started
 ms.assetid: 55bf4f9c-d037-412f-ae57-3fc39ce32fa5
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: f37319c07856f0e31abcb2afb047bdea2904063a
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: c10e37d7c1231a3ed4db2d7412ea223cccc6922d
+ms.sourcegitcommit: 5d839dc63a5abb65508dc498d0a95027d530afb6
+ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56290300"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67688511"
 ---
 # <a name="report-builder-in-sql-server"></a>SQL Server のレポート ビルダー
-  [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] は、Visual Studio のレポート デザイナーよりもスタンドアロン環境での作業を好むビジネス ユーザー向けの、ページ分割されたレポートを作成するためのツールです。  改ページ調整されたレポートをデザインすることは、データの取得場所、取得するデータ、およびデータの表示方法を指定するレポート定義を作成することです。 レポートを実行するとき、レポート プロセッサは、指定されたレポート定義を受け取り、データを取得し、それをレポート レイアウトに結合して、レポートを生成します。 [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)]でレポートをプレビューできます。 その後、ネイティブ モードまたは SharePoint 統合モード (2016 以前) でレポートを [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] レポート サーバーにパブリッシュします。 ページ分割されたレポートを Power BI サービスにパブリッシュすることもできます。 詳しくは、[Power BI Premium のページ分割されたレポート](https://docs.microsoft.com/power-bi/paginated-reports-report-builder-power-bi) (プレビュー) に関するページをご覧ください。
+
+ [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] は、Visual Studio/SSDT のレポート デザイナーよりもスタンドアロン環境での作業を好むビジネス ユーザー向けの、ページ分割されたレポートを作成するためのツールです。  ページ分割されたレポートをデザインすることは、取得するデータ、その取得場所、およびその表示方法を指定するレポート定義を作成することです。 レポートを実行するとき、レポート プロセッサは、指定されたレポート定義を受け取り、データを取得し、それをレポート レイアウトに結合して、レポートを生成します。 [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)]でレポートをプレビューできます。 その後、ネイティブ モードまたは SharePoint 統合モード (2016 以前) でレポートを [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] レポート サーバーにパブリッシュします。 
+
+ページ分割されたレポートを Power BI サービスにパブリッシュすることもできます。 詳しくは、[Power BI Premium のページ分割されたレポート](https://docs.microsoft.com/power-bi/paginated-reports-report-builder-power-bi) (プレビュー) に関するページをご覧ください。
   
  ![rs_GettingStartedReport](../../reporting-services/report-builder/media/rs-gettingstartedreport.png "rs_GettingStartedReport")  
   
@@ -33,7 +36,7 @@ ms.locfileid: "56290300"
   
 -   **テーブル、マトリックス、グラフの各ウィザードから開始**します。 データ ソース接続を選択したり、フィールドをドラッグ アンド ドロップしてデータセット クエリを作成したりできます。また、レイアウトとスタイルを選択して、レポートをカスタマイズできます。  
   
--   **マップ ウィザードから開始** して、地図や幾何図形を背景として集計データを表示するレポートを作成します。 マップ データには、[!INCLUDE[tsql](../../includes/tsql-md.md)] クエリや Environmental Systems Research Institute, Inc. (ESRI) シェープファイルの空間データを指定できます。 また、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Bing のマップ タイルの背景を追加することもできます。  
+-   **マップ ウィザードから開始** して、地図や幾何図形を背景として集計データを表示するレポートを作成します。 マップ データには、 [!INCLUDE[tsql](../../includes/tsql-md.md)] クエリや Environmental Systems Research Institute, Inc. (ESRI) シェープファイルの空間データを指定できます。 また、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Bing のマップ タイルの背景を追加することもできます。  
   
 -   **レポート パーツからレポートの作成を開始する**。 レポート パーツとは、ネイティブ モードまたは SharePoint 統合モードの [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] レポート サーバーに個別にパブリッシュされたレポート アイテムです。 レポート パーツは、他のレポートに再利用できます。 テーブル、マトリックス、グラフ、画像などのレポート アイテムを、レポート パーツとしてパブリッシュできます。  
   
@@ -45,13 +48,12 @@ ms.locfileid: "56290300"
   
 -   **既存のレポートを変更します。** [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)]を使用すると、 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]のレポート デザイナーで作成されたレポートをカスタマイズおよび更新できます。  
   
--   データのフィルター選択、グループ化と並べ替え、または数式や式の追加によって、**データを変更します。**   
-  
--   データをビジュアルな形式でまとめ、大量の集計情報がひとめでわかるようにするため、**グラフ、ゲージ、スパークライン、およびインジケーターを追加します。**   
+-   データのフィルター選択、グループ化と並べ替え、または数式や式の追加によって、**データを変更します。**  
+-   データをビジュアルな形式でまとめ、大量の集計情報がひとめでわかるようにするため、**グラフ、ゲージ、スパークライン、およびインジケーターを追加します。**  
   
 -   ドキュメント マップ、表示/非表示を切り替えるボタン、サブレポートおよび詳細レポートへのドリルスルー リンクなど、**対話機能を追加します** 。 パラメーターとフィルターを使用すると、カスタマイズされたビューのデータをフィルター処理できます。  
   
--   外部コンテンツなど、**画像やその他のリソースを埋め込んだり参照したりします。**   
+-   外部コンテンツなど、**画像やその他のリソースを埋め込んだり参照したりします。**  
   
 ##  <a name="ManageRpt"></a> レポートの管理  
   
@@ -79,7 +81,7 @@ ms.locfileid: "56290300"
  [レポートの計画 (レポート ビルダー)](../../reporting-services/report-design/planning-a-report-report-builder.md)  
  レポートを作成する前の考慮事項について説明します。  
   
- [レポート作成の概念 (レポート ビルダーおよび SSRS)](../../reporting-services/report-design/report-authoring-concepts-report-builder-and-ssrs.md)  
+ [Reporting Services の概念 (SSRS)](../reporting-services-concepts-ssrs.md)  
  [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] のドキュメント全体で使用する主要な概念について説明します。  
   
  [レポート デザイン ビュー (レポート ビルダー)](../../reporting-services/report-builder/report-design-view-report-builder.md)  

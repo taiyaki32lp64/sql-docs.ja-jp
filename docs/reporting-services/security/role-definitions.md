@@ -2,7 +2,7 @@
 title: ロールの定義 | Microsoft Docs
 ms.date: 03/14/2017
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: security
 ms.topic: conceptual
 helpviewer_keywords:
@@ -11,17 +11,17 @@ helpviewer_keywords:
 - security [Reporting Services], role definitions
 - role-based security [Reporting Services], role definitions
 ms.assetid: d1b8dbf0-4462-402e-92dd-0e4835002b6e
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: a5dd1e17cbef4dd716959c38d852b2a8def8853a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 22087b03c0c11d008d91de80930d98fef79fc3a5
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47849470"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65570589"
 ---
 # <a name="role-definitions"></a>ロールの定義
-  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] では、*ロール**の定義*は、ユーザーがレポート サーバー上で実行できる操作を定義する、一連の名前付きタスクです。 ロールの定義によって、レポート サーバーがセキュリティを強制的に適用する際に使用するルールが提供されます。 ユーザーがレポートのパブリッシュなどのタスクを試行すると、レポート サーバーでは、ユーザーのロールの割り当てを確認し、そのタスクがロールの定義に含まれているかどうかを判別します。 該当するタスクがロールの定義に含まれている場合、要求が送信されます。  
+  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] では、"*ロールの定義*" は、ユーザーがレポート サーバー上で実行できる操作を定義する、一連の名前付きタスクです。 ロールの定義によって、レポート サーバーがセキュリティを強制的に適用する際に使用するルールが提供されます。 ユーザーがレポートのパブリッシュなどのタスクを試行すると、レポート サーバーでは、ユーザーのロールの割り当てを確認し、そのタスクがロールの定義に含まれているかどうかを判別します。 該当するタスクがロールの定義に含まれている場合、要求が送信されます。  
   
 ## <a name="using-roles-to-authorize-access-to-a-report-server"></a>ロールを使用したレポート サーバーへのアクセスの承認  
  ロールは、ロールの割り当てで使用されている場合のみ有効になります。 ロールでセキュリティを提供する方法の詳細については、「 [ロールの割り当て](../../reporting-services/security/role-assignments.md)」を参照してください。  
@@ -56,8 +56,8 @@ ms.locfileid: "47849470"
  [タスクと権限](../../reporting-services/security/tasks-and-permissions.md)   
  [ネイティブ モードのレポート サーバーに対する権限の許可](../../reporting-services/security/granting-permissions-on-a-native-mode-report-server.md)   
  [ロールを作成、削除、または変更する (Management Studio)](../../reporting-services/security/role-definitions-create-delete-or-modify.md)   
- [レポート サーバーへのユーザー アクセスを許可する (レポート マネージャー)](../../reporting-services/security/grant-user-access-to-a-report-server-report-manager.md)   
+ [レポート サーバーへのユーザー アクセスを許可する &#40;レポート マネージャー&#41;](../../reporting-services/security/grant-user-access-to-a-report-server-report-manager.md)   
  [ロールの割り当てを変更または削除する &#40;レポート マネージャー&#41;](../../reporting-services/security/role-assignments-modify-or-delete.md)   
- [SharePoint サイト上のレポート サーバー アイテムに対する権限の設定 (Reporting Services の SharePoint 統合モード)](../../reporting-services/security/set-permissions-for-report-server-items-on-a-sharepoint-site.md)  
+ [SharePoint サイト上のレポート サーバー アイテムに対する権限の設定 &#40;Reporting Services の SharePoint 統合モード&#41;](../../reporting-services/security/set-permissions-for-report-server-items-on-a-sharepoint-site.md)  
   
   

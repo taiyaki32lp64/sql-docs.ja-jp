@@ -14,27 +14,21 @@ helpviewer_keywords:
 ms.assetid: ca3625c5-c62e-4ab7-9829-d511f838e385
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 23b50f306dd9096082170d5d3606e0ff46310895
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+monikerRange: =azuresqldb-current||>=sql-server-2014||=sqlallproducts-allversions
+ms.openlocfilehash: 733e63f6dd01c09fd007a7176721533f7a1c57d3
+ms.sourcegitcommit: dc8697bdd950babf419b4f1e93b26bb789d39f4a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47655320"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70846508"
 ---
 # <a name="reinitialize-a-subscription"></a>サブスクリプションの再初期化
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md.md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   このトピックでは、 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] で [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]、 [!INCLUDE[tsql](../../includes/tsql-md.md)]、またはレプリケーション管理オブジェクト (RMO) を使用して、サブスクリプションを再初期化する方法について説明します。 次回の同期で新しいスナップショットが適用されるように、個別のサブスクリプションに再初期化のマークを付けることができます。  
   
- **このトピックの内容**  
-  
--   **サブスクリプションを再初期化するために使用するもの:**  
-  
-     [SQL Server Management Studio](#SSMSProcedure)  
-  
-     [Transact-SQL](#TsqlProcedure)  
-  
-     [レプリケーション管理オブジェクト (RMO)](#RMOProcedure)  
+[!INCLUDE[azure-sql-db-replication-supportability-note](../../includes/azure-sql-db-replication-supportability-note.md)]
+
+
   
 ##  <a name="SSMSProcedure"></a> SQL Server Management Studio の使用  
  サブスクリプションの再初期化には、2 段階の処理があります。  
@@ -109,19 +103,19 @@ ms.locfileid: "47655320"
   
 #### <a name="to-reinitialize-a-pull-subscription-to-a-transactional-publication"></a>トランザクション パブリケーションに対するプル サブスクリプションを再初期化するには  
   
-1.  サブスクライバー側のサブスクリプション データベースに対して、[sp_reinitpullsubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-reinitpullsubscription-transact-sql.md) を実行します。 **@publisher**、 **@publisher_db**、および **@publication**を指定します。 これにより、ディストリビューション エージェントの次回実行時に再初期化するようにサブスクリプションにマークが付けられます。  
+1.  サブスクライバー側のサブスクリプション データベースに対して、[sp_reinitpullsubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-reinitpullsubscription-transact-sql.md) を実行します。 **\@publisher**、 **\@publisher_db**、 **\@publication** を指定します。 これにより、ディストリビューション エージェントの次回実行時に再初期化するようにサブスクリプションにマークが付けられます。  
   
 2.  (省略可) サブスクライバーでディストリビューション エージェントを起動し、サブスクリプションを同期します。 詳細については、「 [Synchronize a Pull Subscription](../../relational-databases/replication/synchronize-a-pull-subscription.md)」をご覧ください。  
   
 #### <a name="to-reinitialize-a-push-subscription-to-a-transactional-publication"></a>トランザクション パブリケーションに対するプッシュ サブスクリプションを再初期化するには  
   
-1.  パブリッシャーで、[sp_reinitsubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-reinitsubscription-transact-sql.md) を実行します。 **@publication**、 **@subscriber**、および **@destination_db**を指定します。 これにより、ディストリビューション エージェントの次回実行時に再初期化するようにサブスクリプションにマークが付けられます。  
+1.  パブリッシャーで、[sp_reinitsubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-reinitsubscription-transact-sql.md) を実行します。 **\@publication**、 **\@subscriber**、および **\@destination_db** を指定します。 これにより、ディストリビューション エージェントの次回実行時に再初期化するようにサブスクリプションにマークが付けられます。  
   
 2.  (省略可) ディストリビューターでディストリビューション エージェントを起動し、サブスクリプションを同期します。 詳細については、「 [Synchronize a Push Subscription](../../relational-databases/replication/synchronize-a-push-subscription.md)」をご覧ください。  
   
 #### <a name="to-reinitialize-a-pull-subscription-to-a-merge-publication"></a>マージ パブリケーションに対するプル サブスクリプションを再初期化するには  
   
-1.  サブスクライバー側のサブスクリプション データベースに対して、[sp_reinitmergepullsubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-reinitmergepullsubscription-transact-sql.md) を実行します。 **@publisher**、 **@publisher_db**、および **@publication**を指定します。 再初期化が実行される前にサブスクライバーの変更をアップロードする場合は、 **@upload_first** @upload_first **@upload_first**ダイアログ ボックスを使用します。 これにより、マージ エージェントの次回実行時に再初期化するようにサブスクリプションにマークが付けられます。  
+1.  サブスクライバー側のサブスクリプション データベースに対して、[sp_reinitmergepullsubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-reinitmergepullsubscription-transact-sql.md) を実行します。 **\@publisher**、 **\@publisher_db**、 **\@publication** を指定します。 再初期化が実行される前にサブスクライバーの変更をアップロードする場合は、 **\@upload_first** に **true** の値を指定します。 これにより、マージ エージェントの次回実行時に再初期化するようにサブスクリプションにマークが付けられます。  
   
     > [!IMPORTANT]  
     >  パラメーター化フィルターを追加、削除、変更する場合は、再初期化の際、サブスクライバーで保留中の変更をパブリッシャーにアップロードできません。 保留中の変更をアップロードしたい場合は、フィルターを変更する前にすべてのサブスクリプションを同期してください。  
@@ -130,7 +124,7 @@ ms.locfileid: "47655320"
   
 #### <a name="to-reinitialize-a-push-subscription-to-a-merge-publication"></a>マージ パブリケーションに対するプッシュ サブスクリプションを再初期化するには  
   
-1.  パブリッシャーで、[sp_reinitmergesubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-reinitmergesubscription-transact-sql.md) を実行します。 **@publication**、**@subscriber**、および **@subscriber_db** を指定します。 再初期化が実行される前にサブスクライバーの変更をアップロードする場合は、 **@upload_first** @upload_first **@upload_first**ダイアログ ボックスを使用します。 これにより、ディストリビューション エージェントの次回実行時に再初期化するようにサブスクリプションにマークが付けられます。  
+1.  パブリッシャーで、[sp_reinitmergesubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-reinitmergesubscription-transact-sql.md) を実行します。 **\@publication**、 **\@subscriber**、 **\@subscriber_db** を指定します。 再初期化が実行される前にサブスクライバーの変更をアップロードする場合は、 **\@upload_first** に **true** の値を指定します。 これにより、ディストリビューション エージェントの次回実行時に再初期化するようにサブスクリプションにマークが付けられます。  
   
     > [!IMPORTANT]  
     >  パラメーター化フィルターを追加、削除、変更する場合は、再初期化の際、サブスクライバーで保留中の変更をパブリッシャーにアップロードできません。 保留中の変更をアップロードしたい場合は、フィルターを変更する前にすべてのサブスクリプションを同期してください。  
@@ -139,7 +133,7 @@ ms.locfileid: "47655320"
   
 #### <a name="to-set-the-reinitialization-policy-when-creating-a-new-merge-publication"></a>新しいマージ パブリケーションを作成するときに再初期化ポリシーを設定するには  
   
-1.  パブリッシャー側のパブリケーション データベースで、 [sp_addmergepublication](../../relational-databases/system-stored-procedures/sp-addmergepublication-transact-sql.md)を実行し、次のいずれかの値を **@automatic_reinitialization_policy**に指定します。  
+1.  パブリッシャー側のパブリケーション データベースで、[sp_addmergepublication](../../relational-databases/system-stored-procedures/sp-addmergepublication-transact-sql.md) を実行し、次のいずれかの値を **\@automatic_reinitialization_policy** に指定します。  
   
     -   **1** - パブリケーションに対する変更に応じてサブスクリプションが自動的に再初期化される前に、サブスクライバーの変更がアップロードされます。  
   
@@ -152,7 +146,7 @@ ms.locfileid: "47655320"
   
 #### <a name="to-change-the-reinitialization-policy-for-an-existing-merge-publication"></a>既存のマージ パブリケーションの再初期化ポリシーを変更するには  
   
-1.  パブリッシャー側のパブリケーション データベースで、 [sp_changemergepublication](../../relational-databases/system-stored-procedures/sp-changemergepublication-transact-sql.md)を実行します。 **@property** @upload_first **@property** を指定し、次のいずれかの値を **@value**に指定します。  
+1.  パブリッシャー側のパブリケーション データベースに対して [sp_changemergepublication](../../relational-databases/system-stored-procedures/sp-changemergepublication-transact-sql.md) を実行します。 **\@property** に **automatic_reinitialization_policy** を指定し、次のいずれかの値を **\@value** に指定します。  
   
     -   **1** - パブリケーションに対する変更に応じてサブスクリプションが自動的に再初期化される前に、サブスクライバーの変更がアップロードされます。  
   

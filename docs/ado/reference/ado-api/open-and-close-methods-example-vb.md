@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 1311d561-0e86-40f5-8cbc-ad8f13e626d1
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: b3c094abbe0f67e3670fc0a1f89ee00b527893ee
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 1a37568f6bf4435d762d62c0475abb7d0fb8065a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47725850"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67917980"
 ---
 # <a name="open-and-close-methods-example-vb"></a>Open および Close メソッドの例 (VB)
 この例では、**オープン**と[閉じる](../../../ado/reference/ado-api/close-method-ado.md)両方のメソッド[Recordset](../../../ado/reference/ado-api/recordset-object-ado.md)と[接続](../../../ado/reference/ado-api/connection-object-ado.md)が開かれているオブジェクト。  
@@ -102,7 +101,7 @@ End Sub
 'EndOpenVB  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [Close メソッド (ADO)](../../../ado/reference/ado-api/close-method-ado.md)   
  [接続オブジェクト (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)   
  [Open メソッド (ADO Connection)](../../../ado/reference/ado-api/open-method-ado-connection.md)   

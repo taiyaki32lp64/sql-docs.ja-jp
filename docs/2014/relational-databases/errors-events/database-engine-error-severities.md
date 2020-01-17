@@ -17,11 +17,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 9de758c6a54ca1993efc8873a02293331a129b33
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52529705"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62870980"
 ---
 # <a name="database-engine-error-severities"></a>データベース エンジン エラーの重大度
   [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]によってエラーが発生した場合、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]に発生した問題の種類がエラーの重大度によって示されます。  
@@ -68,7 +68,7 @@ ms.locfileid: "52529705"
 ## <a name="retrieving-error-severity"></a>エラーの重大度の取得  
  システム関数 ERROR_SEVERITY を使用して、TRY...CATCH コンストラクトの CATCH ブロックを実行したエラーの重大度を取得することができます。 CATCH ブロックの範囲外で呼び出された場合、ERROR_SEVERITY は NULL を返します。 詳細については、「[ERROR_SEVERITY &#40;Transact-SQL&#41;](/sql/t-sql/functions/error-severity-transact-sql)」を参照してください。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [データベース エンジン エラーについて](../native-client-ole-db-errors/errors.md)   
  [sys.messages &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/messages-for-errors-catalog-views-sys-messages)   
  [システム関数 &#40;Transact-SQL&#41;](/sql/t-sql/functions/system-functions-transact-sql)   

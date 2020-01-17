@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: d3cf324c-aa52-47a6-b44a-a59a778fad23
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 02d1bbcb168db03571e7cd74d77468c23c7e9ad7
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: adb76a40b9f8ed79af41fd122ac94f8a0d9ee7c8
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47797980"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68045044"
 ---
 # <a name="microsoft-excel-driver-programming-considerations"></a>Excel ドライバーのプログラミングに関する考慮事項
 このセクションでは、次のトピックを扱います。  

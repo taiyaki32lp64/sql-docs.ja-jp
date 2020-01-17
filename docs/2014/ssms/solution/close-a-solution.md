@@ -14,11 +14,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: f14fea5c448a4b3cd3dbb0a34ce86b40d1db7835
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52763054"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63128544"
 ---
 # <a name="close-a-solution"></a>ソリューションを閉じる
   ソリューションを閉じて、ソリューション エクスプローラーから消すことができます。 ソリューションを閉じると、そのソリューションはソリューション エクスプローラーで使用できなくなります。  
@@ -30,7 +30,7 @@ ms.locfileid: "52763054"
   
 1.  **[ファイル]** メニューの **[ソリューションを閉じる]** をクリックします。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [ソリューション エクスプローラー](solution-explorer.md)  
   
   

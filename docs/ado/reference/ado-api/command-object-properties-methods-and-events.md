@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 0389f21c-06da-4090-9da1-28d912f888d7
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 132d302d994da5de812347f7c4d0396d5b5cf8ba
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: cd8992acf5652d4fad1e4e14a67c847bb30c6d34
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47705510"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67919815"
 ---
 # <a name="command-object-properties-methods-and-events"></a>コマンド オブジェクトのプロパティ、メソッド、およびイベント
 ## <a name="propertiescollections"></a>プロパティ/コレクション  
@@ -56,5 +55,5 @@ ms.locfileid: "47705510"
 ## <a name="events"></a>イベント  
  [なし] :  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [Command オブジェクト (ADO)](../../../ado/reference/ado-api/command-object-ado.md)

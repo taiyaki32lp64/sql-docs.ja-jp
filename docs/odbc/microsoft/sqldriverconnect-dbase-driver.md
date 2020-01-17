@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: c837aa31-068e-4fa3-bc00-aae09bec21de
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 3e4eeaa7ba710814bfeb8c5b4f5aa0dbd2d30ef7
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 238931112d55214c239dab732f951a197d359615
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47690882"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68053918"
 ---
 # <a name="sqldriverconnect-dbase-driver"></a>SQLDriverConnect (dBASE ドライバー)
 > [!NOTE]  
@@ -27,7 +26,7 @@ ms.locfileid: "47690882"
   
  **SQLDriverConnect**データ ソース (DSN) を作成することがなく、ドライバーに接続することができます。  
   
- すべてのドライバーの接続文字列では、次のキーワードがサポートされて: **DSN**、 **DBQ**、および**FIL**します。  
+ すべてのドライバーの接続文字列では、次のキーワードがサポートされています。**DSN**、 **DBQ**、および**FIL**します。  
   
  Paradox ドライバーを使用すると、ユーザーがパスワードで保護されたファイルを開いた後、他のユーザーは同じファイルを開くには許可されません。  
   

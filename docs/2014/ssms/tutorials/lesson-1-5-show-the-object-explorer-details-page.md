@@ -11,11 +11,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: a2771cd508c2bc2f3be0de1c9d0502e8ab5ce062
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48185312"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63282026"
 ---
 # <a name="show-the-object-explorer-details-page"></a>[オブジェクト エクスプローラーの詳細] ページの表示
   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] オブジェクト エクスプローラーで選択した各オブジェクトのレポートを表示できます。 [オブジェクト エクスプローラーの詳細] ページと呼ばれるこのレポートは [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]により作成され、ドキュメント ウィンドウに表示されます。  

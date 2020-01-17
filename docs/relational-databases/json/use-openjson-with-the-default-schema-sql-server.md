@@ -1,6 +1,5 @@
 ---
-title: 既定のスキーマを使用する OPENJSON の使用 (SQL Server) | Microsoft Docs
-ms.custom: ''
+title: 既定のスキーマを使用する OPENJSON の使用
 ms.date: 06/02/2016
 ms.prod: sql
 ms.reviewer: genemi
@@ -11,14 +10,14 @@ helpviewer_keywords:
 ms.assetid: 8e28a8f8-71a8-4c25-96b8-0bbedc6f41c4
 author: jovanpop-msft
 ms.author: jovanpop
-manager: craigg
+ms.custom: seo-dt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 078f198d81c0fc9de1ce5c0a6221b54c253bfa56
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 3e4aac74ac35fc5d75320b420e85b130be110340
+ms.sourcegitcommit: 15fe0bbba963d011472cfbbc06d954d9dbf2d655
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56033420"
+ms.lasthandoff: 11/14/2019
+ms.locfileid: "74096035"
 ---
 # <a name="use-openjson-with-the-default-schema-sql-server"></a>既定のスキーマを使用する OPENJSON の使用 (SQL Server)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -56,9 +55,9 @@ FROM OPENJSON('["en-GB", "en-UK","de-AT","es-AR","sr-Cyrl"]')
 |Key|[値]|  
 |---------|-----------|  
 |0|en-GB|  
-|1|en 英国|  
-|2|de AT|  
-|3|es AR|  
+|1|en-UK|  
+|2|de-AT|  
+|3|es-AR|  
 |4|sr という|  
   
 ## <a name="example---convert-json-to-a-temporary-table"></a>例 - JSON を一時テーブルに変換する  

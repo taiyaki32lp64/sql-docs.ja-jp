@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 helpviewer_keywords:
 - tuning reports [SQL Server]
@@ -13,12 +12,12 @@ ms.assetid: daee6143-269f-428b-8458-9a3e726d586c
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 94222a351343c4558614098dd2a317fdbb9a5396
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 4963a309f6c54998ece968f8a5393e818fd30d07
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48173642"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66110153"
 ---
 # <a name="viewing-tuning-reports"></a>チューニング レポートの表示
   このレッスンの前の実習では、MySession チューニング セッションの結果として生成されたデータベース エンジン チューニング アドバイザーの推奨設定内で、データベース オブジェクトを作成または削除する [!INCLUDE[tsql](../../includes/tsql-md.md)] スクリプトを表示しました。 MySession チューニング セッションは「 [ワークロードのチューニング](lesson-1-1-tuning-a-workload.md)」で作成しました。  
@@ -47,6 +46,6 @@ ms.locfileid: "48173642"
  データベース エンジン チューニング アドバイザー GUI の **[レポート]** タブを使用し、MySession チューニング セッションを検証しました。 同様の手順で、EvaluateMySession チューニング セッションで生成したレポートを調べることができます。 このレポートの内容を検証するには、 **[セッション モニター]** ペインの **[EvaluateMySession]** をダブルクリックします。  
   
 ## <a name="next-lesson"></a>次のレッスン  
- [レッスン 3: dta コマンド プロンプト ユーティリティの使用](lesson-3-using-the-dta-command-prompt-utility.md)  
+ [レッスン 3:Dta コマンド プロンプト ユーティリティの使用](lesson-3-using-the-dta-command-prompt-utility.md)  
   
   

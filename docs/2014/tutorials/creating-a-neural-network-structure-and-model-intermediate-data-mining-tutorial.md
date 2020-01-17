@@ -17,11 +17,11 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: 6787db165770f944838a312ecd3e0386d161da38
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56037723"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62856324"
 ---
 # <a name="creating-a-neural-network-structure-and-model-intermediate-data-mining-tutorial"></a>ニューラル ネットワーク構造およびモデルの作成 (中級者向けデータ マイニング チュートリアル)
   データ マイニング モデルを作成するには、まずデータ マイニング ウィザードを使用して、新しいデータ ソース ビューに基づく新しいマイニング構造を作成する必要があります。 ここでは、ウィザードを使用してマイニング構造を作成し、同時に、[!INCLUDE[msCoName](../includes/msconame-md.md)] ニューラル ネットワーク アルゴリズムに基づく関連マイニング モデルを作成します。  
@@ -83,7 +83,7 @@ ms.locfileid: "56037723"
     |LevelTwoOperators|入力|  
     |Orders|[入力]/[予測]|  
     |ServiceGrade|[入力]/[予測]|  
-    |shift キー|入力|  
+    |Shift|入力|  
     |TotalOperators|使用しない|  
     |WageType|入力|  
   
@@ -103,7 +103,7 @@ ms.locfileid: "56037723"
     |LevelTwoOperators|Continuous|Long|  
     |Orders|Continuous|Long|  
     |ServiceGrade|Continuous|Double|  
-    |shift キー|Discrete|テキスト|  
+    |Shift|Discrete|テキスト|  
     |WageType|Discrete|テキスト|  
   
 13. **テストの設定を作成** ページで、オプションのテキスト ボックスをオフ**テスト用データの割合**します。 **[次へ]** をクリックします。  
@@ -289,7 +289,7 @@ ms.locfileid: "56037723"
     |Orders|入力|入力|  
     |ServiceGrade Binned|Ignore|Predict (ServiceGrade)|  
     |ServiceGrade|Predict|Ignore|  
-    |shift キー|入力|入力|  
+    |Shift|入力|入力|  
     |Total Operators|入力|入力|  
     |WageType|入力|入力|  
   

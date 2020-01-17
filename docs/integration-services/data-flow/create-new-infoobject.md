@@ -8,17 +8,20 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 3587a633-1c0b-4d63-a22a-6b2b93923c3a
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: 91460ffacc5712daecac31073434dcd6a11225a0
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 9691deb08bdc6bce05945e1210edd91273f1bc61
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47753520"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71293173"
 ---
 # <a name="create-new-infoobject"></a>[新しいインフォオブジェクトの作成]
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   SAP Netweaver BW システムで新しいインフォオブジェクトを作成するには、 **[新しいインフォオブジェクトの作成]** ダイアログ ボックスを使用します。  
   
  **[新しいインフォオブジェクトの作成]** ダイアログ ボックスは、 **[SAP BW 変換先エディター]** の **[接続マネージャー]** ページから開くことができます。 SAP BW 変換先の詳細については、「 [SAP BW Destination](../../integration-services/data-flow/sap-bw-destination.md)」を参照してください。  
@@ -130,7 +133,7 @@ ms.locfileid: "47753520"
  **インフォオブジェクトの種類**  
  インフォオブジェクトの種類を表示します。 次の表に、種類として使用できる値の一覧を示します。  
   
-|ReplTest1|[説明]|  
+|[値]|[説明]|  
 |-----------|-----------------|  
 |CHA|特性|  
 |KYF|主要データ|  
@@ -156,7 +159,7 @@ ms.locfileid: "47753520"
 ## <a name="see-also"></a>参照  
  [[トランザクション データのインフォキューブの作成]](../../integration-services/data-flow/create-infocube-for-transaction-data.md)   
  [[インフォソースの作成]](../../integration-services/data-flow/create-infosource.md)   
- [トランザクション データのインフォソースの作成](../../integration-services/data-flow/create-infosource-for-transaction-data.md)   
+ [[トランザクション データのインフォソースの作成]](../../integration-services/data-flow/create-infosource-for-transaction-data.md)   
  [マスター データのインフォソースの作成](../../integration-services/data-flow/create-infosource-for-master-data.md)   
  [Microsoft Connector for SAP BW の F1 ヘルプ](../../integration-services/microsoft-connector-for-sap-bw-f1-help.md)  
   

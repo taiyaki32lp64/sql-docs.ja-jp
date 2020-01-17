@@ -13,16 +13,16 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: c87e272b339357a18ef9f9a167672c1df4ed96e2
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48179152"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62625876"
 ---
 # <a name="table-valued-parameter-diagnostic-record-fields"></a>テーブル値パラメーターの診断レコードのフィールド
   SQL_DIAG_SS_TABLE_COLUMN_NUMBER および SQL_DIAG_SS_TABLE_ROW_NUMBER という 2 つの新しい診断フィールドが、診断レコードに追加されました。 これらのフィールドは、エラーと警告に関連するテーブル値パラメーターの列の値を特定するのに役立ちます。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [テーブル値パラメーター &#40;ODBC&#41;](table-valued-parameters-odbc.md)  
   
   

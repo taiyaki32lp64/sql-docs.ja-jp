@@ -1,79 +1,79 @@
 ---
-title: アプライアンスの監視 - Analytics Platform System |Microsoft Docs
-description: このアプライアンスの監視のガイドでは、ツールと Analytics Platform System appliance の監視のタスクについて説明します。
+title: アプライアンスの監視
+description: このアプライアンス監視ガイドでは、Analytics Platform System アプライアンスを監視するためのツールとタスクについて説明します。
 author: mzaman1
-manager: craigg
 ms.prod: sql
 ms.technology: data-warehouse
 ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: 100a587814e62a6455d25e78a3defca973f39bf6
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.custom: seo-dt-2019
+ms.openlocfilehash: cec604ff1a93213fc6308455cadda90e6efa2d61
+ms.sourcegitcommit: d587a141351e59782c31229bccaa0bff2e869580
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51696090"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74401422"
 ---
-# <a name="appliance-monitoring-for-analytics-platform-system"></a>Analytics Platform System のアプライアンスの監視
-このアプライアンスの監視のガイドでは、ツールと Analytics Platform System appliance の監視のタスクについて説明します。  
+# <a name="appliance-monitoring-for-analytics-platform-system"></a>分析プラットフォームシステムのアプライアンス監視
+このアプライアンス監視ガイドでは、Analytics Platform System アプライアンスを監視するためのツールとタスクについて説明します。  
   
-## <a name="Basics"></a>監視機能とツール  
-値と、SQL Server PDW アプライアンスで監視できる情報があります。 など、次の一般的なタスクを監視します。  
+## <a name="Basics"></a>監視の基本とツール  
+SQL Server PDW アプライアンスで監視できる値と情報は広範囲にわたっています。 たとえば、一般的な監視タスクを次に示します。  
   
--   SQL Server PDW によって発行されたすべてのアラートを確認します。  
+-   SQL Server PDW によって発行されたアラートを確認します。  
   
--   故障したハードウェアを監視します。  
+-   障害が発生したハードウェアを監視します。  
   
 -   ネットワーク接続の問題を監視します。  
   
--   クエリの処理中にユーザーに返されるエラーを確認します。  
+-   クエリ処理中にユーザーに返されるエラーを確認します。  
   
 -   現在アクティブなセッションとクエリの数を表示します。  
   
--   読み込み、バックアップ、および復元の状態を確認します。  
+-   読み込み、バックアップ、復元の状態を確認します。  
   
 ### <a name="appliance-monitoring-tools"></a>アプライアンスの監視ツール  
-アプライアンスの監視に使用できる複数のツールがあります。  
+アプライアンスの監視に使用できるツールは複数あります。  
   
 管理コンソール  
-SQL Server PDW 管理コンソールをしています これは web ベースのツールで、クエリ、読み込み、バックアップと復元、ロック、セッション、アラート、およびアプライアンスの状態に関する情報が表示されます。 アプライアンス; で、管理コンソールを実行します。ユーザーは、Internet explorer の管理コンソールに接続します。 詳細については、以下をご覧ください。  
+SQL Server PDW には管理コンソールがあります。 これは、クエリ、読み込み、バックアップと復元、ロック、セッション、アラート、およびアプライアンスの状態に関する情報を表示する web ベースのツールです。 管理コンソールはアプライアンス上で実行されます。ユーザーは、Internet Explorer を使用して管理コンソールに接続します。 詳細については、次のドキュメントを参照してください。  
   
--   [アプライアンスの監視、管理コンソールを使用して&#40;Analytics Platform System&#41;](monitor-the-appliance-by-using-the-admin-console.md)  
+-   [管理コンソール &#40;Analytics Platform System&#41;を使用してアプライアンスを監視する](monitor-the-appliance-by-using-the-admin-console.md)  
   
 ![PDW 管理コンソールの警告](./media/appliance-monitoring/SQL_Server_PDW_AdminConsol_Queries.png "SQL_Server_PDW_AdminConsol_Queries")  
   
 システム ビュー  
-SQL Server PDW には、アプライアンスの正常性、状態、およびパフォーマンスに関する詳細情報を取得するための包括的なシステム ビューが含まれています。 タスクを監視するためのシステム ビューの一覧を参照してください。  
+SQL Server PDW には、アプライアンスの正常性、状態、およびパフォーマンスに関する詳細情報を取得するための包括的なシステムビューが含まれています。 タスクを監視するためのシステムビューの一覧については、次を参照してください。  
   
--   [システム ビューを使用してアプライアンスの監視&#40;Analytics Platform System&#41;](monitor-the-appliance-by-using-system-views.md)  
+-   [システムビュー &#40;Analytics Platform System&#41;を使用してアプライアンスを監視する](monitor-the-appliance-by-using-system-views.md)  
   
 System Center Operations Manager (SCOM)  
-SQL Server PDW では、広範な Systems Center Operations Manager 統合が。 SQL Server PDW 用の管理パックは、無料でダウンロードとして入手できます。 System Center を使用して、SQL Server PDW を監視する方法の詳細については、次を参照してください。  
+SQL Server PDW は、Systems Center Operations Manager と広範囲に統合されています。 SQL Server PDW 用の管理パックは、無料でダウンロードできます。 System Center を使用して SQL Server PDW を監視する方法の詳細については、次を参照してください。  
   
--   [System Center Operations Manager を使用して、アプライアンスの監視&#40;Analytics Platform System&#41;](monitor-the-appliance-by-using-system-center-operations-manager.md)  
+-   [System Center Operations Manager &#40;Analytics Platform System&#41;を使用してアプライアンスを監視する](monitor-the-appliance-by-using-system-center-operations-manager.md)  
   
 カスタム ソリューション  
-状況の監視ツール、データ センターでは System Center が利用できない場合監視できますアプライアンス サード パーティ製の監視ソリューションを使用しています。 外部のソフトウェアのエージェントのインストールが、PDW でサポートされていません現在がほとんどの監視ソリューションをサポートして Transact\-SQL 統合、システム管理者が直接 Transact を実装できるように\-PDW に対して SQL クエリアプライアンスです。  
+データセンターの監視ツールで System Center を使用できない場合は、サードパーティ製の監視ソリューションを使用してアプライアンスを監視できます。 現在、外部ソフトウェアエージェントのインストールは PDW ではサポートされていません\-が、ほとんどの監視ソリューションは transact sql の統合\-をサポートしているため、システム管理者は pdw アプライアンスに対して直接 transact sql クエリを実装できます。  
   
-監視ソリューションでは、直接 Transact をサポートしていない場合\-SQL クエリ、または監視のツールがないし、アラートが発生したときに電子メールを送信するなどの監視タスクを実行するスクリプトを使用することができます。  TechNet wiki には、スクリプト化された監視ソリューションの例が含まれています。  
+監視ソリューションで直接 Transact\-SQL クエリがサポートされていない場合、または監視ツールがない場合は、アラートが発生したときに電子メールを送信するなど、スクリプトを使用して監視タスクを実行できます。  TechNet wiki には、スクリプト化された監視ソリューションの例が含まれています。  
   
--   [Power Shell が SQL Server PDW の監視の例](https://go.microsoft.com/fwlink/?LinkId=248020)  
+-   [SQL Server PDW のための電源シェルの監視の例](https://go.microsoft.com/fwlink/?LinkId=248020)  
    
-## <a name="Tasks"></a>監視タスクに関連  
+## <a name="Tasks"></a>関連する監視タスク  
   
 |監視タスク|説明|  
 |-------------------|---------------|  
-|アプライアンスの管理コンソールを使用して監視します。|[アプライアンスの監視、管理コンソールを使用して&#40;Analytics Platform System&#41;](monitor-the-appliance-by-using-the-admin-console.md)|  
-|アプライアンスのシステム ビューを使用して監視します。|[システム ビューを使用してアプライアンスの監視&#40;Analytics Platform System&#41;](monitor-the-appliance-by-using-system-views.md)|  
-|System Center を使用して、アプライアンスを監視します。|[System Center Operations Manager を使用して、アプライアンスの監視&#40;Analytics Platform System&#41;](monitor-the-appliance-by-using-system-center-operations-manager.md)|  
-|アプライアンスの状態を監視します。|[モニターのアプライアンスの正常性状態&#40;Analytics Platform System&#41;](monitor-appliance-health-state.md)|  
-|ハートビートを監視します。|[テレメトリのフィードバックをマイクロソフトに送信&#40;SQL Server PDW&#41;](send-telemetry-feedback-to-microsoft-sql-server-pdw.md)|  
-|アプライアンスの警告を追跡します。|[アプライアンスの警告を追跡&#40;Analytics Platform System&#41;](track-appliance-alerts.md)|  
-|容量が使用されているかを決定します。|[容量使用率を表示&#40;Analytics Platform System&#41;](view-capacity-utilization.md)|  
-|アプライアンスをポーリングする頻度を決定します。|[ポーリング間隔の決定&#40;Analytics Platform System&#41;](determine-polling-frequency.md)|  
-|クラスターの障害が発生したときに特定のクラスター ノードが失敗しました。|[特定のクラスター ノードが失敗した&#40;Analytics Platform System&#41;](determine-which-cluster-node-failed.md)|  
+|管理コンソールを使用してアプライアンスを監視します。|[管理コンソール &#40;Analytics Platform System&#41;を使用してアプライアンスを監視する](monitor-the-appliance-by-using-the-admin-console.md)|  
+|システムビューを使用してアプライアンスを監視します。|[システムビュー &#40;Analytics Platform System&#41;を使用してアプライアンスを監視する](monitor-the-appliance-by-using-system-views.md)|  
+|System Center を使用してアプライアンスを監視する|[System Center Operations Manager &#40;Analytics Platform System&#41;を使用してアプライアンスを監視する](monitor-the-appliance-by-using-system-center-operations-manager.md)|  
+|アプライアンスの状態を監視します。|[アプライアンスの正常性状態 &#40;Analytics Platform System&#41;を監視する](monitor-appliance-health-state.md)|  
+|ハートビートの監視。|[テレメトリのフィードバックを Microsoft &#40;SQL Server PDW に送信する&#41;](send-telemetry-feedback-to-microsoft-sql-server-pdw.md)|  
+|アプライアンスのアラートを追跡します。|[アプライアンスアラートの追跡 &#40;Analytics Platform System&#41;](track-appliance-alerts.md)|  
+|使用されている容量を確認します。|[容量使用率 &#40;Analytics Platform System&#41;を表示する](view-capacity-utilization.md)|  
+|アプライアンスをポーリングする頻度を決定します。|[Analytics Platform System&#41;&#40;ポーリング頻度を決定する](determine-polling-frequency.md)|  
+|クラスター障害が発生したときに、失敗したクラスターノードを特定します。|[分析プラットフォームシステム &#40;に失敗したクラスターノードを特定する&#41;](determine-which-cluster-node-failed.md)|  
 
 
 <!-- MISSING LINKS |Monitor loads.|[Monitor Loads &#40;SQL Server PDW&#41;](../sqlpdw/monitor-loads-sql-server-pdw.md)|  -->  
@@ -82,5 +82,5 @@ SQL Server PDW では、広範な Systems Center Operations Manager 統合が。
   
 ## <a name="see-also"></a>参照  
 <!-- MISSING LINKS [Common Metadata Query Examples &#40;SQL Server PDW&#41;](../sqlpdw/common-metadata-query-examples-sql-server-pdw.md)  -->  
-[アプライアンスの管理タスク&#40;Analytics Platform System&#41;](appliance-management-tasks.md)  
+[アプライアンス管理タスク &#40;Analytics Platform System&#41;](appliance-management-tasks.md)  
   

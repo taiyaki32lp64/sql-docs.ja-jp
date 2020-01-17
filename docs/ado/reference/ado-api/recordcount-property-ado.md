@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 834f0121-394a-44d4-ad7d-999b43a6fe63
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: fa6f29c480244919de71d06cf3d56e672f00c47f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 7304062298a95406a223ba58026379a3bebf392f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47623100"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67931477"
 ---
 # <a name="recordcount-property-ado"></a>RecordCount プロパティ (ADO)
 
@@ -55,7 +54,7 @@ ms.locfileid: "47623100"
 
 [Recordset オブジェクト (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)  
   
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 [Filter および RecordCount プロパティの例 (VB)](../../../ado/reference/ado-api/filter-and-recordcount-properties-example-vb.md)   
 [Filter および RecordCount プロパティの例 (vc++)](../../../ado/reference/ado-api/filter-and-recordcount-properties-example-vc.md)   

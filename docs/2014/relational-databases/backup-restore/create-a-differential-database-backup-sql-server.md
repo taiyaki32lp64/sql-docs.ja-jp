@@ -15,15 +15,15 @@ ms.assetid: 70f49794-b217-4519-9f2a-76ed61fa9f99
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 74e855fbb1972abcbc9e5707ee17d334f33632c6
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 4be1c196adbe21635c1339da3d5ec7ca519001fc
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48104882"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62876601"
 ---
 # <a name="create-a-differential-database-backup-sql-server"></a>データベースの差分バックアップの作成 (SQL Server)
-  このトピックでは、[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] で [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] または [!INCLUDE[tsql](../../includes/tsql-md.md)] を使用して、データベースの差分バックアップを作成する方法について説明します。  
+  このトピックでは、 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] で [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] または [!INCLUDE[tsql](../../includes/tsql-md.md)]を使用して、データベースの差分バックアップを作成する方法について説明します。  
   
  **このトピックの内容**  
   
@@ -43,7 +43,7 @@ ms.locfileid: "48104882"
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> 作業を開始する準備  
+##  <a name="BeforeYouBegin"></a> はじめに  
   
 ###  <a name="Restrictions"></a> 制限事項と制約事項  
   
@@ -51,7 +51,7 @@ ms.locfileid: "48104882"
   
 ###  <a name="Prerequisites"></a> 前提条件  
   
--   データベースの差分バックアップを作成するには、データベースの以前の完全バックアップが存在している必要があります。 選択したデータベースをバックアップしたことがない場合は、差分バックアップを作成する前にデータベースの完全バックアップを実行してください。 詳細については、「[データベースの完全バックアップの作成 &#40;SQL Server&#41;](create-a-full-database-backup-sql-server.md)」を参照してください。  
+-   データベースの差分バックアップを作成するには、データベースの以前の完全バックアップが存在している必要があります。 選択したデータベースをバックアップしたことがない場合は、差分バックアップを作成する前にデータベースの完全バックアップを実行してください。 詳細については、データベースの完全バックアップの作成 [データベースの完全バックアップの作成 &#40;SQL Server&#41;](create-a-full-database-backup-sql-server.md)を使用してデータベースの差分バックアップを作成します。  
   
 ###  <a name="Recommendations"></a> 推奨事項  
   
@@ -117,9 +117,9 @@ ms.locfileid: "48104882"
   
 13. **[信頼性]** セクションで、必要に応じて次の項目をオンにします。  
   
-    -   **[完了時にバックアップを検証する]**。  
+    -   **[完了時にバックアップを検証する]** 。  
   
-    -   **[メディアに書き込む前にチェックサムを行う]**、および、必要に応じて、 **[チェックサム エラーのまま続行する]**。 詳細については、「[バックアップ中および復元中に発生する可能性があるメディア エラー &#40;SQL Server&#41;](possible-media-errors-during-backup-and-restore-sql-server.md)」を参照してください。  
+    -   **[メディアに書き込む前にチェックサムを行う]** 、および、必要に応じて、 **[チェックサム エラーのまま続行する]** 。 詳細については、「[バックアップ中および復元中に発生する可能性があるメディア エラー &#40;SQL Server&#41;](possible-media-errors-during-backup-and-restore-sql-server.md)」を参照してください。  
   
 14. **[全般]** ページの **[バックアップ先]** セクションで、テープ ドライブにバックアップするように指定した場合は、 **[バックアップ後にテープをアンロードする]** チェック ボックスがアクティブになります。 このオプションをオンにすると、 **[アンロードの前にテープを巻き戻す]** オプションがアクティブになります。  
   
@@ -154,7 +154,7 @@ ms.locfileid: "48104882"
 ###  <a name="TsqlExample"></a> 例 (Transact-SQL)  
  この例では、 `MyAdvWorks` データベースの完全バックアップおよび差分バックアップを作成します。  
   
-```tsql  
+```sql  
 -- Create a full database backup first.  
 BACKUP DATABASE MyAdvWorks   
    TO MyAdvWorks_1   
@@ -169,7 +169,7 @@ BACKUP DATABASE MyAdvWorks
 GO  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [差分バックアップ &#40;SQL Server&#41;](differential-backups-sql-server.md)   
  [データベースの完全バックアップの作成 &#40;SQL Server&#41;](create-a-full-database-backup-sql-server.md)   
  [ファイルおよびファイル グループのバックアップ &#40;SQL Server&#41;](back-up-files-and-filegroups-sql-server.md)   

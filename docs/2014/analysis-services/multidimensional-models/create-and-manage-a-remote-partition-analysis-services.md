@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - partitions [Analysis Services], remote
@@ -14,12 +13,12 @@ ms.assetid: 4322b5cb-af07-4e79-8ecb-59e1121a9eb8
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: b5f451a9948315a32710bdb1755bb95a5b8d3b98
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: fd074e705c5ae135eb8161a0ea5d2919d1c183e1
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53356647"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66076261"
 ---
 # <a name="create-and-manage-a-remote-partition-analysis-services"></a>リモート パーティションの作成と管理 (Analysis Services)
   メジャー グループをパーティション分割する場合は、パーティションのストレージとして [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] のリモート インスタンスでセカンダリ データベースを構成できます。  
@@ -46,7 +45,7 @@ ms.locfileid: "53356647"
 -   ディザスター リカバリー計画がリモート パーティションのバックアップと復元に対応していることを確認する必要があります。 リモート パーティションを使用すると、バックアップ操作と復元操作が複雑になる場合があります。 必要なデータを復元できるように、計画を十分にテストしてください。  
   
 ## <a name="configure-remote-partitions"></a>リモート パーティションの構成  
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] のインスタンスを実行している異なる 2 台のコンピューターはそれぞれ、1 台をマスター サーバー、もう 1 台を下位サーバーとして指定するリモート パーティションの配置を作成するために必要です。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] のインスタンスを実行している異なる 2 台のコンピューターはそれぞれ、1 台をマスター サーバー、もう 1 台を下位サーバーとして指定するリモート パーティションの配置を作成するために必要です。  
   
  次の手順では、マスター サーバーにキューブ データベースが配置されている、2 つのサーバー インスタンスがあることを前提としています。 この手順では、キューブ データベースを db-master と呼びます。 リモート パーティションが含まれているストレージ データベースを db-storage と呼びます。  
   
@@ -57,9 +56,9 @@ ms.locfileid: "53356647"
   
 #### <a name="specify-valid-server-names-for-cube-deployment-in-ssdt"></a>キューブの配置に有効なサーバー名を指定する (SSDT)  
   
-1.  マスター サーバー。ソリューション エクスプ ローラーでソリューション名を右クリックし、選択**プロパティ**します。 **[プロパティ]** ダイアログ ボックスで、 **[構成プロパティ]**、 **[配置]**、 **[サーバー]** の順にクリックし、マスター サーバーの名前を設定します。  
+1.  マスター サーバー。ソリューション エクスプ ローラーでソリューション名を右クリックし、選択**プロパティ**します。 **[プロパティ]** ダイアログ ボックスで、 **[構成プロパティ]** 、 **[配置]** 、 **[サーバー]** の順にクリックし、マスター サーバーの名前を設定します。  
   
-2.  下位サーバー。ソリューション エクスプ ローラーでソリューション名を右クリックし、選択**プロパティ**します。 **[プロパティ]** ダイアログ ボックスで、 **[構成プロパティ]**、 **[配置]**、 **[サーバー]** の順にクリックし、下位サーバーの名前を設定します。  
+2.  下位サーバー。ソリューション エクスプ ローラーでソリューション名を右クリックし、選択**プロパティ**します。 **[プロパティ]** ダイアログ ボックスで、 **[構成プロパティ]** 、 **[配置]** 、 **[サーバー]** の順にクリックし、下位サーバーの名前を設定します。  
   
 #### <a name="create-and-deploy-a-secondary-database-in-ssdt"></a>セカンダリ データベースを作成および配置する (SSDT)  
   

@@ -2,7 +2,7 @@
 title: SendUsingSMTPServer プロパティ (WMI MSReportServer_ConfigurationSetting) | Microsoft Docs
 ms.date: 03/01/2017
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: wmi-provider-library-reference
 ms.topic: conceptual
 apiname:
@@ -13,14 +13,14 @@ apitype: MOFDef
 helpviewer_keywords:
 - SendUsingSMTPServer property
 ms.assetid: c4abf03a-7a0e-4087-8aa6-91e4277ab65c
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 89801b7297cc784d1e5f38a648e042a1e58a53cd
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: a5e292a91ff23e658ca31ae42401df8ea846fcc5
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47698090"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65570217"
 ---
 # <a name="configurationsetting-property---sendusingsmtpserver"></a>ConfigurationSetting プロパティ - SendUsingSMTPServer
   レポート サーバーの電子メール構成で **SendUsing** 要素を **true**に設定するかどうかを指定します。  

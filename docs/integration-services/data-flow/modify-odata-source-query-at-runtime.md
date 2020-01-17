@@ -8,17 +8,20 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: bcbba7f4-6e5d-46e6-a73a-3f17d3ff376a
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: bbfb753b0c2674e3345286b5a2ee2f038228c5d2
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: aa8a5454fb85c4a6bcfe53088549107f09b9772f
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52517840"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71298208"
 ---
 # <a name="provide-an-odata-source-query-at-runtime"></a>実行時の OData ソース クエリの提供
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
  データ フロー タスクの **[OData ソース].[クエリ]** プロパティに*式*を追加すると、OData ソースのクエリを実行時に変更できます。  
   
  返される列は、デザイン時に返されたものと同じ列である必要があります。それ以外の場合、パッケージの実行時にエラーが発生します。 $select クエリ オプションを使用する場合は、同じ列を (同じ順序で) 指定してください。 $select オプションを使用するより安全な代替手段は、ソース コンポーネント UI で、直接使用することを希望しない列を選択解除することです。  
@@ -28,9 +31,9 @@ ms.locfileid: "52517840"
 ## <a name="provide-the-query-as-a-parameter"></a>クエリをパラメーターとして指定する  
  次の手順では、OData ソース コンポーネントによって使用されるクエリを、パッケージのパラメーターとして公開する方法を示します。  
   
-1.  **[データ フロー タスク]** を右クリックし、**[パラメーター化]** オプションを選択します。  
+1.  **[データ フロー タスク]** を右クリックし、 **[パラメーター化]** オプションを選択します。  
   
-2.  **[パラメーター化]** ダイアログで、**[プロパティ]** に対して **[\<OData ソース コンポーネント名>].[クエリ]** を選択します。  
+2.  **[パラメーター化]** ダイアログで、 **[プロパティ]** に対して **[\<OData ソース コンポーネント名>].[クエリ]** を選択します。  
   
 3.  **[新しいパラメーターの作成]** または **[既存のパラメーターを使用する]** のどちらかを選択します。  
   
@@ -40,7 +43,7 @@ ms.locfileid: "52517840"
   
     2.  パラメーターの既定の **[値]** を指定します。  
   
-    3.  パラメーターに対応する **[スコープ]** (**[パッケージ]** または **[プロジェクト]**) を指定します。  
+    3.  パラメーターに対応する **[スコープ]** ( **[パッケージ]** または **[プロジェクト]** ) を指定します。  
   
     4.  パラメーターが **[必須]** であるかどうかを指定します。  
   
@@ -53,7 +56,7 @@ ms.locfileid: "52517840"
   
 2.  **[プロパティ]** ウィンドウで、 **[Expressions]** プロパティを強調表示します。  
   
-3.  [...] (省略記号) をクリックすると、**[プロパティ式エディター]** が表示されます。  
+3.  [...] (省略記号) をクリックすると、 **[プロパティ式エディター]** が表示されます。  
   
 4.  **[OData ソース].[クエリ]** プロパティを選択します。  
   

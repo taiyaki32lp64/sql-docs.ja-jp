@@ -16,11 +16,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 35092821d2407e90e550a4351f186de6a585cd64
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52791384"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63071797"
 ---
 # <a name="show-query-properties-visual-database-tools"></a>クエリのプロパティの表示 (Visual Database Tools)
   クエリのプロパティは、クエリおよびビュー デザイナーの [プロパティ] ウィンドウで表示できます。  
@@ -31,7 +31,7 @@ ms.locfileid: "52791384"
   
  **[プロパティ]** ウィンドウにクエリのプロパティが表示されます。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [クエリに関する基本操作の実行 (Visual Database Tools)](visual-database-tools.md)  
   
   

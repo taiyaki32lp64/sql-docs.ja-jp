@@ -1,5 +1,5 @@
 ---
-title: bcp_setcolfmt |Microsoft Docs
+title: bcp_setcolfmt | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -19,11 +19,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 2d5d777686bd40fa1b405f20da6173fc2de82640
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48118372"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63226241"
 ---
 # <a name="bcpsetcolfmt"></a>bcp_setcolfmt
   **Bcp_setcolfmt**関数は、 [bcp_colfmt](bcp-colfmt.md)します。 列の照合順序を指定するときに、 **bcp_setcolfmt**関数を使用する必要があります。 [bcp_setbulkmode](bcp-setbulkmode.md) 1 つ以上の列の形式を指定するために使用できます。  
@@ -106,7 +106,7 @@ cbValue
   
 -   省略可能なターミネータ バイト シーケンスの長さ  
   
- 呼び出しごとに**bcp_setcolfmt**のユーザー ファイルの 1 つの列の形式を指定します。 たとえば、5 つの列のユーザーのデータ ファイル内の 3 つの列の既定の設定を変更するにまず[bcp_columns](bcp-columns.md)**(5)** を呼び出して**bcp_setcolfmt**の 5 回これらの呼び出しの 3 つのカスタム形式を設定します。 残りの 2 つの呼び出しでは、BCP_FMT_TYPE を 0 に設定し、BCP_FMT_INDICATOR_LENGTH、BCP_FMT_DATA_LEN を設定し、 *cbValue* 0、SQL_VARLEN_DATA、0 とそれぞれします。 このプロシージャでは、5 つの列すべてをコピーします。それらの列のうち 3 つはカスタマイズされた形式でコピーされ、2 つは既定の形式でコピーされます。  
+ 呼び出しごとに**bcp_setcolfmt**のユーザー ファイルの 1 つの列の形式を指定します。 たとえば、5 つの列のユーザーのデータ ファイル内の 3 つの列の既定の設定を変更するにまず[bcp_columns](bcp-columns.md) **(5)** を呼び出して**bcp_setcolfmt**の 5 回これらの呼び出しの 3 つのカスタム形式を設定します。 残りの 2 つの呼び出しでは、BCP_FMT_TYPE を 0 に設定し、BCP_FMT_INDICATOR_LENGTH、BCP_FMT_DATA_LEN を設定し、 *cbValue* 0、SQL_VARLEN_DATA、0 とそれぞれします。 このプロシージャでは、5 つの列すべてをコピーします。それらの列のうち 3 つはカスタマイズされた形式でコピーされ、2 つは既定の形式でコピーされます。  
   
  **Bcp_columns**関数を呼び出す前に呼び出す必要があります**bcp_setcolfmt**します。  
   

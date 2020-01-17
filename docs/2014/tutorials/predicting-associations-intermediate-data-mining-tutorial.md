@@ -11,11 +11,11 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: bee5ca4ded1b2fd5cbda0712cb766c825b9d0318
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56022364"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62472847"
 ---
 # <a name="predicting-associations-intermediate-data-mining-tutorial"></a>アソシエーションの予測 (中級者向けデータ マイニング チュートリアル)
   モデルの処理が完了したら、モデルに格納されているアソシエーションに関する情報を使用して予測を作成できます。 このレッスンの最後の作業では、作成したアソシエーション モデルに対して予測クエリを作成する方法について学習します。 このレッスンは、予測クエリ ビルダーの使用方法について理解していることを前提に、アソシエーション モデルに対する予測クエリの作成方法について説明します。 詳細については予測クエリ ビルダーを使用する方法[データ マイニング クエリ インターフェイス](../../2014/analysis-services/data-mining/data-mining-query-tools.md)します。  

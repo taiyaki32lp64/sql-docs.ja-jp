@@ -1,91 +1,79 @@
 ---
-title: データベースをバックアップおよび復元
+title: データベースをバックアップし、復元する
 titleSuffix: Azure Data Studio
-description: Azure Data Studio を使用してデータベース バックアップおよび復元する方法について説明します
-ms.custom: seodec18
-ms.date: 09/24/2018
+description: Azure Data Studio を使用してデータベースをバックアップし、復元する方法について説明します。
 ms.prod: sql
 ms.technology: azure-data-studio
-ms.reviewer: alayu; sstein
 ms.topic: tutorial
-author: stevestein
-ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 0e6025c59206f48fe6cf5cd5bf5182ea73090bbf
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
-ms.translationtype: MT
+author: markingmyname
+ms.author: maghan
+ms.reviewer: alayu; sstein
+ms.custom: seodec18
+ms.date: 11/04/2019
+ms.openlocfilehash: bdf3bb3151cfac9f68a9765a2c59232b9fb59f56
+ms.sourcegitcommit: 830149bdd6419b2299aec3f60d59e80ce4f3eb80
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53207131"
+ms.lasthandoff: 11/04/2019
+ms.locfileid: "73532473"
 ---
-# <a name="backup-and-restore-databases-using-includename-sosincludesname-sos-shortmd"></a>バックアップと復元を使用するデータベース [!INCLUDE[name-sos](../includes/name-sos-short.md)]
+# <a name="backup-and-restore-databases-using-includename-sosincludesname-sos-shortmd"></a>[!INCLUDE[name-sos](../includes/name-sos-short.md)] を使用してデータベースをバックアップし、復元する
 
-このチュートリアルでは、次の [!INCLUDE[name-sos](../includes/name-sos-short.md)] の使用方法を学習します:
+このチュートリアルでは、次の目的で [!INCLUDE[name-sos](../includes/name-sos-short.md)] を使用する方法について学習します。
 > [!div class="checklist"]
-> * データベースのバックアップ 
-> * バックアップ状態の表示
-> * バックアップを実行するためのスクリプトの生成
-> * データベースの復元
-> * 復元タスクの状態の表示
+> * データベースをバックアップする 
+> * バックアップ状態を表示する
+> * バックアップを実行するために使用するスクリプトを生成する
+> * データベースを復元する
+> * 復元タスクの状態を表示する
 
 ## <a name="prerequisites"></a>Prerequisites
 
-のチュートリアルでは、SQL Server *TutorialDB* が必要です。 *TutorialDB*データベースを作成するには、次のクイック スタートのいずれかを完了してください。
+このチュートリアルには、SQL Server *TutorialDB* が必要です。 *TutorialDB* データベースを作成するには、次のクイックスタートのいずれかを実行します。
 
-- [[!INCLUDE[name-sos-short](../includes/name-sos-short.md)] を使用して、SQL Server に接続し、クエリを実行する](quickstart-sql-server.md)
+* [[!INCLUDE[name-sos-short](../includes/name-sos-short.md)] を使用して SQL Server に接続し、クエリを実行する](quickstart-sql-server.md)
 
-このチュートリアルでは、SQL Server データベースに接続する必要があります。 Azure SQL Database は、Azure Data Studio から Azure SQL Database のバックアップを実行して復元しないように自動バックアップ、います。 詳細については、次を参照してください。 [SQL Database 自動バックアップについての詳細情報](https://docs.microsoft.com/azure/sql-database/sql-database-automated-backups)します。
+このチュートリアルでは、SQL Server データベースに接続する必要があります。 Azure SQL Database には自動バックアップがあるため、Azure Data Studio では Azure SQL Database のバックアップと復元が実行されません。 詳細は、[自動 SQL Database バックアップ](https://docs.microsoft.com/azure/sql-database/sql-database-automated-backups)に関するページを参照してください。
 
-## <a name="backup-a-database"></a>データベースのバックアップ
+## <a name="back-up-a-database"></a>データベースをバックアップする
 
-1. TutorialDB の データベース ダッシュ ボードを開きます (**サーバー**サイドバー (**CTRL + G**) を開き、**データベース** を展開、**TutorialDB** を右クリックして、**管理** を選択します)。
+1. TutorialDB データベースダッシュボードを開きます ( **[サーバー]** サイドバーを開き (**Ctrl + G**)、 **[データベース]** を展開し、 **[TutorialDB]** を右クリック、 **[管理]** を選択します)。
 
-2. **データベースのバックアップ** ダイアログを開きます (**タスク**ウィジェットにある **バックアップ** をクリックします)。
+2. **[データベースのバックアップ]** ダイアログを開きます ( **[タスク]** ウィジェットで **[バックアップ]** をクリックします)。
 
-   ![タスクのウィジェット](./media/tutorial-backup-restore-sql-server/tasks.png)
+   ![タスク ウィジェット](./media/tutorial-backup-restore-sql-server/tasks.png)
 
-3. このチュートリアルでは、既定のバックアップ オプションを使用します。**バックアップ** をクリックします。
+3. このチュートリアルでは、既定のバックアップ オプションが使用されています。そのため、 **[バックアップ]** をクリックします。
    ![バックアップ ダイアログ](./media/tutorial-backup-restore-sql-server/backup-dialog.png)
 
-**バックアップ** をクリックした後、 **データベースのバックアップ** ダイアログが閉じられ、バックアップ プロセスを開始します。
+**[バックアップ]** をクリックすると、 **[データベースのバックアップ]** ダイアログボックスが消え、バックアップ プロセスが開始されます。
 
-## <a name="view-the-backup-status-and-view-the-backup-script"></a>バックアップ状態の表示とバックアップ スクリプトの表示
+## <a name="view-the-backup-status-and-view-the-backup-script"></a>バックアップの状態を表示し、バックアップ スクリプトを表示する
 
-1. **操作バー**の時計のアイコンをクリックするか、または **CTRL + T** を押して、*タスク履歴* サイド バーを開きます。
+1. **[タスク履歴]** ペインが表示されるか、**CTRL + T** キーを押します。
 
    ![タスクの履歴](./media/tutorial-backup-restore-sql-server/task-history.png)
 
-2. バックアップ スクリプトをエディターに表示するには、**成功したデータベースのバックアップ** を右クリックして **スクリプト** を選択します。
+2. エディターでバックアップ スクリプトを表示するには、 **[Backup Database succeeded]\(データベース バックアップに成功しました\)** を右クリックし、 **[スクリプト]** を選択します。
 
-   ![バックアップ スクリプト](./media/tutorial-backup-restore-sql-server/task-script.png) 
+   ![バックアップ スクリプト](./media/tutorial-backup-restore-sql-server/task-script.png)
 
-## <a name="restore-a-database-from-a-backup-file"></a>バックアップ ファイルからデータベースを復元
+## <a name="restore-a-database-from-a-backup-file"></a>データベースをバックアップ ファイルから復元する
 
+1. **[サーバー]** サイドバーを開き (**Ctrl + G**)、サーバーを右クリックし、 **[管理]** を選択します。
 
-1. **サーバー** サイドバー (**CTRL + G**) を開き、対象のサーバーを右クリックし、**管理** を選択します。 
+2. **[データベースの復元]** ダイアログを開きます ( **[タスク]** ウィジェットで **[復元]** をクリックします)。
 
-2. **データベースを復元** ダイアログを開きます (**タスク**ウィジェットの **復元** をクリックします)。
+   ![復元タスク](media/tutorial-backup-restore-sql-server/tasks-restore.png)
 
-2. **Restore from** フィールドで **バックアップ ファイル** を選択します。 
+3. **[復元元]** フィールドで **[バックアップ ファイル]** を選択します。
 
-3. **バックアップ ファイルのパス** フィールドの省略記号(...)をクリックして、*TutorialDB* の最新のバックアップ ファイルを選択します。
+4. **[バックアップ ファイル パス]** フィールドの省略記号 (...) をクリックし、*TutorialDB* の最新バックアップ ファイルを選択します。
 
-3. バックアップ ファイルから新しいデータベースを復元するために、 **Destination** セクションの **ターゲット データベース** フィールドに **TutorialDB_Restored** と入力します。
+5. **[Destination]\(復元先\)** セクションの **[Target database]\(復元先データベース\)** フィールドに「**TutorialDB_Restored**」と入力すると、バックアップ ファイルが新しいデータベースに復元されます。 次に、 **[復元]** を選択します。
 
    ![復元 (restore)](./media/tutorial-backup-restore-sql-server/restore.png)
 
-4. **復元** をクリックします。
-
-5. 復元操作の状態を表示するには、**CTRL + T** を押して **タスク履歴** サイドバーを開きます。
+6. 復元操作の状態を表示するには、**Ctrl + T** キーを押して **[タスク履歴]** を開きます。
 
    ![復元 (restore)](./media/tutorial-backup-restore-sql-server/task-history-restore.png)
-
-
-このチュートリアルでは、以下の使用方法を学習しました:
-> [!div class="checklist"]
-> * データベースのバックアップ 
-> * バックアップ状態の表示
-> * バックアップを実行するためのスクリプトの生成
-> * データベースの復元
-> * 復元タスクの状態の表示
-

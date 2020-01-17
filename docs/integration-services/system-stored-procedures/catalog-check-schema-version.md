@@ -8,17 +8,20 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: language-reference
 ms.assetid: e0d5e9f5-59c6-4118-87b5-4aa5c37a7df6
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: 11806408179b85749269b07e63437ef4c27fe2e9
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 7d7ec8899e880220dc2011014501a883fafa4470
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47645830"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71295620"
 ---
-# <a name="catalogcheckschemaversion"></a>catalog.check_schema_version
+# <a name="catalogcheck_schema_version"></a>catalog.check_schema_version 
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
   SSISDB カタログ スキーマと [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] バイナリ (ISServerExec および SQLCLR アセンブリ) に互換性があるかどうかを示します。  
@@ -35,7 +38,7 @@ catalog.check_schema_version [@use32bitruntime = ] use32bitruntime
   
 ## <a name="arguments"></a>引数  
  [ @use32bitruntime= ] *use32bitruntime*  
- パラメーターが **True** の場合、32 ビット バージョンの dtexec が呼び出されます。 *use32bitruntime* は、**Bool** です。  
+ パラメーターが **1** に設定されている場合、32 ビット バージョンの dtexec が呼び出されます。 *use32bitruntime* は、**int** です。  
   
 ## <a name="result-set"></a>結果セット  
  なし  

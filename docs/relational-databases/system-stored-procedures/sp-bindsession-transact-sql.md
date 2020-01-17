@@ -17,18 +17,17 @@ helpviewer_keywords:
 ms.assetid: 1436fe21-ad00-4a98-aca1-1451a5e571d2
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: a24c219937341b7c1f9d44515bf52c4de220d4c2
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: fac327d88aa8a6d74e153c1c7b2f3d637bf6f936
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47851990"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68046024"
 ---
-# <a name="spbindsession-transact-sql"></a>sp_bindsession (Transact-SQL)
+# <a name="spbindsession-transact-sql"></a>sp_bindsession (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  バインドまたは同じインスタンス内の他のセッションにセッションをバインド解除、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)]します。 セッションをバインドすると、複数のセッションを同じトランザクションに含むことができ、ROLLBACK TRANSACTION または COMMIT TRANSACTION が実行されるまでロックを共有できます。  
+  バインドまたは同じインスタンス内の他のセッションにセッションをバインド解除、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)]します。 セッションをバインドすると、同じトランザクションに参加し、ROLLBACK TRANSACTION または COMMIT TRANSACTION が実行されるまで、ロックを共有する 2 つ以上のセッションができます。  
   
 > [!IMPORTANT]  
 >  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]代わりに、複数のアクティブな結果セット (MARS) または分散トランザクションを使用してください。 詳細については、「[複数のアクティブな結果セット &#40;MARS&#41; の使用](../../relational-databases/native-client/features/using-multiple-active-result-sets-mars.md)」を参照してください。  
@@ -50,11 +49,11 @@ sp_bindsession { 'bind_token' | NULL }
  0 (成功) または 1 (失敗)  
   
 ## <a name="remarks"></a>コメント  
- バインドされた 2 つのセッションが共有するのはトランザクションとロックだけです。 各セッションはそれぞれの分離レベルを保持し、一方のセッションで新しい分離レベルを設定しても、もう一方のセッションの分離レベルには影響しません。 各セッションは引き続きセキュリティ アカウントによって識別されます。またこれらのセッションは、そのアカウントに権限が与えられているデータベース リソースにしかアクセスできません。  
+ バインドされている 2 つのセッションでは、トランザクションとロックだけを共有します。 各セッションは独自の分離レベルを保持し、1 つのセッションで新しい分離レベルを設定した場合、その他のセッションの分離レベルは影響しません。 各セッションがそのセキュリティ アカウントによって識別されると、アカウントがアクセス許可を付与されて、データベース リソースにのみアクセスできます。  
   
- **sp_bindsession**バインド トークンを使用して、2 つ以上の既存のクライアント セッションをバインドします。 これらのクライアント セッションがの同じインスタンスである必要があります、[!INCLUDE[ssDE](../../includes/ssde-md.md)]バインド トークンの取得元とします。 セッションとは、クライアントが実行しているコマンドのことです。 バインドされたデータベース セッションは、トランザクションとロック領域を共有します。  
+ **sp_bindsession**バインド トークンを使用して、2 つ以上の既存のクライアント セッションをバインドします。 これらのクライアント セッションがの同じインスタンスである必要があります、[!INCLUDE[ssDE](../../includes/ssde-md.md)]バインド トークンの取得元とします。 セッションは、コマンドを実行するクライアントです。 バインド先のデータベース セッションでは、トランザクションとロック領域を共有します。  
   
- [!INCLUDE[ssDE](../../includes/ssde-md.md)]の 1 つのインスタンスから取得したバインド トークンは、DTC トランザクションの場合でも、別のインスタンスに接続するクライアント セッションには使用できません。 バインド トークンは、各インスタンス内でローカルに有効なだけで、複数のインスタンスにわたって共有することはできません。 別のインスタンス上のクライアント セッションをバインドする、 [!INCLUDE[ssDE](../../includes/ssde-md.md)]、実行して、別のバインド トークンを取得する必要があります**sp_getbindtoken**します。  
+ [!INCLUDE[ssDE](../../includes/ssde-md.md)]の 1 つのインスタンスから取得したバインド トークンは、DTC トランザクションの場合でも、別のインスタンスに接続するクライアント セッションには使用できません。 バインド トークンは、内側の各インスタンスし、複数のインスタンス間で共有できませんローカルでのみ有効です。 別のインスタンス上のクライアント セッションをバインドする、 [!INCLUDE[ssDE](../../includes/ssde-md.md)]、実行して、別のバインド トークンを取得する必要があります**sp_getbindtoken**します。  
   
  **sp_bindsession**はアクティブでないトークンを使用している場合は、エラーで失敗します。  
   
@@ -76,7 +75,7 @@ EXEC sp_bindsession 'BP9---5---->KB?-V'<>1E:H-7U-]ANZ';
 GO  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [sp_getbindtoken &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-getbindtoken-transact-sql.md)   
  [srv_getbindtoken&#40;拡張ストアド プロシージャ API&#41;](../../relational-databases/extended-stored-procedures-reference/srv-getbindtoken-extended-stored-procedure-api.md)   
  [システム ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  

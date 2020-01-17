@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 2f574a34-4bab-40a4-89a8-ad4907ffc3fd
 author: Shamikg
 ms.author: Shamikg
-manager: craigg
-ms.openlocfilehash: 3e4142a3492b37df8e161b965639bf8900570c23
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: c084db939482fe57e150d4beb22eab4d5e6decb9
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51663921"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68006549"
 ---
 # <a name="find-databases-wizard-select-files-accesstosql"></a>データベースのウィザード (ファイルの選択) を検索 (AccessToSQL)
 データベースの検出ウィザードのファイルの選択 ページには、検索中に検出されたファイルが一覧表示されます。 SSMA を追加するファイルを選択するには、ファイル名を含む行を選択します。 ファイルの選択が完了したら、クリックして**次**選択の確認 ページを表示します。  
@@ -51,6 +50,6 @@ Access データベース ファイルのパスが表示されます。
 **[更新日時]**  
 日付と、データベースが最後に更新されました。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
 [ユーザー インターフェイスの Reference(Access)](https://msdn.microsoft.com/af24c303-4a41-449b-9c86-d6558a97e839)  
   

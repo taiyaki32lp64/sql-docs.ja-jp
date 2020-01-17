@@ -1,5 +1,5 @@
 ---
-title: 出力パラメーターの BLOB のストリーミング サポート |Microsoft Docs
+title: BLOB 出力パラメーターのストリーミングサポート |Microsoft Docs
 description: 出力パラメーターの BLOB のストリーミング サポート
 ms.custom: ''
 ms.date: 06/14/2018
@@ -12,13 +12,12 @@ helpviewer_keywords:
 - OLE DB Driver for SQL Server, BLOBs
 author: pmasl
 ms.author: pelopes
-manager: craigg
-ms.openlocfilehash: 70befe255703441e9eea8e837f0787a756eb5bab
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 0ff6386f1d2f953b2e28641edf7330ba85b9a19d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47635280"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67936510"
 ---
 # <a name="streaming-support-for-blob-output-parameters"></a>BLOB 出力パラメーターのストリーミング サポート
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

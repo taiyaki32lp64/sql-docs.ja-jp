@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: f2426d68-71bc-4ef7-a5cb-ee9d6c1c9671
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: f07f835361fcf29143376fe468a55f0bf26e31e3
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 7cd157edd6111dec29ae238a1c383879e66ac0b3
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47601280"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68067432"
 ---
 # <a name="data-buffer-address"></a>データ バッファーのアドレス
 アプリケーションでは、データ バッファーのアドレスを渡すという名前の多くの場合、引数にドライバー *ValuePtr*または類似する名前。 呼び出す次の場合など**SQLBindCol**、アプリケーションのアドレスを指定する、*日付*変数。  

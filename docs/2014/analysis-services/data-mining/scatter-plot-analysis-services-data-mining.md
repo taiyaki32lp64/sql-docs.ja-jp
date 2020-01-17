@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - charts [Analysis Services]
@@ -16,12 +15,12 @@ ms.assetid: 166812ec-fd1c-47c8-88db-d5041142be91
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 5135fa8ed6565096e8e2cf5ff851c3c0c2aced72
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: d3319b72f1c3b37805a653d1f315aa0a3363521a
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48179172"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66082943"
 ---
 # <a name="scatter-plot-analysis-services---data-mining"></a>散布図 (Analysis Services - データ マイニング)
   *散布図* では、モデルで予測された値とデータの実際の値がグラフで比較されます。 実際の値は X 軸に表示され、予測された値は Y 軸に表示されます。 そのほかに、完璧な予測 (予測された値が実際の値と完全に一致する状態) を表す線も表示されます。 この理想的な 45 度の線からの距離により、それぞれの点の予測の正確さがわかります。  
@@ -48,12 +47,12 @@ ms.locfileid: "48179172"
   
 |トピック|リンク|  
 |------------|-----------|  
-|Targeted Mailing モデルのリフト チャートの作成方法に関するチュートリアルが含まれています。|[基本的なデータ マイニング チュートリアル](../../tutorials/basic-data-mining-tutorial.md)<br /><br /> [リフト チャートを使用した精度テスト&#40;基本的なデータ マイニング チュートリアル&#41;](../../tutorials/testing-accuracy-with-lift-charts-basic-data-mining-tutorial.md)|  
-|関連するグラフの種類について説明します。|[リフト チャート&#40;Analysis Services - データ マイニング&#41;](lift-chart-analysis-services-data-mining.md)<br /><br /> [利益チャート&#40;Analysis Services - データ マイニング&#41;](profit-chart-analysis-services-data-mining.md)<br /><br /> [分類マトリックス&#40;Analysis Services - データ マイニング&#41;](classification-matrix-analysis-services-data-mining.md)|  
-|マイニング モデルとマイニング構造の相互検証の使用法について説明します。|[クロス検証&#40;Analysis Services - データ マイニング&#41;](cross-validation-analysis-services-data-mining.md)|  
-|リフト チャートおよびその他の精度チャートを作成する手順について説明します。|[テスト、検証タスク、および操作方法&#40;データ マイニング&#41;](testing-and-validation-tasks-and-how-tos-data-mining.md)|  
+|Targeted Mailing モデルのリフト チャートの作成方法に関するチュートリアルが含まれています。|[基本的なデータ マイニング チュートリアル](../../tutorials/basic-data-mining-tutorial.md)<br /><br /> [リフト チャートを使用した精度テスト (基本的なデータ マイニング チュートリアル)](../../tutorials/testing-accuracy-with-lift-charts-basic-data-mining-tutorial.md)|  
+|関連するグラフの種類について説明します。|[リフト チャート (Analysis Services - データ マイニング)](lift-chart-analysis-services-data-mining.md)<br /><br /> [利益チャート (Analysis Services - データ マイニング)](profit-chart-analysis-services-data-mining.md)<br /><br /> [分類マトリックス &#40;Analysis Services - データ マイニング&#41;](classification-matrix-analysis-services-data-mining.md)|  
+|マイニング モデルとマイニング構造の相互検証の使用法について説明します。|[相互検証 (Analysis Services - データ マイニング)](cross-validation-analysis-services-data-mining.md)|  
+|リフト チャートおよびその他の精度チャートを作成する手順について説明します。|[テストおよび検証タスク、および操作方法 (データ マイニング)](testing-and-validation-tasks-and-how-tos-data-mining.md)|  
   
 ## <a name="see-also"></a>参照  
- [テストと検証&#40;データ マイニング&#41;](testing-and-validation-data-mining.md)  
+ [テストおよび検証 (データ マイニング)](testing-and-validation-data-mining.md)  
   
   

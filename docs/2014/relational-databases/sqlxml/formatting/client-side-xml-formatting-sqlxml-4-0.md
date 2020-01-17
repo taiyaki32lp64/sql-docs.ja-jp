@@ -12,15 +12,15 @@ helpviewer_keywords:
 - client-side XML formatting
 - client-side-xml attribute
 ms.assetid: 9630a21d-a93b-4d3b-8a25-c4b32399f993
-author: douglaslMS
-ms.author: douglasl
+author: MightyPen
+ms.author: genemi
 manager: craigg
-ms.openlocfilehash: ee49bec234f5ee29d377253034a2bc58b195c3b2
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 89f1327a7672d7de5b480bf3b8757b0c85ff138f
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52759664"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66012318"
 ---
 # <a name="client-side-xml-formatting-sqlxml-40"></a>クライアント側の XML 書式設定 (SQLXML 4.0)
   ここでは、クライアント側の XML 書式設定に関する情報を提供します。 クライアント側の書式設定とは、中間層での XML の書式設定を指します。  
@@ -122,7 +122,7 @@ AS
 > [!NOTE]  
 >  SQLXMLOLEDB プロバイダーを使用している ADO アプリケーションでの XML テンプレートを実行して、両方を指定する場合、**クライアント側の xml**テンプレートと ClientSideXML プロパティで指定された値プロバイダー内の属性、テンプレートが優先されます。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [クライアント側とサーバー側の XML 書式設定のアーキテクチャ&#40;SQLXML 4.0&#41;](server-side-xml-formatting-sqlxml-4-0.md)   
  [FOR XML &#40;SQL Server&#41;](../../xml/for-xml-sql-server.md)   
  [XML のセキュリティに関する考慮事項の&#40;SQLXML 4.0&#41;](../../sqlxml-annotated-xsd-schemas-xpath-queries/security/for-xml-security-considerations-sqlxml-4-0.md)   

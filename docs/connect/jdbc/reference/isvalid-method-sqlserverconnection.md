@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 3b0a8bbf-9369-4456-9ab8-1434ccacdd7e
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 855a2fc8c6ff5a1cb9cee1db7504e0dd309113b0
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 3915690475e5ce9321af7fc15498c2bde018c640
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47727450"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67977131"
 ---
 # <a name="isvalid-method-sqlserverconnection"></a>isValid メソッド (SQLServerConnection)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -42,7 +41,7 @@ public boolean isValid(int timeout)
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- この isValid メソッドは、java.sql.Connection インターフェイスで isValid メソッドによって指定されます。  
+ この isValid メソッドは、java. .sql. 接続インターフェイスの isValid メソッドによって指定されます。  
   
 ## <a name="see-also"></a>参照  
  [SQLServerConnection のメンバー](../../../connect/jdbc/reference/sqlserverconnection-members.md)   

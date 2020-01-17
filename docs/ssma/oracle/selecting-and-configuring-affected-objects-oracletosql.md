@@ -12,13 +12,13 @@ helpviewer_keywords:
 ms.assetid: 545eeda2-9829-4187-a858-619a96b4b71d
 author: Shamikg
 ms.author: Shamikg
-manager: v-thobro
-ms.openlocfilehash: fbd151b0fa8682865e44615c22a9fdd7577014ea
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+manager: shamikg
+ms.openlocfilehash: c06fb621cab581e934ba4655ed6507149d109c60
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52405919"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68266503"
 ---
 # <a name="selecting-and-configuring-affected-objects-oracletosql"></a>影響を受けるオブジェクトの選択と構成 (OracleToSQL)
 このページでは、テーブルを選択することができ、SSMA 前の手順で選択したオブジェクトの実行の結果を検証するときに、外部キーを変更とを比較する必要があります。 また、検証パラメーターをカスタマイズできます。  
@@ -41,7 +41,7 @@ SSMA のテスト担当者は、これらのオブジェクトのいずれかを
   
 -   Rule  
   
--   既定値  
+-   既定  
   
 -   同一。  
   
@@ -50,15 +50,15 @@ SSMA のテスト担当者は、これらのオブジェクトのいずれかを
 ## <a name="sql"></a>Sql  
 SQL タブには、「テーブル作成」にはが含まれています。 SQL のテーブルを選択します。  
   
-## <a name="data"></a>データ  
+## <a name="data"></a>data  
 [データ] タブには、選択したテーブル内のデータが表示されます。  
   
-## <a name="properties"></a>プロパティ  
+## <a name="properties"></a>Properties  
 [プロパティ] タブには、選択したテーブルのプロパティが表示されます。 次のフィールド、[プロパティ] タブの下。  
   
 -   作成または最後に変更  
   
--   [オブジェクト名]  
+-   オブジェクト名  
   
 ## <a name="columns-comparison-settings"></a>列の比較の設定  
 テーブルの列に対して比較の規則の確立**列比較**ページ。 次の設定を行うことができます。  
@@ -109,7 +109,7 @@ SSMA テスターによって生成された SELECT ステートメントを表�
 ## <a name="next-step"></a>次の手順  
 [呼び出し順序のカスタマイズ&#40;OracleToSQL&#41;](../../ssma/oracle/customizing-calls-order-oracletosql.md)  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
 [テスト_ケースの準備の終了&#40;OracleToSQL&#41;](../../ssma/oracle/finishing-test-case-preparation-oracletosql.md)  
 [テスト_ケースを実行している&#40;OracleToSQL&#41;](../../ssma/oracle/running-test-cases-oracletosql.md)  
 [移行されたデータベース オブジェクトのテスト&#40;OracleToSQL&#41;](../../ssma/oracle/testing-migrated-database-objects-oracletosql.md)  

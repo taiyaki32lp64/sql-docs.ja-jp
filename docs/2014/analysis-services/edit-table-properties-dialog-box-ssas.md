@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.bidtoolset.edittablepropdb.f1
@@ -13,12 +12,12 @@ ms.assetid: 8d913e83-7246-44cc-8fc7-31729023c0d8
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 11e2dbc6cdd0911361aff76f252e9a772104789b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 1fefc72d81129ac4691f35209f25c4f348272c81
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48229282"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66081442"
 ---
 # <a name="edit-table-properties-dialog-box-ssas"></a>[テーブルのプロパティの編集] ダイアログ ボックス (SSAS)
   **[テーブルのプロパティの編集]** ダイアログ ボックスを使用すると、テーブルのインポート ウィザードを使用してモデル デザイナーにインポートされたテーブルのプロパティを表示して変更を加えることができます。 このダイアログ ボックスにアクセスするには、モデル デザイナーでテーブルを選択し、 **[テーブル]** メニュー、 **[テーブルのプロパティ]** の順にクリックします。  
@@ -99,7 +98,7 @@ ms.locfileid: "48229282"
  **[OK]**  
  クリックすると、列の置換も含めて、加えたすべての変更が適用されます。  
   
-## <a name="see-also"></a>参照  
- [テーブルと列&#40;SSAS 表形式&#41;](tabular-models/tables-and-columns-ssas-tabular.md)  
+## <a name="see-also"></a>関連項目  
+ [テーブルと列 &#40;SSAS テーブル&#41;](tabular-models/tables-and-columns-ssas-tabular.md)  
   
   

@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 93dfc377-45f1-4384-9392-560d9331a915
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 5a39312142a2d81761320c1e5f75cefe2a85b9d7
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 8711190a6d3cbae0c716f7f62af478b70b9473e0
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51673491"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68038912"
 ---
 # <a name="functions-on-boolean-values---not-function"></a>ブール値に対する関数 - 機能しない 
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -45,7 +44,7 @@ fn:not($arg as item()*) as xs:boolean
  このトピックではさまざまなに格納されている XML インスタンスに対して XQuery の例について**xml**型の列には、AdventureWorks データベース。  
   
 ### <a name="a-using-the-not-xquery-function-to-find-product-models-whose-catalog-descriptions-do-not-include-the-specifications-element"></a>A. 製品モデル カタログの説明の検索に not() XQuery 関数を使用するは含めないでください、\<仕様 > 要素。  
- 次のクエリを使用して、カタログの説明に <`Specifications`> 要素が含まれていない製品モデルの製品モデル ID を含む XML を作成します。  
+ 次のクエリは、カタログの説明は含めないでください製品モデルの製品モデル Id を含む XML を構築、<`Specifications`> 要素。  
   
 ```  
 WITH XMLNAMESPACES ('https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription' AS pd)  
@@ -62,7 +61,7 @@ WHERE CatalogDescription.exist('
   
  上のクエリに関して、次の点に注意してください。  
   
--   このドキュメントは名前空間を使用しているため、サンプルでは WITH NAMESPACES ステートメントを使用しています。 使用することも、**名前空間を宣言**キーワード、 [XQuery プロローグ](../xquery/modules-and-prologs-xquery-prolog.md)プレフィックスを定義しています。  
+-   ドキュメントは、名前空間を使用しているため、サンプルは、WITH NAMESPACES ステートメントを使用します。 使用することも、**名前空間を宣言**キーワード、 [XQuery プロローグ](../xquery/modules-and-prologs-xquery-prolog.md)プレフィックスを定義しています。  
   
 -   クエリを含む XML を構築し、<`Product`> 要素とその**ProductModelID**属性。  
   
@@ -71,9 +70,9 @@ WHERE CatalogDescription.exist('
  各製品モデル カタログの説明が含まれているために、この結果セットが空で、\<仕様 > 要素。  
   
 ### <a name="b-using-the-not-xquery-function-to-retrieve-work-center-locations-that-do-not-have-a-machinehours-attribute"></a>B. not() XQuery 関数を使用して、MachineHours 属性を持たないワーク センターの場所を取得する  
- 次のクエリは、Instructions 列に対して指定されています。 この列には、製品モデルの製造手順が格納されています。  
+ Instructions 列に対しては、次のクエリを指定します。 この列には、製品モデルの製造手順が格納されています。  
   
- 特定の製品モデルでは、MachineHours を指定しないワーク センターの場所がクエリによって取得されます。 属性は、 **MachineHours**が指定されていない、\<場所 > 要素。  
+ 特定の製品モデルの場合は、クエリは、MachineHours を指定しないワーク センターの場所を取得します。 属性は、 **MachineHours**が指定されていない、\<場所 > 要素。  
   
 ```  
 SELECT ProductModelID, Instructions.query('  
@@ -109,7 +108,7 @@ ProductModelID Result
   
 -   **Not()** 関数には、xs:boolean 型、node() *、または空のシーケンスの引数のみサポートされています。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [xml データ型に対する XQuery 関数](../xquery/xquery-functions-against-the-xml-data-type.md)  
   
   

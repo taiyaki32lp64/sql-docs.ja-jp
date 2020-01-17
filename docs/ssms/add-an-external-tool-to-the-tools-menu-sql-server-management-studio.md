@@ -13,15 +13,14 @@ helpviewer_keywords:
 - adding external tools
 - Tools menu
 ms.assetid: 25c1399e-afb1-4337-b74b-57a199cf26db
-author: stevestein
-ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 1a81c4d80a63765ed7014104b0fe40679b4ca93b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 41cb442df9651f4013a8053bf0070350eacac0c3
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47594550"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68265586"
 ---
 # <a name="add-an-external-tool-to-the-tools-menu-sql-server-management-studio"></a>[ツール] メニューへの外部ツールの追加 (SQL Server Management Studio)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

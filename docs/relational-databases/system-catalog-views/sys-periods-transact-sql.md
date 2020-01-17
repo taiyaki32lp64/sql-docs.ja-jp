@@ -12,24 +12,23 @@ dev_langs:
 ms.assetid: 25e66ed3-2270-4c5c-9f5a-2c0f165a57ca
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: eed8badea9b7136cb71c5d89a76494aab190a0d2
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: eea7709c67eab0dc9fe1890135f9ae03225cdff2
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51655962"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68068091"
 ---
 # <a name="sysperiods-transact-sql"></a>sys.periods (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
   期間が定義されている各テーブルの行を返します。  
   
-|列ヘッダー|データ型|説明|  
+|列ヘッダー|データの種類|説明|  
 |-------------------|---------------|-----------------|  
 |NAME|**sysname**|期間の名前|  
 |period_type|**tinyint**|期間の型を表す数値。<br /><br /> 1 = システム期間|  
-|period_type_desc|**nvarchar(60)**|列の型のテキストの説明:<br /><br /> SYSTEM_TIME_PERIOD|  
+|period_type_desc|**nvarchar(60)**|列の種類の説明テキスト。<br /><br /> SYSTEM_TIME_PERIOD|  
 |object_id|**int**|Period_type 列を含むテーブルの id|  
 |start_column_id|**int**|期間下限の境界を定義する列の id|  
 |end_column_id|**int**|期間の上限を定義する列の id|  

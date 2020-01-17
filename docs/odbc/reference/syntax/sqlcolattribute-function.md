@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: 8c45c598-cb01-4789-a571-e93619a18ed9
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: eb4ba702d540ccad7a976cc4045408d5e1d88766
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: c4577b97c827d527422fe2448656496d7c196c40
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52542174"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68118699"
 ---
 # <a name="sqlcolattribute-function"></a>SQLColAttribute 関数
 **準拠**  
@@ -39,7 +38,7 @@ ms.locfileid: "52542174"
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
   
 SQLRETURN SQLColAttribute (  
       SQLHSTMT        StatementHandle,  
@@ -192,7 +191,7 @@ SQLRETURN SQLColAttribute (
 ## <a name="example"></a>例  
  次のサンプル コードでは、ハンドルと接続は解放されません。 参照してください[SQLFreeHandle 関数](../../../odbc/reference/syntax/sqlfreehandle-function.md)、 [ODBC のサンプル プログラム](../../../odbc/reference/sample-odbc-program.md)、および[SQLFreeStmt 関数](../../../odbc/reference/syntax/sqlfreestmt-function.md)ハンドルおよびステートメントを解放するコード サンプルについてはします。  
   
-```  
+```cpp  
 // SQLColAttibute.cpp  
 // compile with: user32.lib odbc32.lib  
   
@@ -212,11 +211,12 @@ struct DataBinding {
 void printStatementResult(SQLHSTMT hstmt) {  
    int bufferSize = 1024, i;  
    SQLRETURN retCode;  
-   SQLSMALLINT numColumn = 0, bufferLenUsed;  
+   SQLSMALLINT numColumn = 0, bufferLenUsed;
+   
+   retCode = SQLNumResultCols(hstmt, &numColumn);  
+   
    SQLPOINTER* columnLabels = (SQLPOINTER *)malloc( numColumn * sizeof(SQLPOINTER*) );  
    struct DataBinding* columnData = (struct DataBinding*)malloc( numColumn * sizeof(struct DataBinding) );  
-  
-   retCode = SQLNumResultCols(hstmt, &numColumn);  
   
    printf( "Columns from that table:\n" );  
    for ( i = 0 ; i < numColumn ; i++ ) {  

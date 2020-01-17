@@ -12,13 +12,12 @@ dev_langs:
 ms.assetid: 1d769f62-f646-4057-b93a-bf5f90e935ed
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: a63af515ccbca170c480bc2df2dfa0a84387dda7
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 30b70c57d90f7772368713ac378c809a3dd7c46e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56038543"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68117196"
 ---
 # <a name="create-selective-xml-index-transact-sql"></a>CREATE SELECTIVE XML INDEX (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
@@ -37,7 +36,7 @@ CREATE SELECTIVE XML INDEX index_name
     [WITH (<index_options>)]  
   
 <table_object> ::=  
- { [database_name. [schema_name ] . | schema_name. ] table_name }  
+ { database_name.schema_name.table_name | schema_name.table_name | table_name }  
   
 <promoted_node_path_list> ::=   
 <named_promoted_node_path_item> [, <promoted_node_path_list>]  
@@ -99,7 +98,7 @@ identifier
  *index_name*  
  作成する新しいインデックスの名前を指定します。 インデックス名は、テーブル内では一意である必要がありますが、データベース内で一意である必要はありません。 インデックス名は、[識別子](../../relational-databases/databases/database-identifiers.md)の規則に従っている必要があります。  
   
- *\<table_object>* インデックスに XML 列を含むテーブルです。 次のどちらかの形式を使用します。  
+ *\<table_object>* インデックスに XML 列を含むテーブルです。 次のいずれかの形式を使用します。  
   
 -   `database_name.schema_name.table_name`  
   
@@ -112,9 +111,9 @@ identifier
  *xml_column_name*  
  インデックスを作成するパスが含まれる XML 列の名前を指定します。  
   
- [WITH XMLNAMESPACES **(**\<xmlnamespace_list>**)**] インデックスを作成するパスで使用される名前空間の一覧を指定します。 WITH XMLNAMESPACES 句の構文については、「[WITH XMLNAMESPACES &#40;Transact-SQL&#41;](../../t-sql/xml/with-xmlnamespaces.md)」をご覧ください。  
+ [WITH XMLNAMESPACES **(** \<xmlnamespace_list> **)** ] インデックスを作成するパスで使用される名前空間の一覧を指定します。 WITH XMLNAMESPACES 句の構文については、「[WITH XMLNAMESPACES &#40;Transact-SQL&#41;](../../t-sql/xml/with-xmlnamespaces.md)」をご覧ください。  
   
- FOR **(**\<promoted_node_path_list>**)** 省略可能な最適化ヒントを使用してインデックスを作成するパスの一覧を指定します。 CREATE または ALTER ステートメントで指定できるパスと最適化ヒントについては、「[選択的 XML インデックスのパスと最適化ヒントの指定](../../relational-databases/xml/specify-paths-and-optimization-hints-for-selective-xml-indexes.md)」をご覧ください。  
+ FOR **(** \<promoted_node_path_list> **)** 省略可能な最適化ヒントを使用してインデックスを作成するパスの一覧を指定します。 CREATE または ALTER ステートメントで指定できるパスと最適化ヒントについては、「[選択的 XML インデックスのパスと最適化ヒントの指定](../../relational-databases/xml/specify-paths-and-optimization-hints-for-selective-xml-indexes.md)」をご覧ください。  
   
  WITH *\<index_options>* インデックス オプションについては、「[CREATE XML INDEX &#40;選択的 XML インデックス&#41;](../../t-sql/statements/create-xml-index-selective-xml-indexes.md)」を参照してください。  
   

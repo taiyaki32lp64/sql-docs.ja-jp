@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - SQMSupportEnabled property
@@ -20,23 +19,23 @@ ms.assetid: a34d046a-6562-4d98-b827-37cebc6d77b4
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 7c9047bc6bae67b005d8ed93e4831557a0dac9b5
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 1cc2d52bd942fe15eeabd72f1c37740637e692d2
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53368054"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66069049"
 ---
 # <a name="feature-properties"></a>機能のプロパティ
   機能プロパティは、製品の機能に関連しており、そのほとんどが詳細プロパティです。サーバー インスタンス間のリンクを制御するプロパティが含まれます。  
   
  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] では、次の表に示すサーバー プロパティがサポートされています。 その他のサーバー プロパティとその設定方法の詳細については、「 [Configure Server Properties in Analysis Services](server-properties-in-analysis-services.md)」を参照してください。  
   
- **適用対象:** 多次元サーバー モードの場合のみ  
+ **適用対象:** 多次元サーバー モードのみ  
   
 ## <a name="properties"></a>プロパティ  
   
-|プロパティ|既定値|説明|  
+|プロパティ|既定|説明|  
 |--------------|-------------|-----------------|  
 |`ManagedCodeEnabled`|1|CLR ストレージ手順が有効かどうかを示す、ブール型プロパティです。|  
 |`LinkInsideInstanceEnabled`|1|リンク オブジェクトを同じサーバー インスタンス内で作成できるかどうかを示す、ブール型プロパティです。|  

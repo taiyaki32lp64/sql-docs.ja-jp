@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - mining models [Analysis Services], copying
@@ -16,12 +15,12 @@ ms.assetid: 7975bb02-f188-49a0-b7de-5b9b216254ad
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: dfae5c36cd05f7122645479980517b14bd2c328d
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 7464c7d780a420b0f95b59ebde02494bd40661e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52529091"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66084218"
 ---
 # <a name="make-a-copy-of-a-mining-model"></a>マイニング モデルのコピーの作成
   マイニング モデルのコピーの作成は、同じデータに基づいて複数のマイニング モデルをすばやく作成する場合に便利です。 モデルをコピーした後で、パラメーターを変更したり、フィルターを追加したりすることで、新しいコピーを編集できます。  
@@ -38,7 +37,7 @@ ms.locfileid: "52529091"
   
 3.  モデルを選択し、右クリックしてショートカット メニューを開きます。  
   
-     - または -  
+     \- または -  
   
      モデルを選択します。 **[マイニング モデル]** メニューの **[新しいマイニング モデル]** をクリックします。  
   
@@ -58,7 +57,7 @@ ms.locfileid: "52529091"
   
 5.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [マイニング モデルのフィルター (Analysis Services - データ マイニング)](mining-models-analysis-services-data-mining.md)   
  [マイニング モデル タスクと操作方法](mining-model-tasks-and-how-tos.md)   
  [マイニング モデルからのフィルターの削除](delete-a-filter-from-a-mining-model.md)  

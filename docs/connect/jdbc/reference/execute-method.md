@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: fa96d0f8-101b-422f-a767-405be9a5f74f
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 76b495fc9d583ea93b32d6625a836fcd84faca47
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 9f7e87040fa74954435ed52f9923568e8bfed3fd
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47731190"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67954922"
 ---
 # <a name="execute-method-"></a>execute () メソッド
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -36,7 +35,7 @@ public boolean execute()
 ```  
   
 ## <a name="return-value"></a>戻り値  
- **true**ステートメントは結果セットを返す場合。 **false**場合は、更新数またはない結果が返されます。  
+ ステートメントによって結果セットが返される場合は**true**を指定します。 更新数を返すか、または結果を返さない場合は**false** 。  
   
 ## <a name="exceptions"></a>例外  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  

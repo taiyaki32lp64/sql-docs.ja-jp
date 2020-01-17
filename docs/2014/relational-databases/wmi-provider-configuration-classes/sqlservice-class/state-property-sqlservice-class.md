@@ -19,11 +19,11 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: cc1484a09929f4e4a8534b2c2acac2089adfbb97
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53349726"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62912187"
 ---
 # <a name="state-property-sqlservice-class"></a>State プロパティ (SqlService クラス)
   サービスの現在の状態を取得または設定します。  
@@ -46,7 +46,7 @@ object
  値は、次のいずれかを指定できます。  
   
  1  
- 停止中。 サービスは停止しています。  
+ 停止中。 サービスが停止します。  
   
  2  
  開始保留中。 サービスは開始を待機しています。  

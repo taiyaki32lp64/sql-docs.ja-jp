@@ -12,21 +12,20 @@ f1_keywords:
 ms.assetid: 301ea227-0455-40ba-9009-d38f8676b325
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 223d1f8cab99a75d78bfa75b25a2092e4ba83865
-ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
+ms.openlocfilehash: 3bdb3585647e64ad1a175900263628b607eb0041
+ms.sourcegitcommit: 8732161f26a93de3aa1fb13495e8a6a71519c155
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/18/2018
-ms.locfileid: "53591576"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71710363"
 ---
 # <a name="login-for-updatable-subscriptions"></a>[更新可能なサブスクリプション] のログイン
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   即時更新するために、このウィザードの **[更新可能なサブスクリプション]** ページで **[レプリケート]** を選択した場合は、パブリッシャーへの接続に使用する、サブスクライバーでのアカウントを指定する必要があります。 
   
- 接続はサブスクライバーで起動されるトリガーによって使用され、サブスクライバーに変更を反映します。 このアカウントは、**[更新可能なサブスクリプション]** ページで **[変更をキューに登録し、可能な場合はコミット]** を選択している場合でも必要です。 サブスクリプションの新規作成ウィザードでは、必要に応じて即時更新に切り替えることができるキュー更新が既定で構成されます。  
+ 接続はサブスクライバーで起動されるトリガーによって使用され、サブスクライバーに変更を反映します。 このアカウントは、 **[更新可能なサブスクリプション]** ページで **[変更をキューに登録し、可能な場合はコミット]** を選択している場合でも必要です。 サブスクリプションの新規作成ウィザードでは、必要に応じて即時更新に切り替えることができるキュー更新が既定で構成されます。  
   
-> **重要!!** 接続用に指定するアカウントには、レプリケーションによってパブリケーション データベース内に作成されるビューのデータの挿入、更新、および削除だけを実行できる権限を与える必要があります。 それ以外の権限は与えないでください。 各サブスクライバーで構成したアカウントに、**syncobj_**_\<HexadecimalNumber>_ の形式で名前が指定されたパブリケーション データベース内のビューに対する権限を与えます。  
+> **重要!!** 接続用に指定するアカウントには、レプリケーションによってパブリケーション データベース内に作成されるビューのデータの挿入、更新、および削除だけを実行できる権限を与える必要があります。 それ以外の権限は与えないでください。 各サブスクライバーで構成したアカウントに、**syncobj_** _\<HexadecimalNumber>_ の形式で名前が指定されたパブリケーション データベース内のビューに対する権限を与えます。  
   
  接続の種類として、3 つのオプションがあります。  
   
@@ -36,7 +35,7 @@ ms.locfileid: "53591576"
   
 -   レプリケーションによって作成されるリンク サーバー。サブスクライバーで変更を行うユーザーの資格情報を使用して接続を行います。  
   
- 最初の 2 つのオプションは、このウィザードで指定できます。 最後のオプションは、[sp_link_publication &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-link-publication-transact-sql.md) を使用した場合にだけ指定できます。**@security_mode** パラメーターに値 **1** を指定します。  
+ 最初の 2 つのオプションは、このウィザードで指定できます。 最後のオプションは、[sp_link_publication &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-link-publication-transact-sql.md) を使用した場合にだけ指定できます。`@security_mode` パラメーターに値 **1** を指定します。  
   
 ## <a name="options"></a>オプション  
  **[SQL Server 認証を使用して接続するリンク サーバーを作成する]**  

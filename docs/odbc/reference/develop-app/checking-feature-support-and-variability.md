@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: ff45f220-9b8b-4c44-82f8-a8e9913fffea
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: b9af2cfd73556baca4870428cdcdfcee3e07191d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 21495e538a554a477336d1a92926c11fe762c5af
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47648820"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68062660"
 ---
 # <a name="checking-feature-support-and-variability"></a>機能のサポートと可変性の確認
 アプリケーションの通常の呼び出し機能のサポートと可変性を確認する**SQLGetInfo**、 **SQLGetFunctions**、および**SQLGetTypeInfo**します。 開始点としては、ドライバーの API と SQL 文法の適合性レベルです。 これらには、さまざまなレベルの機能サポートについて説明します。 アプリケーションを呼び出して**SQLGetInfo**サポートまたは必要な機能のばらつきを判断するには、他のオプションと**SQLGetFunctions**を決定する関数かどうか、返されたを超える必要があります準拠レベルはサポートされていると**SQLGetTypeInfo**をどのような SQL データ型がサポートされているかを判断します。  

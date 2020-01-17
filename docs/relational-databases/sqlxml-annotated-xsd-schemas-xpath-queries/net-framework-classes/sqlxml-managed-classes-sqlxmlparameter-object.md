@@ -1,6 +1,5 @@
 ---
-title: SqlXmlParameter オブジェクト (SQLXML マネージ クラス) |Microsoft Docs
-ms.custom: ''
+title: SqlXmlParameter オブジェクト (SQLXML)
 ms.date: 03/16/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -16,28 +15,28 @@ helpviewer_keywords:
 ms.assetid: 40b938bf-7b09-48b3-9771-4421a673e17b
 author: MightyPen
 ms.author: genemi
-manager: craigg
+ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: fb7d6de3e00430e39d51dd365282e997a1e284d0
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 6d86e6d3a6e910dbd18f2038f127ba99bfd65369
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56036183"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75252617"
 ---
 # <a name="sqlxml-managed-classes---sqlxmlparameter-object"></a>SQLXML マネージド クラス - SqlXmlParameter オブジェクト
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-  SqlXmlParameter オブジェクトには、これらのプロパティがサポートされています。  
+  SqlXmlParameter オブジェクトは、次のプロパティをサポートしています。  
   
  名前  
- パラメーターの名前。 コマンドをパラメーターとして渡すことができます。 SqlXmlCommand オブジェクトの CreateParameter メソッドを呼び出すと、パラメーター オブジェクトが作成されます。  
+ パラメーターの名前。 コマンドをパラメーターとして渡すことができます。 SqlXmlCommand オブジェクトの CreateParameter メソッドを呼び出すと、parameter オブジェクトが作成されます。  
   
  値  
- パラメーターの値。 実際のサンプルでは、次を参照してください。 [SQL クエリの実行&#40;SQLXML マネージ クラス&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/net-framework-classes/executing-sql-queries-sqlxml-managed-classes.md)します。  
+ パラメーターの値。 実際のサンプルについては、「 [SQL クエリの実行 &#40;SQLXML マネージクラス&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/net-framework-classes/executing-sql-queries-sqlxml-managed-classes.md)」を参照してください。  
   
 ## <a name="see-also"></a>参照  
- [SqlXmlCommand オブジェクト&#40;SQLXML マネージ クラス&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/net-framework-classes/sqlxml-managed-classes-sqlxmlcommand-object.md)   
- [SqlXmlAdapter オブジェクト&#40;SQLXML マネージ クラス&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/net-framework-classes/sqlxml-managed-classes-sqlxmladapter-object.md)   
+ [SqlXmlCommand オブジェクト &#40;SQLXML マネージクラス&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/net-framework-classes/sqlxml-managed-classes-sqlxmlcommand-object.md)   
+ [SqlXmlAdapter オブジェクト &#40;SQLXML マネージクラス&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/net-framework-classes/sqlxml-managed-classes-sqlxmladapter-object.md)   
  [.NET 環境での SQLXML 機能へのアクセス](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/net-framework-classes/accessing-sqlxml-functionality-in-the-net-environment.md)  
   
   

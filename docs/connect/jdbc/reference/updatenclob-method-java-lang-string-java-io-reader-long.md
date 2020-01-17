@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: ad5c8d9b-f8c8-4ddf-85c8-23420bba54ee
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 9f82cbfee67acdb914263bd2fe70e0388f86a7f0
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a99434485ad244eec1f9cbb8ff4707e04f9d9907
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47695090"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67998901"
 ---
 # <a name="updatenclob-method-javalangstring-javaioreader-long"></a>updateNClob (java.lang.String, java.io.Reader, long) メソッド
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -39,7 +38,7 @@ public void updateNClob(java.lang.String columnLabel,
   
  *reader*  
   
- リーダー オブジェクト。  
+ リーダーオブジェクト。  
   
  *length*  
   
@@ -49,9 +48,9 @@ public void updateNClob(java.lang.String columnLabel,
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- この updateNClob メソッドは、java.sql.ResultSet インターフェイスの updateNClob メソッドによって指定されます。  
+ この updateNClob メソッドは、java.sql.ResultSet インターフェイスの updateNClob メソッドで規定されています。  
   
- このメソッドでのみサポートされます**nvarchar (max)**、 **ntext**、および**xml**列。 このメソッドを他のデータ型で使用すると、例外がスローされます。  
+ このメソッドは、 **nvarchar (max)** 、 **ntext**、および**xml**列でのみサポートされています。 このメソッドを他のデータ型で使用すると、例外がスローされます。  
   
 ## <a name="see-also"></a>参照  
  [updateNClob メソッド &#40;SQLServerResultSet&#41;](../../../connect/jdbc/reference/updatenclob-method-sqlserverresultset.md)   

@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: cdb31c76-e559-475c-b33a-aac24f73e70e
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: ee70ddd7b3aa7fc1455eeefbf7913a24f73d0f03
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a84932192fc7f51f21a7fd65c06c7417ef02da92
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47715350"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67965844"
 ---
 # <a name="keys-collection-adox"></a>Keys コレクション (ADOX)
 すべてを含む[キー](../../../ado/reference/adox-api/key-object-adox.md)のオブジェクトを[テーブル](../../../ado/reference/adox-api/table-object-adox.md)します。  
@@ -46,7 +45,7 @@ ms.locfileid: "47715350"
   
 -   [Indexes コレクションのプロパティ、メソッド、およびイベント](../../../ado/reference/adox-api/indexes-collection-properties-methods-and-events.md)  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [Keys Append メソッド、キーの種類、RelatedColumn、RelatedTable、UpdateRule プロパティの例 (VB)](../../../ado/reference/adox-api/keys-append-method-key-type-relatedcolumn-relatedtable-example-vb.md)   
  [Keys コレクションのプロパティ、メソッド、およびイベント](../../../ado/reference/adox-api/keys-collection-properties-methods-and-events.md)   
  [Key オブジェクト (ADOX)](../../../ado/reference/adox-api/key-object-adox.md)

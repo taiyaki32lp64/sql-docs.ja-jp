@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: 07f13e1c-0b20-4f9e-ad62-c438983f2785
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 0d9411ab88d259718aaa62873e615a62efdd82e9
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: ede0a23a6e37c47a1af242748233ca49b0cdfab7
+ms.sourcegitcommit: f5807ced6df55dfa78ccf402217551a7a3b44764
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48070308"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69493882"
 ---
 # <a name="defining-calculated-members"></a>計算されるメンバーの定義
   計算されるメンバーとは、キューブ データ、算術演算子、数値、関数を組み合わせて定義した、ディメンション グループまたはメジャー グループのメンバーです。 たとえば、キューブ内の 2 つの物理的なメジャーの合計を計算する、計算されるメンバーを作成できます。 計算されるメンバーの定義はキューブ内に保存されますが、その値はクエリ時に計算されます。  
@@ -33,7 +32,7 @@ ms.locfileid: "48070308"
   
      次の図は、キューブ デザイナーの **[計算]** タブを示しています。  
   
-     ![キューブ デザイナーの [計算] タブ](../../2014/tutorials/media/l6-calculatedmembers-1.gif "キューブ デザイナーの [計算] タブ")  
+     ![キューブデザイナーの [計算] タブ](../../2014/tutorials/media/l6-calculatedmembers-1.gif "キューブデザイナーの [計算] タブ")  
   
 2.  **[計算]** タブのツール バーで、 **[新しい計算されるメンバー]** をクリックします。  
   
@@ -41,9 +40,9 @@ ms.locfileid: "48070308"
   
      次の図は、 **[新しい計算されるメンバー]** をクリックしたとき、 **計算式**ペインに表示されるフォームを示しています。  
   
-     ![計算式ペイン フォーム](../../2014/tutorials/media/l6-calculatedmembers-02.gif "計算式ペイン フォーム")  
+     ![計算式ペインフォーム](../../2014/tutorials/media/l6-calculatedmembers-02.gif "計算式ペインフォーム")  
   
-3.  **名前**ボックスに、計算されるメジャーの名前を変更`[Total Sales Amount]`します。  
+3.  **[名前]** ボックスで、計算されるメジャーの名前を`[Total Sales Amount]`に変更します。  
   
      計算されるメンバーの名前に空白文字が含まれる場合は、その名前全体を角かっこで囲む必要があります。  
   
@@ -58,7 +57,7 @@ ms.locfileid: "48070308"
   
 5.  **[計算ツール]** ペインの **[メタデータ]** タブで **[Internet Sales-Sales Amount]** をクリックし、 **計算式** ペインの **[式]** ボックスまでドラッグします。  
   
-6.  **式**ボックスに、プラス記号を入力 (`+`) 後 **[Measures]. [Internet Sales-sales Amount]** します。  
+6.  **[式]** ボックスに、`+` **[Measures]. の後にプラス記号 () を入力します。 [Internet Sales-Sales Amount]** 。  
   
 7.  **[計算ツール]** ペインの **[メタデータ]** タブで **[Reseller Sales]** を展開します。次に、 **[Reseller Sales-Sales Amount]** を、 **計算式** ペインの **[式]** ボックスにあるプラス符号 (+) の後ろにドラッグします。  
   
@@ -70,7 +69,7 @@ ms.locfileid: "48070308"
   
      次の図は、上記の手順で指定した設定が入力された **計算式** ペインを示しています。  
   
-     ![計算式ペインの Populated](../../2014/tutorials/media/l6-calculatedmembers-03.gif "設定の計算式ペイン")  
+     ![計算式ペイン](../../2014/tutorials/media/l6-calculatedmembers-03.gif "計算式ペイン")  
   
 10. **[計算]** タブのツール バーにある **[スクリプト ビュー]** をクリックし、 **計算式** ペインで計算スクリプトを確認します。  
   
@@ -84,11 +83,11 @@ ms.locfileid: "48070308"
   
      次の図は、チュートリアルのこの時点で **計算式** ペインに表示される計算スクリプトを示しています。  
   
-     ![計算式ペインでスクリプト](../../2014/tutorials/media/l6-calculatedmembers-04.gif "計算式ペインでスクリプト")  
+     ![計算式ペインのスクリプト](../../2014/tutorials/media/l6-calculatedmembers-04.gif "計算式ペインのスクリプト")  
   
-12. ツールバーで、**計算**] タブで [**フォーム ビュー**、ことを確認します`[Total Sales Amount]`でが選択されている、**スクリプト オーガナイザー**ウィンドウをクリック**新しい計算されるメンバー**します。  
+12. **[計算]** タブのツールバーで、 **[フォームビュー]** を`[Total Sales Amount]`クリックし、 **[スクリプトオーガナイザー]** ペインでが選択されていることを確認して、 **[新しい計算]** されるメンバー をクリックします。  
   
-13. この新しい計算されるメンバーの名前を変更`[Total Product Cost]`、し、次の式を作成、**式**ボックス。  
+13. この新しい計算されるメンバーの名前を`[Total Product Cost]`に変更し、 **[式]** ボックスに次の式を作成します。  
   
     ```  
     [Measures].[Internet Sales-Total Product Cost] + [Measures].[Reseller Sales-Total Product Cost]  
@@ -102,9 +101,9 @@ ms.locfileid: "48070308"
   
 ## <a name="defining-gross-profit-margin-calculations"></a>売上総利益率の計算の定義  
   
-1.  確認します`[Total Product Cost]`でが選択されている、**スクリプト オーガナイザー**ペイン、およびクリック**新しい計算されるメンバー**のツールバーで、**計算** タブ。  
+1.  `[Total Product Cost]` **[スクリプトオーガナイザー]** ペインでが選択されていることを確認し、 **[計算]** タブのツールバーの **[新しい計算]** されるメンバー をクリックします。  
   
-2.  **名前**ボックスにこの新しい計算されるメジャーの名前に変更`[Internet GPM]`します。  
+2.  **[名前]** ボックスで、この新しい計算されるメジャーの名前`[Internet GPM]`をに変更します。  
   
 3.  **[式]** ボックスで、以下の MDX 式を作成します。  
   
@@ -120,7 +119,7 @@ ms.locfileid: "48070308"
   
 6.  **[計算]** タブのツール バーで、 **[新しい計算されるメンバー]** をクリックします。  
   
-7.  **名前**ボックスにこの新しい計算されるメジャーの名前に変更`[Reseller GPM]`します。  
+7.  **[名前]** ボックスで、この新しい計算されるメジャーの名前`[Reseller GPM]`をに変更します。  
   
 8.  **[式]** ボックスで、以下の MDX 式を作成します。  
   
@@ -136,7 +135,7 @@ ms.locfileid: "48070308"
   
 11. **[計算]** タブのツール バーで、 **[新しい計算されるメンバー]** をクリックします。  
   
-12. **名前**ボックスに、この計算されるメジャーの名前を変更`[Total GPM]`します。  
+12. **[名前]** ボックスで、この計算されるメジャーの名前`[Total GPM]`をに変更します。  
   
 13. **[式]** ボックスで、以下の MDX 式を作成します。  
   
@@ -154,7 +153,7 @@ ms.locfileid: "48070308"
   
 16. **[計算]** タブのツール バーで **[スクリプト ビュー]** をクリックし、計算スクリプトに追加した 3 つの計算を確認します。  
   
-17. 計算スクリプトの直前の新しい行を追加、`[Internet GPM]`計算し、独自の行のスクリプトに次のテキストを追加します。  
+17. 計算スクリプト内の計算の`[Internet GPM]`直前に新しい行を追加し、次のテキストを独自の行にスクリプトに追加します。  
   
     ```  
     /* Calculations to calculate gross profit margin */  
@@ -162,17 +161,17 @@ ms.locfileid: "48070308"
   
      次の図は、新しい 3 つの計算が表示されている **計算式** ペインを示しています。  
   
-     ![計算式ペインで、新しい計算](../../2014/tutorials/media/l6-calculatedmembers-05.gif "計算式ペインで、新しい計算")  
+     ![計算式ペインの新しい計算](../../2014/tutorials/media/l6-calculatedmembers-05.gif "計算式ペインの新しい計算")  
   
 ## <a name="defining-the-percent-of-total-calculations"></a>全体に対する比率の計算の定義  
   
 1.  **[計算]** タブのツール バーで、 **[フォーム ビュー]** をクリックします。  
   
-2.  **スクリプト オーガナイザー**ペインで、 `[Total GPM]`、 をクリックし、**新しい計算されるメンバー**のツールバーで、**計算**タブ。  
+2.  **[スクリプトオーガナイザー]** ペインで、 `[Total GPM]` を選択し、 **[計算]** タブのツールバーの **[新しい計算されるメンバー]** をクリックします。  
   
      **[スクリプト オーガナイザー]** ペインで最後の計算されるメンバーをクリックしてから **[新しい計算されるメンバー]** をクリックすると、新しい計算されるメンバーがスクリプトの末尾に挿入されます。 スクリプトは、 **[スクリプト オーガナイザー]** ペインに表示される順序で実行されます。  
   
-3.  この新しい計算されるメンバーの名前を変更`[Internet Sales Ratio to All Products]`します。  
+3.  この新しい計算されるメンバーの名前を`[Internet Sales Ratio to All Products]`に変更します。  
   
 4.  **[式]** ボックスに以下の式を入力します。  
   
@@ -195,7 +194,7 @@ ms.locfileid: "48070308"
   
 7.  **[計算]** タブのツール バーで、 **[新しい計算されるメンバー]** をクリックします。  
   
-8.  この計算されるメンバーの名前を変更`[Reseller Sales Ratio to All Products]`します。  
+8.  この計算されるメンバーの名前を`[Reseller Sales Ratio to All Products]`に変更します。  
   
 9. **[式]** ボックスに以下の式を入力します。  
   
@@ -216,7 +215,7 @@ ms.locfileid: "48070308"
   
 12. **[計算]** タブのツール バーで、 **[新しい計算されるメンバー]** をクリックします。  
   
-13. この計算されるメンバーの名前を変更`[Total Sales Ratio to All Products]`します。  
+13. この計算されるメンバーの名前を`[Total Sales Ratio to All Products]`に変更します。  
   
 14. **[式]** ボックスに以下の式を入力します。  
   
@@ -237,7 +236,7 @@ ms.locfileid: "48070308"
   
 17. **[計算]** タブのツール バーで **[スクリプト ビュー]** をクリックし、計算スクリプトに追加した 3 つの計算を確認します。  
   
-18. 計算スクリプトの直前の新しい行を追加、`[Internet Sales Ratio to All Products]`計算し、独自の行のスクリプトに次のテキストを追加します。  
+18. 計算スクリプト内の計算の`[Internet Sales Ratio to All Products]`直前に新しい行を追加し、次のテキストを独自の行にスクリプトに追加します。  
   
     ```  
     /* Calculations to calculate percentage of product to total product sales */  
@@ -273,7 +272,7 @@ ms.locfileid: "48070308"
   
      次の図のように、再販業者による売上の売上総利益率は、インターネットでの販売と比べて著しく低くなっています。  
   
-     ![データ ペインの再販業者の売上を示す](../../2014/tutorials/media/l6-calculatedmembers-7b.gif "再販業者の売上を示すデータ ペイン")  
+     ![再販業者の売上を示すデータペイン](../../2014/tutorials/media/l6-calculatedmembers-7b.gif "再販業者の売上を示すデータペイン")  
   
 9. **Total Sales Ratio to All Products**、 **Internet Sales Ratio to All Products**、および **Reseller Sales Ratio to All Products** メジャーを値領域に追加します。  
   
@@ -288,10 +287,10 @@ ms.locfileid: "48070308"
      アクセサリの売上は毎年増加しているものの、合計売上に占める割合が非常に小さいことがわかります。 また、アクセサリの売上における総利益率は、自転車よりも高くなっています。  
   
 ## <a name="next-task-in-lesson"></a>このレッスンの次の作業  
- [名前付きセットの定義](../analysis-services/lesson-6-2-defining-named-sets.md)  
+ [名前付きセットの定義](lesson-6-2-defining-named-sets.md)  
   
-## <a name="see-also"></a>参照  
- [計算](multidimensional-models-olap-logical-cube-objects/calculations.md)   
+## <a name="see-also"></a>関連項目  
+ [Custom](multidimensional-models-olap-logical-cube-objects/calculations.md)   
  [多次元モデルの計算](multidimensional-models/calculations-in-multidimensional-models.md)   
  [計算されるメンバーの作成](multidimensional-models/create-calculated-members.md)  
   

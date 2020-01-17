@@ -7,15 +7,15 @@ ms.reviewer: ''
 ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: a763d76b-06a3-4d51-9614-01fc9fb1c158
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 04ed80887a2a81a2179dcec423b9e22b3f9d43ef
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 831d0b504a65d485413772ee3711e689e29ee2a3
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56032033"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65489707"
 ---
 # <a name="task-8-adding-a-new-value-for-state-entity-in-excel"></a>タスク 8:Excel で State エンティティに新しい値を追加する
   ここでは、Excel で State エンティティの値を追加し、MDS サーバーに変更をパブリッシュします。  
@@ -26,7 +26,7 @@ ms.locfileid: "56032033"
   
 2.  **Excel**、] をクリックして、**マスター データ**メニューで、タブをクリックして **[エクスプ ローラーの**リボン上。  
   
-3.  **マスター データ エクスプ ローラー**、 **Suppliers**の**モデル**します。 2 つのエンティティ**サプライヤー**と**状態**でエンティティの一覧。  
+3.  **マスター データ エクスプ ローラー**、 **Suppliers**の**モデル**します。 2 つのエンティティが表示されます。**サプライヤー**と**状態**でエンティティの一覧。  
   
 4.  ダブルクリック**状態**一覧にします。 すべてのメンバー、**状態**がワークシートに MDS からのエンティティを表示する必要があります。  
   

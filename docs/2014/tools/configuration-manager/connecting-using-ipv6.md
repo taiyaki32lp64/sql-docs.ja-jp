@@ -15,11 +15,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: db26351430c6b7e0737273b2107bea242c455a2a
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52775244"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63253780"
 ---
 # <a name="connecting-using-ipv6"></a>IPv6 を使用した接続
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] および [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client では、インターネット プロトコル バージョン 4 (IPv4) とインターネット プロトコル バージョン 6 (IPv6) の両方が完全にサポートされます。 Windows で IPv6 が構成されている場合、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のコンポーネントは IPv6 の存在を自動的に認識します。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] で特別な構成は必要ありません。  

@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: d9f49520-72d7-4234-8635-260d0ce4199c
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: be472a4a99324927128514fa9f8cbf19d44d49cc
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 7600734fef44071b1f5e35c136a6b9facdb8b390
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47825905"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67949035"
 ---
 # <a name="level-2-api-functions-odbc-driver-for-oracle"></a>レベル 2 API 関数 (ODBC Driver for Oracle)
 > [!IMPORTANT]  

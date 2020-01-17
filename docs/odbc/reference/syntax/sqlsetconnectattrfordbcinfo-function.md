@@ -12,24 +12,24 @@ helpviewer_keywords:
 ms.assetid: a28fadb9-b998-472a-b252-709507e92005
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 798f986adfeda95ef091161458d94c2ccc33b2e3
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: f16cac6a715716dcef0a1c2b337716835c14b2b7
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47818481"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67910368"
 ---
 # <a name="sqlsetconnectattrfordbcinfo-function"></a>SQLSetConnectAttrForDbcInfo 関数
 **準拠**  
- バージョンで導入されました ODBC 3.81 標準準拠: ODBC。  
+ バージョンが導入されました。ODBC 3.81 規格に準拠します。ODBC  
   
  **概要**  
  **SQLSetConnectAttrForDbcInfo**と同じ**SQLSetConnectAttr**が接続ハンドルの代わりに、接続情報トークンの属性を設定します。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp
+  
 SQLRETURN  SQLSetConnectAttrForDbcInfo(  
                 SQLHDBC_INFO_TOKEN    hDbcInfoToken,  
                 SQLINTEGER            Attribute,  

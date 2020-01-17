@@ -19,11 +19,11 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: 89cdfa63bff88c4f4bb5954402034b31ad7f77ce
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53373604"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63060987"
 ---
 # <a name="errorcontrol-property-sqlservice-class"></a>ErrorControl プロパティ (SqlService クラス)
   起動時にサービスを開始できなかった場合のエラーの重大度を取得または設定します。  
@@ -49,7 +49,7 @@ object
  標準  
  ユーザーへの通知が行われます。  
   
- Severe  
+ 重大  
  システムは最後の正しい構成で再起動されます。  
   
  重大  

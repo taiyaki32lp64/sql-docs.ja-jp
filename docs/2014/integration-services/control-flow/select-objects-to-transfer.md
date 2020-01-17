@@ -9,15 +9,15 @@ ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.transfertasks.selectobjectsmodaldialogs.f1
 ms.assetid: 57941e52-374a-4c07-84eb-9899ff1bb119
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 3c52d22e9c963672495c87912fb9a3989166152f
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 8ca32cdc72bb5c062be4c3745d3f742f39753afa
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52759484"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62830406"
 ---
 # <a name="select-objects-to-transfer"></a>[<転送するオブジェクト> の選択]
   このダイアログ ボックスを使用すると、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の転送タスクを使用して [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] の 1 つのインスタンスから別のインスタンスに転送するオブジェクトを選択できます。  
@@ -26,7 +26,7 @@ ms.locfileid: "52759484"
   
  特定のオブジェクトの転送を指定する場合は、オブジェクトが表示されているグリッド内の行の最初の列にあるチェック ボックスをオンにします。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [Integration Services のエラーおよびメッセージのリファレンス](../integration-services-error-and-message-reference.md)   
  [[ジョブ転送タスク エディター] ([全般] ページ)](../general-page-of-integration-services-designers-options.md)   
  [[ログイン転送タスク エディター] &#40;[ログイン] ページ&#41;](../transfer-logins-task-editor-logins-page.md)   

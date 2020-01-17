@@ -10,12 +10,12 @@ ms.assetid: 6d1ac280-87db-4bd8-ad43-54353647d8b5
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 56999c5e74648ecd36adea3ee941627c1e2e607b
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: b1b79c0908f8639df869d01a8ff862afc5be77cb
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53377902"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62754244"
 ---
 # <a name="determining-the-correct-bucket-count-for-hash-indexes"></a>ハッシュ インデックスの適切なバケット数の決定
   メモリ最適化テーブルを作成するときに `BUCKET_COUNT` パラメーターの値を指定する必要があります。 このトピックでは、`BUCKET_COUNT` パラメーターの適切な値を判断する際の推奨事項を示します。 適切なバケット数を決定できない場合は、代わりに非クラスター化インデックスを使用してください。  `BUCKET_COUNT` の値が不適切な場合 (特に小さすぎる場合)、ワークロードのパフォーマンス、およびデータベースの復旧時間に大きな影響を与えることがあります。 バケット数は大きめに設定することをお勧めします。  
@@ -26,7 +26,7 @@ ms.locfileid: "53377902"
   
  メモリ最適化テーブルの各ハッシュ インデックスに対して 1 個のハッシュ テーブルが割り当てられます。 インデックスがで指定された割り当てられるハッシュ テーブルのサイズ、`BUCKET_COUNT`パラメーター [CREATE TABLE &#40;TRANSACT-SQL&#41; ](/sql/t-sql/statements/create-table-transact-sql)または[CREATE TYPE &#40;TRANSACT-SQL&#41; ](/sql/t-sql/statements/create-type-transact-sql). バケット数は内部的に、最も近い 2 のべき乗に切り上げられます。 たとえば、バケット数に 300,000 を指定すると、実際のバケット数は 524,288 になります。  
   
- バケット数に関する記事とビデオへのリンクについては、「 [ハッシュ インデックス (インメモリ OLTP) に正しいバケット数を指定する方法](https://go.microsoft.com/fwlink/p/?LinkId=525853)」を参照してください。  
+ バケット数に関する記事とビデオへのリンクについては、「 [ハッシュ インデックス (インメモリ OLTP) に正しいバケット数を指定する方法](https://www.mssqltips.com/sqlservertip/3104/determine-bucketcount-for-hash-indexes-for-sql-server-memory-optimized-tables/)」を参照してください。  
   
 ## <a name="recommendations"></a>推奨事項  
  ほとんどの場合、バケット数はインデックス キーにおける別個の値の数の 1 倍から 2 倍の範囲に設定する必要があります。 インデックス キーに重複する値が多数含まれている場合 (平均して各インデックス キー値に対して 10 を超える行がある場合) は、代わりに非クラスター化インデックスを使用します。  
@@ -38,7 +38,7 @@ ms.locfileid: "53377902"
 ### <a name="primary-key-and-unique-indexes"></a>主キーと一意インデックス  
  主キー インデックスは一意であるため、そのキーでの別個の値の数はテーブル内の行の数に相当します。 AdventureWorks データベースの Sales.SalesOrderDetail テーブル内の (SalesOrderID, SalesOrderDetailID) の主キーの例の場合は、次のクエリを発行して、テーブル内の行数に相当する別個の主キーの値の数を計算します。  
   
-```tsql  
+```sql  
 SELECT COUNT(*) AS [row count]   
 FROM Sales.SalesOrderDetail  
 ```  
@@ -48,7 +48,7 @@ FROM Sales.SalesOrderDetail
 ### <a name="non-unique-indexes"></a>一意ではないインデックス  
  (SpecialOfferID, ProductID) の複数列のインデックスなど、その他のインデックスの場合は、次のクエリを発行して一意なインデックス キーの値の数を決定します。  
   
-```tsql  
+```sql  
 SELECT COUNT(*) AS [SpecialOfferID_ProductID index key count]  
 FROM   
    (SELECT DISTINCT SpecialOfferID, ProductID   
@@ -65,7 +65,7 @@ FROM
 ## <a name="troubleshooting-the-bucket-count"></a>バケット数のトラブルシューティング  
  メモリ最適化テーブルのバケット数の問題をトラブルシューティングするには、 [sys.dm_db_xtp_hash_index_stats &#40;TRANSACT-SQL&#41; ](/sql/relational-databases/system-dynamic-management-views/sys-dm-db-xtp-hash-index-stats-transact-sql)空のバケットと行チェーンの長さに関する統計情報を取得します。 次のクエリを使用して、現在のデータベースのすべてのハッシュ インデックスに関する統計情報を取得できます。 データベースに大きなテーブルがある場合、このクエリの実行には数分かかることがあります。  
   
-```tsql  
+```sql  
 SELECT   
    object_name(hs.object_id) AS 'object name',   
    i.name as 'index name',   
@@ -99,7 +99,7 @@ FROM sys.dm_db_xtp_hash_index_stats AS hs
   
  例として、次のテーブルとテーブルのサンプル行を挿入するスクリプトを考えます。  
   
-```tsql  
+```sql  
 CREATE TABLE [Sales].[SalesOrderHeader_test]  
 (  
    [SalesOrderID] [uniqueidentifier] NOT NULL DEFAULT (newid()),  
@@ -139,7 +139,7 @@ GO
   
 -   IX_Status:バケットの 50% が空で、適切です。 しかし、平均チェーン長さは非常に高くなっています (65,536)。 これは、重複する値が多いことを示しています。 したがって、この場合は非クラスター化ハッシュ インデックスの使用は適切ではありません。 代わりに、非クラスター化インデックスを使用する必要があります。  
   
--   IX_OrderSequence:バケットの 0% が空で、値が低すぎます。 また、平均チェーン長さは 8 です。 このインデックスの値は一意であるため、これは平均 8 個の値が各バケットにマップされていることを意味します。 バケット数を増やす必要があります。 インデックス キーには 262,144 個の一意な値があるため、バケット数は少なくとも 262,144 個必要です。 今後さらに大きくなることが予測される場合、さらに数を多くする必要があります。  
+-   IX_OrderSequence:バケットの 0% は、空が低すぎます。 また、平均チェーン長さは 8 です。 このインデックスの値は一意であるため、これは平均 8 個の値が各バケットにマップされていることを意味します。 バケット数を増やす必要があります。 インデックス キーには 262,144 個の一意な値があるため、バケット数は少なくとも 262,144 個必要です。 今後さらに大きくなることが予測される場合、さらに数を多くする必要があります。  
   
 -   主キー インデックス (pk _ _salesorder...):バケットの 36% が空で、適切です。 また、平均チェーン長さも 1 で、適切です。 変更は不要です。  
   
@@ -185,7 +185,7 @@ GO
   
 -   ポイント参照のパフォーマンスを最適化する際は、一意のインデックス値の数の 2 ～ 3 倍のバケット数が適しています。 バケット数を大きくすると、メモリ使用量が増え、フル インデックス スキャンに必要な時間が増えます。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [メモリ最適化テーブルのインデックス](../../2014/database-engine/indexes-on-memory-optimized-tables.md)  
   
   

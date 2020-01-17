@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords:
 - security [Integration Services], firewalls
@@ -16,15 +15,15 @@ helpviewer_keywords:
 - SQL Server Integration Services, firewalls
 - SSIS, firewalls
 ms.assetid: 39975cf2-c351-4205-8c39-27a0fadfb010
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 7160e4622cea397f7b300a1221797349107d38d5
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: b2c6a19eb44b1d53fe87bef0183bdafbb3ec105b
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53369994"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66060852"
 ---
 # <a name="configure-a-windows-firewall-for-access-to-the-ssis-service"></a>SSIS サービスにアクセスするように Windows ファイアウォールを構成する
     
@@ -36,7 +35,7 @@ ms.locfileid: "53369994"
 > [!IMPORTANT]  
 >  リモート サーバーに格納されるパッケージを管理するために、そのリモート サーバー上の [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] サービスのインスタンスに接続する必要はありません。 代わりに、 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] サービスの構成ファイルを編集し、 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] でリモート サーバーに格納されているパッケージが表示されるようにします。 詳細については、「 [Integration Services サービスの構成 (SSIS サービス)](configuring-the-integration-services-service-ssis-service.md)との互換性を維持するために、このサービスをサポートしています。  
   
- [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] サービスは、DCOM プロトコルを使用しています。 ファイアウォール経由で DCOM プロトコルがどのように動作するかについては、MSDN ライブラリの「[ファイアウォール経由での分散 COM の使用](https://go.microsoft.com/fwlink/?LinkId=12490)」を参照してください。  
+ [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] サービスは、DCOM プロトコルを使用しています。 ファイアウォールを介した DCOM プロトコルのしくみの詳細については、情報の記事を参照してください。"[ファイアウォールで分散 COM を使用して](https://manualzz.com/doc/19762578/using-distributed-com-with-firewalls-by-michael-nelson-in...)"。  
   
  多くのファイアウォール システムが市販されています。 Windows ファイアウォール以外のファイアウォールを実行している場合、使用しているシステム固有の情報については、そのファイアウォールのマニュアルを参照してください。  
   
@@ -66,13 +65,13 @@ ms.locfileid: "53369994"
   
 1.  コントロール パネルの **[Windows ファイアウォール]** をダブルクリックします。  
   
-2.   **[Windows ファイアウォール]** ダイアログ ボックスで、 **[例外]** タブをクリックし、 **[プログラムの追加]** をクリックします。  
+2.  **[Windows ファイアウォール]** ダイアログ ボックスで、 **[例外]** タブをクリックし、 **[プログラムの追加]** をクリックします。  
   
 3.  **[プログラムの追加]** ダイアログ ボックスで、 **[参照]** をクリックし、Program Files\Microsoft SQL Server\100\DTS\Binn フォルダーに移動します。次に MsDtsSrvr.exe をクリックし、 **[開く]** をクリックします。 **[OK]** をクリックして、 **[プログラムの追加]** ダイアログ ボックスを閉じます。  
   
-4.   **[例外]** タブで、 **[ポートの追加]** をクリックします。  
+4.  **[例外]** タブで、 **[ポートの追加]** をクリックします。  
   
-5.  **[ポートの追加]** ダイアログ ボックスの **[名前]** ボックスに、「 **RPC(TCP/135)**」またはその他のわかりやすい名前を入力します。次に、 **[ポート番号]** ボックスに「 **135** 」と入力し、 **[TCP]** をクリックにします。  
+5.  **[ポートの追加]** ダイアログ ボックスの **[名前]** ボックスに、「 **RPC(TCP/135)** 」またはその他のわかりやすい名前を入力します。次に、 **[ポート番号]** ボックスに「 **135** 」と入力し、 **[TCP]** をクリックにします。  
   
     > [!IMPORTANT]  
     >  [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] サービスは常にポート 135 を使用します。 別のポートを指定することはできません。  
@@ -88,7 +87,7 @@ ms.locfileid: "53369994"
     > [!NOTE]  
     >  Windows ファイアウォールを構成するために、この手順では、コントロール パネルの **[Windows ファイアウォール]** を使用します。 **[Windows ファイアウォール]** では、現在のネットワークの場所のプロファイルに対してのみファイアウォールを構成できます。 ただし、Windows ファイアウォールは、 **netsh** コマンド ライン ツール、またはセキュリティが強化された Windows ファイアウォールの [!INCLUDE[msCoName](../includes/msconame-md.md)] 管理コンソール (MMC) スナップインを使用して構成することもできます。 これらのツールの詳細については、「 [SQL Server のアクセスを許可するための Windows ファイアウォールの構成](../../2014/sql-server/install/configure-the-windows-firewall-to-allow-sql-server-access.md)」を参照してください。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [Integration Services サービスの構成 (SSIS サービス)](service/integration-services-service-ssis-service.md)   
  [Integration Services サービス (SSIS サービス)](service/integration-services-service-ssis-service.md)  
   

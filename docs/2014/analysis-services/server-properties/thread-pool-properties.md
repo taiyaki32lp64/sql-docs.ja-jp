@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - PriorityRatio property
@@ -18,12 +17,12 @@ ms.assetid: e2697bb6-6d3f-4621-b9fd-575ac39c2185
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 384d1cd437947e23f571cf30b6ec7fad84704942
-ms.sourcegitcommit: b51edbe07a0a2fdb5f74b5874771042400baf919
+ms.openlocfilehash: 1fe324da14460d69d6930bf9d398a50e816f676f
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/28/2019
-ms.locfileid: "55087901"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66068837"
 ---
 # <a name="thread-pool-properties"></a>スレッド プール プロパティ
   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] は、多くの操作でマルチスレッドを使用し、複数のジョブを並列実行することによって、サーバーの全体的なパフォーマンスを向上させます。 スレッドをより効率的に管理するために、 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] はスレッド プールを使用してスレッドの事前割り当てを実行し、次のジョブがスレッドを容易に利用できるようにします。  
@@ -88,7 +87,7 @@ ms.locfileid: "55087901"
   
  プロパティは、アルファベット順に示しています。  
   
-|名前|型|説明|既定値|ガイダンス|  
+|名前|型|説明|既定|ガイダンス|  
 |----------|----------|-----------------|-------------|--------------|  
 |`IOProcess` \ `Concurrency`|double|一度にキューに登録できるスレッド数のターゲットを設定するアルゴリズムを決定する、倍精度浮動小数点値です。|2.0|詳細プロパティです。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] サポートの指示がない限り、変更しないでください。<br /><br /> Concurrency はスレッド プールを初期化するために使用され、それらのプールは Windows 内の IO 完了ポートを使用して実装されます。 詳しくは、「 [I/O 完了ポート](https://msdn.microsoft.com/library/windows/desktop/aa365198\(v=vs.85\).aspx) 」をご覧ください。<br /><br /> 多次元モデルにのみ適用されます。|  
 |`IOProcess` \ `GroupAffinity`|string|システムのプロセッサ グループに対応する 16 進値の配列です。IOProcess スレッド プールのスレッドと各プロセッサ グループの論理プロセッサとの関係を設定するために使用されます。|なし|このプロパティを使用して、カスタム関係を作成することもできます。 既定では、このプロパティは空です。<br /><br /> 詳細については、「 [プロセッサ グループ内のプロセッサにスレッドを関連付けるための GroupAffinity の設定](#bkmk_groupaffinity) 」をご覧ください。<br /><br /> 多次元モデルにのみ適用されます。|  
@@ -251,17 +250,17 @@ ms.locfileid: "55087901"
   
  `"10/28/2013 9:20:52 AM) Message: The Query thread pool now has 1 minimum threads, 16 maximum threads, and a concurrency of 16.  Its thread pool affinity mask is 0x00000000000000ff. (Source: \\?\C:\Program Files\Microsoft SQL Server\MSAS11.MSSQLSERVER\OLAP\Log\msmdsrv.log, Type: 1, Category: 289, Event ID: 0x4121000A)"`  
   
- **MinThread** と **MaxThread** を設定するアルゴリズムが、システム構成、特にプロセッサ数を組み込んでいることに注意してください。 次のブログ記事では、値の計算方法についての洞察を提供します。[Analysis Services 2012 の構成設定 (Wordpress ブログ)](https://go.microsoft.com/fwlink/?LinkId=330387)します。 これらの設定と動作が、それ以降のリリースで調整される可能性があることに注意してください。  
+ **MinThread** と **MaxThread** を設定するアルゴリズムが、システム構成、特にプロセッサ数を組み込んでいることに注意してください。 次のブログ記事では、値の計算方法に関する洞察を提供します。[Analysis Services 2012 の構成設定 (Wordpress ブログ)](https://go.microsoft.com/fwlink/?LinkId=330387)します。 これらの設定と動作が、それ以降のリリースで調整される可能性があることに注意してください。  
   
  次の一覧に、プロセッサのさまざまな組み合わせを対象にした、他の関係マスクの設定例を示します。  
   
--   8 コアのシステムでプロセッサ 3-2-1-0 のようにすると、このビットマスクが得られます。00001111、および 16 進数値の場合:0xF  
+-   8 コアのシステムでプロセッサ 3-2-1-0 は、このビットマスクが得られます。00001111、および 16 進数値の場合:0 xf です.  
   
--   8 コアのシステムでプロセッサ 7-6-5-4 は、このビットマスクが得られます。11110000、および 16 進数値の場合:0xF0  
+-   8 コアのシステムでプロセッサ 7-6-5-4 は、このビットマスクが得られます。11110000、および 16 進数値の場合:0xf0 です.  
   
--   8 コアのシステムでプロセッサ 5-4-3-2 は、このビットマスクが得られます。00111100、および 16 進数値の場合:0x3C  
+-   8 コアのシステムでプロセッサ 5-4-3-2 は、このビットマスクが得られます。00111100、および 16 進数値の場合:0x3c です.  
   
--   8 コアのシステムでプロセッサ 7-6-1-0 は、このビットマスクが得られます。11000011、および 16 進数値の場合:0xC3  
+-   8 コアのシステムでプロセッサ 7-6-1-0 は、このビットマスクが得られます。11000011、および 16 進数値の場合:0xc3 です.  
   
  システムに複数のプロセッサ グループが存在する場合は、グループごとに個別の関係マスクが生成され、コンマ区切りリストの形式で表現されることに注意してください。  
   

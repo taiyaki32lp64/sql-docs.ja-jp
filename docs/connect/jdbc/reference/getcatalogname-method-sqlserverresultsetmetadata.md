@@ -1,5 +1,5 @@
 ---
-title: getCatalogName メソッド (SQLServerResultSetMetaData) |Microsoft Docs
+title: getCatalogName メソッド (SQLServerResultSetMetaData) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: 64f62569-5d8e-411f-a98d-ddc52798391e
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: dcf7c0b513726db49615b8ab85e99493b8a7cb41
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: f734a6779847aa72b9a41015470b377489c686bc
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47730492"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68213710"
 ---
 # <a name="getcatalogname-method-sqlserverresultsetmetadata"></a>getCatalogName メソッド (SQLServerResultSetMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -47,7 +46,7 @@ public java.lang.String getCatalogName(int column)
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- この getCatalogName メソッドは、java.sql.ResultSetMetaData インターフェイスで getCatalogName メソッドによって指定されます。  
+ この getCatalogName メソッドは、java.sql.ResultSetMetaData インターフェイスの getCatalogName メソッドで規定されています。  
   
 ## <a name="see-also"></a>参照  
  [SQLServerResultSetMetaData メソッド](../../../connect/jdbc/reference/sqlserverresultsetmetadata-methods.md)   

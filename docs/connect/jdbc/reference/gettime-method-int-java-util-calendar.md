@@ -1,5 +1,5 @@
 ---
-title: getTime (int, java.util.Calendar) メソッド |Microsoft Docs
+title: getTime メソッド (int, java.util.Calendar) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: 87b7fbaf-7149-494f-b3b2-16b468a8ebf1
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: b5c0172dd04e13775b977a93f05f2976791a2343
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 33f5e25d45f1e08c30f3094a9200291de9510150
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47611922"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67979100"
 ---
 # <a name="gettime-method-int-javautilcalendar"></a>getTime (int, java.util.Calendar) メソッド
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -41,12 +40,12 @@ public java.sql.Time getTime(int index,
   
  パラメーターのインデックスを示す **int** です。  
   
- *cal*  
+ *カレンダー*  
   
- 暦オブジェクト。  
+ Calendar オブジェクト。  
   
 ## <a name="return-value"></a>戻り値  
- 時刻のオブジェクト。  
+ 時刻オブジェクト。  
   
 ## <a name="exceptions"></a>例外  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
@@ -54,7 +53,7 @@ public java.sql.Time getTime(int index,
 ## <a name="remarks"></a>Remarks  
  この getTime メソッドは、java.sql.CallableStatement インターフェイスの getTime メソッドで規定されています。  
   
- 「Get アクセス操作子メソッドの変換」というタイトル図を参照してください[データ型変換について](../../../connect/jdbc/understanding-data-type-conversions.md)を確認する[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]データ型は、このメソッドで取得できます。  
+ このメソッドで取得できる[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]データ型については、「[データ型の変換につい](../../../connect/jdbc/understanding-data-type-conversions.md)て」の「Getter メソッドの変換」を参照してください。  
   
 ## <a name="see-also"></a>参照  
  [getTime メソッド &#40;SQLServerCallableStatement&#41;](../../../connect/jdbc/reference/gettime-method-sqlservercallablestatement.md)   

@@ -9,22 +9,22 @@ ms.topic: reference
 helpviewer_keywords:
 - updategrams [SQLXML], about updategrams
 ms.assetid: b5231859-14e2-4276-bc17-db2817b6f235
-author: douglaslMS
-ms.author: douglasl
+author: MightyPen
+ms.author: genemi
 manager: craigg
-ms.openlocfilehash: a146124df2d215532b3da4b85a3a36123de2786f
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 953fc5b7c203faa8fa6a9820993a3d0fd7a7de40
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52754724"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66014828"
 ---
 # <a name="guidelines-and-limitations-of-xml-updategrams-sqlxml-40"></a>XML アップデートグラムのガイドラインと制限 (SQLXML 4.0)
   XML アップデートグラムを使用する場合は、次の点に注意してください。  
   
--   1 つのペアのみを使用して、挿入操作のアップデート グラムを使用している場合**\<する前に >** と**\<後 >** 、ブロック、 **\<する前に>** ブロックを省略できます。 逆に、削除操作が発生した場合、 **\<後 >** ブロックを省略できます。  
+-   1 つのペアのみを使用して、挿入操作のアップデート グラムを使用している場合 **\<する前に >** と **\<後 >** 、ブロック、 **\<する前に>** ブロックを省略できます。 逆に、削除操作が発生した場合、 **\<後 >** ブロックを省略できます。  
   
--   複数のアップデート グラムを使用している場合**\<する前に >** と**\<後 >** 内のブロック、 **\<同期 >** 両方のタグ**\<する前に >** ブロックと**\<後 >** フォームにブロックを指定する必要があります**\<する前に >** と**\<後 >** ペア。  
+-   複数のアップデート グラムを使用している場合 **\<する前に >** と **\<後 >** 内のブロック、 **\<同期 >** 両方のタグ **\<する前に >** ブロックと **\<後 >** フォームにブロックを指定する必要があります **\<する前に >** と **\<後 >** ペア。  
   
 -   アップデートグラムの更新は、XML スキーマで提供される XML ビューに適用されます。 したがって、既定のマッピングが正しく行われるようにするには、アップデートグラムでスキーマ ファイル名を指定するか、ファイル名を指定しない場合は、要素名と属性名がデータベースのテーブル名と列名に一致している必要があります。  
   
@@ -52,7 +52,7 @@ ms.locfileid: "52754724"
     Empty update, no updatable rows found   Transaction aborted  
     ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [アップデート グラムのセキュリティに関する考慮事項&#40;SQLXML 4.0&#41;](../security/updategram-security-considerations-sqlxml-4-0.md)  
   
   

@@ -19,29 +19,28 @@ helpviewer_keywords:
 ms.assetid: 054aed54-7151-4760-934a-149fa434f1ae
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: f97837a7e6bdc9b84f15512cf20a3791e5cf433c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: fb845732f3766e715df0e92d751a18b1aa8f2969
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47705470"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68091949"
 ---
 # <a name="systriggereventtypes-transact-sql"></a>sys.trigger_event_types (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  トリガーを起動できるイベントまたはイベント グループごとに 1 行のデータを返します。  
+  各イベントまたはトリガーを起動できるイベント グループの行を返します。  
   
 |列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
 |**type**|**int**|トリガーを起動するイベントまたはイベント グループの種類。|  
-|**type_name**|**nvarchar(64)**|イベントまたはイベント グループの名前。 これは、FOR 句で指定できます、 [CREATE TRIGGER](../../t-sql/statements/create-trigger-transact-sql.md)ステートメント。|  
-|**parent_type**|**int**|イベントまたはイベント グループの親イベント グループの種類。|  
+|**type_name**|**nvarchar(64)**|イベントまたはイベント グループの名前です。 これは、FOR 句で指定できます、 [CREATE TRIGGER](../../t-sql/statements/create-trigger-transact-sql.md)ステートメント。|  
+|**parent_type**|**int**|イベントまたはイベント グループの親であるイベントのグループの種類。|  
   
 ## <a name="permissions"></a>アクセス許可  
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] 詳細については、「 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)」を参照してください。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [オブジェクト カタログ ビュー &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/object-catalog-views-transact-sql.md)   
  [カタログ ビュー &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)  
   

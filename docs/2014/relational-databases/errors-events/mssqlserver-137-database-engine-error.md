@@ -13,11 +13,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 2eaaadc4e1cc1f2f360fe3d45e2dea4c082b7b76
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48214132"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62915689"
 ---
 # <a name="mssqlserver137"></a>MSSQLSERVER_137
     
@@ -54,7 +54,7 @@ ms.locfileid: "48214132"
 ## <a name="user-action"></a>ユーザーの操作  
  SQL スクリプトで使用する変数がスクリプト内の別の場所で事前に宣言されていることを確認します。  
   
- 外部で宣言された EXECUTE ステートメント内の変数を参照しないようにスクリプトを修正します。 以下に例を示します。  
+ 外部で宣言された EXECUTE ステートメント内の変数を参照しないようにスクリプトを修正します。 例 :  
   
  USE AdventureWorks2012;  
   

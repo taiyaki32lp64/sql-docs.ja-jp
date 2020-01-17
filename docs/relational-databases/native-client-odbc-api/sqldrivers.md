@@ -13,23 +13,21 @@ helpviewer_keywords:
 ms.assetid: 775bbbef-3d34-4b1c-b494-73ddad83206f
 author: MightyPen
 ms.author: genemi
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 110d613f8b2e9f4fed1788a614b71041710edac4
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 3810b414ca0183e7bbdff37883bab29b57fd82c5
+ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51662941"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73786970"
 ---
 # <a name="sqldrivers"></a>SQLDrivers
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-[!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
 
-  ODBC ドライバー マネージャーは、すべてを返します**SQLDrivers**属性指定文字列。 属性の文字列と値の定義の詳細については、次を参照してください。、[データ アクセスおよびストレージ デベロッパー センター](https://go.microsoft.com/fwlink/?LinkId=4173)、または表示することができます、 [ODBC プログラマ リファレンス](https://go.microsoft.com/fwlink/?LinkId=45250)オンライン。  
+  ODBC ドライバーマネージャーは、すべての**Sqldrivers**属性の指定文字列を返します。 属性文字列と値の定義の詳細については、「[データアクセスおよびストレージデベロッパーセンター](https://go.microsoft.com/fwlink/?LinkId=4173)」を参照するか、 [ODBC プログラマーズリファレンス](https://go.microsoft.com/fwlink/?LinkId=45250)をオンラインで参照してください。  
   
 ## <a name="see-also"></a>参照  
- [SQLDrivers](https://go.microsoft.com/fwlink/?LinkId=59341)   
+ [Sqldrivers](https://go.microsoft.com/fwlink/?LinkId=59341)   
  [ODBC API 実装の詳細](../../relational-databases/native-client-odbc-api/odbc-api-implementation-details.md)  
   
   

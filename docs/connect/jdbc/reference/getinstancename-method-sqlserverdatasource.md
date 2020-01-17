@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: 3749776b-69b8-4f57-a192-568705200ca6
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 054420e4bed5ca671495ace43a45df07cf07c1da
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 393b14287c27d20fbbda2bb0cdf1ba2eedab24b3
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47813260"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67982773"
 ---
 # <a name="getinstancename-method-sqlserverdatasource"></a>getInstanceName メソッド (SQLServerDataSource)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

@@ -1,5 +1,5 @@
 ---
-title: '例 : ELEMENT ディレクティブの指定 | Microsoft Docs'
+title: 例:ELEMENT ディレクティブの指定 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -10,17 +10,16 @@ ms.topic: conceptual
 helpviewer_keywords:
 - ELEMENT directive
 ms.assetid: 80dd5d1f-fa90-4f97-a186-8fa3f460a7f3
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: 6f52cf1dc13c2c3fecc4a578cac5e210a0c97ea0
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: MightyPen
+ms.author: genemi
+ms.openlocfilehash: 5e0760c0d1ee59725e074f55d3730f574a5fac3a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47845690"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68006728"
 ---
-# <a name="example-specifying-the-element-directive"></a>例 : ELEMENT ディレクティブの指定
+# <a name="example-specifying-the-element-directive"></a>例:ELEMENT ディレクティブの指定
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
   この例では、次に示すように従業員情報を取得し、要素中心の XML を生成します。  
   

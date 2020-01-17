@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 886bc9ed-39d4-43d2-82ff-aebc35b14d39
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 388147de8935d36180ba9845c8353bbf3dd6edc0
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b783c2fc6766f0e2d2685724169894160c15ffc9
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47682830"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68077193"
 ---
 # <a name="allocating-and-freeing-buffers"></a>バッファーの割り当てと解放
 すべてのバッファーに割り当てられ、アプリケーションによって解放されます。 バッファーが遅延しない場合は必要があります関数の呼び出しの期間中のみ存在します。 たとえば、 **SQLGetInfo**によって指し示されるバッファー内の特定のオプションに関連付けられている値を返します、 *InfoValuePtr*引数。 呼び出し後すぐにこのバッファーを解放できる**SQLGetInfo**次のコード例のように。  

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - input row filtering [SQL Server]
@@ -15,12 +14,12 @@ ms.assetid: 9ccc9a23-5597-4b35-a05f-2fc8eb885147
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 967de27eb9bc1f191b138e8b5962b04c145fe191
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 16c5a556159caa1227268bc3488a19d25fa9e296
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52510748"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66086146"
 ---
 # <a name="apply-filters-to-model-testing-data"></a>モデルのテスト データへのフィルターの適用
   モデルのテストに使用する外部データ ソースを指定する場合に、入力データを制限するフィルターを必要に応じて適用できます。 たとえば、特定の所得範囲の顧客に関する予測についてのみモデルをテストできます。  

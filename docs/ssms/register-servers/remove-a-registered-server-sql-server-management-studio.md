@@ -12,15 +12,14 @@ helpviewer_keywords:
 - deleting registered servers
 - Registered Servers [SQL Server], removing servers
 ms.assetid: 1f7f755f-7ed2-4572-aa18-13cdd92e350e
-author: stevestein
-ms.author: sstein
-manager: craigg
-ms.openlocfilehash: ca56a7b636e1375bf78cdd3e061dff19ff2d4e3c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 8ff49e0a8f369c40b37759b2b59cd7f5e1897e66
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47658370"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68266080"
 ---
 # <a name="remove-a-registered-server-sql-server-management-studio"></a>登録済みサーバーの削除 (SQL Server Management Studio)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

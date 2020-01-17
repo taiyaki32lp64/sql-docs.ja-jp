@@ -7,15 +7,15 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 8745dc80-193d-4de0-9f17-ba648ab1e81c
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: ee7cc12f4fde3a2e5116458034ae3d4a8cc1c13a
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 60becb35980b896aa2c44bbc8ff0a78a81210f48
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56015113"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65485577"
 ---
 # <a name="enterprise-information-management-tutorials"></a>Enterprise Information Management のチュートリアル
   このセクションには、[!INCLUDE[ssSQL11](../includes/sssql11-md.md)] に付属の Enterprise Information Management (EIM) テクノロジを使用して、企業で情報を管理する方法のチュートリアルが含まれています。 Enterprise Integration Management (EIM) では、組織がデータの信頼性と一貫性を信頼してビジネス上の重要な意思決定を行うことを可能にするソリューションのポートフォリオが用意されています。 [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] には、企業で EIM ソリューションを実装する際に役立つ以下のテクノロジがあります。  

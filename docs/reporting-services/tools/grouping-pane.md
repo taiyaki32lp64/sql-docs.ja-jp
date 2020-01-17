@@ -2,7 +2,7 @@
 title: グループ化ペイン | Microsoft Docs
 ms.date: 03/07/2017
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: tools
 ms.topic: conceptual
 f1_keywords:
@@ -11,19 +11,19 @@ f1_keywords:
 helpviewer_keywords:
 - Grouping Pane dialog box
 ms.assetid: 8b4bd0b3-ec97-48f8-8bfb-82a53a2f35a1
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: f20b9d4ed3f6e82e613e9d42c219d464cdf282f5
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 0359a53fafa4c738b80d4ad44b3c9babdd534cf7
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56293400"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68892552"
 ---
 # <a name="grouping-pane"></a>グループ化ペイン
 [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] のレポートをデザインする際、グループ化ペインには、現在選択されている Tablix データ領域の行グループと列グループが表示されます。 グラフおよびゲージのデータ領域では、グループ化ペインは使用できません。 グループ化ペインは、行グループ ペインと列グループ ペインで構成されています。 グループ化ペインには、既定モードと詳細設定モードの 2 つのモードがあります。 既定モードでは、行グループおよび列グループの動的メンバーの階層ビューが表示されます。 詳細設定モードでは、行グループと列グループの動的メンバーと静的メンバーの両方が表示されます。 グループは、データ領域に表示されるレポート データセットの名前付きセットです。 グループは、静的および動的なメンバーを含む階層で構成されます。 詳細については、「[グループについて &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/understanding-groups-report-builder-and-ssrs.md)」を参照してください。  
   
-  ![ssrs_fyi_note](../../analysis-services/instances/install-windows/media/ssrs-fyi-note.png) グループ化ペインが表示されない場合は、 **[レポート]** メニューの **[グループ化]** をクリックしてください。
+  ![ssrs_fyi_note](https://docs.microsoft.com/analysis-services/analysis-services/instances/install-windows/media/ssrs-fyi-note.png) グループ化ペインが表示されない場合は、 **[レポート]** メニューの **[グループ化]** をクリックしてください。
   
  行グループ領域と列グループ領域のセルは、グループの静的メンバーまたは動的メンバーです。 静的メンバーはグループごとに 1 回繰り返され、通常、ラベルまたは合計が格納されています。 動的メンバーはグループ インスタンスごとに 1 回繰り返され、通常、グループ式の固有の値が格納されています。 行グループ領域または列グループ領域で Tablix セルを選択すると、対応するグループ メンバーが行グループ ペインまたは列グループ ペインで選択されます。 反対に、グループ化ペインでグループを選択すると、そのグループ メンバーに関連した対応するセルがデザイン画面で選択されます。 Tablix の行グループ領域と列グループ領域の詳細については、「[Tablix データ領域部分 &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/tablix-data-region-areas-report-builder-and-ssrs.md)」を参照してください。  
   
@@ -49,7 +49,7 @@ ms.locfileid: "56293400"
 ## <a name="advanced-mode"></a>詳細設定モード  
 詳細設定モードでは、グループのすべての静的メンバーと動的メンバーを表示できます。 メンバーを選択すると、現在選択されている **Tablix メンバー**のプロパティが [プロパティ] ウィンドウに表示されます。  
   
-![ssrs_fyi_note](../../analysis-services/instances/install-windows/media/ssrs-fyi-note.png) **詳細設定モード**に切り替えるには、列グループ ペインの横の下向き矢印を右クリックして **[詳細設定モード]** をクリックします。  
+![ssrs_fyi_note](https://docs.microsoft.com/analysis-services/analysis-services/instances/install-windows/media/ssrs-fyi-note.png) **詳細設定モード**に切り替えるには、列グループ ペインの横の下向き矢印を右クリックして **[詳細設定モード]** をクリックします。  
   
 ほとんどの場合、静的および動的グループ行とグループ列の表示を制御するプロパティは、グループの作成時または合計の追加時に自動設定されます。 
 

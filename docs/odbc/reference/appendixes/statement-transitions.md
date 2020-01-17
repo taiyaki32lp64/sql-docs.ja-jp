@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 3d70e0e3-fe83-4b4d-beac-42c82495a05b
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: db8ec0edfa1a5ae1b6b94ed07f63c930bc896f5c
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: b0d46bad2e0b37c5e6751a4895cdf1899aee4b01
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52523906"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68070106"
 ---
 # <a name="statement-transitions"></a>ステートメントの遷移
 ODBC ステートメントでは、次の状態があります。  
@@ -51,7 +50,7 @@ ODBC ステートメントでは、次の状態があります。
 |------------------------|----------------------|------------------------|---------------------|----------------------|--------------------------|-----------------------|  
 |--[1], [5], [6]|--[5]|--[5]|--[5]|--[5]|--[5]|--[5]|  
 |--[2], [5]|--[5]|--[5]|--[5]|--[5]|--[5]|--[5]|  
-|S1 [3]|--[5]|--[5]|--[5]|--[5]|--[5]|--[5]|  
+|S1[3]|--[5]|--[5]|--[5]|--[5]|--[5]|--[5]|  
 |--[4], [5]|--[5]|--[5]|--[5]|--[5]|--[5]|--[5]|  
   
  [1] この行は、移行を示しています。 ときに*HandleType* sql_handle_env としてでした。  

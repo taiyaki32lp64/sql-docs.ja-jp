@@ -1,6 +1,7 @@
 ---
-title: レプリケーション モニターのパブリッシャーの追加および削除 | Microsoft Docs
-ms.custom: ''
+title: レプリケーション モニターのパブリッシャーの追加および削除 (SSMS)
+description: SQL Server Management Studio (SSMS) でレプリケーション モニターのパブリッシャーを追加および削除する方法について説明します。
+ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -12,17 +13,17 @@ helpviewer_keywords:
 ms.assetid: fa36c4b4-bfa5-494e-92e3-07a02d7332c3
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 4a67f087349214623cf76012d12a85abb9c8df51
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
+ms.openlocfilehash: d46f710bfae73527f414017108954bf4e9129f8f
+ms.sourcegitcommit: 02d44167a1ee025ba925a6fefadeea966912954c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54126307"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75320771"
 ---
 # <a name="add-and-remove-publishers-from-replication-monitor"></a>レプリケーション モニターのパブリッシャーの追加および削除
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  パブリッシャーになっているサーバーからレプリケーション モニターを起動すると、そのサーバーは自動的にモニターに追加されます。 その他のパブリッシャーを追加するには、 **[パブリッシャーの追加]** ダイアログ ボックスを使用します。 追加したパブリッシャーは、モニターの左ペインのグループの中に表示されます。 既定で **[マイ パブリッシャー]** グループが含まれていますが、新しいグループを作成して、1 つ以上のレプリケーション トポロジを管理できます。 レプリケーション モニターの開始の詳細については、「[レプリケーション モニターの開始](../../../relational-databases/replication/monitor/start-the-replication-monitor.md)」を参照してください。  
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+  パブリッシャーになっているサーバーからレプリケーション モニターを起動すると、そのサーバーは自動的にモニターに追加されます。 その他のパブリッシャーを追加するには、 **[パブリッシャーの追加]** ダイアログ ボックスを使用します。 追加したパブリッシャーは、モニターの左ペインのグループの中に表示されます。 既定で **[マイ パブリッシャー]** グループが含まれていますが、新しいグループを作成して、1 つ以上のレプリケーション トポロジを管理できます。 レプリケーション モニターの起動の詳細については、「[Start the Replication Monitor](../../../relational-databases/replication/monitor/start-the-replication-monitor.md)」 (レプリケーション モニターの開始) を参照してください。  
   
 ### <a name="to-add-a-sql-server-publisher"></a>SQL Server パブリッシャーを追加するには  
   

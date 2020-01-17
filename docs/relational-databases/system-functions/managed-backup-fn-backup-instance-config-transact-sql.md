@@ -20,13 +20,12 @@ helpviewer_keywords:
 ms.assetid: 2382a547-c0c9-4e1d-87c9-d8526192eb5a
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 2be102c3d1b967d4376385b2bc20f61e16ecbde7
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 41c689d03ebae3afe16dc51d8a47c54e923d3a82
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47627546"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68067761"
 ---
 # <a name="managedbackupfnbackupinstanceconfig-transact-sql"></a>managed_backup.fn_backup_instance_config (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -52,11 +51,11 @@ managed_backup.fn_backup_db_config ()
 |列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
 |is_smart_backup_enabled|INT|表示すると 1[!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]が有効な場合は 0 と[!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]は無効です。|  
-|credential_name|SYSNAME|ストレージへの認証に使用された既定の SQL 資格情報。|  
+|credential_name|SYSNAME|既定の SQL 資格情報は、ストレージへの認証に使用します。|  
 |retention_days|INT|インスタンス レベルで設定されている既定の保有期間。|  
 |storage_url|NVARCHAR (1024)|インスタンス レベルで設定されている既定のストレージ アカウントの URL。|  
-|encryption_algorithm|SYSNAME|暗号化アルゴリズムの名前。 暗号化が指定されていない場合は、NULL に設定されます。|  
-|encryptor_type|NVARCHAR (32)|使用される暗号化機能の種類 (証明書または非対称キー)。 暗号化機能が指定されていない場合は、NULL に設定されます。|  
+|encryption_algorithm|SYSNAME|暗号化アルゴリズムの名前。 暗号化が指定されていない場合、NULL に設定されます。|  
+|encryptor_type|NVARCHAR (32)|使用される暗号化の種類:証明書キーまたは非対称キー。 指定された暗号化機能がない場合、NULL に設定されます。|  
 |encryptor_name|SYSNAME|証明書または非対称キーの名前。 名前が指定されていない場合は、NULL に設定されます。|  
   
 ## <a name="security"></a>セキュリティ  

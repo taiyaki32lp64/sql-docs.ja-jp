@@ -10,15 +10,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - traces [SQL Server], defaults
 ms.assetid: ab9fc570-797d-411e-814f-1c46d2d5feae
-author: stevestein
-ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 7d67c3190374cd5fd40ef37db5f08151e1ab6c2b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: a3e8f627e7aeac05d418345ded1a069e63e8d116
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47681140"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68104159"
 ---
 # <a name="set-trace-definition-defaults-sql-server-profiler"></a>トレース定義の既定値の設定 (SQL Server Profiler)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

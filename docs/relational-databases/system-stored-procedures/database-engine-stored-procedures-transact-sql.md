@@ -16,15 +16,14 @@ helpviewer_keywords:
 ms.assetid: 2ce018e9-1a3b-4530-a87d-842456a555ad
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: be9aa514bd7bb98dc2209d0e3d84131895f93f83
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 40548043b601d2a2309d9d5180f1200228f11bb4
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47596770"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67942412"
 ---
-# <a name="database-engine-stored-procedures-transact-sql"></a>データベース エンジンのストアド プロシージャ (Transact-SQL)
+# <a name="database-engine-stored-procedures-transact-sql"></a>データベース エンジン ストアド プロシージャ (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、次のシステム ストアド プロシージャのインスタンスの全般的なメンテナンスに使用される[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]します。  
@@ -81,7 +80,7 @@ ms.locfileid: "47596770"
 |[sp_getapplock](../../relational-databases/system-stored-procedures/sp-getapplock-transact-sql.md)|[sys.sp_xtp_checkpoint_force_garbage_collection](../../relational-databases/system-stored-procedures/sys-sp-xtp-checkpoint-force-garbage-collection-transact-sql.md)|  
 |[sp_getbindtoken](../../relational-databases/system-stored-procedures/sp-getbindtoken-transact-sql.md)|[sys.sp_xtp_unbind_db_resource_pool](../../relational-databases/system-stored-procedures/sys-sp-xtp-unbind-db-resource-pool-transact-sql.md)|  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [システム ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

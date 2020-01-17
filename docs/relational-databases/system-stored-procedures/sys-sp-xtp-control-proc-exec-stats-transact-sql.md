@@ -17,18 +17,17 @@ helpviewer_keywords:
 ms.assetid: f5119808-76a1-4522-8529-9e02ee39adcb
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 6ba21eb0bf672f9468e4ba1ae72b1b82c7b6dc78
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 14c45f5ba725ef8d9cc498b1049c5a71c80a6d7a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47841002"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67909220"
 ---
 # <a name="sysspxtpcontrolprocexecstats-transact-sql"></a>sys.sp_xtp_control_proc_exec_stats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2014-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2014-xxxx-xxxx-xxx-md.md)]
 
-  インスタンスに関するネイティブ コンパイル ストアド プロシージャの統計コレクションを有効にします。  
+  インスタンスのネイティブ コンパイル ストアド プロシージャの統計コレクションを有効にします。  
   
  ネイティブ コンパイル ストアド プロシージャのクエリ レベルで統計コレクションを有効にするのを参照してください。 [sys.sp_xtp_control_query_exec_stats &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-xtp-control-query-exec-stats-transact-sql.md)します。  
   
@@ -40,7 +39,7 @@ sp_xtp_control_proc_exec_stats [ [ @new_collection_value = ] collection_value ],
   
 ## <a name="arguments"></a>引数  
  @new_collection_value = *value*  
- プロシージャ レベルの統計コレクションが有効 (1) であるか、無効 (0) であるかを示します。  
+ プロシージャ レベルの統計コレクションがオン (1) かどうかを決定します。 または off (0)。  
   
  @new_collection_value 0 に設定されている[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]したり、データベースを起動します。  
   
@@ -48,7 +47,7 @@ sp_xtp_control_proc_exec_stats [ [ @new_collection_value = ] collection_value ],
  現在の状態を返します。  
   
 ## <a name="return-code"></a>リターン コード  
- 成功した場合は 0。 失敗した場合は 0 以外の値。  
+ 成功した場合は 0。 エラーの 0 以外の値。  
   
 ## <a name="permissions"></a>アクセス許可  
  固定 sysadmin ロールのメンバーシップが必要です。  
@@ -63,7 +62,7 @@ exec sp_xtp_control_proc_exec_stats @old_collection_value=@c output
 select @c as 'collection status'  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [システム ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
  [インメモリ OLTP &#40;インメモリ最適化&#41;](../../relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md)  
   

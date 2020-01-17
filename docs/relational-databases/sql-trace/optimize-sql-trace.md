@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 50944218-925f-4576-aec8-4379846d7681
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: c6145a0bba1418846bdc45a1354138ac5592ffcd
-ms.sourcegitcommit: ddb682c0061c2a040970ea88c051859330b8ac00
+ms.openlocfilehash: 59b1a599a38e31abeee677059d5a99842e76d807
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51571282"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68033217"
 ---
 # <a name="optimize-sql-trace"></a>SQL トレースの最適化
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

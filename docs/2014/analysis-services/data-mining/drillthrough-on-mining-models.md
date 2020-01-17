@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: f179a467-7d03-4d61-8e9a-6b5afb5fc2d5
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: fa70606a2edf735e7d8379dde51ba66b444d7f36
-ms.sourcegitcommit: 0d6e4cafbb5d746e7d00fdacf8f3ce16f3023306
+ms.openlocfilehash: b955ade0251f43d6a482abe346c286c6bafd0ce7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/11/2018
-ms.locfileid: "49085398"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66084595"
 ---
 # <a name="drillthrough-on-mining-models"></a>マイニング モデルでのドリルスルー
   *ドリルスルー* とは、マイニング モデルまたはマイニング構造に対してクエリを実行し、モデルで公開されていない詳細データを取得する機能です。  
@@ -50,7 +49,7 @@ ms.locfileid: "49085398"
 |Microsoft ニューラル ネットワーク アルゴリズム|サポートされていません。<br /><br /> これらのアルゴリズムでは、コンテンツ内の特定のノードにケースが割り当てられません。|  
 |Microsoft ロジスティック回帰アルゴリズム|サポートされていません。<br /><br /> これらのアルゴリズムでは、コンテンツ内の特定のノードにケースが割り当てられません。|  
 |Microsoft 線形回帰アルゴリズム|サポートされています。<br /><br /> ただし、モデルが 1 つのノードを作成するため、`All`ドリルスルーはモデルのすべてのトレーニング ケースを返します。 トレーニング セットが大きいと、結果の読み込みに非常に時間がかかることがあります。|  
-|Microsoft タイム シリーズ アルゴリズム (Microsoft Time Series algorithm)|サポートされています。<br /><br /> ただし、構造やケース データのドリルスルーに、データ マイニング デザイナーの **[マイニング モデル ビューアー]** を使用することはできません。 代わりに、DMX クエリを作成する必要があります。<br /><br /> また、タイム シリーズ モデルでは、特定のノードをドリルスルーしたり、特定のノード内のケースを取得する DMX クエリを記述したりすることができません。 日付や属性値などの他の条件を使用して、モデルや構造からケース データを取得することは可能です。<br /><br /> Microsoft タイム シリーズ アルゴリズムで作成された ARTXP ノードおよび ARIMA ノードの詳細を表示する場合は、[Microsoft 汎用コンテンツ ツリー ビューアー (データ マイニング)](../microsoft-generic-content-tree-viewer-data-mining.md) を使用する方が簡単です。|  
+|Microsoft Time Series アルゴリズム|サポートされています。<br /><br /> ただし、構造やケース データのドリルスルーに、データ マイニング デザイナーの **[マイニング モデル ビューアー]** を使用することはできません。 代わりに、DMX クエリを作成する必要があります。<br /><br /> また、タイム シリーズ モデルでは、特定のノードをドリルスルーしたり、特定のノード内のケースを取得する DMX クエリを記述したりすることができません。 日付や属性値などの他の条件を使用して、モデルや構造からケース データを取得することは可能です。<br /><br /> Microsoft タイム シリーズ アルゴリズムで作成された ARTXP ノードおよび ARIMA ノードの詳細を表示する場合は、[Microsoft 汎用コンテンツ ツリー ビューアー (データ マイニング)](../microsoft-generic-content-tree-viewer-data-mining.md) を使用する方が簡単です。|  
   
 ## <a name="related-tasks"></a>Related Tasks  
  マイニング モデルでドリルスルーを使用する方法の詳細については、次のトピックを参照してください。  

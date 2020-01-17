@@ -10,12 +10,12 @@ ms.assetid: 64dfe192-965c-49d4-a3ea-848fbc5f619f
 author: Shamikg
 ms.author: Shamikg
 manager: murato
-ms.openlocfilehash: 5258a95b713da0ec1fe526e94ce11c6e5e0b595c
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 9d888fa133e6cb1026ae23486dfabfc5e0b13b57
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52539154"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68259837"
 ---
 # <a name="creating-script-files-accesstosql"></a>スクリプト ファイル (AccessToSQL) の作成
 SSMA コンソールのアプリケーションを起動すると、スクリプト ファイルを作成する前に、変数値ファイルとサーバー接続ファイルを作成するために必要な場合、最初の手順します。  
@@ -316,7 +316,7 @@ SSMA コンソールのアプリケーションを起動すると、スクリプ
     </...All commands...>  
     ```  
   
-10. **暗号化されたパスワードをオーバーライドします。**'True' の場合、サーバー接続ファイルのサーバー定義のセクションで、またはスクリプト ファイルに上書きの場合は、保護されたストレージに格納されている暗号化されたパスワードが存在するクリア テキスト パスワードが指定されました。 クリア テキストでパスワードが指定されていない場合は、パスワードの入力を求められます。  
+10. **暗号化されたパスワードをオーバーライドします。** 'True' の場合、サーバー接続ファイルのサーバー定義のセクションで、またはスクリプト ファイルに上書きの場合は、保護されたストレージに格納されている暗号化されたパスワードが存在するクリア テキスト パスワードが指定されました。 クリア テキストでパスワードが指定されていない場合は、パスワードの入力を求められます。  
   
     ここでは 2 つのケースが生じます。  
   

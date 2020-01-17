@@ -13,14 +13,13 @@ helpviewer_keywords:
 ms.assetid: d9666d0b-3446-480e-bf1a-10b01213e411
 author: MightyPen
 ms.author: genemi
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 32b1f1185dad9b173c12f3acb232c2426d5db411
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 1623779ba0fb47df1750e72b2e66ff7ad492a3e9
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51664901"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68135482"
 ---
 # <a name="sqlfreestmt"></a>SQLFreeStmt
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -31,7 +30,7 @@ ms.locfileid: "51664901"
   
  一般よりにドロップし、新しいものを割り当てるステートメントを再利用する方が効率的です。 ただし、状況によっては、ステートメントの再利用するように SQLFreeStmt 依然使用しなければなりません。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [SQLFreeStmt 関数](https://go.microsoft.com/fwlink/?LinkId=59346)   
  [ODBC API 実装の詳細](../../relational-databases/native-client-odbc-api/odbc-api-implementation-details.md)  
   

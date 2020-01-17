@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: ba9642d0-9025-4eff-8885-e6e7f8154c73
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 447ee9d65c4ce50daacfbf2f81d1822a41629ebb
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e3521c85e8666ee5386ac38c3158331c3f882cb6
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47741460"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67966235"
 ---
 # <a name="group-object-properties-methods-and-events"></a>Group オブジェクトのプロパティ、メソッド、およびイベント
 ## <a name="propertiescollections"></a>プロパティ/コレクション  
@@ -36,5 +35,5 @@ ms.locfileid: "47741460"
 ## <a name="events"></a>イベント  
  [なし] :  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [Group オブジェクト (ADOX)](../../../ado/reference/adox-api/group-object-adox.md)

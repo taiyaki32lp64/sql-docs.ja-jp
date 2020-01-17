@@ -17,11 +17,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 57ad0c696eb8c81a029160417a7d847d6e0600ec
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52776484"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62711826"
 ---
 # <a name="audit-database-mirroring-login-event-class"></a>Audit Database Mirroring Login イベント クラス
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] は **Audit Database Mirroring Login** イベントを作成して、データベース ミラーリングのトランスポートのセキュリティに関する監査メッセージを報告します。  
@@ -50,7 +50,7 @@ ms.locfileid: "52776484"
 |**SPID**|**int**|クライアントに関連付けられているプロセスに、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] によって割り当てられているサーバー プロセス ID。|12|はい|  
 |**StartTime**|**datetime**|イベントの開始時刻 (取得できた場合)。|14|はい|  
 |**状態**|**int**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のソース コード内のイベントが生成された場所を示します。 イベントが生成された場所によって、状態コードが異なることがあります。 マイクロソフトのサポート エンジニアはこの状態コードを使用して、イベントが生成されたソース コード内の場所を特定することができます。|30|いいえ|  
-|**TargetUserName**|**nvarchar**|ログイン状態。 次のいずれかです。<br /><br /> INITIAL<br /><br /> WAIT LOGIN NEGOTIATE<br /><br /> ONE ISC<br /><br /> ONE ASC<br /><br /> TWO ISC<br /><br /> TWO ASC<br /><br /> WAIT ISC Confirm<br /><br /> WAIT ASC Confirm<br /><br /> WAIT REJECT<br /><br /> WAIT PRE-MASTER SECRET<br /><br /> WAIT VALIDATION<br /><br /> WAIT ARBITRATION<br /><br /> ONLINE<br /><br /> ERROR<br /><br /> <br /><br /> 注:ISC は、セキュリティ コンテキストの送信 (Initiate Security Context) を表します。 ASC は、セキュリティ コンテキストの受け入れ (Accept Security Context) を表します。|39|いいえ|  
+|**TargetUserName**|**nvarchar**|ログイン状態。 次のいずれかです。<br /><br /> INITIAL<br /><br /> WAIT LOGIN NEGOTIATE<br /><br /> ONE ISC<br /><br /> ONE ASC<br /><br /> TWO ISC<br /><br /> TWO ASC<br /><br /> WAIT ISC Confirm<br /><br /> WAIT ASC Confirm<br /><br /> WAIT REJECT<br /><br /> WAIT PRE-MASTER SECRET<br /><br /> WAIT VALIDATION<br /><br /> WAIT ARBITRATION<br /><br /> ONLINE<br /><br /> ERROR<br /><br /> <br /><br /> 注:ISC 開始のセキュリティ コンテキストを = です。 ASC は、セキュリティ コンテキストの受け入れ (Accept Security Context) を表します。|39|いいえ|  
 |**TransactionID**|**bigint**|トランザクションに対してシステムが割り当てた ID。|4|いいえ|  
   
  次の表に、このイベント クラスのサブクラス値を示します。  
@@ -64,7 +64,7 @@ ms.locfileid: "52776484"
 |5|Authentication Failure|Authentication Failure イベントは、データベース ミラーリング エンドポイントがエラーのために接続を認証できないことを報告するイベントです。 Windows 認証の場合は、データベース ミラーリング エンドポイントが Windows 認証を使用できないことを示しています。 証明書ベースの認証の場合は、データベース ミラーリング エンドポイントが証明書にアクセスできないことを示しています。|  
 |6|Authorization Failure|Authorization Failure イベントは、データベース ミラーリング エンドポイントが接続の認証を拒否したことを報告するイベントです。 Windows 認証の場合は、接続のセキュリティ ID に一致するデータベース ユーザーが見つからないことを示しています。 証明書ベースの認証の場合は、メッセージにより渡された公開キーが **master** データベース内の証明書に対応していないことを示しています。|  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [CREATE ENDPOINT &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-endpoint-transact-sql)   
  [ALTER ENDPOINT &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-endpoint-transact-sql)   
  [データベース ミラーリング &#40;SQL Server&#41;](../../database-engine/database-mirroring/database-mirroring-sql-server.md)  

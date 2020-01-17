@@ -20,13 +20,12 @@ helpviewer_keywords:
 ms.assetid: ec5ccb69-61c9-4576-8843-014b976fd46e
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: d41ee42e17dc8f501749599e56ab31e01ba6f85d
-ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
+ms.openlocfilehash: 914250b46e7608f3b0977a2b5c4d7218032989f5
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/18/2018
-ms.locfileid: "53591736"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68011817"
 ---
 # <a name="enable-or-disable-a-server-network-protocol"></a>サーバー ネットワーク プロトコルの有効化または無効化
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -52,13 +51,13 @@ ms.locfileid: "53591736"
   
 1.  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 構成マネージャーのコンソール ペインで、 **[SQL Server ネットワークの構成]** を展開します。  
   
-2.  コンソール ペインで、**[**_\<インスタンス名> のプロトコル]_ をクリックします。  
+2.  コンソール ペインで、 **[** _\<インスタンス名> のプロトコル]_ をクリックします。  
   
 3.  詳細ペインで、変更するプロトコルを右クリックし、 **[有効化]** または **[無効化]** をクリックします。  
   
 4.  コンソール ペインで、 **[SQL Server のサービス]** をクリックします。  
   
-5.  詳細ペインで **[SQL Server (**_\<インスタンス名>_**)]** を右クリックします。次に、**[再起動]** をクリックして、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] サービスを停止し、再起動します。  
+5.  詳細ペインで **[SQL Server (** _\<インスタンス名>_ **)]** を右クリックします。次に、 **[再起動]** をクリックして、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] サービスを停止し、再起動します。  
   
 ##  <a name="PowerShellProcedure"></a> SQL Server PowerShell の使用  
   
@@ -68,7 +67,7 @@ ms.locfileid: "53591736"
   
 2.  タスク バーから Windows PowerShell を起動するか、[スタート] ボタンをクリックし、[すべてのプログラム]、[アクセサリ]、[Windows PowerShell]、[Windows PowerShell] の順にクリックします。  
   
-3.  「**Import-Module "sqlps"**」と入力して、**sqlps** モジュールをインポートします  
+3.  「**Import-Module "sqlps"** 」と入力して、**sqlps** モジュールをインポートします  
   
 4.  次のステートメントを実行して TCP プロトコルおよび名前付きパイプ プロトコルの両方を有効にします。 `<computer_name>` を、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]を実行しているコンピューターの名前に置き換えます。 名前付きインスタンスを構成する場合は、 `MSSQLSERVER` をインスタンス名に置き換えます。  
   

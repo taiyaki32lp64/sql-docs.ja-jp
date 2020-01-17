@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 509cb65d-2f54-427a-83d7-37919cc4e3e3
 author: Shamikg
 ms.author: Shamikg
-manager: craigg
-ms.openlocfilehash: 3734c2efaaefae44a17381cab46029f2d57666a4
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: 507ac2a61043260435a18c90fb473130988e7f35
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52418163"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67948511"
 ---
 # <a name="converting-sap-ase-database-objects-sybasetosql"></a>SAP ASE データベース オブジェクト (SybaseToSQL) の変換
 SAP Adaptive Server Enterprise (ASE) に接続すると後に、接続されている[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]SAP Adaptive Server Enterprise (ASE) のデータベース オブジェクトを変換できる Azure SQL とプロジェクトの設定とデータ マッピング オプション、または[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]または Azure SQL データベースオブジェクト。  

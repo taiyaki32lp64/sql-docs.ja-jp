@@ -13,15 +13,14 @@ helpviewer_keywords:
 - renaming database diagrams
 - database diagrams [SQL Server], renaming
 ms.assetid: 27c90b54-cc21-4f2f-a529-eacdc41f302e
-author: stevestein
-ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 4a5169dd6237b53223db41754e708969e7059473
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 241cd446706d2eacb5e230faf0241be7161f1686
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47833260"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68256013"
 ---
 # <a name="rename-a-database-diagram-visual-database-tools"></a>データベース ダイアグラムの名前変更 (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: 0db06631-5e68-488c-a9f1-6e5052c0759d
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 8e83129965f4d8b2e68f4a3ff99f1e9b687684d5
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 54459377a27406044a9323c36b78417b144661de
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47701980"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67973239"
 ---
 # <a name="setpassword-method-sqlserverdatasource"></a>setPassword メソッド (SQLServerDataSource)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

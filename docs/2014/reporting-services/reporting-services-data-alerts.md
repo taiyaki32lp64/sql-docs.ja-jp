@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 ms.assetid: 8c234077-b670-45c0-803f-51c5a5e0866e
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 15323e5ea5f2762e0cef9b4e275e8131d43c591a
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: d5dd8bad47bdbc1faaec1dcb7e9c7e9a05bed548
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56017273"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66102975"
 ---
 # <a name="reporting-services-data-alerts"></a>Reporting Services のデータ警告
   [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] の "データ警告" は、関心のある、または重要なレポート データを適切なタイミングで把握できるよう補助する、データ駆動型の警告ソリューションです。 データ警告を使用することで、情報を探し出す必要がなくなり、情報が自動的に通知されるようになります。  

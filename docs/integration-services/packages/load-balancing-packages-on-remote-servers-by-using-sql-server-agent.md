@@ -12,17 +12,20 @@ helpviewer_keywords:
 - parent packages [Integration Services]
 - SQL Server Agent [Integration Services]
 ms.assetid: 9281c5f8-8da3-4ae8-8142-53c5919a4cfe
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: a4c845b6a9c962358b702f4b1609a2567568f3d4
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 325d5cde9ae15bb58c6173a974f14f48847c3361
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51639839"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71282472"
 ---
 # <a name="load-balancing-packages-on-remote-servers-by-using-sql-server-agent"></a>リモート サーバー上での SQL Server エージェントを使用したパッケージの負荷分散
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   実行する必要のあるパッケージが数多くある場合、使用可能な他のサーバーでパッケージを実行すると便利です。 すべてのパッケージを 1 つの親パッケージで管理している場合に、他のサーバーを使用してパッケージを実行するこの方法を、負荷分散といいます。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]の負荷分散は、手動による方法であり、パッケージの所有者が構築する必要があります。 負荷分散は、サーバーで自動的には実行されません。 また、リモート サーバーで実行するパッケージは、他のパッケージ内の個別のタスクではなく、完全なパッケージである必要があります。  
   
  負荷分散は、次のようなシナリオで役に立ちます。  
@@ -66,7 +69,7 @@ ms.locfileid: "51639839"
   
  子パッケージをデザインする際、子パッケージにはデザイン上の制限がないため、目的の機能をすべて追加できます。 ただし、パッケージからデータにアクセスする場合は、パッケージを実行するサーバーからそのデータにアクセスできなければなりません。  
   
- 子パッケージを実行する親パッケージを識別するには、[!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] のソリューション エクスプローラーでパッケージを右クリックし、**[エントリ ポイント パッケージ]** をクリックします。  
+ 子パッケージを実行する親パッケージを識別するには、[!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] のソリューション エクスプローラーでパッケージを右クリックし、 **[エントリ ポイント パッケージ]** をクリックします。  
   
  子パッケージをデザインしたら、次に、そのパッケージをリモート サーバーに配置します。  
   
@@ -85,7 +88,7 @@ ms.locfileid: "51639839"
 ### <a name="debugging-the-sql-server-agent-jobs-and-child-packages"></a>SQL Server エージェント ジョブと子パッケージのデバッグ  
  次のいずれかの方法を使用して、SQL Server エージェント ジョブとその子パッケージをテストできます。  
   
--   **[デバッグ]** メニューの  / **[デバッグなしで開始]** をクリックして、SSIS デザイナーで各子パッケージを実行します。  
+-   **[デバッグ]** メニューの  /  **[デバッグなしで開始]** をクリックして、SSIS デザイナーで各子パッケージを実行します。  
   
 -   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] を使用してリモート コンピューター上の個別の SQL Server エージェント ジョブを実行し、パッケージが実行されていることを確認します。  
   

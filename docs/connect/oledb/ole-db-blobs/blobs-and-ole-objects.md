@@ -16,13 +16,12 @@ helpviewer_keywords:
 - large data, OLE objects
 author: pmasl
 ms.author: pelopes
-manager: craigg
-ms.openlocfilehash: 6f65e9b99b01f413c85ed61bbacc7a7aebfdb72a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 70d3ffccfc9613434b09335944e445a2705b95c3
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47700350"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67988671"
 ---
 # <a name="blobs-and-ole-objects"></a>BLOB と OLE オブジェクト
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -31,7 +30,7 @@ ms.locfileid: "47700350"
 
   OLE DB Driver for SQL Server で公開されている **ISequentialStream** インターフェイスにより、コンシューマーはバイナリ ラージ オブジェクト (BLOB) として [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] の **ntext** 型、**text** 型、**image** 型、**varchar(max)** 型、**nvarchar(max)** 型、**varbinary(max)** 型、および XML 型にアクセスできます。 **ISequentialStream** の **Read** メソッドを使用すると、扱いやすい単位で大量のデータを取得できます。  
   
- この機能を示すサンプルについては、次を参照してください。[大量のデータを設定&#40;OLE DB&#41;](../../oledb/ole-db-how-to/set-large-data-ole-db.md)します。  
+ この機能を示すサンプルについては、「 [ &#40;Large&#41;Data OLE DB の設定](../../oledb/ole-db-how-to/set-large-data-ole-db.md)」を参照してください。  
   
  コンシューマーからデータ変更用にバインドされたアクセサーにインターフェイス ポインターを渡すとき、OLE DB Driver for SQL Server は、コンシューマーに実装された **IStorage** インターフェイスを使用できます。  
   
@@ -47,11 +46,11 @@ ms.locfileid: "47700350"
   
 -   DBTYPE_IUNKNOWN としてバインドし、ストリーミングを使用します。  
   
- DBTYPE_IUNKNOWN にバインドすると、ISequentialStream ストリーム機能が使用されます。 OLE DB Driver for SQL Server では、大きな値データ型の DBTYPE_IUNKNOWN としてバインドの出力パラメーターをサポートします。 これは、ストアド プロシージャが、クライアントに DBTYPE_IUNKNOWN として返される、戻り値としてこれらのデータ型を返すシナリオをサポートします。  
+ DBTYPE_IUNKNOWN にバインドすると、ISequentialStream ストリーム機能が使用されます。 OLE DB Driver for SQL Server では、大きな値のデータ型に対して DBTYPE_IUNKNOWN として出力パラメーターをバインドすることがサポートされています。 これは、ストアドプロシージャがこれらのデータ型を戻り値として返すシナリオをサポートするためです。これらのデータ型は、DBTYPE_IUNKNOWN としてクライアントに返されます。  
   
 ## <a name="storage-object-limitations"></a>ストレージ オブジェクトの制限事項  
   
--   OLE DB Driver for SQL Server では、1 つ開いているストレージ オブジェクトのみをサポートできます。 複数の **ISequentialStream** インターフェイス ポインターへの参照を取得するために、複数のストレージ オブジェクトを開こうとすると、DBSTATUS_E_CANTCREATE が返されます。  
+-   SQL Server 用の OLE DB ドライバーは、開いているストレージオブジェクトを1つだけサポートできます。 複数の **ISequentialStream** インターフェイス ポインターへの参照を取得するために、複数のストレージ オブジェクトを開こうとすると、DBSTATUS_E_CANTCREATE が返されます。  
   
 -   OLE DB Driver for SQL Server の読み取り専用プロパティ DBPROP_BLOCKINGSTORAGEOBJECTS の既定値は VARIANT_TRUE です。 そのため、ストレージ オブジェクトがアクティブの場合は、(ストレージ オブジェクト以外の) 一部のメソッドが失敗して E_UNEXPECTED が返されます。  
   

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.cubeeditor.kpidefinitionpane.f1
@@ -13,12 +12,12 @@ ms.assetid: 45c6453a-bbe2-4ca5-836e-c7ef11cfcb65
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 233e8f36f103d1a5adac6937d47e1040dfe6395d
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: ca81dda4ce34a498aa471ceed5ea86729b1df508
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52523475"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66079446"
 ---
 # <a name="kpi-form-editor-kpis-tab-cube-designer-analysis-services---multidimensional-data"></a>KPI フォーム エディター (キューブ デザイナーの [KPI] タブ) (Analysis Services - 多次元データ)
   キューブ デザイナーの **[KPI]** タブの **KPI フォーム エディター** ペインを使用すると、選択した主要業績評価指標 (KPI) を変更したり作成したりできます。  
@@ -86,14 +85,14 @@ ms.locfileid: "52523475"
 >  -1 より、1 以上の値が考えられますが正しく解釈されないサード パーティ製のクライアント アプリケーションによって。  
   
  **[追加のプロパティ]**  
- 展開すると、 **[フォルダーの表示]**、 **[親 KPI]**、 **[現在の時間メンバー]**、 **[加重]**、 **[説明]** のオプションが表示されます。  
+ 展開すると、 **[フォルダーの表示]** 、 **[親 KPI]** 、 **[現在の時間メンバー]** 、 **[加重]** 、 **[説明]** のオプションが表示されます。  
   
  **表示フォルダー**  
  表示のためにクライアント アプリケーションで使用される KPI の分類を入力します。  
   
  表示フォルダー内のフォルダー名は円記号 (\\) を使用して区切り、複数の表示フォルダーはセミコロン (;) を使用して区切ります。 たとえば、「 `Category\Goal\Scientific;Category\Goal\Metric`」のように入力します。  
   
- **親 KPI**  
+ **Parent KPI**  
  クライアント アプリケーションで使用する KPI を分類するための、既存の KPI を選択します。  
   
 > [!NOTE]  

@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 52310260-a892-4b27-ad2e-bf164b98ee80
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: cbf78cf6c3ed1b04dd0a282c016db83837bf0a0f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: f32929b9cd5d2f69ae4ffbb8d13f7ec09d9972ae
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47846140"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68064267"
 ---
 # <a name="unicode-data-and-server-code-pages"></a>Unicode データおよびサーバー コード ページ
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -151,7 +150,7 @@ ms.locfileid: "47846140"
   
     ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [srv_wsendmsg&#40;拡張ストアド プロシージャ API&#41;](../../relational-databases/extended-stored-procedures-reference/srv-wsendmsg-extended-stored-procedure-api.md)  
   
   

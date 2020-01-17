@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: 840ecfcf-0dd3-4b7b-976f-dc9a96cd1464
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 8ec96cd3f56b1710268ae951e39e98866fe1bd54
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 92d7b0db997a6b77b43efb6d8104f629bb5507e3
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47826820"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67976022"
 ---
 # <a name="recover-method-sqlserverxaresource"></a>recover メソッド (SQLServerXAResource)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -38,7 +37,7 @@ public javax.transaction.xa.Xid[] recover(int flags)
 #### <a name="parameters"></a>パラメーター  
  *flags*  
   
- **Int**値は次のいずれかを取る値: XAResource.TMSTARTRSCAN または XAResource.TMENDRSCAN または XAResource.TMNOFLAGS XAResource.TMSTARTTRSCAN |XAResource.TMENDRSCAN します。  
+ 次のいずれかの値を取ることができる**int**値: XARESOURCE. tmstarscan または xaresource. TMENDRSCAN または xaresource. tmstartrscan |XAResource. TMENDRSCAN。  
   
 ## <a name="return-value"></a>戻り値  
  Xid オブジェクト。  
@@ -49,7 +48,7 @@ public javax.transaction.xa.Xid[] recover(int flags)
 ## <a name="remarks"></a>Remarks  
  この recover メソッドは、javax.transaction.xa.XAResource インターフェイスの recover メソッドで規定されています。  
   
- 場合、パラメーター**フラグ**XAResource.TMSTARTRSCAN または XAResource.TMSTARTRSCAN ではありません |XAResource.TMENDRSCAN、リカバリ スキャンは、進行状況でなければなりません。  
+ パラメーター**フラグ**が XARESOURCE. tmstartrscan または XAResource. tmstartrscan |XAResource. TMENDRSCAN。回復スキャンが進行中である必要があります。  
   
 ## <a name="see-also"></a>参照  
  [SQLServerXAResource のメソッド](../../../connect/jdbc/reference/sqlserverxaresource-methods.md)   

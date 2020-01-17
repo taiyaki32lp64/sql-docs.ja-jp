@@ -12,16 +12,15 @@ f1_keywords:
 helpviewer_keywords:
 - MSSQLSERVER property protocols
 ms.assetid: 776addd6-25f3-4875-9a71-064035787090
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-manager: craigg
-ms.openlocfilehash: 85e7e9cbc454785379fac029cbe970a492e0fffd
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 1dd00a167765e80a67daa6e795330fdbcf04e3a7
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47760100"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68058481"
 ---
 # <a name="protocols-for-mssqlserver-properties-certificate-tab"></a>[MSSQLSERVER のプロトコルのプロパティ] ダイアログ ボックス ([証明書] タブ)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -39,7 +38,7 @@ ms.locfileid: "47760100"
  **[MSSQLSERVER のプロトコルのプロパティ]**  
  セキュリティ プロバイダーによって判別される証明書の名前です。 証明書を選択すると、プロパティのグリッドに詳細が表示されます。  
   
-## <a name="options"></a>[変数]  
+## <a name="options"></a>オプション  
  [有効期限]  
  証明書の有効期間の最終日付です。  
   

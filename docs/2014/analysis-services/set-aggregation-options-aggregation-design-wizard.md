@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.storagedesignwizard.setaggregateoptions.f1
@@ -13,12 +12,12 @@ ms.assetid: 4672d686-10c0-43f8-a53e-a16dfa840c81
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: ded40a4ceca02e56f78207c35ff174f2d09feb07
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: d82d19836147514a4a03296ebc40a047b80410b5
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48067512"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66068809"
 ---
 # <a name="set-aggregation-options-aggregation-design-wizard"></a>[集計オプションの設定] (集計のデザイン ウィザード)
   **[集計オプションの設定]** ページを使用すると、集計のデザイン プロセスを開始したり、生成する集計のストレージ制限やパフォーマンス制限を指定したりできます。  
@@ -36,7 +35,7 @@ ms.locfileid: "48067512"
  **(0%) の集計をデザインしません。**  
  集計のデザインに集計が含まれないように指定します。 このオプションを使用すると、パーティション、メジャー グループ、またはキューブに対する既存の集計デザインが消去されます。  
   
- **コントロール パネルの  ◆セグ : 文が分断されているため、訳の位置が入れ替わっています◇**  
+ **[開始]**  
  集計のデザイン プロセスを開始します。  
   
  **[停止]**  

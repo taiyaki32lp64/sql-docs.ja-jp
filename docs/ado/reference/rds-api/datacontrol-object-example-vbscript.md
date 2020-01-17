@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 4f306a51-d5a4-4785-b426-487639cda164
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 351f04af84419d8ee10a967a61c8b11dc179592a
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.openlocfilehash: 7eff8a3a016ad7e0cc6b9f928bef4f16891e8375
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51601425"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67964414"
 ---
 # <a name="datacontrol-object-example-vbscript"></a>DataControl オブジェクトの例 (VBScript)
 > [!IMPORTANT]
@@ -183,7 +182,7 @@ End Sub
 <!-- EndDataControlRuntimeVBS -->  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [DataControl オブジェクト (RDS)](../../../ado/reference/rds-api/datacontrol-object-rds.md)
 
 

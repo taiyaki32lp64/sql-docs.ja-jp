@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: 0610d667-a16d-4201-a14b-0a40048911e1
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: bdea6926543bd95fa66c4b73a48736a3b685859e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d0fe3b01fd02bf48fb5f38707530e3b3344133e6
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47810090"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67979221"
 ---
 # <a name="gettableprivileges-method-sqlserverdatabasemetadata"></a>getTablePrivileges メソッド (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -57,7 +56,7 @@ public java.sql.ResultSet getTablePrivileges(java.lang.String catalog,
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- この getTablePrivileges メソッドは、java.sql.DatabaseMetaData インターフェイスで getTablePrivileges メソッドによって指定されます。  
+ この getTablePrivileges メソッドは、java.sql.DatabaseMetaData インターフェイスの getTablePrivileges メソッドで規定されています。  
   
  getTablePrivileges メソッドによって返される結果セットには、次の情報が含まれます。  
   

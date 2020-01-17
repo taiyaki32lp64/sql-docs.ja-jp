@@ -9,15 +9,15 @@ ms.topic: conceptual
 helpviewer_keywords:
 - FILESTREAM [SQL Server], moving a FILESTREAM-enabled database
 ms.assetid: dd4d270d-9283-431a-aa6b-e571fced1893
-author: douglaslMS
-ms.author: douglasl
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 98887ac98ef0dc2e77a1a2ead02fbd773a8ae701
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: aaf6dffd3d8424f5582a43d327ce6f2b3e26af4b
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48100672"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66009954"
 ---
 # <a name="move-a-filestream-enabled-database"></a>FILESTREAM が有効なデータベースの移動
   このトピックでは、FILESTREAM が有効なデータベースを移動する方法について説明します。  
@@ -31,7 +31,7 @@ ms.locfileid: "48100672"
   
 2.  次の [!INCLUDE[tsql](../../includes/tsql-md.md)] スクリプトをクエリ エディターにコピーして、 **[実行]** をクリックします。 このスクリプトは、FILESTREAM データベースで使用される物理データベース ファイルの場所を表示します。  
   
-    ```tsql  
+    ```sql  
     USE Archive  
     GO  
     SELECT type_desc, name, physical_name from sys.database_files  
@@ -39,7 +39,7 @@ ms.locfileid: "48100672"
   
 3.  次の [!INCLUDE[tsql](../../includes/tsql-md.md)] スクリプトをクエリ エディターにコピーして、 **[実行]** をクリックします。 このコードでは、 `Archive` データベースがオフラインに設定されます。  
   
-    ```tsql  
+    ```sql  
     USE master  
     EXEC sp_detach_db Archive  
     GO  
@@ -49,7 +49,7 @@ ms.locfileid: "48100672"
   
 5.  次の [!INCLUDE[tsql](../../includes/tsql-md.md)] スクリプトをクエリ エディターにコピーして、 **[実行]** をクリックします。 このスクリプトでは、 `Archive` データベースがオンラインに設定されます。  
   
-    ```tsql  
+    ```sql  
     CREATE DATABASE Archive ON  
     PRIMARY ( NAME = Arch1,  
         FILENAME = 'c:\moved_location\archdat1.mdf'),  

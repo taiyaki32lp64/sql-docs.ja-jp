@@ -8,17 +8,20 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: a79f1006-54e8-4cbf-96f8-5ed143ebb830
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: ff408f0fd410e330f0ab5e3dfcdeee965a72a051
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 62cbd5141dfb6254415657dc3ef03d1402b0f3b4
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52545234"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71281369"
 ---
-# <a name="catalogcleanupserverexecutionkeys"></a>catalog.cleanup_server_execution_keys
+# <a name="catalogcleanup_server_execution_keys"></a>catalog.cleanup_server_execution_keys 
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
   SSISDB データベースから証明書と対称キーを削除します。  
@@ -66,9 +69,9 @@ catalog.cleanup_server_execution_keys [ @cleanup_flag = ] cleanup_flag ,
 ## <a name="remarks"></a>Remarks  
  SQL Server 2012 Service Pack 2 により、SERVER_OPERATION_ENCRYPTION_LEVEL プロパティが **internal.catalog_properties** テーブルに追加されました。 このプロパティには、次の 2 つの有効値があります。  
   
--   **PER_EXECUTION (1)**: 機密性の高い実行パラメーターと実行ログを保護する証明書と対称キーが実行するたびに作成されます。 これが既定値です。 実行ごとに証明書/キーが生成されるため、運用環境でパフォーマンスの問題 (デッドロック、メンテナンス ジョブの失敗など) が発生する可能性があります。 ただしこの設定は、その他の値 (2) よりも高いレベルのセキュリティを提供します。  
+-   **PER_EXECUTION (1)** : 機密性の高い実行パラメーターと実行ログを保護する証明書と対称キーが実行するたびに作成されます。 これが既定値です。 実行ごとに証明書/キーが生成されるため、運用環境でパフォーマンスの問題 (デッドロック、メンテナンス ジョブの失敗など) が発生する可能性があります。 ただしこの設定は、その他の値 (2) よりも高いレベルのセキュリティを提供します。  
   
--   **PER_PROJECT (2)**: 実行のたびに証明書と対称キーが作成されます。これらは機密性の高いパラメーターを保護するために使用されます。 これは、キーと証明書が実行ごとではなく、プロジェクトに対して 1 回生成されるため、PER_EXECUTION レベルより優れたパフォーマンスを提供します。  
+-   **PER_PROJECT (2)** : 実行のたびに証明書と対称キーが作成されます。これらは機密性の高いパラメーターを保護するために使用されます。 これは、キーと証明書が実行ごとではなく、プロジェクトに対して 1 回生成されるため、PER_EXECUTION レベルより優れたパフォーマンスを提供します。  
   
  SERVER_OPERATION_ENCRYPTION_LEVEL を 1 から 2 (または) 2 から 1 に変更するには、事前に [catalog.cleanup_server_log](../../integration-services/system-stored-procedures/catalog-cleanup-server-log.md) ストアド プロシージャを実行する必要があります。 このストアド プロシージャを実行する前に、次の操作を行う必要があります。  
   

@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: a7451a85-18e5-4fd0-bbcb-2f15a1117290
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: dab1e03a0c1f2364ec3557e375f7db044ad5b5cf
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.openlocfilehash: 8d685c15b4cc30dc093a47b37e6bfc29368e91f0
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51605132"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68014801"
 ---
 # <a name="step-3-proof-of-concept-connecting-to-sql-using-php"></a>ステップ 3: PHP を使用した SQL への接続を概念実証する
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -24,7 +23,7 @@ ms.locfileid: "51605132"
 ## <a name="step-1--connect"></a>手順 1: 接続する  
   
   
-これは、 **OpenConnection**ですべての次の関数の先頭付近にある関数が呼び出されます。  
+この**Openconnection**関数は、後続のすべての関数の先頭付近で呼び出されます。  
   
   
 ```php 
@@ -46,9 +45,9 @@ ms.locfileid: "51605132"
     }  
 ```  
   
-## <a name="step-2--execute-query"></a>手順 2: クエリを実行します。  
+## <a name="step-2--execute-query"></a>手順 2: クエリを実行する  
   
-[Sqlsrv_query()](https://php.net/manual/en/function.sqlsrv-query.php) SQL Database に対するクエリのセットの結果を取得する関数を使用できます。 この関数は、基本的に任意のクエリを受け取り、接続オブジェクトと、使用して反復処理できる結果セットを返します[sqlsrv_fetch_array()](https://php.net/manual/en/function.sqlsrv-fetch-array.php)します。  
+[Sqlsrv_query ()](https://php.net/manual/en/function.sqlsrv-query.php)関数を使用すると、SQL Database に対するクエリから結果セットを取得できます。 この関数は、基本的にクエリと接続オブジェクトを受け取り、 [sqlsrv_fetch_array ()](https://php.net/manual/en/function.sqlsrv-fetch-array.php)を使用して反復処理できる結果セットを返します。  
   
 ```php  
     function ReadData()  
@@ -110,16 +109,16 @@ ms.locfileid: "51605132"
     }  
 ```  
   
-## <a name="step-4--rollback-a-transaction"></a>手順 4: トランザクションをロールバックします。  
+## <a name="step-4--rollback-a-transaction"></a>手順 4: トランザクションをロールバックする  
   
   
-このコード例でトランザクションを使用します。  
+このコード例では、次のようなトランザクションの使用方法を示します。  
   
--トランザクションを開始します。  
+-トランザクションを開始します  
   
--データの行の挿入、データの別の行を更新  
+-データの行を挿入し、別のデータ行を更新します  
   
--コミット トランザクションの挿入および更新が成功した場合、トランザクションをロールバック、うち 1 つがなかった場合  
+-挿入と更新が正常に完了した場合はトランザクションをコミットし、そのうちの1つがトランザクションをロールバックしなかった場合は、  
   
   
 ```php 

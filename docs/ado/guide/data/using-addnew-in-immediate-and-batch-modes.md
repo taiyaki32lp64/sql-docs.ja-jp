@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: ed314bb9-e188-4658-a68c-a2abc49610be
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 6295e4499a6f6f25f9111497012f2e9f1d6dc421
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 265b1dcd3cdc1aa7f18f0ca54dc2cf54df2da158
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47616651"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67923625"
 ---
 # <a name="using-addnew-in-immediate-and-batch-modes"></a>イミディエイト モードとバッチ モードで AddNew を使用する
 動作、 **AddNew**メソッドの更新モードによって異なります、 **Recordset**オブジェクトとかどうかを渡す、 *FieldList*と*値*引数。  

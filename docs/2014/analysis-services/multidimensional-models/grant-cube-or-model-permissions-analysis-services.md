@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.roledesignerdialog.cubes.f1
@@ -18,12 +17,12 @@ ms.assetid: 55b1456e-2f6b-4101-b316-c926f40304e3
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 44159dccd8fd912e0ebee75c5ab7d1a72c946e75
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 12eb2a2f6ea7501e03830724b24c5808375db7c4
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48149712"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66075027"
 ---
 # <a name="grant-cube-or-model-permissions-analysis-services"></a>キューブ権限またはモデル権限の付与 (Analysis Services)
   キューブまたは表形式モデルは、Analysis Services データ モデルの主要なクエリ オブジェクトです。 アドホック データ探索のために Excel から多次元データまたは表形式データに接続する場合、ユーザーは、通常、最初に、ピボット レポート オブジェクトの基礎となるデータ構造として、特定のキューブまたは表形式モデルを選択します。 このトピックでは、キューブまたは表形式データへのアクセスに必要な権限を付与する方法について説明します。  
@@ -37,7 +36,7 @@ ms.locfileid: "48149712"
 > [!NOTE]  
 >  サーバー管理者、またはフル コントロール権限を持つデータベース管理者のみが、ソース ファイルからサーバーへのキューブの配置や、ロールの作成とメンバーへの割り当てを実行できます。 参照してください[サーバーの管理者アクセス許可の付与&#40;Analysis Services&#41; ](../instances/grant-server-admin-rights-to-an-analysis-services-instance.md)と[データベース アクセス許可を付与&#40;Analysis Services&#41; ](grant-database-permissions-analysis-services.md)詳細については、これらのアクセス許可レベル。  
   
-#### <a name="step-1-create-the-role"></a>手順 1: ロールの作成  
+#### <a name="step-1-create-the-role"></a>手順 1:ロールを作成します。  
   
 1.  SSMS で、Analysis Services に接続します。 この手順について不明な点がある場合は、「[クライアント アプリケーションからの接続 (Analysis Services)](../instances/connect-from-client-applications-analysis-services.md)」をご覧ください。  
   
@@ -49,15 +48,15 @@ ms.locfileid: "48149712"
   
 5.  名前および必要に応じて説明を入力した後、次の手順に進みます。  
   
-#### <a name="step-2-assign-membership"></a>手順 2: メンバーシップの割り当て  
+#### <a name="step-2-assign-membership"></a>手順 2:メンバーシップを割り当てる  
   
 1.  **[メンバーシップ]** ペインで、 **[追加]** をクリックして、このロールを使用してキューブにアクセスする Windows ユーザー アカウントまたはグループ アカウントを入力します。 Analysis Services では、Windows セキュリティ ID のみがサポートされています。 この手順ではデータベース ログインを作成しないことに注意してください。 Analysis Services では、ユーザーは Windows アカウントで接続します。  
   
 2.  次の手順に進み、キューブ権限を設定します。  
   
-     データ ソース ペインをスキップしていることに注意してください。 Analysis Services データの通常のコンシューマーのほとんどには、データ ソース オブジェクトに対する権限は必要ありません。 これらの権限レベルの詳細については、「 [Grant permissions on a data source object &#40;Analysis Services&#41;](grant-permissions-on-a-data-source-object-analysis-services.md) 」をご覧ください。  
+     データ ソース ペインをスキップしていることに注意してください。 Analysis Services データの通常のコンシューマーのほとんどには、データ ソース オブジェクトに対する権限は必要ありません。 これらの権限レベルの詳細については、「 [データ ソース オブジェクトに対する権限の付与 (Analysis Services)](grant-permissions-on-a-data-source-object-analysis-services.md) 」をご覧ください。  
   
-#### <a name="step-3-set-cube-permissions"></a>手順 3: キューブ権限の設定  
+#### <a name="step-3-set-cube-permissions"></a>手順 3:キューブ権限を設定します。  
   
 1.  **キューブ**ウィンドウは、キューブを選択し、クリックして`Read`または**読み取り/書き込み**アクセスします。  
   
@@ -73,7 +72,7 @@ ms.locfileid: "48149712"
   
      さらに、このペインでは、キューブに対する **[データベースの処理]** 権限を付与して、このロールのすべてのメンバーがこのキューブのデータを処理できるようにすることができます。 処理は通常制限付きの操作であるため、そのタスクを管理者に委ねるか、または特にそのタスク用に別途ロールを定義することをお勧めします。 処理権限のベスト プラクティスの詳細については、「[処理権限の付与 (Analysis Services)](grant-process-permissions-analysis-services.md)」をご覧ください。  
   
-#### <a name="step-4-test"></a>手順 4: テスト  
+#### <a name="step-4-test"></a>手順 4:テスト  
   
 1.  Excel を使用して、キューブのアクセス権をテストします。 また、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]を使用すると、次に説明するのと同じ方法に従って、管理者以外のユーザーとしてアプリケーションを実行できます。  
   
@@ -86,7 +85,7 @@ ms.locfileid: "48149712"
   
      接続に関するエラーが表示された場合は、Analysis Services のポート構成を確認し、サーバーがリモート接続に対応していることを確認します。 ポートの構成については、「 [Analysis Services のアクセスを許可するための Windows ファイアウォールの構成](../instances/configure-the-windows-firewall-to-allow-analysis-services-access.md) 」をご覧ください。  
   
-#### <a name="step-5-script-role-definition-and-assignments"></a>手順 5: スクリプト ロールの定義と割り当て  
+#### <a name="step-5-script-role-definition-and-assignments"></a>手順 5:スクリプト ロールの定義と割り当て  
   
 1.  最後の手順として、作成したロール定義をキャプチャするスクリプトを生成します。  
   
@@ -94,7 +93,7 @@ ms.locfileid: "48149712"
   
 2.  SSMS で、 **[ロール]** フォルダーに移動し、既存のロールを右クリックします。  
   
-3.  **[ロールをスクリプト化]** | **[CREATE TO]** | **[ファイル]** の順に選択します。  
+3.  **[ロールをスクリプト化]**  |  **[CREATE TO]**  |  **[ファイル]** の順に選択します。  
   
 4.  拡張子を .xmla にしてファイルを保存します。 スクリプトをテストするには、現在のロールを削除し、SSMS でファイルを開き、F5 キーを押してスクリプトを実行します。  
   
@@ -103,7 +102,7 @@ ms.locfileid: "48149712"
   
 ## <a name="see-also"></a>参照  
  [Analysis Services でサポートされる認証方法](../instances/authentication-methodologies-supported-by-analysis-services.md)   
- [データ マイニング構造およびモデルに対する権限の付与&#40;Analysis Services&#41;](grant-permissions-on-data-mining-structures-and-models-analysis-services.md)   
- [データ ソース オブジェクトに対する権限の付与&#40;Analysis Services&#41;](grant-permissions-on-a-data-source-object-analysis-services.md)  
+ [データ マイニング構造およびデータ マイニング モデルに対する権限の付与 (Analysis Services)](grant-permissions-on-data-mining-structures-and-models-analysis-services.md)   
+ [データ ソース オブジェクトに対する権限の付与 &#40;Analysis Services&#41;](grant-permissions-on-a-data-source-object-analysis-services.md)  
   
   

@@ -4,22 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 f1_keywords:
 - sql12.rtp.rptdesigner.calculatedseriesproperties.formula.f1
 - "10151"
 ms.assetid: 97d4a29b-30ae-4141-8595-e994e47e6648
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 11e035ea7b89e3871253db907f34c620f99bf085
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: d3f03857ebbd1d633d78a25437b1f7c03558c7e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56295960"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66109870"
 ---
 # <a name="calculated-series-properties-dialog-box-general-report-builder-and-ssrs"></a>[全般] ([計算系列のプロパティ] ダイアログ ボックス) (レポート ビルダーおよび SSRS)
   **[計算系列のプロパティ]** ダイアログ ボックスの **[数式]** を選択すると、既存の系列データを入力として使用する組み込みの数式に基づいて計算される系列を追加または変更できます。  

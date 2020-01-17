@@ -1,5 +1,5 @@
 ---
-title: setShort メソッド (SQLServerCallableStatement) |Microsoft Docs
+title: setShort メソッド (SQLServerCallableStatement) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: d7031a89-e964-4ffd-87b7-63825799435d
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 33d39d7e0242ff7913fd13858cd35fc81ea6858c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d4ad0910814cd4600b3d70c9037c03e1b9997888
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47662240"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67972852"
 ---
 # <a name="setshort-method-sqlservercallablestatement"></a>setShort メソッド (SQLServerCallableStatement)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -43,7 +42,7 @@ public void setShort(java.lang.String sCol,
   
  *s*  
   
- A**短い**値。  
+ **short** 値です。  
   
 ## <a name="exceptions"></a>例外  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  

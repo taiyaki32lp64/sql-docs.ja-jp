@@ -20,18 +20,17 @@ helpviewer_keywords:
 ms.assetid: 66b95f96-6df7-4657-9b3c-86a58c788ca5
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 8bdbab374f7f6fa182ea344f442b23e2dec2a15b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a840c749222cc7c01fa1b1ff5a27489e0e9d322a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47766471"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67942465"
 ---
-# <a name="corespupdatedatasource-transact-sql"></a>core.sp_update_data_source (Transact-SQL)
+# <a name="corespupdatedatasource-transact-sql"></a>core.sp_update_data_source を呼び出します (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  管理データ ウェアハウスの core.source_info_internal テーブルで既存行の更新または新規行の挿入を行います。 このプロシージャは、アップロード パッケージが管理データ ウェアハウスへのデータのアップロードを開始するたびに、データ コレクターの実行時コンポーネントによって呼び出されます。  
+  管理データ ウェアハウスの core.source_info_internal テーブルで既存行の更新または新規行の挿入を行います。 この手順は、アップロード パッケージが管理データ ウェアハウスへのデータのアップロードを起動するたびに、データ コレクターの実行時コンポーネントによって呼び出されます。  
   
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -54,7 +53,7 @@ core.sp_update_data_source [ @collection_set_uid = ] 'collection_set_uid'
  コレクション セットが存在するサーバーの名前を指定します。 *コンピューター名*は**sysname**で既定値はありません。  
   
  [ @named_instance =] '*named_instance*'  
- コレクション セットのインスタンスの名前を指定します。 *named_instance*は**sysname**既定値はありません。  
+ コレクション セットのインスタンスの名前。 *named_instance*は**sysname**既定値はありません。  
   
 > [!NOTE]  
 >  *named_instance*インスタンスの完全修飾名は、コンピューター名と形式でインスタンス名で構成される必要があります*computername*\\*instancename*します。  
@@ -63,7 +62,7 @@ core.sp_update_data_source [ @collection_set_uid = ] 'collection_set_uid'
  スナップショット データ保持期間の日数を指定します。 *days_until_expiration*は**smallint**します。  
   
  [ @source_id =] *source_id*  
- 更新元の一意な識別子を指定します。 *source_id*は**int**出力として返されます。  
+ 更新プログラムのソースの一意の識別子。 *source_id*は**int**出力として返されます。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  **0** (成功) または**1** (失敗)  
@@ -71,7 +70,7 @@ core.sp_update_data_source [ @collection_set_uid = ] 'collection_set_uid'
 ## <a name="remarks"></a>コメント  
  アップロード パッケージが管理データ ウェアハウスへのデータのアップロードを開始するたびに、データ コレクターの実行時コンポーネントが core.sp_update_data_source を呼び出します。 前回のアップロード時以降に次のいずれかの変更が行われている場合は、core.source_info_internal テーブルが更新されます。  
   
--   新しいコレクション セットが追加された。  
+-   新しいコレクション セットが追加されました。  
   
 -   days_until_expiration の値が変更された。  
   
@@ -79,7 +78,7 @@ core.sp_update_data_source [ @collection_set_uid = ] 'collection_set_uid'
  メンバーシップが必要です、 **mdw_writer** (EXECUTE 権限) を持つ固定データベース ロール。  
   
 ## <a name="examples"></a>使用例  
- 次の例では、データ ソース (この場合はディスク使用量コレクション セット) を更新し、有効期限 (日数) を設定します。さらに、更新元の識別子を返します。 この例では、既定のインスタンスを使用しています。  
+ 次の例では、データ ソースを更新する (この場合、ディスク使用量コレクション セット)、有効期限までの日数の数を設定し、ソースの識別子を返します。 例では、既定のインスタンスが使用されます。  
   
 ```  
 USE <management_data_warehouse>;  
@@ -93,7 +92,7 @@ EXEC core.sp_update_data_source
 @source_id = @source_id OUTPUT;  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [システム ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
  [データ コレクター ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/data-collector-stored-procedures-transact-sql.md)   
  [管理データ ウェアハウス](../../relational-databases/data-collection/management-data-warehouse.md)  

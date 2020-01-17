@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: 85b867ed-de5a-4879-b3f8-bce897879077
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: a6c9a01c4be9dd0777d57cf87ab7613c1de3a832
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 2e2349dbe193834385869f86f87fe4284a967284
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47718070"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67983689"
 ---
 # <a name="getdefaulttransactionisolation-method-sqlserverdatabasemetadata"></a>getDefaultTransactionIsolation メソッド (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -42,7 +41,7 @@ public int getDefaultTransactionIsolation()
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- この getDefaultTransactionIsolation メソッドは、java.sql.DatabaseMetaData インターフェイスで getDefaultTransactionIsolation メソッドによって指定されます。  
+ この getDefaultTransactionIsolation メソッドは、getDefaultTransactionIsolation メソッドによって、java メタデータインターフェイスで指定されます。  
   
  [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)] を [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] データベースと共に使用している場合、このメソッドは TRANSACTION_READ_COMMITTED の値または **int** 値 2 が返されます。  
   

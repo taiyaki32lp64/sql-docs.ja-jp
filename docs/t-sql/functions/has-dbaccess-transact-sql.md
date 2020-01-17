@@ -22,21 +22,20 @@ helpviewer_keywords:
 - testing permissions
 - status information [SQL Server], user access
 ms.assetid: 99b43a72-0722-4a7b-a493-bdee1c74c7b9
-author: MashaMSFT
-ms.author: mathoma
-manager: craigg
+author: VanMSFT
+ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 0ed76b4ddc84e3f61594ecd3296b5762a274bba1
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 4255caf93e7076745bfe798c0b200c981d4651bf
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47839070"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68019751"
 ---
 # <a name="hasdbaccess-transact-sql"></a>HAS_DBACCESS (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-pdw-md.md)]
 
-  ユーザーが指定のデータベースにアクセスできるかどうかについて情報を返します。  
+  ユーザーが、指定したデータベースにアクセスできるかどうかに関する情報を返します。  
   
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -54,11 +53,11 @@ HAS_DBACCESS ( 'database_name' )
  **int**  
   
 ## <a name="remarks"></a>Remarks  
- ユーザーがデータベースにアクセスできる場合は 1、アクセスできない場合は 0 が返されます。データベース名が有効でない場合は NULL が返されます。  
+ HAS_DBACCESS は、ユーザーがデータベースにアクセスできる場合は 1、ユーザーがデータベースにアクセスできない場合は 0、およびデータベース名が有効でない場合は NULL を返します。  
   
  データベースがオフラインの場合または異常がある場合は、0 が返されます。  
   
- データベースがシングル ユーザー モードであり、別のユーザーによって使用されている場合も、0 が返されます。  
+ HAS_DBACCESS は、データベースがシングルユーザー モードで、データベースが別のユーザーによって使用中の場合、0 を返します。  
   
 ## <a name="permissions"></a>アクセス許可  
  public ロールのメンバーシップが必要です。  

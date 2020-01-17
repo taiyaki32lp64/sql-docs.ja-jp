@@ -50,7 +50,7 @@
       href: features/utf-16-support-in-sql-server-native-client-11-0.md
     - name: SQL Server Native Client の HADR サポート
       href: features/sql-server-native-client-support-for-high-availability-disaster-recovery.md
-    - name: 拡張イベント ログの診断情報へのアクセス」を参照してください。
+    - name: 拡張イベント ログの診断情報へのアクセス
       href: features/accessing-diagnostic-information-in-the-extended-events-log.md
     - name: SQL Server Native Client における LocalDB のサポート
       href: features/sql-server-native-client-support-for-localdb.md

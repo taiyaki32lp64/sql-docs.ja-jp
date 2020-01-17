@@ -19,15 +19,14 @@ helpviewer_keywords:
 - ORIGINAL_LOGIN function
 - names [SQL Server], logins
 ms.assetid: ddfb0991-cde3-4b97-a5b7-ee450133f160
-author: MashaMSFT
-ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 91c5694868c7e57182b8295e5bac793ee8698a50
-ms.sourcegitcommit: 7419a8c957c212e60422a5d87a253683031dc467
+author: VanMSFT
+ms.author: vanto
+ms.openlocfilehash: ff9f53c6dd3e0029f2627545c7654ded3219abbe
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/05/2018
-ms.locfileid: "52951594"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67914532"
 ---
 # <a name="originallogin-transact-sql"></a>ORIGINAL_LOGIN (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -82,7 +81,7 @@ GO
 ```  
   
 ## <a name="see-also"></a>参照  
- [実行 AS (& a) #40 です。TRANSACT-SQL と #41 です。](../../t-sql/statements/execute-as-transact-sql.md)   
- [元に戻す (& a) #40 です。TRANSACT-SQL と #41 です。](../../t-sql/statements/revert-transact-sql.md)  
+ [EXECUTE AS &#40;Transact-SQL&#41;](../../t-sql/statements/execute-as-transact-sql.md)   
+ [REVERT &#40;Transact-SQL&#41;](../../t-sql/statements/revert-transact-sql.md)  
   
   

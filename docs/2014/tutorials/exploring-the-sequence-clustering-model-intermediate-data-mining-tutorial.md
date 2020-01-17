@@ -11,11 +11,11 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: e0904239933361b80727700c94b03e379751251f
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56025000"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63164052"
 ---
 # <a name="exploring-the-sequence-clustering-model-intermediate-data-mining-tutorial"></a>シーケンス クラスター モデルの検証 (中級者向けデータ マイニング チュートリアル)
   これでビルドした、 **Sequence Clustering with Region**モデルでは、利用できることを使用して、[!INCLUDE[msCoName](../includes/msconame-md.md)]でシーケンス クラスター ビューアー、**マイニング モデル ビューアー**データ マイニング デザイナーのタブ。 [!INCLUDE[msCoName](../includes/msconame-md.md)]シーケンス クラスター ビューアーには、5 つのタブが含まれています。**クラスター ダイアグラム**、**クラスターのプロファイル**、**クラスターの特性**、 **ClusterDiscrimination**、および**状態遷移**. このビューアーを使用する方法の詳細については、次を参照してください。 [Microsoft シーケンス クラスター ビューアーを使用してモデルの参照](../../2014/analysis-services/data-mining/browse-a-model-using-the-microsoft-sequence-cluster-viewer.md)します。  

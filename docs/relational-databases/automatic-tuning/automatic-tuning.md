@@ -13,14 +13,13 @@ helpviewer_keywords:
 ms.assetid: ''
 author: jovanpop-msft
 ms.author: jovanpop
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 7382e4d1b9e9d968d7ad87af9830691dd931d657
-ms.sourcegitcommit: 170c275ece5969ff0c8c413987c4f2062459db21
+ms.openlocfilehash: 4ad185085c19d8286fa6a09e46742860a948849a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/11/2019
-ms.locfileid: "54226619"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67934556"
 ---
 # <a name="automatic-tuning"></a>自動調整
 [!INCLUDE[tsql-appliesto-ss2017-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-asdb-xxxx-xxx-md.md)]
@@ -32,7 +31,7 @@ ms.locfileid: "54226619"
 
 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]モニター、データベースと自動的に実行されるクエリ ワークロードのパフォーマンスが向上します。 [!INCLUDE[ssde_md](../../includes/ssde_md.md)]組み込みのインテリジェンス メカニズムを自動的に調整して、ワークロードにデータベースを動的に適応することで、クエリのパフォーマンスを向上させることができます。 利用できる 2 つの自動チューニング機能があります。
 
- -  **自動プラン修正**問題のあるクエリ実行プランし、クエリの実行プランのパフォーマンスに関する問題の修正を識別します。 **適用対象**:[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (以降[!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)]) と [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
+ -  **自動プラン修正**問題のあるクエリ実行プランし、クエリの実行プランのパフォーマンスに関する問題の修正を識別します。 **適用対象**:[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (開始値 [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)]) および [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
  -  **自動インデックス管理**を削除するインデックスと、データベースに追加するインデックスを識別します。 **適用対象**: [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
 
 ## <a name="why-automatic-tuning"></a>なぜ自動チューニングでしょうか。

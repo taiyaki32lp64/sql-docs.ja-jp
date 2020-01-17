@@ -1,6 +1,5 @@
 ---
-title: PATH モードで入れ子になった JSON 出力を書式設定する (SQL Server) | Microsoft Docs
-ms.custom: ''
+title: PATH モードで入れ子になった JSON 出力を書式設定する
 ms.date: 07/17/2017
 ms.prod: sql
 ms.reviewer: genemi
@@ -9,14 +8,14 @@ ms.topic: conceptual
 ms.assetid: 032761b0-6358-42e4-b05c-dbfd663ac881
 author: jovanpop-msft
 ms.author: jovanpop
-manager: craigg
+ms.custom: seo-dt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 6d90637fb98635c16029be7fb81bb384e08edd34
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 61c282e01a03a0b46de0c256025cb59c57304ddb
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56033183"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75245595"
 ---
 # <a name="format-nested-json-output-with-path-mode-sql-server"></a>PATH モードで入れ子になった JSON 出力を書式設定する (SQL Server)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -90,10 +89,10 @@ SELECT TOP 5
  **クエリ**  
   
 ```sql  
-SELECT TOP 2 SalesOrderNumber AS 'Order.Number',  
-        OrderDate AS 'Order.Date',  
-        UnitPrice AS 'Product.Price',  
-        OrderQty AS 'Product.Quantity'  
+SELECT TOP 2 H.SalesOrderNumber AS 'Order.Number',  
+        H.OrderDate AS 'Order.Date',  
+        D.UnitPrice AS 'Product.Price',  
+        D.OrderQty AS 'Product.Quantity'  
 FROM Sales.SalesOrderHeader H  
    INNER JOIN Sales.SalesOrderDetail D  
      ON H.SalesOrderID = D.SalesOrderID  

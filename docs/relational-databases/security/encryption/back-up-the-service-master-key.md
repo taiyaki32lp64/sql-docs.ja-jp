@@ -9,15 +9,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - service master key [SQL Server], exporting
 ms.assetid: f60b917c-6408-48be-b911-f93b05796904
-author: aliceku
-ms.author: aliceku
-manager: craigg
-ms.openlocfilehash: 8ad7bbe4ff7ab1ccf72e84c51d91c1732face24a
-ms.sourcegitcommit: fa2f85b6deeceadc0f32aa7f5f4e2b6e4d99541c
+author: jaszymas
+ms.author: jaszymas
+ms.openlocfilehash: 1fa730e1143516df2fe5f14c04afcbb9292ac67f
+ms.sourcegitcommit: 39ea690996a7390e3d13d6fb8f39d8641cd5f710
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/03/2019
-ms.locfileid: "53997484"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "74957486"
 ---
 # <a name="back-up-the-service-master-key"></a>サービス マスター キーのバックアップ
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -69,5 +68,5 @@ ms.locfileid: "53997484"
 8. ファイルをバックアップ メディアにコピーして、コピーしたファイルを確認します。  
   
 9. バックアップを安全な場所に保存します。  
-  
+
  詳細については、「[OPEN MASTER KEY &#40;Transact-SQL&#41;](../../../t-sql/statements/open-master-key-transact-sql.md)」と「[BACKUP MASTER KEY &#40;Transact-SQL&#41;](../../../t-sql/statements/backup-master-key-transact-sql.md)」を参照してください。  

@@ -21,14 +21,13 @@ helpviewer_keywords:
 ms.assetid: 1c321680-562e-41f1-8eb1-e7fa5ae45cc5
 author: VanMSFT
 ms.author: vanto
-manager: craigg
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: 6bac04d2c3e60496c73f1cc91c1adb89c82b606a
-ms.sourcegitcommit: 97340deee7e17288b5eec2fa275b01128f28e1b8
+ms.openlocfilehash: cc6f7c3ad9dc10e46a7abd1b044bcf70ff86f92d
+ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55421099"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "73983000"
 ---
 # <a name="create-server-audit-transact-sql"></a>CREATE SERVER AUDIT (Transact-SQL)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -71,7 +70,7 @@ CREATE SERVER AUDIT audit_name
 }  
   
 <predicate_factor>::=   
-    event_field_name { = | < > | ! = | > | > = | < | < = } { number | ' string ' }  
+    event_field_name { = | < > | ! = | > | > = | < | < = | LIKE } { number | ' string ' }  
 ```  
   
 ## <a name="arguments"></a>引数  
@@ -86,11 +85,11 @@ CREATE SERVER AUDIT audit_name
  MAXSIZE = { *max_size }*  
  監査ファイルのサイズの上限を指定します。 *max_size* の値は、整数の後に MB、GB、TB を付けて指定するか、または UNLIMITED を指定します。 *max_size* に指定できる最小サイズは 2 MB、最大サイズは 2,147,483,647 TB です。 UNLIMITED を指定した場合、ファイルはディスクがいっぱいになるまで拡張されます。 0 も UNLIMITED を示します。2 MB 未満の値を指定すると、エラー MSG_MAXSIZE_TOO_SMALL が発生します。 既定値は UNLIMITED です。  
   
- MAX_ROLLOVER_FILES =*{ integer* | UNLIMITED }  
+ MAX_ROLLOVER_FILES = *{ integer* | UNLIMITED }  
  現在のファイルに加えてファイル システム内に保持するファイルの最大数を指定します。 *MAX_ROLLOVER_FILES* 値には整数値または UNLIMITED を指定してください。 既定値は UNLIMITED です。 監査が再開されるたび ([!INCLUDE[ssDE](../../includes/ssde-md.md)] のインスタンスの再起動時や、監査をオフにして再度オンにしたとき)、または MAXSIZE に達して新しいファイルが必要になった場合に、このパラメーターが評価されます。 *MAX_ROLLOVER_FILES* の評価時にファイル数が *MAX_ROLLOVER_FILES* の設定を超えている場合、最も古いファイルが削除されます。 そのため、*MAX_ROLLOVER_FILES* の設定が 0 の場合、*MAX_ROLLOVER_FILES* 設定が評価されるたびに新しいファイルが作成されます。 *MAX_ROLLOVER_FILES* 設定の評価時に自動的に削除されるファイルは 1 つだけです。したがって、*MAX_ROLLOVER_FILES* の値を下げても、古いファイルを手動で削除しない限り、ファイル数は少なくなりません。 指定できるファイルの最大数は 2,147,483,647 です。  
   
  MAX_FILES =*integer*  
- **適用対象**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]  
+ **適用対象**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 以降。  
   
  作成できる監査ファイルの最大数を指定します。 制限に達しても、最初のファイルへのロールオーバーは行われません。 MAX_FILES の制限に達すると、追加の監査イベントを生成させるアクションは失敗し、エラーが発生します。  
   
@@ -111,18 +110,18 @@ SHUTDOWN
   
  FAIL_OPERATION  
  監査イベントを発生させるデータベース アクションを失敗させます。 監査イベントを発生させないアクションは続行できますが、監査イベントを発生させることはできません。 監査はイベントのログ記録を試行し続け、エラー状態が解決されると、記録を再開します。 [!INCLUDE[ssDE](../../includes/ssde-md.md)]へのフル アクセスより、完全な監査の維持の方が重要である場合に、このオプションを使用します。  
-**適用対象**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
+**適用対象**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 以降。
 
  AUDIT_GUID =*uniqueidentifier*  
  監査には、データベース ミラーリングなどのシナリオをサポートするために、ミラーリングされたデータベースで見つかった GUID と照合する特定の GUID が必要です。 この GUID は、監査が作成されると変更できなくなります。  
   
  predicate_expression  
- **適用対象**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]  
+ **適用対象**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 以降。  
   
  イベントを処理する必要があるかどうかを判定するために使用する述語式を指定します。 述語式は 3,000 文字に制限され、これにより文字列引数が制限されます。  
   
  event_field_name  
- **適用対象**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]  
+ **適用対象**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 以降。  
   
  述語ソースを識別するイベント フィールドの名前を指定します。 監査フィールドについては、「[sys.fn_get_audit_file &#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-get-audit-file-transact-sql.md)」で説明されています。 `file_name`、`audit_file_offset`、`event_time` 以外のすべてのフィールドは監査できます。  
 
@@ -137,12 +136,12 @@ SHUTDOWN
 
 
  number  
- **適用対象**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]  
+ **適用対象**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 以降。  
   
  **decimal** を含む任意の数値型です。 制限として、使用可能な物理メモリの不足、または 64 ビット整数として表すのに大きすぎる数字が挙げられます。  
   
  ' string '  
- **適用対象**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]  
+ **適用対象**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 以降。  
   
  述語の比較に必要な ANSI 文字列または Unicode 文字列です。 述語比較関数に対しては、暗黙の文字列型変換は行われません。 無効な型を渡すとエラーになります。  
   

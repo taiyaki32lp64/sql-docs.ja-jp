@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 52b42b56-50aa-4ce6-8d79-0963c7a71437
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: bbd920b77fd44eaf4765f0983d7d16feb31a4d91
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 3387b4fa48eb1a04102daadcc08f971765d7ca2b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47685720"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68037785"
 ---
 # <a name="c-interval-structure"></a>C Interval 構造体
 表示される間隔の C データ型の[C データ型](../../../odbc/reference/appendixes/c-data-types.md)セクションでは、同じ構造を使用して、データの間隔を含めることができます。 ときに**SQLFetch**、 **SQLFetchScroll**、または**SQLGetData**が呼び出されると、ドライバー SQL_INTERVAL_STRUCT 構造にデータを返す、によって指定された値を使用して、C データ型のアプリケーション (への呼び出しで**SQLBindCol**、 **SQLGetData**、または**SQLBindParameter**) SQL_INTERVAL_STRUCT の内容を解釈するには、し、設定、 *interval_type*を構造体のフィールド、 *enum* C 型に対応する値。 ドライバーの読み取りを行わないことに注意してください、 *interval_type*間隔の種類を決定するフィールド; SQL_DESC_CONCISE_TYPE 記述子フィールドの値を取得します。 アプリケーションの値を設定する場合でも、ドライバーが、SQL_INTERVAL_STRUCT の内容を解釈する APD SQL_DESC_CONCISE_TYPE フィールドに適用することによって指定された値を使用パラメーターのデータ構造体を使用すると、ときに、 *interval_type*フィールドを別の値。  

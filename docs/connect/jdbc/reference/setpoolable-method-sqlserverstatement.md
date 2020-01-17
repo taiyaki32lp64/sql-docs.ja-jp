@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: f0f798c8-cafb-4acc-b85d-2e0059c91d92
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 809e16fce7cac83b6ba09fcef676c8da920b0dc3
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 5424de7d0d6f7bda44ec61ea61f48d63bb097c97
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47759680"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67973197"
 ---
 # <a name="setpoolable-method-sqlserverstatement"></a>setPoolable メソッド (SQLServerStatement)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -43,7 +42,7 @@ public void setPoolable(boolean poolable) throws SQLException
   
  ステートメントのプール値は、ドライバーによって実装される内部ステートメント キャッシュと、アプリケーション サーバーや他のアプリケーションによって実装される外部ステートメント キャッシュの両方に適用されます。  
   
- 既定では、SQLServerStatement オブジェクトはプールの作成時にではありません。 SQLServerPreparedStatement や SQLServerCallableStatement オブジェクトは作成時にプールします。  
+ 既定では、SQLServerStatement オブジェクトは、作成時にはプールできません。 SQLServerPreparedStatement オブジェクトと SQLServerCallableStatement オブジェクトは、作成時にプールできます。  
   
  このメソッドを閉じたステートメントで呼び出すと、[SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md) がスローされます。  
   

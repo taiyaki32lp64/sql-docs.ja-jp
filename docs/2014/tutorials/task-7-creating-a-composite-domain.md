@@ -7,15 +7,15 @@ ms.reviewer: ''
 ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: ae778647-1df0-4952-9a69-0ef6177eea9c
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: c48144ca3720565c3c745ffd8aa39b0896e1fb66
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: bbc00117e10e48adbde37b9f0561610feff8f87e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56013793"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65488963"
 ---
 # <a name="task-7-creating-a-composite-domain"></a>タスク 7:複合ドメインを作成する
   このタスクで、複合ドメインを作成する**Address Validation**で構成される**Address Line**、**市区町村**、**状態**、および**Zip**ドメイン。 複合ドメインでは、ルール内の複数のドメインに関するクロスドメイン ルールを定義できます。 複合ドメインには、フィールド値を複数のドメインに解析できるなどの利点があります。  たとえば、氏名フィールドの値を、名、ミドル ネーム、および姓の個別のドメインに解析できます。 このチュートリアルでは、クロスドメイン ルールのみを定義します。 参照してください[複合ドメインの管理](https://msdn.microsoft.com/library/hh510399.aspx)の詳細。  
@@ -28,7 +28,7 @@ ms.locfileid: "56013793"
   
      ![アドレス検証複合ドメイン](../../2014/tutorials/media/et-creatingacompositedomain-02.jpg "アドレス検証複合ドメイン")  
   
-3.  ドメインの一覧から選択**Address Line**、**市区町村**、**状態**、および**Zip**  をクリック**右矢印**追加する、**複合ドメイン内の**一覧。  
+3.  ドメインの一覧から選択**Address Line**、**City**、**State**、および**Zip**  をクリック**右矢印**追加する、**複合ドメイン内の**一覧。  
   
 4.  **[OK]** をクリックしてダイアログ ボックスを閉じます。  
   

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - multiple currency conversions
@@ -19,12 +18,12 @@ ms.assetid: e03f491c-7df8-46a0-ade9-f2e55b68db85
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 14ae3f58a8cfdef4dfde4d30e969e4386bd1dbc0
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 48bbb9eeacc1e3ba2bd31ef10b47b058f0f57239
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48190842"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66086553"
 ---
 # <a name="currency-conversions-analysis-services"></a>通貨換算 (Analysis Services)
   **[!INCLUDE[applies](../includes/applies-md.md)]**  多次元のみ  
@@ -55,7 +54,7 @@ ms.locfileid: "48190842"
  通貨ディメンション  
  次の設定で定義されているデータベース ディメンションです。  
   
--   `Type`ディメンションのプロパティが Currency に設定します。  
+-   ディメンションの `Type` プロパティが Currency に設定されている。  
   
 -   ディメンションの 1 つの属性の `Type` プロパティが CurrencyName に設定されている。  
   
@@ -69,18 +68,18 @@ ms.locfileid: "48190842"
   
 -   時間ディメンションとレート メジャー グループ間に標準のディメンション リレーションシップが存在する。  
   
--   必要に応じて、`Type` プロパティが ExchangeRate に設定される。 ビジネス インテリジェンス ウィザードでは、通貨ディメンションおよび時間ディメンションのリレーションシップを使用して、可能性の高いレート メジャー グループを識別するために、設定、`Type`プロパティを ExchangeRate にレート メジャーをより簡単に識別するためにアプリケーションをクライアントに許可グループ。  
+-   必要に応じて、`Type` プロパティが ExchangeRate に設定される。 ビジネス インテリジェンス ウィザードでは通貨ディメンションおよび時間ディメンションとのリレーションシップを使用して、考えられるレート メジャー グループが識別されますが、`Type` プロパティを ExchangeRate に設定すると、クライアント アプリケーションでより簡単にレート メジャー グループを識別できるようになります。  
   
 -   レート メジャー グループに含まれている換算レートを表す 1 つまたは複数のメジャー。  
   
  レポートの通貨ディメンション  
  通貨換算の定義後にビジネス インテリジェンス ウィザードによって定義されるディメンションで、その通貨換算用のレポートの通貨を含んでいます。 レポートの通貨ディメンションは、通貨ディメンションのディメンション メイン テーブルから名前付きクエリに基づいて作成され、レート メジャー グループに関連付けられている通貨ディメンションの基になっているデータ ソース ビューで定義されます。 ディメンションは、次の設定を使用して定義されます。  
   
--   `Type`ディメンションのプロパティが Currency に設定します。  
+-   ディメンションの `Type` プロパティが Currency に設定されている。  
   
--   `Type`ディメンションのキー属性のプロパティが CurrencyName に設定します。  
+-   ディメンションのキー属性の `Type` プロパティが CurrencyName に設定されている。  
   
--   `Type`ディメンション内の 1 つの属性のプロパティは CurrencyDestination に設定され、属性にバインドされている列には、通貨換算用のレポートの通貨を表す通貨識別子が含まれています。  
+-   ディメンション内の 1 つの属性の `Type` プロパティは CurrencyDestination に設定されており、属性にバインドされている列には、通貨換算用のレポートの通貨を表す通貨識別子が含まれている。  
   
 ## <a name="defining-currency-conversions"></a>通貨換算の定義  
  ビジネス インテリジェンス ウィザードを使用すると、キューブの通貨換算機能を定義できます。また、MDX スクリプトを使用して通貨換算を手動で定義することもできます。  

@@ -17,18 +17,17 @@ helpviewer_keywords:
 ms.assetid: 47abab63-e605-40e8-a54e-2241e2e01afd
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: 8d978bce696db7ff5ec2f19c773681409559ccb3
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 63fa5b02e681309e36b0c42ec5b504d9f07228ce
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47837281"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68035369"
 ---
-# <a name="spsyspolicyunsubscribefrompolicycategory-transact-sql"></a>sp_syspolicy_unsubscribe_from_policy_category (Transact-SQL)
+# <a name="spsyspolicyunsubscribefrompolicycategory-transact-sql"></a>sp_syspolicy_unsubscribe_from_policy_category は (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  現在のデータベースのポリシー カテゴリのサブスクリプションを削除します。  
+  現在のデータベースのポリシー カテゴリ サブスクリプションを削除します。  
   
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -40,8 +39,7 @@ sp_syspolicy_unsubscribe_from_policy_category [ @policy_category = ] 'policy_cat
 ```  
   
 ## <a name="arguments"></a>引数  
- [ **@policy_category=** ] **'***policy_category***'**  
- 削除するポリシー カテゴリのサブスクリプションの名前を指定します。 *policy_category*は**sysname**、必要があります。  
+`[ @policy_category = ] 'policy_category'` 削除するポリシー カテゴリのサブスクリプションの名前です。 *policy_category*は**sysname**、必要があります。  
   
  値を取得する*policy_category*、msdb.dbo.syspolicy_policy_categories システム ビューをクエリします。  
   
@@ -65,7 +63,7 @@ EXEC sys.sp_syspolicy_unsubscribe_from_policy_category @policy_category = N'Fina
 GO  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [ポリシー ベースの管理ストアド プロシージャ&#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/policy-based-management-stored-procedures-transact-sql.md)   
  [sp_syspolicy_subscribe_to_policy_category は&#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-syspolicy-subscribe-to-policy-category-transact-sql.md)  
   

@@ -19,15 +19,14 @@ helpviewer_keywords:
 - Query Designer [SQL Server], SQL Editor
 - View Designer, SQL Editor
 ms.assetid: 029abf7d-6414-47ca-a3a7-b3a057efb6c2
-author: stevestein
-ms.author: sstein
-manager: craigg
-ms.openlocfilehash: dd79404d5a9a128e259f7efbc48d2c426ad3752e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 34cc5508fee8a46c48625ac093b995d7ab806b6d
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47776180"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68263214"
 ---
 # <a name="sql-editor-visual-database-tools"></a>SQL エディター (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

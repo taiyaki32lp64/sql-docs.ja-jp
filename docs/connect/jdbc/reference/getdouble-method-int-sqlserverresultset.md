@@ -1,5 +1,5 @@
 ---
-title: getDouble (int) メソッド (SQLServerResultSet) |Microsoft Docs
+title: getDouble メソッド (int) (SQLServerResultSet) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: 128df26a-9063-4bdf-a4fb-a077cbe7cfe1
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 77589b13639f678b0c647241054075ec26151e5b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 3d9a02c6bf2fa6c9afa48c2192bfc9103c519174
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47635220"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67983653"
 ---
 # <a name="getdouble-method-int-sqlserverresultset"></a>getDouble (int) メソッド (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -41,13 +40,13 @@ public double getDouble(int columnIndex)
  列インデックスを示す **int** です。  
   
 ## <a name="return-value"></a>戻り値  
- A**二重**値。  
+ **Double**値。  
   
 ## <a name="exceptions"></a>例外  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- この getDouble メソッドは、java.sql.ResultSet インターフェイスの getDouble メソッドによって指定されます。  
+ この getDouble メソッドは、java.sql.ResultSet インターフェイスの getDouble メソッドで規定されています。  
   
  このメソッドは、数値ベースのすべてのデータ型を、Java の**double** の忠実性を使用して返します。  
   

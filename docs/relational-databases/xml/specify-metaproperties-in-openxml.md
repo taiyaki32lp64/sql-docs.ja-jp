@@ -14,15 +14,14 @@ helpviewer_keywords:
 - extracting information of XML nodes [SQL Server]
 - OPENXML statement, metaproperties
 ms.assetid: 29bfd1c6-3f9a-43c4-924a-53d438e442f4
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: 96503e254c1b5d409b7e631671fc22783c573f1c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: MightyPen
+ms.author: genemi
+ms.openlocfilehash: 9354bf1c1539a7ba83f1af1eafdb27ed99041d76
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47834700"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68000696"
 ---
 # <a name="specify-metaproperties-in-openxml"></a>OPENXML 内でのメタプロパティの指定
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -45,7 +44,7 @@ ms.locfileid: "47834700"
 |**\@mp:localname**|ノードの名前のローカル部分を格納します。 要素ノードや属性ノードの名前付けの際に、プレフィックスおよび名前空間 URI と共に使用します。|  
 |**\@mp:namespaceuri**|現在の要素の名前空間 URI を指定します。 この属性の値が NULL の場合は、名前空間がありません。|  
 |**\@mp:prefix**|現在の要素名の名前空間プレフィックスを格納します。<br /><br /> プレフィックスがなくて (NULL) URI が指定されている場合は、指定された名前空間が既定の名前空間であることを示します。 URI が指定されていない場合は、名前空間が関連付けられていません。|  
-|**\@mp:prev**|ノードよりも前の兄弟を格納します。 これにより、ドキュメント内の要素の順序に関する情報が得られます。<br /><br /> **\@mp:prev** には、同じ親要素を持つ前の兄弟要素の XML ID が含まれます。 要素が兄弟リストの先頭にある場合、**\@mp:prev** は NULL になります。|  
+|**\@mp:prev**|ノードよりも前の兄弟を格納します。 これにより、ドキュメント内の要素の順序に関する情報が得られます。<br /><br /> **\@mp:prev** には、同じ親要素を持つ前の兄弟要素の XML ID が含まれます。 要素が兄弟リストの先頭にある場合、 **\@mp:prev** は NULL になります。|  
 |**\@mp:xmltext**|処理の目的で使用します。 OPENXML のオーバーフロー処理で使用したように、要素とその属性とサブ要素のテキストをシリアル化したものです。|  
   
  次の表には、用意されている追加の親プロパティを示します。これらのプロパティを使用すると、階層情報を取得できます。  
@@ -162,13 +161,13 @@ EXEC sp_xml_removedocument @idoc
 ### <a name="c-specifying-the-xmltext-metaproperty-to-retrieve-the-unconsumed-data-in-a-column"></a>C. xmltext メタプロパティの指定による列内の未使用データの取得  
  この例では、OPENXML を使用して、サンプルの XML ドキュメントの行セット ビューを作成します。 この例では、OPENXML 内の行セットの列に **xmltext** メタプロパティ属性をマップすることによって、未使用の XML データを取得する方法について説明します。  
   
- **comment** 列は、**\@mp:xmltext** メタプロパティにマップすることによって、オーバーフロー列として識別されます。 *flags* パラメーターは **9** (XML_ATTRIBUTE and XML_NOCOPY) に設定されています。 この設定は、 **属性中心** のマッピングであり、未使用データのみがオーバーフロー列にコピーされることを示しています。  
+ **comment** 列は、 **\@mp:xmltext** メタプロパティにマップすることによって、オーバーフロー列として識別されます。 *flags* パラメーターは **9** (XML_ATTRIBUTE and XML_NOCOPY) に設定されています。 この設定は、 **属性中心** のマッピングであり、未使用データのみがオーバーフロー列にコピーされることを示しています。  
   
  SELECT ステートメントは OPENXML で提供される行セットを返します。  
   
  この例では、OPENXML によって生成された行セット内の列 (**ParentLocalName**) に対して **\@mp:parentlocalname** メタプロパティが設定されます。 その結果、この列には親要素のローカル名が含まれます。  
   
- 行セットには他に 2 つの列 ( **parent** と **comment**) が指定されています。 **parent** 列は **\@mp:parentid** にマップされ、この列に、要素の親要素の XML ID が含まれることを示します。 comment 列は、**\@mp:xmltext** メタプロパティにマップすることによって、オーバーフロー列として識別されます。  
+ 行セットには他に 2 つの列 ( **parent** と **comment**) が指定されています。 **parent** 列は **\@mp:parentid** にマップされ、この列に、要素の親要素の XML ID が含まれることを示します。 comment 列は、 **\@mp:xmltext** メタプロパティにマップすることによって、オーバーフロー列として識別されます。  
   
 ```  
 DECLARE @idoc int  

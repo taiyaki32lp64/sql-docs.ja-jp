@@ -13,11 +13,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 5ea24081f4b3a41211f3bd8d6bba52aaec8b74fc
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53370184"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62868744"
 ---
 # <a name="mssqlserver3168"></a>MSSQLSERVER_3168
     
@@ -45,12 +45,12 @@ ms.locfileid: "53370184"
   
 -   サーバー A のシステム データベースを、サーバー B で行ったバックアップから復元しようとしており、サーバー A とサーバー B でサーバー ビルドが異なる。 たとえば、サーバー A が最初のリリース バージョンのビルドで、サーバー B が Service Pack 1 (SP1) ビルドであるような場合です。  
   
--   同じサーバーで行ったバックアップからシステム データベースを復元しようとしており、 バックアップ時にサーバーでは別のビルドを実行していた  (つまり、バックアップ後にサーバーがアップグレードされた)。  
+-   同じサーバーで行ったバックアップからシステム データベースを復元しようとしており、 バックアップ時にサーバーでは別のビルドを実行していた (つまり、バックアップ後にサーバーがアップグレードされた)。  
   
 ## <a name="user-action"></a>ユーザーの操作  
  この状況での復元プロセスはかなり複雑になるため、最後の手段としてのみ使用します。 詳細については、「[SQL Server の別のビルドにデータベースのシステム バックアップを復元することができません。](https://support.microsoft.com/kb/264474)」を参照してください。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [システム データベースのバックアップと復元 &#40;SQL Server&#41;](../backup-restore/back-up-and-restore-of-system-databases-sql-server.md)  
   
   

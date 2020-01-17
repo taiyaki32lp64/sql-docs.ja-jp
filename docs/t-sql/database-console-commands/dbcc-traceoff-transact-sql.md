@@ -19,18 +19,17 @@ helpviewer_keywords:
 - DBCC TRACEOFF statement
 - disabling trace flags
 ms.assetid: 1379afba-6480-454b-9c65-5e64cb4f3415
-author: uc-msft
+author: pmasl
 ms.author: umajay
-manager: craigg
-ms.openlocfilehash: 9c138fbfc750bce13c9146c2a4c1416b291c8ecf
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b7b8bf219c62734398d387e63f86d8a2d9a11662
+ms.sourcegitcommit: 57e20b7d02853ec9af46b648106578aed133fb45
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47773990"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69553272"
 ---
 # <a name="dbcc-traceoff-transact-sql"></a>DBCC TRACEOFF (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
 
 指定されたトレース フラグを無効にします。
   

@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 0514531f-009d-4519-abc3-d727014a39f1
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 976e822482efc530e3b055f61c242ee03a30e012
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: c70a22a3048c769aac343d51e621e4d755d3baeb
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47613860"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67916720"
 ---
 # <a name="stream-object-ado"></a>Stream オブジェクト (ADO)
 バイナリ データまたはテキストのストリームを表します。  

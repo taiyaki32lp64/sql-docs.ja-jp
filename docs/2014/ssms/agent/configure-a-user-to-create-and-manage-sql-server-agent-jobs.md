@@ -16,23 +16,23 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: a62f6c2e1ef86a6fcd5e532b2ef413d8142698e6
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52796144"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63253559"
 ---
 # <a name="configure-a-user-to-create-and-manage-sql-server-agent-jobs"></a>SQL Server エージェント ジョブ ステップを作成および管理するユーザーの構成
   このトピックでは、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェント ジョブを作成または実行するユーザーを構成する方法について説明します。  
   
--   **作業を開始する準備:**[Security](#Security)  
+-   **作業を開始する準備:** [Security](#Security)  
   
--   **ユーザーを作成および管理を使用して、SQL Server エージェント ジョブを構成するには。**[SQL Server Management Studio](#SSMS)  
+-   **SQL Server エージェント ジョブを作成および管理するユーザーを構成するために使用するもの:** [SQL Server Management Studio](#SSMS)  
   
 ##  <a name="BeforeYouBegin"></a> はじめに  
   
 ###  <a name="Security"></a> セキュリティ  
- 作成または実行するユーザーを構成する[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]エージェント ジョブでは、最初に、次のいずれかに既存の SQL Server ログインまたは msdb ロールを追加する必要があります[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]エージェント固定データベース ロール、msdb データベースにします。SQLAgentUserRole、SQLAgentReaderRole、または SQLAgentOperatorRole します。  
+ [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェント ジョブを作成または実行するユーザーを構成するには、まず、msdb データベース内の次のいずれかの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェント固定データベース ロールに、既存の SQL Server ログインまたは msdb ロールを追加する必要があります: SQLAgentUserRole、SQLAgentReaderRole、または SQLAgentOperatorRole。  
   
  既定では、これらのデータベース ロールのメンバーは、メンバー自身が実行する独自のジョブ ステップを作成できます。 このような管理者権限のないユーザーが他の種類のジョブ ステップ ( [!INCLUDE[ssIS](../../includes/ssis-md.md)] パッケージなど) を実行するには、プロキシ アカウントへのアクセスが必要です。 sysadmin 固定サーバー ロールのすべてのメンバーには、プロキシ アカウントを作成、変更、および削除する権限があります。 これら [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェント固定のデータベース ロールに関連付けられている権限の詳細については、「 [SQL Server エージェントの固定データベース ロール](sql-server-agent-fixed-database-roles.md)」を参照してください。  
   

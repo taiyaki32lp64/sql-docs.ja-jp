@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dm.miningmodeleditor.sequenceclustering.diagrams.f1
@@ -13,19 +12,19 @@ ms.assetid: 4b705397-9af4-4678-9eda-149bc5d762fa
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 95763dca9e5a617e3fdc1c4d1d69b45e6679a392
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: d8cff96e3ed2d36db93abb3583a08b5c9d8153d8
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48174202"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66069110"
 ---
 # <a name="sequence-clustering-cluster-diagram-tab-mining-model-viewer"></a>シーケンス クラスターの [クラスター ダイアグラム] タブ (マイニング モデル ビューアー)
   **Microsoft シーケンス クラスター ビューアー**の **[クラスター ダイアグラム]** タブには、シーケンス クラスター モデルに含まれるすべてのクラスターのグラフィカル ビューが表示されます。  
   
  ドリルスルーが有効な場合に、各クラスターからサポートするケースをドリルスルーには、シーケンス クラスター モデルのこのビューを使用します。 クラスターにわかりやすい名前を割り当てておき、シェーディング変数を変更することで値の分布をひとめで評価することもできます。  
   
- **詳細:** [Microsoft シーケンス クラスター アルゴリズム](data-mining/microsoft-sequence-clustering-algorithm.md)、 [Microsoft シーケンス クラスター ビューアーを使用したモデルの参照](data-mining/browse-a-model-using-the-microsoft-sequence-cluster-viewer.md)  
+ **詳細情報。** [Microsoft シーケンス クラスター アルゴリズム](data-mining/microsoft-sequence-clustering-algorithm.md)、 [Microsoft シーケンス クラスター ビューアーを使用してモデルの参照](data-mining/browse-a-model-using-the-microsoft-sequence-cluster-viewer.md)  
   
 ## <a name="options"></a>および  
  **ビューアーのコンテンツを更新します。**  
@@ -53,7 +52,7 @@ ms.locfileid: "48174202"
  画面の大きさに合うようにダイアグラム全体を縮小します。  
   
  **ノードを検索します。**  
- グラフ内のクラスターにフィルターを適用して特定のクラスターを簡単に検索するには、**[ノードの検索]** ダイアログ ボックスを使用します。 詳細については、「[[ノードの検索] ダイアログ ボックス (マイニング モデル ビューアー)](find-node-dialog-box-mining-model-viewer.md)」を参照してください。  
+ グラフ内のクラスターにフィルターを適用して特定のクラスターを簡単に検索するには、 **[ノードの検索]** ダイアログ ボックスを使用します。 詳細については、「[[ノードの検索] ダイアログ ボックス (マイニング モデル ビューアー)](find-node-dialog-box-mining-model-viewer.md)」を参照してください。  
   
  このコンテキストでは、検索はクラスターの名前でのみ実行でき、クラスター内の属性は使用できません。したがって、このオプションは、クラスターにわかりやすい名前を割り当てている場合に最も役に立ちます。 ビューアーに表示されているクラスターを右クリックし、 **[名前の変更]** をクリックすることで、クラスターに名前を割り当てることができます。  
   
@@ -77,8 +76,8 @@ ms.locfileid: "48174202"
  図の線は、シーケンス クラスター間の関連付けを示します。 ビューアーに表示されるリンクの数は、クラスターの右側のスライダーを使用して調整できます。 スライダーを小さく設定すると、緊密なリンクのみが表示されます。  
   
 ## <a name="see-also"></a>参照  
- [データ マイニング アルゴリズム&#40;Analysis Services - データ マイニング&#41;](data-mining/data-mining-algorithms-analysis-services-data-mining.md)   
- [マイニング モデル ビューアー&#40;データ マイニング モデル デザイナー&#41;](mining-model-viewers-data-mining-model-designer.md)   
+ [データ マイニング アルゴリズム &#40;Analysis Services - データ マイニング&#41;](data-mining/data-mining-algorithms-analysis-services-data-mining.md)   
+ [マイニング モデル ビューアー (データ マイニング モデル デザイナー)](mining-model-viewers-data-mining-model-designer.md)   
  [データ マイニング モデル ビューアー](data-mining/data-mining-model-viewers.md)  
   
   

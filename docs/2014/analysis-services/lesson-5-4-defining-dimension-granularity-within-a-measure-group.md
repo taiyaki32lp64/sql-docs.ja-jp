@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: 4f079485-9eb4-405c-9a20-81258298b810
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: e1d7b619cb711938f07ae7902dc1b9544adc5890
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 46d69f2bcc82ba1ff4ae49e9bfa5e3aa7a61ad2a
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52512291"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66078454"
 ---
 # <a name="defining-dimension-granularity-within-a-measure-group"></a>メジャー グループでのディメンション粒度の定義
   ファクト データは、利用目的ごとに異なる粒度でディメンションを作成しなければならない場合があります。 たとえば、販売店やインターネットでの売上データを日ごとに記録する一方で、販売量は月ごとまたは四半期ごとに記録することが考えられます。 このようなシナリオでは、ファクト テーブルごとに異なる詳細度を、時間のディメンションに設定します。 新しいデータベース ディメンションを定義する場合、このようにさまざまに異なる詳細度を設定して時間のディメンションを定義することもできますが、 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]を使用すると、さらに容易にディメンションを定義できます。  
@@ -77,7 +76,7 @@ ms.locfileid: "52512291"
   
 1.  **[ビルド]** メニューの **[Analysis Services Tutorial の配置]** をクリックします。  
   
-2.  配置が正常に完了したら、[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Tutorial キューブのキューブ デザイナーで **[ブラウザー]** タブをクリックし、**[再接続]** ボタンをクリックします。  
+2.  配置が正常に完了したら、[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Tutorial キューブのキューブ デザイナーで **[ブラウザー]** タブをクリックし、 **[再接続]** ボタンをクリックします。  
   
 3.  Excel ショートカットをクリックし、 **[有効化]** をクリックします。  
   
@@ -127,13 +126,13 @@ ms.locfileid: "52512291"
   
      注意、**従業員**と`Date`にキューブ ディメンションがリンクされている、 **Sales Quotasand Sales Quotas 1**標準リレーションシップによりメジャー グループです。 また、 **Sales Territory** キューブ ディメンションはどちらのメジャー グループにもリンクしていません。  
   
-4.  交差する位置のセルをクリックして、 **Sales Territory**ディメンションと`Sales Quotas`メジャー グループと、参照ボタンをクリックして (**.**).**[リレーションシップの定義]** ダイアログ ボックスが開きます。  
+4.  交差する位置のセルをクリックして、 **Sales Territory**ディメンションと`Sales Quotas`メジャー グループと、参照ボタンをクリックして ( **.** ). **[リレーションシップの定義]** ダイアログ ボックスが開きます。  
   
 5.  **[リレーションシップの種類の選択]** ボックスの一覧から **[参照対象]** をクリックします。  
   
 6.  **[中間ディメンション]** ボックスの一覧から **[Employee]** を選択します。  
   
-7.   **[参照ディメンションの属性]** ボックスの一覧から **[Sales Territory Region]** を選択します。  
+7.  **[参照ディメンションの属性]** ボックスの一覧から **[Sales Territory Region]** を選択します。  
   
 8.  **[中間ディメンションの属性]** ボックスの一覧から **[Sales Territory Key]** を選択します (Sales Territory Region 属性のキー列は、SalesTerritoryKey 列です)。  
   
@@ -141,13 +140,13 @@ ms.locfileid: "52512291"
   
 10. **[OK]** をクリックします。  
   
-11. 交差する位置のセルをクリックして、 **Sales Territory**ディメンションと**Sales Quotas 1**メジャー グループと、参照ボタンをクリックして (**.**).**[リレーションシップの定義]** ダイアログ ボックスが開きます。  
+11. 交差する位置のセルをクリックして、 **Sales Territory**ディメンションと**Sales Quotas 1**メジャー グループと、参照ボタンをクリックして ( **.** ). **[リレーションシップの定義]** ダイアログ ボックスが開きます。  
   
 12. **[リレーションシップの種類の選択]** ボックスの一覧から **[参照対象]** をクリックします。  
   
 13. **[中間ディメンション]** ボックスの一覧から **[Employee]** を選択します。  
   
-14.  **[参照ディメンションの属性]** ボックスの一覧から **[Sales Territory Region]** を選択します。  
+14. **[参照ディメンションの属性]** ボックスの一覧から **[Sales Territory Region]** を選択します。  
   
 15. **[中間ディメンションの属性]** ボックスの一覧から **[Sales Territory Key]** を選択します (Sales Territory Region 属性のキー列は、SalesTerritoryKey 列です)。  
   
@@ -163,7 +162,7 @@ ms.locfileid: "52512291"
   
      名前の変更、 **Order Date**キューブ ディメンションを`Date`をこのキューブのプライマリ日付ディメンションとしての役割を理解しやすきます。  
   
-20. [参照] ボタンをクリックします (**.**) の交差部分にあるセルで、`Sales Quotas`メジャー グループと`Date`ディメンション。  
+20. [参照] ボタンをクリックします ( **.** ) の交差部分にあるセルで、`Sales Quotas`メジャー グループと`Date`ディメンション。  
   
 21. **[リレーションシップの定義]** ダイアログ ボックスで、 **[リレーションシップの種類の選択]** ボックスの一覧から **[標準]** を選択します。  
   
@@ -223,7 +222,7 @@ ms.locfileid: "52512291"
 ## <a name="next-lesson"></a>次のレッスン  
  [レッスン 6:計算の定義](lesson-6-defining-calculations.md)  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [ディメンション リレーションシップ](multidimensional-models-olap-logical-cube-objects/dimension-relationships.md)   
  [標準のリレーションシップとファクト リレーションシップのプロパティを定義します。](multidimensional-models/define-a-regular-relationship-and-regular-relationship-properties.md)   
  [データ ソース ビュー デザイナーでのダイアグラムの操作 &#40;Analysis Services&#41;](multidimensional-models/work-with-diagrams-in-data-source-view-designer-analysis-services.md)  

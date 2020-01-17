@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 api_name:
 - MSReportServer_Instance Properties
@@ -16,15 +15,15 @@ topic_type:
 helpviewer_keywords:
 - MSReportServer_Instance class
 ms.assetid: b494fd52-22f0-46af-be35-a1de8a138d95
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 50e89bfa0ec9f8d4d792ed655eef40d9f4d47dcb
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 27719888e994a9cfc9408901a7d89fcf28220c5c
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56023013"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66097024"
 ---
 # <a name="msreportserverinstance-properties"></a>MSReportServer_Instance プロパティ
   MSReportServer_Instance クラスは、インストールされているレポート サーバーにクライアントが接続するために必要な基本情報を提供します。  

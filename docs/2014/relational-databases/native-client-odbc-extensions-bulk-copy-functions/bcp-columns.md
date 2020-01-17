@@ -19,11 +19,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: fcfbbdb1881662401e791ea197115120444cf855
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48096922"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63225525"
 ---
 # <a name="bcpcolumns"></a>bcp_columns
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] との一括コピー入出力に使用する、ユーザー ファイル内の合計列数を設定します。 [bcp_setbulkmode](bcp-setbulkmode.md) bcp_columns 代わりに使用でき、 [bcp_colfmt](bcp-colfmt.md)します。  

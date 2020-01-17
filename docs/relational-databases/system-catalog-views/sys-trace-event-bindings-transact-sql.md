@@ -19,18 +19,17 @@ helpviewer_keywords:
 ms.assetid: 22f534e1-4ed6-4b3e-9ead-1d1001a1b0f5
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 156e8a2cd2ee6e0d2789526615b7236b26874dac
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d74fd55d4d2bf230cbb190cad428b371807f32ef
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47791978"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68022607"
 ---
-# <a name="systraceeventbindings-transact-sql"></a>sys.trace_event_bindings (Transact-SQL)
+# <a name="systraceeventbindings-transact-sql"></a>sys.trace_event_bindings (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  **Sys.trace_event_bindings**カタログ ビューに含めるイベントと列のすべての可能な使用状況の組み合わせの一覧が含まれています。 各イベントに対して、 **trace_event_id**列で、使用可能なすべての列は記載されて、 **trace_column_id**列。 ただし、イベントが発生するたびに、使用できるすべての列が追加されるわけではありません。 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]のバージョンによっては、これらの値は変化しません。  
+  **Sys.trace_event_bindings**カタログ ビューに含めるイベントと列のすべての可能な使用状況の組み合わせの一覧が含まれています。 各イベントに対して、 **trace_event_id**列で、使用可能なすべての列は記載されて、 **trace_column_id**列。 使用可能なすべての列には、特定のイベントが発生するたびには設定されます。 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]のバージョンによっては、これらの値は変化しません。  
   
  サポートされているトレース イベントの完全な一覧を参照してください。 [SQL Server Event Class Reference](../../relational-databases/event-classes/sql-server-event-class-reference.md)します。  
   

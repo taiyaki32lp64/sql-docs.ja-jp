@@ -1,10 +1,9 @@
 ---
-title: Sql:hide を使用して要素と属性を非表示 |マイクロソフトのドキュメント
+title: sql:hide による要素と属性の非表示
 ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.reviewer: ''
 ms.technology: xml
 ms.topic: reference
 helpviewer_keywords:
@@ -23,29 +22,29 @@ helpviewer_keywords:
 - attribute hiding [SQLXML]
 ms.assetid: 0978301b-f068-46b6-82b9-dc555161f52e
 author: MightyPen
-ms.author: douglasl
-manager: craigg
+ms.author: genemi
+ms.reviewer: ''
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 97b318070d96c162b930d586f0e06775b2335106
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 670b11e86498116549c395c47364604e72b790a4
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56022999"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75246861"
 ---
 # <a name="hiding-elements-and-attributes-by-using-sqlhide"></a>sql:hide による要素と属性の非表示
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-  XSD スキーマに対して XPath クエリを実行すると、結果の XML ドキュメントにはスキーマで指定された要素と属性が含められます。 要素と属性のいくつか非表示にする、スキーマを使用して指定できます、 **sql:hide**注釈。 この機能は、クエリの選択条件としてはスキーマ内の特定の要素または属性が必要でも、生成される XML ドキュメントではこれらを返したくない場合に便利です。  
+  XSD スキーマに対して XPath クエリを実行すると、結果の XML ドキュメントにはスキーマで指定された要素と属性が含められます。 **Sql: hide**注釈を使用して、スキーマで一部の要素と属性を非表示にするように指定できます。 この機能は、クエリの選択条件としてはスキーマ内の特定の要素または属性が必要でも、生成される XML ドキュメントではこれらを返したくない場合に便利です。  
   
- **Sql:hide**注釈はブール値 (0 = false、1 = true)。 指定できる値は 0、1、true、false です。  
+ **Sql: hide**注釈はブール値 (0 = false、1 = true) を取ります。 指定できる値は 0、1、true、false です。  
   
-## <a name="examples"></a>使用例  
- 次の例を使用した実際のサンプルを作成するには、特定の条件を満たす必要があります。 詳細については、次を参照してください。 [SQLXML の例を実行するための要件](../../relational-databases/sqlxml/requirements-for-running-sqlxml-examples.md)します。  
+## <a name="examples"></a>例  
+ 次の例を使用した実際のサンプルを作成するには、特定の条件を満たす必要があります。 詳細については、「 [SQLXML の例を実行するための要件](../../relational-databases/sqlxml/requirements-for-running-sqlxml-examples.md)」を参照してください。  
   
 ### <a name="a-specifying-sqlhide-on-an-attribute"></a>A. 属性に sql:hide を指定する  
- この例では、XSD スキーマから成る、  **\<Person.Contact >** を持つ要素**ContactID**、 **FirstName**、および**LastName**属性。  
+ この例の XSD スキーマは、 **ContactID**、 **FirstName**、および**LastName**属性を持つ** \<Person>** 要素で構成されています。  
   
- **\<Person.Contact >** 要素は複合型はあり、そのため、同じ名前 (既定のマッピング) のテーブルにマップされます。 すべての属性 **\<Person.Contact >** 要素は単純型と、AdventureWorks データベース Person.Contacttable 内の同じ名前の列にマップします。 スキーマで、 **sql:hide**注釈が指定されて、 **ContactID**属性。 このスキーマに対して XPath クエリを指定した場合、 **ContactID** XML ドキュメントでは返されません。  
+ Person. Contact>要素は複合型であるため、同じ名前のテーブルにマップされます (既定のマッピング)。 ** \<** ** \<Person. contact>** 要素のすべての属性は単純型であり、AdventureWorks データベースの person. contacttable 内の同じ名前の列にマップされます。 スキーマでは、 **ContactID**属性に**sql: hide**注釈が指定されています。 このスキーマに対して XPath クエリを指定すると、XML ドキュメントで**ContactID**が返されません。  
   
 ```  
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"   
@@ -82,9 +81,9 @@ ms.locfileid: "56022999"
   
 3.  SQLXML 4.0 テスト スクリプト (sqlxml4test.vbs) を作成し、それを使用してテンプレートを実行します。  
   
-     詳細については、次を参照してください。 [SQLXML 4.0 クエリの実行に ADO を使用する](../../relational-databases/sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md)します。  
+     詳細については、「ADO を使用した[SQLXML 4.0 クエリの実行](../../relational-databases/sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md)」を参照してください。  
   
- Here is the result set:  
+ 以下に結果セットを示します。  
   
 ```  
 <ROOT xmlns:sql="urn:schemas-microsoft-com:xml-sql">  
@@ -92,7 +91,7 @@ ms.locfileid: "56022999"
 </ROOT>  
 ```  
   
- ときに**sql:hide**要素とその属性または子要素が生成される XML ドキュメントに表示されない、要素に指定されます。 ここで別の XSD スキーマでは、 **sql:hide**が指定されて、  **\<OD >** 要素。  
+ 要素に**sql: hide**が指定されている場合、要素とその属性または子要素は、生成された XML ドキュメントに表示されません。 次の XSD スキーマでは、 ** \<OD>** 要素に**sql: hide**が指定されています。  
   
 ```  
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"  
@@ -147,7 +146,7 @@ ms.locfileid: "56022999"
 </xsd:schema>  
 ```  
   
- XPath クエリ (たとえば`/Customers[@CID="1"]`) が指定されて、このスキーマに対して生成される XML ドキュメントには含まれません、  **\<OD >** 要素とその子は、結果の一部で示すようにします。  
+ このスキーマに対して XPath クエリ`/Customers[@CID="1"]`(たとえば) が指定されている場合、生成される XML ドキュメントには、次の部分的な結果に示すように、 ** \<OD>** 要素とその子が含まれません。  
   
 ```  
 <ROOT xmlns:sql="urn:schemas-microsoft-com:xml-sql">  

@@ -1,7 +1,7 @@
 ---
-title: SQL Server インポート拡張機能
+title: SQL Server インポートの拡張機能
 titleSuffix: Azure Data Studio
-description: インストールして Azure Data Studio の SQL Server インポート拡張機能 (プレビュー) を使用
+description: Azure Data Studio 用の SQL Server インポートの拡張機能をインストールして使用する
 ms.custom: seodec18
 ms.date: 09/24/2018
 ms.reviewer: alayu; sstein
@@ -10,55 +10,54 @@ ms.technology: azure-data-studio
 ms.topic: conceptual
 author: yualan
 ms.author: alayu
-manager: craigg
-ms.openlocfilehash: acca24570cf1c5052d92378b0dd5aa44d978aab6
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
-ms.translationtype: MT
+ms.openlocfilehash: 012c2c880e81c095e90086cf26ebffd6117d534e
+ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54131422"
+ms.lasthandoff: 07/25/2019
+ms.locfileid: "67959121"
 ---
-# <a name="sql-server-import-extension-preview"></a>SQL Server インポート拡張機能 (プレビュー)
+# <a name="sql-server-import-extension-preview"></a>SQL Server インポートの拡張機能 (プレビュー)
 
-SQL Server インポート拡張機能 (プレビュー) は、.txt、.csv ファイルを SQL テーブルに変換します。 このウィザードと呼ばれる Microsoft Research のフレームワークを利用して[Program Synthesis using 例 (PROSE)](https://microsoft.github.io/prose/)をインテリジェントに最小限のユーザー入力を使用してファイルを解析します。 これは、データの処理の強力なフレームワークと、Microsoft Excel で Flash Fill が作動するのと同じテクノロジが
+SQL Server インポートの拡張機能 (プレビュー) では、.txt ファイルと .csv ファイルが SQL テーブルに変換されます。 このウィザードでは、[Program Synthesis using Examples (PROSE)](https://microsoft.github.io/prose/) と呼ばれるマイクロソフト リサーチ フレームワークを利用して、最小のユーザー入力でファイルをインテリジェントに解析することができます。 これはデータ ラングリングのための強力なフレームワークであり、Microsoft Excel でフラッシュ フィルを強化するのと同じテクノロジです
 
-この機能の SSMS のバージョンに関する詳細についてを参照して[今回](https://docs.microsoft.com/sql/relational-databases/import-export/import-flat-file-wizard)します。
+この機能の SSMS バージョンの詳細については、[こちら](https://docs.microsoft.com/sql/relational-databases/import-export/import-flat-file-wizard)の記事を参照してください。
 
 
-## <a name="install-the-sql-server-import-extension"></a>SQL Server インポート拡張機能をインストールします。
+## <a name="install-the-sql-server-import-extension"></a>SQL Server インポートの拡張機能をインストールする
 
-1. 拡張機能マネージャーを開き、使用可能な拡張機能にアクセスするには、拡張機能 アイコンを選択するか、**ビュー**メニューの**拡張**を選択します。
-2. 詳細を表示する使用可能な拡張機能を選択します。
+1. 拡張機能マネージャーを開いて、使用可能な拡張機能にアクセスするには、拡張機能アイコンを選択するか、 **[表示]** メニューの **[拡張機能]** を選択します。
+2. 使用可能な拡張機能を選択すると、その詳細が表示されます。
 
-   ![インポートの拡張機能マネージャー](media/sql-server-import-extension/import-wizard-install.png)
+   ![拡張機能マネージャーをインポートする](media/sql-server-import-extension/import-wizard-install.png)
 
-1. 必要な拡張機能を選択し、**インストール**します。
-2. **再読み込み**を選択して拡張機能を有効にします(初めて拡張機能をインストールするときのみ必要です)。
+1. 必要な拡張機能を選択して**インストール**します。
+2. **[再読み込み]** を選択して拡張機能を有効にします (拡張機能を初めてインストールするときにのみ必要です)。
 
-## <a name="start-import-wizard"></a>インポート ウィザードを起動します。
+## <a name="start-import-wizard"></a>インポート ウィザードを開始する
 
-1. SQL Server インポートを開始するには、[サーバー] タブで、サーバーへの接続をまず確認します。
-2. 接続を確立した後は、SQL テーブルにファイルをインポートするターゲット データベースにドリルダウンします。
-3. データベースを右クリックし、をクリックして**のインポート ウィザード**します。
-    ![オープンのインポート ウィザード](media/sql-server-import-extension/open-import-wizard.png)
+1. SQL Server インポートを開始するには、まず [サーバー] タブでサーバーへの接続を確立します。
+2. 接続を確立したら、SQL テーブルにファイルをインポートするターゲット データベースにドリルダウンします。
+3. データベースを右クリックし、 **[インポート ウィザード]** をクリックします。
+    ![インポート ウィザードを開く](media/sql-server-import-extension/open-import-wizard.png)
 
-## <a name="importing-a-file"></a>ファイルをインポートします。
-1. ウィザードを起動する右クリックすると、サーバーとデータベースは既に自動的に入力します。 その他のアクティブな接続がある場合は、ドロップダウン リストで選択できます。 
+## <a name="importing-a-file"></a>ファイルのインポート
+1. 右クリックしてウィザードを起動すると、サーバーとデータベースは既に自動入力されています。 アクティブな接続が他にもある場合は、ドロップダウンで選択することができます。 
     
-    クリックすると、ファイルを選択**参照します。** 自動入力ファイルの名前に基づいて、テーブル名が必要がありますが、変更することも、自分でします。
+    **[参照]** をクリックしてファイルを選択します。 ファイル名に基づくテーブル名が自動的に入力されますが、それを自分で変更することもできます。
 
-    既定では、スキーマ dbo になりますが、これを変更することができます。 **[次へ]** をクリックします。
+    既定では、スキーマは dbo になりますが、これは変更することができます。 **[次へ]** をクリックします。
     ![入力ファイル](media/sql-server-import-extension/import-wizard-input-file.png)
-1. ウィザードでは、最初の 50 行に基づくプレビューを生成します。 このページで、追加の操作の他のデータの正確な表示形式を確認するより、 **[次へ]** をクリックします。
-    ![オープンのインポート ウィザード](media/sql-server-import-extension/import-wizard-preview-data.png)
-2. このページで、ことができますを変更する列名、データ型は、プライマリ キーまたは、null を許可するかどうか。 好きなように、多くの変更を行うことができます。 クリックして**データのインポート**を続行します。
-    ![オープンのインポート ウィザード](media/sql-server-import-extension/import-wizard-modify-columns.png)
-3. このページには、選択した操作の概要が表示されます。 テーブルが正常に挿入かどうかもわかります。 
+1. ウィザードでは、最初の 50 行に基づいてプレビューが生成されます。 データが正確に見えることを確認する以外に、このページに追加のアクションはありません。 **[次へ]** をクリックします。
+    ![インポート ウィザードを開く](media/sql-server-import-extension/import-wizard-preview-data.png)
+2. このページでは、列名またはデータ型に変更を加えたり、主キーかどうか、または null を許容するかどうかを変更したりできます。 変更は必要なだけ行うことができます。 **[データのインポート]** をクリックして続行します。
+    ![インポート ウィザードを開く](media/sql-server-import-extension/import-wizard-modify-columns.png)
+3. このページには、選択したアクションの概要が表示されます。 ご利用のテーブルが正常に挿入されたかどうかを確認することもできます。 
 
-    クリックするか**完了前**、変更を行う必要がある場合または**新しいファイルのインポート**をすばやく別のファイルをインポートします。
-    ![オープンのインポート ウィザード](media/sql-server-import-extension/import-wizard-summary.png)
-1. テーブルが、対象のデータベースを更新またはテーブル名で SELECT クエリを実行して正常にインポートを確認します。
+    変更が必要な場合に **[完了]、[前へ]** の順にクリックすることも、別のファイルをすばやくインポートするために **[Import new file]\(新しいファイルのインポート\)** をクリックすることもできます。
+    ![インポート ウィザードを開く](media/sql-server-import-extension/import-wizard-summary.png)
+1. ご利用のターゲット データベースを更新するか、テーブル名に対して SELECT クエリを実行することにより、テーブルが正常にインポートされたかどうかを確認します。
 
 ## <a name="next-steps"></a>次の手順
-- インポート ウィザードの詳細については、読み取り、[ブログの投稿](https://cloudblogs.microsoft.com/sqlserver/2018/08/30/the-august-release-of-sql-operations-studio-is-now-available/)します。
-- PROSE の詳細については、読み取り、[ドキュメント。](https://microsoft.github.io/prose/)
+- インポート ウィザードの詳細については、[こちら](https://cloudblogs.microsoft.com/sqlserver/2018/08/30/the-august-release-of-sql-operations-studio-is-now-available/)のブログの投稿を参照してください。
+- PROSE の詳細については、[こちら](https://microsoft.github.io/prose/)のドキュメントを参照してください。

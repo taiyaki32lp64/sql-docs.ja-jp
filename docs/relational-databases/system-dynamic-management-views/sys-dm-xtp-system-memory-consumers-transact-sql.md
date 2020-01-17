@@ -18,18 +18,17 @@ helpviewer_keywords:
 ms.assetid: 9eb0dd82-7920-42e0-9e50-7ce6e7ecee8b
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: fbab6be30b0d268c7632180caaf939a54e672fbf
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 83e9368b562a7ac200171dc814830b21d677770a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52544030"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68090095"
 ---
-# <a name="sysdmxtpsystemmemoryconsumers-transact-sql"></a>sys.dm_xtp_system_memory_consumers (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2014-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2014-xxxx-xxxx-xxx-md.md)]
+# <a name="sysdmxtpsystemmemoryconsumers-transact-sql"></a>sys.dm_xtp_system_memory_consumers (TRANSACT-SQL)
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
-  [!INCLUDE[hek_2](../../includes/hek-2-md.md)] に関するシステム レベルのメモリ コンシューマーを報告します。 これらのコンシューマーのメモリは、既定のプール (割り当てがユーザー スレッドのコンテキスト内にある場合)、または内部プール (割り当てがシステム スレッドのコンテキスト内にある場合) から取得されます。  
+  に関するシステム レベルのメモリ コンシューマーを報告[!INCLUDE[hek_2](../../includes/hek-2-md.md)]します。 これらのコンシューマーのメモリでは、既定のプール (割り当てがユーザー スレッドのコンテキストである場合) または内部プール (割り当てがシステムのスレッドのコンテキストである場合) になります。  
   
 ```  
 -- system memory consumers @ instance  
@@ -41,13 +40,13 @@ select * from sys.dm_xtp_system_memory_consumers
 |列名|型|説明|  
 |-----------------|----------|-----------------|  
 |memory_consumer_id|**bigint**|メモリ コンシューマーの内部 ID。|  
-|memory_consumer_type|**int**|次の値のいずれかのメモリ コンシューマーの種類を表す整数。<br /><br /> 0 - これは表示されません。 複数のコンシューマーのメモリ使用量を集計します。<br /><br /> 1-ルック アサイド:システムのルック アサイドのメモリ使用量を追跡します。<br /><br /> 2-VARHEAP:可変長ヒープのメモリ使用量を追跡します。<br /><br /> 4-IO ページ プール。IO 操作に使用するシステム ページ プールのメモリ使用量を追跡します。|  
-|memory_consumer_type_desc|**nvarchar(16)**|メモリ コンシューマーの種類の説明。<br /><br /> 0 - これは表示されません。<br /><br /> 1-ルック アサイド<br /><br /> 2 - VARHEAP<br /><br /> 4-PGPOOL|  
-|memory_consumer_desc|**nvarchar(64)**|メモリ コンシューマー インスタンスの説明。<br /><br /> VARHEAP: <br />システム ヒープ。 汎用的です。 現在、ガベージ コレクションの作業項目の割り当てにのみ使用されています。<br />-または-<br />ルック アサイド ヒープ。 ルック アサイド リストに含まれる項目の数が事前に定義された上限 (通常は約 5,000 個の項目) に達した場合にルック アサイドで使用されます。<br /><br /> PGPOOL。IO システム プールの場合は、異なる 3 サイズ (System 4K ページ プール、System 64K ページ プール、System 256K ページ プール) があります。|  
+|memory_consumer_type|**int**|次の値のいずれかのメモリ コンシューマーの種類を表す整数。<br /><br /> 0 - これは表示されません。 複数のコンシューマーのメモリ使用量を集計します。<br /><br /> 1-ルック アサイド:システムのルック アサイドのメモリ使用量を追跡します。<br /><br /> 2-VARHEAP:可変長ヒープのメモリ使用量を追跡します。<br /><br /> 4-IO ページ プール。IO 操作に使用されるシステム ページ プールのメモリ使用量を追跡します。|  
+|memory_consumer_type_desc|**nvarchar(16)**|メモリ コンシューマーの種類の説明:<br /><br /> 0 - これは表示されません。<br /><br /> 1-ルック アサイド<br /><br /> 2-VARHEAP<br /><br /> 4-PGPOOL|  
+|memory_consumer_desc|**nvarchar(64)**|メモリ コンシューマー インスタンスの説明。<br /><br /> VARHEAP: <br />システム ヒープ。 一般的な用途は。 現在、ガベージ コレクション作業項目の割り当てに使用されるだけです。<br />-または-<br />ルック アサイド ヒープ。 ルック アサイド リストに含まれる項目の数が事前に定義された上限 (通常は約 5,000 個の項目) に達した場合にルック アサイドで使用されます。<br /><br /> PGPOOL。IO システム プールは、3 つのサイズです。System 4 K ページ プール、System 64 K ページ プール、および System 256 K ページ プール。|  
 |lookaside_id|**bigint**|スレッド ローカルなルック アサイド メモリ プロバイダーの ID。|  
 |pagepool_id|**bigint**|スレッド ローカルなページ プール メモリ プロバイダーの ID。|  
 |allocated_bytes|**bigint**|このコンシューマーのために予約されたバイト数。|  
-|used_bytes|**bigint**|このコンシューマーが使用したバイト数。 varheap メモリ コンシューマーのみに適用されます。|  
+|used_bytes|**bigint**|このコンシューマーによって使用されるバイト数。 varheap メモリ コンシューマーのみに適用されます。|  
 |allocation_count|**int**|割り当ての数。|  
 |partition_count|**int**|内部使用のみです。|  
 |sizeclass_count|**int**|内部使用のみです。|  
@@ -68,7 +67,7 @@ used_bytes/1024 as used_bytes_kb, allocation_count
 from sys.dm_xtp_system_memory_consumers  
 ```  
   
- 出力はシステム レベルのすべてのメモリ コンシューマーを示します。 たとえば、トランザクション ルック アサイドのコンシューマーなどがあります。  
+ 出力はシステム レベルのすべてのメモリ コンシューマーを示します。 たとえば、トランザクション ルック アサイドのコンシューマーがあります。  
   
 ```  
 memory_consumer_type_name           memory_consumer_desc                           allocated_bytes_kb   used_bytes_kb        allocation_count  
@@ -105,7 +104,7 @@ total_allocated_MB   total_used_MB
 2                    2  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [メモリ最適化テーブルの動的管理ビュー &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/memory-optimized-table-dynamic-management-views-transact-sql.md)  
   
   

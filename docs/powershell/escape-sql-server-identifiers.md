@@ -7,15 +7,14 @@ ms.reviewer: ''
 ms.technology: scripting
 ms.topic: conceptual
 ms.assetid: 8a73e945-daa6-4e5d-93da-10f000f1f3a2
-author: stevestein
-ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 40897ed67ca661a763a2c654dc2c5fb223956264
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: c196b316424c941cba52eb50c61c82ca772ba18c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47792346"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67951704"
 ---
 # <a name="escape-sql-server-identifiers"></a>SQL Server 識別子のエスケープ
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -44,7 +43,7 @@ Set-Location SQLSERVER:\SQL\`(local`)\DEFAULT
   
 ## <a name="see-also"></a>参照  
  [PowerShell での SQL Server 識別子](sql-server-identifiers-in-powershell.md)   
- [SQL Server PowerShell Provider](sql-server-powershell-provider.md)   
+ [SQL Server PowerShell プロバイダー](sql-server-powershell-provider.md)   
  [SQL Server PowerShell](sql-server-powershell.md)  
   
   

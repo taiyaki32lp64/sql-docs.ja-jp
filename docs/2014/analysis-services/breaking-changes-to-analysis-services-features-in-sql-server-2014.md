@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - breaking changes [Analysis Services]
@@ -14,12 +13,12 @@ ms.assetid: aeb02542-5a6c-458c-a110-13413dd3e9d9
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 944385d23b39938a6cb4a28afa16c3d2d67dca23
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: 65b70cf2bb85bca60a372f09a5d3fc9ffedb90cc
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52391995"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66064420"
 ---
 # <a name="breaking-changes-to-analysis-services-features-in-sql-server-2014"></a>SQL Server 2014 の Analysis Services 機能における重大な変更
   このトピックでは、 [!INCLUDE[ssASCurrent](../includes/ssascurrent-md.md)]における重大な変更について説明します。 これらの変更によって、以前のバージョンの SQL Server に基づくアプリケーション、スクリプト、機能が使用できなくなる場合があります。  

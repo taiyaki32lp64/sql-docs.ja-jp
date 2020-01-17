@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 9c77b68d-0649-44af-96fa-586cbb319f5f
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: edaca465d4c3c078ff837f30ab0f8881c59a7f72
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.openlocfilehash: b016d850286daf0c2cda9604302d78faa6cc6ae1
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51600492"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67936284"
 ---
 # <a name="pdo-class"></a>PDO クラス
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -70,9 +69,9 @@ PDO のサポートは [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]
 
 [定数 &#40;Microsoft Drivers for PHP for SQL Server&#41;](../../connect/php/constants-microsoft-drivers-for-php-for-sql-server.md)
 
-[For PHP for SQL Server のプログラミング、Microsoft ドライバーのガイド](../../connect/php/programming-guide-for-php-sql-driver.md)
+[SQL Server 用 Microsoft Drivers for PHP のためのプログラミング ガイド](../../connect/php/programming-guide-for-php-sql-driver.md)
 
-[概要 Microsoft Drivers for PHP for SQL Server](../../connect/php/getting-started-with-the-php-sql-driver.md)
+[Microsoft Drivers for PHP for SQL Server の概要](../../connect/php/getting-started-with-the-php-sql-driver.md)
 
 [PDO](https://php.net/manual/book.pdo.php)  
   

@@ -13,15 +13,14 @@ helpviewer_keywords:
 - push pin [SQL Server Management Studio]
 - tool windows [SQL Server Management Studio]
 ms.assetid: bebf8383-dcaf-466e-84f5-63b81c9cfe52
-author: stevestein
-ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 377bc150d0e357a245a9281aa853ce834a50de36
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: b70475e8dba26c1a5aa660ec8bf59547dc9251c8
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47774170"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68267588"
 ---
 # <a name="understand-sql-server-management-studio-windows-management"></a>SQL Server Management Studio でのウィンドウの管理について
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

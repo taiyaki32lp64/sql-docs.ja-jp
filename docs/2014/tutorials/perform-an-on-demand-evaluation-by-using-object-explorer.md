@@ -11,11 +11,11 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: 8d2aadd055334c7ee64871c2fdfe5239c9849e90
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56028283"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68210943"
 ---
 # <a name="perform-an-on-demand-evaluation-by-using-object-explorer"></a>オブジェクト エクスプローラーを使用した要求時評価の実行
   ここでは、オブジェクト エクスプローラーを使用して、[!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] の単一インスタンス上の [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]に対して、ベスト プラクティス ポリシーの要求時評価を実行します。  
@@ -38,17 +38,17 @@ ms.locfileid: "56028283"
     > [!NOTE]  
     >  既定では、ローカル インスタンスがポリシーのソースとして使用されます。 ベスト プラクティス ポリシーを以前にインポートしている場合は、作成済みのポリシーがあれば、それと共に一覧表示されます。 インポートしたベスト プラクティス ポリシーのいずれかを選択してクリックして**Evaluate**します。 ベスト プラクティス ポリシーをインポートしていない場合には、この手順を続行します。  
   
-3.  **ポリシーの評価** ダイアログ ボックスの横に、**ソース**ボックスで、省略記号ボタンをクリックします (**.**) ボタンをクリックします。  
+3.  **ポリシーの評価** ダイアログ ボックスの横に、**ソース**ボックスで、省略記号ボタンをクリックします ( **.** ) ボタンをクリックします。  
   
 4.  **ソースの選択**ダイアログ ボックスで、いずれかを選択できます**ファイル**または**Server**を評価するポリシー ファイルのソースとして。 クリックすると**Server**、ローカルまたはリモート サーバー上のポリシー ベースの管理に以前インポートされたすべてのベスト プラクティス ポリシーのオンデマンドで評価を行うことができます。 このチュートリアルをクリックして**ファイル**、し評価する個々 のポリシー ファイルを選択します。 これを行うには、次の手順を実行します。  
   
     1.  クリックして**ファイル**します。  
   
-    2.  横に**ファイル**、省略記号をクリックします (**.**) ボタンをクリックします。  
+    2.  横に**ファイル**、省略記号をクリックします ( **.** ) ボタンをクリックします。  
   
     3.  **ポリシーの選択** ダイアログ ボックスで、ベスト プラクティス ポリシーを格納している次のフォルダーを参照します。  
   
-         **C:\Program Files (x86)\Microsoft SQL Server\110\Tools\Policies\DatabaseEngine\1033**  
+         **ある C:\Program Files (x86) \Microsoft SQL server \110\tools\policies\databaseengine\1033**  
   
         > [!NOTE]  
         >  ファイル パスは、[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] プログラム ファイルのインストール先、32 ビットまたは 64 ビットのどちらのオペレーティング システムを実行しているか、および言語識別子によって異なることがあります。  

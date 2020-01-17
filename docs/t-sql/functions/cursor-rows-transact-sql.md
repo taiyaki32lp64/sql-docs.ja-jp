@@ -18,15 +18,14 @@ helpviewer_keywords:
 - last-opened cursor
 - asynchronous cursors [SQL Server]
 ms.assetid: 31bd7a97-7f28-42a8-ba24-24d16d22973d
-author: MashaMSFT
-ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: b22a70494e76f559edd461b566c81224503d8c2e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: MikeRayMSFT
+ms.author: mikeray
+ms.openlocfilehash: ec6830916132a87a7beb50a8509f2f46bd2d1d74
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47707975"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68026273"
 ---
 # <a name="x40x40cursorrows-transact-sql"></a>&#x40;&#x40;CURSOR_ROWS (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -49,7 +48,7 @@ ms.locfileid: "47707975"
 |戻り値|[説明]|  
 |---|---|
 |-*m*|カーソルは非同期で作成されます。 返される値 (-*m*) は、現在キーセットにある行数です。|  
-|-1|カーソルが動的な場合に返されます。 動的カーソルはすべての変更を反映するので、そのカーソルに登録されている行数は常に変化します。 登録されているすべての行がカーソルによって取得されるとは限りません。|  
+|-1|カーソルが動的です。 動的カーソルはすべての変更を反映するので、そのカーソルに登録されている行数は常に変化します。 登録されているすべての行がカーソルによって取得されるとは限りません。|  
 |0|オープンされているカーソルがない場合、最後にオープンされたカーソルに行が登録されていない場合、または最後にオープンされたカーソルがクローズまたは割り当てを解除されている場合に返されます。|  
 |*n*|カーソルに行がすべて完全に登録されている場合に返されます。 返される値 (*n*) には、カーソル内の行の合計数。|  
   
@@ -93,6 +92,6 @@ Sanchez
   
 ## <a name="see-also"></a>参照
 [カーソル関数 &#40;Transact-SQL&#41;](../../t-sql/functions/cursor-functions-transact-sql.md)  
-[開く (&) #40 です。TRANSACT-SQL と #41 です。](../../t-sql/language-elements/open-transact-sql.md)
+[OPEN &#40;Transact-SQL&#41;](../../t-sql/language-elements/open-transact-sql.md)
   
   

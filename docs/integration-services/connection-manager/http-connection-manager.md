@@ -17,17 +17,20 @@ helpviewer_keywords:
 - Web server connections [Integration Services]
 - connections [Integration Services], HTTP
 ms.assetid: 26b2b3e1-d02c-46ca-8d31-7aef2bbc3c53
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: 84303bf8084f745a052e4057351fa29a231d6dc3
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 106b0d08ec24143ba497fb5b631fcbd5003a4872
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47824707"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71294407"
 ---
 # <a name="http-connection-manager"></a>HTTP 接続マネージャー
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   HTTP 接続により、パッケージが HTTP を使用してファイルを送受信することで、Web サーバーにアクセスできるようになります。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] に含まれる Web サービス タスクには、この接続マネージャーを使用します。  
   
  HTTP 接続マネージャーをパッケージに追加するときは、 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] によって、実行時に HTTP 接続を解決する接続マネージャーを作成し、接続マネージャーのプロパティを設定して、接続マネージャーをパッケージの **Connections** コレクションに追加します。  
@@ -60,7 +63,7 @@ ms.locfileid: "47824707"
   
  HTTP 接続マネージャーの詳細については、「 [HTTP Connection Manager](../../integration-services/connection-manager/http-connection-manager.md)」を参照してください。 HTTP 接続マネージャーの一般的な使用シナリオの詳細については、「 [Web Service Task](../../integration-services/control-flow/web-service-task.md)」を参照してください。  
   
-### <a name="options"></a>[変数]  
+### <a name="options"></a>オプション  
  **[サーバー URL]**  
  サーバーの URL を入力します。  
   
@@ -72,7 +75,7 @@ ms.locfileid: "47824707"
  **User name**  
  HTTP 接続マネージャーで資格情報を使用する場合は、ユーザー名、パスワード、およびドメインを指定する必要があります。  
   
- **Password**  
+ **パスワード**  
  HTTP 接続マネージャーで資格情報を使用する場合は、ユーザー名、パスワード、およびドメインを指定する必要があります。  
   
  **[ドメイン]**  
@@ -98,7 +101,7 @@ ms.locfileid: "47824707"
   
  HTTP 接続マネージャーの詳細については、「 [HTTP Connection Manager](../../integration-services/connection-manager/http-connection-manager.md)」を参照してください。 HTTP 接続マネージャーの一般的な使用シナリオの詳細については、「 [Web Service Task](../../integration-services/control-flow/web-service-task.md)」を参照してください。  
   
-### <a name="options"></a>[変数]  
+### <a name="options"></a>オプション  
  **[プロキシを使用する]**  
  HTTP 接続マネージャーでプロキシ サーバーを使用して接続するかどうかを指定します。  
   
@@ -114,7 +117,7 @@ ms.locfileid: "47824707"
  **User name**  
  HTTP 接続マネージャーで資格情報を使用する場合は、ユーザー名、パスワード、およびドメインを指定する必要があります。  
   
- **Password**  
+ **パスワード**  
  HTTP 接続マネージャーで資格情報を使用する場合は、ユーザー名、パスワード、およびドメインを指定する必要があります。  
   
  **[ドメイン]**  

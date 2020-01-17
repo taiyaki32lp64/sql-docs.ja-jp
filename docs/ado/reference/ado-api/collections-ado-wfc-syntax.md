@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 073f9a0e-c755-42dd-9f71-4647d68e331a
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: e4c5a2e9ae543f7ebbbefb6286835906626a6285
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b26c78f514ef6786f642c534b2621d0c81c71e51
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47831200"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67919904"
 ---
 # <a name="collections-ado---wfc-syntax"></a>Collections (ADO - WFC 構文)
 **package com.ms.wfc.data**  
@@ -39,7 +38,7 @@ public Parameter getItem(int n)
 public Parameter getItem(String s)  
 ```  
   
-### <a name="properties"></a>[プロパティ]  
+### <a name="properties"></a>Properties  
   
 ```  
 public int getCount()  
@@ -60,7 +59,7 @@ public com.ms.wfc.data.Field getItem(int n)
 public com.ms.wfc.data.Field getItem(String s)  
 ```  
   
-### <a name="properties"></a>[プロパティ]  
+### <a name="properties"></a>Properties  
   
 ```  
 public int getCount()  
@@ -77,13 +76,13 @@ public com.ms.wfc.data.Error getItem(int n)
 public com.ms.wfc.data.Error getItem(String s)  
 ```  
   
-### <a name="properties"></a>[プロパティ]  
+### <a name="properties"></a>Properties  
   
 ```  
 public int getCount()  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [エラーのコレクション (ADO)](../../../ado/reference/ado-api/errors-collection-ado.md)   
  [フィールド コレクション (ADO)](../../../ado/reference/ado-api/fields-collection-ado.md)   
  [Parameters コレクション (ADO)](../../../ado/reference/ado-api/parameters-collection-ado.md)

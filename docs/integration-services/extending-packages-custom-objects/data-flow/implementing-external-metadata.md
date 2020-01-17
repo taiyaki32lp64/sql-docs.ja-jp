@@ -21,17 +21,20 @@ helpviewer_keywords:
 - custom data flow components [Integration Services], external metadata
 - external metadata [Integration Services]
 ms.assetid: 8f5bd3ed-3e79-43a4-b6c1-435e4c2cc8cc
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: ab4fa98f652b7e3bda9b29553cf5c7589d851a41
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 530a0e9a472638d5c401488cc408adc3957007f4
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47840320"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71297230"
 ---
 # <a name="implementing-external-metadata"></a>外部メタデータの実装
+
+[!INCLUDE[ssis-appliesto](../../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   コンポーネントがそのデータ ソースから切断されると、<xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSExternalMetadataColumnCollection100> インターフェイスを使用することによって、入力および出力列のコレクション内の列を、その外部データ ソースの列に対して検証できます。 このインターフェイスを使用すると、外部データ ソースの列のスナップショットを保持し、これらの列をコンポーネントの入力および出力列コレクションの列にマップできます。  
   
  外部メタデータ列を実装することで、追加した列のコレクションに対する管理と検証の必要が生じるため、コンポーネントの開発にオーバーヘッドと複雑性が加わりますが、検証のためのサーバーへのラウンド トリップに余計な費用をかけなくても済むので、開発作業は行う価値のあるものになるでしょう。  

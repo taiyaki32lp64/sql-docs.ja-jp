@@ -1,5 +1,5 @@
 ---
-title: Web サービス操作の分類 (Master Data Services) | Microsoft Docs
+title: Web サービス操作の分類
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -8,15 +8,14 @@ ms.reviewer: ''
 ms.technology: ''
 ms.topic: reference
 ms.assetid: e3f346b5-7e26-481d-9821-1846e2e91289
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: d6a65e16bd82c6f44df7b8a2d4172a75d5b4ef9f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
-ms.translationtype: HT
+ms.openlocfilehash: a629ead2f102c20466126bdfa9952962311bb750
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47668420"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73728294"
 ---
 # <a name="categorized-web-service-operations-master-data-services"></a>Web サービス操作の分類 (Master Data Services)
 

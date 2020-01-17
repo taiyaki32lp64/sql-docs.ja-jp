@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 9d133e9b-7545-464d-aa3c-677fa7e2a41d
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 9a71874c91e48c25072fbfed8f66a312d65b4697
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e211797147c4da8f197247244f6f2805185b3b0b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47626386"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68053983"
 ---
 # <a name="sqldriverconnect-access-driver"></a>SQLDriverConnect (Access ドライバー)
 > [!NOTE]  
@@ -27,7 +26,7 @@ ms.locfileid: "47626386"
   
  **SQLDriverConnect**データ ソース (DSN) を作成することがなく、ドライバーに接続することができます。  
   
- すべてのドライバーの接続文字列では、次のキーワードがサポートされて: **DSN**、 **DBQ**、および**FIL**します。  
+ すべてのドライバーの接続文字列では、次のキーワードがサポートされています。**DSN**、 **DBQ**、および**FIL**します。  
   
  **UID**と**PWD**キーワードもサポートされています。  
   

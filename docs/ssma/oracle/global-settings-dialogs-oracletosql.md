@@ -9,13 +9,13 @@ ms.topic: conceptual
 ms.assetid: 43989355-cebf-4d8b-ba3d-fa8546e70230
 author: Shamikg
 ms.author: Shamikg
-manager: v-pelars
-ms.openlocfilehash: a85eb72b3c239b8be0141c445e5d4507efb438cb
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: shamikg
+ms.openlocfilehash: 4fc68e8b8d3fc009b766f0fb0be97f1124797764
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47723266"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68259650"
 ---
 # <a name="global-settings-dialogs--oracletosql"></a>グローバル設定 (ダイアログ ボックス) (OracleToSQL)
 ダイアログ ボックスのページを使用して、**グローバル設定** ダイアログ ボックスで、既定のユーザー アクションと SSMA に対する警告の設定を指定します。  

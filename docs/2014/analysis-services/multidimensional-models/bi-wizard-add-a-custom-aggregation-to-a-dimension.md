@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - dimensions [Analysis Services], Business Intelligence enhancements
@@ -17,12 +16,12 @@ ms.assetid: 3199a6c2-a06d-47b9-bd1c-604dbb085318
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 15c37f8fa070c3faf3d8fe5bc86213e90519cf54
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: e647b32d8f94ebd545a9d8d85d066a25dde6e77c
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48167382"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66076907"
 ---
 # <a name="add-a-custom-aggregation-to-a-dimension"></a>ディメンションへのカスタム集計の追加
   カスタム集計拡張機能をキューブまたはディメンションに追加して、ディメンション メンバーに関連付けられている既定の集計を、別の単項演算子に置き換えます。 この拡張機能では、親子階層内のメンバーのロールアップを定義する単項演算子列がディメンション テーブルに指定されます。 単項演算子は、親子階層内の親属性に適用されます。  

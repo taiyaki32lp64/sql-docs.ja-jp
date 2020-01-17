@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: be4ed45f-fde3-466c-9869-49bd3ddb505e
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 142a775415da489e67bc00b048651209a2a30179
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 85d085472a8d904efb2b33b942ba9f0a67326fed
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48224762"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66067248"
 ---
 # <a name="delete-a-table-ssas-tabular"></a>テーブルの削除 (SSAS テーブル)
   モデル デザイナーでは、モデル ワークスペース データベース内の不要なテーブルを削除できます。 テーブルを削除しても、元のソース データには影響しません。インポートして作業していたデータにのみ影響します。 テーブルの削除を元に戻すことはできません。  
@@ -34,6 +33,6 @@ ms.locfileid: "48224762"
 -   そのテーブルを使用して計算列を作成していた場合、そのテーブルの列も削除されます。削除対象のテーブル列を他のテーブルの計算列で使用している場合は、エラーが表示されます。  
   
 ## <a name="see-also"></a>参照  
- [テーブルと列&#40;SSAS 表形式&#41;](tables-and-columns-ssas-tabular.md)  
+ [テーブルと列 &#40;SSAS テーブル&#41;](tables-and-columns-ssas-tabular.md)  
   
   

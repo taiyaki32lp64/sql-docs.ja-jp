@@ -1,6 +1,5 @@
 ---
-title: 明示的なスキーマで OPENJSON を使用する (SQL Server) | Microsoft Docs
-ms.custom: ''
+title: 明示的なスキーマで OPENJSON を使用する
 ms.date: 06/02/2016
 ms.prod: sql
 ms.reviewer: genemi
@@ -11,14 +10,14 @@ helpviewer_keywords:
 ms.assetid: 9c1c3bfb-e1ad-4659-b94f-722b0848d5a2
 author: jovanpop-msft
 ms.author: jovanpop
-manager: craigg
+ms.custom: seo-dt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 6c7e01d228253fbc94859263d39715298782dc73
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 9acdbdba5aec458640b61935bd4eb9d28497b4a7
+ms.sourcegitcommit: 15fe0bbba963d011472cfbbc06d954d9dbf2d655
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56033313"
+ms.lasthandoff: 11/14/2019
+ms.locfileid: "74096058"
 ---
 # <a name="use-openjson-with-an-explicit-schema-sql-server"></a>明示的なスキーマで OPENJSON を使用する (SQL Server)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]

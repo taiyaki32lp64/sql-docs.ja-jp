@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 94195797-ad7a-4962-a8e3-b259cd13aa38
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: e6555af4448af4e9e1e4e14f2e4e23f1407f0681
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: 96716d694a44003105190e287cfc7a4662924663
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54135992"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68033421"
 ---
 # <a name="advanced-merge-replication-conflict---com-based-custom-resolvers"></a>マージ レプリケーションの競合の詳細 - COM ベースのカスタム競合回避モジュール
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

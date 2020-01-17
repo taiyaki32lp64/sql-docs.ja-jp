@@ -1,6 +1,6 @@
 ---
 title: XML データ型の使用 |Microsoft Docs
-description: OLE DB Driver for SQL Server の XML データ型の使用
+description: OLE DB Driver for SQL Server での XML データ型の使用
 ms.custom: ''
 ms.date: 06/12/2018
 ms.prod: sql
@@ -30,13 +30,12 @@ helpviewer_keywords:
 - COLUMNS rowset
 author: pmasl
 ms.author: pelopes
-manager: craigg
-ms.openlocfilehash: 729d2f7288e6156cdd0688f6eed4b3e5acada5ff
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: 0d3554363e4813dfb4b3f6cbeefec00214d5a2d6
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52391459"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67988790"
 ---
 # <a name="using-xml-data-types"></a>XML データ型の使用
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -59,7 +58,7 @@ ms.locfileid: "52391459"
  `INSERT INTO xmltable(xmlcol) VALUES(N'<?xml version="1.0" encoding="UTF-8"?><doc/>')`  
   
 ## <a name="ole-db-driver-for-sql-server"></a>OLE DB Driver for SQL Server 
- DBTYPE_XML は、OLE DB Driver for SQL Server の XML に固有の新しいデータ型です。 また、既存の OLE DB 型である DBTYPE_BYTES、DBTYPE_WSTR、DBTYPE_BSTR、DBTYPE_XML、DBTYPE_STR、DBTYPE_VARIANT、および DBTYPE_IUNKNOWN を使用して、XML データにアクセスできます。 XML 型の列に格納されたデータ型は、OLE DB Driver for SQL Server の行セット内の列から、次の形式で取得できます。  
+ DBTYPE_XML は、SQL Server 用の OLE DB ドライバーの XML に固有の新しいデータ型です。 また、既存の OLE DB 型である DBTYPE_BYTES、DBTYPE_WSTR、DBTYPE_BSTR、DBTYPE_XML、DBTYPE_STR、DBTYPE_VARIANT、および DBTYPE_IUNKNOWN を使用して、XML データにアクセスできます。 XML 型の列に格納されたデータ型は、OLE DB Driver for SQL Server の行セット内の列から、次の形式で取得できます。  
   
 -   テキスト文字列  
   
@@ -68,7 +67,7 @@ ms.locfileid: "52391459"
 > [!NOTE]  
 >  OLE DB Driver for SQL Server には SAX リーダーは含まれていませんが、MSXML を使用して **ISequentialStream** を簡単に SAX オブジェクトや DOM オブジェクトに渡せます。  
   
- **ISequentialStream** は、大きな XML ドキュメントを取得するために使用します。 他の大きな値の型で使用される方法と同じ方法を XML でも使用できます。 詳細については、次を参照してください。[大きな値の型を使用して](../../oledb/features/using-large-value-types.md)します。  
+ **ISequentialStream** は、大きな XML ドキュメントを取得するために使用します。 他の大きな値の型で使用される方法と同じ方法を XML でも使用できます。 詳細については、「[大きな値の型の使用](../../oledb/features/using-large-value-types.md)」を参照してください。  
   
  行セットの XML 型の列に格納されているデータは、アプリケーションで **IRow::GetColumns**、**IRowChange::SetColumns**、**ICommand::Execute** などの通常のインターフェイスを使用することにより、取得、挿入、または更新することもできます。 取得する場合と同様に、アプリケーション プログラムでテキスト文字列または **ISequentialStream** を OLE DB Driver for SQL Server に渡すことができます。  
   
@@ -86,11 +85,11 @@ ms.locfileid: "52391459"
   
 |データ型|SQL Server の<br /><br /> **XML**|SQL Server の<br /><br /> **XML 以外から**|サーバーから<br /><br /> **XML**|サーバーから<br /><br /> **XML 以外から**|  
 |---------------|---------------------------|--------------------------------|-----------------------------|----------------------------------|  
-|DBTYPE_XML|パス スルー<sup>6、7</sup>|エラー<sup>1</sup>|[OK]<sup>11、6</sup>|エラー<sup>8</sup>|  
-|DBTYPE_BYTES|パス スルー<sup>6、7</sup>|該当なし<sup>2</sup>|可 <sup>11、6</sup>|該当なし <sup>2</sup>|  
-|DBTYPE_WSTR|パス スルー<sup>6、10</sup>|該当なし <sup>2</sup>|[OK]<sup>4、6、12</sup>|該当なし <sup>2</sup>|  
+|DBTYPE_XML|パス スルー<sup>6、7</sup>|エラー<sup>1</sup>|OK<sup>11、6</sup>|エラー<sup>8</sup>|  
+|DBTYPE_BYTES|パス スルー<sup>6、7</sup>|N/A<sup>2</sup>|可 <sup>11、6</sup>|該当なし <sup>2</sup>|  
+|DBTYPE_WSTR|パス スルー<sup>6、10</sup>|該当なし <sup>2</sup>|OK<sup>4、6、12</sup>|該当なし <sup>2</sup>|  
 |DBTYPE_BSTR|パス スルー<sup>6、10</sup>|該当なし <sup>2</sup>|可 <sup>3</sup>|該当なし <sup>2</sup>|  
-|DBTYPE_STR|[OK]<sup>6、9、10</sup>|該当なし <sup>2</sup>|可<sup>5、6、12</sup>|該当なし <sup>2</sup>|  
+|DBTYPE_STR|OK<sup>6、9、10</sup>|該当なし <sup>2</sup>|可<sup>5、6、12</sup>|該当なし <sup>2</sup>|  
 |DBTYPE_IUNKNOWN|**ISequentialStream** 経由のバイト ストリーム<sup>7</sup>|該当なし <sup>2</sup>|**ISequentialStream** 経由のバイト ストリーム<sup>11</sup>|該当なし <sup>2</sup>|  
 |DBTYPE_VARIANT (VT_UI1 &#124; VT_ARRAY)|パス スルー<sup>6、7</sup>|該当なし <sup>2</sup>|なし|該当なし <sup>2</sup>|  
 |DBTYPE_VARIANT (VT_BSTR)|パス スルー<sup>6、10</sup>|該当なし <sup>2</sup>|可<sup>3</sup>|該当なし <sup>2</sup>|  
@@ -126,7 +125,7 @@ ms.locfileid: "52391459"
   
  OLE DB Core Services で提供されるデータ変換 (**IDataConvert**) は、DBTYPE_XML 型には適用できません。  
   
- 検証はデータがサーバーに送信されたときに行われます。 クライアント側の検証とエンコーディングの変更は、アプリケーションで処理する必要があります。 直接、XML データを処理しないが、それを処理する代わりに、DOM や SAX リーダーを使用する必要があることをお勧めします。  
+ 検証はデータがサーバーに送信されたときに行われます。 クライアント側の検証とエンコードの変更は、アプリケーションで処理する必要があります。 XML データは直接処理しないことをお勧めしますが、代わりに DOM または SAX リーダーを使用して処理することをお勧めします。  
   
  DBTYPE_NULL と DBTYPE_EMPTY は入力パラメーターにバインドできますが、出力パラメーターや結果にはバインドできません。 入力パラメーターにバインドした場合、状態を DBSTATUS_S_ISNULL または DBSTATUS_S_DEFAULT に設定する必要があります。  
   
@@ -135,7 +134,7 @@ ms.locfileid: "52391459"
  DBTYPE_IUNKNOWN は (上記の表に示したように) サポート済みのバインドですが、DBTYPE_XML と DBTYPE_IUNKNOWN との間では変換は行われません。 DBTYPE_IUNKNOWN は、DBTYPE_BYREF と共に使用することはできません。  
   
 ### <a name="ole-db-rowset-additions-and-changes"></a>OLE DB 行セットに関する追加事項と変更事項  
- OLE DB Driver for SQL Server では、新しい値を追加します。 または、多くの主要な OLE DB スキーマ行セットを変更します。  
+ OLE DB Driver for SQL Server では、新しい値またはコア OLE DB スキーマ行セットの多くに対する変更が追加されます。  
   
 #### <a name="the-columns-and-procedureparameters-schema-rowsets"></a>COLUMNS スキーマ行セットと PARAMETERS スキーマ行セット  
  COLUMNS スキーマ行セットと PROCEDURE_PARAMETERS スキーマ行セットに次の列が追加されました。  
@@ -167,7 +166,7 @@ ms.locfileid: "52391459"
 |DBSCHEMA_XML_COLLECTIONS|4|SCHEMACOLLECTION_CATALOGNAME<br /><br /> SCHEMACOLLECTION_SCHEMANAME<br /><br /> SCHEMACOLLECTIONNAME<br /><br /> TARGETNAMESPACEURI|  
   
 ### <a name="ole-db-property-set-additions-and-changes"></a>OLE DB プロパティ セットに関する追加事項と変更事項  
- OLE DB Driver for SQL Server では、新しい値を追加します。 またはに多くの主要な OLE DB プロパティ セットを変更します。  
+ OLE DB Driver for SQL Server では、多くのコア OLE DB プロパティセットに新しい値または変更が追加されます。  
   
 #### <a name="the-dbpropsetsqlserverparameter-property-set"></a>DBPROPSET_SQLSERVERPARAMETER プロパティ セット  
  OLE DB で **xml** データ型をサポートするため、OLE DB Driver for SQL Server では、次の値を含む新しい DBPROPSET_SQLSERVERPARAMETER プロパティ セットが実装されました。  
@@ -190,7 +189,7 @@ ms.locfileid: "52391459"
  SSPROP_PARAM 値と同様に、これらのプロパティはすべて省略可能なプロパティで、既定値は空です。 SSPROP_COL_XML_SCHEMACOLLECTION_CATALOGNAME と SSPROP_COL_XML_SCHEMACOLLECTION_SCHEMANAME は、SSPROP_COL_XML_SCHEMACOLLECTIONNAME が指定されている場合のみ指定できます。 XML をサーバーに渡すときにこれらの値が含まれていると、これらの値が妥当かどうかが現在のデータベースとの比較によりチェックされ、インスタンス データがスキーマとの比較によりチェックされます。 どの場合でも、これらはすべて空かすべて設定されている場合に妥当と判断されます。  
   
 ### <a name="ole-db-interface-additions-and-changes"></a>OLE DB インターフェイスに関する追加事項と変更事項  
- OLE DB Driver for SQL Server では、新しい値を追加します。 または、多くの主要な OLE DB インターフェイスを変更します。  
+ OLE DB Driver for SQL Server は、コア OLE DB インターフェイスの多くに新しい値または変更を追加します。  
   
 #### <a name="the-isscommandwithparameters-interface"></a>ISSCommandWithParameters インターフェイス  
  OLE DB で **xml** データ型をサポートするため、OLE DB Driver for SQL Server では、[ISSCommandWithParameters](../../oledb/ole-db-interfaces/isscommandwithparameters-ole-db.md) インターフェイスの追加など、多くの変更が加えられました。 この新しいインターフェイスは、主要な OLE DB インターフェイス **ICommandWithParameters** から継承されます。 **ICommandWithParameters** から継承される 3 つのメソッド (**GetParameterInfo**、**MapParameterNames**、および **SetParameterInfo**) に加えて、**ISSCommandWithParameters** では、サーバー固有のデータ型を処理するために使用される [GetParameterProperties](../../oledb/ole-db-interfaces/isscommandwithparameters-getparameterproperties-ole-db.md) メソッドと [SetParameterProperties](../../oledb/ole-db-interfaces/isscommandwithparameters-setparameterproperties-ole-db.md) メソッドが提供されます。  
@@ -217,7 +216,7 @@ ms.locfileid: "52391459"
 #### <a name="the-irowsetchange-interface"></a>IRowsetChange インターフェイス  
  コンシューマーは、列の XML インスタンスを 2 とおりの方法で更新できます。 1 つ目の方法では、プロバイダーで作成されるストレージ オブジェクト **ISequentialStream** を使用します。 コンシューマーは **ISequentialStream::Write** メソッドを呼び出して、プロバイダーから返された XML インスタンスを直接更新できます。  
   
- 2 つ目の方法では、**IRowsetChange::SetData** メソッドまたは **IRowsetChange::InsertRow** メソッドを使用します。 この方法では、コンシューマーのバッファーに格納されている XML インスタンスを DBTYPE_BSTR 型、DBTYPE_WSTR 型、DBTYPE_VARIANT 型、DBTYPE_XML 型、または DBTYPE_IUNKNOWN 型のバインドで指定できます。  
+ 2 つ目の方法では、**IRowsetChange::SetData** メソッドまたは **IRowsetChange::InsertRow** メソッドを使用します。 この方法では、コンシューマーのバッファーにある XML インスタンスを DBTYPE_BSTR、DBTYPE_WSTR、DBTYPE_VARIANT、DBTYPE_XML、または DBTYPE_IUNKNOWN 型のバインドで指定できます。  
   
  DBTYPE_BSTR、DBTYPE_WSTR、または DBTYPE_VARIANT が指定されている場合、コンシューマーのバッファーに存在する XML インスタンスがプロバイダーによって適切な列に格納されます。  
   

@@ -10,15 +10,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - FILESTREAM [SQL Server], moving a FILESTREAM-enabled database
 ms.assetid: dd4d270d-9283-431a-aa6b-e571fced1893
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: 9343cbe31b5d77cf9a91a513d61c6aca2d21408a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: MikeRayMSFT
+ms.author: mikeray
+ms.openlocfilehash: 33d2f34f9f2ea63f23c570c0b4ada95906649215
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47693460"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68091535"
 ---
 # <a name="move-a-filestream-enabled-database"></a>FILESTREAM が有効なデータベースの移動
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

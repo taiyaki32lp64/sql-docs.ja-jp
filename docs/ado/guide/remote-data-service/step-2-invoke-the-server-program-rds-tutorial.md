@@ -1,5 +1,5 @@
 ---
-title: '手順 2: サーバー プログラム (RDS チュートリアル) を呼び出す |Microsoft Docs'
+title: 手順 2:サーバーのプログラム (RDS チュートリアル) を呼び出す |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -12,15 +12,14 @@ helpviewer_keywords:
 ms.assetid: 5e74c2da-65ee-4de4-8b41-6eac45c3632e
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: a64e45f68003948f0d0f45d3932c1edf9b94972a
-ms.sourcegitcommit: 1a5448747ccb2e13e8f3d9f04012ba5ae04bb0a3
+ms.openlocfilehash: 8ca35b952cdb228e70a2e747026214dc1cf020f9
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51559949"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67922097"
 ---
-# <a name="step-2-invoke-the-server-program-rds-tutorial"></a>手順 2: サーバー プログラムを呼び出す (RDS チュートリアル)
+# <a name="step-2-invoke-the-server-program-rds-tutorial"></a>手順 2:サーバー プログラムを呼び出す (RDS チュートリアル)
 クライアント上のメソッドを呼び出すと*プロキシ*サーバー上の実際のプログラムは、メソッドを実行します。 この手順では、サーバーでクエリを実行します。  
   
 > [!IMPORTANT]
@@ -64,6 +63,6 @@ Sub RDSTutorial2B()
 ...  
 ```  
   
-## <a name="see-also"></a>参照  
- [手順 3: サーバーは、レコード セット (RDS チュートリアル) を取得します。](../../../ado/guide/remote-data-service/step-3-server-obtains-a-recordset-rds-tutorial.md)   
+## <a name="see-also"></a>関連項目  
+ [手順 3:サーバーは、レコード セット (RDS チュートリアル) を取得します。](../../../ado/guide/remote-data-service/step-3-server-obtains-a-recordset-rds-tutorial.md)   
  [RDS のチュートリアル (VBScript)](../../../ado/guide/remote-data-service/rds-tutorial-vbscript.md)   

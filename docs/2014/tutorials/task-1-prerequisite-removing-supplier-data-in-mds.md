@@ -1,5 +1,5 @@
 ---
-title: 'タスク 1 (前提条件): MDS の仕入先データを削除する |Microsoft Docs'
+title: タスク 1 (前提条件):MDS の仕入先データを削除する |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -7,20 +7,20 @@ ms.reviewer: ''
 ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: 6f0a4287-7fd4-4f18-b7e4-a5191a9d4a3c
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 19e402f1b74f72ce962aaa95f5f48794ffb7c154
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 84c0acceb4953b819cb5696c4ef90c39e4376846
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56018124"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65481222"
 ---
-# <a name="task-1-prerequisite-removing-supplier-data-in-mds"></a>タスク 1 (前提条件): MDS の仕入先データを削除する
+# <a name="task-1-prerequisite-removing-supplier-data-in-mds"></a>タスク 1 (前提条件):MDS の仕入先データを削除する
   ここでは、MDS に格納されている仕入先データを削除します。 使用して手動でデータをアップロードした**MDS Excel アドイン**前のレッスンでします。 このレッスンで作成する SSIS パッケージは、MDS にデータを自動的にアップロードします。 したがって、SSIS パッケージをテストする前に、MDS からの仕入先データの削除、派生階層の削除、Supplier および State エンティティの削除、データのない Supplier エンティティの作成が必要となります。  
   
-1.  起動**マスター データ マネージャー**に移動して**http://localhost/MDS**または web サイトと指定した場合にアプリケーションが MDS を構成します。 保持する場合、**マスター データ マネージャー**を開き、 **SQL Server 2012 マスター データ サービス**に切り替えるの上部にある、**ホーム ページ**します。  
+1.  起動**マスター データ マネージャー**に移動して **http://localhost/MDS** または web サイトと指定した場合にアプリケーションが MDS を構成します。 保持する場合、**マスター データ マネージャー**を開き、 **SQL Server 2012 マスター データ サービス**に切り替えるの上部にある、**ホーム ページ**します。  
   
 2.  クリックして**システム管理**で、**管理タスク**セクション。  
   
@@ -50,9 +50,9 @@ ms.locfileid: "56018124"
   
     1.  選択**新しい接続を作成**、 をクリック**新規**ボタンをクリックします。  
   
-    2.  新しい接続の追加 ダイアログ ボックスで、入力**ローカル MDS サーバー**の**説明**と**http://localhost/MDS**の**MDS サーバー アドレス**、をクリック**OK**ダイアログ ボックスを閉じます。  
+    2.  新しい接続の追加 ダイアログ ボックスで、入力**ローカル MDS サーバー**の**説明**と **http://localhost/MDS** の**MDS サーバー アドレス**、をクリック**OK**ダイアログ ボックスを閉じます。  
   
-15. **接続の管理**ダイアログ ボックスで、**ローカル MDS サーバー** (http://localhost/MDS)、 をクリックして**テスト**接続をテストします。 クリックして**OK**メッセージ ボックス。  
+15. **接続の管理**ダイアログ ボックスで、**ローカル MDS サーバー** (http://localhost/MDS) 、 をクリックして**テスト**接続をテストします。 クリックして**OK**メッセージ ボックス。  
   
 16. クリックして**Connect** MDS サーバーに接続します。  
   

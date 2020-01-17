@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 3382fd41-0aa1-4091-97d3-624403111e07
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 0b17fc32998a00d011bfcf305c3ebcdf4d79a76b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a5826cc8edcb857ffeb10cc197134708d20468b7
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47631320"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67918416"
 ---
 # <a name="isolationlevel-and-mode-properties-example-vb"></a>IsolationLevel および Mode プロパティの例 (VB)
 この例では、[モード](../../../ado/reference/ado-api/mode-property-ado.md)、排他的な接続を開き、プロパティ、および[IsolationLevel](../../../ado/reference/ado-api/isolationlevel-property.md)を他のトランザクションの分離を実行したトランザクションを開きます。  
@@ -116,7 +115,7 @@ End Sub
 'EndIsolationLevelVB  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [接続オブジェクト (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)   
  [IsolationLevel プロパティ](../../../ado/reference/ado-api/isolationlevel-property.md)   
  [Mode プロパティ (ADO)](../../../ado/reference/ado-api/mode-property-ado.md)

@@ -10,14 +10,13 @@ ms.topic: conceptual
 ms.assetid: 891c37b3-cb72-411f-9937-ee87e6d95f34
 author: rothja
 ms.author: jroth
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: b3b558913488a6e8ded7b4e7df38c97af377331b
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 391c4f3013754e4b641241bacb025c63a68cb68e
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52535578"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72906679"
 ---
 # <a name="modify-user-defined-functions"></a>ユーザー定義関数の変更
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -29,7 +28,7 @@ ms.locfileid: "52535578"
   
      [制限事項と制約事項](#Restrictions)  
   
-     [Security](#Security)  
+     [セキュリティ](#Security)  
   
 -   **ユーザー定義関数を変更する方法:**  
   
@@ -74,7 +73,7 @@ ms.locfileid: "52535578"
 5.  クエリ ウィンドウで、ALTER FUNCTION ステートメントに必要な変更を加えます。  
   
 6.  **ファイル** メニューの **function_name**_の保存_をクリックします。  
-  
+
 ##  <a name="TsqlProcedure"></a> Transact-SQL の使用  
   
 #### <a name="to-modify-a-user-defined-function"></a>ユーザー定義関数を変更するには  

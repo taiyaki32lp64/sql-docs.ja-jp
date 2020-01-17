@@ -1,6 +1,7 @@
 ---
-title: データベース ミラーリング セッションの一時停止または再開 (SQL Server) | Microsoft Docs
-ms.custom: ''
+title: データベース ミラーリング セッションを一時停止して再開するには
+description: SQL Server Management Studio または Transact-SQL (T-SQL) を使用して、SQL Server データベース ミラーリング セッションを一時停止および再開する方法について説明します。
+ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: high-availability
@@ -16,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 05ede3b4-6abe-4442-abb7-9f5aee1d6bc0
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 51e19a1af0fc8e1764c66777cf58d580a70671b6
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: c9d36b4818aa54a6f63b0b38a353cf69840519b9
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47776860"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75244156"
 ---
 # <a name="pause-or-resume-a-database-mirroring-session-sql-server"></a>データベース ミラーリング セッションの一時停止または再開 (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -32,7 +32,7 @@ ms.locfileid: "47776860"
   
 -   **作業を開始する準備:**  
   
-     [Security](#Security)  
+     [セキュリティ](#Security)  
   
 -   **ReplaceThisText:**  
   
@@ -40,9 +40,9 @@ ms.locfileid: "47776860"
   
      [Transact-SQL](#TsqlProcedure)  
   
--   **補足情報:**  [データベース ミラーリングの一時停止または再開した後](#FollowUp)  
+-   **補足情報:** [データベース ミラーリングを一時停止または再開した後](#FollowUp)  
   
-##  <a name="BeforeYouBegin"></a> 作業を開始する準備  
+##  <a name="BeforeYouBegin"></a> はじめに  
  データベース ミラーリング セッションをいつでも中断して、ボトルネックの発生中にパフォーマンスを向上させることができます。また、中断したセッションはいつでも再開できます。  
   
 > [!CAUTION]  
@@ -62,7 +62,7 @@ ms.locfileid: "47776860"
   
 2.  **[データベース]** を展開し、データベースを選択します。  
   
-3.  データベースを右クリックして **[タスク]** をポイントし、 **[ミラー]** をクリックします。 **[データベースのプロパティ]** ダイアログ ボックスの **[ミラーリング]** ページが開きます。  
+3.  データベースを右クリックして **[タスク]** を選択し、 **[ミラー]** をクリックします。 **[データベースのプロパティ]** ダイアログ ボックスの **[ミラーリング]** ページが開きます。  
   
 4.  セッションを一時停止するには、 **[一時停止]** をクリックします。  
   
@@ -110,7 +110,7 @@ ms.locfileid: "47776860"
     ALTER DATABASE AdventureWorks2012 SET PARTNER RESUME;  
     ```  
   
-##  <a name="FollowUp"></a> 補足情報: データベース ミラーリングの一時停止または再開した後  
+##  <a name="FollowUp"></a>補足情報: データベース ミラーリングを一時停止または再開した後  
   
 -   **データベース ミラーリングを一時停止した後**  
   

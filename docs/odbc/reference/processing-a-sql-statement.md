@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 96270c4f-2efd-4dc1-a985-ed7fd5658db2
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: edf912bf3b8073a05dd900cd00511715020ee0c2
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: dfbf23f0be369ae540dac33d33a3e3c1505d5ebe
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47808990"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68076280"
 ---
 # <a name="processing-a-sql-statement"></a>SQL ステートメントの処理
 プログラムによる SQL の使用方法を説明する前に、SQL ステートメントの処理方法を説明する必要があります。 必要な手順は、各手法を実行したら、その異なる時刻では、3 つすべての手法に共通です。 次の図では、このセクションの残りの部分で説明する、SQL ステートメントの処理に関連する手順を示します。  

@@ -22,16 +22,15 @@ helpviewer_keywords:
 - NOT EXISTS keyword
 - row existence testing [SQL Server]
 ms.assetid: b6510a65-ac38-4296-a3d5-640db0c27631
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
+author: rothja
+ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 0ca4028645821b2110cf9026fe8d76724dd9b56a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: be05a8adcf83fdd9f2e26ca5dce38d71a67c70ac
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47790590"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68075266"
 ---
 # <a name="exists-transact-sql"></a>EXISTS (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -51,7 +50,7 @@ EXISTS ( subquery )
  制限付きの SELECT ステートメントを指定します。 INTO キーワードは使用できません。 詳細については、「[SELECT &#40;Transact-SQL&#41;](../../t-sql/queries/select-transact-sql.md)」のサブクエリに関する情報を参照してください。  
   
 ## <a name="result-types"></a>戻り値の型  
- **ブール値**  
+ **Boolean**  
   
 ## <a name="result-values"></a>結果の値  
  サブクエリが行を含む場合は、TRUE を返します。  

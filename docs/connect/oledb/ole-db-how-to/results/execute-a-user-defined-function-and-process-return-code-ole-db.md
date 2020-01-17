@@ -1,6 +1,6 @@
 ---
 title: ユーザー定義関数の実行とリターン コードの処理 (OLE DB) | Microsoft Docs
-description: ユーザー定義関数とプロセス戻り値を使用してコード OLE DB Driver for SQL Server を実行します。
+description: OLE DB Driver for SQL Server を使用したユーザー定義関数の実行とリターンコードの処理
 ms.custom: ''
 ms.date: 06/14/2018
 ms.prod: sql
@@ -12,13 +12,12 @@ helpviewer_keywords:
 - user-defined functions [OLE DB]
 author: pmasl
 ms.author: pelopes
-manager: craigg
-ms.openlocfilehash: fdcd5378968a6bb38e0e1422e716293848c854bd
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: 8964bb97acef2a26f65740522f5f5a05aa7a9810
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53215851"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67994745"
 ---
 # <a name="execute-a-user-defined-function-and-process-return-code-ole-db"></a>ユーザー定義関数の実行とリターン コードの処理 (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

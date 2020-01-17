@@ -12,17 +12,20 @@ helpviewer_keywords:
 - sources [Integration Services], XML
 - XML source [Integration Services]
 ms.assetid: 5d5be54c-2b7e-4957-9193-c5ea5c5d6d15
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: 6fc57b1fab58e69b16afd855d64a53753d968a84
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: f149ca01b71b7611264f28d14532d7827554585f
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47694100"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71292540"
 ---
 # <a name="extract-data-by-using-the-xml-source"></a>XML ソースを使用してデータを抽出する
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   XML ソースを追加して構成するには、パッケージに 1 つ以上のデータ フロー タスクがあらかじめ含まれている必要があります。  
   
 ### <a name="to-extract-data-using-an-xml-source"></a>XML ソースを使用してデータを抽出するには  
@@ -66,6 +69,6 @@ ms.locfileid: "47694100"
  [XML ソース](../../integration-services/data-flow/xml-source.md)   
  [Integration Services の変換](../../integration-services/data-flow/transformations/integration-services-transformations.md)   
  [Integration Services のパス](../../integration-services/data-flow/integration-services-paths.md)   
- [データ フロー タスク](../../integration-services/control-flow/data-flow-task.md)  
+ [[データ フロー タスク]](../../integration-services/control-flow/data-flow-task.md)  
   
   

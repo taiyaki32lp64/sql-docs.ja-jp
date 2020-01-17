@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 7a46d23c-efef-4ec7-815d-cd3ac86787dd
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 98ff605c2fb701f2451e3df4ba2068da6729ff86
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 6493157c00e5a71c7c2f085191231bb33bb5279a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47845290"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67967328"
 ---
 # <a name="append-method-adox-columns"></a>Append メソッド (ADOX Columns)
 新しく追加[列](../../../ado/reference/adox-api/column-object-adox.md)オブジェクトを[列](../../../ado/reference/adox-api/columns-collection-adox.md)コレクション。  
@@ -50,7 +49,7 @@ Columns.Append Column [,Type] [,DefinedSize]
 ## <a name="applies-to"></a>適用対象  
  [Columns コレクション (ADOX)](../../../ado/reference/adox-api/columns-collection-adox.md)  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [Columns および Tables Append メソッド、Name プロパティの例 (VB)](../../../ado/reference/adox-api/columns-and-tables-append-methods-name-property-example-vb.md)   
  [Keys Append メソッド、キーの種類、RelatedColumn、RelatedTable、UpdateRule プロパティの例 (VB)](../../../ado/reference/adox-api/keys-append-method-key-type-relatedcolumn-relatedtable-example-vb.md)   
  [ParentCatalog プロパティの例 (VB)](../../../ado/reference/adox-api/parentcatalog-property-example-vb.md)   

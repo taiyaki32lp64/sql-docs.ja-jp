@@ -13,15 +13,15 @@ f1_keywords:
 - sql12.dts.designer.advancededitor.componentproperties.f1
 - sql12.dts.designer.advancededitor.connections.f1
 ms.assetid: 5ad0ac71-fa8b-4c26-bd42-e6ef00c87571
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 43cf4ea4b228226bb12be8a47befd6f55513c40d
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: fe860a52cb847aec473763c02f24348701766478
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52756794"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62772195"
 ---
 # <a name="advanced-editor"></a>[詳細エディター]
   **[詳細エディター]** ダイアログ ボックスを使用すると、選択した [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] オブジェクトのプロパティを構成できます。  
@@ -42,7 +42,7 @@ ms.locfileid: "52756794"
   
  表示されるプロパティはコンポーネントによって異なります。 **[詳細エディター]** に表示される可能性のあるプロパティの詳細については、次のトピックを参照してください。  
   
--   [Common Properties](../../2014/integration-services/common-properties.md)  
+-   [共通プロパティ](../../2014/integration-services/common-properties.md)  
   
 -   [変換のカスタム プロパティ](data-flow/transformations/transformation-custom-properties.md)  
   
@@ -52,7 +52,7 @@ ms.locfileid: "52756794"
   
 -   [Integration Services の変換](data-flow/transformations/integration-services-transformations.md)  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [Integration Services のエラーおよびメッセージのリファレンス](../../2014/integration-services/integration-services-error-and-message-reference.md)  
   
   

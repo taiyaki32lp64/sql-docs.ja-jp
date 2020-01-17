@@ -12,16 +12,15 @@ helpviewer_keywords:
 - associating file extensions [SQL Server]
 - Query Editor [SQL Server Management Studio], associating file extensions
 ms.assetid: 193630f4-93de-4950-8f36-68702531f925
-author: stevestein
-ms.author: sstein
-manager: craigg
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 59e49665d11b4b2abcc159e7028cf05db5c98d7a
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 7848fc1d7793e3685f465741c296e190e7901695
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52542798"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68264894"
 ---
 # <a name="associate-file-extensions-to-a-code-editor"></a>ファイル拡張子をコード エディターに関連付ける方法
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -31,7 +30,7 @@ ms.locfileid: "52542798"
   
 ### <a name="to-associate-a-new-file-extension-with-sql-server-management-studio"></a>新しいファイル拡張子を SQL Server Management Studio に関連付けるには  
   
-1.  **[スタート]** ボタンをクリックし、 **[すべてのプログラム]**、 **[アクセサリ]** の順にポイントして、 **[エクスプローラー]** をクリックします。  
+1.  **[スタート]** ボタンをクリックし、 **[すべてのプログラム]** 、 **[アクセサリ]** の順にポイントして、 **[エクスプローラー]** をクリックします。  
   
 2.  Windows エクスプローラーで、 **[ツール]** メニューの **[フォルダー オプション]** をクリックします。  
   
@@ -41,7 +40,7 @@ ms.locfileid: "52542798"
   
 5.  **[登録されているファイルの種類]** ボックスで、新しい拡張子をクリックし、 **[変更]** をクリックします。  
   
-6.  **[ファイルを開くプログラムの選択]** ダイアログ ボックスで **[SSMS - SQL Server Management Studio]** をクリックし、**[OK]** をクリックします。  
+6.  **[ファイルを開くプログラムの選択]** ダイアログ ボックスで **[SSMS - SQL Server Management Studio]** をクリックし、 **[OK]** をクリックします。  
   
 7.  **[閉じる]** をクリックして **[フォルダー オプション]** ダイアログ ボックスを閉じ、Windows エクスプローラーを閉じます。  
   
@@ -49,11 +48,11 @@ ms.locfileid: "52542798"
   
 1.  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]で、 **[ツール]** メニューの **[オプション]** をクリックします。  
   
-2.  **[オプション]** ダイアログ ボックスで、 **[テキスト エディター]**、 **[ファイル拡張子]** の順にクリックします。  
+2.  **[オプション]** ダイアログ ボックスで、 **[テキスト エディター]** 、 **[ファイル拡張子]** の順にクリックします。  
   
 3.  **[拡張子]** ボックスに新しいファイル拡張子を入力します。  
   
-4.  **[エディター]** ボックスで、この種類のファイルを開くときに使用するコード エディターをクリックし、 **[追加]**、 **[OK]** の順にクリックします。  
+4.  **[エディター]** ボックスで、この種類のファイルを開くときに使用するコード エディターをクリックし、 **[追加]** 、 **[OK]** の順にクリックします。  
   
 ## <a name="see-also"></a>参照  
  [Ssms ユーティリティ](../../tools/sql-server-management-studio/ssms-utility.md)  

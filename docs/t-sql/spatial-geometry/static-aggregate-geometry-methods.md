@@ -12,15 +12,14 @@ dev_langs:
 helpviewer_keywords:
 - Aggregate Geometry Methods [SQL Server]
 ms.assetid: 4e19f582-ef8f-40f7-8ad1-4f08591cdd1a
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: a826fd2e2a2be92b71a74e3a59945bd167277ea6
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+author: MladjoA
+ms.author: mlandzic
+ms.openlocfilehash: 4a6684022b1231c1de2ee4ff21f933dacb63ecee
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52513688"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67930180"
 ---
 # <a name="static-aggregate-geometry-methods"></a>静的集計ジオメトリ メソッド
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
@@ -30,7 +29,7 @@ ms.locfileid: "52513688"
 > [!NOTE]  
 >  これらの集計メソッドは、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] だけで公開されています。 Microsoft.SqlServer.Types アセンブリでは公開されていません。  
   
- OGC 仕様の詳細については、以下を参照してください。  
+ OGC 仕様の詳細については、以下のリソースを参照してください。  
   
  [OGC の仕様、簡易機能アクセス Part 1 - 共通アーキテクチャ](https://go.microsoft.com/fwlink/?LinkId=93627)  
   

@@ -1,5 +1,5 @@
 ---
-title: Recommendation 要素 (DTA) |Microsoft Docs
+title: 推奨要素 (DTA) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -12,15 +12,14 @@ dev_langs:
 helpviewer_keywords:
 - Recommendation element
 ms.assetid: 679ea535-865a-4633-a4d3-5b3090515158
-author: stevestein
-ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 82d5671ca8923b1e85a189c6913c4cefe2a293c3
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 4fb9df2d769161213090b33755e1f2ecb018afef
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51681100"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68034570"
 ---
 # <a name="recommendation-element-dta"></a>Recommendation 要素 (DTA)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

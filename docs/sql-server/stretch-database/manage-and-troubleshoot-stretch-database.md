@@ -1,5 +1,5 @@
 ---
-title: Stretch Database の管理とトラブルシューティング | Microsoft Docs
+title: 管理とトラブルシューティング
 ms.date: 06/27/2016
 ms.service: sql-server-stretch-database
 ms.reviewer: ''
@@ -12,13 +12,13 @@ helpviewer_keywords:
 ms.assetid: 6334db3e-9297-44df-8d53-211187a95520
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: b6e24af8c3117c85e2dbeb90f2482ca55db9eac6
-ms.sourcegitcommit: ec1f01b4bb54621de62ee488decf9511d651d700
+ms.custom: seo-dt-2019
+ms.openlocfilehash: 786ebc0529d9af47c34840e0e2cb11bf2a448fec
+ms.sourcegitcommit: f688a37bb6deac2e5b7730344165bbe2c57f9b9c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/14/2019
-ms.locfileid: "56240826"
+ms.lasthandoff: 11/08/2019
+ms.locfileid: "73844607"
 ---
 # <a name="manage-and-troubleshoot-stretch-database"></a>Stretch Database の管理とトラブルシューティング
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md-winonly](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md-winonly.md)]

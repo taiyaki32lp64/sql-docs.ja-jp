@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 76d8a6e9-bc6c-4ea0-8e7a-2bae5ed06650
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 76e4a4efeeb8ca71b4591bdaaa3e06dcab71d144
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.openlocfilehash: ea3be9a06d41718271fee2480da1bf58081c1f07
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51603642"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67964590"
 ---
 # <a name="cancelupdate-method-rds"></a>CancelUpdate メソッド (RDS)
 現在のまたは新しい行に加えられた変更を取り消します、 [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md)オブジェクト。  
@@ -44,7 +43,7 @@ DataControl.CancelUpdate
 ## <a name="applies-to"></a>適用対象  
  [DataControl オブジェクト (RDS)](../../../ado/reference/rds-api/datacontrol-object-rds.md)  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [CancelUpdate メソッドの例 (VBScript)](../../../ado/reference/rds-api/cancelupdate-method-example-vbscript.md)   
  [アドレス帳のコマンド ボタン](../../../ado/guide/remote-data-service/address-book-command-buttons.md)   
  [Cancel メソッド (ADO)](../../../ado/reference/ado-api/cancel-method-ado.md)   

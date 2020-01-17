@@ -13,15 +13,14 @@ helpviewer_keywords:
 - Parse method
 - Parse (geography Data Type)
 ms.assetid: 21c402fa-fd0f-4d09-a097-49cee0316d4e
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: 0b2e42f61e3926845930b1bd0d3429f2f83c9685
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: MladjoA
+ms.author: mlandzic
+ms.openlocfilehash: 209186cf3756c0bfb9b572a33ba470a83e0cd493
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47710900"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68051441"
 ---
 # <a name="parse-geography-data-type"></a>Parse (geography データ型)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -44,7 +43,7 @@ Parse ( 'geography_tagged_text' )
 ## <a name="return-types"></a>戻り値の型  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 戻り値の型: **geography**  
   
- CLR の戻り値の型: **SqlGeography**  
+ CLR の戻り値の型:**SqlGeography**  
   
 ## <a name="remarks"></a>Remarks  
  `Parse()` によって返された **geography** インスタンスの OGC 型は、対応する WKT 入力に設定されます。  

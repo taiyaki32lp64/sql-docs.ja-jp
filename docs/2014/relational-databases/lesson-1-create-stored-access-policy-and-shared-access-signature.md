@@ -1,22 +1,21 @@
 ---
-title: 'レッスン 2:  コンテナーのポリシーを作成し、Shared Access Signature (SAS) キーの生成 |Microsoft Docs'
+title: 'レッスン 2:  コンテナーでポリシーを作成し、Shared Access Signature (SAS) キーを生成する |Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 ms.assetid: 41674d9d-8132-4bff-be4d-85a861419f3d
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 7ddcef5d5e0695041742784151103c358a973d55
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 80bd9c253adfcf1d1a677953fef183d9109534ef
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48124082"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75231821"
 ---
 # <a name="lesson-2-create-a-policy-on-container-and-generate-a-shared-access-signature-sas-key"></a>レッスン 2:  コンテナーのポリシーを作成し、Shared Access Signature (SAS) キーを生成する
   このレッスンでは、BLOB コンテナーのポリシーを作成する方法と、SAS キーを生成する方法について学習します。  
@@ -25,9 +24,9 @@ ms.locfileid: "48124082"
   
  次の方法の 1 つを使用してポリシーと Shared Access Signature を作成できます。  
   
--   Windows Azure REST API 操作:[コンテナーの作成](https://msdn.microsoft.com/library/azure/dd179468.aspx)、 [Set Container ACL](https://msdn.microsoft.com/library/azure/dd179391.aspx)、および[コンテナー ACL の取得](https://msdn.microsoft.com/library/azure/dd179469.aspx)します。  
+-   Azure REST API 操作: コンテナーを[作成](https://msdn.microsoft.com/library/azure/dd179468.aspx)し、[コンテナー acl を設定](https://msdn.microsoft.com/library/azure/dd179391.aspx)して、[コンテナー acl を取得](https://msdn.microsoft.com/library/azure/dd179469.aspx)します。  
   
--   [CloudBlobContainer.GetSharedAccessSignature メソッド](https://msdn.microsoft.com/library/azure/microsoft.windowsazure.storageclient.cloudblobcontainer.getsharedaccesssignature.aspx)windows Azure SDK。  
+-   Azure SDK の[CloudBlobContainer メソッド](https://docs.microsoft.com/dotnet/api/microsoft.azure.storage.blob.cloudblobcontainer.getsharedaccesssignature)を呼び出します。  
   
     ```  
   
@@ -41,10 +40,9 @@ ms.locfileid: "48124082"
   
     ```  
   
--   などのサード パーティの Windows Azure エクスプ ローラー ツール[Azure ストレージ エクスプ ローラー](http://azurestorageexplorer.codeplex.com/)します。  
+-   [Azure Storage Explorer](https://azurestorageexplorer.codeplex.com/)などのサードパーティの Azure explorer ツール。  
   
  **次のレッスン:**  
   
  [レッスン 3: SQL Server 資格情報の作成](../relational-databases/lesson-2-create-a-sql-server-credential-using-a-shared-access-signature.md)  
-  
   

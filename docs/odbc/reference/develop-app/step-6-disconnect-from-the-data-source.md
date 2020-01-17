@@ -1,5 +1,5 @@
 ---
-title: '手順 6: は、データ ソースから切断 |Microsoft Docs'
+title: 手順 6:データ ソースから切断 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -14,15 +14,14 @@ helpviewer_keywords:
 ms.assetid: 6ad759ba-4721-4d8f-9b26-de976d4fc1a0
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: a42465e763f8f6d520ed9c1dac42612aa1b28575
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 65cc2ae8d2c2248a733e6efa9537fd3b40bb8fd1
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47802440"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68114119"
 ---
-# <a name="step-6-disconnect-from-the-data-source"></a>ステップ 6: データ ソースからの切断
+# <a name="step-6-disconnect-from-the-data-source"></a>手順 6:データ ソースから切断する
 最後の手順は、データ ソースから切断するのには次の図に示すようにします。 最初に、アプリケーションが呼び出すことによって任意のステートメント ハンドルを解放**SQLFreeHandle**します。 詳細については、次を参照してください。[ステートメント ハンドルの解放](../../../odbc/reference/develop-app/freeing-a-statement-handle-odbc.md)します。  
   
  ![データ ソースからの切断を示しています](../../../odbc/reference/develop-app/media/pr17.gif "pr17。")  

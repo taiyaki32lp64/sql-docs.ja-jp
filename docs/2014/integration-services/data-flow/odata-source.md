@@ -9,15 +9,15 @@ ms.topic: conceptual
 f1_keywords:
 - SQL12.DTS.DESIGNER.ODATASOURCE.F1
 ms.assetid: cc9003c9-638e-432b-867e-e949d50cec90
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 331baa7fd450b1a49879f7f1be3d985425ad1267
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 4b6b4aeb4059ba659a3188712b1ce76f10efd030
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53363454"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62771038"
 ---
 # <a name="odata-source"></a>OData ソース
   SSIS パッケージ内で OData ソース コンポーネントを使用して、Open Data Protocol (OData) サービスから取得したデータを使用します。 このコンポーネントは、OData v2 と v3 の各プロトコル、および ATOM と JSON の各データ形式をサポートします。  
@@ -41,7 +41,7 @@ ms.locfileid: "53363454"
   
 -   [OData ソース コンポーネントのインストールと、アンインストール](../install-and-uninstall-odata-source-component.md)  
   
--   [チュートリアル:OData ソースを使用して&#91;SSIS&#93;](tutorial-using-the-odata-source.md)  
+-   [チュートリアル: OData ソースを使用して&#91;SSIS&#93;](tutorial-using-the-odata-source.md)  
   
 -   [実行時の OData ソース クエリの変更](modify-odata-source-query-at-runtime.md)  
   

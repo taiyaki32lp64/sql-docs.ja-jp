@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 3be75b75-4d36-4479-ab64-9a456869252a
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 01a930bc571e84c6ecfd38ce8415493c90ebd377
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e391ad7c61bd6c303b0558892435af344a2768fb
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47828912"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67933498"
 ---
 # <a name="connectionstring-property-ado"></a>ConnectionString プロパティ (ADO)
 データ ソースへの接続を確立するための情報を示します。  
@@ -30,7 +29,7 @@ ms.locfileid: "47828912"
  設定または取得を**文字列**値。  
   
 ## <a name="remarks"></a>コメント  
- 使用して、 **ConnectionString**プロパティを含む、一連の詳細な接続文字列を渡すことによって、データ ソースを指定する*引数**値 =* で区切られたステートメントセミコロン入力します。  
+ 使用して、 **ConnectionString**プロパティを含む、一連の詳細な接続文字列を渡すことによって、データ ソースを指定する*引数* *値 =* で区切られたステートメントセミコロン入力します。  
   
  ADO の 5 つの引数をサポートする、 **ConnectionString**プロパティです。 ADO で処理なしのプロバイダーに直接の引数のパス。 引数の ADO サポートは、次のとおりです。  
   
@@ -53,19 +52,19 @@ ms.locfileid: "47828912"
  引数の重複、 **ConnectionString**プロパティは無視されます。 いずれかの引数の最後のインスタンスが使用されます。  
   
 > [!NOTE]
->  **リモート データ サービスの使用状況**クライアント側で使用すると**接続**オブジェクト、 **ConnectionString**プロパティにのみを含めることができます、*リモート プロバイダー**リモート サーバー*パラメーター。  
+>  **リモート データ サービスの使用状況**クライアント側で使用すると**接続**オブジェクト、 **ConnectionString**プロパティにのみを含めることができます、*リモート プロバイダー* *リモート サーバー*パラメーター。  
   
  次の表では、各 Windows オペレーティング システムの既定の ADO プロバイダーを示します。  
   
 |ADO プロバイダーは既定値|Windows オペレーティング システム|  
 |--------------------------|------------------------------|  
 |MSDASQL<br /><br /> (ソース コードの読みやすさを向上させるのに明示的にプロバイダー名、接続文字列で指定します。)|Windows 2000 (32 ビット)<br /><br /> Windows XP (32 ビット)<br /><br /> Windows 2003 Server (32 ビット)<br /><br /> Windows Vista (32 ビット)<br /><br /> Windows Vista Service Pack 1 またはそれ以降 (32 ビットおよび 64 ビット)<br /><br /> Windows Vista (32 ビットおよび 64 ビット) より後の Windows バージョン|  
-|既定値はありません。<br /><br /> ADO アプリケーションでは、次のオペレーティング システムで実行され、プロバイダーが明示的に指定しない、次のエラーが返されます。"ADODB します。接続: プロバイダーが指定されていないと、指定された既定のプロバイダーがありません"|Windows 2000 (64 ビット)<br /><br /> Windows XP (64 ビット)<br /><br /> Windows 2003 Server (64 ビット)<br /><br /> Windows Vista (64 ビット)|  
+|既定値はありません。<br /><br /> ADO アプリケーションでは、次のオペレーティング システムで実行され、プロバイダーが明示的に指定しない、ADO には、次のエラーが返されます。"ADODB します。接続: プロバイダーが指定されていないと、指定された既定のプロバイダーがありません"|Windows 2000 (64 ビット)<br /><br /> Windows XP (64 ビット)<br /><br /> Windows 2003 Server (64 ビット)<br /><br /> Windows Vista (64 ビット)|  
   
 ## <a name="applies-to"></a>適用対象  
  [Connection オブジェクト (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [ConnectionString、ConnectionTimeout、および状態のプロパティの例 (VB)](../../../ado/reference/ado-api/connectionstring-connectiontimeout-and-state-properties-example-vb.md)   
  [ConnectionString、ConnectionTimeout、および状態のプロパティの例 (vc++)](../../../ado/reference/ado-api/connectionstring-connectiontimeout-and-state-properties-example-vc.md)   
  [付録 A: プロバイダー](../../../ado/guide/appendixes/appendix-a-providers.md)

@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: 8011659a-d74b-489b-a88b-08bd9e8b48b2
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: cf7eb71d8757f4dc07463b4b2263a048d1198ec5
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 1dbe35f0d0068cabd92f3f8ff538e15fc0b81668
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47744290"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67969024"
 ---
 # <a name="supportspositioneddelete-method-sqlserverdatabasemetadata"></a>supportsPositionedDelete メソッド (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -36,13 +35,13 @@ public boolean supportsPositionedDelete()
 ```  
   
 ## <a name="return-value"></a>戻り値  
- **true**サポートされている場合。 それ以外の場合は、 **false**です。  
+ サポートされている場合は**true** 。 それ以外の場合は、 **false**です。  
   
 ## <a name="exceptions"></a>例外  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- この supportsPositionedDelete メソッドは、java.sql.DatabaseMetaData インターフェイスで supportsPositionedDelete メソッドによって指定されます。  
+ この supportsPositionedDelete メソッドは、supportsPositionedDelete メソッドによって、java メタデータインターフェイスで指定されます。  
   
 ## <a name="see-also"></a>参照  
  [SQLServerDatabaseMetaData のメソッド](../../../connect/jdbc/reference/sqlserverdatabasemetadata-methods.md)   

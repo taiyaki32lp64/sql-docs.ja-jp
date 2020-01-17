@@ -8,13 +8,12 @@ ms.topic: conceptual
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-manager: kfile
-ms.openlocfilehash: 65ab4d5ebf1fbe64d3e85854df186d9ebe098e84
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.openlocfilehash: 041d6ade2363b4a33528bd44438a2fcb440d61ab
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51600062"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67928295"
 ---
 # <a name="select-from-ltstructuregtcases"></a>SELECT FROM&lt;構造&gt;します。場合
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -68,7 +67,7 @@ SELECT StructureColumn('<column name>') FROM <model>.CASES
 ## <a name="examples"></a>使用例  
  次の例に基づく Targeted Mailing マイニング構造に基づいています、[!INCLUDE[ssAWDWsp](../includes/ssawdwsp-md.md)]データベース、および関連するマイニング モデルです。 詳細については、次を参照してください。 [Basic Data Mining Tutorial](https://msdn.microsoft.com/library/6602edb6-d160-43fb-83c8-9df5dddfeb9c)します。  
   
-### <a name="example-1-drill-through-to-structure-cases"></a>例 1 : 構造ケースにドリルスルーする  
+### <a name="example-1-drill-through-to-structure-cases"></a>例 1 : 構造ケースにドリルスルーします。  
  次の例では、マイニング構造 Targeted Mailing で最も古い 500 人の顧客のリストが返されます。 このクエリではマイニング モデル内のすべての列が返されますが、行は自転車を購入した顧客に制限され、年齢順に並べ替えられます。 必要な列のみを返すように式のリストを編集することもできます。  
   
 ```  
@@ -78,7 +77,7 @@ WHERE [Bike Buyer] = 1
 ORDER BY Age DESC;  
 ```  
   
-### <a name="example-2-drillthrough-to-test-or-training-cases-only"></a>例 2 : テスト ケースまたはトレーニング ケースのみにドリルスルーする  
+### <a name="example-2-drillthrough-to-test-or-training-cases-only"></a>例 2:テスト_ケースまたはトレーニング ケースのみへのドリルスルー  
  次の例では、テスト用に予約されている Targeted Mailing の構造ケースのリストが返されます。 マイニング構造に、提示されたテスト セットが含まれていない場合、既定ではすべてのケースがトレーニング ケースとして扱われ、このクエリはケースを返しません。  
   
 ```  
@@ -90,7 +89,7 @@ WHERE IsTestCase();
  トレーニング ケースを返すには、関数を `IsTrainingCase()` に置き換えます。  
   
 ## <a name="see-also"></a>参照  
- [選択&AMP;#40;DMX&AMP;#41;](../dmx/select-dmx.md)   
+ [選択&#40;DMX&#41;](../dmx/select-dmx.md)   
  [データ マイニング拡張機能&#40;DMX&#41;データ定義ステートメント](../dmx/dmx-statements-data-definition.md)   
  [データ マイニング拡張機能&#40;DMX&#41;データ操作ステートメント](../dmx/dmx-statements-data-manipulation.md)   
  [データ マイニング拡張機能 &#40;DMX&#41; ステートメント リファレンス](../dmx/data-mining-extensions-dmx-statements.md)  

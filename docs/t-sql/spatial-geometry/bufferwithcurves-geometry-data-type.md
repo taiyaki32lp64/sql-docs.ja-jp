@@ -12,16 +12,15 @@ dev_langs:
 helpviewer_keywords:
 - BufferWithCurves method (geometry)
 ms.assetid: 8ffaba3f-d2dd-4e57-9f41-3ced9f14b600
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
+author: MladjoA
+ms.author: mlandzic
 monikerRange: =azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 9adca69b9f275fae20eef2b5bb9f619c034556c5
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 608b6cc3ee887a8d17b30a027a7669d51c8822ab
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47654220"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67929313"
 ---
 # <a name="bufferwithcurves-geometry-data-type"></a>BufferWithCurves (geometry データ型)
 [!INCLUDE[tsql-appliesto-ss2014-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2014-asdb-xxxx-xxx-md.md)]
@@ -42,7 +41,7 @@ ms.locfileid: "47654220"
 ## <a name="return-types"></a>戻り値の型  
 SQL Server 戻り値の型: **geometry**  
   
- CLR 戻り値の型: **SqlGeometry**  
+ CLR の戻り値の型:**SqlGeometry**  
   
 ## <a name="exceptions"></a>例外  
  次の条件を満たす場合、**ArgumentException** がスローされます。  
@@ -63,7 +62,7 @@ SQL Server 戻り値の型: **geometry**
 |distance 値|型ディメンション|返される空間の種類|  
 |--------------------|---------------------|---------------------------|  
 |distance < 0|0 または 1|空の **GeometryCollection** インスタンス|  
-|distance < 0|2 以上|負のバッファーを持つ **CurvePolygon** または **GeometryCollection** インスタンス **注:** 負の値のバッファーでは、空の **GeometryCollection** が作成されることもあります。|  
+|distance < 0|2 以上|負のバッファーを持つ **CurvePolygon** または **GeometryCollection** インスタンス **注:** 負の値のバッファーでは、空の **GeometryCollection** が作成されることがあります|  
 |distance = 0|すべてのディメンション|呼び出し元の **geography** インスタンスのコピー|  
 |distance > 0|すべてのディメンション|**CurvePolygon** または **GeometryCollection** インスタンス|  
   

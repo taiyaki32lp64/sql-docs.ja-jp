@@ -11,11 +11,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 6319d9b1c5e091297e371c03949daf73e9551bd7
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52537384"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62787948"
 ---
 # <a name="behavior-changes-to-management-tools-features-in-sql-server-2014"></a>SQL Server 2014 における管理ツール機能の動作の変更
   このトピックでは、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 管理ツール機能の動作変更について説明します。 動作変更によって、 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] の機能や操作方法が [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]の以前のバージョンと異なっています。  

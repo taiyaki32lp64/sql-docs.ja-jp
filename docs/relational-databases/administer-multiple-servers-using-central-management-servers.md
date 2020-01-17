@@ -1,5 +1,5 @@
 ---
-title: 中央管理サーバーを使用した複数のサーバーの管理 | Microsoft Docs
+title: 中央管理サーバーを使用した複数のサーバーの管理
 ms.date: 08/12/2016
 ms.prod: sql
 ms.prod_service: database-engine
@@ -16,13 +16,13 @@ helpviewer_keywords:
 ms.assetid: 427911a7-57d4-4542-8846-47c3267a5d9c
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 67f4b59fc0159a3e93c892defac6f2f44385807b
-ms.sourcegitcommit: ddb682c0061c2a040970ea88c051859330b8ac00
+ms.custom: seo-lt-2019
+ms.openlocfilehash: a2e2da55bd04ba29cf1c6ef81757488f8d50fd24
+ms.sourcegitcommit: d00ba0b4696ef7dee31cd0b293a3f54a1beaf458
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51571051"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "74055618"
 ---
 # <a name="administer-multiple-servers-using-central-management-servers"></a>中央管理サーバーを使用した複数のサーバーの管理
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

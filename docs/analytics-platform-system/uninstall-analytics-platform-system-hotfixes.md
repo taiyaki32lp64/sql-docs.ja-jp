@@ -1,42 +1,42 @@
 ---
-title: Analytics Platform System の修正プログラムのアンインストール |Microsoft Docs
+title: 修正プログラムのアンインストール
 description: Analytics Platform System の修正プログラムをアンインストールします。
 author: mzaman1
-manager: craigg
 ms.prod: sql
 ms.technology: data-warehouse
 ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: 5507eae7bb2f8a5ce138223a031ac4946d9f0030
-ms.sourcegitcommit: bfa10c54e871700de285d7f819095d51ef70d997
+ms.custom: seo-dt-2019
+ms.openlocfilehash: ef6929aeb06c9472eb3ff210de016117a9636ded
+ms.sourcegitcommit: d587a141351e59782c31229bccaa0bff2e869580
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/14/2019
-ms.locfileid: "54255068"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74399761"
 ---
-# <a name="uninstall-analytics-platform-system-hotfixes"></a>Analytics Platform System の修正プログラムをアンインストールします。 
-次の手順では、以前にインストールされた Analytics Platform System の修正プログラムをアンインストールする方法について説明します。  
+# <a name="uninstall-analytics-platform-system-hotfixes"></a>Analytics Platform System の修正プログラムのアンインストール 
+次の手順では、以前にインストールした Analytics Platform System 修正プログラムをアンインストールする方法について説明します。  
   
-## <a name="before-you-begin"></a>はじめに  
+## <a name="before-you-begin"></a>開始する前に  
   
 ### <a name="prerequisites"></a>前提条件  
-次の手順を実行するには、必要があります。  
+これらの手順を実行するには、次のものが必要です。  
   
--   アプライアンスの監視を管理コンソールにアクセスする権限を持つ、Analytics Platform System ログインします。  
+-   アプライアンスを監視するために管理コンソールにアクセスするためのアクセス許可を持つ分析プラットフォームシステムログイン。  
   
--   ドメイン管理者アカウントにログインを<em>< appliance_domain ></em>**-HST01**ノード。  
+-   <em><appliance_domain></em> **-HST01**ノードにログインするドメイン管理者アカウント。  
   
--   アンインストールする修正プログラムのサポート技術情報記事番号。  
+-   アンインストールする修正プログラムのサポート技術情報の記事番号。  
   
-## <a name="HowToUninstallPDW"></a>SQL Server PDW の修正プログラムをアンインストールするには  
+## <a name="HowToUninstallPDW"></a>SQL Server PDW 修正プログラムをアンインストールするには  
   
-1.  ログオン、 <em>< appliance_domain ></em>**-HST01** Fabric ドメイン管理者としてのノード。  
+1.  ファブリックドメイン管理者として<em><appliance_domain></em> **-HST01**ノードにログオンします。  
   
-2.  管理者として実行を使用して、コマンド プロンプトを開きます。  
+2.  [管理者として実行] オプションを使用して、コマンドプロンプトを開きます。  
   
-3.  ディレクトリに移動`C:\PDWINST\Patches\<kbarticle>\media`場所*<kbarticle>* をアンインストールする修正プログラムのサポート技術情報記事番号です。  
+3.  ディレクトリをに`C:\PDWINST\Patches\<kbarticle>\media`変更*<kbarticle>* します。には、アンインストールする修正プログラムのサポート技術情報の記事番号を指定します。  
   
     ```  
     cd /d c:\PDWINST\Patches\<kbarticle>\media  
@@ -49,8 +49,8 @@ ms.locfileid: "54255068"
     ```  
   
 ## <a name="see-also"></a>参照  
-[ダウンロードして Microsoft 更新プログラムを適用して&#40;Analytics Platform System&#41;](download-and-apply-microsoft-updates.md)  
-[Microsoft 更新プログラムのアンインストール&#40;Analytics Platform System&#41;](uninstall-microsoft-updates.md)  
-[Analytics Platform System の修正プログラムを適用&#40;Analytics Platform System&#41;](apply-analytics-platform-system-hotfixes.md)  
-[ソフトウェアのサービス&#40;Analytics Platform System&#41;](software-servicing.md)  
+[Microsoft Update &#40;Analytics Platform System&#41;をダウンロードして適用します](download-and-apply-microsoft-updates.md)  
+[Microsoft 更新プログラムのアンインストール &#40;Analytics Platform System&#41;](uninstall-microsoft-updates.md)  
+[Analytics platform system の修正プログラム &#40;analytics Platform System&#41;を適用します](apply-analytics-platform-system-hotfixes.md)  
+[ソフトウェアサービス &#40;Analytics Platform System&#41;](software-servicing.md)  
   

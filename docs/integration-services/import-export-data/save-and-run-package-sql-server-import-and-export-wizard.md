@@ -3,24 +3,26 @@ title: パッケージの保存および実行 (SQL Server インポートおよ
 ms.custom: ''
 ms.date: 02/16/2017
 ms.prod: sql
-ms.prod_service: integration-services
 ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql13.dts.impexpwizard.saveschedule.f1
 ms.assetid: b582c462-3d7a-4a4c-a2a2-2c79fedab75a
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: 78fb4a1905e53fce60e7d2461e33782e24441ee5
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: b1275f5cbb718f34ba1386d6d6313dd662901900
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47742510"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71284939"
 ---
 # <a name="save-and-run-package-sql-server-import-and-export-wizard"></a>[パッケージの保存および実行]\(SQL Server インポートおよびエクスポート ウィザード)
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   データ ソースと宛先を指定して構成すると、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インポートおよびエクスポート ウィザードによって **[パッケージの保存および実行]** が表示されます。 このページでは、コピー操作をすぐに実行するかどうかを指定します。 構成によっては、設定を [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] (SSIS) パッケージとして保存して、それをカスタマイズし、後から再利用することができます。
   
 **パッケージとは** ウィザードは SQL Server Integration Services (SSIS) を使用してデータをコピーします。 SSIS での基本単位はパッケージです。 ウィザードのページを進みながらオプションを指定すると、SSIS パッケージがメモリに作成されます。
@@ -42,7 +44,7 @@ ms.locfileid: "47742510"
 パッケージを保存するオプションを選択できるのは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Standard Edition 以上のエディションをインストールしている場合のみです。   
   
 > [!NOTE]
-> ウィザードを終了し、操作を実行したが、実行が完了する前に操作が停止した場合は、**[SSIS パッケージの保存]** チェック ボックスをオンにしていても、パッケージは保存されません。  
+> ウィザードを終了し、操作を実行したが、実行が完了する前に操作が停止した場合は、 **[SSIS パッケージの保存]** チェック ボックスをオンにしていても、パッケージは保存されません。  
 
 ### <a name="if-you-started-the-wizard-from-visual-studio"></a>Visual Studio からウィザードを起動した場合
 SQL Server Data Tools (SSDT) がインストールされている Visual Studio で Integration Services プロジェクトからウィザードを起動した場合:
@@ -76,7 +78,7 @@ SQL Server Data Tools (SSDT) がインストールされている Visual Studio 
  パスワードを再度入力します。  
   
 > [!NOTE]
-> このパスワード オプションは、パスワードが必要な **[パッケージの保護レベル]** を指定した場合 (つまり、**[機微なデータをパスワードで暗号化する]** または **[すべてのデータをパスワードで暗号化する]** を指定した場合) にのみ使用できます。  
+> このパスワード オプションは、パスワードが必要な **[パッケージの保護レベル]** を指定した場合 (つまり、 **[機微なデータをパスワードで暗号化する]** または **[すべてのデータをパスワードで暗号化する]** を指定した場合) にのみ使用できます。  
 
 ## <a name="about-the-two-pages-of-options-for-saving-the-package"></a>パッケージを保存するためのオプションの 2 つのページについて  
  **[パッケージの保存および実行]** ページは、SSIS パッケージを保存するためのオプションを選択する 2 つのページの 1 つです。  

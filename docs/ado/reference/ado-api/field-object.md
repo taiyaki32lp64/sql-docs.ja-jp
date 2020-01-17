@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: b10a72fc-3c4b-4186-a70b-993dc9f7a092
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 002e0f570aa2143ddba4a5b55f3cba1537389e77
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 04dbf3069896b9a7668d64a2f1d322f0b17ca5f3
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47753320"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67918684"
 ---
 # <a name="field-object"></a>Field オブジェクト
 一般的なデータ型のデータの列を表します。  
@@ -53,7 +52,7 @@ ms.locfileid: "47753320"
   
 -   [Field オブジェクトのプロパティ、メソッド、およびイベント](../../../ado/reference/ado-api/field-object-properties-methods-and-events.md)  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [フィールド コレクション (ADO)](../../../ado/reference/ado-api/fields-collection-ado.md)   
  [Properties コレクション (ADO)](../../../ado/reference/ado-api/properties-collection-ado.md)   
  [Recordset オブジェクト (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)

@@ -7,14 +7,13 @@ ms.custom: ''
 ms.topic: conceptual
 author: rothja
 ms.author: jroth
-manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || >= sql-server-linux-2017 || = sqlallproducts-allversions'
-ms.openlocfilehash: c9855f798a7867dfd67a52a1c8452340cdf2a69a
-ms.sourcegitcommit: 60739bcb48ccce17bca4e11a85df443e93ca23e3
+ms.openlocfilehash: 5b63711b537358db7cbf3fa34dcbfdf7444d4b7a
+ms.sourcegitcommit: 182ed49fa5a463147273b58ab99dc228413975b6
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52439904"
+ms.lasthandoff: 07/31/2019
+ms.locfileid: "68693187"
 ---
 # <a name="how-to-contribute-to-sql-server-documentation"></a>SQL Server のドキュメントに投稿する方法
 
@@ -33,14 +32,24 @@ ms.locfileid: "52439904"
 
 ## <a id="githubui"></a> ブラウザーで編集する
 
-お使いのブラウザーで SQL Server のコンテンツに簡単な編集を加え、Microsoft に送信することができます。 完全なプロセスは、[Microsoft Docs 共同作成者ガイド概要](https://docs.microsoft.com/contribute/#quick-edits-to-existing-documents)の記事に記載されています。 次のビデオは、お使いのブラウザーで変更を送信するためのエンド ツー エンド プロセスを示しています。
+お使いのブラウザーで SQL Server のコンテンツに簡単な編集を加え、Microsoft に送信することができます。 詳細については、[Microsoft Docs 共同作成者ガイドの概要](https://docs.microsoft.com/contribute/#quick-edits-to-existing-documents)のページを参照してください。 
 
-> [!VIDEO https://www.microsoft.com/videoplayer/embed/RE23pxh]
+次の手順は、このプロセスをまとめたものです。 
 
-> [!TIP]
-> **[編集]** ボタンの場所はビデオで示す内容と若干異なりますが、プロセスは同じです。
->
-> ![[編集] ボタン](./media/sql-server-docs-contribute/edit-sql-server-docs.png)
+1. フィードバックがあるページで、右上の **[編集]** リンクを選択します。
+1. 次のページで、右上の**鉛筆**アイコンを選択します。
+1. 次のページの **[Edit file]\(ファイルの編集\)** テキスト ウィンドウで、変更するテキストを直接編集します。
+    新規または変更されたテキストの書式設定に関するヘルプが必要な場合は、「[Markdown Cheatsheet](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet)」(マークダウンのカンニング ペーパー) を参照してください。
+1. 編集が完了したら、 **[Commit changes]\(変更のコミット\)** で次の手順を実行します。
+    1. 最初のテキスト ボックスに、行った変更の簡単な説明を入力します。
+    1. **[Add an optional extended description]\(省略可能な長い説明を追加する\)** ボックスに、変更の簡単な説明を入力します。
+1. **[Propose file change]\(ファイルの変更の提案\)** を選択します。
+1. **[Comparing changes]\(変更の比較\)** ページで、 **[Create pull request]\(プル要求の作成\)** を選択します。 
+1. **[Open a pull request]\(プル要求を開く\)** ページで、 **[Create pull request]\(プル要求の作成\)** を選択します。 
+
+次の GIF は、お使いのブラウザーで変更を送信するためのエンドツーエンド プロセスを示しています。
+
+![SQL ドキュメントの編集](media/sql-server-docs-navigation-guide/edit-sql-docs.gif)
 
 ## <a id="tools"></a> ツールを使ってローカルに編集する
 
@@ -53,7 +62,7 @@ ms.locfileid: "52439904"
 - [Git リポジトリをローカルに設定する](https://docs.microsoft.com/contribute/get-started-setup-local)
 - [ツールを使って投稿する](https://docs.microsoft.com/contribute/how-to-write-workflows-major)
 
-ドキュメントを大幅に変更するプル要求を送信する場合は、オンライン**貢献者使用許諾契約書 (CLA)** の提出を求める GitHub のコメントを受け取ります。 オンライン フォームを提出してからでないと、プル要求は受け付けられません。
+ドキュメントを大幅に変更する pull request を送信する場合は、オンライン**貢献者使用許諾契約書 (CLA)** の提出を求める GitHub のコメントを受け取ります。 オンライン フォームを提出してからでないと、pull request は受け付けられません。
 
 ## <a name="recognition"></a>認識
 

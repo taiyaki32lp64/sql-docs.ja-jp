@@ -10,21 +10,20 @@ ms.topic: conceptual
 helpviewer_keywords:
 - FileTables [SQL Server], directories
 ms.assetid: f1e45900-bea0-4f6f-924e-c11e1f98ab62
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: c13eb6089e9be42733782c54d757a0e3035fe6f7
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+author: MikeRayMSFT
+ms.author: mikeray
+ms.openlocfilehash: 2f31288df7d03bf527f1ee0a0bcd3b8ed84bba19
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52418453"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72908701"
 ---
 # <a name="work-with-directories-and-paths-in-filetables"></a>FileTable 内のディレクトリとパスの操作
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   FileTable 内でファイルが格納されるディレクトリ構造について説明します。  
   
-##  <a name="HowToDirectories"></a> 方法: FileTable 内のディレクトリとパスを操作する  
+##  <a name="HowToDirectories"></a> 方法:FileTable 内のディレクトリとパスの操作  
  次の 3 つの関数を使用して、 [!INCLUDE[tsql](../../includes/tsql-md.md)]で FileTable ディレクトリを操作することができます。  
   
 |目的|使用する関数|  
@@ -33,7 +32,7 @@ ms.locfileid: "52418453"
 |FileTable 内のファイルまたはディレクトリの絶対 UNC パスまたは相対 UNC パスを取得する。|[GetFileNamespacePath &#40;Transact-SQL&#41;](../../relational-databases/system-functions/getfilenamespacepath-transact-sql.md)|  
 |パスを指定して、FileTable 内の指定されたファイルまたはディレクトリのパス ロケーター ID 値を取得する。|[GetPathLocator &#40;Transact-SQL&#41;](../../relational-databases/system-functions/getpathlocator-transact-sql.md)|  
   
-##  <a name="BestPracticeRelativePaths"></a> 方法: 相対パスを使用して移植可能なコードを実現する  
+##  <a name="BestPracticeRelativePaths"></a> 方法:相対パスを使用して移植可能なコードを実現する  
  コードとアプリケーションが現在のコンピューターとデータベースから切り離された状態を維持するには、絶対ファイル パスに依存したコードを記述しないでください。 代わりに、以下の例に示すように [FileTableRootPath &#40;Transact-SQL&#41;](../../relational-databases/system-functions/filetablerootpath-transact-sql.md) 関数および [GetFileNamespacePath &#40;Transact-SQL&#41;](../../relational-databases/system-functions/getfilenamespacepath-transact-sql.md)関数を併用して、実行時にファイルの完全なパスを取得します。 既定では、 **GetFileNamespacePath** 関数は、データベースのルート パスの下のファイルの相対パスを返します。  
   
 ```sql  
@@ -68,7 +67,7 @@ GO
 2.  データベース レベルで指定された **DIRECTORY_NAME** 。  
   
 3.  FileTable レベルで指定された **FILETABLE_DIRECTORY** 。  
-  
+
  以上を組み合わせた階層は、次のようになります。  
   
  `\\<machine>\<instance-level FILESTREAM share>\<database-level directory>\<FileTable directory>\`  

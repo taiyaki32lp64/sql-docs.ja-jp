@@ -15,15 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - STIsClosed method
 ms.assetid: eba1643f-07c4-4500-8643-b7e90f908147
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: 7e9fd864ae5688e1d3540f54db54454ec1ff41db
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: MladjoA
+ms.author: mlandzic
+ms.openlocfilehash: dbc1bd923b0e86acfd0fbae995bd6fdbd16816a2
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47663470"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68042034"
 ---
 # <a name="stisclosed-geography-data-type"></a>STIsClosed (geography データ型)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -42,7 +41,7 @@ ms.locfileid: "47663470"
 ## <a name="return-types"></a>戻り値の型  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 戻り値の型: **bit**  
   
- CLR の戻り値の型: **SqlBoolean**  
+ CLR の戻り値の型:**SqlBoolean**  
   
 ## <a name="remarks"></a>Remarks  
  **geography** インスタンスの任意の図形が地点の場合、またはインスタンスが空の場合、このメソッドは 0 を返します。  

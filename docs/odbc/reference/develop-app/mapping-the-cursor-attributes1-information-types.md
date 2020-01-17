@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 9f112449-ca86-45ac-a865-e6174d67f91b
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 9e9549c442e301f3a6ed8d3da9c73d52177adf01
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d95d3e67fdcd7159074e2f20ffa558f4c80bbcb2
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47821331"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68036361"
 ---
 # <a name="mapping-the-cursor-attributes1-information-types"></a>Cursor Attributes1 の情報の種類のマッピング
 ODBC 3 時にします。*x*アプリケーション呼び出し**SQLGetInfo** ODBC 2 で *.x* SQL_XXXX_CURSOR_ATTRIBUTES1 情報の種類のドライバー (dynamic、順方向専用、キーセットのドライバーの場合、または静的カーソル)、ドライバー マネージャーによって返されるビットの設定は、どのような ODBC 2 に依存します。*x*ドライバーは、対応する ODBC 2 を返します *。x*情報の種類。 次の表に示すように、ビットが設定されます。  

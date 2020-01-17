@@ -23,16 +23,15 @@ helpviewer_keywords:
 - viewing object IDs
 - verifying object exists
 ms.assetid: f89286db-440f-4218-a828-30881ce3077a
-author: MashaMSFT
-ms.author: mathoma
-manager: craigg
+author: VanMSFT
+ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: f514bd7b5f18fba37ba8159ee4fe1804b5d8b8bb
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 2191fbd39cea24142b866f0acc9a27717896dab9
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47722450"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67914862"
 ---
 # <a name="objectid-transact-sql"></a>OBJECT_ID (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -40,7 +39,7 @@ ms.locfileid: "47722450"
   スキーマ スコープ オブジェクトのデータベース オブジェクト ID 番号を返します。  
   
 > [!IMPORTANT]  
->  DDL トリガーなど、スキーマ スコープ オブジェクトでないオブジェクトは、OBJECT_ID を使用して照会できません。 [sys.objects](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md) カタログ ビューにないオブジェクトについては、適切なカタログ ビューを照会してオブジェクト ID 番号を取得してください。 たとえば、DDL トリガーのオブジェクト ID 番号を取得するには、`SELECT OBJECT_ID FROM sys.triggers WHERE name = 'DatabaseTriggerLog``'` を使用します。  
+>  DDL トリガーなどのスキーマ スコープでないオブジェクトは、OBJECT_ID を使用してクエリできません。 [sys.objects](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md) カタログ ビューにないオブジェクトについては、適切なカタログ ビューを照会してオブジェクト ID 番号を取得してください。 たとえば、DDL トリガーのオブジェクト ID 番号を取得するには、`SELECT OBJECT_ID FROM sys.triggers WHERE name = 'DatabaseTriggerLog``'` を使用します。  
   
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -53,10 +52,10 @@ OBJECT_ID ( '[ database_name . [ schema_name ] . | schema_name . ]
   
 ## <a name="arguments"></a>引数  
  **'** *object_name* **'**  
- 使用するオブジェクトを指定します。 *object_name* は **varchar** または **nvarchar** です。 場合 *object_name* は **varchar**, に暗黙的に変換されます **nvarchar** です。 データベース名とスキーマ名の指定は省略可能です。  
+ 使用するオブジェクトです。 *object_name* は **varchar** または **nvarchar** です。 場合 *object_name* は **varchar**, に暗黙的に変換されます **nvarchar** です。 データベース名とスキーマ名の指定は省略可能です。  
   
  **'** *object_type* **'**  
- スキーマ スコープのオブジェクトの種類を指定します。 *object_type* は **varchar** または **nvarchar** です。 場合 *object_type* は **varchar**, に暗黙的に変換されます **nvarchar** です。 オブジェクトの種類の一覧については、「[sys.objects &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md)」 の **type** 列を参照してください。  
+ スキーマ スコープのオブジェクトの種類です。 *object_type* は **varchar** または **nvarchar** です。 場合 *object_type* は **varchar**, に暗黙的に変換されます **nvarchar** です。 オブジェクトの種類の一覧については、「[sys.objects &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md)」 の **type** 列を参照してください。  
   
 ## <a name="return-types"></a>戻り値の型  
  **int**  
@@ -69,7 +68,7 @@ OBJECT_ID ( '[ database_name . [ schema_name ] . | schema_name . ]
  ユーザーが所有しているか、または権限を与えられている、セキュリティ保護可能なリソースのメタデータのみを表示できます。 つまり、オブジェクトに対する権限がユーザーに与えられていない場合、メタデータを生成する組み込み関数 (OBJECT_ID など) が NULL を返す可能性があります。 詳細については、「 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)」を参照してください。  
   
 ## <a name="remarks"></a>Remarks  
- システム関数のパラメーターを指定しない場合は、現在のデータベース、ホスト コンピューター、サーバー ユーザー、またはデータベース ユーザーを指定したと見なされます。 組み込み関数の後には、必ずかっこが必要です。  
+ システム関数へのパラメーターが省略可能の場合は、現在のデータベース、ホスト コンピューター、サーバー ユーザー、またはデータベース ユーザーが推測されます。 組み込み関数の後には常にかっこが必要です。  
   
  一時テーブル名を指定する場合は、現在のデータベースが **tempdb** でない限り、一時テーブル名の前にデータベース名を指定する必要があります。 例: `SELECT OBJECT_ID('tempdb..#mytemptable')`」を参照してください。  
   
@@ -102,7 +101,7 @@ GO
  次の例では、[!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] データベース内にある `Person.Address` テーブルのすべてのインデックスとパーティションについて、[sys.dm_db_index_operational_stats](../../relational-databases/system-dynamic-management-views/sys-dm-db-index-operational-stats-transact-sql.md) 関数を使用して情報を返しています。  
   
 > [!IMPORTANT]  
->  [!INCLUDE[tsql](../../includes/tsql-md.md)] 関数 DB_ID および OBJECT_ID を使ってパラメーター値を返すときには、有効な ID が返されることを常に確認してください。 データベースまたはオブジェクト名が存在しないか、スペルが間違っていることが原因で見つからない場合は、両方の関数で NULL が返されます。 **sys.dm_db_index_operational_stats** 関数では、NULL 値はすべてのデータベースまたはすべてのオブジェクトを指定するワイルドカード値として解釈されます。 これによって意図しない操作が実行される可能性があるので、この例では安全な方法を使用してデータベース ID とオブジェクト ID を特定します。  
+>  [!INCLUDE[tsql](../../includes/tsql-md.md)] 関数 DB_ID および OBJECT_ID を使ってパラメーター値を返すときには、有効な ID が返されることを常に確認してください。 存在しない場合やスペルが正しくない場合など、データベースまたはオブジェクト名が見つからない場合、両方の関数が NULL を返します。 **sys.dm_db_index_operational_stats** 関数では、NULL 値はすべてのデータベースまたはすべてのオブジェクトを指定するワイルドカード値として解釈されます。 これは、意図しない操作である可能性があるため、このセクションの例では、データベースおよびオブジェクト ID を確認する安全な方法を示します。  
   
 ```  
 DECLARE @db_id int;  
@@ -126,7 +125,7 @@ GO
   
 ## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>例: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] および [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
-### <a name="d-returning-the-object-id-for-a-specified-object"></a>D. 指定したオブジェクトのオブジェクト ID を返す  
+### <a name="d-returning-the-object-id-for-a-specified-object"></a>D:指定したオブジェクトのオブジェクト ID を返す  
  次の例では、[!INCLUDE[ssawPDW](../../includes/ssawpdw-md.md)] データベース内の `FactFinance` テーブルのオブジェクト ID を返します。  
   
 ```  

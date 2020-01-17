@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 00d722d4-ce99-4dbe-a503-1ab27cb6fe0a
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: bb5476902d36bd5761ebea6139bd1b7085da414b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ef140d51bd51295a794352e57a2ef41f96f38c64
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47855430"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67911440"
 ---
 # <a name="visual-foxpro-odbc-driver-programmer39s-reference"></a>Visual FoxPro ODBC ドライバーのプログラマ&#39;リファレンス
 Visual FoxPro ODBC ドライバーのドキュメントのこのセクションには、次のトピックが含まれています。  

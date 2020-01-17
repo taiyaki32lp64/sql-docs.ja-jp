@@ -20,20 +20,19 @@ helpviewer_keywords:
 ms.assetid: bd8ae5fd-1337-4b7f-b0a4-153cbca9fa5f
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 578997f57c4092689e49cb0e3102c8bdf7b4f8d2
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 838a8b0d998476a37b0dd4d30cab5041ad4276a0
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47843896"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67942032"
 ---
 # <a name="managedbackupspsetparameter-transact-sql"></a>managed_backup.sp_set_parameter (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
   指定された Smart Admin システム パラメーターの値を設定します。  
   
- 使用可能なパラメーターは、[!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]に関連します。 これらのパラメーターは、電子メール通知の設定、特定の拡張イベントの有効化、およびユーザーが設定したポリシー ベースの管理ポリシーの有効化に使用されます。 パラメーター名とパラメーター値のペアを指定する必要があります。  
+ 使用可能なパラメーターは、[!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]に関連します。 これらのパラメーターは、電子メール通知を設定し、特定の拡張イベントを有効にする、ユーザー ポリシー ベースの管理ポリシーの設定を有効にするに使用されます。 パラメーター名とパラメーター値のペアを指定する必要があります.  
 
   
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
@@ -51,7 +50,7 @@ EXEC managed_backup.sp_set_parameter
  値を設定するパラメーターの名前。 @parameter_name nvarchar (128) です。 使用可能なパラメーター名は**SSMBackup2WANotificationEmailIds**、 **SSMBackup2WADebugXevent**、 **SSMBackup2WAEnableUserDefinedPolicy**、 **FileRetentionDebugXevent**、および**StorageOperationDebugXevent**します。  
   
  @parameter_value  
- パラメーターに設定する値。 @parameter 値は、nvarchar (128) です。  許容されているパラメーターの名前と値のペアは次のとおりです。  
+ 設定するパラメーターの値。 @parameter 値は、nvarchar (128) です。  許容されているパラメーターの名前と値のペアは次のとおりです。  
   
 -   @parameter_name = 'SSMBackup2WANotificationEmailIds': @parameter_value = '電子メール'  
   
@@ -67,7 +66,7 @@ EXEC managed_backup.sp_set_parameter
  0 (成功) または 1 (失敗)  
   
 ## <a name="best-practices"></a>ベスト プラクティス  
- ステートメントまたはルーチンの実行時にユーザーが知っておく必要があるベスト プラクティスを説明するセクション (省略可) です。  
+ ステートメントまたはルーチンを実行するときに、ユーザーが知っておく必要がベスト プラクティスについて説明する省略可能なセクションです。  
   
 ## <a name="security"></a>セキュリティ  
   
@@ -75,7 +74,7 @@ EXEC managed_backup.sp_set_parameter
  必要があります**EXECUTE**に対する**managed_backup.sp_set_parameter**ストアド プロシージャ。  
   
 ## <a name="examples"></a>使用例  
- 次の例では、運用およびデバッグの拡張イベントを有効にします。  
+ 次の例では、運用を有効にし、拡張イベントをデバッグします。  
   
 ```  
 -- to enable operational events  
@@ -89,7 +88,7 @@ Go
   
 ```  
   
- 次の例では、エラーと警告の電子メール通知を有効にし、通知の送信先に使用する emailID を設定します。  
+ 次の例では、エラーおよび警告の電子メール通知を有効にしに通知の送信に使用する emailID を設定します。  
   
 ```  
 Use msdb  

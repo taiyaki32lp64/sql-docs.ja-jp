@@ -12,14 +12,13 @@ helpviewer_keywords:
 ms.assetid: 4b97c0b4-03ff-4cfb-9c3f-3b33290b7a2c
 author: julieMSFT
 ms.author: jrasnick
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 0fafe9e457a29a8247478ed9c638c3bddedeee0f
-ms.sourcegitcommit: 0c1d552b3256e1bd995e3c49e0561589c52c21bf
+ms.openlocfilehash: 59efa5a8143d448ca322ab1b6efa86cbfa9f66d1
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/14/2018
-ms.locfileid: "53380863"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67934080"
 ---
 # <a name="update-statistics"></a>統計の更新
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -60,7 +59,7 @@ ms.locfileid: "53380863"
   
 5.  更新する統計オブジェクトを右クリックし、 **[プロパティ]** を選択します。  
   
-6.  **[統計のプロパティ - _statistics\_name_]** ダイアログ ボックスで **[この列の統計を更新する]** チェック ボックスをオンにし、**[OK]** をクリックします。  
+6.  **[統計のプロパティ - _statistics\_name_]** ダイアログ ボックスで **[この列の統計を更新する]** チェック ボックスをオンにし、 **[OK]** をクリックします。  
   
 ##  <a name="TsqlProcedure"></a> Transact-SQL の使用  
   

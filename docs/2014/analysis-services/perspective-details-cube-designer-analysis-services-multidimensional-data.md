@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.cubeeditor.perspectives.perspectivespane.perspectivedetails.f2
@@ -13,12 +12,12 @@ ms.assetid: b4d0ff9e-5ee7-470c-abc2-d748ac4c04e7
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: e64c7ae51bf68c8a26cfb601172f214b6c710f80
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 93ad2deb67e1b8526e14ea34eb165659f96fa066
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48209822"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66072060"
 ---
 # <a name="perspective-details-perspectives-tab-cube-designer-analysis-services---multidimensional-data"></a>パースペクティブの詳細 (キューブ デザイナーの [パースペクティブ] タブ) (Analysis Services - 多次元データ)
   キューブ デザイナーの **[パースペクティブ]** タブの **パースペクティブの詳細** ペインを使用すると、選択したパースペクティブをクエリするユーザーは、利用できるメタデータを管理できます。  

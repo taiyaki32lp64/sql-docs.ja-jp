@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: b4476603-691b-4081-8797-a3d0b331dce5
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 941c6a8cf6c7ed57e0a28d5cb288d92ab8e231c1
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: c309319ceb81e9af4a8b84d0b96537d0be933e32
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47707580"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67918339"
 ---
 # <a name="item-property-example-vb"></a>Item プロパティの例 (VB)
 この例では、どのように[項目](../../../ado/reference/ado-api/item-property-ado.md)プロパティは、コレクションのメンバーにアクセスします。 開く例を示します、***作成者***のテーブル、 ***Pubs***パラメーター化されたコマンドを使ってデータベース。  
@@ -135,7 +134,7 @@ End Sub
 'EndItemVB  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [コマンド オブジェクト (ADO)](../../../ado/reference/ado-api/command-object-ado.md)   
  [フィールド コレクション (ADO)](../../../ado/reference/ado-api/fields-collection-ado.md)   
  [Item プロパティ (ADO)](../../../ado/reference/ado-api/item-property-ado.md)   

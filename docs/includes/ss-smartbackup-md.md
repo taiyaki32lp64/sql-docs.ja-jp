@@ -1,1 +1,1 @@
- Microsoft Azure への SQL Server マネージ バックアップ 
+ Microsoft Azure への SQL Server マネージド バックアップ 

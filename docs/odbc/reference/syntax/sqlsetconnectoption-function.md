@@ -19,19 +19,18 @@ helpviewer_keywords:
 ms.assetid: 8cd2c2a2-25c8-4aff-951c-b593bbfc90ad
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 62d22d1bf5fc3d01bf62afd2da6b3ebbc2bb0289
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: b429e499cccaad553236b4ebee78374c69c7c4dd
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53204352"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68093013"
 ---
 # <a name="sqlsetconnectoption-function"></a>SQLSetConnectOption 関数
 **準拠**  
  バージョンが導入されました。ODBC 1.0 規格に準拠します。非推奨  
   
- **まとめ**  
+ **概要**  
  ODBC 3 *.x*、ODBC 2.0 関数**SQLSetConnectOption**置き換わりました**SQLSetConnectAttr**します。 詳細については、「[SQLSetConnectAttr](../../../odbc/reference/syntax/sqlsetconnectattr-function.md)」を参照してください。  
   
 > [!NOTE]
@@ -43,6 +42,6 @@ ms.locfileid: "53204352"
 > [!NOTE]  
 >  ODBC 3.8 に導入された SQL_ASYNC_DBC_FUNCTION_ENABLE 属性でサポートされていない**SQLSetConnectOption**します。 接続ハンドルに対して非同期操作を使用するアプリケーションを使用する必要があります**SQLSetConnectAttr**します。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [ODBC API リファレンス](../../../odbc/reference/syntax/odbc-api-reference.md)   
  [ODBC ヘッダー ファイル](../../../odbc/reference/install/odbc-header-files.md)

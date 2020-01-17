@@ -1,5 +1,5 @@
 ---
-title: setInt メソッド (SQLServerPreparedStatement) |Microsoft Docs
+title: setInt メソッド (SQLServerPreparedStatement) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: 5e46b129-9fe1-469f-b2e8-7ce7fb832996
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 02f87cd8586f17a85408b3a6e1f0f9bb9fb4f633
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b4f78d918b597d9e336feb58d512c0156eadd4e9
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47755461"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67974162"
 ---
 # <a name="setint-method-sqlserverpreparedstatement"></a>setInt メソッド (SQLServerPreparedStatement)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

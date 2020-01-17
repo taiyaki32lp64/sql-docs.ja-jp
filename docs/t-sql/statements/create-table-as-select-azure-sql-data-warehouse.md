@@ -8,18 +8,17 @@ ms.topic: language-reference
 dev_langs:
 - TSQL
 ms.assetid: d1e08f88-64ef-4001-8a66-372249df2533
-author: CarlRabeler
-ms.author: carlrab
-manager: craigg
+author: julieMSFT
+ms.author: jrasnick
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 882f6c9691905d4dd18d7c70a19b3afd9bc86751
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 22f296db7717e81068ac52d6c3df547a0ba0d085
+ms.sourcegitcommit: baa40306cada09e480b4c5ddb44ee8524307a2ab
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56012663"
+ms.lasthandoff: 11/06/2019
+ms.locfileid: "73660790"
 ---
-# <a name="create-table-as-select-azure-sql-data-warehouse"></a>テーブルとして選択 (Azure SQL データ ウェアハウス) を作成します。
+# <a name="create-table-as-select-azure-sql-data-warehouse"></a>CREATE TABLE AS SELECT (Azure SQL Data Warehouse)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
 
 CREATE TABLE AS SELECT (CTAS) は、使用可能な最も重要な T-SQL 機能の 1 つです。 SELECT ステートメントの出力に基づいて新しいテーブルを作成する完全に並列化された操作です。 CTAS は、テーブルのコピーを作成する最も簡単で速い方法です。   
@@ -41,13 +40,14 @@ CREATE TABLE AS SELECT (CTAS) は、使用可能な最も重要な T-SQL 機能�
 ## <a name="syntax"></a>構文   
 
 ```  
-CREATE TABLE [ database_name . [ schema_name ] . | schema_name. ] table_name   
+CREATE TABLE { database_name.schema_name.table_name | schema_name.table_name | table_name }
     [ ( column_name [ ,...n ] ) ]  
     WITH ( 
       <distribution_option> -- required
       [ , <table_option> [ ,...n ] ]    
     )  
-    AS <select_statement>   
+    AS <select_statement>  
+    OPTION <query_hint> 
 [;]  
 
 <distribution_option> ::=
@@ -60,16 +60,21 @@ CREATE TABLE [ database_name . [ schema_name ] . | schema_name. ] table_name
 <table_option> ::= 
     {   
         CLUSTERED COLUMNSTORE INDEX --default for SQL Data Warehouse 
+      | CLUSTERED COLUMNSTORE INDEX ORDER (column[,...n])
       | HEAP --default for Parallel Data Warehouse   
       | CLUSTERED INDEX ( { index_column_name [ ASC | DESC ] } [ ,...n ] ) --default is ASC 
     }  
-    | PARTITION ( partition_column_name RANGE [ LEFT | RIGHT ] --default is LEFT  
+      | PARTITION ( partition_column_name RANGE [ LEFT | RIGHT ] --default is LEFT  
         FOR VALUES ( [ boundary_value [,...n] ] ) ) 
   
 <select_statement> ::=  
     [ WITH <common_table_expression> [ ,...n ] ]  
     SELECT select_criteria  
 
+<query_hint> ::=
+    {
+        MAXDOP 
+    }
 ```  
 
 <a name="arguments-bk"></a>
@@ -103,15 +108,19 @@ CTAS ステートメントは、ソース テーブルがパーティション�
 
 <a name="select-options-bk"></a>
 
-### <a name="select-options"></a>SELECT のオプション
+### <a name="select-statement"></a>Select ステートメント
 SELECT ステートメントは、CTAS と CREATE TABLE の基本的な違いです。  
 
  `WITH` *common_table_expression*  
  共通テーブル式 (CTE) と呼ばれる一時的な名前付き結果セットを指定します。 詳細については、「[WITH common_table_expression &#40;Transact-SQL&#41;](../../t-sql/queries/with-common-table-expression-transact-sql.md)」を参照してください。  
   
  `SELECT` *select_criteria*  
- SELECT ステートメントの結果を新しいテーブルを追加します。 *select_criteria* は、新しいテーブルにコピーするデータを決定する SELECT ステートメントの本文です。 SELECT ステートメントについては、「[SELECT &#40;Transact-SQL&#41;](../../t-sql/queries/select-transact-sql.md)」を参照してください。  
-  
+ SELECT ステートメントの結果を新しいテーブルに追加します。 *select_criteria* は、新しいテーブルにコピーするデータを決定する SELECT ステートメントの本文です。 SELECT ステートメントについては、「[SELECT &#40;Transact-SQL&#41;](../../t-sql/queries/select-transact-sql.md)」を参照してください。  
+ 
+### <a name="query-hint"></a>クエリ ヒント
+ユーザーは MAXDOP を整数値に設定し、並列処理の最大値を制御できます。  MAXDOP が 1 に設定されていると、クエリは 1 つのスレッドによって実行されます。
+
+ 
 <a name="permissions-bk"></a>  
   
 ## <a name="permissions"></a>アクセス許可  
@@ -128,6 +137,8 @@ CTAS には、*select_criteria* で参照されるすべてのオブジェクト
 
 ## <a name="limitations-and-restrictions"></a>制限事項と制約事項  
 Azure SQL Data Warehouse では、統計の自動作成や自動更新はまだサポートされていません。  クエリから最高のパフォーマンスを得るには、CTAS を実行した後と、データで大幅な変更が発生した後に、すべてのテーブルのすべての列の統計を作成することが重要です。 詳細については、「 [CREATE STATISTICS (Transact-SQL)](../../t-sql/statements/create-statistics-transact-sql.md)」をご覧ください。
+
+順序付けされたクラスター化列ストア インデックスは、文字列型の列を除く Azure SQL Data Warehouse でサポートされている任意のデータ型の列に作成できます。  
 
 CTAS では [SET ROWCOUNT &#40;Transact-SQL&#41;](../../t-sql/statements/set-rowcount-transact-sql.md) の効果はありません。 同様の動作を実現するには、[TOP &#40;Transact-SQL&#41;](../../t-sql/queries/top-transact-sql.md) を使用します。  
  
@@ -156,7 +167,7 @@ CTAS を使用してテーブルを作成するときに、パフォーマンス
 <a name="ctas-copy-table-bk"></a>
 
 ### <a name="a-use-ctas-to-copy-a-table"></a>A. CTAS を使用してテーブルをコピーする 
-適用対象Azure SQL Data Warehouse と Parallel Data Warehouse
+適用対象:Azure SQL Data Warehouse と Parallel Data Warehouse
 
 `CTAS` の最も一般的な使用方法の 1 つとして、DDL を変更できるようにテーブルのコピーを作成することが考えられます。 たとえば、最初に `ROUND_ROBIN` としてテーブルを作成し、それを列で分散されるテーブルに変更する必要がある場合、`CTAS` を使用して分散列を変更します。 また、`CTAS` を使用して、パーティション、インデックス、列の型を変更することができます。
 
@@ -228,7 +239,7 @@ DROP TABLE FactInternetSales_old;
 <a name="ctas-change-column-attributes-bk"></a>
 
 ### <a name="b-use-ctas-to-change-column-attributes"></a>B. CTAS を使用して列属性を変更する 
-適用対象Azure SQL Data Warehouse と Parallel Data Warehouse
+適用対象:Azure SQL Data Warehouse と Parallel Data Warehouse
 
 この例では CTAS を使用して、DimCustomer2 テーブルのデータ型、NULL 値の許容、いくつかの列の照合順序を変更します。  
   
@@ -289,7 +300,7 @@ DROP TABLE DimCustomer2_old;
 <a name="ctas-change-distribution-method-bk"></a>
 
 ### <a name="c-use-ctas-to-change-the-distribution-method-for-a-table"></a>C. CTAS を使用してテーブルの分散方法を変更する
-適用対象Azure SQL Data Warehouse と Parallel Data Warehouse
+適用対象:Azure SQL Data Warehouse と Parallel Data Warehouse
 
 この簡単な例では、テーブルの分散方法を変更する方法を示します。 これを行う方法のしくみを表示するには、ハッシュ分散テーブルをラウンドロビンに変更してから、ラウンドロビン テーブルをハッシュ分散に戻します。 最終的なテーブルは元のテーブルと一致します。 
 
@@ -340,7 +351,7 @@ DROP TABLE [dbo].[DimSalesTerritory_old];
 <a name="ctas-change-to-replicated-bk"></a>
 
 ### <a name="d-use-ctas-to-convert-a-table-to-a-replicated-table"></a>D. CTAS を使用してテーブルをレプリケートされたテーブルに変換する  
-適用対象Azure SQL Data Warehouse と Parallel Data Warehouse 
+適用対象:Azure SQL Data Warehouse と Parallel Data Warehouse 
 
 この例は、ラウンドロビン テーブルまたはハッシュ分散テーブルをレプリケートされたテーブルに変換する場合に適用されます。 この特定の例では、分散の種類を変更する前の方法を 1 歩進めた方法を使用します。  DimSalesTerritory はディメンションであり、より小さいテーブルである可能性があるため、テーブル間の結合時にデータが移動されないようにテーブルをレプリケート済みとして再作成することを選択できます。 
 
@@ -364,7 +375,7 @@ DROP TABLE [dbo].[DimSalesTerritory_old];
 ```
  
 ### <a name="e-use-ctas-to-create-a-table-with-fewer-columns"></a>E. CTAS を使用して列が少ないテーブルを作成する
-適用対象Azure SQL Data Warehouse と Parallel Data Warehouse 
+適用対象:Azure SQL Data Warehouse と Parallel Data Warehouse 
 
 次の例では、`myTable (c, ln)` という名前のラウンドロビン分散テーブル テーブルを作成します。 新しいテーブルには 2 つの列のみがあります。 列名には、SELECT ステートメントの列の別名を使用します。  
   
@@ -386,10 +397,10 @@ AS SELECT CustomerKey AS c, LastName AS ln
 
 <a name="ctas-query-hint-bk"></a>
 
-### <a name="f-use-a-query-hint-with-create-table-as-select-ctas"></a>F. 作成するテーブルとの間でのクエリ ヒントを使用する (CTAS) を選択します。  
-適用対象Azure SQL Data Warehouse と Parallel Data Warehouse
+### <a name="f-use-a-query-hint-with-create-table-as-select-ctas"></a>F. CREATE TABLE AS SELECT (CTAS) でクエリ ヒントを使用する  
+適用対象:Azure SQL Data Warehouse と Parallel Data Warehouse
   
-このクエリは、CTAS ステートメントを使用してクエリの結合ヒントを使用するための基本構文を示しています。 クエリが送信されると、[!INCLUDE[ssSDW](../../includes/sssdw-md.md)] では、分散ごとにクエリ プランを生成する際にハッシュ結合方法が適用されます。 ハッシュ結合のクエリ ヒントの詳細については、「[OPTION 句 &#40;Transact-SQL&#41;](../../t-sql/queries/option-clause-transact-sql.md)」を参照してください。  
+このクエリは、CTAS ステートメントでクエリの結合ヒントを使用するための基本構文を示しています。 クエリが送信されると、[!INCLUDE[ssSDW](../../includes/sssdw-md.md)] では、分散ごとにクエリ プランを生成する際にハッシュ結合方法が適用されます。 ハッシュ結合のクエリ ヒントの詳細については、「[OPTION 句 &#40;Transact-SQL&#41;](../../t-sql/queries/option-clause-transact-sql.md)」を参照してください。  
   
 ```  
 CREATE TABLE dbo.FactInternetSalesNew  
@@ -410,11 +421,11 @@ OPTION ( HASH JOIN );
 <a name="ctas-azure-blob-storage-bk"></a>
 
 ### <a name="g-use-ctas-to-import-data-from-azure-blob-storage"></a>G. CTAS を使用して Azure BLOB ストレージからデータをインポートする  
-適用対象Azure SQL Data Warehouse と Parallel Data Warehouse  
+適用対象:Azure SQL Data Warehouse と Parallel Data Warehouse  
 
-外部テーブルからデータをインポートするには、だけで作成表を使用する AS 外部テーブルからを選択します。 外部テーブルからデータを選択して [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] に格納する構文は、通常のテーブルからデータを選択する構文と同じです。  
+外部テーブルからデータをインポートするには、CREATE TABLE AS SELECT を使用して外部テーブルから選択するだけです。 外部テーブルからデータを選択して [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] に格納する構文は、通常のテーブルからデータを選択する構文と同じです。  
   
- 次の例では、Azure BLOB ストレージ アカウントのデータに対して外部テーブルを定義します。 使用して、テーブルとして選択の作成、外部テーブルからを選択します。 これで、Azure BLOB ストレージのテキスト区切りファイルからデータがインポートされ、新しい [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] テーブルにデータが格納されます。  
+ 次の例では、Azure BLOB ストレージ アカウントのデータに対して外部テーブルを定義します。 次に CREATE TABLE AS SELECT を使用して、外部テーブルから選択します。 これで、Azure BLOB ストレージのテキスト区切りファイルからデータがインポートされ、新しい [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] テーブルにデータが格納されます。  
   
 ```  
 --Use your own processes to create the text-delimited files on Azure blob storage.  
@@ -447,9 +458,9 @@ AS SELECT * FROM ClickStreamExt
 ### <a name="h-use-ctas-to-import-hadoop-data-from-an-external-table"></a>H. CTAS を使用して外部テーブルから Hadoop データをインポートする  
 適用対象: [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
-外部テーブルからデータをインポートするには、だけで作成表を使用する AS 外部テーブルからを選択します。 外部テーブルからデータを選択して [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] に格納する構文は、通常のテーブルからデータを選択する構文と同じです。  
+外部テーブルからデータをインポートするには、CREATE TABLE AS SELECT を使用して外部テーブルから選択するだけです。 外部テーブルからデータを選択して [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] に格納する構文は、通常のテーブルからデータを選択する構文と同じです。  
   
- 次の例では、Hadoop クラスター上、外部テーブルを定義します。 使用して、テーブルとして選択の作成、外部テーブルからを選択します。 これで、Hadoop のテキスト区切りファイルからデータがインポートされ、新しい [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] テーブルにデータが格納されます。  
+ 次の例では、Hadoop クラスターに外部テーブルを定義します。 次に CREATE TABLE AS SELECT を使用して、外部テーブルから選択します。 これで、Hadoop のテキスト区切りファイルからデータがインポートされ、新しい [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] テーブルにデータが格納されます。  
   
 ```  
 -- Create the external table called ClickStream.  
@@ -492,7 +503,7 @@ CTAS を使用して、サポートされていない一部の機能に対処し
 <a name="ctas-replace-select-into-bk"></a>
 
 ### <a name="i-use-ctas-instead-of-selectinto"></a>I. SELECT..INTO の代わりに CTAS を使用する  
-適用対象Azure SQL Data Warehouse と Parallel Data Warehouse
+適用対象:Azure SQL Data Warehouse と Parallel Data Warehouse
 
 SQL Server コードでは通常、SELECT..INTO を使用して、テーブルに SELECT ステートメントの結果を設定します。 これは、SQL Server の SELECT..INTO ステートメントの例です。
 
@@ -519,7 +530,7 @@ FROM    [dbo].[FactInternetSales]
 <a name="ctas-replace-implicit-joins-bk"></a>
 
 ### <a name="j-use-ctas-and-implicit-joins-to-replace-ansi-joins-in-the-from-clause-of-an-update-statement"></a>J. CTAS と暗黙の結合を使用して、`UPDATE` ステートメントの `FROM` 句で ANSI 結合を置き換える  
-適用対象Azure SQL Data Warehouse と Parallel Data Warehouse  
+適用対象:Azure SQL Data Warehouse と Parallel Data Warehouse  
 
 UPDATE または DELETE を実行するために ANSI 結合構文を使用して、3 つ以上のテーブルをまとめて結合する更新は複雑になることがあります。
 
@@ -602,7 +613,7 @@ DROP TABLE CTAS_acs
 <a name="ctas-replace-ansi-joins-bk"></a>
 
 ### <a name="k-use-ctas-to-specify-which-data-to-keep-instead-of-using-ansi-joins-in-the-from-clause-of-a-delete-statement"></a>K. CTAS を使用して、DELETE ステートメントの FROM 句で ANSI 結合を使用する代わりに保持するデータを指定する  
-適用対象Azure SQL Data Warehouse と Parallel Data Warehouse  
+適用対象:Azure SQL Data Warehouse と Parallel Data Warehouse  
 
 データを削除するときに `CTAS` を使用するのが最良の方法である場合があります。 データを削除するのではなく、保持する必要があるデータを選択するだけです。 SQL Data Warehouse では `DELETE` ステートメントの `FROM` 句での ANSI 結合がサポートされていないため、これは特に、ansi 結合構文を使用する `DELETE` ステートメントの場合に当てはまります。
 
@@ -630,7 +641,7 @@ RENAME OBJECT dbo.DimProduct_upsert TO DimProduct;
 <a name="ctas-simplify-merge-bk"></a>
 
 ### <a name="l-use-ctas-to-simplify-merge-statements"></a>L. CTAS を使用して MERGE ステートメントを簡略化する  
-適用対象Azure SQL Data Warehouse と Parallel Data Warehouse  
+適用対象:Azure SQL Data Warehouse と Parallel Data Warehouse  
 
 MERGE ステートメントの少なくとも一部は、`CTAS` を使用して置き換えることができます。 `INSERT` と `UPDATE` を単一のステートメントにまとめることができます。 削除されたレコードは、2 番目のステートメントで閉じる必要があります。
 
@@ -669,7 +680,7 @@ RENAME OBJECT dbo.[DimProduct_upsert]  TO [DimProduct];
 <a name="ctas-data-type-and-nullability-bk"></a>
 
 ### <a name="m-explicitly-state-data-type-and-nullability-of-output"></a>M. 出力のデータ型と NULL 値の許容を明示的に指定する  
-適用対象Azure SQL Data Warehouse と Parallel Data Warehouse  
+適用対象:Azure SQL Data Warehouse と Parallel Data Warehouse  
 
 SQL Server コードを SQL Data Warehouse に移行したときに、次のようなコーディング パターンが発生する場合があります。
 
@@ -821,6 +832,14 @@ OPTION (LABEL = 'CTAS : Partition IN table : Create');
 ```
 
 したがって、型の一貫性と、CTAS で NULL 値の許容プロパティを維持することが適切なエンジニアリングのベスト プラクティスであることがわかります。 計算の整合性を維持するのに役立ち、また、確実にパーティションを切り替えることができます。
+
+### <a name="n-create-an-ordered-clustered-columnstore-index-with-maxdop-1"></a>N. MAXDOP 1 で順序指定クラスター化列ストア インデックスを作成する  
+```sql
+CREATE TABLE Table1 WITH (DISTRIBUTION = HASH(c1), CLUSTERED COLUMNSTORE INDEX ORDER(c1) )
+AS SELECT * FROM ExampleTable
+OPTION (MAXDOP 1);
+```
+
  
 ## <a name="see-also"></a>参照  
  [CREATE EXTERNAL DATA SOURCE &#40;Transact-SQL&#41;](../../t-sql/statements/create-external-data-source-transact-sql.md)   

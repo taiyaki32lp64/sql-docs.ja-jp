@@ -20,13 +20,12 @@ helpviewer_keywords:
 ms.assetid: ee0afe78-b58f-4d34-ad9b-616bb23653bd
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 168fa55d89488277cd17f4bdca3105f7d879c8f8
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: aca333a6f3006b1f12cf44d1670e38556027e476
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52509396"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68019121"
 ---
 # <a name="converting-data-from-c-to-sql-data-types"></a>C から SQL データ型へのデータ変換
 アプリケーションを呼び出すと**SQLExecute**または**SQLExecDirect**にバインドされているすべてのパラメーターのデータを取り出します**SQLBindParameter**記憶域の場所からアプリケーションです。 アプリケーションを呼び出すと**SQLSetPos**、ドライバーのデータの更新プログラムを取得または追加操作を使用してバインドされた列から**SQLBindCol**します。 アプリケーションを実行時データ パラメーターの場合にでパラメーター データを送信します**SQLPutData**します。 かどうか、必要に応じて、ドライバーのデータを変換で指定されたデータ型、 *ValueType*引数**SQLBindParameter**データ型を指定する、 *ParameterType*引数**SQLBindParameter**、し、データ ソースにデータを送信します。  

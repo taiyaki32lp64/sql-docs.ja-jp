@@ -17,15 +17,14 @@ helpviewer_keywords:
 - deleting rows
 - deleting data
 ms.assetid: 0db3af43-1ec4-48c8-b769-2bb9c76d3434
-author: stevestein
-ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 7703d72bbd5e7d5db35526ccd0a38d1afd2ac2f9
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 5cada1c122cf9716a306e7a30bb539f51a24ad6a
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47640920"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68267471"
 ---
 # <a name="create-delete-queries-visual-database-tools"></a>削除クエリの作成 (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

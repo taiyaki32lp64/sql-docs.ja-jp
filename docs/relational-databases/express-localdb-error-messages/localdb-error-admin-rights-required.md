@@ -9,13 +9,12 @@ ms.topic: reference
 ms.assetid: 2414167c-33cb-4103-8105-994cbda29b9d
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: f9b80223901ce810a758cea9271fa715979a2a74
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 724feba9ea1a54edff757274da836039e69f334f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47650500"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67996067"
 ---
 # <a name="localdberroradminrightsrequired"></a>LOCALDB_ERROR_ADMIN_RIGHTS_REQUIRED
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: ca7ee9b3-ef9a-4ba4-83d0-9ee9f80dab27
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 74bbb7c7e971df4a7d570b91dc5f231a71d87bf3
-ms.sourcegitcommit: af1d9fc4a50baf3df60488b4c630ce68f7e75ed1
+ms.openlocfilehash: 95eefe789ae50c9dadeb55c8960937256204460c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/06/2018
-ms.locfileid: "51030959"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68219665"
 ---
 # <a name="run-utility-and-non-utility-collection-sets-on-same-sql-instance"></a>同じ SQL インスタンスでユーティリティとユーティリティ以外のコレクション セットを実行する
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

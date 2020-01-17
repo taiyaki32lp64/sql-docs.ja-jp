@@ -1,32 +1,33 @@
 ---
-title: Sqlrutils - SQL Server Machine Learning Services を使用してストアド プロシージャを作成する方法
-description: SQL Server で R 言語のコードをストアド プロシージャに引数として渡すことができる 1 つの関数にバンドルするのに sqlrutils R パッケージを使用します。
+title: R ストアド プロシージャを作成する
+description: SQL Server の sqlrutils R パッケージを使用して、R 言語コードを 1 つの関数にバンドルし、引数としてストアド プロシージャに渡せるようにします。
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 04/15/2018
 ms.topic: conceptual
-author: HeidiSteen
-ms.author: heidist
-manager: cgronlun
-ms.openlocfilehash: e347deb0a0f05da12a4281e77223a0492f04f13f
-ms.sourcegitcommit: 85bfaa5bac737253a6740f1f402be87788d691ef
-ms.translationtype: MT
+author: dphansen
+ms.author: davidph
+ms.custom: seo-lt-2019
+monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
+ms.openlocfilehash: e0846442abce6dd598c6318e4ba7cf9e74685066
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/15/2018
-ms.locfileid: "53432715"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73727471"
 ---
-# <a name="create-a-stored-pprocedure-using-sqlrutils"></a>Sqlrutils を使用してストアド pProcedure を作成します。
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+# <a name="create-a-stored-procedure-using-sqlrutils"></a>sqlrutils を使用してストアド プロシージャを作成する
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 この記事では、T-SQL ストアド プロシージャとして実行する R コードを変換するための手順について説明します。 考えられる最良の結果を得るために、コードを少し変更し、すべての入力をパラメーター化できるようにする必要がある場合があります。
 
-## <a name="bkmk_rewrite"></a>手順 1. R スクリプトを書き直してください。
+## <a name="bkmk_rewrite"></a>手順 1. R スクリプトを再生成する
 
-最適な結果、1 つの関数としてカプセル化する R コードを書き直す必要があります。
+最良の結果を得るには、R コードを再生成して、それを 1 つの関数としてカプセル化する必要があります。
 
-関数によって使用されるすべての変数は、関数内で定義する必要がありますか、入力パラメーターとして定義する必要があります。 参照してください、[サンプル コード](#samples)この記事では。
+関数で使用されるすべての変数を関数内で定義するか、入力パラメーターとして定義する必要があります。 この記事の[サンプル コード](#samples)を参照してください。
 
-また、R 関数の入力パラメーターになるため、SQL の入力パラメーターはストアド プロシージャ、入力と出力が次の種類の要件に準拠していることを確認する必要があります。
+また、R 関数の入力パラメーターは SQL ストアド プロシージャの入力パラメーターになるため、ご自身の入出力が次の種類の要件に従っていることを確認する必要があります。
 
 ### <a name="inputs"></a>入力
 
@@ -50,77 +51,77 @@ ms.locfileid: "53432715"
 - 最大で 1 つのデータ フレームを含む名前付きリスト。 リストのすべてのメンバーでは、サポートされるデータ型のいずれかを使用する必要があります。
 - NULL (関数が結果を返さない場合)
 
-## <a name="step-2-generate-required-objects"></a>手順 2. 必要なオブジェクトを生成します。
+## <a name="step-2-generate-required-objects"></a>手順 2. 必要なオブジェクトを生成する
 
-内の関数を使用する R コードを使用すると、クリーンアップされて、1 つの関数として呼び出すことができます、 **sqlrutils**パッケージは、入力と出力で実際に構築するコンス トラクターに渡すことができるフォームを準備する、ストアド プロシージャです。
+ご自身の R コードのクリーンアップが完了し、1 つの関数として呼び出せるようになったら、**sqlrutils** パッケージの関数を使用して、実際にストアド プロシージャをビルドするコンストラクターに渡すことができる形式で入出力を準備します。
 
-**sqlrutils**入力データ スキーマと型を定義し、出力データのスキーマと型を定義する関数を提供します。 必要な出力の種類に R オブジェクトを変換する関数も含まれています。 コードでのデータ型によって、必要なオブジェクトを作成するための複数の関数呼び出しを行うことがあります。
+**sqlrutils** には、入力データと出力データのスキーマと型を定義する関数が用意されています。 また、必要な出力の種類に R オブジェクトを変換できる関数も含まれています。 コードで使用されているデータ型によっては、必要なオブジェクトを作成するために複数の関数を呼び出すことがあります。
 
 ### <a name="inputs"></a>入力
 
-関数が、入力を受け取る場合、それぞれの入力は、次の関数を呼び出します。
+関数が入力を取る場合は、入力ごとに次の関数を呼び出します。
 
-- `setInputData` 入力がデータ フレームの場合
-- `setInputParameter` 他のすべての入力の種類に対して
+- `setInputData`。入力がデータ フレームの場合
+- `setInputParameter`。その他すべての入力
 
-引数として渡すは後で R オブジェクトを作成するときに、各関数の呼び出しを行うと、 `StoredProcedure`、完全なストアド プロシージャを作成します。
+関数を呼び出すたびに、R オブジェクトが作成されます。後でこのオブジェクトを引数として `StoredProcedure` に渡して、完全なストアド プロシージャを作成します。
 
 ### <a name="outputs"></a>出力
 
-**sqlrutils** R に変換するオブジェクトの SQL Server で必要な data.frame にリストのような複数の関数を提供します。
+**sqlrutils** には、リストなどの R オブジェクトを、SQL Server で必要な data.frame に変換するための関数が複数用意されています。
 関数でデータ フレームが直接出力された場合は、最初にリストにラップせずに、この手順を省略できます。
-手順を省略できます変換この場合は NULL を返します。
+関数で NULL が返された場合も、この変換手順を省略できます。
 
-ときに、リストへの変換や、リストから特定の項目を取得するは、これらの関数から選択します。
+リストを変換する場合、またはリストから特定の項目を取得する場合は、次の関数から選択します。
 
-- `setOutputData` 一覧から取得する変数がデータ フレームである場合
-- `setOutputParameter` リストの他のすべてのメンバー
+- `setOutputData`。リストから取得する変数がデータ フレームの場合
+- `setOutputParameter`。リストのその他のメンバーすべて
 
-引数として渡すは後で R オブジェクトを作成するときに、各関数の呼び出しを行うと、 `StoredProcedure`、完全なストアド プロシージャを作成します。
+関数を呼び出すたびに、R オブジェクトが作成されます。後でこのオブジェクトを引数として `StoredProcedure` に渡して、完全なストアド プロシージャを作成します。
 
-## <a name="step-3-generate-the-stored-procedure"></a>手順 3. ストアド プロシージャを生成します。
+## <a name="step-3-generate-the-stored-procedure"></a>手順 3. ストアド プロシージャを生成する
 
-すべての入力と出力パラメーターは、準備が整ったらへの呼び出しを行い、`StoredProcedure`コンス トラクター。
+すべての入出力パラメーターの準備ができたら、`StoredProcedure` コンストラクターを呼び出します。
 
 **使用方法**
 
 `StoredProcedure (func, spName, ..., filePath = NULL ,dbName = NULL, connectionString = NULL, batchSeparator = "GO")`
 
-仮定という名前のストアド プロシージャを作成することを示すために、 **sp_rsample**これらのパラメーターを使用します。
+たとえば、次のパラメーターを使用して、**sp_rsample** という名前のストアド プロシージャを作成するとします。
 
-- 既存の関数を使用して**foosql**します。 関数が R 関数の既存のコードに基づいて**foo**、」の説明に従って、要件に準拠するように関数を書き直して、[ここ](#bkmk_rewrite)、名前付きとして更新された機能と**foosql**します。
-- データ フレームを使用して**queryinput**入力として
-- R 変数名では、データ フレームを出力として生成**sqloutput**
-- 内のファイルとして T-SQL コードを作成する、`C:\Temp`フォルダー、後で SQL Server Management Studio を使用してこれを実行できるように
+- 既存の関数 **foosql** を使用します。 関数は R 関数 **foo** の既存のコードに基づいていましたが、[こちらのセクション](#bkmk_rewrite)で説明されている要件に準拠するためにその関数を再生成し、更新された関数に **foosql** という名前を付けました。
+- データ フレーム **queryinput** を入力として使用します
+- R 変数名 **sqloutput** を使用して、データ フレームを出力として生成します
+- T-SQL コードはファイルとして `C:\Temp` フォルダーに作成します。これは後から SQL Server Management Studio を使用して実行できます
 
 ```R
 StoredProcedure (foosql, sp_rsample, queryinput, sqloutput, filePath = "C:\\Temp")
 ```
 
 > [!NOTE]
-> ファイル システムにファイルを作成するためには、データベース接続を定義する引数を省略できます。
+> ファイルをファイル システムに書き込んでいるため、データベース接続を定義する引数は省略できます。
 
-関数の出力は、SQL Server 2016 の (R Services が必要) または (R を使用した Machine Learning サービスが必要)、SQL Server 2017 のインスタンスで実行できる T-SQL ストアド プロシージャです。 
+関数の出力は、SQL Server 2016 のインスタンスで実行できる (R Services が必要)、または SQL Server 2017 のインスタンスで実行できる (Machine Learning Services と R が必要) T-SQL ストアド プロシージャです。 
 
-その他の例では、呼び出すことによって、パッケージのヘルプを参照してください。 `help(StoredProcedure)` 、R 環境から。
+その他の例については、R 環境から `help(StoredProcedure)` を呼び出して、パッケージのヘルプを参照してください。
 
-## <a name="step-4-register-and-run-the-stored-procedure"></a>手順 4. 登録およびストアド プロシージャの実行
+## <a name="step-4-register-and-run-the-stored-procedure"></a>手順 4. ストアド プロシージャを登録して実行する
 
-ストアド プロシージャを実行することが 2 つの方法はあります。
+ストアド プロシージャは 2 つの方法で実行できます。
 
-- SQL Server 2016 または SQL Server 2017 のインスタンスへの接続をサポートする任意のクライアントから、T-SQL を使用します。
+- SQL Server 2016 インスタンスまたは SQL Server 2017 インスタンスへの接続がサポートされる任意のクライアントから T-SQL を使用する
 - R 環境から
 
-どちらの方法では、ストアド プロシージャを使用するデータベースでストアド プロシージャを登録することが必要です。
+どちらの方法を使用する場合も、ストアド プロシージャを使用するデータベースで、そのストアド プロシージャを登録する必要があります。
 
-### <a name="register-the-stored-procedure"></a>ストアド プロシージャを登録します。
+### <a name="register-the-stored-procedure"></a>ストアド プロシージャを登録する
 
-R を使用するストアド プロシージャを登録することができますか、T-SQL で CREATE PROCEDURE ステートメントを実行することができます。
+ストアド プロシージャは R を使用して登録できます。または、T-SQL で CREATE PROCEDURE ステートメントを実行できます。
 
-- T-SQL を使用します。  T-SQL で快適な場合は、SQl Server Management Studio (または SQL DDL コマンドを実行できるその他のクライアント) を開く準備でコードを使用して CREATE PROCEDURE ステートメントを実行して、`StoredProcedure`関数。
-- R を使用まだ、R 環境では中を使用して、`registerStoredProcedure`関数**sqlrutils**データベースでストアド プロシージャを登録します。
+- T-SQL の使用。  T-SQL に慣れている場合は、SQL Server Management Studio (または SQL DDL コマンドを実行できるその他のクライアント) を開き、`StoredProcedure` 関数によって準備されたコードを使用して CREATE PROCEDURE ステートメントを実行します。
+- R の使用。まだ R 環境にいる場合は、**sqlrutils** で `registerStoredProcedure` 関数を使用して、ストアド プロシージャをデータベースに登録できます。
 
-  たとえば、ストアド プロシージャを登録することが**sp_rsample**インスタンスおよびデータベースで定義されている*sqlConnStr*、R 呼び出しによって。
+  たとえば、次の R 呼び出しを行うと、*sqlConnStr* で定義されているインスタンスとデータベースで、ストアド プロシージャ **sp_rsample** を登録できます。
 
   ```R
   registerStoredProcedure(sp_rsample, sqlConnStr)
@@ -128,17 +129,17 @@ R を使用するストアド プロシージャを登録することができ�
 
 
 > [!IMPORTANT]
-> かどうかを使用する R または SQL に関係なくを新しいデータベース オブジェクトを作成するアクセス許可を持つアカウントを使用してステートメントを実行する必要があります。
+> R と SQL のどちらを使用する場合でも、ステートメントは、新しいデータベース オブジェクトを作成する権限を持つアカウントを使用して実行する必要があります。
 
-### <a name="run-using-sql"></a>SQL を使用して実行します。
+### <a name="run-using-sql"></a>SQL を使用して実行する
 
-ストアド プロシージャが作成された後、T-SQL をサポートする任意のクライアントを使用して SQL database への接続を開くし、ストアド プロシージャに必要なパラメーター値を渡します。
+ストアド プロシージャの作成後、T-SQL がサポートされている任意のクライアントを使用して SQL データベースへの接続を開き、ストアド プロシージャで必要なパラメーターの値を渡します。
 
-### <a name="run-using-r"></a>R を使用して実行します。
+### <a name="run-using-r"></a>R を使用して実行する
 
-SQL Server からではなく、R コードからストアド プロシージャを実行する場合は、いくつか追加の準備が必要です。 たとえば、ストアド プロシージャは、入力値を必要とする場合、関数を選択して、実行することができますし、R コードでストアド プロシージャにそれらのオブジェクトを渡す前にその入力パラメーターを設定する必要があります。
+SQL Server ではなく R コードからストアド プロシージャを実行するには、追加の準備が必要です。 たとえば、ストアド プロシージャで入力値が必要な場合は、関数を実行する前にその入力パラメーターを設定し、そのオブジェクトを R コードでストアド プロシージャに渡す必要があります。
 
-準備された SQL ストアド プロシージャを呼び出すことの全体的なプロセスは次のとおりです。
+準備された SQL ストアド プロシージャを呼び出す全体的なプロセスを次に示します。
 
 1. 入力パラメーター オブジェクトのリストを取得するには、 `getInputParameters` を呼び出します。
 2. `$query` を定義するか、入力パラメーターごとに `$value` を設定します。
@@ -146,11 +147,11 @@ SQL Server からではなく、R コードからストアド プロシージャ
 
 ## <a name = "samples"></a>例
 
-この例では前に、と後のバージョンの R スクリプトの中で、SQL Server データベースからデータを取得し、データ、いくつかの変換の実行、別のデータベースに保存します。
+次の例は、SQL Server データベースからデータを取得し、そのデータに対して何らかの変換を実行して、別のデータベースに保存する R スクリプトの準備前と準備後のバージョンを示しています。
 
-この簡単な例は、ストアド プロシージャに変換するが簡単に R コードを並べ替え方法をデモンストレーションにのみ使用されます。
+このシンプルな例は、R コードを並べ替えてストアド プロシージャへの変換を容易にする方法を示す目的でのみ使用されます。
 
-### <a name="before-code-preparation"></a>コードの準備をする前に
+### <a name="before-code-preparation"></a>コードを準備する前
 
 
 ```R
@@ -188,12 +189,12 @@ rxDataStep(inData = dsSqlFrom,
 
 > [!NOTE]
 > 
-> ODBC 接続を使用する場合の呼び出しではなく、 *RxSqlServerData*関数を使用して接続を開く必要があります*rxOpen*データベースでの操作を実行する前にします。
+> *RxSqlServerData* を呼び出すのではなく、ODBC 接続を使用する場合は、データベースで操作を実行する前に、*rxOpen* を使用して接続を開く必要があります。
 
 
-### <a name="after-code-preparation"></a>コードの準備
+### <a name="after-code-preparation"></a>コードを準備した後
 
-更新されたバージョンでは、最初の行は、関数名を定義します。 元の R ソリューションから他のすべてのコードでは、その関数の一部になります。
+更新されたバージョンで、最初の行で関数名を定義します。 元の R ソリューションからの他のすべてのコードは、その関数の一部になります。
 
 ```R
 myetl1function <- function() { 

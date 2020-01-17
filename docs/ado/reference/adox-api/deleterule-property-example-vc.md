@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 7a1def31-2b6f-4542-aac3-ec35b54c89ef
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: b980b698bd8a6abb9c49fb669e821be07a5aab36
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b73773b064fd50d8b1422a9a0aad2fe67aa71e91
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47798512"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67966395"
 ---
 # <a name="deleterule-property-example-vc"></a>DeleteRule プロパティの例 (VC++)
 この例では、 [DeleteRule](../../../ado/reference/adox-api/deleterule-property-adox.md)のプロパティを[キー](../../../ado/reference/adox-api/key-object-adox.md)オブジェクト。 新しいコードを追加します[テーブル](../../../ado/reference/adox-api/table-object-adox.md)し、新しいプライマリ キーが、設定を定義および**DeleteRule**に**adRICascade**します。  
@@ -108,6 +107,6 @@ int main() {
 }  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [DeleteRule プロパティ (ADOX)](../../../ado/reference/adox-api/deleterule-property-adox.md)   
  [Key オブジェクト (ADOX)](../../../ado/reference/adox-api/key-object-adox.md)

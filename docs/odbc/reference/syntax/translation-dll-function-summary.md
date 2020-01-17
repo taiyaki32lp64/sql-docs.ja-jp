@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 76436acc-e6b8-42ec-a4bf-0edea65d0286
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 40405d6bbdc4c1444a85ef77557346b9a35eb54d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: c84528779cf39a08218bff9ba045f49db5f61f8c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47607969"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68039357"
 ---
 # <a name="translation-dll-function-summary"></a>トランスレーター DLL 関数の概要
 次の表では、翻訳の DLL の関数について説明します。 構文とセマンティクスの各関数の詳細については、次を参照してください。 [DLL 関数の参照を翻訳](../../../odbc/reference/syntax/translation-dll-api-reference.md)します。  

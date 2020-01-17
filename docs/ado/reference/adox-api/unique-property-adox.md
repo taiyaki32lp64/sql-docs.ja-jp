@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 85fd4bd0-393b-4dc1-9d73-80dced4f2fbe
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 6069d7891e7f21dcd24cfbf4f5392912e8bc8ad8
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 7a4b3ab6c9b623544f1cc93f26394fa1905b6d3f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47798190"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67964986"
 ---
 # <a name="unique-property-adox"></a>Unique プロパティ (ADOX)
 インデックス キーが一意である必要があるかどうかを示します。  
@@ -31,7 +30,7 @@ ms.locfileid: "47798190"
 ## <a name="settings-and-return-values"></a>設定と戻り値  
  設定し、返します、**ブール**値。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>コメント  
  既定値は **False**です。  
   
  このプロパティは読み取り専用で[インデックス](../../../ado/reference/adox-api/index-object-adox.md)オブジェクトが既にコレクションに追加します。  

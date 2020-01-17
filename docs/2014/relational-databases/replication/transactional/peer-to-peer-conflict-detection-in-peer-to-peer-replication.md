@@ -14,11 +14,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 9db326ac27a7137f03f34e242c3c5c3931637f36
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54135452"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68198991"
 ---
 # <a name="conflict-detection-in-peer-to-peer-replication"></a>ピア ツー ピア レプリケーションにおける競合検出
   ピア ツー ピア トランザクション レプリケーションを使用すると、トポロジ内の任意のノードでデータの挿入、更新、または削除を実行し、データ変更をその他のノードに反映させることができます。 どのノードでもデータを変更できるので、さまざまなノードで行われたデータ変更が相互に競合する場合があります。 行が複数のノードで変更されると、他のノードに反映される際に競合が発生したり、場合によっては更新データが失われたりする可能性があります。  
@@ -99,7 +99,7 @@ ms.locfileid: "54135452"
   
     5.  実行[sp_changepublication](/sql/relational-databases/system-stored-procedures/sp-changepublication-transact-sql): 'p2p_continue_onconflict' を指定、@propertyパラメーターと`false`の@valueパラメーター。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [@loopback_detection](peer-to-peer-transactional-replication.md)  
   
   

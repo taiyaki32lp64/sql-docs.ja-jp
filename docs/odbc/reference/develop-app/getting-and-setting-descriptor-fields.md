@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 394fe500-803d-463f-ae95-f8eb87b66bc8
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 72fe76d566a5b4a92899b0a8a30804201ab13109
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 930a062477fa1459413ea98073d3ca13a574a82e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47825410"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68139061"
 ---
 # <a name="getting-and-setting-descriptor-fields"></a>記述子フィールドの取得と設定
 このセクションでは、アプリケーションで使用できる記述子フィールドの値を設定または取得する方法について説明します。  

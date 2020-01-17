@@ -15,18 +15,17 @@ helpviewer_keywords:
 ms.assetid: c2f6ce79-c4b3-4d40-ac95-21025208f991
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 249616f2f08b8b8f6138ce13621d26c5f7af9e1e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: aef8f768dd991e4e6ed740cc56600a6f1a8020e0
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47647810"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67965950"
 ---
 # <a name="inherittypeenum"></a>InheritTypeEnum
 オブジェクトに設定されたアクセス許可を継承する方法を指定します。 [SetPermissions](../../../ado/reference/adox-api/setpermissions-method-adox.md)します。  
   
-|定数|値|説明|  
+|定数|Value|説明|  
 |--------------|-----------|-----------------|  
 |**adInheritBoth**|3|オブジェクトと、プライマリ オブジェクトに含まれるその他のコンテナーの両方のエントリを継承します。|  
 |**adInheritContainers**|2|プライマリ オブジェクトに含まれる他のコンテナーでは、エントリを継承します。|  

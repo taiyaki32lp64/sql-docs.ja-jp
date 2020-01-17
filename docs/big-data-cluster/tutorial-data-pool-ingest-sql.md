@@ -1,35 +1,36 @@
 ---
 title: SQL Server のデータ プールにデータを取り込む
-titleSuffix: SQL Server 2019 big data clusters
-description: このチュートリアルでは、sp_data_pool_table_insert_data ストアド プロシージャを含む SQL Server 2019 ビッグ データ クラスター (プレビュー) のデータ プールにデータを取り込む方法を示します。
-author: rothja
-ms.author: jroth
-manager: craigg
-ms.date: 02/28/2019
+titleSuffix: SQL Server big data clusters
+description: このチュートリアルでは、[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]のデータ プールにデータを取り込む方法について説明します。
+author: MikeRayMSFT
+ms.author: mikeray
+ms.reviewer: mihaelab
+ms.date: 08/21/2019
 ms.topic: tutorial
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.custom: seodec18
-ms.openlocfilehash: 086db0838eb02b0e83ffbb2f00b92d39e1e4d202
-ms.sourcegitcommit: 2533383a7baa03b62430018a006a339c0bd69af2
-ms.translationtype: MT
+ms.openlocfilehash: f2ae96a04da69835b4b13886637cf87e62996b57
+ms.sourcegitcommit: 5e838bdf705136f34d4d8b622740b0e643cb8d96
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57017670"
+ms.lasthandoff: 08/20/2019
+ms.locfileid: "69653312"
 ---
-# <a name="tutorial-ingest-data-into-a-sql-server-data-pool-with-transact-sql"></a>チュートリアル:Transact SQL を使用した SQL Server のデータ プールにデータを取り込む
+# <a name="tutorial-ingest-data-into-a-sql-server-data-pool-with-transact-sql"></a>チュートリアル: Transact-SQL を使用して SQL Server のデータ プールにデータを取り込む
 
-このチュートリアルで TRANSACT-SQL を使用してデータを読み込む方法、[データ プール](concept-data-pool.md)の SQL Server 2019 ビッグ データ クラスター (プレビュー)。 ビッグ データの SQL Server クラスターでのさまざまなソースからデータを取り込み、データ プール インスタンスに分散します。
+[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
-このチュートリアルで確認する方法。
+このチュートリアルでは、Transact-SQL を使用して [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]の[データ プール](concept-data-pool.md)にデータを取り込む方法について説明します。 [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]を使用すると、さまざまなソースからデータを取り込み、それをデータ プールのインスタンス間で分散することができます。
+
+このチュートリアルでは、次の方法を学習します。
 
 > [!div class="checklist"]
-> * データ プール内の外部テーブルを作成します。
-> * サンプル web クリック ストリーム データをデータ プール テーブルに挿入します。
-> * ローカル テーブルのデータ プール テーブル内のデータを結合します。
+> * データ プールに外部テーブルを作成する。
+> * サンプルの Web クリックストリーム データをデータ プール テーブルに挿入する。
+> * データ プール テーブルのデータをローカル テーブルと結合する。
 
 > [!TIP]
-> をする場合は、ダウンロードして、このチュートリアルでは、コマンドのスクリプトを実行します。 手順については、次を参照してください。、[データ プール サンプル](https://github.com/Microsoft/sql-server-samples/tree/master/samples/features/sql-big-data-cluster/data-pool)GitHub でします。
+> 必要に応じて、このチュートリアルのコマンド用のスクリプトをダウンロードして実行できます。 手順については、GitHub の[データ プールのサンプル](https://github.com/Microsoft/sql-server-samples/tree/master/samples/features/sql-big-data-cluster/data-pool)を参照してください。
 
 ## <a id="prereqs"></a> 前提条件
 
@@ -39,24 +40,32 @@ ms.locfileid: "57017670"
    - **SQL Server 2019 の拡張機能**
 - [ビッグ データ クラスターにサンプル データを読み込む](tutorial-load-sample-data.md)
 
-## <a name="create-an-external-table-in-the-data-pool"></a>データ プール内の外部テーブルを作成します。
+## <a name="create-an-external-table-in-the-data-pool"></a>データ プールに外部テーブルを作成する
 
-次の手順では、外部テーブルを作成という名前のデータ プールに**web_clickstream_clicks_data_pool**します。 このテーブルことができますし、場所としてのデータの取り込みに使用するビッグ データ クラスター。
+次の手順では、**web_clickstream_clicks_data_pool** という名前のデータ プールに外部テーブルを作成します。 このテーブルは、ビッグ データ クラスターにデータを取り込むための場所として使用できます。
 
-1. Azure Data Studio では、ビッグ データ クラスターの SQL Server のマスター インスタンスに接続します。 詳細については、次を参照してください。 [master の SQL Server インスタンスへの接続](connect-to-big-data-cluster.md#master)します。
+1. Azure Data Studio で、ビッグ データ クラスターの SQL Server マスター インスタンスに接続します。 詳細については、「[SQL Server マスター インスタンスに接続する](connect-to-big-data-cluster.md#master)」を参照してください。
 
-1. 内の接続をダブルクリックして、**サーバー**ウィンドウに SQL Server のマスター インスタンスのサーバー ダッシュ ボードを表示します。 選択**新しいクエリ**します。
+1. **[サーバー]** ウィンドウで接続をダブルクリックして、SQL Server マスター インスタンスのサーバー ダッシュボードを表示します。 **[新しいクエリ]** を選択します。
 
-   ![SQL Server マスター インスタンスのクエリ](./media/tutorial-data-pool-ingest-sql/sql-server-master-instance-query.png)
+   ![SQL Server マスター インスタンス クエリ](./media/tutorial-data-pool-ingest-sql/sql-server-master-instance-query.png)
 
-1. コンテキストを変更するのには、次の TRANSACT-SQL コマンドを実行、 **Sales**マスター インスタンス内のデータベース。
+1. 次の Transact-SQL コマンドを実行し、マスター インスタンスの **Sales** データベースにコンテキストを変更します。
 
    ```sql
    USE Sales
    GO
    ```
 
-1. という名前の外部テーブルを作成**web_clickstream_clicks_data_pool**データ プールにします。 `SqlDataPool`データ ソースは、ビッグ データ クラスターのマスター インスタンスから使用できる特殊なデータ ソースの種類。
+1. まだ存在しない場合は、データ プールへの外部データ ソースを作成します。
+
+   ```sql
+   IF NOT EXISTS(SELECT * FROM sys.external_data_sources WHERE name = 'SqlDataPool')
+     CREATE EXTERNAL DATA SOURCE SqlDataPool
+     WITH (LOCATION = 'sqldatapool://controller-svc/default');
+   ```
+
+1. データ プールで、**web_clickstream_clicks_data_pool** という名前の外部テーブルを作成します。
 
    ```sql
    IF NOT EXISTS(SELECT * FROM sys.external_tables WHERE name = 'web_clickstream_clicks_data_pool')
@@ -69,30 +78,25 @@ ms.locfileid: "57017670"
       );
    ```
   
-1. CTP 2.3 以降でのデータ プールの作成は、非同期ですがまだ完了して確認する方法はありません。 続行する前に、データのプールが作成されたかどうかを確認する 2 分間待ちます。
+1. CTP 3.1 では、データ プールの作成は非同期ですが、完了しているかどうかを判断する方法がありません。 データ プールが作成されたことを確認できるまで 2 分待ってから続行してください。
 
 ## <a name="load-data"></a>データの読み込み
 
-次の手順では、前の手順で作成された外部テーブルを使用してデータ プールにサンプル web クリック ストリーム データを取り込みます。
+次の手順では、前の手順で作成した外部テーブルを使用して、サンプルの Web クリックストリーム データをデータ プールに取り込みます。
 
-1. 使用してデータ プールにデータを挿入するクエリの変数を定義します。 使用して、**モデル.sp_data_pool_table_insert_data**ストアド プロシージャのデータ プールに、クエリから結果を挿入する (、 **web_clickstream_clicks_data_pool**外部テーブル)。
+1. `INSERT INTO` ステートメントを使用して、クエリの結果をデータ プール (**web_clickstream_clicks_data_pool** 外部テーブル) に挿入します。
 
    ```sql
-   DECLARE @db_name SYSNAME = 'Sales'
-   DECLARE @schema_name SYSNAME = 'dbo'
-   DECLARE @table_name SYSNAME = 'web_clickstream_clicks_data_pool'
-   DECLARE @query NVARCHAR(MAX) = '
+   INSERT INTO web_clickstream_clicks_data_pool
    SELECT wcs_user_sk, i_category_id, COUNT_BIG(*) as clicks
-   FROM sales.dbo.web_clickstreams
+     FROM sales.dbo.web_clickstreams_hdfs
    INNER JOIN sales.dbo.item it ON (wcs_item_sk = i_item_sk
-      AND wcs_user_sk IS NOT NULL)
+                           AND wcs_user_sk IS NOT NULL)
    GROUP BY wcs_user_sk, i_category_id
-   HAVING COUNT_BIG(*) > 100;'
-
-   EXEC model..sp_data_pool_table_insert_data @db_name, @schema_name, @table_name, @query
+   HAVING COUNT_BIG(*) > 100;
    ```
 
-1. 2 つの SELECT クエリで挿入されたデータを検査します。
+1. 2 つの SELECT クエリを使用して、挿入されたデータを検査します。
 
    ```sql
    SELECT count(*) FROM [dbo].[web_clickstream_clicks_data_pool]
@@ -101,7 +105,7 @@ ms.locfileid: "57017670"
 
 ## <a name="query-the-data"></a>データのクエリ
 
-格納されたデータ プール内でローカル データのクエリから結果を結合、 **Sales**テーブル。
+データ プールのクエリから格納された結果を、**Sales** テーブルのローカル データと結合します。
 
 ```sql
 SELECT TOP (100)
@@ -122,16 +126,16 @@ INNER JOIN (SELECT DISTINCT i_category_id, i_category FROM item) as i
 GROUP BY w.wcs_user_sk;
 ```
 
-## <a name="clean-up"></a>クリーンアップします。
+## <a name="clean-up"></a>クリーンアップ
 
-このチュートリアルで作成されたデータベース オブジェクトを削除するのにには、次のコマンドを使用します。
+このチュートリアルで作成されたデータベース オブジェクトを削除するには、次のコマンドを使用します。
 
 ```sql
 DROP EXTERNAL TABLE [dbo].[web_clickstream_clicks_data_pool];
 ```
 
-## <a name="next-steps"></a>次のステップ
+## <a name="next-steps"></a>次の手順
 
-Spark ジョブのデータ プールにデータを取り込む方法について説明します。
+Spark ジョブを使用してデータ プールにデータを取り込む方法について説明します。
 > [!div class="nextstepaction"]
 > [Spark ジョブを使用してデータを取り込む](tutorial-data-pool-ingest-spark.md)

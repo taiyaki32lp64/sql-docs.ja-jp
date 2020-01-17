@@ -68,7 +68,7 @@
           href: object/delete-objects.md
         - name: '[オブジェクトの依存関係]'
           href: object/object-dependencies.md
-        - name: '[オブジェクトの選択]\(オブジェクト エクスプローラー)'
+        - name: '[オブジェクトの選択] (オブジェクト エクスプローラー)'
           href: object/select-objects-object-explorer.md
         - name: '[オブジェクトの追加]'
           href: object/add-objects.md
@@ -249,7 +249,7 @@
       href: ../database-engine/connection-properties-dialog-box.md
     - name: '[パスワードの有効期限が切れました]'
       href: ../database-engine/password-expired.md
-    - name: Windows Azure ストレージへの接続
+    - name: Azure Storage への接続
       href: ../database-engine/connect-to-windows-azure-storage.md
 - name: Visual Database Tools +
   href: visual-db-tools/visual-database-tools.md
@@ -257,10 +257,10 @@
   href: menu-help/sql-server-management-studio-menu-help.md
 - name: SQL Server エージェント +
   href: agent/sql-server-agent.md
-- name: 'チュートリアル: SQL Server Management Studio'
+- name: 'チュートリアル:SQL Server Management Studio'
   href: tutorials/tutorial-sql-server-management-studio.md
   items:
-    - name: 'レッスン 1 : SQL Server Management Studio での基本操作'
+    - name: 'レッスン 1:SQL Server Management Studio での基本操作'
       href: tutorials/lesson-1-basic-navigation-in-sql-server-management-studio.md
       items:
         - name: SQL Server Management Studio の起動
@@ -279,9 +279,9 @@
           href: tutorials/lesson-1-7-set-the-startup-options.md
         - name: SQL Server Management Studio の既定の構成の復元
           href: tutorials/lesson-1-8-restore-the-default-sql-server-management-studio-configuration.md
-        - name: 'まとめ : 基本操作'
+        - name: 'まとめ:基本操作'
           href: tutorials/lesson-1-9-summary-basic-navigation.md
-    - name: 'レッスン 2 : Transact-SQL の記述'
+    - name: 'レッスン 2:Transact-SQL の記述'
       href: tutorials/lesson-2-writing-transact-sql.md
       items:
         - name: クエリ エディターとの接続
@@ -296,7 +296,7 @@
           href: tutorials/lesson-2-5-other-ways-of-viewing-the-code-window.md
         - name: テーブルのスクリプト作成
           href: tutorials/lesson-2-6-script-a-table.md
-    - name: 'レッスン 3: テンプレート、ソリューション、およびスクリプト プロジェクトの操作'
+    - name: 'レッスン 3:テンプレート、ソリューション、およびスクリプト プロジェクトの操作'
       href: tutorials/lesson-3-working-with-templates-solutions-and-script-projects.md
       items:
         - name: テンプレートを使用したスクリプトの作成
@@ -305,5 +305,5 @@
           href: tutorials/lesson-3-2-create-custom-templates.md
         - name: プロジェクトまたはソリューションとしてスクリプトを保存する
           href: tutorials/lesson-3-3-save-scripts-as-projects-or-solutions.md
-        - name: 'まとめ : ソリューションとスクリプト プロジェクト'
+        - name: 'まとめ:ソリューションおよびスクリプト プロジェクト'
           href: tutorials/lesson-3-4-summary-solutions-and-script-projects.md

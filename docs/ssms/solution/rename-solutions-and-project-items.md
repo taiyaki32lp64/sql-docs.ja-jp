@@ -13,15 +13,14 @@ helpviewer_keywords:
 - projects [SQL Server Management Studio], renaming
 - renaming solutions
 ms.assetid: 2adca850-58a2-4ed5-bded-9dd091fc33f2
-author: stevestein
-ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 838db10a6e82708416b634975ca6ea0cb21bf777
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 028ab587298879bc3bbb8be444e8d5094921fab2
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47606010"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68264716"
 ---
 # <a name="rename-solutions-and-project-items"></a>ソリューションとプロジェクト アイテムの名前変更
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

@@ -1,5 +1,5 @@
 ---
-title: '例 : バイナリ データの取得 | Microsoft Docs'
+title: '例: バイナリ データの取得 | Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -9,17 +9,17 @@ ms.topic: conceptual
 helpviewer_keywords:
 - RAW mode, retrieving binary data example
 ms.assetid: 5cea5d49-58ac-403a-a933-c4fd91de400b
-author: douglaslMS
-ms.author: douglasl
+author: MightyPen
+ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 3ebfd863d458231c802f3648e3a53411f13f8bed
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: c39f508d20e194b0031baecf168851cd300031e1
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48144022"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62704844"
 ---
-# <a name="example-retrieving-binary-data"></a>例 : バイナリ データの取得
+# <a name="example-retrieving-binary-data"></a>例:バイナリ データの取得
   次のクエリでは、`varbinary(max)` 型の列に格納された製品の写真が返されます。 クエリで `BINARY BASE64` オプションが指定されているので、バイナリ データは Base64 エンコード形式で返されます。  
   
 ## <a name="example"></a>例  

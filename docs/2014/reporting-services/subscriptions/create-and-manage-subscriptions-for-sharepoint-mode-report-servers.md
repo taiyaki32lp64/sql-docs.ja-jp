@@ -4,23 +4,22 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 helpviewer_keywords:
 - subscriptions [Reporting Services], creating
 - subscriptions [Reporting Services], deleting
 - subscriptions [Reporting Services], managing
 ms.assetid: 44be7ee2-33ce-46e4-9d1a-a20aaf43a227
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: e53af8ff7de611f00af6e38553f21885597e7232
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: b167aaadfbef817608a2b0dc14954ad7f29f9b97
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56040643"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66101009"
 ---
 # <a name="create-and-manage-subscriptions-for-sharepoint-mode-report-servers"></a>SharePoint モード レポート サーバーのサブスクリプションの作成と管理
   SharePoint モードのレポート サーバーと統合されている SharePoint Web アプリケーションから、レポートを配信する [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] サブスクリプションを作成することができます。 サブスクリプションは、ドキュメント ライブラリやファイル フォルダーに対して、または電子メールとしてレポートを配信できます。 このトピックでは、 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] サブスクリプションを作成するための要件と手順についてまとめます。  
@@ -31,9 +30,9 @@ ms.locfileid: "56040643"
   
  サブスクリプションを作成する場合、配信を指定する方法には次の 3 つがあります。  
   
--   **ドキュメント ライブラリ**:元のレポートと同じ SharePoint サイト内のライブラリに、元のレポートに基づくドキュメントを配信するためのサブスクリプションを作成できます。 同じサイト コレクション内の別のサーバーや別のサイト上のライブラリにドキュメントを配信することはできません。 ドキュメントを配信するには、レポートの配信先のライブラリにアイテムを追加する権限が必要です。  
+-   **ドキュメント ライブラリ**:元のレポートには、元のレポートと同じ SharePoint サイト内のライブラリに基づくドキュメントを配信するサブスクリプションを作成することができます。 同じサイト コレクション内の別のサーバーや別のサイト上のライブラリにドキュメントを配信することはできません。 ドキュメントを配信するには、レポートの配信先のライブラリにアイテムを追加する権限が必要です。  
   
--   **ファイル フォルダー:** 元のレポートに基づくドキュメントを、ファイル システムの共有フォルダーに配信できます。 この場合、ネットワーク接続経由でアクセスできる既存のフォルダーを選択する必要があります。  
+-   **ファイル フォルダー:** 共有フォルダーにファイル システム上の元のレポートに基づくドキュメントを配信できます。 この場合、ネットワーク接続経由でアクセスできる既存のフォルダーを選択する必要があります。  
   
 -   **電子メール:** レポート サーバーの電子メール配信拡張機能を使用するレポート サーバーを構成する場合は、レポートまたはエクスポートされたレポート ファイル (出力形式で保存) をトレイに送信するサブスクリプションを作成できます。 レポートまたはレポート URL なしで通知だけを受信するには、 **[レポートへのリンクを含める]** チェック ボックスと **[メッセージ内にレポートを表示する]** チェック ボックスをオフにします。  
   

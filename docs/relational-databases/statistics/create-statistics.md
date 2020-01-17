@@ -17,14 +17,13 @@ helpviewer_keywords:
 ms.assetid: 95a455fb-664d-4c95-851e-c6b62d7ebe04
 author: julieMSFT
 ms.author: jrasnick
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: a8c1dbccf3b45896f56aba5c478e1a37954f37f8
-ms.sourcegitcommit: 0c1d552b3256e1bd995e3c49e0561589c52c21bf
+ms.openlocfilehash: 1876c16455876931d6a5c1d091d9d4c0dc860fcc
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/14/2018
-ms.locfileid: "53380703"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68103421"
 ---
 # <a name="create-statistics"></a>統計の作成
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -69,7 +68,7 @@ ms.locfileid: "53380703"
   
 3.  プラス記号をクリックして、新しい統計を作成するテーブルを展開します。  
   
-4.  **[統計]** フォルダーを右クリックし、**[新しい統計]** を選択します。  
+4.  **[統計]** フォルダーを右クリックし、 **[新しい統計]** を選択します。  
   
      **[New Statistics on Table_table\_name_]\(テーブル <テーブル名> の新しい統計\)** ダイアログ ボックスの **[全般]** ページに、以下のプロパティが表示されます。  
   
@@ -82,7 +81,7 @@ ms.locfileid: "53380703"
      **[統計の列]**  
      このグリッドに、この統計の対象となる列が表示されます。 グリッド内のすべての値は読み取り専用です。  
   
-     **名前**  
+     **[名前]**  
      統計の対象となる列の名前が表示されます。 表示されるのは、1 つのテーブルの 1 つの列、または列の組み合わせです。  
   
      **[データ型]**  
@@ -120,11 +119,11 @@ ms.locfileid: "53380703"
      **[フィルター式]**  
      フィルター処理された統計情報にどのデータ行を含めるかを定義します。 例を次に示します。 `Production.ProductSubcategoryID IN ( 1,2,3 )`  
   
-5.  **[New Statistics on Table_table\_name_]\(テーブル <テーブル名> の新しい統計\)** ダイアログ ボックスの **[全般]** ページで、**[追加]** をクリックします。  
+5.  **[New Statistics on Table_table\_name_]\(テーブル <テーブル名> の新しい統計\)** ダイアログ ボックスの **[全般]** ページで、 **[追加]** をクリックします。  
   
      **[列の選択]** ダイアログ ボックスに次のプロパティが表示されます。 この情報は読み取り専用です。  
   
-     **名前**  
+     **[名前]**  
      統計の対象となる列の名前が表示されます。 表示されるのは、1 つのテーブルの 1 つの列、または列の組み合わせです。  
   
      **[データ型]**  
@@ -141,7 +140,7 @@ ms.locfileid: "53380703"
   
 6.  **[列の選択]** ダイアログ ボックスで、統計を作成する列のチェック ボックスをオンにし、 **[OK]** をクリックします。  
   
-7.  **[New Statistics on Table_table\_name_]\(テーブル <テーブル名> の新しい統計\)** ダイアログ ボックスで、**[OK]** をクリックします。  
+7.  **[New Statistics on Table_table\_name_]\(テーブル <テーブル名> の新しい統計\)** ダイアログ ボックスで、 **[OK]** をクリックします。  
   
 ##  <a name="TsqlProcedure"></a> Transact-SQL の使用  
   

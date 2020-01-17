@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dm.dmwizard.specifytrainingdata.f1
@@ -13,12 +12,12 @@ ms.assetid: cb04deeb-0f89-4bba-b3f1-efccada16825
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: c06fb99f8e2104e17d9f6d5f8016b3149ab62c76
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: c3bbeb708cdb0c2882b85d55081446b3dc12b56b
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48149332"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66068065"
 ---
 # <a name="specify-the-training-data-data-mining-wizard"></a>[トレーニング データの指定] (データ マイニング ウィザード)
   **[トレーニング データの指定]** ページを使用すると、マイニング構造に含める列を指定できます。 構造に含める列をすべてのモデルで使用するとは限らない場合でも、それらの列を選択できます。 たとえば、マイニング モデルから列にドリルスルーする場合は、それらの列をモデルには含めずに構造に含めることができます。  
@@ -28,7 +27,7 @@ ms.locfileid: "48149332"
 > [!NOTE]  
 >  マイニング アルゴリズムごとに、異なるキーが使用されます。 各種のキーの詳細については、「[コンテンツの種類 &#40;データ マイニング&#41;](data-mining/content-types-data-mining.md)」を参照してください。  
   
- **詳細:** [マイニング構造 &#40;Analysis Services - データ マイニング&#41;](data-mining/mining-structures-analysis-services-data-mining.md)、[マイニング モデル列](data-mining/mining-model-columns.md)、[データ マイニング ウィザード &#40;Analysis Services - データ マイニング&#41;](data-mining/data-mining-wizard-analysis-services-data-mining.md)、[リレーショナル マイニング構造の作成](data-mining/create-a-relational-mining-structure.md)  
+ **詳細情報。**[マイニング構造&#40;Analysis Services - データ マイニング&#41;](data-mining/mining-structures-analysis-services-data-mining.md)、[マイニング モデル列](data-mining/mining-model-columns.md)、[データ マイニング ウィザード&#40;Analysis Services - データ マイニング&#41;](data-mining/data-mining-wizard-analysis-services-data-mining.md)、 [リレーショナル マイニング構造を作成します。](data-mining/create-a-relational-mining-structure.md)  
   
 ## <a name="options"></a>および  
  **テーブル/列**  

@@ -8,22 +8,21 @@ ms.reviewer: ''
 ms.technology: configuration
 ms.topic: conceptual
 ms.assetid: 588f886f-d6c8-48c8-893d-c2be43a97943
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-manager: craigg
-ms.openlocfilehash: ef041bcf908b9c5660734936a24d2a42e0720286
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e94b298c6514a9d03c8b6cb45f0e1614a1ffa91a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47813590"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68024230"
 ---
 # <a name="sql-server-agent-properties-advanced-tab"></a>[SQL Server Agent のプロパティ] ダイアログ ボックス ([詳細設定] タブ)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
   既定では、5 つのプロパティが **[詳細設定]** タブに表示されます。 カスタム プロパティが定義されていれば、そのプロパティと値もこのタブに表示されます。  
   
-## <a name="options"></a>[変数]  
+## <a name="options"></a>オプション  
  **クラスター化インデックス**  
  このサービスがクラスター サーバーのリソースとしてインストールされているかどうかが表示されます。  
   

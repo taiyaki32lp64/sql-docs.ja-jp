@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: e8f1b16b-ea40-4e12-886c-967ebda4e6e4
 author: julieMSFT
 ms.author: jrasnick
-manager: craigg
-ms.openlocfilehash: bacf9a8a08008b23309d2d8c08b9310c491abf2a
-ms.sourcegitcommit: b51edbe07a0a2fdb5f74b5874771042400baf919
+ms.openlocfilehash: 252162be51d79224ac786ff44ae2620f4f189f81
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/28/2019
-ms.locfileid: "55087681"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68046755"
 ---
 # <a name="monitor-sql-server-components"></a>SQL Server コンポーネントの監視
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

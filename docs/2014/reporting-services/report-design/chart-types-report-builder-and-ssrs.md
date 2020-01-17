@@ -4,21 +4,20 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 f1_keywords:
 - "10423"
 ms.assetid: 57b00017-69ae-4e71-8d78-44744e208ac7
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 5b6c53e1e3fff9309ec46529abd382864e91db43
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: e4c71d67b215732eae6e94af1d0c92d9231f4a01
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56285160"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66106267"
 ---
 # <a name="chart-types-report-builder-and-ssrs"></a>グラフの種類 (レポート ビルダーおよび SSRS)
   表示するデータの種類に対して適切な種類のグラフを選択することが重要です。 これにより、データをグラフ形式にした場合にどの程度わかりやすくなるかが決まります。 たとえば、グラフのサイズに対して多数のデータ ポイントがデータセットに含まれている場合は、面グラフ、折れ線グラフ、または散布図を使用して表示するのが適しています。 選択したグラフの種類に応じてデータを準備する方法の詳細については、「 [グラフ (レポート ビルダーおよび SSRS)](charts-report-builder-and-ssrs.md)」を参照してください。  
@@ -40,7 +39,7 @@ ms.locfileid: "56285160"
 |[データ バー](sparklines-and-data-bars-report-builder-and-ssrs.md)|||![使用可能](../media/greencheck.gif "使用可能")||  
 |[縦棒グラフ (レポート ビルダーおよび SSRS)](column-charts-report-builder-and-ssrs.md)|||![使用可能](../media/greencheck.gif "使用可能")||  
 |[折れ線グラフ (レポート ビルダーおよび SSRS)](line-charts-report-builder-and-ssrs.md)|||![使用可能](../media/greencheck.gif "使用可能")||  
-|[円グラフ &#40;レポート ビルダーおよび SSRS&#41;](pie-charts-report-builder-and-ssrs.md)|![使用可能](../media/greencheck.gif "使用可能")||||  
+|[円グラフ (レポート ビルダーおよび SSRS)](pie-charts-report-builder-and-ssrs.md)|![使用可能](../media/greencheck.gif "使用可能")||||  
 |[極座標グラフ (レポート ビルダーおよび SSRS)](polar-charts-report-builder-and-ssrs.md)|![使用可能](../media/greencheck.gif "使用可能")||||  
 |[範囲グラフ (レポート ビルダーおよび SSRS)](range-charts-report-builder-and-ssrs.md)|||![使用可能](../media/greencheck.gif "使用可能")|![使用可能](../media/greencheck.gif "使用可能")|  
 |[散布図 (レポート ビルダーおよび SSRS)](scatter-charts-report-builder-and-ssrs.md)|![使用可能](../media/greencheck.gif "使用可能")||![使用可能](../media/greencheck.gif "使用可能")||  

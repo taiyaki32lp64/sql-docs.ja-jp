@@ -15,17 +15,20 @@ helpviewer_keywords:
 - errors [Integration Services], troubleshooting
 - packages [Integration Services], troubleshooting
 ms.assetid: 08a019f5-8ba7-4527-97c1-e9846d4022ff
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: 0984613ed3fc299da60113c9701d30f6ccf36e74
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 70e53f37056357fbaff315d6cd432b2171eb478b
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47782910"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71295059"
 ---
 # <a name="troubleshooting-tools-for-package-connectivity"></a>パッケージ接続のトラブルシューティング ツール
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] には、パッケージと、パッケージがデータを抽出して読み込むデータ ソースとの接続のトラブルシューティングを行うための、機能とツールが用意されています。  
   
 ## <a name="troubleshooting-issues-with-external-data-providers"></a>外部データ プロバイダーの問題のトラブルシューティング  

@@ -1,10 +1,8 @@
 ---
 title: PolyBase の監視とトラブルシューティング | Microsoft Docs
-ms.custom: ''
-ms.date: 09/24/2018
+ms.date: 04/23/2019
 ms.prod: sql
 ms.technology: polybase
-ms.reviewer: ''
 ms.topic: conceptual
 f1_keywords:
 - PolyBase, monitoring
@@ -12,19 +10,20 @@ f1_keywords:
 helpviewer_keywords:
 - PolyBase, troubleshooting
 ms.assetid: f119e819-c3ae-4e0b-a955-3948388a9cfe
-author: rothja
-ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 3c8c6922aca2d291527412e3384fe6682ba26556
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: MikeRayMSFT
+ms.author: mikeray
+ms.reviewer: ''
+monikerRange: '>= sql-server-linux-ver15 || >= sql-server-2016 || =sqlallproducts-allversions'
+ms.openlocfilehash: 520637f8bcbe8ae1fcd4fee0ebf3fa33fe3b3650
+ms.sourcegitcommit: 8732161f26a93de3aa1fb13495e8a6a71519c155
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47687510"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71710490"
 ---
 # <a name="monitor-and-troubleshoot-polybase"></a>PolyBase の監視とトラブルシューティング
 
-[!INCLUDE[appliesto-ss-xxxx-asdw-pdw-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE[appliesto-ss-xxxx-asdw-pdw-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 PolyBase のトラブルシューティングを行うには、このトピックに記載されている手法を使用してください。
 
@@ -135,13 +134,13 @@ PolyBase のクエリを監視およびトラブルシューティングする�
 
 ## <a name="to-view-the--polybase-query-plan-to-be-changed"></a>PolyBase クエリ プランを参照するには (変更予定) 
 
-1. SSMS で、**[実際の実行プランを含める]** (Ctrl + M) を有効にし、クエリを実行します。
+1. SSMS で、 **[実際の実行プランを含める]** (Ctrl + M) を有効にし、クエリを実行します。
 
 2. **[実行プラン]** タブをクリックします。
 
    ![PolyBase クエリ プラン](../../relational-databases/polybase/media/polybase-query-plan.png "PolyBase クエリ プラン")  
 
-3. **[Remote Query 操作]** を右クリックし、**[プロパティ]** を選択します。
+3. **[Remote Query 操作]** を右クリックし、 **[プロパティ]** を選択します。
 
 4. Remote Query の値をコピーし、テキスト エディターに貼り付け、XML リモート クエリ プランを表示します。 例を次に示します。
 
@@ -218,11 +217,11 @@ PolyBase スケール アウト グループの一部として一連のコンピ
 
 PolyBase は現在、Zookeeper や Knox などの Name Node HA サービスとやり取りしません。 ただし、この機能を提供するための実績のある回避策を使用できます。
 
-回避策: DNS 名を使用して、アクティブな Name Node への接続を再ルーティングします。 これを行うためには、外部データ ソースが DNS 名を使用して Name Node と通信していることを確認する必要があります。 Name Node のフェールオーバーが発生したときには、外部データ ソースの定義で使用される DNS 名に関連付けられている IP アドレスを変更する必要があります。 これには、すべての新しい接続を適切な Name Node に再ルーティングします。 フェールオーバーが発生したときに、既存の接続は失敗します。 このプロセスを自動化するために、"ハートビート" が、アクティブな Name Node の ping を実行できます。 ハートビートが失敗する場合、フェールオーバーが発生し、セカンダリ IP アドレスに自動的に切り替えると想定できます。
+回避策:DNS 名を使用して、アクティブな Name Node への接続を再ルーティングします。 これを行うためには、外部データ ソースが DNS 名を使用して Name Node と通信していることを確認する必要があります。 Name Node のフェールオーバーが発生したときには、外部データ ソースの定義で使用される DNS 名に関連付けられている IP アドレスを変更する必要があります。 これには、すべての新しい接続を適切な Name Node に再ルーティングします。 フェールオーバーが発生したときに、既存の接続は失敗します。 このプロセスを自動化するために、"ハートビート" が、アクティブな Name Node の ping を実行できます。 ハートビートが失敗する場合、フェールオーバーが発生し、セカンダリ IP アドレスに自動的に切り替えると想定できます。
 
 ## <a name="error-messages-and-possible-solutions"></a>エラー メッセージと考えられる解決策
 
-外部テーブルのエラーのトラブルシューティングについては、Murshed Zaman のブログ「[https://blogs.msdn.microsoft.com/sqlcat/2016/06/21/polybase-setup-errors-and-possible-solutions/](https://blogs.msdn.microsoft.com/sqlcat/2016/06/21/polybase-setup-errors-and-possible-solutions/ "PolyBase setup errors and possible solutions")」(PolyBase のセットアップ エラーと使用可能な解決策) を参照してください。
+外部テーブルのエラーのトラブルシューティングについては、Murshed Zaman のブログ [https://blogs.msdn.microsoft.com/sqlcat/2016/06/21/polybase-setup-errors-and-possible-solutions/](https://blogs.msdn.microsoft.com/sqlcat/2016/06/21/polybase-setup-errors-and-possible-solutions/ "PolyBase のセットアップ エラーと考えられる解決策") を参照してください。
 
 ## <a name="see-also"></a>参照
 

@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 7a3846ee-b221-47a5-ac8c-d08a962931af
 author: Shamikg
 ms.author: Shamikg
-manager: craigg
-ms.openlocfilehash: d6a8943ab1cc22da90208c10a5dcbfe5b8f5e369
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 4ef40fbc5acafeaaba76953940f763c663cb121c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47626360"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67908851"
 ---
 # <a name="new-project-ssma-mysqltosql"></a>新しいプロジェクト (SSMA) (MySQLToSQL)
 使用して、**新しいプロジェクト**新しい SSMA プロジェクトを作成する ダイアログ ボックス。 アクセスする、**新しいプロジェクト** ダイアログ ボックスで、**ファイル** メニューのをクリックして**新しいプロジェクト**します。  

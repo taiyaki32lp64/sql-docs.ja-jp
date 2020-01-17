@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 1057b57b-5ace-4830-9a20-562e88aeef86
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 4aab3372068a621235da9e26461df29240928440
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 1a234817f40809185c3c4cdb8fbcd2d10e5833db
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47633512"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67967096"
 ---
 # <a name="attributes-property-example-vc"></a>Attributes プロパティの例 (VC++)
 この例では、[属性](../../../ado/reference/adox-api/attributes-property-adox.md)のプロパティを[列](../../../ado/reference/adox-api/column-object-adox.md)します。 設定すると**adColNullable**ユーザーの値を設定できるように、[レコード セット](../../../ado/reference/ado-api/recordset-object-ado.md)[フィールド](../../../ado/reference/ado-api/field-object.md)に空の文字列。 このような状況で、ユーザーは、データがないとわかっているレコードと、データが当てはまりませんレコード間で区別できます。  
@@ -203,6 +202,6 @@ int main() {
 }  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [Attributes プロパティ (ADOX)](../../../ado/reference/adox-api/attributes-property-adox.md)   
  [Column オブジェクト (ADOX)](../../../ado/reference/adox-api/column-object-adox.md)

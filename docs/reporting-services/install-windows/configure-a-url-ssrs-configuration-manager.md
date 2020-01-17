@@ -7,14 +7,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - URL access [Reporting Services], syntax
 ms.assetid: 851e163a-ad2a-491e-bc1e-4df92327092f
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 912f0473db120c9874e231334d1d393e18518c71
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 616d04205fdf079435bf7810a3c6957f0cf8b32f
+ms.sourcegitcommit: 312b961cfe3a540d8f304962909cd93d0a9c330b
+ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53202491"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73594115"
 ---
 # <a name="configure-a-url--ssrs-configuration-manager"></a>URL の構成 (SSRS 構成マネージャー)
   [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)] やレポート サーバー Web サービスを使用するには、まず、各アプリケーションに対して少なくとも 1 つの URL を構成する必要があります。 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] を "ファイルのみ" モードでインストールした場合 (インストール ウィザードの [レポート サーバー インストール オプション] ページで **[サーバーを構成せずにインストールする]** オプションを選択した場合) は、URL の構成は必須です。 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] を既定の構成でインストールした場合は、各アプリケーションの URL が既に構成されています。  
@@ -31,7 +31,7 @@ ms.locfileid: "53202491"
   
 -   URL の詳細プロパティを設定して追加の URL を定義する。  
   
- URL の格納および管理のしくみや相互運用性の問題に関する詳細については、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] オンライン ブックの「[URL の予約と登録について &#40;SSRS 構成マネージャー&#41;](../../reporting-services/install-windows/about-url-reservations-and-registration-ssrs-configuration-manager.md)」および「[Reporting Services とインターネット インフォメーション サービスのサイド バイ サイド インストール &#40;SSRS ネイティブ モード&#41;](../../reporting-services/install-windows/install-reporting-and-internet-information-services-side-by-side.md)」を参照してください。 Reporting Services でよく使用される URL の例については、このトピックの「 [URL の構成の例](#URLExamples) 」を参照してください。  
+ URL の格納および管理のしくみや相互運用性の問題に関する詳細については、「[URL の予約と登録について &#40;SSRS 構成マネージャー&#41;](../../reporting-services/install-windows/about-url-reservations-and-registration-ssrs-configuration-manager.md)」および「[Reporting Services とインターネット インフォメーション サービスのサイド バイ サイド インストール &#40;SSRS ネイティブ モード&#41;](../../reporting-services/install-windows/install-reporting-and-internet-information-services-side-by-side.md)」を参照してください。 Reporting Services でよく使用される URL の例については、このトピックの「 [URL の構成の例](#URLExamples) 」を参照してください。  
   
 ## <a name="prerequisites"></a>Prerequisites  
  URL の作成や変更を行う前に、次の点を確認してください。  
@@ -133,7 +133,7 @@ ms.locfileid: "53202491"
   **ホスト ヘッダー**  
  コンピューターに解決されるホスト ヘッダーをドメイン ネーム サーバーに既に定義している場合は、レポート サーバー アクセス用に構成する URL にそのホスト ヘッダーを指定できます。  
   
- ホスト ヘッダーは一意の名前であり、これを使用して複数の Web サイトで単一の IP アドレスとポートを共有できます。 ホスト ヘッダー名は、IP アドレスとポート番号に比べて容易に記憶でき、入力も簡単です。 たとえば、www.adventure-works.com などはホスト ヘッダー名の一例です。  
+ ホスト ヘッダーは一意の名前であり、これを使用して複数の Web サイトで単一の IP アドレスとポートを共有できます。 ホスト ヘッダー名は、IP アドレスとポート番号に比べて容易に記憶でき、入力も簡単です。 たとえば、 www.adventure-works.com などはホスト ヘッダー名の一例です。  
   
  **[SSL ポート]**  
  SSL 接続のポートを指定します。 SSL の既定のポートは 443 です。  
@@ -143,7 +143,7 @@ ms.locfileid: "53202491"
   
  証明書が登録されている完全修飾コンピューター名を指定します。 証明書が登録されている名前と同じ名前を指定する必要があります。  
   
- このオプションを使用するには、証明書がインストールされている必要があります。 また、RSReportServer.config ファイルの UrlRoot 構成設定を、証明書で登録されたコンピューターの完全修飾名を指すように変更する必要があります。 詳細については、 [オンライン ブックの「](../../reporting-services/security/configure-ssl-connections-on-a-native-mode-report-server.md) ネイティブ モードのレポート サーバーでの SSL 接続の構成 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 」を参照してください。  
+ このオプションを使用するには、証明書がインストールされている必要があります。 また、RSReportServer.config ファイルの UrlRoot 構成設定を、証明書で登録されたコンピューターの完全修飾名を指すように変更する必要があります。 詳細については、「 [ネイティブ モードのレポート サーバーでの SSL 接続の構成](../../reporting-services/security/configure-ssl-connections-on-a-native-mode-report-server.md)」を参照してください。  
   
 ### <a name="to-set-advanced-properties-on-a-url"></a>URL の詳細プロパティを設定するには  
   

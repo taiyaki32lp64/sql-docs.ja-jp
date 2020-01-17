@@ -16,15 +16,16 @@ helpviewer_keywords:
 - sp_dropapprole
 ms.assetid: ea1aefe6-8f7d-46e9-a3cb-7b037b393e73
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: 150fd6e01efb67281146e5b7dfff79bde27636dc
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+author: VanMSFT
+ms.openlocfilehash: 36c3aaf72390ac5005ff5577000820f07ac5856d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54130602"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68001032"
 ---
 # <a name="spdropapprole-transact-sql"></a>sp_dropapprole (Transact-SQL)
+
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   アプリケーション ロールを現在のデータベースから削除します。  
@@ -37,13 +38,11 @@ ms.locfileid: "54130602"
 ## <a name="syntax"></a>構文  
   
 ```  
-  
 sp_dropapprole [@rolename = ] 'role'  
 ```  
   
 ## <a name="arguments"></a>引数  
- [  **@rolename =** ] **'**_ロール_**'**  
- アプリケーションの役割を削除します。 *ロール*は、 **sysname**、既定値はありません。 *ロール*現在のデータベースに存在する必要があります。  
+`[ @rolename = ] 'role'` アプリケーションの役割を削除します。 *ロール*は、 **sysname**、既定値はありません。 *ロール*現在のデータベースに存在する必要があります。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  0 (成功) または 1 (失敗)  
@@ -57,13 +56,13 @@ sp_dropapprole [@rolename = ] 'role'
  データベースに対する ALTER ANY APPLICATION ROLE 権限が必要です。  
   
 ## <a name="examples"></a>使用例  
- 次の例では、現在のデータベースからアプリケーション ロール `SalesApp` を削除します。  
+ 次の例では、削除、`SalesApp`現在のデータベースからアプリケーション ロールです。  
   
-```  
+```sql
 EXEC sp_dropapprole 'SalesApp';  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [セキュリティ ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md)   
  [sp_addapprole &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addapprole-transact-sql.md)   
  [DROP APPLICATION ROLE &#40;Transact-SQL&#41;](../../t-sql/statements/drop-application-role-transact-sql.md)   

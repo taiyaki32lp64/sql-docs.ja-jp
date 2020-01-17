@@ -1,5 +1,5 @@
 ---
-title: 文字列関数の使用 |Microsoft ドキュメント
+title: 文字列関数の使用 |Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -8,13 +8,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-manager: kfile
-ms.openlocfilehash: 6e151d06d086569b16fcdf1dc3570f9b220dfcd6
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.openlocfilehash: 74eec478baad335cb5be6a78ec1faea2d15030ba
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34743831"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68037996"
 ---
 # <a name="using-string-functions"></a>文字列関数の使用
 
@@ -72,7 +71,7 @@ ms.locfileid: "34743831"
   
  `FROM [Adventure Works]`  
   
- 広く使われているもう 1 つのグループの文字列関数は、オブジェクトやそのオブジェクトに解決される式の一意の名前を含む文字列を、そのオブジェクト自体にキャストできるようにする関数です。 次の例のクエリを示していますが、どのように**StrToMember**と**StrToSet**関数は。  
+ 広く使われているもう 1 つのグループの文字列関数は、オブジェクトやそのオブジェクトに解決される式の一意の名前を含む文字列を、そのオブジェクト自体にキャストできるようにする関数です。 次のクエリを示していますが、どのように**StrToMember**と**StrToSet**関数は。  
   
  `SELECT`  
   
@@ -99,7 +98,7 @@ ms.locfileid: "34743831"
  `FROM [Adventure Works]`  
   
 > [!NOTE]  
->  **StrToMember**と**StrToSet**関数を使用して、注意してください。 これらの関数を計算の定義内で使用すると、クエリのパフォーマンスが低下する場合があります。  
+>  **StrToMember**と**StrToSet**関数は、注意して使用する必要があります。 これらの関数を計算の定義内で使用すると、クエリのパフォーマンスが低下する場合があります。  
   
 ## <a name="see-also"></a>参照  
  [Generate&#40;MDX&#41;](../mdx/generate-mdx.md)   

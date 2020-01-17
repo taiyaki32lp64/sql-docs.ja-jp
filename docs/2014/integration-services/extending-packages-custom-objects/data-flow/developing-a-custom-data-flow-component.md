@@ -15,15 +15,15 @@ helpviewer_keywords:
 - extending data flow task [Integration Services]
 - components [Integration Services], data flow
 ms.assetid: be126913-2a9a-41c9-9bf5-a7b0a0aea2f8
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 6121149433cd0f687c91663f7bb1b23ecb38aaff
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 6c174fe5cdf1ebe1dbc9b0350a01fb6e8027effa
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53369474"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62768968"
 ---
 # <a name="developing-a-custom-data-flow-component"></a>カスタム データ フロー コンポーネントの開発
   データ フロー タスクは、さまざまなデータ ソースに接続し、そのデータを高速で変換およびルーティングするコンポーネントで構成されています。 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] では、拡張可能なオブジェクト モデルが用意されており、開発者はそのオブジェクト モデルを使用して、[!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)] や配置されたパッケージで使用できるカスタム変換元、カスタム変換、およびカスタム変換先を作成できます。 ここでは、カスタム データ フロー コンポーネントの開発に役立つトピックを紹介します。  
@@ -68,7 +68,7 @@ ms.locfileid: "53369474"
  [特定の種類のデータ フロー コンポーネントの開発](../../extending-packages-custom-objects-data-flow-types/developing-specific-types-of-data-flow-components.md)  
  変換元、変換、および変換先の、3 種類のデータ フロー コンポーネントの開発に関する情報が含まれています。  
   
-## <a name="reference"></a>参照  
+## <a name="reference"></a>リファレンス  
  <xref:Microsoft.SqlServer.Dts.Pipeline>  
  カスタム データ フロー コンポーネントを作成するために使用するクラスやインターフェイスが含まれています。  
   

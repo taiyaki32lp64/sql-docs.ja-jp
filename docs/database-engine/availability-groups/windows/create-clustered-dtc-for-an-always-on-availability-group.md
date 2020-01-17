@@ -10,14 +10,13 @@ ms.topic: conceptual
 ms.assetid: 0e332aa4-2c48-4bc4-a404-b65735a02cea
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 2182b11c9416c487d3d583308d07ae1ad5f3f72f
-ms.sourcegitcommit: 9ea11d738503223b46d2be5db6fed6af6265aecc
+ms.openlocfilehash: 96c706d58e0f90f4f10b89a724f7d87fa94e41f3
+ms.sourcegitcommit: ac90f8510c1dd38d3a44a45a55d0b0449c2405f5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/07/2019
-ms.locfileid: "54069778"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72586765"
 ---
 # <a name="create-clustered-dtc-resource-for-an-always-on-availability-group"></a>Always On 可用性グループ用のクラスター化された DTC リソースを作成する
 
@@ -27,7 +26,7 @@ ms.locfileid: "54069778"
 
 このチュートリアルでは、クラスター化された DTC リソースと SQL Server 可用性グループを「[Cluster MSDTC for SQL Server Availability Groups](../../../database-engine/availability-groups/windows/cluster-dtc-for-sql-server-2016-availability-groups.md)」(SQL Server 可用性グループの DTC をクラスター化する) の要件に基づいて作成します。
 
-このチュートリアルでは、PowerShell スクリプトと Transact-SQL (T-SQL) スクリプトが使用されます。  T-SQL スクリプトの多くで **SQLCMD モード** を有効にする必要があります。  **SQLCMD モード**に関する情報については、「 [クエリ エディターで SQLCMD スクリプト操作を有効にする方法](../../../relational-databases/scripting/edit-sqlcmd-scripts-with-query-editor.md)」を参照してください。  PowerShell モジュール **FailoverClusters** をインポートする必要があります。  PowerShell モジュールのインポートに関する詳細については、「 [Importing a PowerShell Module](https://msdn.microsoft.com/library/dd878284(v=vs.85).aspx)」 (PowerShell モジュールのインポート) を参照してください。  このチュートリアルは以下を前提条件とします。
+このチュートリアルでは、PowerShell スクリプトと Transact-SQL (T-SQL) スクリプトが使用されます。  T-SQL スクリプトの多くで **SQLCMD モード** を有効にする必要があります。  **SQLCMD モード**に関する情報については、「 [クエリ エディターで SQLCMD スクリプト操作を有効にする方法](../../../relational-databases/scripting/edit-sqlcmd-scripts-with-query-editor.md)」を参照してください。  PowerShell モジュール **FailoverClusters** をインポートする必要があります。  PowerShell モジュールのインポートに関する詳細については、[PowerShell モジュールのインポート](/powershell/scripting/developer/module/importing-a-powershell-module)に関する記事を参照してください。  このチュートリアルは以下を前提条件とします。
 - 「[Always On 可用性グループの前提条件、制限事項、推奨事項 (SQL Server)](../../../database-engine/availability-groups/windows/prereqs-restrictions-recommendations-always-on-availability.md)」の要件をすべて満たしています。  
 - ドメインが `contoso.lab`です。
 - DTC ネットワーク名リソースが作成される OU でコンピューター オブジェクトを作成する権限がユーザーに与えられています。

@@ -1,5 +1,5 @@
 ---
-title: ディメンション、階層、およびレベル関数を使用して |Microsoft ドキュメント
+title: ディメンション、階層、およびレベル関数を使用して |Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -8,20 +8,19 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-manager: kfile
-ms.openlocfilehash: fb6460ed28c856ef6b5ceea8bf89c7bf33f54f2e
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.openlocfilehash: 8fa374ef93f56f8cddaed81bc9e3872d1eb206c7
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34743391"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68097184"
 ---
 # <a name="using-dimension-hierarchy-and-level-functions"></a>ディメンション関数、階層関数、およびレベル関数の使用
 
 
   ディメンション関数、階層関数、およびレベル関数は、Analysis Services で検出された多次元階層をスキャンする際に役立ちます。 通常は、ディメンション、階層、またはレベルのメンバーに関する情報を得るために、これらの関数を他の関数と共に使用します。  
   
- 次の例を使用する方法を示しています、 **.Dimension** 、 **.Hierarchy** 、および **.Level** 関数。   
+ 次の例を使用する方法を示しています、 **.Dimension** 、 **.Hierarchy** 、および **.Level** 関数。  
   
  `WITH`  
   

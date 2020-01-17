@@ -1,6 +1,7 @@
 ---
-title: 一部の可用性レプリカでデータが同期されない | Microsoft Docs
-ms.custom: ''
+title: 可用性レプリカでデータが同期されない
+description: Always On 可用性グループ内の 1 つまたは複数の可用性レプリカが、プライマリ レプリカとデータを同期していない場合に考えられる原因と解決策。
+ms.custom: seo-lt-2019
 ms.date: 05/17/2016
 ms.prod: sql
 ms.reviewer: ''
@@ -13,18 +14,17 @@ helpviewer_keywords:
 ms.assetid: 3db6a569-e942-4321-a0dd-c4ab002087c8
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 016ce9783ee3d25b80ad777710b22b4afe0a72ff
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.openlocfilehash: 66ebb11535fe2eecc6495b8c5e194d286ecc88ed
+ms.sourcegitcommit: f8cf8cc6650a22e0b61779c20ca7428cdb23c850
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51602523"
+ms.lasthandoff: 12/04/2019
+ms.locfileid: "74822585"
 ---
 # <a name="some-availability-replicas-are-not-synchronizing-data"></a>一部の可用性レプリカでデータが同期されない
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
     
-## <a name="introduction"></a>概要  
+## <a name="introduction"></a>はじめに  
   
 |||  
 |-|-|  

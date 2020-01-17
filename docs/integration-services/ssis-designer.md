@@ -22,17 +22,20 @@ helpviewer_keywords:
 - SSIS Designer, about SSIS Designer
 - Integration Services, SSIS Designer
 ms.assetid: 006d68ea-1b5c-4c1e-8079-3910288e012c
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: 91099edbdbd2f1b25fd77dc1f076acd5b4647708
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 3c458257766e52898d0924b2f8ad57ddd2423b19
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52397395"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71295664"
 ---
 # <a name="ssis-designer"></a>SSIS デザイナー
+
+[!INCLUDE[ssis-appliesto](../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   [!INCLUDE[ssIS](../includes/ssis-md.md)] デザイナーは、 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] パッケージの作成および管理に使用できるグラフィカル ツールです。 [!INCLUDE[ssIS](../includes/ssis-md.md)] デザイナーは、 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] で [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] プロジェクトの一部として使用できます。  
   
  [!INCLUDE[ssIS](../includes/ssis-md.md)] デザイナーを使用すると、次のタスクを実行できます。  
@@ -87,7 +90,7 @@ ms.locfileid: "52397395"
 > **重要!!**  パラメーターを使用できるのは、プロジェクトの配置モデル用に開発したプロジェクトに対してのみです。 したがって、プロジェクト配置モデルを使用するように構成されているプロジェクトの一部であるパッケージに対してのみ、[パラメーター] タブが表示されます。  
   
 ### <a name="event-handlers-tab"></a>[イベント ハンドラー] タブ  
- パッケージ内にイベントを構築するには、 **[イベント ハンドラー]** タブのデザイン画面を使用します。**[イベント ハンドラー]** タブで、イベント ハンドラーを作成するパッケージまたはパッケージ オブジェクトを選択し、次にイベント ハンドラーに関連付けるイベントを選択します。 イベント ハンドラーには制御フローと、オプションでデータ フローが含まれます。  
+ パッケージ内にイベントを構築するには、 **[イベント ハンドラー]** タブのデザイン画面を使用します。 **[イベント ハンドラー]** タブで、イベント ハンドラーを作成するパッケージまたはパッケージ オブジェクトを選択し、次にイベント ハンドラーに関連付けるイベントを選択します。 イベント ハンドラーには制御フローと、オプションでデータ フローが含まれます。  
   
  詳細については、「 [Add an Event Handler to a Package](https://msdn.microsoft.com/library/5e56885d-8658-480a-bed9-3f2f8003fd78)」を参照してください。  
   
@@ -145,7 +148,7 @@ ms.locfileid: "52397395"
 ## <a name="event-handlers-tab"></a>[イベント ハンドラー] タブ
   **デザイナーの** [イベント ハンドラー] [!INCLUDE[ssIS](../includes/ssis-md.md)] タブを使用すると、 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] パッケージの制御フローを構築できます。 イベント ハンドラーは、パッケージによって生成されたイベントまたはパッケージ内のタスクまたはコンテナーによって生成されたイベントに応答して実行されます。  
   
-## <a name="options"></a>[変数]  
+## <a name="options"></a>オプション  
  **[実行可能ファイル]**  
  イベント ハンドラーを作成する実行可能ファイルを選択します。 実行可能ファイルとは、パッケージか、パッケージ内のタスクまたはコンテナーです。  
   
@@ -153,7 +156,7 @@ ms.locfileid: "52397395"
  イベント ハンドラーの種類を選択します。 **ツールボックス**からアイテムをドラッグしてイベント ハンドラーを作成します。  
   
  **削除**  
- イベント ハンドラーを選択し、**[削除]** をクリックすると、パッケージからイベント ハンドラーを削除できます。  
+ イベント ハンドラーを選択し、 **[削除]** をクリックすると、パッケージからイベント ハンドラーを削除できます。  
   
  **実行可能ファイル \<executable name\> の \<event handler name\> を作成するには、ここをクリックします**  
  イベント ハンドラーを作成する場合にクリックします。  

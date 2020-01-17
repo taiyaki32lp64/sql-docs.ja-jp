@@ -17,11 +17,11 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 07f8ecc0e6550fcec63a0b1ebb906cd5ffd3aaf1
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53355192"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62524335"
 ---
 # <a name="tutorial-getting-started-with-the-database-engine"></a>チュートリアル:データベース エンジンの概要
   「 [!INCLUDE[ssDE](../includes/ssde-md.md)] の概要」チュートリアルへようこそ。 このチュートリアルは、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] を初めて使用するユーザーで、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] または [!INCLUDE[ssExpress](../includes/ssexpress-md.md)]をインストールしたユーザーを対象にしています。 この短いチュートリアルでは、 [!INCLUDE[ssDE](../includes/ssde-md.md)]の簡単な使用方法を学習できます。  
@@ -34,7 +34,7 @@ ms.locfileid: "53355192"
  [レッスン 1:データベース エンジンへの接続](lesson-1-connecting-to-the-database-engine.md)  
  このレッスンでは、 [!INCLUDE[ssDE](../includes/ssde-md.md)] に接続し、他のユーザーが接続できるようにする方法を学習します。  
   
- [レッスン 2:別のコンピューターから接続します。](lesson-2-connecting-from-another-computer.md)  
+ [レッスン 2:別のコンピューターからの接続](lesson-2-connecting-from-another-computer.md)  
  このレッスンでは、別のコンピューターから [!INCLUDE[ssDE](../includes/ssde-md.md)] に接続する方法を学習します。これには、プロトコルを有効化する方法や、ポートやファイアウォール設定を構成する方法も含まれます。  
   
 ## <a name="requirements"></a>必要条件  

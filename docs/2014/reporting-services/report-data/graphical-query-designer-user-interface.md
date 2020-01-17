@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 f1_keywords:
 - "10012"
@@ -17,23 +16,23 @@ helpviewer_keywords:
 - query designers [Reporting Services]
 - Reporting Services, query designers
 ms.assetid: 5022ae33-03a3-48de-8ac1-82742f48cebe
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 83a9233d9d5016be3307b797bb9a5a84ead276be
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 2fc424ec2354130d361305b0e3dd2a0bb015cca6
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56039293"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68891100"
 ---
 # <a name="graphical-query-designer-user-interface"></a>グラフィカル クエリ デザイナーのユーザー インターフェイス
-  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] にはグラフィカル クエリ デザイナーとテキスト ベースのクエリ デザイナーが用意されており、レポート デザイナーでレポート データセットのリレーショナル データベースからデータを取得するクエリの作成に使用できます。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]、Oracle、OLE DB、ODBC の各データ ソースの種類に対して、対話形式でクエリを作成して結果を表示するには、グラフィカル クエリ デザイナーを使用します。 テキスト ベースのクエリ デザイナーは、複数の [!INCLUDE[tsql](../../../includes/tsql-md.md)] ステートメント、複雑なクエリやコマンド構文、式ベースのクエリを指定する場合に使用します。 詳細については、「 [テキストベースのクエリ デザイナーのユーザー インターフェイス](../text-based-query-designer-user-interface.md)」を参照してください。 特定のデータ ソースの種類の使用方法の詳細については、次を参照してください。[レポートへのデータの追加&#40;レポート ビルダーおよび SSRS&#41;](report-datasets-ssrs.md)します。  
+  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] にはグラフィカル クエリ デザイナーとテキスト ベースのクエリ デザイナーが用意されており、レポート デザイナーでレポート データセットのリレーショナル データベースからデータを取得するクエリの作成に使用できます。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]、Oracle、OLE DB、ODBC の各データ ソースの種類に対して、対話形式でクエリを作成して結果を表示するには、グラフィカル クエリ デザイナーを使用します。 テキスト ベースのクエリ デザイナーは、複数の [!INCLUDE[tsql](../../../includes/tsql-md.md)] ステートメント、複雑なクエリやコマンド構文、式ベースのクエリを指定する場合に使用します。 詳細については、「 [テキストベースのクエリ デザイナーのユーザー インターフェイス](../text-based-query-designer-user-interface.md)」を参照してください。 特定の種類のデータソースを操作する方法の詳細については、「 [ &#40;レポートレポートビルダー&#41;および SSRS にデータを追加する](report-datasets-ssrs.md)」を参照してください。  
   
  .  
   
 ## <a name="graphical-query-designer"></a>グラフィカル クエリ デザイナー  
- グラフィカル クエリ デザイナーには、次の 3 つの種類のクエリ コマンドがサポートされています。**テキスト**、 **StoredProcedure**、または**TableDirect**します。 データセットに対するクエリを作成する前に、 [[データセットのプロパティ]](../dataset-properties-dialog-box-query.md) ダイアログ ボックスの [クエリ] ページにあるコマンドの種類のオプションを選択する必要があります。  
+ このグラフィカルクエリデザイナーでは、次の3種類のクエリコマンドがサポートされています。**Text**、 **StoredProcedure**、または**tabledirect**。 データセットに対するクエリを作成する前に、 [[データセットのプロパティ]](../dataset-properties-dialog-box-query.md) ダイアログ ボックスの [クエリ] ページにあるコマンドの種類のオプションを選択する必要があります。  
   
  クエリの種類には、次のオプションがあります。  
   
@@ -77,7 +76,7 @@ ms.locfileid: "56039293"
 |![グリッド ペインの表示/非表示の切り替え](../media/rsqdicon-showhidegrid.gif "グリッド ペインの表示/非表示の切り替え")|グリッド ペインの表示と非表示を切り替えます。|  
 |![SQL ペインの表示/非表示の切り替え](../media/rsqdicon-showhidesql.gif "SQL ペインの表示/非表示の切り替え")|SQL ペインの表示と非表示を切り替えます。|  
 |![結果ペインの表示/非表示の切り替え](../media/rsqdicon-showhideresult.gif "結果ペインの表示/非表示の切り替え")|結果ペインの表示と非表示を切り替えます。|  
-|![クエリを実行する](../../analysis-services/media/rsqdicon-run.gif "クエリを実行する")|クエリを実行します。|  
+|![クエリを実行する](https://docs.microsoft.com/analysis-services/analysis-services/media/rsqdicon-run.gif "クエリを実行する")|クエリを実行します。|  
 |![SQL ウィンドウで SQL の確認](../media/rsqdicon-verifysql.gif "SQL ウィンドウのボタンで SQL の確認")|クエリ テキストの構文が正しいかどうかを確認します。|  
 |![選択したフィールドでの昇順による並べ替え](../media/rsqdicon-sortascending.gif "選択したフィールドでの昇順による並べ替え")|ダイアグラム ペインで選択した列の並べ替え順序を **[昇順で並べ替え]** に設定します。|  
 |![選択したフィールドでの降順による並べ替え](../media/rsqdicon-sortdescending.gif "選択したフィールドでの降順による並べ替え")|ダイアグラム ペインで選択した列の並べ替え順序を **[降順で並べ替え]** に設定します。|  
@@ -119,7 +118,7 @@ EXEC uspGetEmployeeManagers '1';
 |**[テキストとして編集]**|テキスト ベースのクエリ デザイナーと、グラフィカル クエリ デザイナー間で切り替えます。|  
 |**[インポート]**|ファイルまたはレポートから既存のクエリをインポートします。 サポートされているファイルの種類は sql と rdl だけです。 詳細については、「 [レポート埋め込みデータセットと共有データセット &#40;レポート ビルダーおよび SSRS&#41;](report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)と呼ばれます。|  
 |![汎用クエリ デザイナー ボタンのアイコン](../media/icongenericquerydesigner.gif "汎用クエリ デザイナー ボタンのアイコン")|クエリ テキスト ビューまたはストアド プロシージャ ビューを維持したまま、汎用クエリ デザイナーとグラフィカル クエリ デザイナーを切り替えます。|  
-|![クエリを実行する](../../analysis-services/media/rsqdicon-run.gif "クエリを実行する")|選択したテーブルのすべての列が選択されます。|  
+|![クエリを実行する](https://docs.microsoft.com/analysis-services/analysis-services/media/rsqdicon-run.gif "クエリを実行する")|選択したテーブルのすべての列が選択されます。|  
   
 ### <a name="command-type-storedprocedure"></a>コマンドの種類 (StoredProcedure)  
  コマンドの種類が **[StoredProcedure]** の場合、グラフィカル クエリ デザイナーには、データ ソースで利用可能なストアド プロシージャを一覧にしたドロップダウン リストと結果ペインが表示されます。 次の表に各ペインの機能を示します。  
@@ -136,7 +135,7 @@ EXEC uspGetEmployeeManagers '1';
 |------------|-----------------|  
 |**[テキストとして編集]**|テキスト ベースのクエリ デザイナーと、グラフィカル クエリ デザイナー間で切り替えます。|  
 |**[インポート]**|ファイルまたはレポートから既存のクエリをインポートします。 サポートされているファイルの種類は sql と rdl だけです。 詳細については、「 [レポート埋め込みデータセットと共有データセット (レポート ビルダーおよび SSRS)](report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)と呼ばれます。|  
-|![クエリを実行する](../../analysis-services/media/rsqdicon-run.gif "クエリを実行する")|選択されたストアド プロシージャを実行します。|  
+|![クエリを実行する](https://docs.microsoft.com/analysis-services/analysis-services/media/rsqdicon-run.gif "クエリを実行する")|選択されたストアド プロシージャを実行します。|  
 |[ストアド プロシージャ] ドロップダウン リスト|下矢印をクリックすると、データ ソースで利用可能なストアド プロシージャが一覧表示されます。 この一覧から目的のストアド プロシージャをクリックして選択します。|  
   
 #### <a name="example"></a>例  
@@ -145,11 +144,11 @@ EXEC uspGetEmployeeManagers '1';
  `uspGetEmployeeManagers '1';`  
   
 ## <a name="see-also"></a>参照  
- [クエリ デザイン ツールでレポート デザイナーの SQL Server Data Tools &#40;SSRS&#41;](query-design-tools-ssrs.md)   
- [レポートにデータを追加&#40;レポート ビルダーおよび SSRS&#41;](report-datasets-ssrs.md)   
+ [レポートデザイナー SQL Server Data Tools &#40;SSRS のクエリデザインツール&#41;](query-design-tools-ssrs.md)   
+ [レポート&#40;レポートビルダーと SSRS にデータを追加する&#41;](report-datasets-ssrs.md)   
  [SQL Server の接続の種類 &#40;SSRS&#41;](sql-server-connection-type-ssrs.md)   
  [OLE DB の接続の種類 &#40;SSRS&#41;](ole-db-connection-type-ssrs.md)   
- [レポートにデータを追加&#40;レポート ビルダーおよび SSRS&#41;](report-datasets-ssrs.md)   
+ [レポート&#40;レポートビルダーと SSRS にデータを追加する&#41;](report-datasets-ssrs.md)   
  [Oracle の接続の種類 &#40;SSRS&#41;](oracle-connection-type-ssrs.md)   
  [RSReportDesigner 構成ファイル](../report-server/rsreportdesigner-configuration-file.md)   
  [クエリおよびビューのデザインの操作方法に関するトピック (Visual Database Tools)](../../ssms/visual-db-tools/design-queries-and-views-how-to-topics-visual-database-tools.md)  

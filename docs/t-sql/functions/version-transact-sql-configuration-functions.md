@@ -18,16 +18,15 @@ helpviewer_keywords:
 - versions [SQL Server], @@VERSION
 - processors [SQL Server], types
 ms.assetid: 385ba80e-7c28-41a5-9cdb-5648f3785983
-author: MashaMSFT
-ms.author: mathoma
-manager: craigg
+author: MikeRayMSFT
+ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 3f5b04781959218d9044f1bf032156ce6ec65946
-ms.sourcegitcommit: 97340deee7e17288b5eec2fa275b01128f28e1b8
+ms.openlocfilehash: 1894f0e4aa31e8b80255fb49f30c7cfe1c1a146b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55420960"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67927534"
 ---
 # <a name="x40x40version---transact-sql-configuration-functions"></a>&#x40;&#x40;バージョン - Transact SQL 構成関数
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -46,7 +45,7 @@ ms.locfileid: "55420960"
  **nvarchar**  
   
 ## <a name="remarks"></a>Remarks  
- @@VERSION の結果は 1 つの nvarchar 文字列として表示されます。 を使用する [SERVERPROPERTY (& a) #40 です。TRANSACT-SQL と #41;](../../t-sql/functions/serverproperty-transact-sql.md) 個々 のプロパティの値を取得します。  
+ @@VERSION の結果は 1 つの nvarchar 文字列として表示されます。 を使用する [SERVERPROPERTY &#40;Transact-SQL&#41;](../../t-sql/functions/serverproperty-transact-sql.md) 個々 のプロパティの値を取得します。  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]では、次の情報が返されます。  
   
@@ -84,7 +83,7 @@ ms.locfileid: "55420960"
   
 ## <a name="examples"></a>使用例  
   
-### <a name="a-return-the-current-version-of-includessnoversionincludesssnoversion-mdmd"></a>A:現在のバージョンの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] を返す  
+### <a name="a-return-the-current-version-of-includessnoversionincludesssnoversion-mdmd"></a>A: 現在のバージョンの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] を返す  
  次の例では、現在のインストールに関するバージョン情報を返します。  
   
 ```  

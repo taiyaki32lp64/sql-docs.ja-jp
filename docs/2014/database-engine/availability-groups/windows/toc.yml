@@ -1,256 +1,249 @@
-items:
 - name: 概要
   href: overview-of-always-on-availability-groups-sql-server.md
   items:
-  - name: AlwaysOn 可用性グループの前提条件、制限事項、および推奨事項
-    href: prereqs-restrictions-recommendations-always-on-availability.md
-  - name: 可用性モード
-    href: availability-modes-always-on-availability-groups.md
+    - name: AlwaysOn 可用性グループの前提条件、制限事項、および推奨事項
+      href: prereqs-restrictions-recommendations-always-on-availability.md
+    - name: 可用性モード
+      href: availability-modes-always-on-availability-groups.md
 - name: クイック スタート
   items:
-  - name: 作業の開始
-    href: getting-started-with-always-on-availability-groups-sql-server.md
-  - name: 可用性グループを作成する
-    items:
-    - name: ウィザード
-      href: use-the-availability-group-wizard-sql-server-management-studio.md
-    - name: ダイアログ ボックス
-      href: use-the-new-availability-group-dialog-box-sql-server-management-studio.md
-    - name: Transact-SQL
-      href: create-an-availability-group-transact-sql.md
-    - name: PowerShell
-      href: create-an-availability-group-sql-server-powershell.md
-    - name: Azure の仮想マシン
-      href: https://docs.microsoft.com/azure/virtual-machines/windows/sql/virtual-machines-windows-portal-sql-availability-group-overview
+    - name: 作業の開始
+      href: getting-started-with-always-on-availability-groups-sql-server.md
+    - name: 可用性グループを作成する
+      items:
+        - name: ウィザード
+          href: use-the-availability-group-wizard-sql-server-management-studio.md
+        - name: ダイアログ ボックス
+          href: use-the-new-availability-group-dialog-box-sql-server-management-studio.md
+        - name: Transact-SQL
+          href: create-an-availability-group-transact-sql.md
+        - name: PowerShell
+          href: create-an-availability-group-sql-server-powershell.md
+        - name: Azure の仮想マシン
+          href: 'https://docs.microsoft.com/azure/virtual-machines/windows/sql/virtual-machines-windows-portal-sql-availability-group-overview'
 - name: 操作方法
   items:
-  - name: 構成
-    href: creation-and-configuration-of-availability-groups-sql-server.md
-    items:
-    - name: AlwaysOn 可用性グループの有効化と無効化
-      href: enable-and-disable-always-on-availability-groups-sql-server.md
-    - name: AlwaysOn 可用性グループのエンドポイントを作成する (PowerShell)
-      href: database-mirroring-always-on-availability-groups-powershell.md
-    - name: 可用性レプリカを追加または変更する場合のエンドポイント URL の指定
-      href: specify-endpoint-url-adding-or-modifying-availability-replica.md
-    - name: 可用性グループへのセカンダリ レプリカの参加
-      href: join-a-secondary-replica-to-an-availability-group-sql-server.md
-    - name: AlwaysOn セカンダリ データベース上のデータ移動の開始
-      href: start-data-movement-on-an-always-on-secondary-database-sql-server.md
-    - name: 可用性グループに対するセカンダリ データベースの手動準備
-      href: manually-prepare-a-secondary-database-for-an-availability-group-sql-server.md
-    - name: 可用性グループへのセカンダリ データベースの参加
-      href: join-a-secondary-database-to-an-availability-group-sql-server.md
-    - name: 可用性グループへのセカンダリ レプリカの追加
-      href: add-a-secondary-replica-to-an-availability-group-sql-server.md
-    - name: 可用性グループへのレプリカ追加ウィザードの使用
-      href: use-the-add-replica-to-availability-group-wizard-sql-server-management-studio.md
-    - name: Azure のレプリカ追加ウィザードの使用
-      href: use-the-add-azure-replica-wizard-sql-server.md
-    - name: 可用性グループへのデータベースの追加
-      href: availability-group-add-a-database.md
-    - name: 可用性グループへのデータベース追加ウィザードの使用
-      href: availability-group-add-database-to-group-wizard.md
-    - name: 可用性グループ リスナーの作成または構成
-      href: create-or-configure-an-availability-group-listener-sql-server.md
-    - name: 可用性グループの読み取り専用ルーティングの構成
-      href: configure-read-only-routing-for-an-availability-group-sql-server.md
-    - name: 可用性グループからのセカンダリ データベースの削除 (SQL Server)
-      href: remove-a-secondary-database-from-an-availability-group-sql-server.md
-    - name: 可用性グループからのプライマリ データベースの削除
-      href: remove-a-primary-database-from-an-availability-group-sql-server.md
-    - name: 可用性グループからのセカンダリ レプリカの削除
-      href: remove-a-secondary-replica-from-an-availability-group-sql-server.md
-    - name: 可用性グループの削除
-      href: remove-an-availability-group-sql-server.md
-    - name: 可用性グループ リスナーの削除
-      href: remove-an-availability-group-listener-sql-server.md
-    - name: AlwaysOn 可用性グループの構成のトラブルシューティング
-      href: troubleshoot-always-on-availability-groups-configuration-sql-server.md
-  - name: 管理
-    items:
-    - name: 可用性グループの計画的な手動フェールオーバーの実行
-      href: perform-a-planned-manual-failover-of-an-availability-group-sql-server.md
-    - name: 可用性グループの強制手動フェールオーバーの実行
-      href: perform-a-forced-manual-failover-of-an-availability-group-sql-server.md
-    - name: 可用性グループのフェールオーバー ウィザードの使用
-      href: use-the-fail-over-availability-group-wizard-sql-server-management-studio.md
-    - name: 可用性レプリカの可用性モードの変更
-      href: change-the-availability-mode-of-an-availability-replica-sql-server.md
-    - name: 可用性レプリカのフェールオーバー モードの変更
-      href: change-the-failover-mode-of-an-availability-replica-sql-server.md
-    - name: 自動フェールオーバーの条件を制御する柔軟なフェールオーバー ポリシーの構成
-      href: configure-flexible-automatic-failover-policy.md
-    - name: 可用性レプリカでのバックアップの構成
-      href: configure-backup-on-availability-replicas-sql-server.md
-    - name: 可用性レプリカでの読み取り専用アクセスの構成
-      href: configure-read-only-access-on-an-availability-replica-sql-server.md
-    - name: 可用性データベースの中断
-      href: suspend-an-availability-database-sql-server.md
-    - name: 可用性データベースの再開
-      href: resume-an-availability-database-sql-server.md
-    - name: 可用性レプリカのセッション タイムアウト期間の変更
-      href: change-the-session-timeout-period-for-an-availability-replica-sql-server.md
-    - name: 可用性グループをオフラインにする
-      href: ../../take-an-availability-group-offline-sql-server.md
-    - name: サーバー インスタンスの HADR クラスター コンテキストの変更
-      href: change-the-hadr-cluster-context-of-server-instance-sql-server.md
-    - name: 失敗したファイルの追加操作のトラブルシューティング (AlwaysOn 可用性グループ)
-      href: troubleshoot-a-failed-add-file-operation-always-on-availability-groups.md
-  - name: 監視
-    href: monitoring-of-availability-groups-sql-server.md
-    items:
-    - name: 可用性グループの監視 (T-SQL)
-      href: monitor-availability-groups-transact-sql.md
-    - name: オブジェクト エクスプローラーの詳細を使用した可用性グループの監視
-      href: use-object-explorer-details-to-monitor-availability-groups.md
-    - name: 可用性グループのプロパティの表示
-      href: view-availability-group-properties-sql-server.md
-    - name: 可用性レプリカのプロパティの表示
-      href: view-availability-replica-properties-sql-server.md
-    - name: 可用性グループ リスナーのプロパティの表示
-      href: view-availability-group-listener-properties-sql-server.md
+    - name: 構成
+      href: creation-and-configuration-of-availability-groups-sql-server.md
+      items:
+        - name: AlwaysOn 可用性グループの有効化と無効化
+          href: enable-and-disable-always-on-availability-groups-sql-server.md
+        - name: AlwaysOn 可用性グループのエンドポイントを作成する (PowerShell)
+          href: database-mirroring-always-on-availability-groups-powershell.md
+        - name: 可用性レプリカを追加または変更する場合のエンドポイント URL の指定
+          href: specify-endpoint-url-adding-or-modifying-availability-replica.md
+        - name: 可用性グループへのセカンダリ レプリカの参加
+          href: join-a-secondary-replica-to-an-availability-group-sql-server.md
+        - name: AlwaysOn セカンダリ データベース上のデータ移動の開始
+          href: start-data-movement-on-an-always-on-secondary-database-sql-server.md
+        - name: 可用性グループに対するセカンダリ データベースの手動準備
+          href: manually-prepare-a-secondary-database-for-an-availability-group-sql-server.md
+        - name: 可用性グループへのセカンダリ データベースの参加
+          href: join-a-secondary-database-to-an-availability-group-sql-server.md
+        - name: 可用性グループへのセカンダリ レプリカの追加
+          href: add-a-secondary-replica-to-an-availability-group-sql-server.md
+        - name: 可用性グループへのレプリカ追加ウィザードの使用
+          href: use-the-add-replica-to-availability-group-wizard-sql-server-management-studio.md
+        - name: Azure のレプリカ追加ウィザードの使用
+          href: use-the-add-azure-replica-wizard-sql-server.md
+        - name: 可用性グループへのデータベースの追加
+          href: availability-group-add-a-database.md
+        - name: 可用性グループへのデータベース追加ウィザードの使用
+          href: availability-group-add-database-to-group-wizard.md
+        - name: 可用性グループ リスナーの作成または構成
+          href: create-or-configure-an-availability-group-listener-sql-server.md
+        - name: 可用性グループの読み取り専用ルーティングの構成
+          href: configure-read-only-routing-for-an-availability-group-sql-server.md
+        - name: 可用性グループからのセカンダリ データベースの削除 (SQL Server)
+          href: remove-a-secondary-database-from-an-availability-group-sql-server.md
+        - name: 可用性グループからのプライマリ データベースの削除
+          href: remove-a-primary-database-from-an-availability-group-sql-server.md
+        - name: 可用性グループからのセカンダリ レプリカの削除
+          href: remove-a-secondary-replica-from-an-availability-group-sql-server.md
+        - name: 可用性グループの削除
+          href: remove-an-availability-group-sql-server.md
+        - name: 可用性グループ リスナーの削除
+          href: remove-an-availability-group-listener-sql-server.md
+        - name: AlwaysOn 可用性グループの構成のトラブルシューティング
+          href: troubleshoot-always-on-availability-groups-configuration-sql-server.md
+    - name: 管理
+      items:
+        - name: 可用性グループの計画的な手動フェールオーバーの実行
+          href: perform-a-planned-manual-failover-of-an-availability-group-sql-server.md
+        - name: 可用性グループの強制手動フェールオーバーの実行
+          href: perform-a-forced-manual-failover-of-an-availability-group-sql-server.md
+        - name: 可用性グループのフェールオーバー ウィザードの使用
+          href: use-the-fail-over-availability-group-wizard-sql-server-management-studio.md
+        - name: 可用性レプリカの可用性モードの変更
+          href: change-the-availability-mode-of-an-availability-replica-sql-server.md
+        - name: 可用性レプリカのフェールオーバー モードの変更
+          href: change-the-failover-mode-of-an-availability-replica-sql-server.md
+        - name: 自動フェールオーバーの条件を制御する柔軟なフェールオーバー ポリシーの構成
+          href: configure-flexible-automatic-failover-policy.md
+        - name: 可用性レプリカでのバックアップの構成
+          href: configure-backup-on-availability-replicas-sql-server.md
+        - name: 可用性レプリカでの読み取り専用アクセスの構成
+          href: configure-read-only-access-on-an-availability-replica-sql-server.md
+        - name: 可用性データベースの中断
+          href: suspend-an-availability-database-sql-server.md
+        - name: 可用性データベースの再開
+          href: resume-an-availability-database-sql-server.md
+        - name: 可用性レプリカのセッション タイムアウト期間の変更
+          href: change-the-session-timeout-period-for-an-availability-replica-sql-server.md
+        - name: 可用性グループをオフラインにする
+          href: ../../take-an-availability-group-offline-sql-server.md
+        - name: サーバー インスタンスの HADR クラスター コンテキストの変更
+          href: change-the-hadr-cluster-context-of-server-instance-sql-server.md
+        - name: 失敗したファイルの追加操作のトラブルシューティング (AlwaysOn 可用性グループ)
+          href: troubleshoot-a-failed-add-file-operation-always-on-availability-groups.md
+    - name: 監視
+      href: monitoring-of-availability-groups-sql-server.md
+      items:
+        - name: 可用性グループの監視 (T-SQL)
+          href: monitor-availability-groups-transact-sql.md
+        - name: オブジェクト エクスプローラーの詳細を使用した可用性グループの監視
+          href: use-object-explorer-details-to-monitor-availability-groups.md
+        - name: 可用性グループのプロパティの表示
+          href: view-availability-group-properties-sql-server.md
+        - name: 可用性レプリカのプロパティの表示
+          href: view-availability-replica-properties-sql-server.md
+        - name: 可用性グループ リスナーのプロパティの表示
+          href: view-availability-group-listener-properties-sql-server.md
 - name: 概念
   items:
-  - name: 構成
-    items:
-    - name: Failover Clustering and AlwaysOn Availability Groups
-      href: failover-clustering-and-always-on-availability-groups-sql-server.md
-    - name: フェールオーバーとフェールオーバー モード
-      href: failover-and-failover-modes-always-on-availability-groups.md
-    - name: 可用性グループの自動フェールオーバーのための柔軟なフェールオーバー ポリシー
-      href: flexible-automatic-failover-policy-availability-group.md
-    - name: 可用性グループのデータベースのためのログインとジョブの管理
-      href: ../../logins-and-jobs-for-availability-group-databases.md
-  - name: 管理
-    href: administration-of-an-availability-group-sql-server.md
-    items:
-    - name: 可用性レプリカ間のセッション中に発生する可能性のあるエラー (SQL Server)
-      href: possible-failures-during-sessions-between-availability-replicas-sql-server.md
-    - name: セカンダリ レプリカでのバックアップ
-      href: active-secondaries-backup-on-secondary-replicas-always-on-availability-groups.md
-    - name: 読み取り可能なセカンダリ レプリカ
-      href: active-secondaries-readable-secondary-replicas-always-on-availability-groups.md
-    - name: ダウンタイムとデータ損失を最小限に抑えた可用性グループ サーバーのアップグレードおよび更新
-      href: upgrading-always-on-availability-group-replica-instances.md
-  - name: 接続
-    items:
-    - name: クライアント接続
-      href: about-client-connection-access-to-availability-replicas-sql-server.md
-    - name: クライアント接続
-      href: ../../listeners-client-connectivity-application-failover.md
-    - name: AlwaysOn クライアント接続
-      href: always-on-client-connectivity-sql-server.md
-  - name: 相互運用性
-    href: always-on-availability-groups-interoperability-sql-server.md
-    items:
-    - name: 包含データベースと Always On 可用性グループ
-      href: contained-databases-with-always-on-availability-groups-sql-server.md
-    - name: データベース ミラーリングまたは AlwaysOn 可用性グループではサポートされない複数データベースにまたがるトランザクション
-      href: transactions-always-on-availability-and-database-mirroring.md
-    - name: AlwaysOn 可用性グループを含むデータベース スナップショット
-      href: database-snapshots-with-always-on-availability-groups-sql-server.md
-    - name: 暗号化されたデータベースと AlwaysOn 可用性グループ
-      href: encrypted-databases-with-always-on-availability-groups-sql-server.md
-    - name: FILESTREAM および FileTable と AlwaysOn 可用性グループ
-      href: filestream-and-filetable-with-always-on-availability-groups-sql-server.md
-    - name: ログ配布から AlwaysOn 可用性グループへの移行の前提条件 (SQL Server)
-      href: prereqs-migrating-log-shipping-to-always-on-availability-groups.md
-    - name: リモート BLOB ストア (RBS) と AlwaysOn 可用性グループ
-      href: remote-blob-store-rbs-and-always-on-availability-groups-sql-server.md
-    - name: AlwaysOn 可用性グループ用のレプリケーションの構成
-      href: configure-replication-for-always-on-availability-groups-sql-server.md
-    - name: AlwaysOn パブリケーション データベースのメンテナンス
-      href: maintaining-an-always-on-publication-database-sql-server.md
-    - name: レプリケーション サブスクライバーと AlwaysOn 可用性グループ
-      href: replication-subscribers-and-always-on-availability-groups-sql-server.md
-    - name: レプリケーション、変更の追跡、変更データ キャプチャ、および AlwaysOn 可用性グループ
-      href: replicate-track-change-data-capture-always-on-availability.md
-    - name: Analysis Services と Always On 可用性グループ
-      href: analysis-services-with-always-on-availability-groups.md
-    - name: Reporting Services と AlwaysOn 可用性グループ
-      href: reporting-services-with-always-on-availability-groups-sql-server.md
-    - name: Service Broker と AlwaysOn 可用性グループ
-      href: service-broker-with-always-on-availability-groups-sql-server.md
+    - name: 構成
+      items:
+        - name: Failover Clustering and AlwaysOn Availability Groups
+          href: failover-clustering-and-always-on-availability-groups-sql-server.md
+        - name: フェールオーバーとフェールオーバー モード
+          href: failover-and-failover-modes-always-on-availability-groups.md
+        - name: 可用性グループの自動フェールオーバーのための柔軟なフェールオーバー ポリシー
+          href: flexible-automatic-failover-policy-availability-group.md
+        - name: 可用性グループのデータベースのためのログインとジョブの管理
+          href: ../../logins-and-jobs-for-availability-group-databases.md
+    - name: 管理
+      href: administration-of-an-availability-group-sql-server.md
+      items:
+        - name: 可用性レプリカ間のセッション中に発生する可能性のあるエラー (SQL Server)
+          href: possible-failures-during-sessions-between-availability-replicas-sql-server.md
+        - name: セカンダリ レプリカでのバックアップ
+          href: active-secondaries-backup-on-secondary-replicas-always-on-availability-groups.md
+        - name: 読み取り可能なセカンダリ レプリカ
+          href: active-secondaries-readable-secondary-replicas-always-on-availability-groups.md
+        - name: ダウンタイムとデータ損失を最小限に抑えた可用性グループ サーバーのアップグレードおよび更新
+          href: upgrading-always-on-availability-group-replica-instances.md
+    - name: 接続
+      items:
+        - name: クライアント接続
+          href: about-client-connection-access-to-availability-replicas-sql-server.md
+        - name: クライアント接続
+          href: ../../listeners-client-connectivity-application-failover.md
+        - name: AlwaysOn クライアント接続
+          href: always-on-client-connectivity-sql-server.md
+    - name: 相互運用性
+      href: always-on-availability-groups-interoperability-sql-server.md
+      items:
+        - name: 包含データベースと Always On 可用性グループ
+          href: contained-databases-with-always-on-availability-groups-sql-server.md
+        - name: データベース ミラーリングまたは AlwaysOn 可用性グループではサポートされない複数データベースにまたがるトランザクション
+          href: transactions-always-on-availability-and-database-mirroring.md
+        - name: AlwaysOn 可用性グループを含むデータベース スナップショット
+          href: database-snapshots-with-always-on-availability-groups-sql-server.md
+        - name: 暗号化されたデータベースと AlwaysOn 可用性グループ
+          href: encrypted-databases-with-always-on-availability-groups-sql-server.md
+        - name: FILESTREAM および FileTable と AlwaysOn 可用性グループ
+          href: filestream-and-filetable-with-always-on-availability-groups-sql-server.md
+        - name: ログ配布から AlwaysOn 可用性グループへの移行の前提条件 (SQL Server)
+          href: prereqs-migrating-log-shipping-to-always-on-availability-groups.md
+        - name: リモート BLOB ストア (RBS) と AlwaysOn 可用性グループ
+          href: remote-blob-store-rbs-and-always-on-availability-groups-sql-server.md
+        - name: AlwaysOn 可用性グループ用のレプリケーションの構成
+          href: configure-replication-for-always-on-availability-groups-sql-server.md
+        - name: AlwaysOn パブリケーション データベースのメンテナンス
+          href: maintaining-an-always-on-publication-database-sql-server.md
+        - name: レプリケーション サブスクライバーと AlwaysOn 可用性グループ
+          href: replication-subscribers-and-always-on-availability-groups-sql-server.md
+        - name: レプリケーション、変更の追跡、変更データ キャプチャ、および AlwaysOn 可用性グループ
+          href: replicate-track-change-data-capture-always-on-availability.md
+        - name: Analysis Services と Always On 可用性グループ
+          href: analysis-services-with-always-on-availability-groups.md
+        - name: Reporting Services と AlwaysOn 可用性グループ
+          href: reporting-services-with-always-on-availability-groups-sql-server.md
+        - name: Service Broker と AlwaysOn 可用性グループ
+          href: service-broker-with-always-on-availability-groups-sql-server.md
 - name: リファレンス
   items:
-  - name: AlwaysOn 可用性グループの Transact-SQL ステートメントの概要
-    href: transact-sql-statements-for-always-on-availability-groups.md
-  - name: AlwaysOn 可用性グループの PowerShell コマンドレットの概要
-    href: overview-of-powershell-cmdlets-for-always-on-availability-groups-sql-server.md
-  - name: 可用性グループ ポリシー
-    href: always-on-policies-for-operational-issues-always-on-availability.md
-    items:
-    - name: AlwaysOn ポリシーを使用した可用性グループの正常性の確認
-      href: use-always-on-policies-to-view-the-health-of-an-availability-group-sql-server.md
-    - name: AlwaysOn ダッシュボードの使用 (SQL Server Management Studio)
-      href: use-the-always-on-dashboard-sql-server-management-studio.md
-    - name: オプション (SQLServer AlwaysOn、ダッシュ ボード ページ)
-      href: options-sql-server-always-on-dashboard-page.md
-    - name: ポリシー評価の結果 (AlwaysOn)
-      href: policy-evaluation-result-always-on.md
-    - name: WSFC クラスター サービスはオフライン
-      href: wsfc-cluster-service-is-offline.md
-    - name: 可用性グループがオフライン
-      href: availability-group-is-offline.md
-    - name: 可用性グループの自動フェールオーバーの準備ができていない
-      href: availability-group-is-not-ready-for-automatic-failover.md
-    - name: 一部の可用性レプリカでデータが同期されない
-      href: some-availability-replicas-are-not-synchronizing-data.md
-    - name: いくつかの同期のレプリカが同期されていません
-      href: some-synchronous-replicas-are-not-synchronized.md
-    - name: いくつかの可用性レプリカが、正常なロールを持っていません
-      href: some-availability-replicas-do-not-have-a-healthy-role.md
-    - name: いくつかの可用性レプリカが切断されている
-      href: some-availability-replicas-are-disconnected.md
-    - name: 正常なロールのない可用性レプリカ
-      href: availability-replica-does-not-have-a-healthy-role.md
-    - name: 可用性レプリカが切断されている
-      href: availability-replica-is-disconnected.md
-    - name: 可用性データベースのデータ同期状態が正常でない
-      href: data-synchronization-state-of-availability-database-is-not-healthy.md
-    - name: 可用性レプリカが参加していない
-      href: availability-replica-is-not-joined.md
-    - name: 可用性データベースが中断されている
-      href: availability-database-is-suspended.md
-    - name: セカンダリ データベースが参加していない
-      href: secondary-database-is-not-joined.md
-    - name: 一部の可用性データベースのデータ同期状態が正常ではない
-      href: data-synchronization-state-of-some-availability-database-is-not-healthy.md
-  - name: 可用性グループのプロパティ
-    href: availability-group-properties-new-availability-group-general-page.md
-    items:
-    - name: 可用性レプリカのプロパティ ([全般] ページ)
-      href: availability-replica-properties-general-page.md
-    - name: 可用性グループのプロパティ:新しい可用性グループ ([バックアップの設定] ページ)
-      href: availability-group-properties-new-availability-group-backup-preferences-page.md
-  - name: 可用性グループ ウィザード
-    items:
-    - name: '[IP アドレスの追加] ダイアログ ボックス'
-      href: add-ip-address-dialog-box-sql-server-management-studio.md
-    - name: '[可用性グループ名の指定] ページ'
-      href: specify-availability-group-name-page.md
-    - name: '[データベースの選択] ページ'
-      href: select-databases-page-new-availability-group-wizard-and-add-database-wizard.md
-    - name: '[レプリカの指定] ページ'
-      href: specify-replicas-page-new-availability-group-wizard-add-replica-wizard.md
-    - name: '[最初のデータ同期を選択] ページ'
-      href: select-initial-data-synchronization-page-always-on-availability-group-wizards.md
-    - name: '[検証] ページ'
-      href: validation-page-always-on-availability-group-wizards.md
-    - name: '[概要] ページ'
-      href: summary-page-always-on-availability-group-wizards.md
-    - name: '[進行状況] ページ'
-      href: progress-page-always-on-availability-group-wizards.md
-    - name: '[結果] ページ'
-      href: results-page-always-on-availability-group-wizards.md
-    - name: '[新しい可用性グループ] ダイアログ ボックスの使用'
-      href: use-the-new-availability-group-dialog-box-sql-server-management-studio.md
-    - name: 既存のセカンダリ レプリカ ページへの接続 (レプリカの追加ウィザードとデータベース追加ウィザード)
-      href: connect-to-existing-secondary-replicas-page.md
-ms.openlocfilehash: a07546237c7524201f54da4352b746f2ea3f03a0
-ms.sourcegitcommit: a192814756570bcbce3b1dbbb05acb24a79d1530
-ms.translationtype: HT
-ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54457625"
+    - name: AlwaysOn 可用性グループの Transact-SQL ステートメントの概要
+      href: transact-sql-statements-for-always-on-availability-groups.md
+    - name: AlwaysOn 可用性グループの PowerShell コマンドレットの概要
+      href: overview-of-powershell-cmdlets-for-always-on-availability-groups-sql-server.md
+    - name: 可用性グループ ポリシー
+      href: always-on-policies-for-operational-issues-always-on-availability.md
+      items:
+        - name: AlwaysOn ポリシーを使用した可用性グループの正常性の確認
+          href: use-always-on-policies-to-view-the-health-of-an-availability-group-sql-server.md
+        - name: AlwaysOn ダッシュボードの使用 (SQL Server Management Studio)
+          href: use-the-always-on-dashboard-sql-server-management-studio.md
+        - name: オプション (SQLServer AlwaysOn、ダッシュ ボード ページ)
+          href: options-sql-server-always-on-dashboard-page.md
+        - name: ポリシー評価の結果 (AlwaysOn)
+          href: policy-evaluation-result-always-on.md
+        - name: WSFC クラスター サービスはオフライン
+          href: wsfc-cluster-service-is-offline.md
+        - name: 可用性グループがオフライン
+          href: availability-group-is-offline.md
+        - name: 可用性グループの自動フェールオーバーの準備ができていない
+          href: availability-group-is-not-ready-for-automatic-failover.md
+        - name: 一部の可用性レプリカでデータが同期されない
+          href: some-availability-replicas-are-not-synchronizing-data.md
+        - name: いくつかの同期のレプリカが同期されていません
+          href: some-synchronous-replicas-are-not-synchronized.md
+        - name: いくつかの可用性レプリカが、正常なロールを持っていません
+          href: some-availability-replicas-do-not-have-a-healthy-role.md
+        - name: いくつかの可用性レプリカが切断されている
+          href: some-availability-replicas-are-disconnected.md
+        - name: 正常なロールのない可用性レプリカ
+          href: availability-replica-does-not-have-a-healthy-role.md
+        - name: 可用性レプリカが切断されている
+          href: availability-replica-is-disconnected.md
+        - name: 可用性データベースのデータ同期状態が正常でない
+          href: data-synchronization-state-of-availability-database-is-not-healthy.md
+        - name: 可用性レプリカが参加していない
+          href: availability-replica-is-not-joined.md
+        - name: 可用性データベースが中断されている
+          href: availability-database-is-suspended.md
+        - name: セカンダリ データベースが参加していない
+          href: secondary-database-is-not-joined.md
+        - name: 一部の可用性データベースのデータ同期状態が正常ではない
+          href: data-synchronization-state-of-some-availability-database-is-not-healthy.md
+    - name: 可用性グループのプロパティ
+      href: availability-group-properties-new-availability-group-general-page.md
+      items:
+        - name: '可用性レプリカのプロパティ ([全般] ページ)'
+          href: availability-replica-properties-general-page.md
+        - name: '可用性グループのプロパティ:新しい可用性グループ ([バックアップの設定] ページ)'
+          href: availability-group-properties-new-availability-group-backup-preferences-page.md
+    - name: 可用性グループ ウィザード
+      items:
+        - name: '[IP アドレスの追加] ダイアログ ボックス'
+          href: add-ip-address-dialog-box-sql-server-management-studio.md
+        - name: '[可用性グループ名の指定] ページ'
+          href: specify-availability-group-name-page.md
+        - name: '[データベースの選択] ページ'
+          href: select-databases-page-new-availability-group-wizard-and-add-database-wizard.md
+        - name: '[レプリカの指定] ページ'
+          href: specify-replicas-page-new-availability-group-wizard-add-replica-wizard.md
+        - name: '[最初のデータ同期を選択] ページ'
+          href: select-initial-data-synchronization-page-always-on-availability-group-wizards.md
+        - name: '[検証] ページ'
+          href: validation-page-always-on-availability-group-wizards.md
+        - name: '[概要] ページ'
+          href: summary-page-always-on-availability-group-wizards.md
+        - name: '[進行状況] ページ'
+          href: progress-page-always-on-availability-group-wizards.md
+        - name: '[結果] ページ'
+          href: results-page-always-on-availability-group-wizards.md
+        - name: '[新しい可用性グループ] ダイアログ ボックスの使用'
+          href: use-the-new-availability-group-dialog-box-sql-server-management-studio.md
+        - name: 既存のセカンダリ レプリカ ページへの接続 (レプリカの追加ウィザードとデータベース追加ウィザード)
+          href: connect-to-existing-secondary-replicas-page.md

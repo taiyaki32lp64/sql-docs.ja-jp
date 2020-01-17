@@ -1,5 +1,5 @@
 ---
-title: sys.sp_cdc_get_ddl_history (TRANSACT-SQL) |Microsoft Docs
+title: sys.sp_cdc_get_ddl_history (Transact-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -21,18 +21,17 @@ helpviewer_keywords:
 ms.assetid: 4dee5e2e-d7e5-4fea-8037-a4c05c969b3a
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 657d7b6cc21c573d2d9535d36392f9b7eb94200f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: bb4622b36901afc7ff04eacbfe840a9adda5b214
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47827221"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68083733"
 ---
-# <a name="sysspcdcgetddlhistory-transact-sql"></a>sys.sp_cdc_get_ddl_history (Transact-SQL)
+# <a name="syssp_cdc_get_ddl_history-transact-sql"></a>sys.sp_cdc_get_ddl_history (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  指定されたキャプチャ インスタンスに関連付けられたデータ定義言語 (DDL) の変更履歴を返します。変更履歴は、指定されたキャプチャ インスタンスに対して変更データ キャプチャが有効にされた時点からの履歴になります。 変更データ キャプチャは、 [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のすべてのエディッションで使用できるわけではありません。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]の各エディションでサポートされる機能の一覧については、「 [SQL Server 2016 の各エディションがサポートする機能](~/sql-server/editions-and-supported-features-for-sql-server-2016.md)」を参照してください。  
+  そのキャプチャ インスタンスに対して変更データ キャプチャが有効にされて、指定したキャプチャ インスタンスに関連付けられたデータ定義言語 (DDL) の変更履歴を返します。 変更データ キャプチャは、 [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のすべてのエディッションで使用できるわけではありません。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]の各エディションでサポートされる機能の一覧については、「 [SQL Server 2016 の各エディションがサポートする機能](~/sql-server/editions-and-supported-features-for-sql-server-2016.md)」を参照してください。  
   
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -45,7 +44,7 @@ sys.sp_cdc_get_ddl_history [ @capture_instance = ] 'capture_instance'
   
 ## <a name="arguments"></a>引数  
  [ @capture_instance =] '*capture_instance*'  
- ソース テーブルに関連付けられたキャプチャ インスタンスの名前を指定します。 *capture_instance*は**sysname** NULL にすることはできません。  
+ ソース テーブルに関連付けられたキャプチャ インスタンスの名前です。 *capture_instance*は**sysname** NULL にすることはできません。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  0 (成功) または 1 (失敗)  
@@ -55,11 +54,11 @@ sys.sp_cdc_get_ddl_history [ @capture_instance = ] 'capture_instance'
 |列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
 |source_schema|**sysname**|ソース テーブルのスキーマ名です。|  
-|source_table|**sysname**|ソース テーブルの名前です。|  
+|source_table|**sysname**|ソース テーブルの名前。|  
 |capture_instance|**sysname**|キャプチャ インスタンスの名前です。|  
 |required_column_update|**bit**|DDL の変更で、ソース列に対して行われたデータ型の変更を反映するために、変更テーブルの列を更新する必要があったことを示します。|  
 |ddl_command|**nvarchar(max)**|ソース テーブルに適用された DDL ステートメントです。|  
-|ddl_lsn|**binary(10)**|DDL の変更に関連付けられたログ シーケンス番号 (LSN) です。|  
+|ddl_lsn|**binary(10)**|ログ シーケンス番号 (LSN) の DDL の変更に関連付けられています。|  
 |ddl_time|**datetime**|DDL の変更に関連付けられた時刻です。|  
   
 ## <a name="remarks"></a>コメント  
@@ -85,7 +84,7 @@ EXECUTE sys.sp_cdc_get_ddl_history
 GO  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [sys.sp_cdc_help_change_data_capture &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-cdc-help-change-data-capture-transact-sql.md)  
   
   

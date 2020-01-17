@@ -11,11 +11,11 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: 8becd7ad30acf1ea2a63feae4760091aede70c06
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56027583"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63033504"
 ---
 # <a name="schedule-the-policies"></a>ポリシーのスケジュール設定
   ここでは、前の作業でインポートしたベスト プラクティス ポリシーをスケジュールします。  

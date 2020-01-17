@@ -1,5 +1,5 @@
 ---
-title: sys.dm_exec_plan_attributes (TRANSACT-SQL) |Microsoft Docs
+title: sys.dm_exec_plan_attributes (Transact-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 10/20/2017
 ms.prod: sql
@@ -18,15 +18,14 @@ helpviewer_keywords:
 ms.assetid: dacf3ab3-f214-482e-aab5-0dab9f0a3648
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: c17f1ba2b6e57fe9194d4cbf4a6e365e65a89d6c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 4b6e5b28612efccafa9e2de0606eef821e341081
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47842600"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68255600"
 ---
-# <a name="sysdmexecplanattributes-transact-sql"></a>sys.dm_exec_plan_attributes (Transact-SQL)
+# <a name="sysdm_exec_plan_attributes-transact-sql"></a>sys.dm_exec_plan_attributes (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   プラン ハンドルで指定したプランのプラン属性ごとに 1 行のデータを返します。 このテーブル値関数を使用すると、キャッシュ キーの値やプランの同時実行数など、特定のプランに関する詳細情報を取得できます。  
@@ -47,7 +46,7 @@ sys.dm_exec_plan_attributes ( plan_handle )
   
 |列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
-|属性 (attribute)|**varchar(128)**|このプランに関連付けられている属性の名前。 この 1 つのすぐ下の表は、使用可能な属性、そのデータ型とその説明を一覧表示します。|  
+|attribute|**varchar(128)**|このプランに関連付けられている属性の名前。 この 1 つのすぐ下の表は、使用可能な属性、そのデータ型とその説明を一覧表示します。|  
 |value|**sql_variant**|プランに関連付けられている属性の値。|  
 |is_cache_key|**bit**|属性が、プランに対するキャッシュ参照キーの一部として使用されているかどうかを示します。|  
 
@@ -82,11 +81,11 @@ sys.dm_exec_plan_attributes ( plan_handle )
 ## <a name="permissions"></a>アクセス許可  
 
 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]、必要があります`VIEW SERVER STATE`権限。   
-[!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]が必要です、`VIEW DATABASE STATE`データベースの権限。   
+[!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] Premium レベルでは、必要があります、`VIEW DATABASE STATE`データベースの権限。 [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] Standard および Basic 階層は、必要があります、**サーバー管理者**または**Azure Active Directory 管理者**アカウント。   
 
 ## <a name="remarks"></a>コメント  
   
-## <a name="set-options"></a>オプションの設定  
+## <a name="set-options"></a>SET オプション  
  値のみで、同じコンパイル済みプランのコピーが異なる場合があります、 **set_options**列。 これは、異なる接続では、同じクエリに対して異なる SET オプション セットが使用されていることを示します。 通常、異なるオプション セットを使用することは望ましくありません。異なるオプション セットを使用すると、余分なコンパイルが発生し、プランの再利用が減少して、キャッシュ内にプランの複数のコピーが存在することが原因でプラン キャッシュが増加します。  
   
 ### <a name="evaluating-set-options"></a>SET オプションの評価  
@@ -169,8 +168,8 @@ GO
   
 ## <a name="see-also"></a>参照  
  [動的管理ビューと動的管理関数 &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
- [実行関連の動的管理ビューおよび関数&#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/execution-related-dynamic-management-views-and-functions-transact-sql.md)   
- [sys.dm_exec_cached_plans &#40です。TRANSACT-SQL と&#41 です。](../../relational-databases/system-dynamic-management-views/sys-dm-exec-cached-plans-transact-sql.md)   
+ [実行関連の動的管理ビューおよび関数&#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/execution-related-dynamic-management-views-and-functions-transact-sql.md)   
+ [sys.dm_exec_cached_plans &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-cached-plans-transact-sql.md)   
  [sys.databases &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md)   
  [sys.objects &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md)  
   

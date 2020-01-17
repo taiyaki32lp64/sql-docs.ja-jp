@@ -1,5 +1,5 @@
 ---
-title: absolute メソッド (SQLServerResultSet) |Microsoft Docs
+title: absolute メソッド (SQLServerResultSet) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: 638e8148-8ca0-4e1f-9ec2-04a11bc9809b
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 298e169fe2b67b16b55d607f504446c48893fc1b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 66bdbfa417077e70be7969b28ae851a0244e54ca
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47616940"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67956065"
 ---
 # <a name="absolute-method-sqlserverresultset"></a>absolute メソッド (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -41,13 +40,13 @@ public boolean absolute(int row)
  移動先の行番号を示す **int** です。 正の値、負の値、または 0 を指定できます。  
   
 ## <a name="return-value"></a>戻り値  
- **true**の指定された位置にカーソルが移動した場合。 **false**最初の行の前に、または最後の行より後である場合。  
+ カーソルが指定された位置に移動された場合は**true** 。 最初の行の前または最後の行の後の場合は**false** 。  
   
 ## <a name="exceptions"></a>例外  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- この絶対メソッドは、絶対 java.sql.ResultSet インターフェイスのメソッドによって指定されます。  
+ この absolute メソッドは、java.sql.ResultSet インターフェイスの absolute メソッドで規定されています。  
   
 ## <a name="see-also"></a>参照  
  [SQLServerResultSet のメンバー](../../../connect/jdbc/reference/sqlserverresultset-members.md)   

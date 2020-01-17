@@ -19,28 +19,27 @@ helpviewer_keywords:
 ms.assetid: 4e1a885d-eed1-4993-9c87-e6fd781f437d
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: 2a0b326eef888ebf36fded7ae4ab95fe9f1b6bc0
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: c326a5dd3a964209af0cc4834b91bca9071da9e2
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47785200"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67904580"
 ---
 # <a name="sysremoteservicebindings-transact-sql"></a>sys.remote_service_bindings (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  リモート サービス バインドごとに 1 行のデータを格納するカタログ ビューです。 
+  このカタログ ビューには、リモート サービス バインドごとに 1 行が含まれています。 
   
 |列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
-|**name**|**sysname**|リモート サービス バインドの名前。 Null を許容しません。|  
-|**remote_service_binding_id**|**int**|リモート サービス バインドの ID。 Null を許容しません。|  
-|**principal_id**|**int**|リモート サービス バインドを所有しているデータベース プリンシパルの ID。 NULL 値は許可されます。|  
-|**remote_service_name**|**nvarchar (256)**|バインドが適用されるリモート サービスの名前。 NULL 値は許可されます。|  
-|**service_contract_id**|**int**|バインドが適用されるコントラクトの ID。 値 0 は、このバインドがサービスのすべてのコントラクトに適用されることを表すワイルドカードです。 Null を許容しません。|  
-|**remote_principal_id**|**int**|リモート サービス バインドに指定されているユーザーの ID。 Service Broker では、このユーザーが所有する証明書を使用して、指定したコントラクトに基づき、指定したサービスと通信します。 NULL 値は許可されます。|  
-|**is_anonymous_on**|**bit**|リモート サービス バインドで ANONYMOUS セキュリティを使用します。 メッセージ交換を開始するユーザーの識別情報は、対象サービスに提供されません。 Null を許容しません。|  
+|**name**|**sysname**|このリモート サービス バインドの名前です。 Null を許容しません。|  
+|**remote_service_binding_id**|**int**|このリモート サービス バインドの ID。 Null を許容しません。|  
+|**principal_id**|**int**|このリモート サービス バインドを所有するデータベース プリンシパルの ID。 NULL 値を許容します。|  
+|**remote_service_name**|**nvarchar (256)**|このバインドが適用されるリモート サービスの名前。 NULL 値を許容します。|  
+|**service_contract_id**|**int**|このバインドが適用されているコントラクトの ID。 値 0 は、サービスのすべてのコントラクトにこのバインドが適用されることを意味するワイルドカードです。 Null を許容しません。|  
+|**remote_principal_id**|**int**|リモート サービス バインドで指定されたユーザーの ID。 Service Broker では、このユーザーが所有する証明書を使用して、指定したコントラクトに基づき、指定したサービスと通信します。 NULL 値を許容します。|  
+|**is_anonymous_on**|**bit**|このリモート サービス バインドでは、匿名セキュリティを使用します。 対象サービスには、メッセージ交換を開始したユーザーの id が指定されていません。 Null を許容しません。|  
   
 ## <a name="permissions"></a>アクセス許可  
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] 詳細については、「 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)」を参照してください。  

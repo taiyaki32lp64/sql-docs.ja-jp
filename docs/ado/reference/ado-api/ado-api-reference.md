@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: bfd96a4b-c913-45aa-9e4c-ec86ac364f3a
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 2b2f91a0b2ded038e89be6dfee29bea344ed010f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 9e3c71d7233e75e0c97cacf6ec35d86bd4c8df31
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47707410"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67921229"
 ---
 # <a name="ado-api-reference"></a>ADO の API リファレンス
 ADO のドキュメントのこのセクションには、各 ADO オブジェクト、コレクション、プロパティ、動的なプロパティ、メソッド、イベント、および列挙体のトピックが含まれています。 さらに、Microsoft Visual C と Windows Foundation のクラス (WFC) で使用する ADO 構文のインデックスの一覧が含まれています。  
@@ -45,9 +44,9 @@ ADO のドキュメントのこのセクションには、各 ADO オブジェ�
   
 -   [ADO のコード例](../../../ado/reference/ado-api/ado-code-examples.md)  
   
-## <a name="see-also"></a>参照  
- [付録 d: ADO サンプル](../../../ado/guide/appendixes/appendix-d-ado-samples.md)   
+## <a name="see-also"></a>関連項目  
+ [付録 D: ADO のサンプル](../../../ado/guide/appendixes/appendix-d-ado-samples.md)   
  [Microsoft ActiveX Data Objects (ADO)](../../../ado/microsoft-activex-data-objects-ado.md)   
- [付録 c: は、ADO を使用したプログラミング](../../../ado/guide/appendixes/appendix-c-programming-with-ado.md)   
- [付録 a: プロバイダー](../../../ado/guide/appendixes/appendix-a-providers.md)   
+ [付録 C: ADO を使用したプログラミング](../../../ado/guide/appendixes/appendix-c-programming-with-ado.md)   
+ [付録 A: プロバイダー](../../../ado/guide/appendixes/appendix-a-providers.md)   
  [ADO 履歴](../../../ado/guide/ado-history.md)

@@ -10,17 +10,20 @@ ms.topic: conceptual
 helpviewer_keywords:
 - RIGHT function
 ms.assetid: 83e70e75-4be5-4783-a8cf-032f82afe16e
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: 80f510579b9f86af61327761516427a643d3aaf3
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 1dcd15de93893b34a6842110767b2242fbc3a146
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47720600"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71297406"
 ---
 # <a name="right-ssis-expression"></a>RIGHT (SSIS 式)
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   指定された文字式の一番右の部分から指定された数の文字を返します。  
   
 ## <a name="syntax"></a>構文  

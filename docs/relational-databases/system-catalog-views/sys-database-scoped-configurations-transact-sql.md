@@ -1,5 +1,5 @@
 ---
-title: sys.database_scoped_configurations (TRANSACT-SQL) |Microsoft Docs
+title: database_scoped_configurations (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 05/14/2018
 ms.prod: sql
@@ -17,38 +17,38 @@ helpviewer_keywords:
 ms.assetid: 8899310a-3464-4d38-9f2f-88396c4e7dc2
 author: VanMSFT
 ms.author: vanto
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 00cfd52bfd6293e6875054fb7b7746b1ac52a7cb
-ms.sourcegitcommit: f62f70298651d6223fa5d215b6a7a0d2ffecbd0d
+ms.openlocfilehash: da115c8d4cf48cfbcd6190c88a83bee4e61ae5a1
+ms.sourcegitcommit: 27c267bf2a3cfaf2abcb5f3777534803bf4cffe5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/19/2018
-ms.locfileid: "51947656"
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73240768"
 ---
-# <a name="sysdatabasescopedconfigurations-transact-sql"></a>sys.database_scoped_configurations (TRANSACT-SQL)
+# <a name="sysdatabase_scoped_configurations-transact-sql"></a>database_scoped_configurations (Transact-sql)
+
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
-  構成ごとに 1 行が含まれています。 
-  
-|列名|データ型|説明|  
-|-----------------|---------------|-----------------|  
-|**configuration_id**|**int**|構成オプションの ID。|  
-|**name**|**nvarchar(60)**|構成オプションの名前。 可能な構成については、次を参照してください。 [ALTER DATABASE SCOPED CONFIGURATION &#40;TRANSACT-SQL&#41;](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md)します。|  
-|**value**|**sqlvariant**|プライマリ レプリカの場合は、この構成オプションの設定値です。|  
-|**value_for_secondary**|**sqlvariant**|セカンダリ レプリカの場合は、この構成オプションの設定値です。|  
-|**is_value_default**|**bit** |値のセットが既定値であるかどうかを指定します。|
-|**elevate_resumable**|nvarchar(60)|Db スコープのインデックス操作の再開可能なオプションの既定のセット| 
-  
-##  <a name="Permissions"></a> Permissions  
- ロール **public** のメンバーシップが必要です。  
-  
-## <a name="remarks"></a>コメント  
- 値として NULL が返される**value_for_secondary**、これは、セカンダリがプライマリに設定されていることを意味します。  
+構成ごとに1行の値を格納します。 
+
+|列名|データ型|Description|
+|-----------------|---------------|-----------------|
+|**configuration_id**|**int**|構成オプションの ID。|
+|**name**|**nvarchar(60)**|構成オプションの名前。 使用可能な構成の詳細については、「 [ALTER DATABASE &#40;スコープ&#41;構成 transact-sql](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md)」を参照してください。|
+|**value**|**sqlvariant**|プライマリレプリカのこの構成オプションに設定された値。|
+|**value_for_secondary**|**sqlvariant**|セカンダリレプリカのこの構成オプションに設定された値。|
+|**is_value_default**|**bit** |値が既定値に設定されているかどうかを指定します。|
+
+## <a name="Permissions"></a> アクセス許可
+
+ロール **public** のメンバーシップが必要です。
+
+## <a name="remarks"></a>備考
+
+**Value_for_secondary**の値として NULL が返された場合、セカンダリがプライマリに設定されていることを意味します。
  
- データベース スコープ構成設定はデータベースで継承されます。 つまり、特定のデータベースが復元されたり、アタッチされたりしたとき、既存の構成設定が残ります。
-  
-## <a name="see-also"></a>参照  
- [ALTER DATABASE SCOPED CONFIGURATION (Transact-SQL)](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md)  
-  
-  
+データベース スコープ構成設定はデータベースで継承されます。 つまり、特定のデータベースが復元されたり、アタッチされたりしたとき、既存の構成設定が残ります。
+
+## <a name="see-also"></a>「
+
+[ALTER DATABASE SCOPED CONFIGURATION (Transact-SQL)](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md)

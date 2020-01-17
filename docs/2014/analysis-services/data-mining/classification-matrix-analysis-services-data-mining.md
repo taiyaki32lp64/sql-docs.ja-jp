@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - mining models [Analysis Services], validating
@@ -19,12 +18,12 @@ ms.assetid: 5c12f202-2ed9-41fa-bee2-0f7ab3ff058a
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 7949729f3ebee87d06e5e591c46513c111b70016
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 22f8733c816014bbdd29b44c4ed85d5fc3d2127d
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53358894"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66085787"
 ---
 # <a name="classification-matrix-analysis-services---data-mining"></a>分類マトリックス (Analysis Services - データ マイニング)
   *分類マトリックス*は、モデルのすべてのケースについて、予測値が実際の値と一致したかどうかを判断してカテゴリに分類します。 各カテゴリのすべてのケースがカウントされ、合計がマトリックスに表示されます。 分類マトリックスは統計モデルの評価に使用する標準のツールで、 *混同行列*とも呼ばれます。  
@@ -85,6 +84,6 @@ ms.locfileid: "53358894"
 |リフト チャートおよびその他の精度チャートを作成する手順について説明します。|[テストおよび検証タスク、および操作方法 (データ マイニング)](testing-and-validation-tasks-and-how-tos-data-mining.md)|  
   
 ## <a name="see-also"></a>参照  
- [テストおよび検証 &#40;データ マイニング&#41;](testing-and-validation-data-mining.md)  
+ [テストおよび検証 (データ マイニング)](testing-and-validation-data-mining.md)  
   
   

@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 9e765fbd-f339-473c-8537-22f478e79696
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 9c6b6f864f5935ab6e814c3ceac822a930e25952
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 80ef9d283f90c50406477a7a651fb418694ae445
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47771650"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68027952"
 ---
 # <a name="altering-an-assembly"></a>アセンブリの変更
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

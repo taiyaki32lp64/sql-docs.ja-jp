@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 9533d3e0-e7c1-49de-a3a3-0cc4373a91cb
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 16651df836ac3fb87c5e28b4b8fa25088e9dd86a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 686ecc89f44bac4b219b760e55160f451a15c503
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47606802"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67997728"
 ---
 # <a name="set-exact-command"></a>SET EXACT コマンド
 異なる長さの 2 つの文字列を比較するための規則を指定します。  
@@ -35,7 +34,7 @@ SET EXACT ON | OFF
  正規表現が等価である文字の文字に一致する必要がありますを指定します。 比較式の末尾の空白は無視されます。 この比較では、2 つの式のうち、小さい方が長い式の長さが一致するように空白を右側に埋め込まれます。  
   
  OFF  
- (既定)。、等価である、式と一致するが文字の文字の右側にある式の末尾に到達するまでを指定します。  
+ (既定値。) 、等価である、式と一致するが文字の文字の右側にある式の末尾に到達するまでを指定します。  
   
 ## <a name="remarks"></a>コメント  
  両方の文字列が長さが同じ場合は、正確な設定の設定を指定しても効果はありません。  
@@ -51,7 +50,7 @@ SET EXACT ON | OFF
   
  次の表では、演算子の選択と設定の正確な設定が比較に影響を示します。 (アンダー スコアは、空白を表します)。  
   
-|比較|= オフ正確です|= の正確です|正確な ON または OFF = =|  
+|条件式|= オフ正確です|= の正確です|正確な ON または OFF = =|  
 |----------------|------------------|-----------------|--------------------------|  
 |"abc"="abc"|一致|一致|一致|  
 |"ab"="abc"|一致なし|一致なし|一致なし|  
@@ -66,5 +65,5 @@ SET EXACT ON | OFF
 |TRIM("___") =""|一致|一致|一致|  
 |""TRIM("___") を =|一致|一致|一致|  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [SET ANSI コマンド](../../odbc/microsoft/set-ansi-command.md)

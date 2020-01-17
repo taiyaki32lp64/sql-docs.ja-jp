@@ -10,18 +10,16 @@ ms.topic: reference
 ms.assetid: 953ee253-a4be-4f47-bbad-d2f6600207b2
 author: MightyPen
 ms.author: genemi
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: cdc506836eb1dea86c12225286a62802f586c21f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 2773078b8e442b1cfed70ccb9f4a8518b108b678
+ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47665590"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73789911"
 ---
 # <a name="integrated-kerberos-authentication-ole-db"></a>統合 Kerberos 認証 (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-[!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
 
   このサンプルでは、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client で、OLE DB を使用して、Kerberos 相互認証を行う方法を紹介しています。 このサンプルは、[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 以降で動作します。  
   
@@ -32,7 +30,7 @@ ms.locfileid: "47665590"
   
  また、顧客から提供された SPN を指定する必要があります。 .cpp ファイルで、"CPSPN" の部分を顧客から提供された SPN に変更してください。  
   
- INCLUDE 環境変数には、sqlncli.h を含むディレクトリが含まれています。 を確認します。 ole32.lib と oleaut32.lib を使用してコンパイルします。  
+ INCLUDE 環境変数に、sqlncli を含むディレクトリが含まれていることを確認します。 ole32.lib と oleaut32.lib を使用してコンパイルします。  
   
 ```  
 // compile with: ole32.lib oleaut32.lib  

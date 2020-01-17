@@ -15,11 +15,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: acf6d033595952186b411ef0e547858f8b59771b
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52769344"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62657237"
 ---
 # <a name="partitioning-element-dta"></a>Partitioning 要素 (DTA)
   データベース エンジン チューニング アドバイザーでの分析時に使用するパーティション分割構成が含まれます。  

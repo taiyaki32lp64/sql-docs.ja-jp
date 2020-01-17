@@ -8,17 +8,20 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: f50178e7-6d9a-45f9-bfce-61260aa882c1
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: a1119944ed0cc80ed8463cce0cee6b7130a0d211
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: c1d2cbcf5d9b6751bf0b5842af77462b1b753267
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47799280"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71294798"
 ---
 # <a name="change-data-capture-service-for-oracle-by-attunity-how-to-guide"></a>Change Data Capture Service for Oracle by Attunity 操作ガイド
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   このセクションでは、CDC Service 構成コンソールのタスクを実行する方法について説明します。  
   
 ## <a name="learn-how-to-use-the-cdc-service-for-oracle-service-configuration-ui"></a>CDC Service for Oracle のサービス構成 UI を使用する方法を学ぶ  

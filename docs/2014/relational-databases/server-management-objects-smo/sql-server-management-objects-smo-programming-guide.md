@@ -15,11 +15,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 4dfa741f79b0a6dec95250edd9f7eb8cee4afb1d
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52762094"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62655302"
 ---
 # <a name="sql-server-management-objects-smo-programming-guide"></a>SQL Server 管理オブジェクト (SMO) プログラミング ガイド
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 管理オブジェクト (SMO) の管理のすべての側面をプログラミングできるように設計されたオブジェクトのコレクションは、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]します。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] レプリケーション管理オブジェクト (RMO) は、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] レプリケーション管理をカプセル化するオブジェクトの集まりです。  

@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: f8da760e-aacb-4661-9f3a-2578d8c11e4e
 author: pmasl
 ms.author: pelopes
-manager: craigg
-ms.openlocfilehash: 0384f081f3c660bb54d75b72992b991e822ec630
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: f318dcaf176212414ccd0a82c006fa545a8a846f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47677960"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67929790"
 ---
 # <a name="reading-pages"></a>ページの読み取り
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

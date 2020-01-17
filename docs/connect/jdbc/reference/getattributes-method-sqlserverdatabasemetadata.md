@@ -1,5 +1,5 @@
 ---
-title: getAttributes メソッド (SQLServerDatabaseMetaData) |Microsoft Docs
+title: getAttributes メソッド (SQLServerDatabaseMetaData) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: 4dc784ed-4699-4197-9af5-6e03da80d14c
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 8e129702dea18ee9866aba2595ea357a739388b1
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 36543107ba8acd635f0e71fde903cab2576a7b17
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47754750"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67954075"
 ---
 # <a name="getattributes-method-sqlserverdatabasemetadata"></a>getAttributes メソッド (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -65,7 +64,7 @@ public java.sql.ResultSet getAttributes(java.lang.String catalog,
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- この getAttributes メソッドは、java.sql.DatabaseMetaData インターフェイスで getAttributes メソッドによって指定されます。  
+ この getAttributes メソッドは、java メタデータインターフェイスの getAttributes メソッドによって指定されます。  
   
 ## <a name="see-also"></a>参照  
  [SQLServerDatabaseMetaData のメソッド](../../../connect/jdbc/reference/sqlserverdatabasemetadata-methods.md)   

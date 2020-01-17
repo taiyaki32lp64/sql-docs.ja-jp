@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 helpviewer_keywords:
 - Reporting Services, backward compatibility
@@ -21,15 +20,15 @@ helpviewer_keywords:
 - initializing installations [Reporting Services]
 - behavior changes [Reporting Services]
 ms.assetid: 2a767f0f-84f2-4099-8784-1e37790f858e
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: b845480863facf66ff33c5d976531118edb2d4a9
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 91fa7a66981f3e36c7e25babffbf73dc2519a0c2
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56033193"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66109939"
 ---
 # <a name="behavior-changes-to-sql-server-reporting-services--in-sql-server-2014"></a>SQL Server 2014 における SQL Server Reporting Services の動作変更
   このトピックでは、 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]における動作変更について説明します。 動作変更によって、 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] の以前のバージョンに比べて、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]の機能の動作や操作方法が変わります。  
@@ -49,9 +48,9 @@ ms.locfileid: "56033193"
  ここでは、 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] SharePoint モードでの動作変更について説明します。  
   
 ### <a name="view-items-permission-will-not-download-shared-datasets-sharepoint-mode"></a>"アイテムの表示" 権限によって共有データセットがダウンロードされない (SharePoint モード)  
- **新しい動作:**「アイテムの表示」の SharePoint 権限を持つユーザーは、Reporting Services 共有データセットの内容をダウンロードできなくできます。 この動作の変更は、一貫性のあるレポート、データ ソース、およびモデルに対する「アイテムの表示」アクセス許可を持つようになりました。 「アイテムの表示」権限を持つユーザーの表示し、レポート、データ ソース、およびモデルを実行できますが、そのコンテンツをダウンロードすることはできません。  
+ **新しい動作:** 「アイテムの表示」の SharePoint 権限を持つユーザーは、Reporting Services 共有データセットの内容をダウンロードできなくできます。 この動作の変更は、一貫性のあるレポート、データ ソース、およびモデルに対する「アイテムの表示」アクセス許可を持つようになりました。 「アイテムの表示」権限を持つユーザーの表示し、レポート、データ ソース、およびモデルを実行できますが、そのコンテンツをダウンロードすることはできません。  
   
- **以前の動作:**「アイテムの表示」SharePoint 権限を持つユーザーは、Reporting Services 共有データセットのコンテンツをダウンロードできます。  
+ **以前の動作:** 「アイテムの表示」SharePoint 権限を持つユーザーは、Reporting Services 共有データセットのコンテンツをダウンロードできます。  
   
  SharePoint 権限レベルの詳細については、「 [ユーザー権限とアクセス許可レベル](https://technet.microsoft.com/library/cc721640.aspx)」を参照してください。  
   
@@ -68,12 +67,12 @@ ms.locfileid: "56033193"
 ### <a name="report-server-configuration-and-management-tools"></a>レポート サーバーの構成と管理のツール  
   
 #### <a name="configuration-manager-is-not-used-for-sharepoint-mode"></a>SharePoint モードで構成マネージャーが使用されない  
- **新しい動作:**[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] Configuration Manager が SharePoint モードのレポート サーバーをサポートしていません。 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] SharePoint モードの構成は、SharePoint サーバーの全体管理を使用して完了できるようになったため、 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 構成マネージャーでは SharePoint モードはサポートされなくなりました。 構成マネージャーは今後、ネイティブ モードのレポート サーバーに対してのみ使用されます。  
+ **新しい動作:** [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] Configuration Manager が SharePoint モードのレポート サーバーをサポートしていません。 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] SharePoint モードの構成は、SharePoint サーバーの全体管理を使用して完了できるようになったため、 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 構成マネージャーでは SharePoint モードはサポートされなくなりました。 構成マネージャーは今後、ネイティブ モードのレポート サーバーに対してのみ使用されます。  
   
 #### <a name="you-cannot-change-the-server-from-one-mode-to-another"></a>サーバーを別のモードに変更できない  
  **新しい動作:** サーバー モードを変更することはできません。 レポート サーバーをネイティブ モードとしてインストールした場合、それを変更または再構成して SharePoint モードにすることはできません。 SharePoint モードでインストールした場合は、レポート サーバーをネイティブ モードに変更できます。  
   
- **以前の動作:**[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] レポート サーバーを SharePoint モードでインストールします。 レポート サーバーをネイティブ モードに切り替えたい場合は、 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 構成マネージャーを開き、新しいネイティブ モード データベースを作成するか、または既存のネイティブ モード データベースに接続することで、ネイティブ モードに切り替えることができました。 また、 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 構成マネージャーを使用して、SharePoint モードからネイティブ モードに切り替えることもできました。  
+ **以前の動作:** インストール、 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] SharePoint モードでレポート サーバー。 レポート サーバーをネイティブ モードに切り替えたい場合は、 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 構成マネージャーを開き、新しいネイティブ モード データベースを作成するか、または既存のネイティブ モード データベースに接続することで、ネイティブ モードに切り替えることができました。 また、 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 構成マネージャーを使用して、SharePoint モードからネイティブ モードに切り替えることもできました。  
   
 ##  <a name="bkmk_kj"></a> SQL Server 2008 R2 Reporting Services における動作変更  
  ここでは、 [!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]の動作変更について説明します。  
@@ -82,7 +81,7 @@ ms.locfileid: "56033193"
 >  SQL Server 2008 R2 は SQL Server 2008 のマイナー バージョン アップグレードなので、SQL Server 2008 のセクションのコンテンツも確認することをお勧めします。  
   
 ### <a name="secureconnectionlevel-property-in-the-reporting-services-wmi-provider-library"></a>Reporting Services WMI プロバイダー ライブラリの SecureConnectionLevel プロパティ  
- WMI プロバイダー ライブラリで[!INCLUDE[ssKatmai](../includes/sskatmai-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]、 **SecureConnectionLevel**プロパティの値を許可する`0`、`1`、`2`、`3`で`0`Secure Socket Layer (SSL) が、Web サービス メソッドのいずれかの必要ないことを示す`3`SSL が必要なすべての Web サービス メソッドであることを示すと`1`と`2`Web サービス メソッドのサブセットを示しますSSL を必要とします。  [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]では、これらの値によって次の 2 つの設定のみを行うことができます。  
+ WMI プロバイダー ライブラリで[!INCLUDE[ssKatmai](../includes/sskatmai-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]、 **SecureConnectionLevel**プロパティの値を許可する`0`、`1`、`2`、`3`で`0`Secure Socket Layer (SSL) が、Web サービス メソッドのいずれかの必要ないことを示す`3`SSL が必要なすべての Web サービス メソッドであることを示すと`1`と`2`Web サービス メソッドのサブセットを示しますSSL を必要とします。 [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]では、これらの値によって次の 2 つの設定のみを行うことができます。  
   
 -   `0` は、いずれの Web サービス メソッドでも SSL が不要であることを示します。  
   

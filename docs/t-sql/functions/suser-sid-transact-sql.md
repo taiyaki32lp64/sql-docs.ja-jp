@@ -22,17 +22,16 @@ helpviewer_keywords:
 - identification numbers [SQL Server], logins
 - SUSER_SID function
 ms.assetid: 57b42a74-94e1-4326-85f1-701b9de53c7d
-author: MashaMSFT
-ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 0d4a3d885eb4f0d40d95f937ba252625e9e07de5
-ms.sourcegitcommit: 467b2c708651a3a2be2c45e36d0006a5bbe87b79
+author: VanMSFT
+ms.author: vanto
+ms.openlocfilehash: a31be66b07c6d5c463f5220e6359942cd507849b
+ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53979888"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "73981741"
 ---
-# <a name="susersid-transact-sql"></a>SUSER_SID (Transact-SQL)
+# <a name="suser_sid-transact-sql"></a>SUSER_SID (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   指定されたログイン名のセキュリティ ID 番号 (SID) を返します。  
@@ -48,12 +47,12 @@ SUSER_SID ( [ 'login' ] [ , Param2 ] )
   
 ## <a name="arguments"></a>引数  
  **'** *login* **'**  
-**適用対象**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
+**適用対象**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 以降
   
  ユーザーのログイン名を指定します。 *login* は **sysname** です。 *login* は省略可能で、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ログインか、[!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows ユーザーまたはグループを指定できます。 *login* の指定を省略すると、現在のセキュリティ コンテキストについての情報が返されます。 パラメーターに "NULL" という語が含まれていると、NULL が返されます。  
   
  *Param2*  
-**適用対象**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
+**適用対象**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 以降
   
  ログイン名を検証するかどうかを指定します。 *Param2* のデータ型は **int** で、省略可能です。 *Param2* が 0 の場合、ログイン名は検証されません。 *Param2* で 0 が指定されていない場合、Windows ログイン名と [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] に格納されたログイン名がまったく同じであるかどうかが確認されます。  
   
@@ -71,34 +70,34 @@ SUSER_SID ( [ 'login' ] [ , Param2 ] )
   
 ## <a name="examples"></a>使用例  
   
-### <a name="a-using-susersid"></a>A. SUSER_SID を使用する  
+### <a name="a-using-suser_sid"></a>A. SUSER_SID を使用する  
  次の例では、現在のセキュリティ コンテキストのセキュリティ ID 番号 (SID) を返します。  
   
 ```  
 SELECT SUSER_SID();  
 ```  
   
-### <a name="b-using-susersid-with-a-specific-login"></a>B. SUSER_SID を特定のログインと共に使用する  
+### <a name="b-using-suser_sid-with-a-specific-login"></a>B. SUSER_SID を特定のログインと共に使用する  
  次の例では、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] における `sa` というログインのセキュリティ ID 番号を返します。  
   
-**適用対象**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
+**適用対象**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 以降
   
 ```  
 SELECT SUSER_SID('sa');  
 GO  
 ```  
   
-### <a name="c-using-susersid-with-a-windows-user-name"></a>C. SUSER_SID を Windows ユーザー名と共に使用する  
+### <a name="c-using-suser_sid-with-a-windows-user-name"></a>C. SUSER_SID を Windows ユーザー名と共に使用する  
  次の例では、Windows ユーザーである `London\Workstation1` のセキュリティ ID 番号を返します。  
   
-**適用対象**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
+**適用対象**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 以降
   
 ```  
 SELECT SUSER_SID('London\Workstation1');  
 GO  
 ```  
   
-### <a name="d-using-susersid-as-a-default-constraint"></a>D. SUSER_SID を DEFAULT 制約として使用する  
+### <a name="d-using-suser_sid-as-a-default-constraint"></a>D. SUSER_SID を DEFAULT 制約として使用する  
  次の例では、`SUSER_SID` ステートメントで `DEFAULT` を `CREATE TABLE` 制約として使用しています。  
   
 ```  
@@ -119,7 +118,7 @@ GO
 ### <a name="e-comparing-the-windows-login-name-to-the-login-name-stored-in-sql-server"></a>E. Windows ログイン名と SQL Server に格納されたログイン名を比較する  
  次の例は、*Param2* を使用して Windows から SID を取得する方法を示しています。この例では、その SID を `SUSER_SNAME` 関数への入力として使用しています。 Windows に格納された形式 (`TestComputer\User`) でログインを指定し、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] に格納された形式 (`TESTCOMPUTER\User`) のログインを取得しています。  
   
-**適用対象**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
+**適用対象**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 以降
   
 ```  
 SELECT SUSER_SNAME(SUSER_SID('TestComputer\User', 0));  
@@ -129,6 +128,6 @@ SELECT SUSER_SNAME(SUSER_SID('TestComputer\User', 0));
  [ORIGINAL_LOGIN &#40;Transact-SQL&#41;](../../t-sql/functions/original-login-transact-sql.md)   
  [CREATE TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql.md)   
  [binary と varbinary &#40;Transact-SQL&#41;](../../t-sql/data-types/binary-and-varbinary-transact-sql.md)   
- [システム関数 &#40;Transact-SQL&#41;](../../relational-databases/system-functions/system-functions-for-transact-sql.md)  
+ [システム関数 &#40;Transact-SQL&#41;](../../relational-databases/system-functions/system-functions-category-transact-sql.md)  
   
   

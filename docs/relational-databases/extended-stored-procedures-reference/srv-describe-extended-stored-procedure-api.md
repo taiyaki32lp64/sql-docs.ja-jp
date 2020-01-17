@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: 2115600e-5ce7-4be0-9cd3-a1dd1fab0729
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: de810e283429f36c52258a53b22addff96be8ba1
-ms.sourcegitcommit: 480961f14405dc0b096aa8009855dc5a2964f177
+ms.openlocfilehash: f8904e3c08789eb0cb50b0f5a20b66c851578ac5
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/22/2019
-ms.locfileid: "54419898"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68064124"
 ---
 # <a name="srvdescribe-extended-stored-procedure-api"></a>srv_describe (拡張ストアド プロシージャ API)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

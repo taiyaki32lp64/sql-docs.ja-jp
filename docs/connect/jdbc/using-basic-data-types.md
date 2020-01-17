@@ -1,7 +1,7 @@
 ---
-title: 基本的なデータ型の使用 |Microsoft Docs
+title: 基本データ型を使用する |Microsoft Docs
 ms.custom: ''
-ms.date: 07/19/2018
+ms.date: 08/12/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: d7044936-5b8c-4def-858c-28a11ef70a97
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: f8aa3b6b211095f3c27693928dab6518a6a2e895
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: abbd2aa3c277ad36f419de849b02433f17d27403
+ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47759410"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "69026509"
 ---
 # <a name="using-basic-data-types"></a>基本データ型の使用
 
@@ -34,15 +33,15 @@ ms.locfileid: "47759410"
 | binary             | BINARY                                             | byte[]                       |
 | bit                | BIT                                                | boolean                      |
 | char               | CHAR                                               | String                       |
-| 日付               | [DATE]                                               | java.sql.Date                |
+| date               | DATE                                               | java.sql.Date                |
 | DATETIME           | timestamp                                          | java.sql.Timestamp           |
 | datetime2          | timestamp                                          | java.sql.Timestamp           |
 | datetimeoffset (2) | microsoft.sql.Types.DATETIMEOFFSET                 | microsoft.sql.DateTimeOffset |
-| Decimal            | [DECIMAL]                                            | java.math.BigDecimal         |
-| FLOAT              | DOUBLE                                             | 倍精度浮動小数点                       |
+| Decimal            | DECIMAL                                            | java.math.BigDecimal         |
+| FLOAT              | DOUBLE                                             | double                       |
 | image              | LONGVARBINARY                                      | byte[]                       |
-| ssNoversion                | INTEGER                                            | ssNoversion                          |
-| money              | [DECIMAL]                                            | java.math.BigDecimal         |
+| INT                | INTEGER                                            | INT                          |
+| money              | DECIMAL                                            | java.math.BigDecimal         |
 | NCHAR              | CHAR<br /><br /> NCHAR (Java SE 6.0)               | String                       |
 | ntext              | LONGVARCHAR<br /><br /> LONGNVARCHAR (Java SE 6.0) | String                       |
 | NUMERIC            | NUMERIC                                            | java.math.BigDecimal         |
@@ -51,7 +50,7 @@ ms.locfileid: "47759410"
 | REAL               | real                                               | FLOAT                        |
 | smalldatetime      | timestamp                                          | java.sql.Timestamp           |
 | SMALLINT           | SMALLINT                                           | short                        |
-| SMALLMONEY         | [DECIMAL]                                            | java.math.BigDecimal         |
+| SMALLMONEY         | DECIMAL                                            | java.math.BigDecimal         |
 | text               | LONGVARCHAR                                        | String                       |
 | time               | TIME (1)                                           | java.sql.Time (1)            |
 | TIMESTAMP          | BINARY                                             | byte[]                       |
@@ -69,7 +68,7 @@ ms.locfileid: "47759410"
   
 (1) 時刻の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データ型を持つ java.sql.Time を使用する場合は、**sendTimeAsDatetime** 接続プロパティを false に設定します。  
   
-(値をプログラムでアクセスできます 2) **datetimeoffset**で[DateTimeOffset クラス](../../connect/jdbc/reference/datetimeoffset-class.md)します。  
+(2) **datetimeoffset** の値には、 [datetimeoffset クラス](../../connect/jdbc/reference/datetimeoffset-class.md)を使用してプログラムでアクセスできます。  
   
 以下のセクションでは、JDBC ドライバーと基本データ型の使用方法の例を示します。 Java アプリケーションの基本データ型の使用方法の詳細例については、「[基本データ型のサンプル](../../connect/jdbc/basic-data-types-sample.md)」をご覧ください。  
   
@@ -86,11 +85,11 @@ ms.locfileid: "47759410"
 [!code[JDBC#UsingBasicDataTypes2](../../connect/jdbc/codesnippet/Java/using-basic-data-types_2.java)]  
   
 > [!NOTE]  
-> GetUnicodeStream とスケールの方法で getBigDecimal は非推奨し、は、JDBC ドライバーでサポートされていません。
+> Scale メソッドを使用した getUnicodeStream および getBigDecimal は非推奨とされており、JDBC ドライバーではサポートされていません。
 
 ## <a name="updating-data-by-data-type"></a>データ型によるデータの更新
 
-データ ソースのフィールドの値を更新した場合、更新プログラムのいずれかを使用して、\<型 >、SQLServerResultSet クラスのメソッド。 次の例では、[updateInt](../../connect/jdbc/reference/updateint-method-sqlserverresultset.md) メソッドを [updateRow](../../connect/jdbc/reference/updaterow-method-sqlserverresultset.md) メソッドと組み合わせて使用し、データ ソース内のデータを更新します。  
+データソースのフィールドの値を更新する必要がある場合は、SQLServerResultSet クラスのいずれか\<の更新の種類 > メソッドを使用します。 次の例では、[updateInt](../../connect/jdbc/reference/updateint-method-sqlserverresultset.md) メソッドを [updateRow](../../connect/jdbc/reference/updaterow-method-sqlserverresultset.md) メソッドと組み合わせて使用し、データ ソース内のデータを更新します。  
   
 [!code[JDBC#UsingBasicDataTypes3](../../connect/jdbc/codesnippet/Java/using-basic-data-types_3.java)]  
   
@@ -103,7 +102,7 @@ ms.locfileid: "47759410"
   
 [!code[JDBC#UsingBasicDataTypes4](../../connect/jdbc/codesnippet/Java/using-basic-data-types_4.java)]  
   
-パラメーター化クエリの詳細については、次を参照してください。[パラメーターの SQL ステートメントを使って](../../connect/jdbc/using-an-sql-statement-with-parameters.md)します。  
+パラメーター化されたクエリの詳細については、「パラメーターを使用し[た SQL ステートメントの使用](../../connect/jdbc/using-an-sql-statement-with-parameters.md)」を参照してください。  
 
 ## <a name="passing-parameters-to-a-stored-procedure"></a>ストアド プロシージャにパラメーターを渡す
 
@@ -114,7 +113,7 @@ ms.locfileid: "47759410"
 > [!NOTE]  
 > この例では、結果セットはストアド プロシージャの実行結果で返されます。
 
-JDBC ドライバーでストアド プロシージャと入力パラメーターの使用に関する詳細については、次を参照してください。[ストアド プロシージャを使用して、入力パラメーターを持つ](../../connect/jdbc/using-a-stored-procedure-with-input-parameters.md)します。  
+ストアドプロシージャおよび入力パラメーターと共に JDBC ドライバーを使用する方法の詳細については、「[入力パラメーターを](../../connect/jdbc/using-a-stored-procedure-with-input-parameters.md)使用したストアドプロシージャの使用」を参照してください。  
 
 ## <a name="retrieving-parameters-from-a-stored-procedure"></a>ストアド プロシージャからのパラメーターの取得
 
@@ -125,7 +124,7 @@ JDBC ドライバーでストアド プロシージャと入力パラメータ�
 > [!NOTE]  
 > out パラメーターが返されるだけでなく、ストアド プロシージャの実行結果により作成された結果セットが返されることもあります。  
   
-JDBC driver を使用して、ストアド プロシージャと出力パラメーターを使用する方法の詳細については、次を参照してください。[ストアド プロシージャを使用して、出力パラメーターを持つ](../../connect/jdbc/using-a-stored-procedure-with-output-parameters.md)します。  
+JDBC driver とストアドプロシージャおよび出力パラメーターを使用する方法の詳細については、「 [output パラメーターを](../../connect/jdbc/using-a-stored-procedure-with-output-parameters.md)使用したストアドプロシージャの使用」を参照してください。  
 
 ## <a name="see-also"></a>参照
 

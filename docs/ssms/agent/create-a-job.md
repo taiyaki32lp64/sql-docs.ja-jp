@@ -11,16 +11,15 @@ helpviewer_keywords:
 - jobs [SQL Server Agent], creating
 - SQL Server Agent jobs, creating
 ms.assetid: b35af2b6-6594-40d1-9861-4d5dd906048c
-author: stevestein
-ms.author: sstein
-manager: craigg
+author: markingmyname
+ms.author: maghan
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: f323a029e881da8a6b2ef681cacc3bb12b118d51
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: da439ad37191df14d26f32623ec58454c79402b0
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52541973"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68264442"
 ---
 # <a name="create-a-job"></a>ジョブの作成
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -36,7 +35,7 @@ ms.locfileid: "52541973"
   
     [制限事項と制約事項](#Restrictions)  
   
-    [Security](#Security)  
+    [セキュリティ](#Security)  
   
 -   **ジョブを作成する方法:**  
   
@@ -56,7 +55,7 @@ ms.locfileid: "52541973"
   
 -   ローカル ジョブはローカル [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェントによってキャッシュに格納されます。 したがって、ジョブを変更すると、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェントは暗黙的にジョブをキャッシュに再登録します。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sp_add_jobserver **が呼び出されるまで** エージェントはジョブをキャッシュに格納しないので、 **sp_add_jobserver** を最後に呼び出す方が効率的です。  
   
-### <a name="Security"></a>Security  
+### <a name="Security"></a>セキュリティ  
   
 -   ジョブの所有者を変更するには、システム管理者でなければなりません。  
   
@@ -65,8 +64,8 @@ ms.locfileid: "52541973"
     > [!NOTE]  
     > ジョブの所有権を **sysadmin** 固定サーバー ロールのメンバーでないユーザーに変更し、そのジョブがプロキシ アカウントを必要とするジョブ ステップを実行する ( [!INCLUDE[ssIS](../../includes/ssis_md.md)] パッケージの実行など) 場合は、ユーザーがそのプロキシ アカウントにアクセスできることを確認してください。アクセスできない場合、ジョブは失敗します。  
   
-#### <a name="Permissions"></a>Permissions  
-詳細については、「 [Implement SQL Server Agent Security](../../ssms/agent/implement-sql-server-agent-security.md)」をご覧ください。  
+#### <a name="Permissions"></a>アクセス許可  
+詳細については、「 [SQL Server エージェントのセキュリティの実装](../../ssms/agent/implement-sql-server-agent-security.md)」をご覧ください。  
   
 ## <a name="SSMSProcedure"></a>SQL Server Management Studio の使用  
   
@@ -76,7 +75,7 @@ ms.locfileid: "52541973"
   
 2.  プラス記号をクリックして **[SQL Server エージェント]** を展開します。  
   
-3.  **[ジョブ]** フォルダーを右クリックし、**[新しいジョブ...]** を選択します。  
+3.  **[ジョブ]** フォルダーを右クリックし、 **[新しいジョブ]** を選択します。  
   
 4.  **[新しいジョブ]** ダイアログ ボックスの **[全般]** ページで、ジョブの全般的なプロパティを変更します。 このページで利用可能なオプションの詳細については、「[ジョブのプロパティ - [新しいジョブ] ([全般] ページ)](../../ssms/agent/job-properties-new-job-general-page.md)」を参照してください。  
   
@@ -86,9 +85,9 @@ ms.locfileid: "52541973"
   
 7.  **[警告]** ページで、ジョブの警告を編成します。 このページで利用可能なオプションの詳細については、「[ジョブのプロパティ - [新しいジョブ] ([警告] ページ)](../../ssms/agent/job-properties-new-job-alerts-page.md)」を参照してください。  
   
-8.   **[通知]** ページで、ジョブの完了時に [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェントが実行するアクションを設定します。 このページで利用可能なオプションの詳細については、「[ジョブのプロパティ - [新しいジョブ] ([通知] ページ)](../../ssms/agent/job-properties-new-job-notifications-page.md)」を参照してください。  
+8.  **[通知]** ページで、ジョブの完了時に [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェントが実行するアクションを設定します。 このページで利用可能なオプションの詳細については、「[ジョブのプロパティ - [新しいジョブ] ([通知] ページ)](../../ssms/agent/job-properties-new-job-notifications-page.md)」を参照してください。  
   
-9. **[ターゲット]** ページで、ジョブの対象サーバーを管理します。 このページで利用可能なオプションの詳細については、「[ジョブのプロパティ - [新しいジョブ] ([対象サーバー] ページ)](../../ssms/agent/job-properties-new-job-targets-page.md)」を参照してください。  
+9. **[ターゲット]** ページで、ジョブのターゲット サーバーを管理します。 このページで利用可能なオプションの詳細については、「[ジョブのプロパティ - [新しいジョブ] ([対象サーバー] ページ)](../../ssms/agent/job-properties-new-job-targets-page.md)」を参照してください。  
   
 10. 完了したら、 **[OK]** をクリックします。  
   

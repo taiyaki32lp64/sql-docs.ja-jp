@@ -1,49 +1,49 @@
 ---
-title: リモート テーブル コピー用の並列データ ウェアハウスの構成 |Microsoft Docs
-description: リモート テーブル コピー機能を使用して非アプライアンス サーバー上の SMP SQL Server データベースにテーブルをコピーする並列データ ウェアハウスを構成する方法について説明します。
+title: リモートテーブルのコピー
+description: リモートテーブルのコピー機能を使用して、非アプライアンスサーバー上の SMP SQL Server データベースにテーブルをコピーするように並列データウェアハウスを構成する方法について説明します。
 author: mzaman1
-manager: craigg
 ms.prod: sql
 ms.technology: data-warehouse
 ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: fdac0b6ed211e223c3fad7ba15ac79a282c61303
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.custom: seo-dt-2019
+ms.openlocfilehash: 6c9a0a29b543eb287c7e233d6b1ea77bb2a0d45c
+ms.sourcegitcommit: d587a141351e59782c31229bccaa0bff2e869580
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54123917"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74401262"
 ---
-# <a name="configure-parallel-data-warehouse-for-remote-table-copies"></a>リモート テーブル コピー用の並列データ ウェアハウスを構成します。
-リモート テーブル コピー機能を使用して非アプライアンス サーバー上の SMP SQL Server データベースにテーブルをコピーする SQL Server PDW を構成する方法について説明します。  
+# <a name="configure-parallel-data-warehouse-for-remote-table-copies"></a>リモートテーブルコピー用に並列データウェアハウスを構成する
+リモートテーブルのコピー機能を使用して、非アプライアンスサーバー上の SMP SQL Server データベースにテーブルをコピーする SQL Server PDW を構成する方法について説明します。  
   
-このトピックでは、リモート テーブルのコピーを構成するための構成手順のいずれかについて説明します。 すべての構成手順の一覧は、次を参照してください。[リモート テーブル コピー](remote-table-copy.md)します。  
+このトピックでは、リモートテーブルのコピーを構成するための構成手順の1つについて説明します。 すべての構成手順の一覧については、「[リモートテーブルのコピー](remote-table-copy.md)」を参照してください。  
   
-## <a name="before-you-begin"></a>はじめに  
-リモート テーブル コピーを使用する SQL Server PDW を構成するには次の操作を行う必要があります。  
+## <a name="before-you-begin"></a>開始する前に  
+リモートテーブルのコピーを使用するように SQL Server PDW を構成するには、次のことを行う必要があります。  
   
--   Analytics Platform System 管理者アカウントに直接ログインすることができます、  <strong>*appliance_domain*-AD01</strong>と <strong>*appliance_domain*-AD02</strong>ノード。  
+-   Analytics Platform システム管理者アカウントに、 <strong> *appliance_domain*の AD01</strong>ノードと<strong> *appliance_domain*</strong>ノードに直接ログインできるようにします。  
   
--   ホスト名または移行先サーバーの IP 名を知っています。  
+-   移行先サーバーのホスト名または IP 名を確認します。  
   
-## <a name="HowToPDW"></a>SQL Server PDW は、リモート テーブルのコピーを構成します。DNS のホスト名を更新します。  
-**CREATE REMOTE TABLE**ステートメント、リモート テーブルのコピーに使用される IP アドレスまたは SMP Windows システムの IP 名を使用して、移行先サーバーを指定します。 IP 名を使用するには、DNS サーバーに正常な名前解決のためのエントリを追加する必要があります。  
+## <a name="HowToPDW"></a>リモートテーブルのコピー用に SQL Server PDW を構成する: DNS でホスト名を更新する  
+リモートテーブルのコピーに使用される**CREATE REMOTE table**ステートメントでは、SMP Windows システムの ip アドレスまたは ip 名を使用して、移行先サーバーを指定します。 IP 名を使用するには、DNS サーバーに名前解決を成功させるためのエントリを追加する必要があります。  
   
 次の手順では、DNS サーバーを更新する方法を説明します。  
   
-1.  アクティブな AD ノードにログオン (通常 <strong>*appliance_domain*-AD01</strong>)。  
+1.  アクティブな AD ノード (通常は<strong> *appliance_domain*-AD01</strong>) にログオンします。  
   
-2.  DNS マネージャーを開きます。 下にあるこの**管理ツール**で、**開始**メニュー。  
+2.  DNS マネージャーを開きます。 これは、[**スタート**] メニューの [**管理ツール**] にあります。  
   
-3.  IP 名を追加するのにには、DNS マネージャーを使用します。  
+3.  DNS マネージャーを使用して、IP 名を追加します。  
   
 ## <a name="see-also"></a>参照  
 <!-- MISSING LINKS 
 [Common Metadata Query Examples &#40;SQL Server PDW&#41;](../sqlpdw/common-metadata-query-examples-sql-server-pdw.md)  
 -->
-[DNS フォワーダーを使用して非アプライアンス DNS 名を解決するには](use-a-dns-forwarder-to-resolve-non-appliance-dns-names.md)  
+[DNS フォワーダーを使用してアプライアンス以外の DNS 名を解決する](use-a-dns-forwarder-to-resolve-non-appliance-dns-names.md)  
 <!-- MISSING LINKS 
 [Security - Configure Domain Trusts &#40;SQL Server PDW&#41;](../sqlpdw/security-configure-domain-trusts-sql-server-pdw.md)  
 -->

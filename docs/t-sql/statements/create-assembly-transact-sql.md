@@ -22,19 +22,18 @@ helpviewer_keywords:
 ms.assetid: d8d1d245-c2c3-4325-be52-4fc1122c2079
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: 31eda87e2a1934c5f18d73540a502880590445e8
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: 276e7a88d7cd10f6ee98a6dde80d3f86c39b2c08
+ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53207661"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "73981987"
 ---
 # <a name="create-assembly-transact-sql"></a>CREATE ASSEMBLY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md )]
 
-  クラス メタデータとマネージド コードを [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンス内のオブジェクトとして含む、マネージド アプリケーション モジュールを作成します。 データベース内では、このモジュールを参照することにより、共通言語ランタイム (CLR) 関数、ストアド プロシージャ、トリガー、ユーザー定義集計関数、ユーザー定義型を作成できます。  
+  クラス メタデータとマネージド コードを [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンス内のオブジェクトとして含む、マネージド アプリケーション モジュールを作成します。 データベース内でこのモジュールを参照することにより、共通言語ランタイム (CLR) 関数、ストアド プロシージャ、トリガー、ユーザー定義集計関数、ユーザー定義型を作成できます。  
   
 > [!WARNING]
 >  CLR では、セキュリティ境界としてサポートされなくなった、.NET Framework のコード アクセス セキュリティ (CAS) が使用されます。 `PERMISSION_SET = SAFE` で作成された CLR アセンブリが、外部のシステム リソースにアクセスし、非管理対象コードを呼び出し、sysadmin 特権を取得できる場合があります。 [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)] 以降、CLR アセンブリのセキュリティを強化するために `clr strict security` という `sp_configure` オプションが導入されました。 `clr strict security` は既定で有効になり、`SAFE` および `EXTERNAL_ACCESS` アセンブリを `UNSAFE` とマークされている場合と同様に扱います。 `clr strict security` オプションは、旧バージョンとの互換性のために無効にできますが、これは推奨されません。 Microsoft では、master データベースで `UNSAFE ASSEMBLY` アクセス許可が付与されている対応するログインを含む証明書または非対称キーで、すべてのアセンブリに署名することをお勧めします。 詳しくは、「[CLR の厳密なセキュリティ](../../database-engine/configure-windows/clr-strict-security.md)」をご覧ください。  
@@ -65,7 +64,7 @@ FROM { <client_assembly_specifier> | <assembly_bits> [ ,...n ] }
  アセンブリの所有者となるユーザーまたはロールの名前を指定します。 *owner_name* に現在のユーザーがメンバーとなっているロールの名前を指定するか、現在のユーザーが *owner_name* に対する IMPERSONATE 権限を持っている必要があります。 このオプションを指定しない場合は、所有権は現在のユーザーに与えられます。  
   
  \<client_assembly_specifier>  
-アップロードされているアセンブリが置かれるローカル パスまたはネットワーク上の位置と、そのアセンブリに対応するマニフェスト ファイル名を指定します。  \<client_assembly_specifier> は、固定文字列または変数で固定文字列に評価される式で表すことができます。 CREATE ASSEMBLY では、マルチモジュール アセンブリの読み込みはサポートされません。 また、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ではこのアセンブリの依存アセンブリが同じ場所にないか検索され、同じ所有者の依存アセンブリがルート レベル アセンブリとしてアップロードされます。 これらの依存アセンブリが検出されず、現在のデータベースに読み込まれていない場合、CREATE ASSEMBLY は失敗します。 依存アセンブリが現在のアセンブリに既に読み込まれている場合、これらのアセンブリの所有者は、新しく作成されたアセンブリの所有者と同じであることが必要です。
+アップロードされているアセンブリが置かれるローカル パスまたはネットワーク上の位置と、そのアセンブリに対応するマニフェスト ファイル名を指定します。  \<client_assembly_specifier> は、固定文字列または変数で固定文字列に評価される式で表すことができます。 CREATE ASSEMBLY では、マルチモジュール アセンブリの読み込みはサポートしていません。 また、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ではこのアセンブリの依存アセンブリが同じ場所にないか検索され、同じ所有者の依存アセンブリがルート レベル アセンブリとしてアップロードされます。 これらの依存アセンブリが検出されず、現在のデータベースに読み込まれていない場合、CREATE ASSEMBLY は失敗します。 依存アセンブリが現在のアセンブリに既に読み込まれている場合、これらのアセンブリの所有者は、新しく作成されたアセンブリの所有者と同じである必要があります。
 
 > [!IMPORTANT]
 > Azure SQL Database では、ファイルからのアセンブリの作成はサポートされません。
@@ -129,7 +128,7 @@ FROM { <client_assembly_specifier> | <assembly_bits> [ ,...n ] }
   
 -   アセンブリ バイナリが有効なメタデータとコード セグメントに基づく整形式になっており、コード セグメントに有効な MSIL (Microsoft Intermediate language) 命令が含まれていること。  
   
--   参照先の一連のシステム アセンブリが、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] でサポートされている次のいずれかのアセンブリであること。Microsoft.Visualbasic.dll、Mscorlib.dll、System.Data.dll、System.dll、System.Xml.dll、Microsoft.Visualc.dll、Custommarshallers.dll、System.Security.dll、System.Web.Services.dll、System.Data.SqlXml.dll、System.Core.dll、System.Xml.Linq.dll 他のシステム アセンブリは参照できますが、データベースに明示的に登録されている必要があります。  
+-   参照先の一連のシステム アセンブリが、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] でサポートされている次のいずれかのアセンブリであること。Microsoft.Visualbasic.dll、Mscorlib.dll、System.Data.dll、System.dll、System.Xml.dll、Microsoft.Visualc.dll、Custommarshallers.dll、System.Security.dll、System.Web.Services.dll、System.Data.SqlXml.dll、System.Core.dll、and System.Xml.Linq.dll。 他のシステム アセンブリは参照できますが、データベースに明示的に登録されている必要があります。  
   
 -   SAFE または EXTERNAL ACCESS 権限セットを使用して作成されるアセンブリの場合は、次の点がチェックされます。  
   
@@ -154,7 +153,7 @@ FROM { <client_assembly_specifier> | <assembly_bits> [ ,...n ] }
   
  PERMISSION_SET = EXTERNAL_ACCESS を指定する場合、サーバーに対する **EXTERNAL ACCESS ASSEMBLY** 権限が必要です。 PERMISSION_SET = UNSAFE を指定する場合、サーバーに対する **UNSAFE ASSEMBLY** 権限が必要です。  
   
- アップロードするアセンブリによって参照されているアセンブリがデータベース内に存在する場合、ユーザーは、この参照先となるアセンブリの所有者であることが必要です。 ファイル パスを使ってアセンブリをアップロードするには、現在のユーザーは、Windows 認証済みログインであるか、**sysadmin** 固定サーバー ロールのメンバーであることが必要です。 CREATE ASSEMBLY を実行するユーザーの Windows ログインには、共有フォルダーおよびステートメントに読み込まれるファイルに対する読み取り権限が与えられている必要があります。  
+ アップロードするアセンブリによって参照されているアセンブリがデータベース内に存在する場合、ユーザーは、この参照先となるアセンブリの所有者である必要があります。 ファイル パスを使ってアセンブリをアップロードするには、現在のユーザーは、Windows 認証済みログインであるか、**sysadmin** 固定サーバー ロールのメンバーであることが必要です。 CREATE ASSEMBLY を実行するユーザーの Windows ログインには、共有フォルダーおよびステートメントに読み込まれるファイルに対する読み取り権限が与えられている必要があります。  
 
 ### <a name="permissions-with-clr-strict-security"></a>CLR の厳密なセキュリティによるアクセス許可    
 `CLR strict security` が有効になっている場合に CLR アセンブリを作成するには、次のアクセス許可が必要です。
@@ -170,11 +169,11 @@ FROM { <client_assembly_specifier> | <assembly_bits> [ ,...n ] }
   
 ### <a name="example-a-creating-an-assembly-from-a-dll"></a>例 A:dll からアセンブリを作成する  
   
-**適用対象**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]  
+**適用対象**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 以降。  
   
  次の例では、[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] サンプルがローカル コンピューターの既定の場所にインストールされており、HelloWorld.csproj サンプル アプリケーションがコンパイルされていることを前提としています。 詳細については、「[Hello World サンプル](https://msdn.microsoft.com/library/fed6c358-f5ee-4d4c-9ad6-089778383ba7)」を参照してください。  
   
-```  
+```sql  
 CREATE ASSEMBLY HelloWorld   
 FROM <system_drive>:\Program Files\Microsoft SQL Server\100\Samples\HelloWorld\CS\HelloWorld\bin\debug\HelloWorld.dll  
 WITH PERMISSION_SET = SAFE;  
@@ -185,11 +184,11 @@ WITH PERMISSION_SET = SAFE;
   
 ### <a name="example-b-creating-an-assembly-from-assembly-bits"></a>例 B:アセンブリのビットからアセンブリを作成する  
   
-**適用対象**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]  
+**適用対象**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 以降。  
   
- (これは、完全性または有効ではありません)、サンプルのビットをアセンブリ ビットに置き換えます。  
+ アセンブリ ビットを (完全性または有効ではない) サンプル ビットに置き換えます。  
   
-```  
+```sql  
 CREATE ASSEMBLY HelloWorld  
     FROM 0x4D5A900000000000  
 WITH PERMISSION_SET = SAFE;  

@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: f47fd1a4-5bd8-4b2e-8ae3-e595e49f4f95
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 1299af287d9826893fc8c1f93007967509704d30
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 7fcdf9cc41a55d1e529001ae7183ef9fa833363b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47811870"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67949011"
 ---
 # <a name="sqltables-text-file-driver"></a>SQLTables (テキスト ファイル ドライバー)
 > [!NOTE]  

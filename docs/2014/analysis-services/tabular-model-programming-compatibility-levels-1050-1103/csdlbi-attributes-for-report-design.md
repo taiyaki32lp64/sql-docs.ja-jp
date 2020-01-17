@@ -4,20 +4,18 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: analysis-services
 ms.topic: reference
 ms.assetid: 61ba3a27-790e-43bc-b421-e01bf2fdbda6
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: dce0abecb352071a22e74cb820408fe5b8851fc3
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: b7d2a9f075879ce1bfa0c0e7257ea8a2495562c0
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53352534"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62757934"
 ---
 # <a name="csdlbi-attributes-for-report-design"></a>レポート デザインの CSDLBI 属性
   このセクションでは、テーブル モデリングについての CSDL に対する拡張機能の、[!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] クエリ デザインに影響のある属性について説明します。  

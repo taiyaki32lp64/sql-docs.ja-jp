@@ -1,55 +1,61 @@
 ---
-title: 拡張イベント - SQL Server | Microsoft Docs
+title: 拡張イベントの概要 - SQL Server | Microsoft Docs
 ms.custom: ''
-ms.date: 12/16/2018
+ms.date: 07/23/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
 ms.technology: xevents
-ms.topic: conceptual
+ms.topic: overview
 helpviewer_keywords:
 - extended events [SQL Server]
 - xe
+- XEvents
 ms.assetid: bf3b98a6-51ed-4f2d-9c26-92f07f1fa947
 author: MightyPen
 ms.author: genemi
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 441d0535e75663150d12e5ff6c05a7b1067f3e6d
-ms.sourcegitcommit: 85fd3e1751de97a16399575397ab72ebd977c8e9
+ms.openlocfilehash: 4d829b32941ad1bc64df4e2e86cddb26d7468281
+ms.sourcegitcommit: c7a202af70fd16467a498688d59637d7d0b3d1f3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/17/2018
-ms.locfileid: "53531048"
+ms.lasthandoff: 10/15/2019
+ms.locfileid: "72313699"
 ---
-# <a name="extended-events"></a>拡張イベント
+# <a name="extended-events-overview"></a>拡張イベントの概要
+
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 拡張イベントのアーキテクチャは高い拡張性と柔軟な構成を備えており、これによってユーザーは、トラブルシューティングまたはパフォーマンスの問題の特定に必要な量の情報を過不足なく収集できます。  
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 拡張イベントのアーキテクチャを使用すると、ユーザーは、パフォーマンスの問題のトラブルシューティングや特定に必要最小限のデータを収集できます。 拡張イベントは構成可能で、スケーリングにとても優れています。
 
 拡張イベントの詳細については、「[クイック スタート:SQL Server 拡張イベント](../../relational-databases/extended-events/quick-start-extended-events-in-sql-server.md)」を参照してください。
 
-
 ## <a name="benefits-of-includessnoversionincludesssnoversion-mdmd-extended-events"></a>[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 拡張イベントの利点  
- 拡張イベントは軽量なパフォーマンス監視システムであり、使用されるパフォーマンス リソースはごくわずかです。 拡張イベントには、セッション データを容易かつ迅速に作成、変更、表示、および分析するためのグラフィカル ユーザー インターフェイスが 2 つ用意されています (**新規セッション ウィザード** と **[新しいセッション]**)。  
-  
+
+拡張イベントは軽量なパフォーマンス監視システムであり、使用されるパフォーマンス リソースは最小限です。 拡張イベントには、セッション データを作成、変更、表示、分析するためのグラフィカル ユーザー インターフェイスが 2 つ用意されています。 これらのインターフェイスには次の名前が付けられています。
+
+- 新規セッション ウィザード
+- 新しいセッション
+
 ## <a name="extended-events-concepts"></a>拡張イベントの概念  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 拡張イベントは、イベントやイベント コンシューマーなど、既存の概念を基にして、Event Tracing for Windows の概念や、新しい概念を導入したものです。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 拡張イベントは、イベントやイベント コンシューマーなどの既存の概念を基にし、Event Tracing for Windows の概念を使用し、新しい概念を導入しています。  
   
  次の表は、拡張イベントにおける各種の概念を示しています。  
   
 |トピック|[説明]|  
 |-----------|-----------------|  
-|[SQL Server 拡張イベント パッケージ](../../relational-databases/extended-events/sql-server-extended-events-packages.md)|拡張イベント パッケージについて説明します。拡張イベント パッケージには、拡張イベント セッションを実行する際、データの取得と処理に使用されるオブジェクトが含まれます。|  
+|[SQL Server 拡張イベント パッケージ](../../relational-databases/extended-events/sql-server-extended-events-packages.md)|オブジェクトを含む拡張イベント パッケージについて説明します。 これらのオブジェクトは、拡張イベント セッションの実行中にデータを取得して処理するために使用されます。|  
 |[SQL Server 拡張イベント ターゲット](https://msdn.microsoft.com/library/e281684c-40d1-4cf9-a0d4-7ea1ecffa384)|イベント セッション中にデータを受け取ることができるイベント コンシューマーについて説明します。|  
 |[SQL Server 拡張イベント エンジン](../../relational-databases/extended-events/sql-server-extended-events-engine.md)|拡張イベント セッションを実装および管理するエンジンについて説明します。|  
 |[SQL Server 拡張イベント セッション](../../relational-databases/extended-events/sql-server-extended-events-sessions.md)|拡張イベント セッションについて説明します。|  
+| &nbsp; | &nbsp; |
   
 ## <a name="extended-events-architecture"></a>拡張イベントのアーキテクチャ  
- 拡張イベントは、サーバー システムの汎用的なイベント処理システムです。 拡張イベント インフラストラクチャでは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]からのデータを相互に関連付けることができます。さらに、特定の条件下では、オペレーティング システムやデータベース アプリケーションからのデータを相互に関連付けることもできます。 後者の場合、イベント データをオペレーティング システムまたはアプリケーションのイベント データと相互に関連付けるためには、拡張イベント出力を Event Tracing for Windows (ETW) に送る必要があります。  
-  
- すべてのアプリケーションには、アプリケーションの内部と外部の両方で有用な実行ポイントが存在します。 アプリケーションの内部に目を向けると、非同期処理が、タスクの初回実行時に収集された情報を使ってエンキューされていることがあります。 一方、アプリケーションの外部では、実行ポイントは、監視ユーティリティに対し、監視対象アプリケーションの動作やパフォーマンス特性に関する情報を提供します。  
-  
+
+拡張イベントは、サーバー システム用の汎用的なイベント処理システムの名前です。 拡張イベント インフラストラクチャでは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]からのデータを相互に関連付けることができます。さらに、特定の条件下では、オペレーティング システムやデータベース アプリケーションからのデータを相互に関連付けることもできます。 オペレーティング システムのケースでは、拡張イベント出力を Event Tracing for Windows (ETW) に送る必要があります。 ETW は、イベント データをオペレーティング システムまたはアプリケーション イベント データに関連付けます。  
+
+すべてのアプリケーションには、アプリケーションの内部と外部の両方で有用な実行ポイントが存在します。 アプリケーションの内部に目を向けると、非同期処理が、タスクの初回実行時に収集された情報を使ってエンキューされていることがあります。 アプリケーションの外部では、実行ポイントによって監視ユーティリティに情報が提供されます。 この情報は、監視対象アプリケーションの動作やパフォーマンス特性に関するものです。  
+
  拡張イベントを使用すると、プロセスの外部でイベント データを利用できます。 このデータは通常、次のようなツールやユーザーによって使用されます。  
   
 -   トレース ツール (SQL トレース、システム モニターなど)。  
@@ -60,13 +66,13 @@ ms.locfileid: "53531048"
   
  拡張イベントの設計には、次の大きな特徴があります。  
   
--   拡張イベント エンジンはイベントの種類に依存しません。 イベントの内容による制約を受けないため、あらゆるイベントをあらゆるターゲットにバインドできます。 拡張イベント エンジンの詳細については、「 [SQL Server 拡張イベント エンジン](../../relational-databases/extended-events/sql-server-extended-events-engine.md)」を参照してください。  
+-   拡張イベント エンジンはイベントの種類に依存しません。 エンジンはイベントの内容による制約を受けないため、あらゆるイベントをあらゆるターゲットにバインドできます。 拡張イベント エンジンの詳細については、「 [SQL Server 拡張イベント エンジン](../../relational-databases/extended-events/sql-server-extended-events-engine.md)」を参照してください。  
   
 -   イベントは、イベント コンシューマー (拡張イベントの *ターゲット* ) とは分離されています。 つまり、任意のターゲットが任意のイベントを受け取ることができます。 さらに、ターゲット側では、発生したあらゆるイベントを自動的に処理できるため、追加のイベント コンテキストを提供したりログに記録したりすることが可能となります。 詳細については、「 [SQL Server 拡張イベント ターゲット](https://msdn.microsoft.com/library/e281684c-40d1-4cf9-a0d4-7ea1ecffa384)」を参照してください。  
   
 -   イベントは、イベントが発生した際に実行されるアクションとは異なります。 したがって、すべてのイベントには任意のアクションを関連付けることができます。  
   
--   述語を使用すると、イベント データのキャプチャ時に動的にフィルターが適用されます。 この機能が拡張イベント インフラストラクチャの柔軟性を高めています。 詳細については、「 [SQL Server 拡張イベント パッケージ](../../relational-databases/extended-events/sql-server-extended-events-packages.md)」を参照してください。  
+-   述語を使用すると、イベント データのキャプチャ時に動的にフィルターが適用されます。 動的フィルター処理により、拡張イベント インフラストラクチャの柔軟性が高まります。 詳細については、「 [SQL Server 拡張イベント パッケージ](../../relational-databases/extended-events/sql-server-extended-events-packages.md)」を参照してください。  
   
  拡張イベントはイベント データを同期的に生成します。また、そのデータは非同期的に処理できるため、柔軟なイベント処理が可能となります。 さらに、拡張イベントには、次の機能が用意されています。  
   
@@ -100,15 +106,40 @@ ms.locfileid: "53531048"
 |ロックを保持しているクエリ、クエリのプラン、およびロックが取得されたときの [!INCLUDE[tsql](../../includes/tsql-md.md)] スタックを特定する方法について説明します。|[ロックを保持しているクエリの特定](../../relational-databases/extended-events/determine-which-queries-are-holding-locks.md)|  
 |データベース パフォーマンスを低下させているロックのソースを特定する方法について説明します。|[ロックの大半を取得しているオブジェクトを見つける](../../relational-databases/extended-events/find-the-objects-that-have-the-most-locks-taken-on-them.md)|  
 |拡張イベントを Event Tracing for Windows と共に使用してシステムの使用状況を監視する方法について説明します。|[拡張イベントを使用したシステムの使用状況の監視](../../relational-databases/extended-events/monitor-system-activity-using-extended-events.md)|  
-| 拡張イベントに対するカタログ ビューと動的管理ビュー (DMV) の使用。 | [SQL Server の拡張イベントに対するシステム ビューからの SELECT と JOIN](../../relational-databases/extended-events/selects-and-joins-from-system-views-for-extended-events-in-sql-server.md) |
+|拡張イベントに対するカタログ ビューと動的管理ビュー (DMV) の使用。 | [SQL Server の拡張イベントに対するシステム ビューからの SELECT と JOIN](../../relational-databases/extended-events/selects-and-joins-from-system-views-for-extended-events-in-sql-server.md) |
+| &nbsp; | &nbsp; |
 
-  
-## <a name="see-also"></a>参照  
- [[データ層アプリケーション]](../../relational-databases/data-tier-applications/data-tier-applications.md)   
- [SQL Server オブジェクトとバージョンの DAC サポート](../../relational-databases/data-tier-applications/dac-support-for-sql-server-objects-and-versions.md)   
- [データ層アプリケーションの配置](../../relational-databases/data-tier-applications/deploy-a-data-tier-application.md)   
- [データ層アプリケーションの監視](../../relational-databases/data-tier-applications/monitor-data-tier-applications.md)   
- [拡張イベントの動的管理ビュー](../../relational-databases/system-dynamic-management-views/extended-events-dynamic-management-views.md)   
- [拡張イベント カタログ ビュー &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/extended-events-catalog-views-transact-sql.md)  
-  
-  
+次の Transact-SQL (T-SQL) クエリを使用して、可能なすべての拡張イベントとその説明を一覧表示します。
+
+```sql
+SELECT
+     obj1.name as [XEvent-name],
+     col2.name as [XEvent-column],
+     obj1.description as [Descr-name],
+     col2.description as [Descr-column]
+  FROM
+               sys.dm_xe_objects        as obj1
+      JOIN sys.dm_xe_object_columns as col2 on col2.object_name = obj1.name
+  ORDER BY
+    obj1.name,
+    col2.name
+```
+
+
+## <a name="code-examples-can-differ-for-azure-sql-database"></a>Azure SQL Database では、コード例が異なる可能性があります。
+
+[!INCLUDE[sql-on-premises-vs-azure-similar-sys-views-include.](../../includes/paragraph-content/sql-on-premises-vs-azure-similar-sys-views-include.md)]
+
+## <a name="see-also"></a>参照
+
+[データ層アプリケーション](../../relational-databases/data-tier-applications/data-tier-applications.md)  
+[SQL Server オブジェクトとバージョンの DAC サポート](../../relational-databases/data-tier-applications/dac-support-for-sql-server-objects-and-versions.md)  
+[データ層アプリケーションの配置](../../relational-databases/data-tier-applications/deploy-a-data-tier-application.md)  
+[データ層アプリケーションの監視](../../relational-databases/data-tier-applications/monitor-data-tier-applications.md)  
+&nbsp;  
+[拡張イベントの動的管理ビュー](../../relational-databases/system-dynamic-management-views/extended-events-dynamic-management-views.md)  
+[拡張イベント カタログ ビュー (Transact-SQL)](../../relational-databases/system-catalog-views/extended-events-catalog-views-transact-sql.md)  
+&nbsp;  
+[XELite: XEL ファイルまたはライブ SQL ストリームから XEvents を読み取るためのクロスプラットフォーム ライブラリ](https://www.nuget.org/packages/Microsoft.SqlServer.XEvent.XELite/)、2019 年 5 月リリース。  
+[Read-SQLXEvent PowerShell コマンドレット](https://www.powershellgallery.com/packages/SqlServer.XEvent)、2019 年 6 月リリース。  
+[SQL の謎:XEvent セッションの因果関係の追跡とイベント シーケンス (ブログ公開 2019 年 4 月 1 日)](https://bobsql.com/sql-mysteries-causality-tracking-vs-event-sequence-for-xevent-sessions/)  

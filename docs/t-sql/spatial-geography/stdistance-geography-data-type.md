@@ -1,7 +1,7 @@
 ---
 title: STDistance (geography データ型) | Microsoft Docs
 ms.custom: ''
-ms.date: 03/14/2017
+ms.date: 11/19/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -15,15 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - STDistance method
 ms.assetid: 063d8722-e019-4d3d-8fcf-dbf5325823e7
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: 7a1b5a95b5123186ce76a4d8b7c9dde7044fe827
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: MladjoA
+ms.author: mlandzic
+ms.openlocfilehash: 45f0b6f9524c4877c669bfec8c5ab7bcfec198bb
+ms.sourcegitcommit: 381595e990f2294dbf324ef31071e2dd2318b8dd
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47688465"
+ms.lasthandoff: 11/20/2019
+ms.locfileid: "74200508"
 ---
 # <a name="stdistance-geography-data-type"></a>STDistance (geography データ型)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
@@ -47,15 +46,16 @@ ms.locfileid: "47688465"
 ## <a name="return-types"></a>戻り値の型  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 戻り値の型: **float**  
   
- CLR の戻り値の型: **SqlDouble**  
+ CLR の戻り値の型:**SqlDouble**  
   
-## <a name="remarks"></a>Remarks  
- **geography** インスタンスの SRID (spatial reference ID) が一致しない場合、STDistance() は常に null を返します。  
+## <a name="remarks"></a>解説  
+ この結果は、空間データの [SRID (Spatial Reference Identifier)](../../relational-databases/spatial/spatial-reference-identifiers-srids.md) によって定義された測定単位で表されます。
+**geography** インスタンスの SRID (spatial reference ID) が一致しない場合、STDistance() は常に *null* を返します。  
   
 > [!NOTE]  
->  面積や距離を計算する、**geography** データ型のメソッドの結果は、メソッドで使用されるインスタンスの SRID に応じて異なります。   SRID の詳細については、「[&#40;SRIDs&#41; Spatial Reference Identifiers](../../relational-databases/spatial/spatial-reference-identifiers-srids.md)」を参照してください。  
+>  面積や距離を計算する、**geography** データ型のメソッドの結果は、メソッドで使用されるインスタンスの SRID に応じて異なります。 SRID の詳細については、「[&#40;SRIDs&#41; Spatial Reference Identifiers](../../relational-databases/spatial/spatial-reference-identifiers-srids.md)」を参照してください。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
  2 つの **geography** インスタンスの間の距離を計算する例を次に示します。  
   
 ```  

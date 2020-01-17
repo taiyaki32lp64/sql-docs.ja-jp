@@ -1,24 +1,23 @@
 ---
-title: チュートリアル:マトリックス レポート (レポート ビルダー) の作成 |Microsoft Docs
+title: チュートリアル:マトリックス レポートの作成 (レポート ビルダー) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 ms.assetid: 9ee19c2e-2a8c-4bb0-9274-04a5812c2e96
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 1b1f3226d196354dbbe6a959822534342a92f818
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: f87c1188b0abd1b576da63412829464368275b0f
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56288416"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66098918"
 ---
-# <a name="tutorial-creating-a-matrix-report-report-builder"></a>チュートリアル:マトリックス レポート (レポート ビルダー) を作成します。
+# <a name="tutorial-creating-a-matrix-report-report-builder"></a>チュートリアル:マトリックス レポートの作成 (レポート ビルダー)
   このチュートリアルでは、サンプルの売上データに基づいて基本的なマトリックス レポートを作成する方法を説明します。 このマトリックスは、入れ子になった行グループと列グループ、および隣接する列グループで構成されます。 また、列を書式設定し、テキストを回転させる方法についても学習します。 次の図に、ここで作成するレポートと同様のレポートを示します。  
   
  ![rs_CreateMatixReportTutorial](../../2014/tutorials/media/rs-creatematixreporttutorial.gif "rs_CreateMatixReportTutorial")  
@@ -61,7 +60,7 @@ ms.locfileid: "56288416"
   
 #### <a name="to-create-a-new-matrix"></a>新しいマトリックスを作成するには  
   
-1.  **[スタート]** ボタンをクリックし、 **[プログラム]**、 **[Microsoft SQL Server 2012 レポート ビルダー]** の順にポイントして、 **[レポート ビルダー]** をクリックします。  
+1.  **[スタート]** ボタンをクリックし、 **[プログラム]** 、 **[Microsoft SQL Server 2012 レポート ビルダー]** の順にポイントして、 **[レポート ビルダー]** をクリックします。  
   
     > [!NOTE]  
     >  **[作業の開始]** ダイアログ ボックスが表示されます。 レポート ビルダーのボタンから、開かない場合はクリックして**新規**します。  
@@ -74,7 +73,7 @@ ms.locfileid: "56288416"
   
 5.  **[次へ]** をクリックします。  
   
-6.  **データ ソースへの接続の選択**ページで既存のデータ ソースを選択します。 または、レポート サーバーを参照し、データ ソースを選択します。 使用できるデータ ソースがなく、レポート サーバーにもアクセスできない場合は、代わりに埋め込みデータ ソースを使用できます。 埋め込みデータ ソースを作成する方法の詳細については、次を参照してください。[チュートリアル。基本的なテーブル レポートを作成する&#40;レポート ビルダー&#41;](../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md)します。  
+6.  **データ ソースへの接続の選択**ページで既存のデータ ソースを選択します。 または、レポート サーバーを参照し、データ ソースを選択します。 使用できるデータ ソースがなく、レポート サーバーにもアクセスできない場合は、代わりに埋め込みデータ ソースを使用できます。 埋め込みデータ ソースを作成する方法の詳細については、次を参照してください。[チュートリアル。基本的な表レポートの作成 &#40;レポート ビルダー&#41;](../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md)」を参照してください。  
   
 7.  **[次へ]** をクリックします。  
   
@@ -160,7 +159,7 @@ ms.locfileid: "56288416"
   
 13. **[完了]** をクリックします。  
   
-     マトリックスがデザイン画面に追加されます。 行グループ ペインには、2 つの行グループが表示されます。Territory と SalesDate します。 列グループ ペインには、2 つの列グループを示しています。Subcategory と Product します。 詳細データは、データセット クエリによって取得されるすべてのデータです。  
+     マトリックスがデザイン画面に追加されます。 [行グループ] ペインには 2 つの行グループが表示されます。Territory と SalesDate です。 [列グループ] ペインには 2 つの列グループが表示されます。Subcategory と Product です。 詳細データは、データセット クエリによって取得されるすべてのデータです。  
   
 14. **[実行]** をクリックして、レポートをプレビューします。  
   
@@ -350,7 +349,7 @@ ms.locfileid: "56288416"
   
 1.  **レポート ビルダー** のボタンの **[名前を付けて保存]** をクリックします。  
   
-2.  **[デスクトップ]**、 **[マイ ドキュメント]**、または **[マイ コンピューター]** をクリックして、レポートを保存するフォルダーを参照します。  
+2.  **[デスクトップ]** 、 **[マイ ドキュメント]** 、または **[マイ コンピューター]** をクリックして、レポートを保存するフォルダーを参照します。  
   
 3.  **[名前]** に表示されている既定の名前を「 **SalesByTerritorySubcategory**」に変更します。  
   

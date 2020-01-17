@@ -4,21 +4,20 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 f1_keywords:
 - "10427"
 ms.assetid: 423360de-9bed-462e-921f-60a5abab004f
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 692cb15e699a7c4403e2590bb119350cac74e5e2
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: bae94dfd09495d271b668390b17059e067f092c7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56289528"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66107616"
 ---
 # <a name="report-builder-options-dialog-box-settings-report-builder"></a>[設定] (レポート ビルダーの [オプション] ダイアログ ボックス) (レポート ビルダー)
   をクリックして、**レポート ビルダー**ボタンをクリックし、をクリックし、**オプション**最近使ったファイルとの接続を表示するためのオプションを設定します。 既定のレポート サーバーを変更することも、既定のレポート サーバーがなければ追加することもできます。  
@@ -46,7 +45,7 @@ ms.locfileid: "56289528"
  **[最近使ったすべてのアイテムの一覧をクリア]**  
  最近使ったサイトとサーバー、共有データセット、共有データ ソース接続、およびドキュメントの現在の一覧をクリアします。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [レポート ビルダーのダイアログ ボックス、ペイン、およびウィザードに関するヘルプ](../report-builder-help-for-dialog-boxes-panes-and-wizards.md)  
   
   

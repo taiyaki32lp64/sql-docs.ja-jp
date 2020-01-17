@@ -14,17 +14,20 @@ f1_keywords:
 - sql13.dts.designer.advancededitor.connections.f1
 - sql13.dts.designer.advancededitor.columnmappings.f1
 ms.assetid: 5ad0ac71-fa8b-4c26-bd42-e6ef00c87571
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: 7ef5d2976ede4bf9c96ae109acd921d9fa385f6d
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: eedc7754a9bb5f48a07b4865cfb426f7e234d192
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51641459"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71294983"
 ---
 # <a name="advanced-editor"></a>[詳細エディター]
+
+[!INCLUDE[ssis-appliesto](../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   **[詳細エディター]** ダイアログ ボックスを使用すると、選択した [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] オブジェクトのプロパティを構成できます。  
   
  **[詳細エディター]** は、構成可能なプロパティを持つほとんどの [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] オブジェクトで利用可能です。 カスタム ユーザー インターフェイスを公開しないオブジェクトに対しては、唯一の利用可能なエディターです。  

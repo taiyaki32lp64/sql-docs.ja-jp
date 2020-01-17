@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 343975c2c6ad39c67dcd10c0d55886d21e69f3f5
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48076312"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62711560"
 ---
 # <a name="using-autofetch-with-odbc-cursors"></a>autofetch と ODBC カーソルの併用
   インスタンスに接続されているときに[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client ODBC ドライバーは、任意のサーバー カーソルの種類を使用する場合、autofetch オプションをサポートしています。 Autofetch では、 **SQLExecute**または**SQLExecDirect**カーソルを開く関数にも、暗黙の型は、 [SQLFetchScroll](../../native-client-odbc-api/sqlfetchscroll.md)(SQL_FIRST) 関数。 バインドされたアプリケーション変数に、最初の行セットを構成する行がステートメント実行の一環として返されるので、ネットワーク経由でのサーバーとのやり取りが減少します。 [SQLGetData](../../native-client-odbc-api/sqlgetdata.md)ときはサポートされていません、autofetch オプションが有効になります。 結果セットの列をプログラム変数にバインドする必要があります。  

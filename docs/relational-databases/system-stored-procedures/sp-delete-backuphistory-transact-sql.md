@@ -17,18 +17,17 @@ helpviewer_keywords:
 ms.assetid: bdb56834-616e-47e4-b942-e895d2325e97
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 2252fe0339a13a6d75c43a09351b95b17b7abd7b
-ms.sourcegitcommit: fc6a6eedcea2d98c93e33d39c1cecd99fbc9a155
+ms.openlocfilehash: 5c538a217c5d86f2b59f079f8629a6f4cbe9fea3
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49168762"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68120063"
 ---
-# <a name="spdeletebackuphistory-transact-sql"></a>sp_delete_backuphistory (Transact-SQL)
+# <a name="spdeletebackuphistory-transact-sql"></a>sp_delete_backuphistory (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  指定した日付より古いバックアップ セットを削除して、バックアップおよび復元履歴テーブルのサイズを減らします。 追加の行は、バックアップに追加され、各バックアップ復元履歴テーブルまたは復元操作が実行されます。定期的に実行こと勧めそのため、 **sp_delete_backuphistory**します。  
+  指定した日付より古いバックアップ セットのエントリを削除することによって、バックアップと復元履歴テーブルのサイズを縮小します。 追加の行は、バックアップに追加され、各バックアップ復元履歴テーブルまたは復元操作が実行されます。定期的に実行こと勧めそのため、 **sp_delete_backuphistory**します。  
   
 > [!NOTE]  
 >  バックアップと復元履歴テーブルに存在、 **msdb**データベース。  
@@ -43,8 +42,7 @@ sp_delete_backuphistory [ @oldest_date = ] 'oldest_date'
 ```  
   
 ## <a name="arguments"></a>引数  
- [  **@oldest_date=** ] **'**_最も古い\_日付_**'**  
- バックアップと復元の履歴を残しておく最も古い日付です。 *oldest_date*は**datetime**、既定値はありません。  
+`[ @oldest_date = ] 'oldest\_date'` 最も古い日付は、バックアップと復元履歴テーブルに保持されます。 *oldest_date*は**datetime**、既定値はありません。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  0 (成功) または 1 (失敗)  
@@ -85,7 +83,7 @@ GO
 EXEC sp_delete_backuphistory @oldest_date = '01/14/2010';  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [sp_delete_database_backuphistory &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-delete-database-backuphistory-transact-sql.md)   
  [バックアップの履歴とヘッダーの情報 &#40;SQL Server&#41;](../../relational-databases/backup-restore/backup-history-and-header-information-sql-server.md)  
   

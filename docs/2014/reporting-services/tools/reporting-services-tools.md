@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 helpviewer_keywords:
 - SSRS, tools
@@ -19,15 +18,15 @@ helpviewer_keywords:
 - SQL Server Reporting Services, tools
 - architecture [Reporting Services]
 ms.assetid: 23d616e3-eb90-43fb-9b7a-869bd7e22e7b
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 144cce158e6b4f8814392a996699ddbe214ca628
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 21c56f28a6f65b22d8fe334a1046f44f868c4453
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56016033"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66099909"
 ---
 # <a name="reporting-services-tools"></a>Reporting Services ツール
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] には、管理環境での機能豊富なレポートの開発と使用をサポートするグラフィカル ツールとスクリプト ツールのセットが用意されています。 このツール セットには、開発ツール、構成と管理ツール、およびレポート表示ツールが含まれています。 ここでは、 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] の各ツール、およびツールへのアクセス方法について簡単に説明します。  

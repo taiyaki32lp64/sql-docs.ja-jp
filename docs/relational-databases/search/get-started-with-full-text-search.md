@@ -3,8 +3,6 @@ title: フルテキスト検索の概要 | Microsoft Docs
 ms.date: 08/22/2016
 ms.prod: sql
 ms.prod_service: search, sql-database
-ms.reviewer: ''
-ms.custom: ''
 ms.technology: search
 ms.topic: conceptual
 helpviewer_keywords:
@@ -13,16 +11,16 @@ helpviewer_keywords:
 - full-text search [SQL Server], about
 - full-text search [SQL Server], setting up
 ms.assetid: 1fa628ba-0ee4-4d8f-b086-c4e52962ca4a
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
+author: pmasl
+ms.author: pelopes
+ms.reviewer: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 3913dc3c95bc067022046ac4ae44a77c65e4e43b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 349e00b7734ed8e8176585c55018b7565649cc1f
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47856160"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72903824"
 ---
 # <a name="get-started-with-full-text-search"></a>フルテキスト検索の概要
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -75,7 +73,7 @@ SQL Server データベースでは、フルテキストが既定で有効にな
   
     ```  
   
-     この例で定義する TYPE COLUMN では、"Document" 列 (バイナリ型) の各行のドキュメント型が含まれる、テーブルの型列を指定します。 この型列には、特定の行のドキュメントのユーザー指定ファイル拡張子 (".doc"、".xls" など) が格納されます。 Full-Text Engine では、特定の行のファイル拡張子を使用して、その行のデータを解析するために使用する正しいフィルターを呼び出します。 フィルターで行のバイナリ データが解析された後は、指定したワード ブレーカーで内容が解析されます  (この例では、英語 (英国) のワード ブレーカーが使用されます)。詳細については、「 [検索用フィルターの構成と管理](../../relational-databases/search/configure-and-manage-filters-for-search.md)」を参照してください。  
+     この例で定義する TYPE COLUMN では、"Document" 列 (バイナリ型) の各行のドキュメント型が含まれる、テーブルの型列を指定します。 この型列には、特定の行のドキュメントのユーザー指定ファイル拡張子 (".doc"、".xls" など) が格納されます。 Full-Text Engine では、特定の行のファイル拡張子を使用して、その行のデータを解析するために使用する正しいフィルターを呼び出します。 フィルターで行のバイナリ データが解析された後は、指定したワード ブレーカーで内容が解析されます (この例では、英語 (英国) のワード ブレーカーが使用されます)。詳細については、「 [検索用フィルターの構成と管理](../../relational-databases/search/configure-and-manage-filters-for-search.md)」を参照してください。  
 
     詳細については、「[Create and Manage Full-Text Indexes](../../relational-databases/search/create-and-manage-full-text-indexes.md)」 (フルテキスト インデックスの作成と管理) を参照してください。
 

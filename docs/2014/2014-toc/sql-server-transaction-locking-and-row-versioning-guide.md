@@ -10,12 +10,12 @@ ms.assetid: c7757153-9697-4f01-881c-800e254918c9
 author: mightypen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 09c39fdb8cdb811efecbf84d41ce8778f022001a
-ms.sourcegitcommit: 5ca813d045e339ef9bebe0991164a5d39c8c742b
+ms.openlocfilehash: b49007cb51a2990ea90eb67b6e71087f59018d37
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/24/2019
-ms.locfileid: "54880565"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62513278"
 ---
 # <a name="sql-server-transaction-locking-and-row-versioning-guide"></a>SQL Server トランザクションのロックおよび行のバージョン管理ガイド
 
@@ -65,7 +65,7 @@ ms.locfileid: "54880565"
   
 ### <a name="controlling-transactions"></a>トランザクションの制御  
 
- アプリケーションは、主にトランザクションの開始タイミングと終了タイミングを指定してトランザクションを制御します。 これについては、[!INCLUDE[tsql](../includes/tsql-md.md)] ステートメントまたはデータベース アプリケーション プログラミング インターフェイス (API) 関数を使用して指定できます。 また、トランザクションが完了せずに終了した場合、その原因となったエラーがシステムによって正しく処理される必要があります。 詳細については、次を参照してください[トランザクション ステートメント&#40;TRANSACT-SQL&#41;](/sql/t-sql/language-elements/transactions-transact-sql)、 [ODBC でのトランザクション](https://technet.microsoft.com/library/ms131281.aspx)と[トランザクション SQL Server Native Client (OLEDB)](https://msdn.microsoft.com/library/ms130918.aspx).  
+ アプリケーションは、主にトランザクションの開始タイミングと終了タイミングを指定してトランザクションを制御します。 これについては、[!INCLUDE[tsql](../includes/tsql-md.md)] ステートメントまたはデータベース アプリケーション プログラミング インターフェイス (API) 関数を使用して指定できます。 また、トランザクションが完了せずに終了した場合、その原因となったエラーがシステムによって正しく処理される必要があります。 詳細については、[トランザクション ステートメント&#40;TRANSACT-SQL&#41;](/sql/t-sql/language-elements/transactions-transact-sql)、 [ODBC でのトランザクション](https://technet.microsoft.com/library/ms131281.aspx)と[トランザクション SQL Server Native Client (OLEDB)](https://msdn.microsoft.com/library/ms130918.aspx) を参照してください。  
   
  既定では、トランザクションは接続レベルで管理されます。 接続時にトランザクションが開始すると、その接続で実行されるすべての [!INCLUDE[tsql](../includes/tsql-md.md)] ステートメントが、トランザクションが終了するまでそのトランザクションの一部になります。 ただし、複数のアクティブな結果セット (MARS) セッションでは、[!INCLUDE[tsql](../includes/tsql-md.md)] の明示的または暗黙的なトランザクションは、バッチ レベルで管理されるバッチスコープのトランザクションになります。 バッチの完了時にバッチスコープのトランザクションがコミットまたはロールバックされていない場合、[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] により、トランザクションは自動的にロールバックされます。 詳細については、次を参照してください。[複数アクティブな結果セット (MARS) SQL Server で](https://msdn.microsoft.com/library/ms345109(v=SQL.90).aspx)します。  
   
@@ -101,7 +101,7 @@ ms.locfileid: "54880565"
 |-|-|-|  
 |ALTER TABLE|FETCH|REVOKE|  
 |CREATE|GRANT|SELECT|  
-|Del|INSERT|TRUNCATE TABLE|  
+|DELETE|INSERT|TRUNCATE TABLE|  
 |DROP|OPEN|UPDATE|  
   
  **バッチスコープのトランザクション**  
@@ -120,7 +120,7 @@ ms.locfileid: "54880565"
  コミット フェーズ  
  トランザクション マネージャーは、すべてのリソース マネージャーから準備の正常完了通知を受け取ると、リソース マネージャーにコミット コマンドを送ります。 これにより、リソース マネージャーはコミットを完了できます。 すべてのリソース マネージャーがコミットの正常完了を報告した場合、トランザクション マネージャーは、アプリケーションに成功通知を送ります。 準備できなかったことを報告するリソース マネージャーがあった場合、トランザクション マネージャーはすべてのリソース マネージャーにロールバック コマンドを送り、アプリケーションにコミットできなかったことを報告します。  
   
- [!INCLUDE[ssDE](../includes/ssde-md.md)] アプリケーションは分散トランザクションの管理に [!INCLUDE[tsql](../includes/tsql-md.md)] またはデータベース API のどちらも使用できます。 詳細については、次を参照してください。 [BEGIN DISTRIBUTED TRANSACTION & #40 です。TRANSACT-SQL と #41 です](/sql/t-sql/language-elements/begin-distributed-transaction-transact-sql)。  
+ [!INCLUDE[ssDE](../includes/ssde-md.md)] アプリケーションは分散トランザクションの管理に [!INCLUDE[tsql](../includes/tsql-md.md)] またはデータベース API のどちらも使用できます。 詳細については、[BEGIN DISTRIBUTED TRANSACTION &#40;Transact-SQL&#41;](/sql/t-sql/language-elements/begin-distributed-transaction-transact-sql) を参照してください。  
   
 #### <a name="ending-transactions"></a>トランザクションの終了  
 
@@ -152,7 +152,7 @@ CREATE TABLE TestBatch (Cola INT PRIMARY KEY, Colb CHAR(3));
 GO  
 INSERT INTO TestBatch VALUES (1, 'aaa');  
 INSERT INTO TestBatch VALUES (2, 'bbb');  
-INSERT INTO TestBatch VALUES (3, 'ccc');  -- Syntax error.  
+INSERT INTO TestBatch VALUSE (3, 'ccc');  -- Syntax error.  
 GO  
 SELECT * FROM TestBatch;  -- Returns no rows.  
 GO  
@@ -326,7 +326,7 @@ GO
 |**READ UNCOMMITTED**|はい|[はい]|はい|  
 |**READ COMMITTED**|いいえ|はい|はい|  
 |**REPEATABLE READ**|いいえ|いいえ|はい|  
-|**スナップショット**|いいえ|いいえ|いいえ|  
+|**SNAPSHOT**|いいえ|いいえ|いいえ|  
 |**SERIALIZABLE**|いいえ|いいえ|いいえ|  
   
  各トランザクション分離レベルによって制御される特定のロックまたは行のバージョン管理の種類について詳しくは、「[SET TRANSACTION ISOLATION LEVEL &#40;Transact-SQL&#41;](/sql/t-sql/statements/set-transaction-isolation-level-transact-sql)」をご覧ください。  
@@ -496,7 +496,7 @@ GO
   
  キー範囲ロックを使用すると、ファントム読み取りを回避できます。 各行のキー範囲を保護することで、トランザクションからアクセスされるレコード セットへのファントム挿入も回避されます。  
   
- キー範囲ロックは、キー範囲の開始値と終了値を指定して、インデックスに対して設定されます。 このロックでは、範囲内のキー値を持つ行を挿入、更新、または削除する操作がブロックされます。挿入操作、更新操作、または削除操作では、最初にインデックスに対するロックを取得する必要があるためです。 たとえば、シリアル化可能なトランザクションでは、**'** AAA **'** と **'** CZZ **'** の間のキー値を持つすべての行を読み取る SELECT ステートメントを実行できます。 **'** AAA **'** から **'** CZZ **'** の範囲内のキー値にキー範囲ロックをかけると、他のトランザクションからは **'** ADG **'**、**'** BBD **'**、**'** CAL **'** など、その範囲内のキー値を持つ行は挿入されません。  
+ キー範囲ロックは、キー範囲の開始値と終了値を指定して、インデックスに対して設定されます。 このロックでは、範囲内のキー値を持つ行を挿入、更新、または削除する操作がブロックされます。挿入操作、更新操作、または削除操作では、最初にインデックスに対するロックを取得する必要があるためです。 たとえば、シリアル化可能なトランザクションでは、 **'** AAA **'** と **'** CZZ **'** の間のキー値を持つすべての行を読み取る SELECT ステートメントを実行できます。 **'** AAA **'** から **'** CZZ **'** の範囲内のキー値にキー範囲ロックをかけると、他のトランザクションからは **'** ADG **'** 、 **'** BBD **'** 、 **'** CAL **'** など、その範囲内のキー値を持つ行は挿入されません。  
   
 #### <a name="key-range-lock-modes"></a>キー範囲ロック モード  
 
@@ -1250,7 +1250,7 @@ BEGIN TRANSACTION
   
  sys.dm_tran_top_version_generators。 バージョン ストア内で最も高いバージョンを生成しているオブジェクトの仮想テーブルを返します。 集計済みのレコード長について、長いものから順に 256 位までを database_id と rowset_id でグループ化しています。 この関数を使用して、バージョン ストアを最も多く使用しているレコードを見つけます。 詳しくは、「[sys.dm_tran_top_version_generators &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-tran-top-version-generators-transact-sql)」をご覧ください。  
   
- sys.dm_tran_version_store。 共通バージョン ストア内のすべてのバージョン レコードを表す仮想テーブルを返します。 詳細については、次を参照してください。 [sys.dm_tran_version_store & #40 です。TRANSACT-SQL と #41 です](/sql/relational-databases/system-dynamic-management-views/sys-dm-tran-version-store-transact-sql)。  
+ sys.dm_tran_version_store。 共通バージョン ストア内のすべてのバージョン レコードを表す仮想テーブルを返します。 詳細については、[sys.dm_tran_version_store &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-tran-version-store-transact-sql)を参照してください。  
   
 > [!NOTE]  
 >  sys.dm_tran_top_version_generators と sys.dm_tran_version_store では、非常に大きくなる可能性があるバージョン ストア全体に対してクエリが実行されるので、これらの関数を実行すると非常に多くのリソースが使用される可能性があります。  
@@ -1267,7 +1267,7 @@ BEGIN TRANSACTION
 
  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] のパフォーマンス カウンターからは、[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] プロセスによって影響を受けるシステム パフォーマンスについての情報が提供されます。 次に示すパフォーマンス カウンターでは、行のバージョン管理を使用しているトランザクションだけではなく、tempdb とそのバージョン ストアを監視します。 パフォーマンス カウンターは SQLServer:Transactions パフォーマンス オブジェクトに含まれています。  
   
- **Free Space in tempdb (KB)**。 tempdb データベース内の空き領域 (KB) を監視します。 tempdb には、スナップショット分離をサポートするバージョン ストアを処理できるだけの十分な空き領域が必要です。  
+ **Free Space in tempdb (KB)** 。 tempdb データベース内の空き領域 (KB) を監視します。 tempdb には、スナップショット分離をサポートするバージョン ストアを処理できるだけの十分な空き領域が必要です。  
   
  次の式を使用すると、バージョン ストアのサイズを概算することができます。 実行時間の長いトランザクションの場合、生成率とクリーンアップ率を監視してバージョン ストアの最大サイズを推定すると有益な場合があります。  
   
@@ -1275,7 +1275,7 @@ BEGIN TRANSACTION
   
  実行時間が極端に長いトランザクションには、オンラインのインデックス構築操作を含めないでください。 そのような場合のオンラインのインデックス構築操作は、非常に大きなテーブルでは時間がかかる場合があるので、別のバージョン ストアを使用します。 オンライン インデックス構築用のバージョン ストアの大まかなサイズは、オンラインのインデックス構築がアクティブになっている間にテーブル内で変更されたデータ (すべてのインデックスを含む) の量と同じです。  
   
- **Version Store Size (KB)**。 すべてのバージョン ストアのサイズを KB 単位で監視します。 この情報は、tempdb データベースに必要なバージョン ストア用の領域のサイズを判定する際に役立ちます。 このカウンターを長期間監視すると、tempdb に必要な領域を追加する際に役立つ推定値が得られます。  
+ **Version Store Size (KB)** 。 すべてのバージョン ストアのサイズを KB 単位で監視します。 この情報は、tempdb データベースに必要なバージョン ストア用の領域のサイズを判定する際に役立ちます。 このカウンターを長期間監視すると、tempdb に必要な領域を追加する際に役立つ推定値が得られます。  
   
  `Version Generation rate (KB/s)`。 すべてのバージョン ストアについてバージョンの生成率 (KB/秒) を監視します。  
   
@@ -1944,7 +1944,7 @@ GO
   
 #### <a name="stopping-a-transaction"></a>トランザクションの停止  
 
- KILL ステートメントの使用が必要になる場合もあります。 ただし、重要なプロセスが実行中の場合は特に、このステートメントの使用には十分注意してください。 詳細については、次を参照してください。 [KILL & #40 です。TRANSACT-SQL と #41 です](/sql/t-sql/language-elements/kill-transact-sql)。  
+ KILL ステートメントの使用が必要になる場合もあります。 ただし、重要なプロセスが実行中の場合は特に、このステートメントの使用には十分注意してください。 詳細については、[KILL &#40;Transact-SQL&#41;](/sql/t-sql/language-elements/kill-transact-sql) を参照してください。  
   
  ![上部のリンクに戻る で使用される矢印アイコン](media/uparrow16x16.gif "に戻る リンクの上位で使用される矢印アイコン")[このガイドで](#Top)  
   

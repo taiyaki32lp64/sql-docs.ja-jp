@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 12/29/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - content type [data mining]
@@ -21,12 +20,12 @@ ms.assetid: 7c72d80e-913c-4bbe-b258-444294a78838
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 4a9c7a8152896aa3bd9f75cf483aaf29429a5638
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 9bec249e483c5736ee7cf0e66f4aff0af98e08c7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53355813"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66088033"
 ---
 # <a name="choosing-data-for-data-mining"></a>データ マイニングで使用するデータの選択
   データ マイニングを開始すると"どのくらいのデータが必要ですか?"を依頼する場合があります。 または「は存在する、特別な要件のクリーニングやデータを書式設定する際に理解する必要がありますか。」  
@@ -73,7 +72,7 @@ ms.locfileid: "53355813"
   
  妥当なサイズのデータが手元にある場合は、さらに多くのデータを追加する代わりに、データの品質に注目します。 一定の水準に達し、統計的に有効なすべてのパターンが見つかった後は、それ以上データを追加しても有効性は向上しません。 逆に、過度にデータを追加すると、偶発的な相関関係が見つかったという望ましくない結論を導く可能性もあります。  
   
-### <a name="discrete-vs-continuous-numbers"></a>データ マイニングにおける連続する数値  
+### <a name="discrete-vs-continuous-numbers"></a>おける連続する数値  
  A*不連続*列には、有限数値にはが含まれています。 たとえば、テキストは常に不連続値として扱われます。  
   
  不連続値には、いくつかの重要な属性があります。 たとえば、多様な数値を不連続値として扱う場合は、不連続値の間の順序を想定することはできず、数値の平均や合計を求めることもできません。 電話の市外局番コードは、不連続な数値データの典型的な例です。市外局番は、数学の演算の対象になりません。  

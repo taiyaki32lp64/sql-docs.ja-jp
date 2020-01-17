@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: e9032ad8-d14c-42e3-ba13-cb5f00084a79
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 283e623b045e635ef3165b51270c2a257d7856fd
-ms.sourcegitcommit: 1a5448747ccb2e13e8f3d9f04012ba5ae04bb0a3
+ms.openlocfilehash: f998463e0f8190aa040b801d2fd29c732bb31dce
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51559999"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67922364"
 ---
 # <a name="registering-a-custom-business-object"></a>カスタム ビジネス オブジェクトの登録
 Web サーバー経由 (.dll または .exe) は、カスタム ビジネス オブジェクトが正常に起動するにはこの手順で説明したように、ビジネス オブジェクトの ProgID レジストリに入力する必要があります。 この RDS 機能は、承認された実行可能ファイルだけを実行して、Web サーバーのセキュリティを保護します。  

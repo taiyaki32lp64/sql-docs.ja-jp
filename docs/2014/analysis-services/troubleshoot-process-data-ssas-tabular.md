@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: 678f523c-e181-4456-9a54-7b7bf044b8d2
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: e07f6674df80b16abad45a6fece9aad582ec585d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: f76d67d5e44fc700d4b889840ef2dcc07a0bfde0
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48174702"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66065765"
 ---
 # <a name="troubleshoot-process-data-ssas-tabular"></a>データの処理のトラブルシューティング (SSAS テーブル)
   このトピックでは、 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]を使用したモデルの作成時のモデル データの処理 (更新) について説明します。 このトピックでは、Analysis Services サーバー インスタンスに配置されたモデルでのデータの処理については説明しません。 配置済みモデルでのデータ処理の詳細については、「 [Analysis Services の管理タスクのスクリプト作成](script-administrative-tasks-in-analysis-services.md)」を参照してください。  
@@ -47,7 +46,7 @@ ms.locfileid: "48174702"
   
  したがって、データ ソースを変更したり、データ ソースから取得したデータを処理する前に、その影響について常に考慮し、次のような結果への影響を考慮する必要があります。  
   
--   データ ソースを変更した結果、モデル データの一部が破損する場合があります。 一部の列をデータ ソースから取得できない場合 (たとえば、列が削除または変更されている場合)、処理は失敗し、ソース データとモデル データの間のマッピングを更新する必要があります。 詳細については、次を参照してください。[既存のデータ ソース接続の編集&#40;SSAS 表形式&#41;](edit-an-existing-data-source-connection-ssas-tabular.md)します。  
+-   データ ソースを変更した結果、モデル データの一部が破損する場合があります。 一部の列をデータ ソースから取得できない場合 (たとえば、列が削除または変更されている場合)、処理は失敗し、ソース データとモデル データの間のマッピングを更新する必要があります。 詳細については、「 [既存のデータ ソース接続の編集 (SSAS テーブル)](edit-an-existing-data-source-connection-ssas-tabular.md)を使用したモデルの作成時のモデル データの処理 (更新) について説明します。  
   
 -   処理後、一部の列にエラーの存在を示すフラグが設定されることがあります。 処理時に使用できなくなっていたデータを列内の DAX 式が使用している場合、列のデータ型が変更された場合、または無効な値が外部データに追加された場合に、フラグが設定されます。 この問題を解決するには、数式を編集するか、使用できなくなったデータに基づいている列を削除します。  
   
@@ -106,7 +105,7 @@ ms.locfileid: "48174702"
 -   別々のテーブルの列を複数選択して、これらの列のプロパティを変更することはできません。 一度に 1 つのテーブルまたはビューのみを操作できます。  
   
 ## <a name="see-also"></a>参照  
- [データの手動処理&#40;SSAS 表形式&#41;](manually-process-data-ssas-tabular.md)   
- [既存のデータ ソース接続の編集&#40;SSAS 表形式&#41;](edit-an-existing-data-source-connection-ssas-tabular.md)  
+ [データの手動処理 (SSAS テーブル)](manually-process-data-ssas-tabular.md)   
+ [既存のデータ ソース接続の編集 (SSAS テーブル)](edit-an-existing-data-source-connection-ssas-tabular.md)  
   
   

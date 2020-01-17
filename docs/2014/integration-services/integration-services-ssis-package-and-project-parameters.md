@@ -7,15 +7,15 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 9ed9ca8e-8b1e-48d9-907d-285516d6562b
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 9358d3d7d014f7dc69dad00605ebdaaa2ef70707
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: cfd6a65e1561f252574ff919c8b63b0bbd57876f
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53352242"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62892247"
 ---
 # <a name="integration-services-ssis-parameters"></a>Integration Services (SSIS) パラメーター
   [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] (SSIS) パラメーターを使用すると、パッケージの実行時にパッケージ内のプロパティに値を割り当てることができます。 " *プロジェクト パラメーター* " はプロジェクト レベル、" *パッケージ パラメーター* " はパッケージ レベルで作成できます。 プロジェクト パラメーターは、プロジェクトが受け取る外部入力をプロジェクト内の 1 つまたは複数のパッケージに指定するために使用します。 パッケージ パラメーターを使用すると、パッケージを編集したり再配置したりせずにパッケージ実行を変更できます。  
@@ -77,12 +77,12 @@ ms.locfileid: "53352242"
  [catalog.object_parameters &#40;SSISDB データベース&#41;](/sql/integration-services/system-views/catalog-object-parameters-ssisdb-database) (ビュー)  
  設計上の既定値とサーバーの既定値を含め、 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] カタログのすべてのパッケージおよびプロジェクトのパラメーターとプロパティを表示します。  
   
- [catalog.set_execution_parameter_value &#40;SSISDB データベース&#41;](/sql/integration-services/system-stored-procedures/catalog-set-execution-parameter-value-ssisdb-database)  
+ [catalog.set_execution_parameter_value (SSISDB データベース)](/sql/integration-services/system-stored-procedures/catalog-set-execution-parameter-value-ssisdb-database)  
  [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] カタログの実行のインスタンスにパラメーターの値を設定します。  
   
  **の** [パッケージの実行] [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] ダイアログ ボックスを使用してパラメーター値を変更することもできます。 詳細については、「 [Execute Package Dialog Box](../../2014/integration-services/execute-package-dialog-box.md)」を参照してください。  
   
- dtexec の `/Parameter` オプションを使用してパラメーター値を変更することもできます。 詳細については、「 [dtexec Utility](packages/dtexec-utility.md)」を参照してください。  
+ dtexec の `/Parameter` オプションを使用してパラメーター値を変更することもできます。 詳しくは、「 [dtexec Utility](packages/dtexec-utility.md)」をご覧ください。  
   
 ### <a name="parameter-validation"></a>パラメーターの検証  
  パラメーター値を解決できない場合、対応するパッケージ実行は失敗します。 失敗を回避するために、 **の** [検証] [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]ダイアログ ボックスを使用してプロジェクトとパッケージを検証できます。 検証を使用すると、すべてのパラメーター値に必要な値が設定されているか、または特定の環境参照で必要な値を解決できるかを確認できます。 検証では、その他の一般的なパッケージの問題も確認されます。  
@@ -102,6 +102,6 @@ ms.locfileid: "53352242"
  [プロジェクトを配置した後にパラメーターの値を設定する](../../2014/integration-services/set-parameter-values-after-the-project-is-deployed.md)  
   
 ## <a name="related-content"></a>関連コンテンツ  
- ブログ エントリ「 [SSIS 簡単なヒント。必須パラメーター](https://go.microsoft.com/fwlink/?LinkId=239781)、mattmasson.com します。  
+ mattmasson.com のブログ記事、「[SSIS 簡単なヒント: 必要なパラメーター](https://go.microsoft.com/fwlink/?LinkId=239781)」  
   
   

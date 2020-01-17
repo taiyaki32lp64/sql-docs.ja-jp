@@ -1,5 +1,5 @@
 ---
-title: 操作方法:Geography 列 (ODBC) に行を挿入 |Microsoft Docs
+title: Geography 列に行を挿入する方法 (ODBC) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -10,37 +10,35 @@ ms.topic: reference
 ms.assetid: 0b6516f7-1fc0-4b01-a2d0-add0571070d5
 author: MightyPen
 ms.author: genemi
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: cc99a6dc997dd5cad589784446235a2ea1011d7d
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: 94c533392a824bf14b2b6f8f5ef57674a9a8c440
+ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53206281"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73781291"
 ---
-# <a name="how-to-insert-rows-into-geography-column-odbc"></a>操作方法:Geography 列 (ODBC) に行を挿入します。
+# <a name="how-to-insert-rows-into-geography-column-odbc"></a>Geography 列に行を挿入する方法 (ODBC)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-[!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
 
-  このサンプルでは、2 つの異なるバインド (SQLCCHAR および SQLCBINARY) を使用して WellKnownBinary (WKB) から geography 列を持つテーブルに 2 行追加します。 これには、そのテーブルから 1 つの行を選択し、使用、し、::stastext() を表示します。WKB は 0x01010000000700ECFAD03A4C4001008000B5DF07C0 で、アプリケーション、コンソールに出力します。ポイント (56.4595-2.9842)。  
+  このサンプルでは、2 つの異なるバインド (SQLCCHAR および SQLCBINARY) を使用して WellKnownBinary (WKB) から geography 列を持つテーブルに 2 行追加します。 次に、そのテーブルから 1 行選択し、::STAsText() を使用してその行を表示します。WKB は 0x01010000000700ECFAD03A4C4001008000B5DF07C0 で、アプリケーションは POINT(56.4595 -2.9842) をコンソールに出力します。  
   
  このサンプルは ODBC データ ソースを必要としませんが、既定では SQL Server のローカル インスタンスで実行されます。  
   
  このサンプルは、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] より前のバージョンの [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] では動作しません。  
   
- 空間ストレージの詳細については、次を参照してください。[空間データ&#40;SQL Server&#41;](../../relational-databases/spatial/spatial-data-sql-server.md)します。  
+ 空間ストレージの詳細については、「 [ &#40;空間&#41;データ SQL Server](../../relational-databases/spatial/spatial-data-sql-server.md)」を参照してください。  
   
 ## <a name="example"></a>例  
- 最初の ( [!INCLUDE[tsql](../../includes/tsql-md.md)]) コード リストは、このサンプルで使用するテーブルを作成します。  
+ 最初の ([!INCLUDE[tsql](../../includes/tsql-md.md)]) コードリストは、このサンプルで使用するテーブルを作成します。  
   
- odbc32.lib と user32.lib を使用して 3 つ目の (C++) コード リストをコンパイルします。 INCLUDE 環境変数には、sqlncli.h を含むディレクトリが含まれています。 を確認します。  
+ odbc32.lib と user32.lib を使用して 3 つ目の (C++) コード リストをコンパイルします。 INCLUDE 環境変数に、sqlncli を含むディレクトリが含まれていることを確認します。  
   
  このサンプルを 64 ビット オペレーティング システムで 32 ビット アプリケーションとしてビルドし、実行する場合、%windir%\SysWOW64\odbcad32.exe の ODBC アドミニストレーターを使用して ODBC データ ソースを作成する必要があります。  
   
  このサンプルでは、コンピューターの既定の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスに接続します。 名前付きインスタンスに接続するには、ODBC データ ソースの定義を変更し、server\namedinstance 形式でそのインスタンスを指定します。 [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] は、既定で名前付きインスタンスとしてインストールされます。  
   
- 3 番目の ( [!INCLUDE[tsql](../../includes/tsql-md.md)]) コード リストは、このサンプルで使用するテーブルを削除します。  
+ 3番目の ([!INCLUDE[tsql](../../includes/tsql-md.md)]) コードリストは、このサンプルで使用されるテーブルを削除します。  
   
 ```sql
 use tempdb  

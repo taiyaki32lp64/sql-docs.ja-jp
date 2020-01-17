@@ -4,23 +4,22 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.termlookup.referencetable.f1
 helpviewer_keywords:
 - Term Lookup Transformation Editor
 ms.assetid: 86ccec6d-615b-4f84-9226-ff80d8012f17
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 69ab9ccde1d3f14a4cf3d28c856350aef4c80b56
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: e28dda733e4c93c482e26eeb207189014a1940da
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48071666"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66055163"
 ---
 # <a name="term-lookup-transformation-editor-reference-table-tab"></a>[用語参照変換エディター] ([参照テーブル] タブ)
   **[用語参照変換エディター]** ダイアログ ボックスの **[参照テーブル]** タブを使用すると、参照テーブルへの接続を指定できます。  
@@ -42,8 +41,8 @@ ms.locfileid: "48071666"
   
 ## <a name="see-also"></a>参照  
  [Integration Services のエラーおよびメッセージのリファレンス](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [用語参照変換エディター&#40;用語参照 タブ&#41;](../../2014/integration-services/term-lookup-transformation-editor-term-lookup-tab.md)   
- [用語参照変換エディター&#40;詳細設定 タブ&#41;](../../2014/integration-services/term-lookup-transformation-editor-advanced-tab.md)   
+ [[用語参照変換エディター] &#40;[用語参照] タブ&#41;](../../2014/integration-services/term-lookup-transformation-editor-term-lookup-tab.md)   
+ [[用語参照変換エディター] &#40;[詳細設定] タブ&#41;](../../2014/integration-services/term-lookup-transformation-editor-advanced-tab.md)   
  [用語抽出変換](data-flow/transformations/term-extraction-transformation.md)  
   
   

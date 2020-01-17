@@ -1,5 +1,5 @@
 ---
-title: データ ソース オブジェクトを永続化 |Microsoft Docs
+title: 永続化されたデータソースオブジェクト |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -15,23 +15,21 @@ helpviewer_keywords:
 ms.assetid: dfdacc81-42fe-4f20-8969-bed1f743defe
 author: MightyPen
 ms.author: genemi
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 5f9afa1b416b451689f4fd0c47957e6b28cb6e66
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: f1c553835cc0380082821dd49f53f69e767baacb
+ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47656125"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73771470"
 ---
 # <a name="persisted-data-source-objects"></a>保存されるデータ ソース オブジェクト
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-[!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB プロバイダーは永続化されたデータ ソース オブジェクトをサポート、 **IPersistFile**インターフェイス。  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB プロバイダーは、 **IPersistFile**インターフェイスを使用して、永続化されたデータソースオブジェクトをサポートします。  
   
 ## <a name="examples"></a>使用例  
- **A.データ ソースの初期化の保存:**  
+ **A: データソースの初期化を保持します。**  
   
  次の例では、サーバー、データベース、および接続用の Windows 認証モードを定義しているデータ ソースの初期化プロパティを保存する関数を示します。 サーバー名とデータベース名は、関数の *pLocation* パラメーターと *pDatasource* パラメーターで受け取ります。  
   
@@ -142,7 +140,7 @@ HRESULT SetAndSaveInitProps
     }  
 ```  
   
- **B.保存されたデータ ソースの初期化の使用:**  
+ **B. 永続化されたデータソースの初期化を使用する:**  
   
  次の例では、保存されたデータ ソース オブジェクトを使用して、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ログインとパスワードを指定する初期化プロパティを追加します。  
   
@@ -233,6 +231,6 @@ HRESULT InitFromPersistedDS
  **IPersistFile::Save** メソッドは、**IDBInitialize::Initialize** の呼び出しの前または後に呼び出すことができます。 **IDBInitialize::Initialize** から正常に制御が戻った後にこのメソッドを呼び出すと、有効なデータ ソース指定が確実に保存されます。  
   
 ## <a name="see-also"></a>参照  
- [データ ソース オブジェクト&#40;OLE DB&#41;](../../relational-databases/native-client-ole-db-data-source-objects/data-source-objects-ole-db.md)  
+ [データソースオブジェクト&#40;の OLE DB&#41;](../../relational-databases/native-client-ole-db-data-source-objects/data-source-objects-ole-db.md)  
   
   

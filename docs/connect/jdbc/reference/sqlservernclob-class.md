@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 3d3883a2-c39c-439f-bbc0-01e73968672b
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: a2a3c207998acdf621809c920b9048b8edef9022
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 6775f44c2d220e6b0f13312b8fcf47d133def00d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47798210"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67970968"
 ---
 # <a name="sqlservernclob-class"></a>SQLServerNClob クラス
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

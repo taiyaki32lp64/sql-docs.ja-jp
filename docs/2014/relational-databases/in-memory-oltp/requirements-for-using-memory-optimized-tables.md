@@ -11,11 +11,11 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: 9b9e442fb97245d32c398602cdfd727de8239cb8
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53352421"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62467909"
 ---
 # <a name="requirements-for-using-memory-optimized-tables"></a>メモリ最適化テーブルを使用するための要件
   加え、 [Hardware and Software Requirements for Installing SQL Server 2014](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md)、インメモリ OLTP を使用するための要件を次に示します。  
@@ -36,9 +36,9 @@ ms.locfileid: "53352421"
   
 -   インメモリ OLTP をインストールするには、 **のインストール時に** [データベース エンジン サービス] [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]を選択します。  
   
-     レポートの生成をインストールする ([Determining if テーブルまたはストアド プロシージャ Should Be Ported to インメモリ OLTP](determining-if-a-table-or-stored-procedure-should-be-ported-to-in-memory-oltp.md)) と[!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] (を使用して、インメモリ OLTP を管理する[!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]オブジェクト エクスプ ローラー) を選択します**管理ツール-基本**または**管理ツール-高度な**インストールするときに[!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]します。  
+     レポートの生成をインストールする ([Determining if テーブルまたはストアド プロシージャ Should Be Ported to インメモリ OLTP](determining-if-a-table-or-stored-procedure-should-be-ported-to-in-memory-oltp.md)) と[!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)](を使用して、インメモリ OLTP を管理する[!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]オブジェクト エクスプ ローラー) を選択します**管理ツール-基本**または**管理ツール-高度な**インストールするときに[!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]します。  
   
-## <a name="important-notes-on-using-includehek2includeshek-2-mdmd"></a> [!INCLUDE[hek_2](../../../includes/hek-2-md.md)]  
+## <a name="important-notes-on-using-includehek2includeshek-2-mdmd"></a>[!INCLUDE[hek_2](../../../includes/hek-2-md.md)]  
   
 -   データベース内の持続性のあるすべてのテーブルのメモリ内サイズの合計は 250 GB を超えないようにする必要があります。 詳細については、次を参照してください。[メモリ最適化テーブルの持続性](durability-for-memory-optimized-tables.md)します。  
   

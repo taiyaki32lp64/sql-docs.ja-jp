@@ -16,34 +16,33 @@ helpviewer_keywords:
 ms.assetid: 79b9c268-16ac-4b80-b451-f9dcd8c02ca4
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 5485da176b9bd4aa7afca7afa088e6932d6f0d58
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 5222282bce2acf49cc6a144667ddd691528b3693
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47814105"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67944844"
 ---
 # <a name="odbc-and-the-standard-cli"></a>ODBC と標準の CLI
 ODBC は、次の仕様およびコールレベル インターフェイス (CLI) を処理する標準に揃えて配置します。 (ODBC の機能は、これらの標準のそれぞれのスーパー セットです)。  
   
--   Open Group CAE 仕様"のデータ管理: SQL コールレベル インターフェイス (CLI)"  
+-   Open Group CAE 仕様"のデータ管理。SQL 呼び出しレベルのインターフェイス (CLI)"  
   
 -   ISO/IEC 9075-3:1995 (E) コールレベル インターフェイス (SQL/CLI)  
   
  この配置では、結果として、以下が該当します。  
   
--   ODBC 3 は、Open Group および ISO CLI 仕様に記述されたアプリケーションは動作します。*x*ドライバーまたは ODBC 3 でコンパイルされるときに、標準に準拠したドライバー *。x*ヘッダー ファイルし、ODBC 3 にリンクされている *。x*ライブラリとすると、ドライバーは ODBC 3 へのアクセスが得られます *。x*ドライバー マネージャー。  
+-   Open Group および ISO CLI 仕様に記述されたアプリケーションは、ODBC *3.x*ドライバーまたは ODBC でコンパイルされるときに、標準に準拠したドライバー *3.x*ヘッダー ファイルし、リンクされています。ODBC *3.x*ライブラリ、ドライバーは ODBC へのアクセスを得る場合と*3.x*ドライバー マネージャー。  
   
--   Open Group および ISO CLI 仕様に記述されたドライバーは、ODBC 3 *.x*アプリケーションまたは ODBC 3 でコンパイルされるときに、標準に準拠したアプリケーションを *.x*ヘッダー ファイルし、リンクODBC 3 *.x*ライブラリ、ドライバーは ODBC 3 に、アプリケーションがアクセスおよび *.x*ドライバー マネージャー。 (詳細については、次を参照してください。[標準に準拠したアプリケーションやドライバー](../../odbc/reference/develop-app/standards-compliant-applications-and-drivers.md)します。  
+-   Open Group および ISO CLI 仕様に記述されたドライバーは ODBC *3.x*アプリケーションまたは ODBC でコンパイルされるときに、標準に準拠したアプリケーションを*3.x*ヘッダー ファイルし、リンクODBC を使って*3.x*ライブラリ、ODBC を使用してドライバー、アプリケーションがアクセスおよび*3.x*ドライバー マネージャー。 (詳細については、次を参照してください。[標準に準拠したアプリケーションやドライバー](../../odbc/reference/develop-app/standards-compliant-applications-and-drivers.md)します。  
   
- コア インターフェイスの適合性レベルには、ISO CLI でのすべての機能と、開いているグループ CLI で nonoptional すべての機能が含まれます。 開くグループ CLI の省略可能な機能より高いインターフェイスの適合性レベルに表示されます。 ため、すべての ODBC 3。*x*ドライバーは、コア インターフェイスへの準拠レベルの機能をサポートするために必要で、次が該当します。  
+ コア インターフェイスの適合性レベルには、ISO CLI でのすべての機能と、開いているグループ CLI で nonoptional すべての機能が含まれます。 開くグループ CLI の省略可能な機能より高いインターフェイスの適合性レベルに表示されます。 ため、すべての ODBC *3.x*ドライバーは、コア インターフェイスへの準拠レベルの機能をサポートするために必要で、次が該当します。  
   
--   ODBC 3。*x*ドライバーは、標準に準拠したアプリケーションで使用されるすべての機能をサポートします。  
+-   ODBC *3.x*ドライバーは、標準に準拠したアプリケーションで使用されるすべての機能をサポートします。  
   
--   ODBC 3。*x* ISO CLI での機能のみと、開いているグループの CLI の nonoptional 機能を使用してアプリケーションが標準に準拠したドライバーを使用します。  
+-   ODBC *3.x* ISO CLI での機能のみと、開いているグループの CLI の nonoptional 機能を使用してアプリケーションが標準に準拠したドライバーを使用します。  
   
- ISO/IEC およびオープン グループ CLI 標準に含まれている呼び出しレベルのインターフェイスの仕様、だけでなくは、ODBC は、次の機能を実装します。 (これらの機能の一部は ODBC が ODBC 3 より前のバージョンに存在します。*x*)。  
+ ISO/IEC およびオープン グループ CLI 標準に含まれている呼び出しレベルのインターフェイスの仕様、だけでなくは、ODBC は、次の機能を実装します。 (これらの機能の一部には、ODBC が ODBC より前のバージョンに存在していた*3.x*)。  
   
 -   1 つの関数の呼び出しによって複数行のフェッチ  
   

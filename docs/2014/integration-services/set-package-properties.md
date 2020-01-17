@@ -22,15 +22,15 @@ helpviewer_keywords:
 - version properties [Integration Services]
 - SQL Server Integration Services packages, properties
 ms.assetid: 13f81c3e-2b18-4f83-b445-a2f4a2c560aa
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 379a4084033e4ffadb83de94ee832671b0c77695
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: ea7f5f06816b6dd4ddf840f63119bebb0ebf80e8
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52813544"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62889215"
 ---
 # <a name="set-package-properties"></a>パッケージのプロパティを設定する
   [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] のグラフィカル インターフェイスを使用して [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] のパッケージを作成する場合、パッケージ オブジェクトのプロパティは [プロパティ] ウィンドウで設定します。  
@@ -74,7 +74,7 @@ ms.locfileid: "52813544"
 |`SaveCheckpoints`|パッケージの実行時にチェックポイントをチェックポイント ファイルに書き込むかどうかを指定します。 このプロパティの既定値は `False` です。|  
   
 > [!NOTE]  
->  dtexec の `/CheckPointing on` オプションを使用すると、パッケージの `SaveCheckpoints` プロパティを True に設定した場合、および `CheckpointUsage` プロパティを Always に設定した場合と同等の効果が得られます。 詳細については、「 [dtexec Utility](packages/dtexec-utility.md)」を参照してください。  
+>  dtexec の `/CheckPointing on` オプションを使用すると、パッケージの `SaveCheckpoints` プロパティを True に設定した場合、および `CheckpointUsage` プロパティを Always に設定した場合と同等の効果が得られます。 詳しくは、「 [dtexec Utility](packages/dtexec-utility.md)」をご覧ください。  
   
 ###  <a name="Execution"></a> 実行  
  このカテゴリのプロパティは、パッケージ オブジェクトの実行時の動作を構成します。  
@@ -109,7 +109,7 @@ ms.locfileid: "52813544"
 |`CreatorName`|パッケージの作成者の名前です。|  
 |`Description`|パッケージ機能の説明です。|  
 |`ID`|パッケージ GUID です。パッケージが作成されるときに割り当てられます。 このプロパティは読み取り専用です。 新しいランダムな値を生成する、`ID`プロパティで、  **\<Generate New ID >** ドロップダウン リストでします。|  
-|`Name`|パッケージの名前です。|  
+|`Name`|パッケージの名前。|  
 |`PackageType`|パッケージの種類です。 値は、`Default`、`DTSDesigner`、`DTSDesigner100`、`DTSWizard`、`SQLDBMaint`、および `SQLReplication` です。 このプロパティの既定値は `Default` です。 詳細については、「 <xref:Microsoft.SqlServer.Dts.Runtime.DTSPackageType> 」を参照してください。|  
   
 ###  <a name="Misc"></a> その他  
@@ -118,7 +118,7 @@ ms.locfileid: "52813544"
 |プロパティ|説明|  
 |--------------|-----------------|  
 |`Configurations`|パッケージで使用する構成のコレクションです。 パッケージ構成を表示して構成するには、参照ボタン ( **[...]** ) をクリックします。|  
-|`Expressions`|パッケージのプロパティの式を作成するには、参照ボタン ( **[...]** ) をクリックします。<br /><br /> 注:[プロパティ] ウィンドウに一覧表示されるプロパティだけでなく、オブジェクト モデルに含まれるすべてのパッケージのプロパティの式が作成できます。<br /><br /> 詳細については、「 [パッケージでプロパティ式を使用する](expressions/use-property-expressions-in-packages.md)」を参照してください。<br /><br /> 既存のプロパティの式を表示するには、`Expressions` を展開します。 式を変更したり評価するには、式テキスト ボックスの参照ボタン ( **[...]** ) をクリックします。|  
+|`Expressions`|パッケージのプロパティの式を作成するには、参照ボタン ( **[...]** ) をクリックします。<br /><br /> 注:オブジェクト モデルに含まれている [プロパティ] ウィンドウに表示されているプロパティだけでなくすべてのパッケージのプロパティのプロパティ式を作成することができます。<br /><br /> 詳細については、「 [パッケージでプロパティ式を使用する](expressions/use-property-expressions-in-packages.md)」を参照してください。<br /><br /> 既存のプロパティの式を表示するには、`Expressions` を展開します。 式を変更したり評価するには、式テキスト ボックスの参照ボタン ( **[...]** ) をクリックします。|  
 |`ForceExecutionResult`|パッケージの実行結果です。 有効値は、`None`、`Success`、`Failure`、および `Completion` です。 このプロパティの既定値は `None` です。 詳細については、「T:Microsoft.SqlServer.Dts.Runtime.DTSForcedExecResult」を参照してください。|  
 |`LocaleId`|Microsoft Win32 ロケールです。 このプロパティの既定値は、ローカル コンピューター上のオペレーティング システムのロケールです。|  
 |`LoggingMode`|パッケージのログ記録の動作を指定する値です。 値は、`Disabled`、`Enabled`、および `UseParentSetting` です。 このプロパティの既定値は `UseParentSetting` です。 詳細については、「 <xref:Microsoft.SqlServer.Dts.Runtime.DTSLoggingMode> 」を参照してください。|  
@@ -139,7 +139,7 @@ ms.locfileid: "52813544"
   
 |プロパティ|説明|  
 |--------------|-----------------|  
-|`IsolationLevel`|パッケージ トランザクションの分離レベルです。  このプロパティの既定値は `Serializable` です。 有効な値は <br />`Unspecified`<br />`Chaos`<br />`ReadUncommitted`<br />`ReadCommitted`<br />`RepeatableRead`<br />`Serializable`<br />`Snapshot` 。<br /><br /> `IsolationLevel` プロパティは、`TransactionOption` プロパティの値が `Required` の場合にのみ、パッケージ トランザクションに適用されます。<br /><br /> 子コンテナーによって要求された `IsolationLevel` プロパティの値は、以下の場合には無視されます。<br /><br /> 子コンテナーの `TransactionOption` プロパティの値が `Supported` である場合。<br />子コンテナーが親コンテナーのトランザクションに参加する場合。<br /><br /> コンテナーによって要求された `IsolationLevel` プロパティの値は、コンテナーが新しいトランザクションを開始する場合にのみ利用されます。 コンテナーは、次の場合に新しいトランザクションを開始します。<br /><br /> コンテナーの `TransactionOption` プロパティの値が `Required` である場合。<br />親がまだトランザクションを開始していない場合。<br /><br /> <br /><br /> 注:`Snapshot` プロパティの値 `IsolationLevel` は、パッケージ トランザクションと互換性がありません。 したがって、`IsolationLevel` プロパティを使用して、パッケージ トランザクションの分離レベルを `Shapshot` に設定することはできません。 SQL クエリを使用して、パッケージ トランザクションを `Snapshot` に設定してください。 詳細については、「[SET TRANSACTION ISOLATION LEVEL &#40;Transact-SQL&#41;](/sql/t-sql/statements/set-transaction-isolation-level-transact-sql)」を参照してください。<br /><br /> `IsolationLevel` プロパティの詳細については、「<xref:Microsoft.SqlServer.Dts.Runtime.DtsContainer.IsolationLevel%2A>」を参照してください。|  
+|`IsolationLevel`|パッケージ トランザクションの分離レベルです。  このプロパティの既定値は `Serializable` です。 有効な値は <br />`Unspecified`<br />`Chaos`<br />`ReadUncommitted`<br />`ReadCommitted`<br />`RepeatableRead`<br />`Serializable`<br />`Snapshot`。<br /><br /> `IsolationLevel` プロパティは、`TransactionOption` プロパティの値が `Required` の場合にのみ、パッケージ トランザクションに適用されます。<br /><br /> 子コンテナーによって要求された `IsolationLevel` プロパティの値は、以下の場合には無視されます。<br /><br /> 子コンテナーの `TransactionOption` プロパティの値が `Supported` である場合。<br />子コンテナーが親コンテナーのトランザクションに参加する場合。<br /><br /> コンテナーによって要求された `IsolationLevel` プロパティの値は、コンテナーが新しいトランザクションを開始する場合にのみ利用されます。 コンテナーは、次の場合に新しいトランザクションを開始します。<br /><br /> コンテナーの `TransactionOption` プロパティの値が `Required` である場合。<br />親がまだトランザクションを開始していない場合。<br /><br /> <br /><br /> 注:`Snapshot`の値、`IsolationLevel`プロパティは、パッケージ トランザクションと互換性がありません。 したがって、`IsolationLevel` プロパティを使用して、パッケージ トランザクションの分離レベルを `Shapshot` に設定することはできません。 SQL クエリを使用して、パッケージ トランザクションを `Snapshot` に設定してください。 詳細については、「[SET TRANSACTION ISOLATION LEVEL &#40;Transact-SQL&#41;](/sql/t-sql/statements/set-transaction-isolation-level-transact-sql)」を参照してください。<br /><br /> `IsolationLevel` プロパティの詳細については、「<xref:Microsoft.SqlServer.Dts.Runtime.DtsContainer.IsolationLevel%2A>」を参照してください。|  
 |`TransactionOption`|パッケージに対するトランザクションの関与を示します。 値は、 `NotSupported`、 `Supported`、`Required`します。 このプロパティの既定値は `Supported` です。 詳細については、「 <xref:Microsoft.SqlServer.Dts.Runtime.DTSTransactionOption> 」を参照してください。|  
   
 ###  <a name="Version"></a> バージョン  

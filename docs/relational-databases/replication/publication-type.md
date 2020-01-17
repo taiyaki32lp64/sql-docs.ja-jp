@@ -12,16 +12,16 @@ f1_keywords:
 ms.assetid: 1b77a466-479c-4356-b539-a644cec507b5
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 37086a91a9fb65739181284efd1c57cee34bde81
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
+ms.openlocfilehash: d0d93259d8acdeb6d548d18971bba2843b61bab7
+ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47825270"
+ms.lasthandoff: 08/03/2019
+ms.locfileid: "68769919"
 ---
 # <a name="publication-type"></a>[パブリケーションの種類]
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
   レプリケーションにより、次の種類のパブリケーションが提供されます。  
   
 -   スナップショット パブリケーション  
@@ -32,7 +32,7 @@ ms.locfileid: "47825270"
   
  アプリケーションに対してどの種類のレプリケーションを選択するかは、物理レプリケーション環境、レプリケートするデータの種類と量、およびデータがサブスクライバーで更新されるかどうかに依存します。 物理環境には、レプリケーションに関連するコンピューターの台数と場所、およびこれらのコンピューターがクライアント (ワークステーション、ラップトップ コンピューター、またはハンドヘルド デバイス) かサーバーかということが含まれます。 詳細については、「[Types of Replication](../../relational-databases/replication/types-of-replication.md)」 (レプリケーションの種類) を参照してください。  
   
-## <a name="options"></a>[変数]  
+## <a name="options"></a>オプション  
  **Publication type**  
  このパブリケーションにとって適切なレプリケーションの種類を選択します。  
   

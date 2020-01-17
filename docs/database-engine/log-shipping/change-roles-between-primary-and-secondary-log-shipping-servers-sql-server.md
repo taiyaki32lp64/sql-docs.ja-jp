@@ -1,6 +1,7 @@
 ---
-title: プライマリ ログ配布サーバーとセカンダリ ログ配布サーバー間でのロールの変更 (SQL Server) | Microsoft Docs
-ms.custom: ''
+title: プライマリ ログとセカンダリ ログ配布のロールの変更
+description: SQL Server ログ配布ソリューションに対してプライマリ データベースとして機能するようにセカンダリ データベースを構成する方法について説明します。
+ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.reviewer: ''
@@ -16,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 2d7cc40a-47e8-4419-9b2b-7c69f700e806
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 425fd1f945995b63b66fa105c96b36629c595941
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e06d382258d6d98b7f54ff9dd3f4840a04274d81
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47852070"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75259002"
 ---
 # <a name="change-roles-between-primary-and-secondary-log-shipping-servers-sql-server"></a>プライマリ ログ配布サーバーとセカンダリ ログ配布サーバー間でのロールの変更 (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -43,17 +43,17 @@ ms.locfileid: "47852070"
   
     3.  **[セカンダリ データベースの設定]** ダイアログ ボックスで、 **[いいえ、セカンダリ データベースは初期化されています]** を選択します。  
   
-4.  ログ配布モニターが以前のログ配布構成で有効になっていた場合は、新しいログ配布構成を監視するようにログ配布モニターを再構成します。  *database_name* をデータベースの名前に置き換えて、次のコマンドを実行します。  
+4.  ログ配布モニターが以前のログ配布構成で有効になっていた場合は、新しいログ配布構成を監視するようにログ配布モニターを再構成します。  threshold_alert_enabled を 1 に設定して、restore_threshold を超えたらアラートが生成されるように指定します。 *database_name* をデータベースの名前に置き換えて、次のコマンドを実行します。  
   
     1.  **新しいプライマリ サーバーで、**  
   
          次の [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントを実行します。  
   
-        ```  
+        ```sql  
         -- Statement to execute on the new primary server  
         USE msdb  
         GO  
-        EXEC master.dbo.sp_change_log_shipping_secondary_database @secondary_database = N'database_name', @threshold_alert_enabled = 0;  
+        EXEC master.dbo.sp_change_log_shipping_secondary_database @secondary_database = N'database_name', @threshold_alert_enabled = 1;  
         GO  
         ```  
   
@@ -61,11 +61,11 @@ ms.locfileid: "47852070"
   
          次の [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントを実行します。  
   
-        ```  
+        ```sql  
         -- Statement to execute on the new secondary server  
         USE msdb  
         GO  
-        EXEC master.dbo.sp_change_log_shipping_primary_database @database=N'database_name', @threshold_alert_enabled = 0;  
+        EXEC master.dbo.sp_change_log_shipping_primary_database @database=N'database_name', @threshold_alert_enabled = 1;  
         GO  
         ```  
   

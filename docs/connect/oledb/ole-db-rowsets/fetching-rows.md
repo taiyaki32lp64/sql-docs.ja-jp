@@ -1,6 +1,6 @@
 ---
-title: 行のフェッチ |Microsoft Docs
-description: IRowset インターフェイスを使用して行をフェッチしています
+title: 行をフェッチしています |Microsoft Docs
+description: IRowset インターフェイスを使用した行のフェッチ
 ms.custom: ''
 ms.date: 06/14/2018
 ms.prod: sql
@@ -16,13 +16,12 @@ helpviewer_keywords:
 - OLE DB Driver for SQL Server, fetching
 author: pmasl
 ms.author: pelopes
-manager: craigg
-ms.openlocfilehash: b744d36d6e5d51fa86107fc1335307900c016c17
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d47e94795f3bb81dd7a2d870190f081436c47e07
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47597321"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68015363"
 ---
 # <a name="fetching-rows"></a>行のフェッチ
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

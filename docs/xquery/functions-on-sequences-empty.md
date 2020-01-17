@@ -15,18 +15,17 @@ helpviewer_keywords:
 ms.assetid: 46da89a8-0cd9-4913-8521-4087589a04ba
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 5d9afc542b8d743c3e4e0ae35bb87f10e2f0835f
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 888739807a79163a8188f3b2f27b7f7860032bc4
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51669361"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68004675"
 ---
 # <a name="functions-on-sequences---empty"></a>シーケンスの関数 - empty
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
-  True の場合の値 *$arg*は空のシーケンスです。 それ以外の場合は False を返します。  
+  True の場合の値 *$arg*は空のシーケンスです。 それ以外の場合、関数は、False を返します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -37,7 +36,7 @@ fn:empty($arg as item()*) as xs:boolean
   
 ## <a name="arguments"></a>引数  
  *$arg*  
- アイテムのシーケンス。 シーケンスが空の場合、関数は True を返します。 それ以外の場合は False を返します。  
+ 項目のシーケンス。 シーケンスが空の場合、関数は True を返します。 それ以外の場合、関数は、False を返します。  
   
 ## <a name="remarks"></a>コメント  
  **Fn:exists()** 関数がサポートされていません。 別の方法として、 **not()** 関数を使用できます。  
@@ -45,7 +44,7 @@ fn:empty($arg as item()*) as xs:boolean
 ## <a name="examples"></a>使用例  
  このトピックではさまざまなに格納されている XML インスタンスに対して XQuery の例について**xml**型の列には、AdventureWorks データベース。  
   
-### <a name="a-using-the-empty-xquery-function-to-determine-if-an-attribute-is-present"></a>A. empty() XQuery 関数を使用した属性の有無の判断  
+### <a name="a-using-the-empty-xquery-function-to-determine-if-an-attribute-is-present"></a>A. Empty() XQuery 関数を使用して、属性が存在するかどうかを決定するには  
  製品モデル 7 の製造プロセスをこのクエリがないすべてのワーク センター拠点が返されます、 **MachineHours**属性。  
   
 ```  
@@ -111,7 +110,7 @@ ProductModelID Result
   <Location LocationID="60" LaborHrs="4" MachineHours="NotFound"/>  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [Xml データ型に対する XQuery 関数](../xquery/xquery-functions-against-the-xml-data-type.md)   
  [exist&#40;&#41; メソッド &#40;xml データ型&#41;](../t-sql/xml/exist-method-xml-data-type.md)  
   

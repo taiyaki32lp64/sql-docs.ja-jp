@@ -15,17 +15,20 @@ helpviewer_keywords:
 - containers [Integration Services], For Loop
 - For Loop containers
 ms.assetid: 44cf7355-992b-4bbf-a28c-bfb012de06f6
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: 914a8eab85e26e97c1f36f95b75366d6fdd98bce
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 26d7442164d4d018feb6066e6cafdf12c9312429
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51640499"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71294153"
 ---
 # <a name="for-loop-container"></a>For ループ コンテナー
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   For ループ コンテナーは、パッケージ内で繰り返す制御フローを定義します。 ループの実装は、プログラミング言語の **For** ループ構造と同じです。 For ループ コンテナーは、ループの各繰り返しで式を評価し、式が **False**に評価されるまでそのワークフローを繰り返します。  
   
  For ループ コンテナーは、次の要素を使用してループを定義します。  
@@ -94,7 +97,7 @@ ms.locfileid: "51640499"
   
  For ループ コンテナーの概要とパッケージ内で For ループ コンテナーを使用する方法の詳細については、「 [For Loop Container](../../integration-services/control-flow/for-loop-container.md)」を参照してください。  
   
-### <a name="options"></a>[変数]  
+### <a name="options"></a>オプション  
  **[InitExpression]**  
  必要に応じて、ループが使用する値を初期化する式を指定します。  
   
@@ -104,7 +107,7 @@ ms.locfileid: "51640499"
  **[AssignExpression]**  
  必要に応じて、ループの繰り返しごとに条件を変更する式を指定します。  
   
- **名前**  
+ **[名前]**  
  For ループ コンテナーに一意な名前を指定します。 この名前は、タスク アイコンのラベルとして使用されます。  
   
 > [!NOTE]  

@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 39c8d86e-7ee9-4182-be5e-aad5ce952f84
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 3860434236f5a0751ddb857c6b8bce1cf54d19ac
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: afee71d4f37e2b3a27247fbeacf51dab66cc1e23
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47718780"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67933284"
 ---
 # <a name="cursorlocation-property-ado"></a>CursorLocation プロパティ (ADO)
 カーソル サービスの場所を示します。  
@@ -48,5 +47,5 @@ ms.locfileid: "47718780"
 |-|-|  
 |[Connection オブジェクト (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)|[Recordset オブジェクト (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)|  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [付録 A: プロバイダー](../../../ado/guide/appendixes/appendix-a-providers.md)

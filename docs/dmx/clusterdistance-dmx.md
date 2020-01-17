@@ -8,18 +8,17 @@ ms.topic: conceptual
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-manager: kfile
-ms.openlocfilehash: ad3d0d06016fe8684cacaf73286b229a423aa7c6
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 523c57811ca29956edc3c18b8143844732c163b6
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52533662"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68892390"
 ---
 # <a name="clusterdistance-dmx"></a>ClusterDistance (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
-  **ClusterDistance**関数では、入力したケースの距離を返します、指定されたクラスターでは、クラスターが指定されていない場合、最も可能性の高いクラスターから入力したケースの距離。  
+  **Clusterdistance**関数は、指定されたクラスターから入力したケースの距離を返します。クラスターが指定されていない場合は、最も可能性の高いクラスターと入力したケース間の距離を返します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -29,37 +28,37 @@ ClusterDistance([<ClusterID expression>])
 ```  
   
 ## <a name="applies-to"></a>適用対象  
- この関数は、基本となるデータ マイニング モデルがクラスターをサポートする場合にのみ使用できます。 この関数はどの種類のクラスター モデル (EM、K-Means など) でも使用できますが、アルゴリズムによって結果が異なります。  
+ この関数は、基本となるデータ マイニング モデルがクラスターをサポートする場合にのみ使用できます。 関数は、任意の種類のクラスターモデル (EM、K など) で使用できますが、結果はアルゴリズムによって異なります。  
   
 ## <a name="return-type"></a>戻り値の型  
  スカラー値です。  
   
 ## <a name="remarks"></a>コメント  
- **ClusterDistance**関数が、入力したケースとその入力したケースの確率の高いクラスターとの間の距離を返します。  
+ **Clusterdistance**関数は、入力したケースと、その入力ケースの確率が最も高いクラスターとの距離を返します。  
   
- K-Means クラスタリングの場合、どのケースも所属できるのは、メンバーシップの重みが 1.0 のクラスター 1 つだけなので、クラスターの距離は常に 0 になります。 ただし、K-Means では、各クラスターに重心があると想定されています。 マイニング モデル コンテンツ内の入れ子になったテーブル NODE_DISTRIBUTION をクエリしたり参照したりして、重心の値を取得できます。 詳細については、「 [クラスター モデルのマイニング モデル コンテンツ &#40;Analysis Services - データ マイニング&#41;](../analysis-services/data-mining/mining-model-content-for-clustering-models-analysis-services-data-mining.md)」を参照してください。  
+ K がクラスター化されている場合、いずれのケースも1つのクラスターに属することができますが、メンバーシップの重みは1.0 であるため、クラスターの距離は常に0になります。 ただし、K-Means では、各クラスターに重心があると想定されています。 階層の値を取得するには、マイニングモデルコンテンツ内の入れ子になった NODE_DISTRIBUTION テーブルをクエリまたは参照します。 詳細については、「 [クラスター モデルのマイニング モデル コンテンツ &#40;Analysis Services - データ マイニング&#41;](https://docs.microsoft.com/analysis-services/data-mining/mining-model-content-for-clustering-models-analysis-services-data-mining)」を参照してください。  
   
- 既定の EM クラスタリング手法の場合、クラスター内のすべてのポイントは同程度であると見なされるため、仕様上、クラスターには重心がありません。 値**ClusterDistance**特定のケースと特定のクラスター間*N*は次のように計算されます。  
+ 既定の EM クラスタリング方法の場合、クラスター内のすべてのポイントは同じように見なされます。したがって、設計上、クラスターの重心はありません。 特定のケースと特定のクラスター *N*の間の**clusterdistance**の値は、次のように計算されます。  
   
- ClusterDistance(N) =1-(membershipWeight(N))  
+ ClusterDistance (N) = 1-(メンバーシップの重み (N))  
   
- または。  
+ または:  
   
- ClusterDistance(N) = 1 ClusterProbability (N))  
+ ClusterDistance (N) = 1-Clusterdistance (N))  
   
 ## <a name="related-prediction-functions"></a>関連する予測関数  
- [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] には、クラスター モデルに対してクエリを実行するために、次に示す追加の関数が用意されています。  
+ [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]には、クラスターモデルにクエリを実行するための次の関数が用意されています。  
   
--   使用して、[クラスター &#40;DMX&#41; ](../dmx/cluster-dmx.md)関数可能性が最も高いクラスターを返します。  
+-   [クラスター &#40;DMX&#41; ](../dmx/cluster-dmx.md)関数を使用して、最も可能性の高いクラスターを返します。  
   
--   使用して、 [ClusterProbability &#40;DMX&#41; ](../dmx/clusterprobability-dmx.md)ケースが特定のクラスターに所属する確率を取得します。 この値は、クラスターとの距離とは逆の関係になります。  
+-   [Clusterprobability &#40;DMX&#41; ](../dmx/clusterprobability-dmx.md)関数は、ケースが特定のクラスターに属する確率を取得するために使用します。 この値は、クラスター距離の逆の役割を果たします。  
   
--   使用して、 [PredictHistogram &#40;DMX&#41; ](../dmx/predicthistogram-dmx.md)関数をそれぞれのモデルのクラスターで、入力ケース既存の確率値のヒストグラムを返します。  
+-   [PredictHistogram &#40;DMX&#41; ](../dmx/predicthistogram-dmx.md)関数を使用すると、各モデルのクラスターに存在する入力ケースの可能性のヒストグラムを取得できます。  
   
--   使用して、 [PredictCaseLikelihood &#40;DMX&#41; ](../dmx/predictcaselikelihood-dmx.md)関数を入力したケース可能性を示す 1、0 からメジャーが考慮すると、モデルが存在するが返されませんが、アルゴリズムによって学習します。  
+-   [Predictcaselikelihood &#40;度 DMX&#41; ](../dmx/predictcaselikelihood-dmx.md)関数を使用すると、アルゴリズムによって学習されたモデルを考慮して入力ケースが存在する可能性を示す 0 ~ 1 のメジャーを返すことができます。  
   
-## <a name="example1-obtaining-cluster-distance-to-the-most-likely-cluster"></a>例 1:最も可能性の高いクラスターにクラスターの距離を取得します。  
- 次の例は、指定したケースから、そのケースが最も所属している可能性の高いクラスターまでの距離を返します。  
+## <a name="example1-obtaining-cluster-distance-to-the-most-likely-cluster"></a>Example1最も可能性の高いクラスターへのクラスターの距離の取得  
+ 次の例では、指定したケースから、ケースが属する可能性が最も高いクラスターへの距離を返します。  
   
 ```  
 SELECT  
@@ -88,8 +87,8 @@ NATURAL PREDICTION JOIN
 |--------------|  
 |クラスター 6|  
   
-## <a name="example2-obtaining-distance-to-a-specified-cluster"></a>例 2:指定したクラスターまでの距離を取得します。  
- 次の構文では、マイニング モデル コンテンツ スキーマ行セットを使用して、マイニング モデル内のクラスターのノードの ID とノードのキャプションの一覧を返します。 クラスター id の引数としてノードのキャプションを使用することができますし、 **ClusterDistance**関数。  
+## <a name="example2-obtaining-distance-to-a-specified-cluster"></a>Example2指定されたクラスターへの距離を取得しています  
+ 次の構文では、マイニング モデル コンテンツ スキーマ行セットを使用して、マイニング モデル内のクラスターのノードの ID とノードのキャプションの一覧を返します。 その後、 **Clusterdistance**関数でクラスター識別子の引数としてノードのキャプションを使用できます。  
   
 ```  
 SELECT NODE_UNIQUE_NAME, NODE_CAPTION   
@@ -104,7 +103,7 @@ WHERE NODE_TYPE = 5
 |001|クラスター 1|  
 |002|Cluster 2|  
   
- 次の構文例では、Cluster 2 というラベルが付いたクラスターから、指定されたケースまでの距離が返されます。  
+ 次の構文例では、Cluster 2 というラベルが付いたクラスターから、指定したケースの距離を返します。  
   
 ```  
 SELECT  
@@ -125,10 +124,10 @@ NATURAL PREDICTION JOIN
 |------------------------|  
 |0.97008209236394|  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [クラスター &#40;DMX&#41;](../dmx/cluster-dmx.md)   
- [データ マイニング拡張機能&#40;DMX&#41;関数リファレンス](../dmx/data-mining-extensions-dmx-function-reference.md)   
- [関数&#40;DMX&#41;](../dmx/functions-dmx.md)   
- [クラスター モデルのマイニング モデル コンテンツ &#40;Analysis Services - データ マイニング&#41;](../analysis-services/data-mining/mining-model-content-for-clustering-models-analysis-services-data-mining.md)  
+ [データマイニング拡張&#40;機能&#41; DMX 関数リファレンス](../dmx/data-mining-extensions-dmx-function-reference.md)   
+ [DMX &#40;関数&#41;](../dmx/functions-dmx.md)   
+ [クラスター モデルのマイニング モデル コンテンツ &#40;Analysis Services - データ マイニング&#41;](https://docs.microsoft.com/analysis-services/data-mining/mining-model-content-for-clustering-models-analysis-services-data-mining)  
   
   

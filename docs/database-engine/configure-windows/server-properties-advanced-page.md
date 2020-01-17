@@ -12,13 +12,12 @@ f1_keywords:
 ms.assetid: cc5e65c2-448e-4f37-9ad4-2dfb1cc84ebe
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: d7ae58695fabc363a432f21d91a70ccc3a3f4dc6
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 1672b245f061f521c9114bca71f723fe75553c96
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47619510"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68025592"
 ---
 # <a name="server-properties---advanced-page"></a>サーバーのプロパティ - [詳細設定] ページ
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

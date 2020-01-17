@@ -15,11 +15,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 776d5fae1aa295f15238397b439cca1015ebe99c
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52770184"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63180730"
 ---
 # <a name="remove-tables-from-database-diagrams-visual-database-tools"></a>データベース ダイアグラムからのテーブルの削除 (Visual Database Tools)
   データベース ダイアグラムからは、テーブルを削除できます。 データベース ダイアグラムからテーブルを削除しても、データベースは変更されません。 削除したテーブルと、他のテーブルとのリレーションシップは、データベースに残ります。  
@@ -30,7 +30,7 @@ ms.locfileid: "52770184"
   
 2.  テーブルを右クリックし、ショートカット メニューの **[ダイアグラムからテーブルを削除]** を選択します。  
   
-     - または -  
+     \- または -  
   
      Esc キーを押します。  
   

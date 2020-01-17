@@ -29,17 +29,20 @@ helpviewer_keywords:
 - packages [Integration Services], deploying
 - SSIS packages, deploying
 ms.assetid: 0f5fc7be-e37e-4ecd-ba99-697c8ae3436f
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: 8830f5984bed8b18c82d18e724c608d6730eb643
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 6fc3a1e41edd95a8e1cf9b4489732cff7ac2852d
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53204731"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71295814"
 ---
 # <a name="legacy-package-deployment-ssis"></a>レガシー パッケージの配置 (SSIS)
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] には、開発コンピューターから実稼働サーバーまたは他のコンピューターへのパッケージの配置を簡素化するツールとウィザードが含まれています。  
   
  パッケージ配置プロセスは、次の 4 段階で行います。  
@@ -495,7 +498,7 @@ ConfiguredValueType NVARCHAR(20) NOT NULL
   
 2.  プロジェクトを右クリックして、 **[プロパティ]** をクリックします。  
   
-3.  **[\<プロジェクト名> プロパティ ページ]** ダイアログ ボックスで、**[配置ユーティリティ]** をクリックします。  
+3.  **[\<プロジェクト名> プロパティ ページ]** ダイアログ ボックスで、 **[配置ユーティリティ]** をクリックします。  
   
 4.  パッケージの配置時にパッケージの構成を更新するには、 **[AllowConfigurationChanges]** を **True**に設定します。  
   
@@ -541,7 +544,7 @@ ConfiguredValueType NVARCHAR(20) NOT NULL
   
 3.  **[SSIS パッケージの配置]** ページで、 **[SQL Server に配置]** オプションを選択します。  
   
-4.  必要に応じて、ターゲット サーバーにパッケージがインストールされた後で検証を行う場合は、**[インストール後にパッケージを検証する]** を選択します。  
+4.  必要に応じて、ターゲット サーバーにパッケージがインストールされた後で検証を行う場合は、 **[インストール後にパッケージを検証する]** を選択します。  
   
 5.  **[インストール先の SQL Server の指定]** ページで、パッケージをインストールする [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスを指定し、認証モードを選択します。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 認証を選択する場合は、ユーザー名とパスワードを入力する必要があります。  
   
@@ -587,12 +590,12 @@ ConfiguredValueType NVARCHAR(20) NOT NULL
  **[構成ファイル]**  
  一覧からファイルを選択して、構成ファイルの内容を編集します。  
   
- **関連項目:**[パッケージ構成を作成する](../../integration-services/packages/create-package-configurations.md)  
+ **関連項目:** [パッケージ構成を作成する](../../integration-services/packages/create-package-configurations.md)  
   
  **[パス]**  
  構成するプロパティのパスを表示します。  
   
- **型**  
+ **Type**  
  プロパティのデータ型が表示されます。  
   
  **Value**  

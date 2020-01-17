@@ -12,13 +12,13 @@ helpviewer_keywords:
 ms.assetid: df79664c-972e-4bef-865a-ce609789fee7
 author: Shamikg
 ms.author: Shamikg
-manager: v-thobro
-ms.openlocfilehash: 80fc86c4b3d9385dc056b0c0ea9633f9f5f26675
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: shamikg
+ms.openlocfilehash: ef71a9355bc11c4d377f00a44b2b8cd2958f8656
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47782070"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68264455"
 ---
 # <a name="getting-started-with-ssma-for-oracle-oracletosql"></a>SSMA for Oracle 入門 (OracleToSQL)
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Migration Assistant (SSMA) の Oracle を使用する簡単に変換する Oracle データベース スキーマ[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]スキーマへの結果として得られるスキーマのアップロード[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]を Oracle からデータを移行および[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]します。  
@@ -65,7 +65,7 @@ Oracle メタデータ エクスプ ローラーでは、Oracle スキーマに�
 詳細については、次を参照してください。[を SQL Server に変換されたデータベース オブジェクトの読み込み&#40;OracleToSQL&#41;](../../ssma/oracle/loading-converted-database-objects-into-sql-server-oracletosql.md)します。  
   
 ### <a name="metadata"></a>メタデータ  
-各メタデータ エクスプ ローラーの右側には、選択したオブジェクトを記述するタブが。 たとえば、Oracle メタデータ エクスプ ローラーでテーブルを選択する場合は、6 つのタブが表示されます:**テーブル**、 **SQL**、**型マッピング]、[レポート**、**プロパティ**、および**データ**します。 **レポート** タブには、選択したオブジェクトを格納しているレポートを作成した後にのみ情報が含まれます。 内のテーブルを選択した場合[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]メタデータ エクスプ ローラーで、3 つのタブが表示されます:**テーブル**、 **SQL**、および**データ**します。  
+各メタデータ エクスプ ローラーの右側には、選択したオブジェクトを記述するタブが。 たとえば、Oracle メタデータ エクスプ ローラーでテーブルを選択する場合は、6 つのタブが表示されます。**テーブル**、 **SQL**、**型マッピング、レポート**、**プロパティ**、および**データ**します。 **レポート** タブには、選択したオブジェクトを格納しているレポートを作成した後にのみ情報が含まれます。 内のテーブルを選択した場合[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]メタデータ エクスプ ローラーで、3 つのタブが表示されます。**テーブル**、 **SQL**、および**データ**します。  
   
 ほとんどのメタデータの設定とは、読み取り専用です。 ただし、次のメタデータを変更できます。  
   

@@ -12,15 +12,15 @@ helpviewer_keywords:
 - lookups [Integration Services]
 - exact matches [Integration Services]
 ms.assetid: 01b7fbca-5181-4d47-9f75-7f25af6b40d2
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: fb778827f9193cd9fae136e078e353241d2b55ae
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 97da627058fa6da67e8ef623b267d0f7cbaa6c7e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52769744"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62770738"
 ---
 # <a name="implement-a-lookup-in-no-cache-or-partial-cache-mode"></a>キャッシュなしモードまたは部分キャッシュ モードの参照を実装する
   参照変換は、次の部分キャッシュ モードまたはキャッシュなしのモードを使用するように構成できます。  
@@ -60,11 +60,11 @@ ms.locfileid: "52769744"
   
     -   **[SQL クエリの結果を使用する]** をクリックし、 **[SQL コマンド]** ウィンドウでクエリを作成します。  
   
-         - または -  
+         \- または -  
   
          **[クエリの作成]** をクリックし、 **[クエリ ビルダー]** で用意されているグラフィック ツールを使用してクエリを作成します。  
   
-         - または -  
+         \- または -  
   
          **[参照]** をクリックして、ファイルから SQL ステートメントをインポートします。  
   
@@ -101,9 +101,9 @@ ms.locfileid: "52769744"
      ステートメントにパラメーターが含まれている場合は、 **[パラメーター]** をクリックしてパラメーターを入力列にマップします。  
   
     > [!NOTE]  
-    >  このページで指定するオプションの SQL ステートメントは、**[参照変換エディター]** の **[接続]** ページで指定したテーブル名をオーバーライドおよび置換します。  
+    >  このページで指定するオプションの SQL ステートメントは、 **[参照変換エディター]** の **[接続]** ページで指定したテーブル名をオーバーライドおよび置換します。  
   
-13. エラー出力を構成するには、**[エラー出力]** ページをクリックし、エラー処理オプションを設定します。 詳細については、「[[参照変換エディター] ([エラー出力] ページ)](../../lookup-transformation-editor-error-output-page.md)」をご覧ください。  
+13. エラー出力を構成するには、 **[エラー出力]** ページをクリックし、エラー処理オプションを設定します。 詳細については、「[[参照変換エディター] ([エラー出力] ページ)](../../lookup-transformation-editor-error-output-page.md)」をご覧ください。  
   
 14. **[OK]** をクリックして参照変換への変更を保存し、パッケージを実行します。  
   

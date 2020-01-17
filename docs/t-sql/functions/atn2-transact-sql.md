@@ -17,16 +17,15 @@ helpviewer_keywords:
 - tangent
 - ATN2 function
 ms.assetid: 014b291e-7cd7-4c39-b20d-5db3a9f0505d
-author: MashaMSFT
-ms.author: mathoma
-manager: craigg
+author: MikeRayMSFT
+ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 53ec08d2c59ce7e8121e7c5f0f1a8b1c5a2aa9b5
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 993020892a992800a8fb8fab2c7801fe7caf9493
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47673650"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68040194"
 ---
 # <a name="atn2-transact-sql"></a>ATN2 (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -66,7 +65,7 @@ The ATN2 of the angle is: 1.30545
   
 ## <a name="see-also"></a>参照
 [CAST および CONVERT &#40;Transact-SQL&#41;](../../t-sql/functions/cast-and-convert-transact-sql.md)  
-[float、real および #40 です。TRANSACT-SQL と #41 です。](../../t-sql/data-types/float-and-real-transact-sql.md)  
+[float 型と real 型 &#40;Transact-SQL&#41;](../../t-sql/data-types/float-and-real-transact-sql.md)  
 [数学関数 (Transact-SQL)](../../t-sql/functions/mathematical-functions-transact-sql.md)
   
   

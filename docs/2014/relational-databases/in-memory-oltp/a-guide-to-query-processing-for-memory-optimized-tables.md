@@ -10,12 +10,12 @@ ms.assetid: 065296fe-6711-4837-965e-252ef6c13a0f
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 2393792341fdbc28bbc0f74657aa2f3cf54ee4d1
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 4db539979cf6a9e06d93b38fbc2aa92c8cdbabfb
+ms.sourcegitcommit: 495913aff230b504acd7477a1a07488338e779c6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53374824"
+ms.lasthandoff: 08/06/2019
+ms.locfileid: "68811070"
 ---
 # <a name="a-guide-to-query-processing-for-memory-optimized-tables"></a>メモリ最適化テーブルのクエリ処理のガイド
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]では、インメモリ OLTP によってメモリ最適化テーブルとネイティブ コンパイル ストアド プロシージャが導入されています。 ここでは、メモリ最適化テーブルとネイティブ コンパイル ストアド プロシージャの両方に対するクエリ処理の概要について説明します。  
@@ -41,7 +41,7 @@ ms.locfileid: "53374824"
   
  ここでは、Customer と Order という 2 個のテーブルについて検討します。 次の [!INCLUDE[tsql](../../../includes/tsql-md.md)] スクリプトには、2 個のテーブルおよび関連するインデックスの定義が (従来の) ディスク ベース形式で含まれています。  
   
-```tsql  
+```sql  
 CREATE TABLE dbo.[Customer] (  
   CustomerID nchar (5) NOT NULL PRIMARY KEY,  
   ContactName nvarchar (30) NOT NULL   
@@ -64,7 +64,7 @@ GO
   
  次のクエリについて考えてみます。このクエリでは、Customer テーブルと Order テーブルを結合し、注文の ID および関連付けられた顧客情報を返します。  
   
-```tsql  
+```sql  
 SELECT o.OrderID, c.* FROM dbo.[Customer] c INNER JOIN dbo.[Order] o ON c.CustomerID = o.CustomerID  
 ```  
   
@@ -83,7 +83,7 @@ SELECT o.OrderID, c.* FROM dbo.[Customer] c INNER JOIN dbo.[Order] o ON c.Custom
   
  これを少し変えたバリエーションとして、OrderID だけでなく、Order テーブルのすべての行を返すクエリを検討します。  
   
-```tsql  
+```sql  
 SELECT o.*, c.* FROM dbo.[Customer] c INNER JOIN dbo.[Order] o ON c.CustomerID = o.CustomerID  
 ```  
   
@@ -114,7 +114,7 @@ SQL Server クエリ処理パイプライン。
   
 6.  Access Methods は、バッファー プールのインデックスおよびデータ ページから行を取得し、必要に応じてバッファー プールにディスクからページを読み込みます。  
   
- クエリの最初の例の場合、実行エンジンは、Customer のクラスター化インデックスおよび Order の非クラスター化インデックスの行を Access Methods から要求します。 Access Methods は、要求された行を取得するために B ツリー インデックス構造をスキャンします。 この場合は、プランがフル インデックス スキャンを必要とするため、すべての行が取得されます。  
+ 最初のクエリ例では、実行エンジンは、ユーザーのクラスター化インデックスの行と、アクセスメソッドから順番に非クラスター化インデックスの行を要求します。 Access Methods は、要求された行を取得するために B ツリー インデックス構造をスキャンします。 この場合は、プランがフル インデックス スキャンを必要とするため、すべての行が取得されます。  
   
 ## <a name="interpreted-includetsqlincludestsql-mdmd-access-to-memory-optimized-tables"></a>解釈された [!INCLUDE[tsql](../../../includes/tsql-md.md)] によるメモリ最適化テーブルへのアクセス  
  [!INCLUDE[tsql](../../../includes/tsql-md.md)] アドホック バッチおよびストアド プロシージャは、解釈された [!INCLUDE[tsql](../../../includes/tsql-md.md)]とも呼ばれます。 "解釈された" とは、クエリ プラン内の各演算子について、クエリ実行エンジンによってクエリ プランが解釈されることを意味します。 実行エンジンは、演算子とそのパラメーターを読み取り、操作を実行します。  
@@ -136,7 +136,7 @@ SQL Server クエリ処理パイプライン。
   
  次の [!INCLUDE[tsql](../../../includes/tsql-md.md)] スクリプトには、ハッシュ インデックスを使用する Order テーブルと Customer テーブルのメモリ最適化バージョンが含まれています。  
   
-```tsql  
+```sql  
 CREATE TABLE dbo.[Customer] (  
   CustomerID nchar (5) NOT NULL PRIMARY KEY NONCLUSTERED,  
   ContactName nvarchar (30) NOT NULL   
@@ -153,7 +153,7 @@ GO
   
  同じクエリをメモリ最適化テーブルで実行するとします。  
   
-```tsql  
+```sql  
 SELECT o.OrderID, c.* FROM dbo.[Customer] c INNER JOIN dbo.[Order] o ON c.CustomerID = o.CustomerID  
 ```  
   
@@ -175,7 +175,7 @@ SELECT o.OrderID, c.* FROM dbo.[Customer] c INNER JOIN dbo.[Order] o ON c.Custom
 ## <a name="natively-compiled-stored-procedures"></a>ネイティブ コンパイル ストアド プロシージャ  
  ネイティブ コンパイル ストアド プロシージャは、クエリ実行エンジンによって解釈されるのではなく、マシン語コードにコンパイルされる [!INCLUDE[tsql](../../../includes/tsql-md.md)] ストアド プロシージャです。 次のスクリプトは、(クエリの例のセクションの) クエリの例を実行する、ネイティブ コンパイル ストアド プロシージャを作成します。  
   
-```tsql  
+```sql  
 CREATE PROCEDURE usp_SampleJoin  
 WITH NATIVE_COMPILATION, SCHEMABINDING, EXECUTE AS OWNER  
 AS BEGIN ATOMIC WITH   
@@ -195,7 +195,7 @@ END
 |-|-----------------------|-----------------|  
 |最初のコンパイル|作成時。|最初の実行時。|  
 |自動再コンパイル|データベースまたはサーバーの再起動後、プロシージャの最初の実行時。|サーバーの再起動時。 または、通常はスキーマや統計の変更またはメモリ不足に基づく、プラン キャッシュからの削除時。|  
-|手動での再コンパイル|サポートされていません。 回避策は、ストアド プロシージャを削除して再作成することです。|`sp_recompile`を使用します。 たとえば DBCC FREEPROCCACHE を使用して、キャッシュからプランを手動で削除できます。 また、WITH RECOMPILE ストアド プロシージャを作成することもできます。このストアド プロシージャは、実行のたびに再コンパイルされます。|  
+|手動での再コンパイル|サポートされていません。 回避策は、ストアド プロシージャを削除して再作成することです。|`sp_recompile` を使用してください。 たとえば DBCC FREEPROCCACHE を使用して、キャッシュからプランを手動で削除できます。 また、WITH RECOMPILE ストアド プロシージャを作成することもできます。このストアド プロシージャは、実行のたびに再コンパイルされます。|  
   
 ### <a name="compilation-and-query-processing"></a>コンパイルとクエリ処理  
  次の図は、ネイティブ コンパイル ストアド プロシージャのコンパイル処理を示しています。  
@@ -222,7 +222,7 @@ END
   
  ネイティブ コンパイル ストアド プロシージャの呼び出しは、次のとおりです。  
   
-1.  ユーザーの問題、 `EXEC` *usp_myproc*ステートメント。  
+1.  ユーザーは、 `EXEC` *usp_myproc*ステートメントを発行します。  
   
 2.  パーサーは、名前とストアド プロシージャのパラメーターを抽出します。  
   
@@ -239,9 +239,9 @@ END
  パラメーターを見つけ出すことは、ネイティブ コンパイル ストアド プロシージャのコンパイルには使用されません。 ストアド プロシージャに対するすべてのパラメーターは、UNKNOWN 値があると見なされます。 解釈されたストアド プロシージャと同様に、ネイティブ コンパイル ストアド プロシージャでも、`OPTIMIZE FOR` ヒントがサポートされます。 詳細については、「[クエリ ヒント &#40;Transact-SQL&#41;](/sql/t-sql/queries/hints-transact-sql-query)」を参照してください。  
   
 ### <a name="retrieving-a-query-execution-plan-for-natively-compiled-stored-procedures"></a>ネイティブ コンパイル ストアド プロシージャ用のクエリ実行プランの取得  
- ネイティブ コンパイル ストアド プロシージャ用のクエリ実行プランは、 **の** 推定実行プラン [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]または [!INCLUDE[tsql](../../../includes/tsql-md.md)]の SHOWPLAN_XML オプションを使用して取得できます。 以下に例を示します。  
+ ネイティブ コンパイル ストアド プロシージャ用のクエリ実行プランは、 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] の **推定実行プラン** または [!INCLUDE[tsql](../../../includes/tsql-md.md)]の SHOWPLAN_XML オプションを使用して取得できます。 例:  
   
-```tsql  
+```sql  
 SET SHOWPLAN_XML ON  
 GO  
 EXEC dbo.usp_myproc  
@@ -269,7 +269,7 @@ GO
 |Stream Aggregate|Hash Match 操作が集計をサポートしていないことに注意してください。 したがって、解釈された [!INCLUDE[tsql](../../../includes/tsql-md.md)] 内の同じクエリに対するプランが Hash Match 操作を使用しても、ネイティブ コンパイル ストアド プロシージャ内のすべての集計は Stream Aggregate 操作を使用します<br /><br /> `SELECT count(CustomerID) FROM dbo.Customer`|  
   
 ## <a name="column-statistics-and-joins"></a>列統計と結合  
- [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] インデックス スキャンやインデックス シークなど特定の操作のコストを推定できるように、インデックス キー列に値の統計を保持します。 ([!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]明示的に作成する場合、または、クエリ オプティマイザーがクエリ述語の応答でそれらを作成する場合も非インデックス キー列に対して統計を作成します)。コストの推定の主要な基準は、1 個の操作によって処理される行数です。 ディスク ベース テーブルの場合、コストの推定では、特定の操作でアクセスされるページ数が重要です。 ただし、メモリ最適化テーブルではページ数は重要ではないため (常にゼロ)、ここでは行数を中心に説明します。 推定は、プラン内のインデックス シークおよびスキャン操作で開始され、続いて、結合操作などの他の操作へと進みます。 結合操作によって処理される行数の推定値は、基になるインデックス、シーク、およびスキャン操作の推定値に基づきます。 解釈された [!INCLUDE[tsql](../../../includes/tsql-md.md)] によるメモリ最適化テーブルへのアクセスの場合は、実際の実行プランを調べて、プラン内の操作の推定行数と実際の行数の違いを確認することができます。  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] インデックス スキャンやインデックス シークなど特定の操作のコストを推定できるように、インデックス キー列に値の統計を保持します。 ([!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] では、非インデックス キー列に対しても、明示的に作成された場合またはクエリ オプティマイザーによってクエリの述語に応じて作成された場合、統計が作成されます)。コストの推定の主要な基準は、1 個の操作によって処理される行数です。 ディスク ベース テーブルの場合、コストの推定では、特定の操作でアクセスされるページ数が重要です。 ただし、メモリ最適化テーブルではページ数は重要ではないため (常にゼロ)、ここでは行数を中心に説明します。 推定は、プラン内のインデックス シークおよびスキャン操作で開始され、続いて、結合操作などの他の操作へと進みます。 結合操作によって処理される行数の推定値は、基になるインデックス、シーク、およびスキャン操作の推定値に基づきます。 解釈された [!INCLUDE[tsql](../../../includes/tsql-md.md)] によるメモリ最適化テーブルへのアクセスの場合は、実際の実行プランを調べて、プラン内の操作の推定行数と実際の行数の違いを確認することができます。  
   
  図 1 の例の場合は、次のようになります。  
   
@@ -302,7 +302,7 @@ SELECT o.OrderID, c.* FROM dbo.[Customer] c INNER JOIN dbo.[Order] o ON c.Custom
 ### <a name="statistics-and-cardinality-for-memory-optimized-tables"></a>メモリ最適化テーブルの統計およびカーディナリティ  
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] では、メモリ最適化テーブルの列レベルの統計が保持されます。 また、テーブルの実際の行数も保持されます。 ただし、ディスク ベース テーブルとは異なり、メモリ最適化テーブルの統計は自動更新されません。 このため、テーブルに重要な変更が発生した場合は、統計を手動で更新する必要があります。 詳細については、「 [メモリ最適化テーブルの統計](memory-optimized-tables.md)」を参照してください。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [メモリ最適化テーブル](memory-optimized-tables.md)  
   
   

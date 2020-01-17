@@ -15,18 +15,17 @@ helpviewer_keywords:
 ms.assetid: 4013075d-dbea-4bbc-a6f4-c345a55c5633
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: e1a89759d6943dc6ccae2a6bfbe65bd96927f87c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 9f356097f1262630d47b4b4b4048c61d42816a4c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47681628"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67918232"
 ---
 # <a name="marshaloptionsenum"></a>MarshalOptionsEnum
 サーバーに返されるレコードを指定します。  
   
-|定数|値|説明|  
+|定数|Value|説明|  
 |--------------|-----------|-----------------|  
 |**adMarshalAll**|0|既定値です。 サーバーにすべての行を返します。|  
 |**adMarshalModifiedOnly**|1|返します。 は、行をサーバーにのみ変更できます。|  

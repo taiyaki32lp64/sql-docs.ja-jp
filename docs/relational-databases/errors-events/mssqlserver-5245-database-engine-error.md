@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 6005c9ec-ccdd-4def-9eb4-37cdb599ddb3
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: a5a1c3882a310a5fb0debb52ccfc7c0e7cdd35de
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: c1d0c05f5439bbeea03895a4c0611b1aca6f35ed
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47825548"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68062622"
 ---
 # <a name="mssqlserver5245"></a>MSSQLSERVER_5245
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -31,7 +30,7 @@ ms.locfileid: "47825548"
 |イベント ソース|MSSQLSERVER|  
 |コンポーネント|SQLEngine|  
 |シンボル名|DBCC4_TABLE_LOCK_TIMEOUT_EXCEEDED|  
-|メッセージ テキスト|オブジェクト ID O_ID (オブジェクト 'NAME'): DBCC ではこのオブジェクトをロックできませんでした。ロック要求がタイムアウトしました。 このオブジェクトはスキップされたので、処理されません。|  
+|メッセージ テキスト|オブジェクト ID O_ID (オブジェクト 'NAME'):DBCC ではこのオブジェクトをロックできませんでした。ロック要求がタイムアウトしました。 このオブジェクトはスキップされたので、処理されません。|  
   
 ## <a name="explanation"></a>説明  
 DBCC が、指定されたオブジェクト用にテーブルのロック獲得を待機している間に、ロック要求のタイムアウトが発生しました。  

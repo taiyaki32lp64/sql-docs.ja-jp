@@ -7,15 +7,15 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: db5c718a-6e7f-48ec-82a3-9d5b131716e5
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 2cab5b109a8f9181235fa1b61d18a2f7a5976c80
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: d047d1c584e176f5446361dd29821eb4ff18aa74
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52796044"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62771212"
 ---
 # <a name="how-to-work-with-cdc-services"></a>CDC Service の操作方法
   この手順では、CDC Service 構成コンソールを使用して、Oracle CDC Service の操作用に [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスを準備し、新しい CDC サービスを作成する方法について説明します。  
@@ -54,7 +54,7 @@ ms.locfileid: "52796044"
   
          **db_owner** データベース ロールなど、MSXDBCDC データベースに対する書き込み権限を持つログインの資格情報を入力する方法については、「 [Oracle CDC Service の作成と編集](create-and-edit-an-oracle-cdc-service.md) 」および「 [SQL Server への接続](connection-to-sql-server.md)」を参照してください。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [CDC Service の操作](work-with-cdc-services.md)  
   
   

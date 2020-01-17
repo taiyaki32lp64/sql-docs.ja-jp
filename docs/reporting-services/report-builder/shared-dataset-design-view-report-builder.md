@@ -2,18 +2,18 @@
 title: 共有データセット デザイン ビュー (レポート ビルダー) | Microsoft Docs
 ms.date: 03/17/2017
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: report-builder
 ms.topic: conceptual
 ms.assetid: 47c502da-d163-45d9-bf04-0849e5ba7929
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 4b00e626bf9823d45d7437bfa3219fb2b0afa8cc
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 6b4936ef2889d433985d4ff0206d72722300ac91
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56287950"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66500525"
 ---
 # <a name="shared-dataset-design-view-report-builder"></a>共有データセット デザイン ビュー (レポート ビルダー)
   レポートにおけるデータセットとは、外部データ ソースに対してクエリを実行することによって返されるレポート データをいいます。 共有データセットはレポート サーバー上でパブリッシュされ、複数のレポートで使用できます。 他のユーザーと共有するデータセットを作成できます。 共有データセット デザイン ウィンドウで、共有データ ソースの選択、共有データセットのプロパティの指定、およびクエリ デザイナーによるクエリの作成を行います。  
@@ -23,7 +23,7 @@ ms.locfileid: "56287950"
  レポートのデータ処理方法の詳細については、「 [レポート データセット (SSRS)](../../reporting-services/report-data/report-datasets-ssrs.md)」を参照してください。  
   
 ##  <a name="Ribbon"></a> リボン  
- リボンを使用すると、タスクの実行に必要なコマンドを簡単に見つけることができます。 コマンドは、接続、データセット、およびクエリ デザイナーの各論理グループに分類されています。  
+ リボンを使用すると、タスクの実行に必要なコマンドを簡単に見つけることができます。 コマンドは、接続、データセット、クエリ デザイナーの各論理グループに分類されています。  
   
 ### <a name="connection"></a>接続  
  レポートで共有データ ソースを選択するか、レポート サーバーで共有データ ソースを参照するには、接続グループの **[選択]** ボタンを使用します。  
@@ -31,7 +31,7 @@ ms.locfileid: "56287950"
 > [!NOTE]  
 >  共有データセットは共有データ ソースに基づく必要があります。 必要なデータ ソースを使用できない場合は、レポート サーバー上にデータ ソースを作成する必要があります。 詳細については、「[共有データ ソースを作成、変更、および削除する &#40;SSRS&#41;](../../reporting-services/report-data/create-modify-and-delete-shared-data-sources-ssrs.md)」を参照してください。  
   
- 詳細については、「 [データ接続、データ ソース、および接続文字列](https://msdn.microsoft.com/library/7e103637-4371-43d7-821c-d269c2cc1b34)」を参照してください。  
+ 詳細については、「 [データ接続、データ ソース、および接続文字列](../report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)」を参照してください。  
   
 ### <a name="dataset"></a>データセット  
  共有データセット プロパティを設定するには、 **[オプションの設定]** ボタンを使用します。 その一部を次に示します。  

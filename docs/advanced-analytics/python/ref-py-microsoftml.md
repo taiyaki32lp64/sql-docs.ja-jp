@@ -1,133 +1,133 @@
 ---
-title: microsoftml の Python パッケージ - SQL Server Machine Learning サービス
-description: Microsoft の機械学習アルゴリズムを紹介し、python に関連する SQL Server machine learning ワークロードとしてモデル化します。
+title: microsoftml Python パッケージ
+description: SQL Server 機械学習ワークロードとの関連で、Microsoft の機械学習アルゴリズムと Python 向けモデルについて説明します。
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 12/04/2018
+ms.date: 11/06/2019
 ms.topic: conceptual
-author: HeidiSteen
-ms.author: heidist
-manager: cgronlun
-ms.openlocfilehash: b892af192be2cea441004adca8e9297f1947b313
-ms.sourcegitcommit: ee76332b6119ef89549ee9d641d002b9cabf20d2
-ms.translationtype: MT
+author: dphansen
+ms.author: davidph
+monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions'
+ms.openlocfilehash: 7ecbfd2edd20a312fc8a6d451938f1407585ded5
+ms.sourcegitcommit: b4ad3182aa99f9cbfd15f4c3f910317d6128a2e5
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/20/2018
-ms.locfileid: "53645101"
+ms.lasthandoff: 11/06/2019
+ms.locfileid: "73706948"
 ---
-# <a name="microsoftml-python-module-in-sql-server"></a>microsoftml (SQL Server での Python モジュール)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+# <a name="microsoftml-python-module-in-sql-server"></a>microsoftml (SQL Server の Python モジュール)
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-**microsoftml**高性能な機械学習アルゴリズムを提供する Microsoft から Python35 と互換性のあるモジュールです。 これには、トレーニングと変換、スコア付け、テキストと画像分析、および既存のデータから値を派生させるための特徴抽出の関数が含まれます。
+**microsoftml** は、高パフォーマンスの機械学習アルゴリズムを提供する Microsoft の Python35 互換モジュールです。 トレーニング、変換、スコアリング、テキストと画像の分析、既存のデータから値を派生させるための特徴抽出を行うための関数が含まれています。
 
-ラーニング Api は Microsoft によって開発されている内部の machine learning アプリケーションのおよびが改良されてビッグ データで高パフォーマンスをサポートするために長年にわたってマルチコア処理と高速データ ストリーミングを使用してマシン。 このパッケージの R バージョンでは、Python と同等として送信された[MicrosoftML](../r/ref-r-microsoftml.md)、同様の機能を持ちます。 
+機械学習 API は、内部機械学習アプリケーション用に Microsoft によって開発されたものです。マルチコア処理と高速データ ストリーミングを使用してビッグ データに対する高パフォーマンスをサポートするために、長年にわたって改善され続けています。 このパッケージは Python の R バージョンである [MicrosoftML](../r/ref-r-microsoftml.md) として開発され、同じような機能が与えられています。 
 
 ## <a name="full-reference-documentation"></a>完全なリファレンス ドキュメント
 
-**Microsoftml**ライブラリは、複数のマイクロソフト製品で配布されますが、使用量は同じライブラリは、SQL Server または別の製品を取得するかどうか。 関数では同じですが、ため[個々 の microsoftml 関数のドキュメントを](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/microsoftml-package)が下の 1 つの場所に発行される、 [Python リファレンス](https://docs.microsoft.com/machine-learning-server/python-reference/introducing-python-package-reference)の Microsoft Machine Learning Server。 製品固有の動作の存在、相違点は、関数のヘルプ ページに記録されます。
+**microsoftml** ライブラリは複数の Microsoft 製品で配布されていますが、SQL Server または別の製品のどちらでライブラリを取得した場合でも、使用方法は同じです。 これらの関数は同じであるため、[個々の microsoftml 関数のドキュメント](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/microsoftml-package)は Microsoft Machine Learning Server の [Python リファレンス](https://docs.microsoft.com/machine-learning-server/python-reference/introducing-python-package-reference)の下でのみ公開されています。 製品固有の動作が存在する場合、関数のヘルプ ページにその相違点が示されます。
 
 ## <a name="versions-and-platforms"></a>バージョンとプラットフォーム
 
-**Microsoftml**モジュールは、Python 3.5 に基づいており、使用可能な次の Microsoft 製品やダウンロードのいずれかをインストールする場合にのみ。
+**microsoftml** モジュールは Python 3.5 に基づいており、次のいずれかの Microsoft 製品またはダウンロードをインストールした場合にのみ利用できます。
 
-+ [SQL Server 2017 の Machine Learning サービス](../install/sql-machine-learning-services-windows-install.md)
-+ [Microsoft Machine Learning Server 9.2.0 またはそれ以降](https://docs.microsoft.com/machine-learning-server/)
-+ [データ サイエンス クライアント用 Python クライアント ライブラリ](setup-python-client-tools-sql.md)
++ [SQL Server Machine Learning Services](../install/sql-machine-learning-services-windows-install.md)
++ [Microsoft Machine Learning Server 9.2.0 以降](https://docs.microsoft.com/machine-learning-server/)
++ [データ サイエンス クライアント用の Python クライアント ライブラリ](setup-python-client-tools-sql.md)
 
 > [!NOTE]
-> 完全な製品リリース バージョンは、Windows 専用にする、SQL Server 2017 以降します。 Linux サポート**microsoftml**新[SQL Server 2019 Preview](../../linux/sql-server-linux-setup-machine-learning.md)。
+> 完全な製品リリース バージョンは、SQL Server 2017 では Windows のみです。 [SQL Server 2019](../../linux/sql-server-linux-setup-machine-learning.md) の **microsoftml** では、Windows と Linux の両方がサポートされています。
 
 ## <a name="package-dependencies"></a>パッケージの依存関係
 
-アルゴリズムで**microsoftml**依存[revoscalepy](ref-py-revoscalepy.md)の。
+**microsoftml** のアルゴリズムは、次に関して [revoscalepy](ref-py-revoscalepy.md) に依存します。
 
-+ データ ソース オブジェクト。 データを使用して**microsoftml**関数を使用して作成される**revoscalepy**関数。
-+ リモート (リモートの SQL Server インスタンスにシフト関数の実行) を計算します。 **Revoscalepy**ライブラリを作成して、リモートのアクティブ化のコンピューティング コンテキストを SQL server に関数を提供します。
++ データ ソース オブジェクト。 **microsoftml** 関数によって使用されるデータは、**revoscalepy** 関数を使用して作成されます。
++ リモート コンピューティング (関数の実行をリモート SQL Server インスタンスにシフトする)。 **revoscalepy** ライブラリには、SQL Server のリモート計算コンテキストを作成およびアクティブ化するための関数が用意されています。
 
-ほとんどの場合、ロード、パッケージ化を使用するたびに**microsoftml**します。
+ほとんどの場合、**microsoftml** を使用しているときは常に、パッケージをまとめて読み込みます。
 
 ## <a name="functions-by-category"></a>カテゴリ別の関数
 
-このセクションでは、それぞれの使用方法の概要を把握するためのカテゴリ別の関数を示します。 使用することも、[目次](https://docs.microsoft.com/machine-learning-server/python-reference/introducing-python-package-reference)関数をアルファベット順に検索します。
+このセクションでは、関数をカテゴリ別に一覧表示し、それぞれの使用方法について説明します。 [目次](https://docs.microsoft.com/machine-learning-server/python-reference/introducing-python-package-reference)を使用して関数をアルファベット順に検索することもできます。
 
-## <a name="1-training-functions"></a>1-トレーニング関数
+## <a name="1-training-functions"></a>1 - トレーニング関数
 
-| 関数 | 説明 |
+| 機能 | [説明] |
 |----------|-------------|
 |[microsoftml.rx_ensemble](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/rx-ensemble) | モデルのアンサンブルをトレーニングします。 |
 |[microsoftml.rx_fast_forest](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/rx-fast-forest)  | ランダム フォレスト。 |
-|[microsoftml.rx_fast_linear](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/rx-fast-linear) | 線形モデル。 確率的双対座標。 |
-|[microsoftml.rx_fast_trees](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/rx-fast-trees) | ブースト ツリー。 |
+|[microsoftml.rx_fast_linear](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/rx-fast-linear) | 線形モデル。 確率的双対座標上昇法による。 |
+|[microsoftml.rx_fast_trees](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/rx-fast-trees) | ブーストされたツリー。 |
 |[microsoftml.rx_logistic_regression](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/rx-logistic-regression) | ロジスティック回帰。 |
 |[microsoftml.rx_neural_network](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/rx-neural-network) | ニューラル ネットワーク。 |
-|[microsoftml.rx_oneclass_svm](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/rx-oneclass-svm) | 異常検出します。 |
+|[microsoftml.rx_oneclass_svm](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/rx-oneclass-svm) | 異常検出。 |
 
 <a name="ml-transforms"></a>
 
-## <a name="2-transform-functions"></a>2-変換関数
+## <a name="2-transform-functions"></a>2 - 変換関数
 
 ### <a name="categorical-variable-handling"></a>カテゴリ変数の処理
 
-| 関数 | 説明 |
+| 機能 | [説明] |
 |----------|-------------|
-|[microsoftml.categorical](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/categorical) | カテゴリには、テキスト列を変換します。 |
-|[microsoftml.categorical_hash](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/categorical-hash) | ハッシュを計算し、カテゴリにテキスト列を変換します。 |
+|[microsoftml.categorical](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/categorical) | テキスト列をカテゴリに変換します。 |
+|[microsoftml.categorical_hash](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/categorical-hash) | テキスト列をハッシュし、カテゴリに変換します。 |
 
-### <a name="schema-manipulation"></a>スキーマの操作
+### <a name="schema-manipulation"></a>スキーマ操作
 
-| 関数 | 説明 |
+| 機能 | [説明] |
 |----------|-------------|
-|[microsoftml.concat](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/concat) | 1 つのベクトルに複数の列を連結します。 |
+|[microsoftml.concat](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/concat) | 複数の列を連結して 1 つのベクトルにします。 |
 |[microsoftml.drop_columns](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/drop-columns) | データセットから列を削除します。 |
 |[microsoftml.select_columns](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/select-columns) | データセットの列を保持します。 |
 
 
 ### <a name="variable-selection"></a>選択、変数
 
-| 関数 | 説明 |
+| 機能 | [説明] |
 |----------|-------------|
-|[microsoftml.count_select](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/count-select) |機能の数に基づいて選択します。 |
-|[microsoftml.mutualinformation_select](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/mutualinformation-select) | 相互情報量に基づく特徴選択します。 |
+|[microsoftml.count_select](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/count-select) |カウントに基づく特徴の選択。 |
+|[microsoftml.mutualinformation_select](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/mutualinformation-select) | 相互情報に基づく特徴の選択。 |
 
 
 ### <a name="text-analytics"></a>テキスト分析
 
-| 関数 | 説明 |
+| 機能 | [説明] |
 |----------|-------------|
-|[microsoftml.featurize_text](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/featurize-text) | 数値の機能には、テキスト列を変換します。 |
-|[microsoftml.get_sentiment](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/get-sentiment) | センチメント分析します。 |
+|[microsoftml.featurize_text](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/featurize-text) | テキスト列を数的特徴に変換します。 |
+|[microsoftml.get_sentiment](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/get-sentiment) | 感情分析。 |
 
 
 ### <a name="image-analytics"></a>画像分析 
 
-| 関数 | 説明 |
+| 機能 | [説明] |
 |----------|-------------|
-|[microsoftml.load_image](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/load-image) | イメージを読み込みます。 |
-|[microsoftml.resize_image](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/resize-image) | 画像のサイズを変更します。 |
-|[microsoftml.extract_pixels](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/extract-pixels) | イメージからピクセルを抽出します。 |
-|[microsoftml.featurize_image](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/featurize-image) | 機能には、イメージを変換します。 |
+|[microsoftml.load_image](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/load-image) | 画像を読み込みます。 |
+|[microsoftml.resize_image](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/resize-image) | 画像サイズを変更します。 |
+|[microsoftml.extract_pixels](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/extract-pixels) | 画像からピクセルを抽出します。 |
+|[microsoftml.featurize_image](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/featurize-image) | 画像を特徴に変換します。 |
 
-### <a name="featurization-functions"></a>特徴の生成関数
+### <a name="featurization-functions"></a>特徴付け関数
 
-| 関数 | 説明 |
+| 機能 | [説明] |
 |----------|-------------|
-|[microsoftml.rx_featurize](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/rx-featurize) | データ ソースのデータの変換 |
+|[microsoftml.rx_featurize](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/rx-featurize) | データ ソースのデータ変換 |
 
 <a name="ml-scoring"></a>
 
-## <a name="3-scoring-functions"></a>3-スコア付け関数
+## <a name="3-scoring-functions"></a>3 - スコア付け関数
 
-| 関数 | 説明 |
+| 機能 | [説明] |
 |----------|-------------|
-|[microsoftml.rx_predict](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/rx-predict) | Microsoft の機械学習モデルを使用してスコア |
+|[microsoftml.rx_predict](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/rx-predict) | Microsoft 機械学習アルゴリズムを使用してスコアを付けます。 |
 
-## <a name="how-to-call-microsoftml"></a>Microsoftml を呼び出す方法
+## <a name="how-to-call-microsoftml"></a>microsoftml を呼び出す方法
 
-関数の**microsoftml**ストアド プロシージャにカプセル化された Python コードで呼び出すことができます。 ほとんどの開発者がビルド**microsoftml**ソリューションをローカルにし、完成した Python コードをデプロイの手順としてストアド プロシージャに移行します。
+**microsoftml** 内の関数は、ストアド プロシージャにカプセル化された Python コードで呼び出すことができます。 ほとんどの開発者は、**microsoftml** ソリューションをローカルでビルドし、完成した Python コードを展開の練習としてストアド プロシージャに移行します。
 
-**Microsoftml**とは異なり、既定で Python がインストールされている用のパッケージ**revoscalepy**、SQL Server と共にインストールされる Python 実行可能ファイルを使用して Python セッションを開始するときに、既定では読み込まれません。
+Python の **microsoftml** パッケージは既定でインストールされますが、**revoscalepy** とは異なり、SQL Server でインストールされる Python 実行ファイルで Python を起動したとき、既定では読み込まれません。
 
-最初の手順としては、インポート、 **microsoftml**パッケージ化、およびインポート**revoscalepy**かどうかは、リモート コンピューティング コンテキストまたは関連する接続またはデータ ソース オブジェクトを使用する必要があります。 次に、必要がある個々 の関数を参照します。
+最初の手順として、**microsoftml** パッケージをインポートし、リモート計算コンテキスト、関連する接続またはデータ ソース オブジェクトを使用する必要がある場合は、次に **revoscalepy** をインポートします。 その後、必要な個々の関数を参照します。
 
 ```python
 from microsoftml.modules.logistic_regression.rx_logistic_regression import rx_logistic_regression
@@ -135,9 +135,9 @@ from revoscalepy.functions.RxSummary import rx_summary
 from revoscalepy.etl.RxImport import rx_import_datasource
 ```
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 + [Python のチュートリアル](../tutorials/sql-server-python-tutorials.md)
-+ [チュートリアル:T-SQL での Python コードを埋め込む](../tutorials/run-python-using-t-sql.md)
++ [チュートリアル: T-SQL に Python コードを埋め込む](../tutorials/run-python-using-t-sql.md)
 + [Python リファレンス (Microsoft Machine Learning Server)](https://docs.microsoft.com/machine-learning-server/python-reference/introducing-python-package-reference)
 

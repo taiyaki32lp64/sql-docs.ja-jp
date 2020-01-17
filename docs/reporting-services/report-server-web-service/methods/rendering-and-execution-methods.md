@@ -11,14 +11,14 @@ helpviewer_keywords:
 - methods [Reporting Services], execution options
 - methods [Reporting Services], rendering
 ms.assetid: 12626aad-f0be-4653-87d0-60eb3a3fff78
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 0fcd2398f2f02814d435ab1d611f139ebe5de181
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 244541348f583ab5384a0ebfe7321509a421fe1b
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47779250"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63284537"
 ---
 # <a name="rendering-and-execution-methods"></a>Rendering メソッドと Execution メソッド
   これらのメソッドを使用して、アイテムの実行とキャッシュ、およびレポートの表示を管理します。  

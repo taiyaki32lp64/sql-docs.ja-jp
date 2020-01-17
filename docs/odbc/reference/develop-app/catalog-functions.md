@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 81ba9453-c085-47c0-b411-90ca6a5ee428
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 268d5f00d787cef8dfdcb29bd9e091f81a5ed2c9
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 232d2e9b7e9eb695a40058075ea511392e464a32
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47692170"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68064397"
 ---
 # <a name="catalog-functions"></a>カタログ関数
 すべてのデータベースでは、データベース内のデータの格納方法が説明されている構造があります。 たとえば、単純な販売注文データベースには、リンク、テーブルに ID 列を使用する、次の図に示すように構造があります。  

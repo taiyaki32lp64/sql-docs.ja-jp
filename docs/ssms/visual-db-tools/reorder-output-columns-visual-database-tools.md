@@ -11,15 +11,14 @@ helpviewer_keywords:
 - reordering output columns [SQL Server]
 - output columns [SQL Server]
 ms.assetid: 76462885-de4a-4290-a26b-90696d3671f4
-author: stevestein
-ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 68898742ad340c648414614cde8741157f814221
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 8ea54ee09a6e2c03548779e591aed5d260b54d49
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47806018"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68255892"
 ---
 # <a name="reorder-output-columns-visual-database-tools"></a>列の出力順の変更 (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -35,7 +34,7 @@ ms.locfileid: "47806018"
   
 2.  行セレクター ボタンにポインターを置き、行を新しい場所にドラッグします。  
   
-    - または -  
+    \- または -  
   
     [SQL ペイン](../../ssms/visual-db-tools/sql-pane-visual-database-tools.md)で列名の順序を編集します。  
   

@@ -19,12 +19,12 @@ ms.assetid: 462a731f-08f1-44e1-9eeb-4deac6d2f6c5
 author: Shamikg
 ms.author: Shamikg
 manager: murato
-ms.openlocfilehash: 1168609d35a266f2ac5fe6641aee7ca131bc9d89
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 863e62dc9e2970f7531bba15f7242c73c5b0f9e7
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47668670"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68259920"
 ---
 # <a name="getting-started-with-sql-server-migration-assistant-for-access-accesstosql"></a>SQL Server Migration Assistant for Access (AccessToSQL) の概要
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Migration Assistant (SSMA) のアクセスでは、すぐに Access データベース オブジェクトを変換することができる[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]または Azure SQL DB のオブジェクトに結果のオブジェクトをアップロードする[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]または Azure SQL DB へのアクセスからデータを移行および[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]または Azure SQL DB します。 かどうか必要に応じて、リンクすることもテーブルにアクセスする[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]または Azure SQL DB のテーブルを使用して、既存の Access のフロント エンド アプリケーションを続行できるように[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]または Azure SQL DB します。  
@@ -88,7 +88,7 @@ SSMA は、参照、および操作へのアクセスを実行に使用できる
 詳細については、次を参照してください。[を SQL Server に変換されたデータベース オブジェクトの読み込み](loading-converted-database-objects-into-sql-server-accesstosql.md)します。  
   
 ### <a name="metadata"></a>メタデータ  
-各メタデータ エクスプ ローラーの右側には、選択したオブジェクトを記述するタブが。 たとえば、アクセス メタデータ エクスプ ローラーでテーブルを選択する場合は、4 つのタブが表示されます:**テーブル**、**型マッピングの**、**プロパティ**、および**データ**. 内のテーブルを選択した場合[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]メタデータ エクスプ ローラーで、次の 3 つのタブが表示されます:**テーブル**、 **SQL**、および**データ**します。  
+各メタデータ エクスプ ローラーの右側には、選択したオブジェクトを記述するタブが。 たとえば、アクセス メタデータ エクスプ ローラーでテーブルを選択する場合、4 つのタブが表示されます。**テーブル**、**の種類のマッピング**、**プロパティ**、および**データ**します。 内のテーブルを選択した場合[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]メタデータ エクスプ ローラーで、次の 3 つのタブが表示されます。**テーブル**、 **SQL**、および**データ**します。  
   
 ほとんどのメタデータの設定とは、読み取り専用です。 ただし、次のメタデータを変更できます。  
   

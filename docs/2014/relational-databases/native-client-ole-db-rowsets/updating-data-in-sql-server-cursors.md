@@ -18,11 +18,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: b5c0b188d8fd45c1177cab77501bdf80fc550987
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48204142"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63242922"
 ---
 # <a name="updating-data-in-sql-server-cursors"></a>SQL Server カーソルでのデータ更新
   フェッチとを使用してデータを更新するとき[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]カールでは、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]ネイティブ クライアント OLE DB プロバイダーのコンシューマー アプリケーションが同じ考慮事項とその他のクライアント アプリケーションに適用される制約をバインドします。  

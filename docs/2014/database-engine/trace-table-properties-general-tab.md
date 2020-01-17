@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 f1_keywords:
 - sql12.pro.tracetableproperties.general.f1
@@ -15,12 +14,12 @@ ms.assetid: 16de6d72-0605-4264-891c-e275cd005a37
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 70f96b0146dbb38827b028e55a241296a5443c1c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 79976111570e2f9cb153c853567f0f2091f77eb6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48052361"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66088740"
 ---
 # <a name="trace-table-properties-general-tab"></a>[トレース テーブルのプロパティ] ([全般] タブ)
   使用して、**全般**のタブ、**トレース テーブルのプロパティ**トレース テーブルのプロパティを表示 ダイアログ ボックス。  
@@ -48,7 +47,7 @@ ms.locfileid: "48052361"
   
 ## <a name="see-also"></a>関連項目  
  [トレース テーブルを開く &#40;SQL Server Profiler&#41;](../tools/sql-server-profiler/open-a-trace-table-sql-server-profiler.md)   
- [SQL Server Profiler](../tools/sql-server-profiler/sql-server-profiler.md)   
- [SQL Server プロファイラーのテンプレートとアクセス許可](../tools/sql-server-profiler/sql-server-profiler-templates-and-permissions.md)  
+ [[SQL Server Profiler]](../tools/sql-server-profiler/sql-server-profiler.md)   
+ [SQL Server プロファイラーのテンプレートと権限](../tools/sql-server-profiler/sql-server-profiler-templates-and-permissions.md)  
   
   

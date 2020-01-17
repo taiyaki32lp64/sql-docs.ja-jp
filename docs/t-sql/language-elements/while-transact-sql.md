@@ -19,22 +19,19 @@ helpviewer_keywords:
 - nested WHILE loops
 - WHILE keyword
 ms.assetid: 52dd29ab-25d7-4fd3-a960-ac55c30c9ea9
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
+author: rothja
+ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: de4a1d7371068aac519d52fa646cb03f05fc077d
-ms.sourcegitcommit: 96032813f6bf1cba680b5e46d82ae1f0f2da3d11
+ms.openlocfilehash: d3ee098b61c233bb3012ab1505553873c30edd5d
+ms.sourcegitcommit: 15fe0bbba963d011472cfbbc06d954d9dbf2d655
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/15/2019
-ms.locfileid: "54298769"
+ms.lasthandoff: 11/14/2019
+ms.locfileid: "74095879"
 ---
 # <a name="while-transact-sql"></a>WHILE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-  > [!div class="nextstepaction"]
-  > [SQL ドキュメントの目次に関するご意見を共有してください。](https://aka.ms/sqldocsurvey)
 
   SQL ステートメントまたはステートメント ブロックの実行を繰り返すための条件を設定します。 指定した条件が true の場合に限り、ステートメントは繰り返し実行します。 WHILE ループ内のステートメントの実行は、ループ内から BREAK キーワードおよび CONTINUE キーワードによって制御することができます。  
   
@@ -99,19 +96,23 @@ PRINT 'Too much for the market to bear';
  次の例では、`@@FETCH_STATUS` を使用して `WHILE` ループ内のカーソルの動作を制御します。  
   
 ```  
+DECLARE @EmployeeID as nvarchar(256)
+DECLARE @Title as nvarchar(50)
+
 DECLARE Employee_Cursor CURSOR FOR  
-SELECT EmployeeID, Title   
+SELECT LoginID, JobTitle   
 FROM AdventureWorks2012.HumanResources.Employee  
 WHERE JobTitle = 'Marketing Specialist';  
 OPEN Employee_Cursor;  
-FETCH NEXT FROM Employee_Cursor;  
+FETCH NEXT FROM Employee_Cursor INTO @EmployeeID, @Title;  
 WHILE @@FETCH_STATUS = 0  
    BEGIN  
-      FETCH NEXT FROM Employee_Cursor;  
+      Print '   ' + @EmployeeID + '      '+  @Title 
+      FETCH NEXT FROM Employee_Cursor INTO @EmployeeID, @Title;  
    END;  
 CLOSE Employee_Cursor;  
 DEALLOCATE Employee_Cursor;  
-GO  
+GO 
 ```  
   
 ## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>例: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] および [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
@@ -135,7 +136,7 @@ END
   
 ## <a name="see-also"></a>参照  
  [ALTER TRIGGER &#40;Transact-SQL&#41;](../../t-sql/statements/alter-trigger-transact-sql.md)   
- [フロー制御言語 &#40;TRANSACT-SQL&#41;](~/t-sql/language-elements/control-of-flow.md)   
+ [フロー制御言語 &#40;Transact-SQL&#41;](~/t-sql/language-elements/control-of-flow.md)   
  [CREATE TRIGGER &#40;Transact-SQL&#41;](../../t-sql/statements/create-trigger-transact-sql.md)   
  [カーソル &#40;Transact-SQL&#41;](../../t-sql/language-elements/cursors-transact-sql.md)   
  [SELECT &#40;Transact-SQL&#41;](../../t-sql/queries/select-transact-sql.md)  

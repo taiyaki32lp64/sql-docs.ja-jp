@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: analysis-services
 ms.topic: reference
 helpviewer_keywords:
 - storage [Analysis Services], partitions
@@ -25,12 +23,12 @@ ms.assetid: cd10ad00-468c-4d49-9f8d-873494d04b4f
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 8ec379d0dde0775aad3fe81a3443cf5d27601d3f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 47a7b4c2b11a6d17a52af20aef71ee13863ea29c
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48087782"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62702618"
 ---
 # <a name="partitions-analysis-services---multidimensional-data"></a>パーティション (Analysis Services - 多次元データ)
   パーティションは、メジャー グループ データの一部を入れるコンテナーです。 パーティションは、MDX クエリからは見えません。メジャー グループに定義されたパーティションの数にかかわらず、すべてのクエリでメジャー グループの内容全体が反映されます。 パーティションのデータの内容は、パーティションのクエリ バインドと、スライス式によって定義されます。  

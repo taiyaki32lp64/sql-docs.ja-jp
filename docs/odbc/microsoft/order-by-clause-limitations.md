@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: fd4ddc7c-9c7e-4a0c-a781-e5427dfb2e18
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 2835396a7b8266d812ca5a1049679c7d82549389
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b58afff444c09622027f50a87bd77fcd6ed45640
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47855150"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68100784"
 ---
 # <a name="order-by-clause-limitations"></a>ORDER BY 句の制限事項
 GROUP BY 句と ORDER BY 句が SELECT ステートメントが含まれる場合、ORDER BY 句は結果セット内の列のみまたは GROUP BY 句で式を含めることができます。

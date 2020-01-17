@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: f3c54bfe-d5b7-4f6e-ae6c-3e8954e5b1c9
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 5cea6bc026cecccdb362b8aef422f3f38ab8ef22
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 3bc8420b9f79ce61874dbb03e73924e7be6eca96
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47677170"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67976785"
 ---
 # <a name="movetoinsertrow-method-sqlserverresultset"></a>moveToInsertRow メソッド (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -39,7 +38,7 @@ public void moveToInsertRow()
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- この moveToInsertRow メソッドは、java.sql.ResultSet インターフェイスの moveToInsertRow メソッドによって指定されます。  
+ この moveToInsertRow メソッドは、moveToInsertRow インターフェイスのメソッドによって指定されます。  
   
  カーソルが挿入行に置かれている間、現在のカーソルの位置は記憶されています。 挿入行は、更新可能な結果セットに関連付けられている特殊な行です。 挿入行とは、本質的には、行を結果セットに追加する前に updater メソッドを呼び出すことによって新しい行を作成できるバッファーです。  
   

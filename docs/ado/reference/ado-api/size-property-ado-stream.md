@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: a487c241-d953-4c31-ae7e-6358d5cf6733
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: d35af0315460af8b110c7af38934e5d196a5c895
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e52d05cdbc0fe0ca397c3a7b417fec72703b8e1d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47696320"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67916936"
 ---
 # <a name="size-property-ado-stream"></a>Size プロパティ (ADO Stream)
 バイト数のストリームのサイズを示します。  
@@ -38,5 +37,5 @@ ms.locfileid: "47696320"
 ## <a name="applies-to"></a>適用対象  
  [Stream オブジェクト (ADO)](../../../ado/reference/ado-api/stream-object-ado.md)  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [Size プロパティ (ADO Parameter)](../../../ado/reference/ado-api/size-property-ado-parameter.md)

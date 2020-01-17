@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: ea0f95d0-0238-4dc8-9f26-7ff9b65f30c3
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 1a12b9ca70dd8e48fa92df9b1b2be55b22ee6994
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 1b65281fbe6ba1f758bdd4e12ae834cee3347842
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47721360"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67980052"
 ---
 # <a name="getsearchstringescape-method-sqlserverdatabasemetadata"></a>getSearchStringEscape メソッド (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -42,7 +41,7 @@ public java.lang.String getSearchStringEscape()
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- この getSearchStringEscape メソッドは、java.sql.DatabaseMetaData インターフェイスで getSearchStringEscape メソッドによって指定されます。  
+ この getSearchStringEscape メソッドは、java メタデータインターフェイスの getSearchStringEscape メソッドによって指定されます。  
   
  このメソッドは、メタデータのパターン検索にだけ使用されます。 "\\" を返します。 **文字列**の検索パターンでは、先頭に円記号を付加することによってワイルドカード ("%" および "_") をエスケープし、リテラルとして使用することができます。 これにより、"\\%" は "[%]" に、"\\\_" は "[\_]" に変換されます。  
   

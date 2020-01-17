@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - Bayesian classifiers
@@ -17,12 +16,12 @@ ms.assetid: 3b53e011-3b1a-4cd1-bdc2-456768ba31b5
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: f7ea7b0f79dac89188599854c73279ee8d8c2f5c
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: b1290e92ecd49a95f250574fb8778a8aa27eb2e2
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52390879"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66083877"
 ---
 # <a name="microsoft-naive-bayes-algorithm"></a>Microsoft Naive Bayes アルゴリズム
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] Naive Bayes アルゴリズムは、分類アルゴリズム、Bayes の定理に基づくし、によって提供される[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]予測モデリングで使用します。 Naive Bayes (単純ベイズ) という名前の単純 (Naive) という部分は、このアルゴリズムで Bayes の技法が使用されているものの、存在する可能性のある依存関係が考慮されないことに由来しています。  

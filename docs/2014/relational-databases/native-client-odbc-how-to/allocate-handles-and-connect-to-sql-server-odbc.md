@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 322120624c612371b56029c2cf29c9ab457c81b5
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53376358"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63225499"
 ---
 # <a name="allocate-handles-and-connect-to-sql-server-odbc"></a>ハンドルの割り当てと SQL Server への接続 (ODBC)
     
@@ -54,7 +54,7 @@ ms.locfileid: "53376358"
   
      接続文字列が完全でない場合は、`SQLDriverConnect` によって必要な情報の入力が要求される場合があります。 指定された値によって制御されます、 *DriverCompletion*パラメーター。  
   
-     \- または -  
+     \- - または -  
   
      呼び出す[SQLBrowseConnect](../native-client-odbc-api/sqlbrowseconnect.md)接続文字列を作成しに接続する、反復的な方法で複数回[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]します。  
   

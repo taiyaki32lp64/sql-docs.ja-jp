@@ -1,5 +1,5 @@
 ---
-title: Microsoft Drivers for PHP for SQL Server のディザスター リカバリー、高可用性のサポート |Microsoft Docs
+title: Microsoft Drivers for PHP for SQL Server | の高可用性とディザスターリカバリーのサポートMicrosoft Docs
 ms.custom: ''
 ms.date: 07/31/2018
 ms.prod: sql
@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 73a80821-d345-4fea-b076-f4aabeb4af3e
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 42990a22e3e4389940fe24d31bf028229e68aff4
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: fab65d777025f59fab6566d118233febbb51aaa6
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52417903"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67992974"
 ---
 # <a name="support-for-high-availability-disaster-recovery"></a>高可用性、障害復旧のサポート
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -35,7 +34,7 @@ ms.locfileid: "52417903"
   
 SQL Server 2012 可用性グループ リスナーまたは SQL Server 2012 フェールオーバー クラスター インスタンスに接続するときには、必ず **MultiSubnetFailover=True** を指定してください。 **MultiSubnetFailover** を指定することで、SQL Server 2012 のすべての可用性グループおよびフェールオーバー クラスター インスタンスに対して高速フェールオーバーが有効化され、単一サブネットおよびマルチサブネットの AlwaysOn トポロジにおけるフェールオーバー時間が大幅に短縮されます。 マルチサブネット フェールオーバーの際には、クライアントは複数の接続を並列で試行します。 サブネット フェールオーバー中、[!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] では TCP 接続が積極的に再試行されます。  
   
-接続文字列キーワードの詳細については[!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]を参照してください[接続オプション](../../connect/php/connection-options.md)します。  
+の[!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]接続文字列キーワードの詳細については、「[接続オプション](../../connect/php/connection-options.md)」を参照してください。  
   
 可用性グループ リスナーまたはフェールオーバー クラスター インスタンス以外に接続するときに **MultiSubnetFailover=true** を指定すると、パフォーマンスが低下する可能性があるため、このような指定はサポートされていません。  
   
@@ -63,16 +62,16 @@ SQL Server 2012 可用性グループ リスナーまたは SQL Server 2012 フ�
 
 ## <a name="transparent-network-ip-resolution-tnir"></a>透過的なネットワーク IP の解決 (TNIR)
 
-透過的なネットワーク IP 解決 (TNIR) では、既存の MultiSubnetFailover 機能のリビジョンです。 ドライバーの接続シーケンスは、最初の解決のホスト名の IP が応答しないと、ホスト名に関連付けられている複数の ip アドレスがある場合に影響します。 MultiSubnetFailover と共に、次の 4 つの接続シーケンスを提供します。 
+透過的なネットワーク IP 解決 (TNIR) は、既存の MultiSubnetFailover 機能のリビジョンです。 ホスト名の解決された最初の IP が応答せず、ホスト名に複数の Ip が関連付けられている場合、ドライバーの接続シーケンスに影響します。 MultiSubnetFailover と一緒に使用すると、次の4つの接続シーケンスが提供されます。 
 
-- 有効になっている TNIR & MultiSubnetFailover 無効になっている: 1 つの IP が試行された後に並列ですべての ip アドレス
-- TNIR で有効になっている & MultiSubnetFailover を有効にしますすべての ip アドレスが並列で試行されます。
-- TNIR 無効 & MultiSubnetFailover 無効: すべての ip アドレスが試行された 1 つずつ
-- TNIR 無効 & MultiSubnetFailover を有効にします。 すべての ip アドレスは、並列で試行します。
+- TNIR Enabled & MultiSubnetFailover Disabled: 1 つの IP が試行され、その後にすべての ip が並列で含まれる
+- TNIR Enabled & MultiSubnetFailover Enabled: すべての Ip が並列で試行されます
+- TNIR Disabled & MultiSubnetFailover Disabled: すべての Ip が1回試行されます
+- TNIR Disabled & MultiSubnetFailover Enabled: すべての Ip が並列で試行されます
 
-既定では、TNIR が有効になり、MultiSubnetFailover が既定で無効になっています。
+TNIR は既定で有効になっており、MultiSubnetFailover は既定で無効になっています。
 
-これは、両方の TNIR および MultiSubnetFailover PDO_SQLSRV ドライバーを使用して有効にする例を示します。
+次に、PDO_SQLSRV ドライバーを使用して TNIR と MultiSubnetFailover の両方を有効にする例を示します。
 
 ```
 <?php

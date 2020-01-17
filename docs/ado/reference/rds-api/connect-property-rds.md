@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: dbad5e77-b213-4eb8-aecf-d60f203fdb59
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 2612fdc52bde6b199080bcdd7b67a8e8401e6805
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.openlocfilehash: ba8b5aa1f59fbb161da878f5930f83d2f6ff0bdd
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51604662"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67964564"
 ---
 # <a name="connect-property-rds"></a>Connect プロパティ (RDS)
 クエリと更新操作の実行元となるデータベース名を示します。  
@@ -50,7 +49,7 @@ Run time: DataControl.Connect = "ConnectionString"
 ## <a name="applies-to"></a>適用対象  
  [DataControl オブジェクト (RDS)](../../../ado/reference/rds-api/datacontrol-object-rds.md)  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [接続プロパティの例 (VBScript)](../../../ado/reference/rds-api/connect-property-example-vbscript.md)   
  [クエリ メソッド (RDS)](../../../ado/reference/rds-api/query-method-rds.md)   
  [Refresh メソッド (RDS)](../../../ado/reference/rds-api/refresh-method-rds.md)   

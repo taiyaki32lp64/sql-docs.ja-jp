@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: c5d795ba-70b0-420f-a944-b1894061a755
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: cac190a634185a5bed77a7ff38423782044c83ee
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 33f2050be5a0fb1b6d58bf00dd8c76c33219a237
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47778500"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68079567"
 ---
 # <a name="using-scrollable-cursors"></a>スクロール可能なカーソルの使用
 スクロール可能なカーソルを使用するには、これら 3 つの手順が必要です。  

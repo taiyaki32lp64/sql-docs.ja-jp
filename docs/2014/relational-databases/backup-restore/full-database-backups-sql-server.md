@@ -19,12 +19,12 @@ ms.assetid: 4d933d19-8d21-4aa1-8153-d230cb3a3f99
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: bad28d9b10d09cbf08e3568d9f994c7d5b84dfda
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: 713e2e507fd98f6d3d87fe60e075e587725ddaf2
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53205381"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68890342"
 ---
 # <a name="full-database-backups-sql-server"></a>データベースの完全バックアップ (SQL Server)
   データベースの完全バックアップでは、データベース全体をバックアップします。 このバックアップにはトランザクション ログの一部が含まれるため、データベースの完全バックアップを復元した後に、データベース全体を復旧することができます。 データベースの完全バックアップは、バックアップが完了した時点でのデータベースを表します。  
@@ -50,7 +50,7 @@ ms.locfileid: "53205381"
   
  ![データベース バックアップ間でのデータ損失の危険性](../../database-engine/media/bnr-rmsimple-1-fulldb-backups.gif "データベース バックアップ間でのデータ損失の危険性")  
   
-### <a name="example--includetsqlincludestsql-mdmd"></a>例 ( [!INCLUDE[tsql](../../../includes/tsql-md.md)])  
+### <a name="example--includetsqlincludestsql-mdmd"></a>例 ([!INCLUDE[tsql](../../../includes/tsql-md.md)])  
  次の例では、WITH FORMAT を使用してデータベースの完全バックアップを作成することにより、既存のバックアップを上書きして新しいメディア セットを作成します。  
   
 ```  
@@ -68,7 +68,7 @@ GO
   
  ログのバックアップを作成する方法については、「[トランザクション ログのバックアップ &#40;SQL Server&#41;](transaction-log-backups-sql-server.md)」を参照してください。  
   
-### <a name="example--includetsqlincludestsql-mdmd"></a>例 ( [!INCLUDE[tsql](../../../includes/tsql-md.md)])  
+### <a name="example--includetsqlincludestsql-mdmd"></a>例 ([!INCLUDE[tsql](../../../includes/tsql-md.md)])  
  次の例では、WITH FORMAT を使用してデータベースの完全バックアップを作成することにより、既存のバックアップを上書きして新しいメディア セットを作成します。 その後、トランザクション ログをバックアップします。 実際の状況では、一連の定期的なログ バックアップを実行する必要があります。 この例では、完全復旧モデルが使用されるように [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] サンプル データベースを設定します。  
   
 ```  
@@ -101,9 +101,9 @@ GO
   
  [メンテナンス プラン ウィザードの使用](../maintenance-plans/use-the-maintenance-plan-wizard.md)  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [SQL Server データベースのバックアップと復元](back-up-and-restore-of-sql-server-databases.md)   
  [バックアップの概要 &#40;SQL Server&#41;](backup-overview-sql-server.md)   
- [Analysis Services データベースのバックアップと復元](../../analysis-services/multidimensional-models/backup-and-restore-of-analysis-services-databases.md)  
+ [Analysis Services データベースのバックアップと復元](https://docs.microsoft.com/analysis-services/multidimensional-models/backup-and-restore-of-analysis-services-databases)  
   
   

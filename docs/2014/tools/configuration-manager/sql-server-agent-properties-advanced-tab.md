@@ -11,11 +11,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 898f16c0b0588fe61ae76e1e86e85713ba3f898a
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52764464"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63137488"
 ---
 # <a name="sql-server-agent-properties-advanced-tab"></a>[SQL Server Agent のプロパティ] ダイアログ ボックス ([詳細設定] タブ)
   既定では、5 つのプロパティが **[詳細設定]** タブに表示されます。 カスタム プロパティが定義されていれば、そのプロパティと値もこのタブに表示されます。  

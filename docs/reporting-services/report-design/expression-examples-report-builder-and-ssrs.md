@@ -2,7 +2,7 @@
 title: 式の例 (レポート ビルダーおよび SSRS) | Microsoft Docs
 ms.date: 04/06/2017
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: report-design
 ms.topic: conceptual
 helpviewer_keywords:
@@ -21,14 +21,14 @@ helpviewer_keywords:
 - dates [Reporting Services], expressions
 - expressions [Reporting Services], examples
 ms.assetid: 87ddb651-a1d0-4a42-8ea9-04dea3f6afa4
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 026338642a4fe5be4480a1b83b93a809437ecfa3
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: c3becfd5ede4ddd1ca7bfd7d12a6c88db225ced3
+ms.sourcegitcommit: 97e94b76f9f48d161798afcf89a8c2ac0f09c584
+ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56289610"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68661340"
 ---
 # <a name="expression-examples-report-builder-and-ssrs"></a>式の例 (レポート ビルダーおよび SSRS)
 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] のページ分割されたレポートでは、内容と外観を制御するために式をよく使用します。 式は [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]で記述し、組み込み関数、カスタム コード、レポート変数とグループ変数、およびユーザー定義変数を使用することができます。 式は等号 (=) で始まります。 式エディターと使用できる参照の種類の詳細については、「[レポートでの式の使用 &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/expression-uses-in-reports-report-builder-and-ssrs.md)」および「[式の追加 &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/add-an-expression-report-builder-and-ssrs.md)」を参照してください。  
@@ -62,7 +62,7 @@ ms.locfileid: "56289610"
   
 単純型と複合型の式、式を使用できる場所、式に使用できる参照の種類など、レポート式の詳細については、「 [式 &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/expressions-report-builder-and-ssrs.md)」を参照してください。 式が集計の計算のために評価されるコンテキストの詳細については、「[合計、集計、および組み込みコレクションの式のスコープ &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/expression-scope-for-totals-aggregates-and-built-in-collections.md)」を参照してください。  
   
-多数の関数および演算子がこのトピックでも式の例に使用されていますが、これらを使用して式を作成する方法をレポート作成のコンテキストで学習するには、「[チュートリアル:式の概要](../../reporting-services/tutorial-introducing-expressions.md)」を参照してください。  
+多数の関数および演算子がこのトピックでも式の例に使用されていますが、これらを使用して式を作成する方法をレポート作成のコンテキストで学習するには、「 [チュートリアル: 式の概要](../../reporting-services/tutorial-introducing-expressions.md)」を参照してください。  
 
   
 ## <a name="functions"></a>関数  
@@ -208,7 +208,7 @@ ms.locfileid: "56289610"
   
      日付または数値のみを格納するテキスト ボックスに書式を適用する場合は、テキスト ボックス内で **Format** 関数を使用するのではなく、テキスト ボックスの Format プロパティを使用する必要があります。  
   
--   **Right**、 **Len**、 **InStr** の各関数は、サブストリングを返す場合に役立ちます。たとえば、 *DOMAIN*\\*username* の文字列からユーザー名だけを返します。 次の式では、\\User *というパラメーターで取得できる文字列のうち、円記号 (*) より右側の部分のみが返されます。  
+-   **Right**、 **Len**、 **InStr** の各関数は、サブストリングを返す場合に役立ちます。たとえば、 *DOMAIN*\\*username* の文字列からユーザー名だけを返します。 次の式では、\\User *というパラメーターで取得できる文字列のうち、円記号 (* ) より右側の部分のみが返されます。  
   
     ```  
     =Right(Parameters!User.Value, Len(Parameters!User.Value) - InStr(Parameters!User.Value, "\"))  
@@ -233,7 +233,7 @@ ms.locfileid: "56289610"
   
     ```  
   
--   また、 **の** System.Text.RegularExpressions [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] <xref:System.Text.RegularExpressions> 関数は、電話番号の書式を設定するなど、既存の文字列の書式を変更する場合に役立ちます。 次の式では、フィールドに含まれる、" **nnn** nnn*nnnn*-*" 形式の 10 桁の電話番号を、*-*Replace*関数を使用して "(*nnn*) *nnn*-*nnnn*" 形式に変更しています。  
+-   また、 **の** System.Text.RegularExpressions [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] <xref:System.Text.RegularExpressions> 関数は、電話番号の書式を設定するなど、既存の文字列の書式を変更する場合に役立ちます。 次の式では、フィールドに含まれる、" **nnn** nnn*nnnn*- *" 形式の 10 桁の電話番号を、* -*Replace*関数を使用して "(*nnn*) *nnn*-*nnnn*" 形式に変更しています。  
   
     ```  
     =System.Text.RegularExpressions.Regex.Replace(Fields!Phone.Value, "(\d{3})[ -.]*(\d{3})[ -.]*(\d{4})", "($1) $2-$3")  
@@ -247,7 +247,7 @@ ms.locfileid: "56289610"
 -   キー フィールドを指定することで、 **Lookup** 関数を使用し、1 対 1 のリレーションシップ (キーと値のペアなど) の値をデータセットから取得することができます。 次の式では、入力された製品識別子に一致する製品名をデータセット ("Product") から取得し、表示します。  
   
     ```  
-    =Lookup(Fields!PID.Value, Fields!ProductID.Value, Fields.ProductName.Value, "Product")  
+    =Lookup(Fields!PID.Value, Fields!ProductID.Value, Fields!ProductName.Value, "Product")  
     ```  
   
 ### <a name="lookupset"></a>LookupSet  

@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 0590b466-2a36-49a2-868e-028ef5e49394
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 76fbb95117b1aae982242f24dc2cb1e815bc2356
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 5a7ed836b9b57ddd690dd85dd94cc12cb967c472
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47625930"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67926008"
 ---
 # <a name="aggregate-functions-the-calc-function-and-the-new-keyword"></a>集計関数、CALC 関数、NEW キーワード
 データ シェイプには、次の関数がサポートされています。 操作する列を含む章に割り当てられた名前は、*章エイリアス*します。  
@@ -62,7 +61,7 @@ ms.locfileid: "47625930"
 |DBTYPE_GUID|adGuid|  
 |DBTYPE_BYTES|adBinary、AdVarBinary、adLongVarBinary|  
 |DBTYPE_STR|adChar、adVarChar、adLongVarChar|  
-|DBTYPE_WSTR|adWChar adVarWChar、adLongVarWChar|  
+|DBTYPE_WSTR|adWChar, adVarWChar, adLongVarWChar|  
 |DBTYPE_NUMERIC|adNumeric|  
 |DBTYPE_DBDATE|adDBDate|  
 |DBTYPE_DBTIME|adDBTime|  
@@ -73,7 +72,7 @@ ms.locfileid: "47625930"
   
  (OLE DB DBTYPE_DECIMAL、または ADO、adDecimal)、decimal 型の新しいフィールドがある場合は、有効桁数と小数点の値を指定する必要があります。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [データ シェイプの例](../../../ado/guide/data/data-shaping-example.md)   
  [Shape の正式文法](../../../ado/guide/data/formal-shape-grammar.md)   
  [一般的な Shape コマンド](../../../ado/guide/data/shape-commands-in-general.md)

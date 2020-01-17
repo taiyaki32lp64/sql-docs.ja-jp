@@ -10,17 +10,20 @@ ms.topic: reference
 helpviewer_keywords:
 - custom tasks [Integration Services], creating
 ms.assetid: 42965c09-1782-4cdb-9ce1-216af4c23e0a
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: a967b8dc0fd0367ecd608287642ba7d5e662ed8e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: eb82df6839e15c3b710d40c52899d661fe9e55ca
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47854220"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71297089"
 ---
 # <a name="creating-a-custom-task"></a>カスタム タスクの作成
+
+[!INCLUDE[ssis-appliesto](../../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   カスタム タスクの作成手順は、[!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] の他のカスタム オブジェクトの作成手順と同様です。  
   
 -   基本クラスを継承する新しいクラスを作成します。 タスク用の基本クラスは <xref:Microsoft.SqlServer.Dts.Runtime.Task> です。  

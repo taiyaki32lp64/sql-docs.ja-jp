@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 2c927003-c49d-4fe1-8e3e-5b2899166268
 author: Shamikg
 ms.author: Shamikg
-manager: craigg
-ms.openlocfilehash: 2a27b2e7c915a1ac13050d0ed188002cd42746c8
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: 5c39e81f8faffed606e6ca94315c47d383174c91
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52400435"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68028872"
 ---
 # <a name="mapping-sybase-ase-schemas-to-sql-server-schemas-sybasetosql"></a>Sybase ASE スキーマの SQL Server スキーマへのマッピング (SybaseToSQL)
 Sybase Adaptive Server Enterprise (ASE)、各データベースは、1 つまたは複数のスキーマを持っています。 既定では、SSMA は、同じデータベースおよびスキーマ内にデータベースおよびスキーマ内のすべてのオブジェクトを移行[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]または SQL Azure です。 ただし、ASE の間のマッピングをカスタマイズすることができますと[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]または SQL Azure データベースとスキーマです。  
@@ -64,6 +63,6 @@ ASE、スキーマ間のマッピングをカスタマイズする場合は、[!
 ## <a name="next-steps"></a>次の手順  
 Sybase ASE オブジェクトへの変換を分析する[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]または SQL Azure のオブジェクトを実行できます[変換レポートを作成](assessing-sybase-ase-database-objects-for-conversion-sybasetosql.md)します。 それ以外の場合できます[ASE データベース オブジェクトの定義の変換](converting-sybase-ase-database-objects-sybasetosql.md)に[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]または SQL Azure のオブジェクトの定義。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
 [SQL Server - Azure SQL DB への Sybase ASE データベース移行&#40;SybaseToSQL&#41;](../../ssma/sybase/migrating-sybase-ase-databases-to-sql-server-azure-sql-db-sybasetosql.md)  
   

@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 5815e4f3a0cdd0defb16c613f3d6e9444fdfaac7
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53360954"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63067729"
 ---
 # <a name="sqlcolumns"></a>SQLColumns
   `SQLColumns` 値が存在するかどうかに関係なく SQL_SUCCESS を返します、 *CatalogName*、 *TableName*、または*ColumnName*パラメーター。 **SQLFetch** SQL_NO_DATA が返されるこれらのパラメーターに無効な値を使用する場合。  
@@ -38,7 +38,7 @@ ms.locfileid: "53360954"
 |列名|説明|  
 |-----------------|-----------------|  
 |DATA_TYPE|SQL_VARCHAR、SQL_VARBINARY、または SQL_WVARCHAR を返します、 **varchar (max)** データ型。|  
-|TYPE_NAME|"Varchar"、"varbinary"または"nvarchar"を返します、 **varchar (max)**、 **varbinary (max)**、および**nvarchar (max)** データ型。|  
+|TYPE_NAME|"Varchar"、"varbinary"または"nvarchar"を返します、 **varchar (max)** 、 **varbinary (max)** 、および**nvarchar (max)** データ型。|  
 |COLUMN_SIZE|SQL_SS_LENGTH_UNLIMITED を返します**varchar (max)** 列のサイズが制限されることを示すデータ型。|  
 |BUFFER_LENGTH|SQL_SS_LENGTH_UNLIMITED を返します**varchar (max)** バッファーのサイズが制限されることを示すデータ型。|  
 |SQL_DATA_TYPE|SQL_VARCHAR、SQL_VARBINARY、または SQL_WVARCHAR を返します、 **varchar (max)** データ型。|  

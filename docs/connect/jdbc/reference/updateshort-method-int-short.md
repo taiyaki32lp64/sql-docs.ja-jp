@@ -1,5 +1,5 @@
 ---
-title: updateShort (int, short) メソッド |Microsoft Docs
+title: updateShort (int, short) メソッドMicrosoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: 155b9189-cb97-4264-b42c-bbda1c7d624f
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 6cd9e5e7d0c51ac69ca63abf7f924587d0701316
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 9e146aacff54a934687b57d6b971e02c14d38e0a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47771513"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67998328"
 ---
 # <a name="updateshort-method-int-short"></a>updateShort (int, short) メソッド
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -43,13 +42,13 @@ public void updateShort(int index,
   
  *x*  
   
- A**短い**値。  
+ **short** 値です。  
   
 ## <a name="exceptions"></a>例外  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- この updateShort メソッドは、java.sql.ResultSet インターフェイスの updateShort メソッドによって指定されます。  
+ この updateShort メソッドは、java.sql.ResultSet インターフェイスの updateShort メソッドで規定されています。  
   
 ## <a name="see-also"></a>参照  
  [updateShort メソッド &#40;SQLServerResultSet&#41;](../../../connect/jdbc/reference/updateshort-method-sqlserverresultset.md)   

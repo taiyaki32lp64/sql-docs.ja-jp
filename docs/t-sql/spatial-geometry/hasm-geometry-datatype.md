@@ -12,15 +12,14 @@ dev_langs:
 helpviewer_keywords:
 - HasM geometry
 ms.assetid: 15540837-c4bf-4d18-b380-13ae31f3226f
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: c9062dbbbb5f650597f323b2c427b1b7825e7f7e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: MladjoA
+ms.author: mlandzic
+ms.openlocfilehash: 8e1600c9cf6ea4dbd540137ac53b9d34b65ea125
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47853810"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68101264"
 ---
 # <a name="hasm-geometry-datatype"></a>HasM (geometry データ型)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
@@ -37,7 +36,7 @@ ms.locfileid: "47853810"
 ## <a name="return-types"></a>戻り値の型  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 戻り値の型: **bit**  
   
- CLR 戻り値の型: **Boolean**  
+ CLR の戻り値の型:**Boolean**  
   
 ## <a name="remarks"></a>Remarks  
   
@@ -52,5 +51,4 @@ SELECT @p.HasM
 ## <a name="see-also"></a>参照  
  [Geometry インスタンスの拡張メソッド](../../t-sql/spatial-geometry/extended-methods-on-geometry-instances.md)   
  [M &#40;geometry データ型&#41;](../../t-sql/spatial-geometry/m-geometry-data-type.md)  
-  
   

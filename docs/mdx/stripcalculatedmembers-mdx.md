@@ -1,5 +1,5 @@
 ---
-title: StripCalculatedMembers (MDX) |Microsoft ドキュメント
+title: StripCalculatedMembers (MDX) |Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -8,18 +8,17 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-manager: kfile
-ms.openlocfilehash: ef9eb558c2f73c51c78f1464ed7951c743bc4ef0
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.openlocfilehash: d4a29a8227fc7b0452f17d6da0c1f47d37738ed0
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34743091"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68036810"
 ---
 # <a name="stripcalculatedmembers-mdx"></a>StripCalculatedMembers (MDX)
 
 
-  計算されるメンバーを指定されたセットから削除して生成したセットを返します。  
+  指定したセットから計算されるメンバーを削除することによって生成されるセットを返します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -33,10 +32,10 @@ StripCalculatedMembers(Set_Expression)
  セットを返す有効な多次元式 (MDX) です。  
   
 ## <a name="remarks"></a>コメント  
- **StripCalculatedMembers**関数は、セットから計算されるメンバーを削除します。 計算されるメンバーを使用してセットに追加することができます、 [AddCalculatedMembers](../mdx/addcalculatedmembers-mdx.md)関数で、サーバーで定義されている計算されるメンバーまたは WITH MEMBER 構文を使用して、クエリ自体内で追加された計算されるメンバーを返します。  
+ **StripCalculatedMembers**関数セットから計算されるメンバーを削除します。 計算メンバーを使用してセットに追加できる、 [AddCalculatedMembers](../mdx/addcalculatedmembers-mdx.md)サーバーで定義されている計算されるメンバーまたは、WITH を使用して、クエリ自体内で追加された計算されるメンバーを返す関数メンバー構文です。  
   
 ## <a name="example"></a>例  
- 次の例では、すべての計算されるメンバーがクエリから削除されます。  
+ 次の例では、クエリからすべての計算されるメンバーを削除します。  
   
 ```  
 WITH MEMBER Measures.MemberName AS   
@@ -78,7 +77,7 @@ FROM [Adventure Works]
   
 ```  
   
-## <a name="see-also"></a>参照  
- [MDX 関数リファレンス&#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
+## <a name="see-also"></a>関連項目  
+ [MDX 関数リファレンス &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
   
   

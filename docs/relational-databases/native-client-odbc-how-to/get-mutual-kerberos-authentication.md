@@ -1,5 +1,5 @@
 ---
-title: Kerberos 相互認証 |マイクロソフトのドキュメント
+title: 相互 Kerberos 認証を取得する |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -10,24 +10,22 @@ ms.topic: reference
 ms.assetid: 64149fd4-239b-40e4-91e2-f9011f7d9f66
 author: MightyPen
 ms.author: genemi
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 24dbb618f9b938ef9e96ee825102fe08de574ca9
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 0c7d2e5ff90ce8ca9fd8e6cef090b4de5e645be4
+ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47697890"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73782805"
 ---
 # <a name="get-mutual-kerberos-authentication"></a>Kerberos 相互認証の取得
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-[!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
 
   このサンプルでは、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client で ODBC を使用して、Kerberos 相互認証を行う方法を紹介しています。  
   
  このサンプルは、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] より前のバージョンの [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] では動作しません。  
   
- 詳細については、次を参照してください。[サービス プリンシパル名&#40;SPN&#41;クライアント接続でサポート](../../relational-databases/native-client/features/service-principal-name-spn-support-in-client-connections.md)します。  
+ 詳細については、「[クライアント&#40;接続&#41;でのサービスプリンシパル名の SPN のサポート](../../relational-databases/native-client/features/service-principal-name-spn-support-in-client-connections.md)」を参照してください。  
   
 ## <a name="example"></a>例  
  このサンプルを 64 ビット オペレーティング システムで 32 ビット アプリケーションとしてビルドし、実行する場合、%windir%\SysWOW64\odbcad32.exe の ODBC アドミニストレーターを使用して ODBC データ ソースを作成する必要があります。  
@@ -38,7 +36,7 @@ ms.locfileid: "47697890"
   
  また、顧客から提供された SPN を指定する必要があります。 " CP_SPN " の部分を顧客から提供された SPN に変更してください。  
   
- /EHsc、/D "_UNICODE"、/D "UNICODE"、および odbc32.lib を使用してコンパイルします。 INCLUDE 環境変数には、sqlncli.h を含むディレクトリが含まれています。 を確認します。  
+ /EHsc、/D "_UNICODE"、/D "UNICODE"、および odbc32.lib を使用してコンパイルします。 INCLUDE 環境変数に、sqlncli を含むディレクトリが含まれていることを確認します。  
   
 ```  
 // compile with: /EHsc /D "_UNICODE" /D "UNICODE" odbc32.lib  

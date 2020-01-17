@@ -1,5 +1,5 @@
 ---
-title: メンバー リビジョン履歴のロールバック (マスター データ サービス) | Microsoft Docs
+title: メンバー リビジョン履歴のロールバック
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -8,15 +8,14 @@ ms.reviewer: ''
 ms.technology: master-data-services
 ms.topic: conceptual
 ms.assetid: d39d3474-20e7-429f-9c8d-fcc4eb0854fc
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 7616ec615e70015abc671740d7a18b7a18e35c74
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
-ms.translationtype: HT
+ms.openlocfilehash: 51465b3f3ae7193d925d30203c5a831a03b8d51a
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52796216"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73727927"
 ---
 # <a name="rollback-member-revision-history-master-data-services"></a>メンバー リビジョン履歴のロールバック (マスター データ サービス)
 
@@ -36,7 +35,7 @@ ms.locfileid: "52796216"
   
 2.  ロールバックするエンティティとメンバーを選択します。  
   
-3.   **[履歴の表示]** をクリックします。  
+3.  **[履歴の表示]** をクリックします。  
   
 4.  ロールバックするリビジョンを選択し、 **[ロールバック]** をクリックします。  
   

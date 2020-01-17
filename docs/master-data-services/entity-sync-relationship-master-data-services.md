@@ -1,5 +1,5 @@
 ---
-title: エンティティの同期関係 (マスター データ サービス) | Microsoft Docs
+title: エンティティの同期関係
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -8,15 +8,14 @@ ms.reviewer: ''
 ms.technology: master-data-services
 ms.topic: conceptual
 ms.assetid: bd627a2d-dc64-47e9-9a71-2d0ad04b4962
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 8ce9a4be4497454cc20751920c7ae32712e01669
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
-ms.translationtype: HT
+ms.openlocfilehash: fde11c6b106a9e559d74504b77d975d096c1f3d0
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52748795"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73729270"
 ---
 # <a name="entity-sync-relationship-master-data-services"></a>エンティティの同期関係 [マスター データ サービス]
 

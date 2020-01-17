@@ -14,25 +14,24 @@ helpviewer_keywords:
 ms.assetid: 31bad04f-7c74-4773-9f83-612704fdd21c
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 1c28f61a39e45ea101f2e999d5787dfa23cb29c2
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: b3726686a2c0e5229a0fccf4d9f51c0e1404f1a3
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56031793"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68038952"
 ---
 # <a name="data-accessor-functions"></a>データ アクセサー関数
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
-  このセクションのトピックでは、データ アクセサー関数のサンプル コードについて説明し、そのコードを提供します。  
+  このセクションのトピックでは、について説明し、データ アクセサー関数のサンプル コードを指定します。  
   
 ## <a name="understanding-fndata-fnstring-and-text"></a>fn:data()、fn:string()、text() について  
  XQuery 関数を持つ**fn:data()** ノード、ノード テストからスカラー、型指定された値を抽出する**text()** テキスト ノード、および関数を返す**fn:string()** を返す、ノードの文字列値。 この 3 つのアクセサーの使用方法が紛らわしい場合があります。 次に、[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] でこれらを使用する場合のガイドラインを示します。 XML インスタンス\<age > 12\<age/> の図のために使用されます。  
   
--   型指定されていない XML:パスの式/age/text() はテキスト ノード「12」を返します。 関数 fn:data(/age) および fn:string(/age) は文字列値 "12" を返します。  
+-   型指定されていない XML:パスの式/age/text() はテキスト ノード「12」を返します。 関数 fn:data (/age) は、文字列値「12」を返しますおよび fn:string します。  
   
--   型指定された XML:式/age/text() は任意の単純型の静的なエラーを返します\<age > 要素。 一方、fn:data(/age) は整数 12 を返します。 fn:string(/age) は文字列 "12" を返します。  
+-   型指定された XML:式/age/text() は任意の単純型の静的なエラーを返します\<age > 要素。 一方、fn:data (/age) は、12 の整数を返します。 fn:string(/age) は文字列 "12" を返します。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
   
@@ -40,7 +39,7 @@ ms.locfileid: "56031793"
   
 -   [data 関数&#40;XQuery&#41;](../xquery/data-accessor-functions-data-xquery.md)  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [パス式&#40;XQuery&#41;](../xquery/path-expressions-xquery.md)  
   
   

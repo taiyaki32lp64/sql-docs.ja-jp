@@ -16,11 +16,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: b49b24db5dfa3c9b522247024e0cbb8dbd1a81d2
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52411819"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63151261"
 ---
 # <a name="view-plan-guide-properties"></a>プラン ガイド プロパティの表示
   [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] のプラン ガイドのプロパティは、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] または  を使用して表示できます。 [!INCLUDE[tsql](../../includes/tsql-md.md)]  

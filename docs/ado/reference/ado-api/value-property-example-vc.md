@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 2a104245-56df-44f3-b9b7-b3d18643d57b
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: d70cf7e3fe370556a3be480a561c9ca9733ed6aa
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: f30b6663ff532fe12eede6042df5c9f0cc29ccb6
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47602830"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67944462"
 ---
 # <a name="value-property-example-vc"></a>Value プロパティの例 (VC++)
 この例では、[値](../../../ado/reference/ado-api/value-property-ado.md)プロパティ[フィールド](../../../ado/reference/ado-api/field-object.md)と[プロパティ](../../../ado/reference/ado-api/property-object-ado.md)オブジェクトのフィールドおよびプロパティの値を表示することによって、***従業員***テーブル。  
@@ -170,7 +169,7 @@ void PrintComError(_com_error &e) {
 }  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [Field オブジェクト](../../../ado/reference/ado-api/field-object.md)   
  [オブジェクトのプロパティ (ADO)](../../../ado/reference/ado-api/property-object-ado.md)   
  [Value プロパティ (ADO)](../../../ado/reference/ado-api/value-property-ado.md)

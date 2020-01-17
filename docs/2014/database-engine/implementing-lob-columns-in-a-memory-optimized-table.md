@@ -10,12 +10,12 @@ ms.assetid: bd8df0a5-12b9-4f4c-887c-2fb78dd79f4e
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: c2adbcc07134b80e78dbc73691e275d56b6f90c6
-ms.sourcegitcommit: 35e4c71bfbf2c330a9688f95de784ce9ca5d7547
+ms.openlocfilehash: e347d942bf6541de9c16f34075e2d66817c3e347
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/16/2018
-ms.locfileid: "49356573"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62778923"
 ---
 # <a name="implementing-lob-columns-in-a-memory-optimized-table"></a>メモリ最適化テーブルへの LOB 列の実装
   メモリ最適化テーブルでは行外またはラージ オブジェクト (LOB) ストレージはありません (SQL Server 2016 以降を参照してください、この制限は削除されました[、インメモリ OLTP に対してサポートされるデータ型](../relational-databases/in-memory-oltp/supported-data-types-for-in-memory-oltp.md))、行サイズの上限は 8060 バイトとします。 大きなバイナリ値または文字列値を格納するには、次の 2 とおりの方法で行うことができます。  
@@ -80,7 +80,7 @@ go</code></pre>
   
  また、LOB 列のディスク ベース テーブルを定義できます。 メモリ最適化テーブルの各行に、その行のすべての LOB 値を持つディスク ベース テーブルの対応する行が格納されています。 次の例では、従業員に関するデータがメモリ最適化テーブルに格納され、各従業員の写真がディスク ベース テーブルに格納されます。  
   
-```tsql  
+```sql  
 CREATE TABLE EmployeePhoto (  
 EmployeeId int NOT NULL PRIMARY KEY CLUSTERED,  
 Photo varbinary(max))  

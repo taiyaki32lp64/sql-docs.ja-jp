@@ -15,18 +15,17 @@ helpviewer_keywords:
 ms.assetid: 6d746670-0850-4065-9cd4-168dea1d3ea9
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 8574da628c4bc1af800635ed9228e074817adae9
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 65fe33b73cf77a27fcd69743ffb09cb05e197797
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47679950"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67917343"
 ---
 # <a name="recordcreateoptionsenum"></a>RecordCreateOptionsEnum
 指定します、既存かどうか**レコード**開かれているか、新しい**レコード**用に作成された、[レコード](../../../ado/reference/ado-api/record-object-ado.md)オブジェクト[オープン](../../../ado/reference/ado-api/open-method-ado-record.md)メソッド。 値は、AND 演算子と組み合わせることができます。  
   
-|定数|値|説明|  
+|定数|Value|説明|  
 |--------------|-----------|-----------------|  
 |**adCreateCollection**|0x2000|新たに作成**レコード**によって指定されたノードで*ソース*既存を開く代わりに、パラメーター**レコード**します。 ソースを指している場合、既存のノードでは、実行時エラーが発生し、しない限り、 **adCreateCollection**を組み合わせて**adOpenIfExists**または**adCreateOverwrite**します。|  
 |**adCreateNonCollection**|0|新たに作成**レコード**型の[adSimpleRecord](../../../ado/reference/ado-api/recordtypeenum.md)します。|  

@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 3f5287e9-f62c-40c4-bb59-985102be956e
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: dab1a748eeda5f1b192010203bd59760942b3611
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 16ff3c926b1c0457f0f0dda382881aad45fb4efd
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47772300"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67928500"
 ---
 # <a name="adox-objects"></a>ADOX オブジェクト
 ## <a name="adox-object-summary"></a>ADOX オブジェクトの概要  
@@ -33,14 +32,14 @@ ms.locfileid: "47772300"
 |[[キー]](../../../ado/reference/adox-api/key-object-adox.md)|データベース テーブルから、外部キー、または一意のキー フィールドを表します。|  
 |[プロシージャ](../../../ado/reference/adox-api/procedure-object-adox.md)|ストアド プロシージャを表します。|  
 |[Table](../../../ado/reference/adox-api/table-object-adox.md)|列、インデックス、およびキーを含むデータベース テーブルを表します。|  
-|[ユーザー](../../../ado/reference/adox-api/user-object-adox.md)|セキュリティで保護されたデータベース内のアクセス許可を持つユーザー アカウントを表します。|  
+|[User](../../../ado/reference/adox-api/user-object-adox.md)|セキュリティで保護されたデータベース内のアクセス許可を持つユーザー アカウントを表します。|  
 |[[表示]](../../../ado/reference/adox-api/view-object-adox.md)|フィルター選択された一連のレコードまたは仮想テーブルを表します。|  
   
  これらのオブジェクト間のリレーションシップは、「、 [ADOX オブジェクト モデル](../../../ado/reference/adox-api/adox-object-model.md)します。  
   
  各オブジェクトは、対応するコレクションに格納できます。 たとえば、**テーブル**オブジェクトを含めることができます、[テーブル](../../../ado/reference/adox-api/tables-collection-adox.md)コレクション。 詳細については、次を参照してください。 [ADOX Collections](../../../ado/reference/adox-api/adox-collections.md) 」、または特定のコレクション。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [ADOX の API リファレンス](../../../ado/reference/adox-api/adox-api-reference.md)   
  [ADOX のコレクション](../../../ado/reference/adox-api/adox-collections.md)   
  [ADOX オブジェクト モデル](../../../ado/reference/adox-api/adox-object-model.md)   

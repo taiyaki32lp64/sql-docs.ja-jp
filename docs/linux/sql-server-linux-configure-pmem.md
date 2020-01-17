@@ -1,52 +1,52 @@
 ---
-title: Linux 上の SQL Server の永続的なメモリ (PMEM) を構成する方法 |Microsoft Docs
-description: この記事では、Linux で PMEM を構成するチュートリアルについては、説明します。
-author: DBArgenis
-ms.author: argenisf
-manager: craigg
-ms.date: 11/06/2018
+title: SQL Server on Linux 用に永続メモリ (PMEM) を構成する
+description: この記事では、Linux で PMEM を構成する手順について説明します。
+ms.custom: seo-lt-2019
+author: briancarrig
+ms.author: brcarrig
+ms.reviewer: vanto
+ms.date: 11/04/2019
 ms.topic: conceptual
 ms.prod: sql
-ms.custom: sql-linux
 ms.technology: linux
-monikerRange: '>= sql-server-ver15 || = sqlallproducts-allversions'
-ms.openlocfilehash: ba2ed69239313a7933840d7a99ccbf3ce0864bfd
-ms.sourcegitcommit: 8664c2452a650e1ce572651afeece2a4ab7ca4ca
-ms.translationtype: MT
+monikerRange: '>= sql-server-linux-ver15  || >= sql-server-ver15 || = sqlallproducts-allversions'
+ms.openlocfilehash: 0b5f86dac62c371a9e4dda607cbd9ec7533a187a
+ms.sourcegitcommit: 035ad9197cb9799852ed705432740ad52e0a256d
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/26/2019
-ms.locfileid: "56828422"
+ms.lasthandoff: 12/31/2019
+ms.locfileid: "75558615"
 ---
-# <a name="how-to-configure-persistent-memory-pmem-for-sql-server-on-linux"></a>Linux 上の SQL Server の永続的なメモリ (PMEM) を構成する方法
+# <a name="how-to-configure-persistent-memory-pmem-for-sql-server-on-linux"></a>SQL Server on Linux 用に永続メモリ (PMEM) を構成する方法
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
-この記事では、SQL Server on Linux の永続的なメモリ (PMEM) を構成する方法について説明します。 Linux 上の PMEM サポートは、SQL Server 2019 プレビューで導入されました。
+この記事では、SQL Server on Linux 用に永続メモリ (PMEM) を構成する方法について説明します。 Linux での PMEM のサポートは SQL Server 2019 で導入されました。
 
 ## <a name="overview"></a>概要
 
-SQL Server 2016 には、非揮発性の Dimm のサポートが導入され、最適化と呼ばれる[ログ キャッシュの末尾は NVDIMM に]( https://blogs.msdn.microsoft.com/bobsql/2016/11/08/how-it-works-it-just-runs-faster-non-volatile-memory-sql-server-tail-of-log-caching-on-nvdimm/)します。 これらの最適化には、永続的ストレージにログ バッファーを強化するために必要な操作の数が減少します。 これは、DAX のモードでの永続的なメモリ デバイスに直接アクセスを Windows Server を活用します。
+SQL Server 2016 では、非揮発性 DIMM のサポートと、[NVDIMM でのログ末尾のキャッシング]( https://blogs.msdn.microsoft.com/bobsql/2016/11/08/how-it-works-it-just-runs-faster-non-volatile-memory-sql-server-tail-of-log-caching-on-nvdimm/)と呼ばれる最適化が導入されました。 このような最適化によって、ログ バッファーを強化して永続ストレージにするために必要な操作数を削減することができました。 これは、DAX モードでの永続メモリ デバイスに対する Windows Server の直接アクセスを活用しています。
 
-SQL Server 2019 プレビューは、(PMEM) デバイス、Linux を永続的なメモリのサポートを拡張 PMEM 上に配置するデータとトランザクションのログ ファイルの完全な啓蒙を提供します。 効率的なユーザー領域を使用して、記憶域デバイスへのアクセスのメソッドを指す啓蒙`memcpy()`操作。 ファイル システムと記憶域スタックを通じて進行中ではなくは、SQL Server は、待機時間を短縮するデバイスにデータを直接配置する Linux 上の DAX のサポートを利用します。
+SQL Server 2019 では、Linux に対する永続メモリ (PMEM) デバイスのサポートが拡張されています。これにより、PMEM に配置されるデータ ファイルとトランザクション ログ ファイルの完全なエンライトメントが提供されます。 エンライトメントは、効率的なユーザー スペースの `memcpy()` 操作を使用してストレージ デバイスにアクセスする方法を意味します。 SQL Server は、ファイル システムとストレージ スタックを経由せずに、Linux での DAX サポートを利用してデータをデバイスに直接配置します。これにより待機時間が短縮されます。
 
-## <a name="enable-enlightenment-of-database-files"></a>データベース ファイルの啓蒙を有効にします。
-Linux 上の SQL server データベース ファイルの啓蒙を有効にするには、次の手順に従います。
+## <a name="enable-enlightenment-of-database-files"></a>データベース ファイルのエンライトメントを有効にする
+SQL Server on Linux でデータベースファイルのエンライトメントを有効にするには、次の手順に従います。
 
 1. デバイスを構成します。
 
-  Linux では、使用、`ndctl`ユーティリティ。
+  Linux では `ndctl` ユーティリティを使用します。
 
-  - インストール`ndctl`PMEM デバイスを構成します。 見つかります[ここ](https://docs.pmem.io/getting-started-guide/installing-ndctl)します。
-  - [Ndctl] を使用すると、名前空間を作成します。
+  - `ndctl` をインストールして、PMEM デバイスを構成します。 詳しくは[こちら](https://docs.pmem.io/getting-started-guide/installing-ndctl)をご覧ください。
+  - [ndctl] を使用して名前空間を作成します。
 
   ```bash 
   ndctl create-namespace -f -e namespace0.0 --mode=fsdax* --map=mem
   ```
 
   >[!NOTE]
-  >使用する場合`ndctl`59 を使用してよりも低いバージョン`--mode=memory`します。
+  >バージョンが 59 よりも前の `ndctl` を使用している場合は `--mode=memory`を使用します。
 
-  使用`ndctl`を名前空間を確認します。 サンプル出力が次に示します。
+  `ndctl` を使用して名前空間を確認します。 サンプル出力を次に示します。
 
 ```bash
 ndctl list
@@ -61,9 +61,9 @@ ndctl list
 ]
 ```
 
-  - 作成してマウント PMEM デバイス
+  - PMEM デバイスの作成とマウント
 
-    たとえば、XFS で
+    例: XFS
 
     ```bash
     mkfs.xfs -f /dev/pmem0
@@ -71,19 +71,19 @@ ndctl list
     xfs_io -c "extsize 2m" /mnt/dax
     ```
 
-    たとえば、EXT4 の
+    例: EXT4
 
     ```bash
     mkfs.ext4 -b 4096 -E stride=512 -F /dev/pmem0
     mount -o dax,noatime /dev/pmem0 /mnt/dax
     ```
 
-  デバイスは、ndctl で構成されている、書式設定およびマウントされていますが後で、データベース ファイルを配置できます。 新しいデータベースを作成することもできます。 
+  デバイスを ndctl を使用して構成し、フォーマットとマウントを行ったら、データベース ファイルを配置できます。 また、新しいデータベースを作成することもできます。 
 
-1. PMEM デバイスは、O_DIRECT セーフであるために、トレース フラグを強制フラッシュ メカニズムを無効にする 3979 を有効にします。 このトレース フラグは、スタートアップ トレース フラグは、およびよう mssql conf ユーティリティを使用して有効にする必要があります。 これは、サーバー全体の構成変更をデータの整合性を保証する強制フラッシュ メカニズムが必要な O_DIRECT 非準拠デバイスがある場合に、このトレース フラグを使用する必要がありますに注意してください。 詳細について参照してください。 https://support.microsoft.com/en-us/help/4131496/enable-forced-flush-mechanism-in-sql-server-2017-on-linux
+1. PMEM デバイスは O_DIRECT セーフであるため、トレース フラグ 3979 を有効にして強制フラッシュ メカニズムを無効にします。 このトレース フラグはスタートアップ トレース フラグであるため、mssql-conf ユーティリティを使用して有効にする必要があります。 これはサーバー全体の構成変更であることに注意してください。データ整合性を確保するために強制フラッシュ メカニズムが必要となる O_DIRECT 非準拠デバイスがある場合は、このトレース フラグを使用しないでください。 詳しくは、 https://support.microsoft.com/help/4131496/enable-forced-flush-mechanism-in-sql-server-2017-on-linux をご覧ください。
 
 1. SQL Server を再起動してください。
 
 ## <a name="next-steps"></a>次のステップ
 
-Linux 上の SQL Server に関する詳細については、次を参照してください。 [SQL Server on Linux](sql-server-linux-overview.md)します。
+SQL Server on Linux について詳しくは、「[SQL Server on Linux](sql-server-linux-overview.md)」をご覧ください。

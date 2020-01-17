@@ -1,10 +1,8 @@
 ---
-title: フルテキスト カタログとフルテキスト インデックスのバックアップおよび復元 | Microsoft Docs
-ms.custom: ''
+title: フルテキスト カタログとフルテキスト インデックスのバックアップおよび復元
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
-ms.reviewer: ''
 ms.technology: search
 ms.topic: conceptual
 helpviewer_keywords:
@@ -15,15 +13,16 @@ helpviewer_keywords:
 - full-text indexes [SQL Server], restoring
 - restore operations [full-text search]
 ms.assetid: 6a4080d9-e43f-4b7b-a1da-bebf654c1194
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: cafc3297727c53ba6134f74f0cb5291b4e14baea
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+author: pmasl
+ms.author: pelopes
+ms.reviewer: mikeray
+ms.custom: seo-lt-2019
+ms.openlocfilehash: 38eaba8bdf2772fe03690773881c67306a024b64
+ms.sourcegitcommit: d00ba0b4696ef7dee31cd0b293a3f54a1beaf458
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51675551"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "74056133"
 ---
 # <a name="back-up-and-restore-full-text-catalogs-and-indexes"></a>フルテキスト カタログとフルテキスト インデックスのバックアップおよび復元
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

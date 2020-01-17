@@ -17,11 +17,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 7532f2a6f2c50f53e5af01c2cec979170b493147
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48169392"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62922937"
 ---
 # <a name="apply-transaction-log-backups-sql-server"></a>トランザクション ログ バックアップの適用 (SQL Server)
   このトピックは完全復旧モデルと一括ログ復旧モデルのみに関連します。  
@@ -43,9 +43,9 @@ ms.locfileid: "48169392"
   
 -   **復元シーケンスに必要なログ バックアップの保持:** 復元シーケンスを完了できるだけのログ レコードがバックアップされている必要があります。 復元シーケンスを開始する前に、必要なログ バックアップ (必要な場合は [ログ末尾のバックアップ](tail-log-backups-sql-server.md) も含む) が用意されている必要があります。  
   
--   **正しい復元順序:**  先に、データベースの前回の完全バックアップまたは差分バックアップを復元する必要があります。 次に、その完全バックアップまたは差分バックアップの後に作成されたすべてのトランザクション ログを日時順に復元する必要があります。 このログ チェーン内のトランザクション ログ バックアップが失われたかまたは損傷している場合は、失われたトランザクション ログよりも前のトランザクション ログのみを復元できます。  
+-   **正しい復元順序:** 先に、データベースの前回の完全バックアップまたは差分バックアップを復元する必要があります。 次に、その完全バックアップまたは差分バックアップの後に作成されたすべてのトランザクション ログを日時順に復元する必要があります。 このログ チェーン内のトランザクション ログ バックアップが失われたかまたは損傷している場合は、失われたトランザクション ログよりも前のトランザクション ログのみを復元できます。  
   
--   **データベースはまだ復旧されていない:**  データベースは、最後のトランザクション ログが適用されるまで復旧できません。 いずれかの中間トランザクション ログ バックアップを復元した後 (ログ チェーンが終わる前) にデータベースを復旧する場合、その時点以降にデータベースを復元するには、データベースの完全バックアップから復元シーケンス全体を再度開始する必要があります。  
+-   **データベースはまだ復旧されていない:** データベースは、最後のトランザクション ログが適用されるまで復旧できません。 いずれかの中間トランザクション ログ バックアップを復元した後 (ログ チェーンが終わる前) にデータベースを復旧する場合、その時点以降にデータベースを復元するには、データベースの完全バックアップから復元シーケンス全体を再度開始する必要があります。  
   
     > [!TIP]  
     >  すべてのログ バックアップを復元することをお勧めします (RESTORE LOG *database_name* WITH NORECOVERY) 。 最後のログ バックアップを復元した後、別の操作でデータベースを復旧します (RESTORE DATABASE *database_name* WITH RECOVERY)。  
@@ -104,7 +104,7 @@ ms.locfileid: "48169392"
   
 -   [完全復旧モデルで障害発生時点までデータベースを復元する &#40;Transact-SQL&#41;](restore-database-to-point-of-failure-full-recovery.md)  
   
--   [SQL Server データベースを特定の時点に復元する &#40;完全復旧モデル&#41;](restore-a-sql-server-database-to-a-point-in-time-full-recovery-model.md)  
+-   [SQL Server データベースを特定の時点に復元する方法 &#40;完全復旧モデル&#41;](restore-a-sql-server-database-to-a-point-in-time-full-recovery-model.md)  
   
 -   <xref:Microsoft.SqlServer.Management.Smo.Restore.SqlRestore%2A> (SMO)  
   

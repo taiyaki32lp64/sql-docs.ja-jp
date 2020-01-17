@@ -12,15 +12,15 @@ helpviewer_keywords:
 - columns [Integration Services], values
 - Derived Column transformation
 ms.assetid: 28b07746-fc6f-42b2-b741-9de6fac3f29c
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 4d0a6a918c2b4a41272b4c09b87d64b925fbf028
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 39b8e065b6b3cbd013089700de07376edc9a656c
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52785154"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62770696"
 ---
 # <a name="derive-column-values-by-using-the-derived-column-transformation"></a>派生列変換を使用して列の値を取得する
   派生列変換を追加して構成するには、パッケージに 1 つ以上のデータ フロー タスクと 1 つの変換元があらかじめ含まれている必要があります。  
@@ -44,11 +44,11 @@ ms.locfileid: "52785154"
     > [!NOTE]  
     >  式が有効でない場合、式のテキストは強調表示され、列のツールヒントにエラーの説明が表示されます。  
   
-7.  **[派生列]** 一覧で、**[\<新しい列として追加>]** を選択して式の評価結果を新しい列に書き込みます。または、既存の列を選択し、評価結果で更新します。  
+7.  **[派生列]** 一覧で、 **[\<新しい列として追加>]** を選択して式の評価結果を新しい列に書き込みます。または、既存の列を選択し、評価結果で更新します。  
   
      新しい列を使用することを選択した場合は、 **[派生列変換エディター]** ダイアログ ボックスによって式が評価され、データ型、長さ、有効桁数、小数点以下桁数、およびコード ページに応じて列にデータ型が割り当てられます。  
   
-8.  新しい列を使用する場合は、 **[データ型]** 一覧でデータ型を選択します。 選択したデータ型によっては、必要に応じて **[長さ]**、 **[有効桁数]**、 **[小数点以下桁数]**、および **[コード ページ]** 列の値を更新します。 既存の列のメタデータは変更できません。  
+8.  新しい列を使用する場合は、 **[データ型]** 一覧でデータ型を選択します。 選択したデータ型によっては、必要に応じて **[長さ]** 、 **[有効桁数]** 、 **[小数点以下桁数]** 、および **[コード ページ]** 列の値を更新します。 既存の列のメタデータは変更できません。  
   
 9. 必要に応じ、 **[派生列名]** 列の値を変更します。  
   
@@ -58,12 +58,12 @@ ms.locfileid: "52785154"
   
 12. 更新したパッケージを保存するには、 **[ファイル]** メニューの **[選択されたファイルを上書き保存]** をクリックします。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [Derived Column Transformation](derived-column-transformation.md)   
  [Integration Services のデータ型](../integration-services-data-types.md)   
  [Integration Services の変換](integration-services-transformations.md)   
  [Integration Services のパス](../integration-services-paths.md)   
- [データ フロー タスク](../../control-flow/data-flow-task.md)   
+ [[データ フロー タスク]](../../control-flow/data-flow-task.md)   
  [Integration Services (SSIS) 式](../../expressions/integration-services-ssis-expressions.md)  
   
   

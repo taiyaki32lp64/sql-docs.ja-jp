@@ -9,15 +9,15 @@ ms.topic: conceptual
 f1_keywords:
 - sql12.dqs.dm.kbtermsbased.f1
 ms.assetid: 66db9277-d892-4dae-8a82-060fd3ba6949
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 1b276f913c70619933d5f317f322fc840cc4d672
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 54a899036513854d8a091165646b6fb4a955c962
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56016773"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65480826"
 ---
 # <a name="create-term-based-relations"></a>用語ベースのリレーションの作成
   このトピックでは、 [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) でドメインの用語ベースのリレーションを作成する方法について説明します。 用語ベースのリレーション (TBR) を使用して、ドメインの値の一部になっている用語を修正できます。 用語ベースのリレーションでは、共通する部分のスペルを除いても同一である複数の値は同一のシノニムと見なすことができます。 たとえば、"Inc." という用語を “Incorporated” に変更する用語ベースのリレーションを設定できます。 "Inc." という用語は、ドメインで発生するたびに変更されます。 "Contoso, Inc." のインスタンスは "Contoso, Incorporated" に変更され、2 つの値はまったく同じシノニムと見なされます。  
@@ -90,7 +90,7 @@ ms.locfileid: "56016773"
   
     6.  **[検索]** ボックスに 1 つ以上の数字を入力し、リレーション テーブルで値を検索します。 一致する文字列が強調表示されます。 上矢印と下矢印を使用して、テーブル内の文字列の異なるインスタンスに移動します。  
   
-    7.  **スペル チェック**:値の場合、**値**または**次に修正**列に赤い波線は、スペル チェックで、値の修正が提案されています。 下線が付いている値を右クリックし、スペル チェックで提案された値の 1 つを選択します。 または、ショートカット メニューの **[追加]** をクリックすると、元の値を反映できます。 詳細については、「 [DQS のスペル チェックの使用](../../2014/data-quality-services/use-the-dqs-speller.md) 」および「 [ドメインのプロパティを設定する](../../2014/data-quality-services/set-domain-properties.md)」を参照してください。  
+    7.  **スペル チェック**: **[値]** 列または **[次に修正]** 列の値に赤い波線の下線が付いている場合は、スペル チェックで値の修正が提案されています。 下線が付いている値を右クリックし、スペル チェックで提案された値の 1 つを選択します。 または、ショートカット メニューの **[追加]** をクリックすると、元の値を反映できます。 詳細については、「 [DQS のスペル チェックの使用](../../2014/data-quality-services/use-the-dqs-speller.md) 」および「 [ドメインのプロパティを設定する](../../2014/data-quality-services/set-domain-properties.md)」を参照してください。  
   
         > [!NOTE]  
         >  スペル チェックを使用するには、 **[ドメインのプロパティ]** ページで有効にする必要があります。 **[ドメインのプロパティ]** ページで無効になっている場合は、 **[用語ベースのリレーション]** ページで **[スペル チェックを有効/無効にします]** アイコンをクリックして有効にすることもできます。  

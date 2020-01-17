@@ -1,66 +1,66 @@
 ---
-title: Windows を受け取りますが、リモート テーブルの並列データ ウェアハウス構成 |Microsoft ドキュメント
-description: 購入して Parallel Data Warehouse でのリモート テーブルのコピー機能で使用するための InfiniBand ネットワークを使用して接続されているアプライアンス非 Windows システムを構成する方法について説明します。 Windows システムでは、SQL Server PDW のデータベースからリモート テーブルのコピーを受信する SQL Server データベースをホストします。 アプライアンスから別途購入、アプライアンスの InfiniBand ネットワークに接続します。
+title: リモートテーブルコピーを受信するように Windows を構成する
+description: 並列データウェアハウスのリモートテーブルコピー機能で使用するために、InfiniBand ネットワークを使用して接続されているアプライアンス以外の Windows システムを購入して構成する方法について説明します。 Windows システムは、SQL Server PDW データベースからリモートテーブルのコピーを受信する SQL Server データベースをホストします。 アプライアンスとは別に購入し、アプライアンス InfiniBand ネットワークに接続します。
 author: mzaman1
-manager: craigg
 ms.prod: sql
 ms.technology: data-warehouse
 ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: ed7122f497b0bdebd893eec75606bbb6382e9a73
-ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
+ms.custom: seo-dt-2019
+ms.openlocfilehash: 837d41cc929d90b2494682645127f985b5768546
+ms.sourcegitcommit: d587a141351e59782c31229bccaa0bff2e869580
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/19/2018
-ms.locfileid: "31538772"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74401314"
 ---
-# <a name="configure-an-external-windows-system-to-receive-remote-table-copies-using-infiniband---parallel-data-warehouse"></a>InfiniBand - 並列データ ウェアハウスを使用してリモート テーブルのコピーを受信する外部の Windows システムを構成します。
-購入して、SQL Server PDW でリモート テーブルのコピー機能で使用するための InfiniBand ネットワークを使用して接続されているアプライアンス非 Windows システムを構成する方法について説明します。 Windows システムでは、SQL Server PDW のデータベースからリモート テーブルのコピーを受信する SQL Server データベースをホストします。 アプライアンスから別途購入、アプライアンスの InfiniBand ネットワークに接続します。  
+# <a name="configure-an-external-windows-system-to-receive-remote-table-copies-using-infiniband---parallel-data-warehouse"></a>InfiniBand-Parallel Data Warehouse を使用してリモートテーブルコピーを受信するように外部 Windows システムを構成する
+SQL Server PDW のリモートテーブルコピー機能で使用するために、InfiniBand ネットワークを使用して接続されているアプライアンス以外の Windows システムを購入して構成する方法について説明します。 Windows システムは、SQL Server PDW データベースからリモートテーブルのコピーを受信する SQL Server データベースをホストします。 アプライアンスとは別に購入し、アプライアンス InfiniBand ネットワークに接続します。  
   
 > [!NOTE]  
-> InfiniBand ネットワーク経由での接続は、リモート テーブルのコピーを使用する必要はありません。 イーサネット帯域幅要件を満たさない場合、イーサネット ネットワーク経由で接続を実行できます。  
+> リモートテーブルコピーを使用する場合、InfiniBand ネットワーク経由の接続は必要ありません。 イーサネットネットワーク経由の接続は、イーサネット帯域幅がニーズに合っている場合に行うことができます。  
   
-このトピックでは、リモート テーブルのコピーを構成するための構成手順のいずれかについて説明します。 すべての構成手順の一覧は、次を参照してください[リモート テーブルのコピー。](remote-table-copy.md)  
+このトピックでは、リモートテーブルのコピーを構成するための構成手順の1つについて説明します。 すべての構成手順の一覧については、「[リモートテーブルのコピー](remote-table-copy.md) 」を参照してください。  
   
-## <a name="before-you-begin"></a>はじめに  
-外部の Windows システムを構成する前に次の操作を行う必要があります。  
+## <a name="before-you-begin"></a>開始する前に  
+外部 Windows システムを構成する前に、次のことを行う必要があります。  
   
-1.  購入するか、リモートのコピーを受信する Windows システムを提供します。  
+1.  リモートコピーを受信する Windows システムを購入または提供します。  
   
-2.  (十分な領域がある場合)、Windows システム コントロールのラックをラック閉じたりアプライアンスに十分なアプライアンスの InfiniBand ネットワークに接続することができるようにします。  
+2.  コントロールラックの Windows システムをラックに設置します (十分な領域がある場合)。または、アプライアンスに十分に近づけて、アプライアンス InfiniBand ネットワークに接続できるようにします。  
   
-3.  アプライアンス ハードウェア ベンダーから InfiniBand ケーブルおよび InfiniBand ネットワーク アダプターを購入します。 エクスポートされたデータを受信するときに、フォールト トレランスのための 2 つのポートを持つネットワーク アダプターを購入することをお勧めします。 2 つのポートのネットワーク アダプターは勧めしますが、必須ではありません。  
+3.  InfiniBand ケーブルと InfiniBand ネットワークアダプターを、アプライアンスハードウェアベンダーから購入します。 エクスポートされたデータを受信する場合は、フォールトトレランスのために2つのポートを持つネットワークアダプターを購入することをお勧めします。 2つのポートネットワークアダプターをお勧めしますが、これは必須ではありません。  
   
-## <a name="HowToWindows"></a>リモート テーブルのコピーを受信する外部の Windows システムを構成します。  
-外部の Windows システムを構成するのには、次の手順を使用します。  
+## <a name="HowToWindows"></a>リモートテーブルコピーを受信するように外部 Windows システムを構成する  
+外部 Windows システムを構成するには、次の手順に従います。  
   
-1.  InfiniBand ネットワーク アダプターを Windows システムにインストールします。  
+1.  Windows システムに InfiniBand ネットワークアダプターをインストールします。  
   
-2.  InfiniBand ネットワーク アダプターを InfiniBand ケーブルを使用してコントロールのラックにメインの InfiniBand スイッチに接続します。  
+2.  InfiniBand ケーブルを使用して、InfiniBand ネットワークアダプターを、コントロールラックのメイン InfiniBand スイッチに接続します。  
   
-3.  インストールし、適切な Windows ドライバー InfiniBand ネットワーク アダプターを構成します。  
+3.  InfiniBand ネットワークアダプター用の適切な Windows ドライバーをインストールして構成します。  
   
-    Windows 用の InfiniBand ドライバーは、OpenFabrics Alliance、InfiniBand 仕入先の業界 consortium によって開発されています。  適切なドライバーは、InfiniBand アダプターと共に配布されたことがあります。 それ以外の場合は、ドライバーは www.openfabrics.org からダウンロードできます。  
+    InfiniBand drivers for Windows は、InfiniBand ベンダーの業界コンソーシアムである OpenFabrics アライアンスによって開発されています。  正しいドライバーが InfiniBand アダプターと共に配布されている可能性があります。 それ以外の場合は、www.openfabrics.org からドライバーをダウンロードできます。  
   
-4.  アダプターでは、各ポートの IP アドレスを構成します。 SMP システムは、この目的のために予約されたアドレスの範囲から静的 IP アドレスを使用する必要があります。 次のパラメーターに従って最初のポートを構成します。  
+4.  アダプターのポートごとに IP アドレスを構成します。 SMP システムでは、この目的のために予約されているアドレス範囲の静的 IP アドレスを使用する必要があります。 次のパラメーターに従って、最初のポートを構成します。  
   
-    -   ネットワークの IP アドレス: 172.16.132.x  
+    -   IP ネットワークアドレス: 172.16.132  
   
-    -   IP サブネット マスク: 255.255.128.0  
+    -   IP サブネットマスク: 255.255.128.0  
   
-    -   ホストの IP 範囲: 1 ~ 254  
+    -   IP ホストの範囲: 1-254  
   
-    2 つのポートの InfiniBand ネットワーク アダプターの次のパラメーターに基づく 2 番目のポートを構成します。  
+    2つのポートを持つ InfiniBand ネットワークアダプターについては、次のパラメーターに従って2番目のポートを構成します。  
   
-    -   ネットワークの IP アドレス: 172.16.132.x  
+    -   IP ネットワークアドレス: 172.16.132  
   
-    -   IP サブネット マスク: 255.255.128.0  
+    -   IP サブネットマスク: 255.255.128.0  
   
-    -   ホストの IP 範囲: 1 ~ 254  
+    -   IP ホストの範囲: 1-254  
   
-5.  2 つのポートのアダプターを使用すると、複数の外部の Windows システムがアプライアンスに接続されている場合は、各システムに各 IP サブネット内の別のホストの番号を割り当てます。  
+5.  2つのポートアダプターが使用されている場合、または複数の外部 Windows システムがアプライアンスに接続されている場合は、各システムにそれぞれの IP サブネット内の異なるホスト番号を割り当てます。  
   
 <!-- MISSING LINKS 
 ## See Also  

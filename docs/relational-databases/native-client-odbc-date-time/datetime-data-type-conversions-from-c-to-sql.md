@@ -1,5 +1,5 @@
 ---
-title: C から SQL への変換 |マイクロソフトのドキュメント
+title: C から SQL への変換 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -12,79 +12,77 @@ helpviewer_keywords:
 ms.assetid: 7ac098db-9147-4883-8da9-a58ab24a0d31
 author: MightyPen
 ms.author: genemi
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: e547a21eb86a76a76bc1d4560005bcd58595dfb3
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: 07a53f979e721463c0f2cf95df1b79487e471579
+ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52417223"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73783949"
 ---
 # <a name="datetime-data-type-conversions-from-c-to-sql"></a>datetime データ型の C から SQL への変換
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-[!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
 
-  このトピックでは、C 型から変換する際に考慮する問題を示します[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]日付/時刻型です。  
+  このトピックでは、C 型から [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の日付型または時刻型に変換する際に考慮すべき問題を示します。  
   
- 次の表で説明する変換は、クライアントで行われる変換に当てはまります。 クライアントがサーバーで定義されているパラメーターとは異なる小数秒の有効桁数を指定する場合、クライアントの変換が成功可能性がありますが、サーバーはエラーを返しますと**SQLExecute**または**SQLExecuteDirect**が呼び出されます。 一方、ODBC で秒の小数部の切り捨てがエラーとして処理する具体的には、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]に丸める動作は、たとえば、丸め処理を行うときに発生しますから移動する**datetime2(6)** に**datetime2(2)**. datetime 列の値は 1/300 秒単位に丸められ、smalldatetime 列では、サーバーによって秒が 0 に設定されます。  
+ 次の表で説明する変換は、クライアントで行われる変換に当てはまります。 サーバーで定義されているものとは異なるパラメーターの秒の小数部の有効桁数をクライアントが指定している場合、クライアントの変換は成功する可能性がありますが、 **Sqlexecute**または**sqlexecutedirect**が呼び出されると、サーバーからエラーが返されます。 特に、ODBC は秒の小数部の切り捨てをエラーとして処理しますが、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の動作は round です。たとえば、 **datetime2 (6)** から**datetime2 (2)** に進むと丸め処理が行われます。 datetime 列の値は 1/300 秒単位に丸められ、smalldatetime 列では、サーバーによって秒が 0 に設定されます。  
   
 |||||||||  
 |-|-|-|-|-|-|-|-|  
 ||SQL_TYPE_DATE|SQL_TYPE_TIME|SQL_SS_TIME2|SQL_TYPE_TIMESTAMP|SQL_SS_TIMSTAMPOFFSET|SQL_CHAR|SQL_WCHAR|  
-|SQL_C_DATE|1|-|-|1,6|1,5,6|1,13|1,13|  
-|SQL_C_TIME|-|1|1|1,7|1,5,7|1,13|1,13|  
-|SQL_C_SS_TIME2|-|1,3|1,10|1,7|1,5,7|1,13|1,13|  
-|SQL_C_BINARY(SQL_SS_TIME2_STRUCT)|なし|なし|1,10,11|なし|なし|なし|なし|  
-|SQL_C_TYPE_TIMESTAMP|1,2|1,3,4|1,4,10|1,10|1,5,10|1,13|1,13|  
-|SQL_C_SS_TIMESTAMPOFFSET|1,2,8|1,3,4,8|1,4,8,10|1,8,10|1,10|1,13|1,13|  
-|SQL_C_BINARY(SQL_SS_TIMESTAMPOFFSET_STRUCT)|なし|なし|なし|なし|1,10,11|なし|なし|  
-|SQL_C_CHAR/SQL_WCHAR (date)|9|9|9|9,6|9,5,6|なし|なし|  
-|SQL_C_CHAR/SQL_WCHAR (time2)|9|9,3|9,10|9,7,10|9,5,7,10|なし|なし|  
-|SQL_C_CHAR/SQL_WCHAR (datetime)|9,2|9,3,4|9,4,10|9,10|9,5,10|なし|なし|  
-|SQL_C_CHAR/SQL_WCHAR (datetimeoffset)|9,2,8|9,3,4,8|9,4,8,10|9,8,10|9,10|なし|なし|  
-|SQL_C_BINARY(SQL_DATE_STRUCT)|1,11|なし|なし|なし|なし|なし|なし|  
+|SQL_C_DATE|1|-|-|1、6|1、5、6|1、13|1、13|  
+|SQL_C_TIME|-|1|1|1、7|1、5、7|1、13|1、13|  
+|SQL_C_SS_TIME2|-|1、3|1、10|1、7|1、5、7|1、13|1、13|  
+|SQL_C_BINARY(SQL_SS_TIME2_STRUCT)|なし|なし|1、10、11|なし|なし|なし|なし|  
+|SQL_C_TYPE_TIMESTAMP|1、2|1、3、4|1、4、10|1、10|1、5、10|1、13|1、13|  
+|SQL_C_SS_TIMESTAMPOFFSET|1、2、8|1、3、4、8|1、4、8、10|1、8、10|1、10|1、13|1、13|  
+|SQL_C_BINARY(SQL_SS_TIMESTAMPOFFSET_STRUCT)|なし|なし|なし|なし|1、10、11|なし|なし|  
+|SQL_C_CHAR/SQL_WCHAR (date)|9|9|9|9、6|9、5、6|なし|なし|  
+|SQL_C_CHAR/SQL_WCHAR (time2)|9|9、3|9、10|9、7、10|9、5、7、10|なし|なし|  
+|SQL_C_CHAR/SQL_WCHAR (datetime)|9、2|9、3、4|9、4、10|9、10|9、5、10|なし|なし|  
+|SQL_C_CHAR/SQL_WCHAR (datetimeoffset)|9、2、8|9、3、4、8|9、4、8、10|9、8、10|9、10|なし|なし|  
+|SQL_C_BINARY(SQL_DATE_STRUCT)|1、11|なし|なし|なし|なし|なし|なし|  
 |SQL_C_BINARY(SQL_TIME_STRUCT)|なし|なし|なし|なし|なし|なし|なし|  
 |SQL_C_BINARY(SQL_TIMESTAMP_STRUCT)|なし|なし|なし|なし|なし|なし|なし|  
   
 ## <a name="key-to-symbols"></a>記号の説明  
   
--   **-**:変換はサポートされていません。 "データ型の属性に関する制限に違反しました" というメッセージで SQLSTATE 07006 の診断レコードが生成されます。  
+-   **-** : 変換はサポートされていません。 "データ型の属性に関する制限に違反しました" というメッセージで SQLSTATE 07006 の診断レコードが生成されます。  
   
--   **1**:指定したデータが無効な場合、"datetime 形式が無効です" というメッセージで SQLSTATE 22007 の診断レコードが生成されます。  
+-   **1**: 指定されたデータが有効でない場合、"Datetime 形式が無効です" というメッセージで SQLSTATE 22007 の診断レコードが生成されます。  
   
--   **2**:時刻フィールドは 0 である必要があります。0 以外の場合、"分数が切り捨てられました" というメッセージで SQLSTATE 22008 の診断レコードが生成されます。  
+-   **2**: 時間フィールドをゼロにする必要があります。または、"小数部の切り捨て" というメッセージで SQLSTATE 22008 の診断レコードが生成されます。  
   
--   **3**:秒の小数部は 0 である必要があります。0 以外の場合、"分数が切り捨てられました" というメッセージで SQLSTATE 22008 の診断レコードが生成されます。  
+-   **3**: 秒の小数部は0にする必要があります。指定しないと、"小数部の切り捨て" というメッセージで SQLSTATE 22008 の診断レコードが生成されます。  
   
--   **4**:日付部分は無視されます。  
+-   **4**: 日付部分は無視されます。  
   
--   **5**:タイム ゾーンには、クライアントのタイム ゾーン設定が設定されます。  
+-   **5**: タイムゾーンは、クライアントのタイムゾーン設定に設定されます。  
   
--   **6**:時刻は 0 に設定されます。  
+-   **6**: 時刻は0に設定されます。  
   
--   **7**:日付は現在の日付に設定されます。  
+-   **7**: 日付は現在の日付に設定されます。  
   
--   **8**:時間は、クライアントのタイム ゾーンから UTC に変換されます。 この変換中にエラーが発生すると、"Datetime フィールド オーバーフロー" というメッセージで SQLSTATE 22008 の診断レコードが生成されます。  
+-   **8**: 時刻は、クライアントのタイムゾーンから UTC に変換されます。 この変換中にエラーが発生すると、"Datetime フィールド オーバーフロー" というメッセージで SQLSTATE 22008 の診断レコードが生成されます。  
   
--   **9**:文字列は解析され、最初に検出された句読点、および残りの部分があるかどうかに応じて、date 値、datetime 値、datetimeoffset 値、time 値のいずれかに変換されます。 次に、上の表に示した規則のうち、この処理で検出された変換元の型についての規則に従って、文字列は変換先の型に変換されます。 データの解析中にエラーが検出された場合、"キャストした文字コードが正しくありません" というメッセージで SQLSTATE 22018 の診断レコードが生成されます。 datetime 型および smalldatetime 型のパラメーターでは、年がこれらの型でサポートされる範囲外の場合、"datetime 形式が無効です" というメッセージで SQLSTATE 22007 の診断レコードが生成されます。  
+-   **9**: 文字列が解析され、最初に検出された区切り文字と残りのコンポーネントの有無に応じて、日付、日時、datetimeoffset、または時刻の値に変換されます。 次に、上の表に示した規則のうち、この処理で検出された変換元の型についての規則に従って、文字列は変換先の型に変換されます。 データの解析中にエラーが検出された場合、"キャストした文字コードが正しくありません" というメッセージで SQLSTATE 22018 の診断レコードが生成されます。 datetime 型および smalldatetime 型のパラメーターでは、年がこれらの型でサポートされる範囲外の場合、"datetime 形式が無効です" というメッセージで SQLSTATE 22007 の診断レコードが生成されます。  
   
      datetimeoffset では、UTC への変換が必要なくても、値は UTC への変換後の範囲内に収まっている必要があります。 TDS とサーバーは datetimeoffset 値の時刻を常に UTC 用に正規化するので、クライアントは、時刻部分が、UTC への変換後にサポートされる範囲内に収まっていることを確認する必要があるためです。 値が、サポートされている UTC の範囲内に収まっていない場合、"datetime 形式が無効です" というメッセージで SQLSTATE 22007 の診断レコードが生成されます。  
   
--   **10**:データの損失を伴う切り捨てが行われると、"時間の形式が正しくありません" というメッセージで SQLSTATE 22008 の診断レコードが生成されます。 サーバーが使用する UTC の範囲で表すことができる範囲の外に値がある場合にも、このエラーが発生します。  
+-   **10**: データ損失を伴う切り捨てが発生した場合、"時刻の形式が無効です" というメッセージで SQLSTATE 22008 の診断レコードが生成されます。 サーバーが使用する UTC の範囲で表すことができる範囲の外に値がある場合にも、このエラーが発生します。  
   
--   **11**:データのバイト長が、SQL 型が要求する構造体のサイズと等しくない場合、"数値が範囲を超えています" というメッセージで SQLSTATE 22003 の診断レコードが生成されます。  
+-   **11**: データのバイト長が SQL 型で必要な構造体のサイズと等しくない場合、"数値が範囲を超えています" というメッセージで SQLSTATE 22003 の診断レコードが生成されます。  
   
--   **12**:データのバイト長が 4 バイトまたは 8 バイトの場合、データは、生の TDS smalldatetime 形式または datetime 形式でサーバーに送信されます。 データのバイト長が SQL_TIMESTAMP_STRUCT のサイズと完全に一致する場合、データは、datetime2 用の TDS 形式に変換されます。  
+-   **12**: データのバイト長が4または8の場合、生の TDS smalldatetime または datetime 形式でデータがサーバーに送信されます。 データのバイト長が SQL_TIMESTAMP_STRUCT のサイズと完全に一致する場合、データは、datetime2 用の TDS 形式に変換されます。  
   
--   **13**:データの損失を伴う切り捨てが行われると、"文字列データの右側が切り捨てられました" というメッセージで SQLSTATE 22001 の診断レコードが生成されます。  
+-   **13**: データ損失を伴う切り捨てが発生した場合、"文字列データ、右側が切り捨てられました" というメッセージで SQLSTATE 22001 の診断レコードが生成されます。  
   
-     秒の小数部桁数 (スケール) は、次の表に従って、変換先列のサイズから決定されます。  
+     秒の小数部の桁数 (小数点以下桁数) は、次の表に従って、変換先の列のサイズによって決まります。  
   
     ||||  
     |-|-|-|  
-    |型|暗黙の小数点以下桁数<br /><br /> 0|暗黙の小数点以下桁数<br /><br /> 1..9|  
-    |SQL_C_TYPE_TIMESTAMP|19|21..29|  
+    |型|暗黙の小数点以下桁数<br /><br /> 0|暗黙の小数点以下桁数<br /><br /> 1.. 9|  
+    |SQL_C_TYPE_TIMESTAMP|19|21.. 29|  
   
      ただし、SQL_C_TYPE_TIMESTAMP では、データを損失することなく秒の小数部を 3 桁で表すことができる場合で、かつ、列のサイズが 23 以上である場合、ちょうど 3 桁になるように秒の小数部が生成されます。 この動作により、以前の ODBC ドライバーを使用して開発されたアプリケーションの下位互換性が保証されます。  
   
@@ -92,9 +90,9 @@ ms.locfileid: "52417223"
   
      列サイズ 0 は、ODBC では可変長文字型のサイズが無制限であることを意味します (SQL_C_TYPE_TIMESTAMP の 3 桁ルールが適用されなければ 9 桁)。 固定長文字型の列サイズ 0 を指定すると、エラーになります。  
   
--   **該当なし**:既存の [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 以前のバージョンの動作が維持されます。  
+-   **N/A**: 既存の [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] と以前の動作が維持されます。  
   
 ## <a name="see-also"></a>参照  
- [日付と時刻の強化&#40;ODBC&#41;](../../relational-databases/native-client-odbc-date-time/date-and-time-improvements-odbc.md)  
+ [日付と時刻の&#40;機能強化 ODBC&#41;](../../relational-databases/native-client-odbc-date-time/date-and-time-improvements-odbc.md)  
   
   

@@ -1,7 +1,7 @@
 ---
-title: Always Encrypted による暗号化 | Microsoft Docs
+title: Always Encrypted による暗号 | Microsoft Docs
 ms.custom: ''
-ms.date: 02/29/2016
+ms.date: 10/30/2019
 ms.prod: sql
 ms.reviewer: vanto
 ms.technology: security
@@ -9,30 +9,29 @@ ms.topic: conceptual
 helpviewer_keywords:
 - Always Encrypted, cryptography system
 ms.assetid: ae8226ff-0853-4716-be7b-673ce77dd370
-author: aliceku
-ms.author: aliceku
-manager: craigg
+author: jaszymas
+ms.author: jaszymas
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 3f7e80b878583932976c85f7fa390ed546a67587
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: b0fe0e861e8139416250ffc2677230dbc2aeab6d
+ms.sourcegitcommit: 312b961cfe3a540d8f304962909cd93d0a9c330b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52401125"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73594402"
 ---
-# <a name="always-encrypted-cryptography"></a>Always Encrypted による暗号化
+# <a name="always-encrypted-cryptography"></a>Always Encrypted による暗号
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
   このドキュメントでは、 [および](../../../relational-databases/security/encryption/always-encrypted-database-engine.md) において、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Always Encrypted [!INCLUDE[ssSDSFull](../../../includes/sssdsfull-md.md)]機能で使用される暗号化マテリアルを派生させる暗号化アルゴリズムとメカニズムについて説明します。  
   
-## <a name="keys-key-stores-and-key-encryption-algorithms"></a>キー、キー ストアおよびキーの暗号化アルゴリズム  
- Always Encrypted では、列マスター キーと列暗号化キーという 2 種類のキーを使用します。  
+## <a name="keys-key-stores-and-key-encryption-algorithms"></a>キー、キー ストア、およびキー暗号化アルゴリズム
+ Always Encrypted では 2 種類のキーを使用します。列マスター キーと列暗号化キーです。  
   
- 列マスター キー (CMK) は、常にクライアントに制御され、外部キー ストアに格納されているキーの暗号化キー (つまり、他のキーの暗号化に使用されるキー) です。 Always Encrypted が有効なクライアント ドライバーは CMK ストア プロバイダーを介してキー ストアと対話します。このプロバイダーはドライバー ライブラリの一部 ( [!INCLUDE[msCoName](../../../includes/msconame-md.md)]/system プロバイダー) またはクライアント アプリケーションの一部 (カスタム プロバイダー) である場合があります。 現在、クライアント ドライバー ライブラリには、[Windows 証明書ストア](/windows/desktop/SecCrypto/using-certificate-stores)およびハードウェア セキュリティ モジュール (HSM) の [!INCLUDE[msCoName](../../../includes/msconame-md.md)] キー ストア プロバイダーが含まれています。  (現在のプロバイダーの一覧については、「[CREATE COLUMN MASTER KEY &#40;Transact-SQL&#41;](../../../t-sql/statements/create-column-master-key-transact-sql.md)」を参照してください)。アプリケーション開発者は、任意のストアのカスタム プロバイダーを提供できます。  
+ 列マスター キー (CMK) は、常にクライアントによって制御され、外部キー ストアに格納されているキー暗号化キー (たとえば、他のキーの暗号化に使用されるキー) です。 Always Encrypted が有効なクライアント ドライバーは CMK ストア プロバイダーを介してキー ストアと対話します。このプロバイダーはドライバー ライブラリの一部 ( [!INCLUDE[msCoName](../../../includes/msconame-md.md)]/system プロバイダー) またはクライアント アプリケーションの一部 (カスタム プロバイダー) である場合があります。 現在、クライアント ドライバー ライブラリには、 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Windows 証明書ストア [およびハードウェア セキュリティ モジュール (HSM) の](/windows/desktop/SecCrypto/using-certificate-stores) キー ストア プロバイダーが含まれています。 現在のプロバイダーの一覧については、「[CREATE COLUMN MASTER KEY &#40;Transact-SQL&#41;](../../../t-sql/statements/create-column-master-key-transact-sql.md)」を参照してください。 アプリケーション開発者は、任意のストアのカスタム プロバイダーを提供できます。  
   
- 列暗号化キー (CEK) は、CMK によって保護されているコンテンツ暗号化キー (つまり、データを保護するために使用されるキー) です。  
+ 列暗号化キー (CEK) は、CMK によって保護されているコンテンツ暗号化キー (たとえば、データを保護するために使用されるキー) です。  
   
- すべての [!INCLUDE[msCoName](../../../includes/msconame-md.md)] CMK ストア プロバイダーは、セクション A.2.1 の RFC 8017 で指定されている既定のパラメーターを指定し、RSA-OAEP (RSA with Optimal Asymmetric Encryption Padding) を使用して CEK を暗号化します。 これらの既定のパラメーターでは、SHA-1 のハッシュ関数と、SHA-1 を指定した MGF1 のマスク生成関数を使用します。  
+ すべての [!INCLUDE[msCoName](../../../includes/msconame-md.md)] CMK ストア プロバイダーでは、RSA-OAEP (RSA with Optimal Asymmetric Encryption Padding) を使用して CEK が暗号化されます。 Microsoft Cryptography API がサポートされているキー ストア プロバイダー:.NET Framework の Next Generation (CNG) ([SqlColumnEncryptionCngProvider クラス](https://msdn.microsoft.com/library/system.data.sqlclient.sqlcolumnencryptioncngprovider.aspx)) では、RFC 8017 のセクション A.2.1 で指定されている既定のパラメーターが使用されます。 これらの既定のパラメーターでは、SHA-1 のハッシュ関数と、SHA-1 を指定した MGF1 のマスク生成関数を使用します。 他のすべてのキー ストア プロバイダーでは、SHA-256 が使用されます。 
   
 ## <a name="data-encryption-algorithm"></a>データ暗号化のアルゴリズム  
  Always Encrypted では **AEAD_AES_256_CBC_HMAC_SHA_256** アルゴリズムを使用して、データベース内のデータを暗号化します。  
@@ -43,7 +42,7 @@ ms.locfileid: "52401125"
   
  **AEAD_AES_256_CBC_HMAC_SHA_256** は、以下の手順を使用して指定されたプレーンテキストの暗号化テキストの値を計算します。  
   
-### <a name="step-1-generating-the-initialization-vector-iv"></a>手順 1: 初期化ベクター (IV) の生成  
+### <a name="step-1-generating-the-initialization-vector-iv"></a>手順 1:初期化ベクター (IV) の生成  
  Always Encrypted では、以下の 2 種類の **AEAD_AES_256_CBC_HMAC_SHA_256**がサポートされています。  
   
 -   ランダム化  
@@ -56,7 +55,7 @@ ms.locfileid: "52401125"
 When using randomized encryption: IV = Generate cryptographicaly random 128bits  
 ```  
   
- 決定的な暗号化の場合、IV はランダムに生成されませんが、その代わりに、以下のアルゴリズムを使用してプレーンテキスト値から派生します。  
+ 決定論的暗号化がある場合、IV はランダムに生成されず、代わりに、以下のアルゴリズムを使用してプレーンテキスト値から派生されます。  
   
 ```  
 When using deterministic encryption: IV = HMAC-SHA-256( iv_key, cell_data ) truncated to 128 bits.  
@@ -68,12 +67,12 @@ When using deterministic encryption: IV = HMAC-SHA-256( iv_key, cell_data ) trun
 iv_key = HMAC-SHA-256(CEK, "Microsoft SQL Server cell IV key" + algorithm + CEK_length)  
 ```  
   
- HMAC 値の切り捨ては、IV での必要に応じて 1 つのデータ ブロックに収まるように実行されます。    
+ IV で必要な場合、1 つのデータ ブロックに収まるように HMAC 値の切り捨てが行われます。
 その結果、決定的な暗号化では常に指定されたプレーンテキスト値に対して同じ暗号化テキストが生成されます。これにより、2 つのプレーンテキスト値のそれぞれ対応する暗号化テキスト値を比較して、プレーンテキスト値が同じであるかどうかを推定できます。 この制限された情報の公開により、データベース システムは暗号化された列値の等価比較をサポートできます。  
   
  決定的な暗号化は、定義済みの IV 値を使用するなどして、パターンを非表示にする場合や代替との比較を行う場合により効果的です。  
   
-### <a name="step-2-computing-aes256cbc-ciphertext"></a>手順 2: AES_256_CBC 暗号化テキストの計算  
+### <a name="step-2-computing-aes_256_cbc-ciphertext"></a>手順 2:AES_256_CBC 暗号化テキストの計算  
  IV を計算した後、 **AES_256_CBC** 暗号化テキストが次のように生成されます。  
   
 ```  
@@ -86,7 +85,7 @@ aes_256_cbc_ciphertext = AES-CBC-256(enc_key, IV, cell_data) with PKCS7 padding.
 enc_key = HMAC-SHA-256(CEK, "Microsoft SQL Server cell encryption key" + algorithm + CEK_length )  
 ```  
   
-### <a name="step-3-computing-mac"></a>手順 3: MAC の計算  
+### <a name="step-3-computing-mac"></a>手順 3:MAC の計算  
  その後、MAC は以下のアルゴリズムを使用して計算されます。  
   
 ```  
@@ -96,12 +95,12 @@ MAC = HMAC-SHA-256(mac_key, versionbyte + IV + Ciphertext + versionbyte_length)
  各要素の説明は次のとおりです。  
   
 ```  
-versionbyte = 0x01 and versionbyte_length = 1   
+versionbyte = 0x01 and versionbyte_length = 1
 mac_key = HMAC-SHA-256(CEK, "Microsoft SQL Server cell MAC key" + algorithm + CEK_length)  
 ```  
   
-### <a name="step-4-concatenation"></a>手順 4: 連結  
- 最後に、暗号化された値は、アルゴリズム バージョン バイト、MAC、IV および AES_256_CBC 暗号化テキストを単に連結して生成されます。  
+### <a name="step-4-concatenation"></a>手順 4:Concatenation  
+ 最後に、暗号化された値は、アルゴリズム バージョン バイト、MAC、IV および AES_256_CBC 暗号化テキストを連結して生成されます。  
   
 ```  
 aead_aes_256_cbc_hmac_sha_256 = versionbyte + MAC + IV + aes_256_cbc_ciphertext  
@@ -130,7 +129,7 @@ aead_aes_256_cbc_hmac_sha_256 = versionbyte + MAC + IV + aes_256_cbc_ciphertext
 1 + 32 + 16 + (FLOOR(DATALENGTH(cell_data)/16) + 1) * 16  
 ```  
   
- 例 :  
+ 例:  
   
 -   4 バイト長の **int** プレーンテキスト値は、暗号化後に 65 バイト長のバイナリ値になります。  
   
@@ -176,10 +175,10 @@ aead_aes_256_cbc_hmac_sha_256 = versionbyte + MAC + IV + aes_256_cbc_ciphertext
 |**xml**|該当なし (サポートされていません)|  
   
 ## <a name="net-reference"></a>.NET リファレンス  
- このドキュメントに記載されているアルゴリズムの詳細については、 **.NET リファレンス** の **SqlAeadAes256CbcHmac256Algorithm.cs** ファイルと [SqlColumnEncryptionCertificateStoreProvider.cs](https://referencesource.microsoft.com/)ファイルを参照してください。  
+ このドキュメントに記載されているアルゴリズムの詳細については、[.NET リファレンス](https://referencesource.microsoft.com/)の **SqlAeadAes256CbcHmac256Algorithm.cs**、**SqlColumnEncryptionCertificateStoreProvider.cs**、**SqlColumnEncryptionCertificateStoreProvider.cs** ファイルを参照してください。  
   
 ## <a name="see-also"></a>参照  
- [Always Encrypted &#40;データベース エンジン&#41;](../../../relational-databases/security/encryption/always-encrypted-database-engine.md)   
- [Always Encrypted &#40;クライアント開発&#41;](../../../relational-databases/security/encryption/always-encrypted-client-development.md)  
+ - [Always Encrypted](../../../relational-databases/security/encryption/always-encrypted-database-engine.md)   
+ - [Always Encrypted を使用したアプリケーションの開発](../../../relational-databases/security/encryption/always-encrypted-client-development.md)  
   
   

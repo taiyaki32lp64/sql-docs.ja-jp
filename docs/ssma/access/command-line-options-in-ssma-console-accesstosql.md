@@ -10,12 +10,12 @@ ms.assetid: c1f3b3f0-0f3e-4e07-b745-2fbdde85c67e
 author: Shamikg
 ms.author: Shamikg
 manager: murato
-ms.openlocfilehash: fc8065bcfda3066fae31be982e25f054c07bca3a
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: f6a2bb7e10e487d65c0fa8dfd406a30f9acd557a
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52532007"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68265534"
 ---
 # <a name="command-line-options-in-the-ssma-console-accesstosql"></a>SSMA コンソール (AccessToSQL) コマンド ライン オプション
 Microsoft は、堅牢な実行および SSMA アクティビティを制御するコマンド ライン オプションのセットを提供します。 次のセクションでは、追加の詳細情報を提供します。  
@@ -25,7 +25,7 @@ Microsoft は、堅牢な実行および SSMA アクティビティを制御す�
   
 ここでは、用語 'option' と呼ばれるもを 'switch'。  
   
-オプションは、小文字は区別されず、いずれかで始めることは、'**-**'または'**/**' 文字。  
+オプションは、小文字は区別されず、いずれかで始めることは、' **-** 'または' **/** ' 文字。  
   
 オプションを指定する場合は、対応する、オプション パラメーターを指定することが必須です。  
   

@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: bb2d9f21-bda0-4e50-a8be-f710db660034
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: f44ae90a82e778bf8e8564b719aa6b9f0157a05a
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: 15fa1269b733c9adc938b1880735ae2a4e5db731
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53204371"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68039557"
 ---
 # <a name="sqlspecialcolumns-function"></a>SQLSpecialColumns 関数
 **準拠**  
@@ -40,7 +39,7 @@ ms.locfileid: "53204371"
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
   
 SQLRETURN SQLSpecialColumns(  
      SQLHSTMT      StatementHandle,  
@@ -138,7 +137,7 @@ SQLRETURN SQLSpecialColumns(
 |IM018|**SQLCompleteAsync**このハンドルに対する前の非同期操作を完了が呼び出されていません。|通知モードが有効になっている場合、ハンドルでは、前の関数呼び出しに SQL_STILL_EXECUTING が返された場合と**SQLCompleteAsync**後処理を行い、操作を完了するハンドルで呼び出す必要があります。|  
   
 ## <a name="comments"></a>コメント  
- ときに、 *IdentifierType*引数は、SQL_BEST_ROWID **SQLSpecialColumns**列またはテーブル内の各行を一意に識別する列を返します。 これらの列で常に使用できる、*選択リスト*または**場所**句。 **SQLColumns**テーブルの列でさまざまな情報を返すために使用するは必ずしも返さない、各行を一意に識別する列またはによって行のいずれかの値に自動的に更新される列を更新します。トランザクションです。 たとえば、 **SQLColumns** Oracle の擬似列 ROWID を返さなかった可能性があります。 これは、ため**SQLSpecialColumns**これらの列を返すために使用します。 詳細については、次を参照してください。[カタログ データの使用](../../../odbc/reference/develop-app/uses-of-catalog-data.md)します。  
+ ときに、 *IdentifierType*引数は、SQL_BEST_ROWID **SQLSpecialColumns**列またはテーブル内の各行を一意に識別する列を返します。 これらの列で常に使用できる、*選択リスト*または**WHERE**句。 **SQLColumns**テーブルの列でさまざまな情報を返すために使用するは必ずしも返さない、各行を一意に識別する列またはによって行のいずれかの値に自動的に更新される列を更新します。トランザクションです。 たとえば、 **SQLColumns** Oracle の擬似列 ROWID を返さなかった可能性があります。 これは、ため**SQLSpecialColumns**これらの列を返すために使用します。 詳細については、次を参照してください。[カタログ データの使用](../../../odbc/reference/develop-app/uses-of-catalog-data.md)します。  
   
 > [!NOTE]  
 >  一般的な使用、引数、および ODBC カタログ関数の返されたデータの詳細については、次を参照してください。[カタログ関数](../../../odbc/reference/develop-app/catalog-functions.md)します。  
@@ -151,9 +150,9 @@ SQLRETURN SQLSpecialColumns(
   
  **SQLSpecialColumns**スコープによって順序付けられた、標準的な結果セットとして結果を返します。  
   
- 次の列が ODBC 3 の名前が変更された *.x*します。 列名の変更では、アプリケーションは、列番号でバインドため、旧バージョンとの互換性は影響しません。  
+ 次の列が ODBC の名前が変更された*3.x*します。 列名の変更では、アプリケーションは、列番号でバインドため、旧バージョンとの互換性は影響しません。  
   
-|ODBC 2.0 列|ODBC 3 *.x*列|  
+|ODBC 2.0 列|ODBC *3.x*列|  
 |---------------------|-----------------------|  
 |PRECISION|COLUMN_SIZE|  
 |LENGTH|BUFFER_LENGTH|  

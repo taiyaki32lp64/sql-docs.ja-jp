@@ -1,5 +1,5 @@
 ---
-title: WMI Provider for Server Events の操作 |Microsoft Docs
+title: WMI Provider for Server Events の操作
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -20,13 +20,12 @@ helpviewer_keywords:
 ms.assetid: cd974b3b-2309-4a20-b9be-7cfc93fc4389
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: 8a3f6118c2227ad81d368c012c7282e3ba962881
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 9134b2964c27129b5ccc9d6a5992dda7c638dc7a
+ms.sourcegitcommit: baa40306cada09e480b4c5ddb44ee8524307a2ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51671741"
+ms.lasthandoff: 11/06/2019
+ms.locfileid: "73658119"
 ---
 # <a name="working-with-the-wmi-provider-for-server-events"></a>WMI Provider for Server Events の操作
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -45,10 +44,10 @@ SELECT name, is_broker_enabled, service_broker_guid FROM sys.databases;
   
  msdb の Service Broker GUID はプロバイダーの対象サービスの拠点であり、特別な意味を持っています。  
   
- 有効にする[!INCLUDE[ssSB](../../includes/sssb-md.md)]データベースでは、ENABLE_BROKER SET オプションを使用して、 [ALTER DATABASE](../../t-sql/statements/alter-database-transact-sql.md)ステートメント。  
+ データベースで [!INCLUDE[ssSB](../../includes/sssb-md.md)] を有効にするには、 [ALTER database](../../t-sql/statements/alter-database-transact-sql.md)ステートメントの ENABLE_BROKER SET オプションを使用します。  
   
-## <a name="specifying-a-connection-string"></a>接続文字列を指定します。  
- アプリケーションは、プロバイダーによって定義された WMI 名前空間に接続することによって、WMI Provider for Server Events を [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスにダイレクトします。 Windows WMI サービスは、この名前空間をプロバイダー DLL である Sqlwep.dll にマップし、これをメモリに読み込みます。 各インスタンス[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]独自 WMI 名前空間、既定値を持つ: \\ \\.\\*ルート*\Microsoft\SqlServer\ServerEvents\\*instance_name*します。 *instance_name*既定では既定のインストールの MSSQLSERVER[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]します。  
+## <a name="specifying-a-connection-string"></a>接続文字列の指定  
+ アプリケーションは、プロバイダーによって定義された WMI 名前空間に接続することによって、WMI Provider for Server Events を [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスにダイレクトします。 Windows WMI サービスは、この名前空間をプロバイダー DLL である Sqlwep.dll にマップし、これをメモリに読み込みます。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の各インスタンスには、独自の WMI 名前空間があります。既定では、\\\\が使用されます。\\*ルート*\Microsoft\SqlServer\ServerEvents\\*instance_name*。 既定の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のインストールでは、 *instance_name*既定値は MSSQLSERVER です。  
   
 ## <a name="permissions-and-server-authentication"></a>権限とサーバー認証  
  WMI Provider for Server Events にアクセスするには、WMI 管理アプリケーションの起動元クライアントが、アプリケーションのアプリケーション接続文字列で指定された [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンス内の Windows 認証ログインまたはグループに対応している必要があります。  
@@ -64,7 +63,7 @@ SELECT name, is_broker_enabled, service_broker_guid FROM sys.databases;
   
 -   キュー スコープされるイベント通知を作成するには、少なくとも、キューの ALTER 権限が必要です。  
   
- WQL クエリがスコープ設定する方法については、次を参照してください。 [WMI Provider for Server Events と WQL の使用](https://technet.microsoft.com/library/ms180524\(v=sql.105\).aspx)します。  
+ WQL クエリのスコープの詳細については、「 [WMI Provider For Server Events での wql の使用](https://technet.microsoft.com/library/ms180524\(v=sql.105\).aspx)」を参照してください。  
   
  スコープの例として、次の WQL クエリを含む WMI プロバイダー アプリケーションを考えます。  
   
@@ -78,7 +77,7 @@ WHERE DatabaseName = "AdventureWorks2012"
   
  WMI プロバイダーはこのクエリを変換し、[!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] データベース内にイベント通知を作成します。 つまり、呼び出し側は、このようなイベント通知を作成するのに必要な権限 (具体的には CREATE DATABASE DDL EVENT NOTIFICATION 権限) を [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] データベース内に持っている必要があります。  
   
- サーバー レベルをスコープとしたイベント通知を指定する WQL クエリ (SELECT * FROM ALTER_TABLE など) の場合、呼び出し側アプリケーションはサーバー レベルの CREATE DDL EVENT NOTIFICATION 権限を持っている必要があります。 サーバースコープのイベント通知は、master データベースに格納されることに注意してください。 使用することができます、 [sys.server_event_notifications](../../relational-databases/system-catalog-views/sys-server-event-notifications-transact-sql.md)カタログ ビューをそのメタデータを参照してください。  
+ サーバー レベルをスコープとしたイベント通知を指定する WQL クエリ (SELECT * FROM ALTER_TABLE など) の場合、呼び出し側アプリケーションはサーバー レベルの CREATE DDL EVENT NOTIFICATION 権限を持っている必要があります。 サーバースコープのイベント通知は、master データベースに格納されることに注意してください。 メタデータを表示するには、 [server_event_notifications](../../relational-databases/system-catalog-views/sys-server-event-notifications-transact-sql.md)カタログビューを使用します。  
   
 > [!NOTE]  
 >  WMI プロバイダーによって作成されるイベント通知のスコープ (サーバー、データベース、またはオブジェクト) は、最終的には、WMI プロバイダーによって使用される権限検証プロセスの結果によって異なります。 これは、プロバイダーを呼び出しているユーザーの権限セットとクエリ対象のデータベースの検証の影響を受けます。  
@@ -111,7 +110,7 @@ WHERE DatabaseName = "AdventureWorks2012"
     -   DENY または REVOKE (ALTER DATABASE、ALTER ANY DATABASE EVENT NOTIFICATION、CREATE DATABASE DDL EVENT NOTIFICATION、CONTROL SERVER、ALTER ANY EVENT NOTIFICATION、CREATE DDL EVENT NOTIFICATION、または CREATE TRACE EVENT NOTIFICATION 権限のみに適用されます)  
   
 ## <a name="working-with-event-data-on-the-client-side"></a>クライアント側のイベント データの使用  
- WMI プロバイダーの後に for Server Events、ターゲット データベースで必要なイベント通知を作成するイベント通知サービスに送信イベント データ ターゲットの名前は msdb で**SQL/通知/ProcessWMIEventProviderNotification/v1.0**します。 内のキューにイベントを対象となるサービスに配置**msdb**という**WMIEventProviderNotificationQueue**します。 (サービスもキューも、プロバイダーが [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] に最初に接続する際に動的に作成されます)。プロバイダーは、このキューから XML イベント データを読み取り、それをマネージド オブジェクト フォーマット (MOF) に変換してからクライアント アプリケーションに返します。 MOF データは、CIM (Common Information Model) クラス定義として WQL クエリから要求されるイベントのプロパティで構成されています。 各プロパティには、対応する CIM 型があります。 たとえば、`SPID`プロパティは CIM 型として返される**Sint32**します。 各プロパティの CIM 型は、各イベント クラスの下に表示されます[WMI Provider for Server Events のクラスとプロパティ](../../relational-databases/wmi-provider-server-events/wmi-provider-for-server-events-classes-and-properties.md)します。  
+ WMI Provider for Server Events によって、ターゲットデータベースに必要なイベント通知が作成された後、イベント通知は、 **SQL/notification/Processの Eventprovidernotification/** v1.0 という名前の msdb 内のターゲットサービスにイベントデータを送信します. 発信先サービスは、" **wmi**" という名前の**msdb**内のキューにイベントを格納します。 (サービスとキューの両方が、最初に [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]に接続するときにプロバイダーによって動的に作成されます)。プロバイダーは、このキューから XML イベントデータを読み取り、それを管理オブジェクト形式 (MOF) に変換してから、クライアントアプリケーションに返します。 MOF データは、CIM (Common Information Model) クラス定義として WQL クエリから要求されるイベントのプロパティで構成されています。 各プロパティには、対応する CIM 型があります。 たとえば、`SPID` プロパティは CIM 型**Sint32**として返されます。 各プロパティの CIM 型については、「 [WMI Provider For Server Events のクラスとプロパティ](../../relational-databases/wmi-provider-server-events/wmi-provider-for-server-events-classes-and-properties.md)」の各イベントクラスに記載されています。  
   
 ## <a name="see-also"></a>参照  
  [WMI Provider for Server Events の概念](https://technet.microsoft.com/library/ms180560.aspx)  

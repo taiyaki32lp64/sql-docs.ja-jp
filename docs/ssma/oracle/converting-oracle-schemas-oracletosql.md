@@ -11,13 +11,13 @@ helpviewer_keywords:
 ms.assetid: e021182d-31da-443d-b110-937f5db27272
 author: Shamikg
 ms.author: Shamikg
-manager: v-thobro
-ms.openlocfilehash: 18da150a435b5d3d61740139309d109a16691da3
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: shamikg
+ms.openlocfilehash: 638c16de8312456410c14e38fa632085e504913e
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47788510"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68266154"
 ---
 # <a name="converting-oracle-schemas-oracletosql"></a>Oracle スキーマの変換 (OracleToSQL)
 Oracle に接続すると後に、接続されている[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]、プロジェクトの設定とデータ マッピング オプションでは、Oracle データベースのオブジェクトを変換できますと[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]データベース オブジェクト。  

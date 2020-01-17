@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 2825c6e7-b9ff-42fe-84fc-7fb39728ac5d
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 1ed2e5ca1fdaba97dde64329c5e8e1b692f43158
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 8586157237db1158587e3c39f1320b78d8251fb5
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47745850"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68081467"
 ---
 # <a name="data-length-buffer-length-and-truncation"></a>データの長さ、バッファー長、および切り捨て
 *データ長*はデータのバイトの長さ、アプリケーションのデータのバッファーに格納されているとするとなく、データ ソースに格納されます。 データは多くの場合よりも、データ ソース内のデータ バッファー内のさまざまな種類に格納されているために、この区別が重要です。 データ ソースに送信されるデータ、これは、データ ソースの型に変換する前に、データのバイト長。 データ ソースから取得されるデータは、これは、データのバイト長を切り捨てが行われる前に、データ バッファーの型に変換した後。  

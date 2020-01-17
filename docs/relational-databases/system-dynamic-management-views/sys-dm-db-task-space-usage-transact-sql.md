@@ -19,16 +19,15 @@ helpviewer_keywords:
 ms.assetid: fb0c87e5-43b9-466a-a8df-11b3851dc6d0
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 7ab12b9a0c042b96803e44c479a68a110a3c560b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 4ee20a77440fd769e813f8335148c2b67a34d7bf
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47806740"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68263961"
 ---
-# <a name="sysdmdbtaskspaceusage-transact-sql"></a>sys.dm_db_task_space_usage (Transact-SQL)
+# <a name="sysdm_db_task_space_usage-transact-sql"></a>sys.dm_db_task_space_usage (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   データベースに対するタスクごとに、ページの割り当てと割り当て解除の処理に関する情報を返します。  
@@ -54,12 +53,12 @@ ms.locfileid: "47806740"
 ## <a name="permissions"></a>アクセス許可
 
 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]、必要があります`VIEW SERVER STATE`権限。   
-[!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]が必要です、`VIEW DATABASE STATE`データベースの権限。   
+[!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] Premium レベルでは、必要があります、`VIEW DATABASE STATE`データベースの権限。 [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] Standard および Basic 階層は、必要があります、**サーバー管理者**または**Azure Active Directory 管理者**アカウント。   
 
 ## <a name="remarks"></a>コメント  
  このビューでレポートされるページの数に、IAM ページは含まれません。  
   
- ページ カウンターは要求の開始時にゼロ (0) に初期化されます。 これらの値は要求が完了したときにセッション レベルで集計されます。 詳細については、次を参照してください。 [sys.dm_db_session_space_usage & #40 です。TRANSACT-SQL と #41 です](../../relational-databases/system-dynamic-management-views/sys-dm-db-session-space-usage-transact-sql.md)。  
+ ページ カウンターは要求の開始時にゼロ (0) に初期化されます。 これらの値は要求が完了したときにセッション レベルで集計されます。 詳細については、[sys.dm_db_session_space_usage &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-session-space-usage-transact-sql.md)を参照してください。  
   
  指定したタスクで割り当てられるページ数と割り当て解除されるページ数は、作業テーブル キャッシュ、一時テーブル キャッシュ、および延期された削除操作によって影響を受けます。  
   

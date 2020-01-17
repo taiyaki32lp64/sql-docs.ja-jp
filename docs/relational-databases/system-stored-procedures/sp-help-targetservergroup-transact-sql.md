@@ -17,18 +17,17 @@ helpviewer_keywords:
 ms.assetid: ec3a4a68-b591-431c-9518-053ede522d0c
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 1c2b16617a4676e50a105affd5a885c8627b3120
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 63a3d9daa48bb98408c3f0d9b8282e8083849cf0
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47784723"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68085073"
 ---
 # <a name="sphelptargetservergroup-transact-sql"></a>sp_help_targetservergroup (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  指定したグループ内のすべての対象サーバーを表示します。 グループを指定しない場合、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ではすべてのターゲット サーバー グループに関する情報が返されます。  
+  指定したグループ内のすべてのターゲット サーバーを表示します。 グループを指定しない場合、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ではすべてのターゲット サーバー グループに関する情報が返されます。  
   
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -41,8 +40,7 @@ sp_help_targetservergroup
 ```  
   
 ## <a name="argument"></a>引数  
- [ **@name=** ] **'***name***'**  
- 情報を返すターゲット サーバー グループの名前を指定します。 *名前*は**sysname**、既定値は NULL です。  
+`[ @name = ] 'name'` 情報を返す対象サーバー グループの名前です。 *名前* は **sysname** 、既定値は NULL です。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  **0** (成功) または**1** (失敗)  

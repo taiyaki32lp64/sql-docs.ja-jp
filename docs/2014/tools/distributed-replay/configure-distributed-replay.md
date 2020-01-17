@@ -11,11 +11,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: c5e44910c72e5162b9acb74ebbf74cd19d7ce1bc
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54124572"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63149526"
 ---
 # <a name="configure-distributed-replay"></a>Configure Distributed Replay
   Distributed Replay Controller、クライアント、および管理ツールのインストール場所に関する [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributed Replay の構成の詳細は、XML ファイルで指定されます。 このようなファイルには、次のファイルが含まれます。  
@@ -28,7 +28,7 @@ ms.locfileid: "54124572"
   
 -   [再生構成ファイル](#ReplayConfig)  
   
-##  <a name="DReplayController"></a> コント ローラー構成ファイル:DReplayController.config  
+##  <a name="DReplayController"></a> コントローラー構成ファイル:DReplayController.config  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributed Replay Controller サービスを開始すると、コントローラー構成ファイル `DReplayController.config`からログ記録レベルが読み込まれます。 このファイルは、Distributed Replay Controller サービスをインストールしたフォルダーにあります。  
   
  **\<コントローラーのインストール パス>\DReplayController.config**  
@@ -76,7 +76,7 @@ ms.locfileid: "54124572"
 </Options>  
 ```  
   
-##  <a name="PreprocessConfig"></a> 前処理構成ファイル。DReplay.exe.preprocess.config  
+##  <a name="PreprocessConfig"></a> 前処理構成ファイル:DReplay.exe.preprocess.config  
  前処理段階を開始するために管理ツールを使用すると、管理ツールは前処理構成ファイル `DReplay.exe.preprocess.config` から前処理設定を読み込みます。  
   
  既定の構成ファイルまたは管理ツール **-c** パラメーターを使用して、変更された前処理構成ファイルの場所を指定します。 管理ツールの前処理オプションの使用の詳細については、「[前処理オプション &#40;Distributed Replay 管理ツール&#41;](preprocess-option-distributed-replay-administration-tool.md)」を参照してください。  

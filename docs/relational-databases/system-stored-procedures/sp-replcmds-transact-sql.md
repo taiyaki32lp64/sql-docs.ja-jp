@@ -1,5 +1,5 @@
 ---
-title: sp_replcmds (TRANSACT-SQL) |Microsoft Docs
+title: sp_replcmds (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -15,21 +15,20 @@ helpviewer_keywords:
 ms.assetid: 7e932f80-cc6e-4109-8db4-2b7c8828df73
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: c868fe69df1f3fd34fe0c1f550507e7db7b6c944
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 3d60de0f459ec1224f6023e8ee848227fdc17ece
+ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52823426"
+ms.lasthandoff: 08/03/2019
+ms.locfileid: "68771007"
 ---
-# <a name="spreplcmds-transact-sql"></a>sp_replcmds (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+# <a name="spreplcmds-transact-sql"></a>sp_replcmds (Transact-sql)
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
-  レプリケーションするようマークが付けられたトランザクションのコマンドを返します。 このストアド プロシージャは、パブリッシャー側でパブリケーション データベースについて実行されます。  
+  レプリケーション用にマークされたトランザクションのコマンドを返します。 このストアド プロシージャは、パブリッシャー側でパブリケーション データベースについて実行されます。  
   
 > [!IMPORTANT]  
->  **Sp_replcmds**プロシージャがレプリケーションに関する問題のトラブルシューティングにのみ実行する必要があります。  
+>  **Sp_replcmds**プロシージャは、レプリケーションに関する問題のトラブルシューティングを行う場合にのみ実行してください。  
   
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -41,50 +40,49 @@ sp_replcmds [ @maxtrans = ] maxtrans
 ```  
   
 ## <a name="arguments"></a>引数  
- [  **@maxtrans=**] *maxtrans*  
- 情報を返すトランザクションの数です。 *maxtrans*は**int**、既定値は**1**、ディストリビューション待ちの次のトランザクションを指定します。  
+`[ @maxtrans = ] maxtrans`情報を返すトランザクションの数を指定します。 *maxtrans*は**int**,、既定値は**1**,、ディストリビューションを待機している次のトランザクションを指定します。  
   
 ## <a name="result-sets"></a>結果セット  
   
 |列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
-|**アーティクル id**|**int**|アーティクルの ID。|  
-|**partial_command**|**bit**|これが部分的なコマンドかどうかを示します。|  
+|**アーティクル id**|**int**|アーティクルの ID です。|  
+|**partial_command**|**bit**|これが部分コマンドであるかどうかを示します。|  
 |**command**|**varbinary(1024)**|コマンドの値。|  
-|**xactid**|**binary(10)**|トランザクション id。|  
-|**xact_seqno**|**varbinary(16)**|トランザクション シーケンス番号です。|  
-|**publication_id**|**int**|パブリケーションの ID。|  
-|**command_id**|**int**|内のコマンドの ID [MSrepl_commands](../../relational-databases/system-tables/msrepl-commands-transact-sql.md)します。|  
-|**command_type**|**int**|コマンドの種類です。|  
-|**originator_srvname**|**sysname**|トランザクションが発生したサーバーです。|  
-|**originator_db**|**sysname**|トランザクションが発生したデータベースです。|  
+|**xactid**|**binary(10)**|トランザクション ID。|  
+|**xact_seqno**|**varbinary(16)**|トランザクションのシーケンス番号。|  
+|**publication_id**|**int**|パブリケーションの ID です。|  
+|**command_id**|**int**|[MSrepl_commands](../../relational-databases/system-tables/msrepl-commands-transact-sql.md)内のコマンドの ID。|  
+|**command_type**|**int**|コマンドの種類。|  
+|**originator_srvname**|**sysname**|トランザクションが発生したサーバー。|  
+|**originator_db**|**sysname**|トランザクションが発生したデータベース。|  
 |**pkHash**|**int**|内部使用のみです。|  
-|**originator_publication_id**|**int**|トランザクションが発生したパブリケーションの ID です。|  
-|**originator_db_version**|**int**|トランザクションが発生したデータベースのバージョンです。|  
-|**originator_lsn**|**varbinary(16)**|発生元パブリケーションでのコマンドのログ シーケンス番号 (LSN) を識別します。|  
+|**originator_publication_id**|**int**|トランザクションが発生したパブリケーションの ID。|  
+|**originator_db_version**|**int**|トランザクションが発生したデータベースのバージョン。|  
+|**originator_lsn**|**varbinary(16)**|元のパブリケーションのコマンドのログシーケンス番号 (LSN) を識別します。|  
   
 ## <a name="remarks"></a>コメント  
- **sp_replcmds**トランザクション レプリケーションでログ読み取りプロセスによって使用されます。  
+ **sp_replcmds**は、トランザクションレプリケーションのログリーダープロセスによって使用されます。  
   
- レプリケーション処理を実行する最初のクライアント**sp_replcmds**ログ リーダーとして特定のデータベースでします。  
+ レプリケーションでは、指定されたデータベース内で**sp_replcmds**を実行する最初のクライアントがログリーダーとして扱われます。  
   
- このプロシージャは、所有者限定テーブルまたはテーブル名が限定されていないテーブル (既定値) に対するコマンドを生成します。 限定されたテーブル名を追加することにより、あるデータベースの特定のユーザーが所有するテーブルから、別のデータベースで同じユーザーが所有するテーブルにデータのレプリケーションが可能になります。  
+ このプロシージャでは、所有者によって修飾されたテーブルのコマンドを生成したり、テーブル名を修飾したりすることはできません (既定)。 修飾されたテーブル名を追加すると、あるデータベースの特定のユーザーが所有するテーブルから、別のデータベースの同じユーザーが所有するテーブルにデータをレプリケートできます。  
   
 > [!NOTE]  
 >  レプリケーション元データベースのテーブル名は、所有者名により限定されるので、レプリケーション先データベースのテーブルの所有者も同じ所有者名である必要があります。  
   
- クライアントを実行しようとした**sp_replcmds**同じデータベース内で最初のクライアントが切断されるまでにエラー 18752 を受け取ります。 別のクライアントを実行できる最初のクライアントが切断した後**sp_replcmds**、され、新しいログ リーダーになります。  
+ 同じデータベース内で**sp_replcmds**を実行しようとしたクライアントは、最初のクライアントが切断されるまでエラー18752を受信します。 最初のクライアントが切断されると、別のクライアントが**sp_replcmds**を実行し、新しいログリーダーになります。  
   
- 両方に警告メッセージ番号 18759 が追加された、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]エラー ログと[!INCLUDE[msCoName](../../includes/msconame-md.md)]Windows アプリケーション ログ**sp_replcmds**テキスト ポインターができなかったため、テキスト コマンドをレプリケートすることはできません同じトランザクションで取得します。  
+ テキストポインターが同じで取得されなかった[!INCLUDE[msCoName](../../includes/msconame-md.md)]ために**sp_replcmds**が[!INCLUDE[msCoName](../../includes/msconame-md.md)]テキストコマンドをレプリケートできない場合、エラーログと Windows アプリケーションログの[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]両方に警告メッセージ番号18759が追加されます。取引.  
   
 ## <a name="permissions"></a>アクセス許可  
- メンバーのみ、 **sysadmin**固定サーバー ロールまたは**db_owner**固定データベース ロールが実行できる**sp_replcmds**します。  
+ **Sp_replcmds**を実行できるのは、固定サーバーロール**sysadmin**または固定データベースロール**db_owner**のメンバーだけです。  
   
-## <a name="see-also"></a>参照  
- [エラー メッセージ](../../relational-databases/native-client-odbc-error-messages/error-messages.md)   
- [sp_repldone &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-repldone-transact-sql.md)   
- [sp_replflush &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-replflush-transact-sql.md)   
- [sp_repltrans &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-repltrans-transact-sql.md)   
+## <a name="see-also"></a>関連項目  
+ [エラーメッセージ](../../relational-databases/native-client-odbc-error-messages/error-messages.md)   
+ [sp_repldone &#40;transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-repldone-transact-sql.md)   
+ [sp_replflush &#40;transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-replflush-transact-sql.md)   
+ [sp_repltrans &#40;transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-repltrans-transact-sql.md)   
  [システム ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

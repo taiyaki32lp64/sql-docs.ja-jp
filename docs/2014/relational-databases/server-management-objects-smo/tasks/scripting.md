@@ -1,5 +1,5 @@
 ---
-title: スクリプト |マイクロソフトのドキュメント
+title: スクリプト |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -13,15 +13,15 @@ ms.assetid: 13a35511-3987-426b-a3b7-3b2e83900dc7
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: f10289e099a0c3b6400b71d972c6f749ffb76ff8
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: a54a067ed9da68e25f9394a463fa352ccc165f21
+ms.sourcegitcommit: a165052c789a327a3a7202872669ce039bd9e495
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52822456"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72781927"
 ---
 # <a name="scripting"></a>スクリプトの作成
-  SMO でのスクリプティングは、<xref:Microsoft.SqlServer.Management.Smo.Scripter> オブジェクトおよびその子オブジェクトによって、または個々のオブジェクトの `Script` メソッドによって制御されます。 <xref:Microsoft.SqlServer.Management.Smo.Scripter>オブジェクトのインスタンス上のオブジェクトの依存関係のマッピングを制御する[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]。  
+  SMO でのスクリプティングは、<xref:Microsoft.SqlServer.Management.Smo.Scripter> オブジェクトおよびその子オブジェクトによって、または個々のオブジェクトの `Script` メソッドによって制御されます。 @No__t_0 オブジェクトは、[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] のインスタンス上のオブジェクトの依存関係からのマッピングを制御します。  
   
  <xref:Microsoft.SqlServer.Management.Smo.Scripter> オブジェクト、およびその子オブジェクトを使用する高度なスクリプティング プロセスには、次の 3 つのフェーズがあります。  
   
@@ -31,7 +31,7 @@ ms.locfileid: "52822456"
   
 3.  スクリプト生成  
   
- 検索フェーズでは、<xref:Microsoft.SqlServer.Management.Smo.DependencyWalker> オブジェクトが使用されます。 オブジェクトの URN リストが指定されている場合、<xref:Microsoft.SqlServer.Management.Smo.DependencyWalker.DiscoverDependencies%2A> オブジェクトの <xref:Microsoft.SqlServer.Management.Smo.DependencyWalker> メソッドは、URN リスト内のオブジェクトに対応する <xref:Microsoft.SqlServer.Management.Smo.DependencyTree> オブジェクトを返します。 ブール値*fParents*パラメーターを使用して検出するのには、親または指定したオブジェクトの子かどうかを選択します。 依存関係ツリーはこの段階で変更することができます。  
+ 検索フェーズでは、<xref:Microsoft.SqlServer.Management.Smo.DependencyWalker> オブジェクトが使用されます。 オブジェクトの URN リストが指定されている場合、<xref:Microsoft.SqlServer.Management.Smo.DependencyWalker.DiscoverDependencies%2A> オブジェクトの <xref:Microsoft.SqlServer.Management.Smo.DependencyWalker> メソッドは、URN リスト内のオブジェクトに対応する <xref:Microsoft.SqlServer.Management.Smo.DependencyTree> オブジェクトを返します。 ブール型の*Fparents*パラメーターを使用して、指定したオブジェクトの親または子を検出するかどうかを選択します。 依存関係ツリーはこの段階で変更することができます。  
   
  リスト生成フェーズでは、このツリーが渡され、結果リストが返されます。 このオブジェクト リストは記述順であり、変更することもできます。  
   
@@ -40,11 +40,11 @@ ms.locfileid: "52822456"
  3 番目の最後のフェーズでは、指定されたリストとスクリプティング オプションを使用してスクリプトが生成されます。 結果は <xref:System.Collections.Specialized.StringCollection> システム オブジェクトとして返されます。 このフェーズで、<xref:Microsoft.SqlServer.Management.Smo.DependencyTree> オブジェクトの Items コレクションおよび <xref:Microsoft.SqlServer.Management.Smo.DependencyTree.NumberOfSiblings%2A> や <xref:Microsoft.SqlServer.Management.Smo.DependencyTree.FirstChild%2A> などのプロパティから、依存オブジェクト名が抽出されます。  
   
 ## <a name="example"></a>例  
- 提供されているコード例を使用するには、アプリケーションを作成するプログラミング環境、プログラミング テンプレート、およびプログラミング言語を選択する必要があります。 詳細については、次を参照してください。 [Visual Studio .NET で Visual Basic SMO プロジェクトを作成](../../../database-engine/dev-guide/create-a-visual-basic-smo-project-in-visual-studio-net.md)または[Visual C の作成&#35;Visual Studio .NET での SMO プロジェクト](../how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md)します。  
+ 提供されているコード例を使用するには、アプリケーションを作成するプログラミング環境、プログラミング テンプレート、およびプログラミング言語を選択する必要があります。 詳細については、「 [Visual studio .net での VISUAL BASIC SMO プロジェクトの作成](../../../database-engine/dev-guide/create-a-visual-basic-smo-project-in-visual-studio-net.md)」または「visual [studio .Net での Visual C&#35; SMO プロジェクトの作成](../how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md)」を参照してください。  
   
  このコード例には、System.Collections.Specialized 名前空間の `Imports` ステートメントが必要です。 アプリケーションの宣言の前、かつ他の Imports ステートメントの後に、次のステートメントを挿入します。  
   
-```  
+```vb
 Imports Microsoft.SqlServer.Management.Smo  
 Imports Microsoft.SqlServer.Management.Common  
 Imports System.Collections.Specialized  
@@ -53,7 +53,7 @@ Imports System.Collections.Specialized
 ## <a name="scripting-out-the-dependencies-for-a-database-in-visual-basic"></a>Visual Basic でデータベースの依存関係のスクリプトを作成する  
  このコード例では、依存関係を検出する方法と、リストを反復処理して結果を表示する方法を示します。  
   
-```  
+```vb
 ' compile with:   
 ' /r:Microsoft.SqlServer.Smo.dll   
 ' /r:Microsoft.SqlServer.ConnectionInfo.dll   
@@ -101,7 +101,7 @@ End Class
 ## <a name="scripting-out-the-dependencies-for-a-database-in-visual-c"></a>Visual C# でデータベースの依存関係のスクリプトを作成する  
  このコード例では、依存関係を検出する方法と、リストを反復処理して結果を表示する方法を示します。  
   
-```  
+```csharp
 // compile with:   
 // /r:Microsoft.SqlServer.Smo.dll   
 // /r:Microsoft.SqlServer.ConnectionInfo.dll   
@@ -149,7 +149,7 @@ public class A {
 ## <a name="scripting-out-the-dependencies-for-a-database-in-powershell"></a>PowerShell でデータベースの依存関係のスクリプトを作成する  
  このコード例では、依存関係を検出する方法と、リストを反復処理して結果を表示する方法を示します。  
   
-```  
+```powershell
 # Set the path context to the local, default instance of SQL Server.  
 CD \sql\localhost\default  
   
@@ -160,7 +160,6 @@ $scrp.Options.WithDependencies = $true
 $scrp.Options.IncludeIfNotExists = $true  
   
 # Set the path context to the tables in AdventureWorks2012.  
-  
 CD Databases\AdventureWorks2012\Tables  
   
 foreach ($Item in Get-ChildItem)  
@@ -168,5 +167,3 @@ foreach ($Item in Get-ChildItem)
  $scrp.Script($Item)  
  }  
 ```  
-  
-  

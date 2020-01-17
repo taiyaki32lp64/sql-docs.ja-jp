@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 ms.assetid: aa1ee96f-9fc4-4775-b9d4-c6187dc37e27
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: c620c8cc4f3ddaaa0cddd261cf5c42f111763ed1
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: 75b4f5a6755d019b4cd19b4d5062088cd7a7473f
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56287670"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66105180"
 ---
 # <a name="min-function-report-builder-and-ssrs"></a>Min 関数 (レポート ビルダーおよび SSRS)
   指定されたスコープのコンテキストで、式で指定された NULL 以外のすべての数値の中から最小値を返します。  

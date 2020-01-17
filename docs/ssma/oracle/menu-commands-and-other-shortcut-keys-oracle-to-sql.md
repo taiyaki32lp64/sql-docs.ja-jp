@@ -9,13 +9,13 @@ ms.topic: conceptual
 ms.assetid: fc00e683-189e-4765-b280-84927d635126
 author: Shamikg
 ms.author: Shamikg
-manager: v-thobro
-ms.openlocfilehash: 960bdc184d4d71015a3d5dd1530929ccb9b9f01e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: shamikg
+ms.openlocfilehash: 723f9c644d0e327919134baee5267197bb0f71b9
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47609483"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68264564"
 ---
 # <a name="menu-commands-and-other-shortcut-keysoracle-to-sql"></a>メニュー コマンドやその他のショートカット キー (OracleToSQL)
 次のセクションでは、メニュー コマンドや Oracle アプリケーションの SSMA のさまざまなダイアログ ボックスで使用されるその他のショートカット キーにアクセスするキーボード ショートカットについて説明します。  
@@ -197,6 +197,6 @@ ms.locfileid: "47609483"
 |クイック ヒントを起動します。|CTRL + SHIFT + スペース|  
 |宣言に移動します。|F12|  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
 [ショートカット キー&#40;To SQL、Oracle&#41;](../../ssma/oracle/shortcut-keys-oracle-to-sql.md)  
   

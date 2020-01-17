@@ -11,11 +11,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: c854e26ee7acfc34931e5b08f1179494d2cbd096
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52806971"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63252666"
 ---
 # <a name="sql-server-integration-services-properties-advanced-tab"></a>[SQL Server Integration Services のプロパティ] ダイアログ ボックス ([詳細設定] タブ)
   Microsoft [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] は、 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]サービスとして実装されます。 カスタム プロパティが定義されていれば、そのプロパティと値がこのタブに表示されます。 このタブにプロパティが表示されない場合もあります。  

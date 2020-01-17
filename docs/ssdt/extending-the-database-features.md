@@ -8,15 +8,14 @@ ms.technology: ssdt
 ms.reviewer: ''
 ms.topic: conceptual
 ms.assetid: 1c43d9e4-6fb1-4d15-a5fb-cd572daf2951
-author: stevestein
-ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 0e1efe0db32b167214521e1af3b9a1e941480d2d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 2170d8e9da577062779183efe49202b9fa7e62c3
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47764260"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67912812"
 ---
 # <a name="extending-the-database-features"></a>データベース機能の拡張
 機能拡張を作成して、単体テストやデータベース コード分析などの機能を拡張することができます。 詳細については、次の各トピックを参照してください。  
@@ -27,7 +26,7 @@ ms.locfileid: "47764260"
   
 -   [データベース コード分析ルールの機能拡張の概要](../ssdt/overview-of-extensibility-for-database-code-analysis-rules.md)  
   
--   [方法: 機能拡張のインストールと管理](../ssdt/how-to-install-and-manage-feature-extensions.md)  
+-   [方法:機能拡張のインストールと管理](../ssdt/how-to-install-and-manage-feature-extensions.md)  
   
 ## <a name="see-also"></a>参照  
 [SQL Server Data Tools](../ssdt/sql-server-data-tools.md)  

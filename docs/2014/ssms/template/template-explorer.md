@@ -20,11 +20,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 42e52d92d993627129f79f215fa536001f44538d
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52821872"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63074067"
 ---
 # <a name="template-explorer"></a>テンプレート エクスプローラー
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] にはさまざまなテンプレートがあります。 テンプレートは、データベース内のオブジェクトを簡単に作成するための SQL スクリプトを含む、定型的なファイルです。 初めてテンプレート エクスプ ローラーを開くと、テンプレートのコピーが C:\Users の \roaming\microsoft\sql Server Management \120\templates 下で、ユーザーのフォルダーに配置されます。  

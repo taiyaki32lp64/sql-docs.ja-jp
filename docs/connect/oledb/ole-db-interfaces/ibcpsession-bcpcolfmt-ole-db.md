@@ -1,5 +1,5 @@
 ---
-title: Ibcpsession::bcpcolfmt (OLE DB) |Microsoft Docs
+title: 'IBCPSession:: BCPColFmt (OLE DB) |Microsoft Docs'
 description: IBCPSession::BCPColFmt (OLE DB)
 ms.custom: ''
 ms.date: 06/14/2018
@@ -15,13 +15,12 @@ helpviewer_keywords:
 - BCPColFmt method
 author: pmasl
 ms.author: pelopes
-manager: craigg
-ms.openlocfilehash: 007a8d7a9a8f7a617445393dfcfb5f5a718b1cf8
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.openlocfilehash: 76dd26d42951a95c604b8d5b3bceaff21c355be2
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51605642"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67994581"
 ---
 # <a name="ibcpsessionbcpcolfmt-ole-db"></a>IBCPSession::BCPColFmt (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -65,12 +64,12 @@ HRESULT BCPColFmt(
   
 -   省略可能なターミネータ バイト シーケンスの長さ  
   
- **BCPColFmt** を呼び出すたびに、ユーザー ファイルの 1 つのフィールドの形式が指定されます。 たとえば、5 つのフィールドから構成されるユーザー データ ファイルの 3 つのフィールドの既定の設定を変更するには、まず、`BCPColumns(5)` を呼び出し、**BCPColFmt** を 5 回呼び出します。この 5 回の呼び出しのうち 3 回は独自の形式を設定して呼び出します。 残りの 2 つの呼び出しでは、設定*eUserDataType*を設定し、BCP_TYPE_DEFAULT *cbIndicator*、 *cbUserData*、および*cbUserDataTerm*0、BCP_VARIABLE_LENGTH、0、それぞれします。 このプロシージャでは、5 つの列すべてをコピーします。それらの列のうち 3 つはカスタマイズされた形式でコピーされ、2 つは既定の形式でコピーされます。  
+ **BCPColFmt** を呼び出すたびに、ユーザー ファイルの 1 つのフィールドの形式が指定されます。 たとえば、5 つのフィールドから構成されるユーザー データ ファイルの 3 つのフィールドの既定の設定を変更するには、まず、`BCPColumns(5)` を呼び出し、**BCPColFmt** を 5 回呼び出します。この 5 回の呼び出しのうち 3 回は独自の形式を設定して呼び出します。 残りの2つの呼び出しでは、 *Euserdatatype*を BCP_TYPE_DEFAULT に設定し、 *cbindicator*、 *Cbuserdata*、および*cbuserdataterm*をそれぞれ0、BCP_VARIABLE_LENGTH、0に設定します。 このプロシージャでは、5 つの列すべてをコピーします。それらの列のうち 3 つはカスタマイズされた形式でコピーされ、2 つは既定の形式でコピーされます。  
   
 > [!NOTE]  
 >  **BCPColFmt** を呼び出す前に、[IBCPSession::BCPColumns](../../oledb/ole-db-interfaces/ibcpsession-bcpcolumns-ole-db.md) メソッドを呼び出す必要があります。 **BCPColFmt** は、ユーザー ファイル内の列ごとに 1 回呼び出す必要があります。 **BCPColFmt** をユーザー ファイルの任意の列に対して複数回呼び出すと、エラーが発生します。  
   
- ユーザー ファイル内のすべてのデータをコピーする必要はありません、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]テーブル。 列をスキップするには、列のデータの形式を指定する際に idxServerCol パラメーターを 0 に設定します。 一方、フィールドをスキップする場合は、メソッドを正しく機能させるためにすべての情報が必要になります。  
+ ユーザーファイル内のすべてのデータを[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]テーブルにコピーする必要はありません。 列をスキップするには、列のデータの形式を指定する際に idxServerCol パラメーターを 0 に設定します。 一方、フィールドをスキップする場合は、メソッドを正しく機能させるためにすべての情報が必要になります。  
   
  **注** [IBCPSession::BCPWriteFmt](../../oledb/ole-db-interfaces/ibcpsession-bcpwritefmt-ole-db.md) 関数を使用すると、**BCPColFmt** で指定された形式指定を保存できます。  
   
@@ -79,7 +78,7 @@ HRESULT BCPColFmt(
  ユーザー データ ファイル内のフィールドのインデックス。  
   
  *eUserDataType*[in]  
- ユーザー データ ファイル内のフィールドのデータ型。 使用できるデータ型は、bcp_type_xxx という形式、BCP_TYPE_SQLINT4 などのヘッダー ファイル (msoledbsql.h) SQL Server の OLE DB ドライバーに一覧表示されます。 BCP_TYPE_DEFAULT 値を指定すると、プロバイダーはテーブルやビューの列と同じ型を使用します。 **eUserDataType** 引数に BCP_TYPE_SQLDECIMAL または BCP_TYPE_SQLNUMERIC を指定し、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] からファイルへの一括コピー操作を行う場合の動作を次に示します。  
+ ユーザー データ ファイル内のフィールドのデータ型。 使用可能なデータ型は、msoledbsql Driver for SQL Server header file () に、BCP_TYPE_SQLINT4 のように BCP_TYPE_XXX 形式で一覧 OLE DB 表示されます。 BCP_TYPE_DEFAULT 値を指定すると、プロバイダーはテーブルやビューの列と同じ型を使用します。 **eUserDataType** 引数に BCP_TYPE_SQLDECIMAL または BCP_TYPE_SQLNUMERIC を指定し、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] からファイルへの一括コピー操作を行う場合の動作を次に示します。  
   
 -   コピー元の列が decimal 型または numeric 型以外の場合は、既定の有効桁数と小数点以下桁数が使用されます。  
   
@@ -125,7 +124,7 @@ HRESULT BCPColFmt(
  メソッドの呼び出しが予期されませんでした。 たとえば、このメソッドが呼び出される前に、[IBCPSession::BCPInit](../../oledb/ole-db-interfaces/ibcpsession-bcpinit-ole-db.md) メソッドが呼び出されなかった場合などです。  
   
  E_INVALIDARG  
- 引数が無効です。  
+ 引数が無効でした。  
   
  E_OUTOFMEMORY  
  メモリ不足エラー。  

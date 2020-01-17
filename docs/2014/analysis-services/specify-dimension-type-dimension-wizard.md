@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.dimensionwizard.bidimensionproperties.f1
@@ -13,12 +12,12 @@ ms.assetid: 3215282a-532d-4ff2-b721-286f088967fc
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 36e74f875b8306a8678e0197d95f1fe18c5ea7f6
-ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
+ms.openlocfilehash: 6de1b056942673d358cec4768c6854a6966d139e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50145587"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66068373"
 ---
 # <a name="specify-dimension-type-dimension-wizard"></a>[ディメンションの種類を指定] (ディメンション ウィザード)
   **[ディメンションの種類を指定]** ページを使用すると、ディメンションの種類を定義し、選択したディメンションの種類に関連付けられている特殊な属性の型をディメンションに追加できます。  
@@ -45,7 +44,7 @@ ms.locfileid: "50145587"
 |**料金**|レート ディメンションには、換算レートと通貨変換の情報を表すデータとメタデータが収められます。|  
 |**Regular**|標準ディメンションは、 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]で最も一般的に使用されるディメンションの種類です。<br /><br /> 標準ディメンションの詳細については、 [「ディメンションの種類」](multidimensional-models-olap-logical-dimension-objects/database-dimension-properties-types.md)を参照してください。|  
 |**Scenario**|シナリオ ディメンションは、計画的または戦略的な分析の情報を表すデータとメタデータが収められる標準ディメンションです。<br /><br /> 標準ディメンションの詳細については、 [「ディメンションの種類」](multidimensional-models-olap-logical-dimension-objects/database-dimension-properties-types.md)を参照してください。|  
-|**Time**|時間ディメンションには、時刻に関するデータとメタデータが収められます。<br /><br /> 時間ディメンションの詳細については、「 [日付型ディメンションの作成](multidimensional-models/database-dimensions-create-a-date-type-dimension.md)」を参照してください。|  
+|**[時刻]**|時間ディメンションには、時刻に関するデータとメタデータが収められます。<br /><br /> 時間ディメンションの詳細については、「 [日付型ディメンションの作成](multidimensional-models/database-dimensions-create-a-date-type-dimension.md)」を参照してください。|  
 |**Utility**|ユーティリティ ディメンションは、他のディメンションの種類に当てはまらない情報を表すデータとメタデータが収められる標準ディメンションです。<br /><br /> 標準ディメンションの詳細については、 [「ディメンションの種類」](multidimensional-models-olap-logical-dimension-objects/database-dimension-properties-types.md)を参照してください。|  
   
 ## <a name="dimension-attributes-options"></a>ディメンションの属性のオプション  

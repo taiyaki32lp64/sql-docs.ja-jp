@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: ad87e9a0-b901-4e37-9950-aa517d680fc3
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: f36cac8a1a21f5e742c9fe7925684a6002f4a2b1
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: dc461bcd1b5adbbc64b2eadaa4bb55af690ea88a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47777650"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68123830"
 ---
 # <a name="sphelpdbfixedrole-transact-sql"></a>sp_helpdbfixedrole (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -40,8 +39,7 @@ sp_helpdbfixedrole [ [ @rolename = ] 'role' ]
 ```  
   
 ## <a name="arguments"></a>引数  
- [  **@rolename =** ] **'***ロール***'**  
- 固定データベース ロールの名前を指定します。 *ロール*は**sysname**、既定値は NULL です。 場合*ロール*が指定すると、そのロールに関する情報のみが返されます。 それ以外の場合、一覧とすべての固定データベース ロールの説明が返されます。  
+`[ @rolename = ] 'role'` 固定データベース ロールの名前です。 *ロール*は**sysname**、既定値は NULL です。 場合*ロール*が指定すると、そのロールに関する情報のみが返されます。 それ以外の場合、一覧とすべての固定データベース ロールの説明が返されます。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  0 (成功) または 1 (失敗)  
@@ -51,10 +49,10 @@ sp_helpdbfixedrole [ [ @rolename = ] 'role' ]
 |列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
 |**DbFixedRole**|**sysname**|固定データベース ロールの名前。|  
-|**[説明]**|**nvarchar (70)**|説明**DbFixedRole します。**|  
+|**[説明]**|**nvarchar(70)**|説明**DbFixedRole します。**|  
   
 ## <a name="remarks"></a>コメント  
- 次の表に示すように、固定データベース ロールはデータベース レベルで定義され、特定のデータベース レベルの管理操作を実行する権限が与えられています。 固定データベース ロールは、追加または削除できません。 固定データベース ロールに許可されている権限は変更できません。  
+ 次の表に示すように、固定データベース ロールは、データベース レベルで定義され、特定のデータベース レベルの管理操作を実行する権限します。 固定データベース ロールは、追加または削除できません。 固定データベース ロールに付与されるアクセス許可を変更できません。  
   
 |固定データベース ロール|説明|  
 |-------------------------|-----------------|  
@@ -72,24 +70,24 @@ sp_helpdbfixedrole [ [ @rolename = ] 'role' ]
   
 |ストアド プロシージャ|操作|  
 |----------------------|------------|  
-|**sp_addrolemember**|固定データベース ロールにデータベース ユーザーを追加します。|  
+|**sp_addrolemember**|固定データベース ロールには、データベース ユーザーを追加します。|  
 |**sp_helprole**|固定データベース ロールのメンバーの一覧を表示します。|  
 |**sp_droprolemember**|固定データベース ロールからメンバーを削除します。|  
   
 ## <a name="permissions"></a>アクセス許可  
  ロール **public** のメンバーシップが必要です。  
   
- 返される情報は、メタデータへのアクセスに関する制限の対象となります。 プリンシパルに権限がないエンティティは表示されません。 詳細については、「 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)」を参照してください。  
+ 返される情報は、メタデータへのアクセスの制限が適用されます。 これで、権限がプリンシパルにないエンティティは表示されません。 詳細については、「 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)」を参照してください。  
   
 ## <a name="examples"></a>使用例  
- 次の例では、すべての固定データベース ロールの一覧を表示します。  
+ 次の例では、すべての固定データベース ロールの一覧が表示されます。  
   
 ```  
 EXEC sp_helpdbfixedrole;  
 GO  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [セキュリティ ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md)   
  [sp_addrolemember &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addrolemember-transact-sql.md)   
  [sp_dbfixedrolepermission &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dbfixedrolepermission-transact-sql.md)   

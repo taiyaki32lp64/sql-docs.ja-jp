@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: edc80444-b697-410f-9419-0f63c9b5618d
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: bddc7c269443446a6b8de6498cf73dd35f218e16
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: f38ee0e89201a1ecc0a8faa145167ad58601c133
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56012683"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68077820"
 ---
 # <a name="isdescendantof-database-engine"></a>IsDescendantOf (データベース エンジン)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -59,7 +58,7 @@ IsDescendantOf テストを実行する必要がある **hierarchyid** ノード
 ## <a name="examples"></a>使用例  
   
 ### <a name="a-using-isdescendantof-in-a-where-clause"></a>A. WHERE 句で IsDescendantOf を使用する  
-次の例では、指定したマネージャー、およびそのマネージャーの部下にあたる従業員を取得します。
+次の例では、マネージャーと、そのマネージャーに直属の従業員を返します。
   
 ```sql
 DECLARE @Manager hierarchyid  
@@ -71,7 +70,7 @@ WHERE OrgNode.IsDescendantOf(@Manager) = 1
 ```  
   
 ### <a name="b-using-isdescendantof-to-evaluate-a-relationship"></a>B. IsDescendantOf を使用してリレーションシップを評価する  
-次のコードでは、3 つの変数を宣言して設定します。 その後に階層リレーションシップを評価し、比較を基に 2 つの出力結果のいずれかを返します。
+次のコードでは、3 つの変数を宣言して値を設定します。 その後に階層リレーションシップを評価し、比較を基に 2 つの出力結果のいずれかを返します。
   
 ```sql
 DECLARE @Manager hierarchyid, @Employee hierarchyid, @LoginID nvarchar(256)  

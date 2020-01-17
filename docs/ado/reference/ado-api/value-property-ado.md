@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 48919c74-86d4-462e-99b9-8854ceb8d683
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 8c7e4d42bc58321c5b650df5e8e842290094fcf4
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e35dd93e6d90a81934d8f272ea79c5eb7c8a97c2
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47715022"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67913923"
 ---
 # <a name="value-property-ado"></a>Value プロパティ (ADO)
 
@@ -49,7 +48,7 @@ ADO を使用する設定と取得と長のバイナリ データ、**値**プ�
 |-|-|-|  
 |[Field オブジェクト](../../../ado/reference/ado-api/field-object.md)|[Parameter オブジェクト](../../../ado/reference/ado-api/parameter-object.md)|[Property オブジェクト (ADO)](../../../ado/reference/ado-api/property-object-ado.md)|
   
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 [値のプロパティの例 (VB)](../../../ado/reference/ado-api/value-property-example-vb.md)
 [値のプロパティの例 (vc++)](../../../ado/reference/ado-api/value-property-example-vc.md) 

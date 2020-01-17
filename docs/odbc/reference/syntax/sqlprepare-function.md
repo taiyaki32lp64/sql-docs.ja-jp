@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: 332e1b4b-b0ed-4e7a-aa4d-4f35f4f4476b
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 6e4c15cfe0d82fc4b68115c029334fa7d3ec7410
-ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
+ms.openlocfilehash: 292b1c4d9cd0281de610af4e53f25aa3d0ab6f90
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/18/2018
-ms.locfileid: "53590285"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68005767"
 ---
 # <a name="sqlprepare-function"></a>SQLPrepare 関数
 **準拠**  
@@ -36,7 +35,7 @@ ms.locfileid: "53590285"
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
   
 SQLRETURN SQLPrepare(  
      SQLHSTMT      StatementHandle,  

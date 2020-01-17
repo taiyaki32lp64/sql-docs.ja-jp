@@ -1,82 +1,84 @@
 ---
-title: Analytics Platform System の SCOM 管理パックのインストール |Microsoft Docs
-description: 以下の手順をダウンロードして SQL Server PDW の System Center Operations Manager (SCOM) 管理パックをインストールします。 管理パックが SCOM から SQL Server PDW の監視に必要です。
+title: SCOM 管理パックをインストールする
+description: SQL Server PDW 用の System Center Operations Manager (SCOM) 管理パックをダウンロードしてインストールするには、次の手順に従います。 SCOM から SQL Server PDW を監視するには、管理パックが必要です。
 author: mzaman1
-manager: craigg
 ms.prod: sql
 ms.technology: data-warehouse
 ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: f0acfa636a3432dcffb18cfec57ee7625c1eb01b
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.custom: seo-dt-2019
+ms.openlocfilehash: f3652b767f4628b61f5dd363999838418ff933aa
+ms.sourcegitcommit: d587a141351e59782c31229bccaa0bff2e869580
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51696431"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74401072"
 ---
-# <a name="install-sql-server-operations-manager-scom-management-packs-for-analytics-platform-system"></a>Analytics Platform System の SQL Server Operations Manager (SCOM) 管理パックをインストールします。
-以下の手順をダウンロードして SQL Server PDW の System Center Operations Manager (SCOM) 管理パックをインストールします。 管理パックが SCOM から SQL Server PDW の監視に必要です。  
+# <a name="install-sql-server-operations-manager-scom-management-packs-for-analytics-platform-system"></a>Analytics Platform System 用 SQL Server Operations Manager (SCOM) 管理パックをインストールする
+SQL Server PDW 用の System Center Operations Manager (SCOM) 管理パックをダウンロードしてインストールするには、次の手順に従います。 SCOM から SQL Server PDW を監視するには、管理パックが必要です。  
   
-## <a name="BeforeBegin"></a>はじめに  
+## <a name="BeforeBegin"></a>開始する前に  
 **前提条件**  
   
-System Center Operations Manager は、インストールして実行する必要があります。 SQL Server PDW 2012 では、System Center Operations Manager 2007 R2、System Center Operations Manager 2012、または System Center Operations Manager 2012 service pack 1 が必要です。  
+System Center Operations Manager をインストールして実行する必要があります。 SQL Server PDW 2012 では System Center Operations Manager 2007 R2、System Center Operations Manager 2012、または System Center Operations Manager 2012 Service Pack 1 が必要です。  
   
-## <a name="Step1"></a>手順 1: 管理パックをダウンロードします。  
-APS PDW ワークロードでは、ダウンロード、 [Microsoft Analytics Platform System 用の System Center 管理パック](https://go.microsoft.com/fwlink/?LinkId=396857)します。  
+## <a name="Step1"></a>手順 1: 管理パックをダウンロードする  
+APS PDW ワークロードの場合は、 [Microsoft Analytics Platform System 用の System Center 管理パック](https://go.microsoft.com/fwlink/?LinkId=396857)をダウンロードします。  
   
-アプライアンスの管理、ダウンロード、 [SQL Server アプライアンス ベースの管理パック](https://www.microsoft.com/download/details.aspx?displaylang=en&id=11436)します。  
+アプライアンス管理については、 [SQL Server アプライアンスベース管理パック](https://docs.microsoft.com/previous-versions/system-center/packs/gg602398(v=technet.10))をダウンロードしてください。  
   
-古いバージョンの PDW AP せず、ダウンロード、[System Center Monitoring Pack for Microsoft SQL Server 2012 並列データ ウェアハウス アプライアンス](https://go.microsoft.com/fwlink/p/?LinkId=282661)します。  
+APS を使用していない PDW の旧バージョンについては、[Microsoft SQL Server 2012 並列データウェアハウスアプライアンス用の System Center 監視パック](https://go.microsoft.com/fwlink/p/?LinkId=282661)をダウンロードしてください。  
   
 <!-- MISSING LINKS - For the HDInsight workload, download the [System Center Management Pack for HDInsight](https://go.microsoft.com/fwlink/?LinkId=390208).  -->
   
-## <a name="Step2"></a>手順 2: 管理パックをインストールします。  
+## <a name="Step2"></a>手順 2. 管理パックをインストールする  
   
-### <a name="install-the-sql-server-appliance-base-management-pack"></a>SQL Server アプライアンス ベースの管理パックをインストールします。  
+### <a name="install-the-sql-server-appliance-base-management-pack"></a>SQL Server アプライアンスベース管理パックをインストールする  
   
-1.  インストールを実行するには、ダウンロードした SQL Server アプライアンス ベースの管理パックをダブルクリックします。  
+1.  インストールを実行するには、ダウンロードした SQL Server アプライアンスベース管理パックをダブルクリックします。  
   
-2.  ライセンス条項に同意し、をクリックして**次**します。  
+2.  使用許諾契約書に同意し、[**次へ**] をクリックします。  
   
-    ![ライセンス条項に同意](./media/install-the-scom-management-packs/SCOM_licnse_agrmt.png "SCOM_licnse_agrmt")  
+    ![使用許諾契約書に同意する](./media/install-the-scom-management-packs/SCOM_licnse_agrmt.png "SCOM_licnse_agrmt")  
   
-3.  独自のインストール フォルダーを選択するか、既定の管理パックのインストール フォルダーを使用します。  
+3.  独自のインストールフォルダーを選択するか、既定の管理パックのインストールフォルダーを使用します。  
   
-    ![インストール フォルダーの選択](./media/install-the-scom-management-packs/SCOM_licnse_agrmt2.png "SCOM_licnse_agrmt2")  
+    ![インストール先フォルダーの選択](./media/install-the-scom-management-packs/SCOM_licnse_agrmt2.png "SCOM_licnse_agrmt2")  
   
-4.  **[インストール]** をクリックします。  
+4.  
+  **[インストール]** をクリックします。  
   
     ![インストールの確認](./media/install-the-scom-management-packs/SCOM_licnse_agrmt3.png "SCOM_licnse_agrmt3")  
   
-5.  **[閉じる]** をクリックします。  
+5.  [**閉じる**] をクリックします。  
   
-    ![[閉じる] をクリックして](./media/install-the-scom-management-packs/SCOM_licnse_agrmt4.png "SCOM_licnse_agrmt4")  
+    ![[閉じる] をクリックしてください](./media/install-the-scom-management-packs/SCOM_licnse_agrmt4.png "SCOM_licnse_agrmt4")  
   
-### <a name="install-the-monitoring-pack-for-sql-server-pdw-appliance"></a>SQL Server PDW アプライアンス用監視パックをインストールします。  
+### <a name="install-the-monitoring-pack-for-sql-server-pdw-appliance"></a>SQL Server PDW アプライアンス用監視パックのインストール  
   
-1.  インストールを実行するには、ダウンロードした SQL Server PDW アプライアンスの管理パックをダブルクリックします。  
+1.  インストールを実行するには、ダウンロードした SQL Server PDW アプライアンス管理パックをダブルクリックします。  
   
-2.  ライセンス条項に同意し、をクリックして**次**します。  
+2.  使用許諾契約書に同意し、[**次へ**] をクリックします。  
   
-    ![使用許諾に同意](./media/install-the-scom-management-packs/SCOM_licnse_agmtB.png "SCOM_licnse_agmtB")  
+    ![使用許諾契約に同意](./media/install-the-scom-management-packs/SCOM_licnse_agmtB.png "SCOM_licnse_agmtB")  
   
-3.  抽出したファイルを保持するディレクトリを選択します。 既定の管理パックのインストール フォルダーは、既定で表示されます。 既定値を選択するか、独自のインストール フォルダーを選択します。  
+3.  抽出されたファイルを保持するディレクトリを選択します。 既定では、既定の管理パックのインストールフォルダーが表示されます。 既定値を選択するか、独自のインストールフォルダーを選択します。  
   
-    ![インストール フォルダーの選択](./media/install-the-scom-management-packs/SCOM_licnse_agmtB1.png "SCOM_licnse_agmtB1")  
+    ![インストール先フォルダーの選択](./media/install-the-scom-management-packs/SCOM_licnse_agmtB1.png "SCOM_licnse_agmtB1")  
   
-4.  **[インストール]** をクリックします。  
+4.  
+  **[インストール]** をクリックします。  
   
     ![インストールの確認](./media/install-the-scom-management-packs/SCOM_licnse_agmtB2.png "SCOM_licnse_agmtB2")  
   
-5.  **[閉じる]** をクリックします。  
+5.  [**閉じる**] をクリックします。  
   
     ![インストールの完了](./media/install-the-scom-management-packs/SCOM_licnse_agmtB3.png "SCOM_licnse_agmtB3")  
   
-## <a name="next-step"></a>次の手順  
-インストールされている管理パックがある場合は、これでは、次の手順に進む: [PDW の SCOM 管理パックをインポート&#40;Analytics Platform System&#41;](import-the-scom-management-pack-for-pdw.md)します。  
+## <a name="next-step"></a>次のステップ  
+管理パックがインストールされたので、次の手順「 [PDW 用の SCOM 管理パックをインポートする &#40;Analytics Platform System&#41;](import-the-scom-management-pack-for-pdw.md)」に進みます。  
   
 <!-- MISSING LINKS ## See Also  
 [Common Metadata Query Examples &#40;SQL Server PDW&#41;](../sqlpdw/common-metadata-query-examples-sql-server-pdw.md)  -->  

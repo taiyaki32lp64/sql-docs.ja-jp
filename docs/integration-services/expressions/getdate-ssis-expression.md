@@ -12,17 +12,20 @@ helpviewer_keywords:
 - GETDATE function
 - dates [Integration Services], GETDATE
 ms.assetid: 6d20ec93-3244-4d63-baf6-70eff7bd598c
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: afbbc80ce19c2820d24d65a9caa0736d00e7f8b2
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 7b17deb29406ff70d777e45ceed8db8ca23275f1
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47833160"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71289753"
 ---
 # <a name="getdate-ssis-expression"></a>GETDATE (SSIS 式)
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   システムの現在の日付を、DT_DBTIMESTAMP 形式で返します。 GETDATE 関数に引数はありません。  
   
 > [!NOTE]  

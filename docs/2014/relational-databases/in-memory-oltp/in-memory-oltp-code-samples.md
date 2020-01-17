@@ -11,16 +11,16 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: ff7af7c8fd578d29254c8c34fe946246fa275120
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48135782"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63157888"
 ---
 # <a name="in-memory-oltp-code-samples"></a>インメモリ OLTP のコード サンプル
   このセクションには、インメモリ OLTP について説明するコード例が含まれています。  
   
--   [実証: インメモリ OLTP によるパフォーマンスの向上](demonstration-performance-improvement-of-in-memory-oltp.md)  
+-   「[実証: インメモリ OLTP によるパフォーマンスの向上](demonstration-performance-improvement-of-in-memory-oltp.md)  
   
 -   [インメモリ OLTP を実証する AdventureWorks の拡張](../../database-engine/extensions-to-adventureworks-to-demonstrate-in-memory-oltp.md)  
   

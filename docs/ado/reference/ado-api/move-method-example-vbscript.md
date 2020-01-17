@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 29ec4b95-8986-4970-943f-3da3ecb207a2
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 6054953ba980be5c8c2c12b6a309f64ddaae4e01
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 8d2075987e8c3faae9003b0edc4010fe7e4cedb5
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47602520"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67918164"
 ---
 # <a name="move-method-example-vbscript"></a>Move メソッドの例 (VBScript)
 この例では、[移動](../../../ado/reference/ado-api/move-method-ado.md)ユーザー入力に基づいて、レコードのポインターを配置するメソッド。  
@@ -183,6 +182,6 @@ End Sub
 <!-- EndMoveVBS -->  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [Move メソッド (ADO)](../../../ado/reference/ado-api/move-method-ado.md)   
  [Recordset オブジェクト (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)

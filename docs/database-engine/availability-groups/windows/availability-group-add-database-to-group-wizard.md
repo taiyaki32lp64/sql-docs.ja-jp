@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 81e5e36d-735d-4731-8017-2654673abb88
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 32a8945392df4d45dd6904a3921d2cbc770a4674
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: 1dfb6540724cf3dae9b39c4e388b4f2e2aacb734
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53211571"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67934882"
 ---
 # <a name="add-a-database-to-an-always-on-availability-group-with-the-availability-group-wizard"></a>可用性グループ ウィザードを使用して Always On 可用性グループにデータベースを追加する
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -57,15 +56,19 @@ ms.locfileid: "53211571"
   
 1.  オブジェクト エクスプローラーで、可用性グループのプライマリ レプリカをホストするサーバー インスタンスに接続し、サーバー ツリーを展開します。  
   
-2.  [**AlwaysOn 高可用性**] ノードと [**可用性グループ**] ノードを展開します。  
+2.  **[AlwaysOn 高可用性]** ノードと **[可用性グループ]** ノードを展開します。  
   
 3.  データベースを追加する可用性グループを右クリックして、 **[データベースの追加]** を選択します。 可用性グループへのデータベース追加ウィザードが起動します。  
   
 4.  **[データベースの選択]** ページで 1 つまたは複数のデータベースを選択します。 詳細については、「[[データベースの選択] ページ &#40;新しい可用性グループ ウィザード/データベース追加ウィザード&#41;](../../../database-engine/availability-groups/windows/select-databases-page-new-availability-group-wizard-and-add-database-wizard.md)」を参照してください。  
   
-     データベースにデータベース マスター キーが含まれている場合、**[パスワード]** 列にデータベース マスター キーのパスワードを入力します。  
+     データベースにデータベース マスター キーが含まれている場合、 **[パスワード]** 列にデータベース マスター キーのパスワードを入力します。  
   
 5.  **[最初のデータの同期を選択]** ページで、新しいセカンダリ データベースを作成して可用性グループに参加させる方法を選択します。 次のいずれかのオプションを選択します。  
+
+    - **自動シード処理**
+      
+      自動シード処理を使用するには、このオプションを選択します。 自動シード処理ではログ ストリーム トランスポートを使用して、VDI を使用するバックアップを、構成済みのエンドポイントを使用する可用性グループの各データベースのセカンダリ レプリカにストリーミングします。 これにより、データベースのバックアップがセカンダリ レプリカ上に復元されます。手動でこれを行う必要はありません。 自動シード処理の詳細については、[自動シード処理](automatic-seeding-secondary-replicas.md)に関するページをご覧ください
   
     -   **Full**  
   
@@ -92,7 +95,7 @@ ms.locfileid: "53211571"
   
      詳細については、「[既存のセカンダリ レプリカ ページへの接続 &#40;レプリカの追加ウィザード:データベース追加ウィザード&#41;](../../../database-engine/availability-groups/windows/connect-to-existing-secondary-replicas-page.md)」を参照してください。  
   
-7.  **[検証]** ページでは、このウィザードで指定した値が、新しい可用性グループ ウィザードの要件を満たしているかどうかが確認されます。 変更が必要な場合は、 **[戻る]** をクリックして前のウィザード ページに戻り、値を変更できます。 その後、**[次へ]** をクリックして **[検証]** ページに戻り、**[検証の再実行]** をクリックします。  
+7.  **[検証]** ページでは、このウィザードで指定した値が、新しい可用性グループ ウィザードの要件を満たしているかどうかが確認されます。 変更が必要な場合は、 **[戻る]** をクリックして前のウィザード ページに戻り、値を変更できます。 その後、 **[次へ]** をクリックして **[検証]** ページに戻り、 **[検証の再実行]** をクリックします。  
   
      詳細については、「[[検証] ページ &#40;AlwaysOn 可用性グループ ウィザード&#41;](../../../database-engine/availability-groups/windows/validation-page-always-on-availability-group-wizards.md)」を参照してください。  
   
@@ -102,7 +105,7 @@ ms.locfileid: "53211571"
   
      選択内容に問題がなければ、[スクリプト] をクリックして、ウィザードが実行する手順のスクリプトを作成することもできます。 新しい可用性グループを作成して構成するには、 **[完了]** をクリックします。  
   
-9. 可用性グループの作成手順 (エンドポイントの構成、可用性グループの作成、グループへのセカンダリ レプリカの参加) の進行状況が、**[進行状況]** ページに表示されます。  
+9. 可用性グループの作成手順 (エンドポイントの構成、可用性グループの作成、グループへのセカンダリ レプリカの参加) の進行状況が、 **[進行状況]** ページに表示されます。  
   
      詳細については、「[[進行状況] ページ &#40;AlwaysOn 可用性グループ ウィザード&#41;](../../../database-engine/availability-groups/windows/progress-page-always-on-availability-group-wizards.md)」を参照してください。  
   

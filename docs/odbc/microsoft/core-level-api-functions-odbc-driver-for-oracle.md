@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 8596eed7-bda6-4cac-ae1f-efde1aab785f
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: f2ada1011096eb8275f9059e531cfc0fcc1af58c
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: cc95ec17dc221cb77bd94fc3378af483aeee92dd
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54126172"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68081969"
 ---
 # <a name="core-level-api-functions-odbc-driver-for-oracle"></a>コア レベルの API 関数 (ODBC Driver for Oracle)
 > [!IMPORTANT]  
@@ -40,8 +39,8 @@ ms.locfileid: "54126172"
 |**SQLConnect**|データ ソースに接続します。 Oracle オペレーティング システムの認証を使用する指定として「/」、 *szUID*パラメーターと""として、 *szAuthStr*パラメーター。|  
 |**SQLDescribeCol**|名前、型、有効桁数、スケール、および指定された結果の列の null 値を返します。 **注:SQLDescribeCol** SQL_VARCHAR として計算列をレポートします。|  
 |**SQLDisconnect**|接続を閉じます。 共有環境の接続プールが有効になっているし、アプリケーションを呼び出すかどうか**SQLDisconnect**その環境で、接続で、接続が接続プールに返されを使用して他のコンポーネントを引き続き使用できます同じ共有環境です。|  
-|**Sqlerror 関数**|最後のエラーについてのエラーまたは状態情報を返します。 このドライバーは、スタックまたはに対して返されるエラーの一覧、 *hstmt*、 *hdbc*、および*henv*方法に応じて、引数への呼び出し**SQLError**されます。 エラー キューは、各ステートメントの後にフラッシュされます。 通常、Oracle のエラー メッセージを取得し、空ではそれ以外の場合。|  
-|**SQLExecDirect**|新しい、準備されていない SQL ステートメントを実行します。 ドライバーでは、ステートメントにパラメーターが存在しない場合、パラメーター マーカーの変数の現在の値が使用されます。 テーブル、ビュー、またはフィールド名にスペースが含まれる場合の名前で囲みます引用符の背面にマークします。 例では、データベースには、という名前のテーブルが含まれている場合、 *My Table*とフィールド*My Field*識別子の各要素を囲むようになります。<br /><br /> 選択\`表\`します。 \`マイ Field1\`、;\`表\`.\`マイ Field2\` FROM\`行をテーブル '|  
+|**SQLError**|最後のエラーについてのエラーまたは状態情報を返します。 このドライバーは、スタックまたはに対して返されるエラーの一覧、 *hstmt*、 *hdbc*、および*henv*方法に応じて、引数への呼び出し**SQLError**されます。 エラー キューは、各ステートメントの後にフラッシュされます。 通常、Oracle のエラー メッセージを取得し、空ではそれ以外の場合。|  
+|**SQLExecDirect**|新しい、準備されていない SQL ステートメントを実行します。 ドライバーでは、ステートメントにパラメーターが存在しない場合、パラメーター マーカーの変数の現在の値が使用されます。 テーブル、ビュー、またはフィールド名にスペースが含まれる場合の名前で囲みます引用符の背面にマークします。 たとえば、データベースには、という名前のテーブルが含まれている場合*My Table*とフィールド*My Field*、次のように、識別子の各要素を囲みます。<br /><br /> SELECT \`My Table\`. \`My Field1\`,; \`My Table\`.\`My Field2\` FROM \`My Table\`|  
 |**SQLExecute**|準備された SQL ステートメントを実行します (既にによって準備ステートメント**SQLPrepare**)。 ドライバーでは、ステートメントにパラメーターが存在しない場合、パラメーター マーカーの変数の現在の値が使用されます。|  
 |**SQLFetch**|前の呼び出しで指定された場所に結果セットから 1 つの行を取得します。 **SQLBindCol**します。 呼び出すのため、ドライバーを準備します**SQLGetData**バインドされていない列にします。|  
 |**SQLFreeConnect**|接続ハンドルを解放し、ハンドルに割り当てられたすべてのメモリを解放します。|  
@@ -49,7 +48,7 @@ ms.locfileid: "54126172"
 |**SQLFreeStmt**|特定 hstmt に関連付けられている処理を停止、hstmt に関連付けられている開いているカーソルを閉じ、保留中の結果を破棄および必要に応じて、ステートメント ハンドルに関連付けられているすべてのリソースを解放します。|  
 |**SQLGetCursorName**|指定された hstmt に関連付けられているカーソルの名前を返します。|  
 |**SQLNumResultCols**|結果セットのカーソルでは、列の数を返します。|  
-|**SQLPrepare**|最適化し、ステートメントを実行する方法を計画することにより、SQL ステートメントを準備します。 実行するため、SQL ステートメントがコンパイルされる**SQLExecDirect**します。<br /><br /> テーブル、ビュー、またはフィールド名にスペースが含まれる場合の名前で囲みます引用符の背面にマークします。 たとえば、データベースには、という名前のテーブルが含まれている場合*My Table*とフィールド*My Field*、次のように、識別子の各要素を囲みます。<br /><br /> 選択\`表\`.\`My Field\` FROM\`行をテーブル '<br /><br /> 仮パラメーターとして配列を含む結果セットの使用方法の詳細については、次を参照してください。[ストアド プロシージャから配列パラメーターを返す](../../odbc/microsoft/returning-array-parameters-from-stored-procedures.md)します。|  
+|**SQLPrepare**|最適化し、ステートメントを実行する方法を計画することにより、SQL ステートメントを準備します。 実行するため、SQL ステートメントがコンパイルされる**SQLExecDirect**します。<br /><br /> テーブル、ビュー、またはフィールド名にスペースが含まれる場合の名前で囲みます引用符の背面にマークします。 たとえば、データベースには、という名前のテーブルが含まれている場合*My Table*とフィールド*My Field*、次のように、識別子の各要素を囲みます。<br /><br /> SELECT \`My Table\`.\`My Field\` FROM \`My Table\`<br /><br /> 仮パラメーターとして配列を含む結果セットの使用方法の詳細については、次を参照してください。[ストアド プロシージャから配列パラメーターを返す](../../odbc/microsoft/returning-array-parameters-from-stored-procedures.md)します。|  
 |**SQLRowCount**|Oracle では、結果セットの最後の行をフェッチした後、返します-1 までの行の数を決定する方法は提供されません。|  
 |**SQLSetCursorName**|カーソル名をアクティブなステートメント ハンドルに関連付けます*hstmt*します。|  
 |**SQLSetParam**|Odbc 2 SQLBindParameter で置き換えられます。*x*します。|  

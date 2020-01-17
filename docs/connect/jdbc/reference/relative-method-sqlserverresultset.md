@@ -1,5 +1,5 @@
 ---
-title: relative メソッド (SQLServerResultSet) |Microsoft Docs
+title: relative メソッド (SQLServerResultSet) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: 2bcdbb69-95fd-4ae8-8488-1a75a91fe2e0
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 04f353734f6053808972c5cb977658e512222ddb
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 5b2e644feff3cd2787cc6bd80bce54562ad20794
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47637130"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67975783"
 ---
 # <a name="relative-method-sqlserverresultset"></a>relative メソッド (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -47,7 +46,7 @@ public boolean relative(int nRows)
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- この相対メソッドは、java.sql.ResultSet インターフェイスの相対的なメソッドによって指定されます。  
+ この相対メソッドは、java. ResultSet インターフェイスの相対メソッドによって指定されます。  
   
  結果セット内の先頭行または最終行を越えて移動しようとすると、先頭行の前または最終行の後にカーソルが配置されます。 `relative(0)` の呼び出しは有効ですが、カーソルの位置は変更されません。  
   

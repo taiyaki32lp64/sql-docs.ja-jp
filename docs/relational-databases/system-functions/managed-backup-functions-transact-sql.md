@@ -15,15 +15,14 @@ helpviewer_keywords:
 ms.assetid: 1d513d9c-05af-446d-8eba-42f55efcc221
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: f4f378950844f2297c8fdf80388a642c254a94d2
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 1b9b16e426143e1eca7dc39d7d050988faa0222a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47808520"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68140622"
 ---
-# <a name="managed-backup-functions-transact-sql"></a>管理されているバックアップ関数 (TRANSACT-SQL)
+# <a name="managed-backup-functions-transact-sql"></a>マネージ バックアップ関数 (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 次の機能を提供します。[!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]します。  
@@ -43,7 +42,7 @@ ms.locfileid: "47808520"
   
  [managed_backup.fn_backup_instance_config &#40;TRANSACT-SQL&#41;](../../relational-databases/system-functions/managed-backup-fn-backup-instance-config-transact-sql.md)  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [Microsoft Azure への SQL Server マネージド バックアップ](../../relational-databases/backup-restore/sql-server-managed-backup-to-microsoft-azure.md)  
   
   

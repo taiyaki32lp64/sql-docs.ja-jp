@@ -10,18 +10,17 @@ ms.topic: conceptual
 ms.assetid: 30710a63-c05d-47d9-9cf9-c087a1c76373
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 38d85e88e8095cc5e2f41af045c36f230fbd43de
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 637b56c7f64d35501be0efef30e8f2a055b5be4b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47810160"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67971915"
 ---
 # <a name="sqlservercallablestatement-class"></a>SQLServerCallableStatement クラス
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  入力パラメーターおよび出力パラメーターと共に、呼び出すストアド プロシージャの名前を指定できます。 また、? = call( ?, ..) 構文を使用して状態の戻り値を取得することもできます。 呼び出しを = (?、..) 構文。  
+  入力パラメーターおよび出力パラメーターと共に、呼び出すストアド プロシージャの名前を指定できます。 また、? = call( ?, ..) 構文を使用して状態の戻り値を取得することもできます。 = 呼び出し (?, ..) 構文。  
   
  **パッケージ:** com.microsoft.sqlserver.jdbc  
   
@@ -37,11 +36,11 @@ public final class SQLServerCallableStatement
 ```  
   
 ## <a name="remarks"></a>Remarks  
- SQLServerCallableStatement を使用すると、呼び出すストアド プロシージャの名前と共に、入力および出力パラメーターを指定できます。 SQLServerCallableStatement は、使用状態の戻り値を取得する機能も用意されています。、`? = call( ?, ..)`構文。  
+ SQLServerCallableStatement を使用すると、呼び出すストアド プロシージャの名前と共に、入力および出力パラメーターを指定できます。 SQLServerCallableStatement では、 `? = call( ?, ..)`構文を使用して戻り状態の値を取得することもできます。  
   
- このクラスは、SQLServerCallableStatement クラス、ISQLServerCallableStatement インターフェイス、java.sql.CallableStatement インターフェイス、クラスおよび SQLServerPreparedStatement でアンラッピングをサポートされるインターフェイスへのアンラッピングをサポートしています。 詳細については、次を参照してください。[ラッパーとインターフェイス](../../../connect/jdbc/wrappers-and-interfaces.md)します。  
+ このクラスは、SQLServerCallableStatement クラス、ISQLServerCallableStatement インターフェイス、SQLServerPreparedStatement インターフェイス、およびラップ解除のためにによってサポートされるクラスとインターフェイスへのラップをサポートしています。 詳細については、「[ラッパーとインターフェイス](../../../connect/jdbc/wrappers-and-interfaces.md)」を参照してください。  
   
- 指定された型との競合を入力する場合、型、に対して呼び出すはメソッドを設定、SQLServerCallableStatement のいずれかと[registerOutParameter](../../../connect/jdbc/reference/registeroutparameter-method-sqlservercallablestatement.md)、最後の SQLServerCallableStatement set メソッドで指定された型を使用します。 ただし、その結果、データ型の非互換性から変換エラーが発生する可能性があります。 SQLServerCallableStatement の set メソッドが呼び出されなかった場合、最初の [registerOutParameter](../../../connect/jdbc/reference/registeroutparameter-method-sqlservercallablestatement.md) 呼び出しで指定された型が使用されます。  
+ 型に対して SQLServerCallableStatement set メソッドの1つが呼び出されたときに、その型が[Registeroutparameter](../../../connect/jdbc/reference/registeroutparameter-method-sqlservercallablestatement.md)で指定された型と競合する場合、last SQLServerCallableStatement set メソッドによって指定された型が使用されます。 ただし、その結果、データ型の非互換性から変換エラーが発生する可能性があります。 SQLServerCallableStatement の set メソッドが呼び出されなかった場合、最初の [registerOutParameter](../../../connect/jdbc/reference/registeroutparameter-method-sqlservercallablestatement.md) 呼び出しで指定された型が使用されます。  
   
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] JDBC Driver 3.0 は、結果セットと更新数が OUT パラメーターよりも先に取得されなければならないという JDBC 4.0 の勧告に準拠しています。 結果セットと更新数が完全に処理される前に OUT パラメーターが取得された場合、処理の済んでいない結果セットと更新数はすべて失われます。  
   

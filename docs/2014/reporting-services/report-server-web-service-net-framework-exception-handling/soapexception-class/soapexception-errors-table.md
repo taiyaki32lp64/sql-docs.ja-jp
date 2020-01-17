@@ -4,22 +4,20 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- docset-sql-devref
-- reporting-services-native
+ms.technology: reporting-services
 ms.topic: reference
 helpviewer_keywords:
 - SoapException class
 ms.assetid: 3dbf1b5a-bd2a-4385-925d-5d095d72014c
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: b2bd827eb6c1ff4abf5e531d54bbdde66b44249c
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: f58f6a181d1c3bda8556d0ac07fd0f983cb8b52f
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56027243"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63045994"
 ---
 # <a name="soapexception-errors-table"></a>SoapException エラー テーブル
   レポート サーバーでは、[!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] で発生するエラーに基づいて、SOAP 例外のエラーとエラー メッセージが生成されます。 次の表は、レポート サーバー Web サービスの **SoapException** を使用してメソッドからアクセスできるエラーを示します。 例外をスローする 1 つまたは複数のメソッド別に分類されています。  
@@ -101,7 +99,7 @@ ms.locfileid: "56027243"
 |**CancelJob**|**rsJobWasCanceled**|  
 |**ListSecureMethods**|**rsServerConfigurationError**|  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [Reporting Services における例外処理の概要](../introducing-exception-handling-in-reporting-services.md)   
  [エラーとイベントのリファレンス (Reporting Services)](../../troubleshooting/errors-and-events-reference-reporting-services.md)   
  [Reporting Services SoapException クラス](reporting-services-soapexception-class.md)   

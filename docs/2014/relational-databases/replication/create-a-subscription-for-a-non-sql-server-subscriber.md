@@ -15,11 +15,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: be2568e0a99ff21280388bd309a1e49bdec7e072
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52774914"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62721674"
 ---
 # <a name="create-a-subscription-for-a-non-sql-server-subscriber"></a>SQL Server 以外のサブスクライバーのサブスクリプションの作成
   このトピックでは、 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] で [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] または [!INCLUDE[tsql](../../includes/tsql-md.md)]を使用して、SQL Server 以外のサブスクライバーのサブスクリプションを作成する方法について説明します。 トランザクション レプリケーションとスナップショット レプリケーションでは、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 以外のサブスクライバーに対するデータのパブリッシュがサポートされています。 サポートされるサブスクライバー プラットフォームの詳細については、「 [Non-SQL Server Subscribers](non-sql/non-sql-server-subscribers.md)を使用して、SQL Server 以外のサブスクライバーのサブスクリプションを作成する方法について説明します。  
@@ -96,15 +96,15 @@ ms.locfileid: "52774914"
   
     -   IBM DB2 の場合、データベースは DB2 接続文字列の **Initial Catalog** プロパティで指定されます。DB2 接続文字列は、後述する **[追加の接続オプション]** フィールドに入力できます。  
   
-8.  **[ディストリビューション エージェント セキュリティ]** ページで、サブスクライバーの横のプロパティ ボタン **[...]** をクリックし、**[ディストリビューション エージェント セキュリティ]** ダイアログ ボックスにアクセスします。  
+8.  **[ディストリビューション エージェント セキュリティ]** ページで、サブスクライバーの横のプロパティ ボタン **[...]** をクリックし、 **[ディストリビューション エージェント セキュリティ]** ダイアログ ボックスにアクセスします。  
   
 9. **[ディストリビューション エージェント セキュリティ]** ダイアログ ボックスで、以下の操作を行います。  
   
-    -   **[プロセス アカウント]**、 **[パスワード]**、および **[パスワードの確認入力]** フィールドで、ディストリビューション エージェントの実行、およびディストリビューターへのローカル接続に使用される [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows アカウントおよびパスワードを入力します。  
+    -   **[プロセス アカウント]** 、 **[パスワード]** 、および **[パスワードの確認入力]** フィールドで、ディストリビューション エージェントの実行、およびディストリビューターへのローカル接続に使用される [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows アカウントおよびパスワードを入力します。  
   
          アカウントには、ディストリビューション データベースの固定データベース ロール **db_owner** のメンバーであること、パブリケーション アクセス リスト (PAL) のメンバーであること、スナップショット共有での読み取り権限、および OLE DB プロバイダーのインストール ディレクトリでの読み取り権限など、最小限の権限が必要です。 PAL の詳細については、「[Secure the Publisher (パブリッシャーのセキュリティ保護)](security/secure-the-publisher.md)」を参照してください。  
   
-    -   **[サブスクライバーに接続]** の、 **[ログイン]**、 **[パスワード]**、および **[パスワードの確認入力]** フィールドで、サブスクライバーへの接続に使用するログインとパスワードを入力します。 このログインは、あらかじめ構成され、サブスクリプション データベースでオブジェクトを作成できる十分な権限を持っている必要があります。  
+    -   **[サブスクライバーに接続]** の、 **[ログイン]** 、 **[パスワード]** 、および **[パスワードの確認入力]** フィールドで、サブスクライバーへの接続に使用するログインとパスワードを入力します。 このログインは、あらかじめ構成され、サブスクリプション データベースでオブジェクトを作成できる十分な権限を持っている必要があります。  
   
     -   **[追加の接続オプション]** フィールドで、接続文字列の形式でサブスクライバーの接続オプションを指定します (Oracle では追加オプションは必要ありません)。 各オプションはセミコロンで区切る必要があります。 以下に、DB2 接続文字列の例を示します (読みやすいように改行しています)。  
   
@@ -155,34 +155,34 @@ ms.locfileid: "52774914"
   
     -   `enabled_for_het_sub` の値が 1 の場合、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 以外のサブスクライバーがサポートされます。  
   
-    -   場合の値`enabled_for_het_sub`は 0 です実行[sp_changepublication &#40;TRANSACT-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-changepublication-transact-sql)を指定して`enabled_for_het_sub`の**@property**と`true`の。**@value**.  
+    -   場合の値`enabled_for_het_sub`は 0 です実行[sp_changepublication &#40;TRANSACT-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-changepublication-transact-sql)を指定して`enabled_for_het_sub`の **@property** と`true`の。 **@value** .  
   
         > [!NOTE]  
         >  `enabled_for_het_sub` を `true` に変更する前に、そのパブリケーションに対する既存のサブスクリプションをすべて削除する必要があります。 パブリケーションで更新サブスクリプションもサポートされる場合、`enabled_for_het_sub` を `true` に設定することはできません。 `enabled_for_het_sub` を変更すると、他のパブリケーション プロパティにも影響します。 詳細については、「 [Non-SQL Server Subscribers](non-sql/non-sql-server-subscribers.md)」を参照してください。  
   
-3.  パブリッシャー側のパブリケーション データベースに対して、[sp_addsubscription &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addsubscription-transact-sql) を実行します。 **@destination_db** に、**@publication**、**@subscriber**、**(既定の転送先)** の値を指定し、**@subscription_type** に **push** の値を指定し、**@subscriber_type** に値 3 を指定します (OLE DB プロバイダーを指定します)。  
+3.  パブリッシャー側のパブリケーション データベースに対して、[sp_addsubscription &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addsubscription-transact-sql) を実行します。 **@destination_db** に、 **@publication** 、 **@subscriber** 、 **(既定の転送先)** の値を指定し、 **@subscription_type** に **push** の値を指定し、 **@subscriber_type** に値 3 を指定します (OLE DB プロバイダーを指定します)。  
   
 4.  パブリッシャー側のパブリケーション データベースに対して、[sp_addpushsubscription_agent &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addpushsubscription-agent-transact-sql) を実行します。 次の指定を行います。  
   
-    -   ディストリビューターで実行されるディストリビューション エージェントが使用する **@subscriber**」および「 **@publication** パラメーター。  
+    -   ディストリビューターで実行されるディストリビューション エージェントが使用する **@subscriber** 」および「 **@publication** パラメーター。  
   
     -   **@subscriber_db** に対する **(既定の転送先)** の値。  
   
-    -   **@subscriber_provider**、**@subscriber_datasrc**、**@subscriber_location**、**@subscriber_provider_string**、**@subscriber_catalog** の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 以外のデータ ソースのプロパティ。  
+    -   **@subscriber_provider** 、 **@subscriber_datasrc** 、 **@subscriber_location** 、 **@subscriber_provider_string** 、 **@subscriber_catalog** の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 以外のデータ ソースのプロパティ。  
   
-    -   ディストリビューターで実行されるディストリビューション エージェントが使用する [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 資格情報。 **@job_login** に **@job_password**」を参照してください。  
+    -   ディストリビューターで実行されるディストリビューション エージェントが使用する [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 資格情報。 **@job_login** に **@job_password** 」を参照してください。  
   
         > [!NOTE]  
-        >  Windows 統合認証を使用して行われる接続では、常に **@job_login** 」および「 **@job_password**を使用して、SQL Server 以外のサブスクライバーのサブスクリプションを作成する方法について説明します。 ディストリビューション エージェントは、常に Windows 統合認証を使用してディストリビューターにローカル接続します。 既定では、エージェントは Windows 統合認証を使用してサブスクライバーに接続します。  
+        >  Windows 統合認証を使用して行われる接続では、常に **@job_login** 」および「 **@job_password** を使用して、SQL Server 以外のサブスクライバーのサブスクリプションを作成する方法について説明します。 ディストリビューション エージェントは、常に Windows 統合認証を使用してディストリビューターにローカル接続します。 既定では、エージェントは Windows 統合認証を使用してサブスクライバーに接続します。  
   
-    -   **@subscriber_security_mode** に **0** を指定し、**@subscriber_login** に **@subscriber_password** にOLE DB プロバイダーのログイン情報を指定します。  
+    -   **@subscriber_security_mode** に **0** を指定し、 **@subscriber_login** に **@subscriber_password** にOLE DB プロバイダーのログイン情報を指定します。  
   
     -   このサブスクリプションでのディストリビューション エージェント ジョブのスケジュール。 詳細については、「 [Specify Synchronization Schedules](specify-synchronization-schedules.md)」を参照してください。  
   
     > [!IMPORTANT]  
     >  リモート ディストリビューターを使用するパブリッシャー側でプッシュ サブスクリプションを作成する場合は、 *job_login* および *job_password*を含むすべてのパラメーターに指定された値がディストリビューターにプレーン テキストとして送信されます。 このストアド プロシージャを実行する前に、パブリッシャーとリモート ディストリビューターの間の接続を暗号化する必要があります。 詳細については、「[データベース エンジンへの暗号化接続の有効化 &#40;SQL Server 構成マネージャー&#41;](../../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md)」を参照してください。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [IBM DB2 Subscribers](non-sql/ibm-db2-subscribers.md)   
  [Oracle Subscribers](non-sql/oracle-subscribers.md)   
  [その他の SQL Server 以外のサブスクライバー](non-sql/other-non-sql-server-subscribers.md)   

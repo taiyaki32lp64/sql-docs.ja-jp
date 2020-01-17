@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 3a2644e9-d634-4ae6-a5b7-13fb7b317ec7
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 7a3b973d0c09d272e8960b2d5bf0d2b438260b74
-ms.sourcegitcommit: 1a5448747ccb2e13e8f3d9f04012ba5ae04bb0a3
+ms.openlocfilehash: 45324642d2f323297ecbe091617fbb14cc5fc785
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51558649"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67922247"
 ---
 # <a name="running-the-address-book-sample-application"></a>アドレス帳のサンプル アプリケーションの実行
 > [!IMPORTANT]
@@ -42,7 +41,7 @@ ms.locfileid: "51558649"
   
 3.  「プログラム マネージャー」というタイトルのすべてのユーザーの一覧を表示する自分の電子メール名に基づく人を検索または編集の既存のレコードなど、アドレス帳のサンプル アプリケーションでさまざまなシナリオを試行できます。 クリックして**検索**データ グリッドを使用可能なすべての名前を入力します。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [アドレス帳のデータ バインディング オブジェクト](../../../ado/guide/remote-data-service/address-book-data-binding-object.md)
 
 

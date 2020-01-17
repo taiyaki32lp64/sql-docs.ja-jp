@@ -12,13 +12,13 @@ helpviewer_keywords:
 ms.assetid: a1a03ef9-b6e8-4127-bad0-eae261251472
 author: Shamikg
 ms.author: Shamikg
-manager: v-thobro
-ms.openlocfilehash: 7fb88b22ae3c1a1ebdee9dc0167169e2cdbc4b3c
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+manager: shamikg
+ms.openlocfilehash: a11948b901e0f687b1daf537faa7b836c4618206
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52520212"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68262968"
 ---
 # <a name="managing-backups-oracletosql"></a>バックアップの管理 (OracleToSQL)
 Oracle のバックアップの管理は、バックアップと復元のテストの実行の前後にデータをテーブルことができます。 バックアップ コンテンツの管理 ダイアログで、バックアップ コンテンツを管理することもできます。  
@@ -94,6 +94,6 @@ SQL Server のバックアップ管理は、バックアップと復元のテス
   
 -   をクリックして、**閉じます**ボタンをクリックしてダイアログを閉じます。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
 [移行されたデータベース オブジェクトのテスト&#40;OracleToSQL&#41;](../../ssma/oracle/testing-migrated-database-objects-oracletosql.md)  
   

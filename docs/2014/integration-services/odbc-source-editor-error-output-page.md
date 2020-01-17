@@ -4,21 +4,20 @@ ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.ssis.designer.odbcsource.errorhandling.f1
 ms.assetid: b2f6866c-db07-4cb3-9f38-889f8d2b03e6
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 1bf6d22a2cbe6111f9cce1a3be446c507969ca82
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: b19a94e71eaef45184c1777ce299809b2b2d7f8d
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48158422"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66057127"
 ---
 # <a name="odbc-source-editor-error-output-page"></a>[ODBC ソース エディター] ([エラー出力] ページ)
   **[ODBC 入力元エディター]** ダイアログ ボックスの **[エラー出力]** ページを使用すると、エラー処理オプションを選択できます。  
@@ -70,7 +69,7 @@ ms.locfileid: "48158422"
  エラーまたは切り捨てが ODBC 入力元のエラー出力に送られる原因となった行。 詳しくは、「 [ODBC 入力元](data-flow/odbc-source.md)」をご覧ください。  
   
 ## <a name="see-also"></a>参照  
- [Odbc 入力元エディター&#40;接続マネージャー ページ&#41;](../../2014/integration-services/odbc-source-editor-connection-manager-page.md)   
- [Odbc 入力元エディター&#40;列 ページ&#41;](../../2014/integration-services/odbc-source-editor-columns-page.md)  
+ [[ODBC ソース エディター] &#40;[接続マネージャー] ページ&#41;](../../2014/integration-services/odbc-source-editor-connection-manager-page.md)   
+ [[ODBC ソース エディター] &#40;[列] ページ&#41;](../../2014/integration-services/odbc-source-editor-columns-page.md)  
   
   

@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 4b44f6b9-2359-452f-8bb1-5520f2528483
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: c62934d6ffe221acd483d316461e0b2c72cc0c46
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: 1850f5d85baf418e0ce872f641a920514156101f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52413416"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68137383"
 ---
 # <a name="contained-database-collations"></a>包含データベースの照合順序
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

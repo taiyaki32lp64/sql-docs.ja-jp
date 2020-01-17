@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - backward compatibility [Analysis Services]
@@ -19,12 +18,12 @@ ms.assetid: 2715c245-f206-43af-8bf5-e6bd2585477a
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 1f5333d67e40d4abc10134f339e39a41c83fbcc1
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: dc721d58c69b0275c9846863f761d60db66e5aaf
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48218692"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66084683"
 ---
 # <a name="deploy-a-data-mining-solution-to-previous-versions-of-sql-server"></a>SQL Server の以前のバージョンへのデータ マイニング ソリューションの配置
   ここでは、 [!INCLUDE[ssASCurrent](../../includes/ssascurrent-md.md)] のインスタンスで作成されたデータ マイニング モデルまたはデータ マイニング構造を、SQL Server 2005 Analysis Services を使用するデータベースに配置しようとする際、または SQL Server 2005 で作成されたモデルを [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]のインスタンスに配置する際に発生する可能性のある、互換性に関する既知の問題について説明します。  
@@ -42,7 +41,7 @@ ms.locfileid: "48218692"
  [データベースの同期の使用](#bkmk_Synch)  
   
 ##  <a name="bkmk_TimeSeries"></a> タイム シリーズ モデルの配置  
- Microsoft タイム シリーズのアルゴリズムは、SQL Server 2008 で補完的なアルゴリズムの ARIMA が追加され、機能が拡張されています。 タイム シリーズ アルゴリズムの変更に関する詳細については、「 [Microsoft タイム シリーズ アルゴリズム](microsoft-time-series-algorithm.md)」を参照してください。  
+ Microsoft Time Series アルゴリズムは、SQL Server 2008 で補完的なアルゴリズムの ARIMA が追加され、機能が拡張されています。 タイム シリーズ アルゴリズムの変更に関する詳細については、「 [Microsoft Time Series アルゴリズム](microsoft-time-series-algorithm.md)」を参照してください。  
   
  したがって、新しい ARIMA アルゴリズムを使用するタイム シリーズ マイニング モデルを SQL Server 2005 Analysis Services のインスタンスに配置すると、動作が異なる場合があります。  
   
@@ -52,7 +51,7 @@ ms.locfileid: "48218692"
   
  したがって、モデルが変更されないようにするには、モデルを参照するだけにして、決して処理を行わないようにします。 あるいは、FORECAST_METHOD パラメーターまたは PREDICTION_SMOOTHING パラメーターを明示的に設定することもできます。  
   
- 混合モデルを設定する方法については、「 [Microsoft タイム シリーズ アルゴリズム テクニカル リファレンス](microsoft-time-series-algorithm-technical-reference.md)」を参照してください。  
+ 混合モデルを設定する方法については、「 [Microsoft Time Series アルゴリズム テクニカル リファレンス](microsoft-time-series-algorithm-technical-reference.md)」を参照してください。  
   
  モデルのデータ ソースに使用されるプロバイダーが SQL Client Data Provider 10 の場合、データ ソース定義も変更して、SQL Server Native Client の前のバージョンを指定する必要があります。 そうしないと、 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] で、プロバイダーが登録されていないことを示すエラーが発生します。  
   
@@ -78,7 +77,7 @@ ms.locfileid: "48218692"
   
  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] データベースの同期を試みると、サーバーはエラーを返し、データベースの同期は失敗します。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [Analysis Services の旧バージョンとの互換性](../analysis-services-backward-compatibility.md)  
   
   

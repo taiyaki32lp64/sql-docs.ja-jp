@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 4070580b-880d-4f4c-abcc-626a4fe0c9a2
 author: julieMSFT
 ms.author: jrasnick
-manager: craigg
-ms.openlocfilehash: 502ee4eb72f476d3e63eee6efbe2aaa21df88d75
-ms.sourcegitcommit: 0c1d552b3256e1bd995e3c49e0561589c52c21bf
+ms.openlocfilehash: 8273d3c86cbfa6774458d40a964e64ba415f1de0
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/14/2018
-ms.locfileid: "53379743"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68114039"
 ---
 # <a name="sql-server-xtp-storage"></a>SQL Server の XTP ストレージ
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

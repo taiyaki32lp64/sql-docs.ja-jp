@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 helpviewer_keywords:
 - subscriptions [Reporting Services], report distribution
@@ -16,15 +15,15 @@ helpviewer_keywords:
 - subscriptions [Reporting Services], security
 - mail [Reporting Services]
 ms.assetid: 8f15e2c6-a647-4b05-a519-1743b5d8654c
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: e3911bfcd923b26251c81809c9671981e0ff84e9
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: de8a27801ef89f10bf303cee17d1c2d0e1081c5a
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56018044"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66109698"
 ---
 # <a name="control-report-distribution"></a>レポートの配信を制御する
   電子メール配信およびファイル共有配信に関連するセキュリティ上のリスクを減らすように、レポート サーバーを構成できます。  

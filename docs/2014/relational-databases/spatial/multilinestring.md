@@ -9,15 +9,15 @@ helpviewer_keywords:
 - MultiLineString geometry subtype [SQL Server]
 - geometry subtypes [SQL Server]
 ms.assetid: 95deeefe-d6c5-4a11-b347-379e4486e7b7
-author: douglaslMS
-ms.author: douglasl
+author: MladjoA
+ms.author: mlandzic
 manager: craigg
-ms.openlocfilehash: c755752aaa2e4cac795b277c0cdba070d7b2f6d5
-ms.sourcegitcommit: 87f29b23d5ab174248dab5d558830eeca2a6a0a4
+ms.openlocfilehash: 9244f32b2ee9921d1caaa63b5d6aae9c324049ff
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "51019057"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66014208"
 ---
 # <a name="multilinestring"></a>MultiLineString
   A `MultiLineString` 0 個以上のコレクションである`geometry`または**geographyLineString**インスタンス。  

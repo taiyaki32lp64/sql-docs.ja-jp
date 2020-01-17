@@ -2,18 +2,18 @@
 title: Reporting Services SharePoint サービス アプリケーションの管理 | Microsoft Docs
 ms.date: 10/05/2017
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: report-server-sharepoint
 ms.topic: conceptual
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 5ce513473683d12d5ba2af68f08bc96c0f47d893
-ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
-ms.translationtype: HT
+ms.openlocfilehash: 6e1b69fc176281e9be65ca7a9766fc8fb270a3de
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51814005"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65580086"
 ---
 # <a name="manage-a-reporting-services-sharepoint-service-application"></a>Reporting Services SharePoint サービス アプリケーションの管理
 
@@ -140,7 +140,7 @@ Get-SPRSServiceApplication | select typename, name, service, ueaccountname
 
  詳細については、「 [Reporting Services SharePoint モード用の PowerShell コマンドレット](../../reporting-services/report-server-sharepoint/powershell-cmdlets-for-reporting-services-sharepoint-mode.md)」をご覧ください。  
 
-### <a name="options"></a>[変数]
+### <a name="options"></a>オプション
 
  **[実行アカウントの指定]**  
  アカウントを指定します。  
@@ -148,7 +148,7 @@ Get-SPRSServiceApplication | select typename, name, service, ueaccountname
  **アカウント**  
  Windows のドメイン ユーザー アカウントを入力します。 *\<ドメイン>\\<ユーザー アカウント\>* の形式を使用します。  
   
- **Password**  
+ **パスワード**  
  パスワードを入力します。  
   
  **[パスワードの確認入力]**  
@@ -158,7 +158,7 @@ Get-SPRSServiceApplication | select typename, name, service, ueaccountname
 
  このページを使用すると、レポート サーバーからのレポート サーバー電子メール配信を有効にする簡易メール転送プロトコル (SMTP) の設定を指定できます。 レポート サーバーの電子メール配信拡張機能により、電子メール サブスクリプションを通じてレポートやレポート処理通知を配信できます。 レポート サーバーの電子メール配信拡張機能を使用するには、SMTP サーバーと、差出人フィールドに使用する電子メール アドレスが必要です。  
 
-### <a name="options"></a>[変数]
+### <a name="options"></a>オプション
 
  **[SMTP サーバーの使用]**  
  レポート サーバー電子メールが SMTP サーバーによってルーティングされるように指定します。  

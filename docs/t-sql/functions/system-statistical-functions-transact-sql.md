@@ -14,15 +14,14 @@ helpviewer_keywords:
 - system statistical functions [SQL Server]
 - functions [SQL Server], statistical
 ms.assetid: 45828c67-1b9a-4653-bb24-86246084d8ba
-author: MashaMSFT
-ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 3a1a8edc39fde0adefb4981ed6d064ec435f6284
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: MikeRayMSFT
+ms.author: mikeray
+ms.openlocfilehash: c55a051866ae346d5f83c898dc8292833d6d0679
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47675300"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68117510"
 ---
 # <a name="system-statistical-functions-transact-sql"></a>システム統計関数 (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -38,7 +37,7 @@ ms.locfileid: "47675300"
 |[@@IO_BUSY](../../t-sql/functions/io-busy-transact-sql.md)|[@@TOTAL_READ](../../t-sql/functions/total-read-transact-sql.md)|  
 |[@@PACKET_ERRORS](../../t-sql/functions/packet-errors-transact-sql.md)|[@@TOTAL_WRITE](../../t-sql/functions/total-write-transact-sql.md)|  
   
- システム統計関数はすべて非決定的です。 つまり、これらの関数は、同じ一連の入力値を使用しても、呼び出されるたびに常に同じ結果を返すわけではありません。 関数の決定性の詳細については、次を参照してください。[決定的関数と非決定的関数です](../../relational-databases/user-defined-functions/deterministic-and-nondeterministic-functions.md)。  
+ システム統計関数はすべて非決定的です。 つまり、同じ一連の入力値を使用してこれらの関数を呼び出しても、毎回、常に同じ結果が返されるわけではありません。 関数の決定性の詳細については、次を参照してください。[決定的関数と非決定的関数です](../../relational-databases/user-defined-functions/deterministic-and-nondeterministic-functions.md)。  
   
 ## <a name="see-also"></a>参照  
  [組み込み関数 &#40;Transact-SQL&#41;](~/t-sql/functions/functions.md)  

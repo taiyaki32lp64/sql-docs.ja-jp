@@ -1,5 +1,5 @@
 ---
-title: unwrap メソッド (SQLServerDataSource) |Microsoft Docs
+title: ラップ解除メソッド (SQLServerDataSource) |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: eb8abe29-f3ec-4752-a590-1d5dc3e48f08
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 00d6f3bd7d512342565da93dd245a0f5714f5021
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: f8cb254ba464b0e051c00c7ac6d410c5e6da1e36
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47682620"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67997289"
 ---
 # <a name="unwrap-method-sqlserverdatasource"></a>unwrap メソッド (SQLServerDataSource)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -48,7 +47,7 @@ public <T> T unwrap(Class<T> iface)
   
  このメソッドが呼び出されると、オブジェクトは [SQLServerDataSource](../../../connect/jdbc/reference/sqlserverdatasource-class.md) クラスにアンラップされます。  
   
- 詳細については、次を参照してください。[ラッパーとインターフェイス](../../../connect/jdbc/wrappers-and-interfaces.md)します。  
+ 詳細については、「[ラッパーとインターフェイス](../../../connect/jdbc/wrappers-and-interfaces.md)」を参照してください。  
   
 ## <a name="see-also"></a>参照  
  [isWrapperFor メソッド &#40;SQLServerDataSource&#41;](../../../connect/jdbc/reference/iswrapperfor-method-sqlserverdatasource.md)   

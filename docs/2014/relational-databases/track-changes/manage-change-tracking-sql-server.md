@@ -15,12 +15,12 @@ ms.assetid: 94a8d361-e897-4d6d-9a8f-1bb652e7a850
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: be3f9c61d3c035959def4a46f91eff605e475569
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: c9d0deb3567daa64afb46c96a4e93c9da9c0972a
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52808804"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62670843"
 ---
 # <a name="manage-change-tracking-sql-server"></a>変更の追跡の管理 (SQL Server)
   このトピックでは、変更の追跡を管理する方法について説明します。 また、セキュリティを構成する方法、および変更の追跡を使用する場合のストレージとパフォーマンスへの影響を判断する方法について説明します。  
@@ -96,7 +96,7 @@ ms.locfileid: "52808804"
   
  その他の内部テーブルと同様に、変更追跡テーブルに使用される領域は、 [sp_spaceused](/sql/relational-databases/system-stored-procedures/sp-spaceused-transact-sql) ストアド プロシージャを使用して確認できます。 内部テーブルの名前は、次の例に示すように、 [sys.internal_tables](/sql/relational-databases/system-catalog-views/sys-internal-tables-transact-sql) カタログ ビューを使用して取得できます。  
   
-```tsql  
+```sql  
 sp_spaceused 'sys.change_tracking_309576141'  
 sp_spaceused 'sys.syscommittab'  
 ```  

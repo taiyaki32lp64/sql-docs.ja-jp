@@ -13,27 +13,25 @@ helpviewer_keywords:
 ms.assetid: f79d8b3c-521e-4e50-a564-21d73ae5767b
 author: MightyPen
 ms.author: genemi
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 75aa909f306524d60b40b27ec85bf00998e889eb
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: c5ec47c112a41d579710a42c1913785d794f040c
+ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51665441"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73786039"
 ---
 # <a name="sqlnumresultcols"></a>SQLNumResultCols
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-[!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
 
-  実行されるステートメントを[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native Client ODBC ドライバーは結果セット内の列の数を報告するサーバーを利用しません。 この場合、 **SQLNumResultCols**サーバーとのやり取りは行われません。 ような[SQLDescribeCol](../../relational-databases/native-client-odbc-api/sqldescribecol.md)と[SQLColAttribute](../../relational-databases/native-client-odbc-api/sqlcolattribute.md)を呼び出すと、 **SQLNumResultCols**準備されていても実行されていないステートメントには、サーバーとのやり取りが生成されます。  
+  実行されたステートメントの場合、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC ドライバーは、サーバーにアクセスして結果セット内の列数を報告しません。 この場合、 **Sqlnumresultcols**ではサーバーのやり取りは行われません。 [SQLDescribeCol](../../relational-databases/native-client-odbc-api/sqldescribecol.md)や[sqlcolattribute](../../relational-databases/native-client-odbc-api/sqlcolattribute.md)と同様に、準備されているが実行されていないステートメントで**sqlnumresultcols**を呼び出すと、サーバーのラウンドトリップが生成されます。  
   
- [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントまたはステートメント バッチが複数の結果行セットを返すときは、結果セットの列数を報告する場合、あるセットから別のセットへ結果セットを変更することができます。 **SQLNumResultCols**セットごとに呼び出す必要があります。 列数が変化すると、アプリケーションでは行の結果をフェッチする前に、データ値を再バインドする必要があります。 セットを返す複数の結果の処理の詳細についてを参照してください[SQLMoreResults](../../relational-databases/native-client-odbc-api/sqlmoreresults.md)します。  
+ [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントまたはステートメント バッチが複数の結果行セットを返すときは、結果セットの列数を報告する場合、あるセットから別のセットへ結果セットを変更することができます。 **Sqlnumresultcols**は、セットごとに呼び出す必要があります。 列数が変化すると、アプリケーションでは行の結果をフェッチする前に、データ値を再バインドする必要があります。 複数の結果セットを返す処理の詳細については、「 [Sqlmoreresults](../../relational-databases/native-client-odbc-api/sqlmoreresults.md)」を参照してください。  
   
- 以降では、データベース エンジンの機能強化[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]期待どおりの結果のより正確な記述を取得する SQLNumResultCols を許可します。 これらのより正確な結果の以前のバージョンの SQLNumResultCols によって返される値が異なる場合があります[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]します。 詳細については、次を参照してください。[メタデータ検出](../../relational-databases/native-client/features/metadata-discovery.md)します。  
+ [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 以降のデータベースエンジンの機能強化により、SQLNumResultCols は予想される結果についてより正確な説明を取得できます。 これらのより正確な結果は、以前のバージョンの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]で SQLNumResultCols によって返される値とは異なる場合があります。 詳細については、「[メタデータの検出](../../relational-databases/native-client/features/metadata-discovery.md)」を参照してください。  
   
 ## <a name="see-also"></a>参照  
- [SQLNumResultCols 関数](https://go.microsoft.com/fwlink/?LinkId=59359)   
+ [Sqlnumresultcols 関数](https://go.microsoft.com/fwlink/?LinkId=59359)   
  [ODBC API 実装の詳細](../../relational-databases/native-client-odbc-api/odbc-api-implementation-details.md)  
   
   

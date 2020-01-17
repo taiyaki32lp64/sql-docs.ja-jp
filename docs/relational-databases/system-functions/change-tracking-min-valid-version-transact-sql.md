@@ -18,16 +18,15 @@ helpviewer_keywords:
 ms.assetid: 5a43d23f-adcf-4c0b-95ad-07cee03c1f9d
 author: rothja
 ms.author: jroth
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: d2858c61ea7316b1bafa06a1181b31e97b0724b3
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 5bb0baec2284d17d84c7a8c3dddd13de3fa69510
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47766640"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68042945"
 ---
-# <a name="changetrackingminvalidversion-transact-sql"></a>CHANGE_TRACKING_MIN_VALID_VERSION (Transact-SQL)
+# <a name="changetrackingminvalidversion-transact-sql"></a>CHANGE_TRACKING_MIN_VALID_VERSION (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   変更の追跡を使用する場合の指定したテーブルから情報を取得するに使用するために有効なクライアントの最小バージョンを返します、 [CHANGETABLE](../../relational-databases/system-functions/changetable-transact-sql.md)関数。  
@@ -51,13 +50,13 @@ CHANGE_TRACKING_MIN_VALID_VERSION ( table_object_id )
 ## <a name="remarks"></a>コメント  
  この関数の値の検証を使用して、 *last_sync_version* CHANGETABLE のパラメーター。 場合*last_sync_version*が CHANGETABLE を後の呼び出しから返される結果を有効にすることはできない、この関数によって報告される値より小さい。  
   
- CHANGE_TRACKING_MIN_VALID_VERSION は、次の情報を使用して戻り値を判断します。  
+ CHANGE_TRACKING_MIN_VALID_VERSION は、戻り値を決定するのに、次の情報を使用します。  
   
--   テーブルで変更の追跡を有効にした日時。  
+-   テーブルが変更の追跡の有効な場合。  
   
 -   バックグラウンド クリーンアップ タスクを実行して、データベースに対して指定した保持期間より古い変更追跡情報を削除した日時。  
   
--   テーブルが切り捨てられたかどうか。 これにより、テーブルに関連付けられている変更追跡情報がすべて削除されます。  
+-   場合は、テーブルが切り捨てられました。 これにより、テーブルに関連付けられている変更追跡情報がすべて削除されます。  
   
  次のいずれかの条件に該当する場合、この関数は NULL を返します。  
   
@@ -68,10 +67,10 @@ CHANGE_TRACKING_MIN_VALID_VERSION ( table_object_id )
 -   オブジェクト ID で指定されたテーブルに対する十分な権限がない。  
   
 ## <a name="examples"></a>使用例  
- 次の例では、指定されたバージョンが有効なバージョンかどうかを判断します。 例では、有効な最小のバージョンの取得、`dbo.Employees`テーブル、および次の値を比較し、`@last_sync_version`変数。 `@last_sync_version` の値が `@min_valid_version` の値より小さい場合、変更された行の一覧は有効ではありません。  
+ 次の例では、指定されたバージョンが有効なバージョンであるかどうかを判断します。 例では、有効な最小のバージョンの取得、`dbo.Employees`テーブル、および次の値を比較し、`@last_sync_version`変数。 `@last_sync_version` の値が `@min_valid_version` の値より小さい場合、変更された行の一覧は有効ではありません。  
   
 > [!NOTE]  
->  通常は、データの同期に使用した最新のバージョン番号が格納されているテーブルまたはその他の場所から値を取得します。  
+>  通常、テーブルまたはデータの同期に使用された最後のバージョン番号を格納するその他の場所から値を入手します。  
   
 ```  
 -- The tracked change is tagged with the specified context   
@@ -87,7 +86,7 @@ ELSE
 -- Obtain changes using CHANGETABLE(CHANGES ...)  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [変更追跡関数 &#40;Transact-SQL&#41;](../../relational-databases/system-functions/change-tracking-functions-transact-sql.md)   
  [sys.change_tracking_tables &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/change-tracking-catalog-views-sys-change-tracking-tables.md)  
   

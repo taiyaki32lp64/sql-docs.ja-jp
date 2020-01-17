@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 233315bd-2b7f-4b20-9978-e920e1ea9a07
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 6b064436dae6cb2f3d5f37fa02ab57a1e4a3f015
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 945ebced0703c109ac64c374e31d2e76b556e7ab
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47801540"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67944834"
 ---
 # <a name="odbc-overview"></a>ODBC の概要
 Open Database Connectivity (ODBC) は、データベースへのアクセスに広く受け入れられているアプリケーション プログラミング インターフェイス (API) です。 データベース Api の Open Group および ISO/IEC からコールレベル インターフェイス (CLI) 仕様に基づいていて、そのデータベースへのアクセスの言語として構造化照会言語 (SQL) を使用します。  

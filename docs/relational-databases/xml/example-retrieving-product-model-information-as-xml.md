@@ -1,5 +1,5 @@
 ---
-title: '例 : XML での製品モデル情報の取得 | Microsoft Docs'
+title: 例:XML での製品モデル情報の取得 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -10,17 +10,16 @@ ms.topic: conceptual
 helpviewer_keywords:
 - RAW mode, retrieving XML information example
 ms.assetid: 3828b4ca-3ab2-444f-9c58-8be6e7f064a6
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: 583a38873f5895f88484ccdec7cb6ce46f94b7ac
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: MightyPen
+ms.author: genemi
+ms.openlocfilehash: 6e5fd12b1de0f2c1cb792d5d764d6fb5917cc837
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47854780"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68006767"
 ---
-# <a name="example-retrieving-product-model-information-as-xml"></a>例 : XML での製品モデル情報の取得
+# <a name="example-retrieving-product-model-information-as-xml"></a>例:XML での製品モデル情報の取得
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
   次の クエリでは、出力モデル情報が返されます。 `RAW` モードは、 `FOR XML` 句で指定します。  
   

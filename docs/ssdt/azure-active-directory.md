@@ -1,27 +1,28 @@
 ---
 title: SQL Server Data Tools (SSDT) での Azure Active Directory | Microsoft Docs
 ms.custom: ''
-ms.date: 05/31/2018
+ms.date: 10/28/2019
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: ssdt
 ms.topic: conceptual
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: = azuresqldb-current || = azure-sqldw-latest || = sqlallproducts-allversions
-ms.openlocfilehash: 4d607a7fa7dd9ce91c5ca97bf144f89e1624ed93
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 302345a2d7e8c1bd9192c91c6f88253c9a4668f2
+ms.sourcegitcommit: 4fb6bc7c81a692a2df706df063d36afad42816af
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51670611"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73049904"
 ---
 # <a name="azure-active-directory-support-in-sql-server-data-tools-ssdt"></a>SQL Server Data Tools (SSDT) での Azure Active Directory のサポート
 
 [!INCLUDE[appliesto-xx-asdb-asdb-xxx-md.md](../includes/appliesto-xx-asdb-asdw-xxx-md.md)]
 
 SQL Server Data Tools (SSDT) では、[Azure Active Directory (Azure AD)](https://docs.microsoft.com/azure/active-directory/active-directory-whatis) の認証方法がいくつか用意されています。
+
+Visual Studio で **[SQL Server オブジェクト エクスプローラー]** ( **[表示]** メニュー) を開き、 **[SQL Server の追加]** を選択します。
 
 ![SSDT 接続ダイアログ](media/azure-active-directory/interactive.png)
 
@@ -60,7 +61,7 @@ Active Directory 対話型認証では、Azure Active Directory (AD) Multi-Facto
 - @outlook.com、@hotmail.com、@live.com など、Microsoft アカウント。
 - @gmail.com など、Microsoft 以外のアカウント。
 
-MFA 方法を指定すると、**[ユーザー名]** を指定する必要があり、**[パスワード]** フィールドが無効になります。 
+MFA 方法を指定すると、 **[ユーザー名]** を指定する必要があり、 **[パスワード]** フィールドが無効になります。 
 
 #### <a name="password-entry"></a>パスワードの入力
 

@@ -4,21 +4,20 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 helpviewer_keywords:
 - RSExecRole
 ms.assetid: 7ac17341-df7e-4401-870e-652caa2859c0
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 13131359ddf4df667e18a674533954f95d8a6665
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 3a6bc5ecbd1c59a5dc03f9c28d36d2816e6a8d92
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56023493"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66102028"
 ---
 # <a name="create-the-rsexecrole"></a>RSExecRole を作成する
   [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] では、`RSExecRole` と呼ばれる定義済みのデータベース ロールを使用して、レポート サーバー データベースに対するレポート サーバーの権限が付与されます。 `RSExecRole`ロールは、レポート サーバー データベースで自動的に作成されます。 原則として、このロールを変更したり、他のユーザーをこのロールに割り当てたりすることはできません。 ただし、レポート サーバー データベースを新規または別の [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../../includes/ssde-md.md)]に移動した場合は、master および MSDB システム データベースでロールを再作成する必要があります。  
@@ -49,7 +48,7 @@ ms.locfileid: "56023493"
   
 #### <a name="to-create-rsexecrole-in-the-master-system-database-using-management-studio"></a>Management Studio を使用して master システム データベースに RSExecRole を作成するには  
   
-1.   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] を起動し、レポート サーバー データベースをホストする [!INCLUDE[ssDE](../../../includes/ssde-md.md)] インスタンスに接続します。  
+1.  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] を起動し、レポート サーバー データベースをホストする [!INCLUDE[ssDE](../../../includes/ssde-md.md)] インスタンスに接続します。  
   
 2.  **[データベース]** を開きます。  
   
@@ -124,7 +123,7 @@ ms.locfileid: "56023493"
   
 11. **[オブジェクトの種類]** をクリックします。  
   
-12.  **[ストアド プロシージャ]** をクリックします。  
+12. **[ストアド プロシージャ]** をクリックします。  
   
 13. **[OK]** をクリックします。  
   
@@ -166,7 +165,7 @@ ms.locfileid: "56023493"
   
 22. **[オブジェクトの種類]** をクリックします。  
   
-23.  **[テーブル]** をクリックします。  
+23. **[テーブル]** をクリックします。  
   
 24. **[OK]** をクリックします。  
   

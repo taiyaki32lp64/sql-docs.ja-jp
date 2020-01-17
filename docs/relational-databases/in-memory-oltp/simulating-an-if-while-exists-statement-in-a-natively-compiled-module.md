@@ -1,6 +1,6 @@
 ---
-title: ネイティブ コンパイル モジュールでの IF-WHILE EXISTS ステートメントのシミュレーション | Microsoft Docs
-ms.custom: ''
+title: IF-WHILE EXISTS のシミュレーション - ネイティブ コンパイル モジュール
+ms.custom: seo-dt-2019
 ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -10,14 +10,13 @@ ms.topic: conceptual
 ms.assetid: c0e187c1-cbd9-463c-b417-8a734574f102
 author: MightyPen
 ms.author: genemi
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 26a6075e835e98fb31b13251ba671412b13101dc
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: e860bbab32549b72048d30caa93f18daa422cc42
+ms.sourcegitcommit: 384e7eeb0020e17a018ef8087970038aabdd9bb7
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52514006"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74412597"
 ---
 # <a name="simulating-an-if-while-exists-statement-in-a-natively-compiled-module"></a>ネイティブ コンパイル モジュールでの IF-WHILE EXISTS ステートメントのシミュレーション
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]

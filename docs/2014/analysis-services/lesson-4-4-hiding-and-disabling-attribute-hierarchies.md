@@ -1,22 +1,21 @@
 ---
-title: 属性階層を無効にして、非表示 |Microsoft Docs
+title: 属性階層の非表示と無効化 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: 095039c2-7104-414c-a9a6-327b03ce79df
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 8c3dbf70fe7a50caaaa1a3e80cd5fe7699c7287a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 4381047ad4373a2a5b03dc9ba1c96274b37621f2
+ms.sourcegitcommit: 187f6d327421e64f1802a3085f88bbdb0c79b707
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48049232"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69530846"
 ---
 # <a name="hiding-and-disabling-attribute-hierarchies"></a>属性階層の非表示化と無効化
   既定では、ディメンションの属性ごとに属性階層が 1 つ作成されます。また、それぞれの階層はディメンションのファクト データで使用できます。 属性階層は、"All" レベルと、その階層のすべてのメンバーを含む詳細レベルで構成されます。 既に学習したように、これらの属性をユーザー定義階層として整理し、キューブ内にナビゲーション パスを設けることができます。 状況によっては、一部の属性とその階層を無効にしたり、非表示にしたりする必要が生じます。 たとえば、社会保障番号 (身分登録番号)、給与、誕生日、ログイン情報などは、キューブ情報の生成には必要のない属性です。 一般に、これらの情報は、特定の属性メンバーの詳細情報としてのみ表示されます。 したがって、これらの属性階層を非表示にして、各属性のメンバー プロパティとしてのみ表示されるようにする必要があります。 また、顧客名、郵便番号など他の属性メンバーは、属性階層に個別に表示するのではなく、ユーザー階層からのみ表示されるようにする必要があります。 このような処理をするのは、属性階層内の独立したメンバーが非常に多いためです。 処理パフォーマンスを向上させるため、ユーザーが参照しない属性階層を無効にしてください。  
@@ -78,7 +77,7 @@ ms.locfileid: "48049232"
   
      次の図では、選択した属性の **AttributeHierarchyEnabled** プロパティが False に設定されています。  
   
-     ![False に設定された AttributeHierarchyEnabled プロパティ](../../2014/tutorials/media/l4-hierarchyenabled-1.gif "AttributeHierarchyEnabled プロパティが False に設定")  
+     ![AttributeHierarchyEnabled プロパティが False に設定 される](../../2014/tutorials/media/l4-hierarchyenabled-1.gif "AttributeHierarchyEnabled プロパティが False に設定")される  
   
 5.  **[ビルド]** メニューの **[Analysis Services Tutorial の配置]** をクリックします。  
   
@@ -108,7 +107,7 @@ ms.locfileid: "48049232"
   
      次の図では、 **AttributeHierarchyVisible** プロパティが False に設定されています。  
   
-     ![AttributeHierarchyVisible プロパティが False に設定](../../2014/tutorials/media/l4-hierarchyvisible-1.gif "AttributeHierarchyVisible プロパティが False に設定")  
+     ![AttributeHierarchyVisible プロパティが False に設定される](../../2014/tutorials/media/l4-hierarchyvisible-1.gif "AttributeHierarchyVisible プロパティが False に設定")される  
   
 5.  **[属性]** ペインの **Postal Code** 属性を、 **[階層とレベル]** ペインの **Customer Geography** ユーザー階層 ( **City** レベルのすぐ下) にドラッグします。  
   
@@ -127,6 +126,6 @@ ms.locfileid: "48049232"
      ユーザー定義階層には、非表示にした **Postal Code** レベルと **Full Name**レベルが表示されます。  
   
 ## <a name="next-task-in-lesson"></a>このレッスンの次の作業  
- [2 次属性に基づく属性メンバーの並べ替え](../analysis-services/lesson-4-5-sorting-attribute-members-based-on-a-secondary-attribute.md)  
+ [2 次属性に基づく属性メンバーの並べ替え](lesson-4-5-sorting-attribute-members-based-on-a-secondary-attribute.md)  
   
   

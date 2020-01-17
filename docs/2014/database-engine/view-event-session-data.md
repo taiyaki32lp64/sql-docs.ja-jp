@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 ms.assetid: ac742a01-2a95-42c7-b65e-ad565020dc49
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: befef498ab4cda12ce38a34678b78a2b5dcd278c
-ms.sourcegitcommit: 08b3de02475314c07a82a88c77926d226098e23f
+ms.openlocfilehash: e2fecf8a71854d7f8df160ba3ff63912086a34e5
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49120299"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "67131793"
 ---
 # <a name="view-event-session-data"></a>イベント セッション データの表示
   このトピックでは、表示のユーザー インターフェイスを使用して、拡張イベント データを表示および分析する方法について説明します。  
@@ -28,10 +27,10 @@ ms.locfileid: "49120299"
 ## <a name="view-target-data"></a>[ターゲット データの表示]  
  [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]内で指定したターゲットに収集されたデータを表示することができます。  
   
-### <a name="view-target-data"></a>ターゲット データの表示  
+### <a name="view-target-data"></a>[ターゲット データの表示]  
  ターゲット データを表示するには:  
   
-1.  オブジェクト エクスプローラーで、 **[管理]**、 **[拡張イベント]**、 **[セッション]** の順に展開し、セッションを展開します。  
+1.  オブジェクト エクスプローラーで、 **[管理]** 、 **[拡張イベント]** 、 **[セッション]** の順に展開し、セッションを展開します。  
   
 2.  ターゲット名を右クリックし、 **[ターゲット データの表示]** をクリックしてターゲット データを表示します。  
   
@@ -45,23 +44,27 @@ ms.locfileid: "49120299"
   
 -   event_file ターゲットの場合、ファイル ターゲット データ (.XEL ファイル) を表示するには、次のいずれかの方法を使用します。  
   
-    -   [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] で [ファイル] -> [開く] を使用する。  
-  
-    -   [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]にファイルをドラッグ アンド ドロップする。  
-  
+    -   ファイルを使用するには [開く]-> [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]します。
+    
+    -   ドラッグ アンド ドロップ ファイルを[!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]します。 
+    
     -   .XEL ファイルをダブルクリックする。  
-  
-    -   [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]で、実行中の拡張イベント セッションを右クリックし、[ターゲット データの表示] をクリックする。  
-  
-    -   [fn_xe_file_target_read_file](/sql/relational-databases/system-functions/sys-fn-xe-file-target-read-file-transact-sql)  
-  
-    -   1 つ以上を表示することができます。XEL ファイルを選択して**拡張イベント ファイルの結合**ファイルから、開く メニュー。  
-  
+    
+    -   [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]で、実行中の拡張イベント セッションを右クリックし、[ターゲット データの表示] をクリックする。 
+    
+    -   [fn_xe_file_target_read_file](/sql/relational-databases/system-functions/sys-fn-xe-file-target-read-file-transact-sql)します。
+    
+    -   使用して、Powershell で読み取り-SQLXevent [SQLServer.XEvent モジュール](https://www.powershellgallery.com/packages/SqlServer.XEvent)します。
+    
+    -   使用してプログラムで XEvents を使用、 [XELite NuGet](https://www.nuget.org/packages/Microsoft.SqlServer.XEvent.XELite)します。
+    
+    -   1 つ以上を表示することができます。XEL ファイルを選択して**拡張イベント ファイルの結合**ファイルから、開く メニュー。
+
 ### <a name="watching-live-data"></a>ライブ データの監視  
  キャプチャされているライブ データを監視することができます。  
   
 -   オブジェクト エクスプローラーで **[管理]** ノード、 **[拡張イベント]** ノード、および **[セッション]** ノードの順に展開します。  
-  
+
 -   セッション名を右クリックし、 **[ライブ データの監視]** をクリックしてトレース データを表示します。  
   
      既定の表示列は、 **Event Name** と **TimeStamp**です。  
@@ -69,7 +72,9 @@ ms.locfileid: "49120299"
      トレース ウィンドウに列を追加するには、[拡張イベント] ツール バーで **[列の選択]** をクリックします。 **[詳細]** タブに選択したイベントのすべてのイベント情報が表示されます。  
   
      イベントは通常、約 30 秒間表示されます。 待機時間を変更するには、 **[新しいセッション]** ダイアログの **[詳細設定]** ページで **[ディスパッチの最大待機時間]** を変更します。  
-  
+     
+-    ライブ データをストリームできる、 [SqlServer.XEvent PowerShell モジュール](https://www.powershellgallery.com/packages/SqlServer.XEvent)します。
+     
 ### <a name="to-refresh-target-data"></a>ターゲット データを更新するには  
  event_files ターゲットでは、ターゲット データの更新はサポートされていません。  
   
@@ -218,7 +223,7 @@ ms.locfileid: "49120299"
   
 -   .CSV ファイル  
   
- トレース結果をコピーするには、セルまたは行 (行は複数可) を選択し、右クリックして、 **[コピー]** をクリックし、 **[セル]**、 **[行]**、または **[詳細]** をクリックします。 拡張イベントは、最大 1000 行のコピーをサポートしています。  
+ トレース結果をコピーするには、セルまたは行 (行は複数可) を選択し、右クリックして、 **[コピー]** をクリックし、 **[セル]** 、 **[行]** 、または **[詳細]** をクリックします。 拡張イベントは、最大 1000 行のコピーをサポートしています。  
   
  トレース結果を .XEL ファイル、テーブル、または .CSV ファイルにエクスポートするには、 **で** [拡張イベント] **メニュー オプションの** [エクスポート先] [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]をクリックします。  
   

@@ -18,11 +18,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 04a7db670171f6f890f55a89e2da987ef2309f0e
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48218855"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62657682"
 ---
 # <a name="commands-generating-multiple-rowset-results"></a>複数行セットの結果を生成するコマンド
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB プロバイダーから複数の行セットを返すことができます[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]ステートメント。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のステートメントは、次の条件が満たされた場合に複数行セットの結果を返します。  
@@ -48,7 +48,7 @@ WCHAR*       wSQLString = L"SELECT * FROM Categories; "
   
 -   [IMultipleResults を使用した複数の結果セットの処理](using-imultipleresults-to-process-multiple-result-sets.md)  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [[コマンド]](commands.md)  
   
   

@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: c226aba7-a2f4-4b32-b640-92654b40e5a7
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 626ee1de57fdcecdf53d20263b1717df25480c40
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 8d71e3522ab46116e378b2ee17689a7048af04c6
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52532522"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68003308"
 ---
 # <a name="sqlgetinfo-access-driver"></a>SQLGetInfo (Access ドライバー)
 > [!NOTE]  
@@ -188,7 +187,7 @@ ms.locfileid: "52532522"
   
  PIVOT  
   
- 短い  
+ SHORT  
   
  1 つ  
   
@@ -204,7 +203,7 @@ ms.locfileid: "52532522"
   
  [TEXT]  
   
- 先頭に戻る  
+ TOP  
   
  変換  
   

@@ -13,17 +13,17 @@ helpviewer_keywords:
 - FileTable [SQL Server], see FileTables [SQL Server]
 - FileTable [SQL Server]
 ms.assetid: a57b629c-e9ed-48fd-9a48-ed3787d80c8f
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: 93461858c1318b65d3fd75160e06785847c265a6
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: MikeRayMSFT
+ms.author: mikeray
+ms.openlocfilehash: 8993c5e9ea1334b5bb8a002f1991041886a9f282
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47598290"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68125168"
 ---
 # <a name="filetables-sql-server"></a>FileTables (SQL Server)
+
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   FileTable 機能は、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]に格納されているファイル データに対して Windows ファイル名前空間のサポートと Windows アプリケーションとの互換性を提供します。 FileTable により、アプリケーションは、ストレージとデータ管理コンポーネントを統合し、非構造化データおよびメタデータに対する統合 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] サービス (フルテキスト検索、セマンティック検索など) を提供できます。  
   
@@ -60,7 +60,7 @@ ms.locfileid: "47598290"
   
 -   各行には次のアイテムが含まれます。 FileTable のスキーマの詳細については、「 [FileTable スキーマ](../../relational-databases/blob/filetable-schema.md)」を参照してください。  
   
-    -   ストリーム データ用の **file_stream** 列、および **stream_id** (GUID) 識別子  ( **file_stream** 列はディレクトリでは NULL です)。  
+    -   ストリーム データ用の **file_stream** 列、および **stream_id** (GUID) 識別子 ( **file_stream** 列はディレクトリでは NULL です)。  
   
     -   現在のアイテム (ファイルまたはディレクトリ) 、およびディレクトリ階層を表して保持するための、**path_locator** 列と **parent_path_locator** 列の両方。  
   
@@ -83,6 +83,8 @@ ms.locfileid: "47598290"
 -   Windows API の操作は、本質的には非トランザクションであり、ユーザー トランザクションに関連しません。 ただし、通常のテーブルの FILESTREAM 列の場合のように、FileTable に格納されている FILESTREAM データへのトランザクション アクセスは、完全にサポートされます。  
   
 -   FileTable に対して、通常の [!INCLUDE[tsql](../../includes/tsql-md.md)] アクセスによってクエリおよび更新を実行することもできます。 また、FileTable は、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 管理ツールや、バックアップなどの機能と統合されています。  
+
+-   dbmail を介して電子メールの要求を送信し、filestream ディレクトリ内のファイルを添付することができません (そのため filetable 内のファイルも添付できません)。 ファイル システム フィルター ドライバーの RsFx0420 は、ファイルストリーム フォルダーに出入りする着信 I/O 要求を検査します。 SQLServer 実行可能ファイルと Filestream コードのいずれの要求でもない場合、その要求は明示的に許可されません。
   
 ##  <a name="additional"></a> FileTable の使用に関するその他の考慮事項  
   

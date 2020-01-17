@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: f0216f4a-46e3-48ae-be0a-e2625e8403a6
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: e5510eb58315f70195eb40390edec1766c350fb6
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 92e3694690ef1cba210da29766e7528762e691f2
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47662350"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68061599"
 ---
 # <a name="scrollable-cursors-and-transaction-isolation"></a>スクロール可能なカーソルとトランザクション分離
 次の表は、変更の可視性を規定する要因を一覧表示します。  
@@ -40,27 +39,27 @@ ms.locfileid: "47662350"
   
 |カーソル type\action|self|所有<br /><br /> トランザクション|どうやって<br /><br /> トランザクション<br /><br /> (RU[a])|どうやって<br /><br /> トランザクション<br /><br /> (RC[a])|どうやって<br /><br /> トランザクション<br /><br /> (RR[a])|どうやって<br /><br /> トランザクション<br /><br /> (S[a])|  
 |-------------------------|----------|-----------------|----------------------------------|----------------------------------|----------------------------------|---------------------------------|  
-|静的|||||||  
+|スタティック|||||||  
 |Insert|おそらく [b]|いいえ|いいえ|いいえ|いいえ|いいえ|  
-|Update|おそらく [b]|いいえ|いいえ|いいえ|いいえ|いいえ|  
+|更新|おそらく [b]|いいえ|いいえ|いいえ|いいえ|いいえ|  
 |DELETE|おそらく [b]|いいえ|いいえ|いいえ|いいえ|いいえ|  
 |キーセット ドリブン|||||||  
 |Insert|おそらく [b]|いいえ|いいえ|いいえ|いいえ|いいえ|  
-|Update|はい|はい|はい|はい|いいえ|いいえ|  
-|DELETE|おそらく [b]|はい|はい|はい|いいえ|いいえ|  
+|更新|はい|[はい]|[はい]|[はい]|いいえ|いいえ|  
+|DELETE|おそらく [b]|はい|[はい]|[はい]|いいえ|いいえ|  
 |動的|||||||  
-|Insert|はい|はい|はい|はい|はい|いいえ|  
-|Update|はい|はい|はい|はい|いいえ|いいえ|  
-|DELETE|はい|はい|はい|はい|いいえ|いいえ|  
+|Insert|[はい]|[はい]|[はい]|[はい]|[はい]|いいえ|  
+|更新|はい|[はい]|[はい]|[はい]|いいえ|いいえ|  
+|DELETE|はい|[はい]|[はい]|[はい]|いいえ|いいえ|  
   
  [a] かっこで囲まれた文字は、カーソルを含むトランザクションの分離レベルを示します(これで、変更が行われた)、その他のトランザクションの分離レベルは関係ありません。  
   
- RU: 読み取りコミットされていません。  
+ RU:READ UNCOMMITTED  
   
- コミットされた RC: 読み取り  
+ RC:READ COMMITTED  
   
- RR: Repeatable read  
+ RR:REPEATABLE READ  
   
- %S: シリアル化可能です  
+ %S:Serializable  
   
  [b]、カーソルの実装方法に依存します。 SQL_STATIC_SENSITIVITY オプションを使用して、カーソルがこのような変更を検出するかどうかは報告**SQLGetInfo**します。

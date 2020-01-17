@@ -34,15 +34,14 @@ helpviewer_keywords:
 - progress reporting [DBCC statements]
 - informational statements [SQL Server]
 ms.assetid: c6da8c04-5b6b-459a-9f76-110c92ca8b29
-author: uc-msft
+author: pmasl
 ms.author: umajay
-manager: craigg
-ms.openlocfilehash: 30b407b4cbfd10f6a5844978bbabbb9bf26e2784
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 7f0d3d07f6f4a0ef3a35991c4805c478ed702bdf
+ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47731350"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "73982441"
 ---
 # <a name="dbcc-transact-sql"></a>DBCC (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -51,14 +50,14 @@ ms.locfileid: "47731350"
   
 データベース コンソール コマンドは、次のように分類されます。
   
-|コマンドの分類|実行内容|  
+|コマンドのカテゴリ|実行内容|  
 |---|---|
 |メンテナンス|データベース、インデックスまたはファイル グループを対象とするメンテナンス タスク。|  
 |その他|トレース フラグの有効化やメモリからの DLL の削除など、その他のタスク。|  
 |情報提供|さまざまな種類の情報を収集および表示するタスク。|  
 |検証|データベース、テーブル、インデックス、カタログ、ファイル グループ、またはデータベース ページの割り当ての検証操作。|  
   
-DBCC コマンドは入力パラメーターをとり、値を返します。 すべての DBCC コマンド パラメーターには、Unicode と DBCS の両方のリテラルを使用できます。
+DBCC コマンドは入力パラメーターをと受け取り、値を返します。 すべての DBCC コマンド パラメーターには、Unicode と DBCS の両方のリテラルを使用できます。
   
 ## <a name="dbcc-internal-database-snapshot-usage"></a>DBCC 内部データベース スナップショットの使用  
 次の DBCC コマンドは、[!INCLUDE[ssDE](../../includes/ssde-md.md)]で作成される内部の読み取り専用データベース スナップショットに対して実行でき、 これにより、コマンド実行時のブロックやコンカレンシーの問題を回避できます。 詳細については、「[データベース スナップショット &#40;SQL Server&#41;](../../relational-databases/databases/database-snapshots-sql-server.md)」を参照してください。
@@ -101,12 +100,12 @@ DBCC コマンドを次の対象に実行する場合は、内部データベー
 |---------------------|-----------------|------------------------------------|  
 |DBCC TABLE CHECK|このフェーズでは、データベースのオブジェクトの論理的および物理的な一貫性がチェックされます。|進行状況はデータベース ページ レベルでレポートされます。<br /><br /> 進行状況レポートの値は、1,000 データベース ページがチェックされるたびに更新されます。|  
 |DBCC TABLE REPAIR|このフェーズでは、REPAIR_FAST、REPAIR_REBUILD、または REPAIR_ALLOW_DATA_LOSS が指定され、修復が必要なオブジェクト エラーがある場合に、データベース修復が実行されます。|進行状況は個々の修復レベルでレポートされます。<br /><br /> カウンターは修復が完了するたびに更新されます。|  
-|DBCC ALLOC CHECK|このフェーズでは、データベースの割り当て構造がチェックされます。<br /><br /> 注: DBCC CHECKALLOC でも同じチェックが実行されます。|進行状況はレポートされません。|  
+|DBCC ALLOC CHECK|このフェーズでは、データベースの割り当て構造がチェックされます。<br /><br /> 注:DBCC CHECKALLOC でも同じチェックが実行されます。|進行状況はレポートされません。|  
 |DBCC ALLOC REPAIR|このフェーズでは、REPAIR_FAST、REPAIR_REBUILD、または REPAIR_ALLOW_DATA_LOSS が指定され、修復が必要なアロケーション エラーがある場合に、データベース修復が実行されます。|進行状況はレポートされません。|  
 |DBCC SYS CHECK|このフェーズでは、データベース システム テーブルがチェックされます。|進行状況はデータベース ページ レベルでレポートされます。<br /><br /> 進行状況レポートの値は、1,000 データベース ページがチェックされるたびに更新されます。|  
 |DBCC SYS REPAIR|このフェーズでは、REPAIR_FAST、REPAIR_REBUILD、または REPAIR_ALLOW_DATA_LOSS が指定され、修復が必要なシステム テーブル エラーがある場合に、データベース修復が実行されます。|進行状況は個々の修復レベルでレポートされます。<br /><br /> カウンターは修復が完了するたびに更新されます。|  
-|DBCC SSB CHECK|このフェーズでは、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Service Broker オブジェクトがチェックされます。<br /><br /> 注: このフェーズは、DBCC CHECKTABLE を実行した場合は実行されません。|進行状況はレポートされません。|  
-|DBCC CHECKCATALOG|このフェーズでは、データベース カタログの一貫性がチェックされます。<br /><br /> 注: このフェーズは、DBCC CHECKTABLE を実行した場合は実行されません。|進行状況はレポートされません。|  
+|DBCC SSB CHECK|このフェーズでは、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Service Broker オブジェクトがチェックされます。<br /><br /> 注:このフェーズは、DBCC CHECKTABLE を実行した場合は実行されません。|進行状況はレポートされません。|  
+|DBCC CHECKCATALOG|このフェーズでは、データベース カタログの一貫性がチェックされます。<br /><br /> 注:このフェーズは、DBCC CHECKTABLE を実行した場合は実行されません。|進行状況はレポートされません。|  
 |DBCC IVIEW CHECK|このフェーズでは、データベースに存在するインデックス付きビューの論理的な一貫性がチェックされます。|進行状況は、チェックされたデータベース ビュー レベルでレポートされます。|  
   
 ## <a name="informational-statements"></a>情報ステートメント  
@@ -144,6 +143,6 @@ DBCC コマンドを次の対象に実行する場合は、内部データベー
 |[DBCC dllname (FREE)](../../t-sql/database-console-commands/dbcc-dllname-free-transact-sql.md)|[DBCC HELP](../../t-sql/database-console-commands/dbcc-help-transact-sql.md)|  
 |[DBCC FLUSHAUTHCACHE](../../t-sql/database-console-commands/dbcc-flushauthcache-transact-sql.md)|[DBCC TRACEOFF](../../t-sql/database-console-commands/dbcc-traceoff-transact-sql.md)|  
 |[DBCC FREESESSIONCACHE](../../t-sql/database-console-commands/dbcc-freesessioncache-transact-sql.md)|[DBCC TRACEON](../../t-sql/database-console-commands/dbcc-traceon-transact-sql.md)|  
-|[DBCC FREESYSTEMCACHE](../../t-sql/database-console-commands/dbcc-freesystemcache-transact-sql.md)|[DBCC CLONEDATABASE](../../t-sql/database-console-commands/dbcc-clonedatabase-transact-sql.md) <br /><br /> **適用対象**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] SP2 から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。|  
+|[DBCC FREESYSTEMCACHE](../../t-sql/database-console-commands/dbcc-freesystemcache-transact-sql.md)|[DBCC CLONEDATABASE](../../t-sql/database-console-commands/dbcc-clonedatabase-transact-sql.md) <br /><br /> **適用対象**:[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] SP2 以降。|  
   
   

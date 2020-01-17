@@ -18,17 +18,20 @@ helpviewer_keywords:
 - roles [Integration Services]
 - db_ssisltduser role
 ms.assetid: 9702e90c-fada-4978-a473-1b1423017d80
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: 8fbc95fb105a5bfcb3eebc09a728d6487ffbf4bb
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 3290aa2297ca849ed175b7db109f6b200debc789
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47793733"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71295680"
 ---
 # <a name="integration-services-roles-ssis-service"></a>Integration Services のロール (SSIS サービス)
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] は、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]に格納されたパッケージに安全にアクセスするための固定データベース レベルの特定のロールを提供します。 利用可能なロールは、パッケージを SSIS カタログ データベース (SSISDB) に保存するか、msdb データベースに保存するかどうかによって異なります。  
   
 ## <a name="roles-in-the-ssis-catalog-database-ssisdb"></a>SSIS カタログ データベース (SSISDB) のロール  
@@ -138,7 +141,7 @@ ms.locfileid: "47793733"
   
  **sysssispackages** テーブルの **ownersid** 列には、パッケージを作成したユーザーの一意なセキュリティ識別子が表示されます。  
   
-### <a name="options"></a>[変数]  
+### <a name="options"></a>オプション  
  **[パッケージ名]**  
  パッケージの名前を指定します。  
   

@@ -1,5 +1,5 @@
 ---
-title: SQLServerClob のメンバー |Microsoft Docs
+title: SQLServerClob Members |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -11,13 +11,12 @@ apitype: Assembly
 ms.assetid: 7db785ca-edd5-4833-8053-17fdbf87279a
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: b77219ffbd397b830e1706a84ce5b7ae00aaa6e5
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 55e306b2fe7b8f52655f504d63f02ffc26e04ea1
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47736720"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67971780"
 ---
 # <a name="sqlserverclob-members"></a>SQLServerClob のメンバー
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

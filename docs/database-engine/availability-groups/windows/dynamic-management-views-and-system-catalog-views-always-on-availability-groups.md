@@ -1,7 +1,7 @@
 ---
-title: AlwaysOn 可用性グループの動的管理ビューとシステム カタログ ビュー
+title: 可用性グループの DMV とシステム カタログ ビュー
 description: Always On 可用性グループの正常性を監視し、診断するために役立つ一連の動的管理ビューとカタログ ビュー。
-ms.custom: ag-guide, seodec18
+ms.custom: seo-lt-2019
 ms.date: 06/13/2017
 ms.prod: sql
 ms.reviewer: ''
@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 4320a4a4-6183-462b-8bda-e7424e7cb706
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 8126cd6d7dba1f8cfab856d4e7b76288581e7f87
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: 0389f613d9b7a26aa14c5a8388ee8cd34036ddf8
+ms.sourcegitcommit: f8cf8cc6650a22e0b61779c20ca7428cdb23c850
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53209311"
+ms.lasthandoff: 12/04/2019
+ms.locfileid: "74822332"
 ---
 # <a name="dynamic-management-views-and-system-catalog-views-always-on-availability-groups"></a>動的管理ビューおよびシステム カタログ ビュー (Always On 可用性グループ)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

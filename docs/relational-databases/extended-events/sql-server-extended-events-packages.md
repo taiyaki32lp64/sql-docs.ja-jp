@@ -1,6 +1,5 @@
 ---
-title: SQL Server 拡張イベント パッケージ | Microsoft Docs
-ms.custom: ''
+title: SQL Server 拡張イベント パッケージ
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -13,16 +12,16 @@ helpviewer_keywords:
 ms.assetid: 6bcb04fc-ca04-48f4-b96a-20b604973447
 author: MightyPen
 ms.author: genemi
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 19d870d64816dfea011bc0a5c245b5a18a8f5aa3
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 37c4b2c9972dbd8e236f8a8e64f312a15a3353ac
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51675821"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75242927"
 ---
 # <a name="sql-server-extended-events-packages"></a>SQL Server 拡張イベント パッケージ
+
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
   パッケージは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 拡張イベント オブジェクトのコンテナーです。 拡張イベント パッケージには、次の 3 種類があります。  
@@ -40,7 +39,7 @@ ms.locfileid: "51675821"
   
  パッケージには、次のいずれかまたはすべてのオブジェクトを含めることができます。この点については、このトピックの後半で詳しく説明します。  
   
--   イベント  
+-   events  
   
 -   対象サーバー  
   
@@ -57,9 +56,9 @@ ms.locfileid: "51675821"
 ## <a name="package-contents"></a>パッケージの内容  
  次の図は、パッケージ内に存在することのできるオブジェクトを示しています。これらは、モジュール内に格納されます。 モジュールは、実行可能ファイルかダイナミック リンク ライブラリ (DLL) です。  
   
- ![モジュール、パッケージ、オブジェクトの関係](../../relational-databases/extended-events/media/xepackagesobjects.gif "モジュール、パッケージ、オブジェクトの関係")  
+ ![モジュール、パッケージ、およびオブジェクトの関係](../../relational-databases/extended-events/media/xepackagesobjects.gif "モジュール、パッケージ、およびオブジェクトの関係")  
   
-### <a name="events"></a>イベント  
+### <a name="events"></a>events  
  イベントは、プログラム ( [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]など) の実行パスにおける、監視対象となる地点です。 イベントは、監視対象の地点まで到達したという事実のほか、イベントが生成された時点の状態情報を伴って発生します。  
   
  イベントは、トレースを行う目的、またはアクションのトリガーを起動する目的でのみ使用できます。 これらのアクションは同期的に実行される場合と非同期的に実行される場合とがあります。  
@@ -78,10 +77,10 @@ ms.locfileid: "51675821"
   
  チャネルは、イベントの対象ユーザーを識別します。 次の表でこれらのチャネルについて説明します。  
   
-|項目|定義|  
+|期間|定義|  
 |----------|----------------|  
-|管理|管理イベントの対象は、主にエンド ユーザー、管理者、およびサポートです。 管理チャネルのイベントは、管理者が対応できる明確な解決策が存在する問題を示します。 たとえば、アプリケーションがプリンターに接続できなかった場合に発生するイベントなどがあります。 これらのイベントには、詳しい解説が付属するか、問題の解決方法をユーザーに伝えるメッセージが関連付けられています。|  
-|運用|運用イベントは、問題や事象の分析および診断のために使用されます。 問題や事象に応じたツールまたはタスクを起動する目的で使用できます。 たとえば、プリンターがシステムに追加されたり、システムから削除された場合に発生するイベントなどがあります。|  
+|[Admin]|管理イベントの対象は、主にエンド ユーザー、管理者、およびサポートです。 管理チャネルのイベントは、管理者が対応できる明確な解決策が存在する問題を示します。 たとえば、アプリケーションがプリンターに接続できなかった場合に発生するイベントなどがあります。 これらのイベントには、詳しい解説が付属するか、問題の解決方法をユーザーに伝えるメッセージが関連付けられています。|  
+|運用時|運用イベントは、問題や事象の分析および診断のために使用されます。 問題や事象に応じたツールまたはタスクを起動する目的で使用できます。 たとえば、プリンターがシステムに追加されたり、システムから削除された場合に発生するイベントなどがあります。|  
 |分析|非常に多くの分析イベントが公開されています。 プログラムの動作を説明するもので、主にパフォーマンス調査に用いられます。|  
 |デバッグ|デバッグ イベントは、開発者がデバッグ時に問題を診断する目的でのみ使用されます。<br /><br /> デバッグ チャネルのイベントでは、実装固有の内部状態データが返されます。 スキーマ、およびこのイベントによって返されるデータは、SQL Server の将来のバージョンで変更または無効化される可能性があります。 そのため、デバッグ チャネルのイベントは、SQL Server の将来のバージョンで予告なしに変更または削除されることがあります。|  
   
@@ -143,7 +142,7 @@ where name = 'keyword_map'
   
 -   イベント  
   
--   アクション (action)  
+-   action  
   
 -   ターゲット (target)  
   

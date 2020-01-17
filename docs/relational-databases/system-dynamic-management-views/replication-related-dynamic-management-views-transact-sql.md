@@ -14,25 +14,24 @@ helpviewer_keywords:
 ms.assetid: 2bf5e145-3c4c-4fb6-afa0-197342dba038
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: f69ea09d42d6080bc811730fc6f2ee0be8f5b8e1
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 9eb38392c2982234bcb2f7452c123291b8a4f600
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47733030"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68023734"
 ---
-# <a name="replication-related-dynamic-management-views-transact-sql"></a>レプリケーション関連の動的管理ビュー (Transact-SQL)
+# <a name="replication-related-dynamic-management-views-transact-sql"></a>レプリケーション関連の動的管理ビュー (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
-  ここではレプリケーションで使用される次の動的管理オブジェクトについて説明します。  
+  このセクションには、レプリケーションで使用される次の動的管理オブジェクトが含まれています。  
   
 |||  
 |-|-|  
 |[sys.dm_repl_articles](../../relational-databases/system-dynamic-management-views/sys-dm-repl-articles-transact-sql.md)|[sys.dm_repl_schemas](../../relational-databases/system-dynamic-management-views/sys-dm-repl-schemas-transact-sql.md)|  
 |[sys.dm_repl_tranhash](../../relational-databases/system-dynamic-management-views/sys-dm-repl-tranhash-transact-sql.md)|[sys.dm_repl_traninfo](../../relational-databases/system-dynamic-management-views/sys-dm-repl-traninfo-transact-sql.md)|  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [動的管理ビューおよび関数 &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)  
   
   

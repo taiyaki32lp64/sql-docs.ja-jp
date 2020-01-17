@@ -3,24 +3,23 @@ title: FILESTREAM の有効化と構成 | Microsoft Docs
 ms.custom: ''
 ms.date: 08/23/2017
 ms.prod: sql
-ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: filestream
 ms.topic: conceptual
 helpviewer_keywords:
 - FILESTREAM [SQL Server], enabling
 ms.assetid: 78737e19-c65b-48d9-8fa9-aa6f1e1bce73
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: 14bdacd3cf156e2902d8fac54b08ec939da640e7
-ms.sourcegitcommit: cb9c54054449c586360c9cb634e33f505939a1c9
+author: MikeRayMSFT
+ms.author: mikeray
+ms.openlocfilehash: 7abba927f12f4f6ae8b9c45dc4695eb64b7d5621
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/15/2019
-ms.locfileid: "54317792"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72908767"
 ---
 # <a name="enable-and-configure-filestream"></a>FILESTREAM の有効化と構成
+
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   FILESTREAM の使用を開始するには、 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]のインスタンスで FILESTREAM を有効にする必要があります。 このトピックでは、SQL Server 構成マネージャーを使用して FILESTREAM を有効にする方法について説明します。  
   
@@ -28,7 +27,7 @@ ms.locfileid: "54317792"
   
 #### <a name="to-enable-and-change-filestream-settings"></a>FILESTREAM の設定の有効化と変更  
   
-1.  **[スタート]** メニューで、 **[すべてのプログラム]**、[ [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]]、 **[構成ツール]** の順にポイントして、 **[SQL Server 構成マネージャー]** をクリックします。  
+1.  **[スタート]** メニューで、 **[すべてのプログラム]** 、[ [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]]、 **[構成ツール]** の順にポイントして、 **[SQL Server 構成マネージャー]** をクリックします。  
   
 2.  サービスの一覧で、 **[SQL Server のサービス]** を右クリックし、 **[開く]** をクリックします。  
   
@@ -58,8 +57,7 @@ ms.locfileid: "54317792"
 12. **[実行]** をクリックします。  
   
 13. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] サービスを再開します。  
-  
-  
+
 ##  <a name="best"></a> ベスト プラクティス  
   
 ###  <a name="config"></a> 物理的な構成と保守  
@@ -83,6 +81,7 @@ ms.locfileid: "54317792"
 |RAID 5|標準|標準|[非常に良い]|パフォーマンスは、1 台のディスクまたは JBOD よりも高く、RAID 0 またはストライピング機能を備えた RAID 5 よりも低くなります。|  
 |RAID 0|[非常に良い]|[非常に良い]|なし||  
 |RAID 5 + ストライピング|[非常に良い]|[非常に良い]|[非常に良い]|最も高価なオプションです。|  
+| &nbsp; | &nbsp; | &nbsp; | &nbsp; | &nbsp; |
   
   
 ###  <a name="database"></a> 物理的なデータベース設計  

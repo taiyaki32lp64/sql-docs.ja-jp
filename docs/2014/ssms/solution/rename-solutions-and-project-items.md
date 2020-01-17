@@ -16,11 +16,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: b6643499ac9df8bcfcb663baa5e9c0e5db19045e
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52760804"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63035581"
 ---
 # <a name="rename-solutions-and-project-items"></a>ソリューションとプロジェクト アイテムの名前変更
   ソリューション エクスプローラーでソリューションとプロジェクト アイテムの名前を変更できます。  

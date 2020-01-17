@@ -17,15 +17,14 @@ helpviewer_keywords:
 ms.assetid: 7188353e-ab29-49a0-8f25-7fb8ab122589
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 7189499084c40d297f30514ba2f9bf5c01ada510
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: 98c986c26c8d0d0cc6e2b8ff3573f0a20d938975
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52397645"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67942266"
 ---
-# <a name="spkillfilestreamnontransactedhandles-transact-sql"></a>sp_kill_filestream_non_transacted_handles (Transact-SQL)
+# <a name="spkillfilestreamnontransactedhandles-transact-sql"></a>sp_kill_filestream_non_transacted_handles (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   FileTable データに対する非トランザクション ファイル ハンドルを閉じます。  
@@ -42,12 +41,12 @@ sp_kill_filestream_non_transacted_handles [[ @table_name = ] 'table_name', [[ @h
   
  渡すことができます*table_name*せず*handle_id* FileTable に対する非トランザクション ハンドルを開くすべてを閉じます。  
   
- 値に NULL を渡すことが*table_name*現在のデータベース内のすべての Filetable の非トランザクション ハンドルを開くすべてを閉じます。 NULL は既定値です。  
+ 値に NULL を渡すことが*table_name*現在のデータベース内のすべての Filetable の非トランザクション ハンドルを開くすべてを閉じます。 既定値は NULL です。  
   
  *handle_id*  
  閉じる個々のハンドルのオプションの ID です。 取得することができます、 *handle_id*から、 [sys.dm_filestream_non_transacted_handles &#40;TRANSACT-SQL&#41; ](../../relational-databases/system-dynamic-management-views/sys-dm-filestream-non-transacted-handles-transact-sql.md)動的管理ビュー。 各 ID は [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンス内で一意です。 指定した場合*handle_id*の値を指定する必要も*table_name*します。  
   
- 値に NULL を渡すことが*handle_id*で指定された FileTable に対する非トランザクション ハンドルを開くすべてを閉じます*table_name*します。 NULL は既定値です。  
+ 値に NULL を渡すことが*handle_id*で指定された FileTable に対する非トランザクション ハンドルを開くすべてを閉じます*table_name*します。 既定値は NULL です。  
   
 ## <a name="return-code-value"></a>リターン コード値  
  **0** (成功) または**1** (失敗)  
@@ -95,7 +94,7 @@ EXEC sp_kill_filestream_non_transacted_handles @dbname, @table_name, @handle_id;
 GO  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [FileTable の管理](../../relational-databases/blob/manage-filetables.md)  
  [Filestream および FileTable 動的管理ビュー (TRANSACT-SQL)](../system-dynamic-management-views/filestream-and-filetable-dynamic-management-views-transact-sql.md)
  <br>[Filestream および FileTable のカタログ ビュー (TRANSACT-SQL)](../system-catalog-views/filestream-and-filetable-catalog-views-transact-sql.md)

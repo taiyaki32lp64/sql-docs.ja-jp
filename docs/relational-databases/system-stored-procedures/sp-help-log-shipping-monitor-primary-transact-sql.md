@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: d9dfcb8f-1da6-49ca-a2c8-411574915434
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 04e1fb52d74366893ff43deb9fabad9cac7135cc
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b3f579fb9a263b69755baaa1be84f6d51e9beac1
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47843897"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68113843"
 ---
 # <a name="sphelplogshippingmonitorprimary-transact-sql"></a>sp_help_log_shipping_monitor_primary (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -42,11 +41,9 @@ sp_help_log_shipping_monitor_primary
 ```  
   
 ## <a name="arguments"></a>引数  
- [  **@primary_server =** ] '*primary_server*'  
- プライマリ インスタンスの名前、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]ログ配布構成にします。 *primary_server*は**sysname** NULL にすることはできません。  
+`[ @primary_server = ] 'primary_server'` プライマリ インスタンスの名前、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]ログ配布構成にします。 *primary_server*は**sysname** NULL にすることはできません。  
   
- [  **@primary_database =** ] '*primary_database*'  
- プライマリ サーバー上のデータベースの名前を指定します。 *primary_database*は**sysname**、既定値はありません。  
+`[ @primary_database = ] 'primary_database'` プライマリ サーバー上のデータベースの名前です。 *primary_database*は**sysname**、既定値はありません。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  0 (成功) または 1 (失敗)  
@@ -58,12 +55,12 @@ sp_help_log_shipping_monitor_primary
 |**primary_id**|ログ配布構成におけるプライマリ データベースの ID。|  
 |**primary_server**|ログ配布構成における [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]のプライマリ インスタンスの名前。|  
 |**primary_database**|ログ配布構成におけるプライマリ データベースの名前。|  
-|**backup_threshold**|バックアップ操作が始まってから警告が生成されるまでの許容経過時間 (分単位)。|  
+|**backup_threshold**|分単位の許容経過時間を通知する前にバックアップ操作の数が生成されます。|  
 |**threshold_alert**|バックアップのしきい値を超えたときに発生する警告。|  
-|**threshold_alert_enabled**|バックアップのしきい値の警告が有効かどうか。 1 = 有効、0 = 無効。|  
+|**threshold_alert_enabled**|バックアップのしきい値のアラートが有効になっているかどうかを決定します。 1 = 有効になっています。0 = 無効になっています。|  
 |**last_backup_file**|最新のトランザクション ログ バックアップの絶対パス。|  
-|**last_backup_date**|プライマリ データベースに対して最後にトランザクション ログのバックアップ操作を行った日時。|  
-|**last_backup_date_utc**|プライマリ データベースに対して最後にトランザクション ログのバックアップ操作を行った日時。協定世界時 (UTC) で表されます。|  
+|**last_backup_date**|最後のトランザクションの日付と時刻は、プライマリ データベースでバックアップ操作にログインします。|  
+|**last_backup_date_utc**|最後のトランザクションの日付と時刻は、世界協定時刻で表される、プライマリ データベースでバックアップ操作にログインします。|  
 |**history_retention_period**|指定したプライマリ データベースでログ配布履歴レコードが保持される時間 (分単位)。この時間を過ぎるとレコードは削除されます。|  
   
 ## <a name="remarks"></a>コメント  
@@ -72,7 +69,7 @@ sp_help_log_shipping_monitor_primary
 ## <a name="permissions"></a>アクセス許可  
  メンバーのみ、 **sysadmin**固定サーバー ロールは、この手順を実行できます。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [ログ配布について &#40;SQL Server&#41;](../../database-engine/log-shipping/about-log-shipping-sql-server.md)   
  [システム ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   

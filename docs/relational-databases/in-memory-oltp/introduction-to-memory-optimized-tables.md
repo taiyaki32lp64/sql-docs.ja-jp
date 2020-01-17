@@ -10,14 +10,13 @@ ms.topic: conceptual
 ms.assetid: ef1cc7de-63be-4fa3-a622-6d93b440e3ac
 author: MightyPen
 ms.author: genemi
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 0dc7ab298607964f4b9a6d7c1c7fa74a53c6bc83
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: 9fe7d83331ee1dc0824e77602c60be04e070fb6f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52399275"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68050204"
 ---
 # <a name="introduction-to-memory-optimized-tables"></a>メモリ最適化テーブルの概要
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -60,9 +59,9 @@ SQL Server 2016 以降、および Azure SQL Database では、インメモリ O
   
 |機能|ネイティブ コンパイル ストアド プロシージャを使用したアクセス|解釈された [!INCLUDE[tsql](../../includes/tsql-md.md)] アクセス|CLR アクセス|  
 |-------------|-------------------------------------------------------|-------------------------------------------|----------------|  
-|メモリ最適化テーブル|[ユーザー アカウント制御]|[ユーザー アカウント制御]|なし*|  
-|メモリ最適化テーブル型|[ユーザー アカウント制御]|[はい]|いいえ|  
-|ネイティブ コンパイル ストアド プロシージャ|ネイティブ コンパイル ストアド プロシージャの入れ子がサポートされるようになりました。 参照先のプロシージャがネイティブにコンパイルされている場合は、ストアド プロシージャ内で EXECUTE 構文を使用できます。|[ユーザー アカウント制御]|いいえ*|  
+|メモリ最適化テーブル|はい|はい|なし*|  
+|メモリ最適化テーブル型|はい|はい|いいえ|  
+|ネイティブ コンパイル ストアド プロシージャ|ネイティブ コンパイル ストアド プロシージャの入れ子がサポートされるようになりました。 参照先のプロシージャがネイティブにコンパイルされている場合は、ストアド プロシージャ内で EXECUTE 構文を使用できます。|はい|いいえ*|  
   
  *コンテキスト接続 (CLR モジュールを実行するときの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] からの接続) からメモリ最適化テーブルまたはネイティブ コンパイル ストアド プロシージャにアクセスすることはできません。 ただし、別の接続を作成して開き、そこからメモリ最適化テーブルおよびネイティブ コンパイル ストアド プロシージャにアクセスできます。  
   
@@ -83,7 +82,7 @@ SQL Server 2016 以降、および Azure SQL Database では、インメモリ O
   
 *インデックス操作:* インデックス操作はログに記録されず、メモリ内にのみ存在します。  
   
-*コンカレンシー:* ラッチの競合やブロックなど、エンジンレベルのコンカレンシーがパフォーマンスに影響するアプリケーションの場合、アプリケーションをインメモリ OLTP に移行するとパフォーマンスが大幅に向上します。  
+*同時実行:* ラッチの競合やブロックなど、エンジンレベルのコンカレンシーがパフォーマンスに影響するアプリケーションの場合、アプリケーションをインメモリ OLTP に移行するとパフォーマンスが大幅に向上します。  
   
 次の表は、リレーショナル データベースで一般的に生じるパフォーマンスとスケーラビリティの問題、およびインメモリ OLTP によってどのようにパフォーマンスが向上するかを示しています。  
   

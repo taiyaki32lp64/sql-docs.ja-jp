@@ -14,17 +14,20 @@ f1_keywords:
 helpviewer_keywords:
 - FTP task [Integration Services]
 ms.assetid: 41c3f2c4-ee04-460a-9822-bb9ae4036c2e
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: ab81a9e76ea17a683062431da678fa679ceffdee
-ms.sourcegitcommit: 170c275ece5969ff0c8c413987c4f2062459db21
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: d606e66c3ad7a78edf3808578fe3021d2933b22d
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/11/2019
-ms.locfileid: "54226639"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71294139"
 ---
 # <a name="ftp-task"></a>FTP タスク
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   FTP タスクは、データ ファイルをダウンロードまたはアップロードし、サーバー上のディレクトリを管理します。 たとえば、パッケージは、リモート サーバーまたはインターネット サイトから、 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] パッケージ ワークフローの一部としてデータ ファイルをダウンロードできます。 FTP タスクは、次の目的で使用できます。  
   
 -   データを移動し、変換をデータに適用する前または後で、あるディレクトリから別のディレクトリに、ディレクトリやデータ ファイルをコピーします。  
@@ -82,7 +85,7 @@ ms.locfileid: "54226639"
   
 ### <a name="options"></a>オプション  
  **[FtpConnection]**  
- 既存の FTP 接続マネージャーを選択するか、[\<**新しい接続...**>] をクリックして接続マネージャーを作成します。  
+ 既存の FTP 接続マネージャーを選択するか、[\<**新しい接続...** >] をクリックして接続マネージャーを作成します。  
   
 > [!IMPORTANT]  
 >  FTP 接続マネージャーでは、匿名認証と基本認証のみがサポートされています。 Windows 認証はサポートされていません。  
@@ -92,7 +95,7 @@ ms.locfileid: "54226639"
  **[StopOnFailure]**  
  FTP 操作が失敗した場合に FTP タスクを終了するかどうかを示します。  
   
- **名前**  
+ **[名前]**  
  FTP タスクの一意な名前を指定します。 この名前は、タスク アイコンのラベルとして使用されます。  
   
 > [!NOTE]  
@@ -129,8 +132,8 @@ ms.locfileid: "54226639"
   
 |ReplTest1|[説明]|  
 |-----------|-----------------|  
-|**ファイルの送信**|ファイルを送信します。 この値を選択すると、動的オプションの **[LocalVariable]**、 **[LocalPathRemoteVariable]** 、 **[RemotePath]** が表示されます。|  
-|**ファイルの受信**|ファイルを受信します。 この値を選択すると、動的オプションの **[LocalVariable]**、 **[LocalPathRemoteVariable]** 、 **[RemotePath]** が表示されます。|  
+|**ファイルの送信**|ファイルを送信します。 この値を選択すると、動的オプションの **[LocalVariable]** 、 **[LocalPathRemoteVariable]** 、 **[RemotePath]** が表示されます。|  
+|**ファイルの受信**|ファイルを受信します。 この値を選択すると、動的オプションの **[LocalVariable]** 、 **[LocalPathRemoteVariable]** 、 **[RemotePath]** が表示されます。|  
 |**ローカル ディレクトリの作成**|ローカル ディレクトリを作成します。 この値を選択すると、動的オプションの **[LocalVariable]** および **[LocalPath]** が表示されます。|  
 |**リモート ディレクトリの作成**|リモート ディレクトリを作成します。 この値を選択すると、動的オプションの **[RemoteVariable]** および **[RemotePath]** が表示されます。|  
 |**ローカル ディレクトリの削除**|ローカル ディレクトリを削除します。 この値を選択すると、動的オプションの **[LocalVariable]** および **[LocalPath]** が表示されます。|  
@@ -145,13 +148,13 @@ ms.locfileid: "54226639"
   
 #### <a name="isremotepathvariable--true"></a>[IsRemotePathVariable] = [True]  
  **[RemoteVariable]**  
- 既存のユーザー定義変数を選択するか、[\<**新しい変数...**>] をクリックしてユーザー定義変数を作成します。  
+ 既存のユーザー定義変数を選択するか、[\<**新しい変数...** >] をクリックしてユーザー定義変数を作成します。  
   
  **関連トピック:** [Integration Services &#40;SSIS&#41; の変数](../../integration-services/integration-services-ssis-variables.md)、変数の追加  
   
 #### <a name="isremotepathvariable--false"></a>[IsRemotePathVariable] = [False]  
  **[RemotePath]**  
- 既存の FTP 接続マネージャーを選択するか、[\<**新しい接続...**>] をクリックして接続マネージャーを作成します。  
+ 既存の FTP 接続マネージャーを選択するか、[\<**新しい接続...** >] をクリックして接続マネージャーを作成します。  
   
  **関連トピック:** [FTP 接続マネージャー](../../integration-services/connection-manager/ftp-connection-manager.md)、[FTP 接続マネージャー エディター](../../integration-services/connection-manager/ftp-connection-manager-editor.md)  
   
@@ -159,13 +162,13 @@ ms.locfileid: "54226639"
   
 #### <a name="islocalpathvariable--true"></a>[IsLocalPathVariable] = [True]  
  **[LocalVariable]**  
- 既存のユーザー定義変数を選択するか、[\<**新しい変数...**>] をクリックして変数を作成します。  
+ 既存のユーザー定義変数を選択するか、[\<**新しい変数...** >] をクリックして変数を作成します。  
   
  **関連トピック:** [Integration Services &#40;SSIS&#41; の変数](../../integration-services/integration-services-ssis-variables.md)、変数の追加  
   
 #### <a name="islocalpathvariable--false"></a>[IsLocalPathVariable] = [False]  
  **[LocalPath]**  
- 既存のファイル接続マネージャーを選択するか、[\<**新しい接続...**>] をクリックして、接続マネージャーを作成します。  
+ 既存のファイル接続マネージャーを選択するか、[\<**新しい接続...** >] をクリックして、接続マネージャーを作成します。  
   
  **関連トピック:** [フラット ファイル接続マネージャー](../../integration-services/connection-manager/flat-file-connection-manager.md)  
   

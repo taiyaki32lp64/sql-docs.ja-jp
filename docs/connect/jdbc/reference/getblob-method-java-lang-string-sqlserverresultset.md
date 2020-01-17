@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: 9f730d45-b54a-4961-950e-f4447f7225e1
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 45d22674b668fd8eb9b1ba0118a5e657f67f25e7
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 06da29ea9986281bd89225c1e36920fb4de26d82
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47719390"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67953778"
 ---
 # <a name="getblob-method-javalangstring-sqlserverresultset"></a>getBlob (java.lang.String) メソッド (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -41,16 +40,16 @@ public java.sql.Blob getBlob(java.lang.String colName)
  列名を含む**文字列**です。  
   
 ## <a name="return-value"></a>戻り値  
- Blob オブジェクト。  
+ Blob オブジェクトです。  
   
 ## <a name="exceptions"></a>例外  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- この getBlob メソッドは、java.sql.ResultSet インターフェイスの getBlob メソッドによって指定されます。  
+ この getBlob メソッドは、java.sql.ResultSet インターフェイスの getBlob メソッドで規定されています。  
   
 ## <a name="see-also"></a>参照  
- [getBlob メソッド&#40;SQLServerResultSet&#41;](../../../connect/jdbc/reference/getblob-method-sqlserverresultset.md)   
+ [getBlob メソッド &#40;SQLServerResultSet&#41;](../../../connect/jdbc/reference/getblob-method-sqlserverresultset.md)   
  [SQLServerResultSet のメンバー](../../../connect/jdbc/reference/sqlserverresultset-members.md)   
  [SQLServerResultSet クラス](../../../connect/jdbc/reference/sqlserverresultset-class.md)  
   

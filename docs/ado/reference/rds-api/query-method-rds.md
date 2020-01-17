@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 20f2480f-3758-405d-a379-05a0dce74796
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: a64a4f1a51d678e70516f277c08071f5884492c1
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.openlocfilehash: f646d5ebee63981c882f5e1ece147be0ff1677e7
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51607122"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67963824"
 ---
 # <a name="query-method-rds"></a>Query メソッド (RDS)
 返す有効な SQL クエリ文字列を使用して、 [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md)します。  
@@ -41,7 +40,7 @@ Set Recordset = DataFactory.Query(Connection, Query)
  *DataFactory*  
  オブジェクト変数を表す、 [RDSServer.DataFactory](../../../ado/reference/rds-api/datafactory-object-rdsserver.md)オブジェクト。  
   
- *[接続]*  
+ *Connection*  
  A**文字列**をサーバーの接続情報を含む値です。 これに似ています、 [Connect](../../../ado/reference/rds-api/connect-property-rds.md)プロパティ。  
   
  *クエリ*  
@@ -53,7 +52,7 @@ Set Recordset = DataFactory.Query(Connection, Query)
 ## <a name="applies-to"></a>適用対象  
  [DataFactory オブジェクト (RDSServer)](../../../ado/reference/rds-api/datafactory-object-rdsserver.md)  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [DataFactory オブジェクト、クエリ メソッド、および CreateObject メソッドの例 (VBScript)](../../../ado/reference/rds-api/datafactory-object-query-method-and-createobject-method-example-vbscript.md)
 
 

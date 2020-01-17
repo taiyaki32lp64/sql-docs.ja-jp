@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.dimensiondesigner.translations.translationspane.f1
@@ -13,12 +12,12 @@ ms.assetid: 7104cc5f-f3c9-468c-8567-d78c7d84e60b
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 991f5df41294b6d44f083f3da73236eabd125cba
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: c7d879ffb8f02b41c4cc6c070946c737f9aea2c4
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48186292"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66065726"
 ---
 # <a name="translations-dimension-designer-analysis-services---multidimensional-data"></a>[翻訳] (ディメンション デザイナー) (Analysis Services - 多次元データ)
   ディメンション デザイナーの **[翻訳]** タブを使用すると、ディメンションの階層や属性と同様に、ディメンションの翻訳について定義したり管理したりできます。  
@@ -26,7 +25,7 @@ ms.locfileid: "48186292"
 ## <a name="panes"></a>ペイン  
  **[翻訳]** タブには、次のペインがあります。  
   
- [ツールバー](toolbar-translations-dimension-designer-analysis-services-multidimensional-data.md)  
+ [[ツール バー]](toolbar-translations-dimension-designer-analysis-services-multidimensional-data.md)  
  ツール バーを使用すると、ディメンション デザイナーの **[翻訳]** タブで一般的な操作を実行できます。  
   
  [翻訳の詳細](translation-details-dimension-designer-analysis-services-multidimensional-data.md)  

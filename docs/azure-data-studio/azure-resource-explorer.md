@@ -1,106 +1,104 @@
 ---
-title: Azure リソース エクスプ ローラーで Azure SQL のリソースを調べる
+title: Azure Resource Explorer を使用して Azure SQL リソースを調べる
 titleSuffix: Azure Data Studio
-description: 調査および Azure SQL Server、Azure SQL Database、Azure Resource Explorer で Azure SQL マネージ インスタンスを管理する方法について説明します。
+description: Azure Resource Explorer を使用して、Azure SQL Server、Azure SQL Database、Azure SQL Managed Instance を調査し、管理する方法について学習します。
 ms.custom: seodec18
 author: yanancai
 ms.author: yanacai
-manager: craigg
-ms.date: 09/24/2018
 ms.topic: quickstart
 ms.prod: sql
 ms.technology: azure-data-studio
-ms.openlocfilehash: d202a305468f78cf1890533292570ebb56edff12
-ms.sourcegitcommit: 189a28785075cd7018c98e9625c69225a7ae0777
-ms.translationtype: MT
+ms.date: 09/24/2018
+ms.openlocfilehash: 2a1f62ed9266b0575f037dfe9541a026a4c1ed29
+ms.sourcegitcommit: db715cad313055c8b42d547be686de8755342d65
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53030116"
+ms.lasthandoff: 11/08/2019
+ms.locfileid: "73801136"
 ---
-# <a name="explore-and-manage-azure-sql-resources-with-azure-resource-explorer"></a>調査、Azure リソース エクスプ ローラーで Azure SQL のリソースの管理
+# <a name="explore-and-manage-azure-sql-resources-with-azure-resource-explorer"></a>Azure Resource Explorer を使用して Azure SQL リソースを調査および管理する
 
-このドキュメントでは、調査し、Azure SQL Server、Azure SQL database、および Azure SQL マネージ インスタンスでの Azure リソース エクスプ ローラーを使用したリソースを管理する方法を説明します[!INCLUDE [Azure Data Studio](../includes/name-sos-short.md)]します。
+このドキュメントでは、[!INCLUDE [Azure Data Studio](../includes/name-sos-short.md)] の Azure Resource Explorer を使用して、Azure SQL Server、Azure SQL Database、Azure SQL Managed Instance のリソースを調査し、管理する方法について学習します。
 
 >[!NOTE]
->Azure リソース エクスプ ローラーは、SQL Server 2019 年 10 月プレビューでサポートされます。 その後、を介してプレビュー拡張機能をインストールすることができます[拡張機能マネージャー](extensions.md)または**ファイル** > **VSIX パッケージからのパッケージのインストール**します。
+>Azure Resource Explorer は SQL Server 2019 でサポートされています。 その後、[拡張機能マネージャー](extensions.md)または **[ファイル]**  >  **[Install Package from VSIX Package]\(VSIX パッケージからパッケージをインストールする\)** を使用して、拡張機能をインストールできます。
 
+## <a name="connect-to-azure"></a>Azure に接続する
 
-## <a name="connect-to-azure"></a>Azure への接続します。
+SQL プラグインをインストールした後、Azure アイコンが左側のメニュー バーに表示されます。 アイコンをクリックして Azure Resource Explorer を開きます。 Azure アイコンが表示されない場合は、左側のメニュー バーを右クリックし、 **[Azure Resource Explorer]** を選択します。
 
-SQL プレビューのプラグインをインストールした後は、左側のメニュー バーで、Azure のアイコンが表示されます。 Azure リソース エクスプ ローラーを開く アイコンをクリックします。 Azure のアイコンが見つからない場合、左側のメニュー バーを右クリックし、選択**Azure リソース エクスプ ローラー**します。
+### <a name="add-an-azure-account"></a>Azure アカウントを追加する
 
-### <a name="add-an-azure-account"></a>Azure アカウントを追加します。
+Azure アカウントに関連付けられている SQL リソースを表示するには、まず [!INCLUDE [Azure Data Studio](../includes/name-sos-short.md)] にアカウントを追加する必要があります。
 
-Azure のアカウントに関連付けられた SQL リソースを表示するアカウントを最初に追加する必要があります[!INCLUDE [Azure Data Studio](../includes/name-sos-short.md)]します。
+1. 左下の [アカウント管理] アイコンから、または Azure Resource Explorer の **[Azure にサインイン]** から、 **[リンクされたアカウント]** ダイアログを開きます。
 
-1. 開いている**リンクされたアカウント**ダイアログ ボックスの左下にある、または、アカウント管理アイコン**Azure にサインインしています.** Azure リソース エクスプ ローラーでリンクします。
+    ![Azure にサインインする](media/azure-resource-explorer/sign-in-to-azure.png)
 
-    ![Azure へのサインイン](media/azure-resource-explorer/sign-in-to-azure.png)
+2. **[リンクされたアカウント]** ダイアログで **[アカウントの追加]** をクリックします。
 
-2. **リンクされたアカウント**ダイアログ ボックスで、をクリックして**アカウントを追加**します。
+    ![Azure アカウントを追加する](media/azure-resource-explorer/add-an-azure-account.png)
 
-    ![Azure アカウントを追加します。](media/azure-resource-explorer/add-an-azure-account.png)
+3. **[コピーして開く]** をクリックして、認証用のブラウザーを開きます。
 
-3. クリックして**コピーして開く**認証用のブラウザーを開きます。
+    ![ブラウザーで認証ページを開く](media/azure-resource-explorer/open-authentication-in-browser.png)
 
-    ![ブラウザーで開いて認証ページ](media/azure-resource-explorer/open-authentication-in-browser.png)
+4. Web ページに**ユーザー コード**を貼り付け、 **[続行]** をクリックして認証を行います。
 
-4. 貼り付け、**ユーザー コード**web ページをクリックします**続行**を認証します。
+    ![ブラウザーでの認証](media/azure-resource-explorer/authenticate-in-browser.png)
 
-    ![ブラウザーで認証します。](media/azure-resource-explorer/authenticate-in-browser.png)
+5. [!INCLUDE [Azure Data Studio](../includes/name-sos-short.md)] の **[リンクされたアカウント]** ダイアログで、ログインしている Azure アカウントが表示されます。
 
-5. [!INCLUDE [Azure Data Studio](../includes/name-sos-short.md)]が表示されます、ログに記録された Azure アカウントに**リンクされたアカウント**ダイアログ。
+    ![Azure アカウントにサインインする](media/azure-resource-explorer/signed-in-azure-account.png)
 
-    ![Azure のアカウントのサインイン](media/azure-resource-explorer/signed-in-azure-account.png)
+### <a name="add-more-azure-accounts"></a>Azure アカウントをさらに追加する
 
-### <a name="add-more-azure-accounts"></a>その他の Azure アカウントを追加します。
+複数の Azure アカウントは [!INCLUDE [Azure Data Studio](../includes/name-sos-short.md)] でサポートされています。 Azure アカウントをさらに追加するには、 **[リンクされたアカウント]** ダイアログの右上にあるボタンをクリックし、「Azure アカウントを追加する」セクションと同じ手順に従って、Azure アカウントをさらに追加します。
 
-複数の Azure アカウントではサポートされて[!INCLUDE [Azure Data Studio](../includes/name-sos-short.md)]します。 その他の Azure アカウントを追加するには、右上にあるボタンをクリックします。**リンクされたアカウント**ダイアログとで同じ手順に従って、その他の Azure アカウントを追加する Azure アカウント セクションを追加します。
+![Azure アカウントをさらに追加する](media/azure-resource-explorer/add-more-azure-account.png)
 
-![その他の Azure アカウントを追加します。](media/azure-resource-explorer/add-more-azure-account.png)
+### <a name="remove-an-azure-account"></a>Azure アカウントを削除する
 
-### <a name="remove-an-azure-account"></a>Azure アカウントを削除します。
+既にログインしている Azure アカウントを削除するには
 
-既存を削除するには、Azure アカウントに記録されます。
+1. 左下の [アカウント管理] アイコンを使用して、 **[リンクされたアカウント]** ダイアログを開きます。
+2. 削除するには、Azure アカウントの右側にある **[X]** ボタンをクリックします。
 
-1. 開いている**リンクされたアカウント**ダイアログの左下にあるアカウント管理アイコンを使用します。
-2. をクリックして、 **X**それを削除する Azure アカウントの右側にあるボタンをクリックします。
+    ![Azure アカウントの削除](media/azure-resource-explorer/remove-azure-account.png)
 
-    ![Azure アカウントを削除します。](media/azure-resource-explorer/remove-azure-account.png)
+## <a name="filter-subscription"></a>サブスクリプションのフィルター
 
-## <a name="filter-subscription"></a>サブスクリプションをフィルター処理します。
+Azure アカウントにログインすると、その Azure アカウントに関連付けられているすべてのサブスクリプションが Azure Resource Explorer に表示されます。 Azure アカウントごとにサブスクリプションをフィルター処理できます。
 
-Azure アカウントにログインするとすべてのサブスクリプションに関連付けられている Azure リソース エクスプ ローラーで、Azure アカウントの表示。 各 Azure アカウントのサブスクリプションをフィルター処理することができます。
+1. Azure アカウントの右側にある **[サブスクリプションの選択]** ボタンをクリックします。
 
-1. をクリックして、 **Select Subscription** Azure アカウントの右にあるボタンをクリックします。
+   ![サブスクリプションのフィルター](media/azure-resource-explorer/filter-subscription.png)
 
-   ![サブスクリプションをフィルター処理します。](media/azure-resource-explorer/filter-subscription.png)
+2. 参照するアカウント サブスクリプションのチェック ボックスをオンにして、 **[OK]** をクリックします。
 
-2. [参照] をクリックするアカウントのサブスクリプションのチェック ボックスをオン**OK**します。
+   ![サブスクリプションの選択](media/azure-resource-explorer/select-subscription.png)
 
-   ![サブスクリプションを選択します](media/azure-resource-explorer/select-subscription.png)
+## <a name="explore-azure-sql-resources"></a>Azure SQL リソースを調べる
 
-## <a name="explore-azure-sql-resources"></a>Azure SQL のリソースを調べる
+Azure Resource Explorer で Azure SQL リソースを移動するには、Azure アカウントとリソースの種類のグループを展開します。
 
-Azure リソース エクスプ ローラーで、Azure SQL のリソースを移動するには、Azure アカウントとリソースの種類のグループを展開します。
+現在、Azure Resource Explorer では、Azure SQL Server、Azure SQL Database、Azure SQL Managed Instance をサポートしています。
 
-Azure リソース エクスプ ローラーには現在 Azure SQL Server、Azure SQL Database および Azure SQL マネージ インスタンスがサポートしています。
+## <a name="connect-to-azure-sql-resources"></a>Azure SQL リソースに接続する
 
-## <a name="connect-to-azure-sql-resources"></a>Azure SQL のリソースへの接続します。
+Azure Resource Explorer では、クエリおよび管理のために SQL Server およびデータベースに接続する際に役立つクイック アクセスが提供されます。
 
-Azure リソース エクスプ ローラーでは、SQL サーバーとクエリと管理のためデータベースに接続するのに役立つクイック アクセスを提供します。 
+1. ツリー ビューから、接続する SQL リソースを探索します。
+2. リソースを右クリックして **[接続]** を選択し、リソースの右側にある [接続] ボタンを見つけることもできます。
 
-1. ツリー ビューから接続するには、SQL リソースについて説明します。
-2. リソースを右クリックし、選択**Connect**リソースの右側にある [接続] ボタンを検索することもできます。
+   ![Azure SQL リソースへの接続](media/azure-resource-explorer/connect-to-azure-sql-resource.png)
 
-   ![Azure SQL のリソースへの接続します。](media/azure-resource-explorer/connect-to-azure-sql-resource.png)
-
-3. 開いている**接続**ダイアログ ボックスで、パスワードを入力し、をクリックして**Connect**します。
+3. 開いている **[接続]** ダイアログで、パスワードを入力し、 **[接続]** をクリックします。
 
    ![SQL 接続ダイアログ](media/azure-resource-explorer/sql-connection-dialog.png)
-4. **サーバー**接続が成功した後、このウィンドウは、自動的に新しい接続されている SQL サーバー/データベースが開きます。
+4. 接続に成功すると、新しく接続された SQL Server またはデータベースを使って、 **[サーバー]** ウィンドウが自動的に開きます。
 
 ## <a name="next-steps"></a>次の手順
 
-- [使用[!INCLUDE[Azure Data Studio](../includes/name-sos-short.md)]に接続して Azure SQL database のクエリ](quickstart-sql-database.md)
-- [使用[!INCLUDE[Azure Data Studio](../includes/name-sos-short.md)]に接続して、Azure SQL Data Warehouse のデータの照会](quickstart-sql-dw.md)
+- [[!INCLUDE[Azure Data Studio](../includes/name-sos-short.md)] を使用した Azure SQL データベースに対する接続およびクエリ](quickstart-sql-database.md)
+- [[!INCLUDE[Azure Data Studio](../includes/name-sos-short.md)] を使用した Azure SQL Data Warehouse のデータに対する接続およびクエリ](quickstart-sql-dw.md)

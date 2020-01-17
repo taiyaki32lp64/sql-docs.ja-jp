@@ -1,5 +1,5 @@
 ---
-title: MDX の予約語 |Microsoft ドキュメント
+title: MDX の予約語 |Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -8,13 +8,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-manager: kfile
-ms.openlocfilehash: 5eec141a82b4cf7aca5fd8c112249c362a1242d4
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.openlocfilehash: 4654733b2f8f0b59ee01ae881d55519d9ca48c23
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34742291"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68003459"
 ---
 # <a name="mdx-reserved-words"></a>MDX の予約語
 
@@ -80,6 +79,6 @@ ms.locfileid: "34742291"
   
 ## <a name="see-also"></a>参照  
  [予約済みキーワード&#40;MDX 構文&#41;](../mdx/reserved-keywords-mdx-syntax.md)   
- [MDX 言語リファレンス&#40;MDX&#41;](../mdx/mdx-language-reference-mdx.md)  
+ [MDX 言語リファレンス &#40;MDX&#41;](../mdx/mdx-language-reference-mdx.md)  
   
   

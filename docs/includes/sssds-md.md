@@ -1,1 +1,1 @@
- SQL データベース 
+ SQL Database

@@ -1,7 +1,7 @@
 ---
-title: 空間データ型を使用して |Microsoft Docs
+title: 空間データ型を使用する |Microsoft Docs
 ms.custom: ''
-ms.date: 01/21/2018
+ms.date: 08/12/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,25 +10,24 @@ ms.topic: conceptual
 ms.assetid: ''
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 4d00692b0b5872b1020f900587a24a3116aee9be
-ms.sourcegitcommit: 879a5c6eca99e0e9cc946c653d4ced165905d9c6
+ms.openlocfilehash: f133fa066ef2c486cf7bb40c5b653c99e077bc46
+ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/05/2019
-ms.locfileid: "55737013"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "69026942"
 ---
 # <a name="using-spatial-datatypes"></a>空間データ型の使用
 
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
-空間データ型 (Geometry と Geography) は、プレビュー リリースの JDBC Driver 6.5.0 を起動サポートします。 空間データ型は、現在はストアド プロシージャ、テーブル値パラメーター (TVP)、BulkCopy、および Always Encrypted でサポートされません。 このページでは、JDBC ドライバーで Geometry と Geography データ型のケースを使用して、さまざまな表示されます。 空間データ型の概要については、確認[空間データ型の概要](https://docs.microsoft.com/sql/relational-databases/spatial/spatial-data-types-overview)ページ。
+空間データ型 (Geometry および Geography) は、JDBC Driver preview release 6.5.0 の開始をサポートしています。 現在、空間データ型は、ストアドプロシージャ、テーブル値パラメーター (TVP)、BulkCopy、および Always Encrypted ではサポートされていません。 このページでは、JDBC ドライバーを使用した Geometry データ型と Geography データ型のさまざまなユースケースを示します。 空間データ型の概要については、「[空間データ型の概要」](https://docs.microsoft.com/sql/relational-databases/spatial/spatial-data-types-overview)ページをご覧ください。
 
-## <a name="creating-a-geometry--geography-object"></a>Geometry の作成/Geography オブジェクト
+## <a name="creating-a-geometry--geography-object"></a>Geometry/geography オブジェクトの作成
 
 Geometry / Geography オブジェクトを作成する主な方法は 2 つあります - Well-Known Text (WKT) または、Well-Known Binary (WKB) のいずれかから変換します。
 
-### <a name="creating-from-wkt"></a>WKT から作成します。
+### <a name="creating-from-wkt"></a>作成 (WKT から)
 
 ```java
 String geoWKT = "LINESTRING(1 0, 0 1, -1 0)";
@@ -36,9 +35,9 @@ Geometry geomWKT = Geometry.STGeomFromText(geoWKT, 0);
 Geography geogWKT = Geography.STGeomFromText(geoWKT, 4326);
 ```
 
-SRID が 4326 LINESTRING Geometry オブジェクトをシステム識別子 SRID (Spatial Reference)、0 と Geography オブジェクトが作成されます。
+これにより、空間参照システム識別子 (SRID) 0 を持つ LINESTRING Geometry オブジェクトと、SRID 4326 を持つ Geography オブジェクトが作成されます。
 
-### <a name="creating-from-wkb"></a>WKB から作成します。
+### <a name="creating-from-wkb"></a>作成 (WKB から)
 
 ```java
 byte[] geomWKB = Hex.decodeHex("00000000010403000000000000000000F03F00000000000000000000000000000000000000000000F03F000000000000F0BF000000000000000001000000010000000001000000FFFFFFFF0000000002".toCharArray());
@@ -48,9 +47,9 @@ Geometry geomWKT = Geometry.deserialize(geomWKB);
 Geography geogWKT = Geography.deserialize(geogWKB);
 ```
 
-これにより、以前、WKT から作成したものに相当する Geometry と Geography オブジェクトが作成されます。
+これにより、以前 WKT から作成された Geometry オブジェクトと Geography オブジェクトが作成されます。
 
-## <a name="working-with-a-geometry--geography-object"></a>ジオメトリの使用/Geography オブジェクト
+## <a name="working-with-a-geometry--geography-object"></a>Geometry/Geography オブジェクトの操作
 
 ユーザーは SQL Server に次のようなテーブルを持つと仮定します。
 
@@ -58,7 +57,7 @@ Geography geogWKT = Geography.deserialize(geogWKB);
 CREATE TABLE sampleTable (c1 geometry)  
 ```
 
-Geometry 値を挿入するサンプル スクリプトは次のようになります。
+Geometry 値を挿入するサンプルスクリプトは次のようになります。
 
 ```java
 String geoWKT = "LINESTRING(1 0, 0 1, -1 0)";
@@ -68,9 +67,9 @@ pstmt.setGeometry(1, geomWKT);
 pstmt.execute();
 ```
 
-Geography 列を使用して、Geography 対応の同様の手法と**setGeography()** メソッド。
+Geography 列と**setgeography ()** メソッドを使用して、geography に対応する同じことを行うこともできます。
 
-Geometry を読み取り/Geography 列。
+Geometry/Geography 列を読み取るには、次のようにします。
 
 ```java
 try(SQLServerResultSet rs = (SQLServerResultSet)stmt.executeQuery("select * from geomTable")) {
@@ -80,85 +79,85 @@ try(SQLServerResultSet rs = (SQLServerResultSet)stmt.executeQuery("select * from
 }
 ```
 
-Geography 列を使用して、Geography 対応の同様の手法と**getGeography()** メソッド。
+Geography 列と**Getgeography ()** メソッドを使用して、geography に対応する同じことを行うこともできます。
 
 ## <a name="newly-introduced-apis"></a>新しく導入された Api
 
-これらは、クラスでこの追加で導入された新しいパブリック Api **SQLServerPreparedStatement**、 **SQLServerResultSet**、 **Geometry**、および**Geography**します。
+これらは、この追加で導入された新しいパブリック Api であり、 **SQLServerPreparedStatement**、 **SQLServerResultSet**、 **Geometry**、 **Geography**の各クラスに含まれています。
 
 ### <a name="sqlserverpreparedstatement"></a>SQLServerPreparedStatement
 
 |方法|[説明]|
 |:------|:----------|
-|void setGeometry(int n, Geometry x)| 指定された microsoft.sql.Geometry クラスのオブジェクトを指定されたパラメーターを設定します。
-|void setGeography(int n, Geography x)| 指定された microsoft.sql.Geography クラスのオブジェクトを指定されたパラメーターを設定します。
+|void setGeometry(int n, Geometry x)| 指定されたパラメーターを、指定した microsoft .sql. Geometry クラスオブジェクトに設定します。
+|void setGeography(int n, Geography x)| 指定されたパラメーターを、特定の microsoft .sql. Geography クラスオブジェクトに設定します。
 
 ### <a name="sqlserverresultset"></a>SQLServerResultSet
 
 |方法|[説明]|
 |:------|:----------|
-|Geometry getGeometry (int colunIndex)| この結果セット オブジェクトの現在の行で指定された列の値を Java プログラミング言語で com.microsoft.sqlserver.jdbc.Geometry オブジェクトとして返します。
-|Geometry getGeometry (文字列 columnName)| この結果セット オブジェクトの現在の行で指定された列の値を Java プログラミング言語で com.microsoft.sqlserver.jdbc.Geometry オブジェクトとして返します。
-|Geography getGeography(int colunIndex)| この結果セット オブジェクトの現在の行で指定された列の値を Java プログラミング言語で com.microsoft.sqlserver.jdbc.Geography オブジェクトとして返します。
-|Geography getGeography (文字列 columnName)| この結果セット オブジェクトの現在の行で指定された列の値を Java プログラミング言語で com.microsoft.sqlserver.jdbc.Geography オブジェクトとして返します。
+|Geometry getGeometry (int colunIndex)| この ResultSet オブジェクトの現在の行の指定された列の値を Java プログラミング言語の com. sqlserver. Geometry オブジェクトとして返します。
+|Geometry getGeometry (文字列 columnName)| この ResultSet オブジェクトの現在の行の指定された列の値を Java プログラミング言語の com. sqlserver. Geometry オブジェクトとして返します。
+|Geography getGeography(int colunIndex)| この ResultSet オブジェクトの現在の行の指定された列の値を、Java プログラミング言語の com. sqlserver. jdbc. Geography オブジェクトとして返します。
+|Geography getGeography (文字列 columnName)| この ResultSet オブジェクトの現在の行の指定された列の値を、Java プログラミング言語の com. sqlserver. jdbc. Geography オブジェクトとして返します。
 
 ### <a name="geometry"></a>Geometry
 
 |方法|[説明]|
 |:------|:----------|
-|Geometry STGeomFromText (文字列 wkt、int SRID)| インスタンスに格納されている Z (標高) 値と M (メジャー) 値で補完された、Open Geospatial Consortium (OGC) の Well-Known Text (WKT) 表現からの Geometry インスタンス用のコンストラクター。
+|Geometry STGeomFromText (String wkt, int SRID)| インスタンスに格納されている Z (標高) 値と M (メジャー) 値で補完された、Open Geospatial Consortium (OGC) の Well-Known Text (WKT) 表現からの Geometry インスタンス用のコンストラクター。
 |Geometry STGeomFromWKB(byte[] wkb)| Open Geospatial Consortium (OGC) の Well-Known Binary (WKB) 表現からの Geometry インスタンス用のコンストラクター。
-|ジオメトリ (byte wkb) を逆シリアル化します。| 空間データの SQL Server 内部形式からの Geometry インスタンスのコンス トラクター。
-|ジオメトリの解析 (文字列 wkt)| Open Geospatial Consortium (OGC) の Well-Known Text (WKT) 表現からの Geometry インスタンス用のコンストラクター。 空間参照識別子は、0 を既定値は。
-|ジオメトリのポイント (double x、y の二重、int SRID)| その X と Y 値および空間参照識別子から Point インスタンスを表す Geometry インスタンスのコンス トラクター。
+|ジオメトリ逆シリアル化 (byte [] wkb)| 空間データの内部 SQL Server 形式の Geometry インスタンスのコンストラクター。
+|ジオメトリ解析 (文字列 wkt)| Open Geospatial Consortium (OGC) の Well-Known Text (WKT) 表現からの Geometry インスタンス用のコンストラクター。 空間参照識別子の既定値は0です。
+|ジオメトリポイント (double x、double y、int SRID)| X 値と Y 値および空間参照識別子からポイントインスタンスを表す Geometry インスタンスのコンストラクター。
 |String STAsText()| Geometry インスタンスにおける Open Geospatial Consortium (OGC) の Well-Known Text (WKT) 表現を返します。 このテキストは、インスタンスに格納されている Z (標高) 値または M (メジャー) 値を含みません。
-|byte[] STAsBinary()| Geometry インスタンスにおける Open Geospatial Consortium (OGC) の Well-Known Binary (WKB) 表現を返します。 この値には、インスタンスに格納されている Z 値または M 値が含まれません。
-|バイト [serialize()| Geometry 型の内部 SQL Server 形式を表すバイトを返します。
-|boolean hasM()| オブジェクトに M (メジャー) 値が含まれているかどうかを返します。
-|ブール hasZ()| オブジェクトには、Z (標高) 値が含まれている場合を返します。
-|二重 getX()| X 座標の値を返します。
-|二重 getY()| Y 座標の値を返します。
-|二重 getM()| オブジェクトの M (メジャー) 値を返します。
-|二重 getZ()| オブジェクトの Z (標高) 値を返します。
-|int getSrid()| 空間参照識別子 (SRID) の値を返します。
-|boolean isNull()| Geometry オブジェクトのかどうかは null を返します。
-|int STNumPoints()| Geometry オブジェクト内の地点の数を返します。
+|byte [] STAsBinary ()| Geometry インスタンスにおける Open Geospatial Consortium (OGC) の Well-Known Binary (WKB) 表現を返します。 この値には、インスタンスに格納されている Z 値または M 値が含まれません。
+|byte [] serialize ()| Geometry 型の内部 SQL Server 形式を表すバイトを返します。
+|boolean hasM()| オブジェクトに M (メジャー) 値が含まれている場合は、を返します。
+|ブール値 hasZ ()| オブジェクトに Z (標高) 値が含まれている場合は、を返します。
+|Double getX ()| X 座標値を返します。
+|二重 getY ()| Y 座標の値を返します。
+|Double getM ()| オブジェクトの M (メジャー) 値を返します。
+|Double getZ ()| オブジェクトの Z (標高) 値を返します。
+|int getSrid()| 空間参照識別子 (SRID) 値を返します。
+|boolean isNull()| Geometry オブジェクトが null の場合はを返します。
+|int STNumPoints()| Geometry オブジェクト内の点の数を返します。
 |String STGeometryType()| geometry インスタンスで表される Open Geospatial Consortium (OGC) の型名を返します。
-|String asTextZM()| Geometry オブジェクトの Well-Known Text (WKT) 表現を返します。
-|文字列の toString()| Geometry オブジェクトの文字列表現を返します。
+|String asTextZM()| Geometry オブジェクトの Well-known Text (WKT) 表現を返します。
+|文字列 toString ()| Geometry オブジェクトの文字列表現を返します。
 
 ### <a name="geography"></a>Geography
 
 |方法|[説明]|
 |:------|:----------|
-|Geography STGeomFromText (文字列 wkt、int SRID)| インスタンスに格納されている Z (標高) 値と M (メジャー) 値で補完された、Open Geospatial Consortium (OGC) の Well-Known Text (WKT) 表現からの Geography インスタンス用のコンストラクター。
+|Geography STGeomFromText (String wkt, int SRID)| インスタンスに格納されている Z (標高) 値と M (メジャー) 値で補完された、Open Geospatial Consortium (OGC) の Well-Known Text (WKT) 表現からの Geography インスタンス用のコンストラクター。
 |Geography STGeomFromWKB(byte[] wkb)| Open Geospatial Consortium (OGC) の Well-Known Binary (WKB) 表現からの Geography インスタンス用のコンストラクター。
-|Geography が (byte wkb) を逆シリアル化します。| 空間データの SQL Server 内部形式からの Geography インスタンスのコンス トラクター。
-|Geography の解析 (文字列 wkt)| Open Geospatial Consortium (OGC) の Well-Known Text (WKT) 表現からの Geography インスタンス用のコンストラクター。 空間参照識別子は、0 を既定値は。
-|地理的ポイント (lon lat 二重 int SRID を二重)| Point インスタンスを経度、緯度、空間参照識別子 (SRID) で表す Geography インスタンス用のコンストラクター。
+|Geography 逆シリアル化 (byte [] wkb)| 空間データの内部 SQL Server 形式からの Geography インスタンスのコンストラクター。
+|Geography parse (文字列 wkt)| Open Geospatial Consortium (OGC) の Well-Known Text (WKT) 表現からの Geography インスタンス用のコンストラクター。 空間参照識別子の既定値は0です。
+|Geography point (double lon、double lat、int SRID)| Point インスタンスを経度、緯度、空間参照識別子 (SRID) で表す Geography インスタンス用のコンストラクター。
 |String STAsText()| Geography インスタンスにおける Open Geospatial Consortium (OGC) の Well-Known Text (WKT) 表現を返します。 このテキストは、インスタンスに格納されている Z (標高) 値または M (メジャー) 値を含みません。
-|byte[] STAsBinary())| Geography インスタンスにおける Open Geospatial Consortium (OGC) の Well-Known Binary (WKB) 表現を返します。 この値には、インスタンスに格納されている Z 値または M 値が含まれません。
-|バイト [serialize()| Geography 型の内部 SQL Server 形式を表すバイトを返します。
-|boolean hasM()| オブジェクトに M (メジャー) 値が含まれているかどうかを返します。
-|ブール hasZ()| オブジェクトには、Z (標高) 値が含まれている場合を返します。
-|二重 getLatitude()| 緯度の値を返します。
-|Double getLongitude()| 経度値を返します。
-|二重 getM()| オブジェクトの M (メジャー) 値を返します。
-|二重 getZ()| オブジェクトの Z (標高) 値を返します。
-|int getSrid()| 空間参照識別子 (SRID) の値を返します。
-|boolean isNull()| Geography オブジェクトのかどうかは null を返します。
-|int STNumPoints()| Geography オブジェクト内の地点の数を返します。
+|byte [] STAsBinary ())| Geography インスタンスにおける Open Geospatial Consortium (OGC) の Well-Known Binary (WKB) 表現を返します。 この値には、インスタンスに格納されている Z 値または M 値が含まれません。
+|byte [] serialize ()| Geography 型の内部 SQL Server 形式を表すバイトを返します。
+|boolean hasM()| オブジェクトに M (メジャー) 値が含まれている場合は、を返します。
+|ブール値 hasZ ()| オブジェクトに Z (標高) 値が含まれている場合は、を返します。
+|Double getLatitude ()| 緯度の値を返します。
+|Double getLongitude()| 経度の値を返します。
+|Double getM ()| オブジェクトの M (メジャー) 値を返します。
+|Double getZ ()| オブジェクトの Z (標高) 値を返します。
+|int getSrid()| 空間参照識別子 (SRID) 値を返します。
+|boolean isNull()| Geography オブジェクトが null の場合、を返します。
+|int STNumPoints()| Geography オブジェクト内の点の数を返します。
 |String STGeographyType()| geography インスタンスで表される Open Geospatial Consortium (OGC) の型名を返します。
-|String asTextZM()| Geography オブジェクトの Well-Known Text (WKT) 表現を返します。
-|文字列の toString()| Geography オブジェクトの文字列表現を返します。
+|String asTextZM()| Geography オブジェクトの Well-known Text (WKT) 表現を返します。
+|文字列 toString ()| Geography オブジェクトの文字列表現を返します。
 
-## <a name="limitations-of-spatial-datatypes"></a>空間データ型の制限事項
+## <a name="limitations-of-spatial-datatypes"></a>空間データ型の制限
 
-1. 空間のサブ型**CircularString**、 **CompoundCurve**、 **CurvePolygon**、および**FullGlobe**以降のみサポートされますSQL server 2012 以降。
+1. 空間サブデータ型**CircularString**、 **CompoundCurve**、 **Curvepolygon**、および**fullglobe**は、2012以降の SQL Server 以降でのみサポートされます。
 
-2. 常に暗号化は空間データ型では使用できません。
+2. Always Encrypted を空間データ型と共に使用することはできません。
 
-3. ストアド プロシージャ、TVP、BulkCopy 空間データ型を持つ現在は操作はできません。
+3. 現在、ストアドプロシージャ、TVP、および BulkCopy 操作は、空間データ型ではサポートされていません。
 
 ## <a name="see-also"></a>参照
 

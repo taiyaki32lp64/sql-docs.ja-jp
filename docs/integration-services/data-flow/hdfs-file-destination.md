@@ -10,17 +10,20 @@ ms.topic: conceptual
 f1_keywords:
 - sql13.ssis.designer.hdfsfiledest.f1
 ms.assetid: 4338ce9f-c077-4301-aca5-47ed070ec94d
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: db467aa42e6924b02eb68d7300e41cf9d49b4743
-ms.sourcegitcommit: 299b63e04498eba22659970cd077f247c1657931
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: eec72a0421576ed4c09d35cd19bb0d842bd08f78
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/24/2019
-ms.locfileid: "54898937"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71292374"
 ---
 # <a name="hdfs-file-destination"></a>HDFS ファイル変換先
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   HDFS ファイル変換先コンポーネントは、SSIS パッケージが HDFS ファイルにデータを書き込めるようにします。 サポートされるファイル形式は、テキスト、Avro、および ORC です。
 
  HDFS ファイル変換先を構成するには、HDFS ファイル ソースをデータ フロー デザイナー上にドラッグ アンド ドロップし、このコンポーネントをダブルクリックしてエディターを開きます。
@@ -58,8 +61,8 @@ Java ビルドのアーキテクチャ (32/64 ビット) は、SSIS ランタイ
 5. **[変数名]** に「`JAVA_HOME`」と入力します。
 6. **[ディレクトリの参照]** を選択し、解凍したフォルダーに移動し、`jre` サブフォルダーを選択します。
    **[OK]** を選択すると、**変数の値**が自動的に入力されます。
-7. **[OK]** を選択し、**[新しいシステム変数]** ダイアログ ボックスを閉じます。
-8. **[OK]** を選択し、**[環境変数]** ダイアログ ボックスを閉じます。
+7. **[OK]** を選択し、 **[新しいシステム変数]** ダイアログ ボックスを閉じます。
+8. **[OK]** を選択し、 **[環境変数]** ダイアログ ボックスを閉じます。
 9. **[OK]** を選択して **[システム プロパティ]** ダイアログ ボックスを閉じます。
 
 ### <a name="set-up-oracles-java-se-runtime-environment"></a>Oracle の Java SE Runtime Environment を設定する

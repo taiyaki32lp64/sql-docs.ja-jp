@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 helpviewer_keywords:
 - report servers [Reporting Services], connections
@@ -13,15 +12,15 @@ helpviewer_keywords:
 - registering report servers
 - report servers [Reporting Services], registering
 ms.assetid: c875ff87-ee7d-443a-a702-bdb4b6c27c6e
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 450ecc2a61951e0a6b0fa587002ed99a5fb59c4d
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 93cd0c424a5173539eedfa4d53ac93fa04f5962c
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56041373"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66100438"
 ---
 # <a name="connect-to-a-report-server-in-management-studio"></a>Management Studio でレポート サーバーに接続する
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] のオブジェクト エクスプローラーでは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ファミリのあらゆるサーバーに接続して、その内容をグラフィカルに表示できます。 Reporting Services については、オブジェクト エクスプローラーを使用して、次のことを実行できます。  
@@ -46,7 +45,7 @@ ms.locfileid: "56041373"
   
 2.  **[接続]** をクリックしてサーバーの種類を一覧表示し、 **[Reporting Services]** を選択します。  
   
-3.  **[サーバーへの接続]** ダイアログ ボックスに、レポート サーバー インスタンスの名前を入力します。 レポート サーバー インスタンスの名前は、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスの名前に基づいています。 既定では、ローカル レポート サーバー インスタンスのインスタンス名はコンピューター名です。 レポート サーバーを名前付きインスタンスとしてインストールした場合は、*\<サーバー名>[\\<インスタンス名\>]* の形式でサーバーを指定します。  
+3.  **[サーバーへの接続]** ダイアログ ボックスに、レポート サーバー インスタンスの名前を入力します。 レポート サーバー インスタンスの名前は、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスの名前に基づいています。 既定では、ローカル レポート サーバー インスタンスのインスタンス名はコンピューター名です。 レポート サーバーを名前付きインスタンスとしてインストールした場合は、 *\<サーバー名>[\\<インスタンス名\>]* の形式でサーバーを指定します。  
   
 4.  認証の種類を選択します。 Windows 認証を使用している場合は、資格情報を使用して接続する必要があります。 基本認証またはフォーム認証を選択した場合は、アカウントおよびパスワードを入力します。  
   
@@ -78,7 +77,7 @@ ms.locfileid: "56041373"
   
 4.  **[サーバー名]** に値を入力します。 指定する値は、サーバーのモードによって異なります。  
   
-    -   ネイティブ モードのレポート サーバーでは、レポート サーバー インスタンスの名前を入力します。 レポート サーバー インスタンスの名前は、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスの名前に基づいています。 既定では、ローカル レポート サーバー インスタンスのインスタンス名はコンピューター名です。 レポート サーバーを名前付きインスタンスとしてインストールした場合は、*\<サーバー名>[\\<インスタンス名\>]* の形式でサーバーを指定します。  
+    -   ネイティブ モードのレポート サーバーでは、レポート サーバー インスタンスの名前を入力します。 レポート サーバー インスタンスの名前は、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスの名前に基づいています。 既定では、ローカル レポート サーバー インスタンスのインスタンス名はコンピューター名です。 レポート サーバーを名前付きインスタンスとしてインストールした場合は、 *\<サーバー名>[\\<インスタンス名\>]* の形式でサーバーを指定します。  
   
     -   SharePoint 統合モードで動作するレポート サーバーの場合、接続先のサーバーは、レポート サーバーが接続されている SharePoint サイトです。 SharePoint サイトに接続して初めて、レポート サーバーのコンテンツおよび操作へのアクセスを制御する権限レベルを閲覧できるようになります。 サイト コレクション内の任意のサイトを指定できます。 構文例を次に示します。 http://mysharepointsite  
   

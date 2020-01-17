@@ -13,18 +13,17 @@ helpviewer_keywords:
 ms.assetid: b66c301d-3d20-45b8-a112-225d8f01c0bd
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 2b2677e5614fd8e50c34084624dda19c3ced54d6
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.openlocfilehash: 11026bcb372759f62aa0b0d5f406a6721b65c135
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51600332"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67993668"
 ---
 # <a name="default-php-data-types"></a>既定の PHP データ型
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
-サーバーからデータを取得するとき、ユーザーが PHP のデータ型を指定しないと、[!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] はデータを既定の PHP データ型に変換します。  
+サーバーからデータを取得するとき、ユーザーが PHP のデータ型を指定しないと、 [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] はデータを既定の PHP データ型に変換します。  
   
 PDO_SQLSRV ドライバーを使用してデータが返される場合、データ型は int または string になります。  
   
@@ -46,8 +45,8 @@ PDO_SQLSRV ドライバーを使用してデータが返される場合、デー
 |FLOAT|float|8 ビット文字<sup>1</sup>|  
 |geography|Stream|バイナリ<sup>3</sup>|  
 |geometry|Stream|バイナリ<sup>3</sup>|  
-|イメージ<sup>5</sup>|Stream<sup>2</sup>|バイナリ<sup>3</sup>|  
-|ssNoversion|Integer|8 ビット文字<sup>1</sup>|  
+|画像<sup>5</sup>|Stream<sup>2</sup>|バイナリ<sup>3</sup>|  
+|INT|Integer|8 ビット文字<sup>1</sup>|  
 |money|String|8 ビット文字<sup>1</sup>|  
 |NCHAR|String|8 ビット文字<sup>1</sup>|  
 |NUMERIC|String|8 ビット文字<sup>1</sup>|  
@@ -84,13 +83,13 @@ PDO_SQLSRV ドライバーを使用してデータが返される場合、デー
 
 6. これは、nvarchar(max) 型にマップされる従来の型です。
 
-7.  sql_variant は双方向または出力パラメーターではサポートされていません。
+7.  sql_variant は、双方向パラメーターまたは出力パラメーターではサポートされていません。
 
 8.  これは、varchar(max) 型にマップされる従来の型です。  
   
 9.  UNIQUEIDENTIFIER は、次の正規表現によって表される GUID です。  
   
-    [0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-f]{4}-[0-9a-fA-f]{4}-[0-9a-fA-F]{12}  
+    [0-9a-z]-[0-9a-z{4}]-[0-9a-z{4}]-[0-9a-z{4}-f]-[0-9a-z-f] を右に入力します。 {8}{12}  
  
  
 ## <a name="other-new-sql-server-2008-data-types-and-features"></a>SQL Server 2008 でのその他の新しいデータ型と機能  
@@ -100,10 +99,10 @@ SQL Server 2008 の新しいデータ型で、列の外部に存在するもの 
 |-----------|---------------|  
 |テーブル値パラメーター|いいえ|  
 |スパース列|部分的|  
-|Null ビット圧縮|[ユーザー アカウント制御]|  
-|大きな CLR ユーザー定義型 (UDT)|[ユーザー アカウント制御]|  
+|Null ビット圧縮|はい|  
+|大きな CLR ユーザー定義型 (UDT)|はい|  
 |サービス プリンシパル名|いいえ|  
-|MERGE|[ユーザー アカウント制御]|  
+|MERGE|はい|  
 |FILESTREAM|部分的|  
   
 部分的な型のサポートとは、その列の型をプログラムでクエリできないことを意味します。  

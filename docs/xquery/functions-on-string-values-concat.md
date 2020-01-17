@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: d50afd20-a297-445e-be9e-13b48017e7ca
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 3a2dd68c36887c373c7102b150ffc1032750eb52
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 063eca49a6a4d69e84e8a3d05221b632d0690bef
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51667071"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68099830"
 ---
 # <a name="functions-on-string-values---concat"></a>文字列値に使用する関数 - concat
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]

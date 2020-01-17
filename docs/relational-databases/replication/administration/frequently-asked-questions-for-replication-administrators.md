@@ -1,6 +1,7 @@
 ---
-title: レプリケーションの管理者に関してよく寄せられる質問 | Microsoft Docs
-ms.custom: ''
+title: レプリケーションの管理者に関してよく寄せられる質問
+description: SQL Server のレプリケーションの管理者に関してよく寄せられる質問の一覧です。
+ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -13,22 +14,22 @@ helpviewer_keywords:
 ms.assetid: 5a9e4ddf-3cb1-4baf-94d6-b80acca24f64
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 5f6d488b46f576ed5c5d97358ec8674a64be46bd
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
+ms.openlocfilehash: 99be52de235c676137981021b9e926aba7320f43
+ms.sourcegitcommit: 02d44167a1ee025ba925a6fefadeea966912954c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54135362"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75322034"
 ---
 # <a name="frequently-asked-questions-for-replication-administrators"></a>レプリケーションの管理者に関してよく寄せられる質問
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
   ここでは、レプリケートされたデータベースの管理者が行うさまざまな作業についての指針となるような質問と回答を掲載します。  
   
 ## <a name="configuring-replication"></a>レプリケーションの構成  
   
 ### <a name="does-activity-need-to-be-stopped-on-a-database-when-it-is-published"></a>データベースをパブリッシュするときに、データベースに対する操作を停止する必要がありますか。  
- 不可。 パブリケーションの作成中でもデータベースの操作を継続することができます。 ただし、スナップショットの生成には大量のリソースが必要な点に注意してください。そのため、スナップショットはデータベースでの操作が少ない時間帯に生成することをお勧めします (既定では、パブリケーションの新規作成ウィザードを終了するとスナップショットが生成されます)。  
+ いいえ。 パブリケーションの作成中でもデータベースの操作を継続することができます。 ただし、スナップショットの生成には大量のリソースが必要な点に注意してください。そのため、スナップショットはデータベースでの操作が少ない時間帯に生成することをお勧めします (既定では、パブリケーションの新規作成ウィザードを終了するとスナップショットが生成されます)。  
   
 ### <a name="are-tables-locked-during-snapshot-generation"></a>テーブルはスナップショット生成中にロックされますか。  
  ロックが設定される時間の長さは、使用するレプリケーションの種類によって以下のように異なります。  
@@ -56,7 +57,7 @@ ms.locfileid: "54135362"
 -   ディストリビューション エージェントまたはマージ エージェントが、スケジュールまたは要求時に実行されるように構成されており、エージェント起動時には利用可能なスナップショットがなかった場合には、エージェントはスナップショットが利用できないことを示すメッセージを表示して終了します。 スナップショットを適用するためには、スナップショット エージェントが完了した後でエージェントを再度実行する必要があります。 エージェントの実行については、「[Synchronize a Push Subscription](../../../relational-databases/replication/synchronize-a-push-subscription.md)」 (プッシュ サブスクリプションの同期)、「[Synchronize a Pull Subscription](../../../relational-databases/replication/synchronize-a-pull-subscription.md)」 (プル サブスクリプションの同期)、「[Replication Agent Executables Concepts](../../../relational-databases/replication/concepts/replication-agent-executables-concepts.md)」 (レプリケーション エージェント実行可能ファイルの概念) を参照してください。  
   
 ### <a name="should-i-script-my-replication-configuration"></a>レプリケーションの構成をスクリプト化する必要がありますか。  
- 可能。 レプリケーション構成をスクリプト化するのは、レプリケーション トポロジのディザスター リカバリー計画の重要な部分です。 スクリプト作成の詳細については、「 [Scripting Replication](../../../relational-databases/replication/scripting-replication.md)」を参照してください。  
+ はい。 レプリケーション構成をスクリプト化するのは、レプリケーション トポロジのディザスター リカバリー計画の重要な部分です。 スクリプト作成の詳細については、「 [Scripting Replication](../../../relational-databases/replication/scripting-replication.md)」を参照してください。  
   
 ### <a name="what-recovery-model-is-required-on-a-replicated-database"></a>レプリケートされたデータベースでは、どの復旧モデルが必要ですか。  
  単純復旧モデル、一括ログ復旧モデル、完全復旧モデルのいずれの復旧モデルでも、レプリケーションは正常に機能します。 マージ レプリケーションでは、メタデータ テーブルに情報を格納することで変更が追跡されます。 トランザクション レプリケーションでは、トランザクション ログにマークを付けることにより変更が追跡されますが、復旧モデルによってこのマーク設定処理が影響を受けることはありません。  
@@ -88,7 +89,7 @@ ms.locfileid: "54135362"
  はい。ただし、制限があります。 詳細については、「[Publish Data and Database Objects](../../../relational-databases/replication/publish/publish-data-and-database-objects.md)」 (データとデータベース オブジェクトのパブリッシュ) の「Publishing Tables in More Than One Publication」 (複数のパブリケーションでのテーブルのパブリッシュ) を参照してください。  
   
 ### <a name="can-multiple-publications-use-the-same-distribution-database"></a>複数のパブリケーションで同じディストリビューション データベースを使用できますか。  
- 可能。 同じディストリビューション データベースを使用するパブリケーションの数や種類に制限はありません。 指定されたパブリッシャーのすべてのパブリケーションで、同じディストリビューターとディストリビューション データベースを使用する必要があります。  
+ はい。 同じディストリビューション データベースを使用するパブリケーションの数や種類に制限はありません。 指定されたパブリッシャーのすべてのパブリケーションで、同じディストリビューターとディストリビューション データベースを使用する必要があります。  
   
  複数のパブリケーションがある場合は、ディストリビューターで複数のディストリビューション データベースを構成することにより、各ディストリビューション データベースのデータ フローを、単一のパブリケーションから渡すことができます。 **[ディストリビューターのプロパティ]** ダイアログ ボックスまたは [sp_adddistributiondb &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-adddistributiondb-transact-sql.md) を使用して、分散データベースを追加します。 このダイアログ ボックスへのアクセスの詳細については、「[View and Modify Distributor and Publisher Properties](../../../relational-databases/replication/view-and-modify-distributor-and-publisher-properties.md)」 (ディストリビューターとパブリッシャーのプロパティの表示および変更) を参照してください。  
   
@@ -96,7 +97,7 @@ ms.locfileid: "54135362"
  この情報は、 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]およびいくつかのレプリケーション ストアド プロシージャを使用して参照できます。 詳細については、「 [Distributor and Publisher Information Script](../../../relational-databases/replication/administration/distributor-and-publisher-information-script.md)」を参照してください。  
   
 ### <a name="does-replication-encrypt-data"></a>レプリケーションではデータが暗号化されますか。  
- 不可。 レプリケーションでは、データベースに格納されるデータやネットワーク経由で転送されるデータは暗号化されません。 詳細については、「[レプリケーションのセキュリティ設定の表示および変更](../../../relational-databases/replication/security/view-and-modify-replication-security-settings.md)」のトピックの暗号化に関する説明を参照してください。  
+ いいえ。 レプリケーションでは、データベースに格納されるデータやネットワーク経由で転送されるデータは暗号化されません。 詳細については、「[レプリケーションのセキュリティ設定の表示および変更](../../../relational-databases/replication/security/view-and-modify-replication-security-settings.md)」のトピックの暗号化に関する説明を参照してください。  
   
 ### <a name="how-do-i-replicate-data-over-the-internet"></a>インターネット経由でデータをレプリケートするにはどうすればよいですか。  
  インターネット経由のデータのレプリケーションでは、以下を使用します。  
@@ -105,10 +106,10 @@ ms.locfileid: "54135362"
   
 -   マージ レプリケーション用の Web 同期オプション。 詳細については、「 [Web Synchronization for Merge Replication](../../../relational-databases/replication/web-synchronization-for-merge-replication.md)」を参照してください。  
   
- すべての種類の [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] レプリケーションは VPN 経由でデータをレプリケートできますが、マージ レプリケーションを使用している場合は Web 同期を検討してください。  
+ すべての種類の [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] レプリケーションは、VPN 経由でデータをレプリケートできますが、マージ レプリケーションを使用している場合は Web 同期を検討してください。  
   
 ### <a name="does-replication-resume-if-a-connection-is-dropped"></a>接続が切断された場合にレプリケーションは再開されますか。  
- 可能。 接続が切断された場合には、中断した時点からレプリケーション処理が再開されます。 不安定なネットワーク経由でマージ レプリケーションを使用している場合は、論理レコードの利用を検討してください。これにより、関連する変更が 1 つの単位として処理されるようになります。 詳細については、「[Group Changes to Related Rows with Logical Records](../../../relational-databases/replication/merge/group-changes-to-related-rows-with-logical-records.md)」 (論理レコードによる関連行への変更のグループ化) を参照してください。  
+ はい。 接続が切断された場合には、中断した時点からレプリケーション処理が再開されます。 不安定なネットワーク経由でマージ レプリケーションを使用している場合は、論理レコードの利用を検討してください。これにより、関連する変更が 1 つの単位として処理されるようになります。 詳細については、「[Group Changes to Related Rows with Logical Records](../../../relational-databases/replication/merge/group-changes-to-related-rows-with-logical-records.md)」 (論理レコードによる関連行への変更のグループ化) を参照してください。  
   
 ### <a name="does-replication-work-over-low-bandwidth-connections-does-it-use-compression"></a>低帯域接続経由でもレプリケーションは機能しますか。 圧縮は行われますか。  
  はい。低帯域接続経由でもレプリケーションは機能します。 TCP/IP 経由の接続では、プロトコルによって提供される圧縮を利用しますが、それ以外の圧縮は行われません。 HTTPS 経由の Web 同期接続の場合は、プロトコルで提供される圧縮に加え、変更をレプリケートするために使用する XML ファイルの圧縮も使用されます。  
@@ -116,14 +117,14 @@ ms.locfileid: "54135362"
 ## <a name="logins-and-object-ownership"></a>ログインとオブジェクトの所有権  
   
 ### <a name="are-logins-and-passwords-replicated"></a>ログインとパスワードはレプリケートされますか。  
- 不可。 ただし、DTS パッケージを作成することで、ログインとパスワードをパブリッシャーから 1 つ以上のサブスクライバーに転送することができます。  
+ いいえ。 ただし、SSIS パッケージを作成することで、ログインとパスワードをパブリッシャーから 1 つ以上のサブスクライバーに転送することができます。  
   
 ### <a name="what-are-schemas-and-how-are-they-replicated"></a>スキーマとは何ですか。また、スキーマはどのようにレプリケートされますか。  
- [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)], *スキーマ* には次の 2 つの意味があります。  
+ [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] 以降では、"*スキーマ*" には次の 2 つの意味があります。  
   
--   CREATE TABLE ステートメントなどの、オブジェクトの定義。 既定では、レプリケートされるすべてのオブジェクトの定義がサブスクライバーにコピーされます。  
+-   `CREATE TABLE` ステートメントなどの、オブジェクトの定義。 既定では、レプリケートされるすべてのオブジェクトの定義がサブスクライバーにコピーされます。  
   
--   オブジェクトが作成される\<Database>.\<Schema>.\<Object> の名前空間です。 スキーマは、CREATE SCHEMA ステートメントで定義します。  
+-   オブジェクトが作成される\<Database>.\<Schema>.\<Object> の名前空間です。 スキーマは、`CREATE SCHEMA` ステートメントで定義します。  
   
 -   既定では、パブリケーションの新規作成ウィザードは、スキーマとオブジェクトの所有権に関して、以下のように動作します。  
   
@@ -135,7 +136,7 @@ ms.locfileid: "54135362"
   
 -   キャラクター モードのスナップショット ([!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 以外のバージョンのサブスクライバーや [!INCLUDE[ssEW](../../../includes/ssew-md.md)] サブスクライバーで使用されます) を使用するパブリケーションのアーティクルの場合。既定では、所有者は空白のままになります。 既定の所有者は、サブスクライバーに接続しているディストリビューション エージェントまたはマージ エージェントで使用されるアカウントに関連付けられている所有者になります。  
   
- オブジェクトの所有者は、**[アーティクルのプロパティ - \<***Article***>]** ダイアログ ボックスと、ストアド プロシージャの **sp_addarticle**、**sp_addmergearticle**、**sp_changearticle**、**sp_changemergearticle** で変更できます。 詳細については、「[View and Modify Publication Properties](../../../relational-databases/replication/publish/view-and-modify-publication-properties.md)」 (パブリケーション プロパティの表示および変更)、「[Define an Article](../../../relational-databases/replication/publish/define-an-article.md)」 (アーティクルの定義)、および「[View and Modify Article Properties](../../../relational-databases/replication/publish/view-and-modify-article-properties.md)」 (アーティクルのプロパティの表示および変更) を参照してください。  
+ オブジェクトの所有者は、 **[アーティクルのプロパティ - \<***Article***>]** ダイアログ ボックスと、ストアド プロシージャの **sp_addarticle**、**sp_addmergearticle**、**sp_changearticle**、**sp_changemergearticle** で変更できます。 詳細については、「[View and Modify Publication Properties](../../../relational-databases/replication/publish/view-and-modify-publication-properties.md)」 (パブリケーション プロパティの表示および変更)、「[Define an Article](../../../relational-databases/replication/publish/define-an-article.md)」 (アーティクルの定義)、および「[View and Modify Article Properties](../../../relational-databases/replication/publish/view-and-modify-article-properties.md)」 (アーティクルのプロパティの表示および変更) を参照してください。  
   
 ### <a name="how-can-grants-on-the-subscription-database-be-configured-to-match-grants-on-the-publication-database"></a>サブスクリプション データベースの権限をパブリケーション データベースの権限に一致させるには、どのように構成すればよいですか。  
  既定では、レプリケーションではサブスクリプション データベース上で GRANT ステートメントは実行されません。 サブスクリプション データベース上の権限をパブリケーション データベース上の権限に一致させる場合は、次のいずれかの方法を使用します。  
@@ -154,9 +155,9 @@ ms.locfileid: "54135362"
   
 -   サブスクリプションを再初期化するときに、オブジェクトを削除しないように指定します。 再初期化の前に、次のいずれかを実行します。  
   
-    -   [sp_changearticle](../../../relational-databases/system-stored-procedures/sp-changearticle-transact-sql.md) または [sp_changemergearticle](../../../relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql.md)を実行します。 **@property** パラメーターの値として 'pre_creation_cmd' (**sp_changearticle**) または 'pre_creation_command' (**sp_changemergearticle**) を指定し、**@value** パラメーターの値として 'none'、'delete'、または 'truncate' を指定します。  
+    -   [sp_changearticle](../../../relational-databases/system-stored-procedures/sp-changearticle-transact-sql.md) または [sp_changemergearticle](../../../relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql.md)を実行します。 `@property` パラメーターの値として "pre_creation_cmd" (**sp_changearticle**) または "pre_creation_command" (**sp_changemergearticle**) を指定し、`@value` パラメーターの値として "none"、"delete"、または "truncate" を指定します。  
   
-    -   **[アーティクルのプロパティ - \<Article>]** ダイアログ ボックスの **[対象オブジェクト]** セクションで、**[既存のオブジェクトを変更せずに保持します]**、**[データを削除します。アーティクルに行フィルターがある場合は、フィルターに一致するデータのみを削除します]**  または **[既存のオブジェクト内にあるすべてのデータを切り捨てます]** を **[名前が使用中である場合のアクション]**」で選択します。 このダイアログ ボックスへのアクセスの詳細については、「[View and Modify Publication Properties](../../../relational-databases/replication/publish/view-and-modify-publication-properties.md)」 (パブリケーションのプロパティの表示および変更) を参照してください。  
+    -   **[アーティクルのプロパティ - \<Article>]** ダイアログ ボックスの **[対象オブジェクト]** セクションで、 **[既存のオブジェクトを変更せずに保持します]** 、 **[データを削除します。アーティクルに行フィルターがある場合は、フィルターに一致するデータのみを削除します]** または **[既存のオブジェクト内にあるすべてのデータを切り捨てます]** を **[名前が使用中である場合のアクション]** 」で選択します。 このダイアログ ボックスへのアクセスの詳細については、「[View and Modify Publication Properties](../../../relational-databases/replication/publish/view-and-modify-publication-properties.md)」 (パブリケーションのプロパティの表示および変更) を参照してください。  
   
 ## <a name="database-maintenance"></a>データベースのメンテナンス  
   
@@ -167,7 +168,7 @@ ms.locfileid: "54135362"
  トランザクション レプリケーションの場合、他の挿入と同様に一括挿入も追跡およびレプリケートされます。 マージ レプリケーションでは、変更を追跡するメタデータが正しく更新されるようにする必要があります。  
   
 ### <a name="are-there-any-replication-considerations-for-backup-and-restore"></a>バックアップと復元を行うときにレプリケーションに関する注意点はありますか。  
- 可能。 データベースのレプリケーションに関係する特別な注意点がいくつかあります。 詳細については、「 [レプリケートされたデータベースのバックアップと復元](../../../relational-databases/replication/administration/back-up-and-restore-replicated-databases.md)」を参照してください。  
+ はい。 データベースのレプリケーションに関係する特別な注意点がいくつかあります。 詳細については、「 [レプリケートされたデータベースのバックアップと復元](../../../relational-databases/replication/administration/back-up-and-restore-replicated-databases.md)」を参照してください。  
   
 ### <a name="does-replication-affect-the-size-of-the-transaction-log"></a>レプリケーションはトランザクション ログの大きさに影響しますか。  
  マージ レプリケーションとスナップショット レプリケーションは、トランザクション ログのサイズには影響しません。ただし、トランザクション レプリケーションは影響する場合があります。 データベースに 1 つ以上のトランザクション パブリケーションが含まれている場合、それらのパブリケーションに関連するすべてのトランザクションがディストリビューション データベースに配布されるまで、トランザクション ログの切り捨ては行われません。 トランザクション ログが大きくなりすぎ、ログ リーダー エージェントをスケジュールによって実行している場合は、実行間隔を短くすることを検討してください。 または、連続モードで実行するように設定してください。 連続モードで実行するように設定されている場合は (既定値)、実行中であることを確認してください。 ログ リーダー エージェントの状態の確認の詳細については、「[レプリケーション モニターを使用して情報を表示し、タスクを実行する](../../../relational-databases/replication/monitor/view-information-and-perform-tasks-replication-monitor.md)」を参照してください。  
@@ -178,24 +179,24 @@ ms.locfileid: "54135362"
  インデックスの再構築にはいくつかのメカニズムがあります。 どのメカニズムもレプリケーションに関して特別な注意をせずに使用できます。ただし、トランザクション パブリケーションのテーブルでは主キーが必要なため、主キーの削除や再作成を行うことはできません。  
   
 ### <a name="how-do-i-add-or-change-indexes-on-publication-and-subscription-databases"></a>パブリケーション データベースとサブスクリプション データベース上でインデックスを追加または変更するにはどうすればよいですか。  
- レプリケーションに関して特別な注意をしなくても、パブリッシャーまたはサブスクライバーでインデックスを追加できます (インデックスがパフォーマンスに影響する点に注意してください)。 CREATE INDEX および ALTER INDEX はレプリケートされないため、たとえばパブリッシャーでインデックスを追加または変更した場合、サブスクライバーに反映するためには、同じ追加または変更を行う必要があります。  
+ レプリケーションに関して特別な注意をしなくても、パブリッシャーまたはサブスクライバーでインデックスを追加できます (インデックスがパフォーマンスに影響する点に注意してください)。 `CREATE INDEX` および `ALTER INDEX` はレプリケートされないため、たとえばパブリッシャーでインデックスを追加または変更した場合、サブスクライバーに反映するには、同じ追加または変更を行う必要があります。  
   
 ### <a name="how-do-i-move-or-rename-files-for-databases-involved-in-replication"></a>レプリケーションに関連するデータベースのファイルは、どのように移動または名前の変更を行うのですか。  
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] より前のバージョンの [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]では、データベース ファイルの移動または名前の変更を行うには、データベースのデタッチと再アタッチが必要でした。 レプリケートされたデータベースはデタッチできないため、まずデータベースからレプリケーションを削除する必要がありました。 [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]以降では、データベースのデタッチと再アタッチを行わなくてもファイルの移動や名前の変更が行え、レプリケーションに影響を与えることもありません。 ファイルの移動と名前の変更については、「[ALTER DATABASE &#40;Transact-SQL&#41;](../../../t-sql/statements/alter-database-transact-sql.md)」を参照してください。  
   
 ### <a name="how-do-i-drop-a-table-that-is-being-replicated"></a>レプリケートされているテーブルを削除するにはどうすればよいですか。  
- まず [sp_droparticle](../../../relational-databases/system-stored-procedures/sp-droparticle-transact-sql.md)、[sp_dropmergearticle](../../../relational-databases/system-stored-procedures/sp-dropmergearticle-transact-sql.md)、**[パブリケーションのプロパティ - \<Publication>]** ダイアログ ボックスのいずれかを使用してパブリケーションからアーティクルを削除し、次に `DROP <Object>` を使用してデータベースからアーティクルを削除します。 サブスクリプションを追加した後で、スナップショット パブリケーションまたはトランザクション パブリケーションからアーティクルを削除することはできません。まずサブスクリプションを削除する必要があります。 詳細については、「[Add Articles to and Drop Articles from Existing Publications](../../../relational-databases/replication/publish/add-articles-to-and-drop-articles-from-existing-publications.md)」 (既存のパブリケーションでのアーティクルの追加および削除) を参照してください。  
+ まず [sp_droparticle](../../../relational-databases/system-stored-procedures/sp-droparticle-transact-sql.md)、[sp_dropmergearticle](../../../relational-databases/system-stored-procedures/sp-dropmergearticle-transact-sql.md)、 **[パブリケーションのプロパティ - \<Publication>]** ダイアログ ボックスのいずれかを使用してパブリケーションからアーティクルを削除し、次に `DROP <Object>` を使用してデータベースからアーティクルを削除します。 サブスクリプションを追加した後で、スナップショット パブリケーションまたはトランザクション パブリケーションからアーティクルを削除することはできません。まずサブスクリプションを削除する必要があります。 詳細については、「[Add Articles to and Drop Articles from Existing Publications](../../../relational-databases/replication/publish/add-articles-to-and-drop-articles-from-existing-publications.md)」 (既存のパブリケーションでのアーティクルの追加および削除) を参照してください。  
   
 ### <a name="how-do-i-add-or-drop-columns-on-a-published-table"></a>パブリッシュされたテーブル上の列を追加または削除するにはどうすればよいですか。  
- [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] では、列の追加や削除などの、パブリッシュされたオブジェクトに対するスキーマのさまざまな変更がサポートされています。 たとえば、ALTER TABLE … DROP COLUMN をパブリッシャーで実行すると、ステートメントがサブスクライバーにレプリケートされて実行され、列が削除されます。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] より前のバージョンの [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] が実行されているサブスクライバーでは、ストアド プロシージャ [sp_repladdcolumn](../../../relational-databases/system-stored-procedures/sp-repladdcolumn-transact-sql.md) および [sp_repldropcolumn](../../../relational-databases/system-stored-procedures/sp-repldropcolumn-transact-sql.md)で列の追加と削除がサポートされています。 詳細については、「[パブリケーション データベースでのスキーマの変更](../../../relational-databases/replication/publish/make-schema-changes-on-publication-databases.md)」を参照してください。  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] では、列の追加や削除などの、パブリッシュされたオブジェクトに対するスキーマのさまざまな変更がサポートされています。 たとえば、`ALTER TABLE … DROP COLUMN` をパブリッシャーで実行すると、ステートメントがサブスクライバーにレプリケートされて実行され、列が削除されます。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] より前のバージョンの [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] が実行されているサブスクライバーでは、ストアド プロシージャ [sp_repladdcolumn](../../../relational-databases/system-stored-procedures/sp-repladdcolumn-transact-sql.md) および [sp_repldropcolumn](../../../relational-databases/system-stored-procedures/sp-repldropcolumn-transact-sql.md)で列の追加と削除がサポートされています。 詳細については、「[パブリケーション データベースでのスキーマの変更](../../../relational-databases/replication/publish/make-schema-changes-on-publication-databases.md)」を参照してください。  
   
 ## <a name="replication-maintenance"></a>レプリケーションのメンテナンス  
   
 ### <a name="how-do-i-determine-if-the-data-at-subscribers-is-synchronized-with-data-at-the-publisher"></a>サブスクライバーのデータがパブリッシャーのデータと同期していることはどうすれば判断できますか。  
- 検証機能を使用します。 検証では、指定したサブスクライバーがパブリッシャーと同期されているかどうかがレポートされます。 詳細については、「[Validate Replicated Data](../../../relational-databases/replication/validate-data-at-the-subscriber.md)」 (レプリケートされたデータの検証) を参照してください。 正しく同期されていない行がある場合、検証を行っても、同期されていない行についての情報が表示されませんが、 [tablediff ユーティリティ](../../../tools/tablediff-utility.md) では表示されます。  
+ 検証機能を使用します。 検証では、指定したサブスクライバーがパブリッシャーと同期されているかどうかがレポートされます。 詳細については、「[レプリケートされたデータの検証](../../../relational-databases/replication/validate-data-at-the-subscriber.md)」を参照してください。 正しく同期されていない行がある場合、検証を行っても、同期されていない行についての情報が表示されませんが、 [tablediff ユーティリティ](../../../tools/tablediff-utility.md) では表示されます。  
   
 ### <a name="how-do-i-add-a-table-to-an-existing-publication"></a>既存のパブリケーションにテーブルを追加するにはどうすればよいですか。  
- テーブル (または他のオブジェクト) を追加するときに、パブリケーション データベースまたはサブスクリプション データベースに対する操作を停止する必要はありません。 パブリケーションにテーブルを追加するには、**[パブリケーションのプロパティ - \<Publication>]** ダイアログ ボックスか、ストアド プロシージャ [sp_addarticle](../../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md) および [sp_addmergearticle](../../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md) を使用します。 詳細については、「[Add Articles to and Drop Articles from Existing Publications](../../../relational-databases/replication/publish/add-articles-to-and-drop-articles-from-existing-publications.md)」 (既存のパブリケーションでのアーティクルの追加および削除) を参照してください。  
+ テーブル (または他のオブジェクト) を追加するときに、パブリケーション データベースまたはサブスクリプション データベースに対する操作を停止する必要はありません。 パブリケーションにテーブルを追加するには、 **[パブリケーションのプロパティ - \<Publication>]** ダイアログ ボックスか、ストアド プロシージャ [sp_addarticle](../../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md) および [sp_addmergearticle](../../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md) を使用します。 詳細については、「[Add Articles to and Drop Articles from Existing Publications](../../../relational-databases/replication/publish/add-articles-to-and-drop-articles-from-existing-publications.md)」 (既存のパブリケーションでのアーティクルの追加および削除) を参照してください。  
   
 ### <a name="how-do-i-remove-a-table-from-a-publication"></a>パブリケーションからテーブルを削除するにはどうすればよいですか。  
  パブリケーションからテーブルを削除するには、[sp_droparticle](../../../relational-databases/system-stored-procedures/sp-droparticle-transact-sql.md)、[sp_dropmergearticle](../../../relational-databases/system-stored-procedures/sp-dropmergearticle-transact-sql.md)、または **[パブリケーションのプロパティ - \<Publication>]** ダイアログ ボックスを使用します。 サブスクリプションを追加した後で、スナップショット パブリケーションまたはトランザクション パブリケーションからアーティクルを削除することはできません。まずサブスクリプションを削除する必要があります。 詳細については、「[Add Articles to and Drop Articles from Existing Publications](../../../relational-databases/replication/publish/add-articles-to-and-drop-articles-from-existing-publications.md)」 (既存のパブリケーションでのアーティクルの追加および削除) を参照してください。  
@@ -226,10 +227,10 @@ ms.locfileid: "54135362"
 ## <a name="replication-and-other-database-features"></a>レプリケーションおよびその他のデータベース機能  
   
 ### <a name="does-replication-work-in-conjunction-with-log-shipping-and-database-mirroring"></a>レプリケーションはログ配布やデータベース ミラーリングと組み合わせて使用できますか。  
- 可能。 詳細については、「[Log Shipping and Replication &#40;SQL Server&#41;](../../../database-engine/log-shipping/log-shipping-and-replication-sql-server.md)」(ログ配布とレプリケーション &#40;SQL Server&#41;) および「[Database Mirroring and Replication &#40;SQL Server&#41;](../../../database-engine/database-mirroring/database-mirroring-and-replication-sql-server.md)」(データベース ミラーリングとレプリケーション &#40;SQL Server&#41;) を参照してください。  
+ はい。 詳細については、「[Log Shipping and Replication &#40;SQL Server&#41;](../../../database-engine/log-shipping/log-shipping-and-replication-sql-server.md)」(ログ配布とレプリケーション &#40;SQL Server&#41;) および「[Database Mirroring and Replication &#40;SQL Server&#41;](../../../database-engine/database-mirroring/database-mirroring-and-replication-sql-server.md)」(データベース ミラーリングとレプリケーション &#40;SQL Server&#41;) を参照してください。  
   
 ### <a name="does-replication-work-in-conjunction-with-clustering"></a>レプリケーションはクラスター化と組み合わせて使用できますか。  
- 可能。 データはすべてクラスターの 1 つのディスク セットに格納されるため、特別な注意は不要です。  
+ はい。 データはすべてクラスターの 1 つのディスク セットに格納されるため、特別な注意は不要です。  
   
 ## <a name="see-also"></a>参照  
  [レプリケーション管理に関する FAQ](../../../relational-databases/replication/administration/frequently-asked-questions-for-replication-administrators.md)   

@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: analysis-services
 ms.topic: reference
 helpviewer_keywords:
 - XML for Analysis, traces
@@ -17,12 +15,12 @@ ms.assetid: cdbfb984-18bd-4c4e-8fb7-d64ce298ed35
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 24af6f2ff33235321ef49732721042ab2227ca5f
-ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
+ms.openlocfilehash: 678c6d2312261475f4b970b1535ce1faa1f00930
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50146467"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62729074"
 ---
 # <a name="monitoring-traces-xmla"></a>トレースの監視 (XMLA)
   使用することができます、[購読](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/subscribe-element-xmla)XML for Analysis (XMLA) のインスタンスで定義されている既存のトレースを監視するためにコマンド[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]します。 `Subscribe` コマンドは、トレースの結果を行セットとして返します。  
@@ -56,7 +54,7 @@ ms.locfileid: "50146467"
 |ObjectReference|String|ObjectName で指定されたオブジェクトへのオブジェクト参照を表す XML 表現。|  
 |NestLevel|Integer|イベントが発生したトランザクションのレベル。|  
 |NumSegments|Long integer|イベントが発生したコマンドによって影響を受ける、またはアクセスされるデータ セグメントの数。|  
-|Severity|Integer|イベントの例外の重大度レベル。 この列には、以下の値のいずれかが含まれます。<br /><br /> 値: 0 = 成功<br /><br /> 値: 1 = 情報<br /><br /> 値: 2 = 警告<br /><br /> Value: 3 = エラー|  
+|重大度|Integer|イベントの例外の重大度レベル。 この列には、以下の値のいずれかが含まれます。<br /><br /> 値: 0 = 成功<br /><br /> 値: 1 = 情報<br /><br /> 値: 2 = 警告<br /><br /> 値: 3 = エラー|  
 |成功|ブール値|コマンドが成功したか、失敗したかを示します。|  
 |[エラー]|Long integer|イベントのエラー番号 (ある場合)。|  
 |ConnectionID|String|イベントが発生した接続の識別子。|  

@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: f6a20d9f-c1ab-474c-b9f3-82277e2a126d
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 8ceb1bcf0e05a667372aefa625c40d4ef0238661
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 690c7b58c336596485b9ade77f0c02928853cd2d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47712800"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67923203"
 ---
 # <a name="ado-md-fundamentals"></a>ADO MD の基礎
 Microsoft® ActiveX® Data Objects (多次元) (ADO MD) により簡単にアクセスする多次元データ Microsoft Visual Basic® などの言語から Microsoft Visual C++® します。 ADO MD の拡張などの多次元データに固有のオブジェクトを含める Microsoft ActiveX® Data オブジェクト (ADO)、 [CubeDef](../../../ado/reference/ado-md-api/cubedef-object-ado-md.md)と[セルセット](../../../ado/reference/ado-md-api/cellset-object-ado-md.md)オブジェクト。 ADO MD とには、多次元スキーマを参照し、キューブを照会および結果を取得することができます。  

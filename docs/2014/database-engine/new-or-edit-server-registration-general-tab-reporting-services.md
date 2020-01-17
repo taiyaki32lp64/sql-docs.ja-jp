@@ -13,11 +13,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: e0e6d6d3ad57726c42556c9ecc2662edce102e57
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48063412"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62844278"
 ---
 # <a name="new-or-edit-server-registration-general-tab-reporting-services"></a>[新規サーバーの登録] または [サーバー登録プロパティの編集] ([全般] タブ) (Reporting Services)
   このタブを使用すると、 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]のインスタンスを登録するときのオプションを指定できます。  

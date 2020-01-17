@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 3117a47d-e179-4f76-89d0-656582f1c9bb
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 78ee14838b467cfe6e555c97f1e74c65cccf98ff
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e39b70f92f7b239b011cdd4fdd6abd36c27561c2
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47664120"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68076803"
 ---
 # <a name="deleting-rows-in-the-rowset-with-sqlsetpos"></a>SQLSetPos による行セットの行の削除
 削除操作の**SQLSetPos**データ ソースのテーブルの 1 つまたは複数の選択した行を削除します。 行を削除する**SQLSetPos**、アプリケーション呼び出し**SQLSetPos**で*操作*SQL_DELETE に設定と*RowNumber*に設定します削除する行の数。 場合*RowNumber*が 0 の行セット内のすべての行が削除されます場合、。  

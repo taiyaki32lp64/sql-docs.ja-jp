@@ -21,11 +21,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: b3be16ea856b5d632ba5a0285bad2c4d2d93709c
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53210181"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62473150"
 ---
 # <a name="automated-administration-across-an-enterprise"></a>エンタープライズ全体の管理の自動化
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] の複数のインスタンスにわたって管理を自動化することを*マルチサーバー管理*といいます。 次の場合に、マルチサーバー管理を行います。  
@@ -37,9 +37,9 @@ ms.locfileid: "53210181"
 > [!NOTE]  
 >  一部として[!INCLUDE[msCoName](../../includes/msconame-md.md)]、所有権の総コストを削減する継続的な取り組み[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]2 つの機能が導入されました: ポリシー ベースの管理と構成サーバーとサーバーを使用するマルチ サーバー クエリに呼び出されるサーバーを管理する方法グループ。 この 2 つの機能は、ここで説明する機能の一部と組み合わせたり、それらの代わりとして使用したりすることができます。 詳細については、次を参照してください。[でポリシー ベースの管理サーバーの管理](../../relational-databases/policy-based-management/administer-servers-by-using-policy-based-management.md)と[複数サーバーを使用して中央管理サーバーの管理](../../relational-databases/administer-multiple-servers-using-central-management-servers.md)します。  
   
- マルチサーバー管理機能を活用するには、1 台以上のマスター サーバーと 1 台以上のターゲット サーバーが必要です。 マスター サーバーは、対象サーバーに対してジョブを分散し、対象サーバーからイベントを受け取ります。 また、マスター サーバーは、対象サーバーで実行されるジョブについて、ジョブ定義の中央コピーも保存します。 対象サーバーは、定期的にマスター サーバーに接続して、ジョブのスケジュールを更新します。 マスター サーバー上に新しいジョブがあれば、ターゲット サーバーはそのジョブをダウンロードします。 ターゲット サーバーは、ジョブを完了した後、マスター サーバーに再接続してジョブのステータスをレポートします。  
+ マルチサーバー管理機能を活用するには、1 台以上のマスター サーバーと 1 台以上のターゲット サーバーが必要です。 マスター サーバーは、ターゲット サーバーに対してジョブを分散し、ターゲット サーバーからイベントを受け取ります。 また、マスター サーバーは、ターゲット サーバーで実行されるジョブについて、ジョブ定義の中央コピーも保存します。 ターゲット サーバーは、定期的にマスター サーバーに接続して、ジョブのスケジュールを更新します。 マスター サーバー上に新しいジョブがあれば、ターゲット サーバーはそのジョブをダウンロードします。 ターゲット サーバーは、ジョブを完了した後、マスター サーバーに再接続してジョブのステータスをレポートします。  
   
- 次の図は、マスター サーバーと対象サーバーの関係を示します。  
+ 次の図は、マスター サーバーとターゲット サーバーの関係を示します。  
   
  ![マルチ サーバー管理構成](../../database-engine/media/multisvr.gif "マルチ サーバー管理構成")  
   
@@ -58,13 +58,13 @@ ms.locfileid: "53210181"
   
 ## <a name="in-this-section"></a>このセクションの内容  
  [マルチサーバー環境の作成](create-a-multiserver-environment.md)  
- マスター サーバーおよび対象サーバーを作成および管理する方法について説明します。  
+ マスター サーバーおよびターゲット サーバーを作成および管理する方法について説明します。  
   
  [マルチサーバー環境に適した SQL Server エージェント サービス アカウントの選択](choose-the-right-sql-server-agent-service-account-for-multiserver-environments.md)  
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] エージェント サービスに管理者以外の Windows アカウントまたはローカル システム アカウントを使用することによる、マルチサーバー環境への影響について説明します。  
   
  [対象サーバーでの暗号化オプションの設定](set-encryption-options-on-target-servers.md)  
- 対象サーバーの MsxEncryptChannelOptions [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] エージェントのレジストリ サブキーの設定について説明します。  
+ ターゲット サーバーの MsxEncryptChannelOptions [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] エージェントのレジストリ サブキーの設定について説明します。  
   
  [エンタープライズ全体におけるジョブの管理](manage-jobs-across-an-enterprise.md)  
  ジョブ ステータスの確認、ジョブのターゲット サーバーの変更、ターゲット サーバーのクロックの同期、およびマスター サーバーの現在のジョブ ステータスに対するポーリングについて説明します。  
@@ -73,10 +73,10 @@ ms.locfileid: "53210181"
  プロキシを使用しているマルチサーバー ジョブに障害が発生した場合のトラブルシューティングについて説明します。  
   
  [サーバーのポーリング](poll-servers.md)  
- 対象サーバーをマスター サーバーに明示的および暗黙的にポーリングして、ジョブ情報の同期をとる方法について説明します。  
+ ターゲット サーバーをマスター サーバーに明示的および暗黙的にポーリングして、ジョブ情報の同期をとる方法について説明します。  
   
  [イベントの管理](manage-events.md)  
- 対象サーバーからマスター サーバーに転送されるイベントについて説明します。  
+ ターゲット サーバーからマスター サーバーに転送されるイベントについて説明します。  
   
  [企業全体の自動管理のチューニング](tune-automated-administration-across-an-enterprise.md)  
  マルチサーバー環境で自動化された管理により [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]の自己チューニング機能を活用する方法について説明します。  

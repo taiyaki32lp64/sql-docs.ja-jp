@@ -4,22 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 helpviewer_keywords:
 - logs [Reporting Services], execution
 - execution logs [Reporting Services]
 ms.assetid: a7ead67d-1404-4e67-97e7-4c7b0d942070
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 6e11a7d35550c881157ab4be6aa78048346653c8
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 649795e5e142563b64014f2ccf970f0df5de134b
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56011254"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66103471"
 ---
 # <a name="report-server-execution-log-and-the-executionlog3-view"></a>レポート サーバー実行ログと ExecutionLog3 ビュー
   レポート サーバー実行ログには、サーバー上で実行するレポート、またはネイティブ モードのスケールアウト配置や SharePoint ファーム内の複数のサーバー上で実行するレポートに関する情報が含まれます。 レポート実行ログを使用して、レポートを要求する頻度、最も多く使用される出力形式、および各処理フェーズでかかる処理時間 (単位はミリ秒) を調査できます。 このログには、レポートのデータセット クエリの実行にかかった時間とデータの処理にかかった時間に関する情報が記録されます。 レポート サーバー管理者は、ログの情報を確認して実行時間が長いタスクを特定し、レポート作成者に対して改善の余地があるレポートの領域 (データセットや処理) について提案することができます。  
@@ -317,7 +316,7 @@ select * from ExecutionLog2 order by TimeStart DESC
 |RequestType|要求の種類 (ユーザーまたはシステム)。|  
 |形式|表示形式。|  
 |Parameters|レポート実行に使用するパラメーター値。|  
-|ReportAction|有効値は次のとおりです。Render、Sort、BookMarkNavigation、DocumentNavigation、GetDocumentMap、Findstring。|  
+|ReportAction|有効値は次のとおりです。Render, Sort, BookMarkNavigation, DocumentNavigation, GetDocumentMap, Findstring|  
 |TimeStart|レポート処理の期間を示す開始時刻と終了時刻。|  
 |TimeEnd||  
 |TimeDataRetrieval|データの取得、レポートの処理、レポートの表示にかかった時間 (単位はミリ秒)。|  
@@ -353,7 +352,7 @@ select * from ExecutionLog order by TimeStart DESC
 |TimeDataRetrieval|データの取得、レポートの処理、レポートの表示にかかった時間 (単位はミリ秒)。|  
 |TimeProcessing||  
 |TimeRendering||  
-|Source|レポート実行のソース。 有効値は次のとおりです。1 = 実行中、2 = キャッシュ、3 = スナップショット、4 = 履歴、5 = アドホック、6 = セッション、7 = RDCE。|  
+|Source|レポート実行のソース。 有効値は次のとおりです。(1 = 実行中、2 = キャッシュ、3 = スナップショット、4 = 履歴、5 = アドホック、6 = セッション、7 = RDCE)。|  
 |状態|有効値: rsSuccess、rsProcessingAborted、またはエラー コード。 複数のエラーが発生した場合は、最初のエラーだけが記録されます。|  
 |ByteCount|表示されるレポートのサイズ (バイト単位)。|  
 |RowCount|クエリから返される行数。|  

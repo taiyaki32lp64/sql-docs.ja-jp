@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: 542b19ca-61c8-41ca-aa2e-0aba8906cc24
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: f96a3966a3f7d6a7c3c115586929cf975d54e45c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a099d67d337544a33bfc922fe14e07af39bd619d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47659018"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68022623"
 ---
 # <a name="systracesubclassvalues-transact-sql"></a>sys.trace_subclass_values (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -41,7 +40,7 @@ ms.locfileid: "47659018"
 |-----------------|---------------|-----------------|  
 |**trace_event_id**|**smallint**|トレース イベントの ID。 このパラメーターもに、 **sys.trace_events**カタログ ビューです。|  
 |**trace_column_id**|**smallint**|列挙に使用されるトレース列の ID。 このパラメーターもに、 **sys.trace_columns**カタログ ビューです。|  
-|**subclass_name**|**nvarchar(128)**|列の値の意味。|  
+|**subclass_name**|**nvarchar(128)**|列の値の意味です。|  
 |**subclass_value**|**smallint**|列の値。|  
   
 ## <a name="permissions"></a>アクセス許可  

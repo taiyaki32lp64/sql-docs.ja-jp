@@ -6,14 +6,14 @@ ms.prod_service: reporting-services-native
 ms.technology: mobile-reports
 ms.topic: conceptual
 ms.assetid: fd259b95-bb58-4eb1-a436-6aa12fc6f5f2
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: eef1a8c7ca2d1a7aaff29e04455f17a7cc236b78
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: b2f2d3b15021569fe53bfc886f744ed7e53c1444
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56291260"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63141248"
 ---
 # <a name="add-a-custom-map-to-a-reporting-services-mobile-report"></a>Reporting Services モバイル レポートへのカスタム マップの追加
 カスタム マップには、2 つのファイルが必要です。  
@@ -26,11 +26,11 @@ ms.locfileid: "56291260"
   
 ## <a name="load-a-custom-map"></a>カスタム マップを読み込む  
   
-1. **[レイアウト]** タブで、マップの種類を選択します:**[グラデーション ヒート マップ]**、**[範囲停止のヒート マップ]**、または **[バブル マップ]**。これをデザイン画面にドラッグして、必要なサイズにします。  
+1. **[レイアウト]** タブで、マップの種類として **[Gradient Heat Map]** (グラデーション ヒート マップ)、 **[Range Stop Heat Map]** (範囲境界ヒート マップ)、 **[Bubble Map]** (バブル マップ) のいずれかを選択し、デザイン画面にドラッグして、必要なサイズにします。  
   
    ![SSMRP_MapsGallery](../../reporting-services/mobile-reports/media/ssmrp-mapsgallery.png)  
   
-2. **[レイアウト]** ビュー、**[Visual Properties]** (ビジュアル プロパティ) パネル、**[マップ]** の順に移動し、**[Custom Map From File]** (ファイルのカスタム マップ) を選択します。   
+2. **[レイアウト]** ビュー、 **[Visual Properties]** (ビジュアル プロパティ) パネル、 **[マップ]** の順に移動し、 **[Custom Map From File]** (ファイルのカスタム マップ) を選択します。   
   
    ![SSMRP_SelectCustomMap](../../reporting-services/mobile-reports/media/ssmrp-selectcustommap.png)  
   

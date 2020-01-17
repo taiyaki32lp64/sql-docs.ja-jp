@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 9e94146a-5b80-4a01-b586-1e03ff05b9ac
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: bc8133241ad0b76579e87164350a5c6fe2a39f2e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 9ef460a7d004227e34e0043223abdf3769c92520
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47600910"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68135658"
 ---
 # <a name="compiling-an-embedded-sql-program"></a>埋め込み SQL プログラムのコンパイル
 埋め込み SQL プログラムには、SQL とホスト言語のステートメントの組み合わせが含まれている、ために、ホスト言語、コンパイラに直接送信できません。 代わりに、マルチ ステップのプロセスでコンパイルされます。 このプロセスには、製品が異なる場合は、操作は、ほぼすべての製品と同じです。  

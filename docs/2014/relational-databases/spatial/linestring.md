@@ -9,15 +9,15 @@ helpviewer_keywords:
 - LineString geometry subtype [SQL Server]
 - geometry subtypes [SQL Server]
 ms.assetid: e50d0b86-8b31-4285-be71-ad05c7712cbd
-author: douglaslMS
-ms.author: douglasl
+author: MladjoA
+ms.author: mlandzic
 manager: craigg
-ms.openlocfilehash: 2efe03bcff016070c9017068c62e823dd36d497a
-ms.sourcegitcommit: 87f29b23d5ab174248dab5d558830eeca2a6a0a4
+ms.openlocfilehash: 6bc07f8770e6cd7d1fb1e4b4e6e40ca8b1c5256f
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "51018477"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66014201"
 ---
 # <a name="linestring"></a>LineString
   `LineString` は、一連の点と、それらを結ぶ線分を表す 1 次元のオブジェクトです。  
@@ -48,7 +48,7 @@ DECLARE @g3 geometry = 'LINESTRING(1 1, 1 1)';
   
  `@g3` の場合、`LineString` インスタンスは許容されますが、有効ではありません。  
   
- 次に示す `LineString` インスタンスは許容されません。 `System.FormatException` がスローされます。  
+ 次に示す `LineString` インスタンスは許容されません。 `System.FormatException`がスローされます。  
   
 ```  
 DECLARE @g geometry = 'LINESTRING(1 1)';  
@@ -102,7 +102,7 @@ SET @g = geometry::STGeomFromText('LINESTRING(1 1 NULL 0, 2 4 NULL 12.3, 3 9 NUL
   
  次の例は、同じ 2 つの点を持つ `geometry LineString` インスタンスを作成する方法を示しています。 `IsValid` 呼び出しは、`LineString` インスタンスが無効であることを示します。`MakeValid` 呼び出しは、`LineString` インスタンスを `Point` に変換します。  
   
-```tsql  
+```sql  
 DECLARE @g geometry  
 SET @g = geometry::STGeomFromText('LINESTRING(1 3, 1 3)',0);  
 IF @g.STIsValid() = 1  
@@ -125,7 +125,7 @@ LINESTRING(1 3, 1 3) is not a valid LineString
 POINT(1 3) is a valid Point.  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [STLength &#40;geometry データ型&#41;](/sql/t-sql/spatial-geometry/stlength-geometry-data-type)   
  [STStartPoint &#40;geometry データ型&#41;](/sql/t-sql/spatial-geometry/ststartpoint-geometry-data-type)   
  [STEndpoint &#40;geometry データ型&#41;](/sql/t-sql/spatial-geometry/stendpoint-geometry-data-type)   

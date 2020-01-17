@@ -16,15 +16,14 @@ helpviewer_keywords:
 ms.assetid: 7b9a56b3-face-452e-a655-147dac306ba1
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: 56703c5c0a2b3bb833b0e600c8dbfbca929ae75a
-ms.sourcegitcommit: c6e71ed14198da67afd7ba722823b1af9b4f4e6f
+ms.openlocfilehash: eada4b2dbd5a76418ec8de9f988a6291e175da5f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/16/2019
-ms.locfileid: "54326563"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67914272"
 ---
-# <a name="revoke-server-permissions-transact-sql"></a>REVOKE (サーバーの権限の取り消し) (Transact-SQL)
+# <a name="revoke-server-permissions-transact-sql"></a>REVOKE (サーバー権限の取り消し) (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   サーバー レベルの GRANT および DENY の権限を取り消します。  
@@ -64,7 +63,7 @@ REVOKE [ GRANT OPTION FOR ] permission  [ ,...n ]
  AS \<grantor_principal> このクエリを実行するプリンシパルの、権限を取り消す権利の取得元であるプリンシパルを指定します。  
   
  GRANT OPTION FOR  
- 指定した権限を他のプリンシパルに許可するための権利が、取り消されます。 権限自体は取り消されません。  
+ 指定した権限を他のプリンシパルに許可するための権利が、取り消されることを示します。 権限自体は取り消されません。  
   
 > [!IMPORTANT]  
 >  指定した権限が GRANT オプションなしでプリンシパルに許可されている場合は、その権限自体が取り消されます。  
@@ -96,13 +95,13 @@ REVOKE [ GRANT OPTION FOR ] permission  [ ,...n ]
 ## <a name="remarks"></a>Remarks  
  サーバー スコープの権限を取り消すことができるのは、現在のデータベースが master のときだけです。  
   
- REVOKE では、GRANT と DENY の両方の権限が取り消されます。  
+ REVOKE では、GRANT と DENY の両方の権限を取り消します。  
   
- 指定した権限を許可するための権利を取り消すには、REVOKE GRANT OPTION FOR を使用します。 プリンシパルに、権限とその権限を許可する権利がある場合は、権限を許可する権利だけが取り消され、権限自体は取り消されません。 ただし、指定した権限が GRANT オプションなしでプリンシパルに許可されている場合は、その権限自体が取り消されます。  
+ 指定した権限を許可するための権利を取り消すには、REVOKE GRANT OPTION FOR を使用します。 プリンシパルに権限を許可する権限がある場合、権限を許可する権限は取り消され、権限自体は取り消されません。 しかし、プリンシパルに GRANT オプションなしで指定した権限がある場合は、その権限自体が取り消されます。  
   
  サーバー権限に関する情報は [sys.server_permissions](../../relational-databases/system-catalog-views/sys-server-permissions-transact-sql.md) カタログ ビュー、サーバー プリンシパルに関する情報は [sys.server_principals](../../relational-databases/system-catalog-views/sys-server-principals-transact-sql.md) カタログ ビューでそれぞれ確認できます。 サーバー ロールのメンバーシップに関する情報は、[sys.server_role_members](../../relational-databases/system-catalog-views/sys-server-role-members-transact-sql.md) カタログ ビューで確認できます。  
   
- サーバーは権限の階層の最上位となります。 次の表に、サーバーで取り消すことができる最も限定的な権限を示します。  
+ サーバーは権限の階層の最上位となります。 次の表には、サーバーで取り消すことができる最も限定的な権限が示されています。  
   
 |サーバー権限|権限が含まれるサーバー権限|  
 |-----------------------|----------------------------------|  

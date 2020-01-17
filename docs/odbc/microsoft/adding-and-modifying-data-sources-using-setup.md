@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 54b2d61d-6ce5-45af-a776-e03180470ecf
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 953563285d3c62a8523079a604cf607f2e0edf62
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 621d10c3c602b2f406461a24e53b2302e45835eb
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52526861"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67901401"
 ---
 # <a name="adding-and-modifying-data-sources-using-setup"></a>セットアップを使用してデータ ソースを追加および変更する
 > [!IMPORTANT]  

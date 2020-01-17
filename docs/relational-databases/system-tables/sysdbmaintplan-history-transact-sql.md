@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 02d36f08-ac93-4463-bb59-284c5cd6ed04
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: a51e2ea16ab7cc34ade122284a7162707c4d8f7d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 4470b6b5d1b30f5698bf588a04066c50bb4c7197
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47732670"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68130450"
 ---
 # <a name="sysdbmaintplanhistory-transact-sql"></a>sysdbmaintplan_history (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -36,16 +35,16 @@ ms.locfileid: "47732670"
 |列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
 |**sequence_id**|**int**|データベース メンテナンス プランで実行された履歴のシーケンス|  
-|**plan_id**|**uniqueidentifier**|データベース メンテナンス プランの ID|  
+|**plan_id**|**uniqueidentifier**|データベース メンテナンス プランの id。|  
 |**plan_name**|**sysname**|データベース メンテナンス プランの名前。|  
-|**database_name**|**sysname**|このデータベース メンテナンス プランが関連付けられているデータベースの名前|  
+|**database_name**|**sysname**|データベース メンテナンス プランに関連付けられているデータベースの名前。|  
 |**server_name**|**sysname**|システム名|  
-|**activity**|**nvarchar(128)**|データベース メンテナンス プランで実行された操作 (トランザクション ログのバックアップなど)|  
+|**activity**|**nvarchar(128)**|(トランザクション ログのバックアップおよびなど)。 データベース メンテナンス プランで実行されたアクティビティ。|  
 |**succeeded**|**bit**|**0** = 成功**1** = 失敗|  
 |**end_time**|**datetime**|操作が完了した時刻|  
 |**duration**|**int**|データベース メンテナンス プラン操作が完了するまでの所用時間|  
-|**start_time**|**datetime**|操作が開始された時刻|  
-|**error_number**|**int**|失敗時に報告されたエラー番号|  
+|**start_time**|**datetime**|操作が開始された時刻。|  
+|**error_number**|**int**|エラー発生時に報告されたエラー番号。|  
 |**message**|**nvarchar(512)**|によって生成されたメッセージ**sqlmaint**します。|  
   
   

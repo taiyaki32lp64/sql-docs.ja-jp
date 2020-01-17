@@ -15,15 +15,14 @@ helpviewer_keywords:
 - order of operator execution [Transact-SQL]
 - precedence [SQL Server], operators
 ms.assetid: f04d2439-6fff-4e4c-801f-cc62faef510a
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: 41cdf947d16cc5dc2366ae27c9008fe4d53c158f
-ms.sourcegitcommit: bbdf51f0d56acfa6bcc4a5c4fe2c9f3cd4225edc
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 37c1bac44b4dff2be7735f89243b6e273eca0775
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56079328"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68121920"
 ---
 # <a name="operator-precedence-transact-sql"></a>演算子の優先順位 (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -32,7 +31,7 @@ ms.locfileid: "56079328"
   
  演算子には、次の表に示す優先順位レベルが定義されています。 優先順位が高い演算子は、優先順位が低い演算子よりも前に評価されます。 次の表では、1 が最も高いレベルで 8 が最も低いレベルです。
   
-|Level|演算子|  
+|Level|オペレーター|  
 |-----------|---------------|  
 |1|~ (ビットごとの NOT)|  
 |2|* (乗算)、/ (除算)、% (剰余)|  

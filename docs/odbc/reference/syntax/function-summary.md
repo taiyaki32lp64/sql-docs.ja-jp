@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: e7fc96e3-3f16-4799-b70f-49febed53a44
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 04da1deae2745efb3b40cecaf842a42dfcdc30de
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: eb4a037e8ddf7d0cfa1b4075f5f67676667da0c1
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47619480"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68007159"
 ---
 # <a name="function-summary"></a>関数の概要
 次のセクションでは、集計関数の使用によって、ODBC 対応のアプリケーションと関連するソフトウェア。  

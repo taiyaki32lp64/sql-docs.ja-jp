@@ -11,16 +11,15 @@ helpviewer_keywords:
 - skipping columns when importing
 - format files [SQL Server], skipping columns
 ms.assetid: 30e0e7b9-d131-46c7-90a4-6ccf77e3d4f3
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
+author: MashaMSFT
+ms.author: mathoma
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 904bc5edeb805d3c4d780bfe4595d3dff98bf962
-ms.sourcegitcommit: bfa10c54e871700de285d7f819095d51ef70d997
+ms.openlocfilehash: 9acac3eca271c8bb8c20df7e429dd830d19bdd43
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/14/2019
-ms.locfileid: "54256367"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72909253"
 ---
 # <a name="use-a-format-file-to-skip-a-table-column-sql-server"></a>フォーマット ファイルを使用したテーブル列のスキップ (SQL Server)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -80,7 +79,7 @@ bcp WideWorldImporters..myTestSkipCol format nul -f myTestSkipCol_Default.fmt -c
   
  次のスクリーンショットに、この既定のフォーマット ファイルのサンプルで使用されている値を示します。 
   
- ![myTestSkipCol 用の既定の XML 以外のフォーマット ファイル](../../relational-databases/import-export/media/mytestskipcol-f-c-default-fmt.gif "myTestSkipCol 用の既定の XML 以外のフォーマット ファイル")  
+ ![myTestSkipCol 用の既定の非 XML 形式ファイル](../../relational-databases/import-export/media/mytestskipcol-f-c-default-fmt.gif "myTestSkipCol 用の既定の非 XML 形式ファイル")  
   
 > [!NOTE]  
 >  フォーマット ファイル フィールドの詳細については、「[XML 以外のフォーマット ファイル &#40;SQL Server&#41;](../../relational-databases/import-export/non-xml-format-files-sql-server.md)」をご覧ください。  

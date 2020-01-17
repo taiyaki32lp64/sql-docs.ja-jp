@@ -1,6 +1,7 @@
 ---
-title: ミラーリングのためのミラー データベースの準備 (SQL Server) | Microsoft Docs
-ms.custom: ''
+title: ミラーリングのためのデータベースの準備
+description: データベース ミラーリングのための SQL Server データベースを準備する方法について説明します。
+ms.custom: seo-lt-2019
 ms.date: 11/10/2017
 ms.prod: sql
 ms.prod_service: high-availability
@@ -14,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 8676f9d8-c451-419b-b934-786997d46c2b
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 2179ae0fd8110f7172ca936b77045f58fb50cd7e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: f93ea5a9b37abcfac0310619b971e3ec5f1e625f
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47770179"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75255978"
 ---
 # <a name="prepare-a-mirror-database-for-mirroring-sql-server"></a>ミラーリングのためのミラー データベースの準備 (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -34,19 +34,19 @@ ms.locfileid: "47770179"
   
      [制限事項と制約事項](#Restrictions)  
   
-     [推奨事項](#Recommendations)  
+     [Recommendations (推奨事項)](#Recommendations)  
   
-     [Security](#Security)  
+     [セキュリティ](#Security)  
   
 -   [ミラーリングを再開するために既存のミラー データベースを準備するには](#PrepareToRestartMirroring)  
   
 -   [新しいミラー データベースを準備するには](#CombinedProcedure)  
   
--   **補足情報:**  [ミラー データベースを準備した後](#FollowUp)  
+-   **補足情報:** [ミラー データベースを準備した後](#FollowUp)  
   
 -   [関連タスク](#RelatedTasks)  
   
-##  <a name="BeforeYouBegin"></a> 作業を開始する準備  
+##  <a name="BeforeYouBegin"></a> はじめに  
   
 ###  <a name="Requirements"></a> 必要条件  
   
@@ -98,7 +98,7 @@ ms.locfileid: "47770179"
 ##  <a name="PrepareToRestartMirroring"></a> ミラーリングを再開するために既存のミラー データベースを準備するには  
  ミラーリングを削除してもミラー データベースが RECOVERING 状態のままである場合、ミラーリングを再開することができます。  
   
-1.  プリンシパル データベースで 1 つ以上のログ バックアップを作成します。 詳細については、「 [トランザクション ログのバックアップ &#40;SQL Server&#41;](../../relational-databases/backup-restore/back-up-a-transaction-log-sql-server.md)でミラー データベースを準備する方法について説明します。  
+1.  プリンシパル データベースで 1 つ以上のログ バックアップを作成します。 詳細については、「[トランザクション ログのバックアップ &#40;SQL Server&#41;](../../relational-databases/backup-restore/back-up-a-transaction-log-sql-server.md)」を参照してください。  
   
 2.  ミラー データベースで、RESTORE WITH NORECOVERY を使用して、ミラーリングの削除後にプリンシパル データベースで作成されたすべてのログ バックアップを復元します。 詳細については、「 [トランザクション ログ バックアップの復元 &#40;SQL Server&#41;](../../relational-databases/backup-restore/restore-a-transaction-log-backup-sql-server.md)でミラー データベースを準備する方法について説明します。  
   
@@ -129,7 +129,7 @@ ms.locfileid: "47770179"
     > [!NOTE]  
     >  データベースのファイル グループをファイル グループごとに復元する場合は、必ずデータベース全体を復元してください。  
   
-    -   [SSMS を使用したデータベース バックアップの復元](../../relational-databases/backup-restore/restore-a-database-backup-using-ssms.md)  
+    -   [SSMS を使用してデータベース バックアップを復元する](../../relational-databases/backup-restore/restore-a-database-backup-using-ssms.md)  
   
     -   [RESTORE &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-transact-sql.md) 」と「 [RESTORE の引数 &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-arguments-transact-sql.md)でミラー データベースを準備する方法について説明します。  
   
@@ -140,7 +140,7 @@ ms.locfileid: "47770179"
 ###  <a name="TsqlExample"></a> 例 (Transact-SQL)  
  データベース ミラーリング セッションを開始する前に、ミラー データベースを作成する必要があります。 ミラー データベースは、ミラーリング セッションを開始する直前に作成してください。  
   
- この例では、既定で単純復旧モデルを使う [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] サンプル データベースを使います。  
+ この例では、既定で単純復旧モデルを使用する [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] サンプル データベースを使用します。  
   
 1.  [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] データベースでデータベース ミラーリングを使用するには、完全復旧モデルが使用されるように変更します。  
   
@@ -237,7 +237,7 @@ ms.locfileid: "47770179"
   
  データベース ミラーリングの設定、セキュリティの設定、ミラー データベースの準備、パートナーの設定、およびミラーリング監視サーバーの追加をすべて含む例については、「 [データベース ミラーリングの設定 &#40;SQL Server&#41;](../../database-engine/database-mirroring/setting-up-database-mirroring-sql-server.md)でミラー データベースを準備する方法について説明します。  
   
-##  <a name="FollowUp"></a> 補足情報: ミラー データベースを準備した後  
+##  <a name="FollowUp"></a>補足情報: ミラー データベースを準備した後  
   
 1.  最新の RESTORE LOG 操作の後、ログ バックアップを採取している場合は、ミラーリングを開始する前に、採取したすべてのログ バックアップを手動で適用する必要があります (WITH NORECOVERY を使用します。  
   

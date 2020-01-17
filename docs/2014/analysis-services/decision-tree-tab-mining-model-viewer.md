@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dm.miningmodeleditor.decisiontree.f1
@@ -13,17 +12,17 @@ ms.assetid: dc88606f-ba7c-4f8d-af65-bfa17ec16e2b
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: dbb34719b79ba5a12249cdb96187b178450d5802
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: cee721aca66f5266a29d3bf61babf9060e9aef32
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48194492"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66082300"
 ---
 # <a name="decision-tree-tab-mining-model-viewer"></a>[デシジョン ツリー] タブ (マイニング モデル ビューアー)
   **[デシジョン ツリー]** ペインは、デシジョン ツリー モデルで作成されたデシジョン ルールをビジュアルに表示します。 デシジョン ルールは、特定の結果に至るパスを記述します。  
   
- **詳細:** [Microsoft デシジョン ツリー アルゴリズム](data-mining/microsoft-decision-trees-algorithm.md)」、「 [Microsoft ツリー ビューアーを使用したモデルの参照](data-mining/browse-a-model-using-the-microsoft-tree-viewer.md)  
+ **詳細情報。** [Microsoft デシジョン ツリー アルゴリズム](data-mining/microsoft-decision-trees-algorithm.md)、 [Microsoft ツリー ビューアーを使用してモデルの参照](data-mining/browse-a-model-using-the-microsoft-tree-viewer.md)  
   
 ## <a name="options"></a>および  
  **ビューアーのコンテンツを更新します。**  
@@ -66,8 +65,8 @@ ms.locfileid: "48194492"
  ツリー グラフに表示するレベル数を調整するには、スライダー バーを左右に移動します。 モデルのすべてのノードを表示するには、バーを右端までスライドします。  
   
 ## <a name="see-also"></a>参照  
- [データ マイニング アルゴリズム&#40;Analysis Services - データ マイニング&#41;](data-mining/data-mining-algorithms-analysis-services-data-mining.md)   
- [マイニング モデル ビューアー&#40;データ マイニング モデル デザイナー&#41;](mining-model-viewers-data-mining-model-designer.md)   
+ [データ マイニング アルゴリズム &#40;Analysis Services - データ マイニング&#41;](data-mining/data-mining-algorithms-analysis-services-data-mining.md)   
+ [マイニング モデル ビューアー (データ マイニング モデル デザイナー)](mining-model-viewers-data-mining-model-designer.md)   
  [データ マイニング モデル ビューアー](data-mining/data-mining-model-viewers.md)  
   
   

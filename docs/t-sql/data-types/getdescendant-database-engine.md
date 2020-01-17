@@ -17,18 +17,17 @@ helpviewer_keywords:
 ms.assetid: f5f39596-033e-4243-acbc-caa188b45b03
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 28face7dd893a43b9167ff162a3c741b99c65eab
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 3d015602e944416435c95aba6aaea1ead84b834a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56018873"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68077971"
 ---
 # <a name="getdescendant-database-engine"></a>GetDescendant (データベース エンジン)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-parent の子ノードを返します。
+親の子ノードを返します。
   
 ## <a name="syntax"></a>構文  
   
@@ -55,7 +54,7 @@ NULL または現在のノードの子の **hierarchyid**。
 **CLR 戻り値の型:SqlHierarchyId**
   
 ## <a name="remarks"></a>Remarks  
-parent の子孫である 1 つの子ノードを返します。
+親の子孫である 1 つの子ノードを返します。
 -   parent が NULL の場合、NULL を返します。  
 -   parent が NULL でなく、child1 と child2 の両方が NULL の場合、parent の子を返します。  
 -   parent と child1 が NULL でなく、child2 が NULL の場合、child1 より大きい parent の子を返します。  
@@ -65,7 +64,7 @@ parent の子孫である 1 つの子ノードを返します。
 -   child2 が NULL でなく parent の子でない場合、例外が発生します。  
 -   child1 >= child2 の場合は、例外が発生します。  
   
-GetDescendant は決定的です。 そのため場合、 GetDescendant と呼ばれるは、同じ入力でが同じ出力常に生成されます。 ただし、生成される子の実際の ID は、例 C に示すように、他のノードとの関係によって異なります。
+GetDescendant は決定的です。 そのため場合、 GetDescendant と呼ばれるは、同じ入力でが同じ出力常に生成されます。 ただし、生成された子の正確な ID は、例 C に示されているように、他のノードとの関係によって異なります。
   
 ## <a name="examples"></a>使用例  
   

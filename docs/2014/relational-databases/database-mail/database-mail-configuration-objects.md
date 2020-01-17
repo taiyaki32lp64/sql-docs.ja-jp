@@ -33,11 +33,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 71a2805eb935088f39c6b4a86714f263dc5ba643
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52772636"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62872437"
 ---
 # <a name="database-mail-configuration-objects"></a>データベース メール構成オブジェクト
   データベース メールでは、2 つの構成オブジェクトがあります。データベース メールは、データベース アプリケーションから電子メールを送信するときに使用する設定を構成する方法を提供する、データベース構成オブジェクトまたは[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]エージェント。  

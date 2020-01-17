@@ -1,5 +1,5 @@
 ---
-title: 出力パラメーターの BLOB のストリーミング サポート |Microsoft Docs
+title: BLOB 出力パラメーターのストリーミングサポート |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -12,18 +12,16 @@ helpviewer_keywords:
 ms.assetid: b55fccbe-643e-42f1-bf9e-99509c4281af
 author: MightyPen
 ms.author: genemi
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 78ee5038da9b5620c80097b0f34dd6f1002e88e3
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: c15599e2e322eca4f1dca17ff2a46456d6852be9
+ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47761590"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73790491"
 ---
 # <a name="streaming-support-for-blob-output-parameters"></a>BLOB 出力パラメーターのストリーミング サポート
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-[!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
 
   このトピックでは、BLOB 出力パラメーターのストリーミング サポートを示すサンプルを紹介します。このストリーミング サポートでは、BLOB 出力パラメーターを ISequentialStreams としてバインドします。  
   

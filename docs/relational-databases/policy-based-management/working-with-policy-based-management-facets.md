@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 88d025c4-07c2-4e4d-8634-204249a8c82c
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: 6893d6d86066cd77d1889ac859c67b0074d6d8c7
-ms.sourcegitcommit: ef6e3ec273b0521e7c79d5c2a4cb4dcba1744e67
+ms.openlocfilehash: 179b5431f0531b29b4867f405ee88e4567ddb5d8
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51512073"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68054399"
 ---
 # <a name="working-with-policy-based-management-facets"></a>ポリシー ベースの管理ファセットの操作
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

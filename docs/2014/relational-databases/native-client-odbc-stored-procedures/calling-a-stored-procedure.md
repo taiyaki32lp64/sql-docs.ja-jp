@@ -19,11 +19,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 45b3d55774c4a05192f3bec9ef8bd92f89a74aa8
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54127652"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68207029"
 ---
 # <a name="calling-a-stored-procedure"></a>ストアド プロシージャの呼び出し
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC ドライバーは、両方、ODBC CALL エスケープ シーケンスをサポートしていると、 [!INCLUDE[tsql](../../includes/tsql-md.md)] [EXECUTE](/sql/t-sql/language-elements/execute-transact-sql)ストアド プロシージャを実行するためのステートメントは、ODBC CALL エスケープ シーケンスは、推奨される方法です。 ODBC 構文を使用すると、アプリケーションでストアド プロシージャのリターン コードを取得できます。また、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC ドライバーは、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] を実行するコンピューター間のリモート プロシージャ コール (RPC) の送信向けに開発されているプロトコルを使用するように最適化されます。 この RPC プロトコルでは、サーバー側で実行されるパラメーター処理やステートメントの解析作業の多くを排除することで、パフォーマンスを向上しています。  
@@ -33,7 +33,7 @@ ms.locfileid: "54127652"
   
  プロシージャを呼び出す ODBC CALL エスケープ シーケンスは、次の構文を使用します。  
   
- {**[? =]****呼び出す**_procedure_name_[([*パラメーター*] [**、**[*パラメーター*]]...)]}  
+ { **[? =]** **呼び出す**_procedure_name_[([*パラメーター*] [ **、** [*パラメーター*]]...)]}  
   
  場所*procedure_name*プロシージャの名前を指定し、*パラメーター*プロシージャのパラメーターを指定します。 名前付きパラメーターは、ODBC CALL エスケープ シーケンスを使用するステートメントでのみサポートされます。  
   
@@ -41,7 +41,7 @@ ms.locfileid: "54127652"
   
  プロシージャ呼び出しでは、入力パラメーターと入出力パラメーターを省略できます。 かっこだけを指定し、パラメーターを指定しないでプロシージャを呼び出した場合、ドライバーは最初のパラメーターの既定値を使用するように、データ ソースに指示します。 以下に例を示します。  
   
- {**呼び出す** _procedure_name_**()**}  
+ {**呼び出す** _procedure_name_ **()** }  
   
  プロシージャにパラメーターを指定しないと、失敗する可能性があります。 かっこを付けないでプロシージャを呼び出すと、ドライバーはパラメーター値を送信しません。 以下に例を示します。  
   
@@ -90,7 +90,7 @@ ms.locfileid: "54127652"
 { CALL [MyDB].[MyOwner].[My.Table] }  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [ストアド プロシージャの実行](../../relational-databases/native-client-odbc-stored-procedures/running-stored-procedures.md)  
   
   

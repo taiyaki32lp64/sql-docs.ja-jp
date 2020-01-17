@@ -9,13 +9,12 @@ ms.topic: reference
 ms.assetid: 60c7a47b-114c-441b-869e-9d8ebfe4148e
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 93af9ff4c28570f1a7304ff4255c876c79ba5ee1
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 2393c7da432f2143319588c3c16ea88c3b9f1b65
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47844323"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67995710"
 ---
 # <a name="localdberrorinternalerror"></a>LOCALDB_ERROR_INTERNAL_ERROR
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

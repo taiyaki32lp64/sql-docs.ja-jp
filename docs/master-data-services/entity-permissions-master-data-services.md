@@ -1,5 +1,5 @@
 ---
-title: エンティティ アクセス許可 (Master Data Services) | Microsoft Docs
+title: エンティティ権限
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -11,15 +11,14 @@ helpviewer_keywords:
 - entities [Master Data Services], permissions
 - permissions [Master Data Services], entities
 ms.assetid: 22785062-4faf-46ee-bffa-01cbd6d5a5b3
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 4030351db122190636292ccc84c574af95df76fe
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
-ms.translationtype: HT
+ms.openlocfilehash: db9187a5a30a740e8d790a8b84b5dae597de8bfd
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52819014"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73728175"
 ---
 # <a name="entity-permissions-master-data-services"></a>エンティティ権限 (Master Data Services)
 
@@ -43,8 +42,8 @@ ms.locfileid: "52819014"
 |**読み取り**|ユーザーは、メンバー、属性、階層メンバーシップ、コレクション メンバーシップを読み取ることができます。|  
 |**作成**|ユーザーはメンバーを作成し、作成時に属性値を割り当てることができます。|  
 |**Update**|ユーザーは、メンバー、属性、階層メンバーシップ、コレクション メンバーシップを更新できます。|  
-|**削除**|ユーザーはメンバーを削除できます。|  
-|**Deny**|エンティティに対するすべてのアクセスを拒否します。|  
+|**[削除]**|ユーザーはメンバーを削除できます。|  
+|**拒否**|エンティティに対するすべてのアクセスを拒否します。|  
   
  読み取り、作成、更新、削除の各権限は組み合わせることができます。 作成、更新、削除の各権限を割り当てた場合は、読み取り権限が自動的に割り当てられます。  
   

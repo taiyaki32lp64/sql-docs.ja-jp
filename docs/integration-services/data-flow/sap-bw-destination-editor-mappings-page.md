@@ -10,17 +10,20 @@ ms.topic: conceptual
 f1_keywords:
 - sql13.dts.designer.sapbwdestination.columns.f1
 ms.assetid: dfa1f1d6-6b64-4331-bdc5-eaa8b7aa41a1
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: f2f72788f600c853b638673b1ab1d143059ea0ab
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 31c6ab812081d66980002ed0138f5b1ad63f62b5
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47686110"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71298099"
 ---
 # <a name="sap-bw-destination-editor-mappings-page"></a>[SAP BW 変換先エディター] ([マッピング] ページ)
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   **[SAP BW 変換先エディター]** ダイアログ ボックスの **[マッピング]** ページを使用すると、入力列を変換先列にマップできます。  
   
  [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector 1.1 for SAP BW の SAP BW 変換先の詳細については、「 [SAP BW 転送先](../../integration-services/data-flow/sap-bw-destination.md)」を参照してください。  
@@ -36,7 +39,7 @@ ms.locfileid: "47686110"
   
 3.  **[SAP BW 変換先エディター]** で、 **[マッピング]** をクリックして **[マッピング]** ページを開きます。  
   
-## <a name="options"></a>[変数]  
+## <a name="options"></a>オプション  
   
 > [!NOTE]  
 >  変換先を構成するために必要な値がわからない場合は、SAP 管理者に確認してください。  
@@ -74,7 +77,7 @@ ms.locfileid: "47686110"
  **入力列**  
  選択した入力列を表示します。  
   
- 同じマップ先の列に別の入力列をマップするには、リストで別の入力列を選択します。 マッピングを削除するには、**[\<無視>]** を選択して、出力から入力列を除外します。  
+ 同じマップ先の列に別の入力列をマップするには、リストで別の入力列を選択します。 マッピングを削除するには、 **[\<無視>]** を選択して、出力から入力列を除外します。  
   
  **変換先列**  
  マップされているかどうかにかかわらず、使用できる変換先列を表示します。  

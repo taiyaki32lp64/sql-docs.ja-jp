@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: 9a4de02b-1a07-4850-979a-0861fddb7f9d
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 9257b158546ee9a64f38e5143cf6030c4dc3060c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ff099e48540b7255e2453bfb9b90c9515196449c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47686826"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68005095"
 ---
 # <a name="sysdmcryptographicprovidersessions-transact-sql"></a>sys.dm_cryptographic_provider_sessions (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -50,15 +49,15 @@ sys.dm_cryptographic_provider_sessions(session_identifier)
   
 |列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
-|**provider_id**|**int**|暗号化サービス プロバイダーの ID 番号。|  
+|**provider_id**|**int**|暗号プロバイダーの id 番号。|  
 |**session_handle**|**varbytes(8)**|暗号セッション ハンドル。|  
-|**identity**|**nvarchar(128)**|暗号プロバイダーでの認証に使用する ID。|  
+|**identity**|**nvarchar(128)**|暗号化サービス プロバイダーで認証に使用される id。|  
 |**spid**|**short**|接続のセッション ID SPID。 詳細については、「[@@SPID &#40;Transact-SQL&#41;](../../t-sql/functions/spid-transact-sql.md)」を参照してください。|  
   
 ## <a name="remarks"></a>コメント  
  **Sys.dm_cryptographic_provider_sessions**ビューは、現在の接続をパブリックに表示します。 すべての暗号接続を表示するが必要、**コントロール**サーバー アクセス許可。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [セキュリティ カタログ ビュー &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/security-catalog-views-transact-sql.md)   
  [拡張キー管理 &#40;EKM&#41;](../../relational-databases/security/encryption/extensible-key-management-ekm.md)   
  [CREATE CRYPTOGRAPHIC PROVIDER &#40;Transact-SQL&#41;](../../t-sql/statements/create-cryptographic-provider-transact-sql.md)   

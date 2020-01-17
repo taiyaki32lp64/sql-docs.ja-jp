@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - Business Intelligence Development Studio, translations [Analysis Services]
@@ -18,12 +17,12 @@ ms.assetid: 018471e0-3c82-49ec-aa16-467fb58a6d5f
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: e85f6ca82f11b9f19c14a020d879afb65a6d1775
-ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
+ms.openlocfilehash: e97c9ba15aab664e9f0c77f9eb84152f75c3e3d7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50145957"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66065882"
 ---
 # <a name="translations-analysis-services"></a>翻訳 (Analysis Services)
   **[!INCLUDE[applies](../includes/applies-md.md)]**  多次元のみ  
@@ -54,7 +53,7 @@ ms.locfileid: "50145957"
   
  日付、時刻、通貨の形式は、翻訳を通じては実装されません。 クライアントのロケールに基づいてカルチャに固有の形式を動的に提供するには、通貨変換ウィザードと `FormatString` プロパティを使用します。 「[通貨換算 (Analysis Services)](currency-conversions-analysis-services.md)」および「[FormatString 要素 (ASSL)](https://docs.microsoft.com/bi-reference/assl/properties/formatstring-element-assl)」をご覧ください。  
   
- Analysis Services のチュートリアルの「[Lesson 9: Defining Perspectives and Translations](lesson-9-defining-perspectives-and-translations.md) 」では、翻訳を作成してテストする手順について説明しています。  
+ [レッスン 9:パースペクティブと翻訳の定義](lesson-9-defining-perspectives-and-translations.md)Analysis Services チュートリアルでは手順については説明、作成すると、翻訳をテストします。  
   
 ## <a name="defining-translations"></a>翻訳の定義  
  翻訳を定義するには、[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] データベース、ディメンション、またはキューブ オブジェクトの子として `Translation` オブジェクトを作成します。 [!INCLUDE[ss_dtbi](../includes/ss-dtbi-md.md)] を使用してソリューションを開き、翻訳を定義します。  

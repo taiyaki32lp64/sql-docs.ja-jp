@@ -4,23 +4,22 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.httpconnection.proxy.f1
 helpviewer_keywords:
 - HTTP Connection Manager Editor
 ms.assetid: e831a830-49a3-49c5-8a31-9731fc4fd12e
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 1af35445cdbc6d4b5d24e8109af96e60f81af92f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 0b6694741388e649e8a216efad18f48a66de6d61
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48052862"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66058257"
 ---
 # <a name="http-connection-manager-editor-proxy-page"></a>[HTTP 接続マネージャー エディター] ([プロキシ] ページ)
   **[HTTP 接続マネージャー エディター]** の **[プロキシ]** タブを使用すると、HTTP 接続マネージャーがプロキシ サーバーを使用するように設定できます。 HTTP 接続により、パッケージが HTTP を使用してファイルを送受信することで、Web サーバーにアクセスできるようになります。  
@@ -60,6 +59,6 @@ ms.locfileid: "48052862"
   
 ## <a name="see-also"></a>参照  
  [Integration Services のエラーおよびメッセージのリファレンス](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [HTTP 接続マネージャー エディター&#40;サーバー ページ&#41;](../../2014/integration-services/http-connection-manager-editor-server-page.md)  
+ [[HTTP 接続マネージャー エディター] &#40;[サーバー] ページ&#41;](../../2014/integration-services/http-connection-manager-editor-server-page.md)  
   
   

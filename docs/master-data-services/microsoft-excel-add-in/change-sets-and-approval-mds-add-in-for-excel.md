@@ -1,5 +1,5 @@
 ---
-title: 変更セットと承認 (Excel 用 MDS アドイン) | Microsoft Docs
+title: 変更セットと承認
 ms.custom: microsoft-excel-add-in
 ms.date: 03/01/2017
 ms.prod: sql
@@ -8,15 +8,14 @@ ms.reviewer: ''
 ms.technology: master-data-services
 ms.topic: conceptual
 ms.assetid: 5257e054-be61-4a55-b699-708366a759af
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: d1b4fa09fbd6d66262d22e7061adad88dc4a6b6d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
-ms.translationtype: HT
+ms.openlocfilehash: cca345024fcf34cee4abd3695621c9548cee6121
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47649683"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73728020"
 ---
 # <a name="change-sets-and-approval-mds-add-in-for-excel"></a>変更セットと承認 (Excel 用 MDS アドイン)
 

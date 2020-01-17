@@ -15,18 +15,17 @@ helpviewer_keywords:
 ms.assetid: e68fe0b9-5993-4880-917a-b0f661f8459b
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: e49099c2bf0ecd7974531c9f1b840e77805cf218
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: bb8c38d24fbf6c96c61a7b2e83874d15218797c3
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54131352"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68092673"
 ---
 # <a name="spmarksubscriptionvalidation-transact-sql"></a>sp_marksubscriptionvalidation (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  現在開いているトランザクションに、指定のサブスクライバーのサブスクリプションレベル検証トランザクションであることを示すマークを付けます。 このストアド プロシージャは、パブリッシャー側でパブリケーション データベースについて実行されます。  
+  指定のサブスクライバーのサブスクリプション レベル検証トランザクションであることを現在開いているトランザクションをマークします。 このストアド プロシージャは、パブリッシャー側でパブリケーション データベースについて実行されます。  
   
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -41,17 +40,13 @@ sp_marksubscriptionvalidation [ @publication = ] 'publication'
 ```  
   
 ## <a name="arguments"></a>引数  
- [ **@publication**=] **'***パブリケーション***'**  
- パブリケーションの名前です。 *パブリケーション*は**sysname**、既定値はありません。  
+`[ @publication = ] 'publication'` パブリケーションの名前です。 *パブリケーション* は **sysname** 、既定値はありません。  
   
- [ **@subscriber**=] **'***サブスクライバー***'**  
- サブスクライバーの名前です。 *サブスクライバー*が sysname で、既定値はありません。  
+`[ @subscriber = ] 'subscriber'` サブスクライバーの名前です。 *サブスクライバー*が sysname で、既定値はありません。  
   
- [  **@destination_db=**] **'***destination_db***'**  
- 対象データベース名を指定します。 *destination_db*は**sysname**、既定値はありません。  
+`[ @destination_db = ] 'destination_db'` 転送先データベースの名前です。 *destination_db*は**sysname**、既定値はありません。  
   
- [  **@publisher=** ] **'***パブリッシャー***'**  
- 以外を指定[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]パブリッシャーです。 *パブリッシャー*は**sysname**、既定値は NULL です。  
+`[ @publisher = ] 'publisher'` 以外を指定[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]パブリッシャーです。 *パブリッシャー*は**sysname**、既定値は NULL です。  
   
 > [!NOTE]  
 >  *パブリッシャー*が属しているパブリケーションの使わないで、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]パブリッシャーです。  
@@ -64,7 +59,7 @@ sp_marksubscriptionvalidation [ @publication = ] 'publication'
   
  **sp_marksubscriptionvalidation**はサポートされません以外[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]サブスクライバー。  
   
- 非[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]実行することはできません、発行元**sp_marksubscriptionvalidation**から明示的なトランザクション。 これは、パブリッシャーへのアクセスに使用されるリンク サーバー接続で、明示的なトランザクションがサポートされないためです。  
+ 非[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]実行することはできません、発行元**sp_marksubscriptionvalidation**から明示的なトランザクション。 これは、明示的なトランザクションはパブリッシャーにアクセスするために使用するリンク サーバー接続経由でサポートされていません。  
   
  **sp_marksubscriptionvalidation**と同時に使用する必要があります[sp_article_validation &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-article-validation-transact-sql.md)の値を指定する**1**の*subscription_level*、およびその他の呼び出しで使用できる**sp_marksubscriptionvalidation**他のサブスクライバーの現在開いているトランザクションをマークします。  
   
@@ -72,7 +67,7 @@ sp_marksubscriptionvalidation [ @publication = ] 'publication'
  メンバーのみ、 **sysadmin**固定サーバー ロールまたは**db_owner**固定データベース ロールが実行できる**sp_marksubscriptionvalidation**します。  
   
 ## <a name="example"></a>例  
- 次のクエリは、サブスクリプションレベルの検証コマンドを通知するために、パブリッシング データベースに適用できます。 これらのコマンドは、指定されたサブスクライバーのディストリビューション エージェントによって処理されます。 最初のトランザクションがアーティクルを検証することに注意してください '**art1**'、2 番目に、トランザクションを検証します**art2**'。 またを注意への呼び出し**sp_marksubscriptionvalidation**と[sp_article_validation &#40;TRANSACT-SQL&#41; ](../../relational-databases/system-stored-procedures/sp-article-validation-transact-sql.md)トランザクションにカプセル化されました。 1 つだけの呼び出しをお勧め[sp_article_validation &#40;TRANSACT-SQL&#41; ](../../relational-databases/system-stored-procedures/sp-article-validation-transact-sql.md) (トランザクションあたり)。 これは、ため[sp_article_validation &#40;TRANSACT-SQL&#41; ](../../relational-databases/system-stored-procedures/sp-article-validation-transact-sql.md) 、トランザクションの実行中のソース テーブルで、共有テーブル ロックを保持します。 コンカレンシーを最大限に高めるために、トランザクションは短くしてください。  
+ 次のクエリは、サブスクリプションレベルの検証コマンドを通知するために、パブリッシング データベースに適用できます。 これらのコマンドは、指定されたサブスクライバーのディストリビューション エージェントによって取得されます。 最初のトランザクションがアーティクルを検証することに注意してください '**art1**'、2 番目に、トランザクションを検証します**art2**'。 またを注意への呼び出し**sp_marksubscriptionvalidation**と[sp_article_validation &#40;TRANSACT-SQL&#41; ](../../relational-databases/system-stored-procedures/sp-article-validation-transact-sql.md)トランザクションにカプセル化されました。 1 つだけの呼び出しをお勧め[sp_article_validation &#40;TRANSACT-SQL&#41; ](../../relational-databases/system-stored-procedures/sp-article-validation-transact-sql.md) (トランザクションあたり)。 これは、ため[sp_article_validation &#40;TRANSACT-SQL&#41; ](../../relational-databases/system-stored-procedures/sp-article-validation-transact-sql.md) 、トランザクションの実行中のソース テーブルで、共有テーブル ロックを保持します。 コンカレンシーを最大限に高めるために、トランザクションは短くしてください。  
   
 ```  
 begin tran  
@@ -104,7 +99,7 @@ exec sp_article_validation @publication = 'pub1', @article = 'art2',
 commit tran  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [システム ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
  [レプリケートされたデータの検証](../../relational-databases/replication/validate-data-at-the-subscriber.md)  
   

@@ -1,5 +1,5 @@
 ---
-title: NULL 以外の制限事項 |Microsoft Docs
+title: NOT NULL の制限事項 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: bb1a04f0-111b-412e-b2fb-090b62e74d59
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 3c6ffe2c197d8e46688326086aa25e934523c326
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a58b1d328bb658c714e4f98ffc4243ca4c7eb13a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47706290"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67915855"
 ---
 # <a name="not-null-limitations"></a>NOT NULL の制限事項
 CREATE TABLE ステートメントで NOT NULL 制約がサポートされていません。

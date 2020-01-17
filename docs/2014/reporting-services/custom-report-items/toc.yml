@@ -9,7 +9,7 @@
       href: creating-a-custom-report-item-run-time-component.md
     - name: カスタム レポート アイテムのデザイン時コンポーネントの作成
       href: creating-a-custom-report-item-design-time-component.md
-    - name: カスタム レポート アイテムを配置する方法
+    - name: '方法:カスタム レポート アイテムを配置する'
       href: how-to-deploy-a-custom-report-item.md
     - name: カスタム レポート アイテムのクラス ライブラリ
       href: custom-report-item-class-libraries.md

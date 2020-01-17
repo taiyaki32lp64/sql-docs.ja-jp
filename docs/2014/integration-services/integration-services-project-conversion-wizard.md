@@ -4,21 +4,20 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.ssis.migrationwizard.f1
 ms.assetid: a192b094-4d0f-4c21-b911-460ec844a49f
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 252d8c44921db82cc634e17e1628f72f18a066e1
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: 9c077fdb85612c5e3f574d9d0236b07f149b9c3a
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52396366"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66057976"
 ---
 # <a name="integration-services-project-conversion-wizard"></a>Integration Services プロジェクト変換ウィザード
   **Integration Services プロジェクト変換ウィザード** で、プロジェクトをプロジェクト配置モデルに変換します。  
@@ -113,7 +112,7 @@ ms.locfileid: "52396366"
  **[選択項目に適用]**  
  クリックすると、 **[パスワード]** ボックスのパスワードが選択したパッケージに適用されます。  
   
- **[更新]**  
+ **更新**  
  パッケージの一覧を更新します。  
   
 ##  <a name="destination"></a> [配置先の選択] ページのオプションの設定  
@@ -181,7 +180,7 @@ ms.locfileid: "52396366"
  **[構成の追加]**  
  他のプロジェクトに含まれているパッケージ構成を、パラメーターで置き換える (使用可能な) 構成の一覧に追加します。 ファイル システムまたは SQL Server に格納された構成を選択できます。  
   
- **[更新]**  
+ **更新**  
  構成の一覧を更新する場合にクリックします。  
   
  **[変換後にすべてのパッケージから構成を削除する]**  
@@ -220,7 +219,7 @@ ms.locfileid: "52396366"
  また、 **[パラメーターの詳細の設定]** ダイアログ ボックスには、パラメーター値のデータ型や元のパラメーターが一覧表示されます。  
   
 ##  <a name="review"></a> [確認] ページのオプションの設定  
- プロジェクトの変換に関して選択したオプションを確認するには、**[確認]** ページを使用します。  
+ プロジェクトの変換に関して選択したオプションを確認するには、 **[確認]** ページを使用します。  
   
  **前へ**  
  オプションを変更する場合にクリックします。  
@@ -242,7 +241,7 @@ ms.locfileid: "52396366"
  **[レポートの保存]**  
  プロジェクトの変換の概要を .xml ファイルに保存する場合にクリックします。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [Integration Services サーバーへのプロジェクトの配置](../../2014/integration-services/deploy-projects-to-integration-services-server.md)  
   
   

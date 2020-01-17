@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: ccb6ffbc-7303-4124-8a0c-f6356f2c82d9
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 874c22fa4625ba78af44f19ad328a39d854eb8de
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ad88bd09f82863586694ce1ea1eda7720a8d3af8
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47606360"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67919776"
 ---
 # <a name="command-visual-c-syntax-index-with-import"></a>コマンド (Visual C 構文のインデックスで #import)
 ## <a name="methods"></a>メソッド  
@@ -32,7 +31,7 @@ _RecordsetPtr Execute( VARIANT * RecordsAffected, VARIANT * Parameters, long Opt
 _ParameterPtr CreateParameter( _bstr_t Name, enum DataTypeEnum Type, enum ParameterDirectionEnum Direction, long Size, const _variant_t & Value = vtMissing );  
 ```  
   
-## <a name="properties"></a>[プロパティ]  
+## <a name="properties"></a>Properties  
   
 ```  
 _ConnectionPtr GetActiveConnection( );  

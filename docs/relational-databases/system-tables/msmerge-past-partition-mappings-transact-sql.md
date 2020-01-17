@@ -1,5 +1,5 @@
 ---
-title: MSmerge_past_partition_mappings (TRANSACT-SQL) |Microsoft Docs
+title: MSmerge_past_partition_mappings (Transact-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: sql
@@ -17,15 +17,14 @@ helpviewer_keywords:
 ms.assetid: 06d54ff5-4d29-4eeb-b8be-64d032e53134
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 7ad8c5db6a067477e3e4e5d349a8faa2adba5199
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 7d56debf540de7b1e7f33f741fdd4c3f52d3f04a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52775394"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67984890"
 ---
-# <a name="msmergepastpartitionmappings-transact-sql"></a>MSmerge_past_partition_mappings (Transact-SQL)
+# <a name="msmerge_past_partition_mappings-transact-sql"></a>MSmerge_past_partition_mappings (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   **MSmerge_past_partition_mappings**テーブルがパーティション id に属している、使用される変更された行ごとに 1 つの行が格納されますに属していません。 このテーブルは、パブリケーション データベース内に保存されます。  
@@ -33,14 +32,14 @@ ms.locfileid: "52775394"
 |列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
 |**publication_number**|**smallint**|格納されているパブリケーションの番号**sysmergepublications**します。|  
-|**tablenick**|**int**|パブリッシュされたテーブルのニックネーム。|  
-|**rowguid**|**uniqueidentifier**|指定した行の行識別子 (ROWID)。|  
-|**partition_id**|**int**|その行が属するパーティションの ID。 行の変更がすべてのサブスクライバーに関連する場合、値は-1 を使用します。|  
-|**生成**|**bigint**|パーティションの変更が発生した生成の値。|  
+|**tablenick**|**int**|パブリッシュされたテーブルのニックネームです。|  
+|**rowguid**|**uniqueidentifier**|特定の行の行識別子。|  
+|**partition_id**|**int**|行が属するパーティションの ID。 行の変更がすべてのサブスクライバーに関連する場合、値は-1 を使用します。|  
+|**generation**|**bigint**|パーティションの変更が発生した生成の値。|  
 |**reason**|**tinyint**|内部使用のみ。|  
   
-## <a name="see-also"></a>参照  
- [レプリケーション テーブル &#40; です。TRANSACT-SQL と &#41; です。](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
+## <a name="see-also"></a>関連項目  
+ [レプリケーション テーブル &#40;Transact-SQL&#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
  [レプリケーション ビュー &#40;Transact-SQL&#41;](../../relational-databases/system-views/replication-views-transact-sql.md)  
   
   

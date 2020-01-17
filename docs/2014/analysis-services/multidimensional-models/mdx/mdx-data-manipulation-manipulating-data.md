@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 01/19/2019
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - MDX [Analysis Services], data manipulation
@@ -15,12 +14,12 @@ ms.assetid: 4865192e-f46b-4ce5-b51c-9e08dbad5b85
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 0db6ba98ec318cfc9780984f54ff04a3cedd20cf
-ms.sourcegitcommit: 1e28f923cda9436a4395a405ebda5149202f8204
+ms.openlocfilehash: 29e569ec781d0015017d3009746c3299f0865c80
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/25/2019
-ms.locfileid: "55044448"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66074354"
 ---
 # <a name="manipulating-data-mdx"></a>データの操作 (MDX)
 

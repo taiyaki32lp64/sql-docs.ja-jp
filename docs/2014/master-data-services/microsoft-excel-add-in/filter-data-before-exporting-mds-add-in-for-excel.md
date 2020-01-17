@@ -7,15 +7,15 @@ ms.reviewer: ''
 ms.technology: master-data-services
 ms.topic: conceptual
 ms.assetid: 9e30eae0-776b-4a09-aac3-0c0249d92ca5
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: c3bbbc189df4a004f18e8b23dba22a6a9469e3a9
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 277b5ff1e575f223b78f958e26801e7b209d05d5
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52793015"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65478931"
 ---
 # <a name="filter-data-before-loading-mds-add-in-for-excel"></a>読み込み前のデータのフィルター処理 (Excel 用 MDS アドイン)
   [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] [!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)]、サイズまたは Excel に読み込むデータのスコープを制限する場合に、データをフィルター処理します。  

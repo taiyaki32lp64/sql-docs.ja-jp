@@ -22,13 +22,12 @@ helpviewer_keywords:
 ms.assetid: 41313809-e970-449c-bc35-85da2ef96e48
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: 434948bebe433c8325fc93e0a79a749e34a886d5
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 3682c9faa66252f4e578fe75b41b010380409fc6
+ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47709640"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "73982578"
 ---
 # <a name="create-synonym-transact-sql"></a>CREATE SYNONYM (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -70,7 +69,7 @@ CREATE SYNONYM [ schema_name_1. ] synonym_name FOR < object >
  新しいシノニムの名前です。  
   
  *server_name*  
- **適用対象**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]  
+ **適用対象**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 以降。  
   
  ベース オブジェクトがあるサーバーの名前です。  
   
@@ -83,7 +82,7 @@ CREATE SYNONYM [ schema_name_1. ] synonym_name FOR < object >
  *object_name*  
  シノニムが参照するベース オブジェクトの名前です。  
   
- Windows Azure SQL データベースでは、database_name が現在のデータベースの場合、または database_name が tempdb で、object_name が # で始まる場合に、3 つの要素で構成された名前形式 database_name.[schema_name].object_name をサポートします。  
+ Azure SQL Database では、database_name が現在のデータベースの場合、または database_name が tempdb で、object_name が # で始まる場合に、3 つの要素で構成された名前形式 database_name.[schema_name].object_name がサポートされます。  
   
 ## <a name="remarks"></a>Remarks  
  シノニムの作成時にベース オブジェクトが存在している必要はありません。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] は、ベース オブジェクトが存在することを実行時に確認します。  
@@ -103,7 +102,10 @@ CREATE SYNONYM [ schema_name_1. ] synonym_name FOR < object >
   
  4 部構成の関数ベース オブジェクト名はサポートされません。  
   
- シノニムは、動的な SQL で作成、削除、および参照できます。  
+ シノニムは、動的な SQL で作成、削除、参照することができます。
+ 
+ > [!NOTE]
+ > シノニムはデータベース固有であり、他のデータベースではアクセスできません。
   
 ## <a name="permissions"></a>アクセス許可  
  ユーザーが特定のスキーマ内にシノニムを作成するには、CREATE SYNONYM 権限が必要であり、さらにスキーマを所有しているか ALTER SCHEMA 権限が与えられている必要があります。  
@@ -148,7 +150,7 @@ GO
 ### <a name="b-creating-a-synonym-to-remote-object"></a>B. リモート オブジェクトに対してシノニムを作成する  
  次の例では、ベース オブジェクト `Contact` は、`Server_Remote` というリモート サーバー上にあります。  
   
-**適用対象**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]  
+**適用対象**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 以降。  
   
 ```  
 EXEC sp_addlinkedserver Server_Remote;  

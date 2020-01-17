@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 ms.assetid: c7e9db15-89f2-4d4d-8860-1e64c5821c4d
 author: heidisteen
 ms.author: heidist
 manager: craigg
-ms.openlocfilehash: 33cc1b337666e1d628ae285a7df0ba43cc4fe140
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: b1cf8c6f8442fc69669c10106f671040733e48ef
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53352843"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66092230"
 ---
 # <a name="setup-role"></a>セットアップ ロール
   [機能の選択] ページを使用して個々の機能を選択するか、セットアップ ロールを使用してインストールするかを指定するには、このページを使用します。  
@@ -43,7 +42,7 @@ ms.locfileid: "53352843"
   
  オペレーティング システムがドメイン コントローラーでない場合、既定ではデータベース エンジンおよび Reporting Services は NTAUTHORITY\NETWORK SERVICE アカウントを、Integration Services は NTAUTHORITY\NETWORK SERVICE アカウントを、SQL フルテキスト フィルター デーモン ランチャーは NTAUTHORITY\LOCAL SERVICE アカウントを使用します。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [PowerPivot for SharePoint インストール](https://go.microsoft.com/fwlink/?LinkId=206906)   
  [ハードウェアとソフトウェア要件 (PowerPivot for SharePoint](https://go.microsoft.com/fwlink/?LinkId=216823)   
  [機能の選択](../../../2014/sql-server/install/feature-selection.md)  

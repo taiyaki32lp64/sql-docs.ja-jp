@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: dfd404aa-c455-41b5-b69d-b6739575033c
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: eacb57e4db5d312d04fdcd1e3b06b446f62635cc
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 15765d0aaf10c268a0aed864dc497c8a000eedc2
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47817838"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68082033"
 ---
 # <a name="connecting-to-a-visual-foxpro-data-source"></a>Visual FoxPro データ ソースへの接続
 Microsoft Office アプリケーションを使用して、または SQL API を使用して、Visual FoxPro データ ソースに接続することができます。  

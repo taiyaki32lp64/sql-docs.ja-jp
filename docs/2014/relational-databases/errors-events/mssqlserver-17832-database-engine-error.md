@@ -16,11 +16,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 1280bb44d11ce4f8234d544bf113e796a9c3c85c
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54133382"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62915430"
 ---
 # <a name="mssqlserver17832"></a>MSSQLSERVER_17832
     
@@ -55,13 +55,13 @@ ms.locfileid: "54133382"
   
 1.  **[スタート]** メニューの **[ファイル名を指定して実行]** をクリックします。  
   
-2.  型`regedit`、 をクリックし、 **OK**します。 (**[ユーザー アカウント制御]** ダイアログ ボックスが表示されたら、**[続行]** をクリックします)。  
+2.  型`regedit`、 をクリックし、 **OK**します。 ( **[ユーザー アカウント制御]** ダイアログ ボックスが表示されたら、 **[続行]** をクリックします)。  
   
 3.  **HKEY_LOCAL_MACHINE\System\CurrentControlSet\Control\Lsa\Kerberos\Parameters** に移動します。  
   
-4.  **MaxTokenSize** パラメーターが存在しない場合は、**[Parameters]** を右クリックし、**[新規]** をポイントして、**[DWORD (32 ビット) 値]** をクリックします。 レジストリ エントリに **MaxTokenSize** という名前を付けます。  
+4.  **MaxTokenSize** パラメーターが存在しない場合は、 **[Parameters]** を右クリックし、 **[新規]** をポイントして、 **[DWORD (32 ビット) 値]** をクリックします。 レジストリ エントリに **MaxTokenSize** という名前を付けます。  
   
-5.  **[MaxTokenSize]** を右クリックし、**[修正]** をクリックします。  
+5.  **[MaxTokenSize]** を右クリックし、 **[修正]** をクリックします。  
   
 6.  **[値のデータ]** ボックスに、目的の **MaxTokenSize** 値を入力します。  
   

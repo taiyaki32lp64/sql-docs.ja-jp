@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dm.miningmodeleditor.drillthrough.f1
@@ -13,12 +12,12 @@ ms.assetid: 42b78399-143d-4f44-90e0-b545ffb79e10
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: d26fcb3d26570adafe340f190e7a91c82fd2ef3a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: c065e36dd20646312d04379ea61b96d37a47a262
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48066959"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66081492"
 ---
 # <a name="drill-through-dialog-box-mining-model-viewer"></a>[ドリルスルー] ダイアログ ボックス (マイニング モデル ビューアー)
   データ マイニング デザイナーの **[マイニング モデル ビューアー]** タブを使用してマイニング モデルを表示する場合、モデルでドリルスルーが有効になっていれば、ケース データに関する詳細をドリルスルーできます。 さらに、基になるマイニング構造でドリルスルーが有効になっていれば、マイニング構造の列がマイニング モデルに含まれていない場合でも、それらの列を表示できます。 列リストでは、構造列に "Structure." というプレフィックスが付きます [ラベル]。  
@@ -45,9 +44,9 @@ ms.locfileid: "48066959"
  **再生**  
  データを更新するには、緑色の矢印ボタンをクリックします。  
   
-## <a name="see-also"></a>参照  
- [ドリルスルー クエリ&#40;データ マイニング&#41;](data-mining/drillthrough-queries-data-mining.md)   
- [マイニング モデル ビューアー&#40;データ マイニング モデル デザイナー&#41;](mining-model-viewers-data-mining-model-designer.md)   
+## <a name="see-also"></a>関連項目  
+ [ドリルスルー クエリ (データ マイニング)](data-mining/drillthrough-queries-data-mining.md)   
+ [マイニング モデル ビューアー (データ マイニング モデル デザイナー)](mining-model-viewers-data-mining-model-designer.md)   
  [マイニング モデル ビューアーのタスクと操作方法](data-mining/mining-model-viewer-tasks-and-how-tos.md)  
   
   

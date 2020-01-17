@@ -14,16 +14,15 @@ helpviewer_keywords:
 ms.assetid: d92e0c5c-d176-4282-bbe1-d449e2223d50
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 45d9203a08b9c70809e81fb3d9cf84a521017068
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 803da51c8507faa47f92b295d3749f00317bc413
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47722960"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67915383"
 ---
 # <a name="file-based-drivers"></a>ファイル ベースのドライバー
-ファイル ベースのドライバーがドライバーを使用するためのスタンドアロン データベース エンジンを提供しない dBASE などのデータ ソースで使用されます。 これらのドライバーでは、物理的なデータに直接アクセスし、プロセスの SQL ステートメントをデータベース エンジンを実装する必要があります。 ファイル ベースのドライバーでのデータベース エンジンが、最小 SQL への準拠レベルで定義されている ODBC SQL のサブセットを実装する標準的な方法では、この準拠レベル内の SQL ステートメントの一覧は、次を参照してください。[付録 c: SQL の文法](../../odbc/reference/appendixes/appendix-c-sql-grammar.md)します。  
+ファイル ベースのドライバーがドライバーを使用するためのスタンドアロン データベース エンジンを提供しない dBASE などのデータ ソースで使用されます。 これらのドライバーでは、物理的なデータに直接アクセスし、プロセスの SQL ステートメントをデータベース エンジンを実装する必要があります。 ファイル ベースのドライバーでのデータベース エンジンが、最小 SQL への準拠レベルで定義されている ODBC SQL のサブセットを実装する標準的な方法では、この準拠レベル内の SQL ステートメントの一覧は、次を参照してください[付録 c:。SQL 文法](../../odbc/reference/appendixes/appendix-c-sql-grammar.md)します。  
   
  ファイルおよび DBMS ベースのドライバーを比較する、ファイル ベースのドライバーは、データベース エンジンのコンポーネント、ネットワークの部分がないため、構成する簡単なため作成が難しくと性能の低い数人のユーザーがデータベースに書き込む時間企業のデータベースによって生成されたものと、強力なエンジン。  
   

@@ -1,4 +1,3 @@
-items:
 - name: Data Quality Services
   href: data-quality-services.md
 - name: Data Quality Services の概要
@@ -10,142 +9,136 @@ items:
 - name: Data Quality Client アプリケーション
   href: data-quality-client-application.md
   items:
-  - name: Data Quality Client アプリケーションの実行
-    href: run-the-data-quality-client-application.md
-  - name: Data Quality Client のホーム画面
-    href: data-quality-client-home-screen.md
+    - name: Data Quality Client アプリケーションの実行
+      href: run-the-data-quality-client-application.md
+    - name: Data Quality Client のホーム画面
+      href: data-quality-client-home-screen.md
 - name: DQS のナレッジ ベースとドメイン
   href: dqs-knowledge-bases-and-domains.md
   items:
-  - name: ナレッジ ベースの作成
-    href: building-a-knowledge-base.md
-    items:
     - name: ナレッジ ベースの作成
-      href: create-a-knowledge-base.md
-    - name: ナレッジ ベースを開く
-      href: open-a-knowledge-base.md
-    - name: ナレッジ ベースの管理
-      href: manage-a-knowledge-base.md
-    - name: ナレッジ ベースへのナレッジの追加
-      href: adding-knowledge-to-a-knowledge-base.md
-    - name: ナレッジ検出の実行
-      href: perform-knowledge-discovery.md
-  - name: ナレッジのインポートとエクスポート
-    href: importing-and-exporting-knowledge.md
-    items:
-    - name: .dqs ファイルへのドメインのエクスポート
-      href: export-a-domain-to-a-dqs-file.md
-    - name: .dqs ファイルからのドメインのインポート
-      href: import-a-domain-from-a-dqs-file.md
-    - name: .dqs ファイルへのナレッジ ベースのエクスポート
-      href: export-a-knowledge-base-to-a-dqs-file.md
-    - name: .dqs ファイルからのナレッジ ベースのインポート
-      href: import-a-knowledge-base-from-a-dqs-file.md
-    - name: 値を Excel ファイルからドメインへインポートする
-      href: import-values-from-an-excel-file-into-a-domain.md
-    - name: ナレッジ検出でドメインを Excel ファイルからインポートする
-      href: import-domains-from-an-excel-file-in-knowledge-discovery.md
-    - name: ドメインへのクレンジング プロジェクトの値のインポート
-      href: import-cleansing-project-values-into-a-domain.md
-  - name: ドメインの管理
-    href: managing-a-domain.md
-    items:
-    - name: ドメインの作成
-      href: create-a-domain.md
-    - name: 'ドメイン管理: ドメイン リスト'
-      href: domain-management-domain-list.md
-    - name: ドメインのプロパティの設定
-      href: set-domain-properties.md
-    - name: リンク ドメインの作成
-      href: create-a-linked-domain.md
-    - name: ドメイン値の変更
-      href: change-domain-values.md
-    - name: ドメイン ルールの作成
-      href: create-a-domain-rule.md
-    - name: 用語ベースのリレーションの作成
-      href: create-term-based-relations.md
-    - name: DQS のスペル チェックの使用
-      href: use-the-dqs-speller.md
-    - name: ドメイン管理アクティビティの終了
-      href: end-the-domain-management-activity.md
-    - name: DQS ドメインに対してサポートされる SQL Server のデータ型と SSIS のデータ型
-      href: supported-sql-server-and-ssis-data-types-for-dqs-domains.md
-  - name: 複合ドメインの管理
-    href: managing-a-composite-domain.md
-    items:
-    - name: 複合ドメインの作成
-      href: create-a-composite-domain.md
-    - name: クロス ドメイン ルールの作成
-      href: create-a-cross-domain-rule.md
-    - name: 複合ドメインでの値のリレーションの使用
-      href: use-value-relations-in-a-composite-domain.md
-  - name: DQS の既定のナレッジ ベースの使用
-    href: using-the-dqs-default-knowledge-base.md
+      href: building-a-knowledge-base.md
+      items:
+        - name: ナレッジ ベースの作成
+          href: create-a-knowledge-base.md
+        - name: ナレッジ ベースを開く
+          href: open-a-knowledge-base.md
+        - name: ナレッジ ベースの管理
+          href: manage-a-knowledge-base.md
+        - name: ナレッジ ベースへのナレッジの追加
+          href: adding-knowledge-to-a-knowledge-base.md
+        - name: ナレッジ検出の実行
+          href: perform-knowledge-discovery.md
+    - name: ナレッジのインポートとエクスポート
+      href: importing-and-exporting-knowledge.md
+      items:
+        - name: .dqs ファイルへのドメインのエクスポート
+          href: export-a-domain-to-a-dqs-file.md
+        - name: .dqs ファイルからのドメインのインポート
+          href: import-a-domain-from-a-dqs-file.md
+        - name: .dqs ファイルへのナレッジ ベースのエクスポート
+          href: export-a-knowledge-base-to-a-dqs-file.md
+        - name: .dqs ファイルからのナレッジ ベースのインポート
+          href: import-a-knowledge-base-from-a-dqs-file.md
+        - name: 値を Excel ファイルからドメインへインポートする
+          href: import-values-from-an-excel-file-into-a-domain.md
+        - name: ナレッジ検出でドメインを Excel ファイルからインポートする
+          href: import-domains-from-an-excel-file-in-knowledge-discovery.md
+        - name: ドメインへのクレンジング プロジェクトの値のインポート
+          href: import-cleansing-project-values-into-a-domain.md
+    - name: ドメインの管理
+      href: managing-a-domain.md
+      items:
+        - name: ドメインの作成
+          href: create-a-domain.md
+        - name: 'ドメイン管理:ドメイン リスト'
+          href: domain-management-domain-list.md
+        - name: ドメインのプロパティの設定
+          href: set-domain-properties.md
+        - name: リンク ドメインの作成
+          href: create-a-linked-domain.md
+        - name: ドメイン値の変更
+          href: change-domain-values.md
+        - name: ドメイン ルールの作成
+          href: create-a-domain-rule.md
+        - name: 用語ベースのリレーションの作成
+          href: create-term-based-relations.md
+        - name: DQS のスペル チェックの使用
+          href: use-the-dqs-speller.md
+        - name: ドメイン管理アクティビティの終了
+          href: end-the-domain-management-activity.md
+        - name: DQS ドメインに対してサポートされる SQL Server のデータ型と SSIS のデータ型
+          href: supported-sql-server-and-ssis-data-types-for-dqs-domains.md
+    - name: 複合ドメインの管理
+      href: managing-a-composite-domain.md
+      items:
+        - name: 複合ドメインの作成
+          href: create-a-composite-domain.md
+        - name: クロス ドメイン ルールの作成
+          href: create-a-cross-domain-rule.md
+        - name: 複合ドメインでの値のリレーションの使用
+          href: use-value-relations-in-a-composite-domain.md
+    - name: DQS の既定のナレッジ ベースの使用
+      href: using-the-dqs-default-knowledge-base.md
 - name: データ品質プロジェクト
   href: data-quality-projects-dqs.md
   items:
-  - name: データ品質プロジェクトの作成
-    href: create-a-data-quality-project.md
-  - name: データ品質プロジェクトの管理 (開く、ロック解除、名前の変更、および削除)
-    href: manage-open-unlock-rename-and-delete-a-data-quality-project.md
-  - name: Data Quality Client で Integration Services プロジェクトを開く
-    href: open-integration-services-projects-in-data-quality-client.md
+    - name: データ品質プロジェクトの作成
+      href: create-a-data-quality-project.md
+    - name: データ品質プロジェクトの管理 (開く、ロック解除、名前の変更、および削除)
+      href: manage-open-unlock-rename-and-delete-a-data-quality-project.md
+    - name: Data Quality Client で Integration Services プロジェクトを開く
+      href: open-integration-services-projects-in-data-quality-client.md
 - name: Data Cleansing
   href: data-cleansing.md
   items:
-  - name: DQS (内部) ナレッジを使用したデータのクレンジング
-    href: cleanse-data-using-dqs-internal-knowledge.md
-  - name: 複合ドメインでのデータのクレンジング
-    href: cleanse-data-in-a-composite-domain.md
+    - name: DQS (内部) ナレッジを使用したデータのクレンジング
+      href: cleanse-data-using-dqs-internal-knowledge.md
+    - name: 複合ドメインでのデータのクレンジング
+      href: cleanse-data-in-a-composite-domain.md
 - name: データ照合
   href: data-matching.md
   items:
-  - name: 照合ポリシーの作成
-    href: create-a-matching-policy.md
-  - name: 照合プロジェクトの実行
-    href: run-a-matching-project.md
+    - name: 照合ポリシーの作成
+      href: create-a-matching-policy.md
+    - name: 照合プロジェクトの実行
+      href: run-a-matching-project.md
 - name: DQS の参照データ サービス
   href: reference-data-services-in-dqs.md
   items:
-  - name: 参照データを使用する DQS の構成
-    href: configure-dqs-to-use-reference-data.md
-  - name: 参照データにドメインまたは複合ドメインをアタッチする
-    href: attach-a-domain-or-composite-domain-to-reference-data.md
-  - name: 参照データ (外部) のナレッジを使用したデータのクレンジング
-    href: cleanse-data-using-reference-data-external-knowledge.md
+    - name: 参照データを使用する DQS の構成
+      href: configure-dqs-to-use-reference-data.md
+    - name: 参照データにドメインまたは複合ドメインをアタッチする
+      href: attach-a-domain-or-composite-domain-to-reference-data.md
+    - name: 参照データ (外部) のナレッジを使用したデータのクレンジング
+      href: cleanse-data-using-reference-data-external-knowledge.md
 - name: DQS のデータ プロファイルと通知
   href: data-profiling-and-notifications-in-dqs.md
 - name: DQS 管理
   href: dqs-administration.md
   items:
-  - name: DQS アクティビティの監視
-    href: monitor-dqs-activities.md
-  - name: クレンジングと照合のしきい値の構成
-    href: configure-threshold-values-for-cleansing-and-matching.md
-  - name: DQS のプロファイル通知の有効化または無効化
-    href: enable-or-disable-profiling-notifications-in-dqs.md
-  - name: DQS ログ ファイルの管理
-    href: manage-dqs-log-files.md
-    items:
-    - name: DQS ログ ファイルの重大度レベルの構成
-      href: configure-severity-levels-for-dqs-log-files.md
-    - name: DQS ログ ファイルの詳細設定の構成
-      href: configure-advanced-settings-for-dqs-log-files.md
-  - name: Manage DQS Databases
-    href: manage-dqs-databases.md
-    items:
-    - name: DQS データベースのバックアップと復元
-      href: backing-up-and-restoring-dqs-databases.md
-    - name: DQS データベースのデタッチとアタッチ
-      href: detaching-and-attaching-dqs-databases.md
+    - name: DQS アクティビティの監視
+      href: monitor-dqs-activities.md
+    - name: クレンジングと照合のしきい値の構成
+      href: configure-threshold-values-for-cleansing-and-matching.md
+    - name: DQS のプロファイル通知の有効化または無効化
+      href: enable-or-disable-profiling-notifications-in-dqs.md
+    - name: DQS ログ ファイルの管理
+      href: manage-dqs-log-files.md
+      items:
+        - name: DQS ログ ファイルの重大度レベルの構成
+          href: configure-severity-levels-for-dqs-log-files.md
+        - name: DQS ログ ファイルの詳細設定の構成
+          href: configure-advanced-settings-for-dqs-log-files.md
+    - name: Manage DQS Databases
+      href: manage-dqs-databases.md
+      items:
+        - name: DQS データベースのバックアップと復元
+          href: backing-up-and-restoring-dqs-databases.md
+        - name: DQS データベースのデタッチとアタッチ
+          href: detaching-and-attaching-dqs-databases.md
 - name: DQS セキュリティ
   href: dqs-security.md
   items:
-  - name: SSMS による DQS ユーザーの管理
-    href: manage-dqs-users-in-ssms.md
-ms.openlocfilehash: 1e0898bc9375c771359dd80a2cd748ca309defba
-ms.sourcegitcommit: 9def1e583e012316367c7812c31505f34af7f714
-ms.translationtype: HT
-ms.contentlocale: ja-JP
-ms.lasthandoff: 07/27/2018
-ms.locfileid: "39317770"
+    - name: SSMS による DQS ユーザーの管理
+      href: manage-dqs-users-in-ssms.md

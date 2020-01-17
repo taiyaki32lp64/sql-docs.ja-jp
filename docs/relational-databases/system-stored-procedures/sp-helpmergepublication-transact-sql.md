@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: dfe1e1e1-9a65-406a-aced-6385a078e135
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 580ac26d2478de1f42800d6f8d6704f26bc6fff4
-ms.sourcegitcommit: 170c275ece5969ff0c8c413987c4f2062459db21
+ms.openlocfilehash: d291288c44341c3a707696b0b3baecdcd15779ef
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/11/2019
-ms.locfileid: "54226649"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68137647"
 ---
 # <a name="sphelpmergepublication-transact-sql"></a>sp_helpmergepublication (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -43,19 +42,19 @@ sp_helpmergepublication [ [ @publication = ] 'publication' ]
 ```  
   
 ## <a name="arguments"></a>引数  
- [ @publication **=** ] **'**_パブリケーション_**'**  
- パブリケーションの名前を指定します。 *パブリケーション*は**sysname**、既定値は**%**、現在のデータベース内のすべてのマージ パブリケーションに関する情報が返されます。  
+ [ @publication **=** ] **'** _パブリケーション_ **'**  
+ パブリケーションの名前を指定します。 *パブリケーション*は**sysname**、既定値は **%** 、現在のデータベース内のすべてのマージ パブリケーションに関する情報が返されます。  
   
  [ @found **=** ] **'***見つかった***'** 出力  
  行を返すことを示すフラグ。 *見つかった*は**int**は出力パラメーター、既定値は NULL です。 **1**パブリケーションが見つかったことを示します。 **0**パブリケーションが見つからないことを示します。  
   
- [ @publication_id **=**] **'***publication_id***'** 出力  
+ [ @publication_id **=** ] **'***publication_id***'** OUTPUT  
  パブリケーション識別番号です。 *publication_id*は**uniqueidentifier**は出力パラメーター、既定値は NULL です。  
   
- [ @reserved **=**] **'***予約***'**  
- [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)] *予約済み*は**nvarchar (20)**、既定値は NULL です。  
+ [ @reserved **=** ] **'***reserved***'**  
+ [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)] *予約済み*は**nvarchar (20)** 、既定値は NULL です。  
   
- [ @publisher **=** ] **'***パブリッシャー***'**  
+ [ @publisher **=** ] **'***publisher***'**  
  パブリッシャーの名前。 *パブリッシャー*は**sysname**、既定値は NULL です。  
   
  [@publisher_db **=** ] **'***publisher_db***'**  

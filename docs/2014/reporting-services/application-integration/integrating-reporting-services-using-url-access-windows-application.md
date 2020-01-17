@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- docset-sql-devref
-- reporting-services-native
+ms.technology: reporting-services
 ms.topic: reference
 helpviewer_keywords:
 - Windows applications [Reporting Services]
@@ -15,15 +13,15 @@ helpviewer_keywords:
 - browser controls [Reporting Services]
 - URL access [Reporting Services], Windows applications
 ms.assetid: a4b222e5-0cbd-409c-92c4-046a674db8ac
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: fe263ce5008c98fa620aa54baad10490529aed0e
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: cb841d187385724ea31b5a7db86fcb323bf10663
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56018084"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63126242"
 ---
 # <a name="using-url-access-in-a-windows-application"></a>Windows アプリケーションでの URL アクセスの使用
   レポート サーバーへの URL アクセスは Web 環境用に最適化されていますが、URL アクセスを使用して [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] レポートを [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows アプリケーションに埋め込むこともできます。 ただし、Windows フォームに関連する URL アクセスでは、Web ブラウザー テクノロジを使用する必要があります。 URL アクセスと Windows フォームでは、次の統合シナリオを使用できます。  
@@ -93,7 +91,7 @@ private void viewReportButton_Click(object sender, System.EventArgs e)
   
 2.  **[ツールボックス]** ダイアログ ボックスで <xref:System.Windows.Forms.WebBrowser> コントロールを探します。  
   
-     **ツールボックス**が表示されていない場合は、**[表示]** メニュー項目をクリックして **[ツールボックス]** を選択することでアクセスできます。  
+     **ツールボックス**が表示されていない場合は、 **[表示]** メニュー項目をクリックして **[ツールボックス]** を選択することでアクセスできます。  
   
 3.  <xref:System.Windows.Forms.WebBrowser> コントロールを Windows フォームのデザイン画面にドラッグします。  
   

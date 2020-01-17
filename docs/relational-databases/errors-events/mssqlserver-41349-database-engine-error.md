@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: dd365112-a36a-4ba1-888a-b3bc149775e6
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 8620680bde3d5384edce840c342ff2d3ae753f5e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 3c48b94273658fc6b8b003937f6162fe6785ab96
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47827640"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68123257"
 ---
 # <a name="mssqlserver41349"></a>MSSQLSERVER_41349
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -31,7 +30,7 @@ ms.locfileid: "47827640"
 |イベント ソース|MSSQLSERVER|  
 |コンポーネント|SQLEngine|  
 |シンボル名|HK_ENCRYPTION_ON|  
-|メッセージ テキスト|警告: 持続性が SCHEMA_AND_DATA のメモリ最適化テーブルを含むデータベースで暗号化が有効にされました。 これらのメモリ最適化テーブル内のデータは暗号化されません。|  
+|メッセージ テキスト|警告:持続性が SCHEMA_AND_DATA のメモリ最適化テーブルを含むデータベースで暗号化が有効にされました。 これらのメモリ最適化テーブル内のデータは暗号化されません。|  
   
 ## <a name="see-also"></a>参照  
 [インメモリ OLTP &#40;インメモリ最適化&#41;](~/relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md)  

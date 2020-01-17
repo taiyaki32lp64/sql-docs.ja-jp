@@ -20,16 +20,15 @@ helpviewer_keywords:
 - Query Editor [Database Engine], Features
 - SQL Server Management Studio [SQL Server], Database Engine Query Editor
 ms.assetid: 05cfae9b-96d5-4a35-a098-0bc3a548bcfc
-author: stevestein
-ms.author: sstein
-manager: craigg
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 1b1b073f9695dd6bf30a6c3d2ae75e26015fad40
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: 26a6e67287c7a2effdd62604fa492a532ed636bf
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51644077"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68263504"
 ---
 # <a name="database-engine-query-editor-sql-server-management-studio"></a>データベース エンジン クエリ エディター (SQL Server Management Studio)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -125,7 +124,7 @@ ms.locfileid: "51644077"
  また、 **[表示]** メニューの **[ツール バー]** を選択し、 **[SQL エディター]** を選択して、SQL エディター ツール バーを追加することもできます。 [!INCLUDE[ssDE](../../includes/ssde-md.md)] クエリ エディターのウィンドウが開いていない状態で SQL エディター ツール バーを追加した場合、ボタンは使用できません。  
   
 ## <a name="sql-editor-toolbar"></a>SQL エディター ツール バー  
- [!INCLUDE[ssDE](../../includes/ssde-md.md)] クエリ エディター ウィンドウが開いているときに、 **[表示]** メニューから **[ツール バー]**、 **[デバッグ]** の順に選択すると、[デバッグ] ツール バーが追加されます。 [!INCLUDE[ssDE](../../includes/ssde-md.md)] クエリ エディター ウィンドウが開いていない状態で [デバッグ] ツール バーを追加した場合、ボタンは使用できません。  
+ [!INCLUDE[ssDE](../../includes/ssde-md.md)] クエリ エディター ウィンドウが開いているときに、 **[表示]** メニューから **[ツール バー]** 、 **[デバッグ]** の順に選択すると、[デバッグ] ツール バーが追加されます。 [!INCLUDE[ssDE](../../includes/ssde-md.md)] クエリ エディター ウィンドウが開いていない状態で [デバッグ] ツール バーを追加した場合、ボタンは使用できません。  
   
  **Continue**  
  ブレークポイントに達するまで、 [!INCLUDE[ssDE](../../includes/ssde-md.md)] クエリ エディター ウィンドウ内のコードを実行します。  

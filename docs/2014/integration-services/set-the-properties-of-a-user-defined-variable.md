@@ -4,29 +4,28 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords:
 - modifying variables
 - variables [Integration Services], properties
 ms.assetid: f98ddbec-f668-4dba-a768-44ac3ae0536f
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 9cd85ac29d34f40e9473f28444c8b727543d6ecf
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: aadfb7b53d22a00bf14699f611f20ce508a7ab5e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48075602"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66055652"
 ---
 # <a name="set-the-properties-of-a-user-defined-variable"></a>ユーザー定義変数のプロパティを設定する
   [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] でユーザー定義変数のプロパティを設定するには、次の機能のいずれかを使用します。  
   
 -   [変数] ウィンドウ。  
   
--   [プロパティ] ウィンドウ。 **[プロパティ]** ウィンドウには、 **[変数]** ウィンドウでは使用できない変数 (Description、EvaluateAsExpression、Expression、ReadOnly、ValueType、および IncludeInDebugDump) を構成するためのプロパティが一覧表示されています。  
+-   [プロパティ] ウィンドウ。 **[プロパティ]** ウィンドウには、 **[変数]** ウィンドウでは使用できない変数を構成するための次のプロパティが一覧表示されています: Description、EvaluateAsExpression、Expression、ReadOnly、ValueType、IncludeInDebugDump。  
   
 > [!NOTE]  
 >  [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] には、RaiseChangedEvent プロパティを除き、更新できないプロパティを持つ一連のシステム変数もあります。  
@@ -53,7 +52,7 @@ ms.locfileid: "48075602"
   
  **Namespace と名のプロパティの設定**  
   
- 値、`Name`と`Namespace`プロパティは、Unicode Standard 2.0、またはアンダー スコア (_) で定義されているアルファベット文字で始まる必要があります。 2 番目以降の文字では、Unicode Standard 2.0 に定義されている文字または数字と、アンダースコア (\_) を使用できます。  
+ `Name` プロパティと `Namespace` プロパティの値の最初の文字は、Unicode Standard 2.0 に定義されているアルファベット文字か、アンダースコア (_) にする必要があります。 2 番目以降の文字では、Unicode Standard 2.0 に定義されている文字または数字と、アンダースコア (\_) を使用できます。  
   
 ## <a name="using-the-variables-window-to-set-properties"></a>[変数] ウィンドウを使用したプロパティの設定  
   
@@ -98,8 +97,8 @@ ms.locfileid: "48075602"
 8.  更新されたパッケージを保存するには、 **[ファイル]** メニューの **[選択されたファイルを上書き保存]** をクリックします。  
   
 ## <a name="see-also"></a>参照  
- [Integration Services &#40;SSIS&#41;変数](integration-services-ssis-variables.md)   
- [パッケージで変数を使用します。](../../2014/integration-services/use-variables-in-packages.md)   
+ [Integration Services &#40;SSIS&#41; の変数](integration-services-ssis-variables.md)   
+ [パッケージで変数を使用する](../../2014/integration-services/use-variables-in-packages.md)   
  [パッケージ内のユーザー定義変数のスコープの追加、削除、変更](../../2014/integration-services/add-delete-change-scope-of-user-defined-variable-in-a-package.md)  
   
   

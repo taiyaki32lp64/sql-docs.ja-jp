@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 573e673e-a194-4cb2-9aba-aaac6e1a225c
 author: Shamikg
 ms.author: Shamikg
-manager: craigg
-ms.openlocfilehash: 7dbdee734d6d8a1dac825ad8f502c5851f746f42
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 4efd9989e0893d8941f3f6fcb9496f5f4744b0e6
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51681080"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67989741"
 ---
 # <a name="data-migration-settings-db2tosql"></a>データ移行の設定 (DB2ToSQL)
   
@@ -48,10 +47,10 @@ ms.locfileid: "51681080"
   
 存在する 2 つのボタンを viz。  
   
--   **適用:** クリックして**適用**変更されている設定を適用します。  
+-   **適用されます。** クリックして**適用**変更されている設定を適用します。  
   
--   **[キャンセル]:** クリックして**キャンセル**変更が行われた前に、現在の設定を復元します。  
+-   **キャンセル：** クリックして**キャンセル**変更が行われた前に、現在の設定を復元します。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
 [SQL Server への DB2 データの移行](https://msdn.microsoft.com/86cbd39f-6dac-409a-9ce1-7dd54403f84b)  
   

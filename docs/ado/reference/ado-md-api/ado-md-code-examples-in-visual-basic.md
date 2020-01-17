@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: bfb52e8c-cb06-47a0-931c-03b8bdb1a05a
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 5f2860db43c5b336ce0259d721e4adccfb8ad17d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: f6608ef9d70909b4838a027e43339739402caccc
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47614750"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67940072"
 ---
 # <a name="ado-md-code-examples-in-visual-basic"></a>Visual Basic での ADO MD のコード例
 次の例では、Service Pack 3 の Microsoft Visual Basic バージョン 5.0 または Visual Basic 6.0 が必要です。  

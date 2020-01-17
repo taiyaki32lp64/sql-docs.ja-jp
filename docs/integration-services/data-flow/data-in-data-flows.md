@@ -15,17 +15,20 @@ helpviewer_keywords:
 - string comparisons
 - data flow [Integration Services], data options
 ms.assetid: 8a9d6186-eb52-48e3-997e-021f24d458a3
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: dcc79e1bcb8e871b5424e9e4995db58e1f97a513
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: ac04c9b6a8838ba338407533834a7950dabe055d
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47692874"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71293050"
 ---
 # <a name="data-in-data-flows"></a>データ フロー内のデータ
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] には、データ フローで使用するデータ型のセットが用意されています。  
   
 ## <a name="data-type-conversion"></a>データ型の変換  

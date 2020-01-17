@@ -10,15 +10,15 @@ helpviewer_keywords:
 - attributes [Master Data Services], creating text attributes
 - creating text attributes [Master Data Services]
 ms.assetid: cd8b57de-364d-42a3-9273-c1c6b992bb40
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: a58aaee32970b157b70a9f6a7c9477c18d9f19a7
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 5be296ceca85eb2032f2a409beefaed603c63f98
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52796874"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65483310"
 ---
 # <a name="create-a-text-attribute-master-data-services"></a>テキスト属性を作成する (マスター データ サービス)
   [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]で、ユーザーに属性値としてテキスト文字列を入力させる場合、テキスト属性を作成します。  

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 helpviewer_keywords:
 - extended events [SQL Server], getting fields
@@ -14,12 +13,12 @@ ms.assetid: 4e4ee03f-5bca-42ed-a37c-db1c82e3aad2
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: b741f98dec0b2f6233f4c51c1c809c1a7baf4d81
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: c0838367ad699c1278bb6ec42f28161ba76c6fd5
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48154312"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66064789"
 ---
 # <a name="get-the-fields-for-all-events"></a>すべてのイベントのフィールドを取得する
   この作業には、 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]のクエリ エディターを使用した次の手順の実行も含まれます。  

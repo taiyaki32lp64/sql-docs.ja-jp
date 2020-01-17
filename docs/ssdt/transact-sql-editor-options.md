@@ -25,18 +25,17 @@ f1_keywords:
 - VS.TOOLSOPTIONSPAGES.SQL_SERVER_TOOLS.ONLINE_EDITING
 - VS.TOOLSOPTIONSPAGES.SQL_SERVER_TOOLS.TRANSACT-SQL_EDITOR.QUERY_EXECUTION.ADVANCED
 ms.assetid: fa9a250f-7feb-433e-91bd-a09779d74c8b
-author: stevestein
-ms.author: sstein
-manager: craigg
-ms.openlocfilehash: ffc6d128bcc1984a0d340e3ec4a39e0f6dccc897
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: e5de3a6bef68955611290cce77b95989b7ff72c6
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51667051"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68110632"
 ---
 # <a name="transact-sql-editor-options"></a>Transact-SQL エディターのオプション
-このトピックでは、Transact-SQL エディターのいくつかのオプションについて説明します。 これらのオプションを設定するには、**[ツール] > [オプション]** を選択して、**[オプション]** ダイアログ ボックスに移動します。  
+このトピックでは、Transact-SQL エディターのいくつかのオプションについて説明します。 これらのオプションを設定するには、 **[ツール] > [オプション]** を選択して、 **[オプション]** ダイアログ ボックスに移動します。  
   
 [クエリの実行](#QueryExecution)  
   
@@ -68,7 +67,7 @@ ms.locfileid: "51667051"
 |**SET CURSOR_CLOSE_ON_COMMIT**|トランザクションをコミットするときにカーソルを閉じるかどうかを制御します。 詳しくは、「[SET CURSOR_CLOSE_ON_COMMIT](https://go.microsoft.com/fwlink/?LinkId=238754)」をご覧ください。|  
 |**SET ANSI_PADDING**|**char**、 **varchar**、 **binary**、 **varbinary** 型のデータにおいて、列の定義サイズより短い値や末尾に空白がある値を格納する方法を制御します。 詳しくは、「[SET ANSI_PADDING](https://go.microsoft.com/fwlink/?LinkId=238755)」をご覧ください。|  
 |**SET ANSI_WARNINGS**|いくつかのエラー条件に対して SQL-92 標準の動作を実行することを指定します。詳しくは、「[SET ANSI_WARNINGS](https://go.microsoft.com/fwlink/?LinkId=238758)」をご覧ください。|  
-|**SET ANSI_NULLS**|等号 (**=**) 比較演算子と不等号 (**<>**) 比較演算子を NULL 値に対して使用した場合の、SQL-92 準拠動作を指定します。詳しくは、「[SET ANSI_NULLS](https://go.microsoft.com/fwlink/?LinkId=238759)」をご覧ください。|  
+|**SET ANSI_NULLS**|等号 ( **=** ) 比較演算子と不等号 ( **<>** ) 比較演算子を NULL 値に対して使用した場合の、SQL-92 準拠動作を指定します。詳しくは、「[SET ANSI_NULLS](https://go.microsoft.com/fwlink/?LinkId=238759)」をご覧ください。|  
   
 ## <a name="QueryResults"></a>クエリの結果  
   

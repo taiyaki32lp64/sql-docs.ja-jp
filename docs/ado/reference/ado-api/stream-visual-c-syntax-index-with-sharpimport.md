@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: e59d0687-1f5a-45c5-9d0a-c1f27079495d
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 9b66a3549fde85f7806443a0cf5fa1299739e6f7
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: bdbd75a8b89ffdc6c100d3d124329c8212c4bdc3
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47663200"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67930687"
 ---
 # <a name="stream-visual-c-syntax-index-with-import"></a>Stream (Visual C 構文のインデックスで #import)
 ## <a name="methods"></a>メソッド  
@@ -58,7 +57,7 @@ HRESULT WriteText( _bstr_t Data, enum StreamWriteEnum
     Options );  
 ```  
   
-## <a name="properties"></a>[プロパティ]  
+## <a name="properties"></a>Properties  
   
 ```  
 _bstr_t GetCharset( );  
@@ -92,5 +91,5 @@ void PutType( enum StreamTypeEnum ptype );
 __declspec(property(get=GetType,put=PutType)) enum StreamTypeEnum Type;  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [Stream オブジェクト (ADO)](../../../ado/reference/ado-api/stream-object-ado.md)

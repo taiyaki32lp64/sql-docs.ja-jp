@@ -9,13 +9,12 @@ ms.topic: reference
 ms.assetid: 66d92652-b46f-46d8-8093-fa9c6fc4e0d1
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 129e3c9547f1e5a4338231f6c349482834bcc3f9
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 71f1406c12966191d962fd0efab10a0855ee9047
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47804759"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67995903"
 ---
 # <a name="localdberrorcannotcreatesqlprocess"></a>LOCALDB_ERROR_CANNOT_CREATE_SQL_PROCESS
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

@@ -7,15 +7,14 @@ ms.reviewer: ''
 ms.technology: scripting
 ms.topic: conceptual
 ms.assetid: 89b70725-bbe7-4ffe-a27d-2a40005a97e7
-author: stevestein
-ms.author: sstein
-manager: craigg
-ms.openlocfilehash: b9c5354f0a94dc8ec3cccc66f751124554554357
-ms.sourcegitcommit: 29760037d0a3cec8b9e342727334cc3d01db82a6
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 7a2725586a094aed0cb7d933553bc3fc389adfdf
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50411732"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67912211"
 ---
 # <a name="sql-server-powershell"></a>SQL Server PowerShell
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

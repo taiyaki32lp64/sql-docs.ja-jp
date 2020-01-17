@@ -15,11 +15,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: c49b343e9eb04a349219b9a5a752496c9bc0abda
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52781612"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63297574"
 ---
 # <a name="add-related-tables-to-diagrams-visual-database-tools"></a>ダイアグラムへの関連テーブルの追加 (Visual Database Tools)
   選択したテーブルのリレーションシップに関連するすべてのテーブルを、データベース ダイアグラムにすばやく追加できます。  

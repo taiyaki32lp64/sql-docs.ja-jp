@@ -1,8 +1,8 @@
 ---
 title: Reporting Services レポート サーバー (ネイティブ モード) | Microsoft Docs
-ms.date: 03/15/2017
+ms.date: 06/06/2019
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: report-server
 ms.topic: conceptual
 helpviewer_keywords:
@@ -10,23 +10,23 @@ helpviewer_keywords:
 - administering [Reporting Services]
 - Reporting Services, administration
 ms.assetid: fa0d84e2-4c21-432c-aa7c-23517da75253
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 43917e9d51aecb545421e9462526fc435bf19d37
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 4a0e3f521549bb309fcbd69fc7905746be09d84b
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47713150"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66826897"
 ---
 # <a name="reporting-services-report-server-native-mode"></a>Reporting Services Report Server (Native Mode)
   ネイティブ モード用に構成されたレポート サーバーは、 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]コンポーネントのみを通じてすべての処理機能と管理機能を提供するアプリケーション サーバーとして実行されます。  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] またはレポート マネージャーを使用して、 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] レポートを管理できます。 レポート サーバーをネイティブ モードで管理するには、 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 構成マネージャーを使用します。  
+ いずれかを使用する[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]または web ポータルを管理する[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]レポートします。 レポート サーバーをネイティブ モードで管理するには、 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 構成マネージャーを使用します。  
   
  レポート サーバーを SharePoint モード用に構成した場合、レポートや共有データ ソースなどのレポート サーバー アイテムを管理するには、SharePoint サイトのコンテンツ管理のページを使用する必要があります。  
   
- このトピックの内容は次のとおりです。  
+ この記事には、次の情報が含まれています。  
   
 -   [ネイティブ モードの概要](#bkmk_sum)  
   
@@ -77,7 +77,7 @@ ms.locfileid: "47713150"
   
  管理タスクを実行するための権限は、 **システム管理者** と **コンテンツ マネージャー**という、事前定義された 2 つのロールを通じて提供されます。 レポート サーバーのコンテンツを効率よく管理するためには、両方のロールに割り当てられている必要があります。 詳細については、「[ロールとアクセス許可 &#40;Reporting Services&#41;](../../reporting-services/security/roles-and-permissions-reporting-services.md)」を参照してください。  
   
- レポート サーバーのコンテンツを管理するためのツールには、 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] またはレポート マネージャーがあります。 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] では、既定値を設定したり、各機能を有効化することができます。 レポート マネージャーでは、レポート サーバーのアイテムや操作に対するアクセス権を付与できます。また、レポートをはじめとする各種のコンテンツ、さらに、すべての共有アイテムとレポート配信機能を表示および使用できます。  
+ レポート サーバーのコンテンツを管理するためのツールには、[!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] や Web ポータルなどがあります。 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] では、既定値を設定したり、各機能を有効化することができます。 Web ポータルを使って、レポート サーバーのアイテムおよび操作へのユーザー アクセスを許可したり、レポートをはじめとする各種のコンテンツを表示および使用したり、すべての共有アイテムとレポート配信機能を表示および使用したりできます。  
   
 ##  <a name="bkmk_manageresources"></a> リソースの保護と管理  
  リソースはレポート サーバーに格納される管理対象アイテムですが、レポート サーバーで処理されるものではありません。 通常、リソースにレポート ユーザー向けの外部コンテンツが用意されています。 例としては、.jpg ファイルや、レポートで使用されるビジネス ルールを示す HTML ファイルなどがあります。 JPG ファイルや HTML ファイルはレポート サーバーに格納されますが、このファイルはレポート サーバーで処理されずに、ブラウザーに直接渡されます。  
@@ -86,10 +86,10 @@ ms.locfileid: "47713150"
   
 |演算|ファイルの種類|  
 |---------------|---------------|  
-|アップロード|レポート定義 (.rdl) ファイルとレポート モデル (.smdl) ファイルを除くすべてのファイルがアップロードされます。<br /><br /> リソースをアップロードするには、レポート サーバーがネイティブ モードで動作している場合はレポート マネージャーを使用し、レポート サーバーが SharePoint 統合モードで動作している場合は SharePoint サイト上のアプリケーション ページを使用する必要があります。 詳細については、「[ファイルまたはレポートをアップロードする &#40;レポート マネージャー&#41;](../../reporting-services/reports/upload-a-file-or-report-report-manager.md)」または「[SharePoint ライブラリへのドキュメントのアップロード &#40;Reporting Services の SharePoint モード&#41;](../../reporting-services/report-server-sharepoint/upload-documents-to-a-sharepoint-library-reporting-services-in-sharepoint-mode.md)」を参照してください。|  
+|アップロード|レポート定義 (.rdl) ファイルとレポート モデル (.smdl) ファイルを除くすべてのファイルがアップロードされます。<br /><br /> リソースをアップロードするには、レポート サーバーがネイティブ モードで動作している場合は Web ポータルを使用し、サーバーが SharePoint 統合モードで動作している場合は SharePoint サイト上のアプリケーション ページを使用する必要があります。 詳細については、「[レポート サーバーでファイルまたはレポートをアップロードする](../../reporting-services/reports/upload-a-file-or-report-report-manager.md)」または「[SharePoint ライブラリへのドキュメントのアップロード &#40;Reporting Services の SharePoint モード&#41;](../../reporting-services/report-server-sharepoint/upload-documents-to-a-sharepoint-library-reporting-services-in-sharepoint-mode.md)」をご覧ください。|  
 |パブリッシュ|.rdl、.smdl、.rds データ ソース ファイルを除くすべてのファイルが、リソースとしてアップロードされます。 リソースをパブリッシュするには、既存のアイテムをレポート デザイナーのプロジェクトに追加した後で、そのプロジェクトをレポート サーバーにパブリッシュします。|  
   
- リソースはすべて、もともとはファイル システム上のファイルです。そのファイルがレポート サーバーにアップロードされることで、リソースになります。 ASP.NET の制限により、ファイル サイズが既定で 4 MB 以下に限定されている以外は、アップロードできるファイルの種類に制限はありません。 ただし、リソースとしてレポート サーバーにパブリッシュする場合には、適合する MIME の種類があるファイルの方が適しています。 たとえば、HTML および JPG ファイルを基にしたリソースは、ユーザーがリソースをクリックすると、HTML は Web ページとして、JPG は画像として、ユーザーが見ることができる形でブラウザー ウィンドウで開かれます。 これに対し、たとえばデスクトップ アプリケーション ファイルなど、適合する MIME の種類がないリソースは、ブラウザー ウィンドウに表示されない場合があります。  
+ リソースはすべて、もともとはファイル システム上のファイルです。そのファイルがレポート サーバーにアップロードされることで、リソースになります。 制限がないファイルをアップロードできるファイルの種類、最大 1 GB のサイズします。 ただし、リソースとしてレポート サーバーにパブリッシュする場合には、適合する MIME の種類があるファイルの方が適しています。 たとえば、HTML および JPG ファイルを基にしたリソースは、ユーザーがリソースをクリックすると、HTML は Web ページとして、JPG は画像として、ユーザーが見ることができる形でブラウザー ウィンドウで開かれます。 これに対し、たとえばデスクトップ アプリケーション ファイルなど、適合する MIME の種類がないリソースは、ブラウザー ウィンドウに表示されない場合があります。  
   
  レポート ユーザーがリソースを表示できるかどうかは、ブラウザーの表示機能によって異なります。 リソースはリソース サーバーで処理されないため、特定の MIME の種類を表示するための表示機能がブラウザーに必要となります。 ブラウザーがコンテンツを表示できない場合、そのリソースを閲覧するユーザーが見ることができるのは、リソースの全般プロパティのみとなります。  
   

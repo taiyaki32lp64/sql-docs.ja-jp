@@ -16,17 +16,20 @@ helpviewer_keywords:
 - Integration Services, data types
 - SQL Server Integration Services, data types
 ms.assetid: 896fc3e8-3aa6-4396-ba82-5d7741cffa56
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: 76559f2d4a8c96a64792e4ecf095094c3cb1229e
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 45ada0520d90c1c6e63adad4f9e62bf1ea31e270
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51641759"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71292413"
 ---
 # <a name="integration-services-data-types"></a>Integration Services のデータ型
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   データがパッケージ内のデータ フローに入ると、データを抽出する変換元は、そのデータを [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] のデータ型に変換します。 数値データは数値データ型、文字列データは文字列データ型、および日付データは日付データ型に割り当てられます。 GUID やバイナリ ラージ オブジェクト (BLOB) などの他のデータも、同様に適切な [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] のデータ型に割り当てられます。 データのデータ型が [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] のデータ型に変換できない場合は、エラーが発生します。  
   
  一部のデータ フロー コンポーネントでは、[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] データ型と [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]のマネージド データ型の間でデータ型を変換します。 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] データ型とマネージド データ型とのマッピングの詳細については、「[データ フロー内のデータ型の処理](../../integration-services/extending-packages-custom-objects/data-flow/working-with-data-types-in-the-data-flow.md)」を参照してください。  
@@ -106,7 +109,7 @@ ms.locfileid: "51641759"
 ### <a name="converting-datetime-data-types"></a>日付/時刻データ型の変換  
  日付または時刻のデータを含む列のデータ型を変更し、データの一部である日付または時刻を抽出できます。 次の表に、日付/時刻データ型を別の日付/時刻データ型に変換した結果を示します。  
   
-#### <a name="converting-from-dtfiletime"></a>DT_FILETIME からの変換  
+#### <a name="converting-from-dt_filetime"></a>DT_FILETIME からの変換  
   
 |DT_FILETIME の変換|結果|  
 |-----------------------------|------------|  
@@ -119,7 +122,7 @@ ms.locfileid: "51641759"
 |DT_DBTIMESTAMP2|秒の小数点以下桁数が、DT_DBTIMESTAMP2 データ型に含めることのできる秒の小数点以下桁数よりも大きい場合に、秒の小数部の値を削除します。 秒の小数部の値を削除した後、このデータの切り捨てに関するレポートを生成します。 詳細については、「 [データのエラー処理](../../integration-services/data-flow/error-handling-in-data.md)」を参照してください。|  
 |DT_DBTIMESTAMPOFFSET|DT_DBTIMESTAMPOFFSET データ型のタイム ゾーン フィールドをゼロに設定します。<br /><br /> 秒の小数点以下桁数が、DT_DBTIMESTAMPOFFSET データ型に含めることのできる秒の小数点以下桁数よりも大きい場合に、秒の小数部の値を削除します。 秒の小数部の値を削除した後、このデータの切り捨てに関するレポートを生成します。 詳細については、「 [データのエラー処理](../../integration-services/data-flow/error-handling-in-data.md)」を参照してください。|  
   
-#### <a name="converting-from-dtdate"></a>DT_DATE からの変換  
+#### <a name="converting-from-dt_date"></a>DT_DATE からの変換  
   
 |DT_DATE の変換|結果|  
 |-------------------------|------------|  
@@ -132,7 +135,7 @@ ms.locfileid: "51641759"
 |DT_DBTIMESTAMP2|データ型を変換します。|  
 |DT_DBTIMESTAMPOFFSET|DT_DBTIMESTAMPOFFSET データ型のタイム ゾーン フィールドをゼロに設定します。|  
   
-#### <a name="converting-from-dtdbdate"></a>DT_DBDATE からの変換  
+#### <a name="converting-from-dt_dbdate"></a>DT_DBDATE からの変換  
   
 |DT_DBDATE の変換|結果|  
 |---------------------------|------------|  
@@ -145,7 +148,7 @@ ms.locfileid: "51641759"
 |DT_DBTIMESTAMP2|DT_DBTIMESTAMP データ型の時刻フィールドをゼロに設定します。|  
 |DT_DBTIMESTAMPOFFSET|DT_DBTIMESTAMPOFFSET データ型の時刻フィールドとタイム ゾーン フィールドをゼロに設定します。|  
   
-#### <a name="converting-from-dtdbtime"></a>DT_DBTIME からの変換  
+#### <a name="converting-from-dt_dbtime"></a>DT_DBTIME からの変換  
   
 |DT_DBTIME の変換|結果|  
 |---------------------------|------------|  
@@ -158,7 +161,7 @@ ms.locfileid: "51641759"
 |DT_DBTIMESTAMP2|DT_DBTIMESTAMP2 データ型の日付フィールドを現在の日付に設定します。|  
 |DT_DBTIMESTAMPOFFSET|DT_DBTIMESTAMPOFFSET データ型の日付フィールドとタイム ゾーン フィールドをそれぞれ現在の日付とゼロに設定します。|  
   
-#### <a name="converting-from-dtdbtime2"></a>DT_DBTIME2 からの変換  
+#### <a name="converting-from-dt_dbtime2"></a>DT_DBTIME2 からの変換  
   
 |DT_DBTIME2 の変換|結果|  
 |----------------------------|------------|  
@@ -171,7 +174,7 @@ ms.locfileid: "51641759"
 |DT_DBTIMESTAMP2|DT_DBTIMESTAMP2 データ型の日付フィールドを現在の日付に設定します。<br /><br /> 秒の小数点以下桁数が、DT_DBTIMESTAMP2 データ型に含めることのできる秒の小数点以下桁数よりも大きい場合に、秒の小数部の値を削除します。 秒の小数部の値を削除した後、このデータの切り捨てに関するレポートを生成します。 詳細については、「 [データのエラー処理](../../integration-services/data-flow/error-handling-in-data.md)」を参照してください。|  
 |DT_DBTIMESTAMPOFFSET|DT_DBTIMESTAMPOFFSET データ型の日付フィールドとタイム ゾーン フィールドをそれぞれ現在の日付とゼロに設定します。<br /><br /> 秒の小数点以下桁数が、DT_DBTIMESTAMPOFFSET データ型に含めることのできる秒の小数点以下桁数よりも大きい場合に、秒の小数部の値を削除します。 秒の小数部の値を削除した後、このデータの切り捨てに関するレポートを生成します。 詳細については、「 [データのエラー処理](../../integration-services/data-flow/error-handling-in-data.md)」を参照してください。|  
   
-#### <a name="converting-from-dtdbtimestamp"></a>DT_DBTIMESTAMP からの変換  
+#### <a name="converting-from-dt_dbtimestamp"></a>DT_DBTIMESTAMP からの変換  
   
 |DT_DBTIMESTAMP の変換|結果|  
 |--------------------------------|------------|  
@@ -184,7 +187,7 @@ ms.locfileid: "51641759"
 |DT_DBTIMESTAMP2|秒の小数点以下桁数が、DT_DBTIMESTAMP2 データ型に含めることのできる秒の小数点以下桁数よりも大きい場合に、秒の小数部の値を削除します。 秒の小数部の値を削除した後、このデータの切り捨てに関するレポートを生成します。 詳細については、「 [データのエラー処理](../../integration-services/data-flow/error-handling-in-data.md)」を参照してください。|  
 |DT_DBTIMESTAMPOFFSET|DT_DBTIMESTAMPOFFSET データ型のタイム ゾーン フィールドをゼロに設定します。<br /><br /> 秒の小数点以下桁数が、DT_DBTIMESTAMPOFFSET データ型に含めることのできる秒の小数点以下桁数よりも大きい場合に、秒の小数部の値を削除します。 秒の小数部の値を削除した後、このデータの切り捨てに関するレポートを生成します。 詳細については、「 [データのエラー処理](../../integration-services/data-flow/error-handling-in-data.md)」を参照してください。|  
   
-#### <a name="converting-from-dtdbtimestamp2"></a>DT_DBTIMESTAMP2 からの変換  
+#### <a name="converting-from-dt_dbtimestamp2"></a>DT_DBTIMESTAMP2 からの変換  
   
 |DT_DBTIMESTAMP2 の変換|結果|  
 |---------------------------------|------------|  
@@ -197,7 +200,7 @@ ms.locfileid: "51641759"
 |DT_DBTIMESTAMP2|秒の小数点以下桁数が、変換先の DT_DBTIMESTAMP2 データ型に含めることのできる秒の小数点以下桁数よりも大きい場合に、秒の小数部の値を削除します。 秒の小数部の値を削除した後、このデータの切り捨てに関するレポートを生成します。 詳細については、「 [データのエラー処理](../../integration-services/data-flow/error-handling-in-data.md)」を参照してください。|  
 |DT_DBTIMESTAMPOFFSET|DT_DBTIMESTAMPOFFSET データ型のタイム ゾーン フィールドをゼロに設定します。<br /><br /> 秒の小数点以下桁数が、DT_DBTIMESTAMPOFFSET データ型に含めることのできる秒の小数点以下桁数よりも大きい場合に、秒の小数部の値を削除します。 秒の小数部の値を削除した後、このデータの切り捨てに関するレポートを生成します。 詳細については、「 [データのエラー処理](../../integration-services/data-flow/error-handling-in-data.md)」を参照してください。|  
   
-#### <a name="converting-from-dtdbtimestampoffset"></a>DT_DBTIMESTAMPOFFSET からの変換  
+#### <a name="converting-from-dt_dbtimestampoffset"></a>DT_DBTIMESTAMPOFFSET からの変換  
   
 |DT_DBTIMESTAMPOFFSET の変換|結果|  
 |--------------------------------------|------------|  
@@ -223,9 +226,9 @@ ms.locfileid: "51641759"
 |---------------|--------------------------------------------|------------------------------|---------|---------------------------------|--------------------------|--------------------------|  
 |DT_BOOL|bit|bit|bit||||  
 |DT_BYTES|binary、varbinary、timestamp|binary、varbinary、timestamp|BigBinary、VarBinary|RAW|||  
-|DT_CY|smallmoney、money|smallmoney、money|通貨||||  
+|DT_CY|smallmoney、money|smallmoney、money|Currency||||  
 |DT_DATE|||||||  
-|DT_DBDATE|[date &#40;Transact-SQL&#41;](../../t-sql/data-types/date-transact-sql.md)|[date &#40;Transact-SQL&#41;](../../t-sql/data-types/date-transact-sql.md)||日付|日付|日付|  
+|DT_DBDATE|[date &#40;Transact-SQL&#41;](../../t-sql/data-types/date-transact-sql.md)|[date &#40;Transact-SQL&#41;](../../t-sql/data-types/date-transact-sql.md)||date|date|date|  
 |DT_DBTIME||||TIMESTAMP|time|time|  
 |DT_DBTIME2|[time &#40;Transact-SQL&#41;](../../t-sql/data-types/time-transact-sql.md)(p)|[time &#40;Transact-SQL&#41;](../../t-sql/data-types/time-transact-sql.md) (p)|||||  
 |DT_DBTIMESTAMP|[datetime &#40;Transact-SQL&#41;](../../t-sql/data-types/datetime-transact-sql.md)、[smalldatetime &#40;Transact-SQL&#41;](../../t-sql/data-types/smalldatetime-transact-sql.md)|[datetime &#40;Transact-SQL&#41;](../../t-sql/data-types/datetime-transact-sql.md)、[smalldatetime &#40;Transact-SQL&#41;](../../t-sql/data-types/smalldatetime-transact-sql.md)|DateTime|TIMESTAMP、DATE、INTERVAL|TIME、TIMESTAMP、DATE|TIME、TIMESTAMP、DATE|  
@@ -236,10 +239,10 @@ ms.locfileid: "51641759"
 |DT_GUID|UNIQUEIDENTIFIER|UNIQUEIDENTIFIER|GUID||||  
 |DT_I1|||||||  
 |DT_I2|SMALLINT|SMALLINT|Short||smallint|SMALLINT|  
-|DT_I4|ssNoversion|ssNoversion|Long||INTEGER|INTEGER|  
-|DT_I8|BIGINT|BIGINT|||BIGINT|bigint|  
+|DT_I4|INT|INT|Long||INTEGER|INTEGER|  
+|DT_I8|BIGINT|BIGINT|||bigint|bigint|  
 |DT_NUMERIC|decimal、numeric|decimal、numeric|Decimal|NUMBER、INT|decimal、numeric|decimal、numeric|  
-|DT_R4|REAL|REAL|単一||real|real|  
+|DT_R4|REAL|REAL|Single||real|real|  
 |DT_R8|FLOAT|FLOAT|Double|FLOAT、REAL|FLOAT、DOUBLE|FLOAT、DOUBLE|  
 |DT_STR|char、varchar||varchar||char、varchar|char、varchar|  
 |DT_UI1|TINYINT|TINYINT|Byte||||  

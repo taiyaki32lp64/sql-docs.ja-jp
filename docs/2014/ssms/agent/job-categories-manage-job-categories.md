@@ -1,5 +1,5 @@
 ---
-title: ジョブ カテゴリ:ジョブ カテゴリの管理 |Microsoft Docs
+title: '[ジョブ カテゴリ]:ジョブ カテゴリの管理 |Microsoft Docs'
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -15,13 +15,13 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: c9a9c5f01bd682e68e44a7a974cbbaeade8008d1
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52785484"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62937019"
 ---
-# <a name="job-categories-manage-job-categories"></a>ジョブ カテゴリ:ジョブ カテゴリを管理します。
+# <a name="job-categories-manage-job-categories"></a>[ジョブ カテゴリ]:ジョブ カテゴリの管理
   **[ジョブ カテゴリ]** ダイアログ ボックスを使用すると、ジョブ カテゴリを追加したり削除したりできます。 組み込みジョブ カテゴリは削除できません。  
   
 ## <a name="options"></a>および  

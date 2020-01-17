@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 ms.assetid: 1a9509f0-c663-4b31-b396-7f5dc4371651
 author: craigg-msft
 ms.author: craigg
 manager: craigg
-ms.openlocfilehash: 70689ff767661409dce982d7bb294d0b620838e2
-ms.sourcegitcommit: 40c3b86793d91531a919f598dd312f7e572171ec
+ms.openlocfilehash: eb3422b859ce4e58fc05564357876c5fe09fcdff
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53328432"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66089206"
 ---
 # <a name="options-text-editor---xml---miscellaneous-page"></a>[オプション] ([テキスト エディター]/[XML]/[その他] ページ)
 
@@ -27,7 +26,7 @@ ms.locfileid: "53328432"
  テキスト エディターで XML 要素を記述する際に、終了タグが自動的に追加されます。 要素の開始タグが選択されると、対応する終了タグが挿入されます。この場合、対応する名前空間プレフィックスも含められます。 既定では、このチェック ボックスはオンになっています。  
   
  **属性の引用符**  
- XML 属性を記述する際に、自動的に `="``"` が挿入され、カレット (**^** ) が引用符の内側に置かれます。 既定では、このチェック ボックスはオンになっています。  
+ XML 属性を記述する際に、自動的に `="``"` が挿入され、カレット ( **^** ) が引用符の内側に置かれます。 既定では、このチェック ボックスはオンになっています。  
   
  **Namespace 宣言**  
  名前空間の宣言が必要な場所には、自動的に宣言が挿入されます。 既定では、このチェック ボックスはオンになっています。  

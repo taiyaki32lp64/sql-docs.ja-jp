@@ -11,11 +11,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 263fdcd4b09c4acc6c2bba4d67629f867d64c6b3
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48169472"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62779492"
 ---
 # <a name="hash-indexes"></a>ハッシュ インデックス
   インデックスは、メモリ最適化テーブルのエントリ ポイントとして使用します。 テーブルから行を読み取るときには、データがメモリ上のどの場所にあるかを特定するためのインデックスが必要になります。  
@@ -44,7 +44,7 @@ ms.locfileid: "48169472"
   
  図では、行を備えたバケットが 3 つ示されています。 上から 2 番目のバケットには、赤い行が 3 つあります。 4 番目のバケットには、青色の行が 1 つあります。 一番下のバケットには、緑色の行が 2 つあります。 ここに挙げた行はいずれも、同じ行が別のバージョンになったものである可能性があります。  
   
- メモリ最適化テーブルのインデックスの詳細については、次を参照してください。 [メモリ最適化テーブルでのインデックス使用のガイドライン](../relational-databases/in-memory-oltp/memory-optimized-tables.md)します。  
+ メモリ最適化テーブルのインデックスの詳細については、[メモリ最適化テーブルでのインデックス使用のガイドライン](../relational-databases/in-memory-oltp/memory-optimized-tables.md)を参照してください。  
   
 ## <a name="see-also"></a>参照  
  [メモリ最適化テーブルのインデックス](../../2014/database-engine/indexes-on-memory-optimized-tables.md)  

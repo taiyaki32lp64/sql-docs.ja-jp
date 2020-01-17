@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 722bd2c6-0fb9-4838-954a-439744c6ac4b
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 92154266ba63b51b83667ee548fdb2fa9d8472e6
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b7cc3e42abfdb31da50b7db329f9c61c2a195111
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47766510"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68087593"
 ---
 # <a name="mssqlserver7933"></a>MSSQLSERVER_7933
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -31,7 +30,7 @@ ms.locfileid: "47766510"
 |イベント ソース|MSSQLSERVER|  
 |コンポーネント|SQLEngine|  
 |シンボル名|DBCC2_FS_ORPHANED_ROWSET_DIRECTORY|  
-|メッセージ テキスト|テーブル エラー: パーティションの FileStream ディレクトリ ID F_ID は存在しますが、対応するパーティションがデータベース内に存在しません。|  
+|メッセージ テキスト|テーブル エラー:パーティションの FileStream ディレクトリ ID F_ID は存在しますが、対応するパーティションがデータベース内に存在しません。|  
   
 ## <a name="explanation"></a>説明  
 DBCC CHECKDB の実行中に、FILESTREAM データ領域で行セット ディレクトリが見つかりましたが、対応するパーティションがデータベース内にありません。  

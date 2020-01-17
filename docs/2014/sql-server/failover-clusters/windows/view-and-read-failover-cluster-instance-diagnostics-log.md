@@ -11,22 +11,22 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 19308ee2838238f0dea6cfdaeb228a250591613b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48098782"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63049338"
 ---
 # <a name="view-and-read-failover-cluster-instance-diagnostics-log"></a>フェールオーバー クラスター インスタンスの診断ログを表示して読む方法
   SQL Server Resource DLL のすべての重大なエラーと警告イベントが、Windows イベント ログに書き込まれます。 [sp_server_diagnostics &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-server-diagnostics-transact-sql) システム ストアド プロシージャによってキャプチャされる SQL Server に固有の診断情報の実行ログは、SQL Server フェールオーバー クラスター診断ログ ファイル (*SQLDIAG* ログとも呼ばれます) に書き込まれます。  
   
--   **作業を開始する準備:**  [推奨事項](#Recommendations)、[セキュリティ](#Security)  
+-   **作業を開始する準備:** [推奨事項](#Recommendations)、[セキュリティ](#Security)  
   
--   **診断ログの表示:**  [SQL Server Management Studio の使用](#SSMSProcedure)、 [Transact-SQL の使用](#TsqlProcedure)  
+-   **診断ログを表示するを使用します。** [SQL Server Management Studio](#SSMSProcedure)、[Transact-SQL](#TsqlProcedure)  
   
--   **診断ログ設定の構成:** [Transact-SQL の使用](#TsqlConfigure)  
+-   **使用して診断ログの構成設定。** [Transact-SQL](#TsqlConfigure)  
   
-##  <a name="BeforeYouBegin"></a> 作業を開始する準備  
+##  <a name="BeforeYouBegin"></a> はじめに  
   
 ###  <a name="Recommendations"></a> 推奨事項  
  既定では、SQLDIAG は格納されている SQL Server インスタンス ディレクトリのローカル ログ フォルダーの下など ' C\Program \microsoft の SQL Server\MSSQL12 します。\<InstanceName > \MSSQL\LOG' の AlwaysOn フェールオーバー クラスター インスタンス (FCI) の所有元ノード。 各 SQLDIAG ログ ファイルのサイズは 100 MB に固定されています。 10 個のログ ファイルがコンピューターに格納された後、新しいログとして再利用されます。  
@@ -43,7 +43,7 @@ ms.locfileid: "48098782"
 ##  <a name="SSMSProcedure"></a> SQL Server Management Studio の使用  
  **診断ログ ファイルを表示するには**  
   
-1.  **[ファイル]** メニューから、 **[開く]**、 **[ファイル]** を選択し、表示する診断ログ ファイルを選択します。  
+1.  **[ファイル]** メニューから、 **[開く]** 、 **[ファイル]** を選択し、表示する診断ログ ファイルを選択します。  
   
 2.  イベントは、右ペインに行として表示されます。既定では、 **名前**と **タイムスタンプ** の 2 つの列だけが表示されます。  
   

@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: 74b1d8b1-6bf4-490a-a181-03cc52348952
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: deae929c1e01939d6caeb4d9fa49b3c7fe73fd0d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 658d47908929720e51f7c87418f6892ce8148df0
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48090862"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66066082"
 ---
 # <a name="toolbar-calculations-tab-cube-designer-analysis-services---multidimensional-data"></a>ツール バー (キューブ デザイナーの [計算] タブ) (Analysis Services - 多次元データ)
   **ツール バー** ペインを使用すると、キューブ デザイナーの **[計算]** タブで一般的な操作を実行できます。  

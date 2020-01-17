@@ -17,15 +17,14 @@ helpviewer_keywords:
 - security functions
 - encryption [SQL Server], functions
 ms.assetid: 0be5626b-5a25-4d8c-9f44-7abbfccf816c
-author: MashaMSFT
-ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 7ae9827dd72fc8c3028f4c52e87245ebae4c6cfb
-ms.sourcegitcommit: 467b2c708651a3a2be2c45e36d0006a5bbe87b79
+author: VanMSFT
+ms.author: vanto
+ms.openlocfilehash: 3bc543e40f4f5189a1d813d21b66af6b26b51d52
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53979148"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68026444"
 ---
 # <a name="cryptographic-functions-transact-sql"></a>暗号化関数 (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]

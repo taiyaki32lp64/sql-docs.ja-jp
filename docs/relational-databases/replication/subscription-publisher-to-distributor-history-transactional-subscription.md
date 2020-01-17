@@ -1,6 +1,7 @@
 ---
-title: サブスクリプション、[パブリッシャーからディストリビューターまでの履歴] (トランザクション サブスクリプション) | Microsoft Docs
-ms.custom: ''
+title: '[パブリッシャーからディストリビューターまでの履歴] (トランザクション - SSMS)'
+description: SQL Server Management Studio (SSMS) にあるトランザクション パブリケーションのレプリケーション モニターの [パブリッシャーからディストリビューターまでの履歴] タブについて説明します。
+ms.custom: seo-lt-2019
 ms.date: 03/07/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -12,28 +13,28 @@ f1_keywords:
 ms.assetid: d5a4c697-1342-49fd-8b7b-b059af32556a
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 793420d352b25d969c5cd618861c9b355dea8491
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
+ms.openlocfilehash: 350866a6a574469ef87586cd10f932bfcc201859
+ms.sourcegitcommit: 02d44167a1ee025ba925a6fefadeea966912954c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54131982"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75322189"
 ---
 # <a name="subscription-publisher-to-distributor-history-transactional-subscription"></a>サブスクリプション、[パブリッシャーからディストリビューターまでの履歴] (トランザクション サブスクリプション)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
   **[パブリッシャーからディストリビューターまでの履歴]** タブでは、ステータス、履歴、情報メッセージ、およびすべてのエラー メッセージを含む、ログ リーダー エージェントの詳細情報が表示されます。  
   
-## <a name="options"></a>および  
+## <a name="options"></a>オプション  
  **[表示]** メニューから表示するログ リーダー エージェントのセッションを選択し、 **[ログ リーダー エージェントのセッション]** というラベルのグリッド内で特定のセッションを選択します。 このセッションの詳細情報は、 **[選択されたセッションのアクション]** というラベルのグリッドに表示されます。 選択したセッションがエラーで終了した場合は、 **[選択されたセッションのエラーの詳細またはメッセージ]** というラベルのテキスト領域も表示されます。  
   
- **[表示]**  
+ **表示**  
  表示するログ リーダー エージェントのセッションを選択します。 通常、ログ リーダー エージェントは継続的に実行されるため、表示するセッションが 1 つのみの場合があります。  
   
- **ステータス**  
+ **状態**  
  ログ リーダー エージェントの状態です。 表示される状態の種類を、次に示します。  
   
--   [エラー]  
+-   エラー  
   
 -   [完了]  
   

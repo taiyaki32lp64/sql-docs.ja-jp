@@ -20,13 +20,12 @@ helpviewer_keywords:
 ms.assetid: c5579976-97c4-4123-be0c-d0b98a9e38fb
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: 272702dcf1d6fa05af9c8df3fa1562a1752890ec
-ms.sourcegitcommit: c6e71ed14198da67afd7ba722823b1af9b4f4e6f
+ms.openlocfilehash: 33a8623c3e098589015a00185c8ab2a895b1410b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/16/2019
-ms.locfileid: "54327833"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68050761"
 ---
 # <a name="grant-service-broker-permissions-transact-sql"></a>GRANT (Service Broker の権限の許可) (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -54,21 +53,21 @@ GRANT permission  [ ,...n ] ON
   
 ## <a name="arguments"></a>引数  
  *permission*  
- Service Broker のセキュリティ保護可能なリソースに対して許可できる権限を指定します。  下の表をご覧ください。  
+ Service Broker のセキュリティ保護可能なリソースに対して許可できる権限を指定します。  以下に一覧を示します。  
   
- CONTRACT **::**_contract_name_  
- 権限を許可するコントラクトを指定します。 スコープ修飾子"::"が必要です。  
+ CONTRACT **::** _contract_name_  
+ 権限を許可するコントラクトを指定します。 スコープ修飾子"::" が必須です。  
   
- MESSAGE TYPE **::**_message_type_name_  
+ MESSAGE TYPE **::** _message_type_name_  
  権限を許可するメッセージ型を指定します。 スコープ修飾子 "::" が必要です。  
   
- REMOTE SERVICE BINDING **::**_remote_binding_name_  
+ REMOTE SERVICE BINDING **::** _remote_binding_name_  
  権限を許可するリモート サービス バインドを指定します。 スコープ修飾子 "::" が必要です。  
   
- ROUTE **::**_route_name_  
+ ROUTE **::** _route_name_  
  権限を許可するルートを指定します。 スコープ修飾子 "::" が必要です。  
   
- SERVICE **::**_service_name_  
+ SERVICE **::** _service_name_  
  権限を許可するサービスを指定します。 スコープ修飾子 "::" が必要です。  
   
  *database_principal*  

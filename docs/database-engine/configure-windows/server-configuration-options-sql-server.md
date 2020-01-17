@@ -29,13 +29,12 @@ helpviewer_keywords:
 ms.assetid: 9f38eba6-39b1-4f1d-ba24-ee4f7e2bc969
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 7388c5c768c9ffe6865a46f4513090cc1716c59e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: c42c9501772972c523d5635a159fcdeb54bf107b
+ms.sourcegitcommit: 56fb0b7750ad5967f5d8e43d87922dfa67b2deac
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47837436"
+ms.lasthandoff: 12/11/2019
+ms.locfileid: "75002015"
 ---
 # <a name="server-configuration-options-sql-server"></a>サーバー構成オプション (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -49,7 +48,7 @@ ms.locfileid: "47837436"
   
 -   オプションを設定し、**RECONFIGURE** ステートメントまたは場合によっては **RECONFIGURE WITH OVERRIDE**ステートメントを実行した直後。 特定のオプションを再設定すると、プラン キャッシュのプランが無効になり、新しいプランがコンパイルされます。 詳細については、「 [DBCC FREEPROCCACHE &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-freeproccache-transact-sql.md)」を参照してください。
   
-     - または -  
+     または  
   
 -   上の操作を行い、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のインスタンスを再起動した後。
   
@@ -57,7 +56,7 @@ ms.locfileid: "47837436"
   
 オプションの中には、新しい構成を有効にするために、サーバーを再起動する必要があるものもあります。 新しい値を設定し sp_configure を実行した後にサーバーを再起動した場合、新しい値は構成オプションの **value_in_use** 列ではなく **value** 列に表示されます。 サーバーの再起動後は、新しい値が **value_in_use** 列に表示されます。  
   
-自己構成オプションは、システムのニーズに合わせて [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] が調整するオプションです。 このため、ほとんどの場合、値を手動で変更する必要はありません。 たとえば、 **min server memory** 、 **max server memory** 、user connections などの各オプションがあります。  
+自己構成オプションは、システムのニーズに合わせて [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] が調整するオプションです。 このため、ほとんどの場合、値を手動で変更する必要はありません。 例には、**ワーカー スレッドの最大数**オプションとユーザー接続オプションが含まれます。  
   
 ## <a name="configuration-options-table"></a>構成オプションの表  
  次の表は、使用可能なすべての構成オプション、設定可能範囲、および既定値を示しています。 構成オプションには文字コードを付けています。その内容を次に示します。  
@@ -70,7 +69,7 @@ ms.locfileid: "47837436"
   
 -   SC = 自己構成オプション。  
   
-    |構成オプション|最小値|最大値|既定|  
+    |構成オプション|最小値|最大値|Default|  
     |--------------------------|-------------------|-------------------|-------------|  
     |[access check cache bucket count](../../database-engine/configure-windows/access-check-cache-server-configuration-options.md) (A)|0|16384|0|  
     |[access check cache quota](../../database-engine/configure-windows/access-check-cache-server-configuration-options.md) (A)|0|2147483647|0|  
@@ -87,7 +86,7 @@ ms.locfileid: "47837436"
     |[blocked process threshold](../../database-engine/configure-windows/blocked-process-threshold-server-configuration-option.md) (A)|0|86400|0|  
     |[c2 audit mode](../../database-engine/configure-windows/c2-audit-mode-server-configuration-option.md) (A、RR)|0|1|0|  
     |[clr enabled](../../database-engine/configure-windows/clr-enabled-server-configuration-option.md)|0|1|0|  
-    |[clr strict security](../../database-engine/configure-windows/clr-strict-security.md) (A) <br /> **適用対象**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] まで)。|0|1|0|  
+    |[clr strict security](../../database-engine/configure-windows/clr-strict-security.md) (A) <br /> **適用対象**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)] 以降)。|0|1|0|  
     |[common criteria compliance enabled](../../database-engine/configure-windows/common-criteria-compliance-enabled-server-configuration-option.md) (A、RR)|0|1|0|  
     |[contained database authentication](../../database-engine/configure-windows/contained-database-authentication-server-configuration-option.md)|0|1|0|  
     |[cost threshold for parallelism](../../database-engine/configure-windows/configure-the-cost-threshold-for-parallelism-server-configuration-option.md) (A)|0|32767|5|  
@@ -99,13 +98,14 @@ ms.locfileid: "47837436"
     |[default trace enabled](../../database-engine/configure-windows/default-trace-enabled-server-configuration-option.md) (A)|0|1|1|  
     |[disallow results from triggers](../../database-engine/configure-windows/disallow-results-from-triggers-server-configuration-option.md) (A)|0|1|0|  
     |[EKM provider enabled](../../database-engine/configure-windows/ekm-provider-enabled-server-configuration-option.md)|0|1|0|  
-    |[external scripts enabled](../../database-engine/configure-windows/external-scripts-enabled-server-configuration-option.md) (RR)<br /><br /> **適用対象**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] まで)。|0|1|0|  
+    |[external scripts enabled](../../database-engine/configure-windows/external-scripts-enabled-server-configuration-option.md) (SC)<br /><br /> **再起動が必要**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] および [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)])。|0|1|0|  
     |[filestream_access_level](../../database-engine/configure-windows/filestream-access-level-server-configuration-option.md)|0|2|0|  
     |[fill factor](../../database-engine/configure-windows/configure-the-fill-factor-server-configuration-option.md) (A、RR)|0|100|0|  
     |ft crawl bandwidth (max)、 [ft crawl bandwidth](../../database-engine/configure-windows/ft-crawl-bandwidth-server-configuration-option.md)(A) を参照|0|32767|100|  
     |ft crawl bandwidth (min)、 [ft crawl bandwidth](../../database-engine/configure-windows/ft-crawl-bandwidth-server-configuration-option.md)(A) を参照|0|32767|0|  
     |ft notify bandwidth (max)、 [ft notify bandwidth](../../database-engine/configure-windows/ft-notify-bandwidth-server-configuration-option.md)(A) を参照|0|32767|100|  
     |ft notify bandwidth (min)、 [ft notify bandwidth](../../database-engine/configure-windows/ft-notify-bandwidth-server-configuration-option.md)(A) を参照|0|32767|0|  
+    |[hadoop connectivity](../../database-engine/configure-windows/polybase-connectivity-configuration-transact-sql.md) (RP)<br /><br /> **適用対象**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 以降)。|0|7|0|   
     |[index create memory](../../database-engine/configure-windows/configure-the-index-create-memory-server-configuration-option.md) (A、SC)|704|2147483647|0|  
     |[in-doubt xact resolution](../../database-engine/configure-windows/in-doubt-xact-resolution-server-configuration-option.md) (A)|0|2|0|  
     |[lightweight pooling](../../database-engine/configure-windows/lightweight-pooling-server-configuration-option.md) (A、RR)|0|1|0|  
@@ -114,7 +114,7 @@ ms.locfileid: "47837436"
     |[max full-text crawl range](../../database-engine/configure-windows/max-full-text-crawl-range-server-configuration-option.md) (A)|0|256|4|  
     |[max server memory](../../database-engine/configure-windows/server-memory-server-configuration-options.md) (A、SC)|16|2147483647|2147483647|  
     |[max text repl size](../../database-engine/configure-windows/configure-the-max-text-repl-size-server-configuration-option.md)|0|2147483647|65536|  
-    |[max worker threads](../../database-engine/configure-windows/configure-the-max-worker-threads-server-configuration-option.md) (A)|128|32767<br /><br /> 32 ビット版の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では 1024 が、64 ビット版の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では 2048 が推奨されます。 **注:** [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] が 32 ビット オペレーティング システムで利用可能な最後のバージョンでした。|0<br /><br /> 0 の場合、32 ビット版の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では式 (256 + (*\<processors>* -4) * 8) を使用し、64 ビット版の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では式 (512 + (*\<processors>* - 4) * 8) を使用して、プロセッサ数に基づいたワーカー スレッドの最大数が自動的に構成されます。 **注:** [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] が 32 ビット オペレーティング システムで利用可能な最後のバージョンでした。|  
+    |[max worker threads](../../database-engine/configure-windows/configure-the-max-worker-threads-server-configuration-option.md) (A)|128|32767<br /><br /> 32 ビット版の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では 1024 が、64 ビット版の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では 2048 が推奨されます。 **注:** [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] が 32 ビット オペレーティング システムで利用可能な最後のバージョンでした。|0<br /><br /> 0 の場合、32 ビット版の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では式 (256 + ( *\<processors>* -4) * 8) を使用し、64 ビット版の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では式 (512 + ( *\<processors>* - 4) * 8) を使用して、プロセッサ数に基づいたワーカー スレッドの最大数が自動的に構成されます。 **注:** [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] が 32 ビット オペレーティング システムで利用可能な最後のバージョンでした。|  
     |[media retention](../../database-engine/configure-windows/configure-the-media-retention-server-configuration-option.md) (A、RR)|0|365|0|  
     |[min memory per query](../../database-engine/configure-windows/configure-the-min-memory-per-query-server-configuration-option.md) (A)|512|2147483647|1024|  
     |[min server memory](../../database-engine/configure-windows/server-memory-server-configuration-options.md) (A、SC)|0|2147483647|0|  
@@ -124,7 +124,7 @@ ms.locfileid: "47837436"
     |[open objects](../../database-engine/configure-windows/open-objects-server-configuration-option.md) (A、RR、旧バージョンで使用)|0|2147483647|0|  
     |[optimize for ad hoc workloads](../../database-engine/configure-windows/optimize-for-ad-hoc-workloads-server-configuration-option.md) (A)|0|1|0|  
     |[PH_timeout](../../database-engine/configure-windows/ph-timeout-server-configuration-option.md) (A)|1|3600|60|  
-    |[PolyBase Hadoop and Azure blob storage](../../database-engine/configure-windows/polybase-connectivity-configuration-transact-sql.md) (RP)<br /><br /> **適用対象**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] まで)。|0|7|0|   
+    |[polybase enabled](../../relational-databases/polybase/polybase-installation.md#enable) (RR) **適用対象**: [!INCLUDE[sssqlv15](../../includes/sssqlv15-md.md)])|0|1|0|
     |[precompute rank](../../database-engine/configure-windows/precompute-rank-server-configuration-option.md) (A)|0|1|0|  
     |[priority boost](../../database-engine/configure-windows/configure-the-priority-boost-server-configuration-option.md) (A、RR)|0|1|0|  
     |[query governor cost limit](../../database-engine/configure-windows/configure-the-query-governor-cost-limit-server-configuration-option.md) (A)|0|2147483647|0|  

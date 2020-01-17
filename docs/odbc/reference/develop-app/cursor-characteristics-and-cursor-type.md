@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 6f67edd2-ae71-4ca0-9b2d-abf4c20dc17b
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: dbef278f3f25b572ddc44e87d60b5cdcd33058c1
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e8803e7827102f564be63454b0387df938064d84
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47721060"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68002056"
 ---
 # <a name="cursor-characteristics-and-cursor-type"></a>カーソルの特定とカーソルの種類
 アプリケーションでは、(順方向専用、静的、キーセット ドリブンまたは動的) カーソルの種類を指定する代わりに、カーソルの特性を指定できます。 これを行うには、アプリケーションを選択します (SQL_ATTR_CURSOR_SCROLLABLE ステートメント属性を設定) して、カーソルのスクロール機能と感度 (SQL_ATTR_CURSOR_SENSITIVITY ステートメント属性を設定する) をステートメントでカーソルを開く前に処理します。 ドライバーは、アプリケーションが要求した特性を最も効率的に提供する、カーソルの種類から選択します。  

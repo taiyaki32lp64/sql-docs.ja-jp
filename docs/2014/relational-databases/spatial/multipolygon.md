@@ -9,15 +9,15 @@ helpviewer_keywords:
 - MultiPolygon geometry subtype [SQL Server]
 - geometry subtypes [SQL Server]
 ms.assetid: 2c5db358-2a16-49d9-aac5-a74e86813932
-author: douglaslMS
-ms.author: douglasl
+author: MladjoA
+ms.author: mlandzic
 manager: craigg
-ms.openlocfilehash: d941425b1faa2fcbc23b48555dce12846a7fd52e
-ms.sourcegitcommit: 87f29b23d5ab174248dab5d558830eeca2a6a0a4
+ms.openlocfilehash: ccb2689b24914a0a953c1b9f7325cd5aa9c75d0d
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "51018987"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66014120"
 ---
 # <a name="multipolygon"></a>MultiPolygon
   `MultiPolygon` インスタンスは、0 個以上の `Polygon` インスタンスのコレクションです。  

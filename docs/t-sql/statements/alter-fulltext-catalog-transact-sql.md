@@ -22,13 +22,12 @@ helpviewer_keywords:
 ms.assetid: 31a47aaf-6c7f-48a4-a86a-d57aec66c9cb
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: b79d00b02f06395a083ee93a2916a7d3aa5f0233
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 5f6888525a9b213806267d253fca9c8f2c391766
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47712010"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68065596"
 ---
 # <a name="alter-fulltext-catalog-transact-sql"></a>ALTER FULLTEXT CATALOG (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -55,7 +54,7 @@ ALTER FULLTEXT CATALOG catalog_name
  REBUILD  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] でカタログ全体を再構築することを指定します。 カタログの再構築では、既存のカタログが削除され、代わりに新しいカタログが作成されます。 フルテキスト インデックスの参照を持つすべてのテーブルが新しいカタログに関連付けられます。 再構築すると、データベース システム テーブル内のフルテキスト メタデータがリセットされます。  
   
- WITH ACCENT_SENSITIVITY = {ON|OFF}   
+ WITH ACCENT_SENSITIVITY = {ON|OFF}  
  変更するカタログのフルテキスト インデックス作成とクエリ処理において、アクセントを区別するかしないかを指定します。  
   
  フルテキスト カタログのアクセントの区別に関する現在のプロパティ設定を確認するには、*catalog_name* に対して、FULLTEXTCATALOGPROPERTY 関数を **accentsensitivity** プロパティ値と共に使用します。 この関数で '1' が返された場合、フルテキスト カタログではアクセントが区別され、'0' が返された場合、アクセントは区別されません。  
@@ -69,8 +68,8 @@ ALTER FULLTEXT CATALOG catalog_name
   
  インデックスが設定されるデータの量によっては、マスター マージの完了までに時間がかかる場合があります。 マスター マージで大量のデータを処理すると、実行時間が長いトランザクションが発生し、チェックポイント時のログの切り捨てが遅れる場合があります。 この場合、完全復旧モデルでは、トランザクション ログが非常に大きくなることがあります。 完全復旧モデルを使用するデータベースで大きなフルテキスト インデックスを再編成する前に、実行時間が長いトランザクションのための十分な領域をトランザクション ログに割り当てることをお勧めします。 詳細については、「 [トランザクション ログ ファイルのサイズの管理](../../relational-databases/logs/manage-the-size-of-the-transaction-log-file.md)」を参照してください。  
   
- AS DEFAULT   
- このカタログが既定のカタログであることを指定します。 カタログを指定せずにフルテキスト インデックスを作成すると、既定のカタログが使用されます。 既定のフルテキスト カタログが既に存在する場合、このカタログを AS DEFAULT に設定すると、既定の設定がオーバーライドされます。  
+ AS DEFAULT  
+ このカタログが既定のカタログであることを指定します。 カタログを指定せずにフルテキスト インデックスを作成すると、既定のカタログが使用されます。 既定のフルテキスト カタログが既に存在する場合、このカタログを AS DEFAULT に設定すると、既存の既定値がオーバーライドされます。  
   
 ## <a name="permissions"></a>アクセス許可  
  フルテキスト カタログに対する ALTER 権限が与えられているか、**db_owner** 固定データベース ロール、**db_ddladmin** 固定データベース ロール、または sysadmin 固定サーバー ロールのメンバーであることが必要です。  

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 helpviewer_keywords:
 - users [Reporting Services]
@@ -14,18 +13,18 @@ helpviewer_keywords:
 - groups [Reporting Services]
 - security [Reporting Services], role assignments
 ms.assetid: 600e112c-1897-48a6-93c0-6e9f3f12dc01
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: faf66ef9c84c5a2b93a7b7ec42bd3a0ccf6f2e8a
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 556abc4ff00df4393c756f62072254e417653f40
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56043163"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66101864"
 ---
 # <a name="role-assignments"></a>ロールの割り当て
-  [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]では、*”ロール”* の割り当てにより、格納されているアイテムおよびレポート サーバー自体にアクセスできるかどうかが決まります。 ロールの割り当ては以下の要素で構成されています。  
+  [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]では、 *”ロール”* の割り当てにより、格納されているアイテムおよびレポート サーバー自体にアクセスできるかどうかが決まります。 ロールの割り当ては以下の要素で構成されています。  
   
 -   アクセスを制御するセキュリティ保護可能なアイテム。 セキュリティ保護可能なアイテムの例として、フォルダー、レポート、リソースがあります。  
   
@@ -61,7 +60,7 @@ ms.locfileid: "56043163"
   
  既定のセキュリティを提供する定義済みのロールの割り当ての詳細については、「 [定義済みロール](role-definitions-predefined-roles.md)」を参照してください。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [ロールを作成、削除、または変更する (Management Studio)](role-definitions-create-delete-or-modify.md)   
  [レポート サーバーへのユーザー アクセスを許可する &#40;レポート マネージャー&#41;](grant-user-access-to-a-report-server.md)   
  [ロールの割り当てを変更または削除する &#40;レポート マネージャー&#41;](role-assignments-modify-or-delete.md)   

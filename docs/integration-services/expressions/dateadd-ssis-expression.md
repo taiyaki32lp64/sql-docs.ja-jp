@@ -12,17 +12,20 @@ helpviewer_keywords:
 - dates [Integration Services]
 - DATEADD function
 ms.assetid: fa5c37b1-2ddc-4857-8f8e-f6d5643b654f
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: 585b97e644be39048d832f55067be5661430131c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 66733b12bbf3b4723449eb09f93182efb1f6462c
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47602490"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71290176"
 ---
 # <a name="dateadd-ssis-expression"></a>DATEADD (SSIS 式)
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   指定された日付要素に、日付または期間を示す数値を加算して、新しい DT_DBTIMESTAMP の値を返します。 数値のパラメーターは整数に、日付のパラメーターは有効な日付に評価される必要があります。  
   
 ## <a name="syntax"></a>構文  

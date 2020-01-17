@@ -1,6 +1,7 @@
 ---
-title: いくつかの同期のレプリカが同期されていません | Microsoft Docs
-ms.custom: ''
+title: いくつかの同期のレプリカが同期されていません
+description: 同期のレプリカが Always On 可用性グループで同期されていない場合に考えられるいくつかの原因と解決策について説明します
+ms.custom: seo-lt-2019
 ms.date: 05/17/2016
 ms.prod: sql
 ms.reviewer: ''
@@ -13,18 +14,17 @@ helpviewer_keywords:
 ms.assetid: e58ed56e-4c30-42e6-a9fc-a8c401620e02
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 7c1fb484897fbfc75736dfc78cb5b6da078a91df
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.openlocfilehash: 494d772f7eff9ccf8ba9783885d5c62e49fddbbe
+ms.sourcegitcommit: f8cf8cc6650a22e0b61779c20ca7428cdb23c850
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51602322"
+ms.lasthandoff: 12/04/2019
+ms.locfileid: "74822594"
 ---
 # <a name="some-synchronous-replicas-are-not-synchronized"></a>いくつかの同期のレプリカが同期されていません
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
     
-## <a name="introduction"></a>概要  
+## <a name="introduction"></a>はじめに  
   
 |||  
 |-|-|  

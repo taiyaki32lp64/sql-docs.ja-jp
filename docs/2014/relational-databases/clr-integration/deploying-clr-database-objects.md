@@ -16,11 +16,11 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 4e06dfced9b9800c0e5c0b7d0dca208bac67c900
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48122783"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62920842"
 ---
 # <a name="deploying-clr-database-objects"></a>CLR データベース オブジェクトの配置
   配置は、完了したアプリケーションまたはモジュールを別のコンピューターにインストールし、実行するために配布するプロセスです。 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Visual Studio を使用して、共通言語ランタイム (CLR) データベース オブジェクトを開発し、これらをテスト サーバーに配置することができます。 また、Visual Studio ではなく [!INCLUDE[msCoName](../../../includes/msconame-md.md)] .NET Framework の再配布ファイルを使用して、マネージド データベース オブジェクトをコンパイルすることも可能です。 コンパイルすると、CLR データベース オブジェクトを含むアセンブリを、Visual Studio または [!INCLUDE[tsql](../../../includes/tsql-md.md)] ステートメントを使用して、テスト サーバーに配置することができます。 Visual Studio .NET 2003 は、CLR 統合プログラミングまたは配置には使用できない点に注意してください。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] には .NET Framework がプレインストールされていますが、Visual Studio .NET 2003 では .NET Framework 2.0 アセンブリを使用できません。  
@@ -90,7 +90,7 @@ ms.locfileid: "48122783"
   
 3.  リスト ボックスからデータベースを選択し、をクリックして**次**します。  
   
-4.  **[スクリプト オプションの**ウィンドウで、をクリックして **[次へ]**、オプションの変更] をクリックし、 **[次へ]** します。  
+4.  **[スクリプト オプションの**ウィンドウで、をクリックして **[次へ]** 、オプションの変更] をクリックし、 **[次へ]** します。  
   
 5.  **オブジェクトの種類の選択**ウィンドウで、展開するデータベース オブジェクトの種類を選択します。 **[次へ]** をクリックします。  
   

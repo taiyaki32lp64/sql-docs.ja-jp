@@ -1,7 +1,7 @@
 ---
-title: 保持機能の使用 |Microsoft Docs
+title: Using 保持機能 |Microsoft Docs
 ms.custom: ''
-ms.date: 01/19/2017
+ms.date: 08/12/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,15 +10,14 @@ ms.topic: conceptual
 ms.assetid: aa48306c-e7a0-4dcb-af21-9ebb6898e45a
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 520468faa2398bcb11dc237826859e12cb027815
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 1c126385955ce6e9fa9098ec5a09ba115b94ffb0
+ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47780242"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "69026199"
 ---
-# <a name="using-holdability"></a>保持機能の使用
+# <a name="using-holdability"></a>保持可能性の使用
 
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 

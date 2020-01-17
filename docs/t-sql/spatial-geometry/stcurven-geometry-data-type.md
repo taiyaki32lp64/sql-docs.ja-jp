@@ -12,15 +12,14 @@ dev_langs:
 helpviewer_keywords:
 - STCurveN method (geometry)
 ms.assetid: 64adf1a1-3a41-41fb-b7d1-44390c3e4ea9
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: 634b91d114753355e765c6e6da96bfc20618e969
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: MladjoA
+ms.author: mlandzic
+ms.openlocfilehash: 9b9e958085af5f70d4dedb1f9a44866c04918343
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47630140"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67930130"
 ---
 # <a name="stcurven-geometry-data-type"></a>STCurveN (geometry データ型)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
@@ -41,7 +40,7 @@ ms.locfileid: "47630140"
 ## <a name="return-types"></a>戻り値の型  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の戻り値の型: **geometry**  
   
- CLR 戻り値の型: **SqlGeometry**  
+ CLR の戻り値の型:**SqlGeometry**  
   
 ## <a name="exceptions"></a>例外  
  *curve_index* < 1 の場合、`ArgumentOutOfRangeException` がスローされます。  

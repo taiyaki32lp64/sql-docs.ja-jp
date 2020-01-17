@@ -15,17 +15,20 @@ helpviewer_keywords:
 - connections [Integration Services], SQL Server Compact
 - connection managers [Integration Services], SQL Server Compact
 ms.assetid: ba627d4d-41f4-49fc-a921-f534cde67770
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: 362595a28f63b29955f1368dac515f597085a5e9
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 62c5a0400918ffe86cca4ec9ff98dd9254d29621
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47820440"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71294352"
 ---
 # <a name="sql-server-compact-edition-connection-manager"></a>SQL Server Compact Edition 接続マネージャー
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Compact 接続マネージャーを使用すると、パッケージは [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Compact データベースに接続できます。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] Compact 変換先は、この接続マネージャーを使用して、データを [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Compact データベースに接続できます。  
   
 > [!NOTE]  
@@ -55,7 +58,7 @@ ms.locfileid: "47820440"
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Compact Edition 接続マネージャーについて詳しくは、「 [SQL Server Compact Edition 接続マネージャー](../../integration-services/connection-manager/sql-server-compact-edition-connection-manager.md)」をご覧ください。  
   
-### <a name="options"></a>[変数]  
+### <a name="options"></a>オプション  
  **[データベースのファイル名とパスを入力]**  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Compact データベースのパスとファイル名を入力します。  
   
@@ -70,7 +73,7 @@ ms.locfileid: "47820440"
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Compact Edition 接続マネージャーについて詳しくは、「 [SQL Server Compact Edition 接続マネージャー](../../integration-services/connection-manager/sql-server-compact-edition-connection-manager.md)」をご覧ください。  
   
-### <a name="options"></a>[変数]  
+### <a name="options"></a>オプション  
  **[AutoShrink Threshold]**  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Compact データベース ファイルの空き容量 (%) がどの程度になったら自動圧縮プロセスを実行するかを指定します。  
   
@@ -97,7 +100,7 @@ ms.locfileid: "47820440"
   
  [Mode] オプションには、次の表に示すように 4 つの値が用意されています。  
   
-|ReplTest1|[説明]|  
+|[値]|[説明]|  
 |-----------|-----------------|  
 |**[読み取り専用]**|データベースに対する読み取り専用アクセスを指定します。|  
 |**[Read Write]**|データベースに対する読み取り/書き込み権限を指定します。|  
@@ -113,6 +116,6 @@ ms.locfileid: "47820440"
  **[データ ソース]**  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Compact データベースの名前を指定します。  
   
- **Password**  
+ **パスワード**  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Compact データベースのパスワードを入力します。  
   

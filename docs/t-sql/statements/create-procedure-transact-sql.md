@@ -45,20 +45,16 @@ helpviewer_keywords:
 ms.assetid: afe3d86d-c9ab-44e4-b74d-4e3dbd9cc58c
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: ca3d18ca29e09509c6e9d15e4064efc1efdd9960
-ms.sourcegitcommit: 96032813f6bf1cba680b5e46d82ae1f0f2da3d11
+ms.openlocfilehash: d24ab7a119162c9ad0f084efa8f47961b270a11e
+ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/15/2019
-ms.locfileid: "54300489"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "73982757"
 ---
 # <a name="create-procedure-transact-sql"></a>CREATE PROCEDURE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
-
-> [!div class="nextstepaction"]
-> [SQL ドキュメントの目次に関するご意見を共有してください。](https://aka.ms/sqldocsurvey)
 
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]、[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]、Azure SQL Data Warehouse、および Parallel Data Warehouse で、[!INCLUDE[tsql](../../includes/tsql-md.md)] または共通言語ランタイム (CLR) のストアド プロシージャを作成します。 ストアド プロシージャは、次のことを実行できる点で、他のプログラミング言語のプロシージャに似ています。  
   
@@ -160,12 +156,12 @@ OR ALTER
   
  プロシージャに名前を付けるときは、**sp_** プレフィックスを使用しないでください。 このプレフィックスは、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] でシステム プロシージャを指定するために使用されるものです。 このプレフィックスを使用すると、同じ名前のシステム プロシージャがある場合にアプリケーション コードが機能しなくなる可能性があります。  
   
- ローカルまたはグローバルの一時プロシージャを作成するには、*procedure_name* の前に、ローカル一時プロシージャの場合は番号記号 (#) を 1 つ付加し (*#procedure_name*)、グローバル一時プロシージャの場合は番号記号を 2 つ付加します (*##procedure_name*)。 ローカル一時プロシージャは、そのプロシージャが作成された接続のみで表示でき、その接続が閉じられると削除されます。 グローバル一時プロシージャは、すべての接続で使用でき、そのプロシージャを使用する最後のセッションが終了すると削除されます。 CLR プロシージャには一時名は指定できません。  
+ ローカルまたはグローバルの一時プロシージャを作成するには、*procedure_name* の前に、ローカル一時プロシージャの場合は番号記号 (#) を 1 つ付加し ( *#procedure_name*)、グローバル一時プロシージャの場合は番号記号を 2 つ付加します ( *##procedure_name*)。 ローカル一時プロシージャは、そのプロシージャが作成された接続のみで表示でき、その接続が閉じられると削除されます。 グローバル一時プロシージャは、すべての接続で使用でき、そのプロシージャを使用する最後のセッションが終了すると削除されます。 CLR プロシージャには一時名は指定できません。  
   
  プロシージャまたはグローバル一時プロシージャの名前は、## を含め最大で半角 128 文字です。 ローカル一時プロシージャの名前は、# を含め最大で半角 116 文字です。  
   
  **;** *number*  
- **適用対象**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] および [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。  
+ **適用対象**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 以降と [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。  
   
  同じ名前のプロシージャのグループ化に使用される整数を指定します (省略可能)。 グループ化したプロシージャは、DROP PROCEDURE ステートメントの 1 回の実行でまとめて削除できます。  
   
@@ -175,13 +171,13 @@ OR ALTER
  番号付きプロシージャでは **xml** または CLR ユーザー定義型を使用できません。また、番号付きプロシージャはプラン ガイドでは使用できません。  
   
  **@** *parameter*  
- プロシージャ内で宣言されているパラメーターを指定します。 最初の文字をアット マーク (**@**) にしてパラメーター名を指定します。 パラメーター名は[識別子](../../relational-databases/databases/database-identifiers.md)のルールに従っている必要があります。 パラメーターはプロシージャに対してローカルです。同じパラメーター名を他のプロシージャで使用できます。  
+ プロシージャ内で宣言されているパラメーターを指定します。 最初の文字をアット マーク ( **@** ) にしてパラメーター名を指定します。 パラメーター名は[識別子](../../relational-databases/databases/database-identifiers.md)のルールに従っている必要があります。 パラメーターはプロシージャに対してローカルです。同じパラメーター名を他のプロシージャで使用できます。  
   
  1 つ以上のパラメーター (最大 2,100 個) を宣言できます。 宣言される各パラメーターの値は、パラメーターに既定値が定義されていない場合、または別のパラメーターと同じ値を使用するよう設定されていない場合は、プロシージャの呼び出し時にユーザーが指定する必要があります。 プロシージャに[テーブル値パラメーター](../../relational-databases/tables/use-table-valued-parameters-database-engine.md)が含まれていて、そのパラメーターが呼び出しに含まれてない場合、空のテーブルが渡されます。 パラメーターは定数式の代わりにのみ使用することができます。テーブル名、列名、またはその他のデータベース オブジェクト名の代わりにパラメーターを使用することはできません。 詳細については、「 [EXECUTE &#40;Transact-SQL&#41;](../../t-sql/language-elements/execute-transact-sql.md)」を参照してください。  
   
  FOR REPLICATION を指定した場合、パラメーターは宣言できません。  
   
- [ _type\_schema\_name_**.** ] *data_type*  
+ [ _type\_schema\_name_ **.** ] *data_type*  
  パラメーターのデータ型とそのデータ型が属するスキーマを指定します。  
   
 **[!INCLUDE[tsql](../../includes/tsql-md.md)] プロシージャに関するガイドライン**:  
@@ -220,7 +216,7 @@ RECOMPILE
  [!INCLUDE[ssDE](../../includes/ssde-md.md)]でプロシージャ内にある個々のクエリに対するクエリ プランを破棄するには、クエリの定義で RECOMPILE クエリ ヒントを使用します。 詳細については、「[クエリ ヒント &#40;Transact-SQL&#41;](../../t-sql/queries/hints-transact-sql-query.md)」を参照してください。  
   
 ENCRYPTION  
- **適用対象**:SQL Server ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)])、[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。  
+ **適用対象**:SQL Server ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 以降)、[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] で、CREATE PROCEDURE ステートメントの元のテキストを、暗号化した形式に変換することを示します。 暗号化した形式の出力は、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 内のどのカタログ ビューでも直接見ることはできません。 システム テーブルまたはデータベース ファイルへのアクセス権を持たないユーザーは、暗号化した形式のテキストを取得できません。 ただし、[DAC ポート](../../database-engine/configure-windows/diagnostic-connection-for-database-administrators.md)経由でシステム テーブルにアクセスする権限、または直接データベース ファイルにアクセスする権限を持っているユーザーは、このテキストを使用できます。 また、サーバー プロセスにデバッガーをアタッチできるユーザーは、実行時に、暗号化を解除したプロシージャをメモリから取得できます。 システム メタデータのアクセス方法について詳しくは、「[メタデータ表示の構成](../../relational-databases/security/metadata-visibility-configuration.md)」をご覧ください。  
   
@@ -236,7 +232,7 @@ EXECUTE AS *clause*
  詳細については、「[EXECUTE AS 句 &#40;Transact-SQL&#41;](../../t-sql/statements/execute-as-clause-transact-sql.md)」を参照してください。  
   
 FOR REPLICATION  
- **適用対象**:SQL Server ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)])、[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。  
+ **適用対象**:SQL Server ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 以降)、[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。  
   
  プロシージャがレプリケーション用に作成されていることを指定します。 そのため、サブスクライバーでプロシージャを実行することはできません。 FOR REPLICATION オプションを指定して作成したプロシージャは、プロシージャ フィルターとして使用され、レプリケーション時にのみ実行されます。 FOR REPLICATION を指定した場合、パラメーターは宣言できません。 CLR プロシージャには FOR REPLICATION は指定できません。 RECOMPILE オプションは、FOR REPLICATION を使って作成されたプロシージャでは無視されます。  
   
@@ -245,10 +241,10 @@ FOR REPLICATION
  { [ BEGIN ] *sql_statement* [;] [ ...*n* ] [ END ] }  
  プロシージャの本体を構成する 1 つ以上の [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントを指定します。 省略可能な BEGIN キーワードと END キーワードを使用して、ステートメントを囲むことができます。 詳細については、後で説明する「ベスト プラクティス」、「全般的な解説」、および「制限事項と制約事項」をご覧ください。  
   
-EXTERNAL NAME _assembly\_name_**.**_class\_name_**.**_method\_name_  
- **適用対象**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]、[!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]。  
+EXTERNAL NAME _assembly\_name_ **.** _class\_name_ **.** _method\_name_  
+ **適用対象**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 以降、[!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]。  
   
- CLR プロシージャで参照する [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] アセンブリのメソッドを指定します。 *class_name* は、有効な [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 識別子であること、およびアセンブリにクラスとして存在していることが必要です。 名前空間部分を区切るためにピリオド (**.**) を使う名前空間修飾名がクラスにある場合は、クラス名をかっこ (**[ ]**) または引用符 (**""**) で区切る必要があります。 指定するメソッドは、クラスの静的メソッドであることが必要です。  
+ CLR プロシージャで参照する [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] アセンブリのメソッドを指定します。 *class_name* は、有効な [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 識別子であること、およびアセンブリにクラスとして存在していることが必要です。 名前空間部分を区切るためにピリオド ( **.** ) を使う名前空間修飾名がクラスにある場合は、クラス名をかっこ ( **[ ]** ) または引用符 ( **""** ) で区切る必要があります。 指定するメソッドは、クラスの静的メソッドであることが必要です。  
   
  既定では、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] は CLR コードを実行できません。 共通言語ランタイム モジュールを参照するデータベース オブジェクトを作成、変更、および削除することはできますが、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] でこれらの参照を実行するには、[clr enabled オプション](../../database-engine/configure-windows/clr-enabled-server-configuration-option.md)を有効にする必要があります。 このオプションを有効にするには、[sp_configure](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md) を使用します。  
   
@@ -256,7 +252,7 @@ EXTERNAL NAME _assembly\_name_**.**_class\_name_**.**_method\_name_
 >  CLR プロシージャは、包含データベースではサポートされていません。  
   
 ATOMIC WITH  
- **適用対象**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] および [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。  
+ **適用対象**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 以降と [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。  
   
  アトミック ストアド プロシージャの実行を示します。 変更はコミットされるか、例外のスローによってすべての変更がロールバックされます。 ネイティブ コンパイル ストアド プロシージャには、ATOMIC WITH ブロックが必要です。  
   
@@ -281,22 +277,22 @@ BEGIN、ROLLBACK、および COMMIT 操作は、アトミック ブロック内�
  パラメーターで NULL 値を許すかどうかを示します。 NULL が既定値です。  
   
 NATIVE_COMPILATION  
- **適用対象**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] および [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。  
+ **適用対象**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 以降と [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。  
   
  プロシージャがネイティブにコンパイルされることを示します。 NATIVE_COMPILATION、SCHEMABINDING、および EXECUTE AS は、任意の順序で指定できます。 詳細については、次を参照してください。 [ネイティブ コンパイル ストアド プロシージャ](../../relational-databases/in-memory-oltp/natively-compiled-stored-procedures.md)です。  
   
 SCHEMABINDING  
- **適用対象**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] および [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。  
+ **適用対象**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 以降と [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。  
   
  プロシージャによって参照されるテーブルを削除または変更できないようにします。 ネイティブ コンパイル ストアド プロシージャでは、SCHEMABINDING が必要です。 詳しくは、「[ネイティブ コンパイル ストアド プロシージャ](../../relational-databases/in-memory-oltp/natively-compiled-stored-procedures.md)」をご覧ください。SCHEMABINDING の制限は、ユーザー定義関数に対する場合と同じです。 詳しくは、「[CREATE FUNCTION &#40;Transact-SQL&#41;](../../t-sql/statements/create-function-transact-sql.md)」の SCHEMABINDING のセクションをご覧ください。  
   
 LANGUAGE = [N] 'language'  
- **適用対象**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] および [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。  
+ **適用対象**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 以降と [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。  
   
  [SET LANGUAGE &#40;Transact-SQL&#41;](../../t-sql/statements/set-language-transact-sql.md) セッション オプションと同等です。 LANGUAGE = [N] 'language' は必須です。  
   
 TRANSACTION ISOLATION LEVEL  
- **適用対象**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] および [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。  
+ **適用対象**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 以降と [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。  
   
  ネイティブ コンパイル ストアド プロシージャでは必要です。 ストアド プロシージャのトランザクション分離レベルを指定します。 次のオプションがあります。  
   
@@ -315,21 +311,21 @@ SNAPSHOT
  トランザクションの各ステートメントで、トランザクション全体で一貫性のあるデータを読み取るように指定します。このデータは、トランザクション開始時点に存在したデータです。  
   
 DATEFIRST = *number*  
- **適用対象**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] および [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。  
+ **適用対象**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 以降と [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。  
   
- 週の最初の曜日を 1 ～ 7 の数値で指定します。 DATEFIRST は省略可能です。 指定しない場合、設定は指定された言語から推定されます。  
+ 週の最初の曜日を 1 - 7 の数値で指定します。 DATEFIRST は省略可能です。 指定しない場合、設定は指定された言語から推定されます。  
   
  詳しくは、「[SET DATEFIRST &#40;Transact-SQL&#41;](../../t-sql/statements/set-datefirst-transact-sql.md)」をご覧ください。  
   
 DATEFORMAT = *format*  
- **適用対象**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] および [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。  
+ **適用対象**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 以降と [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。  
   
  date、smalldatetime、datetime、datetime2、datetimeoffset の各文字列を解釈する際の日付要素 (月、日、年) の順序を指定します。 DATEFORMAT は省略可能です。 指定しない場合、設定は指定された言語から推定されます。  
   
  詳しくは、「[SET DATEFORMAT &#40;Transact-SQL&#41;](../../t-sql/statements/set-dateformat-transact-sql.md)」をご覧ください。  
   
 DELAYED_DURABILITY = { OFF | ON }  
- **適用対象**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] および [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。  
+ **適用対象**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 以降と [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] によるトランザクションのコミットには、完全持続性、既定値、または遅延持続性が適用されます。  
   
@@ -347,7 +343,7 @@ SELECT DB_NAME() AS ThisDB;
 ```   
 `EXEC What_DB_is_this;` というステートメントを使ってストアド プロシージャを呼び出します。   
 
-もう少し複雑な例として、プロシージャの柔軟性を高めるために入力パラメーターを提供します。 例 :  
+もう少し複雑な例として、プロシージャの柔軟性を高めるために入力パラメーターを提供します。 例:  
 ```sql   
 CREATE PROC What_DB_is_that @ID int   
 AS    
@@ -360,7 +356,7 @@ SELECT DB_NAME(@ID) AS ThatDB;
 ## <a name="best-practices"></a>ベスト プラクティス  
  ここではベスト プラクティスをすべて網羅しているわけではありませんが、次の推奨事項に従うと、プロシージャのパフォーマンスが向上する場合があります。  
   
--   プロシージャの本体の最初のステートメントとして SET NOCOUNT ON ステートメントを使用する。 つまり、SET NOCOUNT ON ステートメントを AS キーワードの直後に配置します。 これにより、SELECT、INSERT、UPDATE、MERGE、および DELETE ステートメントの実行後に、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] がクライアントに返すメッセージが表示されません。 この不要なネットワーク オーバーヘッドを軽減することにより、データベースとアプリケーションの全体的なパフォーマンスが向上します。 詳しくは、「[SET NOCOUNT &#40;Transact-SQL&#41;](../../t-sql/statements/set-nocount-transact-sql.md)」をご覧ください。  
+-   プロシージャの本体の最初のステートメントとして SET NOCOUNT ON ステートメントを使用する。 つまり、このステートメントを AS キーワードの直後に配置します。 これにより、SELECT、INSERT、UPDATE、MERGE、および DELETE ステートメントの実行後に、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] がクライアントに返すメッセージが表示されません。 これにより、生成される出力が最小限になってわかりやすくなります。 ただし、今日のハードウェアでは、測定できるほどのパフォーマンス上の利点はありません。 詳しくは、「[SET NOCOUNT &#40;Transact-SQL&#41;](../../t-sql/statements/set-nocount-transact-sql.md)」をご覧ください。  
   
 -   プロシージャ内のデータベース オブジェクトを作成または参照するときにスキーマ名を使用する。 これにより、複数のスキーマを検索する必要がない場合に、[!INCLUDE[ssDE](../../includes/ssde-md.md)]でオブジェクト名の解決に要する時間が短縮されます。 また、スキーマを指定せずにオブジェクトを作成したときに割り当てられるユーザーの既定のスキーマが原因で発生する権限とアクセスの問題を防ぐこともできます。  
   
@@ -395,7 +391,7 @@ SELECT DB_NAME(@ID) AS ThatDB;
   
  プロシージャは、別のプロシージャを呼び出す場合、または CLR ルーチン、型、集計を参照してマネージド コードを実行する場合に入れ子になります。 プロシージャとマネージド コード参照は、32 レベルまで入れ子にすることができます。 入れ子のレベルは、呼び出されたプロシージャまたはマネージド コード参照の実行が開始されると 1 つ増加し、呼び出されたプロシージャまたはマネージド コード参照の実行が終了されると 1 つ減少します。 マネージド コード内から呼び出されたメソッドは、この入れ子レベルの制限としてはカウントされません。 ただし、CLR ストアド プロシージャで、SQL Server マネージド プロバイダーを利用してデータ アクセス操作が実行される場合、マネージド コードから SQL への移行時に入れ子のレベルが 1 つ追加されます。  
   
- 入れ子の最高レベルを越える呼び出しを行うと、一連の呼び出しが失敗します。 @@NESTLEVEL 関数を使用すると、現在実行中のストアド プロシージャの入れ子レベルを返すことができます。  
+ 入れ子の最高レベルを超える呼び出しを行うと、一連の呼び出しが失敗します。 @@NESTLEVEL 関数を使用すると、現在実行中のストアド プロシージャの入れ子レベルを返すことができます。  
   
 ## <a name="interoperability"></a>相互運用性  
  [!INCLUDE[ssDE](../../includes/ssde-md.md)] プロシージャを作成または変更すると、[!INCLUDE[tsql](../../includes/tsql-md.md)]では SET QUOTED_IDENTIFIER と SET ANSI_NULLS の両方の設定が保存されます。 これらの元の設定は、プロシージャの実行時に使用されます。 したがって、プロシージャの実行中は、SET QUOTED_IDENTIFIER と SET ANSI_NULLS のクライアント セッションの設定は無視されます。  
@@ -459,7 +455,7 @@ GO
 ||Cache Pages|  
 ||Cache Object Counts*|  
   
- * アドホック [!INCLUDE[tsql](../../includes/tsql-md.md)]、準備された [!INCLUDE[tsql](../../includes/tsql-md.md)]、プロシージャ、トリガーなど、キャッシュ オブジェクトの種類別にオブジェクトの数を調べることができます。 詳しくは、「[SQL Server の Plan Cache オブジェクト](../../relational-databases/performance-monitor/sql-server-plan-cache-object.md)」をご覧ください。  
+ \* アドホック [!INCLUDE[tsql](../../includes/tsql-md.md)]、準備された [!INCLUDE[tsql](../../includes/tsql-md.md)]、プロシージャ、トリガーなど、キャッシュ オブジェクトの種類別にオブジェクトの数を調べることができます。 詳しくは、「[SQL Server の Plan Cache オブジェクト](../../relational-databases/performance-monitor/sql-server-plan-cache-object.md)」をご覧ください。  
   
 ## <a name="security"></a>Security  
   
@@ -546,7 +542,7 @@ GO
 #### <a name="c-creating-a-clr-stored-procedure"></a>C. CLR ストアド プロシージャを作成する  
  次の例では、`GetPhotoFromDB` プロシージャを作成します。このプロシージャでは、`HandlingLOBUsingCLR` アセンブリ内の `LargeObjectBinary` クラスの `GetPhotoFromDB` メソッドを参照します。 プロシージャが作成される前に、`HandlingLOBUsingCLR` アセンブリがローカル データベースに登録されます。  
   
-**適用対象**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]、[!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] (*assembly_bits* から作成されたアセンブリを使用する場合)。  
+**適用対象**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 以降、[!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] (*assembly_bits* から作成されたアセンブリを使用する場合)。  
   
 ```sql  
 CREATE ASSEMBLY HandlingLOBUsingCLR  
@@ -662,7 +658,7 @@ SET @ComparePrice = @MaxPrice;
 GO  
 ```  
   
- `uspGetList` を実行し、`$700` より安い [!INCLUDE[ssSampleDBCoShort](../../includes/sssampledbcoshort-md.md)] 製品 (バイク) の一覧を返します。 ここではフロー制御言語と共に `OUTPUT` パラメーターの `@Cost` および `@ComparePrices` を使用して、**[メッセージ]** ウィンドウにメッセージを返します。  
+ `uspGetList` を実行し、`$700` より安い [!INCLUDE[ssSampleDBCoShort](../../includes/sssampledbcoshort-md.md)] 製品 (バイク) の一覧を返します。 ここではフロー制御言語と共に `OUTPUT` パラメーターの `@Cost` および `@ComparePrices` を使用して、 **[メッセージ]** ウィンドウにメッセージを返します。  
   
 > [!NOTE]  
 >  OUTPUT 変数は、プロシージャの作成時と変数の使用時に定義する必要があります。 パラメーター名と変数名は一致する必要はありませんが、データ型とパラメーターの位置は一致する必要があります。ただし、`@ListPrice` = *variable* が使用されている場合を除きます。  
@@ -875,7 +871,7 @@ DROP PROCEDURE Production.uspDeleteWorkOrder;
 #### <a name="k-using-the-with-encryption-option"></a>K. WITH ENCRYPTION オプションを使用する  
  次の例では、`HumanResources.uspEncryptThis` プロシージャを作成します。  
   
-**A適用対象**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]、SQL Database.  
+**適用対象**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 以降、SQL Database。  
   
 ```sql  
 CREATE PROCEDURE HumanResources.uspEncryptThis  
@@ -972,7 +968,7 @@ AS TRUNCATE TABLE MyDB..MyTable;
   
 ## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>例: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] および [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
-### <a name="o-create-a-stored-procedure-that-runs-a-select-statement"></a>O.  SELECT ステートメントを実行するストアド プロシージャを作成します。  
+### <a name="o-create-a-stored-procedure-that-runs-a-select-statement"></a>O. SELECT ステートメントを実行するストアド プロシージャを作成します。  
  この例では、プロシージャを作成して実行するための基本構文を示します。 バッチを実行する場合は、CREATE PROCEDURE を最初のステートメントにする必要があります。 たとえば、[!INCLUDE[ssawPDW](../../includes/ssawpdw-md.md)] で次のストアド プロシージャを作成するには、最初にデータベース コンテキストを設定した後、CREATE PROCEDURE ステートメントを実行します。  
   
 ```sql  
@@ -995,13 +991,13 @@ EXEC Get10TopResellers;
   
 ## <a name="see-also"></a>参照  
  [ALTER PROCEDURE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-procedure-transact-sql.md)   
- [フロー制御言語 &#40;TRANSACT-SQL&#41;](~/t-sql/language-elements/control-of-flow.md)   
+ [フロー制御言語 &#40;Transact-SQL&#41;](~/t-sql/language-elements/control-of-flow.md)   
  [カーソル](../../relational-databases/cursors.md)   
  [データ型 &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)   
  [DECLARE @local_variable &#40;Transact-SQL&#41;](../../t-sql/language-elements/declare-local-variable-transact-sql.md)   
  [DROP PROCEDURE &#40;Transact-SQL&#41;](../../t-sql/statements/drop-procedure-transact-sql.md)   
  [EXECUTE &#40;Transact-SQL&#41;](../../t-sql/language-elements/execute-transact-sql.md)   
- [実行 AS (& a) #40 です。TRANSACT-SQL と #41 です。](../../t-sql/statements/execute-as-transact-sql.md)   
+ [EXECUTE AS &#40;Transact-SQL&#41;](../../t-sql/statements/execute-as-transact-sql.md)   
  [ストアド プロシージャ &#40;データベース エンジン&#41;](../../relational-databases/stored-procedures/stored-procedures-database-engine.md)   
  [sp_procoption &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-procoption-transact-sql.md)   
  [sp_recompile &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-recompile-transact-sql.md)   

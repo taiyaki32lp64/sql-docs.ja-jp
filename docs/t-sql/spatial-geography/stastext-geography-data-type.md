@@ -15,15 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - STAsText method
 ms.assetid: d3d2635d-ca6c-4205-9d6c-eb939ee314fd
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: 05fbba2764d21e6646aebb9e7c9ddfdc09cf35f5
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: MladjoA
+ms.author: mlandzic
+ms.openlocfilehash: 9050e529cd851d5b6785e3e167c1c081a2079dd5
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47835990"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68042501"
 ---
 # <a name="stastext-geography-data-type"></a>STAsText (geography データ型)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -42,7 +41,7 @@ ms.locfileid: "47835990"
 ## <a name="return-types"></a>戻り値の型  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 戻り値の型: **nvarchar(max)**  
   
- CLR の戻り値の型: **SqlChars**  
+ CLR の戻り値の型:**SqlChars**  
   
 ## <a name="remarks"></a>Remarks  
  **geography** インスタンスの OGC 型は、[STGeometryType()](../../t-sql/spatial-geography/stgeometrytype-geography-data-type.md) を呼び出すことによって判別できます。  

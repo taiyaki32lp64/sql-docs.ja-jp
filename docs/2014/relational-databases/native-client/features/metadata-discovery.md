@@ -11,11 +11,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: e808f1fc82dfe0a9fd6fa96999e6e2c5320ee452
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48142232"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63162012"
 ---
 # <a name="metadata-discovery"></a>メタデータの検出
   メタデータ検出機能が強化、[!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)]により[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]書式を設定する前に指定したネイティブ クライアント アプリケーションがそのクエリの実行から返された列またはパラメーター メタデータが同じか、メタデータと互換性のあることを確認するにはクエリを実行しました。 クエリの実行後に返されたメタデータにクエリの実行前に指定したメタデータ形式との互換性がない場合は、エラーが発生します。  

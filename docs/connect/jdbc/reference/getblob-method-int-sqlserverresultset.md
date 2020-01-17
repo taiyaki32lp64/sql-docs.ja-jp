@@ -1,5 +1,5 @@
 ---
-title: getBlob (int) メソッド (SQLServerResultSet) |Microsoft Docs
+title: getBlob メソッド (int) (SQLServerResultSet) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: a00275cb-0299-4a21-a518-2640598a5bbf
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 2447a116ba7cafaa2299aa46c7a55e10a4114fd6
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 70f0faaa9babb4ddaa1512fd18cbbd1f5f34d337
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47775746"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67953609"
 ---
 # <a name="getblob-method-int-sqlserverresultset"></a>getBlob (int) メソッド (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -41,16 +40,16 @@ public java.sql.Blob getBlob(int i)
  列インデックスを示す **int** です。  
   
 ## <a name="return-value"></a>戻り値  
- Blob オブジェクト。  
+ Blob オブジェクトです。  
   
 ## <a name="exceptions"></a>例外  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- この getBlob メソッドは、java.sql.ResultSet インターフェイスの getBlob メソッドによって指定されます。  
+ この getBlob メソッドは、java.sql.ResultSet インターフェイスの getBlob メソッドで規定されています。  
   
 ## <a name="see-also"></a>参照  
- [getBlob メソッド&#40;SQLServerResultSet&#41;](../../../connect/jdbc/reference/getblob-method-sqlserverresultset.md)   
+ [getBlob メソッド &#40;SQLServerResultSet&#41;](../../../connect/jdbc/reference/getblob-method-sqlserverresultset.md)   
  [SQLServerResultSet のメンバー](../../../connect/jdbc/reference/sqlserverresultset-members.md)   
  [SQLServerResultSet クラス](../../../connect/jdbc/reference/sqlserverresultset-class.md)  
   

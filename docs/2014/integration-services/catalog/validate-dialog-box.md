@@ -10,15 +10,15 @@ f1_keywords:
 - sql12.ssis.ssms.ispackagevalidate.f1
 - sql12.ssis.ssms.isprojectvalidate.f1
 ms.assetid: 134e14ce-4f8d-4a20-889a-918014c841d8
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: aaa7f88cda8c2c3cbda7ca38b2531de6354e83f5
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 8380b3ff1502088e0131b182149e90e31d2be42c
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52819304"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62771653"
 ---
 # <a name="validate-dialog-box"></a>[検証] ダイアログ ボックス
   **のプロジェクトまたはパッケージの一般的な問題を確認するには、** [検証] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] ダイアログ ボックスを使用します。  

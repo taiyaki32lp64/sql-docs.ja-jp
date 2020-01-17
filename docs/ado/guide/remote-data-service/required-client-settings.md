@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: e776b4e3-fcc4-4bfb-a7e8-5ffae1d83833
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: cec3e79e3d37f064cb742588519a374737e01319
-ms.sourcegitcommit: 1a5448747ccb2e13e8f3d9f04012ba5ae04bb0a3
+ms.openlocfilehash: bdb99cb3d792900f48ceb69c25c7ae720c339683
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51558219"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67922293"
 ---
 # <a name="required-client-settings"></a>必要なクライアントの設定
 > [!IMPORTANT]
@@ -76,7 +75,7 @@ rs.CursorLocation = adUseClient
 "Remote Server=https://yourServer"  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [カスタマイズ ファイル Connect セクション](../../../ado/guide/remote-data-service/customization-file-connect-section.md)   
  [カスタマイズ ファイル SQL セクション](../../../ado/guide/remote-data-service/customization-file-sql-section.md)   
  [カスタマイズ ファイル UserList セクション](../../../ado/guide/remote-data-service/customization-file-userlist-section.md)   

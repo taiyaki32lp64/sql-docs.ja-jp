@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - nearest neighbor [Data Mining]
@@ -16,15 +15,15 @@ ms.assetid: aed1b7d3-8f20-4eeb-b156-0229f942cefd
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: e3d93d564dedbb5a08cf403d771a6f8e794fb498
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: a733b434e428f7486c235f4efc923adfa4b14949
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48190282"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66083679"
 ---
 # <a name="mining-model-content-for-clustering-models-analysis-services---data-mining"></a>クラスター モデルのマイニング モデル コンテンツ (Analysis Services - データ マイニング)
-  このトピックでは、Microsoft クラスタリング アルゴリズムを使用するモデルに固有のマイニング モデル コンテンツについて説明します。 すべての種類のモデルのマイニング モデル コンテンツの一般的な説明を参照してください。[マイニング モデル コンテンツ&#40;Analysis Services - データ マイニング&#41;](mining-model-content-analysis-services-data-mining.md)します。  
+  このトピックでは、Microsoft クラスタリング アルゴリズムを使用するモデルに固有のマイニング モデル コンテンツについて説明します。 すべての種類のモデルのマイニング モデル コンテンツの一般的な説明については、「 [マイニング モデル コンテンツ &#40;Analysis Services - データ マイニング&#41;](mining-model-content-analysis-services-data-mining.md)」 (マイニング モデル コンテンツ (Analysis Services - データ マイニング)) を参照してください。  
   
 ## <a name="understanding-the-structure-of-a-clustering-model"></a>クラスター モデルの構造について  
  クラスター モデルの構造は単純です。 モデルとそのメタデータを表す 1 つの親ノードが各モデルにあり、各親ノードにはクラスターのフラット リストがあります (NODE_TYPE = 5)。 この組織は次の図に表示されます。  
@@ -51,12 +50,12 @@ ms.locfileid: "48190282"
 > [!NOTE]  
 >  分散は、クラスターの全分散を表します。 分散の値が小さい場合は、その列のほとんどの値が平均にきわめて近いことになります。 標準偏差を得るには、分散の平方根を計算します。  
   
- 各属性があることに注意してください、`Missing`その属性のデータがなかったケースの数を示す型の値します。 Missing のデータが重要になる場合もあります。このデータが計算に与える影響は、データ型によって異なります。 詳細については、「[Missing 値 &#40;Analysis Services - データ マイニング&#41;](missing-values-analysis-services-data-mining.md)」を参照してください。  
+ 各属性の `Missing` という値の型は、その属性のデータがなかったケースの数を示します。 Missing のデータが重要になる場合もあります。このデータが計算に与える影響は、データ型によって異なります。 詳細については、「[Missing 値 &#40;Analysis Services - データ マイニング&#41;](missing-values-analysis-services-data-mining.md)」を参照してください。  
   
 ## <a name="model-content-for-a-clustering-model"></a>クラスター モデルのモデル コンテンツ  
  ここでは、マイニング モデル コンテンツの列のうち、クラスター モデルに関連する列についてのみ詳細と例を紹介します。  
   
- スキーマ行セットの汎用の列 (MODEL_CATALOG や MODEL_NAME など) の詳細については、「[マイニング モデル コンテンツ &#40;Analysis Services - データ マイニング&#41;](mining-model-content-analysis-services-data-mining.md)」を参照してください。  
+ スキーマ行セットの汎用の列 (MODEL_CATALOG や MODEL_NAME など) の詳細については、「 [マイニング モデル コンテンツ &#40;Analysis Services - データ マイニング&#41;](mining-model-content-analysis-services-data-mining.md)」 (マイニング モデル コンテンツ (Analysis Services - データ マイニング)) を参照してください。  
   
  MODEL_CATALOG  
  モデルが格納されているデータベースの名前。  
@@ -149,9 +148,9 @@ ms.locfileid: "48190282"
  MSOLAP_NODE_SHORT_CAPTION  
  表示目的で使用されるラベル。 変更することはできません。  
   
- **親ノード** モデルの種類 (クラスター モデル) です。  
+ **親ノード**モデルの種類。クラスター モデル  
   
- **クラスター ノード** クラスターの名前です (Cluster 1 など)。  
+ **クラスター ノード** クラスターの名前です 例:クラスター 1 です。  
   
 ## <a name="remarks"></a>コメント  
  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] には、クラスター モデルを作成するための方法が複数用意されています。 使用しているモデルがどの方法で作成されたかわからない場合は、モデルのメタデータを取得します。モデルのメタデータは、ADOMD クライアントや AMO を使用してプログラムで取得することも、データ マイニング スキーマ行セットに対してクエリを実行して取得することもできます。 詳細については、「 [マイニング モデルの作成に使用されたパラメーターのクエリ](query-the-parameters-used-to-create-a-mining-model.md)」を参照してください。  
@@ -160,9 +159,9 @@ ms.locfileid: "48190282"
 >  使用するクラスタリング手法やパラメーターが違っても、モデルの構造とコンテンツは変わりません。  
   
 ## <a name="see-also"></a>参照  
- [マイニング モデル コンテンツ&#40;Analysis Services - データ マイニング&#41;](mining-model-content-analysis-services-data-mining.md)   
+ [マイニング モデル コンテンツ &#40;Analysis Services - データ マイニング&#41;](mining-model-content-analysis-services-data-mining.md)   
  [データ マイニング モデル ビューアー](data-mining-model-viewers.md)   
- [Microsoft クラスタ リング アルゴリズム](microsoft-clustering-algorithm.md)   
+ [Microsoft クラスタリング アルゴリズム](microsoft-clustering-algorithm.md)   
  [データ マイニング クエリ](data-mining-queries.md)  
   
   

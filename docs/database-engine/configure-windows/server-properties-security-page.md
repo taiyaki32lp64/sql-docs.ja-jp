@@ -12,13 +12,12 @@ f1_keywords:
 ms.assetid: b8a131c7-e7bd-4203-bf26-234f1ebfe622
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 48fb7495e7dcd3818e784fd7c9dd7b4152871ebb
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 11a8e63d75f4194727344009dfac6f2fed77edaa
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47848866"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68031427"
 ---
 # <a name="server-properties---security-page"></a>[サーバーのプロパティ] - [セキュリティ] ページ
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -63,10 +62,10 @@ ms.locfileid: "47848866"
  **[プロキシ アカウント]**  
  使用されるプロキシ アカウントを指定します。  
   
- **Password**  
+ **パスワード**  
  プロキシ アカウントのパスワードを指定します。  
   
-## <a name="options"></a>[変数]  
+## <a name="options"></a>オプション  
  **[C2 監査トレースを有効にする]**  
  ステートメントおよびオブジェクトへのアクセスの試行をすべて監査し、\MSSQL\Data ディレクトリ ( [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]の既定のインスタンスの場合)、または \MSSQL$*instancename*\Data ディレクトリ ( [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]の名前付きインスタンスの場合) のファイルに記録します。 詳細については、「 [c2 audit mode サーバー構成オプション](../../database-engine/configure-windows/c2-audit-mode-server-configuration-option.md)」を参照してください。  
   

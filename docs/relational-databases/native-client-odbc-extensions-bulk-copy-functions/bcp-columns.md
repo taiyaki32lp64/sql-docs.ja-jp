@@ -15,22 +15,20 @@ apitype: DLLExport
 helpviewer_keywords:
 - bcp_columns function
 ms.assetid: 5376f6fe-9508-439a-8c66-778d77f19ac3
-author: MightyPen
-ms.author: genemi
-manager: craigg
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 2e7a3e15c8f1090a286fb13eecaa58605f1b242c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d26f288c857cf44a932a91b250074c36453e2482
+ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47675750"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73782977"
 ---
-# <a name="bcpcolumns"></a>bcp_columns
+# <a name="bcp_columns"></a>bcp_columns
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-[!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] との一括コピー入出力に使用する、ユーザー ファイル内の合計列数を設定します。 [bcp_setbulkmode](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-setbulkmode.md) bcp_columns 代わりに使用でき、 [bcp_colfmt](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-colfmt.md)します。  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] との一括コピー入出力に使用する、ユーザー ファイル内の合計列数を設定します。 bcp_columns と[bcp_colfmt](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-colfmt.md)の代わりに[bcp_setbulkmode](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-setbulkmode.md)を使用できます。  
   
 ## <a name="syntax"></a>構文  
   
@@ -45,18 +43,18 @@ RETCODE bcp_columns (
  *hdbc*  
  一括コピーが有効な ODBC 接続ハンドルです。  
   
- *nColumns*  
- ユーザー ファイル内の合計列数です。 一括をユーザー ファイルからデータをコピーする準備を行う場合でも、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]テーブルで、ユーザー ファイル内のすべての列をコピーする予定がないと、設定する必要があります*nColumns*ユーザー ファイルの列の合計数にします。  
+ *n 列*  
+ ユーザー ファイル内の合計列数です。 ユーザーファイルから [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] テーブルにデータを一括コピーする準備をしていて、ユーザーファイル内のすべての列をコピーすることを意図していない場合でも、 *Ncolumns*をユーザーファイルの列の合計数に設定する必要があります。  
   
 ## <a name="returns"></a>戻り値  
  SUCCEED または FAIL。  
   
-## <a name="remarks"></a>コメント  
- この関数は、後でのみ呼び出すことができます[bcp_init](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-init.md)は有効なファイル名で呼び出されました。  
+## <a name="remarks"></a>解説  
+ この関数は、有効なファイル名を指定して[bcp_init](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-init.md)が呼び出された後にのみ呼び出すことができます。  
   
- この関数を呼び出す必要があるのは、既定とは異なる形式のユーザー ファイルを使用する場合のみです。 既定のユーザー ファイル形式の説明の詳細については、次を参照してください。 **bcp_init**します。  
+ この関数を呼び出す必要があるのは、既定とは異なる形式のユーザー ファイルを使用する場合のみです。 既定のユーザーファイル形式の詳細については、「 **bcp_init**」を参照してください。  
   
- 呼び出した後**bcp_columns**、呼び出す必要があります[bcp_colfmt](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-colfmt.md)カスタム ファイル形式を完全に定義するユーザー ファイル内の各列にします。  
+ **Bcp_columns**を呼び出した後、ユーザーファイルの各列に対して[bcp_colfmt](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-colfmt.md)を呼び出して、カスタムファイル形式を完全に定義する必要があります。  
   
 ## <a name="see-also"></a>参照  
  [一括コピー関数](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/sql-server-driver-extensions-bulk-copy-functions.md)  

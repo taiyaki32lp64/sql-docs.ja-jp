@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: 36fbca8e-1884-44b5-806b-d15e30f42fe6
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 1fa18eeacad58195c42d03b12f03332c332b0a35
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 77a45203c50555168d2cd163c8b97406b8377694
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47662660"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67919896"
 ---
 # <a name="collections-visual-c-syntax-index-with-import"></a>コレクション (Visual C 構文のインデックスで #import)
 コレクションが特定の一般的なメソッドとプロパティを継承するかを把握すると便利です。  
@@ -39,7 +38,7 @@ ms.locfileid: "47662660"
 HRESULT Refresh( );  
 ```  
   
-### <a name="properties"></a>[プロパティ]  
+### <a name="properties"></a>Properties  
   
 ```  
 long GetCount( ); __declspec(property(get=GetCount)) long Count;  
@@ -55,7 +54,7 @@ HRESULT Clear( );
 HRESULT Refresh( );  
 ```  
   
-### <a name="properties"></a>[プロパティ]  
+### <a name="properties"></a>Properties  
   
 ```  
 long GetCount( ); __declspec(property(get=GetCount)) long Count;  
@@ -72,7 +71,7 @@ HRESULT Delete( const _variant_t & Index );
 HRESULT Refresh( );  
 ```  
   
-### <a name="properties"></a>[プロパティ]  
+### <a name="properties"></a>Properties  
   
 ```  
 long GetCount( ); __declspec(property(get=GetCount)) long Count;  
@@ -90,14 +89,14 @@ HRESULT Refresh( );
 HRESULT Update( );  
 ```  
   
-### <a name="properties"></a>[プロパティ]  
+### <a name="properties"></a>Properties  
   
 ```  
 long GetCount( ); __declspec(property(get=GetCount)) long Count;  
 PropertyPtr GetItem( const _variant_t & Index ); __declspec(property(get=GetItem)) PropertyPtr Item[];  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [エラーのコレクション (ADO)](../../../ado/reference/ado-api/errors-collection-ado.md)   
  [フィールド コレクション (ADO)](../../../ado/reference/ado-api/fields-collection-ado.md)   
  [Parameters コレクション (ADO)](../../../ado/reference/ado-api/parameters-collection-ado.md)   

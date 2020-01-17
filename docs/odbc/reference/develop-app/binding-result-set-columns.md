@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 4bc9c30f-83ae-4766-a746-032953c187ad
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: b92f317d72410a5dff56652dd9de1e3b2ba5c9cb
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: becda51a0fac924fce31e6cb15331321990d8a42
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47725910"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68135000"
 ---
 # <a name="binding-result-set-columns"></a>結果セットの列のバインド
 アプリケーションは、すべての列のバインドなしを含む結果セットを選択する際の多くまたは少なく列としてバインドできます。 データの行をフェッチするとき、ドライバーは、アプリケーションにバインドされた列のデータを返します。 かどうか、結果セット内のアプリケーション バインドのすべての列は、アプリケーションによって異なります。 たとえば、通常、レポートを生成するアプリケーションはある固定形式です。このようなアプリケーションはすべてのレポートで使用される列を含む結果セットを作成し、バインドし、これらの列のすべてのデータを取得します。 データの完全な画面を表示するアプリケーションが表示する列を決定するユーザーを許可します。このようなアプリケーションでは、ユーザー可能性がありますが、バインドし、ユーザーが選択された列のみをデータの取得のすべての列を含む結果セットを作成します。  

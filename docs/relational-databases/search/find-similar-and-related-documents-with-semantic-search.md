@@ -1,24 +1,23 @@
 ---
-title: セマンティック検索による類似および関連したドキュメントの取得 | Microsoft Docs
-ms.custom: ''
+title: セマンティック検索による類似および関連したドキュメントの取得
 ms.date: 03/06/2017
 ms.prod: sql
 ms.prod_service: search, sql-database
-ms.reviewer: ''
 ms.technology: search
 ms.topic: conceptual
 helpviewer_keywords:
 - semantic search [SQL Server], document similarity queries
 ms.assetid: 9f527883-031b-442f-8e95-24bc0151ecbf
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: 48deccb166167afb600611035454cb34ab22da6b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: pmasl
+ms.author: pelopes
+ms.reviewer: mikeray
+ms.custom: seo-lt-2019
+ms.openlocfilehash: 3ee3baa843aee101e5cbea425582a96e32bcd92b
+ms.sourcegitcommit: d00ba0b4696ef7dee31cd0b293a3f54a1beaf458
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47627130"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "74056514"
 ---
 # <a name="find-similar-and-related-documents-with-semantic-search"></a>セマンティック検索による類似および関連したドキュメントの取得
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -36,8 +35,8 @@ ms.locfileid: "47627130"
 > [!IMPORTANT]  
 >  対象の列では、フルテキスト インデックスとセマンティック インデックスが有効になっている必要があります。  
   
-###  <a name="HowToIdentifySimilar"></a> Example: Find the top documents that are similar to another document  
- 次の例では、AdventureWorks2012 サンプル データベースの HumanResources.JobCandidate テーブルから、 *@CandidateID* で指定した候補に類似する上位 10 件の候補を取得します。  
+###  <a name="HowToIdentifySimilar"></a> 例: 別のドキュメントとの類似性が高い複数のドキュメントを見つける  
+ 次の例では、AdventureWorks2012 サンプル データベースの HumanResources.JobCandidate テーブルから、 *\@CandidateID* で指定した候補に類似する上位 10 件の候補を取得します。  
   
 ```scr  
 SELECT TOP(10) KEY_TBL.matched_document_key AS Candidate_ID  
@@ -61,7 +60,7 @@ GO
 > [!IMPORTANT]  
 >  対象の列では、フルテキスト インデックスとセマンティック インデックスが有効になっている必要があります。  
   
-###  <a name="HowToSimilarPhrases"></a> Example: Find the top key phrases that are similar between documents  
+###  <a name="HowToSimilarPhrases"></a> 例: ドキュメント間で類似性が高い上位のキー フレーズを見つける  
  次の例では、AdventureWorks2012 サンプル データベースの **HumanResources.JobCandidate** テーブル内の指定された候補間で最も類似スコアが高い 5 つのキー フレーズを取得します。  
   
 ```sql  

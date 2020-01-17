@@ -1,7 +1,7 @@
 ---
 title: データベースの照合順序の設定または変更 | Microsoft Docs
 ms.custom: ''
-ms.date: 03/14/2017
+ms.date: 10/11/2019
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: ''
@@ -12,21 +12,20 @@ helpviewer_keywords:
 ms.assetid: 1379605c-1242-4ac8-ab1b-e2a2b5b1f895
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 62ac97c76f3b08a7dc13258fe2d45e88c9f5500a
-ms.sourcegitcommit: ddb682c0061c2a040970ea88c051859330b8ac00
+ms.openlocfilehash: 5fe614dc28c434a068378d256a6e1c7aaa59e6d6
+ms.sourcegitcommit: 43c3d8939f6f7b0ddc493d8e7a643eb7db634535
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51571331"
+ms.lasthandoff: 10/12/2019
+ms.locfileid: "72289345"
 ---
 # <a name="set-or-change-the-database-collation"></a>データベースの照合順序の設定または変更
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   このトピックでは、 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] または [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] を使用して、 [!INCLUDE[tsql](../../includes/tsql-md.md)]でデータベースの照合順序を設定および変更する方法を説明します。 照合順序を指定しない場合、サーバーの照合順序が使用されます。  
  
 > [!NOTE]
-> [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] でデータベースが作成された後は、照合順序を変更することはできません。
+> [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] でデータベースが作成された後は、[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] を使用して照合順序を変更することはできません。 [!INCLUDE[tsql](../../includes/tsql-md.md)] を使用することによってのみ変更できます。
 
  **このトピックの内容**  
   
@@ -36,7 +35,7 @@ ms.locfileid: "51571331"
   
      [推奨事項](#Recommendations)  
   
-     [Security](#Security)  
+     [セキュリティ](#Security)  
   
 -   **データベースの照合順序を設定または変更する方法:**  
   
@@ -52,30 +51,28 @@ ms.locfileid: "51571331"
   
 -   指定した照合順序、または参照先のオブジェクトで使用される照合順序で、Windows でサポートされていないコード ページが使用されていると、 [!INCLUDE[ssDE](../../includes/ssde-md.md)] でエラーが表示されます。  
 
--   [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] でデータベースが作成された後は、照合順序を変更することはできません。
+-   [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] でデータベースが作成された後は、[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] を使用して照合順序を変更することはできません。 [!INCLUDE[tsql](../../includes/tsql-md.md)] を使用することによってのみ変更できます。
   
 ###  <a name="Recommendations"></a> 推奨事項  
   
--   サポートされる照合順序名は、「 [Windows 照合順序名 &#40;Transact-SQL&#41;](../../t-sql/statements/windows-collation-name-transact-sql.md) 」と「 [SQL Server 照合順序名 &#40;Transact-SQL&#41;](../../t-sql/statements/sql-server-collation-name-transact-sql.md)」で確認できます。または、 [sys.fn_helpcollations &#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-helpcollations-transact-sql.md) システム関数を使用できます。  
+サポートされる照合順序名は、「 [Windows 照合順序名 &#40;Transact-SQL&#41;](../../t-sql/statements/windows-collation-name-transact-sql.md) 」と「 [SQL Server 照合順序名 &#40;Transact-SQL&#41;](../../t-sql/statements/sql-server-collation-name-transact-sql.md)」で確認できます。または、 [sys.fn_helpcollations &#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-helpcollations-transact-sql.md) システム関数を使用できます。  
   
--   データベースの照合順序を変更すると、次の変更が行われます。  
+データベースの照合順序を変更すると、次の変更が行われます。  
   
-    -   システム テーブル内の **char**型、 **varchar**型、 **text**型、 **nchar**型、 **nvarchar**型、または **ntext** 型の列はすべて、新しい照合順序に変更されます。  
+-   システム テーブル内の **char**型、 **varchar**型、 **text**型、 **nchar**型、 **nvarchar**型、または **ntext** 型の列はすべて、新しい照合順序に変更されます。  
   
-    -   ストアド プロシージャおよびユーザー定義関数で使用されている **char**、 **varchar**、 **text**、 **nchar**、 **nvarchar**、または **ntext** の既存のパラメーターおよびスカラー値の戻り値はすべて、新しい照合順序に変更されます。  
+-   ストアド プロシージャおよびユーザー定義関数で使用されている **char**、 **varchar**、 **text**、 **nchar**、 **nvarchar**、または **ntext** の既存のパラメーターおよびスカラー値の戻り値はすべて、新しい照合順序に変更されます。  
   
-    -   **char**、 **varchar**、 **text**、 **nchar**、 **nvarchar**、または **ntext** のシステム データ型およびこれらを基にしたユーザー定義データ型はすべて、新しい既定の照合順序に変更されます。  
+-   **char**、 **varchar**、 **text**、 **nchar**、 **nvarchar**、または **ntext** のシステム データ型およびこれらを基にしたユーザー定義データ型はすべて、新しい既定の照合順序に変更されます。  
   
--   ユーザー データベースに作成する新しいオブジェクトの照合順序は、 [ALTER DATABASE](../../t-sql/statements/alter-database-transact-sql.md) ステートメントの COLLATE 句を使用して変更できます。 このステートメントを実行しても、既存のユーザー定義テーブルの列の照合順序は変わりません。 [ALTER TABLE](../../t-sql/statements/alter-table-transact-sql.md)の COLLATE 句で変更することができます。  
+ユーザー データベースに作成される新しいオブジェクトの照合順序は、[ALTER DATABASE](../../t-sql/statements/alter-database-transact-sql.md) ステートメントの `COLLATE` 句を使用して変更できます。 このステートメントを実行しても、既存のユーザー定義テーブルの列の照合順序は**変更されません**。 [ALTER TABLE](../../t-sql/statements/alter-table-transact-sql.md) の `COLLATE` 句で変更することができます。  
   
 ###  <a name="Security"></a> セキュリティ  
   
 ####  <a name="Permissions"></a> Permissions  
- CREATE DATABASE  
- **master** データベースの CREATE DATABASE 権限か、CREATE ANY DATABASE 権限または ALTER ANY DATABASE 権限が必要です。  
+ 新しいデータベースを作成するには、**master** データベースでの `CREATE DATABASE` アクセス許可か、`CREATE ANY DATABASE` または `ALTER ANY DATABASE` のアクセス許可が必要です。  
   
- ALTER DATABASE  
- データベースに対する ALTER 権限が必要です。  
+ 既存のデータベースの照合順序を変更するには、データベースに対する `ALTER` アクセス許可が必要です。  
   
 ##  <a name="SSMSProcedure"></a> SQL Server Management Studio の使用  
   
@@ -114,7 +111,6 @@ SELECT name, collation_name
 FROM sys.databases  
 WHERE name = N'MyOptionsTest';  
 GO  
-  
 ```  
   
 #### <a name="to-change-the-database-collation"></a>データベースの照合順序を変更するには  
@@ -137,7 +133,6 @@ SELECT name, collation_name
 FROM sys.databases  
 WHERE name = N'MyOptionsTest';  
 GO  
-  
 ```  
   
 ## <a name="see-also"></a>参照  

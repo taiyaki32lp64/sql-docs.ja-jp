@@ -17,17 +17,20 @@ helpviewer_keywords:
 - joining datasets [Integration Services]
 - joins [SQL Server], SSIS
 ms.assetid: cd8b0412-f83b-4bd2-b227-e53dcfd941a8
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: 6fc41dc0b30164410ca1e5d770632f9866ca26c1
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: f963a3f8bf82ed3de76e31b6872ac6475d6dfd83
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47833536"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71297847"
 ---
 # <a name="merge-join-transformation"></a>Merge Join Transformation
+
+[!INCLUDE[ssis-appliesto](../../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   マージ結合変換では、FULL、LEFT、または INNER 結合を使用して並べ替えた 2 つのデータセットを結合した出力が生成されます。 たとえば、LEFT 結合を使用して、製品情報を含むテーブルを、製品が製造された国または地域を一覧表示するテーブルと結合します。 その結果、すべての製品とその製造元である国または地域を一覧表示するテーブルが生成されます。  
   
  マージ結合変換は、次の方法で構成できます。  
@@ -69,7 +72,7 @@ ms.locfileid: "47833536"
 > [!IMPORTANT]  
 >  マージ結合変換では、入力データが並べ替えられている必要があります。 この重要な要件の詳細については、「 [マージ変換およびマージ結合変換用にデータを並べ替える](../../../integration-services/data-flow/transformations/sort-data-for-the-merge-and-merge-join-transformations.md)」を参照してください。  
   
-### <a name="options"></a>[変数]  
+### <a name="options"></a>オプション  
  **[結合の種類]**  
  内部結合、左外部結合、または完全結合を使用するかどうかを指定します。  
   
@@ -89,7 +92,7 @@ ms.locfileid: "47833536"
   
 ## <a name="see-also"></a>参照  
  [マージ変換](../../../integration-services/data-flow/transformations/merge-transformation.md)   
- [Union All Transformation](../../../integration-services/data-flow/transformations/union-all-transformation.md)   
+ [全体結合変換](../../../integration-services/data-flow/transformations/union-all-transformation.md)   
  [Integration Services の変換](../../../integration-services/data-flow/transformations/integration-services-transformations.md)  
   
   

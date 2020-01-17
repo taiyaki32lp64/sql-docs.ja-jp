@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: be66188a-ebdb-4c9e-af72-c379886766fa
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 0158da62ed360e926cdb5382b89b1491c0723550
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 0f30e0cf7622de5124cb151288417bb508354ce0
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47776460"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68037723"
 ---
 # <a name="c-to-sql-character"></a>C から SQL へ: 文字
 ODBC C データ型の文字の識別子は次のとおりです。  

@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 6da136c5-fa93-4fe6-9bf5-90f4d92441fb
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 0a533f9c5cc3e0c2ca9adcbfd3d66d3eb9258b06
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: c9ecf51a777ad4d31363eb031af9ab4c448e6bf9
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47753250"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67925112"
 ---
 # <a name="hellodata-code"></a>HelloData コード
 ```  

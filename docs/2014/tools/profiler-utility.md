@@ -17,11 +17,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 572644cf673c70000cee7de77f2bca9199f19675
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52780774"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68211096"
 ---
 # <a name="profiler-utility"></a>profiler ユーティリティ
   **profiler** ユーティリティにより [!INCLUDE[ssSqlProfiler](../includes/sssqlprofiler-md.md)] ツールが起動されます。 このトピックの後半で説明する省略可能な引数を使用して、アプリケーションの起動を制御できます。  
@@ -69,10 +69,10 @@ ms.locfileid: "52780774"
  現在のユーザーの資格情報に基づいて、Windows 認証による接続を行います。  
   
  **/S**  *sql_server_name*  
- [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]のインスタンスを指定します。 **/U** スイッチと **/P** スイッチ、または **/E** スイッチで指定した認証情報を使用して、Profiler は指定されたサーバーに自動的に接続します。  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]の名前付きインスタンスに接続するには、 **/S** *sql_server_name*\\*instance_name*を使用します。  
+ [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]のインスタンスを指定します。 **/U** スイッチと **/P** スイッチ、または **/E** スイッチで指定した認証情報を使用して、Profiler は指定されたサーバーに自動的に接続します。 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]の名前付きインスタンスに接続するには、 **/S** *sql_server_name*\\*instance_name*を使用します。  
   
  **/A**  *analysis_services_server_name*  
- Analysis Services のインスタンスを指定します。 **/U** スイッチと **/P** スイッチ、または **/E** スイッチで指定した認証情報を使用して、Profiler は指定されたサーバーに自動的に接続します。  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] の名前付きインスタンスに接続するには、 **/A** *analysis_services_server_name\instance_name*を使用します。  
+ Analysis Services のインスタンスを指定します。 **/U** スイッチと **/P** スイッチ、または **/E** スイッチで指定した認証情報を使用して、Profiler は指定されたサーバーに自動的に接続します。 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] の名前付きインスタンスに接続するには、 **/A** *analysis_services_server_name\instance_name*を使用します。  
   
  **/D** *database*  
  接続に使用するデータベースの名前を指定します。 データベースを指定しないと、指定したユーザーに対して既定のデータベースが選択されます。  
@@ -124,7 +124,7 @@ ms.locfileid: "52780774"
 profiler /S MyServer\MyInstance /T "Standard"  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [コマンド プロンプト ユーティリティ リファレンス &#40;データベース エンジン&#41;](command-prompt-utility-reference-database-engine.md)  
   
   

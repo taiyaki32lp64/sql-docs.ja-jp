@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - model filter [data mining]
@@ -16,12 +15,12 @@ ms.assetid: 4d0abeb5-e939-46d3-9097-6e0358244300
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: b26f246b85f708976fd792247996cfb2084af5e7
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 0370d4fceada5c0a287c4a071691ea20d5a28f6c
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52512638"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66086218"
 ---
 # <a name="apply-a-filter-to-a-mining-model"></a>マイニング モデルへのフィルターの適用
   入れ子になったテーブルがマイニング構造に含まれている場合は、ケース テーブル、入れ子になったテーブル、またはその両方にフィルターを適用できます。  
@@ -47,7 +46,7 @@ WHERE [Model] <> 'Water Bottle' )
   
 3.  モデルを選択し、右クリックしてショートカット メニューを開きます。  
   
-     - または -  
+     \- または -  
   
      モデルを選択します。 次に、 **[マイニング モデル]** メニューの **[モデル フィルターの設定]** をクリックします。  
   
@@ -67,7 +66,7 @@ WHERE [Model] <> 'Water Bottle' )
   
 8.  **[値]** ボックスをクリックし、ボックスに値を入力します。  
   
-     たとえば、列に `Income` を選択して、"次の値より大きい" 演算子 (>) を選択し、「`30000`」と入力します。  
+     たとえば、選択`Income`選択、列と、大きい演算子 (>) と入力しより`30000`します。  
   
 9. グリッドの次の行をクリックします。  
   
@@ -79,7 +78,7 @@ WHERE [Model] <> 'Water Bottle' )
   
 11. 演算子を選択し、手順 7. と手順 8. に示したように値を入力します。  
   
-     たとえば、列に再度 `Income` を選択して、"次の値より小さい" 演算子 (<) を選択し、「`40000`」と入力します。  
+     たとえば、 `Income` 、もう一度列として小なり演算子 (<) を選択し、入力`40000`します。  
   
 12. グリッドの次の行をクリックします。  
   

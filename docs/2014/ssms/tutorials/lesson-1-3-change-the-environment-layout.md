@@ -11,11 +11,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 7a45ff3544fa85f1bfe9cbe7bdd00968c004a3b6
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48226798"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62634275"
 ---
 # <a name="change-the-environment-layout"></a>環境レイアウトの変更
   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] の各コンポーネントは画面スペースを共有しています。 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] コンポーネントを閉じる、非表示にする、または移動することにより、画面スペースをさらに確保できます。 このページの実習では、コンポーネントを別の場所に移動します。  

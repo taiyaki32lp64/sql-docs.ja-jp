@@ -19,11 +19,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 06bfc2148f7a367fa02d94109e9b5b8a250fd1f9
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54133782"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68198985"
 ---
 # <a name="view-and-modify-pull-subscription-properties"></a>プル サブスクリプションのプロパティの表示または変更
   このトピックでは、 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] で [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]、 [!INCLUDE[tsql](../../includes/tsql-md.md)]、またはレプリケーション管理オブジェクト (RMO) を使用して、プル サブスクリプションのプロパティを表示および変更する方法について説明します。  
@@ -39,7 +39,7 @@ ms.locfileid: "54133782"
      [レプリケーション管理オブジェクト (RMO)](#RMOProcedure)  
   
 ##  <a name="SSMSProcedure"></a> SQL Server Management Studio の使用  
- パブリッシャーまたはサブスクライバーからプル サブスクリプションのプロパティを表示、**サブスクリプションのプロパティ - \<Publisher >:\<PublicationDatabase >** から利用できるダイアログ ボックスで、[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]します。 その他のプロパティはサブスクライバーから表示でき、サブスクライバーで変更できます。 パブリッシャーからも、レプリケーション モニターの **[すべてのサブスクリプション]** タブでプロパティを表示できます。 レプリケーション モニターの起動の詳細については、「[Start the Replication Monitor](monitor/start-the-replication-monitor.md)」 (レプリケーション モニターの開始) を参照してください。  
+ パブリッシャーまたはサブスクライバーからのプル サブスクリプションのプロパティは、 **[サブスクリプションのプロパティ - \<Publisher>:\<PublicationDatabase>]** ダイアログ ボックスで表示できます。これは [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] から使用できます。 その他のプロパティはサブスクライバーから表示でき、サブスクライバーで変更できます。 パブリッシャーからも、レプリケーション モニターの **[すべてのサブスクリプション]** タブでプロパティを表示できます。 レプリケーション モニターの起動の詳細については、「[Start the Replication Monitor](monitor/start-the-replication-monitor.md)」 (レプリケーション モニターの開始) を参照してください。  
   
 #### <a name="to-view-pull-subscription-properties-from-the-publisher-in-management-studio"></a>Management Studio でパブリッシャーからのプル サブスクリプション プロパティを表示するには  
   
@@ -76,9 +76,9 @@ ms.locfileid: "54133782"
   
 #### <a name="to-view-the-properties-of-a-pull-subscription-to-a-snapshot-or-transactional-publication"></a>スナップショット パブリケーションまたはトランザクション パブリケーションに対するプル サブスクリプションのプロパティを表示するには  
   
-1.  サブスクライバーで、 [sp_helppullsubscription](/sql/relational-databases/system-stored-procedures/sp-helppullsubscription-transact-sql)を実行します。 **@publisher**、 **@publisher_db**、および **@publication**を指定します。 これにより、サブスクライバーのシステム テーブルに格納されている、サブスクリプションに関する情報が返されます。  
+1.  サブスクライバーで、 [sp_helppullsubscription](/sql/relational-databases/system-stored-procedures/sp-helppullsubscription-transact-sql)を実行します。 **@publisher** 、 **@publisher_db** 、および **@publication** を指定します。 これにより、サブスクライバーのシステム テーブルに格納されている、サブスクリプションに関する情報が返されます。  
   
-2.  サブスクライバーで、 [sp_helpsubscription_properties](/sql/relational-databases/system-stored-procedures/sp-helpsubscription-properties-transact-sql)を実行します。 **@publisher**、**@publisher_db**、**@publication** を指定し、**@publication_type** に次のいずれかの値を指定します。  
+2.  サブスクライバーで、 [sp_helpsubscription_properties](/sql/relational-databases/system-stored-procedures/sp-helpsubscription-properties-transact-sql)を実行します。 **@publisher** 、 **@publisher_db** 、 **@publication** を指定し、 **@publication_type** に次のいずれかの値を指定します。  
   
     -   **0** - サブスクリプションがトランザクション パブリケーションに属します。  
   
@@ -86,13 +86,13 @@ ms.locfileid: "54133782"
   
 3.  パブリッシャーで、 [sp_helpsubscription](/sql/relational-databases/system-stored-procedures/sp-helpsubscription-transact-sql)を実行します。 **@publication** および **@subscriber** を指定します。  
   
-4.  パブリッシャーで、 [@subscriber](/sql/relational-databases/system-stored-procedures/sp-helpsubscriberinfo-transact-sql)を指定して **@subscriber**から表示できます。 これにより、サブスクライバーに関する情報が表示されます。  
+4.  パブリッシャーで、 [@subscriber](/sql/relational-databases/system-stored-procedures/sp-helpsubscriberinfo-transact-sql)を指定して **@subscriber** から表示できます。 これにより、サブスクライバーに関する情報が表示されます。  
   
 #### <a name="to-change-the-properties-of-a-pull-subscription-to-a-snapshot-or-transactional-publication"></a>スナップショット パブリケーションまたはトランザクション パブリケーションに対するプル サブスクリプションのプロパティを変更するには  
   
-1.  サブスクライバーで、 [sp_change_subscription_properties](/sql/relational-databases/system-stored-procedures/sp-change-subscription-properties-transact-sql)を指定して **@publisher**、 **@publisher_db**、 **@publication**を指定し、 **0** に **1** (トランザクション) または **@publication_type**(スナップショット) を指定します。変更するサブスクリプション プロパティを **@property**に、新しい値を **@value**から表示できます。  
+1.  サブスクライバーで、 [sp_change_subscription_properties](/sql/relational-databases/system-stored-procedures/sp-change-subscription-properties-transact-sql)を指定して **@publisher** 、 **@publisher_db** 、 **@publication** を指定し、 **0** に **1** (トランザクション) または **@publication_type** (スナップショット) を指定します。変更するサブスクリプション プロパティを **@property** に、新しい値を **@value** から表示できます。  
   
-2.  (省略可) サブスクライバー側のサブスクリプション データベースに対して、 [sp_changesubscriptiondtsinfo](/sql/relational-databases/system-stored-procedures/sp-changesubscriptiondtsinfo-transact-sql)を実行します。 ディストリビューション エージェント ジョブの ID を **@jobid**に指定し、次のデータ変換サービス (DTS) パッケージ プロパティを指定します。  
+2.  (省略可) サブスクライバー側のサブスクリプション データベースに対して、 [sp_changesubscriptiondtsinfo](/sql/relational-databases/system-stored-procedures/sp-changesubscriptiondtsinfo-transact-sql)を実行します。 ディストリビューション エージェント ジョブの ID を **@jobid** に指定し、次のデータ変換サービス (DTS) パッケージ プロパティを指定します。  
   
     -   **@dts_package_name**  
   
@@ -107,17 +107,17 @@ ms.locfileid: "54133782"
   
 #### <a name="to-view-the-properties-of-a-pull-subscription-to-a-merge-publication"></a>マージ パブリケーションに対するプル サブスクリプションのプロパティを表示するには  
   
-1.  サブスクライバーで、 [sp_helpmergepullsubscription](/sql/relational-databases/system-stored-procedures/sp-helpmergepullsubscription-transact-sql)を実行します。 **@publisher**、**@publisher_db**、**@publication** を指定します。  
+1.  サブスクライバーで、 [sp_helpmergepullsubscription](/sql/relational-databases/system-stored-procedures/sp-helpmergepullsubscription-transact-sql)を実行します。 **@publisher** 、 **@publisher_db** 、 **@publication** を指定します。  
   
-2.  サブスクライバーで、 [sp_helpsubscription_properties](/sql/relational-databases/system-stored-procedures/sp-helpsubscription-properties-transact-sql)を実行します。 **@publisher**、**@publisher_db**、**@publication** を指定し、**@publication_type** に 2 を指定します。  
+2.  サブスクライバーで、 [sp_helpsubscription_properties](/sql/relational-databases/system-stored-procedures/sp-helpsubscription-properties-transact-sql)を実行します。 **@publisher** 、 **@publisher_db** 、 **@publication** を指定し、 **@publication_type** に 2 を指定します。  
   
-3.  パブリッシャーで [sp_helpmergesubscription](/sql/relational-databases/system-stored-procedures/sp-helpmergesubscription-transact-sql) を実行し、サブスクリプション情報を表示します。 特定のサブスクリプションに関する情報を取得するには、 **@publication**、 **@subscriber**を指定し、 **@subscription_type** に **@subscription_type**から表示できます。  
+3.  パブリッシャーで [sp_helpmergesubscription](/sql/relational-databases/system-stored-procedures/sp-helpmergesubscription-transact-sql) を実行し、サブスクリプション情報を表示します。 特定のサブスクリプションに関する情報を取得するには、 **@publication** 、 **@subscriber** を指定し、 **@subscription_type** に **@subscription_type** から表示できます。  
   
-4.  パブリッシャーで、 [@subscriber](/sql/relational-databases/system-stored-procedures/sp-helpsubscriberinfo-transact-sql)を指定して **@subscriber**から表示できます。 これにより、サブスクライバーに関する情報が表示されます。  
+4.  パブリッシャーで、 [@subscriber](/sql/relational-databases/system-stored-procedures/sp-helpsubscriberinfo-transact-sql)を指定して **@subscriber** から表示できます。 これにより、サブスクライバーに関する情報が表示されます。  
   
 #### <a name="to-change-the-properties-of-a-pull-subscription-to-a-merge-publication"></a>マージ パブリケーションに対するプル サブスクリプションのプロパティを変更するには  
   
-1.  サブスクライバーで、 [sp_changemergepullsubscription](/sql/relational-databases/system-stored-procedures/sp-changemergepullsubscription-transact-sql)を実行します。 **@publication**、**@publisher**、**@publisher_db** を指定し、**@property** に変更するサブスクリプション プロパティを、**@value** に新しい値を指定します。  
+1.  サブスクライバーで、 [sp_changemergepullsubscription](/sql/relational-databases/system-stored-procedures/sp-changemergepullsubscription-transact-sql)を実行します。 **@publication** 、 **@publisher** 、 **@publisher_db** を指定し、 **@property** に変更するサブスクリプション プロパティを、 **@value** に新しい値を指定します。  
   
 ##  <a name="RMOProcedure"></a> レプリケーション管理オブジェクト (RMO) の使用  
  プル サブスクリプションのプロパティを表示または変更する際に使用する RMO のクラスは、プル サブスクリプションがサブスクライブされるパブリケーションの種類によって異なります。  
@@ -158,8 +158,8 @@ ms.locfileid: "54133782"
   
 8.  すべての接続を閉じます。  
   
-## <a name="see-also"></a>参照  
- [表示情報とレプリケーション モニターを使用してタスクを実行します。](monitor/view-information-and-perform-tasks-replication-monitor.md)   
+## <a name="see-also"></a>関連項目  
+ [レプリケーション モニターを使用して情報を表示し、タスクを実行する](monitor/view-information-and-perform-tasks-replication-monitor.md)   
  [Replication Security Best Practices](security/replication-security-best-practices.md)   
  [パブリケーションのサブスクライブ](subscribe-to-publications.md)  
   

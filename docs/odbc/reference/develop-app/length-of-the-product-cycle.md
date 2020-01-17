@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 4d08d886-6d8b-40fd-8544-13032f4bf6c7
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 2c8a5b88f3fdca03be7740ba086e7ff61edbf684
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 203ad92dd6abfc71b0fdeddc466752612e666cee
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47656150"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68100454"
 ---
 # <a name="length-of-the-product-cycle"></a>製品サイクルの長さ
 相互運用性に関する最後の質問には時間です。 通常、相互運用可能なアプリケーションの開発 noninteroperable の 1 つの開発よりも時間がかかります。 理由は、アプリケーションする必要があります DBMS 機能を確認、さまざまな Dbms の異なる方法で同じタスクを実行、一部の Dbms でサポートされる機能を回避するようのです。  

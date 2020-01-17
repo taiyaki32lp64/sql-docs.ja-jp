@@ -1,5 +1,6 @@
 ---
-title: 変更の追跡のしくみ (SQL Server) | Microsoft Docs
+title: 変更の追跡のしくみ
+ms.custom: seo-dt-2019
 ms.date: 08/08/2016
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -20,14 +21,13 @@ helpviewer_keywords:
 ms.assetid: 5aec22ce-ae6f-4048-8a45-59ed05f04dc5
 author: rothja
 ms.author: jroth
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: e2f41329c10544686194524327ddb7fd560cb57d
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 11cfb403fb6bd038549f2273810bb937e625eaf7
+ms.sourcegitcommit: 03884a046aded85c7de67ca82a5b5edbf710be92
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52514154"
+ms.lasthandoff: 11/27/2019
+ms.locfileid: "74564782"
 ---
 # <a name="work-with-change-tracking-sql-server"></a>変更の追跡のしくみ (SQL Server)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -183,7 +183,7 @@ SELECT
       END AS CT_ThumbNailPhoto,  
       CHANGE_TRACKING_IS_COLUMN_IN_MASK(  
                      @PhotoColumnId, CT.SYS_CHANGE_COLUMNS) AS  
-                                   CT_ThumbNailPhoto_Changed  
+                                   CT_ThumbNailPhoto_Changed,  
      CT.SYS_CHANGE_OPERATION, CT.SYS_CHANGE_COLUMNS,  
      CT.SYS_CHANGE_CONTEXT  
 FROM  
@@ -207,7 +207,7 @@ ON
 3.  CHANGETABLE(CHANGES ...) を使用して Sales テーブルの変更を取得します。  
   
 4.  CHANGETABLE(CHANGES ...) を使用して SalesOrders テーブルの変更を取得します。  
-  
+
  データベースで実行される次の 2 つのプロセスが、上記の手順で返される結果に影響する場合があります。  
   
 -   バックグラウンドでクリーンアップ プロセスが実行され、指定した保有期間より古い変更追跡情報が削除されます。  
@@ -266,6 +266,10 @@ COMMIT TRAN
   
  スナップショット トランザクションの詳細については、「[SET TRANSACTION ISOLATION LEVEL &#40;Transact-SQL&#41;](../../t-sql/statements/set-transaction-isolation-level-transact-sql.md)」を参照してください。  
   
+#### <a name="cleanup-and-snapshot-isolation"></a>クリーンアップとスナップショット分離   
+同じデータベース、または同じインスタンス内の 2 つの異なるデータベースのどちらかで、スナップショット分離と変更の追跡を両方有効にすると、スナップショット分離を使用したデータベース内に開かれたトランザクションがある場合に、クリーンアップ プロセスで sys.syscommittab 内の期限切れの行が残される可能性があります。 これが発生するのは、変更の追跡のクリーンアップ プロセスでは、クリーンアップの実行時に、インスタンス全体の低レベルのウォーター マーク (安全なクリーンアップのバージョン) が考慮されるためです。 これが行われるのは、変更の追跡の自動クリーンアップ プロセスによって、スナップショット分離が有効になっているデータベース内の開かれたトランザクションで必要となる場合がある行が削除されないようにするためです。 sys.syscommittab 内の期限切れの行が適切なタイミングでクリーンアップされるように、READ COMMITTED スナップショット分離とスナップショット分離のトランザクションを、できるだけ短いまま維持してください。 
+
+
 #### <a name="alternatives-to-using-snapshot-isolation"></a>スナップショット分離の使用に代わる方法  
  スナップショット分離の使用に代わる方法がありますが、すべてのアプリケーション要件を満たしていることを確認するための作業が必要になります。 *last_synchronization_version* が有効であり、クリーンアップ プロセスでデータが削除されていないことを変更の取得前に確認するには、次の手順を実行します。  
   

@@ -21,17 +21,20 @@ f1_keywords:
 helpviewer_keywords:
 - DTExecUI utility
 ms.assetid: 3d71df39-126b-4c8e-bd77-128bbd5b0887
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: bb2f54dde0e73733a4fd129c2d2a4d081942af52
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 651311d70b17ce4be761e7ecc246e8839ef34eb0
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54132252"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71295829"
 ---
 # <a name="execute-package-utility-dtexecui"></a>パッケージ実行ユーティリティ (dtexecui)
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   **[パッケージ実行ユーティリティ]** を使用すると、 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] パッケージを実行できます。 このユーティリティは、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データベース、 [!INCLUDE[ssIS](../../includes/ssis-md.md)] パッケージ ストア、およびファイル システムの 3 つの場所のうちのいずれかに格納されているパッケージを実行できます。 このユーザー インターフェイスは、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] DTExec **コマンド プロンプト ツールを使用してパッケージを実行する代わりに使用できます。これは、** から開くか、またはコマンド プロンプトで「 **dtexecui** 」と入力して表示します。  
   
  **dtexecui.exe** ユーティリティと同じ手順でパッケージを実行します。 このユーティリティは 32 ビット ツールであるため、64 ビット環境では Windows on Win32 (WOW) で実行される 64 ビット環境の **dtexecui.exe** を使用して、パッケージを実行します。 64 ビット コンピューターで dtexecui.exe ユーティリティを使用してコマンドを開発およびテストする場合、実稼働サーバー上でコマンドの配置またはスケジュール設定を行う前に、64 ビット バージョンの **dtexec.exe** を使用してコマンドのテストを 64 ビット モードで行う必要があります。  
@@ -207,7 +210,7 @@ ms.locfileid: "54132252"
  パッケージのチェックポイントが有効な場合、使用されるパッケージのチェックポイント ファイルを一覧表示します。  
   
  **[参照]**  
- パッケージのチェックポイントが有効な場合、参照ボタン ( **[...]** ) をクリックし、**[開く]** ダイアログ ボックスを使用してチェックポイント ファイルを探します。 チェックポイント ファイルが既に指定されている場合、選択したファイルで置き換えられます。  
+ パッケージのチェックポイントが有効な場合、参照ボタン ( **[...]** ) をクリックし、 **[開く]** ダイアログ ボックスを使用してチェックポイント ファイルを探します。 チェックポイント ファイルが既に指定されている場合、選択したファイルで置き換えられます。  
   
  **[再開オプションをオーバーライドする]**  
  パッケージのチェックポイントが有効な場合、再開オプションをオーバーライドするかどうかを示します。  
@@ -252,7 +255,7 @@ ms.locfileid: "54132252"
  **[コンソールのログ記録]**  
  選択したイベントが発生したときにログに書き込まれる情報を指定します。  
   
- **名前**  
+ **[名前]**  
  パッケージを作成した人物の名前をレポートに記録する場合に選択します。  
   
  **[Computer]**  

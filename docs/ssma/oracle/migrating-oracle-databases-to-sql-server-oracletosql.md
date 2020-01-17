@@ -9,13 +9,13 @@ ms.topic: conceptual
 ms.assetid: 1d196dd6-4322-4c98-bb72-602c57d96134
 author: Shamikg
 ms.author: Shamikg
-manager: v-thobro
-ms.openlocfilehash: 9e746d1df201349011d24fc0de007c74ba0073b0
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: shamikg
+ms.openlocfilehash: e1021643d503e1ca77f120b81046b3773f8ff458
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47651190"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68259100"
 ---
 # <a name="migrating-oracle-databases-to-sql-server-oracletosql"></a>SQL Server への Oracle のデータの移行 (OracleToSQL)
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Migration Assistant (SSMA) for Oracle は Oracle データベースを迅速に移行するのに役立つ包括的な環境[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]、Azure SQL DB、または Azure SQL Data Warehouse。 SSMA for Oracle を使用してデータベース オブジェクトとデータを確認して、移行対象のデータベースを評価をするデータベース オブジェクトを移行[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]、Azure SQL DB、または Azure SQL Data Warehouse へのデータを移行し、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]、Azure SQL DB、または Azure SQL データウェアハウス。 SYS および Oracle のシステム スキーマを移行することはできませんに注意してください。

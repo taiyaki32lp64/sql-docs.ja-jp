@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: d87706d53190552734785b5310cba7ec81056a40
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52535454"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68206997"
 ---
 # <a name="rowsets-and-sql-server-cursors"></a>行セットと SQL Server カーソル
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、2 種類の方法でコンシューマーに結果セットが返されます。  
@@ -60,7 +60,7 @@ ms.locfileid: "52535454"
   
  次の行セット プロパティによって、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] カーソルを使用することが [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB プロバイダーに指示されます。 プロパティによっては、他のプロパティと組み合わせて使用できるものもあります。 たとえば、DBPROP_IRowsetScroll プロパティと DBPROP_IRowsetChange プロパティを備えた行セットは、即時更新動作を表すブックマーク行セットになります。 同時に指定できないプロパティもあります。 たとえば、DBPROP_OTHERINSERT を備えた行セットにはブックマークを含めることはできません。  
   
-|プロパティ ID|値|行セットの動作|  
+|プロパティ ID|[値]|行セットの動作|  
 |-----------------|-----------|---------------------|  
 |DBPROP_SERVERCURSOR|VARIANT_TRUE|行セットを使用して [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データを更新できません。 行セットは順次処理され、順方向のスクロールとフェッチのみがサポートされます。 相対行位置指定がサポートされます。 コマンド テキストに ORDER BY 句を指定できます。|  
 |DBPROP_CANSCROLLBACKWARDS または DBPROP_CANFETCHBACKWARDS|VARIANT_TRUE|行セットを使用して [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データを更新できません。 行セットでは、両方向へのスクロールとフェッチがサポートされます。 相対行位置指定がサポートされます。 コマンド テキストに ORDER BY 句を指定できます。|  
@@ -89,7 +89,7 @@ ms.locfileid: "52535454"
   
  特定の種類のカーソル モデルを使用するには、カーソル モデルに対応する列を探し、列の値が "T" であるすべての行セット プロパティを見つけます。 これらの行セット プロパティに VARIANT_TRUE を設定すると、その特定のカーソル モデルを使用できます。 値が "-" の行セット プロパティには、VARIANT_TRUE と VARIANT_FALSE のどちらも設定できます。  
   
-|行セット プロパティ/カーソル モデル|既定値<br /><br /> result<br /><br /> セット (set)<br /><br />  (RO)|[高速]<br /><br /> 順方向<br /><br /> 専用<br /><br />  (RO)|スタティック<br /><br />  (RO)|Keyset<br /><br /> ドリブン<br /><br />  (RO)|  
+|行セット プロパティ/カーソル モデル|既定<br /><br /> 結果<br /><br /> セット (set)<br /><br /> (RO)|[高速]<br /><br /> 順方向<br /><br /> 専用<br /><br /> (RO)|スタティック<br /><br /> (RO)|Keyset<br /><br /> ドリブン<br /><br /> (RO)|  
 |--------------------------------------|-------------------------------------------|--------------------------------------------|-----------------------|----------------------------------|  
 |DBPROP_SERVERCURSOR|F|T|T|T|  
 |DBPROP_DEFERRED|F|F|-|-|  
@@ -150,7 +150,7 @@ ms.locfileid: "52535454"
   
  行セットの作成や [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] カーソル ブロックの形成にどのメソッドを使用したかにかかわらず、行セットの次の行をフェッチするメソッドが実行されるまで、カーソル ブロックはアクティブです。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [行セット](rowsets.md)  
   
   

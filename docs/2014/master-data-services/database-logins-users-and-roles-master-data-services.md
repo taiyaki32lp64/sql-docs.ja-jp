@@ -14,15 +14,15 @@ helpviewer_keywords:
 - database [Master Data Services], logins
 - security [Master Data Services], database logins
 ms.assetid: 72ee383e-a619-461b-9f9d-1cac162ab0c5
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 2b7430a12c64ab669182ab2877bb6620b42b2f48
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: e9352910554e5f946f21eae3b51a7d87ff1106bd
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52795417"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65479754"
 ---
 # <a name="database-logins-users-and-roles-master-data-services"></a>データベース ログイン、ユーザー、およびロール (マスター データ サービス)
   [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] には、 [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] データベースをホストする [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] インスタンスに自動的にインストールされるログイン、ユーザー、およびロールがあります。 これらのログイン、ユーザー、およびロールは変更しないでください。  
@@ -31,7 +31,7 @@ ms.locfileid: "52795417"
   
 |Login|説明|  
 |-----------|-----------------|  
-|`mds_dlp_login`|UNSAFE アセンブリを作成できます。<br /><br /> - ランダムに生成されたパスワードでのログインは無効です。<br /><br /> - [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] データベースの場合は、dbo にマップされます。<br /><br /> - msdb の場合は、mds_clr_user がこのログインにマップされます。<br /><br /> <br /><br /> 詳細については、「 [アセンブリの作成](../relational-databases/clr-integration/assemblies/creating-an-assembly.md)」を参照してください。|  
+|`mds_dlp_login`|UNSAFE アセンブリを作成できます。<br /><br /> \- ランダムに生成されたパスワードでのログインは無効です。<br /><br /> \- [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] データベースの場合は、dbo にマップされます。<br /><br /> \- msdb の場合は、mds_clr_user がこのログインにマップされます。<br /><br /> <br /><br /> 詳細については、「 [アセンブリの作成](../relational-databases/clr-integration/assemblies/creating-an-assembly.md)」を参照してください。|  
 |`mds_email_login`|通知に使用されるログインは有効です。<br /><br /> msdb および [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] データベースの場合は、mds_email_user がこのログインにマップされます。|  
   
 ## <a name="msdb-users"></a>msdb ユーザー  
@@ -39,7 +39,7 @@ ms.locfileid: "52795417"
 |ユーザー|説明|  
 |----------|-----------------|  
 |`mds_clr_user`|使用されていません。<br /><br /> mds_dlp_login にマップされます。|  
-|`mds_email_user`|通知に使用します。<br /><br /> mds_email_login にマップされます。<br /><br /> ロールのメンバーを示します。DatabaseMailUserRole します。|  
+|`mds_email_user`|通知に使用します。<br /><br /> mds_email_login にマップされます。<br /><br /> ロールのメンバーを示します。ロールのメンバーです。|  
   
 ## <a name="master-data-services-database-users"></a>マスター データ サービス データベース ユーザー  
   

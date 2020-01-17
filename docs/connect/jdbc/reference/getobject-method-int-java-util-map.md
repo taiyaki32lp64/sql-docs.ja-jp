@@ -1,5 +1,5 @@
 ---
-title: getObject (int, java.util.Map) メソッド |Microsoft Docs
+title: getObject メソッド (int, java. util. Map) |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: 164532be-7ed6-40fa-a273-dece4c8d72c4
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: e86cadfbb230255fc3512768ef0886409267923d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 5106bddd6cf71401be0f4a71dfaaf0406901a6cd
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47667502"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67981240"
 ---
 # <a name="getobject-method-int-javautilmap"></a>getObject (int, java.util.Map) メソッド
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -46,7 +45,7 @@ public java.lang.Object getObject(int index,
   
  *map*  
   
- マップ オブジェクト。  
+ マップオブジェクト。  
   
 ## <a name="return-value"></a>戻り値  
  **Object** 値。  

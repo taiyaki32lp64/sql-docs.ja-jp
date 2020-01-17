@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 6f0221bd-70b4-4b04-b15d-722235aceb3c
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: fcde4fd9439862dd88bdb1ff8c9eb40ff85ce0d4
-ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
+ms.openlocfilehash: bc004c611c218324ce2d2d8b764b3ab05cb73e5d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/18/2018
-ms.locfileid: "53590426"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67896594"
 ---
 # <a name="spprocoption-transact-sql"></a>sp_procoption (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -42,20 +41,17 @@ sp_procoption [ @ProcName = ] 'procedure'
 ```  
   
 ## <a name="arguments"></a>引数  
- [  **@ProcName =** ] **'**_プロシージャ_**'**  
- オプションを設定する対象のプロシージャの名前です。 *プロシージャ*は**nvarchar (776)**、既定値はありません。  
+`[ @ProcName = ] 'procedure'` オプションを設定する対象のプロシージャの名前です。 *プロシージャ*は**nvarchar (776)** 、既定値はありません。  
   
- [  **@OptionName =** ] **'**_オプション_**'**  
- 設定するオプションの名前です。 値だけ*オプション*は**スタートアップ**します。  
+`[ @OptionName = ] 'option'` 設定するオプションの名前です。 値だけ*オプション*は**スタートアップ**します。  
   
- [  **@OptionValue =** ] **'**_値_**'**  
- オプションを設定するかどうか (**true**または**で**) かオフ (**false**または**オフ**)。 *値*は**varchar (12)**、既定値はありません。  
+`[ @OptionValue = ] 'value'` オプションを設定するかどうか (**true**または**で**) かオフ (**false**または**オフ**)。 *値*は**varchar (12)** 、既定値はありません。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
- 成功した場合は 0 を、失敗した場合はエラー番号をそれぞれ返します。  
+ 0 (成功) またはエラーの数 (失敗)  
   
 ## <a name="remarks"></a>コメント  
- スタートアップ プロシージャがである必要があります、**マスター**データベースし、入力または出力パラメーターを含めることはできません。 ストアド プロシージャの実行は、すべてのデータベースが復旧され、スタートアップ時に "復元が完了しました" というメッセージがログに記録されると開始されます。  
+ スタートアップ プロシージャがである必要があります、**マスター**データベースし、入力または出力パラメーターを含めることはできません。 ストアド プロシージャの実行は、すべてのデータベースが復旧され、「回復が完了した」メッセージが起動時にログインするとを起動します。  
   
 ## <a name="permissions"></a>アクセス許可  
  **sysadmin** 固定サーバー ロールのメンバーシップが必要です。  
@@ -64,19 +60,20 @@ sp_procoption [ @ProcName = ] 'procedure'
  次の例は、プロシージャの自動実行を設定します。  
   
 ```  
-EXEC sp_procoption @ProcName = '<procedure name>'   
-    , @OptionName = ] 'startup'   
+EXEC sp_procoption @ProcName = N'<procedure name>'   
+    , @OptionName = 'startup'   
     , @OptionValue = 'on';   
 ```  
   
  次の例は、プロシージャの自動実行を停止します。  
   
 ```  
-EXEC sp_procoption @ProcName = '<procedure name>'   
+EXEC sp_procoption @ProcName = N'<procedure name>'      
+    , @OptionName = 'startup'
     , @OptionValue = 'off';   
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [ストアド プロシージャの実行](../../relational-databases/stored-procedures/execute-a-stored-procedure.md)  
   
   

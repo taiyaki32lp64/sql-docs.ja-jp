@@ -19,23 +19,22 @@ helpviewer_keywords:
 ms.assetid: 7bb38a06-e3d5-4c9a-a0e8-7b59b2ec6927
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 84d4a72577af04750d4f1735e84a5e71d3501e8e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 54aeb0ecd88509f9390103e8e476bb0f3cb60440
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47695144"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68036233"
 ---
 # <a name="sqlallocstmt-function"></a>SQLAllocStmt 関数
 **準拠**  
- バージョンで導入されました ODBC 1.0 標準準拠: 非推奨とされます。  
+ バージョンが導入されました。ODBC 1.0 規格に準拠します。非推奨  
   
  **概要**  
  ODBC 3。*x*、ODBC 2 *。x*関数**SQLAllocStmt**置き換わりました**SQLAllocHandle**します。 詳細については、次を参照してください。 [SQLAllocHandle 関数](../../../odbc/reference/syntax/sqlallochandle-function.md)します。  
   
 > [!NOTE]  
->  詳細についてはどのようなドライバー マネージャーのときに、ODBC 2 には、この関数にマップします。*x*アプリケーションは、ODBC 3 の操作します *。x*ドライバーを参照してください[非推奨の関数のマッピング](../../../odbc/reference/appendixes/mapping-deprecated-functions.md)付録 g: ドライバーとの下位互換性のためのガイドラインにします。  
+>  詳細についてはどのようなドライバー マネージャーのときに、ODBC 2 には、この関数にマップします。*x*アプリケーションは、ODBC 3 の操作します *。x*ドライバーを参照してください[非推奨の関数のマッピング](../../../odbc/reference/appendixes/mapping-deprecated-functions.md)で付録 g:旧バージョンとの互換性のためのガイドラインをドライバーです。  
   
 ## <a name="see-also"></a>参照  
  [ODBC API リファレンス](../../../odbc/reference/syntax/odbc-api-reference.md)   

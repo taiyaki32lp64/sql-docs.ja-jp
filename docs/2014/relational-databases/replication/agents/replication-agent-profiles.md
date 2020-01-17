@@ -21,11 +21,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 95692fd0ecf365f1fb54c8c1c3a090227b0d9a38
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52763324"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62721754"
 ---
 # <a name="replication-agent-profiles"></a>レプリケーション エージェント プロファイル
   レプリケーションを構成すると、エージェント プロファイルのセットがディストリビューターにインストールされます。 エージェント プロファイルには、エージェントが実行されるたびに使用されるパラメーターのセットが含まれています。スタートアップ処理中に各エージェントはディストリビューターにログインし、各エージェントのプロファイルのパラメーターをクエリします。 Web 同期を使用するマージ サブスクリプションの場合、プロファイルはダウンロードされてサブスクライバーに格納されます。 プロファイルが変更されると、次回マージ エージェントが実行されたときにサブスクライバーのプロファイルが更新されます。 Web 同期の詳細については、「 [Web Synchronization for Merge Replication](../web-synchronization-for-merge-replication.md)」を参照してください。  
@@ -125,7 +125,7 @@ ms.locfileid: "52763324"
 |**-PollingInterval**|5|  
 |**-QueryTimeout**|1800|  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [レプリケーション エージェントの管理](replication-agent-administration.md)   
  [レプリケーション エージェント コマンド プロンプト パラメーターを表示および変更する &#40;SQL Server Management Studio&#41;](view-and-modify-replication-agent-command-prompt-parameters.md)   
  [Replication Agent Executables Concepts](../concepts/replication-agent-executables-concepts.md)  

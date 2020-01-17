@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 helpviewer_keywords:
 - Database Engine [SQL Server], tutorials
@@ -13,12 +12,12 @@ ms.assetid: e4e690c9-434f-4b01-b4de-0b905323ddd6
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: e70d5088b4b17eb037317b9eccf6afba53e5b5f3
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: fe8d52d898db35698155518646f074e7167687a0
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48052493"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66110179"
 ---
 # <a name="viewing-tuning-recommendations"></a>チューニング推奨設定の表示
   ここでは、「[チューニング ワークロードの作成](lesson-1-1-tuning-a-workload.md)」で作成したチューニング セッションを使用します。 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] スクリプト MyScript.sql を使用して [!INCLUDE[tsql](../../includes/tsql-md.md)] データベースをチューニングすると、その結果が [!INCLUDE[ssDE](../../includes/ssde-md.md)] チューニング アドバイザーの **[推奨設定]** タブに表示されます。次の作業では、 **チューニング アドバイザーのグラフィカル ユーザー インターフェイス (GUI) の** [推奨設定] [!INCLUDE[ssDE](../../includes/ssde-md.md)] タブについて学習し、このタブに表示されるチューニング セッションの結果について検証します。  
@@ -29,7 +28,7 @@ ms.locfileid: "48052493"
   
 2.  **[セッション モニター]** ペインの **[MySession]** をダブルクリックします。 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 前のチューニング セッションからセッション情報が読み込まれ、 **[推奨設定]** タブが表示されます。チューニング オプションをすべて既定値に設定しており、 [!INCLUDE[ssDE](../../includes/ssde-md.md)] [チューニング オプション] **タブで** [パーティション分割なし] **を選択しているため、** チューニング アドバイザーの **[推奨パーティション]** には何も表示されません。  
   
-3.  **[推奨設定]** タブで、 **[推奨インデックス]** のすべての列を表示するには、このページの下部にあるスクロール バーを使用します。 各行は、 [!INCLUDE[ssDE](../../includes/ssde-md.md)] チューニング アドバイザーによって削除または作成が推奨されているデータベース オブジェクト (インデックスまたはインデックス ビュー) です。 右端の列までスクロールし、 **[定義]** をクリックします。 [!INCLUDE[ssDE](../../includes/ssde-md.md)]**[SQL スクリプトのプレビュー]** ウィンドウが表示されます。このウィンドウには、その行のデータベース オブジェクトを作成または削除する [!INCLUDE[tsql](../../includes/tsql-md.md)] スクリプトが表示されます。 **[閉じる]** をクリックし、プレビュー ウィンドウを閉じます。  
+3.  **[推奨設定]** タブで、 **[推奨インデックス]** のすべての列を表示するには、このページの下部にあるスクロール バーを使用します。 各行は、 [!INCLUDE[ssDE](../../includes/ssde-md.md)] チューニング アドバイザーによって削除または作成が推奨されているデータベース オブジェクト (インデックスまたはインデックス ビュー) です。 右端の列までスクロールし、 **[定義]** をクリックします。 [!INCLUDE[ssDE](../../includes/ssde-md.md)] **[SQL スクリプトのプレビュー]** ウィンドウが表示されます。このウィンドウには、その行のデータベース オブジェクトを作成または削除する [!INCLUDE[tsql](../../includes/tsql-md.md)] スクリプトが表示されます。 **[閉じる]** をクリックし、プレビュー ウィンドウを閉じます。  
   
      リンクを含む **[定義]** を見つけにくい場合は、タブ付きページの下部にある **[既存のオブジェクトを表示する]** チェック ボックスをオフにすると、表示される行数が少なくなり、 推奨設定が生成されたオブジェクトのみが [!INCLUDE[ssDE](../../includes/ssde-md.md)] チューニング アドバイザーに表示されます。 **[既存のオブジェクトを表示する]** チェック ボックスをオンにすると、現在 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] データベースに存在するすべてのデータベース オブジェクトが表示されます。 タブ ページ右側のスクロール バーを使用し、すべてのオブジェクトを表示します。  
   

@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: abeadfa4-a14d-469a-bacf-75812e48fac1
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: c35aab2ebd2b31fbbe7067bc8049930f791543c3
-ms.sourcegitcommit: 009bee6f66142c48477849ee03d5177bcc3b6380
+ms.openlocfilehash: 5d27c61576c3af432acfa6c791d25b1bbe9a51de
+ms.sourcegitcommit: 76fb3ecb79850a8ef2095310aaa61a89d6d93afd
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/13/2019
-ms.locfileid: "56230979"
+ms.lasthandoff: 01/09/2020
+ms.locfileid: "75776421"
 ---
 # <a name="configure-the-max-worker-threads-server-configuration-option"></a>max worker threads サーバー構成オプションの構成
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -32,7 +31,7 @@ ms.locfileid: "56230979"
   
      [制限事項と制約事項](#Restrictions)  
   
-     [推奨事項](#Recommendations)  
+     [Recommendations (推奨事項)](#Recommendations)  
   
      [セキュリティ](#Security)  
   
@@ -42,7 +41,7 @@ ms.locfileid: "56230979"
   
      [Transact-SQL](#TsqlProcedure)  
   
--   **補足情報:**[max worker threads オプションを構成した後](#FollowUp)  
+-   **補足情報:** [max worker threads オプションを構成した後](#FollowUp)  
   
 ##  <a name="BeforeYouBegin"></a> はじめに  
   
@@ -72,19 +71,19 @@ ms.locfileid: "56230979"
     
     |CPU の数|32 ビット コンピューター|64 ビット コンピューター|  
     |------------|------------|------------| 
-    |4 個以下のプロセッサ|256|512|
-    |4 個を超えるプロセッサと 64 個以下のプロセッサ|256 + ((論理 CPU - 4) * 8)|512 + ((論理 CPU - 4) * 16)|
-    |64 個を超えるプロセッサ|256 + ((論理 CPU - 4) * 32)|512 + ((論理 CPU - 4) * 32)|
+    |\<= 4 個のプロセッサ|256|512|
+    |\> 4 個を超えるプロセッサと \<= 64 個以下のプロセッサ|256 + ((論理 CPU - 4) * 8)|512 + ((論理 CPU - 4) * 16)|
+    |\> 64 個を超えるプロセッサ|256 + ((論理 CPU - 4) * 32)|512 + ((論理 CPU - 4) * 32)|
   
     > [!NOTE]  
-    > [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] は、32 ビットのオペレーティング システムにインストールすることができません。 32 ビット コンピューターの値は、 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 以前のバージョンを実行しているお客様への参考として一覧表示されています。   32 ビット コンピューター上で動作する [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスの場合、ワーカー スレッドの最大数として 1024 をお勧めします。  
+    > [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] は、32 ビットのオペレーティング システムにインストールすることができません。 32 ビット コンピューターの値は、 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 以前のバージョンを実行しているお客様への参考として一覧表示されています。 32 ビット コンピューター上で動作する [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスの場合、ワーカー スレッドの最大数として 1,024 をお勧めします。  
   
     > [!NOTE]  
-    >  64 個を超える CPU を使用する場合の推奨事項については、「 [64 個を超える CPU を搭載したコンピューター上で SQL Server を実行する場合のベスト プラクティス](../../relational-databases/thread-and-task-architecture-guide.md#best-practices-for-running-sql-server-on-computers-that-have-more-than-64-cpus)」を参照してください。  
+    > 64 個を超える CPU を使用する場合の推奨事項については、「 [64 個を超える CPU を搭載したコンピューター上で SQL Server を実行する場合のベスト プラクティス](../../relational-databases/thread-and-task-architecture-guide.md#best-practices-for-running-sql-server-on-computers-that-have-more-than-64-cpus)」を参照してください。  
   
 -   クエリの実行が長時間にわたり、すべてのスレッドがアクティブになっている場合、いずれかのワーカー スレッドが処理を完了し使用できるようになるまで、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] が応答していないように見えることがあります。 これは欠陥ではありませんが、望ましくない場合があります。 プロセスが応答せず新しいクエリを処理できない場合は、専用管理者接続 (DAC) を使用して [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] に接続し、プロセスを終了します。 このような状態を回避するには、ワーカー スレッド数を増やします。  
   
- **max worker threads** サーバー構成オプションでは、可用性グループ、Service Broker、ロック マネージャーなど、すべてのシステム タスクに必要なスレッドは考慮されません。 構成されたスレッドの数を超えている場合は、次のクエリによって、追加のスレッドを生成したシステム タスクに関する情報が取得されます。  
+ **max worker threads** サーバー構成オプションでは、システム内に生成できる全スレッドに制限はありません。 可用性グループ、Service Broker、ロック マネージャーなどのタスクに必要なスレッドは、この制限の外部で生成されます。 構成されたスレッドの数を超えている場合は、次のクエリによって、追加のスレッドを生成したシステム タスクに関する情報が取得されます。  
   
  ```sql  
  SELECT  s.session_id, r.command, r.status,  
@@ -104,7 +103,7 @@ ms.locfileid: "56230979"
 ###  <a name="Security"></a> セキュリティ  
   
 ####  <a name="Permissions"></a> Permissions  
- パラメーターなしで、または最初のパラメーターだけを指定して **sp_configure** を実行する権限は、既定ですべてのユーザーに付与されます。 両方のパラメーターを指定して **sp_configure** を実行し構成オプションを変更したり RECONFIGURE ステートメントを実行したりするには、ALTER SETTINGS サーバーレベル権限がユーザーに付与されている必要があります。 ALTER SETTINGS 権限は、 **sysadmin** 固定サーバー ロールと **serveradmin** 固定サーバー ロールでは暗黙のうちに付与されています。  
+ パラメーターなしで、または最初のパラメーターだけを指定して **sp_configure** を実行する権限は、既定ですべてのユーザーに付与されます。 両方のパラメーターを指定して **sp_configure** を実行し構成オプションを変更したり `RECONFIGURE` ステートメントを実行したりするには、`ALTER SETTINGS` サーバーレベル権限がユーザーに付与されている必要があります。 `ALTER SETTINGS` 権限は、**sysadmin** 固定サーバー ロールと **serveradmin** 固定サーバー ロールでは暗黙のうちに付与されています。  
   
 ##  <a name="SSMSProcedure"></a> 使用 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]  
   

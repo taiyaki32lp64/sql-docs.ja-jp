@@ -1,5 +1,5 @@
 ---
-title: タスク 4 (省略可能)。結合、照合、および新しいデータ セットの発行 |Microsoft Docs
+title: タスク 4 (オプション):結合、照合、および新しいデータ セットの発行 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -7,17 +7,17 @@ ms.reviewer: ''
 ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: 13a13f03-b307-4555-8e33-6d98c459d994
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 429608f066b0c99c9677a0e35f0b8925e58c7dff
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 2d27a5bcd87ffd84b33de229d955dc9494846a72
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56014284"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65489270"
 ---
-# <a name="task-4-optional-combining-matching-and-publishing-new-set-of-data"></a>タスク 4 (省略可能)。新しいデータ セットを結合、照合、およびパブリッシュする
+# <a name="task-4-optional-combining-matching-and-publishing-new-set-of-data"></a>タスク 4 (オプション):新しいデータ セットを結合、照合、およびパブリッシュする
   後で、MDS リポジトリにさらにデータを追加する場合があります。 データを追加する前に、重複や不正確なデータを追加しないことを確認して、MDS で既に管理されているデータを新しいデータを比較に役立ちます。 Excel 用マスター データ サービス アドインを使用すると、データを MDS にパブリッシュする前に、2 つのワークシートのデータを結合し、データを比較することで重複を識別して削除できます。 MDS Excel アドインの照合機能は、データの一致を識別するための DQS 照合機能を使用します。 ここでは、MDS にパブリッシュする前に、2 つのワークシートのデータを 1 つに結合し、重複を識別して削除するための照合作業を行います。 参照してください[Excel 用 MDS アドインでのデータ品質照合](https://msdn.microsoft.com/library/hh548681.aspx)と[データの結合](https://msdn.microsoft.com/library/hh548680.aspx)詳細についてはトピック。  
   
 1.  新しいインスタンスを起動**Excel**します。 をクリックして**開始**、 をポイント**実行**、型**Excel**、 をクリック**OK**します。  
@@ -26,11 +26,11 @@ ms.locfileid: "56014284"
   
 3.  をクリックして**Connect**リボンで、**接続と読み込み**グループへの接続に、 **MDS サーバー**。 この接続は、このレッスンの前の手順で構成しました。  
   
-     ![Excel - エクスプ ローラー ボタンを表示するマスター データ ボタンで](../../2014/tutorials/media/et-combinematchandpublishnewsod-01.jpg "Excel - [マスター データ] ボタン エクスプ ローラー ボタンを表示します。")  
+     ![Excel - エクスプ ローラー ボタンを表示するマスター データ ボタンで](../../2014/tutorials/media/et-combinematchandpublishnewsod-01.jpg "Excel - [マスター データ] ボタン エクスプ ローラー] ボタンを表示します。")  
   
 4.  表示する必要があります、**マスター データ エクスプ ローラー**右側のウィンドウ。 マスター データ エクスプ ローラーが表示されない場合はクリックして**エクスプ ローラーの**リボンのボタンをクリックします。  
   
-5.  **マスター データ エクスプ ローラー**ウィンドウで、 **Suppliers**のドロップダウン リストで、**モデル**します。 モデルに 1 個のエンティティ **サプライヤー**します。  
+5.  **マスター データ エクスプ ローラー**ウィンドウで、 **Suppliers**のドロップダウン リストで、**モデル**します。 モデルに 1 つのエンティティが表示されます。**サプライヤー**します。  
   
      ![Excel - マスター データ エクスプ ローラー ウィンドウ](../../2014/tutorials/media/et-combinematchandpublishnewsod-02.jpg "Excel - [マスター データ エクスプ ローラー] ウィンドウ")  
   
@@ -90,11 +90,11 @@ ms.locfileid: "56014284"
   
 25. **[OK]** をクリックします。  
   
-26. この照合プロセスでは、**Code:S1**します。  
+26. 照合プロセスは、仕入先の 1 つの重複を識別する必要があります**コード。S1**します。  
   
      ![Excel - 照合結果](../../2014/tutorials/media/et-combinematchandpublishnewsod-08.jpg "Excel - 照合結果")  
   
-27. 選択、**重複する行 (オレンジ)**、右クリックしをクリックします**削除**行を削除します。  
+27. 選択、**重複する行 (オレンジ)** 、右クリックしをクリックします**削除**行を削除します。  
   
 28. 削除、 **CLUSTER_ID**列ため、もはや必要はありません。  
   
@@ -111,6 +111,6 @@ ms.locfileid: "56014284"
 34. これで、閉じる**Book1 - Microsoft Excel**ファイルを保存せずにウィンドウ。  
   
 ## <a name="next-step"></a>次の手順  
- [タスク 5:Excel からドメイン ベースの属性を作成します。](../../2014/tutorials/task-5-creating-a-domain-based-attribute-from-excel.md)  
+ [タスク 5: Excel からドメイン ベースの属性を作成します。](../../2014/tutorials/task-5-creating-a-domain-based-attribute-from-excel.md)  
   
   

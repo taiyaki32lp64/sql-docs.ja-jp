@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 5eb5801d-f0c3-4127-97c0-0b1ef49f4844
 author: Shamikg
 ms.author: Shamikg
-manager: craigg
-ms.openlocfilehash: ce6a13eec87b60480ed2e68aa3d21a4c4f90ba1b
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: b49e5f53e1efbff6febe37a6f3d02fbb3e9cfc05
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51668371"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68141070"
 ---
 # <a name="connecting-to-db2-database-db2tosql"></a>DB2 データベース (DB2ToSQL) に接続します。
 DB2 のデータベースを移行する[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]、移行する DB2 データベースに接続する必要があります。 接続すると、SSMA は、すべての DB2 スキーマに関するメタデータを取得し、DB2 メタデータ エクスプ ローラー ペインに表示します。 SSMA は、データベース サーバーに関する情報を格納しますが、パスワードは保存されません。  

@@ -4,21 +4,20 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - Sql12.dts.designer.odatasource.connection.f1
 ms.assetid: 20bcd347-4547-4fad-b182-9571030101df
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 98ec9c8960696a2a933d9c2358d35df32c716999
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 0e36c0a3449566db9a2acee360243c77ee548f92
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48203972"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66057316"
 ---
 # <a name="odata-source-editor-connection-page"></a>[OData ソース エディター] ([接続] ページ)
   **[ODBC ソース エディター]** ダイアログ ボックスの **[接続]** ページを使用すると、OData ソースに対応する ODBC 接続マネージャーを選択できます。 また、このページで、コレクションまたはリソースのパスと、どのデータを OData ソースから取得する必要があるかを示すクエリ オプションを指定することができます。 OData ソースの詳細については、「 [OData ソース](data-flow/odata-source.md)」を参照してください。  
@@ -55,11 +54,11 @@ ms.locfileid: "48203972"
   
 ### <a name="use-collection-or-resource-path--resource-path"></a>コレクションまたはリソースのパス = Resource Path を使用します。  
  **Resource path**  
- リソースのパスを入力します。 例: Employees  
+ リソースのパスを入力します。 例 :Employees  
   
-## <a name="see-also"></a>参照  
- [OData ソース エディター&#40;列 ページ&#41;](../../2014/integration-services/odata-source-editor-columns-page.md)   
- [OData ソース エディター&#40;エラー出力 ページ&#41;](../../2014/integration-services/odata-source-editor-error-output-page.md)   
- [OData 接続マネージャー](connection-manager/odata-connection-manager.md)  
+## <a name="see-also"></a>関連項目  
+ [OData ソース エディター ([列] ページ)](../../2014/integration-services/odata-source-editor-columns-page.md)   
+ [OData ソース エディター ([エラー出力] ページ)](../../2014/integration-services/odata-source-editor-error-output-page.md)   
+ [OData Connection Manager](connection-manager/odata-connection-manager.md)  
   
   

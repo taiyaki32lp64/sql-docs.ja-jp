@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: 60d5068a-7d7c-447c-acc6-f3f2cf73440c
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: dfe77cba535b78f387a786ddc56f65cf87172644
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: e99dd2f5cf3186120297d7679f87e973d5164a57
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53212402"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68039530"
 ---
 # <a name="sqltables-function"></a>SQLTables 関数
 **準拠**  
@@ -36,7 +35,7 @@ ms.locfileid: "53212402"
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
   
 SQLRETURN SQLTables(  
      SQLHSTMT       StatementHandle,  
@@ -162,7 +161,7 @@ SQLRETURN SQLTables(
 ## <a name="example"></a>例  
  次のサンプル コードでは、ハンドルと接続は解放されません。 参照してください[SQLFreeHandle 関数](../../../odbc/reference/syntax/sqlfreehandle-function.md)と[SQLFreeStmt 関数](../../../odbc/reference/syntax/sqlfreestmt-function.md)ハンドルおよびステートメントを解放するコード サンプルについてはします。  
   
-```  
+```cpp  
 // SQLTables.cpp  
 // compile with: user32.lib odbc32.lib  
 #include <windows.h>  

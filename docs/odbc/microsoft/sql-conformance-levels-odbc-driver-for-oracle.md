@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 077a6c6a-2c57-42c9-a4fd-4cf0e65cf7e2
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: c0bf63b831dace7678f5d3fdf952a9d6d5f60aa6
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 241f4f3da12f63c15d917a0e47cb13ad0e96e6e3
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47669370"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68063355"
 ---
 # <a name="sql-conformance-levels-odbc-driver-for-oracle"></a>SQL への準拠レベル (ODBC Driver for Oracle)
 > [!IMPORTANT]  
@@ -38,7 +37,7 @@ ms.locfileid: "47669370"
     |-|-|-|-|  
     |Abs|Log|round|tan|  
     |ceiling|log10|second|truncate|  
-    |Cos|Mod|サインイン||  
+    |Cos|Mod|sign||  
     |Exp|Pi|sin||  
     |floor|Power|sqrt||  
   
@@ -48,27 +47,27 @@ ms.locfileid: "47669370"
     |-|-|-|-|  
     |Curdate|Dayofweek|monthname|second|  
     |Curtime|Dayofyear|minute|week|  
-    |Dayname|Hour|今|year|  
-    |Dayofmonth|Month|四半期||  
+    |Dayname|Hour|now|year|  
+    |Dayofmonth|Month|quarter||  
   
 -   文字列関数。  
   
     |||||  
     |-|-|-|-|  
     |Ascii|Left|right|Ucase|  
-    |Char|長さ|rtrim||  
+    |Char|Length|rtrim||  
     |Concat|Ltrim|Soundex||  
-    |Lcase|[置換]|substring||  
+    |Lcase|Replace|substring||  
   
 -   型変換関数。  
   
     ||  
     |-|  
-    |[変換]|  
+    |Convert|  
   
 -   システム関数:  
   
     ||  
     |-|  
-    |見つかれば|  
-    |ユーザー|
+    |Ifnull|  
+    |User|

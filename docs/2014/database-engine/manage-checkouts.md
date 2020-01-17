@@ -15,11 +15,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 9de9a1f8ceca0fbb05ab2b6680c5fcc34c951109
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48183788"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62774536"
 ---
 # <a name="manage-checkouts"></a>チェックアウトの管理
   ソース管理にファイルを追加した後にそのファイルを変更するには、まずファイルをチェックアウトする必要があります。 ソース管理からファイルをチェックアウトすると、ソース管理プロバイダーによって、最新バージョンのコピーがローカル ディスクに作成され、ファイルの読み取り専用属性が解除されます。 状況によっては、ファイルをチェックアウトしないで編集することが必要になる場合もあります。 ファイルをチェック アウトしないで編集の詳細については、次を参照してください。[チェックインされたファイルの編集](../../2014/database-engine/edit-checked-in-files.md)します。  

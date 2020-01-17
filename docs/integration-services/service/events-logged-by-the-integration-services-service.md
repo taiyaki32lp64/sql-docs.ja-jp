@@ -12,17 +12,20 @@ helpviewer_keywords:
 - events [Integration Services], service
 - Integration Services service, events
 ms.assetid: d4122dcf-f16f-47a0-93a2-ffa3d0d4f9cf
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: 43a0c3f454eb804df53eedb8736d8bf468f89111
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 8b2f033557c566050dffbd82bc64df84feabb7b6
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47714870"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71296926"
 ---
 # <a name="events-logged-by-the-integration-services-service"></a>Integration Services サービスによってログに記録されるイベント
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] サービスは、各種のメッセージを Windows アプリケーション イベント ログに記録します。 これらのメッセージは、サービスの起動時、サービスの停止時、および特定の問題の発生時にログに記録されます。  
   
  このトピックでは、アプリケーション イベント ログに記録される一般的なイベント メッセージについて説明します。 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] サービスは、SQLISService のイベント ソースを使用してこのトピックで説明されているすべてのメッセージをログに記録します。  
@@ -78,7 +81,7 @@ ms.locfileid: "47714870"
   
 ### <a name="to-view-service-events-for-integration-services-in-windows-event-viewer"></a>Windows イベント ビューアーで Integration Services のサービス イベントを表示するには  
   
-1.  **[コントロール パネル]** で、クラシック表示を使用している場合は **[管理ツール]**、カテゴリの表示を使用している場合は **[パフォーマンスとメンテナンス]** をクリックしてから **[管理ツール]** をクリックします。  
+1.  **[コントロール パネル]** で、クラシック表示を使用している場合は **[管理ツール]** 、カテゴリの表示を使用している場合は **[パフォーマンスとメンテナンス]** をクリックしてから **[管理ツール]** をクリックします。  
   
 2.  **[イベント ビューアー]** をクリックします。  
   

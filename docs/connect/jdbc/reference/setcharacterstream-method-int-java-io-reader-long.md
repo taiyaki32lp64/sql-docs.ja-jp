@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: cb6ac7f5-81ae-4cb7-87c8-cbee40d278c5
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 4ce5694d1f594c69e6f7f72cc7abb497e65bf250
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 486fd2b419e96e2a66a3aeca0c792632a462f4bc
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47732640"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67974750"
 ---
 # <a name="setcharacterstream-method-int-javaioreader-long"></a>setCharacterStream (int, java.io.Reader, long) メソッド
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -39,7 +38,7 @@ public final void setCharacterStream(int parameterIndex,
   
  *reader*  
   
- Unicode データを含む、java.io.Reader オブジェクト。  
+ Unicode データを含む java.io.Reader オブジェクトです。  
   
  *length*  
   
@@ -49,11 +48,11 @@ public final void setCharacterStream(int parameterIndex,
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- この setCharacterStream メソッドは、java.sql.PreparedStatement インターフェイスの setCharacterStream メソッドによって指定されます。  
+ この setCharacterStream メソッドは、java.sql.PreparedStatement インターフェイスの setCharacterStream メソッドで規定されています。  
   
  ストリームの長さが、*length* パラメーターで指定された長さと異なる場合は、行の更新または挿入時に JDBC ドライバーが例外をスローします。  
   
- ストリームの長さが不明である場合、*length* パラメーターを -1 に設定して、ドライバーが長さに関係なくストリームを受け入れるように指定できます。 sqljdbc4.jar を使用する場合、アプリケーションで長さが不明なストリームを使用して列を更新するときには、JDBC 4.0 メソッドの [setCharacterStream メソッド &#40;int, java.io.Reader&#41;](../../../connect/jdbc/reference/setcharacterstream-method-int-java-io-reader.md) を使用することをお勧めします。  
+ ストリームの長さが不明である場合、*length* パラメーターを -1 に設定して、ドライバーが長さに関係なくストリームを受け入れるように指定できます。 sqljdbc4.jar を使用する場合、アプリケーションで長さが不明なストリームを使用して列を更新するときには、JDBC 4.0 メソッドの [setCharacterStream &#40;int, java.io.Reader&#41; メソッド](../../../connect/jdbc/reference/setcharacterstream-method-int-java-io-reader.md)を使用することをお勧めします。  
   
 ## <a name="see-also"></a>参照  
  [setCharacterStream &#40;SQLServerPreparedStatement&#41; メソッド](../../../connect/jdbc/reference/setcharacterstream-method-sqlserverpreparedstatement.md)   

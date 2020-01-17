@@ -1,7 +1,6 @@
 ---
-title: SQL トレースのイベント クラスと等価な拡張イベントを確認する | Microsoft Docs
-ms.custom: ''
-ms.date: 03/04/2017
+title: SQL トレースのイベント クラスと等価な拡張イベント
+ms.date: 03/05/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -14,48 +13,50 @@ helpviewer_keywords:
 ms.assetid: 7f24104c-201d-4361-9759-f78a27936011
 author: MightyPen
 ms.author: genemi
-manager: craigg
+ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 3dca735754367f7ca69fb36f6e5437e421c55a30
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: c98eeec91bdc86af8109cd715b5c0fde9d685f44
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52537601"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75246123"
 ---
 # <a name="view-the-extended-events-equivalents-to-sql-trace-event-classes"></a>SQL トレースのイベント クラスと等価な拡張イベントを確認する
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
   拡張イベントを使用して、SQL トレース イベントのクラスや列に相当するイベント データを収集する場合、SQL トレース イベントが、拡張イベントのイベントおよびアクションとどのように対応しているかを理解しておくことが大切です。  
   
  SQL トレースのイベントとそれに関連した列について、拡張イベントにおける等価なイベントとアクションを確認するには、次の手順に従います。  
   
-## <a name="to-view-the-extended-events-equivalents-to-sql-trace-events-using-query-editor"></a>クエリ エディターを使用して SQL トレース イベントと等価な拡張イベントを確認するには  
-  
--   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]のクエリ エディターから、次のクエリを実行します。  
-  
-    ```sql  
-    USE MASTER;  
-    GO  
-    SELECT DISTINCT  
-       tb.trace_event_id,  
-       te.name AS 'Event Class',  
-       em.package_name AS 'Package',  
-       em.xe_event_name AS 'XEvent Name',  
-       tb.trace_column_id,  
-       tc.name AS 'SQL Trace Column',  
-       am.xe_action_name as 'Extended Events action'  
-    FROM (sys.trace_events te LEFT OUTER JOIN sys.trace_xe_event_map em  
-       ON te.trace_event_id = em.trace_event_id) LEFT OUTER JOIN sys.trace_event_bindings tb  
-       ON em.trace_event_id = tb.trace_event_id LEFT OUTER JOIN sys.trace_columns tc  
-       ON tb.trace_column_id = tc.trace_column_id LEFT OUTER JOIN sys.trace_xe_action_map am  
-       ON tc.trace_column_id = am.trace_column_id  
-    ORDER BY te.name, tc.name  
-    ```  
-  
- 結果を確認する際は、次の点に注意してください。  
-  
--   イベント クラス列を除くすべての列で NULL が返された場合、そのイベント クラスは SQL トレースから移行されなかったことを意味します。  
+## <a name="to-view-the-extended-events-equivalents-to-sql-trace-events-using-query-editor"></a>クエリ エディターを使用して SQL トレース イベントと等価な拡張イベントを確認するには
+
+- [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]のクエリ エディターから、次のクエリを実行します。
+
+   ```sql
+   USE MASTER;
+   GO
+   SELECT DISTINCT
+      tb.trace_event_id,
+      te.name            AS 'Event Class',
+      em.package_name    AS 'Package',
+      em.xe_event_name   AS 'XEvent Name',
+      tb.trace_column_id,
+      tc.name            AS 'SQL Trace Column',
+      am.xe_action_name  AS 'Extended Events action'
+   FROM
+                sys.trace_events         te
+      LEFT JOIN sys.trace_xe_event_map   em ON te.trace_event_id  = em.trace_event_id
+      LEFT JOIN sys.trace_event_bindings tb ON em.trace_event_id  = tb.trace_event_id
+      LEFT JOIN sys.trace_columns        tc ON tb.trace_column_id = tc.trace_column_id
+      LEFT JOIN sys.trace_xe_action_map  am ON tc.trace_column_id = am.trace_column_id
+   ORDER BY te.name, tc.name
+   ```
+
+結果を確認する際は、次の点に注意してください。  
+
+- イベント クラス列を除くすべての列で NULL が返された場合、そのイベント クラスは SQL トレースから移行されなかったことを意味します。  
   
 -   拡張イベント アクション列の値のみが NULL である場合、次のいずれかの条件に該当します。  
   

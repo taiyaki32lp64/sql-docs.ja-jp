@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.importdbwizard.sourcedb.f1
@@ -13,12 +12,12 @@ ms.assetid: 64f1c970-5be4-4a36-939e-f1d1960d477f
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: d753fa58ce7b710ae406d4fc23a5745edafcec4f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 7af29b6a9ea8decb6739052ed1cb06f62547b46f
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48178002"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66068573"
 ---
 # <a name="source-database-import-analysis-services-database-wizard"></a>[ソース データベース] (Analysis Services データベースのインポート ウィザード)
   **[ソース データベース]** ページを使用すると、 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] プロジェクトの作成に使用される [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] インスタンスとデータベースを選択できます。  

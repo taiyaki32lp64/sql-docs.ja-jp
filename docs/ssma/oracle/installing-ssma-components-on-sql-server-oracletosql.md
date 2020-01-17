@@ -1,8 +1,8 @@
 ---
-title: SQL Server (OracleToSQL) での SSMA コンポーネントのインストール |Microsoft Docs
+title: SQL Server での SSMA コンポーネントのインストール (OracleToSQL) |Microsoft Docs
 ms.prod: sql
 ms.custom: ''
-ms.date: 01/19/2017
+ms.date: 10/01/2019
 ms.reviewer: ''
 ms.technology: ssma
 ms.topic: conceptual
@@ -12,98 +12,104 @@ helpviewer_keywords:
 ms.assetid: 33070e5f-4e39-4b70-ae81-b8af6e4983c5
 author: Shamikg
 ms.author: Shamikg
-manager: v-thobro
-ms.openlocfilehash: 2041901a851ca755b1079535ccbf763472ec7bc4
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: shamikg
+ms.openlocfilehash: 1f0cea859e9465eebefebc061ee51107dc7844aa
+ms.sourcegitcommit: fd3e81c55745da5497858abccf8e1f26e3a7ea7d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47853360"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71713312"
 ---
 # <a name="installing-ssma-components-on-sql-server-oracletosql"></a>SQL Server での SSMA コンポーネントのインストール (OracleToSQL)
-SSMA のインストール、に加えて必要がありますもコンポーネントをインストールする実行しているコンピューターで[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]します。 これらのコンポーネントには、データの移行、およびサーバー間の接続を有効にする Oracle プロバイダーをサポートする SSMA 拡張パックが含まれます。  
+
+SSMA をインストールするだけでなく、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]を実行しているコンピューターにコンポーネントをインストールする必要もあります。 これらのコンポーネントには、データ移行をサポートする SSMA extension pack と、サーバー間接続を有効にする Oracle プロバイダーが含まれます。  
   
-## <a name="ssma-for-oracle-extension-pack"></a>SSMA for Oracle の拡張機能パック  
-SSMA の拡張機能パックでは、データベースを追加します。 **sysdb**と**ssmatesterdb**、のインスタンスを指定する[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]します。 データベース**sysdb**テーブルとデータを移行するために必要なストアド プロシージャと Oracle システムの機能をエミュレートするユーザー定義関数が含まれています。 **Ssmatesterdb**データベースには、テーブルとテスト担当者のコンポーネントに必要な手順が含まれています。  
+## <a name="ssma-for-oracle-extension-pack"></a>SSMA for Oracle extension pack
+
+SSMA 拡張パックは、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]の指定されたインスタンスに**sysdb**および**ssmatesterdb**データベースを追加します。 データベース**sysdb**には、データを移行するために必要なテーブルとストアドプロシージャ、および Oracle システム関数をエミュレートするユーザー定義関数が含まれています。 **Ssmatesterdb**データベースには、Tester コンポーネントに必要なテーブルとプロシージャが含まれています。  
   
-データを移行する場合にも、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]、SSMA 作成[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]エージェント ジョブのデータを移行するサーバー側のデータ移行のエンジンを使用するとします。  
+また、データを [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]に移行すると、サーバー側のデータ移行エンジンを使用してデータを移行するときに、SSMA によって [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェントジョブが作成されます。  
   
-### <a name="prerequisites"></a>前提条件  
-SSMA for Oracle サーバー コンポーネントをインストールする前に[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]システムが、次の要件を満たしていることを確認します。  
+### <a name="prerequisites"></a>Prerequisites
+
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]に SSMA for Oracle サーバーコンポーネントをインストールする前に、システムが次の要件を満たしていることを確認してください。  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスがインストールされます。 SSMA では、SQL Server 2008 Express Edition はサポートされていません。  
+- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスがインストールされています。 SSMA は SQL Server 2008 Express Edition をサポートしていません。
   
--   [!INCLUDE[msCoName](../../includes/msconame_md.md)] Windows インストーラー 3.1 またはそれ以降のバージョン。  
+- [!INCLUDE[msCoName](../../includes/msconame_md.md)] Windows インストーラー3.1 以降のバージョン。  
   
--   Oracle クライアント プロバイダーまたは、OLE DB provider for Oracle、および移行する Oracle データベースに接続します。 Oracle 製品メディアまたは Oracle の Web サイトからプロバイダーをインストールすることができます。  
+- Oracle クライアントプロバイダーまたは OLE DB provider for Oracle、および移行する Oracle データベースへの接続。 プロバイダーは、Oracle 製品メディアまたは Oracle Web サイトからインストールできます。  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser サービスをインストール中に実行する必要があります。 インスタンスの一覧を設定するために使用がこの[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]セットアップ ウィザードでします。 無効にすることができます、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser サービスのインストール後にします。  
+- インストール中に [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser サービスが実行されている必要があります。 これは、セットアップウィザードで [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスの一覧を設定するために使用されます。 インストール後に [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser サービスを無効にすることができます。  
   
     > [!NOTE]  
-    > 場合、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser サービスが実行されているが、まだ、セットアップでインスタンスの一覧表示されない、UDP ポート 1434 のブロックを解除する必要があります。 Windows ファイアウォールを使用するには、ポートに一時的にブロックを解除するか、Windows ファイアウォールを一時的に無効にすることができます。 ウイルス対策ソフトウェアを一時的に無効にすることもあります。 インストール後にファイアウォールやウイルス対策ソフトウェアを有効にしてください。  
+    > [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser サービスが実行されていても、セットアップにインスタンスの一覧が表示されない場合は、UDP ポート1434のブロックを解除する必要があります。 Windows ファイアウォールを使用して、一時的にポートのブロックを解除することも、Windows ファイアウォールを一時的に無効にすることもできます。 また、ウイルス対策ソフトウェアを一時的に無効にすることが必要になる場合もあります。 インストール後に、ファイアウォールとウイルス対策ソフトウェアが有効になっていることを確認してください。  
   
-### <a name="installing-the-extension-pack"></a>拡張機能パックをインストールします。  
-拡張機能パックをインストールするとデータを移行する前にいつ[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]します。  
+### <a name="installing-the-extension-pack"></a>拡張機能パックのインストール
+
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]にデータを移行する前に、拡張機能パックをいつでもインストールできます。  
   
 > [!IMPORTANT]  
-> 拡張機能パックをインストールするには、メンバーである、 **sysadmin**サーバー ロールのインスタンスを[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]します。  
+> 拡張パックをインストールするには、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のインスタンスの**sysadmin**サーバーロールのメンバーである必要があります。  
   
-**拡張機能パックをインストールするには**  
+**拡張機能パックをインストールするには**
   
-1.  この手順をまだ行っていないことは場合、は、SSMA の Zip ファイルからすべてのファイルを抽出します。  
+1. SSMA Zip ファイルからすべてのファイルを抽出していない場合は、展開します。  
   
-    、WinZip があるのバージョンに応じていずれか、ファイルをダブルクリックまたはファイルを右クリックして選択**すべて展開**または**WinZip で開く**します。 ファイルを抽出する WinZip のユーザー インターフェイスの指示に従います。  
+    使用している WinZip のバージョンに応じて、ファイルをダブルクリックするか、ファイルを右クリックして **[すべて展開]** または **[winzip で開く]** を選択します。 WinZip のユーザーインターフェイスに記載されている手順に従って、ファイルを抽出します。  
   
-2.  Oracle の拡張機能パックには、SSMA をコピーします。*n*します。Install.exe、場所*n*を実行しているコンピューターに、ビルド番号は、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]します。  
+2. **Ssma For Oracle Extension Pack をコピーします。*n*。** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]を実行しているコンピューターに .exe ( *n*はビルド番号) をインストールします。  
   
-3.  Oracle の拡張機能パックの SSMA をダブルクリックします。*n*します。Install.exe します。  
+3. [ **Ssma For Oracle Extension Pack] をダブルクリックします。*n*.Exe をインストールします**。  
   
-4.  [ようこそ] ページで、次のようにクリックします。**次**します。  
+4. **[ようこそ]** ページで、 **[次へ]** を選択します。  
   
-5.  使用許諾契約書 ページで、ライセンス契約を読みます。 同意する場合は、選択、 **、使用許諾契約書に同意**チェック ボックスをオンにし**次**。  
+5. [使用許諾**契約書**] ページで、使用許諾契約書を読みます。 同意する場合は、 **[使用許諾契約書に同意し]** ます チェックボックスをオンにし、 **[次へ]** を選択します。  
   
-6.  セットアップの種類の選択 ページで、次のようにクリックします。**標準**します。  
+6. **[セットアップの種類の選択]** ページで、 **[標準]** を選択します。  
   
-7.  準備完了 [インストール] ページで、をクリックして**インストール**します。  
+7. **[インストールの準備完了]** ページで、 **[インストール]** を選択します。  
   
-8.  最初のステップのインストール ページの完了 で、をクリックして**次**します。  
+8. **[インストールの最初の手順を完了しまし]** た ページで、 **[次へ]** を選択します。  
   
-    インスタンスを選択する、新しいダイアログ ボックスが表示されます[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]の拡張機能パックのインストール。  
+    新しいダイアログボックスが表示されます。このダイアログボックスで、拡張機能パックをインストールする [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスを選択します。  
   
-9. インスタンスを選択[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]、Oracle のスキーマを移行およびする をクリックし、**次**。  
+9. Oracle スキーマの移行先となる [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスを選択し、 **[次へ]** を選択します。  
   
-    既定のインスタンスには、コンピューターと同じ名前があります。 名前付きインスタンスの後に、円記号とインスタンス名が指定されます。  
+    既定のインスタンスには、コンピューターと同じ名前が付けられています。 名前付きインスタンスの後には、円記号とインスタンス名が続きます。  
   
-10. [接続] ページで、認証方法を選択し、順にクリックします**次**します。  
+10. 接続 ページで、認証方法 を選択し、**次へ** を選択します。  
   
-    Windows 認証は、Windows 資格情報を使用してのインスタンスにログオンしようとする[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]します。 選択した場合[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]を入力する必要があります、認証、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]ログイン名とパスワード。  
+    Windows 認証では、Windows 資格情報を使用して [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のインスタンスにサインインしようとします。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 認証を選択した場合は、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のログイン名とパスワードを入力する必要があります。  
   
-11. 次のページで次のように選択します。**ユーティリティ データベースのインストール** *n*ここで、 *n* 、バージョン番号は、順にクリックします**次**します。  
+11. 次のページで、[ **Install Utilities Database** *n*] を選択します。ここで、 *n*はバージョン番号です。次に、 **[次へ]** を選択します。  
   
-    **Sysdb**データベースが作成され、ユーザー定義関数とストアド プロシージャは、そのデータベースに作成されます。  
+    **Sysdb**データベースが作成され、そのデータベースにユーザー定義関数およびストアドプロシージャが作成されます。  
   
-    場合**テスター データベースのインストール**オプションがオンになって、テスト担当者**ssmatesterdb**データベースが作成されます。  
+    [**テスト担当者データベースをインストール**する] オプションがオンになっている場合は、tester **ssmatesterdb**データベースが作成されます。  
   
-12. 別のインスタンスにユーティリティをインストールする[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]を選択します**はい**、順にクリックします**次**します。 または、をクリックしてウィザードを終了するには、**いいえ**します。  
+12. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]の別のインスタンスにユーティリティをインストールするには、 **[はい]** を選択し、 **[次へ]** を選択します。または、ウィザードを終了するには **[いいえ]** を選択します。  
   
-13. [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]または sqlcmd ユーティリティを使用して CLR を有効にするのには、次のスクリプトを実行します。  
+13. [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] または sqlcmd ユーティリティを使用して、次のスクリプトを実行して CLR を有効にします。  
   
-    ```  
+    ```
     sp_configure 'clr enabled', 1  
     GO  
     RECONFIGURE  
     GO  
-    ```  
-    SSMA に接続するときに、次のエラーを受信は CLR が有効でない場合[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]:  
+    ```
+
+    CLR が有効になっていない場合、SSMA が [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]に接続すると、次のエラーが表示されます。  
   
-    SSMA は、拡張機能パックのアセンブリのバージョン情報を取得できませんでした。 データベース サーバーで、拡張機能パックを再インストールします。  
+    SSMA は、拡張パックのアセンブリのバージョン情報を取得できませんでした。 データベースサーバーに拡張パックを再インストールしてください。  
   
-### <a name="sql-server-database-objects"></a>SQL Server データベース オブジェクト  
-拡張機能パックをインストールした後を参照してください、 **ssma_oracle.bcp_migration_packages** 、テーブル、 **ssma_oracle.db_storage**テーブル、および**ssma_oracle.db_error_list**テーブルに、 **sysdb**データベース。 多くのストアド プロシージャおよびユーザー定義関数にも表示されます、 **ssma_oracle**スキーマ。  
+### <a name="sql-server-database-objects"></a>SQL Server データベースオブジェクト  
+
+拡張機能パックをインストールすると、 **ssma_oracle bcp_migration_packages**テーブルが**sysdb**データベースに表示されます。
+
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]にデータを移行するたびに、SSMA によって [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェントジョブが作成されます。 これらのジョブには**ssma_oracle データ移行パッケージ {GUID}** という名前が付けられ、[ジョブ] フォルダーの [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] の [[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェント] ノードに表示されます。  
   
-データを移行するたびに[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]、SSMA を作成、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]エージェント ジョブ。 これらのジョブの名前は**ssma_oracle データ移行パッケージ {GUID}** に表示し、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のエージェント ノード[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]Jobs フォルダーでします。  
-  
-## <a name="see-also"></a>参照  
-[SSMA for Oracle クライアントのインストール&#40;OracleToSQL&#41;](../../ssma/oracle/installing-ssma-for-oracle-client-oracletosql.md)  
-[SQL Server にデータベースを移行する Oracle &#40;OracleToSQL&#41;](../../ssma/oracle/migrating-oracle-databases-to-sql-server-oracletosql.md)  
-  
+## <a name="see-also"></a>参照
+
+[SSMA for Oracle Client &#40;OracleToSQL のインストール&#41;](../../ssma/oracle/installing-ssma-for-oracle-client-oracletosql.md)  
+[Oracle データベースの SQL Server &#40;OracleToSQL への移行&#41;](../../ssma/oracle/migrating-oracle-databases-to-sql-server-oracletosql.md)  

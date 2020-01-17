@@ -14,18 +14,17 @@ helpviewer_keywords:
 ms.assetid: b9de003f-cb49-4dec-b528-14a5b8ff12bd
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 156dfaf5c6a6a4ec06a0c96b5f726383cba32ba6
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 93cf744cf105762fb90a92049d6698e67a19d58c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47609930"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68138997"
 ---
 # <a name="identifier-arguments"></a>識別子の引数
 識別子の引数の文字列を引用符で囲まれた、ドライバーは先頭と末尾の空白を削除し、文字どおり引用符で囲まれた文字列が扱われます。 文字列が引用符で囲まれていない場合、ドライバーを削除末尾の空白およびフォールド文字列を大文字にします。 SQL_ERROR と SQLSTATE HY009 返します識別子の引数を null ポインターを設定 (null ポインターの無効な使用)、しない限り、引数がカタログ名とカタログがサポートされていません。  
   
- これらの引数は、SQL_ATTR_METADATA_ID ステートメントの属性が SQL_TRUE に設定されている場合、識別子の引数として扱われます。 この場合は、アンダー スコア (_)、パーセント記号 (%) は、検索パターンの文字としてではなく、実際の文字として扱わされます。 これらの引数は、この属性は SQL_FALSE に設定されている場合、通常の引数または引数に応じての pattern 引数のいずれかとして扱われます。  
+ これらの引数は、SQL_ATTR_METADATA_ID ステートメントの属性が SQL_TRUE に設定されている場合、識別子の引数として扱われます。 この場合は、アンダー スコア (_)、パーセント記号 (%)検索パターンの文字としてではなく、実際の文字として扱うは。 これらの引数は、この属性は SQL_FALSE に設定されている場合、通常の引数または引数に応じての pattern 引数のいずれかとして扱われます。  
   
  特殊文字を含む識別子は、SQL ステートメントで引用符で囲む必要があります、ですが、する必要がありますいないは引用符で囲むカタログ関数の引数として渡されるときにカタログ関数に渡される引用符文字を解釈するため。 たとえば、識別子を引用符文字とします (特定のドライバーとを通じて返されることが**SQLGetInfo**) が二重引用符 (")。 最初の呼び出し**SQLTables**が 2 番目の呼び出しが意図した動作しない可能性がありますが、"Accounts Payable"テーブルに関する情報を返すときは、Accounts Payable のテーブルに関する情報を含む結果セットを返します。  
   

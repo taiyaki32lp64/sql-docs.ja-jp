@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 7df1089e-69b7-476e-9244-19947c087351
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 84091a0d01f23fe870f6f0dbfb01bced2bff3e0c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: fd8595cf8089ce6fd15549680da538946414b9c8
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47826788"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67965625"
 ---
 # <a name="parameters-collection-command-property-example-vb"></a>Parameters コレクションおよび Command プロパティの例 (VB)
 次のコードを使用する方法を示します、[コマンド](../../../ado/reference/adox-api/command-property-adox.md)プロパティを[コマンド](../../../ado/reference/ado-api/command-object-ado.md)プロシージャのパラメーター情報を取得するオブジェクト。  
@@ -76,7 +75,7 @@ End Sub
 ' EndParametersVB  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [ActiveConnection プロパティ (ADOX)](../../../ado/reference/adox-api/activeconnection-property-adox.md)   
  [Catalog オブジェクト (ADOX)](../../../ado/reference/adox-api/catalog-object-adox.md)   
  [Command プロパティ (ADOX)](../../../ado/reference/adox-api/command-property-adox.md)   

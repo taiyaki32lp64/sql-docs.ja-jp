@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: 69b756e0-a1df-45b3-8a24-6ded8658aefe
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 4c3f4ed7312afcd19e7244b98ba781753ee22b9f
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 122630048b7e4ff9cef34c49bfde68177020630f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56027536"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68077911"
 ---
 # <a name="hierarchyid-data-type-method-reference"></a>hierarchyid データ型メソッド リファレンス
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -56,7 +55,7 @@ ms.locfileid: "56027536"
   
 -   /0.1/0.2/  
   
-ノードは、任意の位置に挿入できます。 **/1/2/** の後ろで、かつ **/1/3/** の前に挿入されたノードは、**/1/2.5/** として表されます。 0 の前に挿入されたノードの論理表現は、負の値となります。 たとえば、**/1/1/** の前に位置するノードは、**/1/-1/** として表されます。 ノードに先頭のゼロを付けることはできません。 たとえば、**/1/1.1/** は有効ですが、**/1/1.01/** は無効です。 エラーを回避するには、[GetDescendant](../../t-sql/data-types/getdescendant-database-engine.md) メソッドを使用してノードを挿入します。
+ノードは、任意の位置に挿入できます。 **/1/2/** の後ろで、かつ **/1/3/** の前に挿入されたノードは、 **/1/2.5/** として表されます。 0 の前に挿入されたノードの論理表現は、負の値となります。 たとえば、 **/1/1/** の前に位置するノードは、 **/1/-1/** として表されます。 ノードに先頭のゼロを付けることはできません。 たとえば、 **/1/1.1/** は有効ですが、 **/1/1.01/** は無効です。 エラーを回避するには、[GetDescendant](../../t-sql/data-types/getdescendant-database-engine.md) メソッドを使用してノードを挿入します。
   
 ## <a name="data-type-conversion"></a>データ型の変換
 **hierarchyid** データ型は、次のように他のデータ型に変換できます。

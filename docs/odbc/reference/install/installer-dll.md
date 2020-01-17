@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: e2b92afb-64ce-4ce0-84ad-6a4276646e68
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: cb73569f2f605a0ff8cbafa4982894200c8fa6ef
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: c1c50c70920b6ca37a51a0ab048fa81344802f20
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47811330"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68094121"
 ---
 # <a name="installer-dll"></a>インストーラー DLL
 > [!NOTE]  

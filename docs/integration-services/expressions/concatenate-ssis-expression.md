@@ -12,17 +12,20 @@ helpviewer_keywords:
 - + (concatenate operator)
 - concatenate operator (+)
 ms.assetid: 0fed6334-7a4f-42dc-a611-191fcaa0e443
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: 66982a30866d448343df77eb4046900cfa949594
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 366e307220d08192df04b95201758751cce90112
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47737630"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71297669"
 ---
 # <a name="-concatenate-ssis-expression"></a>+ (連結) (SSIS 式)
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   2 つの式を連結して 1 つの式にします。  
   
 ## <a name="syntax"></a>構文  
@@ -49,7 +52,7 @@ character_expression1 + character_expression2
   
  両方の式のデータ型は同じであるか、または一方の式をもう一方の式のデータ型に暗黙的に変換できる必要があります。 たとえば、文字列 "Order date is" と列 **OrderDate** を連結する場合、 **OrderDate** の値は暗黙的に文字列データ型に変換されます。 2 つの数値を連結するには、両方の数値を文字列データ型に明示的にキャストする必要があります。  
   
- BLOB データ型を連結する場合、DT_TEXT、DT_NTEXT、または DT_IMAGE のいずれか 1 つのみを連結できます。  
+ 連結は、1 つの BLOB データ型のみを使用できます。DT_TEXT、DT_NTEXT または DT_IMAGE。  
   
  要素のいずれかが NULL の場合、結果は NULL になります。  
   
@@ -70,6 +73,6 @@ FirstName + ' ' + LastName
   
 ## <a name="see-also"></a>参照  
  [演算子の優先順位と結合規則](../../integration-services/expressions/operator-precedence-and-associativity.md)   
- [演算子 (SSIS 式)](../../integration-services/expressions/operators-ssis-expression.md)  
+ [演算子 &#40;SSIS 式&#41;](../../integration-services/expressions/operators-ssis-expression.md)  
   
   

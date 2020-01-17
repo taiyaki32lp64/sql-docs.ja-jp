@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 helpviewer_keywords:
 - best practices analyzer
@@ -19,14 +18,14 @@ ms.assetid: c7867f9b-7acc-4fae-bde1-63808c403ebc
 author: VanMSFT
 ms.author: vanto
 manager: craigg
-ms.openlocfilehash: 72d4d0863c516fed3a318aca45e8ec478af46a58
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: c41edcfc545e69e6e8174003ca765a4c2f1d551b
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56013153"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66064428"
 ---
-# <a name="tutorial-evaluating-best-practices-by-using-policy-based-management"></a>チュートリアル:ポリシー ベースの管理を使用して、ベスト プラクティスの評価
+# <a name="tutorial-evaluating-best-practices-by-using-policy-based-management"></a>チュートリアル:ポリシー ベースの管理を使用したベスト プラクティスの評価
   「ポリシー ベースの管理を使用したベスト プラクティスの評価」チュートリアルへようこそ。 このチュートリアルは、[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] について理解しており、ポリシー ベースの管理を初めて使用するユーザーを対象としています。 ポリシー ベースの管理は、サイト管理の基準を適用するために使用できるポリシーを定義するためのシステムです。 ポリシー ベースの管理には一連のベスト プラクティス ポリシーが含まれており、これらを使用して、[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] のインスタンスを分析し、インスタンスがベスト プラクティスのガイドラインと推奨事項に適合しているかどうかを判断できます。  
   
 ## <a name="what-you-will-learn"></a>学習する内容  

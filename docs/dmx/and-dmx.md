@@ -8,13 +8,12 @@ ms.topic: conceptual
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-manager: kfile
-ms.openlocfilehash: a53a2e309d427ee3868478a17186cad1070d4f81
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: e0c727e6a6f981dd2862575bfb4943b104196080
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38047320"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67913746"
 ---
 # <a name="and-dmx"></a>AND (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -30,25 +29,25 @@ Expression1 AND Expression2
   
 #### <a name="parameters"></a>パラメーター  
  *Expression1*  
- 数値を返す有効なデータ マイニング拡張機能 (DMX) 式です。  
+ 数値の値を返す有効なデータ マイニング拡張機能 (DMX) 式。  
   
  *Expression2*  
  数値の値を返す有効な DMX 式。  
   
 ## <a name="return-value"></a>戻り値  
- 両方のパラメーターの結果が TRUE の場合は TRUE を返し、そうでない場合は FALSE を返すブール値です。  
+ True の場合、両方のパラメーターが評価されるを TRUE にするブール値それ以外の場合は FALSE です。  
   
 ## <a name="remarks"></a>コメント  
- 両方のパラメーターは、演算子が論理積を実行する前に、ブール値 (FALSE の場合は 0、そうでない場合は TRUE) として処理されます。 次の表は、パラメーター値のさまざまな組み合わせに基づいて返される値を示します。  
+ 両方のパラメーターはブール値として扱われます (0 FALSE の場合それ以外の場合 TRUE) 論理積を実行します。 次の表では、パラメーター値のさまざまな組み合わせに基づいて返される値を示します。  
   
 |Expression1|Expression2|戻り値は|  
 |-----------------------|-----------------------|---------------------|  
 |TRUE|TRUE|TRUE|  
 |TRUE|FALSE|FALSE|  
-|FALSE|TRUE|FALSE|  
+|false|TRUE|FALSE|  
 |FALSE|FALSE|FALSE|  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [データ マイニング拡張機能&#40;DMX&#41;演算子リファレンス](../dmx/data-mining-extensions-dmx-operator-reference.md)   
  [論理演算子&#40;DMX&#41;](../dmx/operators-logical.md)   
  [演算子&#40;DMX&#41;](../dmx/operators-dmx.md)  

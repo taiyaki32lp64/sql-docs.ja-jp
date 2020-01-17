@@ -1,5 +1,5 @@
 ---
-title: トランザクション (マスター データ サービス) | Microsoft Docs
+title: トランザクション
 ms.custom: ''
 ms.date: 01/10/2017
 ms.prod: sql
@@ -11,15 +11,14 @@ helpviewer_keywords:
 - transactions [Master Data Services], about transactions
 - transactions [Master Data Services]
 ms.assetid: 4cd2fa6f-9c76-4b7a-ae18-d4e5fd2f03f5
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 78badeae93c8fbcf7adf03638f22e62f591b56ce
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
-ms.translationtype: HT
+ms.openlocfilehash: 7ce5d8456d1857c3e62239deadf217e5d9841caa
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52782734"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73728903"
 ---
 # <a name="transactions-master-data-services"></a>トランザクション (マスター データ サービス)
 
@@ -55,7 +54,7 @@ ms.locfileid: "52782734"
   
  次のストアド プロシージャを呼び出して、トランザクション ログをクリーンアップすることもできます。  
   
-|ストアド プロシージャ|[説明]|  
+|ストアド プロシージャ|説明|  
 |----------------------|-----------------|  
 |mdm.udpTransactionsCleanup|トランザクション履歴をクリーンアップします。|  
 |mdm.udpValidationsCleanup|検証履歴をクリーンアップします。|  
@@ -87,7 +86,7 @@ EXEC mdm.udpEntityStagingBatchTableCleanup @ModelID, @CleanupOlderThanDate;
   
  トランザクションが有効になっているにもかかわらず、複数のユーザーがエラーなく、同じエンティティの値を更新できます。 通常、時間順で最後に編集した値が優先されます。 トランザクションの履歴で、重複する編集の競合を手動で観察することができ、管理者によって手動で取り消すことができます。 トランザクションの履歴は、各セッションの問題の属性に対する **[以前の値]** と **[新しい値]** の個々のトランザクションを表示しますが、複数の **[新しい値]** が同一の古い値に対して存在しても、競合を自動的には解決しません。  
   
-## <a name="related-tasks"></a>Related Tasks  
+## <a name="related-tasks"></a>関連タスク  
   
 |タスクの説明|トピック|  
 |----------------------|-----------|  

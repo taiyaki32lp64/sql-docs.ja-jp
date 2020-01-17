@@ -16,15 +16,14 @@ helpviewer_keywords:
 - version control [Visual Database Tools]
 - Visual Database Tools [SQL Server], multiuser environments
 ms.assetid: 330bd48c-9427-4967-b58e-b7c492d5ee36
-author: stevestein
-ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 1dc9d3d1fca5c3d2ed979f8b6144861ee8256b66
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: c9053a4b6873c565320e5d8ed9664799990ebbcb
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47716540"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68258442"
 ---
 # <a name="multiuser-environments-visual-database-tools"></a>マルチユーザー環境 (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

@@ -2,18 +2,18 @@
 title: 共有データセットまたは埋め込みデータセットの作成 (レポート ビルダーおよび SSRS) | Microsoft Docs
 ms.date: 10/17/2016
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: report-data
 ms.topic: conceptual
 ms.assetid: d1d7bc71-f0e9-4ce5-b3ad-6fee54388a31
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 950887481902b05de6fd1cd08894164c6818ac67
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 1aeae63d9fdec1b7afb876364b2fc36714e72479
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50029591"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66500476"
 ---
 # <a name="create-a-shared-dataset-or-embedded-dataset-report-builder-and-ssrs"></a>共有データセットまたは埋め込みデータセットの作成 (レポート ビルダーおよび SSRS)
 埋め込みデータセットは、単一の [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] レポートで使用されます。 レポート サーバーの共有データセットはモバイルとページ分割があるタイプの、複数のレポートで使用できます。 データセットを作成するには、埋め込みデータ ソースまたは共有データ ソースが必要です。  
@@ -58,7 +58,7 @@ ms.locfileid: "50029591"
   
 4.  クエリ デザイナーで、データセットに含めるフィールドを指定します。  
   
-5.  **[実行]** (**!**) をクリックしてクエリを実行します。  
+5.  **[実行]** ( **!** ) をクリックしてクエリを実行します。  
   
 6.  **レポート ビルダー** のボタンの **[保存]** または **[名前を付けて保存]** をクリックして、共有データセットをレポート サーバーに保存します。  
   
@@ -116,7 +116,7 @@ ms.locfileid: "50029591"
  [レポート埋め込みデータセットと共有データセット &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)   
  [データセット フィールド コレクション &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-data/dataset-fields-collection-report-builder-and-ssrs.md)   
  [レポート データセット (SSRS)](../../reporting-services/report-data/report-datasets-ssrs.md)   
- [データ接続、データ ソース、および接続文字列 &#40;レポート ビルダーおよび SSRS&#41;](https://msdn.microsoft.com/library/7e103637-4371-43d7-821c-d269c2cc1b34)   
+ [データ接続、データ ソース、および接続文字列 &#40;レポート ビルダーおよび SSRS&#41;](data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)   
  [埋め込みデータセットと共有データセット &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-data/embedded-and-shared-datasets-report-builder-and-ssrs.md)  
   
   

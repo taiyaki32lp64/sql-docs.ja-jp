@@ -1,7 +1,7 @@
 ---
 title: メモリ最適化テーブルのインデックス | Microsoft Docs
 ms.custom: ''
-ms.date: 11/28/2017
+ms.date: 09/16/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -10,19 +10,19 @@ ms.topic: conceptual
 ms.assetid: eecc5821-152b-4ed5-888f-7c0e6beffed9
 author: MightyPen
 ms.author: genemi
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 8c0edd8d6ef30db1dbcae561f09b5cb1cf27cee3
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 6db09106a6ebd8128cc9a7c69b9094adbf732ad7
+ms.sourcegitcommit: 77293fb1f303ccfd236db9c9041d2fb2f64bce42
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51673021"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70929695"
 ---
 # <a name="indexes-on-memory-optimized-tables"></a>メモリ最適化テーブルのインデックス
+
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
-すべてのメモリ最適化テーブルには少なくとも 1 つのインデックスが必要です。このインデックスによって行が連結されるためです。 メモリ最適化テーブルでは、すべてのインデックスもメモリ最適化されます。 メモリ最適化インデックスは、ディスク ベース テーブルの従来のインデックスとはさまざまな点で違いがあります。  
+すべてのメモリ最適化テーブルには少なくとも 1 つのインデックスが必要です。このインデックスによって行が連結されるためです。 メモリ最適化テーブルでは、すべてのインデックスもメモリ最適化されます。 メモリ最適化テーブルは、ディスク ベース テーブルの従来のインデックスとはさまざまな点で違いがあります。  
 
 - データ行はページに格納されないため、ページやエクステントのコレクションも、テーブルのすべてのページを取得するために参照できるパーティションやアロケーション ユニットもありません。 インデックスの使用可能ないずれかの型に対するインデックス ページの概念はありますが、これらの格納方法はディスクベースのテーブルのインデックスとは異なります。 それらはページ内で断片化の従来の種類を計上しないため、fillfactor を持ちません。
 - データ操作中にメモリ最適化テーブルのインデックスに行われた変更がディスクに書き込まれることはありません。 データ行と、データへの変更のみが、トランザクション ログに書き込まれます。 
@@ -35,7 +35,7 @@ ms.locfileid: "51673021"
 - ハッシュ インデックス  
 - メモリ最適化済み非クラスター化インデックス (B ツリーの既定の内部構造を意味します) 
   
-*ハッシュ* インデックスについては、「[メモリ最適化テーブルのハッシュ インデックス](../../relational-databases/sql-server-index-design-guide.md#hash_index)」で、詳しく説明します。
+*ハッシュ* インデックスについては、「[メモリ最適化テーブルのハッシュ インデックス](../../relational-databases/sql-server-index-design-guide.md#hash_index)」で、詳しく説明します。  
 *非クラスター化*インデックスについては、「[Nonclustered Index for Memory-Optimized Tables](../../relational-databases/sql-server-index-design-guide.md#inmem_nonclustered_index)」(メモリ最適化テーブルの非クラスター化インデックス) で、詳しく説明します。  
 *列ストア* インデックスについては、 [別の記事](../../relational-databases/indexes/columnstore-indexes-overview.md)で説明します。  
 
@@ -57,8 +57,9 @@ ms.locfileid: "51673021"
     )  
         WITH (  
             MEMORY_OPTIMIZED = ON,  
-            DURABILITY = SCHEMA\_AND_DATA);  
+            DURABILITY = SCHEMA_AND_DATA);  
     ```
+
 > [!NOTE]  
 > [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] および [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] には、メモリ最適化テーブルまたはテーブル型あたりインデックスは 8 個までという制限があります。 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] 以降および [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] では、メモリ最適化テーブルおよびテーブル型に固有のインデックス数に制限がなくなりました。
   
@@ -116,11 +117,30 @@ ms.locfileid: "51673021"
   
 ## <a name="duplicate-index-key-values"></a>重複するインデックス キー値
 
-重複するインデックス キーの値は、メモリ最適化テーブルに対する操作のパフォーマンスに影響します。 重複するチェーンはほとんどのインデックス操作についてスキャンされる必要があるため、多数の重複 (たとえば、100+) はインデックスを維持するジョブを非効率にします。 メモリ最適化テーブルでの `INSERT`、`UPDATE`、および `DELETE` の操作において影響が見られます。 
+インデックス キーの値が重複していると、メモリ最適化テーブルのパフォーマンスが低下することがあります。 ほとんどのインデックス読み書き操作でエントリ チェーンが走査されるためシステム向けに重複が作られます。 重複するエントリのチェーンが 100 エントリを超えると、パフォーマンスの低下が無視できないほどになることがあります。
 
-この問題は、ハッシュ インデックスの場合、より顕著になります。これは、ハッシュ インデックスの操作あたりのコスト削減と、ハッシュ競合チェーンを持つ大規模な重複チェーンの干渉の両方に起因します。 インデックス内の重複を減らすために、非クラスター化インデックスを使用し、重複の数を減らすために (たとえば、主キーから) インデックス キーの末尾に列を追加します。 ハッシュ競合の詳細については、[メモリ最適化テーブルのハッシュ インデックス](../../relational-databases/sql-server-index-design-guide.md#hash_index)に関するページを参照してください。
+### <a name="duplicate-hash-values"></a>重複するハッシュ値
 
-たとえば、`CustomerId` に主キーが、列 `CustomerCategoryID` にインデックスがある `Customers` テーブルを考えてみてください。 通常は特定のカテゴリに顧客の多くが含まれるため、CustomerCategoryID のインデックスに含まれる特定のキーに対して多くの値が重複すると考えられます。 このシナリオでは、`(CustomerCategoryID, CustomerId)` で非クラスター化インデックスを使用することを推奨します。 このインデックスは、`CustomerCategoryID` を含む述語を使用するクエリに対して使用でき、重複はありません。このため、インデックスのメンテナンスにおいて非効率を生じさせることはありません。
+ハッシュ インデックスの場合、重複が目立って問題になります。 ハッシュ インデックスの場合に問題が大きくなるのは次の理由によります。
+
+- ハッシュ インデックスの場合、操作あたりのコストが低い。
+- 大きな重複チェーンがハッシュ競合チェーンを干渉する。
+
+インデックス内の重複を減らすためには、次の調整をお試しください。
+
+- クラスター化されていないインデックスを使用する。
+- インデックス キーの末尾に列を追加し、重複の数を減らす。
+  - たとえば、主キーにもある列を追加できます。
+
+ハッシュ競合の詳細については、[メモリ最適化テーブルのハッシュ インデックス](../../relational-databases/sql-server-index-design-guide.md#hash_index)に関するページを参照してください。
+
+### <a name="example-improvement"></a>改善例
+
+インデックスで非効率なパフォーマンスを回避する方法の例を紹介します。
+
+`CustomerId` に主キーが、列 `CustomerCategoryID`にインデックスがある `Customers` テーブルを考えてみてください。 一般的に、特定のカテゴリに多くの顧客がいます。 そのため、インデックスの特定のキー内には、CustomerCategoryID の重複値がたくさんできます。
+
+このシナリオでは、`(CustomerCategoryID, CustomerId)` で非クラスター化インデックスを使用することを推奨します。 このインデックスは、`CustomerCategoryID` を伴う述語を使用するクエリに使用できます。それでも、インデックス キーには重複が含まれません。 そのため、重複する CustomerCategoryID 値やインデックスの追加列によりインデックスの保守管理が非効率になることはありません。
 
 次のクエリでは、 `CustomerCategoryID` WideWorldImporters `Sales.Customers`サンプル データベースの [テーブルに含まれる](../../sample/world-wide-importers/wide-world-importers-documentation.md)上のインデックスについて、インデックス キー値の平均重複数がわかります。
 
@@ -155,15 +175,11 @@ SELECT AVG(row_count) FROM
 SELECT CustomerName, Priority, Description 
 FROM SupportEvent  
 WHERE StartDateTime > DateAdd(day, -7, GetUtcDate());  
-    
-SELECT CustomerName, Priority, Description 
-FROM SupportEvent  
-WHERE CustomerName != 'Ben';  
-    
+
 SELECT StartDateTime, CustomerName  
 FROM SupportEvent  
-ORDER BY StartDateTime;  
-    
+ORDER BY StartDateTime DESC; -- ASC would cause a scan.
+
 SELECT CustomerName  
 FROM SupportEvent  
 WHERE StartDateTime = '2016-02-26';  
@@ -195,17 +211,18 @@ WHERE col1 = 'dn';
   
 インデックス キーの 2 番目の列のみ `WHERE` 句が指定した場合は、どちらの種類のインデックスも役に立ちません。  
 
-### <a name="summary-table-to-compare-index-use-scenarios"></a>インデックス使用のシナリオを比較する概要表  
+## <a name="summary-table-to-compare-index-use-scenarios"></a>インデックス使用のシナリオを比較する概要表  
   
 次の表は、異なるインデックスの種類でサポートされるすべての操作を示しています。 *はい*はインデックスが要求に十分に対応できることを意味し、*いいえ*はインデックスが要求に十分に対応できないことを意味します。 
   
 | 演算 | メモリ最適化、 <br/> ハッシュ | メモリ最適化、 <br/> 非クラスター化 | ディスク ベース、 <br/> (非) クラスター化 |  
 | :-------- | :--------------------------- | :----------------------------------- | :------------------------------------ |  
-| インデックス スキャン、すべてのテーブルの行を取得する。 | [ユーザー アカウント制御] | [はい] | [ユーザー アカウント制御] |  
-| 等値述語 (=) でのインデックス シーク。 | [ユーザー アカウント制御] <br/> (フル キーが必要です。) | [ユーザー アカウント制御]  | [ユーザー アカウント制御] |  
-| 非等値述語と範囲述語でのインデックス シーク  <br/> (>, <, <=, >=, `BETWEEN`) | いいえ <br/> (インデックス スキャンが実行される) | はい <sup>1</sup> | [ユーザー アカウント制御] |  
-| インデックス定義と一致する行を並べ替え順序で取得する。 | いいえ | はい | [ユーザー アカウント制御] |  
-| インデックス定義の反対と一致する行を並べ替え順序で取得する。 | いいえ | いいえ | [ユーザー アカウント制御] |  
+| インデックス スキャン、すべてのテーブルの行を取得する。 | はい | はい | はい |  
+| 等値述語 (=) でのインデックス シーク。 | はい <br/> (フル キーが必要です。) | はい  | はい |  
+| 非等値述語と範囲述語でのインデックス シーク <br/> (>, <, <=, >=, `BETWEEN`) | いいえ <br/> (インデックス スキャンが実行される) | はい <sup>1</sup> | はい |  
+| インデックス定義と一致する行を並べ替え順序で取得する。 | いいえ | はい | はい |  
+| インデックス定義の反対と一致する行を並べ替え順序で取得する。 | いいえ | いいえ | はい |  
+| &nbsp; | &nbsp; | &nbsp; | &nbsp; |
 
 <sup>1</sup> メモリ最適化された非クラスター化インデックスの場合、インデックス シークの実行にフル キーは必要ありません。  
 

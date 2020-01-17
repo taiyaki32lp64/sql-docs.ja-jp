@@ -22,13 +22,12 @@ helpviewer_keywords:
 ms.assetid: ec4e4b38-e9c6-4757-b2ef-4e468ae5f1d8
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: afd8b9d4a45bdc98388f1133b3478a1cfbe51e4c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 750e89e97eb916c7db23e71475b753a57a4d90e9
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47773450"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67920444"
 ---
 # <a name="begintranscomplete-committranscomplete-and-rollbacktranscomplete-events-ado"></a>BeginTransComplete、CommitTransComplete、および RollbackTransComplete イベント (ADO)
 これらのイベントが関連付けられている操作の後に呼び出される、[接続](../../../ado/reference/ado-api/connection-object-ado.md)オブジェクトの実行が終了します。  
@@ -68,7 +67,7 @@ RollbackTransComplete pError, adStatus, pConnection
   
  場合、[属性](../../../ado/reference/ado-api/attributes-property-ado.md)プロパティに設定されて**adXactCommitRetaining**または**adXactAbortRetaining**、コミットやトランザクションをロールバックした後、新しいトランザクションを開始します。 使用して、 **BeginTransComplete**すべて無視するイベントが最初のトランザクションの開始イベント。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [ADO イベント モデルの例 (vc++)](../../../ado/reference/ado-api/ado-events-model-example-vc.md)   
  [BeginTrans、CommitTrans、および RollbackTrans メソッドの例 (VB)](../../../ado/reference/ado-api/begintrans-committrans-and-rollbacktrans-methods-example-vb.md)   
  [ADO イベント ハンドラーの概要](../../../ado/guide/data/ado-event-handler-summary.md)   

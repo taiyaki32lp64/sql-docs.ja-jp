@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: 301204b2-140d-4495-98ed-021a9b5025f5
 author: julieMSFT
 ms.author: jrasnick
-manager: craigg
-ms.openlocfilehash: d99971c4672413a7845c8ec3bdb4d9949a3b978f
-ms.sourcegitcommit: 0c1d552b3256e1bd995e3c49e0561589c52c21bf
+ms.openlocfilehash: 31cf75a57bff14e463864611bc8088e16a0ec998
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/14/2018
-ms.locfileid: "53380833"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68035519"
 ---
 # <a name="performance-center-for-sql-server-database-engine-and-azure-sql-database"></a>SQL Server データベース エンジンと Azure SQL Database のパフォーマンス センター
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -68,7 +67,7 @@ ms.locfileid: "53380833"
 |![security-center-both](../../relational-databases/performance/media/security-center-both.png "security-center-both") **クエリ オプティマイザーの最適化**|[ALTER DATABASE SCOPED CONFIGURATION (Transact-SQL)](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md)<br />[USE HINT クエリ ヒント](../../t-sql/queries/hints-transact-sql-query.md#use_hint)|  
 |![security-center-both](../../relational-databases/performance/media/security-center-both.png "security-center-both") **[統計](../../relational-databases/statistics/statistics.md)**|[統計を更新する場合](../statistics/statistics.md)<br />[統計の更新](../../relational-databases/statistics/update-statistics.md)|  
 |![security-center-both](../../relational-databases/performance/media/security-center-both.png "security-center-both")  **[インメモリ OLTP &#40;インメモリ最適化&#41;](../../relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md)**|[メモリ最適化テーブル](../../relational-databases/in-memory-oltp/memory-optimized-tables.md)<br />[ネイティブ コンパイル ストアド プロシージャ](../../relational-databases/in-memory-oltp/natively-compiled-stored-procedures.md)<br />[ネイティブ コンパイル ストアド プロシージャからの TempDB 内のテーブルの作成およびアクセス](../../relational-databases/in-memory-oltp/create-and-access-tables-in-tempdb-from-stored-procedures.md)<br />[メモリ最適化されたハッシュ インデックスのパフォーマンスに関する一般的な問題のトラブルシューティング](https://msdn.microsoft.com/library/1954a997-7585-4713-81fd-76d429b8d095)<br />[実証:インメモリ OLTP によるパフォーマンスの向上](../../relational-databases/in-memory-oltp/demonstration-performance-improvement-of-in-memory-oltp.md)|
-|![security-center-both](../../relational-databases/performance/media/security-center-both.png "security-center-both")  **[インテリジェントなクエリ処理](../../relational-databases/performance/intelligent-query-processing.md)**|[アダプティブ クエリ処理](../../relational-databases/performance/adaptive-query-processing.md)|
+|![security-center-both](../../relational-databases/performance/media/security-center-both.png "security-center-both")  **[インテリジェントなクエリ処理](../../relational-databases/performance/intelligent-query-processing.md)**|[インテリジェントなクエリ処理](../../relational-databases/performance/intelligent-query-processing.md)|
   
 ## <a name="see-also"></a>参照  
  [パフォーマンスの監視とチューニング](../../relational-databases/performance/monitor-and-tune-for-performance.md)   

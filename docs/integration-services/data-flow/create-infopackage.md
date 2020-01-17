@@ -8,18 +8,21 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 9cd4a848-409f-4681-a390-1c49a2aadbd7
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: fea75b95492aa3ee689a785155bdb6b37670ba34
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 25f1497b7801c7891681324b12fa9a5eda4eb842
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47853388"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71293210"
 ---
 # <a name="create-infopackage"></a>インフォパッケージの作成
-  SAP Netweaver BW システムで新しいインフォパッケージを作成するには、**[インフォパッケージの作成]** ダイアログ ボックスを使用します。  
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
+  SAP Netweaver BW システムで新しいインフォパッケージを作成するには、 **[インフォパッケージの作成]** ダイアログ ボックスを使用します。  
   
  **[インフォパッケージの作成]** ダイアログ ボックスは、 **[SAP BW 変換先エディター]** の **[接続マネージャー]** ページから開くことができます。 SAP BW 変換先の詳細については、「 [SAP BW Destination](../../integration-services/data-flow/sap-bw-destination.md)」を参照してください。  
   
@@ -36,7 +39,7 @@ ms.locfileid: "47853388"
   
 4.  **[接続マネージャー]** ページの **[SAP BW オブジェクトの作成]** で、 **[インフォパッケージ]** を選択し、 **[作成]** をクリックします。  
   
-## <a name="options"></a>[変数]  
+## <a name="options"></a>オプション  
  **インフォソース**  
  新しいインフォパッケージの基にするインフォソースの名前を入力します。  
   

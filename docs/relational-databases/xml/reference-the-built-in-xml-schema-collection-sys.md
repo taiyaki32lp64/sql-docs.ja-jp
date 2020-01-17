@@ -14,15 +14,14 @@ helpviewer_keywords:
 - XML schema collections [SQL Server], predefined
 - built-in XML schema collections [SQL Server]
 ms.assetid: 1e118303-5df0-4ee4-bd8d-14ced7544144
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: 3b6d151d2407e97f2030a083e577d9fd534b770c
-ms.sourcegitcommit: bfa10c54e871700de285d7f819095d51ef70d997
+author: MightyPen
+ms.author: genemi
+ms.openlocfilehash: 249b9d920a15e9eb2b3e85532df7df144b9d4c84
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/14/2019
-ms.locfileid: "54256547"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67995283"
 ---
 # <a name="reference-the-built-in-xml-schema-collection-sys"></a>組み込みの XML スキーマ コレクション (sys) の参照
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

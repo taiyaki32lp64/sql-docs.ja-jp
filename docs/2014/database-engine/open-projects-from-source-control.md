@@ -14,11 +14,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: ec14f86b283fa8ccbc037feec4a8a54983126403
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48152712"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62774956"
 ---
 # <a name="open-projects-from-source-control"></a>ソース管理からプロジェクトを開く
   [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] を使用して、ソース管理からプロジェクトを直接開くことができます。 プロジェクトを直接開く場合は、[!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] によって、このプロジェクトの最新のバージョンが取得され、ローカル ディスクにコピーされます。 また、[!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] 環境によって、そのプロジェクトのソリューションが自動的に作成されます。  
@@ -42,7 +42,7 @@ ms.locfileid: "48152712"
   
 6.  **ソリューションを開く** ダイアログ ボックスを開くには、をクリックしてプロジェクトを選択します。**開く**します。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [ソース管理からソリューションとプロジェクトを開く](../../2014/database-engine/open-solutions-and-projects-from-source-control.md)   
  [ソース管理からソリューションを開く](../../2014/database-engine/open-solutions-from-source-control.md)  
   

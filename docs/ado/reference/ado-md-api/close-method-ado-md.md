@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: a3aa594d-f9d4-4654-8625-ec20153ff5d9
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: ca61f383198207223abf30ce25d9c922909f6526
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 09e83fd8645a5c0ab604a640478c4cced4870742
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47683696"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67949810"
 ---
 # <a name="close-method-ado-md"></a>Close メソッド (ADO MD)
 開いているセルセットを閉じます。  
@@ -42,7 +41,7 @@ Cellset.Close
 ## <a name="applies-to"></a>適用対象  
  [CellSet オブジェクト (ADO MD)](../../../ado/reference/ado-md-api/cellset-object-ado-md.md)  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [軸オブジェクト (ADO MD)](../../../ado/reference/ado-md-api/axis-object-ado-md.md)   
  [Cell オブジェクト (ADO MD)](../../../ado/reference/ado-md-api/cell-object-ado-md.md)   
  [メンバー オブジェクト (ADO MD)](../../../ado/reference/ado-md-api/member-object-ado-md.md)   

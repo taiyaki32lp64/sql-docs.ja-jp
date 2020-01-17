@@ -20,15 +20,14 @@ helpviewer_keywords:
 - marking end of transactions [SQL Server]
 - COMMIT WORK statement
 ms.assetid: 4de76f33-399e-4912-a617-6eb6c560a058
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: fddfde3677b170db1a2503f61ca2f5bbf3b27991
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 00a313c6edfc9f8088d8cb19f62b51144fcc159b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47804090"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68140253"
 ---
 # <a name="commit-work-transact-sql"></a>COMMIT WORK (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]

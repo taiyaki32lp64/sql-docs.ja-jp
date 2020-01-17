@@ -17,11 +17,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: f9323b5d28c0b41b56f4b6fb78c39d8bfacf0ba8
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52781034"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62721320"
 ---
 # <a name="errors-and-events-reference-replication"></a>エラーとイベントのリファレンス (レプリケーション)
   ここでは、レプリケーションに関連するさまざまなエラーの原因と解決方法について説明します。  
@@ -76,7 +76,7 @@ ms.locfileid: "52781034"
 |MSSQL_ENG021642。 「 [Troubleshooting Oracle Publishers](non-sql/troubleshooting-oracle-publishers.md)」を参照してください。|異種パブリッシャーにはリンク サーバーが必要です。 リンク サーバー '%s' は既に存在します。 リンク サーバーを削除するか、または別のパブリッシャー名を選択してください。|  
 |MSSQL_ENG021663。 「 [Troubleshooting Oracle Publishers](non-sql/troubleshooting-oracle-publishers.md)」を参照してください。|ソース テーブル [%s].[%s] に有効な主キーが見つかりません。|  
 |MSSQL_ENG021684。 「 [Troubleshooting Oracle Publishers](non-sql/troubleshooting-oracle-publishers.md)」を参照してください。|Oracle パブリッシャー '%s' の管理者ログインに関連付けられた権限が不十分です。|  
-|[MSSQL_ENG021797](mssql-eng021797.md)|'%s' は、形式で有効な Windows ログインである必要があります。'Machine \login' または 'domain \login'。 '%s' については、マニュアルを参照してください。|  
+|[MSSQL_ENG021797](mssql-eng021797.md)|'%s' は、形式で有効な Windows ログインである必要があります。有効な Windows ログインを指定してください。 '%s' については、マニュアルを参照してください。|  
 |[MSSQL_ENG021798](mssql-eng021798.md)|続行する前に、'%s' エージェント ジョブを '%s' 経由で追加してください。 '%s' については、マニュアルを参照してください。|  
 |[MSSQL_REPL020011](mssql-repl020011.md)|プロセスは、'%1' を '%2' で実行できませんでした。|  
 |[MSSQL_REPL027056](mssql-repl027056.md)|マージ プロセスが、'%1' で生成履歴を変更できませんでした。 トラブルシューティングを行うには、詳細な履歴ログとの同期を再開して、書き込み先の出力ファイルを指定してください。|  

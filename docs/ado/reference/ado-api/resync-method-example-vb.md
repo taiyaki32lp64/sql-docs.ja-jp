@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: ab95315c-fe15-458c-9e0c-937ae5596592
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 0ddcc484c389025a8c4a22ef43d0a46c4f53cdba
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: f8ad898c7a02a46b12c546ae11b2387f8da0479e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47630810"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67917156"
 ---
 # <a name="resync-method-example-vb"></a>Resync メソッドの例 (VB)
 この例では、[再同期](../../../ado/reference/ado-api/resync-method.md)静的レコード セット内のデータを更新する方法。  
@@ -104,6 +103,6 @@ End Sub
 'EndResyncVB  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [RecordSet オブジェクト (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)   
  [Resync メソッド](../../../ado/reference/ado-api/resync-method.md)

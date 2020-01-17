@@ -8,15 +8,15 @@ ms.topic: conceptual
 helpviewer_keywords:
 - MultiPoint geometry subtype [SQL Server]
 ms.assetid: 2aaab211-3aba-4dbd-90b7-095d997b1f62
-author: douglaslMS
-ms.author: douglasl
+author: MladjoA
+ms.author: mlandzic
 manager: craigg
-ms.openlocfilehash: 36c0268ef87eb4cd9996744f9ff0015bf499a9a2
-ms.sourcegitcommit: 87f29b23d5ab174248dab5d558830eeca2a6a0a4
+ms.openlocfilehash: c06ed0be91d64e02f30d6ef4fbebb68e3b9a1272
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "51018547"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66014166"
 ---
 # <a name="multipoint"></a>MultiPoint
   `MultiPoint` は、0 個以上のポイントのコレクションです。 `MultiPoint` インスタンスの境界は空になります。  

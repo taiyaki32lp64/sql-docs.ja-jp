@@ -1,6 +1,7 @@
 ---
-title: トランザクション レプリケーションの更新可能なサブスクリプション | Microsoft Docs
-ms.custom: ''
+title: 更新可能なサブスクリプション (トランザクション)
+description: SQL Server のトランザクション レプリケーションで使用できる、更新可能なサブスクリプション機能について説明します。
+ms.custom: seo-lt-2019
 ms.date: 07/21/2016
 ms.prod: sql
 ms.prod_service: database-engine
@@ -17,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: 8eec95cb-3a11-436e-bcee-bdcd05aa5c5a
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: a8d607e528164e71d1e771d497ff7660cb7ecf66
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: 7baa131caa531038d8764c070ebd00ba44147c54
+ms.sourcegitcommit: 02d44167a1ee025ba925a6fefadeea966912954c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54132992"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75321440"
 ---
 # <a name="updatable-subscriptions---for-transactional-replication"></a>トランザクション レプリケーションの更新可能なサブスクリプション
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -42,9 +42,9 @@ ms.locfileid: "54132992"
   
  パブリケーションの新規作成ウィザードで更新可能なサブスクリプションによるトランザクション パブリケーションを作成する場合は、即時更新およびキュー更新の両方が有効になります。 ストアド プロシージャによるパブリケーションを作成する場合は、どちらか一方または両方のオプションを有効にすることができます。 パブリケーションに対してサブスクリプションを作成する場合は、使用する更新モードを指定します。 必要に応じて、更新モードを切り替えることができます。 詳細については、以下の「更新モードの切り替え」を参照してください。  
   
- トランザクション パブリケーションの更新可能なサブスクリプションを有効にするには、「 [トランザクション パブリケーションの更新可能なサブスクリプションの有効化](../../../relational-databases/replication/publish/enable-updating-subscriptions-for-transactional-publications.md)」をご覧ください。  
+ トランザクション パブリケーションの更新可能なサブスクリプションを有効にするには、「[トランザクション パブリケーションの更新可能なサブスクリプションの有効化](../../../relational-databases/replication/publish/enable-updating-subscriptions-for-transactional-publications.md)」をご覧ください。  
   
- トランザクション パブリケーションの更新可能なサブスクリプションを作成するには、「[トランザクション パブリケーションに対して更新可能なサブスクリプションを作成する (Management Studio)](../../../relational-databases/replication/publish/create-an-updatable-subscription-to-a-transactional-publication.md)」 (トランザクション レプリケーションに更新可能なサブスクリプションを作成する (Management Studio)) を参照してください。 
+ トランザクション パブリケーションの更新可能なサブスクリプションを作成するには、「[トランザクション パブリケーションに対して更新可能なサブスクリプションを作成する (Management Studio)](../../../relational-databases/replication/publish/create-an-updatable-subscription-to-a-transactional-publication.md)」 を参照してください。 
   
 ## <a name="switching-between-update-modes"></a>更新モードの切り替え  
  更新可能なサブスクリプションを使用する場合に、サブスクリプションに 1 つの更新モードを指定し、アプリケーションで別の更新モードが必要な場合はそちらに切り替えるように指定できます。 たとえば、サブスクリプションで即時更新を使用するが、システム障害でネットワークに接続できなくなった場合には、キュー更新に切り替えるように指定することができます。  
@@ -83,7 +83,7 @@ ms.locfileid: "54132992"
   
 -   **text**、 **ntext** または **image** 値は、レプリケーションの変更の追跡トリガー内で挿入または削除されたテーブルから読み取ることができないため、サブスクライバーはこれらを更新または挿入できません。 同様に、 **WRITETEXT** や **UPDATETEXT** を使用すると、サブスクライバーは **text** 値や **image** 値を更新したり挿入したりすることができません。これらのデータはパブリッシャーによって上書きされるからです。 ただし、 **text** 列と **image** 列を別々のテーブルに分けて、トランザクション内で 2 つのテーブルを変更することはできます。  
   
-     サブスクライバーで大きなオブジェクト更新するには、 **text**、 **ntext**、 **image** のデータ型の代わりに、 **varchar(max)**、 **nvarchar(max)**、 **varbinary(max)** のデータ型をそれぞれに使用します。  
+     サブスクライバーで大きなオブジェクト更新するには、 **text**、 **ntext**、 **image** のデータ型の代わりに、 **varchar(max)** 、 **nvarchar(max)** 、 **varbinary(max)** のデータ型をそれぞれに使用します。  
   
 -   一意なキー (主キーを含む) に対する更新によって重複が生じる場合 (たとえば、 `UPDATE <column> SET <column> =<column>+1` などの形式による更新)、その更新を行うことはできません。その更新は一意性違反のため拒否されます。 これは、サブスクライバーで行われた SET 更新が、レプリケーションによって、影響される各行に対する個々の **UPDATE** ステートメントとして反映されるからです。  
   

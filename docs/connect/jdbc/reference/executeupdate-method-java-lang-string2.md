@@ -1,5 +1,5 @@
 ---
-title: executeUpdate (java.lang.String) メソッド |Microsoft Docs
+title: executeUpdate メソッド (java.lang.String) | Microsoft Docs
 ms.custom: ''
 ms.date: 02/07/2017
 ms.prod: sql
@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: 91ecb1cd-001d-4ac9-9ae8-5db05c3c2959
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: d3a976f9e953729be7b9f993139a7603fe8444cc
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 04b3bdcd2b495513500d07583fadc910fe9c13a9
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47804856"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67954682"
 ---
 # <a name="executeupdate-method-javalangstring"></a>executeUpdate (java.lang.String) メソッド
 
@@ -36,7 +35,7 @@ public final int executeUpdate(java.lang.String sql)
 #### <a name="parameters"></a>パラメーター
 *sql*
 
-**文字列**SQL ステートメントを格納しています。
+SQL ステートメントを含む**文字列**です。
 
 ## <a name="return-value"></a>戻り値
 影響を受けた行数を示す **int** です。DDL ステートメントを使用している場合は 0 です。

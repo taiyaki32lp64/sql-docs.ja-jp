@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 881a34de-8461-4811-8c62-322bf7226bed
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: d14cb0b60074ce7cd2c11c80817ec5f0043651a0
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: 6a95082cd732b644105c14c4ba598f859f48456e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53209431"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68014699"
 ---
 # <a name="monitor-availability-groups-transact-sql"></a>可用性グループの監視 (Transact-SQL)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -32,25 +31,6 @@ ms.locfileid: "53209431"
 > [!TIP]  
 >  これらのビューの多くは ID 列を使用して結合可能であり、1 つのクエリで複数のビューの情報を取得できます。  
   
- **このトピックの内容**  
-  
--   [権限](#Permissions)  
-  
--   **Transact-SQL を使用して監視できるもの:**  
-  
-     [サーバー インスタンス上の Always On 可用性グループ機能](#AoAgFeatureOnSI)  
-  
-     [WSFC クラスターの可用性グループ](#WSFC)  
-  
-     [可用性グループ](#AvGroups)  
-  
-     [可用性レプリカ](#AvReplicas)  
-  
-     [可用性データベース](#AvDbs)  
-  
-     [可用性グループ リスナー](#AGlisteners)  
-  
--   [関連タスク](#RelatedTasks)  
   
 ##  <a name="Permissions"></a> Permissions  
  [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] カタログ ビューでは、サーバー インスタンスに対する VIEW ANY DEFINITION 権限が必要です。 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 動的管理ビューでは、サーバーに対する VIEW SERVER STATE 権限が必要です。  
@@ -189,7 +169,7 @@ ms.locfileid: "53209431"
 >  プライマリ レプリカの場所は、可用性グループに対して権限を持つソースです。  
   
 > [!NOTE]  
->  可用性データベースの [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] パフォーマンス カウンター ( **SQLServer:Database Replica** パフォーマンス オブジェクト) の詳細については、「 [SQL Server、データベース レプリカ](../../../relational-databases/performance-monitor/sql-server-database-replica.md)」を参照してください。 また、可用性データベースのトランザクション ログ アクティビティを監視するには、**SQLServer:Databases** パフォーマンス オブジェクトのカウンター、**Log Flush Write Time (ms)**、**Log Flushes/sec**、**Log Pool Cache Misses/sec**、**Log Pool Disk Reads/sec**、**Log Pool Requests/sec** です。詳しくは、「 [SQL Server, Databases Object](../../../relational-databases/performance-monitor/sql-server-databases-object.md)」をご覧ください。  
+>  可用性データベースの [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] パフォーマンス カウンター ( **SQLServer:Database Replica** パフォーマンス オブジェクト) の詳細については、「 [SQL Server、データベース レプリカ](../../../relational-databases/performance-monitor/sql-server-database-replica.md)」を参照してください。 また、可用性データベースのトランザクション ログ アクティビティを監視するには、**SQLServer:Databases** パフォーマンス オブジェクトのカウンター、**Log Flush Write Time (ms)** 、**Log Flushes/sec**、**Log Pool Cache Misses/sec**、**Log Pool Disk Reads/sec**、**Log Pool Requests/sec** です。詳しくは、「 [SQL Server, Databases Object](../../../relational-databases/performance-monitor/sql-server-databases-object.md)」をご覧ください。  
   
 ##  <a name="AGlisteners"></a> 可用性グループ リスナーの監視  
  WSFC クラスターのサブネット上の可用性グループ リスナーを監視するには、次のビューを使用します。  

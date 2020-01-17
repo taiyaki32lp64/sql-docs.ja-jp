@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 5ef1fbf7-c03d-4488-9ab2-64aae296fa4f
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 78328463828b3c4a93b72ddc8790df13677dee81
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: 751f99cad3a2064dce366a90905918075cb697a7
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54125372"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68056481"
 ---
 # <a name="spdropmergearticle-transact-sql"></a>sp_dropmergearticle (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -44,34 +43,27 @@ sp_dropmergearticle [ @publication= ] 'publication'
 ```  
   
 ## <a name="arguments"></a>引数  
- [  **@publication=**] **'**_パブリケーション_**'**  
- アーティクルを削除するパブリケーションの名前を指定します。 *パブリケーション*は**sysname**、既定値はありません。  
+`[ @publication = ] 'publication'` アーティクルを削除するパブリケーションの名前です。 *パブリケーション*は**sysname**、既定値はありません。  
   
- [  **@article=**] **'**_記事_**'**  
- 指定したパブリケーションから削除するアーティクルの名前を指定します。 *記事*は**sysname**、既定値はありません。 場合**すべて**、指定したマージ パブリケーションのすべての既存のアーティクルを削除します。 場合でも*記事*は**すべて**パブリケーションを削除しなければなりませんとは別に、アーティクルからです。  
+`[ @article = ] 'article'` 指定したパブリケーションから削除するアーティクルの名前です。 *記事*は**sysname**、既定値はありません。 場合**すべて**、指定したマージ パブリケーションのすべての既存のアーティクルを削除します。 場合でも*記事*は**すべて**パブリケーションを削除しなければなりませんとは別に、アーティクルからです。  
   
- [  **@ignore_distributor=**] *ignore_distributor*  
- ディストリビューターに接続せずに、このストアド プロシージャを実行するかどうかを指定します。 *ignore_distributor*は**ビット**、既定値は**0**します。  
+`[ @ignore_distributor = ] ignore_distributor` ディストリビューターに接続しなくてもこのストアド プロシージャを実行するかどうかを示します。 *ignore_distributor*は**ビット**、既定値は**0**します。  
   
- [  **@reserved=**]*予約済み*  
- 将来の使用に備えて予約されています。 *予約済み*は**nvarchar (20)**、既定値は NULL です。  
+`[ @reserved = ] reserved` 将来使用するために予約されています。 *予約済み*は**nvarchar (20)** 、既定値は NULL です。  
   
- [  **@force_invalidate_snapshot=**]*更によって*  
- スナップショットを無効にする機能を有効または無効にします。 *更によって*は、**ビット**、既定値は、 **0**します。  
+`[ @force_invalidate_snapshot = ] force_invalidate_snapshot` 有効またはスナップショットを無効にする機能を無効にします。 *更によって*は、**ビット**、既定値は、 **0**します。  
   
  **0**スナップショットが無効であることをマージ アーティクルへの変更が発生しないことを指定します。  
   
  **1**スナップショットが無効であることをマージ アーティクルへの変更が生じる場合、値があるかどうかと**1**新しいスナップショットを作成する権限が与えられます。  
   
- [  **@force_reinit_subscription =** ]*更によって*  
- アーティクルを削除したとき、既存のサブスクリプションが必ず再初期化されるようにします。 *更によって*は、**ビット**、既定値は**0**します。  
+`[ @force_reinit_subscription = ] force_reinit_subscription` 確認、アーティクルを削除すると、既存のサブスクリプションの再初期化が必要があります。 *更によって*は、**ビット**、既定値は**0**します。  
   
  **0**アーティクルを削除するも、サブスクリプションを再初期化するのには発生しませんを指定します。  
   
  **1**記事により、再初期化するために既存のサブスクリプションを削除すると、サブスクリプションを再初期化が発生するの許可します。  
   
- [  **@ignore_merge_metadata=** ] *ignore_merge_metadata*  
- 内部使用のみです。  
+`[ @ignore_merge_metadata = ] ignore_merge_metadata` 内部でのみ使用します。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  **0** (成功) または**1** (失敗)  

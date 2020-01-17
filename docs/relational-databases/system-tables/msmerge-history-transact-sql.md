@@ -1,5 +1,5 @@
 ---
-title: MSmerge_history (TRANSACT-SQL) |Microsoft Docs
+title: MSmerge_history (Transact-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -17,30 +17,29 @@ helpviewer_keywords:
 ms.assetid: 936195ad-ca07-41a8-a1a0-6699b6e63403
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 167cd23ae60ff1eb33f6384dab03cb1c473a8ed4
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 7de3f8de87804facf6670cf0dd261464143c2aeb
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52791674"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68017692"
 ---
-# <a name="msmergehistory-transact-sql"></a>MSmerge_history (Transact-SQL)
+# <a name="msmerge_history-transact-sql"></a>MSmerge_history (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  **MSmerge_history**テーブルに履歴行以前のマージ エージェント ジョブ セッションの結果の詳細な説明にはが含まれています。 このテーブルは、エージェントの出力行ごとに 1 行のデータを保持します。 このテーブルは、ディストリビューション データベースと各サブスクリプション データベースで使用されます。 ディストリビューション データベースでは、ディストリビューターを使用するすべてのマージ パブリケーションとマージ サブスクリプションの履歴がこのテーブルに格納されます。 各サブスクリプション データベースでは、サブスクライバーがサブスクライブされるパブリケーションの履歴がこのテーブルに格納されます。  
+  **MSmerge_history**テーブルに履歴行以前のマージ エージェント ジョブ セッションの結果の詳細な説明にはが含まれています。 このテーブルには、エージェントの出力の行ごとに 1 つの行が含まれています。 このテーブルは、ディストリビューション データベースと各サブスクリプション データベースで使用されます。 ディストリビューション データベースでは、すべてのマージ パブリケーションおよびディストリビューターを使用するサブスクリプションの履歴が含まれます。 各サブスクリプション データベースでは、サブスクライバーでサブスクライブしているパブリケーションの履歴が含まれます。  
   
 |列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
-|**session_id**|**int**|マージ エージェント ジョブの ID です。|  
-|**agent_id**|**int**|マージ エージェントの ID です。|  
+|**session_id**|**int**|マージ エージェント ジョブの ID。|  
+|**agent_id**|**int**|マージ エージェントの ID。|  
 |**comments**|**nvarchar (255)**|メッセージ テキストです。|  
 |**error_id**|**int**|エラーの ID、 [MSrepl_errors](../../relational-databases/system-tables/msrepl-errors-transact-sql.md)システム テーブル。|  
 |**timestamp**|**timestamp**|このテーブルのタイムスタンプ列です。|  
 |**updatable_row**|**bit**|設定**1**履歴行を上書きできる場合。|  
   
-## <a name="see-also"></a>参照  
- [レプリケーション テーブル &#40; です。TRANSACT-SQL と &#41; です。](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
+## <a name="see-also"></a>関連項目  
+ [レプリケーション テーブル &#40;Transact-SQL&#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
  [レプリケーション ビュー &#40;Transact-SQL&#41;](../../relational-databases/system-views/replication-views-transact-sql.md)  
   
   

@@ -17,14 +17,13 @@ helpviewer_keywords:
 ms.assetid: 754a003f-fe51-4d10-975a-f6b8c04ebd35
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 0e09e749cc76a5f2790a2cd885e09631e66e42bc
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 03dbb54a41ef319b7a44185cee00d5de7d46b126
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47764624"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67909542"
 ---
 # <a name="sortintempdb-option-for-indexes"></a>インデックスの SORT_IN_TEMPDB オプション
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]

@@ -4,22 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords:
 - containers [Integration Services], logs
 - logs [Integration Services], containers
 ms.assetid: e5fdbbcb-94ca-4912-aa7c-0d89cebbd308
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: f3c22ca7f44844b434dc74e881830363a79475ee
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: b2adc326ef2e0bb593b0532a51a9a677821ae0e2
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48146392"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66060602"
 ---
 # <a name="configure-logging-by-using-a-saved-configuration-file"></a>保存されている構成ファイルを使用してログ記録を構成する
   この手順では、以前に保存したログ構成ファイルを読み込んでパッケージ内の新しいコンテナーのログ記録を構成する方法について説明します。  

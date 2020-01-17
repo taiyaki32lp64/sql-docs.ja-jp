@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 538c93cf-c5bb-43d5-b758-186d9fb00c19
 author: Shamikg
 ms.author: Shamikg
-manager: craigg
-ms.openlocfilehash: a446fd4ce116ee19aa8b38d1ae6d8213e35c16e1
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: e6918dac33ce0e69116f713cb8906b2774d00575
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52392476"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68084547"
 ---
 # <a name="project-settings-conversion-db2tosql"></a>プロジェクトの設定 (変換) (DB2ToSQL)
 [変換] ページ、**プロジェクト設定** ダイアログ ボックスには、SSMA が DB2 構文に変換する方法をカスタマイズする設定が含まれています。[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]構文。  
@@ -99,7 +98,7 @@ SSMA ROWNUM 式が変換されるときに、TOP 句の後に、式に式を変�
   
 変換モードを選択すると、**モード**SSMA ボックスには、次の設定が適用されます。  
   
-**既定/オプティミスティック/フル モード:** はい  
+**既定/オプティミスティック/フル モード:** [はい]  
   
 ### <a name="convert-count-function-to-countbig"></a>COUNT 関数を COUNT_BIG に変換します。  
 かどうか、COUNT 関数が返す値の 2,147, 483,647 を超える可能性がありますです 2<sup>31</sup>-1、COUNT_BIG 関数に変換する必要があります。  
@@ -110,7 +109,7 @@ SSMA ROWNUM 式が変換されるときに、TOP 句の後に、式に式を変�
   
 変換モードを選択すると、**モード**SSMA ボックスには、次の設定が適用されます。  
   
-**既定/フル モード:** はい  
+**既定/フル モード:** [はい]  
   
 **オプティミスティック モード:** いいえ  
   
@@ -198,7 +197,7 @@ SSMA は、分離の変数に、特定の構造を持つ XML 変数に、DB2 の
   
 変換モードを選択すると、**モード**SSMA ボックスには、次の設定が適用されます。  
   
-**既定/オプティミスティック/フル モード:** はい  
+**既定/オプティミスティック/フル モード:** [はい]  
   
 ### <a name="convert-substr-function-calls-to-substring-function-calls"></a>SUBSTRING 関数の呼び出しに SUBSTR 関数呼び出しに変換します。  
 SSMA は DB2 SUBSTR 関数の呼び出しに変換できる[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]**部分文字列**関数呼び出しのパラメーターの数によって異なります。 SSMA は SUBSTR 関数の呼び出しを変換できない、またはパラメーターの数がサポートされていません、SSMA で SUBSTR 関数の呼び出しがカスタムの SSMA 関数呼び出しに変換されます。  
@@ -260,7 +259,7 @@ SSMA は、DB2 TO_CHAR(date, format) を sysdb データベースからのプロ
   
 -   選択した場合**を使用して TO_CHAR_DATE 関数**、SSMA TO_CHAR_DATE 関数を使用して英語の言語の変換のために、TO_CHAR (日付、形式) を変換します。  
   
--   選択した場合**を使用して TO_CHAR_DATE_LS 関数 (NLS ケア)**、SSMA TO_CHAR_DATE_LS 関数を使用してセッションの言語の変換のために、TO_CHAR (日付、形式) を変換します  
+-   選択した場合**を使用して TO_CHAR_DATE_LS 関数 (NLS ケア)** 、SSMA TO_CHAR_DATE_LS 関数を使用してセッションの言語の変換のために、TO_CHAR (日付、形式) を変換します  
   
 変換モードを選択すると、**モード**SSMA ボックスには、次の設定が適用されます。  
   
@@ -280,7 +279,7 @@ SSMA は、DB2 トランザクション処理のステートメントに変換�
   
 変換モードを選択すると、**モード**SSMA ボックスには、次の設定が適用されます。  
   
-**既定/オプティミスティック/フル モード:** はい  
+**既定/オプティミスティック/フル モード:** [はい]  
   
 ### <a name="emulate-db2-null-behavior-in-order-by-clauses"></a>ORDER BY 句での DB2 null の動作をエミュレートします。  
 NULL 値が異なる方法で順序付けられた[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]および DB2:  
@@ -301,7 +300,7 @@ SSMA は、NULL 値をチェックして、DB2 の ORDER BY の動作をエミ�
   
 **既定/オプティミスティック モード:** いいえ  
   
-**フル モード:** はい  
+**フル モード:** [はい]  
   
 ### <a name="emulate-row-count-exceptions-in-select"></a>SELECT で行カウントの例外をエミュレートします。  
 INTO 句を伴う SELECT ステートメントは、行を返さない、DB2 NO_DATA_FOUND 例外が発生します。 ステートメントには、2 つ以上の行が返されます、TOO_MANY_ROWS 例外が発生します。 変換後のステートメントで[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]行の数が 1 つの異なる場合、例外は発生しません。  
@@ -312,7 +311,7 @@ INTO 句を伴う SELECT ステートメントは、行を返さない、DB2 NO_
   
 変換モードを選択すると、**モード**SSMA ボックスには、次の設定が適用されます。  
   
-**既定/オプティミスティック/フル モード:** はい  
+**既定/オプティミスティック/フル モード:** [はい]  
   
 ### <a name="generate-error-for-dbmssqlparse"></a>DBMS_SQL のエラーを生成します。解析  
   
@@ -322,7 +321,7 @@ INTO 句を伴う SELECT ステートメントは、行を返さない、DB2 NO_
   
 変換モードを選択すると、**モード**SSMA ボックスには、次の設定が適用されます。  
   
-**既定/オプティミスティック/フル モード:**[エラー]  
+**既定/オプティミスティック/フル モード:** Error  
   
 ### <a name="generate-rowid-column"></a>ROWID の列を生成します。  
 SSMA が内のテーブルを作成するときに[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]ROWID 列を作成できます。 データが移行されると、各行は、newid() 関数によって生成される新しい UNIQUEIDENTIFIER 値を取得します。  
@@ -340,14 +339,14 @@ SSMA が内のテーブルを作成するときに[!INCLUDE[ssNoVersion](../../i
   
 **既定/オプティミスティック モード:** トリガーを使用してテーブルの列を ROWID 追加します。  
   
-**フル モード:** はい  
+**フル モード:** [はい]  
   
 ### <a name="generate-unique-index-on-rowid-column"></a>ROWID の列に一意のインデックスを生成します。  
 SSMA に ROWID が生成された列に一意のインデックス列が生成されるかどうかを指定します。 一意のインデックスが生成されるオプションが [はい] に設定されている場合、"NO"に設定されている場合、一意のインデックスは、ROWID 列は生成されません。  
   
 変換モードを選択すると、**モード**SSMA ボックスには、次の設定が適用されます。  
   
-**既定/オプティミスティック/フル モード:** はい  
+**既定/オプティミスティック/フル モード:** [はい]  
   
 ### <a name="local-modules-conversion"></a>ローカル モジュールの変換  
 入れ子になった DB2 サブプログラム (スタンドアロンのストアド プロシージャまたは関数で宣言) 変換の種類を定義します。  
@@ -374,7 +373,7 @@ ISNULL のステートメントは、DB2 の動作をエミュレートする置
   
 -   YES  
   
--   いいえ  
+-   NO  
   
 変換モードを選択すると、**モード**SSMA ボックスには、次の設定が適用されます。  
   
@@ -387,7 +386,7 @@ ISNULL のステートメントは、DB2 の動作をエミュレートする CO
   
 -   YES  
   
--   いいえ  
+-   NO  
   
 変換モードを選択すると、**モード**SSMA ボックスには、次の設定が適用されます。  
   
@@ -440,7 +439,7 @@ DB2 は、すぐに、挿入された値を取得する方法として、RETURNI
   
 変換モードを選択すると、**モード**SSMA ボックスには、次の設定が適用されます。  
   
-**既定/オプティミスティック/フル モード:** はい  
+**既定/オプティミスティック/フル モード:** [はい]  
   
 ### <a name="convert-returning-clause-in-update-statement-to-output"></a>RETURNING 句で UPDATE ステートメントを出力に変換します。  
 DB2 は、すぐに更新された値を取得する方法として、RETURNING 句を提供します。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] OUTPUT 句と共に、その機能を提供します。  
@@ -451,7 +450,7 @@ DB2 は、すぐに更新された値を取得する方法として、RETURNING 
   
 変換モードを選択すると、**モード**SSMA ボックスには、次の設定が適用されます。  
   
-**既定/オプティミスティック/フル モード:** はい  
+**既定/オプティミスティック/フル モード:** [はい]  
   
 ## <a name="sequence-conversion"></a>シーケンスの変換  
   
@@ -479,6 +478,6 @@ SSMA では、SSMA シーケンス エミュレーター DB2 シーケンスに�
   
 -   選択した場合**いいえ**SSMA は、変換後のトリガーの外部エラー CURRVAL をシーケンス処理するすべての参照としてマークされます。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
 [ユーザー インターフェイス リファレンス&#40;DB2ToSQL&#41;](../../ssma/db2/user-interface-reference-db2tosql.md)  
   

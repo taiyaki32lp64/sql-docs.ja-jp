@@ -13,15 +13,15 @@ helpviewer_keywords:
 - data profiling
 - profiling data
 ms.assetid: 248ce233-4342-42c5-bf26-f4387ea152cf
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 546b52e8e0cc944e279e976bc4709d9fcee076f7
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 0a895fd1dc3fe51296a110902fb1dd4c27d3d5a1
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53369964"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62831888"
 ---
 # <a name="data-profiling-task"></a>データ プロファイル タスク
   データ プロファイル タスクでは、データ ソースについて詳細に理解し、解決する必要があるデータの問題を特定するために役立つさまざまなプロファイルが計算されます。  
@@ -133,7 +133,7 @@ ms.locfileid: "53369964"
  データ プロファイル タスクを構成するには、 **[データ プロファイル タスク エディター]** を使用します。 このエディターには、次の 2 つのページがあります。  
   
  [[全般] ページ](../general-page-of-integration-services-designers-options.md)  
- **[全般]** ページでは、出力ファイルまたは変数を指定します。 また、**[クイック プロファイル]** を選択し、既定の設定を使用してプロファイルを計算するようにタスクをすばやく構成することもできます。 詳細については、「 [単一テーブル クイック プロファイル フォーム &#40;データ プロファイル タスク&#41;](data-profiling-task.md)」を参照してください。  
+ **[全般]** ページでは、出力ファイルまたは変数を指定します。 また、 **[クイック プロファイル]** を選択し、既定の設定を使用してプロファイルを計算するようにタスクをすばやく構成することもできます。 詳細については、「 [単一テーブル クイック プロファイル フォーム &#40;データ プロファイル タスク&#41;](data-profiling-task.md)」を参照してください。  
   
  [[プロファイル要求] ページ](data-profiling-task-editor-profile-requests-page.md)  
  **[プロファイル要求]** ページでは、データ ソースを指定して、計算するデータ プロファイルを選択および構成します。 構成できる各種プロファイルの詳細については、次のトピックを参照してください。  

@@ -12,13 +12,12 @@ dev_langs:
 ms.assetid: 100d5670-e2d8-425c-a927-2b4dfe453e28
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 2a236ddafddabeb7b22c2a2ffba89dbe1c034bc0
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 0c220523a431e8387601307709aa42bd9d4eeb02
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56039453"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68113758"
 ---
 # <a name="date-and-time-types"></a>日付/時刻型
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -27,7 +26,7 @@ ms.locfileid: "56039453"
   
 ## <a name="in-this-section"></a>このセクションの内容
 [date &#40;Transact-SQL&#41;](../../t-sql/data-types/date-transact-sql.md)  
-[datetime (&) #40 です。TRANSACT-SQL と #41 です。](../../t-sql/data-types/datetime-transact-sql.md)  
+[datetime &#40;Transact-SQL&#41;](../../t-sql/data-types/datetime-transact-sql.md)  
 [datetime2 &#40;Transact-SQL&#41;](../../t-sql/data-types/datetime2-transact-sql.md)  
 [datetimeoffset &#40;Transact-SQL&#41;](../../t-sql/data-types/datetimeoffset-transact-sql.md)  
 [smalldatetime &#40;Transact-SQL&#41;](../../t-sql/data-types/smalldatetime-transact-sql.md)  

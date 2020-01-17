@@ -1,6 +1,5 @@
 ---
-title: 以前のバージョンの SQL Server からのネイティブ形式データおよび文字形式データのインポート | Microsoft Docs
-ms.custom: ''
+title: 以前のバージョンの SQL Server からのネイティブ形式データおよび文字形式データのインポート
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
@@ -13,16 +12,16 @@ helpviewer_keywords:
 - data formats [SQL Server], earlier versions
 - previous versions [SQL Server], import and export data formats
 ms.assetid: e644696f-9017-428e-a5b3-d445d1c630b3
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
+author: MashaMSFT
+ms.author: mathoma
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 5b6add721ab292799b0de72aff3dc4e8d0cd218f
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.custom: seo-lt-2019
+ms.openlocfilehash: ae89c263008c035dc7cd8e0050b50a5cdd9cc705
+ms.sourcegitcommit: d00ba0b4696ef7dee31cd0b293a3f54a1beaf458
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52504310"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "74055997"
 ---
 # <a name="import-native-and-character-format-data-from-earlier-versions-of-sql-server"></a>以前のバージョンの SQL Server からのネイティブ形式データおよび文字形式データのインポート
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -50,15 +49,15 @@ ms.locfileid: "52504310"
 |XML|**ntext**|**ntext**|**ntext**|  
 |UDT**|**image**|**image**|**image**|  
   
- * この型はネイティブでサポートされています。  
+ \* この型はネイティブでサポートされています。  
   
  ** UDT はユーザー定義型を示します。  
   
 ## <a name="exporting-using--v-80"></a>-V 80 を使用したエクスポート  
- **-V80** スイッチを使用してデータを一括エクスポートする場合、**nvarchar(max)**、**varchar(max)**、**varbinary(max)**、型のデータ、XML データ、およびネイティブ モードの UDT データは、**以降のバージョンの既定である 8 バイトのプレフィックスではなく、** text **、** image **、および** ntext[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 型のデータと同様に、4 バイトのプレフィックス付きで格納されます。  
+ **-V80** スイッチを使用してデータを一括エクスポートする場合、**nvarchar(max)** 、**varchar(max)** 、**varbinary(max)** 、型のデータ、XML データ、およびネイティブ モードの UDT データは、**以降のバージョンの既定である 8 バイトのプレフィックスではなく、** text **、** image **、および** ntext[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 型のデータと同様に、4 バイトのプレフィックス付きで格納されます。  
   
 ## <a name="copying-date-values"></a>日付値のコピー  
- **bcp** は ODBC 一括コピー API を使用します。 したがって、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]、 **bcp** に日付値をインポートするには、ODBC の日付形式 (*yyyy-mm-dd hh:mm:ss*[*.f...*]) を使用します。  
+ **bcp** は ODBC 一括コピー API を使用します。 したがって、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]、 **bcp** に日付値をインポートするには、ODBC の日付形式 (*yyyy-mm-dd hh:mm:ss*[ *.f...* ]) を使用します。  
   
  **bcp** コマンドでは、 **datetime** 型と **smalldatetime** 型の値に使用される ODBC の既定の形式を使用して、文字形式のデータ ファイルがエクスポートされます。 たとえば、日付 **が含まれた** datetime `12 Aug 1998` 型の列は、文字列 `1998-08-12 00:00:00.000`としてデータ ファイルに一括コピーされます。  
   

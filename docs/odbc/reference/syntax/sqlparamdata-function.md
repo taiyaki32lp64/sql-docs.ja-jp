@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: 68fe010d-9539-4e5b-a260-c8d32423b1db
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: ec0038e0ec6c87dba403bbe62441815dfa6d0251
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: 41cb718b5425315856fe4db27658cce873f90e6b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53205181"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68018944"
 ---
 # <a name="sqlparamdata-function"></a>SQLParamData 関数
 **準拠**  
@@ -36,7 +35,7 @@ ms.locfileid: "53205181"
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
   
 SQLRETURN SQLParamData(  
      SQLHSTMT       StatementHandle,  

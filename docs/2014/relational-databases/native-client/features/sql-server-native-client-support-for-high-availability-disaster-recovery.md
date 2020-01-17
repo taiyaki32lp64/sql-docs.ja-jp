@@ -11,11 +11,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 4bd73d32a58e156a3ae8577d41bbdd4725f85656
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56040233"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68206642"
 ---
 # <a name="sql-server-native-client-support-for-high-availability-disaster-recovery"></a>SQL Server Native Client の HADR サポート
   このトピックでは、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] の [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] Native Client のサポート ([!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] で追加) について説明します。 詳細については[!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]を参照してください[可用性グループ リスナー、クライアント接続、およびアプリケーションのフェールオーバー &#40;SQL Server&#41;](../../../database-engine/listeners-client-connectivity-application-failover.md)、[作成し、可用性グループの構成&#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/creation-and-configuration-of-availability-groups-sql-server.md)、[フェールオーバー クラスタ リングと AlwaysOn 可用性グループ&#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/failover-clustering-and-always-on-availability-groups-sql-server.md)、および[アクティブなセカンダリ。読み取り可能なセカンダリ レプリカ (AlwaysOn 可用性グループ)](../../../database-engine/availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md)します。  
@@ -34,7 +34,7 @@ ms.locfileid: "56040233"
   
  接続文字列キーワードの詳細については、「[SQL Server Native Client での接続文字列キーワードの使用](../applications/using-connection-string-keywords-with-sql-server-native-client.md)」を参照してください。  
   
- 可用性グループ リスナーまたはフェールオーバー クラスター インスタンス以外に接続するときに `MultiSubnetFailover=Yes` を指定するとパフォーマンスが低下する可能性があるため、このような指定はサポートされていません。  
+ 接続先が可用性グループ リスナーでもフェールオーバー クラスター インスタンスでもないときに `MultiSubnetFailover=Yes` を指定すると、パフォーマンスが低下する可能性があるため、このような指定はサポートされません。  
   
  可用性グループまたはフェールオーバー クラスター インスタンス内のサーバーに接続する際には、次のガイドラインに従います。  
   
@@ -44,7 +44,7 @@ ms.locfileid: "56040233"
   
 -   64 個を超える数の IP アドレスが構成された [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] インスタンスに接続すると、接続エラーが発生します。  
   
--   `MultiSubnetFailover` 接続プロパティを使用するアプリケーションの動作は、次の認証の種類に影響されません:[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 認証、Kerberos 認証、Windows 認証。  
+-   使用するアプリケーションの動作、`MultiSubnetFailover`接続プロパティが認証の種類に基づく影響を受けません。[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 認証、Kerberos 認証、または Windows 認証。  
   
 -   `loginTimeout` の値を増やすことで、フェールオーバー時間に対応し、アプリケーションの接続試行回数を減らすことができます。  
   
@@ -54,32 +54,32 @@ ms.locfileid: "56040233"
   
 1.  セカンダリ レプリカの場所が、接続を許可するように構成されていない。  
   
-2.  アプリケーションで (以降で説明する) `ApplicationIntent=ReadWrite` が使用され、セカンダリ レプリカの場所が読み取り専用アクセス用に構成されている場合。  
+2.  アプリケーションに `ApplicationIntent=ReadWrite` (以降に解説します) が使用されているが、セカンダリ レプリカの場所が読み取り専用アクセスとして構成されている。  
   
- プライマリ レプリカが読み取り専用ワークロードを拒否するように構成されていて、接続文字列に `ApplicationIntent=ReadOnly` が含まれる場合、接続は失敗します。  
+ プライマリ レプリカが読み取り専用ワークロードを拒否するように構成されているとき、接続文字列に `ApplicationIntent=ReadOnly` が含まれていると、接続は失敗します。  
   
 ## <a name="upgrading-to-use-multi-subnet-clusters-from-database-mirroring"></a>データベース ミラーリングの使用からマルチサブネット クラスターの使用へのアップグレード  
  接続文字列に `MultiSubnetFailover` および `Failover_Partner` の接続キーワードが存在する場合、接続エラーが発生します。 また、`MultiSubnetFailover` が使用されているとき、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] から、データベース ミラーリング ペアに属していることを示すフェールオーバー パートナー応答が返された場合にも、エラーが発生します。  
   
- データベース ミラーリングを現在使用している [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client アプリケーションをマルチサブネットのシナリオにアップグレードする場合、`Failover_Partner` 接続プロパティを削除して `MultiSubnetFailover` に置き換え、それを `Yes` に設定し、接続文字列内のサーバー名を可用性グループ リスナーの名前に置き換えます。 接続文字列に `Failover_Partner` と `MultiSubnetFailover=Yes` が使用されている場合、ドライバーはエラーを生成します。 ただし、接続文字列に `Failover_Partner` と `MultiSubnetFailover=No` (または `ApplicationIntent=ReadWrite`) が使用されている場合、アプリケーションはデータベース ミラーリングを使用します。  
+ データベース ミラーリングを現在使用している [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client アプリケーションをマルチサブネットのシナリオにアップグレードする場合、`Failover_Partner` 接続プロパティを削除して `MultiSubnetFailover` に置き換え、それを `Yes` に設定し、接続文字列内のサーバー名を可用性グループ リスナーの名前に置き換えます。 接続文字列に `Failover_Partner` と `MultiSubnetFailover=Yes` が使用されている場合、ドライバーはエラーを生成します。 ただし、接続文字列で `Failover_Partner` および `MultiSubnetFailover=No` (または `ApplicationIntent=ReadWrite`) が使用されている場合、アプリケーションではデータベース ミラーリングが使用されます。  
   
  ドライバーは、可用性グループのプライマリ データベースでデータベース ミラーリングを使用する場合、エラーを返します`MultiSubnetFailover=Yes`は可用性グループ リスナーにはなく、プライマリ データベースに接続する接続文字列で使用します。  
   
 ## <a name="specifying-application-intent"></a>アプリケーション インテントの指定  
  `ApplicationIntent=ReadOnly` が指定されている場合、AlwaysOn が有効になっているデータベースにクライアントが接続するときに読み取りワークロードが要求されます。 サーバーは、接続時およびデータベース ステートメントの使用時にインテントを強制しますが、その対象は AlwaysOn 対応データベースのみです。  
   
- `ApplicationIntent` キーワードは、従来の読み取り専用データベースに対しては無効です。  
+ `ApplicationIntent` キーワードは、従来型の読み取り専用データベースに対しては動作しません。  
   
  対象の AlwaysOn データベースのワークロードの読み取りを許可または禁止することができます (これは、`ALLOW_CONNECTIONS`の句、`PRIMARY_ROLE`と`SECONDARY_ROLE`[!INCLUDE[tsql](../../../includes/tsql-md.md)]ステートメントです)。  
   
- 読み取り専用ルーティングを有効にするには、`ApplicationIntent` キーワードを使用します。  
+ `ApplicationIntent` キーワードを使用して、読み取り専用のルーティングを有効にします。  
   
 ## <a name="read-only-routing"></a>読み取り専用ルーティング  
  読み取り専用のルーティングは、データベースの読み取り専用レプリカを使用可能にする機能です。 読み取り専用のルーティングを有効にするには  
   
 1.  AlwaysOn 可用性グループ リスナーに接続する必要があります。  
   
-2.  `ApplicationIntent` 接続文字列キーワードが `ReadOnly` に設定されている。  
+2.  `ApplicationIntent` 接続文字列キーワードは `ReadOnly` に設定する必要があります。  
   
 3.  データベース管理者が可用性グループを構成し、読み取り専用のルーティングを有効にする必要があります。  
   
@@ -145,11 +145,11 @@ ms.locfileid: "56040233"
  `IDBProperties::SetProperties`  
  `ApplicationIntent` プロパティの値を設定するには、`IDBProperties::SetProperties` を呼び出します。このとき、引数として、"`SSPROP_INIT_APPLICATIONINTENT`" または "`ReadWrite`" を値として持つ `ReadOnly` プロパティを指定するか、"`DBPROP_INIT_PROVIDERSTRING`" または "`ApplicationIntent=ReadOnly`" を値として持つ `ApplicationIntent=ReadWrite` プロパティを指定します。  
   
- アプリケーション インテントは、**[データ リンク プロパティ]** ダイアログ ボックスの [すべて] タブの [アプリケーション インテントのプロパティ] フィールドで指定できます。  
+ アプリケーション インテントは、 **[データ リンク プロパティ]** ダイアログ ボックスの [すべて] タブの [アプリケーション インテントのプロパティ] フィールドで指定できます。  
   
  暗黙的な接続が確立された場合、その接続には、親の接続のアプリケーション インテント設定が使用されます。 同様に、同じデータ ソースから作成されたセッションはいずれも、そのデータ ソースのアプリケーション インテント設定を継承します。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [SQL Server Native Client の機能](sql-server-native-client-features.md)   
  [SQL Server Native Client での接続文字列キーワードの使用](../applications/using-connection-string-keywords-with-sql-server-native-client.md)  
   

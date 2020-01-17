@@ -6,16 +6,16 @@ ms.prod_service: reporting-services-native
 ms.technology: reporting-services
 ms.topic: conceptual
 ms.assetid: f52d3f3a-0b09-4b34-9112-0b3655271587
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 9bc3a8c70cb1b37bda19d99ab6a79b23b03490c3
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 00f139a6b7b334e3a3e8254a742874cfc28145b4
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47810347"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62651258"
 ---
-# <a name="lesson-9-build-and-run-the-application"></a>Lesson 9: Build and Run the Application
+# <a name="lesson-9-build-and-run-the-application"></a>レッスン 9: アプリケーションをビルドして実行する
 データ テーブルのデータ フィルターを作成した後は、Web サイト アプリケーションをビルドして実行します。  
   
 ### <a name="to-build-and-run-the-application"></a>アプリケーションをビルドして実行するには  

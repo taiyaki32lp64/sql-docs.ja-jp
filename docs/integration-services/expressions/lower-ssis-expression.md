@@ -13,17 +13,20 @@ helpviewer_keywords:
 - uppercase characters [Integration Services]
 - lowercase characters
 ms.assetid: 109328e1-5604-40ff-895e-f2e7c13fff41
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: 3f37e7d7f047b66a4beae544aeb5ae0b4cbde040
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: a61d3a72990914599efa807e388e94f96b0f9754
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47690070"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71297489"
 ---
 # <a name="lower-ssis-expression"></a>LOWER (SSIS 式)
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   大文字が小文字に変換された状態の文字式を返します。  
   
 ## <a name="syntax"></a>構文  

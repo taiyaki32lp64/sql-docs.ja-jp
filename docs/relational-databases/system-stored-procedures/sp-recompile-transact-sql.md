@@ -17,19 +17,18 @@ helpviewer_keywords:
 ms.assetid: 6192ca87-febd-4075-8199-14b4fa609b8c
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 67b4523b871e386fed62388a464a42ee6e9e10bb
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 0f9b72c1a97c17f975144ad0fd364260afab1fb8
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47688290"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68002566"
 ---
-# <a name="sprecompile-transact-sql"></a>sp_recompile (Transact-SQL)
+# <a name="sprecompile-transact-sql"></a>sp_recompile (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  ストアド プロシージャ、トリガー、およびユーザー定義関数が次回実行時に再コンパイルされるようにします。 そのために、プロシージャ キャッシュから既存のプランを削除して、プロシージャまたはトリガーを次回実行するときに新しいプランが作成されるようにします。 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] コレクションでは、SP:Recompile イベントではなく SP:CacheInsert イベントがログに記録されます。  
+  ストアド プロシージャ、トリガー、およびユーザー定義関数が次回実行時に再コンパイルされるようにします。 これは、次回作成する新しいプランをプロシージャ キャッシュから既存のプランを削除することにより、プロシージャまたはトリガーが実行されます。 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] コレクションでは、SP:Recompile イベントではなく SP:CacheInsert イベントがログに記録されます。  
   
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -42,10 +41,10 @@ sp_recompile [ @objname = ] 'object'
   
 ## <a name="arguments"></a>引数  
  [ @objname=] '*オブジェクト*'  
- 現在のデータベースにあるストアド プロシージャ、トリガー、テーブル、ビュー、またはユーザー定義関数の修飾名または非修飾名を指定します。 *オブジェクト*は**nvarchar (776)**、既定値はありません。 場合*オブジェクト*ストアド プロシージャ、トリガー、またはユーザー定義関数、ストアド プロシージャ、トリガーの名前を指定しますまたは、次回実行する関数を再コンパイルされます。 場合*オブジェクト*テーブルまたはビューでは、すべてのストアド プロシージャ、トリガーの名前を指定しますまたは、次回実行されるテーブルまたはビューを参照するユーザー定義関数を再コンパイルされます。  
+ 現在のデータベースにあるストアド プロシージャ、トリガー、テーブル、ビュー、またはユーザー定義関数の修飾名または非修飾名を指定します。 *オブジェクト*は**nvarchar (776)** 、既定値はありません。 場合*オブジェクト*ストアド プロシージャ、トリガー、またはユーザー定義関数、ストアド プロシージャ、トリガーの名前を指定しますまたは、次回実行する関数を再コンパイルされます。 場合*オブジェクト*テーブルまたはビューでは、すべてのストアド プロシージャ、トリガーの名前を指定しますまたは、次回実行されるテーブルまたはビューを参照するユーザー定義関数を再コンパイルされます。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
- 0 (成功) または 0 以外の数値 (失敗)  
+ 0 (成功) または 0 以外の値の数 (失敗)  
   
 ## <a name="remarks"></a>コメント  
  sp_recompile は、現在のデータベース内でのみオブジェクトを検索します。  
@@ -68,7 +67,7 @@ EXEC sp_recompile N'Sales.Customer';
 GO  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [CREATE PROCEDURE &#40;Transact-SQL&#41;](../../t-sql/statements/create-procedure-transact-sql.md)   
  [CREATE TRIGGER &#40;Transact-SQL&#41;](../../t-sql/statements/create-trigger-transact-sql.md)   
  [システム ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  

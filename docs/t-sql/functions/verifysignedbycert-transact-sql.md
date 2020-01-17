@@ -21,15 +21,14 @@ helpviewer_keywords:
 - signatures [SQL Server]
 - digital signatures [SQL Server]
 ms.assetid: 4e041f33-60c4-4190-91c7-220d51dd6c8f
-author: MashaMSFT
-ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: e62eb628a41fc58f96aee84761c9390852f4a81a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: VanMSFT
+ms.author: vanto
+ms.openlocfilehash: 360b597b8cd122ede57426cc879dd041b3414078
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47818350"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67927555"
 ---
 # <a name="verifysignedbycert-transact-sql"></a>VERIFYSIGNEDBYCERT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]

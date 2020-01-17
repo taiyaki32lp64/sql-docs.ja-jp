@@ -1,5 +1,5 @@
 ---
-title: パッケージとその他の操作を実行するモニター | Microsoft Docs
+title: 実行中のパッケージとその他の操作の監視 | Microsoft Docs
 ms.custom: supportability
 ms.date: 06/04/2018
 ms.prod: sql
@@ -11,17 +11,20 @@ f1_keywords:
 - sql13.ssis.ssms.isoperations.executions.f1
 - sql13.ssis.ssms.isoperations.general.f1
 ms.assetid: cbbcd79f-ab9b-46ec-84cb-4821c1d16b99
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: 4ac0343ffe46613e85fc1985a836dd3f05f3d46e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: d7fd62f4f2f82e6dcc3921db7099b4f052db27b3
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47623680"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71295799"
 ---
-# <a name="monitor-running-packages-and-other-operations"></a>パッケージとその他の操作を実行するモニター
+# <a name="monitor-running-packages-and-other-operations"></a>実行中のパッケージとその他の操作の監視
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   次の 1 つ以上のツールを使用して、 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] パッケージの実行、プロジェクトの検証、およびその他の操作を監視できます。 データ タップなどの特定のツールは、 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] サーバーに配置されたプロジェクトに対してのみ使用できます。  
   
 -   ログ  
@@ -53,7 +56,7 @@ ms.locfileid: "47623680"
  9 つの状態の種類を使用して、操作の状態を示します。 状態の種類の一覧については、「[catalog.operations &#40;SSISDB Database&#41;](../../integration-services/system-views/catalog-operations-ssisdb-database.md)」を参照してください。  
 
 ## <a name="active_ops"></a> [アクティブな操作] ダイアログ ボックス
-  配置、検証、パッケージの実行など、 **サーバー上で現在実行中の [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 操作の状態を表示するには、**[アクティブな操作][!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] ダイアログ ボックスを使用します。 このデータは、SSISDB カタログに格納されます。  
+  配置、検証、パッケージの実行など、 **サーバー上で現在実行中の [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 操作の状態を表示するには、** [アクティブな操作][!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] ダイアログ ボックスを使用します。 このデータは、SSISDB カタログに格納されます。  
   
  関連 [!INCLUDE[tsql](../../includes/tsql-md.md)] ビューの詳細については、「[catalog.operations (SSISDB データベース)](../../integration-services/system-views/catalog-operations-ssisdb-database.md)」、「[catalog.validations (SSISDB データベース)](../../integration-services/system-views/catalog-validations-ssisdb-database.md)」、「[catalog.executions (SSISDB データベース)](../../integration-services/system-views/catalog-executions-ssisdb-database.md)」を参照してください。  
   
@@ -67,7 +70,7 @@ ms.locfileid: "47623680"
   
 ### <a name="configure-the-options"></a>オプションの構成  
   
- **型**  
+ **Type**  
  操作の種類を指定します。 **[種類]** フィールドに指定できる値、および Transact-SQL の **catalog.operations** ビューに含まれる operations_type 列の対応する値を次に示します。  
   
 |||  
@@ -141,7 +144,7 @@ ms.locfileid: "47623680"
 |**実行情報**|過去 24 時間のさまざまな状態 (失敗、実行中、成功、その他) の実行の数を示します。|  
 |**Package Information**|過去 24 時間に実行されたパッケージの合計数を示します。|  
 |**接続情報**|過去 24 時間に失敗した実行で使用された接続を示します。|  
-|**パッケージの詳細情報**|過去 24 時間に発生した、完了した実行の詳細を示します。 たとえば、このセクションには、失敗した実行の数、実行の総数、実行時間 (秒単位)、および過去 3 か月における実行の平均時間が表示されます。<br /><br /> **[概要]**、 **[すべてのメッセージ]**、および **[実行のパフォーマンス]** をクリックすることで、パッケージの追加情報を表示できます。<br /><br /> **"実行のパフォーマンス"** レポートは、最後の実行インスタンスの持続時間、開始時刻、終了時刻、および適用された環境を示します。<br /><br /> **"実行のパフォーマンス"** レポートに含まれるグラフと、関連付けられたテーブルは、パッケージの過去 10 件の成功した実行の持続時間を示します。 テーブルは、3 か月間の平均実行時間も示します。 パッケージのこれらの 10 件の成功した実行には、異なる環境と異なるリテラル値が実行時に適用されている場合があります。<br /><br /> 最後に、 **"実行のパフォーマンス"** レポートは、パッケージ データ フロー コンポーネントのアクティブな時間と合計時間を示します。 アクティブな時間は、コンポーネントがすべてのフェーズで実行に費やした合計時間を指し、合計時間は、1 つのコンポーネントで経過した合計時間を示します。 このパッケージ コンポーネントの情報は、最後のパッケージの実行のログ レベルが [パフォーマンス] または [詳細] に設定されていた場合のみ、レポートに表示されます。<br /><br /> **"概要"** レポートは、パッケージ タスクの状態を示します。 **"メッセージ"** レポートは、パッケージとタスクのイベント メッセージとエラー メッセージを示し、開始時刻、終了時刻、書き込まれた行の数などを報告します。<br /><br /> **"概要"** レポートの **[メッセージの表示]** をクリックして、 **"メッセージ"** レポートに移動することもできます。 **"メッセージ"** レポートの **[概要の表示]** をクリックして、 **"概要"** レポートに移動することもできます。|  
+|**パッケージの詳細情報**|過去 24 時間に発生した、完了した実行の詳細を示します。 たとえば、このセクションには、失敗した実行の数、実行の総数、実行時間 (秒単位)、および過去 3 か月における実行の平均時間が表示されます。<br /><br /> **[概要]** 、 **[すべてのメッセージ]** 、および **[実行のパフォーマンス]** をクリックすることで、パッケージの追加情報を表示できます。<br /><br /> **"実行のパフォーマンス"** レポートは、最後の実行インスタンスの持続時間、開始時刻、終了時刻、および適用された環境を示します。<br /><br /> **"実行のパフォーマンス"** レポートに含まれるグラフと、関連付けられたテーブルは、パッケージの過去 10 件の成功した実行の持続時間を示します。 テーブルは、3 か月間の平均実行時間も示します。 パッケージのこれらの 10 件の成功した実行には、異なる環境と異なるリテラル値が実行時に適用されている場合があります。<br /><br /> 最後に、 **"実行のパフォーマンス"** レポートは、パッケージ データ フロー コンポーネントのアクティブな時間と合計時間を示します。 アクティブな時間は、コンポーネントがすべてのフェーズで実行に費やした合計時間を指し、合計時間は、1 つのコンポーネントで経過した合計時間を示します。 このパッケージ コンポーネントの情報は、最後のパッケージの実行のログ レベルが [パフォーマンス] または [詳細] に設定されていた場合のみ、レポートに表示されます。<br /><br /> **"概要"** レポートは、パッケージ タスクの状態を示します。 **"メッセージ"** レポートは、パッケージとタスクのイベント メッセージとエラー メッセージを示し、開始時刻、終了時刻、書き込まれた行の数などを報告します。<br /><br /> **"概要"** レポートの **[メッセージの表示]** をクリックして、 **"メッセージ"** レポートに移動することもできます。 **"メッセージ"** レポートの **[概要の表示]** をクリックして、 **"概要"** レポートに移動することもできます。|  
   
  **[フィルター]** をクリックし、 **[フィルターの設定]** ダイアログで条件を選択することにより、各ページに表示されるテーブルにフィルターを適用できます。 使用できるフィルター条件は、表示されるデータによって異なります。 **[フィルターの設定]** ダイアログの並べ替えアイコンをクリックすることで、レポートの並べ替え順序を変更できます。  
   
@@ -152,7 +155,7 @@ ms.locfileid: "47623680"
   
 |セクション|[説明]|  
 |-------------|-----------------|  
-|[フィルター]|レポートに適用される現在のフィルターを示します (開始時間範囲など)。|  
+|Assert|レポートに適用される現在のフィルターを示します (開始時間範囲など)。|  
 |実行情報|各パッケージの実行の開始時刻、終了時刻、および持続時間を示します。パッケージの実行で使用されたパラメーター値 (パッケージ実行タスクで子パッケージに渡された値など) の一覧を表示できます。 パラメーターの一覧を表示するには、[概要] をクリックします。|  
   
  パッケージ実行タスクを使用して子パッケージで値を使用できるようにする方法の詳細については、「 [パッケージ実行タスク](../../integration-services/control-flow/execute-package-task.md)」を参照してください。  
@@ -184,7 +187,7 @@ ms.locfileid: "47623680"
  カスタム レポートの作成および追加方法については、「 [Add a Custom Report to Management Studio](../../ssms/object/add-a-custom-report-to-management-studio.md)」(Management Studio へのカスタム レポートの追加) を参照してください。  
 
 ## <a name="view-reports-for-the-integration-services-server"></a>Integration Services サーバーのレポートの表示
-  現在のリリースの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]では、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] サーバーに配置された [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] プロジェクトの監視に役立つ標準レポートを [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] で使用できるようになりました。  レポートの詳細については、「 [Integration Services サーバーのレポート](#reports)」を参照してください。  
+  現在のリリースの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]では、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] サーバーに配置された [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] プロジェクトの監視に役立つ標準レポートを [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] で使用できるようになりました。  レポートの詳細については、「 [Integration Services サーバーのレポート](#reports)」をご覧ください。  
   
 ### <a name="to-view-reports-for-the-integration-services-server"></a>Integration Services サーバーのレポートを表示するには  
   

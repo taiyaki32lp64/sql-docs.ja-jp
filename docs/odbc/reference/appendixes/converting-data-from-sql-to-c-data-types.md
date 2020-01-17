@@ -20,20 +20,19 @@ helpviewer_keywords:
 ms.assetid: 029727f6-d3f0-499a-911c-bcaf9714e43b
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 553596f474cd8e7c4f4c91911b0167d5b1bc0b4a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 95a44698c12abf0de64c8d6f7d316e9156dc139c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47680840"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68019109"
 ---
 # <a name="converting-data-from-sql-to-c-data-types"></a>SQL から C データ型へのデータ変換
 アプリケーションを呼び出すと**SQLFetch**、 **SQLFetchScroll**、または**SQLGetData**ドライバーは、データ ソースからデータを取得します。 かどうか、必要に応じて、データ変換から変換で指定されたデータ型には、ドライバーによってを取得するデータ型、 *TargetType*引数**SQLBindCol**または**SQLGetData します。** 最後に、によって示される場所にデータを格納、 *TargetValuePtr*引数**SQLBindCol**または**SQLGetData** (および、ARD の SQL_DESC_DATA_PTR フィールド)。  
   
  次の表は、ODBC SQL からサポートされている変換にデータ型を ODBC C データ型を示します。 塗りつぶされた円は、SQL データ型の既定の変換を示します (をデータが変換されるときに、C データ型の値*TargetType* SQL_C_DEFAULT が)。 白抜きの円では、サポートされている変換を示します。  
   
- ODBC 3 の場合、*.x* ODBC 2 を使用するアプリケーション *。x*ドライバー、ドライバー固有のデータ型がサポートされていない可能性がありますから変換します。  
+ ODBC の*3.x* odbc 作業アプリケーション*2.x*ドライバー、ドライバー固有のデータ型がサポートされていない可能性がありますから変換します。  
   
  変換後のデータの形式は、Windows® 国設定の影響を受けません。  
   
@@ -49,28 +48,28 @@ ms.locfileid: "47680840"
   
 -   **バイトの長さを文字**文字形式でデータを表示するために必要なバイト数の合計です。 これは、セクションでは C データ型ごとに定義されている[表示サイズ](../../../odbc/reference/appendixes/display-size.md)バイト長の文字が文字では、表示サイズ、(バイト単位) がある点が、します。  
   
--   単語*斜体*関数の引数または SQL 文法の要素を表します。 文法要素の構文を参照してください。[付録 c: SQL の文法](../../../odbc/reference/appendixes/appendix-c-sql-grammar.md)します。  
+-   単語*斜体*関数の引数または SQL 文法の要素を表します。 文法要素の構文を参照してください[付録 c:。SQL 文法](../../../odbc/reference/appendixes/appendix-c-sql-grammar.md)します。  
   
  このセクションでは、次のトピックを扱います。  
   
--   [SQL から C へ: 文字](../../../odbc/reference/appendixes/sql-to-c-character.md)  
+-   [SQL c: から文字](../../../odbc/reference/appendixes/sql-to-c-character.md)  
   
--   [SQL から C へ: 数値](../../../odbc/reference/appendixes/sql-to-c-numeric.md)  
+-   [SQL c: から数値](../../../odbc/reference/appendixes/sql-to-c-numeric.md)  
   
--   [SQL から C へ: ビット](../../../odbc/reference/appendixes/sql-to-c-bit.md)  
+-   [SQL c: からビット](../../../odbc/reference/appendixes/sql-to-c-bit.md)  
   
--   [SQL から C へ: バイナリ](../../../odbc/reference/appendixes/sql-to-c-binary.md)  
+-   [SQL c: からバイナリ](../../../odbc/reference/appendixes/sql-to-c-binary.md)  
   
--   [SQL から C へ: 日付](../../../odbc/reference/appendixes/sql-to-c-date.md)  
+-   [SQL c: から日付](../../../odbc/reference/appendixes/sql-to-c-date.md)  
   
--   [SQL から C へ: GUID](../../../odbc/reference/appendixes/sql-to-c-guid.md)  
+-   [SQL c: からGUID](../../../odbc/reference/appendixes/sql-to-c-guid.md)  
   
--   [SQL から C へ: 時刻](../../../odbc/reference/appendixes/sql-to-c-time.md)  
+-   [SQL c: から時間](../../../odbc/reference/appendixes/sql-to-c-time.md)  
   
--   [SQL から C へ: タイムスタンプ](../../../odbc/reference/appendixes/sql-to-c-timestamp.md)  
+-   [SQL c: からタイムスタンプ](../../../odbc/reference/appendixes/sql-to-c-timestamp.md)  
   
--   [SQL から C へ: 年月の間隔](../../../odbc/reference/appendixes/sql-to-c-year-month-intervals.md)  
+-   [SQL c: から年月の間隔](../../../odbc/reference/appendixes/sql-to-c-year-month-intervals.md)  
   
--   [SQL から C へ: 日付と時刻の間隔](../../../odbc/reference/appendixes/sql-to-c-day-time-intervals.md)  
+-   [SQL c: から日付と時刻の間隔](../../../odbc/reference/appendixes/sql-to-c-day-time-intervals.md)  
   
 -   [SQL から C へのデータ変換の例](../../../odbc/reference/appendixes/sql-to-c-data-conversion-examples.md)

@@ -13,11 +13,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: f37f2ce9ec367d136eb853ce3bffe81f22b2dc4e
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53355035"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62869597"
 ---
 # <a name="mssqlserver18456"></a>MSSQLSERVER_18456
     
@@ -33,7 +33,7 @@ ms.locfileid: "53355035"
 |メッセージ テキスト|ユーザー '%.*ls'.%.\*ls はログインできませんでした|  
   
 ## <a name="explanation"></a>説明  
- を不正なパスワードまたはユーザー名を含む認証の失敗によって接続試行が拒否された場合、次のようなメッセージがクライアントに返されます。"ユーザー '<user_name>' はログインできませんでした。 (Microsoft SQL Server、エラー。18456)"。  
+ を不正なパスワードまたはユーザー名を含む認証の失敗によって接続試行が拒否された場合、次のようなメッセージがクライアントに返されます。"ユーザー '<user_name>' はログインできませんでした。 (Microsoft SQL Server、エラー:18456)".  
   
  クライアントに返される追加情報には、次のようなものがあります。  
   
@@ -69,7 +69,7 @@ ms.locfileid: "53355035"
 |7|ログインが無効で、パスワードが正しくありません。|  
 |8|パスワードが正しくありません。|  
 |9|パスワードが無効です。|  
-|11|ログインは有効ですが、サーバー アクセスに失敗しました。 このエラーで考えられる原因の 1 つは、Windows ユーザーがローカル管理者グループのメンバーとして [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] へのアクセス権限を持っている一方で、Windows から管理者資格情報が提供されないことです。 接続するには、**[管理者として実行]** オプションを使用して接続プログラムを開始してから、その Windows ユーザーを特定のログインとして [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] に追加します。|  
+|11|ログインは有効ですが、サーバー アクセスに失敗しました。 このエラーで考えられる原因の 1 つは、Windows ユーザーがローカル管理者グループのメンバーとして [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] へのアクセス権限を持っている一方で、Windows から管理者資格情報が提供されないことです。 接続するには、 **[管理者として実行]** オプションを使用して接続プログラムを開始してから、その Windows ユーザーを特定のログインとして [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] に追加します。|  
 |12|ログインは有効なログインですが、サーバー アクセスに失敗しました。|  
 |18|パスワードを変更する必要があります。|  
   
@@ -77,7 +77,7 @@ ms.locfileid: "53355035"
   
  **その他の特殊な原因**  
   
- エラーの理由として、**"SQL 認証を使用したログインに失敗しました。サーバーは、Windows 認証専用に構成されています。** 次の状況で返される場合があります。  
+ エラーの理由として、 **"SQL 認証を使用したログインに失敗しました。サーバーは、Windows 認証専用に構成されています。** 次の状況で返される場合があります。  
   
 -   サーバーが混合モード認証で構成され、ODBC 接続で TCP プロトコルを使用し、接続でセキュリティ接続を使用することが明示的に指定されていない場合。  
   
@@ -105,10 +105,10 @@ ms.locfileid: "53355035"
   
  エラーが状態 1 を示している場合は、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 管理者に問い合わせてください。  
   
- 管理者の資格情報を使用して接続する場合、**[管理者として実行]** オプションを使用してアプリケーションを起動します。 接続したら、Windows ユーザーを個別のログインとして追加します。  
+ 管理者の資格情報を使用して接続する場合、 **[管理者として実行]** オプションを使用してアプリケーションを起動します。 接続したら、Windows ユーザーを個別のログインとして追加します。  
   
  [!INCLUDE[ssDE](../../includes/ssde-md.md)]で包含データベースがサポートされる場合、包含データベース ユーザーへの移行後にそのログインが削除されていないことを確認してください。  
   
- ローカルの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスに接続している場合、**NT AUTHORITY\NETWORK SERVICE** で実行されているサービスからの接続は、コンピューターの完全修飾ドメイン名を使用して認証する必要があります。 詳細については、次を参照してください[How To:。ASP.NET のリソースにアクセスするネットワーク サービス アカウントを使用します。](https://msdn.microsoft.com/library/ff647402.aspx)  
+ ローカルの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスに接続している場合、**NT AUTHORITY\NETWORK SERVICE** で実行されているサービスからの接続は、コンピューターの完全修飾ドメイン名を使用して認証する必要があります。 詳細については、このトピックの「[方法: ASP.NET のリソースにアクセスするネットワーク サービス アカウントを使用します。](https://msdn.microsoft.com/library/ff647402.aspx)  
   
   

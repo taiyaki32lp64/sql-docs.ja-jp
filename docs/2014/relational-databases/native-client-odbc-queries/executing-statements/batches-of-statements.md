@@ -18,11 +18,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 8951469279e5c3577aef355e339397b329bb5d63
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53368714"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68206775"
 ---
 # <a name="batches-of-statements"></a>ステートメントのバッチ
   バッチの[!INCLUDE[tsql](../../../includes/tsql-md.md)]ステートメントに渡される 1 つの文字列に組み込まれている、セミコロン (;) で区切られた 2 つ以上のステートメントが含まれています**SQLExecDirect**または[SQLPrepare 関数](https://go.microsoft.com/fwlink/?LinkId=59360)します。 以下に例を示します。  
@@ -44,7 +44,7 @@ szSqlState = "01S02", pfNativeError = 0
 szErrorMsg = "[Microsoft][SQL Server Native Server Native Client]Cursor type changed."  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [ステートメントを実行する&#40;ODBC&#41;](executing-statements-odbc.md)  
   
   

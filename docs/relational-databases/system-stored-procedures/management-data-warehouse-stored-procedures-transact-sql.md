@@ -14,19 +14,18 @@ helpviewer_keywords:
 ms.assetid: bc492b18-6965-4bb5-8065-fe2641d29590
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 3437ba951804bc1a3eae4d166b0dc36412e9ea8e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 14ec2b0e98b2d6934233adb7a5b0b4159ed37333
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47755931"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67941993"
 ---
 # <a name="management-data-warehouse-stored-procedures-transact-sql"></a>管理データ ウェアハウスのストアド プロシージャ (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-all-md](../../includes/tsql-appliesto-ss2012-all-md.md)]
 
-  データ コレクターは、データおよびデータ コレクター型の情報を管理データ ウェアハウスに格納します。 管理データ ウェアハウス内のデータを更新したり、テーブルを変更したりするには、次のストアド プロシージャを使用します。  
+  データ コレクターは、管理データ ウェアハウスのデータとデータ コレクターの種類の情報を格納します。 次のストアド プロシージャは、データを更新し、管理データ ウェアハウス内のテーブルの変更に使用されます。  
   
 |||  
 |-|-|  
@@ -34,7 +33,7 @@ ms.locfileid: "47755931"
 |[core.sp_add_collector_type &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/core-sp-add-collector-type-transact-sql.md)|[core.sp_remove_collector_type &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/core-sp-remove-collector-type-transact-sql.md)|  
 |[core.sp_purge_data &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/core-sp-purge-data-transact-sql.md)||  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [データ コレクター ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/data-collector-stored-procedures-transact-sql.md)  
   
   

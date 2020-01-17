@@ -8,17 +8,20 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: tutorial
 ms.assetid: 5683a45d-9e73-4cd5-83ca-fae8b26b488c
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: 0f5d292a7fa1f4097de300fc1f7e8c1a579f541a
-ms.sourcegitcommit: e2fa721b6f46c18f1825dd1b0d56c0a6da1b2be1
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 4a3626878ba4be6d56bb56b545f3d0cdc24a407a
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/11/2019
-ms.locfileid: "54211063"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71283200"
 ---
 # <a name="lesson-4-3-add-error-flow-redirection"></a>レッスン 4-3: エラー フロー リダイレクションを追加する
+
+[!INCLUDE[ssis-appliesto](../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
 
 前のタスクでは、壊れているサンプル フラット ファイルを Lookup Currency Key 変換で処理しようとするとエラーが発生し、変換を行うことができません。 この変換ではエラー出力に既定の設定を使用するため、エラーが発生すると変換は失敗します。 変換が失敗すると、それ以降のパッケージも失敗します。  
   
@@ -30,15 +33,15 @@ ms.locfileid: "54211063"
   
 ## <a name="configure-an-error-output"></a>エラー出力を構成する  
   
-1.  **[SSIS ツールボックス]** で **[共通]** を展開し、 **[スクリプト コンポーネント]** を **[データ フロー]** タブのデザイン画面にドラッグします。**[スクリプト]** を **[Lookup Currency Key]** 変換の右に配置します。  
+1.  **[SSIS ツールボックス]** で **[共通]** を展開し、 **[スクリプト コンポーネント]** を **[データ フロー]** タブのデザイン画面にドラッグします。 **[スクリプト]** を **[Lookup Currency Key]** 変換の右に配置します。  
   
-2.  **[スクリプト コンポーネントの種類を選択]** ダイアログ ボックスで、**[変換]** を選択し、**[OK]** を選択します。  
+2.  **[スクリプト コンポーネントの種類を選択]** ダイアログ ボックスで、 **[変換]** を選択し、 **[OK]** を選択します。  
   
-3.  2 つのコンポーネントを接続するには、**[Lookup Currency Key]** 変換を選択して、赤色の矢印を、新しい **[スクリプト]** 変換までドラッグします。  
+3.  2 つのコンポーネントを接続するには、 **[Lookup Currency Key]** 変換を選択して、赤色の矢印を、新しい **[スクリプト]** 変換までドラッグします。  
   
     赤い矢印は、 **[Lookup Currency Key]** 変換のエラー出力を表します。 エラー処理をスクリプト コンポーネントにリダイレクトするには、赤い矢印を使用して変換をスクリプト コンポーネントに接続します。スクリプト コンポーネントではエラーが処理され、変換先に送信されます。  
   
-4.  **[エラー出力の構成]** ダイアログ ボックスの **[エラー]** 列で、**[行のリダイレクト]** を選択し、**[OK]** を選択します。  
+4.  **[エラー出力の構成]** ダイアログ ボックスの **[エラー]** 列で、 **[行のリダイレクト]** を選択し、 **[OK]** を選択します。  
   
 5.  **[データ フロー]** デザイン画面で、新しい **[ScriptComponent]** にある名前 **[Script Component]** を選択し、その名前を「 **Get Error Description**」に変更します。  
   
@@ -46,7 +49,7 @@ ms.locfileid: "54211063"
   
 7.  **[スクリプト変換エディター]** ダイアログ ボックスの **[入力列]** ページで、 **[ErrorCode]** 列を選択します。  
   
-8.  **[入力および出力]** ページで **[出力 0]** を展開し、**[出力列]** を選択してから、**[列の追加]** を選択します。  
+8.  **[入力および出力]** ページで **[出力 0]** を展開し、 **[出力列]** を選択してから、 **[列の追加]** を選択します。  
   
 9. **Name** プロパティで「*ErrorDescription*」と入力し、**DataType** プロパティを **[Unicode 文字列 [DT_WSTR]]** に設定します。  
   
@@ -93,7 +96,7 @@ ms.locfileid: "54211063"
   
 12. **[ビルド]** メニューの **[ソリューションのビルド]** を選択し、スクリプトをビルドして変更を保存し、VSTA を閉じます。  
   
-13. **[OK]** を選択して、**[スクリプト変換エディター]** ダイアログ ボックスを閉じます。  
+13. **[OK]** を選択して、 **[スクリプト変換エディター]** ダイアログ ボックスを閉じます。  
   
 ## <a name="go-to-next-task"></a>次の実習に進む
 [手順 4: フラット ファイル変換先を追加する](../integration-services/lesson-4-4-adding-a-flat-file-destination.md)  

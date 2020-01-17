@@ -10,18 +10,17 @@ ms.topic: conceptual
 ms.assetid: d9883c25-5c43-4633-874e-4b490e4bccad
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 47423f36eece4ee42da880b555b5ce6acb1a6c40
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 5ef0203c8ece600de52a5ba4734249b269f21777
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47727390"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67955027"
 ---
 # <a name="equals-method-datetimeoffset"></a>equals メソッド (DateTimeOffset)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  この比較**DateTimeOffset**を別のオブジェクト**オブジェクト**します。  
+  この**DateTimeOffset**オブジェクトを別の**オブジェクト**と比較します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -36,7 +35,7 @@ public boolean equals(Object o)
  現在のインスタンスと比較するオブジェクトです。  
   
 ## <a name="return-value"></a>戻り値  
- この場合は true を返します**DateTimeOffset**オブジェクト、同じ地点を表す、同じオフセットで特定の GMT から別**DateTimeOffset**します。  
+ この**datetimeoffset**オブジェクトが、GMT から別の**datetimeoffset**と同じオフセットにある同じ時点を表している場合に true を返します。  
   
 ## <a name="see-also"></a>参照  
  [DateTimeOffset クラス](../../../connect/jdbc/reference/datetimeoffset-class.md)   

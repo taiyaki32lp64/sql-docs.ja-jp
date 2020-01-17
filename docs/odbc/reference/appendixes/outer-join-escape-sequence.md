@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 2cfd1525-6677-4d36-9b9e-730496853750
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: ba08d33efca6fa90531f89bd57a307f42f343ebd
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 576fe7268ccf71a8c926f6b1124ebbf8a8c711b0
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47817675"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68100637"
 ---
 # <a name="outer-join-escape-sequence"></a>外部結合のエスケープ シーケンス
 ODBC では、外部結合のエスケープ シーケンスを使用します。 このエスケープ シーケンスの構文は次のとおりです。  
@@ -29,7 +28,7 @@ ODBC では、外部結合のエスケープ シーケンスを使用します�
 {oj outer-join}  
 ```  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>Remarks  
  BNF 表記では、構文がとおりです。  
   
  *ODBC の外部の結合のエスケープ*:: =  

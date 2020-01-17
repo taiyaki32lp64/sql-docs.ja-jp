@@ -23,11 +23,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: e46610823432efde0cc757e3dff317227b7548ac
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52747704"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63032106"
 ---
 # <a name="monitor-cpu-usage"></a>CPU 使用率の監視
   CPU 使用率が通常の範囲内にあるかどうかを確認するため、Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスを定期的に監視する必要があります。 CPU 使用率が常に高い場合は、CPU のアップグレードまたは多重プロセッサの追加を検討する必要があります。 また、CPU 使用率が高い場合、アプリケーションのチューニングや設計に問題がある可能性もあります。 この場合は、アプリケーションを最適化することで CPU 使用率を下げることができます。  
@@ -47,7 +47,7 @@ ms.locfileid: "52747704"
   
      [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]などのユーザー プロセスの実行にプロセッサが費やす時間比率を示します。  
   
--   **システムの場合:プロセッサ キューの長さ**  
+-   **System:Processor Queue Length**  
   
      プロセッサ時間を待っているスレッドの数を示します。 プロセスのスレッドが、使用できるよりも多くのプロセッサ サイクルを必要とする場合は、プロセッサのボトルネックが生じます。 複数のプロセスがプロセッサ時間を利用する場合、状況によっては、より高速なプロセッサのインストールが必要になります。 多重プロセッサ システムを使用している場合は、プロセッサの追加も可能です。  
   

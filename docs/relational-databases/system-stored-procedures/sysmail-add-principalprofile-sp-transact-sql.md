@@ -1,5 +1,5 @@
 ---
-title: sysmail_add_principalprofile_sp (TRANSACT-SQL) |Microsoft Docs
+title: sysmail_add_principalprofile_sp (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -17,18 +17,17 @@ helpviewer_keywords:
 ms.assetid: b2a0b313-abb9-4c23-8511-db77ca8172b3
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 794a7c9013fff188500c26232a597a7dd4c6283d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: fedc7e0dd7fe71feb0b0da1f00f2a7f996c6129c
+ms.sourcegitcommit: 43c3d8939f6f7b0ddc493d8e7a643eb7db634535
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47756278"
+ms.lasthandoff: 10/14/2019
+ms.locfileid: "72305053"
 ---
-# <a name="sysmailaddprincipalprofilesp-transact-sql"></a>sysmail_add_principalprofile_sp (Transact-SQL)
+# <a name="sysmail_add_principalprofile_sp-transact-sql"></a>sysmail_add_principalprofile_sp (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  データベース ユーザーやロールに対して、データベース メール プロファイルを使用する権限を与えます。  
+  Msdb データベースプリンシパルにデータベースメールプロファイルを使用する権限を許可します。 データベースプリンシパルは、SQL Server 認証ユーザー、Windows ユーザー、または Windows グループにマップされている必要があります。
   
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -42,40 +41,35 @@ sysmail_add_principalprofile_sp  { [ @principal_id = ] principal_id | [ @princip
 ```  
   
 ## <a name="arguments"></a>引数  
- [ **@principal_id** =] *principal_id*  
- データベース ユーザーまたはロールの ID、 **msdb**アソシエーションのデータベースです。 *principal_id*は**int**、既定値は NULL です。 いずれか*principal_id*または*principal_name*指定する必要があります。 A *principal_id*の**0**使用するこのプロファイルはパブリック プロファイルをデータベース内のすべてのプリンシパルにアクセスを許可します。  
+関連付けの**msdb**データベースのデータベースユーザーまたはロールの ID `[ @principal_id = ] principal_id` ます。 *principal_id*は**int**,、既定値は NULL です。 *Principal_id*または*principal_name*のいずれかを指定する必要があります。 *Principal_id*が**0**の場合、このプロファイルはパブリックプロファイルになり、データベース内のすべてのプリンシパルにアクセス権が付与されます。  
   
- [ **@principal_name** =] **'***principal_name***'**  
- データベース ユーザーまたはロールの名前、 **msdb**アソシエーションのデータベースです。 *principal_name*は**sysname**、既定値は NULL です。 いずれか*principal_id*または*principal_name*指定する必要があります。 A *principal_name*の **'public'** 使用するこのプロファイルはパブリック プロファイルをデータベース内のすべてのプリンシパルにアクセスを許可します。  
+関連付けの**msdb**データベースのデータベースユーザーまたはロールの名前 `[ @principal_name = ] 'principal_name'` ます。 *principal_name*は**sysname**,、既定値は NULL です。 *Principal_id*または*principal_name*のいずれかを指定する必要があります。 *Principal_name*が **' public '** の場合、このプロファイルはパブリックプロファイルになり、データベース内のすべてのプリンシパルにアクセス権が付与されます。  
   
- [ **@profile_id** = ] *profile_id*  
- 関連付けに使用するプロファイルの ID を指定します。 *profile_id*は**int**、既定値は NULL です。 いずれか*profile_id*または*profile_name*指定する必要があります。  
+関連付けのプロファイルの id を `[ @profile_id = ] profile_id` します。 *profile_id*は**int**,、既定値は NULL です。 *Profile_id*または*profile_name*のいずれかを指定する必要があります。  
   
- [ **@profile_name** =] **'***profile_name***'**  
- 関連付けに使用するプロファイルの名前を指定します。 *profile_name*は**sysname**、既定値はありません。 いずれか*profile_id*または*profile_name*指定する必要があります。  
+関連付けに使用するプロファイルの名前 `[ @profile_name = ] 'profile_name'` ます。 *profile_name*は**sysname**であり、既定値はありません。 *Profile_id*または*profile_name*のいずれかを指定する必要があります。  
   
- [ **@is_default** =] *is_default*  
- このプロファイルをプリンシパルの既定のプロファイルとするかどうかを指定します。 プリンシパルは既定のプロファイルを 1 つだけ持つ必要があります。 *is_default*は**ビット**、既定値はありません。  
+`[ @is_default = ] is_default`、このプロファイルがプリンシパルの既定のプロファイルであるかどうかを指定します。 プリンシパルには、既定のプロファイルが1つだけ含まれている必要があります。 *is_default*は**ビット**,、既定値はありません。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  **0** (成功) または**1** (失敗)  
   
-## <a name="remarks"></a>コメント  
- プロファイルをパブリックにするために、指定、 **@principal_id**の**0**または**@principal_name**の**パブリック**します。 パブリック プロファイルは、すべてのユーザーに使用可能な**msdb**データベース、ユーザーは、のメンバーでもある必要がありますが**DatabaseMailUserRole**を実行する**sp_send_dbmail**します。  
+## <a name="remarks"></a>Remarks  
+ プロファイルを公開するには、 **\@principal_id**を**0**または **\@principal_name**を指定**します。** パブリックプロファイルは、 **msdb**データベース内のすべてのユーザーが使用できます。ただし、ユーザーは**sp_send_dbmail**を実行するために、 **databasemailuserrole**のメンバーでもある必要があります。  
   
- データベース ユーザーが持つことのできる既定のプロファイルは 1 つだけです。 ときに**@is_default**は '**1**' し、ユーザーは、既に 1 つまたは複数のプロファイルに関連付け、指定されたプロファイルがユーザーの既定のプロファイルになります。 それまで既定のプロファイルであったプロファイルは、引き続きこのユーザーに関連付けられますが、既定のプロファイルではなくなります。  
+ データベースユーザーは、既定のプロファイルを1つだけ持つことができます。 **\@is_default**が '**1**' で、ユーザーが既に1つ以上のプロファイルに関連付けられている場合、指定されたプロファイルがユーザーの既定のプロファイルになります。 それまで既定のプロファイルであったプロファイルは、引き続きこのユーザーに関連付けられますが、既定のプロファイルではなくなります。  
   
- ときに**@is_default**は '**0**' とその他の関連付けがない場合、ストアド プロシージャには、エラーが返されます。  
+ **\@is_default**が '**0**' で、その他のアソシエーションが存在しない場合、ストアドプロシージャはエラーを返します。  
   
- ストアド プロシージャ**sysmail_add_principalprofile_sp**では、 **msdb**が所有するデータベースにあり、 **dbo**スキーマ。 現在のデータベースがない場合、3 つの部分の名前を持つプロシージャを実行する必要があります**msdb**します。  
+ ストアドプロシージャ**sysmail_add_principalprofile_sp**は**msdb**データベースにあり、 **dbo**スキーマが所有しています。 現在のデータベースが**msdb**でない場合は、3つの部分で構成される名前を使用してプロシージャを実行する必要があります。  
   
 ## <a name="permissions"></a>アクセス許可  
- このプロシージャの既定のメンバーへのアクセス許可を実行、 **sysadmin**固定サーバー ロール。  
+ このプロシージャの実行権限は、既定では**sysadmin**固定サーバーロールのメンバーに与えています。  
   
 ## <a name="examples"></a>使用例  
- **A.既定のプロファイルを設定して、アソシエーションの作成**  
+ **A 関連付けを作成し、既定のプロファイルを設定する**  
   
- 次の例では、という名前のプロファイル間のアソシエーションを作成する`AdventureWorks Administrator Profile`と**msdb**データベース ユーザー`ApplicationUser`します。 このプロファイルは、このユーザーの既定のプロファイルです。  
+ 次の例では、`AdventureWorks Administrator Profile` という名前のプロファイルと**msdb**データベースユーザー `ApplicationUser`の関連付けを作成します。 プロファイルは、ユーザーの既定のプロファイルです。  
   
 ```  
 EXECUTE msdb.dbo.sysmail_add_principalprofile_sp  
@@ -84,9 +78,9 @@ EXECUTE msdb.dbo.sysmail_add_principalprofile_sp
     @is_default = 1 ;  
 ```  
   
- **B.プロファイルの既定のパブリック プロファイルを作成します。**  
+ **B. プロファイルを既定のパブリックプロファイルにする**  
   
- 次の例では、プロファイル`AdventureWorks Public Profile`内のユーザーの既定のパブリック プロファイル、 **msdb**データベース。  
+ 次の例では、プロファイルを、 **msdb**データベースのユーザーの既定のパブリックプロファイル `AdventureWorks Public Profile` します。  
   
 ```  
 EXECUTE msdb.dbo.sysmail_add_principalprofile_sp  
@@ -97,7 +91,7 @@ EXECUTE msdb.dbo.sysmail_add_principalprofile_sp
   
 ## <a name="see-also"></a>参照  
  [データベース メール](../../relational-databases/database-mail/database-mail.md)   
- [データベース メール構成オブジェクト](../../relational-databases/database-mail/database-mail-configuration-objects.md)   
- [データベース メール ストアド プロシージャ&#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/database-mail-stored-procedures-transact-sql.md)  
+ [構成オブジェクトのデータベースメール](../../relational-databases/database-mail/database-mail-configuration-objects.md)   
+ [ストアドプロシージャ&#40;のデータベースメール transact-sql&#41;](../../relational-databases/system-stored-procedures/database-mail-stored-procedures-transact-sql.md)  
   
   

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.biwizard.currencyconversion.memberconversion.f1
@@ -13,12 +12,12 @@ ms.assetid: 1a147461-d594-41e7-a41d-09d2d003e1e0
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 2d15a32302aa5d7a4ee3ca087944effc017ce8c1
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 7cc66896eb1735d09991644dd49c03b5a94c208d
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48105148"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66069428"
 ---
 # <a name="select-members-business-intelligence-wizard"></a>[メンバーの選択] (ビジネス インテリジェンス ウィザード)
   **[メンバーの選択]** ページを使用すると、ビジネス インテリジェンス ウィザードの **[通貨換算オプションの設定]** ページで指定された通貨換算機能を適用するメンバーを指定できます。  
@@ -48,7 +47,7 @@ ms.locfileid: "48105148"
 |**メジャー**|レート メジャー グループから、 **[勘定科目メンバー]** で選択したメンバーのメジャーを変換するときに使用する、換算レートを含むメジャーを選択します。|  
   
  **勘定科目の階層の種類に基づく**  
- すべてのメンバーに通貨換算機能を適用する選択が持つ勘定科目の階層で属性`Type`プロパティが指定されたアカウントの種類に設定します。  
+ 選択すると、`Type` プロパティが指定した種類の勘定科目に設定されている勘定科目の階層の属性の全メンバーに、通貨換算機能が適用されます。  
   
  このオプションを選択すると、次の表に示すオプションがグリッドに表示されます。  
   

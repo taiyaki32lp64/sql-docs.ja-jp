@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: a59cfe98-c0f4-46ad-9243-62aa56855f1a
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 3818aca491ac6b57f110644a76db6313afcd0cab
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d745712e5a8c4b59ea85c1a9b19c2e247c166be3
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47697330"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67982305"
 ---
 # <a name="getmaxcolumnsingroupby-method-sqlserverdatabasemetadata"></a>getMaxColumnsInGroupBy メソッド (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -42,7 +41,7 @@ public int getMaxColumnsInGroupBy()
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- この getMaxColumnsInGroupBy メソッドは、java.sql.DatabaseMetaData インターフェイスで getMaxColumnsInGroupBy メソッドによって指定されます。  
+ この getMaxColumnsInGroupBy メソッドは、java メタデータインターフェイスの getMaxColumnsInGroupBy メソッドによって指定されます。  
   
 ## <a name="see-also"></a>参照  
  [SQLServerDatabaseMetaData のメソッド](../../../connect/jdbc/reference/sqlserverdatabasemetadata-methods.md)   

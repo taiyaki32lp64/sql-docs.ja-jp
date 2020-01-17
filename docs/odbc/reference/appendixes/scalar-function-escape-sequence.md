@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: aaf5d516-e090-445f-8839-9e39581c69c7
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 0913458d683d7641145b262552e147033dbfc054
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 36e108fcc61b2390d5fd72ac4ad322778ccfb4b2
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47660790"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68057067"
 ---
 # <a name="scalar-function-escape-sequence"></a>スカラー関数のエスケープ シーケンス
 ODBC スカラー関数のエスケープ シーケンスを使用します。 このエスケープ シーケンスの構文は次のとおりです。  
@@ -38,10 +37,10 @@ ODBC スカラー関数のエスケープ シーケンスを使用します。 �
   
  *スカラー関数*:: =*関数名*(*引数リスト*)  
   
- (、非終端要素の定義*関数名*と*関数名*(*引数リスト*) は、スカラー関数の一覧から派生[付録 e: スカラー関数](../../../odbc/reference/appendixes/appendix-e-scalar-functions.md))。  
+ (、非終端要素の定義*関数名*と*関数名*(*引数リスト*) は、スカラー関数の一覧から派生[付録 e:スカラー関数](../../../odbc/reference/appendixes/appendix-e-scalar-functions.md))。  
   
  *ODBC のイニシエーター esc* :: = {  
   
  *Esc 終端の ODBC* :: =}  
   
- データ ソースには、プロシージャがサポートされ、ドライバーは ODBC プロシージャの呼び出し構文をサポートしているかどうかを調べるにアプリケーションを呼び出すことができます**SQLGetInfo**します。 詳細については、次を参照してください。[付録 e: スカラー関数](../../../odbc/reference/appendixes/appendix-e-scalar-functions.md)します。
+ データ ソースには、プロシージャがサポートされ、ドライバーは ODBC プロシージャの呼び出し構文をサポートしているかどうかを調べるにアプリケーションを呼び出すことができます**SQLGetInfo**します。 詳細については、次を参照してください[付録 e:。スカラー関数](../../../odbc/reference/appendixes/appendix-e-scalar-functions.md)します。

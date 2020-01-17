@@ -10,12 +10,12 @@ ms.assetid: f2a35c37-4449-49ee-8bba-928028f1de66
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 4f4c4244b2d4c9bd785202805312f64194c73b5b
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 01f719470419940b130967b7c1360c4ae0c281eb
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52531668"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62779216"
 ---
 # <a name="guidelines-for-retry-logic-for-transactions-on-memory-optimized-tables"></a>メモリ最適化テーブルでのトランザクションの再試行ロジックのガイドライン
   メモリ最適化テーブルにアクセスするトランザクションに発生するエラー条件にはさまざまなものがあります。  
@@ -75,7 +75,7 @@ ms.locfileid: "52531668"
   
  次のサンプルでは、ネイティブ コンパイル ストアド プロシージャまたは複数コンテナーにまたがるトランザクションへの呼び出しが含まれている [!INCLUDE[tsql](../includes/tsql-md.md)] の解釈されたストアド プロシージャの再試行ロジックを示します。  
   
-```tsql  
+```sql  
 CREATE PROCEDURE usp_my_procedure @param1 type1, @param2 type2, ...  
 AS  
 BEGIN  

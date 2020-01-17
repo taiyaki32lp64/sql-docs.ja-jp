@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: e3abb359-79a3-4c22-b3a8-2900817e0d23
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: ecced3970d5f0bebff4ad0b7a6ae6f7798cdc3e8
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: fcd0e70dd9c505b9e2b0752c33b9e768b9127472
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47759270"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67967148"
 ---
 # <a name="attributes-property-adox"></a>Attributes プロパティ (ADOX)
 列の特性について説明します。  
@@ -37,5 +36,5 @@ ms.locfileid: "47759270"
   
 - [Column オブジェクト (ADOX)](../../../ado/reference/adox-api/column-object-adox.md)  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [Attributes プロパティの例 (VB)](../../../ado/reference/adox-api/attributes-property-example-vb.md)

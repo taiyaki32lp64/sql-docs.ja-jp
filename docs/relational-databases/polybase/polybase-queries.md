@@ -1,9 +1,7 @@
 ---
 title: PolyBase クエリのシナリオ | Microsoft Docs
-ms.custom: ''
-ms.date: 09/24/2018
+ms.date: 04/23/2019
 ms.prod: sql
-ms.reviewer: ''
 ms.technology: polybase
 ms.topic: conceptual
 keywords:
@@ -15,15 +13,16 @@ helpviewer_keywords:
 - Azure blob storage, import with PolyBase
 - Azure blob storage, export with PolyBase
 ms.assetid: 2c5aa2bd-af7d-4f57-9a28-9673c2a4c07e
-author: rothja
-ms.author: jroth
-manager: craigg
-ms.openlocfilehash: fb91a4603fa55fa967c51e25d24fcd33bc211218
-ms.sourcegitcommit: 9f2edcdf958e6afce9a09fb2e572ae36dfe9edb0
+author: MikeRayMSFT
+ms.author: mikeray
+ms.reviewer: ''
+monikerRange: '>= sql-server-2016 || =sqlallproducts-allversions'
+ms.openlocfilehash: a8912a290723e3f0e1d0a0b951a6a5d1ce04b725
+ms.sourcegitcommit: 8732161f26a93de3aa1fb13495e8a6a71519c155
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50099993"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71710513"
 ---
 # <a name="polybase-query-scenarios"></a>PolyBase クエリのシナリオ
 

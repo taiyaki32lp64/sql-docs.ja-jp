@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: 92fa804e-2d08-42c6-a36f-9791544b1d42
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 9f43d395238bb7b100fd4374e7e10a6382370fff
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 44c42bfebdd1a5b4e74a4a95243fb0c0606e9908
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51677192"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67900253"
 ---
 # <a name="sysdmosclusternodes-transact-sql"></a>sys.dm_os_cluster_nodes (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -36,7 +35,7 @@ ms.locfileid: "51677192"
 |列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
 |**NodeName**|**sysname**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] フェールオーバー クラスター インスタンス (仮想サーバー) 構成内のノードの名前。|  
-|status|**int**|内のノードの状態、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]フェールオーバー クラスター インスタンス: 0、1、2、3、-1。 詳細については、次を参照してください。 [GetClusterNodeState 関数](https://go.microsoft.com/fwlink/?LinkId=204794)します。|  
+|status|**int**|内のノードの状態、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]フェールオーバー クラスター インスタンス。0、1、2、3、-1。 詳細については、次を参照してください。 [GetClusterNodeState 関数](https://go.microsoft.com/fwlink/?LinkId=204794)します。|  
 |status_description|**nvarchar(20)**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] フェールオーバー クラスター ノードの状態の説明。<br /><br /> 0 = up<br /><br /> 1 = down<br /><br /> 2 = 一時停止<br /><br /> 3 = joining<br /><br /> -1 = unknown|  
 |is_current_owner|bit|1 は、このノードが [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] フェールオーバー クラスター リソースの現在の所有者であることを意味します。|  
 |pdw_node_id|**int**|**適用対象**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]、 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> この配布であるノードの識別子。|  
@@ -44,7 +43,7 @@ ms.locfileid: "51677192"
 ## <a name="remarks"></a>コメント  
  フェールオーバー クラスタリングが有効な場合、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスは、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] フェールオーバー クラスター インスタンス (仮想サーバー) 構成の一部として指定されているフェールオーバー クラスター内のどのノードでも実行できます。  
   
-> **注:** 、将来のリリースで非推奨の予定 fn_virtualservernodes 関数がこのビューに置き換えられます。  
+> **注:** このビューには、将来のリリースで非推奨の予定 fn_virtualservernodes 関数が置き換えられます。  
   
 ## <a name="permissions"></a>アクセス許可  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスに対する VIEW SERVER STATE 権限が必要です。  

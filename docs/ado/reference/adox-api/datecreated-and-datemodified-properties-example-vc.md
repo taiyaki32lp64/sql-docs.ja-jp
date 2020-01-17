@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: b964beee-83c7-4f91-8255-3ba864c9adfd
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: b95a22661ef66b80b9b0007aee6087e1bb49a1b0
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 07fe23064173ba6e5c64294f9ea89615909cb10f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47801090"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67966608"
 ---
 # <a name="datecreated-and-datemodified-properties-example-vc"></a>DateCreated および DateModified プロパティの例 (VC++)
 この例では、 [DateCreated](../../../ado/reference/adox-api/datecreated-property-adox.md)と[DateModified](../../../ado/reference/adox-api/datemodified-property-adox.md)プロパティを追加して[列](../../../ado/reference/adox-api/column-object-adox.md)既存[テーブル](../../../ado/reference/adox-api/table-object-adox.md)および新しいを作成する**テーブル**します。 DateOutput プロシージャは、この例を実行する必要があります。  
@@ -115,7 +114,7 @@ void DateOutPut(_bstr_t strTemp , _TablePtr tblTemp) {
 }  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [列オブジェクト (ADOX)](../../../ado/reference/adox-api/column-object-adox.md)   
  [DateCreated プロパティ (ADOX)](../../../ado/reference/adox-api/datecreated-property-adox.md)   
  [DateModified プロパティ (ADOX)](../../../ado/reference/adox-api/datemodified-property-adox.md)   

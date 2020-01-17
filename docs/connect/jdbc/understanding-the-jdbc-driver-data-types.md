@@ -1,7 +1,7 @@
 ---
-title: JDBC ドライバーのデータ型について |Microsoft Docs
+title: JDBC ドライバーのデータ型についてMicrosoft Docs
 ms.custom: ''
-ms.date: 01/19/2017
+ms.date: 08/12/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 7802328d-4d23-4775-9573-4169b127d258
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 3c3712370fef840e8bf265850d9ad4dbd946a52b
-ms.sourcegitcommit: 110e5e09ab3f301c530c3f6363013239febf0ce5
+ms.openlocfilehash: a8daea8b477be13dd7b267a17ddf5f960868f579
+ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/10/2018
-ms.locfileid: "48905014"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "69027272"
 ---
 # <a name="understanding-the-jdbc-driver-data-types"></a>JDBC ドライバーのデータ型について
 

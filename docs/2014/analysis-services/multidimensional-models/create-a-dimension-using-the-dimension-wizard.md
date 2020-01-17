@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - dimensions [Analysis Services], creating
@@ -13,12 +12,12 @@ ms.assetid: d84f66ae-7551-49bf-99d0-88368ca2dd0e
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: ad05272b38a2f3dec72c4be160f48981e4fd43a8
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: e23d4af96b5ce7c740f1b29893e6ee760104b871
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48118075"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66076426"
 ---
 # <a name="create-a-dimension-using-the-dimension-wizard"></a>ディメンション ウィザードを使用したディメンションの作成
   [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]のディメンション ウィザードを使用して新しいディメンションを作成できます。  
@@ -46,7 +45,7 @@ ms.locfileid: "48118075"
   
          **[キー列]** ボックスの一覧に複数のキー列が含まれている場合、キー属性のメンバー値を提供する名前列を指定する必要があります。 この操作を行うには、データ ソース ビューで名前付き計算を作成し、それを名前列として使用します。  
   
-    5.  **[次へ]** をクリックします。  
+    5.  [**次へ**] をクリックします。  
   
 4.  **[関連テーブルの選択]** ページで、ディメンションに含める関連テーブルを選択し、 **[次へ]** をクリックします。  
   

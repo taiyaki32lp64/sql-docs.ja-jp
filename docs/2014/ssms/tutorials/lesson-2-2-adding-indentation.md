@@ -11,11 +11,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 009f61563548e0c060350a75e9627804e18a7c54
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48207982"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63222940"
 ---
 # <a name="adding-indentation"></a>インデントの追加
   クエリ エディターでは、大規模なコードのセクションに一括してインデントを適用できるほか、インデント幅を変更できます。  
@@ -48,7 +48,7 @@ ms.locfileid: "48207982"
   
 1.  **[ツール]** メニューの **[オプション]** をクリックします。  
   
-2.  **[テキスト エディター]**、 **[すべての言語]** の順に展開し、 **[タブ]** をクリックして、適切なインデント幅を設定します。 インデント幅とタブのサイズを変更できるほか、タブをスペースに変換するかどうかも指定できます。  
+2.  **[テキスト エディター]** 、 **[すべての言語]** の順に展開し、 **[タブ]** をクリックして、適切なインデント幅を設定します。 インデント幅とタブのサイズを変更できるほか、タブをスペースに変換するかどうかも指定できます。  
   
      ![[タブ] ダイアログ ボックスの表示](media/tabsdialog.gif "[タブ] ダイアログ ボックスの表示")  
   

@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: a16fe7da-e4c8-45f5-be54-aad03c4fa168
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: a76d08ab4c07bc1324d09540a7c667f26c91020d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 92c28fe249d766fff33d2c52e20497cebd1f486b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47735070"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67993680"
 ---
 # <a name="data-types-with-stream-support-using-the-sqlsrv-driver"></a>SQLSRV ドライバーを使用したストリームでのデータ型のサポート
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]

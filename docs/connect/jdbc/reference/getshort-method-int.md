@@ -1,5 +1,5 @@
 ---
-title: getShort (int) メソッド |Microsoft Docs
+title: getShort (int) メソッド | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: cd9773c1-b598-4adb-aaf6-0c0f589cbef5
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: f209288eb05396145a8a0817ac020b615d6d0ebf
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 18161201976c0a00a4d32989667198cd8998223c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47801860"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67979880"
 ---
 # <a name="getshort-method-int"></a>getShort (int) メソッド
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -41,7 +40,7 @@ public short getShort(int index)
  パラメーターのインデックスを示す **int** です。  
   
 ## <a name="return-value"></a>戻り値  
- **短い**値。  
+ **short** 値です。  
   
 ## <a name="exceptions"></a>例外  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  

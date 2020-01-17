@@ -19,11 +19,11 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: 5109089b5cf865591b6f4955e0e7435ba84298dd
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52782324"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63035805"
 ---
 # <a name="servername-property-sqlserveralias-class"></a>ServerName プロパティ (SqlServerAlias クラス)
   インスタンスの名前を取得[!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]サーバー接続別名によって指定します。  

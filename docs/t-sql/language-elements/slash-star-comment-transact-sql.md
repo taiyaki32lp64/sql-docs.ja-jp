@@ -19,15 +19,14 @@ helpviewer_keywords:
 - remarks [SQL Server]
 - comments [SQL Server]
 ms.assetid: 4d9ab1b2-4bbb-4c16-beb1-cafc1af7417c
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: 0d6146d1890f69c5f3c2e17b5af22fee2c33bffa
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: c1bee651b2dd74564ebaff47add5acd4b62c5018
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47676470"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68121680"
 ---
 # <a name="slash-star-block-comment-transact-sql"></a>スラッシュ アスタリスク (ブロック コメント) (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -104,7 +103,7 @@ GO
   
 ## <a name="see-also"></a>参照  
  [-- &#40;コメント&#41; &#40;Transact-SQL&#41;](../../t-sql/language-elements/comment-transact-sql.md)   
- [フロー制御言語 &#40;TRANSACT-SQL&#41;](~/t-sql/language-elements/control-of-flow.md)  
+ [フロー制御言語 &#40;Transact-SQL&#41;](~/t-sql/language-elements/control-of-flow.md)  
   
   
 

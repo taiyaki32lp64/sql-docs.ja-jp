@@ -8,17 +8,20 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: language-reference
 ms.assetid: 5b1aeaf7-c938-4aef-bafc-e4d7a82eb578
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: f0307086f5dc8faa33801843cc20c2c375dc75c9
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 0338675549b49dd5c50eff9a8996f7a3ee6ee329
+ms.sourcegitcommit: 4fb6bc7c81a692a2df706df063d36afad42816af
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47765970"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73049949"
 ---
-# <a name="cataloggetparametervalues-ssisdb-database"></a>catalog.get_parameter_values (SSISDB データベース)
+# <a name="catalogget_parameter_values-ssisdb-database"></a>catalog.get_parameter_values (SSISDB データベース)
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] カタログのプロジェクトおよび対応するパッケージの既定のパラメーター値を解決し、取得します。  
@@ -41,7 +44,7 @@ catalog.get_parameter_values [ @folder_name = ] folder_name
  パラメーターが存在するプロジェクトの名前。 *project_name* は **nvarchar(128)** です。  
   
  [ @package_name = ] *package_name*  
- パッケージの名前です。 パッケージ名を指定して、すべてのプロジェクト パラメーターと指定されたパッケージのパラメーターを取得します。 NULL を使用すると、すべてのプロジェクト パラメーターとすべてのパッケージのパラメーターを取得します。 *package_name* は **nvarchar (260)** です。  
+ パッケージの名前です。 パッケージ名を指定して、すべてのプロジェクト パラメーターと指定されたパッケージのパラメーターを取得します。 *package_name* は **nvarchar (260)** です。  
   
  [ @reference_id = ] *reference_id*  
  環境参照の一意識別子。 このパラメーターはオプションです。 *reference_id* は **bigint** です。  

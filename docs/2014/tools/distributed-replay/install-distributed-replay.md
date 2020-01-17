@@ -11,11 +11,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 67d74db6faf9b40ad323ed2948c2c0a596a63016
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52816064"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63149722"
 ---
 # <a name="install-distributed-replay-from-the-command-prompt"></a>コマンド プロンプトからの 分散再生のインストール
   分散再生の新しいインスタンスをコマンド プロンプトでインストールすると、インストールする機能とその機能の構成を指定できます。 コマンド プロンプトによるインストールでは、分散再生ユーティリティ コンポーネントのインストール、修復、アップグレード、およびアンインストールがサポートされています。 コマンド プロンプトを使用してインストールする場合、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、/Q パラメーターを使用した Full Quiet モードがサポートされます。  

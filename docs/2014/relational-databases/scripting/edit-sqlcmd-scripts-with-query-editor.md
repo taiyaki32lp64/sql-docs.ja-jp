@@ -1,11 +1,10 @@
 ---
-title: クエリ エディターによる SQLCMD スクリプトの編集 | Microsoft Docs
-ms.custom: ''
+title: クエリ エディターによる SQLCMD スクリプトの編集
+ms.custom: seo-lt-2019
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 helpviewer_keywords:
 - scripts [SQL Server], SQLCMD scripts
@@ -17,18 +16,20 @@ ms.assetid: f77b866d-c330-47c9-9e74-0b8d8dff4b31
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 0eaecfdb6e9b3578d1ee4a3bb867c715aa1492e0
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 224fcd5f6b4c15a492be6aa6d893a4a4e5625b08
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48093262"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75245181"
 ---
 # <a name="edit-sqlcmd-scripts-with-query-editor"></a>クエリ エディターによる SQLCMD スクリプトの編集
+  
   [!INCLUDE[ssDE](../../includes/ssde-md.md)] の [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] のクエリ エディターを使用すると、クエリを SQLCMD スクリプトとして作成したり、編集したりできます。 Windows システムのコマンドと [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントを同じスクリプトで処理する必要がある場合は、SQLCMD スクリプトを使用します。  
   
 ## <a name="sqlcmd-mode"></a>SQLCMD モード  
- [!INCLUDE[ssDE](../../includes/ssde-md.md)] のクエリ エディターで SQLCMD スクリプトの作成や編集を行うには、SQLCMD スクリプト モードを有効にする必要があります。 クエリ エディターの SQLCMD モードは、既定では有効ではありません。 スクリプト モードを有効にするには、ツール バーの **[SQLCMD モード]** アイコンをクリックするか、 **[クエリ]** メニューの **[SQLCMD モード]** をクリックします。  
+ 
+  [!INCLUDE[ssDE](../../includes/ssde-md.md)] のクエリ エディターで SQLCMD スクリプトの作成や編集を行うには、SQLCMD スクリプト モードを有効にする必要があります。 クエリ エディターの SQLCMD モードは、既定では有効ではありません。 スクリプト モードを有効にするには、ツール バーの **[SQLCMD モード]** アイコンをクリックするか、 **[クエリ]** メニューの **[SQLCMD モード]** をクリックします。  
   
 > [!NOTE]  
 >  SQLCMD モードを有効にすると、 [!INCLUDE[tsql](../../includes/tsql-md.md)] のクエリ エディターの IntelliSense および [!INCLUDE[ssDE](../../includes/ssde-md.md)] デバッガーが無効になります。  
@@ -46,17 +47,20 @@ ms.locfileid: "48093262"
 -   Showplan  
   
 ## <a name="enable-sqlcmd-scripting-in-query-editor"></a>クエリ エディターで SQLCMD スクリプト操作を有効にする方法  
- [!INCLUDE[ssDE](../../includes/ssde-md.md)] のアクティブなクエリ エディター ウィンドウで SQLCMD スクリプト操作を有効にするには、次の手順を実行します。  
+ 
+  [!INCLUDE[ssDE](../../includes/ssde-md.md)] のアクティブなクエリ エディター ウィンドウで SQLCMD スクリプト操作を有効にするには、次の手順を実行します。  
   
 #### <a name="to-switch-a-database-engine-query-editor-window-to-sqlcmd-mode"></a>データベース エンジンのクエリ エディター ウィンドウを SQLCMD モードに切り替えるには  
   
 1.  オブジェクト エクスプローラーで、サーバーを右クリックして **[新しいクエリ]** をクリックし、 [!INCLUDE[ssDE](../../includes/ssde-md.md)] のクエリ エディター ウィンドウを新しく開きます。  
   
-2.  **[クエリ]** メニューの **[SQLCMD モード]** をクリックします。  
+2.  
+  **[クエリ]** メニューの **[SQLCMD モード]** をクリックします。  
   
      クエリ エディター ウィンドウのコンテキストで **sqlcmd** ステートメントが実行されます。  
   
-3.  **[SQL エディター]** ツール バーの **[使用できるデータベース]** の一覧で、[ [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)]] データベースを選択します。  
+3.  
+  **[SQL エディター]** ツール バーの **[使用できるデータベース]** の一覧で、[ [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)]] データベースを選択します。  
   
 4.  クエリ エディター ウィンドウに、次の 2 つの [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントと `!!DIR` **sqlcmd** ステートメントを入力します。  
   
@@ -73,11 +77,13 @@ ms.locfileid: "48093262"
   
      1 番目と 3 番目のステートメントにより、2 つの SQL 結果ペインが表示されます。  
   
-6.  **結果** ペインの **[メッセージ]** タブをクリックし、3 つのステートメントすべてから取得されたメッセージを確認します。  
+6.  
+  **結果** ペインの **[メッセージ]** タブをクリックし、3 つのステートメントすべてから取得されたメッセージを確認します。  
   
     -   (6 件処理されました)  
   
-    -   \< ディレクトリ情報 >  
+    -   
+  \< ディレクトリ情報 >  
   
     -   (4 行処理されました)  
   
@@ -102,19 +108,25 @@ ms.locfileid: "48093262"
   
 -   1 行のコメント文字は 2 つのハイフン (`--)` であり、行の先頭に置く必要があります。  
   
--   オペレーティング システム コマンドの前には 2 つの感嘆符 (`!!`) を置く必要があります。 2 つの感嘆符が付いたコマンドの場合は、感嘆符の後のステートメントが `cmd.exe` コマンド プロセッサによって実行されます。 `!!` の後のテキストは、 `cmd.exe`にパラメーターとして渡されるので、最終的に実行されるコマンド ラインは、 `"%SystemRoot%\system32\cmd.exe /c <text after !!>"`になります。  
+-   オペレーティング システム コマンドの前には 2 つの感嘆符 (`!!`) を置く必要があります。 2 つの感嘆符が付いたコマンドの場合は、感嘆符の後のステートメントが `cmd.exe` コマンド プロセッサによって実行されます。 
+  `!!` の後のテキストは、 `cmd.exe`にパラメーターとして渡されるので、最終的に実行されるコマンド ラインは、 `"%SystemRoot%\system32\cmd.exe /c <text after !!>"`になります。  
   
 -   SQLCMD コマンドと [!INCLUDE[tsql](../../includes/tsql-md.md)]の区別を明確にするために、すべての SQLCMD コマンドの先頭にはコロン (`:`) を付ける必要があります。  
   
--   `GO` コマンドは、先頭に文字を付けずに使用することも、 を付けて使用することもできます。 `!!:`  
+-   
+  `GO` コマンドは、先頭に文字を付けずに使用することも、 を付けて使用することもできます。 `!!:`  
   
--   [!INCLUDE[ssDE](../../includes/ssde-md.md)] のクエリ エディターは、環境変数をサポートしており、また SQLCMD スクリプトの一部として定義されている変数もサポートしています。ただし、組み込みの SQLCMD 変数や **osql** 変数はサポートしていません。 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] で処理される SQLCMD では、変数の大文字と小文字が区別されます。 たとえば、PRINT '$(COMPUTERNAME)' では正しい結果になりますが、PRINT '$(ComputerName)' ではエラーが返されます。  
+-   
+  [!INCLUDE[ssDE](../../includes/ssde-md.md)] のクエリ エディターは、環境変数をサポートしており、また SQLCMD スクリプトの一部として定義されている変数もサポートしています。ただし、組み込みの SQLCMD 変数や **osql** 変数はサポートしていません。 
+  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] で処理される SQLCMD では、変数の大文字と小文字が区別されます。 たとえば、PRINT '$(COMPUTERNAME)' では正しい結果になりますが、PRINT '$(ComputerName)' ではエラーが返されます。  
   
 > [!CAUTION]  
->  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] は、標準モードと SQLCMD モードの実行に [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]SqlClient を使用します。 コマンド ラインから SQLCMD を実行する場合は、OLE DB プロバイダーを使用することになります。 同じクエリでも、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] の SQLCMD モードで実行する場合と SQLCMD ユーティリティで実行する場合とでは、適用される既定のオプションが異なるので、動作も異なる可能性があります。  
+>  
+  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] は、標準モードと SQLCMD モードの実行に [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]SqlClient を使用します。 コマンド ラインから SQLCMD を実行する場合は、OLE DB プロバイダーを使用することになります。 同じクエリでも、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] の SQLCMD モードで実行する場合と SQLCMD ユーティリティで実行する場合とでは、適用される既定のオプションが異なるので、動作も異なる可能性があります。  
   
 ## <a name="supported-sqlcmd-syntax"></a>サポートされている SQLCMD 構文  
- [!INCLUDE[ssDE](../../includes/ssde-md.md)] のクエリ エディターでは、以下の SQLCMD スクリプト キーワードをサポートしています。  
+ 
+  [!INCLUDE[ssDE](../../includes/ssde-md.md)] のクエリ エディターでは、以下の SQLCMD スクリプト キーワードをサポートしています。  
   
  `[!!:]GO[count]`  
   
@@ -137,15 +149,17 @@ ms.locfileid: "48093262"
  `:out <filename>|stderr|stdout`  
   
 > [!NOTE]  
->  `:error` と `:out`の場合、 `stderr` と `stdout` のどちらを指定しても、出力は [メッセージ] タブに送信されます。  
+>  
+  `:error` と `:out`の場合、 `stderr` と `stdout` のどちらを指定しても、出力は [メッセージ] タブに送信されます。  
   
- クエリ エディターでは、上記以外の SQLCMD コマンドをサポートしていません。 サポートされていない SQLCMD キーワードが実行されると、サポートされていないキーワードごとに、"Ignoring command *\<ignored command*>" (<無視されたコマンド> コマンドを無視しています) メッセージがクエリ エディターから宛先に送信されます。 スクリプトは正常に実行されますが、サポートされていないコマンドは無視されます。  
+ クエリ エディターでは、上記以外の SQLCMD コマンドをサポートしていません。 サポートされていない SQLCMD キーワードを含むスクリプトが実行されると、クエリエディターは、サポートされていない各キーワードの送信先に "コマンド* \<無視コマンド*> を無視します" というメッセージを送信します。 スクリプトは正常に実行されますが、サポートされていないコマンドは無視されます。  
   
 > [!CAUTION]  
 >  コマンド ラインから SQLCMD を実行する場合とは異なり、クエリ エディターの SQLCMD モードにはいくつかの制限事項があります。 まず、変数などのコマンド ライン パラメーターを受け渡すことができません。また、クエリ エディターはオペレーティング システムのプロンプトに応答できないため、対話型のステートメントを実行しないように注意してください。  
   
 ## <a name="color-coding-in-sqlcmd-scripts"></a>SQLCMD スクリプトのコードの色分け  
- SQLCMD スクリプト操作が有効になっていると、スクリプトのコードが色分けされます。 [!INCLUDE[tsql](../../includes/tsql-md.md)] キーワードの色分けは変わりません。 SQLCMD コマンドは、背景が影付きになります。  
+ SQLCMD スクリプト操作が有効になっていると、スクリプトのコードが色分けされます。 
+  [!INCLUDE[tsql](../../includes/tsql-md.md)] キーワードの色分けは変わりません。 SQLCMD コマンドは、背景が影付きになります。  
   
 ## <a name="example"></a>例  
  次の例では、現在のディレクトリを出力するために、 **sqlcmd** ステートメントを使用して testoutput.txt という出力ファイルを作成し、1 つのオペレーティング システム コマンドで 2 つの [!INCLUDE[tsql](../../includes/tsql-md.md)] の SELECT ステートメントを実行しています。 結果ファイルには、 `DIR` ステートメントからのメッセージ出力に続いて、 [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントからの結果の出力が含まれます。  
@@ -160,6 +174,6 @@ GO
 ```  
   
 ## <a name="see-also"></a>参照  
- [sqlcmd Utility](../../tools/sqlcmd-utility.md)  
+ [sqlcmd ユーティリティ](../../tools/sqlcmd-utility.md)  
   
   

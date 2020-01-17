@@ -7,15 +7,15 @@ ms.reviewer: ''
 ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: dc7ef6bc-c03a-4dd1-9ca4-43c62f8761fe
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 41d6248743ceadf23a3a351a6599497dd8e5172b
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 14f45ed2a07ddbc6f4fe7c227e29f34f6ea272ce
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56041213"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65484902"
 ---
 # <a name="task-1-creating-a-data-quality-project"></a>タスク 1:データ品質プロジェクトを作成する
   ここでは、このチュートリアルで既に作成した Suppliers ナレッジ ベースに対して Excel ファイルの仕入先データをクレンジングするためのデータ品質プロジェクトを作成します。  
@@ -33,6 +33,6 @@ ms.locfileid: "56041213"
      ![新しいデータ品質プロジェクト ページ - クレンジングが選択されている](../../2014/tutorials/media/et-creatingadataqualityproject-02.jpg "新しいデータ品質プロジェクト ページ - クレンジングが選択されています。")  
   
 ## <a name="next-step"></a>次の手順  
- [タスク 2:DQS ドメインを Excel 列のマッピング](../../2014/tutorials/task-2-mapping-excel-columns-to-dqs-domains.md)  
+ [タスク 2: DQS ドメインを Excel 列のマッピング](../../2014/tutorials/task-2-mapping-excel-columns-to-dqs-domains.md)  
   
   

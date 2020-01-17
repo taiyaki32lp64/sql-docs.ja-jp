@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.cubeeditor.cubebuilderview.f1
@@ -13,12 +12,12 @@ ms.assetid: 00f0b605-5352-4b42-84f5-bd6c3e42d3d1
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 8ef8764f2fa5e0cf135c6e3b4156964e6f904f8c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: d4a60b80b19bd8c04964e30c035cf2330605fc25
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48160852"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66086578"
 ---
 # <a name="cube-structure-cube-designer-analysis-services---multidimensional-data"></a>[キューブ構造] (キューブ デザイナー) (Analysis Services - 多次元データ)
   **で** キューブ デザイナー **の** [キューブ構造] [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] タブを使用すると、メジャー グループやメジャーを作成、変更、キューブ ディメンションを追加、キューブに含まれているオブジェクトを関連するデータ ソース ビューから表示する操作ができます。  
@@ -34,8 +33,8 @@ ms.locfileid: "48160852"
 |**Dimensions**|**[ディメンション]** ペインを使用して、選択したキューブのキューブ ディメンションを保持、変更します。 このペインの詳細については、「[[ディメンション] (キューブ デザイナーの [キューブ構造] タブ) (Analysis Services - 多次元データ)](dimensions-cube-structure-cube-designer-analysis-services-multidimensional-data.md)」を参照してください。|  
 |**データ ソース ビュー**|**[データ ソース ビュー]** ペインを使用して、選択したキューブに関連付けられたデータ ソース ビューを表示、編集します。 このペインの詳細については、「[[データ ソース ビュー] (キューブ デザイナーの [キューブ構造] タブ) (Analysis Services - 多次元データ)](data-source-view-cube-designer-analysis-services-multidimensional-data.md)」を参照してください。|  
   
-## <a name="see-also"></a>参照  
- [論理アーキテクチャ&#40;Analysis Services - 多次元データ&#41;](multidimensional-models/olap-logical/understanding-microsoft-olap-logical-architecture.md)   
+## <a name="see-also"></a>関連項目  
+ [論理アーキテクチャ &#40;Analysis Services - 多次元データ&#41;](multidimensional-models/olap-logical/understanding-microsoft-olap-logical-architecture.md)   
  [多次元モデルのキューブ](multidimensional-models/cubes-in-multidimensional-models.md)   
  [メジャーのプロパティを構成します。](multidimensional-models/configure-measure-properties.md)   
  [ディメンション&#40;Analysis Services - 多次元データ&#41;](multidimensional-models-olap-logical-dimension-objects/dimensions-analysis-services-multidimensional-data.md)   

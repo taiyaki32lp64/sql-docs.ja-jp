@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: a7dcad87-aaf0-4b02-9660-472f8469761c
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 45e0f3be43ce8e2780268b7dfde83253b71da946
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 665afeb4be263ae0772557d2d2f30e112596f289
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52539705"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67922448"
 ---
 # <a name="rds-scenario"></a>RDS のシナリオ
 > [!IMPORTANT]
@@ -62,7 +61,7 @@ ms.locfileid: "52539705"
   
 -   [アドレス帳のナビゲーション ボタン](../../../ado/guide/remote-data-service/address-book-navigation-buttons.md)  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [アドレス帳アプリケーションのシステム要件](../../../ado/guide/remote-data-service/system-requirements-for-the-address-book-application.md)   
  [Microsoft ActiveX Data Objects (ADO)](../../../ado/microsoft-activex-data-objects-ado.md)   
  [RDS の基礎](../../../ado/guide/remote-data-service/rds-fundamentals.md)   

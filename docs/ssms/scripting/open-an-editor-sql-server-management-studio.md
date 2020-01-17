@@ -7,16 +7,15 @@ ms.technology: scripting
 ms.reviewer: ''
 ms.topic: conceptual
 ms.assetid: 5d654a60-d205-49d2-a831-b3d986d60024
-author: stevestein
-ms.author: sstein
-manager: craigg
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 6e2d05ae0034f7826044f2ae2f29a8d6ca2a07df
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 31c2a9419105f1ee8435b3c1b7e0d7dc7728e0d8
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52508731"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68267018"
 ---
 # <a name="open-an-editor-sql-server-management-studio"></a>エディターの表示 (SQL Server Management Studio)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -31,7 +30,7 @@ ms.locfileid: "52508731"
 ### <a name="permissions"></a>アクセス許可  
  コード エディター内で実行する操作には、ログインに使用した認証アカウントに付与されている権限が適用されます。 たとえば、Windows 認証を使用して [!INCLUDE[ssDE](../../includes/ssde-md.md)] クエリ エディター ウィンドウを開いた場合、自分の Windows ログイン アカウントでアクセスできないオブジェクトを参照する [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントを実行することはできません。  
   
-## <a name="how-to-open-editors"></a>方法: エディターを開く  
+## <a name="how-to-open-editors"></a>方法:エディターを開く  
  このセクションでは、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]の各種エディターを開く方法について説明します。  
   
 ### <a name="using-the-filenew-menu"></a>[ファイル] メニューの [新規作成] の使用  

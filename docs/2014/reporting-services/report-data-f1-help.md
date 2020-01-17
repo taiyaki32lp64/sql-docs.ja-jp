@@ -4,26 +4,25 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 ms.assetid: 61b91ccf-7b4c-4f3d-8992-2c8eb105ccf4
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 555cbc9e0151f68ab560fdc6620d1c6566770e57
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: 1e1bd9fefaf818a3b1499ba3ea8bf761de234666
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56285581"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66107530"
 ---
 # <a name="report-data-f1-help"></a>レポート データの F1 ヘルプ
   このセクションのトピックでは、データ ソース、共有データ ソース、およびデータセットで設定できるオプション、およびレポート デザイナーで使用できるクエリ デザイナーについて説明します。  
   
  **[レポートのプロパティ]** ダイアログ ボックスからこれらのトピックにアクセスするには、 **[ヘルプ]** をクリックします。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [レポート データ (SSRS)](report-data/report-data-ssrs.md)  
   
   

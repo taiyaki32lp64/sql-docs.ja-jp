@@ -8,17 +8,20 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 45d66152-883a-49a7-a877-2e8ab45f8f79
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: 1cbccb0ba6fa66cba9b8e57e628bef4710414cf7
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 64f1b991d0978e45cbfa9dbf19ba796cc824bf5c
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52533394"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71292940"
 ---
 # <a name="define-a-state-variable"></a>状態変数の定義
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   この手順では、CDC 状態が格納されるパッケージ変数を定義する方法について説明します。  
   
  CDC 状態変数は CDC 制御タスクによって読み込まれ、初期化され、更新されます。また、CDC ソース データ フロー コンポーネントによって使用され、変更レコードの現在の処理範囲が決まります。 CDC 状態変数は、CDC 制御タスクおよび CDC ソースに共通のコンテナーで定義できます。 これはパッケージ レベルですが、ループ コンテナーのような他のコンテナーに対しても設定できます。  

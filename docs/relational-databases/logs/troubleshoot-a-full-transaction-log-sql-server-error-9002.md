@@ -1,6 +1,6 @@
 ---
-title: 満杯になったトランザクション ログのトラブルシューティング (SQL Server エラー 9002) | Microsoft Docs
-ms.custom: ''
+title: 満杯になったトランザクション ログのトラブルシューティング (エラー 9002)
+ms.custom: seo-lt-2019
 ms.date: 08/05/2016
 ms.prod: sql
 ms.prod_service: database-engine
@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: 0f23aa84-475d-40df-bed3-c923f8c1b520
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 57d6fa7cf4e323004789dabb098df400f1ae6dce
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: ad8b68338987256f1c7fa01f1f0d56242cef6a7f
+ms.sourcegitcommit: d00ba0b4696ef7dee31cd0b293a3f54a1beaf458
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51663802"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "74056075"
 ---
 # <a name="troubleshoot-a-full-transaction-log-sql-server-error-9002"></a>満杯になったトランザクション ログのトラブルシューティング (SQL Server エラー 9002)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

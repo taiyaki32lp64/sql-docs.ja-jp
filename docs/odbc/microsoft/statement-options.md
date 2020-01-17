@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: cd73b769-c8b5-43e0-9f80-b3011b7a6162
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: fe57ffa0d7628601fcb6dd19218715b32a57322b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 3bf99aace8b058e429898846466294cc42612070
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47829480"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67948833"
 ---
 # <a name="statement-options"></a>ステートメントのオプション
 > [!IMPORTANT]  

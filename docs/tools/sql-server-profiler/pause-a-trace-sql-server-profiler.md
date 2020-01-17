@@ -1,5 +1,5 @@
 ---
-title: トレース (SQL Server Profiler) を一時停止 |Microsoft Docs
+title: トレースを一時停止する (SQL Server プロファイラー) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -13,15 +13,14 @@ helpviewer_keywords:
 - traces [SQL Server], pausing
 - stopping traces
 ms.assetid: 432b9b0c-b5e7-47f3-a71b-310fb3bf2445
-author: stevestein
-ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 8d8eec7d26034b89b40bcec7150f45e11e41230c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: c314337c317ef4892405058b8eba50220a8bcdbb
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47674117"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67911710"
 ---
 # <a name="pause-a-trace-sql-server-profiler"></a>トレースの一時停止 (SQL Server Profiler)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

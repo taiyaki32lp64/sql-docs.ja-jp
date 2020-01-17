@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 f1_keywords:
 - sql12.swb.query.text.f1
@@ -13,12 +12,12 @@ ms.assetid: fd2fb409-58f9-4ede-8349-ce007126b68d
 author: craigg-msft
 ms.author: craigg
 manager: craigg
-ms.openlocfilehash: 8136f43214ef966c7beb05501ca0b27d451f0451
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 8d96384a4a4f4adbb52855a45f1bc00d3aadd85d
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48223888"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66088983"
 ---
 # <a name="query-options-results-text-page"></a>[クエリ オプション] の [結果] ([テキスト] ページ)
   このページを使用すると、クエリ結果セットをテキスト形式で表示するオプションを指定できます。 このページの設定は、 **[結果をファイルに出力]** が選択されているときにも使用できます。  

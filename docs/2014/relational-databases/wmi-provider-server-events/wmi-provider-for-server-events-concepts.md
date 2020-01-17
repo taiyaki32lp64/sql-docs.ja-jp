@@ -17,11 +17,11 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: 3a0ef44b57e092c13b4046b250c99fca5eaea101
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52780824"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68211577"
 ---
 # <a name="wmi-provider-for-server-events-concepts"></a>WMI Provider for Server Events の概念
   WMI Provider for Server Events を使用すると、Windows Management Instrumentation (WMI) によって、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスのイベントを監視できます。  
@@ -36,10 +36,10 @@ ms.locfileid: "52780824"
  [WMI Provider for Server Events と WQL の使用](using-wql-with-the-wmi-provider-for-server-events.md)  
  WQL (WMI Query Language) 構文について概要を示し、プロバイダーに対するプログラミングでこの構文を使用する方法について説明します。  
   
- [サンプル:サーバー イベント用 WMI プロバイダーを使用して SQL Server エージェント警告の作成](sample-creating-a-sql-server-agent-alert-with-the-wmi-provider.md)  
+ [サンプル: サーバー イベント用 WMI プロバイダーを使用して SQL Server エージェント警告の作成](sample-creating-a-sql-server-agent-alert-with-the-wmi-provider.md)  
  WMI プロバイダーを使用してトレース イベント情報を返し、これに対して SQL Server エージェント警告を作成する例を示します。  
   
- [サンプル:.NET Framework で WMI イベント プロバイダーを使用します。](sample-using-the-wmi-event-provider-with-the-net-framework.md)  
+ [サンプル: .NET Framework で WMI イベント プロバイダーを使用します。](sample-using-the-wmi-event-provider-with-the-net-framework.md)  
  WMI プロバイダーを使用して、C# アプリケーションでイベント データを返す例を示します。  
   
  [サーバー イベント用 WMI プロバイダーのクラスとプロパティ](wmi-provider-for-server-events-classes-and-properties.md)  

@@ -1,7 +1,7 @@
 ---
 title: SQLEndTran 関数 |Microsoft Docs
 ms.custom: ''
-ms.date: 01/19/2017
+ms.date: 07/18/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -11,6 +11,7 @@ apiname:
 - SQLEndTran
 apilocation:
 - sqlsrv32.dll
+- odbc32.dll
 apitype: dllExport
 f1_keywords:
 - SQLEndTran
@@ -19,27 +20,26 @@ helpviewer_keywords:
 ms.assetid: ff375ce1-eb50-4693-b1e6-70181a6dbf9f
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: fa1b2afec38116bef3ae90d75607d21c9a92cd80
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: 98a0f072af79c2c6e39d0cfc49e72cbeef1c2193
+ms.sourcegitcommit: c1382268152585aa77688162d2286798fd8a06bb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53204561"
+ms.lasthandoff: 07/19/2019
+ms.locfileid: "68344768"
 ---
 # <a name="sqlendtran-function"></a>SQLEndTran 関数
-**準拠**  
- バージョンが導入されました。ODBC 3.0 規格に準拠します。ISO 92  
+**互換性**  
+ 導入されたバージョン:ODBC 3.0 標準準拠:ISO 92  
   
  **まとめ**  
- **SQLEndTran**接続に関連付けられているすべてのステートメントにアクティブなすべての操作をコミットまたはロールバック操作を要求します。 **SQLEndTran**環境に関連付けられているすべての接続のコミットまたはロールバック操作を実行することが要求もできます。  
+ **SQLEndTran**は、接続に関連付けられているすべてのステートメントに対するすべてのアクティブな操作に対して、コミットまたはロールバックの操作を要求します。 **SQLEndTran**は、環境に関連付けられているすべての接続に対して、コミットまたはロールバックの操作を実行するように要求することもできます。  
   
 > [!NOTE]  
->  詳細についてはどのようなドライバー マネージャーのときに、ODBC 3 には、この関数にマップします。*x* ODBC 2 を利用するアプリケーション *。x*ドライバーを参照してください[アプリケーションの旧バージョンと互換性のマッピング置換関数](../../../odbc/reference/develop-app/mapping-replacement-functions-for-backward-compatibility-of-applications.md)します。  
+>  ドライバーマネージャーが ODBC 3 でこの関数をマップする方法の詳細については、「」を参照してください。*x*アプリケーションは ODBC 2 で動作しています。*x*ドライバー、「[アプリケーションの旧バージョンとの互換性のための置換関数のマッピング](../../../odbc/reference/develop-app/mapping-replacement-functions-for-backward-compatibility-of-applications.md)」を参照してください。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
   
 SQLRETURN SQLEndTran(  
      SQLSMALLINT   HandleType,  
@@ -49,111 +49,111 @@ SQLRETURN SQLEndTran(
   
 ## <a name="arguments"></a>引数  
  *HandleType*  
- [入力]ハンドル型の識別子。 いずれかの sql_handle_env として含まれています (場合*処理*環境ハンドルは、) または sql_handle_dbc として (場合*処理*接続ハンドルです)。  
+ 代入ハンドル型識別子。 SQL_HANDLE_ENV ( *handle*が環境ハンドルの場合) または SQL_HANDLE_DBC (*ハンドル*が接続ハンドルの場合) のいずれかが含まれます。  
   
  *Handle*  
- [入力]示される型のハンドル、 *HandleType*トランザクションのスコープを示します。 詳細については、「コメント」を参照してください。  
+ 代入*Handletype*によって示される型のハンドル。トランザクションのスコープを示します。 詳細については、「コメント」を参照してください。  
   
- *CompletionType*  
- [入力]次の 2 つの値のいずれか:  
+ *入力型*  
+ 代入次の2つの値のいずれかです。  
   
- 指定して SQL_ROLLBACK  
+ SQL_COMMIT SQL_ROLLBACK  
   
 ## <a name="returns"></a>戻り値  
- SQL_SUCCESS、SQL_SUCCESS_WITH_INFO、SQL_ERROR、SQL_INVALID_HANDLE、または SQL_STILL_EXECUTING します。  
+ SQL_SUCCESS、SQL_SUCCESS_WITH_INFO、SQL_ERROR、SQL_INVALID_HANDLE、または SQL_STILL_EXECUTING。  
   
 ## <a name="diagnostics"></a>診断  
- ときに**SQLEndTran** SQL_ERROR または SQL_SUCCESS_WITH_INFO、関連付けられている SQLSTATE 値を返しますを呼び出すことによって取得される可能性があります**SQLGetDiagRec**と適切な*HandleType*と*処理*します。 次の表に、一般的にによって返される SQLSTATE 値**SQLEndTran** ; この関数のコンテキストでそれぞれについて説明しますと表記"(DM)"の前にドライバー マネージャーによって返されるについての説明。 SQLSTATE 値ごとに関連付けられているリターン コードは明記しない限り、SQL_ERROR です。  
+ **SQLEndTran**が SQL_ERROR または SQL_SUCCESS_WITH_INFO を返す場合は、適切な*Handletype*と*ハンドル*を指定して**SQLGetDiagRec**を呼び出すことによって、関連する SQLSTATE 値を取得できます。 次の表に、 **SQLEndTran**によって一般的に返される SQLSTATE 値と、この関数のコンテキストにおけるそれぞれの説明を示します。"(DM)" という表記は、ドライバーマネージャーによって返される SQLSTATEs の説明の前にあります。 特に記載がない限り、各 SQLSTATE 値に関連付けられているリターンコードは SQL_ERROR です。  
   
 |SQLSTATE|[エラー]|説明|  
 |--------------|-----------|-----------------|  
-|01000|一般的な警告|ドライバー固有の情報メッセージです。 (関数は、SQL_SUCCESS_WITH_INFO を返します)。|  
-|08003|接続は開いていません|(DM)、 *HandleType*が sql_handle_dbc として、および*処理*接続状態ではありませんでした。|  
-|08007|トランザクション中に、接続エラー|*HandleType*を sql_handle_dbc として、接続に関連付けられている、*処理*、関数の実行に失敗したし、することはできないかどうかを確認、要求された**コミット**または**ロールバック**障害発生前に発生します。|  
-|25S01|トランザクションの状態が不明です。|1 つまたは複数の接続の*処理*を指定すると、結果を持つトランザクションを完了できませんでしたし、結果は不明です。|  
-|25S02|トランザクションがアクティブなままです。|ドライバーは、グローバル トランザクションのすべての処理が自動的に完了して、トランザクションがアクティブなままのことを保証するためにできませんでした。|  
-|25S03|トランザクションをロールバックします。|ドライバーは、グローバル トランザクションのすべての処理が自動的に完了してすべてのアクティブなトランザクションの処理のことを保証するためにできませんでした*処理*はロールバックされました。|  
-|40001|シリアル化エラー|トランザクションが別のトランザクションでリソース デッドロックによりロールバックされました。|  
-|40002|整合性制約違反|*CompletionType*した状態で、変更のコミットには、整合性制約違反が発生しました。 その結果、トランザクション ロールバックされました。|  
-|HY000|一般的なエラー|これがなかった固有の SQLSTATE とする実装に固有の SQLSTATE が定義されていない、エラーが発生しました。 によって返されるエラー メッセージ**SQLGetDiagRec**で、  *\*szMessageText*バッファーは、エラーとその原因について説明します。|  
-|HY001|メモリの割り当てエラー|ドライバーは、実行または関数の完了をサポートするために必要なメモリを割り当てることができませんでした。|  
-|HY008|操作が取り消されました|非同期処理が有効に、 *ConnectionHandle*します。 関数が呼び出された、および実行する前に完了[SQLCancelHandle 関数](../../../odbc/reference/syntax/sqlcancelhandle-function.md)が呼び出されて、 *ConnectionHandle*します。 後でもう一度関数が呼び出された、 *ConnectionHandle*します。<br /><br /> 関数が呼び出された、および実行する前に完了**SQLCancelHandle**が呼び出されて、 *ConnectionHandle*マルチ スレッド アプリケーションで別のスレッドから。|  
-|HY010|関数のシーケンス エラー|(DM) を非同期的に実行中の関数が呼び出されたステートメント ハンドルに関連付けられている、 *ConnectionHandle*ときに実行されていると**SQLEndTran**が呼び出されました。<br /><br /> (DM) を非同期的に実行中の関数 (いないこの"1") が呼び出された、 *ConnectionHandle*この関数が呼び出されたときに実行されているとします。<br /><br /> (DM) **SQLExecute**、 **SQLExecDirect**、 **SQLBulkOperations**、または**SQLSetPos**ステートメント ハンドルに関連付けられているために呼び出されますが、*ConnectionHandle* SQL_NEED_DATA が返されます。 すべての実行時データ パラメーターまたは列のデータが送信される前に、この関数が呼び出されました。<br /><br /> (DM) を非同期的に実行中の関数 (いないこの"1") が呼び出された、*処理*で*HandleType* sql_handle_dbc として設定し、この関数が呼び出されたときに実行されています。<br /><br /> (DM) **SQLExecute**、 **SQLExecDirect**、または**SQLMoreResults**に関連付けられているステートメント ハンドルのいずれかが呼び出された*処理*と返された SQL_PARAM_DATA_AVAILABLE します。 ストリームのすべてのパラメーターのデータが取得される前に、この関数が呼び出されました。|  
-|HY012|無効なトランザクション操作コード|引数に指定された値 (DM) *CompletionType*した状態でも SQL_ROLLBACK でした。|  
-|HY013|メモリ管理エラー|基になるメモリ オブジェクトにアクセスできませんでした、場合によってメモリ不足が原因であるために、関数呼び出しを処理できませんでした。|  
-|HY092|無効な属性またはオプション識別子|引数に指定された値 (DM) *HandleType* sql_handle_env としても sql_handle_dbc としてでした。|  
-|HY115|非同期関数の実行が有効になっていると、接続が存在する環境に SQLEndTran が許可されていません|(DM) *HandleType*環境での接続の接続の機能の非同期実行が有効になっている場合、sql_handle_env としてに設定することはできません。|  
-|HY117|不明なトランザクションの状態のため、接続が中断されます。 のみを切断して、読み取り専用の関数が許可されます。|(DM) 中断状態の詳細については、このトピックのコメント セクションを参照してください。|  
-|HYC00|省略可能な機能が実装されていません|ドライバーまたはデータ ソースはサポートしていません、**ロールバック**操作。|  
-|HYT01|接続がタイムアウトしました|データ ソースが要求に応答する前に、接続のタイムアウト期間が終了しました。 によって、接続タイムアウト期間が設定されます**SQLSetConnectAttr**、SQL_ATTR_CONNECTION_TIMEOUT します。|  
-|IM001|ドライバーでは、この関数はサポートされていません|(DM) に、ドライバーが関連付けられている、 *ConnectionHandle*関数をサポートしていません。|  
-|IM017|非同期通知モードでのポーリングは無効です。|通知のモデルを使用すると、常にポーリングは無効です。|  
-|IM018|**SQLCompleteAsync**このハンドルに対する前の非同期操作を完了が呼び出されていません。|通知モードが有効になっている場合、ハンドルでは、前の関数呼び出しに SQL_STILL_EXECUTING が返された場合と**SQLCompleteAsync**後処理を行い、操作を完了するハンドルで呼び出す必要があります。|  
+|01000|一般警告|ドライバー固有の情報メッセージ。 (関数は SQL_SUCCESS_WITH_INFO を返します)。|  
+|08003|接続が開かれていません|(DM) *Handletype*が SQL_HANDLE_DBC で、*ハンドル*が connected 状態ではありませんでした。|  
+|08007|トランザクション中の接続エラー|*Handletype*が SQL_HANDLE_DBC で、*ハンドル*に関連付けられている接続が関数の実行中に失敗しました。また、要求された**コミット**または**ロールバック**がの前に発生したかどうかを判断できません。不具合.|  
+|25S01|トランザクションの状態が不明です|*ハンドル*内の1つ以上の接続が、指定された結果でトランザクションを完了できませんでした。結果は不明です。|  
+|25S02|トランザクションはまだアクティブです|ドライバーは、グローバルトランザクション内のすべての作業がアトミックに完了し、トランザクションがアクティブであることを保証できませんでした。|  
+|25S03|トランザクションがロールバックされます|ドライバーは、グローバルトランザクション内のすべての作業をアトミックに完了できることを保証できませんでした。また、*ハンドル*でアクティブになっているトランザクション内のすべての作業がロールバックされました。|  
+|40001|シリアル化エラー|リソースが別のトランザクションでデッドロックしているため、トランザクションがロールバックされました。|  
+|40002|整合性制約違反|*入力型*は SQL_COMMIT でしたが、変更のコミットメントによって整合性制約違反が発生しました。 その結果、トランザクションがロールバックされました。|  
+|HY000|一般エラー|特定の SQLSTATE がなく、実装固有の SQLSTATE が定義されていないエラーが発生しました。 Szmessagetext バッファーの**SQLGetDiagRec によっ**て返されるエラーメッセージには、エラーとその原因が記述されています。  *\**|  
+|HY001|メモリ割り当てエラー|ドライバーは、関数の実行または完了をサポートするために必要なメモリを割り当てることができませんでした。|  
+|HY008|操作が取り消されました|*Connectionhandle*に対して非同期処理が有効になりました。 関数が呼び出され、 [Sqlcancelhandle 関数](../../../odbc/reference/syntax/sqlcancelhandle-function.md)の実行が完了する前に、 *connectionhandle*でが呼び出されました。 次に、 *Connectionhandle*で関数が再度呼び出されました。<br /><br /> 関数が呼び出され、 **Sqlcancelhandle**の実行が完了する前に、マルチスレッドアプリケーションの別のスレッドからの*connectionhandle*でが呼び出されました。|  
+|HY010|関数のシーケンスエラー|(DM) 非同期的に実行する関数が、 *Connectionhandle*に関連付けられているステートメントハンドルに対して呼び出されましたが、 **SQLEndTran**が呼び出されたときにまだ実行されていました。<br /><br /> (DM) 非同期的に実行する関数 (この1つではない) が*Connectionhandle*に対して呼び出されましたが、この関数が呼び出されたときにまだ実行されていました。<br /><br /> (DM) **Sqlexecute**、 **SQLExecDirect**、 **Sqlbulkoperations**、または**SQLSetPos**が、 *connectionhandle*に関連付けられたステートメントハンドルに対して呼び出され、SQL_NEED_DATA が返されました。 この関数は、実行時データのすべてのパラメーターまたは列に対してデータが送信される前に呼び出されました。<br /><br /> (DM) 非同期的に実行されている関数 (この1つではない) が、 *Handletype*が SQL_HANDLE_DBC に設定されていて、この関数が呼び出されたときに実行中だった*ハンドル*に対して呼び出されました。<br /><br /> (DM) **Sqlexecute**、 **SQLExecDirect**、または**Sqlmoreresults**が、 *Handle*に関連付けられたステートメントハンドルの1つに対して呼び出され、SQL_PARAM_DATA_AVAILABLE が返されました。 この関数は、ストリーミングされたすべてのパラメーターのデータが取得される前に呼び出されました。|  
+|HY012|無効なトランザクション操作コード|(DM) 引数の*種類*に指定された値は、SQL_COMMIT でも SQL_ROLLBACK でもありません。|  
+|HY013|メモリ管理エラー|基になるメモリオブジェクトにアクセスできなかったため、関数呼び出しを処理できませんでした。メモリ不足の状態が原因である可能性があります。|  
+|HY092|属性またはオプションの識別子が無効です|(DM) 引数*Handletype*に指定された値は、SQL_HANDLE_ENV でも SQL_HANDLE_DBC でもありませんでした。|  
+|HY115|非同期関数実行が有効になっている接続を含む環境では、SQLEndTran は許可されていません|接続関数の非同期実行が環境内の接続に対して有効になっている場合、(DM) *Handletype*を SQL_HANDLE_ENV に設定することはできません。|  
+|HY117|トランザクションの状態が不明なため、接続が中断されました。 切断と読み取り専用の機能のみが許可されます。|(DM) 中断状態の詳細については、このトピックの「コメント」セクションを参照してください。|  
+|HYC00|省略可能な機能は実装されていません|ドライバーまたはデータソースでは、**ロールバック**操作はサポートされていません。|  
+|HYT01|接続タイムアウトの期限が切れました|データソースが要求に応答する前に、接続のタイムアウト期間が経過しました。 接続タイムアウト期間は、 **SQLSetConnectAttr**、SQL_ATTR_CONNECTION_TIMEOUT によって設定されます。|  
+|IM001|ドライバーはこの機能をサポートしていません|(DM) *Connectionhandle*に関連付けられているドライバーでは、関数はサポートされていません。|  
+|IM017|非同期通知モードでは、ポーリングは無効になっています|通知モデルが使用されるたびに、ポーリングは無効になります。|  
+|IM018|**Sqlcompleteasync**は、このハンドルで前の非同期操作を完了するために呼び出されていません。|ハンドルに対する前の関数呼び出しで SQL_STILL_EXECUTING が返され、通知モードが有効になっている場合は、処理を完了するために、ハンドルで**Sqlcompleteasync**を呼び出して、操作を完了する必要があります。|  
   
 ## <a name="comments"></a>コメント  
- ODBC 3 の場合。*x*ドライバー場合*HandleType* sql_handle_env としてと*処理*ドライバー マネージャーを呼び出すが、有効な環境ハンドルが**SQLEndTran**環境に関連付けられている各ドライバーでします。 *処理*ドライバーへの呼び出しの引数が、ドライバーの環境ハンドルになります。 ODBC 2 の場合。*x*ドライバー場合*HandleType* sql_handle_env としてと*処理*、有効な環境ハンドルであり、その環境での接続状態で複数の接続があります。ドライバー マネージャーが呼び出す**SQLTransact**ドライバー、その環境での接続状態の接続ごとに 1 回です。 *処理*各呼び出しで引数が、接続のハンドルになります。 どちらの場合、ドライバーはしようとするとコミットするかの値に応じて、トランザクションはロールバック*CompletionType*、その環境に接続されている状態にあるすべての接続。 非アクティブな接続では、トランザクションは影響しません。  
+ ODBC 3 の場合。*x*ドライバー。 *HANDLETYPE*が SQL_HANDLE_ENV で、 *handle*が有効な環境ハンドルである場合、ドライバーマネージャーは環境に関連付けられている各ドライバーで**SQLEndTran**を呼び出します。 ドライバーの呼び出しの*ハンドル*引数は、ドライバーの環境ハンドルになります。 ODBC 2 の場合。*x*ドライバー。 *HANDLETYPE*が SQL_HANDLE_ENV で、 *HANDLE*が有効な環境ハンドルであり、その環境で接続された状態に複数の接続が存在する場合、ドライバーマネージャーはドライバーで**sqltransact**を呼び出します。接続された状態では、その環境で1回。 各呼び出しの*handle*引数は、接続のハンドルになります。 どちらの場合も、ドライバーは、その環境で接続された状態にあるすべての接続について、*完了の値*に応じてトランザクションのコミットまたはロールバックを試行します。 アクティブでない接続は、トランザクションに影響しません。  
   
 > [!NOTE]  
->  **SQLEndTran**コミットするか、共有環境でトランザクションをロールバックするのには使用できません。 SQLSTATE HY092 場合 (無効な属性またはオプション識別子) が返される**SQLEndTran**を使用して呼び出した*処理*共有環境のいずれかのハンドルまたは共有上の接続のハンドルに設定環境。  
+>  **SQLEndTran**を使用して、共有環境でトランザクションをコミットまたはロールバックすることはできません。 **SQLEndTran**が呼び出されると、共有環境のハンドルまたは共有環境上の接続のハンドルのいずれか*に設定さ*れている場合、SQLSTATE HY092 (無効な属性/オプション識別子) が返されます。  
   
- 接続ごとに関係なく SQL_SUCCESS を受信した場合にのみ、ドライバー マネージャーは関係なく SQL_SUCCESS を返します。 ドライバー マネージャーは、1 つまたは複数の接続で SQL_ERROR を受信する場合は、アプリケーションに SQL_ERROR を返し、診断情報は、環境の診断データの構造に配置されます。 アプリケーションを呼び出して、コミットまたはロールバック操作中にどの接続または接続の失敗を判断する**SQLGetDiagRec**接続ごとにします。  
+ ドライバーマネージャーは、接続ごとに SQL_SUCCESS を受信した場合にのみ、SQL_SUCCESS を返します。 ドライバーマネージャーは、1つまたは複数の接続で SQL_ERROR を受信すると、SQL_ERROR をアプリケーションに返し、診断情報は環境の診断データ構造に配置されます。 コミットまたはロールバック操作中に失敗した接続または接続を調べるために、アプリケーションは接続ごとに**SQLGetDiagRec**を呼び出すことができます。  
   
 > [!NOTE]  
->  ドライバー マネージャーは、すべての接続はグローバル トランザクションをシミュレートせず、2 フェーズ コミット プロトコルを使用しません。  
+>  ドライバーマネージャーは、すべての接続にわたってグローバルトランザクションをシミュレートするわけではないため、2フェーズコミットプロトコルを使用しません。  
   
- 場合*CompletionType*は指定して、 **SQLEndTran**影響を受ける接続に関連付けられた任意のステートメントですべてのアクティブな操作をコミット要求を発行します。 場合*CompletionType*は SQL_ROLLBACK、 **SQLEndTran**影響を受ける接続に関連付けられた任意のステートメントですべてのアクティブな操作のロールバック要求を発行します。 アクティブな場合は、トランザクションがない場合**SQLEndTran**で任意のデータ ソースに影響しない SQL_SUCCESS を返します。 詳細については、次を参照してください。 [Committing とトランザクションのロールバック](../../../odbc/reference/develop-app/committing-and-rolling-back-transactions.md)します。  
+ SQL_COMMIT は、*入力*候補がの場合、影響を受ける接続に関連付けられているすべてのステートメントで、すべてのアクティブな操作に対するコミット要求**を発行し**ます。 SQL_ROLLBACK*の場合、* **SQLEndTran**は、影響を受ける接続に関連付けられているすべてのアクティブな操作に対して、ロールバック要求を発行します。 アクティブなトランザクションがない場合、 **SQLEndTran**は、どのデータソースにも影響を与えずに SQL_SUCCESS を返します。 詳細については、「[トランザクションのコミットとロールバック](../../../odbc/reference/develop-app/committing-and-rolling-back-transactions.md)」を参照してください。  
   
- ドライバーが手動コミット モードの場合 (呼び出して**SQLSetConnectAttr** SQL_ATTR_AUTOCOMMIT を SQL_AUTOCOMMIT_OFF にセットを属性) と内で格納できる SQL ステートメント、に暗黙的に、新しいトランザクションが開始します。トランザクションは、現在のデータ ソースに対して実行されます。 詳細については、次を参照してください。[コミット モード](../../../odbc/reference/develop-app/commit-mode.md)します。  
+ ドライバーが手動コミットモード (SQL_ATTR_AUTOCOMMIT 属性が SQL_AUTOCOMMIT_OFF に設定された**SQLSetConnectAttr**を呼び出すことによって) の場合、トランザクション内に含めることができる SQL ステートメントが暗黙的に開始されます。現在のデータソースに対して実行されます。 詳細については、「[コミットモード](../../../odbc/reference/develop-app/commit-mode.md)」を参照してください。  
   
- カーソルのトランザクション操作の影響を確認するアプリケーションを呼び出す**SQLGetInfo** SQL_CURSOR_ROLLBACK_BEHAVIOR および SQL_CURSOR_COMMIT_BEHAVIOR のオプションを使用します。 詳細については、次の段落を参照してくださいし、も参照してください[カーソルと準備されたステートメントでトランザクションの効果](../../../odbc/reference/develop-app/effect-of-transactions-on-cursors-and-prepared-statements.md)します。  
+ トランザクション操作がカーソルに与える影響を決定するために、アプリケーションは SQL_CURSOR_ROLLBACK_BEHAVIOR オプションと SQL_CURSOR_COMMIT_BEHAVIOR オプションを使用して**SQLGetInfo**を呼び出します。 詳細については、次の段落を参照してください。また、[カーソルおよび準備されたステートメントに対するトランザクションの影響](../../../odbc/reference/develop-app/effect-of-transactions-on-cursors-and-prepared-statements.md)についても説明します。  
   
- SQL_CURSOR_ROLLBACK_BEHAVIOR または SQL_CURSOR_COMMIT_BEHAVIOR 値に等しい SQL_CB_DELETE 場合、 **SQLEndTran**閉じますと、接続に関連付けられたすべてのステートメントにすべての開いているカーソルを削除し、保留中のすべての結果を破棄します。 **SQLEndTran** (準備されていない) 割り当て済みの状態で存在する任意のステートメントを離れるアプリケーションは、後続の SQL 要求の再利用できるか、呼び出すことができます**SQLFreeStmt**または**SQLFreeHandle**で*HandleType*の sql_handle_stmt としてその割り当てを解除します。  
+ SQL_CURSOR_ROLLBACK_BEHAVIOR または SQL_CURSOR_COMMIT_BEHAVIOR の値が SQL_CB_DELETE の場合、 **SQLEndTran**は、接続に関連付けられているすべてのステートメントで開いているすべてのカーソルを閉じて削除し、すべての保留中の結果を破棄します。 **SQLEndTran**は、割り当てられた (準備されていない) 状態にあるすべてのステートメントを残します。アプリケーションは、後続の SQL 要求に再利用できます。または、SQL_HANDLE_STMT の*Handletype*を使用して**SQLFreeStmt**または**sqlfreehandle**を呼び出して、割り当てを解除することができます。  
   
- SQL_CURSOR_ROLLBACK_BEHAVIOR または SQL_CURSOR_COMMIT_BEHAVIOR 値に等しい SQL_CB_CLOSE 場合、 **SQLEndTran**接続に関連付けられたすべてのステートメントにすべての開いているカーソルを閉じます。 **SQLEndTran**準備された状態で存在する任意のステートメントのまま、アプリケーションが呼び出すことができます**SQLExecute** 、接続先に呼び出さずに関連付けられているステートメントの**SQLPrepare**します。  
+ SQL_CURSOR_ROLLBACK_BEHAVIOR または SQL_CURSOR_COMMIT_BEHAVIOR の値が SQL_CB_CLOSE の場合、 **SQLEndTran**は、接続に関連付けられているすべてのステートメントで開いているすべてのカーソルを閉じます。 **SQLEndTran**は、準備された状態にあるすべてのステートメントを残します。アプリケーションでは、最初に**SQLPrepare**を呼び出さなくても、接続に関連付けられているステートメントに対して**sqlexecute**を呼び出すことができます。  
   
- SQL_CURSOR_ROLLBACK_BEHAVIOR または SQL_CURSOR_COMMIT_BEHAVIOR 値に等しい SQL_CB_PRESERVE 場合、 **SQLEndTran**接続に関連付けられた開いているカーソルには影響しません。 呼び出す前に、示される行にカーソルをまま**SQLEndTran**します。  
+ SQL_CURSOR_ROLLBACK_BEHAVIOR 値または SQL_CURSOR_COMMIT_BEHAVIOR 値が SQL_CB_PRESERVE と等しい場合、 **SQLEndTran**は接続に関連付けられた開いているカーソルには影響しません。 カーソルは、 **SQLEndTran**の呼び出しの前にポインターがある行にとどまります。  
   
- 呼び出し、トランザクションをサポートするドライバーとデータのソースで**SQLEndTran**した状態または SQL_ROLLBACK のいずれかでアクティブなトランザクションがないときに SQL_SUCCESS を返します (コミットまたはロールバックする作業がないことを示す)あり、データ ソースへの影響はありません。  
+ トランザクションをサポートするドライバーとデータソースの場合、トランザクションがアクティブでないときに SQL_COMMIT または SQL_ROLLBACK を指定して**SQLEndTran**を呼び出すと、SQL_SUCCESS (コミットまたはロールバックする作業がないことを示す) が返され、には影響しません。データソース。  
   
- ドライバーは、自動コミット モードでは、ドライバー マネージャーは呼び出されません**SQLEndTran**ドライバー。 **SQLEndTran**常に使用して呼び出したかどうかに関係なく SQL_SUCCESS を返します、 *CompletionType*した状態または SQL_ROLLBACK の。  
+ ドライバーが自動コミットモードの場合、ドライバーマネージャーはドライバーで**SQLEndTran**を呼び出しません。 **SQLEndTran**は、SQL_COMMIT または SQL_ROLLBACK の*型*を使用して呼び出されているかどうかに関係なく、常に SQL_SUCCESS を返します。  
   
- トランザクションをサポートしていないドライバーまたはデータ ソース (**SQLGetInfo** *オプション*SQL_TXN_CAPABLE は SQL_TC_NONE)、常に効果的に自動コミット モードにし、したがって常に関係なく SQL_SUCCESS を返します**SQLEndTran**で呼び出されるかどうかを*CompletionType*した状態または SQL_ROLLBACK の。 このようなドライバーとデータ ソース実際にはロールバックしないするよう要求されたときに、トランザクション。  
+ トランザクションをサポートしていないドライバーまたはデータソース (**SQLGetInfo** *OPTION* SQL_TXN_CAPABLE は SQL_TC_NONE) は実質的にオートコミットモードであるため、SQL_SUCCESS がSQL_COMMIT または SQL_ROLLBACK の*入力型*を使用して呼び出されます。 このようなドライバーやデータソースは、要求されたときにトランザクションをロールバックしません。  
   
 ## <a name="suspended-state"></a>中断状態  
- Windows 7 より前にリリースされたドライバー マネージャーでは、トランザクションがアクティブな場合は**SQLEndTran**ドライバーから SQL_ERROR が返されます。 ただし、トランザクションは、サーバーで、正常にコミットされたいたも、(たとえば、ネットワーク エラーが発生しました) ため、クライアント上のドライバーが通知いませんでした。 異常な状態にこれ接続のままになります。 Windows 7 以降、ときに**SQLEndTran**中断状態で返します SQL_ERROR、接続があります。 中断状態の場合を読み取り専用の関数を呼び出すことです。 最終的には、アプリケーションを呼び出す必要があります**SQLDisconnect**リソースを解放する中断されている接続でします。  
+ Windows 7 より前にリリースされたドライバーマネージャーでは、 **SQLEndTran**がドライバーから SQL_ERROR を返した場合、トランザクションはアクティブでした。 ただし、トランザクションがサーバー上で正常にコミットされたが、クライアント上のドライバーが通知されていない可能性があります (たとえば、ネットワークエラーが発生したため)。 これにより、接続が正しくない状態のままになります。 Windows 7 以降では、 **SQLEndTran**が SQL_ERROR を返したときに、接続が中断状態になっている可能性があります。 中断された状態では、読み取り専用関数を呼び出すことができます。 最終的には、アプリケーションは中断された接続で**Sqldisconnect**を呼び出してリソースを解放する必要があります。  
   
- 次の条件がすべて当てはまる場合、接続が中断状態に格納されます。  
+ 次のすべての条件に該当する場合、接続は中断状態になります。  
   
--   ドライバーはから SQL_ERROR を返します**SQLEndTran**します。  
+-   ドライバーは**SQLEndTran**から SQL_ERROR を返します。  
   
--   ドライバーは、ODBC 3.8、またはそれ以降のバージョンです。  
+-   ドライバーは ODBC バージョン3.8 以降です。  
   
--   アプリケーションのバージョンは 3.8 以降です。再コンパイルされた ODBC 2.x または 3.x アプリケーションが正常にキャンセルするか、 **SQLEndTran**を通過して機能**SQLCancelHandle**します。  
+-   アプリケーションのバージョンは3.8 以降です。または、再コンパイルされた ODBC 2.x または2.x アプリケーションは、 **Sqlcancelhandle**を使用して**SQLEndTran**関数を正常に取り消しました。  
   
--   ドライバーでは、次のメッセージは、トランザクションが完了しなかったことを確認の 1 つ返されませんでした。  
+-   ドライバーが次のメッセージのいずれかを返しませんでした。トランザクションが完了していないことを確認します。  
   
-    -   25S03:トランザクションをロールバックします。  
+    -   25S03:トランザクションがロールバックされます  
   
     -   40001:シリアル化エラー  
   
-    -   40002:整合性制約  
+    -   40002:整合性の制約  
   
-    -   HYC00:省略可能な機能が実装されていません  
+    -   HYC00:省略可能な機能は実装されていません  
   
- 場合**SQLEndTran**が呼び出された環境でハンドルとその接続のいずれかで、上記の条件が満たさ、同じドライバーに接続するすべての接続は中断状態に格納されます。  
+ 環境ハンドルで**SQLEndTran**が呼び出され、その接続のいずれかが上記の条件を満たしている場合、同じドライバーに接続しているすべての接続が中断状態になります。  
   
- アプリケーションから**SQLDisconnect**接続の中断された、接続を別のデータ ソースまたは同じデータ ソースへの再接続を使用できます。  
+ アプリケーションが中断された接続で**Sqldisconnect**を呼び出した後、接続を使用して別のデータソースまたは同じデータソースに再接続することができます。  
   
 ## <a name="related-functions"></a>関連する関数  
   
 |詳細|参照先|  
 |---------------------------|---------|  
-|接続ハンドルで非同期的に実行されている関数を取り消しています。|[SQLCancelHandle 関数](../../../odbc/reference/syntax/sqlcancelhandle-function.md)|  
-|ドライバーまたはデータ ソースに関する情報を返す|[SQLGetInfo 関数](../../../odbc/reference/syntax/sqlgetinfo-function.md)|  
+|接続ハンドルで非同期に実行されている関数をキャンセルする。|[SQLCancelHandle 関数](../../../odbc/reference/syntax/sqlcancelhandle-function.md)|  
+|ドライバーまたはデータソースに関する情報を返す|[SQLGetInfo 関数](../../../odbc/reference/syntax/sqlgetinfo-function.md)|  
 |ハンドルの解放|[SQLFreeHandle 関数](../../../odbc/reference/syntax/sqlfreehandle-function.md)|  
-|ステートメント ハンドルの解放|[SQLFreeStmt 関数](../../../odbc/reference/syntax/sqlfreestmt-function.md)|  
+|ステートメントハンドルの解放|[SQLFreeStmt 関数](../../../odbc/reference/syntax/sqlfreestmt-function.md)|  
   
 ## <a name="see-also"></a>参照  
  [ODBC API リファレンス](../../../odbc/reference/syntax/odbc-api-reference.md)   
- [ODBC ヘッダー ファイル](../../../odbc/reference/install/odbc-header-files.md)   
+ [ODBC ヘッダーファイル](../../../odbc/reference/install/odbc-header-files.md)   
  [非同期実行 (ポーリング メソッド)](../../../odbc/reference/develop-app/asynchronous-execution-polling-method.md)

@@ -1,6 +1,6 @@
 ---
-title: データベースを別のサーバーで使用できるようにするときのメタデータの管理 | Microsoft Docs
-ms.custom: ''
+title: データベースを別のサーバーで使用できるようにするときのメタデータの管理
+ms.custom: seo-dt-2019
 ms.date: 08/24/2016
 ms.prod: sql
 ms.prod_service: database-engine
@@ -34,13 +34,12 @@ helpviewer_keywords:
 ms.assetid: 5d98cf2a-9fc2-4610-be72-b422b8682681
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: a73e8c25d891350f26bfff0ce62a2835fc5355d0
-ms.sourcegitcommit: 2e8783e6bedd9597207180941be978f65c2c2a2d
+ms.openlocfilehash: fad28919360caf2a37f410d1c3f3e122fd3dd803
+ms.sourcegitcommit: add39e028e919df7d801e8b6bb4f8ac877e60e17
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/19/2019
-ms.locfileid: "54405842"
+ms.lasthandoff: 11/15/2019
+ms.locfileid: "74119457"
 ---
 # <a name="manage-metadata-when-making-a-database-available-on-another-server"></a>データベースを別のサーバーで使用できるようにするときのメタデータの管理
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -108,7 +107,7 @@ ms.locfileid: "54405842"
   
  この機能の詳細については、「[資格情報 &#40;データベース エンジン&#41;](../../relational-databases/security/authentication-access/credentials-database-engine.md)」を参照してください。  
   
-> **注:**[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェント プロキシ アカウントでは資格情報を使用します。 プロキシ アカウントの資格情報 ID については、 [sysproxies](../../relational-databases/system-tables/dbo-sysproxies-transact-sql.md) システム テーブルを使用してください。  
+> **注:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェント プロキシ アカウントでは資格情報を使用します。 プロキシ アカウントの資格情報 ID については、 [sysproxies](../../relational-databases/system-tables/dbo-sysproxies-transact-sql.md) システム テーブルを使用してください。  
   
   
 ##  <a name="cross_database_queries"></a> Cross-Database Queries  
@@ -131,7 +130,7 @@ ms.locfileid: "54405842"
   
  サーバー インスタンスでデータベース マスター キーの暗号化を自動的に解除できるようにするには、サービス マスター キーを使用してデータベース マスター キーのコピーを暗号化します。 この暗号化されたコピーをデータベースと **master**データベースの両方に格納します。 通常、 **master** に格納されたコピーは、マスター キーが変更されるたびに暗黙的に更新されます。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] により、インスタンスのサービス マスター キーを使用して、データベース マスター キーの暗号化解除が最初に試行されます。 暗号化解除が失敗した場合、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では資格情報ストア内で、マスター キーが必要なデータベースと同じファミリ GUID のマスター キー資格情報が検索されます。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、次に、一致した資格情報を順に使用してデータベースのマスター キーの暗号化解除が試行されます。これは暗号化解除が成功するか、資格情報がなくなった時点で終了します。 サービス マスター キーによって暗号化されていないマスター キーは、OPEN MASTER KEY ステートメントとパスワードを使用して開かれている必要があります。  
   
- 暗号化されたデータベースがコピー、復元、または [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]の新しいインスタンスにアタッチされた場合、サービス マスター キーによって暗号化されたデータベース マスター キーのコピーは、対象のサーバー インスタンスの **master** データベースに格納されません。 対象のサーバー インスタンスで、データベースのマスター キーを開く必要があります。 マスター キーを開くには、次のステートメントを実行します:OPEN MASTER KEY DECRYPTION BY PASSWORD **='**_password_**'**。 その後、次のステートメントを実行して、データベース マスター キーの自動暗号化解除を有効にすることをお勧めします:ALTER MASTER KEY ADD ENCRYPTION BY SERVICE MASTER KEY。 この ALTER MASTER KEY ステートメントにより、サービス マスター キーを使用して暗号化されたデータベース マスター キーのコピーが対象のサーバー インスタンスに提供されます。 詳細については、「[OPEN MASTER KEY &#40;Transact-SQL&#41;](../../t-sql/statements/open-master-key-transact-sql.md)」と「[ALTER MASTER KEY &#40;Transact-SQL&#41;](../../t-sql/statements/alter-master-key-transact-sql.md)」を参照してください。  
+ 暗号化されたデータベースがコピー、復元、または [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]の新しいインスタンスにアタッチされた場合、サービス マスター キーによって暗号化されたデータベース マスター キーのコピーは、対象のサーバー インスタンスの **master** データベースに格納されません。 対象のサーバー インスタンスで、データベースのマスター キーを開く必要があります。 マスター キーを開くには、次のステートメントを実行します:OPEN MASTER KEY DECRYPTION BY PASSWORD **='** _password_ **'** 。 その後、次のステートメントを実行して、データベース マスター キーの自動暗号化解除を有効にすることをお勧めします:ALTER MASTER KEY ADD ENCRYPTION BY SERVICE MASTER KEY。 この ALTER MASTER KEY ステートメントにより、サービス マスター キーを使用して暗号化されたデータベース マスター キーのコピーが対象のサーバー インスタンスに提供されます。 詳細については、「[OPEN MASTER KEY &#40;Transact-SQL&#41;](../../t-sql/statements/open-master-key-transact-sql.md)」と「[ALTER MASTER KEY &#40;Transact-SQL&#41;](../../t-sql/statements/alter-master-key-transact-sql.md)」を参照してください。  
   
  ミラー データベースのデータベース マスター キーの自動暗号化解除を有効にする方法については、「[暗号化されたミラー データベースの設定](../../database-engine/database-mirroring/set-up-an-encrypted-mirror-database.md)」を参照してください。  
   
@@ -249,8 +248,6 @@ ms.locfileid: "54405842"
 -   [dbo.sysjobs &#40;Transact-SQL&#41;](../../relational-databases/system-tables/dbo-sysjobs-transact-sql.md)  
   
  **ジョブを作成するには**  
-  
--   [ジョブの作成](../../ssms/agent/create-a-job.md)  
   
 -   [ジョブの作成](../../ssms/agent/create-a-job.md)  
   

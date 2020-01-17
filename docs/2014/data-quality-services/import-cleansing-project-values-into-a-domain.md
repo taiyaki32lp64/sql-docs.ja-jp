@@ -9,15 +9,15 @@ ms.topic: conceptual
 f1_keywords:
 - sql12.dqs.kb.importprojectvalues.f1
 ms.assetid: f23e38e2-39e0-42d7-abd5-34d8fcca5d2a
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 07992b9a5150e6b81d869aa21831e019c32ae6e4
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: c5661d490f4669968b6d8198a7565fb5e5c8c218
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56020013"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65484305"
 ---
 # <a name="import-cleansing-project-values-into-a-domain"></a>ドメインへのクレンジング プロジェクトの値のインポート
   [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) では、データ品質プロジェクトのクレンジング プロセス中、または Integration Services パッケージの DQS クレンジング コンポーネントで収集されるデータ品質ナレッジをドメインにインポートできます。 これにより、信頼できるナレッジを保持し、ナレッジ ベースを継続的に改善することができます。  
@@ -62,7 +62,7 @@ ms.locfileid: "56020013"
   
 7.  ドメイン内にあるすべての値を表示するには、 **[新規のみ表示]** の選択を解除します。  
   
-8.  正しい値、エラー値、または無効な値のみを選択して表示するには、 **[適切]**、 **[エラー]**、 **[無効]** を選択します。  
+8.  正しい値、エラー値、または無効な値のみを選択して表示するには、 **[適切]** 、 **[エラー]** 、 **[無効]** を選択します。  
   
 9. 特定の文字列を検索するには、 **[検索]** ボックスに文字列を入力します。 検索条件を満たす値を 1 つずつ調べるには、上矢印または下矢印をクリックします。 これらのは黄色で強調表示されます。  
   
@@ -110,7 +110,7 @@ ms.locfileid: "56020013"
   
 -   プロジェクトから値をインポートできるのは、ナレッジ ベースが作業中の状態になっていて、インポートしているユーザーがナレッジ ベースをロックしている場合だけです。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [データ クレンジング](../../2014/data-quality-services/data-cleansing.md)   
  [DQS クレンジング変換](../integration-services/data-flow/transformations/dqs-cleansing-transformation.md)  
   

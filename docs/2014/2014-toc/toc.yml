@@ -46,6 +46,8 @@
       href: ../sql-server/install/sql-server-2014-upgrade-advisor.md
     - name: セットアップとサービスのインストール +
       href: ../sql-server/install/setup-and-servicing-installation.md
+- name: Transact-SQL リファレンス +
+  href: 'https://docs.microsoft.com/sql/t-sql/?view=sql-server-2016'
 - name: 構成マネージャーのヘルプ +
   href: ../tools/configuration-manager/sql-server-configuration-manager-help.md
 - name: インデックスのデザイン ガイド
@@ -54,5 +56,5 @@
   href: sql-server-transaction-locking-and-row-versioning-guide.md
 - name: トランザクション ログのアーキテクチャと管理
   href: sql-server-transaction-log-architecture-and-management.md
-- name: 'ケース スタディ: Microsoft Dynamics ERP と SQL Server 2014 レプリケーションを活用した、スケーラビリティとパフォーマンスの向上のためのエンタープライズ エコシステムの構築'
+- name: 'ケース スタディ:Microsoft Dynamics ERP と SQL Server 2014 レプリケーションを活用した、スケーラビリティとパフォーマンスの向上のためのエンタープライズ エコシステムの構築'
   href: case-study-building-an-enterprise-ecosystem.md

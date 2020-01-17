@@ -13,17 +13,20 @@ helpviewer_keywords:
 - history tables [SQL Server]
 - History Cleanup task [Integration Services]
 ms.assetid: 5defc5b9-dfd3-4859-a7fe-ac8c2b5480f8
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: ab222a561f15c0eeaf9e887ddf88fe0d9cad4f82
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 1844f4088c026dda5636cd31a7f90b5effe4bfbc
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51640959"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71298247"
 ---
 # <a name="history-cleanup-task"></a>履歴クリーンアップ タスク
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   履歴クリーンアップ タスクは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] msdb データベースの、次の履歴テーブル内のエントリを削除します。  
   
 -   backupfile  

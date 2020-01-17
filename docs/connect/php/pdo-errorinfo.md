@@ -1,5 +1,5 @@
 ---
-title: Pdo::errorinfo |Microsoft Docs
+title: 'PDO:: errorInfo |Microsoft Docs'
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 9d5481d5-13bc-4388-b3aa-78676c0fc709
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 16810cbe7ba634661cf7a1e22c44b69144e66769
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.openlocfilehash: fe0f0cc2ec15fcdb871f290f03565482a8477995
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51606322"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67936268"
 ---
 # <a name="pdoerrorinfo"></a>PDO::errorInfo
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]

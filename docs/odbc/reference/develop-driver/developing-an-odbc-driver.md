@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 3225a011-5605-46ba-bb74-1ca6106a5271
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 6c4affd835931c00fd5f8ad2514070527ce1b80f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 6509a1627a753bc0bb0db354ee0a20b304e19774
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47661680"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68078888"
 ---
 # <a name="developing-an-odbc-driver"></a>ODBC ドライバーの開発
 このセクションには、ODBC ドライバーを開発する方法について説明するトピックが含まれています。  

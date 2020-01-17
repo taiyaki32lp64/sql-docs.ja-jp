@@ -2,18 +2,18 @@
 title: グラフ上で複数のデータ範囲を持つ系列の表示 | Microsoft Docs
 ms.date: 03/07/2017
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: report-design
 ms.topic: conceptual
 ms.assetid: 45da3d39-278e-4760-a4b3-9932c9547cf2
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 5fe2d1cb95045135c07f76744d5160f04ed039cf
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 776c8ab4b133a8655ce42c5b5c3d996360c71322
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56284910"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65578830"
 ---
 # <a name="displaying-a-series-with-multiple-data-ranges-on-a-chart"></a>グラフ上で複数のデータ範囲を持つ系列の表示
 

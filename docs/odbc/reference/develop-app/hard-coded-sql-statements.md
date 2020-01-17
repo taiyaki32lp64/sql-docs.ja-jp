@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: e355f5f1-4f1a-4933-8c74-ee73e90d2d19
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 383a81aea121882b334bbfdab806408ac0513893
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 6b0205208a28238f4fbccb5ae2fd96639b664bd6
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47746240"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68139153"
 ---
 # <a name="hard-coded-sql-statements"></a>ハードコーディングされた SQL ステートメント
 通常、固定のタスクを実行するアプリケーションには、ハード コーディングされた SQL ステートメントが含まれます。 たとえば、受注システムは、オープンの販売注文の一覧を次の呼び出しを使用する可能性があります。  
@@ -29,7 +28,7 @@ ms.locfileid: "47746240"
 SQLExecDirect(hstmt, "SELECT OrderID FROM Orders WHERE Status = 'OPEN'", SQL_NTS);  
 ```  
   
- ハード コーディングされた SQL ステートメントをいくつかの利点がありますアプリケーションが記述されています。 ときにテストする。ステートメントの実行時に構築されたよりも実装する方が簡単アプリケーションが簡略化します。  
+ これにはハード コーディングされた SQL ステートメントをいくつかの利点があります。アプリケーションが記述されています。 ときにテストします。ステートメントの実行時に構築されたよりも実装する方が簡単アプリケーションが簡略化します。  
   
  ステートメント パラメーターの使用とステートメントの準備は、ハード コーディングされた SQL ステートメントを使用してさらに優れた方法を提供します。 たとえば、部品テーブルには、PartID、説明、および価格の列が含まれています。 このテーブルに新しい行を挿入する方法の 1 つは構築および実行すること、**挿入**ステートメント。  
   

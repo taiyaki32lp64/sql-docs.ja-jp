@@ -2,7 +2,7 @@
 title: rs.exe ユーティリティと Web サービスを使用したスクリプト | Microsoft Docs
 ms.date: 03/14/2017
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: tools
 ms.topic: conceptual
 helpviewer_keywords:
@@ -12,14 +12,14 @@ helpviewer_keywords:
 - Report Server Web service, scripts
 - scripts [Reporting Services], Web service
 ms.assetid: 0ec5ac6e-b3cf-49cd-96f6-6b4b7dc29982
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: be7d36aca5b1876fee4e9ea0f80d3064e77daf7e
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: f20551117454ca742c8c681cd43f2704695dd276
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50028701"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65571415"
 ---
 # <a name="script-with-the-rsexe-utility-and-the-web-service"></a>rs.exe ユーティリティと Web サービスを使用したスクリプト
   開発者およびレポート サーバー管理者は、 **rs** ユーティリティ (RS.exe) を使用してレポート サーバーを操作できます。 このユーティリティでは、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]で記述されたスクリプトを使用し、プログラムによってレポート サーバーを管理できます。  

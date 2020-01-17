@@ -19,11 +19,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 269ab3c748557d1d2870195524310f2371b79c52
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48131002"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62689147"
 ---
 # <a name="bcpcolptr"></a>bcp_colptr
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] への現在のコピー操作に関するプログラム変数のデータ アドレスを設定します。  
@@ -52,7 +52,7 @@ idxServerCol
  *pData*  
  コピーするデータを指すポインターです。 バインドされたデータ型は、大きな値型 (SQLTEXT や SQLIMAGE) 場合*pData* NULL を指定できます。 NULL *pData*を使用してチャンクで長い形式のデータ値は SQL Server に送信することを示します[bcp_moretext](bcp-moretext.md)します。  
   
- 場合*pData* NULL と列に設定されている大きな値の型でない束縛のフィールドに対応する**bcp_colptr**が失敗します。  
+ *pData*がNULLに設定されており、バインドされたフィールドに対応する列が大きな値型ではない場合、**bcp_colptr**は失敗します。  
   
  大きな値の型の詳細については、次を参照してください。 [bcp_bind](bcp-bind.md)**します。**  
   

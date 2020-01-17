@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: 54ad1954-22e2-4628-b334-8fad8e9433b8
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: b2f65e31a6a1c42d4d2bfd79f6daf0139edcd49f
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: ca2f92441841168916cb3d50b63376634073456b
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53358424"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66079544"
 ---
 # <a name="use-analysis-services-templates-in-sql-server-management-studio"></a>SQL Server Management Studio での Analysis Services テンプレートの使用
   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] は、XMLA スクリプト、DMX クエリ、または MDX クエリの迅速な作成、キューブまたはテーブル モデルの KPI の作成、バックアップ操作および復元操作のスクリプト作成、および他の多数のタスクを実行するためのテンプレートのセットを提供します。 テンプレートは、 **の** テンプレート エクスプローラー [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]にあります。  
@@ -72,7 +71,7 @@ ms.locfileid: "53358424"
   
     1.  置換\<row_axis, mdx_set > を **[Product Category]. [Product Category Name]** します。  
   
-    2.  置換\<column_axis, mdx_set > を **[Date] です [。Calendar Year] です。[Calendar Year]**.  
+    2.  置換\<column_axis, mdx_set > を **[Date] です [。Calendar Year] です。[Calendar Year]** .  
   
     3.  置換\<from_clause, mdx_name > を **[Internet Sales]** します。  
   
@@ -113,7 +112,7 @@ ms.locfileid: "53358424"
   
  使いやすさのために、スキーマ行セットの多くが動的管理ビュー (DMV) としても公開されています。 対応する DMV を使用することで、Transact-SQL などの構文を使用してスキーマ行セットのクエリを実行できます。 たとえば、次のクエリは同じ結果を返しますが、1 つは XML 形式で、1 つはテーブル形式で返されます。 DMV の詳細については、「[動的管理ビュー (DMV) を使用した Analysis Services の監視](use-dynamic-management-views-dmvs-to-monitor-analysis-services.md)」をご覧ください。  
   
- DMV として使用できるすべてのスキーマ行セットの一覧を返す DMV:   
+ DMV として使用できるすべてのスキーマ行セットの一覧を返す DMV:  
   
 ```  
 SELECT * FROM $system.DISCOVER_SCHEMA_ROWSETS  
@@ -168,9 +167,9 @@ SELECT * FROM $system.DISCOVER_SCHEMA_ROWSETS
   
 |カテゴリ|項目テンプレート|説明|  
 |--------------|-------------------|-----------------|  
-|DMX\モデル コンテンツ|コンテンツ クエリ|DMX SELECT FROM を使用する方法を示します*\<モデル >* します。指定されたマイニング モデルのマイニング モデル スキーマ行セットの内容を取得するコンテンツのステートメント。|  
-||連続列値|DMX SELECT DISTINCT FROM を使用する方法を示します*\<モデル >* ステートメントを DMX`RangeMin`と`RangeMax`連続列から指定した範囲の値のセットを取得する関数を指定したマイニング モデルです。|  
-||不連続列値|DMX SELECT DISTINCT FROM を使用する方法を示します*\<モデル >* ステートメントは、指定されたマイニング モデルの不連続列から値の完全なセットを取得します。|  
+|DMX\モデル コンテンツ|コンテンツ クエリ|DMX SELECT FROM を使用する方法を示します *\<モデル >* します。指定されたマイニング モデルのマイニング モデル スキーマ行セットの内容を取得するコンテンツのステートメント。|  
+||連続列値|DMX SELECT DISTINCT FROM を使用する方法を示します *\<モデル >* ステートメントを DMX`RangeMin`と`RangeMax`連続列から指定した範囲の値のセットを取得する関数を指定したマイニング モデルです。|  
+||不連続列値|DMX SELECT DISTINCT FROM を使用する方法を示します *\<モデル >* ステートメントは、指定されたマイニング モデルの不連続列から値の完全なセットを取得します。|  
 ||ドリルスルー クエリ|DMX SELECT * FROM Model.CASES ステートメントを DMX IsInNode 関数と共に使用してドリルスルー クエリを実行する方法を示します。|  
 ||モデル属性|DMX System.GetModelAttributes 関数を使用して、モデルで使用される属性の一覧を返す方法を示します。|  
 ||PMML コンテンツ|DMX の SELECT を使用する方法を示します\*FROM *\<モデル >* します。PMML ステートメントを使用して、この機能をサポートするアルゴリズム、マイニング モデルの Predictive Model Markup Language (PMML) 表記を取得します。|  
@@ -191,9 +190,9 @@ SELECT * FROM $system.DISCOVER_SCHEMA_ROWSETS
 ||モデルのトレーニング|DMX INSERT INTO MINING MODEL ステートメントを使用して、以前にトレーニングした構造の内部のマイニング モデルをトレーニングする方法を示します。|  
 ||入れ子になった構造のトレーニング|DMX INSERT INTO MINING STRUCTURE ステートメントを SHAPE ソース データ クエリと組み合わせ、クエリを使用して既存のデータ ソースから取得した、入れ子になったテーブルを含んでいるデータで、入れ子になった列を含んでいるマイニング モデルをトレーニングする方法を示します。|  
 ||構造のトレーニング|DMX INSERT INTO MINING STRUCTURE 構造と OPENQUERY ソース データ クエリを組み合わせ、マイニング構造をトレーニングする方法を示します。|  
-|DMX\予測クエリ|基本予測|DMX SELECT FROM を結合する方法を示します*\<モデル >* PREDICTION JOIN ステートメントを OPENQUERY ソース データ クエリからクエリを使用して取り出したデータを使用してマイニング モデルに対して予測クエリを実行する、既存のデータ ソース。|  
-||入れ子になった予測|DMX SELECT FROM を結合する方法を示します*\<モデル >* PREDICTION JOIN ステートメントを SHAPE および OPENQUERY ソース データ クエリを含む入れ子になったデータを使用してマイニング モデルに対して予測クエリを実行するにはこのテーブルを使用して、既存のデータ ソースからクエリを使用して取得します。|  
-||入れ子になった単一予測|DMX SELECT FROM を使用する方法を示します*\<モデル >* 列で、予測クエリで明示的に指定された、1 つの値を使用してマイニング モデルに対して予測クエリを実行する NATURAL PREDICTION JOIN 句名前、マイニング モデル内の列に一致して、マイニング モデルの入れ子になった列にも一致する名前、UNION ステートメントを使用して作成された入れ子になったテーブル内の値のセットを含むです。|  
+|DMX\予測クエリ|基本予測|DMX SELECT FROM を結合する方法を示します *\<モデル >* PREDICTION JOIN ステートメントを OPENQUERY ソース データ クエリからクエリを使用して取り出したデータを使用してマイニング モデルに対して予測クエリを実行する、既存のデータ ソース。|  
+||入れ子になった予測|DMX SELECT FROM を結合する方法を示します *\<モデル >* PREDICTION JOIN ステートメントを SHAPE および OPENQUERY ソース データ クエリを含む入れ子になったデータを使用してマイニング モデルに対して予測クエリを実行するにはこのテーブルを使用して、既存のデータ ソースからクエリを使用して取得します。|  
+||入れ子になった単一予測|DMX SELECT FROM を使用する方法を示します *\<モデル >* 列で、予測クエリで明示的に指定された、1 つの値を使用してマイニング モデルに対して予測クエリを実行する NATURAL PREDICTION JOIN 句名前、マイニング モデル内の列に一致して、マイニング モデルの入れ子になった列にも一致する名前、UNION ステートメントを使用して作成された入れ子になったテーブル内の値のセットを含むです。|  
 ||単一予測|DMX SELECT FROM を使用する方法を示します\<model > NATURAL PREDICTION JOIN ステートメントを名前の列に一致する列で、予測クエリで明示的に指定された 1 つの値を使用してマイニング モデルに対して予測クエリを実行するにはマイニング モデルです。|  
 ||ストアド プロシージャ コール|DMX CALL ステートメントを使用してストアド プロシージャを呼び出す方法を示します。|  
 |MDX\式|移動平均 - 固定|MDX `ParallelPeriod` 関数および `CurrentMember` 関数を自然な順序のセットと共に使用して、時間ディメンションの階層の一定期間においてメジャーの移動平均を提供する、計算メジャーの作成方法を示します。|  

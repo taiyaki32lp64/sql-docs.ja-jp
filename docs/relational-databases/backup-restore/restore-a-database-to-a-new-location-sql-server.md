@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: 4da76d61-5e11-4bee-84f5-b305240d9f42
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 69099375a0c56dadef71f999e34db45b0bc64374
-ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
+ms.openlocfilehash: 4e3c7cfdc24c55dde67e8abe5473b934fc6ac5f4
+ms.sourcegitcommit: d65cef35cdf992297496095d3ad76e3c18c9794a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/18/2018
-ms.locfileid: "53590846"
+ms.lasthandoff: 10/28/2019
+ms.locfileid: "72989564"
 ---
 # <a name="restore-a-database-to-a-new-location-sql-server"></a>データベースを新しい場所に復元する (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -41,7 +40,7 @@ ms.locfileid: "53590846"
   
 -   完全復旧モデルまたは一括ログ復旧モデルを使用する場合は、データベースを復元する前に、アクティブ トランザクション ログをバックアップする必要があります。 詳細については、「 [トランザクション ログのバックアップ &#40;SQL Server&#41;](../../relational-databases/backup-restore/back-up-a-transaction-log-sql-server.md)」を参照してください。  
 
--   暗号化されたデータベースを復元するには、 **データベースを暗号化するために使用した証明書や非対称キーにアクセスする必要があります**。 証明書または非対称キーがないと、データベースを復元することはできません。 バックアップが必要な間は、データベースの暗号化キーの暗号化に使用した証明書を保持する必要があります。 詳細については、「 [SQL Server Certificates and Asymmetric Keys](../../relational-databases/security/sql-server-certificates-and-asymmetric-keys.md)」をご覧ください。  
+-   暗号化されたデータベースを復元するには、 **データベースを暗号化するために使用した証明書や非対称キーにアクセスする必要があります**。 この証明書または非対称キーがないとデータベースを復元できません。 バックアップが必要な間は、データベースの暗号化キーの暗号化に使用した証明書を保持する必要があります。 詳細については、「 [SQL Server Certificates and Asymmetric Keys](../../relational-databases/security/sql-server-certificates-and-asymmetric-keys.md)」をご覧ください。  
   
 ###  <a name="Recommendations"></a> 推奨事項  
   
@@ -75,11 +74,11 @@ ms.locfileid: "53590846"
   
     1.  **[デバイス]**  
   
-         参照ボタン (**[...]**) をクリックし、 **[バックアップ デバイスの選択]** ダイアログ ボックスを開きます。 **[バックアップ メディアの種類]** ボックスから、デバイスの種類を 1 つ選択します。 **[バックアップ メディア]** ボックスにデバイスを追加するには、 **[追加]** をクリックします。  
+         参照ボタン ( **[...]** ) をクリックし、 **[バックアップ デバイスの選択]** ダイアログ ボックスを開きます。 **[バックアップ メディアの種類]** ボックスから、デバイスの種類を 1 つ選択します。 **[バックアップ メディア]** ボックスにデバイスを追加するには、 **[追加]** をクリックします。  
   
          **[バックアップ メディア]** ボックスに目的のデバイスを追加したら、 **[OK]** をクリックして、 **[全般]** ページに戻ります。  
   
-         **[ソース:デバイス:データベース]** ボックスの一覧で、復元するデータベースの名前を選択します。  
+         **[ソース: デバイス: データベース]** リスト ボックスで、復元するデータベースの名前を選択します。  
   
          **メモ** この一覧は **[デバイス]** をクリックした場合にのみ使用できます。 選択されたデバイスにバックアップを持つデータベースのみが使用できるようになります。  
   
@@ -107,63 +106,65 @@ ms.locfileid: "53590846"
      このステートメントは、多くの WITH オプションもサポートします。 詳細については、[RESTORE FILELISTONLY &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-filelistonly-transact-sql.md) を参照してください。  
   
 2.  [RESTORE DATABASE](../../t-sql/statements/restore-statements-transact-sql.md) ステートメントを使用し、データベースの完全バックアップを復元します。 既定で、データとログ ファイルが元の場所に復元されます。 データベースを再配置するには、MOVE オプションを使用して、各データベース ファイルを再配置し、既存ファイルとの衝突が発生するのを防ぎます。  
+
+  データベースを新しい場所と新しい名前に復元するための基本的な [!INCLUDE[tsql](../../includes/tsql-md.md)] 構文は以下のとおりです。  
+  ```sql
+  RESTORE DATABASE *new_database_name*  
   
-     データベースを新しい場所と新しい名前に復元するための基本的な [!INCLUDE[tsql](../../includes/tsql-md.md)] 構文は以下のとおりです。  
+  FROM *backup_device* [ ,...*n* ]  
   
-     RESTORE DATABASE *new_database_name*  
+  [ WITH  
+ 
+   {  
   
-     FROM *backup_device* [ ,...*n* ]  
+      [ **RECOVERY** | NORECOVERY ]  
   
-     [ WITH  
+      [ , ] [ FILE ={ *backup_set_file_number* | @*backup_set_file_number* } ]  
   
-     {  
+      [ , ] MOVE '*logical_file_name_in_backup*' TO '*operating_system_file_name*' [ ,...*n* ]  
   
-     [ **RECOVERY** | NORECOVERY ]  
+  }  
   
-     [ , ] [ FILE ={ *backup_set_file_number* | @*backup_set_file_number* } ]  
+  ;  
+  ```
+  > [!NOTE] 
+  > データベースを別のディスクに再配置する準備をする場合は、容量が十分あるかどうか、および既存のファイルと衝突する可能性がないかどうかを確認してください。 この作業は、 [RESTORE VERIFYONLY](../../t-sql/statements/restore-statements-verifyonly-transact-sql.md) ステートメントを使用して、RESTORE DATABASE ステートメントで使用するのと同じ MOVE パラメーターを指定する必要があります。  
   
-     [ , ] MOVE '*logical_file_name_in_backup*' TO '*operating_system_file_name*' [ ,...*n* ]  
+  次の表で、データベースを新しい場所に復元するという点で、この RESTORE ステートメントの引数を説明します。 これらの引数の詳細については、「 [RESTORE &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-transact-sql.md)データベースを新しい場所に復元し、必要に応じてデータベースの名前を変更する方法について説明します。  
   
-     }  
+  *new_database_name*  
+  データベースの新しい名前。  
   
-     ;  
+  > [!NOTE]
+  > 異なるサーバー インスタンスにデータベースを復元している場合は、新しい名前ではなく元のデータベース名を使用することができます。  
   
-    > **注:** データベースを別のディスクに再配置する準備をする場合は、容量が十分あるかどうか、および既存のファイルと衝突する可能性がないかどうかを確認してください。 この作業は、 [RESTORE VERIFYONLY](../../t-sql/statements/restore-statements-verifyonly-transact-sql.md) ステートメントを使用して、RESTORE DATABASE ステートメントで使用するのと同じ MOVE パラメーターを指定する必要があります。  
+  *backup_device* [ **,** ...*n* ]  
+  データベース バックアップを復元する 1 ～ 64 個のバックアップ デバイスのコンマ区切りリストを指定します。 物理バックアップ デバイスを指定したり、対応する論理バックアップ デバイス (定義されている場合) を指定したりできます。 物理バックアップ デバイスを指定するには、DISK オプションまたは TAPE オプションを使用します。  
   
-     次の表で、データベースを新しい場所に復元するという点で、この RESTORE ステートメントの引数を説明します。 これらの引数の詳細については、「 [RESTORE &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-transact-sql.md)データベースを新しい場所に復元し、必要に応じてデータベースの名前を変更する方法について説明します。  
+  { DISK | TAPE } **=** _physical_backup_device_name_  
   
-     *new_database_name*  
-     データベースの新しい名前。  
+  詳細については、「[バックアップ デバイス &#40;SQL Server&#41;](../../relational-databases/backup-restore/backup-devices-sql-server.md)」を参照してください。  
   
-    >**注:** 異なるサーバー インスタンスにデータベースを復元している場合は、新しい名前ではなく元のデータベース名を使用することができます。  
+  { **RECOVERY** | NORECOVERY }  
+  データベースで完全復旧モデルを使用している場合は、データベースの復元後にトランザクション ログ バックアップを適用しなければならない場合があります。 この場合は、NORECOVERY オプションを指定します。  
   
-     *backup_device* [ **,**...*n* ]  
-     データベース バックアップを復元する 1 ～ 64 個のバックアップ デバイスのコンマ区切りリストを指定します。 物理バックアップ デバイスを指定したり、対応する論理バックアップ デバイス (定義されている場合) を指定したりできます。 物理バックアップ デバイスを指定するには、DISK オプションまたは TAPE オプションを使用します。  
+  そうでない場合は、既定の RECOVERY オプションを使用します。  
   
-     { DISK | TAPE } **=**_physical_backup_device_name_  
+  FILE = { *backup_set_file_number* | @*backup_set_file_number* }  
+  復元するバックアップ セットを特定します。 たとえば、 *1* の **backup_set_file_number** は、バックアップ 目での最初のバックアップ セットを示し、2 の *backup_set_file_number* は **2** 番目のバックアップ セットを示します。 バックアップ セットの *backup_set_file_number* を取得するには、 [RESTORE HEADERONLY](../../t-sql/statements/restore-statements-headeronly-transact-sql.md) ステートメントを使用します。  
   
-     詳細については、「[バックアップ デバイス &#40;SQL Server&#41;](../../relational-databases/backup-restore/backup-devices-sql-server.md)」を参照してください。  
+  このオプションを指定しない場合、既定ではバックアップ デバイスの 1 番目のバックアップ セットを使用します。  
   
-     { **RECOVERY** | NORECOVERY }  
-     データベースで完全復旧モデルを使用している場合は、データベースの復元後にトランザクション ログ バックアップを適用しなければならない場合があります。 この場合は、NORECOVERY オプションを指定します。  
+  詳細については、「[RESTORE の引数 &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-arguments-transact-sql.md)」の「バックアップ セットの指定」を参照してください。  
   
-     そうでない場合は、既定の RECOVERY オプションを使用します。  
+  MOVE **'** _logical_file_name_in_backup_ **'** TO **'** _operating_system_file_name_ **'** [ **,** ...*n* ]  
+  *logical_file_name_in_backup* で指定されるデータまたはログ ファイルが、 *operating_system_file_name*で指定される位置に復元されることを指定します。 バックアップ セットから新しい位置に復元する論理ファイルごとに、MOVE ステートメントを指定してください。  
   
-     FILE = { *backup_set_file_number* | @*backup_set_file_number* }  
-     復元するバックアップ セットを特定します。 たとえば、 *1* の **backup_set_file_number** は、バックアップ 目での最初のバックアップ セットを示し、2 の *backup_set_file_number* は **2** 番目のバックアップ セットを示します。 バックアップ セットの *backup_set_file_number* を取得するには、 [RESTORE HEADERONLY](../../t-sql/statements/restore-statements-headeronly-transact-sql.md) ステートメントを使用します。  
-  
-     このオプションを指定しない場合、既定ではバックアップ デバイスの 1 番目のバックアップ セットを使用します。  
-  
-     詳細については、「[RESTORE の引数 &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-arguments-transact-sql.md)」の「バックアップ セットの指定」を参照してください。  
-  
-     MOVE **'**_logical_file_name_in_backup_**'** TO **'**_operating_system_file_name_**'** [ **,**...*n* ]  
-     *logical_file_name_in_backup* で指定されるデータまたはログ ファイルが、 *operating_system_file_name*で指定される位置に復元されることを指定します。 バックアップ セットから新しい位置に復元する論理ファイルごとに、MOVE ステートメントを指定してください。  
-  
-    |オプション|Description|  
-    |------------|-----------------|  
-    |*logical_file_name_in_backup*|バックアップ セット内のデータまたはログ ファイルの論理名を指定します。 バックアップ セット内のデータ ファイルまたはログ ファイルの論理ファイル名は、バックアップ セットが作成されたときのデータベース内における論理名と同じです。<br /><br /> <br /><br /> 注:バックアップ セットに含まれる論理ファイルの一覧を取得するには、[RESTORE FILELISTONLY](../../t-sql/statements/restore-statements-filelistonly-transact-sql.md) を使用します。|  
-    |*operating_system_file_name*|*logical_file_name_in_backup*で指定したファイルの新しい場所を指定します。 ファイルはこの場所に復元されます。<br /><br /> 必要に応じて、 *operating_system_file_name* に復元するファイルの新しいファイル名を指定します。 これは、同じサーバー インスタンスで既存のデータベースのコピーを作成する場合に必要です。|  
-    |*n*|追加の MOVE ステートメントを指定できることを示すプレースホルダーです。|  
+  |オプション|Description|  
+  |------------|-----------------|  
+  |*logical_file_name_in_backup*|バックアップ セット内のデータまたはログ ファイルの論理名を指定します。 バックアップ セット内のデータ ファイルまたはログ ファイルの論理ファイル名は、バックアップ セットが作成されたときのデータベース内における論理名と同じです。<br /><br /> <br /><br /> 注:バックアップ セットに含まれる論理ファイルの一覧を取得するには、[RESTORE FILELISTONLY](../../t-sql/statements/restore-statements-filelistonly-transact-sql.md) を使用します。|  
+  |*operating_system_file_name*|*logical_file_name_in_backup*で指定したファイルの新しい場所を指定します。 ファイルはこの場所に復元されます。<br /><br /> 必要に応じて、 *operating_system_file_name* に復元するファイルの新しいファイル名を指定します。 これは、同じサーバー インスタンスで既存のデータベースのコピーを作成する場合に必要です。|  
+  |*n*|追加の MOVE ステートメントを指定できることを示すプレースホルダーです。|  
   
 ###  <a name="TsqlExample"></a> 例 (Transact-SQL)  
  この例では、 `MyAdvWorks` サンプル データベースのバックアップを復元して、 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] という名前の新しいデータベースを作成します。このデータベースには、2 つのファイル、 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)]_Data と [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)]_Log が含まれます。 このデータベースは、単純復旧モデルを使用しています。 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] データベースはサーバー インスタンスに既に存在するため、バックアップ内のファイルを新しい場所に復元する必要があります。 RESTORE FILELISTONLY ステートメントは、復元するデータベース内のファイル数と名前を判断するために使用します。 データベース バックアップは、バックアップ デバイスの 1 番目のバックアップ セットです。  

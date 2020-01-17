@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: f2fb2d57-6884-42ef-a18c-2673ba9b85c0
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: c6060d9f2dfecb82e425fc78f3b8cf05c000ad4f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 1248cd86e657b2e038af908ec1023ab8cfa58bd8
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47733350"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67947419"
 ---
 # <a name="ado-md-code-examples-in-visual-basic-scripting-edition"></a>Visual Basic Scripting Edition での ADO MD コード例
 次の例では、Microsoft Internet Information Server 4.0 用 Microsoft Active Server Pages (ASP) が必要です。  

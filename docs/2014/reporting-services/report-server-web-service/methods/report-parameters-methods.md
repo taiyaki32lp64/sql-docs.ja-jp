@@ -4,23 +4,21 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- docset-sql-devref
-- reporting-services-native
+ms.technology: reporting-services
 ms.topic: reference
 helpviewer_keywords:
 - methods [Reporting Services], report parameters
 - parameters [Reporting Services], methods
 ms.assetid: cedf68af-646a-47e4-9fbb-39b5dc3de235
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 1f6735c80707fc3a03e4e7c61d0c06b63f5b3181
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 567888d7dae14108e595c76f45f0ab7b95619cca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56030523"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63283451"
 ---
 # <a name="report-parameters-methods"></a>レポート パラメーターのメソッド
   これらのメソッドを使用して、レポートのパラメーターを設定および取得できます。  

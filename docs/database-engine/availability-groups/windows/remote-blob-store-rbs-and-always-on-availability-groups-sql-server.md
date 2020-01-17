@@ -1,5 +1,5 @@
 ---
-title: 可用性グループでのリモート BLOB ストア (RBS) の使用
+title: 可用性グループでのリモート BLOB ストア (RBS)
 description: 'Always On 可用性グループの一部であるデータベースでリモート Blob ストア (RBS) を使用する方法について説明します。 '
 ms.custom: seodec18
 ms.date: 05/17/2016
@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 01a70258-d4fd-40bc-bc44-c490b5d6c420
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 67d29091ddae26f40dcbea17ef50da7c3b7ae8f8
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: 864ed8080c3978ec272f5212fa0a5e8dc40c2350
+ms.sourcegitcommit: f8cf8cc6650a22e0b61779c20ca7428cdb23c850
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53210881"
+ms.lasthandoff: 12/04/2019
+ms.locfileid: "74822486"
 ---
 # <a name="use-remote-blob-store-rbs-with-always-on-availability-groups"></a>Always On 可用性グループでのリモート BLOB ストア (RBS) の使用
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -27,9 +26,9 @@ ms.locfileid: "53210881"
   
 |BLOB ストアの場所|可用性グループによるこの BLOB データの保護|  
 |-------------------------|-----------------------------------------------------|  
-|RBS メタデータを含む同じデータベース (RBS リモート FILESTREAM プロバイダーを使用して格納)|可|  
-|[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] の同じインスタンスにある別のデータベース (RBS リモート FILESTREAM プロバイダーを使用して格納)|可<br /><br /> このデータベースは、RBS メタデータを含むデータベースと同じ可用性グループに含めることをお勧めします。|  
-|[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] の別のインスタンスにある別のデータベース (RBS リモート FILESTREAM プロバイダーを使用して格納)|可<br /><br /> このデータベースは、別の可用性グループに含まれている必要があります。|  
+|RBS メタデータを含む同じデータベース (RBS リモート FILESTREAM プロバイダーを使用して格納)|はい|  
+|[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] の同じインスタンスにある別のデータベース (RBS リモート FILESTREAM プロバイダーを使用して格納)|はい<br /><br /> このデータベースは、RBS メタデータを含むデータベースと同じ可用性グループに含めることをお勧めします。|  
+|[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] の別のインスタンスにある別のデータベース (RBS リモート FILESTREAM プロバイダーを使用して格納)|はい<br /><br /> このデータベースは、別の可用性グループに含まれている必要があります。|  
 |サード パーティの BLOB ストア|いいえ<br /><br /> この BLOB データを保護するには、BLOB ストア プロバイダーの高可用性メカニズムを使用します。|  
   
 ##  <a name="Limitations"></a> 制限事項  

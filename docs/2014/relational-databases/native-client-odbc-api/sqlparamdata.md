@@ -1,5 +1,5 @@
 ---
-title: SQLParamData |マイクロソフトのドキュメント
+title: SQLParamData |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -12,20 +12,20 @@ ms.assetid: 92349482-ea22-4a6a-8484-e9c6566794fa
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: da50163b90d4a871c2524e1723797474386be8f6
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 79285523ec83d3f10ad6f23010a7f9a6398e5980
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53356208"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68890104"
 ---
 # <a name="sqlparamdata"></a>SQLParamData
-  SQLParamData が返されるときに、 *ValuePtrPtr*テーブル値パラメーターでは、関連付けられているアプリケーションと SQLPutData を呼び出す必要があります*StrLen_Or_Ind*します。 場合*StrLen_Or_Ind* 、0 より大きい値を持つアプリケーションが整ったことになります[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native Client を次のテーブル値パラメーター行のパラメーターのデータを収集します。 場合*StrLen_Or_Ind*の値を持つ 0 はテーブル値パラメーターのデータの行を意味します。 詳細については、次を参照してください。[バインドと Data Transfer of Table-Valued パラメーターおよび列の値](../native-client-odbc-table-valued-parameters/binding-and-data-transfer-of-table-valued-parameters-and-column-values.md)します。  
+  SQLParamData が、テーブル値パラメーターに関連付けられた*Valueptrptr*を返す場合、アプリケーションは*StrLen_Or_Ind*を使用して sqlparamdata を呼び出す必要があります。 *StrLen_Or_Ind*の値が0より大きい場合は、アプリケーションが次のテーブル値パラメーター [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]行のパラメーターデータを収集する準備ができていることを意味します。 *StrLen_Or_Ind*の値が0の場合は、テーブル値パラメーターのデータ行がこれ以上存在しないことを意味します。 詳細については、「[テーブル値パラメーターと列値のバインドとデータ転送](../native-client-odbc-table-valued-parameters/binding-and-data-transfer-of-table-valued-parameters-and-column-values.md)」を参照してください。  
   
- テーブル値パラメーターの詳細については、次を参照してください。[テーブル値パラメーター &#40;ODBC&#41;](../native-client-odbc-table-valued-parameters/table-valued-parameters-odbc.md)します。  
+ テーブル値パラメーターの詳細については、「[テーブル値パラメーター &#40;の&#41;ODBC](../native-client-odbc-table-valued-parameters/table-valued-parameters-odbc.md)」を参照してください。  
   
 ## <a name="see-also"></a>参照  
- [SQLParamData](https://go.microsoft.com/fwlink/?LinkId=80706)   
+ [SQLParamData](/sql/odbc/reference/syntax/sqlparamdata-function)   
  [ODBC API 実装の詳細](odbc-api-implementation-details.md)  
   
   

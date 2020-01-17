@@ -1,7 +1,7 @@
 ---
-title: FROM (Transact-SQL) | Microsoft Docs
+title: FROM:JOIN、APPLY、PIVOT (T-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 03/16/2018
+ms.date: 06/01/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -31,24 +31,36 @@ helpviewer_keywords:
 - UPDATE statement [SQL Server], FROM clause
 - derived tables
 ms.assetid: 36b19e68-94f6-4539-aeb1-79f5312e4263
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
+author: VanMSFT
+ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 8c36325e68fbf9692c9f8f057e5aa215de2ad49b
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: bcf4dc79c1b241d4a9f48a3d211c13871e32b711
+ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52408809"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "73981970"
 ---
-# <a name="from-transact-sql"></a>FROM (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+# <a name="from-clause-plus-join-apply-pivot-transact-sql"></a>FROM 句と JOIN、APPLY、PIVOT (Transact-SQL)
 
-  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] の DELETE、SELECT、および UPDATE ステートメントの中で使用される、テーブル、ビュー、派生テーブル、および結合テーブルを指定します。 SELECT ステートメントでは、選択リストに定数、変数、および数式のみが含まれて列名が含まれていない場合を除き、FROM 句を指定する必要があります。  
-  
- ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
-  
+[!INCLUDE[tsql-appliesto-ss2016-all-md](../../includes/tsql-appliesto-ss2016-all-md.md)]
+
+Transact-SQL では、FROM 句は次のステートメントで利用できます。
+
+- [DELETE](../statements/delete-transact-sql.md)
+- [UPDATE](update-transact-sql.md)
+- [SELECT](select-transact-sql.md)
+
+FROM 句は通常、SELECT ステートメントで必要です。 例外は、テーブル列がリストアップされず、リストアップされる唯一の項目がリテラルか、変数か、数式の時です。
+
+この記事では、FROM 句で使用できる次のキーワードについても説明します。
+
+- JOIN
+- APPLY
+- PIVOT
+
+![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
+
 ## <a name="syntax"></a>構文  
   
 ```  
@@ -187,7 +199,7 @@ FROM { <table_source> [ ,...n ] }
   
  *rowset_function*  
 
-**適用対象**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] および [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]。  
+**適用対象**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 以降と [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]。  
 
   
  OPENROWSET など、テーブル参照の代わりに使用できるオブジェクトを返す行セット関数のいずれかを指定します。 行セット関数の一覧の詳細については、「[行セット関数 &#40;Transact-SQL&#41;](../../t-sql/functions/rowset-functions-transact-sql.md)」を参照してください。  
@@ -196,7 +208,7 @@ FROM { <table_source> [ ,...n ] }
   
  *bulk_column_alias*  
 
-**適用対象**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] および [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]。  
+**適用対象**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 以降と [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]。  
 
   
  結果セット内の列名に対する別名です。このパラメーターは省略可能です。 列の別名は、BULK オプションが指定された OPENROWSET 関数を使用する SELECT ステートメント内でのみ使用できます。 *bulk_column_alias* を使用する場合は、ファイル内の列と同じ順序ですべてのテーブル列に対して別名を指定します。  
@@ -209,7 +221,7 @@ FROM { <table_source> [ ,...n ] }
   
  OPENXML \<openxml_clause>  
 
-**適用対象**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] および [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]。  
+**適用対象**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 以降と [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]。  
 
   
  XML ドキュメントに対して行セット ビューを提供します。 詳細については、「[OPENXML &#40;Transact-SQL&#41;](../../t-sql/functions/openxml-transact-sql.md)」を参照してください。  
@@ -217,17 +229,17 @@ FROM { <table_source> [ ,...n ] }
  *derived_table*  
  データベースから行を取得するサブクエリです。 *derived_table* は 1 つ上のレベルのクエリへの入力として使用されます。  
   
- *derived* *_table* では、[!INCLUDE[tsql](../../includes/tsql-md.md)] テーブル値コンストラクター機能を使用して、複数の行を指定できます。 たとえば、`SELECT * FROM (VALUES (1, 2), (3, 4), (5, 6), (7, 8), (9, 10) ) AS MyTable(a, b);` のようにします。 詳細については、「[テーブル値コンストラクター &#40;Transact-SQL&#41;](../../t-sql/queries/table-value-constructor-transact-sql.md)」を参照してください。  
+ *derived* *_table* では、[!INCLUDE[tsql](../../includes/tsql-md.md)] テーブル値コンストラクター機能を使用して、複数の行を指定できます。 たとえば、`SELECT * FROM (VALUES (1, 2), (3, 4), (5, 6), (7, 8), (9, 10) ) AS MyTable(a, b);` のようになります。 詳細については、「[テーブル値コンストラクター &#40;Transact-SQL&#41;](../../t-sql/queries/table-value-constructor-transact-sql.md)」を参照してください。  
   
  *column_alias*  
  派生テーブルの結果セット内の列名に対する別名です。このパラメーターは省略可能です。 選択リストの各列の別名を 1 つずつ含みます。列の別名リスト全体をかっこで囲みます。  
   
  *table_or_view_name* FOR SYSTEM_TIME \<system_time>  
 
-**適用対象**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] および [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]。  
+**適用対象**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 以降と [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]。  
 
   
- データの特定のバージョンが、指定された時間的なテーブルとそのシステムのバージョン情報のリンクの履歴テーブルから返されることを指定します。  
+ データの特定のバージョンが、指定された時間的なテーブルとそのシステムのバージョン情報のリンクの履歴テーブルから返されることを指定します  
   
 ### <a name="tablesample-clause"></a>TABLESAMPLE 句
 **適用対象:** SQL Server、SQL Database 
@@ -339,7 +351,7 @@ ON (p.ProductID = v.ProductID);
  *table_source* PIVOT \<pivot_clause>  
  *table_source* が *pivot_column* に基づいてピボットされることを指定します。 *table_source* はテーブルまたはテーブル式です。 出力は、*pivot_column* および *value_column* 以外の *table_source* のすべての列を含んでいるテーブルです。 *pivot_column* および *value_column* 以外の *table_source* の列は、ピボット演算子のグループ化列と呼ばれます。 PIVOT および UNPIVOT の詳細については、「[PIVOT および UNPIVOT の使用](../../t-sql/queries/from-using-pivot-and-unpivot.md)」を参照してください。  
   
- PIVOT は、グループ化列に関する入力テーブルに対してグループ化の操作を実行し、各グループごとに 1 行のデータを返します。 さらに、出力では、*input_table* の *pivot_column* に表示される *column_list* で指定された値ごとに 1 列のデータが含まれます。  
+ PIVOT は、グループ化列に関する入力テーブルに対してグループ化の操作を実行し、グループごとに 1 行のデータを返します。 さらに、出力では、*input_table* の *pivot_column* に表示される *column_list* で指定された値ごとに 1 列のデータが含まれます。  
   
  詳細については、後の「解説」を参照してください。  
   
@@ -369,30 +381,30 @@ ON (p.ProductID = v.ProductID);
   
  AS OF \<date_time>  
 
-**適用対象**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] および [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]。  
+**適用対象**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 以降と [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]。  
 
   
- これまでの時間内には、指定位置で行ごとに実際の値を含む (現在) の 1 つのレコードを含むテーブルを返します。 内部的には、テンポラル テーブルとその履歴テーブルの結合が行われ、結果がフィルター処理されて、*\<date_time>* パラメーターで指定された特定の時点で有効だった行の値が返されます。 *system_start_time_column_name* 値が *\<date_time>* パラメーター値と等しいかそれよりも小さく、*system_end_time_column_name* 値が *\<date_time>* パラメーター値より大きい場合に、行の値は有効と見なされます。   
+ これまでの時間内には、指定位置で行ごとに実際の値を含む (現在) の 1 つのレコードを含むテーブルを返します。 内部的には、テンポラル テーブルとその履歴テーブルの結合が行われ、結果がフィルター処理されて、 *\<date_time>* パラメーターで指定された特定の時点で有効だった行の値が返されます。 *system_start_time_column_name* 値が *\<date_time>* パラメーター値と等しいかそれよりも小さく、*system_end_time_column_name* 値が *\<date_time>* パラメーター値より大きい場合に、行の値は有効と見なされます。   
   
  FROM \<start_date_time> TO \<end_date_time>
 
-**適用対象**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] および [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]。
+**適用対象**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 以降と [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]。
 
   
  指定した時間範囲内でアクティブだったすべての行バージョンの値を含むテーブルを返します。FROM 引数の *\<start_date_time>* パラメーター値の前にアクティブになったか、TO 引数の *\<end_date_time>* パラメーター値の後にアクティブでなくなったかに無関係です。 内部的には、共用体が一時的なテーブルとその履歴テーブルの間実行され、結果をフィルター処理すると、指定した時間範囲の中にいつでもにアクティブだったすべての行のバージョンの値を返します。 FROM エンドポイントによって定義されている下限の境界で正確にアクティブになった行のサイズが含まれ、宛先エンドポイントによって定義された境界の上限で正確にアクティブになった行は含まれません。  
   
  BETWEEN \<start_date_time> AND \<end_date_time>  
 
-**適用対象**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] および [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]。  
+**適用対象**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 以降と [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]。  
   
  \<end_date_time> エンドポイントで定義された上限の境界によってアクティブになった行が含まれることを除き、上記の **FROM \<start_date_time> TO \<end_date_time>** の説明と同じです。  
   
  CONTAINED IN (\<start_date_time> , \<end_date_time>)  
 
-**適用対象**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] および [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]。  
+**適用対象**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 以降と [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]。  
 
   
- 開き、含まれている IN 引数の 2 つの datetime 値で定義されている指定された時間範囲内で終了したすべてのレコードのバージョンの値を持つテーブルを返します。 行が下位の境界に正確に有効になったまたは上限の境界上だけでアクティブにされているが中断されることでは、含まれています。  
+ 開かれて、CONTAINED IN 引数の 2 つの datetime 値で定義されている指定時間範囲内に閉じられた、すべてのレコードのバージョンの値が含まれるテーブルを返します。 行が下位の境界に正確に有効になったまたは上限の境界上だけでアクティブにされているが中断されることでは、含まれています。  
   
  ALL  
  現在のテーブルと、履歴テーブルの両方からのすべての行から値を持つテーブルを返します。  
@@ -607,7 +619,7 @@ OUTER APPLY dbo.GetReports(d.DeptMgrID) ;
 ```  
   
 ### <a name="l-using-cross-apply"></a>L. CROSS APPLY を使用する  
-次の例では、`sys.dm_exec_cached_plans` 動的管理ビューに対してクエリを実行し、キャッシュにあるすべてのクエリ プランのプラン ハンドルを取得することによって、プラン キャッシュにあるすべてのクエリ プランのスナップショットを取得します。 これにより、プラン ハンドルを `CROSS APPLY` に渡すように `sys.dm_exec_query_plan` 演算子が指定されます。 現在プラン キャッシュにある各プランの XML プラン表示の出力は、返されるテーブルの `query_plan` 列に格納されます。  
+次の例では、`sys.dm_exec_cached_plans` 動的管理ビューに対してクエリを実行し、キャッシュにあるすべてのクエリ プランのプラン ハンドルを取得することによって、プラン キャッシュにあるすべてのクエリ プランのスナップショットを取得します。 これにより、プラン ハンドルを `sys.dm_exec_query_plan` に渡すように `CROSS APPLY` 演算子が指定されます。 現在プラン キャッシュにある各プランの XML プラン表示の出力は、返されるテーブルの `query_plan` 列に格納されます。  
   
 ```sql
 USE master;  
@@ -618,9 +630,9 @@ CROSS APPLY sys.dm_exec_query_plan(cp.plan_handle);
 GO  
 ```  
   
-### <a name="m-using-for-systemtime"></a>M. FOR SYSTEM_TIME を使用します。  
+### <a name="m-using-for-system_time"></a>M. FOR SYSTEM_TIME を使用する  
   
-**適用対象**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] および [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]。  
+**適用対象**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 以降と [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]。  
   
  次の例では、FOR SYSTEM_TIME AS OF date_time_literal_or_variable 引数を使用して、2014 年 1 月 1 日の時点の実際 (現在) のテーブル行を返します。  
   
@@ -723,7 +735,7 @@ WHERE fis.SalesOrderNumber > 'SO50000'
 ORDER BY fis.SalesOrderNumber;  
 ```  
   
-### <a name="o-using-the-left-outer-join-and-right-outer-join-syntax"></a>O.  LEFT OUTER JOIN と RIGHT OUTER JOIN 構文を使用する  
+### <a name="o-using-the-left-outer-join-and-right-outer-join-syntax"></a>O. LEFT OUTER JOIN と RIGHT OUTER JOIN 構文を使用する  
  次の例では、`FactInternetSales` テーブルと `DimProduct` テーブルを `ProductKey` 列で結合します。 LEFT OUTER JOIN 構文は、左 (`FactInternetSales`) テーブルからの一致しない行を保持します。 `FactInternetSales` テーブルには `DimProduct` テーブルと一致しない `ProductKey` 値は含まれないため、このクエリは、上記の最初の内部結合例と同じ行を返します。  
   
 ```sql
@@ -797,7 +809,7 @@ FULL JOIN FactInternetSales AS fis
 ORDER BY fis.SalesOrderNumber;  
 ```  
   
-### <a name="q-using-the-cross-join-syntax"></a>Q.  CROSS JOIN 構文を使用する  
+### <a name="q-using-the-cross-join-syntax"></a>Q. CROSS JOIN 構文を使用する  
  次の例では、`FactInternetSales` テーブルと `DimSalesTerritory` テーブルのクロス積を返します。 `SalesOrderNumber` と `SalesTerritoryKey` のすべての可能な組み合わせの一覧が返されます。 クロス結合クエリ内に `ON` 句がないことに注目してください。  
   
 ```sql
@@ -809,7 +821,7 @@ CROSS JOIN FactInternetSales AS fis
 ORDER BY fis.SalesOrderNumber;  
 ```  
   
-### <a name="r-using-a-derived-table"></a>R.  派生テーブルを使用する  
+### <a name="r-using-a-derived-table"></a>R. 派生テーブルを使用する  
  次の例では、派生テーブル (`FROM` 句の後の `SELECT` ステートメント) を使用して、`DimCustomer` テーブル内で、`BirthDate` 値が 1970 年 1 月 1 日以降で、姓が 'Smith' のすべての顧客の `CustomerKey` 列と `LastName` 列を返します。  
   
 ```sql
@@ -823,7 +835,7 @@ WHERE LastName = 'Smith'
 ORDER BY LastName;  
 ```  
   
-### <a name="s-reduce-join-hint-example"></a>S.  REDUCE 結合ヒントの例  
+### <a name="s-reduce-join-hint-example"></a>S. REDUCE 結合ヒントの例  
  次の例では、`REDUCE` 結合ヒントを使用して、クエリ内で派生テーブルの処理を変更します。 `REDUCE` 結合ヒントを使用する場合、`fis.ProductKey` は予測され、レプリケートされ、区別した後、`ProductKey` での `DimProduct` のシャッフル中に `DimProduct` に結合されます。 結果として得られる派生テーブルは、`fis.ProductKey` に配布されます。  
   
 ```sql
@@ -839,7 +851,7 @@ FROM
 ORDER BY SalesOrderNumber;  
 ```  
   
-### <a name="t-replicate-join-hint-example"></a>T.  REPLICATE 結合ヒントの例  
+### <a name="t-replicate-join-hint-example"></a>T. REPLICATE 結合ヒントの例  
  次の例は、前の例と同じクエリを示していますが、`REDUCE` 結合ヒントの代わりに `REPLICATE` 結合ヒントを使用している点が異なります。 `REPLICATE` ヒントを使用すると、`FactInternetSales` テーブルの `ProductKey` (結合) 列の値がすべてのノードにレプリケートされます。 `DimProduct` テーブルは、これらの値のレプリケートされたバージョンに結合されます。  
   
 ```sql
@@ -855,7 +867,7 @@ FROM
 ORDER BY SalesOrderNumber;  
 ```  
   
-### <a name="u-using-the-redistribute-hint-to-guarantee-a-shuffle-move-for-a-distribution-incompatible-join"></a>U.  REDISTRIBUTE ヒントを使用して、配布互換性のある結合に SHUFFLE_MOVE を保証する  
+### <a name="u-using-the-redistribute-hint-to-guarantee-a-shuffle-move-for-a-distribution-incompatible-join"></a>U. REDISTRIBUTE ヒントを使用して、配布互換性のある結合に SHUFFLE_MOVE を保証する  
  次のクエリは、配布互換性のある結合で REDISTRIBUTE クエリ ヒントを使用します。 これにより、クエリ オプティマイザーがクエリ プランで SHUFFLE_MOVE を使用することが保証されます。 また、クエリ プランで分散テーブルをレプリケートされたテーブルに移動する、BROADCAST_MOVE を使用しないことも保証されます。  
   
  次の例では、REDISTRIBUTE ヒントが FactInternetSales テーブルでの SHUFFLE_MOVE を強制します。これは、ProductKey は DimProduct のディストリビューション列で、FactInternetSales のディストリビューション列ではないからです。  
@@ -870,7 +882,7 @@ INNER REDISTRIBUTE JOIN FactInternetSales AS fis
     ON dp.ProductKey = fis.ProductKey;  
 ```  
 
-### <a name="v-using-tablesample-to-read-data-from-a-sample-of-rows-in-a-table"></a>V.  TABLESAMPLE を使用してテーブル内のサンプル行からデータを読み取る  
+### <a name="v-using-tablesample-to-read-data-from-a-sample-of-rows-in-a-table"></a>V. TABLESAMPLE を使用してテーブル内のサンプル行からデータを読み取る  
  次の例では、`TABLESAMPLE` 句内で `FROM` を使用して、`10` テーブル内にあるすべての行の約 `Customer`% を返します。  
   
 ```sql    
@@ -880,11 +892,9 @@ FROM Sales.Customer TABLESAMPLE SYSTEM (10 PERCENT) ;
   
 ## <a name="see-also"></a>参照  
  [CONTAINSTABLE &#40;Transact-SQL&#41;](../../relational-databases/system-functions/containstable-transact-sql.md)   
- [DELETE &#40;Transact-SQL&#41;](../../t-sql/statements/delete-transact-sql.md)   
  [FREETEXTTABLE &#40;Transact-SQL&#41;](../../relational-databases/system-functions/freetexttable-transact-sql.md)   
  [INSERT &#40;Transact-SQL&#41;](../../t-sql/statements/insert-transact-sql.md)   
  [OPENQUERY &#40;Transact-SQL&#41;](../../t-sql/functions/openquery-transact-sql.md)   
  [OPENROWSET &#40;Transact-SQL&#41;](../../t-sql/functions/openrowset-transact-sql.md)   
  [演算子 &#40;Transact-SQL&#41;](../../t-sql/language-elements/operators-transact-sql.md)   
- [UPDATE &#40;Transact-SQL&#41;](../../t-sql/queries/update-transact-sql.md)   
  [WHERE &#40;Transact-SQL&#41;](../../t-sql/queries/where-transact-sql.md)  

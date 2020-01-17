@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 75225b64-c102-4f1b-888a-fe72710dbfcd
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: d26498c6006c867bd2123e3bb8a37112773ac450
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: c27ba2a02a9c54f2dc1b57341750d6600843d69d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51663601"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68137880"
 ---
 # <a name="detect-scsi-host-adapter-issues"></a>SCSI ホスト アダプターの問題の検出
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

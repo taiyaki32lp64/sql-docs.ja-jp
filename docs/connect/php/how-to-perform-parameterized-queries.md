@@ -1,5 +1,5 @@
 ---
-title: '方法: パラメーター化クエリの実行 |Microsoft Docs'
+title: '方法: パラメーター化クエリを実行する |Microsoft Docs'
 ms.custom: ''
 ms.date: 03/26/2018
 ms.prod: sql
@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: dc7d0ede-a9b6-4ce2-977e-4d1e7ec2131c
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 8c1e764373b0a8877da8dcdcf967ec8a591f1580
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 7e406d64bd8c56b467c9b331eb4aef132dc0cc67
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47666590"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67993500"
 ---
 # <a name="how-to-perform-parameterized-queries"></a>方法: パラメーター化クエリを実行する
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -32,7 +31,7 @@ ms.locfileid: "47666590"
   
 2.  Transact-SQL クエリ内のプレースホルダーに対応する PHP 変数を初期化または更新します。  
   
-3.  ステップ 2 の PHP 変数を使用して、Transact-SQL 文字列内のパラメーター プレースホルダーに対応するパラメーター値の配列を作成または更新します。 配列内のパラメーター値は、それらを表すプレース ホルダーと同じ順序でなければなりません。
+3.  ステップ 2 の PHP 変数を使用して、Transact-SQL 文字列内のパラメーター プレースホルダーに対応するパラメーター値の配列を作成または更新します。 配列内のパラメーター値は、それらを表すためのプレースホルダーと同じ順序である必要があります。
   
 4.  クエリを実行します。  
   
@@ -114,7 +113,7 @@ sqlsrv_close( $conn);
 前の例では、 **sqlsrv_query** 関数を使用してクエリを実行しています。 この関数は、ステートメントの準備と実行の両方を行うため、1 回限りのクエリを実行するのに便利です。 異なるパラメーター値でクエリを再実行するには、**sqlsrv_prepare**/**sqlsrv_execute** の組み合わせが最善です。 異なるパラメーター値でクエリを再実行する例については、次の例を参照してください。  
   
 ## <a name="example"></a>例  
-次の例では、 **sqlsrv_prepare** 関数を使用するときに変数を暗黙的にバインドする方法を示します。 この例では、複数の注文を *Sales.SalesOrderDetail* テーブルに挿入します。 **sqlsrv_prepare** を呼び出すと、*$params* 配列がステートメント (*$stmt*) にバインドされます。 テーブルに新しい注文を挿入する各クエリを実行する前に、 *$params* 配列が注文の詳細に対応する新しい値で更新されます。 後続のクエリ実行では、新しいパラメーター値が使用されます。  
+次の例では、 **sqlsrv_prepare** 関数を使用するときに変数を暗黙的にバインドする方法を示します。 この例では、複数の注文を *Sales.SalesOrderDetail* テーブルに挿入します。 **sqlsrv_prepare** を呼び出すと、 *$params* 配列がステートメント ( *$stmt*) にバインドされます。 テーブルに新しい注文を挿入する各クエリを実行する前に、 *$params* 配列が注文の詳細に対応する新しい値で更新されます。 後続のクエリ実行では、新しいパラメーター値が使用されます。  
   
 この例では、ローカル コンピューターに SQL Server および [AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) データベースがインストールされていることを前提にしています。 コマンド ラインからこの例を実行すると、すべての出力はコンソールに書き込まれます。  
   
@@ -191,7 +190,7 @@ sqlsrv_close( $conn);
 ## <a name="see-also"></a>参照  
 [データ型の変換](../../connect/php/converting-data-types.md)
 
-[セキュリティに関する考慮事項、Microsoft Drivers for PHP for SQL Server](../../connect/php/security-considerations-for-php-sql-driver.md)
+[Microsoft Drivers for PHP for SQL Server のセキュリティに関する考慮事項](../../connect/php/security-considerations-for-php-sql-driver.md)
 
 [ドキュメントのコード例について](../../connect/php/about-code-examples-in-the-documentation.md)
 

@@ -2,7 +2,7 @@
 title: レポート サーバーでの認証 | Microsoft Docs
 ms.date: 05/30/2017
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: security
 ms.topic: conceptual
 helpviewer_keywords:
@@ -12,14 +12,14 @@ helpviewer_keywords:
 - authentication [Reporting Services]
 - Forms authentication
 ms.assetid: 753c2542-0e97-4d8f-a5dd-4b07a5cd10ab
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 6b559815c7e1bb74dcf5c8b3b6dceb4e14265d11
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: d3246b38461c1445f3335f42944480732ab583a0
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50030221"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65570895"
 ---
 # <a name="authentication-with-the-report-server"></a>レポート サーバーでの認証
 

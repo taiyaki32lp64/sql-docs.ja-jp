@@ -13,15 +13,15 @@ helpviewer_keywords:
 - child packages
 - parent packages [Integration Services]
 ms.assetid: 042d4ec0-0668-401c-bb3a-a25fe2602eac
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 5927cbe753cf0035c37f9a826c6bf89e9c963ae8
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 37d0edcabdb0171c8ca83c79080d59fdd8aafb76
+ms.sourcegitcommit: 0818f6cc435519699866db07c49133488af323f4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53365774"
+ms.lasthandoff: 06/20/2019
+ms.locfileid: "67284951"
 ---
 # <a name="execute-package-task"></a>パッケージ実行タスク
   パッケージ実行タスクは、パッケージのワークフローの一部として他のパッケージを実行できるようにすることで、[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] のエンタープライズ用機能を拡張します。  
@@ -97,7 +97,7 @@ ms.locfileid: "53365774"
  詳細については、「 [子パッケージでの変数およびパラメーターの値の使用](../use-the-values-of-variables-and-parameters-in-a-child-package.md)」を参照してください。  
   
 ### <a name="accessing-parent-package-variables"></a>親パッケージの変数へのアクセス  
- 子パッケージではスクリプト タスクを使用して、親パッケージの変数にアクセスできます。 **スクリプト タスク エディター**で **[スクリプト]** ページに親パッケージ変数の名前を入力するときは、変数名に **User:** を含めないでください。 そうしないと、親パッケージを実行したときに子パッケージで変数が見つかりません。 スクリプト タスクを使用して、親パッケージ変数にアクセスする方法の詳細については、このブログ記事を参照してください[SSIS:。親パッケージ変数にアクセスする](https://go.microsoft.com/fwlink/?LinkId=257729)、consultingblogs.emc.com します。  
+ 子パッケージではスクリプト タスクを使用して、親パッケージの変数にアクセスできます。 **スクリプト タスク エディター**で **[スクリプト]** ページに親パッケージ変数の名前を入力するときは、変数名に **User:** を含めないでください。 そうしないと、親パッケージを実行したときに子パッケージで変数が見つかりません。 スクリプト タスクを使用して、親パッケージ変数にアクセスする方法の詳細については、このブログ記事を参照してください[SSIS:。親パッケージ変数にアクセスする](https://andyleonard.blog/2015/08/ssis-design-pattern-access-parent-variables-from-a-child-package-in-the-ssis-catalog/)します。  
   
 ## <a name="configuring-the-execute-package-task"></a>パッケージ実行タスクの構成  
  プロパティを設定するには [!INCLUDE[ssIS](../../includes/ssis-md.md)] デザイナーから行うか、またはプログラムによって設定します。  
@@ -112,12 +112,8 @@ ms.locfileid: "53365774"
   
 -   [タスクまたはコンテナーのプロパティを設定する](../set-the-properties-of-a-task-or-container.md)  
   
-## <a name="related-tasks"></a>Related Tasks  
-  
 ## <a name="related-content"></a>関連コンテンツ  
-  
--   ブログ エントリ「 [SSIS:インプロセスまたはアウト プロセスの子パッケージを実行する必要がありますか。](https://go.microsoft.com/fwlink/?LinkId=220819)、consultingblogs.emc.com します。  
-  
--   ブログ エントリ「 [SSIS:親パッケージ変数にアクセスする](https://go.microsoft.com/fwlink/?LinkId=257729)、consultingblogs.emc.com します。  
+
+ブログ エントリ「 [SSIS:親パッケージ変数にアクセスする](https://andyleonard.blog/2015/08/ssis-design-pattern-access-parent-variables-from-a-child-package-in-the-ssis-catalog/)andyleonard.blog にします。 
   
   

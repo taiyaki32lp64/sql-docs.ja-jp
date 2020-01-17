@@ -14,15 +14,14 @@ helpviewer_keywords:
 ms.assetid: 0e08bfff-68f9-4648-9558-09b57fea08ad
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: a738712a8fb1b032ef8244f579b10fdcc22becee
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: aa75299f4d8e8f15293064d0bf3fb3979fe382d1
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47739900"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68037702"
 ---
-# <a name="c-to-sql-timestamp"></a>C から SQL へ: タイムスタンプ
+# <a name="c-to-sql-timestamp"></a>C から SQL へ: Timestamp
 Timestamp ODBC C データ型の識別子です。  
   
  SQL_C_TYPE_TIMESTAMP  
@@ -41,6 +40,6 @@ Timestamp ODBC C データ型の識別子です。
   
  SQL_C_TIMESTAMP 構造で有効な値については、次を参照してください。 [C データ型](../../../odbc/reference/appendixes/c-data-types.md)、この付録で以前のバージョン。  
   
- C のタイムスタンプ データは、SQL データの文字に変換するときに、結果の文字データは、"*yyyy*-*mm*-*dd* *hh*:*mm*:*ss*[.*f.*]"の形式。  
+ C のタイムスタンプ データは、SQL データの文字に変換するときに、結果の文字データは、"*yyyy*-*mm*-*dd* *hh*:*mm*:*ss*[.*f.* ]"の形式。  
   
  ドライバーでは、タイムスタンプ C データ型からデータを変換するとき長さ/インジケーター値を無視し、データ バッファーのサイズがタイムスタンプ C データ型のサイズであると仮定します。 長さまたはインジケーターの値が渡さ、 *StrLen_or_Ind*引数**SQLPutData**とで指定したバッファー、 *StrLen_or_IndPtr* 引数**SQLBindParameter**します。 データ バッファーを指定した、 *DataPtr*引数**SQLPutData**と*ParameterValuePtr*引数**SQLBindParameter**.

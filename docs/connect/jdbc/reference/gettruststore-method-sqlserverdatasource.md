@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: 8f5850e4-8627-49a8-ba0e-b1f4014322a5
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 561148cb1492457c4528bd1fdbf60e66233c6b6e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: f35a71cc741411f3aad3408d366f3f70218fecdf
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47708870"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67978523"
 ---
 # <a name="gettruststore-method-sqlserverdatasource"></a>getTrustStore メソッド (SQLServerDataSource)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

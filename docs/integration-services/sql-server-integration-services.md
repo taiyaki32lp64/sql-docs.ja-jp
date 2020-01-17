@@ -18,17 +18,20 @@ helpviewer_keywords:
 - DTS [Integration Services], about Integration Services
 - data integration [Integration Services]
 - Data Transformation Services
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: aec1d61a092926132ae1505ac5bf6ae4bc502560
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 2fbf040bd24ce3da81497001213e953f7436d863
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51699645"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71296863"
 ---
 # <a name="sql-server-integration-services"></a>SQL Server Integration Services
+
+[!INCLUDE[ssis-appliesto](../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
 
 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] は、エンタープライズ レベルのデータ統合およびデータ変換ソリューションを構築するためのプラットフォームです。 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] を使用すると、ファイルのコピーやダウンロード、データ ウェアハウスの読み込み、データのクリーニングとマイニング、[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] のオブジェクトやデータの管理などにより、複雑なビジネスの問題を解決できます。
 
@@ -42,7 +45,7 @@ ms.locfileid: "51699645"
 
 SQL Server での SQL Server Integration Services のインストール、および必要な他のダウンロードについては、「[Integration Services のインストール](install-windows/install-integration-services.md)」をご覧ください。
 
-##  <a name="infotipsql-servermediainfo-tippng-resources"></a>![info_tip](../sql-server/media/info-tip.png) リソース
+##  <a name="info_tipsql-servermediainfo-tippng-resources"></a>![info_tip](../sql-server/media/info-tip.png) リソース
 -   [SSIS フォーラムのヘルプの表示](https://social.msdn.microsoft.com/Forums/en-US/home?forum=sqlintegrationservices)
 -   [Stack Overflow のヘルプの表示](https://stackoverflow.com/questions/tagged/ssis)  
 -   [SSIS チーム ブログのフォロー](https://blogs.msdn.microsoft.com/ssis/)

@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: fdb64e09-222a-47fe-b08b-999264ca261d
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 1f0a85482a663b9be77ea455bdbabe87acf3b1e1
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 527e59ef18d152b4546619cf67130dc7aecbfe6a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56038703"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68050833"
 ---
 # <a name="grant-full-text-permissions-transact-sql"></a>GRANT (フルテキストの権限の許可) (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -54,10 +53,10 @@ GRANT permission [ ,...n ] ON
  *permission*  
  権限の名前を指定します。 権限とセキュリティ保護可能なリソースの有効な組み合わせについては、後の「解説」を参照してください。  
   
- ON FULLTEXT CATALOG **::**_full-text_catalog_name_  
+ ON FULLTEXT CATALOG **::** _full-text_catalog_name_  
  権限を許可するフルテキスト カタログを指定します。 スコープ修飾子 **::** が必要です。  
   
- ON FULLTEXT STOPLIST **::**_full-text_stoplist_name_  
+ ON FULLTEXT STOPLIST **::** _full-text_stoplist_name_  
  権限を許可するフルテキスト ストップリストを指定します。 スコープ修飾子 **::** が必要です。  
   
  *database_principal*  

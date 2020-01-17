@@ -18,21 +18,20 @@ helpviewer_keywords:
 ms.assetid: 2dccc3cd-0e93-4e3e-a4e5-8fe89b31bd63
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: f9e7ba855bde4caa04efea0411857705eb4bf976
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 0a351eaa746654d26d7f51536a41fc2677a2f67e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47702740"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68010551"
 ---
-# <a name="spsyscollectorupdatecollectionset-transact-sql"></a>sp_syscollector_update_collection_set (Transact-SQL)
+# <a name="spsyscollectorupdatecollectionset-transact-sql"></a>sp_syscollector_update_collection_set は (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  ユーザー定義のコレクション セットのプロパティまたは名前の変更に使用されます。  
+  ユーザー定義のコレクション セットのプロパティを変更するために使用またはユーザー定義のコレクションの名前を変更するには設定します。  
   
 > [!WARNING]  
->  プロキシとして構成されている Windows アカウントがまだログインしていない非対話型または対話型のユーザーの場合、プロファイル ディレクトリは存在せず、ステージング ディレクトリの作成は失敗します。 したがって、ドメイン コントローラーでプロキシ アカウントを使用している場合は、プロファイル ディレクトリが確実に作成されているようにするため、少なくとも 1 回は使用されている対話型アカウントを指定する必要があります。  
+>  プロキシとして構成されている Windows アカウントが非対話型または対話型のユーザーではまだログインしていない場合、プロファイル ディレクトリは存在しませんし、ステージング ディレクトリの作成は失敗します。 したがって、ドメイン コントローラーでプロキシ アカウントを使用している場合は、プロファイル ディレクトリが確実に作成されているようにするため、少なくとも 1 回は使用されている対話型アカウントを指定する必要があります。  
   
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -56,52 +55,41 @@ sp_syscollector_update_collection_set
 ```  
   
 ## <a name="arguments"></a>引数  
- [ **@collection_set_id =** ] *collection_set_id*  
- コレクション セットの一意なローカル識別子を指定します。 *collection_set_id*は**int**場合、値が必要と*名前*は NULL です。  
+`[ @collection_set_id = ] collection_set_id` コレクション セットの一意なローカル識別子です。 *collection_set_id*は**int**場合、値が必要と*名前*は NULL です。  
   
- [  **@name =** ] '*名前*'  
- コレクション セットの名前を指定します。 *名前*は**sysname**場合、値が必要と*collection_set_id*は NULL です。  
+`[ @name = ] 'name'` コレクション セットの名前です。 *名前*は**sysname**場合、値が必要と*collection_set_id*は NULL です。  
   
- [  **@new_name =** ] '*new_name*'  
- コレクション セットの新しい名前です。 *新しい名前*は**sysname**、使用する場合は空の文字列にすることはできません。 *新しい名前*で一意である必要があります。 現在のコレクション セットの名前の一覧については、syscollector_collection_sets システム ビューにクエリを実行します。  
+`[ @new_name = ] 'new_name'` コレクション セットの新しい名前です。 *新しい名前*は**sysname**、使用する場合は空の文字列にすることはできません。 *新しい名前*で一意である必要があります。 現在のコレクション セットの名前の一覧については、syscollector_collection_sets システム ビューにクエリを実行します。  
   
- [  **@target =** ] '*ターゲット*'  
- 将来使用するために予約されています。  
+`[ @target = ] 'target'` 将来使用するために予約されています。  
   
- [ **@collection_mode =** ] *collection_mode*  
- 使用するデータ コレクションの種類です。 *collection_mode*は**smallint**値は次のいずれかを指定できます。  
+`[ @collection_mode = ] collection_mode` 使用するデータ コレクションの型です。 *collection_mode*は**smallint**値は次のいずれかを指定できます。  
   
- 0 - キャッシュ モード。 データの収集とアップロードは個別のスケジュールに従います。 連続コレクションのキャッシュ モードを指定します。  
+ 0 - キャッシュ モード。 データの収集とアップロードは個別のスケジュールです。 継続的なコレクションのキャッシュ モードを指定します。  
   
- 1 - 非キャッシュ モード。 データの収集とアップロードは、同じスケジュールでは。 アドホック コレクションまたはスナップショット コレクションの非キャッシュ モードを指定します。  
+ 1-非キャッシュ モード。 データの収集とアップロードは、同じスケジュールでは。 アドホック コレクションまたはスナップショット コレクションの非キャッシュ モードを指定します。  
   
  非キャッシュ モードからキャッシュ モード (0) に変更を場合、する必要がありますいずれかも指定*schedule_uid*または*schedule_name*します。  
   
- [ **@days_until_expiration=** ] *days_until_expiration*  
- 収集したデータを管理データ ウェアハウスに保管しておく日数です。 *days_until_expiration*は**smallint**します。 *days_until_expiration* 0 または正の整数にする必要があります。  
+`[ @days_until_expiration = ] days_until_expiration` 管理データ ウェアハウスに収集されたデータが保存されている日の数です。 *days_until_expiration*は**smallint**します。 *days_until_expiration* 0 または正の整数にする必要があります。  
   
- [ **@proxy_id =** ] *proxy_id*  
- 一意の識別子には、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]エージェント プロキシ アカウント。 *proxy_id*は**int**します。  
+`[ @proxy_id = ] proxy_id` 一意の識別子には、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]エージェント プロキシ アカウント。 *proxy_id*は**int**します。  
   
- [  **@proxy_name =** ] '*proxy_name*'  
- プロキシの名前です。 *proxy_name*は**sysname** null 値は。  
+`[ @proxy_name = ] 'proxy_name'` プロキシの名前です。 *proxy_name*は**sysname** null 値は。  
   
- [ **@schedule_uid** =] '*schedule_uid*'  
- スケジュールを参照する GUID です。 *schedule_uid*は**uniqueidentifier**します。  
+`[ @schedule_uid = ] 'schedule_uid'` スケジュールを参照する GUID。 *schedule_uid*は**uniqueidentifier**します。  
   
  取得する*schedule_uid*、sysschedules システム テーブルをクエリします。  
   
  ときに*collection_mode*を 0 に設定されている*schedule_uid*または*schedule_name*指定する必要があります。 ときに*collection_mode*を 1 に設定されている*schedule_uid*または*schedule_name*指定されている場合は無視されます。  
   
- [  **@schedule_name =** ] '*schedule_name*'  
- スケジュールの名前です。 *schedule_name*は**sysname** null 値は。 指定した場合*schedule_uid* NULL にする必要があります。 取得する*schedule_name*、sysschedules システム テーブルをクエリします。  
+`[ @schedule_name = ] 'schedule_name'` スケジュールの名前です。 *schedule_name*は**sysname** null 値は。 指定した場合*schedule_uid* NULL にする必要があります。 取得する*schedule_name*、sysschedules システム テーブルをクエリします。  
   
- [ **@logging_level =** ] *logging_level*  
- ログ レベルです。 *logging_level*は**smallint**次の値のいずれかの。  
+`[ @logging_level = ] logging_level` ログ記録レベルです。 *logging_level*は**smallint**次の値のいずれかの。  
   
  0 - ログの実行情報と[!INCLUDE[ssIS](../../includes/ssis-md.md)]イベントを追跡します。  
   
--   コレクション セットの開始/停止  
+-   開始/停止のコレクション セット  
   
 -   パッケージの開始/停止  
   
@@ -119,8 +107,7 @@ sp_syscollector_update_collection_set
   
  既定値*logging_level*は 1 です。  
   
- [  **@description =** ] '*説明*'  
- コレクション セットの説明です。 *説明*は**nvarchar (4000)** します。  
+`[ @description = ] 'description'` コレクション セットの説明です。 *説明*は**nvarchar (4000)** します。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  **0** (成功) または**1** (失敗)  
@@ -150,7 +137,7 @@ sp_syscollector_update_collection_set
 ## <a name="examples"></a>使用例  
   
 ### <a name="a-renaming-a-collection-set"></a>A. コレクション セットの名前を変更する  
- 次の例では、ユーザー定義のコレクション セットの名前を変更します。  
+ 次の例では、ユーザー定義のコレクション セットを変更します。  
   
 ```  
 USE msdb;  
@@ -162,7 +149,7 @@ GO
 ```  
   
 ### <a name="b-changing-the-collection-mode-from-non-cached-to-cached"></a>B. コレクション モードを非キャッシュからキャッシュに変更する  
- 次の例では、コレクション モードを非キャッシュ モードからキャッシュ モードに変更します。 コレクション モードの変更には、スケジュール ID またはスケジュール名を指定する必要があります。  
+ 次の例では、コレクション モードを非キャッシュ モードからキャッシュ モードに変更します。 この変更は、スケジュール ID またはスケジュール名を指定することが必要です。  
   
 ```  
 USE msdb;  
@@ -176,8 +163,8 @@ EXECUTE dbo.sp_syscollector_update_collection_set
 GO  
 ```  
   
-### <a name="c-changing-other-collection-set-parameters"></a>C. その他のコレクション セットのパラメーターを変更する  
- 次の例では、"Simple collection set test 2" という名前のコレクション セットのさまざまなプロパティを更新します。  
+### <a name="c-changing-other-collection-set-parameters"></a>C. パラメーターを設定するその他のコレクションを変更します。  
+ 次の例の更新プログラム、コレクション セットのさまざまなプロパティという名前の"Simple collection set test 2" です。  
   
 ```  
 USE msdb;  
@@ -191,7 +178,7 @@ EXEC dbo.sp_syscollector_update_collection_set
 GO  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [システム ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
  [[データ コレクション]](../../relational-databases/data-collection/data-collection.md)   
  [syscollector_collection_sets &#40;TRANSACT-SQL&#41;](../../relational-databases/system-catalog-views/syscollector-collection-sets-transact-sql.md)   

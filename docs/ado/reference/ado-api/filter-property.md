@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 80263a7a-5d21-45d1-84fc-34b7a9be4c22
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: cede9be7c484d40c2220fc891779f7dfb6e5a8df
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ff06bc27e765945d1cca74b5f8401e0caadf6b17
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47762750"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67918635"
 ---
 # <a name="filter-property"></a>Filter プロパティ
 内のデータのフィルターを示します、 [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md)します。  
@@ -30,9 +29,9 @@ ms.locfileid: "47762750"
 
 設定または取得を**バリアント**値で、次の項目の 1 つ含めることができます。  
   
--   **条件の文字列:** と連結された 1 つ以上の各句から成る文字列**AND**または**OR**演算子。  
+-   **条件の文字列。** 1 つ以上の各句を使用して、連結から成る文字列**AND**または**OR**演算子。  
   
--   **ブックマークの配列:** 固有のブックマークの配列値内のレコードを指す、 **Recordset**オブジェクト。  
+-   **ブックマークの配列。** 一意のブックマークの配列値内のレコードを指す、 **Recordset**オブジェクト。  
   
 -   A [FilterGroupEnum](../../../ado/reference/ado-api/filtergroupenum.md)値。  
   
@@ -46,7 +45,7 @@ ms.locfileid: "47762750"
   
 -   演算子は、次のいずれかを指定する必要があります: \<、>、 \<=、> =、<>、=、または**など**します。  
   
--   値は、フィールドの値を比較する、値 (たとえば、'Smith' を 8/24/95 #、12.345、または 50.00 ドル)。 文字列と日付にはシャープ記号 (#) では、単一引用符を使用します。 数値の場合は、小数点、ドル記号、および科学的表記法を使用できます。 演算子は場合**など**値は、ワイルドカードを使用できます。 アスタリスク (*) およびワイルドカードのパーセント記号 (%) のみを許可、および、最後の文字の文字列である必要があります。 値を NULL にすることはできません。  
+-   値は、フィールドの値を比較する、値 (たとえば、'Smith' を 8/24/95 #、12.345、または 50.00 ドル)。 文字列と日付にはシャープ記号 (#) では、単一引用符を使用します。 数値の場合は、小数点、ドル記号、および科学的表記法を使用できます。 演算子は場合**など**値は、ワイルドカードを使用できます。 アスタリスク (*) とパーセント記号 (%)ワイルドカードを許可、および最後の文字の文字列である必要があります。 値を NULL にすることはできません。  
   
 > [!NOTE]
 >  フィルター値には、単一引用符 (') を含めるには、2 つの単一引用符を使用して、1 つを表します。 たとえば、O'Malley でフィルター処理、条件の文字列があります`"col1 = 'O''Malley'"`します。 先頭と末尾のフィルター値の両方に単一引用符を含めるには、シャープ記号文字列を囲む (#)。 たとえば、'1' でフィルター処理、条件の文字列があります`"col1 = #'1'#"`します。  
@@ -102,7 +101,7 @@ ms.locfileid: "47762750"
 
 [Recordset オブジェクト (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)  
   
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 [Filter および RecordCount プロパティの例 (VB)](../../../ado/reference/ado-api/filter-and-recordcount-properties-example-vb.md)
 [Filter および RecordCount プロパティの例 (vc++)](../../../ado/reference/ado-api/filter-and-recordcount-properties-example-vc.md)

@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: f41a38c2-e22e-4c65-a32e-9a6777435160
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 10df35f4f29de4ac3899efa0e86e48af861f1e65
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 535f2feaf17d2060c1c65e7aba17951bb3339a5d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47751020"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68080063"
 ---
 # <a name="supported-odbc-sql-grammar-visual-foxpro-odbc-driver"></a>サポートされている ODBC SQL 文法 (Visual FoxPro ODBC ドライバー)
 Microsoft Visual FoxPro ODBC ドライバーには、次のサポートされています。  
@@ -37,7 +36,7 @@ Microsoft Visual FoxPro ODBC ドライバーには、次のサポートされて
   
 |Level|要素|アイテム|  
 |-----------|--------------|----------|  
-|最小|データ定義言語 (DDL)|CREATE TABLE、および DROP TABLE|  
+|最小|データ定義言語 (DDL)|CREATE TABLE および DROP TABLE|  
 ||データ操作言語 (DML)|選択、挿入、更新、および削除|  
 ||式|単純な (A など > + C)|  
 ||データ型|CHAR、VARCHAR、LONG VARCHAR|  

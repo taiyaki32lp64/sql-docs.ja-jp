@@ -1,18 +1,17 @@
 ---
 title: Claims to Windows Token Service (C2WTS) と Reporting Services | Microsoft Docs
-author: markingmyname
-ms.author: maghan
-manager: kfile
+author: maggiesMSFT
+ms.author: maggies
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint
 ms.topic: conceptual
 ms.date: 09/15/2017
-ms.openlocfilehash: d5a771bc28d4c6a6f248925d329fa708c4135f8d
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
-ms.translationtype: HT
+ms.openlocfilehash: 2ed9c2a5070a1034970f2f34f5e7bf88a77e8533
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52397156"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68264998"
 ---
 # <a name="claims-to-windows-token-service-c2wts-and-reporting-services"></a>Claims to Windows Token Service (C2WTS) と Reporting Services
 
@@ -50,7 +49,7 @@ Kerberos の制約付き委任を使用する環境では、SharePoint Server �
 
     **ベスト プラクティスとしては、C2WTS を独自のドメイン ID で実行する必要があります。**
 
-    * Active Directory アカウントを作成し、SharePoint サーバーの管理アカウントとしてアカウントを登録します。 マネージド アカウントの詳細については、[SharePoint のマネージド アカウント](https://blogs.technet.microsoft.com/wbaer/2010/04/11/managed-accounts-in-sharepoint-2010/)に関する記事を参照してください
+    * Active Directory アカウントを作成し、SharePoint サーバーの管理アカウントとしてアカウントを登録します。 マネージド アカウントの詳細については、[SharePoint のマネージド アカウント](https://blog.wbaer.net/2010/04/11/managed-accounts-in-sharepoint-2010/)に関する記事を参照してください
    
     * [SharePoint サーバーの全体管理] > [セキュリティ] > [サービス アカウントの構成] > [Windows サービス - Claims to Windows Token Service] から、マネージド アカウントを使用するための C2WTS サービスを構成します
 
@@ -84,7 +83,7 @@ Kerberos の制約付き委任を使用する環境では、SharePoint Server �
     * **[ユーザーまたはコンピューター...&#42;]** を選択し、サービスをホストするアカウントを入力します。 たとえば、SQL Server が *sqlservice* というアカウントで実行されている場合は、`sqlservice` と入力します。 
       **レポート ビューアー Web パーツ**の場合は、Reporting Services (ネイティブ モード) インスタンスのサービス アカウントです。
 
-    * サービス一覧を選択します。 そのアカウントで使用できる SPN が表示されます。 そのアカウントのサービス一覧が表示されない場合は、サービスがないか、別のアカウントのサービスの可能性があります。 SPN の調整には、SetSPN ユーティリティを使用できます。 **レポート ビューアー Web パーツ**の場合は、「[レポート ビューアー Web パーツの構成](https://docs.microsoft.com/sql/reporting-services/install-windows/claims-to-windows-token-service-c2wts-and-reporting-services?view=sql-server-2017#report-viewer-web-part-configuration)」で構成した http SPN が表示されます。
+    * サービス一覧を選択します。 そのアカウントで使用できる SPN が表示されます。 そのアカウントのサービス一覧が表示されない場合は、サービスがないか、別のアカウントのサービスの可能性があります。 SPN の調整には、SetSPN ユーティリティを使用できます。 **レポート ビューアー Web パーツ**の場合は、「[レポート ビューアー Web パーツの構成](https://docs.microsoft.com/sql/reporting-services/install-windows/claims-to-windows-token-service-c2wts-and-reporting-services?view=sql-server-2017#report-viewer-native-mode-web-part-configuration)」で構成した http SPN が表示されます。
 
     * [OK] を選択してダイアログを閉じます。
 

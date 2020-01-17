@@ -10,14 +10,14 @@ helpviewer_keywords:
 - Detail property
 - InnerText property
 ms.assetid: 4392633d-b46b-41e6-bc12-efb64e166704
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 4aebb8febbf181a54ed32f31096c408c04c1dae3
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 8543ec4cebe940523dad26044ee93f697d62c6bc
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47621990"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62992410"
 ---
 # <a name="using-the-detail-property-to-handle-specific-errors"></a>Detail プロパティを使用したエラー処理
   例外を細かく分類するために、[!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] によって、SOAP 例外の **Detail** プロパティの子要素の **InnerText** プロパティにある追加のエラー情報が返されます。 **Detail** プロパティは **XmlNode** オブジェクトであるため、次のコードを使って **Message** 子要素の内部テキストにアクセスできます。  

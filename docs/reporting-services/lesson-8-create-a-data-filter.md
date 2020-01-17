@@ -6,14 +6,14 @@ ms.prod_service: reporting-services-native
 ms.technology: reporting-services
 ms.topic: conceptual
 ms.assetid: 19ccbdba-e3da-40a4-b652-32c628cf32e5
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 2d475716043c14c2dabac3090c58b12c9648b468
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 991610dacf7a13a467a3058f2bdbcfcc454ee71e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47700375"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62512394"
 ---
 # <a name="lesson-8-create-a-data-filter"></a>レッスン 8: データ フィルターを作成する
 親レポートにドリルスルー アクションを追加した後は、子レポート用に定義したデータ テーブル用のデータ フィルターを作成します。  
@@ -39,7 +39,7 @@ ms.locfileid: "47700375"
   
 4.  **[式]** フィールドで、一覧から **[ProductID]** を選択します。 これは、フィルターを適用する列です。  
   
-5.  **=**[演算子] **ドロップダウン リストで、等号演算子 (** ) を選択します。  
+5.  **=** [演算子] **ドロップダウン リストで、等号演算子 (** ) を選択します。  
   
 6.  **[値]** フィールドの横の式ボタンを選択します。 **[カテゴリ]** 領域の **[パラメーター]** を選択し、 **[値]** 領域の **[productid]** をダブルクリックします。 **[式の設定: 値]** フィールドに、 **=Parameters!productid.Value**のような式が表示されます。  
   

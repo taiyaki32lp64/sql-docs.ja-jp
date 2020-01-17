@@ -1,207 +1,208 @@
 ---
-title: Spark アプリケーションのデバッグ/診断します。
-titleSuffix: SQL Server 2019 big data clusters
-description: Spark History Server を使用して、デバッグおよび SQL Server 2019 ビッグ データ クラスター上で実行されている Spark アプリケーションを診断します。
+title: Spark アプリケーションのデバッグと診断
+titleSuffix: SQL Server big data clusters
+description: Spark History Server を使用して、[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)] 上で実行されている Spark アプリケーションをデバッグおよび診断します。
 author: jejiang
 ms.author: jejiang
-ms.reviewer: jroth
-manager: craigg
-ms.date: 12/06/2018
+ms.reviewer: mikeray
+ms.date: 08/21/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.custom: seodec18
-ms.openlocfilehash: 6b3cac808386d2341e1c22b18999009f7d72a43f
-ms.sourcegitcommit: 202ef5b24ed6765c7aaada9c2f4443372064bd60
-ms.translationtype: MT
+ms.openlocfilehash: dd35de4111c5e18d8c8237e2935df5de458f19b1
+ms.sourcegitcommit: b4ad3182aa99f9cbfd15f4c3f910317d6128a2e5
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/12/2019
-ms.locfileid: "54241793"
+ms.lasthandoff: 11/06/2019
+ms.locfileid: "73706118"
 ---
-# <a name="debug-and-diagnose-spark-applications-on-sql-server-big-data-clusters-in-spark-history-server"></a>デバッグと Spark History Server の SQL Server のビッグ データ クラスター上で Spark アプリケーションの診断
+# <a name="debug-and-diagnose-spark-applications-on-includebig-data-clusters-2019includesssbigdataclusters-ss-novermd-in-spark-history-server"></a>[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] 上の Spark History Server の Spark アプリケーションのデバッグと診断
 
-この記事では、Spark History Server の拡張を使用して、デバッグおよび SQL Server 2019 (プレビュー) のビッグ データ クラスターで Spark アプリケーションを診断する方法のガイダンスを提供します。 これらのデバッグと診断機能は、Spark History Server に組み込まれており、Microsoft を利用しました。 拡張機能には、データ タブと グラフ タブと診断 タブが含まれています。データ タブで、ユーザーは Spark ジョブの入力と出力データを確認できます。 グラフ タブでは、ユーザーは、データ フローをチェックして、ジョブ グラフを再生します。 [診断] タブは、ユーザーはデータ スキュー、時間のずれおよび Executor の利用状況の分析を参照できます。
+[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
-## <a name="get-access-to-spark-history-server"></a>Spark History Server へのアクセスを取得します。
+この記事では、拡張 Spark History Server を使用して、SQL Server ビッグ データ クラスターで Spark アプリケーションをデバッグおよび診断する方法に関するガイダンスを提供します。 これらのデバッグ機能と診断機能は、Microsoft が提供する Spark History Server に組み込まれています。 拡張機能には、データ タブ、グラフ タブ、診断タブがあります。データ タブで、ユーザーは Spark ジョブの入力データと出力データを確認できます。 グラフ タブで、ユーザーはデータフローを確認し、ジョブ グラフを再生できます。 診断タブで、ユーザーはデータ スキュー、時間のずれ、および実行プログラムの使用状況の分析を参照できます。
 
-オープン ソースから、Spark 履歴サーバーのユーザー エクスペリエンスは、情報、ジョブに固有のデータとビッグ データ クラスターのジョブ グラフやデータ フローの対話型の視覚化を含むが強化されています。 
+## <a name="get-access-to-spark-history-server"></a>Spark History Server へのアクセスを取得する
 
-### <a name="open-the-spark-history-server-web-ui-by-url"></a>Spark History Server Web URL で UI を開く
-開いている、次の URL を参照して、Spark History Server を交換して`<Ipaddress>`と`<Port>`ビッグ データ クラスター固有の情報。 詳細についてを参照できます。[SQL Server のビッグ データ クラスターをデプロイします。](quickstart-big-data-cluster-deploy.md)
+オープン ソースの Spark History Server ユーザー エクスペリエンスは、ジョブ固有のデータや、ビッグ データ クラスターのジョブ グラフとデータ フローの対話型の視覚化などの情報によって強化されています。 
+
+### <a name="open-the-spark-history-server-web-ui-by-url"></a>URL を指定して Spark History Server Web UI を開く
+次の URL を参照して Spark History Server を開き、`<Ipaddress>` と `<Port>` をビッグ データ クラスター固有の情報に置き換えます。 基本認証 (ユーザー名/パスワード) のビッグ クラスター セットアップでは、ゲートウェイ (Knox) エンドポイントにログインするように求められたとき、ユーザー **root** を指定する必要があります。 詳細については、次の情報を参照してください。[SQL Server ビッグ データ クラスターを展開する](quickstart-big-data-cluster-deploy.md)
 
 ```
 https://<Ipaddress>:<Port>/gateway/default/sparkhistory
 ```
 
-Spark History Server web UI をようになります。
+Spark History Server Web UI は次のような外観です。
 
 ![Spark History Server](./media/apache-azure-spark-history-server/spark-history-server.png)
 
 
-## <a name="data-tab-in-spark-history-server"></a>Spark History Server では、[データ] タブ
-ジョブ ID を選択し、クリックして**データ**ツール メニューの データ ビューを取得します。
+## <a name="data-tab-in-spark-history-server"></a>Spark History Server の [Data]\(データ\) タブ
+ジョブ ID を選択し、ツール メニューの **[Data]\(データ\)** をクリックしてデータ ビューを取得します。
 
-+ チェック、**入力**、**出力**と**テーブル操作**を個別にタブを選択します。
++ 各タブを選択して **[Inputs]\(入力\)** 、 **[Outputs]\(出力\)** 、 **[Table Operations]\(テーブルの操作\)** を確認します。
 
-    ![Spark History Server のデータ タブ](./media/apache-azure-spark-history-server/sparkui-data-tabs.png)
+    ![Spark History Server の [Data]\(データ\) タブ](./media/apache-azure-spark-history-server/sparkui-data-tabs.png)
 
-+ ボタンをクリックしてすべての行をコピー**コピー**します。
++ すべての行をコピーするには、ボタン **[Copy]\(コピー\)** をクリックします。
 
-    ![すべての行をコピーします。](./media/apache-azure-spark-history-server/sparkui-data-copy.png)
+    ![すべての行をコピーする](./media/apache-azure-spark-history-server/sparkui-data-copy.png)
 
-+ ボタンをクリックして、すべてのデータを CSV ファイルとして保存**csv**します。
++ ボタン **[csv]** をクリックして、すべてのデータを CSV ファイルとして保存します。
 
-    ![データを CSV ファイルとして保存します。](./media/apache-azure-spark-history-server/sparkui-data-save.png)
+    ![データを CSV ファイルとして保存する](./media/apache-azure-spark-history-server/sparkui-data-save.png)
 
-+ フィールドにキーワードを入力して検索**検索**、検索結果がすぐに表示されます。
++ フィールド **[Search]\(検索\)** にキーワードを入力して検索すると、検索結果がすぐに表示されます。
 
-    ![キーワードを使用した検索します。](./media/apache-azure-spark-history-server/sparkui-data-search.png)
+    ![キーワードを使用した検索](./media/apache-azure-spark-history-server/sparkui-data-search.png)
 
-+ テーブルを並べ替え、詳細については、表示する行を展開するプラス記号をクリックします。 または行を折りたたむにマイナス記号をクリックします。 列ヘッダーをクリックします。
++ 列ヘッダーをクリックするとテーブルが並べ替えられます。プラス記号をクリックすると、詳細が表示されます。マイナス記号をクリックすると、行が折りたたまれます。
 
     ![データ テーブルの機能](./media/apache-azure-spark-history-server/sparkui-data-table.png)
 
-+ ボタンをクリックして、1 つのファイルをダウンロード**部分的なダウンロード**選択したファイルがローカルの場所にダウンロードし、右側にある配置します。 ファイルがこれ以上存在しない場合、エラー メッセージを表示する新しいタブが開きます。
++ 右側にある **[Partial Download]\(部分的なダウンロード\)** ボタンをクリックして 1 つのファイルをダウンロードすると、選択したファイルがローカルの場所にダウンロードされます。 ファイルが存在しない場合は、新しいタブが開き、エラー メッセージが表示されます。
 
-    ![データ行をダウンロードします。](./media/apache-azure-spark-history-server/sparkui-data-download-row.png)
+    ![データ行をダウンロードする](./media/apache-azure-spark-history-server/sparkui-data-download-row.png)
 
-+ 完全なパスまたは相対パスを選択してコピー、**完全パスのコピー**、**相対パスのコピー**ダウンロード メニューを展開します。 Azure data lake ストレージのファイルの**Azure ストレージ エクスプ ローラーで開く**が Azure Storage Explorer を起動します。 サインインするときに、正確なフォルダーを探します。
++ 完全なパスまたは相対パスをコピーするには、ダウンロード メニューから展開して **[Copy Full Path]\(完全なパスのコピー\)** 、 **[Copy Relative Path]\(相対パスのコピー\)** を選択します。 Azure データ レイク ストレージ ファイルの場合は、 **[Open in Azure Storage Explorer]\(Azure Storage Explorer で開く\)** を選択すると Azure Storage Explorer が起動します。 また、サインインするときに、正確なフォルダーを見つけます。
 
-    ![完全なまたは相対パスをコピーします。](./media/apache-azure-spark-history-server/sparkui-data-copy-path.png)
+    ![完全なパスまたは相対パスをコピーする](./media/apache-azure-spark-history-server/sparkui-data-copy-path.png)
 
-+ 1 つのページに表示する行多くをテーブルの下に移動の数がすぎるときにページをクリックします。 
++ 1 ページに表示される行数が多すぎる場合、テーブルの下の数値をクリックするとページに移動します。 
 
-    ![[データ] ページ](./media/apache-azure-spark-history-server/sparkui-data-page.png)
+    ![[Data]\(データ\) ページ](./media/apache-azure-spark-history-server/sparkui-data-page.png)
 
-+ ポイントすると、ツールヒントを表示するデータの横にある疑問符または詳細情報を取得するには、疑問符をクリックします。
++ [Data]\(データ\) の横にある疑問符をポイントすると、ヒントが表示されます。また、疑問符をクリックすると、詳細情報が表示されます。
 
-    ![データの詳細](./media/apache-azure-spark-history-server/sparkui-data-more-info.png)
+    ![データの詳細情報](./media/apache-azure-spark-history-server/sparkui-data-more-info.png)
 
-+ クリックすると、問題とフィードバックを送信**フィードバックをお寄せ**します。
++ 問題についてフィードバックを送信するには、 **[Provide us feedback]\(フィードバックの送信\)** をクリックします。
 
     ![グラフのフィードバック](./media/apache-azure-spark-history-server/sparkui-graph-feedback.png)
 
-## <a name="graph-tab-in-spark-history-server"></a>Spark History Server の [グラフ] タブ
+## <a name="graph-tab-in-spark-history-server"></a>Spark History Server の [Graph]\(グラフ\) タブ
 
-ジョブ ID を選択し、クリックして**グラフ**[ツール] メニュー、ジョブ グラフ ビューを取得します。
+ジョブ ID を選択し、ツール メニューの **[Graph]\(グラフ\)** をクリックして、ジョブ グラフ ビューを取得します。
 
-+ 生成されたジョブのグラフで、ジョブの概要を確認します。 
++ 生成されたジョブ グラフによるジョブの概要を確認します。 
 
-+ 既定ではすべてのジョブを表示して、によってフィルタ処理できます**ジョブ ID**します。
++ 既定では、すべてのジョブが表示され、 **[Job ID]\(ジョブ ID\)** を指定してフィルター処理できます。
 
     ![グラフのジョブ ID](./media/apache-azure-spark-history-server/sparkui-graph-jobid.png)
 
-+ まま**進行状況**既定値として。 ユーザーが選択してデータ フローを確認できます**読み取り**または * * のドロップダウン リストで Written ***表示**します。
++ **[Progress]\(進行状況\)** は既定値のままにします。 ユーザーがデータ フローを確認するには、 **[Display]\(表示\)** のドロップダウン リストで **[Read]\(読み取り\)** または **[Written]\(書き込み\)** を選択します。
 
     ![グラフの表示](./media/apache-azure-spark-history-server/sparkui-graph-display.png)
 
-    グラフ ノードの表示、ヒートマップを表示する色。
+    グラフ ノードは、ヒートマップを示す色で表示されます。
 
     ![グラフのヒートマップ](./media/apache-azure-spark-history-server/sparkui-graph-heatmap.png)
 
-+ クリックして、ジョブを再生、**再生**ボタンをクリックし、[停止] ボタンをクリックして、いつでも停止できます。 タスクの表示を再生するときに、別の状態を表示する色。
++ **[Playback]\(再生\)** ボタンをクリックしてジョブを再生します。また、[Stop]\(停止\) ボタンをクリックしていつでも停止できます。 タスクは、再生時に別の状態を表示する色で表示されます。
 
-    + 緑色は成功しました。ジョブが正常に完了しました。
-    + オレンジ色の再試行。ジョブの最終結果には影響しません、失敗したタスクのインスタンス。 これらのタスクが重複していますか、後で成功する可能性がある再試行インスタンス。
-    + 青の実行:タスクが実行されています。
-    + 待機中の場合は白またはスキップします。実行するには、タスクが待機しているまたはステージがスキップされます。
-    + 赤が失敗しました。タスクが失敗しました。
+    + 成功した場合は緑:ジョブは正常に完了しました。
+    + 再試行の場合はオレンジ:失敗しましたが、ジョブの最終結果には影響しないタスクのインスタンス。 このようなタスクには、後で成功する可能性がある重複するインスタンスまたは再試行インスタンスがあります。
+    + 実行中の場合は青:タスクは実行中です。
+    + 待機中またはスキップ済みの場合は白:タスクは実行を待機しているか、ステージがスキップされました。
+    + 失敗した場合は赤:タスクは失敗しました。
 
-    ![グラフの色のサンプルを実行しています。](./media/apache-azure-spark-history-server/sparkui-graph-color-running.png)
+    ![グラフの色のサンプル、実行中](./media/apache-azure-spark-history-server/sparkui-graph-color-running.png)
  
-    白色のステージをスキップした表示します。
-    ![色のサンプルのグラフをスキップ](./media/apache-azure-spark-history-server/sparkui-graph-color-skip.png)
+    スキップされたステージは白で表示されます。
+    ![グラフの色のサンプル、スキップ](./media/apache-azure-spark-history-server/sparkui-graph-color-skip.png)
 
-    ![グラフの色のサンプル、失敗しました](./media/apache-azure-spark-history-server/sparkui-graph-color-failed.png)
+    ![グラフの色のサンプル、失敗](./media/apache-azure-spark-history-server/sparkui-graph-color-failed.png)
  
     > [!NOTE]
-    > 各ジョブの再生が許可されます。 ジョブが不完全で、再生はサポートされていません。
+    > 各ジョブを再生できます。 不完全なジョブの場合、再生はサポートされていません。
 
 
-+ マウス スクロール入力/出力、ジョブ グラフをズームまたはをクリックして**に合わせてズーム**画面に合わせるようにします。
++ マウスをスクロールして、ジョブ グラフを拡大/縮小します。また、 **[Zoom to fit]\(ウィンドウのサイズに合わせる\)** をクリックして、画面のサイズに合わせることができます。
  
-    ![合わせてグラフのズーム](./media/apache-azure-spark-history-server/sparkui-graph-zoom2fit.png)
+    ![グラフのウィンドウのサイズに合わせる](./media/apache-azure-spark-history-server/sparkui-graph-zoom2fit.png)
 
-+ ツールヒントがある場合に失敗したタスク、表示するグラフのノードをポイントし、登壇ステージのページを開く をクリックします。
++ 失敗したタスクがある場合にツールヒントを表示するには、グラフ ノードをポイントします。また、ステージをクリックすると、ステージ ページが開きます。
 
     ![グラフのツールヒント](./media/apache-azure-spark-history-server/sparkui-graph-tooltip.png)
 
-+ ツールヒントとタスクを満たしている場合に表示される小さいアイコン ジョブ グラフ タブの段階になります、条件の下。
-    + データ スキュー: データの読み込みサイズ > 平均データ読み取りのこのステージ内のすべてのタスクのサイズ * > 10 MB のサイズを 2 とデータの読み取り
-    + 時間のずれ: 実行時間 > この段階内のすべてのタスクの平均実行時間 * 2 と実行時間 > 2 分
++ 次の条件を満たすタスクがある場合、ジョブ グラフ タブのステージにはツールヒントと小さいアイコンが表示されます。
+    + データ スキュー: データの読み取りサイズ > このステージ内のすべてのタスクの平均データ読み取りサイズ * 2 とデータ読み取りサイズ > 10 MB
+    + 時間のずれ: 実行時間 > このステージ内のすべてのタスクの平均実行時間 * 2 と実行時間 > 2 分
 
-    ![グラフの傾斜アイコン](./media/apache-azure-spark-history-server/sparkui-graph-skew-icon.png)
+    ![グラフのスキュー アイコン](./media/apache-azure-spark-history-server/sparkui-graph-skew-icon.png)
 
-+ ジョブ グラフのノードの各段階の次の情報が表示されます。
++ ジョブ グラフ ノードには、各ステージの次の情報が表示されます。
     + ID。
-    + 名前または説明します。
+    + 名前または説明。
     + 合計タスク数。
-    + 読み取られたデータ: 入力サイズ、および shuffle の合計サイズの読み取り。
-    + データの書き込み: 出力のサイズとシャッフルの合計サイズを記述します。
-    + 実行時間: 開始時刻、最初の試行と前回の試行の完了時間までの時間。
-    + 行数: 入力のレコードの合計レコードを出力、シャッフル読み取りレコードおよびレコードの書き込みをシャッフルします。
+    + データ読み取り: 入力サイズとシャッフル読み取りサイズの合計。
+    + データ書き込み: 出力サイズとシャッフル書き込みサイズの合計。
+    + 実行時間: 最初の試行の開始時刻と最後の試行の完了時刻の間の時間。
+    + 行数: 入力レコード、出力レコード、シャッフル読み取りレコード、シャッフル書き込みレコードの合計。
     + 進行状況。
 
     > [!NOTE]
-    > 既定では、ジョブ グラフのノード (ステージの実行時間) を除く各ステージの前回の試行からの情報が表示されますが、グラフの再生中には、ノードによって各試行の情報が表示されます。
+    > 既定で、ジョブ グラフ ノードには各ステージの最後の試行の情報が表示されます (ステージの実行時間を除く)。ただし、再生中のグラフ ノードには、各試行の情報が表示されます。
 
     > [!NOTE]
-    > 読み取りと書き込みを使用して 1 のデータ サイズの MB = 1000 KB = 1000 * 1000 バイトです。
+    > 読み取りと書き込みのデータ サイズの場合は、1 MB = 1000 KB = 1000 * 1000 バイトを使用します。
 
-+ クリックすると、問題とフィードバックを送信**フィードバックをお寄せ**します。
++ 問題についてフィードバックを送信するには、 **[Provide us feedback]\(フィードバックの送信\)** をクリックします。
 
     ![グラフのフィードバック](./media/apache-azure-spark-history-server/sparkui-graph-feedback.png)
 
 
-## <a name="diagnosis-tab-in-spark-history-server"></a>Spark History Server での診断 タブ
-ジョブ ID を選択し、クリックして**診断**[ツール] メニュー、ジョブの診断ビューを取得します。 診断タブが含まれています**データ スキュー**、**時間のずれ**、および**Executor の利用状況分析**します。
+## <a name="diagnosis-tab-in-spark-history-server"></a>Spark History Server の [Diagnosis]\(診断\) タブ
+ジョブ ID を選択し、ツール メニューの **[Diagnosis]\(診断\)** をクリックして、ジョブの [Diagnosis]\(診断\) ビューを取得します。 [Diagnosis]\(診断\) タブには、 **[Data Skew]\(データ スキュー\)** 、 **[Time Skew]\(時間のずれ\)** 、および **[Executor Usage Analysis]\(実行プログラムの使用状況の分析\)** が含まれます。
     
-+ 確認、**データ スキュー**、**時間のずれ**と**Executor の利用状況分析**をそれぞれのタブを選択します。
++ **[Data Skew]\(データ スキュー\)** 、 **[Time Skew]\(時間のずれ\)** 、および **[Executor Usage Analysis]\(実行プログラムの使用状況の分析\)** を確認するには、各タブを選択します。
 
-    ![診断タブ](./media/apache-azure-spark-history-server/sparkui-diagnosis-tabs.png)
+    ![[Diagnosis]\(診断\) タブ](./media/apache-azure-spark-history-server/sparkui-diagnosis-tabs.png)
 
-### <a name="data-skew"></a>データ スキュー
-をクリックして**データ スキュー**タブの対応する指定されたパラメーターに基づいて傾斜したタスクが表示されます。 
+### <a name="data-skew"></a>[Data Skew]\(データ スキュー\)
+**[Data Skew]\(データ スキュー\)** タブをクリックすると、指定したパラメーターに基づいて、対応する偏りのあるタスクが表示されます。 
 
-+ **パラメーターを指定する**-最初のセクションには、データ スキューを検出するために使用されると、パラメーターが表示されます。 組み込みの規則は次のとおりです。読み取られたタスク データが読み取られる、タスクの平均データの 3 回より大きいと、読み取られたタスク データは 10 MB を超える。 傾斜したタスクの独自の規則を定義する場合、パラメーターを選択できます、**傾斜したステージ**、および**Char 傾斜**セクションはそれに応じて更新されます。 
++ **[Specify Parameters]\(パラメーターの指定\)** - 最初のセクションには、[Data Skew]\(データ スキュー\) の検出に使用されるパラメーターが表示されます。 組み込みの規則は次のとおりです。[Task Data Read]\(読み取られたタスク データ\) が、読み取られたタスクの平均読み取り回数の 3 倍を超えており、読み取られたタスク データが 10 MB を超えています。 偏りのあるタスクに対して独自の規則を定義する場合は、 **[Skewed Stage]\(偏りのあるステージ\)** パラメーターを選択します。それに応じて、 **[Skew Char]\(スキュー グラフ\)** セクションが更新されます。 
 
-+ **ステージの傾斜**-2 番目のセクションには、ステージで、上記で指定した条件を満たすタスクが傾斜が表示されます。 ステージに 1 つ以上の傾斜したタスクがある場合、傾斜したステージ テーブルには最も傾斜タスク (たとえば、データ傾斜の最大データ) のみが表示されます。 
++ **[Skewed Stage]\(偏りのあるステージ\)** - 2 つ目のセクションには、上で指定した条件を満たす偏りのあるタスクがあるステージが表示されます。 ステージに偏りのあるタスクが複数ある場合、偏りのあるステージ テーブルには、最も偏りの大きなタスク (たとえば、データ スキューの最大データ) のみが表示されます。 
 
-    ![データ スキュー セクション 2](./media/apache-azure-spark-history-server/sparkui-diagnosis-dataskew-section2.png)
+    ![データ スキュー section2](./media/apache-azure-spark-history-server/sparkui-diagnosis-dataskew-section2.png)
 
-+ **グラフの傾斜**- 傾斜ステージ テーブルの行を選択すると、タスクのディストリビューションの詳細は、データの読み取りと実行時間に基づくスキューのグラフが表示されます。 傾斜のタスクが赤でマークされているされ、通常のタスクは、青色でマークされます。 パフォーマンスの考慮事項に関するグラフには、最大 100 個のサンプル タスクのみが表示されます。 右下のパネルには、タスクの詳細が表示されます。
++ **[Skew Chart]\(スキュー グラフ\)** - スキュー ステージ テーブルの行を選択すると、データの読み取りと実行時間に基づいて、スキュー グラフにさらに多くのタスク分布の詳細が表示されます。 偏りのあるタスクは赤でマークされ、通常のタスクは青でマークされます。 パフォーマンスを考慮し、グラフには最大 100 個のサンプル タスクのみが表示されます。 タスクの詳細は、右下のパネルに表示されます。
 
-    ![データ スキューの 3 番目のセクション](./media/apache-azure-spark-history-server/sparkui-diagnosis-dataskew-section3.png)
+    ![データ スキュー section3](./media/apache-azure-spark-history-server/sparkui-diagnosis-dataskew-section3.png)
 
-### <a name="time-skew"></a>時間のずれ
-**時間のずれ** タブには、タスクの実行時間に基づく傾斜のタスクが表示されます。 
+### <a name="time-skew"></a>[Time Skew]\(時間のずれ\)
+**[Time Skew]\(時間のずれ\)** タブには、タスクの実行時間に基づいて偏りのあるタスクが表示されます。 
 
-+ **パラメーターを指定する**-最初のセクションには、時間のずれを検出するために使用されると、パラメーターが表示されます。 時間のずれを検出するために既定の条件が: タスクの実行時間が 3 回の平均実行時間よりも大きいと、タスクの実行時間が 30 秒より大きい。 ニーズに基づいたパラメーターを変更することができます。 **傾斜したステージ**と**グラフの傾斜**と同じように、対応するステージとタスクの情報を表示、**データ スキュー**上記 タブ。
++ **[Specify Parameters]\(パラメーターの指定\)** - 最初のセクションには、[Time Skew]\(時間のずれ\) の検出に使用されるパラメーターが表示されます。 時間のずれを検出する既定の条件は、タスクの実行時間が平均実行時間の 3 倍を超えており、タスクの実行時間が 30 秒を超えていることです。 必要に応じてパラメーターを変更できます。 **[Skewed Stage]\(偏りのあるステージ\)** と **[Skew Chart]\(スキュー グラフ\)** には、上の **[Data Skew]\(データ スキュー\)** タブと同様に対応するステージとタスクの情報が表示されます。
 
-+ をクリックして**時間のずれ**、フィルター処理された結果は表示**傾斜したステージ**セクションで設定したパラメーターに従ってセクション**パラメーターの指定**。 1 つの項目をクリックします。**傾斜したステージ**セクションで、対応するグラフが 3 番目のセクション、ドラフトとタスクの詳細が右下のパネルに表示されます。
++ **[Time Skew]\(時間のずれ\)** をクリックすると、 **[Specify Parameters]\(パラメーターの指定\)** セクションに設定されたパラメーターに従って、フィルター処理された結果が **[Skewed Stage]\(偏りのあるステージ\)** セクションに表示されます。 **[Skewed Stage]\(偏りのあるステージ\)** セクションのいずれかの項目をクリックすると、section3 に対応するグラフの下書きが描写され、タスクの詳細が右下のパネルに表示されます。
 
-    ![時間のずれセクション 2](./media/apache-azure-spark-history-server/sparkui-diagnosis-timeskew-section2.png)
+    ![時間のずれ section2](./media/apache-azure-spark-history-server/sparkui-diagnosis-timeskew-section2.png)
 
-### <a name="executor-usage-analysis"></a>実行プログラムの利用状況分析
-実行プログラムの使用状況グラフは、Spark ジョブの実際の実行プログラムの割り当てと実行状態を視覚化します。  
+### <a name="executor-usage-analysis"></a>実行プログラムの使用状況の分析
+[Executor Usage Graph]\(実行プログラムの使用状況グラフ\) には、Spark ジョブの実際の実行プログラムの割り当てと実行状態が視覚化されます。  
 
-+ クリックして**Executor の利用状況分析**executor の使用状況に関する次の 4 つの型曲線をドラフトいますし。 含まれている**割り当てられている Executor**、**実行プログラムを実行している**、 **Executor をアイドル**、および**Executor インスタンスの最大**します。 割り当てられている executor は、に関する各「実行プログラムの追加」または「実行プログラムが削除済み」のイベントが向上または低下 executor を割り当てられています。 「イベントのタイムライン」は、比較の詳細については、[ジョブ] タブで確認できます。
++ **[Executor Usage Analysis]\(実行プログラムの使用状況の分析\)** をクリックすると、実行プログラムの使用状況に関する 4 種類の曲線の下書きが描写されます。 これには、 **[Allocated Executors]\(割り当て済みの実行プログラム\)** 、 **[Running Executors]\(実行中の実行プログラム\)** 、 **[idle Executors]\(アイドルの実行プログラム\)** 、 **[Max Executor Instances]\(最大実行プログラム インスタンス\)** が含まれます。 割り当て済みの実行プログラムについては、"Executor added" (実行プログラムの追加) イベントまたは "Executor removed" (実行プログラムの削除) イベントごとに割り当て済み実行プログラムが増減します。 詳細な比較については、[Jobs]\(ジョブ\) タブの [Event Timeline]\(イベントのタイムライン\) を確認します。
 
-    ![Executor タブ](./media/apache-azure-spark-history-server/sparkui-diagnosis-executors.png)
+    ![[Executors]\(実行プログラム\) タブ](./media/apache-azure-spark-history-server/sparkui-diagnosis-executors.png)
 
-+ 選択するか、すべての下書きの対応するコンテンツの選択を解除する色のアイコンをクリックします。
++ 色アイコンをクリックして、すべての下書きの対応する内容を選択または選択解除します。
 
-    ![グラフを選択します。](./media/apache-azure-spark-history-server/sparkui-diagnosis-select-chart.png)
+    ![グラフの選択](./media/apache-azure-spark-history-server/sparkui-diagnosis-select-chart.png)
 
 
 ## <a name="known-issues"></a>既知の問題
-Spark History Server では、次の既知の問題があります。
+Spark History Server には、次の既知の問題があります。
 
-+ 現時点でのみ動作 2.3 の Spark クラスター。
++ 現時点では、Spark 2.3 クラスターに対してのみ機能します。
 
-+ RDD を使用して入力/出力データは、[データ] タブでは表示されません。
++ RDD を使用した入力/出力データは、[Data]\(データ\) タブに表示されません。
 
 ## <a name="next-steps"></a>次の手順
 
-* [HDInsight の Spark クラスターのリソースを管理します。](https://docs.microsoft.com/azure/hdinsight/spark/apache-spark-resource-manager)
-* [Spark の設定を構成します。](https://docs.microsoft.com/azure/hdinsight/spark/apache-spark-settings)
+* [SQL Server ビッグ データ クラスターの概要](../big-data-cluster/deploy-get-started.md)
+* Spark の設定を構成する
+* [Spark の設定を構成する](/azure/hdinsight/spark/apache-spark-settings/)

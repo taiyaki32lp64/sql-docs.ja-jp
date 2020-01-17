@@ -11,15 +11,15 @@ helpviewer_keywords:
 - OLE DB destination [Integration Services]
 - destinations [Integration Services], OLE DB
 ms.assetid: 78899498-725e-4300-a7af-f983f4ea384b
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 865ff640cb64fe212afa5ece8bbdaa7f0be4a14c
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 114460af84d4e820ccd263fc4bf5188b65775c85
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52749512"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62902479"
 ---
 # <a name="load-data-by-using-the-ole-db-destination"></a>OLE DB 変換先を使用してデータを読み込む
   OLE DB 変換先を追加して構成するには、パッケージに 1 つ以上のデータ フロー タスクと 1 つの変換元があらかじめ含まれている必要があります。  
@@ -42,7 +42,7 @@ ms.locfileid: "52749512"
   
     -   **[テーブルまたはビュー]** データが含まれるデータベース内のテーブルまたはビューを選択します。  
   
-    -   **テーブルまたはビュー - 読み込みを高速**データを含むデータベースのテーブルまたはビューを選択し、高速読み込みオプションを設定します。**Id を保持する**、 **null の保持**、 **Table lock**、 **Check 制約**、**バッチごとの行数**、または**最大挿入コミット サイズ**します。  
+    -   **[テーブルまたはビュー - 高速読み込み]** データが含まれるデータベース内のテーブルまたはビューを選択し、高速読み込みのオプションを設定します。高速読み込みのオプションには、 **[ID を保持する]** 、 **[NULL を保持する]** 、 **[テーブル ロック]** 、 **[CHECK 制約]** 、 **[バッチごとの行数]** 、または **[挿入コミット サイズの最大値]** があります。  
   
     -   **[テーブル名またはビュー名の変数]** データベースのテーブルまたはビューの名前が含まれている、ユーザー定義変数を選択します。  
   

@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 832dcda1-e452-48e6-8adb-7fb33c4fb4ff
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: ec6ba27197f7a6021aff90d30884129128cb3614
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 0ddb695d996cdd40b7fde4087799e5c1ec84224c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47837040"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68081929"
 ---
 # <a name="create-index-statement-limitations"></a>CREATE INDEX ステートメントの制限事項
 CREATE INDEX ステートメントは、Microsoft Excel またはテキストのドライバーではサポートされていません。  

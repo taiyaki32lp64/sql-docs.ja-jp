@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 64b2a53d-4416-4a19-acc0-664a61b45348
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: a20d3850b281519d05769de2af5b0fd2dd1cbe85
-ms.sourcegitcommit: ba7fb4b9b4f0dbfe77a7c6906a1fde574e5a8e1e
+ms.openlocfilehash: ec745810697b325b8f1e1b2d5e67871136b9f089
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/26/2018
-ms.locfileid: "52302805"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68126819"
 ---
 # <a name="trustworthy-database-property"></a>TRUSTWORTHY データベース プロパティ
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

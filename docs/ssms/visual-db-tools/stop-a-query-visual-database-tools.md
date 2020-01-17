@@ -12,15 +12,14 @@ helpviewer_keywords:
 - stopping queries
 - queries [SQL Server], stopping
 ms.assetid: b97c5099-1039-4e6a-95df-14e1a34af344
-author: stevestein
-ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 558ab142fba5cec7a4603aaa65d8a64fa6163d5e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 60f322531f451ac0236cafc9d3d9d6b0cb361b30
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47607674"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68263218"
 ---
 # <a name="stop-a-query-visual-database-tools"></a>クエリの停止 (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: d34dfd26-9ca7-4c9c-a918-396f05fecca9
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: abd354021f589260304681ebc45634e7406e538d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 6a13e09895a25ac095888b42097bf47cbe27b369
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47649810"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67931234"
 ---
 # <a name="resync-method-example-vc"></a>Resync メソッドの例 (VC++)
 この例では、[再同期](../../../ado/reference/ado-api/resync-method.md)静的レコード セット内のデータを更新する方法。  
@@ -143,5 +142,5 @@ void PrintComError(_com_error &e) {
 }  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [Resync メソッド](../../../ado/reference/ado-api/resync-method.md)

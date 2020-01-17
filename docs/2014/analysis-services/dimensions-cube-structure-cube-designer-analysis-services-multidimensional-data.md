@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.cubeeditor.cubebuilder.dimensionspane.f1
@@ -13,12 +12,12 @@ ms.assetid: 37eb7525-b423-4df5-9e62-9f4680d47b9b
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 72d896e4d8e7b098729fb65c7b2d21ff81df96fe
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 3a21ca5383d63d14908df0e7b08fb8419c0ff94a
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48072022"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66081694"
 ---
 # <a name="dimensions-cube-structure-tab-cube-designer-analysis-services---multidimensional-data"></a>[ディメンション] (キューブ デザイナーの [キューブ構造] タブ) (Analysis Services - 多次元データ)
   キューブ デザイナーの **[キューブ構造]** タブの **[ディメンション]** ペインを使用すると、階層と属性を含むキューブ ディメンションを表示したり、編集したりできます。  

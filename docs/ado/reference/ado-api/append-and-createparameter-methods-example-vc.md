@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: b57d144c-0a34-49c8-94cf-e5981edfcca6
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: feb3dd4a2e70b48c9f238e36d9cda417f21d29d4
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: f0f23598ac53e1d4d4067721487744c46d819442
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47630890"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67920695"
 ---
 # <a name="append-and-createparameter-methods-example-vc"></a>Append および CreateParameter メソッドの例 (vc++)
 この例では、 [Append](../../../ado/reference/ado-api/append-method-ado.md)と[CreateParameter](../../../ado/reference/ado-api/createparameter-method-ado.md)メソッドが入力パラメーターを持つストアド プロシージャを実行します。  
@@ -195,7 +194,7 @@ void PrintProviderError(_ConnectionPtr pConnection) {
 25  
 ```  
   
-## <a name="sample-output"></a>サンプル出力  
+## <a name="sample-output"></a>出力例  
   
 ```  
 Authors with 25 percent royalty  
@@ -203,6 +202,6 @@ Authors with 25 percent royalty
 899-46-2035, Anne  Ringer  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [Append メソッド (ADO)](../../../ado/reference/ado-api/append-method-ado.md)   
  [CreateParameter メソッド (ADO)](../../../ado/reference/ado-api/createparameter-method-ado.md)

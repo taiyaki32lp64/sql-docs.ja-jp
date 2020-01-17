@@ -10,14 +10,13 @@ ms.topic: conceptual
 ms.assetid: a4891c57-56bb-49f4-9bb5-f11b745279e5
 author: MightyPen
 ms.author: genemi
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 4f672c1b3d7ff8d4480e6fb1647058c50715b657
-ms.sourcegitcommit: 1f10e9df1c523571a8ccaf3e3cb36a26ea59a232
+ms.openlocfilehash: 2762e024f3a94ed20c900833e56840b67af1685d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2018
-ms.locfileid: "51858567"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68111780"
 ---
 # <a name="scalability"></a>スケーラビリティ
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]

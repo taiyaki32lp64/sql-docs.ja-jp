@@ -1,22 +1,21 @@
 ---
-title: Windows 上で PolyBase スケールアウト グループを改善する | Microsoft Docs
-ms.date: 09/24/2018
+title: Windows 上で PolyBase スケールアウト グループを構成する | Microsoft Docs
+ms.date: 04/23/2019
 ms.prod: sql
-ms.reviewer: ''
-ms.custom: ''
 ms.technology: polybase
 ms.topic: tutorial
-author: rothja
-ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 792791cf7ac6abebc56f1b59381fb5d18e83d237
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+author: MikeRayMSFT
+ms.author: mikeray
+ms.reviewer: ''
+monikerRange: '>= sql-server-2016 || =sqlallproducts-allversions'
+ms.openlocfilehash: d686cbe2fb314a59085adee76b3bbad22fcea0fc
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52417483"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72906885"
 ---
-# <a name="improve-polybase-scale-out-groups-on-windows"></a>Windows 上で PolyBase スケールアウト グループを改善する
+# <a name="configure-polybase-scale-out-groups-on-windows"></a>Windows 上で PolyBase スケールアウト グループを構成する
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
@@ -52,13 +51,13 @@ ms.locfileid: "52417483"
   
    - PQTH4A-CMP02  
   
-2. ドメイン アカウント: *PQTH4A\PolyBaseUser*  
+2. ドメイン アカウント:*PQTH4A\PolyBaseUse*r  
 
 ## <a name="install-sql-server-with-polybase-on-all-machines"></a>すべてのマシンに、PolyBase を使用する SQL Server をインストールする
 
 1. setup.exe を実行します。
   
-2. [機能の選択] ページで、**[外部データ用 PolyBase クエリ サービス]** を選択します。
+2. [機能の選択] ページで、 **[外部データ用 PolyBase クエリ サービス]** を選択します。
   
 3. [サーバーの構成] ページで、SQL Server PolyBase エンジンと SQL Server PolyBase Data Movement サービス用に**ドメイン アカウント** PQTH4A\PolyBaseUser を使用します。
   
@@ -88,7 +87,7 @@ ms.locfileid: "52417483"
   
 4. PolyBase エンジンをシャット ダウンし、PolyBase データ移動サービスを再起動します。
   
-## <a name="optional-remove-a-compute-node"></a>省略可能: コンピューティング ノードを削除する  
+## <a name="optional-remove-a-compute-node"></a>省略可能:コンピューティング ノードを削除する  
   
 1. コンピューティング ノードの SQL Server (PQTH4A-CMP02) に接続します。
   

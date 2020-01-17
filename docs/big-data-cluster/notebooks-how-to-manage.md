@@ -1,31 +1,32 @@
 ---
-title: Azure Data Studio で notebook を管理します。
-titleSuffix: SQL Server 2019 big data clusters
-description: Azure Data Studio でノートブックを管理する方法について説明します。 これは、保存、およびビッグ データ クラスター接続を変更するノートブックを開いてが含まれます。
-author: rothja
-ms.author: jroth
-manager: craigg
+title: Azure Data Studio でノートブックを管理する
+titleSuffix: SQL Server big data clusters
+description: Azure Data Studio でノートブックを管理する方法について学習します。 これには、ノートブックを開く、ノートブックの保存、ビッグ データ クラスター接続の変更などが含まれます。
+author: MikeRayMSFT
+ms.author: mikeray
+ms.reviewer: mihaelab
 ms.date: 12/06/2018
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.custom: seodec18
-ms.openlocfilehash: 107a567da4727fa5786b0b913f1c75706a23a9b7
-ms.sourcegitcommit: 202ef5b24ed6765c7aaada9c2f4443372064bd60
-ms.translationtype: MT
+ms.openlocfilehash: fb081c84de1fc9548ef1ea1f19bb2e286d0be636
+ms.sourcegitcommit: f688a37bb6deac2e5b7730344165bbe2c57f9b9c
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/12/2019
-ms.locfileid: "54241927"
+ms.lasthandoff: 11/08/2019
+ms.locfileid: "73844271"
 ---
 # <a name="how-to-manage-notebooks-in-azure-data-studio"></a>Azure Data Studio でノートブックを管理する方法
 
-この記事を開き、SQL Server 2019 プレビューで、Azure Data Studio でノートブック ファイルを保存する方法を示します。 SQL Server、ビッグ データ クラスターへの接続を変更する方法も示します。
+[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
-## <a name="prerequisites"></a>前提条件
+この記事では、SQL Server を使用して Azure Data Studio でノートブック ファイルを開いて保存する方法について示します。 また、SQL Server ビッグ データ クラスターへの接続を変更する方法も示します。
 
-この記事で Azure Data Studio を使用するノートブック済みであることを前提としています。 ノートブックを作成する場合は、「 [SQL Server 2019 プレビューで notebook を使用する方法](notebooks-guidance.md)します。 Notebook を使用して、Azure Data Studio で、次の前提条件を満たす必要があります。
+## <a name="prerequisites"></a>Prerequisites
 
-- [ビッグ データ クラスター デプロイ](quickstart-big-data-cluster-deploy.md)します。
+この記事では、Azure Data Studio で使用するノートブックが既にあることを前提としています。 ノートブックを作成する場合は、「[SQL Server でノートブックを使用する方法](notebooks-guidance.md)」を参照してください。 Azure Data Studio でノートブックを使用するには、次の前提条件を満たしている必要があります。
+
+- [ビッグ データ クラスターを展開する](quickstart-big-data-cluster-deploy.md)
 - [SQL Server 2019 ビッグ データ ツール](deploy-big-data-tools.md):
    - **Azure Data Studio**
    - **SQL Server 2019 の拡張機能**
@@ -33,50 +34,50 @@ ms.locfileid: "54241927"
 
 ## <a name="open-a-notebook"></a>ノートブックを開く
 
-いくつかの方法を開く、 **Notebook を開く**ダイアログ。 [ファイル] メニューのダッシュ ボード、およびコマンド パレットを使用することができます。 次のセクションでは、各メソッドについて説明します。
+**[ノートブックを開く]** ダイアログを開くには、いくつかの方法があります。 [ファイル] メニュー、ダッシュボード、コマンド パレットを使用できます。 次のセクションでは、各メソッドについて説明します。
 
 ### <a name="file-menu"></a>[ファイル] メニュー
 
-選択**ファイルを開く**ファイル メニュー (Windows) では、Ctrl + O と Cmd + O (Mac) にします。
+[ファイル] メニューで **[ファイルを開く]** を選択します (Windows の場合は Ctrl + O キー、Mac の場合は Cmd + O キー)。
 
-![ファイルを開くを選択してファイルを開く ダイアログを開きます](./media/notebooks-how-to-manage/open-file-1.png) 
+![[ファイルを開く] を選択して [ファイルを開く] ダイアログを開く](./media/notebooks-how-to-manage/open-file-1.png) 
 
 ### <a name="dashboard"></a>ダッシュボード
 
-クリックして**Notebook を開く**ダッシュ ボード ファイルを開く ダイアログを開きます。
+ダッシュボードで **[ノートブックを開く]** をクリックして、[ファイルを開く] ダイアログを開きます。
 
-![Notebook を開いて、ダッシュ ボードを選択してファイルを開く ダイアログを開きます](./media/notebooks-how-to-manage/open-file-2.png) 
+![ダッシュボードで [ノートブックを開く] を選択して [ファイルを開く] ダイアログを開く](./media/notebooks-how-to-manage/open-file-2.png) 
 
 ### <a name="command-palette"></a>コマンド パレット
 
-コマンドを使用して**ファイル。開いている**(Windows) で Ctrl + Shift + P と Cmd + Shift + P (Mac) で入力してコマンド パレットから。
+コマンド パレットから「**File: Open**」コマンドを使用します (Windows の場合は Ctrl + Shift + P キー、Mac の場合は Cmd + Shift + P キーと入力)。
 
-![コマンド パレットで File:Open を入力してファイルを開く ダイアログを開きます](./media/notebooks-how-to-manage/open-file-3.png)
+![コマンド パレットに「File: Open」と入力して [ファイルを開く] ダイアログを開く](./media/notebooks-how-to-manage/open-file-3.png)
 
-## <a name="save-a-notebook"></a>ノートブックを保存します。
+## <a name="save-a-notebook"></a>ノートブックを保存する
 
-現在は、notebook を保存する方法の 1 つ。 選択する必要があります**保存**notebook ツールバーから。
+現在、ノートブックを保存する方法は 1 つあります。 ノートブックのツール バーから **[保存]** を選択する必要があります。
 
-![Notebook のツールバーで保存 をクリックしてファイルを保存します。](./media/notebooks-how-to-manage/save-file-1.png)
+![ノートブックのツール バーの [保存] をクリックしてファイルを保存する](./media/notebooks-how-to-manage/save-file-1.png)
 
 > [!NOTE]
-> 次のメソッドは、現在変更を保存しないのノートブックに。
+> 現在、次のメソッドではノートブックへの変更は保存されません。
 >
-> - **ファイルを保存**、**ファイルの名前を付けて保存.** と**ファイルすべて保存**ファイル メニューからコマンド。
-> - **ファイル:保存**コマンド パレットで入力したコマンド。
+> - [ファイル] メニューの **[ファイルの保存]** 、 **[名前を付けて保存]** 、 **[すべてのファイルを保存]** コマンド。
+> - コマンド パレットに入力した「**File: Save**」コマンド。
 
-## <a name="change-the-big-data-cluster"></a>ビッグ データ クラスターを変更します。
+## <a name="change-the-big-data-cluster"></a>ビッグ データ クラスターを変更する
 
-ノートブックの SQL Server のビッグ データ クラスターを変更するには。
+ノートブック用の SQL Server ビッグ データ クラスターを変更するには
 
-1. をクリックして、**にアタッチ**notebook ツールバーからメニュー。
+1. ノートブックのツール バーから **[アタッチ先]** メニューをクリックします。
 
-   ![Notebook のツールバーのメニューにアタッチ をクリックします。](./media/notebooks-how-to-manage/select-attach-to-1.png)
+   ![ノートブックのツール バーから [アタッチ先] メニューをクリックする](./media/notebooks-how-to-manage/select-attach-to-1.png)
 
-2. サーバーをクリックして、**にアタッチ**メニュー。
+2. **[アタッチ先]** メニューからサーバーをクリックします。
 
-   ![メニューにアタッチからサーバーを選択します。](./media/notebooks-how-to-manage/select-attach-to-2.png)
+   ![[アタッチ先] メニューからサーバーを選択する](./media/notebooks-how-to-manage/select-attach-to-2.png)
 
 ## <a name="next-steps"></a>次の手順
 
-Azure Data Studio で notebook の詳細については、次を参照してください。 [SQL Server 2019 プレビューで notebook を使用する方法](notebooks-guidance.md)します。
+Azure Data Studio のノードブックの詳細については、「[SQL Server 2019 でノートブックを使用する方法](notebooks-guidance.md)」を参照してください。

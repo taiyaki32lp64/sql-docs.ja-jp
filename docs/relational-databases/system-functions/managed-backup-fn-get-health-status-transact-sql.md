@@ -1,5 +1,5 @@
 ---
-title: managed_backup.fn_get_health_status (TRANSACT-SQL) |Microsoft Docs
+title: managed_backup fn_get_health_status (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -20,20 +20,19 @@ helpviewer_keywords:
 ms.assetid: b376711d-444a-4b5e-b483-8df323b4e31f
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 98ebc20d497165d4e2d80438bcd711490fd6bc8c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: bc2bfdbd8714bf4211373e921c1b054ed224feb3
+ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47799372"
+ms.lasthandoff: 08/29/2019
+ms.locfileid: "70155813"
 ---
-# <a name="managedbackupfngethealthstatus-transact-sql"></a>managed_backup.fn_get_health_status (TRANSACT-SQL)
+# <a name="managed_backupfn_get_health_status-transact-sql"></a>managed_backup fn_get_health_status (Transact-sql)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
-  指定した期間の拡張イベントによって報告されたエラーの集計数に関する 0 行、1 行、または複数の行から成るテーブルを返します。  
+  指定した期間内に拡張イベントによって報告されたエラーの集計数を示す0行のテーブルを返します。  
   
- Smart Admin の下にあるサービスの正常性状態を報告するために、この関数が使用されます。現在、[!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]は Smart Admin でサポートされています。 返されるエラーに関連するように[!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]します。  
+ 関数は、Smart Admin でサービスの正常性状態を報告するために使用されます。現在[!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] 、Smart Admin の包括的な環境でサポートされています。 したがって、返されるエラーは[!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]に関連しています。  
   
  
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
@@ -46,30 +45,30 @@ managed_backup.fn_get_health_status([@begin_time = ] 'time_1' , [ @end_time = ] 
   
 ##  <a name="Arguments"></a> 引数  
  [@begin_time]  
- エラーの集計数を計算する期間の開始時刻。  @begin_timeパラメーター型は DATETIME です。 既定値は NULL になります。 値が NULL の場合、この関数は現在の時刻の 30 分前に報告されたイベントから処理します。  
+ エラーの集計数を計算する期間の開始時刻。  @begin_timeパラメーターは DATETIME です。 既定値は NULL です。 値が NULL の場合、この関数は現在の時刻の 30 分前に報告されたイベントから処理します。  
   
  [ @end_time]  
- エラーの集計数を計算する期間の終了時刻。 @end_timeパラメーターは DATETIME で、既定値は NULL です。 値が NULL の場合、この関数は現在の時刻までの拡張イベントを処理します。  
+ エラーの集計数を計算する期間の終了時刻。 パラメーター @end_timeは DATETIME で、既定値は NULL です。 値が NULL の場合、関数は現在の時刻まで拡張イベントを処理します。  
   
 ## <a name="table-returned"></a>返されるテーブル  
   
 |列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
-|number_of_storage_connectivity_errors|ssNoversion|プログラムが Windows Azure ストレージ アカウントに接続したときの接続エラーの数。|  
-|number_of_sql_errors|ssNoversion|プログラムが SQL Server エンジンに接続したときに返されたエラーの数。|  
-|number_of_invalid_credential_errors|ssNoversion|プログラムが SQL 資格情報を使用して認証しようとしたときに返されたエラーの数。|  
-|number_of_other_errors|ssNoversion|接続、SQL、資格情報以外のカテゴリに関するエラーの数。|  
-|number_of_corrupted_or_deleted_backups|ssNoversion|削除されるか破損したバックアップ ファイルの数。|  
-|number_of_backup_loops|ssNoversion|バックアップ エージェントで構成されたすべてのデータベースがスキャン回数[!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]します。|  
-|number_of_retention_loops|ssNoversion|保有期間を評価するためにデータベースがスキャンされた回数。|  
+|number_of_storage_connectivity_errors|int|プログラムが Azure ストレージアカウントに接続するときの接続エラーの数。|  
+|number_of_sql_errors|int|プログラムが SQL Server エンジンに接続したときに返されたエラーの数。|  
+|number_of_invalid_credential_errors|int|プログラムが SQL 資格情報を使用して認証しようとしたときに返されたエラーの数。|  
+|number_of_other_errors|int|接続、SQL、資格情報以外のカテゴリに関するエラーの数。|  
+|number_of_corrupted_or_deleted_backups|int|削除または破損したバックアップファイルの数。|  
+|number_of_backup_loops|int|で[!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]構成されたすべてのデータベースをバックアップエージェントがスキャンする回数。|  
+|number_of_retention_loops|int|保有期間を評価するためにデータベースがスキャンされた回数。|  
   
 ## <a name="best-practices"></a>ベスト プラクティス  
- このような集計されたカウントは、システム正常性の監視に使用できます。 たとえば、number_ of_retention_loops 列が 30 分間 0 だった場合、保有期間の管理に長時間がかかる可能性や保有期間の管理が正常に動作しない可能性があります。 エラー列が 0 以外の場合は問題を示す可能性があるため、拡張イベント ログで問題がないかどうかを確認する必要があります。 または、ストアド プロシージャを使用して**managed_backup.sp_get_backup_diagnostics**エラーの詳細を検索する Extended イベントの一覧を取得します。  
+ このような集計されたカウントは、システム正常性の監視に使用できます。 たとえば、number_ of_retention_loops 列が30分間0の場合、リテンション期間の管理に時間がかかったり、正常に機能しなくなったりする可能性があります。 0以外のエラー列は問題を示している可能性があり、拡張イベントログをチェックして問題の詳細を確認する必要があります。 または、ストアドプロシージャ**managed_backup**を使用して、拡張イベントの一覧を取得し、エラーの詳細を確認します。  
   
 ## <a name="security"></a>セキュリティ  
   
 ### <a name="permissions"></a>アクセス許可  
- 必要があります**選択**関数に対する権限。  
+ 関数に対する**SELECT**権限が必要です。  
   
 ## <a name="examples"></a>使用例  
   
@@ -81,7 +80,7 @@ managed_backup.fn_get_health_status([@begin_time = ] 'time_1' , [ @end_time = ] 
   
     ```  
   
--   次の例では、現在の週について集計されたエラー数が返されます。  
+-   次の例では、現在の週の集計されたエラー数を返します。  
   
     ```  
     Use msdb  

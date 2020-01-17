@@ -1,5 +1,5 @@
 ---
-title: ストアド プロシージャ |Microsoft Docs
+title: ストアド プロシージャ | Microsoft Docs
 description: ストアド プロシージャ
 ms.custom: ''
 ms.date: 06/12/2018
@@ -15,20 +15,19 @@ helpviewer_keywords:
 - stored procedures [OLE DB], about OLE DB stored procedures
 author: pmasl
 ms.author: pelopes
-manager: craigg
-ms.openlocfilehash: 7d9a26049a09f45ff7588324d8c0421c4287db2b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 06379ee06ec4b6f6663488b90dace90de97474cc
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47767200"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68015207"
 ---
 # <a name="stored-procedures"></a>ストアド プロシージャ
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
-  ストアド プロシージャ ([Stored Procedures&#40;データベース エンジン&#41;](../../../relational-databases/stored-procedures/stored-procedures-database-engine.md)) は、データベースに格納されている実行可能オブジェクトです。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] では次に示すオブジェクトをサポートしています。  
+  ストアドプロシージャ ([ストアドプロシージャ&#40;データベースエンジン&#41;](../../../relational-databases/stored-procedures/stored-procedures-database-engine.md)) は、データベースに格納されている実行可能オブジェクトです。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] では次に示すオブジェクトをサポートしています。  
   
 -   ストアド プロシージャ  
   

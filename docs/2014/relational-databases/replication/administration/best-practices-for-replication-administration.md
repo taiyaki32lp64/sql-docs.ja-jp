@@ -14,14 +14,14 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: fb7a972d865f7afe1295c5dbdf5ad3ce0c886556
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54134742"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62629634"
 ---
 # <a name="best-practices-for-replication-administration"></a>レプリケーション管理の推奨事項
-  レプリケーションを構成したら、レプリケーション トポロジの管理方法について理解することが重要です。 このトピックでは、さまざまな分野における推奨事項について説明し、また各分野の詳細情報へのリンクも提供します。 このトピックで、ベスト プラクティス ガイダンスに従うだけでなくよく寄せられる質問と問題を理解するよく寄せられる質問のトピックを検討してください。[よく寄せられる質問レプリケーションの管理者に関して](frequently-asked-questions-for-replication-administrators.md)します。  
+  レプリケーションを構成したら、レプリケーション トポロジの管理方法について理解することが重要です。 このトピックでは、さまざまな分野における推奨事項について説明し、また各分野の詳細情報へのリンクも提供します。 このトピックで説明するベスト プラクティスのガイダンスに従うだけでなく、次のよく寄せられる質問のトピックに目を通し、一般的な疑問や問題について理解することをお勧めします: 「[レプリケーションの管理者に関してよく寄せられる質問](frequently-asked-questions-for-replication-administrators.md)」。  
   
  推奨事項について理解するには、以下の 2 つの分野に分けて行うのが効果的です。  
   
@@ -124,7 +124,7 @@ ms.locfileid: "54134742"
  パブリケーション データベースのバックアップ スケジュールに従って検証を行うことを推奨します。 たとえば、パブリケーション データベースを週に 1 回完全バックアップする場合は、検証もバックアップの終了後、週に 1 回行います。 詳細については、「[レプリケートされたデータの検証](../validate-data-at-the-subscriber.md)」を参照してください。  
   
 ## <a name="use-agent-profiles-to-change-agent-parameters-if-necessary"></a>エージェント プロファイルによるエージェント パラメーターへの必要に応じた変更  
- エージェント プロファイルを使用すると、レプリケーション エージェントのパラメーターを簡単に設定できます。 エージェントのコマンド ラインでパラメーターを指定することもできますが、通常は定義済みのエージェント プロファイルを使用するか、パラメーターの値の変更が必要な場合新規プロファイルを作成します。 たとえば、マージ レプリケーションを使用中にサブスクライバーの接続をブロードバンドからダイヤルアップに変更する場合、マージ エージェントに対して **低速リンク** プロファイルの使用を検討してください。このプロファイルでは、低速通信リンクにより適したパラメーターのセットが使用されます。 詳しくは、「 [レプリケーション エージェント プロファイル](../agents/replication-agent-profiles.md)」をご覧ください。  
+ エージェント プロファイルを使用すると、レプリケーション エージェントのパラメーターを簡単に設定できます。 エージェントのコマンド ラインでパラメーターを指定することもできますが、通常は定義済みのエージェント プロファイルを使用するか、パラメーターの値の変更が必要な場合新規プロファイルを作成します。 たとえば、マージ レプリケーションを使用中にサブスクライバーの接続をブロードバンドからダイヤルアップに変更する場合、マージ エージェントに対して **低速リンク** プロファイルの使用を検討してください。このプロファイルでは、低速通信リンクにより適したパラメーターのセットが使用されます。 詳しくは、「 [Replication Agent Profiles](../agents/replication-agent-profiles.md)」をご覧ください。  
   
 ## <a name="adjust-publication-and-distribution-retention-periods-if-necessary"></a>パブリケーションおよびディストリビューションの保有期間の必要に応じた調整  
  トランザクション レプリケーションとマージ レプリケーションでは、ディストリビューション データベースでのトランザクションの保有期間、およびサブスクリプションの同期頻度を決定する保有期間が使用されます。 最初は既定の設定を使用することをお勧めしますが、トポロジを監視して、設定を調整する必要があるかどうかを確認することをお勧めします。 たとえば、マージ レプリケーションの場合、パブリケーションの保有期間 (既定では 14 日間) によって、システム テーブルにおけるメタデータの保有期間が決定されます。 サブスクリプションを常に 5 日以内に同期する場合は、この期間を短くすることを検討してください。こうすることにより、メタデータが削減され、パフォーマンスの向上につながる場合があります。 詳細については、「 [Subscription Expiration and Deactivation](../subscription-expiration-and-deactivation.md)」を参照してください。  
@@ -147,7 +147,7 @@ ms.locfileid: "54134742"
   
  詳細については、「[パブリケーション データベースでのスキーマの変更](../publish/make-schema-changes-on-publication-databases.md)」を参照してください。  
   
-## <a name="see-also"></a>参照  
- [レプリケーションの管理に関する FAQ](frequently-asked-questions-for-replication-administrators.md)  
+## <a name="see-also"></a>関連項目  
+ [レプリケーション管理に関する FAQ](frequently-asked-questions-for-replication-administrators.md)  
   
   

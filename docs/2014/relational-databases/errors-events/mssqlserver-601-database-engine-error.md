@@ -15,11 +15,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 9aebe73ac73ee09ed2ba6de9162877d0e70bc7e6
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48176902"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62867731"
 ---
 # <a name="mssqlserver601"></a>MSSQLSERVER_601
     
@@ -42,7 +42,7 @@ ms.locfileid: "48176902"
 ## <a name="user-action"></a>ユーザーの操作  
  このエラーが発生するとクエリは取り消されます。 クエリを再送信するか、NOLOCK ロック ヒントを削除します。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [MSSQLSERVER_605](mssqlserver-605-database-engine-error.md)   
  [テーブル ヒント &#40;Transact-SQL&#41;](/sql/t-sql/queries/hints-transact-sql-table)   
  [SELECT &#40;Transact-SQL&#41;](/sql/t-sql/queries/select-transact-sql)   

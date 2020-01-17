@@ -9,15 +9,15 @@ ms.topic: conceptual
 helpviewer_keywords:
 - RIGHT function
 ms.assetid: 83e70e75-4be5-4783-a8cf-032f82afe16e
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 0e8d1cfdda299c786aa926aad26f724009a683ec
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: ae56e579e96db82d538189f832001b5a80b4f72e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52796112"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62768798"
 ---
 # <a name="right-ssis-expression"></a>RIGHT (SSIS 式)
   指定された文字式の一番右の部分から指定された数の文字を返します。  

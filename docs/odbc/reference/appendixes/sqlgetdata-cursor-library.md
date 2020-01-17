@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: ff40c9c0-b847-4426-a099-1bff47e6e872
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 1e3009b4e3bed6fc871ecfd1aab4e2af2f1f1c86
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 5962882de08712dcff75790de7c58d69f965a3bd
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47854000"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68086383"
 ---
 # <a name="sqlgetdata-cursor-library"></a>SQLGetData (カーソル ライブラリ)
 > [!IMPORTANT]  

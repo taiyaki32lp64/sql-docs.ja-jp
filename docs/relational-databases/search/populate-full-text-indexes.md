@@ -1,10 +1,8 @@
 ---
 title: フルテキスト インデックスの作成 | Microsoft Docs
-ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: search, sql-database
-ms.reviewer: ''
 ms.technology: search
 ms.topic: conceptual
 helpviewer_keywords:
@@ -22,16 +20,16 @@ helpviewer_keywords:
 - full populations [full-text search]
 - full-text indexes [SQL Server], populations
 ms.assetid: 76767b20-ef55-49ce-8dc4-e77cb8ff618a
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
+author: pmasl
+ms.author: pelopes
+ms.reviewer: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 6d313a2e98bd80a5b2621fd7ce8b30b70cb63f0b
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 52fc7d3d43c1f0adcf7ab94d78cf301254a9a18d
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52537410"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72903876"
 ---
 # <a name="populate-full-text-indexes"></a>フルテキスト インデックスの作成
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -192,24 +190,24 @@ ALTER FULLTEXT INDEX ON Production.Document
 
      次のオプションがあります。  
   
-    -   新しいスケジュールを**作成**するには、**[新規作成]** をクリックします。  
+    -   新しいスケジュールを**作成**するには、 **[新規作成]** をクリックします。  
   
         スケジュールを作成できる **[新しいフルテキスト インデックス テーブルのスケジュール]** ダイアログ ボックスが表示されます。 スケジュールを保存するには、 **[OK]** をクリックします。  
   
         > [!IMPORTANT]  
         >  *[フルテキスト インデックスのプロパティ]* ダイアログ ボックスを閉じると、新しいスケジュールが SQL Server エージェント ジョブ (*database_name*. **table_name** でテーブルの増分作成を開始) に関連付けられます。 同じフルテキスト インデックスのスケジュールを複数作成した場合、すべてのスケジュールで同じジョブが使用されます。  
   
-    -   既存のスケジュールを**変更**するには、それを選択し、**[編集]** をクリックします。  
+    -   既存のスケジュールを**変更**するには、それを選択し、 **[編集]** をクリックします。  
   
          スケジュールを変更できる **[新しいフルテキスト インデックス テーブルのスケジュール]** ダイアログ ボックスが表示されます。  
   
         > [!NOTE]  
         >  SQL Server エージェント ジョブの変更については、「[ジョブの変更](../../ssms/agent/modify-a-job.md)」を参照してください。  
   
-    -   既存のスケジュールを**削除**するには、それを選択し、**[削除]** をクリックします。  
+    -   既存のスケジュールを**削除**するには、それを選択し、 **[削除]** をクリックします。  
   
 2.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]   
-  
+
 ##  <a name="crawl"></a> フルテキスト作成 (クロール) で発生したエラーのトラブルシューティング  
 クロール時にエラーが発生すると、フルテキスト検索クロール ログ記録機能によってクロール ログが作成および保持されます。このログはプレーンテキスト ファイルです。 各クロール ログは特定のフルテキスト カタログに対応します。 既定では、所与のインスタンス (この例では、既定のインスタンス) のクロール ログは `%ProgramFiles%\Microsoft SQL Server\MSSQL15.MSSQLSERVER\MSSQL\LOG` フォルダーにあります。
  
@@ -218,8 +216,8 @@ ALTER FULLTEXT INDEX ON Production.Document
 `SQLFT<DatabaseID><FullTextCatalogID>.LOG[<n>]`
   
 クロール ログ ファイルの可変部分は次のようになります。
--   <**DatabaseID**> - データベースの ID。 <**dbid**> は、ゼロで始まる 5 桁の数字です。  
--   <**FullTextCatalogID**> - フルテキスト カタログ ID。 <**catid**> は、ゼロで始まる 5 桁の数字です。  
+-   <**DatabaseID**> - データベースの ID。 \<**dbid**> は、ゼロで始まる 5 桁の数字です。  
+-   <**FullTextCatalogID**> - フルテキスト カタログ ID。 \<**catid**> は、ゼロで始まる 5 桁の数字です。  
 -   <**n**> - 同じフルテキスト カタログに 1 つ以上のクロール ログが存在することを示す整数です。  
   
  たとえば、`SQLFT0000500008.2` はデータベース ID が 5 で、フルテキスト カタログ ID が 8 のクロール ログ ファイルです。 ファイル名の最後の 2 は、このデータベースとカタログのペアに 2 つのクロール ログ ファイルが存在することを示しています。  

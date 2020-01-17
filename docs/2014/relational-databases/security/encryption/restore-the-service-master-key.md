@@ -10,15 +10,15 @@ helpviewer_keywords:
 - service master key [SQL Server], importing
 - service master key [SQL Server], restoring
 ms.assetid: 14bdbbbe-d384-4692-b670-4243d2466fe1
-author: aliceku
-ms.author: aliceku
+author: jaszymas
+ms.author: jaszymas
 manager: craigg
-ms.openlocfilehash: 17a404ef96b4800aa072b8f35c2d22c349361ca3
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 21abdf4e5781f179c8168ff02aa611bd7dffd39f
+ms.sourcegitcommit: 39ea690996a7390e3d13d6fb8f39d8641cd5f710
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48229792"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "74957175"
 ---
 # <a name="restore-the-service-master-key"></a>サービス マスター キーの復元
   このトピックでは、 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] を使用して [!INCLUDE[tsql](../../../includes/tsql-md.md)]でサービス マスター キーを復元する方法について説明します。  
@@ -32,13 +32,13 @@ ms.locfileid: "48229792"
   
      [制限事項と制約事項](#Restrictions)  
   
-     [Security](#Security)  
+     [保護](#Security)  
   
--   [Transact-SQL を使用してサービス マスター キーを復元するには](#SSMSProcedure)  
+-   [Transact-sql を使用してサービスマスターキーを復元するには](#SSMSProcedure)  
   
-##  <a name="BeforeYouBegin"></a> はじめに  
+##  <a name="BeforeYouBegin"></a>開始する前に  
   
-###  <a name="Restrictions"></a> 制限事項と制約事項  
+###  <a name="Restrictions"></a>制限事項と制約事項  
   
 -   サービス マスター キーを復元するとき、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] では、現在のサービス マスター キーで暗号化されているすべてのキーとシークレットの暗号化が解除され、次にそれらがバックアップ ファイルから読み込まれたサービス マスター キーで暗号化されます。  
   
@@ -49,20 +49,22 @@ ms.locfileid: "48229792"
 > [!CAUTION]  
 >  サービス マスター キーは、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 暗号化階層のルートになります。 サービス マスター キーでは、直接または間接的に、そのツリー内の他のすべてのキーが保護されます。 強制復元で、依存関係のあるキーの暗号化を解除できなかった場合、そのキーで保護されているデータは失われます。  
   
-###  <a name="Security"></a> セキュリティ  
+###  <a name="Security"></a>保護  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a>許可  
  サーバーに対する CONTROL SERVER 権限が必要です。  
   
-##  <a name="SSMSProcedure"></a> Transact-SQL の使用  
+##  <a name="SSMSProcedure"></a>Transact-sql の使用  
   
 #### <a name="to-restore-the-service-master-key"></a>サービス マスター キーを復元するには  
   
 1.  バックアップしたサービス マスター キーのコピーを、物理バックアップ メディアまたはローカル ファイル システム上のディレクトリから取得します。  
   
-2.  **オブジェクト エクスプローラー**で、 [!INCLUDE[ssDE](../../../includes/ssde-md.md)]のインスタンスに接続します。  
+2.  
+  **オブジェクト エクスプローラー**で、 [!INCLUDE[ssDE](../../../includes/ssde-md.md)]のインスタンスに接続します。  
   
-3.  [標準] ツール バーの **[新しいクエリ]** をクリックします。  
+3.  
+  [標準] ツール バーの **[新しいクエリ]** をクリックします。  
   
 4.  次の例をコピーしてクエリ ウィンドウに貼り付け、 **[実行]** をクリックします。  
   

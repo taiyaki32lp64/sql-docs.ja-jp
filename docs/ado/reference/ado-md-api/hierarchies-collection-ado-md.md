@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: bef0fcb1-8060-4faa-84f0-3d52e9c4526f
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: d41f639dce72e0d424f0c8f61593cca870aa82ed
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 63b8e4491d4d0a561bf5e7f108684570fc550928
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47650650"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67949708"
 ---
 # <a name="hierarchies-collection-ado-md"></a>Hierarchies コレクション (ADO MD)
 セットを含む[階層](../../../ado/reference/ado-md-api/hierarchy-object-ado-md.md)ディメンションからのオブジェクト。  
@@ -40,7 +39,7 @@ ms.locfileid: "47650650"
   
 -   [プロパティ、メソッド、およびイベント](../../../ado/reference/ado-md-api/hierarchies-collection-properties-methods-and-events.md)  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [カタログの例 (VB)](../../../ado/reference/ado-md-api/catalog-example-vb.md)   
  [Dimension オブジェクト (ADO MD)](../../../ado/reference/ado-md-api/dimension-object-ado-md.md)   
  [Hierarchy オブジェクト (ADO MD)](../../../ado/reference/ado-md-api/hierarchy-object-ado-md.md)

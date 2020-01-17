@@ -20,15 +20,14 @@ helpviewer_keywords:
 ms.assetid: bd49e28a-128b-4f6b-8545-6a2ec3f4afb3
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 7f1be9ff365412444f87ef0abcc3795301d98cf7
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 52c6b8d2db395560524c2a9fa46aca680ca9eea2
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47825238"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68046404"
 ---
-# <a name="sysfncdcgetminlsn-transact-sql"></a>sys.fn_cdc_get_min_lsn (Transact-SQL)
+# <a name="sysfncdcgetminlsn-transact-sql"></a>sys.fn_cdc_get_min_lsn (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   指定したキャプチャ インスタンスの start_lsn 列の値を返します、 [cdc.change_tables](../../relational-databases/system-tables/cdc-change-tables-transact-sql.md)システム テーブル。 この値は、キャプチャ インスタンスの有効期間の下端を表します。  
@@ -52,7 +51,7 @@ sys.fn_cdc_get_min_lsn ( 'capture_instance_name' )
 ## <a name="remarks"></a>コメント  
  キャプチャ インスタンスが存在しない場合、または、キャプチャ インスタンスに関連付けられた変更データにアクセスするための権限が呼び出し元にない場合は、0x00000000000000000000 が返されます。  
   
- この関数の主な用途は、キャプチャ インスタンスに関連付けられた変更データ キャプチャ タイムラインの下端を識別することです。 変更データを要求する前に、クエリ範囲の両端がキャプチャ インスタンスのタイムライン内にあるかどうかを検証する場合にも、この関数を使用できます。 変更テーブルでクリーンアップが実行されると、キャプチャ インスタンスの下端が変わるため、こうしたチェックを実行することは重要です。 変更データを要求する間隔が開きすぎると、下端を前回の変更データ要求の上端に設定していたとしても、下端が現在のタイムラインから外れている可能性があります。  
+ この関数は通常、キャプチャ インスタンスに関連付けられている変更データ キャプチャ タイムラインの下端を識別するために使用します。 この関数は、クエリ範囲のエンドポイントの変更データを要求する前にキャプチャ インスタンスのタイムライン内に収まる検証に使用することもできます。 変更テーブルでクリーンアップが実行されると、キャプチャ インスタンスの下端が変わるため、こうしたチェックを実行することは重要です。 変更データの要求までの時間が重要な場合は、前の変更データ要求の上端に設定されている低エンドポイントは、現在のタイムラインの外に可能性があります。  
   
 ## <a name="permissions"></a>アクセス許可  
  固定サーバー ロール sysadmin または固定データベース ロール db_owner のメンバーシップが必要です。 それ以外のすべてのユーザーについては、ソース テーブルのすべてのキャプチャ対象列に対する SELECT 権限が必要です。さらに、キャプチャ インスタンスのゲーティング ロールが定義されている場合は、そのデータベース ロールのメンバーシップが必要です。  
@@ -95,7 +94,7 @@ ELSE
 GO  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [sys.fn_cdc_get_max_lsn &#40;TRANSACT-SQL&#41;](../../relational-databases/system-functions/sys-fn-cdc-get-max-lsn-transact-sql.md)   
  [トランザクション ログ &#40;SQL Server&#41;](../../relational-databases/logs/the-transaction-log-sql-server.md)  
   

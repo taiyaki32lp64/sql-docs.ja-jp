@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - session-scoped calculated members [MDX]
@@ -13,12 +12,12 @@ ms.assetid: f2d14a89-6286-4e74-9afb-091076f93f21
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 17a132ea3a775104420640cab5f60cfdd0028fba
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 4388ef278c0762184859162dc55f656aae1c9a15
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48136462"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66074427"
 ---
 # <a name="creating-session-scoped-calculated-cells"></a>セッション スコープの計算されるセルの作成
     
@@ -84,6 +83,6 @@ FOR String_Expression AS 'MDX_Expression'
 |子孫のセット|指定したメンバーの子孫に解決される MDX セット式。 この例は、 `Descendants`(*メンバー式*、 *Level_Expression*、 *Desc_Flag*) MDX 関数です。<br /><br /> 詳細については、「[Descendants (MDX)](/sql/mdx/descendants-mdx)」を参照してください。|  
   
 ## <a name="see-also"></a>参照  
- [MDX でのセル計算の構築&#40;MDX&#41;](../../multidimensional-models-olap-logical-cube-objects/calculations.md)  
+ [MDX でのセル計算の作成 &#40;MDX&#41;](../../multidimensional-models-olap-logical-cube-objects/calculations.md)  
   
   

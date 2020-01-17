@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: d514c622-2c0d-4f41-80d2-66add4d113b1
 author: Shamikg
 ms.author: Shamikg
-manager: craigg
-ms.openlocfilehash: 12b945d4f9e320cba6a143893b306a9fc11da675
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 3927e0a312c077f1d39405ca5526d7f3c0099342
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52544215"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67909034"
 ---
 # <a name="legal-notice-mysqltosql"></a>法的通知 (MySQLToSql)
 このソフトウェアおよびマニュアルに記載されている参照用のアプリケーションを含んだ内容は、情報の提供のみを目的としており、明示または黙示にかかわらず、このマニュアルは保証なしで提供されます。 このソフトウェアの仕様およびマニュアルに記載されている事柄は、将来予告なしに変更することがあります。 お客様が本製品を運用した結果の影響については、お客様が負うものとします。  

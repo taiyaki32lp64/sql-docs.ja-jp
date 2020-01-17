@@ -9,13 +9,12 @@ ms.topic: reference
 ms.assetid: 70cbcae2-1686-4507-9326-b95206b3089b
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 6d67fff726220e00b52f345091f60f8ad862f760
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 45c7458505b2a7e89868b81ceb471e9d52ca425a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47693430"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68011141"
 ---
 # <a name="localdberrorinvalidparameter"></a>LOCALDB_ERROR_INVALID_PARAMETER
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

@@ -1,5 +1,5 @@
 ---
-title: getBytes メソッド (SQLServerBlob) |Microsoft Docs
+title: getBytes メソッド (SQLServerBlob) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: bea1b810-b5c1-466d-bdc4-561468214632
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 098937df965d9573701657ef6c2ec580de09daf3
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: c4c7891c6d7454e0397406f9391fdfb60d0f0fc7
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47729740"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68213716"
 ---
 # <a name="getbytes-method-sqlserverblob"></a>getBytes メソッド (SQLServerBlob)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -37,7 +36,7 @@ public byte[] getBytes(long pos,
 ```  
   
 #### <a name="parameters"></a>パラメーター  
- *pos*  
+ *po*  
   
  開始位置です。1 から始まります (0 ではありません)。  
   
@@ -52,7 +51,7 @@ public byte[] getBytes(long pos,
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- この getBytes メソッドは、java.sql.Blob インターフェイスの getBytes メソッドによって指定されます。  
+ この getBytes メソッドは、java.sql.Blob インターフェイスの getBytes メソッドで指定されています。  
   
  null または長さが 0 の BLOB があり、位置 1 で正確に 0 バイトを取得しようとすると、空の **byte** 配列が返されます (長さが 0 の byte 配列)。  
   

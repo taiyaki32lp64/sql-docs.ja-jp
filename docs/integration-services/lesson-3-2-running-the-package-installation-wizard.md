@@ -1,5 +1,5 @@
 ---
-title: '手順 2: パッケージ インストール ウィザードの実行 | Microsoft Docs'
+title: 手順 2:パッケージ インストール ウィザードの実行 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -8,17 +8,20 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: tutorial
 ms.assetid: f91fbb89-4626-4c47-b96d-56052dc45861
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: 0a346d55b84b115a7a128d02fdedd1ff7f6b800d
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 1b380b56611e72bfd6b0c249792843a6a684813b
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52527140"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71283327"
 ---
 # <a name="lesson-3-2---running-the-package-installation-wizard"></a>レッスン 3-2 - パッケージ インストール ウィザードの実行
+
+[!INCLUDE[ssis-appliesto](../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
 この実習では、パッケージ インストール ウィザードを実行して、Deployment Tutorial プロジェクトから [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]のインスタンスにパッケージを配置します。 msdb [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] データベースの sysssispackages テーブルにインストールできるのはパッケージだけです。配置バンドルに含まれるサポート ファイルは、ファイル システムに配置されます。  
   
 パッケージ インストール ウィザードを使用すると、手順に従ってパッケージのインストールと構成を行うことができます。 配置先のコンピューター (配置バンドルをコピーするコンピューター) の [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] のインスタンスにパッケージをインストールします。 また、C:\DeploymentTutorialInstall フォルダーも作成します。このフォルダーには、パッケージ以外のファイルがインストールされます。  
@@ -43,7 +46,7 @@ ms.locfileid: "52527140"
   
 7.  **[暗号化をサーバー ストレージに依存する]** チェック ボックスがオフになっていることを確認します。  
   
-8.   **[次へ]** をクリックします。  
+8.  **[次へ]** をクリックします。  
   
 9. [インストール フォルダーの選択] ページの **[参照]** をクリックします。  
   
@@ -66,14 +69,14 @@ ms.locfileid: "52527140"
   
 16. **[構成ファイル]** ボックスの一覧で、 **[datatransferconfig.dtsconfig]** をクリックし、 **[構成]** ボックスの **[パス]** 列のプロパティを展開して、 **[値]** 列を次の値で更新します。  
   
-    |プロパティ|ReplTest1|更新後の値|  
+    |プロパティ|[値]|更新後の値|  
     |------------|---------|-----------------|  
     |\Package.Connections[Deployment Tutorial Log].Properties[ConnectionString]|C:\Program Files\Microsoft SQL Server\100\Samples\Integration Services\Tutorial\Deploying Packages\Completed Packages\Deployment Tutorial Log|C:\DeploymentTutorialInstall\Deployment Tutorial Log|  
     |\Package.Connections[NewCustomers].Properties[ConnectionString]|C:\Program Files\Microsoft SQL Server\100\Samples\Integration Services\Tutorial\Deploying Packages\Sample Data\NewCustomers.txt|C:\DeploymentTutorialInstall\NewCustomers.txt|  
   
 17. **[構成ファイル]** ボックスの一覧で、[loadxmldataconfig.dtsconfig] をクリックし、 **[構成]** ボックスの **[パス]** 列のプロパティを展開して、 **[値]** 列を次の値で更新します。  
   
-    |プロパティ|ReplTest1|更新後の値|  
+    |プロパティ|[値]|更新後の値|  
     |------------|---------|-----------------|  
     |\Package.LoadXMLData.Properties[[XML Source].[XMLData]]|C:\Program Files\Microsoft SQL Server\100\Samples\Integration Services\Tutorial\Deploying Packages\Sample Data\orders.xml|C:\DeploymentTutorialInstall\orders.xml|  
     |\Package.LoadXMLData.Properties[[XML Source].[XMLSchemaDefinition]]|C:\Program Files\Microsoft SQL Server\100\Samples\Integration Services\Tutorial\Deploying Packages\Sample Data\orders.xsd|C:\DeploymentTutorialInstall\orders.xsd|  
@@ -82,11 +85,11 @@ ms.locfileid: "52527140"
   
     配置先コンピューターの環境変数の値は開発用コンピューターの環境変数の値と異なるため、[パッケージの検証] ページに複数の警告が表示されます。 次の 4 つの警告が表示されます。  
   
-    -   構成ファイル : "C:\DeploymentTutorial\DataTransferConfig.dtsConfig" は有効ではありません。 構成ファイルの名前を確認してください。  
+    -   構成ファイル: "C:\DeploymentTutorial\DataTransferConfig.dtsConfig" は有効ではありません。 構成ファイルの名前を確認してください。  
   
     -   パッケージの少なくとも 1 つの構成エントリを読み込めませんでした。 構成エントリとそれ以前に発生した警告を確認して、読み込めなかった構成に関する説明を参照してください。  
   
-    -   構成ファイル : "C:\DeploymentTutorial\LoadXMLDataConfig.dtsConfig は有効ではありません。 構成ファイルの名前を確認してください。  
+    -   構成ファイル: "C:\DeploymentTutorial\LoadXMLDataConfig.dtsConfig は有効ではありません。 構成ファイルの名前を確認してください。  
   
     -   パッケージの少なくとも 1 つの構成エントリを読み込めませんでした。 構成エントリとそれ以前に発生した警告を確認して、読み込めなかった構成に関する説明を参照してください。  
   
@@ -100,7 +103,7 @@ ms.locfileid: "52527140"
     > パッケージの検証に使用する一時ログ ファイルが作成されます。 このファイルは、パッケージの実行時には使用されません。  
   
 ## <a name="next-task-in-lesson"></a>このレッスンの次の作業  
-[手順 3: 配置したパッケージのテスト](../integration-services/lesson-3-3-testing-the-deployed-packages.md)  
+[ステップ 3:配置したパッケージのテスト](../integration-services/lesson-3-3-testing-the-deployed-packages.md)  
   
 ## <a name="see-also"></a>参照  
 [Integration Services サービス (SSIS サービス)](../integration-services/service/integration-services-service-ssis-service.md)  

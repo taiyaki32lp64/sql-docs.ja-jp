@@ -14,27 +14,26 @@ helpviewer_keywords:
 ms.assetid: 71f729df-d340-4cf9-9a6d-305fcb39b009
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: dcd2e5bae2ec36658305f211a90a6e76513996de
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d75b811ba670c72aa4ce1ed15041b0b628f3f529
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47660570"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68042883"
 ---
 # <a name="filestream-and-filetable-functions-transact-sql"></a>Filestream および FileTable 関数 (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  ここでは、FILESTREAM 機能および FileTable 機能に関連するシステム関数について説明します。  
+  このセクションでは、FILESTREAM および FileTable 機能に関連するシステム関数について説明します。  
   
  [FileTableRootPath &#40;Transact-SQL&#41;](../../relational-databases/system-functions/filetablerootpath-transact-sql.md)  
- 特定の FileTable または現在のデータベースの、ルート レベルの UNC パスを返します。  
+ 特定の FileTable または現在のデータベースのルート レベルの UNC パスを返します。  
   
  [GetFileNamespacePath &#40;Transact-SQL&#41;](../../relational-databases/system-functions/getfilenamespacepath-transact-sql.md)  
  FileTable 内のファイルまたはディレクトリの UNC パスを返します。  
   
  [GetPathLocator &#40;Transact-SQL&#41;](../../relational-databases/system-functions/getpathlocator-transact-sql.md)  
- FileTable 内の指定されたファイルまたはディレクトリのパス ロケーター ID 値を返します。  
+ FileTable 内のパス ロケーターの指定したファイルまたはディレクトリの ID 値を返します。  
   
  [PathName &#40;Transact-SQL&#41;](../../relational-databases/system-functions/pathname-transact-sql.md)  
  FILESTREAM バイナリ ラージ オブジェクト (BLOB) のパスを返します。  

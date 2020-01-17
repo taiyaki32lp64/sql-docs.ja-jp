@@ -2,7 +2,7 @@
 title: XML レポート データの XML クエリ構文 (SSRS) | Microsoft Docs
 ms.date: 03/01/2017
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: report-data
 ms.topic: conceptual
 helpviewer_keywords:
@@ -11,17 +11,17 @@ helpviewer_keywords:
 - xmldp [Reporting Services]
 - XML [Reporting Services], data retrieval
 ms.assetid: d203886f-faa1-4a02-88f5-dd4c217181ef
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 60488eef28194d8ffdd88dd37897011a9e6422b4
-ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 3fc3cddc10dd53225867b910b8a3b3cb9c73d6ca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51812675"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65574857"
 ---
 # <a name="xml-query-syntax-for-xml-report-data-ssrs"></a>XML レポート データの XML クエリ構文 (SSRS)
-  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]では、XML データ ソースのデータセットを作成できます。 データセットを取得するためのクエリは、データ ソースを定義した後で作成します。 データセット クエリを作成する際は、データ ソースが参照する XML データの種類に応じて、XML **Query** または要素パスを指定する必要があります。 XML **クエリ** は、**\<Query>** タグ内に、名前空間と XML 要素を指定したものです。指定する名前空間と XML 要素は、データ ソースによって異なります。 要素パスは、基になる XML データから取り出すノードおよびノード属性を XPath に似た構文で指定するもので、名前空間には依存しません。 要素パスの詳細については、「[Element Path Syntax for XML Report Data &#40;SSRS&#41;](../../reporting-services/report-data/element-path-syntax-for-xml-report-data-ssrs.md)」 (XML レポート データの要素パス構文 &#40;SSRS&#41;) を参照してください。  
+  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]では、XML データ ソースのデータセットを作成できます。 データセットを取得するためのクエリは、データ ソースを定義した後で作成します。 データセット クエリを作成する際は、データ ソースが参照する XML データの種類に応じて、XML **Query** または要素パスを指定する必要があります。 XML **クエリ** は、 **\<Query>** タグ内に、名前空間と XML 要素を指定したものです。指定する名前空間と XML 要素は、データ ソースによって異なります。 要素パスは、基になる XML データから取り出すノードおよびノード属性を XPath に似た構文で指定するもので、名前空間には依存しません。 要素パスの詳細については、「[Element Path Syntax for XML Report Data &#40;SSRS&#41;](../../reporting-services/report-data/element-path-syntax-for-xml-report-data-ssrs.md)」 (XML レポート データの要素パス構文 &#40;SSRS&#41;) を参照してください。  
   
  次のような種類の XML データについて、XML データ ソースを作成できます。  
   
@@ -38,7 +38,7 @@ ms.locfileid: "51812675"
  接続文字列の URL によって参照される Web サービスのエンドポイントの場合、XML **Query** には、Web サービス メソッドか SOAP アクション、またはその両方を定義します。 レポート用の XML データを取得するための Web サービス要求が XML データ プロバイダーによって作成されます。  
   
 > [!NOTE]  
->  Web サービスの名前空間にスラッシュ (**/)** 文字が含まれる場合は、XML データ処理拡張機能が名前空間を正確に取得できるように、Web サービス メソッドと SOAP アクションの両方を指定します。  
+>  Web サービスの名前空間にスラッシュ ( **/)** 文字が含まれる場合は、XML データ処理拡張機能が名前空間を正確に取得できるように、Web サービス メソッドと SOAP アクションの両方を指定します。  
   
  埋め込み XML ドキュメントの場合、XML **Query** には、使用する埋め込み XML データを定義します。名前空間と XML **ElementPath**を指定することもできます (省略可能)。  
   

@@ -15,40 +15,43 @@ helpviewer_keywords:
 - Transparent Data Encryption, about
 - encryption [SQL Server], transparent data encryption
 ms.assetid: c75d0d4b-4008-4e71-9a9d-cee2a566bd3b
-author: aliceku
-ms.author: aliceku
+author: jaszymas
+ms.author: jaszymas
 manager: craigg
-ms.openlocfilehash: 40bf5851663840dac27252aa5cdfdadb0e76da93
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: e73098a63f193ab868854674d2e77c3ba372c29c
+ms.sourcegitcommit: 39ea690996a7390e3d13d6fb8f39d8641cd5f710
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53205701"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "74957116"
 ---
 # <a name="transparent-data-encryption-tde"></a>透過的なデータ暗号化 (TDE)
-  *Transparent Data Encryption* (TDE) は、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] と [!INCLUDE[ssSDSfull](../../../includes/sssdsfull-md.md)] のデータ ファイルを暗号化します。これは保存データの暗号化と呼ばれます。 データベースをセキュリティで保護するために、安全なシステムの設計、機密資産の暗号化、データベース サーバーに対するファイアウォールの構築などの予防策を講じることができます。 ただし、物理メディア (ドライブやバックアップ テープなど) が盗まれた場合は、悪意のある人物によってデータベースが復元またはアタッチされ、データが参照されるおそれがあります。 解決策の 1 つは、データベース内の機密データを暗号化し、データの暗号化に使用されるキーを証明書で保護することです。 これにより、キーを持たない人物によるデータの使用を防止できますが、このような保護は事前に計画する必要があります。  
+  *Transparent Data Encryption* (tde) は[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 、 [!INCLUDE[ssSDSfull](../../../includes/sssdsfull-md.md)]保存データの暗号化と呼ばれるデータファイルを暗号化します。 セキュリティで保護されたシステムの設計、機密資産の暗号化、データベース サーバーに対するファイアウォールの構築などの、データベースを保護するいくつかの対策を講じることができます。 ただし、物理メディア (ドライブやバックアップ テープなど) が盗まれるシナリオでは、悪意のある第三者がデータベースを復元するかアタッチするだけでデータを閲覧することができます。 ソリューションの 1 つとして、データベース内の機密データを暗号化し、証明書を使用してデータを暗号化するために使用するキーを保護することが挙げられます。 これにより、キーを持たない人物によるデータの使用を防止できますが、このような保護は事前に計画する必要があります。  
   
- TDE では、データとログ ファイルの暗号化および暗号化解除がリアルタイムの I/O で実行されます。 暗号化にはデータベース暗号化キー (DEK) が使用されます。これは、復旧時に使用できるようにデータベース ブート レコードに保存されます。 DEK は、サーバーの master データベースに保存されている証明書を使用して保護される対称キーか、EKM モジュールによって保護される非対称キーです。 TDE では、"静止した" データ、つまりデータとログ ファイルが保護されます。 この暗号化は、法律、規制、およびさまざまな業界で確立されているガイドラインの多くに準拠できるようになっています。 これによりソフトウェア開発者は、既存のアプリケーションを変更することなく、AES および 3DES 暗号化アルゴリズムを使用してデータを暗号化できます。  
+ TDE は、データとログ ファイルの I/O 暗号化と複合化をリアルタイムで実行します。 暗号化は、復旧中に、可用性のためのデータベース ブート レコードに格納されるデータベース暗号化キー (DEK) を使用します。 DEK は、サーバーの master データベースに保存されている証明書を使用して保護される対称キーか、EKM モジュールによって保護される非対称キーです。 TDE は、"保存" データ、つまりデータとログ ファイルを保護します。 多数の法律、規制、さまざまな業界で制定されたガイドラインに準拠する機能を提供します。 これによりソフトウェア開発者は、既存のアプリケーションを変更することなく、AES および 3DES 暗号化アルゴリズムを使用してデータを暗号化できます。  
   
 > [!IMPORTANT]
 >  TDE では、通信チャネル全体を暗号化することはできません。 通信チャネル全体でデータを暗号化する方法の詳細については、「[データベース エンジンへの暗号化接続の有効化 &#40;SQL Server 構成マネージャー&#41;](../../../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md)」を参照してください。  
 > 
->  **関連項目:**  
+>  **関連トピック:**  
 > 
 >  -   [Azure SQL Database での Transparent Data Encryption](../../../database-engine/transparent-data-encryption-with-azure-sql-database.md)  
-> -   [別の SQL Server への TDE で保護されたデータベースの移動](move-a-tde-protected-database-to-another-sql-server.md)  
+> -   [TDE で保護されたデータベースを別の SQL Server に移動する](move-a-tde-protected-database-to-another-sql-server.md)  
 > -   [EKM を使用して TDE を有効にする](enable-tde-on-sql-server-using-ekm.md)  
   
 ## <a name="about-tde"></a>TDE について  
  データベース ファイルの暗号化は、ページ レベルで実行されます。 暗号化されたデータベースのページは、ディスクに書き込まれる前に暗号化され、メモリに読み込まれるときに暗号化解除されます。 TDE では、暗号化されたデータベースのサイズが増えることはありません。  
   
- **[!INCLUDE[ssSDS](../../../includes/sssds-md.md)] に該当する情報**  
+ **に適用される情報[!INCLUDE[ssSDS](../../../includes/sssds-md.md)]**  
   
- TDE を [!INCLUDE[sqldbesa](../../../includes/sqldbesa-md.md)] V12 ([一部のリージョンではプレビュー版](http://azure.microsoft.com/documentation/articles/sql-database-preview-whats-new/?WT.mc_id=TSQL_GetItTag)) と一緒に使用すると、マスター データベースに格納されるサーバー レベルの証明書が [!INCLUDE[ssSDS](../../../includes/sssds-md.md)]によって自動的に作成されます。 [!INCLUDE[ssSDS](../../../includes/sssds-md.md)] で TDE データベースを移動するには、データベースの暗号化を解除してデータベースを移動し、移動先の [!INCLUDE[ssSDS](../../../includes/sssds-md.md)]で TDE を再度有効にする必要があります。  [!INCLUDE[ssSDS](../../../includes/sssds-md.md)]での TDE に関する詳細な手順については、「 [Transparent Data Encryption with Azure SQL Database](../../../database-engine/transparent-data-encryption-with-azure-sql-database.md)」を参照してください。  
+ TDE を [!INCLUDE[sqldbesa](../../../includes/sqldbesa-md.md)] V12 ([一部のリージョンではプレビュー版](https://azure.microsoft.com/documentation/articles/sql-database-preview-whats-new/?WT.mc_id=TSQL_GetItTag)) と一緒に使用すると、マスター データベースに格納されるサーバー レベルの証明書が [!INCLUDE[ssSDS](../../../includes/sssds-md.md)]によって自動的に作成されます。 
+  [!INCLUDE[ssSDS](../../../includes/sssds-md.md)] で TDE データベースを移動するには、データベースの暗号化を解除してデータベースを移動し、移動先の [!INCLUDE[ssSDS](../../../includes/sssds-md.md)]で TDE を再度有効にする必要があります。 
+  [!INCLUDE[ssSDS](../../../includes/sssds-md.md)]での TDE に関する詳細な手順については、「 [Transparent Data Encryption with Azure SQL Database](../../../database-engine/transparent-data-encryption-with-azure-sql-database.md)」を参照してください。  
   
- TDE のプレビューの状態は、 [!INCLUDE[ssSDS](../../../includes/sssds-md.md)] のバージョン ファミリ V12 が現在一般提供の段階にあると発表されている地理的リージョンのサブセットにおいても適用されます。 TDE がプレビューから GA に昇格されたことを [!INCLUDE[ssSDS](../../../includes/sssds-md.md)] が発表するまで、 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] 用の TDE の実稼働データベースでの使用は想定されていません。 [!INCLUDE[ssSDS](../../../includes/sssds-md.md)] V12 の詳細については、「 [Azure SQL Database の新機能](http://azure.microsoft.com/documentation/articles/sql-database-preview-whats-new/)」をご覧ください。  
+ TDE のプレビューの状態は、 [!INCLUDE[ssSDS](../../../includes/sssds-md.md)] のバージョン ファミリ V12 が現在一般提供の段階にあると発表されている地理的リージョンのサブセットにおいても適用されます。 TDE がプレビューから GA に昇格されたことを [!INCLUDE[ssSDS](../../../includes/sssds-md.md)] が発表するまで、 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] 用の TDE の実稼働データベースでの使用は想定されていません。 
+  [!INCLUDE[ssSDS](../../../includes/sssds-md.md)] V12 の詳細については、「 [Azure SQL Database の新機能](https://azure.microsoft.com/documentation/articles/sql-database-preview-whats-new/)」をご覧ください。  
   
- **[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] に該当する情報**  
+ **に適用される情報[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]**  
   
  セキュリティで保護されたデータベースは、正しい証明書を使用することで復元できます。 証明書の詳細については、「 [SQL Server Certificates and Asymmetric Keys](../sql-server-certificates-and-asymmetric-keys.md)」をご覧ください。  
   
@@ -56,16 +59,17 @@ ms.locfileid: "53205701"
   
  **暗号化階層**  
   
- TDE 暗号化のアーキテクチャを次の図に示します。 [!INCLUDE[ssSDS](../../../includes/sssds-md.md)]で TDE を使用する場合に、ユーザーによって構成可能なのは、データベース レベルの項目 (データベース暗号化キーと ALTER DATABASE の部分) のみです。  
+ TDE 暗号化のアーキテクチャを次の図に示します。 
+  [!INCLUDE[ssSDS](../../../includes/sssds-md.md)]で TDE を使用する場合に、ユーザーによって構成可能なのは、データベース レベルの項目 (データベース暗号化キーと ALTER DATABASE の部分) のみです。  
   
- ![トピックで説明された階層を表示](../../../database-engine/media/tde-architecture.gif "トピックで説明された階層を表示")  
+ ![トピックで説明された階層。](../../../database-engine/media/tde-architecture.gif "トピックで説明された階層。")  
   
 ## <a name="using-transparent-data-encryption"></a>Transparent Data Encryption の使用  
  TDE を使用するには、次の手順を実行します。  
   
 ||  
 |-|  
-|**適用対象**: [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]|  
+|**適用対象**: [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]。|  
   
 -   マスター キーを作成します。  
   
@@ -98,7 +102,7 @@ GO
  暗号化および暗号化解除の操作は、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]によってバックグラウンド スレッドでスケジュールされます。 これらの操作の状態は、この後の一覧に示すカタログ ビューおよび動的管理ビューを使用して確認できます。  
   
 > [!CAUTION]  
->  TDE が有効になっているデータベースのバックアップ ファイルも、データベース暗号化キーを使用して暗号化されます。 このため、このバックアップを復元するときには、データベース暗号化キーを保護している証明書が必要です。 つまり、データの損失を防ぐには、データベースをバックアップするだけでなく、サーバー証明書のバックアップも確実に保守する必要があります。 証明書が使用できなくなると、データの損失が発生します。 詳細については、「 [SQL Server Certificates and Asymmetric Keys](../sql-server-certificates-and-asymmetric-keys.md)」を参照してください。  
+>  TDE が有効になっているデータベースのバックアップ ファイルも、データベース暗号化キーを使用して暗号化されます。 このため、このバックアップを復元するときには、データベース暗号化キーを保護している証明書が必要です。 つまり、データの損失を防ぐには、データベースをバックアップするだけでなく、サーバー証明書のバックアップも確実に保守する必要があります。 証明書が使用できなくなると、データの損失が発生します。 詳細については、「 [SQL Server Certificates and Asymmetric Keys](../sql-server-certificates-and-asymmetric-keys.md)」をご覧ください。  
   
 ## <a name="commands-and-functions"></a>コマンドと関数  
  TDE の証明書を次に示すステートメントで処理できるようにするには、この証明書をデータベース マスター キーで暗号化する必要があります。 パスワードだけで暗号化された証明書は、ステートメントで暗号化機能として受け付けられません。  
@@ -108,21 +112,21 @@ GO
   
  次の表に、TDE のコマンドと関数の説明とリンクを示します。  
   
-|コマンドまたは関数|用途|  
+|コマンドまたは関数|目的|  
 |-------------------------|-------------|  
-|[CREATE DATABASE ENCRYPTION KEY &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-database-encryption-key-transact-sql)|データベースの暗号化に使用されるキーを作成します。|  
-|[ALTER DATABASE ENCRYPTION KEY &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-database-encryption-key-transact-sql)|データベースの暗号化に使用されるキーを変更します。|  
-|[DROP DATABASE ENCRYPTION KEY &#40;Transact-SQL&#41;](/sql/t-sql/statements/drop-database-transact-sql)|データベースの暗号化に使用されたキーを削除します。|  
-|[ALTER DATABASE SET のオプション &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql-set-options)|TDE を有効にするために使用される `ALTER DATABASE` オプションについて説明します。|  
+|[Transact-sql&#41;&#40;データベース暗号化キーを作成する](/sql/t-sql/statements/create-database-encryption-key-transact-sql)|データベースの暗号化に使用されるキーを作成します。|  
+|[Transact-sql&#41;&#40;データベース暗号化キーの変更](/sql/t-sql/statements/alter-database-encryption-key-transact-sql)|データベースの暗号化に使用されるキーを変更します。|  
+|[Transact-sql&#41;&#40;データベース暗号化キーを削除します。](/sql/t-sql/statements/drop-database-transact-sql)|データベースの暗号化に使用されたキーを削除します。|  
+|[Transact-sql&#41;&#40;の ALTER DATABASE SET オプション](/sql/t-sql/statements/alter-database-transact-sql-set-options)|TDE を有効にするために使用される `ALTER DATABASE` オプションについて説明します。|  
   
 ## <a name="catalog-views-and-dynamic-management-views"></a>カタログ ビューと動的管理ビュー  
  次の表に、TDE のカタログ ビューと動的管理ビューを示します。  
   
 |カタログ ビューまたは動的管理ビュー|目的|  
 |---------------------------------------------|-------------|  
-|[sys.databases &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-databases-transact-sql)|データベース情報を表示するカタログ ビュー|  
-|[sys.certificates &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-certificates-transact-sql)|データベース内の証明書を表示するカタログ ビュー|  
-|[sys.dm_database_encryption_keys &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-database-encryption-keys-transact-sql)|データベースで使用されている暗号化キー、およびデータベースの暗号化の状態に関する情報を表示する動的管理ビュー|  
+|[データベース &#40;Transact-sql&#41;](/sql/relational-databases/system-catalog-views/sys-databases-transact-sql)|データベース情報を表示するカタログ ビュー|  
+|[sys. 証明書 &#40;Transact-sql&#41;](/sql/relational-databases/system-catalog-views/sys-certificates-transact-sql)|データベース内の証明書を表示するカタログ ビュー|  
+|[dm_database_encryption_keys &#40;Transact-sql&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-database-encryption-keys-transact-sql)|データベースで使用されている暗号化キー、およびデータベースの暗号化の状態に関する情報を表示する動的管理ビュー|  
   
 ## <a name="permissions"></a>アクセス許可  
  TDE の各機能とコマンドには、上の表で説明されているように、個別の権限要件があります。  
@@ -208,7 +212,8 @@ WHERE encryption_state = 3;
 GO  
 ```  
   
- [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] のログ ファイル アーキテクチャの詳細については、「[トランザクション ログ &#40;SQL Server&#41;](../../logs/the-transaction-log-sql-server.md)」を参照してください。  
+ 
+  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] のログ ファイル アーキテクチャの詳細については、「[トランザクション ログ &#40;SQL Server&#41;](../../logs/the-transaction-log-sql-server.md)」を参照してください。  
   
  データベース暗号化キーを変更する前にトランザクション ログに書き込まれたデータは、以前のデータベース暗号化キーで暗号化されます。  
   
@@ -218,7 +223,7 @@ GO
  tempdb システム データベースは、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] インスタンス上の他のデータベースが TDE を使用して暗号化されると暗号化されます。 この場合、同じ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]インスタンス上にある暗号化されないデータベースのパフォーマンスに影響が生じることがあります。 tempdb システム データベースの詳細については、「 [tempdb データベース](../../databases/tempdb-database.md)」を参照してください。  
   
 ### <a name="transparent-data-encryption-and-replication"></a>Transparent Data Encryption とレプリケーション  
- レプリケーションでは、TDE が有効になっているデータベースのデータが暗号化された形式で自動的にレプリケートされることはありません。 ディストリビューション データベースとサブスクライバー データベースを保護する場合は、TDE を個別に有効にする必要があります。 スナップショット レプリケーションでは、トランザクション レプリケーションとマージ レプリケーションへの最初のデータ ディストリビューションと同様に、暗号化されていない中間ファイル (bcp ファイルなど) にデータを格納できます。  トランザクション レプリケーションまたはマージ レプリケーション時に、暗号化を有効にして通信チャネルを保護することができます。 詳細については、「[データベース エンジンへの暗号化接続の有効化 &#40;SQL Server 構成マネージャー&#41;](../../../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md)」を参照してください。  
+ レプリケーションでは、TDE が有効になっているデータベースのデータが暗号化された形式で自動的にレプリケートされることはありません。 ディストリビューション データベースとサブスクライバー データベースを保護する場合は、TDE を個別に有効にする必要があります。 スナップショット レプリケーションでは、トランザクション レプリケーションとマージ レプリケーションへの最初のデータ ディストリビューションと同様に、暗号化されていない中間ファイル (bcp ファイルなど) にデータを格納できます。  トランザクション レプリケーションまたはマージ レプリケーション時に、暗号化を有効にして通信チャネルを保護することができます。 詳細については、「[データベースエンジン &#40;SQL Server 構成マネージャー&#41;への暗号化接続の有効化](../../../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md)」を参照してください。  
   
 ### <a name="transparent-data-encryption-and-filestream-data"></a>Transparent Data Encryption と FILESTREAM データ  
  FILESTREAM データは TDE が有効になっている場合でも暗号化されません。  
@@ -230,12 +235,12 @@ GO
  TDE は、インメモリ OLTP オブジェクトを含むデータベースで有効にすることができます。 TDE が有効な場合、インメモリ OLTP ログ レコードが暗号化されます。 MEMORY_OPTIMIZED_DATA ファイル グループのデータは、TDE が有効な場合は暗号化されません。  
   
 ## <a name="see-also"></a>参照  
- [TDE で保護されたデータベースを別の SQL Server の移動します。](move-a-tde-protected-database-to-another-sql-server.md)   
- [EKM を使用して TDE を有効にします。](enable-tde-on-sql-server-using-ekm.md)   
- [Azure SQL Database での transparent Data Encryption](../../../database-engine/transparent-data-encryption-with-azure-sql-database.md)   
- [SQL Server の暗号化](sql-server-encryption.md)   
- [SQL Server とデータベースの暗号化キー &#40;データベース エンジン&#41;](sql-server-and-database-encryption-keys-database-engine.md)   
- [SQL Server データベース エンジンと Azure SQL Database のセキュリティ センター](../security-center-for-sql-server-database-engine-and-azure-sql-database.md)   
+ [TDE で保護されたデータベースを別の SQL Server に移動する](move-a-tde-protected-database-to-another-sql-server.md)   
+ [EKM を使用して TDE を有効にする](enable-tde-on-sql-server-using-ekm.md)   
+ [Azure SQL Database での Transparent Data Encryption](../../../database-engine/transparent-data-encryption-with-azure-sql-database.md)   
+ [SQL Server 暗号化](sql-server-encryption.md)   
+ [SQL Server とデータベースの暗号化キー &#40;データベースエンジン&#41;](sql-server-and-database-encryption-keys-database-engine.md)   
+ [SQL Server データベースエンジンおよび Azure SQL Database の Security Center](../security-center-for-sql-server-database-engine-and-azure-sql-database.md)   
  [FILESTREAM &#40;SQL Server&#41;](../../blob/filestream-sql-server.md)  
   
   

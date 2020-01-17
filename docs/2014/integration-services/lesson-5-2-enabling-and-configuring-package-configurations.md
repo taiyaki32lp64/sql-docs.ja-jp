@@ -7,17 +7,17 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 005218ab-8dd5-48e9-a185-6bc60cd43a7a
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 5de90c3be35ca5989498872e4c86f4303d17ffc0
-ms.sourcegitcommit: 5ef24b3229b4659ede891b0af2125ef22bd94b96
+ms.openlocfilehash: fa75b3a71832eaba4064de5a9dd90e73236e8177
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/06/2019
-ms.locfileid: "55760075"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62891071"
 ---
-# <a name="step-2-enabling-and-configuring-package-configurations"></a>手順 2:有効にして、パッケージの構成
+# <a name="step-2-enabling-and-configuring-package-configurations"></a>手順 2:パッケージ構成の有効化と構成
   ここでは、パッケージ構成ウィザードを使用することで、プロジェクトをパッケージ配置モデルに変換してパッケージ構成を有効にします。 ここでは、Foreach ループ コンテナーの `Directory` プロパティの構成設定が記述された XML 構成ファイルを生成します。 Directory プロパティの値は、実行時に更新できる新しいパッケージ レベル変数を使って指定します。 また、テスト時に使用する新しいサンプル データを作成します。  
   
 ### <a name="to-create-a-new-package-level-variable-mapped-to-the-directory-property"></a>Directory プロパティにマップする新しいパッケージ レベル変数を作成するには  
@@ -39,11 +39,11 @@ ms.locfileid: "55760075"
   
 7.  **[制御フロー]** タブに戻り、 **[Foreach File in Folder]** コンテナーをダブルクリックします。  
   
-8.  **[Foreach ループ エディター]** の **[コレクション]** ページで、**[Expressions]** をクリックし、参照ボタン ( **[...]** ) をクリックします。  
+8.  **[Foreach ループ エディター]** の **[コレクション]** ページで、 **[Expressions]** をクリックし、参照ボタン ( **[...]** ) をクリックします。  
   
 9. **プロパティ式エディター**、クリックして、**プロパティ**一覧`Directory`します。  
   
-10. **式**ボックスで、省略記号ボタンをクリックします **([...])。**.  
+10. **式**ボックスで、省略記号ボタンをクリックします **([...])。** .  
   
 11. **[式ビルダー]** で [変数] フォルダーを展開し、 **User::varFolderName** 変数を **[式]** ボックスへドラッグします。  
   
@@ -59,13 +59,13 @@ ms.locfileid: "55760075"
   
 2.  警告のメッセージで **[OK]** をクリックし、変換が完了したら、 **[パッケージ配置モデルに変換]** ダイアログで **[OK]** をクリックします。  
   
-3.  [!INCLUDE[ssIS](../includes/ssis-md.md)] デザイナーで、**[制御フロー]** タブの背景をクリックします。  
+3.  [!INCLUDE[ssIS](../includes/ssis-md.md)] デザイナーで、 **[制御フロー]** タブの背景をクリックします。  
   
 4.  **[SSIS]** メニューの **[パッケージ構成]** をクリックします。  
   
 5.  **[パッケージ構成オーガナイザー]** ダイアログ ボックスで **[パッケージの構成を有効にする]** をクリックし、 **[追加]** をクリックします。  
   
-6.  パッケージ構成ウィザードの初期画面で、**[次へ]** をクリックします。  
+6.  パッケージ構成ウィザードの初期画面で、 **[次へ]** をクリックします。  
   
 7.  **[構成の種類の選択]** ページで、 **[構成の種類]** が **[XML 構成ファイル]** に設定されていることを確認します。  
   
@@ -75,9 +75,9 @@ ms.locfileid: "55760075"
   
 10. **[構成ファイルの場所の選択]** ダイアログ ボックスで、 **[ファイル名]** に「 **SSISTutorial**」と入力し、 **[保存]** をクリックします。  
   
-11.  **[構成の種類の選択]** ページで **[次へ]** をクリックします。  
+11. **[構成の種類の選択]** ページで **[次へ]** をクリックします。  
   
-12. **[エクスポートするプロパティの選択]** ページの **[オブジェクト]** ペインで、 **[変数]**、 **[varFolderName]**、 **[Properties]** の順に展開し、 **[Value]** チェック ボックスをオンにします。  
+12. **[エクスポートするプロパティの選択]** ページの **[オブジェクト]** ペインで、 **[変数]** 、 **[varFolderName]** 、 **[Properties]** の順に展開し、 **[Value]** チェック ボックスをオンにします。  
   
 13. **[エクスポートするプロパティの選択]** ページで **[次へ]** をクリックします。  
   

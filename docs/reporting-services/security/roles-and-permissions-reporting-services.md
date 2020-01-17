@@ -2,7 +2,7 @@
 title: ロールとアクセス許可 (Reporting Services) | Microsoft Docs
 ms.date: 03/01/2017
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: security
 ms.topic: conceptual
 helpviewer_keywords:
@@ -14,14 +14,14 @@ helpviewer_keywords:
 - security [Reporting Services], role-based
 - identity [Reporting Services]
 ms.assetid: eea655fe-43ed-418d-8233-b288a8f4daa4
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: f1e2b1e0eca33de05136079dda306f59ce218bdc
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 2fc536de2312bc9adf1cba103ffde0999a83609e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47763240"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65570664"
 ---
 # <a name="roles-and-permissions-reporting-services"></a>ロールと権限 (Reporting Services)
   Reporting Services では、認証サブシステムとロールベースの承認モデルを提供しています。 認証モデルと承認モデルは、レポート サーバーがネイティブ モードで実行されているか、SharePoint モードで実行されているかで異なります。 レポート サーバーが SharePoint 配置の一部として存在している場合、SharePoint の権限によってレポート サーバーへのアクセス権を持つユーザーが決定されます。  

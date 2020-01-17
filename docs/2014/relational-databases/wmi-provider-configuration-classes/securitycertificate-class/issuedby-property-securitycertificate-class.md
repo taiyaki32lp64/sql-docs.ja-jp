@@ -19,11 +19,11 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: 0f5bd1e1e6ce8b35d81ee5c17333543dfe5d8ab8
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53353696"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62511283"
 ---
 # <a name="issuedby-property-securitycertificate-class"></a>IssuedBy プロパティ (SecurityCertificate クラス)
   セキュリティ証明書を発行したオブジェクトを取得します。  

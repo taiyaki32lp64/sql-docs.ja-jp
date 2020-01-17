@@ -16,15 +16,14 @@ helpviewer_keywords:
 - $PARTITION function
 - partitions [SQL Server], numbers
 ms.assetid: abc865d0-57a8-49da-8821-29457c808d2a
-author: MashaMSFT
-ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: cd1197eff97d7e195e66841021c915aafb820342
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+author: MikeRayMSFT
+ms.author: mikeray
+ms.openlocfilehash: 3aa388dd079de10f18abbb39d240f3d57d1e2efd
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51698520"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67914381"
 ---
 # <a name="partition-transact-sql"></a>$PARTITION (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -56,7 +55,7 @@ ms.locfileid: "51698520"
 ## <a name="remarks"></a>Remarks  
  $PARTITION 返します、 **int** 1 ～ パーティション関数のパーティションの数の値です。  
   
- $PARTITION では、指定したパーティション関数を使用するパーティション テーブルやパーティション インデックスに値が存在しているかどうかに関係なく、有効な値に対してパーティション番号が返されます。  
+ $PARTITION は、値が現在パーティション関数を使用するパーティション テーブルまたはインデックスに存在するかどうかに関係なく、有効な値のパーティション番号を返します。  
   
 ## <a name="examples"></a>使用例  
   

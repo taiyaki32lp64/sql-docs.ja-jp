@@ -1,5 +1,5 @@
 ---
-title: SQLServerNClob のメンバー |Microsoft Docs
+title: SQLServerNClob Members |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: b063f191-175e-4430-aab7-d88907f4ebec
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 81bcb5406a491d0e7b73ec098b160008c1a11c4a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 303742b8e7b7bf8221565e09cf23d2e18cdca8de
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47795540"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67970946"
 ---
 # <a name="sqlservernclob-members"></a>SQLServerNClob のメンバー
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -37,14 +36,14 @@ ms.locfileid: "47795540"
 |[オブジェクト名]|[説明]|  
 |----------|-----------------|  
 |[free](../../../connect/jdbc/reference/free-method-sqlservernclob.md)|このメソッドは、**NCLOB** オブジェクトと、それが占有していたリソースを解放します。|  
-|[getAsciiStream](../../../connect/jdbc/reference/getasciistream-method-sqlservernclob.md)|取得、 **NCLOB**によって指定された値、 **java.sql.NClob**を ASCII ストリームとしてのオブジェクト。|  
-|[getCharacterStream](../../../connect/jdbc/reference/getcharacterstream-method-sqlservernclob.md)|取得、 **NCLOB**によって指定された値、 **java.sql.NClob**オブジェクト。|  
-|[getSubString](../../../connect/jdbc/reference/getsubstring-method-sqlservernclob.md)|指定された部分文字列のコピーを取得、 **NCLOB**によって指定された値、 **java.sql.NClob**オブジェクト。|  
-|[length](../../../connect/jdbc/reference/length-method-sqlservernclob.md)|内の文字数を取得、 **NCLOB**によって指定された値、 **java.sql.NClob**オブジェクト。|  
-|[position](../../../connect/jdbc/reference/position-method-sqlservernclob.md)|指定した文字位置を取得**java.sql.NClob**オブジェクトまたはサブスト リングので、 **java.sql.NClob**指定された開始位置に基づいて。|  
+|[getAsciiStream](../../../connect/jdbc/reference/getasciistream-method-sqlservernclob.md)|**NCLOB**オブジェクトによって指定された**NCLOB**値を ASCII ストリームとして取得します。|  
+|[getCharacterStream](../../../connect/jdbc/reference/getcharacterstream-method-sqlservernclob.md)|**NCLOB**オブジェクトによって指定された**NCLOB**値を取得します。|  
+|[getSubString](../../../connect/jdbc/reference/getsubstring-method-sqlservernclob.md)|**NCLOB**オブジェクトによって指定された**NCLOB**値内の指定した部分文字列のコピーを取得します。|  
+|[length](../../../connect/jdbc/reference/length-method-sqlservernclob.md)|**NCLOB**オブジェクトによって指定された**NCLOB**値の文字数を取得します。|  
+|[position](../../../connect/jdbc/reference/position-method-sqlservernclob.md)|指定された開始位置に基づいて、指定された **java.sql.NClob** オブジェクトまたは **java.sql.NClob** の substring の文字位置を取得します。|  
 |[setAsciiStream](../../../connect/jdbc/reference/setasciistream-method-sqlservernclob.md)|この **java.sql.NClob** オブジェクトが表す **NCLOB** 値の指定された位置から ASCII 文字を書き込むために使用するストリームを取得します。|  
 |[setCharacterStream](../../../connect/jdbc/reference/setcharacterstream-method-sqlservernclob.md)|この **java.sql.NClob** オブジェクトが表す **NCLOB** 値の指定された位置から Unicode 文字のストリームを書き込むために使用するストリームを取得します。|  
-|[setString](../../../connect/jdbc/reference/setstring-method-sqlservernclob.md)|書き込み、指定した**文字列**を**NCLOB**の指定した位置から始まります。|  
+|[setString](../../../connect/jdbc/reference/setstring-method-sqlservernclob.md)|指定した**文字列**を**NCLOB**の指定した位置から書き込みます。|  
 |[truncate](../../../connect/jdbc/reference/truncate-method-sqlservernclob.md)|**NCLOB** 値を指定された長さに切り捨てます。|  
   
 ## <a name="inherited-methods"></a>継承されたメソッド  

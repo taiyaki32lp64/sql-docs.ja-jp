@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: 59075e46-a0ca-47bf-972a-367b08bb518d
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 530a5acf9cc7c0de375906279aff2bc6a05ec8a0
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: b1c0b20fed0e6c15fef76b1bcbebc98edd37cfbc
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53213698"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68121459"
 ---
 # <a name="sqlconnect-function"></a>SQLConnect 関数
 **準拠**  
@@ -36,7 +35,7 @@ ms.locfileid: "53213698"
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
   
 SQLRETURN SQLConnect(  
      SQLHDBC        ConnectionHandle,  
@@ -50,7 +49,7 @@ SQLRETURN SQLConnect(
   
 ## <a name="arguments"></a>引数  
  *ConnectionHandle*  
- [入力]接続ハンドルです。  
+ [入力] 接続ハンドル。  
   
  *ServerName*  
  [入力]データ ソースの名前。 データをプログラムと同じコンピューター上またはネットワーク上のどこか別のコンピューター上にあることがあります。 アプリケーションがデータ ソースを選択する方法については、次を参照してください。[データ ソースまたはドライバーを選択する](../../../odbc/reference/develop-app/choosing-a-data-source-or-driver.md)します。  
@@ -64,7 +63,7 @@ SQLRETURN SQLConnect(
  *NameLength2*  
  [入力]長さ **UserName*文字数。  
   
- *[認証]*  
+ *\[認証]*  
  [入力]認証の文字列 (通常はパスワード)。  
   
  *NameLength3*  
@@ -193,7 +192,7 @@ SQLRETURN SQLConnect(
 ### <a name="code-example"></a>コード例  
  次の例では、アプリケーションを割り当てる環境と接続ハンドル。 ユーザー ID ジョンズ SalesOrders データ ソースとパスワード Sesame に接続し、データを処理します。 データの処理が完了したら、データ ソースから切断し、ハンドルを解放します。  
   
-```  
+```cpp  
 // SQLConnect_ref.cpp  
 // compile with: odbc32.lib  
 #include <windows.h>  

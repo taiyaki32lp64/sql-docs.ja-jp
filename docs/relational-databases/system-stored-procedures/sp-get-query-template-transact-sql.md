@@ -17,18 +17,17 @@ helpviewer_keywords:
 ms.assetid: 85e9bef7-2417-41a8-befa-fe75507d9bf2
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: f0d4d19f7b32297401ff036e61806308b54e44c9
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 9841e7815f31af26aeeb3ed0f4783d3a36d83030
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47810280"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68124082"
 ---
-# <a name="spgetquerytemplate-transact-sql"></a>sp_get_query_template (Transact-SQL)
+# <a name="spgetquerytemplate-transact-sql"></a>sp_get_query_template (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  パラメーター化形式のクエリを返します。 返される結果は、強制パラメーター化の使用によるパラメーター化形式のクエリに似ています。 sp_get_query_template は、主に TEMPLATE プラン ガイドの作成時に使用されます。  
+  パラメーター化された形式のクエリを返します。 結果返される同等のものを強制パラメーター化を使用して生成するクエリのパラメーター化形式。 sp_get_query_template は、主に TEMPLATE プラン ガイドの作成時に使用されます。  
   
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -44,7 +43,7 @@ sp_get_query_template
   
 ## <a name="arguments"></a>引数  
  '*ステートメント*'  
- パラメーター化バージョンを生成する基となるクエリです。 '*ステートメント*' 単一引用符で囲む必要があり、前に、n 個の Unicode を指定します。 N'*ステートメント*' に割り当てられた値は、@querytextパラメーター。 これは、型の**nvarchar (max)** します。  
+ パラメーター化されたバージョンが生成されるクエリです。 '*ステートメント*' 単一引用符で囲む必要があり、前に、n 個の Unicode を指定します。 N'*ステートメント*' に割り当てられた値は、@querytextパラメーター。 これは、型の**nvarchar (max)** します。  
   
  @templatetext  
  型の出力パラメーター **nvarchar (max)** に示されるように、パラメーター化形式の受信に用意されている*ステートメント*文字列リテラルとして。  
@@ -111,9 +110,9 @@ SELECT @my_parameters;
 ```  
   
 > [!NOTE]  
->  sp_get_query_template の出力内のパラメーターの順序と名前は、Quick Fix Engineering、Service Pack、および [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のバージョンのアップグレードによって変化する可能性があります。 アップグレードによって、同じクエリに対して異なる定数リテラル群がパラメーター化されるようになったり、両方の出力パラメーターの結果に使用される文字間隔が変化したりする可能性もあります。  
+>  sp_get_query_template の出力内のパラメーターの順序と名前は、Quick Fix Engineering、Service Pack、および [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のバージョンのアップグレードによって変化する可能性があります。 アップグレードは、同じクエリのパラメーター化を定数リテラルのさまざまな可能性もと出力パラメーターの両方の結果に適用される文字間隔が変化します。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [システム ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
  [データベース エンジン ストアド プロシージャ&#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
  [プラン ガイドを使用したクエリのパラメーター化動作の指定](../../relational-databases/performance/specify-query-parameterization-behavior-by-using-plan-guides.md)  

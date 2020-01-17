@@ -1,71 +1,71 @@
 ---
-title: Analytics Platform System でのユーザー セッション |Microsoft Docs"
-description: Analytics Platform System の Parallel Data Warehouse でのユーザー セッション。
+title: ユーザー セッション
+description: Analytics Platform System の Parallel Data Warehouse のユーザーセッション。
 author: mzaman1
-manager: craigg
 ms.prod: sql
 ms.technology: data-warehouse
 ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: 33bf052e27640ee08784927351579378bffbec2b
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.custom: seo-dt-2019
+ms.openlocfilehash: a0e5b338cc616be214ef39527551ee4a6ffd8f56
+ms.sourcegitcommit: d587a141351e59782c31229bccaa0bff2e869580
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52419223"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74399406"
 ---
-# <a name="user-sessions-in-analytics-platform-system"></a>Analytics Platform System でのユーザー セッション
-適切な権限を持つログインは、これらのアクションの実行を含む、SQL Server PDW アプライアンス上のすべてのログインのセッションを管理できます。  
+# <a name="user-sessions-in-analytics-platform-system"></a>Analytics Platform System のユーザーセッション
+適切なアクセス許可を持つログインでは、次の操作の実行を含め、SQL Server PDW アプライアンス上のすべてのログインのセッションを管理できます。  
   
--   アクティブなとアイドル状態の両方のセッションを含め、アプライアンス上の現在のセッションを表示します。  
+-   アクティブなセッションとアイドル状態のセッションの両方を含む、アプライアンス上の現在のセッションを表示します。  
   
--   セッションのアクティブおよび最近使用したクエリを表示します。  
+-   セッションのアクティブなクエリと最近使用したクエリを表示します。  
   
 -   アクティブなセッションを終了します。  
   
-いずれかを使用してこれらのアクションを実行できる、[アプライアンスの監視、管理コンソールを使用して](monitor-the-appliance-by-using-the-admin-console.md)または[システム ビュー](tsql-system-views.md) SQL コマンドを次に示すようを使用します。  
+これらのアクションを実行するには、次に示すように、[管理コンソールを使用してアプライアンスを監視](monitor-the-appliance-by-using-the-admin-console.md)するか、SQL コマンドを使用して[システムビュー](tsql-system-views.md)を使用します。  
   
-いずれかの方法を使用してセッションを管理するために必要なアクセス許可は同じと記載されて[ログインの管理、ユーザー、およびデータベース ロールにアクセス許可の付与](grant-permissions.md#grant-permissions-to-manage-logins-users-and-database-roles)します。  
+どちらの方法でもセッションを管理するために必要なアクセス許可は同じであり、「[ログイン、ユーザー、およびデータベースロールを管理するためのアクセス許可を付与する](grant-permissions.md#grant-permissions-to-manage-logins-users-and-database-roles)」で説明されています。  
   
-## <a name="manage-sessions-by-using-the-admin-console"></a>管理コンソールを使用してセッションを管理します。  
+## <a name="manage-sessions-by-using-the-admin-console"></a>管理コンソールを使用したセッションの管理  
   
 ### <a name="to-view-current-sessions-by-using-the-admin-console"></a>管理コンソールを使用して現在のセッションを表示するには  
   
-1.  上部のメニューでクリックして**セッション**します。  
+1.  上部のメニューで、[**セッション**] をクリックします。  
   
-2.  結果の一覧には、最近使用したすべてのセッションが表示されます。 'アクティブ' または 'アイドル' セッションのみを表示する をクリックして、**状態**列ヘッダーを状態で結果を並べ替えます。  
+2.  結果の一覧には、最近のすべてのセッションが表示されます。 "アクティブ" または "アイドル" のセッションのみを表示するには、[**状態**] 列のヘッダーをクリックして、結果を状態で並べ替えます。  
   
-### <a name="to-view-active-and-recent-queries-for-a-session-by-using-the-admin-console"></a>管理者コンソールを使用して、セッションのアクティブおよび最近使用したクエリを表示するには  
+### <a name="to-view-active-and-recent-queries-for-a-session-by-using-the-admin-console"></a>管理コンソールを使用してセッションのアクティブおよび最近のクエリを表示するには  
   
-1.  上部のメニューでクリックして**セッション**します。  
+1.  上部のメニューで、[**セッション**] をクリックします。  
   
-2.  結果の一覧で目的のセッションのセッション ID をクリックします。  
+2.  結果の一覧で、目的のセッションのセッション ID をクリックします。  
   
-3.  結果として得られるクエリの一覧は、セッションの最新のクエリを示します。 クエリの詳細を表示する方法については、次を参照してください。[アクティブなクエリの監視](monitoring-active-queries.md)します。  
+3.  結果のクエリリストには、セッションの最近のクエリが表示されます。 クエリの詳細を表示する方法については、「[アクティブなクエリの監視](monitoring-active-queries.md)」を参照してください。  
   
-### <a name="to-end-sessions-by-using-the-admin-console"></a>管理者コンソールを使用してセッションを終了するには  
+### <a name="to-end-sessions-by-using-the-admin-console"></a>管理コンソールを使用してセッションを終了するには  
   
-1.  上部のメニューでクリックして**セッション**します。  
+1.  上部のメニューで、[**セッション**] をクリックします。  
   
-2.  キャンセルするセッションのセッションの ID を検索します。  
+2.  キャンセルするセッションのセッション ID を検索します。  
   
-3.  赤いをクリックして**X**セッションを終了するセッション ID の左側にします。 'アクティブ' または 'アイドル' の状態でセッションの赤いはだけ**X**; のみこれらのセッションを終了できます。  
+3.  セッション ID の左側にある赤い**X 印**をクリックしてセッションを終了します。 状態が "アクティブ" または "アイドル" のセッションのみが赤色の**X 印**を持つこれらのセッションだけを終了できます。  
   
-## <a name="manage-sessions-by-using-system-views-and-sql-commands"></a>システム ビューと SQL コマンドを使用してセッションを管理します。  
+## <a name="manage-sessions-by-using-system-views-and-sql-commands"></a>システムビューと SQL コマンドを使用したセッションの管理  
   
-### <a name="to-view-current-sessions-by-using-system-views"></a>システム ビューを使用して現在のセッションを表示するには  
-使用[sys.dm_pdw_exec_sessions](../relational-databases/system-dynamic-management-views/sys-dm-pdw-exec-sessions-transact-sql.md)を現在のセッションの一覧を生成します。  
+### <a name="to-view-current-sessions-by-using-system-views"></a>システムビューを使用して現在のセッションを表示するには  
+現在のセッションの一覧を生成するには、 [dm_pdw_exec_sessions](../relational-databases/system-dynamic-management-views/sys-dm-pdw-exec-sessions-transact-sql.md)を使用します。  
   
-この例では、すべてのセッション状態の 'Active' または 'アイドル' session_id、login_name、および状態を返します。  
+この例では、状態が "アクティブ" または "アイドル" のすべてのセッションの session_id、login_name、および状態が返されます。  
   
 ```sql  
 SELECT session_id, login_name, status FROM sys.dm_pdw_exec_sessions WHERE status='Active' OR status='Idle';  
 ```  
   
-### <a name="to-view-active-and-recent-queries-for-a-session-by-using-system-views"></a>システム ビューを使用してセッションのアクティブなおよび最近のクエリを表示するには  
-使用するセッションに関連付けられているアクティブおよび最近完了したクエリを表示する、 [sys.dm_pdw_exec_sessions](../relational-databases/system-dynamic-management-views/sys-dm-pdw-exec-sessions-transact-sql.md)と[sys.dm_pdw_exec_requests](../relational-databases/system-dynamic-management-views/sys-dm-pdw-exec-requests-transact-sql.md)ビュー。 このクエリは、すべてのアクティブまたはアイドル状態のセッションと各セッション ID に関連付けられているアクティブなまたは最近のクエリの一覧を返します  
+### <a name="to-view-active-and-recent-queries-for-a-session-by-using-system-views"></a>システムビューを使用してセッションのアクティブおよび最近のクエリを表示するには  
+セッションに関連付けられているアクティブなクエリと最近完了したクエリを表示するには、 [dm_pdw_exec_sessions](../relational-databases/system-dynamic-management-views/sys-dm-pdw-exec-sessions-transact-sql.md)および[dm_pdw_exec_requests](../relational-databases/system-dynamic-management-views/sys-dm-pdw-exec-requests-transact-sql.md)ビューを使用します。 このクエリは、アクティブまたはアイドル状態のすべてのセッションの一覧と、各セッション ID に関連付けられているアクティブまたは最近のクエリを返します。  
   
 ```sql  
 SELECT es.session_id, es.login_name, es.status AS sessionStatus,   
@@ -78,15 +78,15 @@ WHERE (es.status='Active' OR es.status='Idle') AND
 ```  
   
 ### <a name="to-end-sessions-by-using-sql-commands"></a>SQL コマンドを使用してセッションを終了するには  
-使用して、 [KILL](../t-sql/language-elements/kill-transact-sql.md)コマンドを現在のセッションを終了します。 使用して取得できますが、終了するプロセスのセッション ID が必要ですが、 [sys.dm_pdw_exec_sessions](../relational-databases/system-dynamic-management-views/sys-dm-pdw-exec-sessions-transact-sql.md)ビュー。  
+現在のセッションを終了するには、 [KILL](../t-sql/language-elements/kill-transact-sql.md)コマンドを使用します。 プロセスを終了するには、そのセッション ID が必要です。これは、 [dm_pdw_exec_sessions](../relational-databases/system-dynamic-management-views/sys-dm-pdw-exec-sessions-transact-sql.md)ビューを使用して取得できます。  
   
-この例では、login_name、session_id、およびログイン名に基づいてセッションを検索する状態値を選択します。  
+この例では、[login_name]、[session_id]、[状態] の値を選択して、ログイン名に基づいてセッションを検索します。  
   
 ```sql  
 SELECT session_id, login_name, status FROM sys.dm_pdw_exec_sessions;  
 ```  
   
-KILL コマンドを使用して、'アクティブ' または 'アイドル' 状態でセッションを終了できます。  
+"アクティブ" または "アイドル" 状態のセッションを終了するには、KILL コマンドを使用します。  
   
 ```sql  
 KILL 'SID137';  

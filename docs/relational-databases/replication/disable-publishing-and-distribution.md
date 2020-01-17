@@ -18,16 +18,16 @@ helpviewer_keywords:
 ms.assetid: 6d4a1474-4d13-4826-8be2-80050fafa8a5
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: e5504030fb8d5759056ce8c5c938f81fcab207b1
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
+ms.openlocfilehash: 3fe1baf8676db54161c0c0fb7fccea171c3a3341
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47656680"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72908406"
 ---
 # <a name="disable-publishing-and-distribution"></a>パブリッシングおよびディストリビューションの無効化
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
   このトピックでは、 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] で [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]、 [!INCLUDE[tsql](../../includes/tsql-md.md)]、またはレプリケーション管理オブジェクト (RMO) を使用して、パブリッシングとディストリビューションを無効にする方法について説明します。  
   
  次の操作を実行できます。  
@@ -52,7 +52,7 @@ ms.locfileid: "47656680"
   
      [レプリケーション管理オブジェクト (RMO)](#RMOProcedure)  
   
-##  <a name="BeforeYouBegin"></a> 作業を開始する準備  
+##  <a name="BeforeYouBegin"></a> はじめに  
   
 ###  <a name="Prerequisites"></a> 前提条件  
   
@@ -68,7 +68,7 @@ ms.locfileid: "47656680"
 2.  **[レプリケーション]** フォルダーを右クリックし、 **[パブリッシングとディストリビューションの無効化]** をクリックします。  
   
 3.  パブリッシングとディストリビューションの無効ウィザードの手順に従って操作します。  
-  
+
 ##  <a name="TsqlProcedure"></a> Transact-SQL の使用  
  パブリッシングおよびディストリビューションは、レプリケーションのストアド プロシージャを使用してプログラムから無効にできます。  
   
@@ -89,7 +89,7 @@ ms.locfileid: "47656680"
 7.  ディストリビューターで [sp_dropdistributor](../../relational-databases/system-stored-procedures/sp-dropdistributor-transact-sql.md) を実行して、サーバーからディストリビューターの指定を削除します。  
   
     > [!NOTE]  
-    >  [sp_dropdistpublisher](../../relational-databases/system-stored-procedures/sp-dropdistpublisher-transact-sql.md) および [sp_dropdistributor](../../relational-databases/system-stored-procedures/sp-dropdistributor-transact-sql.md)の実行前にレプリケーションのパブリッシング オブジェクトおよびディストリビューション オブジェクトがすべて削除されていなかった場合は、これらのプロシージャからエラーが返されます。 パブリッシャーまたはディストリビューターの削除時に、レプリケーション関連のオブジェクトをすべて削除するには、 **@no_checks** パラメーターを **1**」をご覧ください。 パブリッシャーまたはディストリビューターがオフラインになっているか、なんらかの原因でアクセスできない場合、 **@ignore_distributor** パラメーターを **1** に設定すれば削除できます。ただし、その場合、パブリッシング オブジェクトおよびディストリビューション オブジェクトが削除されずに残るため、これらを手動で削除する必要があります。  
+    > [sp_dropdistpublisher](../../relational-databases/system-stored-procedures/sp-dropdistpublisher-transact-sql.md) および [sp_dropdistributor](../../relational-databases/system-stored-procedures/sp-dropdistributor-transact-sql.md)の実行前にレプリケーションのパブリッシング オブジェクトおよびディストリビューション オブジェクトがすべて削除されていなかった場合は、これらのプロシージャからエラーが返されます。 パブリッシャーまたはディストリビューターの削除時に、レプリケーション関連のオブジェクトをすべて削除するには、`@no_checks` パラメーターを **1** に設定する必要があります。 パブリッシャーまたはディストリビューターがオフラインになっているか、アクセスできない場合は、`@ignore_distributor` パラメーターを **1** に設定して削除できます。ただし、パブリッシング オブジェクトおよびディストリビューション オブジェクトは削除されずに残るため、手動で削除する必要があります。  
   
 ###  <a name="TsqlExample"></a> 例 (Transact-SQL)  
  次の例は、サブスクリプション データベースからレプリケーション オブジェクトを削除するスクリプトです。  

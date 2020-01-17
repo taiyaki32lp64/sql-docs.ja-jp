@@ -9,19 +9,18 @@ ms.topic: conceptual
 ms.assetid: b090b327-cec6-4d9a-a670-8f96e8ff0046
 author: Shamikg
 ms.author: Shamikg
-manager: craigg
-ms.openlocfilehash: 199a9fb8587cb1c024ac5dd5c09c1264a1226191
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 4d552114800b2d5d0148e3681f1fd165a914f654
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47769720"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68006587"
 ---
 # <a name="data-migration-report-accesstosql"></a>データ移行レポート (AccessToSQL)
 **データ移行レポート**へのデータを移行した後、ダイアログ ボックスが表示されます[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]します。  
   
 ## <a name="options"></a>および  
-**ステータス**  
+**状態**  
 ソースからターゲット データベースへのデータ移行の状態が表示されます。  
   
 **From**  

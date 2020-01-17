@@ -14,15 +14,14 @@ helpviewer_keywords:
 ms.assetid: fae5d600-586d-45fa-9d6d-03224cc13304
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: c7af34a618fb6f02790e45a1fed0aef0252489e6
-ms.sourcegitcommit: 1e28f923cda9436a4395a405ebda5149202f8204
+ms.openlocfilehash: ffe5e1f8d4ec36fd69f972dcfa631162b7547ba9
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/25/2019
-ms.locfileid: "55044865"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68061908"
 ---
-# <a name="resource-governor-related-dynamic-management-views-transact-sql"></a>リソース ガバナー関連の動的管理ビュー (Transact-SQL)
+# <a name="resource-governor-related-dynamic-management-views-transact-sql"></a>リソース ガバナー関連の動的管理ビュー (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   ここでは、リソース ガバナーの次の動的管理ビューについて説明します。  
@@ -34,7 +33,7 @@ ms.locfileid: "55044865"
 |[sys.dm_resource_governor_resource_pool_affinity &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-resource-pool-affinity-transact-sql.md)|[sys.dm_resource_governor_workload_groups &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-workload-groups-transact-sql.md)|  
 |[sys.dm_resource_governor_external_resource_pools &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-external-resource-pools.md)| |   
 
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [リソース ガバナーのカタログ ビュー &#40;TRANSACT-SQL&#41;](../../relational-databases/system-catalog-views/resource-governor-catalog-views-transact-sql.md)   
  [リソース ガバナー](../../relational-databases/resource-governor/resource-governor.md)  
   

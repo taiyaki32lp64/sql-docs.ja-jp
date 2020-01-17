@@ -13,11 +13,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 169ab149df11de12e5cf5452b0f8176737fb5dba
-ms.sourcegitcommit: 40c3b86793d91531a919f598dd312f7e572171ec
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53328558"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62510014"
 ---
 # <a name="windows-dialog-box-microsoft-document-explorer-help"></a>[ウィンドウ] ダイアログ ボックス (Microsoft Document Explorer ヘルプ)
   このダイアログ ボックスを使用すると、エディターおよびデザイナー内で開いているドキュメントを表示したり、閉じたり、整列したりできます。 このダイアログ ボックスを表示するには、 **[ウィンドウ]** メニューの **[ウィンドウ]** をクリックします。  

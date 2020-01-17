@@ -1,5 +1,5 @@
 ---
-title: OLE DB Driver for SQL Server プログラミング |Microsoft Docs
+title: SQL Server プログラミングの OLE DB ドライバー |Microsoft Docs
 description: OLE DB Driver for SQL Server のプログラミング
 ms.custom: ''
 ms.date: 06/12/2018
@@ -18,30 +18,29 @@ helpviewer_keywords:
 - OLE DB Driver for SQL Server, OLE DB
 author: pmasl
 ms.author: pelopes
-manager: craigg
-ms.openlocfilehash: 124c1f9cfa058b3f59141af0a16d8db25fef700b
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 0645659036af0b00e2cf1b62b67830ded43aecbe
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52535133"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67993932"
 ---
 # <a name="ole-db-driver-for-sql-server-programming"></a>OLE DB Driver for SQL Server のプログラミング
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
-  OLE DB Driver for SQL Server は、データにアクセスするために使用される低レベルの COM API です。 高いパフォーマンスが必要なツール、ユーティリティ、または低レベルのコンポーネントを開発する場合は、OLE DB Driver for SQL Server プロバイダーの使用をお勧めします。 OLE DB Driver for SQL Server は、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] の表形式のデータ ストリーム (TDS) プロトコルに直接アクセスするパフォーマンスの高いネイティブ プロバイダーです。  
+  SQL Server 用の OLE DB ドライバーは、データへのアクセスに使用される低レベルの COM API です。 高いパフォーマンスが必要なツール、ユーティリティ、または低レベルのコンポーネントを開発する場合は、OLE DB Driver for SQL Server プロバイダーの使用をお勧めします。 OLE DB Driver for SQL Server は、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] の表形式のデータ ストリーム (TDS) プロトコルに直接アクセスするパフォーマンスの高いネイティブ プロバイダーです。  
   
- OLE DB Driver for SQL Server に接続するアプリケーションに OLE DB サポートを提供する[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]します。  
+ OLE DB Driver for SQL Server は、に[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]接続しているアプリケーションに対して OLE DB サポートを提供します。  
   
- OLE DB Driver for SQL Server は、OLE DB バージョン 2.0 に準拠したプロバイダーです。  
+ SQL Server の OLE DB ドライバーは OLE DB バージョン2.0 に準拠しているプロバイダーです。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
   
 -   [OLE DB Driver for SQL Server のアプリケーションの作成](../../oledb/ole-db-driver/creating-a-oledb-driver-for-sql-server-application.md)  
   
--   [データ ソース オブジェクト&#40;OLE DB&#41;](../../oledb/ole-db-data-source-objects/data-source-objects-ole-db.md)  
+-   [データソースオブジェクト&#40;の OLE DB&#41;](../../oledb/ole-db-data-source-objects/data-source-objects-ole-db.md)  
   
 -   [[コマンド]](../../oledb/ole-db-commands/commands.md)  
   

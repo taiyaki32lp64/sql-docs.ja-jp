@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: b662fab5-c236-4895-a64f-00c9c6c652c2
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 7e1c09d9a90b94201642bcad5b3e0c3dbb20ef45
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 494c400ff5ead94c6bf8fdcd4be06652824b236f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47667950"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68044999"
 ---
 # <a name="native-error"></a>ネイティブ エラー
 正のネイティブ エラー コードは、デスクトップ データベース ドライバーによって生成されます。 負のエラー コードは、Microsoft Jet によって生成されます。 詳細については、次を参照してください。、 *Microsoft Jet データベース エンジン プログラマー ガイド*します。

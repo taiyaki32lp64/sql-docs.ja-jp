@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 135aab26-ff5c-4fd9-910f-65cdead0b47e
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: eb2938a37f3cb32b4abc61e36029390179b93fe8
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e3bcea9183d44b02e5f45b7bdb977573f283815b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47830610"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67911705"
 ---
 # <a name="supports-method-example-vb"></a>Supports メソッドの例 (VB)
 この例では、[サポート](../../../ado/reference/ado-api/supports-method.md)レコード セットでサポートされるオプションを表示するメソッドが別のカーソルの種類で開かれています。 DisplaySupport プロシージャは、この手順を実行する必要があります。  
@@ -162,6 +161,6 @@ End Sub
 'EndSupports2VB  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [RecordSet オブジェクト (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)   
  [Supports メソッド](../../../ado/reference/ado-api/supports-method.md)

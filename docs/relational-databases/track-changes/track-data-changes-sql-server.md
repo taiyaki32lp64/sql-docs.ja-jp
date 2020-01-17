@@ -1,5 +1,6 @@
 ---
-title: データ変更の追跡 (SQL Server) | Microsoft Docs
+title: データ変更の追跡
+ms.custom: seo-dt-2019
 ms.date: 08/08/2016
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -18,18 +19,17 @@ helpviewer_keywords:
 ms.assetid: 7a34be46-15b4-4b6b-8497-cfd8f9f14234
 author: rothja
 ms.author: jroth
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: f757719563cd2f5ba190b3d2d0f0b3b33f38df40
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 94f5ccf6d7983a25bb8cafe084dbca103f966255
+ms.sourcegitcommit: 15fe0bbba963d011472cfbbc06d954d9dbf2d655
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51666413"
+ms.lasthandoff: 11/14/2019
+ms.locfileid: "74095426"
 ---
 # <a name="track-data-changes-sql-server"></a>データ変更の追跡 (SQL Server)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
-  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] データベースのデータに対する変更を追跡する [変更データ キャプチャ](#Capture) および [変更の追跡](#Tracking)という 2 つの機能が用意されています。 これらの機能では、データベース内のユーザー テーブルに対して行われた DML の変更 (挿入操作、更新操作、および削除操作) をアプリケーションで特定できます。 変更データ キャプチャと変更の追跡は、同じデータベースに対して有効にすることができます。特別な配慮は必要ありません。 変更データ キャプチャと変更の追跡をサポートする [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のエディションについては、「 [SQL Server 2016 の各エディションでサポートされる機能](~/sql-server/editions-and-supported-features-for-sql-server-2016.md)」を参照してください。 変更の追跡は [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]でサポートされています。
+  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] データベースのデータに対する変更を追跡する [変更データ キャプチャ](#Capture) および [変更の追跡](#Tracking)という 2 つの機能が用意されています。 これらの機能では、データベース内のユーザー テーブルに対して行われた DML の変更 (挿入操作、更新操作、および削除操作) をアプリケーションで特定できます。 変更データ キャプチャと変更の追跡は、同じデータベースに対して有効にすることができます。特別な配慮は必要ありません。 変更データ キャプチャと変更の追跡をサポートする [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のエディションについては、「 [SQL Server 2016 の各エディションでサポートされる機能](~/sql-server/editions-and-supported-features-for-sql-server-2016.md)」を参照してください。 変更の追跡は [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]でサポートされています。 変更データ キャプチャは、SQL Server および Azure SQL Database Managed Instance でのみサポートされています。
   
 ## <a name="benefits-of-using-change-data-capture-or-change-tracking"></a>変更データ キャプチャまたは変更の追跡を使用する利点  
  データベースで変更されたデータをクエリする機能は、一部のアプリケーションの効率を高めるための重要な要件です。 一般に、データ変更を確認するには、アプリケーション開発者がトリガー、timestamp 列、および追加のテーブルを組み合わせて使用することで、カスタムの追跡方法をアプリケーションに実装する必要があります。 通常、このようなアプリケーションを作成するには実装に非常に手間がかかり、スキーマの更新も必要になり、多くの場合、パフォーマンスのオーバーヘッドが増加します。  
@@ -56,11 +56,11 @@ ms.locfileid: "51666413"
 |機能|変更データ キャプチャ|変更の追跡|  
 |-------------|-------------------------|---------------------|  
 |**追跡される変更**|||  
-|DML の変更|[ユーザー アカウント制御]|[ユーザー アカウント制御]|  
+|DML の変更|はい|はい|  
 |**追跡される情報**|||  
-|履歴データ|[ユーザー アカウント制御]|いいえ|  
-|列が変更されたかどうか|[ユーザー アカウント制御]|[ユーザー アカウント制御]|  
-|DML 型|[ユーザー アカウント制御]|[ユーザー アカウント制御]|  
+|履歴データ|はい|いいえ|  
+|列が変更されたかどうか|はい|はい|  
+|DML 型|はい|はい|  
   
 ##  <a name="Capture"></a> Change Data Capture  
  変更データ キャプチャでは、DML の変更が行われたという事実と変更された実際のデータの両方がキャプチャされ、ユーザー テーブルの変更情報の履歴が提供されます。 変更は、非同期プロセスを使用してトランザクション ログを読み取ることによってキャプチャされます。これは、システムへの影響が少ない方法です。  
@@ -88,11 +88,11 @@ ms.locfileid: "51666413"
   
 |列の種類|変更テーブルで変更をキャプチャする|制限事項|  
 |--------------------|---------------------------------------|-----------------|  
-|スパース列|[ユーザー アカウント制御]|columnset を使用する場合は変更のキャプチャをサポートしません。|  
+|スパース列|はい|columnset を使用する場合は変更のキャプチャをサポートしません。|  
 |計算列|いいえ|計算列に対する変更は追跡されません。 列は適切な種類の変更テーブルに表示されますが、値は NULL になります。|  
-|XML|[ユーザー アカウント制御]|個々の XML 要素に対する変更は追跡されません。|  
-|timestamp|[ユーザー アカウント制御]|変更テーブル内のデータ型はバイナリに変換されます。|  
-|BLOB データ型|[ユーザー アカウント制御]|BLOB 列の前の画像は、列自体が変更された場合にのみ保存されます。|  
+|XML|はい|個々の XML 要素に対する変更は追跡されません。|  
+|timestamp|はい|変更テーブル内のデータ型はバイナリに変換されます。|  
+|BLOB データ型|はい|BLOB 列の前の画像は、列自体が変更された場合にのみ保存されます。|  
   
 ### <a name="change-data-capture-and-other-sql-server-features"></a>変更データ キャプチャとその他の SQL Server 機能  
  ここでは、次の機能と変更データ キャプチャとの連携について説明します。  
@@ -109,7 +109,7 @@ ms.locfileid: "51666413"
 1.  ミラーで [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェントが実行されていることを確認します。  
   
 2.  プリンシパルがミラーにフェールオーバーした後、ミラーでキャプチャ ジョブとクリーンアップ ジョブを作成します。 ジョブを作成するには、ストアド プロシージャ [sys.sp_cdc_add_job &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-cdc-add-job-transact-sql.md) を使用します。  
-  
+
  データベース ミラーリングの詳細については、「[データベース ミラーリング &#40;SQL Server&#41;](../../database-engine/database-mirroring/database-mirroring-sql-server.md)」を参照してください。  
   
 #### <a name="transactional-replication"></a>トランザクション レプリケーション  
@@ -131,7 +131,7 @@ ms.locfileid: "51666413"
   
 -   データベースをデタッチしてから、同じサーバーまたは別のサーバーにアタッチした場合、変更データ キャプチャは有効のままです。  
   
--   **KEEP_CDC** オプションを使用してデータベースを Enterprise 以外のエディションにアタッチまたは復元しようとすると、操作がブロックされます。これは変更データ キャプチャが [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Enterprise を必要とするためです。 エラー メッセージ 932 が表示されます。  
+-   **KEEP_CDC** オプションを使用してデータベースを Standard または Enterprise 以外のエディションにアタッチまたは復元しようとすると、操作がブロックされます。これは変更データ キャプチャを使用するには、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Standard または Enterprise Edition が必要であるためです。 エラー メッセージ 932 が表示されます。  
   
      `SQL Server cannot load database '%.*ls' because change data capture is enabled. The currently installed edition of SQL Server does not support change data capture. Either disable change data capture in the database by using a supported edition of SQL Server, or upgrade the instance to one that supports change data capture.`  
   
@@ -142,7 +142,7 @@ ms.locfileid: "51666413"
   
  次の図は、変更の追跡を使用すると効果的な同期のシナリオを示しています。 このシナリオのアプリケーションでは、テーブルの前回の同期後に変更されたすべてのテーブル行の現在の行データのみが必要です。 同期メカニズムを使用して変更が追跡されるため、アプリケーションで双方向同期を実行して、発生する可能性がある競合を確実に検出できます。  
   
- ![変更追跡の概念図](../../relational-databases/track-changes/media/cdcart2.gif "変更追跡の概念図")  
+ ![変更の追跡の概念図](../../relational-databases/track-changes/media/cdcart2.gif "変更の追跡の概念図")  
   
 ### <a name="change-tracking-and-sync-services-for-adonet"></a>変更の追跡と Sync Services for ADO.NET  
  [!INCLUDE[sql_sync_long](../../includes/sql-sync-long-md.md)] データベース間の同期が可能になり、直感的で柔軟性の高い API を使用して、オフラインおよびコラボレーションのシナリオを対象とするアプリケーションを構築できます。 [!INCLUDE[sql_sync_long](../../includes/sql-sync-long-md.md)] 変更を同期する API が用意されていますが、この API ではサーバーまたはピア データベース内の変更は実際には追跡されません。 カスタム変更追跡システムを作成できますが、一般に複雑さやパフォーマンスのオーバーヘッドが大幅に増加します。 サーバーまたはピア データベースの変更を追跡するには、構成が簡単でパフォーマンスの高い追跡を実現できる [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] の変更の追跡を使用することをお勧めします。  
@@ -155,7 +155,7 @@ ms.locfileid: "51666413"
   
 -   [Microsoft Sync Framework デベロッパー センター](https://go.microsoft.com/fwlink/?LinkId=108054)  
   
-     [!INCLUDE[ssSyncFrameLong](../../includes/sssyncframelong-md.md)] および [!INCLUDE[sql_sync_short](../../includes/sql-sync-short-md.md)]に関する完全なドキュメントが用意されています。 [!INCLUDE[sql_sync_short](../../includes/sql-sync-short-md.md)]のドキュメントのトピック「SQL Server 変更の追跡の使用方法」には、詳細な情報とコードの例があります。  
+     [!INCLUDE[ssSyncFrameLong](../../includes/sssyncframelong-md.md)] および [!INCLUDE[sql_sync_short](../../includes/sql-sync-short-md.md)]に関する完全なドキュメントが用意されています。 [!INCLUDE[sql_sync_short](../../includes/sql-sync-short-md.md)] のドキュメントのトピック「How to:Use SQL Server Change Tracking」(方法: SQL Server 変更の追跡を使用する) には、詳細な情報とコードの例が掲載されています。  
   
 ## <a name="related-tasks-required"></a>関連タスク (必須)  
   

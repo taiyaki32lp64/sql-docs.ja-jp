@@ -7,15 +7,15 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 7e81f7e1-fac0-4b57-b145-8f1b9e4720bf
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 38acf6fd70bebf5033fde5dcf33fe5b2a6ac6722
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: fe3f77ac629aab7534077274aa9cf62a50149b57
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52754824"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62900902"
 ---
 # <a name="raw-file-custom-properties"></a>RAW ファイルのカスタム プロパティ
   **変換元のカスタム プロパティ**  
@@ -53,6 +53,6 @@ ms.locfileid: "52754824"
  詳細については、「 [RAW ファイル変換先](raw-file-destination.md)」を参照してください。  
   
 ## <a name="see-also"></a>参照  
- [Common Properties](../common-properties.md)  
+ [共通プロパティ](../common-properties.md)  
   
   

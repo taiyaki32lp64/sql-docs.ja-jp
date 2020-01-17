@@ -1,5 +1,5 @@
 ---
-title: 手順 2:配置バンドルの確認 |Microsoft Docs
+title: 手順 2:配置バンドルの確認 | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -7,15 +7,15 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 6c13f5c9-c75e-4e52-94dc-2d2db2c578fe
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 163df99c54ed323d1039d50c69e812cb4c1d2286
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 127044042eed7f082b6f1f7ba7ae6918232ba9ff
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53368784"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62891771"
 ---
 # <a name="step-2-verifying-the-deployment-bundle"></a>手順 2:配置バンドルの確認
   レッスン 1 では、Deployment Tutorial プロジェクトを作成し、パッケージと補助ファイルをプロジェクトに追加しました。前のタスクでプロジェクトの配置ユーティリティを構築しました。  

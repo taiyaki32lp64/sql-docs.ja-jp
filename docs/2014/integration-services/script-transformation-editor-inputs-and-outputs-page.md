@@ -4,23 +4,22 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.scriptcomponent.columnproperties.f1
 helpviewer_keywords:
 - Script Transformation Editor
 ms.assetid: 9659d2d2-5d73-4470-9768-e07b77142fc9
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: d015b637a2823b0551fec82fbe761e586cf1ccd5
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 33ad9ddda5b40abaafddbd6e31272ece1f8edaee
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48084522"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66056055"
 ---
 # <a name="script-transformation-editor-inputs-and-outputs-page"></a>[スクリプト変換エディター] ([入力および出力] ページ)
   **[スクリプト変換エディター]** ダイアログ ボックスの **[入力および出力]** ページを使用すると、スクリプト変換の入力および出力を追加、削除、構成できます。  
@@ -52,10 +51,10 @@ ms.locfileid: "48084522"
   
 ## <a name="see-also"></a>参照  
  [Integration Services のエラーおよびメッセージのリファレンス](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [スクリプト コンポーネントの種類を選択します。](../../2014/integration-services/select-script-component-type.md)   
- [スクリプト変換エディター&#40;入力列 ページ&#41;](../../2014/integration-services/script-transformation-editor-input-columns-page.md)   
- [スクリプト変換エディター &#40;[スクリプト] ページ&#41;](../../2014/integration-services/script-transformation-editor-script-page.md)   
- [スクリプト変換エディター&#40;接続マネージャー ページ&#41;](../../2014/integration-services/script-transformation-editor-connection-managers-page.md)   
+ [[スクリプト コンポーネントの種類を選択]](../../2014/integration-services/select-script-component-type.md)   
+ [[スクリプト変換エディター] &#40;[入力列] ページ&#41;](../../2014/integration-services/script-transformation-editor-input-columns-page.md)   
+ [[スクリプト変換エディター] &#40;[スクリプト] ページ&#41;](../../2014/integration-services/script-transformation-editor-script-page.md)   
+ [スクリプト変換エディター ([接続マネージャー] ページ)](../../2014/integration-services/script-transformation-editor-connection-managers-page.md)   
  [その他のスクリプト コンポーネントの例](extending-packages-scripting-data-flow-script-component-examples/additional-script-component-examples.md)  
   
   

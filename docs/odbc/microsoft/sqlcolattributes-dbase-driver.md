@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: ed44de2b-0b01-4dce-a340-f5eb3aac30b7
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 56d6a7cb3c2c071191a956c6aaf11479810698f8
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 66a37f3c9ceccdf3fb226ea423552886d36ed99f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47619620"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67903972"
 ---
 # <a name="sqlcolattributes-dbase-driver"></a>SQLColAttributes (dBASE ドライバー)
 > [!NOTE]  

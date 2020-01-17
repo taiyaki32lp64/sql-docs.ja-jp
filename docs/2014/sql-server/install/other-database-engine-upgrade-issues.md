@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 helpviewer_keywords:
 - Database Engine [SQL Server], upgrading
@@ -13,12 +12,12 @@ ms.assetid: 78a1d8e8-fa97-476f-8777-84617d145340
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 4fe890744f546e02c91630c5bb0115f5b5c8cb9a
-ms.sourcegitcommit: 98324d9803edfa52508b6d5d3554614d0350a0b9
+ms.openlocfilehash: f247f9addde6baa949f3260d7a9d9f86ce0c5bff
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52321638"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66093699"
 ---
 # <a name="other-database-engine-upgrade-issues"></a>データベース エンジンのアップグレードに関するその他の問題
   アップグレードに関する次の問題は、現在のバージョンのアップグレード アドバイザーでは検出されません。 一覧表示されている問題を確認し、使用するシステムへの影響を判断してください。  

@@ -17,15 +17,14 @@ helpviewer_keywords:
 - decryption [SQL Server], certificates
 - DECRYPTBYCERT function
 ms.assetid: 4950d787-40fa-4e26-bce8-2cb2ceca12fb
-author: MashaMSFT
-ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: ff7cd9e82f2e70e39b02f10726acbae657ad670c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: VanMSFT
+ms.author: vanto
+ms.openlocfilehash: 9653e799a543dd95a7d6fb033e0a8d5b9a4484a8
+ms.sourcegitcommit: a24f6e12357979f1134a54a036ebc58049484a4f
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47741200"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71314531"
 ---
 # <a name="decryptbycert-transact-sql"></a>DECRYPTBYCERT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -56,7 +55,7 @@ DecryptByCert ( certificate_ID , { 'ciphertext' | @ciphertext }
 証明書の秘密キーの復号に使用されるパスワード。 *cert_password* のデータ形式は Unicode にする必要があります。  
   
  @cert_password  
-証明書の秘密キーの復号に使用されるパスワードを含む、型 **nchar** または **nvarchar** の変数。 *@cert_password* のデータ形式は Unicode にする必要があります。  
+証明書の秘密キーの復号に使用されるパスワードを含む、型 **nchar** または **nvarchar** の変数。 *\@cert_password* のデータ形式は Unicode にする必要があります。  
 
 ## <a name="return-types"></a>戻り値の型  
 最大サイズが 8,000 バイトの **varbinary**。  

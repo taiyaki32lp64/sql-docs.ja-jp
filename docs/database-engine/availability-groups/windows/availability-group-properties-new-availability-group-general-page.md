@@ -1,8 +1,8 @@
 ---
-title: 可用性グループのプロパティ:新しい可用性グループ ([全般] ページ)
+title: '[全般] ページ ([新しい可用性グループ] ダイアログ ボックスと [プロパティ] ダイアログ ボックス)'
 titleSuffix: SQL Server
-description: SQL Server Management Studio の [新しい可用性グループ] ウィザードの [全般] ページにあるさまざまなプロパティの説明。
-ms.custom: seodec18
+description: SQL Server Management Studio (SSMS) の [新しい可用性グループ] ダイアログ ボックスと [可用性グループのプロパティ] ダイアログ ボックスの [全般] ページにあるさまざまなプロパティの説明です。
+ms.custom: seo-lt-2019
 ms.date: 05/17/2016
 ms.prod: sql
 ms.reviewer: ''
@@ -13,13 +13,12 @@ f1_keywords:
 ms.assetid: 9af5379f-91b8-4729-9f75-4a80242a30e9
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 1acbcb925b2b98cdc81bf3f745ebaa9b79edbf55
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: f379d55d2728d19a3321e99b342d8597622a6fc0
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53208521"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75254078"
 ---
 # <a name="availability-group-properties-new-availability-group-general-page"></a>可用性グループのプロパティ:新しい可用性グループ ([全般] ページ)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -36,13 +35,13 @@ ms.locfileid: "53208521"
  可用性グループの名前。 これはユーザー指定の名前であり、Windows Server フェールオーバー クラスター (WSFC) 内で一意であることが必要です。  
   
 ## <a name="availability-databases"></a>可用性データベース  
- **Database Name**  
+ **データベース名**  
  可用性グループに追加されたデータベースの名前。  
   
- **[追加]**  
+ **追加**  
  クリックすると、データベースが可用性グループに追加されます。  
   
- **[削除]**  
+ **Remove**  
  クリックすると、選択したデータベースが可用性グループから削除されます。  
   
 ## <a name="availability-replicas"></a>可用性レプリカ  
@@ -106,13 +105,13 @@ ms.locfileid: "53208521"
  **エンドポイント URL**  
  エンドポイントの URL です。 詳細については、「[可用性レプリカを追加または変更する場合のエンドポイント URL の指定 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/specify-endpoint-url-adding-or-modifying-availability-replica.md)」を参照してください。  
   
- **[追加]**  
+ **追加**  
  クリックすると、セカンダリ レプリカが可用性グループに追加されます。  
   
- **[削除]**  
+ **Remove**  
  クリックすると、セカンダリ レプリカが可用性グループから削除されます。  
   
 ## <a name="see-also"></a>参照  
- [AlwaysOn 可用性グループの概要 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)  
+ [Always On 可用性グループの概要 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)  
   
   

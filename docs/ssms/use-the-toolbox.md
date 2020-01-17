@@ -13,15 +13,14 @@ helpviewer_keywords:
 - dragging and dropping text
 - designer controls [SQL Server Management Studio]
 ms.assetid: 16733e39-4dc5-416f-ab10-c1d823f79d2d
-author: stevestein
-ms.author: sstein
-manager: craigg
-ms.openlocfilehash: fad7d0d5106af21db50b10835d862ffbaef5a875
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 6564bd4d2c8c88c4415be8c19e8a0b791d48dea9
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47713530"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68263366"
 ---
 # <a name="use-the-toolbox"></a>ツールボックスの使用
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

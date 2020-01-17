@@ -1,7 +1,7 @@
 ---
 title: 2 台のサーバーでの同じ対称キーの作成 | Microsoft Docs
 ms.custom: ''
-ms.date: 01/02/2019
+ms.date: 05/30/2019
 ms.prod: sql
 ms.reviewer: vanto
 ms.technology: security
@@ -9,16 +9,15 @@ ms.topic: conceptual
 helpviewer_keywords:
 - symmetric keys [SQL Server], creating
 ms.assetid: a13d0b21-a43b-43c0-9c22-7ba8f3d15e80
-author: aliceku
-ms.author: aliceku
-manager: craigg
+author: jaszymas
+ms.author: jaszymas
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: d2f8de3783e7d169e1458170d10db61ad9ac680a
-ms.sourcegitcommit: fa2f85b6deeceadc0f32aa7f5f4e2b6e4d99541c
+ms.openlocfilehash: a64aac5fa64a7ace7c55f7fb3c7b70b8cf9e44c9
+ms.sourcegitcommit: 39ea690996a7390e3d13d6fb8f39d8641cd5f710
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/03/2019
-ms.locfileid: "53997564"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "74957468"
 ---
 # <a name="create-identical-symmetric-keys-on-two-servers"></a>2 台のサーバーでの同じ対称キーの作成
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -90,9 +89,23 @@ ms.locfileid: "53997564"
     CLOSE SYMMETRIC KEY [key_DataShare];  
     GO  
     ```  
-  
- 詳細については、以下を参照してください。  
-  
+
+### <a name="encryption-changes-in-sql-server-2017-cu2"></a>SQL Server 2017 CU2 における暗号化の変更
+
+SQL Server 2016 では、その暗号化処理に SHA1 ハッシュ アルゴリズムが使用されます。 SQL Server 2017 以降は、代わりに SHA2 が使用されます。 つまり、SQL Server 2016 で暗号化されたアイテムを SQL Server 2017 インストールで復号化するには、追加の手順が必要な場合があります。 追加の手順を次に示します。
+
+- SQL Server 2017 が累積的な更新プログラム 2 (CU2) 以上に更新されていることを確認します。
+  - 重要な詳細情報については、[SQL Server 2017 用の累積的な更新プログラム 2 (CU2)](https://support.microsoft.com/help/4052574) に関するページを参照してください。
+- CU2 をインストールした後、SQL Server 2017 でトレース フラグ 4631 を有効にします: `DBCC TRACEON(4631, -1);`
+  - トレース フラグ 4631 は SQL Server 2017 の新機能です。 SQL Server 2017 でマスター キー、証明書、または対称キーを作成するには、まずトレース フラグ 4631 をグローバルに `ON` にする必要があります。 これにより、作成したこれらのアイテムが、SQL Server 2016 以前のバージョンと相互運用できるようになります。
+
+詳細なガイドについては、次を参照してください。
+
+- [修正: SQL Server 2017 は同じ対称キーを使用して SQL Server の以前のバージョンで暗号化されたデータを解読できません。](https://support.microsoft.com/help/4053407/sql-server-2017-cannot-decrypt-data-encrypted-by-earlier-versions)
+- [SQL Server 2017 と他のバージョンの SQL Server の間で、同一の対称キーが機能しない](https://feedback.azure.com/forums/908035-sql-server/suggestions/33116269-identical-symmetric-keys-do-not-work-between-sql-s) <!-- Issue 2225. Thank you Stephen W and Sam Rueby. -->
+
+## <a name="for-more-information"></a>詳細情報
+
 -   [CREATE MASTER KEY &#40;Transact-SQL&#41;](../../../t-sql/statements/create-master-key-transact-sql.md)  
   
 -   [CREATE CERTIFICATE &#40;Transact-SQL&#41;](../../../t-sql/statements/create-certificate-transact-sql.md)  

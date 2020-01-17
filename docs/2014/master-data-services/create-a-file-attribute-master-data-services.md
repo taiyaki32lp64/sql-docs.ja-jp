@@ -10,15 +10,15 @@ helpviewer_keywords:
 - creating file attributes [Master Data Services]
 - attributes [Master Data Services], creating file attributes
 ms.assetid: d224886b-2ef1-4658-8b01-2213cc4b8df6
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 435f68e67080bf006b0c0f121f565ced2339a705
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 387613e12af3435a2a8eb9e3f630f61acaf28a8d
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52765344"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65479991"
 ---
 # <a name="create-a-file-attribute-master-data-services"></a>ファイル属性を作成する (マスター データ サービス)
   [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]でファイル属性を作成して、ファイルで属性値を設定します。  
@@ -66,7 +66,7 @@ ms.locfileid: "52765344"
   
 13. **[エンティティのメンテナンス]** ページで **[エンティティの保存]** をクリックします。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [属性 (マスター データ サービス)](../../2014/master-data-services/attributes-master-data-services.md)   
  [属性名を変更&#40;マスター データ サービス&#41;](change-an-attribute-name-and-data-type-master-data-services.md)   
  [ドメイン ベースの属性を作成する &#40;マスター データ サービス&#41;](../../2014/master-data-services/create-a-domain-based-attribute-master-data-services.md)   

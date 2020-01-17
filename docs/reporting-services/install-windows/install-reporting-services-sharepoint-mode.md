@@ -9,15 +9,15 @@ helpviewer_keywords:
 - installing Reporting Services, SharePoint integrated mode
 - installation options [Reporting Services]
 ms.assetid: ac6cba68-2665-4a39-8fa3-cb7d7e6723c0
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 1aca33e3978b89ccf5f4423e76f0e2ba7888e6a6
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
-ms.translationtype: HT
+ms.openlocfilehash: c0ffb0df6ee5e64e79cd232e07f8ab124dfee530
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52406519"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62514477"
 ---
 # <a name="install-reporting-services-2016-in-sharepoint-mode"></a>SharePoint モードで Reporting Services 2016 をインストールする
 

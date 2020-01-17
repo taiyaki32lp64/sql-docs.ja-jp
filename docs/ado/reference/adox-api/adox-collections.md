@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: c0c90ba9-0471-4381-96f1-376de22fa2ee
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: e044c08c45bc71f51eca16a891d8920a9e42cad6
-ms.sourcegitcommit: 1e28f923cda9436a4395a405ebda5149202f8204
+ms.openlocfilehash: 453836f30e74dd604efe28d309ca69ea2ca26684
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/25/2019
-ms.locfileid: "55044578"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67928604"
 ---
 # <a name="adox-collections"></a>ADOX のコレクション
 
@@ -29,12 +28,12 @@ ms.locfileid: "55044578"
 |[グループ](../../../ado/reference/adox-api/groups-collection-adox.md)|すべてを含む保存**グループ**カタログまたはユーザーのオブジェクト。|  
 |[[インデックス]](../../../ado/reference/adox-api/indexes-collection-adox.md)|すべてを含む**インデックス**テーブルのオブジェクト。|  
 |[[キー]](../../../ado/reference/adox-api/keys-collection-adox.md)|すべてを含む**キー**テーブルのオブジェクト。|  
-|[プロシージャ](../../../ado/reference/adox-api/procedures-collection-adox.md)|すべてを含む**プロシージャ**カタログのオブジェクト。|  
+|[手順](../../../ado/reference/adox-api/procedures-collection-adox.md)|すべてを含む**プロシージャ**カタログのオブジェクト。|  
 |[テーブル](../../../ado/reference/adox-api/tables-collection-adox.md)|すべてを含む**テーブル**カタログのオブジェクト。|  
 |[ユーザー](../../../ado/reference/adox-api/users-collection-adox.md)|すべてを含む保存**ユーザー**カタログまたはグループのオブジェクト。|  
 |[ビュー](../../../ado/reference/adox-api/views-collection-adox.md)|すべてを含む**ビュー**カタログのオブジェクト。|  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [ADOX の API リファレンス](../../../ado/reference/adox-api/adox-api-reference.md)   
  [ADOX オブジェクト モデル](../../../ado/reference/adox-api/adox-object-model.md)   
  [ADOX オブジェクト](../../../ado/reference/adox-api/adox-objects.md)   

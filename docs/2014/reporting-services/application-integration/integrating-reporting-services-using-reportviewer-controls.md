@@ -4,23 +4,21 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- docset-sql-devref
-- reporting-services-native
+ms.technology: reporting-services
 ms.topic: reference
 helpviewer_keywords:
 - ReportViewer controls
 - integrating reports [Reporting Services]
 ms.assetid: 3ba47fb4-73a9-4059-89fd-329adebe94a8
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: a9dbcf9efdb4febaf6a6647e754d31380e575727
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: cbaa41c75297d62e84cfc808463214d19c4ff8fa
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56009554"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63126275"
 ---
 # <a name="integrating-reporting-services-using-the-reportviewer-controls"></a>ReportViewer コントロールを使用した Reporting Services の統合
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsOrcas](../../includes/vsorcas-md.md)] レポート表示機能をアプリケーションに統合するためには、2 つの ReportViewer コントロールを提供します。 Windows フォームベース アプリケーション用のバージョンと Web フォーム アプリケーション用のバージョンがあります。 それぞれのコントロールは同様の機能を持っていますが、別々の環境を対象にして設計されています。 どちらのコントロールも、レポート サーバーに配置されたレポートの処理 (リモート処理モード) または [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] がインストールされていないコンピューターにコピーされたレポートの処理 (ローカル処理モード) を行うことができます。  
@@ -44,6 +42,6 @@ ms.locfileid: "56009554"
   
 ## <a name="see-also"></a>参照  
  [アプリケーションへの Reporting Services の統合](../application-integration/integrating-reporting-services-into-applications.md)   
- [Visual Studio (Curated Answer) を使用して SSRS レポートを作成します。](https://go.microsoft.com/fwlink/?LinkId=321991)  
+ [Visual Studio (ブログ) を使用して SSRS レポートを作成します。](https://jwcooney.com/2015/01/07/ssrs-basics-set-up-visual-studio-to-write-a-new-ssrs-report/)  
   
   

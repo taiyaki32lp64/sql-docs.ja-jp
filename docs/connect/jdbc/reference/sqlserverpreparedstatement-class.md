@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: a8481c06-fbba-432b-8c69-4f4619c20ad4
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 529f93e136ac2515e13fb69866ff5b570557cd0b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 96d2e01d4ca8d38b79906ee31cc5b50df0d8cb25
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47741270"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67970760"
 ---
 # <a name="sqlserverpreparedstatement-class"></a>SQLServerPreparedStatement クラス
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -41,7 +40,7 @@ public class SQLServerPreparedStatement
   
  SQLServerPreparedStatement ではバッチ処理がサポートされており、準備されたステートメントのセットが単一のデータベースのラウンド トリップで実行され、実行時パフォーマンスが向上します。  
   
- このクラスは、SQLServerPreparedStatement クラス、ISQLServerPreparedStatement インターフェイス、java.sql.PreparedStatement インターフェイス、クラスおよびアンラッピング用 SQLServerStatement でサポートされるインターフェイスへのアンラッピングをサポートしています。 詳細については、次を参照してください。[ラッパーとインターフェイス](../../../connect/jdbc/wrappers-and-interfaces.md)します。  
+ このクラスは、SQLServerPreparedStatement クラス、ISQLServerPreparedStatement インターフェイス、PreparedStatement インターフェイス、およびラップ解除用に SQLServerStatement によってサポートされるクラスとインターフェイスへのラップをサポートしています。 詳細については、「[ラッパーとインターフェイス](../../../connect/jdbc/wrappers-and-interfaces.md)」を参照してください。  
   
 ## <a name="see-also"></a>参照  
  [SQLServerPreparedStatement のメンバー](../../../connect/jdbc/reference/sqlserverpreparedstatement-members.md)   

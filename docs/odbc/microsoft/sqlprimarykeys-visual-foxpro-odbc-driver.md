@@ -12,21 +12,20 @@ helpviewer_keywords:
 ms.assetid: 8dbe2903-efdc-45e0-a079-9e357c5fd81b
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 3eeafa338fea31741609e6f9a9b32a4128ebd87d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e85e60cde86c9483e69a8c43de14ef64eb914119
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47765610"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68030705"
 ---
 # <a name="sqlprimarykeys-visual-foxpro-odbc-driver"></a>SQLPrimaryKeys (Visual FoxPro ODBC ドライバー)
 > [!NOTE]  
 >  このトピックでには、Visual FoxPro ODBC ドライバー固有の情報が含まれています。 この関数の詳細については、該当するトピックを参照してください。 [ODBC API リファレンス](../../odbc/reference/syntax/odbc-api-reference.md)します。  
   
- サポート: 完全な  
+ サポート:[完全]  
   
- ODBC API 準拠: レベル 2  
+ ODBC API 準拠:レベル 2  
   
  テーブルの主キーを構成する列の名前を返します。 Visual FoxPro ODBC ドライバー実装**SQLPrimaryKeys**ように動作します。  
   

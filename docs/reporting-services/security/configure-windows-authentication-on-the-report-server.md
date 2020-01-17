@@ -2,21 +2,21 @@
 title: レポート サーバーで Windows 認証を構成する | Microsoft Docs
 ms.date: 08/26/2016
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: security
 ms.topic: conceptual
 helpviewer_keywords:
 - Windows authentication [Reporting Services]
 - Reporting Services, configuration
 ms.assetid: 4de9c3dd-0ee7-49b3-88bb-209465ca9d86
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 992239e7b2e07ac555eb2c474716f341bf4d7870
-ms.sourcegitcommit: c19696d3d67161ce78aaa5340964da3256bf602d
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 47cba9b26c56a41b6741211f1f9d228884b32b5b
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/29/2018
-ms.locfileid: "52617802"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66499945"
 ---
 # <a name="configure-windows-authentication-on-the-report-server"></a>レポート サーバーで Windows 認証を構成する
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] は、既定では、ネゴシエート認証または NTLM 認証を指定する要求を受け入れます。 これらのセキュリティ プロバイダーを使用するクライアント アプリケーションおよびブラウザーが配置に含まれている場合は、追加の構成なしで既定値を使用できます。 Windows 統合セキュリティの別のセキュリティ プロバイダーを使用する場合 (たとえば Kerberos を直接使用する場合)、または既定値を変更した後に元の設定を復元する場合は、このトピックの情報を使用して、レポート サーバーで認証設定を指定できます。  
@@ -130,7 +130,7 @@ ms.locfileid: "52617802"
   
 -   ドメイン ユーザー アカウントでレポート サーバー サービスの SPN を登録します。 詳細については、「[レポート サーバーのサービス プリンシパル名 &#40;SPN&#41; の登録](../../reporting-services/report-server/register-a-service-principal-name-spn-for-a-report-server.md)」を参照してください。  
   
--   ネットワーク サービスなどのビルトイン アカウントで実行されるように、サービス アカウントを変更します。 ビルトイン アカウントは、HTTP SPN を Host SPN にマップします。これは、コンピューターをネットワークに追加するときに定義されます。 詳細については、「[サービス アカウントの構成 (SSRS 構成マネージャー)](https://msdn.microsoft.com/library/25000ad5-3f80-4210-8331-d4754dc217e0)」を参照してください。  
+-   ネットワーク サービスなどのビルトイン アカウントで実行されるように、サービス アカウントを変更します。 ビルトイン アカウントは、HTTP SPN を Host SPN にマップします。これは、コンピューターをネットワークに追加するときに定義されます。 詳細については、「[サービス アカウントの構成 (SSRS 構成マネージャー)](../install-windows/configure-the-report-server-service-account-ssrs-configuration-manager.md)」を参照してください。
   
 -   NTLM を使用します。 NTLM は一般に、Kerberos 認証が失敗した場合に機能します。 NTLM を使用するには、RSReportServer.config ファイルから **RSWindowsNegotiate** を削除し、 **RSWindowsNTLM** のみが指定されていることを確認します。 この方法を選択すれば、SPN を定義していないドメイン ユーザー アカウントでも、引き続きレポート サーバー サービスに使用できます。  
   

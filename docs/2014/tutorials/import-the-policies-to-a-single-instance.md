@@ -11,11 +11,11 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: 410f3a317a9d3ad2f8cab52d9f57fd4a63c1c36c
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56014149"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62865101"
 ---
 # <a name="import-the-policies-to-a-single-instance"></a>単一インスタンスへのポリシーのインポート
   ここでは、スケジュールするベスト プラクティス ポリシーを [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] の単一インスタンス上のポリシー ベースの管理にインポートします。  
@@ -31,7 +31,7 @@ ms.locfileid: "56014149"
   
 3.  右クリックして**ポリシー**、 をクリックし、**ポリシーのインポート**します。  
   
-4.  **インポート** ダイアログ ボックスの横に、**ファイルをインポートする**ボックスで、省略記号ボタンをクリックします (**.**) ボタンをクリックします。  
+4.  **インポート** ダイアログ ボックスの横に、**ファイルをインポートする**ボックスで、省略記号ボタンをクリックします ( **.** ) ボタンをクリックします。  
   
 5.  **ファイルの場所**一覧で、ベスト プラクティス ポリシーを格納している次のフォルダーに移動します。  
   

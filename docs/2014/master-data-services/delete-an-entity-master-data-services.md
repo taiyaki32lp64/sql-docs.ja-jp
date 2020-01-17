@@ -10,15 +10,15 @@ helpviewer_keywords:
 - entities [Master Data Services], deleting
 - deleting entities [Master Data Services]
 ms.assetid: 71fffb03-38fd-46f0-9e10-6ec75da19ab2
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 0767322f3adc8e8766c12ee963183c152f97767d
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 8bcadc041fd1f2c4fd708fbc79ab52d0c0472956
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52755369"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65479577"
 ---
 # <a name="delete-an-entity-master-data-services"></a>エンティティを削除する (マスター データ サービス)
   [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]でエンティティを削除して、そのエンティティのすべてのメンバーおよび属性を削除します。  
@@ -49,7 +49,7 @@ ms.locfileid: "52755369"
   
 7.  追加の確認のダイアログ ボックスで **[OK]** をクリックします。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [エンティティ (マスター データ サービス)](../../2014/master-data-services/entities-master-data-services.md)   
  [エンティティを作成する (マスター データ サービス)](../../2014/master-data-services/create-an-entity-master-data-services.md)  
   

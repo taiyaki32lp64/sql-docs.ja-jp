@@ -25,13 +25,12 @@ helpviewer_keywords:
 ms.assetid: 350684e8-b3f6-4b58-9dbc-0f05cc776ebb
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: d79f0859a79496878ce0ca257b66bb3635d1380d
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 28409675fda41f030e82337b1fcf0f1a6ec5821e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56042804"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67927725"
 ---
 # <a name="create-xml-schema-collection-transact-sql"></a>CREATE XML SCHEMA COLLECTION (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -163,16 +162,16 @@ CREATE XML SCHEMA COLLECTION MyCollection AS @MySchemaCollection
   
  詳細については、「 [格納されている XML スキーマ コレクションの表示](../../relational-databases/xml/view-a-stored-xml-schema-collection.md)」を参照してください。  
   
- スキーマ コレクションを格納する、**xml** 型の列です。 この場合、XML スキーマ コレクションを作成するには、次のようにします。  
+ スキーマ コレクションを格納する、**xml** 型の列です。 この場合、XML スキーマ コレクションを作成するには、次の操作を行います。  
   
 1.  SELECT ステートメントを使用して列からスキーマ コレクションを取得し、**xml** 型または **varchar** 型の変数に割り当てます。  
   
 2.  CREATE XML SCHEMA COLLECTION ステートメントで変数名を指定します。  
   
- CREATE XML SCHEMA COLLECTION には、SQL Server で認識されるスキーマ コンポーネントだけが格納されます。XML スキーマ内のすべての要素がデータベースに格納されるわけではありません。 したがって、XML スキーマ コレクションを、提供されたときと同じ状態に戻す場合は、データベース列またはコンピューター上の他のフォルダーに XML スキーマを保存することをお勧めします。  
+ CREATE XML SCHEMA COLLECTION には、SQL Server で認識されるスキーマ コンポーネントだけが格納されます。XML スキーマ内のすべてがデータベースに格納されるわけではありません。 したがって、XML スキーマ コレクションを、提供されたときと同じ状態に戻す場合は、データベース列またはコンピューター上の他のフォルダーに XML スキーマを保存することをお勧めします。  
   
 ### <a name="b-specifying-multiple-schema-namespaces-in-a-schema-collection"></a>B. スキーマ コレクションに複数のスキーマ名前空間を指定する  
- XML スキーマ コレクションを作成するときには、複数の XML スキーマを指定できます。 例 :  
+ XML スキーマ コレクションを作成するときには、複数の XML スキーマを指定できます。 例:  
   
 ```  
 CREATE XML SCHEMA COLLECTION MyCollection AS N'  
@@ -250,7 +249,7 @@ WHERE  sys.xml_schema_namespaces.name='';
 ```  
   
 ### <a name="d-using-an-xml-schema-collection-and-batches"></a>D. XML スキーマ コレクションとバッチを使用する  
- スキーマ コレクションを作成したバッチ内で、そのスキーマ コレクションを参照することはできません。 スキーマ コレクションを、作成した同じバッチ内で参照すると、コレクションが存在しないというエラーが発生します。 次の例は動作しますが、`GO` を削除し、同じバッチ内で、`xml` 変数を入力するために XML スキーマ コレクションを参照しようとすると、エラーが返されます。  
+ スキーマ コレクションを作成した同じバッチ内で、そのスキーマ コレクションを参照することはできません。 作成した同じバッチ内でコレクションを参照しようとすると、コレクションが存在しないというエラーを受け取ります。 次の例は動作しますが、`GO` を削除し、同じバッチ内で、`xml` 変数を入力するために XML スキーマ コレクションを参照しようとすると、エラーが返されます。  
   
 ```  
 CREATE XML SCHEMA COLLECTION mySC AS '  

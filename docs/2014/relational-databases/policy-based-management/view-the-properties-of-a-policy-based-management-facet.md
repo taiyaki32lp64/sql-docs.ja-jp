@@ -13,11 +13,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: c819fc7fb3b1cc73b67362a0eabd82ad33946fbc
-ms.sourcegitcommit: 78e32562f9c1fbf2e50d3be645941d4aa457e31f
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/08/2019
-ms.locfileid: "54100299"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62676865"
 ---
 # <a name="view-the-properties-of-a-policy-based-management-facet"></a>ポリシー ベースの管理ファセットのプロパティの表示
   このトピックでは、 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] を使用して、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]でポリシー ベースの管理ファセットのプロパティを表示する方法について説明します。  
@@ -51,7 +51,7 @@ ms.locfileid: "54100299"
   
 4.  プラス記号をクリックして **[ファセット]** フォルダーを展開します。  
   
-5.  プロパティを表示するファセットを右クリックし、 **[プロパティ]** をクリックします。 使用できるオプションの詳細については、**ファセットのプロパティ -**_facet_name_ダイアログ ボックスを参照してください[ファセットのプロパティ ダイアログ ボックスの [全般] ページ](../../integration-services/general-page-of-integration-services-designers-options.md)、 [ファセットのプロパティ ダイアログ ボックスの [依存ポリシー] ページ](facet-properties-dialog-box-dependent-policies-page.md)、および[ファセットのプロパティ ダイアログ ボックスの [依存条件] ページ](facet-properties-dialog-box-dependent-conditions-page.md)します。  
+5.  プロパティを表示するファセットを右クリックし、 **[プロパティ]** をクリックします。 **[ファセットのプロパティ -** facet_name _]_ ダイアログ ボックスで使用可能なオプションの詳細については、「[[ファセットのプロパティ] ダイアログ ボックスの [全般] ページ](../../integration-services/general-page-of-integration-services-designers-options.md)」、「[[ファセットのプロパティ] ダイアログ ボックスの [依存ポリシー] ページ](facet-properties-dialog-box-dependent-policies-page.md)」、「[[ファセットのプロパティ] ダイアログ ボックスの [依存条件] ページ](facet-properties-dialog-box-dependent-conditions-page.md)」をご覧ください。  
   
 6.  完了したら、 **[閉じる]** をクリックします。  
   

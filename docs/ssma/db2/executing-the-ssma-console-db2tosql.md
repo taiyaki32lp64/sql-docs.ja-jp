@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: ce63f633-067d-4f04-b8e9-e1abd7ec740b
 author: Shamikg
 ms.author: Shamikg
-manager: craigg
-ms.openlocfilehash: 6750e17b694086cf716e32629fcf3b3f3b48f486
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: 64348e33502e8407e567b8901890246344765f4f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52395195"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67989683"
 ---
 # <a name="executing-the-ssma-console-db2tosql"></a>SSMA コンソール (DB2ToSQL) の実行
 Microsoft は、ファイルのコマンドを実行し、SSMA アクティビティを制御する堅牢なスクリプトのセットを提供します。 次のセクションでは、同じについて説明します。 コンソール アプリケーションは、このセクションでは、列挙型として標準的なスクリプト ファイルの特定のコマンドを使用します。  

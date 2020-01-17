@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 5abeb9cc-4070-4f43-a80d-ad6a2004e5f3
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 1c7800e7da867b4eb0c34fa3feeba5edb2d41cd6
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: c2c229d31941d5cef0da253545cecd7d1496ee4a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47721040"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68076821"
 ---
 # <a name="deferred-fields"></a>遅延フィールド
 値*フィールドを遅延*設定されているが、ドライバーは、遅延の影響用の変数のアドレスを保存する場合は使用しません。 ドライバー、アプリケーション パラメーター記述子への呼び出し時に、変数の内容を使用して**SQLExecDirect**または**SQLExecute**します。 アプリケーションの追加行記述子では、ドライバーはフェッチ時に、変数の内容を使用します。  

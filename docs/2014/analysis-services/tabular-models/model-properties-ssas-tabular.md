@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.bidtoolset.fileprop.f1
@@ -14,12 +13,12 @@ ms.assetid: 8ab04656-75a5-485c-9687-7b1ca49f7f80
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: d87af32662b9b971d3ba983d38f3df39b5a3202c
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 47ca12ee0118e0c2b63da05cf2d508ec0c2f5f92
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52502570"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66066961"
 ---
 # <a name="model-properties-ssas-tabular"></a>モデルのプロパティ (SSAS テーブル)
   このトピックでは、テーブル モデル プロパティについて説明します。 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] の各テーブル モデル プロジェクトには、作成中のモデルの構築とバックアップの方法やワークスペース データベースの保存方法に影響するモデルのプロパティが含まれています。 ここで説明するモデルのプロパティは、既に配置されているモデルには適用されません。  

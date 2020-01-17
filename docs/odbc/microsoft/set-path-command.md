@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: db488d1e-0963-4f45-8c76-a23b9bde9e9d
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: f3d810e66249779b2d3706e92ea39f89a0f87cff
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 57685731bc5eb86381816d0cbb91a4942b5bfeff
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47727550"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68063645"
 ---
 # <a name="set-path-command"></a>SET PATH コマンド
 ファイルの検索のパスを指定します。 ドライバー固有の情報は、「解説」を参照してください。  
@@ -50,7 +49,7 @@ SET PATH TO [Path]
   
  作成、選択、またはデータ ソースで指定されている以外のディレクトリ内のテーブルを更新する場合、コマンドを使用して、ファイルの完全なパスを指定します。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [ODBC Visual FoxPro セットアップ ダイアログ ボックス](../../odbc/microsoft/odbc-visual-foxpro-setup-dialog-box.md)   
  [SQLColumns (Visual FoxPro ODBC ドライバー)](../../odbc/microsoft/sqlcolumns-visual-foxpro-odbc-driver.md)   
  [SQLDriverConnect (Visual FoxPro ODBC ドライバー)](../../odbc/microsoft/sqldriverconnect-visual-foxpro-odbc-driver.md)   

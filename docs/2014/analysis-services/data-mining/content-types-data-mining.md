@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - columns [data mining], content types
@@ -27,12 +26,12 @@ ms.assetid: 2dacd968-70e8-4993-88b6-a6d36024a4e4
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 2ee6c08cf0b9c2cba8e8931e0949734f2afa66e9
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 1cf75c9f6fc12ea84d15aebff5c50d11dd0fd924
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48190092"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66085658"
 ---
 # <a name="content-types-data-mining"></a>コンテンツの種類 (データ マイニング)
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]では、マイニング構造の列に対して物理データ型を定義することも、モデルに使用されている列に対して論理的なコンテンツの種類を定義することもできます。  
@@ -50,14 +49,14 @@ ms.locfileid: "48190092"
   
  不連続の属性列の値には、値が数値であっても順序の意味は含まれません。 さらに、不連続列に対して使用された値は、数値であっても小数部を計算することはできません。 市外局番コードは、不連続の数値データの好例です。  
   
- `Discrete`コンテンツの種類がすべてのデータ マイニング データ型によってサポートされています。  
+ コンテンツの種類 `Discrete` は、すべてのデータ マイニング データ型によってサポートされています。  
   
 ## <a name="continuous"></a>Continuous  
  *Continuous* は、この列に中間値が許可されるスケールの数値データを表す値が格納されることを表します。 有限の数えられるデータを表す不連続列とは異なり、連続列は無限の小数部が含まれる可能性のある計測可能な測定値を表します。 連続した属性列の例としては気温の列があります。  
   
  連続する数値データが列に含まれ、そのデータがどのように分布するかがわかっている場合は、期待される値の分布を指定することで、分析の精度を高めることができます。 列の分布は、マイニング構造レベルで指定します。 このため、設定はその構造に基づくすべてのモデルに適用されます。詳細については、「[列の分布 (データ マイニング)](column-distributions-data-mining.md)」を参照してください。  
   
- `Continuous`コンテンツの種類は、次のデータ型でサポートされて: `Date`、 `Double`、および`Long`します。  
+ コンテンツの種類 `Continuous` は、`Date`、`Double`、および `Long` の各データ型によってサポートされています。  
   
 ## <a name="discretized"></a>Discretized  
  *分離* とは、連続した一連のデータの値をバケットに分割して、限定された数の可能な値を生成するプロセスです。 数値データだけを分離できます。  
@@ -68,22 +67,22 @@ ms.locfileid: "48190092"
   
  コンテンツの種類 `Discretized` は、`Date`、`Double`、`Long`、および `Text` の各データ型によってサポートされています。  
   
-## <a name="key"></a>Key  
- コンテンツの種類 *key* は、この列が行を一意に識別することを表します。 ケース テーブルの場合、通常、キー列は数値またはテキストの識別子です。 コンテンツ タイプを設定した`key`追跡レコードには、分析するため、列を使用しないことを示します。  
+## <a name="key"></a>キー  
+ コンテンツの種類 *key* は、この列が行を一意に識別することを表します。 ケース テーブルの場合、通常、キー列は数値またはテキストの識別子です。 コンテンツの種類を `key` に設定すると、分析には使用しない、レコードの追跡専用の列であることが示されます。  
   
- 入れ子になったテーブルにもキーはありますが、入れ子になったテーブルのキーは使い方が多少異なります。 コンテンツ タイプを設定した`key`で入れ子になったテーブル列の属性を分析したい場合。 入れ子になったテーブルのキーの値は各ケースで一意である必要がありますが、ケースのセット全体では重複していてもかまいません。  
+ 入れ子になったテーブルにもキーはありますが、入れ子になったテーブルのキーは使い方が多少異なります。 入れ子になったテーブルでコンテンツの種類を `key` に設定するのは、その列が分析する属性である場合です。 入れ子になったテーブルのキーの値は各ケースで一意である必要がありますが、ケースのセット全体では重複していてもかまいません。  
   
  たとえば、顧客が購入する製品を分析する場合は、ケース テーブルの **CustomerID** 列のコンテンツの種類を key に設定し、入れ子になったテーブルの **PurchasedProducts** 列のコンテンツの種類も key に設定します。  
   
 > [!NOTE]  
 >  入れ子になったテーブルを使用できるのは、Analysis Services のデータ ソース ビューとして定義されている外部データ ソースのデータを使用する場合だけです。  
   
- このコンテンツの種類は、次のデータ型でサポートされて: `Date`、 `Double`、 `Long`、および`Text`します。  
+ このコンテンツの種類は、`Date`、`Double`、`Long`、および `Text` の各データ型によってサポートされています。  
   
 ## <a name="key-sequence"></a>Key Sequence  
  コンテンツの種類 *key sequence* は、シーケンス クラスター モデルでのみ使用できます。 コンテンツの種類を `key sequence` に設定すると、一連のイベントを表す値を格納する列であることが示されます。 値は順序付けされていますが、互いに等間隔である必要はありません。  
   
- このコンテンツの種類は、次のデータ型でサポートされて: `Double`、 `Long`、 `Text`、および`Date`します。  
+ このコンテンツの種類は、`Double`、`Long`、`Text`、および `Date` の各データ型によってサポートされています。  
   
 ## <a name="key-time"></a>[キー時刻]  
  コンテンツの種類 *key time* は、時系列モデルでのみ使用できます。 コンテンツの種類を `key time` に設定すると、値が順序付きであり時系列を表す値であることが示されます。  
@@ -112,10 +111,10 @@ ms.locfileid: "48190092"
 ## <a name="classified"></a>分類済み  
  すべてのモデルで共通して使用される上記のコンテンツの種類の他にも、分類済みの列を使用して、一部のデータ型に対してコンテンツの種類を定義できます。 分類済みの列の詳細については、「[分類済みの列 (データ マイニング)](classified-columns-data-mining.md)」を参照してください。  
   
-## <a name="see-also"></a>参照  
- [コンテンツの種類&#40;DMX&#41;](/sql/dmx/content-types-dmx)   
- [データ型&#40;データ マイニング&#41;](data-types-data-mining.md)   
- [データ型&#40;DMX&#41;](/sql/dmx/data-types-dmx)   
+## <a name="see-also"></a>関連項目  
+ [コンテンツの種類 (DMX)](/sql/dmx/content-types-dmx)   
+ [データ型 (データ マイニング)](data-types-data-mining.md)   
+ [データ型 &#40;DMX&#41;](/sql/dmx/data-types-dmx)   
  [マイニング構造のプロパティの変更](change-the-properties-of-a-mining-structure.md)   
  [マイニング構造列](mining-structure-columns.md)  
   

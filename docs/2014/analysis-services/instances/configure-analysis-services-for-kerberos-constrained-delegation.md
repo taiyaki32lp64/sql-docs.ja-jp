@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: 6d751477-6bf1-48b4-8833-5a631bbe7650
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 20e8a9d7b360b9b161d994805ff713840962be41
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: cfceb6b2314f9e57d6d383312d9f9373f7df1621
+ms.sourcegitcommit: 93d1566b9fe0c092c9f0f8c84435b0eede07019f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53350054"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67832921"
 ---
 # <a name="configure-analysis-services-for-kerberos-constrained-delegation"></a>Kerberos の制約付き委任のための Analysis Services の構成
   Kerberos 認証用に Analysis Services を構成する際は、通常、データを照会するときに Analysis Services でユーザー ID の権限を借用すること、Analysis Services でユーザー ID を下位レベル サービスに委任すること、またはその両方を実現することが重要になります。 これらのシナリオで求められる構成要件はそれぞれ異なります。 どちらのシナリオでも、構成が正しく行われたことを確認するための検証が必要になります。  
@@ -110,7 +109,7 @@ ms.locfileid: "53350054"
   
  徹底的なテストを行うには、ネットワーク上の Kerberos 要求と応答を取得できるネットワーク監視ツールを使用する必要があります。 このタスクには、Kerberos 用にフィルター処理されたネットワーク モニター ユーティリティ (netmon.exe) を使用できます。 Netmon 3.4 などのツールを使用して、Kerberos 認証をテストの詳細については、次を参照してください。 [Kerberos 認証を構成します。コア構成 (SharePoint Server 2010)](https://technet.microsoft.com/library/gg502602\(v=office.14\).aspx)します。  
   
- また、Active Directory オブジェクトの [プロパティ] ダイアログ ボックスにある [委任] タブの各オプションの詳細な説明については、「 [Active Directory 内で最も紛らわしいダイアログ ボックス](http://windowsitpro.com/windows/most-confusing-dialog-box-active-directory) 」をご覧ください。 この記事ではまた、LDP を使ってテストし、テスト結果を解釈する方法を説明します。  
+ また、Active Directory オブジェクトの [プロパティ] ダイアログ ボックスにある [委任] タブの各オプションの詳細な説明については、「 [Active Directory 内で最も紛らわしいダイアログ ボックス](https://www.itprotoday.com/active-directory/most-confusing-dialog-box-active-directory) 」をご覧ください。 この記事ではまた、LDP を使ってテストし、テスト結果を解釈する方法を説明します。  
   
 ## <a name="see-also"></a>参照  
  [Microsoft BI 認証と ID 委任](https://go.microsoft.com/fwlink/?LinkID=286576)   

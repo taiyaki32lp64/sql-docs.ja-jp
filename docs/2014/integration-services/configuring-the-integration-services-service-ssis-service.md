@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords:
 - Integration Services service, configuring
@@ -13,15 +12,15 @@ helpviewer_keywords:
 - service [Integration Services], configuring
 - default configuration files
 ms.assetid: 36d78393-a54c-44b0-8709-7f003f44c27f
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 4fd38d33bf0ed5d074fe2784dfba38348342df98
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 600858e3d7b2ea29a30541c559aa764b4085f7cd
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53359684"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66060496"
 ---
 # <a name="configuring-the-integration-services-service-ssis-service"></a>Integration Services サービスの構成 (SSIS サービス)
     

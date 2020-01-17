@@ -14,18 +14,17 @@ helpviewer_keywords:
 ms.assetid: 459c29cb-4230-42bf-8cc2-f3132ccc7aba
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: a8507be55ae84a3a03fd75871106bc39e0631d89
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: c4d6f86539e1abc7ee74087b130e0186322346e8
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47678430"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67925674"
 ---
 # <a name="cursor-and-lock-characteristics"></a>カーソルとロックの特性
 カーソルの特性は、プロバイダーの機能に依存して、次の長所と短所一般的に適用されますカーソルとロックのさまざまな種類。  
   
-|カーソルまたはロックの種類|利点があります。|欠点|  
+|カーソルまたはロックの種類|長所|欠点|  
 |-------------------------|----------------|-------------------|  
 |**adOpenForwardOnly**|-低のリソース要件|-逆方向にスクロールことはできません。<br />-データの同時実行|  
 |**adOpenStatic**|スクロール|-データの同時実行|  

@@ -1,3 +1,11 @@
+---
+ms.openlocfilehash: bf755ccfe5a1a6816129173dcb6ad5050ea5e114
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68213318"
+---
 
 ## <a name="add-a-database-to-the-availability-group"></a>可用性グループにデータベースを追加する
 
@@ -7,7 +15,7 @@
 CREATE DATABASE [db1];
 ALTER DATABASE [db1] SET RECOVERY FULL;
 BACKUP DATABASE [db1]
-   TO DISK = N'/var/opt/mssql/data/db1.bak';
+   TO DISK = N'c:\Program Files\Microsoft SQL Server\MSSQL14.MSSQLSERVER\MSSQL\Backup\db1.bak';
 ```
 
 `db1` という名前のデータベースを `ag1` という名前の可用性グループに追加するには、プライマリ SQL Server レプリカで、次の Transact-SQL スクリプトを実行します。

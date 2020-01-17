@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 08/10/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 helpviewer_keywords:
 - Reporting Services Configuration tool
@@ -13,15 +12,15 @@ helpviewer_keywords:
 - report servers [Reporting Services], configuring
 - components [Reporting Services], Reporting Services Configuration tool
 ms.assetid: 379eab68-7f13-4997-8d64-38810240756e
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: craigg
-ms.openlocfilehash: 285170d1860d7ba19102e2476758ed951bfe06c4
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: e7b5e46b90702bf39bf2902eed3e5a6c609757e0
+ms.sourcegitcommit: ffe2fa1b22e6040cdbd8544fb5a3083eed3be852
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48209792"
+ms.lasthandoff: 10/04/2019
+ms.locfileid: "71952491"
 ---
 # <a name="reporting-services-configuration-manager-native-mode"></a>Reporting Services 構成マネージャー (ネイティブ モード)
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] のネイティブ モード インストールを構成するには、 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 構成マネージャーを使用します。 ファイルのみのインストール オプションを使用してレポート サーバーをインストールした場合は、構成マネージャーを使用して、サーバーを使用するための構成を行う必要があります。 既定の構成のインストール オプションを使用してレポート サーバーをインストールした場合は、構成マネージャーを使用して、セットアップ時に指定した設定の確認や変更を行うことができます。 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 構成マネージャーでは、ローカルまたはリモートのレポート サーバー インスタンスを構成できます。  
@@ -29,7 +28,7 @@ ms.locfileid: "48209792"
  [!INCLUDE[applies](../../includes/applies-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] ネイティブ モード。  
   
 > [!NOTE]  
->  [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] リリース以降の [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 構成マネージャーは、SharePoint モードのレポート サーバーを管理できるように設計されていません。 SharePoint モードの管理や構成は、SharePoint サーバーの全体管理および PowerShell スクリプトを使用して行います。 詳しくは、次を参照してください。 [Reporting Services SharePoint モードのインストール&#40;SharePoint 2010 および SharePoint 2013&#41;](../../reporting-services/install-windows/install-reporting-services-sharepoint-mode.md)します。  
+>  [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] リリース以降の [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 構成マネージャーは、SharePoint モードのレポート サーバーを管理できるように設計されていません。 SharePoint モードの管理や構成は、SharePoint サーバーの全体管理および PowerShell スクリプトを使用して行います。 詳細については、「sharepoint[モードのインストール&#40;Reporting Services SharePoint&#41;2010 および sharepoint 2013](../../reporting-services/install-windows/install-reporting-services-sharepoint-mode.md)」を参照してください。  
   
  **このセクションの内容:**  
   
@@ -39,16 +38,16 @@ ms.locfileid: "48209792"
  [レポート サーバー URL の構成 &#40;SSRS 構成マネージャー&#41;](../../reporting-services/install-windows/configure-report-server-urls-ssrs-configuration-manager.md)  
  レポート サーバー Web サービスおよびレポート マネージャーへのアクセスに使用する URL を構成する方法について説明します。  
   
- [レポート サーバー データベースの作成&#40;SSRS 構成マネージャー&#41;](../../../2014/sql-server/install/create-a-report-server-database-ssrs-configuration-manager.md)  
+ [レポート サーバー データベースの作成 &#40;SSRS 構成マネージャー&#41;](../../../2014/sql-server/install/create-a-report-server-database-ssrs-configuration-manager.md)  
  サーバーのメタデータやオブジェクトの格納に必要なレポート サーバー データベースを作成する方法について説明します。  
   
- [レポート サーバー データベース接続の構成&#40;SSRS 構成マネージャー&#41;](../../../2014/sql-server/install/configure-a-report-server-database-connection-ssrs-configuration-manager.md)  
+ [レポート サーバー データベース接続の構成 &#40;SSRS構成マネージャー&#41;](../../../2014/sql-server/install/configure-a-report-server-database-connection-ssrs-configuration-manager.md)  
  レポート サーバーからレポート サーバー データベースへの接続に使用する接続文字列を変更する方法について説明します。  
   
  [自動実行アカウントの構成 &#40;SSRS 構成マネージャー&#41;](../../reporting-services/install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md)  
  自動実行モードでレポートを処理するようにユーザー アカウントを構成する方法について説明します。  
   
- [レポート サーバー電子メール配信用に構成&#40;SSRS 構成マネージャー&#41;](../../../2014/sql-server/install/configure-a-report-server-for-e-mail-delivery-ssrs-configuration-manager.md)  
+ [電子メール配信&#40;SSRS 用にレポートサーバーを構成する Configuration Manager&#41;](../../../2014/sql-server/install/configure-a-report-server-for-e-mail-delivery-ssrs-configuration-manager.md)  
  電子メールによるレポートの配信をサポートするようにレポート サーバーを構成する方法について説明します。  
   
  [ネイティブ モード レポート サーバーのスケールアウト配置の構成 (SSRS 構成マネージャー)](../../reporting-services/install-windows/configure-a-native-mode-report-server-scale-out-deployment.md)  
@@ -60,23 +59,23 @@ ms.locfileid: "48209792"
  [Reporting Services ネイティブ モードのレポート サーバーの管理](../../reporting-services/report-server/manage-a-reporting-services-native-mode-report-server.md)  
  一般的な作業の実行手順について説明します。  
   
- [Reporting Services 構成マネージャーの F1 ヘルプ トピック&#40;SSRS ネイティブ モード&#41;](../../../2014/sql-server/install/reporting-services-configuration-manager-f1-help-topics-ssrs-native-mode.md)  
- 内のページのヘルプ トピックを提供、[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]構成ツール。  
+ [Reporting Services Configuration Manager の F1 ヘルプ&#40;トピック SSRS ネイティブモード&#41;](../../../2014/sql-server/install/reporting-services-configuration-manager-f1-help-topics-ssrs-native-mode.md)  
+ [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 構成ツールの各ページに関するヘルプ トピックを提供します。  
   
  **このトピックの内容:**  
   
--   [Reporting Services 構成マネージャーを使用するシナリオ](#bkmk_scenarios)  
+-   [Reporting Services Configuration Manager を使用するシナリオ](#bkmk_scenarios)  
   
--   [必要条件](#bkmk_requirements)  
+-   [要件](#bkmk_requirements)  
   
--   [Reporting Services 構成マネージャーを開始するには](#bkmk_start_configuration_manager)  
+-   [Reporting Services Configuration Manager を開始するには](#bkmk_start_configuration_manager)  
   
 ##  <a name="bkmk_scenarios"></a> Reporting Services 構成マネージャーを使用するシナリオ  
  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 構成マネージャーを使用すると、次のタスクを実行できます。  
   
 -   レポート サーバー サービス アカウントの構成。 アカウントは最初にセットアップ時に構成されますが、パスワードの更新や使用するアカウントの変更を行う場合は、 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 構成マネージャーで変更できます。  
   
--   URL の作成および構成。 レポート サーバーとレポート マネージャーは[!INCLUDE[vstecasp](../../includes/vstecasp-md.md)]アプリケーションの Url を通じてアクセスします。 レポート サーバーの URL からは、レポート サーバーの SOAP エンドポイントにアクセスできます。 レポート マネージャーの URL は、レポート マネージャーを起動するために使用されます。 1 つの URL を構成することも、アプリケーションごとに複数の URL を構成することもできます。  
+-   URL の作成および構成。 レポート サーバーおよびレポート マネージャーは、URL でアクセスされる [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] アプリケーションです。 レポート サーバーの URL からは、レポート サーバーの SOAP エンドポイントにアクセスできます。 レポート マネージャーの URL は、レポート マネージャーを起動するために使用されます。 1 つの URL を構成することも、アプリケーションごとに複数の URL を構成することもできます。  
   
 -   レポート サーバー データベースの作成および構成。 レポート サーバーは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データベースを内部ストレージとして必要とする、ステートレス サーバーです。 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 構成マネージャーを使用すると、レポート サーバー データベースを作成し、そのレポート サーバー データベースへの接続を構成できます。 必要なコンテンツが格納されている既存のレポート サーバー データベースを選択することもできます。  
   
@@ -91,7 +90,7 @@ ms.locfileid: "48209792"
  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 構成マネージャーには、レポート サーバー コンテンツの管理、拡張機能の有効化、サーバーに対するアクセス権の付与を支援する機能はありません。 これには完全な配置が必要であり、拡張機能の有効化や既定値の変更には [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] を使用し、サーバーへのユーザー アクセス権の付与にはレポート マネージャーを使用します。  
   
 ##  <a name="bkmk_requirements"></a> 必要条件  
- [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Configuration manager は、バージョン固有です。 このバージョンの [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] と共にインストールされる [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 構成マネージャーは、以前のバージョンの [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]の構成には使用できません。 同じコンピューター上で古いバージョンと新しいバージョンの [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] をサイド バイ サイドで実行している場合は、各バージョンに付属する Reporting Services 構成マネージャーを使用して、各インスタンスを構成する必要があります。  
+ [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 構成マネージャーはバージョン固有です。 このバージョンの [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] と共にインストールされる [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 構成マネージャーは、以前のバージョンの [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]の構成には使用できません。 同じコンピューター上で古いバージョンと新しいバージョンの [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] をサイド バイ サイドで実行している場合は、各バージョンに付属する Reporting Services 構成マネージャーを使用して、各インスタンスを構成する必要があります。  
   
  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 構成マネージャーを使用するには、次の準備が必要です。  
   
@@ -113,9 +112,9 @@ ms.locfileid: "48209792"
   
     -   Windows のスタート画面から「 **Reporting** 」と入力し、検索結果から " **Reporting Services 構成マネージャー** " を選択します。  
   
-    -   をクリックして**開始**、 をポイント**すべてのプログラム**、 をポイント[!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)]、順にポイント**構成ツール**します。  
+    -   **[スタート]** ボタンをクリックし、 **[すべてのプログラム]** 、[ [!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)]]、 **[構成ツール]** の順にポイントします。  
   
-         以前のバージョンの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]からレポート サーバー インスタンスを構成する場合は、そのバージョンのプログラム フォルダーを開きます。 たとえば、ポイントする[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]の代わりに[!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)]の構成ツールを開く[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]サーバー コンポーネント。  
+         以前のバージョンの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]からレポート サーバー インスタンスを構成する場合は、そのバージョンのプログラム フォルダーを開きます。 たとえば、 [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] サーバー コンポーネントの構成ツールを開くには、[ [!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)] ] ではなく [ [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] ] をポイントします。  
   
          **[Reporting Services 構成マネージャー]** をクリックします。  
   
@@ -132,7 +131,7 @@ ms.locfileid: "48209792"
 ## <a name="see-also"></a>参照  
  [レポート マネージャー &#40;SSRS ネイティブ モード&#41;](../../../2014/reporting-services/report-manager-ssrs-native-mode.md)   
  [Reporting Services ツール](../../reporting-services/tools/reporting-services-tools.md)   
- [レポート サーバー データベース接続の構成&#40;SSRS 構成マネージャー&#41;](../../../2014/sql-server/install/configure-a-report-server-database-connection-ssrs-configuration-manager.md)   
+ [レポート サーバー データベース接続の構成 &#40;SSRS 構成マネージャー&#41;](../../../2014/sql-server/install/configure-a-report-server-database-connection-ssrs-configuration-manager.md)   
  [SQL Server 構成マネージャー](../../relational-databases/sql-server-configuration-manager.md)   
  [レポート サーバーを構成および管理する &#40;SSRSネイティブ モード&#41;](../../reporting-services/report-server/configure-and-administer-a-report-server-ssrs-native-mode.md)  
   

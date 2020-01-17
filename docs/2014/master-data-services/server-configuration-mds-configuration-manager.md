@@ -9,18 +9,18 @@ ms.topic: conceptual
 f1_keywords:
 - sql12.mds.configmanager.srvinfopg.f1
 ms.assetid: c5a6c797-4ac9-4ab0-89c0-25ded2e3db4a
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 8a65b9b50c3b57afc055022392681a946be605c1
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 4d2fabec1bd022a1d73c3abc669995d04bfc9856
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52794944"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65478852"
 ---
 # <a name="master-data-services-server-configuration-page-configuration-manager"></a>マスター データ サービスの [サーバーの構成] ページ (構成マネージャー)
-  ローカル サーバー コンピューターの構成情報を表示するには、**[サーバーの構成]** ページを使用します。  
+  ローカル サーバー コンピューターの構成情報を表示するには、 **[サーバーの構成]** ページを使用します。  
   
 ## <a name="server-configuration"></a>[サーバーの構成]  
   

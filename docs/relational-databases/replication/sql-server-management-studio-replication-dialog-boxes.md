@@ -1,6 +1,7 @@
 ---
-title: SQL Server Management Studio のレプリケーション ダイアログ ボックス | Microsoft Docs
-ms.custom: ''
+title: SQL Server Management Studio のレプリケーション ダイアログ ボックス
+description: SQL Server Management Studio 内のレプリケーションのさまざまなダイアログ ボックスについて説明する記事のリファレンスです。
+ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -10,17 +11,17 @@ ms.topic: conceptual
 ms.assetid: 7426b605-7749-4134-a7e4-990d0d845694
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: cfb9f9037e01afd0f67c338dfa77494ef316a3c4
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
+ms.openlocfilehash: 51ad6849489392483dba8db7c3f7688e939d53c7
+ms.sourcegitcommit: 02d44167a1ee025ba925a6fefadeea966912954c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47797210"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75320045"
 ---
 # <a name="sql-server-management-studio-replication-dialog-boxes"></a>SQL Server Management Studio のレプリケーション ダイアログ ボックス
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  ここでは、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]に用意されているいくつかのレプリケーション ダイアログ ボックスについて説明します。  
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+  ここでは、[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] に用意されているいくつかのレプリケーション ダイアログ ボックスについて説明します。  
   
 -   [スナップショット エージェントのセキュリティ](../../relational-databases/replication/snapshot-agent-security.md)  
   
@@ -38,7 +39,7 @@ ms.locfileid: "47797210"
   
 -   [&#60;AgentProfileName&#62; のプロパティ](../../relational-databases/replication/agentprofilename-properties.md)  
   
--   [新しいエージェント プロファイル](../../relational-databases/replication/new-agent-profile.md)  
+-   [[新しいエージェント プロファイル]](../../relational-databases/replication/new-agent-profile.md)  
   
 -   [すべてのサブスクリプションの検証](../../relational-databases/replication/validate-all-subscriptions.md)  
   

@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 2ee8e4c5-1d66-4a77-8892-6dad7e07e611
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 487f32fa2ec374d08589766b75ce97a1b35e2aac
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a8def5c7089be85c9b6eb7700a8a5bcdaeebe99e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47779290"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67937857"
 ---
 # <a name="type-property-example-property-vb"></a>Type プロパティの例 (プロパティ) (VB)
 この例では、[型](../../../ado/reference/ado-api/type-property-ado.md)プロパティ。 これは、モデルなどの名前と、コレクションの型を一覧表示するためのユーティリティの[プロパティ](../../../ado/reference/ado-api/properties-collection-ado.md)、[フィールド](../../../ado/reference/ado-api/fields-collection-ado.md)など。  
@@ -148,6 +147,6 @@ End Sub
 'EndTypePropertyVB  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [オブジェクトのプロパティ (ADO)](../../../ado/reference/ado-api/property-object-ado.md)   
  [Type プロパティ (ADO)](../../../ado/reference/ado-api/type-property-ado.md)

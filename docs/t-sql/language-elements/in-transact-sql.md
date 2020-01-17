@@ -20,16 +20,15 @@ helpviewer_keywords:
 - IN keyword
 - 8632 (Database Engine error)
 ms.assetid: 4419de73-96b1-4dfe-8500-f4507915db04
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
+author: rothja
+ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 15af126a7fd76a38fc9cffa218d4a77fc5da3e0b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 99d179218e52801da593eaba6ef9ff5c7dde5ee0
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47602820"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68075064"
 ---
 # <a name="in-transact-sql"></a>IN (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -53,11 +52,11 @@ test_expression [ NOT ] IN
  *subquery*  
  1 列の結果セットを返すサブクエリです。 この列のデータ型は、*test_expression* と同じデータ型である必要があります。  
   
- *expression*[ **,**... *n* ]  
+ *expression*[ **,** ... *n* ]  
  一致するかどうかのテストに使用する式のリストです。 すべての式は、*test_expression* と同じ型である必要があります。  
   
 ## <a name="result-types"></a>戻り値の型  
- **ブール値**  
+ **Boolean**  
   
 ## <a name="result-value"></a>結果の値  
  *test_expression* の値が *subquery* によって返される値と等しい場合、またはコンマ区切りの一覧内の任意の*式*と等しい場合、結果の値は TRUE です。それ以外の場合、結果の値は FALSE です。  

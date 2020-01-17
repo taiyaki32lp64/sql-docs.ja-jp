@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 ms.assetid: e0c50b6e-89e7-4b4d-8fe5-c90682c5d1b1
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 61f4daf31f462f6d0c9df40767bb83d38f2973f7
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: d0573325ec63d930b6191572ec4b274053a7d72b
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56026953"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66106995"
 ---
 # <a name="update-credentials-in-report-data-sources-from-a-sharepoint-site"></a>レポート データ ソース内の資格情報を SharePoint サイトから更新する
   このトピックでは、レポートに埋め込まれたデータ ソースや、SharePoint ドキュメント ライブラリ内に保存された共有データ ソースを更新する方法について説明します。  
@@ -49,7 +48,7 @@ ms.locfileid: "56026953"
   
 7.  ユーザー名とパスワードを入力します。  
   
-    -   このアカウントが Windows ドメイン ユーザー アカウントである場合は、\<ドメイン>\\<アカウント\> という形式で指定し、**[データ ソースへの接続時に Windows 資格情報として使用する]** チェック ボックスをオンにします。  
+    -   このアカウントが Windows ドメイン ユーザー アカウントである場合は、\<ドメイン>\\<アカウント\> という形式で指定し、 **[データ ソースへの接続時に Windows 資格情報として使用する]** チェック ボックスをオンにします。  
   
     -   ユーザー名とパスワードがデータベースの資格情報である場合は、 **[データ ソースへの接続時に Windows 資格情報として使用する]** を選択しないでください。 データベース サーバーが権限の借用または委譲をサポートしている場合は、 **[実行コンテキストをこのアカウントに設定する]** を選択できます。  
   
@@ -75,7 +74,7 @@ ms.locfileid: "56026953"
   
 5.  ユーザー名とパスワードを入力します。  
   
-    -   このアカウントが Windows ドメイン ユーザー アカウントである場合は、\<ドメイン>\\<アカウント\> という形式で指定し、**[データ ソースへの接続時に Windows 資格情報として使用する]** チェック ボックスをオンにします。  
+    -   このアカウントが Windows ドメイン ユーザー アカウントである場合は、\<ドメイン>\\<アカウント\> という形式で指定し、 **[データ ソースへの接続時に Windows 資格情報として使用する]** チェック ボックスをオンにします。  
   
     -   ユーザー名とパスワードがデータベースの資格情報である場合は、 **[データ ソースへの接続時に Windows 資格情報として使用する]** を選択しないでください。 データベース サーバーが権限の借用または委譲をサポートしている場合は、 **[実行コンテキストをこのアカウントに設定する]** を選択できます。  
   
@@ -85,7 +84,7 @@ ms.locfileid: "56026953"
   
 8.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [SharePoint ライブラリへのドキュメントのアップロード &#40;Reporting Services の SharePoint モード&#41;](../upload-documents-to-a-sharepoint-library-reporting-services-in-sharepoint-mode.md)  
   
   

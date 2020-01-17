@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: 030ad599-0431-4242-9428-e9ead7b75b1d
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 17a3f03292bee8d832a70ee4c1f7e72a20262417
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 481869ac11516bba597b3dc4de63698cace40811
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47773650"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67980860"
 ---
 # <a name="getpooledconnection-method-sqlserverconnectionpooldatasource"></a>getPooledConnection メソッド (SQLServerConnectionPoolDataSource)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

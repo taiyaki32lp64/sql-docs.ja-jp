@@ -1,52 +1,50 @@
 ---
-title: Linux で ssis conf と SSIS の構成 |Microsoft Docs
-description: この記事では、ssis conf ユーティリティを使用した Linux 上の SQL Server Integration Services (SSIS) を構成する方法について説明します。
-author: leolimsft
+title: ssis-conf を使用して Linux で SSIS を構成する
+description: この記事では、ssis-conf ユーティリティを使用して Linux で SQL Server Integration Services (SSIS) を構成する方法について説明します。
+author: lrtoyou1223
 ms.author: lle
-ms.reviewer: douglasl
-manager: craigg
+ms.reviewer: maghan
 ms.date: 10/02/2017
 ms.topic: conceptual
 ms.prod: sql
-ms.custom: sql-linux
 ms.technology: linux
-ms.openlocfilehash: 600a40f0ff04d401cfddbdee0f214254b1d3f7a4
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
-ms.translationtype: MT
+ms.openlocfilehash: 51dc2ba27e346dea75f1bd347491d4932695fd43
+ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52412509"
+ms.lasthandoff: 07/25/2019
+ms.locfileid: "68077532"
 ---
-# <a name="configure-sql-server-integration-services-on-linux-with-ssis-conf"></a>Ssis conf で Linux 上の SQL Server Integration Services を構成します。
+# <a name="configure-sql-server-integration-services-on-linux-with-ssis-conf"></a>ssis-conf を使用して Linux で SQL Server Integration Services を構成する
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
-実行する、 `ssis-conf` Red Hat Enterprise Linux と Ubuntu 用 SQL Server Integration Services (SSIS) をインストールするときに、構成スクリプト。 SSIS をインストールする方法の詳細については、次を参照してください。[インストール SQL Server Integration Services (SSIS) on Linux](sql-server-linux-setup-ssis.md)します。
+Red Hat Enterprise Linux および Ubuntu 用の SQL Server Integration Services (SSIS) をインストールするときは、`ssis-conf` 構成スクリプトを実行します。 SSIS のインストールについて詳しくは、「[SQL Server Integration Services (SSIS) を Linux にインストールする](sql-server-linux-setup-ssis.md)」をご覧ください。
 
-使用することも、`ssis-conf`ユーティリティは、次のプロパティを構成します。
+`ssis-conf` ユーティリティを使用して、次のプロパティを構成することもできます。
 
-| コマンド | 説明 |
+| コマンド | [説明] |
 |-------------|---------------------------------------------------------------------|
 | set-edition | SQL Server のエディションを設定します。                                       |
-| 製品利用統計情報   | 有効にするか、SQL Server Integration Services の製品利用統計情報サービスを無効にします。 |
-| セットアップ       | Microsoft SQL Server Integration Services の初期化し、セットアップ      |
+| telemetry   | SQL Server Integration Services のテレメトリ サービスを有効または無効にします。 |
+| セットアップ       | Microsoft SQL Server Integration Services を初期化して設定します。      |
 |||
 
-## <a name="run-ssis-conf"></a>Ssis conf を実行します。
+## <a name="run-ssis-conf"></a>ssis-conf を実行する
 
-例を実行するこの記事では、`ssis-conf`の完全なパスを指定することによって:`/opt/ssis/bin/ssis-conf`します。 実行する前に、その場所に移動すると`ssis-conf`、ユーティリティを実行するには、現在のディレクトリのコンテキストで:`./ssis-conf`します。
+この記事の例では、完全なパス `/opt/ssis/bin/ssis-conf` を指定して `ssis-conf` を実行します。 その場所に異動してから `ssis-conf` を実行する場合は、このユーティリティを現在のディレクトリのコンテキストで実行できます (`./ssis-conf`)。
 
-ルート権限では、この記事で説明されているコマンドを実行してください。 たとえば、実行`sudo /opt/ssis/bin/ssis-conf setup`なく`/opt/ssis/bin/ssis-conf setup`します。
+この記事で説明されているコマンドは必ずルート特権を付けて使用してください。 たとえば、`/opt/ssis/bin/ssis-conf setup` ではなく、`sudo /opt/ssis/bin/ssis-conf setup` を実行します。
 
-を使用する言語のプロンプトでこれらのコマンドを実行するには、ロケールを指定できます。 たとえば、中国語では、画面の指示を受信するに次のコマンドを実行します。`sudo LC_ALL=zh_CN.UTF-8 /opt/ssis/bin/ssis-conf setup`します。
+希望の言語のプロンプトでこれらのコマンドを実行するには、ロケールを指定できます。 たとえば、中国語のプロンプトを受け取るには、コマンド `sudo LC_ALL=zh_CN.UTF-8 /opt/ssis/bin/ssis-conf setup` を実行します。
 
-## <a name="use-set-edition-to-set-the-edition-of-sql-server-integration-services"></a>セット edition を使用して、SQL Server Integration Services のエディションを設定するには
+## <a name="use-set-edition-to-set-the-edition-of-sql-server-integration-services"></a>set-edition を使用して SQL Server Integration Services のエディションを設定する
 
-SSIS のエディションは、SQL Server のエディションに揃えられます。
+SSIS のエディションは SQL Server のエディションに合わせられます。
 
-次のコマンドを入力します:`$ sudo /opt/ssis/bin/ssis-conf set-edition`します。
+コマンド `$ sudo /opt/ssis/bin/ssis-conf set-edition` を入力します。
 
-コマンドを入力すると、次のプロンプトをお送りします。
+コマンドを入力すると、次のプロンプトが表示されます。
 
 ```
 Choose an edition of SQL Server:
@@ -76,21 +74,21 @@ By choosing a PAID edition, you are verifying that you have the appropriate numb
 Enter your edition (1-8):
 ```
 
-1 から 7 に値を入力すると、システムは、無料または有料エディションを構成します。 8 を入力すると、ユーティリティでは、購入したプロダクト キーを入力するように求められます。
+1 から 7 までの値を入力すると、無償版または有償版がシステムによって構成されます。 8 と入力すると、購入したプロダクト キーの入力を求められます。
 
 ```
 Enter the 25-character product key:
 ```
 
-## <a name="use-telemetry-to-configure-customer-feedback"></a>製品利用統計情報を使用して、お客様のフィードバックを構成するには
+## <a name="use-telemetry-to-configure-customer-feedback"></a>telemetry を使用してカスタマー フィードバックを構成する
 
-`telemetry`コマンドは、SSIS が Microsoft にフィードバックを送信するかどうかを判断します。
+`telemetry` コマンドは、SSIS が Microsoft にフィードバックを送信するかどうかを決定します。
 
-無料エディション (つまり、Express、Developer、および Evaluation エディション) では、テレメトリ サービスは常に有効にします。 無償のエディションがある場合は使用できません、`telemetry`テレメトリを無効にするコマンド。
+無償版 (Express、Developer、および Evaluation Edition) の場合、テレメトリ サービスは常に有効になります。 無償版を使用する場合、`telemetry` コマンドを使用してテレメトリを無効にすることはできません。
 
-次のコマンドを入力します:`$ sudo /opt/ssis/bin/ssis-conf telemetry`します。
+コマンド `$ sudo /opt/ssis/bin/ssis-conf telemetry` を入力します。
 
-有料エディションで、コマンドを入力した後と、次の次のプロンプトが送信されます。
+有償版の場合、コマンドを入力すると、次のプロンプトが表示されます。
 
 ```
 Send feature usage data to Microsoft. Feature usage data includes information about your hardware configuration and how you use SQL Server Integration Services.
@@ -98,29 +96,29 @@ Send feature usage data to Microsoft. Feature usage data includes information ab
 [Yes/No]:
 ```
 
-選択した場合**はい**、製品利用統計情報サービスが有効になり、実行が開始されます。 サービスは、各起動後に自動的に開始します。 選択した場合**いいえ**、製品利用統計情報サービスが停止し、無効になっています。
+**Yes** を選択すると、テレメトリ サービスが有効になり、実行が開始します。 サービスは起動のたびに自動的に開始します。 **No** を選択すると、テレメトリ サービスが停止し、無効になります。
 
-## <a name="use-setup-to-initialize-and-set-up-microsoft-sql-server-integration-services"></a>セットアップを使用して初期化し、Microsoft SQL Server Integration Services のセットアップ
+## <a name="use-setup-to-initialize-and-set-up-microsoft-sql-server-integration-services"></a>setup を使用して Microsoft SQL Server Integration Services を初期化および設定する
 
-使用して、 `setup` SSIS をインストールするたびにコマンドします。
+SSIS をインストールするたびに `setup` コマンドを使用します。
 
-次のコマンドを入力します:`sudo /opt/ssis/bin/ssis-conf setup`します。
+コマンド `sudo /opt/ssis/bin/ssis-conf setup` を入力します。
 
-ユーティリティでは、承認、または、次の項目の値を指定するように求められます。
--   製品のライセンス
--   使用許諾契約書
--   製品利用統計情報サービス
+ユーティリティによって、次の項目の値を確認または指定するように求められます。
+-   製品ライセンス
+-   使用許諾契約
+-   テレメトリ サービス
 -   Integration Services で使用される言語
 
-実行する、`setup`言語でのプロンプトでコマンドを必要に応じて、ロケールを指定することができます。 たとえば、中国語では、画面の指示を受信するに次のコマンドを実行します。`sudo LC_ALL=zh_CN.UTF-8 /opt/ssis/bin/ssis-conf setup`します。
+希望の言語のプロンプトで `setup` コマンドを実行するには、ロケールを指定できます。 たとえば、中国語のプロンプトを受け取るには、コマンド `sudo LC_ALL=zh_CN.UTF-8 /opt/ssis/bin/ssis-conf setup` を実行します。
 
-## <a name="ssisconf-format"></a>ssis.conf 形式
+## <a name="ssisconf-format"></a>ssis.conf の形式
 
-次`/var/opt/ssis/ssis.conf`ファイルは、各設定の例を示します。
+次の `/var/opt/ssis/ssis.conf` ファイルで各設定の例を示します。
 
-For SQL Server を内の値を変更することでシステム設定を変更することができます、`mssql.conf`ファイル。 SSIS でのする*できません*内の値を変更することでシステム設定を変更、`ssis.conf`ファイル。 `ssis.conf`ファイルは、セットアップの結果のみを示しています。 SSIS の設定を変更する場合は、削除、`ssis.conf`実行ファイルを開き、`setup`コマンドを再実行します。
+SQL Server では、`mssql.conf` ファイルの値を変更することによってシステム設定を変更できます。 SSIS では、`ssis.conf` ファイルの値を変更してシステム設定を変更 "*できません*"。 `ssis.conf` ファイルには、セットアップの結果のみが表示されます。 SSIS の設定を変更する場合は、`ssis.conf` ファイルを削除し、`setup` コマンドを再度実行します。
 
-サンプルを次に示します`ssis.conf`ファイル。 各フィールドは、1 つのセットアップ手順の結果に対応します。
+次に、サンプルの `ssis.conf` ファイルを示します。 各フィールドが 1 つのセットアップ手順の結果に対応しています。
 
 ```
 [LICENSE]
@@ -142,8 +140,8 @@ enabled = Y
 lcid = 2052
 ```
 
-## <a name="related-content-about-ssis-on-linux"></a>Linux 上の SSIS に関する関連コンテンツ
--   [抽出、変換、および SSIS Linux でのデータを読み込む](sql-server-linux-migrate-ssis.md)
--   [Linux 上の SQL Server Integration Services (SSIS) のインストールします。](sql-server-linux-setup-ssis.md)
--   [制限事項と Linux での SSIS の既知の問題](sql-server-linux-ssis-known-issues.md)
--   [スケジュールの SQL Server Integration Services パッケージ cron を使用した Linux 上の実行](sql-server-linux-schedule-ssis-packages.md)
+## <a name="related-content-about-ssis-on-linux"></a>Linux 上の SSIS の関連コンテンツ
+-   [SSIS で Linux 上のデータの抽出、変換、読み込みを行う](sql-server-linux-migrate-ssis.md)
+-   [Linux に SQL Server Integration Services (SSIS) をインストールする](sql-server-linux-setup-ssis.md)
+-   [Linux の SSIS の制限事項と既知の問題](sql-server-linux-ssis-known-issues.md)
+-   [cron を利用して Linux で SQL Server Integration Services パッケージのスケジュールを設定する](sql-server-linux-schedule-ssis-packages.md)

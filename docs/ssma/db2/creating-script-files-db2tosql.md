@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: ec23d188-b890-49b8-9a88-446df96269e4
 author: Shamikg
 ms.author: Shamikg
-manager: craigg
-ms.openlocfilehash: cddfa2e3fd5d1263bf4f9e5e0bb1fd4c6e8fe675
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 324aff21d677c213148922f7e06f267e08740c13
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52520642"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67989839"
 ---
 # <a name="creating-script-files-db2tosql"></a>スクリプト ファイル (DB2ToSQL) の作成
 SSMA コンソールのアプリケーションを起動すると、スクリプト ファイルを作成する前に、変数値ファイルとサーバー接続ファイルを作成するために必要な場合、最初の手順します。  
@@ -316,7 +315,7 @@ SSMA コンソールのアプリケーションを起動すると、スクリプ
     </...All commands...>  
     ```  
   
-10. **暗号化されたパスワードをオーバーライドします。**'True' の場合、サーバー接続ファイルのサーバー定義のセクションで、またはスクリプト ファイルに上書きの場合は、保護されたストレージに格納されている暗号化されたパスワードが存在するクリア テキスト パスワードが指定されました。 クリア テキストでパスワードが指定されていない場合は、パスワードの入力を求められます。  
+10. **暗号化されたパスワードをオーバーライドします。** 'True' の場合、サーバー接続ファイルのサーバー定義のセクションで、またはスクリプト ファイルに上書きの場合は、保護されたストレージに格納されている暗号化されたパスワードが存在するクリア テキスト パスワードが指定されました。 クリア テキストでパスワードが指定されていない場合は、パスワードの入力を求められます。  
   
     ここでは 2 つのケースが生じます。  
   
@@ -395,6 +394,6 @@ SSMA コンソールのアプリケーションを起動すると、スクリプ
 ## <a name="next-step"></a>次の手順  
 コンソールの運用には、次の手順は[変数値ファイルの作成&#40;DB2ToSQL&#41;](../../ssma/db2/creating-variable-value-files-db2tosql.md)します。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
 [変数値ファイルを作成する&#40;DB2ToSQL&#41;](../../ssma/db2/creating-variable-value-files-db2tosql.md)  
   

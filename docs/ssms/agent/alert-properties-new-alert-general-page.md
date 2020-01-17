@@ -10,19 +10,18 @@ ms.topic: conceptual
 f1_keywords:
 - sql13.ag.alert.general.f1
 ms.assetid: f5c11610-62e3-44df-9800-a5dc35be4a09
-author: stevestein
-ms.author: sstein
-manager: craigg
+author: markingmyname
+ms.author: maghan
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 6d6c4db00e382724ebf0f3f781a8cd0e907bc2e7
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 4634821adee5021b986b3f9c87c0416bad33ec6a
+ms.sourcegitcommit: 949e55b32eff6610087819a93160a35af0c5f1c9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47630290"
+ms.lasthandoff: 09/05/2019
+ms.locfileid: "70383806"
 ---
 # <a name="alert-properties---new-alert-general-page"></a>[警告のプロパティ] - [新しい警告] ([全般] ページ)
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 
 > [!IMPORTANT]  
@@ -30,14 +29,14 @@ ms.locfileid: "47630290"
 
 このページを使用すると、[!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェントの警告の全般プロパティを表示および変更できます。  
 
-## <a name="options"></a>[変数]  
-**名前**  
+## <a name="options"></a>オプション  
+**[名前]**  
 警告の名前を変更します。  
   
 **[有効化]**  
 警告を有効にします。 警告が有効でない場合、警告に指定されたアクションは発生しません。  
   
-**型**  
+**Type**  
 警告の種類を選択します。  
   
 -   **SQL Server イベント警告** は、 [!INCLUDE[msCoName](../../includes/msconame_md.md)] Windows イベント ログ内のメッセージに応答します。  

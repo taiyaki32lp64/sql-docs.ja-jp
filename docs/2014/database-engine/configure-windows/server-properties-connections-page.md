@@ -13,11 +13,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: c9d58fb2a5702a2a6c3f5ac74ae970411d887b62
-ms.sourcegitcommit: 04dd0620202287869b23cc2fde998a18d3200c66
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "52640033"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62809352"
 ---
 # <a name="server-properties-connections-page"></a>[サーバーのプロパティ] ([接続] ページ)
   このページを使用すると、接続オプションを表示したり変更したりできます。  
@@ -70,7 +70,7 @@ ms.locfileid: "52640033"
  **[実行中の値]**  
  このペイン上のオプションの、現在実行中の値を表示します。 これらの値は読み取り専用です。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [オプション&#40;実行: SQL Server のクエリ: [詳細] ページ&#41;](../options-query-execution-sql-server-advanced-page.md)   
  [サーバー構成オプション &#40;SQL Server&#41;](server-configuration-options-sql-server.md)  
   

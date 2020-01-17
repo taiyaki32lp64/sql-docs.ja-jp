@@ -83,7 +83,7 @@
       href: greater-than-or-equal-to-ssis-expression.md
     - name: <= (以下) (SSIS 式)
       href: less-than-or-equal-to-ssis-expression.md
-    - name: '? : (条件) (SSIS 式)'
+    - name: '? :(条件) (SSIS 式)'
       href: conditional-ssis-expression.md
 - name: 関数 (SSIS 式)
   href: functions-ssis-expression.md

@@ -15,15 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - CurveToLineWithTolerance method (geography)
 ms.assetid: 74369c76-2cf6-42ae-b9cc-e7a051db2767
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: 34cb0cbe98bd0afd9eb1e3183839984799df7718
-ms.sourcegitcommit: c61c7b598aa61faa34cd802697adf3a224aa7dc4
+author: MladjoA
+ms.author: mlandzic
+ms.openlocfilehash: 6f81b5ba7ba6de057dd82090775013db55e4275b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56154837"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68066493"
 ---
 # <a name="curvetolinewithtolerance-geography-data-type"></a>CurveToLineWithTolerance (geography データ型)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]

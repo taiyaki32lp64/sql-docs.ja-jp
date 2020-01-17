@@ -1,5 +1,5 @@
 ---
-title: 暗号化を使用して |Microsoft Docs
+title: Encryption | を使用するMicrosoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -19,12 +19,12 @@ ms.assetid: 405e0ed7-50a9-430e-a343-471f54b4af76
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 09de7053de66d2d280c2bc6da61b8bf6b2ebf55b
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 233f5bc9decf5e8246f2aba6836ec5ecb650283b
+ms.sourcegitcommit: a165052c789a327a3a7202872669ce039bd9e495
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52794464"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72781850"
 ---
 # <a name="using-encryption"></a>暗号化の使用
   SMO では、サービス マスター キーは <xref:Microsoft.SqlServer.Management.Smo.ServiceMasterKey> オブジェクトで表現します。 これは、<xref:Microsoft.SqlServer.Management.Smo.Server.ServiceMasterKey%2A> オブジェクトの <xref:Microsoft.SqlServer.Management.Smo.Server> プロパティによって参照されます。 <xref:Microsoft.SqlServer.Management.Smo.ServiceMasterKey.Regenerate%2A> メソッドを使用して、再生成することができます。  
@@ -40,7 +40,7 @@ ms.locfileid: "52794464"
  SMO では、証明書は <xref:Microsoft.SqlServer.Management.Smo.Certificate> オブジェクトで表現します。 <xref:Microsoft.SqlServer.Management.Smo.Certificate> オブジェクトには、公開キー、サブジェクト名、有効期間、および発行者に関する情報を指定するプロパティがあります。 証明書にアクセスする権限は、`Grant` メソッド、`Revoke` メソッド、および `Deny` メソッドを使用して制御されます。  
   
 ## <a name="example"></a>例  
- 次のコード例では、アプリケーションを作成するプログラミング環境、プログラミング テンプレート、およびプログラミング言語を選択する必要があります。 詳細については、次を参照してください。 [Visual Studio .NET で Visual Basic SMO プロジェクトを作成](../../../database-engine/dev-guide/create-a-visual-basic-smo-project-in-visual-studio-net.md)と[Visual C の作成&#35;Visual Studio .NET での SMO プロジェクト](../how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md)します。  
+ 次のコード例では、アプリケーションを作成するプログラミング環境、プログラミング テンプレート、およびプログラミング言語を選択する必要があります。 詳細については、「 [Visual studio .net での VISUAL BASIC SMO プロジェクトの作成](../../../database-engine/dev-guide/create-a-visual-basic-smo-project-in-visual-studio-net.md)」および「visual [studio .Net での Visual C&#35; SMO プロジェクトの作成](../how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md)」を参照してください。  
   
 ## <a name="adding-a-certificate-in-visual-basic"></a>Visual Basic での証明書の追加  
  コード例では、暗号化パスワードを持つ簡単な証明書を作成します。 他のオブジェクトと異なり、<xref:Microsoft.SqlServer.Management.Smo.Certificate.Create%2A> メソッドには複数のオーバーロードがあります。 この例で使用するオーバーロードは、暗号化パスワードを持つ新しい証明書を作成しています。  
@@ -50,7 +50,7 @@ ms.locfileid: "52794464"
 ## <a name="adding-a-certificate-in-visual-c"></a>Visual C# での証明書の追加  
  コード例では、暗号化パスワードを持つ簡単な証明書を作成します。 他のオブジェクトと異なり、<xref:Microsoft.SqlServer.Management.Smo.Certificate.Create%2A> メソッドには複数のオーバーロードがあります。 この例で使用するオーバーロードは、暗号化パスワードを持つ新しい証明書を作成しています。  
   
-```  
+```csharp
 {  
             //Connect to the local, default instance of SQL Server.   
             {  
@@ -78,24 +78,20 @@ ms.locfileid: "52794464"
 ## <a name="adding-a-certificate-in-powershell"></a>PowerShell での証明書の追加  
  コード例では、暗号化パスワードを持つ簡単な証明書を作成します。 他のオブジェクトと異なり、<xref:Microsoft.SqlServer.Management.Smo.Certificate.Create%2A> メソッドには複数のオーバーロードがあります。 この例で使用するオーバーロードは、暗号化パスワードを持つ新しい証明書を作成しています。  
   
-```  
+```powershell
 # Set the path context to the local, default instance of SQL Server and get a reference to AdventureWorks2012  
 CD \sql\localhost\default\databases  
 $db = get-item AdventureWorks2012  
   
-#Create a certificate  
-  
-$c = New-Object -TypeName Microsoft.SqlServer.Management.Smo.Certificate -argumentlist $db, "Test_Certificate"  
+#Create a certificate
+$c = New-Object -TypeName Microsoft.SqlServer.Management.Smo.Certificate -ArgumentList $db, "Test_Certificate"  
 $c.StartDate = "January 01, 2010"  
 $c.Subject = "This is a test certificate."  
 $c.ExpirationDate = "January 01, 2015"  
   
 #Create the certificate on the instance of SQL Server by supplying the certificate password argument.  
-$c.Create("pGFD4bb925DGvbd2439587y")  
-  
+$c.Create("pGFD4bb925DGvbd2439587y")
 ```  
   
-## <a name="see-also"></a>参照  
- [暗号化キーを使用します。](using-encryption.md)  
-  
-  
+## <a name="see-also"></a>「  
+ [暗号化キーの使用](using-encryption.md)  

@@ -19,14 +19,13 @@ helpviewer_keywords:
 ms.assetid: ad5496b5-e5c7-4a18-b5a0-3f985d7c4758
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: afef7b79c10b3d7f72d69dbe9bfca8721f6d13ec
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: a239624fcbc3913d636f7f57b496c006d06a64b4
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56041533"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68061385"
 ---
 # <a name="syseventlog-azure-sql-database"></a>sys.event_log (Azure SQL データベース)
 
@@ -74,16 +73,16 @@ ms.locfileid: "56041533"
 |**接続**|**connection_failed**|6|**failed_to_open_db**|2|*注:Azure SQL Database V11 にのみ適用されます。*<br /><br /> データベースを開くことができませんでした。 これはデータベースが存在しないか、データベースを開くための認証が正常に行われなかったため発生した可能性があります。|  
 |**接続**|**connection_failed**|7|**blocked_by_firewall**|2|クライアントの IP アドレスからサーバーにアクセスすることが許可されていません。|  
 |**接続**|**connection_failed**|8|**client_close**|2|*注:Azure SQL Database V11 にのみ適用されます。*<br /><br /> クライアントが接続の確立中にタイムアウトした可能性があります。 接続タイムアウトを増やしてください。|  
-|**接続**|**connection_failed**|9|**reconfiguration**|2|*注:Azure SQL Database V11 にのみ適用されます。*<br /><br /> データベースが再構成中であったため接続に失敗しました。|  
+|**接続**|**connection_failed**|9|**再構成**|2|*注:Azure SQL Database V11 にのみ適用されます。*<br /><br /> データベースが再構成中であったため接続に失敗しました。|  
 |**接続**|**connection_terminated**|0|**idle_connection_timeout**|2|*注:Azure SQL Database V11 にのみ適用されます。*<br /><br /> 接続がシステム定義のしきい値よりも長い時間にわたってアイドル状態でした。|  
-|**接続**|**connection_terminated**|1|**reconfiguration**|2|*注:Azure SQL Database V11 にのみ適用されます。*<br /><br /> データベース再構成が原因で、セッションが終了しました。|  
+|**接続**|**connection_terminated**|1|**再構成**|2|*注:Azure SQL Database V11 にのみ適用されます。*<br /><br /> データベース再構成が原因で、セッションが終了しました。|  
 |**接続**|**調整**|*\<理由コード >*|**reason_code**|2|*注:Azure SQL Database V11 にのみ適用されます。*<br /><br /> 要求が調整されています。  調整理由コード: *\<理由コード >* します。 詳細については、次を参照してください。[エンジン調整](https://msdn.microsoft.com/library/windowsazure/dn338079.aspx)します。|  
 |**接続**|**throttling_long_transaction**|40549|**long_transaction**|2|*注:Azure SQL Database V11 にのみ適用されます。*<br /><br /> トランザクションが長時間実行されているため、セッションを終了しました。 トランザクションを短くしてください。 詳細については、次を参照してください。[リソース制限](https://msdn.microsoft.com/library/windowsazure/dn338081.aspx)します。|  
 |**接続**|**throttling_long_transaction**|40550|**excessive_lock_usage**|2|*注:Azure SQL Database V11 にのみ適用されます。*<br /><br /> 取得したロックの数が多すぎるため、セッションを終了しました。 1 つのトランザクションで読み取る行または変更する行の数を減らしてください。 詳細については、次を参照してください。[リソース制限](https://msdn.microsoft.com/library/windowsazure/dn338081.aspx)します。|  
 |**接続**|**throttling_long_transaction**|40551|**excessive_tempdb_usage**|2|*注:Azure SQL Database V11 にのみ適用されます。*<br /><br /> TEMPDB の使用領域が多すぎるため、セッションを終了しました。 クエリを変更して一時テーブルの使用領域を減らしてください。 詳細については、次を参照してください。[リソース制限](https://msdn.microsoft.com/library/windowsazure/dn338081.aspx)します。|  
 |**接続**|**throttling_long_transaction**|40552|**excessive_log_space_usage**|2|*注:Azure SQL Database V11 にのみ適用されます。*<br /><br /> トランザクション ログの使用領域が多すぎるため、セッションを終了しました。 1 回のトランザクションで変更する行を減らしてください。 詳細については、次を参照してください。[リソース制限](https://msdn.microsoft.com/library/windowsazure/dn338081.aspx)します。|  
 |**接続**|**throttling_long_transaction**|40553|**excessive_memory_usage**|2|*注:Azure SQL Database V11 にのみ適用されます。*<br /><br /> メモリの使用量が多すぎるため、セッションを終了しました。 クエリを変更して、処理する行を減らしてください。 詳細については、次を参照してください。[リソース制限](https://msdn.microsoft.com/library/windowsazure/dn338081.aspx)します。|  
-|**エンジン**|**deadlock**|0|**deadlock**|2|デッドロックが発生しました。|  
+|**エンジン**|**デッドロック**|0|**デッドロック**|2|デッドロックが発生しました。|  
   
 ## <a name="permissions"></a>アクセス許可
 
@@ -231,5 +230,5 @@ SELECT * FROM CTE2;
 
 ## <a name="see-also"></a>参照
 
- [Azure SQL Database の拡張イベント](https://azure.microsoft.com/documentation/articles/sql-database-xevent-db-diff-from-svr/)  
+ [Azure SQL Database での拡張イベント](https://azure.microsoft.com/documentation/articles/sql-database-xevent-db-diff-from-svr/)  
  

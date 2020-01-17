@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: 5dbfc67e-7260-445a-8210-a9d33827db7f
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 933a0e9c2eaca4fe55748938737fc8f30d965c5b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 4f2e12e536cfaf91bab25e958ba279b072b39259
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48154212"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66071482"
 ---
 # <a name="delete-a-powerpivot-data-feed-library"></a>PowerPivot データ フィード ライブラリの削除
   データ フィード ライブラリを削除できるのはサイト所有者だけです。 ライブラリにアイテムが含まれている場合、それらもライブラリと共に削除されます。  

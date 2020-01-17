@@ -13,11 +13,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: c52c1d38e115e4064e106175bb49d0a3ecb4318d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48186812"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62913782"
 ---
 # <a name="mssqlserver701"></a>MSSQLSERVER_701
     
@@ -46,7 +46,7 @@ ms.locfileid: "48186812"
   
 1.  このサーバー上で、他のアプリケーションやサービスによってメモリが消費されていないか確認します。 重要度の低いアプリケーションやサービスのメモリ消費量が少なくなるように、構成を変更します。  
   
-2.  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]**: Buffer Manager** および **SQL Server: Memory Manager** のパフォーマンス モニター カウンターを確認します。  
+2.  パフォーマンス モニター カウンターを収集を開始[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **:バッファー マネージャー**、 **SQL Server:Memory Manager**します。  
   
 3.  次に示す SQL Server メモリ構成パラメーターを確認します。  
   

@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: database-engine
 ms.topic: reference
 helpviewer_keywords:
 - Managed Classes [SQLXML], object model
@@ -16,12 +14,12 @@ ms.assetid: 1726cba5-a294-4a8b-a5c6-e9d325066000
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 88e815d0b6e4cb95e9c5d0afa6b4cc79349d2965
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 1f49961a48c096cf01fbf7f09de0d76ac9fd4bfe
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48144332"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62781809"
 ---
 # <a name="sqlxml-managed-classes-object-model"></a>SQLXML マネージド クラス オブジェクト モデル
   このセクションでは、[!INCLUDE[msCoName](../../includes/msconame-md.md)] SQLXML マネージド クラス オブジェクト モデルについて説明します。  

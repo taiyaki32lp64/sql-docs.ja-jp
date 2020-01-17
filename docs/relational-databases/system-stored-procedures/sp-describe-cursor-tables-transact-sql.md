@@ -17,18 +17,17 @@ helpviewer_keywords:
 ms.assetid: 02c0f81a-54ed-4ca4-aa4f-bb7463a9ab9a
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 2a4627491075dd7b7db9d75188137271edd17804
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 5c005ff603f21dca387215cafd9dff572db53960
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47721700"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68053087"
 ---
 # <a name="spdescribecursortables-transact-sql"></a>sp_describe_cursor_tables (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  サーバー カーソルが参照するオブジェクトまたはベース テーブルをレポートします。  
+  オブジェクトまたはサーバー カーソルが参照するベース テーブルを報告します。  
   
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -50,10 +49,10 @@ sp_describe_cursor_tables
   
 ## <a name="arguments"></a>引数  
  [ @cursor_return=] *output_cursor_variable*出力  
- カーソル出力を受け取るように宣言したカーソル変数の名前です。 *output_cursor_variable*は**カーソル**, ない必要があり、既定で、sp_describe_cursor_tables の呼び出し時にいない、カーソルに関連付けをします。 スクロール可能で動的な読み取り専用カーソルが返されます。  
+ カーソル出力を受け取るように宣言したカーソル変数の名前です。 *output_cursor_variable*は**カーソル**, ない必要があり、既定で、sp_describe_cursor_tables の呼び出し時にいない、カーソルに関連付けをします。 返されるカーソルのスクロール可能な動的、読み取り専用カーソルです。  
   
  [ @cursor_source=] {N'local' |N'global' |N'variable'}  
- レポート対象のカーソルをローカル カーソル、グローバル カーソル、カーソル変数のどの名前で指定するのかを指定します。 パラメーターが**nvarchar (30)** します。  
+ ローカル カーソル、グローバル カーソル、またはカーソル変数の名前を使用して、レポート対象のカーソルが指定されているかどうかを指定します。 パラメーターが**nvarchar (30)** します。  
   
  [ @cursor_identity=] N'*local_cursor_name*'  
  カーソルの名前または作成された DECLARE CURSOR ステートメントによって、ローカルのキーワードをローカルに既定値が設定します。 *local_cursor_name*は**nvarchar (128)** します。  
@@ -68,20 +67,20 @@ sp_describe_cursor_tables
  なし  
   
 ## <a name="cursors-returned"></a>返されるカーソル  
- sp_describe_cursor_tables としてレポートをカプセル化、 [!INCLUDE[tsql](../../includes/tsql-md.md)] **カーソル**出力パラメーター。 これにより、[!INCLUDE[tsql](../../includes/tsql-md.md)]バッチ、ストアド プロシージャ、および、一度に 1 行の出力の操作をトリガーします。 また、API 関数からプロシージャを直接呼び出すことができなくなります。 **カーソル**出力パラメーターは、プログラム変数にバインドする必要がありますが、Api はバインドをサポートしていない**カーソル**パラメーターまたは変数です。  
+ sp_describe_cursor_tables としてレポートをカプセル化、 [!INCLUDE[tsql](../../includes/tsql-md.md)] **カーソル**出力パラメーター。 これにより、[!INCLUDE[tsql](../../includes/tsql-md.md)]バッチ、ストアド プロシージャ、および、一度に 1 行の出力の操作をトリガーします。 つまり、プロシージャは、API 関数から直接呼び出すことができません。 **カーソル**出力パラメーターは、プログラム変数にバインドする必要がありますが、Api はバインドをサポートしていない**カーソル**パラメーターまたは変数です。  
   
  次の表に、sp_describe_cursor_tables が返すカーソルの形式を示します。  
   
 |列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
-|table_owner|**sysname**|テーブル所有者のユーザー ID。|  
+|テーブルの所有者|**sysname**|テーブルの所有者のユーザー ID。|  
 |Table_name|**sysname**|オブジェクトまたはベース テーブルの名前。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]、サーバー カーソルは常にベース テーブルではなく、ユーザーが指定したオブジェクトを返します。|  
-|optimizer_hints|**smallint**|次のうちの 1 つ以上で構成されるビットマップです。<br /><br /> 1 = 行レベルのロック (ROWLOCK)<br /><br /> 4 = ページレベルのロック (PAGELOCK)<br /><br /> 8 = テーブル ロック (TABLOCK)<br /><br /> 16 = 排他テーブル ロック (TABLOCKX)<br /><br /> 32 = 更新ロック (UPDLOCK)<br /><br /> 64 = ロックなし (NOLOCK)<br /><br /> 128 = 高速順方向参照 (FASTFIRST)<br /><br /> 4096 = DECLARE CURSOR で使用する場合、反復可能セマンティックの読み取り (HOLDLOCK)<br /><br /> 複数のオプションを指定する場合、システムは最も限定的なオプションを使用します。 ただし、sp_describe_cursor_tables は、クエリに指定されているフラグを表示します。|  
-|lock_type|**smallint**|カーソルの基になっている各ベース テーブルに対して、明示的にまたは暗黙的に要求したスクロール ロックの種類です。 値は、次のいずれかです。<br /><br /> 0 = なし<br /><br /> 1 = 共有<br /><br /> 3 = 更新|  
-|server_name|**sysname で、null 許容型**|テーブルが存在するリンク サーバーの名前。 OPENQUERY または OPENROWSET が使用されている場合は NULL です。|  
-|Objectid|**int**|テーブルのオブジェクト ID。 OPENQUERY または OPENROWSET が使用されている場合は 0 です。|  
-|dbid|**int**|テーブルが存在するデータベースの ID。 OPENQUERY または OPENROWSET が使用されている場合は 0 です。|  
-|dbname|**sysname**、 **null 許容型**|テーブルが存在するデータベースの名前。 OPENQUERY または OPENROWSET が使用されている場合は NULL です。|  
+|optimizer_hints|**smallint**|次の 1 つ以上から構成されるビットマップ。<br /><br /> 1 = 行レベルのロック (ROWLOCK)<br /><br /> 4 = ページレベルのロック (PAGELOCK)<br /><br /> 8 = テーブル ロック (TABLOCK)<br /><br /> 16 = 排他テーブル ロック (TABLOCKX)<br /><br /> 32 = 更新ロック (UPDLOCK)<br /><br /> 64 = ロックなし (NOLOCK)<br /><br /> 128 = 高速順方向参照 (FASTFIRST)<br /><br /> 4096 = DECLARE CURSOR で使用する場合、反復可能セマンティックの読み取り (HOLDLOCK)<br /><br /> 複数のオプションを指定する場合、システムは最も限定的なオプションを使用します。 ただし、sp_describe_cursor_tables は、クエリに指定されているフラグを表示します。|  
+|lock_type|**smallint**|スクロール ロックの種類は、いずれかを明示的に要求または暗黙的に各ベース テーブルの基になるこのカーソル。 値は次のいずれかになります。<br /><br /> 0 = なし<br /><br /> 1 = 共有<br /><br /> 3 = 更新プログラム|  
+|server_name|**sysname で、null 許容型**|テーブルが存在するリンク サーバーの名前です。 OPENQUERY または OPENROWSET を使用する場合は NULL です。|  
+|Objectid|**int**|テーブルのオブジェクト ID。 OPENQUERY または OPENROWSET を使用する場合は 0 を返します。|  
+|dbid|**int**|テーブルが存在するデータベースの ID。 OPENQUERY または OPENROWSET を使用する場合は 0 を返します。|  
+|データベース名|**sysname**、 **null 許容型**|テーブルが存在するデータベースの名前。 OPENQUERY または OPENROWSET を使用する場合は NULL です。|  
   
 ## <a name="remarks"></a>コメント  
  sp_describe_cursor_tables は、サーバー カーソルが参照するベース テーブルを説明します。 カーソルから返された結果セットの属性の説明が必要な場合は、sp_describe_cursor_columns を使用します。 スクロール可能かどうか、更新可能かどうかなど、カーソルの総体的な特性の説明が必要な場合は、sp_describe_cursor を使用します。 接続時に可視である [!INCLUDE[tsql](../../includes/tsql-md.md)] Server カーソルに関するレポートが必要な場合は、sp_cursor_list を使用します。  
@@ -130,7 +129,7 @@ DEALLOCATE abc;
 GO  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [カーソル](../../relational-databases/cursors.md)   
  [CURSOR_STATUS &#40;TRANSACT-SQL&#41;](../../t-sql/functions/cursor-status-transact-sql.md)   
  [DECLARE CURSOR &#40;Transact-SQL&#41;](../../t-sql/language-elements/declare-cursor-transact-sql.md)   

@@ -19,14 +19,13 @@ helpviewer_keywords:
 ms.assetid: 32dfe254-6df7-4437-bfd6-ca7d37557b0a
 author: ronortloff
 ms.author: rortloff
-manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: d1c06397b74ecab0f29cb293d7efa591b36fa1ac
-ms.sourcegitcommit: 0a64d26f865a21f4bd967b2b72680fd8638770b8
+ms.openlocfilehash: 24668748b97c44e825baee2dee95d9442aa1e11f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/18/2019
-ms.locfileid: "54395408"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68073146"
 ---
 # <a name="create-external-table-as-select-transact-sql"></a>CREATE EXTERNAL TABLE AS SELECT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
@@ -76,22 +75,22 @@ CREATE EXTERNAL TABLE [ [database_name  . [ schema_name ] . ] | schema_name . ] 
  FILE_FORMAT = *external_file_format_name*  
  外部データ ファイルの形式を含む、外部ファイル形式オブジェクトの名前を指定します。 外部ファイル形式を作成するには、[CREATE EXTERNAL FILE FORMAT &#40;Transact-SQL&#41;](../../t-sql/statements/create-external-file-format-transact-sql.md) を使用します。  
   
- オプションを拒否します。  
+ 拒否オプション  
  この CREATE EXTERNAL TABLE AS SELECT ステートメントの実行時に拒否オプションは適用されません。 代わりに、ここで指定し、後で外部テーブルからデータをインポートする際に、データベースで使用できるようにします。 後で CREATE TABLE AS SELECT ステートメントで外部テーブルからデータを選択するときに、データベースでは拒否オプションを使用して、インポートを停止するまでにインポートの失敗が許容される行の数または割合を決定します。  
   
  REJECT_VALUE = *reject_value*  
  データベースでインポートを停止するまでに、インポートの失敗が許容される行の値または割合を指定します。  
   
  REJECT_TYPE = **value** | percentage  
- REJECT_VALUE オプションは、リテラル値またはパーセントとして指定されているかどうか明確にします。  
+ REJECT_VALUE オプションがリテラル値として指定されているか、割合として指定されているかを明確にします。  
   
  value  
- REJECT_VALUE は、リテラル値、パーセンテージではありません。  失敗した行の数が *reject_value* を超えた場合、データベースは外部データ ファイルからの行のインポートを停止します。  
+ REJECT_VALUE は、割合ではなくリテラル値です。  失敗した行の数が *reject_value* を超えた場合、データベースは外部データ ファイルからの行のインポートを停止します。  
   
  たとえば、REJECT_VALUE = 5 で、REJECT_TYPE = value の場合、データベースは、5 行のインポートが失敗した後、行のインポートを停止します。  
   
- 割合  
- REJECT_VALUE では、リテラル値ではなく、パーセンテージです。 失敗した行の *percentage* が *reject_value* を超えた場合、データベースは外部データ ファイルからの行のインポートを停止します。 障害が発生した行の割合は、間隔で計算されます。  
+ percentage  
+ REJECT_VALUE は、リテラル値ではなく割合です。 失敗した行の *percentage* が *reject_value* を超えた場合、データベースは外部データ ファイルからの行のインポートを停止します。 失敗した行の割合は、間隔をおいて計算されます。  
   
  REJECT_SAMPLE_VALUE = *reject_sample_value*  
  REJECT_TYPE= percentage の場合に必要です。これにより、データベースが失敗した行の割合を再計算する前に、インポートを試みる行の数が指定されます。  
@@ -103,15 +102,15 @@ CREATE EXTERNAL TABLE [ [database_name  . [ schema_name ] . ] | schema_name . ] 
   
  例:  
   
- この例では、拒否の 3 つのオプションが相互にやり取りする方法を示します。 たとえば場合、REJECT_TYPE 割合、REJECT_VALUE を = = 30、および REJECT_SAMPLE_VALUE、次のシナリオが発生する可能性が 100 を =。  
+ この例は、REJECT の 3 つのオプションが相互にどのように作用するかを示しています。 たとえば、REJECT_TYPE = percentage、REJECT_VALUE = 30、REJECT_SAMPLE_VALUE = 100 の場合、次のようなシナリオとなる可能性があります。  
   
 -   データベースは、最初の 100 行の読み込みを試みます。この場合、失敗が 25、成功が 75 です。  
   
--   障害が発生した行の割合は、これは、30% の拒否の値よりも小さい 25%、として計算されます。 そのため、読み込みを停止する必要はありません。  
+-   失敗した行の割合は 25% と計算されます。これは reject 値である 30% を下回っています。 そのため、読み込みを停止する必要はありません。  
   
 -   データベースは次の 100 行の読み込みを試みます。今回は成功が 25、失敗が 75 です。  
   
--   失敗した行の割合が 50% として再計算されます。 障害が発生した行の割合が 30% の拒否の値を超えました。  
+-   失敗した行の割合が 50% として再計算されます。 失敗した行の割合が、30% という reject 値を超えました。  
   
 -   200 行の読み込みを試みた後、失敗した行の割合が 50% で読み込みに失敗しています。この割合は、指定された制限の 30% を超えています。  
   
@@ -168,7 +167,7 @@ CREATE EXTERNAL TABLE [ [database_name  . [ schema_name ] . ] | schema_name . ] 
   
 -   外部パーティション移動  
   
- **適用対象:**[!INCLUDE[ssPDW](../../includes/sspdw-md.md)] 外部テーブルを作成するための前提条件として、アプライアンス管理者は Hadoop 接続を構成する必要があります。 詳細については、[ここ](https://www.microsoft.com/download/details.aspx?id=48241)からダウンロードできる、APS ドキュメントの外部データへの接続の構成 (Analytics Platform System) に関する記述を参照してください。  
+ **適用対象:** [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] 外部テーブルを作成するための前提条件として、アプライアンス管理者は Hadoop 接続を構成する必要があります。 詳細については、[ここ](https://www.microsoft.com/download/details.aspx?id=48241)からダウンロードできる、APS ドキュメントの外部データへの接続の構成 (Analytics Platform System) に関する記述を参照してください。  
   
 ## <a name="limitations-and-restrictions"></a>制限事項と制約事項  
  外部テーブル データがデータベースの外部にあるため、バックアップおよび復元操作ではデータベースに格納されているデータに対してのみ作用します。 つまり、メタデータのみがバックアップされ、復元されます。  
@@ -181,7 +180,7 @@ CREATE EXTERNAL TABLE [ [database_name  . [ schema_name ] . ] | schema_name . ] 
   
  外部テーブルで許可されるデータ定義言語 (DDL) 操作は、CREATE TABLE、DROP TABLE、CREATE STATISTICS、DROP STATISTICS、CREATE VIEW、DROP VIEW のみです。  
   
- PolyBase は 32 の同時実行 PolyBase クエリを実行している場合、最大で 1 つのフォルダーの 33 k ファイルを使用できます。 この最大数には、各 HDFS フォルダー内のファイルとサブフォルダーの両方が含まれます。 コンカレンシーの程度が 32 未満である場合は、ユーザーは、複数の 33 k ファイルが含まれている HDFS のフォルダーに対して PolyBase クエリを実行できます。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] では、Hadoop および PolyBase のユーザーがファイル パスを短くし、HDFS フォルダーごとに 30K 以下のファイルを使用することをお勧めします。 参照されているファイルが多すぎると、JVM のメモリ不足例外が発生します。  
+ PolyBase では、32 個の同時 PolyBase クエリを実行しているときに、フォルダーあたり最大 33,000 ファイルを使用できます。 この最大数には、各 HDFS フォルダー内のファイルとサブフォルダーの両方が含まれます。 コンカレンシーの程度が 32 未満である場合は、ユーザーは、33,000 を超えるファイルが含まれている HDFS のフォルダーに対して PolyBase クエリを実行できます。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] では、Hadoop および PolyBase のユーザーがファイル パスを短くし、HDFS フォルダーごとに 30K 以下のファイルを使用することをお勧めします。 参照されているファイルが多すぎると、JVM のメモリ不足例外が発生します。  
   
  この CREATE EXTERNAL TABLE AS SELECT では [SET ROWCOUNT &#40;Transact-SQL&#41;](../../t-sql/statements/set-rowcount-transact-sql.md) の効果はありません。 同様の動作を実現するには、[TOP &#40;Transact-SQL&#41;](../../t-sql/queries/top-transact-sql.md) を使用します。  
   

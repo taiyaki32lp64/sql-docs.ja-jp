@@ -10,15 +10,15 @@ ms.assetid: ae849f79-c581-42a5-a5cc-0a9ebea171b9
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: a33585b216da10bd09a604905c50ce97b528de49
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: f104f7a6395442484be15f1e72c849edbf11e74f
+ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52752854"
+ms.lasthandoff: 08/29/2019
+ms.locfileid: "70152679"
 ---
-# <a name="sql-server-httpstorageobject"></a>SQL Server:HTTP_STORAGE_OBJECT
-  **SQLServer:HTTP_STORAGE_OBJECT** パフォーマンス オブジェクトは、Windows Azure ストレージ アカウントを監視する各種のパフォーマンス カウンターで構成されています。 使用して[Windows Azure での SQL Server データ ファイル](../databases/sql-server-data-files-in-microsoft-azure.md)機能、Windows Azure Storage Blob にデータベース ファイルを格納できます。 このパフォーマンス オブジェクトでは、各 Windows Azure ストレージ アカウントが別々のドライブとして処理されます。  
+# <a name="sql-server-http_storage_object"></a>SQL Server:HTTP_STORAGE_OBJECT
+  **SQLServer: HTTP_STORAGE_OBJECT**パフォーマンスオブジェクトは、Azure Storage アカウントを監視するパフォーマンスカウンターで構成されています。 [Azure 機能で SQL Server データファイル](../databases/sql-server-data-files-in-microsoft-azure.md)を使用すると、Azure Storage blob にデータベースファイルを格納できます。 このパフォーマンスオブジェクトは、各 Azure Storage アカウントを別のドライブとして扱います。  
   
 |カウンター名|説明|  
 |------------------|-----------------|  
@@ -37,7 +37,7 @@ ms.locfileid: "52752854"
 |**Outstanding HTTP Storage I/O**|HTTP ストレージに対する未処理 I/O の合計数。|  
 |**HTTP Storage I/O Retry/sec**|HTTP ストレージに送信された 1 秒あたりの再試行要求数。|  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [リソースの利用状況の監視 &#40;システム モニター&#41;](monitor-resource-usage-system-monitor.md)  
   
   

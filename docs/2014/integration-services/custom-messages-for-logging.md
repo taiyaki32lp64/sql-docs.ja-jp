@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords:
 - logs [Integration Services], custom
@@ -13,15 +12,15 @@ helpviewer_keywords:
 - SSIS packages, logs
 - custom messages for logging [Integration Services]
 ms.assetid: 3c74bba9-02b7-4bf5-bad5-19278b680730
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: f55c99ad60dd449a3f5b591adf09f325127258b6
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: a557d3dfddf5989c580b0ba78f9b5d930c548617
+ms.sourcegitcommit: 757cda42bce65721a6079fe403add874f9afb31e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53366574"
+ms.lasthandoff: 06/21/2019
+ms.locfileid: "67316663"
 ---
 # <a name="custom-messages-for-logging"></a>ログ記録用のカスタム メッセージ
   [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] には、パッケージや多くのタスクのログ エントリを書き込むための豊富なカスタム イベントが用意されています。 記録したエントリを使用すれば、定義済みのイベントやユーザー定義メッセージを後の分析用に記録しておくことで、実行の進行状況、結果、および問題点に関する詳細を保管できます。 たとえば、一括挿入の開始時刻と終了時刻を記録しておけば、パッケージ実行時のパフォーマンスの問題を特定できます。  
@@ -83,7 +82,7 @@ ms.locfileid: "53366574"
 |---------------|-----------------|  
 |`PackageStart`|パッケージの実行が開始されたことを示します。<br /><br /> 注:このログ エントリは自動的にログに書き込まれます。 除外することはできません。|  
 |`PackageEnd`|パッケージが完了したことを示します。<br /><br /> 注:このログ エントリは自動的にログに書き込まれます。 除外することはできません。|  
-|`Diagnostic`|同時実行できる実行可能ファイル数など、パッケージの実行に影響するシステム構成に関する情報を提供します。<br /><br /> `Diagnostic` ログ エントリに、外部データ プロバイダーの呼び出し前後のエントリも含まれています。 詳細については、「 [トラブルシューティング ツールのパッケージ接続](troubleshooting/troubleshooting-tools-for-package-connectivity.md)」を参照してください。|  
+|`Diagnostic`|同時実行できる実行可能ファイル数など、パッケージの実行に影響するシステム構成に関する情報を提供します。<br /><br /> `Diagnostic` ログ エントリに、外部データ プロバイダーの呼び出し前後のエントリも含まれています。 詳細については、「[トラブルシューティング ツールのパッケージ接続](troubleshooting/troubleshooting-tools-for-package-connectivity.md)」を参照してください。|  
   
 ###  <a name="BulkInsert"></a> 一括挿入タスク  
  次の表は、一括挿入タスクのカスタム ログ エントリの一覧です。  
@@ -259,12 +258,8 @@ ms.locfileid: "53366574"
   
 |ログ エントリ|説明|  
 |---------------|-----------------|  
-|`XMLOperation`|タスクで実行される操作に関する情報を提供します。|  
+|`XMLOperation`|タスクで実行される操作に関する情報を提供します。|   
   
-## <a name="related-content"></a>関連コンテンツ  
- dougbert.com のブログ [「Integration Services タスクのカスタム イベントのログ記録」](https://go.microsoft.com/fwlink/?LinkId=150580)。  
-  
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [Integration Services &#40;SSIS&#41; のログ記録](performance/integration-services-ssis-logging.md)  
-  
   

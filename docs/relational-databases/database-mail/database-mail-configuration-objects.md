@@ -32,13 +32,12 @@ helpviewer_keywords:
 ms.assetid: 03f6e4c0-04ff-490a-bd91-637806215bd1
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: f91b618e98fa9036b27a398731ecfaca51925611
-ms.sourcegitcommit: 1a5448747ccb2e13e8f3d9f04012ba5ae04bb0a3
+ms.openlocfilehash: 5082c3ab595cc11ff9ab3f5dbc869c11105ce70a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51558959"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68134431"
 ---
 # <a name="database-mail-configuration-objects"></a>データベース メール構成オブジェクト
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -60,11 +59,11 @@ ms.locfileid: "51558959"
   
  データベース メールでは、SMTP サーバーとの通信に関して、次に示す 3 つの認証方法をサポートしています。  
   
--   Windows 認証 : SMTP サーバーの認証に [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] の Windows サービス アカウントの資格情報を使用します。  
+-   Windows 認証:SMTP サーバーの認証に [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] の Windows サービス アカウントの資格情報を使用します。  
   
--   基本認証 : SMTP サーバーの認証用に指定されたユーザー名とパスワードを使用します。  
+-   基本認証:SMTP サーバーの認証用に指定されたユーザー名とパスワードを使用します。  
   
--   匿名認証 : SMTP サーバーでの認証を要求しません。  SMTP サーバーの認証には資格情報をまったく使用しません。  
+-   匿名認証:SMTP サーバーでは認証が必要ありません。  SMTP サーバーの認証には資格情報をまったく使用しません。  
   
  アカウント情報は、 **msdb** データベースに保存されます。 各アカウントを構成する情報は、次のとおりです。  
   

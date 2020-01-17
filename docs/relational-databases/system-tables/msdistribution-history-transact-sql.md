@@ -1,5 +1,5 @@
 ---
-title: MSdistribution_history (TRANSACT-SQL) |Microsoft Docs
+title: MSdistribution_history (Transact-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: sql
@@ -17,18 +17,17 @@ helpviewer_keywords:
 ms.assetid: 55665bd2-9e1d-4efc-8f60-c63a24f66b28
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 305223fca45bb1916598f02c16cc4e38981e861d
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 1053181486dba8c8119f9160d9c08cb8d2bbe56b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52817324"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67907391"
 ---
-# <a name="msdistributionhistory-transact-sql"></a>MSdistribution_history (Transact-SQL)
+# <a name="msdistribution_history-transact-sql"></a>MSdistribution_history (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  **MSdistribution_history**テーブルは、ローカル ディストリビューターに関連付けられているディストリビューション エージェントの履歴行を保持します。 このテーブルは、ディストリビューション データベースに保存されます。  
+  **MSdistribution_history**テーブルは、ローカル ディストリビューターに関連付けられているディストリビューション エージェントの履歴行を保持します。 このテーブルは、ディストリビューション データベースに格納されます。  
   
 ## <a name="definition"></a>定義  
   
@@ -37,24 +36,24 @@ ms.locfileid: "52817324"
 |**agent_id**|**int**|ディストリビューション エージェントの ID。|  
 |**runstatus**|**int**|実行中の状態:<br /><br /> **1** = 開始します。<br /><br /> **2** = 成功します。<br /><br /> **3** = 実行中です。<br /><br /> **4** = アイドル状態です。<br /><br /> **5** = 再試行します。<br /><br /> **6** = 失敗します。|  
 |**start_time**|**datetime**|ジョブの実行開始時刻です。|  
-|**time**|**datetime**|メッセージが記録された時刻です。|  
+|**time**|**datetime**|メッセージが記録された時刻。|  
 |**duration**|**int**|メッセージ セッションの実行時間 (秒) です。|  
 |**comments**|**nvarchar (4000)**|メッセージ テキストです。|  
 |**xact_seqno**|**varbinary(16)**|最後に処理されたトランザクション シーケンス番号です。|  
-|**current_delivery_rate**|**float**|最後の履歴エントリ以降 1 秒あたりに配信されたコマンド数の平均です。|  
-|**current_delivery_latency**|**int**|最後の履歴エントリ以降で、コマンドがディストリビューション データベースに登録されてからサブスクライバーに適用されるまでの間隔です。 単位はミリ秒。|  
-|**delivered_transactions**|**int**|セッション中に配信されたトランザクションの総数です。|  
+|**current_delivery_rate**|**float**|最後の履歴エントリ以降 1 秒あたりに配信される平均コマンド数。|  
+|**current_delivery_latency**|**int**|コマンドがディストリビューション データベースから最後の履歴エントリ以降のサブスクライバーに適用されるまでの待機時間。 単位はミリ秒。|  
+|**delivered_transactions**|**int**|セッションに配信されたトランザクション数の合計。|  
 |**delivered_commands**|**int**|セッションに配信されたコマンド数の合計。|  
-|**average_commands**|**int**|セッション中に配信された平均コマンド数です。|  
-|**delivery_rate**|**float**|1 秒あたりの平均配信コマンド数です。|  
+|**average_commands**|**int**|セッションで配信される平均コマンド数。|  
+|**delivery_rate**|**float**|配信されたコマンドを 1 秒あたりの平均です。|  
 |**delivery_latency**|**int**|コマンドがディストリビューション データベースに登録されてからサブスクライバーに適用されるまでの待機時間です。 単位はミリ秒。|  
-|**total_delivered_commands**|**bigint**|サブスクリプションが作成されてから配信されたコマンドの総数です。|  
+|**total_delivered_commands**|**bigint**|サブスクリプションの作成後に配信されたコマンド数の合計。|  
 |**error_id**|**int**|内のエラーの ID、 **MSrepl_error**システム テーブル。|  
 |**updateable_row**|**bit**|設定**1**履歴行を上書きできる場合。|  
 |**timestamp**|**timestamp**|このテーブルのタイムスタンプ列です。|  
   
-## <a name="see-also"></a>参照  
- [レプリケーション テーブル &#40; です。TRANSACT-SQL と &#41; です。](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
+## <a name="see-also"></a>関連項目  
+ [レプリケーション テーブル &#40;Transact-SQL&#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
  [レプリケーション ビュー &#40;Transact-SQL&#41;](../../relational-databases/system-views/replication-views-transact-sql.md)  
   
   

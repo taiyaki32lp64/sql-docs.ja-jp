@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 963fe470-f7cb-4dbe-a779-05f98d7ff17d
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 8d0c5380a0006de82c39f532f1d87d6b7f33dd6d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 22519e6d3be8ab4474fd88309da1b7e8be0fb49e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47646980"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68083334"
 ---
 # <a name="commit-mode"></a>コミット モード
 ODBC でのトランザクションが 2 つのモードのいずれかであることができます。 自動コミット モードまたは手動コミット モード。  

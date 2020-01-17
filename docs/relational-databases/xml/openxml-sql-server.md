@@ -21,15 +21,14 @@ helpviewer_keywords:
 - XML [SQL Server], OPENXML statement
 - element-centric mapping [SQL Server]
 ms.assetid: 060126fc-ed0f-478f-830a-08e418d410dc
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: 3534d1772fcc13ebcd420bc845b004bf20b1d446
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: MightyPen
+ms.author: genemi
+ms.openlocfilehash: 6282a242807532095d13fed4b853731937bdd176
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47629861"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67995358"
 ---
 # <a name="openxml-sql-server"></a>OPENXML (SQLServer)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

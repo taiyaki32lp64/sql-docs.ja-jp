@@ -16,13 +16,12 @@ helpviewer_keywords:
 - cursors [OLE DB]
 author: pmasl
 ms.author: pelopes
-manager: craigg
-ms.openlocfilehash: 6c2783969aacb7a7dfd86a677d28eb3a4ea1de92
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 9ba062c9718203c52659dd0c35fa7bcb76b1a40c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52537291"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67994178"
 ---
 # <a name="rowsets-and-sql-server-cursors"></a>行セットと SQL Server カーソル
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -61,11 +60,11 @@ ms.locfileid: "52537291"
   
     -   複数の結果セットを返す [!INCLUDE[tsql](../../../includes/tsql-md.md)] ステートメントはサポートしません。  
   
- コンシューマーは、特定の行セット プロパティを設定することで、行セットでのカーソルの動作を変更できます。 コンシューマーでそれらの行セット プロパティがまったく設定されないか、またはすべてのプロパティが既定値に設定された場合、OLE DB Driver for SQL Server では既定の結果セットを使用して行セットが実装されます。 これらのプロパティのいずれかが、既定以外の値に設定されている場合、OLE DB Driver for SQL Server は、サーバー カーソルを使用して行セットを実装します。  
+ コンシューマーは、特定の行セット プロパティを設定することで、行セットでのカーソルの動作を変更できます。 コンシューマーでそれらの行セット プロパティがまったく設定されないか、またはすべてのプロパティが既定値に設定された場合、OLE DB Driver for SQL Server では既定の結果セットを使用して行セットが実装されます。 これらのプロパティのいずれかが既定値以外の値に設定されている場合、SQL Server の OLE DB ドライバーは、サーバーカーソルを使用して行セットを実装します。  
   
- 次の行セット プロパティは、OLE DB Driver for SQL Server を使用するを直接[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]カーソル。 プロパティによっては、他のプロパティと組み合わせて使用できるものもあります。 たとえば、DBPROP_IRowsetScroll プロパティと DBPROP_IRowsetChange プロパティを備えた行セットは、即時更新動作を表すブックマーク行セットになります。 同時に指定できないプロパティもあります。 たとえば、DBPROP_OTHERINSERT を備えた行セットにはブックマークを含めることはできません。  
+ 次の行セットプロパティは、カーソルを使用[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]するように SQL Server の OLE DB ドライバーに指示します。 プロパティによっては、他のプロパティと組み合わせて使用できるものもあります。 たとえば、DBPROP_IRowsetScroll プロパティと DBPROP_IRowsetChange プロパティを備えた行セットは、即時更新動作を表すブックマーク行セットになります。 同時に指定できないプロパティもあります。 たとえば、DBPROP_OTHERINSERT を備えた行セットにはブックマークを含めることはできません。  
   
-|プロパティ ID|ReplTest1|行セットの動作|  
+|プロパティ ID|[値]|行セットの動作|  
 |-----------------|-----------|---------------------|  
 |DBPROP_SERVERCURSOR|VARIANT_TRUE|行セットを使用して [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] データを更新できません。 行セットは順次処理され、順方向のスクロールとフェッチのみがサポートされます。 相対行位置指定がサポートされます。 コマンド テキストに ORDER BY 句を指定できます。|  
 |DBPROP_CANSCROLLBACKWARDS または DBPROP_CANFETCHBACKWARDS|VARIANT_TRUE|行セットを使用して [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] データを更新できません。 行セットでは、両方向へのスクロールとフェッチがサポートされます。 相対行位置指定がサポートされます。 コマンド テキストに ORDER BY 句を指定できます。|  
@@ -94,7 +93,7 @@ ms.locfileid: "52537291"
   
  特定の種類のカーソル モデルを使用するには、カーソル モデルに対応する列を探し、列の値が "T" であるすべての行セット プロパティを見つけます。 これらの行セット プロパティに VARIANT_TRUE を設定すると、その特定のカーソル モデルを使用できます。 値が "-" の行セット プロパティには、VARIANT_TRUE と VARIANT_FALSE のどちらも設定できます。  
   
-|行セット プロパティ/カーソル モデル|既定<br /><br /> result<br /><br /> セット (set)<br /><br />  (RO)|[高速]<br /><br /> 順方向<br /><br /> 専用<br /><br />  (RO)|静的<br /><br />  (RO)|Keyset<br /><br /> ドリブン<br /><br />  (RO)|  
+|行セット プロパティ/カーソル モデル|既定<br /><br /> 結果<br /><br /> セット (set)<br /><br /> (RO)|[高速]<br /><br /> 順方向<br /><br /> 専用<br /><br /> (RO)|静的<br /><br /> (RO)|Keyset<br /><br /> ドリブン<br /><br /> (RO)|  
 |--------------------------------------|-------------------------------------------|--------------------------------------------|-----------------------|----------------------------------|  
 |DBPROP_SERVERCURSOR|F|T|T|T|  
 |DBPROP_DEFERRED|F|F|-|-|  

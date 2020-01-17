@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: a7f9e7d4-fff4-4c72-8b3e-3f18dffc8919
 author: julieMSFT
 ms.author: jrasnick
-manager: craigg
-ms.openlocfilehash: 668fe6a825be365aa605febaaea7aafdd71ddf7d
-ms.sourcegitcommit: fa2f85b6deeceadc0f32aa7f5f4e2b6e4d99541c
+ms.openlocfilehash: a8114722ac95c1404a45d8c85bf1736e541fa0ae
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/03/2019
-ms.locfileid: "53997574"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68093603"
 ---
 # <a name="sql-server-databases-object"></a>SQL Server、Databases オブジェクト
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -70,7 +69,7 @@ ms.locfileid: "53997574"
 |**Log Pool Total Active Log Size**|共有キャッシュ バッファー マネージャーに現在格納されているアクティブなログの合計 (バイト単位) です。|
 |**Log Pool Total Shared Pool Size**|共有キャッシュ バッファー マネージャーの現在のメモリ使用量の合計 (バイト単位) です。|
 |**Log Shrinks**|このデータベースのログ圧縮の総数。|  
-|**Log Truncations**|トランザクション ログが圧縮された回数。|  
+|**Log Truncations**|トランザクション ログが切り捨てられた回数 (単純復旧モデルの場合)。|  
 |**Percent Log Used**|ログの中で使用中の領域の割合。|  
 |**Repl.Pending Xacts**|レプリケーション用にマークされていてまだディストリビューション データベースに配信されていないパブリケーション データベースのトランザクション ログ内のトランザクションの数。|  
 |**Repl.Trans.Rate**|1 秒間に、パブリケーション データベースのトランザクション ログから読み取られ、ディストリビューション データベースに配信されたトランザクションの数。|  

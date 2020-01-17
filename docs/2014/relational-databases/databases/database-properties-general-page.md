@@ -13,11 +13,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 13ec38a90e0acf85dccf87edd94f6efa4cf3dfd6
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56012993"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62916960"
 ---
 # <a name="database-properties-general-page"></a>[データベースのプロパティ] \([全般] ページ)
   このページを使用すると、選択されているデータベースのプロパティを表示または変更できます。  
@@ -53,7 +53,7 @@ ms.locfileid: "56012993"
  **[照合順序名]**  
  データベースの照合順序を表示します。 照合順序は、 **[オプション]** ページで変更できます。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [ALTER DATABASE &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql)   
  [sys.databases &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-databases-transact-sql)  
   

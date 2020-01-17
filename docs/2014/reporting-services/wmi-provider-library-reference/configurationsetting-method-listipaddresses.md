@@ -4,21 +4,20 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 helpviewer_keywords:
 - ListIPAddresses method
 ms.assetid: 7e7cf182-fba0-4604-a474-098461e23e9d
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 1c6854194122dbc4ab5e1781ea62de119f7a09e9
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: e406b42346e936fe72c70e5cb13b75ffb3f1f8fe
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56029053"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66098319"
 ---
 # <a name="listipaddresses-method-wmi-msreportserverconfigurationsetting"></a>ListIPAddresses メソッド (WMI MSReportServer_ConfigurationSetting)
   レポート サーバー コンピューターの IP アドレスを一覧表示します。  

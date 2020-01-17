@@ -17,11 +17,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: d67a37e85bd67d80b86a30c21b35de298060985f
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52783604"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63044223"
 ---
 # <a name="server-event-category"></a>Server イベント カテゴリ
   **Server** イベント カテゴリには、一般的なサーバー イベントが含まれます。  
@@ -31,7 +31,7 @@ ms.locfileid: "52783604"
 |トピック|説明|  
 |-----------|-----------------|  
 |[Mount Tape イベント クラス](mount-tape-event-class.md)|テープ マウント要求を受け取ったことを示します。|  
-|[Server Memory Change イベント クラス](server-memory-change-event-class.md)| [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のメモリ使用量が変更されたことを示します。|  
+|[Server Memory Change イベント クラス](server-memory-change-event-class.md)|[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のメモリ使用量が変更されたことを示します。|  
 |[Trace File Close イベント クラス](trace-file-close-event-class.md)|トレース ファイルのロールオーバー中にトレース ファイルが閉じられたことを示します。|  
   
   

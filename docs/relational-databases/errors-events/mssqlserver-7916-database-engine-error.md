@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 9bac3536-de14-4e98-84c2-bde9a59ba0d1
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 96d2e507283cacb475cbb866dba304e6faaa823f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 4ee6bae9798ab9e3c4a12f5b535c07a2a167a8ac
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47648140"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68125518"
 ---
 # <a name="mssqlserver7916"></a>MSSQLSERVER_7916
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -31,7 +30,7 @@ ms.locfileid: "47648140"
 |イベント ソース|MSSQLSERVER|  
 |コンポーネント|SQLEngine|  
 |シンボル名|DBCC2_REPAIR_RECORD|  
-|メッセージ テキスト|修復: ページ P_ID、スロット S_ID のオブジェクト ID O_ID、インデックス ID I_ID、パーティション ID PN_ID、アロケーション ユニット ID A_ID (型 TYPE) のレコードが削除されました。 インデックスが再構築されます。|  
+|メッセージ テキスト|修復:ページ P_ID、スロット S_ID のオブジェクト ID O_ID、インデックス ID I_ID、パーティション ID PN_ID、アロケーション ユニット ID A_ID (型 TYPE) のレコードが削除されました。 インデックスが再構築されます。|  
   
 ## <a name="explanation"></a>説明  
 これは、REPAIR からの情報メッセージであり、このページから指定のレコードが削除されたことを示しています。  

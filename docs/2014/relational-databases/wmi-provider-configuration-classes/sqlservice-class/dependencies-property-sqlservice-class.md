@@ -19,11 +19,11 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: eae8ad534ba452acd7f65e4faf66dfcf4bc73791
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53357928"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63223276"
 ---
 # <a name="dependencies-property-sqlservice-class"></a>Dependencies プロパティ (SqlService クラス)
   参照されたサービスに依存するサービスのリストを取得します。  

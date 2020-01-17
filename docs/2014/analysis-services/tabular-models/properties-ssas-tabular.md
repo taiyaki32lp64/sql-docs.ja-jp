@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: a59d3448-8619-4044-923b-8effba926dfa
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 934ad51c8855b5b4aadd49af628ee8348bf960d9
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: cbaf5c82f386330fc632c55aab3cd3ec5a3d07b9
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52401353"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66066712"
 ---
 # <a name="properties-ssas-tabular"></a>プロパティ (SSAS テーブル)
   [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] の表形式モデル プロジェクトには、プロジェクト、モデル、レポート、および配置の方法を定義するさまざまなプロパティがあります。 プロパティ設定は、Model.bim ファイルに XML 形式で保存されます。ただし、ここで説明するすべてのプロパティは、 **の** [プロパティ] [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]ウィンドウで構成できます。  

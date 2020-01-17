@@ -21,15 +21,14 @@ helpviewer_keywords:
 - write errors [SQL Server]
 - read/write errors
 ms.assetid: 09e62428-ee0e-4ef5-b969-da9d255f1199
-author: MashaMSFT
-ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: d07e77ab56cd75e0416f4a457788bbe8ef6d6050
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: MikeRayMSFT
+ms.author: mikeray
+ms.openlocfilehash: a07518edbdfce618fa8bfcff15a49df70f029ee3
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47744440"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68098966"
 ---
 # <a name="x40x40totalerrors-transact-sql"></a>&#x40;&#x40;TOTAL_ERRORS (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

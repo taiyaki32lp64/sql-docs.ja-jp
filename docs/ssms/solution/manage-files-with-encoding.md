@@ -12,15 +12,14 @@ helpviewer_keywords:
 - encoding [SQL Server Management Studio]
 - files [SQL Server Management Studio], encoding
 ms.assetid: 919544c9-59f0-4cc6-bb2a-f1ad671eb74b
-author: stevestein
-ms.author: sstein
-manager: craigg
-ms.openlocfilehash: a8ed7c0555c566d5d93feafaea6f4ca851920ca1
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: c75981961540081d8761bfb4cdf24028b41d1071
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47813040"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68262827"
 ---
 # <a name="manage-files-with-encoding"></a>エンコーディングによるファイルの管理
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

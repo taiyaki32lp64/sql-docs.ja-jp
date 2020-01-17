@@ -19,14 +19,13 @@ helpviewer_keywords:
 ms.assetid: cd522dda-b4ab-41b8-82b0-02445bdba7af
 author: rothja
 ms.author: jroth
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 7a0055e87ea9cdd93f232b9e93468db66a4f96ba
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: fe633bc88750173f974ccf41a75f4bcad7e5c03b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47694010"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68075512"
 ---
 # <a name="create-nested-triggers"></a>入れ子になったトリガーの作成
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -37,7 +36,7 @@ ms.locfileid: "47694010"
   
  トリガーを入れ子にできる場合に、トリガーのチェーンのどれかが無限ループを開始すると、入れ子階層の上限を超えることになり、トリガーは終了します。  
   
- 入れ子になったトリガーを使用して、前のトリガーの影響を受けた行のバックアップ コピーを保存するなど、システムの運用上有益な機能を実行することができます。 たとえば、 `PurchaseOrderDetail` トリガーが削除した `PurchaseOrderDetail` 行のバックアップ コピーを保存するトリガーを `delcascadetrig` に作成することができます。 `delcascadetrig` トリガーが有効な場合、 `PurchaseOrderID` から `PurchaseOrderHeader` 1965 が削除されると、 `PurchaseOrderDetail`から対応する行が削除されます。 このデータを保存するには、 `PurchaseOrderDetail` に DELETE トリガーを作成します。このトリガーでは削除されたデータが、別に作成されたテーブル `del_save`に保存されます。 例 :  
+ 入れ子になったトリガーを使用して、前のトリガーの影響を受けた行のバックアップ コピーを保存するなど、システムの運用上有益な機能を実行することができます。 たとえば、 `PurchaseOrderDetail` トリガーが削除した `PurchaseOrderDetail` 行のバックアップ コピーを保存するトリガーを `delcascadetrig` に作成することができます。 `delcascadetrig` トリガーが有効な場合、 `PurchaseOrderID` から `PurchaseOrderHeader` 1965 が削除されると、 `PurchaseOrderDetail`から対応する行が削除されます。 このデータを保存するには、 `PurchaseOrderDetail` に DELETE トリガーを作成します。このトリガーでは削除されたデータが、別に作成されたテーブル `del_save`に保存されます。 例:  
   
 ```  
 CREATE TRIGGER Purchasing.savedel  

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 helpviewer_keywords:
 - traces [SQL Server], logs
@@ -13,15 +12,15 @@ ms.assetid: e1b3072c-8daf-49a7-9895-c8cccd2adb95
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 75af6924104764f372eefd0731799ec3566d0a0f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 3294c9fd70ebae8eab4e76e17b2e0a21771ec26f
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48049152"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66065048"
 ---
 # <a name="correlate-a-trace-with-windows-performance-log-data-sql-server-profiler"></a>トレースと Windows パフォーマンス ログ データの関連付け (SQL Server Profiler)
-  [!INCLUDE[ssSqlProfiler](../includes/sssqlprofiler-md.md)] Microsoft Windows システム モニター カウンターを関連付けることができる[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]または[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)][!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]イベント。 Windows システム モニターでは、指定されたカウンターのシステムの利用状況がパフォーマンス ログに記録されます。  
+  [!INCLUDE[ssSqlProfiler](../includes/sssqlprofiler-md.md)] では、Microsoft Windows システム モニター カウンターを [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] または [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] イベントと相互に関連付けることができます。 Windows システム モニターでは、指定されたカウンターのシステムの利用状況がパフォーマンス ログに記録されます。  
   
 > [!NOTE]  
 >  異なるバージョンの Windows 間でログを共有する方法の詳細については、このトピックの最後に記載されている手順を参照してください。  
@@ -30,7 +29,7 @@ ms.locfileid: "48049152"
   
 1.  [!INCLUDE[ssSqlProfiler](../includes/sssqlprofiler-md.md)]で、保存されているトレース ファイルまたはトレース テーブルを開きます。 イベント データを収集している実行中のトレースを相互に関連付けることはできません。 システム モニター データとの相関関係の精度を保証するには、 **[StartTime]** データ列と **[EndTime]** データ列の両方がトレースに含まれている必要があります。  
   
-2.  [!INCLUDE[ssSqlProfiler](../includes/sssqlprofiler-md.md)] **ファイル** メニューのをクリックして**パフォーマンス データのインポート**します。  
+2.   [!INCLUDE[ssSqlProfiler](../includes/sssqlprofiler-md.md)] **[ファイル]** メニューで、 **[パフォーマンス データのインポート]** をクリックします。  
   
 3.  **[開く]** ダイアログ ボックスで、パフォーマンス ログが含まれているファイルを選択します。 パフォーマンス ログ データは、トレース データがキャプチャされたのと同じ期間にキャプチャされている必要があります。  
   

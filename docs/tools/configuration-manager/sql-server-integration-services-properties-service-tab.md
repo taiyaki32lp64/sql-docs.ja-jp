@@ -8,22 +8,21 @@ ms.reviewer: ''
 ms.technology: configuration
 ms.topic: conceptual
 ms.assetid: 37f0acd9-c96f-48fd-9b53-2ca0097af242
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-manager: craigg
-ms.openlocfilehash: 7f6d4f710d4feb56ae839bafc640b6e598a6e9f4
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: d99dd32aa72d550db7aab32f0f4d9a4539d4251d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52519906"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68024017"
 ---
 # <a name="sql-server-integration-services-properties-service-tab"></a>[SQL Server Integration Services のプロパティ] ダイアログ ボックス ([サービス] タブ)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
   **[[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] のプロパティ]** ダイアログ ボックスの **[サービス]** タブでは、以下のオプションの表示や指定を行います。  
   
-## <a name="options"></a>[変数]  
+## <a name="options"></a>オプション  
  **バイナリ パス**  
  このサービスが使用するプログラム ファイルの場所が表示されます。  
   
@@ -36,7 +35,7 @@ ms.locfileid: "52519906"
  **Host Name**  
  [!INCLUDE[ssIS](../../includes/ssis-md.md)] サービスを実行しているコンピューターまたはクラスターの名前が表示されます。  
   
- **名前**  
+ **[名前]**  
  サービスの表示名が表示されます。  
   
  **プロセス ID**  
@@ -55,6 +54,6 @@ ms.locfileid: "52519906"
 -   \[無効]: このサービスは開始できません。  
   
  **状態**  
- このサービスが実行中か、停止しているか、無効になっているかが表示されます。 "**...**" の場合は、状態の変更が保留になっています。  
+ このサービスが実行中か、停止しているか、無効になっているかが表示されます。 " **...** " の場合は、状態の変更が保留になっています。  
   
   

@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: cc7d6ff9-2034-45c6-9d61-90b177010054
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 18370885fedb106f02c9b404ea946680aa048b8b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 85d4a7607fae1df7dfb6ec62b8a3bfae8f58001b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47811130"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67924546"
 ---
 # <a name="provider-errors"></a>プロバイダー エラー
 プロバイダー エラーが発生する、-2147467259 の実行時エラーが返されます。 このエラーが表示されたら、確認、**エラー**のアクティブなコレクション**接続**オブジェクトで、発生した内容について説明する 1 つまたは複数のエラーが含まれます。  
@@ -70,8 +69,8 @@ End Function
 |**[説明]**|発生したエラーの説明テキスト。|  
 |**HelpContext、HelpFile**|発生したエラーの説明が含まれているヘルプ トピックとヘルプ ファイルを参照します。|  
 |**NativeError**|プロバイダー固有のエラー番号。|  
-|**数**|数を表す長整数 (記載、 **ErrorValueEnum**) の発生したエラー。|  
-|**Source**|オブジェクトまたはエラーを生成したアプリケーションの名前を示します。|  
+|**数値**|数を表す長整数 (記載、 **ErrorValueEnum**) の発生したエラー。|  
+|**ソース**|オブジェクトまたはエラーを生成したアプリケーションの名前を示します。|  
 |**SQLState**|プロバイダーを返す SQL ステートメントの処理中に 5 文字のエラー コードを指定します。|  
   
  ADO**エラー**オブジェクトは、標準の Visual Basic によく似た**Err**オブジェクト。 そのプロパティには、発生したエラーについて説明します。 エラーの数、2 つの関連情報が表示されます。 **NativeError**プロパティには、エラー番号が含まれています。 使用するプロバイダーに固有です。 前の例では、プロバイダーしたが、Microsoft OLE DB Provider for SQL Server, **NativeError**は SQL Server に固有のエラーが含まれます。 **SQLState**プロパティは、SQL ステートメントでエラーを説明するための 5 文字コード。  

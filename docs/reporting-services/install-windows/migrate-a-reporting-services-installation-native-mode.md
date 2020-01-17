@@ -1,18 +1,17 @@
 ---
 title: Reporting Services のインストールの移行 (ネイティブ モード) | Microsoft Docs
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.topic: conceptual
-author: markingmyname
-ms.author: maghan
-manager: kfile
+author: maggiesMSFT
+ms.author: maggies
 ms.date: 11/06/2018
-ms.openlocfilehash: 2e7c5d6ecaebcdad5b3e2d9d23b4660f12e0bad7
-ms.sourcegitcommit: c7febcaff4a51a899bc775a86e764ac60aab22eb
-ms.translationtype: HT
+ms.openlocfilehash: 5db33f22ffd5143d88c5654c753f1b08811c0c8a
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "52712423"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68262899"
 ---
 # <a name="migrate-a-reporting-services-installation-native-mode"></a>Reporting Services のインストールの移行 (ネイティブ モード)
 
@@ -38,9 +37,10 @@ ms.locfileid: "52712423"
 * [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]  
   
 * [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]
-::: moniker-end
 
 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePoint モード配置を移行する方法については、「[Reporting Services の移行 &#40; SharePoint モード&#41;](../../reporting-services/install-windows/migrate-a-reporting-services-installation-sharepoint-mode.md)」をご覧ください。  
+
+::: moniker-end
   
  移行とは、新しい SQL Server インスタンスにアプリケーション データ ファイルを移動することを指します。 以下は、インストールを移行する必要がある一般的な理由です。  
   
@@ -89,7 +89,7 @@ ms.locfileid: "52712423"
   
 * WMI プロバイダーを呼び出してデータベース間でデータをコピーするコードを記述します。 このアプローチの詳細については、「 [Reporting Service WMI プロバイダーへのアクセス](../../reporting-services/tools/access-the-reporting-services-wmi-provider.md)」を参照してください。  
   
-* アイテム数が少ない場合は、レポート デザイナー、モデル デザイナー、およびレポート ビルダーから新しいレポート サーバーに、レポート、レポート モデル、および共有データ ソースを再パブリッシュできます。 ロールの割り当て、サブスクリプション、共有スケジュール、レポート スナップショット スケジュール、レポートやその他のアイテムに設定したカスタム プロパティ、モデル アイテム セキュリティ、およびレポート サーバーで設定したプロパティを再作成します。 これらのアクションを行う場合は、レポート履歴やレポートの実行ログ データの損失に備えてください。
+* アイテム数が少ない場合は、レポート デザイナー、モデル デザイナー、およびレポート ビルダーから新しいレポート サーバーに、レポートおよび共有データ ソースを再パブリッシュできます。 ロールの割り当て、サブスクリプション、共有スケジュール、レポート スナップショット スケジュール、レポートやその他のアイテムに設定したカスタム プロパティ、モデル アイテム セキュリティ、およびレポート サーバーで設定したプロパティを再作成します。 これらのアクションを行う場合は、レポート履歴やレポートの実行ログ データの損失に備えてください。
   
 ## <a name="bkmk_before_you_start"></a> 開始前の準備
 
@@ -201,7 +201,7 @@ SQL Server Reporting Services の変更点の詳細については、アップ�
 
     * カスタム セキュリティ拡張機能は、[IAuthenticationExtension2](https://msdn.microsoft.com/library/microsoft.reportingservices.interfaces.iauthenticationextension2.aspx) インターフェイスを使用して記述し直す必要があります。
   
-    *  [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] のカスタム表示拡張機能は、表示オブジェクト モデル (ROM) を使用して記述し直す必要があります。  
+    * [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] のカスタム表示拡張機能は、表示オブジェクト モデル (ROM) を使用して記述し直す必要があります。  
   
     * HTML 3.2 レンダラーおよび HTML OWC レンダラーは、 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 以降のバージョンではサポートされません。  
   
@@ -238,7 +238,7 @@ SQL Server Reporting Services の変更点の詳細については、アップ�
 
 このスケールアウト キーは、 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 構成マネージャーでは削除できません。 SQL Server Management Studio を使用して、 **ReportServer** データベースの **Keys** テーブルから古いキーを削除する必要があります。 Keys テーブル内のすべての行を削除します。 このアクションによってテーブルがクリアされ、以降の手順に示すように、対称キーのみを復元できるように準備されます。  
 
-キーを削除する前に、対称暗号化キーをバックアップしておくことをお勧めします。 キーのバックアップには、 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 構成マネージャーを使用できます。 Configuration Manager を開き、[暗号化キー] タブをクリックし、**[バックアップ]** ボタンをクリックします。 スクリプト WMI コマンドを使用して暗号化キーをバックアップすることもできます。 WMI の詳細については、「[BackupEncryptionKey メソッド &#40;WMI MSReportServer_ConfigurationSetting&#41;](../../reporting-services/wmi-provider-library-reference/configurationsetting-method-backupencryptionkey.md)」をご覧ください。  
+キーを削除する前に、対称暗号化キーをバックアップしておくことをお勧めします。 キーのバックアップには、 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 構成マネージャーを使用できます。 Configuration Manager を開き、[暗号化キー] タブをクリックし、 **[バックアップ]** ボタンをクリックします。 スクリプト WMI コマンドを使用して暗号化キーをバックアップすることもできます。 WMI の詳細については、「[BackupEncryptionKey メソッド &#40;WMI MSReportServer_ConfigurationSetting&#41;](../../reporting-services/wmi-provider-library-reference/configurationsetting-method-backupencryptionkey.md)」をご覧ください。  
   
 1. Reporting Services Configuration Manager を起動し、インストールした [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] インスタンスに接続します。 詳細については、「 [Reporting Services 構成マネージャー &#40;ネイティブ モード&#41;](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md)」を参照してください。  
   

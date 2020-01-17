@@ -13,21 +13,21 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 9e9f8e5d5f196452a8cd0f56e26aac40895bcd9d
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52774992"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68188541"
 ---
 # <a name="options-environment-help-general-page"></a>オプション (環境-ヘルプ-[全般] ページ)
-   **[オプション]** ダイアログ ボックスを使用すると、ドキュメントのセットを選択し、トピックを [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] の内部に表示するか、別の外部ウィンドウに表示するかを指定できます。 このダイアログ ボックスを開くには、 **[ツール]** メニューの **[オプション]** をクリックして、 **[環境]** ノードの **[ヘルプ]** を展開し、 **[全般]** をクリックします。  
+  **[オプション]** ダイアログ ボックスを使用すると、ドキュメントのセットを選択し、トピックを [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] の内部に表示するか、別の外部ウィンドウに表示するかを指定できます。 このダイアログ ボックスを開くには、 **[ツール]** メニューの **[オプション]** をクリックして、 **[環境]** ノードの **[ヘルプ]** を展開し、 **[全般]** をクリックします。  
   
 > [!NOTE]  
 >  このページのオプションに加えた変更は、環境が再起動されるまで有効になりません。  
   
-## <a name="settings"></a>[設定]  
+## <a name="settings"></a>設定  
  **[次を使用してヘルプを表示する]**  
- ヘルプの表示方法を指定します。 ドロップダウン リストで **[外部ヘルプ ビューアー]** を選択すると、外部のフローティング ウィンドウにトピックが表示されます。  **[統合ヘルプ ビューアー]** を選択すると、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]の内側にドッキングした Web ブラウザー ウィンドウにヘルプ トピックを表示します。  
+ ヘルプの表示方法を指定します。 ドロップダウン リストで **[外部ヘルプ ビューアー]** を選択すると、外部のフローティング ウィンドウにトピックが表示されます。 **[統合ヘルプ ビューアー]** を選択すると、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]の内側にドッキングした Web ブラウザー ウィンドウにヘルプ トピックを表示します。  
   
  **[ページ毎の検索結果]**  
  1 つの **[検索結果]** ページに表示するトピックの数を指定します。  

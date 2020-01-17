@@ -1,5 +1,5 @@
 ---
-title: getIndexInfo メソッド (SQLServerDatabaseMetaData) |Microsoft Docs
+title: getIndexInfo メソッド (SQLServerDatabaseMetaData) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: 8a677cc6-8e33-4e57-8678-0849345aa8d0
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: d7d66a175522cd89cf4bd0aca567779244b0a385
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 8dd512236aa3070ce299756d4e4294c79ac2e94a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47789830"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67982791"
 ---
 # <a name="getindexinfo-method-sqlserverdatabasemetadata"></a>getIndexInfo メソッド (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -54,11 +53,11 @@ public java.sql.ResultSet getIndexInfo(java.lang.String cat,
   
  *unique*  
   
- **true**のみ場合、インデックスが一意の値が返されます。 **false**場合、すべてのインデックスが返されます。  
+ 一意の値のインデックスのみが返される場合は**true** 。 すべてのインデックスが返される場合は**false** 。  
   
  *approximate*  
   
- **true**場合は、結果に概数または期限切れの値が反映されます。 **false**結果が正確である場合。  
+ 結果に概数または古い値が反映されている場合は**true** 。 結果が正確である場合は**false** 。  
   
 ## <a name="return-value"></a>戻り値  
  [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) オブジェクトです。  
@@ -67,7 +66,7 @@ public java.sql.ResultSet getIndexInfo(java.lang.String cat,
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- この getIndexInfo メソッドは、java.sql.DatabaseMetaData インターフェイスで getIndexInfo メソッドによって指定されます。  
+ この getIndexInfo メソッドは、java.sql.DatabaseMetaData インターフェイスの getIndexInfo メソッドで規定されています。  
   
  getIndexInfo メソッドによって返される結果セットには、次の情報が含まれます。  
   

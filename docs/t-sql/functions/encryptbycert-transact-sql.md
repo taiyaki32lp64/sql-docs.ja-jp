@@ -17,22 +17,21 @@ helpviewer_keywords:
 - encryption [SQL Server], certificates
 - ENCRYPTBYCERT function
 ms.assetid: ab66441f-e2d2-4e3a-bcae-bcc09e12f3c1
-author: MashaMSFT
-ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 1b3901fc4364248b4fa987279e600fd65e5fcde8
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: VanMSFT
+ms.author: vanto
+ms.openlocfilehash: f1548aa3b7b436f89ad4dee73b7c1ed7034e0f87
+ms.sourcegitcommit: a24f6e12357979f1134a54a036ebc58049484a4f
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47661370"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71314591"
 ---
 # <a name="encryptbycert-transact-sql"></a>ENCRYPTBYCERT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  証明書の公開キーを使ってデータを暗号化します。  
+証明書の公開キーを使ってデータを暗号化します。  
   
- ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>構文  
   
@@ -42,23 +41,30 @@ EncryptByCert ( certificate_ID , { 'cleartext' | @cleartext } )
 ```  
   
 ## <a name="arguments"></a>引数  
- *certificate_ID*  
- データベース内の証明書の ID。 **int** です。  
+_certificate\_ID_  
+データベース内の証明書の ID。 **int** です。  
   
- *cleartext*  
- 証明書で暗号化するデータの文字列を指定します。  
+_cleartext_  
+証明書で暗号化されるデータの文字列。  
   
- **@cleartext**  
- 証明書の公開キーを使用して暗号化されるデータを含む  **nvarchar**、**char**、**varchar**、**binary**、**varbinary**、または**nchar** 型の変数。  
+**\@cleartext**  
+証明書の公開キーで暗号化されるデータが含まれる次のいずれかの型の変数:
+
+* **nvarchar** 
+* **char**
+* **varchar**
+* **binary** 
+* **varbinary**
+* **nchar**
   
 ## <a name="return-types"></a>戻り値の型  
- **varbinary** 8,000 バイトの最大サイズ。  
+**varbinary** 8,000 バイトの最大サイズ。  
   
 ## <a name="remarks"></a>Remarks  
- この関数では、証明書の公開キーを使ってデータを暗号化します。 この暗号文は、対応する秘密キーでのみ暗号化を解除できます。 このような非対称変換は、対称キーを使用する暗号化および暗号化解除と比較して、非常にコストがかかります。 したがって、非対称暗号化は、テーブル内のユーザー データなど、大きなデータセットを処理する場合は推奨されません。  
+この関数によって証明書の公開キーでデータが暗号化されます。 この暗号文は、対応する秘密キーでのみ暗号化を解除できます。 対称キーを使用した暗号化と暗号化の解除に比べ、このような非対称変換はコストが高くなります。 そのため、大きなデータセットを扱う場合、非同期暗号化は推奨されません。
   
 ## <a name="examples"></a>使用例  
- 次の例では、`@cleartext` という証明書を使用して、`JanainaCert02` に格納されているプレーン テキストを暗号化します。 暗号化されたデータは、テーブル `ProtectedData04` に挿入されます。  
+次の例では、`@cleartext` という証明書を使用して、`JanainaCert02` に格納されているプレーン テキストを暗号化します。 暗号化されたデータは、テーブル `ProtectedData04` に挿入されます。  
   
 ```  
 INSERT INTO [AdventureWorks2012].[ProtectedData04]   
@@ -68,11 +74,11 @@ GO
 ```  
   
 ## <a name="see-also"></a>参照  
- [DECRYPTBYCERT &#40;Transact-SQL&#41;](../../t-sql/functions/decryptbycert-transact-sql.md)   
- [CREATE CERTIFICATE &#40;Transact-SQL&#41;](../../t-sql/statements/create-certificate-transact-sql.md)   
- [ALTER CERTIFICATE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-certificate-transact-sql.md)   
- [DROP CERTIFICATE &#40;Transact-SQL&#41;](../../t-sql/statements/drop-certificate-transact-sql.md)   
- [BACKUP CERTIFICATE &#40;Transact-SQL&#41;](../../t-sql/statements/backup-certificate-transact-sql.md)   
- [暗号化階層](../../relational-databases/security/encryption/encryption-hierarchy.md)  
+[DECRYPTBYCERT &#40;Transact-SQL&#41;](../../t-sql/functions/decryptbycert-transact-sql.md)   
+[CREATE CERTIFICATE &#40;Transact-SQL&#41;](../../t-sql/statements/create-certificate-transact-sql.md)   
+[ALTER CERTIFICATE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-certificate-transact-sql.md)   
+[DROP CERTIFICATE &#40;Transact-SQL&#41;](../../t-sql/statements/drop-certificate-transact-sql.md)   
+[BACKUP CERTIFICATE &#40;Transact-SQL&#41;](../../t-sql/statements/backup-certificate-transact-sql.md)   
+[暗号化階層](../../relational-databases/security/encryption/encryption-hierarchy.md)  
   
   

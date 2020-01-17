@@ -1,34 +1,35 @@
 ---
-title: R と Python スクリプトの実行 - SQL Server Machine Learning Services のデータベース アクセス許可の付与
-description: SQL Server Machine Learning Services で R と Python スクリプトの実行、データベース ユーザーのアクセス許可を付与する方法。
+title: スクリプトに関する権限の付与
+description: SQL Server Machine Learning Services で R および Python スクリプトの実行に対するデータベース ユーザーの権限を付与する方法について説明します。
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 10/17/2018
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
-manager: cgronlun
-ms.openlocfilehash: e281f1712163aeee1846565458c2b037077c8588
-ms.sourcegitcommit: ee76332b6119ef89549ee9d641d002b9cabf20d2
-ms.translationtype: MT
+ms.custom: seo-lt-2019
+monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
+ms.openlocfilehash: 9b8d3ea5c52c5c18f09097322fdc1e1b2321494e
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/20/2018
-ms.locfileid: "53644841"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73727309"
 ---
-# <a name="give-users-permission-to-sql-server-machine-learning-services"></a>SQL Server Machine Learning サービスへのアクセス許可をユーザーに付与します。
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+# <a name="give-users-permission-to-sql-server-machine-learning-services"></a>SQL Server Machine Learning Services にユーザー 権限を付与する
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-この記事では、どのユーザーに付与できます SQL Server Machine Learning サービスで外部のスクリプトを実行して、読み取り、書き込み、またはデータの定義のデータベースへの言語 (DDL) のアクセス許可を付与するアクセス許可について説明します。
+この記事では、SQL Server Machine Learning Services で外部スクリプトを実行する権限をユーザーに付与する方法とデータベースに対する読み取り、書き込み、またはデータ定義言語 (DDL) の権限を付与する方法について説明します。
 
-詳細については、アクセス許可のセクションを参照してください。[機能拡張フレームワークのセキュリティの概要](../../advanced-analytics/concepts/security.md#permissions)します。
+詳細については、「[機能拡張フレームワークのセキュリティ概要](../../advanced-analytics/concepts/security.md#permissions)」の「権限」セクションを参照してください。
 
 <a name="permissions-external-script"></a>
 
-## <a name="permission-to-run-scripts"></a>スクリプトを実行するためのアクセス許可
+## <a name="permission-to-run-scripts"></a>スクリプトを実行する権限
 
-インストールした場合[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]して、自分で独自のインスタンスで R または Python スクリプトの実行は、通常、管理者としてスクリプトを実行します。 したがって、さまざまな操作と、データベース内のすべてのデータに対する暗黙的なアクセス許可があります。
+自分で [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] をインストールし、独自のインスタンスで R または Python スクリプトを実行している場合は、通常、管理者としてスクリプトを実行します。 そのため、データベース内のさまざまな操作とすべてのデータに対して暗黙的な権限を持っています。
 
-ただし、ほとんどのユーザーは、このような高度な権限を必要はありません。 たとえば、一般に、データベースにアクセスする SQL ログインを使用して、組織内のユーザーには、昇格されたアクセス許可がありません。 そのため、R または Python を使用しているユーザーごとにする必要がありますユーザーに付与する Machine Learning サービスの言語が使用されている各データベースで外部のスクリプトを実行するアクセス許可。 ここではどのように。
+ただし、ほとんどのユーザーには、このような管理者権限はありません。 たとえば、SQL ログインを使用してデータベースにアクセスする組織内のユーザーには、通常、管理者権限がありません。 そのため、R または Python を使用している毎ユーザーに対して、言語が使用されている各データベースで外部スクリプトを実行する権限を Machine Learning Services のユーザーに付与する必要があります。 その方法は次のとおりです。
 
 ```sql
 USE <database_name>
@@ -37,17 +38,17 @@ GRANT EXECUTE ANY EXTERNAL SCRIPT TO [UserName]
 ```
 
 > [!NOTE]
-> 権限はサポートされているスクリプト言語に固有ではありません。 つまり、R スクリプトのスクリプトと Python スクリプトの個別のアクセス許可レベルがありません。 これらの言語の個別のアクセス許可を維持する必要がある場合は、個別のインスタンスに R と Python をインストールします。
+> サポートされているスクリプト言語には、権限が固有ではありません。 言い換えると、R スクリプトと Python スクリプトには個別の権限レベルがありません。 これらの言語に対して個別の権限を保持する必要がある場合は、R と Python を別々のインスタンスにインストールします。
 
 <a name="permissions-db"></a> 
 
-## <a name="grant-databases-permissions"></a>データベースのアクセス許可の付与
+## <a name="grant-databases-permissions"></a>データベースの権限の許可
 
-ユーザーがスクリプトを実行中に、ユーザーが他のデータベースからデータを読み取る必要があります。 ユーザーは、結果の保存、およびテーブルにデータを記述する新しいテーブルを作成する必要もあります。
+ユーザーがスクリプトを実行している間、ユーザーは他のデータベースからデータを読み取ることが必要になる場合があります。 ユーザーは、結果を格納したり、テーブルにデータを書き込んだりするために、新しいテーブルを作成することが必要になる場合もあります。
 
-Windows ユーザー アカウントまたは R または Python スクリプトを実行している SQL ログインごとに、特定のデータベースに対する適切なアクセス許可があることを確認します:`db_datareader`データを読み取る`db_datawriter`オブジェクトをデータベースに保存するか、`db_ddladmin`オブジェクトを作成するにはストアド プロシージャやテーブルなどを含むはトレーニングし、データをシリアル化します。
+R または Python スクリプトを実行している Windows ユーザー アカウントまたは SQL ログインごとに、特定のデータベースに対する適切なアクセス許可を持っていることを確認します。これには、データを読み取るための `db_datareader`、オブジェクトをデータベースに保存するための `db_datawriter`、およびトレーニングおよびシリアル化されたデータを含むストアド プロシージャまたはテーブルなどのオブジェクトを作成する `db_ddladmin` が含まれます。
 
-たとえば、次[!INCLUDE[tsql](../../includes/tsql-md.md)]ステートメントは、SQL ログイン*MySQLLogin*で T-SQL クエリを実行する権限、 *ML_Samples*データベース。 このステートメントを実行するには、SQL ログインがサーバーのセキュリティ コンテキストに既に存在している必要があります。
+たとえば、次の [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントでは、SQL ログインである *MySQLLogin* に、*ML_Samples* データベースで T-SQL クエリを実行する権限を与えています。 このステートメントを実行するには、SQL ログインがサーバーのセキュリティ コンテキストに既に存在している必要があります。
 
 ```sql
 USE ML_Samples
@@ -57,4 +58,4 @@ EXEC sp_addrolemember 'db_datareader', 'MySQLLogin'
 
 ## <a name="next-steps"></a>次の手順
 
-各ロールに含まれるアクセス許可の詳細については、次を参照してください。[データベース レベル ロール](../../relational-databases/security/authentication-access/database-level-roles.md)します。
+各ロールに含まれる権限の詳細については、「[データベース レベルのロール](../../relational-databases/security/authentication-access/database-level-roles.md)」をご覧ください。

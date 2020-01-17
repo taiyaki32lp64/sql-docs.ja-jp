@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dm.miningmodeleditor.neuralnet.f1
@@ -13,17 +12,17 @@ ms.assetid: 18d87e7b-a821-40ea-9bd8-c6fecf189a1c
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 014dfb18c0ca2b54486e5bf61420aec903b4a258
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 05654d9206f09d151abd5557d0aa6aae90b1b9ff
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48169712"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66072316"
 ---
 # <a name="neural-network-mining-model-viewer"></a>ニューラル ネットワーク (マイニング モデル ビューアー)
-  **ニューラル ネットワーク** ビューアーを使用すると、[!INCLUDE[msCoName](../includes/msconame-md.md)] ニューラル ネットワーク アルゴリズムまたは [!INCLUDE[msCoName](../includes/msconame-md.md)] ロジスティック回帰アルゴリズムに基づくマイニング モデルを調べることができます。  
+  **ニューラル ネットワーク** ビューアーを使用すると、 [!INCLUDE[msCoName](../includes/msconame-md.md)] ニューラル ネットワーク アルゴリズムまたは [!INCLUDE[msCoName](../includes/msconame-md.md)] ロジスティック回帰アルゴリズムに基づくマイニング モデルを調べることができます。  
   
- **詳細:** [Microsoft ニューラル ネットワーク アルゴリズム](data-mining/microsoft-neural-network-algorithm.md)、 [Microsoft ロジスティック回帰アルゴリズム](data-mining/microsoft-logistic-regression-algorithm.md)、[Microsoft ニューラル ネットワーク ビューアーを使用したモデルの参照](data-mining/browse-a-model-using-the-microsoft-neural-network-viewer.md)  
+ **詳細情報。** [Microsoft ニューラル ネットワーク アルゴリズム](data-mining/microsoft-neural-network-algorithm.md)、 [Microsoft ロジスティック回帰アルゴリズム](data-mining/microsoft-logistic-regression-algorithm.md)、[Microsoft ニューラル ネットワーク ビューアーを使用してモデルの参照](data-mining/browse-a-model-using-the-microsoft-neural-network-viewer.md)  
   
 ## <a name="options"></a>および  
  **ビューアーのコンテンツを更新します。**  
@@ -40,7 +39,7 @@ ms.locfileid: "48169712"
   
 |値|説明|  
 |-----------|-----------------|  
-|**属性**|一覧から入力属性を選択します。 既定で選択した場合**\<すべて >** グラフには、すべての入力属性、予測可能な属性に与える影響順の一覧が表示されます。|  
+|**属性**|一覧から入力属性を選択します。 既定で選択した場合 **\<すべて >** グラフには、すべての入力属性、予測可能な属性に与える影響順の一覧が表示されます。|  
 |**[値]**|入力属性の値を選択します。|  
   
  **出力**  
@@ -63,8 +62,8 @@ ms.locfileid: "48169712"
 |**優先\<値 2 >**|選択した属性と値の組み合わせが **[値 2]** で選択した対象となる結果にどの程度影響しているかを示す棒を表示します。|  
   
 ## <a name="see-also"></a>参照  
- [データ マイニング アルゴリズム&#40;Analysis Services - データ マイニング&#41;](data-mining/data-mining-algorithms-analysis-services-data-mining.md)   
- [マイニング モデル ビューアー&#40;データ マイニング モデル デザイナー&#41;](mining-model-viewers-data-mining-model-designer.md)   
+ [データ マイニング アルゴリズム &#40;Analysis Services - データ マイニング&#41;](data-mining/data-mining-algorithms-analysis-services-data-mining.md)   
+ [マイニング モデル ビューアー (データ マイニング モデル デザイナー)](mining-model-viewers-data-mining-model-designer.md)   
  [データ マイニング モデル ビューアー](data-mining/data-mining-model-viewers.md)  
   
   

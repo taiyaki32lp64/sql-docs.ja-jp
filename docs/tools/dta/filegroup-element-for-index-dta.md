@@ -1,5 +1,5 @@
 ---
-title: Filegroup 要素 (DTA) のインデックスの |Microsoft Docs
+title: Index の Filegroup 要素 (DTA) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -12,15 +12,14 @@ dev_langs:
 helpviewer_keywords:
 - Filegroup element [DTA]
 ms.assetid: 7078d2fb-fa77-44fc-beb3-c095088fcb85
-author: stevestein
-ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 391167d35ecdfbfc1d9cdc9ac1f5306dbb7961a8
-ms.sourcegitcommit: 0f7cf9b7ab23df15624d27c129ab3a539e8b6457
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 8ea26368dacd6cfc3a81245fe95eef27ec94b9a2
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51293018"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68034892"
 ---
 # <a name="filegroup-element-for-index-dta"></a>Index の Filegroup 要素 (DTA)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - batches [Analysis Services]
@@ -13,12 +12,12 @@ ms.assetid: ba4dcf72-0667-41d0-816b-ab8ff9a7d9cb
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 58b0ea08b09e62881de6cef073ae931ecb598978
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 2c54c374bc5dd6b7bea30a95cb84f5e9365f0e75
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48188892"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66076940"
 ---
 # <a name="batch-processing-analysis-services"></a>バッチ処理 (Analysis Services)
   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]では、Batch コマンドを使用して、1 つの要求で複数の処理コマンドをサーバーに送信することができます。 バッチ処理では、どのオブジェクトがどの順序で処理されるのかを制御できます。 また、バッチは、一連のスタンドアロン ジョブとして実行するか、1 つのプロセスが失敗したときにバッチ全体をロールバックするトランザクションとして実行することもできます。  
@@ -60,7 +59,7 @@ ms.locfileid: "48188892"
   
     -   **[影響を受けたオブジェクト]** の **[影響を受けたオブジェクトを処理する]** チェック ボックスをオンにします。  
   
-10. **[ディメンション キーのエラー]** タブをクリックします。**[既定のエラー構成を使用する]** が選択されていることを確認します。  
+10. **[ディメンション キーのエラー]** タブをクリックします。 **[既定のエラー構成を使用する]** が選択されていることを確認します。  
   
 11. **[OK]** をクリックし、 **[設定の変更]** 画面を閉じます。  
   

@@ -15,15 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - HasZ geography
 ms.assetid: 4c5e1669-a987-4dda-9ebf-f573ce615c34
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: 54d74f96eee99b7c05ab9d26bf9733d4b457bbc5
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: MladjoA
+ms.author: mlandzic
+ms.openlocfilehash: 8aae17057d9b4b114ed7ad03fd7e29ad61f127b3
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47625112"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67930240"
 ---
 # <a name="hasz-geography-data-type"></a>HasZ (geography データ型)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
@@ -40,7 +39,7 @@ ms.locfileid: "47625112"
 ## <a name="return-types"></a>戻り値の型  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 戻り値の型: **bit**  
   
- CLR 戻り値の型: **Boolean**  
+ CLR の戻り値の型:**Boolean**  
   
 ## <a name="remarks"></a>Remarks  
   

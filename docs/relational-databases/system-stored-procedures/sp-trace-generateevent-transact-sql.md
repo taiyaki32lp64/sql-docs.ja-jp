@@ -17,15 +17,14 @@ helpviewer_keywords:
 ms.assetid: 3ef05bfb-b467-4403-89cc-6e77ef9247dd
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: cce91def9566105550788a8a46ea6c2b6bb959aa
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: cfeacf9f3c18d3f80b7ad83a3697e33a5797ba22
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47826550"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68096026"
 ---
-# <a name="sptracegenerateevent-transact-sql"></a>sp_trace_generateevent (Transact-SQL)
+# <a name="sptracegenerateevent-transact-sql"></a>sp_trace_generateevent (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   ユーザー定義イベントを作成します。[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]します。  
@@ -45,14 +44,11 @@ sp_trace_generateevent [ @eventid = ] event_id
 ```  
   
 ## <a name="arguments"></a>引数  
- [ **@eventid=**] *event_id*  
- 有効にするイベントの ID を指定します。 *event_id*は**int**、既定値はありません。 ID は、82 ~ 91 のセットとしてユーザー定義イベントを表すからのイベント番号のいずれかを指定する必要があります[sp_trace_setevent](../../relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql.md)します。  
+`[ @eventid = ] event_id` 有効にするイベントの ID です。 *event_id*は**int**、既定値はありません。 ID は、82 ~ 91 のセットとしてユーザー定義イベントを表すからのイベント番号のいずれかを指定する必要があります[sp_trace_setevent](../../relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql.md)します。  
   
- [ **@userinfo**=] **'***user_info***'**  
- イベントの理由を示すユーザー定義の文字列を指定します。この引数は省略可能です。 *user_info*は**nvarchar (128)**、既定値は NULL です。  
+`[ @userinfo = ] 'user_info'` イベントの理由を特定する省略可能なユーザー定義の文字列です。 *user_info*は**nvarchar (128)** 、既定値は NULL です。  
   
- [ **@userdata**=] *user_data*  
- イベントに対するユーザー指定のデータを指定します。この引数は省略可能です。 *user_data*は**varbinary (8000)**、既定値は NULL です。  
+`[ @userdata = ] user_data` イベントの省略可能なユーザー指定のデータです。 *user_data*は**varbinary (8000)** 、既定値は NULL です。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  次の表は、このストアド プロシージャの完了時に返されるコード値を示しています。  
@@ -60,9 +56,9 @@ sp_trace_generateevent [ @eventid = ] event_id
 |リターン コード|説明|  
 |-----------------|-----------------|  
 |**0**|エラーなし。|  
-|**1**|不明なエラーです。|  
-|**3**|指定したイベントは無効です。 イベントが存在しないか、イベントがこのストアド プロシージャに対して適切ではありません。|  
-|**13**|メモリ不足。 指定した操作を実行するための十分なメモリがない場合に返されます。|  
+|**1**|不明なエラー。|  
+|**3**|指定したイベントが無効です。 イベントが存在しないか、ストアド プロシージャに対して適切なものではありません。|  
+|**13**|メモリ不足。 指定したアクションを実行するための十分なメモリがない場合に返されます。|  
   
 ## <a name="remarks"></a>コメント  
  **sp_trace_generateevent**によって実行される操作の多くは、 **xp_trace _\*** 拡張ストアド プロシージャ。 使用**sp_trace_generateevent**の代わりに**この**します。  
@@ -72,10 +68,10 @@ sp_trace_generateevent [ @eventid = ] event_id
  パラメーターのすべての SQL トレース ストアド プロシージャ (**sp_trace_xx**) は厳密に型指定されます。 これらのパラメーターを、引数の説明で指定されている正しいデータ型で指定しないと、このストアド プロシージャではエラーが返されます。  
   
 ## <a name="permissions"></a>アクセス許可  
- ユーザーに ALTER TRACE 権限が必要です。  
+ ALTER TRACE 権限が必要です。  
   
 ## <a name="examples"></a>使用例  
- 次の例では、ユーザーが構成できるイベントをサンプル テーブルに作成します。  
+ 次の例では、サンプル テーブルで、user configurable イベントを作成します。  
   
 ```  
 --Create a sample table.  

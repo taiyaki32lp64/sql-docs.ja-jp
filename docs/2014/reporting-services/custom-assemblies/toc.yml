@@ -13,5 +13,5 @@
       href: accessing-custom-assemblies-through-expressions.md
     - name: カスタム アセンブリ オブジェクトの初期化
       href: initializing-custom-assembly-objects.md
-    - name: カスタム アセンブリをデバッグする方法
+    - name: '方法:カスタム アセンブリをデバッグする'
       href: how-to-debug-custom-assemblies.md

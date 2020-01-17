@@ -1,63 +1,62 @@
 ---
-title: 作成し、キーボード ショートカットのカスタマイズ
+title: キーボード ショートカットの作成とカスタマイズ
 titleSuffix: Azure Data Studio
-description: 作成して Azure Data Studio でのキーボード ショートカットをカスタマイズする方法について説明します
-ms.custom: seodec18
-ms.date: 09/24/2018
+description: Azure Data Studio でキーボード ショートカットを作成し、カスタマイズする方法について説明します
 ms.prod: sql
 ms.technology: azure-data-studio
-ms.reviewer: alayu; sstein
 ms.topic: conceptual
-author: stevestein
-ms.author: sstein
-manager: craigg
-ms.openlocfilehash: dd58bb28fe5969fcf0553576d70dd62314f5f974
-ms.sourcegitcommit: 189a28785075cd7018c98e9625c69225a7ae0777
-ms.translationtype: MT
+author: markingmyname
+ms.author: maghan
+ms.reviewer: alayu; sstein
+ms.custom: seodec18
+ms.date: 09/24/2018
+ms.openlocfilehash: 8e577f50152eb5f86b81caa23cc493b92bbab270
+ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53030256"
+ms.lasthandoff: 07/25/2019
+ms.locfileid: "67959479"
 ---
-# <a name="keyboard-shortcuts-in-includename-sosincludesname-sosmd"></a>キーボード ショートカット [!INCLUDE[name-sos](../includes/name-sos.md)]
+# <a name="keyboard-shortcuts-in-includename-sosincludesname-sosmd"></a>[!INCLUDE[name-sos](../includes/name-sos.md)] でのキーボード ショートカット
 
-この記事では簡単に表示、編集、およびキーボード ショートカットを作成する手順[!INCLUDE[name-sos](../includes/name-sos-short.md)]します。
+この記事では、[!INCLUDE[name-sos](../includes/name-sos-short.md)] でキーボード ショートカットをすばやく表示、編集、および作成する手順について説明します。
 
-[!INCLUDE[name-sos](../includes/name-sos-short.md)]から Visual Studio Code で、高度なカスタマイズに関する詳細情報など、さまざまなキーボード レイアウトを使用して、キー バインド機能を継承にでは、 [for Visual Studio Code のキー バインド](https://code.visualstudio.com/docs/getstarted/keybindings)アーティクルです。 キー バインドの一部の機能を利用できない可能性があります (たとえば、キーマップ拡張でサポートされていない[!INCLUDE[name-sos](../includes/name-sos-short.md)])。
-
-
-## <a name="open-the-keyboard-shortcuts-editor"></a>キーボード ショートカットのエディターを開く
-
-現在のすべてを表示するには、キーボード ショートカットを定義します。
-
-開く、**のキーボード ショートカット**エディターから、**ファイル**メニュー。**ファイル** > **設定** > **キーボード ショートカット**(**[!INCLUDE[name-sos](../includes/name-sos-short.md)]**  >  **基本設定** > **キーボード ショートカット**Mac で)。
-
-現在のキー バインドを表示するだけでなく、**のキーボード ショートカット**エディターが定義されているキーボード ショートカットを持たない使用可能なコマンドを一覧表示されます。 **のキーボード ショートカット**エディターでは、簡単に変更、削除、リセット、および新しいキー バインドを定義することができます。  
+[!INCLUDE[name-sos](../includes/name-sos-short.md)] のキー バインド機能は Visual Studio Code から継承されているため、高度なカスタマイズや、さまざまなキーボード レイアウトの使用などの詳細については、「[Visual Studio Code のキー バインド](https://code.visualstudio.com/docs/getstarted/keybindings)」を参照してください。 一部のキー バインド機能については使用できない場合があります (たとえば、キーマップ拡張機能は、[!INCLUDE[name-sos](../includes/name-sos-short.md)] ではサポートされていません)。
 
 
-## <a name="edit-existing-keyboard-shortcuts"></a>既存のキーボード ショートカットを編集します。
+## <a name="open-the-keyboard-shortcuts-editor"></a>キーボード ショートカット エディターを開く
 
-既存のキーボード ショートカットのキー バインドを変更するには。
+現在定義されているキーボード ショートカットをすべて表示するには:
 
-1. 検索ボックスを使用して、または一覧をスクロールして変更するキーボード ショートカットを見つけます。
+**[ファイル]** メニューから、**キーボード ショートカット** エディターを開きます。 **[ファイル]**  >  **[基本設定]**  >  **[キーボード ショートカット]** (Mac の場合は **[!INCLUDE[name-sos](../includes/name-sos-short.md)]**  >  **[基本設定]**  >  **[キーボード ショートカット]** )。
+
+**キーボード ショートカット** エディターでは、現在のキー バインドを表示することに加えて、キーボード ショートカットが定義されていない使用可能なコマンドの一覧を表示できます。 **キーボード ショートカット** エディターを使用すると、キー バインドの変更、削除、リセット、および新しいキー バインドの定義を簡単に行うことができます。  
+
+
+## <a name="edit-existing-keyboard-shortcuts"></a>既存のキーボード ショートカットを編集する
+
+既存のキーボード ショートカットのキー バインドを変更するには:
+
+1. 検索ボックスを使用するか、または一覧をスクロールして、変更するキーボード ショートカットを見つけます。
    > [!TIP]
-   > コマンドによって、ソースのすべての関連するキーボード ショートカットを返すなどして、キーによって検索します。
+   > キー、コマンド、ソースなどで検索して、関連するすべてのキーボード ショートカットを表示します。
 
-1. 目的のエントリを右クリックして**変更キー バインド**
+1. 目的のエントリを右クリックし、 **[Change Key binding]\(キー バインドの変更\)** を選択します
 
-   ![キーボード ショートカットを編集します。](media/keyboard-shortcuts/change-keybinding.png)
+   ![キーボード ショートカットを編集する](media/keyboard-shortcuts/change-keybinding.png)
 
-1. 目的の組み合わせを押して、キーのキーを押します **」と入力**に保存します。 
+1. 目的のキーの組み合わせを押し、**Enter** キーを押してそれを保存します。 
 
-   ![キーボード ショートカットを保存します。](media/keyboard-shortcuts/save-keybinding.png)
+   ![キーボード ショートカットを保存する](media/keyboard-shortcuts/save-keybinding.png)
 
-## <a name="create-new-keyboard-shortcuts"></a>新しいキーボード ショートカットを作成します。
+## <a name="create-new-keyboard-shortcuts"></a>新しいキーボード ショートカットを作成する
 
-新しいキーボード ショートカットを作成します。
+新しいショートカットキーを作成するには:
 
-1. 任意のキー バインドと選択を持たないコマンドを右クリックして**キーの追加のバインド**します。
+1. キー バインドが設定されていないコマンドを右クリックし、 **[Add Key binding]\(キー バインドの追加\)** を選択します。
 
-   ![キーボード ショートカットを作成します。](media/keyboard-shortcuts/add-keybinding.png)
+   ![キーボード ショートカットを作成する](media/keyboard-shortcuts/add-keybinding.png)
 
-1. 目的の組み合わせを押して、キーのキーを押します **」と入力**に保存します。
+1. 目的のキーの組み合わせを押し、**Enter** キーを押してそれを保存します。
 
 

@@ -14,20 +14,20 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: a286c7d4c0ff42389830713a6c42c89a7273f1d1
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52798364"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62917729"
 ---
 # <a name="create-a-database-mail-account"></a>データベース メール アカウントの作成
   データベース メール アカウントの作成には、 **データベース メール構成ウィザード** または [!INCLUDE[tsql](../../includes/tsql-md.md)] を使用します。  
   
--   **作業を開始する準備:**[前提条件](#Prerequisites)  
+-   **作業を開始する準備:** [前提条件](#Prerequisites)  
   
--   **使用して、データベース メール アカウントを作成します。**[データベース メール構成ウィザード](#SSMSProcedure)、 [TRANSACT-SQL](#TsqlProcedure)  
+-   **使用して、データベース メール アカウントを作成します。** [データベース メール構成ウィザード](#SSMSProcedure)、[Transact-SQL](#TsqlProcedure)  
   
--   **補足情報:**[データベース メールを構成する次の手順](#FollowUp)  
+-   **補足情報:** [データベース メールを構成する次の手順](#FollowUp)  
   
 ##  <a name="BeforeYouBegin"></a> はじめに  
   
@@ -50,7 +50,7 @@ ms.locfileid: "52798364"
   
 -   **[プロファイルとアカウントの管理]** ページで、 **[新しいアカウントを作成する]** を選択し、 **[次へ]** をクリックします。  
   
--   **[新しいアカウント]** ページで、アカウント名、説明、メール サーバー情報、および認証の種類を指定します。  **[次へ]** をクリックします。  
+-   **[新しいアカウント]** ページで、アカウント名、説明、メール サーバー情報、および認証の種類を指定します。 **[次へ]** をクリックします。  
   
 -   **[ウィザードの完了]** ページで、実行される動作を確認し、 **[完了]** をクリックして、新しいアカウントの作成を完了します。  
   
@@ -84,7 +84,7 @@ EXECUTE msdb.dbo.sysmail_add_account_sp
     @mailserver_name = 'smtp.Adventure-Works.com' ;  
 ```  
   
-##  <a name="FollowUp"></a> フォローしてください：データベース メールを構成する次の手順  
+##  <a name="FollowUp"></a>補足情報: データベース メールを構成する次の手順  
   
 -   [データベース メール プロファイルの作成](create-a-database-mail-profile.md)  
   

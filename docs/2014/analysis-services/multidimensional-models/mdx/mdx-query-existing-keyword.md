@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 f1_keywords:
 - EXISTING
@@ -15,12 +14,12 @@ ms.assetid: 651ee9ac-04ef-4316-87c9-a3df5ac27d22
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: ceaeac711ed30028dab3bc09827df9b6ae1f0e0a
-ms.sourcegitcommit: 110e5e09ab3f301c530c3f6363013239febf0ce5
+ms.openlocfilehash: a6c5e8dbe3e1b1ad44286bcbb79132010cad618a
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/10/2018
-ms.locfileid: "48905972"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66073966"
 ---
 # <a name="existing-keyword-mdx"></a>EXISTING キーワード (MDX)
   指定されたセットを現在のコンテキストで評価するように設定します。  

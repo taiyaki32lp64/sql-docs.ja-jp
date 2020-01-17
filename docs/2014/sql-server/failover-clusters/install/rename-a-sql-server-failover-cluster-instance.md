@@ -16,11 +16,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 4ce98bacfcc5f3aa8814a9253d1796fd18c4a735
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53362624"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63126020"
 ---
 # <a name="rename-a-sql-server-failover-cluster-instance"></a>SQL Server のフェールオーバー クラスター インスタンスの名前変更
   フェールオーバー クラスターに含まれる [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] インスタンスの場合、仮想サーバーの名前を変更する手順は、スタンドアロン インスタンスでの手順とは異なります。 詳細については、 [SQL Server のスタンドアロン インスタンスをホストするコンピューターの名前変更](../../../database-engine/install-windows/rename-a-computer-that-hosts-a-stand-alone-instance-of-sql-server.md)を参照してください。  
@@ -63,13 +63,13 @@ ms.locfileid: "53362624"
 ## <a name="additional-considerations-after-the-renaming-operation"></a>名前変更操作後のその他の考慮事項  
  フェールオーバー クラスターのネットワーク名を変更した後は、以下の点を検証および実行して、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] エージェントと [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]のすべてのシナリオを有効にする必要があります。  
   
- **[!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]:** ネットワーク名を変更した後、[!INCLUDE[ssASCurrent](../../../includes/ssascurrent-md.md)]フェールオーバー クラスター インスタンスのアップグレード、Windows クラスター アドミニストレーター ツールを使用またはアンインストール操作が失敗します。 この問題の更新を解決するのには、 **ClusterName**の解決方法」の指示に従い、レジストリ エントリ[この](https://go.microsoft.com/fwlink/?LinkId=244002)(https://go.microsoft.com/fwlink/?LinkId=244002)します。  
+ **[!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]:** ネットワーク名を変更した後、[!INCLUDE[ssASCurrent](../../../includes/ssascurrent-md.md)]フェールオーバー クラスター インスタンスのアップグレード、Windows クラスター アドミニストレーター ツールを使用またはアンインストール操作が失敗します。 この問題の更新を解決するのには、 **ClusterName**の解決方法」の指示に従い、レジストリ エントリ[この](https://go.microsoft.com/fwlink/?LinkId=244002)(https://go.microsoft.com/fwlink/?LinkId=244002) します。  
   
  **[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] エージェント サービス:** 検証および実行して、以下の追加事項[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]エージェント サービス。  
   
 -   SQL エージェントがイベントの転送用に構成されている場合は、レジストリ設定を修正します。 詳細については、[イベントの転送先サーバーの指定 &#40;SQL Server Management Studio&#41;](../../../ssms/agent/designate-an-events-forwarding-server-sql-server-management-studio.md) を参照してください。  
   
--   コンピューター/クラスターのネットワーク名が変更されている場合は、マスター サーバー (MSX) と対象サーバー (TSX) のインスタンス名を修正します。 詳細については、次の各トピックを参照してください。  
+-   コンピューター/クラスターのネットワーク名が変更されている場合は、マスター サーバー (MSX) とターゲット サーバー (TSX) のインスタンス名を修正します。 詳細については、次の各トピックを参照してください。  
   
     -   [マスター サーバーからの複数の対象サーバーの参加の解除](../../../ssms/agent/defect-multiple-target-servers-from-a-master-server.md)  
   

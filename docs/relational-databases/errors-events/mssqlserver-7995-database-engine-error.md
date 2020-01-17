@@ -11,15 +11,14 @@ helpviewer_keywords:
 ms.assetid: af6d6322-3cba-43d8-be97-e6ef15f8c933
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 4afcdeef25dd28a97cf5b9096e8ac5635ca0c35f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 16f2bebd761898fad44cd19c78c02470420b6d18
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47776820"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72906556"
 ---
-# <a name="mssqlserver7995"></a>MSSQLSERVER_7995
+# <a name="mssqlserver_7995"></a>MSSQLSERVER_7995
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   
 ## <a name="details"></a>詳細  
@@ -41,7 +40,7 @@ DBCC CHECKDB のプロセスは、次の 3 つのステージで構成されて�
 2.  システム テーブルの一貫性チェック。 これは、少数の不可欠なシステム ベース テーブルに対して DBCC CHECKTABLE を実行することに相当します。  
   
 3.  データベース全体の一貫性チェック。  
-  
+
 ステージ 2 で MSSQLEngine_7995 が発行されました。このメッセージは、DBCC CHECKDB コマンドで修復できないエラーが検出されたか、REPAIR が指定されていないことを示しています。 問題のシステム ベース テーブルにデータベース内のすべてのオブジェクトのメタデータが格納されているか、システム ベース テーブルが破損しているため、DBCC CHECKDB はステージ 3 に進むことができません。  
   
 ## <a name="user-action"></a>ユーザーの操作  

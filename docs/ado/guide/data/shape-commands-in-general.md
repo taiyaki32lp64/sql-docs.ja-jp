@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 1fac7831-a187-4b15-9b43-aad380c5556c
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: b42e515c4c124e19ad6079aca6ef68727fea3d2a
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.openlocfilehash: 09fec8bd07d036fd6a93b8f6bcb54a51a68150fa
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51601352"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67924174"
 ---
 # <a name="shape-commands-in-general"></a>一般的な Shape コマンド
 形状の列を定義するデータの整形**レコード セット**、列、および方法で表されるエンティティ間のリレーションシップ、**レコード セット**にデータを設定します。  
@@ -32,7 +31,7 @@ ms.locfileid: "51601352"
 |」の章|別の参照**レコード セット**という、*章*します。 チャプター列により、定義できる、 *、親子*リレーションシップで、*親*は、**レコード セット**チャプター列と、を含む*子*は、**レコード セット**」の章で表されます。|  
 |集計 (aggregate)|実行することによって、列の値が派生した、*集計関数*のすべての行または子のすべての行の列で**レコード セット**します。 (次のトピックでは、集計関数を参照してください[集計関数、CALC 関数、および新しいキーワード](../../../ado/guide/data/aggregate-functions-the-calc-function-and-the-new-keyword.md))。|  
 |計算式|Visual Basic のアプリケーションの同じ行の列の式を計算することで、列の値が派生した、 **Recordset**します。 式では、CALC 関数の引数です。 (次のトピックでは、計算式を参照してください[集計関数、CALC 関数、および新しいキーワード](../../../ado/guide/data/aggregate-functions-the-calc-function-and-the-new-keyword.md)し[Visual Basic for Applications の関数](../../../ado/guide/data/visual-basic-for-applications-functions.md))。|  
-|新機能|空で作成されるフィールドは後でデータを設定することができます。 列には、新しいキーワードが定義されます。 (新しいキーワードで、次のトピックを参照してください[集計関数、CALC 関数、および新しいキーワード](../../../ado/guide/data/aggregate-functions-the-calc-function-and-the-new-keyword.md)。)。|  
+|new|空で作成されるフィールドは後でデータを設定することができます。 列には、新しいキーワードが定義されます。 (新しいキーワードで、次のトピックを参照してください[集計関数、CALC 関数、および新しいキーワード](../../../ado/guide/data/aggregate-functions-the-calc-function-and-the-new-keyword.md)。)。|  
   
  図形のコマンドを返す基になるデータ プロバイダーへのクエリ コマンドを指定する句を含めることができます、 **Recordset**オブジェクト。 クエリの構文は、基になるデータ プロバイダーの要件によって異なります。 これは普通、SQL、ADO では、特定のクエリ言語の使用は必要ありません。  
   

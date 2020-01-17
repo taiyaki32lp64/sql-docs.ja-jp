@@ -18,15 +18,14 @@ helpviewer_keywords:
 - Visual Database Tools [SQL Server], designers
 - Properties window [Visual Database Tools]
 ms.assetid: bd0ca68e-6f69-42dd-bcb5-ce511673769c
-author: stevestein
-ms.author: sstein
-manager: craigg
-ms.openlocfilehash: fef194492c12d934112714934b4f7ad00413b0f0
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 02e08bcdc7050a9f7332f7f55226951aed49bf26
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47753210"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68261377"
 ---
 # <a name="visual-database-tool-designers"></a>Visual Database Tools のデザイナー
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

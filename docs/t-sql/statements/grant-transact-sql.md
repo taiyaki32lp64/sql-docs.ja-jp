@@ -24,14 +24,13 @@ helpviewer_keywords:
 ms.assetid: a760c16a-4d2d-43f2-be81-ae9315f38185
 author: VanMSFT
 ms.author: vanto
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 78b83b521da0c7a045fee803b51f143c94b08bf8
-ms.sourcegitcommit: c6e71ed14198da67afd7ba722823b1af9b4f4e6f
+ms.openlocfilehash: e23c4794b00daca7a228a3cd189835fcdf32628a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/16/2019
-ms.locfileid: "54327433"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68050647"
 ---
 # <a name="grant-transact-sql"></a>GRANT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -80,7 +79,7 @@ GRANT
  ALL  
  このオプションは旧バージョンとの互換性のためだけに保持されており、非推奨とされます。 実際にはすべての権限が許可されるわけではありません。 ALL を指定すると、次のアクセス許可が許可されます。 
   
--   セキュリティ保護可能なリソースがデータベースの場合、BACKUP DATABASE、BACKUP LOG、CREATE DATABASE、CREATE DEFAULT、CREATE FUNCTION、CREATE PROCEDURE、CREATE RULE、CREATE TABLE、および CREATE VIEW。  
+-   セキュリティ保護可能なリソースがデータベースの場合、ALL は BACKUP DATABASE、BACKUP LOG、CREATE DATABASE、CREATE DEFAULT、CREATE FUNCTION、CREATE PROCEDURE、CREATE RULE、CREATE TABLE、および CREATE VIEW を意味します。  
   
 -   セキュリティ保護可能なリソースがスカラー関数の場合、EXECUTE および REFERENCES。  
   
@@ -88,9 +87,9 @@ GRANT
   
 -   セキュリティ保護可能なリソースがストアド プロシージャの場合、EXECUTE。  
   
--   セキュリティ保護可能なリソースがテーブルの場合、DELETE、INSERT、REFERENCES、SELECT、UPDATE。  
+-   セキュリティ保護可能なリソースがテーブルの場合、ALL は DELETE、INSERT、REFERENCES、SELECT、および UPDATE を意味します。  
   
--   セキュリティ保護可能なリソースがビューの場合、DELETE、INSERT、REFERENCES、SELECT、UPDATE。  
+-   セキュリティ保護可能なリソースがビューの場合、ALL は DELETE、INSERT、REFERENCES、SELECT、および UPDATE を意味します。  
   
 PRIVILEGES  
  ISO 準拠のために用意されています。 ALL の動作は変更されません。  
@@ -108,10 +107,10 @@ PRIVILEGES
  権限を許可するセキュリティ保護可能なリソースを指定します。  
   
 TO *principal*  
- プリンシパルの名前を指定します。 セキュリティ保護可能なリソースに対する権限を許可できるプリンシパルは、そのリソースによって異なります。 有効な組み合わせについては、後のトピックを参照してください。  
+ プリンシパルの名前です。 セキュリティ保護可能なリソースに対する権限を許可できるプリンシパルは、そのリソースによって異なります。 有効な組み合わせについては、後のトピックを参照してください。  
   
 GRANT OPTION  
- 権限を許可されたプリンシパルが、この権限を他のプリンシパルにも許可できることを示します。  
+ 権限が許可された被付与者が、この権限を他のプリンシパルにも許可できることを示します。  
   
 AS *principal*  
  AS <principal> 句は、権限の許可者として記録されるプリンシパルは、ステートメントを実行しているユーザー以外のプリンシパルでなければならないことを示すために使います。 たとえば、ユーザー Mary の principal_id は 12、ユーザー Raul の principal_id は 15 であるものとします。 Mary が `GRANT SELECT ON OBJECT::X TO Steven WITH GRANT OPTION AS Raul;` を実行します。ステートメントは実際にはユーザー 13 (Mary) によって実行されましたが、sys.database_permissions テーブルでは、grantor_prinicpal_id は 15 (Raul) であることが示されます。
@@ -123,16 +122,16 @@ AS *principal*
 ## <a name="remarks"></a>Remarks  
  GRANT ステートメントの完全な構文は複雑です。 前の構文ダイアグラムは、構造をわかりやすくするために簡略化されています。 セキュリティ保護可能なリソースに対するアクセス許可を許可するための完全な構文については、後の記事を参照してください。  
   
- 許可された権限を取り消す場合は REVOKE ステートメントを使用します。また、GRANT ステートメントによってプリンシパルに特定の権限が許可されないようにするには DENY ステートメントを使用します。  
+ 許可された権限を取り消す場合は REVOKE ステートメントを使用します。また、GRANT によってプリンシパルに特定の権限が許可されないようにするには DENY ステートメントを使用します。  
   
  権限を許可すると、指定したセキュリティ保護可能なリソースに対する権限の DENY または REVOKE は削除されます。 対象のセキュリティ保護可能なリソースの上位スコープで同じ権限が拒否されている場合は、その DENY ステートメントが優先されますが、 上位スコープで許可されている権限を取り消そうとしても、その REVOKE ステートメントは優先されません。  
   
  データベース レベルの権限は、指定されたデータベースのスコープ内で許可されます。 ユーザーが別のデータベースのオブジェクトに対する権限を必要とする場合、そのデータベースにユーザー アカウントを作成するか、または現在のデータベースへのアクセス権と同様に、そのデータベースへのアクセス権もユーザー アカウントに与えます。  
   
 > [!CAUTION]  
->  テーブル レベルの DENY ステートメントは列レベルの GRANT ステートメントよりも優先されません。 この動作は権限の階層内で一貫していませんが、旧バージョンとの互換性のために保持されています。 将来のリリースでは削除される予定です。  
+>  テーブル レベルの DENY は列レベルの GRANT ステートメントよりも優先されません。 この動作は権限の階層内で一貫していませんが、旧バージョンとの互換性のために保持されています。 将来のリリースでは削除される予定です。  
   
- システム ストアド プロシージャ sp_helprotect では、データベース レベルのセキュリティ保護可能なリソースに対する権限がレポートされます。  
+ システム ストアド プロシージャ sp_helprotect では、データベース レベルのセキュリティ保護可能なリソースに対する権限をレポートします。  
   
 ## <a name="with-grant-option"></a>WITH GRANT OPTION  
  **GRANT** ...**WITH GRANT OPTION** は、権限を受け取るセキュリティ プリンシパルが、指定された権限を他のセキュリティ アカウントに付与する能力を与えられることを意味します。 権限を与えられるプリンシパルがロールまたは Windows グループである場合、グループまたはロールのメンバーではないユーザーにオブジェクト権限をさらに付与する必要があるときは、**AS** 句を使用する必要があります。 **GRANT** ステートメントを実行できるのはグループまたはロールではなくユーザーだけなので、グループまたはロールの特定のメンバーは、権限を付与するときに、**AS** 句を使用して、ロールまたはグループのメンバーシップを明示的に呼び出す必要があります。 次の例では、ロールまたは Windows グループに付与するときの **WITH GRANT OPTION** の使用方法を示します。  

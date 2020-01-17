@@ -13,15 +13,15 @@ helpviewer_keywords:
 - converting string data
 - string comparisons
 ms.assetid: 93aeb5bd-e208-46b7-8979-dea2dcd37d4c
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 14a9cd4f9d37798aaabaf65ea2f2afe79c207e6e
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 7fe9955ba4f20c4a20e24d99924adce7ff0d992a
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53359544"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62828149"
 ---
 # <a name="comparing-string-data"></a>比較、文字列データ
   文字列比較は、 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]によって実行される多くの変換において重要な部分です。また、文字列比較は、変数内の式やプロパティ式の評価でも使用されます。 たとえば、並べ替え変換はデータセット内の値を比較し、昇順または降順にデータを並べ替えます。  

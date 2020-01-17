@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 449a2f57-fcbd-4478-8f21-2c646d801699
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: f5ecdbebcc23ddce8947cd7e832eb62af0f64008
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 156ca6b7c04b8362a15a07f7db7f7aa43b2389a5
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47855970"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68085855"
 ---
 # <a name="breaking-changes-in-sql-server-replication"></a>SQL Server レプリケーションにおける重大な変更
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

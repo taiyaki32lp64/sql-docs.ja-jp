@@ -12,24 +12,24 @@ helpviewer_keywords:
 ms.assetid: 95a8666a-ad68-4d89-bf65-f2cc797f8820
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 39b3d3d1ecdc21acee8b238f56cede0a59146bd2
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 7daef4785a77df294a831d69089108cbb1d88489
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47740060"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68061483"
 ---
 # <a name="sqlgetpoolid-function"></a>SQLGetPoolID 関数
 **準拠**  
- バージョンで導入されました ODBC 3.81 標準準拠: ODBC。  
+ バージョンが導入されました。ODBC 3.81 規格に準拠します。ODBC  
   
  **概要**  
  **SQLGetPoolID**プール ID を取得します。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp
+  
 SQLRETURN  SQLGetPoolID (  
                 SQLHDBC_INFO_TOKEN    hDbcInfoToken,  
                 POOLID *              pPoolID );  

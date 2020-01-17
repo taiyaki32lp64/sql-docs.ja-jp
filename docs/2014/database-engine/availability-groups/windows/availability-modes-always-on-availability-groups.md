@@ -18,11 +18,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 5a05f52eceb554d8f4b023a3136fd4cf8e55d4fc
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53376314"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62791816"
 ---
 # <a name="availability-modes-always-on-availability-groups"></a>可用性モード (AlwaysOn 可用性グループ)
   [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]の *可用性モード* は、可用性レプリカが同期コミット モードで動作できるかどうかを指定するレプリカのプロパティです。 可用性レプリカごとに、可用性モードを同期コミット モードまたは非同期コミット モードとして構成する必要があります。  プライマリ レプリカが *非同期コミット モード*で構成されている場合、プライマリ レプリカはセカンダリ レプリカによる受信トランザクション ログ レコードのディスクへの書き込みを ( *ログ書き込み*) 待機しません。 特定のセカンダリ レプリカが非同期コミット モードで構成されている場合、プライマリ レプリカはそのセカンダリ レプリカによるログ書き込みを待機しません。 プライマリ レプリカとセカンダリ レプリカの両方が *同期コミット モード*で構成されている場合、プライマリ レプリカはログが書き込まれたことをセカンダリ レプリカが確認するまで待機します (プライマリの *セッション タイムアウト期間*内に、セカンダリ レプリカがプライマリ レプリカに対する ping に失敗した場合を除きます)。  

@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 481bb43d-6fe5-497c-9096-971fb6bf733b
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: d5bc9651433cc0940732d4818f5d9b8c0f011ad1
-ms.sourcegitcommit: ef6e3ec273b0521e7c79d5c2a4cb4dcba1744e67
+ms.openlocfilehash: 155426b05311354153e03994f854f3860afad9c5
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51511977"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67940447"
 ---
 # <a name="disable-lightweight-pooling"></a>簡易プーリングの無効化
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

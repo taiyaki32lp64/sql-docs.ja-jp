@@ -21,15 +21,15 @@ helpviewer_keywords:
 - Text File log provider
 - SQL Server log provider
 ms.assetid: 65e17889-371f-4951-9a7e-9932b2d0dcde
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 244efd95d67f36ae77efb15a6fa62684606db746
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 2478f1605b7fb67d8328be905956cbaae8e3c243
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53369771"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62889814"
 ---
 # <a name="integration-services-ssis-logging"></a>Integration Services (SSIS) のログ記録
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] には、パッケージ、コンテナー、およびタスクにログ記録を実装するために使用できる、ログ プロバイダーが含まれています。 ログ記録を行うと、パッケージに関する実行時の情報をキャプチャできるので、パッケージを実行するたびに監査やトラブルシューティングに役立ちます。 たとえば、パッケージを実行した演算子の名前と、パッケージの開始および完了時刻をログにキャプチャできます。  
@@ -147,7 +147,7 @@ ms.locfileid: "53369771"
   
 1.  パッケージおよびタスクのログ記録を有効にします。 ログは、パッケージ レベル、コンテナー レベル、またはタスク レベルで記録できます。 パッケージ、コンテナー、タスクに対して、それぞれ異なるログを指定できます。  
   
-2.  ログ プロバイダーを選択して、パッケージのログを追加します。 ログはパッケージ レベルでのみ作成可能で、タスクやコンテナーではパッケージで作成されたログのいずれかを使用します。 各ログは、次のログ プロバイダーのいずれかで関連付けられています。テキスト ファイル、 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]、Windows イベント ログ、または XML ファイル。 詳細については、「 [SQL Server Data Tools でパッケージのログ記録を有効にする](../enable-package-logging-in-sql-server-data-tools.md)」を参照してください。  
+2.  ログ プロバイダーを選択して、パッケージのログを追加します。 ログはパッケージ レベルでのみ作成可能で、タスクやコンテナーではパッケージで作成されたログのいずれかを使用します。 各ログは、テキスト ファイル、[!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]、Windows のイベント ログ、または XML ファイルのいずれかのログ プロバイダーに関連付けられます。 詳細については、「 [SQL Server Data Tools でパッケージのログ記録を有効にする](../enable-package-logging-in-sql-server-data-tools.md)」を参照してください。  
   
 3.  ログに取り込むイベントと、各イベントのログ スキーマ情報を選択します。 詳細については、「 [保存されている構成ファイルを使用してログ記録を構成する](../configure-logging-by-using-a-saved-configuration-file.md)」を参照してください。  
   

@@ -9,17 +9,20 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: dcfbd1c5-c001-4fb7-b9ae-916e49ab6a96
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: 0eb8532c10069f50283e13ab997560330dfa5a1c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 4b4a5b5f27f959f3a04bb3cf5468d198d3ef5267
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47715370"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71295652"
 ---
 # <a name="integration-services-ssis-scale-out"></a>Integration Services (SSIS) Scale Out
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
 SQL Server [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] (SSIS) Scale Out では、パッケージの実行を複数のコンピューターに分散することにより、SSIS パッケージの実行パフォーマンスを高めます。 Scale Out をセットアップしたら、SQL Server Management Studio (SSMS) から、複数のパッケージ実行を並列にスケールアウト モードで実行することができます。
 
 ## <a name="components"></a>Components
@@ -46,4 +49,4 @@ Scale Out をセットアップすると、次のことができます。
 ## <a name="next-steps"></a>次の手順
 -   [1 台のコンピューターでの Integration Services (SSIS) Scale Out の概要](get-started-with-ssis-scale-out-onebox.md)
 
--   [チュートリアル: Integration Services Scale Out をセットアップする](walkthrough-set-up-integration-services-scale-out.md)
+-   [チュートリアル:Integration Services Scale Out を設定する](walkthrough-set-up-integration-services-scale-out.md)

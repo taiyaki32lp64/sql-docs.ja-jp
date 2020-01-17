@@ -1,5 +1,5 @@
 ---
-title: 'レッスン 2: 別のコンピューターからの接続 |Microsoft Docs'
+title: レッスン 2:別のコンピューターからの接続 | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,13 +11,13 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: eedbde338ad3cc2af5477cc263eac7444707c0d8
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54127212"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63144799"
 ---
-# <a name="lesson-2-connecting-from-another-computer"></a>レッスン 2: 別のコンピューターからの接続
+# <a name="lesson-2-connecting-from-another-computer"></a>レッスン 2:別のコンピューターからの接続
   セキュリティを強化するため、 [!INCLUDE[ssDE](../includes/ssde-md.md)] Developer、Express、および Evaluation Editions の [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] は、最初にインストールした状態では別のコンピューターからアクセスできないようになっています。 このレッスンでは、別のコンピューターから接続するために、プロトコルの有効化、ポートの構成、Windows ファイアウォールの構成を行う方法について学習します。  
   
  このレッスンの内容は次のとおりです。  
@@ -39,7 +39,7 @@ ms.locfileid: "54127212"
   
 #### <a name="how-to-enable-tcpip-connections-from-another-computer"></a>別のコンピューターからの TCP/IP 接続を有効にするには  
   
-1.  **[スタート]** メニューで、 **[すべてのプログラム]**、[ [!INCLUDE[ssCurrentUI](../includes/sscurrentui-md.md)]]、 **[構成ツール]** の順にポイントして、 **[SQL Server 構成マネージャー]** をクリックします。  
+1.  **[スタート]** メニューで、 **[すべてのプログラム]** 、[ [!INCLUDE[ssCurrentUI](../includes/sscurrentui-md.md)]]、 **[構成ツール]** の順にポイントして、 **[SQL Server 構成マネージャー]** をクリックします。  
   
     > [!NOTE]  
     >  32 ビットと 64 ビットの両方のオプションが利用できる場合もあります。  
@@ -48,7 +48,7 @@ ms.locfileid: "54127212"
   
      既定のインスタンス (名前のないインスタンス) は、 **MSSQLSERVER**として一覧表示されます。 名前付きインスタンスをインストールした場合は、指定した名前が表示されます。 [!INCLUDE[ssExpressEd11](../includes/ssexpressed11-md.md)] は **SQLEXPRESS**としてしてインストールされます (セットアップ中に名前を変更した場合を除く)。  
   
-3.  プロトコルの一覧で、有効にするプロトコル (**[TCP/IP]**) を右クリックし、 **[有効化]** をクリックします。  
+3.  プロトコルの一覧で、有効にするプロトコル ( **[TCP/IP]** ) を右クリックし、 **[有効化]** をクリックします。  
   
     > [!NOTE]  
     >  ネットワーク プロトコルを変更したら [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] サービスを再起動する必要がありますが、これは次の作業で実行されます。  
@@ -112,7 +112,7 @@ ms.locfileid: "54127212"
   
 2.  **[サーバーへの接続]** ダイアログ ボックスで、 **[サーバーの種類]** ボックスが **[データベース エンジン]** になっていることを確認します。  
   
-3.  **[サーバー名]** ボックスに「**tcp:**」と入力してプロトコルを指定し、続けてコンピューター名、コンマ、ポート番号の順に入力します。 既定のインスタンスに接続する場合、ポート 1433 が暗黙的に設定されるためポート番号を省略できます。したがって、この場合は「**tcp:**_<computer_name>_」と入力します。 今回の名前付きインスタンスの例では、「**tcp:**_<computer_name>_**,49172**」と入力します。  
+3.  **[サーバー名]** ボックスに「**tcp:** 」と入力してプロトコルを指定し、続けてコンピューター名、コンマ、ポート番号の順に入力します。 既定のインスタンスに接続する場合、ポート 1433 が暗黙的に設定されるためポート番号を省略できます。したがって、この場合は「**tcp:** _<computer_name>_ 」と入力します。 今回の名前付きインスタンスの例では、「**tcp:** _<computer_name>_ **,49172**」と入力します。  
   
     > [!NOTE]  
     >  **[サーバー名]** ボックスで **tcp:** を省略した場合、クライアントは、有効になっているすべてのプロトコルをクライアント構成に指定された順番で試行します。  

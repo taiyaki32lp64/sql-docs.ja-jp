@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 api_name:
 - SenderEmailAddress
@@ -16,15 +15,15 @@ topic_type:
 helpviewer_keywords:
 - SenderEmailAddress property
 ms.assetid: 087de0ab-6505-48c6-80f3-bd493f76282d
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 2f22084ae3eeea3f27630ccab5a930171ae64a80
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 1b2649e16997e980135c8aecc271f285423bfb3c
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56040193"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66097540"
 ---
 # <a name="senderemailaddress-property-wmi-msreportserverconfigurationsetting"></a>SenderEmailAddress プロパティ (WMI MSReportServer_ConfigurationSetting)
   レポート サーバーからの電子メール送信に使用するアドレスを取得します。 読み取り専用。  

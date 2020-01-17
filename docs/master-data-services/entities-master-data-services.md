@@ -1,5 +1,5 @@
 ---
-title: エンティティ (Master Data Services) | Microsoft Docs
+title: '[エンティティ]'
 ms.custom: ''
 ms.date: 04/01/2016
 ms.prod: sql
@@ -11,15 +11,14 @@ helpviewer_keywords:
 - entities [Master Data Services], about entities
 - entities [Master Data Services]
 ms.assetid: 0af057d5-6b73-472b-99eb-9f5eb61a9b5b
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 920ca38ae50975bfb187bbcf3d3a0bb14dfa917e
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
-ms.translationtype: HT
+ms.openlocfilehash: 9326cafa216ad11e7b7a818d34fe035220402c33
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52769874"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73728155"
 ---
 # <a name="entities-master-data-services"></a>エンティティ (Master Data Services)
 
@@ -35,11 +34,11 @@ ms.locfileid: "52769874"
 ## <a name="how-entities-relate-to-other-model-objects"></a>エンティティと他のモデル オブジェクトの関連付け  
  エンティティはマスター データを含むテーブルと考えることができます。行がメンバーを表し、列が属性を表します。  
   
- ![テーブルとして表されたマスター データ サービス エンティティ](../master-data-services/media/mds-conc-entity-table.gif "テーブルとして表されたマスター データ サービス エンティティ")  
+ ![テーブルとして表されるマスターデータサービスエンティティ](../master-data-services/media/mds-conc-entity-table.gif "テーブルとして表されるマスターデータサービスエンティティ")  
   
  管理対象のマスター データのリストをエンティティに設定します。  
   
- 複数のエンティティを使用して派生階層を構築できます。派生階層とは、複数のエンティティに基づくレベルベースの階層です。 詳細については、「 [派生階層 (マスター データ サービス)](../master-data-services/derived-hierarchies-master-data-services.md)」を参照してください。  
+ 複数のエンティティを使用して派生階層を構築できます。派生階層とは、複数のエンティティに基づくレベルベースの階層です。 詳細については、「[派生階層 (マスター データ サービス)](../master-data-services/derived-hierarchies-master-data-services.md)」を参照してください。  
   
  また、場合によっては、エンティティに明示的階層 (単一のエンティティに基づく不規則な構造) とコレクション (メンバーのサブセットの 1 回限りの組み合わせ) を含めることも可能です。 詳細については、「[明示的階層 (マスター データ サービス)](../master-data-services/explicit-hierarchies-master-data-services.md)」および「[コレクション (マスター データ サービス)](../master-data-services/collections-master-data-services.md)」を参照してください。  
   
@@ -53,18 +52,18 @@ ms.locfileid: "52769874"
  関連するモデル オブジェクトを含む、エンティティに対する権限をユーザーに付与できます。 詳細については、「[エンティティ権限 (マスター データ サービス)](../master-data-services/entity-permissions-master-data-services.md)」を参照してください。  
   
 ## <a name="entity-examples"></a>エンティティの例  
- 次の例では、エンティティに Name、Code、Subcategory、StandardCost、ListPrice、FilePhoto という属性があることを示しています。 これらの属性はメンバーを表します。 各メンバーは、属性値の 1 行で表されます。  
+ 次の例では、エンティティに Name、Code、Subcategory、StandardCost、ListPrice、および FilePhoto という属性があることを示しています。 これらの属性はメンバーを表します。 各メンバーは、属性値の 1 行で表されます。  
   
- ![自転車製品エンティティ テーブル](../master-data-services/media/mds-conc-entity-table-w-data.gif "自転車製品エンティティ テーブル")  
+ ![自転車製品エンティティテーブル](../master-data-services/media/mds-conc-entity-table-w-data.gif "自転車製品エンティティテーブル")  
   
  次の例では、Product エンティティが中心となるエンティティです。 Subcategory エンティティは、Product エンティティのドメイン ベースの属性です。 Category エンティティは、Subcategory エンティティのドメイン ベースの属性です。 StandardCost および ListPrice は、Product エンティティの自由形式属性で、FilePhoto は Product エンティティのファイル属性です。  
   
- ![製品エンティティ ツリー構造](../master-data-services/media/mds-conc-entity-ui.gif "製品エンティティ ツリー構造")  
+ ![製品エンティティツリー構造](../master-data-services/media/mds-conc-entity-ui.gif "製品エンティティツリー構造")  
   
 > [!NOTE]  
 >  これは、 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] ユーザー インターフェイスに基づく例です。 階層ツリー構造は、エンティティとドメイン ベースの属性間のリレーションシップを示します。 これは、リレーションシップを示すもので、重要度を表すものではありません。  
   
-## <a name="related-tasks"></a>Related Tasks  
+## <a name="related-tasks"></a>関連タスク  
   
 |タスクの説明|トピック|  
 |----------------------|-----------|  

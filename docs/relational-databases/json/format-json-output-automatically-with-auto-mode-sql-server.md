@@ -1,6 +1,5 @@
 ---
-title: AUTO モードで自動的に JSON 出力を書式設定する (SQL Server) | Microsoft Docs
-ms.custom: ''
+title: AUTO モードで自動的に JSON 出力を書式設定する
 ms.date: 07/17/2017
 ms.prod: sql
 ms.reviewer: genemi
@@ -11,14 +10,14 @@ helpviewer_keywords:
 ms.assetid: 178a2a4e-e0f6-49b9-9895-396956d3c7d9
 author: jovanpop-msft
 ms.author: jovanpop
-manager: craigg
+ms.custom: seo-dt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: b0578b06a83b1a3af7ab86f4800e64e56472f071
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 1472c05c2ac4a9308a0fc941ed706d155203ca03
+ms.sourcegitcommit: 15fe0bbba963d011472cfbbc06d954d9dbf2d655
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56033533"
+ms.lasthandoff: 11/14/2019
+ms.locfileid: "74095808"
 ---
 # <a name="format-json-output-automatically-with-auto-mode-sql-server"></a>AUTO モードで自動的に JSON 出力を書式設定する (SQL Server)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]

@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 3b1ec9fe-f6c5-46f7-aa63-6e671be1572d
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: 7296a880dcf9ec10a5aa86182a71c3eec879bb54
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: f0be2586d83aaf859ba6b5f4b57f08a4d679b9be
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51677531"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68109881"
 ---
 # <a name="check-integrity-of-database-with-suspect-pages"></a>問題のあるページを含むデータベースの整合性のチェック
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

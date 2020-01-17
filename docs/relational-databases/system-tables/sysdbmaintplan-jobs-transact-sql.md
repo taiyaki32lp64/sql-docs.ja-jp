@@ -17,15 +17,14 @@ helpviewer_keywords:
 ms.assetid: bc65cd70-6ef2-4c17-be11-877ecf4efe50
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 0e54355cf0c7806c70f6bb80ee0463744b4c869b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: f780199361d9e5741187dd4e5346abb2df98b9cb
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47794952"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68130441"
 ---
-# <a name="sysdbmaintplanjobs-transact-sql"></a>sysdbmaintplan_jobs (Transact-SQL)
+# <a name="sysdbmaintplanjobs-transact-sql"></a>sysdbmaintplan_jobs (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   このテーブルは、以前のバージョンの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] からアップグレードされたインスタンスの情報を保持するために、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] に付属されたものです。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] このテーブルの内容は変更されません。 このテーブルに格納されます、 **msdb**データベース。  
@@ -36,7 +35,7 @@ ms.locfileid: "47794952"
   
 |列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
-|**plan_id**|**uniqueidentifier**|データベース メンテナンス プランの ID|  
-|**job_id**|**uniqueidentifier**|データベース メンテナンス プランに関連付けられているジョブの ID|  
+|**plan_id**|**uniqueidentifier**|データベース メンテナンス プランの id。|  
+|**job_id**|**uniqueidentifier**|データベース メンテナンス プランに関連付けられているジョブの ID。|  
   
   

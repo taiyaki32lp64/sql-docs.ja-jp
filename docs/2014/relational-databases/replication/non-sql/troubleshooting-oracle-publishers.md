@@ -14,11 +14,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: c84bf2d98440ff9425cd26a4a71667abea2904e1
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52786694"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63021907"
 ---
 # <a name="troubleshooting-oracle-publishers"></a>Oracle パブリッシャーのトラブルシューティング
   このトピックでは、Oracle パブリッシャーを構成および使用する際に発生する可能性のあるいくつかの問題を示します。  
@@ -68,7 +68,7 @@ ms.locfileid: "52786694"
   
 -   "Oracle サーバー インスタンス '\<*OraclePublisherName*>' は、'\<*SQLServerDistributorName*>' をディストリビューターとして使用するように構成されています。 '\<*NewSQLServerDistributorName*>' をディストリビューターとして使用するためには、Oracle サーバー インスタンスの現在のレプリケーション構成を削除する必要があります。その場合、サーバー インスタンス上のすべてのパブリケーションが削除されます。"  
   
--   "Oracle サーバー '\<*OracleServerName*>' は、既にディストリビューター '\<*SQLServerDistributorName*>.*\<DistributionDatabaseName>*' のパブリッシャー '\<*OraclePublisherName*>' として定義されています。 パブリッシャーを削除するか、パブリック シノニム '*\<SynonymName>*' を削除して、再作成してください。"  
+-   "Oracle サーバー '\<*OracleServerName*>' は、既にディストリビューター '\<*SQLServerDistributorName*>. *\<DistributionDatabaseName>* ' のパブリッシャー '\<*OraclePublisherName*>' として定義されています。 パブリッシャーを削除するか、パブリック シノニム ' *\<SynonymName>* ' を削除して、再作成してください。"  
   
  Oracle パブリッシャーが削除されると、Oracle データベース内のレプリケーション オブジェクトが自動的にクリーンアップされます。 ただし、Oracle レプリケーション オブジェクトを手動でクリーンアップすることが必要な場合もあります。 レプリケーションで作成した Oracle レプリケーション オブジェクトを手動でクリーン アップするには、次の手順を実行します。  
   
@@ -88,7 +88,7 @@ ms.locfileid: "52786694"
 ## <a name="sql-server-error-21642-is-raised-regarding-a-duplicate-linked-server-login"></a>リンク サーバー ログインの重複に関する SQL Server エラー 21642 が発生する  
  Oracle パブリッシャーを最初に構成するときに、パブリッシャーとディストリビューター間の接続用にリンク サーバー エントリが作成されます。 リンク サーバーには、Oracle TNS サービスと同じ名前が付けられます。 同じ名前でリンク サーバーを作成しようとすると、次のエラー メッセージが表示されます。  
   
- "異種パブリッシャーにはリンク サーバーが必要です。 リンク サーバー '*\<LinkedServerName>*' は既に存在します。 リンク サーバーを削除するか、または別のパブリッシャー名を選択してください。"  
+ "異種パブリッシャーにはリンク サーバーが必要です。 リンク サーバー ' *\<LinkedServerName>* ' は既に存在します。 リンク サーバーを削除するか、または別のパブリッシャー名を選択してください。"  
   
  このエラーは、リンク サーバーを直接作成しようとしたり、Oracle パブリッシャーと [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ディストリビューター間のリレーションシップを以前に削除し、再構成しようとしている場合に発生する可能性があります。 パブリッシャーを再構成しようとしているときにこのエラーが表示される場合は、[sp_dropserver &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-dropserver-transact-sql) を使用してリンク サーバーを削除してください。  
   
@@ -155,7 +155,7 @@ ms.locfileid: "52786694"
   
 2.  **[ファイル名を指定して実行]** ダイアログ ボックスで、「 **regedit**」と入力し、 **[OK]** をクリックします。  
   
-3.  HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\\*\<InstanceName>* \Providers に移動します。  
+3.  HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\\ *\<InstanceName>* \Providers に移動します。  
   
      [Providers] の下に、[OraOLEDB.Oracle] という名前のフォルダーがあります。 このフォルダーの中に、 **[AllowInProcess]** という名前の DWORD 値があり、値は **1**になっている必要があります。  
   

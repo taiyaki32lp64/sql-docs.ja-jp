@@ -1,6 +1,6 @@
 ---
-title: SystemStore プロパティ (SecurityCertificate クラス) |Microsoft Docs
-ms.custom: ''
+title: SystemStore プロパティ (SecurityCertificate)
+ms.custom: seo-lt-2019
 ms.date: 03/06/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 5d2a6ee2-d975-4fd6-adb5-ed43d0cc7fdd
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: 961973131c1ee1089037630cd2151f08c4fb39ab
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 1de02f0042dce3b22a3da721d1ea9f31afb0620a
+ms.sourcegitcommit: baa40306cada09e480b4c5ddb44ee8524307a2ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51659613"
+ms.lasthandoff: 11/06/2019
+ms.locfileid: "73659449"
 ---
 # <a name="systemstore-property-securitycertificate-class"></a>SystemStore プロパティ (SecurityCertificate クラス)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -43,9 +42,9 @@ object.SystemStore [= value]
 ## <a name="property-valuereturn-value"></a>プロパティ値/戻り値  
  セキュリティ証明書に対応するシステム ストアを指定する文字列値。  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>解説  
   
 ## <a name="see-also"></a>参照  
- [サーバー ネットワーク プロトコルとネットワーク ライブラリの構成](https://msdn.microsoft.com/library/ms177485\(v=sql.100\).aspx)  
+ [サーバーネットワークプロトコルと Net-library の構成](https://msdn.microsoft.com/library/ms177485\(v=sql.100\).aspx)  
   
   

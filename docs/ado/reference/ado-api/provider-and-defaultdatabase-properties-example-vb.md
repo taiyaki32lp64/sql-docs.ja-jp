@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 677e1dbe-bcf6-4028-a62c-e99b1c88bf7b
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: ad9e2566af4f320ce3bf12d00421b40e5c41d661
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 46486167ab5e8bd1b063928d4ba3f6f73c893784
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47704930"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67931512"
 ---
 # <a name="provider-and-defaultdatabase-properties-example-vb"></a>Provider および DefaultDatabase プロパティの例 (VB)
 この例では、[プロバイダー](../../../ado/reference/ado-api/provider-property-ado.md)プロパティを開き、3 つ[接続](../../../ado/reference/ado-api/connection-object-ado.md)オブジェクトを別のプロバイダーを使用します。 また、使用、 [DefaultDatabase](../../../ado/reference/ado-api/defaultdatabase-property.md) Microsoft ODBC プロバイダーの既定のデータベースを設定するプロパティ。  
@@ -105,7 +104,7 @@ End Sub
 'EndProviderVB  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [接続オブジェクト (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)   
  [DefaultDatabase プロパティ](../../../ado/reference/ado-api/defaultdatabase-property.md)   
  [Provider プロパティ (ADO)](../../../ado/reference/ado-api/provider-property-ado.md)

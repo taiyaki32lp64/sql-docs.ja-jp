@@ -9,15 +9,15 @@ ms.topic: conceptual
 helpviewer_keywords:
 - Data Profiling Task Editor
 ms.assetid: ca94da82-a4c9-4e87-9cba-c2d85bd31f01
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: f06a9aecd070fe3272d665372bf374d24ed4e60f
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 0a2037297db3f8a303ffd08fb31241e51505aeff
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53350815"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62829473"
 ---
 # <a name="value-inclusion-profile-request-options-data-profiling-task"></a>[値包含プロファイル要求] のオプション (データ プロファイル タスク)
   **[プロファイル要求]** ページの **[要求プロパティ]** ペインを使用すると、要求ペインで選択した **[値包含プロファイル要求]** のオプションを設定できます。 値包含プロファイルは、2 つの列間または列のセット間の値の重複を計算します。 したがって、このプロファイルでは、列または列のセットが、選択したテーブル間の外部キーとして適しているかどうかを判断できます。 また、このプロファイルを使用すると、無効な値などのデータの問題を特定できます。 たとえば、値包含プロファイルで Sales テーブルの ProductID 列をプロファイルするとします。 プロファイルでは、この列に Products テーブルの ProductID 列には存在しない値が含まれていることを検出できます。  
@@ -53,7 +53,7 @@ ms.locfileid: "53350815"
 ## <a name="request-properties-options"></a>[要求プロパティ] のオプション  
  **[要求プロパティ]** ペインに表示される **[値包含プロファイル要求]** のオプション グループは次のとおりです。  
   
--   **[データ]**( **[SubsetTableOrView]** オプション、 **[SupersetTableOrView]** オプション、 **[InclusionColumns]** オプションなど)  
+-   **[データ]** ( **[SubsetTableOrView]** オプション、 **[SupersetTableOrView]** オプション、 **[InclusionColumns]** オプションなど)  
   
 -   **全般**  
   
@@ -100,7 +100,7 @@ ms.locfileid: "53350815"
  文字列値を比較するためのオプションを選択します。 このプロパティのオプションを次の表に示します。 このオプションの既定値は **[Default]** です。  
   
 > [!NOTE]  
->  **[ColumnName]** に **[(\*)]** ワイルドカードを使用する場合、**[CompareOptions]** は読み取り専用で、**[Default]** に設定されます。  
+>  **[ColumnName]** に **[(\*)]** ワイルドカードを使用する場合、 **[CompareOptions]** は読み取り専用で、 **[Default]** に設定されます。  
   
 |値|説明|  
 |-----------|-----------------|  

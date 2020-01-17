@@ -7,10 +7,10 @@ author: dphansen
 ms.author: davidph
 manager: cgronlun
 ms.openlocfilehash: b2747466f18a448ec9d0132757fb1f308d502471
-ms.sourcegitcommit: ce4b39bf88c9a423ff240a7e3ac840a532c6fcae
-ms.translationtype: MT
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/09/2018
-ms.locfileid: "48878345"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68185151"
 ---
- SQL Server スタート パッド 
+ SQL Server Launchpad 

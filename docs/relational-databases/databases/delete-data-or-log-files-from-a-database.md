@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: 0db4018c-ce2c-4ba1-bb29-1e4f3791c925
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 08abccdf7f10b2ffea795ba53a6db6fbf51a788e
-ms.sourcegitcommit: 1a5448747ccb2e13e8f3d9f04012ba5ae04bb0a3
+ms.openlocfilehash: 8cdc8f15cedb170ae6c5aeab35c8f92a979d30d6
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51558380"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72909056"
 ---
 # <a name="delete-data-or-log-files-from-a-database"></a>データまたはログ ファイルのデータベースからの削除
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -36,7 +35,7 @@ ms.locfileid: "51558380"
   
      [前提条件](#Prerequisites)  
   
-     [Security](#Security)  
+     [セキュリティ](#Security)  
   
 -   **以下を使用してデータ ファイルまたはログ ファイルをデータベースから削除するには:**  
   
@@ -68,7 +67,7 @@ ms.locfileid: "51558380"
 4.  **[データベース ファイル]** グリッドで、削除するファイルをクリックし、 **[削除]** をクリックします。  
   
 5.  **[OK]** をクリックします。  
-  
+
 ##  <a name="TsqlProcedure"></a> Transact-SQL の使用  
   
 #### <a name="to-delete-data-or-log-files-from-a-database"></a>データ ファイルまたはログ ファイルをデータベースから削除するには  

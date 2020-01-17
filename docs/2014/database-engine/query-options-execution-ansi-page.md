@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 f1_keywords:
 - sql12.swb.query.ansi.f1
@@ -13,12 +12,12 @@ ms.assetid: c90d7cdf-3309-46f4-b900-220521bb9552
 author: craigg-msft
 ms.author: craigg
 manager: craigg
-ms.openlocfilehash: bfc25b918c9cca50af6ac7c57bfc0ce1c1b4c3c9
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: d9a8b5dea5ab90137c95c9ddaf609c63532dd5b1
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48088612"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66089077"
 ---
 # <a name="query-options-execution-ansi-page"></a>[クエリ オプション] の [実行] ([ANSI] ページ)
   このページを使用すると、[!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] でクエリを実行する際に ISO (ANSI) 規格で指定されているすべての設定または設定の一部を使用するように指定できます。  

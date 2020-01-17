@@ -16,14 +16,13 @@ helpviewer_keywords:
 ms.assetid: c439e53b-56f3-4442-97c6-dabd48a203d8
 author: julieMSFT
 ms.author: jrasnick
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 2aa0eb5794abca24ff3bea6c4242799bf9f8e802
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 8feec11884ae31e34cbc5497bf818991e59b39dd
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53349633"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72909791"
 ---
 # <a name="save-an-execution-plan-in-xml-format"></a>XML 形式での実行プランの保存
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -69,29 +68,29 @@ ms.locfileid: "53349633"
   
 4.  **[結果]** ペインで、クエリ プランを含む **[Microsoft SQL Server XML Showplan]** を右クリックし、 **[結果に名前を付けて保存]** をクリックします。  
   
-5.  **[**\<グリッドまたはテキスト> **の結果を保存]** ダイアログ ボックスで、**[保存の種類]** ボックスの **[すべてのファイル (\*.\*)]** をクリックします。  
+5.  **[** \<グリッドまたはテキスト> **の結果を保存]** ダイアログ ボックスで、 **[保存の種類]** ボックスの **[すべてのファイル (\*.\*)]** をクリックします。  
   
-6.  **[ファイル名]** ボックスに \<name **>.sqlplan** の形式で名前を入力し、**[保存]** をクリックします。  
-  
+6.  **[ファイル名]** ボックスに \<name **>.sqlplan** の形式で名前を入力し、 **[保存]** をクリックします。  
+
 ### <a name="to-save-an-execution-plan-by-using-sql-server-management-studio-options"></a>SQL Server Management Studio のオプションを使用して実行プランを保存するには  
   
 1.  [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]で、推定実行プランまたは実際の実行プランを生成します。 詳細については、「[推定実行プランの表示](../../relational-databases/performance/display-the-estimated-execution-plan.md) 」と「[実際の実行プランの表示](../../relational-databases/performance/display-an-actual-execution-plan.md)」を参照してください。  
   
 2.  結果ペインの **[実行プラン]** タブで、グラフィカルな実行プランを右クリックし、 **[実行プランに名前を付けて保存]** をクリックします。  
   
-     代わりに、**[ファイル]** メニューの **[実行プランに名前を付けて保存]** をクリックしてもかまいません。  
+     代わりに、 **[ファイル]** メニューの **[実行プランに名前を付けて保存]** をクリックしてもかまいません。  
   
-3.  **[名前を付けて保存]** ダイアログ ボックスで、**[ファイルの種類]** が **[実行プラン ファイル (\*.sqlplan)]** に設定されていることを確認します。  
+3.  **[名前を付けて保存]** ダイアログ ボックスで、 **[ファイルの種類]** が **[実行プラン ファイル (\*.sqlplan)]** に設定されていることを確認します。  
   
-4.  **[ファイル名]** ボックスに \<name **>.sqlplan** の形式で名前を入力し、**[保存]** をクリックします。  
+4.  **[ファイル名]** ボックスに \<name **>.sqlplan** の形式で名前を入力し、 **[保存]** をクリックします。  
   
 ### <a name="to-open-a-saved-xml-query-plan-in-sql-server-management-studio"></a>保存した XML クエリ プランを SQL Server Management Studio で開くには  
   
-1.  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] で **[ファイル]** メニューの **[開く]** をポイントし、**[ファイル]** をクリックします。  
+1.  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] で **[ファイル]** メニューの **[開く]** をポイントし、 **[ファイル]** をクリックします。  
   
 2.  **[ファイルを開く]** ダイアログ ボックスで **[ファイルの種類]** を **[実行プラン ファイル (\*.sqlplan)]** に設定し、保存済みの XML クエリ プラン ファイルだけを表示します。  
   
-3.  表示する XML クエリ プラン ファイルを選択し、**[開く]** をクリックします。  
+3.  表示する XML クエリ プラン ファイルを選択し、 **[開く]** をクリックします。  
   
      代わりに、Windows エクスプローラーで、拡張子が **.sqlplan**のファイルをダブルクリックしてもかまいません。 プランが、 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]で開かれます。  
   

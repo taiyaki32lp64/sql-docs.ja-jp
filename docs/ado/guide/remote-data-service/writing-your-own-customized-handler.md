@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: d447712a-e123-47b5-a3a4-5d366cfe8d72
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: daddb9057775e1f098754dd2a331c1dc77194d10
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: 98e2ec3538de68bffa5b22acc94dda3d81e5c6f2
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53214011"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67921887"
 ---
 # <a name="writing-your-own-customized-handler"></a>独自のカスタム ハンドラーの記述
 RDS のサポート、既定値を希望する IIS サーバー管理者がいるかどうか、独自のハンドラーを記述したい場合がありますが、ユーザーの要求より詳細に制御し、アクセス権。  
@@ -32,7 +31,7 @@ RDS のサポート、既定値を希望する IIS サーバー管理者がい�
 ## <a name="idatafactoryhandler-interface"></a>IDataFactoryHandler インターフェイス  
  このインターフェイスは、2 つのメソッドを持って**GetRecordset**と**再接続**します。 どちらの方法では、する必要があります、 [CursorLocation](../../../ado/reference/ado-api/cursorlocation-property-ado.md)プロパティに設定する**adUseClient**します。  
   
- どちらの方法は、最初のコンマの後に表示される引数を受け取る、"**ハンドラー =**"キーワード。 たとえば、`"Handler=progid,arg1,arg2;"`の引数の文字列を渡す`"arg1,arg2"`と`"Handler=progid"`null 引数を渡します。  
+ どちらの方法は、最初のコンマの後に表示される引数を受け取る、"**ハンドラー =** "キーワード。 たとえば、`"Handler=progid,arg1,arg2;"`の引数の文字列を渡す`"arg1,arg2"`と`"Handler=progid"`null 引数を渡します。  
   
 ## <a name="getrecordset-method"></a>GetRecordset メソッド  
  このメソッドは、データ ソース クエリを実行し、新たに作成[レコード セット](../../../ado/reference/ado-api/recordset-object-ado.md)オブジェクトの指定された引数を使用します。 **Recordset**で開く必要がある**adLockBatchOptimistic**され、非同期的に開かれませんする必要があります。  
@@ -100,7 +99,7 @@ HRESULT _stdcall GetRecordset(
 };  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [カスタマイズ ファイル Connect セクション](../../../ado/guide/remote-data-service/customization-file-connect-section.md)   
  [カスタマイズ ファイル Logs セクション](../../../ado/guide/remote-data-service/customization-file-logs-section.md)   
  [カスタマイズ ファイル SQL セクション](../../../ado/guide/remote-data-service/customization-file-sql-section.md)   

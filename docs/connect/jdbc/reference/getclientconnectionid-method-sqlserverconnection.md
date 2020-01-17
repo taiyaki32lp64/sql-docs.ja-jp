@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: bee39c11-733a-461f-92cc-33efcb2af87d
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: eb6e81dc3968677571fea444fc83a4b999a74b5c
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 84367995aa5820bc6078b5e62bc830b0e58c4b0a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52544368"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67953172"
 ---
 # <a name="getclientconnectionid-method-sqlserverconnection"></a>getClientConnectionID メソッド (SQLServerConnection)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -36,7 +35,7 @@ public Java.util.UUID SQLServerConnection.getClientConnectionID();
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- 拡張イベント ログの診断情報にアクセスする方法の詳細については、次を参照してください。[拡張のイベント ログへのアクセスの診断情報](../../../connect/jdbc/accessing-diagnostic-information-in-the-extended-events-log.md)します。  
+ 拡張イベントログの診断情報へのアクセスの詳細については、「[拡張イベントログの診断情報へのアクセス](../../../connect/jdbc/accessing-diagnostic-information-in-the-extended-events-log.md)」を参照してください。  
   
  次のサンプルは、接続 ID の取得方法を示しています。  
   

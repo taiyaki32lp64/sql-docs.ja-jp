@@ -21,13 +21,12 @@ helpviewer_keywords:
 ms.assetid: a6330b74-4e52-42a4-91ca-3f440b3223cf
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: d5c63b6e2f128871740f816cf0772f44646e31f3
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 51c1898ddaee1ecf878944a3b43c3d8adbb38590
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56024603"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67946177"
 ---
 # <a name="xml-construction-xquery"></a>XML の構築 (XQuery)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]

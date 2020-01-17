@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: ed072a35-e1ae-4cf9-b8d2-0db1e32641fa
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: c38902c2e1692dd1a1d2782e8989f480ad5a837d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 92b978e3019e6dfbabcf4421f53a111c7d520112
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47645750"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67952133"
 ---
 # <a name="adox-code-examples-in-microsoft-visual-basic"></a>Microsoft Visual Basic での ADOX コードの例
 これらのトピックでは、ADOX を使用する方法を理解するのに役立つサンプル コードを提供します。 すべてのコード例では、Microsoft Visual Basic を使用して書き込まれます。  
@@ -58,7 +57,7 @@ ms.locfileid: "47645750"
   
 -   [Views Refresh メソッドの例 (VB)](../../../ado/reference/adox-api/views-refresh-method-example-vb.md)  
   
-## <a name="properties"></a>[プロパティ]  
+## <a name="properties"></a>Properties  
   
 -   [Attributes プロパティの例 (VB)](../../../ado/reference/adox-api/attributes-property-example-vb.md)  
   

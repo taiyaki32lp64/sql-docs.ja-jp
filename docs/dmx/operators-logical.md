@@ -8,13 +8,12 @@ ms.topic: conceptual
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-manager: kfile
-ms.openlocfilehash: 254215318a79971e384ab8e08e3e7a17959b58d8
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 947e9a26f697a4b6a62d2153afc882c68c3066dc
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37989534"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68008149"
 ---
 # <a name="operators---logical"></a>演算子 - 論理
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -25,12 +24,12 @@ ms.locfileid: "37989534"
   
 |演算子|説明|  
 |--------------|-----------------|  
-|[&AMP;#40;DMX&AMP;#41;](../dmx/and-dmx.md)|2 つの数値式の論理積演算を実行します。|  
-|[いない&AMP;#40;DMX&AMP;#41;](../dmx/not-dmx.md)|1 つの数値式の論理否定を実行します。|  
-|[または&AMP;#40;DMX&AMP;#41;](../dmx/or-dmx.md)|2 つの数値式の論理和を実行します。|  
+|[AND&#40;DMX&#41;](../dmx/and-dmx.md)|2 つの数値式の論理積演算を実行します。|  
+|[NOT&#40;DMX&#41;](../dmx/not-dmx.md)|1 つの数値式の論理否定を実行します。|  
+|[OR&#40;DMX&#41;](../dmx/or-dmx.md)|2 つの数値式の論理和を実行します。|  
   
-## <a name="see-also"></a>参照  
- [データ マイニング拡張機能&#40;DMX&#41;リファレンス](../dmx/data-mining-extensions-dmx-reference.md)   
+## <a name="see-also"></a>関連項目  
+ [データ マイニング拡張機能 &#40;DMX&#41; リファレンス](../dmx/data-mining-extensions-dmx-reference.md)   
  [データ マイニング拡張機能&#40;DMX&#41;関数リファレンス](../dmx/data-mining-extensions-dmx-function-reference.md)   
  [データ マイニング拡張機能&#40;DMX&#41;演算子リファレンス](../dmx/data-mining-extensions-dmx-operator-reference.md)   
  [データ マイニング拡張機能&#40;DMX&#41;ステートメント リファレンス](../dmx/data-mining-extensions-dmx-statements.md)   

@@ -12,15 +12,14 @@ helpviewer_keywords:
 - traces [SQL Server], starting
 - starting trace automatically
 ms.assetid: d74b848d-e796-49af-a8c5-dd69230f3a78
-author: stevestein
-ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 96003d947f9ab3b466f19b01f7b016e3a256c45d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 0cda5aeb04517b0879a8139432f58bdbc08fe553
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47751190"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68059724"
 ---
 # <a name="start-a-trace-automatically-after-connecting-to-a-server-sql-server-profiler"></a>サーバーへの接続後の自動的なトレースの開始 (SQL Server Profiler)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

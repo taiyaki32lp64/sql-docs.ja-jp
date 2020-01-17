@@ -18,16 +18,15 @@ helpviewer_keywords:
 - expressions [SQL Server], negating
 - reversing Boolean expression values
 ms.assetid: dc07cc35-20f1-46e6-9995-2938390dc19a
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
+author: rothja
+ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 9df3611684dbde4490b922047294810a6ad93147
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 30977ed0baff058c838403b436a4da497c5ac4c8
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47647540"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68121989"
 ---
 # <a name="not-transact-sql"></a>NOT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -47,7 +46,7 @@ ms.locfileid: "47647540"
  有効なブール[式](../../t-sql/language-elements/expressions-transact-sql.md)を指定します。  
   
 ## <a name="result-types"></a>戻り値の型  
- **ブール値**  
+ **Boolean**  
   
 ## <a name="result-value"></a>結果の値  
  NOT は、任意のブール式を反転します。  
@@ -57,7 +56,7 @@ ms.locfileid: "47647540"
   
  次の表は、NOT 演算子を使用して TRUE 値と FALSE 値を比較した結果です。  
   
-||[NOT]|  
+||NOT|  
 |------|---------|  
 |**TRUE**|FALSE|  
 |**FALSE**|TRUE|  

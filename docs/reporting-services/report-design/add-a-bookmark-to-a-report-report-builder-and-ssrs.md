@@ -2,18 +2,18 @@
 title: レポートへのブックマークの追加 (レポート ビルダーおよび SSRS) | Microsoft Docs
 ms.date: 03/01/2017
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: report-design
 ms.topic: conceptual
 ms.assetid: f130562e-5673-40e3-8e01-de7227a21d41
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 776dfbba57afe73e019a9c1c671e8f2bae63165b
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 176d4318cad92d74fb7bfdeeadab5e9690843458
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56285490"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65582244"
 ---
 # <a name="add-a-bookmark-to-a-report-report-builder-and-ssrs"></a>レポートへのブックマークの追加 (レポート ビルダーおよび SSRS)
   カスタマイズされた目次を指定したり、レポートにカスタマイズされた内部ナビゲーション リンクを指定したりする場合は、レポートにブックマークおよびブックマーク リンクを追加します。 通常、各テーブルやグラフ、テーブルやマトリックスに表示される固有のグループ値など、ユーザーが直接アクセスするレポート内の場所にブックマークを追加します。 ブックマークとして使用する独自の文字列を作成できます。また、グループの場合はブックマークをグループ式に設定できます。  
@@ -31,7 +31,7 @@ ms.locfileid: "56285490"
   
 1.  レポート デザイン ビューで、ブックマークを追加するテキスト ボックス、画像、グラフ、または他のレポート アイテムを選択します。 選択したアイテムのプロパティがプロパティ ペインに表示されます。  
   
-2.  **[ブックマーク]** の隣のテキスト ボックスに、このブックマークのラベルとなる文字列を入力します。 たとえば、レポート内の画像のブックマークとして、「 **BikePhoto** 」と入力できます。 または、式 (**[fx]**) ボタンをクリックして **[式]** ダイアログ ボックスを開き、結果がラベルになる式を指定します。 グループの場合、入力する式はグループ式である必要があります。  
+2.  **[ブックマーク]** の隣のテキスト ボックスに、このブックマークのラベルとなる文字列を入力します。 たとえば、レポート内の画像のブックマークとして、「 **BikePhoto** 」と入力できます。 または、式 ( **[fx]** ) ボタンをクリックして **[式]** ダイアログ ボックスを開き、結果がラベルになる式を指定します。 グループの場合、入力する式はグループ式である必要があります。  
   
     > [!NOTE]  
     >  ブックマークには任意の文字列を使用できますが、レポート内で一意である必要があります。 ブックマークが一意でない場合、そのブックマークへのリンクは、最初に一致したブックマークを参照します。  

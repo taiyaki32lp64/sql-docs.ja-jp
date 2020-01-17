@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 helpviewer_keywords:
 - xs:date
@@ -16,12 +15,12 @@ ms.assetid: b9f758df-030c-4aec-8ade-1bf904aa2c61
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: e8ccc6581e48a44e636fad07891bd8ec51596fbf
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 0f631783aad92757edd4faae41cd43c06c431887
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52797644"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66096604"
 ---
 # <a name="changes-to-the-storage-format-for-types-xsdatetime-xsdate-and-xstime"></a>xs:dateTime 型、xs:date 型、および xs:time 型のストレージ形式の変更
   XMLDATETIME ルールでは、[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] へのアップグレード後に無効になる型指定された XML データがデータベースに含まれているかどうかが確認されます。  

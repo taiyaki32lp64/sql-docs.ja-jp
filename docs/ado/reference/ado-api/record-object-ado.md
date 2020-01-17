@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: db83ed2c-a8e3-460c-8682-64667e4d5d01
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: d719ebf47757a48b034d2a0cadd0ed68f51f0ee5
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 5ffc515350bfff4307da382c05aae50ed1930802
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52538775"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67917360"
 ---
 # <a name="record-object-ado"></a>Record オブジェクト (ADO)
 行を表す、 [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md)またはデータ プロバイダー、あるいはファイルやディレクトリなどの半構造化データ プロバイダーによって返されるオブジェクト。  

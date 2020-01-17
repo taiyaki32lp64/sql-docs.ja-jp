@@ -17,12 +17,12 @@ ms.assetid: 0f97f953-33c5-4b26-afeb-db2a26ce38b4
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 8ed56b0d2c3ce14888f7856cadbcf1f1dc67a5ef
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 1195d1b15ed845728cd254032fc7187b3f355f8f
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52760694"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68196530"
 ---
 # <a name="delete-or-disable-dml-triggers"></a>DML トリガーの削除または無効化
   このトピックでは、 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] で [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] または [!INCLUDE[tsql](../../includes/tsql-md.md)]を使用して、DML トリガーを削除または無効にする方法について説明します。  
@@ -90,7 +90,7 @@ ms.locfileid: "52760694"
   
 3.  次の例をコピーし、クエリ ウィンドウに貼り付けます。 [トリガーを作成するには、](/sql/t-sql/statements/create-trigger-transact-sql) CREATE TRIGGER `Sales.bonus_reminder` ステートメントを実行します。 トリガーを削除するには、 [DROP TRIGGER](/sql/t-sql/statements/drop-trigger-transact-sql) ステートメントを実行します。  
   
-```tsql  
+```sql  
 --Create the trigger.  
 USE AdventureWorks2012;  
 GO  
@@ -106,7 +106,7 @@ GO
   
 ```  
   
-```tsql  
+```sql  
 --Delete the trigger.  
 USE AdventureWorks2012;  
 GO  
@@ -124,7 +124,7 @@ GO
   
 3.  次の例をコピーし、クエリ ウィンドウに貼り付けます。 [トリガーを作成するには、](/sql/t-sql/statements/create-trigger-transact-sql) CREATE TRIGGER `Sales.bonus_reminder` ステートメントを実行します。 トリガーを無効または有効にするには、それぞれ、 [DISABLE TRIGGER](/sql/t-sql/statements/disable-trigger-transact-sql) ステートメントおよび [ENABLE TRIGGER](/sql/t-sql/statements/enable-trigger-transact-sql) ステートメントを実行します。  
   
-```tsql  
+```sql  
 --Create the trigger.  
 USE AdventureWorks2012;  
 GO  
@@ -140,7 +140,7 @@ GO
   
 ```  
   
-```tsql  
+```sql  
 --Disable the trigger.  
 USE AdventureWorks2012;  
 GO  
@@ -149,7 +149,7 @@ GO
   
 ```  
   
-```tsql  
+```sql  
 --Enable the trigger.  
 USE AdventureWorks2012;  
 GO  
@@ -157,7 +157,7 @@ ENABLE TRIGGER Sales.bonus_reminder ON Sales.SalesPersonQuotaHistory;
 GO  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [ALTER TRIGGER &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-trigger-transact-sql)   
  [CREATE TRIGGER &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-trigger-transact-sql)   
  [DROP TRIGGER &#40;Transact-SQL&#41;](/sql/t-sql/statements/drop-trigger-transact-sql)   

@@ -1,5 +1,5 @@
 ---
-title: Ibcpsession::bcpcolumns (OLE DB) |Microsoft Docs
+title: 'IBCPSession:: BCPColumns (OLE DB) |Microsoft Docs'
 description: IBCPSession::BCPColumns (OLE DB)
 ms.custom: ''
 ms.date: 06/14/2018
@@ -14,13 +14,12 @@ helpviewer_keywords:
 - BCPColumns method
 author: pmasl
 ms.author: pelopes
-manager: craigg
-ms.openlocfilehash: 9e308b556a1a35cd52c97024b6dad93aa512bc85
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.openlocfilehash: df4282182fe4faefd2fe52ec4dd58910d822ebe6
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51603202"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67994586"
 ---
 # <a name="ibcpsessionbcpcolumns-ole-db"></a>IBCPSession::BCPColumns (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

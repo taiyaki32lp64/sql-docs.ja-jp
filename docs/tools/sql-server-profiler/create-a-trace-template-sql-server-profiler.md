@@ -1,5 +1,5 @@
 ---
-title: トレース テンプレート (SQL Server Profiler) を作成する |Microsoft Docs
+title: トレーステンプレートを作成する (SQL Server プロファイラー) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -12,15 +12,14 @@ helpviewer_keywords:
 - trace templates [SQL Server]
 - saving trace template
 ms.assetid: 025868b0-3790-4cda-8757-5a58327bfba0
-author: stevestein
-ms.author: sstein
-manager: craigg
-ms.openlocfilehash: a6ca4014bd8bbaed28afad2bf7f87ebab5007004
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 90e0563fac5a8ff1619abb946d7b35207d47f706
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47777160"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68223764"
 ---
 # <a name="create-a-trace-template-sql-server-profiler"></a>トレース テンプレートの作成 (SQL Server Profiler)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

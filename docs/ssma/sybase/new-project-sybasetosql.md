@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: fcd83cd6-a876-4b5f-996d-84b7c8706305
 author: Shamikg
 ms.author: Shamikg
-manager: craigg
-ms.openlocfilehash: 853483d2149cc159395fae9fda10f6f84a245151
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 4b64cd0aa3d6a6b03e396bfd0ecbc2ce25519897
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47662890"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68028771"
 ---
 # <a name="new-project-sybasetosql"></a>新しいプロジェクト (SybaseToSQL)
 使用して、**新しいプロジェクト**新しい SSMA プロジェクトを作成する ダイアログ ボックス。 アクセスする、**新しいプロジェクト** ダイアログ ボックスで、**ファイル** メニューのをクリックして**新しいプロジェクト**します。  

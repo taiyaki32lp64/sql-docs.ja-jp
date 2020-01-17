@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.cubeeditor.calculationexpression.calculatedmember.f1
@@ -13,12 +12,12 @@ ms.assetid: f7719b9e-b1e6-4792-90a6-30d9d8eb1196
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 3a16319b01c6555aa3bf299da201d9662cd59f4b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 432300f54a7678970f394b27712bcb28ba8a7e7d
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48049112"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66088371"
 ---
 # <a name="calculated-member-form-editor-calculations-tab-cube-designer-analysis-services---multidimensional-data"></a>計算されるメンバー フォーム エディター (キューブ デザイナーの [計算] タブ) (Analysis Services - 多次元データ)
   キューブ デザイナーの **[計算]** タブの **計算されるメンバー フォーム エディター** ペインを使用すると、計算されるメンバーを作成したり変更したりできます。  
@@ -30,7 +29,7 @@ ms.locfileid: "48049112"
  計算されるメンバーの名前を入力します。  
   
  **親のプロパティ**  
- 展開して、 **[親階層]**、 **[親メンバー]**、および **[変更]** の各オプションを表示します。  
+ 展開して、 **[親階層]** 、 **[親メンバー]** 、および **[変更]** の各オプションを表示します。  
   
  **親階層**  
  計算されるメンバーを含めるために選択したキューブ内でディメンションと階層を選択します。 [メジャー] を選択して、計算されるメジャーを定義します。  
@@ -52,7 +51,7 @@ ms.locfileid: "48049112"
 >  この式は文字列または数値として評価することをお勧めします。  
   
  **[追加のプロパティ]**  
- 展開して、 **[書式設定文字列]**、 **[表示]**、 **[空以外の動作]**、 **[色の式]**、および **[フォントの式]** の各オプションを表示します。  
+ 展開して、 **[書式設定文字列]** 、 **[表示]** 、 **[空以外の動作]** 、 **[色の式]** 、および **[フォントの式]** の各オプションを表示します。  
   
  **書式指定文字列**  
  計算されるメンバーが返す値の書式設定に使用するために、MDX 書式設定文字列を入力するか、定義済みの書式設定文字列を選択します。  
@@ -76,17 +75,17 @@ ms.locfileid: "48049112"
   
  選択した要素を **[計算ツール]** ペインからこのオプションへドラッグして、選択した要素に対して MDX 構文を含めます。  
   
- 色の選択ボタンをクリックして、**[色]** ダイアログ ボックスを表示し、指定する色の RGB 値 (赤、緑、青) を MDX 式に挿入します。 RGB 値の詳細については、「[FORE_COLOR および BACK_COLOR の内容 &#40;MDX&#41;](multidimensional-models/mdx/mdx-cell-properties-fore-color-and-back-color-contents.md)」を参照してください。  
+ 色の選択ボタンをクリックして、 **[色]** ダイアログ ボックスを表示し、指定する色の RGB 値 (赤、緑、青) を MDX 式に挿入します。 RGB 値の詳細については、「[FORE_COLOR および BACK_COLOR の内容 &#40;MDX&#41;](multidimensional-models/mdx/mdx-cell-properties-fore-color-and-back-color-contents.md)」を参照してください。  
   
  **背景色**  
  計算されるメンバーの背景色を指定するために、MDX 式を入力します。  
   
  選択した要素を **[計算ツール]** ペインからこのオプションへドラッグして、選択した要素に対して MDX 構文を含めます。  
   
- 色の選択ボタンをクリックして、**[色]** ダイアログ ボックスを表示し、指定する色の RGB 値 (赤、緑、青) を MDX 式に挿入します。 RGB 値の詳細については、「[FORE_COLOR および BACK_COLOR の内容 &#40;MDX&#41;](multidimensional-models/mdx/mdx-cell-properties-fore-color-and-back-color-contents.md)」を参照してください。  
+ 色の選択ボタンをクリックして、 **[色]** ダイアログ ボックスを表示し、指定する色の RGB 値 (赤、緑、青) を MDX 式に挿入します。 RGB 値の詳細については、「[FORE_COLOR および BACK_COLOR の内容 &#40;MDX&#41;](multidimensional-models/mdx/mdx-cell-properties-fore-color-and-back-color-contents.md)」を参照してください。  
   
  **フォントの式**  
- 展開して **[フォント名]**、 **[フォント サイズ]**、および **[フォント フラグ]** の各オプションを表示します。  
+ 展開して **[フォント名]** 、 **[フォント サイズ]** 、および **[フォント フラグ]** の各オプションを表示します。  
   
  **[フォント名]**  
  計算されるメンバーに使用するフォント名を指定するために、MDX 式を入力します。  

@@ -1,7 +1,7 @@
 ---
 title: 照合順序と Unicode のサポート | Microsoft Docs
 ms.custom: ''
-ms.date: 07/17/2017
+ms.date: 10/18/2019
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.technology: ''
@@ -27,15 +27,15 @@ ms.assetid: 92d34f48-fa2b-47c5-89d3-a4c39b0f39eb
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 1985e7c3fc55f6783c88569c196713050fa40287
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: c63b7c0d1acad34bb273e4a49921d55818965e80
+ms.sourcegitcommit: 82a1ad732fb31d5fa4368c6270185c3f99827c97
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53377872"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72688733"
 ---
 # <a name="collation-and-unicode-support"></a>Collation and Unicode Support
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の照合順序により、並べ替え規則、大文字と小文字の区別、およびアクセントの区別のプロパティをデータで利用できるようになります。 `char` や `varchar` などの文字データ型に使用する照合順序は、そのデータ型で表すことのできるコード ページおよび対応する文字を指定します。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]の新しいインスタンスをインストールしているか、データベース バックアップを復元しているか、サーバーをクライアント データベースに接続しているかに関係なく、操作するデータのロケールの要件、並べ替え順序、および大文字と小文字の区別とアクセントの区別について理解することが重要です。  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のインスタンスで使用可能な照合順序の一覧については「[sys.fn_helpcollations &#40;Transact-SQL&#41;](/sql/relational-databases/system-functions/sys-fn-helpcollations-transact-sql)」を参照してください。  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の照合順序により、並べ替え規則、大文字と小文字の区別、およびアクセントの区別のプロパティをデータで利用できるようになります。 `char` や `varchar` などの文字データ型に使用する照合順序は、そのデータ型で表すことのできるコード ページおよび対応する文字を指定します。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]の新しいインスタンスをインストールしているか、データベース バックアップを復元しているか、サーバーをクライアント データベースに接続しているかに関係なく、操作するデータのロケールの要件、並べ替え順序、および大文字と小文字の区別とアクセントの区別について理解することが重要です。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のインスタンスで使用可能な照合順序の一覧については、「 [sys」を参照してください。fn_helpcollations &#40;Transact-SQL&#41;](/sql/relational-databases/system-functions/sys-fn-helpcollations-transact-sql)」を参照してください。  
   
  サーバー、データベース、列、または式の照合順序を選択すると、データベースのさまざまな操作の結果に影響を与える特定の特性がデータに割り当てられます。 たとえば、ORDER BY を使用してクエリを構築する場合、結果セットの並べ替え順序は、データベースに適用される照合順序、またはクエリの式レベルで COLLATE 句に指定される照合順序に依存します。  
   
@@ -49,17 +49,17 @@ ms.locfileid: "53377872"
   
  照合順序に関連するオプションは、大文字と小文字の区別、アクセントの区別、かなの区別、および文字幅の区別です。 これらのオプションは、照合順序の名前に付加することによって指定されます。 たとえば、 `Japanese_Bushu_Kakusu_100_CS_AS_KS_WS` という照合順序では、大文字と小文字、アクセント、かな、および文字幅が区別されます。 次の表は、これらのオプションに関連付けられている動作を示しています。  
   
-|オプション|説明|  
+|オプション|[説明]|  
 |------------|-----------------|  
 |大文字と小文字を区別する (_CS)|大文字と小文字を区別します。 このオプションを選択すると、大文字より先に小文字が並べ替えられます。 このオプションを選択しないと、照合順序で大文字と小文字が区別されなくなります。 つまり、大文字と小文字は、並べ替えを行う際に同じものと見なされます。 大文字と小文字を区別しないことを明示的に選択するには、_CI と指定します。|  
-|アクセントを区別する (_AS)|アクセントのある文字とアクセントのない文字を区別します。 たとえば、' a' と等しい ' '。 このオプションを選択しないと、照合順序でアクセントが区別されなくなります。 つまり、アクセントのある文字とアクセントのない文字は、並べ替えを行う際に同じものと見なされます。 アクセントを区別しないことを明示的に選択するには、_AI と指定します。|  
-|かなを区別する (_KS)|次の 2 種類の日本語かな文字を区別します。ひらがなとカタカナ。 このオプションを選択しないと、照合順序でかなが区別されません。 つまり、ひらがなとカタカナは、並べ替えを行う際に同じものと見なされます。 かなを区別しないように指定する唯一の方法は、このオプションを省略することです。|  
+|アクセントを区別する (_AS)|アクセントのある文字とアクセントのない文字を区別します。 たとえば、' a ' は '&#x1EA5;' と等しくありません。 このオプションを選択しないと、照合順序でアクセントが区別されなくなります。 つまり、アクセントのある文字とアクセントのない文字は、並べ替えを行う際に同じものと見なされます。 アクセントを区別しないことを明示的に選択するには、_AI と指定します。|  
+|かなを区別する (_KS)|ひらがなとカタカナという日本語の 2 種類のかな文字を区別します。 このオプションを選択しないと、照合順序でかなが区別されません。 つまり、ひらがなとカタカナは、並べ替えを行う際に同じものと見なされます。 かなを区別しないように指定する唯一の方法は、このオプションを省略することです。|  
 |文字幅を区別する (_WS)|全角文字と半角文字を区別します。 このオプションを選択しないと、同じ文字の全角表現と半角表現は、並べ替えを行う際に同じものと見なされます。 文字幅を区別しないように指定する唯一の方法は、このオプションを省略することです。|  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、次の照合順序のセットをサポートしています。  
   
  Windows 照合順序  
- Windows 照合順序は、関連する Windows システム ロケールに基づく文字データを格納するための規則を定義します。 Windows 照合順序では、非 Unicode データの比較が、Unicode データと同じアルゴリズムを使用して実装されます。 基本の Windows 照合順序規則では、辞書順の並べ替えが適用される場合に使用される文字または言語と、非 Unicode 文字データの格納に使用されるコード ページを指定します。 Unicode 順の並べ替えと非 Unicode 順の並べ替えは、いずれも、特定のバージョンの Windows の文字列比較と互換性があります。 このしくみによって [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 内のデータ型に一貫性が生まれ、開発者が [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] と同一の規則を使用してアプリケーションで文字列を並べ替えることが可能になります。 詳細については、「[Windows 照合順序名 &#40;Transact-SQL&#41;](/sql/t-sql/statements/windows-collation-name-transact-sql)」を参照してください。  
+ Windows 照合順序は、関連する Windows システム ロケールに基づく文字データを格納するための規則を定義します。 Windows 照合順序では、非 Unicode データの比較が、Unicode データと同じアルゴリズムを使用して実装されます。 基本の Windows 照合順序規則では、辞書順の並べ替えが適用される場合に使用される文字または言語と、非 Unicode 文字データの格納に使用されるコード ページを指定します。 Unicode 順の並べ替えと非 Unicode 順の並べ替えは、いずれも、特定のバージョンの Windows の文字列比較と互換性があります。 このしくみによって [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]内のデータ型に一貫性が生まれ、開発者が [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]と同一の規則を使用してアプリケーションで文字列を並べ替えることが可能になります。 詳細については、「[Windows 照合順序名 &#40;Transact-SQL&#41;](/sql/t-sql/statements/windows-collation-name-transact-sql)」を参照してください。  
   
  バイナリ照合順序  
  バイナリ照合順序では、ロケールおよびデータ型によって定義されるコーディングされた値の順序に基づいてデータを並べ替えます。 バイナリ照合順序では大文字と小文字が区別されます。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のバイナリ照合順序は、使用するロケールおよび ANSI コード ページを定義します。 また、バイナリ並べ替え順を実施します。 これらは比較的単純なので、バイナリ照合順序はアプリケーションのパフォーマンスを向上させるために役立ちます。 非 Unicode データ型の場合は、ANSI コード ページで定義されているコード ポイントに基づいてデータが比較されます。 Unicode データ型の場合は、Unicode コード ポイントに基づいてデータが比較されます。 Unicode データ型のバイナリ照合順序では、データを並べ替える際にロケールが考慮されません。 たとえば、Unicode データに対して Latin_1_General_BIN と Japanese_BIN を使用した場合、並べ替え結果はどちらも同じになります。  
@@ -70,7 +70,7 @@ ms.locfileid: "53377872"
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 照合順序 (SQL_*) では、以前のバージョンの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]と互換性のある並べ替え順が使用されます。 非 Unicode データについては、辞書順での並べ替え規則は Windows オペレーティング システムによって提供されるどの並べ替えルーチンとも互換性はありません。 ただし、Unicode データの並べ替えは、特定のバージョンの Windows 並べ替え規則と互換性があります。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 照合順序では非 Unicode データと Unicode データで別々の比較規則を使用するため、基本となるデータ型によっては、同一データの比較で異なる結果が得られる場合があります。 詳細については、「[SQL Server 照合順序名 &#40;Transact-SQL&#41;](/sql/t-sql/statements/sql-server-collation-name-transact-sql)」を参照してください。  
   
 > [!NOTE]
->  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の英語インスタンスをアップグレードするときに、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の既存インスタンスとの互換性のために [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 照合順序 (SQL_*) を指定することができます。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスの既定照合順序がセットアップ時に定義されるため、次のいずれかに該当する場合は、照合順序の設定を注意深く指定するようにしてください。  
+>  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]の英語インスタンスをアップグレードするときに、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の既存インスタンスとの互換性のために [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]照合順序 (SQL_*) を指定することができます。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスの既定照合順序がセットアップ時に定義されるため、次のいずれかに該当する場合は、照合順序の設定を注意深く指定するようにしてください。  
 > 
 >  -   アプリケーション コードが以前の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 照合順序の動作に依存している場合。  
 > -   複数の言語に対応する文字データを格納する必要がある場合。  
@@ -101,7 +101,7 @@ SELECT name FROM customer ORDER BY name COLLATE Latin1_General_CS_AI;
   
   
 ###  <a name="Locale_Defn"></a> ロケール  
- ロケールは、場所またはカルチャに関連付けられる一連の情報です。 これには、言語の名前や ID、言語の記述に使用される文字表記、文化的慣習などがあります。 照合順序は、1 つ以上のロケールに関連付けることができます。 詳細については、「 [Microsoft によって割り当てられているロケール ID](https://msdn.microsoft.com/goglobal/bb964664.aspx)」を参照してください。  
+ ロケールは、場所またはカルチャに関連付けられる一連の情報です。 これには、言語の名前や ID、言語の記述に使用される文字表記、文化的慣習などがあります。 照合順序は、1 つ以上のロケールに関連付けることができます。 詳細については、「[Microsoft によって割り当てられているロケール ID](https://msdn.microsoft.com/goglobal/bb964664.aspx)」を参照してください。  
   
   
 ###  <a name="Code_Page_Defn"></a> Code Page  
@@ -129,13 +129,13 @@ SELECT name FROM customer ORDER BY name COLLATE Latin1_General_CS_AI;
   
  さまざまな状況で、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] は他のサーバーまたはクライアントとやり取りし、組織ではアプリケーションやサーバー インスタンス間で複数のデータ アクセス標準を使用する可能性があります。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] クライアントは次の 2 つの主要タイプのいずれかになります。  
   
--   OLE DB および Open Database Connectivity (ODBC) Version 3.7 以降のバージョンを使用する**Unicode クライアント**   
+-   OLE DB および Open Database Connectivity (ODBC) Version 3.7 以降のバージョンを使用する**Unicode クライアント**  
   
--   DB ライブラリおよび ODBC Version 3.6 以前のバージョンを使用する**非 Unicode クライアント**   
+-   DB ライブラリおよび ODBC Version 3.6 以前のバージョンを使用する**非 Unicode クライアント**  
   
  以下の表は、Unicode 型サーバーと非 Unicode 型サーバーの各種の組み合わせにおける多言語データの使用に関する情報を示しています。  
   
-|[サーバー]|クライアント|利点または制限事項|  
+|Server|クライアント|利点または制限事項|  
 |------------|------------|-----------------------------|  
 |Unicode|Unicode|このシナリオでは、システム全体で Unicode データが使用されるため、最高のパフォーマンスが実現され、取得されるデータが破損から保護されます。 これは、ActiveX Data Objects (ADO)、OLE DB、および ODBC Version 3.7 以降のバージョンの場合に該当します。|  
 |Unicode|非 Unicode|このシナリオで、特に新しいオペレーティング システムを実行しているサーバーと、古いバージョンの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]または古いオペレーティング システムを実行しているクライアントが接続されている場合、データをクライアント コンピューターに移動するときに制約やエラーが生じることがあります。 サーバー上の Unicode データは、非 Unicode クライアント上の対応するコード ページにマップしてデータを変換しようと試みます。|  
@@ -217,8 +217,8 @@ SELECT name FROM customer ORDER BY name COLLATE Latin1_General_CS_AI;
  [Unicode コンソーシアムの Web サイト](https://go.microsoft.com/fwlink/?LinkId=48619)  
   
 ## <a name="see-also"></a>参照  
- [包含データベースの照合順序](../databases/contained-database-collations.md)   
+ [Contained Database Collations](../databases/contained-database-collations.md)   
  [フルテキスト インデックス作成時の言語の選択](../search/choose-a-language-when-creating-a-full-text-index.md)   
- [sys.fn_helpcollations (TRANSACT-SQL)](https://msdn.microsoft.com/library/ms187963(SQL.130).aspx)  
+ [sys.fn_helpcollations (Transact-SQL)](https://msdn.microsoft.com/library/ms187963(SQL.130).aspx)  
   
   

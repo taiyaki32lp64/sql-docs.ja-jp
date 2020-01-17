@@ -14,11 +14,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 32d66451ff0c3e08feccc72719152a275e40a511
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52767624"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63063068"
 ---
 # <a name="reorder-output-columns-visual-database-tools"></a>列の出力順の変更 (Visual Database Tools)
   選択クエリにデータ列を追加する順序によって、結果での列の表示順序が決まります。 最初にクエリに追加した列は結果の左端に表示され、次に追加した列はその右隣に表示されます。  
@@ -33,7 +33,7 @@ ms.locfileid: "52767624"
   
 2.  行セレクター ボタンにポインターを置き、行を新しい場所にドラッグします。  
   
-     - または -  
+     \- または -  
   
      [SQL ペイン](sql-pane-visual-database-tools.md)で列名の順序を編集します。  
   

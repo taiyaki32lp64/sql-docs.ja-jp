@@ -2,18 +2,18 @@
 title: スパークラインとデータ バーの追加 (レポート ビルダーおよび SSRS) | Microsoft Docs
 ms.date: 03/03/2017
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: report-design
 ms.topic: conceptual
 ms.assetid: 0b297c2e-d48b-41b0-aabd-29680cdcdb05
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 2c5ee0c66e6d510825b70fae5c844aa859439c11
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 8982b9fb6312f3d3c14b4a4e009a81b51c435914
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56292150"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65581897"
 ---
 # <a name="add-sparklines-and-data-bars-report-builder-and-ssrs"></a>スパークラインとデータ バーの追加 (レポート ビルダーおよび SSRS)
   スパークラインとデータ バーは小さく簡潔なグラフであり、余分な情報を最小限に抑えて多くの情報を伝えます。 詳細については、「[スパークラインとデータ バー (レポート ビルダーおよび SSRS)](../../reporting-services/report-design/sparklines-and-data-bars-report-builder-and-ssrs.md)」を参照してください。  
@@ -37,9 +37,9 @@ ms.locfileid: "56292150"
   
      **グラフ データ** ペインが開きます。  
   
-6.  **[値]** 領域で、 **[フィールドの追加]** のプラス記号 (**+**) をクリックし、グラフ化する値のあるフィールドをクリックします。  
+6.  **[値]** 領域で、 **[フィールドの追加]** のプラス記号 ( **+** ) をクリックし、グラフ化する値のあるフィールドをクリックします。  
   
-7.  **[カテゴリ グループ]** 領域で、 **[フィールドの追加]** のプラス記号 (**+**) をクリックし、グループ化に使用する値のフィールドをクリックします。  
+7.  **[カテゴリ グループ]** 領域で、 **[フィールドの追加]** のプラス記号 ( **+** ) をクリックし、グループ化に使用する値のフィールドをクリックします。  
   
      通常、各行に 1 つの系列を使用するので、スパークラインまたはデータ バーでは **[系列グループ]** 領域にフィールドを追加しません。  
   

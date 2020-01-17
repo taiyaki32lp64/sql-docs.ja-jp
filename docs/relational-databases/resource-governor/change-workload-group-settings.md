@@ -12,21 +12,20 @@ helpviewer_keywords:
 ms.assetid: 73b6109c-2ad0-4915-b11b-d40d5a0fdc25
 author: julieMSFT
 ms.author: jrasnick
-manager: craigg
-ms.openlocfilehash: c2addb0ed4dea6114b1abaa5e7474d6de6912f75
-ms.sourcegitcommit: cebfa2610ea36e3c5ad510c214590035ecb499c2
+ms.openlocfilehash: 5389413091f57a5a0dfdad887edad675ee68ff64
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/04/2019
-ms.locfileid: "55689815"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68136929"
 ---
 # <a name="change-workload-group-settings"></a>ワークロード グループの設定の変更
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
   ワークロード グループの設定を変更するには、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]を使用します。  
   
--   **作業を開始する準備:**[制限事項と制約事項](#LimitationsRestrictions)、[権限](#Permissions)  
+-   **作業を開始する準備:** [制限事項と制約事項](#LimitationsRestrictions)、[権限](#Permissions)  
   
--   **ワークロード グループの設定変更に使用するもの:**[SQL Server Management Studio](#ChgWGProp)、[Transact-SQL](#ChgWGTSQL)  
+-   **ワークロード グループの設定変更に使用するもの:** [SQL Server Management Studio](#ChgWGProp)、[Transact-SQL](#ChgWGTSQL)  
   
 ## <a name="before-you-begin"></a>はじめに  
   

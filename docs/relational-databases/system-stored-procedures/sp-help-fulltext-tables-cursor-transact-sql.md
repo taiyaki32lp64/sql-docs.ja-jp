@@ -15,16 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - sp_help_fulltext_tables_cursor
 ms.assetid: 155791eb-8832-4596-8487-7fc70dfba5b9
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
+author: MikeRayMSFT
+ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 87566a816638e38e9adbf4e2dd6ebfef1f741e3c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 8e4218f6a105f81997c37202421feb689cd3a074
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47852000"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68055001"
 ---
 # <a name="sphelpfulltexttablescursor-transact-sql"></a>sp_help_fulltext_tables_cursor (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-pdw-md.md)]
@@ -46,14 +45,11 @@ sp_help_fulltext_tables_cursor [ @cursor_return = ] @cursor_variable OUTPUT
 ```  
   
 ## <a name="arguments"></a>引数  
- [ **@cursor_return=** ] *@cursor_variable* OUTPUT  
- 型の output 変数は、**カーソル**します。 カーソルは読み取り専用で、スクロール可能な動的カーソルです。  
+`[ @cursor_return = ] @cursor_variable OUTPUT` 型の output 変数は、**カーソル**します。 カーソルの読み取り専用で、スクロール可能な動的カーソルです。  
   
- [ **@fulltext_catalog_name=** ] **'***fulltext_catalog_name***'**  
- フルテキスト カタログの名前を指定します。 *fulltext_catalog_name*は**sysname**、既定値は NULL です。 場合*fulltext_catalog_name*を省略するかが null の場合、データベースに関連付けられているすべてのフルテキスト インデックス付きのテーブルが返されます。 場合*fulltext_catalog_name*が指定されているが、 *table_name*を省略するかが null の場合、このカタログに関連付けられているすべてのフルテキスト インデックス付きテーブルについて、フルテキスト インデックス情報を取得します。 両方*fulltext_catalog_name*と*table_name*指定する場合、行が返されます*table_name*に関連付けられている*fulltext_catalog_name*;それ以外の場合、エラーが発生します。  
+`[ @fulltext_catalog_name = ] 'fulltext_catalog_name'` フルテキスト カタログの名前です。 *fulltext_catalog_name*は**sysname**、既定値は NULL です。 場合*fulltext_catalog_name*を省略するかが null の場合、データベースに関連付けられているすべてのフルテキスト インデックス付きのテーブルが返されます。 場合*fulltext_catalog_name*が指定されているが、 *table_name*を省略するかが null の場合、このカタログに関連付けられているすべてのフルテキスト インデックス付きテーブルについて、フルテキスト インデックス情報を取得します。 両方*fulltext_catalog_name*と*table_name*指定する場合、行が返されます*table_name*に関連付けられている*fulltext_catalog_name*;それ以外の場合、エラーが発生します。  
   
- [ **@table_name=**] **'***table_name***'**  
- フルテキスト メタデータを要求するテーブル名を指定します。この名前は 1 つまたは 2 つの要素で構成されます。 *table_name*は**nvarchar (517)** 既定値は NULL です。 だけの場合*table_name*指定すると、関連する行のみ*table_name*が返されます。  
+`[ @table_name = ] 'table_name'` フルテキスト メタデータが要求される 1 つまたは 2 つの部分のテーブルの名前です。 *table_name*は**nvarchar (517)** 既定値は NULL です。 だけの場合*table_name*指定すると、関連する行のみ*table_name*が返されます。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  0 (成功) または (1) の失敗  
@@ -62,12 +58,12 @@ sp_help_fulltext_tables_cursor [ @cursor_return = ] @cursor_variable OUTPUT
   
 |列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
-|**TABLE_OWNER**|**sysname**|テーブル所有者 テーブルを作成したデータベース ユーザーの名前です。|  
+|**TABLE_OWNER**|**sysname**|テーブル所有者 これは、テーブルを作成したデータベース ユーザーの名前です。|  
 |**TABLE_NAME**|**sysname**|テーブル名です。|  
-|**FULLTEXT_KEY_INDEX_NAME**|**sysname**|一意なキー列として指定された列に対して UNIQUE 制約を課すインデックス。|  
-|**FULLTEXT_KEY_COLID**|**int**|FULLTEXT_KEY_NAME で指定された一意なインデックスの列 ID。|  
+|**FULLTEXT_KEY_INDEX_NAME**|**sysname**|一意のキー列として指定された列に UNIQUE 制約を課すインデックス。|  
+|**FULLTEXT_KEY_COLID**|**int**|FULLTEXT_KEY_NAME で指定された一意のインデックスの列 ID。|  
 |**FULLTEXT_INDEX_ACTIVE**|**int**|このテーブルでフルテキスト インデックス作成のマークが付いている列がクエリに適しているかどうか。<br /><br /> 0 = 非アクティブ<br /><br /> 1 = アクティブ|  
-|**FULLTEXT_CATALOG_NAME**|**sysname**|フルテキスト インデックス データが存在するフルテキスト カタログ。|  
+|**FULLTEXT_CATALOG_NAME**|**sysname**|フルテキスト カタログがフルテキスト インデックス データが存在します。|  
   
 ## <a name="permissions"></a>アクセス許可  
  実行権限は、既定のメンバーに、**パブリック**ロール。  

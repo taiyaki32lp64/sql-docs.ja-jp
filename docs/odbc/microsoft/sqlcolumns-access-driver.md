@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 1eac255c-6110-4805-a1bc-feee1eec35d0
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: c0e0977aebfe16b9274df8e93260eb98a24742cf
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 2916532b9dd79e25adce791b2201d77eb2cdff84
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47680640"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67985253"
 ---
 # <a name="sqlcolumns-access-driver"></a>SQLColumns (Access ドライバー)
 > [!NOTE]  

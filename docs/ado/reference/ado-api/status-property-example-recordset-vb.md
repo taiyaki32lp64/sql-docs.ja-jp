@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: e37b4d46-380d-4615-b4bb-e1a7b0851771
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: db2b2aa3eb59b32894b7ca6bfcf0a8a519bf3903
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: f1f418ed4c8ac74a023203606ebf3934129525a6
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47604540"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67916791"
 ---
 # <a name="status-property-example-recordset-vb"></a>Status プロパティの例 (Recordset) (VB)
 この例では、[状態](../../../ado/reference/ado-api/status-property-ado-recordset.md)バッチ更新が発生する前に、バッチ操作で変更されたレコードを表示するプロパティ。  
@@ -98,5 +97,5 @@ End Sub
 'EndStatusRecordsetVB  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [Status プロパティ (ADO Recordset)](../../../ado/reference/ado-api/status-property-ado-recordset.md)

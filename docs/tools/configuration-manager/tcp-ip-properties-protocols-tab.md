@@ -10,15 +10,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - TCP/IP [SQL Server], configuration options
 ms.assetid: 007638fc-3a24-4460-adbe-545ded5d6f88
-author: stevestein
-ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 6b8e961af919f3d92dad4aba5d87e910e341ce07
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: ef748c0b53ecd4812816bfc021567e91fbc10c52
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47797412"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68023790"
 ---
 # <a name="tcpip-properties-protocols-tab"></a>[TCP/IP のプロパティ] ダイアログ ボックス ([プロトコル] タブ)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -26,7 +25,7 @@ ms.locfileid: "47797412"
   
  変更を有効にするには、Microsoft SQL Server を再起動する必要があります。  
   
-## <a name="options"></a>[変数]  
+## <a name="options"></a>オプション  
  **有効**  
  可能な値は、 **[はい]** と **[いいえ]** です。  
   

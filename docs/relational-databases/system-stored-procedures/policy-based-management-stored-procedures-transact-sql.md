@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: df64ab19-4e66-4702-96bd-32ad587d00f0
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 9bd5dc3b6e3d491be6cde3dff8a362ca076359d8
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a4304bfb3048c8e72a98e4eb24c51b4c7f19d5cf
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47743280"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67941944"
 ---
 # <a name="policy-based-management-stored-procedures-transact-sql"></a>ポリシー ベースの管理ストアド プロシージャ (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -29,7 +28,7 @@ ms.locfileid: "47743280"
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、次のシステム ストアド、ポリシー ベースの管理に使用されるプロシージャです。  
   
 > [!IMPORTANT]  
->  サポートされているのは、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] オンライン ブックに記載されているポリシー ベースの管理ストアド プロシージャのみです。 記載されていないストアド プロシージャは、内部ポリシー ベースの管理コンポーネント専用です。ポリシー ベースの管理には使用しないでください。  
+>  サポートされているのは、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] オンライン ブックに記載されているポリシー ベースの管理ストアド プロシージャのみです。 ドキュメントに未記載のストアド プロシージャでは、内部ポリシー ベースの管理コンポーネントによって使用され、ポリシー ベースの管理を管理するのには使用しない必要があります。  
   
 |||  
 |-|-|  
@@ -44,7 +43,7 @@ ms.locfileid: "47743280"
 |[sp_syspolicy_rename_condition](../../relational-databases/system-stored-procedures/sp-syspolicy-rename-condition-transact-sql.md)|[sp_syspolicy_update_policy_category_subscription](../../relational-databases/system-stored-procedures/sp-syspolicy-update-policy-category-subscription-transact-sql.md)|  
 |[sp_syspolicy_rename_policy](../../relational-databases/system-stored-procedures/sp-syspolicy-rename-policy-transact-sql.md)||  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [ポリシー ベースの管理を使用したサーバーの管理](../../relational-databases/policy-based-management/administer-servers-by-using-policy-based-management.md)  
   
   

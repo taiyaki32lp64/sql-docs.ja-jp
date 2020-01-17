@@ -23,14 +23,13 @@ helpviewer_keywords:
 ms.assetid: 92bd29a3-9beb-410e-b7e0-7bc1dc1ae6d0
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: ed0dd384b3ca1a90b1a40bbb23d63feabf2ae85d
-ms.sourcegitcommit: dd794633466b1da8ead9889f5e633bdf4b3389cd
+ms.openlocfilehash: fcbc2f6ae35c72f86ccbbc6d34f45384c88c2fd9
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54143292"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68041901"
 ---
 # <a name="set-ansipadding-transact-sql"></a>SET ANSI_PADDING (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-pdw-md.md)]
@@ -65,7 +64,7 @@ SET ANSI_PADDING ON
   
 |設定|char(*n*) NOT NULL または binary(*n*) NOT NULL|char(*n*) NULL または binary(*n*) NULL|varchar(*n*) または varbinary(*n*)|  
 |-------------|----------------------------------------------------|--------------------------------------------|----------------------------------------|  
-|ON|列の定義サイズになるように、**char** 型の列の場合は元の値の右側を空白で埋め、**binary** 型の列の場合は 0 で埋めます。|SET ANSI_PADDING が ON の場合は、**char(**_n_**)** または **binary(**_n_**)** NOT NULL と同じ規則に従います。|**varchar** 型の列に挿入された文字値の末尾にある空白は切り捨てられません。 **varbinary** 型の列に挿入されたバイナリ値の末尾にある 0 は切り捨てられません。 列の長さに合わせるためにパディングされることはありません。|  
+|ON|列の定義サイズになるように、**char** 型の列の場合は元の値の右側を空白で埋め、**binary** 型の列の場合は 0 で埋めます。|SET ANSI_PADDING が ON の場合は、**char(** _n_ **)** または **binary(** _n_ **)** NOT NULL と同じ規則に従います。|**varchar** 型の列に挿入された文字値の末尾にある空白は切り捨てられません。 **varbinary** 型の列に挿入されたバイナリ値の末尾にある 0 は切り捨てられません。 値は列の長さに合わせてパディングされません。|  
 |OFF|列の定義サイズになるように、**char** 型の列の場合は元の値の右側を空白で埋め、**binary** 型の列の場合は 0 で埋めます。|SET ANSI_PADDING が OFF の場合は、**varchar** または **varbinary** と同じ規則に従います。|**varchar** 型の列に挿入された文字値の末尾にある空白は切り捨てられます。 **varbinary** 型の列に挿入されたバイナリ値の末尾にある 0 は切り捨てられます。|  
   
 > [!NOTE]  
@@ -73,9 +72,9 @@ SET ANSI_PADDING ON
   
 計算列やインデックス付きビューのインデックスを作成または変更するときには、ANSI_PADDING を ON に設定する必要があります。 インデックス付きビューおよび計算列上のインデックスに必要な SET オプション設定の詳細については、「[SET ステートメント &#40;Transact-SQL&#41;](../../t-sql/statements/set-statements-transact-sql.md)」の「SET ステートメントの使用に関する留意事項」を参照してください。  
   
-既定では、SET ANSI_PADDING は ON に設定されています。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC ドライバーおよび [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB Provider for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、接続時に自動的に ANSI_PADDING が ON に設定されます。 この構成は、ODBC データ ソースまたは ODBC 接続属性で定義でき、接続前にアプリケーションで設定される OLE DB 接続プロパティでも定義できます。 DB-Library アプリケーションからの接続に対しては、既定では SET ANSI_PADDING は OFF に設定されています。  
+既定では、SET ANSI_PADDING は ON に設定されています。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC ドライバーおよび [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB Provider for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、接続時に自動的に ANSI_PADDING が ON に設定されます。 この構成は、ODBC データ ソースまたは ODBC 接続属性で定義でき、接続前にアプリケーションで設定される OLE DB 接続プロパティでも定義できます。 DB-Library アプリケーションからの接続に対しては、既定で SET ANSI_PADDING は OFF に設定されています。  
   
- SET ANSI_PADDING 設定は、**nchar**、**nvarchar**、**ntext**、**text**、**image**、**varbinary(max)**、**varchar(max)**、および **nvarchar(max)** データ型には影響しません。 これらの値では、常に SET ANSI_PADDING ON の動作が示されます。 つまり、末尾の空白と 0 は切り捨てられません。  
+ SET ANSI_PADDING 設定は、**nchar**、**nvarchar**、**ntext**、**text**、**image**、**varbinary(max)** 、**varchar(max)** 、および **nvarchar(max)** データ型には影響しません。 これらの値では、常に SET ANSI_PADDING ON の動作が示されます。 つまり、末尾の空白と 0 は切り捨てられません。  
   
 ANSI_DEFAULTS が ON の場合は、ANSI_PADDING が有効になります。  
   

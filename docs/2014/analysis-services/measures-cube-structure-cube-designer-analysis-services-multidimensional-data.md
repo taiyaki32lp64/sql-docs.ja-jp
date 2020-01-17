@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.cubeeditor.cubebuilder.measurespane.f1
@@ -13,12 +12,12 @@ ms.assetid: be70f63b-58f2-4eff-81bc-c86d8229e617
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: d3b063029126a8141e1a1a8044991a1653b536b8
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: cbd64cd4eb3ca686fdbdd1a59c9e84fa387e6a7f
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48090320"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66077923"
 ---
 # <a name="measures-cube-structure-tab-cube-designer-analysis-services---multidimensional-data"></a>[メジャー] (キューブ デザイナーの [キューブ構造] タブ) (Analysis Services - 多次元データ)
   **[メジャー]** ペインを使用すると、キューブ デザイナーの **[キューブ構造]** タブでメジャー グループとメンバーを操作できます。  
@@ -90,7 +89,7 @@ ms.locfileid: "48090320"
  **Properties**  
  選択したメジャー グループまたはメジャーに対する、 **の** [プロパティ] [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] ウィンドウを表示します。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [メジャーのプロパティを構成します。](multidimensional-models/configure-measure-properties.md)   
  [メジャーおよびメジャー グループ](multidimensional-models/measures-and-measure-groups.md)  
   

@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: bb3274b1-764d-43a7-a49f-ef55680ecd26
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: ef3dfb97299616bcf0dbb22fca87dceb201f0643
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 4c6d30aeeb650525873669ccd175155c7e69cd0b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47770990"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67967115"
 ---
 # <a name="catalog-activeconnection-property-example-vb"></a>カタログ ActiveConnection プロパティの例 (VB)
 設定、 [ActiveConnection](../../../ado/reference/adox-api/activeconnection-property-adox.md)プロパティを開き、有効な接続「表示」カタログ。 開いているカタログからカタログ内に含まれるスキーマ オブジェクトにアクセスできます。  
@@ -66,7 +65,7 @@ End Sub
 Attribute VB_Name = "Catalog"  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [ActiveConnection プロパティ (ADOX)](../../../ado/reference/adox-api/activeconnection-property-adox.md)   
  [Catalog オブジェクト (ADOX)](../../../ado/reference/adox-api/catalog-object-adox.md)   
  [Table オブジェクト (ADOX)](../../../ado/reference/adox-api/table-object-adox.md)   

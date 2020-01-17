@@ -2,18 +2,18 @@
 title: レポート データ ソース内の資格情報を SharePoint サイトから更新する | Microsoft Docs
 ms.date: 03/01/2017
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: report-data
 ms.topic: conceptual
 ms.assetid: e0c50b6e-89e7-4b4d-8fe5-c90682c5d1b1
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 0c49195b6dc0695899d6eddad0860bcf3e028fce
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 0a9908e340dadeb1108e68ca10f466276c14df23
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47757591"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65575433"
 ---
 # <a name="update-credentials-in-report-data-sources-from-a-sharepoint-site"></a>レポート データ ソース内の資格情報を SharePoint サイトから更新する
   このトピックでは、レポートに埋め込まれたデータ ソースや、SharePoint ドキュメント ライブラリ内に保存された共有データ ソースを更新する方法について説明します。  
@@ -46,7 +46,7 @@ ms.locfileid: "47757591"
   
 7.  ユーザー名とパスワードを入力します。  
   
-    -   このアカウントが Windows ドメイン ユーザー アカウントである場合は、\<ドメイン>\\<アカウント\> という形式で指定し、**[データ ソースへの接続時に Windows 資格情報として使用する]** チェック ボックスをオンにします。  
+    -   このアカウントが Windows ドメイン ユーザー アカウントである場合は、\<ドメイン>\\<アカウント\> という形式で指定し、 **[データ ソースへの接続時に Windows 資格情報として使用する]** チェック ボックスをオンにします。  
   
     -   ユーザー名とパスワードがデータベースの資格情報である場合は、 **[データ ソースへの接続時に Windows 資格情報として使用する]** を選択しないでください。 データベース サーバーが権限の借用または委譲をサポートしている場合は、 **[実行コンテキストをこのアカウントに設定する]** を選択できます。  
   
@@ -72,7 +72,7 @@ ms.locfileid: "47757591"
   
 5.  ユーザー名とパスワードを入力します。  
   
-    -   このアカウントが Windows ドメイン ユーザー アカウントである場合は、\<ドメイン>\\<アカウント\> という形式で指定し、**[データ ソースへの接続時に Windows 資格情報として使用する]** チェック ボックスをオンにします。  
+    -   このアカウントが Windows ドメイン ユーザー アカウントである場合は、\<ドメイン>\\<アカウント\> という形式で指定し、 **[データ ソースへの接続時に Windows 資格情報として使用する]** チェック ボックスをオンにします。  
   
     -   ユーザー名とパスワードがデータベースの資格情報である場合は、 **[データ ソースへの接続時に Windows 資格情報として使用する]** を選択しないでください。 データベース サーバーが権限の借用または委譲をサポートしている場合は、 **[実行コンテキストをこのアカウントに設定する]** を選択できます。  
   

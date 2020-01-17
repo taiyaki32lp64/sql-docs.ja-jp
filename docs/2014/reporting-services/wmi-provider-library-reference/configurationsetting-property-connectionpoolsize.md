@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 api_name:
 - ConnectionPoolSize
@@ -16,15 +15,15 @@ topic_type:
 helpviewer_keywords:
 - ConnectionPoolSize property
 ms.assetid: b80c8e5d-b725-4fe4-aec6-02fb18ec4434
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 589069aebe2275fd06e58385fd85cffaaa3c1222
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 24a180fde90ff406d40a0f0c89bf82dfe5138b88
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56016133"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66097872"
 ---
 # <a name="connectionpoolsize-property-wmi-msreportserverconfigurationsetting"></a>ConnectionPoolSize プロパティ (WMI MSReportServer_ConfigurationSetting)
   レポート サーバー データベースをホストする [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスとの通信にレポート サーバーが使用する、接続プールサイズです。 読み取り専用。  

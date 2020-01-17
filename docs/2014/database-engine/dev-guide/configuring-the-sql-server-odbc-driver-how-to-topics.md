@@ -4,20 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: database-engine
 ms.topic: reference
 ms.assetid: e26fbc87-9483-4a2e-99f1-bf52a58360db
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 52df71c222dfd5a32099a753d5578864b766c494
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 7c2e64b667d0bbdc8dd886dc0e9fef9d260d473b
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48080402"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62753674"
 ---
 # <a name="configuring-the-sql-server-odbc-driver-how-to-topics"></a>SQL Server ODBC ドライバーを構成する方法に関するトピック
   [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 以降で ODBC アプリケーションを使用する前に、以前のバージョンの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] でカタログ ストアド プロシージャのバージョンをアップグレードする方法や、データ ソースを追加、削除、およびテストする方法を理解しておく必要があります。  

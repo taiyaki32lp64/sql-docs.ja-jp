@@ -9,15 +9,15 @@ ms.topic: conceptual
 f1_keywords:
 - sql12.dqs.kb.createdomain.f1
 ms.assetid: 5c4828f5-bd51-4c29-b3de-87b7d2f2d3e5
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 6db2481777a79697e109400786399a5db9daf448
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 54c1a720f34a7cce978371a6794f41e8af5f3b24
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56024453"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65480958"
 ---
 # <a name="create-a-domain"></a>ドメインの作成
   このトピックでは、 [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) でドメインを作成する方法について説明します。 ドメインの値は、フィールド内のデータのセマンティック表現です。 ドメインについて詳しくは、「[ドメインの管理](../../2014/data-quality-services/managing-a-domain.md)」をご覧ください。  
@@ -61,7 +61,7 @@ ms.locfileid: "56024453"
     > [!NOTE]  
     >  ドメインのプロパティの詳細については、「 [Set Domain Properties](../../2014/data-quality-services/set-domain-properties.md)」を参照してください。  
   
-2.  **[データ型]** の一覧で、ドメイン内の値に対するデータ型を選択します。 データ型には、 **[String]** (既定値)、 **[Date]**、 **[Integer]**、または **[Decimal]** を指定できます。  
+2.  **[データ型]** の一覧で、ドメイン内の値に対するデータ型を選択します。 データ型には、 **[String]** (既定値)、 **[Date]** 、 **[Integer]** 、または **[Decimal]** を指定できます。  
   
 3.  シノニムの値ではなく、シノニムのグループの先頭の値が出力されることを指定する場合は、 **[先頭の値を使用]** をオンにします。 各シノニムの値が正しいフォームまたは修正されたフォームで出力され、そのグループの先頭の値で置き換えられないことを指定する場合は、 **[先頭の値を使用]** をオフにします。  
   

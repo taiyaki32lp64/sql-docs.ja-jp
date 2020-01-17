@@ -20,13 +20,12 @@ helpviewer_keywords:
 ms.assetid: e46e959f-d3c5-4ddb-810a-107bfcb83fd2
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 78cdaabe867ae67e3a1dfcb80e82cfaf95a94ed1
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b8285ca9fddf0e1b77ca171414e4c00b0029d110
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47797910"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68036504"
 ---
 # <a name="connecting-with-sqldriverconnect"></a>SQLDriverConnect による接続
 **SQLDriverConnect**接続文字列を使用してデータ ソースに接続するために使用します。 **SQLDriverConnect**の代わりに使用が**SQLConnect**次の理由。  

@@ -1,10 +1,10 @@
 ---
 title: Integration Services (SSIS) プロジェクトとパッケージの配置 | Microsoft Docs
 ms.custom: ''
-ms.date: 06/04/2018
+ms.date: 09/26/2019
 ms.prod: sql
 ms.prod_service: integration-services
-ms.reviewer: ''
+ms.reviewer: vanto
 ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
@@ -16,30 +16,33 @@ f1_keywords:
 - sql13.ssis.ssms.isenvprop.variables.f1
 - sql13.ssis.migrationwizard.f1
 ms.assetid: bea8ce8d-cf63-4257-840a-fc9adceade8c
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: d8f51a507ff3dc2ee317b2b347c4c7b56b043694
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: b0c755208a5443e4606bdb41a0cbdfdf26a1fa1c
+ms.sourcegitcommit: 445842da7c7d216b94a9576e382164c67f54e19a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53202881"
+ms.lasthandoff: 09/30/2019
+ms.locfileid: "71680963"
 ---
 # <a name="deploy-integration-services-ssis-projects-and-packages"></a>Integration Services (SSIS) プロジェクトとパッケージの配置
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] では、プロジェクト配置モデルと従来のパッケージ配置モデルの 2 つの配置モデルがサポートされています。 プロジェクト配置モデルを使用すると、 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] サーバーにプロジェクトを配置できます。  
   
 従来のパッケージ配置モデルの詳細については、「[レガシー パッケージの配置 &#40;SSIS&#41;](../../integration-services/packages/legacy-package-deployment-ssis.md)」を参照してください。  
   
 > [!NOTE]  
->  プロジェクト配置モデルは、 [!INCLUDE[ssISversion11](../../includes/ssisversion11-md.md)]で導入されました。 このデプロイ モデルを使用した場合、プロジェクト全体をデプロイすることなく 1 つまたは複数のパッケージをデプロイすることができませんでした。 [!INCLUDE[ssISversion13](../../includes/ssisversion13-md.md)] ではパッケージ デプロイ モデルが導入されました。プロジェクト全体をデプロイすることなく 1 つまたは複数のパッケージをデプロイできます。  
+>  プロジェクト配置モデルは、 [!INCLUDE[ssISversion11](../../includes/ssisversion11-md.md)]で導入されました。 このデプロイ モデルを使用した場合、プロジェクト全体をデプロイすることなく 1 つまたは複数のパッケージをデプロイすることができませんでした。 [!INCLUDE[ssISversion13](../../includes/ssisversion13-md.md)] で導入された増分パッケージ配置機能によって、プロジェクト全体を配置することなく、プロジェクトに 1 つ以上のパッケージを配置できます。
 
 > [!NOTE]
 > この記事では、SSIS パッケージをデプロイする方法 (全般) と、オンプレミスでパッケージをデプロイする方法について説明します。 次のプラットフォームで SSIS パッケージをデプロイすることもできます。
 > - **Microsoft Azure クラウド**。 詳細については、「[Lift and shift SQL Server Integration Services workloads to the cloud](../lift-shift/ssis-azure-lift-shift-ssis-packages-overview.md)」 (SQL Server Integration Services ワークロードをクラウドにリフト アンド シフトする) を参照してください。
 > - **Linux**。 詳しくは、「[SSIS で Linux 上のデータの抽出、変換、読み込みを行う](../../linux/sql-server-linux-migrate-ssis.md)」 をご覧ください。
 
-## <a name="compare-project-deployment-model-and-legacy-package-deployment-model"></a>プロジェクト配置モデルと従来のパッケージ配置モデルの比較  
+## <a name="compare-project-deployment-model-and-legacy-package-deployment-model"></a>プロジェクト配置モデルと従来のパッケージ配置モデルの比較
+
  プロジェクトに対して選択する配置モデルの種類によって、そのプロジェクトに使用できる開発オプションと管理オプションが決まります。 次の表に、プロジェクト配置モデルを使用した場合とパッケージ配置モデルを使用した場合の相違点と共通点を示します。  
   
 |プロジェクト配置モデルを使用した場合|従来のパッケージ配置モデルを使用した場合|  
@@ -55,9 +58,8 @@ ms.locfileid: "53202881"
 |実行時に、パッケージによって生成されたイベントが自動的にキャプチャされ、カタログに保存されます。 Transact-SQL ビューを使用して、これらのイベントに対してクエリを実行できます。|実行時に、パッケージによって生成されたイベントは自動的にキャプチャされません。 イベントをキャプチャするには、パッケージにログ プロバイダーを追加する必要があります。|  
 |パッケージは、個別の Windows プロセスで実行されます。|パッケージは、個別の Windows プロセスで実行されます。|  
 |SQL Server エージェントを使用してパッケージ実行がスケジュールされます。|SQL Server エージェントを使用してパッケージ実行がスケジュールされます。|  
-  
- プロジェクト配置モデルは、 [!INCLUDE[ssISversion11](../../includes/ssisversion11-md.md)]で導入されました。 このモデルを使用した場合、プロジェクト全体を配置することなく 1 つまたは複数のパッケージを配置することができませんでした。 [!INCLUDE[ssISversion13](../../includes/ssisversion13-md.md)] で導入された増分パッケージ配置機能によって、プロジェクト全体を配置することなく、プロジェクトに 1 つ以上のパッケージを配置できます。   
-  
+
+
 ## <a name="features-of-project-deployment-model"></a>プロジェクト配置モデルの機能  
  次の表に、プロジェクト配置モデル専用に開発されたプロジェクトで使用できる機能を示します。  
   
@@ -76,21 +78,23 @@ ms.locfileid: "53202881"
 
 SSIS サービス アカウントを既定値から変更した場合は、パッケージを正常に展開するために、既定以外のサービス アカウントに追加のアクセス許可を付与することが必要な場合があります。 既定以外のサービス アカウントに必要なアクセス許可が割り当てられていない場合、次のエラー メッセージが表示される可能性があります。
 
-*ユーザー定義のルーチンまたは集計 "deploy_project_internal" を実行中に .NET Framework エラーが発生しました: System.ComponentModel.Win32Exception: クライアントは要求された特権を保有していません。*
+`A .NET Framework error occurred during execution of user-defined routine or aggregate "deploy_project_internal":
+System.ComponentModel.Win32Exception: A required privilege is not held by the client.`
 
-このエラーは、通常、DCOM アクセス許可が不足している場合に発生します。 このエラーを解決するには、次の操作を実行します。
+このエラーは、通常、DCOM アクセス許可が不足している場合に発生します。 このエラーを解決するには、次の操作を行います。
 
 1.  **[コンポーネント サービス]** コンソールを開きます (または Dcomcnfg.exe を実行します)。
-2.  **[コンポーネント サービス]** コンソールで、**[コンポーネント サービス]** > **[コンピューター]** > **[マイ コンピューター]** > **[DCOM の構成]** を展開します。
+2.  **[コンポーネント サービス]** コンソールで、 **[コンポーネント サービス]**  >  **[コンピューター]**  >  **[マイ コンピューター]**  >  **[DCOM の構成]** を展開します。
 3.  一覧で、使用している SQL Server のバージョンに対応する **Microsoft SQL Server Integration Services xx.0** を探します。 たとえば、SQL Server 2016 がバージョン 13 であるとします。
-4.  右クリックし、**[プロパティ]** を選択します。
-5.  **[Microsoft SQL Server Integration Services 13.0 のプロパティ]** ダイアログ ボックスで、**[セキュリティ]** タブをクリックします。
-6.  3 つのアクセス許可 ("起動とアクティブ化"、"アクセス"、"構成") のそれぞれに対して、**[カスタマイズ]** を選択してから、**[編集]** を選択して **[権限]** ダイアログ ボックスを開きます。
+4.  右クリックし、 **[プロパティ]** を選択します。
+5.  **[Microsoft SQL Server Integration Services 13.0 のプロパティ]** ダイアログ ボックスで、 **[セキュリティ]** タブをクリックします。
+6.  3 つのアクセス許可 ("起動とアクティブ化"、"アクセス"、"構成") のそれぞれに対して、 **[カスタマイズ]** を選択してから、 **[編集]** を選択して **[権限]** ダイアログ ボックスを開きます。
 7.  **[権限]** ダイアログ ボックスで、既定以外のサービス アカウントを追加し、必要に応じて **[許可]** を付与します。 通常、アカウントには **[ローカルからの起動]** と **[ローカルからのアクティブ化]** のアクセス許可が割り当てられています。
-8.  **[OK]** を 2 回クリックし、**[コンポーネント サービス]** コンソールを閉じます。
+8.  **[OK]** を 2 回クリックし、 **[コンポーネント サービス]** コンソールを閉じます。
 
-このセクションで示したエラーと SSIS サービス アカウントで求められるアクセス許可の詳細については、次のブログ投稿を参照してください。  
-[System.ComponentModel.Win32Exception: Deploying SSIS プロジェクトの配置中にクライアントが要求された特権を保有していません](https://blogs.msdn.microsoft.com/dataaccesstechnologies/2013/08/20/system-componentmodel-win32exception-a-required-privilege-is-not-held-by-the-client-while-deploying-ssis-project/)
+このセクションで示したエラーと SSIS サービス アカウントで求められるアクセス許可の詳細については、次のブログ記事を参照してください。
+ 
+- [System.ComponentModel.Win32Exception: Deploying SSIS プロジェクトの配置中にクライアントが要求された特権を保有していません](https://blogs.msdn.microsoft.com/dataaccesstechnologies/2013/08/20/system-componentmodel-win32exception-a-required-privilege-is-not-held-by-the-client-while-deploying-ssis-project/)
 
 ## <a name="deploy-projects-to-integration-services-server"></a>Integration Services サーバーへのプロジェクトの配置
   現在のリリースの [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]では、 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] サーバーにプロジェクトを配置できます。 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] サーバーを使用すると、さまざまな環境を利用して、パッケージの管理、パッケージの実行、およびパッケージに合わせたランタイム値の構成を行うことができます。  
@@ -102,7 +106,7 @@ SSIS サービス アカウントを既定値から変更した場合は、パ�
   
 1.  SSISDB カタログをまだ作成していない場合は、作成します。 詳細については、「[SSIS カタログ](../../integration-services/catalog/ssis-catalog.md)」を参照してください。  
   
-2.  **Integration Services プロジェクト変換ウィザード** を実行して、プロジェクトをプロジェクト配置モデルに変換します。 詳細については、後の手順を参照してください。[プロジェクトをプロジェクトの配置モデルに変換するには](#convert)  
+2.  **Integration Services プロジェクト変換ウィザード** を実行して、プロジェクトをプロジェクト配置モデルに変換します。 詳細については、次の指示を参照してください。[プロジェクトをプロジェクトの配置モデルに変換するには](#convert)  
   
     -   [!INCLUDE[ssISversion12](../../includes/ssisversion12-md.md)] 以降でプロジェクトを作成した場合、既定では、プロジェクトでプロジェクト配置モデルが使用されます。  
   
@@ -131,7 +135,7 @@ SSIS サービス アカウントを既定値から変更した場合は、パ�
   
 1.  [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)]でプロジェクトを開き、ソリューション エクスプローラーでプロジェクトを右クリックし、 **[プロジェクト配置モデルに変換]** をクリックします。  
   
-     - または -  
+     \- または -  
   
      オブジェクト エクスプローラーの [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]で、 **[プロジェクト]** ノードを右クリックし、 **[パッケージのインポート]** を選択します。  
   
@@ -141,17 +145,17 @@ SSIS サービス アカウントを既定値から変更した場合は、パ�
   
 1.  [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)]でプロジェクトを開き、 **[プロジェクト]** メニューの **[配置]** を選択して、 **Integration Services 配置ウィザード**を起動します。  
   
-     -または-  
+     内の複数の  
   
      [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]のオブジェクト エクスプローラーで、 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] > **SSISDB** ノードの順に展開し、配置するプロジェクトの [プロジェクト] フォルダーを探します。 **[プロジェクト]** フォルダーを右クリックして **[プロジェクトの配置]** をクリックします。  
   
-     - または -  
+     内の複数の  
   
      コマンド プロンプトで、 **%ProgramFiles%\Microsoft SQL Server\130\DTS\Binn** にある **isdeploymentwizard.exe**を実行します。 64 ビット コンピューターの場合、 **%ProgramFiles(x86)%\Microsoft SQL Server\130\DTS\Binn**に 32 ビット バージョンのツールもあります。  
   
 2.  **[ソースの選択]** ページで、 **[プロジェクト配置ファイル]** をクリックして、プロジェクトの配置ファイルを選択します。  
   
-     -または-  
+     内の複数の  
   
      **[Integration Services カタログ]** をクリックし、SSISDB カタログに既に配置されているプロジェクトを選択します。  
   
@@ -170,9 +174,9 @@ SSIS サービス アカウントを既定値から変更した場合は、パ�
   
 ###  <a name="SSMS"></a> SQL Server Management Studio を使用してパッケージを配置する  
   
-1.  SQL Server Management Studio のオブジェクト エクスプローラーで、**[Integration Services カタログ]**  >  **[SSISDB]** ノードの順に展開します。  
+1.  SQL Server Management Studio のオブジェクト エクスプローラーで、 **[Integration Services カタログ]**  >  **[SSISDB]** ノードの順に展開します。  
   
-2.  **[プロジェクト]** フォルダーを右クリックして、**[プロジェクトの配置]** をクリックします。  
+2.  **[プロジェクト]** フォルダーを右クリックして、 **[プロジェクトの配置]** をクリックします。  
   
 3.  **[説明]** ページが表示される場合は、 **[次へ]** をクリックして続行します。  
   
@@ -263,8 +267,7 @@ static void Main()
 
 ## <a name="convert-to-package-deployment-model-dialog-box"></a>[パッケージ配置モデルに変換] ダイアログ ボックス
   **[パッケージ配置モデルに変換]** コマンドを使用すると、パッケージをパッケージ配置モデルに変換できます。この変換は、プロジェクトおよびプロジェクト内の各パッケージとそのモデルとの互換性を確認した後に行います。 パラメーターなど、プロジェクト配置モデルに固有の機能をパッケージで使用する場合は、パッケージを変換できません。  
-  
-### <a name="task-list"></a>タスク一覧  
+
  パッケージをパッケージ配置モデルに変換するには、2 つの手順を実行する必要があります。  
   
 1.  **[プロジェクト]** メニューの **[パッケージ配置モデルに変換]** をクリックすると、プロジェクトおよび各パッケージとこのモデルとの互換性が確認されます。 結果は **[結果]** テーブルに表示されます。  
@@ -273,7 +276,8 @@ static void Main()
   
 2.  プロジェクトとすべてのパッケージの互換性テストが成功した場合は、 **[OK]** をクリックしてパッケージを変換します。  
   
-> **注:** プロジェクトをプロジェクト配置モデルに変換するには、**Integration Services プロジェクト変換ウィザード**を使用します。 詳細については、「 [Integration Services プロジェクトの変換ウィザード](deploy-integration-services-ssis-projects-and-packages.md)」を参照してください。  
+> [!NOTE]
+> プロジェクトをプロジェクト配置モデルに変換するには、**Integration Services プロジェクト変換ウィザード**を使用します。 詳細については、「 [Integration Services プロジェクトの変換ウィザード](deploy-integration-services-ssis-projects-and-packages.md)」を参照してください。  
 
 ## <a name="integration-services-deployment-wizard"></a>Integration Services 配置ウィザード
   **Integration Services 配置ウィザード** は次の 2 つの配置モデルをサポートしています。
@@ -284,78 +288,88 @@ static void Main()
  
  **パッケージ配置モデル** では、プロジェクト全体を配置する必要はなく、更新したパッケージを SSIS カタログに配置できます。 
  
- > **注:** ウィザードの既定の配置は、プロジェクト配置モデルです。  
+ > [!NOTE]
+ > ウィザードの既定の配置は、プロジェクト配置モデルです。  
   
 ### <a name="launch-the-wizard"></a>ウィザードを起動する
 ウィザードを起動するには、次のいずれかの方法を使用します。
 
  - Windows Search に「 **SQL Server 配置ウィザード」** 」と入力します。 
 
-**OR**
+ 内の複数の
 
  - SQL Server のインストール フォルダーで、実行可能ファイル **ISDeploymentWizard.exe** を検索します。たとえば、"C:\Program Files (x86)\Microsoft SQL Server\130\DTS\Binn" で検索します。 
  
- > **注:****[説明]** ページが表示された場合は、 **[次へ]** をクリックして、 **[ソースの選択]** ページに切り替えます。 
+ > **注:** **[説明]** ページが表示された場合は、 **[次へ]** をクリックして、 **[ソースの選択]** ページに切り替えます。 
  
  このページの設定は、配置モデルごとに異なります。 このページで選択したモデルに基づいて、「 [Project Deployment Model](#ProjectModel) 」セクションまたは「 [Package Deployment Model](#PackageModel) 」セクションの手順に従ってください。  
   
 ###  <a name="ProjectModel"></a> Project Deployment Model  
   
-#### <a name="select-source"></a>[ソースの選択]  
+#### <a name="select-source"></a>[ソースの選択]
+
  作成したプロジェクト配置ファイルを配置するには、 **[プロジェクト配置ファイル]** を選択して .ispac ファイルのパスを入力します。 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] カタログにあるプロジェクトを配置するには、 **[Integration Services カタログ]** を選択し、サーバー名とカタログ内のプロジェクトのパスを入力します。 **[次へ]** をクリックして、 **[配置先の選択]** ページを表示します。  
   
-#### <a name="select-destination"></a>[配置先の選択]  
+#### <a name="select-destination"></a>[配置先の選択]
+
  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] カタログでプロジェクトの配置先フォルダーを選択するには、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスを入力するか、 **[参照]** をクリックしてサーバーの一覧から選択します。 SSISDB でプロジェクトのパスを入力するか、 **[参照]** をクリックしてプロジェクトを選択します。 **[次へ]** をクリックして **[レビュー]** ページを表示します。  
   
-#### <a name="review-and-deploy"></a>レビュー (と配置)  
+#### <a name="review-and-deploy"></a>レビュー (と配置)
+
  このページでは、選択した設定を確認することができます。 選択内容を変更するには、 **[戻る]** をクリックするか、左ペインでいずれかの手順をクリックします。 **[配置]** をクリックして、配置プロセスを開始します。  
   
-#### <a name="results"></a>[結果]  
- 配置プロセスが完了したら、 **[結果]** ページが表示されます。 このページでは、各アクションが成功したか、失敗したかを表示します。 アクションが失敗した場合は、 **[結果]** 列の **[失敗]** をクリックすると、エラーの説明が表示されます。 **[レポートの保存]** をクリックして結果を XML ファイルに保存するか、**[閉じる]** をクリックしてウィザードを終了します。
+#### <a name="results"></a>[結果]
+
+ 配置プロセスが完了したら、 **[結果]** ページが表示されます。 このページでは、各アクションが成功したか、失敗したかを表示します。 アクションが失敗した場合は、 **[結果]** 列の **[失敗]** をクリックすると、エラーの説明が表示されます。 **[レポートの保存]** をクリックして結果を XML ファイルに保存するか、 **[閉じる]** をクリックしてウィザードを終了します。
   
 ###  <a name="PackageModel"></a> Package Deployment Model  
   
-#### <a name="select-source"></a>[ソースの選択]  
+#### <a name="select-source"></a>[ソースの選択]
+
  **Integration Services 配置ウィザード** の **[ソースの選択]** ページには、 **配置モデル** に **[パッケージ配置]** オプションを選択した場合、パッケージ配置モデルに固有の設定が表示されます。  
   
- ソース パッケージを選択するには、**[参照]** ボタンをクリックして、パッケージを含む**フォルダー**を選択するか、**[パッケージ フォルダーのパス]** テキストボックスにフォルダー パスを入力して、ページの下部にある **[更新]** ボタンをクリックします。 これで、リスト ボックスに指定したフォルダー内のすべてのパッケージが表示されます。 既定では、すべてのパッケージが選択されます。 サーバーに配置するパッケージを選択するには、最初の列の **チェックボックス** をクリックします。  
+ ソース パッケージを選択するには、 **[参照]** ボタンをクリックして、パッケージを含む**フォルダー**を選択するか、 **[パッケージ フォルダーのパス]** テキストボックスにフォルダー パスを入力して、ページの下部にある **[更新]** ボタンをクリックします。 これで、リスト ボックスに指定したフォルダー内のすべてのパッケージが表示されます。 既定では、すべてのパッケージが選択されます。 サーバーに配置するパッケージを選択するには、最初の列の **チェックボックス** をクリックします。  
   
- **[ステータス]** と **[メッセージ]** 列を参照して、パッケージの状態を確認します。 ステータスが **[準備完了]** または **[警告]** に設定されている場合は、配置ウィザードは配置プロセスをブロックしません。 一方、ステータスが **[エラー]** に設定されている場合は、ウィザードは選択したパッケージの配置をさらに処理することはありません。 詳細な警告メッセージまたはエラー メッセージを表示するには、 **[メッセージ]** 列のリンクをクリックします。  
+ **[ステータス]** と **[メッセージ]** 列を参照して、パッケージの状態を確認します。 ステータスが **[準備完了]** または **[警告]** に設定されている場合は、配置ウィザードは配置プロセスをブロックしません。 ステータスが **[エラー]** に設定されている場合は、ウィザードは選択したパッケージの配置には進みません。 詳細な警告メッセージまたはエラー メッセージを表示するには、 **[メッセージ]** 列のリンクをクリックします。  
   
- 機微なデータまたはパッケージのデータがパスワードで暗号化されている場合は、 **[パスワード]** 列にパスワードを入力して、 **[更新]** ボタンをクリックし、パスワードが承認されたかどうかを検証します。 パスワードが正しい場合は、ステータスが **[準備完了]** に変更され、警告メッセージは表示されません。 同じパスワードを使用する複数のパッケージがある場合は、同じ暗号化パスワードのパッケージを選択して、 **[パスワード]** テキストボックスにパスワードを入力し、 **[適用]** ボタンをクリックします。 パスワードは、選択したパッケージに適用されます。  
+ 機微なデータまたはパッケージのデータがパスワードで暗号化されている場合は、 **[パスワード]** 列にパスワードを入力して、 **[更新]** ボタンをクリックし、パスワードが承認されたかどうかを検証します。 パスワードが正しい場合は、ステータスが **[準備完了]** に変更され、警告メッセージは表示されません。 同じパスワードを使用する複数のパッケージがある場合は、同じ暗号化パスワードのパッケージを選択して、 **[パスワード]** テキストボックスにパスワードを入力し、 **[適用]** ボタンを選択します。 パスワードは、選択したパッケージに適用されます。  
   
  選択したすべてのパッケージのステータスが **[エラー]** に設定されていない場合は、パッケージ配置プロセスを続行できるように、 **[次へ]** ボタンが有効になります。  
   
-#### <a name="select-destination"></a>[配置先の選択]  
- パッケージ ソースを選択した後に、 **[次へ]** ボタンをクリックして、 **[配置先の選択]** ページに切り替えます。 パッケージは、SSIS カタログ (SSISDB) のプロジェクトに配置する必要があります。 そのため、パッケージを配置する前に、配置先のプロジェクトが既に SSIS カタログに存在することを確認してください。 存在しない場合は、空のプロジェクトを作成します。**[配置先の選択]** ページで、**[サーバー名]** テキストボックスにサーバー名を入力するか、**[参照]** ボタンをクリックしてサーバー インスタンスを選択します。 **[パス]** テキストボックスの横にある **[参照]** ボタンをクリックして、配置先のプロジェクトを指定します。 プロジェクトが存在しない場合は、**[新しいプロジェクト]** をクリックして、配置先のプロジェクトとして空のプロジェクトを作成します。 プロジェクトは、フォルダーの下に作成する **必要があります** 。  
+#### <a name="select-destination"></a>[配置先の選択]
+
+ パッケージ ソースを選択した後に、 **[次へ]** ボタンをクリックして、 **[配置先の選択]** ページに切り替えます。 パッケージは、SSIS カタログ (SSISDB) のプロジェクトに配置する必要があります。 パッケージを配置する前に、SSIS カタログに配置先のプロジェクトが既に必ず存在しているようにします。 プロジェクトが存在しない場合は、空のプロジェクトを作成します。 **[配置先の選択]** ページで、 **[サーバー名]** テキストボックスにサーバー名を入力するか、 **[参照]** ボタンをクリックしてサーバー インスタンスを選択します。 次に、 **[パス]** テキストボックスの横にある **[参照]** ボタンをクリックして、配置先のプロジェクトを指定します。 プロジェクトが存在しない場合は、 **[新しいプロジェクト]** ボタンをクリックして、配置先のプロジェクトとして空のプロジェクトを作成します。 プロジェクトは、フォルダーの下に作成する必要があります。  
   
-#### <a name="review-and-deploy"></a>レビューと配置  
+#### <a name="review-and-deploy"></a>レビューと配置
+
  **[配置先の選択]** ページで **[次へ]** をクリックして、 **Integration Services 配置ウィザード** の **[レビュー]** ページに切り替えます。 [レビュー] ページで、配置アクションに関する概要レポートを確認します。 検証した後に、 **[配置]** ボタンをクリックして、配置アクションを実行します。  
   
-#### <a name="results"></a>[結果]  
- 配置が完了したら、 **[結果]** ページが表示されます。 **[結果]** ページで、配置プロセスの各手順の結果を確認します。 **[結果]** ページで、 **[レポートの保存]** をクリックして配置レポートを保存するか、 **[閉じる]** をクリックしてウィザードを閉じます。  
+#### <a name="results"></a>[結果]
+
+ 配置が完了したら、 **[結果]** ページが表示されます。 **[結果]** ページで、配置プロセスの各手順の結果を確認します。 **[レポートの保存]** をクリックして配置レポートを保存するか、 **[閉じる]** をクリックしてウィザードを閉じます。  
 
 ## <a name="create-and-map-a-server-environment"></a>サーバー環境の作成とマップ
+
   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] サーバーに配置したプロジェクトに含まれるパッケージに合わせたランタイム値を指定するためのサーバー環境を作成します。 特定のパッケージ、エントリ ポイント パッケージ、または特定のプロジェクト内のすべてのパッケージに対して、環境変数をパラメーターにマップできるようになります。 エントリ ポイント パッケージは、通常、子パッケージを実行する親パッケージです。  
   
 > [!IMPORTANT]  
 >  特定の実行で、パッケージは単一のサーバー環境に含まれている値だけで実行できます。  
   
- サーバー環境、環境参照、および環境変数の一覧のビューに対してクエリを実行できます。 環境、環境参照、および環境変数を追加、削除、変更するストアド プロシージャを呼び出すこともできます。 詳細については、「 **SSIS Catalog** 」の「 [サーバー環境、サーバー変数、およびサーバー環境参照](../../integration-services/catalog/ssis-catalog.md)」を参照してください。  
+ サーバー環境、環境参照、および環境変数の一覧のビューに対してクエリを実行できます。 環境、環境参照、および環境変数を追加、削除、変更するストアド プロシージャを呼び出すこともできます。 詳細については、「[SSIS Catalog](../../integration-services/catalog/ssis-catalog.md)」の「**サーバー環境、サーバー変数、およびサーバー環境参照**」を参照してください。  
   
 ### <a name="to-create-and-use-a-server-environment"></a>サーバー環境を作成して使用するには  
   
-1.  [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] のオブジェクト エクスプローラーで、[[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] カタログ] ノード、**[SSISDB]** ノードの順に展開し、環境を作成するプロジェクトの **[環境]** フォルダーを探します。  
+1.  [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] のオブジェクト エクスプローラーで、[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] カタログ **SSISDB** ノードを展開し、環境を作成するプロジェクトの **[環境]** フォルダーを検索します。  
   
-2.  **[環境]** フォルダーを右クリックし、**[環境の作成]** をクリックします。  
+2.  **[環境]** フォルダーを右クリックし、 **[環境の作成]** をクリックします。  
   
-3.  環境の名前、および必要に応じて説明を入力し、 **[OK]** をクリックします。  
+3.  環境の名前を入力し、必要に応じて説明を追加します。 **[OK]** をクリックします。  
   
 4.  新しい環境を右クリックし、 **[プロパティ]** をクリックします。  
   
 5.  **[変数]** ページで、次の手順を実行して変数を追加します。  
   
-    1.  変数の **[型]** を選択します。 変数の名前は、変数にマップするプロジェクト パラメーターの名前と一致している **必要はありません** 。  
+    1.  変数の **[型]** を選択します。 変数の名前は、変数にマップするプロジェクト パラメーターの名前と一致している必要はありません。  
   
     2.  必要に応じて、変数の **[説明]** を入力します。  
   
@@ -375,12 +389,12 @@ static void Main()
   
     2.  **[ログインまたはロール]** 領域で、権限を許可または拒否するユーザーまたはロールを選択します。  
   
-    3.  **[明示]** 領域で、各権限の横にある **[許可]** または **[拒否]** をクリックします。  
+    3.  **[明示]** 領域で、各権限の横にある **[許可]** または **[拒否]** を選択します。  
   
 7.  環境のスクリプトを作成するには、 **[スクリプト]** をクリックします。 既定では、新しいクエリ エディター ウィンドウにスクリプトが表示されます。  
   
     > [!TIP]  
-    >  スクリプトを作成した後、または変数を追加するなど環境プロパティを変更した後に **[スクリプト]** をクリックしてから、**[環境のプロパティ]** ダイアログ ボックスで **[OK]** をクリックする必要があります。 このようにしないと、スクリプトは生成されません。  
+    >  スクリプトを作成した後、または変数を追加するなど環境プロパティを変更した後に **[スクリプト]** をクリックしてから、 **[環境のプロパティ]** ダイアログ ボックスで **[OK]** をクリックする必要があります。 このようにしないと、スクリプトは生成されません。  
   
 8.  **[OK]** をクリックして、変更を環境プロパティに保存します。  
   
@@ -390,7 +404,7 @@ static void Main()
   
 11. プロジェクトをもう一度右クリックし、 **[構成]** をクリックします。  
   
-12. 環境変数を、デザイン時にパッケージに追加したパラメーターにマップするか、 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] プロジェクトをプロジェクト配置モデルに変換したときに生成されたパラメーターにマップするには、次の手順を実行します。  
+12. 環境変数を、デザイン時にパッケージに追加したパラメーターにマップするか、[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] プロジェクトをプロジェクト配置モデルに変換したときに生成されたパラメーターにマップするには、次の手順を実行します。
   
     1.  **[パラメーター]** ページの **[パラメーター]** タブで、 **[値]** フィールドの横にある参照ボタンをクリックします。  
   
@@ -398,22 +412,23 @@ static void Main()
   
 13. 環境変数を接続マネージャーのプロパティにマップするには、次の操作を行います。 パラメーターは、SSIS サーバー上で接続マネージャー プロパティ用に自動的に生成されます。  
   
-    1.  **[パラメーター]** ページの **[接続マネージャー]** タブで、 **[値]** フィールドの横にある参照ボタンをクリックします。  
+    1.  **[パラメーター]** ページの **[接続マネージャー]** タブで、 **[値]** フィールドの横にある **[参照]** ボタンをクリックします。  
   
     2.  **[環境変数を使用する]** をクリックし、作成した環境変数を選択します。  
   
 14. **[OK]** を 2 回クリックして変更を保存します。  
 
 ## <a name="deploy-and-execute-ssis-packages-using-stored-procedures"></a>ストアド プロシージャを使用した SSIS パッケージの配置と実行
-  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] プロジェクトを、プロジェクト配置モデルを使用するように構成すると、[!INCLUDE[ssIS](../../includes/ssis-md.md)] カタログのストアド プロシージャを使用して、プロジェクトの配置とパッケージの実行を行うことができます。 プロジェクト配置モデルの詳細については、「 [プロジェクトとパッケージの展開](https://msdn.microsoft.com/library/hh213290.aspx)」を参照してください。  
+
+  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] プロジェクトを、プロジェクト配置モデルを使用するように構成すると、[!INCLUDE[ssIS](../../includes/ssis-md.md)] カタログのストアド プロシージャを使用して、プロジェクトの配置とパッケージの実行を行うことができます。 プロジェクト配置モデルの詳細については、「[プロジェクトとパッケージの展開](deploy-integration-services-ssis-projects-and-packages.md#compare-project-deployment-model-and-legacy-package-deployment-model)」を参照してください。  
   
  また、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] または [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] を使用して、プロジェクトの配置とパッケージの実行を行うこともできます。 詳細については、「 **関連項目** 」セクションのトピックを参照してください。  
   
 > [!TIP]
->  次の手順を実行することにより、catalog.deploy_project を除き、次の手順に示されるストアド プロシージャの Transact-SQL ステートメントを簡単に生成できます。  
+>  次の手順を実行することにより、catalog.deploy_project を除き、次の手順に示されるストアド プロシージャの Transact-SQL ステートメントを簡単に生成できます。
 > 
 >  1.  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]で、オブジェクト エクスプローラーの **[Integration Services カタログ]** ノードを展開し、実行するパッケージに移動します。  
-> 2.  パッケージを右クリックし、**[実行]** をクリックします。  
+> 2.  パッケージを右クリックし、 **[実行]** をクリックします。  
 > 3.  必要に応じて、パラメーター値、接続マネージャー プロパティ、 **[詳細設定]** タブのオプション (ログ記録レベルなど) を設定します。  
 > 
 >      詳細については、「[SSIS サーバーでのパッケージ実行のログ記録を有効にする](../../integration-services/performance/integration-services-ssis-logging.md#server_logging)」を参照してください。  
@@ -423,9 +438,9 @@ static void Main()
   
 1.  [catalog.deploy_project (SSISDB データベース)](../../integration-services/system-stored-procedures/catalog-deploy-project-ssisdb-database.md) を呼び出して、パッケージを含む [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] プロジェクトを [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] サーバーに配置します。  
   
-     [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] プロジェクト配置ファイルのバイナリ コンテンツを取得するには、*@project_stream* パラメーターの場合、SELECT ステートメントと、OPENROWSET 関数および BULK 行セット プロバイダーを使用します。 BULK 行セット プロバイダーを使用すると、ファイルからデータを読み取ることができます。 BULK 行セット プロバイダーの SINGLE_BLOB 引数は、データ ファイルの内容を、varbinary(max) 型の単一行、単一列の行セットとして返します。 詳細については、「[OPENROWSET (Transact-SQL)](../../t-sql/functions/openrowset-transact-sql.md)」を参照してください。  
+     [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] プロジェクト配置ファイルのバイナリ コンテンツを取得するには、 _\@project_stream_ パラメーターの場合、SELECT ステートメントと、OPENROWSET 関数および BULK 行セット プロバイダーを使用します。 BULK 行セット プロバイダーを使用すると、ファイルからデータを読み取ることができます。 BULK 行セット プロバイダーの SINGLE_BLOB 引数は、データ ファイルの内容を、varbinary(max) 型の単一行、単一列の行セットとして返します。 詳細については、「[OPENROWSET (Transact-SQL)](../../t-sql/functions/openrowset-transact-sql.md)」を参照してください。  
   
-     次の例では、SSISPackages_ProjectDeployment プロジェクトを、 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] サーバーの SSIS パッケージ フォルダーに配置します。 バイナリ データは、プロジェクト ファイル (SSISPackage_ProjectDeployment.ispac) から読み取られ、varbinary(max) 型の *@ProjectBinary* パラメーターに格納されます。 *@ProjectBinary* パラメーター値は、*@project_stream* パラメーターに割り当てられます。  
+     次の例では、SSISPackages_ProjectDeployment プロジェクトを、 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] サーバーの SSIS パッケージ フォルダーに配置します。 バイナリ データは、プロジェクト ファイル (SSISPackage_ProjectDeployment.ispac) から読み取られ、varbinary(max) 型の _\@ProjectBinary パラメーターに格納されます。 _\@ProjectBinary_ パラメーター値は、 _\@project_stream_ パラメーターに割り当てられます。  
   
     ```sql
     DECLARE @ProjectBinary as varbinary(max)  
@@ -477,14 +492,15 @@ static void Main()
   
     ```  
   
-### <a name="to-deploy-a-project-from-server-to-server-using-stored-procedures"></a>ストアド プロシージャを使用してサーバー間でプロジェクトを配置するには  
+### <a name="to-deploy-a-project-from-server-to-server-using-stored-procedures"></a>ストアド プロシージャを使用してサーバー間でプロジェクトを配置するには
+
  [catalog.get_project (SSISDB データベース)](../../integration-services/system-stored-procedures/catalog-get-project-ssisdb-database.md) と [catalog.deploy_project (SSISDB データベース)](../../integration-services/system-stored-procedures/catalog-deploy-project-ssisdb-database.md) ストアド プロシージャを使用して、サーバー間でプロジェクトを配置できます。  
   
  ストアド プロシージャを実行する前に次の操作を行う必要があります。  
   
 -   リンク サーバー オブジェクトを作成します。 詳細については、「[リンク サーバーの作成 (SQL Server データベース エンジン)](../../relational-databases/linked-servers/create-linked-servers-sql-server-database-engine.md)」を参照してください。  
   
-     **[リンク サーバーのプロパティ]** ダイアログ ボックスの **[サーバー オプション]** ページで、**[RPC]** および **[RPC 出力]** を **[True]** に設定します。 そして、 **[分散トランザクションのプロモーションを RPC に対して有効化]** を **[False]** に設定します。  
+     **[リンク サーバーのプロパティ]** ダイアログ ボックスの **[サーバー オプション]** ページで、 **[RPC]** および **[RPC 出力]** を **[True]** に設定します。 そして、 **[分散トランザクションのプロモーションを RPC に対して有効化]** を **[False]** に設定します。  
   
 -   オブジェクト エクスプローラーの **[リンク サーバー]** にある **[プロバイダー]** ノードを展開し、プロバイダーを右クリックして **[プロパティ]** をクリックすることで、リンク サーバーに対して選択したプロバイダーの動的パラメーターを有効にします。 **[動的パラメーター]** の横にある **[有効化]** を選択します。  
   
@@ -544,7 +560,7 @@ exec [SSISDB].[CATALOG].[deploy_project] 'DestFolder', 'SSISPackages', @project_
   
 -   [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)]でプロジェクトを開き、ソリューション エクスプローラーでプロジェクトを右クリックし、 **[プロジェクト配置モデルに変換]** をクリックします。  
   
--   オブジェクト エクスプローラーの [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]で、 **[プロジェクト]** ノードを右クリックし、 **[パッケージのインポート]** を選択します。  
+-   [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] のオブジェクト エクスプローラーで、 **[Integration Services カタログ]** の **[プロジェクト]** ノードを右クリックし、 **[パッケージのインポート]** をクリックします。  
   
  **Integration Services プロジェクト変換ウィザード** を [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] または [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]のいずれから実行するかによって、ウィザードが実行する変換タスクは異なります。   
   
@@ -658,7 +674,7 @@ exec [SSISDB].[CATALOG].[deploy_project] 'DestFolder', 'SSISPackages', @project_
  **[パッケージ]**  
  パッケージ ファイルを一覧表示します。  
   
- **型**  
+ **Type**  
  XML 構成ファイルなど、構成の種類を一覧表示します。  
   
  **[構成文字列]**  
@@ -691,7 +707,7 @@ exec [SSISDB].[CATALOG].[deploy_project] 'DestFolder', 'SSISPackages', @project_
  パラメーターのスコープ (パッケージまたはプロジェクト) を選択します。  
   
 ###  <a name="configureParameters"></a> [パラメーターの構成] ページのオプションの設定  
- **名前**  
+ **[名前]**  
  パラメーター名を一覧表示します。  
   
  **スコープ**  
@@ -709,7 +725,7 @@ exec [SSISDB].[CATALOG].[deploy_project] 'DestFolder', 'SSISPackages', @project_
  また、 **[パラメーターの詳細の設定]** ダイアログ ボックスには、パラメーター値のデータ型や元のパラメーターが一覧表示されます。  
   
 ###  <a name="review"></a> [確認] ページのオプションの設定  
- プロジェクトの変換に関して選択したオプションを確認するには、**[確認]** ページを使用します。  
+ プロジェクトの変換に関して選択したオプションを確認するには、 **[確認]** ページを使用します。  
   
  **[戻る]**  
  オプションを変更する場合にクリックします。  

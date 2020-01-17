@@ -19,15 +19,14 @@ helpviewer_keywords:
 ms.assetid: d7a6dbff-71d9-4297-8a4f-bfd2876fe204
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: f6cb276636f2d77ae91a201fd7625c8251d2f8f0
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
-ms.translationtype: HT
+ms.openlocfilehash: 564326044c2fe0f00a26d3c32c5ad3d36d0b6b85
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51672121"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68005645"
 ---
-# <a name="srvparamnumber-extended-stored-procedure-api"></a>srv_paramnumber (拡張ストアド プロシージャ API)
+# <a name="srv_paramnumber-extended-stored-procedure-api"></a>srv_paramnumber (拡張ストアド プロシージャ API)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
     
 > [!IMPORTANT]  

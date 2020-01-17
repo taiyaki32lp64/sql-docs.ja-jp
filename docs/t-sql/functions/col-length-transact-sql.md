@@ -18,17 +18,16 @@ helpviewer_keywords:
 - column properties [SQL Server]
 - column length [SQL Server]
 ms.assetid: cf891206-c49f-40eb-858e-eefd2b638a33
-author: MashaMSFT
-ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 07f040e9a44507c698a5a5066036038a1c103312
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+author: MikeRayMSFT
+ms.author: mikeray
+ms.openlocfilehash: bf23672374db7d8348154e95ca6228723934aa5a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52541141"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68064732"
 ---
-# <a name="collength-transact-sql"></a>COL_LENGTH (Transact-SQL)
+# <a name="col_length-transact-sql"></a>COL_LENGTH (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
 この関数は、定義されている列の長さをバイト単位で返します。
@@ -46,9 +45,9 @@ COL_LENGTH ( 'table' , 'column' )
 列の長さ情報を定義するテーブルの名前。 *テーブル* 型の式は、 **nvarchar**です。
   
 **'** *column* **'**  
-長さを定義する列名。 ** 列* * 型の式は、 **nvarchar**です。
+長さを定義する列名。 *列* 型の式は、 **nvarchar**です。
   
-## <a name="return-type"></a> の戻り値の型 : 
+## <a name="return-type"></a>の戻り値の型 :
 **smallint**
   
 ## <a name="exceptions"></a>例外  
@@ -57,7 +56,7 @@ COL_LENGTH ( 'table' , 'column' )
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、そのユーザーが所有している、または権限を与えられている、セキュリティ保護可能なアイテムのメタデータのみを表示できます。 つまり、オブジェクトに対する適切な権限がユーザーに与えられていない場合、メタデータを生成する組み込み関数 (COL_LENGTH など) が NULL を返す可能性があります。 詳細については、「[メタデータ表示の構成](../../relational-databases/security/metadata-visibility-configuration.md)」を参照してください。
   
 ## <a name="remarks"></a>Remarks  
-**max** 指定子 (**varchar (max)**) で宣言された **varchar** 列の場合、COL_LENGTH では値 -1 が返されます。
+**max** 指定子 (**varchar (max)** ) で宣言された **varchar** 列の場合、COL_LENGTH では値 -1 が返されます。
   
 ## <a name="examples"></a>使用例  
 この例では、`varchar(40)` 型と `nvarchar(40)` 型の列の値を返します。
@@ -82,8 +81,8 @@ VarChar     NVarChar
   
 ## <a name="see-also"></a>参照
 [式 &#40;Transact-SQL&#41;](../../t-sql/language-elements/expressions-transact-sql.md)  
-[メタデータ関数 (&) #40 です。TRANSACT-SQL と #41 です。](../../t-sql/functions/metadata-functions-transact-sql.md)  
-[COL_NAME (&) #40 です。TRANSACT-SQL と #41 です。](../../t-sql/functions/col-name-transact-sql.md)  
+[メタデータ関数 &#40;Transact-SQL&#41;](../../t-sql/functions/metadata-functions-transact-sql.md)  
+[COL_NAME &#40;Transact-SQL&#41;](../../t-sql/functions/col-name-transact-sql.md)  
 [COLUMNPROPERTY &#40;Transact-SQL&#41;](../../t-sql/functions/columnproperty-transact-sql.md)
   
   

@@ -1,6 +1,5 @@
 ---
-title: FOR JSON での特殊文字のエスケープと制御文字 (SQL Server) | Microsoft Docs
-ms.custom: ''
+title: FOR JSON での特殊文字のエスケープと制御文字
 ms.date: 03/16/2017
 ms.prod: sql
 ms.reviewer: genemi
@@ -11,16 +10,17 @@ helpviewer_keywords:
 ms.assetid: 4ba90025-5a09-4f0a-836a-54c886324530
 author: jovanpop-msft
 ms.author: jovanpop
-manager: craigg
+ms.custom: seo-dt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 49c1cbd82b6a4dd1f65f0c3e31c9f8612d0b11dc
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 5654a27a5457fe1d89fe76241c576f831dc9bf55
+ms.sourcegitcommit: 15fe0bbba963d011472cfbbc06d954d9dbf2d655
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56033133"
+ms.lasthandoff: 11/14/2019
+ms.locfileid: "74095787"
 ---
 # <a name="how-for-json-escapes-special-characters-and-control-characters-sql-server"></a>FOR JSON での特殊文字のエスケープと制御文字 (SQL Server)
+
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
   このトピックでは、SQL Server **SELECT** ステートメントの **FOR JSON** 句が JSON 出力で特殊文字をどのようにエスケープするか、また制御文字をどのように表すかについて説明します。  
@@ -34,7 +34,7 @@ ms.locfileid: "56033133"
 |**特殊文字**|**エスケープされた出力**|  
 |---------------------------|--------------------------|  
 |引用符 (")|\\"|  
-|円記号 (\\)|\\\|  
+|円記号 (\\)|\\\\|  
 |スラッシュ (/)|\\/|  
 |バックスペース|\b|  
 |改ページ|\f|  

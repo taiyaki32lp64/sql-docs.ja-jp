@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 ms.assetid: e9a01a74-2f51-4b35-be3a-a6138568f6cf
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 444d02709a25334893a5d5741ac08dbf9ee40dea
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: d328f58da2be026046fc2688a4959b37f5ff7d65
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56291965"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66105881"
 ---
 # <a name="format-axis-labels-as-dates-or-currencies-report-builder-and-ssrs"></a>日付または通貨として軸ラベルを書式設定する (レポート ビルダーおよび SSRS)
   適切に書式設定された DateTime 値を軸に表示すると、これらの値が日数として自動的にグラフに表示されます。 月や時間の間隔など、X 軸の日付や期間を指定するには、軸ラベルの書式を設定し、軸間隔の種類を有効な日付または期間に設定する必要があります。  
@@ -39,7 +38,7 @@ ms.locfileid: "56291965"
   
 3.  **[カテゴリ]** ボックスの一覧で、 **[日付]** を選択します。 **[種類]** ボックスの一覧で、X 軸のラベルに適用する日付書式を選択します。  
   
-4.   **[軸のオプション]** を選択します。  
+4.  **[軸のオプション]** を選択します。  
   
 5.  **[間隔]** で、「 **1**」と入力します。 **[間隔の種類]** プロパティで、 **[月]** を選択します。  
   

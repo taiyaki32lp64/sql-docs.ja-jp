@@ -10,14 +10,14 @@ helpviewer_keywords:
 - debugging delivery extensions [Reporting Services]
 - troubleshooting [Reporting Services], delivery extensions
 ms.assetid: a7d959da-5005-4a50-aca7-2cef36aa9947
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: c6a7bb7b306b3e00d0ed45aa03d42cf4637c4708
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 1abe30a462e8bf303b0171dbeeb82c407c80ca2a
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47709040"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63193742"
 ---
 # <a name="debugging-delivery-extension-code"></a>配信拡張機能のコードのデバッグ
   [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] には、配信拡張機能コードを分析してエラーを探すのに役立ついくつかのデバッグ ツールが用意されています。 最適なデバッグ ツールは、使用する目的によって異なります。 この例では [!INCLUDE[vsOrcas](../../../includes/vsorcas-md.md)]を使用します。  
@@ -32,11 +32,11 @@ ms.locfileid: "47709040"
   
 4.  [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] および配信拡張機能のプロジェクトに移動し、コードにブレーク ポイントを設定します。  
   
-5.  配信拡張機能プロジェクトのウィンドウをアクティブにしたまま、**[デバッグ]** メニューの **[プロセスにアタッチ]** をクリックします。  
+5.  配信拡張機能プロジェクトのウィンドウをアクティブにしたまま、 **[デバッグ]** メニューの **[プロセスにアタッチ]** をクリックします。  
   
      **[プロセスにアタッチ]** ダイアログが開きます。  
   
-6.  プロセスの一覧から aspnet_wp.exe プロセス (アプリケーションを IIS 6.0 に配置している場合は w3wp.exe ) を選択し、**[アタッチ]** をクリックします。  
+6.  プロセスの一覧から aspnet_wp.exe プロセス (アプリケーションを IIS 6.0 に配置している場合は w3wp.exe ) を選択し、 **[アタッチ]** をクリックします。  
   
 7.  配信拡張機能を使用して新しいサブスクリプションを定義します。 通常は、レポート マネージャーまたは SOAP API を使用します。 これにより、デバッガーが呼び出され、ブレーク ポイントに対応するコードが実行されます。  
   

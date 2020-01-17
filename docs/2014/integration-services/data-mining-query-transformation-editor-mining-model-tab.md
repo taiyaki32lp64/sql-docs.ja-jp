@@ -4,23 +4,22 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.dmquerytransformation.miningmodel.f1
 helpviewer_keywords:
 - Data Mining Query Transformation Editor
 ms.assetid: 432bba6f-b218-403e-b92c-59ef9f39e4d5
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 9c8ad2853a33ca804ebe414bf2e7a6ff837f4d2b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 88dbc58a205a87f1b4c2e187537eef9d9c493cf1
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48195342"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66059769"
 ---
 # <a name="data-mining-query-transformation-editor-mining-model-tab"></a>[データ マイニング クエリ変換エディター] ([マイニング モデル] タブ)
   **[データ マイニング クエリ変換エディター]** ダイアログ ボックスの **[マイニング モデル]** タブを使用すると、データ マイニング構造とそのマイニング モデルを選択できます。  
@@ -42,6 +41,6 @@ ms.locfileid: "48195342"
   
 ## <a name="see-also"></a>参照  
  [Integration Services のエラーおよびメッセージのリファレンス](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [データ マイニング クエリ変換エディター&#40;クエリ タブ&#41;](../../2014/integration-services/data-mining-query-transformation-editor-query-tab.md)  
+ [[データ マイニング クエリ変換エディター] ([クエリ] タブ)](../../2014/integration-services/data-mining-query-transformation-editor-query-tab.md)  
   
   

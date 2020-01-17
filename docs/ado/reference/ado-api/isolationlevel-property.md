@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: ea84e4b2-fbf2-4eef-b9ce-796b22e21800
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: c2557c5859f10c7651cfc97fc3c849c00c26e985
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: dc360bc91e977228a6f9139089a7bfa87d912e1f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47786840"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67918441"
 ---
 # <a name="isolationlevel-property"></a>IsolationLevel プロパティ
 分離のレベルを示します、[接続](../../../ado/reference/ado-api/connection-object-ado.md)オブジェクト。  
@@ -40,6 +39,6 @@ ms.locfileid: "47786840"
 ## <a name="applies-to"></a>適用対象  
  [Connection オブジェクト (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [IsolationLevel および Mode プロパティの例 (VB)](../../../ado/reference/ado-api/isolationlevel-and-mode-properties-example-vb.md)   
  [IsolationLevel および Mode プロパティの例 (vc++)](../../../ado/reference/ado-api/isolationlevel-and-mode-properties-example-vc.md)   

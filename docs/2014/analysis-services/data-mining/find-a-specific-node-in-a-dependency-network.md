@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - nodes [Analysis Services]
@@ -15,15 +14,15 @@ ms.assetid: 37c54602-ab25-48be-ae7a-59819deea8ed
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: dffcb63d5f8b89f4d777f7bdb07bc972cf5bff58
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: f27398948ed2c89578921bf6404244bcf5072652
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48163972"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66084376"
 ---
 # <a name="find-a-specific-node-in-a-dependency-network"></a>依存関係ネットワークでの特定のノードの検索
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] マイニング モデルの依存関係ネットワークに含まれているノードの数が多すぎると、対象となるデータを見つけにくくなる場合があります。 データ マイニング デザイナーの **[依存関係ネットワーク]** タブでは、 **[ノードの検索]** ダイアログ ボックスを使用して特定のノードを検索できるので、この問題を解決することができます。  
+   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] マイニング モデルの依存関係ネットワークに含まれているノードの数が多すぎると、対象となるデータを見つけにくくなる場合があります。 データ マイニング デザイナーの **[依存関係ネットワーク]** タブでは、 **[ノードの検索]** ダイアログ ボックスを使用して特定のノードを検索できるので、この問題を解決することができます。  
   
 ### <a name="to-find-a-specific-node-in-a-dependency-network"></a>依存関係ネットワークで特定のノードを検索するには  
   

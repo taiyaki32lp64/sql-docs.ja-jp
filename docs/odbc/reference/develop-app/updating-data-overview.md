@@ -15,16 +15,15 @@ helpviewer_keywords:
 ms.assetid: 062036a4-cda6-4aaa-9765-f1ec3e0b31b1
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 3edbd41bc5361d864abcc7d631a90521af98ef01
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 0701218b5ef489d1f8962ffadc9409986a0c36c7
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47777831"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67942810"
 ---
 # <a name="updating-data-overview"></a>データの概要の更新
-SQL ステートメントを実行するか、呼び出すことによって、アプリケーションでデータを更新できる**SQLSetPos**または**SQLBulkOperations**します。 **UPDATE**、**削除**、および**挿入**ステートメントは、データ ソース上で直接実行し、通常、ドライバーによってサポートされます。 更新プログラムを検索する delete ステートメントを変更する行の仕様を含めることができます。 更新プログラムの配置、および delete ステートメントと**SQLSetPos**カーソルを介して、データ ソースに対して動作し、はあまり広くサポートされています。  
+SQL ステートメントを実行するか、呼び出すことによって、アプリケーションでデータを更新できる**SQLSetPos**または**SQLBulkOperations**します。 **UPDATE**、**DELETE**、および**INSERT**ステートメントは、データ ソース上で直接実行し、通常、ドライバーによってサポートされます。 更新プログラムを検索する delete ステートメントを変更する行の仕様を含めることができます。 更新プログラムの配置、および delete ステートメントと**SQLSetPos**カーソルを介して、データ ソースに対して動作し、はあまり広くサポートされています。  
   
  カーソルが、このセクションで説明する方法を使用して結果セットに加えられた変更を検出できるかどうかは、カーソルの実装方法の種類によって異なります。 順方向専用カーソルでは、行を再確認いませんし、そのため、変更は検出されません。 スクロール可能なカーソルが変更を検出するかどうかについては、次を参照してください。[スクロール可能なカーソル](../../../odbc/reference/develop-app/scrollable-cursors.md)します。  
   

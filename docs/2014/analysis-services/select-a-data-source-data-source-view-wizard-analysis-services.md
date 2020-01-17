@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.datasourceviewwizard.selectdatasource.f1
@@ -13,12 +12,12 @@ ms.assetid: 51282270-8ca8-42cf-8538-a6baf0006656
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: be709cb574d1dc7fac6f1b4948c6deb227dff100
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: be1ceb4135118197317e7b8a320c7a82d09ffda5
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48218972"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66069859"
 ---
 # <a name="select-a-data-source-data-source-view-wizard-analysis-services"></a>[データ ソースの選択] (データ ソース ビュー ウィザード) (Analysis Services)
   **[データ ソースの選択]** ページを使用すると、データ ソース ビューのデータ ソースを選択できます。  

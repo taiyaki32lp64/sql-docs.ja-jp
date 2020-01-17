@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: b0478836-4123-4357-969a-c5784fc28be5
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: c02447379b713a7d3b1c6dd72af8c3860098a68c
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 67d791820e9dd22b035f98eb76e27723ebfb8fb8
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52528019"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67927174"
 ---
 # <a name="ado-glossary-terms"></a>ADO の用語集の用語
 このトピックでは、ADO に関連する用語を定義します。
@@ -41,7 +40,7 @@ ms.locfileid: "52528019"
 ## <a name="b"></a>B
  テーブル内のフィールドと変数のエントリ、マッピングをバインドします。 Visual C の ADO 拡張機能で**Recordset**フィールドは、C と C++ の変数にマップされます。
 
- ビットマスク A の数値では、その他のフラグ パラメーターのオプションを通常の数値の値または戻り値と値のビット単位の比較対象としています。 この比較がなどのビットごとの論理演算子と行われ、通常は**と**と**または**Visual basic で**&** と **&#124;** C++ でします。
+ ビットマスク A の数値では、その他のフラグ パラメーターのオプションを通常の数値の値または戻り値と値のビット単位の比較対象としています。 この比較がなどのビットごとの論理演算子と行われ、通常は**と**と**または**Visual basic で **&** と **&#124;** C++ でします。
 
  たとえば、ADO **FieldAttributeEnum**値は、フィールドの属性を決定するビットマスクとして使用できます。 フィールドが更新可能なかどうかを確認したいとします。 Visual Basic では、次の式では、このテストできます。`Field.Attributes AND adFldUpdatable`
 

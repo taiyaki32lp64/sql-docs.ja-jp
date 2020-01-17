@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: e63ff331-8655-4be7-82c6-e6cd6cc9d16d
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: bde55939e974c6c879dcd126fac863ef0a866487
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: a01e17ea9c786a724e5869a28bf4d8927b58ac81
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52520649"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67925694"
 ---
 # <a name="current-record-and-size-of-recordset"></a>レコードセットの現在のレコードとサイズ
 このセクションのサンプルでは、カーソルの現在位置を検索する方法を説明します**レコード セット**で[レコード セットを返す JScript コードの例](../../../ado/guide/data/jscript-code-example-to-return-a-recordset.md)します。  

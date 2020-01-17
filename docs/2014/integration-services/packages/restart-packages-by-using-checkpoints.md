@@ -11,15 +11,15 @@ helpviewer_keywords:
 - restarting packages
 - starting packages
 ms.assetid: 48f2fbb7-8964-484a-8311-5126cf594bfb
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 945bb384f522aa483c490fccd92768078a2d315a
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 1f41ed858bedd18ec68794d5e7d1c13100af5254
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53365057"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62767034"
 ---
 # <a name="restart-packages-by-using-checkpoints"></a>チェックポイントを使用してパッケージを再開する
   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] では、失敗したパッケージ全体を再実行する代わりに、失敗した時点から再開することができます。 パッケージがチェックポイントを使用するように設定されている場合、パッケージの実行に関する情報がチェックポイント ファイルに書き込まれます。 失敗したパッケージを再実行する場合、チェックポイント ファイルを使用して、失敗した時点からパッケージを再開します。 パッケージの実行が成功するとチェックポイント ファイルは削除され、次にパッケージが実行されるときに再度作成されます。  
@@ -73,7 +73,7 @@ ms.locfileid: "53365057"
 |`IfExists`|チェックポイント ファイルが存在する場合、チェックポイント ファイルを使用することを指定します。 チェックポイント ファイルが存在する場合、パッケージは前の実行で失敗した時点から再開されます。存在しない場合、パッケージのワークフローの最初から実行されます。|  
   
 > [!NOTE]  
->  **で/CheckPointing** dtexec のオプションは設定に相当、`SaveCheckpoints`するパッケージのプロパティ`True`、および`CheckpointUsage`プロパティを always にします。 詳細については、「 [dtexec Utility](dtexec-utility.md)」を参照してください。  
+>  **で/CheckPointing** dtexec のオプションは設定に相当、`SaveCheckpoints`するパッケージのプロパティ`True`、および`CheckpointUsage`プロパティを always にします。 詳しくは、「 [dtexec Utility](dtexec-utility.md)」をご覧ください。  
   
 ## <a name="securing-checkpoint-files"></a>チェックポイント ファイルのセキュリティ保護  
  パッケージ レベルの保護にはチェックポイント ファイルの保護が含まれないため、チェックポイント ファイルは個別にセキュリティ保護する必要があります。 チェックポイントのデータはファイル システムにしか格納できないので、オペレーティング システムのアクセス制御リスト (ACL) を使用して、ファイルの格納先またはフォルダーのセキュリティを保護する必要があります。 チェックポイント ファイルには、現在の変数値などパッケージの状態に関する情報が含まれているため、セキュリティで保護することが重要です。 たとえば変数には、電話番号などの個人データを含む多数の行で構成されるレコードセットが格納されている場合があります。 詳細については、「 [パッケージで使用されるファイルへのアクセス](../access-to-files-used-by-packages.md)」を参照してください。  
@@ -88,7 +88,7 @@ ms.locfileid: "53365057"
   
 -   support.microsoft.com のサポート技術情報の記事「 [SSIS チェックポイントが For ループ コンテナーまたは Foreach ループ コンテナーの項目に格納されない](https://go.microsoft.com/fwlink/?LinkId=241633)」  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [SQL Server Integration Services](../sql-server-integration-services.md)  
   
   

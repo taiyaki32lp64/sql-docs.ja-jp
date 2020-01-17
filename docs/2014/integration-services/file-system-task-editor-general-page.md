@@ -4,23 +4,22 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.filesystemtask.general.f1
 helpviewer_keywords:
 - File System Task Editor
 ms.assetid: 51fe6614-3418-4eff-a28d-02ea31cc9aa9
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: e6778bd585d84601d35846cafca3822a81a3bb60
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 594b87b3e2d58ffe60bd3c31324811a66038c82b
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48208752"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66058822"
 ---
 # <a name="file-system-task-editor-general-page"></a>[ファイル システム タスク エディター] \([全般] ページ)
   **[ファイル システム タスク エディター]** ダイアログ ボックスの **[全般]** ページを使用すると、タスクで実行するファイル システム操作を構成できます。  
@@ -70,8 +69,8 @@ ms.locfileid: "48208752"
 |**ディレクトリ コンテンツの削除**|ディレクトリのコンテンツを削除します。 この値を選択すると、ソースを指定するための動的オプションが表示されます。|  
 |**ファイルの削除**|ファイルを削除します。 この値を選択すると、ソースを指定するための動的オプションが表示されます。|  
 |**ディレクトリの移動**|ディレクトリを移動します。 この値を選択すると、ソースとターゲットを指定するための動的オプションが表示されます。|  
-|**ファイルの移動**|ファイルを移動します。 この値を選択すると、ソースとターゲットを指定するための動的オプションが表示されます。<br /><br /> 注: ファイルを移動するときにファイル名に含めない先として指定するディレクトリ パス。|  
-|**ファイル名の変更**|ファイルの名前を変更します。 この値を選択すると、ソースとターゲットを指定するための動的オプションが表示されます。<br /><br /> 注: ファイルの名前を変更するには、ときに、宛先の指定したディレクトリ パスに新しいファイル名を含めます。|  
+|**ファイルの移動**|ファイルを移動します。 この値を選択すると、ソースとターゲットを指定するための動的オプションが表示されます。<br /><br /> 注:ファイルを移動するときは、移動先として指定するディレクトリ パスにファイル名を含めないようにします。|  
+|**ファイル名の変更**|ファイルの名前を変更します。 この値を選択すると、ソースとターゲットを指定するための動的オプションが表示されます。<br /><br /> 注:ファイル名を変更するときは、変更先として指定するディレクトリ パスに新しいファイル名を含めます。|  
 |**属性の設定**|ファイルまたはディレクトリの属性を設定します。 この値を選択すると、ソースと操作を指定するための動的オプションが表示されます。|  
   
  `IsSourcePathVariable`  
@@ -86,7 +85,7 @@ ms.locfileid: "48208752"
   
 ### <a name="isdestinationpathvariable--true"></a>[IsDestinationPathVariable] = [True]  
  **[DestinationVariable]**  
- 一覧から変数名を選択するか、**[新しい変数...]** をクリックして新しい変数を作成します。  
+ 一覧から変数名を選択するか、\<**[新しい変数...]** をクリックして新しい変数を作成します。  
   
  **関連トピック:** [Integration Services &#40;SSIS&#41; の変数](integration-services-ssis-variables.md)、[変数の追加](../../2014/integration-services/add-variable.md)  
   
@@ -94,13 +93,13 @@ ms.locfileid: "48208752"
  `DestinationConnection`  
  ファイル接続マネージャーを一覧から選択するか、\<**[新しい接続...]** をクリックして新しい接続マネージャーを作成します。  
   
- **関連トピック:** [ファイル接続マネージャー](connection-manager/file-connection-manager.md)、 [ファイル接続マネージャー エディター](../../2014/integration-services/file-connection-manager-editor.md)  
+ **関連トピック:** [ファイル接続マネージャー](connection-manager/file-connection-manager.md)、[ファイル接続マネージャー エディター](../../2014/integration-services/file-connection-manager-editor.md)  
   
 ## <a name="issourcepathvariable-dynamic-options"></a>[IsSourcePathVariable] の動的オプション  
   
 ### <a name="issourcepathvariable--true"></a>[IsSourcePathVariable] = [True]  
  **[SourceVariable]**  
- 一覧から変数名を選択するか、**[新しい変数...]** をクリックして新しい変数を作成します。  
+ 一覧から変数名を選択するか、\<**[新しい変数...]** をクリックして新しい変数を作成します。  
   
  **関連トピック:** [Integration Services &#40;SSIS&#41; の変数](integration-services-ssis-variables.md)、[変数の追加](../../2014/integration-services/add-variable.md)  
   
@@ -108,7 +107,7 @@ ms.locfileid: "48208752"
  `SourceConnection`  
  ファイル接続マネージャーを一覧から選択するか、\<**[新しい接続...]** をクリックして新しい接続マネージャーを作成します。  
   
- **関連トピック:** [ファイル接続マネージャー](connection-manager/file-connection-manager.md)、 [ファイル接続マネージャー エディター](../../2014/integration-services/file-connection-manager-editor.md)  
+ **関連トピック:** [ファイル接続マネージャー](connection-manager/file-connection-manager.md)、[ファイル接続マネージャー エディター](../../2014/integration-services/file-connection-manager-editor.md)  
   
 ## <a name="operation-dynamic-options"></a>[Operation] の動的オプション  
   

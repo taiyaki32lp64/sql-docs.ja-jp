@@ -1,5 +1,5 @@
 ---
-title: '例 : 従業員情報の取得 | Microsoft Docs'
+title: '例: 従業員情報の取得 | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -10,17 +10,16 @@ ms.topic: conceptual
 helpviewer_keywords:
 - EXPLICIT mode
 ms.assetid: 63cd6569-2600-485b-92b4-1f6ba09db219
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: dedcea064cf71695764e1892b1fb6b7dd96bed21
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: MightyPen
+ms.author: genemi
+ms.openlocfilehash: d3e123a5195d9eb6a5dd489c635cdd687b42f720
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47699090"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68006779"
 ---
-# <a name="example-retrieving-employee-information"></a>例 : 従業員情報の取得
+# <a name="example-retrieving-employee-information"></a>例:従業員情報の取得
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
   この例では、各従業員の従業員 ID と名前を取得します。 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] データベースの場合、employeeID は Employee テーブルの BusinessEntityID 列から取得できます。 従業員名は、Person テーブルから取得できます。 これらのテーブルを結合する際には、BusinessEntityID 列を使用します。  
   
@@ -87,41 +86,29 @@ FOR XML EXPLICIT;
   
  結果の一部を次に示します。  
   
- `<Employee EmpID="1">`  
-  
- `<Name FName="Ken" LName="Sánchez" />`  
-  
- `</Employee>`  
-  
- `<Employee EmpID="2">`  
-  
- `<Name FName="Terri" LName="Duffy" />`  
-  
- `</Employee>`  
-  
- `...`  
+```
+<Employee EmpID="1">
+  <Name FName="Ken" LName="Sánchez" />
+</Employee>
+<Employee EmpID="2">
+  <Name FName="Terri" LName="Duffy" />
+</Employee>
+...
+```
   
  1 つ目の `SELECT` では、結果の行セット内の列名を指定しています。 この名前により、2 つの列グループが形成されます。 `Tag` 列の値が `1` のグループでは、`Employee` が要素であり、`EmpID` が属性であると識別されます。 `Tag` 列の値が `2` のグループでは、<`Name`> が要素であり、`FName` と `LName` が属性であると識別されます。  
   
  次の表に、このクエリを実行した結果として生成される行セットの一部を示します。  
   
- `Tag Parent  Employee!1!EmpID Name!2!FName Name!2!LName`  
-  
- `--- ------  ---------------- ------------ ------------`  
-  
- `1   NULL    1                NULL         NULL`  
-  
- `2   1       1                Ken          Sánchez`  
-  
- `1   NULL    2                NULL         NULL`  
-  
- `2   1       2                Terri        Duffy`  
-  
- `1   NULL    3                NULL         NULL`  
-  
- `2   1       3                Roberto      Tamburello`  
-  
- `...`  
+タグ | Parent | Employee!1!EmpID | Name!2!FName | Name!2!LName
+-|-|-|-|-
+1 | NULL | 1 | NULL | NULL 
+2 | 1 | 1 | Ken | Sánchez 
+1 | NULL | 2 | NULL | NULL 
+2 | 1 | 2 | Terri | Duffy 
+1 | NULL | 3 | NULL | NULL 
+2 | 1 | 3 | Roberto | Tamburello 
+[...] | [...] | [...] | [...] | [...]
   
  結果の XML ツリーを生成する際、ユニバーサル テーブル内の行は、次のように処理されます。  
   

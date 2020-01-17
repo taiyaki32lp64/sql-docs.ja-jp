@@ -19,22 +19,21 @@ helpviewer_keywords:
 ms.assetid: c5150d18-e8b7-48a7-ada7-77c583af6e41
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: d2622328b29141e145a9877952b9d2a97c0994ce
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ef7a5456f0bae470bcbf1f12f37843aa6c311d78
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47735761"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67984918"
 ---
-# <a name="dbosysnotifications-transact-sql"></a>dbo.sysnotifications (Transact-SQL)
+# <a name="dbosysnotifications-transact-sql"></a>dbo.sysnotifications (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   通知ごとに 1 行のデータを格納します。  
   
 |列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
-|**alert_id**|**int**|警告の ID。|  
+|**alert_id**|**int**|アラートの ID。|  
 |**operator_id**|**int**|通知を送信するオペレーターの ID。|  
 |**notification_method**|**tinyint**|通知の方法。<br /><br /> **1** = 電子メール<br /><br /> **2** = ポケットベル<br /><br /> **4** = **netsend**<br /><br /> **7** = all|  
   

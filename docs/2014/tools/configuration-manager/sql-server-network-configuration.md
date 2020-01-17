@@ -11,11 +11,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 341f7fa171213e37e8ec59b540b7116cb1991fdf
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52777794"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63028279"
 ---
 # <a name="sql-server-network-configuration"></a>SQL Server のネットワーク構成
   ここでは、SQL Server 構成マネージャーの各 **サーバー ネットワークの構成** ダイアログ ボックスに関する F1 ヘルプのトピックを扱います。  

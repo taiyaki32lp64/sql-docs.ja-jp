@@ -10,15 +10,15 @@ helpviewer_keywords:
 - FOR XML clause, TYPE directive
 - TYPE directive
 ms.assetid: a3df6c30-1f25-45dc-b5a9-bd0e41921293
-author: douglaslMS
-ms.author: douglasl
+author: MightyPen
+ms.author: genemi
 manager: craigg
-ms.openlocfilehash: bafe35efbcc1f5dae7cea0775464deac3c8ed7f8
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 21ff73c95bb85167dfba64d434ed7b6c42051c07
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53351085"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63193287"
 ---
 # <a name="type-directive-in-for-xml-queries"></a>FOR XML クエリの TYPE ディレクティブ
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] サポート、 [xml &#40;TRANSACT-SQL&#41; ](/sql/t-sql/xml/xml-transact-sql) FOR XML クエリの結果として返す要求オプションには、 `xml` TYPE ディレクティブを指定することによってデータ型。 これにより、サーバーで FOR XML クエリの結果を処理できるようになります。 たとえば、それに対して XQuery を指定に結果を割り当てる、`xml`変数、または書き込み[入れ子になった FOR XML クエリ](use-nested-for-xml-queries.md)します。  
@@ -89,7 +89,7 @@ FOR XML AUTO, TYPE).query('/Person.Person[1]');
   
  内側の `SELECT ... FOR XML` クエリにより `xml` 型の結果が返され、外側の `SELECT` によりその `xml` 型の結果に `query()` メソッドが適用されます。 `TYPE` ディレクティブが指定されていることに注意してください。  
   
- これは、結果です。  
+ 結果を次に示します。  
   
  `<Person.Person BusinessEntityID="1" FirstName="Ken" LastName="S??nchez">`  
   
@@ -147,7 +147,7 @@ SELECT (SELECT XmlCol.query('/Root')
 GO  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [FOR XML &#40;SQL Server&#41;](../xml/for-xml-sql-server.md)  
   
   

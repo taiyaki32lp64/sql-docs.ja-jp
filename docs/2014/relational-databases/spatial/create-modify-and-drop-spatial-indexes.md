@@ -13,15 +13,15 @@ helpviewer_keywords:
 - indexes [SQL Server], modifying
 - spatial indexes [SQL Server], modifying
 ms.assetid: 00c1b927-8ec5-44cf-87c2-c8de59745735
-author: douglaslMS
-ms.author: douglasl
+author: MladjoA
+ms.author: mlandzic
 manager: craigg
-ms.openlocfilehash: 485b9bd38754309602df8002bf651188d322d6d8
-ms.sourcegitcommit: 87f29b23d5ab174248dab5d558830eeca2a6a0a4
+ms.openlocfilehash: 7e5dcd71dec0a2189e9f3b51bb7a68b50b070416
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "51018657"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66014267"
 ---
 # <a name="create-modify-and-drop-spatial-indexes"></a>空間インデックスの作成、変更、および削除
   空間インデックスは、の列で特定の操作をより効率的に実行できる、`geometry`または`geography`データ型 (、*列 spatial*)。 1 つの空間列に対して複数の空間インデックスを指定できます。 たとえば、1 つの列の異なるテセレーション パラメーターのインデックスを作成する場合などに便利です。  
@@ -62,7 +62,7 @@ ms.locfileid: "51018657"
   
 11. **[空間]** ページで、インデックスの空間プロパティに対して使用する値を指定します。  
   
-     インデックスを作成するとき、`geometry`型の列を指定する必要がある、 **(*`X-min`*、*`Y-min`*)** と **(*`X-max`*、*`Y-max`*)** 境界ボックスの座標。 インデックスの場合、`geography`型の列で、境界ボックスのフィールド読み取り専用に指定した後、**地理グリッド**テセレーション スキーム、地理グリッド テセレーション スキームは境界ボックスを使用しないためです。  
+     インデックスを作成するとき、`geometry`型の列を指定する必要がある、 **( *`X-min`* 、 *`Y-min`* )** と **( *`X-max`* 、 *`Y-max`* )** 境界ボックスの座標。 インデックスの場合、`geography`型の列で、境界ボックスのフィールド読み取り専用に指定した後、**地理グリッド**テセレーション スキーム、地理グリッド テセレーション スキームは境界ボックスを使用しないためです。  
   
      また、 **[オブジェクトごとのセル数]** フィールドに既定以外の値を指定したり、テセレーション スキームの任意のレベルのグリッド密度を指定したりすることもできます。 オブジェクトごとのセル数の既定値は、 [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)] では 16、 [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] 以降では 8 で、 **のグリッド密度の既定値は** [中] [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)]です。  
   

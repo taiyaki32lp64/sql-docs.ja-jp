@@ -10,12 +10,12 @@ ms.assetid: e365e9ca-c34b-44ae-840c-10e599fa614f
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: aced288e62fefe46777993fd46130b8dd65e8d1b
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 26f0193d40a01858bc3fe651a23b389a4ffcb6ea
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52510021"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62779157"
 ---
 # <a name="guidelines-for-transaction-isolation-levels-with-memory-optimized-tables"></a>メモリ最適化テーブルのトランザクション分離レベルに関するガイドライン
   多くのシナリオでは、トランザクション分離レベルを指定する必要があります。 メモリ最適化テーブルのトランザクション分離は、ディスク ベース テーブルとは異なります。  
@@ -62,7 +62,7 @@ ms.locfileid: "52510021"
   
  以下の自動コミット トランザクションの例では、アドホック バッチの一環としてメモリ最適化テーブル Customers と通常のテーブル [Order History] の間の結合を表示しています。  
   
-```tsql  
+```sql  
 SET TRANSACTION ISOLATION LEVEL READ COMMITTED;  
 GO  
 SELECT *   
@@ -73,7 +73,7 @@ LEFT JOIN dbo.[Order History] AS oh
   
  以下の明示的トランザクションまたは暗黙的トランザクションの例でも同じ結合を示していますが、今回は明示的なユーザー トランザクションを使用しています。 テーブル ヒント WITH (SNAPSHOT) で示すように、メモリ最適化テーブル Customers が SNAPSHOT 分離レベルでアクセスされています。これに対して、通常のテーブル [Order History] は、READ COMMITTED 分離レベルでアクセスされています。  
   
-```tsql  
+```sql  
 SET TRANSACTION ISOLATION LEVEL READ COMMITTED  
 GO  
 BEGIN TRAN  
@@ -105,7 +105,7 @@ COMMIT
   
  ポーリングのロジックはテーブル t1 にアクセスするうえで SNAPSHOT 分離を使用しているため、トランザクションの範囲外に置く必要があることに注意してください。 トランザクションの範囲内でポーリング ロジックを使用すると、トランザクションの実行時間が長くなり、好ましくありません。  
   
-```tsql  
+```sql  
 -- poll table  
 WHILE NOT EXISTS (SELECT 1 FROM dbo.t1)  
 BEGIN   

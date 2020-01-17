@@ -11,11 +11,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 4e5c7a01cc2a9569dd8c05316a2aa3314959e894
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48142482"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63046527"
 ---
 # <a name="support-policies-for-sql-server-native-client"></a>SQL Server Native Client のサポート ポリシー
   ここでは、さまざまなデータ アクセス コンポーネントを [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client で使用する方法について説明します。  
@@ -29,9 +29,9 @@ ms.locfileid: "48142482"
 |SQL Server Native Client のバージョン|サポートされるオペレーティング システム|  
 |--------------------------------------|---------------------------------|  
 |SQL Server Native Client (SQL Server 2005)|Microsoft Windows 2000 Service Pack 4 以降<br />Microsoft Windows Server 2003 またはそれ以降<br />Microsoft Windows XP Service Pack 1 またはそれ以降<br />Microsoft Windows Vista (必要[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Service Pack 2 以降)<br />Microsoft Windows Server 2008 (必要[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Service Pack 2 以降)|  
-|SQL Server Native Client 10.0 ([!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)])|Microsoft Windows Server 2003 Service Pack 2、またはそれ以降<br />Microsoft Windows XP Service Pack 2 またはそれ以降<br />Microsoft Windows Vista<br />Microsoft Windows Server 2008|  
-|SQL Server Native Client 10.5 ([!INCLUDE[ssKilimanjaro](../../../includes/sskilimanjaro-md.md)])|Microsoft Windows Server 2003 Service Pack 2、またはそれ以降<br />Microsoft Windows XP Service Pack 2 またはそれ以降<br />Microsoft Windows Vista<br />Microsoft Windows Server 2008<br />Microsoft Windows 7|  
-|SQL Server Native Client 11.0 ([!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] および [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)])|Microsoft Windows Vista<br />Microsoft Windows Server 2008<br />Microsoft Windows 7<br />Microsoft Windows 8<br />Microsoft Windows Server 2012|  
+|SQL Server Native Client 10.0 ([!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)])|Microsoft Windows Server 2003 Service Pack 2、またはそれ以降<br />Microsoft Windows XP Service Pack 2 またはそれ以降<br />Microsoft Windows Vista<br />-   Microsoft Windows Server 2008|  
+|SQL Server Native Client 10.5 ([!INCLUDE[ssKilimanjaro](../../../includes/sskilimanjaro-md.md)])|Microsoft Windows Server 2003 Service Pack 2、またはそれ以降<br />Microsoft Windows XP Service Pack 2 またはそれ以降<br />Microsoft Windows Vista<br />-   Microsoft Windows Server 2008<br />-   Microsoft Windows 7|  
+|SQL Server Native Client 11.0 ([!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] および [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)])|Microsoft Windows Vista<br />-   Microsoft Windows Server 2008<br />-   Microsoft Windows 7<br />Microsoft Windows 8<br />Microsoft Windows Server 2012|  
   
 ## <a name="ado-support-policies"></a>ADO サポート ポリシー  
  ADO アプリケーションでは、[!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] 以降の機能を必要としない場合に、Windows に付属している SQLOLEDB OLE DB プロバイダーを使用できます。  

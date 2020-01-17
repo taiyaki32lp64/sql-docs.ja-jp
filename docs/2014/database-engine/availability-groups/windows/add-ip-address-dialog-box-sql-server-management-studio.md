@@ -13,11 +13,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 68bd85258bd3fd259386f020394ffb5bc70a9781
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48164672"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62791916"
 ---
 # <a name="add-ip-address-dialog-box-sql-server-management-studio"></a>[IP アドレスの追加] ダイアログ ボックス (SQL Server Management Studio)
   この F1 ヘルプ トピックでは、 **[IP アドレスの追加]** ダイアログ ボックスのオプションについて説明します。 このダイアログ ボックスには、 **[新しい可用性グループ リスナー]** ダイアログ ボックスと **[リスナー]** タブ ( **の** または [!INCLUDE[ssAoNewAgWiz](../../../includes/ssaonewagwiz-md.md)] の [!INCLUDE[ssAoAddRepWiz](../../../includes/ssaoaddrepwiz-md.md)] [レプリカの指定] [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]ページ上) からアクセスできます。  

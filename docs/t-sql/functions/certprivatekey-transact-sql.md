@@ -15,15 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - CERTPRIVATEKEY
 ms.assetid: 33e0f01e-39ac-46da-94ff-fe53b1116df4
-author: MashaMSFT
-ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: f58f6859c57a16f5715d8a0f54c30775277b0c8d
-ms.sourcegitcommit: 5d6e1c827752c3aa2d02c4c7653aefb2736fffc3
+author: VanMSFT
+ms.author: vanto
+ms.openlocfilehash: e409d5064cb0e807d12a76b42055a6a43c9cb7c1
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/10/2018
-ms.locfileid: "49071826"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65948828"
 ---
 # <a name="certprivatekey-transact-sql"></a>CERTPRIVATEKEY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
@@ -33,7 +32,7 @@ ms.locfileid: "49071826"
 -   関数によって返される秘密キーのビットの暗号化に使用される暗号化パスワード。 この方法では、キーはユーザーにクリア テキストとして公開されません。  
 -   オプションの暗号化解除パスワード。 証明書の秘密キーを暗号化解除するために指定された暗号化解除パスワードが使用されます。 それ以外の場合、データベース マスター キーが使用されます。  
   
-証明書の秘密キーへのアクセス権を持つユーザーだけが、この関数を使用できます。 この関数は、秘密キーを PVK 形式で返します。
+証明書の秘密キーへのアクセス権を持つユーザーだけが、この関数を使用できます。 この関数では、秘密キーが PVK 形式で返されます。
   
 ## <a name="syntax"></a>構文  
   

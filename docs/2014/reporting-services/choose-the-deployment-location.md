@@ -4,21 +4,20 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 f1_keywords:
 - sql12.rtp.rptwizard.choosedeployment.f1
 ms.assetid: 3b19b8a3-000d-48a4-b4a2-4f7da078a0c6
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: c19e4461da1da968a0ea3115da8cc4ac22e3764a
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: e902d40a75e3034bb22f27711de325914d255435
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56291000"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66109822"
 ---
 # <a name="choose-the-deployment-location"></a>配置場所の選択
   レポート ウィザードのこのページを使用すると、レポート サーバー プロジェクトに使用するサーバーとフォルダーの配置を設定できます。  

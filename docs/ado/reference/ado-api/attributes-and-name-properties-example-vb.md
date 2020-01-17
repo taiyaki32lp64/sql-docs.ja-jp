@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 258bdce3-1819-44a2-9217-105879c789ef
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: eb69a3f9da2ed86411c2a6506cf2ea7a8defcc7f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 7b591da347e71b4dcb2df070df4368f825354f90
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47735150"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67920586"
 ---
 # <a name="attributes-and-name-properties-example-vb"></a>Attributes および Name プロパティの例 (VB)
 この例の値を表示、[属性](../../../ado/reference/ado-api/attributes-property-ado.md)プロパティ[接続](../../../ado/reference/ado-api/connection-object-ado.md)、[フィールド](../../../ado/reference/ado-api/field-object.md)、および[プロパティ](../../../ado/reference/ado-api/property-object-ado.md)オブジェクト。 使用して、[名前](../../../ado/reference/ado-api/name-property-ado.md)それぞれの名前を表示するプロパティ**フィールド**と**プロパティ**オブジェクト。  
@@ -127,7 +126,7 @@ End Sub
 ' EndAttributesVB  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [Attributes プロパティ (ADO)](../../../ado/reference/ado-api/attributes-property-ado.md)   
  [接続オブジェクト (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)   
  [Field オブジェクト](../../../ado/reference/ado-api/field-object.md)   

@@ -11,15 +11,14 @@ f1_keywords:
 - VS.TOOLSOPTIONSPAGES.ENVIRONMENT.KEYBOARD.GENERAL
 - VS.ToolsOptionsPages.Environment.SQLEnvironmentKeyboard
 ms.assetid: 0ad77fd5-95bf-4da3-9797-c1e1b9a1102e
-author: stevestein
-ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 039128f4a1e77d6c7777a47b49b2aea47a21b92c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: e3df7105bf2cd01736a16b77ab1b367dce80a598
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47831990"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68257319"
 ---
 # <a name="options-environment---keyboard-page"></a>[オプション] \([環境]/[キーボード] ページ)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

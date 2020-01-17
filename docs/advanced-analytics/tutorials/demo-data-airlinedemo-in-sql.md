@@ -1,59 +1,60 @@
 ---
-title: SQL Server の Python および R のチュートリアル - SQL Server Machine Learning の航空会社のフライト デモ データのセット
-Description: Create a database containing the Airline dataset from R and Python. This dataset is used in exercises showing how to wrap R language or Python code in a SQL Server stored procedure.
+title: チュートリアルの航空会社のフライト デモ データ
+Description: R と Python の航空会社データセットを含むデータベースを作成します。 このデータセットは、R 言語または Python コードを SQL Server ストアド プロシージャでラップする方法を示す演習で使用されます。
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 10/22/2018
 ms.topic: tutorial
-author: HeidiSteen
-ms.author: heidist
-manager: cgronlun
-ms.openlocfilehash: 10d2f013c103dee3de02335ca2acf82d4320b623
-ms.sourcegitcommit: 33712a0587c1cdc90de6dada88d727f8623efd11
-ms.translationtype: MT
+author: dphansen
+ms.author: davidph
+ms.custom: seo-lt-2019
+monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
+ms.openlocfilehash: 520a94f5f92c8b7e7d8bf7ba4efc851ce0c3e723
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53596983"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73727147"
 ---
-#  <a name="airline-flight-arrival-demo-data-for-sql-server-python-and-r-tutorials"></a>航空会社のフライトの到着デモ データの SQL Server の Python および R のチュートリアル
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+#  <a name="airline-flight-arrival-demo-data-for-sql-server-python-and-r-tutorials"></a>SQL Server Python と R のチュートリアルの航空会社フライト到着デモ データ
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-この演習では、R または Python の組み込み航空会社のデモ データ セットからインポートしたデータを格納する SQL Server データベースを作成します。 R および Python ディストリビューションでは、Management Studio を使用して SQL Server データベースにインポートすることができますが、同等のデータを提供します。
+この演習では、R または Python の組み込みの航空会社デモ データ セットからインポートしたデータを格納する SQL Server データベースを作成します。 R と Python のディストリビューションには同等のデータが用意されており、Management Studio を使用してそれを SQL Server データベースにインポートできます。
 
-この手順を完了しておく[SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms?view=sql-server-2017)または T-SQL クエリを実行できる他のツール。
+この演習を完了するには、[SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms?view=sql-server-2017) または T-SQL クエリを実行できる別のツールが必要です。
 
-チュートリアルとクイック スタートのこのデータ セットを使用して、次に示します。
+このデータセットを使用したチュートリアルとクイックスタートには、次のものがあります。
 
-+  [Revoscalepy を使用して、Python モデルを作成します。](use-python-revoscalepy-to-create-model.md)
++  [revoscalepy を使用した Python モデルの作成](use-python-revoscalepy-to-create-model.md)
 
 ## <a name="create-the-database"></a>データベースの作成
 
-1. SQL Server Management Studio を起動、R または Python の統合には、データベース エンジンのインスタンスに接続します。  
+1. SQL Server Management Studio を開始し、R または Python 統合のあるデータベース エンジン インスタンスに接続します。  
 
-2. オブジェクト エクスプ ローラーで右クリックして**データベース**と呼ばれる新しいデータベースを作成および**flightdata**します。
+2. オブジェクト エクスプローラーで、 **[データベース]** を右クリックし、**flightdata** という名前の新しいデータベースを作成します。
 
-3. 右クリックして**flightdata**、 をクリックして**タスク**、 をクリックして**フラット ファイルのインポート**します。
+3. flightdata を右クリックし、 **[タスク]** をクリックして、 **[フラットファイルのインポート]** をクリックします。
 
-4. インストールした言語に応じて、R または Python ディストリビューションで提供される AirlineDemoData.csv ファイルを開きます。
+4. インストールした言語に応じて、R または Python ディストリビューションに用意されている AirlineDemoData.csv ファイルを開きます。
 
-   検索、R 用**AirlineDemoSmall.csv** C:\Program files \microsoft SQL Server\MSSQL14 にします。MSSQLSERVER\R_SERVICES\library\RevoScaleR\SampleData
+   R の場合は、C:\Program Files\Microsoft SQL Server\MSSQL14.MSSQLSERVER\R_SERVICES\library\RevoScaleR\SampleData で **AirlineDemoSmall.csv** を探します。
    
-   Python を探します**AirlineDemoSmall.csv** C:\Program files \microsoft SQL Server\MSSQL14 にします。MSSQLSERVER\PYTHON_SERVICES\Lib\site packages\revoscalepy\data\sample_data
+   Python の場合は、C:\Program Files\Microsoft SQL Server\MSSQL14.MSSQLSERVER\PYTHON_SERVICES\Lib\site-packages\revoscalepy\data\sample_data で **AirlineDemoSmall.csv** を探します。
   
-ファイルを選択すると、既定値は、テーブル名とスキーマ用に入力されます。
+ファイルを選択すると、テーブル名とスキーマに既定値が設定されます。
 
-  ![フラット ファイル ウィザードが表示された航空デモの既定値をインポートします。](media/import-airlinedemosmall.png)
+  ![航空会社のデモの既定値を表示したフラット ファイルのインポート ウィザード](media/import-airlinedemosmall.png)
 
-データをインポートする、既定値のまま、残りのページをクリックします。
+残りのページをクリックし、既定値をそのまま使用してデータをインポートします。
 
 
-## <a name="query-the-data"></a>データのクエリ
+## <a name="query-the-data"></a>データにクエリを実行する
 
-検証手順として、データがアップロードされたことを確認するためのクエリを実行します。
+検証手順として、クエリを実行してデータがアップロードされたことを確認します。
 
-1. データベースのオブジェクト エクスプ ローラーで右クリックし、 **flightdata**データベース、および新しいクエリを開始します。
+1. オブジェクト エクスプローラーの [データベース] で、**flightdata** データベースを右クリックし、新しいクエリを開始します。
 
-2. シンプルなクエリを実行します。
+2. いくつかの単純なクエリを実行します。
 
     ```sql
     SELECT TOP(10) * FROM AirlineDemoSmall;
@@ -62,6 +63,6 @@ ms.locfileid: "53596983"
 
 ## <a name="next-steps"></a>次の手順
 
-次のレッスンでは、このデータに基づく線形回帰モデルを作成します。
+次のレッスンでは、このデータに基づいて線形回帰モデルを作成します。
 
-+ [Revoscalepy を使用して、Python モデルを作成します。](use-python-revoscalepy-to-create-model.md)
++ [revoscalepy を使用した Python モデルの作成](use-python-revoscalepy-to-create-model.md)

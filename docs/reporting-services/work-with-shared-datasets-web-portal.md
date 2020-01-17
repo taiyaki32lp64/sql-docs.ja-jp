@@ -6,14 +6,14 @@ ms.prod_service: reporting-services-native
 ms.technology: reporting-services
 ms.topic: conceptual
 ms.assetid: 2641ea84-9343-4e6f-aec1-25339031b163
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 85d63fa9515552f2c2acc5851f36e38f52017dda
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: e034b911ec5817ac82214466fdc2bf7087e8865a
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52539104"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68222797"
 ---
 # <a name="work-with-shared-datasets---web-portal"></a>共有データセットの操作 - Web ポータル
 
@@ -56,9 +56,9 @@ Web ポータル内の共有データセットのプロパティを表示およ�
   
     ![ssRSDataset-Manage](../reporting-services/media/ssrsdataset-manage.png)  
   
-## <a name="properties"></a>[プロパティ]
+## <a name="properties"></a>Properties
   
-プロパティ画面では、データセットの **[名前]** と **[説明]** を変更できます。 また、 **[削除]**、 **[移動]**、 **[レポート ビルダーでの編集]**、 **[ダウンロード]** 、 **[置換]** を選択することもできます。  
+プロパティ画面では、データセットの **[名前]** と **[説明]** を変更できます。 また、 **[削除]** 、 **[移動]** 、 **[レポート ビルダーでの編集]** 、 **[ダウンロード]** 、 **[置換]** を選択することもできます。  
   
 ![ssRSdataset-Properties](../reporting-services/media/ssrsdataset-properties.png)  
   

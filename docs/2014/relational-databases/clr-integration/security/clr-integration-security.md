@@ -16,11 +16,11 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 12ca3fcb00122313c1d1e4aae8b64733be9140c9
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48181562"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62918996"
 ---
 # <a name="clr-integration-security"></a>CLR 統合のセキュリティ
   セキュリティ モデル、[!INCLUDE[ssNoVersion](../../../includes/dnprdnshort-md.md)]共通言語ランタイム (CLR) を管理し、さまざまな種類内で実行されている CLR および CLR 以外のオブジェクトの間のアクセスをセキュリティで保護[!INCLUDE[ssNoVersion](../../../includes/tsql-md.md)]ステートメントまたはサーバーで実行されている別の CLR オブジェクト。 オブジェクト間の呼び出しをリンクと呼びます。 このようなオブジェクトに対して実行されるセキュリティ チェックの種類は、関連するリンクの種類によって異なります。  

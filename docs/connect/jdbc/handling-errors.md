@@ -1,7 +1,7 @@
 ---
 title: エラーの処理 |Microsoft Docs
 ms.custom: ''
-ms.date: 01/21/2019
+ms.date: 08/12/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 8fd5b5ef-d939-4b78-b900-5b7b6ddb3eb9
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 535881ed3ece30996390af6c9a22568d49bc6d3e
-ms.sourcegitcommit: 879a5c6eca99e0e9cc946c653d4ced165905d9c6
+ms.openlocfilehash: 6277b3ecf0160078fa47bc79994d31f64519d9b7
+ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/05/2019
-ms.locfileid: "55736969"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "69028031"
 ---
 # <a name="handling-errors"></a>エラーの処理
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -31,29 +30,29 @@ ms.locfileid: "55736969"
   
 -   `getNextException()` は、返す例外オブジェクトが他にない場合、次の `SQLServerException` オブジェクトまたは null を返します。
 
--   `getSQLServerError()` 返します、 `SQLServerError` SQL Server から受信すると、例外に関する詳細情報を格納しているオブジェクト。 サーバー エラーが発生していない場合は null が返されます。
+-   `getSQLServerError()`SQL Server から`SQLServerError`受信した例外に関する詳細情報を格納しているオブジェクトを返します。 サーバーエラーが発生しなかった場合、このメソッドは null を返します。
 
-次のメソッド、`SQLServerError`クラスを使用してをサーバーから生成されたエラーに関する追加情報を取得できます。
+`SQLServerError`クラスの次のメソッドは、サーバーから生成されたエラーに関する追加情報を取得するために使用できます。
 
--   `SQLServerError.getErrorMessage()` サーバーから受信したエラー メッセージが返されます。
+-   `SQLServerError.getErrorMessage()`サーバーから受信したエラーメッセージを返します。
 
--   `SQLServerError.getErrorNumber()` エラーの種類を識別する番号を返します。
+-   `SQLServerError.getErrorNumber()`エラーの種類を識別する数値を返します。
 
--   `SQLServerError.getErrorState()` SQL server、エラー、警告、または「データが見つかりません」メッセージを表す数値エラー コードを返します。
+-   `SQLServerError.getErrorState()`エラー、警告、または "データが見つかりません" メッセージを表す SQL Server から数値エラーコードを返します。
 
--   `SQLServerError.getErrorSeverity()` 受信したエラーの重大度レベルを返します。
+-   `SQLServerError.getErrorSeverity()`受信したエラーの重大度レベルを返します。
 
--   `SQLServerError.getServerName()` エラーを生成する SQL Server のインスタンスを実行しているコンピューターの名前を返します。
+-   `SQLServerError.getServerName()`エラーを生成した SQL Server のインスタンスを実行しているコンピューターの名前を返します。
 
--   `SQLServerError.getProcedureName()` ストアド プロシージャまたはエラーを生成したリモート プロシージャ コール (RPC) の名前を返します。
+-   `SQLServerError.getProcedureName()`エラーを生成したストアドプロシージャまたはリモートプロシージャコール (RPC) の名前を返します。
 
--   `SQLServerError.getLineNumber()` TRANSACT-SQL コマンド バッチまたはエラーを生成したストアド プロシージャ内の行番号を返します。
+-   `SQLServerError.getLineNumber()`Transact-sql コマンドバッチまたはストアドプロシージャ内の、エラーを生成した行番号を返します。
   
  次の例では、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal_md.md)] サンプル データベースに対して開いている接続が関数に渡され、FROM 句のない不適切な SQL ステートメントが作成されます。 次に、ステートメントが実行され、SQL 例外が処理されます。  
   
  [!code[JDBC#HandlingErrors1](../../connect/jdbc/codesnippet/Java/handling-errors_1.java)]  
   
 ## <a name="see-also"></a>参照  
- [JDBC ドライバーで発生した問題の診断](../../connect/jdbc/diagnosing-problems-with-the-jdbc-driver.md)  
+ [JDBC ドライバーに関する問題の診断](../../connect/jdbc/diagnosing-problems-with-the-jdbc-driver.md)  
   
   

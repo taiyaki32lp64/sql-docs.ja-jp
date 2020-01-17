@@ -1,5 +1,5 @@
 ---
-title: カスタム ワークフロー XML の説明 (マスター データ サービス) | Microsoft Docs
+title: カスタム ワークフローの XML の説明
 ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
@@ -8,15 +8,14 @@ ms.reviewer: ''
 ms.technology: ''
 ms.topic: reference
 ms.assetid: e267e5f4-38bb-466d-82e8-871eabeec07e
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 27bcc991088135b95305842639f55b0dc389c4ee
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
-ms.translationtype: HT
+ms.openlocfilehash: eb5beeb5115c3a68ab34313ea9125c65a4f4e185
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47685700"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73729305"
 ---
 # <a name="create-a-custom-workflow---xml-description"></a>カスタム ワークフローの作成 - XML の説明
 
@@ -68,10 +67,10 @@ ms.locfileid: "47685700"
   
 |タグ|[説明]|  
 |---------|-----------------|  
-|\<Type>|どのカスタム ワークフロー アセンブリを読み込むかを識別するために、[!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] の **[ワークフローの種類]** ボックスに入力したテキスト。|  
-|\<SendData>|[!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] の **[メッセージにメンバーのデータを含める]** チェック ボックスによって制御されるブール値。 値 1 は、\<MemberData> セクションが送信されることを示します。それ以外の場合、\<MemberData> セクションは送信されません。|  
-|<Server_URL>|[!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] の **[ワークフロー サイト]** ボックスに入力したテキスト。|  
-|<Action_ID>|[!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] の **[ワークフロー名]** ボックスに入力したテキスト。|  
+|\<Type>|どのカスタム ワークフロー アセンブリを読み込むかを識別するために、**の**[ワークフローの種類][!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] ボックスに入力したテキスト。|  
+|\<SendData>|**の**[メッセージにメンバーのデータを含める][!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] チェック ボックスによって制御されるブール値。 値 1 は、\<MemberData> セクションが送信されることを示します。それ以外の場合、\<MemberData> セクションは送信されません。|  
+|<Server_URL>|**の**[ワークフロー サイト][!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] ボックスに入力したテキスト。|  
+|<Action_ID>|**の**[ワークフロー名][!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] ボックスに入力したテキスト。|  
 |\<MemberData>|ワークフロー アクションをトリガーしたメンバーのデータが含まれます。 これは、\<SendData> の値が 1 の場合にのみ含められます。|  
 |\<Enter*xxx*>|このタグ セットには、メンバーの作成に関するメタデータ (作成日時や作成者など) が含まれます。|  
 |\<LastChg*xxx*>|このタグ セットには、メンバーへの最終変更に関するメタデータ (変更日時や変更者など) が含まれます。|  

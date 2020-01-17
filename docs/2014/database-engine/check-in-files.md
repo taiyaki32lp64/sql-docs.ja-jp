@@ -15,11 +15,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 5debb7c80e7365e67d8661709b09b16f5d25b7b9
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48096772"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62812586"
 ---
 # <a name="check-in-files"></a>ファイルのチェックイン
   ファイルのソース管理を行っている場合、修正後のファイルを他のユーザーも利用できるようにするには、そのファイルをソース管理にチェックインする必要があります。 ファイルをチェックインすると、チェックインしたバージョンがソース管理プロバイダーに書き込まれ、そのファイルの最新バージョンになります。  
@@ -61,7 +61,7 @@ ms.locfileid: "48096772"
   
  チェックインしたファイルが共有チェックアウトの一部でない場合、[!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 環境ではそのファイルが直ちにチェックインされます。 あるいは、直ちにはチェックインされずに、他のユーザーが作成したバージョンとのマージを要求するダイアログが表示されることもあります。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [変更されたファイルの一覧を表示します。](../../2014/database-engine/view-a-list-of-modified-files.md)   
  [チェックインの管理](../../2014/database-engine/manage-checkins.md)  
   

@@ -15,11 +15,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: e3888782f93dde5726ed808383ea7da0c9a02a4d
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52761844"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62827195"
 ---
 # <a name="performance-statistics-event-class"></a>Performance Statistics イベント クラス
   Performance Statistics イベント クラスは、実行中のクエリ、ストアド プロシージャ、およびトリガーのパフォーマンスを監視するために使用できます。 6 個のイベント サブクラスがあり、それぞれがシステム内のクエリ、ストアド プロシージャ、およびトリガーの有効期間内のイベントを示します。 これらのイベント サブクラスを、関連する sys.dm_exec_query_stats、sys.dm_exec_procedure_stats、および sys.dm_exec_trigger_stats 動的管理ビューと組み合わせて使用することで、クエリ、ストアド プロシージャ、トリガーのパフォーマンス履歴を再構成できます。  
@@ -37,7 +37,7 @@ ms.locfileid: "52761844"
 |EventSequence|`int`|要求内の特定のイベントのシーケンス。|51|いいえ|  
 |EventSubClass|`int`|イベント サブクラスの種類。<br /><br /> 0 = 現在キャッシュ内にない新しいバッチ SQL テキスト。<br /><br /> アドホック バッチのトレースで、次の種類の EventSubClass が生成されます。<br /><br /> *n* 個のクエリを持つアドホック バッチでは、次のようになります。<br /><br /> 種類 0 が 1 個|21|はい|  
 |IntegerData2|`int`|NULL|55|はい|  
-|ObjectID|`int`|NULL|22|はい|  
+|ObjectID|`int`|NULL|22|[はい]|  
 |Offset|`int`|NULL|61|はい|  
 |PlanHandle|`Image`|NULL|65|はい|  
 |SessionLoginName|`nvarchar`|セッションを開始したユーザーのログイン名。 たとえば、Login1 を使用して [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] に接続し、Login2 でステートメントを実行すると、SessionLoginName には Login1 が表示され、LoginName には Login2 が表示されます。 この列には、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ログインと Windows ログインの両方が表示されます。|64|はい|  
@@ -67,7 +67,7 @@ ms.locfileid: "52761844"
 |ObjectType|`int`|イベントに関係するオブジェクトの種類を表す値。<br /><br /> 8272 = ストアド プロシージャ|28|はい|  
 |BigintData2|`bigint`|コンパイル中に使用されたメモリの合計 (KB 単位)。|53|はい|  
 |CPU|`int`|コンパイル中に使用された CPU 時間の合計 (ミリ秒単位)。|18|はい|  
-|Duration|`int`|コンパイル中に使用された時間の合計 (マイクロ秒単位)。|13|はい|  
+|Duration|`int`|コンパイル中に使用された時間の合計 (マイクロ秒単位)。|13|[はい]|  
 |IntegerData|`int`|コンパイル済みプランのサイズ (KB 単位)。|25|はい|  
   
 ### <a name="eventsubclass-2"></a>EventSubClass 2  
@@ -76,9 +76,9 @@ ms.locfileid: "52761844"
 |----------------------|---------------|-----------------|---------------|----------------|  
 |BigintData1|`bigint`|このプランが再コンパイルされた累積回数。|52|はい|  
 |BinaryData|`image`|コンパイル済みプランのバイナリ XML。|2|はい|  
-|DatabaseID|`int`|USE *database* ステートメントで指定されたデータベースの ID、または特定のインスタンスについて USE *database* ステートメントが実行されていない場合は既定のデータベースの ID となります。 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] では、ServerName データ列がトレースにキャプチャされ、そのサーバーが利用可能な場合、データベースの名前が表示されます。 データベースに対応する値は、DB_ID 関数を使用して特定します。|3|はい|  
+|DatabaseID|`int`|USE *database* ステートメントで指定されたデータベースの ID、または特定のインスタンスについて USE *database* ステートメントが実行されていない場合は既定のデータベースの ID となります。 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] では、ServerName データ列がトレースにキャプチャされ、そのサーバーが利用可能な場合、データベースの名前が表示されます。 データベースに対応する値は、DB_ID 関数を使用して特定します。|3|[はい]|  
 |EventSequence|`int`|要求内の特定のイベントのシーケンス。|51|いいえ|  
-|SessionLoginName|`nvarchar`|セッションを開始したユーザーのログイン名。 たとえば、Login1 を使用して [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] に接続し、Login2 でステートメントを実行すると、SessionLoginName には Login1 が表示され、LoginName には Login2 が表示されます。 この列には、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ログインと Windows ログインの両方が表示されます。|64|はい|  
+|SessionLoginName|`nvarchar`|セッションを開始したユーザーのログイン名。 たとえば、Login1 を使用して [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] に接続し、Login2 でステートメントを実行すると、SessionLoginName には Login1 が表示され、LoginName には Login2 が表示されます。 この列には、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ログインと Windows ログインの両方が表示されます。|64|[はい]|  
 |EventSubClass|`int`|イベント サブクラスの種類。<br /><br /> 2 = アドホック SQL ステートメント内のクエリがコンパイルされました。<br /><br /> アドホック バッチのトレースで、次の種類の EventSubClass が生成されます。<br /><br /> *n* 個のクエリを持つアドホック バッチでは、次のようになります。<br /><br /> 種類 2 が*n* 個|21|はい|  
 |IntegerData2|`int`|バッチ内のステートメントの最後。<br /><br /> バッチの最後に達すると -1 になります。|55|はい|  
 |ObjectID|`int`|なし|22|はい|  
@@ -89,8 +89,8 @@ ms.locfileid: "52761844"
 |TextData|`ntext`|NULL|1|はい|  
 |PlanHandle|`image`|バッチのコンパイル済みプランのプラン ハンドル。 dm_exec_query_plan 動的管理ビューを使用してバッチ XML プランを取得するために使用できます。|65|はい|  
 |BigintData2|`bigint`|コンパイル中に使用されたメモリの合計 (KB 単位)。|53|はい|  
-|CPU|`int`|コンパイル中に使用された CPU 時間の合計 (マイクロ秒単位)。|18|はい|  
-|Duration|`int`|コンパイル中に使用された時間の合計 (ミリ秒単位)。|13|はい|  
+|CPU|`int`|コンパイル中に使用された CPU 時間の合計 (マイクロ秒単位)。|18|[はい]|  
+|Duration|`int`|コンパイル中に使用された時間の合計 (ミリ秒単位)。|13|[はい]|  
 |IntegerData|`int`|コンパイル済みプランのサイズ (KB 単位)。|25|はい|  
   
 ### <a name="eventsubclass-3"></a>EventSubClass 3  
@@ -117,11 +117,11 @@ ms.locfileid: "52761844"
   
 |データ列名|データ型|説明|列 ID|フィルターの適用|  
 |----------------------|---------------|-----------------|---------------|----------------|  
-|BigintData1|`bigint`|NULL|52|はい|  
+|BigintData1|`bigint`|NULL|52|[はい]|  
 |BinaryData|`image`|NULL|2|はい|  
 |DatabaseID|`int`|指定されたストアド プロシージャが存在するデータベースの ID。|3|はい|  
 |EventSequence|`int`|要求内の特定のイベントのシーケンス。|51|いいえ|  
-|SessionLoginName|`nvarchar`|セッションを開始したユーザーのログイン名。 たとえば、Login1 を使用して [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] に接続し、Login2 でステートメントを実行すると、SessionLoginName には Login1 が表示され、LoginName には Login2 が表示されます。 この列には、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ログインと Windows ログインの両方が表示されます。|64|はい|  
+|SessionLoginName|`nvarchar`|セッションを開始したユーザーのログイン名。 たとえば、Login1 を使用して [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] に接続し、Login2 でステートメントを実行すると、SessionLoginName には Login1 が表示され、LoginName には Login2 が表示されます。 この列には、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ログインと Windows ログインの両方が表示されます。|64|[はい]|  
 |EventSubClass|`int`|イベント サブクラスの種類。<br /><br /> 4 = キャッシュされたストアド プロシージャがキャッシュから削除されており、そのストアド プロシージャに関連付けられたパフォーマンス履歴データが破棄されようとしています。|21|はい|  
 |IntegerData2|`int`|NULL|55|はい|  
 |ObjectID|`int`|ストアド プロシージャの ID。 sys.procedures の object_id 列と同じです。|22|はい|  

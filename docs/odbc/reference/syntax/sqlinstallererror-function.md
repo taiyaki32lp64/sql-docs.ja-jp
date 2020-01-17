@@ -19,24 +19,23 @@ helpviewer_keywords:
 ms.assetid: e6474b79-4d55-458f-81ce-abfafe357f83
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 2d5e05e62350d916e9c5fcf680af05717b39aa58
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: ab9461d87a3df2efc98c38e4c72cee4c247fee7c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53208281"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68138027"
 ---
 # <a name="sqlinstallererror-function"></a>SQLInstallerError 関数
 **準拠**  
  バージョンが導入されました。ODBC 3.0  
   
- **まとめ**  
+ **概要**  
  **SQLInstallerError** ODBC インストーラーの関数のエラーまたは状態の情報を返します。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
   
 RETCODE SQLInstallerError(  
      WORD      iError,  

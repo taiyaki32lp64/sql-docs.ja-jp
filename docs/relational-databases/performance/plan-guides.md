@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: bfc97632-c14c-4768-9dc5-a9c512f6b2bd
 author: julieMSFT
 ms.author: jrasnick
-manager: craigg
-ms.openlocfilehash: 2e7ce811b66da3bb0ee271ea18c2aead1b53495c
-ms.sourcegitcommit: dd794633466b1da8ead9889f5e633bdf4b3389cd
+ms.openlocfilehash: 595ef410a631da1eb1d71e7b2d20c75fd09e4bb2
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54143482"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68113480"
 ---
 # <a name="plan-guides"></a>プラン ガイド
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -96,7 +95,25 @@ sp_create_plan_guide
 @params = NULL,   
 @hints = N'OPTION (MAXDOP 1)';  
 ```  
-  
+別の例として、[sp_executesql](../../relational-databases/system-stored-procedures/sp-executesql-transact-sql.md) を使用して送信された次の SQL ステートメントについて考えます。
+
+```sql  
+exec sp_executesql N'SELECT * FROM Sales.SalesOrderHeader
+where SalesOrderID =  @so_id', N'@so_id int', @so_id = 43662;  
+```  
+ このクエリの毎回の実行について一意のプランを作成するには、次のプラン ガイドを作成し、`OPTION (RECOMPILE)` クエリ ヒントを `@hints` パラメーターで使用します。 
+
+```sql  
+exec sp_create_plan_guide   
+@name = N'PlanGuide1_SalesOrders',   
+@stmt = N'SELECT * FROM Sales.SalesOrderHeader
+where SalesOrderID =  @so_id',
+@type = N'SQL',  
+@module_or_batch = NULL,   
+@params = N'@so_id int',   
+@hints = N'OPTION (recompile)';
+```
+
 > [!IMPORTANT]  
 >  `@module_or_batch` ステートメントの `@params` 引数と `sp_create_plan guide` 引数に指定する値は、実際のクエリで送信される、対応するテキストと一致している必要があります。 詳細については、「 [sp_create_plan_guide &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-create-plan-guide-transact-sql.md) ステートメントの [SQL Server Profiler を使用したプラン ガイドの作成とテスト](../../relational-databases/performance/use-sql-server-profiler-to-create-and-test-plan-guides.md)の実際のクエリのテキストを直接変更することが不可能な場合や望ましくない場合に、プラン ガイドを使用してクエリのパフォーマンスを最適化することができます。  
   

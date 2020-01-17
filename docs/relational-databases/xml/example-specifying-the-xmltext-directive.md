@@ -1,5 +1,5 @@
 ---
-title: '例 : XMLTEXT ディレクティブの指定 | Microsoft Docs'
+title: '例: XMLTEXT ディレクティブの指定 | Microsoft Docs'
 ms.custom: ''
 ms.date: 04/05/2017
 ms.prod: sql
@@ -10,17 +10,16 @@ ms.topic: conceptual
 helpviewer_keywords:
 - XMLTEXT directive
 ms.assetid: e78008ec-51e8-4fd1-b86f-1058a781de17
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: 7c20ecd2ea4df8ea3e3a22138473ec1de48fc7a3
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: MightyPen
+ms.author: genemi
+ms.openlocfilehash: 52e3d6ea8cff9d1984ee11a510a6c21833034c29
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47806814"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68006676"
 ---
-# <a name="example-specifying-the-xmltext-directive"></a>例: XMLTEXT ディレクティブの指定
+# <a name="example-specifying-the-xmltext-directive"></a>例:XMLTEXT ディレクティブの指定
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
   この例では、EXPLICIT モードを使用した **ステートメントで、** XMLTEXT `SELECT` ディレクティブによりオーバーフロー列のデータを指定する方法を示します。  
   

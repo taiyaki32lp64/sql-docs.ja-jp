@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: ca64f234-38f2-4607-a9d6-d4906e48e336
 author: Shamikg
 ms.author: Shamikg
-manager: craigg
-ms.openlocfilehash: 5ce9f08d0e06fbb9d65e6ff891ec1f6b58e1f061
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ff4dc8e042dc27156d03935c1de39c9fbd67a69c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47700170"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67986375"
 ---
 # <a name="global-settings-output-window-accesstosql"></a>グローバル設定 (出力ウィンドウ) (AccessToSQL)
 使用して、**グローバル設定**SSMA の設定を指定 ダイアログ ボックス。  

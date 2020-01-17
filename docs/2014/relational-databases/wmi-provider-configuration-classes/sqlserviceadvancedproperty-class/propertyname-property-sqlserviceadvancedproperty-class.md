@@ -19,11 +19,11 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: d04001770eab3ee218f5a3addbafe8db921f6315
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53373664"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62911604"
 ---
 # <a name="propertyname-property-sqlserviceadvancedproperty-class"></a>PropertyName プロパティ (SqlServiceAdvancedProperty クラス)
   詳細プロパティの名前を取得または設定します。  
@@ -45,7 +45,7 @@ object
   
 ## <a name="remarks"></a>コメント  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [開始とサービスの停止](https://technet.microsoft.com/library/ms174886\(v=sql.105\).aspx)  
   
   

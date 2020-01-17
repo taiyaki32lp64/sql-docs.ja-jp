@@ -10,15 +10,14 @@ ms.topic: conceptual
 f1_keywords:
 - vdt.dlgbox.partitioncolumnlist
 ms.assetid: b554b6e6-3435-4b43-89ab-7a4c7a241236
-author: stevestein
-ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 10ce568cf27841f3f261ac02088791f4a384512f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 94adf704a08abf36b38b371aed95cb49439758fa
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47656122"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68263241"
 ---
 # <a name="partition-column-list-dialog-box-visual-database-tools"></a>[パーティション列の一覧] ダイアログ ボックス (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

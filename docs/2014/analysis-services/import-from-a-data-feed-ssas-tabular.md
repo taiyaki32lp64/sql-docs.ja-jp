@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: 0686e519-67c2-4f9b-8cd2-84a4871499ee
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 27c22caf9c3b6dfebede60cd795496496562c19b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: bcb3a1cbcabc66492bbd780be4716ce69f15de37
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48099842"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66080566"
 ---
 # <a name="import-from-a-data-feed-ssas-tabular"></a>データ フィードからのインポート (SSAS テーブル)
   データ フィードは、オンライン データ ソースから生成され、宛先のドキュメントやアプリケーションに送信される 1 つ以上の XML データ ストリームです。 テーブルのインポート ウィザードを使用して、データ フィードからモデルにデータをインポートできます。  
@@ -45,7 +44,7 @@ ms.locfileid: "48099842"
  **Atom フィード**  
  フィードは Atom フィードである必要があります。 RSS フィードはサポートされていません。 フィードが一般公開されているか、現在ログインしている Windows アカウントでそのフィードに接続するための権限を持っている必要があります。  
   
- インポート時に、データ フィードからのデータがモデルに 1 回追加されます。 フィードから更新済みデータを取得するには、モデル デザイナーからデータを更新するか、Analysis Services の実稼動インスタンスに配置後にモデルのデータ更新スケジュールを構成するかします。 詳細については、「[データの処理 &#40;SSAS テーブル&#41;](process-data-ssas-tabular.md)」を参照してください。  
+ インポート時に、データ フィードからのデータがモデルに 1 回追加されます。 フィードから更新済みデータを取得するには、モデル デザイナーからデータを更新するか、Analysis Services の実稼動インスタンスに配置後にモデルのデータ更新スケジュールを構成するかします。 詳細については、「 [データの処理 (SSAS テーブル)](process-data-ssas-tabular.md)」を参照してください。  
   
 ##  <a name="azure"></a> Azure DataMarket データセットからのデータのインポート  
  モデル内のテーブルとして Azure DataMarket からデータをインポートできます。  
@@ -191,10 +190,10 @@ ms.locfileid: "48099842"
 12. **[テーブルとビューの選択]** ページで、 **[完了]** をクリックします。  
   
 ## <a name="see-also"></a>参照  
- [サポートされるデータ ソース&#40;SSAS 表形式&#41;](tabular-models/data-sources-supported-ssas-tabular.md)   
- [サポートされるデータ型&#40;SSAS 表形式&#41;](tabular-models/data-types-supported-ssas-tabular.md)   
- [権限借用&#40;SSAS 表形式&#41;](tabular-models/impersonation-ssas-tabular.md)   
- [データ処理&#40;SSAS 表形式&#41;](process-data-ssas-tabular.md)   
- [データをインポート&#40;SSAS 表形式&#41;](import-data-ssas-tabular.md)  
+ [サポートされているデータ ソース (SSAS テーブル)](tabular-models/data-sources-supported-ssas-tabular.md)   
+ [サポートされているデータ型 (SSAS テーブル)](tabular-models/data-types-supported-ssas-tabular.md)   
+ [権限借用 (SSAS テーブル)](tabular-models/impersonation-ssas-tabular.md)   
+ [データの処理 (SSAS テーブル)](process-data-ssas-tabular.md)   
+ [データのインポート (SSAS テーブル)](import-data-ssas-tabular.md)  
   
   

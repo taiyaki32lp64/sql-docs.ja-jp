@@ -20,16 +20,15 @@ helpviewer_keywords:
 - <= (less than or equal to operator)
 - less than or equal to operator (<=)
 ms.assetid: 1f05474c-0377-48cb-b567-9d85d0c40479
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
+author: rothja
+ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: e07114e37293eb4c7b1a6a6b31d59bd7ce562b45
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 5209f679888833a532849a694f0683c6d1283b13
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47842071"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68122238"
 ---
 # <a name="lt-less-than-or-equal-to-transact-sql"></a>&lt;= (以下) (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -51,11 +50,11 @@ expression <= expression
  任意の有効な[式](../../t-sql/language-elements/expressions-transact-sql.md)を指定します。 両方の式とも、暗黙的に変換可能なデータ型でなければなりません。 変換は、[データ型の優先順位](../../t-sql/data-types/data-type-precedence-transact-sql.md)のルールに依存します。  
   
 ## <a name="result-types"></a>戻り値の型  
- **ブール値**  
+ **Boolean**  
   
 ## <a name="examples"></a>使用例  
   
-### <a name="a-using--in-a-simple-query"></a>A. 使用して < 簡単なクエリで =  
+### <a name="a-using--in-a-simple-query"></a>A. 簡単なクエリで <= を使用する  
  次の例では、`HumanResources.Department` テーブル内で、`DepartmentID` の値が値 3 以下の行をすべて返します。  
   
 ```  
@@ -83,6 +82,6 @@ DepartmentID Name
   
 ## <a name="see-also"></a>参照  
  [データ型 &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)   
- [演算子 (&) #40 です。TRANSACT-SQL と #41 です。](../../t-sql/language-elements/operators-transact-sql.md)  
+ [演算子 &#40;Transact-SQL&#41;](../../t-sql/language-elements/operators-transact-sql.md)  
   
   

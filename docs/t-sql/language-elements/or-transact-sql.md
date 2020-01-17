@@ -17,16 +17,15 @@ helpviewer_keywords:
 - combining conditions
 - OR operator
 ms.assetid: b730a256-4a63-4880-9906-65b05cd9caf2
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
+author: rothja
+ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 31ced5cce6049cb63f915c6f255cb2649172571d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 78e19aa69d5d5141be7b142074a1c4d120ea8519
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47678340"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68121867"
 ---
 # <a name="or-transact-sql"></a>OR (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -46,13 +45,13 @@ boolean_expression OR boolean_expression
  TRUE、FALSE または、UNKNOWN を返す有効な[式](../../t-sql/language-elements/expressions-transact-sql.md)を指定します。  
   
 ## <a name="result-types"></a>戻り値の型  
- **ブール値**  
+ **Boolean**  
   
 ## <a name="result-value"></a>結果の値  
- OR は、いずれかの条件が TRUE の場合に TRUE を返します。  
+ OR では、いずれかの条件が TRUE の場合に TRUE を返します。  
   
 ## <a name="remarks"></a>Remarks  
- 次の表は、OR 演算子の結果です。  
+ 次の表に、OR 演算子の結果を示します。  
   
 ||TRUE|FALSE|UNKNOWN|  
 |------|----------|-----------|-------------|  

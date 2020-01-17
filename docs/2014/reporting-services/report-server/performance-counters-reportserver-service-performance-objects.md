@@ -4,21 +4,20 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 helpviewer_keywords:
 - Report Server service, performance counters
 ms.assetid: 2bcacab2-3a4f-4aae-b123-19d756b9b9ed
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: e63f964d61fa5f7402244186f292d6d0543b9304
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 001e62869146a7090fe4598650c763a690809cfb
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56037613"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66103638"
 ---
 # <a name="performance-counters-for-the-reportserverservice--and-reportserversharepointservice-performance-objects"></a>ReportServer:Service と ReportServerSharePoint:Service パフォーマンス オブジェクトのパフォーマンス カウンター
   このトピックでは、次の [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] パフォーマンス オブジェクトのパフォーマンス カウンターについて説明します。  
@@ -30,7 +29,7 @@ ms.locfileid: "56037613"
 > [!NOTE]  
 >  このパフォーマンス オブジェクトを使用して、ローカル レポート サーバー上のイベントを監視します。 スケールアウト配置でレポート サーバーを実行している場合、カウントはスケールアウト配置全体ではなく、現在のサーバーに適用されます。  
   
- パフォーマンス オブジェクトは、Windows パフォーマンス モニター (**Perfmon.exe**) で利用できます。 詳細については、Windows のマニュアルを参照してください。 [ランタイム プロファイリング](https://msdn.microsoft.com/library/w4bz2147.aspx) (https://msdn.microsoft.com/library/w4bz2147.aspx)。  
+ パフォーマンス オブジェクトは、Windows パフォーマンス モニター (**Perfmon.exe**) で利用できます。 詳細については、Windows のマニュアルを参照してください。 [ランタイム プロファイリング](https://msdn.microsoft.com/library/w4bz2147.aspx) (https://msdn.microsoft.com/library/w4bz2147.aspx) 。  
   
  このトピックの内容  
   
@@ -68,7 +67,7 @@ ms.locfileid: "56037613"
 |`Logon Attempts/sec`|ログオン試行の割合。|  
 |`Logon Successes Total`|RSWindows 認証タイプのログオンに成功した回数。 RSWindows 認証タイプには、RSWindowsNegotiate、RSWindowsNTLM、RSWindowsKerberos、RSWindowsBasic などがあります。 ゼロ (0) はカスタム認証を表します。|  
 |`Logon Successes/sec`|成功したログオンの割合。|  
-|`Memory Pressure State`|サーバーの現在のメモリの状態を示す 1 ～ 5 の数値。<br /><br /> 1:負荷なし<br /><br /> 2:低負荷<br /><br /> 3:中負荷<br /><br /> 4:高負荷<br /><br /> 5:負荷が限度を超えている|  
+|`Memory Pressure State`|サーバーの現在のメモリの状態を示す 1 ～ 5 の数値。<br /><br /> 1:負荷なし<br /><br /> 2:低負荷<br /><br /> 3:中負荷<br /><br /> 4:高負荷<br /><br /> 5:しきい値を超える負荷|  
 |`Memory Shrink Amount`|使用メモリ量を縮小するためにサーバーが要求したバイト数。|  
 |`Memory Shrink Notifications/sec`|使用メモリ量を縮小するために、サーバーが直前の 1 秒間に送信した通知の数。 この値は、サーバーでメモリ不足が何回発生しているかを示しています。|  
 |`Requests Disconnected`|通信エラーのために切断された要求の数。|  

@@ -10,15 +10,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - Visual Database Tools [SQL Server], help
 ms.assetid: 79d15b47-6759-4f48-b9ac-2c86a3cd9980
-author: stevestein
-ms.author: sstein
-manager: craigg
-ms.openlocfilehash: e5ede63cffc1865987036e066327215b01563bbb
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 69038420801a07abb7a22f5604245b3ca3ce80a2
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47744472"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68267376"
 ---
 # <a name="visual-database-tools-f1-help"></a>Visual Database Tools の F1 ヘルプ
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

@@ -1,5 +1,5 @@
 ---
-title: MeasureGroupMeasures (MDX) |Microsoft ドキュメント
+title: MeasureGroupMeasures (MDX) |Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -8,18 +8,17 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-manager: kfile
-ms.openlocfilehash: 55e00420ad3f941d50d9179dcd4a87d678cc28a0
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.openlocfilehash: 45d7adc5e1f4e103790d9d067bc4876fb5b134d2
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34742041"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68033874"
 ---
 # <a name="measuregroupmeasures-mdx"></a>MeasureGroupMeasures (MDX)
 
 
-  指定されたメジャー グループに属するメジャーのセットを返します。  
+  指定されたメジャー グループに属しているメジャーのセットを返します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -36,14 +35,14 @@ MEASUREGROUPMEASURES(MeasureGroupName)
  指定する文字列は、メジャー グループの名前と正確に一致する必要があります。 スペースを含むメジャー グループ名を角かっこで囲む必要はありません。  
   
 ## <a name="example"></a>例  
- 次の例では、Adventure Works キューブの Internet Sales メジャー グループ内のメジャーがすべて返されます。  
+ 次の例では、Adventure Works キューブ内の Internet Sales メジャー グループ内のすべてのメジャーを返します。  
   
 ```  
 SELECT MeasureGroupMeasures('Internet Sales') ON 0  
 FROM [Adventure Works]  
 ```  
   
-## <a name="see-also"></a>参照  
- [MDX 関数リファレンス&#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
+## <a name="see-also"></a>関連項目  
+ [MDX 関数リファレンス &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
   
   

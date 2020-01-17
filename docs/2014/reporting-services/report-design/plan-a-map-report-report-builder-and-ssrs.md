@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 ms.assetid: dc0c27a4-7e31-4a15-a0bc-3a02479d5b02
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 37dfbbec68d525667d415cca852aded4aba8b747
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: 706b930627039b5d2944b162ba9681808bfcc62c
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56288190"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66105464"
 ---
 # <a name="plan-a-map-report-report-builder-and-ssrs"></a>マップ レポートの計画 (レポート ビルダーおよび SSRS)
   優れたレポートは、具体的な行動や洞察につながる情報をもたらします。 地理的背景上に売上合計や人口統計などの分析データを表現するには、レポートにマップを追加します。 マップには、複数のレイヤーを含めることができます。各レイヤーには、特定の種類の空間データ (場所を表すポイント、ルートを表す線、または領域を表す多角形) によって定義されたマップ要素が表示されます。 各レイヤー上でマップ要素に分析データを関連付けることができます。  
@@ -112,14 +111,14 @@ ms.locfileid: "56288190"
   
 |ウィザード アイコン|レイヤー スタイル|レイヤーの種類|説明およびオプション|  
 |-----------------|-----------------|----------------|-----------------------------|  
-|![rs_MapType_Polygon_Basic](../media/rs-maptype-polygon-basic.gif "rs_MapType_Polygon_Basic")|基本マップ|Polygon|領域のみ (販売地域など) を表示するマップ。<br /><br /> オプション：パレットで色を使い分けるか、1 つの色を使用します。 パレットには、一連の色があらかじめ定義されています。 パレットのすべての色を割り当てた場合、色の濃淡が割り当てられます。|  
+|![rs_MapType_Polygon_Basic](../media/rs-maptype-polygon-basic.gif "rs_MapType_Polygon_Basic")|基本マップ|Polygon|領域のみ (販売地域など) を表示するマップ。<br /><br /> オプション:パレットで色を使い分けるか、単色を使用する。 パレットには、一連の色があらかじめ定義されています。 パレットのすべての色を割り当てた場合、色の濃淡が割り当てられます。|  
 |![rs_MapType_Polygon_ColorAnalytical](../media/rs-maptype-polygon-coloranalytical.gif "rs_MapType_Polygon_ColorAnalytical")|色分析マップ|Polygon|分析データを地域ごとの売上データなどで色分けして表示するマップ。|  
-|![rs_MapType_Polygon_Bubble](../media/rs-maptype-polygon-bubble.gif "rs_MapType_Polygon_Bubble")|バブル マップ|Polygon|領域に中央揃えで表示されるバブルのサイズを、地域ごとの売上データなどに基づいて変化させながら分析データを表示するマップ。<br /><br /> オプション：第 2 分析フィールドに基づいて領域の色を変更し、色のルールを指定します。|  
-|![rs_MapType_Line_Basic](../media/rs-maptype-line-basic.gif "rs_MapType_Line_Basic")|基本線マップ|線|線のみ (配達ルートなど) を表示するマップ。<br /><br /> オプション：パレットで色を使い分けるか、1 つの色を使用します。|  
-|![rs_MapType_Line_Analytical](../media/rs-maptype-line-analytical.gif "rs_MapType_Line_Analytical")|分析線マップ|線|配達済みの荷物の数や、ルートごとの時間指定の達成率などに基づいて、線の色や幅を変化させるマップ。<br /><br /> オプション：1 つの分析フィールドで線の幅を変化、第 2 分析フィールドでは、によって線の色を変更し、色のルールを指定します。|  
-|![rs_MapType_Marker_Basic](../media/rs-maptype-marker-basic.gif "rs_MapType_Marker_Basic")|基本マーカー マップ|ポイント|それぞれの場所 (市区町村など) にマーカーを表示するマップ。<br /><br /> オプション：パレットで色を使い分けるまたは 1 つの色を使用し、マーカーのスタイルを変更します。|  
-|![rs_MapType_Marker_Bubble](../media/rs-maptype-marker-bubble.gif "rs_MapType_Marker_Bubble")|バブル マーカー マップ|ポイント|場所ごとにバブルを表示するマップ。市区町村ごとの売上データなど、特定の分析データ フィールドによってバブルのサイズが変化します。<br /><br /> オプション：2 番目の分析フィールドに基づいてバブルの色を変更し、色のルールを指定します。|  
-|![rs_MapType_Marker_Analytical](../media/rs-maptype-marker-analytical.gif "rs_MapType_Marker_Analytical")|分析マーカー マップ|ポイント|場所ごとにマーカーを表示するマップ。分析データ (販売が好調な製品、利益率、ディスカウント戦略など) に基づいて、マーカーの色、サイズ、種類などが変化します。<br /><br /> オプション：マーカーの種類を 1 つの分析フィールドで、マーカーのサイズを第 2 分析フィールドを異なる、異なる 3 つ目の分析フィールドでは、マーカーの色および色ルールを指定します。|  
+|![rs_MapType_Polygon_Bubble](../media/rs-maptype-polygon-bubble.gif "rs_MapType_Polygon_Bubble")|バブル マップ|Polygon|領域に中央揃えで表示されるバブルのサイズを、地域ごとの売上データなどに基づいて変化させながら分析データを表示するマップ。<br /><br /> オプション:第 2 分析フィールドに基づいて領域の色を変え、色ルールを指定する。|  
+|![rs_MapType_Line_Basic](../media/rs-maptype-line-basic.gif "rs_MapType_Line_Basic")|基本線マップ|線|線のみ (配達ルートなど) を表示するマップ。<br /><br /> オプション:パレットで色を使い分けるか、単色を使用する。|  
+|![rs_MapType_Line_Analytical](../media/rs-maptype-line-analytical.gif "rs_MapType_Line_Analytical")|分析線マップ|線|配達済みの荷物の数や、ルートごとの時間指定の達成率などに基づいて、線の色や幅を変化させるマップ。<br /><br /> オプション:一方の分析フィールドでは線の幅を変化させ、別の分析フィールドでは線の色を変化させて、色ルールを指定する。|  
+|![rs_MapType_Marker_Basic](../media/rs-maptype-marker-basic.gif "rs_MapType_Marker_Basic")|基本マーカー マップ|ポイント|それぞれの場所 (市区町村など) にマーカーを表示するマップ。<br /><br /> オプション:パレットで色を使い分けるか、単色を使用して、マーカーのスタイルを変更する。|  
+|![rs_MapType_Marker_Bubble](../media/rs-maptype-marker-bubble.gif "rs_MapType_Marker_Bubble")|バブル マーカー マップ|ポイント|場所ごとにバブルを表示するマップ。市区町村ごとの売上データなど、特定の分析データ フィールドによってバブルのサイズが変化します。<br /><br /> オプション:第 2 分析フィールドに基づいてバブルの色を変え、色ルールを指定する。|  
+|![rs_MapType_Marker_Analytical](../media/rs-maptype-marker-analytical.gif "rs_MapType_Marker_Analytical")|分析マーカー マップ|ポイント|場所ごとにマーカーを表示するマップ。分析データ (販売が好調な製品、利益率、ディスカウント戦略など) に基づいて、マーカーの色、サイズ、種類などが変化します。<br /><br /> オプション:マーカーの種類を第 1 の分析フィールドで変化させ、マーカーのサイズを第 2 分析フィールドで変化させ、マーカーの色を第 3 の分析フィールドで変化させて、色ルールを指定する。|  
   
  マップ ウィザードでマップを追加した後、レイヤー ウィザードを使用して、追加レイヤーを作成したり、レイヤーのオプションを変更したりできます。 ウィザードの詳細については、「[マップ ウィザードおよびマップ レイヤー ウィザード &#40;レポート ビルダーおよび SSRS&#41;](map-wizard-and-map-layer-wizard-report-builder-and-ssrs.md)」を参照してください。  
   
@@ -161,10 +160,10 @@ ms.locfileid: "56288190"
   
 
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [マップまたはマップ レイヤーのデータと表示のカスタマイズ &#40;レポート ビルダーおよび SSRS&#41;](customize-the-data-and-display-of-a-map-or-map-layer-report-builder-and-ssrs.md)   
- [チュートリアル: マップ レポート&#40;レポート ビルダー&#41;](../tutorial-map-report-report-builder.md)   
+ [チュートリアル: マップ レポート &#40;レポート ビルダー&#41;](../tutorial-map-report-report-builder.md)   
  [マップ &#40;レポート ビルダーおよび SSRS&#41;](maps-report-builder-and-ssrs.md)   
- [レポートのトラブルシューティング: マップ レポート&#40;レポート ビルダーおよび SSRS&#41;](troubleshoot-reports-map-reports-report-builder-and-ssrs.md)  
+ [レポートのトラブルシューティング: マップ レポート &#40;レポート ビルダーおよび SSRS&#41;](troubleshoot-reports-map-reports-report-builder-and-ssrs.md)  
   
   

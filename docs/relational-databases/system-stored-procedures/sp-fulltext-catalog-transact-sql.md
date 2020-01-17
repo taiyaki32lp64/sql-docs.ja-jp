@@ -1,5 +1,5 @@
 ---
-title: sp_fulltext_catalog (TRANSACT-SQL) |Microsoft Docs
+title: sp_fulltext_catalog (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -15,24 +15,23 @@ dev_langs:
 helpviewer_keywords:
 - sp_fulltext_catalog
 ms.assetid: e49b98e4-d1f1-42b2-b16f-eb2fc7aa1cf5
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
+author: MikeRayMSFT
+ms.author: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: ab482a70374c9a11256719811db02dd4eb1586e4
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 4b51e4e38b7587074a39f850c2e56dbd8c09ed6f
+ms.sourcegitcommit: 454270de64347db917ebe41c081128bd17194d73
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47663240"
+ms.lasthandoff: 10/07/2019
+ms.locfileid: "72005964"
 ---
-# <a name="spfulltextcatalog-transact-sql"></a>sp_fulltext_catalog (Transact-SQL)
+# <a name="sp_fulltext_catalog-transact-sql"></a>sp_fulltext_catalog (Transact-sql)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  フルテキスト カタログの作成と削除、およびカタログのインデックス作成の開始と中止を行います。 データベースごとに複数のフルテキスト カタログを作成できます。  
+  フルテキスト カタログの作成と削除、およびカタログのインデックス作成の開始と中止を行います。 各データベースに対して複数のフルテキストカタログを作成できます。  
   
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] 使用[CREATE FULLTEXT CATALOG](../../t-sql/statements/create-fulltext-catalog-transact-sql.md)、 [ALTER FULLTEXT CATALOG](../../t-sql/statements/alter-fulltext-catalog-transact-sql.md)、および[DROP FULLTEXT CATALOG](../../t-sql/statements/drop-fulltext-catalog-transact-sql.md)代わりにします。  
+>  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] 使用して、代わりに、フルテキストカタログを[作成](../../t-sql/statements/create-fulltext-catalog-transact-sql.md)し、フルテキストカタログを[変更](../../t-sql/statements/alter-fulltext-catalog-transact-sql.md)し、[フルテキスト](../../t-sql/statements/drop-fulltext-catalog-transact-sql.md)カタログを削除します。  
   
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -46,49 +45,46 @@ sp_fulltext_catalog [ @ftcat= ] 'fulltext_catalog_name' ,
 ```  
   
 ## <a name="arguments"></a>引数  
- [ **@ftcat=**] **'***fulltext_catalog_name***'**  
- フルテキスト カタログの名前を指定します。 カタログ名は各データベース内で一意である必要があります。 *fulltext_catalog_name*は**sysname**します。  
+`[ @ftcat = ] 'fulltext_catalog_name'` は、フルテキストカタログの名前です。 カタログ名は、データベースごとに一意である必要があります。 *fulltext_catalog_name*は**sysname**です。  
   
- [  **@action=**] **'***アクション***'**  
- 実行する操作を指定します。 *アクション*は**varchar (20)**、これらの値のいずれかを指定できます。  
+`[ @action = ] 'action'` は、実行するアクションです。 *アクション*は**varchar (20)** ,、これらの値のいずれかを指定することができます。  
   
 > [!NOTE]  
->  フルテキスト カタログは必要に応じて作成、削除、修正できますが、 複数のカタログで同時にスキーマを変更することは避けてください。 使用してこれらのアクションを実行できる、 **sp_fulltext_table**ストアド プロシージャは、これは推奨される方法です。  
+>  必要に応じて、フルテキストカタログの作成、削除、変更を行うことができます。 複数のカタログで同時にスキーマを変更することは避けてください。 これらのアクションは、 **sp_fulltext_table**ストアドプロシージャを使用して実行できます。この方法をお勧めします。  
   
-|値|説明|  
+|ReplTest1|[説明]|  
 |-----------|-----------------|  
-|**作成**|ファイル システムに空の新しいフルテキスト カタログを作成しに関連付けられている行を追加します**sysfulltextcatalogs**で、 *fulltext_catalog_name*と*root_directory*、存在する場合は、次の値です。 *fulltext_catalog_name*データベース内で一意である必要があります。|  
-|**Drop**|削除操作を行う*fulltext_catalog_name*ファイル システムから削除してに関連する行を削除する**sysfulltextcatalogs**します。 このカタログに 1 つ以上のテーブルのインデックスが含まれている場合、このアクションは失敗します。 **sp_fulltext_table** '*table_name*'、'drop' は、カタログからテーブルを削除するために実行する必要があります。<br /><br /> カタログが存在しない場合、エラーが表示されます。|  
-|**start_incremental**|増分作成を開始*fulltext_catalog_name*します。 カタログが存在しない場合、エラーが表示されます。 フルテキスト インデックス作成が既にアクティブな場合、警告が表示され、作成は行われません。 存在が、変更された行だけをフルテキスト インデックス作成、取得するよう増分作成で、**タイムスタンプ**テーブル内の列、フルテキスト インデックスを作成します。|  
-|**start_full**|完全作成を開始*fulltext_catalog_name*します。 既にインデックス作成が行われている場合でも、このフルテキスト カタログと関連するすべてのテーブルにあるすべての行が、フルテキスト インデックス作成用に取得されます。|  
-|**[停止]**|インデックスの作成を停止する*fulltext_catalog_name*します。 カタログが存在しない場合、エラーが表示されます。 インデックスの作成を既に中止している場合、警告は表示されません。|  
-|**Rebuild**|再構築*fulltext_catalog_name*します。 カタログの再構築では、既存のカタログが削除され、代わりに新しいカタログが作成されます。 フルテキスト インデックスの参照を持つすべてのテーブルが新しいカタログに関連付けられます。 再構築すると、データベース システム テーブル内のフルテキスト メタデータがリセットされます。<br /><br /> 変更の追跡がオフになっていると、再構築しても、新しく作成されたフルテキスト カタログにデータが再び追加されることはありません。 この場合、再作成する次のように実行します。 **sp_fulltext_catalog**で、 **start_full**または**start_incremental**アクション。|  
+|**作成**|ファイルシステムに空の新しいフルテキストカタログを作成し、 *fulltext_catalog_name*と*root_directory*(存在する場合) を使用して、関連付けられた行を**sysfulltextcatalogs**に追加します。 *fulltext_catalog_name*は、データベース内で一意である必要があります。|  
+|**Drop**|*Fulltext_catalog_name*を削除するには、ファイルシステムから削除し、関連付けられている行を**sysfulltextcatalogs**で削除します。 このカタログに1つ以上のテーブルのインデックスが含まれている場合、このアクションは失敗します。 **sp_fulltext_table**カタログからテーブルを削除するには、'*table_name*'、' drop ' を実行する必要があります。<br /><br /> カタログが存在しない場合、エラーが表示されます。|  
+|**start_incremental**|*Fulltext_catalog_name*の増分作成を開始します。 カタログが存在しない場合、エラーが表示されます。 フルテキストインデックスの作成が既にアクティブになっている場合は、警告が表示されますが、作成操作は行われません。 増分作成では、フルテキストインデックスが作成されているテーブルに**timestamp**列がある場合に限り、変更された行のみがフルテキストインデックスに対して取得されます。|  
+|**start_full**|*Fulltext_catalog_name*の完全作成を開始します。 このフルテキストカタログに関連付けられているすべてのテーブルのすべての行は、インデックスが既に作成されている場合でも、フルテキストインデックス作成のために取得されます。|  
+|**停止**|*Fulltext_catalog_name*のインデックスの作成を停止します。 カタログが存在しない場合、エラーが表示されます。 インデックスの作成を既に中止している場合、警告は表示されません。|  
+|**Rebuild**|*Fulltext_catalog_name*を再構築します。 カタログの再構築では、既存のカタログが削除され、代わりに新しいカタログが作成されます。 フルテキスト インデックスの参照を持つすべてのテーブルが新しいカタログに関連付けられます。 再構築すると、データベース システム テーブル内のフルテキスト メタデータがリセットされます。<br /><br /> 変更の追跡が無効になっている場合、再構築しても、新しく作成されたフルテキストカタログの再作成は行われません。 この場合、再作成するには、 **start_full**または**start_incremental**アクションを使用して**sp_fulltext_catalog**を実行します。|  
   
- [ **@path=**] **'***root_directory***'**  
- ルート ディレクトリ (、完全な物理パスではなく) は、**作成**アクション。 *ただし、物理的な*は**nvarchar (100)** あり、既定値は null の場合、セットアップ時に指定された既定の場所の使用を示すです。 これは Mssql ディレクトリ内の Ftdata サブディレクトリをします。たとえば、C:\Program files \microsoft SQL Server\MSSQL13 です。MSSQLSERVER\MSSQL\FTData です。 指定するルート ディレクトリは、同じコンピューター上のドライブに存在している必要があります。ルート ディレクトリ名には、ドライブ文字だけを指定したり、相対パスを指定することはできません。 ネットワーク ドライブ、リムーバブル ドライブ、フロッピー ディスク、および UNC パスはサポートされていません。 インスタンスに関連付けられているローカルのハード ドライブ上のフルテキスト カタログを作成する必要があります[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]します。  
+`[ @path = ] 'root_directory'` は、 **create**アクションのルートディレクトリ (完全な物理パスではありません) です。 *root_directory*は**nvarchar (100)** で、既定値は NULL です。これは、セットアップ時に指定された既定の場所を使用することを示します。 Mssql ディレクトリの Ftdata サブディレクトリです。たとえば、C:\Program ・ SQL Server\MSSQL13. のようになります。MSSQLSERVER\MSSQL\FTData. 指定されたルートディレクトリは、同じコンピューター上のドライブに存在し、ドライブ文字以外で構成されている必要があり、相対パスにすることはできません。 ネットワークドライブ、リムーバブルドライブ、フロッピーディスク、および UNC パスはサポートされていません。 フルテキストカタログは、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のインスタンスに関連付けられているローカルハードドライブ上に作成する必要があります。  
   
- **@path** 有効な場合にのみ*アクション*は**作成**です。 以外のアクションの**作成**(**停止**、**を再構築**など)、 **@path** NULL であるかを省略するとします。  
+ **\@のパス**は、 *action*が**create**の場合にのみ有効です。 **Create** (**stop**、 **rebuild**など) 以外のアクションでは、 **\@パス**を NULL にするか、省略する必要があります。  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスがクラスター内の仮想サーバーの場合、指定するカタログ ディレクトリは、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] リソースが依存する共有ディスク ドライブ上にある必要があります。 場合@pathが指定されていない、既定のカタログ ディレクトリの場所が仮想サーバーのインストール時に指定されたディレクトリ内のディスク ドライブの共有。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスがクラスター内の仮想サーバーの場合、指定するカタログ ディレクトリは、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] リソースが依存する共有ディスク ドライブ上にある必要があります。 @path が指定されていない場合、既定のカタログディレクトリの場所は、仮想サーバーのインストール時に指定されたディレクトリ内の共有ディスクドライブ上にあります。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  0 (成功) または 1 (失敗)  
   
 ## <a name="result-sets"></a>結果セット  
- なし  
+ [InclusionThresholdSetting]  
   
-## <a name="remarks"></a>コメント  
- **Start_full**でフルテキスト データの完全なスナップショットを作成するアクションが使用される*fulltext_catalog_name*します。 **Start_incremental**アクションは、データベースで変更された行のみのインデックスを再作成するために使用します。 テーブル型の列がある場合にのみ、増分作成を適用できる**タイムスタンプ**します。 フルテキスト カタログ内のテーブルには、型の列が含まれていない場合**タイムスタンプ**テーブルには完全作成が行われます。  
+## <a name="remarks"></a>Remarks  
+ **Start_full**アクションは、 *fulltext_catalog_name*にフルテキストデータの完全なスナップショットを作成するために使用されます。 **Start_incremental**アクションは、データベース内の変更された行のインデックスを再作成するために使用されます。 増分作成は、テーブルに**timestamp**型の列がある場合にのみ適用できます。 フルテキストカタログ内のテーブルに**timestamp**型の列が含まれていない場合、テーブルは完全作成を行います。  
   
- フルテキスト カタログおよびインデックス データは、フルテキスト カタログ ディレクトリに作成したファイルに格納されます。 フルテキスト カタログ ディレクトリで指定されたディレクトリのサブディレクトリとして作成**@path**またはサーバーの既定のフルテキスト カタログ ディレクトリに場合**@path**はありません指定します。 フルテキスト カタログ ディレクトリの名前は、サーバー上で一意になるように作成されます。 したがって、特定のサーバー上のすべてのフルテキスト カタログ ディレクトリで、同じパスを共有できます。  
+ フルテキスト カタログおよびインデックス データは、フルテキスト カタログ ディレクトリに作成したファイルに格納されます。 フルテキストカタログディレクトリは、 **\@パス**で指定されたディレクトリのサブディレクトリとして作成されるか、 **\@パス**が指定されていない場合はサーバーの既定のフルテキストカタログディレクトリに作成されます。 フルテキストカタログディレクトリの名前は、サーバー上で一意であることを保証するように構築されています。 このため、サーバー上のすべてのフルテキストカタログディレクトリは、同じパスを共有できます。  
   
 ## <a name="permissions"></a>アクセス許可  
- 呼び出し元がのメンバーであるために必要な**db_owner**ロール。 によって要求された操作、呼び出し元が拒否されていない ALTER または CONTROL 権限 (が**db_owner**が)、ターゲット、フルテキスト カタログ。  
+ 呼び出し元は、 **db_owner**ロールのメンバーである必要があります。 要求されたアクションに応じて、呼び出し元は、対象のフルテキストカタログに対する ALTER 権限または CONTROL 権限を拒否しないようにする必要があります ( **db_owner** )。  
   
 ## <a name="examples"></a>使用例  
   
 ### <a name="a-create-a-full-text-catalog"></a>A. フルテキスト カタログを作成する  
- この例は、空のフルテキスト カタログを作成します。 **Cat_Desc**の、 **AdventureWorks2012**データベース。  
+ 次の例では、 **AdventureWorks2012**データベースに空のフルテキストカタログ**Cat_Desc**を作成します。  
   
 ```  
 USE AdventureWorks2012;  
@@ -97,8 +93,8 @@ EXEC sp_fulltext_catalog 'Cat_Desc', 'create';
 GO  
 ```  
   
-### <a name="b-to-rebuild-a-full-text-catalog"></a>B. フルテキスト カタログを再構築するには  
- この例では、既存のフルテキスト カタログを再構築。 **Cat_Desc**の、 **AdventureWorks2012**データベース。  
+### <a name="b-to-rebuild-a-full-text-catalog"></a>b. フルテキスト カタログを再構築するには  
+ この例では、 **AdventureWorks2012**データベース内の既存のフルテキストカタログ**Cat_Desc**を再構築します。  
   
 ```  
 USE AdventureWorks2012;  
@@ -107,8 +103,8 @@ EXEC sp_fulltext_catalog 'Cat_Desc', 'rebuild';
 GO  
 ```  
   
-### <a name="c-start-the-population-of-a-full-text-catalog"></a>C. フルテキスト カタログの作成を開始する  
- この例の完全作成を開始する、 **Cat_Desc**カタログ。  
+### <a name="c-start-the-population-of-a-full-text-catalog"></a>C. フルテキストカタログの作成を開始します。  
+ この例では、 **Cat_Desc**カタログの完全作成を開始します。  
   
 ```  
 USE AdventureWorks2012;  
@@ -117,8 +113,8 @@ EXEC sp_fulltext_catalog 'Cat_Desc', 'start_full';
 GO  
 ```  
   
-### <a name="d-stop-the-population-of-a-full-text-catalog"></a>D. フルテキスト カタログの作成を中止する  
- この例の作成を中止します、 **Cat_Desc**カタログ。  
+### <a name="d-stop-the-population-of-a-full-text-catalog"></a>D. フルテキストカタログの作成を停止します。  
+ この例では、 **Cat_Desc**カタログの作成を停止します。  
   
 ```  
 USE AdventureWorks2012;  
@@ -127,8 +123,8 @@ EXEC sp_fulltext_catalog 'Cat_Desc', 'stop';
 GO  
 ```  
   
-### <a name="e-to-remove-a-full-text-catalog"></a>E. フルテキスト カタログを削除する  
- この例は、 **Cat_Desc**カタログ。  
+### <a name="e-to-remove-a-full-text-catalog"></a>E. フルテキストカタログを削除するには  
+ 次の例では、 **Cat_Desc**カタログを削除します。  
   
 ```  
 USE AdventureWorks2012;  
@@ -139,9 +135,9 @@ GO
   
 ## <a name="see-also"></a>参照  
  [FULLTEXTCATALOGPROPERTY &#40;Transact-SQL&#41;](../../t-sql/functions/fulltextcatalogproperty-transact-sql.md)   
- [sp_fulltext_database &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-fulltext-database-transact-sql.md)   
- [sp_help_fulltext_catalogs &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-fulltext-catalogs-transact-sql.md)   
- [sp_help_fulltext_catalogs_cursor &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-fulltext-catalogs-cursor-transact-sql.md)   
+ [transact-sql &#40;  の&#41; sp_fulltext_database](../../relational-databases/system-stored-procedures/sp-fulltext-database-transact-sql.md)  
+ [transact-sql &#40;  の&#41; sp_help_fulltext_catalogs](../../relational-databases/system-stored-procedures/sp-help-fulltext-catalogs-transact-sql.md)  
+ [transact-sql &#40;  の&#41; sp_help_fulltext_catalogs_cursor](../../relational-databases/system-stored-procedures/sp-help-fulltext-catalogs-cursor-transact-sql.md)  
  [システム ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
  [フルテキスト検索](../../relational-databases/search/full-text-search.md)  
   

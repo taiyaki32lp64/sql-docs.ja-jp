@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 540f1c6d-df51-497e-958a-3a0f429d2920
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: ec5e38c55ae31bac1cee4489f9e92065a649a748
-ms.sourcegitcommit: ef6e3ec273b0521e7c79d5c2a4cb4dcba1744e67
+ms.openlocfilehash: cbe3efe2337b8e967ea7b5ced9fc6b3890d989e5
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51512837"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68087291"
 ---
 # <a name="guest-permissions-on-user-databases"></a>ユーザー データベースに対する guest の権限
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

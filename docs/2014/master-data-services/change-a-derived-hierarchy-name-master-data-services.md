@@ -9,15 +9,15 @@ ms.topic: conceptual
 helpviewer_keywords:
 - derived hierarchies, changing name
 ms.assetid: 5765e710-d273-4675-aee2-5718273bfdc4
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 26f744831fb551a896430f86716d96f08a4ca164
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 5a8bec1ab4bd19fdf11310fb467035eab1ac34b4
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52794954"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65483610"
 ---
 # <a name="change-a-derived-hierarchy-name-master-data-services"></a>派生階層名を変更する (マスター データ サービス)
   [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]では、派生階層の名前を変更できます。  

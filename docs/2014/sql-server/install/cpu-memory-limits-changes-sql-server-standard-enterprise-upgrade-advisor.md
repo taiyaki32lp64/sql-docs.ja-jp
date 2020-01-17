@@ -1,29 +1,28 @@
 ---
-title: SQL Server Standard および Enterprise (アップグレード アドバイザー) CPU とメモリの制限に変更点 |Microsoft Docs
+title: SQL Server Standard および Enterprise の CPU およびメモリの制限に対する変更 (アップグレードアドバイザー) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 ms.assetid: 348c45b9-2e3f-4a51-acde-5fc7e27f94a5
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: craigg
-ms.openlocfilehash: e328dc12005a7f46702094fc33446d9f8768f6b6
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 6564a507b01e45e9808f2efbce79c4b3d07b0680
+ms.sourcegitcommit: ffe2fa1b22e6040cdbd8544fb5a3083eed3be852
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48217642"
+ms.lasthandoff: 10/04/2019
+ms.locfileid: "71952572"
 ---
 # <a name="changes-to-cpu-and-memory-limits-for-sql-server-standard-and-enterprise-upgrade-advisor"></a>SQL Server Standard および Enterprise での CPU およびメモリの制限の変更点 (アップグレード アドバイザー)
   [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] Standard Edition および Enterprise Edition では、最大 64 GB のシステム メモリがサポートされています。  
   
 ||  
 |-|  
-|**[!INCLUDE[applies](../../includes/applies-md.md)]**  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] ネイティブ モード | [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePoint モード。|  
+|**[!INCLUDE[applies](../../includes/applies-md.md)]**  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] ネイティブ モード &#124; [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePoint モード。|  
   
 ## <a name="component"></a>コンポーネント  
  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]  
@@ -40,7 +39,7 @@ ms.locfileid: "48217642"
   
 -   [SQL Server のエディション別の計算容量制限](../compute-capacity-limits-by-edition-of-sql-server.md)  
   
-## <a name="see-also"></a>参照  
- [Reporting Services のアップグレードに関する問題&#40;アップグレード アドバイザー&#41;](../../../2014/sql-server/install/reporting-services-upgrade-issues-upgrade-advisor.md)  
+## <a name="see-also"></a>関連項目  
+ [アップグレードに関する&#40;問題の Reporting Services アップグレードアドバイザー&#41;](../../../2014/sql-server/install/reporting-services-upgrade-issues-upgrade-advisor.md)  
   
   

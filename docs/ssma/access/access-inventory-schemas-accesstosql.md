@@ -36,13 +36,12 @@ helpviewer_keywords:
 ms.assetid: fdd3cff2-4d62-4395-8acf-71ea8f17f524
 author: Shamikg
 ms.author: Shamikg
-manager: craigg
-ms.openlocfilehash: 71a52a619ba2a3c16c372021181b90bae72ccfe7
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: c140489877be5f34bc6d7a5b20a4ce36fdb3820f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47653727"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68068953"
 ---
 # <a name="access-inventory-schemas-accesstosql"></a>Access インベントリ スキーマ (AccessToSQL)
 次のセクションでは、SSMA によってへのアクセスのスキーマをエクスポートするときに作成されるテーブルを記述する[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]します。  
@@ -67,7 +66,7 @@ ms.locfileid: "47653727"
 |**ReportsCount**|**int**|Access データベースでのレポートの数。|  
 |**MacrosCount**|**int**|Access データベース内のマクロの数。|  
 |**AccessVersion**|**nvarchar (4000)**|データベースのアクセスのバージョン。|  
-|**[照合順序]**|**nvarchar (4000)**|Access データベースの照合順序です。 データベースの並べ替えし、文字列を比較、照合順序が決定します。|  
+|**照合順序**|**nvarchar (4000)**|Access データベースの照合順序です。 データベースの並べ替えし、文字列を比較、照合順序が決定します。|  
 |**JetVersion**|**nvarchar (4000)**|Jet データベース エンジンのバージョン。 Access データベースは、基になる Jet データベース エンジンを使用します。|  
 |**IsUpdatable**|**bit**|データベースを更新できるかどうかを示します。 値が 1 の場合は、データベースは更新可能にします。 値が 0 の場合、データベースは読み取り専用です。|  
 |**QueryTimeout**|**int**|構成されている ODBC クエリのタイムアウト値 (秒)、データベース。 既定値は 60 秒です。|  
@@ -98,7 +97,7 @@ ms.locfileid: "47653727"
 |**DataType**|**nvarchar (4000)**|データ アクセスなどの列の入力**テキスト**または**長い**します。|  
 |**IsAutoIncrement**|**bit**|列が整数値を自動的にインクリメントするかどうかを指定します。 値が 1 の場合、整数が自動的にインクリメントします。|  
 |**Ordinal**|**smallint**|0 から始まる、テーブル内の列の順序。|  
-|**DefaultValue**|**nvarchar (4000)**|列の既定値。|  
+|**DefaultValue**|**nvarchar (4000)**|列の既定値です。|  
 |**ValidationRule**|**nvarchar (4000)**|データの検証に使用する規則を追加または列で更新します。|  
   
 ## <a name="indexes"></a>インデックス  
@@ -138,7 +137,7 @@ ms.locfileid: "47653727"
 |---------------|-------------|---------------|  
 |**DatabaseId**|**uniqueidentifier**|このクエリを含むデータベースを識別します。|  
 |**QueryId**|**int**|クエリを識別するインクリメント整数。 この列は、テーブルの主キーです。|  
-|**QueryName**|**nvarchar (4000)**|クエリの名前。|  
+|**QueryName**|**nvarchar (4000)**|クエリ名を返します。|  
 |**QueryText**|**nvarchar (4000)**|SELECT ステートメントなどの SQL クエリ コード。|  
 |**IsUpdateable**|**bit**|クエリは更新可能または読み取り専用のかどうかを指定します。|  
 |**QueryType**|**nvarchar (4000)**|などのクエリの種類を指定**選択**または**SetOperation**します。|  
@@ -153,7 +152,7 @@ ms.locfileid: "47653727"
 |**FormId**|**int**|フォームを識別するインクリメント整数。 この列は、テーブルの主キーです。|  
 |**FormName**|**nvarchar (4000)**|フォームの名前。|  
   
-## <a name="macros"></a>マクロ  
+## <a name="macros"></a>[マクロ]  
 マクロのメタデータにエクスポートするが、 **SSMA_Access_InventoryMacros**テーブル。 このテーブルには、次の列が含まれています。  
   
 |列名|データ型|説明|  
@@ -162,7 +161,7 @@ ms.locfileid: "47653727"
 |**MacroId**|**int**|マクロを識別するインクリメント整数。 この列は、テーブルの主キーです。|  
 |**マクロ名**|**nvarchar (4000)**|マクロの名前。|  
   
-## <a name="reports"></a>[レポート]  
+## <a name="reports"></a>レポート  
 レポートのメタデータにエクスポートするが、 **SSMA_Access_InventoryReports**テーブル。 このテーブルには、次の列が含まれています。  
   
 |列名|データ型|説明|  
@@ -180,6 +179,6 @@ ms.locfileid: "47653727"
 |**ModuleId**|**int**|モジュールを識別するインクリメント整数。 この列は、テーブルの主キーです。|  
 |**ModuleName**|**nvarchar (4000)**|モジュールの名前。|  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
 [Access インベントリのエクスポート](exporting-an-access-inventory-accesstosql.md)  
   

@@ -7,15 +7,15 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 5ae69ddf-27c3-467c-9af1-c89ec383f661
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 306d810d844140caf0d3ee0e5cfe04fcae55e3fa
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: a11983c6fc9e1ca2e8917fd2efdaa5c90b4d3c30
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53360004"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62828568"
 ---
 # <a name="cdc-flow-components"></a>CDC フロー コンポーネント
   SSIS 開発者は、Microsoft [!INCLUDE[ssISCurrent](../../../includes/ssiscurrent-md.md)] 用 Attunity 変更データ キャプチャ (CDC) コンポーネントを使用すると、CDC を操作し、CDC パッケージの複雑さを軽減できます。  
@@ -204,7 +204,7 @@ ms.locfileid: "53360004"
   
 ## <a name="related-content"></a>関連コンテンツ  
   
--   mattmasson.com のブログ「 [SQL Server 2012 用の SSIS の CDC](https://go.microsoft.com/fwlink/?LinkId=242543)」  
+-   mattmasson.com のブログ「 [SQL Server 2012 用の SSIS の CDC](https://www.mattmasson.com/2011/12/cdc-in-ssis-for-sql-server-2012-2/)」  
   
 -   blogs.msdn.com の CDC Service の設定に関するブログ エントリ「 [SQL Server 2012 の Oracle 用 CDC](https://go.microsoft.com/fwlink/?LinkId=247827)」  
   

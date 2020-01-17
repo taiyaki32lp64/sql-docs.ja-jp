@@ -1,5 +1,5 @@
 ---
-title: getBytes (int) メソッド (SQLServerResultSet) |Microsoft Docs
+title: getBytes メソッド (int) (SQLServerResultSet) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: 1385d7d4-9288-4cbd-8606-4b919e9b07b2
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 631534e2ca1d0fe7a4c127acb277fc9db7208ace
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d328a2b1f092686403ba4cbcddf1ad22d733ea06
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47722290"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68213736"
 ---
 # <a name="getbytes-method-int-sqlserverresultset"></a>getBytes (int) メソッド (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -41,13 +40,13 @@ public byte[] getBytes(int columnIndex)
  列インデックスを示す **int** です。  
   
 ## <a name="return-value"></a>戻り値  
- 配列の**バイト**値。  
+ **バイト**値の配列。  
   
 ## <a name="exceptions"></a>例外  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- この getBytes メソッドは、java.sql.ResultSet インターフェイスの getBytes メソッドによって指定されます。  
+ この getBytes メソッドは、java.sql.ResultSet インターフェイスの getBytes メソッドで規定されています。  
   
  このメソッドでは、サーバーからバイトの生データを読み取ることにより、すべての列を取得できます。 byte 配列が、サーバーに格納されている形式のまま、サーバーから直接返されます。  
   

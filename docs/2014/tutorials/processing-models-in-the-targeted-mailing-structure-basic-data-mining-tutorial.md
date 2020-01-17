@@ -11,11 +11,11 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: 605088d405cbd2dcfba92a2da5fa4e07c38d8f0b
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56038983"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63188230"
 ---
 # <a name="processing-models-in-the-targeted-mailing-structure-basic-data-mining-tutorial"></a>絞り込みメール配信構造でのモデルの処理 (基本的なデータ マイニング チュートリアル)
   作成したマイニング モデルを参照したり操作したりする前に、[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] プロジェクトを配置し、マイニング構造とマイニング モデルを処理する必要があります。  

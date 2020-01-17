@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 0a1fa7c0-7494-4706-bec1-1ac2c764f6be
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: fead9d6f80c62995cf156adc092221113a9ff24c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 6afb061e07b3d01395031b4ce00fe315364ef382
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47713610"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68045014"
 ---
 # <a name="microsoft-supplied-odbc-drivers"></a>Microsoft 提供の ODBC ドライバー
 *ドライバー*ライブラリには、ODBC api 関数を実装します。 各ドライバーでは、特定のデータベース管理システム (DBMS) に固有です。 ほとんどの場合、ドライバーが; 基になる DBMS の機能を公開します。DBMS でサポートされていない機能を実装する必要はありません。 ドライバーは、特定のタスクを実行し、2 つのカテゴリに分類できます: ファイルおよび DBMS ベースします。 ドライバーとドライバーのアーキテクチャの詳細については、次を参照してください。[ドライバー](../../odbc/reference/drivers.md)します。  

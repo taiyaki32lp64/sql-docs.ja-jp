@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 dev_langs:
 - VB
@@ -13,15 +12,15 @@ dev_langs:
 helpviewer_keywords:
 - paths [Integration Services], properties
 ms.assetid: 89b1e347-9579-4f6b-af74-c6519ea08eea
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: a1b69e60cc4adc85d6af9a909f3278a179ea06df
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: fc13943df93acf2227b089b177cdca6c86ee1831
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48171002"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66056663"
 ---
 # <a name="path-properties"></a>パスのプロパティ
   [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] のオブジェクト モデルでは、データ フロー オブジェクトのコンポーネント、入力、出力、入力列、および出力列の各レベルに、共通プロパティとカスタム プロパティがあります。 多くのプロパティの値は読み取り専用で、実行時にデータ フロー エンジンによって割り当てられます。  
@@ -35,11 +34,11 @@ ms.locfileid: "48171002"
   
 |プロパティ名|データ型|説明|  
 |-------------------|---------------|-----------------|  
-|[PathAnnotation]|Integer (列挙)|注釈をパスと共にデザイナー画面に表示するかどうかを示す値。 指定できる値は`AsNeeded`、 `SourceName`、 `PathName`、および`Never`します。 既定値は `AsNeeded` です。|  
+|[PathAnnotation]|Integer (列挙)|注釈をパスと共にデザイナー画面に表示するかどうかを示す値。 値には、`AsNeeded`、`SourceName`、`PathName`、および `Never` があります。 既定値は `AsNeeded` です。|  
 |[DestinationName]|<xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSInput100>|パスに関連付けられた入力|  
 |SourceName|<xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSOutput100>|パスに関連付けられた出力|  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [Integration Services のパス](data-flow/integration-services-paths.md)   
  [共通プロパティ](../../2014/integration-services/common-properties.md)   
  [変換のカスタム プロパティ](data-flow/transformations/transformation-custom-properties.md)   

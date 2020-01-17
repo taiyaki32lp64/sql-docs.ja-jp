@@ -12,13 +12,12 @@ f1_keywords:
 ms.assetid: 72c4e539-fe11-4d57-b977-65b418d5916f
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: c6f0113072c99872236273e4e0fde5e368b48b26
-ms.sourcegitcommit: 96b2355d54dfad259826e88bdff91cc9344e16f2
+ms.openlocfilehash: 8155524f6e5d8172092630c04dbb0540514b56ed
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51350456"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68099573"
 ---
 # <a name="database-properties-transaction-log-shipping-page"></a>[データベースのプロパティ] \([トランザクション ログの配布] ページ)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -26,7 +25,7 @@ ms.locfileid: "51350456"
   
  ログ配布の概念については、「 [ログ配布について &#40;SQL Server&#41;](../../database-engine/log-shipping/about-log-shipping-sql-server.md)」を参照してください。  
   
-## <a name="options"></a>[変数]  
+## <a name="options"></a>オプション  
  **[ログ配布構成のプライマリ データベースとして有効にする]**  
  このデータベースをログ配布のプライマリ データベースとして有効にします。 オンにした場合は、このページの残りのオプションを構成します。 このチェック ボックスをオフにした場合、このデータベースのログ配布構成は削除されます。  
   

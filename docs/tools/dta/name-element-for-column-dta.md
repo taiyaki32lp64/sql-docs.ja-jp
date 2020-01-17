@@ -1,5 +1,5 @@
 ---
-title: 要素 (DTA) の列の名前を付けます |Microsoft Docs
+title: Column の Name 要素 (DTA) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -12,15 +12,14 @@ dev_langs:
 helpviewer_keywords:
 - Name element
 ms.assetid: f93b61de-01fe-4237-ada4-f1e481550564
-author: stevestein
-ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 3e31201b8ff0057c7fd1ef41c0316e8070943e42
-ms.sourcegitcommit: 0f7cf9b7ab23df15624d27c129ab3a539e8b6457
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: a185c94dabf2efdcfa4e29c4a79d0b27f9032b93
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51291098"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68034753"
 ---
 # <a name="name-element-for-column-dta"></a>Column の Name 要素 (DTA)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

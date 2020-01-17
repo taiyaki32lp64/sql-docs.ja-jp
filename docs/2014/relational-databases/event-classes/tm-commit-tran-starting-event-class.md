@@ -1,5 +1,5 @@
 ---
-title: TM:Commit Tran Starting イベント クラス |Microsoft Docs
+title: 'TM: Commit Tran Starting イベント クラス |Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,16 +15,16 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: f53d8731ff9d5ef2484b652fc1c7c673ba9b3984
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52774504"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63061365"
 ---
-# <a name="tm-commit-tran-starting-event-class"></a>TM:Commit Tran Starting イベント クラス
+# <a name="tm-commit-tran-starting-event-class"></a>TM: Commit Tran Starting イベント クラス
   TM:Commit Tran Starting イベント クラスでは、COMMIT TRANSACTION 要求が開始されていることを示します。 要求は、トランザクション管理インターフェイスを使用してクライアントから送信されます。 EventSubClass 列は、現在のトランザクションがコミットされた後に新しいトランザクションが開始されるかどうかを示します。  
   
-## <a name="tm-commit-tran-starting-event-class-data-columns"></a>TM:Commit Tran Starting イベント クラスのデータ列  
+## <a name="tm-commit-tran-starting-event-class-data-columns"></a>TM: Commit Tran Starting イベント クラスのデータ列  
   
 |データ列名|データ型|説明|列 ID|フィルターの適用|  
 |----------------------|---------------|-----------------|---------------|----------------|  
@@ -37,17 +37,17 @@ ms.locfileid: "52774504"
 |EventSubClass|`int`|イベント サブクラスの種類。<br /><br /> 1 = コミット<br /><br /> 2 = コミットして開始|21|はい|  
 |GroupID|`int`|SQL トレース イベントが発生したワークロード グループの ID。|66|はい|  
 |HostName|`nvarchar`|クライアントが実行されているコンピューターの名前。 このデータ列にはクライアントからホスト名が提供されている場合に値が格納されます。 ホスト名を指定するには、HOST_NAME 関数を使用します。|8|はい|  
-|IsSystem|`int`|イベントがシステム プロセスとユーザー プロセスのどちらで発生したか。 1 はシステム、0 はユーザーです。|60|はい|  
+|IsSystem|`int`|イベントがシステム プロセスとユーザー プロセスのどちらで発生したか。 1 はシステム、0 はユーザーです。|60|[はい]|  
 |LoginName|`nvarchar`|ユーザーのログイン名 ( [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] セキュリティ ログインまたは DOMAIN\username という形式の [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows ログイン資格情報)。|11|はい|  
-|LoginSid|`image`|ログイン ユーザーのセキュリティ ID 番号 (SID)。 この情報は、sys.server_principals カタログ ビューで参照できます。 各 SID はサーバーのログインごとに一意です。|41|はい|  
-|NTDomainName|`nvarchar`|ユーザーが所属する Windows ドメイン。|7|はい|  
+|LoginSid|`image`|ログイン ユーザーのセキュリティ ID 番号 (SID)。 この情報は、sys.server_principals カタログ ビューで参照できます。 各 SID はサーバーのログインごとに一意です。|41|[はい]|  
+|NTDomainName|`nvarchar`|ユーザーが所属する Windows ドメイン。|7|[はい]|  
 |NTUserName|`nvarchar`|Windows のユーザー名。|6|はい|  
 |RequestID|`int`|ステートメントが含まれている要求の ID。|49|はい|  
 |ServerName|`nvarchar`|トレースされている [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスの名前。|26|いいえ|  
 |SessionLoginName|`nvarchar`|セッションを開始したユーザーのログイン名。 たとえば、Login1 を使用して [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] に接続し、Login2 でステートメントを実行すると、SessionLoginName には Login1 が表示され、LoginName には Login2 が表示されます。 この列には、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ログインと Windows ログインの両方が表示されます。|64|はい|  
 |SPID|`int`|イベントが発生したセッションの ID。|12|はい|  
 |StartTime|`datetime`|イベントの開始時刻 (取得できた場合)。|14|はい|  
-|TextData|`ntext`|トレースでキャプチャされたイベント クラスに依存するテキスト値。|1|はい|  
+|TextData|`ntext`|トレースでキャプチャされたイベント クラスに依存するテキスト値。|1|[はい]|  
 |TransactionID|`bigint`|システムによって割り当てられたトランザクション ID。|4|はい|  
 |XactSequence|`bigint`|現在のトランザクションを説明するトークン。|50|はい|  
   

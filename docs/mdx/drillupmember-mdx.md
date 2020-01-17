@@ -1,5 +1,5 @@
 ---
-title: DrillupMember (MDX) |Microsoft ドキュメント
+title: DrillupMember (MDX) |Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -8,18 +8,17 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-manager: kfile
-ms.openlocfilehash: 31981669d5d08e63a853b8daa530b886f9b7dfbe
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.openlocfilehash: 5dfdec16d20173639cc92a80b1ca546f44b70334
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34740791"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68049191"
 ---
 # <a name="drillupmember-mdx"></a>DrillupMember (MDX)
 
 
-  指定されたセットのメンバーのうち、2 番目に指定されたセットに含まれるメンバーの子孫ではないものを返します。  
+  2 番目に指定されたセット内のメンバーの子孫ではないが、指定されたセット メンバーを返します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -36,15 +35,15 @@ DrillupMember(Set_Expression1, Set_Expression2)
  セットを返す有効な多次元式 (MDX) です。  
   
 ## <a name="remarks"></a>コメント  
- **DrillupMember**関数が 2 番目のセット内のメンバーの子孫である最初のセットで指定されたメンバーに基づくメンバーのセットを返します。 1 番目のセットの次元は任意ですが、2 番目には 1 次元のセットを指定する必要があります。 1 番目のセット内の元のメンバー間の順序はそのまま保持されます。 この関数は、1 番目のセット内のメンバーのうち、2 番目のセット内のメンバーの直接の子孫でもあるメンバーだけで構成されるセットを作成します。 1 番目のセット内のメンバーの直接の先祖が 2 番目のセット内に存在しない場合、この関数から返されるセットには 1 番目のセット内のメンバーが格納されます。 1 番目のセット内の子孫のうち、2 番目のセット内の先祖メンバーより前にあるメンバーも含められます。  
+ **DrillupMember**関数は、2 番目のセット内のメンバーの子孫である最初のセットで指定されたメンバーに基づくメンバーのセットを返します。 1 番目のセットの次元は任意ですが、2 番目には 1 次元のセットを指定する必要があります。 順序は、最初のセット内の元のメンバー間で保持されます。 関数では、2 番目のセット内のメンバーの直接の子孫である 1 番目のセット内のメンバーのみを含めることによって、セットを構築します。 最初のセット内のメンバーの直接の先祖が 2 番目のセットに存在しない場合は、この関数によって返されたセットの最初のセットに含まれるメンバーが含まれます。 2 番目のセットに親メンバーの前にある最初のセット内の子孫も含まれます。  
   
- 1 番目のセットには、メンバーではなく組を含めることもできます。 組のドリル ダウンは、OLE DB の拡張機能であり、メンバーではなく組のセットを返します。  
+ 最初のセットは、メンバーではなく組を含めることができます。 組のドリル ダウンでは、OLE DB の拡張機能し、メンバーではなく組のセットを返します。  
   
 > [!IMPORTANT]  
->  メンバーのドリルアップは、直後に子または子孫が続く場合のみ行われます。 セット内のメンバーの順序は重要の両方、ドリル ダウン\*と Drillup\*系関数。 使用を検討して、 **Hierarchize**適切に最初のセットのメンバーの順序付けする関数。  
+>  メンバーのドリルアップは、直後に子または子孫が続く場合のみ行われます。 両方のドリル ダウン、セット内のメンバーの順序は重要です\*と Drillup\*関数のファミリです。 使用を検討して、 **Hierarchize**最初のセットのメンバーの適切に順序付けする関数。  
   
 ## <a name="example"></a>例  
- 次の 3 つの例は、2 番目のセットを除いて同一です。 最初の例では、2 番目のセットは United States です。 その結果、Colorado は結果セットから除外されます。 これは United States の子孫です。  
+ 次の 3 つの例は、2 番目のセットを除いて同一です。 最初の例では、2 番目のセットは United States です。 その結果、Colorado は結果セットから除外されます。 United States の子孫になります。  
   
 ```  
 SELECT DrillUpMember (   
@@ -59,7 +58,7 @@ SELECT DrillUpMember (
 FROM [Adventure Works]  
 ```  
   
- 例 2 は、メンバーの順序の重要性を示しています。 **DrillupMember**のみ 1 番目のセット内の子孫の直前に置かれるこれらのメンバー ドリル アップ、それをドリル アップしません、Canada メンバーです。 Canada は、United States および Colorado によって、Canada の子孫から分離されています。 Canada が Alberta のすぐ上になるようにメンバーの順序を変更する場合、Alberta と Brunswick の両方が行セットから除外されます。  
+ 2 つの例のメンバーの順序の重要性が表示されます。 **DrillupMember**のみ最初のセット内の子孫の直前に置かそれらのメンバーのドリル アップ、それをドリル アップしません、Canada メンバーです。 カナダは米国および Colorado によって子孫から分離します。 あるようにカナダ アルバータ州のすぐ上のメンバーの順序を変更する場合、Alberta と Brunswick の両方から除外されます、行セット。  
   
 ```  
 SELECT DrillUpMember (   
@@ -94,7 +93,7 @@ FROM [Adventure Works]
   
 ```  
   
-## <a name="see-also"></a>参照  
- [MDX 関数リファレンス&#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
+## <a name="see-also"></a>関連項目  
+ [MDX 関数リファレンス &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
   
   

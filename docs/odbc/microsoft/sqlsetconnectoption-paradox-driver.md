@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 050ee2be-594e-4dbd-af67-8b6aae756cd1
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 0fac808000fb2c1fba4993b8a9ee3639d702bb48
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 0cf6d01650b86fca4c782521fe3c368f729e6b42
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47767280"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67897771"
 ---
 # <a name="sqlsetconnectoption-paradox-driver"></a>SQLSetConnectOption (Paradox ドライバー)
 > [!NOTE]  

@@ -13,17 +13,20 @@ helpviewer_keywords:
 - lookups [Integration Services]
 - exact matches [Integration Services]
 ms.assetid: 01b7fbca-5181-4d47-9f75-7f25af6b40d2
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: b063396b2dc55636f85b6884206c1a5a1d6e6109
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: c0f04255feb2eec4b7cc8fc2fd9df0eed67ef25f
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52509220"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71297900"
 ---
 # <a name="implement-a-lookup-in-no-cache-or-partial-cache-mode"></a>キャッシュなしモードまたは部分キャッシュ モードの参照を実装する
+
+[!INCLUDE[ssis-appliesto](../../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   参照変換は、次の部分キャッシュ モードまたはキャッシュなしのモードを使用するように構成できます。  
   
 -   [部分キャッシュ]  
@@ -61,11 +64,11 @@ ms.locfileid: "52509220"
   
     -   **[SQL クエリの結果を使用する]** をクリックし、 **[SQL コマンド]** ウィンドウでクエリを作成します。  
   
-         - または -  
+         \- または -  
   
          **[クエリの作成]** をクリックし、 **[クエリ ビルダー]** で用意されているグラフィック ツールを使用してクエリを作成します。  
   
-         - または -  
+         \- または -  
   
          **[参照]** をクリックして、ファイルから SQL ステートメントをインポートします。  
   
@@ -102,9 +105,9 @@ ms.locfileid: "52509220"
      ステートメントにパラメーターが含まれている場合は、 **[パラメーター]** をクリックしてパラメーターを入力列にマップします。  
   
     > [!NOTE]  
-    >  このページで指定するオプションの SQL ステートメントは、**[参照変換エディター]** の **[接続]** ページで指定したテーブル名をオーバーライドおよび置換します。  
+    >  このページで指定するオプションの SQL ステートメントは、 **[参照変換エディター]** の **[接続]** ページで指定したテーブル名をオーバーライドおよび置換します。  
   
-13. エラー出力を構成するには、**[エラー出力]** ページをクリックし、エラー処理オプションを設定します。 詳細については、「[[参照変換エディター] ([エラー出力] ページ)](../../../integration-services/data-flow/transformations/lookup-transformation-editor-error-output-page.md)」をご覧ください。  
+13. エラー出力を構成するには、 **[エラー出力]** ページをクリックし、エラー処理オプションを設定します。 詳細については、「[[参照変換エディター] ([エラー出力] ページ)](../../../integration-services/data-flow/transformations/lookup-transformation-editor-error-output-page.md)」をご覧ください。  
   
 14. **[OK]** をクリックして参照変換への変更を保存し、パッケージを実行します。  
   

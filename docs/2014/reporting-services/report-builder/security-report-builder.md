@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 12/29/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 ms.assetid: ed38291a-6afe-449f-9f32-3ae04502bd6f
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 6de5a58a378c67a64fa50a92d08ab140f0f34960
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: 8a68a050627d431570327822cccc60dd0aaf860b
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56289240"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66107606"
 ---
 # <a name="security-report-builder"></a>セキュリティ (レポート ビルダー)
   レポート ビルダーは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] レポート サーバーと連携するように設計されたレポート作成クライアント アプリケーションです。 レポート サーバーは、ネイティブ モードでスタンドアロン サーバーとして動作するように構成したり、SharePoint 統合モードで SharePoint サイト上のレポートをサポートするように構成したりすることができます。  
@@ -121,7 +120,7 @@ ms.locfileid: "56289240"
   
  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [インストール、アンインストール、およびレポート ビルダーのサポート](../install-uninstall-and-report-builder-support.md)   
  [レポート パラメーター &#40;レポート ビルダーおよびレポート デザイナー&#41;](../report-design/report-parameters-report-builder-and-report-designer.md)  
   

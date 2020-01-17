@@ -1,8 +1,8 @@
 ---
 title: レポート処理プロパティの設定 | Microsoft Docs
-ms.date: 03/14/2017
+ms.date: 06/10/2019
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: report-server
 ms.topic: conceptual
 helpviewer_keywords:
@@ -13,27 +13,27 @@ helpviewer_keywords:
 - report snapshots [Reporting Services], running reports from
 - report execution snapshots [Reporting Services]
 ms.assetid: b5cbc453-5986-423e-af44-1f243ef3edb1
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 3b0f9d441db188551b1b2073e968c8f000b21107
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 4a7729e8880e811494e6e1016b827831674cd812
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50031771"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "67140394"
 ---
 # <a name="set-report-processing-properties"></a>レポート処理プロパティの設定
   レポート実行プロパティでは、レポートの処理方法を制御します。 実行プロパティは、各レポートごとに設定する必要があります。  
   
- レポート実行プロパティを設定するには、レポート マネージャーでレポートを開き、[実行] プロパティ ページに移動します。 詳細については、「[[処理オプション] プロパティ ページ &#40;レポート マネージャー&#41;](https://msdn.microsoft.com/library/28f07c70-7132-4d15-9505-4fdf31dc9cc0)」を参照してください。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] を使用してプロパティを設定することもできます。「[[処理オプション] プロパティ ページ &#40;レポート マネージャー&#41;](https://msdn.microsoft.com/library/28f07c70-7132-4d15-9505-4fdf31dc9cc0)」を参照してください。  
+ レポート実行プロパティを設定する web ポータルでレポートに移動、レポートを右クリックして選択**管理**ドロップ ダウン メニューから。
   
 ## <a name="report-execution-modes"></a>レポート実行モード  
  レポートは、要求時に実行するか、スナップショットとして実行することができます。 以下のセクションでは、各方法について説明します。  
   
-### <a name="running-reports-on-demand"></a>要求時にレポートを実行  
+### <a name="running-reports-on-demand"></a>要求時にレポートを実行 
  ユーザーがレポートを実行するたびに、レポートがデータ ソースへのクエリを実行するように指定できます。これが、最新データが格納される要求時レポートになります。 レポートを開くユーザーまたはレポートを要求するユーザーごとに、レポートの新しいインスタンスが作成されます。それぞれの新しいインスタンスに、新しいクエリの結果が保持されます。 この方法を使用すると、10 人のユーザーが同時にレポートを開いた場合、10 のクエリがデータ ソースに送信され、処理されます。  
   
-### <a name="running-reports-on-demand-from-cache"></a>要求時にキャッシュからレポートを実行  
+### <a name="running-reports-on-demand-from-cache"></a>要求時にキャッシュからレポートを実行 
  パフォーマンスを向上させるため、ユーザーがレポートを実行するときに、レポート (およびデータ) を一時的にキャッシュするよう指定できます。 キャッシュされたコピーは、それ以降に同じレポートにアクセスする他のユーザーも使用できます。 この方法では、10 人のユーザーがレポートを開いた場合、レポート処理が行われるのは、最初の要求に対してのみとなります。 続いてレポートがキャッシュされ、残りの 9 人のユーザーには、そのキャッシュされたレポートが表示されます。  
   
  キャッシュされたレポートは、定義された間隔でキャッシュから削除されます。 キャッシュを空にするは、分単位で間隔を指定したり、特定の日時にスケジュールすることができます。 詳細については、「 [レポートのキャッシュ (SSRS)](../../reporting-services/report-server/caching-reports-ssrs.md)でキャッシュを事前に読み込む唯一の方法でした。  
@@ -55,9 +55,7 @@ ms.locfileid: "50031771"
   
 ## <a name="see-also"></a>参照  
  [処理オプションの設定 &#40;Reporting Services の SharePoint 統合モード&#41;](../../reporting-services/report-server-sharepoint/set-processing-options-reporting-services-in-sharepoint-integrated-mode.md)   
- [レポートの実行プロパティを構成する &#40;レポート マネージャー&#41;](../../reporting-services/reports/configure-execution-properties-for-a-report-report-manager.md)   
  [Reporting Services の概念 &#40;SSRS&#41;](../../reporting-services/reporting-services-concepts-ssrs.md)   
- [レポート履歴にスナップショットを追加する方法](../../reporting-services/report-server/add-a-snapshot-to-report-history-report-manager.md)   
+ [レポート履歴のスナップショットの作成、変更および削除](create-modify-and-delete-snapshots-in-report-history.md)   
  [レポート データ ソースに関する資格情報と接続情報を指定する](../../reporting-services/report-data/specify-credential-and-connection-information-for-report-data-sources.md)  
-  
   

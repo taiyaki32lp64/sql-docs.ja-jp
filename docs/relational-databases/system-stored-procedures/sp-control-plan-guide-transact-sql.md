@@ -17,18 +17,17 @@ helpviewer_keywords:
 ms.assetid: c96d43d5-6507-4d66-b3f5-f44c0617cb5c
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 5801a38e22a0c638e9daee1e448158941499b19f
-ms.sourcegitcommit: 78e32562f9c1fbf2e50d3be645941d4aa457e31f
+ms.openlocfilehash: 808d6e9482d293e957a0dc483df128d08b74133c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/08/2019
-ms.locfileid: "54100787"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68108762"
 ---
-# <a name="spcontrolplanguide-transact-sql"></a>sp_control_plan_guide (Transact-SQL)
+# <a name="spcontrolplanguide-transact-sql"></a>sp_control_plan_guide を (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  プラン ガイドを削除するか、有効または無効にします。  
+  削除を有効にすると、またはプラン ガイドを無効にします。  
   
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -55,22 +54,22 @@ sp_control_plan_guide [ @operation = ] N'<control_option>'
  削除するか、有効または無効にするプラン ガイドを指定します。 *plan_guide_name*は、現在のデータベースに解決されます。 指定しない場合、 *plan_guide_name*既定値は NULL です。  
   
  DROP  
- 指定されたプラン ガイドを削除*plan_guide_name*します。 プラン ガイドの削除後は、そのプラン ガイドに以前一致していたクエリを実行しても、そのプラン ガイドによる影響は受けません。  
+ 指定されたプラン ガイドを削除*plan_guide_name*します。 プラン ガイドを削除した後、プラン ガイドによって一致していたクエリを将来実行プラン ガイドは影響されません。  
   
  DROP ALL  
- 現在のデータベースのすべてのプラン ガイドを削除します。 **N'**_plan_guide_name_ DROP ALL が指定されると指定することはできません。  
+ 現在のデータベースのすべてのプラン ガイドを削除します。 **N'** _plan_guide_name_ DROP ALL が指定されると指定することはできません。  
   
  DISABLE  
  指定したプラン ガイドを無効にします。 *plan_guide_name*します。 プラン ガイドが無効になった後は、そのプラン ガイドに以前一致していたクエリを実行しても、そのプラン ガイドによる影響は受けません。  
   
  DISABLE ALL  
- 現在のデータベースのすべてのプラン ガイドを無効にします。 **N'**_plan_guide_name_ DISABLE ALL が指定されると指定することはできません。  
+ 現在のデータベース内のすべてのプラン ガイドを無効にします。 **N'** _plan_guide_name_ DISABLE ALL が指定されると指定することはできません。  
   
- ENABLE  
- 指定したプラン ガイドを有効*plan_guide_name*します。 プラン ガイドが有効になった後は、そのプラン ガイドを適切なクエリと照合できます。 既定では、プラン ガイドは作成時に有効になります。  
+ 有効にします。  
+ 指定したプラン ガイドを有効*plan_guide_name*します。 プラン ガイドが有効になった後は、そのプラン ガイドを適切なクエリと照合できます。 既定では、プラン ガイドは、作成時に有効にします。  
   
  ENABLE ALL  
- 現在のデータベースのすべてのプラン ガイドを有効にします。 **N'**_plan_guide_name_**'** ENABLE ALL を指定すると指定することはできません。  
+ 現在のデータベース内のすべてのプラン ガイドを有効にします。 **N'** _plan_guide_name_ **'** ENABLE ALL を指定すると指定することはできません。  
   
 ## <a name="remarks"></a>コメント  
  有効、無効にする場合のどちらでも、そのプラン ガイドで参照されている関数、ストアド プロシージャ、または DML トリガーを削除または変更しようとすると、エラーが発生します。  
@@ -125,7 +124,7 @@ GO
 EXEC sp_control_plan_guide N'DROP', N'Guide3';  
 ```  
   
-### <a name="b-disabling-all-plan-guides-in-the-current-database"></a>B. 現在のデータベースのすべてのプラン ガイドを無効にする  
+### <a name="b-disabling-all-plan-guides-in-the-current-database"></a>B. 現在のデータベース内のすべてのプラン ガイドを無効にします。  
  次の例では、[!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] データベースのすべてのプラン ガイドを無効にします。  
   
 ```  
@@ -134,7 +133,7 @@ GO
 EXEC sp_control_plan_guide N'DISABLE ALL';  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [データベース エンジン ストアド プロシージャ&#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
  [システム ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
  [sp_create_plan_guide &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-create-plan-guide-transact-sql.md)   

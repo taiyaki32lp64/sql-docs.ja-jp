@@ -21,15 +21,14 @@ helpviewer_keywords:
 - stopping traces
 - starting traces
 ms.assetid: aeeb38eb-229a-4c8b-ad66-57e9ce45fb6a
-author: stevestein
-ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 1956b5054f474cd27b4b6131821386c4af012bb3
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 40526c910ad10dd280f7eb304abe4db518f8c530
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47607790"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68059651"
 ---
 # <a name="start-a-trace"></a>トレースの開始
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

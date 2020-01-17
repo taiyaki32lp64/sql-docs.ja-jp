@@ -18,15 +18,14 @@ helpviewer_keywords:
 ms.assetid: 6f2d552d-bfd7-47a5-8dcb-05560aa1a32d
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 5d373b4e62a0141c64a335cc860407251e0ed9be
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: cd9c138cd574e22d1ce658c4749f2a61c34d8e73
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47623960"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68108075"
 ---
-# <a name="spdbmmonitordropmonitoring-transact-sql"></a>sp_dbmmonitordropmonitoring (Transact-SQL)
+# <a name="spdbmmonitordropmonitoring-transact-sql"></a>sp_dbmmonitordropmonitoring (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   サーバー インスタンスのすべてのデータベースに対し、ミラーリング監視ジョブを停止して削除します。  
@@ -53,13 +52,13 @@ sp_dbmmonitordropmonitoring
  **sysadmin** 固定サーバー ロールのメンバーシップが必要です。  
   
 ## <a name="examples"></a>使用例  
- 次の例では、サーバー インスタンスのすべてのミラー化されたデータベースで、データベース ミラーリング監視を削除します。  
+ ミラーリング監視サーバー インスタンス上のミラー化されたデータベースのすべてを次の例のドロップ データベース。  
   
 ```  
 EXEC sp_dbmmonitordropmonitoring ;  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [データベース ミラーリングの監視 &#40;SQL Server&#41;](../../database-engine/database-mirroring/monitoring-database-mirroring-sql-server.md)   
  [sp_dbmmonitorchangemonitoring &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dbmmonitorchangemonitoring-transact-sql.md)   
  [sp_dbmmonitoraddmonitoring &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dbmmonitoraddmonitoring-transact-sql.md)   

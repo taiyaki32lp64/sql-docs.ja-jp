@@ -14,28 +14,27 @@ helpviewer_keywords:
 - SMO [SQL Server], versions
 - versions [SMO]
 ms.assetid: 510907b6-e7a9-41bd-b892-d6d99a5118e1
-author: stevestein
-ms.author: sstein
-manager: craigg
+author: markingmyname
+ms.author: maghan
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 0a72b776add3dc1fb31886711b3f812b65d1176c
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: 7a7d7e7dd9bf7e6d5ad6dfa5776d76892f96ad05
+ms.sourcegitcommit: f3f83ef95399d1570851cd1360dc2f072736bef6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53203703"
+ms.lasthandoff: 08/13/2019
+ms.locfileid: "70148667"
 ---
 # <a name="files-and-version-numbers"></a>ファイルとバージョン番号
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
 
-  必要なすべての SQL Server 管理オブジェクト (SMO) コンポーネントは、Microsoft.SqlServer.SqlManagementObjects NuGet パッケージに含まれています。 SMO は複数のマネージド アセンブリに実装されます。 クライアント上またはサーバー上のいずれかで SMO アプリケーションを開発することができます。  
+  SqlManagementObjects NuGet パッケージには、必要なすべての SQL Server 管理オブジェクト (SMO) コンポーネントが含まれています。 SMO は複数のマネージド アセンブリに実装されます。 クライアント上またはサーバー上のいずれかで SMO アプリケーションを開発することができます。  
 
 > > [!Important]
-> > SMO アセンブリのファイル バージョンは、メジャーとして表示されます。**0**します。Build.Revision します。 埋め込まれたアセンブリのバージョンがメジャー。**100**します。Build.Revision します。 これは、1 つの更新で、その他の要素に影響しませんは、各アプリケーションで使用される SMO のバージョンを分離します。
+> > SMO アセンブリのファイルバージョンは、メジャーとして表示されます。**0**。ビルド. リビジョン。 ただし、埋め込みアセンブリのバージョンは Major です。**100**。ビルド. リビジョン。 これは、各アプリケーションで使用されている SMO のバージョンを別々に保持し、1つの更新プログラムが他のアプリケーションに影響を与えないようにするためです。
 > > 
-> > このためする必要があります**いない**これらのバージョンのアセンブリをグローバル アセンブリ キャッシュ (GAC) にインストールします。 そう考えられる原因、他のアプリケーションなど[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Management Studio を中断します。 
+> > このため、これらのバージョンのアセンブリをグローバルアセンブリキャッシュ (GAC) にインストール**しない**でください。 これにより、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Management Studio などの他のアプリケーションが中断する可能性があります。 
   
-|ファイル|説明|  
+|File|説明|  
 |-----------|-----------------|  
 |Microsoft.SqlServer.ConnectionInfo.dll|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスへの接続のサポートが含まれています。|  
 |Microsoft.SqlServer.ServiceBrokerEnum.dll|[!INCLUDE[msCoName](../../includes/msconame-md.md)] Service Broker のプログラミングのサポートが含まれています。 Service Broker にアクセスするプログラムにのみ必要です。|  

@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: f2e6391d-9aaf-4b09-ae1c-a27c1ada6301
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 5d6c21fa5df3545b641ccb935c53f6d7a689f580
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 69a9db6da093341264953e698cdbb1145093d9a5
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47702950"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67980870"
 ---
 # <a name="getpooledconnection-method-javalangstring-javalangstring"></a>getPooledConnection (java.lang.String, java.lang.String) メソッド
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -41,7 +40,7 @@ public javax.sql.PooledConnection getPooledConnection(java.lang.String user,
   
  ユーザー名を含む**文字列**です。  
   
- *passwword*  
+ *pass wword*  
   
  パスワードを含む**文字列**です。  
   
@@ -52,7 +51,7 @@ public javax.sql.PooledConnection getPooledConnection(java.lang.String user,
  java.sql.SQLException  
   
 ## <a name="remarks"></a>Remarks  
- この getPooledConnection メソッドは、javax.sql.ConnectionPoolDataSource インターフェイスで getPooledConnection メソッドによって指定されます。  
+ この getPooledConnection メソッドは、javax.mail インターフェイスの getPooledConnection メソッドによって指定されます。  
   
 ## <a name="see-also"></a>参照  
  [getPooledConnection](../../../connect/jdbc/reference/getpooledconnection-method-sqlserverconnectionpooldatasource.md)   

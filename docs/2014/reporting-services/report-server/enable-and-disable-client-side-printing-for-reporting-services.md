@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 ms.assetid: 0e709c96-7517-4547-8ef6-5632f8118524
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: b5353afae9a07be7dcf5b5df3f1a2ec5442378a6
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: ea5016aa51a25bd296d2e77516b30b84a7a28cec
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56041283"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66103928"
 ---
 # <a name="enable-and-disable-client-side-printing-for-reporting-services"></a>Reporting Services のクライアント側印刷機能の有効化と無効化
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] ActiveX コントロール、 **RSClientPrint**レポートのクライアント側印刷機能は、ブラウザーで表示を提供します。 このコントロールによって表示されるカスタム印刷ダイアログ ボックスでは、一般的な印刷ダイアログ ボックスの機能がサポートされています。 この機能には、印刷プレビュー、特定のページや範囲を指定するためのページ選択、ページ余白、ページの向きなどが含まれます。 クライアント側印刷機能は既定で有効になっていますが、無効にして使用できないようにすることもできます。  
@@ -58,7 +57,7 @@ ms.locfileid: "56041283"
   
     4.  選択**ActiveX クライアントの印刷コントロールのダウンロードを有効にする**します。  
   
-    5.  **[OK]** をクリックします。  
+    5.  [**OK**] をクリックします。  
   
 -   **SharePoint モードのレポート サーバー**の場合:  
   
@@ -72,7 +71,7 @@ ms.locfileid: "56041283"
   
     5.  **[クライアントの印刷を有効にする]** を選択します。 **[クライアントの印刷を有効にする]** オプションは、ページの下部付近にあります。  
   
-    6.  **[OK]** をクリックします。  
+    6.  [**OK**] をクリックします。  
   
 -   レポート サーバーのシステム プロパティを設定するスクリプトまたはコードを記述**EnableClientPrinting**に `false.`  
   

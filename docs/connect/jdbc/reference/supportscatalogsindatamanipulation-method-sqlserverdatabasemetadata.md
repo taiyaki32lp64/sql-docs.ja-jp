@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: ee1af47a-4c04-4391-83a5-54ced80218c8
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: c35d0f312dde450f33c9c295e092d9bc594b87f2
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: bed23d0a0781de7c384e61cb09903e2ab2136268
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47826920"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67969730"
 ---
 # <a name="supportscatalogsindatamanipulation-method-sqlserverdatabasemetadata"></a>supportsCatalogsInDataManipulation メソッド (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -36,13 +35,13 @@ public boolean supportsCatalogsInDataManipulation()
 ```  
   
 ## <a name="return-value"></a>戻り値  
- **true**サポートされている場合。 それ以外の場合は、 **false**です。  
+ サポートされている場合は**true** 。 それ以外の場合は、 **false**です。  
   
 ## <a name="exceptions"></a>例外  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- この supportsCatalogInDataManipulation メソッドは、java.sql.DatabaseMetaData インターフェイスで supportsCatalogInDataManipulation メソッドによって指定されます。  
+ この supportsCatalogInDataManipulation メソッドは、supportsCatalogInDataManipulation メソッドによって、java メタデータインターフェイスで指定されます。  
   
 ## <a name="see-also"></a>参照  
  [SQLServerDatabaseMetaData のメソッド](../../../connect/jdbc/reference/sqlserverdatabasemetadata-methods.md)   

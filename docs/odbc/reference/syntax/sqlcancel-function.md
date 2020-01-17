@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: ac0b5972-627f-4440-8c5a-0e8da728726d
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: b9d0c756db7f84e6bcec46a61ef805f885f39d28
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: 94f823cdefe4b3e5a62beb62062356dad3a88a03
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53214653"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68036117"
 ---
 # <a name="sqlcancel-function"></a>SQLCancel 関数
 **準拠**  
@@ -38,7 +37,7 @@ ms.locfileid: "53214653"
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
   
 SQLRETURN SQLCancel(  
      SQLHSTMT     StatementHandle);  

@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 ms.assetid: c962b0ff-ce8a-4742-8262-dc730901afcf
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 7f7f1df9e5b5ee885af3e7a0fe462faeafd2d6b7
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 619d35c084884aa72de63ff221d5a6f61ea86196
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56026423"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66108487"
 ---
 # <a name="lesson-2-modifying-the-report-data-source-properties"></a>レッスン 2:レポート データ ソースのプロパティの変更
   このレッスンでは、受信者に配信されるレポートを、レポート マネージャーを使って選択します。 ここで定義するデータ ドリブン サブスクリプションによって、チュートリアル「 **基本的なテーブル レポートの作成 (SSRS チュートリアル)** 」で作成されたレポート [基本的なテーブル レポートの作成 (SSRS チュートリアル)](../reporting-services/create-a-basic-table-report-ssrs-tutorial.md)が配信されます。 この後の手順では、レポートがデータの取得に使用するデータ ソースの接続情報を変更します。 データ ドリブン サブスクリプションを介して配信できるのは、 **保存されている資格情報** を使用してレポート データ ソースにアクセスするレポートのみです。 保存されている資格情報は、レポートの自動処理に必要となります。  
@@ -92,7 +91,7 @@ ms.locfileid: "56026423"
   
 ##  <a name="bkmk_add_reportparameter"></a> レポート パラメーターを追加し、レポートを再パブリッシュ  
   
-1.   **レポート データ** ペインで、 **[新規作成]** をクリックし、 **[パラメーター]** をクリックします。  
+1.  **レポート データ** ペインで、 **[新規作成]** をクリックし、 **[パラメーター]** をクリックします。  
   
 2.  **[名前]** に「 `OrderNumber`」と入力します。  
   
@@ -114,16 +113,16 @@ ms.locfileid: "56026423"
   
          ![パラメーター領域を表示、レポート ビューアー](../../2014/tutorials/media/ssrs-tutorial-datadriven-reportviewer-parameter.gif "パラメーター領域を表示、レポート ビューアー")  
   
-8.  レポートを再配置して、このレッスンで適用した変更を、次のレッスンのサブスクリプション構成で利用できるようにします。 テーブルのチュートリアルで使用されるプロジェクト プロパティの詳細については、レポート サーバー (省略可能) に、レポートをパブリッシュ' するセクションを参照してください。 の[レッスン 6。グループ化と合計の追加&#40;Reporting Services&#41;](../reporting-services/lesson-6-adding-grouping-and-totals-reporting-services.md)します。  
+8.  レポートを再配置して、このレッスンで適用した変更を、次のレッスンのサブスクリプション構成で利用できるようにします。 テーブルのチュートリアルで使用されるプロジェクト プロパティの詳細については、レポート サーバー (省略可能) に、レポートをパブリッシュ' するセクションを参照してください。 の[レッスン 6。グループと合計の追加 &#40;Reporting Services&#41;](../reporting-services/lesson-6-adding-grouping-and-totals-reporting-services.md)」を参照してください。  
   
 ##  <a name="bkmk_redeploy"></a> レポートを再配置するには  
   
-1.  レポートを再配置して、このレッスンで適用した変更を、次のレッスンのサブスクリプション構成で利用できるようにします。 テーブルのチュートリアルで使用されるプロジェクト プロパティの詳細については、レポート サーバー (省略可能) に、レポートをパブリッシュ' するセクションを参照してください。 の[レッスン 6。グループ化と合計の追加&#40;Reporting Services&#41;](../reporting-services/lesson-6-adding-grouping-and-totals-reporting-services.md)します。  
+1.  レポートを再配置して、このレッスンで適用した変更を、次のレッスンのサブスクリプション構成で利用できるようにします。 テーブルのチュートリアルで使用されるプロジェクト プロパティの詳細については、レポート サーバー (省略可能) に、レポートをパブリッシュ' するセクションを参照してください。 の[レッスン 6。グループと合計の追加 &#40;Reporting Services&#41;](../reporting-services/lesson-6-adding-grouping-and-totals-reporting-services.md)」を参照してください。  
   
 2.  ツール バーの **[ビルド]** をクリックし、 **[Tutorial の配置]** をクリックします。  
   
 ## <a name="next-steps"></a>次の手順  
- 保存されている資格情報を使用してデータを取得するレポートを構成しました。 次に、レポート マネージャーの [データ ドリブン サブスクリプション] ページを使用してサブスクリプションを指定します。 参照してください[レッスン 3。データ ドリブン サブスクリプションを定義する](../reporting-services/lesson-3-defining-a-data-driven-subscription.md)します。  
+ 保存されている資格情報を使用してデータを取得するレポートを構成しました。 次に、レポート マネージャーの [データ ドリブン サブスクリプション] ページを使用してサブスクリプションを指定します。 「[レッスン 3:データ ドリブン サブスクリプションを定義する](../reporting-services/lesson-3-defining-a-data-driven-subscription.md)します。  
   
 ## <a name="see-also"></a>参照  
  [レポート データ ソースを管理する](report-data/manage-report-data-sources.md)   

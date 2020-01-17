@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 00b2d32a-998b-47a7-b25c-589b5bd6777a
 author: Shamikg
 ms.author: Shamikg
-manager: craigg
-ms.openlocfilehash: 86e9d39e6dd56cb5762933dc5ed37b5740a34ea5
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 82558c7839263a777a15d374acff28b4c40103d4
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51666751"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68024748"
 ---
 # <a name="find-databases-wizard-select-locations-accesstosql"></a>データベースのウィザード (場所の選択) を検索 (AccessToSQL)
 データベースの検出ウィザードの [場所の選択] ページで、Access データベースを検索するための検索パラメーターを入力します。  
@@ -58,7 +57,7 @@ SSMA はスキャンの場所を一覧表示します。 クリックすると�
 **[所有者]**  
 所有者の完全な Windows ユーザー名を入力します。 として書式設定することがありますこれ*ドメイン*\\*ユーザー*します。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
 [追加して、Access データベース ファイルを削除します。](adding-and-removing-access-database-files-accesstosql.md)  
 [ユーザー インターフェイスの Reference(Access)](https://msdn.microsoft.com/af24c303-4a41-449b-9c86-d6558a97e839)  
   

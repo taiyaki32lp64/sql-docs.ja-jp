@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - Visio shapes, dependency network
@@ -19,12 +18,12 @@ ms.assetid: aac732a8-5262-4649-b7d7-3ccf6f9cfa8b
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 0f8d69e97aa542d89291d81d60177e520e6a007b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: db069b243a0d06c142651ab4dcadd68e1e06657f
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48197932"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66081970"
 ---
 # <a name="dependency-network-diagram-walkthrough-data-mining-add-ins"></a>依存関係ネットワーク ダイアグラムのチュートリアル (データ マイニング アドイン)
   データ マイニング モデルのいくつかの種類では、データのリレーションシップを調査する方法としてネットワーク グラフを使用します。 使用して Visio にこれらのモデルをインポートすることができます、**依存関係ネットワーク**図形、カスタマイズおよび強化、レイアウトに進みます。 **Visio 用データ マイニング図形**次のような依存関係ネットワーク ダイアグラムの使用のカスタム コントロールが含まれます。  
@@ -106,7 +105,7 @@ ms.locfileid: "48197932"
      **枠の太さ**  
      グラフ全体の枠の太さの表示を切り替えます。 枠とは、ノード間の接続です。 スライダー コントロールを使用すると、強度が低い接続をフィルターで除外できます。  
   
-     **スライダー**  
+     **Slider**  
      **スライダー**依存関係ネットワーク ダイアグラムで表示されるリレーションシップの強度を制御するのに役立ちます。  
   
      グラフ内の各ノードは状態を表します。 矢印は、2 つの状態間の遷移とその遷移に関連付けられた確率を表します。 グラフに表示されるノードの数を減らすには、スライダー バーを上方向に動かします。  
@@ -123,7 +122,7 @@ ms.locfileid: "48197932"
 > [!WARNING]  
 >  アドインの以前のバージョンで使用できた依存ノードの強調表示などのショートカット メニュー オプションは、Office 2013 では機能しません。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [Visio データ マイニング図形のトラブルシューティング&#40;SQL Server データ マイニング アドイン&#41;](troubleshooting-visio-data-mining-diagrams-sql-server-data-mining-add-ins.md)  
   
   

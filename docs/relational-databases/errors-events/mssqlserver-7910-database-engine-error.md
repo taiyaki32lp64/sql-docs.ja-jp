@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 017a0113-2b17-40b3-a419-30bbc43d46b8
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: e22a2555f3a7b2e062b370085710e4ba21e74078
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 8638d205ba3958a88096d12e001a9362bb3d59cb
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47669450"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67951419"
 ---
 # <a name="mssqlserver7910"></a>MSSQLSERVER_7910
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -31,7 +30,7 @@ ms.locfileid: "47669450"
 |イベント ソース|MSSQLSERVER|  
 |コンポーネント|SQLEngine|  
 |シンボル名|DBCC2_REPAIR_PAGE_ALLOCATED|  
-|メッセージ テキスト|修復 : ページ P_ID が、オブジェクト ID O_ID、インデックス ID I_ID、パーティション ID PN_ID、アロケーション ユニット ID A_ID (型 TYPE) に割り当てられました。|  
+|メッセージ テキスト|修復:ページ P_ID が、オブジェクト ID O_ID、インデックス ID I_ID、パーティション ID PN_ID、アロケーション ユニット ID A_ID (型 TYPE) に割り当てられました。|  
   
 ## <a name="explanation"></a>説明  
 単一ページ スロット配列の IAM (Index Allocation Map) ページに 1 ページが割り当てられたことを示す、REPAIR からの情報メッセージです。  

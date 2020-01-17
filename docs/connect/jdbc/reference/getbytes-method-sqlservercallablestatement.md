@@ -1,5 +1,5 @@
 ---
-title: getBytes メソッド (SQLServerCallableStatement) |Microsoft Docs
+title: getBytes メソッド (SQLServerCallableStatement) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: b6e88cea-54b3-4d18-a9af-db54abf19f45
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 1369c40e071d6045bdf42b6c425fb4b94932cf08
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b8db05472492e7893dd7874e137baaa5cf8fd89e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47655588"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68213721"
 ---
 # <a name="getbytes-method-sqlservercallablestatement"></a>getBytes メソッド (SQLServerCallableStatement)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

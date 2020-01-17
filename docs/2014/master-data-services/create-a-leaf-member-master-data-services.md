@@ -11,15 +11,15 @@ helpviewer_keywords:
 - creating leaf members [Master Data Services]
 - members [Master Data Services], creating leaf members
 ms.assetid: 0499d3b3-d508-4d43-a740-19cf53ade9f1
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: bbfd5a806badca4a8d24f57a9b3791a1fdf7ff68
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: a113803c9d6e5c688ea6eddca9446d96d79e82be
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52782394"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65483406"
 ---
 # <a name="create-a-leaf-member-master-data-services"></a>リーフ メンバーを作成する (マスター データ サービス)
   [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]、リーフ メンバーを作成する、システムにマスター データを追加して、ステージング テーブルを使用していない場合、または[!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)][!INCLUDE[ssMDSXLS](../includes/ssmdsxls-md.md)]データをインポートします。  
@@ -49,7 +49,7 @@ ms.locfileid: "52782394"
   
 8.  **[OK]** をクリックします。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [読み込むか、ステージング処理を使用してマスター データ サービス内のメンバーを更新します。](add-update-and-delete-data-master-data-services.md)   
  [統合メンバーを作成する (マスター データ サービス)](../../2014/master-data-services/create-a-consolidated-member-master-data-services.md)   
  [メンバー (マスター データ サービス)](../../2014/master-data-services/members-master-data-services.md)  

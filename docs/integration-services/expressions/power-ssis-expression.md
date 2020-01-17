@@ -10,17 +10,20 @@ ms.topic: conceptual
 helpviewer_keywords:
 - POWER function
 ms.assetid: db48ae65-bfa6-4db1-8d3c-d0d4f8a399bc
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: 4748de700d229d03058154b5b46e15aa66ba27f7
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 818f99100150c366c3caf982555f802b2ca6fc68
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47595360"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71297437"
 ---
 # <a name="power-ssis-expression"></a>POWER (SSIS 式)
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   指定された数値式の結果をべき乗値で返します。 power パラメーターは整数に評価される必要があります。  
   
 ## <a name="syntax"></a>構文  

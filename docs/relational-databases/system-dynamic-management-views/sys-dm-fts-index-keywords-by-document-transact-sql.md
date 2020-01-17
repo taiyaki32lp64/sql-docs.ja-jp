@@ -19,21 +19,20 @@ helpviewer_keywords:
 - sys.dm_fts_index_keywords_by_document dynamic management function
 - full-text search [SQL Server], viewing keywords
 ms.assetid: 793b978b-c8a1-428c-90c2-a3e49d81b5c9
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
+author: pmasl
+ms.author: pelopes
 monikerRange: '>=aps-pdw-2016||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 60a93e4add862a1dca67e329a15fb575ad9a1292
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 86ab3a31f53f480713ae27a70bfe59d3817af017
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47681700"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68078559"
 ---
 # <a name="sysdmftsindexkeywordsbydocument-transact-sql"></a>sys.dm_fts_index_keywords_by_document (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-pdw-md.md)]
 
-  指定されたテーブルに関連付けられているフルテキスト インデックスのドキュメント レベルのコンテンツに関連する情報を返します。  
+  指定したテーブルに関連付けられているフルテキスト インデックスのドキュメント レベルのコンテンツに関する情報を返します。  
   
  sys.dm_fts_index_keywords_by_document は動的管理関数です。  
   
@@ -66,8 +65,8 @@ sys.dm_fts_index_keywords_by_document
   
 |[列]|データ型|説明|  
 |------------|---------------|-----------------|  
-|キーワード (keyword)|**nvarchar (4000)**|フルテキスト インデックスに格納されているキーワードの 16 進数表記です。<br /><br /> 注: 0 Xff は、ファイルまたはデータセットの終了位置を示す特殊文字を表します。|  
-|display_term|**nvarchar (4000)**|人間が判読できる形式のキーワードです。 この形式は、フルテキスト インデックスに格納されている内部形式から派生しています。<br /><br /> 注: 0 Xff は、ファイルまたはデータセットの終了位置を示す特殊文字を表します。|  
+|キーワード (keyword)|**nvarchar (4000)**|フルテキスト インデックスに格納されているキーワードの 16 進数表記です。<br /><br /> 注:0 Xff は、ファイルまたはデータセットの終了位置を示す特殊文字を表します。|  
+|display_term|**nvarchar (4000)**|人間が判読できる形式のキーワードです。 この形式は、フルテキスト インデックスに格納されている内部形式から派生しています。<br /><br /> 注:0 Xff は、ファイルまたはデータセットの終了位置を示す特殊文字を表します。|  
 |column_id|**int**|現在のキーワードのフルテキスト インデックスが作成された列の ID です。|  
 |document_id|**int**|現在の用語のフルテキスト インデックスが作成されたドキュメントまたは行の ID です。 この ID は、ドキュメントまたは行のフル テキスト キー値に対応します。|  
 |occurrence_count|**int**|ドキュメントまたは行で示される現在のキーワードの出現回数**document_id**します。 ときに '*search_property_name*' が指定されている occurrence_count ドキュメントまたは行内の指定した検索プロパティの現在のキーワードのオカレンス数のみが表示されます。|  
@@ -75,11 +74,11 @@ sys.dm_fts_index_keywords_by_document
 ## <a name="remarks"></a>コメント  
  sys.dm_fts_index_keywords_by_document から返される情報は、特に次の項目を確認するのに役立ちます。  
   
--   フルテキスト インデックスに格納されているキーワードの合計数。  
+-   フルテキスト インデックスに含まれるキーワードの合計数。  
   
--   キーワードが特定のドキュメントまたは行の一部であるかどうか。  
+-   かどうか、キーワードには、特定のドキュメントまたは行の一部です。  
   
--   フルテキスト インデックス全体にキーワードが出現する回数。次のようになります。  
+-   全体のフルテキスト インデックスにキーワードが出現する回数それです：  
   
      ([合計](../../t-sql/functions/sum-transact-sql.md)(**occurrence_count**)、**キーワード**=*keyword_value* )  
   
@@ -128,7 +127,7 @@ object_id('HumanResources.JobCandidate'));
 GO  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [フルテキスト検索とセマンティック検索の動的管理ビューおよび関数&#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/full-text-and-semantic-search-dynamic-management-views-functions.md)   
  [フルテキスト検索](../../relational-databases/search/full-text-search.md)   
  [sys.dm_fts_index_keywords &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-fts-index-keywords-transact-sql.md)   

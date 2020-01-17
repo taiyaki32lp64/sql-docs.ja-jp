@@ -14,16 +14,15 @@ helpviewer_keywords:
 - statements [SQL Server], executing
 - sqlcmd utility, about sqlcmd utility
 ms.assetid: 3ec89119-7314-43ef-9e91-12e72bb63d62
-author: stevestein
-ms.author: sstein
-manager: craigg
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 0730dc681a4faa61425803f98dc091a0fb745b1e
-ms.sourcegitcommit: c19696d3d67161ce78aaa5340964da3256bf602d
+ms.openlocfilehash: 7fd1c2eafec0d0dd832e4d01d43195d7ec175485
+ms.sourcegitcommit: ffb87aa292fc9b545c4258749c28df1bd88d7342
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/29/2018
-ms.locfileid: "52617878"
+ms.lasthandoff: 10/02/2019
+ms.locfileid: "71816612"
 ---
 # <a name="sqlcmd---use-the-utility"></a>sqlcmd - ユーティリティの使用
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -41,13 +40,13 @@ ms.locfileid: "52617878"
   
 ## <a name="typically-used-sqlcmd-options"></a>一般的な sqlcmd オプション  
   
--   サーバー オプション (**-S**) は、**sqlcmd** が接続する [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスを指定します。  
+-   サーバー オプション ( **-S**) は、**sqlcmd** が接続する [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスを指定します。  
   
--   認証オプション (**-E**、**-U**、**-P**) は、**sqlcmd** が [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスに接続するために使用する資格情報を指定します。 **注:** オプション **-E** は既定値なので、指定する必要はありません。  
+-   認証オプション ( **-E**、 **-U**、 **-P**) は、**sqlcmd** が [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスに接続するために使用する資格情報を指定します。 **注:** オプション **-E** は既定値のため、指定する必要はありません。  
   
--   入力オプション (**-Q**、**-q**、**-i**) は、**sqlcmd** への入力場所を指定します。  
+-   入力オプション ( **-Q**、 **-q**、 **-i**) は、**sqlcmd** への入力場所を指定します。  
   
--   出力オプション (**-o**) は、**sqlcmd** が出力を格納するファイルを指定します。  
+-   出力オプション ( **-o**) は、**sqlcmd** が出力を格納するファイルを指定します。  
   
 ## <a name="connect-to-the-sqlcmd-utility"></a>sqlcmd ユーティリティに接続する  
   
@@ -98,7 +97,7 @@ ms.locfileid: "52617878"
     > **ヒント** **sqlcmd** ユーティリティでサポートされているオプションの一覧を表示するには、 `sqlcmd -?`を実行してください。  
   
 ## <a name="run-transact-sql-statements-interactively-by-using-sqlcmd"></a>sqlcmd を使用して Transact-SQL ステートメントを対話的に実行する  
- コマンド プロンプト ウィンドウでは、 **sqlcmd** ユーティリティを対話的に使用して、 [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントを実行できます。 [!INCLUDE[tsql](../../includes/tsql-md.md)] sqlcmd **を使用して対話的に**ステートメントを実行するには、入力ファイルまたはクエリを指定するための **-Q**、 **-q**、 **-Z**、または **-i** オプションを使用せずにこのユーティリティを実行します。 例 :  
+ コマンド プロンプト ウィンドウでは、 **sqlcmd** ユーティリティを対話的に使用して、 [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントを実行できます。 [!INCLUDE[tsql](../../includes/tsql-md.md)] sqlcmd **を使用して対話的に**ステートメントを実行するには、入力ファイルまたはクエリを指定するための **-Q**、 **-q**、 **-Z**、または **-i** オプションを使用せずにこのユーティリティを実行します。 例:  
   
  `sqlcmd -S <ComputerName>\<InstanceName>`  
   
@@ -113,7 +112,7 @@ ms.locfileid: "52617878"
 ## <a name="quoted-strings"></a>引用符で囲まれた文字列  
  引用符で囲まれた文字列は、前処理がまったく行われずそのまま使用されます。ただし、例外として、2 つの連続する引用符を入力することで、引用符自体を文字列に挿入できます。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] は、この文字の並びを 1 つの引用符として扱います (ただし、この変換はサーバーで行われます)。スクリプト変数が文字列内に存在する場合は展開されません。  
   
- 例 :  
+ 例:  
   
  `sqlcmd`  
   
@@ -250,13 +249,13 @@ ms.locfileid: "52617878"
   
  `C:\>sqlcmd -S ServerName -A`  
   
- `1> SELECT blocked FROM sys.dm_exec_requests WHERE blocked <> 0;`  
+ `1> SELECT session_id, blocking_session_id FROM sys.dm_exec_requests WHERE blocking_session_id <> 0;`  
   
  `2> GO`  
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
- `spid   blocked`  
+ `session_id   blocking_session_id`  
   
  `------ -------`  
   
@@ -474,7 +473,7 @@ ms.locfileid: "52617878"
   
  `SQLCMD returned 100 to the command shell`  
   
-### <a name="g-using-sqlcmd-to-set-encryption-on-windows-azure-sql-database"></a>G. sqlcmd を使用した Windows Azure SQL データベースでの暗号化の設定  
+### <a name="g-using-sqlcmd-to-set-encryption-on-azure-sql-database"></a>G. sqlcmd を使用した Azure SQL Database での暗号化の設定  
  **データへの接続時に**sqlcmd [!INCLUDE[ssSDS](../../includes/sssds-md.md)] を実行して、通信を暗号化するかどうか、および証明書を信頼するかどうかを指定できます。 次の 2 つの **sqlcmd**``オプションを使用できます。  
   
 -   暗号化された接続を要求するには、クライアント側で -N スイッチを使用します。 このオプションは、ADO.net オプションの `ENCRYPT = true`と同等です。  

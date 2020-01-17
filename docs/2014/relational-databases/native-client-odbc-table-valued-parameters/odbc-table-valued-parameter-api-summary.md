@@ -14,11 +14,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 3c4606fcc4bad9355753b11557a0a4be7706688a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48169342"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63199868"
 ---
 # <a name="odbc-table-valued-parameter-api-summary"></a>ODBC テーブル値パラメーター API の概要
   ここでは、テーブル値パラメーターをサポートするように機能強化された ODBC 関数を示します。  
@@ -59,7 +59,7 @@ ms.locfileid: "48169342"
   
 -   [SQLTables](../native-client-odbc-api/sqltables.md)  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [テーブル値パラメーター &#40;ODBC&#41;](table-valued-parameters-odbc.md)  
   
   

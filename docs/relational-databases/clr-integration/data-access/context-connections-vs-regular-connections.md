@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: a1dead02-be88-4b16-8cb2-db1284856764
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: f4810a7a7d117c498ce74dbe978716900b25d19f
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 69733cbf3357ba26dc9e9fdf818858dc4e747b99
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52516785"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68138712"
 ---
 # <a name="context-connections-vs-regular-connections"></a>コンテキスト接続と通常の接続の比較
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -32,7 +31,7 @@ ms.locfileid: "52516785"
   
  同じサーバーに対して通常の接続を別に開く必要が生じる場合もあります。 たとえば、上で説明されている、コンテキスト接続を使用して制限があり、[標準モードとコンテキスト接続に関する制限事項](../../../relational-databases/clr-integration/data-access/context-connections-and-regular-connections-restrictions.md)します。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [コンテキスト接続](../../../relational-databases/clr-integration/data-access/context-connection.md)  
   
   

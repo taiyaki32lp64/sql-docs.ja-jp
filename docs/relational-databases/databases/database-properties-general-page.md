@@ -12,13 +12,12 @@ f1_keywords:
 ms.assetid: 43080d43-8841-4807-baea-34a29b0fe663
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: e99e5a97b9d15702c0b1040ffade4a91528cbbf8
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 7b9ba71d5f7791b442989a5194c9cc6aede98677
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56028703"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68099600"
 ---
 # <a name="database-properties-general-page"></a>[データベースのプロパティ] \([全般] ページ)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -31,7 +30,7 @@ ms.locfileid: "56028703"
  **[最終データベース ログ バックアップ]**  
  データベース トランザクション ログが最後にバックアップされた日付を表示します。  
   
- **名前**  
+ **[名前]**  
  データベースの名前が表示されます。  
   
  **ステータス**  

@@ -1,6 +1,8 @@
 ---
-title: DENY (可用性グループの権限の拒否) (Transact-SQL) | Microsoft Docs
-ms.custom: ''
+title: DENY (可用性グループのアクセス許可の拒否)
+description: Always On 可用性グループに対する権限を拒否します。
+titleSuffix: SQL Server (Transact-SQL)
+ms.custom: seo-lt-2019
 ms.date: 05/15/2017
 ms.prod: sql
 ms.prod_service: sql-database
@@ -17,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: bda60b36-a0b9-4c20-80c1-6a5cb1d638a5
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: 3518aeb808b6a77294993aa11a40e35363dfbcd3
-ms.sourcegitcommit: c6e71ed14198da67afd7ba722823b1af9b4f4e6f
+ms.openlocfilehash: dc29fadcbe0fe3a3f2eca8616b89e9ec3e45a7a9
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/16/2019
-ms.locfileid: "54326343"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75258313"
 ---
 # <a name="deny-availability-group-permissions-transact-sql"></a>可用性グループの権限の拒否 (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -52,8 +53,8 @@ DENY permission  [ ,...n ] ON AVAILABILITY GROUP :: availability_group_name
  *permission*  
  可用性グループに対して拒否できる権限を指定します。 権限の一覧については、後の「解説」を参照してください。  
   
- ON AVAILABILITY GROUP **::**_availability_group_name_  
- 権限を拒否する可用性グループを指定します。 スコープ修飾子 (**::**) が必要です。  
+ ON AVAILABILITY GROUP **::** _availability_group_name_  
+ 権限を拒否する可用性グループを指定します。 スコープ修飾子 ( **::** ) が必要です。  
   
  TO \<server_principal>  
  権限を拒否する [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ログインを指定します。  
@@ -76,12 +77,12 @@ DENY permission  [ ,...n ] ON AVAILABILITY GROUP :: availability_group_name
  AS *SQL_Server_login*  
  このクエリを実行するプリンシパルが権限を拒否する権利を取得した、元の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ログインを指定します。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  サーバー スコープの権限を拒否できるのは、現在のデータベースが **master** のときだけです。  
   
  可用性グループに関する情報は、[sys.availability_groups &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-availability-groups-transact-sql.md) カタログ ビューで表示できます。 サーバー権限に関する情報は [sys.server_permissions](../../relational-databases/system-catalog-views/sys-server-permissions-transact-sql.md) カタログ ビュー、サーバー プリンシパルに関する情報は [sys.server_principals](../../relational-databases/system-catalog-views/sys-server-principals-transact-sql.md) カタログ ビューでそれぞれ確認できます。  
   
- 可用性グループは、サーバー レベルのセキュリティ保護可能なリソースです。 次の表に、可用性グループで拒否できる権限のうち最も限定的なものを、それらを暗黙的に含む一般的な権限と共に示します。  
+ 可用性グループは、サーバー レベルでセキュリティ保護可能なリソースです。 次の表に、可用性グループで拒否できる権限のうち最も限定的なものを、それらを暗黙的に含む一般的な権限と共に示します。  
   
 |可用性グループの権限|権限が含まれる可用性グループ権限|権限が含まれるサーバー権限|  
 |-----------------------------------|----------------------------------------------|----------------------------------|  
@@ -94,7 +95,7 @@ DENY permission  [ ,...n ] ON AVAILABILITY GROUP :: availability_group_name
 ## <a name="permissions"></a>アクセス許可  
  可用性グループに対する CONTROL 権限、またはサーバーに対する ALTER ANY AVAILABILITY GROUP 権限が必要です。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
   
 ### <a name="a-denying-view-definition-permission-on-an-availability-group"></a>A. 可用性グループの VIEW DEFINITION 権限を拒否する  
  次の例では、可用性グループ `MyAg` での `VIEW DEFINITION` 権限を、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ログイン `ZArifin` に対して拒否します。  

@@ -1,5 +1,5 @@
 ---
-title: getSchemaName メソッド (SQLServerResultSetMetaData) |Microsoft Docs
+title: getSchemaName メソッド (SQLServerResultSetMetaData) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: 2d0063ab-d5d7-420f-b388-36d5169b1358
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 31356684d8f00cdc6f3043c523859051099a6ea1
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 69e5183ceea19693205dc7f30a97e29bfb2bb70d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47597886"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67980144"
 ---
 # <a name="getschemaname-method-sqlserverresultsetmetadata"></a>getSchemaName メソッド (SQLServerResultSetMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -47,7 +46,7 @@ public java.lang.String getSchemaName(int column)
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- この getSchemaName メソッドは、java.sql.ResultSetMetaData インターフェイスで getSchemaName メソッドによって指定されます。  
+ この getSchemaName メソッドは、java.sql.ResultSetMetaData インターフェイスの getSchemaName メソッドで規定されています。  
   
 ## <a name="see-also"></a>参照  
  [SQLServerResultSetMetaData メソッド](../../../connect/jdbc/reference/sqlserverresultsetmetadata-methods.md)   

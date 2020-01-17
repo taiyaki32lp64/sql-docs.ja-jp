@@ -4,24 +4,23 @@ ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 ms.assetid: c4b47e15-0484-4c13-9182-898db825f01f
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 178060835cf90032013a11e2b674462cb6e26ea7
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: c3c9452a9be55c71431a0ed3012769b1f5f6d8eb
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56287973"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66106410"
 ---
 # <a name="parameters-collection-references-report-builder-and-ssrs"></a>Parameters コレクションの参照 (レポート ビルダーおよび SSRS)
   レポート パラメーターは、式から参照できる組み込みコレクションの 1 つです。 パラメーターを式に含めると、レポートのデータと外観をユーザーの選択に基づいてカスタマイズできます。 式は、(*Fx*) オプションまたは [\<**式**>] オプションを利用できる、すべてのレポート アイテム プロパティやテキスト ボックス プロパティで使用できます。 式は、他の方法でレポートの内容と外観を制御する場合にも使用されます。 詳細については、「[式の例 &#40;レポート ビルダーおよび SSRS&#41;](expression-examples-report-builder-and-ssrs.md)」を参照してください。  
   
- 実行時にパラメーター値をデータセットのフィールド値と比較する場合は、比較する 2 つのアイテムのデータ型が同じである必要があります。 レポート パラメーターには、次の種類のいずれかを指定できます。ブール値、DateTime、Integer、Float、またはテキストで、基になるデータ型の文字列を表します。 必要に応じて、パラメーター値のデータ型をデータセットの値に一致するように変換することが必要になる場合もあります。 詳細については、「 [式で使用されるデータ型 (レポート ビルダーおよび SSRS)](expressions-report-builder-and-ssrs.md)など、先頭に &amp; (アンパサンド) が付いた状態で表示されます。  
+ 実行時にパラメーター値をデータセットのフィールド値と比較する場合は、比較する 2 つのアイテムのデータ型が同じである必要があります。 レポート パラメーターに使用できるデータ型は次のいずれかです:Boolean、DateTime、Integer、Float、または Text (これは基になるデータ型 String を表します)。 必要に応じて、パラメーター値のデータ型をデータセットの値に一致するように変換することが必要になる場合もあります。 詳細については、「 [式で使用されるデータ型 (レポート ビルダーおよび SSRS)](expressions-report-builder-and-ssrs.md)など、先頭に &amp; (アンパサンド) が付いた状態で表示されます。  
   
  パラメーター参照を式に含めるには、パラメーター参照に適切な構文を指定する方法を理解する必要があります。これは、パラメーターが単独値パラメーターと複数の値を持つパラメーターのどちらであるかによって異なります。  
   
@@ -60,7 +59,7 @@ ms.locfileid: "56287973"
  [式 &#40;レポート ビルダーおよび SSRS&#41;](expressions-report-builder-and-ssrs.md)   
  [一般的に使用されるフィルター &#40;レポート ビルダーおよび SSRS&#41;](commonly-used-filters-report-builder-and-ssrs.md)   
  [レポート パラメーターの追加、変更、または削除 &#40;レポート ビルダーおよび SSRS&#41;](add-change-or-delete-a-report-parameter-report-builder-and-ssrs.md)   
- [チュートリアル: レポートにパラメーターを追加&#40;レポート ビルダー&#41;](../tutorial-add-a-parameter-to-your-report-report-builder.md)   
+ [チュートリアル: レポートへのパラメーターの追加 &#40;レポート ビルダー&#41;](../tutorial-add-a-parameter-to-your-report-report-builder.md)   
  [チュートリアル&#40;レポート ビルダー&#41;](../report-builder-tutorials.md)   
  [式で使用される組み込みコレクション &#40;レポート ビルダーおよび SSRS&#41;](built-in-collections-in-expressions-report-builder.md)  
   

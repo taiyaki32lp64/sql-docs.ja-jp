@@ -1,5 +1,5 @@
 ---
-title: モデルの配置 (マスター データ サービス) | Microsoft Docs
+title: モデルの配置
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -11,15 +11,14 @@ helpviewer_keywords:
 - deployment packages [Master Data Services], about deployment packages
 - deployment packages [Master Data Services]
 ms.assetid: 30085c08-034f-4efe-80fe-408f9091ff5c
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: ca46c6709614184c094bb7d8457f542b734d375d
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
-ms.translationtype: HT
+ms.openlocfilehash: 1fa740ec21867c07b2e39b9743234dd3c8121551
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52783234"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73728290"
 ---
 # <a name="deploying-models-master-data-services"></a>モデルの配置 (マスター データ サービス)
 
@@ -28,14 +27,14 @@ ms.locfileid: "52783234"
   [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]におけるパッケージは、配置可能なモデル構造と (必要に応じて) モデル データを含んだ XML ファイルです。 モデル パッケージを使用して、モデルのコピーを MDS 環境間で移動したり、既存の MDS 環境に新しいモデルを作成したりすることができます。  
   
 > [!IMPORTANT]  
->  [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] **MDSModelDeploy ツール** は、 [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] 以降で作成されたパッケージと下位互換性があります。  
+>  [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] **MDSModelDeploy ツール** は、[!INCLUDE[ssSQL11](../includes/sssql11-md.md)] 以降で作成されたパッケージと下位互換性があります。  
   
 ## <a name="tools-for-deploying-models"></a>モデルを展開するためのツール  
  モデル パッケージを使用するには、3 つのツールをニーズに応じて使い分けることができます。  
   
 -   **MDSModelDeploy ツール**: モデル オブジェクトとデータを作成して配置するには、MDSModelDeploy.exe ツールを使用します。 MDS のインストール時に既定のパスを選択した場合、 *drive*:\Program Files\Microsoft SQL Server\130\Master Data Services\Configuration にこのツールが格納されています。  
   
--   **モデル配置ウィザード**: モデルの構造のみのパッケージを作成して配置するには、[!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] Web アプリケーションのウィザードを使用します。 このウィザードを使用して、データを配置することはできません。  
+-   **モデル配置ウィザード**: モデルの構造のみのパッケージを作成して配置するには、 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] Web アプリケーションのウィザードを使用します。 このウィザードを使用して、データを配置することはできません。  
   
 -   **モデル パッケージ エディター**: モデル パッケージを編集するには、ModelPackageEditor.exe を使用してモデル パッケージ エディター ウィザードを起動します。 このウィザードを使用して、MDSModelDeploy ツールまたはモデル配置ウィザードによって作成されたパッケージを編集します。 MDS のインストール時に既定のパスを選択した場合、 *drive*:\Program Files\Microsoft SQL Server\130\Master Data Services\Configuration にこのツールが格納されています。  
   
@@ -68,7 +67,7 @@ ms.locfileid: "52783234"
 ## <a name="sample-packages"></a>サンプル パッケージ  
  サンプル パッケージ ファイルは [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]のインストールに含まれています。 このパッケージ ファイルは、 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]をインストールした Master Data Services\Samples\Packages ディレクトリにあります。 MDSModelDeploy ツールを使用してサンプル パッケージを配置したときに、サンプル モデルが作成されデータが読み込まれます。  
   
-## <a name="related-tasks"></a>Related Tasks  
+## <a name="related-tasks"></a>関連タスク  
   
 |タスクの説明|トピック|  
 |----------------------|-----------|  

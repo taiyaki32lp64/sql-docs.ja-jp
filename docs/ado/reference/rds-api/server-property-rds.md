@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: d2727ce7-da9f-4271-ae3c-9334ef477c14
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 77ad00d9c21a7f7558f8f5cafc66464c1ffc54f7
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.openlocfilehash: 9d196a60986734c5717be9711af1fa28accee414
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51600182"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67963472"
 ---
 # <a name="server-property-rds"></a>Server プロパティ (RDS)
 インターネット インフォメーション サービス (IIS) の名前との通信プロトコルを示します。  
@@ -123,7 +122,7 @@ DataControl.Server=""
 ## <a name="applies-to"></a>適用対象  
  [DataControl オブジェクト (RDS)](../../../ado/reference/rds-api/datacontrol-object-rds.md)  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [サーバー プロパティの例 (VBScript)](../../../ado/reference/rds-api/server-property-example-vbscript.md)   
  [接続プロパティ (RDS)](../../../ado/reference/rds-api/connect-property-rds.md)   
  [SQL プロパティ](../../../ado/reference/rds-api/sql-property.md)   

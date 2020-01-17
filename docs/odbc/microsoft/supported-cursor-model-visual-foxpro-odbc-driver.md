@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: be95bbb2-6886-491e-a5a7-f58028d19c1e
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 875348a501c292e55b267ece769f16dd6bc9dbdd
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e623c0ce5135a4b2e558be9c405ec2757e605ceb
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47792665"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68080714"
 ---
 # <a name="supported-cursor-model-visual-foxpro-odbc-driver"></a>サポートされるカーソル モデル (Visual FoxPro ODBC ドライバー)
 Visual FoxPro ODBC ドライバーでは、両方をサポート*ブロック*(*行セット*) と*静的*カーソル。 レベル 1 の ODBC コンプライアンスに準拠している任意のドライバーでは、静的カーソルはサポートされます。 ドライバーは、動的、キーセット ドリブンまたは混合 (キーセット カーソルおよび動的) をサポートしていませんカーソル。  

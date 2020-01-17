@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- docset-sql-devref
-- reporting-services-native
+ms.technology: reporting-services
 ms.topic: reference
 helpviewer_keywords:
 - expressions [Reporting Services], custom assemblies
@@ -15,15 +13,15 @@ helpviewer_keywords:
 - calling class members
 - custom assemblies [Reporting Services], expressions
 ms.assetid: 917c4d47-1a95-4f54-98b1-e8cb2165d90f
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 4e7f513cc737e50b6ad8276b550df30b8fd05be8
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: fb9e2ae87a82bf272e84a8d940606879aa3c1e9d
+ms.sourcegitcommit: 56b963446965f3a4bb0fa1446f49578dbff382e0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56009696"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67792802"
 ---
 # <a name="accessing-custom-assemblies-through-expressions"></a>式を使用したカスタム アセンブリへのアクセス
   カスタム アセンブリを作成し、レポート デザイナーまたはレポート サーバーで利用可能にします。そして、適切なセキュリティ ポリシーを追加し、レポート定義のカスタム アセンブリへの参照を追加すると、レポートの式を使用してアセンブリ内のクラスのメンバーにアクセスできます。 式の中でカスタム コードを参照するには、アセンブリ内のクラスのメンバーを呼び出す必要があります。 呼び出す方法は、メソッドが静的であるかインスタンス ベースであるかにより異なります。  
@@ -45,7 +43,7 @@ ms.locfileid: "56009696"
 ## <a name="calling-instance-members-from-a-report-definition-file"></a>レポート定義ファイルからインスタンス メンバーを呼び出す  
  レポート定義内からアクセスする必要があるインスタンス メンバーがカスタム アセンブリ内に含まれている場合は、クラスのインスタンス名をレポートに追加する必要があります。 **[レポートのプロパティ]** ダイアログ ボックスの **[コード]** タブを使用してクラスのインスタンス名を追加できます。 レポートにクラスのインスタンスを追加する方法については、「[レポート デザイナーでカスタム コードやアセンブリを式から参照する &#40;SSRS&#41;](../report-design/custom-code-and-assembly-references-in-expressions-in-report-designer-ssrs.md)」を参照してください。  
   
- 静的メンバーを呼び出すには、=Code *.InstanceName.Method* の形をとる式として参照する必要があります。  
+ 静的メンバーを呼び出す形をとる式として参照する必要があります。 コードを =*します。InstanceName.Method*します。  
   
 #### <a name="to-call-instance-members"></a>インスタンス メンバーを呼び出すには  
   
@@ -55,7 +53,7 @@ ms.locfileid: "56009696"
     =Code.m_myDollarCoversion.ToEUR(Fields!StandardCost.Value)  
     ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [レポートでのカスタム アセンブリの使用](using-custom-assemblies-with-reports.md)  
   
   

@@ -4,21 +4,20 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords:
 - child packages
 ms.assetid: ab0c09d7-ce2e-487d-a1ed-a4b5adb6cc01
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: ec58691ab78fdf7c57871805bb095ca48f221da7
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 1f9eb6860a40f6c47e65beb3fe109255d333d628
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53373404"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66058189"
 ---
 # <a name="implementation-of-child-packages"></a>子パッケージの実装
   [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] を使用して負荷分散を実装すると、子パッケージが他のサーバーにインストールされ、利用可能な CPU 時間またはサーバー時間を活用することができます。 子パッケージを作成および実行するには、次の手順を実行します。  
@@ -68,8 +67,8 @@ ms.locfileid: "53373404"
   
 ## <a name="related-content"></a>関連コンテンツ  
   
--   ブログ エントリ「 [SSIS:親パッケージ変数にアクセスする](https://go.microsoft.com/fwlink/?LinkId=257729)、consultingblogs.emc.com します。  
+-   ブログ エントリ「 [SSIS:親パッケージ変数にアクセスする](https://andyleonard.blog/2015/08/ssis-design-pattern-access-parent-variables-from-a-child-package-in-the-ssis-catalog/)andyleonard.blog にします。  
   
--   ブログ エントリ「 [SSIS:インプロセスまたはアウト プロセスの子パッケージを実行する必要がありますか。](https://go.microsoft.com/fwlink/?LinkId=220819)、consultingblogs.emc.com します。  
+-   記事では、[パッケージ実行タスク](../integration-services/control-flow/execute-package-task.md)します。  
   
   

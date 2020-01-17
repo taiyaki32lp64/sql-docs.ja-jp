@@ -16,15 +16,15 @@ helpviewer_keywords:
 - preprocessor tool [XML schemas]
 - XML schemas [SQL Server]
 ms.assetid: cde1de5f-077a-4a6d-8a81-1ecb6e10d549
-author: douglaslMS
-ms.author: douglasl
+author: MightyPen
+ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 78405d434ee32270363821077ca436702cb7c797
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: f878c64620ab0cd3f0bc439164ef86b54ab3b78e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48161252"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63241228"
 ---
 # <a name="preprocess-a-schema-to-merge-included-schemas"></a>含まれているスキーマをマージするためのスキーマの前処理
   W3C XSD の **include** 要素では、スキーマのモジュール性がサポートされます。そのため、1 つの XML スキーマを複数の物理ファイルにパーティション分割できます。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、この要素は現在サポートされていません。 この要素を含む XML スキーマはサーバーによって拒否されます。  

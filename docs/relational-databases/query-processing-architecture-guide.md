@@ -1,7 +1,7 @@
 ---
 title: クエリ処理アーキテクチャ ガイド | Microsoft Docs
 ms.custom: ''
-ms.date: 11/15/2018
+ms.date: 02/24/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 44fadbee-b5fe-40c0-af8a-11a1eecf6cb5
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 743c12fe1ec749c597655f249c1ba6fbfe1b0b4e
-ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
+ms.openlocfilehash: bb6463efe0b4b4f5d7b009eae6f9a4a612cf5e7e
+ms.sourcegitcommit: 722f2ec5a1af334f5bcab8341bc744d16a115273
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/18/2018
-ms.locfileid: "53591886"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74866079"
 ---
 # <a name="query-processing-architecture-guide"></a>クエリ処理アーキテクチャ ガイド
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -29,7 +28,7 @@ ms.locfileid: "53591886"
 [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] は、ローカル テーブル、パーティション テーブル、複数のサーバーに分散されたテーブルなどさまざまなデータ ストレージ アーキテクチャでクエリを処理します。 以下のトピックでは、[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] でクエリを処理して、実行プランのキャッシュによりクエリの再利用を最適化する方法について説明します。
 
 ## <a name="execution-modes"></a>実行モード
-[!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] は、2 つの異なる処理モードで SQL ステートメントを処理できます。
+[!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] は、2 つの異なる処理モードで [!INCLUDE[tsql](../includes/tsql-md.md)] ステートメントを処理できます。
 - 行モード実行
 - バッチ モード実行
 
@@ -51,10 +50,9 @@ ms.locfileid: "53591886"
 > バッチ モード実行は、大量のデータが読み取られ、集計される、データ ウェアハウス シナリオで非常に効率的となります。
 
 ## <a name="sql-statement-processing"></a>SQL ステートメントの処理
-単一の [!INCLUDE[tsql](../includes/tsql-md.md)] ステートメントの処理は、[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] で SQL ステートメントを実行する最も基本的な方法です。 ローカルのベース テーブルだけを参照する (ビューやリモート テーブルは参照しない) 単一の `SELECT` ステートメントを処理する手順が、この基本的な処理の良い例です。
+単一の [!INCLUDE[tsql](../includes/tsql-md.md)] ステートメントの処理は、[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] で [!INCLUDE[tsql](../includes/tsql-md.md)] ステートメントを実行する最も基本的な方法です。 ローカルのベース テーブルだけを参照する (ビューやリモート テーブルは参照しない) 単一の `SELECT` ステートメントを処理する手順が、この基本的な処理の良い例です。
 
 ### <a name="logical-operator-precedence"></a>論理演算子の優先順位
-
 1 つのステートメントで複数の論理演算子を使用すると、最初に `NOT` が評価され、次に `AND`、最後に `OR` が評価されます。 算術演算子、およびビット演算子は論理演算子より前に処理されます。 詳細については、「[Operator Precedence (Transact-SQL)](../t-sql/language-elements/operator-precedence-transact-sql.md)」 (演算子の順位 (Transact-SQL)) を参照してください。
 
 次の例では、色の条件が製品モデル 21 には該当しますが、製品モデル 20 には該当しません。これは、`AND` が `OR` よりも優先されるためです。
@@ -88,7 +86,6 @@ GO
 ```
 
 ### <a name="optimizing-select-statements"></a>SELECT ステートメントの最適化
-
 `SELECT` ステートメントは非手続き型であり、要求したデータを取得するときにデータベース サーバーで使用する手順が細かく指定されません。 つまり、データベース サーバーが SELECT ステートメントを分析して、要求したデータを抽出する最も効率的な方法を決定する必要があります。 これを、 `SELECT` ステートメントの最適化と呼びます。 また、最適化を行うコンポーネントをクエリ オプティマイザーと呼びます。 クエリ オプティマイザーへの入力は、クエリ、データベース スキーマ (テーブル定義やインデックスの定義)、およびデータベース統計で構成されます。 クエリ オプティマイザーの出力がクエリ実行プランです。これは、クエリ プランや単にプランと呼ばれることもあります。 クエリ プランの内容については、このトピックの後半で説明します。
 
 単一の `SELECT` ステートメントを最適化する場合のクエリ オプティマイザーの入出力は、次の図のようになります。
@@ -108,7 +105,7 @@ GO
   `TableC`、 `TableB`、 `TableA`、または  
   `TableB`、 `TableA`、 `TableC`、または  
   `TableB`、 `TableC`、 `TableA`、または  
-  `TableC`、 `TableA`、 `TableB`  
+  `TableC`、`TableA`、`TableB`  
 
 * 各テーブルからデータを取り出す方法  
   通常、各テーブルのデータにアクセスする方法にも何とおりかあります。 特定のキー値を持つ数行だけが必要な場合、データベース サーバーではインデックスを使用できます。 テーブル内のすべての行が必要な場合は、インデックスを無視してテーブル スキャンを実行できます。 テーブル内のすべての行が必要で、 `ORDER BY`で指定されたキー列のインデックスがある場合、テーブル スキャンではなくインデックス スキャンを行うと、結果セットの並べ替えを個別に行わずに済みます。 テーブルが非常に小さい場合は、テーブルにどのようにアクセスするときでもテーブル スキャンが最も効率的な方法です。
@@ -126,7 +123,6 @@ GO
 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] クエリ オプティマイザーを使用すると、プログラマやデータベース管理者が入力しなくても、データベース内の状態の変化に合わせてデータベース サーバーを動的に調整できるので、クエリ オプティマイザーは不可欠です。 これにより、プログラマはクエリの最終結果の記述だけに重点を置くことができます。 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] クエリ オプティマイザーは、ステートメントを実行するたびに、データベースの状態に合わせて効率的な実行プランを構築します。
 
 ### <a name="processing-a-select-statement"></a>SELECT ステートメントの処理
-
 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] が単一の SELECT ステートメントを処理する基本的な手順は次のとおりです。 
 
 1. パーサーが `SELECT` ステートメントをスキャンし、キーワード、式、演算子、識別子などの論理単位に分解します。
@@ -135,26 +131,105 @@ GO
 4. リレーショナル エンジンによって、実行プランの実行が開始されます。 リレーショナル エンジンは、ベース テーブルからのデータを必要とする手順を処理するときに、要求した行セットのデータを渡すようにストレージ エンジンに要求します。
 5. リレーショナル エンジンでは、ストレージ エンジンから返されたデータが結果セット用に定義された形式に変換され、結果セットをクライアントに返します。
 
-### <a name="processing-other-statements"></a>その他のステートメントの処理
+### <a name="ConstantFolding"></a> 定数のたたみ込みと式の評価 
+[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] ではクエリのパフォーマンスを向上するために、いくつかの定数式を前もって評価します。 これを定数のたたみ込みと呼びます。 定数は、3、'ABC'、'2005-12-31'、1.0e3、0x12345678 のような [!INCLUDE[tsql](../includes/tsql-md.md)] リテラルです。
 
-`SELECT` ステートメントの処理で説明した基本的な手順は、 `INSERT`、 `UPDATE`、 `DELETE`などの SQL ステートメントにも適用されます。 `UPDATE` ステートメントと `DELETE` ステートメントは、いずれも変更または削除する行セットを対象とする必要があります。 これらの行を特定する処理は、 `SELECT` ステートメントの結果セットを得るために使用された、基になる行を特定する処理と同じです。 `UPDATE` ステートメントと `INSERT` ステートメントのどちらにも、更新または挿入するデータ値を指定する SELECT ステートメントを埋め込むことができます。
+#### <a name="foldable-expressions"></a>たたみ込み可能な式
+[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] では、次の種類の式に定数のたたみ込みを適用します。
+- 定数のみから構成される数式 (1+1、5/3*2 など)。
+- 定数のみから構成される論理式 (1=1、1>2 AND 3>4 など)。
+- [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] によってたたみ込み可能と判断された組み込み関数 (`CAST`、`CONVERT` など)。 固有の関数は、通常はたたみ込み可能です。ただし結果が関数への入力のみによって決まらず、SET オプション、言語設定、データベース オプション、暗号化キーなどの、状況によって変わりうる他の情報を交えて決まる場合は例外です。 非決定的関数はたたみ込み不可能です。 組み込みの決定的関数はたたみ込み可能ですが、一部例外があります。
+
+> [!NOTE] 
+> 例外の 1 つは LOB 型です。 たたみ込み処理の出力が LOB 型 (text、image、nvarchar(max)、varchar(max)、または varbinary(max) のいずれか) である場合、[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] では式はたたみ込まれません。
+
+#### <a name="nonfoldable-expressions"></a>たたみ込み不可能な式
+その他の種類の式は、すべてたたみ込み不可能です。 具体的には、次に示す種類の式です。
+- 定数ではない式 (結果が列の値によって変わる式など)。
+- 結果がローカル変数またはパラメーター (@x など) によって変わる式。
+- 非決定的関数。
+- ユーザー定義関数 ([!INCLUDE[tsql](../includes/tsql-md.md)] および CLR)
+- 結果が言語設定によって変わる式。
+- 結果が SET オプションによって変わる式。
+- 結果がサーバー構成オプションによって変わる式。
+
+#### <a name="examples-of-foldable-and-nonfoldable-constant-expressions"></a>たたみ込み可能/不可能な定数式の例
+次のクエリを考えてみます。
+
+```sql
+SELECT *
+FROM Sales.SalesOrderHeader AS s 
+INNER JOIN Sales.SalesOrderDetail AS d 
+ON s.SalesOrderID = d.SalesOrderID
+WHERE TotalDue > 117.00 + 1000.00;
+```
+
+このクエリの `PARAMETERIZATION` データベース オプションが `FORCED` に設定されていない場合、クエリをコンパイルする前に式 `117.00 + 1000.00` が評価され、その結果である `1117.00` に置き換えられます。 定数のたたみ込みには、次に示す利点があります。
+- 実行時に式を繰り返し評価する必要がありません。
+- クエリ `TotalDue > 117.00 + 1000.00` の部分の結果セットのサイズをクエリ オプティマイザーで推定するときは、評価後の式の値が使用されます。
+
+一方、ユーザー定義関数を含んだ式は決定的関数であってもたたみ込まれないので、`dbo.f` をスカラー値のユーザー定義関数とした場合、[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] では、式 `dbo.f(100)` はたたみ込まれません。 パラメーター化の詳細については、この記事で後述する「[強制パラメーター化](#ForcedParam)」を参照してください。
+
+#### <a name="ExpressionEval"></a>式の評価 
+また、定数のたたみ込みは行われませんが、引数がコンパイル時に確定する式は、引数がパラメーターと定数のどちらでも、最適化のときにクエリ オプティマイザーのカーディナリティ (結果セットのサイズ) 推定機能によって評価されます。
+
+具体的には、次の組み込み関数と特殊演算子は、入力がすべて確定する場合コンパイル時に評価されます: `UPPER`、`LOWER`、`RTRIM`、`DATEPART( YY only )`、`GETDATE`、`CAST`、`CONVERT`。 次に示す演算子も、入力がすべて確定する場合コンパイル時に評価されます。
+- 算術演算子 : +、-、\*、/、単項演算子の -
+- 論理演算子: `AND`、`OR`、`NOT`
+- 比較演算子: <、>、<=、>=、<>、`LIKE`、`IS NULL`、`IS NOT NULL`
+
+上記以外の関数および演算子は、カーディナリティを推定するときにはクエリ オプティマイザーによって評価されません。
+
+#### <a name="examples-of-compile-time-expression-evaluation"></a>コンパイル時の式の評価の例
+次のストアド プロシージャについて考えてみましょう。
+
+```sql
+USE AdventureWorks2014;
+GO
+CREATE PROCEDURE MyProc( @d datetime )
+AS
+SELECT COUNT(*)
+FROM Sales.SalesOrderHeader
+WHERE OrderDate > @d+1;
+```
+
+このストアド プロシージャの `SELECT` ステートメントを最適化するとき、条件 `OrderDate > @d+1` に対する結果セットの予測カーディナリティがクエリ オプティマイザーによって評価されます。 式 `@d+1` は `@d` がパラメーターであるために定数がたたみ込まれません。 しかし、最適化のときにはパラメーターの値が確定しています。 したがって結果セットのサイズがクエリ オプティマイザーによって正確に推定できるので、適切なクエリ プランが選択されます。
+
+次は、上記のクエリの `@d2` をローカル変数 `@d+1` に置き換え、クエリではなく SET ステートメントで式を評価するストアド プロシージャの例を考えてみます。
+
+```sql 
+USE AdventureWorks2014;
+GO
+CREATE PROCEDURE MyProc2( @d datetime )
+AS
+BEGIN
+DECLARE @d2 datetime
+SET @d2 = @d+1
+SELECT COUNT(*)
+FROM Sales.SalesOrderHeader
+WHERE OrderDate > @d2
+END;
+```
+
+[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] で *MyProc2* の `SELECT` ステートメントを最適化するとき、`@d2` の値は確定していません。 そのため、クエリ オプティマイザーでは `OrderDate > @d2` の選択度に対して既定の推定が使用されます (この場合は 30%)。
+
+### <a name="processing-other-statements"></a>その他のステートメントの処理
+`SELECT` ステートメントの処理で説明した基本的な手順は、[!INCLUDE[tsql](../includes/tsql-md.md)]、`INSERT`、`UPDATE` などの `DELETE` ステートメントにも適用されます。 `UPDATE` ステートメントと `DELETE` ステートメントは、いずれも変更または削除する行セットを対象とする必要があります。 これらの行を特定する処理は、 `SELECT` ステートメントの結果セットを得るために使用された、基になる行を特定する処理と同じです。 `UPDATE` ステートメントと `INSERT` ステートメントのどちらにも、更新または挿入するデータ値を指定する `SELECT` ステートメントを埋め込むことができます。
 
 `CREATE PROCEDURE` または `ALTER TABLE` などの DDL (データ定義言語) ステートメントも、最終的には、システム カタログ テーブル上の一連のリレーショナル操作になります。また、場合によっては `ALTER TABLE ADD COLUMN` など、データ テーブルに対する一連のリレーショナル操作になります。
 
 ### <a name="worktables"></a>作業テーブル
-
-リレーショナル エンジンは、SQL ステートメントで指定された論理操作を行う際に、作業テーブルの作成を必要とする場合があります。 作業テーブルとは、中間結果を格納するための内部テーブルです。 作業テーブルは、特定の `GROUP BY`クエリ、 `ORDER BY`クエリ、 `UNION` クエリで生成されます。 たとえば、インデックスの対象になっていない列を `ORDER BY` 句が参照している場合、要求された順番に結果セットを並べ替えるための作業テーブルが生成されることがあります。 また、クエリ プランの一部を実行した結果を一時的に格納するためのスプールとして作業テーブルが使用されることもあります。 作業テーブルは tempdb に作成され、不要になると自動的に削除されます。
+リレーショナル エンジンでは、[!INCLUDE[tsql](../includes/tsql-md.md)] ステートメントで指定された論理操作を行う際に、作業テーブルの作成を必要とする場合があります。 作業テーブルとは、中間結果を格納するための内部テーブルです。 作業テーブルは、特定の `GROUP BY`クエリ、 `ORDER BY`クエリ、 `UNION` クエリで生成されます。 たとえば、インデックスの対象になっていない列を `ORDER BY` 句が参照している場合、要求された順番に結果セットを並べ替えるための作業テーブルが生成されることがあります。 また、クエリ プランの一部を実行した結果を一時的に格納するためのスプールとして作業テーブルが使用されることもあります。 作業テーブルは tempdb に作成され、不要になると自動的に削除されます。
 
 ### <a name="view-resolution"></a>ビューの解決
-
 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] クエリ プロセッサでは、インデックス付きビューとインデックスなしのビューの処理方法が異なります。 
 
 * インデックス付きビューの行は、テーブルと同じ形式でデータベースに格納されます。 クエリ オプティマイザーでクエリ プランにインデックス付きビューを使用することが決定されると、インデックス付きビューはベース テーブルと同じ方法で処理されます。
-* インデックスなしのビューでは、ビューの行ではなく、定義のみが格納されます。 クエリ オプティマイザーにより、ロジックがビューの定義から、インデックスなしのビューを参照する SQL ステートメントに対して作成された実行プランに組み込まれます。 
+* インデックスなしのビューでは、ビューの行ではなく、定義のみが格納されます。 クエリ オプティマイザーにより、ロジックがビューの定義から、インデックスなしのビューを参照する [!INCLUDE[tsql](../includes/tsql-md.md)] ステートメントに対して作成された実行プランに組み込まれます。 
 
-[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] のクエリ オプティマイザーでは、いつインデックス付きビューを使用するかを決定するときに、テーブルのインデックスをいつ使用するかを決定するのとよく似たロジックが使用されます。 インデックス付きビューに含まれるデータが SQL ステートメントの一部またはすべてを対象としており、クエリ オプティマイザーによってビュー上のインデックスが低コストのアクセス パスであると判断されると、クエリ内でビューが名前で参照されるかどうかにかかわらず、クエリ オプティマイザーではインデックスが選択されます。
+[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] のクエリ オプティマイザーでは、いつインデックス付きビューを使用するかを決定するときに、テーブルのインデックスをいつ使用するかを決定するのとよく似たロジックが使用されます。 インデックス付きビューに含まれるデータが [!INCLUDE[tsql](../includes/tsql-md.md)] ステートメントの一部またはすべてを対象としており、クエリ オプティマイザーによってビュー上のインデックスが低コストのアクセス パスであると判断された場合、クエリ内でビューが名前で参照されるかどうかにかかわらず、クエリ オプティマイザーではインデックスが選択されます。
 
-SQL ステートメントからインデックスなしのビューが参照されるときは、パーサーとクエリ オプティマイザーで SQL ステートメントとビューのソースが両方分析され、それらが 1 つの実行プランに解決されます。 SQL ステートメントの実行プランとビューの実行プランに別々に解決されるわけではありません。
+[!INCLUDE[tsql](../includes/tsql-md.md)] ステートメントからインデックスなしのビューが参照されるときは、パーサーとクエリ オプティマイザーで [!INCLUDE[tsql](../includes/tsql-md.md)] ステートメントとビューのソースが両方分析され、それらが 1 つの実行プランに解決されます。 [!INCLUDE[tsql](../includes/tsql-md.md)] ステートメントの実行プランとビューの実行プランに別々に解決されるわけではありません。
 
 たとえば、次のビューがあるとします。
 
@@ -169,7 +244,7 @@ ON h.BusinessEntityID = p.BusinessEntityID;
 GO
 ```
 
-次の 2 つの SQL ステートメントはどちらも、このビューに基づいてベース テーブルに同じ操作を行い、同じ結果を生成します。
+次の 2 つの [!INCLUDE[tsql](../includes/tsql-md.md)] ステートメントはどちらも、このビューに基づいてベース テーブルに同じ操作を行い、同じ結果を生成します。
 
 ```sql
 /* SELECT referencing the EmployeeName view. */
@@ -192,7 +267,6 @@ WHERE OrderDate > '20020531';
 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Management Studio のプラン表示機能では、リレーショナル エンジンがこの 2 つの `SELECT` ステートメントのどちらに対しても同じ実行プランを構築することが示されます。
 
 ### <a name="using-hints-with-views"></a>ビューでのヒントの使用
-
 クエリのビューに設定されるヒントは、ベース テーブルにアクセスするためにビューを展開するときに検出される他のヒントと競合することがあります。 この競合が発生すると、クエリはエラーを返します。 たとえば、定義にテーブル ヒントが含まれている、次のビューについて考えてみます。
 
 ```sql
@@ -281,7 +355,7 @@ WHERE TableA.ColZ = TableB.Colz;
 
 `NOEXPAND` をビューに対して指定した場合、ビューに定義されたインデックスを使用することがクエリ オプティマイザーにより検討されます。 `NOEXPAND` をオプションの `INDEX()` 句で指定すると、クエリ オプティマイザーの判断で指定されたインデックスが強制的に使用されます。 `NOEXPAND` を指定できるのはインデックス付きビューに対してのみであり、インデックスのないビューには指定できません。
 
-ビューを含んだクエリで `NOEXPAND` と `EXPAND VIEWS` のいずれも指定しない場合、基になるテーブルにアクセスするためにビューが拡張されます。 ビューを構成するクエリにテーブル ヒントが含まれている場合、基になるテーブルにヒントが反映されます  (この処理の詳細については、「ビューの解決」を参照してください)。ビューの基になるテーブルに存在するヒントのセットがテーブル間で同一であれば、クエリはインデックス付きビューと一致する可能性があります。 ほとんどの場合、ヒントはビューから直接継承されるので双方のヒントは一致します。 ただし、クエリの参照先がビューではなくテーブルであり、参照先テーブルに直接適用されているヒントがテーブルによって異なる場合、そのようなクエリはインデックス付きビューと一致しません。 ビューの展開後、 `INDEX`、 `PAGLOCK`、 `ROWLOCK`、 `TABLOCKX`、 `UPDLOCK`、 `XLOCK` のいずれかのヒントがクエリの参照先テーブルに適用される場合、クエリはインデックス付きビューと一致しません。
+ビューを含んだクエリで `NOEXPAND` と `EXPAND VIEWS` のいずれも指定しない場合、基になるテーブルにアクセスするためにビューが拡張されます。 ビューを構成するクエリにテーブル ヒントが含まれている場合、基になるテーブルにヒントが反映されます (この処理の詳細については、「ビューの解決」を参照してください)。ビューの基になるテーブルに存在するヒントのセットがテーブル間で同一であれば、クエリはインデックス付きビューと一致する可能性があります。 ほとんどの場合、ヒントはビューから直接継承されるので双方のヒントは一致します。 ただし、クエリの参照先がビューではなくテーブルであり、参照先テーブルに直接適用されているヒントがテーブルによって異なる場合、そのようなクエリはインデックス付きビューと一致しません。 ビューの展開後、 `INDEX`、 `PAGLOCK`、 `ROWLOCK`、 `TABLOCKX`、 `UPDLOCK`、 `XLOCK` のいずれかのヒントがクエリの参照先テーブルに適用される場合、クエリはインデックス付きビューと一致しません。
 
 `INDEX (index_val[ ,...n] )` という形式のテーブル ヒントでクエリ内のビューを参照しているときに、 `NOEXPAND` ヒントを指定しない場合、インデックス ヒントは無視されます。 特定のインデックスを使用するように指定するには `NOEXPAND` を使用します。 
 
@@ -296,7 +370,7 @@ WHERE TableA.ColZ = TableB.Colz;
 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] では、リモート メンバー テーブルからのデータにアクセスするときに分散クエリを効率的に使用できる、高機能で動的なプランが構築されます。 
 
 * クエリ プロセッサでは、最初に OLE DB を使用して、各メンバー テーブルから CHECK 制約の定義が取得されます。 これにより、クエリ プロセッサは、メンバー テーブル間でキー値の分布をマップできるようになります。
-* The Query Processor compares the key ranges specified in an SQL statement `WHERE` 句で指定されたキーの範囲が、メンバー テーブルでの行の分布状況を示すマップと比較されます。 次に、分散クエリを使用して SQL ステートメントの完了に必要なリモート行だけを取得するクエリ実行プランが構築されます。 この実行プランでは、リモート メンバー テーブルのデータやメタデータへのアクセスが、情報が要求されるまで遅延されます。
+* クエリ プロセッサでは、[!INCLUDE[tsql](../includes/tsql-md.md)] ステートメントの `WHERE` 句で指定されたキーの範囲が、メンバー テーブルでの行の分布状況を示すマップと比較されます。 次に、クエリ プロセッサでは、分散クエリを使用して [!INCLUDE[tsql](../includes/tsql-md.md)] ステートメントの完了に必要なリモート行だけを取得するクエリ実行プランが構築されます。 この実行プランでは、リモート メンバー テーブルのデータやメタデータへのアクセスが、情報が要求されるまで遅延されます。
 
 たとえば、顧客テーブルが Server1 (`CustomerID` 1 ～ 3299999)、Server2 (`CustomerID` 3300000 ～ 6599999)、および Server3 (`CustomerID` 6600000 ～ 9999999) にパーティション分割されたシステムがあるとします。
 
@@ -310,7 +384,7 @@ WHERE CustomerID BETWEEN 3200000 AND 3400000;
 
 このクエリの実行プランでは、ローカル メンバー テーブルから `CustomerID` のキー値が 3200000 ～ 3299999 の行が抽出され、分散クエリを実行して Server2 からキー値が 3300000 ～ 3400000 の行が取得されます。
 
-[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] のクエリ プロセッサでは、プランを構築する必要があるときにキー値がわからない SQL ステートメント用に、クエリの実行プランに動的なロジックを組み込むこともできます。 たとえば、次のようなストアド プロシージャがあるとします。
+[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] のクエリ プロセッサでは、プランを構築する必要があるときにキー値がわからない [!INCLUDE[tsql](../includes/tsql-md.md)] ステートメント用に、クエリの実行プランに動的なロジックを組み込むこともできます。 たとえば、次のようなストアド プロシージャがあるとします。
 
 ```sql
 CREATE PROCEDURE GetCustomer @CustomerIDParameter INT
@@ -335,7 +409,7 @@ ELSE IF @CustomerIDParameter BETWEEN 6600000 and 9999999
 
 ## <a name="stored-procedure-and-trigger-execution"></a>ストアド プロシージャとトリガーの実行
 
-[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] では、ストアド プロシージャとトリガーのソースだけが格納されます。 ストアド プロシージャまたはトリガーを最初に実行するときに、ソースが実行プランにコンパイルされます。 時間が経過して実行プランがメモリから削除される前にストアド プロシージャまたはトリガーを再度実行すると、リレーショナル エンジンは既存の実行プランを検出してそれを再利用します。 時間が経過して実行プランがメモリから削除されると、新しい実行プランが構築されます。 これは、[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] がすべての SQL ステートメントに行うのと同じ処理です。 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] で、動的 SQL のバッチと比較した場合の、ストアド プロシージャやトリガーのパフォーマンス上の主な利点は、SQL ステートメントが常に同じであることです。 したがって、リレーショナル エンジンを既存の実行プランに容易に適合させることができます。 その結果、ストアド プロシージャやトリガーのプランを簡単に再利用できます。
+[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] では、ストアド プロシージャとトリガーのソースだけが格納されます。 ストアド プロシージャまたはトリガーを最初に実行するときに、ソースが実行プランにコンパイルされます。 時間が経過して実行プランがメモリから削除される前にストアド プロシージャまたはトリガーを再度実行すると、リレーショナル エンジンは既存の実行プランを検出してそれを再利用します。 時間が経過して実行プランがメモリから削除されると、新しい実行プランが構築されます。 これは、[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] がすべての [!INCLUDE[tsql](../includes/tsql-md.md)] ステートメントに行うのと同じ処理です。 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] で、動的 [!INCLUDE[tsql](../includes/tsql-md.md)] のバッチと比較した場合の、ストアド プロシージャやトリガーのパフォーマンス上の主な利点は、[!INCLUDE[tsql](../includes/tsql-md.md)] ステートメントが常に同じであることです。 したがって、リレーショナル エンジンを既存の実行プランに容易に適合させることができます。 その結果、ストアド プロシージャやトリガーのプランを簡単に再利用できます。
 
 ストアド プロシージャとトリガーの実行プランは、ストアド プロシージャを呼び出すバッチやトリガーを起動するバッチの実行プランとは別に実行されます。 このため、ストアド プロシージャやトリガーの実行プランを何回でも再利用できます。
 
@@ -345,16 +419,21 @@ ELSE IF @CustomerIDParameter BETWEEN 6600000 and 9999999
 
 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] の実行プランは、主に次の要素から構成されます。 
 
-* クエリ実行プラン: 実行プランの大部分は、任意の数のユーザーが使用できる再入可能な読み取り専用のデータ構造体です。 これをクエリ プランといいます。 クエリ プランにはユーザー コンテキストは格納されません。 また、メモリに複数のクエリ プランのコピーが配置されることはありません。すべての直列実行に 1 つのコピーが使用され、すべての並列実行に 1 つのコピーが使用されます。 並列実行用コピーは、並列処理の次数に関係なくすべての並列実行に適用されます。 
-* 実行コンテキスト: クエリを現在実行しているユーザーごとに、パラメーター値など、実行に固有のデータを保持するデータ構造体が用意されています。 このデータ構造体を実行コンテキストといいます。 実行コンテキストのデータ構造体は再利用されます。 ユーザーがクエリを実行したときに使用されていない構造体が 1 つある場合、新しいユーザーのコンテキストでその構造体が再初期化されます。 
+- **クエリ実行プラン**     
+  実行プランの大部分は、任意の数のユーザーが使用できる再入可能な読み取り専用のデータ構造体です。 これをクエリ プランといいます。 クエリ プランにはユーザー コンテキストは格納されません。 また、メモリに複数のクエリ プランのコピーが配置されることはありません。すべての直列実行に 1 つのコピーが使用され、すべての並列実行に 1 つのコピーが使用されます。 並列実行用コピーは、並列処理の次数に関係なくすべての並列実行に適用されます。 
+- **実行コンテキスト**     
+  クエリを現在実行しているユーザーごとに、パラメーター値など、実行に固有のデータを保持するデータ構造体が用意されています。 このデータ構造体を実行コンテキストといいます。 実行コンテキストのデータ構造体は再利用されます。 ユーザーがクエリを実行したときに使用されていない構造体が 1 つある場合、新しいユーザーのコンテキストでその構造体が再初期化されます。 
 
 ![execution_context](../relational-databases/media/execution-context.gif)
 
-[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] で任意の SQL ステートメントを実行すると、まずリレーショナル エンジンにより、プラン キャッシュが調査され、同じ SQL ステートメントの既存の実行プランが存在するかどうかが確認されます。 SQL ステートメントは、キャッシュされたプランで前に実行された SQL ステートメントと文字単位で一致する場合、既存と見なされます。 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] は既存のプランが見つかった場合には再利用して、SQL ステートメントを再びコンパイルするオーバーヘッドを削減します。 既存の実行プランが存在しない場合、[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] によってクエリの新しい実行プランが生成されます。
+[!INCLUDE[tsql](../includes/tsql-md.md)] で任意の [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] ステートメントを実行すると、まずリレーショナル エンジンにより、プラン キャッシュが調査され、同じ [!INCLUDE[tsql](../includes/tsql-md.md)] ステートメントの既存の実行プランが存在するかどうかが確認されます。 [!INCLUDE[tsql](../includes/tsql-md.md)] ステートメントは、キャッシュされたプランで前に実行された [!INCLUDE[tsql](../includes/tsql-md.md)] ステートメントと文字単位で一致する場合、既存と見なされます。 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] では、既存のプランが見つかった場合にはそれが再利用され、[!INCLUDE[tsql](../includes/tsql-md.md)] ステートメントを再びコンパイルするオーバーヘッドが削減されます。 既存の実行プランが存在しない場合、[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] によってクエリの新しい実行プランが生成されます。
 
-[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] には、特定の SQL ステートメントの既存の実行プランを検索する効率的なアルゴリズムが用意されています。 ほとんどのシステムでは、このスキャンで使用される最低限のリソースの量が、すべての SQL ステートメントをコンパイルせずに既存の実行プランを再利用することで節約できるリソースの量を超えることはありません。
+> [!NOTE]
+> [!INCLUDE[tsql](../includes/tsql-md.md)] ステートメントの中にはキャッシュされないものもあります。たとえば、行ストア上で実行される一括操作ステートメントや 8 KB より大きい文字列リテラルを含むステートメントなどです。
 
-新しい SQL ステートメントをキャッシュ内の使用されていない既存の実行プランと照合するアルゴリズムでは、すべてのオブジェクト参照が完全に修飾されている必要があります。 たとえば、`Person` は下の `SELECT` ステートメント実行するユーザーに対する既定のスキーマであるものとします。 この例では、実行するために `Person` テーブルが完全修飾されている必要はありませんが、これは、2 番目のステートメントは既存のプランと一致しないのに対し、3 番目は一致することを意味します。
+[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] には、特定の [!INCLUDE[tsql](../includes/tsql-md.md)] ステートメントの既存の実行プランを検索する効率的なアルゴリズムが用意されています。 ほとんどのシステムでは、このスキャンで使用される最低限のリソースの量が、すべての [!INCLUDE[tsql](../includes/tsql-md.md)] ステートメントをコンパイルせずに既存の実行プランを再利用することで節約できるリソースの量を超えることはありません。
+
+新しい [!INCLUDE[tsql](../includes/tsql-md.md)] ステートメントをキャッシュ内の使用されていない既存の実行プランと照合するアルゴリズムでは、すべてのオブジェクト参照が完全に修飾されている必要があります。 たとえば、`Person` は下の `SELECT` ステートメント実行するユーザーに対する既定のスキーマであるものとします。 この例では、実行するために `Person` テーブルが完全修飾されている必要はありませんが、これは、2 番目のステートメントは既存のプランと一致しないのに対し、3 番目は一致することを意味します。
 
 ```sql
 SELECT * FROM Person;
@@ -404,7 +483,7 @@ GO
 
 主として再コンパイルが必要になるのは、ステートメントの正確性を維持したり、より処理速度が速いクエリ実行プランを取得したりする場合です。
 
-[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 2000 では、バッチ内のステートメントが原因で再コンパイルが実行されるときに、そのバッチがストアド プロシージャ、トリガー、アドホック バッチ、または準備されたステートメントのいずれを使用して送信されたかどうかに関係なく、常にバッチ全体が再コンパイルされます。 [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)] 以降では、再コンパイルの原因となったバッチ内のステートメントのみが再コンパイルされます。 この違いにより、[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 2000 以降のリリースの再コンパイル回数を比較することはできません。 また、[!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)] 以降の再コンパイルには、拡張機能セットによってさらに多くの種類が用意されています。
+[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]2005 より前のバージョンでは、バッチ内のステートメントが原因で再コンパイルが実行されるときに、そのバッチがストアド プロシージャ、トリガー、アドホック バッチ、または準備されたステートメントのいずれを使用して送信されたかどうかに関係なく、常にバッチ全体が再コンパイルされます。 [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)] 以降では、再コンパイルをトリガーしたバッチ内のステートメントのみが再コンパイルされます。 また、[!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)] 以降の再コンパイルには、拡張機能セットによって種類が追加されています。
 
 ステートメントレベルの再コンパイルにより、パフォーマンスが向上します。これは、多くの場合、再コンパイルとそれに関連付けられた CPU 時間やロックへの悪影響を引き起こすステートメントの数が少ないからです。 したがって、再コンパイルする必要がないバッチの他のステートメントでは、これらの影響を回避できます。
 
@@ -424,11 +503,11 @@ GO
 
 > [!NOTE]
 > xEvents が利用できない [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] バージョンの場合、ステートメントレベルの再コンパイルの報告という同じ目的に [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] プロファイラー [SP:Recompile](../relational-databases/event-classes/sp-recompile-event-class.md) トレース イベントを利用できます。
-> トレース イベント [SQL:StmtRecompile](../relational-databases/event-classes/sql-stmtrecompile-event-class.md) はまた、ステートメントレベルの再コンパイルを報告します。このトレース イベントを利用し、再コンパイルを追跡記録し、デバッグすることもできます。 SP:Recompile では、ストアド プロシージャとトリガーのみに対して値が生成されますが、`sp_executesql`、準備されたクエリ、および動的 SQL を使用して実行されたストアド プロシージャ、トリガー、アドホック バッチ、およびバッチに対して値が生成されます。
-> SP:Recompile と SQL:StmtRecompile の *EventSubClass* 列には、再コンパイルの理由を示す整数コードが格納されます。 コードの説明は[ここ](../relational-databases/event-classes/sql-stmtrecompile-event-class.md)にあります。
+> トレース イベント [SQL:StmtRecompile](../relational-databases/event-classes/sql-stmtrecompile-event-class.md) はまた、ステートメントレベルの再コンパイルを報告します。このトレース イベントを利用し、再コンパイルを追跡記録し、デバッグすることもできます。 SP:Recompile では、ストアド プロシージャとトリガーのみに対して値が生成されますが、`SQL:StmtRecompile` では、`sp_executesql`、準備されたクエリ、および動的 SQL を使用して実行されたストアド プロシージャ、トリガー、アドホック バッチ、およびバッチに対して値が生成されます。
+> `SP:Recompile` と `SQL:StmtRecompile` の *EventSubClass* 列には、再コンパイルの理由を示す整数コードが含まれます。 コードの説明は[ここ](../relational-databases/event-classes/sql-stmtrecompile-event-class.md)にあります。
 
 > [!NOTE]
-> `AUTO_UPDATE_STATISTICS` データベース オプションが `ON` に設定されていると、対象にしているテーブルまたはインデックス付きビューの統計が更新された場合、または前回の実行から基数が大きく変更された場合、クエリが再コンパイルされます。 この動作は、標準のユーザー定義テーブル、一時テーブル、および DML トリガーによって作成された inserted テーブルと deleted テーブルに当てはまります。 過度の再コンパイルによってクエリのパフォーマンスが低下する場合は、この設定を `OFF`に変更することを検討してください。 `AUTO_UPDATE_STATISTICS` データベース オプションを `OFF` に設定すると、統計や基数の変更に基づく再コンパイルは行われません。ただし、DML `INSTEAD OF` トリガーで作成した inserted テーブルおよび deleted テーブルは例外です。 これらのテーブルは tempdb で作成されるため、それらにアクセスするクエリの再コンパイルは tempdb の `AUTO_UPDATE_STATISTICS` の設定によって異なります。 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 2000 では、この設定を `OFF` にした場合も、DML トリガーの inserted テーブルと deleted テーブルにタイする基数の変更に基づいて再コンパイルが引き続き行われます。
+> `AUTO_UPDATE_STATISTICS` データベース オプションが `ON` に設定されていると、対象にしているテーブルまたはインデックス付きビューの統計が更新された場合、または前回の実行から基数が大きく変更された場合、クエリが再コンパイルされます。 この動作は、標準のユーザー定義テーブル、一時テーブル、および DML トリガーによって作成された inserted テーブルと deleted テーブルに当てはまります。 過度の再コンパイルによってクエリのパフォーマンスが低下する場合は、この設定を `OFF`に変更することを検討してください。 `AUTO_UPDATE_STATISTICS` データベース オプションを `OFF` に設定すると、統計や基数の変更に基づく再コンパイルは行われません。ただし、DML `INSTEAD OF` トリガーで作成した inserted テーブルおよび deleted テーブルは例外です。 これらのテーブルは tempdb で作成されるため、それらにアクセスするクエリの再コンパイルは tempdb の `AUTO_UPDATE_STATISTICS` の設定によって異なります。 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 2005 より前のバージョンでは、この設定を `OFF` にした場合も、DML トリガーの inserted テーブルと deleted テーブルにタイする基数の変更に基づいて再コンパイルが引き続き行われます。
 
 ### <a name="PlanReuse"></a> パラメーターと実行プランの再利用
 
@@ -451,11 +530,11 @@ FROM AdventureWorks2014.Production.Product
 WHERE ProductSubcategoryID = 4;
 ```
 
-これらのクエリの実行プランでは、 `ProductSubcategoryID` 列に対して比較用に格納された値のみが異なります。 最終的な目標は、ステートメントが生成するプランは基本的に同じであると [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] に常に認識させてプランを再利用することにありますが、SQL ステートメントが複雑になると [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] がこのことを検出できない場合があります。
+これらのクエリの実行プランでは、 `ProductSubcategoryID` 列に対して比較用に格納された値のみが異なります。 最終的な目標は、ステートメントが生成するプランは基本的に同じであると [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] に常に認識させてプランを再利用することにありますが、[!INCLUDE[tsql](../includes/tsql-md.md)] ステートメントが複雑になると [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] がこのことを検出できない場合があります。
 
-パラメーターを使用して SQL ステートメントと定数を切り離すと、同一のプランをリレーショナル エンジンが認識できるようになります。 パラメーターは、次の方法で使用できます。 
+パラメーターを使用して [!INCLUDE[tsql](../includes/tsql-md.md)] ステートメントと定数を切り離すと、同一のプランをリレーショナル エンジンが認識できるようになります。 パラメーターは、次の方法で使用できます。 
 
-* Transact-SQL では、 `sp_executesql`を使用します。 
+* [!INCLUDE[tsql](../includes/tsql-md.md)] では、`sp_executesql` を次のように使用します: 
 
    ```sql
    DECLARE @MyIntParm INT
@@ -468,7 +547,7 @@ WHERE ProductSubcategoryID = 4;
      @MyIntParm
    ```
 
-   この方法は、SQL ステートメントを動的に生成する Transact-SQL スクリプト、ストアド プロシージャ、またはトリガーで使用することをお勧めします。 
+   この方法は、SQL ステートメントを動的に生成する [!INCLUDE[tsql](../includes/tsql-md.md)] スクリプト、ストアド プロシージャ、またはトリガーで使用することをお勧めします。 
 
 * ADO、OLE DB、および ODBC ではパラメーター マーカーを使用します。 パラメーター マーカーは疑問符 (?) です。SQL ステートメント内の定数の代わりに置かれ、プログラム変数にバインドされます。 たとえば、ODBC アプリケーションでは次のような操作を実行できます。 
 
@@ -501,12 +580,12 @@ WHERE AddressID = 1 + 2;
 
 ### <a name="SimpleParam"></a> 簡易パラメーター化
 
-[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] では、Transact-SQL ステートメントでパラメーターまたはパラメーター マーカーを使用することで、新しい SQL ステートメントと既存のコンパイル済みの実行プランとを照合するリレーショナル エンジンの機能を向上させています。
+[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] では、Transact-SQL ステートメントでパラメーターまたはパラメーター マーカーを使用することで、新しい [!INCLUDE[tsql](../includes/tsql-md.md)] ステートメントと既存のコンパイル済みの実行プランとを照合するリレーショナル エンジンの機能が強化されています。
 
 > [!WARNING] 
 > パラメーターまたはパラメーター マーカーを使用してエンド ユーザーの入力値を保持する方法は、文字列に値を連結し、その後この文字列をデータ アクセス API メソッド、 `EXECUTE` ステートメント、または `sp_executesql` ストアド プロシージャのいずれかを使用して実行する方法よりも安全です。
 
-パラメーターを指定せずに SQL ステートメントを実行した場合、[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] はステートメントを内部でパラメーター化することにより、既存の実行プランとの照合機能を高めます。 この処理を簡易パラメーター化と呼びます。 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 2000 では、この処理を自動パラメーター化と呼んでいました。
+パラメーターを指定せずに [!INCLUDE[tsql](../includes/tsql-md.md)] ステートメントを実行した場合、[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] ではステートメントを内部でパラメーター化することにより、既存の実行プランとの照合機能が高められます。 この処理を簡易パラメーター化と呼びます。 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 2005 より前のバージョンでは、この処理を自動パラメーター化と呼んでいました。
 
 次のステートメントについて考えてみます。
 
@@ -526,7 +605,7 @@ SELECT * FROM AdventureWorks2014.Production.Product
 WHERE ProductSubcategoryID = 4;
 ```
 
-複雑な SQL ステートメントを処理する場合、リレーショナル エンジンでは、どの式をパラメーター化できるのかを簡単に決定できないことがあります。 複雑な SQL ステートメントと既存の使用されていない実行プランを照合するリレーショナル エンジンの機能を向上させるには、sp_executesql またはパラメーター マーカーを使用してパラメーターを明示的に指定します。 
+複雑な [!INCLUDE[tsql](../includes/tsql-md.md)] ステートメントを処理する場合、リレーショナル エンジンでは、どの式をパラメーター化できるのかを簡単に決定できないことがあります。 複雑な [!INCLUDE[tsql](../includes/tsql-md.md)] ステートメントと既存の使用されていない実行プランを照合するリレーショナル エンジンの機能を向上させるには、sp_executesql またはパラメーター マーカーを使用してパラメーターを明示的に指定します。 
 
 > [!NOTE]
 > +、-、\*、/、または % の算術演算子を使用して int、smallint、tinyint、または bigint の定数値を float、real、decimal、または numeric のデータ型に暗黙的にまたは明示的に変換した場合、その式の結果の型および有効桁数を計算するための特定の規則が [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] により適用されます。 ただし、これらの規則はクエリがパラメーター化されるかどうかによって異なります。 したがって、クエリ内の類似の式から異なる結果が生成される場合があります。
@@ -545,7 +624,7 @@ WHERE ProductSubcategoryID = 4;
 * ストアド プロシージャ、トリガー、またはユーザー定義関数の本体内のステートメント。 これらのルーチンのクエリ プランは既に [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] により再利用されています。
 * クライアント側のアプリケーションで既にパラメーター化されている、準備されたステートメント。
 * XQuery メソッド呼び出しを含んでいるステートメントを、 `WHERE` 句など通常は引数がパラメーター化されるコンテキストで使用した場合。 引数がパラメーター化されないコンテキストでこのメソッドを使用した場合は、ステートメントの残りの部分がパラメーター化されます。
-* TRANSACT-SQL カーソル内のステートメント (API カーソル内の`SELECT` ステートメントはパラメーター化されます)。
+* [!INCLUDE[tsql](../includes/tsql-md.md)] カーソル内のステートメント (API カーソル内の`SELECT` ステートメントはパラメーター化されます)。
 * 非推奨のクエリ構造。
 * `ANSI_PADDING` または `ANSI_NULLS` が `OFF`に設定されている状態で実行されているステートメント。
 * パラメーター化が可能なリテラルが 2,097 を超えるステートメント。
@@ -569,7 +648,7 @@ WHERE ProductSubcategoryID = 4;
   * 式に `CASE` 句が含まれている。  
 * クエリ ヒントの句に渡す引数。 `number_of_rows` クエリ ヒントの `FAST` 引数、 `number_of_processors` クエリ ヒントの `MAXDOP` 引数、および `MAXRECURSION` クエリ ヒントの number 引数がこれに該当します。
 
-パラメーター化は個々の Transact-SQL ステートメント レベルで行われます。 つまり、バッチ内では個々のステートメントがパラメーター化されます。 コンパイルの後、パラメーター化クエリは、最初に送信されたバッチのコンテキストで実行されます。 クエリの実行プランがキャッシュに残っている場合、sys.syscacheobjects 動的管理ビューの sql 列を参照することでクエリがパラメーター化されているかどうかを判断できます。 クエリがパラメーター化されている場合、この列には送信されたバッチのテキストの前に "\@1 tinyint" のように、パラメーターの名前とデータ型が付加されます。
+パラメーター化は個々の [!INCLUDE[tsql](../includes/tsql-md.md)] ステートメント レベルで行われます。 つまり、バッチ内では個々のステートメントがパラメーター化されます。 コンパイルの後、パラメーター化クエリは、最初に送信されたバッチのコンテキストで実行されます。 クエリの実行プランがキャッシュに残っている場合、sys.syscacheobjects 動的管理ビューの sql 列を参照することでクエリがパラメーター化されているかどうかを判断できます。 クエリがパラメーター化されている場合、この列には送信されたバッチのテキストの前に "\@1 tinyint" のように、パラメーターの名前とデータ型が付加されます。
 
 > [!NOTE]
 > パラメーター名の規則はありません。 特定の命名順序に依存することは避けてください。 また、次のものは、[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] のバージョンおよび Service Pack の適用状況によって異なる場合があります:パラメーター名、パラメーター化されるリテラル、およびパラメーター化されたテキストに含まれるスペース。
@@ -603,15 +682,15 @@ WHERE ProductSubcategoryID = 4;
 
 ### <a name="preparing-sql-statements"></a>SQL ステートメントの準備
 
-[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] のリレーショナル エンジンでは、SQL ステートメントを実行前に準備する方式が完全にサポートされるようになりました。 アプリケーションによって SQL ステートメントを複数回実行する必要がある場合、データベース API を使用して次の処理を実行できます。 
+[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] のリレーショナル エンジンでは、[!INCLUDE[tsql](../includes/tsql-md.md)] ステートメントを実行前に準備する方式が完全にサポートされるようになりました。 アプリケーションでは、[!INCLUDE[tsql](../includes/tsql-md.md)] ステートメントを複数回実行する必要がある場合、データベース API を使用して次の処理を実行できます。 
 
-* ステートメントを 1 回準備します。 これにより、SQL ステートメントがコンパイルされて実行プランが作成されます。
-* ステートメントの実行が必要になるたびに、コンパイル済みの実行プランを実行します。 これにより、2 回目以降は実行ごとに SQL ステートメントを再コンパイルする必要がなくなります。   
-  ステートメントの準備と実行は、API の関数およびメソッドによって制御されます。 Transact-SQL 言語の一部ではありません。 SQL ステートメントを実行するための準備/実行のモデルは、[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Native Client OLE DB プロバイダーと [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Native Client ODBC ドライバーによってサポートされています。 準備要求時に、プロバイダーまたはドライバーから [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] に対し、準備要求と共にステートメントが送信されます。 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] で実行プランがコンパイルされ、このプランのハンドルがプロバイダーまたはドライバーに返されます。 実行要求時に、プロバイダーまたはドライバーのいずれかによって、ハンドルに関連付けられたプランの実行要求がサーバーに送信されます。 
+* ステートメントを 1 回準備します。 これにより、[!INCLUDE[tsql](../includes/tsql-md.md)] ステートメントがコンパイルされて実行プランが作成されます。
+* ステートメントの実行が必要になるたびに、コンパイル済みの実行プランを実行します。 これにより、2 回目以降は実行ごとに [!INCLUDE[tsql](../includes/tsql-md.md)] ステートメントを再コンパイルする必要がなくなります。   
+  ステートメントの準備と実行は、API の関数およびメソッドによって制御されます。 これは [!INCLUDE[tsql](../includes/tsql-md.md)] 言語の一部ではありません。 [!INCLUDE[tsql](../includes/tsql-md.md)] ステートメントを実行するための準備/実行のモデルは、[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Native Client OLE DB プロバイダーと [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Native Client ODBC ドライバーによってサポートされています。 準備要求時に、プロバイダーまたはドライバーから [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] に対し、準備要求と共にステートメントが送信されます。 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] で実行プランがコンパイルされ、このプランのハンドルがプロバイダーまたはドライバーに返されます。 実行要求時に、プロバイダーまたはドライバーのいずれかによって、ハンドルに関連付けられたプランの実行要求がサーバーに送信されます。 
 
 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] では、準備されたステートメントを使用して一時オブジェクトを作成することはできません。 また、準備されたステートメントでは、一時テーブルなどの一時オブジェクトを作成するシステム ストアド プロシージャを参照できません。 このようなプロシージャは、直接実行する必要があります。
 
-準備/実行のモデルを過度に使用すると、パフォーマンスが低下することがあります。 ステートメントを 1 回だけ実行する場合は、直接実行のためのネットワークからサーバーへのアクセスは 1 回だけで済みます。 1 回だけ実行される SQL ステートメントを準備してから実行する場合は、もう 1 回余分にネットワークからサーバーにアクセスする必要があります。つまり、1 回はステートメントを準備するため、もう 1 回はステートメントを実行するためです。
+準備/実行のモデルを過度に使用すると、パフォーマンスが低下することがあります。 ステートメントを 1 回だけ実行する場合は、直接実行のためのネットワークからサーバーへのアクセスは 1 回だけで済みます。 1 回だけ実行される [!INCLUDE[tsql](../includes/tsql-md.md)] ステートメントを準備してから実行する場合は、もう 1 回余分にネットワークからサーバーにアクセスする必要があります。つまり、1 回はステートメントを準備するため、もう 1 回はステートメントを実行するためです。
 
 パラメーター マーカーを使用する場合、ステートメントを準備するとより効果的です。 たとえば、あるアプリケーションに対して、 `AdventureWorks` サンプル データベースから製品情報を取得するように頻繁に要求する場合を考えます。 アプリケーションでこの処理を実行できる方法は 2 つあります。 
 
@@ -634,9 +713,9 @@ WHERE ProductID = 63;
 
 ステートメントを 4 回以上実行する場合は、2 番目の方法がより効率的です。
 
-[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] では、直接実行と比べて準備/実行モデルにパフォーマンス上のメリットはほとんどありません。これは、[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] では実行プランが再利用されるためです。 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] には、現在の SQL ステートメントを、同じ SQL ステートメントの前回の実行用に生成された実行プランと照合する効率的なアルゴリズムが備わっています。 アプリケーションにより、パラメーター マーカーを使用して SQL ステートメントが複数回実行される場合、[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] では 2 回目以降の実行に最初の実行で使用した実行プランが再利用されます。ただし、プラン キャッシュのプランが古くなった場合は、実行プランは再利用されません。 準備/実行のモデルには次の利点もあります。 
+[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] では、直接実行と比べて準備/実行モデルにパフォーマンス上のメリットはほとんどありません。これは、[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] では実行プランが再利用されるためです。 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] には、現在の [!INCLUDE[tsql](../includes/tsql-md.md)] ステートメントを、同じ [!INCLUDE[tsql](../includes/tsql-md.md)] ステートメントの前回の実行用に生成された実行プランと照合する効率的なアルゴリズムが備わっています。 アプリケーションにより、パラメーター マーカーを使用して [!INCLUDE[tsql](../includes/tsql-md.md)] ステートメントが複数回実行される場合、[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] では 2 回目以降の実行に最初の実行で使用した実行プランが再利用されます。ただし、プラン キャッシュのプランが古くなった場合は、実行プランは再利用されません。 準備/実行のモデルには次の利点もあります。 
 
-* 識別のためのハンドルによって実行プランを検索する方が、SQL ステートメントを既存の実行プランと照合するために使用するアルゴリズムよりも効率的です。
+* 識別のためのハンドルによって実行プランを検索する方が、[!INCLUDE[tsql](../includes/tsql-md.md)] ステートメントを既存の実行プランと照合するために使用するアルゴリズムよりも効率的です。
 * 実行プランの作成および再利用のタイミングをアプリケーションで制御できます。
 * 準備/実行のモデルは、以前のバージョンの [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] など、他のデータベースに移植できます。
 
@@ -648,6 +727,8 @@ WHERE ProductID = 63;
 -  ストアド プロシージャ
 -  sp_executesql 経由で送信されたクエリ 
 -  準備されたクエリ
+
+不適切なパラメーター スニッフィング問題のトラブルシューティングについては、「[Troubleshoot queries with parameter-sensitive query execution plan issues](https://docs.microsoft.com/azure/sql-database/sql-database-monitor-tune-overview#troubleshoot-performance-problems)」 (パラメーター依存のクエリ実行プランの問題を解決する) を参照してください。
 
 > [!NOTE]
 > `RECOMPILE` ヒントを利用するクエリの場合、パラメーター値とローカル変数の現在の値の両方がスニッフィングされます。 (パラメーターとローカル変数の) スニッフィングされた値は、バッチの中で、`RECOMPILE` ヒントのあるステートメントの手前に存在する値です。 特に、パラメーターの場合、バッチ呼び出しで共に与えられた値はスニッフィングされません。
@@ -671,7 +752,7 @@ WHERE ProductID = 63;
 >   カーソルについて詳しくは、「[DECLARE CURSOR](../t-sql/language-elements/declare-cursor-transact-sql.md)」をご覧ください。
 > - **再帰クエリ**    
 >   再帰について詳しくは、「[再帰共通テーブル式の定義および使用に関するガイドライン](../t-sql/queries/with-common-table-expression-transact-sql.md#guidelines-for-defining-and-using-recursive-common-table-expressions)」および「[Recursion in T-SQL](https://msdn.microsoft.com/library/aa175801(v=sql.80).aspx)」(T-SQL での再帰) をご覧ください。
-> - **テーブル値関数 (TVF)**    
+> - **テーブル値関数 (TVF)**     
 >   TVF について詳しくは、「[ユーザー定義関数の作成 (データベース エンジン)](../relational-databases/user-defined-functions/create-user-defined-functions-database-engine.md#TVF)」をご覧ください。
 > - **TOP キーワード**    
 >   詳しくは、「[TOP (Transact-SQL)](../t-sql/queries/top-transact-sql.md)」をご覧ください。
@@ -833,20 +914,20 @@ Index Seek 操作の上位にある並列操作は、`O_ORDERKEY` の値を使�
 
 ## <a name="distributed-query-architecture"></a>分散クエリ アーキテクチャ
 
-Microsoft [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] は、Transact-SQL ステートメント内で異種 OLE DB データ ソースを参照する方法として、次の 2 つをサポートしています。
+Microsoft [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] では、[!INCLUDE[tsql](../includes/tsql-md.md)] ステートメント内で異種 OLE DB データ ソースを参照する方法として、次の 2 つがサポートされています。
 
 * リンク サーバー名  
-  `sp_addlinkedserver` と `sp_addlinkedsrvlogin` の各システム ストアド プロシージャを使用して、OLE DB データ ソースにサーバー名を渡します。 リンク サーバー内のオブジェクトは、4 部構成の名前を使用して Transact-SQL ステートメント内で参照できます。 たとえば、`DeptSQLSrvr` というリンク サーバー名が [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] の別のインスタンスで定義されている場合、次のステートメントはこのサーバー上のテーブルを参照します。 
+  `sp_addlinkedserver` と `sp_addlinkedsrvlogin` の各システム ストアド プロシージャを使用して、OLE DB データ ソースにサーバー名を渡します。 リンク サーバー内のオブジェクトは、4 部構成の名前を使用して [!INCLUDE[tsql](../includes/tsql-md.md)] ステートメント内で参照できます。 たとえば、`DeptSQLSrvr` というリンク サーバー名が [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] の別のインスタンスで定義されている場合、次のステートメントはこのサーバー上のテーブルを参照します。 
   
   ```sql
   SELECT JobTitle, HireDate 
   FROM DeptSQLSrvr.AdventureWorks2014.HumanResources.Employee;
   ```
 
-   リンク サーバー名を `OPENQUERY` ステートメントで指定して、OLE DB データ ソースの行セットを開くこともできます。 この行セットは、Transact-SQL ステートメント内でテーブルと同じように参照できます。 
+   リンク サーバー名を `OPENQUERY` ステートメントで指定して、OLE DB データ ソースの行セットを開くこともできます。 この行セットは、[!INCLUDE[tsql](../includes/tsql-md.md)] ステートメント内でテーブルと同じように参照できます。 
 
 * アドホック コネクタ名  
-  データ ソースを頻繁に参照しない場合は、リンク サーバーに接続するために必要な情報を含めた `OPENROWSET` 関数または `OPENDATASOURCE` 関数を指定します。 これにより、行セットを Transact-SQL ステートメント内でテーブルと同じように参照できます。 
+  データ ソースを頻繁に参照しない場合は、リンク サーバーに接続するために必要な情報を含めた `OPENROWSET` 関数または `OPENDATASOURCE` 関数を指定します。 これにより、行セットは [!INCLUDE[tsql](../includes/tsql-md.md)] ステートメント内でテーブルと同じように参照できます。 
   
   ```sql
   SELECT *
@@ -855,19 +936,19 @@ Microsoft [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] は、Transact-
         Employees);
   ```
 
-[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] では、OLE DB を使用してリレーショナル エンジンとストレージ エンジンの間の通信を行います。 リレーショナル エンジンは、各 Transact-SQL ステートメントを一連の操作に分割します。それぞれの操作は、ストレージ エンジンがベース テーブルから開いた単純な OLE DB 行セットに対する操作です。 これは、リレーショナル エンジンは、OLE DB データ ソースに対する単純な OLE DB 行セットも開くことができることを意味しています。  
+[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] では、OLE DB を使用してリレーショナル エンジンとストレージ エンジンの間の通信を行います。 リレーショナル エンジンは、各 [!INCLUDE[tsql](../includes/tsql-md.md)] ステートメントを一連の操作に分割します。それぞれの操作は、ストレージ エンジンがベース テーブルから開いた単純な OLE DB 行セットに対する操作です。 これは、リレーショナル エンジンは、OLE DB データ ソースに対する単純な OLE DB 行セットも開くことができることを意味しています。  
 ![oledb_storage](../relational-databases/media/oledb-storage.gif)  
 リレーショナル エンジンは OLE DB API (アプリケーション プログラミング インターフェイス) を使用して、リンク サーバー上の行セットを開き、行をフェッチし、トランザクションを管理します。
 
-OLE DB データ ソースにリンク サーバーとしてアクセスするには、[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] が動作するサーバー上に OLE DB プロバイダーが存在している必要があります。 OLE DB データ ソースに対して使用できる Transact-SQL 操作の数は、OLE DB プロバイダーの機能によって決まります。
+OLE DB データ ソースにリンク サーバーとしてアクセスするには、[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] が動作するサーバー上に OLE DB プロバイダーが存在している必要があります。 OLE DB データ ソースに対して使用できる [!INCLUDE[tsql](../includes/tsql-md.md)] 操作の数は、OLE DB プロバイダーの機能によって決まります。
 
-たとえば、`sysadmin` 固定サーバー ロールのメンバーは、[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] のインスタンスごとに [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] `DisallowAdhocAccess` プロパティを使用して、OLE DB プロバイダーのアドホック コネクタ名の使用を有効化または無効化できます。 アドホック アクセスが有効化されると、そのインスタンスにログオンしているユーザーは、アドホック コネクタ名を含んだ SQL ステートメントを実行し、OLE DB プロバイダーを使用してアクセスできるネットワークのすべてのデータ ソースを参照できます。 `sysadmin` ロールのメンバーは、データ ソースへのアクセスを制御するために、その OLE DB プロバイダーに対するアドホック アクセスを無効化できます。その結果、ユーザーは管理者が定義したリンク サーバー名で参照されるデータ ソースのみに制限されます。 既定では、[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] OLE DB プロバイダーではアドホック アクセスが有効化されており、他のすべての OLE DB プロバイダーでは無効化されています。
+たとえば、`sysadmin` 固定サーバー ロールのメンバーは、[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] のインスタンスごとに [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] の `DisallowAdhocAccess` プロパティを使用して、OLE DB プロバイダーのアドホック コネクタ名の使用を有効化または無効化できます。 アドホック アクセスが有効化されると、そのインスタンスにログオンしているユーザーは、アドホック コネクタ名を含んだ [!INCLUDE[tsql](../includes/tsql-md.md)] ステートメントを実行し、OLE DB プロバイダーを使用してアクセスできるネットワークのすべてのデータ ソースを参照できます。 `sysadmin` ロールのメンバーは、データ ソースへのアクセスを制御するために、その OLE DB プロバイダーに対するアドホック アクセスを無効化できます。その結果、ユーザーは管理者が定義したリンク サーバー名で参照されるデータ ソースのみに制限されます。 既定では、[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] OLE DB プロバイダーではアドホック アクセスが有効化されており、他のすべての OLE DB プロバイダーでは無効化されています。
 
 分散クエリを使用すると、[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] サービスを実行している Microsoft Windows アカウントのセキュリティ コンテキストを使用して、他のデータ ソース (たとえば、ファイルや Active Directory などのリレーショナルでないデータ ソース) にアクセスできます。 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] は Windows ログインでは正常にログインを借用できますが、[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] ログインでは借用できません。 この場合、[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] サービスを実行しているアカウントに権限があり、分散クエリ ユーザーには権限のない他のデータ ソースに、分散クエリ ユーザーからのアクセスを許してしまう可能性が生じます。 対応するリンク サーバーにアクセスする権限のある特定のログインを定義するには、 `sp_addlinkedsrvlogin` を使用します。 このような制御は、アドホック名では使用できないので、OLE DB プロバイダーでアドホック アクセスを有効にする場合は十分に注意してください。
 
 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] は、可能であれば、OLE DB データ ソースに対して、結合、条件、射影、並べ替え、および GROUP BY (SQL 言語) 操作などのリレーショナル操作を試行します。 特に指定しない限り、[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 自身がベース テーブルをスキャンして [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] に読み込んだり、リレーショナル操作を実行することはありません。 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] は OLE DB プロバイダーに問い合わせて、そのプロバイダーがサポートする SQL 文法のレベルを判別し、その情報に基づいて、可能な限り多くのリレーショナル操作をプロバイダーに送ります。 
 
-[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] では、OLE DB プロバイダーのメカニズムを指定して、OLE DB データ ソース内でのキー値の分布状況を示す統計を返すようにします。 これにより、各 SQL ステートメントの必要条件に対して、[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] クエリ オプティマイザーがデータ ソース内のデータのパターンをより正確に分析できるようになり、最適な実行プランを作成するクエリ オプティマイザーの機能が向上します。 
+[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] では、OLE DB プロバイダーのメカニズムを指定して、OLE DB データ ソース内でのキー値の分布状況を示す統計を返すようにします。 これにより、各 [!INCLUDE[tsql](../includes/tsql-md.md)] ステートメントの必要条件に対して、[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] クエリ オプティマイザーがデータ ソース内のデータのパターンをより正確に分析できるようになり、最適な実行プランを作成するクエリ オプティマイザーの機能が向上します。 
 
 ## <a name="query-processing-enhancements-on-partitioned-tables-and-indexes"></a>パーティション テーブルとパーティション インデックスに対するクエリ処理の機能強化
 
@@ -902,7 +983,7 @@ CREATE PARTITION FUNCTION myRangePF1 (int) AS RANGE LEFT FOR VALUES (3, 7, 10);
 
 ### <a name="displaying-partitioning-information-in-query-execution-plans"></a>クエリ実行プランのパーティション分割情報の表示
 
-パーティション テーブルとパーティション インデックスに対するクエリの実行プランは、Transact-SQL `SET` ステートメントの `SET SHOWPLAN_XML` または `SET STATISTICS XML`を使用するか、[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Management Studio のグラフィカル実行プラン出力を使用して調べることができます。 たとえば、コンパイル時の実行プランを表示するにはクエリ エディターのツール バーの *[推定実行プランの表示]* をクリックし、実行時のプランを表示するには *[実際の実行プランを含める]* をクリックします。 
+パーティション テーブルとパーティション インデックスに対するクエリの実行プランは、[!INCLUDE[tsql](../includes/tsql-md.md)] `SET` ステートメントの `SET SHOWPLAN_XML` または `SET STATISTICS XML` を使用するか、[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Management Studio のグラフィカル実行プラン出力を使用して調べることができます。 たとえば、コンパイル時の実行プランを表示するにはクエリ エディターのツール バーの *[推定実行プランの表示]* をクリックし、実行時のプランを表示するには *[実際の実行プランを含める]* をクリックします。 
 
 これらのツールを使用すると、次の情報を確認できます。
 
@@ -1117,7 +1198,7 @@ GO
  [拡張イベント](../relational-databases/extended-events/extended-events.md)  
  [クエリ ストアを使用する際の推奨事項](../relational-databases/performance/best-practice-with-the-query-store.md)  
  [カーディナリティ推定](../relational-databases/performance/cardinality-estimation-sql-server.md)  
- [アダプティブ クエリ処理](../relational-databases/performance/adaptive-query-processing.md)   
+ [インテリジェントなクエリ処理](../relational-databases/performance/intelligent-query-processing.md)   
  [演算子の優先順位](../t-sql/language-elements/operator-precedence-transact-sql.md)    
  [実行プラン](../relational-databases/performance/execution-plans.md)    
  [SQL Server データベース エンジンと Azure SQL Database のパフォーマンス センター](../relational-databases/performance/performance-center-for-sql-server-database-engine-and-azure-sql-database.md)

@@ -1,5 +1,5 @@
 ---
-title: '手順 4: は PHP で SQL に弾性的に接続 |Microsoft Docs'
+title: '手順 4: PHP を使用して SQL に弾性的を接続する |Microsoft Docs'
 ms.custom: ''
 ms.date: 01/22/2018
 ms.prod: sql
@@ -10,23 +10,22 @@ ms.topic: conceptual
 ms.assetid: 8013474f-48e9-43d5-ab89-7b0504044468
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 25cc5bf210b218df59232efb5a6f1cf363174115
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 002c27145360e0877d4e1bff816c25070247ddd8
+ms.sourcegitcommit: f76b4e96c03ce78d94520e898faa9170463fdf4f
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47609160"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70874370"
 ---
 # <a name="step-4-connect-resiliently-to-sql-with-php"></a>ステップ 4: PHP で SQL に弾性的に接続する
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
   
-デモ プログラムの目的はように一時的なエラー (エラー コードは '08'」の一覧にこのプレフィックスを持つ[付録](https://docs.microsoft.com/sql/odbc/reference/appendixes/appendix-a-odbc-error-codes)) 再試行に潜在顧客を接続の試行中にします。 ただし、クエリ コマンドの実行中の一時的なエラーが原因で接続が破棄され、クエリ コマンドを再試行する前に、新しい接続を作成するプログラム。 この設計の選択を推奨します。 デモ プログラムは、使用できる柔軟にデザインの一部を示しています。  
+デモプログラムは、接続の試行中に一時的なエラー (この[付録](https://docs.microsoft.com/sql/odbc/reference/appendixes/appendix-a-odbc-error-codes)に記載されているプレフィックス ' 08 ' を持つエラーコード) が発生するように設計されています。 ただし、クエリコマンドの実行中に一時的なエラーが発生すると、プログラムは接続を破棄し、新しい接続を作成してから、クエリコマンドを再試行します。 この設計を選択することは推奨しません。 デモプログラムは、ユーザーが使用できるデザインの柔軟性を示しています。  
   
-このサンプル コードの長さが例外キャッチ ロジックにほとんどの場合です。   
+このコードサンプルの長さは、ほとんどが例外のキャッチロジックによるものです。   
   
-[Sqlsrv_query()](../../connect/php/sqlsrv-query.md) SQL Database に対するクエリのセットの結果を取得する関数を使用できます。 この関数は、基本的にクエリと接続オブジェクトをすべて受け入れます、使用して反復処理できる結果セットを返します[sqlsrv_fetch_array()](../../connect/php/sqlsrv-fetch-array.md)します。 
+[Sqlsrv_query ()](../../connect/php/sqlsrv-query.md)関数を使用すると、SQL Database に対するクエリから結果セットを取得できます。 この関数は、基本的にはクエリおよび接続オブジェクトを受け取り、結果セットを返します。結果セットは、 [sqlsrv_fetch_array ()](../../connect/php/sqlsrv-fetch-array.md)を使用して反復処理できます。 
   
 ```php
 
@@ -62,7 +61,7 @@ ms.locfileid: "47609160"
                 sqlsrv_close( $conn); 
                 break;  
             } else {    
-                // [A.4] Check whether the error code is on the whitelist of transients.  
+                // [A.4] Check whether the error code is on the list of allowed transients.  
                 $isTransientError = false;  
                 $errorCode = '';
                 if (($errors = sqlsrv_errors()) != null) {

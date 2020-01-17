@@ -7,15 +7,15 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 3caa4372-aff3-4c0f-9ecd-97870948b8d0
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: d4d88e90e595cd69da28c4767c723fed63b0e052
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 0b0596e9ba13e617b6f4eef961966bcc07107314
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52756644"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62833110"
 ---
 # <a name="odata-connection-manager"></a>OData 接続マネージャー
   OData 接続マネージャーを使用すると、パッケージは OData ソースに接続できます。 OData ソース コンポーネントは OData 接続マネージャーを使用して OData ソースに接続し、サービスから取得したデータを使用します。 参照してください[OData ソース](../data-flow/odata-source.md)これらのコンポーネントのインストール手順などの詳細セクション。  
@@ -27,7 +27,7 @@ ms.locfileid: "52756644"
   
 -   右クリック**接続マネージャー**フォルダーで、**ソリューション エクスプ ローラー**  をクリック**新しい接続マネージャー**します。 **[接続マネージャーの種類]** の **[ODATA]** をクリックします。  
   
--   右クリックし、**接続マネージャー**パッケージ デザイナー、および select の下部にあるウィンドウ**新しい接続.**.**[接続マネージャーの種類]** の **[ODATA]** をクリックします。  
+-   右クリックし、**接続マネージャー**パッケージ デザイナー、および select の下部にあるウィンドウ**新しい接続.** . **[接続マネージャーの種類]** の **[ODATA]** をクリックします。  
   
 ## <a name="connection-manager-authentication"></a>接続マネージャーの認証  
  OData 接続マネージャーでは、2 つの認証モードがサポートされています。  

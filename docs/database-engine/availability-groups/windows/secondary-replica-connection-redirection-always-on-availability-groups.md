@@ -1,6 +1,7 @@
 ---
-title: SQL Server でのセカンダリ レプリカからプライマリ レプリカへの読み取り/書き込み接続のリダイレクト -Always On 可用性グループ | Microsoft Docs
-ms.custom: ''
+title: プライマリ レプリカへの読み取り/書き込み接続のリダイレクト
+description: 接続文字列で指定されている対象サーバーに関係なく、読み取り/書き込み接続を Always On 可用性グループのプライマリ レプリカに常にリダイレクトする方法について説明します。
+ms.custom: seo-lt-2019
 ms.date: 01/09/2019
 ms.prod: sql
 ms.reviewer: ''
@@ -16,14 +17,13 @@ helpviewer_keywords:
 ms.assetid: ''
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: e64768dcfaf4342c3ea52f1b01c29940fb1c8cf0
-ms.sourcegitcommit: 1f53b6a536ccffd701fc87e658ddac714f6da7a2
+ms.openlocfilehash: 8bf76e0929dea69758b1f9152af0df8f3170227d
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/10/2019
-ms.locfileid: "54206308"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75235203"
 ---
 # <a name="secondary-to-primary-replica-readwrite-connection-redirection-always-on-availability-groups"></a>セカンダリ レプリカからプライマリ レプリカへの読み取り/書き込み接続のリダイレクト (Always On 可用性グループ)
 
@@ -35,7 +35,7 @@ ms.locfileid: "54206308"
 
 ## <a name="use-cases"></a>ユース ケース
 
-[!INCLUDE[sssqlv15-md](../../../includes/sssqlv15-md.md)] より前のバージョンでは、プライマリ レプリカへのユーザー トラフィックは、AG リスナーおよび対応するクラスター リソースによってリダイレクトされ、フェールオーバー後に再接続されるようになっています。 [!INCLUDE[sssqlv15-md](../../../includes/sssqlv15-md.md)] では、この AG リスナー機能は引き続きサポートされますが、リスナーを含めることができないシナリオのためにレプリカの接続のリダイレクトが追加されています。 例 :
+[!INCLUDE[sssqlv15-md](../../../includes/sssqlv15-md.md)] より前のバージョンでは、プライマリ レプリカへのユーザー トラフィックは、AG リスナーおよび対応するクラスター リソースによってリダイレクトされ、フェールオーバー後に再接続されるようになっています。 [!INCLUDE[sssqlv15-md](../../../includes/sssqlv15-md.md)] では、この AG リスナー機能は引き続きサポートされますが、リスナーを含めることができないシナリオのためにレプリカの接続のリダイレクトが追加されています。 次に例を示します。
 
 * SQL Server の可用性グループに統合されているクラスター テクノロジでは、リスナーに似た機能が提供されない 
 * 構成が複雑になり、エラーが発生しがちであり、複数のコンポーネントが関係するせいでトラブルシューティングが困難な、クラウドや Pacemaker を使用するマルチサブネット フローティング IP のようなマルチサブネット構成である
@@ -48,7 +48,7 @@ ms.locfileid: "54206308"
 * レプリカの仕様の `PRIMARY_ROLE` に `READ_WRITE_ROUTING_URL` が含まれている必要があります。
 * 接続文字列に `ApplicationIntent` として `ReadWrite` が定義されている必要があります (これは既定値です)。
 
-## <a name="set-readwriteroutingurl-option"></a>READ_WRITE_ROUTING_URL オプションを設定する
+## <a name="set-read_write_routing_url-option"></a>READ_WRITE_ROUTING_URL オプションを設定する
 
 読み取り/書き込み接続を構成するには、AG を作成するときに、プライマリ レプリカに対して `READ_WRITE_ROUTING_URL` を設定する必要があります。 
 
@@ -58,24 +58,24 @@ ms.locfileid: "54206308"
 * [ALTER AVAILABILITY GROUP](../../../t-sql/statements/alter-availability-group-transact-sql.md)
 
 
-### <a name="primaryrolereadwriteroutingurl-not-set-default"></a>PRIMARY_ROLE(READ_WRITE_ROUTING_URL) が設定されていない (既定の設定) 
+### <a name="primary_roleread_write_routing_url-not-set-default"></a>PRIMARY_ROLE(READ_WRITE_ROUTING_URL) が設定されていない (既定の設定) 
 
 既定では、レプリカには読み取り/書き込み接続のリダイレクトは設定されていません。 接続要求がセカンダリ レプリカによってどのように処理されるかは、セカンダリ レプリカが接続を許可するように設定されているかどうかと、接続文字列内の `ApplicationIntent` 設定によって決まります。 次の表は、`SECONDARY_ROLE (ALLOW CONNECTIONS = )` と `ApplicationIntent` に基づくセカンダリ レプリカによる接続の処理方法を示しています。
 
 ||`SECONDARY_ROLE (ALLOW CONNECTIONS = NO)`|`SECONDARY_ROLE (ALLOW CONNECTIONS = READ_ONLY)`|`SECONDARY_ROLE (ALLOW CONNECTIONS = ALL)`|
 |-----|-----|-----|-----|
-|`ApplicationIntent=ReadWrite`<br/> 既定|接続失敗|接続失敗|接続成功<br/>読み取り成功<br/>書き込み失敗|
+|`ApplicationIntent=ReadWrite`<br/> Default|接続失敗|接続失敗|接続成功<br/>読み取り成功<br/>書き込み失敗|
 |`ApplicationIntent=ReadOnly`|接続失敗|接続成功|接続成功
 
 上の表に示した既定の動作は、[!INCLUDE[sssqlv15-md](../../../includes/sssqlv15-md.md)] より前のバージョンの SQL Server と同じです。 
 
-### <a name="primaryrolereadwriteroutingurl-set"></a>PRIMARY_ROLE(READ_WRITE_ROUTING_URL) が設定されている 
+### <a name="primary_roleread_write_routing_url-set"></a>PRIMARY_ROLE(READ_WRITE_ROUTING_URL) が設定されている 
 
 読み取り/書き込み接続のリダイレクトを設定すると、レプリカによる接続要求の処理方法が変わります。 接続動作は、引き続き `SECONDARY_ROLE (ALLOW CONNECTIONS = )` と `ApplicationIntent` の設定によって決まります。 次の表は、`READ_WRITE_ROUTING` が設定されたセカンダリ レプリカによる `SECONDARY_ROLE (ALLOW CONNECTIONS = )` と `ApplicationIntent` に基づく接続の処理方法を示しています。
 
 ||`SECONDARY_ROLE (ALLOW CONNECTIONS = NO)`|`SECONDARY_ROLE (ALLOW CONNECTIONS = READ_ONLY)`|`SECONDARY_ROLE (ALLOW CONNECTIONS = ALL)`|
 |-----|-----|-----|-----|
-|`ApplicationIntent=ReadWrite`<br/>既定|接続失敗|接続失敗|プライマリへの接続のルーティング|
+|`ApplicationIntent=ReadWrite`<br/>Default|接続失敗|接続失敗|プライマリへの接続のルーティング|
 |`ApplicationIntent=ReadOnly`|接続失敗|接続成功|接続成功
 
 上の表は、プライマリ レプリカに `READ_WRITE_ROUTING_URL` が設定されているときに、`SECONDARY_ROLE (ALLOW CONNECTIONS = ALL)` であり、接続に `ReadWrite` が指定されている場合に、セカンダリ レプリカによって接続がプライマリ レプリカにリダイレクトされることを示しています。
@@ -85,7 +85,7 @@ ms.locfileid: "54206308"
 この例では、可用性グループには 3 つのレプリカがあります。
 * COMPUTER01 上のプライマリ レプリカ
 * COMPUTER02 上の同期セカンダリ レプリカ
-* COMPUTER03 上の同期セカンダリ レプリカ
+* COMPUTER03 上の非同期セカンダリ レプリカ
 
 次の図は、可用性グループを表しています。
 
@@ -125,7 +125,7 @@ CREATE AVAILABILITY GROUP MyAg
       'COMPUTER03' WITH   
          (  
          ENDPOINT_URL = 'TCP://COMPUTER03.<domain>.<tld>:5022',  
-         AVAILABILITY_MODE = SYNCHRONOUS_COMMIT,  
+         AVAILABILITY_MODE = ASYNCHRONOUS_COMMIT,  
          FAILOVER_MODE = MANUAL,  
          SECONDARY_ROLE (ALLOW_CONNECTIONS = ALL,   
             READ_ONLY_ROUTING_URL = 'TCP://COMPUTER03.<domain>.<tld>:1433' ),  
@@ -137,7 +137,7 @@ CREATE AVAILABILITY GROUP MyAg
 GO  
 ```
    - `<domain>.<tld>`
-      - 完全修飾ドメイン名のドメインと最上位ドメイン。 たとえば、`corporation.com` のようにします。
+      - 完全修飾ドメイン名のドメインと最上位ドメイン。 たとえば、「 `corporation.com` 」のように入力します。
 
 
 ### <a name="connection-behaviors"></a>接続動作
@@ -159,7 +159,7 @@ GO
 
 ## <a name="see-also"></a>参照
 
-[AlwaysOn 可用性グループの概要 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   
+[Always On 可用性グループの概要 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   
  
 [可用性レプリカに対するクライアント接続アクセスについて &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/about-client-connection-access-to-availability-replicas-sql-server.md)   
 

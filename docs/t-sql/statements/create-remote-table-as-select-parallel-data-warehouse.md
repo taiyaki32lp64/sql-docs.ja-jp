@@ -1,6 +1,6 @@
 ---
-title: CREATE REMOTE TABLE AS SELECT (Parallel Data Warehouse) | Microsoft Docs
-ms.custom: ''
+title: CREATE REMOTE TABLE AS SELECT (Parallel Data Warehouse)
+ms.custom: seo-dt-2019
 ms.date: 08/10/2017
 ms.prod: sql
 ms.technology: data-warehouse
@@ -9,14 +9,13 @@ ms.topic: conceptual
 ms.assetid: 16ef8191-7587-45a3-9ee9-7d99b7088de3
 author: ronortloff
 ms.author: rortloff
-manager: craigg
 monikerRange: '>= aps-pdw-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 0da82a782dcebeee22e422d5c25b05e17584393c
-ms.sourcegitcommit: 769b71f01052ec9b4fc5eb02d9da9a1a58118029
+ms.openlocfilehash: 1b6b024507d06149efc0bc2693b5bde2f67d482b
+ms.sourcegitcommit: d587a141351e59782c31229bccaa0bff2e869580
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56319203"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74401702"
 ---
 # <a name="create-remote-table-as-select-parallel-data-warehouse"></a>CREATE REMOTE TABLE AS SELECT (Parallel Data Warehouse)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md.md)]
@@ -25,13 +24,13 @@ ms.locfileid: "56319203"
   
  リモート サーバーを構成するには、[!INCLUDE[pdw-product-documentation](../../includes/pdw-product-documentation-md.md)]の「リモート テーブルのコピー」を参照してください。  
   
- ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則 &#40;Transact-SQL&#41;](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "|::ref1::|") [Transact-SQL 構文表記規則 &#40;Transact-SQL&#41;](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>構文  
   
 ```  
   
-CREATE REMOTE TABLE [ database_name . [ schema_name ] . | schema_name. ] table_name     AT ('<connection_string>')  
+CREATE REMOTE TABLE { database_name.schema_name.table_name | schema_name.table_name | table_name }  AT ('<connection_string>')  
     [ WITH ( BATCH_SIZE = batch_size ) ]  
     AS <select_statement>  
 [;]  
@@ -61,14 +60,14 @@ CREATE REMOTE TABLE [ database_name . [ schema_name ] . | schema_name. ] table_n
   
  接続文字列は、セミコロンで区切られたキーと値のペアの一覧です。 キーワードの大文字と小文字は区別されません。 キーと値のペア間のスペースは無視されます。 ただし、データ ソースによっては、値の大文字小文字が区別されます。  
   
- *[データ ソース]*  
+ *データ ソース*  
  リモートの SMP [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の名前、IP アドレス、および TCP ポート番号を指定するパラメーターです。  
   
  *hostname* または *IP_address*  
  リモート サーバー コンピューターの名前またはリモート サーバーの IPv4 アドレスです。 IPv6 アドレスはサポートされていません。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 名前付きインスタンスを、**Computer_Name\Instance_Name** または **IP_address\Instance_Name** の形式で指定することができます。 サーバーは、リモートである必要があり、(local) として指定することはできません。  
   
  TCP *port* 番号  
- 接続の TCP ポート番号。 既定のポート 1433 でリッスンしていない SQL Server のインスタンスに対して、0～65535 の TCP ポート番号を指定することができます。 例 :**ServerA,1450** または **10.192.14.27,1435**  
+ 接続の TCP ポート番号。 既定のポート 1433 でリッスンしていない SQL Server のインスタンスに対して、0～65535 の TCP ポート番号を指定することができます。 次に例を示します。**ServerA,1450** または **10.192.14.27,1435**  
   
 > [!NOTE]  
 >  IP アドレスを使用してリモート サーバーに接続することをお勧めします。 ネットワーク構成によっては、コンピューター名を使用して接続するときに、正しいサーバーの名前を解決する非アプライアンス DNS サーバーを使用するために、追加の手順が必要になることがあります。 IP アドレスで接続するときには、この手順は必要ではありません。 詳細については、[!INCLUDE[pdw-product-documentation](../../includes/pdw-product-documentation-md.md)]の「Use a DNS Forwarder to Resolve Non-Appliance DNS Names (Analytics Platform System)」(DNS フォワーダーを使用して非アプライアンス DNS 名を解決する (分析プラットフォーム システム)) を参照してください。  
@@ -144,7 +143,7 @@ AT ( 'Data Source = SQLA, 1433; User ID = David; Password = e4n8@3;' )
 AS SELECT <select_criteria>;  
 ```  
   
-### <a name="b-querying-the-sysdmpdwdmsworkers-dmv-for-remote-table-copy-status"></a>B. リモート テーブルのコピーのステータスの sys.dm_pdw_dms_workers DMV のクエリを実行します。  
+### <a name="b-querying-the-sysdm_pdw_dms_workers-dmv-for-remote-table-copy-status"></a>B. リモート テーブルのコピーのステータスの sys.dm_pdw_dms_workers DMV のクエリを実行します。  
  このクエリは、リモート テーブルのコピーのコピー状態を表示する方法を示します。  
   
 ```  

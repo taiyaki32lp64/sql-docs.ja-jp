@@ -15,16 +15,19 @@ f1_keywords:
 - sql14.ssis.designer.powerquerysource.connmgrs.f1
 author: swinarko
 ms.author: sawinark
-ms.reviewer: douglasl
-manager: craigg
-ms.openlocfilehash: 072cf951eabd5d7d0ae2211427a66e63900cfb72
-ms.sourcegitcommit: 769b71f01052ec9b4fc5eb02d9da9a1a58118029
+ms.reviewer: maghan
+ms.openlocfilehash: efefe16b7c5180ed0ae0dd853737c2182f335f61
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56319313"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68034398"
 ---
 # <a name="power-query-source-preview"></a>Power Query ソース (プレビュー)
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
 
 この記事では、SQL Server Integration Services (SSIS) データ フロー内の Power Query ソースのプロパティを構成する方法について説明します。 Power Query は、Excel/Power BI Desktop を使用したさまざまなデータ ソースへの接続とデータの変換を可能にするテクノロジです。 詳細については、「[Power Query - 概要と学習](https://support.office.com/article/power-query-overview-and-learning-ed614c81-4b00-4291-bd3a-55d80767f81d)」の記事を参照してください。 Power Query によって生成されたスクリプトをコピーし、SSIS データ フローの Power Query ソースに貼り付けて構成することができます。
   
@@ -49,14 +52,14 @@ SSDT で **Power Query ソース エディター**を開くには、SSIS Toolbox
 
 ![PQ ソースの [接続マネージャー] タブ (追加)](media/power-query-source/pq-source-connection-managers-tab-add.png)
 
-最後に、**[列]** タブでは、出力列の情報を編集できます。
+最後に、 **[列]** タブでは、出力列の情報を編集できます。
 
 ![PQ ソースの [列] タブ](media/power-query-source/pq-source-columns-tab.png)
 
 ## <a name="configure-the-power-query-connection-manager"></a>Power Query 接続マネージャーを構成する
 
 SSDT で Power Query ソースを含むデータ フローを設計するときに、新しい Power Query 接続マネージャーを次の方法で作成できます。
-- 前述のように、Power Query ソースの **[接続マネージャー]** タブで、**[追加]**/**[データ ソースの検出]** ボタンを選択し、ドロップダウン メニューから **<New connection...>** を選択することで、間接的に作成する。
+- 前述のように、Power Query ソースの **[接続マネージャー]** タブで、 **[追加]** / **[データ ソースの検出]** ボタンを選択し、ドロップダウン メニューから **<New connection...>** を選択することで、間接的に作成する。
 - パッケージの **[接続マネージャー]** パネルを右クリックし、ドロップダウン メニューから **[新しい接続...]** を選択することで、直接作成する。
 
 ![PQ ソースの [接続マネージャー] パネル (追加)](media/power-query-source/pq-source-connection-managers-panel-add.png)
@@ -65,7 +68,7 @@ SSDT で Power Query ソースを含むデータ フローを設計するとき�
 
 ![PQ ソースの [接続マネージャー] パネル ([追加] ダイアログ)](media/power-query-source/pq-source-connection-managers-panel-add-dialog.png)
 
-**Power Query 接続マネージャー エディター**で、**[データソースの種類]**、**[データ ソースのパス]**、および **[認証の種類]** を指定し、適切なアクセス資格情報を割り当てます。 **[データ ソースの種類]** では、現時点では 22 種類のドロップダウン メニューから選択できます。
+**Power Query 接続マネージャー エディター**で、 **[データソースの種類]** 、 **[データ ソースのパス]** 、および **[認証の種類]** を指定し、適切なアクセス資格情報を割り当てます。 **[データ ソースの種類]** では、現時点では 22 種類のドロップダウン メニューから選択できます。
 
 ![PQ ソース接続マネージャー エディター (種類)](media/power-query-source/pq-source-connection-manager-editor-kind.png)
 
@@ -75,7 +78,7 @@ SSDT で Power Query ソースを含むデータ フローを設計するとき�
 
 ![PQ ソース接続マネージャー エディター (パス)](media/power-query-source/pq-source-connection-manager-editor-path.png)
 
-最後に、**[認証の種類]** では、ドロップダウン メニューから **[匿名]**/**[Windows 認証]**/**[ユーザー名とパスワード]**/**[キー]** のいずれかを選択し、適切なアクセス資格情報を入力し、**[テスト接続]** ボタンを選択して Power Query ソースが適切に構成されていることを確認します。
+最後に、 **[認証の種類]** では、ドロップダウン メニューから **[匿名]** / **[Windows 認証]** / **[ユーザー名とパスワード]** / **[キー]** のいずれかを選択し、適切なアクセス資格情報を入力し、 **[テスト接続]** ボタンを選択して Power Query ソースが適切に構成されていることを確認します。
 
 ![PQ ソース接続マネージャー エディター (認証)](media/power-query-source/pq-source-connection-manager-editor-authentication.png)
 

@@ -9,15 +9,15 @@ helpviewer_keywords:
 - GeomCollection geometry subtype [SQL Server]
 - geometry subtypes [SQL Server]
 ms.assetid: 4445c0d9-a66b-4d7c-88e4-a66fa6f7d9fd
-author: douglaslMS
-ms.author: douglasl
+author: MladjoA
+ms.author: mlandzic
 manager: craigg
-ms.openlocfilehash: f19c99786a1b3bd6e219c0b2fd8c0d8258294b91
-ms.sourcegitcommit: 87f29b23d5ab174248dab5d558830eeca2a6a0a4
+ms.openlocfilehash: 5aceabe5a263cfa53572be6f818ddc905f9742a7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "51018517"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66014228"
 ---
 # <a name="geometrycollection"></a>GeometryCollection
   `GeometryCollection` は、0 個以上の `geometry` インスタンスまたは `geography` インスタンスのコレクションです。 `GeometryCollection` は空にできます。  

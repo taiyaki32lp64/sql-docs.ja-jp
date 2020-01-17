@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: aa366d98-8c7a-4189-bdd8-1d663b243d33
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: ad89f93569a9df0c14630506a3cea3d9091e8bf7
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 11250cf591f576052434c641d8c65ba681000666
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47675470"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67966245"
 ---
 # <a name="getpermissions-and-setpermissions-methods-example-vb"></a>GetPermissions および SetPermissions メソッドの例 (VB)
 この例では、 [GetPermissions](../../../ado/reference/adox-api/getpermissions-method-adox.md)と[SetPermissions](../../../ado/reference/adox-api/setpermissions-method-adox.md)メソッド。 次のコードでは、Orders テーブルのフル アクセスを管理ユーザーに与えられます。  
@@ -95,7 +94,7 @@ End Sub
 ' EndGrantPermissionsVB  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [Catalog オブジェクト (ADOX)](../../../ado/reference/adox-api/catalog-object-adox.md)   
  [GetPermissions メソッド (ADOX)](../../../ado/reference/adox-api/getpermissions-method-adox.md)   
  [SetPermissions メソッド (ADOX)](../../../ado/reference/adox-api/setpermissions-method-adox.md)   

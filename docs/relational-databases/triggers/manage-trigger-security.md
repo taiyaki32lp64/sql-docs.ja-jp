@@ -11,14 +11,13 @@ helpviewer_keywords:
 ms.assetid: e94720a8-a3a2-4364-b0a3-bbe86e3ce4d5
 author: rothja
 ms.author: jroth
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 1e400ada65efa69dd1b3e5ccc7dbdc21f67e3674
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: f51227380aa0e3cacebceaae246df672d3fcd663
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47690790"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68056052"
 ---
 # <a name="manage-trigger-security"></a>トリガーのセキュリティの管理
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -41,14 +40,31 @@ ms.locfileid: "47690790"
 ## <a name="trigger-security-best-practices"></a>トリガーのセキュリティに関するベスト プラクティス  
  次の方法を使用することで、トリガー コードが上位の特権の下で実行されないようにすることができます。  
   
+::: moniker range=">=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
+
 -   [sys.triggers](../../relational-databases/system-catalog-views/sys-triggers-transact-sql.md) カタログ ビューと [sys.server_triggers](../../relational-databases/system-catalog-views/sys-server-triggers-transact-sql.md) カタログ ビューをクエリし、データベースとサーバー インスタンスに存在する DML トリガーおよび DDL トリガーを認識します。 次のクエリは、現在のデータベースにあるすべての DML とデータベースレベルのすべての DDL トリガーと、サーバー インスタンスにあるすべてのサーバー レベルの DDL トリガーを返します。  
   
-    ```  
+    ```sql
     SELECT type, name, parent_class_desc FROM sys.triggers  
     UNION  
     SELECT type, name, parent_class_desc FROM sys.server_triggers ;  
     ```  
+
+   > [!NOTE]
+   > Managed Instance を使用している場合を除き、Azure SQL Database で使用できるのは **sys.triggers** のみです。
+
+::: moniker-end
+
+::: moniker range="=azuresqldb-current||=sqlallproducts-allversions"
+
+-   [sys.triggers](../../relational-databases/system-catalog-views/sys-triggers-transact-sql.md) カタログ ビューに対してクエリを実行して、データベースに存在する DML および DDL トリガーを認識します。 次のクエリでは、現在のデータベースにあるすべての DML とデータベースレベルの DDL トリガーが返されます。  
   
+    ```sql
+    SELECT type, name, parent_class_desc FROM sys.triggers ; 
+    ```  
+  
+::: moniker-end
+
 -   [DISABLE TRIGGER](../../t-sql/statements/disable-trigger-transact-sql.md) を使用して、トリガーが上位の特権の下で実行された場合に、データベースやサーバーの整合性に支障をきたす可能性のあるトリガーを無効にします。 次のステートメントは、現在のデータベースにあるすべてのデータベースレベルの DDL トリガーを無効にします。  
   
     ```  

@@ -8,7 +8,7 @@
    ALTER SERVER ROLE [sysadmin] ADD MEMBER [pacemakerLogin]
    ```
 
-  可用性グループの作成時に、作成後、すべてのノードが追加される前に、pacemaker のユーザーにより、可用性グループで、ALTER、CONTROL、および VIEW DEFINITION アクセス許可が必要です。
+  Pacemaker ユーザーには、可用性グループの作成時、作成後のそれへのノードの追加前に、可用性グループに対する ALTER、CONTROL、VIEW DEFINITION 権限が必要です。
 
 1. **すべての SQL Server に、SQL Server ログインの資格情報を保存します**。
 

@@ -1,5 +1,5 @@
 ---
-title: execute (java.lang.String) メソッド |Microsoft Docs
+title: execute メソッド (java.lang.String) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: a871917e-d286-46c3-96cf-2e8e8b22111c
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 39f1763a7c7a3d06db99460df3f16a0f2fee412f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 09adea323a5a2930e9c636a1b2e1b00567dbd9ce
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47727580"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67954952"
 ---
 # <a name="execute-method-javalangstring"></a>execute (java.lang.String) メソッド
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -38,10 +37,10 @@ public final boolean execute(java.lang.String sql)
 #### <a name="parameters"></a>パラメーター  
  *sql*  
   
- A**文字列**SQL ステートメントを格納しています。  
+ SQL ステートメントを含む**文字列**です。  
   
 ## <a name="return-value"></a>戻り値  
- **true**ステートメントは結果セットを返す場合。 **false**場合は、更新数またはない結果が返されます。  
+ ステートメントによって結果セットが返される場合は**true**を指定します。 更新数を返すか、または結果を返さない場合は**false** 。  
   
 ## <a name="exceptions"></a>例外  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  

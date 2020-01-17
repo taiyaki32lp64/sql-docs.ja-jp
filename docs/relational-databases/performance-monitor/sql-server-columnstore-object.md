@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: ae663a49-012f-4ffe-a332-f03157843052
 author: julieMSFT
 ms.author: jrasnick
-manager: craigg
-ms.openlocfilehash: dc21bd2fa9d3c35d436679cf256bec81654f5747
-ms.sourcegitcommit: 0c1d552b3256e1bd995e3c49e0561589c52c21bf
+ms.openlocfilehash: 334a8388b7abc217123071fdc37c9e1091f6a3fc
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/14/2018
-ms.locfileid: "53380513"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67987135"
 ---
 # <a name="sql-server-columnstore-object"></a>SQL Server の Columnstore オブジェクト
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

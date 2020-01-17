@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 7a745aae-9372-49b6-8dae-b9c93e5f3216
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 5743e04b402302cc53b7694d8160edfb11769e0c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 89093367532177ec87fb3a5fd86e38e98345962c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47783880"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67926042"
 ---
 # <a name="ado-objects-and-collections"></a>ADO オブジェクトとコレクション
 ADO は、次の 9 つのオブジェクトと 4 つのコレクションで構成されます。  
@@ -39,5 +38,5 @@ ADO は、次の 9 つのオブジェクトと 4 つのコレクションで構�
 |**パラメーター**コレクション|すべてが含まれています、**パラメーター**のオブジェクトを**コマンド**オブジェクト。|  
 |**エラー**コレクション|すべてが含まれています、**エラー**単一のプロバイダーに関連の障害への応答で作成されたオブジェクト。|  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [ADO のオブジェクト モデル](../../../ado/reference/ado-api/ado-object-model.md)

@@ -1,5 +1,5 @@
 ---
-title: DateTimeOffset のメソッド |Microsoft Docs
+title: DateTimeOffset メソッド |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -10,18 +10,17 @@ ms.topic: conceptual
 ms.assetid: 6b1f31c1-97de-4fc6-8d23-71d299f7bc28
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: dabfdd126b3d92457189124961e8f4d519c19ce6
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 89918afe6fdeb70e4051f6a821f603e05196c317
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47672982"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67955146"
 ---
 # <a name="datetimeoffset-methods"></a>DateTimeOffset のメソッド
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  DateTimeOffset のメンバーについては、次を参照してください。 [DateTimeOffset のメンバー](../../../connect/jdbc/reference/datetimeoffset-members.md)します。  
+  DateTimeOffset のメンバーの詳細については、「 [Datetimeoffset メンバー](../../../connect/jdbc/reference/datetimeoffset-members.md)」を参照してください。  
   
 ## <a name="see-also"></a>参照  
  [DateTimeOffset クラス](../../../connect/jdbc/reference/datetimeoffset-class.md)  

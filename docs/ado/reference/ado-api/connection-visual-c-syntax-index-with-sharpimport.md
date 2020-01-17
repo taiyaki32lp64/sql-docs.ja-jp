@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 03f47eda-840d-4cab-83d9-ccddd873f342
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 5bafba8f62f5e5120cb593bc7620e74056224271
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 52ad9e19e07fbe6bff7a23bcd4da8feb2dec93cf
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47617010"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67933518"
 ---
 # <a name="connection-visual-c-syntax-index-with-import"></a>接続 (Visual C 構文のインデックスで #import)
 ## <a name="methods"></a>メソッド  
@@ -41,7 +40,7 @@ _RecordsetPtr OpenSchema( enum SchemaEnum Schema, const
     SchemaID = vtMissing );  
 ```  
   
-## <a name="properties"></a>[プロパティ]  
+## <a name="properties"></a>Properties  
   
 ```  
 _bstr_t GetConnectionString( );  
@@ -88,5 +87,5 @@ long GetState( );
 __declspec(property(get=GetState)) long State;  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [Connection オブジェクト (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)

@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: e0a01f3d-d0aa-4c38-8bcc-82e59de50512
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 07c215c0ae360a5b386909cd64e9f3dfb2893bcf
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d078557186af534f1f489e8fee2e0f803c548f58
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47809570"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68100429"
 ---
 # <a name="mssqlserver17053"></a>MSSQLSERVER_17053
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -31,7 +30,7 @@ ms.locfileid: "47809570"
 |イベント ソース|MSSQLSERVER|  
 |コンポーネント|SQLEngine|  
 |シンボル名|OS_ERROR|  
-|メッセージ テキスト|%ls: オペレーティング システム エラー %ls が発生しました。|  
+|メッセージ テキスト|%ls:オペレーティング システム エラー %ls が発生しました。|  
   
 ## <a name="explanation"></a>説明  
 一般的なオペレーティング システム エラーが発生しました。  結果の状態については明らかではありません。  

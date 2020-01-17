@@ -21,22 +21,18 @@ helpviewer_keywords:
 - expressions [SQL Server], part returned
 - characters [SQL Server], returning part of
 ms.assetid: a19c808f-aaf9-4a69-af59-b1a5fc3e5c4c
-author: MashaMSFT
-ms.author: mathoma
-manager: craigg
+author: MikeRayMSFT
+ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 3dea4c451c82a17e29a6d47028a35e3e61bd27ec
-ms.sourcegitcommit: 96032813f6bf1cba680b5e46d82ae1f0f2da3d11
+ms.openlocfilehash: 19c261227f81debb3afec4e9d4b68f6ca7e8d607
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/15/2019
-ms.locfileid: "54298969"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68117679"
 ---
 # <a name="substring-transact-sql"></a>SUBSTRING (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
-
-> [!div class="nextstepaction"]
-> [SQL ドキュメントの目次に関するご意見を共有してください。](https://aka.ms/sqldocsurvey)
 
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] で、文字、バイナリ、テキスト、またはイメージ型の式の一部を返します。  
   
@@ -61,14 +57,14 @@ SUBSTRING ( expression ,start , length )
 ## <a name="return-types"></a>戻り値の型  
  *expression* が、サポートされている文字データ型の 1 つである場合は、文字データが返されます。 *expression* が、サポートされている **binary** データ型の 1 つである場合は、binary データが返されます。 返される文字列のデータ型は、指定した式のデータ型と同じです。ただし、次の表の場合は例外です。  
   
-|指定した式|の戻り値の型 : |  
+|指定した式|の戻り値の型 :|  
 |--------------------------|-----------------|  
 |**char**/**varchar**/**text**|**varchar**|  
 |**nchar**/**nvarchar**/**ntext**|**nvarchar**|  
 |**binary**/**varbinary**/**image**|**varbinary**|  
   
 ## <a name="remarks"></a>Remarks  
- 値は、 *開始* と *長さ* の文字数で指定する必要があります **ntext**, 、**char**, 、または **varchar** データ型とのバイト **テキスト**, 、**イメージ**, 、**バイナリ**, 、または **varbinary** データ型。  
+ 値は、 *開始* と *長さ* の文字数で指定する必要があります **ntext**、**char**、または **varchar** データ型とのバイト **text**、**image**、**binary**、または **varbinary** データ型。  
   
  *式* する必要があります **varchar (max)** または **varbinary (max)** ときに、 *開始* または *長さ* 2,147, 483,647 を超える値が含まれています。  
   
@@ -119,7 +115,7 @@ bcd
 > [!NOTE]  
 >  次の例を実行するには、**pubs** データベースをインストールする必要があります。  
   
- 次の例では、`pubs` データベースにある `pub_info` テーブルの **text** および **image** データ列から、それぞれ最初の 10 文字を返す方法を示します。 **テキスト** としてデータが返される **varchar**, 、および **イメージ** としてデータが返されます **varbinary**です。  
+ 次の例では、`pubs` データベースにある `pub_info` テーブルの **text** および **image** データ列から、それぞれ最初の 10 文字を返す方法を示します。 **text** としてデータが返される **varchar**, 、および **image** としてデータが返されます **varbinary**です。  
   
 ```  
 USE pubs;  

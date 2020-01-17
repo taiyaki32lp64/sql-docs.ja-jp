@@ -1,5 +1,5 @@
 ---
-title: getTypeInfo メソッド (SQLServerDatabaseMetaData) |Microsoft Docs
+title: getTypeInfo メソッド (SQLServerDatabaseMetaData) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: 23208f01-c1bf-4235-b29c-9051d3df59a3
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 40ca58f33dec39a1ec6d39979c7f6f0103acf8b2
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: cb9b1b632d5a17b7c8f497e30a4f033932f09b33
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47682720"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67978517"
 ---
 # <a name="gettypeinfo-method-sqlserverdatabasemetadata"></a>getTypeInfo メソッド (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -42,7 +41,7 @@ public java.sql.ResultSet getTypeInfo()
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- この getTypeInfo メソッドは、java.sql.DatabaseMetaData インターフェイスで getTypeInfo メソッドによって指定されます。  
+ この getTypeInfo メソッドは、java.sql.DatabaseMetaData インターフェイスの getTypeInfo メソッドで規定されています。  
   
  getTypeInfo メソッドによって返される結果セットには、次の情報が含まれます。  
   
@@ -50,7 +49,7 @@ public java.sql.ResultSet getTypeInfo()
 |----------|----------|-----------------|  
 |TYPE_NAME|**String**|データ型の名前です。|  
 |DATA_TYPE|**short**|java.sql.Types の SQL データ型です。|  
-|PRECISION|**int**|有効桁数の合計数。|  
+|PRECISION|**int**|有効桁数の合計。|  
 |LITERAL_PREFIX|**String**|定数の先頭に記述する文字または文字列です。|  
 |LITERAL_SUFFIX|**String**|定数の末尾に記述する文字または文字列です。|  
 |CREATE_PARAMS|**String**|データ型の作成パラメーターの記述です。|  

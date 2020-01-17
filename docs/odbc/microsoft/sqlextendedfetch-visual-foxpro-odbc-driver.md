@@ -12,21 +12,20 @@ helpviewer_keywords:
 ms.assetid: b28af112-fb47-4143-b11e-3b743b2ae1b8
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: a2d01c25044bf7b03e2fabe9c615668fc7837312
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d58d7885eed1a8ed0611470f29cb24e8072afcb9
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47667156"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68053802"
 ---
 # <a name="sqlextendedfetch-visual-foxpro-odbc-driver"></a>SQLExtendedFetch (Visual FoxPro ODBC ドライバー)
 > [!NOTE]  
 >  このトピックでには、Visual FoxPro ODBC ドライバー固有の情報が含まれています。 この関数の詳細については、該当するトピックを参照してください。 [ODBC API リファレンス](../../odbc/reference/syntax/odbc-api-reference.md)します。  
   
- サポート: 完全な  
+ サポート:[完全]  
   
- ODBC API 準拠: レベル 2  
+ ODBC API 準拠:レベル 2  
   
  ような[SQLFetch](../../odbc/microsoft/sqlfetch-visual-foxpro-odbc-driver.md)が各列の配列を使用して複数の行を返します。 結果セットは前方スクロールし、旧バージョンとのスクロール可能な静的、順方向専用カーソルが定義されている場合に行んだことができます。  
   

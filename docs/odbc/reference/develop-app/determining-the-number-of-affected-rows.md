@@ -14,16 +14,15 @@ helpviewer_keywords:
 ms.assetid: 1e56297d-a786-415e-b66d-b42d1b2a8d45
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 99e3676c3b73b177f5e6fc3acef0d93d55cce898
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a6a1bebf7d5cfb85e49fb0e382dacc4f4464054e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47626210"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68039982"
 ---
 # <a name="determining-the-number-of-affected-rows"></a>影響を受ける行数の決定
-呼び出すことができます、アプリケーションは、更新、削除、または行を挿入後、 **SQLRowCount**に影響を受けた行の数を決定します。 **SQLRowCount**更新、削除、または実行することによって挿入された行かどうかは、この値を返す、 **UPDATE**、**削除**、または**挿入**ステートメントでは、位置指定を実行して更新または delete ステートメント、または呼び出すことによって**SQLSetPos**します。  
+アプリケーションが行を更新、削除、または挿入後、 **SQLRowCount** を呼び出し影響を受けた行の数を判断できます。 **SQLRowCount** は、 **UPDATE**、**DELETE**、または**INSERT**ステートメントの実行により、位置指定、更新、削除、または **SQLSetPos** の呼び出しによって行が更新、削除または挿入されたかどうかに関わらず、この値を返します。  
   
  SQL ステートメントのバッチを実行すると、バッチ内のすべてのステートメントの総数または個々 のカウント、バッチ内の各ステートメントの影響を受ける行の数。 可能性があります。 詳細については、次を参照してください。 [SQL ステートメントのバッチ](../../../odbc/reference/develop-app/batches-of-sql-statements.md)と[複数結果](../../../odbc/reference/develop-app/multiple-results.md)します。  
   

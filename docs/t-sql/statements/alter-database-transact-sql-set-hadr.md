@@ -23,13 +23,12 @@ helpviewer_keywords:
 ms.assetid: 20e6e803-d6d5-48d5-b626-d1e0a73d174c
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: 040c30ce4c48ce8d1fc596b88bae4bc1fec242aa
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 43970780903aa0a4d5aef84f971ac230f2f26358
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52533352"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68065731"
 ---
 # <a name="alter-database-transact-sql-set-hadr"></a>ALTER DATABASE (Transact-SQL) SET HADR 
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -53,16 +52,16 @@ ALTER DATABASE database_name
   
 ## <a name="arguments"></a>引数  
  *database_name*  
- 変更するセカンダリ データベースの名前を指定します。  
+ 変更するセカンダリ データベースの名前です。  
   
  SET HADR  
  指定したデータベース上で指定した [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] コマンドを実行します。  
   
- { AVAILABILITY GROUP **=**_group_name_ | OFF }  
+ { AVAILABILITY GROUP **=** _group_name_ | OFF }  
  次のように、指定した可用性グループから可用性データベースを削除するか、指定した可用性グループに参加させます。  
   
  *group_name*  
- 指定したデータベースをセカンダリ レプリカ上で参加させます。このレプリカは、group_name で指定された可用性グループにコマンドを実行するサーバー インスタンスによってホストされています。  
+ 指定したデータベースをセカンダリ レプリカ上で参加させます。このレプリカは、group_name で指定された可用性グループに対してコマンドを実行するサーバー インスタンスによってホストされています。  
   
  この操作の前提条件は以下のとおりです。  
   
@@ -88,7 +87,7 @@ ALTER DATABASE database_name
 >  可用性グループから可用性データベースを完全に削除するには、プライマリ可用性レプリカをホストするサーバー インスタンスに接続し、[ALTER AVAILABILITY GROUP](../../t-sql/statements/alter-availability-group-transact-sql.md)*group_name* REMOVE DATABASE *availability_database_name* ステートメントを使用します。 詳細については、「[可用性グループからのプライマリ データベースの削除 &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/remove-a-primary-database-from-an-availability-group-sql-server.md)」をご覧ください。  
   
  SUSPEND  
- セカンダリ データベースでデータ移動を中断します。 SUSPEND コマンドは、対象のデータベースをホストするレプリカによって受け付けられるとすぐに戻りますが、実際にはデータベースの中断が非同期に行われます。  
+ セカンダリ データベース上でデータ移動を中断します。 SUSPEND コマンドは、対象のデータベースをホストするレプリカによって受け付けられるとすぐに戻りますが、実際にはデータベースの中断が非同期に行われます。  
   
  その影響の範囲は、ALTER DATABASE ステートメントを実行する場所によって異なります。  
   

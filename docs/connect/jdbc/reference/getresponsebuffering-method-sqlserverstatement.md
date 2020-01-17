@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: a9a9ffdd-7ce3-4e0a-907c-34d6a54e6865
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: c682e28244bf85ce761ab6f8d0b54d5f5f054679
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: cf5a9ee4d4aa001103840ba8768ba338baa42db8
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47680410"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67980403"
 ---
 # <a name="getresponsebuffering-method-sqlserverstatement"></a>getResponseBuffering メソッド (SQLServerStatement)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -36,16 +35,16 @@ public final java.lang.String getResponseBuffering()
 ```  
   
 ## <a name="return-value"></a>戻り値  
- A**文字列**小文字を含む**完全**または**アダプティブ**します。  
+ 小文字の**完全**または**アダプティブ**を含む**文字列**。  
   
 ## <a name="remarks"></a>Remarks  
  **adaptive** 値は、必要に応じて最小限のデータをバッファリングすることを示します。  
   
  **full** は、実行時にサーバーから結果全体を読み取ることを示します。  
   
- **アダプティブ**は JDBC Driver version 2.0 および 3.0 での既定値です。 **完全な**JDBC Driver version 2.0 よりも前の既定のでした。  
+ **adaptive**は、JDBC Driver version 2.0 および3.0 の既定値です。 JDBC Driver version 2.0 より前の既定値は**full**でした。  
   
- 詳細については、応答バッファリング モードを使用して、次を参照してください。[アダプティブ バッファリングを使用して](../../../connect/jdbc/using-adaptive-buffering.md)します。  
+ 応答バッファリングモードの使用方法の詳細については、「[アダプティブバッファリングの使用](../../../connect/jdbc/using-adaptive-buffering.md)」を参照してください。  
   
 ## <a name="see-also"></a>参照  
  [setResponseBuffering メソッド &#40;SQLServerStatement&#41;](../../../connect/jdbc/reference/setresponsebuffering-method-sqlserverstatement.md)   

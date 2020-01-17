@@ -10,17 +10,20 @@ ms.topic: conceptual
 f1_keywords:
 - sql13.dts.designer.sapbwdestination.connection.f1
 ms.assetid: 04ae38f8-5287-45a3-826a-8aac5dd15a91
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: 032cce243ef7bdf9f688074915770cf29d95df15
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 66365c942bc3f996d834f0217f29bd82cc911457
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47749786"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71298107"
 ---
 # <a name="sap-bw-destination-editor-connection-manager-page"></a>[SAP BW 変換先エディター] ([接続マネージャー] ページ)
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   **[SAP BW 変換先エディター]** の **[接続マネージャー]** ページを使用すると、SAP BW 変換先が使用する SAP BW 接続マネージャーを選択できます。 このページでは、SAP Netweaver BW システムにデータを読み込むためのパラメーターも選択します。  
   
  [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector 1.1 for SAP BW の SAP BW 変換先の詳細については、「 [SAP BW 転送先](../../integration-services/data-flow/sap-bw-destination.md)」を参照してください。  
@@ -36,7 +39,7 @@ ms.locfileid: "47749786"
   
 3.  **[SAP BW 変換先エディター]** で、 **[接続マネージャー]** をクリックして **[接続マネージャー]** ページを開きます。  
   
-## <a name="options"></a>[変数]  
+## <a name="options"></a>オプション  
   
 > [!NOTE]  
 >  変換先を構成するために必要な値がわからない場合は、SAP 管理者に確認してください。  
@@ -59,7 +62,7 @@ ms.locfileid: "47749786"
  **インフォソース**  
  インフォソースの名前を入力します。  
   
- **型**  
+ **Type**  
  インフォソースの種類を識別する 1 文字を入力します。 指定できる 1 文字の値の一覧を次の表に示します。  
   
 |値|[説明]|  
@@ -114,7 +117,7 @@ ms.locfileid: "47749786"
   
 ## <a name="see-also"></a>参照  
  [SAP BW 変換先エディター ([マッピング] ページ)](../../integration-services/data-flow/sap-bw-destination-editor-mappings-page.md)   
- [SAP BW 変換先エディター &#40;[エラー出力] ページ&#41;](../../integration-services/data-flow/sap-bw-destination-editor-error-output-page.md)   
+ [SAP BW 変換先エディター ([エラー出力] ページ)](../../integration-services/data-flow/sap-bw-destination-editor-error-output-page.md)   
  [SAP BW 変換先エディター &#40;[詳細設定] ページ&#41;](../../integration-services/data-flow/sap-bw-destination-editor-advanced-page.md)   
  [Microsoft Connector for SAP BW の F1 ヘルプ](../../integration-services/microsoft-connector-for-sap-bw-f1-help.md)  
   

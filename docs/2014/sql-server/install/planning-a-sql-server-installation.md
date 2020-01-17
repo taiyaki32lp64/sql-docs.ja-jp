@@ -13,11 +13,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: b1baf29a88ff25eb278271719680d1979940c590
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53367907"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68211495"
 ---
 # <a name="planning-a-sql-server-installation"></a>SQL Server のインストール計画
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]をインストールするには、次の手順を実行します。  
@@ -73,7 +73,7 @@ ms.locfileid: "53367907"
  [SQL Server フェールオーバー クラスターのインストール](../failover-clusters/install/sql-server-failover-cluster-installation.md)  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] セットアップ ドキュメントのこのセクションでは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] フェールオーバー クラスターをインストールして構成する方法について説明します。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [SQL Server 2014 のインストールのクイック スタート](../../../2014/getting-started/quick-start-installation-of-sql-server-2014.md)   
  [コマンド プロンプトから SQL Server 2014 をインストールします。](../../database-engine/install-windows/install-sql-server-from-the-command-prompt.md)   
  [高可用性ソリューション &#40;SQL Server&#41;](../failover-clusters/high-availability-solutions-sql-server.md)   

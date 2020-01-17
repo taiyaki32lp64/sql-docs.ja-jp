@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: 5fed9ebb-d9a3-4d1a-9212-1057a603c4e5
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 7218cd8f86fa6fe65f6820c77b54f77654dce7b7
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a7fcdbd273af8d4b3ddddbdebcfea3d2740eb480
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47667360"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67996956"
 ---
 # <a name="updateboolean-method-javalangstring-boolean"></a>updateBoolean (java.lang.String, boolean) メソッド
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -49,7 +48,7 @@ public void updateBoolean(java.lang.String columnName,
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- この updateBoolean メソッドは、java.sql.ResultSet インターフェイスの updateBoolean メソッドによって指定されます。  
+ この updateBoolean メソッドは、java. ResultSet インターフェイスの updateBoolean メソッドによって指定されます。  
   
 ## <a name="see-also"></a>参照  
  [updateBoolean メソッド &#40;SQLServerResultSet&#41;](../../../connect/jdbc/reference/updateboolean-method-sqlserverresultset.md)   

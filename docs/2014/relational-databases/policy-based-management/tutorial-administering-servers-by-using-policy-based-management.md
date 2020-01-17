@@ -14,11 +14,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 58757aa0de2b13c68926cf596a8da702b972edf3
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52754204"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63256056"
 ---
 # <a name="tutorial-administering-servers-by-using-policy-based-management"></a>チュートリアル:ポリシー ベースの管理を使用したサーバーの管理
   「ポリシー ベースの管理を使用したサーバーの管理」チュートリアルへようこそ。 このチュートリアルは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] については理解しているが、ポリシー ベースの管理を初めて使用するユーザーを対象としています。  
@@ -31,7 +31,7 @@ ms.locfileid: "52754204"
  [レッスン 1:作成して適用する既定のポリシーではオフ](lesson-1-create-and-apply-an-off-by-default-policy.md)  
  このレッスンでは、データベース メールをサーバーで有効化しないように指定するポリシーを作成します。 さらに、サーバーがポリシーに準拠しているかどうかを確認し、データベース メールを無効にしてサーバーを構成します。  
   
- [レッスン 2:作成し、名前付け基準ポリシーの適用](lesson-2-create-and-apply-a-naming-standards-policy.md)  
+ [レッスン 2:名前付け基準ポリシーの作成と適用](lesson-2-create-and-apply-a-naming-standards-policy.md)  
  このレッスンでは、テーブルの名前付け基準を定義して適用するポリシーを作成します。  
   
 ## <a name="requirements"></a>必要条件  

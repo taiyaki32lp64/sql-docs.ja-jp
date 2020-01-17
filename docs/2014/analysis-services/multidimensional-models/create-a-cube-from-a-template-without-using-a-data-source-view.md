@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: 5c8c09b1-140c-48db-9b9f-d18a051d7dbd
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 0125550f8ec4a3fa290ea29df3d33cc3bebe3c7e
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: c6541a60b4810319fd353d39a3922244c018496f
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52504978"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66076506"
 ---
 # <a name="create-a-cube-from-a-template-without-using-a-data-source-view"></a>データ ソース ビューを使用しないテンプレートからのキューブの作成
   キューブ ウィザードの最初のページで **[データ ソースを使用せずにキューブを構築する]** を選択すると、データ ソース ビューを使用せずにキューブを作成できます。 後で、スキーマ生成ウィザードを使用して、キューブ (および場合によっては他の [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] オブジェクト) の構造に基づいて、データ ソース ビューのリレーショナル スキーマを作成できます。 スキーマ生成の詳細については、「[スキーマ生成ウィザード (Analysis Services)](schema-generation-wizard-analysis-services.md)」を参照してください。  

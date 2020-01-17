@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 6e2e5063-c1cf-4b5a-b642-234921e3f4f7
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: fe1115c7e0cf0e4f78ff09acb405c64912af3471
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 56a8c53a22fefec7fbda4c2ac7476ae46d664199
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51658001"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67946007"
 ---
 # <a name="xquery-extension-functions---sqlvariable"></a>XQuery Extension Functions - sql:variable()
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -46,14 +45,14 @@ sql:variable("variableName") as xdt:anyAtomicType?
   
 ## <a name="examples"></a>使用例  
   
-### <a name="a-using-the-sqlvariable-function-to-bring-a-transact-sql-variable-value-into-xml"></a>A. Transact-SQL 変数の値を XML にする sql:variable() 関数の使用  
- 次の例では、次の値で構成される XML インスタンスを構築します。  
+### <a name="a-using-the-sqlvariable-function-to-bring-a-transact-sql-variable-value-into-xml"></a>A. TRANSACT-SQL 変数の値を XML にするのに sql:variable() 関数の使用  
+ 次の例では、次の構成されている XML インスタンスを構築します。  
   
 -   XML 以外の列の値 (`ProductID`)。 [Sql:column() 関数](../xquery/xquery-extension-functions-sql-column.md)XML にこの値をバインドするために使用します。  
   
--   他のテーブルの XML 以外の列の値 (`ListPrice`)。 ここでも、XML にこの値をバインドするために、`sql:column()` を使用します。  
+-   他のテーブルの XML 以外の列の値 (`ListPrice`)。 ここでも、 `sql:column()` XML にこの値をバインドするために使用します。  
   
--   [!INCLUDE[tsql](../includes/tsql-md.md)] 変数の値 (`DiscountPrice`)。 XML にこの値をバインドするために、`sql:variable()` メソッドを使用します。  
+-   [!INCLUDE[tsql](../includes/tsql-md.md)] 変数の値 (`DiscountPrice`)。 `sql:variable()` XML にこの値をバインドするメソッドを使用します。  
   
 -   値 (`ProductModelName`) から、 **xml**型の列で、クエリをさらに興味深いにするようにします。  
   
@@ -81,9 +80,9 @@ WHERE ProductID=771
   
  上のクエリに関して、次の点に注意してください。  
   
--   `query()` メソッド内の XQuery により、XML が構築されます。  
+-   内の XQuery、`query()`メソッドは、XML を構築します。  
   
--   `namespace`で名前空間プレフィックスを定義するキーワードが使用される、 [XQuery プロローグ](../xquery/modules-and-prologs-xquery-prolog.md)します。 これは、関連付けられたスキーマを持つ xml 型の `ProductModelName` 列から `CatalogDescription xml` 属性値を取得するためです。  
+-   `namespace`で名前空間プレフィックスを定義するキーワードが使用される、 [XQuery プロローグ](../xquery/modules-and-prologs-xquery-prolog.md)します。 これは、`ProductModelName`から属性値を取得、`CatalogDescription xml`型の列に関連付けられているスキーマがあります。  
   
  結果を次に示します。  
   
@@ -93,7 +92,7 @@ WHERE ProductID=771
          ListPrice="3399.99" DiscountPrice="2500" />  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [SQL Server XQuery 拡張関数します。](https://msdn.microsoft.com/library/4bc5d499-5fec-4c3f-b11e-5ab5ef9d8f97)   
  [型指定された XML と型指定されていない XML の比較](../relational-databases/xml/compare-typed-xml-to-untyped-xml.md)   
  [XML データ &#40;SQL Server&#41;](../relational-databases/xml/xml-data-sql-server.md)   

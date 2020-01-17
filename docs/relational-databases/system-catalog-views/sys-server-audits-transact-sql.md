@@ -19,15 +19,14 @@ helpviewer_keywords:
 ms.assetid: c2c4a000-1127-46a8-b1e9-947fd1136e1e
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 1cf8e911f8b8e871cf7389bf40d6a84bc455bffa
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 0a00f6843a0ef379c12aa1d1d00df9380efbd139
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52506365"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68125003"
 ---
-# <a name="sysserveraudits-transact-sql"></a>sys.server_audits (Transact-SQL)
+# <a name="sysserveraudits-transact-sql"></a>sys.server_audits (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   サーバー インスタンス内の各 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 監査について行を 1 つずつ含みます。 詳しくは、「[SQL Server Audit &#40;データベース エンジン&#41;](../../relational-databases/security/auditing/sql-server-audit-database-engine.md)」を参照してください。  
@@ -36,16 +35,16 @@ ms.locfileid: "52506365"
 |-----------------|---------------|-----------------|  
 |**audit_id**|**int**|監査の ID。|  
 |**name**|**sysname**|監査の名前。|  
-|**audit_guid**|**uniqueidentifier**|列挙に使用される監査の GUID がメンバー サーバーと #124 を使用した監査は、アタッチ操作の中に、サーバーの開始とデータベースのデータベース監査の仕様。|  
+|**audit_guid**|**uniqueidentifier**|メンバー サーバーで監査を列挙するために使用される監査の GUID&#124;アタッチ操作の中にサーバーの開始とデータベースのデータベース監査の仕様。|  
 |**create_date**|**datetime**|監査が作成された UTC 日付。|  
 |**modify_date**|**datetime**|監査が最後に変更された UTC 日付。|  
-|**principal_id**|**int**|サーバーに登録した監査の所有者の ID。|  
+|**principal_id**|**int**|サーバーに登録されている、監査の所有者の ID。|  
 |**type**|**char(2)**|監査の種類。<br /><br /> SL - NT セキュリティ イベント ログ<br /><br /> AL - NT アプリケーション イベント ログ<br /><br /> FL - ファイル システム上のファイル|  
-|**type_desc**|**nvarchar(60)**|SECURITY LOG<br /><br /> APPICATION LOG<br /><br /> FILE|  
-|**on_failure**|**tinyint**|アクション エントリの書き込みに失敗した場合 : <br /><br /> 0 - 続行します。<br /><br /> 1 - サーバー インスタンスのシャット ダウン<br /><br /> 2 - 操作に失敗します。|  
-|**on_failure_desc**|**nvarchar(60)**|アクション エントリの書き込みに失敗した場合 : <br /><br /> CONTINUE<br /><br /> SHUTDOWN SERVER INSTANCE<br /><br /> FAIL_OPERATION|  
+|**type_desc**|**nvarchar(60)**|SECURITY LOG<br /><br /> アプリケーション ログ<br /><br /> FILE|  
+|**on_failure**|**tinyint**|アクション エントリの書き込みに失敗します。<br /><br /> 0 - 続行します。<br /><br /> 1 - サーバー インスタンスのシャット ダウン<br /><br /> 2 - 操作に失敗します。|  
+|**on_failure_desc**|**nvarchar(60)**|アクション エントリの書き込みに失敗します。<br /><br /> CONTINUE<br /><br /> サーバー インスタンスのシャット ダウン<br /><br /> FAIL_OPERATION|  
 |**is_state_enabled**|**tinyint**|0 - 無効<br /><br /> 1 - 有効|  
-|**queue_delay**|**int**|ディスクに書き込むまでに待機する最大時間 (ミリ秒)。 0 の場合は、イベントが続行する前に書き込みが行われます。|  
+|**queue_delay**|**int**|ディスクに書き込む前に待機するミリ秒単位で最大時間。 0 の場合、監査は、イベントが続行する前に書き込みを保証します。|  
 |**述語**|**nvarchar(3000)**|イベントに適用される述語式。|  
   
 ## <a name="permissions"></a>アクセス許可  
@@ -53,7 +52,7 @@ ms.locfileid: "52506365"
   
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] 詳細については、「 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)」を参照してください。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [CREATE SERVER AUDIT &#40;Transact-SQL&#41;](../../t-sql/statements/create-server-audit-transact-sql.md)   
  [ALTER SERVER AUDIT &#40;Transact-SQL&#41;](../../t-sql/statements/alter-server-audit-transact-sql.md)   
  [DROP SERVER AUDIT &#40;Transact-SQL&#41;](../../t-sql/statements/drop-server-audit-transact-sql.md)   

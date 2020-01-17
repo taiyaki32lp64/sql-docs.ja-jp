@@ -15,18 +15,17 @@ helpviewer_keywords:
 ms.assetid: b4c18863-ed92-4aa2-a04f-7ed832fc9e07
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 65f1990c1c35278e67036f2bb3699f268a2aca8a
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 67ba388871720ff804063f27a378b838d300baf0
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52751845"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68126389"
 ---
-# <a name="spscriptdynamicupdproc-transact-sql"></a>sp_scriptdynamicupdproc (Transact-SQL)
+# <a name="spscriptdynamicupdproc-transact-sql"></a>sp_scriptdynamicupdproc (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  動的な更新ストアド プロシージャを作成する CREATE PROCEDURE ステートメントを生成します。 カスタム ストアド プロシージャ内の UPDATE ステートメントは、変更する列を示す MCALL 構文に基づいて動的に構築されます。 このストアド プロシージャは、サブスクライブの対象となるテーブルのインデックスの数が増加し、変更される列の数が少ない場合に使用します。 このストアド プロシージャは、パブリケーション データベースで、パブリッシャー側で実行されます。  
+  動的な更新ストアド プロシージャを作成する CREATE PROCEDURE ステートメントを生成します。 カスタム ストアド プロシージャ内の UPDATE ステートメントは変更する列を示す MCALL 構文に基づいて動的に構築します。 サブスクライブするテーブルのインデックスの数が増加し、変更される列の数が少ない場合は、このストアド プロシージャを使用します。 このストアド プロシージャは、パブリケーション データベースで、パブリッシャー側で実行されます。  
   
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -38,14 +37,13 @@ sp_scriptdynamicupdproc [ @artid =] artid
 ```  
   
 ## <a name="arguments"></a>引数  
- [  **@artid=**] *artid*  
- アーティクルの ID を指定します。 *artid*は**int**、既定値はありません。  
+`[ @artid = ] artid` アーティクル ID です。 *artid*は**int**、既定値はありません。  
   
 ## <a name="result-sets"></a>結果セット  
- 結果セットを返しますが、1 つから成る**nvarchar (4000)** 列。 この結果セットは、カスタム ストアド プロシージャの作成に使用される完全な CREATE PROCEDURE ステートメントを構成します。  
+ 結果セットを返しますが、1 つから成る**nvarchar (4000)** 列。 結果は、カスタム ストアド プロシージャの作成に使用される完全な CREATE PROCEDURE ステートメントをフォームに設定します。  
   
 ## <a name="remarks"></a>コメント  
- **sp_scriptdynamicupdproc**はトランザクション レプリケーションで使用します。 既定の MCALL スクリプト作成ロジックでは、UPDATE ステートメント内のすべての列を対象に、ビットマップを使用して、変更された列が特定されます。 列が変更されていなかった場合、列は元に戻され、通常は問題は発生しません。 列にインデックスが作成されている場合、追加の処理が発生します。 動的な処理では変更された列だけが対象になり、最適な UPDATE 文字列が提供されます。 ただし、動的な UPDATE ステートメントが構築されると、実行時に追加の処理が発生します。 動的な方法と静的な方法の両方をテストし、最適な方を選択することをお勧めします。  
+ **sp_scriptdynamicupdproc**はトランザクション レプリケーションで使用します。 既定の MCALL スクリプト作成ロジックでは、UPDATE ステートメント内のすべての列を対象に、ビットマップを使用して、変更された列が特定されます。 列が変更されていなかった場合、列に設定されます戻る自体には、これは、通常、問題は発生しません。 列にインデックスが作成されている場合、追加の処理が発生します。 動的なアプローチが最適な UPDATE 文字列を提供する、変更された列のみが含まれます。 ただし、余分な処理と、動的な UPDATE ステートメントのビルド時に実行時に発生します。 動的な方法と静的な方法の両方をテストし、最適な方を選択することをお勧めします。  
   
 ## <a name="permissions"></a>アクセス許可  
  メンバーのみ、 **sysadmin**固定サーバー ロールまたは**db_owner**固定データベース ロールが実行できる**sp_scriptdynamicupdproc**します。  
@@ -57,7 +55,7 @@ sp_scriptdynamicupdproc [ @artid =] artid
 'MCALL sp_mupd_authors'  
 ```  
   
- パブリッシャー側で次のストアド プロシージャを実行し、サブスクライバー側のディストリビューション エージェントで実行するカスタム ストアド プロシージャを生成します。  
+ パブリッシャー側で次のストアド プロシージャを実行して、サブスクライバーでディストリビューション エージェントによって実行されるカスタム ストアド プロシージャを生成します。  
   
 ```  
 EXEC sp_scriptdynamicupdproc @artid = '1'  
@@ -124,7 +122,7 @@ if @@rowcount = 0
   
  このストアド プロシージャを実行した後、結果のスクリプトを使用して、サブスクライバー側で手動でストアド プロシージャを作成できます。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [システム ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

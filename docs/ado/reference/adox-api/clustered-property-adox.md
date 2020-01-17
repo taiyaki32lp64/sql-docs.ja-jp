@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: 9b62fb35-de43-425a-83ca-77af4e33fea9
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: f273509d8080a3f02a624e77001bb14569730ddc
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: c66bca375951ec78593bafc2c2eff950e3282e4c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47691440"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67966994"
 ---
 # <a name="clustered-property-adox"></a>Clustered プロパティ (ADOX)
 インデックスがクラスター化されているかどうかを示します。  
@@ -41,5 +40,5 @@ ms.locfileid: "47691440"
 ## <a name="applies-to"></a>適用対象  
  [Index オブジェクト (ADOX)](../../../ado/reference/adox-api/index-object-adox.md)  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [Clustered プロパティの例 (VB)](../../../ado/reference/adox-api/clustered-property-example-vb.md)

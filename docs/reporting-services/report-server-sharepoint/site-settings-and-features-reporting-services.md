@@ -2,18 +2,18 @@
 title: Reporting Services のサイト設定とサイト機能 (SharePoint モード) | Microsoft Docs
 ms.date: 09/25/2017
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: report-server-sharepoint
 ms.topic: conceptual
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 10e04d4864ac3f6ecf7c59f989a8886cee2409d5
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
-ms.translationtype: HT
+ms.openlocfilehash: 73d357b6a601265df5e579f1b6acaff6ce8d648d
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52414779"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65580455"
 ---
 # <a name="reporting-services-site-settings-and-site-features-sharepoint-mode"></a>Reporting Services のサイト設定とサイト機能 (SharePoint モード)
 

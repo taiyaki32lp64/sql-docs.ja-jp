@@ -1,5 +1,5 @@
 ---
-title: トレースを作成する (SQL Server Profiler) |Microsoft Docs
+title: トレースの作成 (SQL Server プロファイラー) |Microsoft Docs
 ms.custom: ''
 ms.date: 08/01/2016
 ms.prod: sql
@@ -10,15 +10,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - traces [SQL Server], creating
 ms.assetid: 0302fa6d-d2b5-43fe-ad70-7a337575b112
-author: stevestein
-ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 36f53b9f4daaa25d6276778ed4f38ae641c73c93
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: cb6a3f10f93d7bba147dca0cc9f7bbb879a82d68
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47716819"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67930165"
 ---
 # <a name="create-a-trace-sql-server-profiler"></a>トレースの作成 (SQL Server Profiler)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -30,11 +29,11 @@ ms.locfileid: "47716819"
   
      **[トレースのプロパティ]** ダイアログ ボックスが表示されます。  
   
-    > **注:** **[接続の確立直後にトレースを開始する]** を選択している場合は、 **[トレースのプロパティ]** ダイアログ ボックスは表示されずに、トレースが開始されます。 この設定を無効にするには、**[ツール]** メニューの **[オプション]** をクリックし、[接続の確立直後にトレースを開始する] チェック ボックスをオフにします。  
+    > **注:** **[接続の確立直後にトレースを開始する]** を選択している場合は、 **[トレースのプロパティ]** ダイアログ ボックスは表示されずに、トレースが開始されます。 この設定を無効にするには、* *[ツール]* * メニューの **[オプション]** をクリックし、[接続の確立直後にトレースを開始する] チェック ボックスをオフにします。  
   
 2.  **[トレース名]** ボックスに、トレースの名前を入力します。  
   
-3.  **[使用するテンプレート]** ボックスの一覧で、トレースの基本として使用するトレース テンプレートを選択します。テンプレートを使用しない場合は、**[空白]** を選択します。  
+3.  **[使用するテンプレート]** ボックスの一覧で、トレースの基本として使用するトレース テンプレートを選択します。テンプレートを使用しない場合は、 **[空白]** を選択します。  
   
 4.  トレース結果を保存するには、次のいずれかの操作を実行します。  
   

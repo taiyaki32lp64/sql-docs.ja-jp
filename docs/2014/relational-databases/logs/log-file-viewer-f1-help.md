@@ -15,18 +15,18 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 3ce118fb3234d45ae0606fb4bcc99777a945acda
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52748754"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63143835"
 ---
 # <a name="log-file-viewer-f1-help"></a>[ログ ファイルの表示] の F1 ヘルプ
   [ログ ファイルの表示] には、さまざまなコンポーネントのログ情報が表示されます。 [ログ ファイルの表示] が開いているときに **[ログの選択]** ペインを使用して、表示するログを選択します。 各ログには、そのログの種類に適した列が表示されます。  
   
  表示できるログ ファイルは、[ログ ファイルの表示] を開いたときの状況に応じて変わります。 詳細については、「 [[ログ ファイルの表示] を開く](open-log-file-viewer.md)」を参照してください。  
   
- 監査ログの表示行数は、**[ツール] メニューから開く [オプション]** ダイアログ ボックスの **[SQL Server オブジェクト エクスプローラー]/[コマンド]** ページで構成できます。 監査ログの表示列の詳細については、「[sys.fn_get_audit_file &#40;Transact-SQL&#41;](/sql/relational-databases/system-functions/sys-fn-get-audit-file-transact-sql)」を参照してください。  
+ 監査ログの表示行数は、 **[ツール] メニューから開く [オプション]** ダイアログ ボックスの **[SQL Server オブジェクト エクスプローラー]/[コマンド]** ページで構成できます。 監査ログの表示列の詳細については、「[sys.fn_get_audit_file &#40;Transact-SQL&#41;](/sql/relational-databases/system-functions/sys-fn-get-audit-file-transact-sql)」を参照してください。  
   
 ## <a name="options"></a>および  
  **[ログの読み込み]**  
@@ -77,7 +77,7 @@ ms.locfileid: "52748754"
   
  オフラインの [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] のインスタンスのログ ファイルにアクセスするには、 **Root\Microsoft\SqlServer\ComputerManagement10** WMI 名前空間、および、ログ ファイルの保存されているフォルダーの両方に対する読み取りアクセス権が必要です。 詳細については、「 [オフライン ログ ファイルの表示](view-offline-log-files.md)」トピックの「セキュリティ」セクションを参照してください。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [ログ ファイルの表示](log-file-viewer.md)   
  [[ログ ファイルの表示] を開く](open-log-file-viewer.md)   
  [オフライン ログ ファイルの表示](view-offline-log-files.md)  

@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 0678aee9-8256-463c-89dd-77b1a0dfdd60
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: ca2a52eb08cdf1b1b9cb5a23805da34aab915b7a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: edf9976dd3e5d890b46919808e896a8e81a0cd93
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47664630"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68093791"
 ---
 # <a name="usage-counting"></a>使用状況のカウント
 > [!NOTE]  

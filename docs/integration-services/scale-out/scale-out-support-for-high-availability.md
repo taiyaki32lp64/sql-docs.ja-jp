@@ -10,15 +10,18 @@ ms.technology: integration-services
 ms.topic: conceptual
 author: haoqian
 ms.author: haoqian
-manager: craigg
-ms.openlocfilehash: 4e3429a52d24b9bb9fbb0de18c1687cfdaa76d30
-ms.sourcegitcommit: edf7372cb674179f03a330de5e674824a8b4118f
+ms.openlocfilehash: 36f4dce1559df59a61ee25d26b76d0ddd4dda3c1
+ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53246741"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "69028749"
 ---
 # <a name="scale-out-support-for-high-availability"></a>高可用性を実現するための Scale Out のサポート
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
 
 SSIS Scale Out では、複数の Scale Out Worker を使用してパッケージを実行することで、Scale Out Worker 側の高可用性が提供されます。
 
@@ -43,7 +46,7 @@ Scale Out Master のプライマリ ノードに SQL Server データベース �
 
 ### <a name="22-include-the-dns-host-name-for-the-scale-out-master-service-in-the-cns-of-the-scale-out-master-certificate"></a>2.2 Scale Out Master サービスの DNS ホスト名を Scale Out Master 証明書の CN に含める
 
-このホスト名は、Scale Out Master エンドポイントで使用されます。 (サーバー名ではなく、DNS ホスト名を指定してください。)
+このホスト名は Scale Out Master エンドポイントであり、フェールオーバー クラスター内にクラスター化された汎用サービスとして作成されます (手順 7 を参照してください)。   (サーバー名ではなく、DNS ホスト名を指定してください。)
 
 ![HA マスターの構成](media/ha-master-config.PNG)
 
@@ -70,22 +73,22 @@ Scale Out Master のセカンダリ ノードに SQL Server データベース �
 
 SSISDB でのログ記録は、ログイン **##MS_SSISLogDBWorkerAgentLogin##** (パスワードは自動生成されます) によって行われます。 SSISDB のすべてのレプリカのログ記録を機能させるには、次の操作を行います。
 
-### <a name="61-change-the-password-of-msssislogdbworkeragentlogin-on-the-primary-sql-server"></a>6.1 プライマリ SQL Server で **##MS_SSISLogDBWorkerAgentLogin##** のパスワードを変更する
+### <a name="61-change-the-password-of-ms_ssislogdbworkeragentlogin-on-the-primary-sql-server"></a>6.1 プライマリ SQL Server で **##MS_SSISLogDBWorkerAgentLogin##** のパスワードを変更する
 
 ### <a name="62-add-the-login-to-the-secondary-sql-server"></a>6.2 ログインをセカンダリ SQL Server に追加する
 
 ### <a name="63-update-the-connection-string-used-for-logging"></a>6.3 ログで使用する接続文字列を更新する
 以下のパラメーター値を使用して、ストアド プロシージャ `[catalog].[update_logdb_info]` を呼び出します。
 
--   `@server_name = '[Availability Group Listener DNS name],[Port]' `
+-   `@server_name = '[Availability Group Listener DNS name],[Port]'`
 
 -   `@connection_string = 'Data Source=[Availability Group Listener DNS name],[Port];Initial Catalog=SSISDB;User Id=##MS_SSISLogDBWorkerAgentLogin##;Password=[Password]];'`
 
 ## <a name="7-configure-the-scale-out-master-service-role-of-the-windows-server-failover-cluster"></a>7. Windows Server フェールオーバー クラスターの Scale Out Master サービス ロールを構成する
 
-1.  フェールオーバー クラスター マネージャーで、Scale Out のクラスターに接続します。クラスターを選択します。 メニューで **[アクション]** を選択してから、**[役割の構成]** を選択します。
+1.  フェールオーバー クラスター マネージャーで、Scale Out のクラスターに接続します。クラスターを選択します。 メニューで **[アクション]** を選択してから、 **[役割の構成]** を選択します。
 
-2.  **[高可用性ウィザード]** ダイアログ ボックスの **[役割の選択]** ページで、**[汎用サービス]** を選択します。 **[サービスの選択]** ページで、[SQL Server Integration Services Scale Out Master 14.0] を選択します。
+2.  **[高可用性ウィザード]** ダイアログ ボックスの **[役割の選択]** ページで、 **[汎用サービス]** を選択します。 **[サービスの選択]** ページで、[SQL Server Integration Services Scale Out Master 14.0] を選択します。
 
 3.  **[クライアント アクセス ポイント]** ページで、Scale Out Master サービスの DNS ホスト名を入力します。
 
@@ -95,7 +98,7 @@ SSISDB でのログ記録は、ログイン **##MS_SSISLogDBWorkerAgentLogin##**
 
 Azure の仮想マシンでは、この構成手順の他に追加の手順が必要です。 これらの概念および手順の詳しい説明については、この記事の範囲対象外です。
 
-1.  Azure ドメインを設定する必要があります。 Windows Server フェールオーバー クラスタリングでは、クラスター内のすべてのコンピューターが同じドメインのメンバーである必要があります。 詳細については、「[Azure Portal を使用して Azure Active Directory Domain Services を有効にする](https://docs.microsoft.com/azure/active-directory-domain-services/active-directory-ds-getting-started)」を参照してください。
+1.  Azure ドメインを設定する必要があります。 Windows Server フェールオーバー クラスタリングでは、クラスター内のすべてのコンピューターが同じドメインのメンバーである必要があります。 詳細については、「[Azure Portal を使用して Azure Active Directory Domain Services を有効にする](https://docs.microsoft.com/azure/active-directory-domain-services/create-instance)」を参照してください。
 
 2. Azure ロード バランサーを設定する必要があります。 これは可用性グループ リスナーの要件です。 詳細については、「[チュートリアル:Azure portal の Basic ロードバランサーを使用して内部トラフィックの負荷を分散する](https://docs.microsoft.com/azure/load-balancer/tutorial-load-balancer-basic-internal-portal)」を参照してください。
 

@@ -1,5 +1,5 @@
 ---
-title: updateBigDecimal メソッド (SQLServerResultSet) |Microsoft Docs
+title: updateBigDecimal メソッド (SQLServerResultSet) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,18 +15,17 @@ apitype: Assembly
 ms.assetid: 35445fe4-3b8e-4ec5-a138-067524236dc6
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 043e0c931b07f8069b9a1b7e06124f7cfc484bf5
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 6231368cd83ffdbff9732c8b7886a7dc4af571e9
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47768450"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67985406"
 ---
 # <a name="updatebigdecimal-method-sqlserverresultset"></a>updateBigDecimal メソッド (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  BigDecimal オブジェクトで指定された列を更新します。  
+  指定された列を BigDecimal オブジェクトで更新します。  
   
 ## <a name="overload-list"></a>オーバーロードの一覧  
   

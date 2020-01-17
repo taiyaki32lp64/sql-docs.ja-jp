@@ -13,12 +13,12 @@ ms.assetid: af24c303-4a41-449b-9c86-d6558a97e839
 author: Shamikg
 ms.author: Shamikg
 manager: murato
-ms.openlocfilehash: d35db315cebcc6292ca11b1e31f81015238fbcb9
-ms.sourcegitcommit: c19696d3d67161ce78aaa5340964da3256bf602d
+ms.openlocfilehash: 479c22747f640a9ccfff43534571dabfcd2717a6
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/29/2018
-ms.locfileid: "52617482"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68266963"
 ---
 # <a name="user-interface-reference-accesstosql"></a>ユーザー インターフェイス リファレンス (AccessToSQL)
 このセクションには、ヘルプ トピックが含まれています。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Migration Assistant (SSMA) for アクセスします。  

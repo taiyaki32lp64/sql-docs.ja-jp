@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 14129cc4-be80-4772-9e3f-0e5da4d0696b
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 5cbf9d361ff50758c8eb0a3f7b13e234fcf81a38
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 183354ddbf62c09d23987c6179eea33951983f96
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51677621"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68129239"
 ---
 # <a name="mssqlserver833"></a>MSSQLSERVER_833
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -55,5 +54,5 @@ ms.locfileid: "51677621"
 > [!NOTE]  
 > ディスク アクセス速度は、ウイルス対策プログラムによって低下する場合があります。 アクセスを高速化するには、エラー メッセージに示されている [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データ ファイルをアクティブ ウイルス スキャンの対象から除外します。  
   
-I/O エラーの詳細については、「[Microsoft SQL Server I/O Basics, Chapter 2](https://go.microsoft.com/fwlink/?LinkId=69370)」と、[https://support.microsoft.com/kb/897284/en-us](https://support.microsoft.com/kb/897284/en-us) にあるサポート技術情報の資料を参照してください。  
+I/O エラーの詳細については、「[Microsoft SQL Server I/O Basics, Chapter 2](/previous-versions/sql/sql-server-2005/administrator/cc917726(v=technet.10))」と、[https://support.microsoft.com/kb/897284/en-us](https://support.microsoft.com/kb/897284/en-us) にあるサポート技術情報の資料を参照してください。  
   

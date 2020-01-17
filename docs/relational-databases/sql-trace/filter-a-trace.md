@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 019c10ab-68f6-4e40-a5e8-735b2e1270db
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 1dae7b73c02ce1c9ced01104754dc881bf25893f
-ms.sourcegitcommit: ddb682c0061c2a040970ea88c051859330b8ac00
+ms.openlocfilehash: 5e518050759aea98d249e93374a6335bddf30c75
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51571232"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72909485"
 ---
 # <a name="filter-a-trace"></a>トレースへのフィルターの適用
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -45,7 +44,7 @@ ms.locfileid: "51571232"
 2.  必要な情報を保存するデータおよびデータ列を決めます。  
   
 3.  必要なデータのサブセットを決め、そのデータのサブセットに基づいてフィルターを設定します。  
-  
+
  たとえば、ある一定の時間よりも長くかかるイベントをトレースで出力するとします。 その場合、 **Duration** データ列が 300 ミリ秒よりも長いイベントを出力するトレースを作成できます。 300 ミリ秒以内に完了したイベントはトレースから除外されます。  
   
  フィルターは、SQL Server Profiler または Transact-SQL ストアド プロシージャを使用して作成できます。  
@@ -135,7 +134,7 @@ ms.locfileid: "51571232"
 |**TargetUserName**|LIKE、NOT LIKE|  
 |**TextData** *|LIKE、NOT LIKE|  
 |**TransactionID**|=、<>、>=、<=|  
-|**型**|=、<>、>=、<=|  
+|**Type**|=、<>、>=、<=|  
 |**Writes**|=、<>、>=、<=|  
 |**XactSequence**|=、<>、>=、<=|  
   

@@ -13,11 +13,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 2b489fda1c051ecd08b63f28d6232a0e213d9fcb
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52794004"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63188875"
 ---
 # <a name="modify-a-resource-health-policy-definition-sql-server-utility"></a>リソース正常性ポリシーの定義の変更 (SQL Server ユーティリティ)
   このトピックでは、 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] を使用して、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]でリソース正常性ポリシーの定義を変更する方法について説明します。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ユーティリティでリソース使用率のポリシーを変更する前に、ユーティリティ コントロール ポイント (UCP) を作成する必要があります。 詳細については、「 [SQL Server ユーティリティの機能とタスク](sql-server-utility-features-and-tasks.md)」を参照してください。  
@@ -36,7 +36,7 @@ ms.locfileid: "52794004"
   
 4.  ポリシーの説明の右側にあるコントロールを使用して、過小使用ポリシーまたは過大使用ポリシーのしきい値を設定します。  
   
-5.  必要に応じて、 **[適用]**、 **[破棄]**、または **[既定値に戻す]** ボタンをクリックします。 ポリシーの変更は、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ユーティリティのダッシュボードおよびリスト ビューの詳細に反映されるまで最大 15 分かかる場合があります。  
+5.  必要に応じて、 **[適用]** 、 **[破棄]** 、または **[既定値に戻す]** ボタンをクリックします。 ポリシーの変更は、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ユーティリティのダッシュボードおよびリスト ビューの詳細に反映されるまで最大 15 分かかる場合があります。  
   
 6.  データを更新するには、ユーティリティ エクスプローラーのナビゲーション ウィンドウで **[ユーティリティ管理]** ノードを右クリックし、 **[更新]** をクリックします。  
   
@@ -50,11 +50,11 @@ ms.locfileid: "52794004"
   
 4.  矢印またはポリシーの説明をクリックして、表示または変更するポリシーを選択します。 既定では、グローバル ポリシーが選択されます。  
   
-5.  グローバル ポリシーをオーバーライドして、指定したデータ層アプリケーションに個別のポリシー定義を実装するには、**[グローバル ポリシーをオーバーライド]** をクリックします。  
+5.  グローバル ポリシーをオーバーライドして、指定したデータ層アプリケーションに個別のポリシー定義を実装するには、 **[グローバル ポリシーをオーバーライド]** をクリックします。  
   
 6.  ポリシーの説明の右側にあるコントロールを使用して、過小使用ポリシーまたは過大使用ポリシーのしきい値を設定します。  
   
-7.  必要に応じて、 **[適用]**、 **[破棄]**、または **[既定値に戻す]** ボタンをクリックします。 ポリシーの変更は、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ユーティリティのダッシュボードおよびリスト ビューの詳細に反映されるまで最大 15 分かかる場合があります。  
+7.  必要に応じて、 **[適用]** 、 **[破棄]** 、または **[既定値に戻す]** ボタンをクリックします。 ポリシーの変更は、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ユーティリティのダッシュボードおよびリスト ビューの詳細に反映されるまで最大 15 分かかる場合があります。  
   
 8.  データを更新するには、ユーティリティ エクスプローラーのナビゲーション ウィンドウで **[配置済みのデータ層アプリケーション]** ノードを右クリックし、 **[更新]** をクリックします。  
   

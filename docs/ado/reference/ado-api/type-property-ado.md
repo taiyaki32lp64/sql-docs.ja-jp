@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 8a4c079f-9f4f-4545-801d-85983b8db71e
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 02c5b9193b89c131095ccfec6ef185d5ff39f4d5
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 0ee1058299becb4a7a4234debc097516cb02dd41
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47820790"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67937864"
 ---
 # <a name="type-property-ado"></a>Type プロパティ (ADO)
 操作の種類またはデータ型を示す、[パラメーター](../../../ado/reference/ado-api/parameter-object.md)、[フィールド](../../../ado/reference/ado-api/field-object.md)、または[プロパティ](../../../ado/reference/ado-api/property-object-ado.md)オブジェクト。  
@@ -41,7 +40,7 @@ ms.locfileid: "47820790"
 |-|-|-|  
 |[Field オブジェクト](../../../ado/reference/ado-api/field-object.md)|[Parameter オブジェクト](../../../ado/reference/ado-api/parameter-object.md)|[Property オブジェクト (ADO)](../../../ado/reference/ado-api/property-object-ado.md)|  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [Type プロパティの例 (Field) (VB)](../../../ado/reference/ado-api/type-property-example-field-vb.md)   
  [Type プロパティの例 (プロパティ) (vc++)](../../../ado/reference/ado-api/type-property-example-property-vc.md)   
  [RecordType プロパティ (ADO)](../../../ado/reference/ado-api/recordtype-property-ado.md)   

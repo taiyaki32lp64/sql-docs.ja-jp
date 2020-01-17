@@ -17,16 +17,15 @@ helpviewer_keywords:
 ms.assetid: 2a88d079-3755-43cb-8a54-97d0114149e6
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 91a5209044b824746dcd71b7ae9069ed45568d32
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 511b5b8f01a96f860d9f0c4266f92b323e6f1240
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47650778"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67997359"
 ---
-# <a name="sphelpsort-transact-sql"></a>sp_helpsort (Transact-SQL)
+# <a name="sphelpsort-transact-sql"></a>sp_helpsort (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスの並べ替え順および文字セットを表示します。  
@@ -53,7 +52,7 @@ sp_helpsort
  ロール **public** のメンバーシップが必要です。  
   
 ## <a name="examples"></a>使用例  
- この例では、サーバーの既定の並べ替え順の名前、文字セット、およびその並べ替え順の要約を表示します。なお、サーバーの言語として日本語を選択した場合は、並べ替え順の要約は表示されません。  
+ 次の例では、サーバー、その文字セットと、1 番目の並べ替えの値のテーブルの既定の並べ替え順序の名前が表示されます。  
   
 ```  
 sp_helpsort;  
@@ -67,7 +66,7 @@ sp_helpsort;
   
  `Latin1-General, case-sensitive, accent-sensitive, kanatype-insensitive, width-insensitive for Unicode Data, SQL Server Sort Order 51 on Code Page 1252 for non-Unicode Data.`  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [システム ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
  [データベース エンジン ストアド プロシージャ&#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
  [COLLATE &#40;Transact-SQL&#41;](~/t-sql/statements/collations.md)   

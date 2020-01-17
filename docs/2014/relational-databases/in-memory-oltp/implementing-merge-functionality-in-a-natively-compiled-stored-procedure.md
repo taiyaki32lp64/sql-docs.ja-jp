@@ -10,19 +10,19 @@ ms.assetid: d4bcdc36-3302-4abc-9b35-64ec2b920986
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: faf6112fa3f8ec588d00480d09ff072a71051a02
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: e0e108f70f66aef1ed88ea202ddb326bd0757c10
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52508165"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63015923"
 ---
 # <a name="implementing-merge-functionality"></a>MERGE 機能の実装
   データベースは、特定の行がデータベースに既に存在するかどうかによって、挿入か更新のどちらかの実行が必要になる場合があります。  
   
  `MERGE` ステートメントを使用せずに [!INCLUDE[tsql](../../includes/tsql-md.md)] で使用できる方法の 1 つは次のとおりです。  
   
-```tsql  
+```sql  
 UPDATE mytable SET col=@somevalue WHERE myPK = @parm  
 IF @@ROWCOUNT = 0  
     INSERT mytable (columns) VALUES (@parm, @other values)  
@@ -30,7 +30,7 @@ IF @@ROWCOUNT = 0
   
  マージを実装する [!INCLUDE[tsql](../../includes/tsql-md.md)] の別の方法は次のとおりです。  
   
-```tsql  
+```sql  
 IF EXISTS (SELECT 1 FROM mytable WHERE myPK = @parm)  
     UPDATE....  
 ELSE  
@@ -39,7 +39,7 @@ ELSE
   
  ネイティブ コンパイル ストアド プロシージャ向け  
   
-```tsql  
+```sql  
 DECLARE @i  int  = 0  -- or whatever your PK data type is  
 UPDATE mytable SET @i=myPK, othercolums = other values WHERE myPK = @parm  
 IF @i = 0  

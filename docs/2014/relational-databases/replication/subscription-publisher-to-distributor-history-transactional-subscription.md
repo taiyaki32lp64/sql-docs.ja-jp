@@ -13,11 +13,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: a4e91d05bf851d425bf61dba0037cee8c48eb5ce
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54126682"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62626777"
 ---
 # <a name="subscription-publisher-to-distributor-history-transactional-subscription"></a>サブスクリプション、[パブリッシャーからディストリビューターまでの履歴] (トランザクション サブスクリプション)
   **[パブリッシャーからディストリビューターまでの履歴]** タブでは、ステータス、履歴、情報メッセージ、およびすべてのエラー メッセージを含む、ログ リーダー エージェントの詳細情報が表示されます。  
@@ -62,7 +62,7 @@ ms.locfileid: "54126682"
   
 ## <a name="see-also"></a>参照  
  [レプリケーション モニターの開始](monitor/start-the-replication-monitor.md)   
- [表示情報とレプリケーション モニターを使用してタスクを実行します。](monitor/view-information-and-perform-tasks-replication-monitor.md)   
+ [レプリケーション モニターを使用して情報を表示し、タスクを実行する](monitor/view-information-and-perform-tasks-replication-monitor.md)   
  [レプリケーションの監視](monitoring-replication.md)   
  [レプリケーション エージェントの概要](agents/replication-agents-overview.md)  
   

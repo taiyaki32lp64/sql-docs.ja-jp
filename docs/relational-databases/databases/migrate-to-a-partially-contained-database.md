@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 90faac38-f79e-496d-b589-e8b2fe01c562
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: bc658daa87062450c8b98f6bc9d7548feba4de31
-ms.sourcegitcommit: 1a5448747ccb2e13e8f3d9f04012ba5ae04bb0a3
+ms.openlocfilehash: 6674cb5f457b634682da90a2b7a2dff27a171da7
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51559219"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72908089"
 ---
 # <a name="migrate-to-a-partially-contained-database"></a>Migrate to a Partially Contained Database
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -70,7 +69,7 @@ GO
 2.  **[詳細設定]** ページの **[包含]** セクションで、 **[包含データベースを有効にする]** オプションを **True**に設定します。  
   
 3.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
-  
+
 ##  <a name="convert"></a> 部分的包含へのデータベースの変換  
  データベースを包含データベースに変換するには、 **CONTAINMENT** オプションを変更します。  
   

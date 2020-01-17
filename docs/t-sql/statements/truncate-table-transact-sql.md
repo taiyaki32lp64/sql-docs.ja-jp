@@ -24,22 +24,18 @@ helpviewer_keywords:
 ms.assetid: 3d544eed-3993-4055-983d-ea334f8c5c58
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 7574027024f6ab8bf014e7cd1972d234d95c7a6e
-ms.sourcegitcommit: 96032813f6bf1cba680b5e46d82ae1f0f2da3d11
+ms.openlocfilehash: 115aba36783857d5a0915822cb6f8ff810562f16
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/15/2019
-ms.locfileid: "54299559"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68100075"
 ---
 # <a name="truncate-table-transact-sql"></a>TRUNCATE TABLE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-> [!div class="nextstepaction"]
-> [SQL ドキュメントの目次に関するご意見を共有してください。](https://aka.ms/sqldocsurvey)
-
-個々 の行の削除ログに記録せず、テーブルまたはテーブルの指定したパーティションからすべての行を削除します。 TRUNCATE TABLE は、WHERE 句を伴わない DELETE ステートメントに似ています。ただし、TRUNCATE TABLE の方が高速で、使用するシステム リソースとトランザクション ログ リソースも少なくなります。  
+個々の行の削除をログに記録せず、テーブルまたはテーブルの指定したパーティションからすべての行を削除します。 TRUNCATE TABLE は、WHERE 句を伴わない DELETE ステートメントに似ています。ただし、TRUNCATE TABLE の方が高速で、使用するシステム リソースとトランザクション ログ リソースも少なくなります。  
   
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -49,8 +45,7 @@ ms.locfileid: "54299559"
 -- Syntax for SQL Server and Azure SQL Database  
   
 TRUNCATE TABLE   
-    [ { database_name .[ schema_name ] . | schema_name . } ]  
-    table_name  
+    { database_name.schema_name.table_name | schema_name.table_name | table_name }  
     [ WITH ( PARTITIONS ( { <partition_number_expression> | <range> }   
     [ , ...n ] ) ) ]  
 [ ; ]  
@@ -62,7 +57,7 @@ TRUNCATE TABLE
 ```  
 -- Syntax for Azure SQL Data Warehouse and Parallel Data Warehouse  
   
-TRUNCATE TABLE [ { database_name . [ schema_name ] . | schema_name . ] table_name  
+TRUNCATE TABLE { database_name.schema_name.table_name | schema_name.table_name | table_name }  
 [;]  
 ```  
   
@@ -115,11 +110,11 @@ TRUNCATE TABLE [ { database_name . [ schema_name ] . | schema_name . ] table_nam
 ## <a name="restrictions"></a>制限  
  次のテーブルには TRUNCATE TABLE を使用できません。  
   
--   FOREIGN KEY 制約で参照されるテーブル (それ自体を参照する外部キーを持つテーブルを切り捨てることができます)  
+-   FOREIGN KEY 制約で参照されるテーブル (それ自体を参照する外部キーを持つテーブルを切り捨てることができます。)  
   
--   インデックス付きビューで使用されているテーブル  
+-   インデックス付きビューで使用されているテーブル。  
   
--   トランザクション レプリケーションとマージ レプリケーションを使用してパブリッシュされているテーブル  
+-   トランザクション レプリケーションとマージ レプリケーションを使用してパブリッシュされているテーブル。  
   
  これらの特性を 1 つ以上持つテーブルには、代わりに DELETE ステートメントを使用します。  
   

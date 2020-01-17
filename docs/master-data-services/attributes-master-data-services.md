@@ -1,5 +1,5 @@
 ---
-title: 属性 (マスター データ サービス) | Microsoft Docs
+title: 属性
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -15,15 +15,14 @@ helpviewer_keywords:
 - attributes [Master Data Services], free-form attributes
 - attributes [Master Data Services]
 ms.assetid: 95ecb75f-c559-41c3-933c-40ae60a4c2fd
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: d782a7863d8e6ed029a201b4b309817d2e2a12c8
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
-ms.translationtype: HT
+ms.openlocfilehash: 19cbf51a9ac022674e9dfec7b287a38d16af00cf
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52813364"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73728754"
 ---
 # <a name="attributes-master-data-services"></a>属性 (マスター データ サービス)
 
@@ -34,9 +33,9 @@ ms.locfileid: "52813364"
 ## <a name="how-attributes-relate-to-other-model-objects"></a>属性と他のモデル オブジェクトとの関連付け  
  属性は、エンティティ テーブルの列と考えることができます。 属性値は、特定のメンバーを表すために使用される値です。  
   
- ![テーブルとして表されたマスター データ サービス エンティティ](../master-data-services/media/mds-conc-entity-table.gif "テーブルとして表されたマスター データ サービス エンティティ")  
+ ![テーブルとして表されるマスターデータサービスエンティティ](../master-data-services/media/mds-conc-entity-table.gif "テーブルとして表されるマスターデータサービスエンティティ")  
   
- 多数の属性を含むエンティティを作成するときは、属性を属性グループに整理できます。 詳細については、「 [属性グループ (マスター データ サービス)](../master-data-services/attribute-groups-master-data-services.md)」を参照してください。  
+ 多数の属性を含むエンティティを作成するときは、属性を属性グループに整理できます。 詳細については、「[属性グループ (マスター データ サービス)](../master-data-services/attribute-groups-master-data-services.md)」を参照してください。  
   
 ## <a name="required-attributes"></a>必須の属性  
  エンティティを作成すると、Name 属性と Code 属性が自動的に作成されます。 Code 属性には値が必要であり、Code 属性はエンティティ内で一意であることが必要です。 Name 属性と Code 属性を削除することはできません。  
@@ -46,7 +45,7 @@ ms.locfileid: "52813364"
   
 -   自由形式属性。テキスト、数値、日付、またはリンクを自由形式で入力できます。  
   
--   ドメイン ベースの属性。エンティティによって設定されます。 詳細については、「 [ドメインベースの属性 (マスター データ サービス)](../master-data-services/domain-based-attributes-master-data-services.md)」を参照してください。  
+-   ドメイン ベースの属性。エンティティによって設定されます。 詳細については、「[ドメインベースの属性 (マスター データ サービス)](../master-data-services/domain-based-attributes-master-data-services.md)」を参照してください。  
   
 -   ファイル属性。ファイル、ドキュメント、または画像を格納するために使用されます。 ファイル属性は、ファイルに特定の拡張子を付けることによって、データの一貫性を確保するためのものです。 悪意のあるユーザーによる異なる種類のファイルのアップロードを防ぐことを保証するものではありません。  
   
@@ -62,9 +61,9 @@ ms.locfileid: "52813364"
 -   浮動小数点数が含まれていると、値が " *ラウンド トリップ* " されない場合があります。 値のラウンド トリップとは、演算で元の浮動小数点数が別の形式に変換され、逆の演算で変換後の形式から浮動小数点数に戻されて、最終の浮動小数点数が元の浮動小数点数に等しくなる場合をいいます。 変換で最小有効数字が 1 桁以上失われるか、または変更された場合は、ラウンド トリップが失敗します。  
   
 ## <a name="attribute-examples"></a>属性の例  
- 次の例では、エンティティに Name、Code、Subcategory、StandardCost、ListPrice、FilePhoto という属性があることを示しています。 これらの属性はメンバーを表します。 各メンバーは、属性値の 1 行で表されます。  
+ 次の例では、エンティティに Name、Code、Subcategory、StandardCost、ListPrice、および FilePhoto という属性があります。 これらの属性はメンバーを表します。 各メンバーは、属性値の 1 行で表されます。  
   
- ![自転車製品エンティティ テーブル](../master-data-services/media/mds-conc-entity-table-w-data.gif "自転車製品エンティティ テーブル")  
+ ![自転車製品エンティティテーブル](../master-data-services/media/mds-conc-entity-table-w-data.gif "自転車製品エンティティテーブル")  
   
  次の例では、Product エンティティに次の属性が含まれます。  
   
@@ -76,9 +75,9 @@ ms.locfileid: "52813364"
   
  Subcategory は、Product のドメイン ベースの属性として使用されるエンティティです。 Category は、Subcategory のドメイン ベースの属性として使用されるエンティティです。 Product エンティティと同様に、Category エンティティと Subcategory エンティティにはそれぞれ、既定の Name 属性と Code 属性が含まれています。  
   
- ![製品エンティティ ツリー構造](../master-data-services/media/mds-conc-entity-ui.gif "製品エンティティ ツリー構造")  
+ ![製品エンティティツリー構造](../master-data-services/media/mds-conc-entity-ui.gif "製品エンティティツリー構造")  
   
-## <a name="related-tasks"></a>Related Tasks  
+## <a name="related-tasks"></a>関連タスク  
   
 |タスクの説明|トピック|  
 |----------------------|-----------|  

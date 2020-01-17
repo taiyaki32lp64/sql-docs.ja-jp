@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: fafed718-8c3c-403f-93ee-ec51fc157a6e
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 544798f1de0b5000cfa6e3b797d72e3af2e6f36c
-ms.sourcegitcommit: bfa10c54e871700de285d7f819095d51ef70d997
+ms.openlocfilehash: 765d412b9f3f0395a9bca6fd52c74135ddde3ff4
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/14/2019
-ms.locfileid: "54256157"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68004562"
 ---
 # <a name="functions-related-to-qnames---local-name-from-qname"></a>QNames に関係する関数 - local-name-from-QName
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -43,11 +42,11 @@ fn:local-name-from-QName($arg as xs:QName?) as xs:NCName?
   
  次の例では、 **local-name-from-QName()** QName 型の値からパーツのローカル名と名前空間 URI を取得します。 この例では、次の操作が実行されます。  
   
--   XML スキーマ コレクションの作成。  
+-   XML スキーマ コレクションを作成します。  
   
--   xml 型の列を持つテーブルの作成。 この xml 型は、XML スキーマ コレクションを使用して型指定されます。  
+-   xml 型の列を持つテーブルの作成。 Xml 型は、XML スキーマ コレクションを使用して入力されます。  
   
--   サンプルの XML インスタンスのテーブルへの格納。 使用して、 **query()** インスタンスから QName 型の値のローカル名部分を取得するクエリ式では、xml データ型のメソッドを実行します。  
+-   サンプル XML インスタンスをテーブルに保存します。 使用して、 **query()** インスタンスから QName 型の値のローカル名部分を取得するクエリ式では、xml データ型のメソッドを実行します。  
   
 ```sql
 DROP TABLE T  
@@ -76,7 +75,7 @@ FROM T
 -- Result = https://someURI  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [QNames に関係する関数&#40;XQuery&#41;](https://msdn.microsoft.com/library/7e07eb26-f551-4b63-ab77-861684faff71)  
   
   

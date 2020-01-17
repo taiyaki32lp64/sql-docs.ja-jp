@@ -8,17 +8,20 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: language-reference
 ms.assetid: dbafe110-b480-48f3-b45f-31d71ca68f62
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: eb300ad961ded0b49ae8a9d36d3ccaeacf635e5c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 086b4503289c01f8b0022633361e7ce72dff73e1
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47733750"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71295253"
 ---
 # <a name="catalogvalidations-ssisdb-database"></a>catalog.validations (SSISDB データベース)
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] カタログのすべてのプロジェクトおよびパッケージ検証の詳細を表示します。  
@@ -41,7 +44,7 @@ ms.locfileid: "47733750"
 |end_time|**datetimeoffsset(7)**|操作が終了したときの日時。|  
 |ステータス|**int**|操作の状態。 使用される可能性がある値は、作成済み (`1`)、実行中 (`2`)、取り消し済み (`3`)、失敗 (`4`)、保留中 (`5`)、予期しない終了 (`6`)、成功 (`7`)、停止 (`8`)、および完了 (`9`) です。|  
 |caller_sid|**varbinary(85)**|ログオンに Windows 認証が使用された場合はユーザーのセキュリティ ID (SID)。|  
-|させていただきたいと|**nvarchar(128)**|操作を実行したアカウントの名前。|  
+|caller_name|**nvarchar(128)**|操作を実行したアカウントの名前。|  
 |process_id|**int**|外部プロセスのプロセス ID (該当する場合)。|  
 |stopped_by_sid|**varbinary(85)**|操作を停止したユーザーの SID。|  
 |stopped_by_name|**nvarchar(128)**|操作を停止したユーザーの名前。|  

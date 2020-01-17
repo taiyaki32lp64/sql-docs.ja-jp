@@ -21,13 +21,12 @@ helpviewer_keywords:
 ms.assetid: 6efbc87c-1c92-4e43-96a7-e0f30f1db185
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: cd96a77a90086c894024a2d46f3497f2ae7f14ca
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 709ba2af4cc06f1a1ff2314115f163032bd4227e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47641520"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68044017"
 ---
 # <a name="drop-partition-scheme-transact-sql"></a>DROP PARTITION SCHEME (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -48,10 +47,10 @@ DROP PARTITION SCHEME partition_scheme_name [ ; ]
  削除するパーティション構成の名前です。  
   
 ## <a name="remarks"></a>Remarks  
- パーティション構成を削除できるのは、現在パーティション構成を使用しているテーブルやインデックスがない場合のみです。 パーティション構成を使用しているテーブルやインデックスがある場合は、削除パーティション構成にエラーが返されます。 DROP PARTITION SCHEME では、ファイル グループそのものは削除することはありません。  
+ パーティション構成を削除できるのは、現在パーティション構成を使用しているテーブルまたはインデックスがない場合のみです。 パーティション構成を使用しているテーブルまたはインデックスがある場合、DROP PARTITION SCHEME ではエラーが返されます。 DROP PARTITION SCHEME では、ファイル グループそのものは削除することはありません。  
   
 ## <a name="permissions"></a>アクセス許可  
- DROP PARTITION SCHEME を実行すると、下記の権限を使用することができます。  
+ 次の権限を使って、DROP PARTITION SCHEME を実行できます。  
   
 -   ALTER ANY DATASPACE 権限。 この権限は、既定では **sysadmin** 固定サーバー ロール、 **db_owner** 固定データベース ロール、および **db_ddladmin** 固定データベース ロールのメンバーに与えられています。  
   

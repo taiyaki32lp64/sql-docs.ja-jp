@@ -1,6 +1,6 @@
 ---
-title: AcceptPause プロパティ (SqlService クラス) |Microsoft Docs
-ms.custom: ''
+title: AcceptPause プロパティ (SqlService)
+ms.custom: seo-lt-2019
 ms.date: 03/04/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 4339e903-35ee-4395-b005-ca58b3a24a84
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: c1c8a32e8b11bbc15e9fc9bf2c18a935a660dab3
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: cacfdc65de94df31ab96559dc05888b85519bf59
+ms.sourcegitcommit: baa40306cada09e480b4c5ddb44ee8524307a2ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51658651"
+ms.lasthandoff: 11/06/2019
+ms.locfileid: "73660813"
 ---
 # <a name="acceptpause-property-sqlservice-class"></a>AcceptPause プロパティ (SqlService クラス)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -42,9 +41,9 @@ object.AcceptPause [= value]
 ## <a name="property-valuereturn-value"></a>プロパティ値/戻り値  
  サービスを一時停止できるかどうかを指定するブール値。 サービスを一時停止できる場合は**true** 、サービスを一時停止できない場合は **false** です。  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>解説  
   
 ## <a name="see-also"></a>参照  
- [開始とサービスの停止](https://technet.microsoft.com/library/ms174886\(v=sql.105\).aspx)  
+ [サービスの開始と停止](https://technet.microsoft.com/library/ms174886\(v=sql.105\).aspx)  
   
   

@@ -11,15 +11,15 @@ helpviewer_keywords:
 - '& (bitwise AND)'
 - bitwise AND (&)
 ms.assetid: 06d2958e-66a5-44d8-8bc4-56209ebe1ff2
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 3d7e56e0ea1e74ac1dcc3f4686d3925d564426f1
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: f4785967ceafd105e8d7b56e24223edd40d08850
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52781384"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62898444"
 ---
 # <a name="amp-bitwise-and-ssis-expression"></a>&amp; (ビット演算 AND) (SSIS 式)
   2 つの整数値の AND 演算をビット単位で実行します。 最初のオペランドの各ビットを 2 番目のオペランドの対応するビットと比較します。 両方のビットが 1 の場合、対応する結果ビットは 1 に設定されます。 それ以外の場合、対応する結果ビットは 0 に設定されます。  
@@ -93,7 +93,7 @@ ReorderPoint & SafetyStockLevel
   
  00000001  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [&& (論理 AND) (SSIS 式)](logical-and-ssis-expression.md)   
  [演算子の優先順位と結合規則](operator-precedence-and-associativity.md)   
  [演算子 &#40;SSIS 式&#41;](operators-ssis-expression.md)  

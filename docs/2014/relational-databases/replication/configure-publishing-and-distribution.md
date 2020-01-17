@@ -14,12 +14,12 @@ ms.assetid: 3cfc8966-833e-42fa-80cb-09175d1feed7
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 557c3eb76dbaba037c289b93bc80bb1314e4d106
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: 905b1ceed2df8afc854ad38ee07d2b21596530f1
+ms.sourcegitcommit: 619917a0f91c8f1d9112ae6ad9cdd7a46a74f717
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54135862"
+ms.lasthandoff: 11/09/2019
+ms.locfileid: "73882254"
 ---
 # <a name="configure-publishing-and-distribution"></a>パブリッシングおよびディストリビューションの構成
   このトピックでは、 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] で [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]、 [!INCLUDE[tsql](../../includes/tsql-md.md)]、またはレプリケーション管理オブジェクト (RMO) を使用して、パブリッシングとディストリビューションを構成する方法について説明します。  
@@ -28,20 +28,20 @@ ms.locfileid: "54135862"
 ##  <a name="BeforeYouBegin"></a> はじめに  
   
 ###  <a name="Security"></a> セキュリティ  
- 詳細については、次を参照してください。[レプリケーションのデプロイをセキュリティで保護された](security/view-and-modify-replication-security-settings.md)します。  
+ 詳細については、「[レプリケーションの配置のセキュリティ保護](security/view-and-modify-replication-security-settings.md)」を参照してください。  
   
 ##  <a name="SSMSProcedure"></a> SQL Server Management Studio の使用  
- パブリケーションの新規作成ウィザードまたはディストリビューションの構成ウィザードを使用して、ディストリビューションを構成します。 ディストリビューターを構成したら、**[ディストリビューターのプロパティ - \<ディストリビューター>]** ダイアログ ボックスでプロパティを表示および変更します。 **db_owner** 固定データベース ロールのメンバーがパブリケーションを作成できるようにディストリビューターを構成する場合、またはパブリッシャーではないリモート ディストリビューターを構成する必要がある場合は、ディストリビューションの構成ウィザードを使用します。  
+ パブリケーションの新規作成ウィザードまたはディストリビューションの構成ウィザードを使用して、ディストリビューションを構成します。 ディストリビューターを構成したら、 **[ディストリビューターのプロパティ - \<ディストリビューター>]** ダイアログ ボックスでプロパティを表示および変更します。 **db_owner** 固定データベース ロールのメンバーがパブリケーションを作成できるようにディストリビューターを構成する場合、またはパブリッシャーではないリモート ディストリビューターを構成する必要がある場合は、ディストリビューションの構成ウィザードを使用します。  
   
 #### <a name="to-configure-distribution"></a>ディストリビューションを構成するには  
   
-1.   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]で、ディストリビューターとなるサーバーに接続し (多くの場合、パブリッシャーとディストリビューターは同じサーバーです)、サーバー ノードを展開します。  
+1.  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]で、ディストリビューターとなるサーバーに接続し (多くの場合、パブリッシャーとディストリビューターは同じサーバーです)、サーバー ノードを展開します。  
   
 2.  **[レプリケーション]** フォルダーを右クリックし、 **[ディストリビューションの構成]** をクリックします。  
   
 3.  ディストリビューションの構成ウィザードに従って、次の操作を実行します。  
   
-    -   ディストリビューターを選択します。 ローカル ディストリビューターを使用するには、**['\<ServerName' を独自のディストリビューターとする (SQL Server はディストリビューション データベースとログを作成します)]** を選択します。 リモート ディストリビューターを使用するには、 **[以下のサーバーをディストリビューターとして使用する]** を選択し、サーバーを選択します。 このサーバーは既にディストリビューターとして構成されている必要があり、パブリッシャーではこのディストリビューターを使用できるようになっている必要があります。 詳細については、「[ディストリビューターでのリモート パブリッシャーの有効化 &#40;SQL Server Management Studio&#41;](enable-a-remote-publisher-at-a-distributor-sql-server-management-studio.md)」を参照してください。  
+    -   ディストリビューターを選択します。 ローカル ディストリビューターを使用するには、 **['\<ServerName' を独自のディストリビューターとする (SQL Server はディストリビューション データベースとログを作成します)]** を選択します。 リモート ディストリビューターを使用するには、 **[以下のサーバーをディストリビューターとして使用する]** を選択し、サーバーを選択します。 このサーバーは既にディストリビューターとして構成されている必要があり、パブリッシャーではこのディストリビューターを使用できるようになっている必要があります。 詳細については、「[ディストリビューターでのリモート パブリッシャーの有効化 &#40;SQL Server Management Studio&#41;](enable-a-remote-publisher-at-a-distributor-sql-server-management-studio.md)」を参照してください。  
   
          リモート ディストリビューターを選択した場合、パブリッシャーからディストリビューターへの接続に対して、 **[管理パスワード]** ページでパスワードを入力する必要があります。 このパスワードは、リモート ディストリビューターでパブリッシャーを有効にしたときに指定したパスワードと一致する必要があります。  
   
@@ -51,7 +51,7 @@ ms.locfileid: "54135862"
   
     -   必要に応じて、その他のパブリッシャーでディストリビューターを使用できるようにします。 その他のパブリッシャーがディストリビューターを使用できるようになっている場合は、これらのパブリッシャーからディストリビューターへの接続に対して、 **[ディストリビューター パスワード]** ページでパスワードを入力する必要があります。  
   
-    -   必要に応じて、構成の設定のスクリプトを作成します。 詳しくは、「 [Scripting Replication](scripting-replication.md)」をご覧ください。  
+    -   必要に応じて、構成の設定のスクリプトを作成します。 詳細については、「 [Scripting Replication](scripting-replication.md)」をご参照ください。  
   
 ##  <a name="TsqlProcedure"></a> Transact-SQL の使用  
  レプリケーションのパブリッシングおよびディストリビューションは、レプリケーションのストアド プロシージャを使用してプログラムから構成できます。  
@@ -62,25 +62,25 @@ ms.locfileid: "54135862"
   
     -   結果セットの **installed** の値が **0** の場合は、ディストリビューターの master データベースで [sp_adddistributor &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-adddistributor-transact-sql) を実行します。  
   
-    -   結果セットの **distribution db installed** の値が **0** の場合は、ディストリビューターの master データベースで [sp_adddistributiondb &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-adddistributiondb-transact-sql) を実行します。 このとき、 **@database**」を参照してください。 必要に応じて、トランザクションの最大保有期間 ( **@max_distretention** ) および履歴保有期間 ( **@history_retention**」を参照してください。 新しいデータベースを作成する場合は、必要なデータベース プロパティのパラメーターを指定します。  
+    -   結果セットの **distribution db installed** の値が **0** の場合は、ディストリビューターの master データベースで [sp_adddistributiondb &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-adddistributiondb-transact-sql) を実行します。 **\@データベース**のディストリビューションデータベースの名前を指定します。 必要に応じて、 **\@max_distretention**の最大トランザクション保有期間と **\@history_retention**の履歴の保有期間を指定できます。 新しいデータベースを作成する場合は、必要なデータベース プロパティのパラメーターを指定します。  
   
-2.  ディストリビューター (兼パブリッシャー) で、[sp_adddistpublisher &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-adddistpublisher-transact-sql) を実行します。このとき、**@working_directory** には、既定のスナップショット フォルダーとして使用する UNC 共有を指定します。  
+2.  パブリッシャーでもあるディストリビューターで、 **\@working_directory**の既定のスナップショットフォルダーとして使用される UNC 共有を指定して[sp_adddistpublisher &#40;transact-sql&#41;](/sql/relational-databases/system-stored-procedures/sp-adddistpublisher-transact-sql)を実行します。  
   
-3.  パブリッシャーで、[sp_replicationdboption &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-replicationdboption-transact-sql) を実行します。 パブリッシュするデータベースを指定**@dbname**、レプリケーションの種類 **@optname**の値と`true`の**@value**.  
+3.  パブリッシャーで、[sp_replicationdboption &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-replicationdboption-transact-sql) を実行します。 **\@dbname**にパブリッシュするデータベース、 **\@optname**のレプリケーションの種類、 **\@値**に `true` の値を指定します。  
   
 #### <a name="to-configure-publishing-using-a-remote-distributor"></a>リモート ディストリビューターを使用してパブリッシングを構成するには  
   
 1.  [sp_get_distributor &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-get-distributor-transact-sql) を実行して、サーバーが既にディストリビューターとして構成されているかどうかを調べます。  
   
-    -   結果セットの **installed** の値が **0** の場合は、ディストリビューターの master データベースで [sp_adddistributor &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-adddistributor-transact-sql) を実行します。 **@password** には強力なパスワードを指定してください。 この **distributor_admin** アカウントのパスワードは、パブリッシャーがディストリビューターに接続する際に使用されます。  
+    -   結果セットの **installed** の値が **0** の場合は、ディストリビューターの master データベースで [sp_adddistributor &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-adddistributor-transact-sql) を実行します。 **\@パスワード**に強力なパスワードを指定してください。 この **distributor_admin** アカウントのパスワードは、パブリッシャーがディストリビューターに接続する際に使用されます。  
   
-    -   結果セットの **distribution db installed** の値が **0** の場合は、ディストリビューターの master データベースで [sp_adddistributiondb &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-adddistributiondb-transact-sql) を実行します。 このとき、 **@database**」を参照してください。 必要に応じて、トランザクションの最大保有期間 ( **@max_distretention** ) および履歴保有期間 ( **@history_retention**」を参照してください。 新しいデータベースを作成する場合は、必要なデータベース プロパティのパラメーターを指定します。  
+    -   結果セットの **distribution db installed** の値が **0** の場合は、ディストリビューターの master データベースで [sp_adddistributiondb &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-adddistributiondb-transact-sql) を実行します。 **\@データベース**のディストリビューションデータベースの名前を指定します。 必要に応じて、 **\@max_distretention**の最大トランザクション保有期間と **\@history_retention**の履歴の保有期間を指定できます。 新しいデータベースを作成する場合は、必要なデータベース プロパティのパラメーターを指定します。  
   
-2.  ディストリビューターで、[sp_adddistpublisher &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-adddistpublisher-transact-sql) を実行します。このとき、**@working_directory** には、既定のスナップショット フォルダーとして使用する UNC 共有を指定します。 ディストリビューターがパブリッシャーに接続する際に [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 認証を使用する場合、さらに **0** @value **@security_mode** を指定し、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] と **@login** に **@password**」を参照してください。  
+2.  ディストリビューターで、 **\@working_directory**の既定のスナップショットフォルダーとして使用される UNC 共有を指定して[sp_adddistpublisher &#40;transact-sql&#41;](/sql/relational-databases/system-stored-procedures/sp-adddistpublisher-transact-sql)を実行します。 ディストリビューターがパブリッシャーへの接続時に [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 認証を使用する場合は、 **\@security_mode**に**0**を指定し、 **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ログイン**と **\@パスワード**の [!INCLUDE[msCoName](../../includes/msconame-md.md)]\@ログイン情報も指定する必要があります。  
   
-3.  パブリッシャーの master データベースで [sp_adddistributor &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-adddistributor-transact-sql) を実行します。 **@password** には、手順 1. で使用した強力なパスワードを指定してください。 このパスワードは、パブリッシャーがディストリビューターに接続する際に使用されます。  
+3.  パブリッシャーの master データベースで [sp_adddistributor &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-adddistributor-transact-sql) を実行します。 **\@パスワード**については、手順 1. で使用した強力なパスワードを指定します。 このパスワードは、パブリッシャーがディストリビューターに接続する際に使用されます。  
   
-4.  パブリッシャーで、[sp_replicationdboption &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-replicationdboption-transact-sql) を実行します。 このとき、 **@dbname**にはパブリッシュするデータベースを、 **@optname**にはレプリケーションの種類を、 **@value**」を参照してください。  
+4.  パブリッシャーで、[sp_replicationdboption &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-replicationdboption-transact-sql) を実行します。 **\@dbname**にパブリッシュするデータベース、 **\@optname**のレプリケーションの種類、 **\@値**に true を指定します。  
   
 ###  <a name="TsqlExample"></a> 例 (Transact-SQL)  
  次の例に、パブリッシングおよびディストリビューションをプログラムから構成する方法を示します。 この例では、パブリッシャーおよびローカル ディストリビューターとして構成するサーバーの名前をスクリプト変数を使って指定しています。 レプリケーションのパブリッシングおよびディストリビューションは、レプリケーションのストアド プロシージャを使用してプログラムから構成できます。  
@@ -99,7 +99,7 @@ ms.locfileid: "54135862"
   
 4.  <xref:Microsoft.SqlServer.Replication.DistributionDatabase.Name%2A> プロパティにデータベース名を設定し、 <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> プロパティに手順 1. の <xref:Microsoft.SqlServer.Management.Common.ServerConnection> を設定します。  
   
-5.  <xref:Microsoft.SqlServer.Replication.ReplicationServer.InstallDistributor%2A> メソッドを呼び出してディストリビューターをインストールします。 手順 3. の <xref:Microsoft.SqlServer.Replication.DistributionDatabase> オブジェクトを渡します。  
+5.  <xref:Microsoft.SqlServer.Replication.ReplicationServer.InstallDistributor%2A> メソッドを呼び出してディストリビューターをインストールします。 手順 3 の <xref:Microsoft.SqlServer.Replication.DistributionDatabase> オブジェクトを渡します。  
   
 6.  <xref:Microsoft.SqlServer.Replication.DistributionPublisher> クラスのインスタンスを作成します。  
   
@@ -130,7 +130,7 @@ ms.locfileid: "54135862"
 5.  <xref:Microsoft.SqlServer.Replication.ReplicationServer.InstallDistributor%2A> メソッドを呼び出してディストリビューターをインストールします。 安全なパスワード (パブリッシャーがリモート ディストリビューターへの接続時に使用) および手順 3. の <xref:Microsoft.SqlServer.Replication.DistributionDatabase> オブジェクトを指定します。 詳細については、「[ディストリビューターのセキュリティ保護](security/secure-the-distributor.md)」を参照してください。  
   
     > [!IMPORTANT]  
-    >  可能であれば、実行時、ユーザーに対してセキュリティ資格情報の入力を要求します。 資格情報を保存する必要がある場合は、 [Windows .NET&#xA0;Framework に用意されている](https://go.microsoft.com/fwlink/?LinkId=34733) 暗号化サービス [!INCLUDE[msCoName](../../includes/msconame-md.md)] を使用します。  
+    >  可能であれば、実行時、ユーザーに対してセキュリティ資格情報の入力を要求します。 資格情報を保存する必要がある場合は、 [Windows .NET&nbsp;Framework に用意されている](https://go.microsoft.com/fwlink/?LinkId=34733) 暗号化サービス [!INCLUDE[msCoName](../../includes/msconame-md.md)] を使用します。  
   
 6.  <xref:Microsoft.SqlServer.Replication.DistributionPublisher> クラスのインスタンスを作成します。  
   
@@ -168,7 +168,7 @@ ms.locfileid: "54135862"
  [View and Modify Distributor and Publisher Properties (ディストリビューターとパブリッシャーのプロパティの表示および変更)](view-and-modify-distributor-and-publisher-properties.md)   
  [Replication System Stored Procedures Concepts](concepts/replication-system-stored-procedures-concepts.md)   
  [[ディストリビューションの構成]](configure-distribution.md)   
- [Replication Management Objects Concepts](concepts/replication-management-objects-concepts.md)   
- [AlwaysOn 可用性グループのレプリケーションを構成する&#40;SQL Server&#41;](../../database-engine/availability-groups/windows/always-on-availability-groups-sql-server.md) 
+ [レプリケーション管理オブジェクトの概念](concepts/replication-management-objects-concepts.md)   
+ [AlwaysOn 可用性グループ&#40;SQL Server のレプリケーションを構成する&#41;](../../database-engine/availability-groups/windows/always-on-availability-groups-sql-server.md) 
   
   

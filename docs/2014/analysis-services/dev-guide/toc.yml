@@ -1,255 +1,248 @@
-items:
 - name: 開発者ガイド (Analysis Services)
   href: analysis-services-dev-guide.md
 - name: データ マイニングのプログラミング
   href: data-mining-programming.md
   items:
-  - name: OLE DB for Data Mining
-    href: ole-db-for-data-mining.md
+    - name: OLE DB for Data Mining
+      href: ole-db-for-data-mining.md
 - name: テーブル モデルのプログラミング +
   href: ../tabular-model-programming-compatibility-levels-1050-1103/tabular-model-programming-for-compatibility-levels-1050-through-1103.md
 - name: Analysis Services のスキーマ行セット +
-  href: https://docs.microsoft.com/bi-reference/schema-rowsets/analysis-services-schema-rowsets
+  href: 'https://docs.microsoft.com/bi-reference/schema-rowsets/analysis-services-schema-rowsets'
 - name: ASSL リファレンス +
-  href: https://docs.microsoft.com/bi-reference/assl/analysis-services-scripting-language-assl-for-xmla
+  href: 'https://docs.microsoft.com/bi-reference/assl/analysis-services-scripting-language-assl-for-xmla'
 - name: XMLA リファレンス +
-  href: https://docs.microsoft.com/bi-reference/xmla/xml-for-analysis-xmla-reference
+  href: 'https://docs.microsoft.com/bi-reference/xmla/xml-for-analysis-xmla-reference'
 - name: 多次元モデルのプログラミング
   href: ../multidimensional-models/multidimensional-model-programming.md
   items:
-  - name: Microsoft OLAP アーキテクチャについて
-    href: ../multidimensional-models/olap-physical/understanding-microsoft-olap-architecture.md
-  - name: 論理アーキテクチャ
-    href: ../multidimensional-models/olap-logical/understanding-microsoft-olap-logical-architecture.md
-    items:
-    - name: 論理アーキテクチャの概要
-      href: ../multidimensional-models/olap-logical/logical-architecture-overview-analysis-services-multidimensional-data.md
-    - name: Server オブジェクト
-      href: ../multidimensional-models/olap-logical/server-objects-analysis-services-multidimensional-data.md
-    - name: Database オブジェクト
-      href: ../multidimensional-models/olap-logical/database-objects-analysis-services-multidimensional-data.md
-    - name: Dimension オブジェクト
-      href: ../multidimensional-models-olap-logical-dimension-objects/dimension-objects-analysis-services-multidimensional-data.md
-    - name: ディメンション
-      href: ../multidimensional-models-olap-logical-dimension-objects/dimensions-analysis-services-multidimensional-data.md
+    - name: Microsoft OLAP アーキテクチャについて
+      href: ../multidimensional-models/olap-physical/understanding-microsoft-olap-architecture.md
+    - name: 論理アーキテクチャ
+      href: ../multidimensional-models/olap-logical/understanding-microsoft-olap-logical-architecture.md
       items:
-      - name: ディメンションの概要
-        href: ../multidimensional-models-olap-logical-dimension-objects/introduction-to-dimensions-analysis-services-multidimensional-data.md
-      - name: ディメンションのストレージ
-        href: ../multidimensional-models-olap-logical-dimension-objects/dimensions-storage.md
-    - name: 属性と属性階層
-      href: ../multidimensional-models-olap-logical-dimension-objects/attributes-and-attribute-hierarchies.md
-    - name: のディメンション デザイナーでは、[ディメンション構造] ビューの
-      href: ../multidimensional-models-olap-logical-dimension-objects/attribute-relationships.md
-    - name: ユーザー階層
-      href: ../multidimensional-models-olap-logical-dimension-objects/user-hierarchies.md
+        - name: 論理アーキテクチャの概要
+          href: ../multidimensional-models/olap-logical/logical-architecture-overview-analysis-services-multidimensional-data.md
+        - name: Server オブジェクト
+          href: ../multidimensional-models/olap-logical/server-objects-analysis-services-multidimensional-data.md
+        - name: データベース オブジェクト
+          href: ../multidimensional-models/olap-logical/database-objects-analysis-services-multidimensional-data.md
+        - name: Dimension オブジェクト
+          href: ../multidimensional-models-olap-logical-dimension-objects/dimension-objects-analysis-services-multidimensional-data.md
+        - name: Dimensions
+          href: ../multidimensional-models-olap-logical-dimension-objects/dimensions-analysis-services-multidimensional-data.md
+          items:
+            - name: ディメンションの概要
+              href: ../multidimensional-models-olap-logical-dimension-objects/introduction-to-dimensions-analysis-services-multidimensional-data.md
+            - name: ディメンションのストレージ
+              href: ../multidimensional-models-olap-logical-dimension-objects/dimensions-storage.md
+        - name: 属性と属性階層
+          href: ../multidimensional-models-olap-logical-dimension-objects/attributes-and-attribute-hierarchies.md
+        - name: 'のディメンション デザイナーでは、[ディメンション構造] ビューの'
+          href: ../multidimensional-models-olap-logical-dimension-objects/attribute-relationships.md
+        - name: ユーザー階層
+          href: ../multidimensional-models-olap-logical-dimension-objects/user-hierarchies.md
+          items:
+            - name: ユーザー階層プロパティ
+              href: ../multidimensional-models-olap-logical-dimension-objects/user-hierarchies-properties.md
+            - name: レベル プロパティ
+              href: ../multidimensional-models-olap-logical-dimension-objects/user-hierarchies-level-properties.md
+        - name: 書き込み許可ディメンション
+          href: ../multidimensional-models-olap-logical-dimension-objects/write-enabled-dimensions.md
+        - name: ディメンションの翻訳
+          href: ../multidimensional-models-olap-logical-dimension-objects/dimension-translations.md
+        - name: データベース ディメンション プロパティ
+          href: ../multidimensional-models-olap-logical-dimension-objects/database-dimension-properties.md
+          items:
+            - name: ディメンションの種類
+              href: ../multidimensional-models-olap-logical-dimension-objects/database-dimension-properties-types.md
+        - name: プロアクティブ キャッシュ (ディメンション)
+          href: ../multidimensional-models-olap-logical-dimension-objects/proactive-caching-dimensions.md
+        - name: '[キューブ オブジェクト]'
+          href: ../multidimensional-models-olap-logical-cube-objects/cube-objects-analysis-services-multidimensional-data.md
+        - name: キューブ プロパティ
+          href: ../multidimensional-models-olap-logical-cube-objects/cube-properties-multidimensional-model-programming.md
+        - name: ディメンション リレーションシップ
+          href: ../multidimensional-models-olap-logical-cube-objects/dimension-relationships.md
+        - name: '[新しい名前付きセット]'
+          href: ../multidimensional-models-olap-logical-cube-objects/calculations.md
+        - name: '[メジャー グループ]'
+          href: ../multidimensional-models-olap-logical-cube-objects/partitions-analysis-services-multidimensional-data.md
+          items:
+            - name: パーティションのストレージ モードおよび処理
+              href: ../multidimensional-models-olap-logical-cube-objects/partitions-partition-storage-modes-and-processing.md
+            - name: プロアクティブ キャッシュ (パーティション)
+              href: ../multidimensional-models-olap-logical-cube-objects/partitions-proactive-caching.md
+            - name: リモート パーティション
+              href: ../multidimensional-models-olap-logical-cube-objects/partitions-remote-partitions.md
+            - name: 書き込み許可パーティション
+              href: ../multidimensional-models-olap-logical-cube-objects/partitions-write-enabled-partitions.md
+        - name: パースペクティブ
+          href: ../multidimensional-models-olap-logical-cube-objects/perspectives.md
+        - name: キューブの翻訳
+          href: ../multidimensional-models-olap-logical-cube-objects/cube-translations.md
+        - name: キューブ セル
+          href: ../multidimensional-models-olap-logical-cube-objects/cube-cells-analysis-services-multidimensional-data.md
+        - name: キューブのストレージ
+          href: ../multidimensional-models-olap-logical-cube-objects/cube-storage-analysis-services-multidimensional-data.md
+        - name: 集計と集計デザイン
+          href: ../multidimensional-models-olap-logical-cube-objects/aggregations-and-aggregation-designs.md
+        - name: セキュリティ ロール
+          href: ../multidimensional-models/olap-logical/security-roles-analysis-services-multidimensional-data.md
+    - name: 物理アーキテクチャ
+      href: ../multidimensional-models/olap-physical/understanding-microsoft-olap-physical-architecture.md
       items:
-      - name: ユーザー階層プロパティ
-        href: ../multidimensional-models-olap-logical-dimension-objects/user-hierarchies-properties.md
-      - name: レベル プロパティ
-        href: ../multidimensional-models-olap-logical-dimension-objects/user-hierarchies-level-properties.md
-    - name: 書き込み許可ディメンション
-      href: ../multidimensional-models-olap-logical-dimension-objects/write-enabled-dimensions.md
-    - name: ディメンションの翻訳
-      href: ../multidimensional-models-olap-logical-dimension-objects/dimension-translations.md
-    - name: データベース ディメンション プロパティ
-      href: ../multidimensional-models-olap-logical-dimension-objects/database-dimension-properties.md
+        - name: OLAP エンジンのサーバー コンポーネント
+          href: ../multidimensional-models/olap-physical/olap-engine-server-components.md
+        - name: オブジェクトの名前付け規則
+          href: ../multidimensional-models/olap-physical/object-naming-rules-analysis-services.md
+        - name: 最大容量仕様
+          href: ../multidimensional-models/olap-physical/maximum-capacity-specifications-analysis-services.md
+        - name: Analysis Services で使用するデータ型
+          href: ../multidimensional-models/olap-physical/data-types-in-analysis-services.md
+        - name: ローカル キューブ
+          href: ../multidimensional-models/olap-physical/local-cubes-analysis-services-multidimensional-data.md
+        - name: クライアント アーキテクチャの要件
+          href: ../multidimensional-models/olap-physical/client-architecture-requirements-for-analysis-services-development.md
+    - name: ADOMD.NET での開発
+      href: 'https://docs.microsoft.com/bi-reference/adomd/developing-with-adomd-net'
+    - name: ADOMD.NET クライアント プログラミング
+      href: 'https://docs.microsoft.com/bi-reference/adomd/multidimensional-models-adomd-net-client/adomd-net-client-programming'
       items:
-      - name: ディメンションの種類
-        href: ../multidimensional-models-olap-logical-dimension-objects/database-dimension-properties-types.md
-    - name: プロアクティブ キャッシュ (ディメンション)
-      href: ../multidimensional-models-olap-logical-dimension-objects/proactive-caching-dimensions.md
-    - name: '[キューブ オブジェクト]'
-      href: ../multidimensional-models-olap-logical-cube-objects/cube-objects-analysis-services-multidimensional-data.md
-    - name: キューブ プロパティ
-      href: ../multidimensional-models-olap-logical-cube-objects/cube-properties-multidimensional-model-programming.md
-    - name: ディメンション リレーションシップ
-      href: ../multidimensional-models-olap-logical-cube-objects/dimension-relationships.md
-    - name: '[新しい名前付きセット]'
-      href: ../multidimensional-models-olap-logical-cube-objects/calculations.md
-    - name: '[メジャー グループ]'
-      href: ../multidimensional-models-olap-logical-cube-objects/partitions-analysis-services-multidimensional-data.md
+        - name: ADOMD.NET のクライアント機能
+          href: 'https://docs.microsoft.com/bi-reference/adomd/multidimensional-models-adomd-net-client/adomd-net-client-functionality'
+        - name: ADO MD から ADOMD.NET への移行
+          href: 'https://docs.microsoft.com/bi-reference/adomd/multidimensional-models-adomd-net-client/migrating-from-ado-md-to-adomd-net'
+        - name: ADOMD.NET での接続の確立
+          href: 'https://docs.microsoft.com/bi-reference/adomd/multidimensional-models-adomd-net-client/connections-in-adomd-net'
+        - name: ADOMD.NET でのセキュリティ保護された接続の確立
+          href: 'https://docs.microsoft.com/bi-reference/adomd/multidimensional-models-adomd-net-client/connections-in-adomd-net-establishing-secure-connections'
+        - name: ADOMD.NET での接続およびセッションの使用
+          href: 'https://docs.microsoft.com/bi-reference/adomd/multidimensional-models-adomd-net-client/connections-in-adomd-net-working-with-connections-and-sessions'
+        - name: ADOMD.NET でのトランザクションの実行
+          href: 'https://docs.microsoft.com/bi-reference/adomd/multidimensional-models-adomd-net-client/connections-in-adomd-net-performing-transactions'
+        - name: 分析データ ソースからのメタデータの取得
+          href: 'https://docs.microsoft.com/bi-reference/adomd/multidimensional-models-adomd-net-client/retrieving-metadata-from-an-analytical-data-source'
+        - name: ADOMD.NET オブジェクト モデルの操作
+          href: 'https://docs.microsoft.com/bi-reference/adomd/multidimensional-models-adomd-net-client/retrieving-metadata-working-with-adomd-net-object-model'
+        - name: ADOMD.NET でのスキーマ行セットの操作
+          href: 'https://docs.microsoft.com/bi-reference/adomd/multidimensional-models-adomd-net-client/retrieving-metadata-working-with-schema-rowsets'
+        - name: 分析データ ソースに対するコマンドの実行
+          href: 'https://docs.microsoft.com/bi-reference/adomd/multidimensional-models-adomd-net-client/executing-commands-against-an-analytical-data-source'
+        - name: 分析データ ソースからのデータの取得
+          href: 'https://docs.microsoft.com/bi-reference/adomd/multidimensional-models-adomd-net-client/retrieving-data-from-an-analytical-data-source'
+        - name: セルセットを使用したデータの取得
+          href: 'https://docs.microsoft.com/bi-reference/adomd/multidimensional-models-adomd-net-client/retrieving-data-using-the-cellset'
+        - name: AdomdDataReader を使用したデータの取得
+          href: 'https://docs.microsoft.com/bi-reference/adomd/multidimensional-models-adomd-net-client/retrieving-data-using-the-adomddatareader'
+        - name: XmlReader を使用したデータの取得
+          href: 'https://docs.microsoft.com/bi-reference/adomd/multidimensional-models-adomd-net-client/retrieving-data-using-the-xmlreader'
+    - name: ADOMD.NET サーバー プログラミング
+      href: 'https://docs.microsoft.com/bi-reference/adomd/multidimensional-models-adomd-net-server/adomd-net-server-programming'
       items:
-      - name: パーティションのストレージ モードおよび処理
-        href: ../multidimensional-models-olap-logical-cube-objects/partitions-partition-storage-modes-and-processing.md
-      - name: プロアクティブ キャッシュ (パーティション)
-        href: ../multidimensional-models-olap-logical-cube-objects/partitions-proactive-caching.md
-      - name: リモート パーティション
-        href: ../multidimensional-models-olap-logical-cube-objects/partitions-remote-partitions.md
-      - name: 書き込み許可パーティション
-        href: ../multidimensional-models-olap-logical-cube-objects/partitions-write-enabled-partitions.md
-    - name: パースペクティブ
-      href: ../multidimensional-models-olap-logical-cube-objects/perspectives.md
-    - name: キューブの翻訳
-      href: ../multidimensional-models-olap-logical-cube-objects/cube-translations.md
-    - name: キューブ セル
-      href: ../multidimensional-models-olap-logical-cube-objects/cube-cells-analysis-services-multidimensional-data.md
-    - name: キューブのストレージ
-      href: ../multidimensional-models-olap-logical-cube-objects/cube-storage-analysis-services-multidimensional-data.md
-    - name: 集計と集計デザイン
-      href: ../multidimensional-models-olap-logical-cube-objects/aggregations-and-aggregation-designs.md
-    - name: セキュリティ ロール
-      href: ../multidimensional-models/olap-logical/security-roles-analysis-services-multidimensional-data.md
-  - name: 物理アーキテクチャ
-    href: ../multidimensional-models/olap-physical/understanding-microsoft-olap-physical-architecture.md
-    items:
-    - name: OLAP エンジンのサーバー コンポーネント
-      href: ../multidimensional-models/olap-physical/olap-engine-server-components.md
-    - name: オブジェクトの名前付け規則
-      href: ../multidimensional-models/olap-physical/object-naming-rules-analysis-services.md
-    - name: 最大容量仕様
-      href: ../multidimensional-models/olap-physical/maximum-capacity-specifications-analysis-services.md
-    - name: Analysis Services で使用するデータ型
-      href: ../multidimensional-models/olap-physical/data-types-in-analysis-services.md
-    - name: ローカル キューブ
-      href: ../multidimensional-models/olap-physical/local-cubes-analysis-services-multidimensional-data.md
-    - name: クライアント アーキテクチャの要件
-      href: ../multidimensional-models/olap-physical/client-architecture-requirements-for-analysis-services-development.md
-  - name: ADOMD.NET での開発
-    href: https://docs.microsoft.com/bi-reference/adomd/developing-with-adomd-net
-  - name: ADOMD.NET クライアント プログラミング
-    href: https://docs.microsoft.com/bi-reference/adomd/multidimensional-models-adomd-net-client/adomd-net-client-programming
-    items:
-    - name: ADOMD.NET のクライアント機能
-      href: https://docs.microsoft.com/bi-reference/adomd/multidimensional-models-adomd-net-client/adomd-net-client-functionality
-    - name: ADO MD から ADOMD.NET への移行
-      href: https://docs.microsoft.com/bi-reference/adomd/multidimensional-models-adomd-net-client/migrating-from-ado-md-to-adomd-net
-    - name: ADOMD.NET での接続の確立
-      href: https://docs.microsoft.com/bi-reference/adomd/multidimensional-models-adomd-net-client/connections-in-adomd-net
-    - name: ADOMD.NET でのセキュリティ保護された接続の確立
-      href: https://docs.microsoft.com/bi-reference/adomd/multidimensional-models-adomd-net-client/connections-in-adomd-net-establishing-secure-connections
-    - name: ADOMD.NET での接続およびセッションの使用
-      href: https://docs.microsoft.com/bi-reference/adomd/multidimensional-models-adomd-net-client/connections-in-adomd-net-working-with-connections-and-sessions
-    - name: ADOMD.NET でのトランザクションの実行
-      href: https://docs.microsoft.com/bi-reference/adomd/multidimensional-models-adomd-net-client/connections-in-adomd-net-performing-transactions
-    - name: 分析データ ソースからのメタデータの取得
-      href: https://docs.microsoft.com/bi-reference/adomd/multidimensional-models-adomd-net-client/retrieving-metadata-from-an-analytical-data-source
-    - name: ADOMD.NET オブジェクト モデルの操作
-      href: https://docs.microsoft.com/bi-reference/adomd/multidimensional-models-adomd-net-client/retrieving-metadata-working-with-adomd-net-object-model
-    - name: ADOMD.NET でのスキーマ行セットの操作
-      href: https://docs.microsoft.com/bi-reference/adomd/multidimensional-models-adomd-net-client/retrieving-metadata-working-with-schema-rowsets
-    - name: 分析データ ソースに対するコマンドの実行
-      href: https://docs.microsoft.com/bi-reference/adomd/multidimensional-models-adomd-net-client/executing-commands-against-an-analytical-data-source
-    - name: 分析データ ソースからのデータの取得
-      href: https://docs.microsoft.com/bi-reference/adomd/multidimensional-models-adomd-net-client/retrieving-data-from-an-analytical-data-source
-    - name: セルセットを使用したデータの取得
-      href: https://docs.microsoft.com/bi-reference/adomd/multidimensional-models-adomd-net-client/retrieving-data-using-the-cellset
-    - name: AdomdDataReader を使用したデータの取得
-      href: https://docs.microsoft.com/bi-reference/adomd/multidimensional-models-adomd-net-client/retrieving-data-using-the-adomddatareader
-    - name: XmlReader を使用したデータの取得
-      href: https://docs.microsoft.com/bi-reference/adomd/multidimensional-models-adomd-net-client/retrieving-data-using-the-xmlreader
-  - name: ADOMD.NET サーバー プログラミング
-    href: https://docs.microsoft.com/bi-reference/adomd/multidimensional-models-adomd-net-server/adomd-net-server-programming
-    items:
-    - name: ADOMD.NET のサーバー機能
-      href: https://docs.microsoft.com/bi-reference/adomd/multidimensional-models-adomd-net-server/adomd-net-server-functionality
-    - name: ADOMD.NET サーバー オブジェクト アーキテクチャ
-      href: https://docs.microsoft.com/bi-reference/adomd/multidimensional-models-adomd-net-server/adomd-net-server-object-architecture
-    - name: ユーザー定義関数およびストアド プロシージャ
-      href: https://docs.microsoft.com/bi-reference/adomd/multidimensional-models-adomd-net-server/user-defined-functions-and-stored-procedures
-  - name: ADOMD.NET の再配布
-    href: https://docs.microsoft.com/bi-reference/adomd/redistributing-adomd-net
-  - name: 分析管理オブジェクト (AMO) による開発
-    href: https://docs.microsoft.com/bi-reference/amo/developing-with-analysis-management-objects-amo
-  - name: AMO の概念とオブジェクト モデル
-    href: https://docs.microsoft.com/bi-reference/amo/amo-concepts-and-object-model
-  - name: AMO クラスの概要
-    href: https://docs.microsoft.com/bi-reference/amo/amo-classes-introduction
-    items:
-    - name: AMO 基礎クラス
-      href: https://docs.microsoft.com/bi-reference/amo/amo-fundamental-classes
-    - name: AMO OLAP クラス
-      href: https://docs.microsoft.com/bi-reference/amo/amo-olap-classes
-    - name: AMO データ マイニング クラス
-      href: https://docs.microsoft.com/bi-reference/amo/amo-data-mining-classes
-    - name: AMO セキュリティ クラス
-      href: https://docs.microsoft.com/bi-reference/amo/amo-security-classes
-    - name: AMO のその他のクラスとメソッド
-      href: https://docs.microsoft.com/bi-reference/amo/amo-other-classes-and-methods
-  - name: AMO による管理タスクのプログラミング
-    href: https://docs.microsoft.com/bi-reference/amo/programming-administrative-tasks-with-amo
-    items:
-    - name: AMO 基本オブジェクトのプログラミング
-      href: https://docs.microsoft.com/bi-reference/amo/programming-amo-fundamental-objects
-    - name: AMO OLAP 基本オブジェクトのプログラミング
-      href: https://docs.microsoft.com/bi-reference/amo/programming-amo-olap-basic-objects
-    - name: 高度な AMO OLAP オブジェクトのプログラミング
-      href: https://docs.microsoft.com/bi-reference/amo/programming-amo-olap-advanced-objects
-    - name: AMO データ マイニング オブジェクトのプログラミング
-      href: https://docs.microsoft.com/bi-reference/amo/programming-amo-data-mining-objects
-    - name: AMO セキュリティ オブジェクトのプログラミング
-      href: https://docs.microsoft.com/bi-reference/amo/programming-amo-security-objects
-    - name: AMO の補足的なクラスとメソッドのプログラミング
-      href: https://docs.microsoft.com/bi-reference/amo/programming-amo-complementary-classes-and-methods
-  - name: Analysis Services スクリプト言語 (ASSL) での開発
-    href: ../multidimensional-models/scripting-language-assl/developing-with-analysis-services-scripting-language-assl.md
-  - name: ASSL オブジェクトとオブジェクトの特性
-    href: ../multidimensional-models/scripting-language-assl/assl-objects-and-object-characteristics.md
-  - name: ASSL XML 規則
-    href: ../multidimensional-models/scripting-language-assl/assl-xml-conventions.md
-  - name: XMLA の概念
-    href: ../multidimensional-models/scripting-language-assl/xmla-concepts.md
-  - name: Analysis Services での XMLA による開発
-    href: ../multidimensional-models-scripting-language-assl-xmla/developing-with-xmla-in-analysis-services.md
-    items:
-    - name: 接続およびセッションの管理
-      href: ../multidimensional-models-scripting-language-assl-xmla/managing-connections-and-sessions-xmla.md
-    - name: エラーおよび警告の処理
-      href: ../multidimensional-models-scripting-language-assl-xmla/handling-errors-and-warnings-xmla.md
-    - name: オブジェクトの定義と識別
-      href: ../multidimensional-models-scripting-language-assl-xmla/defining-and-identifying-objects-xmla.md
-    - name: トランザクションの管理
-      href: ../multidimensional-models-scripting-language-assl-xmla/managing-transactions-xmla.md
-    - name: コマンドのキャンセル
-      href: ../multidimensional-models-scripting-language-assl-xmla/canceling-commands-xmla.md
-    - name: バッチ操作の実行
-      href: ../multidimensional-models-scripting-language-assl-xmla/performing-batch-operations-xmla.md
-    - name: オブジェクトの作成と変更
-      href: ../multidimensional-models-scripting-language-assl-xmla/creating-and-altering-objects-xmla.md
-    - name: データベースのロックおよびロック解除
-      href: ../multidimensional-models-scripting-language-assl-xmla/locking-and-unlocking-databases-xmla.md
-    - name: オブジェクトの処理
-      href: ../multidimensional-models-scripting-language-assl-xmla/processing-objects-xmla.md
-    - name: パーティションのマージ
-      href: ../multidimensional-models-scripting-language-assl-xmla/merging-partitions-xmla.md
-    - name: 集計のデザイン
-      href: ../multidimensional-models-scripting-language-assl-xmla/designing-aggregations-xmla.md
-    - name: データベースのバックアップ、復元、および同期
-      href: ../multidimensional-models-scripting-language-assl-xmla/backing-up-restoring-and-synchronizing-databases-xmla.md
-    - name: メンバーの挿入、更新、および削除
-      href: ../multidimensional-models-scripting-language-assl-xmla/inserting-updating-and-dropping-members-xmla.md
-    - name: セルの更新
-      href: ../multidimensional-models-scripting-language-assl-xmla/updating-cells-xmla.md
-    - name: キャッシュの管理
-      href: ../multidimensional-models-scripting-language-assl-xmla/managing-caches-xmla.md
-    - name: トレースの監視
-      href: ../multidimensional-models-scripting-language-assl-xmla/monitoring-traces-xmla.md
-  - name: OLAP 機能の拡張
-    href: ../multidimensional-models/extending-olap/extending-olap-functionality.md
-  - name: パーソナル化による OLAP の拡張
-    href: ../multidimensional-models/extending-olap/extending-olap-through-personalizations.md
-  - name: Analysis Services のパーソナル化拡張機能の定義
-    href: ../multidimensional-models/extending-olap/analysis-services-personalization-extensions.md
-  - name: ストアド プロシージャの定義
-    href: ../multidimensional-models-extending-olap-stored-procedures/defining-stored-procedures.md
-    items:
-    - name: ストアド プロシージャのデザイン
-      href: ../multidimensional-models-extending-olap-stored-procedures/designing-stored-procedures.md
-    - name: ストアド プロシージャの作成
-      href: ../multidimensional-models-extending-olap-stored-procedures/creating-stored-procedures.md
-    - name: ストアド プロシージャを呼び出す
-      href: ../multidimensional-models-extending-olap-stored-procedures/calling-stored-procedures.md
-    - name: ストアド プロシージャのクエリ コンテキストへのアクセス
-      href: ../multidimensional-models-extending-olap-stored-procedures/accessing-query-context-in-stored-procedures.md
-    - name: ストアド プロシージャのセキュリティの設定
-      href: ../multidimensional-models-extending-olap-stored-procedures/setting-security-for-stored-procedures.md
-    - name: デバッグ系のストアド プロシージャ
-      href: ../multidimensional-models-extending-olap-stored-procedures/debugging-stored-procedures.md
-  - name: Analysis Services OLE DB Provider
-    href: analysis-services-ole-db-provider-analysis-services-multidimensional-data.md
-ms.openlocfilehash: 9ef7bffc68cb6a3986a1cf56c671cbfbadff291a
-ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
-ms.translationtype: HT
-ms.contentlocale: ja-JP
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50145137"
+        - name: ADOMD.NET のサーバー機能
+          href: 'https://docs.microsoft.com/bi-reference/adomd/multidimensional-models-adomd-net-server/adomd-net-server-functionality'
+        - name: ADOMD.NET サーバー オブジェクト アーキテクチャ
+          href: 'https://docs.microsoft.com/bi-reference/adomd/multidimensional-models-adomd-net-server/adomd-net-server-object-architecture'
+        - name: ユーザー定義関数およびストアド プロシージャ
+          href: 'https://docs.microsoft.com/bi-reference/adomd/multidimensional-models-adomd-net-server/user-defined-functions-and-stored-procedures'
+    - name: ADOMD.NET の再配布
+      href: 'https://docs.microsoft.com/bi-reference/adomd/redistributing-adomd-net'
+    - name: 分析管理オブジェクト (AMO) による開発
+      href: 'https://docs.microsoft.com/bi-reference/amo/developing-with-analysis-management-objects-amo'
+    - name: AMO の概念とオブジェクト モデル
+      href: 'https://docs.microsoft.com/bi-reference/amo/amo-concepts-and-object-model'
+    - name: AMO クラスの概要
+      href: 'https://docs.microsoft.com/bi-reference/amo/amo-classes-introduction'
+      items:
+        - name: AMO 基礎クラス
+          href: 'https://docs.microsoft.com/bi-reference/amo/amo-fundamental-classes'
+        - name: AMO OLAP クラス
+          href: 'https://docs.microsoft.com/bi-reference/amo/amo-olap-classes'
+        - name: AMO データ マイニング クラス
+          href: 'https://docs.microsoft.com/bi-reference/amo/amo-data-mining-classes'
+        - name: AMO セキュリティ クラス
+          href: 'https://docs.microsoft.com/bi-reference/amo/amo-security-classes'
+        - name: AMO のその他のクラスとメソッド
+          href: 'https://docs.microsoft.com/bi-reference/amo/amo-other-classes-and-methods'
+    - name: AMO による管理タスクのプログラミング
+      href: 'https://docs.microsoft.com/bi-reference/amo/programming-administrative-tasks-with-amo'
+      items:
+        - name: AMO 基本オブジェクトのプログラミング
+          href: 'https://docs.microsoft.com/bi-reference/amo/programming-amo-fundamental-objects'
+        - name: AMO OLAP 基本オブジェクトのプログラミング
+          href: 'https://docs.microsoft.com/bi-reference/amo/programming-amo-olap-basic-objects'
+        - name: 高度な AMO OLAP オブジェクトのプログラミング
+          href: 'https://docs.microsoft.com/bi-reference/amo/programming-amo-olap-advanced-objects'
+        - name: AMO データ マイニング オブジェクトのプログラミング
+          href: 'https://docs.microsoft.com/bi-reference/amo/programming-amo-data-mining-objects'
+        - name: AMO セキュリティ オブジェクトのプログラミング
+          href: 'https://docs.microsoft.com/bi-reference/amo/programming-amo-security-objects'
+        - name: AMO の補足的なクラスとメソッドのプログラミング
+          href: 'https://docs.microsoft.com/bi-reference/amo/programming-amo-complementary-classes-and-methods'
+    - name: Analysis Services スクリプト言語 (ASSL) での開発
+      href: ../multidimensional-models/scripting-language-assl/developing-with-analysis-services-scripting-language-assl.md
+    - name: ASSL オブジェクトとオブジェクトの特性
+      href: ../multidimensional-models/scripting-language-assl/assl-objects-and-object-characteristics.md
+    - name: ASSL XML 規則
+      href: ../multidimensional-models/scripting-language-assl/assl-xml-conventions.md
+    - name: XMLA の概念
+      href: ../multidimensional-models/scripting-language-assl/xmla-concepts.md
+    - name: Analysis Services での XMLA による開発
+      href: ../multidimensional-models-scripting-language-assl-xmla/developing-with-xmla-in-analysis-services.md
+      items:
+        - name: 接続およびセッションの管理
+          href: ../multidimensional-models-scripting-language-assl-xmla/managing-connections-and-sessions-xmla.md
+        - name: エラーおよび警告の処理
+          href: ../multidimensional-models-scripting-language-assl-xmla/handling-errors-and-warnings-xmla.md
+        - name: オブジェクトの定義と識別
+          href: ../multidimensional-models-scripting-language-assl-xmla/defining-and-identifying-objects-xmla.md
+        - name: トランザクションの管理
+          href: ../multidimensional-models-scripting-language-assl-xmla/managing-transactions-xmla.md
+        - name: コマンドのキャンセル
+          href: ../multidimensional-models-scripting-language-assl-xmla/canceling-commands-xmla.md
+        - name: バッチ操作の実行
+          href: ../multidimensional-models-scripting-language-assl-xmla/performing-batch-operations-xmla.md
+        - name: オブジェクトの作成と変更
+          href: ../multidimensional-models-scripting-language-assl-xmla/creating-and-altering-objects-xmla.md
+        - name: データベースのロックおよびロック解除
+          href: ../multidimensional-models-scripting-language-assl-xmla/locking-and-unlocking-databases-xmla.md
+        - name: オブジェクトの処理
+          href: ../multidimensional-models-scripting-language-assl-xmla/processing-objects-xmla.md
+        - name: パーティションのマージ
+          href: ../multidimensional-models-scripting-language-assl-xmla/merging-partitions-xmla.md
+        - name: 集計のデザイン
+          href: ../multidimensional-models-scripting-language-assl-xmla/designing-aggregations-xmla.md
+        - name: データベースのバックアップ、復元、および同期
+          href: ../multidimensional-models-scripting-language-assl-xmla/backing-up-restoring-and-synchronizing-databases-xmla.md
+        - name: メンバーの挿入、更新、および削除
+          href: ../multidimensional-models-scripting-language-assl-xmla/inserting-updating-and-dropping-members-xmla.md
+        - name: セルの更新
+          href: ../multidimensional-models-scripting-language-assl-xmla/updating-cells-xmla.md
+        - name: キャッシュの管理
+          href: ../multidimensional-models-scripting-language-assl-xmla/managing-caches-xmla.md
+        - name: トレースの監視
+          href: ../multidimensional-models-scripting-language-assl-xmla/monitoring-traces-xmla.md
+    - name: OLAP 機能の拡張
+      href: ../multidimensional-models/extending-olap/extending-olap-functionality.md
+    - name: パーソナル化による OLAP の拡張
+      href: ../multidimensional-models/extending-olap/extending-olap-through-personalizations.md
+    - name: Analysis Services のパーソナル化拡張機能の定義
+      href: ../multidimensional-models/extending-olap/analysis-services-personalization-extensions.md
+    - name: ストアド プロシージャの定義
+      href: ../multidimensional-models-extending-olap-stored-procedures/defining-stored-procedures.md
+      items:
+        - name: ストアド プロシージャのデザイン
+          href: ../multidimensional-models-extending-olap-stored-procedures/designing-stored-procedures.md
+        - name: ストアド プロシージャの作成
+          href: ../multidimensional-models-extending-olap-stored-procedures/creating-stored-procedures.md
+        - name: ストアド プロシージャを呼び出す
+          href: ../multidimensional-models-extending-olap-stored-procedures/calling-stored-procedures.md
+        - name: ストアド プロシージャのクエリ コンテキストへのアクセス
+          href: ../multidimensional-models-extending-olap-stored-procedures/accessing-query-context-in-stored-procedures.md
+        - name: ストアド プロシージャのセキュリティの設定
+          href: ../multidimensional-models-extending-olap-stored-procedures/setting-security-for-stored-procedures.md
+        - name: デバッグ系のストアド プロシージャ
+          href: ../multidimensional-models-extending-olap-stored-procedures/debugging-stored-procedures.md
+    - name: Analysis Services OLE DB Provider
+      href: analysis-services-ole-db-provider-analysis-services-multidimensional-data.md

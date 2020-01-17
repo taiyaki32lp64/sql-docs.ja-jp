@@ -1,59 +1,60 @@
 ---
-title: Linux 上のスナップショット フォルダーの共有 SQL Server レプリケーションの構成 |Microsoft Docs
-description: この記事では、Linux でのスナップショット フォルダーの共有 SQL Server レプリケーションを構成する方法について説明します。
+title: スナップショット フォルダー共有の構成
+titleSuffix: SQL Server on Linux
+description: Linux 上の SQL Server レプリケーションでスナップショット フォルダーの共有を構成する方法について説明します。
+ms.custom: seo-lt-2019
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
+ms.reviewer: vanto
 ms.date: 09/24/2018
 ms.topic: article
 ms.prod: sql
-ms.custom: sql-linux
 ms.technology: linux
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 37b2aeb0ad03f0762fc593f5d9b4d2a0fec7a6a4
-ms.sourcegitcommit: 769b71f01052ec9b4fc5eb02d9da9a1a58118029
-ms.translationtype: MT
+ms.openlocfilehash: c5deaf7fbe62b30140f476a37ad096d080e00c49
+ms.sourcegitcommit: 035ad9197cb9799852ed705432740ad52e0a256d
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56319133"
+ms.lasthandoff: 12/31/2019
+ms.locfileid: "75558355"
 ---
-# <a name="configure-replication-snapshot-folder-with-shares"></a>共有スナップショット フォルダーのレプリケーションを構成します。
+# <a name="configure-replication-snapshot-folder-with-shares"></a>共有を含むレプリケーション スナップショット フォルダーを構成する
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
-スナップショット フォルダーが共有; として指定したディレクトリ読み取りし、書き込みをこのフォルダーにエージェントにアクセスするための十分なアクセス許可が必要です。
+スナップショット フォルダーは、共有として指定したディレクトリです。このフォルダーの読み取りと書き込みをするエージェントには、このフォルダーへのアクセスを可能にする十分な権限が必要です。
 
-![レプリケーションのダイアグラム][1]
+![レプリケーションの図][1]
 
-### <a name="replication-snapshot-folder-share-explained"></a>レプリケーション スナップショット フォルダーの共有の説明
+### <a name="replication-snapshot-folder-share-explained"></a>レプリケーション スナップショット フォルダー共有の説明
 
-前の例には、SQL Server がレプリケーションで samba 共有を使用する方法を見てみましょう。 このしくみの基本的な例を次に示します。
+例の前に、SQL Server がレプリケーションで samba 共有を使用する方法について説明します。 このしくみの基本的な例は次のとおりです。
 
-1. Samba 共有が構成されているファイルに書き込まれる`/local/path1`レプリケーションによって、サブスクライバーでパブリッシャー上のエージェントを表示できます
-2. すべてのインスタンスが確認されるようにパブリッシャー側でディストリビューション サーバーをセットアップするときに、共有のパスを使用する SQL Server が構成されて、 `//share/path`
-3. SQL Server からローカル パスの検索、`//share/path`ファイルを検索する場所を指定するには
-4. ローカル パスは、samba 共有をバックアップする SQL Server の読み取り/書き込み
+1. samba 共有は、パブリッシャー上のレプリケーション エージェント によって `/local/path1` に書き込まれるファイルを、サブスクライバーが参照できるように構成されます。
+2. SQL Server は、ディストリビューション サーバー上にパブリッシャーを設定するときに共有パスを使用するように構成されます。これによって、すべてのインスタンスが `//share/path` を参照します。
+3. SQL Server は、`//share/path` からローカル パスを探して、ファイルを見つける場所を認識します。
+4. SQL Server は、samba 共有によってサポートされるローカル パスに対して読み取りと書き込みを行います。
 
 
-## <a name="configure-a-samba-share-for-the-snapshot-folder"></a>スナップショット フォルダーの samba 共有を構成します。 
+## <a name="configure-a-samba-share-for-the-snapshot-folder"></a>スナップショット フォルダーの samba 共有を構成する 
 
-レプリケーション エージェントには、他のコンピューターでスナップショット フォルダーにアクセスするホストをレプリケーションの間で共有ディレクトリが必要です。 たとえば、トランザクション プル レプリケーションでは、記事を取得するためにディストリビューターへのアクセスを必要とすると、サブスクライバーでディストリビューション エージェントが存在します。 このセクションでは、レプリケーションの 2 つのホストで samba 共有を構成する方法の例をしましょう。
+レプリケーション エージェントは、他のマシンのスナップショット フォルダーにアクセスするために、レプリケーション ホスト間の共有ディレクトリを必要とします。 たとえば、トランザクション プル レプリケーションでは、ディストリビューション エージェントはサブスクライバーに存在するため、アーティクルを取得するためにディストリビューターへのアクセスが必要です。 このセクションでは、2 つのレプリケーション ホストに対して samba 共有を構成する方法の例について説明します。
 
 
 ## <a name="steps"></a>手順
 
-例としては、Samba を使用してホスト 2 (サブスクライバー) を共有するホスト 1 (ディストリビューター) で、スナップショット フォルダーを構成します。 
+例としては、Samba を使用して、ホスト 1 (ディストリビューター) 上のスナップショット フォルダーがホスト 2 (サブスクライバー) で共有されるように構成します。 
 
-### <a name="install-and-start-samba-on-both-machines"></a>インストールして Samba を両方のマシンで開始 
+### <a name="install-and-start-samba-on-both-machines"></a>両方のマシンに Samba をインストールして起動する 
 
-Ubuntu の場合。
+Ubuntu の場合:
 
 ```bash
 sudo apt-get -y install samba
 sudo service smbd restart
 ```
 
-On RHEL:
+RHEL の場合:
 
 ```bash
 sudo yum install samba
@@ -61,15 +62,15 @@ sudo service smb start
 sudo service smb status
 ```
 
-### <a name="on-host-1-distributor-set-up-the-samba-share"></a>ホスト 1 (ディストリビューター) のセットアップ、Samba 共有します。 
+### <a name="on-host-1-distributor-set-up-the-samba-share"></a>ホスト 1 (ディストリビューター) で Samba 共有を設定する 
 
-1. セットアップのユーザーと samba のパスワード:
+1. Samba のユーザーとパスワードを設定します。
 
   ```bash
   sudo smbpasswd -a mssql 
   ```
 
-1. 編集、`/etc/samba/smb.conf`を次のエントリを含め、入力、 *share_name*と*パス*フィールド
+1. `/etc/samba/smb.conf` を編集して次のエントリを含め、*share_name* および *path* フィールドに入力します。
  ```bash
   <[share_name]>
   path = </local/path/on/host/1>
@@ -90,9 +91,9 @@ sudo service smb status
   valid users = mssql   <- list of users who can login to this share
   ```
 
-### <a name="on-host-2-subscriber--mount-the-samba-share"></a>ホスト 2 (サブスクライバー) に、Samba 共有をマウントします
+### <a name="on-host-2-subscriber--mount-the-samba-share"></a>ホスト 2 (サブスクライバー) で Samba 共有をマウントする
 
-正しいパスを指定してコマンドを編集し、machine2 で、次のコマンドを実行します。
+正しいパスを使用するようにコマンドを編集し、machine2 で次のコマンドを実行します。
 
   ```bash
   sudo mount //<name_of_host_1>/<share_name> </local/path/on/host/2> -o user=mssql,uid=mssql,gid=mssql
@@ -108,9 +109,9 @@ sudo service smb status
   gid=mssql   <- sets the mssql group as the owner of the mounted directory
   ```
 
-### <a name="on-both-hosts--configure-sql-server-on-linux-instances-to-use-snapshot-share"></a>両方のホストを構成する SQL server でスナップショット共有を使用する Linux インスタンス
+### <a name="on-both-hosts--configure-sql-server-on-linux-instances-to-use-snapshot-share"></a>両方のホストでスナップショット共有を使用するように SQL Server on Linux インスタンスを構成する
 
-次のセクションに追加`mssql.conf`両方のコンピューターにします。 任意の場所を使用して、//共有/パスの samba 共有します。 この例では、ことになります `//host1/mssql_data`
+次のセクションを両方のマシンの `mssql.conf` に追加します。 どこであっても //share/path の samba 共有を使用します。 この例では、`//host1/mssql_data` です。
 
   ```bash
   [uncmapping]
@@ -119,29 +120,29 @@ sudo service smb status
 
   **例**
 
-  Host1:
+  host1:
 
   ```bash
   [uncmapping]
   //host1/mssql_data = /local/path/on/hosts/1
   ```
 
-  Host2:
+  host2:
   
   ```bash
   [uncmapping]
   //host1/mssql_data = /local/path/on/hosts/2
   ```
 
-### <a name="configuring-publisher-with-shared-paths"></a>共有パスでパブリッシャーを構成します。
+### <a name="configuring-publisher-with-shared-paths"></a>共有パスを使用するようにパブリッシャーを構成する
 
-* レプリケーションを設定する場合は、共有パス (例を使用してください。 `//host1/mssql_data`
-* マップ`//host1/mssql_data`ローカル ディレクトリに追加のマッピングを`mssql.conf`します。
+* レプリケーションを設定するときに、共有パス (`//host1/mssql_data` など) を使用します。
+* `//host1/mssql_data` をローカル ディレクトリにマップすると、マッピングが `mssql.conf` に追加されます。
 
 ## <a name="next-steps"></a>次のステップ
 
-[概念:Linux 上の SQL Server レプリケーション](sql-server-linux-replication.md)
+[概念:Linux での SQL Server のレプリケーション](sql-server-linux-replication.md)
 
-[レプリケーション ストアド プロシージャ](../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)します。
+[レプリケーション ストアド プロシージャ](../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)。
 
 [1]: ./media/sql-server-linux-replication-snapshot-shares/image1.png

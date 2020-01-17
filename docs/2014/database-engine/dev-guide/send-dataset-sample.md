@@ -1,23 +1,21 @@
 ---
-title: Send DataSet サンプル |Microsoft Docs
+title: データセットの送信サンプル |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: database-engine
 ms.topic: reference
 ms.assetid: d10dacbc-1b0f-4a4b-b53b-83eae2a6d809
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: e7f617c7a69925f4ddb4bf6a2c0ef34c2e43f03a
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 7b622de076f9040fdedaa487baa8f1ec0f759c88
+ms.sourcegitcommit: baa40306cada09e480b4c5ddb44ee8524307a2ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53372794"
+ms.lasthandoff: 11/06/2019
+ms.locfileid: "73637732"
 ---
 # <a name="send-dataset-sample"></a>Send DataSet サンプル
   Send `DataSet` サンプルでは、サーバー側の共通言語ランタイム (CLR) ベースのストアド プロシージャ内で、クライアントへの結果セットとして ADO.NET ベースの `DataSet` を返す方法を示します。 この方法は、このようなストアド プロシージャがクエリの結果を使用して `DataSet` にデータを格納し、その `DataSet` に含まれているデータを操作する場合などに役立ちます。 また、ストアド プロシージャによって `DataSet` を新しく作成してデータを設定する場合にも役立ちます。このサンプルは、`DataSetUtilities` および `TestSendDataSet` という 2 つのクラスで構成されています。 `SendDataSet` クラスの `DataSetUtilities` メソッドには、`DataSet` インスタンスのコンテンツをクライアントに送信するための汎用的な手段が実装されています。 `DoTest` クラスで定義されている `TestSendDataSet` メソッドは、`SendDataSet` を作成し、Transact-SQL ストアド プロシージャ `DataSet` から返されたデータを設定することによって、`uspGetTwoBOMTestData` メソッドの動作を検証します。 `uspGetTwoBOMTestData` は、Transact-SQL ストアド プロシージャ `uspGetBillOfMaterials` を 2 回実行し、`usp_GetTwoBOMTestData` ストアド プロシージャへのパラメーターとして指定された 2 つの製品の部品表に対して再帰的にクエリを行います。 データセットに設定されたデータは、`SendDataSet` 呼び出しにより結果セットとしてクライアントへ配信される前に、変更されるのが普通です。 わかりやすくするために、このサンプルではデータを変更せずに返します。  
@@ -25,7 +23,7 @@ ms.locfileid: "53372794"
 ## <a name="prerequisites"></a>前提条件  
  このプロジェクトを作成して実行するには、次のソフトウェアがインストールされている必要があります。  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] または [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express は、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express ドキュメントとサンプルの [Web サイト](https://go.microsoft.com/fwlink/?LinkId=31046)から無償で入手できます。  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] または [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express は、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express ドキュメントとサンプルの [Web サイト](https://www.microsoft.com/sql-server/sql-server-editions-express)から無償で入手できます。  
   
 -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] デベロッパー [Web サイト](https://go.microsoft.com/fwlink/?linkid=62796)から入手できる AdventureWorks データベース。  
   
@@ -50,7 +48,7 @@ ms.locfileid: "53372794"
      `GO`  
   
     > [!NOTE]  
-    >  CLR を有効にする必要`ALTER SETTINGS`のメンバーが暗黙的に保持しているサーバー レベル権限、`sysadmin`と`serveradmin`固定サーバー ロール。  
+    >  CLR を有効にするには、`ALTER SETTINGS` サーバーレベルの権限を持っている必要があります。この権限は、固定サーバーロール `sysadmin` と `serveradmin` のメンバーによって暗黙的に保持されます。  
   
 -   使用している [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスに AdventureWorks データベースがインストールされている必要があります。  
   

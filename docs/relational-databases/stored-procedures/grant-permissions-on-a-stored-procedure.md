@@ -11,14 +11,13 @@ helpviewer_keywords:
 ms.assetid: a7d15816-a788-4099-ad91-dc4b26618299
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 09194b8d9e38fe7eaa42487c6e810749d19d056e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 50a7df8f2c9479c957158e96f597655c72ac7b2c
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47617770"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72909715"
 ---
 # <a name="grant-permissions-on-a-stored-procedure"></a>ストアド プロシージャに対する権限の許可
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -30,7 +29,7 @@ ms.locfileid: "47617770"
   
      [制限事項と制約事項](#Restrictions)  
   
-     [Security](#Security)  
+     [セキュリティ](#Security)  
   
 -   **ストアド プロシージャに対する権限を許可するために使用するもの:**  
   
@@ -38,7 +37,7 @@ ms.locfileid: "47617770"
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> 作業を開始する準備  
+##  <a name="BeforeYouBegin"></a> はじめに  
   
 ###  <a name="Restrictions"></a> 制限事項と制約事項  
   
@@ -68,7 +67,7 @@ ms.locfileid: "47617770"
 7.  **[参照]** をクリックしてユーザーまたはロールの一覧を表示します。 権限を許可するユーザーまたはロールを選択します。  
   
 8.  **[明示的な権限]** グリッドで、指定したユーザーまたはロールに許可する権限を選択します。 すべてのアクセス許可の説明については、「[権限 &#40;データベース エンジン&#41;](../../relational-databases/security/permissions-database-engine.md) 」を参照してください。  
-  
+
  **[許可]** を選択すると、指定した権限が与えられます。 **[許可の有無]** を選択すると、指定した権限をさらに他のプリンシパルにも許可できるようになります。  
   
 ##  <a name="TsqlProcedure"></a> Transact-SQL の使用  

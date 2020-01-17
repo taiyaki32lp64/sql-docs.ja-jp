@@ -16,17 +16,20 @@ helpviewer_keywords:
 - Script task [Integration Services], about Script task
 - Script task [Integration Services]
 ms.assetid: f6cce7df-4bd6-4b75-9f89-6c37b4bb5558
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: fb3f42c9b997b35492166d96a7eec698106f2ae9
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 1cb9ca9739ca6f50a2424d9d68ee66263edf08f3
+ms.sourcegitcommit: 02449abde606892c060ec9e9e9a85a3f49c47c6c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52522965"
+ms.lasthandoff: 11/26/2019
+ms.locfileid: "74542303"
 ---
 # <a name="script-task"></a>スクリプト タスク
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   スクリプト タスクでは、組み込みのタスクで利用できない関数を実行するコード、および [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] で用意されている変換を実行するコードが用意されています。 また、スクリプト タスクを使用すると、複数のタスクおよび変換を使用しなくても、関数を 1 つのスクリプトに結合できます。 スクリプト タスクは、データ行ごとに 1 回ではなく、1 つのパッケージ内で 1 回 (または列挙されたオブジェクトごとに 1 回) 行う作業に使用します。  
   
  スクリプト タスクは、次の目的で使用できます。  
@@ -48,7 +51,7 @@ ms.locfileid: "52522965"
   
  VSTA には、色分け表示が可能な [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] エディター、IntelliSense、 [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] オブジェクト エクスプローラー **など、** 環境での標準機能がすべて含まれています。 VSTA には、他の [!INCLUDE[msCoName](../../includes/msconame-md.md)] の開発ツールに付属しているのと同じデバッガーも含まれています。 スクリプト内のブレークポイントは、 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] のタスクやコンテナーのブレークポイントとシームレスに動作します。 VSTA では、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual Basic と [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual C# の両方のプログラミング言語がサポートされます。  
   
- スクリプトを実行するには、パッケージを実行するコンピューターに VSTA がインストールされている必要があります。 パッケージを実行すると、タスクはスクリプト エンジンを読み込み、スクリプトを実行します。 プロジェクト内のアセンブリへの参照を追加すると、スクリプトから外部の .NET アセンブリにアクセスできます。  
+ スクリプトを実行するには、パッケージを実行するコンピューターに VSTA がインストールされている必要があります。 パッケージを実行すると、タスクはスクリプト エンジンを読み込み、スクリプトを実行します。 プロジェクト内のアセンブリへの参照を追加すると、スクリプトから外部の .NET アセンブリにアクセスできます。 現在、.NET Core および .NET Standard のアセンブリ参照はサポートされていません。  
   
 > [!NOTE]  
 >  スクリプトをプリコンパイルするかどうかを指定できた以前のバージョンとは異なり、 [!INCLUDE[ssISversion10](../../includes/ssisversion10-md.md)] 以降のバージョンではすべてのスクリプトがプリコンパイルされます。 スクリプトがプリコンパイルされると、実行時に言語エンジンを読み込まないため、パッケージの実行速度が向上します。 ただし、コンパイル済みのバイナリ ファイルは多量のディスク領域を使用します。  
@@ -95,14 +98,14 @@ ms.locfileid: "52522965"
   
  スクリプト タスクの詳細については、「 [Script Task](../../integration-services/control-flow/script-task.md) 」および「 [スクリプト タスク エディターでのスクリプト タスクの構成](../../integration-services/extending-packages-scripting/task/configuring-the-script-task-in-the-script-task-editor.md)」を参照してください。 スクリプト タスクのプログラミングの詳細については、「 [Extending the Package with the Script Task](../../integration-services/extending-packages-scripting/task/extending-the-package-with-the-script-task.md)」を参照してください。  
   
-### <a name="options"></a>[変数]  
- **名前**  
+### <a name="options"></a>オプション  
+ **Name**  
  スクリプト タスクの固有の名前を指定します。 この名前は、タスク アイコンのラベルとして使用されます。  
   
 > [!NOTE]  
 >  タスク名はパッケージ内で一意である必要があります。  
   
- **[説明]**  
+ **説明**  
  スクリプト タスクの説明を入力します。  
   
 ## <a name="script-task-editor-script-page"></a>[スクリプト タスク エディター] \([スクリプト] ページ)
@@ -113,7 +116,7 @@ ms.locfileid: "52522965"
   
  スクリプト タスクの詳細については、「 [Script Task](../../integration-services/control-flow/script-task.md) 」および「 [スクリプト タスク エディターでのスクリプト タスクの構成](../../integration-services/extending-packages-scripting/task/configuring-the-script-task-in-the-script-task-editor.md)」を参照してください。 スクリプト タスクのプログラミングの詳細については、「 [Extending the Package with the Script Task](../../integration-services/extending-packages-scripting/task/extending-the-package-with-the-script-task.md)」を参照してください。  
   
-### <a name="options"></a>[変数]  
+### <a name="options"></a>オプション  
  **[ScriptLanguage]**  
  タスクのスクリプト言語を選択します。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual Basic または [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual C# のいずれかです。  
   
@@ -121,8 +124,8 @@ ms.locfileid: "52522965"
   
  スクリプト タスクの既定のスクリプト言語を設定するには、 **[オプション]** ダイアログ ボックスの **[全般]** ページにある **[スクリプト言語]** オプションを使用します。 詳細については、「 [General Page](../../integration-services/control-flow/script-task-editor-general-page.md)」を参照してください。  
   
- **[EntryPoint]**  
- スクリプト タスクのコードのエントリ ポイントとして [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] ランタイムが呼び出すメソッドを指定します。 指定するメソッドは、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] Tools for Applications (VSTA) プロジェクトの ScriptMain クラスに存在する必要があります。ScriptMain クラスは、スクリプト テンプレートによって生成される既定のクラスです。  
+ **EntryPoint**  
+ スクリプト タスクのコードのエントリ ポイントとして [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] ランタイムが呼び出すメソッドを指定します。 指定するメソッドは、[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] Tools for Applications (VSTA) プロジェクトの ScriptMain クラスに存在する必要があります。ScriptMain クラスは、スクリプト テンプレートによって生成される既定のクラスです。  
   
  VSTA プロジェクトでメソッドの名前を変更する場合は、 **EntryPoint** プロパティの値を変更する必要があります。  
   

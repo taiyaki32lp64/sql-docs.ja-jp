@@ -13,15 +13,14 @@ helpviewer_keywords:
 - queries [SQL Server], results
 - printing query results
 ms.assetid: 025497d1-54a0-402c-81d8-b8b597a0de11
-author: stevestein
-ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 4513b9a5852d5f7dd4e182d74e15fdd02c36daa3
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: e57bc256e2fec2bd978e958b75c18683b8837599
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47698710"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68266324"
 ---
 # <a name="print-query-results-visual-database-tools"></a>クエリ結果の印刷 (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

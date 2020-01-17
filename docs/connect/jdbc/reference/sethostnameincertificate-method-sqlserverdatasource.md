@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: 2bcf4f2e-a103-4374-abc4-ffad4ce8e3c0
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 012073c9d1f8f3646c9bea5fd35cb12e0e0343c8
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: deeab57c573311db36eabdbad60c3cb2fbda9a47
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47601786"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67974217"
 ---
 # <a name="sethostnameincertificate-method-sqlserverdatasource"></a>setHostNameInCertificate メソッド (SQLServerDataSource)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

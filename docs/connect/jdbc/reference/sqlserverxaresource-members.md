@@ -1,5 +1,5 @@
 ---
-title: SQLServerXAResource のメンバー |Microsoft Docs
+title: SQLServerXAResource Members |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: a069bf2c-1b70-4817-b084-a508445de799
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: b9d55da45733e15a9b2aa98f7c6d8fa386b1e4e4
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b420dd7c4bc714e26c8078112c5af54ae5aa7b0c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47682690"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67970068"
 ---
 # <a name="sqlserverxaresource-members"></a>SQLServerXAResource のメンバー
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

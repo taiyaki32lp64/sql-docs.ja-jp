@@ -1,7 +1,7 @@
 ---
 title: データベース レベルのロール | Microsoft Docs
 ms.custom: ''
-ms.date: 01/19/2019
+ms.date: 07/11/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -37,14 +37,13 @@ helpviewer_keywords:
 ms.assetid: 7f3fa5f6-6b50-43bb-9047-1544ade55e39
 author: VanMSFT
 ms.author: vanto
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: d8d205e184f31e628cf9629b702e21e43c200e38
-ms.sourcegitcommit: 480961f14405dc0b096aa8009855dc5a2964f177
+ms.openlocfilehash: 6e91fcd2281082bbef88f0a8387d3ed6cef603d9
+ms.sourcegitcommit: c5e2aa3e4c3f7fd51140727277243cd05e249f78
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/22/2019
-ms.locfileid: "54420097"
+ms.lasthandoff: 08/02/2019
+ms.locfileid: "68742839"
 ---
 # <a name="database-level-roles"></a>データベース レベルのロール
 
@@ -58,7 +57,7 @@ ms.locfileid: "54420097"
   
  固定データベース ロールはデータベース レベルで定義されており、各データベースに存在します。 **db_owner** データベース ロールのメンバーは、固定データベース ロールのメンバーシップを管理できます。 msdb データベースには、特別な用途のデータベース ロールもいくつかあります。  
   
- データベース レベルのロールには、すべてのデータベース アカウントとその他の [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ロールを追加できます。 固定データベース ロールの各メンバーは、その同じロールに他のユーザーを追加できます。  
+ データベース レベルのロールには、すべてのデータベース アカウントとその他の [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ロールを追加できます。
   
 > [!TIP]  
 >  ユーザー定義データベース ロールは、固定ロールのメンバーとして追加しないでください。 これを行うと、特権が意図せず昇格されることがあります。  
@@ -74,7 +73,7 @@ ms.locfileid: "54420097"
 |固定データベース ロールの名前|[説明]|  
 |-------------------------------|-----------------|  
 |**db_owner**|**db_owner** 固定データベース ロールのメンバーは、データベースでのすべての構成作業とメンテナンス作業を実行でき、 [!INCLUDE[ssNoVersion_md](../../../includes/ssnoversion-md.md)]でデータベースを削除することもできます。 ( [!INCLUDE[ssSDS_md](../../../includes/sssds-md.md)] と [!INCLUDE[ssSDW_md](../../../includes/sssdw-md.md)]では、一部のメンテナンス作業にサーバー レベルの権限が必要であり、 **db_owners**では実行できません。)|  
-|**db_securityadmin**|**db_securityadmin** 固定データベース ロールのメンバーは、ロールのメンバーシップを変更し、権限を管理できます。 このロールにプリンシパルを追加すると、特権が意図せず昇格されることがあります。|  
+|**db_securityadmin**|**db_securityadmin** 固定データベース ロールのメンバーは、カスタム ロールのロール メンバーシップのみの変更、および権限の管理を実行できます。 このロールのメンバーは、特権を昇格させる可能性があり、そのアクションを監視する必要があります。|  
 |**db_accessadmin**|**db_accessadmin** 固定データベース ロールのメンバーは、Windows ログイン、Windows グループ、および [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ログインのデータベースに対するアクセスを追加または削除できます。|  
 |**db_backupoperator**|**db_backupoperator** 固定データベース ロールのメンバーは、データベースをバックアップできます。|  
 |**db_ddladmin**|**db_ddladmin** 固定データベース ロールのメンバーは、すべての DDL (データ定義言語) コマンドをデータベースで実行できます。|  
@@ -87,9 +86,9 @@ ms.locfileid: "54420097"
 
 ![fixed_database_role_permissions](../../../relational-databases/security/authentication-access/media/permissions-of-database-roles.png)
 
-## <a name="special-roles-for-includesssdsmdincludessssds-mdmd-and-includesssdwmdincludessssdw-mdmd"></a>特別なロール - [!INCLUDE[ssSDS_md](../../../includes/sssds-md.md)] と [!INCLUDE[ssSDW_md](../../../includes/sssdw-md.md)]
+## <a name="special-roles-for-includesssds_mdincludessssds-mdmd-and-includesssdw_mdincludessssdw-mdmd"></a>特別なロール - [!INCLUDE[ssSDS_md](../../../includes/sssds-md.md)] と [!INCLUDE[ssSDW_md](../../../includes/sssdw-md.md)]
 
-以下のデータベース ロールは、仮想 master データベース内にのみ存在します。 その権限は master で実行されるアクションに制限されます。 これらのロールに追加できるのは、master のデータベース ユーザーのみです。 これらのロールにログインを追加することはできませんが、ログインに基づいてユーザーを作成してから、そのユーザーをロールに追加することはできます。 これらのロールに、master の包含データベース ユーザーを追加することもできます。
+以下のデータベース ロールは、仮想 master データベース内にのみ存在します。 その権限は master で実行されるアクションに制限されます。 これらのロールに追加できるのは、master のデータベース ユーザーのみです。 これらのロールにログインを追加することはできませんが、ログインに基づいてユーザーを作成してから、そのユーザーをロールに追加することはできます。 これらのロールに、master の包含データベース ユーザーを追加することもできます。 ただし、master の **dbmanager** ロールに追加された包含データベース ユーザーを使用して新しいデータベースを作成することはできません。
 
 |ロール名|[説明]|  
 |--------------------|-----------------|

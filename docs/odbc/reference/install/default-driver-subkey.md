@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 9e58b24f-ebfc-4286-a272-0843b4d6f2d5
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: d78101fd564e18467e6833f480cec2409dc2c44b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e82644d3bddab5d4f6fde6f7103bd9731872bab9
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47856260"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68094196"
 ---
 # <a name="default-driver-subkey"></a>既定のドライバーのサブキー
 既定のサブキーには、既定のデータ ソースで使用するドライバーを記述する 1 つの値が含まれています。 この値の形式は、次の表に示します。  

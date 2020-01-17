@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: 3f809b09-3c1b-415e-80c5-a603e8e25d5b
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 37d6bdb61e23c3a48b54aa7d0e6488122486ffe5
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: 022d19a291b4fab93925fd103620c4bc16839872
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53205267"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68005749"
 ---
 # <a name="sqlprimarykeys-function"></a>SQLPrimaryKeys 関数
 **準拠**  
@@ -36,7 +35,7 @@ ms.locfileid: "53205267"
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
   
 SQLRETURN SQLPrimaryKeys(  
      SQLHSTMT       StatementHandle,  

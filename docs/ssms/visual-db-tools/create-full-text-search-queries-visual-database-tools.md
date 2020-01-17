@@ -12,19 +12,18 @@ helpviewer_keywords:
 - queries [full-text search], creating
 - full-text queries [SQL Server], creating
 ms.assetid: 537fa556-390e-4c88-9b8e-679848d94abc
-author: stevestein
-ms.author: sstein
-manager: craigg
-ms.openlocfilehash: f95edb2129432df62edf4db88c6d42b28e46bddd
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 2134b04c87d6bbc3ca400ebf307dae4a1f0eab36
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51701790"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68264933"
 ---
 # <a name="create-full-text-search-queries-visual-database-tools"></a>フルテキスト検索クエリの作成 (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-フルテキスト検索は、CONTAINS 述語を使用して、特定の列内に指定したテキストを持つ行を探します。 フルテキスト検索は、アクティブなフルテキスト インデックスが設定されている列でのみ実行できます。 現在アクティブなフルテキスト インデックスが設定されていない列に対して CONTAINS 句を使用すると、エラーが返されます。 フルテキスト インデックスと CONTAINS 句に関する詳細については、「 [フルテキスト検索](https://msdn.microsoft.com/a0ce315d-f96d-4e5d-b4eb-ff76811cab75) 」と「 [CONTAINS (Transact-SQL)](https://msdn.microsoft.com/996c72fc-b1ab-4c96-bd12-946be9c18f84)」を参照してください。  
+フルテキスト検索は、CONTAINS 述語を使用して、特定の列内に指定したテキストを持つ行を探します。 フルテキスト検索は、アクティブなフルテキスト インデックスが設定されている列でのみ実行できます。 現在アクティブなフルテキスト インデックスが設定されていない列に対して CONTAINS 句を使用すると、エラーが返されます。 フルテキスト インデックスと CONTAINS 句に関する詳細については、「 [フルテキスト検索](../../relational-databases/search/full-text-search.md) 」と「 [CONTAINS (Transact-SQL)](https://msdn.microsoft.com/996c72fc-b1ab-4c96-bd12-946be9c18f84)」を参照してください。  
   
 ### <a name="to-create-a-full-text-search-query"></a>フルテキスト検索クエリを作成するには  
   

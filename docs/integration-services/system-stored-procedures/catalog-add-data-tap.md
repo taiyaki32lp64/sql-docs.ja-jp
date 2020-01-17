@@ -8,17 +8,20 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: language-reference
 ms.assetid: a25ebcc7-535e-4619-adf6-4e2b5a62ba37
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: 4d9c2725fbb4e237e065a7cfdd7c79ffe83d968a
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 513e4874c858d6ce83b65a9a846aa05617229481
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51642119"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71295572"
 ---
-# <a name="catalogadddatatap"></a>catalog.add_data_tap
+# <a name="catalogadd_data_tap"></a>catalog.add_data_tap 
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
   パッケージ データ フロー内のコンポーネントの出力で、実行のインスタンスのデータ タップを追加します。  
@@ -39,14 +42,14 @@ catalog.add_data_tap [ @execution_id = ] execution_id
  パッケージを含む実行の実行 ID。 *execution_id* は **bigint** です。  
   
  [ @task_package_path = ] *task_package_path*  
- データ フロー タスクのパッケージ パス。 データ フロー タスクの **PackagePath** プロパティはパスを指定します。 パスの大文字と小文字は区別されます。 パッケージ パスを特定するには、[!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] でデータ フロー タスクを右クリックし、**[プロパティ]** をクリックします。 **[プロパティ]** ウィンドウに、**[PackagePath]** プロパティが表示されます。  
+ データ フロー タスクのパッケージ パス。 データ フロー タスクの **PackagePath** プロパティはパスを指定します。 パスの大文字と小文字は区別されます。 パッケージ パスを特定するには、[!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] でデータ フロー タスクを右クリックし、 **[プロパティ]** をクリックします。 **[プロパティ]** ウィンドウに、 **[PackagePath]** プロパティが表示されます。  
   
  *task_package_path* は **nvarchar (max)** です。  
   
  [ @dataflow_path_id_string = ] *dataflow_path_id_string*  
  データ フロー パスの識別文字列。 パスは、2 つのデータ フロー コンポーネントを連結します。 パスの **IdentificationString** プロパティは文字列を指定します。  
   
- 識別文字列を特定するには、[!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] で 2 つのデータ フロー コンポーネント間のパスを右クリックし、**[プロパティ]** をクリックします。 **[プロパティ]** ウィンドウに、**[IdentificationString]** プロパティが表示されます。  
+ 識別文字列を特定するには、[!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] で 2 つのデータ フロー コンポーネント間のパスを右クリックし、 **[プロパティ]** をクリックします。 **[プロパティ]** ウィンドウに、 **[IdentificationString]** プロパティが表示されます。  
   
  *dataflow_path_id_string* は **nvarchar (4000)** です。  
   

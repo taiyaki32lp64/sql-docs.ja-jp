@@ -4,17 +4,17 @@ ms.custom: ''
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.topic: conceptual
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
 ms.date: 10/24/2018
 ms.technology: install
-ms.openlocfilehash: 44805d6fd7512a5180a2b62e2c8808b890901705
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 93f362adfbc85500854943a479dac01988eb3a01
+ms.sourcegitcommit: ffe2fa1b22e6040cdbd8544fb5a3083eed3be852
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52808354"
+ms.lasthandoff: 10/04/2019
+ms.locfileid: "71952561"
 ---
 # <a name="install-sql-server-2014-bi-features"></a>SQL Server 2014 の BI 機能のインストール
 
@@ -22,7 +22,7 @@ ms.locfileid: "52808354"
   
  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] および [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] は、スタンドアロン サーバーとして、スケールアウト構成で、または SharePoint ファームの共有サービス アプリケーションとしてインストールできます。 サービスをファームにインストールすると、SharePoint のみで使用できる BI 機能が有効になります。これらの機能には、 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for SharePoint と、 [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)]または [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] の表形式モデルのデータベースで実行される [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] を対話形式でアドホック実行したレポート デザイナーの [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] が含まれます。  
   
- [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]、[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]、または PowerPivot for SharePoint のインストール手順について詳しく理解している場合は、特定のシナリオを有効にする手順のチェック リストに進みます。 詳細については、次を参照してください。[と SharePoint の BI 機能のインストールのチェックリスト](checklists-for-installing-bi-features-with-sharepoint.md)します。  
+ [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]、[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]、または PowerPivot for SharePoint のインストール手順について詳しく理解している場合は、特定のシナリオを有効にする手順のチェック リストに進みます。 詳細については、「 [SharePoint を使用した BI 機能のインストールのチェックリスト](checklists-for-installing-bi-features-with-sharepoint.md)」を参照してください。  
   
 ## <a name="contents"></a>目次
 
@@ -31,9 +31,9 @@ ms.locfileid: "52808354"
 |リンク|タスク|  
 |----------|----------|  
 |[SharePoint を使用した BI 機能のインストール用チェック リスト](checklists-for-installing-bi-features-with-sharepoint.md)|インストール方法が既にわかっており、[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]、[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]、または [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for SharePoint のインストール手順について詳しく理解している場合は、このセクションのチェック リストでインストールの順序、アカウントと権限の要件、マルチサーバーやマルチ機能の配置などの高度なトポロジを配置した手順を確認できます。|  
-|[SharePoint と SQL Server BI 機能をインストール&#40;PowerPivot と Reporting Services&#41;](install-sql-server-bi-features-sharepoint-powerpivot-reporting-services.md)|このセクションでは、SQL Server 機能を SharePoint 環境でインストールする方法について説明します。 ここでは、指定されたバージョンとエディションの SharePoint が与えられている場合に使用できる SQL Server 機能を示します。 また、PowerPivot for SharePoint と Reporting Services を SharePoint モードでインストールする手順についても説明します。|  
-|[多次元モードおよびデータ マイニング モードでの Analysis Services のインストール](install-analysis-services-in-multidimensional-and-data-mining-mode.md)<br /><br /> [表形式モードでの Analysis Services のインストール](../../analysis-services/instances/install-windows/install-analysis-services.md)<br /><br /> [Data Quality Services のインストール](../../data-quality-services/install-windows/install-data-quality-services.md)<br /><br /> [Integration Services のインストール](../../integration-services/install-windows/install-integration-services.md)<br /><br /> [マスター データ サービスのインストール](../../master-data-services/install-windows/install-master-data-services.md)<br /><br /> [Reporting Services ネイティブ モードのレポート サーバーのインストール](../../reporting-services/install-windows/install-reporting-services-native-mode-report-server.md)|このセクションでは、Analysis Services、Integration Services、マスター データ サービス、および Reporting Services のインストール手順について説明します。Analysis Services と Reporting Services は SharePoint がなくてもインストールできます。 これとも呼ば*ネイティブ モード*、Reporting Services と Analysis Services の両方の最も一般的なインストール シナリオがあるとします。 このセクションでは、サーバーの操作コンテキストを直接指定するインストール オプションについて学習します。 Reporting Services の場合、これは、事前構成済みのサーバーまたは使用する前に複数の構成が必要になるサーバーになります。 Analysis Services の場合は、選択するインストール オプションによって、サーバーに配置できるプロジェクトの種類が決定されます。|  
-|[確認するか、SQL Server BI 機能のインストールに関する問題のトラブルシューティング](../../../2014/sql-server/install/verify-or-troubleshoot-sql-server-bi-feature-installation-problems.md)|このセクションには、インストールを確認するための手順が含まれています。 また、Web 上での問題の解決情報へのリンクも用意されています。|  
+|[SharePoint &#40;PowerPivot と Reporting Services を使用した SQL Server BI 機能のインストール&#41;](install-sql-server-bi-features-sharepoint-powerpivot-reporting-services.md)|このセクションでは、SQL Server 機能を SharePoint 環境でインストールする方法について説明します。 ここでは、指定されたバージョンとエディションの SharePoint が与えられている場合に使用できる SQL Server 機能を示します。 また、PowerPivot for SharePoint と Reporting Services を SharePoint モードでインストールする手順についても説明します。|  
+|[多次元モードおよびデータ マイニング モードでの Analysis Services のインストール](install-analysis-services-in-multidimensional-and-data-mining-mode.md)<br /><br /> [表形式モードでの Analysis Services のインストール](https://docs.microsoft.com/analysis-services/instances/install-windows/install-analysis-services)<br /><br /> [Data Quality Services のインストール](../../data-quality-services/install-windows/install-data-quality-services.md)<br /><br /> [Integration Services のインストール](../../integration-services/install-windows/install-integration-services.md)<br /><br /> [マスター データ サービスのインストール](../../master-data-services/install-windows/install-master-data-services.md)<br /><br /> [Reporting Services ネイティブ モードのレポート サーバーのインストール](../../reporting-services/install-windows/install-reporting-services-native-mode-report-server.md)|このセクションでは、Analysis Services、Integration Services、マスター データ サービス、および Reporting Services のインストール手順について説明します。Analysis Services と Reporting Services は SharePoint がなくてもインストールできます。 これは、*ネイティブモード*と呼ばれることもあり、Reporting Services と Analysis Services における最も一般的なインストールシナリオです。 このセクションでは、サーバーの操作コンテキストを直接指定するインストール オプションについて学習します。 Reporting Services の場合、これは、事前構成済みのサーバーまたは使用する前に複数の構成が必要になるサーバーになります。 Analysis Services の場合は、選択するインストール オプションによって、サーバーに配置できるプロジェクトの種類が決定されます。|  
+|[SQL Server BI 機能のインストールに関する問題を確認またはトラブルシューティングする](../../../2014/sql-server/install/verify-or-troubleshoot-sql-server-bi-feature-installation-problems.md)|このセクションには、インストールを確認するための手順が含まれています。 また、Web 上での問題の解決情報へのリンクも用意されています。|  
   
 ## <a name="related-content"></a>関連コンテンツ  
   
@@ -44,9 +44,9 @@ ms.locfileid: "52808354"
   
 ## <a name="see-also"></a>参照
 
-* [新機能については&#40;Reporting Services&#41;](../../../2014/reporting-services/what-s-new-reporting-services.md)
+* [新&#40;機能 Reporting Services&#41;](../../../2014/reporting-services/what-s-new-reporting-services.md)
 
-* [新しい Analysis Services と Business Intelligence の新機能](../../analysis-services/what-s-new-in-analysis-services.md)
+* [Analysis Services とビジネスインテリジェンスの新機能](https://docs.microsoft.com/analysis-services/what-s-new-in-analysis-services)
 
 * [SQL Server 2014 のインストール](../../database-engine/install-windows/install-sql-server.md)
 

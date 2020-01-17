@@ -16,11 +16,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 8f1814c96a5f58052be6271d2a35c1bbf78f87b1
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52792425"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63066480"
 ---
 # <a name="rules-for-updating-results-visual-database-tools"></a>結果更新の規則 (Visual Database Tools)
   多くの場合、 [結果ペイン](visual-database-tools.md)に表示されている結果セットは更新できます。 ただし、更新できない場合もあります。  
@@ -64,7 +64,7 @@ ms.locfileid: "52792425"
   
 -   タイムスタンプまたは BLOB 列  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [クエリおよびビューのデザインの操作方法に関するトピック (Visual Database Tools)](design-queries-and-views-how-to-topics-visual-database-tools.md)  
   
   

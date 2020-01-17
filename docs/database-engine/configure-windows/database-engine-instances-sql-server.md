@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: af9ae643-9866-4014-b36f-11ab556a773e
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 8e983bc2bbf7efe42d479dea90e8cf1f212adc15
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 2d5f89f5e3aa801386642bfb75470cef15db6e96
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47807940"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68012053"
 ---
 # <a name="database-engine-instances-sql-server"></a>データベース エンジンのインスタンス (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -47,7 +46,7 @@ ms.locfileid: "47807940"
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスが受け取ったアプリケーション要求のトレースをキャプチャするために [!INCLUDE[ssDE](../../includes/ssde-md.md)]Profiler を使用する方法について説明します。 これらのトレースは、後でパフォーマンスのテストや問題の診断などの活動のために再生できます。|[SQL Server Profiler](../../tools/sql-server-profiler/sql-server-profiler.md)|  
 |変更データ キャプチャ (CDC) 機能および変更の追跡機能について説明し、これらの機能を使用してデータベースのデータに対する変更を追跡する方法について説明します。|[データ変更の追跡 &#40;SQL Server&#41;](../../relational-databases/track-changes/track-data-changes-sql-server.md)|  
 |さまざまなログ ( [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ジョブ履歴、SQL Server ログ、Windows イベント ログなど) 内の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のエラーやメッセージを検索および表示するために [ログ ファイルの表示] を使用する方法について説明します。|[ログ ファイルの表示](../../relational-databases/logs/log-file-viewer.md)|  
-|データベースを分析し、潜在的なパフォーマンスの問題に対処する提案を行うために [!INCLUDE[ssDE](../../includes/ssde-md.md)] チューニング アドバイザーを使用する方法について説明します。|[データベース エンジン チューニング アドバイザー](../../relational-databases/performance/database-engine-tuning-advisor.md)|  
+|データベースを分析し、潜在的なパフォーマンスの問題に対処する提案を行うために [!INCLUDE[ssDE](../../includes/ssde-md.md)] チューニング アドバイザーを使用する方法について説明します。|[Database Engine Tuning Advisor](../../relational-databases/performance/database-engine-tuning-advisor.md)|  
 |標準接続が受け入れられないときに実稼働データベース管理者がインスタンスへの診断接続を確立する方法について説明します。|[データベース管理者用の診断接続](../../database-engine/configure-windows/diagnostic-connection-for-database-administrators.md)|  
 |[!INCLUDE[ssDE](../../includes/ssde-md.md)] の 1 つのインスタンスから別のインスタンスにアクセスできるようにする、非推奨のリモート サーバー機能を使用する方法について説明します。 この機能のための推奨メカニズムは、リンク サーバーです。|[リモート サーバー](../../database-engine/configure-windows/remote-servers.md)|  
 |メッセージング アプリケーションおよびキューイング アプリケーションのための Service Broker の機能について説明し、Service Broker のドキュメントを示します。|[Service Broker](../../database-engine/configure-windows/sql-server-service-broker.md)|  

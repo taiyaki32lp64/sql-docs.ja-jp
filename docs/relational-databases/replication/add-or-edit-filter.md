@@ -12,16 +12,16 @@ f1_keywords:
 ms.assetid: bdd7c71d-1c59-4044-bfe8-c85f908345bb
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 7e91f5bd925ec0a9aba9998f0c4dbdae4afa599e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
+ms.openlocfilehash: 21d23387b3d17f54cbd6cfed3398cf5a0e8cffe6
+ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47719950"
+ms.lasthandoff: 08/03/2019
+ms.locfileid: "68770798"
 ---
 # <a name="add-or-edit-filter"></a>フィルターの追加または編集
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
   **[フィルターの追加]** ダイアログ ボックスと **[フィルターの編集]** ダイアログ ボックスを使用すると、静的行フィルターおよびパラメーター化された行フィルターを追加したり編集したりできます。  
   
 > [!NOTE]  
@@ -31,7 +31,7 @@ ms.locfileid: "47719950"
   
  行フィルターを使用すれば、テーブルからパブリッシュの対象となる行のサブセットを指定できます。 行フィルターを使用して、ユーザーにとって必要のない行 (機密性の高い情報など) を削除したり、さまざまなサブスクライバーに送られるさまざまなデータのパーティションを作成したりできます。 さまざまなデータのパーティションをさまざまなサブスクライバーにパブリッシュすると、複数のサブスクライバーが同じデータを更新することによって発生する可能性のある競合を回避するためにも役立ちます。  
   
-## <a name="options"></a>[変数]  
+## <a name="options"></a>オプション  
  このダイアログ ボックスには、トランザクション パブリケーションとスナップショット アプリケーション用の 2 段階のプロセスと、マージ パブリケーション用の 3 段階のプロセスがあります。 すべての種類のパブリケーションで、フィルター対象のテーブルと、フィルターに含む 1 つまたは複数の列を選択する必要があります。フィルターは、標準の WHERE 句として定義されます。  
   
 1.  **[フィルターを適用するテーブルを選択します。]**  
@@ -65,7 +65,7 @@ ms.locfileid: "47719950"
  [Create a Publication](../../relational-databases/replication/publish/create-a-publication.md)   
  [パブリケーション プロパティの表示および変更](../../relational-databases/replication/publish/view-and-modify-publication-properties.md)   
  [パブリッシュされたデータのフィルター選択](../../relational-databases/replication/publish/filter-published-data.md)   
- [結合フィルター](../../relational-databases/replication/merge/join-filters.md)   
+ [Join Filters](../../relational-databases/replication/merge/join-filters.md)   
  [Parameterized Row Filters](../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md)   
  [データとデータベース オブジェクトのパブリッシュ](../../relational-databases/replication/publish/publish-data-and-database-objects.md)  
   

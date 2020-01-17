@@ -18,18 +18,17 @@ helpviewer_keywords:
 - DBCC TRACEON statement
 - trace flags [SQL Server], enabling
 ms.assetid: 93085324-ebaa-4e38-aac8-5e57b4b0d36d
-author: uc-msft
+author: pmasl
 ms.author: umajay
-manager: craigg
-ms.openlocfilehash: 5faae18ce730182218886cf46c711d16344cfd88
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: 3831a9244b3e946dcba01b7d8c31825a75f7b39f
+ms.sourcegitcommit: 57e20b7d02853ec9af46b648106578aed133fb45
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54125872"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69553259"
 ---
 # <a name="dbcc-traceon-transact-sql"></a>DBCC TRACEON (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
 
 指定されたトレース フラグを有効にします。
   
@@ -49,7 +48,7 @@ DBCC TRACEON ( trace# [ ,...n ][ , -1 ] ) [ WITH NO_INFOMSGS ]
 複数のトレース フラグを指定できることを示すプレースホルダーです。  
   
 -1  
-指定されたトレース フラグをグローバルに有効にします。  
+指定されたトレース フラグをグローバルに有効にします。 Azure SQL Managed Instance では、この引数は必須です。 
   
 WITH NO_INFOMSGS  
 すべての情報メッセージを表示しないようにします。  
@@ -57,12 +56,14 @@ WITH NO_INFOMSGS
 ## <a name="remarks"></a>Remarks  
 稼働サーバーでは、予期しない動作を避けるため、次のいずれかの方法を使用してトレース フラグをサーバー規模でのみ有効にすることをお勧めします。
 -   Sqlservr.exe のコマンド ライン スタートアップ オプション **-T** を使用します。 すべてのステートメントがトレース フラグを有効にした状態で実行されるので、この方法をお勧めします。 これらはスタートアップ スクリプトのコマンドに含まれています。 詳細については、「 [sqlservr Application](../../tools/sqlservr-application.md)」を参照してください。  
--   DBCC TRACEON **(**_trace#_ [**,** ...*.n*]**,-1)** は、システムでユーザーまたはアプリケーションが同時にステートメントを実行していない場合にのみ使用します。  
+-   DBCC TRACEON **(** _trace#_ [ **,** ... *.n*] **,-1)** は、システムでユーザーまたはアプリケーションが同時にステートメントを実行していない場合にのみ使用します。  
 
 トレース フラグは、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の動作を制御して特定の特性をカスタマイズするために使用されます。 トレース フラグは、有効になると、DBCC TRACEOFF ステートメントを実行して無効にするまで、サーバー内では有効のままです。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] には、セッションとグローバルという 2 種類のトレース フラグがあります。 セッション トレース フラグは、1 つの接続についてアクティブで、その接続に対してのみ表示可能です。 グローバル トレース フラグは、サーバー レベルで設定され、サーバー上のすべての接続に対して表示可能です。 トレース フラグの状態を確認するには、DBCC TRACESTATUS を使用します。 トレース フラグを無効にするには、DBCC TRACEOFF を使用します。
   
 クエリ プランに影響を与えるトレース フラグをオンにした後、`DBCC FREEPROCCACHE;` を実行すると、新しいプランに影響を与える動作を使用して、キャッシュされているプランが再コンパイルされます。
-  
+
+Azure SQL Database Managed Instance では、次のグローバル トレース フラグがサポートされています。460、2301、2389、2390、2453、2467、7471、8207、9389、10316、および 11024
+
 ## <a name="result-sets"></a>結果セット  
  DBCC TRACEON は次の結果セット (メッセージ) を返します。  
   

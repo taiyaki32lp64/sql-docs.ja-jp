@@ -14,17 +14,20 @@ helpviewer_keywords:
 - data profiling
 - profiling data
 ms.assetid: 248ce233-4342-42c5-bf26-f4387ea152cf
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: 23abd4f7ebe0cb0cc3c18053914d6aa531fcde7d
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 309fb584db245ee3da6b67e475a4881347f39bd5
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51640689"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71294208"
 ---
 # <a name="data-profiling-task"></a>データ プロファイル タスク
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   データ プロファイル タスクでは、データ ソースについて詳細に理解し、解決する必要があるデータの問題を特定するために役立つさまざまなプロファイルが計算されます。  
   
  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] パッケージ内のデータ プロファイル タスクを使用すると、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] に格納されているデータをプロファイルし、発生する可能性のあるデータ品質の問題を特定することができます。  
@@ -134,7 +137,7 @@ ms.locfileid: "51640689"
  データ プロファイル タスクを構成するには、 **[データ プロファイル タスク エディター]** を使用します。 このエディターには、次の 2 つのページがあります。  
   
  [[全般] ページ](../../integration-services/control-flow/data-profiling-task-editor-general-page.md)  
- **[全般]** ページでは、出力ファイルまたは変数を指定します。 また、**[クイック プロファイル]** を選択し、既定の設定を使用してプロファイルを計算するようにタスクをすばやく構成することもできます。 詳細については、「 [単一テーブル クイック プロファイル フォーム &#40;データ プロファイル タスク&#41;](../../integration-services/control-flow/single-table-quick-profile-form-data-profiling-task.md)」を参照してください。  
+ **[全般]** ページでは、出力ファイルまたは変数を指定します。 また、 **[クイック プロファイル]** を選択し、既定の設定を使用してプロファイルを計算するようにタスクをすばやく構成することもできます。 詳細については、「 [単一テーブル クイック プロファイル フォーム &#40;データ プロファイル タスク&#41;](../../integration-services/control-flow/single-table-quick-profile-form-data-profiling-task.md)」を参照してください。  
   
  [[プロファイル要求] ページ](../../integration-services/control-flow/data-profiling-task-editor-profile-requests-page.md)  
  **[プロファイル要求]** ページでは、データ ソースを指定して、計算するデータ プロファイルを選択および構成します。 構成できる各種プロファイルの詳細については、次のトピックを参照してください。  

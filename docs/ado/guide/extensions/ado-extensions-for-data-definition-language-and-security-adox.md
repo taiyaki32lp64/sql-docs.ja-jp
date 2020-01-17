@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: c6579b5b-a93e-48c5-8847-743fc4590cd2
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 765ba0ec23dae20cd55ac54f14391e43725c2312
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 70400206f0fc7628586b13e93681f349237cda52
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47812130"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67923304"
 ---
 # <a name="ado-extensions-for-data-definition-language-and-security-adox"></a>データ定義言語とセキュリティの ADO 拡張機能 (ADOX)
 このセクションでは、次のトピックを扱います。  

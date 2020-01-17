@@ -11,17 +11,20 @@ helpviewer_keywords:
 - dates [Integration Services], YEAR
 - YEAR function
 ms.assetid: 9d88dead-ace8-44b9-b8e2-916c1842e155
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: 515a7818263105664d4f33be241e0a10c7be07a6
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: c3583baedb1766944a89b9f4491c53a94a17f3fa
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47657026"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71297308"
 ---
 # <a name="year-ssis-expression"></a>YEAR (SSIS 式)
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   ある日付の、年の日付要素を表す整数値を返します。  
   
 ## <a name="syntax"></a>構文  
@@ -44,7 +47,7 @@ YEAR(date)
  日付リテラルは、日付データ型のいずれかに明示的にキャストされる必要があります。 詳細については、「 [Integration Services Data Types](../../integration-services/data-flow/integration-services-data-types.md)」を参照してください。  
   
 > [!NOTE]  
->  日付リテラルが DT_DBTIMESTAMPOFFSET と DT_DBTIMESTAMP2 のいずれかの日付データ型に明示的にキャストされると、式の検証は失敗します。  
+>  日付リテラルが次のいずれかの日付データ型に明示的にキャストされると、式の検証は失敗します。DT_DBTIMESTAMPOFFSET および DT_DBTIMESTAMP2。  
   
  YEAR 関数を使用すると、DATEPART("Year", date) 関数を使用する場合と同じ結果を、より簡単に取得できます。  
   

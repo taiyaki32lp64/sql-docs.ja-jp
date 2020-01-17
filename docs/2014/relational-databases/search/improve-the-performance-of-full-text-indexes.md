@@ -14,15 +14,15 @@ helpviewer_keywords:
 - full-text search [SQL Server], performance
 - batches [SQL Server], full-text search
 ms.assetid: ef39ef1f-f0b7-4582-8e9c-31d4bd0ad35d
-author: douglaslMS
-ms.author: douglasl
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 88629dc1457d148b4a8e01537e35f2f5ccfbbdb3
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: 42aa89a111697f17f23613761eeeb462494bdd27
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54128617"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66011258"
 ---
 # <a name="improve-the-performance-of-full-text-indexes"></a>フルテキスト インデックスのパフォーマンスの向上
   フルテキスト インデックス作成とフルテキスト クエリのパフォーマンスは、メモリ、ディスク速度、CPU 速度、コンピューターのアーキテクチャなどのハードウェア リソースの影響を受けます。  
@@ -128,10 +128,10 @@ ms.locfileid: "54128617"
   
 |プラットフォーム|MB-fdhost.exe のメモリ要件の推定*F*<sup>1</sup>|最大サーバー メモリの計算式*M*<sup>2</sup>|  
 |--------------|---------------------------------------------------------------------|---------------------------------------------------------------|  
-|x86|_F_ **=** _クロール範囲の数_ **&#42;** 50|_M_ **= 最小 (** _T_ **、** 2000 **)-*`F`* -** 500|  
+|x86|_F_ **=** _クロール範囲の数_ **&#42;** 50|_M_ **= 最小 (** _T_ **、** 2000 **)- *`F`* -** 500|  
 |x64|_F_ **=** _クロール範囲の数_ **&#42;** 10 **&#42;** 8|_M_ **=** _T_ **-** _F_ **-** 500|  
   
- <sup>1</sup>複数の完全作成が進行中である場合は、それぞれの fdhost.exe のメモリ要件の計算として個別に*F1*、 *F2*となります。 その後、*M* as _T_**-** sigma **(**_F_i **)** で計算します。  
+ <sup>1</sup>複数の完全作成が進行中である場合は、それぞれの fdhost.exe のメモリ要件の計算として個別に*F1*、 *F2*となります。 その後、*M* as _T_ **-** sigma **(** _F_i **)** で計算します。  
   
  <sup>2</sup> 500 MB は、その他のプロセス、システムに必要なメモリの推定値です。 システムで追加の作業を実行している場合、適宜この値を大きくします。  
   

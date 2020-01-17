@@ -15,14 +15,13 @@ helpviewer_keywords:
 ms.assetid: cc5bf181-18a0-44d5-8bd7-8060d227c927
 author: julieMSFT
 ms.author: jrasnick
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 5cac151a3c3192c03f915c95eb0ac228ad2d8c05
-ms.sourcegitcommit: 258c32f7e85a38aaf674da3478ae3ed10648d1f1
+ms.openlocfilehash: 043e1e570efc42988dcf6b0fb66098cbcd7fc9ec
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/14/2018
-ms.locfileid: "53414177"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68024872"
 ---
 # <a name="partitioned-tables-and-indexes"></a>パーティション テーブルとパーティション インデックス
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -38,7 +37,7 @@ ms.locfileid: "53414177"
   
 -   1 つまたは複数のパーティションでのメンテナンス操作をより迅速に実行できます。 テーブル全体ではなく、これらのデータ サブセットのみを対象にできるので、操作がより効率化されます。 たとえば、1 つまたは複数のパーティションでデータを圧縮するか、インデックスの 1 つまたは複数のパーティションを再構築するかを選択できます。  
   
--   頻繁に実行するクエリの種類とハードウェア構成に基づいて、クエリのパフォーマンスを改善できる場合があります。 たとえば、クエリ オプティマイザーで 2 つ以上のパーティション テーブル間の等結合クエリを行う場合、そのテーブル内のパーティション分割列が同じであれば、パーティション自体を結合できるので処理がより迅速になります。  
+-   頻繁に実行するクエリの種類とハードウェア構成に基づいて、クエリのパフォーマンスを改善できる場合があります。 たとえば、クエリ オプティマイザーで 2 つ以上のパーティション テーブル間の等結合クエリを行う場合、そのパーティション分割列が、テーブルが結合される列と同じであれば、処理がより高速になります。 詳細については、下の「[クエリ](#queries)」をご覧ください。
   
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] により I/O 操作用にデータの並べ替えが実行される場合、まずパーティションでデータが並べ替えられます。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、一度に 1 つのドライブにしかアクセスできないので、パフォーマンスが低下することがあります。 データの並べ替えのパフォーマンスを向上させるには、RAID を構成して複数のディスク間でパーティションのデータ ファイルをストライプします。 この方法を使用すると、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では今までどおりデータがパーティションで並べ替えられますが、すべてのドライブの各パーティションに同時にアクセスできるようになります。  
   
@@ -54,7 +53,7 @@ ms.locfileid: "53414177"
 パーティション関数のパーティションを一連のファイル グループにマップするデータベース オブジェクト。 パーティションを別々のファイル グループに配置する主な理由は、パーティションのバックアップ操作を個別に実行できるようにすることです。 これは、バックアップを個別のファイル グループで実行できるからです。  
   
 ### <a name="partitioning-column"></a>パーティション分割列  
-パーティション関数が、テーブルまたはインデックスをパーティション分割するために使用するテーブルまたはインデックスの列。 パーティション関数に参加する計算列は、明示的に PERSISTED とマークされている必要があります。 **timestamp**型を除き、インデックス列として使用できるすべてのデータ型をパーティション分割列として使用できます。 **ntext**、 **text**、 **image**、 **xml**、 **varchar(max)**、 **nvarchar(max)**、または **varbinary(max)** データ型を指定することはできません。 また、Microsoft .NET Framework 共通言語ランタイム (CLR) ユーザー定義型の列とエイリアス データ型の列を指定することはできません。  
+パーティション関数が、テーブルまたはインデックスをパーティション分割するために使用するテーブルまたはインデックスの列。 パーティション関数に参加する計算列は、明示的に PERSISTED とマークされている必要があります。 **timestamp**型を除き、インデックス列として使用できるすべてのデータ型をパーティション分割列として使用できます。 **ntext**、 **text**、 **image**、 **xml**、 **varchar(max)** 、 **nvarchar(max)** 、または **varbinary(max)** データ型を指定することはできません。 また、Microsoft .NET Framework 共通言語ランタイム (CLR) ユーザー定義型の列とエイリアス データ型の列を指定することはできません。  
   
 ### <a name="aligned-index"></a>固定されたインデックス  
 対応するテーブルと同じパーティション構成に基づいて構築されたインデックス。 テーブルとインデックスが固定されている状態では、両者のパーティション構造を保ったまま [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] がパーティションをすばやく効率的に切り替えることができます。 ベース テーブルに固定させるために、インデックスを同じ名前のパーティション関数に加える必要はありません。 ただし、インデックスとベース テーブルのパーティション関数が次の点で基本的に同じでなければなりません。
@@ -133,6 +132,6 @@ ms.locfileid: "53414177"
 -   [パーティション テーブルの一括読み込み](https://msdn.microsoft.com/library/cc966380.aspx)    
 -   [プロジェクト REAL:データ ライフ サイクル -- パーティション分割](https://technet.microsoft.com/library/cc966424.aspx)    
 -   [パーティション テーブルとパーティション インデックスに対するクエリ処理の機能強化](https://msdn.microsoft.com/library/ms345599.aspx)    
--   [大規模なリレーショナル データ ウェアハウスを構築するためのトップ 10 のベスト プラクティス](https://sqlcat.com/top10lists/archive/2008/02/06/top-10-best-practices-for-building-a-large-scale-relational-data-warehouse.aspx)    
+-   [大規模なリレーショナル データ ウェアハウスを構築するためのトップ 10 のベスト プラクティス](https://download.microsoft.com/download/0/F/B/0FBFAA46-2BFD-478F-8E56-7BF3C672DF9D/SQLCAT's%20Guide%20to%20Relational%20Engine.pdf) (_SQLCAT ガイド:リレーショナル エンジン_)
   
   

@@ -12,20 +12,19 @@ helpviewer_keywords:
 ms.assetid: b4a03273-5e30-4d7b-826e-02f8f28ba078
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 8e6d0806a7c3eabd1c6f4cd1836308eba99a6d5a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 2d20f2535038b13eac0b8d5ca20dfa77bfc12588
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47656740"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68139029"
 ---
 # <a name="header-files"></a>ヘッダー ファイル
 Sql.h ヘッダー ファイルには、主要な ODBC インターフェイスへの準拠レベルの機能のプロトタイプが含まれています。 Sqlext.h ヘッダー ファイルには、レベル 1 およびレベル 2 API の適合性レベルで機能のプロトタイプが含まれています。 Sqltypes.h ヘッダー ファイルには、型の定義と、SQL データ型のインジケーターが含まれています。  
   
  すべてを含むヘッダー ファイル、 **#define**ODBCVER、アプリケーション、ドライバーは ODBC のさまざまなバージョン用にコンパイルするのに設定できます。  
   
- ヘッダー ファイルには開いてグループ CLI と ISO CLI でアラインするにはへの呼び出しで使用される情報の種類のエイリアスが含まれて**SQLGetInfo**します。 次の表には、「ODBC 名」列はで情報の種類を ODBC の名前を示します。 [ODBC API リファレンス](../../../odbc/reference/syntax/odbc-api-reference.md)します。 列「ヘッダー ファイル内の別名」では、ISO CLI と開いているグループ CLI で使用される名前を示します。 これらのマニフェスト名の実際の数値は、ODBC と標準の Cli の両方で同じです。 これらの別名には、ODBC 3 でコンパイルするには、標準に準拠したアプリケーションまたはドライバーが有効にする *.x*ヘッダー ファイル。  
+ ヘッダー ファイルには開いてグループ CLI と ISO CLI でアラインするにはへの呼び出しで使用される情報の種類のエイリアスが含まれて**SQLGetInfo**します。 次の表には、「ODBC 名」列はで情報の種類を ODBC の名前を示します。 [ODBC API リファレンス](../../../odbc/reference/syntax/odbc-api-reference.md)します。 列「ヘッダー ファイル内の別名」では、ISO CLI と開いているグループ CLI で使用される名前を示します。 これらのマニフェスト名の実際の数値は、ODBC と標準の Cli の両方で同じです。 これらの別名には、ODBC を使用してコンパイルするには、標準に準拠したアプリケーションまたはドライバーが有効にする*3.x*ヘッダー ファイル。  
   
  これらの別名には、名前がわかりやすくなるように、ODBC 名での省略形の拡張が含まれます。 "OUTER_JOIN"に"MULTIPLE"、"OJ"を「トランザクションです」に「トランザクション」に、"MAX"を"MAXIMUM"、"LEN"に"LENGTH"、"MULT"に拡張します。  
   

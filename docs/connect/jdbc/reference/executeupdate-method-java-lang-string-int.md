@@ -1,5 +1,5 @@
 ---
-title: executeUpdate (java.lang.String, int) メソッド |Microsoft Docs
+title: executeUpdate メソッド (java.lang.String, int) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: 4c52a20e-527e-4d14-9a5a-4cd195aac8ed
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 8d7baa2edfdc1d8583dbea5bf16ea05db2e3afad
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 783058a764963637f2c91808424bac7bdd403c02
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47611350"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67954755"
 ---
 # <a name="executeupdate-method-javalangstring-int"></a>executeUpdate (java.lang.String, int) メソッド
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -39,7 +38,7 @@ public final int executeUpdate(java.lang.String sql,
 #### <a name="parameters"></a>パラメーター  
  *sql*  
   
- A**文字列**SQL ステートメントを格納しています。  
+ SQL ステートメントを含む**文字列**です。  
   
  *flag*  
   

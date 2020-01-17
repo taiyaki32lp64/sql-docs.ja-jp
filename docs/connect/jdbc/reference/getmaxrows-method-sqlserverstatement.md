@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: 6aece4e5-027d-434e-a8cf-a67c0484f189
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 8cb1c317930d97263038d09bd84e8836d5f6f4ff
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e0b9df5512466c5f12c5fda1b4e5cb4a91504499
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47773640"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67982072"
 ---
 # <a name="getmaxrows-method-sqlserverstatement"></a>getMaxRows メソッド (SQLServerStatement)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -42,7 +41,7 @@ public final int getMaxRows()
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- この getMaxRows メソッドは、java.sql.Statement インターフェイスの getMaxRows メソッドによって指定されます。  
+ この getMaxRows メソッドは、getMaxRows インターフェイスのメソッドによって指定されます。  
   
  getMaxRows メソッドは、スクロール可能な動的カーソルに対して常に 0 を返します。  
   

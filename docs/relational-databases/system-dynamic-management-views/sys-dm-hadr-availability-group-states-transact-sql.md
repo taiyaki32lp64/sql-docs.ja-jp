@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: d18019dd-f8dc-4492-b035-b1a639369b65
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: b06ffc7a8400d3b02698009b2452282658cf959e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 91efefbdc28480cf2a3b3fb579dba0946dba8a2e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47745360"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67900774"
 ---
 # <a name="sysdmhadravailabilitygroupstates-transact-sql"></a>sys.dm_hadr_availability_group_states (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -43,7 +42,7 @@ ms.locfileid: "47745360"
 |**primary_recovery_health_desc**|**nvarchar(60)**|説明**primary_replica_health**、1 つの。<br /><br /> ONLINE_IN_PROGRESS<br /><br /> ONLINE<br /><br /> NULL|  
 |**secondary_recovery_health**|**tinyint**|1 つのセカンダリ レプリカのレプリカの復旧の正常性を示します。<br /><br /> 0 = 実行中<br /><br /> 1 = オンライン<br /><br /> NULL<br /><br /> プライマリ レプリカの場合、 **secondary_recovery_health**列は NULL です。|  
 |**secondary_recovery_health_desc**|**nvarchar(60)**|説明**secondary_recovery_health**、1 つの。<br /><br /> ONLINE_IN_PROGRESS<br /><br /> ONLINE<br /><br /> NULL|  
-|**synchronization_health**|**tinyint**|プログラムのロールアップを反映して、 **synchronization_health**の可用性グループ内のすべての可用性レプリカ。 使用可能な値とその説明を次に示します。<br /><br /> 0: 正常ではありません。 None の可用性レプリカの正常性がある**synchronization_health** (2 = HEALTHY)。<br /><br /> 1: 部分的に正常。 一部の可用性レプリカの同期状態は正常です。<br /><br /> 2: 正常な状態です。 すべての可用性レプリカの同期状態は正常です。<br /><br /> レプリカの同期状態については、次を参照してください。、 **synchronization_health**列[sys.dm_hadr_availability_replica_states &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-hadr-availability-replica-states-transact-sql.md)します。|  
+|**synchronization_health**|**tinyint**|プログラムのロールアップを反映して、 **synchronization_health**の可用性グループ内のすべての可用性レプリカ。 使用可能な値とその説明を次に示します。<br /><br /> 0:正常ではありません。 None の可用性レプリカの正常性がある**synchronization_health** (2 = HEALTHY)。<br /><br /> 1:部分的に正常な状態にします。 一部の可用性レプリカの同期状態は正常です。<br /><br /> 2:正常な状態です。 すべての可用性レプリカの同期状態は正常です。<br /><br /> レプリカの同期状態については、次を参照してください。、 **synchronization_health**列[sys.dm_hadr_availability_replica_states &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-hadr-availability-replica-states-transact-sql.md)します。|  
 |**synchronization_health_desc**|**nvarchar(60)**|説明**synchronization_health**、1 つの。<br /><br /> NOT_HEALTHY<br /><br /> PARTIALLY_HEALTHY<br /><br /> HEALTHY|  
   
 ## <a name="security"></a>セキュリティ  

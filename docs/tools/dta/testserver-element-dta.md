@@ -12,15 +12,14 @@ dev_langs:
 helpviewer_keywords:
 - TestServer element
 ms.assetid: caa3547a-2cd5-47ad-ace2-a36752835cfe
-author: stevestein
-ms.author: sstein
-manager: craigg
-ms.openlocfilehash: a64b7feb1f3d557a6c5d38d6beaea1b32728d453
-ms.sourcegitcommit: 0f7cf9b7ab23df15624d27c129ab3a539e8b6457
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 784275fe53edd3e0c7068927c4af299de3d304d6
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51292788"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68105935"
 ---
 # <a name="testserver-element-dta"></a>TestServer 要素 (DTA)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

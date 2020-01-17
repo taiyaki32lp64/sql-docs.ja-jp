@@ -4,23 +4,22 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.xmlsourceadapter.connectionmanager.f1
 helpviewer_keywords:
 - XML Source Editor
 ms.assetid: e6507403-a3ce-4b6f-91fc-a7de9f7b6283
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 7c10a7febfcb5df1f2702498fe30148f1794095b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 5965c48f91387944f223e1d0cfe666b19aba0e63
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48096052"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66054294"
 ---
 # <a name="xml-source-editor-connection-manager-page"></a>[XML ソース エディター] ([接続マネージャー] ページ)
   **[XML ソース エディター]** の **[接続マネージャー]** ページを使用すると、XML ファイルと、XML データを変換する XSD を指定できます。  
@@ -68,8 +67,8 @@ ms.locfileid: "48096052"
   
 ## <a name="see-also"></a>参照  
  [Integration Services のエラーおよびメッセージのリファレンス](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [XML ソース エディター&#40;列 ページ&#41;](../../2014/integration-services/xml-source-editor-columns-page.md)   
- [XML ソース エディター&#40;エラー出力 ページ&#41;](../../2014/integration-services/xml-source-editor-error-output-page.md)   
+ [[XML ソース エディター] &#40;[列] ページ&#41;](../../2014/integration-services/xml-source-editor-columns-page.md)   
+ [XML ソース エディター &#40;[エラー出力] ページ&#41;](../../2014/integration-services/xml-source-editor-error-output-page.md)   
  [XML ソースを使用してデータを抽出する](data-flow/extract-data-by-using-the-xml-source.md)  
   
   

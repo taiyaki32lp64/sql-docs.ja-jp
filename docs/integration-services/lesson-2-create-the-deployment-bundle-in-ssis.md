@@ -1,5 +1,5 @@
 ---
-title: 'レッスン 2: SSIS での配置バンドルの作成 | Microsoft Docs'
+title: レッスン 2:SSIS での配置バンドルの作成 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -8,18 +8,21 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: tutorial
 ms.assetid: ab17289d-c3d4-4a5e-b7f5-4fea8ae21707
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: a7513169dbff655d185c130b320075f0e2f2d855
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 23d700f7886b046896397eb1cce4eb21f9c32850
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47715140"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71296011"
 ---
-# <a name="lesson-2-create-the-deployment-bundle-in-ssis"></a>レッスン 2: SSIS での配置バンドルの作成
-[「レッスン 1: 配置バンドルを作成する準備」](../integration-services/lesson-1-preparing-to-create-the-deployment-bundle.md)では、Deployment Tutorial という名前の [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] プロジェクトを作成し、パッケージとサポート ファイルをプロジェクトに追加して、パッケージに構成を実装しました。  
+# <a name="lesson-2-create-the-deployment-bundle-in-ssis"></a>レッスン 2:SSIS での配置バンドルの作成
+
+[!INCLUDE[ssis-appliesto](../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
+「[レッスン 1: 配置バンドルを作成する準備](../integration-services/lesson-1-preparing-to-create-the-deployment-bundle.md)」では、Deployment Tutorial という名前の [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] プロジェクトを作成し、パッケージとサポート ファイルをプロジェクトに追加して、パッケージに構成を実装しました。  
   
 このレッスンでは、配置バンドルを作成します。配置バンドルとは、他のコンピューターにパッケージをインストールするために必要なアイテムが含まれているフォルダーです。 配置バンドルには、Deployment Tutorial プロジェクトの配置マニフェスト、パッケージのコピー、サポート ファイルのコピーを含めます。 配置マニフェストとは、配置バンドルに含まれているパッケージ、その他のファイル、および構成の一覧です。  
   
@@ -30,12 +33,12 @@ ms.locfileid: "47715140"
 ## <a name="lesson-tasks"></a>このレッスンの作業  
 このレッスンの内容は次のとおりです。  
   
--   [手順 1: 配置ユーティリティの構築](../integration-services/lesson-2-1-building-the-deployment-utility.md)  
+-   [ステップ 1:配置ユーティリティの構築](../integration-services/lesson-2-1-building-the-deployment-utility.md)  
   
--   [手順 2: 配置バンドルの確認](../integration-services/lesson-2-2-verifying-the-deployment-bundle.md)  
+-   [手順 2:配置バンドルの確認](../integration-services/lesson-2-2-verifying-the-deployment-bundle.md)  
   
 ## <a name="start-the-lesson"></a>レッスンの開始  
-[手順 1: 配置ユーティリティの構築](../integration-services/lesson-2-1-building-the-deployment-utility.md)  
+[ステップ 1:配置ユーティリティの構築](../integration-services/lesson-2-1-building-the-deployment-utility.md)  
   
   
   

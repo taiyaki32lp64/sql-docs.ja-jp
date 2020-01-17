@@ -13,11 +13,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 30b37236b321fc90372914f2af48a652d41fbe03
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48185868"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62913600"
 ---
 # <a name="mssqlserver5245"></a>MSSQLSERVER_5245
     
@@ -30,7 +30,7 @@ ms.locfileid: "48185868"
 |イベント ソース|MSSQLSERVER|  
 |コンポーネント|SQLEngine|  
 |シンボル名|DBCC4_TABLE_LOCK_TIMEOUT_EXCEEDED|  
-|メッセージ テキスト|オブジェクト ID O_ID (オブジェクト 'NAME'): DBCC ではこのオブジェクトをロックできませんでした。ロック要求がタイムアウトしました。 このオブジェクトはスキップされたので、処理されません。|  
+|メッセージ テキスト|Object ID O_ID (object 'NAME'):DBCC は、ロック要求のタイムアウト期間を超過したため、このオブジェクトのロックを取得できませんでした。 このオブジェクトはスキップされたので、処理されません。|  
   
 ## <a name="explanation"></a>説明  
  DBCC が、指定されたオブジェクト用にテーブルのロック獲得を待機している間に、ロック要求のタイムアウトが発生しました。  

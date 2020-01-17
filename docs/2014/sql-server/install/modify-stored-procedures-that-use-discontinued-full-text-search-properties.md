@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 helpviewer_keywords:
 - discontinued properties [Full-Text Search]
@@ -14,12 +13,12 @@ ms.assetid: 8d9392d9-a9ba-4378-84e4-59f516b67ddb
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 1d6d7467da572d5d0552d400e2c05505c1bc0aaa
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 5204b27fb4745f8005a328dc62503f7db418387d
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48091542"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66093850"
 ---
 # <a name="modify-stored-procedures-that-use-discontinued-full-text-search-properties"></a>廃止されたフルテキスト検索プロパティを使用するストアド プロシージャを変更する
   ストアド プロシージャが正しく実行されるようにするには、既存のプロシージャを編集し、削除または非推奨とされたフルテキスト関連のプロパティおよび設定を削除する必要があります。  

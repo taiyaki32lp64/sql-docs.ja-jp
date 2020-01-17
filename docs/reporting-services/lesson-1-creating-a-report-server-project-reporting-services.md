@@ -1,80 +1,70 @@
 ---
-title: レッスン 1:レポート サーバー プロジェクトの作成 (Reporting Services) | Microsoft Docs
-ms.date: 11/30/2016
+title: 'レッスン 1: レポート サーバー プロジェクトの作成 (Reporting Services) | Microsoft Docs'
+ms.date: 05/01/2019
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: reporting-services
 ms.topic: conceptual
 ms.assetid: 675671ca-e6c9-48a2-82e9-386778f3a49f
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 72d337f441d3aabb5dc1ee8801a5cec200904d23
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: c3a32b6b27a8919d729c95bfe29f50c2bda81db8
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56292350"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65095852"
 ---
-# <a name="lesson-1-creating-a-report-server-project-reporting-services"></a>レッスン 1:レポート サーバー プロジェクトの作成 (Reporting Services)
+# <a name="lesson-1-creating-a-report-server-project-reporting-services"></a>レッスン 1 : レポート サーバー プロジェクトの作成 (Reporting Services)
 
-このレッスンで、 *レポート サーバー プロジェクト* と *レポート定義 (.rdl)* ファイルを [!INCLUDE[ssBIDevStudio_md](../includes/ssbidevstudio-md.md)] Visual Studio 内に作成します。 
+このレッスンでは、*レポート デザイナー*を使用して、*レポート サーバー プロジェクト*と*レポート定義 (.rdl)* ファイルを作成します。
 
-[!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]でレポートを作成するには、まず、レポート定義ファイル (.rdl) やレポートに必要なその他のリソース ファイルを格納できる、レポート サーバー プロジェクトが必要です。 
+> [!NOTE]
+> [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] は、ビジネス インテリジェンス ソリューションを作成するための [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 環境です。 SSDT は、レポート デザイナー作成環境を標準装備しています。この環境では、 [!INCLUDE[ssrsnoversion_md](../includes/ssrsnoversion-md.md)] のページ分割されたレポート定義、共有データ ソース、共有データセット、およびレポート パーツを開けるほか、変更、プレビュー、保存、配置ができます。
 
-次のレッスンでは、実際のレポート定義ファイルを作成し、レポートのデータ ソース、データセット、レイアウトを定義します。 作成したレポートを実行すると、データが取得され、レイアウト定義に従って画面上に表示されます。 その状態からエクスポート、印刷、保存を行うことができます。  
+レポート デザイナーを使用してレポートを作成すると、レポート ファイルと、レポートで使用されるその他のリソース ファイルを含むレポート サーバー プロジェクトが作成されます。
+
+## <a name="to-create-a-report-server-project"></a>レポート サーバー プロジェクトを作成するには
   
-  
-  
-## <a name="to-create-a-report-server-project"></a>レポート サーバー プロジェクトを作成するには  
-  
-1.  [!INCLUDE[ssBIDevStudio_md](../includes/ssbidevstudio-md.md)]を開きます。  
-  
-2.  **[ファイル]** メニューの **[新規]**  > **[プロジェクト]** をクリックします。  
+1. **[ファイル]** メニューから、 **[新規]**  >  **[プロジェクト]** の順に選択します。  
 
     ![ssrs-ssdt-file-01-new-project](../reporting-services/media/ssrs-ssdt-file-01-new-project.png)
   
-3.  **[インストール済み]** > **[テンプレート]** > **[ビジネス インテリジェンス]** で、 **[Reporting Services]** をクリックします。
+2. 左端の列の **[インストール済み]** の下で、 **[Reporting Services]** を選択します。 場合によっては、 **[Business Intelligence]** の下にあることもあります。
 
-    ![ssrs-ssdt-01-new-rs-project](../reporting-services/media/ssrs-ssdt-01-new-rs-project.png)
+    ![レポート サーバー プロジェクト テンプレートの選択](../reporting-services/media/lesson-1-creating-a-report-server-project-reporting-services/select-report-server-project-template.png)
 
-5. **[レポート サーバー プロジェクト]** ![ssrs_ssdt_report_server_project](../reporting-services/media/ssrs-ssdt-report-server-project.png)でレポート サーバー プロジェクトを作成する方法を学習します。 
+    > [!IMPORTANT]
+    > VS の場合、左の列に [Reporting Services] が表示されていない場合は、SSDT ワークロードをインストールしてレポート デザイナーを追加します。 **[ツール]** メニューから **[ツールと機能を取得]** を選択し、表示されたワークロードから **[SQL Server Data Tools]** を選択します。 中央の列に [Reporting Services] オブジェクトが表示されていない場合は、Reporting Services 拡張機能を追加します。 **[ツール]** メニューから、 **[拡張機能と更新プログラム]**  >  **[オンライン]** の順に選択します。 中央の列で、表示された拡張機能から **[Microsoft Reporting Services Projects]**  >  **[ダウンロード]** を選択します。 SSDT については、[SQL Server Data Tools (SSDT) のダウンロード](../ssdt/download-sql-server-data-tools-ssdt.md)に関する記事を参照してください。
 
-   >**注**:**[ビジネス インテリジェンス]** または **[レポート サーバー プロジェクト]** オプションが表示されない場合、ビジネス インテリジェンス テンプレートを使用して SSDT を更新する必要があります。 「 [SQL Server Data Tools (SSDT) のダウンロード](../ssdt/download-sql-server-data-tools-ssdt.md)」を参照してください。  
-  
-5.  **[名前]** に「 **Tutorial**」と入力します。  
+3. **[新しいプロジェクト]** ダイアログ ボックスの中央の列で、 **[レポート サーバー プロジェクト]** アイコン &nbsp;&nbsp;![ssrs_ssdt_report_server_project](media/ssrs-ssdt-report-server-project.png) &nbsp;&nbsp; を選択します。
 
-    既定では、新しいディレクトリの Visual Studio 2015\Projects フォルダーに作成されます。
-    
-    ![ssrs-ssdt-01-solution-location](../reporting-services/media/ssrs-ssdt-01-solution-location.png)
-  
-6.  **[OK]** をクリックすると、プロジェクトが作成されます。  
-  
-    Tutorial プロジェクトが右側の [ソリューション エクスプローラー] ウィンドウに表示されます。  
-  
-## <a name="to-create-a-new-report-definition-file"></a>新しいレポート定義ファイルを作成するには  
-  
-1.  **[ソリューション エクスプローラー]** ウィンドウで、 **[レポート] を右クリックし、** > **[追加]** > **[新しいアイテム]** の順に選択します。 
+4. **[名前]** ボックスに、プロジェクトの名前として「Tutorial」を入力します。 既定では、 **[場所]** ボックスに "Documents\Visual Studio 20xx\Projects\" フォルダーへのパスが表示されます。 レポート デザイナーにより Tutorial という名前のフォルダーがこのパスの下に作成され、このフォルダー内に Tutorial プロジェクトが作成されます。 プロジェクトが VS ソシューションに属していない場合は、VS によりソリューション ファイル (.sln) も作成されます。
 
-    >**ヒント**:**[ソリューション エクスプローラー]** ウィンドウが表示されない場合は、**[表示]** メニューの **[ソリューション エクスプローラー]** をクリックします。 
+5. **[OK]** を選択すると、プロジェクトが作成されます。 Tutorial プロジェクトが右側の **[ソリューション エクスプローラー]** ウィンドウに表示されます。
+  
+## <a name="creating-a-report-definition-file-rdl"></a>レポート定義ファイル (RDL) を作成する  
+  
+1. **[ソリューション エクスプローラー]** ウィンドウで、 **[レポート]** フォルダーを右クリックします。 **[ソリューション エクスプローラー]** ウィンドウが表示されない場合は、 **[表示]** メニュー > **[ソリューション エクスプローラー]** の順に選択します。
+
+2. **[追加]**  >  **[新しい項目]** の順に選択します。
 
     ![ssrs_ssdt_add_report](../reporting-services/media/ssrs-ssdt-add-report.png)
-  
-2.  **[新しいアイテムの追加]** ウィンドウで、 **[レポート]** ![ssrs_ssdt_report](../reporting-services/media/ssrs-ssdt-report.png)でレポート サーバー プロジェクトを作成する方法を学習します。  
-  
-3.  **[名前]** に「 **Sales Orders.rdl** 」と入力して、 **[追加]** をクリックします。  
-  
-    レポート デザイナーを開き、デザイン ビューで新しい .rdl ファイルを表示します。  
-    
-    ![ssrs-ssdt-01-new-report-designer](../reporting-services/media/ssrs-ssdt-01-new-report-designer.png)
-  
-     レポート デザイナーは、 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] で実行される [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]コンポーネントです。 2 つのビューがあります。**[デザイン]** と **[プレビュー]** です。 ビューを変更するには該当するタブをクリックします。  
-  
-    **[レポート データ]** ペインでデータを定義します。 **[デザイン]** ビューではレポートのレイアウトを定義します。 **[プレビュー]** ビューではレポートを実行して結果を確認できます。  
-  
-## <a name="next-lesson"></a>次のレッスン  
-ここでは、"Tutorial" というレポート プロジェクトを作成し、このレポート プロジェクトにレポート定義ファイル (.rdl) を追加しました。 次に、レポートで使用するデータ ソースを指定します。 「[レッスン 2:接続情報の指定 &#40;Reporting Services&#41;](../reporting-services/lesson-2-specifying-connection-information-reporting-services.md)」を参照してください。  
-  
-## <a name="see-also"></a>参照  
-[基本的なテーブル レポートの作成 (SSRS チュートリアル)](../reporting-services/create-a-basic-table-report-ssrs-tutorial.md)  
-  
 
+3. **[新しい項目の追加]** ウィンドウで、 **[レポート]** アイコンを選択します。
+
+4. **[名前]** ボックスに「Sales Orders.rdl」と入力します。
+
+5. **[新しい項目の追加]** ダイアログ ボックスの右下にある **[追加] ボタン**を選択して、処理を完了します。 レポート デザイナーが開き、デザイン ビューで Sales Orders レポート ファイルが表示されます。
+
+    ![ssrs-ssdt-01-new-report-designer](media/ssrs-ssdt-01-new-report-designer.png)
+
+## <a name="next-steps"></a>次の手順
+
+これまで、Tutorial レポート プロジェクトと Sales Orders レポートを作成しました。 残りのレッスンでは、次の方法について学習します。
+
+- レポートのデータ ソースを構成する。
+- データ ソースからデータセットを作成する。
+- レポートのレイアウトをデザインし書式を設定する。
+
+「[レッスン 2: 接続情報の指定 &#40;Reporting Services&#41;](../reporting-services/lesson-2-specifying-connection-information-reporting-services.md)」に進みます。

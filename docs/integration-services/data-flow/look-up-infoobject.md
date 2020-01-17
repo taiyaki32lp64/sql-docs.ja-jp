@@ -8,17 +8,20 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: e7f4c132-a5ec-49d8-a964-45775432731f
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: 6246042a70aca4edc07a36bc0dabe95be56c6d7d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: e77890725659f05d8616156f6e84712dc20323eb
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47657976"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71292312"
 ---
 # <a name="look-up-infoobject"></a>[インフォオブジェクトの参照]
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   SAP Netweaver BW システムで定義されたインフォオブジェクトを参照する場合、 **[インフォオブジェクトの参照]** ダイアログ ボックスを使用します。 使用できるインフォオブジェクトの一覧が表示されたら目的のインフォオブジェクトを選択すると、SAP BW 変換先で関連するオプションに必要な値が設定されます。  
   
  [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector 1.1 for SAP BW の SAP BW 変換先は、 **[インフォオブジェクトの参照]** ダイアログ ボックスを使用します。 SAP BW 変換先の詳細については、「 [SAP BW Destination](../../integration-services/data-flow/sap-bw-destination.md)」を参照してください。  
@@ -59,7 +62,7 @@ ms.locfileid: "47657976"
  **時間の特性**  
  時間の特性を表すインフォオブジェクトを参照します。  
   
- **名前**  
+ **[名前]**  
  参照するインフォオブジェクトの名前、または部分的な名前をアスタリスクのワイルドカード文字 (*) と入力します。 すべてのインフォオブジェクトを含めるには、アスタリスクのワイルドカード文字を単独で使用します。  
   
  **[説明]**  
@@ -82,9 +85,9 @@ ms.locfileid: "47657976"
 ## <a name="see-also"></a>参照  
  [[トランザクション データのインフォキューブの作成]](../../integration-services/data-flow/create-infocube-for-transaction-data.md)   
  [[インフォソースの作成]](../../integration-services/data-flow/create-infosource.md)   
- [トランザクション データのインフォソースの作成](../../integration-services/data-flow/create-infosource-for-transaction-data.md)   
+ [[トランザクション データのインフォソースの作成]](../../integration-services/data-flow/create-infosource-for-transaction-data.md)   
  [マスター データのインフォソースの作成](../../integration-services/data-flow/create-infosource-for-master-data.md)   
- [新しいインフォオブジェクトの作成](../../integration-services/data-flow/create-new-infoobject.md)   
+ [[追加]](../../integration-services/data-flow/create-new-infoobject.md)   
  [SAP BW 変換先エディター &#40;[接続マネージャー] ページ&#41;](../../integration-services/data-flow/sap-bw-destination-editor-connection-manager-page.md)   
  [Microsoft Connector for SAP BW の F1 ヘルプ](../../integration-services/microsoft-connector-for-sap-bw-f1-help.md)  
   

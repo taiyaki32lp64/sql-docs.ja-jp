@@ -24,13 +24,12 @@ helpviewer_keywords:
 ms.assetid: 89f01b10-5fae-4ed8-b0fb-a4b9f540fd28
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 5436dc0ad0e3148fb152f5d72d5b8d05dc27ed5a
-ms.sourcegitcommit: 1a5448747ccb2e13e8f3d9f04012ba5ae04bb0a3
+ms.openlocfilehash: c53e9ee51714ebfcce81a722f78a4f79cbc2530f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51559789"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68067324"
 ---
 # <a name="move-database-files"></a>データベース ファイルの移動
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

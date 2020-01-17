@@ -4,21 +4,20 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.transferdatabasetask.destdbfiles.f1
 ms.assetid: f6f90417-86fb-4b8c-a790-0b215c344ef6
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: fb6f834ab26fb6d5cc7535d217745af92e97c2a5
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 2cfee31b4167625b4f868d7312abd752a215652c
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48135278"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66059546"
 ---
 # <a name="destination-database-files"></a>[転送先データベース ファイル]
   **[転送先データベース ファイル]** ダイアログ ボックスを使用すると、転送先サーバーのデータベース ファイルの名前と場所を表示または変更したり、データベース転送タスクのネットワーク ファイルの場所を指定したりできます。 このタスクの詳細については、「 [データベース転送タスク](control-flow/transfer-database-task.md)」を参照してください。  
@@ -45,7 +44,7 @@ ms.locfileid: "48135278"
   
 ## <a name="see-also"></a>参照  
  [Integration Services のエラーおよびメッセージのリファレンス](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [データベース転送タスク エディター &#40;[全般] ページ&#41;](general-page-of-integration-services-designers-options.md)   
- [データベース転送タスク エディター&#40;データベース ページ&#41;](../../2014/integration-services/transfer-database-task-editor-databases-page.md)  
+ [[データベース転送タスク エディター] &#40;[全般] ページ&#41;](general-page-of-integration-services-designers-options.md)   
+ [[データベース転送タスク エディター] &#40;[データベース] ページ&#41;](../../2014/integration-services/transfer-database-task-editor-databases-page.md)  
   
   

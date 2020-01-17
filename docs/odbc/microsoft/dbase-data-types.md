@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: a0e31e6b-d02b-4ee2-9b37-5baf6a11c0a6
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: fc4b4c7a5c1074a62bf0e84d265840109f65ea55
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 1753e0d50655205bc6f459548f2ef2b77d5cc885
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47626270"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68096451"
 ---
 # <a name="dbase-data-types"></a>dBASE データ型
 次の表では、dBASE データ型を ODBC SQL データ型にマップする方法を示します。 すべての ODBC SQL データ型がサポートされていることに注意してください。  
@@ -36,7 +35,7 @@ ms.locfileid: "47626270"
 |論理|SQL_BIT|  
 |メモ|SQL_LONGVARCHAR|  
 |数値 (BCD)|SQL_DOUBLE|  
-|OLEOBJECT クラス [1]|SQL_LONGBINARY|  
+|OLEOBJECT[1]|SQL_LONGBINARY|  
   
  DBASE バージョン 5 には [1] 有効です。*x*  
   
@@ -51,7 +50,7 @@ ms.locfileid: "47626270"
   
  次の表は、データ型、dBASE の制限事項を示します。  
   
-|データ型|説明|  
+|データの種類|説明|  
 |---------------|-----------------|  
 |CHAR|0 の char 型の列を作成または指定されていない長さが実際に 254 バイト列を返します。|  
 |暗号化データ|DBASE ドライバーでは、dBASE テーブルをサポートしません。|  

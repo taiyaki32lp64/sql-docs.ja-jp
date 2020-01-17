@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 0c9e5d21-9321-49f8-a055-69459e1c9c85
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 8e2f3b1e63578af7c0b42f00113fbb9e87cb8003
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e8478e80ae2ebd19a3e0f2aa8307e0985b2c092d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47628510"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68043689"
 ---
 # <a name="paradox-data-types"></a>Paradox データ型
 ODBC Paradox ドライバーは、Paradox データ型を ODBC SQL データ型にマップします。 次の表では、すべて Paradox データ型の一覧し、ODBC SQL データの型にマップされますを示しています。  
@@ -41,7 +40,7 @@ ODBC Paradox ドライバーは、Paradox データ型を ODBC SQL データ型�
 |[2] のメモ|SQL_LONGVARCHAR|  
 |MONEY [1]|SQL_DOUBLE|  
 |NUMBER|SQL_DOUBLE|  
-|短い|SQL_SMALLINT|  
+|SHORT|SQL_SMALLINT|  
 |時間 [1]|SQL_TIMESTAMP|  
 |[1] のタイムスタンプ|SQL_TIMESTAMP|  
   
@@ -54,7 +53,7 @@ ODBC Paradox ドライバーは、Paradox データ型を ODBC SQL データ型�
   
  次の表では、Paradox データ型の制限事項を示します。  
   
-|データ型|説明|  
+|データの種類|説明|  
 |---------------|-----------------|  
 |英数字|0 の英数字の列を作成または指定されていない長さが実際には 255 バイト列を返します。|  
 |BYTES|Paradox5 ドライバーとバイナリ列に NULL を挿入する場合は、0 に変更されます。|  

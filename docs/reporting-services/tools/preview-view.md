@@ -2,7 +2,7 @@
 title: '[プレビュー] ビュー | Microsoft Docs'
 ms.date: 05/30/2016
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: tools
 ms.topic: conceptual
 f1_keywords:
@@ -10,20 +10,20 @@ f1_keywords:
 helpviewer_keywords:
 - Preview view [Reporting Services]
 ms.assetid: 108255d1-5be8-47c1-80f3-1f2a055e4d02
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 4386fef770eb741b55df5740651cec1bd64ef048
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 7c546ee5bdc941a5b0dba77b9c110bd283b217d7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47854280"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65582164"
 ---
 # <a name="preview-view"></a>[プレビュー] ビュー
 [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] レポート デザイナーで **[プレビュー]** ビューを使用すると、表示レポートを表示できます。 レポートをプレビューすると、レポート デザイナーでは、レポートがローカルで実行され、[プレビュー] ビューに表示されます。 プレビュー モードでは、レポート全体が処理されます。 レポートに複雑なクエリや大量のデータが含まれている場合、初回のプレビューは、完了するまでに数分かかることがあります。 その後の変更内容が、レポートの形式に関するのみである場合、プレビュー時にはキャッシュされたデータが使用されます。
 
   ![ssrs_ssdt_preview](../../reporting-services/media/ssrs-ssdt-preview.png)  
-## <a name="options"></a>[変数]  
+## <a name="options"></a>オプション  
  ツール バーは、プレビュー機能を管理するために使用します。  
 
 ![ssrs_ssdt_viewer_toolbar](../../reporting-services/tools/media/ssrs-ssdt-viewer-toolbar.png)

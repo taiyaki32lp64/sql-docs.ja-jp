@@ -1,5 +1,5 @@
 ---
-title: TM:Rollback Tran Starting イベント クラス |Microsoft Docs
+title: 'TM: Rollback Tran Starting イベント クラス |Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,16 +15,16 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: a761d04ebb9bef40deacb19081d7dfdf6a329ea4
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52786004"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63061263"
 ---
-# <a name="tm-rollback-tran-starting-event-class"></a>TM:Rollback Tran Starting イベント クラス
+# <a name="tm-rollback-tran-starting-event-class"></a>TM: Rollback Tran Starting イベント クラス
   TM:Rollback Tran Starting イベント クラスは、ROLLBACK TRANSACTION 要求が開始されていることを示します。 クライアントはトランザクション管理インターフェイスから要求を送信します。 EventSubClass 列は、現在のトランザクションがロールバックされた後に新しいトランザクションが開始されるかどうかを示します。  
   
-## <a name="tm-rollback-tran-starting-event-class-data-columns"></a>TM:Rollback Tran Starting イベント クラスのデータ列  
+## <a name="tm-rollback-tran-starting-event-class-data-columns"></a>TM: Rollback Tran Starting イベント クラスのデータ列  
   
 |データ列名|データ型|説明|列 ID|フィルターの適用|  
 |----------------------|---------------|-----------------|---------------|----------------|  
@@ -34,12 +34,12 @@ ms.locfileid: "52786004"
 |DatabaseName|`nvarchar`|ユーザーのステートメントが実行されているデータベースの名前。|35|はい|  
 |EventClass|`int`|イベントの種類 = 187。|27|いいえ|  
 |EventSequence|`int`|要求内の特定のイベントのシーケンス。|51|いいえ|  
-|EventSubClass|`int`|イベント サブクラスの種類。<br /><br /> 1 = ロールバック<br /><br /> 2 = ロールバックして開始|21|はい|  
+|EventSubClass|`int`|イベント サブクラスの種類。<br /><br /> 1 = ロールバック<br /><br /> 2 = ロールバックして開始|21|[はい]|  
 |GroupID|`int`|SQL トレース イベントが発生したワークロード グループの ID。|66|はい|  
 |HostName|`nvarchar`|クライアントが実行されているコンピューターの名前。 このデータ列にはクライアントからホスト名が提供されている場合に値が格納されます。 ホスト名を指定するには、HOST_NAME 関数を使用します。|8|はい|  
 |IsSystem|`int`|イベントがシステム プロセスとユーザー プロセスのどちらで発生したか。 1 はシステム、0 はユーザーです。|60|はい|  
 |LoginName|`nvarchar`|ユーザーのログイン名 ( [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] セキュリティ ログインまたは DOMAIN\username という形式の [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows ログイン資格情報)。|11|はい|  
-|LoginSid|`image`|ログインしたユーザーのセキュリティ識別子 (SID)。 この情報は、sys.server_principals カタログ ビューで参照できます。 各 SID はサーバーのログインごとに一意です。|41|はい|  
+|LoginSid|`image`|ログインしたユーザーのセキュリティ識別子 (SID)。 この情報は、sys.server_principals カタログ ビューで参照できます。 各 SID はサーバーのログインごとに一意です。|41|[はい]|  
 |NTDomainName|`nvarchar`|ユーザーが所属する Windows ドメイン。|7|はい|  
 |NTUserName|`nvarchar`|Windows のユーザー名。|6|はい|  
 |RequestID|`int`|ステートメントが含まれている要求の ID。|49|はい|  
@@ -49,9 +49,9 @@ ms.locfileid: "52786004"
 |StartTime|`datetime`|イベントの開始時刻 (取得できた場合)。|14|はい|  
 |TextData|`ntext`|トレースでキャプチャされたイベント クラスに依存するテキスト値。|1|はい|  
 |TransactionID|`bigint`|システムによって割り当てられたトランザクション ID。|4|はい|  
-|XactSequence|`bigint`|現在のトランザクションを説明するトークン。|50|はい|  
+|XactSequence|`bigint`|現在のトランザクションを説明するトークン。|50|[はい]|  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [ROLLBACK TRANSACTION &#40;Transact-SQL&#41;](/sql/t-sql/language-elements/rollback-transaction-transact-sql)   
  [sp_trace_setevent &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql)  
   

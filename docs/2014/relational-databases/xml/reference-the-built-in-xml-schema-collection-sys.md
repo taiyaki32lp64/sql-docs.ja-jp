@@ -13,15 +13,15 @@ helpviewer_keywords:
 - XML schema collections [SQL Server], predefined
 - built-in XML schema collections [SQL Server]
 ms.assetid: 1e118303-5df0-4ee4-bd8d-14ced7544144
-author: douglaslMS
-ms.author: douglasl
+author: MightyPen
+ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 2b9c91e26c7c797bcde837d59c9447bc50d7d435
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 410dd8785ce58f87b35c6c18b5c5dc00ffcd9faa
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53376054"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63240780"
 ---
 # <a name="reference-the-built-in-xml-schema-collection-sys"></a>組み込みの XML スキーマ コレクション (sys) の参照
   作成したどのデータベースでも、 **sys** リレーショナル スキーマに **sys** XML スキーマ コレクションが事前に定義されています。 各データベースはこれらの事前定義されたスキーマを保持します。また、これらのスキーマは、ユーザーが作成した他の XML スキーマ コレクションからアクセスできます。 このような事前定義されたスキーマに使われているプレフィックスは、XQuery で意味があるものとして扱われます。 **xml** のみが、予約されているプレフィックスです。  

@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 04/27/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 ms.assetid: d7a11bda-ae26-49ac-b071-37d83cae5afe
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: b820e36ba4c7fd90398ba5984a2d43bbd29b3746
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: a7996ea2541963d0c7a2060d819667e25d102305
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56039603"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66108959"
 ---
 # <a name="add-an-additional-reporting-services-web-front-end-to-a-farm"></a>ファームへの Reporting Services Web フロントエンドの追加
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePoint モードには、アプリケーション サーバーと Web フロントエンド (WFE) サーバーに必要なコンポーネントが含まれています。 このトピックでは、WFE サーバーに必要な [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] コンポーネントのインストールに焦点を当てます。これらのコンポーネントには、サブスクリプション、データ警告、 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] など、 [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)]機能で使用されるアプリケーション ページが含まれます。 WFE に必要な主要な [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] インストールは、SharePoint 2010 製品用 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] アドインをインストールすることです。  
@@ -59,7 +58,7 @@ ms.locfileid: "56039603"
 |SharePoint Server 2010 SP1 をインストールします。|既存の SharePoint ファームに SharePoint 2010 SP1 インストールをダウンロードしてから、SharePoint 2010 SP1 をインストールする場合:[https://support.microsoft.com/kb/2460045](https://go.microsoft.com/fwlink/p/?linkID=219697)します。<br /><br /> SharePoint 2010 SP1 の詳細については、「 [Office 2010 SP1 および SharePoint 2010 SP1 インストール時の既知の問題](https://support.microsoft.com/kb/2532126)」を参照してください。|  
 |SharePoint 製品の構成ウィザードを実行して、ファームにサーバーを追加します。|1) で、 **Microsoft SharePoint 2010 製品**プログラム グループで、をクリックして**Microsoft SharePoint 2010 製品構成ウィザード**します。<br /><br /> 2)、**サーバー ファームへの接続**選択ページ**既存ファームへの接続** をクリック**次**。<br /><br /> 3)、**構成データベースの設定の指定** ページで、既存のファーム構成データベースの名前を使用するデータベース サーバーの名前を入力します。 **[次へ]** をクリックします。<br />**&#42;&#42;重要な&#42; &#42;** で SQL Server ネットワーク構成に対してどのようなプロトコルが有効になっている確認し、次のようなエラー メッセージが表示アクセス許可があることを確認する場合は、 **Sql ServerConfiguration Manager**します。 "データベース サーバーへの接続に失敗しました。 確認してください、データベースが存在する、それが Sql Server、およびサーバーにアクセスする適切なアクセス許可がある。"<br />**&#42;&#42;重要な&#42; &#42;** ページが表示された場合**サーバー ファーム製品と修正プログラムの状態**、ページの情報を確認しへの参加を続行する前に、必要なファイルでサーバーを更新する必要がありますファームにサーバー。<br /><br /> 4)、**ファームのセキュリティ設定の指定**ページは、ファームのパスフレーズを入力し、をクリックして**次**します。 確認ページで **[次へ]** をクリックして、ウィザードを実行します。<br /><br /> 5) クリック**次**を実行する、**ファーム構成ウィザード**します。|  
 |サーバーが SharePoint ファームに追加されたことを確認します。|1) SharePoint サーバーの全体管理で、 **[システム設定]** の **[このファームのサーバーの管理]** をクリックします。<br /><br /> 2) 新しいサーバーが追加され、状態が正しいことを確認します。<br /><br /> このサーバーを WFE ロールから削除するには 3) をクリックして**サービス サーバーの管理**サービスを停止および**Microsoft SharePoint Foundation Web アプリケーション**。|  
-|インストール、 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePoint 2010 製品用アドイン。|アドインをインストールするには、いくつかの方法があります。 次の手順では、 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] セットアップ ウィザードを使用します。 アドインをインストールする方法の詳細については、次を参照してください。[インストールまたは SharePoint 用 Reporting Services アドインのアンインストール&#40;SharePoint 2010 および SharePoint 2013&#41;](install-or-uninstall-the-reporting-services-add-in-for-sharepoint.md)します。 実行[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]インストール。<br /><br /> 1) **[セットアップ ロール]** ページで、 **[SQL Server 機能のインストール]** を選択します。<br /><br /> 2)、**機能の選択**] ページで、[ **Reporting Services アドインを SharePoint 製品用**<br /><br /> 3) をクリックして**次**セットアップ オプションを完了する次のいくつかのページにします。<br /><br />  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]の詳細については、「 [SharePoint 2010 用 Reporting Services の SharePoint モードのインストール](../../../2014/sql-server/install/install-reporting-services-sharepoint-mode-for-sharepoint-2010.md)」を参照してください。|  
+|インストール、 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePoint 2010 製品用アドイン。|アドインをインストールするには、いくつかの方法があります。 次の手順では、 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] セットアップ ウィザードを使用します。 アドインをインストールする方法の詳細については、次を参照してください。[インストールまたは SharePoint 用 Reporting Services アドインのアンインストール&#40;SharePoint 2010 および SharePoint 2013&#41;](install-or-uninstall-the-reporting-services-add-in-for-sharepoint.md)します。 実行[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]インストール。<br /><br /> 1) **[セットアップ ロール]** ページで、 **[SQL Server 機能のインストール]** を選択します。<br /><br /> 2)、**機能の選択**] ページで、[ **Reporting Services アドインを SharePoint 製品用**<br /><br /> 3) をクリックして**次**セットアップ オプションを完了する次のいくつかのページにします。<br /><br /> [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]の詳細については、「 [SharePoint 2010 用 Reporting Services の SharePoint モードのインストール](../../../2014/sql-server/install/install-reporting-services-sharepoint-mode-for-sharepoint-2010.md)」を参照してください。|  
 |新しいサーバーが稼働することを確認します。|1) SharePoint サーバーの全体管理で、 **[システム設定]** の **[このファームのサーバーの管理]** をクリックします。<br /><br /> 2) 新しいサーバーが一覧に含まれていることを確認します。|  
 |NLB ソリューションを更新します。|該当する場合は、ハードウェアまたはソフトウェア NLB 環境を更新し、新しいサーバーを環境に含めます。|  
   

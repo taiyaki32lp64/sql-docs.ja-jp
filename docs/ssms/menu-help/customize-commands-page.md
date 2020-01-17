@@ -1,5 +1,5 @@
 ---
-title: '[カスタマイズ]\([コマンド] ページ) | Microsoft Docs'
+title: '[カスタマイズ] ([コマンド] ページ) | Microsoft Docs'
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -10,15 +10,14 @@ ms.topic: conceptual
 f1_keywords:
 - sql13.swb.vs.customizecom.f1
 ms.assetid: c8965f2c-51d9-437d-a6f3-8ac2075ede6b
-author: stevestein
-ms.author: sstein
-manager: craigg
-ms.openlocfilehash: ccd1f0f6318aa5a81e9b824ecdd4ddd7a50bdd7a
-ms.sourcegitcommit: 40c3b86793d91531a919f598dd312f7e572171ec
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 2fd07b342977603f6983c4d9389ac1c6b7934629
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53328332"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68259424"
 ---
 # <a name="customize-commands-page"></a>[カスタマイズ] \([コマンド] ページ)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

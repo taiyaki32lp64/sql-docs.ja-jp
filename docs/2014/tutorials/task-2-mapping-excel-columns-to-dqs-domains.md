@@ -7,15 +7,15 @@ ms.reviewer: ''
 ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: f347cc92-950f-4021-b7af-393640dfe821
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: e9bc721869c1287be709c594fd60aad511709e46
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 29d45e06dcd3e67af3abbc6b356d44877e40f46b
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56020471"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65484703"
 ---
 # <a name="task-2-mapping-excel-columns-to-dqs-domains"></a>タスク 2:DQS ドメインに Excel 列をマップする
     
@@ -49,6 +49,6 @@ ms.locfileid: "56020471"
 6.  をクリックして**次**に切り替える、 **Cleanse**ページ。  
   
 ## <a name="next-step"></a>次の手順  
- [タスク 3:Suppliers ナレッジ ベースに対してデータをクレンジング](../../2014/tutorials/task-3-cleansing-data-against-the-suppliers-knowledge-base.md)  
+ [タスク 3: Suppliers ナレッジ ベースに対してデータをクレンジング](../../2014/tutorials/task-3-cleansing-data-against-the-suppliers-knowledge-base.md)  
   
   

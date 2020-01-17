@@ -20,15 +20,14 @@ helpviewer_keywords:
 - queries [SQL Server], results
 - Results pane
 ms.assetid: 6309a1bc-a628-4141-8bb5-b35924bd19f9
-author: stevestein
-ms.author: sstein
-manager: craigg
-ms.openlocfilehash: ca52db342b92b3c20e52ca4080505244bfb78eea
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 65221627169e524b53eed7965ec6ec2f7c677b8d
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47601730"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68255802"
 ---
 # <a name="results-pane-visual-database-tools"></a>結果ペイン (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

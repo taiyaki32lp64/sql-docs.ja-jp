@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 07/17/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - Multidimensional Expressions [Analysis Services], about MDX
@@ -17,12 +16,12 @@ ms.assetid: 4797ddc8-6423-497a-9a43-81a1af7eb36c
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: acd35ed9c39dc11b0ea60017b082d407f6c1b47d
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: b51c763987fdfe8bbaf08851094a5e6e6d267c36
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52512798"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66074858"
 ---
 # <a name="key-concepts-in-mdx-analysis-services"></a>MDX の主な概念 (Analysis Services)
   多次元式 (MDX) を使用して多次元データを照会したり、キューブ内で MDX 式を作成したりするには、多次元の概念と用語を理解しておく必要があります。  
@@ -103,7 +102,7 @@ ms.locfileid: "52512798"
 ## <a name="key-attributes"></a>キー属性  
  モデルは、キーとインデックスを使って関連付けを示す関連オブジェクトのコレクションです。 Analysis Services モデルについても違いはありません。 ディメンション (リレーショナル モデルのテーブルに相当することを思い出してください) ごとに、キー属性が存在します。 **キー属性** は、ファクト テーブル (メジャー グループ) に対する外部キー リレーションシップで使用されます。 ディメンション内のすべての非キー属性がキー属性に (直接的または間接的に) リンクされます。  
   
- 必ずではありませんが、キー属性の多くは **粒度属性**でもあります。 粒度は、データ内の詳細または精度のレベルを表します。 この場合も、一般的な例が理解の助けになります。 日付の値を考えてみましょう。日次売上の場合は、日付の値を日に設定する必要があります。売上予算の場合は、四半期ごとで十分ですが、分析データがスポーツ イベントのレース結果で構成されている場合は、粒度をミリ秒にする必要があります。 データ値の精度のレベルが粒度です。  
+ 必ずではありませんが、キー属性の多くは **粒度属性**でもあります。 粒度は、データ内の詳細または精度のレベルを表します。 この場合も、一般的な例が理解の助けになります。 日付の値を考慮してください。毎日の売上の日に指定された値を日付する必要があります。クォータは、四半期に 1 回あります十分ですが、分析データがスポーツ イベントのレース結果で構成される場合、粒度も非常にミリ秒にする必要があります。 データ値の精度のレベルが粒度です。  
   
  通貨は、別の例: 財務アプリケーションは、地方の学校の資金調達は、最も近いドルに値を必要がありますのみに、多くの小数点以下桁数の金銭的価値を追跡可能性があります。 粒度の理解は、不要なデータの保存を避けるという意味でも重要です。 詳細のレベルが分析に影響しない場合は、タイムスタンプからミリ秒を切り捨てる、または、売上高から少額を切り捨てることによって、ストレージと処理時間を節約することができます。  
   

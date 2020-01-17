@@ -17,15 +17,14 @@ helpviewer_keywords:
 ms.assetid: b55d3898-596d-47a5-a4f0-d65dc736223b
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 3b2c202ae0336884b801160569c62ad469d22aa1
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 19c0a4d2a95b81c26b746a8ece9defce61fe712f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47758520"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68009136"
 ---
-# <a name="spdeletenotification-transact-sql"></a>sp_delete_notification (Transact-SQL)
+# <a name="spdeletenotification-transact-sql"></a>sp_delete_notification (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   特定の警告およびオペレーターに対する [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェント通知定義を削除します。  
@@ -42,11 +41,9 @@ sp_delete_notification
 ```  
   
 ## <a name="arguments"></a>引数  
- [ **@alert_name=** ] **'***alert***'**  
- 警告の名前を指定します。 *アラート*は**sysname**、既定値はありません。  
+`[ @alert_name = ] 'alert'` アラートの名前。 *アラート*は**sysname**、既定値はありません。  
   
- [ **@operator_name=** ] **'***operator***'**  
- オペレーターの名前です。 *演算子*は**sysname**、既定値はありません。  
+`[ @operator_name = ] 'operator'` オペレーターの名前。 *演算子*は**sysname**、既定値はありません。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  **0** (成功) または**1** (失敗)  
@@ -55,7 +52,7 @@ sp_delete_notification
  なし  
   
 ## <a name="remarks"></a>コメント  
- 通知を削除する場合は、通知だけが削除されます。警告やオペレーターには影響しません。  
+ 通知を削除すると通知だけが削除されます。アラートと演算子はそのまま残されます。  
   
 ## <a name="permissions"></a>アクセス許可  
  このストアド プロシージャを実行するユーザーに付与する必要があります、 **sysadmin**固定サーバー ロール。  
@@ -73,7 +70,7 @@ EXEC dbo.sp_delete_notification
 GO  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [sp_add_alert &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-alert-transact-sql.md)   
  [sp_add_notification &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-notification-transact-sql.md)   
  [sp_add_operator &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-operator-transact-sql.md)   

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 dev_langs:
 - VB
@@ -17,22 +16,22 @@ helpviewer_keywords:
 - SSIS packages, property expressions
 - property expressions [Integration Services]
 ms.assetid: cd0e171a-08be-45d6-81dc-ed94f37698b8
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: d561840bfe2c10d7b269bb952b934d22dd957d32
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: f70a956834108c21dd7b17bb9f3e04db38f29bfa
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48135202"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66059941"
 ---
 # <a name="data-flow-properties-that-can-be-set-by-using-expressions"></a>式を使って設定できるデータ フロー プロパティ
   データ フロー タスク コンテナーで使用できるプロパティ式を使用して、データ フロー オブジェクトの特定のプロパティの値を指定できます。  
   
  プロパティ式の使用の詳細については、「 [パッケージでプロパティ式を使用する](expressions/use-property-expressions-in-packages.md)」を参照してください。  
   
- プロパティ式を使用して、パッケージを配置するインスタンスごとに構成をカスタマイズできます。 また、コマンド プロンプト ユーティリティ **dtexec** に **/set** オプションを付けて使用すると、プロパティ式を使用してパッケージの実行時制約を指定することもできます。 たとえば、制限、 `MaximumThreads` 、並べ替え変換で使用される、または`MaxMemoryUsage`あいまいグループ化とあいまい参照変換の。 制約を行わないと、これらの変換により大容量のデータがメモリ内にキャッシュされる場合があります。  
+ プロパティ式を使用して、パッケージを配置するインスタンスごとに構成をカスタマイズできます。 また、コマンド プロンプト ユーティリティ **dtexec** に **/set** オプションを付けて使用すると、プロパティ式を使用してパッケージの実行時制約を指定することもできます。 たとえば、並べ替え変換で使用される `MaximumThreads`、または、あいまいグループ化変換およびあいまい参照変換の `MaxMemoryUsage` を制約できます。 制約を行わないと、これらの変換により大容量のデータがメモリ内にキャッシュされる場合があります。  
   
  このトピックに示すデータ フロー オブジェクトのプロパティの 1 つに対するプロパティ式を指定するには、デザイナーの **[制御フロー]** 画面でデータ フロー タスクを選択するか、コンポーネントやパスを個別に選択せずにデザイナーの **[データ フロー]** タブを選択して、データ フロー タスクの **[プロパティ]** ウィンドウを表示します。 **[式]** プロパティを選択し、省略記号 (...) をクリックして、 **[プロパティ式エディター]** ダイアログ ボックスを表示します。 **[プロパティ]** の一覧からプロパティを選択し、 **[式]** テキスト ボックスに式を入力するか、省略記号 (...) をクリックして **[式ビルダー]** ダイアログ ボックスを表示します。  
   
@@ -79,10 +78,10 @@ ms.locfileid: "48135202"
 -   [プロパティ式を追加または変更する](expressions/add-or-change-a-property-expression.md)  
   
 ## <a name="related-content"></a>関連コンテンツ  
- pragmaticworks.com の技術記事「 [SSIS 式チート シート](http://pragmaticworks.com/cheatsheet/)」  
+ pragmaticworks.com の技術記事「 [SSIS 式チート シート](https://pragmaticworks.com/Resources/Cheat-Sheets/SSIS-Expression-Cheat-Sheet)」  
   
-## <a name="see-also"></a>参照  
- [パッケージでプロパティ式を使用します。](expressions/use-property-expressions-in-packages.md)   
+## <a name="see-also"></a>関連項目  
+ [パッケージでプロパティ式を使用する](expressions/use-property-expressions-in-packages.md)   
  [共通プロパティ](../../2014/integration-services/common-properties.md)   
  [変換のカスタム プロパティ](data-flow/transformations/transformation-custom-properties.md)   
  [パスのプロパティ](../../2014/integration-services/path-properties.md)  

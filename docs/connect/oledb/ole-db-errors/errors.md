@@ -1,5 +1,5 @@
 ---
-title: エラー |Microsoft Docs
+title: エラー | Microsoft Docs
 description: エラー
 ms.custom: ''
 ms.date: 06/14/2018
@@ -16,13 +16,12 @@ helpviewer_keywords:
 - OLE DB error handling
 author: pmasl
 ms.author: pelopes
-manager: craigg
-ms.openlocfilehash: 96772a8de06454d038b3e018643cd32e5132ec2c
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.openlocfilehash: 9bf1985706cefc3007da56a9bf782a070e3b8edf
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51606112"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67994960"
 ---
 # <a name="errors"></a>エラー
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -37,7 +36,7 @@ ms.locfileid: "51606112"
   
  OLE DB Driver for SQL Server は、OLE DB レコードに対して機能強化された **IErrorInfo**、カスタム **ISQLErrorInfo**、およびプロバイダー固有の [ISQLServerErrorInfo](https://msdn.microsoft.com/library/a8323b5c-686a-4235-a8d2-bda43617b3a1) の各エラー オブジェクト インターフェイスを公開します。  
   
- エラーのトレースの詳細については、「[データ アクセスのトレース](https://go.microsoft.com/fwlink/?LinkId=125805)」を参照してください。 エラーのトレースで追加の機能強化については[!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)]を参照してください[診断の情報を拡張イベント ログにアクセスする](../../oledb/features/accessing-diagnostic-information-in-the-extended-events-log.md)します。  
+ エラーのトレースの詳細については、「[データ アクセスのトレース](https://go.microsoft.com/fwlink/?LinkId=125805)」を参照してください。 で[!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)]追加されたエラートレースの機能強化の詳細については、「[拡張イベントログの診断情報へのアクセス](../../oledb/features/accessing-diagnostic-information-in-the-extended-events-log.md)」を参照してください。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
   

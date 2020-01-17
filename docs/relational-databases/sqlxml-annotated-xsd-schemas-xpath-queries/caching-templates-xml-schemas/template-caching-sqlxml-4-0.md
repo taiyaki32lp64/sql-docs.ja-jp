@@ -1,6 +1,5 @@
 ---
-title: テンプレート キャッシュ (SQLXML 4.0) |マイクロソフトのドキュメント
-ms.custom: ''
+title: テンプレートのキャッシュ (SQLXML)
 ms.date: 03/04/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -14,14 +13,14 @@ helpviewer_keywords:
 ms.assetid: 73e151c6-b24e-4422-a116-51e0846bc6f5
 author: MightyPen
 ms.author: genemi
-manager: craigg
+ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: e18dd84ff5e38419202ee0e2475f560630c13718
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: ac28f41ca90b686dd469640abaaabe6855b07766
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56034703"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75246659"
 ---
 # <a name="template-caching-sqlxml-40"></a>テンプレートのキャッシュ (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -36,9 +35,9 @@ HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\MSSQLServer\Client\SQLXML4\TemplateCacheSi
 > [!CAUTION]  
 >  [!INCLUDE[ssNoteRegistry](../../../includes/ssnoteregistry-md.md)]  
   
- テンプレートのサイズは、使用できるメモリと使用しているテンプレートの数に基づいて設定します。 デフォルトの**TemplateCacheSize**サイズは、31 です。 テンプレートのアクセスが遅い場合はキャッシュ サイズを増やし、メモリが少ない場合はキャッシュ サイズを減らします。  
+ テンプレートのサイズは、使用できるメモリと使用しているテンプレートの数に基づいて設定します。 **TemplateCacheSize**の既定値は31です。 テンプレートのアクセスが遅い場合はキャッシュ サイズを増やし、メモリが少ない場合はキャッシュ サイズを減らします。  
   
- パフォーマンス向上のためお勧め設定する**TemplateCacheSize**通常使用するテンプレートの数よりも高い。 場合**TemlateCacheSize**は、以下のテンプレートの増加数と、あるテンプレートの数よりもパフォーマンスが低下します。 **TemplateCacheSize**最大値は 128 に設定することができます。  
+ パフォーマンスを向上させるために、通常使用するテンプレートの数より**TemplateCacheSize**を設定することをお勧めします。 **TemlateCacheSize**がテンプレートの数より少ない場合、テンプレートの数が増えるにつれてパフォーマンスが低下します。 **TemplateCacheSize**は最大128に設定できます。  
   
  キャッシュされたテンプレートが使用されるときには、毎回テンプレート ファイルの変更回数がチェックされ、更新が必要がどうかが決定されます。 これは、ディスク コピーがキャッシュ コピーより新しいためです。  
   
@@ -46,7 +45,7 @@ HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\MSSQLServer\Client\SQLXML4\TemplateCacheSi
 >  テンプレートのパラメーターとコマンド プロパティはキャッシュされません。  
   
 ## <a name="see-also"></a>参照  
- [スキーマ キャッシュ&#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/caching-templates-xml-schemas/schema-caching-sqlxml-4-0.md)   
- [XSL のキャッシュ&#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/caching-templates-xml-schemas/xsl-caching-sqlxml-4-0.md)  
+ [スキーマキャッシュ &#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/caching-templates-xml-schemas/schema-caching-sqlxml-4-0.md)   
+ [XSL キャッシュ &#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/caching-templates-xml-schemas/xsl-caching-sqlxml-4-0.md)  
   
   

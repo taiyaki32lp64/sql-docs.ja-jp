@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 0f0b1fb6-f697-4ced-811c-2908e210bc71
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 4ce45314cef92404fe14a43e033c14d6a272e1bf
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a62bad0e69a8bf8b5365575f97e4791cbbf270d6
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47765790"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68057110"
 ---
 # <a name="row-status"></a>行の状態
 > [!IMPORTANT]  

@@ -14,14 +14,14 @@ helpviewer_keywords:
 ms.assetid: d5bf7340-2b0b-4593-965c-de04ae628344
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 60f8d479b5efb63e08427e9dbfb019cdf9c8f5ec
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
+ms.openlocfilehash: d05dfb3e00dfdd473cc120496825c246fda75428
+ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47852740"
+ms.lasthandoff: 08/03/2019
+ms.locfileid: "68769843"
 ---
 # <a name="maintain-publications"></a>パブリケーションの管理
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
   パブリケーションの作成後、アーティクルの追加や削除、またはパブリケーションおよびアーティクルのプロパティの変更が必要になる場合があります。 ほとんどの変更はパブリケーションの作成後に行うことができますが、場合によっては、パブリケーションのスナップショットの新規生成やパブリケーションに対するサブスクリプションの再初期化が必要になります。

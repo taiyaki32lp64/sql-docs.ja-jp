@@ -15,15 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - STY (geometry Data Type)
 ms.assetid: f72e0eaa-7d1d-4052-88fd-a172d8cb0d71
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: b4c8b0a123f2c4151a55813f0fd1025421e3eda3
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: MladjoA
+ms.author: mlandzic
+ms.openlocfilehash: 05f4ddd6366fbb09b4c5f0c9dd186f415fdc16ea
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47755300"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68066143"
 ---
 # <a name="sty-geometry-data-type"></a>STY (geometry データ型)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -40,7 +39,7 @@ ms.locfileid: "47755300"
 ## <a name="return-types"></a>戻り値の型  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の型: **float**  
   
- CLR の型: **SqlDouble**  
+ CLR の型:**SqlDouble**  
   
 ## <a name="remarks"></a>Remarks  
  **geometry** インスタンスが地点である場合、このプロパティの値は null になります。 このプロパティは読み取り専用です。  

@@ -11,15 +11,14 @@ helpviewer_keywords:
 - scripts [SQL Server], traces
 - extracting script from trace [SQL Server]
 ms.assetid: 431126a6-ff91-4818-8763-4442152bd571
-author: stevestein
-ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 5cab84931db11e91e474ffd38aecfa4fb2aafae4
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 2c2ee53261681cbcebd023bef75b98124a24d383
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47617170"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68223696"
 ---
 # <a name="extract-a-script-from-a-trace-sql-server-profiler"></a>トレースからのスクリプトの抽出 (SQL Server Profiler)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -29,7 +28,7 @@ ms.locfileid: "47617170"
   
 1.  [!INCLUDE[tsql](../../includes/tsql-md.md)] スクリプト ファイルに保存する [!INCLUDE[tsql](../../includes/tsql-md.md)] イベントが含まれているトレース ファイルまたはテーブルを開きます。 詳細については、「 [トレース ファイルを開く &#40;SQL Server Profiler&#41;](../../tools/sql-server-profiler/open-a-trace-file-sql-server-profiler.md) や [トレース テーブルを開く &#40;SQL Server Profiler&#41;](../../tools/sql-server-profiler/open-a-trace-table-sql-server-profiler.md)に付属の定義済みチューニング テンプレートを使用します。  
   
-2.  **[ファイル]** メニューで **[エクスポート]**、**[SQL Server イベントの抽出]** の順にポイントし、**[Transact-SQL イベントの抽出]** をクリックします。  
+2.  **[ファイル]** メニューで **[エクスポート]** 、 **[SQL Server イベントの抽出]** の順にポイントし、 **[Transact-SQL イベントの抽出]** をクリックします。  
   
 3.  **[名前を付けて保存]** ダイアログ ボックスで、 [!INCLUDE[tsql](../../includes/tsql-md.md)] ファイルの名前を入力し、 **[保存]** をクリックします。  
   

@@ -15,11 +15,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 0ead368dece8a0c1effd8f8ddc7ff5e5793e8350
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53355522"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62791856"
 ---
 # <a name="availability-replica-is-disconnected"></a>可用性レプリカが切断されている
     
@@ -28,7 +28,7 @@ ms.locfileid: "53355522"
 |||  
 |-|-|  
 |**ポリシー名**|可用性レプリカの接続状態|  
-|**問題点**|可用性レプリカの接続が解除されます。|  
+|**問題**|可用性レプリカの接続が解除されます。|  
 |**カテゴリ**|**重大**|  
 |**ファセット**|可用性レプリカ|  
   

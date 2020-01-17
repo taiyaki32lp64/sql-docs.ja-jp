@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: f17abdd4-5f34-403a-ade4-7857d3056b83
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: 99b8a8de84c6dafc1db26bfbf147d2b9ba0fee85
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 8ed9b592923c421c229706d69abf3b5de2c98bd0
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51677701"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68087106"
 ---
 # <a name="input-and-output-error-during-hard-page-fault"></a>ハード ページ フォールト中の I/O エラー
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

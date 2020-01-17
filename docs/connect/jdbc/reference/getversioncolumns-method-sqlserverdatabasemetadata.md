@@ -1,5 +1,5 @@
 ---
-title: getVersionColumns メソッド (SQLServerDatabaseMetaData) |Microsoft Docs
+title: getVersionColumns メソッド (SQLServerDatabaseMetaData) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: 6dd275d3-d9b2-4db7-938a-d4406c940a7a
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 938cf980a4035684b2e77435d5ab4df9522b4407
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 3e2cf823a6c1cd33d647472a2e709517175ddce7
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47604010"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67978159"
 ---
 # <a name="getversioncolumns-method-sqlserverdatabasemetadata"></a>getVersionColumns メソッド (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -57,7 +56,7 @@ public java.sql.ResultSet getVersionColumns(java.lang.String catalog,
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- この getVersionColumns メソッドは、java.sql.DatabaseMetaData インターフェイスで getVersionColumns メソッドによって指定されます。  
+ この getVersionColumns メソッドは、java.sql.DatabaseMetaData インターフェイスの getVersionColumns メソッドで規定されています。  
   
  getVersionColumns メソッドによって返される結果セットには、次の情報が含まれます。  
   

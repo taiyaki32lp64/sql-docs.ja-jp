@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: 3d4c67c2-a3c8-4a26-a159-89c5d63fda0b
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 200267a37383d858d80419d49e0fbd5172294907
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: c6b8f6239fbc229af009fc9745b0f19ed27e7ee1
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47793670"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67979053"
 ---
 # <a name="gettime-method-javalangstring-javautilcalendar"></a>getTime (java.lang.String, java.util.Calendar) メソッド
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -41,12 +40,12 @@ public java.sql.Time getTime(java.lang.String sCol,
   
  パラメーターの名前を含む**文字列**です。  
   
- *cal*  
+ *カレンダー*  
   
- 暦オブジェクト。  
+ Calendar オブジェクト。  
   
 ## <a name="return-value"></a>戻り値  
- 時刻のオブジェクト。  
+ 時刻オブジェクト。  
   
 ## <a name="exceptions"></a>例外  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
@@ -54,7 +53,7 @@ public java.sql.Time getTime(java.lang.String sCol,
 ## <a name="remarks"></a>Remarks  
  この getTime メソッドは、java.sql.CallableStatement インターフェイスの getTime メソッドで規定されています。  
   
- 「Get アクセス操作子メソッドの変換」というタイトル図を参照してください[データ型変換について](../../../connect/jdbc/understanding-data-type-conversions.md)を確認する[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]データ型は、このメソッドで取得できます。  
+ このメソッドで取得できる[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]データ型については、「[データ型の変換につい](../../../connect/jdbc/understanding-data-type-conversions.md)て」の「Getter メソッドの変換」を参照してください。  
   
 ## <a name="see-also"></a>参照  
  [getTime メソッド &#40;SQLServerCallableStatement&#41;](../../../connect/jdbc/reference/gettime-method-sqlservercallablestatement.md)   

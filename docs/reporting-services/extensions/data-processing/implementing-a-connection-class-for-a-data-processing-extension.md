@@ -10,14 +10,14 @@ helpviewer_keywords:
 - Connection class
 - data processing extensions [Reporting Services], connections
 ms.assetid: 7047d29e-a2c9-4e6f-ad02-635851a38ed7
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 1fa0709d4bfde776221c5c5f234c1a3acb502406
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 32d38fd943628b25ab8fd9ce47b779b75c05e211
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50031811"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63193936"
 ---
 # <a name="implementing-a-connection-class-for-a-data-processing-extension"></a>データ処理拡張機能の Connection クラスの実装
   **Connection** オブジェクトはデータベース接続や類似するリソースを表し、ユーザーにとっては [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] データ処理拡張機能の出発点です。 このオブジェクトはデータベース サーバーへの接続を表しますが、類似する動作を持つエンティティが **Connection** として表示される可能性があります。  
@@ -39,7 +39,7 @@ ms.locfileid: "50031811"
   
  <xref:Microsoft.ReportingServices.Interfaces.IExtension> を実装するクラスは、残りのデータ処理拡張機能のクラスが読み込まれていない場合は、メモリから読み込まれません。 このため、**Extension** クラスを使用して、相互接続状態の情報を格納することや、キャッシュできるデータをメモリに格納することができます。 **Extension** クラスは、レポート サーバーを実行中はメモリに残ります。  
   
- <xref:Microsoft.ReportingServices.DataProcessing.IDbConnectionExtension> を実装することによって、[!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] の資格情報のサポートを含むように **Connection** クラスを拡張できます。 <xref:Microsoft.ReportingServices.DataProcessing.IDbConnectionExtension> インターフェイスの <xref:Microsoft.ReportingServices.DataProcessing.IDbConnectionExtension.IntegratedSecurity%2A>、<xref:Microsoft.ReportingServices.DataProcessing.IDbConnectionExtension.UserName%2A>、および <xref:Microsoft.ReportingServices.DataProcessing.IDbConnectionExtension.Password%2A> の各プロパティを実装する場合は、レポート デザイナーの **[データ ソース]** ダイアログ ボックスで **[統合セキュリティ]** チェック ボックスをオンにし、**[ユーザー名]** ボックスと **[パスワード]** ボックスに必要な情報を入力します。 これによって、レポート デザイナーは承認をサポートするデータ ソースの資格情報を格納および取得できます。 資格情報は、セキュリティによって保護されて格納され、プレビュー モードでレポートを表示する場合に使用されます。  
+ <xref:Microsoft.ReportingServices.DataProcessing.IDbConnectionExtension> を実装することによって、[!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] の資格情報のサポートを含むように **Connection** クラスを拡張できます。 <xref:Microsoft.ReportingServices.DataProcessing.IDbConnectionExtension> インターフェイスの <xref:Microsoft.ReportingServices.DataProcessing.IDbConnectionExtension.IntegratedSecurity%2A>、<xref:Microsoft.ReportingServices.DataProcessing.IDbConnectionExtension.UserName%2A>、および <xref:Microsoft.ReportingServices.DataProcessing.IDbConnectionExtension.Password%2A> の各プロパティを実装する場合は、レポート デザイナーの **[データ ソース]** ダイアログ ボックスで **[統合セキュリティ]** チェック ボックスをオンにし、 **[ユーザー名]** ボックスと **[パスワード]** ボックスに必要な情報を入力します。 これによって、レポート デザイナーは承認をサポートするデータ ソースの資格情報を格納および取得できます。 資格情報は、セキュリティによって保護されて格納され、プレビュー モードでレポートを表示する場合に使用されます。  
   
 > [!NOTE]  
 >  <xref:Microsoft.ReportingServices.DataProcessing.IDbConnectionExtension> を暗黙的に実装するには、<xref:Microsoft.ReportingServices.DataProcessing.IDbConnection> インターフェイスと <xref:Microsoft.ReportingServices.Interfaces.IExtension> インターフェイスのメンバーを実装する必要があります。  

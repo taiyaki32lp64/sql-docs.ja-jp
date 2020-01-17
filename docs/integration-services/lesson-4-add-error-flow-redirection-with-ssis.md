@@ -8,17 +8,20 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: tutorial
 ms.assetid: 0c8dbda2-75e3-4278-9b4e-dcd220c92522
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: 43c841010b70599803c71fd6307cfb68464b7265
-ms.sourcegitcommit: e2fa721b6f46c18f1825dd1b0d56c0a6da1b2be1
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: c0117f867363a9536887ff1b67e1960170317d8d
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/11/2019
-ms.locfileid: "54211003"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71295937"
 ---
 # <a name="lesson-4-add-error-flow-redirection-with-ssis"></a>レッスン 4:SSIS でエラー フロー リダイレクションを追加する
+
+[!INCLUDE[ssis-appliesto](../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
 
 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] では、変換プロセスで発生するエラーを処理する目的で、[!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] で変換できないデータの処理方法をコンポーネントごとに、および列ごとに決定できます。 特定の列の失敗を無視するか、失敗した行全体をリダイレクトするか、コンポーネント単位で失敗を判定するように選択できます。 既定の構成では、エラーの発生時に [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] のコンポーネントが変換に失敗したものと見なされます。 コンポーネントが失敗と見なされると、パッケージが失敗と見なされ、処理が停止します。  
   
@@ -38,7 +41,7 @@ ms.locfileid: "54211003"
 ## <a name="lesson-task"></a>レッスンの作業
 このレッスンの内容は次のとおりです。  
   
--   [ステップ 1: レッスン 3 のパッケージをコピーする](../integration-services/lesson-4-1-copying-the-lesson-3-package.md)  
+-   [ステップ 1:レッスン 3 のパッケージをコピーする](../integration-services/lesson-4-1-copying-the-lesson-3-package.md)  
   
 -   [手順 2:破損したファイルを作成する](../integration-services/lesson-4-2-creating-a-corrupted-file.md)  
   
@@ -49,7 +52,7 @@ ms.locfileid: "54211003"
 -   [手順 5:レッスン 4 で作成したチュートリアル パッケージのテスト](../integration-services/lesson-4-5-testing-the-lesson-4-tutorial-package.md)  
   
 ## <a name="start-the-lesson"></a>レッスンの開始  
-[ステップ 1: レッスン 3 のパッケージをコピーする](../integration-services/lesson-4-1-copying-the-lesson-3-package.md)  
+[ステップ 1:レッスン 3 のパッケージをコピーする](../integration-services/lesson-4-1-copying-the-lesson-3-package.md)  
   
   
   

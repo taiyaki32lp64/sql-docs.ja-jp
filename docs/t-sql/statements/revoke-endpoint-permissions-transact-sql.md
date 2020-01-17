@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 826f513e-9ad0-46b9-87ad-7525713638c8
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: a6b7b9e2fdb8673571803e9b98de80dd1d26040f
-ms.sourcegitcommit: c6e71ed14198da67afd7ba722823b1af9b4f4e6f
+ms.openlocfilehash: db85df99a2b37e2d92997dce579d77d0f31f7c0e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/16/2019
-ms.locfileid: "54327566"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68082279"
 ---
 # <a name="revoke-endpoint-permissions-transact-sql"></a>REVOKE (エンドポイントの権限の取り消し) (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -52,8 +51,8 @@ REVOKE [ GRANT OPTION FOR ] permission [ ,...n ]
  *permission*  
  エンドポイントで許可できる権限を指定します。 権限の一覧については、後の「解説」を参照してください。  
   
- ON ENDPOINT **::**_endpoint_name_  
- 権限を許可するエンドポイントを指定します。 スコープ修飾子 (**::**) が必要です。  
+ ON ENDPOINT **::** _endpoint_name_  
+ 権限を許可するエンドポイントを指定します。 スコープ修飾子 ( **::** ) が必要です。  
   
  { FROM | TO } \<server_principal> 権限を取り消す [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ログインを指定します。  
   
@@ -70,7 +69,7 @@ REVOKE [ GRANT OPTION FOR ] permission [ ,...n ]
  非対称キーにマップされている [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ログインの名前を指定します。  
   
  GRANT OPTION  
- 指定した権限を他のプリンシパルに許可するための権利が、取り消されます。 権限自体は取り消されません。  
+ 指定した権限を他のプリンシパルに許可するための権利が、取り消されることを示します。 権限自体は取り消されません。  
   
 > [!IMPORTANT]  
 >  指定した権限が GRANT オプションなしでプリンシパルに許可されている場合は、その権限自体が取り消されます。  

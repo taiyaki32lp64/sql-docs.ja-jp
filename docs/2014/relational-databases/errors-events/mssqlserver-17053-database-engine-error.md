@@ -13,11 +13,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: f86d2fe9f361470f96123f1035fe9ad51fc7cbe0
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48063872"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62915617"
 ---
 # <a name="mssqlserver17053"></a>MSSQLSERVER_17053
     
@@ -30,7 +30,7 @@ ms.locfileid: "48063872"
 |イベント ソース|MSSQLSERVER|  
 |コンポーネント|SQLEngine|  
 |シンボル名|OS_ERROR|  
-|メッセージ テキスト|%ls: オペレーティング システム エラー %ls が発生しました。|  
+|メッセージ テキスト|%ls:オペレーティング システム エラー %ls が発生しました。|  
   
 ## <a name="explanation"></a>説明  
  一般的なオペレーティング システム エラーが発生しました。  結果の状態については明らかではありません。  

@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 04/27/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: analysis-services
 ms.topic: reference
 helpviewer_keywords:
 - objects [XML for Analysis]
@@ -20,12 +18,12 @@ ms.assetid: 43b65f6d-0123-4556-81f0-c7a0b84361e5
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 595a792e515e862297389faccc324fff8727b8da
-ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
+ms.openlocfilehash: ad6c8de47577eccd7797517c8080957d7afe1abd
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50147987"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62727559"
 ---
 # <a name="defining-and-identifying-objects-xmla"></a>オブジェクトの定義と識別 (XMLA)
   XML for Analysis (XMLA) コマンド内では、オブジェクト識別子とオブジェクト参照を使用してオブジェクトが識別されます。また、XMLA コマンド内では、Analysis Services Scripting Language (ASSL) 要素を使用してオブジェクトが定義されます。  

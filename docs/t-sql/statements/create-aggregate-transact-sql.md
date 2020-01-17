@@ -21,13 +21,12 @@ helpviewer_keywords:
 ms.assetid: 62eebc19-9f15-4245-94fa-b3fcd64a9d42
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: 3a6b17b2e157042c41690c3c2cdf6ab92cd84a09
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: 1e796155210017addb6801930903a5aa38df71e8
+ms.sourcegitcommit: e9c1527281f2f3c7c68981a1be94fe587ae49ee9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54125992"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73064627"
 ---
 # <a name="create-aggregate-transact-sql"></a>CREATE AGGREGATE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -62,7 +61,7 @@ EXTERNAL NAME assembly_name [ .class_name ]
  作成する集計関数の名前です。  
   
  **@** _param_name_  
- ユーザー定義集計で定義された 1 つまたは複数のパラメーター。 パラメーターの値は、集計関数の実行時にユーザーが指定する必要があります。 パラメーター名は、最初の文字を "アット" マーク (**@**) にして指定します。 パラメーター名は[識別子](../../relational-databases/databases/database-identifiers.md)のルールに従っている必要があります。 パラメーターは関数に対してローカルです。  
+ ユーザー定義集計で定義された 1 つまたは複数のパラメーター。 パラメーターの値は、集計関数の実行時にユーザーが指定する必要があります。 パラメーター名は、最初の文字を "アット" マーク ( **@** ) にして指定します。 パラメーター名は[識別子](../../relational-databases/databases/database-identifiers.md)のルールに従っている必要があります。 パラメーターは関数に対してローカルです。  
   
  *system_scalar_type*  
  入力パラメーターの値または戻り値を保持する [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] システムのスカラーのデータ型です。 **text**、**ntext**、**image** 以外のすべてのスカラーのデータ型は、ユーザー定義集計のパラメーターとして使用できます。 **cursor** や **table** など、スカラー型以外のデータ型は指定できません。  
@@ -70,16 +69,16 @@ EXTERNAL NAME assembly_name [ .class_name ]
  *udt_schema_name*  
  CLR ユーザー定義型が所属しているスキーマの名前です。 指定しない場合、[!INCLUDE[ssDE](../../includes/ssde-md.md)] は次の順序で *udt_type_name* を参照します。  
   
--   ネイティブ SQL 型の名前空間  
+-   ネイティブ SQL 型の名前空間。  
   
--   現在のデータベースにおける現在のユーザーの既定のスキーマ  
+-   現在のデータベースにおける現在のユーザーの既定のスキーマ。  
   
 -   現在のデータベースの **dbo** スキーマ。  
   
  *udt_type_name*  
  現在のデータベースに既に作成されている CLR ユーザー定義型の名前です。 *udt_schema_name* を指定しない場合、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、型は現在のユーザーのスキーマに所属すると見なされます。  
   
- *assembly_name* [ **.**_class_name_ ]  
+ *assembly_name* [ **.** _class_name_ ]  
  ユーザー定義集計関数にバインドするアセンブリ、および必要に応じて、アセンブリが所属するスキーマの名前とユーザー定義集計を実装するアセンブリ内のクラス名を指定します。 アセンブリは、CREATE ASSEMBLY ステートメントを使用してデータベース内に作成されている必要があります。 *class_name* は有効な [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 識別子でなければならず、アセンブリに存在するクラスの名前と一致する必要があります。 C# など、クラスを記述するのに使用するプログラミング言語で名前空間を使用する場合、*class_name* には名前空間で修飾された名前を指定できます。 *class_name* を指定しない場合は、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、*aggregate_name* と同じであると見なされます。  
   
 ## <a name="remarks"></a>Remarks  
@@ -95,7 +94,7 @@ EXTERNAL NAME assembly_name [ .class_name ]
   
  この例は集計 `Concatenate` を作成します。 集計が作成される前に、アセンブリ `StringUtilities.dll` がローカル データベースに登録されます。  
   
-```  
+```sql  
 USE AdventureWorks2012;  
 GO  
 DECLARE @SamplesPath nvarchar(1024)  

@@ -1,6 +1,7 @@
 ---
-title: データベース ミラーリング セッションでのサービスの強制 (Transact-SQL) | Microsoft Docs
-ms.custom: ''
+title: データベース ミラーリング サービスの強制
+description: ミラー サーバーが使用可能になっている間にプリンシパル サーバーで障害が発生した場合は、ミラー化されたデータベースにフェールオーバーするサービスを強制することで、データベースを使用できるようにします (データ損失の可能性があります)。
+ms.custom: seo-lt-2019
 ms.date: 03/04/2017
 ms.prod: sql
 ms.prod_service: high-availability
@@ -13,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 8b6ffe77-35f3-4e2a-a658-8a38a8e1c794
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: a4951bccf6f0aedab2e57045046f8be1c8833b38
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 970f399ab6227fdaf2672bf887c250b6be02de1e
+ms.sourcegitcommit: f8cf8cc6650a22e0b61779c20ca7428cdb23c850
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47621730"
+ms.lasthandoff: 12/04/2019
+ms.locfileid: "74822225"
 ---
 # <a name="force-service-in-a-database-mirroring-session-transact-sql"></a>データベース ミラーリング セッションでのサービスの強制 (Transact-SQL)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -42,7 +42,7 @@ ms.locfileid: "47621730"
   
      ALTER DATABASE *<database_name>* SET PARTNER FORCE_SERVICE_ALLOW_DATA_LOSS  
   
-     ここで、*<database_name>* はミラー化されたデータベースです。  
+     ここで、 *<database_name>* はミラー化されたデータベースです。  
   
      ミラー サーバーは、直ちにプリンシパル サーバーに切り替わり、ミラーリングが中断されます。  
   

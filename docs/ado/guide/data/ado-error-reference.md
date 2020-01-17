@@ -14,16 +14,15 @@ helpviewer_keywords:
 ms.assetid: f653393e-d4b0-4c34-ad5f-2bdf56bc1305
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 7a71b651df387bfe28992d426fd2080587e439ad
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.openlocfilehash: da9d7d2374f8e3410598bfdfbd97e59eb505b255
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51600922"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67926244"
 ---
 # <a name="ado-errors"></a>ADO エラー
-**ErrorValueEnum**定数は、ADO エラー値を示します。 値を含む、これらの列挙定数の完全な一覧を参照してください。[付録 b: ADO エラー](../../../ado/guide/appendixes/appendix-b-ado-errors.md)します。 このセクションは、さらに興味深いエラーのいくつかを確認し、または問題を解決するソリューションを発生させることが特定の状況について説明します。 両方の**ErrorValueEnum**定数と短いの正の 10 進数の一覧が表示されます。
+**ErrorValueEnum**定数は、ADO エラー値を示します。 値を含む、これらの列挙定数の完全な一覧を参照してください[付録 b:。ADO エラー](../../../ado/guide/appendixes/appendix-b-ado-errors.md)します。 このセクションは、さらに興味深いエラーのいくつかを確認し、または問題を解決するソリューションを発生させることが特定の状況について説明します。 両方の**ErrorValueEnum**定数と短いの正の 10 進数の一覧が表示されます。
 
 |数値|ErrorValueEnum 定数|説明/考えられる原因します。|
 |------------|-----------------------------|----------------------------------|
@@ -54,8 +53,8 @@ ms.locfileid: "51600922"
 |**3714**|**adErrInvalidTransaction**|トランザクションを調整するか、有効でないが開始されていません。|
 |**3715**|**adErrNotExecuting**|実行していないときに、操作を実行できません。|
 |**3716**|**adErrUnsafeOperation**|このコンピューターの安全性設定は、別のドメインのデータ ソースへのアクセスを禁止されています。|
-|**3717**|**adWrnSecurityDialog**|内部使用のみです。 使用しないでください。 (エントリは完全を期すのために含まれています。 このエラーは表示されません、コード。)|
-|**3718**|**adWrnSecurityDialogHeader**|内部使用のみです。 使用しないでください。 (完全を期すのために含まれるエントリ。 このエラーは表示されません、コード。)|
+|**3717**|**adWrnSecurityDialog**|内部使用専用。 使用しないでください。 (エントリは完全を期すのために含まれています。 このエラーは表示されません、コード。)|
+|**3718**|**adWrnSecurityDialogHeader**|内部使用専用。 使用しないでください。 (完全を期すのために含まれるエントリ。 このエラーは表示されません、コード。)|
 |**3719**|**adErrIntegrityViolation**|データ値、フィールドの整合性制約と競合しています。 新しい値を**フィールド**キーの重複が発生します。 2 つのレコード間のリレーションシップの一方の側を形成する値を更新できない可能性があります。|
 |**3720**|**adErrPermissionDenied**|十分なアクセス許可には、フィールドへの書き込みができないようにします。 接続文字列で指定されたユーザーに書き込むには、適切なアクセス許可がない、**フィールド**します。|
 |**3721**|**adErrDataOverflow**|フィールドのデータ型で表されるデータ値が大きすぎます。 目的のフィールドに対して大きすぎる数値が割り当てられました。 たとえば、長整数値は、短整数フィールドに割り当てられました。|

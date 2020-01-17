@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: ed1ef012-fa14-4ba5-bafe-d1527ba065b3
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: d861c45f8f91a9026285552f30434250bb89d515
-ms.sourcegitcommit: 6c9d35d03c1c349bc82b9ed0878041d976b703c6
+ms.openlocfilehash: 60183a9777098728ee258274a19aca4d65885b87
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/06/2018
-ms.locfileid: "51216530"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68115828"
 ---
 # <a name="options-in-the-back-up-database-task-for-maintenance-plan"></a>メンテナンス プラン用のデータベースのバックアップ タスクのオプション
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -31,7 +30,7 @@ ms.locfileid: "51216530"
   
 -   [メンテナンス プランの作成](../../relational-databases/maintenance-plans/create-a-maintenance-plan.md)  
   
-## <a name="options"></a>[変数]  
+## <a name="options"></a>オプション  
  **[接続]**  
  このタスクを実行するときに使用するサーバー接続を選択します。  
   
@@ -39,7 +38,7 @@ ms.locfileid: "51216530"
  このタスクを実行するときに使用する新しいサーバー接続を作成します。 **[新しい接続]** ダイアログ ボックスについては、後で説明します。  
   
  **データベース**  
- このタスクで操作するデータベースを指定します。 ボックスの一覧から、 **[すべてのデータベース]**、 **[すべてのシステム データベース]**、 **[すべてのユーザー データベース]**、または **[特定のデータベース]** を選択します。  
+ このタスクで操作するデータベースを指定します。 選択すると、ドロップ ダウン リストに次のオプションが表示されます: **[すべてのデータベース]** 、 **[すべてのシステム データベース]** **[すべてのユーザー データベース]** 、 **[These specific databases]\(これらの特定のデータベース\)** 。  
   
  **[すべてのデータベース]**  
  すべての [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データベースを対象として、メンテナンス タスクを実行するメンテナンス プランを生成します。  
@@ -132,7 +131,7 @@ ms.locfileid: "51216530"
  **User name**  
  認証に使用する [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ログインを指定します。 このオプションは利用できません。  
   
- **Password**  
+ **パスワード**  
  認証に使用するパスワードを指定します。 このオプションは利用できません。  
   
 ## <a name="see-also"></a>参照  

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 f1_keywords:
 - cluster network selection, Setup
@@ -14,12 +13,12 @@ ms.assetid: 579482ef-a023-45b2-9176-b4a4188adf9d
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 3cd117a9f873de13938d8a6946faf4f1c00d522d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 48dca8e9ce522f2520521441b2e7eea349ff099b
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48163035"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66096434"
 ---
 # <a name="cluster-network-configuration"></a>クラスター ネットワークの構成
   フェールオーバー クラスター インスタンスのネットワーク リソースを指定するには、 **[クラスター ネットワークの選択]** ページを使用します。  
@@ -41,7 +40,7 @@ ms.locfileid: "48163035"
   
     -   追加しようとしているノードが、他のネットワーク サブネットをサポートしている場合で、なおかつ、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] フェールオーバー クラスターの既存のノードによってサポートされたサブネットは一切サポートしないという場合、別途 IP アドレスを追加する必要があります。 指定された IP アドレスが一部のクラスター ノードでは無効であるという事実を反映するために、IP アドレス リソースの依存関係は [OR] に設定されます。  
   
--   詳細設定インストール: インストールの完了手順で、フェールオーバー クラスター インスタンスのすべてのノードおよびサブネットについて、対応する IP アドレスを指定します。 マルチサブネット フェールオーバー クラスターの場合は複数の IP アドレスを指定できますが、サポートされる IP アドレスは、1 つのサブネットにつき 1 つだけです。 準備の対象となるすべてのノードは、少なくとも 1 つの IP アドレスを所有している必要があります。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] フェールオーバー クラスター内に複数のサブネットが存在する場合、IP アドレス リソースの依存関係を [OR] に設定するように求められます。ノードの削除:  
+-   高度なインストール:インストールの完了手順の間のすべてのノードの IP アドレスと、フェールオーバー クラスター インスタンスのサブネットを指定します。 マルチサブネット フェールオーバー クラスターの場合は複数の IP アドレスを指定できますが、サポートされる IP アドレスは、1 つのサブネットにつき 1 つだけです。 準備の対象となるすべてのノードは、少なくとも 1 つの IP アドレスを所有している必要があります。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] フェールオーバー クラスター内に複数のサブネットが存在する場合、IP アドレス リソースの依存関係を [OR] に設定するように求められます。ノードの削除:  
   
     -   残りの IP アドレスが、残りのすべてのノードでサポートされている場合は、IP アドレス リソースの依存関係を [AND] に設定するように求められます。  
   

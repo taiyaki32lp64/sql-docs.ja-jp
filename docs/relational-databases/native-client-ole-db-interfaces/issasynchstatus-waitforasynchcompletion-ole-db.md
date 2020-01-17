@@ -1,5 +1,5 @@
 ---
-title: Issasynchstatus::waitforasynchcompletion (OLE DB) |Microsoft Docs
+title: 'ISSAsynchStatus:: WaitForAsynchCompletion (OLE DB) |Microsoft Docs'
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -15,18 +15,16 @@ helpviewer_keywords:
 ms.assetid: 9f65e9e7-eb93-47a1-bc42-acd4649fbd0e
 author: MightyPen
 ms.author: genemi
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 02d9c28376d3952dd3537e815101ad36144a9b19
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 50751cdbb4a488913a9673d00195b4b6000f54ad
+ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47613822"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73762622"
 ---
 # <a name="issasynchstatuswaitforasynchcompletion-ole-db"></a>ISSAsynchStatus::WaitForAsynchCompletion (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-[!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
 
   非同期で実行している操作が完了するまで、またはタイムアウトが発生するまで待機します。  
   
@@ -47,7 +45,7 @@ HRESULT WaitForAsynchCompletion(
  メソッドが成功しました。  
   
  E_UNEXPECTED  
- に、行セットが未使用状態は**itransaction::commit**または**itransaction::abort**が呼び出されたか、初期化フェーズ中に、行セットが取り消されました。  
+ **Itransaction:: Commit**または**Itransaction:: Abort**が呼び出されたか、初期化フェーズ中に行セットが取り消されたため、行セットが未使用の状態になっています。  
   
  DB_E_CANCELED  
  行セットの設定中またはデータ ソース オブジェクトの初期化中に、非同期処理が取り消されました。  
@@ -58,8 +56,8 @@ HRESULT WaitForAsynchCompletion(
 > [!NOTE]  
 >  **ISSAsynchStatus::WaitForAsynchCompletion** メソッドでは、上記のリターン コード値以外に、主要な OLEDB **ICommand::Execute** メソッドや **IDBInitialize::Initialize** メソッドによって返されたリターン コード値もサポートします。  
   
-## <a name="remarks"></a>コメント  
- タイムアウト値 (ミリ秒) が経過するか、保留になっている操作が完了するまでは、**ISSAsynchStatus::WaitForAsynchCompletion** メソッドから制御が戻りません。 **Command** オブジェクトには、タイムアウトまでにクエリが実行される秒数を制御する **CommandTimeout** プロパティがあります。**ISSAsynchStatus::WaitForAsynchCompletion** メソッドと組み合わせて使用すると、**CommandTimeout** プロパティは無視されます。  
+## <a name="remarks"></a>Remarks  
+ タイムアウト値 (ミリ秒) が経過するか、保留になっている操作が完了するまでは、**ISSAsynchStatus::WaitForAsynchCompletion** メソッドから制御が戻りません。 **Command**オブジェクトには、クエリがタイムアウトするまでに実行される秒数を制御する**CommandTimeout**プロパティがあります。**ISSAsynchStatus:: WaitForAsynchCompletion**メソッドと共に使用する場合、 **CommandTimeout**プロパティは無視されます。  
   
  非同期操作では、タイムアウト プロパティが無視されます。 **ISSAsynchStatus::WaitForAsynchCompletion** のタイムアウト パラメーターに、制御が呼び出し元に返されるまでに経過する最大時間を指定します。 タイムアウトが発生すると、DB_S_ASYNCHRONOUS が返されます。 タイムアウトによって非同期操作が取り消されることはありません。 タイムアウト期間内に完了しない非同期操作をアプリケーションで取り消す必要がある場合、タイムアウトを待機後、DB_S_ASYNCHRONOUS が返されたときに明示的に操作を取り消す必要があります。  
   

@@ -9,19 +9,19 @@ helpviewer_keywords:
 - HelpLink element
 - SoapException class
 ms.assetid: a4489103-a874-44c2-8f75-95cb238928ed
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: aedb060067e35c0281b81057666b96bb71d631c9
-ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 0ed62c34095adc2e9c039d1780f616530679b601
+ms.sourcegitcommit: 3be14342afd792ff201166e6daccc529c767f02b
+ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/18/2018
-ms.locfileid: "53589583"
+ms.lasthandoff: 07/18/2019
+ms.locfileid: "68307577"
 ---
 # <a name="helplink-element"></a>HelpLink 要素
   **Detail** プロパティの **HelpLink** 要素は、レポート サーバーで生成される URL 文字列です。 この URL は [!INCLUDE[msCoName](../../../includes/msconame-md.md)] ヘルプとサポートで管理されている Web ページを指し、[!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] で発生する特定のエラーに関するヘルプとサポート技術情報の記事を提供します。 URL の構文は、次のようになっています。  
   
- **https://** www.microsoft.com**/** products**/** ee**/** transform.aspx **?EvtSrc**=v_alue_**&EvtID**=_value_**&ProdName**=_value_**&ProdVer**=*value*  
+ **https://** www\.microsoft.com **/** products **/** ee **/** transform.aspx **?EvtSrc**=v_alue_ **&EvtID**=_value_ **&ProdName**=_value_ **&ProdVer**=*value*  
   
  次の表は、**HelpLink** URL の引数を示しています。  
   

@@ -14,12 +14,12 @@ ms.assetid: c7317eec-c0e9-479e-a4a7-83b6b6c58d59
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 3eced987f2f19e5379ab14ebc88eca37b8e19d8a
-ms.sourcegitcommit: 0d6e4cafbb5d746e7d00fdacf8f3ce16f3023306
+ms.openlocfilehash: 824ea1587955884f10a53579865d2029cc63eefc
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/11/2018
-ms.locfileid: "49084971"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62473223"
 ---
 # <a name="modify-or-rename-dml-triggers"></a>DML トリガーの変更または名前の変更
   このトピックでは、 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] または [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] を使用して、 [!INCLUDE[tsql](../../includes/tsql-md.md)]の DML トリガーを変更したりその名前を変更したりする方法について説明します。  
@@ -48,7 +48,7 @@ ms.locfileid: "49084971"
   
 ###  <a name="Recommendations"></a> 推奨事項  
   
--   [sp_rename](/sql/relational-databases/system-stored-procedures/sp-rename-transact-sql) ストアド プロシージャを使用してトリガーの名前を変更しないことをお勧めします。 オブジェクト名の一部または全部を変更すると、スクリプトおよびストアド プロシージャが壊れる可能性があります。 トリガーの名前を変更しても、 [sys.sql_modules](/sql/relational-databases/system-catalog-views/sys-sql-modules-transact-sql) カタログ ビューの definition 列にある、対応するオブジェクトの名前は変更されません。 削除し、代わりにトリガーを再作成することをお勧めします。  
+-   [sp_rename](/sql/relational-databases/system-stored-procedures/sp-rename-transact-sql) ストアド プロシージャを使用してトリガーの名前を変更しないことをお勧めします。 オブジェクト名の一部または全部を変更すると、スクリプトおよびストアド プロシージャが壊れる可能性があります。 トリガーの名前を変更しても、 [sys.sql_modules](/sql/relational-databases/system-catalog-views/sys-sql-modules-transact-sql) カタログ ビューの definition 列にある、対応するオブジェクトの名前は変更されません。 トリガーを削除してから再作成することをお勧めします。  
   
 -   DML トリガーで参照されるオブジェクトの名前を変更する際には、新しい名前を反映するようにトリガーを変更する必要があります。 したがって、オブジェクトの名前を変更する前に、まずオブジェクトの依存関係を表示して、オブジェクト名の変更により影響を受けるトリガーがあるかどうかを確認してください。  
   
@@ -95,7 +95,7 @@ ms.locfileid: "49084971"
   
 3.  次の例をコピーし、クエリに貼り付けます。 1 つ目の例を実行して、ユーザーが `SalesPersonQuotaHistory` テーブルのデータの追加や変更を行おうとしたときにユーザー定義のメッセージを出力する DML トリガーを作成します。 [ALTER TRIGGER](/sql/t-sql/statements/alter-trigger-transact-sql) ステートメントを実行して、 `INSERT` アクティビティのときだけトリガーが発生するように変更します。 このトリガーは、テーブルの更新や行の挿入を行うユーザーに対して、 `Compensation` 部門にも変更を知らせる必要があることを連絡できるので有用です。  
   
-```tsql  
+```sql  
 USE AdventureWorks2012;  
 GO  
 IF OBJECT_ID(N'Sales.bonus_reminder', N'TR') IS NOT NULL  
@@ -110,7 +110,7 @@ GO
   
 ```  
   
-```tsql  
+```sql  
 USE AdventureWorks2012;  
 GO  
 ALTER TRIGGER Sales.bonus_reminder  
@@ -129,7 +129,7 @@ GO
   
 3.  次の例をコピーしてクエリ ウィンドウに貼り付け、 **[実行]** をクリックします。 この例では、 [DROP TRIGGER](/sql/t-sql/statements/drop-trigger-transact-sql) ステートメントと [ALTER TRIGGER](/sql/t-sql/statements/alter-trigger-transact-sql) ステートメントを使用して、 `Sales.bonus_reminder` トリガーの名前を `Sales.bonus_reminder_2`に変更します。  
   
-```tsql  
+```sql  
 USE AdventureWorks2012;  
 GO  
 IF OBJECT_ID(N'Sales.bonus_reminder', N'TR') IS NOT NULL  

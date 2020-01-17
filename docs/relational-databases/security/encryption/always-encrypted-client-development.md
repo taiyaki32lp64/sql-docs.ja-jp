@@ -1,7 +1,7 @@
 ---
-title: Always Encrypted (クライアント開発) | Microsoft Docs
+title: Always Encrypted を使用したアプリケーションの開発 | Microsoft Docs
 ms.custom: ''
-ms.date: 08/21/2018
+ms.date: 10/30/2019
 ms.prod: sql
 ms.reviewer: vanto
 ms.technology: security
@@ -9,21 +9,20 @@ ms.topic: conceptual
 dev_langs:
 - CSharp
 ms.assetid: 9595eb66-284c-4474-828f-8961a05ce989
-author: VanMSFT
-ms.author: vanto
-manager: craigg
+author: jaszymas
+ms.author: jaszymas
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 728df586867f137b05d7bbb54efa420f0f35ceba
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 0dbf983f044118a5d59812f1183d0733b20cb449
+ms.sourcegitcommit: a26cb217adfbbfb3636dff43fb19a46462e2e994
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47604113"
+ms.lasthandoff: 11/26/2019
+ms.locfileid: "74492012"
 ---
-# <a name="always-encrypted-client-development"></a>Always Encrypted (クライアント開発)
+# <a name="develop-applications-using-always-encrypted"></a>Always Encrypted を使用したアプリケーションの開発
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
-クライアント側の暗号化テクノロジ [Always Encrypted](../../../relational-databases/security/encryption/always-encrypted-database-engine.md) により、機微なデータ (および関連する暗号化キー) が SQL Server や Azure SQL Database に開示されることはありません。   Always Encrypted では、クライアント ドライバーが、データベース エンジンにデータを渡す前に機微なデータを透過的に暗号化します。同様に、クライアント ドライバーは、暗号化されたデータベース列から取得したデータを透過的に暗号化解除します。
+クライアント側の暗号化テクノロジ [Always Encrypted](../../../relational-databases/security/encryption/always-encrypted-database-engine.md) により、機微なデータ (および関連する暗号化キー) が SQL Server や Azure SQL Database に開示されることはありません。 Always Encrypted では、クライアント ドライバーが、データベース エンジンにデータを渡す前に機微なデータを透過的に暗号化します。同様に、クライアント ドライバーは、暗号化されたデータベース列から取得したデータを透過的に暗号化解除します。
 
 Always Encrypted の保護するデータベースを使用したアプリケーションの開発、および Always Encrypted をサポートするクライアント ドライバーとそのバージョンの詳細については、次を参照してください。
 
@@ -31,11 +30,5 @@ Always Encrypted の保護するデータベースを使用したアプリケー
 - [JDBC ドライバーで Always Encrypted を使用する](../../../connect/jdbc/using-always-encrypted-with-the-jdbc-driver.md)
 - [ODBC ドライバーで Always Encrypted を使用する](../../../connect/odbc/using-always-encrypted-with-the-odbc-driver.md)
 - [PHP ドライバーで Always Encrypted を使用する](../../../connect/php/using-always-encrypted-php-drivers.md)
-
-> [!NOTE]
-> [.NET CORE](https://docs.microsoft.com/dotnet/core/) では現在、Always Encrypted はサポートされていません。
-
-## <a name="see-also"></a>参照
-
-[Always Encrypted (Database Engine) (Always Encrypted (データベース エンジン))](../../../relational-databases/security/encryption/always-encrypted-database-engine.md)
-
+- [.NET Core および .NET Framework アプリケーションの Microsoft .NET Data Provider for SQL Server で Always Encrypted を使用する](../../../connect/ado-net/sql/sqlclient-support-always-encrypted.md)
+- [常に暗号化](../../../relational-databases/security/encryption/always-encrypted-database-engine.md)

@@ -19,24 +19,23 @@ helpviewer_keywords:
 ms.assetid: 325e0907-8e87-44e8-a111-f39e636a9cbc
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 2f8c585bc758b74c666c8da625c1e57af7af2582
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: c27b16d8b72e289f66a051cb2710004f72309599
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47601110"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68103795"
 ---
 # <a name="sqlgetdescrec-function"></a>SQLGetDescRec 関数
 **準拠**  
- バージョンで導入されました ODBC 3.0 標準準拠: ISO 92。  
+ バージョンが導入されました。ODBC 3.0 規格に準拠します。ISO 92  
   
  **概要**  
  **SQLGetDescRec**現在の設定または記述子レコードの複数のフィールドの値を返します。 返されるフィールドは、名前、データ型、および列またはパラメーターのデータの格納について説明します。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
   
 SQLRETURN SQLGetDescRec(  
       SQLHDESC        DescriptorHandle,  
@@ -149,6 +148,6 @@ SQLRETURN SQLGetDescRec(
 |記述子フィールドの取得|[SQLGetDescField 関数](../../../odbc/reference/syntax/sqlgetdescfield-function.md)|  
 |複数の記述子フィールドの設定|[SQLSetDescRec 関数](../../../odbc/reference/syntax/sqlsetdescrec-function.md)|  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [ODBC API リファレンス](../../../odbc/reference/syntax/odbc-api-reference.md)   
  [ODBC ヘッダー ファイル](../../../odbc/reference/install/odbc-header-files.md)

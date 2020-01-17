@@ -2,18 +2,18 @@
 title: レポート パーツの管理 | Microsoft Docs
 ms.date: 03/14/2017
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: report-design
 ms.topic: conceptual
 ms.assetid: 41947b4c-8ecf-4e4f-b30e-66e1d6692b74
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 21f18b5e8a0e8b06ba96bed7f92fda0c13ae8ac2
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 241d74d615f9aac2cbe48d084fd2d8e91ea9abbf
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56296330"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65580104"
 ---
 # <a name="managing-report-parts"></a>レポート パーツの管理
   ページネーションのあるレポート内のレポート パーツは、複数のユーザーが複数のレポート内で再利用できます。 ユーザーはサーバー上のレポート パーツを検索し、それらをレポートに追加できます。  また、ユーザーはサーバー上のレポート パーツの更新について通知を受け、レポート パーツの新しいバージョンを再パブリッシュすることもできます。 これらのレポート作成アクションは、Reporting Services のセキュリティ権限によって管理および制御されます。  このトピックでは、既にサーバー上に配置されているレポート パーツのプロパティと動作について説明します。  
@@ -49,13 +49,13 @@ ms.locfileid: "56296330"
   
 |プロパティ|[説明]|レポート パーツ<br /><br /> ギャラリーの検索条件|  
 |--------------|-----------------|---------------------------------------------|  
-|[オブジェクト名]|ユーザーがレポート パーツ ギャラリーで検索できる条件の 1 つです。|可|  
-|[説明]|ユーザーがレポート パーツをギャラリー内で見つけやすくするため、レポート パーツに名前を付けて整理することができます。 たとえば、販売関連のデータやプレゼンテーションに関するすべてのレポート パーツに対して、"Sales>>" で始まる説明を検索することができます。|可|  
-|CreatedBy|レポート パーツをレポート サーバー データベースに追加したユーザーの ID です。 正確な形式は、認証の方法によって異なります。 たとえば、一部の認証方法では、CreatedBy フィールドおよび ModifiedBy フィールドに完全なドメインとユーザー名が表示されます。|可|  
-|CreationDate|レポート パーツが最初に作成された日付です。<br /><br /> ユーザーがレポート パーツ ギャラリーで検索できる条件の 1 つです。|可|  
-|ModifiedBy|ModifiedBy はレポート パーツを最後に変更したユーザーの ID です。|可|  
-|ModifiedDate|サーバー上でレポート パーツが最後に変更された日付です。<br /><br /> このフィールドは、レポート パーツがサーバー側でいつ更新されているかを判断するためのロジックの一部として使用されます。 詳細については、この表の ComponentID の説明を参照してください。|可|  
-|SubType (*)|SubType は検索するレポート パーツの種類を示す "Tablix" や "Chart" などの文字列です。|可|  
+|[オブジェクト名]|ユーザーがレポート パーツ ギャラリーで検索できる条件の 1 つです。|はい|  
+|[説明]|ユーザーがレポート パーツをギャラリー内で見つけやすくするため、レポート パーツに名前を付けて整理することができます。 たとえば、販売関連のデータやプレゼンテーションに関するすべてのレポート パーツに対して、"Sales>>" で始まる説明を検索することができます。|はい|  
+|CreatedBy|レポート パーツをレポート サーバー データベースに追加したユーザーの ID です。 正確な形式は、認証の方法によって異なります。 たとえば、一部の認証方法では、CreatedBy フィールドおよび ModifiedBy フィールドに完全なドメインとユーザー名が表示されます。|はい|  
+|CreationDate|レポート パーツが最初に作成された日付です。<br /><br /> ユーザーがレポート パーツ ギャラリーで検索できる条件の 1 つです。|はい|  
+|ModifiedBy|ModifiedBy はレポート パーツを最後に変更したユーザーの ID です。|はい|  
+|ModifiedDate|サーバー上でレポート パーツが最後に変更された日付です。<br /><br /> このフィールドは、レポート パーツがサーバー側でいつ更新されているかを判断するためのロジックの一部として使用されます。 詳細については、この表の ComponentID の説明を参照してください。|はい|  
+|SubType (*)|SubType は検索するレポート パーツの種類を示す "Tablix" や "Chart" などの文字列です。|はい|  
 |ComponentID (*)|ComponentID はレポート パーツの一意の識別子です。 これは、カタログに新たに追加されたフィールドであり、サーバー側、およびレポート ビルダーなどのレポート作成アプリケーションの両方で表示されます。<br /><br /> このフィールドは、レポート パーツの更新がないかどうかをサーバーでチェックする場合に、クライアント アプリケーションで使用されます。 クライアント アプリケーションは、現在のクライアント側レポートにある ComponentID をサーバーで検索します。 ComponentID が一致すると、ModifiedDate がレポート アイテムのクライアント側 SyncDate と比較されます。|N0|  
   
 ## <a name="controlling-access-to-report-parts"></a>レポート パーツへのアクセスの制御  

@@ -22,14 +22,13 @@ helpviewer_keywords:
 ms.assetid: a0455b71-ca25-476e-a7a8-0770f1860bb7
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 636d6979451769151725ba1743ea8a1f3238ccc9
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 699d7779c3409a69d4389a96b93feab1cae3f9e0
+ms.sourcegitcommit: a154b3050b6e1993f8c3165ff5011ff5fbd30a7e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56043173"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "70148838"
 ---
 # <a name="datetimeoffset-transact-sql"></a>datetimeoffset (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -42,22 +41,22 @@ ms.locfileid: "56043173"
 |---|---|
 |構文|**datetimeoffset** [ (*fractional seconds precision*) ]|  
 |使用方法|DECLARE \@MyDatetimeoffset **datetimeoffset(7)**<br /><br /> CREATE TABLE Table1 ( Column1 **datetimeoffset(7)** )|  
-|既定の文字列リテラル形式 (下位クライアント用)|YYYY-MM-DD hh:mm:ss[.nnnnnnn] [{+&#124;-}hh:mm]<br /><br /> 詳細については、以下の「下位クライアントの下位互換性」セクションを参照してください。|  
+|既定の文字列リテラル形式 (下位クライアント用)|YYYY-MM-DD hh:mm:ss[.nnnnnnn] [{+&#124;-}hh:mm]<br /><br /> 詳細については、後述の「下位クライアントの下位互換性」セクションを参照してください。|  
 |日付範囲|0001-01-01 ～ 31.12.99<br /><br /> 1 月 1 日 1 CE ～12 月 31 日 9999 CE|  
-|時刻範囲|00:00:00 ～ 23:59:59.9999999 (Informatica では秒の小数部はサポートされていません)|  
-|タイム ゾーン オフセット範囲|-14:00 ～ +14:00 (Informatica ではタイム ゾーン オフセットは無視されます)|  
-|要素範囲|YYYY は、0001 ～ 9999 の年を表す 4 桁の数字です。<br /><br /> MM は、指定された年の 01 ～ 12 の月を表す 2 桁の数字です。<br /><br /> DD は、指定された月の (月に応じて) 01 ～ 31 の日を表す 2 桁の数字です。<br /><br /> hh は、00 ～ 23 の時を表す 2 桁の数字です。<br /><br /> mm は、00 ～ 59 の分を表す 2 桁の数字です。<br /><br /> ss は、00 ～ 59 の秒を表す 2 桁の数字です。<br /><br /> n* は、秒の有効桁数を表す 0 ～ 7 桁の数字です (0 ～ 9999999)。 Informatica では、秒の小数部はサポートされていません。<br /><br /> hh は、-14 ～ +14 までの 2 桁の数字です。 Informatica ではタイム ゾーン オフセットは無視されます。<br /><br /> mm は、00 ～ 59 の 2 桁の数字です。 Informatica ではタイム ゾーン オフセットは無視されます。|  
+|時間の範囲|00:00:00 から 23:59:59.9999999|  
+|タイム ゾーンのオフセット範囲|-14:00 ～ +14:00|  
+|要素範囲|YYYY は、0001 ～ 9999 の年を表す 4 桁の数字です。<br /><br /> MM は、指定された年の 01 ～ 12 の月を表す 2 桁の数字です。<br /><br /> DD は、指定された月の (月に応じて) 01 ～ 31 の日を表す 2 桁の数字です。<br /><br /> hh は、00 ～ 23 の時を表す 2 桁の数字です。<br /><br /> mm は、分を表す 00 から 59 の 2 桁の数字です。<br /><br /> ss は、秒を表す 00 から 59 の 2 桁の数字です。<br /><br /> n* は、秒の有効桁数を表す 0 ～ 7 桁の数字です (0 ～ 9999999)。<br /><br /> hh は、-14 から +14 までの 2 桁の数字です。 <br /><br /> mm は、00 ～ 59 の 2 桁の数字です。|  
 |文字長|26 文字 (YYYY-MM-DD hh:mm:ss {+&#124;-}hh:mm) 以上、34 文字 (YYYY-MM-DD hh:mm:ss.nnnnnnn {+&#124;-}hh:mm) 以下|  
 |有効桁数、小数点以下桁数|次の表を参照してください。|  
-|ストレージのサイズ|既定では 10 バイト固定 (秒部分の既定の有効桁数は 100ns) です。|  
+|ストレージ サイズ|既定では 10 バイト固定 (秒部分の既定の有効桁数は 100 ns) です。|  
 |精度|100 ナノ秒|  
 |既定値|1900-01-01 00:00:00 00:00|  
 |カレンダー|グレゴリオ暦|  
-|ユーザー定義の 1 秒未満の秒の有効桁数|可|  
-|タイム ゾーン オフセットへの対応と保持|可|  
+|ユーザー定義の 1 秒未満の秒の有効桁数|はい|  
+|タイム ゾーン オフセットへの対応と保持|はい|  
 |夏時間への対応|いいえ|  
   
-|指定した小数点以下桁数|結果 (有効桁数、小数点以下桁数)|列長 (バイト単位)|秒の小数部の有効桁数|  
+|指定した小数点以下桁数|結果 (有効桁数、小数点以下桁数)|列長 (バイト)|秒の小数部の有効桁数|  
 |---|---|---|---|
 |**datetimeoffset**|(34,7)|10|7|  
 |**datetimeoffset(0)**|(26,0)|8|0-2|  
@@ -79,13 +78,13 @@ ms.locfileid: "56043173"
   
 ## <a name="time-zone-offset"></a>タイム ゾーン オフセット
 タイム ゾーン オフセットは、**time** または **datetime** 値の UTC を基準とした相対値を指定します。 タイム ゾーン オフセットは、[+|-] hh:mm として表すことができます。
--   hh は、タイム ゾーン オフセットの時間数を表す 00 ～ 14 の 2 桁の数字です。  
--   mm は、タイム ゾーン オフセットの付加的な分数を表す 00 ～ 59 の 2 桁の数字です。  
+-   hh は、タイム ゾーン オフセットの時間数を表す 00 から 14 までの 2 桁の数字です。  
+-   mm は、タイム ゾーン オフセットの付加的な分数を表す 00 から 59 までの 2 桁の数字です。  
 -   タイム ゾーン オフセットでは、\+ (正負号) または - (負符号) を必ず指定します。 ローカル時刻を取得する際、UTC 時刻を基準としてタイム ゾーン オフセットを加算するか、減算するかを示します。 タイム ゾーン オフセットの有効範囲は -14:00 ～ +14:00 までです。  
   
 タイム ゾーン オフセットの範囲は、XSD スキーマ定義の W3C XML 標準に準拠しており、SQL 2003 標準の定義 (12:59 ～ +14:00) とは若干異なります。
   
-*fractional seconds precision* は、1 秒未満の桁数を指定するオプションのパラメーターです。 この値は、0 ～ 7 (100 ナノ秒) の整数で指定できます。 *fractional seconds precision* の既定値は 100ns (1 秒未満の桁数は 7 桁) です。
+*fractional seconds precision* は、1 秒未満の桁数を指定するオプションのパラメーターです。 この値は、0 から 7 (100 ナノ秒) の整数で指定できます。 *fractional seconds precision* の既定値は 100ns (1 秒未満の桁数は 7 桁) です。
   
 データベースに格納されたデータは、サーバーで UTC として処理、比較、並べ替え、およびインデックス化されます。 タイム ゾーン オフセットは、データベースに保持され、必要に応じて取得できます。
   
@@ -104,7 +103,7 @@ ms.locfileid: "56043173"
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のデータ型|下位クライアントに渡される既定の文字列リテラル形式|下位 ODBC|下位 OLEDB|下位 JDBC|下位 SQLCLIENT|  
 |---|---|---|---|---|---|
 |**time**|hh:mm:ss[.nnnnnnn]|SQL_WVARCHAR または SQL_VARCHAR|DBTYPE_WSTR または DBTYPE_STR|Java.sql.String|String または SqString|  
-|**date**|-YYYY-MM-DD|SQL_WVARCHAR または SQL_VARCHAR|DBTYPE_WSTR または DBTYPE_STR|Java.sql.String|String または SqString|  
+|**date**|YYYY-MM-DD|SQL_WVARCHAR または SQL_VARCHAR|DBTYPE_WSTR または DBTYPE_STR|Java.sql.String|String または SqString|  
 |**datetime2**|YYYY-MM-DD hh:mm:ss[.nnnnnnn]|SQL_WVARCHAR または SQL_VARCHAR|DBTYPE_WSTR または DBTYPE_STR|Java.sql.String|String または SqString|  
 |**datetimeoffset**|YYYY-MM-DD hh:mm:ss[.nnnnnnn] [+&#124;-]hh:mm|SQL_WVARCHAR または SQL_VARCHAR|DBTYPE_WSTR または DBTYPE_STR|Java.sql.String|String または SqString|  
   
@@ -202,16 +201,16 @@ SELECT @datetimeoffset AS '@datetimeoffset', @datetime2 AS '@datetime2';
   
 |入力文字列リテラル|**datetimeoffset(n)**|  
 |---|---|
-|ODBC 日付|ODBC 文字列リテラルは、**datetime** データ型にマップされます。 ODBC DATETIME リテラルから **datetimeoffset** 型への代入演算を行うと、**datetime** 型とこれらの型との間で、変換規則で定義されている暗黙的な変換が行われます。|  
-|ODBC 時刻|上記の ODBC 日付の規則を参照。|  
-|ODBC 日付時刻|上記の ODBC 日付の規則を参照。|  
+|ODBC DATE|ODBC 文字列リテラルは、**datetime** データ型にマップされます。 ODBC DATETIME リテラルから **datetimeoffset** 型への代入演算を行うと、**datetime** 型とこれらの型との間で、変換規則で定義されている暗黙的な変換が行われます。|  
+|ODBC TIME|上記の ODBC 日付の規則を参照。|  
+|ODBC DATETIME|上記の ODBC 日付の規則を参照。|  
 |DATE のみ|時刻部分は既定値の 00:00:00 に設定される TIMEZONE は既定値の +00:00 に設定される。|  
-|TIME のみ|日付部分は既定値の 1900-1-1 に設定される タイム ゾーンは既定値の +00:00 に設定される|  
+|TIME のみ|DATE 部分は既定で 1900-1-1 に設定されます。 TIMEZONE は既定値の +00:00 に設定される。|  
 |タイム ゾーンのみ|既定値が設定される|  
-|日付 + 時刻|TIMEZONE は既定値の +00:00 に設定される。|  
-|日付 + タイム ゾーン|使用不可|  
-|時刻 + タイム ゾーン|日付部分は既定値の 1900-1-1 に設定される|  
-|日付 + 時刻 + タイム ゾーン|単純変換|  
+|DATE + TIME|TIMEZONE は既定値の +00:00 に設定される。|  
+|DATE + TIMEZONE|使用不可|  
+|TIME + TIMEZONE|DATE 部分は既定で 1900-1-1 に設定されます。|  
+|DATE + TIME + TIMEZONE|単純変換|  
   
 ## <a name="examples"></a>使用例  
 次の例では、文字列をそれぞれの **date** および **time** データ型にキャストした結果を比較します。

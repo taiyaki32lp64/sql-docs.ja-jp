@@ -11,17 +11,20 @@ helpviewer_keywords:
 - operations view [Integration Services]
 - catalog.operations view [Integration Services]
 ms.assetid: 9455c5b1-60ff-45fc-8599-cc3abbd6daf5
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: 2844d9c1a1c8ea7263de09c1dc2b5544b11fd783
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: d2cae61482de6b3269122249b310166987cfb44b
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47828426"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71296543"
 ---
 # <a name="catalogoperations-ssisdb-database"></a>catalog.operations (SSISDB データベース)
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] カタログのすべての操作の詳細を表示します。  
@@ -38,7 +41,7 @@ ms.locfileid: "47828426"
 |start_time|**datetimeoffset**|操作が開始したときの日時。|  
 |end_time|**datetimeoffsset**|操作が終了したときの日時。|  
 |caller_sid|**varbinary(85)**|ログオンに Windows 認証が使用された場合はユーザーのセキュリティ ID (SID)。|  
-|させていただきたいと|**nvarchar(128)**|操作を実行したアカウントの名前。|  
+|caller_name|**nvarchar(128)**|操作を実行したアカウントの名前。|  
 |process_id|**int**|外部プロセスのプロセス ID (該当する場合)。|  
 |stopped_by_sid|**varbinary(85)**|操作を停止したユーザーの SID。|  
 |stopped_by_name|**nvarchar(128)**|操作を停止したユーザーの名前。|  

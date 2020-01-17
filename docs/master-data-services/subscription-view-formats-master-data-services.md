@@ -1,5 +1,5 @@
 ---
-title: サブスクリプション ビュー形式 (マスター データ サービス) | Microsoft Docs
+title: サブスクリプション ビュー形式
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -8,15 +8,14 @@ ms.reviewer: ''
 ms.technology: master-data-services
 ms.topic: conceptual
 ms.assetid: ff1e2566-ac8f-467d-a6d9-12c3f13879b9
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 1031a8f30ff65a00dafeff90e5ce0b5efa1155f7
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
-ms.translationtype: HT
+ms.openlocfilehash: 7c5adbd91f713fabe1e185c51adb28350035bb20
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52766642"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73728890"
 ---
 # <a name="subscription-view-formats-master-data-services"></a>サブスクリプション ビュー形式 (マスター データ サービス)
 
@@ -44,7 +43,7 @@ ms.locfileid: "52766642"
 |**派生レベル (派生階層ビュー)**|派生階層構造をレベル形式で含みます。|  
   
 ## <a name="see-also"></a>参照  
- [概要:データのエクスポート (マスター データ サービス)](../master-data-services/overview-exporting-data-master-data-services.md)   
+ [概要: データのエクスポート (マスター データ サービス)](../master-data-services/overview-exporting-data-master-data-services.md)   
  [サブスクリプション ビューを作成してデータをエクスポートする (マスター データ サービス)](../master-data-services/create-a-subscription-view-to-export-data-master-data-services.md)  
   
   

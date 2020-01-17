@@ -9,13 +9,13 @@ ms.topic: conceptual
 ms.assetid: 0edeaa08-9c5d-4e3a-bc15-b9a1f0c8a9dc
 author: Shamikg
 ms.author: Shamikg
-manager: v-thobro
-ms.openlocfilehash: 61b706145f708e9b2e8a04ba4e7bc574c503a742
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+manager: shamikg
+ms.openlocfilehash: e375c07ceddc995b599930c14f00710af040d6c0
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52407875"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68262910"
 ---
 # <a name="mapping-oracle-schemas-to-sql-server-schemas-oracletosql"></a>SQL Server スキーマへの Oracle スキーマのマッピング (OracleToSQL)
 Oracle は、各データベースは、1 つまたは複数のスキーマを持っています。 SSMA は既定では、Oracle スキーマのすべてのオブジェクトを移行、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]スキーマという名前のデータベース。 ただし、Oracle スキーマ間のマッピングをカスタマイズすることができますと[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]データベース。  
@@ -62,7 +62,7 @@ Oracle スキーマ間のマッピングをカスタマイズする場合は、[
 ## <a name="next-steps"></a>次の手順  
 Oracle オブジェクトの変換を分析する[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]オブジェクトを実行できます[変換レポートを作成する](assessing-oracle-schemas-for-conversion-oracletosql.md)します。 それ以外の場合できます[Oracle データベースのオブジェクトの定義の変換](converting-oracle-schemas-oracletosql.md)に[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]オブジェクト定義。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
 [SQL Server に接続する&#40;OracleToSQL&#41;](../../ssma/oracle/connecting-to-sql-server-oracletosql.md)  
 [SQL Server にデータベースを移行する Oracle &#40;OracleToSQL&#41;](../../ssma/oracle/migrating-oracle-databases-to-sql-server-oracletosql.md)  
   

@@ -1,5 +1,5 @@
 ---
-title: Isqlservererrorinfo::geterrorinfo (OLE DB) |Microsoft Docs
+title: 'ISQLServerErrorInfo:: GetErrorInfo (OLE DB) |Microsoft Docs'
 description: ISQLServerErrorInfo::GetErrorInfo (OLE DB)
 ms.custom: ''
 ms.date: 06/14/2018
@@ -15,22 +15,21 @@ helpviewer_keywords:
 - GetErrorInfo method
 author: pmasl
 ms.author: pelopes
-manager: craigg
-ms.openlocfilehash: 22424e6c8cac92ec0bada0ed3dab13e9b6938c14
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.openlocfilehash: 54e9c71ca21647004ea3899306dcb15689dcc3d0
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51600502"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68015442"
 ---
 # <a name="isqlservererrorinfogeterrorinfo-ole-db"></a>ISQLServerErrorInfo::GetErrorInfo (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
-  OLE DB Driver for SQL Server の SSERRORINFO 構造体を格納しているポインターを返します、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]エラーの詳細。  
+  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]エラーの詳細を含む SQL Server SSERRORINFO 構造体の OLE DB ドライバーへのポインターを返します。  
   
- OLE DB Driver for SQL Server の定義、 **ISQLServerErrorInfo**エラー インターフェイス。 このインターフェイスは、重大度や状態など、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] エラーの詳細情報を返します。  
+ OLE DB Driver for SQL Server では、 **ISQLServerErrorInfo**エラーインターフェイスが定義されています。 このインターフェイスは、重大度や状態など、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] エラーの詳細情報を返します。  
 
   
 ## <a name="syntax"></a>構文  
@@ -54,10 +53,10 @@ HRESULT GetErrorInfo(
  メソッドが成功しました。  
   
  E_INVALIDARG  
- いずれか、 *ppSSErrorInfo*または*割り当てません*引数が NULL でした。  
+ *PpSSErrorInfo*または*Pperrorstrings*引数のいずれかが NULL でした。  
   
  E_OUTOFMEMORY  
- SQL Server の OLE DB Driver は、要求を完了するための十分なメモリを割り当てられませんでした。  
+ SQL Server の OLE DB ドライバーが、要求を完了するために必要なメモリを割り当てられませんでした。  
   
 ## <a name="remarks"></a>Remarks  
  OLE DB Driver for SQL Server は、コンシューマーが渡したポインターを使用して返される、SSERRORINFO 文字列と OLECHAR 文字列用にメモリを割り当てます。 コンシューマーはエラー データにアクセスする必要がなくなった時点で、**IMalloc::Free** メソッドを使用してこのメモリの割り当てを解除する必要があります。  

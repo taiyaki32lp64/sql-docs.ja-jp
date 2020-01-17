@@ -12,14 +12,13 @@ helpviewer_keywords:
 ms.assetid: eb507065-ac58-4f18-8601-e5b7f44213ab
 author: VanMSFT
 ms.author: vanto
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: e8521fb6bb67f79ae88e026a3231d733490c5719
-ms.sourcegitcommit: c51f7f2f5d622a1e7c6a8e2270bd25faba0165e7
+ms.openlocfilehash: 4c591a2dbc9b3cb5a5d2964875410637efd3149d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53626346"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68126857"
 ---
 # <a name="sql-injection"></a>SQL インジェクション
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -99,7 +98,7 @@ SELECT * FROM OrdersTable WHERE ShipCity = 'Redmond';drop table OrdersTable--'
 |**xp_**|`xp_cmdshell`など、カタログ拡張ストアド プロシージャ名の先頭に使用します。|  
   
 ### <a name="use-type-safe-sql-parameters"></a>Type-Safe SQL パラメーターの使用  
- **の** Parameters [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] コレクションは、型のチェックおよび長さの検証に使用できます。 **Parameters** コレクションを使用する場合、入力は実行可能コードとしてではなくリテラル値として扱われます。 **Parameters** コレクションを使用することのもう 1 つの利点は、型のチェックおよび長さのチェックを適用できることです。 範囲外の値が入力されると例外が発生します。 次のコード フラグメントは、 **Parameters** コレクションの使用方法を示しています。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の **Parameters** コレクションは、型のチェックおよび長さの検証に使用できます。 **Parameters** コレクションを使用する場合、入力は実行可能コードとしてではなくリテラル値として扱われます。 **Parameters** コレクションを使用することのもう 1 つの利点は、型のチェックおよび長さのチェックを適用できることです。 範囲外の値が入力されると例外が発生します。 次のコード フラグメントは、 **Parameters** コレクションの使用方法を示しています。  
   
 ```csharp
 SqlDataAdapter myCommand = new SqlDataAdapter("AuthorLogin", conn);  

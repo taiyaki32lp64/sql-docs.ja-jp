@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 4f4e1362-a5f3-4b15-8a3c-d4e96605f221
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: eabecbc399751f03e9e5c25b32423ce0839072dc
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: 576e7e10d9d6f5c7e8616f57bde2dfed05503eae
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53207751"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68112070"
 ---
 # <a name="delete-tag-command"></a>DELETE TAG コマンド
 複合インデックス (.cdx) ファイルからのタグまたはタグを削除します。  
@@ -34,7 +33,7 @@ DELETE TAG ALL [OF CDXFileName]
 ```  
   
 ## <a name="arguments"></a>引数  
- *TagName1*の*CDXFileName1*[、 *TagName2*[OF *CDXFileName2*].  
+ *TagName1*OF *CDXFileName1*[, *TagName2*[OF *CDXFileName2*]] ...  
  複合インデックスのファイルから削除するタグを指定します。 削除の 1 つのタグを持つ複数のタグを削除するには、タグ名のコンマ区切りの一覧を含みます。 インデックスを開くファイルには、同じ名前の 2 つ以上のタグが存在する場合の特定のインデックス ファイルからのタグを削除 OF を含めることによって*CDXFileName*します。  
   
  すべて [OF *CDXFileName*]  
@@ -45,5 +44,5 @@ DELETE TAG ALL [OF CDXFileName]
   
  Visual FoxPro は、(1 つは、開いている) 場合に最初に、構造型の複合インデックス ファイル内のタグを検索します。 複合インデックスの構造上のファイルにないタグは、Visual FoxPro は、他の複合インデックスを開いているファイルにタグを検索します。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [INDEX コマンド](../../odbc/microsoft/index-command.md)

@@ -14,15 +14,14 @@ helpviewer_keywords:
 ms.assetid: deed0163-9d1a-4e9b-9342-3f82e64477d2
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 74c122819980abaa328db5ad46f240cae24b92d3
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 2613593d9c2e20d5dfa01c0a0b4f9886dbc8e889
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47686380"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68057133"
 ---
 # <a name="returning-sqlnodata"></a>SQL_NO_DATA を返す
-ODBC 2 時にします。*x*アプリケーションの操作、ODBC 3 *.x*ドライバー呼び出し**SQLExecDirect**、 **SQLExecute**、または**SQLParamData**、検索された update または delete ステートメントが実行されましたが、データ ソース、ODBC 3 行によって影響されなかったと *.x*ドライバーは SQL_SUCCESS を返す必要があります。 ときに、ODBC 3 *.x* 、ODBC 3 の操作アプリケーション *.x*ドライバー呼び出し**SQLExecDirect**、 **SQLExecute**、または**SQLParamData**と同じ結果が、ODBC 3 *.x*ドライバーが SQL_NO_DATA を返す必要があります。  
+ときに、ODBC *2.x*アプリケーションを処理する ODBC *3.x*ドライバー呼び出し**SQLExecDirect**、 **SQLExecute**、または**SQLParamData**、検索された update または delete ステートメントが実行されましたが、ODBC データ ソースの行によって影響されなかったと*3.x*ドライバーは SQL_SUCCESS を返す必要があります。 ときに、ODBC *3.x* odbc 作業アプリケーション*3.x*ドライバー呼び出し**SQLExecDirect**、 **SQLExecute**、または**SQLParamData**と同じ結果が、ODBC *3.x*ドライバーが SQL_NO_DATA を返す必要があります。  
   
  ステートメントのバッチにし、データ ソースで行が削除されない場合は、検索結果の update または delete のステートメント**SQLMoreResults** SQL_SUCCESS を返します。 SQL_NO_DATA は、するものであり、検索された更新/削除する行が影響を受けませんからの結果は、以上結果があることを意味するために返すことはできません。

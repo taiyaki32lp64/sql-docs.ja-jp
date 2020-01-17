@@ -4,23 +4,22 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.fuzzygroupingtransformation.advanced.f1
 helpviewer_keywords:
 - Fuzzy Grouping Transformation Editor
 ms.assetid: dd820d75-b8a7-4515-aea4-3553ba5b442e
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 79b71caf3fa8772bd55627b5c1527eea61ac4ab5
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: dcebe499eb80fbe01b9aa36a4e07785846eaf621
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48150832"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66058366"
 ---
 # <a name="fuzzy-grouping-transformation-editor-advanced-tab"></a>[あいまいグループ化変換エディター] ([詳細設定] タブ)
   **[あいまいグループ化変換エディター]** ダイアログ ボックスの **[詳細設定]** タブを使用すると、入力列と出力列の指定、類似性のしきい値の設定、区切り記号の定義ができます。  
@@ -32,7 +31,7 @@ ms.locfileid: "48150832"
   
 ## <a name="options"></a>および  
  **[入力キー列名]**  
- 各入力行の一意の識別子を含む、出力列の名前を指定します。 `_key_in`列は各行を一意に識別する値。  
+ 各入力行の一意の識別子を含む、出力列の名前を指定します。 [`_key_in`] 列は各行を一意に識別する値を持ちます。  
   
  **[出力キー列名]**  
  重複する行グループの正規行の一意識別子を含む、出力列の名前を指定します。 [`_key_out`] 列は、正規データ行の `_key_in` 値に対応します。  
@@ -46,7 +45,7 @@ ms.locfileid: "48150832"
  **[トークン区切り記号]**  
  変換により、トークンにするデータの区切り記号の既定のセットが提供されます。必要に応じて、一覧を編集して区切り記号の追加や削除を行うことができます。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [Integration Services のエラーおよびメッセージのリファレンス](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [あいまいグループ化変換を使用して類似のデータ行を識別する](data-flow/transformations/identify-similar-data-rows-by-using-the-fuzzy-grouping-transformation.md)  
   

@@ -19,14 +19,13 @@ helpviewer_keywords:
 ms.assetid: 1897fd4a-8d51-461e-8ef2-c60be9e563f2
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: b9d65d8686dcb5651e19a2e18fec4f0e82e51402
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 9e5a79a4ab38fd1cb7d118624fd170219aa90a94
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47667830"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68096252"
 ---
 # <a name="sysdmdbstatshistogram-transact-sql"></a>sys.dm_db_stats_histogram (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -53,8 +52,8 @@ sys.dm_db_stats_histogram (object_id, stats_id)
   
 |列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
-|object_id |**int**|統計オブジェクトのプロパティを返す対象であるオブジェクト (テーブルまたはインデックス付きビュー) の ID。|  
-|stats_id |**int**|統計オブジェクトの ID。 テーブルまたはインデックス付きビューで一意です。 詳細については、「[sys.stats &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-stats-transact-sql.md)」を参照してください。|  
+|object_id |**int**|統計オブジェクトのプロパティを取得する対象のオブジェクト (テーブルまたはインデックス付きビュー) の ID。|  
+|stats_id |**int**|統計オブジェクトの ID。 テーブルまたはインデックス付きビュー内で一意です。 詳細については、「[sys.stats &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-stats-transact-sql.md)」を参照してください。|  
 |step_number |**int** |ヒストグラムのステップの数。 |
 |range_high_key |**sql_variant** |ヒストグラム区間の上限の列値。 この列値はキー値とも呼ばれます。|
 |range_rows |**real** |ヒストグラム区間内 (上限は除く) に列値がある行の予測数。 |
@@ -145,7 +144,7 @@ WHERE ss.[object_id] = OBJECT_ID('Country')
     AND sh.range_high_key = CAST('Canada' AS CHAR(8));
 ```
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
 [DBCC show_statistics で (TRANSACT-SQL)](../../t-sql/database-console-commands/dbcc-show-statistics-transact-sql.md)   
 [オブジェクト関連の動的管理ビューおよび関数 (TRANSACT-SQL)](../../relational-databases/system-dynamic-management-views/object-related-dynamic-management-views-and-functions-transact-sql.md)  
 [sys.dm_db_stats_properties (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-db-stats-properties-transact-sql.md)  

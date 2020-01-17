@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 237354e9-25c4-4386-9d1f-ca0618d4a9a0
 author: Shamikg
 ms.author: Shamikg
-manager: craigg
-ms.openlocfilehash: de41d864b6bfd8e7fe80188b69b50e2592d6cf16
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 51c0253dce8e95a5a25110b47b348397c967af94
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52514479"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67938260"
 ---
 # <a name="command-line-options-in-ssma-console-db2tosql"></a>SSMA コンソール (DB2ToSQL) コマンド ライン オプション
 Microsoft を実行し、SSMA アクティビティを制御する信頼性の高い一連のコマンド ライン オプションを提供します。 次のセクションでは、同じについて説明します。  
@@ -25,7 +24,7 @@ Microsoft を実行し、SSMA アクティビティを制御する信頼性の�
   
 ここでは、用語 'option' と呼ばれるもを 'switch'。  
   
-オプションは、小文字は区別されず、いずれかで始めることは '**-**'、'**/**' 文字。  
+オプションは、小文字は区別されず、いずれかで始めることは ' **-** '、' **/** ' 文字。  
   
 オプションを指定する場合、対応するオプションのパラメーターの指定が必須になります。  
   

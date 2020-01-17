@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 42409387-026c-435f-a9b1-bf4167095875
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: c63fb598630a30fd2616722146bb6737f17b82b5
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d63c413ebed585782ca5ce0568119dd7e05bf8ac
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47760410"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67932062"
 ---
 # <a name="namedparameters-property-ado"></a>NamedParameters プロパティ (ADO)
 パラメーター名をプロバイダーに渡す必要があるかどうかを示します。  
@@ -32,7 +31,7 @@ ms.locfileid: "47760410"
 ## <a name="applies-to"></a>適用対象  
  [Command オブジェクト (ADO)](../../../ado/reference/ado-api/command-object-ado.md)  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [CommandText プロパティ (ADO)](../../../ado/reference/ado-api/commandtext-property-ado.md)   
  [CommandStream プロパティ (ADO)](../../../ado/reference/ado-api/commandstream-property-ado.md)   
  [Parameters コレクション (ADO)](../../../ado/reference/ado-api/parameters-collection-ado.md)

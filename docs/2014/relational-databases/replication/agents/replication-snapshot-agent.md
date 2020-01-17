@@ -16,11 +16,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 12050c8d2e5d440ef8f4d7f6584f6c08c210f4f0
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54132282"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63250584"
 ---
 # <a name="replication-snapshot-agent"></a>レプリケーション スナップショット エージェント
   レプリケーション スナップショット エージェントは、パブリッシュされたテーブルおよびデータベース オブジェクトのスキーマとデータを含むスナップショット ファイルを作成し、これらのファイルをスナップショット フォルダーに格納し、同期ジョブをディストリビューション データベースに記録する実行可能ファイルです。  
@@ -78,8 +78,8 @@ ms.locfileid: "54132282"
  **-?**  
  使用できるすべてのパラメーターを表示します。  
   
- **-Publisher** _server_name_[**\\**_instance_name_]  
- パブリッシャーの名前です。 サーバー上の [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] の既定のインスタンスの場合は、server_name を指定します。 サーバー上の _server_name_**\\**_instance_name_ instance_name [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] の既定のインスタンスの場合は、server_name を指定します。  
+ **-Publisher** _server_name_[ **\\** _instance_name_]  
+ パブリッシャーの名前です。 サーバー上の [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] の既定のインスタンスの場合は、server_name を指定します。 サーバー上の _server_name_ **\\** _instance_name_ instance_name [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] の既定のインスタンスの場合は、server_name を指定します。  
   
  **-Publication** _publication_  
  パブリケーションの名前です。 このパラメーターは、新規または再初期化されたサブスクリプションのスナップショットを常に利用できるようにパブリケーションを設定している場合にのみ有効です。  
@@ -87,16 +87,16 @@ ms.locfileid: "54132282"
  **-70Subscribers**  
  いずれかのサブスクライバーで [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 7.0 が動作している場合に、必ず使用します。  
   
- **-BcpBatchSize** _bcp_ \_ *バッチ*\_ *サイズ*  
+ **-BcpBatchSize** _bcp_\_ *batch*\_ *size*  
  一括コピー操作によって送られる行の数です。 **bcp in** 操作を実行する場合、バッチ サイズは 1 つのトランザクションとしてサーバーに送る行数です。ディストリビューション エージェントが **bcp** 実行状況メッセージをログに記録する前に、これらの行数を送る必要があります。 **bcp out** 操作を実行する場合は、固定バッチ サイズ 1000 が使用されます。 値 0 は、メッセージをログに記録しないことを示します。  
   
  **-DefinitionFile** _def_path_and_file_name_  
  エージェント定義ファイルのパスです。 エージェント定義ファイルには、エージェントのコマンド ライン引数が含まれます。 ファイルの内容は実行可能ファイルとして解析されます。 二重引用符 (") を使用して、任意の文字を含む引数値を指定します。  
   
- **-Distributor** _server_name_[**\\**_instance_name_]  
- ディストリビューターの名前です。 サーバー上の *の既定のインスタンスの場合は、* server_name [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] を指定します。 サーバー上の _server_name_**\\**_instance_name_ instance_name [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] の既定のインスタンスの場合は、server_name を指定します。  
+ **-Distributor** _server_name_[ **\\** _instance_name_]  
+ ディストリビューターの名前です。 サーバー上の *の既定のインスタンスの場合は、* server_name [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] を指定します。 サーバー上の _server_name_ **\\** _instance_name_ instance_name [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] の既定のインスタンスの場合は、server_name を指定します。  
   
- **-DistributorDeadlockPriority** [**-1**|**0**|**1**]  
+ **-DistributorDeadlockPriority** [ **-1**|**0**|**1**]  
  デッドロックが発生した場合のディストリビューターへのスナップショット エージェント接続の優先度です。 このパラメーターは、スナップショットの生成中にスナップショット エージェントとユーザー アプリケーション間で発生する可能性のあるデッドロックを解決するために指定します。  
   
 |DistributorDeadlockPriority の値|説明|  
@@ -196,7 +196,7 @@ ms.locfileid: "54132282"
 |**2**|すべてのエラー メッセージと進行状況レポート メッセージが出力されます。これはデバッグの際に役立ちます。|  
 
  **-PrefetchTables** [ **0**| **1**]  
- テーブル オブジェクトがプリフェッチされてキャッシュされるかどうかを指定する、省略可能なパラメーターです。  既定の動作では、内部の計算に基づき SMO コンポーネントを使用して特定のテーブルのプロパティがプリフェッチされます。  このパラメーターを実行する、操作はかなりのプリフェッチ SMO になったシナリオでことができます。 このパラメーターを使用しない場合は、パブリケーションにアーティクルとして追加されるテーブルの割合に基づいて、実行時にこの決定が行われます。  
+ テーブル オブジェクトがプリフェッチされてキャッシュされるかどうかを指定する、省略可能なパラメーターです。  既定の動作では、内部の計算に基づき SMO コンポーネントを使用して特定のテーブルのプロパティがプリフェッチされます。  このパラメーターは、SMO のプリフェッチ操作の実行にかなりの時間がかかるシナリオで役立つ場合があります。 このパラメーターを使用しない場合は、パブリケーションにアーティクルとして追加されるテーブルの割合に基づいて、実行時にこの決定が行われます。  
   
 |OutputVerboseLevel の値|説明|  
 |------------------------------|-----------------|  
@@ -215,7 +215,7 @@ ms.locfileid: "54132282"
  **-PublisherDB** _publisher_database_  
  パブリケーション データベースの名前です。 *このパラメーターは、Oracle パブリッシャーについてはサポートされません。*  
   
- **-PublisherDeadlockPriority** [**-1**|**0**|**1**]  
+ **-PublisherDeadlockPriority** [ **-1**|**0**|**1**]  
  デッドロックが発生した場合のパブリッシャーへのスナップショット エージェント接続の優先度です。 このパラメーターは、スナップショットの生成中にスナップショット エージェントとユーザー アプリケーション間で発生する可能性のあるデッドロックを解決するために指定します。  
   
 |PublisherDeadlockPriority の値|説明|  
@@ -224,7 +224,7 @@ ms.locfileid: "54132282"
 |**0** (既定値)|優先度は割り当てられません。|  
 |**1**|パブリッシャー側でデッドロックが発生した場合、スナップショット エージェントが優先されます。|  
   
- **-PublisherFailoverPartner** _server_name_[**\\**_instance_name_]  
+ **-PublisherFailoverPartner** _server_name_[ **\\** _instance_name_]  
  パブリケーション データベースとのデータベース ミラーリング セッションに参加する、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] フェールオーバー パートナー インスタンスを指定します。 詳細については、「 [データベース ミラーリングとレプリケーション &#40;SQL Server&#41;](../../../database-engine/database-mirroring/database-mirroring-and-replication-sql-server.md)」をご覧ください。  
   
  **-PublisherLogin** _publisher_login_  

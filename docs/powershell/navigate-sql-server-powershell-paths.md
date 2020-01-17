@@ -7,15 +7,14 @@ ms.reviewer: ''
 ms.technology: scripting
 ms.topic: conceptual
 ms.assetid: d68aca48-d161-45ed-9f4f-14122ed30218
-author: stevestein
-ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 4cc00205c7278e25fad3c3301dcdf0507cb9b4bf
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 4ced679315a8e682a438f2ab99ca610219768172
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47600610"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68049120"
 ---
 # <a name="navigate-sql-server-powershell-paths"></a>SQL Server PowerShell パスの移動
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -136,7 +135,7 @@ Set-Location AWDB:\Tables\Purchasing.Vendor
 ```  
   
 ## <a name="see-also"></a>参照  
- [SQL Server PowerShell Provider](sql-server-powershell-provider.md)   
+ [SQL Server PowerShell プロバイダー](sql-server-powershell-provider.md)   
  [SQL Server PowerShell パスの操作](work-with-sql-server-powershell-paths.md)   
  [SQL Server PowerShell](sql-server-powershell.md)  
   

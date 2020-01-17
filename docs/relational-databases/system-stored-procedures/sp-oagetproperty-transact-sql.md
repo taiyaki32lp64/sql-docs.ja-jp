@@ -17,15 +17,14 @@ helpviewer_keywords:
 ms.assetid: 240eeeb9-6d8b-4930-b912-1d273ca0ab38
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 0a8c87eb8ed41b1669cf423aaccb8b06ee8b0e54
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 6efc0b620dcec300b5342ea5a0f63358fcdfadc5
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47690010"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68107880"
 ---
-# <a name="spoagetproperty-transact-sql"></a>sp_OAGetProperty (Transact-SQL)
+# <a name="sp_oagetproperty-transact-sql"></a>sp_OAGetProperty (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   OLE オブジェクトのプロパティ値を取得します。  
@@ -83,7 +82,7 @@ sp_OAGetProperty objecttoken , propertyname
   
  列内のすべてのデータ値が同じデータ型を共有する場合は、そのデータ型を列全体で使用します。 1 列のデータ値がそれぞれ異なるデータ型である場合、列全体に適用されるデータ型は次の表を基に選択されます。  
   
-||ssNoversion|FLOAT|money|DATETIME|varchar|NVARCHAR|  
+||int|FLOAT|money|DATETIME|varchar|NVARCHAR|  
 |------|---------|-----------|-----------|--------------|-------------|--------------|  
 |**int**|**int**|**float**|**money**|**varchar**|**varchar**|**nvarchar**|  
 |**float**|**float**|**float**|**money**|**varchar**|**varchar**|**nvarchar**|  
@@ -96,7 +95,7 @@ sp_OAGetProperty objecttoken , propertyname
  使用することも**sp_OAMethod**プロパティ値を取得します。  
   
 ## <a name="permissions"></a>アクセス許可  
- **sysadmin** 固定サーバー ロールのメンバーシップが必要です。  
+ メンバーシップが必要です、 **sysadmin**固定サーバー ロールまたはアクセス許可をこのストアド プロシージャを直接実行します。 `Ole Automation Procedures` 構成でなければなりません**有効になっている**OLE オートメーションに関連するすべてのシステム プロシージャを使用します。  
   
 ## <a name="examples"></a>使用例  
   

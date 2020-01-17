@@ -9,13 +9,13 @@ ms.topic: conceptual
 ms.assetid: 42b26160-354f-460c-a1e4-167017af3a0b
 author: Shamikg
 ms.author: Shamikg
-manager: v-pelars
-ms.openlocfilehash: 293b599c8927115c8b82a75d783c222cbf53e8ed
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: shamikg
+ms.openlocfilehash: 660644dc59e0c787a4620d0b15341d1cc7eec0b0
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47708480"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68263015"
 ---
 # <a name="global-settings-output-window--oracletosql"></a>グローバル設定 (出力ウィンドウ) (OracleToSQL)
 使用して、**グローバル設定**SSMA の設定を指定 ダイアログ ボックス。  

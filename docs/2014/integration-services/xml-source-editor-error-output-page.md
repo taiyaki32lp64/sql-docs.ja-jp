@@ -4,23 +4,22 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.xmlsourceadapter.erroroutput.f1
 helpviewer_keywords:
 - XML Source Editor
 ms.assetid: 2ddb97c2-1e43-478f-8872-b6efd41b931e
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 3126888e0e2d64d2091ace450c276881c408259b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 19ebeac45f7596de42add894922838864f62546e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48111748"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66054308"
 ---
 # <a name="xml-source-editor-error-output-page"></a>[XML ソース エディター] ([エラー出力] ページ)
   **[XML ソース エディター]** ダイアログ ボックスの **[エラー出力]** ページを使用すると、エラー処理オプションを選択したり、エラー出力列のプロパティを設定したりできます。  
@@ -51,10 +50,10 @@ ms.locfileid: "48111748"
  **[適用]**  
  選択したセルにエラー処理オプションを適用します。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [Integration Services のエラーおよびメッセージのリファレンス](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [XML ソース エディター&#40;接続マネージャー ページ&#41;](../../2014/integration-services/xml-source-editor-connection-manager-page.md)   
- [XML ソース エディター&#40;列 ページ&#41;](../../2014/integration-services/xml-source-editor-columns-page.md)   
+ [[XML ソース エディター] ([接続マネージャー] ページ)](../../2014/integration-services/xml-source-editor-connection-manager-page.md)   
+ [[XML ソース エディター] ([列] ページ)](../../2014/integration-services/xml-source-editor-columns-page.md)   
  [XML ソースを使用してデータを抽出する](data-flow/extract-data-by-using-the-xml-source.md)  
   
   

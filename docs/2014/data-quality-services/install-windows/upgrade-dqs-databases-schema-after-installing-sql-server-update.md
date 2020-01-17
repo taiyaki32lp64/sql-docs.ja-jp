@@ -7,15 +7,15 @@ ms.reviewer: ''
 ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: c8f3fbae-02c4-464d-a35c-7108f48c58cb
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 984f6927f4602703b71526bf4d005202fe09fcdf
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 5a2b13c80c9e6ee83d2713feab5d9839ded4a6d7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56031243"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65481263"
 ---
 # <a name="upgrade-dqs-databases-schema-after-installing-sql-server-update"></a>SQL Server 更新プログラムのインストール後の DQS データベース スキーマのアップグレード
   あらかじめ構成された DQS インスタンスに SQL Server の更新プログラム (パッチ、修正プログラム、または累積的な更新プログラム) をインストールした後、**upgrade** コマンド ライン パラメーターを指定して DQSInstaller.exe ファイルを実行し、DQS データベース スキーマをアップグレードする必要がある場合があります。 アップグレードしなかった場合、Data Quality Client を使用して Data Quality Server に接続しようとすると、次のエラーが表示されることがあります。  
@@ -27,7 +27,7 @@ An error occurred in the Microsoft .NET Framework while trying to load assembly 
  DQS データベース スキーマのアップグレードは、DQS データベース内の既存のデータ (ナレッジ ベース、データ品質プロジェクト、DQS_STAGING_DATA データベース内にエクスポートされた結果) には影響しません。 ただし、スキーマのアップグレード中に誤ってデータが削除されることを防ぐため、DQS データベース スキーマをアップグレードする前に DQS データベースをバックアップしておく必要があります。 DQS データベースのバックアップの詳細については、「 [DQS データベースのバックアップと復元](../backing-up-and-restoring-dqs-databases.md)」を参照してください。  
   
 > [!NOTE]  
->  SQL Server の更新プログラムのほとんどで、DQS データベース スキーマのアップグレードが必要になります。 DQS データベース スキーマへのアップグレードが必要になる SQL Server 更新プログラムの詳細については、グラフを参照してください。 手順 1.A に[DQS のアップグレード。Data Quality Services の累積的な更新プログラムまたは修正プログラムをインストールする](https://go.microsoft.com/fwlink/?LinkID=251565)します。  
+>  SQL Server の更新プログラムのほとんどで、DQS データベース スキーマのアップグレードが必要になります。 DQS データベース スキーマのアップグレードが必要になる SQL Server 更新プログラムの詳細については、「[Upgrade DQS: Installing Cumulative Updates or Hotfix Patches on Data Quality Services](https://go.microsoft.com/fwlink/?LinkID=251565)」 (DQS のアップグレード: Data Quality Services への累積的な更新プログラムまたは修正プログラムのインストール) の手順 1.A にある表を参照してください。  
   
 ## <a name="prerequisites"></a>前提条件  
   
@@ -60,7 +60,7 @@ An error occurred in the Microsoft .NET Framework while trying to load assembly 
 ## <a name="next-steps"></a>次の手順  
  Data Quality Client アプリケーションから、アップグレードされた Data Quality Server にログオンします。  
   
- DQS のアップグレードの詳細については、SQL Server のインストール後のデータベース スキーマは更新し、関連するトラブルシューティング手順を参照してください[DQS のアップグレードします。Data Quality Services の累積的な更新プログラムまたは修正プログラムをインストールする](https://go.microsoft.com/fwlink/?LinkID=251565)します。  
+ SQL Server の更新プログラムをインストールしてから DQS データベース スキーマをアップグレードする方法と関連するトラブルシューティング手順については、「[Upgrade DQS: Installing Cumulative Updates or Hotfix Patches on Data Quality Services](https://go.microsoft.com/fwlink/?LinkID=251565)」 (DQS のアップグレード: Data Quality Services への累積的な更新プログラムまたは修正プログラムのインストール) を参照してください。  
   
 ## <a name="see-also"></a>参照  
  [Data Quality Services のインストール](install-data-quality-services.md)   

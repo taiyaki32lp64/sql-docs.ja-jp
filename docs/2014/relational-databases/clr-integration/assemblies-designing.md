@@ -14,11 +14,11 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: ad5135eb8141cc84bc6e5bddc8bd8477f4699b9e
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48196242"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62874927"
 ---
 # <a name="designing-assemblies"></a>アセンブリのデザイン
   このトピックでは、アセンブリをデザインするときに考慮する必要がある次の項目について説明します。  
@@ -39,7 +39,7 @@ ms.locfileid: "48196242"
 -   マネージド コードの一部分で上位の権限が必要な場合、そのコードは、上位の権限を必要としないコードとは別のアセンブリにパッケージ化することをお勧めします。  
   
 ## <a name="managing-assembly-security"></a>アセンブリのセキュリティ管理  
- アセンブリでマネージド コードが実行されるときに、.NET コード アクセス セキュリティによって保護されているリソースにアセンブリがアクセスできる程度を制御できます。 この制御は、アセンブリを作成または変更するときに、SAFE、EXTERNAL_ACCESS、または UNSAFE の 3 つの中のいずれかの権限セットを指定して行います。  
+ アセンブリでマネージド コードが実行されるときに、.NET コード アクセス セキュリティによって保護されているリソースにアセンブリがアクセスできる程度を制御できます。 作成またはアセンブリを変更するときに、次の 3 つのアクセス許可セットのいずれかのファイルを指定することによって行います。SAFE、EXTERNAL_ACCESS、または UNSAFE です。  
   
 ### <a name="safe"></a>SAFE  
  SAFE は既定の権限セットであり、最も強い制限です。 SAFE 権限を指定したアセンブリによって実行されるコードでは、ファイル、ネットワーク、環境変数、またはレジストリなどの外部システム リソースにアクセスできません。 SAFE コードでは、ローカルの [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] データベースのデータにアクセスしたり、ローカル データベースの外部にあるリソースへのアクセスを必要としない計算やビジネス ロジックを実行したりすることができます。  

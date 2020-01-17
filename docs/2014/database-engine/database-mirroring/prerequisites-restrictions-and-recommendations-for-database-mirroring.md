@@ -19,11 +19,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 9763385093db6e649e60ab7a6be74f8f28466e1d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48164792"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62754600"
 ---
 # <a name="prerequisites-restrictions-and-recommendations-for-database-mirroring"></a>データベース ミラーリングの前提条件、制限事項、および推奨事項
     

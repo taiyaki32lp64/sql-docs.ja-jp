@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 37db1ae1-ca4e-4cd8-9b47-7f1a38e7fcad
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 2325cd7e4a10e91f351aa2107c64c0978b843fa6
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 1bb7f0fb02049b6d2f1897c4f495035aee2858f6
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47825840"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68085490"
 ---
 # <a name="jet-date-time-and-timestamp-literals"></a>Jet: 日付、時刻、およびタイムスタンプのリテラル
 相互運用性を最大に、アプリケーションは、エスケープ句の構文を使用して ODBC 正規の形式で日付リテラルを渡す必要があります。  

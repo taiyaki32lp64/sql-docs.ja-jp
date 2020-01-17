@@ -17,16 +17,15 @@ helpviewer_keywords:
 - CHECKSUM function
 - checksum values
 ms.assetid: e26d3339-845c-49c2-9d89-243376874c13
-author: MashaMSFT
-ms.author: mathoma
-manager: craigg
+author: MikeRayMSFT
+ms.author: mikeray
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 7feb3a0e82a1c3737f9d8723ecd26c741b334e17
-ms.sourcegitcommit: 032273bfbc240fe22ac6c1f6601a14a6d99573f7
+ms.openlocfilehash: 4a6fd6dd25d19e153b4a2623ceaaeaec558a1aad
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/01/2019
-ms.locfileid: "55513912"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68064752"
 ---
 # <a name="checksum-transact-sql"></a>CHECKSUM (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-asdw-xxx-md.md)]
@@ -45,7 +44,7 @@ CHECKSUM ( * | expression [ ,...n ] )
 \*  
 この引数は、チェックサムの計算がすべてのテーブル列をカバーしていることを指定します。 列のいずれかが比較できないデータ型である場合、`CHECKSUM` ではエラーが返されます。 比較できないデータ型は次のとおりです。
 
-- **カーソル (cursor)**
+- **cursor**
 - **image**
 - **ntext**
 - **text**
@@ -68,6 +67,8 @@ CHECKSUM ( * | expression [ ,...n ] )
   
 `CHECKSUM` 値は照合順序によって異なります。 異なる照合順序で保存された同じ値は別の `CHECKSUM` 値を返します。
   
+`CHECKSUM ()` では、結果が一意になるとは限りません。
+
 ## <a name="examples"></a>使用例  
 これらの例は、`CHECKSUM` を使用してハッシュ インデックスを作成する方法を示しています。
   
@@ -104,7 +105,7 @@ GO
   
 ## <a name="see-also"></a>参照
 [CHECKSUM_AGG &#40;Transact-SQL&#41;](../../t-sql/functions/checksum-agg-transact-sql.md)  
-[HASHBYTES (&) #40 です。TRANSACT-SQL と #41 です。](../../t-sql/functions/hashbytes-transact-sql.md)  
+[HASHBYTES &#40;Transact-SQL&#41;](../../t-sql/functions/hashbytes-transact-sql.md)  
 [BINARY_CHECKSUM  &#40;Transact-SQL&#41;](../../t-sql/functions/binary-checksum-transact-sql.md)
   
   

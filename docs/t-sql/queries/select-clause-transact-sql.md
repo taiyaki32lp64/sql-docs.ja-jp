@@ -24,15 +24,14 @@ helpviewer_keywords:
 - $ROWGUID keyword
 - queries [SQL Server], results
 ms.assetid: 2616d800-4853-4cf1-af77-d32d68d8c2ef
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: 3afaabf46320dc52efee172fe6c74f8892d075fd
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: VanMSFT
+ms.author: vanto
+ms.openlocfilehash: 51707d97a738df13b7aae3c9e7208af76d440492
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47671926"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68141064"
 ---
 # <a name="select-clause-transact-sql"></a>SELECT 句 (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -107,7 +106,7 @@ SELECT [ ALL | DISTINCT ]
 >  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] は、ユーザー定義型の値をバイナリ表記で返します。 ユーザー定義型の値を文字列または XML 形式で返すには、[CAST](../../t-sql/functions/cast-and-convert-transact-sql.md) または [CONVERT](../../t-sql/functions/cast-and-convert-transact-sql.md) を使用します。  
   
  { . | :: }  
- CLR ユーザー定義型のメソッド、プロパティ、またはフィールドを指定します。 使用します。 インスタンス (静的ではない) のメソッド、プロパティ、またはフィールド、します。 静的なメソッド、プロパティ、またはフィールドに対しては :: を使用します。 CLR ユーザー定義型のメソッド、プロパティ、またはフィールドを呼び出すには、その型に対する EXECUTE 権限が必要です。  
+ CLR ユーザー定義型のメソッド、プロパティ、またはフィールドを指定します。 インスタンス (静的ではない) メソッド、プロパティ、フィールド には . を使用します。 静的なメソッド、プロパティ、フィールドには :: を使用します。 CLR ユーザー定義型のメソッド、プロパティ、またはフィールドを呼び出すには、その型に対する EXECUTE 権限が必要です。  
   
  *property_name*  
  *udt_column_name* のパブリック プロパティを指定します。  

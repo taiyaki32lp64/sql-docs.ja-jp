@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 topic_type:
 - apiref
@@ -15,12 +14,12 @@ ms.assetid: cfb0b69d-4ce0-4067-a3df-d82775e57886
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 8a57ec9e8d1cb6b2559622af339b9e8a6a3d7b29
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 17a2c847e906616c4555d37e641f76eeb73391ab
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48152988"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66065258"
 ---
 # <a name="assembly-load-event-class"></a>Assembly Load イベント クラス
   **Assembly Load** イベント クラスは、アセンブリの読み込み要求が実行されるときに発生します。  
@@ -44,7 +43,7 @@ ms.locfileid: "48152988"
 |**NTUserName**|**nvarchar**|Windows のユーザー名。|6|はい|  
 |**Exchange Spill**|**int**|アセンブリ ID。|22|はい|  
 |**ObjectName**|**nvarchar**|アセンブリの完全修飾名。|34|はい|  
-|**RequestID**|**int**|ステートメントが含まれている要求の ID。|49|はい|  
+|**RequestID**|**int**|ステートメントが含まれている要求の ID。|49|[はい]|  
 |**ServerName**|**nvarchar**|トレースされている [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] のインスタンスの名前。|26|いいえ|  
 |**SessionLoginName**|**nvarchar**|セッションを開始したユーザーのログイン名。 たとえば、Login1 を使用して [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] に接続し、Login2 でステートメントを実行すると、 **SessionLoginName** には Login1 が表示され、 **LoginName** には Login2 が表示されます。 この列には、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] ログインと Windows ログインの両方が表示されます。|64|はい|  
 |**SPID**|**int**|イベントが発生したセッションの ID。|12|はい|  
@@ -52,7 +51,7 @@ ms.locfileid: "48152988"
 |**成功**|**int**|アセンブリの読み込みの成功 (1) または失敗 (0) を示します。|23|はい|  
 |**TextData**|**ntext**|読み込みが成功した場合は "アセンブリの読み込み成功" が、それ以外の場合は "アセンブリの読み込み失敗"。|1|はい|  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [拡張イベント](../relational-databases/extended-events/extended-events.md)   
  [アセンブリ &#40;データベース エンジン&#41;](../relational-databases/clr-integration/assemblies-database-engine.md)  
   

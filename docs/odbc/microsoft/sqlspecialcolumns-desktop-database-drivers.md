@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 3de66fdf-053b-4354-979d-e76a5a5e975f
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: f319e6a28a1eba5f803e9cf7f7087f45f227fd87
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e530d0b16811cdf25a5bc1d99f5386efdb55ccd4
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47840010"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67905327"
 ---
 # <a name="sqlspecialcolumns-desktop-database-drivers"></a>SQLSpecialColumns (デスクトップ データベース ドライバー)
 一意のインデックスが返されます (存在する場合の SQL_BEST_ROWID フラグ*fColType*します。 SQL_ROWVER フラグの結果セットは返されません。  

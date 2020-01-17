@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: 4959a0a9-ae55-4c4e-80a8-21119aaceb92
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: a377ef7b3795801a036f5787155a610671dd715c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 91e006cbf64d28e7cb62c1957b46fc7e1ce7b1aa
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47849490"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67997205"
 ---
 # <a name="updateasciistream-method-sqlserverresultset"></a>updateAsciiStream メソッド (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

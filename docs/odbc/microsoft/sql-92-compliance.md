@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 50c8c7df-df01-4f4d-ad62-d059cf29d73a
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: cf6d8d056c1658a924de4b108d3c0d025e8a58f1
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e5d8ed2818b466d16591be8b70478221d7ac84df
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47791490"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68063367"
 ---
 # <a name="sql-92-compliance"></a>SQL-92 準拠
 ODBC のデスクトップ データベース ドライバーと、基になる Microsoft Jet エンジンは、sql-92 準拠ではありません。 Sql-92 で定義されている多くの機能をサポートしています。 ドライバーでサポートされている一部の機能は、sql-92 ではサポートされていません。 詳細については、次を参照してください。、 *Microsoft Jet データベース エンジン プログラマー ガイド*します。 次に、2 つの主な違いを示します。  
@@ -45,4 +44,4 @@ ODBC のデスクトップ データベース ドライバーと、基になる 
 -   その他の集計関数 (**StDev**と**VarP**)。  
   
 > [!NOTE]  
->  デスクトップ データベース ドライバーの標準の ANSI 構文から % (パーセント) と _ (アンダー スコア) のいないサポート * (アスタリスク) としますか? (疑問符)。
+>  デスクトップ データベース ドライバーの標準の ANSI 構文から % (パーセント) と _ (アンダー スコア) のいないサポート * (アスタリスク) としますか? (疑問符) に設定します。

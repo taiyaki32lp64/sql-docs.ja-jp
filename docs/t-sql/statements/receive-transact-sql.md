@@ -21,18 +21,17 @@ helpviewer_keywords:
 ms.assetid: 878c6c14-37ab-4b87-9854-7f8f42bac7dd
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: 5016c697c83ff286fe9d1d66f59dad92f1c534dc
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: e555a51cc4ab7c628dc75469aa1cfe4d7c01edcc
+ms.sourcegitcommit: 3de1fb410de2515e5a00a5dbf6dd442d888713ba
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51700930"
+ms.lasthandoff: 09/02/2019
+ms.locfileid: "70211440"
 ---
 # <a name="receive-transact-sql"></a>RECEIVE (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
 
-  キューから 1 つ以上のメッセージを受信します。 キューの保有期間の設定に応じて、キューからメッセージを削除するか、キューのメッセージの状態を更新します。  
+  キューから 1 つ以上のメッセージを受信します。 キューの保有期間の設定に応じて、キューからメッセージを削除するか、キュー内のメッセージの状態を更新します。  
   
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -57,22 +56,18 @@ ms.locfileid: "51700930"
 }     [ ,...n ]   
   
 <queue> ::=  
-{  
-    [ database_name . [ schema_name ] . | schema_name . ]  
-        queue_name  
-}  
-  
+{ database_name.schema_name.queue_name | schema_name.queue_name | queue_name }
 ```  
   
 ## <a name="arguments"></a>引数  
  WAITFOR  
- 現在メッセージが存在しない場合、RECEIVE ステートメントは、キューにメッセージが到着するのを待機します。  
+ 現在メッセージが存在しない場合、RECEIVE ステートメントが、キューにメッセージが到着するのを待機するように指定します。  
   
  TOP( *n* )  
  返されるメッセージの最大数を指定します。 この句を指定しない場合、ステートメントの条件に合致したすべてのメッセージが返されます。  
   
  \*  
- 結果セットにキューのすべての列を含めます。  
+ 結果セットにキューのすべての列を含めることを指定します。  
   
  *column_name*  
  結果セットに含める列の名前です。  
@@ -81,7 +76,7 @@ ms.locfileid: "51700930"
  列名、定数、関数、またはその組み合わせです。組み合わせる場合は演算子を使用します。  
   
  *column_alias*  
- 結果セット内の列名に対する別名です。  
+ 結果セット内の列名を置換する別名です。  
   
  FROM  
  取得するメッセージが含まれているキューを指定します。  

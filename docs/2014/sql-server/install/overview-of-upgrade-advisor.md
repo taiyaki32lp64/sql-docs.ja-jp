@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 helpviewer_keywords:
 - Upgrade Advisor [SQL Server], about Upgrade Advisor
@@ -14,12 +13,12 @@ ms.assetid: d52773fd-0e13-44a2-a5f2-69d6974bb08f
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 61ad84ce632de0431a584d6ca53b2673d37207c2
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 95d1ca08bcc92a8eeeebfcfbd1f8646cf5add4c1
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48060699"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66093538"
 ---
 # <a name="overview-of-upgrade-advisor"></a>アップグレード アドバイザーの概要
   ここでは、アップグレード処理の概要を説明し、アップグレード アドバイザー分析ウィザードとアップグレード アドバイザー レポート ビューアーを理解して使用するために役立つ情報を提供します。  

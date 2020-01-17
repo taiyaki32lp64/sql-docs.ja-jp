@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: db245c80-981a-4638-bd03-69d04bc67af0
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 733b958ee883aa62034b4acc1eec67100b35a74d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 9d27f168640b25652ed0fd40154ebfb677ef9300
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47809270"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68068646"
 ---
 # <a name="file-data-sources"></a>[ファイル データ ソース]
 *データ ソースをファイル*はファイルに格納され、1 人のユーザーによって繰り返し使用することもいくつかのユーザー間で共有への接続情報を許可します。 ファイル データ ソースを使用すると、ドライバー マネージャーは .dsn ファイルに情報を使用してデータ ソースへの接続を使用します。 このファイルは、その他のファイルのように操作できます。 ファイル データ ソースをは、コンピューターのデータ ソースを行い、任意の 1 人のユーザーまたはコンピューターに登録されていないと、データ ソース名がありません。  

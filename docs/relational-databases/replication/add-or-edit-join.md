@@ -12,13 +12,12 @@ f1_keywords:
 ms.assetid: 3b546560-720f-48b8-9d63-cf159290e9d4
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: d883a137dd182f233bc056b0fca98cf60df4331f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 13c441771044ba6932b35fd59f593b9e635b0afe
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47794580"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72907564"
 ---
 # <a name="add-or-edit-join"></a>結合の追加と編集
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -34,7 +33,7 @@ ms.locfileid: "47794580"
 > [!IMPORTANT]  
 >  結合フィルターに使用できるテーブルの数に制限はありませんが、多数のテーブルをフィルターに使用すると、マージ処理中のパフォーマンスに影響する場合があります。 テーブルが 5 つ以上の結合フィルターを生成する場合は、小さなテーブル、変更されないテーブル、プライマリ参照テーブルはフィルター選択しないという別の解決策を検討してください。 サブスクライバーの間で分割する必要があるテーブル間にのみ、結合フィルターを使用してください。  
   
-## <a name="options"></a>[変数]  
+## <a name="options"></a>オプション  
  このダイアログ ボックスでは、3 つの手順で 2 つのテーブル間の結合フィルターを作成します。 結合フィルターを複数作成するには、このダイアログ ボックスの手順を複数回繰り返す必要があります。  
   
 1.  **[フィルター選択されたテーブルを確認し、結合テーブルを選択します]**  
@@ -47,14 +46,14 @@ ms.locfileid: "47794580"
   
     -   新しい結合を追加する場合、 **[ビルダーを使用してステートメントを作成する]** または **[JOIN ステートメントを手動で作成する]** を選択します。 結合を手動で作成する場合、ビルダーは使用できません。  
   
-         ビルダーの使用を選択した場合、グリッド内の列 (**[結合]**、 **[フィルター選択されたテーブルの列]**、 **[演算子]**、 **[結合テーブルの列]**) を使用して JOIN ステートメントを作成します。 グリッド内の各列にはドロップダウン リスト ボックスがあり、これを使用して 2 つの列と演算子 (**=**、 **<>**、 **<=**、 **\<**、 **>=**、 **>**、 **[like]**) を選択できます。 結果は **[プレビュー]** テキスト領域に表示されます。 結合に列が 2 組以上使用される場合には、**[結合]** 列で結合 ( **[AND]** または **[OR]** ) を選択し、2 つの列と別の演算子を入力します。  
+         ビルダーの使用を選択した場合、グリッド内の列 ( **[結合]** 、 **[フィルター選択されたテーブルの列]** 、 **[演算子]** 、 **[結合テーブルの列]** ) を使用して JOIN ステートメントを作成します。 グリッド内の各列にはドロップダウン リスト ボックスがあり、これを使用して 2 つの列と演算子 ( **=** 、 **<>** 、 **<=** 、 **\<** 、 **>=** 、 **>** 、 **[like]** ) を選択できます。 結果は **[プレビュー]** テキスト領域に表示されます。 結合に列が 2 組以上使用される場合には、 **[結合]** 列で結合 ( **[AND]** または **[OR]** ) を選択し、2 つの列と別の演算子を入力します。  
   
          ステートメントを手動で作成する場合、 **[JOIN ステートメント]** テキスト領域に JOIN ステートメントを入力します。 **[フィルター選択されたテーブルの列]** リスト ボックスと **[結合テーブルの列]** リスト ボックスを使用して、列を **[結合テーブルの列]** テキスト領域にドラッグ アンド ドロップします。  
   
     -   既存の結合を編集する場合、手動で編集する必要があります。  
   
 3.  **[結合オプションを指定します]**  
-  
+
     -   フィルター選択するテーブル内で結合する列が一意な場合、 **[一意キー : フィルター選択されたテーブルの 1 つの行に関連する結合テーブル内の行 (一対一または一対多の関係)]** を選択します。 列が一意の場合、特別なパフォーマンスの最適化機能をマージ処理で利用できます。  
   
         > [!CAUTION]  
@@ -68,7 +67,7 @@ ms.locfileid: "47794580"
  [Create a Publication](../../relational-databases/replication/publish/create-a-publication.md)   
  [パブリケーション プロパティの表示および変更](../../relational-databases/replication/publish/view-and-modify-publication-properties.md)   
  [パブリッシュされたデータのフィルター選択](../../relational-databases/replication/publish/filter-published-data.md)   
- [結合フィルター](../../relational-databases/replication/merge/join-filters.md)   
+ [Join Filters](../../relational-databases/replication/merge/join-filters.md)   
  [Parameterized Row Filters](../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md)   
  [データとデータベース オブジェクトのパブリッシュ](../../relational-databases/replication/publish/publish-data-and-database-objects.md)  
   

@@ -16,11 +16,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 54ec71df8efab1f60bfb7a5b9af448705e349d28
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52760754"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68211423"
 ---
 # <a name="designate-a-fail-safe-operator"></a>Designate a Fail-Safe Operator
   緊急時のオペレーターとは、指定オペレーターが不在の場合に警告を受信するユーザーのことです。 このトピックでは、[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] で [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] を使用して、[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェントの警告通知を受信する緊急時のオペレーターを設定する方法について説明します。  
@@ -60,13 +60,13 @@ ms.locfileid: "52760754"
   
 2.  **[SQL Server エージェント]** を右クリックし、 **[プロパティ]** を選択します。  
 
-3.  **SQL Server エージェントのプロパティ -**_server_name_ダイアログ ボックスで、**ページの選択**を選択します**警告システム**します。  
+3.  **SQL Server エージェントのプロパティ -** _server_name_ダイアログ ボックスで、**ページの選択**を選択します**警告システム**します。  
  
 4.  **[緊急時のオペレーター]** の **[緊急時のオペレーターを有効にする]** チェック ボックスをオンにします。  
   
 5.  **[オペレーター]** 一覧から、緊急時のオペレーターにするオペレーターを選択します。  
   
-6.  いずれかまたはすべてのオペレーターの通知方法を指定する次のチェック ボックスを選択します。**電子メール**、**ポケットベル**、または**Net send**します。  
+6.  次のチェック ボックスのいずれかまたはすべてを選択して、オペレーターへの通知方法を指定します。 **[電子メール]** 、 **[ポケットベル]** 、または **[Net Send]** 。  
   
 7.  完了したら、 **[OK]** をクリックします。  
   

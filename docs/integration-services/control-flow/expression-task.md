@@ -10,17 +10,20 @@ ms.topic: conceptual
 f1_keywords:
 - sql13.DTS.DESIGNER.EXPRESSIONTASK.F1
 ms.assetid: 1d7f042d-508d-4e1a-b83a-86a18e23b85f
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: f026b827c510713ac45d11fbfad552b39171163d
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 385db632232fabe3639384b4792a621e1023075a
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51640279"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71298288"
 ---
 # <a name="expression-task"></a>式タスク
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   式タスクでは、式ビルダーを使用して、実行時に変数値を設定する式を作成して評価します。 タスクを編集するときは、 [Expression Builder](../../integration-services/expressions/expression-builder.md) が起動します。  
   
 ## <a name="expression-examples"></a>式の例  

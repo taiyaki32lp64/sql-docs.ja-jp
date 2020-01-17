@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 9ec1c1e8-a3e1-4e81-bf49-631f87daa209
 author: Shamikg
 ms.author: Shamikg
-manager: craigg
-ms.openlocfilehash: 90a47a7586d0f3c6b5bd0fee28ed01f3b292a92e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: c8aebc643d3d313dcf97bbe69044ee795649ba46
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47803630"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67929427"
 ---
 # <a name="project-settings-loading-objects-accesstosql"></a>プロジェクトの設定 (オブジェクトの読み込み) (AccessToSQL)
 オブジェクトの読み込み、プロジェクトの設定では、SQL Server データベース オブジェクトとデータベース オブジェクトにアクセスを同期する方法を構成できます。  

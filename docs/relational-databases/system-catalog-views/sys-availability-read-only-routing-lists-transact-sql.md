@@ -24,13 +24,12 @@ helpviewer_keywords:
 ms.assetid: 0686bc5a-c206-41ef-b40a-79a8259d51d2
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 48e497c41cc542e54ec4fffa1f97dac5635e0039
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 9449c9a52a49f86e72542d965c1ae1b6a5d1809c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47603150"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67942634"
 ---
 # <a name="sysavailabilityreadonlyroutinglists-transact-sql"></a>sys.availability_read_only_routing_lists (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -40,13 +39,13 @@ ms.locfileid: "47603150"
 |列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
 |**replica_id**|**uniqueidentifier**|ルーティング リストを所有している可用性レプリカの一意の ID。|  
-|**routing_priority**|**int**|ルーティングの優先順位 (1 が 1 番目、2 が 2 番目など)。|  
+|**routing_priority**|**int**|ルーティングの優先順位 (1 は最初、2 は、2 つ目など)。|  
 |**read_only_replica_id**|**uniqueidentifier**|読み取り専用ワークロードがルーティングされる可用性レプリカの一意の ID。|  
   
 ## <a name="permissions"></a>アクセス許可  
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] 詳細については、「 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)」を参照してください。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [AlwaysOn 可用性グループの動的管理ビューおよび関数 &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/always-on-availability-groups-dynamic-management-views-functions.md)   
  [AlwaysOn 可用性グループのカタログ ビュー &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/always-on-availability-groups-catalog-views-transact-sql.md)   
  [可用性グループの監視 &#40;Transact-SQL&#41;](../../database-engine/availability-groups/windows/monitor-availability-groups-transact-sql.md)   

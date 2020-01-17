@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 helpviewer_keywords:
 - workloads [SQL Server], tuning
@@ -13,12 +12,12 @@ ms.assetid: 6229bf3f-1182-4bc6-8451-cedc37f4b62e
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 82d3b33b8c41885d3fa92d1363af6c98443c9deb
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 3dd87c1e2bd08ce5bb1d05e9d51d92e3f62bcc7a
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48073782"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66110185"
 ---
 # <a name="tuning-a-workload"></a>ワークロードのチューニング
   データベース エンジン チューニング アドバイザーでは、チューニング用に選択したデータベースおよびテーブルについて、最適なクエリ パフォーマンスが得られる物理データベース設計を見つけることができます。  
@@ -41,7 +40,7 @@ ms.locfileid: "48073782"
   
 7.  ツール バーの **[分析の開始]** ボタンをクリックします。 ワークロードの分析中は、 **[進行状況]** タブで実行状況を監視できます。チューニングが完了すると **[推奨設定]** タブが表示されます。  
   
-     チューニング停止の日付と時刻に関してエラーが発生する場合は、 **[チューニング オプション]** タブの **[停止時刻]** の時間を確認します。**[停止時刻]** の日付と時刻が現在の日付と時刻よりも後になっていることを確認し、必要に応じて変更します。  
+     チューニング停止の日付と時刻に関してエラーが発生する場合は、 **[チューニング オプション]** タブの **[停止時刻]** の時間を確認します。 **[停止時刻]** の日付と時刻が現在の日付と時刻よりも後になっていることを確認し、必要に応じて変更します。  
   
 8.  分析が完了したら、 [!INCLUDE[tsql](../../includes/tsql-md.md)] [アクション] **メニューの** [推奨設定の保存] **をクリックし、推奨設定を** スクリプトとして保存します。 **[名前を付けて保存]** ダイアログ ボックスで推奨設定スクリプトを保存するディレクトリに移動し、ファイル名として「 **MyRecommendations**」と入力します。  
   

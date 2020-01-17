@@ -14,19 +14,20 @@ helpviewer_keywords:
 ms.assetid: 9e4563dd-4799-4b32-a78a-048ea44a44c1
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: c758edb6bd51ce82affccae78c796437d7a688fc
-ms.sourcegitcommit: 1a5448747ccb2e13e8f3d9f04012ba5ae04bb0a3
+ms.openlocfilehash: 2d9a354b23a751a657ca10acc7e6cc19c6b586b4
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51559391"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68137417"
 ---
 # <a name="database-mail"></a>データベース メール
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  データベース メールは、[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]から電子メールを送信するためのエンタープライズ ソリューションです。 データベース メールを使用すると、データベース アプリケーションからユーザーに電子メールを送信できます。 メッセージにはクエリ結果を含めることができ、ネットワーク上にあるリソースのファイルも含めることができます。  
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+  データベース メールは、[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] または [Azure SQL Database Managed Instance](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-index) から電子メール メッセージを送信するためのエンタープライズ ソリューションです。 データベース メールを使用すると、データベース アプリケーションからユーザーに電子メールを送信できます。 メッセージにはクエリ結果を含めることができ、ネットワーク上にあるリソースのファイルも含めることができます。  
   
-  
+> [!NOTE] 
+> データベース メールは、Azure SQL Database シングルトンおよびエラスティック プールではなく、[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] および [Azure SQL Database Managed Instance](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-index) で使用できます。 
+
 ##  <a name="Benefits"></a>データベース メールの使用の利点  
  データベース メールは、信頼性、スケーラビリティ、セキュリティ、およびサポート性を念頭に置いて設計されています。  
   
@@ -42,21 +43,21 @@ ms.locfileid: "51559391"
   
 ### <a name="scalability"></a>スケーラビリティ  
   
--   バックグラウンド配信: データベース メールでは、バックグラウンド配信または非同期配信が提供されています。 **sp_send_dbmail** を呼び出してメッセージを送信すると、データベース メールによって [!INCLUDE[ssSB](../../includes/sssb-md.md)] のキューに要求が追加されます。 ストアド プロシージャが直ちに返されます。 外部の電子メール コンポーネントが要求を受信し、電子メールを配信します。  
+-   バックグラウンド配信: データベース メールでは、バックグラウンドまたは非同期の配信が提供されています。 **sp_send_dbmail** を呼び出してメッセージを送信すると、データベース メールによって [!INCLUDE[ssSB](../../includes/sssb-md.md)] のキューに要求が追加されます。 ストアド プロシージャが直ちに返されます。 外部の電子メール コンポーネントが要求を受信し、電子メールを配信します。  
   
--   複数のプロファイル: データベース メールを使用すると、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンス内に複数のプロファイルを作成できます。 オプションで、メッセージを送信するときにデータベース メールが使用するプロファイルを選択できます。  
+-   複数のプロファイル: データベース メールを使用すると、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンス内に複数のプロファイルを作成できます。 オプションで、メッセージを送信するときにデータベース メールが使用するプロファイルを選択できます。  
   
 -   複数のアカウント: 各プロファイルに、複数のフェールオーバー アカウントを含めることができます。 別々のアカウントを持つ別々のプロファイルを構成して、複数の電子メール サーバーで電子メールを配信できます。  
   
--   64 ビット互換性: データベース メールは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]の 64 ビット インストールで完全にサポートされています。  
+-   64 ビット互換性: データベース メールは、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の 64 ビット インストールで完全にサポートされています。  
   
 ### <a name="security"></a>Security  
   
--   既定でオフ: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]の外部からのアクセスを縮小するために、データベース メールのストアド プロシージャは既定で無効になっています。  
+-   既定でオフ: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の外部からのアクセスを縮小するために、データベース メールのストアド プロシージャは既定で無効になっています。  
   
 -   メールのセキュリティ: データベース メールを送信するには、 **msdb** データベースの **DatabaseMailUserRole** データベース ロールのメンバーである必要があります。  
   
--   プロファイルのセキュリティ: データベース メールでは、メール プロファイルにセキュリティが適用されます。 データベース メール プロファイルにアクセスする **msdb** データベース ユーザーまたはグループを選択することによって、 特定のユーザーまたは **msdb**のすべてのユーザーにアクセスを許可できます。 プライベート プロファイルでは、指定した一覧のユーザーにアクセスが制限されます。 パブリック プロファイルは、データベースのすべてのユーザーがアクセスできます。  
+-   プロファイル セキュリティ: データベース メールでは、メール プロファイルにセキュリティが適用されます。 データベース メール プロファイルにアクセスする **msdb** データベース ユーザーまたはグループを選択することによって、 特定のユーザーまたは **msdb**のすべてのユーザーにアクセスを許可できます。 プライベート プロファイルでは、指定した一覧のユーザーにアクセスが制限されます。 パブリック プロファイルは、データベースのすべてのユーザーがアクセスできます。  
   
 -   添付ファイル サイズ ガバナー: データベース メールでは、添付ファイル サイズの制限を構成できます。 この制限は、 [sysmail_configure_sp](../../relational-databases/system-stored-procedures/sysmail-configure-sp-transact-sql.md) ストアド プロシージャを使用して変更できます。  
   
@@ -114,7 +115,7 @@ ms.locfileid: "51559391"
 -   データベースのバックアップやレプリケーション イベントなどの定期タスクが成功または失敗したとき。 たとえば、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェント メールを使用して、月末に実行する処理でエラーが発生した場合にオペレーターに通知できます。  
   
   
-##  <a name="RelatedContent"></a>データベース メールのコンポーネントのトピック  
+##  <a name="RelatedContent"></a> 参照  
   
 -   [データベース メール構成オブジェクト](../../relational-databases/database-mail/database-mail-configuration-objects.md)  
   

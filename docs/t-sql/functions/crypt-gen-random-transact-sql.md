@@ -15,15 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - CRYPT_GEN_RANDOM function
 ms.assetid: b74bd9d4-758e-4b94-89a0-76dcda6d8c42
-author: MashaMSFT
-ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 7fa0beb2e7b920e24e77ce9fbb498f7386f57847
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: VanMSFT
+ms.author: vanto
+ms.openlocfilehash: 70df8f06eb1561dd186d5be643a5863ffab5981a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47850050"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68026457"
 ---
 # <a name="cryptgenrandom-transact-sql"></a>CRYPT_GEN_RANDOM (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -67,6 +66,6 @@ SELECT CRYPT_GEN_RANDOM(4, 0x25F18060) ;
 ```  
   
 ## <a name="see-also"></a>参照
-[RAND (&) #40 です。TRANSACT-SQL と #41 です。](../../t-sql/functions/rand-transact-sql.md)
+[RAND &#40;Transact-SQL&#41;](../../t-sql/functions/rand-transact-sql.md)
   
   

@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: f697ac1a-f125-42b5-bbf6-762a7fa30ae3
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 7be1a190773483e198a005b91470dbdbcfc50663
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 58da870e9c65be459e6bd4a8c35bb84aef325c61
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52532593"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67917584"
 ---
 # <a name="prepared-property-example-vc"></a>Prepared プロパティの例 (VC++)
 この例では、[準備](../../../ado/reference/ado-api/prepared-property-ado.md)プロパティを 2 つを開いて[コマンド](../../../ado/reference/ado-api/command-object-ado.md)オブジェクトの準備、および準備されていません。  
@@ -144,6 +143,6 @@ void PrintComError(_com_error &e) {
  **パフォーマンスの結果:**  
 **準備されていません。0.016 秒**  
 **準備。    0.016 秒**   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [コマンド オブジェクト (ADO)](../../../ado/reference/ado-api/command-object-ado.md)   
  [Prepared プロパティ (ADO)](../../../ado/reference/ado-api/prepared-property-ado.md)

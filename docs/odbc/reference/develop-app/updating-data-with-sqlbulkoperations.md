@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 7645a704-341e-4267-adbe-061a9fda225b
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 958514adc02452cdc75a05e7ad28cd31f4e8e0e6
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 4d1aa9b3300cba78f34e876a8501dbaaa421390a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47723410"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68091661"
 ---
 # <a name="updating-data-with-sqlbulkoperations"></a>SQLBulkOperations によるデータの更新
 アプリケーションへの呼び出しで、データ ソースの基になるテーブルでの一括更新、削除、fetch、または挿入操作を実行できます**SQLBulkOperations**します。 呼び出す**SQLBulkOperations**を構築して、SQL ステートメントの実行に代わる便利な方法です。 位置指定更新をサポートして、データ ソースが配置されている SQL ステートメントをサポートしていない場合にも ODBC ドライバーことができます。 関数呼び出しを使用してデータベースの完全なアクセスを実現するためのパラダイムの一部になります。  
@@ -29,7 +28,7 @@ ms.locfileid: "47723410"
   
  使用される行セット サイズ**SQLBulkOperations**への呼び出しで設定されて**SQLSetStmtAttr**で、*属性*引数 sql_attr_row_array_size を指定します。 異なり**SQLSetPos**への呼び出し後にのみ新しい行セット サイズを使用する**SQLFetch**または**SQLFetchScroll**、 **SQLBulkOperations**を使用して、呼び出しの後の新しい行セット サイズ**SQLSetStmtAttr**します。  
   
- Sql、リレーショナル データベースとのほとんどの対話が行われるため、 **SQLBulkOperations**広くサポートされていません。 ただし、ドライバーを簡単にエミュレートできますが構築して実行する**更新**、**削除**、または**挿入**ステートメント。  
+ Sql、リレーショナル データベースとのほとんどの対話が行われるため、 **SQLBulkOperations**広くサポートされていません。 ただし、ドライバーを簡単にエミュレートできますが構築して実行する**UPDATE**、**DELETE**、または**INSERT**ステートメント。  
   
  操作を決定する**SQLBulkOperation**サポートされており、アプリケーションを呼び出す**SQLGetInfo** SQL_DYNAMIC_CURSOR_ATTRIBUTES1、SQL_FORWARD_ONLY_CURSOR_ATTRIBUTES1、SQL_KEYSET_CURSOR_ATTRIBUTES1、または (カーソルの種類) に応じて SQL_STATIC_CURSOR_ATTRIBUTES1 情報オプション。  
   

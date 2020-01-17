@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: fc2fc949-746f-40c7-b5d4-3fd51ccfbd7b
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 39ddb99758833a5f942822e2639768480bf1bc99
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 2887cfe969afd8739b15646efb8ee4700c8affff
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52530141"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68063851"
 ---
 # <a name="management-of-logins-and-jobs-after-role-switching-sql-server"></a>役割の交代後のログインとジョブの管理 (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -39,13 +38,13 @@ ms.locfileid: "52530141"
   
  詳細については、「 [Orphaned Users with Database Mirroring and Log Shipping](https://blogs.msdn.com/b/sqlserverfaq/archive/2009/04/13/orphaned-users-with-database-mirroring-and-log-shipping.aspx) 」(データベース ミラーリングとログ配布での孤立ユーザー) (データベース エンジンのブログ) を参照してください。  
   
-## <a name="jobs"></a>の  
+## <a name="jobs"></a>ジョブ  
  バックアップ ジョブなどのジョブでは、特別な考慮が必要になります。 通常は、役割の交代後、データベース所有者またはシステム管理者が、新しいプライマリ/プリンシパル データベース用にジョブを再作成する必要があります。  
   
  元のプライマリ/プリンシパル サーバー インスタンスが使用できる場合は、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のそのインスタンスで元のジョブを削除する必要があります。 現在のミラー データベースのジョブは RESTORING 状態であるため失敗し、使用できなくなります。  
   
 > [!NOTE]  
->   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の複数のインスタンスを、別のドライブ文字などを使用して別に構成できます。 パートナーごとのジョブは、このような違いを考慮する必要があります。  
+>  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の複数のインスタンスを、別のドライブ文字などを使用して別に構成できます。 パートナーごとのジョブは、このような違いを考慮する必要があります。  
   
 ## <a name="see-also"></a>参照  
  [データベースを別のサーバー インスタンスで使用できるようにするときのメタデータの管理 &#40;SQL Server&#41;](../../relational-databases/databases/manage-metadata-when-making-a-database-available-on-another-server.md)   

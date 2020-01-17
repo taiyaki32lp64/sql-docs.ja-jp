@@ -14,19 +14,18 @@ helpviewer_keywords:
 ms.assetid: 1bb9b727-66e8-49e8-9a6b-587ad6217031
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 1791fa0569012ca9c3cb66068a45104f95b35717
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 0f0fb1fb9a4c0130ac62f9b4cf0b621f1673b7e1
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47857250"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68135748"
 ---
 # <a name="other-dbase-driver-programming-details"></a>その他の dBASE ドライバーのプログラミングの詳細
 > [!NOTE]  
 >  このセクションでは、ODBC 関数とその他のプログラミングの詳細に関する dBASE ドライバー固有の情報を提供します。 関数の詳細については、該当するトピックを参照してください。 [ODBC API リファレンス](../../odbc/reference/syntax/odbc-api-reference.md)します。  
   
- このセクションのトピックは次のとおりです。  
+ このセクションでは、次のトピックについて説明します。  
   
 -   [SQLColAttributes (dBASE ドライバー)](../../odbc/microsoft/sqlcolattributes-dbase-driver.md)  
   

@@ -1,8 +1,8 @@
 ---
 title: パフォーマンス カウンター MSRS 2011 Web サービス、パフォーマンス オブジェクト | Microsoft Docs
-ms.date: 03/14/2017
+ms.date: 06/26/2019
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: report-server
 ms.topic: conceptual
 helpviewer_keywords:
@@ -13,14 +13,15 @@ helpviewer_keywords:
 - counters [Reporting Services]
 - performance [Reporting Services]
 ms.assetid: c642fc4f-8734-4626-a194-42ac9cd8e2ef
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 52e4ef6b3361ca1e577f4c19a325bcb982c4e103
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
+ms.openlocfilehash: f8dbafaede198c82b3e41625d3e670afd980c57a
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52403148"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68893448"
 ---
 # <a name="performance-counters-msrs-2011-web-service-performance-objects"></a>パフォーマンス カウンター MSRS 2011 Web サービス、パフォーマンス オブジェクト
   このトピックでは、 **MSRS 2011 Web Service** および **MSRS 2011 Windows Service** パフォーマンス オブジェクトのパフォーマンス カウンターについて説明します。 これらのオブジェクトは [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)] のネイティブ モードの配置の一部です。  
@@ -110,7 +111,7 @@ ms.locfileid: "52403148"
 |**Total Snapshot Updates**|レポート実行スナップショットの更新回数の合計。|  
   
 ##  <a name="bkmk_powershell"></a> PowerShell コマンドレットを使用して一覧を取得する  
- ![PowerShell 関連コンテンツ](../../analysis-services/instances/install-windows/media/rs-powershellicon.jpg "PowerShell 関連コンテンツ") 次の Windows PowerShell スクリプトは、CounterSetName が "msr" で始まる一連のカウンターを返します。  
+ ![PowerShell 関連コンテンツ](https://docs.microsoft.com/analysis-services/analysis-services/instances/install-windows/media/rs-powershellicon.jpg "PowerShell 関連コンテンツ") 次の Windows PowerShell スクリプトは、CounterSetName が "msr" で始まる一連のカウンターを返します。  
   
 ```  
 get-counter -listset msr*  

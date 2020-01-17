@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: cbf15f32-0550-4c74-8088-8f7ac3855469
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 5f427074f7cd7153f448aaef43bc4ac5dca84c01
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: ec9eacef6f0bd63eb0aaeac36dc97938297d1f16
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53215721"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68135637"
 ---
 # <a name="data-source-example"></a>データ ソースの例
 Microsoft® Windows NT® Server または Windows 2000 Server、Microsoft Windows NT のワークステーションと Windows 2000 Professional、または Microsoft Windows® 95/98、マシンのデータを実行するコンピューターでは、基になる情報がレジストリに格納されます。 によって、どのレジストリ キー情報が格納されている、データ ソースと呼ばれます、*ユーザー データ ソース*または*システム データ ソース*します。 ユーザー データ ソースは、HKEY_CURRENT_USER キーに格納され、現在のユーザーにのみ使用します。 システム データ ソースは、HKEY_LOCAL_MACHINE キーの下では保存され、1 台のコンピューターの 1 つ以上のユーザーが使用することができます。 また、システム全体のサービスは、コンピューターにユーザーがログインしていない場合でも、データ ソースへのアクセスを獲得しによっても使用できます。 ユーザーおよびシステム データ ソースの詳細については、次を参照してください。 [SQLManageDataSources](../../odbc/reference/syntax/sqlmanagedatasources.md)します。  

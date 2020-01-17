@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 614fa0b4-e9fd-4c68-aab3-183f9b9df143
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 6b7a27d9358d6f7f5719aaf1fea1fb292b2db1af
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: eecf4868791a9dcd963a31963f742f90a2cf3843
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52545286"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68008434"
 ---
 # <a name="connection-resiliency-in-the-windows-odbc-driver"></a>Windows ODBC ドライバーの接続レジリエンシー
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
@@ -26,7 +25,7 @@ ms.locfileid: "52545286"
 > [!IMPORTANT]  
 >  接続の復元機能は Microsoft Azure SQL データベースと SQL Server 2014 (以降) サーバー バージョンでご利用いただけます。  
   
- アイドル接続の回復性について詳しくは、「[Technical Article - Idle Connection Resiliency](https://go.microsoft.com/fwlink/?LinkId=393996)」 (技術記事 - アイドル接続の回復性) をご覧ください。  
+ アイドル接続の回復性について詳しくは、「[Technical Article - Idle Connection Resiliency](https://download.microsoft.com/download/D/2/0/D20E1C5F-72EA-4505-9F26-FEF9550EFD44/Idle%20Connection%20Resiliency.docx)」 (技術記事 - アイドル接続の回復性) をご覧ください。
   
  Windows の場合、ODBC Driver for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] には再接続動作を変更する方法が 2 つあります。  
   
@@ -72,7 +71,7 @@ ms.locfileid: "52545286"
 |IMC06|接続が切断され、復旧は不可能です。 クライアント ドライバーは接続を復旧不可能としてマークしています。 接続復旧は試行されませんでした。|  
   
 ## <a name="example"></a>例  
- 次の例には、2 つの関数が含まれています。 **func1** は、Windows の場合に、ODBC Driver for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] を使用するデータ ソース名 (DSN) で接続する方法を示しています。 DSN は [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 認証を使用し、ユーザー ID を指定します。 **func1**で接続再試行回数を取得し、 **SQL_COPT_SS_CONNECT_RETRY_COUNT**します。  
+ 次の例には、2 つの関数が含まれています。 **func1** は、Windows の場合に、ODBC Driver for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] を使用するデータ ソース名 (DSN) で接続する方法を示しています。 DSN は [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 認証を使用し、ユーザー ID を指定します。 **func1**は、 **SQL_COPT_SS_CONNECT_RETRY_COUNT**による接続再試行の回数を取得します。  
   
  **func2** は **SQLDriverConnect**、 **ConnectRetryCount** 接続文字列キーワード、接続属性を使用し、接続再試行と再試行間隔の設定を取得します。  
   

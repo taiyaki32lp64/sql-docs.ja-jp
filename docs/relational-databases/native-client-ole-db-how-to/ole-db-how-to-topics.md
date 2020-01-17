@@ -1,5 +1,5 @@
 ---
-title: OLE DB の操作方法に関するトピック |Microsoft Docs
+title: OLE DB 方法に関するトピック |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -12,26 +12,24 @@ helpviewer_keywords:
 ms.assetid: fbfab1b0-433d-497e-ae07-9b21a5c6903c
 author: MightyPen
 ms.author: genemi
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 1471e27a6496dc514de696e260c74a972cd0661e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: c6932f80b431a45a75d2d365c04cda644de56f9a
+ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47803780"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73789860"
 ---
 # <a name="ole-db-how-to-topics"></a>OLE DB の使用法に関するトピック
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-[!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
 
-  使用する、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB プロバイダーでは、サーバーへの接続、コマンドを実行し、結果を処理する方法を理解する必要があります。  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB プロバイダーを使用するには、サーバーへの接続を確立し、コマンドを実行して結果を処理する方法を理解する必要があります。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
   
 -   [結果を処理する方法に関するトピック &#40;OLE DB&#41;](../../relational-databases/native-client-ole-db-how-to/results/processing-results-how-to-topics-ole-db.md)  
   
--   [大きなデータを設定&#40;OLE DB&#41;](../../relational-databases/native-client-ole-db-how-to/set-large-data-ole-db.md)  
+-   [Large Data &#40;OLE DB の設定&#41;](../../relational-databases/native-client-ole-db-how-to/set-large-data-ole-db.md)  
   
 -   [OLE DB データ ソースの列挙 &#40;OLE DB&#41;](../../relational-databases/native-client-ole-db-how-to/enumerate-ole-db-data-sources-ole-db.md)  
   
@@ -53,7 +51,7 @@ ms.locfileid: "47803780"
   
 -   [IROWSETFASTLOAD と ISEQUENTIALSTREAM を使用した SQL SERVER への BLOB データの送信 &#40;OLE DB&#41;](../../relational-databases/native-client-ole-db-how-to/send-blob-data-to-sql-server-using-irowsetfastload-and-isequentialstream-ole-db.md)  
   
--   [大きな CLR Udt を使用して、 &#40;OLE DB&#41;](../../relational-databases/native-client-ole-db-how-to/use-large-clr-udts-ole-db.md)  
+-   [大きな CLR Udt &#40;を使用 OLE DB&#41;](../../relational-databases/native-client-ole-db-how-to/use-large-clr-udts-ole-db.md)  
   
 -   [スパース列に対する列およびカタログ メタデータの表示 &#40;OLE DB&#41;](../../relational-databases/native-client-ole-db-how-to/display-column-and-catalog-metadata-for-sparse-columns-ole-db.md)  
   

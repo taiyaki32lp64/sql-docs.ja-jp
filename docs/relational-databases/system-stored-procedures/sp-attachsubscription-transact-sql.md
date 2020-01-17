@@ -1,5 +1,5 @@
 ---
-title: sp_attachsubscription (TRANSACT-SQL) |Microsoft Docs
+title: sp_attachsubscription (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -15,21 +15,20 @@ helpviewer_keywords:
 ms.assetid: b9bbda36-a46a-4327-a01e-9cd632e4791b
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 9cd00d75a8afd2fae06868fd4b44320865f239f2
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: 2e059b78a886735ce53b86de77effa43b03136df
+ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54126372"
+ms.lasthandoff: 08/03/2019
+ms.locfileid: "68768966"
 ---
 # <a name="spattachsubscription-transact-sql"></a>sp_attachsubscription (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md.md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
-  既存のサブスクリプション データベースを任意のサブスクライバーにアタッチします。 このストアド プロシージャは、master データベース上の新しいサブスクライバー側で実行されます。  
+  既存のサブスクリプション データベースを任意のサブスクライバーにアタッチします。 このストアドプロシージャは、master データベースの新しいサブスクライバーで実行されます。  
   
 > [!IMPORTANT]  
->  この機能は非推奨とされており、今後のリリースでは削除されます。 新しい開発作業でこの機能を使用しない必要があります。 パラメーター化されたフィルターを使用してパーティション分割されたマージ パブリケーションでは、パーティション スナップショットの新しい機能を使用することをお勧めします。この機能を使用すると、多数のサブスクリプションの初期化を簡単に実行できます。 詳しくは、「 [Snapshots for Merge Publications with Parameterized Filters](../../relational-databases/replication/create-a-snapshot-for-a-merge-publication-with-parameterized-filters.md)」をご覧ください。 パーティション分割されていないパブリケーションでは、バックアップを使用してサブスクリプションを初期化できます。 詳細については、「 [Initialize a Transactional Subscription Without a Snapshot](../../relational-databases/replication/initialize-a-transactional-subscription-without-a-snapshot.md)を使用して、サブスクリプションを手動で初期化する方法について説明します。  
+>  この機能は非推奨とされており、今後のリリースでは削除されます。 新しい開発作業では、この機能を使用しないでください。 パラメーター化されたフィルターを使用してパーティション分割されたマージ パブリケーションでは、パーティション スナップショットの新しい機能を使用することをお勧めします。この機能を使用すると、多数のサブスクリプションの初期化を簡単に実行できます。 詳しくは、「 [Snapshots for Merge Publications with Parameterized Filters](../../relational-databases/replication/create-a-snapshot-for-a-merge-publication-with-parameterized-filters.md)」をご覧ください。 パーティション分割されていないパブリケーションの場合は、バックアップを使用してサブスクリプションを初期化できます。 詳細については、「[スナップショットを使用しないトランザクション サブスクリプションの初期化](../../relational-databases/replication/initialize-a-transactional-subscription-without-a-snapshot.md)」を参照してください。  
   
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -54,65 +53,51 @@ sp_attachsubscription [ @dbname = ] 'dbname'
 ```  
   
 ## <a name="arguments"></a>引数  
- [ **@dbname=** ] **'***dbname***'**  
- 対象となるサブスクリプション データベースの名前を文字列で指定します。 *dbname*は**sysname**、既定値はありません。  
+`[ @dbname = ] 'dbname'`宛先サブスクリプションデータベースを名前で指定する文字列を指定します。 *dbname*は**sysname**,、既定値はありません。  
   
- [  **@filename=** ] **'***filename***'**  
- プライマリ mdf ファイルの物理的な場所と名前は、(**マスター**データ ファイル)。 *ファイル名*は**nvarchar (260)**、既定値はありません。  
+`[ @filename = ] 'filename'`プライマリ MDF (**master**データファイル) の名前と物理的な場所を指定します。 *ファイル名*は**nvarchar (260)** ,、既定値はありません。  
   
- [  **@subscriber_security_mode=** ] **'***subscriber_security_mode***'**  
- サブスクライバーへ接続して同期するときに使用するサブスクライバーのセキュリティ モードを指定します。 *subscriber_security_mode*は**int**、既定値は NULL です。  
+`[ @subscriber_security_mode = ] 'subscriber_security_mode'`サブスクライバーが同期時に接続するときに使用する、サブスクライバーのセキュリティモードを示します。 *subscriber_security_mode*は**int**,、既定値は NULL です。  
   
 > [!NOTE]  
->  Windows 認証を使用する必要があります。 場合*subscriber_security_mode*ない**1** (Windows 認証)、エラーが返されます。  
+>  Windows 認証を使用する必要があります。 *Subscriber_security_mode*が**1** (Windows 認証) でない場合は、エラーが返されます。  
   
- [  **@subscriber_login=** ] **'***subscriber_login***'**  
- サブスクライバーへ接続して同期するときに使用するサブスクライバーのログイン名を指定します。 *subscriber_login*は**sysname**、既定値は NULL です。  
-  
-> [!NOTE]  
->  このパラメーターは、スクリプトの旧バージョンとの互換性を維持するために用意されているもので、非推奨とされます。 場合*subscriber_security_mode*ない**1**と*subscriber_login*が指定すると、エラーが返されます。  
-  
- [  **@subscriber_password=** ] **'***@subscriber_password***'**  
- サブスクライバーのパスワードです。 *@subscriber_password*は**sysname**、既定値は NULL です。  
+`[ @subscriber_login = ] 'subscriber_login'`同期時にサブスクライバーに接続するときに使用するサブスクライバーのログイン名を指定します。 *subscriber_login* は **sysname** 、既定値は NULL です。  
   
 > [!NOTE]  
->  このパラメーターは、スクリプトの旧バージョンとの互換性を維持するために用意されているもので、非推奨とされます。 場合*subscriber_security_mode*ない**1**と *@subscriber_password*が指定すると、エラーが返されます。  
+>  このパラメーターは非推奨とされており、スクリプトの旧バージョンとの互換性のみを維持しています。 *Subscriber_security_mode*が**1**ではなく、 *subscriber_login*が指定されている場合は、エラーが返されます。  
   
- [  **@distributor_security_mode=** ] *distributor_security_mode*  
- ディストリビューターへ接続して同期するときに使用するセキュリティ モードを指定します。 *distributor_security_mode*は**int**、既定値は**0**します。 **0**指定[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]認証します。 **1** Windows 認証を指定します。 [!INCLUDE[ssNoteWinAuthentication](../../includes/ssnotewinauthentication-md.md)]  
+`[ @subscriber_password = ] 'subscriber_password'`サブスクライバーパスワードを入力します。 *subscriber_password* は **sysname** 、既定値は NULL です。  
   
- [  **@distributor_login=** ] **'***distributor_login***'**  
- ディストリビューターへ接続して同期するときに使用するディストリビューター ログインを指定します。 *distributor_login*場合は必須です*distributor_security_mode*に設定されている**0**します。 *distributor_login*は**sysname**、既定値は NULL です。  
+> [!NOTE]  
+>  このパラメーターは非推奨とされており、スクリプトの旧バージョンとの互換性のみを維持しています。 *Subscriber_security_mode*が**1**ではなく、 *subscriber_password*が指定されている場合は、エラーが返されます。  
   
- [  **@distributor_password=** ] **'***distributor_password***'**  
- ディストリビューターのパスワードです。 *distributor_password*場合は必須です*distributor_security_mode*に設定されている**0**します。 *distributor_password*は**sysname**、既定値は NULL です。 値*distributor_password* 120 未満の Unicode 文字にする必要があります。  
+`[ @distributor_security_mode = ] distributor_security_mode`は、同期時にディストリビューターに接続するときに使用するセキュリティモードです。 *distributor_security_mode*は**int**,、既定値は**0**です。 **0**は[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]認証を指定します。 **1** Windows 認証を指定します。 [!INCLUDE[ssNoteWinAuthentication](../../includes/ssnotewinauthentication-md.md)]  
+  
+`[ @distributor_login = ] 'distributor_login'`ディストリビューターへの接続時に、同期時に使用するディストリビューターログインを示します。 *distributor_login* 場合は必須です *distributor_security_mode* に設定されている **0** します。 *distributor_login* は **sysname** 、既定値は NULL です。  
+  
+`[ @distributor_password = ] 'distributor_password'`ディストリビューターパスワードを入力します。 *distributor_password* 場合は必須です *distributor_security_mode* に設定されている **0** します。 *distributor_password* は **sysname** 、既定値は NULL です。 *Distributor_password*の値は 120 Unicode 文字未満である必要があります。  
   
 > [!IMPORTANT]  
 >  空白のパスワードは使用しないでください。 強力なパスワードを使用してください。 可能であれば、実行時、ユーザーに対してセキュリティ資格情報の入力を要求します。 スクリプト ファイルに資格情報を格納する必要がある場合は、不正アクセスを防ぐために、ファイルを保護します。  
   
- [  **@publisher_security_mode=** ] *publisher_security_mode*  
- パブリッシャーへ接続して同期するときに使用するセキュリティ モードを指定します。 *publisher_security_mode*は**int**、既定値は**1**します。 場合**0**を指定します[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]認証します。 場合**1**、Windows 認証を指定します。 [!INCLUDE[ssNoteWinAuthentication](../../includes/ssnotewinauthentication-md.md)]  
+`[ @publisher_security_mode = ] publisher_security_mode`同期時にパブリッシャーに接続するときに使用するセキュリティモードを示します。 *publisher_security_mode*は**int**,、既定値は**1**です。 **0**の場合、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]認証を指定します。 **1**の場合、Windows 認証を指定します。 [!INCLUDE[ssNoteWinAuthentication](../../includes/ssnotewinauthentication-md.md)]  
   
- [  **@publisher_login=** ] **'***publisher_login***'**  
- パブリッシャーへ接続して同期するときに使用するログインを指定します。 *publisher_login*は**sysname**、既定値は NULL です。  
+`[ @publisher_login = ] 'publisher_login'`同期時にパブリッシャーに接続するときに使用するログインを示します。 *publisher_login* は **sysname** 、既定値は NULL です。  
   
- [  **@publisher_password=** ] **'***publisher_password***'**  
- パブリッシャーへの接続時に使用するパスワードを指定します。 *publisher_password*は**sysname**、既定値は NULL です。 値*publisher_password* 120 未満の Unicode 文字にする必要があります。  
+`[ @publisher_password = ] 'publisher_password'`パブリッシャーに接続するときに使用するパスワードを入力します。 *publisher_password* は **sysname** 、既定値は NULL です。 *Publisher_password*の値は 120 Unicode 文字未満である必要があります。  
   
 > [!IMPORTANT]  
 >  空白のパスワードは使用しないでください。 強力なパスワードを使用してください。 可能であれば、実行時、ユーザーに対してセキュリティ資格情報の入力を要求します。 スクリプト ファイルに資格情報を格納する必要がある場合は、不正アクセスを防ぐために、ファイルを保護します。  
   
- [  **@job_login=** ] **'***job_login***'**  
- エージェントを実行する Windows アカウント用のログインを指定します。 *job_login*は**nvarchar (257)**、既定値はありません。 この Windows アカウントはディストリビューターへのエージェント接続で常に使用されます。  
+`[ @job_login = ] 'job_login'`エージェントを実行する Windows アカウントのログインを指定します。 *job_login*は**nvarchar (257)** ,、既定値はありません。 この Windows アカウントは、ディストリビューターへのエージェント接続に常に使用されます。  
   
- [  **@job_password=** ] **'***job_password***'**  
- エージェントを実行する Windows アカウント用のパスワードを指定します。 *job_password*は**sysname**、既定値はありません。 値*job_password* 120 未満の Unicode 文字にする必要があります。  
+`[ @job_password = ] 'job_password'`エージェントを実行する Windows アカウントのパスワードを指定します。 *job_password* は **sysname** 、既定値はありません。 *Job_password*の値は 120 Unicode 文字未満である必要があります。  
   
 > [!IMPORTANT]  
 >  可能であれば、実行時、ユーザーに対してセキュリティ資格情報の入力を要求します。 スクリプト ファイルに資格情報を格納する必要がある場合は、不正アクセスを防ぐために、ファイルを保護します。  
   
- [  **@db_master_key_password=** ] **'***db_master_key_password***'**  
- ユーザー定義データベースのマスター キーのパスワードを指定します。 *db_master_key_password*は**nvarchar (524)** 既定値は NULL です。 場合*db_master_key_password*が指定されていない、既存のデータベース マスター _ キーを削除して再作成されます。  
+`[ @db_master_key_password = ] 'db_master_key_password'`ユーザー定義のデータベースマスターキーのパスワードを指定します。 *db_master_key_password*は**nvarchar (524)** ,、既定の値は NULL です。 *Db_master_key_password*が指定されていない場合は、既存のデータベースマスターキーが削除され、再作成されます。  
   
 > [!IMPORTANT]  
 >  可能であれば、実行時、ユーザーに対してセキュリティ資格情報の入力を要求します。 スクリプト ファイルに資格情報を格納する必要がある場合は、不正アクセスを防ぐために、ファイルを保護します。  
@@ -121,14 +106,14 @@ sp_attachsubscription [ @dbname = ] 'dbname'
  **0** (成功) または**1** (失敗)  
   
 ## <a name="remarks"></a>コメント  
- **sp_attachsubscription**はスナップショット レプリケーション、トランザクション レプリケーション、およびマージ レプリケーションで使用します。  
+ **sp_attachsubscription**は、スナップショットレプリケーション、トランザクションレプリケーション、およびマージレプリケーションで使用します。  
   
- パブリケーション保有期間が過ぎている場合、サブスクリプションをパブリケーションにアタッチすることはできません。 保有期間を過ぎたサブスクリプションを指定した場合は、サブスクリプションがアタッチされたとき、または初めて同期したときにエラーが発生します。 パブリケーションのパブリケーションの保有期間と**0** (有効期限はありません) は無視されます。  
+ パブリケーションの保有期間が終了している場合、サブスクリプションをパブリケーションにアタッチすることはできません。 保有期間が経過したサブスクリプションが指定されている場合、サブスクリプションがアタッチされているか、最初に同期されたときに、エラーが発生します。 パブリケーションの保有期間が**0** (期限切れにならない) のパブリケーションは無視されます。  
   
 ## <a name="permissions"></a>アクセス許可  
- メンバーのみ、 **sysadmin**固定サーバー ロールが実行できる**sp_attachsubscription**します。  
+ **Sp_attachsubscription**を実行できるのは、 **sysadmin**固定サーバーロールのメンバーだけです。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [システム ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

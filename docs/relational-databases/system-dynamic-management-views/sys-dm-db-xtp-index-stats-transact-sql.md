@@ -19,14 +19,13 @@ helpviewer_keywords:
 ms.assetid: 8d0a50b8-2015-4576-930f-e3307dfc888e
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: =azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: b80ba01b73dff6810ee9fcfdc08a904ff6ad4697
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 6e6370f4cbfcbc38478e562c3b74ff24ffde962f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51674271"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68026832"
 ---
 # <a name="sysdmdbxtpindexstats-transact-sql"></a>sys.dm_db_xtp_index_stats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2014-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2014-asdb-xxxx-xxx-md.md)]
@@ -39,7 +38,7 @@ ms.locfileid: "51674271"
 |列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
 |object_id|**bigint**|インデックスが属しているオブジェクトの ID。|  
-|xtp_object_id|**bigint**|オブジェクトの現在のバージョンに対応する内部の ID。<br /><br /> 注: に適用されます[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]します。|  
+|xtp_object_id|**bigint**|オブジェクトの現在のバージョンに対応する内部の ID。<br /><br /> 注:[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]に適用されます。|  
 |index_id|**bigint**|インデックスの ID。 index_id は、オブジェクト内でのみ一意です。|  
 |scans_started|**bigint**|実行されたインメモリ OLTP のインデックス スキャンの回数。 選択、挿入、更新、または削除を実行するたびに、インデックス スキャンが必要になります。|  
 |scans_retries|**bigint**|再試行する必要のあるインデックス スキャンの回数。|  

@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 ms.assetid: eac372e9-d2a1-48a8-bbe5-09d101df16ea
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 65fe3e4979e620b3f49af5def2266c84e77cc616
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: ae18d021465a7d14ea22b56534ea48ac316154c2
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56017884"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66109910"
 ---
 # <a name="caching-page-shared-datasets-report-manager"></a>共有データセットの [キャッシュ] ページ (レポート マネージャー)
   共有データセットのキャッシュ オプションを設定するには、[キャッシュ] プロパティ ページを使用します。  

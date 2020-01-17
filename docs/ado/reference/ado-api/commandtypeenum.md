@@ -15,20 +15,19 @@ helpviewer_keywords:
 ms.assetid: 4b1feb9c-a855-40fe-a906-efe688687e9f
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 5ff7b6ecf919ab83340e49e4395f8c2d1701261d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 5a2de155d9c4a61246245b2c7f9c3c73a535994a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47742880"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67919682"
 ---
 # <a name="commandtypeenum"></a>CommandTypeEnum
 コマンド引数を解釈する方法を指定します。  
   
  ユーザーが指定したかを検証することが重要*クラスヒント*アプリケーション ユーザーに実行する ADO の危険性のあるコマンドを挿入する機会を提供しないようにする値。  
   
-|定数|値|説明|  
+|定数|Value|説明|  
 |--------------|-----------|-----------------|  
 |**adCmdUnspecified**|-1|コマンドの型引数を指定しません。|  
 |**adCmdText**|1|評価[CommandText](../../../ado/reference/ado-api/commandtext-property-ado.md)コマンドまたはストアド プロシージャのテキストの定義として呼び出します。|  

@@ -1,6 +1,8 @@
 ---
-title: DENY (検索プロパティ リスト権限の拒否) (Transact-SQL) | Microsoft Docs
-ms.custom: ''
+title: DENY (検索プロパティ リスト アクセス許可の拒否)
+description: 検索プロパティ リストに対する権限を拒否します。
+titleSuffix: SQL Server (Transact-SQL)
+ms.custom: seo-lt-2019
 ms.date: 06/10/2016
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
@@ -17,14 +19,13 @@ helpviewer_keywords:
 ms.assetid: 96513cb4-a9c0-4834-97a4-ddc0777b8415
 author: VanMSFT
 ms.author: vanto
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 61961ff888b5de3ffa55ffb47c4986a60583b79e
-ms.sourcegitcommit: c6e71ed14198da67afd7ba722823b1af9b4f4e6f
+ms.openlocfilehash: 8be5b497f3046afb4ed9d56ccde0f6f00ede919a
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/16/2019
-ms.locfileid: "54327713"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75244545"
 ---
 # <a name="deny-search-property-list-permissions-transact-sql"></a>DENY (検索プロパティ リスト権限の拒否) (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-all-md](../../includes/tsql-appliesto-ss2012-all-md.md)]
@@ -47,11 +48,11 @@ DENY permission [ ,...n ] ON
  *permission*  
  権限の名前を指定します。 権限とセキュリティ保護可能なリソースの有効な組み合わせについては、後の「解説」を参照してください。  
   
-ON SEARCH PROPERTY LIST **::**_search_property_list_name_  
+ON SEARCH PROPERTY LIST **::** _search_property_list_name_  
  権限を拒否する検索プロパティ リストを指定します。 スコープ修飾子 :: が必要です。  
   
 *database_principal*  
- 権限を拒否するプリンシパルを指定します。 プリンシパルは次のいずれかです。  
+ 権限を拒否するプリンシパルを指定します。 プリンシパルには、次のいずれかを指定することができます。  
   
 -   データベース ユーザー  
 -   データベース ロール (database role)  
@@ -66,7 +67,7 @@ CASCADE
  このプリンシパルによって権限が許可されている他のプリンシパルに対しても、同じ権限を拒否することを示します。  
   
 *denying_principal*  
- このクエリを実行するプリンシパルが権限を拒否する権利を取得した、元のプリンシパルを指定します。 プリンシパルは次のいずれかです。  
+ このクエリを実行するプリンシパルが権限を拒否する権利を取得した、元のプリンシパルを指定します。 プリンシパルには、次のいずれかを指定することができます。  
   
 -   データベース ユーザー  
 -   データベース ロール (database role)  
@@ -77,7 +78,7 @@ CASCADE
 -   非対称キーにマップされているデータベース ユーザー  
 -   サーバー プリンシパルにマップされていないデータベース ユーザー  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
   
 ## <a name="search-property-list-permissions"></a>SEARCH PROPERTY LIST 権限  
  検索プロパティ リストは、データベース レベルのセキュリティ保護可能なリソースで、権限の階層で親となっているデータベースに含まれています。 次の表に、検索プロパティ リストで拒否できる権限のうち最も限定的なものを、それらを暗黙的に含む一般的な権限と共に示します。  

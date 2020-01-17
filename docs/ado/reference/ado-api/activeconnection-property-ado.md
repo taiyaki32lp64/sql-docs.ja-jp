@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 52d0a96c-14fb-4ad9-b004-4d821bc0a6db
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 951f43a2842162aa00f664dc83b754d06d8aafb2
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 8dabf974e36b1f6beaff36f3a4888c128d7dfe1b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47684340"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67921514"
 ---
 # <a name="activeconnection-property-ado"></a>ActiveConnection プロパティ (ADO)
 先を示します[接続](../../../ado/reference/ado-api/connection-object-ado.md)オブジェクトの指定した[コマンド](../../../ado/reference/ado-api/command-object-ado.md)、 [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md)、または[レコード](../../../ado/reference/ado-api/record-object-ado.md)オブジェクトが現在属しています。  

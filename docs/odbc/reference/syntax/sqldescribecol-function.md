@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: eddef353-83f3-4a3c-8f24-f9ed888890a4
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 1b8453d76dc2af0499dc8d8af2ca1ec3024aee83
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 63982d87f0dbbe0c8ab1a540185e298d9943f630
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52523810"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68104789"
 ---
 # <a name="sqldescribecol-function"></a>SQLDescribeCol 関数
 **準拠**  
@@ -36,7 +35,7 @@ ms.locfileid: "52523810"
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
   
 SQLRETURN SQLDescribeCol(  
       SQLHSTMT       StatementHandle,  

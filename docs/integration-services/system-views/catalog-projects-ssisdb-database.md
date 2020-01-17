@@ -8,17 +8,20 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: language-reference
 ms.assetid: a6b595e1-5227-47ce-8ee2-a28c1e1d5645
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: 930aecf309a27d1676f4e66d79cf704e04a412b1
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 4102ee4dc551a02a8b6853062e19d448ab414e7b
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47739545"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71296530"
 ---
 # <a name="catalogprojects-ssisdb-database"></a>catalog.projects (SSISDB データベース)
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
   **SSISDB** カタログに表示されるすべてのプロジェクトの詳細を表示します。  

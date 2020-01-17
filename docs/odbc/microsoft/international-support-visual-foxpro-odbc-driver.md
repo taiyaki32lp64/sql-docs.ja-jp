@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: cd3fab32-13f1-4a86-abc4-5e18667669fc
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 50d65520e74a4e11bada88795fedc0b2f2e82628
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e987c224f2d716fcab3bf898b1cb276e922e48ef
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47853101"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68085500"
 ---
 # <a name="international-support-visual-foxpro-odbc-driver"></a>国際化サポート (Visual FoxPro ODBC ドライバー)
 Microsoft Visual FoxPro ODBC ドライバーがサポートされています。  

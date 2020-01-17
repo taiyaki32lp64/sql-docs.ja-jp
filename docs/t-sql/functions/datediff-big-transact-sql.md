@@ -1,7 +1,7 @@
 ---
 title: DATEDIFF_BIG (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 07/29/2017
+ms.date: 07/18/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -18,15 +18,14 @@ helpviewer_keywords:
 - functions [SQL Server], date and time
 - time [SQL Server], functions
 ms.assetid: 19ac1693-3cfa-400d-bf83-20a9cb46599a
-author: MashaMSFT
-ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 9a2a6dfd98cef225e8ca612d3cce758087663f75
-ms.sourcegitcommit: baca29731a1be4f8fa47567888278394966e2af7
+author: MikeRayMSFT
+ms.author: mikeray
+ms.openlocfilehash: 3724c25854bd98a98b077fb59897ba4da250aee1
+ms.sourcegitcommit: 73dc08bd16f433dfb2e8406883763aabed8d8727
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/04/2019
-ms.locfileid: "54046552"
+ms.lasthandoff: 07/19/2019
+ms.locfileid: "68329290"
 ---
 # <a name="datediffbig-transact-sql"></a>DATEDIFF_BIG (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -39,19 +38,20 @@ ms.locfileid: "54046552"
   
 ## <a name="syntax"></a>構文  
   
-```sql
-  
+```
 DATEDIFF_BIG ( datepart , startdate , enddate )  
 ```  
   
 ## <a name="arguments"></a>引数  
 *datepart*  
-*startdate* と *enddate* の差を求めるときの単位に使用する要素を指定します。 `DATEDIFF_BIG` では、ユーザー定義変数に相当するものは受け入れられません。 この表には、有効な *datepart* 引数をすべて一覧表示しています。
+*startdate* と *enddate* の差を求めるときの単位に使用する要素を指定します。
 
 > [!NOTE]
-> `DATEDIFF_BIG` は、*datepart* 引数に関して、ユーザー定義変数に相当するものは受け入れられません。
+> `DATEDIFF_BIG` では、ユーザー定義変数からの、または引用符で囲まれた文字列としての *datepart* 値は受け入れられません。
+
+この表には、有効な *datepart* 引数名と省略形をすべて一覧表示しています。
   
-|*datepart*|省略形|  
+|*datepart* 名| *datepart* 省略形|  
 |---|---|
 |**year**|**yy、yyyy**|  
 |**quarter**|**qq, q**|  
@@ -65,7 +65,10 @@ DATEDIFF_BIG ( datepart , startdate , enddate )
 |**millisecond**|**ms**|  
 |**microsecond**|**mcs**|  
 |**nanosecond**|**ns**|  
-  
+
+> [!NOTE]
+> 特定の各 *datepart* 名と、その *datepart* 名の省略形では、同じ値が返されます。
+
 *startdate*  
 次のいずれかの値に解決できる式。
 
@@ -82,12 +85,10 @@ DATEDIFF_BIG ( datepart , startdate , enddate )
 「*startdate*」をご覧ください。
   
 ## <a name="return-type"></a>戻り値の型  
-
 符号付き **bigint**  
   
 ## <a name="return-value"></a>戻り値  
-startdate と enddate で指定された 2 つの日付間の差を、指定された datepart 境界の数で (符号付き多倍長整数値として) 返します。
--   特定の各 *datepart* と、その *datepart* の省略形では、同じ値が返されます。  
+*datepart* により設定された境界に表示された、*startdate* と *enddate* の間の **bigint** 差を返します。
   
 **bigint** の範囲外の戻り値 (-9,223,372,036,854,775,808 から 9,223,372,036,854,775,807) の場合、`DATEDIFF_BIG` はエラーを返します。 **int** を返すため **minute** 以上の精度でオーバーフローする可能性がある `DATEDIFF` とは異なり、`DATEDIFF_BIG` は **nanosecond** の精度を使用する場合にのみオーバーフローする可能性があります。この場合、*enddate* と *startdate* の差は 292 年以上、3 か月、10 日、23 時間、47 分、および 16.8547758 秒です。
   
@@ -102,7 +103,7 @@ startdate と enddate で指定された 2 つの日付間の差を、指定さ�
 *startdate* と *enddate* で異なる日付データ型が使用されており、一方の時刻要素の数または秒の小数部の有効桁数が、もう一方のデータ型を超えている場合、`DATEDIFF_BIG` では、欠落している要素が 0 に設定されます。
   
 ## <a name="datepart-boundaries"></a>datepart の差
-次の各ステートメントには、すべて同じ *startdate* と *enddate* の値が指定されています。 これらの日付は隣接しており、時間的な差は 1 マイクロ秒 (0.0000001 秒) です。 各ステートメントにおける *startdate* と *enddate* の差は、どの要素をとっても、*datepart* の 1 単位分となるように配慮されています。 いずれのステートメントも戻り値は 1 です。 *startdate* と *enddate* の年の値は異なるが、カレンダー週の値が同じである場合、`DATEDIFF_BIG` では、*datepart* **week** に対して 0 を返します。
+次の各ステートメントには、すべて同じ *startdate* と *enddate* の値が指定されています。 これらの日付は隣接しており、時間的な差は 1 マイクロ秒 (0.0000001 秒) です。 各ステートメントにおける *startdate* と *enddate* の差は、どの要素をとっても、*datepart* の 1 単位分となるように配慮されています。 いずれのステートメントも 1 を返します。 *startdate* と *enddate* の年の値は異なるが、カレンダー週の値が同じである場合、`DATEDIFF_BIG` では、*datepart* **week** に対して 0 を返します。
 
 ```sql
 SELECT DATEDIFF_BIG(year,        '2005-12-31 23:59:59.9999999', '2006-01-01 00:00:00.0000000');

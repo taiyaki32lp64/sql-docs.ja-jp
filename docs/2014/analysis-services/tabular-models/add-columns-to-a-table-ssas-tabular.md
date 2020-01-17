@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: 5974a3cc-caf8-4558-8836-6e3c24b1ee23
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 63d2958e8c0dec7213bfed0a054787cda5f0c853
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 7a62460a63bab15499f9aeb4c6510c0e4a9652a7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48184722"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66067769"
 ---
 # <a name="add-columns-to-a-table-ssas-tabular"></a>列のテーブルへの追加 (SSAS テーブル)
   このトピックでは、既存のテーブルに列を追加する方法について説明します。  
@@ -62,8 +61,8 @@ ms.locfileid: "48184722"
   
 2.  一番上のセルをクリックし、名前を入力してから Enter キーを押します。  
   
-## <a name="see-also"></a>参照  
- [テーブルのプロパティ ダイアログ ボックスを編集&#40;SSAS&#41;](../edit-table-properties-dialog-box-ssas.md)   
- [テーブル、列、または行のフィルターのマッピング変更&#40;SSAS 表形式&#41;](change-table-column-or-row-filter-mappings-ssas-tabular.md)  
+## <a name="see-also"></a>関連項目  
+ [[テーブルのプロパティの編集] ダイアログ ボックス (SSAS)](../edit-table-properties-dialog-box-ssas.md)   
+ [テーブル、列、または行のフィルターのマッピングの変更 (SSAS テーブル)](change-table-column-or-row-filter-mappings-ssas-tabular.md)  
   
   

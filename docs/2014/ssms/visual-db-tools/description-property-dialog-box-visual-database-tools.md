@@ -14,11 +14,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 88134b2bcad38bda180b7a6102df04a9766f392a
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52818634"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63316076"
 ---
 # <a name="description-property-dialog-box-visual-database-tools"></a>[説明のプロパティ] ダイアログ ボックス (Visual Database Tools)
   **[説明のプロパティ]** ダイアログ ボックスには編集可能な領域が用意されており、ユーザーは、テーブル、列、外部キー制約などのデータベース オブジェクトの詳細な説明を記述できます。 このダイアログ ボックスを表示するには、テーブルやビューなどのオブジェクトがデザイナーで選択されている場合はオブジェクトのプロパティ ウィンドウ、インデックス、CHECK 制約などのオブジェクトの場合はダイアログ ボックス、テーブル列の場合はテーブル デザイナーの **[列のプロパティ]** タブを使用します。 説明は、オブジェクトの拡張プロパティとして保存されます。  

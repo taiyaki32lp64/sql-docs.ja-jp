@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 12/29/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - mining models, validating
@@ -16,12 +15,12 @@ ms.assetid: d6f620f4-39af-4714-9628-28ce3c361fca
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 5f2f1f055974edc3625ed66a8d803358b8345494
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 78f8581839b6b4bdd761c25a1a207e942ae37f62
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52522171"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66087967"
 ---
 # <a name="classification-matrix-sql-server-data-mining-add-ins"></a>分類マトリックス (SQL Server データ マイニング アドイン)
   ![分類マトリックス ボタン、データ マイニング リボン](media/dmc-cmatrix.gif "分類マトリックス ボタン、データ マイニング リボン")  
@@ -88,7 +87,7 @@ ms.locfileid: "52522171"
 ### <a name="known-issues"></a>既知の問題  
  SQL Server 2012 および SQL Server 2014 では、内部のテスト データ セットをモデルにマップする機能はなく操作、**分類マトリックス**ツール。 ただし、外部データ セットを指定して、元のデータ セットのエラーを特定するための入力としてトレーニング セットを選択することができます。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [モデルの検証と予測用モデルの使用&#40;データ マイニング Excel 用アドイン&#41;](validating-models-and-using-models-for-prediction-data-mining-add-ins-for-excel.md)   
  [データの探索&#40;SQL Server データ マイニング アドイン&#41;](explore-data-sql-server-data-mining-add-ins.md)   
  [カテゴリの検出&#40;Excel 用テーブル分析ツール&#41;](detect-categories-table-analysis-tools-for-excel.md)  

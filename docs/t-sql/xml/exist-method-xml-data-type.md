@@ -14,22 +14,21 @@ helpviewer_keywords:
 ms.assetid: a55b75e0-0a17-4787-a525-9b095410f7af
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 97b13091d9b43a371a629d4f3d929e66ffffd368
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 9621d6be1c309930f6104d2193d6127a3167cd7a
+ms.sourcegitcommit: 710d60e7974e2c4c52aebe36fceb6e2bbd52727c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56026643"
+ms.lasthandoff: 10/11/2019
+ms.locfileid: "72278156"
 ---
 # <a name="exist-method-xml-data-type"></a>exist() メソッド (xml データ型)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   次のいずれかの状態を表す **bit** 型を返します。  
   
--   1 (True)。クエリ内の XQuery 式により、空以外の結果が返されたことを示します。 つまり、少なくとも 1 つの XML ノードが返されます。  
+-   クエリ内の XQuery 式により、空以外の結果が返された場合は 1 (True)。 つまり、少なくとも 1 つの XML ノードが返されます。  
   
--   0 (False)。クエリ内の XQuery 式により、空の結果が返されたことを示します。  
+-   これにより、空の結果が返された場合は 0 (False)。  
   
 -   NULL の場合、**xml**クエリの実行対象となるデータ型のインスタンスには、NULL が含まれています。  
   
@@ -73,7 +72,7 @@ select @f;
   
 -   コード `cast as xs:date?` は、比較する値を **xs:date** 型にキャストします。  
   
--   **@Somedate** 属性の値は型指定されません。 この値は、比較するときに右側の比較対象の型である **xs:date** 型に暗黙的にキャストされます。  
+-   **\@Somedate** 属性の値は型指定されません。 この値は、比較するときに右側の比較対象の型である **xs:date** 型に暗黙的にキャストされます。  
   
 -   **cast as xs:date()** の代わりに、**xs:date()** コンストラクター関数を使用できます。 詳細については、「[コンストラクター関数 &#40;XQuery&#41;](../../xquery/constructor-functions-xquery.md)」を参照してください。  
   

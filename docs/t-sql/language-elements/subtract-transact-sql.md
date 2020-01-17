@@ -19,16 +19,15 @@ helpviewer_keywords:
 - minus operator (-)
 - subtracting numbers
 ms.assetid: db23145f-f17d-4b90-be09-28a881cacd1a
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
+author: rothja
+ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 8cbccdecdb504af75e4130d78c92b6e80673dd9c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 09d6eb369d7e4dd1678ea2c344686bb5b672a8c0
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47612740"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68121642"
 ---
 # <a name="--subtraction-transact-sql"></a>- (減算) (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -81,7 +80,7 @@ SET @altstartdate = CONVERT(DATETIME, ''January 10, 1900 3:00 AM', 101);
 SELECT @altstartdate - 1.5 AS 'Subtract Date';  
 ```  
   
- Here is the result set:  
+ 結果セットは次のようになります。  
   
  ```
  Subtract Date  
@@ -93,7 +92,7 @@ SELECT @altstartdate - 1.5 AS 'Subtract Date';
   
 ## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>例: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] および [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
-### <a name="c-using-subtraction-in-a-select-statement"></a>C. SELECT ステートメント内で減算を使用する  
+### <a name="c-using-subtraction-in-a-select-statement"></a>C: SELECT ステートメント内で減算を使用する  
  次の例では、基本給が最高の従業員と最低税率の従業員の間の基本給の差異を `dimEmployee` テーブルから計算します。  
   
 ```  

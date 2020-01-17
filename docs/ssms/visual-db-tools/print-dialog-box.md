@@ -10,22 +10,21 @@ ms.topic: conceptual
 f1_keywords:
 - vs.Print
 ms.assetid: 1811cb9e-3791-414d-b8c9-1d61657707f8
-author: stevestein
-ms.author: sstein
-manager: craigg
-ms.openlocfilehash: c265d14a78f89cf90e7aaa572fa584a5aa69f96f
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 7591ac6ca80aabe5a9895b729184c2b4a6c4beb1
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52520230"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68266339"
 ---
 # <a name="print-dialog-box"></a>[印刷] ダイアログ ボックス
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 **[印刷]** ダイアログ ボックスのオプションを選択すると、ドキュメントの印刷方法を指定できます。  
   
 ## <a name="printer"></a>[プリンター]  
-**名前**  
+**[名前]**  
 プリンターを指定します。 一覧からプリンターを選択します。 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] を閉じるか別のプリンターを選択するまで、選択したプリンターが既定のプリンターになります。 一覧の下のフィールドに表示される情報が、選択したプリンターに適用されます。  
   
 **ステータス**  

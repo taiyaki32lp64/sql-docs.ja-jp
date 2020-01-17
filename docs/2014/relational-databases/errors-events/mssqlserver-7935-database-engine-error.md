@@ -13,11 +13,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 9441a002f7c6e7113970bd4fb847f3371fd67909
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48223362"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62762051"
 ---
 # <a name="mssqlserver7935"></a>MSSQLSERVER_7935
     
@@ -30,7 +30,7 @@ ms.locfileid: "48223362"
 |イベント ソース|MSSQLSERVER|  
 |コンポーネント|SQLEngine|  
 |シンボル名|DBCC2_FS_MISSING_COLUMN|  
-|メッセージ テキスト|テーブル エラー: FILESTREAM ディレクトリ ID F_ID は、オブジェクト ID O_ID、インデックス ID I_ID、パーティション ID PN_ID の列に存在しますが、その列はパーティションに存在しません。|  
+|メッセージ テキスト|テーブル エラー:パーティションの Filestream ディレクトリ ID F_ID は、オブジェクト ID O_ID、インデックス ID I_ID、パーティション ID PN_ID、列がその列が存在するがありませんでした。|  
   
 ## <a name="explanation"></a>説明  
  DBCC CHECKDB の実行中に、指定されたオブジェクト内の列に対応する FILESTREAM ディレクトリが検出されましたが、この列はパーティションの対応するメタデータでは検出されませんでした。  

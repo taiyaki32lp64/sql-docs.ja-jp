@@ -17,14 +17,14 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: ae75dc8af9364a619113d2c38071a441e15351be
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52774934"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63062210"
 ---
 # <a name="poll-servers"></a>サーバーのポーリング
-  マルチサーバー管理を実装している場合、対象サーバーからマスター サーバーに定期的にアクセスし、既に実行したジョブの情報をアップロードして新しいジョブをダウンロードします。 マスター サーバーにアクセスする処理は *サーバー ポーリング* と呼ばれ、定期的な *ポーリング間隔*で行われます。  
+  マルチサーバー管理を実装している場合、ターゲット サーバーからマスター サーバーに定期的にアクセスし、既に実行したジョブの情報をアップロードして新しいジョブをダウンロードします。 マスター サーバーにアクセスする処理は *サーバー ポーリング* と呼ばれ、定期的な *ポーリング間隔*で行われます。  
   
 ## <a name="polling-intervals"></a>ポーリング間隔  
  ターゲット サーバーからマスター サーバーに接続し、命令をダウンロードしてジョブの実行結果をアップロードする頻度をポーリング間隔 (既定値は 1 分) で制御します。  
@@ -43,7 +43,7 @@ ms.locfileid: "52774934"
 EXECUTE msdb.dbo.sp_post_msx_operation 'INSERT', 'JOB', '<job id>'  
 ```  
   
- このコマンドを実行すると、現在のジョブ定義が対象サーバーと同期されます。  
+ このコマンドを実行すると、現在のジョブ定義がターゲット サーバーと同期されます。  
   
  次の場合、操作を明示的に書き込む必要はありません。  
   

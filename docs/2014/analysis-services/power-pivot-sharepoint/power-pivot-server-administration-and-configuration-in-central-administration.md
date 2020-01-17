@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: 2cdbfdc5-45a9-4000-a03d-318cc7ac8fe9
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 5ec3264095ebdb34730f8112389b50aa6839836f
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: de72001ced1b7e2690f90b2de4c59bb35aca6ce4
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53365355"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66071111"
 ---
 # <a name="powerpivot-server-administration-and-configuration-in-central-administration"></a>サーバーの全体管理での PowerPivot サーバーの管理と構成
   PowerPivot サーバーの管理および構成は、SharePoint サービス アプリケーションの管理者が SharePoint サーバーの全体管理を使用して実行します。  

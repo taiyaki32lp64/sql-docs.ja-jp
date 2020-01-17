@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 13fe9381-d00b-4f4a-9162-83c3f21b3837
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: c8306a7d8e3247e77579d0bebc9147c3f9a1cc56
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 4d76f239094185af7a3e940201b3f99132c0194a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47789330"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67918193"
 ---
 # <a name="move-method-ado"></a>Move メソッド (ADO)
 現在のレコードの位置を移動、 [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md)オブジェクト。  
@@ -38,7 +37,7 @@ recordset.Move NumRecords, Start
  *NumRecords*  
  符号付き**長い**レコードの現在の位置を移動するレコードの数を指定する式。  
   
- *開始*  
+ *[開始]*  
  任意。 A**文字列**値または**バリアント**ブックマークに評価されます。 使用することも、 [BookmarkEnum](../../../ado/reference/ado-api/bookmarkenum.md)値。  
   
 ## <a name="remarks"></a>コメント  
@@ -46,9 +45,9 @@ recordset.Move NumRecords, Start
   
  場合、 *NumRecords*引数に 0 を超えると、現在のレコードの位置を前方に移動 (の終了に向けて、 **Recordset**)。 場合*NumRecords* 0、現在のレコードの位置は後方に移動します未満です (の先頭に向かって、 **Recordset**)。  
   
- 場合、**移動**呼び出しは、最初のレコードの前に、のポイントに現在のレコードの位置を移動、ADO レコード セット内の最初のレコードの前に位置する現在のレコードを設定する ([BOF](../../../ado/reference/ado-api/bof-eof-properties-ado.md)は**は True。**). 旧バージョンとのときに移動しよう、 **BOF**プロパティが既に**True**エラーが生成されます。  
+ 場合、**移動**呼び出しは、最初のレコードの前に、のポイントに現在のレコードの位置を移動、ADO レコード セット内の最初のレコードの前に位置する現在のレコードを設定する ([BOF](../../../ado/reference/ado-api/bof-eof-properties-ado.md)は**は True。** ). 旧バージョンとのときに移動しよう、 **BOF**プロパティが既に**True**エラーが生成されます。  
   
- 場合、**移動**呼び出しは最後のレコードの後のポイントに現在のレコードの位置を移動すると、ADO レコード セットの最後のレコードの後に、現在のレコードを位置に設定する ([EOF](../../../ado/reference/ado-api/bof-eof-properties-ado.md)は**は True。**). 転送時に移動しよう、 **EOF**プロパティが既に**True**エラーが生成されます。  
+ 場合、**移動**呼び出しは最後のレコードの後のポイントに現在のレコードの位置を移動すると、ADO レコード セットの最後のレコードの後に、現在のレコードを位置に設定する ([EOF](../../../ado/reference/ado-api/bof-eof-properties-ado.md)は**は True。** ). 転送時に移動しよう、 **EOF**プロパティが既に**True**エラーが生成されます。  
   
  呼び出す、**移動**メソッド空から**レコード セット**オブジェクト、エラーが発生します。  
   
@@ -64,7 +63,7 @@ recordset.Move NumRecords, Start
 ## <a name="applies-to"></a>適用対象  
  [Recordset オブジェクト (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [Move メソッドの例 (VB)](../../../ado/reference/ado-api/move-method-example-vb.md)   
  [Move メソッドの例 (VBScript)](../../../ado/reference/ado-api/move-method-example-vbscript.md)   
  [Move メソッドの例 (vc++)](../../../ado/reference/ado-api/move-method-example-vc.md)   

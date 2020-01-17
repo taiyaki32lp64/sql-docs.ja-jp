@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 564e3500-c567-43dc-993b-9ab50e99cf3f
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: 280d5d37ca364e32e2bd8638cdd03563a2b86f49
-ms.sourcegitcommit: 9c99f992abd5f1c174b3d1e978774dffb99ff218
+ms.openlocfilehash: fd74479464d23ab6ce85a92babf6ba92fa8baf49
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/17/2019
-ms.locfileid: "54361502"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67984345"
 ---
 # <a name="deny-type-permissions-transact-sql"></a>DENY (型の権限の拒否) (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -55,8 +54,8 @@ DENY permission  [ ,...n ] ON TYPE :: [ schema_name . ] type_name
  *permission*  
  型で拒否できる権限を指定します。 権限の一覧については、後の「解説」を参照してください。  
   
- ON TYPE **::** [ _schema_name_**.** ] *type_name*  
- 権限を拒否する型を指定します。 スコープ修飾子 (**::**) が必要です。 *schema_name* が指定されていない場合、既定のスキーマが使用されます。 *schema_name* が指定されている場合、スキーマのスコープ修飾子 (**.**) が必要です。  
+ ON TYPE **::** [ _schema_name_ **.** ] *type_name*  
+ 権限を拒否する型を指定します。 スコープ修飾子 ( **::** ) が必要です。 *schema_name* が指定されていない場合、既定のスキーマが使用されます。 *schema_name* が指定されている場合、スキーマのスコープ修飾子 ( **.** ) が必要です。  
   
  TO \<database_principal>  
  権限を拒否するプリンシパルを指定します。  
@@ -100,9 +99,9 @@ DENY permission  [ ,...n ] ON TYPE :: [ schema_name . ] type_name
  型は、スキーマ レベルのセキュリティ保護可能なリソースで、権限の階層で親となっているスキーマに含まれています。  
   
 > [!IMPORTANT]  
->  **GRANT**、**DENY,**、**REVOKE** の各権限は、システム型には適用されません。 ユーザー定義型には権限を許可できます。 ユーザー定義型について詳しくは、「[SQL Server でのユーザー定義型の使用](../../relational-databases/clr-integration-database-objects-user-defined-types/working-with-user-defined-types-in-sql-server.md)」をご覧ください。  
+>  **GRANT**、**DENY,** 、**REVOKE** の各権限は、システム型には適用されません。 ユーザー定義型には権限を許可できます。 ユーザー定義型について詳しくは、「[SQL Server でのユーザー定義型の使用](../../relational-databases/clr-integration-database-objects-user-defined-types/working-with-user-defined-types-in-sql-server.md)」をご覧ください。  
   
- 次の表に、型で拒否できる権限のうち最も限定的なものを、それらを暗黙的に含む一般的な権限と共に示します。  
+ 次の表に、型で拒否できる権限のうち最も限定的なものを、それらを暗黙的に含むより一般的な権限と共に示します。  
   
 |型権限|権限が含まれる型権限|権限が含まれるスキーマ権限|  
 |---------------------|--------------------------------|----------------------------------|  

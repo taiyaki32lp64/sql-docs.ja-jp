@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: e9003457-0762-48b3-942f-0820266b158f
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 1738c7432dce6538fe15c4b23f15f5ab7fe6f219
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 452259b6e4e406d7a406211a9e9b42ebbf60da53
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47606508"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67925224"
 ---
 # <a name="handling-ado-events"></a>ADO イベントの処理
 ADO イベント モデルを発行する特定同期および非同期 ADO 操作をサポートしています*イベント*、または、操作を開始する前に、または完了後に、通知します。 イベントは、実際には、アプリケーションで定義するイベント ハンドラー ルーチンの呼び出しです。  
@@ -46,7 +45,7 @@ ADO イベント モデルを発行する特定同期および非同期 ADO 操�
   
 -   [言語別の ADO イベントのインスタンス化](../../../ado/guide/data/ado-event-instantiation-by-language.md)  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [ADO イベント ハンドラーの概要](../../../ado/guide/data/ado-event-handler-summary.md)   
  [言語で ADO イベントのインスタンス化](../../../ado/guide/data/ado-event-instantiation-by-language.md)   
  [ADO イベント](../../../ado/reference/ado-api/ado-events.md)   

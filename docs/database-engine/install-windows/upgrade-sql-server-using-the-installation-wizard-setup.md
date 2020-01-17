@@ -13,13 +13,12 @@ ms.assetid: cef118a5-a7ce-4bfa-8b9d-c81996284cfc
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-manager: craigg
-ms.openlocfilehash: 9ce14b9cbc983987072eb9433a20823c8721e3db
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: bcbc5be852e2eed6b22689c8745210dd840e7e6b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52533969"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67934695"
 ---
 # <a name="upgrade-sql-server-using-the-installation-wizard-setup"></a>インストール ウィザードを使用した SQL Server のアップグレード (セットアップ)
 
@@ -62,7 +61,7 @@ ms.locfileid: "52533969"
   
 -   すべての起動ストアド プロシージャを無効にします。アップグレード プロセスでは、サービスの起動および停止はアップグレード中の SQL Server インスタンス上で行われます。 起動時にストアド プロシージャを実行すると、アップグレード プロセスをブロックする可能性があります。  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェントが MSX/TSX リレーションシップに参加している [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスをアップグレードする場合は、マスター サーバーをアップグレードする前に、対象サーバーをアップグレードします。 対象サーバーより前にマスター サーバーをアップグレードすると、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェントは [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のマスター インスタンスに接続できなくなります。  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェントが MSX/TSX リレーションシップに参加している [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスをアップグレードする場合は、マスター サーバーをアップグレードする前に、ターゲット サーバーをアップグレードします。 ターゲット サーバーより前にマスター サーバーをアップグレードすると、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェントは [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のマスター インスタンスに接続できなくなります。  
   
 -   SQL Server との従属関係を持つすべてのサービスを含むすべてのアプリケーションを終了します。 アップグレード実行中のインスタンスにローカル アプリケーションが接続されている場合は、アップグレード操作が失敗する場合があります。  
   
@@ -85,7 +84,7 @@ ms.locfileid: "52533969"
   
 6.  [ [!INCLUDE[msCoName](../../includes/msconame-md.md)] Update] ページは、コントロール パネルの [すべてのコントロール パネル項目] で [Windows Update]、[設定の変更] の順にクリックし、[ [!INCLUDE[msCoName](../../includes/msconame-md.md)] Update] のチェック ボックスがオフになっている場合、次に表示されます。 [ [!INCLUDE[msCoName](../../includes/msconame-md.md)] Update] ページでチェック マークを付けると、Windows Update を調べるときに最新の更新プログラムが含まれるようにコンピューターの設定が変更されます。  
   
-7.  [製品の更新プログラム] ページに、使用できる最新の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 製品の更新プログラムが表示されます。 更新プログラムを含めない場合は、**[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [製品の更新プログラムを含める]** チェック ボックスをオフにします。 製品の更新プログラムが検出されない場合、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] セットアップではこのページは表示されず、 **[セットアップ ファイルのインストール]** ページに自動的に移動します。  
+7.  [製品の更新プログラム] ページに、使用できる最新の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 製品の更新プログラムが表示されます。 更新プログラムを含めない場合は、 **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [製品の更新プログラムを含める]** チェック ボックスをオフにします。 製品の更新プログラムが検出されない場合、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] セットアップではこのページは表示されず、 **[セットアップ ファイルのインストール]** ページに自動的に移動します。  
   
 8.  [セットアップ ファイルのインストール] ページのセットアップには、セットアップ ファイルのダウンロード、抽出、およびインストールの進行状況が表示されます。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] セットアップの更新プログラムが検出され、含まれるように指定されている場合は、その更新プログラムもインストールされます。  
   
@@ -106,7 +105,7 @@ ms.locfileid: "52533969"
   
      すべての [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Service Pack とアップグレードは [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のインスタンスの各コンポーネントに適用されます。  
   
-     **[インストール済みのインスタンス]**: セットアップを実行中のコンピューター上にある [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスがグリッドに表示されます。 既定のインスタンスが既にコンピューターにインストールされている場合、 [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)]の名前付きインスタンスをインストールする必要があります。  
+     **[インストール済みのインスタンス]** : セットアップを実行中のコンピューター上にある [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスがグリッドに表示されます。 既定のインスタンスが既にコンピューターにインストールされている場合、 [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)]の名前付きインスタンスをインストールする必要があります。  
   
 13. この記事の残りの部分のワーク フローは、インストールするように指定した機能に応じて異なります。 選択した機能によっては、表示されないページもあります。  
   

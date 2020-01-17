@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 16049b5b-22a7-4640-9897-c25dd0f19d21
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 655c3c76794b170b113442b14ae75cf977ac024c
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: 629ff63f6fd06aaccc1f60209231f5c937f4a67d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52391705"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68036133"
 ---
 # <a name="sqlcancelhandle-function"></a>SQLCancelHandle 関数
 **準拠**  
@@ -35,7 +34,7 @@ ms.locfileid: "52391705"
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
   
 SQLRETURN SQLCancelHandle(  
       SQLSMALLINT  HandleType,  

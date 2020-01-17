@@ -21,11 +21,11 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 2bce064ee38082861e9b6c5d4f2c6e28bf41dded
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: e4b241fd92689c2aa6e1f5e625874bd0b807dd01
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53361044"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "62745523"
 ---
 # <a name="srvsenddone-extended-stored-procedure-api"></a>srv_senddone (拡張ストアド プロシージャ API)
     

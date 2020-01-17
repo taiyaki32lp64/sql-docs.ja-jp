@@ -1,5 +1,5 @@
 ---
-title: コレクション アクセス許可 (Master Data Services) | Microsoft Docs
+title: コレクション権限
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -11,15 +11,14 @@ helpviewer_keywords:
 - collections [Master Data Services], permissions
 - permissions [Master Data Services], collections
 ms.assetid: 703e1bf5-4b4b-4830-8a5b-f979b09f677d
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 8bb926515be3cd16a5ae1ce9dd1b2694f4bc55a7
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
-ms.translationtype: HT
+ms.openlocfilehash: b55d028e90869f6b21d51348b97411fb6c965eb9
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52759274"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73729641"
 ---
 # <a name="collection-permissions-master-data-services"></a>コレクション権限 (Master Data Services)
 
@@ -35,8 +34,8 @@ ms.locfileid: "52759274"
 |**読み取り**|ユーザーがコレクションのメンバーとメンバーの属性を読み取ることができます。|  
 |**作成**|ユーザーがコレクションのメンバーを作成して属性値を割り当てることができます。|  
 |**Update**|ユーザーがコレクションのメンバー、属性、リレーションシップを更新できます。|  
-|**削除**|ユーザーがコレクションのメンバーを削除できます。|  
-|**Deny**|コレクション メンバーに対するアクセスをすべて拒否します。|  
+|**[削除]**|ユーザーがコレクションのメンバーを削除できます。|  
+|**拒否**|コレクション メンバーに対するアクセスをすべて拒否します。|  
   
  読み取り、作成、更新、削除の各権限は組み合わせることができます。 作成、更新、削除が割り当てられると、読み取り権限が自動的に割り当てられます。  
   

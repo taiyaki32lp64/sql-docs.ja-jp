@@ -10,15 +10,14 @@ ms.topic: conceptual
 ms.assetid: 315c32dc-aeb1-4629-b30e-87b44e8f84d1
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 1aecb94fd7367b12ed2c1aaca06ffe26f586e604
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: 9d7f351b90030e755dde8ad13905ef4533eff08e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53206891"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67924058"
 ---
-# <a name="step-3-populate-the-fields-list-box"></a>手順 3:フィールド リスト ボックスを設定します。
+# <a name="step-3-populate-the-fields-list-box"></a>手順 3:Fields リスト ボックスに値を設定する
 フィールドのリスト ボックスを設定するには、クリック イベント ハンドラーに次のコードを挿入`lstMain`:  
   
 ```  
@@ -57,7 +56,7 @@ End Sub
   
  リソースが構造化ドキュメントの場合は、コードは実装されません。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [インターネットのシナリオへの発行](../../../ado/guide/data/internet-publishing-scenario.md)   
  [手順 2:メイン リスト ボックスを初期化します。](../../../ado/guide/data/step-2-initialize-the-main-list-box.md)   
  [手順 4:詳細情報のテキスト ボックスに入力します。](../../../ado/guide/data/step-4-populate-the-details-text-box.md)

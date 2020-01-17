@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: 44e6e9df-4724-4c86-bbd2-ca750c248333
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: e07c7416c09cd87bdfc8db3f2d912a3916c3511b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: cc7aea1b0b03981d21e9ab3f5e5453c68476a0b0
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47692760"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67982330"
 ---
 # <a name="getmaxcharliterallength-method-sqlserverdatabasemetadata"></a>getMaxCharLiteralLength メソッド (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -36,13 +35,13 @@ public int getMaxCharLiteralLength()
 ```  
   
 ## <a name="return-value"></a>戻り値  
- 許容される最大文字数を示す **int**。  
+ 許容される最大文字数を示す **int** です。  
   
 ## <a name="exceptions"></a>例外  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- この getMaxCharLiteralLength メソッドは、java.sql.DatabaseMetaData インターフェイスで getMaxCharLiteralLength メソッドによって指定されます。  
+ この getMaxCharLiteralLength メソッドは、getMaxCharLiteralLength メソッドによって、java メタデータインターフェイスで指定されます。  
   
 ## <a name="see-also"></a>参照  
  [SQLServerDatabaseMetaData のメソッド](../../../connect/jdbc/reference/sqlserverdatabasemetadata-methods.md)   

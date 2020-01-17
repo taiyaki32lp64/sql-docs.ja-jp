@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: f4a1d0e8-f27f-4cb8-a25d-040b40555dcc
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 5fd64c8324c4ceff60c85864a74deb9c804f53a6
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 27f8965d0244a532b9afeae44b43df6081aac64b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47755160"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68053620"
 ---
 # <a name="mssqlserver5250"></a>MSSQLSERVER_5250
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -31,7 +30,7 @@ ms.locfileid: "47755160"
 |イベント ソース|MSSQLSERVER|  
 |コンポーネント|SQLEngine|  
 |シンボル名|DBCC4_CRITICAL_DATABASE_PAGE_CORRUPT|  
-|メッセージ テキスト|データベース エラー : データベース 'NAME' (データベース ID DB_ID) の PAGE_TYPE ページ P_ID が無効です。 このエラーを修正することはできません。 バックアップから復元してください。|  
+|メッセージ テキスト|データベース エラー:データベース 'NAME' (データベース ID DB_ID) の PAGE_TYPE ページ P_ID が無効です。 このエラーを修正することはできません。 バックアップから復元してください。|  
   
 ## <a name="explanation"></a>説明  
 示されているデータベースのファイル ヘッダー ページまたはブート ページが破損しています。  

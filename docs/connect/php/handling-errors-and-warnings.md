@@ -1,5 +1,5 @@
 ---
-title: エラーおよび警告の処理 |Microsoft Docs
+title: エラーと警告の処理 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/26/2018
 ms.prod: sql
@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 0afea5d5-8797-4a85-b1b4-8cde1f3888a3
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 35c1d728bd1e1fc5547c84c9e11d83044862a5f0
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.openlocfilehash: 2765df415cd4e45469f48c30dc2c0937361ce3aa
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51599463"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68015070"
 ---
 # <a name="handling-errors-and-warnings"></a>エラーおよび警告の処理
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -40,5 +39,5 @@ PDO_SQLSRV ドライバーを使用している場合、エラーとエラー処
 [sqlsrv_get_config](../../connect/php/sqlsrv-get-config.md)  
   
 ## <a name="see-also"></a>参照  
-[For PHP for SQL Server のプログラミング、Microsoft ドライバーのガイド](../../connect/php/programming-guide-for-php-sql-driver.md)
+[SQL Server 用 Microsoft Drivers for PHP のためのプログラミング ガイド](../../connect/php/programming-guide-for-php-sql-driver.md)
   

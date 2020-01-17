@@ -15,15 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - STOverlaps (geometry Data Type)
 ms.assetid: 1813cba1-5780-456a-9489-6b40a79569b3
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: 933678972b7680955eac826caba6e8dedd2095e6
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: MladjoA
+ms.author: mlandzic
+ms.openlocfilehash: 392b39ae14819aa645e4714189f17e6d4604bf44
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47670646"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68140922"
 ---
 # <a name="stoverlaps-geometry-data-type"></a>STOverlaps (geometry データ型)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -44,7 +43,7 @@ ms.locfileid: "47670646"
 ## <a name="return-types"></a>戻り値の型  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 戻り値の型: **bit**  
   
- CLR の戻り値の型: **SqlBoolean**  
+ CLR の戻り値の型:**SqlBoolean**  
   
 ## <a name="remarks"></a>Remarks  
  2 つの **geometry** インスタンスが重なるのは、重なる部分を表す領域がインスタンスと同次元にあり、その領域がどちらのインスタンスとも異なる場合です。  

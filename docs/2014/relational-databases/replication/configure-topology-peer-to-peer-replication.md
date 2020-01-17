@@ -13,11 +13,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 54de95fe39ea6b99139ee040b93160a1a93ff1bf
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52776464"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62721634"
 ---
 # <a name="configure-topology-peer-to-peer-replication"></a>[トポロジの構成] \(ピア ツー ピア レプリケーション)
   **[トポロジの構成]** ページを使用すると、新しいノードの追加、ノードの削除、既存のノード間の新しい接続の追加など、一般的な構成タスクを実行できます。 このウィザードの **[パブリケーション]** ページで選択したノードがデザイン画面に表示されます。 構成オプションを指定するには、ノード、接続、またはデザイン画面を右クリックします。  

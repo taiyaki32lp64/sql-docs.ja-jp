@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: f78f61b6-87e0-48dc-961e-83d0e20da58e
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: b1048e8d243bd19d86d60c3c4f92e4e4b9d137a9
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 23ec65380bfea16d38f02cab0a070ab69f85d525
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47828787"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67919746"
 ---
 # <a name="commandstream-property-ado"></a>CommandStream プロパティ (ADO)
 入力として使用するストリームを示す、[コマンド](../../../ado/reference/ado-api/command-object-ado.md)オブジェクト。  
@@ -41,7 +40,7 @@ ms.locfileid: "47828787"
 ## <a name="applies-to"></a>適用対象  
  [Command オブジェクト (ADO)](../../../ado/reference/ado-api/command-object-ado.md)  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [CommandText プロパティ (ADO)](../../../ado/reference/ado-api/commandtext-property-ado.md)   
  [Dialect プロパティ](../../../ado/reference/ado-api/dialect-property.md)   
  [CommandTypeEnum](../../../ado/reference/ado-api/commandtypeenum.md)

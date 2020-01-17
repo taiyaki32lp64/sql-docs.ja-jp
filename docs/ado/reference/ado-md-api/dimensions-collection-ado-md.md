@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: eaf6f4e7-2ea0-49a3-89ee-e219e025257c
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 860c51ecc5d282f1c2ab957b190c8cb8f66e2b9c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e864d225ade97737ab0471a5b6a19fb66d875857
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47803000"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67949773"
 ---
 # <a name="dimensions-collection-ado-md"></a>Dimensions コレクション (ADO MD)
 含まれています、[ディメンション](../../../ado/reference/ado-md-api/dimension-object-ado-md.md)キューブを作成するオブジェクト。  
@@ -40,7 +39,7 @@ ms.locfileid: "47803000"
   
 -   [プロパティ、メソッド、およびイベント](../../../ado/reference/ado-md-api/dimensions-collection-properties-methods-and-events.md)  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [カタログの例 (VB)](../../../ado/reference/ado-md-api/catalog-example-vb.md)   
  [CubeDef オブジェクト (ADO MD)](../../../ado/reference/ado-md-api/cubedef-object-ado-md.md)   
  [Dimension オブジェクト (ADO MD)](../../../ado/reference/ado-md-api/dimension-object-ado-md.md)

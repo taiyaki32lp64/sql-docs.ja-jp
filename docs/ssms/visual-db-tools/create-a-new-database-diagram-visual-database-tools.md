@@ -11,15 +11,14 @@ helpviewer_keywords:
 - diagrams [SQL Server], creating
 - database diagrams [SQL Server], creating
 ms.assetid: 843649c0-10bb-4b6a-9369-6b10733381e9
-author: stevestein
-ms.author: sstein
-manager: craigg
-ms.openlocfilehash: aa4a72bf62b50709c516ba3fa8eb1c587b0416b4
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: aeddc490049cd1b6a746d11b43f58df665b655ef
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47658400"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68266951"
 ---
 # <a name="create-a-new-database-diagram-visual-database-tools"></a>新しいデータベース ダイアグラムの作成 (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]

@@ -12,16 +12,16 @@ helpviewer_keywords:
 ms.assetid: 46bd3edd-d6de-40a6-a015-21cce8321feb
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: ad33d137f6c5815bb30c4546d6d6acf578e60997
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
+ms.openlocfilehash: 039f8dcdf408d269684b513bf01539692b38444d
+ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47758340"
+ms.lasthandoff: 08/03/2019
+ms.locfileid: "68768629"
 ---
 # <a name="deprecated-features-in-sql-server-replication"></a>SQL Server レプリケーションの非推奨の機能
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
   このトピックでは、[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] でまだ使用できるものの、非推奨のレプリケーション機能について説明します。 これらの機能は [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]の今後のリリースで削除される予定です。 非推奨の機能を新しいアプリケーションで使用しないでください。  
   
 ## <a name="items-deprecated-in-includesssql15includessssql15-mdmd"></a>Items Deprecated in [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]  

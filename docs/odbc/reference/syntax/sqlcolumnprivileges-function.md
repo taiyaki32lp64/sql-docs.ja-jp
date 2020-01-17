@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: ef233d9a-6ed5-4986-9d42-5e0b1a79fb6e
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 83253faf14d1ccabaa39aabb52d7d1265e13e728
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: 5e3c54e0e2eb4ad633d35159e1ff010c9388f5d3
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53207691"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68118713"
 ---
 # <a name="sqlcolumnprivileges-function"></a>SQLColumnPrivileges 関数
 **準拠**  
@@ -36,7 +35,7 @@ ms.locfileid: "53207691"
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
   
 SQLRETURN SQLColumnPrivileges(  
      SQLHSTMT      StatementHandle,  

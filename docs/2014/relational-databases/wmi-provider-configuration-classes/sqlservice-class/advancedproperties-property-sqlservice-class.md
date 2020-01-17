@@ -19,11 +19,11 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: abe9d977dfcde5523e875881b1a5b80be7b1b887
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53376774"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63223230"
 ---
 # <a name="advancedproperties-property-sqlservice-class"></a>AdvancedProperties プロパティ (SqlService クラス)
   `SqlService` オブジェクトの詳細プロパティを格納したオブジェクト参照の配列を取得します。  

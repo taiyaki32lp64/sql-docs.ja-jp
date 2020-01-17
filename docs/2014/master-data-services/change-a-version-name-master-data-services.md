@@ -9,15 +9,15 @@ ms.topic: conceptual
 helpviewer_keywords:
 - versions [Master Data Services], changing name
 ms.assetid: cba8b814-155f-49c5-b636-afddc5b0de4f
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 9763c0a12bd9af232c8a2c3d6b7194e901ca5c3f
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 3e064f78efa3caacf3b21c330a54c145b8fead4a
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52797944"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65483644"
 ---
 # <a name="change-a-version-name-master-data-services"></a>バージョン名を変更する (マスター データ サービス)
   [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]で組織に合わせてバージョン名を変更してカスタマイズします。  
@@ -39,7 +39,7 @@ ms.locfileid: "52797944"
   
 4.  Enter キーを押します。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [ビジネス ルールに対してバージョンを検証する (マスター データ サービス)](../../2014/master-data-services/validate-a-version-against-business-rules-master-data-services.md)   
  [バージョンをロックする (マスター データ サービス)](../../2014/master-data-services/lock-a-version-master-data-services.md)   
  [バージョンをコミットする (マスター データ サービス)](../../2014/master-data-services/commit-a-version-master-data-services.md)   

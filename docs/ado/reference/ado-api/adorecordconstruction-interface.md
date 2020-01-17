@@ -15,20 +15,19 @@ helpviewer_keywords:
 ms.assetid: 52a5429e-5829-455e-be3b-31f05cbecf2d
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 21975fb2442aea97e362cd71b24c087f58addc0f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: c56ba0b9d7ebebbf4a9e4baf669bbdc6eb84355e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47686870"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67920809"
 ---
 # <a name="adorecordconstruction-interface"></a>ADORecordConstruction インターフェイス
 **ADORecordConstruction**インターフェイスは、ADO の構築に使用**レコード**から OLE DB オブジェクト**行**C/C++ アプリケーション内のオブジェクト。  
   
  このインターフェイスには、次のプロパティがサポートされています。  
   
-## <a name="properties"></a>[プロパティ]  
+## <a name="properties"></a>Properties  
   
 |||  
 |-|-|  
@@ -71,8 +70,8 @@ ms.locfileid: "47686870"
   
  ADO**レコード**オブジェクトは、OLE DB のコンテナーから構築することもできます**行**オブジェクト。  
   
-## <a name="requirements"></a>要件  
- **バージョン:** ADO 2.0 以降  
+## <a name="requirements"></a>必要条件  
+ **バージョン：** ADO 2.0 以降  
   
  **ライブラリ:** msado15.dll  
   

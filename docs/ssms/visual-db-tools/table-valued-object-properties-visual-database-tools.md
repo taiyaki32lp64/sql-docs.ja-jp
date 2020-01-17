@@ -10,15 +10,14 @@ ms.topic: conceptual
 f1_keywords:
 - vdt.designers.properties.TVO
 ms.assetid: eaf06cbf-8242-4483-894f-80ae02a4840e
-author: stevestein
-ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 243ad5c0489f2af49823eb0663efbb8b6b474056
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: edcdd09314c3695be45f04e16fa797795f77f776
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52519853"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68261594"
 ---
 # <a name="table-valued-object-properties-visual-database-tools"></a>テーブル値オブジェクトのプロパティ (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -33,14 +32,14 @@ ms.locfileid: "52519853"
 **[IDENTITY] カテゴリ**  
 展開すると、 **[オブジェクト名]** プロパティと **[TVO 型]** プロパティが表示されます。  
   
-**名前**  
+**[名前]**  
 選択されたテーブル値オブジェクトの名前を表示します。  
   
 **[TVO 型]**  
 テーブル値オブジェクトの種類を表示します。 ベース テーブル、ビュー、テーブル値関数、または派生テーブルです。  
   
 **クエリ デザイナー カテゴリ**  
-展開すると、 **[エイリアス]**、 **[列一覧]**、 **[名前]**、および **[パラメーター リスト]** のプロパティが表示されます。  
+展開すると、 **[エイリアス]** 、 **[列一覧]** 、 **[名前]** 、および **[パラメーター リスト]** のプロパティが表示されます。  
   
 **[エイリアス]**  
 選択されたテーブル値オブジェクトの別名を表示します。 別名を追加または変更するには、フィールドに入力します。  

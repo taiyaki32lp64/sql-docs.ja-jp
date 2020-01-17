@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: c260c000-fd53-4831-993f-df6894f3228b
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 3319e045a2503767d9227c3064c18583be7d6e82
-ms.sourcegitcommit: ddb682c0061c2a040970ea88c051859330b8ac00
+ms.openlocfilehash: 5a94926a2876c5cac52560872dc9fc59e50ba6ad
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51570992"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68072875"
 ---
 # <a name="improve-access-to-trace-data"></a>トレース データへのアクセスを向上させる
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

@@ -1,5 +1,5 @@
 ---
-title: '[<OperatorName> のプロパティ] - ([履歴] ページ) | Microsoft Docs'
+title: '[<OperatorName> のプロパティ] ([履歴] ページ) | Microsoft Docs'
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -10,18 +10,17 @@ ms.topic: conceptual
 f1_keywords:
 - sql13.ag.operator.history.f1
 ms.assetid: d25f79da-1ec1-4683-8ceb-5026b62b7364
-author: stevestein
-ms.author: sstein
-manager: craigg
+author: markingmyname
+ms.author: maghan
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 236734ffb81e728704f87e72fd3bcefd40499425
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 8db0f992f38a3f89c3dd84495459c87f8bc1916d
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47743710"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68260089"
 ---
-# <a name="operator-properties-history-page"></a>[<OperatorName> のプロパティ] - ([履歴] ページ)
+# <a name="operator-properties-history-page"></a>[<OperatorName> のプロパティ] ([履歴] ページ)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
 > [!IMPORTANT]  
@@ -40,5 +39,5 @@ ms.locfileid: "47743710"
 最新の通知は、Net Send によって試行されました。また、このオペレーターが Net Send による通知を受け取っていない場合は **[(Net Send 未通知)]** となります。  
   
 ## <a name="see-also"></a>参照  
-[演算子](../../ssms/agent/operators.md)  
+[オペレーター](../../ssms/agent/operators.md)  
   

@@ -4,17 +4,6 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
-- analysis-services/data-mining
-- analysis-services/multidimensional-tabular
-- data-quality-services
-- database-engine
-- integration-services
-- master-data-services
-- replication
-- reporting-services-native
-- reporting-services-sharepoint
 ms.topic: conceptual
 helpviewer_keywords:
 - definitions [SQL Server]
@@ -24,16 +13,32 @@ ms.assetid: 0e8a7967-b407-4e01-b8c4-3eabe2820df5
 author: heidisteen
 ms.author: heidist
 manager: craigg
-ms.openlocfilehash: 9b565fb16621760a69e2462680444db5f0ea3916
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: b84e54a30afc61169f6db8bf0a71081faeb27f96
+ms.sourcegitcommit: 0a4879dad09c6c42ad1ff717e4512cfea46820e9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52519482"
+ms.lasthandoff: 06/27/2019
+ms.locfileid: "67412691"
 ---
 # <a name="glossary"></a>用語集
-  
-  
+
+<!--
+Metadata 'ms.technology:' is restricted to a maximum of one value.
+So I am erasing all the values shown below.  (GeneMi , 2019/04/19)
+
+ms.technology:
+  - "analysis-services"
+  - "analysis-services/data-mining"
+  - "analysis-services/multidimensional-tabular"
+  - "data-quality-services"
+  - "database-engine"
+  - "integration-services"
+  - "master-data-services"
+  - "replication"
+  - "reporting-services-native"
+  - "reporting-services-sharepoint"
+-->
+
 ## <a name="terms"></a>用語  
   
 |項目|定義|  
@@ -600,7 +605,7 @@ ms.locfileid: "52519482"
 |実行プラン ペイン (Execution Plan pane)|タブの 1 つ。SQLServer で使用される予測プランまたは実際の実行プランの出力が表示されます。|  
 |実行ツリー (execution tree)|変換元から変換を経由した変換先までの、SQL Server 2005 Integration Services パッケージのデータ フロー内のデータのパス。|  
 |終了モジュール (exit module)|発行された証明書の Active Directory へのパブリケーションなど、証明書の発効後の処理を実行する Certificate Services コンポーネント。|  
-|expiration |オブジェクトがキャッシュのタイムアウト値を超えるポイント。 オブジェクトは、期限切れになると削除されます。|  
+|expiration|オブジェクトがキャッシュのタイムアウト値を超えるポイント。 オブジェクトは、期限切れになると削除されます。|  
 |明示的なキャップ (explicit cap)|派生階層構造の最上位として使用される明示的階層。|  
 |明示的階層 (explicit hierarchy)|マスター データ サービスで、統合メンバーを使用して、その他の統合メンバーやリーフ メンバーをグループ化する階層。|  
 |明示的な読み込み (explicit loading)|読み込みのパターンの 1 つ。このパターンでは、関連するオブジェクトは、ナビゲーション プロパティの Load メソッドを使用して明示的に要求されるまで読み込まれません。|  
@@ -982,7 +987,7 @@ ms.locfileid: "52519482"
 |Microsoft SQL Server Reporting Services レポート ビルダー (Microsoft SQL Server Reporting Services Report Builder)|Microsoft Office と同様の作成環境を備えたレポート作成ツールです。新しいスパークライン、データ バー、インジケーター データの視覚化、レポート アイテムをレポート パーツとして保存する機能、マップを作成するためのウィザード、入れ子になった集計、式のサポート強化など、さまざまな機能を搭載しています。|  
 |Microsoft SQL Server Service Broker (Microsoft SQL Server Service Broker)|スケーラブルでセキュアなデータベース アプリケーションを開発者が構築するのに役立つテクノロジ。|  
 |Microsoft SQL Server System CLR Types (Microsoft SQL Server System CLR Types)|SQL Server 2008 R2 Feature Pack に含まれるスタンドアロン パッケージ。SQL Server に geometry 型、geography 型、および階層 ID 型を実装するコンポーネントが含まれています。|  
-|Microsoft タイム シリーズ アルゴリズム (Microsoft Time Series algorithm)|線形回帰デシジョン ツリー手法を使用して、時間に関するデータ (月間売上高や年間収益) を分析するアルゴリズム。 検出されたパターンを使用して、将来の期間の値を予測できます。|  
+|Microsoft Time Series アルゴリズム|線形回帰デシジョン ツリー手法を使用して、時間に関するデータ (月間売上高や年間収益) を分析するアルゴリズム。 検出されたパターンを使用して、将来の期間の値を予測できます。|  
 |ミドルウェア (middleware)|複数の種類のソフトウェア上に存在し、それらの間で情報を変換するソフトウェア。 ミドルウェアは多様なソフトウェアに対応し、一般に、アプリケーションとオペレーティング システム、ネットワーク オペレーティング システム、またはデータベース管理システムの間で機能します。|  
 |マイニング モデル|データ マイニング処理の定義とトレーニングの結果を保持するオブジェクト。 たとえば、データ マイニング モデルは、入力、出力、アルゴリズムなどのプロセスのプロパティを指定し、トレーニング中に収集されるデシジョン ツリーなどの情報を保持することができます。|  
 |マイニング構造 (mining structure)|マイニング モデルの作成の基になるデータ ドメインを定義するデータ マイニング オブジェクト。|  

@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 ms.assetid: dfb4ed77-90e5-4273-b690-89a945508ed2
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: ee23e7f2382ca84ad609b3c150f77b4f9530725b
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: e061ea2394c2fdad1e7d37f56016c73d7787eda0
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56033833"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66109950"
 ---
 # <a name="backup-and-restore-reporting-services-sharepoint-service-applications"></a>Reporting Services SharePoint サービス アプリケーションのバックアップと復元
   このトピックでは、SharePoint サーバーの全体管理または PowerShell を使用して、 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] サービス アプリケーションをバックアップおよび復元する方法について説明します。 このトピックの内容は次のとおりです。  
@@ -63,7 +62,7 @@ ms.locfileid: "56033833"
   
 3.  **[次へ]** をクリックします。  
   
-4.   **[バックアップの場所]** にパスを入力し、 **[バックアップの開始]** をクリックします。  
+4.  **[バックアップの場所]** にパスを入力し、 **[バックアップの開始]** をクリックします。  
   
 5.  上記のプロセスを繰り返します。ただし、サービス アプリケーションを選択する代わりに、 **[共有サービス プロキシ]** ノードを展開し、サービス アプリケーション プロキシを選択します。 種類は **[SQL Server Reporting Services サービス アプリケーション プロキシ]** になります。  
   
@@ -153,6 +152,6 @@ ms.locfileid: "56033833"
   
 5.  アカウントとパスワードを入力します。 必要に応じて、 **[Windows 資格情報として使用する]** を選択します。  
   
-6.   **[OK]** をクリックします。  
+6.  **[OK]** をクリックします。  
   
   

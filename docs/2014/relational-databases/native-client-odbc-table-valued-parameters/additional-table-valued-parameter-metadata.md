@@ -14,11 +14,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: f7b9aea58b56308764f907f8cf54bf74bb0663c3
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48141524"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63200579"
 ---
 # <a name="additional-table-valued-parameter-metadata"></a>テーブル値パラメーターの追加メタデータ
   テーブル値パラメーターのメタデータを取得するには、は、アプリケーションは、SQLProcedureColumns を呼び出します。 テーブル値パラメーターの場合は、SQLProcedureColumns は、1 つの行を返します。 2 つ追加[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-テーブル値パラメーターに関連付けられたテーブル型のスキーマとカタログ情報を提供する、SS_TYPE_CATALOG_NAME と SS_TYPE_SCHEMA_NAME、特定の列が追加されました。 SS_TYPE_CATALOG_NAME および SS_TYPE_SCHEMA_NAME でドライバー固有のすべての列の以前のバージョンで追加する前に表示は、ODBC 仕様に準拠[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]と後、すべての列が ODBC 自体によって指定します。  
@@ -50,7 +50,7 @@ ms.locfileid: "48141524"
   
  SQL_SOPT_SS_NAME_SCOPE が SQL_SS_NAME_SCOPE_TABLE に設定されると、リンク サーバーへのクエリは失敗します。 SQLColumns または SQLPrimaryKeys とサーバー コンポーネントを含むカタログの呼び出しは失敗します。  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [テーブル値パラメーター &#40;ODBC&#41;](table-valued-parameters-odbc.md)  
   
   

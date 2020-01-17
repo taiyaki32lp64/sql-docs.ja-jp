@@ -3,24 +3,26 @@ title: '[列変換の詳細] ダイアログ ボックス (SQL Server インポ�
 ms.custom: ''
 ms.date: 02/16/2017
 ms.prod: sql
-ms.prod_service: integration-services
 ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql13.dts.impexpwizard.issuedetails.f1
 ms.assetid: e2d00a39-dfbd-4821-a4d8-a5bd1164ed4d
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: 8de113586457c8bc13c0f6656ed78c18708534dd
-ms.sourcegitcommit: 110e5e09ab3f301c530c3f6363013239febf0ce5
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 531d7e5a0f945a8d0dd5570d95843164fbc98734
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/10/2018
-ms.locfileid: "48905712"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71296350"
 ---
 # <a name="column-conversion-details-dialog-box-sql-server-import-and-export-wizard"></a>[列変換の詳細] ダイアログ ボックス (SQL Server インポートおよびエクスポート ウィザード)
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   **[データ型マッピングの確認]** ページで個別の列の行をダブルクリックすると、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インポートおよびエクスポート ウィザードの **[列変換の詳細]** ダイアログ ボックスが表示されます。 このページでは、個々の列の詳細な変換情報を確認できます。 この情報には次の項目が含まれます。
 -   変換元と変換先の列のデータ型。
 -   変換が必要な場合、ウィザードが実行するデータ型変換。

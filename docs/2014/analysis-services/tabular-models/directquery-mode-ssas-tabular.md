@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.bidtoolset.realtime.f1
@@ -13,12 +12,12 @@ ms.assetid: 45ad2965-05ec-4fb1-a164-d8060b562ea5
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: e092962430895f5398560cdd8f758e24477c2388
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 9a9c1510030f61896f686b49f4bc134a7dfcb42b
+ms.sourcegitcommit: 0818f6cc435519699866db07c49133488af323f4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52511521"
+ms.lasthandoff: 06/20/2019
+ms.locfileid: "67284871"
 ---
 # <a name="directquery-mode-ssas-tabular"></a>DirectQuery モード (SSAS テーブル)
   Analysis Services では、データを取得し、リレーショナル データベース システムから直接データと集計を取得することによって、表形式モデルからレポートを作成できます。 を使用して*DirectQuery モード*します。 ここでは、メモリにのみ存在する標準テーブル モデルと、リレーショナル データ ソースにクエリを実行できるテーブル モデルの違いを紹介し、DirectQuery モードで使用するモデルを作成および配置する方法について説明します。  
@@ -29,7 +28,7 @@ ms.locfileid: "52511521"
   
 -   [DirectQuery モードで使用するためのモデルの作成](#bkmk_Design)  
   
-    -   [DirectQuery モデルのデータ ソース](directquery-mode-ssas-tabular.md#bkmk_datasources)  
+    -   [DirectQuery モデルのデータ ソース](directquery-mode-ssas-tabular.md#bkmk_DataSources)  
   
     -   [検証と DirectQuery モードの設計上の制限](#bkmk_Validation)  
   
@@ -71,7 +70,7 @@ ms.locfileid: "52511521"
   
  この操作を行うと、モデル デザイナーは、キャッシュされたデータの操作を継続できるハイブリッド モードで実行するようにワークスペース データベースを自動的に構成します。 モデル デザイナーによって、モデル内の DirectQuery モードと互換性がない機能も通知されます。 考慮する必要のある主な要件を次の一覧にまとめます。  
   
--   **データ ソース:** DirectQuery モデルでは、1 つの SQL Server データ ソースからのみデータを使用できます。 モデルに対して DirectQuery モードがオンになると、コピーと貼り付け操作によって追加されたテーブルなど他の種類のデータをモデル デザイナーで使用できなくなります。 他のすべてのインポート オプションが無効になります。 クエリに含まれるテーブルは、SQL Server データ ソースに属している必要があります。 参照してください[DirectQuery モデルのデータ ソース](directquery-mode-ssas-tabular.md#bkmk_datasources)詳細についてはします。  
+-   **データ ソース:** DirectQuery モデルでは、1 つの SQL Server データ ソースからのみデータを使用できます。 モデルに対して DirectQuery モードがオンになると、コピーと貼り付け操作によって追加されたテーブルなど他の種類のデータをモデル デザイナーで使用できなくなります。 他のすべてのインポート オプションが無効になります。 クエリに含まれるテーブルは、SQL Server データ ソースに属している必要があります。 参照してください[DirectQuery モデルのデータ ソース](directquery-mode-ssas-tabular.md#bkmk_DataSources)詳細についてはします。  
   
 -   **計算列のサポート:** 計算列は、DirectQuery モデルではサポートされません。 ただし、データ セットを操作するメジャーと KPI を作成できます。 参照してください[検証](#bkmk_Validation)詳細についてはします。  
   
@@ -83,7 +82,7 @@ ms.locfileid: "52511521"
   
 -   **クライアントの制限:** モデルが DirectQuery モードでは、ときに、DAX を使用してのみ照会できます。 MDX を使用してクエリを作成することはできません。 つまり、Excel では MDX を使用するため Excel PivotClient を使用できません。  
   
-     ただしでの DirectQuery モデルに対するクエリを作成できます[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]詳細については、XMLA Execute ステートメントの一部として DAX テーブル クエリを使用する場合は、次を参照してください。 [DAX クエリ構文のリファレンス](https://msdn.microsoft.com/library/ee634217.aspx)します。  
+     ただしでの DirectQuery モデルに対するクエリを作成できます[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]詳細については、XMLA Execute ステートメントの一部として DAX テーブル クエリを使用する場合は、[DAX クエリ構文のリファレンス] を参照してください (/dax dax の構文のリファレンス
   
  デザインの問題をすべて解決し、モデルをテストすると、配置の準備ができます。 この時点では、モデルに対するクエリに応答するための推奨される方法を設定できます。 ユーザーがキャッシュにアクセスできるようにしますか。または常にリレーショナル データ ソースのみ使用するようにしますか。  
   
@@ -182,5 +181,3 @@ ms.locfileid: "52511521"
  [パーティション (SSAS テーブル)](partitions-ssas-tabular.md)   
  [テーブル モデル プロジェクト (SSAS テーブル)](tabular-model-projects-ssas-tabular.md)   
  [Excel で分析 &#40;SSAS テーブル&#41;](analyze-in-excel-ssas-tabular.md)  
-  
-  

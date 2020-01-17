@@ -8,15 +8,14 @@ ms.reviewer: ''
 ms.technology: master-data-services
 ms.topic: conceptual
 ms.assetid: 71eda98f-01a4-4fff-8246-be3133782523
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 6690ab92652858d2ab3df7c066c5b4cbf6a65c57
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
-ms.translationtype: HT
+ms.openlocfilehash: 48124bf61c39a24f07ede4a184db70a85b040b02
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52418553"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68074368"
 ---
 # <a name="validating-data-mds-add-in-for-excel"></a>データの検証 (Excel 用 MDS アドイン)
 
@@ -40,7 +39,7 @@ ms.locfileid: "52418553"
   
  その他の状態については、「[検証状態 (マスター データ サービス)](../../master-data-services/validation-statuses-master-data-services.md)」を参照してください。  
   
-|状態|[説明]|  
+|状態|説明|  
 |------------|-----------------|  
 |検証に失敗しました|行内の 1 つ以上の値で、MDS 管理者によって定義されたビジネス ルールに対する検証が失敗しました。|  
 |検証に成功しました|行内のすべての値は、ビジネス ルールに対する検証にパスしました。|  
@@ -48,9 +47,9 @@ ms.locfileid: "52418553"
 ## <a name="input-statuses"></a>入力状態  
  [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)][!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)]で考えられる入力状態は、次のとおりです。  
   
-|状態|[説明]|  
+|状態|説明|  
 |------------|-----------------|  
-|[エラー]|行内の 1 つまたは複数の値が、長さやデータ型などのシステム要件を満たしていません。 MDS リポジトリ内の値は更新されません。|  
+|Error|行内の 1 つまたは複数の値が、長さやデータ型などのシステム要件を満たしていません。 MDS リポジトリ内の値は更新されません。|  
 |新しい行|行内の値は、まだ MDS リポジトリにパブリッシュされていません。|  
 |[読み取り専用]|ログインしているユーザーは、行内の 1 つ以上の値に対して読み取り専用の権限を持っていて、値は更新されません。|  
 |変更なし|行の値は、ワークシート内で変更されていません。 これは、リポジトリ内の値が変更されていないという意味ではありません。シート内の最新のデータを取得するには、 **[接続と読み込み]** グループで、 **[読み込みまたは更新]** をクリックします。<br /><br /> これは、各行の既定の設定です。|  
@@ -64,6 +63,6 @@ ms.locfileid: "52418553"
   
 ## <a name="related-content"></a>関連コンテンツ  
   
--   [概要: Excel からのデータのインポート (Excel 用 MDS アドイン)](../../master-data-services/microsoft-excel-add-in/overview-importing-data-from-excel-mds-add-in-for-excel.md)  
+-   [概要:Excel からデータをインポートする&#40;MDS アドインの Excel&#41;](../../master-data-services/microsoft-excel-add-in/overview-importing-data-from-excel-mds-add-in-for-excel.md)  
   
   

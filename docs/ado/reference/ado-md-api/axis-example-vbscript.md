@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: b4647211-2566-4657-ae7b-3dd761457d7b
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 420c8a67d8d0d0cbadcf8263a0921877d1444da4
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 345b87539452a974b054b3aec07c648a3c2b6fad
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47747360"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67947388"
 ---
 # <a name="axis-example-vbscript"></a>Axis の例 (VBScript)
 このアクティブ サーバー ページは、MDX クエリ文字列の OLAP データを表示し、結果のセル セットを HTML テーブル構造に書き込みます。  

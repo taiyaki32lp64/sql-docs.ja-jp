@@ -18,16 +18,15 @@ helpviewer_keywords:
 - row distribution [SQL Server]
 - NTILE function
 ms.assetid: 1c364511-d72a-4789-8efa-3cf2a1f6b791
-author: MashaMSFT
-ms.author: mathoma
-manager: craigg
+author: MikeRayMSFT
+ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 9fd2d7735bfb19d400edd278a36e8ab3dac81c7d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d4bd1270c0dde3031054dd4e0aa3e0719a77dfad
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47738110"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67914903"
 ---
 # <a name="ntile-transact-sql"></a>NTILE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -47,7 +46,7 @@ NTILE (integer_expression) OVER ( [ <partition_by_clause> ] < order_by_clause > 
  各パーティションを分割するグループの数を表す正の整数式を指定します。 *であれば、* 任意 の型に**int**, 、または **bigint**です。  
   
  \<partition_by_clause>  
- [ は、FROM](../../t-sql/queries/from-transact-sql.md) 句で生成された結果セットをパーティションに分割します。このパーティションに関数が適用されます。 PARTITION BY の構文で、を参照してください。[ 経由句 (&) #40 です。TRANSACT-SQL と #41;](../../t-sql/queries/select-over-clause-transact-sql.md).  
+ [FROM](../../t-sql/queries/from-transact-sql.md) 句で生成された結果セットをパーティションに分割します。このパーティションに関数が適用されます。 PARTITION BY の構文については、「[OVER 句 &#40;Transact-SQL&#41;](../../t-sql/queries/select-over-clause-transact-sql.md)」をご覧ください。  
   
  \<order_by_clause>  
  NTILE 値がパーティション内の行に割り当てられる順序を決定します。 \<<order_by_clause> が順位付け関数で使用される場合、整数値で列を表すことはできません。  
@@ -238,9 +237,9 @@ Ansman-Wolfe      2        1,183,000.00     United States
   
 ## <a name="see-also"></a>参照  
  [RANK &#40;Transact-SQL&#41;](../../t-sql/functions/rank-transact-sql.md)   
- D[ENSE_RANK (&) #40 です。TRANSACT-SQL と #41 です。](../../t-sql/functions/dense-rank-transact-sql.md)   
- [ROW_NUMBER (&) #40 です。TRANSACT-SQL と #41 です。](../../t-sql/functions/row-number-transact-sql.md)   
- [順位付け関数 (&) #40 です。TRANSACT-SQL と #41 です。](../../t-sql/functions/ranking-functions-transact-sql.md)   
+ [DENSE_RANK &#40;Transact-SQL&#41;](../../t-sql/functions/dense-rank-transact-sql.md)   
+ [ROW_NUMBER &#40;Transact-SQL&#41;](../../t-sql/functions/row-number-transact-sql.md)   
+ [順位付け関数 &#40;Transact-SQL&#41;](../../t-sql/functions/ranking-functions-transact-sql.md)   
  [組み込み関数 &#40;Transact-SQL&#41;](~/t-sql/functions/functions.md)  
   
   

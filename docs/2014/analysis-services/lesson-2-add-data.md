@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: 13c3a8cc-b1db-4aba-ad9b-038b7971be8d
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 696b4e9402e58da6308e6746cadbc25d43396d8f
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: 370e368843fa1e9584cc341397853fcdad26922a
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52416353"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66078972"
 ---
 # <a name="lesson-2-add-data"></a>レッスン 2:データを追加する
   このレッスンでは、 [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)] のテーブルのインポート ウィザードを使用して、AdventureWorksDW SQL データベースに接続し、データを選択し、プレビューして、データをフィルター処理した後、それらのデータをモデル ワークスペース内にインポートします。  
@@ -51,7 +50,7 @@ ms.locfileid: "52416353"
     > [!NOTE]  
     >  Windows のユーザー アカウントとパスワードを使用することで、最も安全なデータ ソース接続方法が提供されます。 詳細については、「[権限借用 (SSAS テーブル)](tabular-models/impersonation-ssas-tabular.md)」を参照してください。  
   
-7.  **[データのインポート方法の選択]** ページで、**[インポートするデータをテーブルとビューの一覧から選択する]** が選択されていることを確認します。 テーブルとビューの一覧から選択するには、 **[次へ]** をクリックして、ソース データベース内のすべてのソース テーブルの一覧を表示します。  
+7.  **[データのインポート方法の選択]** ページで、 **[インポートするデータをテーブルとビューの一覧から選択する]** が選択されていることを確認します。 テーブルとビューの一覧から選択するには、 **[次へ]** をクリックして、ソース データベース内のすべてのソース テーブルの一覧を表示します。  
   
 8.  **テーブルおよびビュー**ページで、次のテーブルのチェック ボックスを選択します。**DimCustomer**、 **DimDate**、 **DimGeography**、 **DimProduct**、 **DimProductCategory**、 **DimProductSubcategory**、および**FactInternetSales**します。  
   
@@ -77,7 +76,7 @@ ms.locfileid: "52416353"
   
 #### <a name="to-filter-the-table-data-prior-to-importing"></a>インポート前のテーブル データにフィルターを適用するには  
   
-1.  **Customer** テーブルの行を選択し、**[プレビューとフィルター]** をクリックします。 **[選択したテーブルのプレビュー]** ウィンドウが開き、DimCustomer ソース テーブルのすべての列が表示されます。  
+1.  **Customer** テーブルの行を選択し、 **[プレビューとフィルター]** をクリックします。 **[選択したテーブルのプレビュー]** ウィンドウが開き、DimCustomer ソース テーブルのすべての列が表示されます。  
   
 2.  次の列の上部にあるチェック ボックスをオフにします。  
   

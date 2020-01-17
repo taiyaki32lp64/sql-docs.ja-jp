@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: e04148b8-f6dd-4c50-a5ef-c650b71dbf4d
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: 8c8ecf331904ff58415807de9a16c3575778aa46
-ms.sourcegitcommit: ef6e3ec273b0521e7c79d5c2a4cb4dcba1744e67
+ms.openlocfilehash: dc531cfeb3db8057353b11af64e5c843af4f7496
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51512095"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72909841"
 ---
 # <a name="delete-a-policy-based-management-condition"></a>ポリシー ベースの管理条件の削除
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -28,7 +27,7 @@ ms.locfileid: "51512095"
   
 -   **作業を開始する準備:**  
   
-     [Security](#Security)  
+     [セキュリティ](#Security)  
   
 -   **以下を使用して条件を削除するには:**  
   
@@ -56,5 +55,4 @@ ms.locfileid: "51512095"
 5.  削除する条件を右クリックして、 **[削除]** をクリックします。  
   
 6.  **[オブジェクトの削除]** ダイアログ ボックスで、正しい条件が選択されていることを確認し、 **[OK]** をクリックします。  
-  
-  
+

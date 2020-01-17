@@ -19,11 +19,11 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: 2a105fd636c454ab236764611f1e57729ccad6ac
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53357034"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63192445"
 ---
 # <a name="setdefaults-method-cinstance-class"></a>SetDefaults メソッド (CInstance クラス)
   インスタンスのすべての既定値の設定、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]既存のデータを上書きするオプションを使用するクライアント。  

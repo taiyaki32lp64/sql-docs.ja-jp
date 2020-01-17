@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: aa4d3188-6927-43de-a3e3-90fc16eeaca7
 author: julieMSFT
 ms.author: jrasnick
-manager: craigg
-ms.openlocfilehash: 6e01fbd98d2004566c4831db8b1ac28878095868
-ms.sourcegitcommit: dd794633466b1da8ead9889f5e633bdf4b3389cd
+ms.openlocfilehash: 97725acacdd4486ebd92a4424704288c5e4efd3e
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54143402"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72907476"
 ---
 # <a name="delete-a-plan-guide"></a>プラン ガイドの削除
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -53,7 +52,7 @@ ms.locfileid: "54143402"
 3.  削除するプラン ガイドを右クリックして、 **[削除]** をクリックします。  
   
 4.  **[オブジェクトの削除]** ダイアログ ボックスで、正しいプラン ガイドが選択されていることを確認し、 **[OK]** をクリックします。  
-  
+
 ##  <a name="TsqlProcedure"></a> Transact-SQL の使用  
   
 #### <a name="to-delete-a-single-plan-guide"></a>単一のプラン ガイドを削除するには  

@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 8c06420a-533b-4de0-948d-a0c6b368c544
 author: Shamikg
 ms.author: Shamikg
-manager: craigg
-ms.openlocfilehash: e0c16fe617b5808f22f15cdf89af8dc7a1e79898
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: e4cf080d7a3bcb2d121a58a57be9f3fd41a4c18a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52410869"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67908826"
 ---
 # <a name="project-settings-azure-sql-db-mysqltosql"></a>プロジェクトの設定 (Azure SQL DB) (MySQLToSQL)
 SQL Azure プロジェクトの設定を使用して、接続ダイアログで追加して、SQL Azure 接続でハートビート メカニズムを実装することもできますを SQL Azure データベース サフィックスを構成できます。  

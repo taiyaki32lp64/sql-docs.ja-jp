@@ -1,6 +1,7 @@
 ---
-title: ミラー化されたデータベースの状態の確認 (SQL Server Management Studio) | Microsoft Docs
-ms.custom: ''
+title: ミラー化されたデータベースの状態の確認
+description: SQL Server Management Studio (SSMS) GUI 内でデータベース ミラーリング用に構成されたデータベースの状態を確認する方法について説明します。
+ms.custom: seo-lt-2019
 ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: high-availability
@@ -13,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 544f4194-253e-4c57-96ca-31c16301434f
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: b5218305eadfc78588e8c1439ce97817a760cdad
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a52cf852edc4a03a72ba9cb71a4ccd50a3963ada
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47636820"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75245450"
 ---
 # <a name="view-the-state-of-a-mirrored-database-sql-server-management-studio"></a>ミラー化されたデータベースの状態の確認 (SQL Server Management Studio)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

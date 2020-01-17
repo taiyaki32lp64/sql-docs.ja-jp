@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: 27283ce1-637e-4e2c-91ee-8ad379114ac5
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 10959976eb6c3c9908d7f5953a8a2edb1c1328c8
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 12645120f543094015f2da03eca224c40e16ab6f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47654918"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67998467"
 ---
 # <a name="updateobject-method-javalangstring-javalangobject-int"></a>updateObject (java.lang.String, java.lang.Object, int) メソッド
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -54,7 +53,7 @@ public void updateObject(java.lang.String columnName,
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- この updateObject メソッドは、java.sql.ResultSet インターフェイスに updateObject メソッドによって指定されます。  
+ この updateObject メソッドは、java.sql.ResultSet インターフェイスの updateObject メソッドで規定されています。  
   
 ## <a name="see-also"></a>参照  
  [updateObject メソッド &#40;SQLServerResultSet&#41;](../../../connect/jdbc/reference/updateobject-method-sqlserverresultset.md)   

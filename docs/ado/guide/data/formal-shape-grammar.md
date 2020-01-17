@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: ea691475-0f03-4abe-a785-b77e77712d1d
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 3b26eaeb804f8d92a7122814641cadf5889b77b8
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 91bdf0cfbfe87075d2c9484bca7edd835a950ee6
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47789270"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67925346"
 ---
 # <a name="formal-shape-grammar"></a>Shape の正式文法
 これは、任意図形のコマンドを作成するための正式な文法です。  
@@ -68,7 +67,7 @@ ms.locfileid: "47789270"
 |\<string>|unicode char [unicode 文字...]|  
 |\<expression>|アプリケーションの式オペランドが同じ行の場合は、他の非計算列用の Visual Basic の場合。|  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [階層レコード セット内の行へのアクセス](../../../ado/guide/data/accessing-rows-in-a-hierarchical-recordset.md)   
  [データ シェイプの概要](../../../ado/guide/data/data-shaping-overview.md)   
  [データ シェイプに必要なプロバイダー](../../../ado/guide/data/required-providers-for-data-shaping.md)   

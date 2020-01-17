@@ -1,57 +1,57 @@
 ---
-title: olapR R 関数のライブラリの SQL Server Machine Learning サービス
-description: SQL Server 2016 R Services で R と SQL Server 2017 Machine Learning Services olapR 関数ライブラリの概要
+title: olapR R 関数ライブラリ
+description: SQL Server 2016 R Services での olapR 関数ライブラリと、SQL Server Machine Learning Services (R 付属) の概要について説明します。
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 12/04/2018
 ms.topic: conceptual
-author: HeidiSteen
-ms.author: heidist
-manager: cgronlun
-ms.openlocfilehash: 1426871c70eb905a0defda206d1a331662e3155c
-ms.sourcegitcommit: ee76332b6119ef89549ee9d641d002b9cabf20d2
-ms.translationtype: MT
+author: dphansen
+ms.author: davidph
+monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
+ms.openlocfilehash: 507bd04140880a3c15f1e72eed49c29ade56769c
+ms.sourcegitcommit: 321497065ecd7ecde9bff378464db8da426e9e14
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/20/2018
-ms.locfileid: "53645151"
+ms.lasthandoff: 08/01/2019
+ms.locfileid: "68715006"
 ---
-# <a name="olapr-r-library-in-sql-server"></a>olapR (SQL Server での R ライブラリ)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+# <a name="olapr-r-library-in-sql-server"></a>olapR (SQL Server の R ライブラリ)
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-**olapR**は SQL Server Analysis Services OLAP キューブに対して MDX クエリに使用される R 関数の Microsoft ライブラリです。 関数は MDX のすべての操作をサポートしていませんが、そのスライス、ダイス、ドリルダウン、ロールアップ、およびディメンションをピボットするためのクエリを作成することができます。 
+**olapR** は、SQL Server Analysis Services OLAP キューブに対する MDX クエリに使用される、R 関数の Microsoft ライブラリです。 関数はすべての MDX 操作をサポートするわけではありませんが、ディメンションに対してスライス、ダイス、ドリルダウン、ロールアップ、およびピボットを行うクエリを作成できます。 
 
-このパッケージは、R セッションにプリロードされていません。 ライブラリの読み込みには、次のコマンドを実行します。
+このパッケージは、R セッションに事前に読み込まれていません。 次のコマンドを実行してライブラリを読み込みます。
 
 ```R
 library(olapR)
 ```
 
-サポートされているすべてのバージョンの SQL Server Analysis Services OLAP キューブへの接続では、このライブラリを使用できます。 この時点では、表形式モデルへの接続はサポートされていません。
+このライブラリは、すべてのサポート対象バージョンの SQL Server 上の Analysis Services OLAP キューブへの接続に使用できます。 現時点では、表形式モデルへの接続はサポートされていません。
 
 ## <a name="package-version"></a>パッケージ バージョン
 
-現在のバージョンでは、1.0.0 Windows 専用のすべての製品では、し、提供する、ライブラリをダウンロードします。
+すべての Windows 限定の製品、およびライブラリを提供するダウンロードにおける現行バージョンは 1.0.0 です。
 
 ## <a name="full-reference-documentation"></a>完全なリファレンス ドキュメント
 
-**Olapr**ライブラリは、複数のマイクロソフト製品で配布されますが、使用量は同じライブラリは、SQL Server または別の製品を取得するかどうか。 関数では同じですが、ため[個々 sqlrutils 関数のドキュメントを](https://docs.microsoft.com/machine-learning-server/r-reference/olapr/olapr)が下の 1 つの場所に発行される、 [R 参照](https://docs.microsoft.com/machine-learning-server/r-reference/introducing-r-server-r-package-reference)の Microsoft Machine Learning Server。 製品固有の動作の存在、相違点は、関数のヘルプ ページに記録されます。
+**olapr** ライブラリは複数の Microsoft 製品に配布されていますが、SQL Server または別の製品のどちらからライブラリを入手しても、使用方法は同じです。 これらの関数は同じであるため、[個々の sqlrutils 関数のドキュメント](https://docs.microsoft.com/machine-learning-server/r-reference/olapr/olapr)は Microsoft Machine Learning Server の [R リファレンス](https://docs.microsoft.com/machine-learning-server/r-reference/introducing-r-server-r-package-reference)の下でのみ公開されています。 製品固有の動作が存在する場合、関数のヘルプ ページにその相違点が示されます。
 
 ## <a name="availability-and-location"></a>可用性と場所
 
-このパッケージは、次の製品と Azure の仮想マシン イメージがいくつか提供されます。 パッケージの場所でもそれに応じて異なります。
+このパッケージは、Azure 上の複数の仮想マシン イメージの他に、次の製品にも用意されています。 パッケージの場所はそれに応じて異なります。
 
-製品 | 場所 |
+Product | Location |
 --------|----------|
-(R 統合) SQL Server 2017 Machine Learning サービス | C:\Program files \microsoft SQL Server\MSSQL14 します。MSSQLSERVER\R_SERVICES\library | 
-SQL Server 2016 R Services | C:\Program files \microsoft SQL Server\MSSQL13 します。MSSQLSERVER\R_SERVICES\library
+SQL Server Machine Learning Services (R 統合あり) | C:\Program Files\Microsoft SQL Server\MSSQL14.MSSQLSERVER\R_SERVICES\library | 
+SQL Server 2016 R Services | C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\R_SERVICES\library
 Microsoft Machine Learning Server (R Server) | C:\Program Files\Microsoft\R_SERVER\library |
 Microsoft R Client | C:\Program Files\Microsoft\R Client\R_SERVER\library |
-(Azure) では、データ サイエンス仮想マシン | C:\Program Files\Microsoft\R Client\R_SERVER\library |
-(Azure) では、SQL Server 仮想マシン<sup>1</sup> | C:\Program files \microsoft SQL Server\MSSQL14 します。MSSQLSERVER\R_SERVICES\library |
+Data Science Virtual Machine (Azure 上) | C:\Program Files\Microsoft\R Client\R_SERVER\library |
+SQL Server Virtual Machine (Azure 上) <sup>1</sup> | C:\Program Files\Microsoft SQL Server\MSSQL14.MSSQLSERVER\R_SERVICES\library |
 
-<sup>1</sup> R 統合では、SQL Server で省略可能です。 VM の構成中に、機械学習や、R の機能を追加すると、olapR ライブラリがインストールされます。
+<sup>1</sup> R 統合は SQL Server では省略可能です。 olapR ライブラリは、VM の構成中に Machine Learning または R 機能を追加するとインストールされます。
 
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
-[OlapR を使って MDX クエリを作成する方法](how-to-create-mdx-queries-using-olapr.md)
+[olapR を使って MDX クエリを作成する方法](how-to-create-mdx-queries-using-olapr.md)

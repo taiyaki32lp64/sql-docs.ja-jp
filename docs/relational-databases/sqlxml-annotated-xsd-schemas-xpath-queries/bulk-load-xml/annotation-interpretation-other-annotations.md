@@ -1,6 +1,5 @@
 ---
-title: その他の注釈 (SQLXML 4.0) |マイクロソフトのドキュメント
-ms.custom: ''
+title: その他の注釈 (SQLXML)
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -21,14 +20,14 @@ helpviewer_keywords:
 ms.assetid: f7b4d37b-d6d3-4ac3-b2fd-a0b534a924e4
 author: MightyPen
 ms.author: genemi
-manager: craigg
+ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: d5b2e9be930bf7ef2cfc70ab9e900ae8f957152c
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 7eb01a084ec968adbd9fe8ff86623bcca5f9eb26
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56034663"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75246832"
 ---
 # <a name="annotation-interpretation---other-annotations"></a>注釈の解釈 - 他の注釈
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -44,7 +43,7 @@ ms.locfileid: "56034663"
  XML 一括読み込みでは、この注釈はサポートされません。 たとえば、XML データ入力に URL を指定することはできません。また、XML 一括読み込みで、指定した場所からデータを読み込んでデータベースに格納することはできません。  
   
  **sql:is-mapping-schema**  
- XML 一括読み込みは、この注釈をサポートしていませんもサポートは**sql:id**します。  
+ XML 一括読み込みでは、この注釈はサポートされません。また、 **sql: id**もサポートされません。  
   
 > [!NOTE]  
 >  XML 一括読み込みでは、インライン マッピング スキーマはサポートされません。  
@@ -53,6 +52,6 @@ ms.locfileid: "56034663"
  XML 一括読み込みでは、この注釈は常に無視されます。  
   
 ## <a name="see-also"></a>参照  
- [注釈の解釈&#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/bulk-load-xml/annotation-interpretation-sqlxml-4-0.md)  
+ [SQLXML 4.0 &#40;の注釈の解釈&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/bulk-load-xml/annotation-interpretation-sqlxml-4-0.md)  
   
   

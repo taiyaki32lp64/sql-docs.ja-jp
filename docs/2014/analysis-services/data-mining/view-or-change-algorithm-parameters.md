@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - algorithms [data mining]
@@ -14,12 +13,12 @@ ms.assetid: 151b899b-c27a-4a09-bcf5-5c9f0ec24168
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 18889a1dfded5f8653446c02a637502a75efd659
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: b7f41394c2adb8cbaaee2011e52ba6155a24e2e2
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48226996"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66082690"
 ---
 # <a name="view-or-change-algorithm-parameters"></a>アルゴリズム パラメーターの表示または変更
   データ マイニング モデルをビルドするためのアルゴリズムで提供されているパラメーターを変更して、モデルの結果をカスタマイズできます。  
@@ -36,7 +35,7 @@ ms.locfileid: "48226996"
   
 -   シード値またはモデルの作成に使用される内部の提示されるセットのサイズを指定する。  
   
- それぞれのアルゴリズムで提供されるパラメーターは大きく異なります。各アルゴリズムに対して設定できるパラメーターの一覧については、「[データ マイニング アルゴリズム (Analysis Services - データ マイニング)](data-mining-algorithms-analysis-services-data-mining.md)」のテクニカル リファレンス トピックを参照してください。  
+ 各アルゴリズムで提供されるパラメーターが大きく各アルゴリズムに対して設定できるパラメーターの一覧は、このセクションのテクニカル リファレンス トピックを参照してください。[データ マイニング アルゴリズム&#40;Analysis Services - データ マイニング&#41;](data-mining-algorithms-analysis-services-data-mining.md)します。  
   
 ### <a name="change-an-algorithm-parameter"></a>アルゴリズム パラメーターを変更する  
   

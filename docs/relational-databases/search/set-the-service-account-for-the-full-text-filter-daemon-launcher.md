@@ -1,26 +1,25 @@
 ---
-title: フルテキスト フィルター デーモン ランチャーのサービス アカウントの設定 | Microsoft Docs
-ms.custom: ''
+title: フルテキスト フィルター デーモン ランチャーのサービス アカウントの設定
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: search, sql-database
-ms.reviewer: ''
 ms.technology: search
 ms.topic: conceptual
 helpviewer_keywords:
 - full-text search [SQL Server], FDHOST Launcher (MSSQLFDLauncher) service account
 - FDHOST Launcher (MSSQLFDLauncher) [SQL Server]
 ms.assetid: 3ab1d101-7ae0-488f-9b57-468e2517b737
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
+author: pmasl
+ms.author: pelopes
+ms.reviewer: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 301d4af9c9c9ddc36b57005d2b5b34ddb51b35aa
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.custom: seo-lt-2019
+ms.openlocfilehash: eed8020872b3d2a3babc0581054bef0dbed64a4d
+ms.sourcegitcommit: d00ba0b4696ef7dee31cd0b293a3f54a1beaf458
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51678101"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "74055947"
 ---
 # <a name="set-the-service-account-for-the-full-text-filter-daemon-launcher"></a>フルテキスト フィルター デーモン ランチャーのサービス アカウントの設定
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -34,9 +33,9 @@ SQL フルテキスト フィルター デーモン ランチャー サービス
 
 ##  <a name="setting"></a> サービス アカウントの設定  
   
-1.  **[スタート]** メニューの **[すべてのプログラム]** をポイントし、[[!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)]] を展開して、**[SQL Server 2016 構成マネージャー]** をクリックします。  
+1.  **[スタート]** メニューの **[すべてのプログラム]** をポイントし、[[!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)]] を展開して、 **[SQL Server 2016 構成マネージャー]** をクリックします。  
   
-2.  **[SQL Server 構成マネージャー]** で、 **[SQL Server のサービス]** をクリックし、 **[SQL フルテキスト フィルター デーモン ランチャー (**_インスタンス名_**)]** を右クリックし、 **[プロパティ]** をクリックします。  
+2.  **[SQL Server 構成マネージャー]** で、 **[SQL Server のサービス]** をクリックし、 **[SQL フルテキスト フィルター デーモン ランチャー (** _インスタンス名_ **)]** を右クリックし、 **[プロパティ]** をクリックします。  
   
 3.  ダイアログ ボックスの **[ログオン]** タブをクリックし、SQL フルテキスト フィルター デーモン ランチャー サービスが開始するプロセスを実行するアカウントを選択または入力します。  
   

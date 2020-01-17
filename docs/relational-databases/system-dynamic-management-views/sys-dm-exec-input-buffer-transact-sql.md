@@ -1,7 +1,7 @@
 ---
-title: sys.dm_exec_input_buffer (TRANSACT-SQL) |Microsoft Docs
+title: dm_exec_input_buffer (Transact-sql) |Microsoft Docs
 ms.custom: ''
-ms.date: 10/13/2017
+ms.date: 11/14/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -19,78 +19,86 @@ helpviewer_keywords:
 ms.assetid: fb34a560-bde9-4ad9-aa96-0d4baa4fc104
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 8531f33f2d027eba14d4416e9138560b25ead20e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 4e18f635b7bbdd8fa96a565fef6aef5be5bde87f
+ms.sourcegitcommit: 0c40843c13f67ba7d975f4fedb9d20d70747f66d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47708040"
+ms.lasthandoff: 11/15/2019
+ms.locfileid: "74097873"
 ---
-# <a name="sysdmexecinputbuffer-transact-sql"></a>sys.dm_exec_input_buffer (TRANSACT-SQL)
+# <a name="sysdm_exec_input_buffer-transact-sql"></a>dm_exec_input_buffer (Transact-sql)
+
 [!INCLUDE[tsql-appliesto-2014sp2-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-2014sp2-asdb-xxxx-xxx-md.md)]
 
-  インスタンスに送信されたステートメントに関する情報を返します[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]します。  
-  
-## <a name="syntax"></a>構文  
-  
-```  
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のインスタンスに送信されたステートメントに関する情報を返します。
+
+## <a name="syntax"></a>構文
+
+```
 sys.dm_exec_input_buffer ( session_id , request_id )
-```  
-  
-## <a name="arguments"></a>引数  
-*session_id*  
-セッション id がルックアップするバッチを実行します。 *session_id*は**smallint**します。 *session_id*次の動的管理オブジェクトから取得できます。  
-  
--   [sys.dm_exec_requests](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md)  
-  
--   [sys.dm_exec_sessions](../../relational-databases/system-dynamic-management-views/sys-dm-exec-sessions-transact-sql.md)  
-  
--   [sys.dm_exec_connections](../../relational-databases/system-dynamic-management-views/sys-dm-exec-connections-transact-sql.md)   
-  
-*request_id*  
-Request_id [sys.dm_exec_requests](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md)します。 *request_id*は**int**します。  
-  
-## <a name="table-returned"></a>返されるテーブル  
-  
-|列名|データ型|説明|  
-|-----------------|---------------|-----------------|  
-|**event_type**|**nvarchar (256)**|特定の spid を入力バッファー内のイベントの種類。|  
-|**parameters**|**smallint**|ステートメントに指定されたパラメーターは任意です。|  
-|**event_info**|**nvarchar(max)**|特定の spid を入力バッファー内のステートメントのテキスト。|  
-  
-## <a name="permissions"></a>アクセス許可  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]、ユーザーがのインスタンスで実行中のすべてのセッションを表示、ユーザーに VIEW SERVER STATE 権限がある場合、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]、それ以外のユーザーは、現在のセッションのみを参照してください。  
-  
- [!INCLUDE[ssSDS](../../includes/sssds-md.md)]、ユーザーがで実行中のすべてのセッションを表示、ユーザーがデータベース所有者である場合、 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]、それ以外のユーザーは、現在のセッションのみを参照してください。  
-  
-## <a name="remarks"></a>コメント  
- この動的管理関数は、これによって sys.dm_exec_sessions、sys.dm_exec_requests と組み合わせて使用することができます**CROSS APPLY**します。  
-  
-## <a name="examples"></a>使用例  
-  
-### <a name="a-simple-example"></a>A. 簡単な例  
- 次の例では、セッション id (SPID) と要求 id を関数に渡す方法を示します。  
-  
-```sql  
+```
+
+## <a name="arguments"></a>引数
+
+*session_id*検索するバッチを実行するセッション ID を指定します。 *session_id*は**smallint**です。 *session_id*は、次の動的管理オブジェクトから取得できます。
+
+- [sys.dm_exec_requests](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md)
+- [sys.dm_exec_sessions](../../relational-databases/system-dynamic-management-views/sys-dm-exec-sessions-transact-sql.md)
+- [sys.dm_exec_connections](../../relational-databases/system-dynamic-management-views/sys-dm-exec-connections-transact-sql.md)
+
+*request_id*[Dm_exec_requests](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md)からの request_id。 *request_id*は**int**です。
+
+## <a name="table-returned"></a>返されるテーブル
+
+|列名|データ型|[説明]|
+|-----------------|---------------|-----------------|
+|**event_type**|**nvarchar (256)**|指定された spid の入力バッファー内のイベントの種類。|
+|**parameters**|**smallint**|ステートメントに対して指定されたすべてのパラメーター。|
+|**event_info**|**nvarchar(max)**|指定された spid の入力バッファー内のステートメントのテキスト。|
+
+## <a name="permissions"></a>アクセス許可
+
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]では、ユーザーが VIEW SERVER STATE 権限を持っている場合、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のインスタンスで実行中のすべてのセッションが表示されます。それ以外の場合、ユーザーには現在のセッションのみが表示されます。
+
+> [!IMPORTANT]
+> VIEW SERVER STATE 権限を持たない SQL Server (トリガー、ストアドプロシージャ、関数など) に対してこの DMV を SQL Server Management Studio 以外で実行すると、master データベースで権限エラーがスローされます。
+
+[!INCLUDE[ssSDS](../../includes/sssds-md.md)]では、ユーザーがデータベースの所有者である場合、[!INCLUDE[ssSDS](../../includes/sssds-md.md)]で実行中のすべてのセッションが表示されます。それ以外の場合、ユーザーには現在のセッションのみが表示されます。
+
+> [!IMPORTANT]
+> 所有者権限を持たない Azure SQL Database (トリガー、ストアドプロシージャ、関数など) に対してこの DMV を SQL Server Management Studio 以外で実行すると、master データベースで権限エラーがスローされます。
+
+## <a name="remarks"></a>Remarks
+
+この動的管理関数は、**クロス適用**を行うことによって、dm_exec_sessions または sys. dm_exec_requests と組み合わせて使用できます。
+
+## <a name="examples"></a>使用例
+
+### <a name="a-simple-example"></a>A. 簡単な例
+
+次の例は、セッション ID (SPID) と要求 ID を関数に渡す方法を示しています。
+
+```sql
 SELECT * FROM sys.dm_exec_input_buffer (52, 0);
 GO
-```  
-  
-### <a name="b-using-cross-apply-to-additional-information"></a>B. クロスを使用して、追加情報を適用  
- 次の例では、セッション id が 50 を超えるとセッションの入力バッファーが一覧表示します。  
-  
-```sql  
-SELECT es.session_id, ib.event_info   
-FROM sys.dm_exec_sessions AS es  
-CROSS APPLY sys.dm_exec_input_buffer(es.session_id, NULL) AS ib  
+```
+
+### <a name="b-using-cross-apply-to-additional-information"></a>b. クロス適用を追加情報に使用する
+
+次の例では、セッション ID が50より大きいセッションの入力バッファーを一覧表示します。
+
+```sql
+SELECT es.session_id, ib.event_info
+FROM sys.dm_exec_sessions AS es
+CROSS APPLY sys.dm_exec_input_buffer(es.session_id, NULL) AS ib
 WHERE es.session_id > 50;
 GO
-```  
-  
-## <a name="see-also"></a>参照  
- [実行関連の動的管理ビューおよび関数&#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/execution-related-dynamic-management-views-and-functions-transact-sql.md)   
- [sys.dm_exec_sessions &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-sessions-transact-sql.md)   
- [sys.dm_exec_requests &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md)   
- [DBCC INPUTBUFFER &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-inputbuffer-transact-sql.md)  
+```
+
+## <a name="see-also"></a>参照
+
+- [実行関連の動的管理ビューおよび関数 &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/execution-related-dynamic-management-views-and-functions-transact-sql.md)
+- [sys.dm_exec_sessions &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-sessions-transact-sql.md)
+- [sys.dm_exec_requests &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md)
+- [DBCC INPUTBUFFER &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-inputbuffer-transact-sql.md)

@@ -11,17 +11,20 @@ helpviewer_keywords:
 - custom user interface [Integration Services]
 - custom objects [Integration Services]
 ms.assetid: ca1929a6-0ae6-47d7-b65f-08173b143720
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: 2a69f590c6ee1cdc95fc13b3a07fa17fb04feeab
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 7b621ebd5750d918c22f61ac005b02e1b8bea187
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52528913"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71297214"
 ---
 # <a name="developing-custom-objects-for-integration-services"></a>Integration Services 用のカスタム オブジェクトの開発
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] に含まれる制御フロー オブジェクトおよびデータ フロー オブジェクトが、求める条件を満たしていない場合は、次のようなさまざまな種類のカスタム オブジェクトを独自に開発できます。  
   
 -   **カスタム タスク**。  
@@ -95,7 +98,7 @@ ms.locfileid: "52528913"
  1 つのカスタム ユーザー インターフェイス プロジェクトまたはアセンブリには、通常 2 つのクラスがあります。特定の種類のカスタム オブジェクトのユーザー インターフェイスに対して [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] インターフェイスを実装するクラスと、このクラスによって表示される、ユーザーから情報を収集するための Windows フォームです。 実装するインターフェイスに含まれるメソッドは少数であるため、カスタム ユーザー インターフェイスの開発は難しくありません。  
   
 > [!NOTE]  
->  多くの [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] ログ プロバイダーには、カスタム ユーザー インターフェイスがあります。カスタム ユーザー インターフェイスには <xref:Microsoft.SqlServer.Dts.Runtime.Design.IDtsLogProviderUI> が実装され、**[構成]** テキスト ボックスが、使用可能な接続マネージャーがフィルター選択されたドロップダウン リストに置き換えられます。 ただし、カスタム ログ プロバイダーのカスタム ユーザー インターフェイスは、このリリースの [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] では実装されていません。 そのため、<xref:Microsoft.SqlServer.Dts.Runtime.DtsLogProviderAttribute.UITypeName%2A> の <xref:Microsoft.SqlServer.Dts.Runtime.DtsLogProviderAttribute> プロパティに値を指定しても、影響がありません。  
+>  多くの [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] ログ プロバイダーには、カスタム ユーザー インターフェイスがあります。カスタム ユーザー インターフェイスには <xref:Microsoft.SqlServer.Dts.Runtime.Design.IDtsLogProviderUI> が実装され、 **[構成]** テキスト ボックスが、使用可能な接続マネージャーがフィルター選択されたドロップダウン リストに置き換えられます。 ただし、カスタム ログ プロバイダーのカスタム ユーザー インターフェイスは、このリリースの [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] では実装されていません。 そのため、<xref:Microsoft.SqlServer.Dts.Runtime.DtsLogProviderAttribute.UITypeName%2A> の <xref:Microsoft.SqlServer.Dts.Runtime.DtsLogProviderAttribute> プロパティに値を指定しても、影響がありません。  
   
  次の表では、各種カスタム オブジェクトに対するカスタム ユーザー インターフェイスの開発時に実装が必要なインターフェイスを、簡単に参照できます。 また、オブジェクトに対するカスタム ユーザー インターフェイスを開発しなかった場合や、オブジェクトの属性の **UITypeName** プロパティを使用して、オブジェクトをそのユーザー インターフェイスにリンクできなかった場合に、ユーザーに対してどのように表示されるのかについても説明します。 データ フロー コンポーネントにとっては強力な詳細エディターで十分な場合もありますが、タスクや接続マネージャーにとっては [プロパティ] ウィンドウは比較的わかりにくいソリューションであり、カスタム ForEach 列挙子はカスタム フォームなしでは構成不可能です。  
   

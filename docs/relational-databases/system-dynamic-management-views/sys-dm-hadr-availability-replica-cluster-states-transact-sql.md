@@ -1,5 +1,5 @@
 ---
-title: sys.dm_hadr_availability_replica_cluster_states (TRANSACT-SQL) |Microsoft Docs
+title: dm_hadr_availability_replica_cluster_states (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -20,28 +20,27 @@ helpviewer_keywords:
 ms.assetid: 2e0dd780-6a71-4f4b-b7f7-6e063bec71d6
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 5e39bd1072f3de3448381d9ac457ef8ab4459184
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e3e2fccaed2b3c001fdcc8a0d7938f0a75a8f10d
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47806220"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75246352"
 ---
-# <a name="sysdmhadravailabilityreplicaclusterstates-transact-sql"></a>sys.dm_hadr_availability_replica_cluster_states (Transact-SQL)
+# <a name="sysdm_hadr_availability_replica_cluster_states-transact-sql"></a>dm_hadr_availability_replica_cluster_states (Transact-sql)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
-  Windows Server フェールオーバー クラスタ リング (WSFC) クラスター内の各 Alwayson 可用性レプリカ (結合状態) に関係なくすべての Always On 可用性グループ (レプリカの場所) に関係なく、行を返します。  
+  Windows Server フェールオーバー クラスタリング (WSFC) クラスター内のすべての AlwaysOn 可用性グループ (レプリカの場所を問いません) の AlwaysOn 可用性レプリカ (結合状態を問いません) ごとに 1 行のデータを返します。  
   
 ##  <a name="connected_state"></a>  
   
 |列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
-|**replica_id**|**uniqueidentifier**|可用性レプリカの一意識別子。|  
-|**replica_server_name**|**nvarchar (256)**|インスタンスの名前[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]レプリカをホストします。|  
-|**group_id**|**uniqueidentifier**|可用性グループの一意識別子。|  
-|**join_state**|**tinyint**|0 = 未結合<br /><br /> 1 = 結合済み、スタンドアロン インスタンス<br /><br /> 2 = 結合済み、フェールオーバー クラスター インスタンス|  
-|**join_state_desc**|**nvarchar(60)**|NOT_JOINED<br /><br /> JOINED_STANDALONE_INSTANCE<br /><br /> JOINED_FAILOVER_CLUSTER_INSTANCE|  
+|**replica_id**|**一意**|可用性レプリカの一意識別子。|  
+|**replica_server_name**|**nvarchar(256)**|レプリカをホストするの[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]インスタンスの名前。|  
+|**group_id**|**一意**|可用性グループの一意識別子。|  
+|**join_state**|**tinyint**|0 = 未結合<br /><br /> 1 = 結合済み、スタンドアロン<br /><br /> 2 = 参加済み、フェールオーバークラスターインスタンス|  
+|**join_state_desc**|**nvarchar (60)**|NOT_JOINED<br /><br /> JOINED_STANDALONE<br /><br /> JOINED_FAILOVER_CLUSTER_INSTANCE|  
   
 ## <a name="security"></a>セキュリティ  
   
@@ -49,6 +48,6 @@ ms.locfileid: "47806220"
  サーバーに対する VIEW SERVER STATE 権限が必要です。  
   
 ## <a name="see-also"></a>参照  
- [可用性グループの監視 &#40;Transact-SQL&#41;](../../database-engine/availability-groups/windows/monitor-availability-groups-transact-sql.md)  
+ [Transact-sql&#41;&#40;可用性グループの監視](../../database-engine/availability-groups/windows/monitor-availability-groups-transact-sql.md)  
   
   

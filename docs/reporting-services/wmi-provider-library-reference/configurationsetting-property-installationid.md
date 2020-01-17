@@ -2,7 +2,7 @@
 title: InstallationID プロパティ (WMI MSReportServer_ConfigurationSetting) | Microsoft Docs
 ms.date: 03/01/2017
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: wmi-provider-library-reference
 ms.topic: conceptual
 apiname:
@@ -13,14 +13,14 @@ apitype: MOFDef
 helpviewer_keywords:
 - InstanceID property
 ms.assetid: 39df58b1-86e0-438e-a22b-280feb3ac033
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: e90d94a48753e79e49ac8ad3859a413321243442
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: a3fb6ba51d875807d4936e90b5d0cd1b3997bc3d
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47802690"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65573548"
 ---
 # <a name="configurationsetting-property---installationid"></a>ConfigurationSetting プロパティ - InstallationID
   このプロパティは、特定のレポート サーバー インスタンスの一意な識別子を返します。  

@@ -8,17 +8,20 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 5ae69ddf-27c3-467c-9af1-c89ec383f661
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: c3a062cd23809db8edf5439f252dabcc6d905dad
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: d1b067ae6f35f9f96f7f0f7207cb6d09456a177f
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51641189"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71293401"
 ---
 # <a name="cdc-flow-components"></a>CDC フロー コンポーネント
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   SSIS 開発者は、Microsoft [!INCLUDE[ssISCurrent](../../includes/ssiscurrent-md.md)] 用 Attunity 変更データ キャプチャ (CDC) コンポーネントを使用すると、CDC を操作し、CDC パッケージの複雑さを軽減できます。  
   
  SSIS CDC コンポーネントは、ソース テーブルが同じ [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] データベースか Oracle データベース (Oracle CDC Service for [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] の使用時) である場合に、 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]CDC 機能を使用できるようにデザインされています。 パーティション テーブルがサポートされます。  
@@ -40,7 +43,7 @@ ms.locfileid: "51641189"
 ## <a name="installation"></a>インストール  
  このセクションでは、CDC Components for Microsoft [!INCLUDE[ssISCurrent](../../includes/ssiscurrent-md.md)]のインストール手順について説明します。  
   
- SSIS 用の CDC コンポーネントは、Microsoft® Change Data Capture Designer and Service for Oracle by Attunity for Microsoft SQL Server® に同梱されています。 このダウンロードは、SQL Server の Feature Pack の一部です。 [SQL Server 2016 Feature Pack の Web ページ](https://go.microsoft.com/fwlink/?LinkId=746297)から、Feature Pack のコンポーネントをダウンロードします。  
+ SSIS 用の CDC コンポーネントは、MicrosoftÂ® Change Data Capture Designer and Service for Oracle by Attunity for Microsoft SQL ServerÂ® に同梱されています。 このダウンロードは、SQL Server の Feature Pack の一部です。 [SQL Server 2016 Feature Pack の Web ページ](https://go.microsoft.com/fwlink/?LinkId=746297)から、Feature Pack のコンポーネントをダウンロードします。  
   
 ### <a name="version-support"></a>バージョンのサポート
 

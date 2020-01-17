@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: d2765828-2385-4019-aef2-1de3ab7d1b26
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: df8cd54cdf13941044ae4f72f8781e4532fc5c51
-ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
+ms.openlocfilehash: abbd4cd516985dcebd28a5fd2fa28e9d83a413b2
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/18/2018
-ms.locfileid: "53588946"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72907778"
 ---
 # <a name="monitor-data-tier-applications"></a>データ層アプリケーションの監視
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -45,7 +44,7 @@ ms.locfileid: "53588946"
 3.  **[表示]** メニューの [ユーティリティ エクスプローラーの詳細] をクリックします。  
   
 4.  **ユーティリティ エクスプローラー** で **[配置済みのデータ層アプリケーション]** ノードをクリックします。  
-  
+
  **[配置済みのデータ層アプリケーション]** 詳細ページに表示される情報は、ユーティリティ管理データ ウェアハウスのデータから取得されます。データ ウェアハウスは、既定で 15 分ごとにデータを収集します。 この間隔も **[ユーティリティ管理]** 詳細ページで調整できます。  
   
 ## <a name="using-object-explorer"></a>オブジェクト エクスプローラーの使用  

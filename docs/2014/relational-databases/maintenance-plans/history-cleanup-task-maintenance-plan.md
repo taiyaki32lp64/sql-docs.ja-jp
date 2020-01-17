@@ -3,31 +3,32 @@ title: '[履歴クリーンアップ タスク] (メンテナンス プラン) |
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
-ms.reviewer: ''
-ms.technology: supportability"
+ms.technology: supportability
 ms.topic: conceptual
 f1_keywords:
 - sql12.swb.maint.historycleanup.f1
 helpviewer_keywords:
 - History Cleanup Task dialog box
 ms.assetid: 66bb6c39-958c-4053-a27f-b1118d2567f5
+ms.reviewer: ''
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: a0629aa0787b535f0a577c60751665d7a2dd760e
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: a2b398a9910926ca2ced339395feaf938c31d519
+ms.sourcegitcommit: 0a4879dad09c6c42ad1ff717e4512cfea46820e9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52806804"
+ms.lasthandoff: 06/27/2019
+ms.locfileid: "67412704"
 ---
 # <a name="history-cleanup-task-maintenance-plan"></a>[履歴クリーンアップ タスク] \(メンテナンス プラン)
+
   **[履歴クリーンアップ タスク]** ダイアログ ボックスを使用すると、msdb データベースのテーブルに含まれる古い履歴情報を破棄できます。 このタスクでは、バックアップと復元の履歴、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェントのジョブ履歴、メンテナンス プランの履歴の削除がサポートされます。  
   
  このステートメントでは、 **sp_purge_jobhistory** ステートメントおよび **sp_delete_backuphistory** ステートメントが使用されます。  
   
 ## <a name="uielement-list"></a>UI 要素の一覧  
- **[接続]**  
+ **Connection**  
  このタスクを実行するときに使用するサーバー接続を選択します。  
   
  **[新規作成]**  
@@ -58,7 +59,7 @@ ms.locfileid: "52806804"
  **[サーバー名の選択または入力]**  
  このタスクを実行するときに接続するサーバーを選択します。  
   
- **[更新]**  
+ **更新**  
  使用できるサーバーの一覧を表示します。  
   
  **[サーバーにログオンするための情報の入力]**  
@@ -76,7 +77,7 @@ ms.locfileid: "52806804"
  **Password**  
  認証に使用するパスワードを指定します。 このオプションは利用できません。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [sp_purge_jobhistory &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-purge-jobhistory-transact-sql)   
  [sp_delete_backuphistory &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-delete-backuphistory-transact-sql)  
   

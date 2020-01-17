@@ -1,5 +1,5 @@
 ---
-title: sp_setreplfailovermode (TRANSACT-SQL) |Microsoft Docs
+title: sp_setreplfailovermode (Transact-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -15,18 +15,17 @@ helpviewer_keywords:
 ms.assetid: ca98a4c3-bea4-4130-88d7-79e0fd1e85f6
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: a480dbccb955875d9e4835ac0d6acadd26e6e06c
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 5b39a5fa53560abb825b303d37d111bcbd7d0886
+ms.sourcegitcommit: 79e6d49ae4632f282483b0be935fdee038f69cc2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52773954"
+ms.lasthandoff: 10/09/2019
+ms.locfileid: "72173559"
 ---
-# <a name="spsetreplfailovermode-transact-sql"></a>sp_setreplfailovermode (Transact-SQL)
+# <a name="sp_setreplfailovermode-transact-sql"></a>sp_setreplfailovermode (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  サブスクリプションが、フェールオーバーとしてキュー更新を使用する即時更新に対して有効になっている場合、このサブスクリプションのフェールオーバー操作モードを設定できます。 このストアド プロシージャは、サブスクライバー側でサブスクリプション データベースについて実行されます。 フェールオーバー モードの詳細については、次を参照してください。[更新可能な Subscriptions for Transactional Replication](../../relational-databases/replication/transactional/updatable-subscriptions-for-transactional-replication.md)します。  
+  フェールオーバーとしてキュー更新を使用する即時更新が有効になっているサブスクリプションに対して、フェールオーバー操作モードを設定できます。 このストアドプロシージャは、サブスクライバー側のサブスクリプションデータベースで実行されます。 フェールオーバーモードの詳細については、「[トランザクションレプリケーションの更新可能なサブスクリプション](../../relational-databases/replication/transactional/updatable-subscriptions-for-transactional-replication.md)」を参照してください。  
   
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -42,40 +41,35 @@ sp_setreplfailovermode [ @publisher= ] 'publisher'
 ```  
   
 ## <a name="arguments"></a>引数  
- [ **@publisher=**] **'***publisher***'**  
- パブリケーションの名前です。 *パブリケーション*は**sysname**、既定値はありません。 パブリケーションは既に存在している必要があります。  
+`[ @publisher = ] 'publisher'` パブリケーションの名前を指定します。 *publication* は **sysname** 、既定値はありません。 パブリケーションは既に存在している必要があります。  
   
- [  **@publisher_db =**] **'***publisher_db***'**  
- パブリケーション データベースの名前です。 *publisher_db*は**sysname**、既定値はありません。  
+`[ @publisher_db = ] 'publisher_db'` は、パブリケーションデータベースの名前です。 *publisher_db* は **sysname** 、既定値はありません。  
   
- [ **@publication=**] **'***publication***'**  
- パブリケーションの名前です。 *パブリケーション*は**sysname**、既定値はありません。  
+`[ @publication = ] 'publication'` パブリケーションの名前を指定します。 *publication* は **sysname** 、既定値はありません。  
   
- [**@failover_mode=**] **'***failover_mode***'**  
- サブスクリプションのフェールオーバー モードを指定します。 *failover_mode*は**nvarchar (10)** これらの値のいずれかを指定できます。  
+`[ @failover_mode = ] 'failover_mode'` は、サブスクリプションのフェールオーバーモードです。 *failover_mode*は**nvarchar (10)** で、次のいずれかの値を指定できます。  
   
-|値|説明|  
+|ReplTest1|[説明]|  
 |-----------|-----------------|  
-|**イミディ エイト**または**同期**|サブスクライバーで行われたデータ変更は、変更の発生時にパブリッシャーに一括コピーされます。|  
-|**キューに登録**|データの変更は、格納、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]キュー。|  
+|**immediate**または**sync**|サブスクライバーで行われたデータ変更は、変更の発生時にパブリッシャーに一括コピーされます。|  
+|**queued**|データの変更は、[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] キューに格納されます。|  
   
 > [!NOTE]  
->  [!INCLUDE[msCoName](../../includes/msconame-md.md)] メッセージ キューは、非推奨とされましたし、現在サポートされていません。  
+>  [!INCLUDE[msCoName](../../includes/msconame-md.md)] メッセージキューは非推奨とされており、サポートされなくなりました。  
   
- [ **@override**=]*オーバーライド*  
- 内部使用のみです。  
+`[ @override = ] override` 内部使用のみです。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  **0** (成功) または**1** (失敗)  
   
-## <a name="remarks"></a>コメント  
- **sp_setreplfailovermode**や使用されるスナップショット レプリケーションまたはトランザクション レプリケーションでのサブスクリプションを有効にするか、即時更新へのフェールオーバーとするキュー更新のフェールオーバーを即時更新キューに入れる更新しています。  
+## <a name="remarks"></a>Remarks  
+ **sp_setreplfailovermode**は、サブスクリプションが有効になっているスナップショットレプリケーションまたはトランザクションレプリケーションで、即時更新へのフェールオーバーを伴うキュー更新、または即時更新 (キュー更新を使用した即時更新) のいずれかに使用されます。  
   
 ## <a name="permissions"></a>アクセス許可  
- メンバーのみ、 **sysadmin**固定サーバー ロールまたは**db_owner**固定データベース ロールが実行できる**sp_setreplfailovermode**します。  
+ **Sp_setreplfailovermode**を実行できるのは、固定サーバーロール**sysadmin**または固定データベースロール**db_owner**のメンバーだけです。  
   
 ## <a name="see-also"></a>参照  
- [Switch Between Update Modes for an Updatable Transactional Subscription](../../relational-databases/replication/administration/switch-between-update-modes-for-an-updatable-transactional-subscription.md)   
+ [更新可能なトランザクションサブスクリプションの更新モードを切り替える](../../relational-databases/replication/administration/switch-between-update-modes-for-an-updatable-transactional-subscription.md)   
  [システム ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - OLAP objects [Analysis Services], processing
@@ -14,12 +13,12 @@ ms.assetid: c7e1f66f-16ca-43da-b8c7-4d3e1fa8b58d
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 704b775a881bc3c08f9789229231e05b56005257
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: a9d83baaecbfdba3612acbdcf7a80c9093aac519
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48050972"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66073290"
 ---
 # <a name="processing-analysis-services-objects"></a>Analysis Services オブジェクトの処理
   処理は、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] オブジェクトの種類 ( [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] データベース、キューブ、ディメンション、メジャー グループ、パーティション、データ マイニング構造、およびデータ マイニング モデル) に影響します。 オブジェクトごとに、オブジェクトの処理レベルを指定するか、または [既定の処理] オプションを指定して [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] が自動的に最適な処理レベルを選択するようにできます。 各オブジェクトに適用できる異なるレベルの処理の詳細については、「[処理オプションと設定 &#40;Analysis Services&#41;](processing-options-and-settings-analysis-services.md)」を参照してください。  
@@ -43,7 +42,7 @@ ms.locfileid: "48050972"
 ##  <a name="bkmk_procdb"></a> データベースの処理  
  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]では、データベースにはデータではなく、オブジェクトが含まれています。 データベースを処理するとき、モデルにデータを格納するディメンション、パーティション、マイニング構造、マイニング モデルなどのオブジェクトを再帰的に処理するようサーバーに指示します。  
   
- データベースを処理すると、データベースに含まれているパーティション、ディメンション、およびマイニング モデルの一部またはすべてが処理されます。 実際の処理の種類は、各オブジェクトの状態および選択した処理オプションによって異なります。 詳細については、「[処理オプションと設定 &#40;Analysis Services&#41;](processing-options-and-settings-analysis-services.md)」を参照してください。  
+ データベースを処理すると、データベースに含まれているパーティション、ディメンション、およびマイニング モデルの一部またはすべてが処理されます。 実際の処理の種類は、各オブジェクトの状態および選択した処理オプションによって異なります。 詳細については、「[Processing Options and Settings (Analysis Services)](processing-options-and-settings-analysis-services.md)」(処理オプションと設定 (Analysis Services)) を参照してください。  
   
 ##  <a name="bkmk_proccube"></a> キューブの処理  
  キューブは、メジャー グループおよびパーティションのラッパー オブジェクトと考えることができます。 キューブは、ディメンションと 1 つ以上のメジャーで構成されており、パーティションに保存されます。 ディメンションでは、データをキューブにレイアウトする方法を定義します。 キューブを処理すると、SQL クエリが実行されてファクト テーブルから値が取得され、キューブ内の各メンバーに適切なメジャー値が設定されます。 キューブ内のノード固有のパスとして、値または計算可能値を使用できます。  
@@ -57,9 +56,9 @@ ms.locfileid: "48050972"
   
 |Country|販売地域|状態|  
 |-------------|------------------|-----------|  
-|United States|West|California|  
-|United States|West|Oregon|  
-|United States|West|Washington|  
+|米国|West|California|  
+|米国|West|Oregon|  
+|米国|West|Washington|  
   
  処理自体は、表形式のデータを、使用可能な階層に変換します。 これらの階層は、メンバー名をすべて連結したもので、内部的には一意の数値パスによって表されます。 次の例は、階層のテキスト表現です。  
   
@@ -73,7 +72,7 @@ ms.locfileid: "48050972"
   
  ディメンションの処理では、計算されるメンバーは作成または更新されません。計算されるメンバーはキューブ レベルで定義されます。 計算されるメンバーは、キューブ定義の更新時に影響を受けます。 また、ディメンションの処理では、集計も作成または更新されません。 ただし、ディメンションの処理により、集計が削除される場合があります。 集計は、パーティションの処理中にのみ、作成または更新されます。  
   
- ディメンションを処理する場合は、そのディメンションが複数のキューブで使用されている可能性があるので注意が必要です。 ディメンションを処理すると、それらのキューブには未処理のマークが付き、クエリには使用できなくなります。 ディメンションと関連キューブを同時に処理するには、バッチ処理の設定を使用します。 詳細については、「[バッチ処理 &#40;Analysis Services&#41;](batch-processing-analysis-services.md)」を参照してください。  
+ ディメンションを処理する場合は、そのディメンションが複数のキューブで使用されている可能性があるので注意が必要です。 ディメンションを処理すると、それらのキューブには未処理のマークが付き、クエリには使用できなくなります。 ディメンションと関連キューブを同時に処理するには、バッチ処理の設定を使用します。 詳細については、「 [バッチ処理 &#40;Analysis Services&#41;](batch-processing-analysis-services.md)」を参照してください。  
   
 ##  <a name="bkmk_procmeasure"></a> メジャー グループの処理  
  メジャー グループを処理すると、メジャー グループ内の一部またはすべてのパーティションと、メジャー グループに含まれている未処理のディメンションが [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] によって処理されます。 処理ジョブの詳細は、選択した処理オプションによって異なります。 キューブ内の他のメジャー グループに影響を与えずに、 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 内の 1 つまたは複数のメジャー グループを処理できます。  
@@ -94,8 +93,8 @@ ms.locfileid: "48050972"
  マイニング構造とモデルの処理の詳細については、「[処理の要件および注意事項 &#40;Data Mining&#41;](../data-mining/processing-requirements-and-considerations-data-mining.md)」を参照してください。  
   
 ## <a name="see-also"></a>参照  
- [ツールと処理のためのアプローチ&#40;Analysis Services&#41;](tools-and-approaches-for-processing-analysis-services.md)   
- [バッチ処理&#40;Analysis Services&#41;](batch-processing-analysis-services.md)   
+ [処理するためのツールと方法 &#40;Analysis Services&#41;](tools-and-approaches-for-processing-analysis-services.md)   
+ [バッチ処理 &#40;Analysis Services&#41;](batch-processing-analysis-services.md)   
  [多次元モデル オブジェクトの処理](processing-a-multidimensional-model-analysis-services.md)  
   
   

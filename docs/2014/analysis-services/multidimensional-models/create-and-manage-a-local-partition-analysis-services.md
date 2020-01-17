@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 05/24/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - local partitions [Analysis Services]
@@ -15,12 +14,12 @@ ms.assetid: eaa95278-9ce9-47d5-a6b6-1046e7076599
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 5665db92828c5a6ea6a6d94587414dc6b411a01b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 44b27801af70756913b293afd5e7613f3e026d82
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48091302"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66076296"
 ---
 # <a name="create-and-manage-a-local-partition-analysis-services"></a>ローカル パーティションの作成と管理 (Analysis Services)
   メジャー グループに追加のパーティションを作成すると、処理パフォーマンスを向上させることができます。 複数のパーティションがあると、ローカル サーバーとリモート サーバー上の対応する数の物理データ ファイルにファクト データを割り当てることができます。 Analysis Services では、パーティションを個別に処理することも並列に処理することもできるため、サーバー上の処理ワークロードをより細かく制御できます。  
@@ -28,7 +27,7 @@ ms.locfileid: "48091302"
  パーティションは、 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] でモデルのデザイン時に作成するか、または [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] または XMLA を使用してソリューションを配置した後に作成することができます。 方法を 1 つだけ選択することをお勧めします。 ツールを何度も切り替えると、後で [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] からソリューションを再配置したときに、 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]で配置されたデータベースに対して行った変更が上書きされることがあります。  
   
 ## <a name="before-you-start"></a>開始前の準備  
- Business Intelligence Edition または Enterprise Edition を持っているかどうかを確認します。 Standard Edition では、複数のパーティションがサポートされていません。 エディションを確認するには、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] でサーバー ノードを右クリックし、 **[レポート]** | **[全般]** を選択します。 利用可能な機能の詳細については、次を参照してください。[機能は、SQL Server 2014 の各エディションでサポートされている](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md)します。  
+ Business Intelligence Edition または Enterprise Edition を持っているかどうかを確認します。 Standard Edition では、複数のパーティションがサポートされていません。 エディションを確認するには、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] でサーバー ノードを右クリックし、 **[レポート]**  |  **[全般]** を選択します。 利用可能な機能の詳細については、次を参照してください。[機能は、SQL Server 2014 の各エディションでサポートされている](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md)します。  
   
  パーティションを後でマージする場合は、パーティションで同じ集計デザインを共有する必要があることを最初に理解しておくことが重要です。 パーティションをマージできるのは、集計デザインとストレージ モードが同じ場合のみです。  
   
@@ -45,7 +44,7 @@ ms.locfileid: "48091302"
 |SQL クエリを使用してファクト データを分割する|パーティションのソースには SQL クエリを指定できます。 処理中に、SQL クエリによってデータが取得されます。 クエリの WHERE 句では、各パーティションにデータを分割するフィルターを指定します。 Analysis Services によってクエリが生成されますが、データを適切に分割するために WHERE 句を自分で入力する必要があります。<br /><br /> このアプローチの主な利点は、1 つのソース テーブルから簡単にデータをパーティション分割できることです。 すべてのソース データが大きなファクト テーブルから取得される場合、そのデータを個別のパーティションにフィルター処理するクエリを作成できます。データ ソース ビュー (DSV) で追加のデータ構造を作成する必要はありません。<br /><br /> 1 つの欠点として、クエリを使用すると、パーティションと DSV のバインドが機能しなくなることが挙げられます。 ファクト テーブルに列を追加するなど、後で Analysis Services プロジェクトで DSV を更新する場合は、新しい列を含めるように各パーティションのクエリを手動で編集する必要があります。 次に説明する 2 番目のアプローチにはこの欠点はありません。|  
 |DSV 内のテーブルを使用してファクト データを分割する|DSV 内のテーブル、名前付きクエリ、またはビューにパーティションをバインドできます。 パーティションの基盤として、この 3 つすべては機能的に等価です。 テーブル全体、名前付きクエリ、またはビューで、すべてのデータが 1 つのパーティションに提供されます。<br /><br /> テーブル、ビュー、または名前付きクエリを使用すると、DSV にデータ選択ロジック全体が配置され、長期にわたる管理とメンテナンスがより簡単になります。 このアプローチの重要な利点は、テーブルのバインドが保持されることです。 ソース テーブルを後で更新する場合に、そのソース テーブルを使用するパーティションを変更する必要はありません。 もう 1 つの利点として、すべてのテーブル、名前付きクエリ、およびビューが共通のワークスペースに存在するため、更新がより簡単になり、パーティションのクエリを個別に開いて編集する必要がありません。|  
   
-## <a name="option-1-filter-a-fact-table-for-multiple-partitions"></a>オプション 1: 複数パーティション用のファクト テーブルをフィルター選択する  
+## <a name="option-1-filter-a-fact-table-for-multiple-partitions"></a>オプション 1:複数のパーティションのファクト テーブルをフィルター処理します。  
  複数のパーティションを作成するには、最初に、既定のパーティションの **[ソース]** プロパティを変更します。 既定では、メジャー グループは、DSV 内の 1 つのテーブルにバインドされている 1 つのパーティションを使用して作成されます。 さらにパーティションを追加する前に、まず、ファクト データの一部だけが含まれるように元のパーティションを変更する必要があります。 その後、残りのデータを格納するための追加のパーティションを作成できます。  
   
  パーティション間でデータが重複しないように、フィルターを作成します。 パーティションのフィルターは、そのパーティションで使用されるファクト テーブル内のデータを指定します。 キューブに含まれるすべてのパーティションのフィルターが、ファクト テーブルから相互排他的なデータセットを取り出すことが重要です。 同一のファクト データは、複数のパーティションに存在すると二重カウントされることがあります。  
@@ -72,7 +71,7 @@ ms.locfileid: "48091302"
     |セット 2:|"Continent" = 'NorthAmerica'<br /><br /> "Continent" = 'Europe'<br /><br /> "Continent" = 'SouthAmerica'|  
     |セット 3:|"Country" = 'USA'<br /><br /> "Country" = 'Mexico'<br /><br /> ("Country" <> 'USA' AND "Country" <> 'Mexico')|  
   
-6.  **[確認]** をクリックして構文エラーの有無を確認し、**[OK]** をクリックします。  
+6.  **[確認]** をクリックして構文エラーの有無を確認し、 **[OK]** をクリックします。  
   
 7.  前の手順を繰り返して残りのパーティションを作成し、毎回次のデータ スライスを選択するように WHERE 句を変更します。  
   
@@ -85,7 +84,7 @@ ms.locfileid: "48091302"
 > [!NOTE]  
 >  パーティション内のデータをフィルター選択する代わりに、同じクエリを使用して DSV で名前付きクエリを作成し、その名前付きクエリに基づいてパーティションを作成できます。  
   
-## <a name="option-2-use-tables-views-or-named-queries"></a>オプション 2: テーブル、ビュー、または名前付きクエリを使用する  
+## <a name="option-2-use-tables-views-or-named-queries"></a>オプション 2:テーブル、ビュー、または名前付きクエリを使用します。  
  DSV で既にファクトが個々のテーブル (年ごとや四半期ごとなど) に編成されている場合は、個々のテーブルに基づくパーティションを作成できます。各パーティションには独自のデータ ソース テーブルが用意されます。 基本的には、これがメジャー グループをパーティション分割する既定の方法となりますが、複数のパーティションの場合は、元のパーティションを複数のパーティションに分割し、新しい各パーティションを、データを提供するデータ ソース テーブルにマップします。  
   
  ビューおよび名前付きクエリはテーブルと機能的に同等です。これら 3 つのオブジェクトはすべて、DSV で定義され、[パーティション ソース] ダイアログ ボックスの [テーブル バインド] オプションを使用してパーティションにバインドされます。 ビューまたは名前付きクエリを作成して、各パーティションに必要なデータ セグメントを生成できます。 詳細については、「[データ ソース ビューでの名前付きクエリの定義 &#40;Analysis Services&#41;](define-named-queries-in-a-data-source-view-analysis-services.md)」を参照してください。  
@@ -123,8 +122,8 @@ ms.locfileid: "48091302"
  最後に、通常、テーブル自体に基づいた既定のパーティション (まだ存在する場合) は削除してください。そうしないと、クエリ パーティションに基づいたクエリが、完全なテーブルに基づいたクエリと重複することになります。  
   
 ## <a name="see-also"></a>参照  
- [パーティション&#40;Analysis Services - 多次元データ&#41;](../multidimensional-models-olap-logical-cube-objects/partitions-analysis-services-multidimensional-data.md)   
+ [パーティション &#40;Analysis Services - 多次元データ&#41;](../multidimensional-models-olap-logical-cube-objects/partitions-analysis-services-multidimensional-data.md)   
  [リモート パーティション](../multidimensional-models-olap-logical-cube-objects/partitions-remote-partitions.md)   
- [Analysis Services でのパーティションをマージ&#40;SSAS - 多次元&#41;](merge-partitions-in-analysis-services-ssas-multidimensional.md)  
+ [Analysis Services でのパーティションのマージ &#40;SSAS - 多次元&#41;](merge-partitions-in-analysis-services-ssas-multidimensional.md)  
   
   

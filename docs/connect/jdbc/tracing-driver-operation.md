@@ -1,7 +1,7 @@
 ---
 title: ドライバー操作のトレース |Microsoft Docs
 ms.custom: ''
-ms.date: 07/11/2018
+ms.date: 08/12/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,15 +10,14 @@ ms.topic: conceptual
 ms.assetid: 723aeae7-6504-4585-ba8b-3525115bea8b
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 5f9ae95bc006017ed5456ee44e13d8dacf28d32b
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.openlocfilehash: 18bfd63a8cf3255a62b6aef5c4c31573c60e76b0
+ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51605782"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "69027594"
 ---
-# <a name="tracing-driver-operation"></a>ドライバー操作のトレース」を参照してください。
+# <a name="tracing-driver-operation"></a>ドライバー操作のトレース
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
   [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] をアプリケーションで使用すると、トレース (またはログ記録) を使用して JDBC Driver で発生した問題の解決に役立てることができます。 トレースを有効にするため、JDBC Driver では java.util.logging でログ記録 API を使用しています。この API には、Logger および LogRecord オブジェクトを作成するための一連のクラスが用意されています。  
@@ -26,7 +25,7 @@ ms.locfileid: "51605782"
 > [!NOTE]  
 >  JDBC Driver に含まれているネイティブのコンポーネント sqljdbc_xa.dll については、Built-In Diagnostics (BID) フレームワークを使用してトレースを有効にしています。 BID の詳細については、[SQL Server でのデータ アクセスのトレース](https://go.microsoft.com/fwlink/?LinkId=70042)に関するページを参照してください。  
   
- アプリケーションを開発する際に、Logger オブジェクトへの呼び出しを行うことができます。次に、このオブジェクトは LogRecord オブジェクトを作成し、処理のために Handler オブジェクトに渡します。 ロガーやハンドラー オブジェクトでログ記録レベルを両方使用して、必要に応じてどの LogRecords を制御する、ログ記録フィルターが処理されます。 ログの記録が完了すると、Handler オブジェクトは、Formatter オブジェクトを使用してオプションでログ情報を公開することができます。  
+ アプリケーションを開発する際に、Logger オブジェクトへの呼び出しを行うことができます。次に、このオブジェクトは LogRecord オブジェクトを作成し、処理のために Handler オブジェクトに渡します。 Logger オブジェクトと Handler オブジェクトはどちらもログレベルを使用し、必要に応じてログフィルターを使用して、どのログレコードを処理するかを制御します。 ログの記録が完了すると、Handler オブジェクトは、Formatter オブジェクトを使用してオプションでログ情報を公開することができます。  
   
  既定では、java.util.logging フレームワークは出力をファイルに書き込みます。 この出力ログ ファイルは、JDBC Driver が動作しているコンテキストについて書き込みアクセス許可を持つ必要があります。  
   
@@ -80,7 +79,7 @@ ms.locfileid: "51605782"
   
 |[オブジェクト名]|[説明]|  
 |----------|-----------------|  
-|AuthenticationJNI|ログ メッセージについて、Windows 統合認証の問題 (ときに、 **authenticationScheme**接続プロパティが暗黙的または明示的に設定**NativeAuthentication**)。<br /><br /> アプリケーションは、ログ記録レベルを FINEST および FINE として設定できます。|  
+|AuthenticationJNI|Windows 統合認証の問題に関するメッセージをログに記録します ( **Authenticationscheme**接続プロパティが暗黙的 **** または明示的にに設定されている場合)。<br /><br /> アプリケーションは、ログ記録レベルを FINEST および FINE として設定できます。|  
 |SQLServerConnection|[SQLServerConnection](../../connect/jdbc/reference/sqlserverconnection-class.md) クラスのメッセージを記録します。 アプリケーションは、ログ記録レベルを FINE および FINER として設定できます。|  
 |SQLServerDataSource|[SQLServerDataSource](../../connect/jdbc/reference/sqlserverdatasource-class.md)、[SQLServerConnectionPoolDataSource](../../connect/jdbc/reference/sqlserverconnectionpooldatasource-class.md)、および [SQLServerPooledConnection](../../connect/jdbc/reference/sqlserverpooledconnection-class.md) クラスのメッセージを記録します。<br /><br /> アプリケーションは、ログ記録レベルを FINER として設定できます。|  
 |InputStream|java.io.InputStream、java.io.Reader のほか、max 指定子を持つデータ型 (varchar、nvarchar、varbinary など) に関するメッセージを記録します。<br /><br /> アプリケーションは、ログ記録レベルを FINER として設定できます。|  
@@ -88,7 +87,7 @@ ms.locfileid: "51605782"
 |SQLServerResultSet|[SQLServerResultSet](../../connect/jdbc/reference/sqlserverresultset-class.md) クラスのメッセージを記録します。 アプリケーションは、ログ記録レベルを FINE、FINER、および FINEST として設定できます。|  
 |SQLServerStatement|[SQLServerStatement](../../connect/jdbc/reference/sqlserverstatement-class.md) クラスのメッセージを記録します。 アプリケーションは、ログ記録レベルを FINE、FINER、および FINEST として設定できます。|  
 |XA|[SQLServerXADataSource](../../connect/jdbc/reference/sqlserverxadatasource-class.md) クラスのすべての XA トランザクションについてメッセージを記録します。 アプリケーションは、ログ記録レベルを FINE および FINER として設定できます。|  
-|KerbAuthentication|タイプ 4 Kerberos 認証に関するメッセージを記録 (ときに、 **authenticationScheme**接続プロパティに設定されて**java Kerberos**)。 アプリケーションは、ログ記録レベルを FINE または FINER として設定できます。|  
+|KerbAuthentication|種類4の Kerberos 認証に関するメッセージをログに記録します ( **Authenticationscheme**接続プロパティが**JavaKerberos**に設定されている場合)。 アプリケーションは、ログ記録レベルを FINE または FINER として設定できます。|  
 |TDS.DATA|ドライバーと SQL Server の間で交わされる TDS プロトコル レベルのメッセージ交換を含んだメッセージを記録します。 送受信される各 TDS パケットの詳細な内容が ASCII および 16 進形式で記録されます。 ログイン資格情報 (ユーザー名とパスワード) は記録されません。 それ以外のすべてのデータが記録されます。<br /><br /> このカテゴリは非常に冗長で詳細なメッセージを作成します。ログ記録のレベルを FINEST に設定したときにのみ有効になります。|  
 |TDS.Channel|SQL Server との TCP 通信チャネルのアクションをトレースします。 記録されるメッセージには、読み取りや書き込みのほか、ソケットの開閉が含まれます。 SQL Server との SSL (Secure Sockets Layer) 接続の確立に関連したメッセージもトレースされます。<br /><br /> このカテゴリは、ログ記録レベルを FINE、FINER、または FINEST に設定したときにのみ有効になります。|  
 |TDS.Writer|TDS チャネルへの書き込みをトレースします。 トレースされるのは書き込みの長さのみです。書き込みの内容がトレースされるわけではありません。 このカテゴリでは、アテンション シグナルがサーバーに送信され、ステートメントの実行がキャンセルされた場合にも、問題がトレースされます。<br /><br /> このカテゴリは、ログ記録レベルを FINEST に設定したときにのみ有効になります。|  
@@ -100,7 +99,7 @@ ms.locfileid: "51605782"
 |SQLServerParameterMetaData|[SQLServerParameterMetaData](../../connect/jdbc/reference/sqlserverparametermetadata-class.md) クラスのメッセージを記録します。 アプリケーションは、ログ記録レベルを FINE として設定できます。|  
 |SQLServerBlob|[SQLServerBlob](../../connect/jdbc/reference/sqlserverblob-class.md) クラスのメッセージを記録します。 アプリケーションは、ログ記録レベルを FINE として設定できます。|  
 |SQLServerClob|[SQLServerClob](../../connect/jdbc/reference/sqlserverclob-class.md) クラスのメッセージを記録します。 アプリケーションは、ログ記録レベルを FINE として設定できます。|  
-|SQLServerSQLXML|内部 SQLServerSQLXML クラスでは、メッセージを記録します。 アプリケーションは、ログ記録レベルを FINE として設定できます。|  
+|SQLServerSQLXML|内部 SQLServerSQLXML クラスのメッセージを記録します。 アプリケーションは、ログ記録レベルを FINE として設定できます。|  
 |SQLServerDriver|[SQLServerDriver](../../connect/jdbc/reference/sqlserverdriver-class.md) クラスのメッセージを記録します。 アプリケーションは、ログ記録レベルを FINE として設定できます。|  
 |SQLServerNClob|[SQLServerNClob](../../connect/jdbc/reference/sqlservernclob-class.md) クラスのメッセージを記録します。 アプリケーションは、ログ記録レベルを FINE として設定できます。|  
   
@@ -132,7 +131,7 @@ Logger logger = Logger.getLogger("com.microsoft.sqlserver.jdbc.Statement");
 logger.setLevel(Level.OFF);  
 ```  
   
-## <a name="enabling-tracing-by-using-the-loggingproperties-file"></a>Logging.Properties ファイルを使用してトレースを有効にする  
+## <a name="enabling-tracing-by-using-the-loggingproperties-file"></a>logging.properties ファイルを使用してトレースを有効にする  
  `logging.properties` ファイルを使用してトレースを有効にすることもできます。このファイルは、Java ランタイム環境 (JRE) のインストール ディレクトリ `lib` にあります。 このファイルを使用すると、トレースが有効になったときに使用されるロガーやハンドラーに既定値を設定することができます。  
   
  次は、`logging.properties` ファイルで行うことができる設定の一例です。  
@@ -160,6 +159,6 @@ com.microsoft.sqlserver.jdbc.level=FINEST
 >  java.util.logging に含まれる LogManager オブジェクトを使用して、`logging.properties` ファイルでプロパティを設定することができます。  
   
 ## <a name="see-also"></a>参照  
- [JDBC ドライバーで発生した問題の診断](../../connect/jdbc/diagnosing-problems-with-the-jdbc-driver.md)  
+ [JDBC ドライバーに関する問題の診断](../../connect/jdbc/diagnosing-problems-with-the-jdbc-driver.md)  
   
   

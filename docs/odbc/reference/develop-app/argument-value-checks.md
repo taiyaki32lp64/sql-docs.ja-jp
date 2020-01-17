@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 37a65f8b-83aa-456c-b7cf-500404abb38a
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 3dfee0dd00e30f6446430156617ba45a5a39b994
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 013c8f80a672ed691e7519b318206c406171cfbc
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47765845"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68077115"
 ---
 # <a name="argument-value-checks"></a>引数の値のチェック
 ドライバー マネージャーは、次の種類の引数を確認します。 明記されない限り、ドライバー マネージャーは、引数の値でエラーの SQL_ERROR を返します。  

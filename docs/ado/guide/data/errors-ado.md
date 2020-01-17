@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 8ae6611b-3069-4155-b014-c0c9da37be39
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 1b81b6d1e28b37947f10a9ec78c8c97f60119841
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 8079c2f49fe64aa94ce061fc47a324087b92f0d0
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47713830"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67925420"
 ---
 # <a name="errors-ado"></a>エラー (ADO)
 ADO オブジェクトに関連するすべての操作には、1 つまたは複数のプロバイダー エラーを生成できます。 各エラーが発生すると、1 つまたは複数**エラー**に配置されたオブジェクト、**エラー**のコレクション、**接続**オブジェクト。 ADO アプリケーションで警告およびエラーの処理について詳しくは、次を参照してください。[エラー処理](../../../ado/guide/data/error-handling.md)します。  

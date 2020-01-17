@@ -14,15 +14,14 @@ dev_langs:
 helpviewer_keywords:
 - sys.sp_rda_set_rpo_duration stored procedure
 ms.assetid: 95c80c5b-9252-4612-9ea7-544c48834fd2
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: 11336658a557d9a2ceced08425a12963dd15782e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: MikeRayMSFT
+ms.author: mikeray
+ms.openlocfilehash: 12d703b03483e1ea4641a822291106de3598f05e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47685230"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67905008"
 ---
 # <a name="syssprdasetrpoduration-transact-sql"></a>sys.sp_rda_set_rpo_duration (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]

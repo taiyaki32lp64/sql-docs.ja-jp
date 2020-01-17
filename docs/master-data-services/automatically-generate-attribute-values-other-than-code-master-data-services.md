@@ -1,6 +1,7 @@
 ---
-title: Code 以外の属性の値の自動生成 (Master Data Services) | Microsoft Docs
-ms.custom: ''
+title: 属性値を自動的に生成する
+titleSuffix: Master Data Services
+ms.custom: seo-lt-2019
 ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: mds
@@ -8,15 +9,14 @@ ms.reviewer: ''
 ms.technology: master-data-services
 ms.topic: conceptual
 ms.assetid: b82f6f81-6e9c-4918-9ea9-4ab5f5d11b15
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: bb4c6ab40a134cad55094c83c8e0ed0561b87a32
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
-ms.translationtype: HT
+ms.openlocfilehash: dc4ee9fd4eead46df29538a85013949402b1920e
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52760344"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73728729"
 ---
 # <a name="automatically-generate-attribute-values-other-than-code-master-data-services"></a>Code 以外の属性の値の自動生成 (Master Data Services)
 
@@ -29,7 +29,7 @@ ms.locfileid: "52760344"
   
 -   **[システム管理]** 機能領域にアクセスする権限が必要です。  
   
--   モデル管理者である必要があります。 詳細については、「 [管理者 (マスター データ サービス)](../master-data-services/administrators-master-data-services.md)にアクセスすることなくグループに対してユーザーの追加または削除を行うことができます。  
+-   モデル管理者である必要があります。 詳細については、「[Administrators &#40;Master Data Services&#41; (管理者 &#40;マスター データ サービス&#41;)](../master-data-services/administrators-master-data-services.md)」を参照してください。  
   
 -   数値属性が存在する必要があります。 詳細については、「[数値属性を作成する (マスター データ サービス)](../master-data-services/create-a-numeric-attribute-master-data-services.md)」を参照してください。  
   
@@ -53,17 +53,17 @@ ms.locfileid: "52760344"
   
 9. **[コンポーネント]** ペインで **[アクション]** ノードを展開します。  
   
-10. 既定値ノードで、**[の既定値が生成値である]** をクリックし、**[THEN]** ペインの **[アクション]** ラベルにドラッグします。  
+10. 既定値ノードで、 **[の既定値が生成値である]** をクリックし、 **[THEN]** ペインの **[アクション]** ラベルにドラッグします。  
   
 11. **[属性]** ペインで値を生成する属性をクリックして、 **[アクションの編集]** ペインの **[属性の選択]** ラベルにドラッグします。  
   
-12. **[開始]** および **[増分]** ボックスに値を入力します。 メンバーが既に存在する場合、値は既存の最も大きい値に基づいて設定されます。 たとえば、既存の最も大きい値が 299 で、**[増分]** を **1**に設定してある場合、次のメンバーの値は 300 に設定されます。  
+12. **[開始]** および **[増分]** ボックスに値を入力します。 メンバーが既に存在する場合、値は既存の最も大きい値に基づいて設定されます。 たとえば、既存の最も大きい値が 299 で、 **[増分]** を **1**に設定してある場合、次のメンバーの値は 300 に設定されます。  
   
 13. **[アクションの編集]** ペインの **[アイテムの保存]** をクリックします。  
   
 14. **[戻る]** をクリックします。  
   
-15. 必要に応じて、 **[ビジネス ルールのメンテナンス]** ページで、ビジネス ルールを含む行の **[名前]**、 **[説明]**、または **[通知]** 列のセルをダブルクリックして値を更新します。  
+15. 必要に応じて、 **[ビジネス ルールのメンテナンス]** ページで、ビジネス ルールを含む行の **[名前]** 、 **[説明]** 、または **[通知]** 列のセルをダブルクリックして値を更新します。  
   
 16. **[ビジネス ルールのパブリッシュ]** をクリックします。  
   

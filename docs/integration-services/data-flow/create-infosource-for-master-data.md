@@ -8,17 +8,20 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: b52a9a89-8380-4a02-8a83-dcfb46ae860e
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: 33069fbe92657e50ba9421ba12130f3a90d44492
-ms.sourcegitcommit: 0d6e4cafbb5d746e7d00fdacf8f3ce16f3023306
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 1fb9be98dbbdf2935fe79c6f579be7ab0e357624
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/11/2018
-ms.locfileid: "49084981"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71293197"
 ---
 # <a name="create-infosource-for-master-data"></a>[マスター データのインフォソースの作成]
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   SAP Netweaver BW システムでマスター データ用の新しいインフォソースを作成するには、 **[マスター データのインフォソースの作成]** ダイアログ ボックスを使用します。  
   
  **[マスター データのインフォソースの作成]** ダイアログ ボックスは、 **[SAP BW 変換先エディター]** の **[接続マネージャー]** ページから開くことができます。 SAP BW 変換先の詳細については、「 [SAP BW Destination](../../integration-services/data-flow/sap-bw-destination.md)」を参照してください。  
@@ -38,7 +41,7 @@ ms.locfileid: "49084981"
   
 5.  **[インフォソースの作成]** ダイアログ ボックスで、 **[マスター データ]** を選択して **[OK]** をクリックします。  
   
-## <a name="options"></a>[変数]  
+## <a name="options"></a>オプション  
  **インフォオブジェクトの名前**  
  新しいインフォソースの基にするインフォオブジェクトの名前を入力します。  
   

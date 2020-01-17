@@ -1,4 +1,4 @@
----
+﻿---
 title: ALTER XML SCHEMA COLLECTION (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
@@ -28,13 +28,12 @@ helpviewer_keywords:
 ms.assetid: e311c425-742a-4b0d-b847-8b974bf66d53
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 9c828a7db7a15e9a25073a5c6246a5c354934400
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 2ae87d5c125ae3eac01013843c9fe2db183b9c1c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56016473"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68055960"
 ---
 # <a name="alter-xml-schema-collection-transact-sql"></a>ALTER XML SCHEMA COLLECTION (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -57,7 +56,7 @@ ALTER XML SCHEMA COLLECTION [ relational_schema. ]sql_identifier ADD 'Schema Com
  *sql_identifier*  
  XML スキーマ コレクションの SQL 識別子を指定します。  
   
- **'** *スキーマ比較* **'**  
+ **'** *Schema Component* **'**  
  挿入するスキーマ コンポーネントを指定します。  
   
 ## <a name="remarks"></a>Remarks  
@@ -188,7 +187,7 @@ CREATE XML SCHEMA COLLECTION AS @MySchemaCollection;
  CREATE XML SCHEMA COLLECTION には、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] で認識されるスキーマ コンポーネントだけが格納されます。XML スキーマ内のすべての要素がデータベースに格納されるわけではありません。 したがって、XML スキーマ コレクションを、提供されたときと同じ状態に戻す場合は、データベース列またはコンピューター上の他のフォルダーに XML スキーマを保存することをお勧めします。  
   
 ### <a name="b-specifying-multiple-schema-namespaces-in-a-schema-collection"></a>B. スキーマ コレクションに複数のスキーマ名前空間を指定する  
- XML スキーマ コレクションを作成するときには、複数の XML スキーマを指定できます。 例 :  
+ XML スキーマ コレクションを作成するときには、複数の XML スキーマを指定できます。 例:  
   
 ```  
 CREATE XML SCHEMA COLLECTION N'  

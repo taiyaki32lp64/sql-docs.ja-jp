@@ -45,13 +45,12 @@ helpviewer_keywords:
 ms.assetid: e11484bb-c5c7-42d8-9bb8-21572125d727
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 776a74422941118e2091c9240d14edbf8c1f0fec
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 6fe7e807fc38d6f1cf6f72e5b19539bb839e9c08
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47655656"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67918360"
 ---
 # <a name="item-property-ado"></a>Item プロパティ (ADO)
 名前または序数で、コレクションの特定のメンバーを示します。  
@@ -91,6 +90,6 @@ collection (Index)
 |[Properties コレクション (ADO)](../../../ado/reference/ado-api/properties-collection-ado.md)|[Tables コレクション (ADOX)](../../../ado/reference/adox-api/tables-collection-adox.md)|[Users コレクション (ADOX)](../../../ado/reference/adox-api/users-collection-adox.md)|  
 |[Views コレクション (ADOX)](../../../ado/reference/adox-api/views-collection-adox.md)|||  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [項目プロパティの例 (VB)](../../../ado/reference/ado-api/item-property-example-vb.md)   
  [Item プロパティの例 (VC++)](../../../ado/reference/ado-api/item-property-example-vc.md)   

@@ -1,6 +1,5 @@
 ---
-title: インメモリ OLTP を使用した JSON の処理の最適化 | Microsoft Docs
-ms.custom: ''
+title: インメモリ OLTP を使用した JSON の処理の最適化
 ms.date: 07/18/2017
 ms.prod: sql
 ms.reviewer: genemi
@@ -9,14 +8,14 @@ ms.topic: conceptual
 ms.assetid: d9c5adb1-3209-4186-bc10-8e41a26f5e57
 author: jovanpop-msft
 ms.author: jovanpop
-manager: craigg
+ms.custom: seo-dt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: a660c9416d58bd4528b8042489a5435a594743fb
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: a2b02d5b987958abc8dd97e48f86e7b44636efad
+ms.sourcegitcommit: 15fe0bbba963d011472cfbbc06d954d9dbf2d655
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56016599"
+ms.lasthandoff: 11/14/2019
+ms.locfileid: "74096078"
 ---
 # <a name="optimize-json-processing-with-in-memory-oltp"></a>インメモリ OLTP を使用した JSON の処理の最適化
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]

@@ -14,15 +14,14 @@ helpviewer_keywords:
 - sp_xml_preparedocument
 - XML [SQL Server], system stored procedures
 ms.assetid: e60c7f85-6823-4d28-93d6-b053d08cc830
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: de9c0bb15963ecfa170c6079a95bfc446cb14f3b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: MightyPen
+ms.author: genemi
+ms.openlocfilehash: b07b7f782c534c7d98e6e20047f58787fe32e8e7
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47787770"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67902870"
 ---
 # <a name="xml-system-stored-procedures"></a>XML システム ストアド プロシージャ
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

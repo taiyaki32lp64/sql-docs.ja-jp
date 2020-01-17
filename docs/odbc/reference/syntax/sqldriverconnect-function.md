@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: e299be1d-5c74-4ede-b6a3-430eb189134f
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: d80de6087997b6af0202dafae7576ba442514abf
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: 9528280514be2eb2424b15a39ded3206aaca112f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53212391"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68104706"
 ---
 # <a name="sqldriverconnect-function"></a>SQLDriverConnect 関数
 **準拠**  
@@ -48,7 +47,7 @@ ms.locfileid: "53212391"
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
   
 SQLRETURN SQLDriverConnect(  
      SQLHDBC         ConnectionHandle,  
@@ -63,7 +62,7 @@ SQLRETURN SQLDriverConnect(
   
 ## <a name="arguments"></a>引数  
  *ConnectionHandle*  
- [入力]接続ハンドルです。  
+ [入力] 接続ハンドル。  
   
  *WindowHandle*  
  [入力]ウィンドウ ハンドル。 該当する場合、アプリケーションは、親ウィンドウのハンドルを渡すことができますか、どちらの場合は null ポインターのウィンドウ ハンドルは、該当するはまたは**SQLDriverConnect**はダイアログ ボックスが表示されません。  
@@ -161,7 +160,7 @@ SQLRETURN SQLDriverConnect(
   
  アプリケーションは後の属性値を囲む中かっこを追加する必要はありません、**ドライバー**キーワード属性にセミコロン (;) が含まれている場合を除き、この場合、中かっこが必要です。 ドライバーが受信した属性の値には、中かっこが含まれている場合、ドライバーは削除せず、返される接続文字列の一部である必要があります。  
   
- DSN または接続文字列値を中かっこで囲む ({}) 文字のいずれかを含む**{}()、;?\*=! @** ドライバーにそのまま渡されます。 ただし、キーワードでこれらの文字を使用して、ドライバー マネージャーはファイル Dsn を使用する場合はエラーを返しますが、通常の接続文字列用のドライバーに接続文字列を渡します。 キーワードの値に埋め込まれた中かっこを使用しないでください。  
+ DSN または接続文字列値を中かっこで囲む ({}) 文字のいずれかを含む **{}()、;?\*=! @** ドライバーにそのまま渡されます。 ただし、キーワードでこれらの文字を使用して、ドライバー マネージャーはファイル Dsn を使用する場合はエラーを返しますが、通常の接続文字列用のドライバーに接続文字列を渡します。 キーワードの値に埋め込まれた中かっこを使用しないでください。  
   
  接続文字列は、任意の数のドライバー定義のキーワードを含めることができます。 **ドライバー**キーワードは、システム情報の情報を使用していない、ドライバーはドライバーが接続文字列情報のみを使用してデータ ソースに接続できるように十分なキーワードを定義する必要があります。 (詳細については、このセクションの後半の「ドライバー ガイドライン」を参照してください)。ドライバーでは、どのキーワードはデータ ソースに接続するために必要なものを定義します。  
   
@@ -291,7 +290,7 @@ SQLRETURN SQLDriverConnect(
   
  詳細については、次を参照してください。 [SQLDriverConnect による接続](../../../odbc/reference/develop-app/connecting-with-sqldriverconnect.md)します。  
   
-```  
+```cpp  
 // SQLDriverConnect_ref.cpp  
 // compile with: odbc32.lib user32.lib  
 #include <windows.h>  

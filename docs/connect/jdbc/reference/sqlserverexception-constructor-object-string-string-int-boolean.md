@@ -1,5 +1,5 @@
 ---
-title: SQLServerException コンス トラクター (java.lang.Object, java.lang.String、java.lang.String、int, boolean) |Microsoft Docs
+title: SQLServerException コンストラクター (java.lang.Object, java.lang.String, java.lang.String, int, boolean) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2018
 ms.prod: sql
@@ -13,18 +13,17 @@ apitype: Assembly
 ms.assetid: ''
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 5b8c39021b8afac5631e44cddd8874cbf22975a3
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 72ae0e8ed3c65a795723326d7ca49e2f5a909f18
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47670030"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67971147"
 ---
-# <a name="sqlserverexception-constructor-javalangobject-javalangstring-javalangstring-int-boolean"></a>SQLServerException コンス トラクター (java.lang.Object, java.lang.String、java.lang.String、int, boolean)
+# <a name="sqlserverexception-constructor-javalangobject-javalangstring-javalangstring-int-boolean"></a>SQLServerException コンストラクター (java.lang.Object, java.lang.String, java.lang.String, int, boolean)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  新しいインスタンスを初期化、 [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)クラスが指定されると、**オブジェクト**、**文字列**オブジェクト、**文字列**オブジェクト、 **int**、および**ブール**します。
+  **オブジェクト**、**文字列**オブジェクト、**文字列**オブジェクト、 **int**、および**ブール値**が指定された場合に、 [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)クラスの新しいインスタンスを初期化します。
 
 ## <a name="syntax"></a>構文  
   
@@ -42,23 +41,23 @@ public SQLServerException(java.lang.Object obj,
 #### <a name="parameters"></a>パラメーター  
  *obj*  
   
- 例外を生成した IO のバッファー。
+ 例外を生成した IO バッファー。
 
  *errText*  
   
- エラー テキストを含む文字列。
+ エラーテキストを表す文字列です。
   
  *sqlState*  
   
- SQL の状態を含む列挙オブジェクト。
+ SQL 状態を格納している列挙オブジェクト。
  
  *errNum*  
   
- 例外のエラー コードが含まれている int です。
+ 例外のエラーコードを格納している int。
  
  *bStack*  
   
- スタック トレースを生成するかどうかを示すブール値。
+ スタックトレースを生成する必要があるかどうかを示すブール値。
   
 ## <a name="see-also"></a>参照  
  [SQLServerException のコンストラクター](../../../connect/jdbc/reference/sqlserverexception-constructors.md)   

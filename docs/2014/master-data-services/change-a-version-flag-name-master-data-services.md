@@ -9,15 +9,15 @@ ms.topic: conceptual
 helpviewer_keywords:
 - version flags [Master Data Services], changing name
 ms.assetid: bc08b69d-a38d-4f27-a356-5bce29e6248c
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: ab922142698101c276f59c9ca0d398f297eedee4
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 6037c1d31b52fba0f961020f1e514b3354e535b9
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52814334"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65484043"
 ---
 # <a name="change-a-version-flag-name-master-data-services"></a>バージョン フラグ名を変更する (マスター データ サービス)
   [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]では、バージョン フラグの名前を変更できます。  
@@ -43,7 +43,7 @@ ms.locfileid: "52814334"
   
 6.  Enter キーを押します。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [バージョン (マスター データ サービス)](../../2014/master-data-services/versions-master-data-services.md)   
  [バージョンにフラグを割り当てる (マスター データ サービス)](../../2014/master-data-services/assign-a-flag-to-a-version-master-data-services.md)  
   

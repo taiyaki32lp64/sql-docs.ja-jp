@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 05ff7bd4-e60b-4f48-a893-bc2346aa9a8a
 author: Shamikg
 ms.author: Shamikg
-manager: craigg
-ms.openlocfilehash: e9ccc7648be4915a68b798f314689d961113639a
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: 50845a9bdf3c3185d7b69bb86a75b2a3d332ef6b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52409511"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68074174"
 ---
 # <a name="mapping-db2-schemas-to-sql-server-schemas-db2tosql"></a>SQL Server スキーマ (DB2ToSQL) への DB2 スキーマのマッピング
 DB2 の場合に、各データベースは、1 つまたは複数のスキーマを持っています。 SSMA は既定では、DB2 スキーマのすべてのオブジェクトを移行、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]スキーマという名前のデータベース。 ただし、DB2 スキーマの間のマッピングをカスタマイズすることができますと[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]データベース。  
@@ -62,7 +61,7 @@ DB2 スキーマの間のマッピングをカスタマイズする場合は、[
 ## <a name="next-steps"></a>次の手順  
 DB2 オブジェクトへの変換を分析する[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]オブジェクトを実行できます[データ移行レポート (SSMA 一般的)](https://msdn.microsoft.com/bbfb9d88-5a98-4980-8d19-c5d78bd0d241)します。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
 [SQL Server に接続する&#40;DB2eToSQL&#41;](../../ssma/db2/connecting-to-sql-server-db2etosql.md)  
 [SQL Server にデータベースを移行する DB2 &#40;DB2ToSQL&#41;](../../ssma/db2/migrating-db2-databases-to-sql-server-db2tosql.md)  
   

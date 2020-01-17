@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - data preparation
@@ -15,12 +14,12 @@ ms.assetid: af041b39-fdd1-4cb5-a5ef-2f3ddab84614
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 74e2322416ec06c36a7834f35581ed611480b6e6
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: 5471720cbd3084c661dec93d9c7f4f680e066b86
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52414609"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66070402"
 ---
 # <a name="relabel-sql-server-data-mining-add-ins"></a>ラベルの変更 (SQL Server データ マイニング アドイン)
   ![ラベルの変更ツールの office 13 アイコン](media/dm13-relabel.gif "ラベルの変更ツールの Office 13 アイコン")  
@@ -53,7 +52,7 @@ ms.locfileid: "52414609"
   
 5.  下の行に新しい値を入力**新しいラベル**します。 値は、既存の値の一覧から選択できます。 新しい値は、入力した直後から再利用に使用できるようになります。  
   
-6.  十分な行を入力すると、クリックして **[次へ]**、し、**先の選択**ページで、選択、ラベルが変更されたデータを保存します。  
+6.  十分な行を入力すると、クリックして **[次へ]** 、し、**先の選択**ページで、選択、ラベルが変更されたデータを保存します。  
   
     -   **現在のワークシートに新しい列として追加します。**  
   
@@ -67,7 +66,7 @@ ms.locfileid: "52414609"
   
          元データを新しい値に置き換える場合に選択します。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [データの探索とクリーニング](exploring-and-cleaning-data.md)  
   
   

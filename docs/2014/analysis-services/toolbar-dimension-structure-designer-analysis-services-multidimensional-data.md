@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: 41f01eed-e50f-44c8-a8e0-97e01bd66bd3
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: a51f3daa31b65901f916bf61a3a734c66390b12c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 187e1755154dad23f1f21eb7b15400faa7cdea30
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48146448"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66066048"
 ---
 # <a name="toolbar-dimension-structure-tab-dimension-designer-analysis-services---multidimensional-data"></a>ツール バー ([ディメンション構造] タブ、ディメンション デザイナー) (Analysis Services - 多次元データ)
   **ディメンション デザイナー** の **[ディメンション構造]** ページのツール バーを使用すると、一般的な操作を実行できます。  
@@ -41,7 +40,7 @@ ms.locfileid: "48146448"
   
 -   グリッド  
   
-     現在のディメンションの属性の詳細な一覧を表示します。これには、 **[名前]**、 **[使用法]**、 **[種類]** の各プロパティ、キー列がある場合はそのデータ型、名前列がキー列に一致するかどうかなどが表示されます。  
+     現在のディメンションの属性の詳細な一覧を表示します。これには、 **[名前]** 、 **[使用法]** 、 **[種類]** の各プロパティ、キー列がある場合はそのデータ型、名前列がキー列に一致するかどうかなどが表示されます。  
   
  下矢印をクリックして、3 つのオプションから 1 つを選択します。  
   

@@ -19,24 +19,23 @@ helpviewer_keywords:
 ms.assetid: aebc439b-fffd-4d98-907a-0163f79aee8d
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 47069f1003b9b3f9bddb1e8601b3b4284372ae7e
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: 1f1e3ac7f0a76c607fa07d6eb92d069d99ef5e0a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53205191"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68076209"
 ---
 # <a name="sqlinstalldrivermanager-function"></a>SQLInstallDriverManager 関数
 **準拠**  
  バージョンが導入されました。ODBC 1.0:Windows XP Service Pack 2、Windows Server 2003 Service Pack 1 では、以降のオペレーティング システムで非推奨とされます。  
   
- **まとめ**  
+ **概要**  
  **SQLInstallDriverManager** ODBC コア コンポーネントのインストールのターゲット ディレクトリのパスを返します。 呼び出し元のプログラムは、ターゲット ディレクトリにドライバー マネージャーのファイルをコピー実際にする必要があります。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
   
 BOOL SQLInstallDriverManager(  
      LPSTR    lpszPath,  

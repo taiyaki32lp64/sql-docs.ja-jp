@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 4dd7e82a-8da5-4a4e-b439-11a29286fa0e
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: e9593b45e8b336fe777b8e240061e82c23543c1d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: c0288dde74d2a172c9b0f8bdb865f4467fb0f637
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47691180"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67919727"
 ---
 # <a name="commandtext-property-ado"></a>CommandText プロパティ (ADO)
 プロバイダーに対して発行するコマンドのテキストを示します。  

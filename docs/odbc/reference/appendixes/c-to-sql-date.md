@@ -14,15 +14,14 @@ helpviewer_keywords:
 ms.assetid: bea087d3-911f-418b-b483-d2b5b334da19
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 8edb075be1bf64dad8f4ef18924a6396b7c64e80
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 02ee7c1fb396dc1c9c0708cf6c0e7a52ff1c11ec
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47796130"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68019410"
 ---
-# <a name="c-to-sql-date"></a>C から SQL へ: 日付
+# <a name="c-to-sql-date"></a>C から SQL へ: date
 日付の ODBC C データ型の識別子を示します。  
   
  SQL_C_TYPE_DATE  

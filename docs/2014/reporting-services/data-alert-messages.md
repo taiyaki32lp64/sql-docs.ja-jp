@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 ms.assetid: 6819720c-d848-4b90-9b51-89501b4f4645
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: e71c7e2c933afc0da1a09adbb26cc5e08bc9747f
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 622fa9e74ca4195363220f00dfa7dd7875f5ba47
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56035633"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66109505"
 ---
 # <a name="data-alert-messages"></a>データ警告メッセージ
   [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] データ警告は、2 つの種類のデータ警告メッセージを電子メールで配信します。データ警告結果とエラーの説明を持つメッセージのメッセージ。 結果を含むメッセージは、すべての受信者に共通して関係し、かつ業務意思決定にとって重要なレポート データの変更について情報を提供します。 何かの理由でエラーが発生し、結果情報が取得できない場合は、代わりにエラー メッセージが送信されます。  
@@ -57,13 +56,13 @@ ms.locfileid: "56035633"
 ##  <a name="HowTo"></a> 関連タスク  
  データ警告メッセージ内に表示される情報の多くを提供する、データ警告定義を作成および編集するための手順を紹介しているトピックの一覧を次に示します。  
   
--   [警告デザイナーでのデータ警告の作成](create-a-data-alert-in-data-alert-designer.md)  
+-   [データ警告デザイナーでのデータ警告の作成](create-a-data-alert-in-data-alert-designer.md)  
   
 -   [警告デザイナーでのデータ警告の編集](edit-a-data-alert-in-alert-designer.md)  
   
 
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [データ警告デザイナー](../../2014/reporting-services/data-alert-designer.md)   
  [Reporting Services Data Alerts](../ssms/agent/alerts.md)  
   

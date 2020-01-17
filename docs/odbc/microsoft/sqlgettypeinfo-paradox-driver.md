@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: e65063c7-ba9e-4cf0-ac13-4bb5bd2937db
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 20b5776b5b0e1490ef31ff07d1876afef326db9b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: c212584972f4a7e329d124cc8512be3b1f7a6b9d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47711490"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67898615"
 ---
 # <a name="sqlgettypeinfo-paradox-driver"></a>SQLGetTypeInfo (Paradox ドライバー)
 > [!NOTE]  

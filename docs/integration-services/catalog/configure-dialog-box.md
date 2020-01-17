@@ -12,17 +12,20 @@ f1_keywords:
 - sql13.SSIS.SSMS.ISPROJECTPROP.REFERENCES.F1
 - sql13.SSIS.SSMS.ISPROJECTPROP.PARAMETERS.F1
 ms.assetid: 10183c8d-b1be-420f-972a-96ea97d4f4d8
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: 179c3418f6d8c13c4974d6b5b023e1905140c6a3
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 63d4507a2ad81a1167444acca111865460662904
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52410209"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71299007"
 ---
 # <a name="configure-dialog-box"></a>[構成] ダイアログ ボックス
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   パッケージとプロジェクトのパラメーター、接続マネージャー、および環境への参照を構成するには、 **[構成]** ダイアログ ボックスを使用します。  
   
  **目的に合ったトピックをクリックしてください**  
@@ -57,7 +60,7 @@ ms.locfileid: "52410209"
  **コンテナー**  
  パラメーターを含むオブジェクトを一覧表示します。  
   
- **名前**  
+ **[名前]**  
  パラメーター名を一覧表示します。  
   
  **Value**  
@@ -68,7 +71,7 @@ ms.locfileid: "52410209"
  **コンテナー**  
  接続マネージャーを含むオブジェクトを一覧表示します。  
   
- **名前**  
+ **[名前]**  
  接続マネージャーの名前を一覧表示します。  
   
  **プロパティ名**  

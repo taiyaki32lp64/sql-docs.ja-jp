@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: 0ffc5f44-17d3-42d4-bc2c-baf3b4485e2d
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 011ca5ed5066113a467082e0fe05c6d0f831f25b
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 812c205c1e612604c0c39a5effb3b9da50308d7a
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53363464"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66067957"
 ---
 # <a name="configure-reporting-properties-for-power-view-reports"></a>Power View レポートのレポート プロパティの構成
   この補足のレッスンでは、Adventure Works Internet Sales Model プロジェクトのレポートのプロパティを設定します。 レポートのプロパティを使用すると、Power View 内のモデル データの選択や表示をエンド ユーザーが簡単にできるようになります。 また、プロパティを設定して、特定の列やテーブルの非表示や、グラフで使う新しいデータの作成を行います。  
@@ -89,7 +88,7 @@ ms.locfileid: "53363464"
   
 3.  **[既定のフィールド セット]** ダイアログ ボックスの **[テーブル内のフィールド]** ボックスの一覧で、Ctrl キーを押しながら次のフィールドをクリックし、 **[追加]** をクリックします。  
   
-     **[Birth Date]**、 **[Customer Alternate Id]**、 **[First Name]**、 **[Last Name]**。  
+     **[Birth Date]** 、 **[Customer Alternate Id]** 、 **[First Name]** 、 **[Last Name]** 。  
   
 4.  **[既定のフィールド (並べ替え順)]** ウィンドウで、[上へ移動] と [下へ移動] を使用して次の順序に並べます。  
   
@@ -215,13 +214,13 @@ ms.locfileid: "53363464"
   
 #### <a name="to-redeploy-the-adventure-works-internet-sales-tabular-model"></a>Adventure Works Internet Sales 表形式モデルを再配置するには  
   
--   [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)] で **[ビルド]** メニューをクリックし、**[Adventure Works Internet Sales Model の配置]** をクリックします。  
+-   [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)] で **[ビルド]** メニューをクリックし、 **[Adventure Works Internet Sales Model の配置]** をクリックします。  
   
      **[配置]** ダイアログ ボックスが表示され、メタデータの配置状況と、モデルに含まれる各テーブルが表示されます。  
   
 ## <a name="next-steps"></a>次の手順  
  これで、Power View を使用してモデルのデータを表示できるようになりました。 SharePoint サイトの Analysis Services と Reporting Services のアカウントが、モデルを配置した Analysis Services インスタンスに対する読み取り権限を持っていることを確認します。  
   
- モデルを参照する Reporting Services のレポート データ ソースを作成するには、「[データ モデルの共有データ ソースの作成 (SSRS)](https://msdn.microsoft.com/library/hh270317%28v=SQL.110%29.aspx)」を参照してください。  
+ モデルを参照する Reporting Services のレポート データ ソースを作成するには、「 [データ モデルの共有データ ソースの作成 (SSRS)](https://msdn.microsoft.com/library/hh270317%28v=SQL.110%29.aspx)」を参照してください。  
   
   

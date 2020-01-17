@@ -1,5 +1,5 @@
 ---
-title: getProcedures メソッド (SQLServerDatabaseMetaData) |Microsoft Docs
+title: getProcedures メソッド (SQLServerDatabaseMetaData) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: 66c9a8b0-dc4c-4cbb-8004-c7157368cab4
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: f61427cdc3a71ebba5c6d511c3a5c8068b44c496
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 054ce4f6f646f873d4aff05fbe1d31aa9903ded9
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47778750"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67980742"
 ---
 # <a name="getprocedures-method-sqlserverdatabasemetadata"></a>getProcedures メソッド (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -42,7 +41,7 @@ public java.sql.ResultSet getProcedures(java.lang.String sCatalog,
   
  カタログ名を含む**文字列**です。 このパラメーターに null を指定すると、カタログ名を使用する必要はありません。  
   
- *スキーマ*  
+ *sSchema*  
   
  スキーマ名のパターンを含む**文字列**です。 このパラメーターに null を指定すると、スキーマ名を使用する必要はありません。  
   
@@ -57,7 +56,7 @@ public java.sql.ResultSet getProcedures(java.lang.String sCatalog,
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- この getProcedures メソッドは、java.sql.DatabaseMetaData インターフェイスで getProcedures メソッドによって指定されます。  
+ この getProcedures メソッドは、java メタデータインターフェイスの getProcedures メソッドによって指定されます。  
   
  getProcedures メソッドによって返される結果セットには、次の情報が含まれます。  
   

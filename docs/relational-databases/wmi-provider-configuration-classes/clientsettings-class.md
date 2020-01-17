@@ -1,5 +1,5 @@
 ---
-title: ClientSettings クラス |Microsoft Docs
+title: ClientSettings クラス
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -16,17 +16,16 @@ helpviewer_keywords:
 ms.assetid: cc58e1f2-2863-4034-ba21-aa9497320b07
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: 87ee6cf8c3ef84363608f7703cc5a8fe64ab15c1
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 834c41b00945d9de09cf9964ee8aa2ca6e63c414
+ms.sourcegitcommit: baa40306cada09e480b4c5ddb44ee8524307a2ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51660172"
+ms.lasthandoff: 11/06/2019
+ms.locfileid: "73660677"
 ---
 # <a name="clientsettings-class"></a>ClientSettings クラス
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
-  [ClientSettings クラス](../../relational-databases/wmi-provider-configuration-classes/clientsettings-class.md)を表す、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]クライアントで設定します。  
+  [Clientsettings クラス](../../relational-databases/wmi-provider-configuration-classes/clientsettings-class.md)は、クライアントの [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 設定を表します。  
   
  このクラスにより、プログラムによるクライアントの管理が可能になります。  
   

@@ -18,11 +18,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 102c3d72d811627074da570ee74902e51a4b86dc
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52818097"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63162161"
 ---
 # <a name="how-online-index-operations-work"></a>オンライン インデックス操作の動作原理
   このトピックでは、オンライン インデックスの操作中に存在する構造を定義し、これらの構造に関連した利用方法について説明します。  

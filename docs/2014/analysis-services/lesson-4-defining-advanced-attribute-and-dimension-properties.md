@@ -1,24 +1,23 @@
 ---
-title: 'レッスン 4: を定義する高度な属性およびディメンションのプロパティ |Microsoft Docs'
+title: レッスン 4:高度な属性およびディメンションのプロパティの定義 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: 0e86b9be-e47d-4bb4-87eb-136ff3a61aef
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: c685a2050611ce9cc55309847608bf50521fff16
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 11d566c029491378a5e0e091e0803cdf5616e637
+ms.sourcegitcommit: f5807ced6df55dfa78ccf402217551a7a3b44764
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48184072"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69493996"
 ---
-# <a name="lesson-4-defining-advanced-attribute-and-dimension-properties"></a>レッスン 4 : 高度な属性およびディメンションのプロパティの定義
+# <a name="lesson-4-defining-advanced-attribute-and-dimension-properties"></a>レッスン 4:高度な属性およびディメンションのプロパティの定義
   このレッスンでは、属性、属性階層、およびディメンションの高度なプロパティをいくつか取り上げ、その使用方法を学習します。  
   
 > [!NOTE]  
@@ -30,12 +29,12 @@ ms.locfileid: "48184072"
  ここでは、 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Tutorial プロジェクトの修正バージョンを開き、内容を確認して、配置します。このプロジェクトには、複数のメジャー グループと追加ディメンションが含まれています。  
   
  [親子階層の親属性プロパティの定義](lesson-4-2-defining-parent-attribute-properties-in-a-parent-child-hierarchy.md)  
- ここでは、親子ディメンションのレベル名を定義し、親メンバーに関連付けられているデータの表示、または非表示を指定します。 詳細については、次を参照してください。 [、親子階層](multidimensional-models/parent-child-dimension.md)と[、親子階層の属性](multidimensional-models/parent-child-dimension-attributes.md)します。  
+ ここでは、親子ディメンションのレベル名を定義し、親メンバーに関連付けられているデータの表示、または非表示を指定します。 詳細については、「親子階層の親子[階層](multidimensional-models/parent-child-dimension.md)と[属性](multidimensional-models/parent-child-dimension-attributes.md)」を参照してください。  
   
  [属性メンバーの自動的なグループ化](lesson-4-3-automatically-grouping-attribute-members.md)  
  ここでは、属性階層内のメンバーの配置に基づいて、属性メンバーのグループを自動的に作成します。 詳細については、[「属性メンバーのグループ化 (分離)](multidimensional-models/attribute-properties-group-attribute-members.md)」を参照してください。  
   
- [属性階層の非表示化と無効化](../analysis-services/lesson-4-4-hiding-and-disabling-attribute-hierarchies.md)  
+ [属性階層の非表示化と無効化](lesson-4-4-hiding-and-disabling-attribute-hierarchies.md)  
  ここでは、属性階層を無効にし、非表示にする方法と、そのタイミングについて学習します。  
   
  [2 次属性に基づく属性メンバーの並べ替え](lesson-4-5-sorting-attribute-members-based-on-a-secondary-attribute.md)  
@@ -48,11 +47,11 @@ ms.locfileid: "48184072"
  この実習では、UnknownMember プロパティと UnknownMemberName プロパティを構成し、null ディメンション メンバーによって発生するエラー状況を処理します。  
   
 ## <a name="next-lesson"></a>次のレッスン  
- [レッスン 5: ディメンションおよびメジャー グループ間のリレーションシップの定義](lesson-5-defining-relationships-between-dimensions-and-measure-groups.md)  
+ [レッスン 5: ディメンションとメジャーグループ間のリレーションシップの定義](lesson-5-defining-relationships-between-dimensions-and-measure-groups.md)  
   
-## <a name="see-also"></a>参照  
- [Analysis Services のチュートリアル シナリオ](analysis-services-tutorial-scenario.md)   
- [多次元モデリング&#40;Adventure Works チュートリアル&#41;](multidimensional-modeling-adventure-works-tutorial.md)   
+## <a name="see-also"></a>関連項目  
+ [Analysis Services チュートリアルのシナリオ](analysis-services-tutorial-scenario.md)   
+ [多次元モデリング&#40;の Adventure works チュートリアル&#41;](multidimensional-modeling-adventure-works-tutorial.md)   
  [多次元モデル内のディメンション](multidimensional-models/dimensions-in-multidimensional-models.md)  
   
   

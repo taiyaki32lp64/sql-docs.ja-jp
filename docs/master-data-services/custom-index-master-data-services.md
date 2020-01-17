@@ -1,5 +1,5 @@
 ---
-title: カスタム インデックス (マスター データ サービス) | Microsoft Docs
+title: カスタム インデックス
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -8,21 +8,20 @@ ms.reviewer: ''
 ms.technology: master-data-services
 ms.topic: conceptual
 ms.assetid: c57bf8b8-55a6-4b6c-9adb-91b5f4f1ee3c
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 8fc6c932dd3cb75a01cd5ad328ca47f1c51f9879
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
-ms.translationtype: HT
+ms.openlocfilehash: 52ca3533dfb8c53e4bbf1cd9f431a290221f2d5e
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52759684"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73729498"
 ---
 # <a name="custom-index-master-data-services"></a>カスタム インデックス (マスター データ サービス)
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-  カスタム インデックスは、1 つの属性 (シングル インデックス) または属性の一覧 (複合インデックス) の非クラスター化インデックスを 1 つのエンティティとして作成します。 通常、インデックスによりクエリ処理のパフォーマンスが向上します。 SQL Server インデックスの詳細については、「 [インデックス](../relational-databases/indexes/indexes.md)」を参照してください。  
+  カスタムインデックスは、1つの属性 (単一のインデックス) または属性の一覧 (複合インデックス) に、エンティティ内の非クラスター化インデックスを作成します。 通常、インデックスによりクエリ処理のパフォーマンスが向上します。 SQL Server インデックスの詳細については、「 [インデックス](../relational-databases/indexes/indexes.md)」を参照してください。  
   
 ## <a name="type-of-indexes"></a>インデックスの種類  
  各エンティティには次のタイプのカスタム インデックスを複数作成することができます。  
@@ -57,7 +56,7 @@ ms.locfileid: "52759684"
   
 -   カスタム インデックスに含まれている属性の種類は変更できません。  
   
-## <a name="related-tasks"></a>Related Tasks  
+## <a name="related-tasks"></a>関連タスク  
   
 |タスクの説明|トピック|  
 |----------------------|-----------|  

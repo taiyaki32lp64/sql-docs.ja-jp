@@ -19,15 +19,14 @@ helpviewer_keywords:
 - stopping SQL Server
 - immediately stopping SQL Server
 ms.assetid: c8b03ff9-688c-4fe8-86e8-bd6bd401c9a4
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: 602c8f5d1cded1c5d19c520087ceac1b9c9124d5
-ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 01cf9fcf7795e8f353565b767bbf79b1da43f4de
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/18/2018
-ms.locfileid: "53591896"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68121702"
 ---
 # <a name="shutdown-transact-sql"></a>SHUTDOWN (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -65,7 +64,7 @@ SHUTDOWN [ WITH NOWAIT ]
   
 -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 構成マネージャーを使用する。  
   
--   既定のインスタンスのコマンド プロンプトから **net stop mssqlserver** を実行する。または、名前付きインスタンスのコマンド プロンプトから **net stop mssql$**_instancename_ を実行する。  
+-   既定のインスタンスのコマンド プロンプトから **net stop mssqlserver** を実行する。または、名前付きインスタンスのコマンド プロンプトから **net stop mssql$** _instancename_ を実行する。  
   
 -   [コントロール パネル] の [サービス] を使用する。  
   

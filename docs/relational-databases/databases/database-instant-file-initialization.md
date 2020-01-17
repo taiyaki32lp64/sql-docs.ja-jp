@@ -1,7 +1,7 @@
 ---
 title: データベースのファイルの瞬時初期化 | Microsoft Docs
 ms.custom: ''
-ms.date: 01/09/2018
+ms.date: 03/07/2019
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
@@ -17,19 +17,18 @@ helpviewer_keywords:
 ms.assetid: 1ad468f5-4f75-480b-aac6-0b01b048bd67
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: e365ef2eed7dcd3f20dd5a9ad9a94627191c4df9
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: 87257431940b527fda01bc1704a519b37b6d4e05
+ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53204921"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "73982448"
 ---
 # <a name="database-file-initialization"></a>データベース ファイルの初期化
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 データおよびログ ファイルの初期化は、ディスクに以前削除したファイルのデータが残っている場合にそれを上書きするために行います。 次のいずれかの操作を実行すると、データとログ ファイルは、まずファイルのゼロイング (ゼロを書き込む処理) で初期化されます。  
   
-- データベースの作成。  
+- データベースを作成します。  
 - 既存のデータベースへのデータ ファイルまたはログ ファイルの追加。  
 - 既存のファイルのサイズを大きくする (自動拡張操作を含む)。  
 - データベースまたはファイル グループの復元。  
@@ -52,36 +51,34 @@ ms.locfileid: "53204921"
   
 アカウントに `Perform volume maintenance tasks` 権限を許可する方法。  
   
-1.  バックアップ ファイルを作成するコンピューター上で、 **ローカル セキュリティ ポリシー** アプリケーション (`secpol.msc`) を開きます。  
+1.  データ ファイルを作成するコンピューター上で、**ローカル セキュリティ ポリシー** アプリケーション (`secpol.msc`) を開きます。  
   
 2.  左側のペインで **[ローカル ポリシー]** を展開し、 **[ユーザー権利の割り当て]** をクリックします。  
   
 3.  右側のペインで、 **[ボリュームの保守タスクを実行]** をダブルクリックします。  
   
-4.  **[ユーザーまたはグループの追加]** をクリックし、バックアップに使用される任意のユーザー アカウントを追加します。  
+4.  **[ユーザーまたはグループの追加]** をクリックして、SQL Server サービスを実行するアカウントを追加します。  
   
 5.  **[適用]** をクリックし、 **[ローカル セキュリティ ポリシー]** ダイアログ ボックスをすべて閉じます。  
+
+1. SQL Server サービスを再起動します。
 
 > [!NOTE]
 > [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 以降、インストール時、セットアップ中にサービス アカウントにこのアクセス許可を付与できます。 [コマンド プロンプト インストール](../../database-engine/install-windows/install-sql-server-from-the-command-prompt.md)を利用する場合、/SQLSVCINSTANTFILEINIT 引数を追加するか、[インストール ウィザード](../../database-engine/install-windows/install-sql-server-from-the-installation-wizard-setup.md)で *[SQL Server データベース エンジン サービスにボリューム メンテナンス タスクを実行する特権を付与する]* ボックスを選択します。
 
 > [!NOTE]
-> [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] SP4 以降、および [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1 から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] では、[sys.dm_server_services](../../relational-databases/system-dynamic-management-views/sys-dm-server-services-transact-sql.md) DMV の *instant_file_initialization_enabled* 列を利用し、ファイルの瞬時初期化が有効になっているかどうかを判断できます。
+> [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] SP4 以降、および [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1 以降では、[sys.dm_server_services](../../relational-databases/system-dynamic-management-views/sys-dm-server-services-transact-sql.md) DMV の *instant_file_initialization_enabled* 列を利用し、ファイルの瞬時初期化が有効になっているかどうかを判断できます。
 
 ## <a name="remarks"></a>Remarks
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] サービス開始アカウントに *SE_MANAGE_VOLUME_NAME* が与えられる場合、開始時に [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エラー ログに次のような情報メッセージが記録されます。 
 
-```
-Database Instant File Initialization: enabled. For security and performance considerations see the topic 'Database Instant File Initialization' in SQL Server Books Online. This is an informational message only. No user action is required.
-```
+`Database Instant File Initialization: enabled. For security and performance considerations see the topic 'Database Instant File Initialization' in SQL Server Books Online. This is an informational message only. No user action is required.`
 
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] サービス開始アカウントに *SE_MANAGE_VOLUME_NAME* が与えられて**いない**場合、開始時に [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エラー ログに次のような情報メッセージが記録されます。 
 
-```
-Database Instant File Initialization: disabled. For security and performance considerations see the topic 'Database Instant File Initialization' in SQL Server Books Online. This is an informational message only. No user action is required.
-```
+`Database Instant File Initialization: disabled. For security and performance considerations see the topic 'Database Instant File Initialization' in SQL Server Books Online. This is an informational message only. No user action is required.`
 
-**適用対象:**[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] SP4 以降、[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] SP2 および [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)])
+**適用対象:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] SP4 以降、[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] SP2 および [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 以降)
 
 ## <a name="security-considerations"></a>セキュリティに関する考慮事項  
 ファイルの瞬時初期化 (IFI) を利用するとき、削除されたディスクの内容は、新しいデータがファイルに書き込まれるときにのみ上書きされるため、他のデータがデータ ファイルのその領域に書き込まれるまで、許可されていないプリンシパルが削除された内容にアクセスする可能性があります。 データベース ファイルが [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のインスタンスにアタッチされている間は、ファイルに対する随意アクセス制御リスト (DACL) により、このような情報漏えいのリスクは軽減されます。 この DACL により、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] サービス アカウントとローカル管理者のみにファイル アクセスが許可されます。 ただし、ファイルがデタッチされると、*SE_MANAGE_VOLUME_NAME* が付与されていないユーザーまたはサービスからアクセスされる可能性があります。 データベースのバックアップ時にも同様の懸案事項があります。バックアップ ファイルが適切な DACL で保護されていない場合、許可されていないユーザーやサービスが削除された内容を利用できるようになることがあります。  

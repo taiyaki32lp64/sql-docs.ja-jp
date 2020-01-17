@@ -10,15 +10,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - External Tools dialog box
 ms.assetid: d7dae88f-0781-4162-96cd-d3a3a4d82035
-author: stevestein
-ms.author: sstein
-manager: craigg
-ms.openlocfilehash: a69ead28479ba16df7439d6e551163be48737562
-ms.sourcegitcommit: 40c3b86793d91531a919f598dd312f7e572171ec
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 17e385913c362a2921d715607ca590d66ed69a48
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53328572"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68262815"
 ---
 # <a name="external-tools"></a>[外部ツール]
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -72,9 +71,9 @@ ms.locfileid: "53328572"
   
 2.  **[タイトル]** ボックスで、「 **SQL Server 構成マネージャー**」と入力します。  
   
-3.   **[コマンド]** ボックスで、 [!INCLUDE[msCoName](../../includes/msconame_md.md)] 管理コンソールの実行可能ファイルへのパスを「 **C:\WINNT\system32\mmc.exe**」のように入力します。  
+3.  **[コマンド]** ボックスで、 [!INCLUDE[msCoName](../../includes/msconame_md.md)] 管理コンソールの実行可能ファイルへのパスを「 **C:\WINNT\system32\mmc.exe**」のように入力します。  
   
-4.   **[引数]** ボックスで、.msc ファイルへのパスを「 **"C:\WINNT\system32\SQLServerManager.msc"**」のように入力します。  
+4.  **[引数]** ボックスで、.msc ファイルへのパスを「 **"C:\WINNT\system32\SQLServerManager.msc"** 」のように入力します。  
   
 > [!NOTE]  
 > [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] [スタート] **メニューで** ショートカットのプロパティを表示して、コンピューター上のファイルの場所を確認します。  

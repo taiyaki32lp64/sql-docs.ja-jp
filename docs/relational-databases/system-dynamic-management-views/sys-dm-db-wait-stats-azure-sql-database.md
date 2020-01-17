@@ -18,14 +18,13 @@ helpviewer_keywords:
 ms.assetid: 00abd0a5-bae0-4d71-b173-f7a14cddf795
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: e5b81c48e017312048f15b600382af5f95aec821
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 0c32af194a1e74e0fd11e65a75109165e81cc4c1
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56038923"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68090873"
 ---
 # <a name="sysdmdbwaitstats-azure-sql-database"></a>sys.dm_db_wait_stats (Azure SQL データベース)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
@@ -111,12 +110,12 @@ ms.locfileid: "56038923"
 |BUILTIN_HASHKEY_MUTEX|この待機はインスタンスの起動後、内部データ構造の初期化中に発生することがあります。 データ構造がいったん初期化されると、それ以降に再発生することはありません。|  
 |CHECK_PRINT_RECORD|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |CHECKPOINT_QUEUE|チェックポイント タスクが、次のチェックポイント要求を待機しているときに発生します。|  
-|CHKPT |サーバー起動時に発生し、チェックポイント スレッドに開始できることを伝えます。|  
+|CHKPT|サーバー起動時に発生し、チェックポイント スレッドに開始できることを伝えます。|  
 |CLEAR_DB|データベースの開閉など、データベースの状態を変更する操作時に発生します。|  
 |CLR_AUTO_EVENT|タスクが共通言語ランタイム (CLR) を実行中で、特定の自動イベントが開始されるのを待機しているときに発生します。 待機は長時間になることが一般的で、問題はありません。|  
 |CLR_CRST|タスクが CLR を実行中で、重大なセクションが別のタスクによって現在使用されている場合、そのセクションを待機しているときに発生します。|  
 |CLR_JOIN|タスクが CLR を実行中で、別のタスクの終了を待機しているときに発生します。 また、この待機状態は、タスク間の結合があるときに発生します。|  
-|CLR_MANUAL_EVENT |タスクが CLR を実行中で、特定の手動イベントが開始されるのを待機しているときに発生します。|  
+|CLR_MANUAL_EVENT|タスクが CLR を実行中で、特定の手動イベントが開始されるのを待機しているときに発生します。|  
 |CLR_MEMORY_SPY|データ構造のロック取得での待機中に発生します。このデータ構造は、CLR に由来するすべての仮想メモリ割り当てを記録するために使用されます。 データ構造はロックされますが、それは並行アクセスがある場合でもデータの整合性を保持するためです。|  
 |CLR_MONITOR|タスクが CLR を実行中で、モニターのロックの取得を待機しているときに発生します。|  
 |CLR_RWLOCK_READER|タスクが CLR を実行中で、リーダー ロックを待機しているときに発生します。|  
@@ -131,11 +130,11 @@ ms.locfileid: "56038923"
 |DBMIRROR_DBM_EVENT|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |DBMIRROR_DBM_MUTEX|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |DBMIRROR_EVENTS_QUEUE|データベース ミラーリングがイベントの処理を待機しているときに発生します。|  
-|DBMIRROR_SEND |タスクが、ネットワーク層の通信バックログが消去されメッセージ送信できるようになるのを待機しているときに発生します。 通信層が過負荷になり、データベース ミラーリング データのスループットに影響が生じ始めていることを表します。|  
+|DBMIRROR_SEND|タスクが、ネットワーク層の通信バックログが消去されメッセージ送信できるようになるのを待機しているときに発生します。 通信層が過負荷になり、データベース ミラーリング データのスループットに影響が生じ始めていることを表します。|  
 |DBMIRROR_WORKER_QUEUE|データベース ミラーリング ワーカー タスクが、次の作業の実行を待機していることを表します。|  
-|DBMIRRORING_CMD |タスクが、ログ レコードのディスクへのフラッシュを待機しているときに発生します。 この待機状態は、長時間続くことが予想されます。|  
+|DBMIRRORING_CMD|タスクが、ログ レコードのディスクへのフラッシュを待機しているときに発生します。 この待機状態は、長時間続くことが予想されます。|  
 |DEADLOCK_ENUM_MUTEX|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] で同時に複数のデッドロック検索が実行されていないかどうかを、デッドロック モニターと sys.dm_os_waiting_tasks が確認しようとするときに発生します。|  
-|DEADLOCK_TASK_SEARCH |このリソースでの待機時間が長い場合は、サーバーが sys.dm_os_waiting_tasks 上で複数のクエリを実行したことにより、デッドロック モニターでデッドロック検索を実行できなくなっていることを表します。 この待機の種類は、デッドロック モニターにのみ使用されます。 sys.dm_os_waiting_tasks の上部のクエリは、DEADLOCK_ENUM_MUTEX を使用します。|  
+|DEADLOCK_TASK_SEARCH|このリソースでの待機時間が長い場合は、サーバーが sys.dm_os_waiting_tasks 上で複数のクエリを実行したことにより、デッドロック モニターでデッドロック検索を実行できなくなっていることを表します。 この待機の種類は、デッドロック モニターにのみ使用されます。 sys.dm_os_waiting_tasks の上部のクエリは、DEADLOCK_ENUM_MUTEX を使用します。|  
 |DEBUG|[!INCLUDE[tsql](../../includes/tsql-md.md)] と CLR が内部同期のためデバッグしているときに発生します。|  
 |DISABLE_VERSIONING|一番最初のアクティブなトランザクションのタイムスタンプが、状態が変化し始めたときのタイムスタンプより後かどうかを確認するために、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] がバージョン トランザクション マネージャーをポーリングしたときに発生します。 最初のトランザクションのタイムスタンプが状態変化のタイムスタンプより後の場合、ALTER DATABASE ステートメントの実行前に開始されたスナップショット トランザクションはすべて終了しています。 この待機状態は、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] が ALTER DATABASE ステートメントを使用してバージョン管理を無効にするときに使用されます。|  
 |DISKIO_SUSPEND|外部バックアップがアクティブで、タスクがファイルへのアクセスを待機しているときに発生します。 これは、ユーザー プロセスの待機が発生するたびに報告されます。 1 つのユーザー プロセスの待機が 5 回を超えた場合は、外部バックアップの完了に時間がかかりすぎている可能性があります。|  
@@ -143,24 +142,24 @@ ms.locfileid: "56038923"
 |DLL_LOADING_MUTEX|XML パーサー DLL が読み込まれるのを待機しているときに 1 回発生します。|  
 |DROPTEMP|一時オブジェクトの削除を試行して失敗した場合に、次の削除を試行するまでの間に発生します。 この待機時間は、削除の試行が失敗するたびに指数関数的に増えます。|  
 |DTC|タスクが、状態遷移の管理に使用されるイベントで待機しているときに発生します。 この待機状態によって、[!INCLUDE[msCoName](../../includes/msconame-md.md)] 分散トランザクション コーディネーター (MS DTC) サービスが使用できなくなったという通知を [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] で受信した後で、MS DTC トランザクションの復旧が発生するタイミングが制御されます。<br /><br /> また、この待機状態によって、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] が MS DTC トランザクションのコミットを開始するときに待機中になっているタスクを把握することができます。さらに、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] が MS DTC のコミットの終了を待機しているときに待機中になっているタスクも把握することができます。|  
-|DTC_ABORT_REQUEST |MS DTC ワーカー セッションが、MS DTC トランザクションの所有権取得を待機しているときに発生します。 MS DTC がトランザクションの所有権を取得した後、セッションはそのトランザクションをロールバックできます。 一般に、セッションが待機するのは、そのトランザクションが別のセッションで使用されている場合です。|  
+|DTC_ABORT_REQUEST|MS DTC ワーカー セッションが、MS DTC トランザクションの所有権取得を待機しているときに発生します。 MS DTC がトランザクションの所有権を取得した後、セッションはそのトランザクションをロールバックできます。 一般に、セッションが待機するのは、そのトランザクションが別のセッションで使用されている場合です。|  
 |DTC_RESOLVE|複数のデータベースにまたがるトランザクションで、復旧タスクが、トランザクションの結果をクエリするため master データベースを待機しているときに発生します。|  
-|DTC_STATE |内部の MS DTC グローバル状態オブジェクトに対する変更を保護するイベントで、タスクが待機しているときに発生します。 この待機状態は非常に短い時間保持されます。|  
+|DTC_STATE|内部の MS DTC グローバル状態オブジェクトに対する変更を保護するイベントで、タスクが待機しているときに発生します。 この待機状態は非常に短い時間保持されます。|  
 |DTC_TMDOWN_REQUEST|MS DTC ワーカー セッションで、MS DTC サービスが使用できないという通知を [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] が受信したときに発生します。 ワーカーはまず MS DTC 復旧プロセスの開始を待機し、 次に、ワーカーが操作している分散トランザクションの結果取得を待機します。 この待機は、MS DTC サービスとの接続が再度確立されるまで継続される場合があります。|  
-|DTC_WAITFOR_OUTCOME |MS DTC がアクティブになり、準備されたトランザクションの解決が可能になるのを、復旧タスクが待機しているときに発生します。|  
-|DUMP_LOG_COORDINATOR |メイン タスクが、サブタスクによるデータ生成を待機しているときに発生します。 通常、この待機状態は発生しません。 待機が長時間になる場合は、予期しないブロックが発生している可能性があり、 サブタスクを調査する必要があります。|  
+|DTC_WAITFOR_OUTCOME|MS DTC がアクティブになり、準備されたトランザクションの解決が可能になるのを、復旧タスクが待機しているときに発生します。|  
+|DUMP_LOG_COORDINATOR|メイン タスクが、サブタスクによるデータ生成を待機しているときに発生します。 通常、この待機状態は発生しません。 待機が長時間になる場合は、予期しないブロックが発生している可能性があり、 サブタスクを調査する必要があります。|  
 |DUMPTRIGGER|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |EC|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |EE_PMOLOCK|ステートメントの実行時、特定の種類のメモリ割り当てを同期するときに発生します。|  
 |EE_SPECPROC_MAP_INIT|内部プロシージャ ハッシュ テーブルの作成における同期中に発生します。 この待機は、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスの開始後、ハッシュ テーブルに最初にアクセスするときにのみ発生します。|  
 |ENABLE_VERSIONING|データベースがスナップショット分離が許可されている状態に移行できることを宣言するために、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] が、このデータベースにおけるすべての更新トランザクションの終了を待機しているときに発生します。 この待機状態は、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] が ALTER DATABASE ステートメントを使用してスナップショット分離を有効にするときに使用されます。|  
 |ERROR_REPORTING_MANAGER|複数のエラー ログの初期化における同期中に発生します。|  
-|EXCHANGE |並列クエリの実行時、クエリ プロセッサ交換反復子での同期中に発生します。|  
-|EXECSYNC |並列クエリの実行時、交換反復子に関係のない領域での、クエリ プロセッサによる同期中に発生します。 このような領域の例としては、ビットマップ、ラージ バイナリ オブジェクト (LOB)、スプール反復子などがあります。 LOB では、この待機状態が頻繁に使用されることがあります。|  
+|EXCHANGE|並列クエリの実行時、クエリ プロセッサ交換反復子での同期中に発生します。|  
+|EXECSYNC|並列クエリの実行時、交換反復子に関係のない領域での、クエリ プロセッサによる同期中に発生します。 このような領域の例としては、ビットマップ、ラージ バイナリ オブジェクト (LOB)、スプール反復子などがあります。 LOB では、この待機状態が頻繁に使用されることがあります。|  
 |EXECUTION_PIPE_EVENT_INTERNAL|バッチ実行のプロデューサー部とコンシューマー部との間で同期しているときに発生します。これらの部は接続コンテキストを通じて送信されます。|  
 |FAILPOINT|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
-|FCB_REPLICA_READ |スナップショット (または DBCC によって作成された一時スナップショット) のスパース ファイルの読み取りを同期するときに発生します。|  
-|FCB_REPLICA_WRITE |スナップショット (または DBCC によって作成された一時スナップショット) のスパース ファイルに対するページのプッシュまたはプルを同期するときに発生します。|  
+|FCB_REPLICA_READ|スナップショット (または DBCC によって作成された一時スナップショット) のスパース ファイルの読み取りを同期するときに発生します。|  
+|FCB_REPLICA_WRITE|スナップショット (または DBCC によって作成された一時スナップショット) のスパース ファイルに対するページのプッシュまたはプルを同期するときに発生します。|  
 |FS_FC_RWLOCK|FILESTREAM ガベージ コレクターが次のいずれかを実行するために待機しているときに発生します。<br /><br /> ガベージ コレクションを無効にします (バックアップと復元で使用)。<br /><br /> FILESTREAM ガベージ コレクターを 1 サイクル実行します。|  
 |FS_GARBAGE_COLLECTOR_SHUTDOWN|FILESTREAM ガベージ コレクターがクリーンアップ タスクの完了を待機しているときに発生します。|  
 |FS_HEADER_RWLOCK|FILESTREAM データ コンテナーの FILESTREAM ヘッダーへのアクセスの取得を待機しているときに発生します。待機するのは、FILESTREAM ヘッダー ファイル (Filestream.hdr) の内容を読み取るかまたは更新するためです。|  
@@ -186,62 +185,62 @@ ms.locfileid: "56038923"
 |KTM_ENLISTMENT|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |KTM_RECOVERY_MANAGER|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |KTM_RECOVERY_RESOLUTION|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
-|LATCH_DT |DT (破棄) ラッチを待機しているときに発生します。 これには、バッファー ラッチまたはトランザクション マーク ラッチは含まれません。 LATCH_* 待機の一覧は、sys.dm_os_latch_stats で確認できます。 sys.dm_os_latch_stats では、LATCH_NL、LATCH_SH、LATCH_UP、LATCH_EX、および LATCH_DT の待機はグループ化されます。|  
-|LATCH_EX |EX (排他) ラッチを待機しているときに発生します。 これには、バッファー ラッチまたはトランザクション マーク ラッチは含まれません。 LATCH_* 待機の一覧は、sys.dm_os_latch_stats で確認できます。 sys.dm_os_latch_stats では、LATCH_NL、LATCH_SH、LATCH_UP、LATCH_EX、および LATCH_DT の待機はグループ化されます。|  
-|LATCH_KP |KP (保持) ラッチを待機しているときに発生します。 これには、バッファー ラッチまたはトランザクション マーク ラッチは含まれません。 LATCH_* 待機の一覧は、sys.dm_os_latch_stats で確認できます。 sys.dm_os_latch_stats では、LATCH_NL、LATCH_SH、LATCH_UP、LATCH_EX、および LATCH_DT の待機はグループ化されます。|  
-|LATCH_NL |[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
-|LATCH_SH |SH (共有) ラッチを待機しているときに発生します。 これには、バッファー ラッチまたはトランザクション マーク ラッチは含まれません。 LATCH_* 待機の一覧は、sys.dm_os_latch_stats で確認できます。 sys.dm_os_latch_stats では、LATCH_NL、LATCH_SH、LATCH_UP、LATCH_EX、および LATCH_DT の待機はグループ化されます。|  
-|LATCH_UP |UP (更新) ラッチを待機しているときに発生します。 これには、バッファー ラッチまたはトランザクション マーク ラッチは含まれません。 LATCH_* 待機の一覧は、sys.dm_os_latch_stats で確認できます。 sys.dm_os_latch_stats では、LATCH_NL、LATCH_SH、LATCH_UP、LATCH_EX、および LATCH_DT の待機はグループ化されます。|  
-|LAZYWRITER_SLEEP |レイジー ライター タスクが一時中断されるときに発生します。 待機中のバックグラウンド タスクで費やされた時間を測定することができます。 ユーザーの機能停止を検索しているときには、この待機状態は考慮しないでください。|  
-|LCK_M_BU |タスクが一括更新 (BU) ロックの取得を待機しているときに発生します。 ロックの互換性対応表を参照してください。 [sys.dm_tran_locks &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md)します。|  
+|LATCH_DT|DT (破棄) ラッチを待機しているときに発生します。 これには、バッファー ラッチまたはトランザクション マーク ラッチは含まれません。 LATCH_* 待機の一覧は、sys.dm_os_latch_stats で確認できます。 sys.dm_os_latch_stats では、LATCH_NL、LATCH_SH、LATCH_UP、LATCH_EX、および LATCH_DT の待機はグループ化されます。|  
+|LATCH_EX|EX (排他) ラッチを待機しているときに発生します。 これには、バッファー ラッチまたはトランザクション マーク ラッチは含まれません。 LATCH_* 待機の一覧は、sys.dm_os_latch_stats で確認できます。 sys.dm_os_latch_stats では、LATCH_NL、LATCH_SH、LATCH_UP、LATCH_EX、および LATCH_DT の待機はグループ化されます。|  
+|LATCH_KP|KP (保持) ラッチを待機しているときに発生します。 これには、バッファー ラッチまたはトランザクション マーク ラッチは含まれません。 LATCH_* 待機の一覧は、sys.dm_os_latch_stats で確認できます。 sys.dm_os_latch_stats では、LATCH_NL、LATCH_SH、LATCH_UP、LATCH_EX、および LATCH_DT の待機はグループ化されます。|  
+|LATCH_NL|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
+|LATCH_SH|SH (共有) ラッチを待機しているときに発生します。 これには、バッファー ラッチまたはトランザクション マーク ラッチは含まれません。 LATCH_* 待機の一覧は、sys.dm_os_latch_stats で確認できます。 sys.dm_os_latch_stats では、LATCH_NL、LATCH_SH、LATCH_UP、LATCH_EX、および LATCH_DT の待機はグループ化されます。|  
+|LATCH_UP|UP (更新) ラッチを待機しているときに発生します。 これには、バッファー ラッチまたはトランザクション マーク ラッチは含まれません。 LATCH_* 待機の一覧は、sys.dm_os_latch_stats で確認できます。 sys.dm_os_latch_stats では、LATCH_NL、LATCH_SH、LATCH_UP、LATCH_EX、および LATCH_DT の待機はグループ化されます。|  
+|LAZYWRITER_SLEEP|レイジー ライター タスクが一時中断されるときに発生します。 待機中のバックグラウンド タスクで費やされた時間を測定することができます。 ユーザーの機能停止を検索しているときには、この待機状態は考慮しないでください。|  
+|LCK_M_BU|タスクが一括更新 (BU) ロックの取得を待機しているときに発生します。 ロックの互換性対応表を参照してください。 [sys.dm_tran_locks &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md)します。|  
 |LCK_M_IS|タスクがインテント共有 (IS) ロックの取得を待機しているときに発生します。 ロックの互換性対応表を参照してください。 [sys.dm_tran_locks &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md)します。|  
 |LCK_M_IU|タスクがインテント更新 (IU) ロックの取得を待機しているときに発生します。 ロックの互換性対応表を参照してください。 [sys.dm_tran_locks &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md)します。|  
-|LCK_M_IX |タスクがインテント排他 (IX) ロックの取得を待機しているときに発生します。 ロックの互換性対応表を参照してください。 [sys.dm_tran_locks &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md)します。|  
-|LCK_M_RIn_NL |タスクが、現在のキー値に対する NULL ロックの取得、および現在のキーから以前のキーまでを対象とした挿入範囲ロックの取得を待機しているときに発生します。 キーの NULL ロックは、すぐに解放されるロックです。 ロックの互換性対応表を参照してください。 [sys.dm_tran_locks &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md)します。|  
-|LCK_M_RIn_S |タスクが、現在のキー値に対する共有ロックの取得、および現在のキーから以前のキーまでを対象とした挿入範囲ロックの取得を待機しているときに発生します。 ロックの互換性対応表を参照してください。 [sys.dm_tran_locks &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md)します。|  
-|LCK_M_RIn_U |タスクが、現在のキー値に対する更新ロックの取得、および現在のキーから以前のキーまでを対象とした挿入範囲ロックの取得を待機しているときに発生します。 ロックの互換性対応表を参照してください。 [sys.dm_tran_locks &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md)します。|  
-|LCK_M_RIn_X |タスクが、現在のキー値に対する排他ロックの取得、および現在のキーから以前のキーまでを対象とした挿入範囲ロックの取得を待機しているときに発生します。 ロックの互換性対応表を参照してください。 [sys.dm_tran_locks &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md)します。|  
-|LCK_M_RS_S |タスクが、現在のキー値に対する共有ロックの取得、および現在のキーから以前のキーまでを対象とした共有範囲ロックの取得を待機しているときに発生します。 ロックの互換性対応表を参照してください。 [sys.dm_tran_locks &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md)します。|  
-|LCK_M_RS_U |タスクが、現在のキー値に対する更新ロックの取得、および現在のキーから以前のキーまでを対象とした更新範囲ロックの取得を待機しているときに発生します。 ロックの互換性対応表を参照してください。 [sys.dm_tran_locks &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md)します。|  
-|LCK_M_RX_S |タスクが、現在のキー値に対する共有ロックの取得、および現在のキーから以前のキーまでを対象とした排他範囲ロックの取得を待機しているときに発生します。 ロックの互換性対応表を参照してください。 [sys.dm_tran_locks &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md)します。|  
-|LCK_M_RX_U |タスクが、現在のキー値に対する更新ロックの取得、および現在のキーから以前のキーまでを対象とした排他範囲ロックの取得を待機しているときに発生します。 ロックの互換性対応表を参照してください。 [sys.dm_tran_locks &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md)します。|  
-|LCK_M_RX_X |タスクが、現在のキー値に対する排他ロックの取得、および現在のキーから以前のキーまでを対象とした排他範囲ロックの取得を待機しているときに発生します。 ロックの互換性対応表を参照してください。 [sys.dm_tran_locks &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md)します。|  
-|LCK_M_S |タスクが共有ロックの取得を待機しているときに発生します。 ロックの互換性対応表を参照してください。 [sys.dm_tran_locks &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md)します。|  
-|LCK_M_SCH_M |タスクがスキーマ変更ロックの取得を待機しているときに発生します。 ロックの互換性対応表を参照してください。 [sys.dm_tran_locks &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md)します。|  
-|LCK_M_SCH_S |タスクがスキーマ共有ロックの取得を待機しているときに発生します。 ロックの互換性対応表を参照してください。 [sys.dm_tran_locks &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md)します。|  
-|LCK_M_SIU |タスクがインテント更新付き共有ロックの取得を待機しているときに発生します。 ロックの互換性対応表を参照してください。 [sys.dm_tran_locks &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md)します。|  
-|LCK_M_SIX |タスクがインテント排他付き共有ロックの取得を待機しているときに発生します。 ロックの互換性対応表を参照してください。 [sys.dm_tran_locks &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md)します。|  
-|LCK_M_U |タスクが更新ロックの取得を待機しているときに発生します。 ロックの互換性対応表を参照してください。 [sys.dm_tran_locks &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md)します。|  
-|LCK_M_UIX |タスクがインテント排他付き更新ロックの取得を待機しているときに発生します。 ロックの互換性対応表を参照してください。 [sys.dm_tran_locks &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md)します。|  
-|LCK_M_X |タスクが排他ロックの取得を待機しているときに発生します。 ロックの互換性対応表を参照してください。 [sys.dm_tran_locks &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md)します。|  
+|LCK_M_IX|タスクがインテント排他 (IX) ロックの取得を待機しているときに発生します。 ロックの互換性対応表を参照してください。 [sys.dm_tran_locks &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md)します。|  
+|LCK_M_RIn_NL|タスクが、現在のキー値に対する NULL ロックの取得、および現在のキーから以前のキーまでを対象とした挿入範囲ロックの取得を待機しているときに発生します。 キーの NULL ロックは、すぐに解放されるロックです。 ロックの互換性対応表を参照してください。 [sys.dm_tran_locks &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md)します。|  
+|LCK_M_RIn_S|タスクが、現在のキー値に対する共有ロックの取得、および現在のキーから以前のキーまでを対象とした挿入範囲ロックの取得を待機しているときに発生します。 ロックの互換性対応表を参照してください。 [sys.dm_tran_locks &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md)します。|  
+|LCK_M_RIn_U|タスクが、現在のキー値に対する更新ロックの取得、および現在のキーから以前のキーまでを対象とした挿入範囲ロックの取得を待機しているときに発生します。 ロックの互換性対応表を参照してください。 [sys.dm_tran_locks &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md)します。|  
+|LCK_M_RIn_X|タスクが、現在のキー値に対する排他ロックの取得、および現在のキーから以前のキーまでを対象とした挿入範囲ロックの取得を待機しているときに発生します。 ロックの互換性対応表を参照してください。 [sys.dm_tran_locks &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md)します。|  
+|LCK_M_RS_S|タスクが、現在のキー値に対する共有ロックの取得、および現在のキーから以前のキーまでを対象とした共有範囲ロックの取得を待機しているときに発生します。 ロックの互換性対応表を参照してください。 [sys.dm_tran_locks &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md)します。|  
+|LCK_M_RS_U|タスクが、現在のキー値に対する更新ロックの取得、および現在のキーから以前のキーまでを対象とした更新範囲ロックの取得を待機しているときに発生します。 ロックの互換性対応表を参照してください。 [sys.dm_tran_locks &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md)します。|  
+|LCK_M_RX_S|タスクが、現在のキー値に対する共有ロックの取得、および現在のキーから以前のキーまでを対象とした排他範囲ロックの取得を待機しているときに発生します。 ロックの互換性対応表を参照してください。 [sys.dm_tran_locks &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md)します。|  
+|LCK_M_RX_U|タスクが、現在のキー値に対する更新ロックの取得、および現在のキーから以前のキーまでを対象とした排他範囲ロックの取得を待機しているときに発生します。 ロックの互換性対応表を参照してください。 [sys.dm_tran_locks &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md)します。|  
+|LCK_M_RX_X|タスクが、現在のキー値に対する排他ロックの取得、および現在のキーから以前のキーまでを対象とした排他範囲ロックの取得を待機しているときに発生します。 ロックの互換性対応表を参照してください。 [sys.dm_tran_locks &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md)します。|  
+|LCK_M_S|タスクが共有ロックの取得を待機しているときに発生します。 ロックの互換性対応表を参照してください。 [sys.dm_tran_locks &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md)します。|  
+|LCK_M_SCH_M|タスクがスキーマ変更ロックの取得を待機しているときに発生します。 ロックの互換性対応表を参照してください。 [sys.dm_tran_locks &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md)します。|  
+|LCK_M_SCH_S|タスクがスキーマ共有ロックの取得を待機しているときに発生します。 ロックの互換性対応表を参照してください。 [sys.dm_tran_locks &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md)します。|  
+|LCK_M_SIU|タスクがインテント更新付き共有ロックの取得を待機しているときに発生します。 ロックの互換性対応表を参照してください。 [sys.dm_tran_locks &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md)します。|  
+|LCK_M_SIX|タスクがインテント排他付き共有ロックの取得を待機しているときに発生します。 ロックの互換性対応表を参照してください。 [sys.dm_tran_locks &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md)します。|  
+|LCK_M_U|タスクが更新ロックの取得を待機しているときに発生します。 ロックの互換性対応表を参照してください。 [sys.dm_tran_locks &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md)します。|  
+|LCK_M_UIX|タスクがインテント排他付き更新ロックの取得を待機しているときに発生します。 ロックの互換性対応表を参照してください。 [sys.dm_tran_locks &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md)します。|  
+|LCK_M_X|タスクが排他ロックの取得を待機しているときに発生します。 ロックの互換性対応表を参照してください。 [sys.dm_tran_locks &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md)します。|  
 |LOG_RATE_GOVERNOR|見積もり値がログに書き込まれるのを DB が待機しているときに発生します。|  
-|LOGBUFFER |タスクが、ログ レコードを格納するログ バッファーの領域を待機しているときに発生します。 常に高い値が示される場合は、ログ デバイスで解放される領域よりも、サーバーにより生成されるログ サイズが大きいことを表しています。|  
+|LOGBUFFER|タスクが、ログ レコードを格納するログ バッファーの領域を待機しているときに発生します。 常に高い値が示される場合は、ログ デバイスで解放される領域よりも、サーバーにより生成されるログ サイズが大きいことを表しています。|  
 |LOGGENERATION|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |LOGMGR|データベースを閉じる間、ログのシャットダウン前に未処理のログ I/O が終了するのをタスクが待機しているときに発生します。|  
-|LOGMGR_FLUSH |[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
+|LOGMGR_FLUSH|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |LOGMGR_QUEUE|ログ ライター タスクが作業要求を待機しているときに発生します。|  
-|LOGMGR_RESERVE_APPEND |新しいログ レコードを書き込むために、タスクが、ログの切り捨てによるログ領域の解放の確認を待機しているときに発生します。 この待機を短縮すると、影響を受けるデータベースのログ ファイル サイズが増えることに注意してください。|  
+|LOGMGR_RESERVE_APPEND|新しいログ レコードを書き込むために、タスクが、ログの切り捨てによるログ領域の解放の確認を待機しているときに発生します。 この待機を短縮すると、影響を受けるデータベースのログ ファイル サイズが増えることに注意してください。|  
 |LOWFAIL_MEMMGR_QUEUE|メモリが使用可能になるのを待機しているときに発生します。|  
 |MSQL_DQ|タスクが分散クエリ操作の終了を待機しているときに発生します。 これは、複数のアクティブな結果セット (MARS) アプリケーションにデッドロックの可能性があるかどうかを検出するために使用されます。 分散クエリ呼び出しが終了すると、待機は終了します。|  
 |MSQL_XACT_MGR_MUTEX|タスクが、セッション レベル トランザクション操作を実行するために、セッション トランザクション マネージャーの所有権の取得を待機しているときに発生します。|  
 |MSQL_XACT_MUTEX|トランザクション使用の同期中に発生します。 要求でトランザクションを使用するには、まずミューテックスを取得する必要があります。|  
-|MSQL_XP |タスクが、拡張ストアド プロシージャの終了を待機しているときに発生します。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、この待機状態を使用して、MARS アプリケーションにデッドロックの可能性があるかどうかを検出します。 拡張ストアド プロシージャ呼び出しが終了すると、待機は終了します。|  
+|MSQL_XP|タスクが、拡張ストアド プロシージャの終了を待機しているときに発生します。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、この待機状態を使用して、MARS アプリケーションにデッドロックの可能性があるかどうかを検出します。 拡張ストアド プロシージャ呼び出しが終了すると、待機は終了します。|  
 |MSSEARCH|フルテキスト検索の呼び出し中に発生します。 フルテキスト操作が完了すると、待機は終了します。 この待機はフルテキスト操作の競合ではなく、操作時間を表します。|  
 |NET_WAITFOR_PACKET|ネットワークの読み取り中に、接続がネットワーク パケットを待機しているときに発生します。|  
 |OLEDB|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] が [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB プロバイダーを呼び出すときに発生します。 この種類の待機は、同期では使用されません。 代わりに、OLE DB プロバイダー呼び出しの持続時間を示します。|  
 |ONDEMAND_TASK_QUEUE|バックグラウンド タスクが、優先度の高いシステム タスクの要求を待機しているときに発生します。 待機時間が長い場合は処理優先度が高い要求がないことを示します。問題があるわけではありません。|  
-|PAGEIOLATCH_DT |タスクが、I/O 要求内のバッファー ラッチで待機しているときに発生します。 ラッチ要求は破棄モードです。 待機時間が長い場合、ディスク サブシステムに問題がある可能性があります。|  
-|PAGEIOLATCH_EX |タスクが、I/O 要求内のバッファー ラッチで待機しているときに発生します。 ラッチ要求は排他モードです。 待機時間が長い場合、ディスク サブシステムに問題がある可能性があります。|  
-|PAGEIOLATCH_KP |タスクが、I/O 要求内のバッファー ラッチで待機しているときに発生します。 ラッチ要求は保持モードです。 待機時間が長い場合、ディスク サブシステムに問題がある可能性があります。|  
-|PAGEIOLATCH_NL |[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
-|PAGEIOLATCH_SH |タスクが、I/O 要求内のバッファー ラッチで待機しているときに発生します。 ラッチ要求は共有モードです。 待機時間が長い場合、ディスク サブシステムに問題がある可能性があります。|  
-|PAGEIOLATCH_UP |タスクが、I/O 要求内のバッファー ラッチで待機しているときに発生します。 ラッチ要求は更新モードです。 待機時間が長い場合、ディスク サブシステムに問題がある可能性があります。|  
-|PAGELATCH_DT |タスクが、I/O 要求内にないバッファー ラッチで待機しているときに発生します。 ラッチ要求は破棄モードです。|  
-|PAGELATCH_EX |タスクが、I/O 要求内にないバッファー ラッチで待機しているときに発生します。 ラッチ要求は排他モードです。|  
-|PAGELATCH_KP |タスクが、I/O 要求内にないバッファー ラッチで待機しているときに発生します。 ラッチ要求は保持モードです。|  
-|PAGELATCH_NL |[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
-|PAGELATCH_SH |タスクが、I/O 要求内にないバッファー ラッチで待機しているときに発生します。 ラッチ要求は共有モードです。|  
-|PAGELATCH_UP |タスクが、I/O 要求内にないバッファー ラッチで待機しているときに発生します。 ラッチ要求は更新モードです。|  
+|PAGEIOLATCH_DT|タスクが、I/O 要求内のバッファー ラッチで待機しているときに発生します。 ラッチ要求は破棄モードです。 待機時間が長い場合、ディスク サブシステムに問題がある可能性があります。|  
+|PAGEIOLATCH_EX|タスクが、I/O 要求内のバッファー ラッチで待機しているときに発生します。 ラッチ要求は排他モードです。 待機時間が長い場合、ディスク サブシステムに問題がある可能性があります。|  
+|PAGEIOLATCH_KP|タスクが、I/O 要求内のバッファー ラッチで待機しているときに発生します。 ラッチ要求は保持モードです。 待機時間が長い場合、ディスク サブシステムに問題がある可能性があります。|  
+|PAGEIOLATCH_NL|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
+|PAGEIOLATCH_SH|タスクが、I/O 要求内のバッファー ラッチで待機しているときに発生します。 ラッチ要求は共有モードです。 待機時間が長い場合、ディスク サブシステムに問題がある可能性があります。|  
+|PAGEIOLATCH_UP|タスクが、I/O 要求内のバッファー ラッチで待機しているときに発生します。 ラッチ要求は更新モードです。 待機時間が長い場合、ディスク サブシステムに問題がある可能性があります。|  
+|PAGELATCH_DT|タスクが、I/O 要求内にないバッファー ラッチで待機しているときに発生します。 ラッチ要求は破棄モードです。|  
+|PAGELATCH_EX|タスクが、I/O 要求内にないバッファー ラッチで待機しているときに発生します。 ラッチ要求は排他モードです。|  
+|PAGELATCH_KP|タスクが、I/O 要求内にないバッファー ラッチで待機しているときに発生します。 ラッチ要求は保持モードです。|  
+|PAGELATCH_NL|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
+|PAGELATCH_SH|タスクが、I/O 要求内にないバッファー ラッチで待機しているときに発生します。 ラッチ要求は共有モードです。|  
+|PAGELATCH_UP|タスクが、I/O 要求内にないバッファー ラッチで待機しているときに発生します。 ラッチ要求は更新モードです。|  
 |PARALLEL_BACKUP_QUEUE|RESTORE HEADERONLY、RESTORE FILELISTONLY、または RESTORE LABELONLY によって生成された出力をシリアル化しているときに発生します。|  
 |PREEMPTIVE_ABR|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |PREEMPTIVE_AUDIT_ACCESS_EVENTLOG|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] オペレーティング システム (SQLOS) スケジューラが、監査イベントを Windows イベント ログに書き込むためにプリエンプティブ モードに切り替えたときに発生します。|  
@@ -256,7 +255,7 @@ ms.locfileid: "56038923"
 |PREEMPTIVE_STRESSDRIVER|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |PREEMPTIVE_TESTING|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |PREEMPTIVE_XETESTING|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
-|PRINT_ROLLBACK_PROGRESS |ALTER DATABASE 終了句を使って遷移されたデータベースで、ユーザー プロセスが終了するのを待機する場合に使用されます。 詳細については、「[ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md)」を参照してください。|  
+|PRINT_ROLLBACK_PROGRESS|ALTER DATABASE 終了句を使って遷移されたデータベースで、ユーザー プロセスが終了するのを待機する場合に使用されます。 詳細については、「[ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md)」を参照してください。|  
 |PWAIT_HADR_CHANGE_NOTIFIER_TERMINATION_SYNC|バックグラウンド タスクが、Windows Server フェールオーバー クラスタリングの通知を (ポーリング経由で) 受信するバックグラウンド タスクの終了を待機しているときに発生します。  内部使用のみです。|  
 |PWAIT_HADR_CLUSTER_INTEGRATION|追加、置換、または削除操作が (ネットワーク、ネットワーク アドレス、または可用性グループ リスナーのリスト) などで常に内部リストで書き込みロックの獲得を待機しています。  内部使用のみです。|  
 |PWAIT_HADR_OFFLINE_COMPLETED|Windows Server フェールオーバー クラスタ リングのオブジェクトを破棄する前にオフラインにするターゲットの可用性グループ、Always On 可用性グループ削除操作が待機しています。|  
@@ -270,13 +269,13 @@ ms.locfileid: "56038923"
 |PWAIT_METADATA_LAZYCACHE_RWLOCk|テーブルのインデックスまたは統計の反復処理を伴うメタデータ データ キャッシュでの内部同期中に発生します。|  
 |QPJOB_KILL|非同期自動統計更新が実行を開始したときに、強制終了の呼び出しにより操作が取り消されたことを示します。 終了スレッドは一時中断され、強制終了コマンドの受信開始を待機します。 1 秒未満であれば問題はありません。|  
 |QPJOB_WAITFOR_ABORT|非同期自動統計更新の実行中に、強制終了の呼び出しにより操作が取り消されたことを示します。 更新は現在完了していますが、終了スレッド メッセージ調整が完了するまでは一時中断されます。 これは通常の状態ですが、発生することはほとんどありません。発生しても非常に短い時間です。 1 秒未満であれば問題はありません。|  
-|QRY_MEM_GRANT_INFO_MUTEX |クエリ実行メモリ管理が、静的な許可情報リストへのアクセスを制御しようとするときに発生します。 この待機状態では、現在許可されており待機中のメモリ要求に関する情報が一覧表示されます。 またこの状態は、単純なアクセス制御状態です。 この状態では、長時間に及ぶ待機は避けてください。 このミューテックスが解放されない場合、新しいメモリを使用するすべてのクエリは応答を停止します。|  
+|QRY_MEM_GRANT_INFO_MUTEX|クエリ実行メモリ管理が、静的な許可情報リストへのアクセスを制御しようとするときに発生します。 この待機状態では、現在許可されており待機中のメモリ要求に関する情報が一覧表示されます。 またこの状態は、単純なアクセス制御状態です。 この状態では、長時間に及ぶ待機は避けてください。 このミューテックスが解放されない場合、新しいメモリを使用するすべてのクエリは応答を停止します。|  
 |QUERY_ERRHDL_SERVICE_DONE|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |QUERY_EXECUTION_INDEX_SORT_EVENT_OPEN|オフラインでのインデックス作成が並列実行される場合、並べ替えを行っている複数のワーカー スレッドが並べ替えファイルへのアクセスを同期するときに発生する場合があります。|  
-|QUERY_NOTIFICATION_MGR_MUTEX |クエリ通知マネージャー内のガベージ コレクション キューの同期中に発生します。|  
-|QUERY_NOTIFICATION_SUBSCRIPTION_MUTEX |クエリ通知内のトランザクションの状態の同期中に発生します。|  
-|QUERY_NOTIFICATION_TABLE_MGR_MUTEX |クエリ通知マネージャー内での内部同期中に発生します。|  
-|QUERY_NOTIFICATION_UNITTEST_MUTEX |[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
+|QUERY_NOTIFICATION_MGR_MUTEX|クエリ通知マネージャー内のガベージ コレクション キューの同期中に発生します。|  
+|QUERY_NOTIFICATION_SUBSCRIPTION_MUTEX|クエリ通知内のトランザクションの状態の同期中に発生します。|  
+|QUERY_NOTIFICATION_TABLE_MGR_MUTEX|クエリ通知マネージャー内での内部同期中に発生します。|  
+|QUERY_NOTIFICATION_UNITTEST_MUTEX|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |QUERY_OPTIMIZER_PRINT_MUTEX|クエリ オプティマイザー診断の出力作成の同期中に発生します。 この待機は、[!INCLUDE[msCoName](../../includes/msconame-md.md)] 製品サポートの指示により、診断設定を有効にしている場合にのみ発生します。|  
 |QUERY_TRACEOUT|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |QUERY_WAIT_ERRHDL_SERVICE|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  

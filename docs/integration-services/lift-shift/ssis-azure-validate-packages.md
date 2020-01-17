@@ -9,18 +9,21 @@ ms.custom: ''
 ms.technology: integration-services
 author: swinarko
 ms.author: sawinark
-ms.reviewer: douglasl
-manager: craigg
-ms.openlocfilehash: 434fb03bdb2d93fd5695576ad864df2259a5c972
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.reviewer: maghan
+ms.openlocfilehash: fd6c55f439b9d95473c5e36ea88cc7c5e1fb555e
+ms.sourcegitcommit: e7c3c4877798c264a98ae8d51d51cb678baf5ee9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47767750"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72915993"
 ---
 # <a name="validate-sql-server-integration-services-ssis-packages-deployed-to-azure"></a>Azure にデプロイされた SQL Server Integration Services (SSIS) パッケージを検証する
 
-SQL Server Integration Services (SSIS) プロジェクトを Azure サーバーの SSIS カタログ (SSISDB) にデプロイすると、パッケージの配置ウィザードにより、**[確認]** ページの後に検証手順が追加されます。 この検証手順では、Azure SSIS Integration Runtime で予定されているパッケージ実行を妨げる既知の問題がないか、プロジェクトのパッケージが調べられます。 その後、**[検証]** ページに該当する警告が表示されます。
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
+
+SQL Server Integration Services (SSIS) プロジェクトを Azure サーバーの SSIS カタログ (SSISDB) にデプロイすると、パッケージの配置ウィザードにより、 **[確認]** ページの後に検証手順が追加されます。 この検証手順では、Azure SSIS Integration Runtime で予定されているパッケージ実行を妨げる既知の問題がないか、プロジェクトのパッケージが調べられます。 その後、 **[検証]** ページに該当する警告が表示されます。
 
 > [!IMPORTANT]
 > この記事で説明する検証は、SQL Server Data Tools (SSDT) バージョン 17.4 以降でプロジェクトをデプロイするときに行われます。 最新版の SSDT を入手する方法については、「[SQL Server Data Tools (SSDT) のダウンロード](../../ssdt/download-sql-server-data-tools-ssdt.md)」をご覧ください。
@@ -40,23 +43,23 @@ SQL Server Integration Services (SSIS) プロジェクトを Azure サーバー�
 
 | 接続マネージャー | Windows 認証 | [ファイル パス] | UNC パス | ホスト名 | プロバイダーまたはドライバー |
 |--------------------|----------|-----------|-----|-----------|-------------------|
-| Ado                | ✓        |           |     | ✓         | ✓                 |
-| AdoNet             | ✓        |           |     | ✓         | ✓                 |
-| Cache              |          | ✓         | ✓   |           |                   |
-| [エクスポート]              |          | ✓         | ✓   |           |                   |
-| ファイル               |          | ✓         | ✓   |           |                   |
-| FlatFile           |          | ✓         | ✓   |           |                   |
-| Ftp                |          |           |     | ✓         |                   |
-| MsOLAP100          |          |           |     | ✓         | ✓                 |
-| MultiFile          |          | ✓         | ✓   |           |                   |
-| MultiFlatFile      |          | ✓         | ✓   |           |                   |
-| OData              | ✓        |           |     | ✓         |                   |
-| Odbc               | ✓        |           |     | ✓         | ✓                 |
-| OleDb              | ✓        |           |     | ✓         | ✓                 |
-| SmoServer          | ✓        |           |     | ✓         |                   |
-| Smtp               | ✓        |           |     | ✓         |                   |
-| SqlMobile          |          | ✓         | ✓   |           |                   |
-| Wmi                | ✓        |           |     |           |                   |
+| Ado                | âœ“        |           |     | âœ“         | âœ“                 |
+| AdoNet             | âœ“        |           |     | âœ“         | âœ“                 |
+| Cache              |          | âœ“         | âœ“   |           |                   |
+| [エクスポート]              |          | âœ“         | âœ“   |           |                   |
+| ファイル               |          | âœ“         | âœ“   |           |                   |
+| FlatFile           |          | âœ“         | âœ“   |           |                   |
+| Ftp                |          |           |     | âœ“         |                   |
+| MsOLAP100          |          |           |     | âœ“         | âœ“                 |
+| MultiFile          |          | âœ“         | âœ“   |           |                   |
+| MultiFlatFile      |          | âœ“         | âœ“   |           |                   |
+| OData              | âœ“        |           |     | âœ“         |                   |
+| Odbc               | âœ“        |           |     | âœ“         | âœ“                 |
+| OleDb              | âœ“        |           |     | âœ“         | âœ“                 |
+| SmoServer          | âœ“        |           |     | âœ“         |                   |
+| Smtp               | âœ“        |           |     | âœ“         |                   |
+| SqlMobile          |          | âœ“         | âœ“   |           |                   |
+| Wmi                | âœ“        |           |     |           |                   |
 |||||||
 
 ## <a name="validate-sources-and-destinations"></a>ソースとターゲットの検証

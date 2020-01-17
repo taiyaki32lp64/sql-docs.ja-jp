@@ -11,11 +11,11 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: 3a35d5cdb9db4c56579a4229b2d08014a99da542
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52392026"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63072761"
 ---
 # <a name="durability-for-memory-optimized-tables"></a>メモリ最適化テーブルの持続性
   [!INCLUDE[hek_2](../../../includes/hek-2-md.md)] により、メモリ最適化テーブルには完全な持続性が提供されます。 メモリ最適化テーブルを変更したトランザクションがコミットされると、基になるストレージが使用可能な場合、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] では、(ディスク ベース テーブルの場合と同様に) この変更が永続的である (データベースの再起動後も保持される) ことが保証されます。 持続性には、トランザクション ログとディスク上ストレージでのデータ変更の保持という、2 つの主なコンポーネントがあります。  

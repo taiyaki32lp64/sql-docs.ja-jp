@@ -20,11 +20,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: a78b177b1fb429535a4bb9b271d0b1dbc4eedc79
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48141252"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62921943"
 ---
 # <a name="file-restores-full-recovery-model"></a>ファイル復元 (完全復旧モデル)
   このトピックは、複数のファイルまたはファイル グループが含まれている、完全復旧モデルまたは一括読み込み復旧モデルを使用するデータベースだけに関連しています。  
@@ -50,7 +50,7 @@ ms.locfileid: "48141252"
      オンライン ページおよびファイルの復元に対するサポートの詳細については、「[SQL Server 2014 の各エディションでサポートされる機能](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md)」を参照してください。 オンライン復元の詳細については、「[オンライン復元 &#40;SQL Server&#41;](online-restore-sql-server.md)」を参照してください。  
   
     > [!TIP]  
-    >  ファイル復元のためにデータベースをオフラインにする場合は、 [ALTER DATABASE](/sql/t-sql/statements/alter-database-transact-sql-set-options) ステートメントの ALTER DATABASE *database_name* SET OFFLINE を実行することにより、データベースをオフラインにしてから復元シーケンスを開始します。  
+    >  ファイル復元のためにデータベースをオフラインにする場合は、次の [ALTER DATABASE](/sql/t-sql/statements/alter-database-transact-sql-set-options) ステートメントを実行して復元シーケンスを開始する前に、データベースをオフラインにしてください。ALTER DATABASE *database_name* SET OFFLINE。  
   
   
   
@@ -131,7 +131,7 @@ RESTORE LOG database_name FROM <tail_log_backup>
   
 
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [バックアップと復元: 相互運用性と共存 &#40;SQL Server&#41;](backup-and-restore-interoperability-and-coexistence-sql-server.md)   
  [差分バックアップ &#40;SQL Server&#41;](differential-backups-sql-server.md)   
  [ファイルの完全バックアップ &#40;SQL Server&#41;](full-file-backups-sql-server.md)   

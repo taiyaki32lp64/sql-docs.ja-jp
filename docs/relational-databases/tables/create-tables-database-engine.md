@@ -12,14 +12,13 @@ helpviewer_keywords:
 ms.assetid: 6f7c6ac5-e6d3-4dca-831e-b28442ba535b
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 3154cf9f8ed32c166399b7413064fdd5a3d6ae23
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d48ce6bea9e9f99cd5db4559c6f4b1d966e809f3
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47629370"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68123709"
 ---
 # <a name="create-tables-database-engine"></a>テーブルの作成 (データベース エンジン)
 [!INCLUDE[tsql-appliesto-ss2016-all-md](../../includes/tsql-appliesto-ss2016-all-md.md)]
@@ -50,7 +49,7 @@ ms.locfileid: "47629370"
   
 5.  他のプロパティ (ID 列または計算列の値など) を指定するには、列をクリックし、列のプロパティ タブで適切なプロパティを選択します。 列のプロパティの詳細については、「[テーブル列のプロパティ &#40;SQL Server Management Studio&#41;](../../relational-databases/tables/table-column-properties-sql-server-management-studio.md)」を参照してください。  
   
-6.  列を主キーとして指定するには、列を右クリックし、**[主キーの設定]** をクリックします。 詳細については、「 [Create Primary Keys](../../relational-databases/tables/create-primary-keys.md)」を参照してください。  
+6.  列を主キーとして指定するには、列を右クリックし、 **[主キーの設定]** をクリックします。 詳細については、「 [Create Primary Keys](../../relational-databases/tables/create-primary-keys.md)」を参照してください。  
   
 7.  外部キーのリレーションシップ、CHECK 制約、またはインデックスを作成するには、テーブル デザイナー ペイン内で右クリックし、次の図に示すように、一覧からオブジェクトを選択します。  
   

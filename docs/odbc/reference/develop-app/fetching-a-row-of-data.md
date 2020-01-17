@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 16d4a380-0d83-456b-aeee-f10738944e86
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 012e454d03a0eb4ad16095353351d67e50d9586a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 010d05990396c10836c0a2130e5d9f4392ae56ec
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47792819"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68069857"
 ---
 # <a name="fetching-a-row-of-data"></a>データの行のフェッチ
 アプリケーションを呼び出す 1 行のデータをフェッチする**SQLFetch**します。 **SQLFetch**任意の種類のカーソルで呼び出すことができますが、順方向専用の方向にのみ行セットのカーソルを移動します。 **SQLFetch**次の行にカーソルを進めるし、データへの呼び出しにバインドされていたすべての列を返します**SQLBindCol**します。 設定すると、カーソルが結果の末尾に達したとき、 **SQLFetch** sql_no_data が返されます。 例については、呼び出し元の**SQLFetch**を参照してください[を使用して SQLBindCol](../../../odbc/reference/develop-app/using-sqlbindcol.md)します。  

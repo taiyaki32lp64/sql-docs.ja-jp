@@ -16,15 +16,14 @@ helpviewer_keywords:
 - object search [SQL Server]
 - searching objects [SQL Server]
 ms.assetid: b963e3c2-dc9e-4d38-bd28-2e00fe9e0e47
-author: stevestein
-ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 9dfa6ac6a609b5bc562267383371fcd19a73215b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: b51309850e4e36083dbbf5fa228746dac18968ef
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47760290"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68264080"
 ---
 # <a name="object-explorer-details-pane"></a>[オブジェクト エクスプローラーの詳細] ペイン
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -89,7 +88,7 @@ ms.locfileid: "47760290"
 ## <a name="sql-server-object-search"></a>SQL Server オブジェクトの検索  
 ワイルドカード  
   
--   標準のワイルドカード文字がサポートされます。 たとえば、 **dm_os%counters** を検索すると、dm_os_memory_cache_counters と dm_os_performance_counters の両方が返されます。 詳細については、「 [ワイルドカードを使用して検索する方法](../../relational-databases/scripting/search-text-with-wildcards.md)」を参照してください。  
+-   標準のワイルドカード文字がサポートされます。 たとえば、 **dm_os%counters** を検索すると、dm_os_memory_cache_counters と dm_os_performance_counters の両方が返されます。 詳細については、「[ソフト NUMA を使用するようにワイルドカードを使用したテキスト検索](../../relational-databases/scripting/search-text-with-wildcards.md)」を参照してください。  
   
 検索範囲  
   

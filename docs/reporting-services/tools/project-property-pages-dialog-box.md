@@ -2,7 +2,7 @@
 title: '[プロパティ ページ] ダイアログ ボックス | Microsoft Docs'
 ms.date: 05/30/2017
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: tools
 ms.topic: reference
 f1_keywords:
@@ -10,26 +10,26 @@ f1_keywords:
 helpviewer_keywords:
 - Project Property Pages dialog box
 ms.assetid: 209d9e22-37fc-418f-8739-83adcf447d3f
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 37868fcc35bc5ba09339a24151f2d8d6e4c1f6ba
-ms.sourcegitcommit: c7febcaff4a51a899bc775a86e764ac60aab22eb
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 8800d8c8b88ef4aeb486513fdff590ddec221bd6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "52712183"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65578236"
 ---
 # <a name="project-property-pages-dialog-box"></a>[プロパティ ページ] ダイアログ ボックス
 
-  プロジェクトのプロパティ ページを使用すると、レポート サーバー プロジェクトの配置プロパティを構成できます。 このダイアログ ボックスを開くには、**[プロジェクト]** メニューの _[\<レポート プロジェクト名>_ **のプロパティ]** をクリックします。  
+  プロジェクトのプロパティ ページを使用すると、レポート サーバー プロジェクトの配置プロパティを構成できます。 このダイアログ ボックスを開くには、 **[プロジェクト]** メニューの _[\<レポート プロジェクト名>_ **のプロパティ]** をクリックします。  
   
  構成プロパティを定義した後は、ツール バーの **[ソリューション構成]** ボックスの一覧から構成を選択できるようになります。  
 
 ![ssrs_project_properties](../../reporting-services/reports/media/ssrs-project-properties.png)
   
-## <a name="options"></a>[変数]  
+## <a name="options"></a>オプション  
  **Configuration**  
- 編集する構成を選択します。 初期状態で使用できる構成は、 **[Debug]**、 **[DebugLocal]**、および **[Release]** です。 アクティブな構成が、 **Active(Debug)** のように最初に表示されます。  
+ 編集する構成を選択します。 初期状態で使用できる構成は、 **[Debug]** 、 **[DebugLocal]** 、および **[Release]** です。 アクティブな構成が、 **Active(Debug)** のように最初に表示されます。  
   
  複数の構成のプロパティを同時に表示するには、 **[すべての構成]** または **[複数の構成]** を選択します。  
   
@@ -75,7 +75,7 @@ ms.locfileid: "52712183"
   
  ネイティブ モードで実行されているレポート サーバーにパブリッシュする場合は、レポート サーバーの仮想ディレクトリの URL を指定します。 たとえば、 `http:\\<server>\reportserver`のようにします。 これは、レポート マネージャーではなく、レポート サーバーの仮想ディレクトリです。 既定では、レポート サーバーは、"reportserver" という名前の仮想ディレクトリにインストールされます。  
   
- SharePoint 統合モードで動作しているレポート サーバーにパブリッシュする場合は、SharePoint トップレベル サイトまたはサブサイトの URL を使用します。 サイトを指定しなかった場合は、既定のトップレベル サイトが使用されます。 例 : 
+ SharePoint 統合モードで動作しているレポート サーバーにパブリッシュする場合は、SharePoint トップレベル サイトまたはサブサイトの URL を使用します。 サイトを指定しなかった場合は、既定のトップレベル サイトが使用されます。 例: 
 + `http:\\<servername>`、 
 + `http:\\<servername\<site>` 
 + `http:\\<servername>\<site>\<subsite>`  

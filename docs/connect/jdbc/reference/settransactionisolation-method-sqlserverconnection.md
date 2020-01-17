@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: 6a8fa4d3-5237-40f8-8a02-b40a3d7a1131
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 992ce78ec0fab556bb2bb91fdcaf97f54f3145e3
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e7e803e60568030eb105fa52a15bc2c2bc4b3e8d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47811820"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67972295"
 ---
 # <a name="settransactionisolation-method-sqlserverconnection"></a>setTransactionIsolation メソッド (SQLServerConnection)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -54,7 +53,7 @@ public void setTransactionIsolation(int level)
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- この setTransactionIsolation メソッドは、java.sql.Connection インターフェイスの setTransactionIsolation メソッドによって指定されます。  
+ この setTransactionIsolation メソッドは、java. .sql. 接続インターフェイスの setTransactionIsolation メソッドによって指定されます。  
   
  トランザクションの実行中にこのメソッドが呼び出された場合、トランザクションはコミットされません。  
   

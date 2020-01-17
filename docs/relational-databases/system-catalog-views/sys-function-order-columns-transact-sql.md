@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: 29287973-3125-4d35-8ca9-92cb45828854
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 43ce8d82bc286e7005d57d5a829e09814ffdd240
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a2a51cc56b37325d760ca77f014594496c8ab6b5
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47643522"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68122747"
 ---
 # <a name="sysfunctionordercolumns-transact-sql"></a>sys.function_order_columns (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -38,7 +37,7 @@ ms.locfileid: "47643522"
 |**object_id**|**int**|順序が定義されているオブジェクト (CLR テーブル値関数) の ID です。|  
 |**order_column_id**|**int**|順序列の ID です **order_column_id**内でのみ一意です**object_id**します。<br /><br /> **order_column_id**順序付けにおけるこの列の位置を表します。|  
 |**column_id**|**int**|内の列の ID **object_id**します。<br /><br /> **column_id**内でのみ一意です**object_id**します。|  
-|**is_descending**|**bit**|1 = 順序列に降順の並べ替え方向が設定されています。<br /><br /> 0 = 順序列に昇順の並べ替え方向が設定されています。|  
+|**is_descending**|**bit**|1 = 順序列には、降順の並べ替え方向。<br /><br /> 0 = 順序列には昇順の並べ替え方向。|  
   
 ## <a name="permissions"></a>アクセス許可  
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] 詳細については、「 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)」を参照してください。  

@@ -13,16 +13,15 @@ helpviewer_keywords:
 - failed jobs [SQL Server]
 - jobs [SQL Server Agent], action flow logic
 ms.assetid: 23041ccf-8a07-41d3-85b9-c449a54b7e1e
-author: stevestein
-ms.author: sstein
-manager: craigg
+author: markingmyname
+ms.author: maghan
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: a3f2da19f628722202a139f81e60affd04c11728
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: 03ad99ecb4ebe274e50cc040715f6266ddea4a4f
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51698263"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68267852"
 ---
 # <a name="set-job-step-success-or-failure-flow"></a>Set Job Step Success or Failure Flow
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -34,7 +33,7 @@ ms.locfileid: "51698263"
   
 -   **作業を開始する準備:**  
   
-    [Security](#Security)  
+    [セキュリティ](#Security)  
   
 -   **ジョブ ステップの成功時または失敗時の動作を設定する方法:**  
   
@@ -47,13 +46,13 @@ ms.locfileid: "51698263"
 ## <a name="before-you-begin"></a>はじめに  
   
 ### <a name="Security"></a>Security  
-詳細については、「 [Implement SQL Server Agent Security](../../ssms/agent/implement-sql-server-agent-security.md)」をご覧ください。  
+詳細については、「 [SQL Server エージェントのセキュリティの実装](../../ssms/agent/implement-sql-server-agent-security.md)」をご覧ください。  
   
 ## <a name="SSMS"></a>SQL Server Management Studio の使用  
   
 #### <a name="to-set-job-step-success-or-failure-flow"></a>ジョブ ステップの成功時または失敗時の動作を設定するには  
   
-1.  **オブジェクト エクスプローラー**で、 **[SQL Server エージェント]**、 **[ジョブ]** の順に展開します。  
+1.  **オブジェクト エクスプローラー**で、 **[SQL Server エージェント]** 、 **[ジョブ]** の順に展開します。  
   
 2.  編集するジョブを右クリックして、 **[プロパティ]** をクリックします。  
   

@@ -13,20 +13,19 @@ helpviewer_keywords:
 - catalog views [SQL Server], XML schemas
 - XML schemas [SQL Server], catalog views
 ms.assetid: e92304ae-f920-4b28-8f63-6324973ba359
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: c1049d54dd838b9f5877759392b296f3a86497d3
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+author: MightyPen
+ms.author: genemi
+ms.openlocfilehash: 6aeedf7820309c7dfbb3e715eedfd6c9d7f67701
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51668781"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67929776"
 ---
-# <a name="xml-schemas-xml-type-system-catalog-views-transact-sql"></a>XML スキーマ (XML 型システム) カタログ ビュー (Transact-SQL)
+# <a name="xml-schemas-xml-type-system-catalog-views-transact-sql"></a>XML スキーマ (XML 型システム) カタログ ビュー (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  ここでは、次のカタログ ビューについて説明します。  
+  このセクションには、次のカタログ ビューが含まれています。  
   
 |||  
 |-|-|  
@@ -39,7 +38,7 @@ ms.locfileid: "51668781"
 |[sys.xml_schema_wildcard_namespaces](../../relational-databases/system-catalog-views/sys-xml-schema-wildcard-namespaces-transact-sql.md)|[sys.xml_indexes](../../relational-databases/system-catalog-views/sys-xml-indexes-transact-sql.md)|  
 |[sys.xml_schema_wildcards](../../relational-databases/system-catalog-views/sys-xml-schema-wildcards-transact-sql.md)||  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [カタログ ビュー &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
  [システム ビュー &#40;TRANSACT-SQL&#41;](https://msdn.microsoft.com/library/35a6161d-7f43-4e00-bcd3-3091f2015e90)  
   

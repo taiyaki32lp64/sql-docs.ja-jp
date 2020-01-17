@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 7572372a-24b6-428f-84ae-48560430b159
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: c0e7f5105090112bfd1abe155acb8fb53996a265
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 0c7755484582f407fb288dd25af1ec74e520b0ce
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47670910"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68026107"
 ---
 # <a name="show-advanced-options-server-configuration-option"></a>show advanced options サーバー構成オプション
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

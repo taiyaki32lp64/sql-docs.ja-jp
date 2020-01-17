@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 89c23aad-bfee-4917-bc16-175288390ac0
 author: Shamikg
 ms.author: Shamikg
-manager: craigg
-ms.openlocfilehash: 2b8d842e9febc94d35f2a8c53c6106159f44423a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 2951d4c3bf1eae73ffd066d796b0e3dda4d28cf6
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47741830"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68020961"
 ---
 # <a name="selecting-and-configuring-objects-to-test-sybasetosql"></a>テストするオブジェクトの選択と構成 (SybaseToSQL)
 この手順では、テスト、およびプロシージャの関数の出力パラメーターと関数の戻り値を比較するための設定を構成するオブジェクトを選択します。  
@@ -83,6 +82,6 @@ SSMA のテスト担当者が、いずれかのテスト用に選択されたオ
 ## <a name="next-step"></a>次の手順  
 [影響を受けるオブジェクトの選択と構成&#40;SybaseToSQL&#41;](../../ssma/sybase/selecting-and-configuring-affected-objects-sybasetosql.md)  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
 [移行されたデータベース オブジェクトのテスト&#40;SybaseToSQL&#41;](../../ssma/sybase/testing-migrated-database-objects-sybasetosql.md)  
   

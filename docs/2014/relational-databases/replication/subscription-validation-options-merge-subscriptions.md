@@ -15,11 +15,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 7d7631df4a1e4c6ec37effbc06b6a141b0d41ebc
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54127353"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63249293"
 ---
 # <a name="subscription-validation-options-merge-subscriptions"></a>[サブスクリプションの検証オプション]\(マージ サブスクリプション)
   **[サブスクリプションの検証オプション]** ダイアログ ボックスを使用すると、検証の際に行数だけを使用するか、行数とバイナリ チェックサムを使用するかを指定できます。  

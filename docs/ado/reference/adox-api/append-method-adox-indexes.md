@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 6695769f-275b-4b70-81bd-1a5f7d74926c
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 18e9162c3c9a1b79c28ca6e0ae94f8680db0ac80
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ef30faf0fef05c4e86ffb4d2c21781592094c198
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47632250"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67967304"
 ---
 # <a name="append-method-adox-indexes"></a>Append メソッド (ADOX Indexes)
 新しく追加[インデックス](../../../ado/reference/adox-api/index-object-adox.md)オブジェクトを[インデックス](../../../ado/reference/adox-api/indexes-collection-adox.md)コレクション。  
@@ -48,7 +47,7 @@ Indexes.Append Index [,Columns]
 ## <a name="applies-to"></a>適用対象  
  [Indexes コレクション (ADOX)](../../../ado/reference/adox-api/indexes-collection-adox.md)  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [Indexes Append メソッドの例 (VB)](../../../ado/reference/adox-api/indexes-append-method-example-vb.md)   
  [Append メソッド (ADOX Columns)](../../../ado/reference/adox-api/append-method-adox-columns.md)   
  [Append メソッド (ADOX Groups)](../../../ado/reference/adox-api/append-method-adox-groups.md)   

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.sqlserverstudio.Backup.f1
@@ -13,12 +12,12 @@ ms.assetid: 7811ce7d-6c37-4189-bfa6-ef36fb4932db
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 741f3b761e4c6645cee7c43c3e8f593dbad13219
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: a99ce67c4b42cc1def10127c8b1862a859d20723
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48067322"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66064379"
 ---
 # <a name="backup-database-dialog-box-analysis-services---multidimensional-data"></a>[データベースのバックアップ] ダイアログ ボックス (Analysis Services - 多次元データ)
   [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] の **[データベースのバックアップ]** ダイアログ ボックスを使用すると、[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] データベースを [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] バックアップ ファイル (.abf) 形式でバックアップ ファイルにバックアップできます。  
@@ -53,7 +52,7 @@ ms.locfileid: "48067322"
  使用するバックアップ ファイルの完全なパスとファイル名を入力します。  
   
  **[参照]**  
- クリックすると、**[ファイル名を付けて保存]** ダイアログ ボックスが表示され、使用するバックアップ ファイルのパスおよびファイル名を選択できます。 **[ファイル名を付けて保存]** ダイアログ ボックスの詳細については、「[[ファイル名を付けて保存] ダイアログ ボックス (Analysis Services - 多次元データ)](save-file-as-dialog-box-analysis-services-multidimensional-data.md)」を参照してください。  
+ クリックすると、 **[ファイル名を付けて保存]** ダイアログ ボックスが表示され、使用するバックアップ ファイルのパスおよびファイル名を選択できます。 **[ファイル名を付けて保存]** ダイアログ ボックスの詳細については、「[[ファイル名を付けて保存] ダイアログ ボックス (Analysis Services - 多次元データ)](save-file-as-dialog-box-analysis-services-multidimensional-data.md)」を参照してください。  
   
  **ファイルの上書きを許可します。**  
  選択すると、既存のバックアップ ファイル、またはリモート バックアップ ファイルが存在する場合にファイルが上書きされます。  
@@ -93,9 +92,9 @@ ms.locfileid: "48067322"
 |**[サーバー]**|リモート パーティションを管理する [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] インスタンスを表示します。|  
 |**[データベース]**|リモート パーティションが格納されている [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] データベースを表示します。|  
 |**パーティションの一覧**|**[データベース]** に表示されるデータベースに含まれているリモート パーティションの一覧を表示します。|  
-|**リモート バックアップ ファイル**|使用するリモート バックアップ ファイルの完全なパスとファイル名を入力するか、**[...]** ボタンをクリックして **[ファイル名を付けて保存]** ダイアログ ボックスを表示し、使用するリモート バックアップ ファイルのパスとファイル名を選択します。 **[ファイル名を付けて保存]** ダイアログ ボックスの詳細については、「[[ファイル名を付けて保存] ダイアログ ボックス (Analysis Services - 多次元データ)](save-file-as-dialog-box-analysis-services-multidimensional-data.md)」を参照してください。|  
+|**リモート バックアップ ファイル**|使用するリモート バックアップ ファイルの完全なパスとファイル名を入力するか、 **[...]** ボタンをクリックして **[ファイル名を付けて保存]** ダイアログ ボックスを表示し、使用するリモート バックアップ ファイルのパスとファイル名を選択します。 **[ファイル名を付けて保存]** ダイアログ ボックスの詳細については、「[[ファイル名を付けて保存] ダイアログ ボックス (Analysis Services - 多次元データ)](save-file-as-dialog-box-analysis-services-multidimensional-data.md)」を参照してください。|  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [Analysis Services のデザイナーおよびダイアログ ボックス&#40;多次元データ&#41;](analysis-services-designers-and-dialog-boxes-multidimensional-data.md)   
  [Analysis Services データベースのバックアップと復元](multidimensional-models/backup-and-restore-of-analysis-services-databases.md)  
   

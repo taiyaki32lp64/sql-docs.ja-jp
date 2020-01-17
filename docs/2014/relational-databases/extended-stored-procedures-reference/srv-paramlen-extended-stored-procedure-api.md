@@ -21,11 +21,11 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 2c858d0fa8579aff288efd7026ab4b65035bad8d
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53364710"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63127196"
 ---
 # <a name="srvparamlen-extended-stored-procedure-api"></a>srv_paramlen (拡張ストアド プロシージャ API)
     
@@ -62,14 +62,14 @@ n
   
 |新しいデータ型|入力データ長|  
 |--------------------|-----------------------|  
-|`BITN`|**NULL:** 1<br /><br /> **0:** 1<br /><br /> **> = 255。** なし<br /><br /> **< 255。** なし|  
-|`BIGVARCHAR`|**NULL:** 0<br /><br /> **0:** 1<br /><br /> **> = 255。** 255<br /><br /> **<255:** 実際の *len*|  
-|`BIGCHAR`|**NULL:** 0<br /><br /> **0:** 255<br /><br /> **> = 255。** 255<br /><br /> **< 255。** 255|  
-|`BIGBINARY`|**NULL:** 0<br /><br /> **0:** 255<br /><br /> **> = 255。** 255<br /><br /> **< 255。** 255|  
-|`BIGVARBINARY`|**NULL:** 0<br /><br /> **0:** 1<br /><br /> **> = 255。** 255<br /><br /> **<255:** 実際の *len*|  
-|`NCHAR`|**NULL:** 0<br /><br /> **0:** 255<br /><br /> **> = 255。** 255<br /><br /> **< 255。** 255|  
-|`NVARCHAR`|**NULL:** 0<br /><br /> **0:** 1<br /><br /> **> = 255。** 255<br /><br /> **<255:** 実際の *len*|  
-|`NTEXT`|**NULL:** -1<br /><br /> **ZERO:** -1<br /><br /> **>=255:** -1<br /><br /> **< 255:** -1|  
+|`BITN`|**NULL:** 1<br /><br /> **ZERO:** 1<br /><br /> **>=255:** なし<br /><br /> **<255:** なし|  
+|`BIGVARCHAR`|**NULL:** 0<br /><br /> **ZERO:** 1<br /><br /> **>=255:** 255<br /><br /> **<255:** 実際の *len*|  
+|`BIGCHAR`|**NULL:** 0<br /><br /> **ZERO:** 255<br /><br /> **>=255:** 255<br /><br /> **<255:** 255|  
+|`BIGBINARY`|**NULL:** 0<br /><br /> **ZERO:** 255<br /><br /> **>=255:** 255<br /><br /> **<255:** 255|  
+|`BIGVARBINARY`|**NULL:** 0<br /><br /> **ZERO:** 1<br /><br /> **>=255:** 255<br /><br /> **<255:** 実際の *len*|  
+|`NCHAR`|**NULL:** 0<br /><br /> **ZERO:** 255<br /><br /> **>=255:** 255<br /><br /> **<255:** 255|  
+|`NVARCHAR`|**NULL:** 0<br /><br /> **ZERO:** 1<br /><br /> **>=255:** 255<br /><br /> **<255:** 実際の *len*|  
+|`NTEXT`|**NULL:** -1<br /><br /> **ZERO:** -1<br /><br /> **>=255:** -1<br /><br /> **<255:** -1|  
   
  \*   実際の *len* とは、マルチバイト文字列 (cch) の長さを示します  
   
@@ -79,9 +79,9 @@ n
  パラメーターを指定してリモート ストアド プロシージャを呼び出す場合、パラメーターは名前で指定することも、名前を使用せずにその位置を指定して渡すこともできます。 名前によるパラメーター指定と位置によるパラメーター指定を混合してリモート ストアド プロシージャを呼び出すと、エラーが発生します。 エラーが発生しても SRV_RPC ハンドラーは呼び出されますが、パラメーターが存在しないと見なされ、**srv_rpcparams** は 0 を返します。  
   
 > [!IMPORTANT]  
->  拡張ストアド プロシージャのソース コードを十分に確認し、コンパイル済み DLL を、運用サーバーにインストールする前にテストする必要があります。 セキュリティの確認およびテストについて詳しくは、[Microsoft の Web サイト](https://go.microsoft.com/fwlink/?LinkID=54761&amp;clcid=0x409https://msdn.microsoft.com/security/)をご覧ください。  
+>  拡張ストアド プロシージャのソース コードを十分に確認し、コンパイル済み DLL を、運用サーバーにインストールする前にテストする必要があります。 セキュリティの確認およびテストについて詳しくは、[Microsoft の Web サイト](https://go.microsoft.com/fwlink/?LinkID=54761&amp;clcid=0x409 https://msdn.microsoft.com/security/)をご覧ください。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [srv_paraminfo &#40;拡張ストアド プロシージャ API&#41;](srv-paraminfo-extended-stored-procedure-api.md)   
  [srv_rpcparams &#40;拡張ストアド プロシージャ API&#41;](srv-rpcparams-extended-stored-procedure-api.md)  
   

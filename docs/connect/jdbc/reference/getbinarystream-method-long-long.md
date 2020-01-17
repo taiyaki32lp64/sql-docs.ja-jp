@@ -1,5 +1,5 @@
 ---
-title: getBinaryStream (long, long) メソッド |Microsoft Docs
+title: getBinaryStream (long, long) メソッドMicrosoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 30bc8882-04b4-4efd-95e4-7d3a2a8c1d47
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: dd171495bb8dde28a30299b0107d91cce9dd472e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 5cc12f9e7ed7a83363766355fa5d340a459a332b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47757170"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67953658"
 ---
 # <a name="getbinarystream-method-long-long"></a>getBinaryStream (long, long) メソッド
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -31,7 +30,7 @@ public java.io.InputStream getBinaryStream(long pos, long length)
 ```  
   
 #### <a name="parameters"></a>パラメーター  
- *pos*  
+ *po*  
   
  取得する部分的な値の最初のバイトへのオフセットです。  
   
@@ -46,7 +45,7 @@ public java.io.InputStream getBinaryStream(long pos, long length)
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- この getBinaryStream メソッドは、java.sql.Blob インターフェイスで getBinaryStream メソッドによって指定されます。  
+ この getBinaryStream メソッドは、java.sql.Blob インターフェイスの getBinaryStream メソッドで規定されています。  
   
 ## <a name="see-also"></a>参照  
  [SQLServerBlob のメソッド](../../../connect/jdbc/reference/sqlserverblob-methods.md)   

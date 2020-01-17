@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 helpviewer_keywords:
 - permissions [Reporting Services], SharePoint integrated mode
@@ -16,15 +15,15 @@ helpviewer_keywords:
 - security [Reporting Services], predefined roles
 - security [Reporting Services], SharePoint integrated mode
 ms.assetid: 429f1dbb-183a-4097-bd1b-693da9fe7a36
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 812f9351e294b4af9fb6854937a1a6cd211e8147
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 1c56b15a5d6887c3e00047c9a0c3a66f907ef468
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56036643"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66102813"
 ---
 # <a name="compare-roles-and-tasks-in-reporting-services-to-sharepoint-groups-and-permissions"></a>Reporting Services のロールおよびタスクと SharePoint のグループおよび権限の比較
   このトピックでは、 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] ネイティブ モードのロール ベースおよびタスク ベースの承認機能を、SharePoint 製品のセキュリティ機能と比較します。 このトピックでは、ロール、タスク、SharePoint グループ、権限レベル、および権限の用語と特徴を比較します。  
@@ -42,9 +41,9 @@ ms.locfileid: "56036643"
 -   [ネイティブ モード タスクと SharePoint の権限の比較](#bkmk_compare_tasks_permissions)  
   
 ##  <a name="bkmk_compare_tools_terms"></a> 権限ツールと用語の比較  
- **ネイティブ モード:**[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] ネイティブ モードの権限オブジェクト (ロールおよびタスク) は、[!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 内で作成し、レポート マネージャー内で個々のユーザーに対して構成します。  
+ **ネイティブ モード:** [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] ネイティブ モードの権限オブジェクト (ロールおよびタスク) は、[!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 内で作成し、レポート マネージャー内で個々のユーザーに対して構成します。  
   
- **SharePoint モード:**[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] SharePoint モードでは、SharePoint の権限の機能を活用します。 SharePoint のグループと権限は、次の **[サイトの設定]** ページで管理します。  
+ **SharePoint モード:** [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] SharePoint モードでは、SharePoint の権限の機能を活用します。 SharePoint のグループと権限は、次の **[サイトの設定]** ページで管理します。  
   
  次の表では、 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] ネイティブ モードと SharePoint の間で、権限に関連するオブジェクトと概念を比較します。  
   
@@ -54,7 +53,7 @@ ms.locfileid: "56036643"
 |---|**権限レベルのグループ:** たとえば、"閲覧者" グループに対応する "表示のみ"。|  
 |**タスク:** たとえば、"レポートの管理"。|**権限:** たとえば、"表示のみ" グループ内には、アイテムの表示、バージョンの表示、アプリケーション ページの表示の一覧に関連する権限があります。|  
   
- SharePoint の権限の詳細については、「 [アクセス許可レベルと権限](http://office.microsoft.com/windows-sharepoint-services-help/permission-levels-and-permissions-HA010100149.aspx) 」、および「 [アクセス許可レベルおよびグループを決定する (SharePoint 2013)](https://technet.microsoft.com/library/cc262690.aspx)」を参照してください。  
+ SharePoint の権限の詳細については、次を参照してください。[ユーザーのアクセス許可と SharePoint サーバーのアクセス許可レベル](/sharepoint/sites/user-permissions-and-permission-levels)と[アクセス許可レベルと SharePoint 2013 でのグループを決定](https://technet.microsoft.com/library/cc262690.aspx)します。  
   
 ##  <a name="bkmk_compare_roles_groups"></a> ネイティブ モードと SharePoint グループの比較  
  次の表では、ネイティブ モードの [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] で事前定義されているロールの定義と、標準の SharePoint グループとを比較しています。 SharePoint のグループが目的のロールと一致しない場合は、SharePoint でカスタム グループを作成し、権限レベルを割り当てることができます。  

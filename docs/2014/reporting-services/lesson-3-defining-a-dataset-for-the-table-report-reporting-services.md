@@ -1,31 +1,30 @@
 ---
-title: 'レッスン 3: データセット テーブル レポート (Reporting Services) の定義 |Microsoft Docs'
+title: 'レッスン 3: テーブル レポートのデータセットの定義 (Reporting Services) | Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 ms.assetid: ee93dfcb-8f52-4d63-b4f6-0d38e00fd350
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 3ffc81b9f0d3ffe91e36e9a06711ce62443ab89c
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: f4c78328e02215520b8d33213e01871f010f62d6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56294340"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66108461"
 ---
-# <a name="lesson-3-defining-a-dataset-for-the-table-report-reporting-services"></a>レッスン 3: データセット テーブル レポート (Reporting Services) の定義
+# <a name="lesson-3-defining-a-dataset-for-the-table-report-reporting-services"></a>レッスン 3: テーブル レポートのデータセットの定義 (Reporting Services)
   データ ソースを定義した後、データセットを定義する必要があります。 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]では、レポートで使用するデータは *データセット*に格納されます。 データセットには、データ ソースへのポインターと、レポートで使用されるクエリ、および計算フィールドと変数が含まれています。  
   
  レポート デザイナーでクエリ デザイナーを使用すると、クエリをデザインできます。 このチュートリアルから販売注文情報を取得するクエリを作成する、 [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] **2008**データベース。  
   
 ### <a name="to-define-a-transact-sql-query-for-report-data"></a>レポート データ用に Transact-SQL クエリを定義するには  
   
-1.  **レポート データ** ペインで、**[新規]** をクリックし、**[データセット]** をクリックします。**[データセットのプロパティ]** ダイアログ ボックスが表示されます。  
+1.  **レポート データ** ペインで、 **[新規]** をクリックし、 **[データセット]** をクリックします。 **[データセットのプロパティ]** ダイアログ ボックスが表示されます。  
   
 2.  **[名前]** ボックスに「 **AdventureWorksDataset**」と入力します。  
   
@@ -69,7 +68,7 @@ ms.locfileid: "56294340"
      レポート データ ペインに **AdventureWorksDataset** データセットとフィールドが表示されます。  
   
 ## <a name="next-task"></a>次の作業  
- これで、レポートのデータを取得するクエリを指定できました。 次に、レポートのレイアウトを作成します。 参照してください[レッスン 4。レポートにテーブルを追加する&#40;Reporting Services&#41;](lesson-4-adding-a-table-to-the-report-reporting-services.md)します。  
+ これで、レポートのデータを取得するクエリを指定できました。 次に、レポートのレイアウトを作成します。 「[レッスン 4:レポートへのテーブルの追加 &#40;Reporting Services&#41;](lesson-4-adding-a-table-to-the-report-reporting-services.md)」を参照してください。  
   
 ## <a name="see-also"></a>参照  
  [クエリ デザイン ツールでレポート デザイナーの SQL Server Data Tools &#40;SSRS&#41;](report-data/query-design-tools-ssrs.md)   

@@ -1,7 +1,7 @@
 ---
 title: ALTER COLUMN ENCRYPTION KEY (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 09/24/2018
+ms.date: 10/15/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -18,26 +18,25 @@ helpviewer_keywords:
 - column encryption key, alter
 - ALTER COLUMN ENCRYPTION KEY statement
 ms.assetid: c79a220d-e178-4091-a330-c924cc0f0ae0
-author: VanMSFT
-ms.author: vanto
-manager: craigg
-ms.openlocfilehash: ec90c3ca632a917bd0905063d2fee94f4c0dfa32
-ms.sourcegitcommit: c6e71ed14198da67afd7ba722823b1af9b4f4e6f
+author: jaszymas
+ms.author: jaszymas
+ms.openlocfilehash: c06fb5b28e1c3ec5bd50b8922bcdf1e5d1b27ff7
+ms.sourcegitcommit: 312b961cfe3a540d8f304962909cd93d0a9c330b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/16/2019
-ms.locfileid: "54326763"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73594392"
 ---
 # <a name="alter-column-encryption-key-transact-sql"></a>ALTER COLUMN ENCRYPTION KEY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
-  データベースでは、追加、または暗号化された値を削除する列の暗号化キーを変更します。 CEK は、対応する列マスター キーのローテーションで最大 2 つの値を持つことができます。 CEK は、[Always Encrypted &#40;Database Engine&#41;](../../relational-databases/security/encryption/always-encrypted-database-engine.md) 機能を使って列を暗号化するときに使われます。 CEK 値を追加する前を使用して、値の暗号化に使用された列のマスター_キーを定義する必要があります [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] または [CREATE MASTER KEY](../../t-sql/statements/create-column-master-key-transact-sql.md) ステートメントです。  
+  データベースで、暗号化された値を追加または削除する列暗号化キーを変更します。 列暗号化キーは、対応する列マスター キーのローテーションで最大 2 つの値を持つことができます。 列暗号化キーは、[Always Encrypted](../../relational-databases/security/encryption/always-encrypted-database-engine.md) または[セキュリティで保護されたエンクレーブが設定された Always Encrypted](../../relational-databases/security/encryption/always-encrypted-enclaves.md) を使用して列を暗号化するときに使用されます。 列暗号化キーの値を追加する前に、[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] または [CREATE MASTER KEY](../../t-sql/statements/create-column-master-key-transact-sql.md) ステートメントを使用して、値の暗号化に使用された列マスター キーを定義する必要があります。  
   
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```sql  
 ALTER COLUMN ENCRYPTION KEY key_name   
     [ ADD | DROP ] VALUE   
     (  
@@ -48,7 +47,7 @@ ALTER COLUMN ENCRYPTION KEY key_name
   
 ## <a name="arguments"></a>引数  
  *key_name*  
- 変更する列の暗号化キー。  
+ 変更する、列の暗号化キー。  
   
  *column_master_key_name*  
  列の暗号化キー (CEK) を暗号化するために使用される列マスター キー (CMK) の名前を指定します。  
@@ -57,19 +56,22 @@ ALTER COLUMN ENCRYPTION KEY key_name
  値を暗号化するために使用する暗号化アルゴリズムの名前です。 システム プロバイダーのアルゴリズムは、**RSA_OAEP** である必要があります。 列の暗号化キーの値を削除するときに、この引数は有効ではありません。  
   
  *varbinary_literal*  
- CEK BLOB は、暗号化キーを指定されたマスターで暗号化されます。 列の暗号化キーの値を削除するときに、この引数は有効ではありません。  
+ 指定されたマスター暗号化キーを使用して暗号化された CEK BLOB。 列の暗号化キーの値を削除するときに、この引数は有効ではありません。  
   
 > [!WARNING]  
->  ありませんプレーン テキスト CEK 値で渡す次のステートメント。 そうと、この機能のメリットを構成します。  
+>  このステートメントでは、プレーンテキストの CEK 値を渡さないでください。 そうすれば、この機能の利点が得られます。  
   
 ## <a name="remarks"></a>Remarks  
- 通常、1 つだけの暗号化された値は、列の暗号化キーが作成されます。 列のマスター_キーが必要な場合は、(現在列マスター_キーのニーズに新しい列のマスター_キーに置き換えられます) を回転する、列の暗号化キーの新しい値を追加する列の新しいマスター_キーで暗号化します。 このワークフローにより、クライアント アプリケーションが新しい列マスター キーを使用できるようになるまでの間、クライアント アプリケーションが列暗号化キーを使用して暗号化されたデータにアクセスできるようになります。 常に暗号化するには、新しいマスター_キーにアクセスできない、列の古いマスター_キーで暗号化された列の暗号化のキー値を使用して機密データにアクセスできるクライアント アプリケーションでのドライバーを有効になっています。 暗号化アルゴリズム、常に暗号化のサポートでは、256 ビットをプレーン テキストの値が必要です。 列のマスター キーを押しながらキー ストアをカプセル化するキー ストア プロバイダーを使用して、暗号化された値を生成する必要があります。  
+通常、列暗号化キーは、暗号化された値を 1 つだけ使用して作成されます。 列マスター キーを回転する必要がある場合 (現在の列マスター キーを新しい列マスター キーと置き換える必要がある場合)、新しい列マスター キーで暗号化された新しい値の列暗号化キーを追加できます。 このワークフローにより、クライアント アプリケーションが新しい列マスター キーを使用できるようになるまでの間、クライアント アプリケーションが列暗号化キーを使用して暗号化されたデータにアクセスできるようになります。 新しいマスター キーにアクセスできないクライアント アプリケーションでも、Always Encrypted が有効にされたドライバーは、古い列マスター キーで暗号化された列暗号化キー値を使用して機密データにアクセスできます。 Always Encrypted でサポートされる暗号化アルゴリズムでは、プレーンテキスト値が 256 ビットである必要があります。 
+ 
+SQL Server Management Studio (SSMS) や PowerShell などのツールを使って、列マスター キーをローテーションすることをお勧めします。 「[SQL Server Management Studio を使用した Always Encrypted キーの交換](../../relational-databases/security/encryption/rotate-always-encrypted-keys-using-ssms.md)」および「[PowerShell を使用して Always Encrypted キーをローテーションする](../../relational-databases/security/encryption/rotate-always-encrypted-keys-using-powershell.md)」をご覧ください。
+
+暗号化された値は、列のマスター キーを保持するキー ストアをカプセル化するキー ストア プロバイダーを使用して生成する必要があります。  
 
  列マスター キーは、次の理由でローテーションされます。
 - 法令に遵守するためにキーを定期的にローテーションする必要があります。
 - 列マスター キーのセキュリティが侵害されたためにローテーションする必要があります。
-- サーバー側のセキュリティで保護されたエンクレーブと列の暗号化キーの共有を有効または無効にします。 たとえば、現在使用中の列マスター キーがエンクレーブ計算をサポートしていない場合 (ENCLAVE_COMPUTATIONS プロパティで定義されていない場合)、お使いの列マスター キーで暗号化されている列暗号化キーを使用して保護されている列でエンクレーブ計算を有効にしたい場合、ENCLAVE_COMPUTATIONS プロパティで列マスター キーを新しいキーと置き換える必要があります。 詳細については、「[セキュア エンクレーブを使用する Always Encrypted](../../relational-databases/security/encryption/always-encrypted-enclaves.md)」を参照してください。
-
+- サーバー側のセキュリティで保護されたエンクレーブと列の暗号化キーの共有を有効または無効にします。 たとえば、現在使用中の列マスター キーがエンクレーブ計算をサポートしていない場合 (ENCLAVE_COMPUTATIONS プロパティで定義されていない場合)、お使いの列マスター キーで暗号化されている列暗号化キーを使用して保護されている列でエンクレーブ計算を有効にしたい場合、ENCLAVE_COMPUTATIONS プロパティで列マスター キーを新しいキーと置き換える必要があります。 「[Always Encrypted のキー管理の概要](../../relational-databases/security/encryption/overview-of-key-management-for-always-encrypted.md)」および「[セキュリティで保護されたエンクレーブが設定された Always Encrypted のキーを管理する](../../relational-databases/security/encryption/always-encrypted-enclaves-manage-keys.md)」。
 
 列暗号化キーについての情報を表示するには、[sys.columns &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-columns-transact-sql.md)、[sys.column_encryption_keys  &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-column-encryption-keys-transact-sql.md)、[sys.column_encryption_key_values &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-column-encryption-key-values-transact-sql.md) を使います。  
   
@@ -78,10 +80,10 @@ ALTER COLUMN ENCRYPTION KEY key_name
   
 ## <a name="examples"></a>使用例  
   
-### <a name="a-adding-a-column-encryption-key-value"></a>A. 列の暗号化キーの値を追加します。  
+### <a name="a-adding-a-column-encryption-key-value"></a>A. 列の暗号化キーの値を追加する  
  次の例と呼ばれる列の暗号化キーを変更する `MyCEK`です。  
   
-```  
+```sql  
 ALTER COLUMN ENCRYPTION KEY MyCEK  
 ADD VALUE  
 (  
@@ -93,10 +95,10 @@ GO
   
 ```  
   
-### <a name="b-dropping-a-column-encryption-key-value"></a>B. 列の暗号化キーの値を削除します。  
+### <a name="b-dropping-a-column-encryption-key-value"></a>B. 列の暗号化キーの値を削除する  
  次の例と呼ばれる列の暗号化キーを変更する `MyCEK` 値を削除することによりします。  
   
-```  
+```sql  
 ALTER COLUMN ENCRYPTION KEY MyCEK  
 DROP VALUE  
 (  
@@ -113,5 +115,8 @@ GO
  [sys.column_encryption_keys (Transact-SQL)](../../relational-databases/system-catalog-views/sys-column-encryption-keys-transact-sql.md)   
  [sys.column_encryption_key_values (Transact-SQL)](../../relational-databases/system-catalog-views/sys-column-encryption-key-values-transact-sql.md)   
  [sys.columns &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-columns-transact-sql.md)  
+ [Always Encrypted](../../relational-databases/security/encryption/always-encrypted-database-engine.md)   
+ [Always Encrypted のキー管理の概要](../../relational-databases/security/encryption/overview-of-key-management-for-always-encrypted.md)   
+ [セキュリティで保護されたエンクレーブが設定された Always Encrypted のキーを管理する](../../relational-databases/security/encryption/always-encrypted-enclaves-manage-keys.md)   
   
   

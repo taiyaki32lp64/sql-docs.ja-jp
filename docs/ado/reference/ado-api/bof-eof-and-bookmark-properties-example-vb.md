@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: b6573c6e-fee8-4267-a722-fadaec6eafe6
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: ef1ab4199de6b0249173f13c607e6cb1816ccbc5
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 9ab332d7d4144d62dd3a0cee1d3585820bf77e77
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47698220"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67920436"
 ---
 # <a name="bof-eof-and-bookmark-properties-example-vb"></a>BOF、EOF、および Bookmark プロパティの例 (VB)
 この例では、 [BOF](../../../ado/reference/ado-api/bof-eof-properties-ado.md)と[EOF](../../../ado/reference/ado-api/bof-eof-properties-ado.md)ユーザーでは、最初と最後のレコードのを越えて移動しようとすると、メッセージを表示するプロパティを[Recordset](../../../ado/reference/ado-api/recordset-object-ado.md)します。 使用して、[ブックマーク](../../../ado/reference/ado-api/bookmark-property-ado.md)ユーザーが内のレコードにフラグを設定できるプロパティ、**レコード セット**し、後で戻ります。  
@@ -136,7 +135,7 @@ End Sub
 Attribute VB_Name = "BOF"  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [BOF、EOF プロパティ (ADO)](../../../ado/reference/ado-api/bof-eof-properties-ado.md)   
  [Bookmark プロパティ (ADO)](../../../ado/reference/ado-api/bookmark-property-ado.md)   
  [Recordset オブジェクト (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)

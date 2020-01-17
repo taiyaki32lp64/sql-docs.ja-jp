@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: c27761e6-75ed-4ee4-a236-0cbc42e500a1
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: 73544b743dbdf4e17961c59eedefa6c4a602c913
-ms.sourcegitcommit: ef6e3ec273b0521e7c79d5c2a4cb4dcba1744e67
+ms.openlocfilehash: 1407f55e2edab15768fb10288b78dd59ff93ddd1
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51512063"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67940498"
 ---
 # <a name="default-trace-log-files-disabled"></a>既定のトレース ログ ファイルの無効化
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

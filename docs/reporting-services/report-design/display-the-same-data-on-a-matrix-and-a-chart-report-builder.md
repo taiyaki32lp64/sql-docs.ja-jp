@@ -2,18 +2,18 @@
 title: マトリックスとグラフでの同じデータの表示 (レポート ビルダー) | Microsoft Docs
 ms.date: 03/07/2017
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: report-design
 ms.topic: conceptual
 ms.assetid: 1262f283-9fc2-4bc1-9c79-457f7642abc7
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 3d3e1eca43d386a11955eac7974baaf4a1d7282a
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: bd4423251ae02931d539b047251abb5915f85ccc
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56292584"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65578836"
 ---
 # <a name="display-the-same-data-on-a-matrix-and-a-chart-report-builder"></a>マトリックスとグラフでの同じデータの表示 (レポート ビルダー)
   マトリックスとグラフで同じデータを表示するには、フィルター、グループ、並べ替え、およびデータに対して同じデータセットを指定するだけでなく、同じ式も指定するプロパティを両方のデータ領域に対して設定する必要があります。  
@@ -45,13 +45,13 @@ ms.locfileid: "56292584"
   
      既定で、グループ値の計算には、集計関数 Sum が使用されます。 マトリックス内の集計関数を変更した場合は、グラフの集計関数も変更する必要があります。  
   
-6.  マトリックスで、データが含まれたセルを右クリックして、 **[テキスト ボックスのプロパティ]**、 **[数値]** の順にクリックします。 データセット フィールド値の適切な形式を選択します。  
+6.  マトリックスで、データが含まれたセルを右クリックして、 **[テキスト ボックスのプロパティ]** 、 **[数値]** の順にクリックします。 データセット フィールド値の適切な形式を選択します。  
   
 7.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
 8.  手順 3. で選択したのと同じデータセット フィールドをグラフの **[値]** 領域にドラッグします。  
   
-9. グラフで Y 軸を右クリックして、 **[軸のプロパティ]**、 **[数値]** の順にクリックします。 手順 4. で使用したのと同じデータ形式を選択します。  
+9. グラフで Y 軸を右クリックして、 **[軸のプロパティ]** 、 **[数値]** の順にクリックします。 手順 4. で使用したのと同じデータ形式を選択します。  
   
 10. [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   

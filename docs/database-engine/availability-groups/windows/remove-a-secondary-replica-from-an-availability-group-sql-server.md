@@ -1,6 +1,6 @@
 ---
 title: 可用性グループからセカンダリ レプリカを削除する
-description: 'TRANSACT-SQL (T-SQL)、PowerShell、または SQL Server Management Studio のいずれかを使用して Always On 可用性グループからセカンダリ レプリカを削除する手順。 '
+description: 'Transact-SQL (T-SQL)、PowerShell、または SQL Server Management Studio のいずれかを使用して Always On 可用性グループからセカンダリ レプリカを削除する手順。 '
 ms.custom: seodec18
 ms.date: 05/17/2016
 ms.prod: sql
@@ -15,51 +15,28 @@ helpviewer_keywords:
 ms.assetid: 35ddc8b6-3e7c-4417-9a0a-d4987a09ddf7
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 4bacb15ea7932cdbe533ee9c4a3ff1be4a65ef9a
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: f0b73bf44f4990b94ad44e450214099760901134
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53201921"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68014385"
 ---
 # <a name="remove-a-secondary-replica-from-an-availability-group-sql-server"></a>可用性グループからのセカンダリ レプリカの削除 (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   このトピックでは、 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]で [!INCLUDE[tsql](../../../includes/tsql-md.md)]、 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]、または PowerShell を使用して、AlwaysOn 可用性グループからセカンダリ レプリカを削除する方法について説明します。  
+ 
+   
+##  <a name="Restrictions"></a> 制限事項と制約事項  
   
--   **作業を開始する準備:**  
-  
-     [制限事項と制約事項](#Restrictions)  
-  
-     [前提条件](#Prerequisites)  
-  
-     [セキュリティ](#Security)  
-  
--   **セカンダリ レプリカを削除する方法:**  
-  
-     [SQL Server Management Studio](#SSMSProcedure)  
-  
-     [Transact-SQL](#TsqlProcedure)  
-  
-     [PowerShell](#PowerShellProcedure)  
-  
--   **補足情報:**[セカンダリ レプリカの削除後](#PostBestPractices)  
-  
-##  <a name="BeforeYouBegin"></a> はじめに  
-  
-###  <a name="Restrictions"></a> 制限事項と制約事項  
-  
--   このタスクは、プライマリ レプリカ上でのみサポートされます。  
-  
+-   このタスクは、プライマリ レプリカ上でのみサポートされます。    
 -   セカンダリ レプリカのみを可用性グループから削除できます。  
   
-###  <a name="Prerequisites"></a> 前提条件  
+## <a name="Prerequisites"></a> 前提条件  
   
 -   可用性グループのプライマリ レプリカをホストするサーバー インスタンスに接続している。  
   
-###  <a name="Security"></a> セキュリティ  
-  
-####  <a name="Permissions"></a> Permissions  
+##  <a name="Permissions"></a> Permissions  
  可用性グループの ALTER AVAILABILITY GROUP 権限、CONTROL AVAILABILITY GROUP 権限、ALTER ANY AVAILABILITY GROUP 権限、または CONTROL SERVER 権限が必要です。  
   
 ##  <a name="SSMSProcedure"></a> SQL Server Management Studio の使用  
@@ -67,7 +44,7 @@ ms.locfileid: "53201921"
   
 1.  オブジェクト エクスプローラーで、プライマリ レプリカをホストするサーバー インスタンスに接続し、サーバー ツリーを展開します。  
   
-2.  [**AlwaysOn 高可用性**] ノードと [**可用性グループ**] ノードを展開します。  
+2.  **[AlwaysOn 高可用性]** ノードと **[可用性グループ]** ノードを展開します。  
   
 3.  可用性グループを選択し、 **[可用性レプリカ]** ノードを展開します。  
   

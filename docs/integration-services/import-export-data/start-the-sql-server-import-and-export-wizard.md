@@ -3,7 +3,6 @@ title: SQL Server インポートおよびエクスポート ウィザードを�
 ms.custom: ''
 ms.date: 06/20/2017
 ms.prod: sql
-ms.prod_service: integration-services
 ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
@@ -13,17 +12,20 @@ helpviewer_keywords:
 - Import and Export Wizard
 - starting Import and Export Wizard
 ms.assetid: 5fc4f6d1-1f6f-444e-9aeb-827f85e1c405
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: 8db11de67db871df75605099191a2ae0e34be0b9
-ms.sourcegitcommit: a13256f484eee2f52c812646cc989eb0ce6cf6aa
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: d54a4d4363b2585d951ca0621306427f8f0e8533
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/25/2019
-ms.locfileid: "56801336"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71285112"
 ---
 # <a name="start-the-sql-server-import-and-export-wizard"></a>SQL Server インポートおよびエクスポート ウィザードを起動する
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
 
 
 このトピックで説明されているいずれかの方法で [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インポートおよびエクスポート ウィザードを起動して、サポートされているデータ ソースからデータをインポートおよびサポートされているデータ ソースにデータをエクスポートします。

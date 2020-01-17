@@ -21,15 +21,14 @@ helpviewer_keywords:
 - fragmentation [SQL Server]
 - index defragmenting [SQL Server]
 ms.assetid: 1df2123a-1197-4fff-91a3-25e3d8848aaa
-author: uc-msft
+author: pmasl
 ms.author: umajay
-manager: craigg
-ms.openlocfilehash: 9ae3cd167b7f8b2dc633eb50063b4bcaee143acf
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: 0e1fff3c60dab7e8fe055753c125fddf70abb1df
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53213851"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68039062"
 ---
 # <a name="dbcc-showcontig-transact-sql"></a>DBCC SHOWCONTIG (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -134,7 +133,7 @@ TABLERESULTS を指定した場合、DBCC SHOWCONTIG は次の列に加え、前
 |**LogicalFragmentation**|インデックスのリーフ ページをスキャンするときに返される、順序が無効なページのパーセンテージです。 この数値はヒープとは関係ありません。 順序が不正なページとは、インデックスに割り当てられている次の物理的なページと、現在のリーフ ページの*次ページ* ポインターが示すページが異なるページのことです。|  
 |**ExtentFragmentation**|インデックスのリーフ ページをスキャンするときの順序が無効なエクステントのパーセンテージです。 この数値はヒープとは関係ありません。 順序が無効なエクステントとは、インデックス上の現在のページを含むエクステントの物理的な位置が、インデックス上の前のページを含むエクステントの直後でない状態を指します。<br /><br /> 注:インデックスが複数のファイルにわたっている場合、この数値は無意味です。|  
   
-WITH TABLERESULTS および FAST を指定した場合の結果セットは WITH TABLERESULTS を指定した場合と同じです。ただし、次の列が NULL 値になります。
+WITH TABLERESULTS および FAST を指定した場合の結果セットは WITH TABLERESULTS を指定した場合と同じです。ただし、次の列が null 値になります。
 
 | [行]| Extents |
 |---|---|
@@ -149,9 +148,9 @@ WITH TABLERESULTS および FAST を指定した場合の結果セットは WITH
 ## <a name="restrictions"></a>制限  
 DBCC SHOWCONTIG では、**ntext**、**text**、**image** データ型のデータは表示されません。 これは、テキストとイメージのデータが格納されているテキスト インデックスが存在しなくなったためです。
   
-また、DBCC SHOWCONTIG でサポートされない新機能もあります。 例 :
+また、DBCC SHOWCONTIG でサポートされない新機能もあります。 例:
 -   指定されたテーブルまたはインデックスがパーティション分割されている場合、DBCC SHOWCONTIG では指定されたテーブルまたはインデックスの最初のパーティションのみが表示されます。  
--   DBCC SHOWCONTIG では、行オーバーフロー ストレージ情報と、**nvarchar(max)**、**varchar(max)**、**varbinary(max)**、**xml** など、その他の新しい行以外のデータ型は表示されません。  
+-   DBCC SHOWCONTIG では、行オーバーフロー ストレージ情報と、**nvarchar(max)** 、**varchar(max)** 、**varbinary(max)** 、**xml** など、その他の新しい行以外のデータ型は表示されません。  
 -   空間インデックスは、DBCC SHOWCONTIG ではサポートされません。  
   
 新しい機能はすべて、[sys.dm_db_index_physical_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-index-physical-stats-transact-sql.md) 動的管理ビューで完全サポートされています。
@@ -174,16 +173,16 @@ DBCC SHOWCONTIG は、テーブルに著しい断片化が生じているかど�
   
 インデックスの断片化レベルは、次の方法で確認できます。
 -   **[エクステントの切り替え回数]** と **[スキャンされたエクステント数]** の値を比較します。  
-     **[エクステントの切り替え回数]** の値は、**[スキャンされたエクステント数]** の値とできる限り近い値にします。 この比率は、**[スキャン密度]** 値として計算されます。 この値はできるだけ高くし、インデックスの断片化を削減することで改善できます。  
+     **[エクステントの切り替え回数]** の値は、 **[スキャンされたエクステント数]** の値とできる限り近い値にします。 この比率は、 **[スキャン密度]** 値として計算されます。 この値はできるだけ高くし、インデックスの断片化を削減することで改善できます。  
   
     > [!NOTE]  
     >  この方法は、インデックスが複数のファイルにわたっている場合は使用できません。  
   
 -   **[論理スキャンの断片化]** と **[エクステント スキャンの断片化]** の値を確認します。  
-     **[論理スキャンの断片化]** と、それに比べて程度は低くなりますが、**[エクステント スキャンの断片化]** の値は、テーブルの断片化レベルの最善の指標です。 0 ～ 10% は許容範囲ですが、この 2 つの値はできるだけ 0 に近い値にする必要があります。  
+     **[論理スキャンの断片化]** と、それに比べて程度は低くなりますが、 **[エクステント スキャンの断片化]** の値は、テーブルの断片化レベルの最善の指標です。 0 ～ 10% は許容範囲ですが、この 2 つの値はできるだけ 0 に近い値にする必要があります。  
   
     > [!NOTE]  
-    >  インデックスが複数のファイルにわたっている場合、**[エクステント スキャンの断片化]** の値は大きくなります。 これらの値を小さくするには、インデックスの断片化を削減する必要があります。  
+    >  インデックスが複数のファイルにわたっている場合、 **[エクステント スキャンの断片化]** の値は大きくなります。 これらの値を小さくするには、インデックスの断片化を削減する必要があります。  
   
 ## <a name="permissions"></a>アクセス許可  
 ユーザーはテーブルを所有しているか、**sysadmin** 固定サーバー ロール、**db_owner** 固定サーバー ロール、または **db_ddladmin** 固定データベース ロールのメンバーであることが必要です。

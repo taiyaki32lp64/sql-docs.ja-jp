@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 9355fb1b-5cd4-49a2-839c-4b06057ea6c4
 author: Shamikg
 ms.author: Shamikg
-manager: craigg
-ms.openlocfilehash: e452278606601fd0313bedad65d18597ed5f8500
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b92c8032ec26ba1c5992659714a4ef1f73052e08
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47684130"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68075359"
 ---
 # <a name="global-settings-output-window-mysqltosql"></a>グローバル設定 (出力ウィンドウ) (MySQLToSQL)
 使用して、**グローバル設定**SSMA の設定を指定 ダイアログ ボックス。  

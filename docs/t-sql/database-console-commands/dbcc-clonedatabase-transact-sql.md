@@ -1,7 +1,7 @@
 ---
 title: DBCC CLONEDATABASE (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 05/01/2018
+ms.date: 04/23/2019
 ms.prod: sql
 ms.prod_service: sql-database
 ms.reviewer: ''
@@ -34,15 +34,15 @@ helpviewer_keywords:
 - database cloning [SQL Server]
 - DBCC CLONEDATABASE statement
 ms.assetid: ''
-author: pamela
+author: bluefooted
 ms.author: pamela
 manager: amitban
-ms.openlocfilehash: 51acbbb1bac63084a26abb68f461880df1409578
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: cd1fc9d36200a571a3dfd0e5367d4e3e01278466
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53204811"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68262322"
 ---
 # <a name="dbcc-clonedatabase-transact-sql"></a>DBCC CLONEDATABASE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -58,8 +58,8 @@ DBCC CLONEDATABASE
 (  
     source_database_name
     ,  target_database_name
-    [ WITH { [ NO_STATISTICS ] [ , NO_QUERYSTORE ] [ , VERIFY_CLONEDB | SERVICEBROKER ] [ , BACKUP_CLONEDB ] } ]   
-)  
+)
+    [ WITH { [ NO_STATISTICS ] [ , NO_QUERYSTORE ] [ , VERIFY_CLONEDB | SERVICEBROKER ] [ , BACKUP_CLONEDB ] } ]     
 ```  
   
 ## <a name="arguments"></a>引数  
@@ -115,9 +115,15 @@ Cannot insert duplicate key row in object <system table> with unique index 'inde
 ```
 
 > [!IMPORTANT]
-> 列ストア インデックスがある場合、[クローン データベースの列ストア インデックスでクエリを調整するときの考慮事項](https://blogs.msdn.microsoft.com/sql_server_team/considerations-when-tuning-your-queries-with-columnstore-indexes-on-clone-databases/)に関するブログ投稿を参照し、**DBCC CLONEDATABASE** コマンドを実行する前に列ストア インデックス統計を更新してください。  SQL Server 2019 以降では、**DBCC CLONEDATABASE** コマンドで自動的にこの情報が収集されるので、上記の記事に記載されている手動手順は必要なくなります。
+> 列ストア インデックスがある場合、[クローン データベースの列ストア インデックスでクエリを調整するときの考慮事項](https://techcommunity.microsoft.com/t5/SQL-Server/Considerations-when-tuning-your-queries-with-columnstore-indexes/ba-p/385294)に関するブログ投稿を参照し、**DBCC CLONEDATABASE** コマンドを実行する前に列ストア インデックス統計を更新してください。  SQL Server 2019 以降では、**DBCC CLONEDATABASE** コマンドで自動的にこの情報が収集されるので、上記の記事に記載されている手動手順は必要なくなります。
 
-複製されたデータベースのデータ セキュリティ関連の詳細については、[複製されたデータベースのデータ セキュリティの概要](https://blogs.msdn.microsoft.com/sql_server_team/understanding-data-security-in-cloned-databases-created-using-dbcc-clonedatabase/)ブログを参照してください。
+<a name="ctp23"></a>
+
+## <a name="stats-blob-for-columnstore-indexes"></a>列ストア インデックスの統計 BLOB
+
+[!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] の `DBCC CLONEDATABASE` では、列ストア インデックスの統計 BLOB が自動的にキャプチャされるので、手動で行う必要ありません。`DBCC CLONEDATABASE` では、データをコピーすることなくクエリのパフォーマンスに関する問題をトラブルシューティングするのに必要なすべての要素を含む、スキーマのみのデータベースのコピーが作成されます。 以前のバージョンの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のコマンドでは、列ストア インデックスのクエリのトラブルシューティングを正確に行うために必要な統計情報がコピーされず、手作業でこの情報をキャプチャする必要がありました。
+
+複製されたデータベースのデータ セキュリティ関連の詳細については、[複製されたデータベースのデータ セキュリティの概要](https://techcommunity.microsoft.com/t5/SQL-Server/Understanding-data-security-in-cloned-databases-created-using/ba-p/385287)ブログを参照してください。
 
 ## <a name="internal-database-snapshot"></a>内部データベース スナップショット
 DBCC CLONEDATABASE では、複製に必要なトランザクション整合性のためにソース データベースの内部データベース スナップショットを使用します。 このスナップショットを使用することで、コマンド実行時のブロックやコンカレンシーの問題を回避できます。 スナップショットを作成できない場合、DBCC CLONEDATABASE は失敗します。 

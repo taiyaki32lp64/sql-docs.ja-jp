@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: f2e91306-2b1b-4e1c-b6d8-a34fb9980057
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 352d6be6f924fc8285a25d3f83ef5bee74c03acb
-ms.sourcegitcommit: bfa10c54e871700de285d7f819095d51ef70d997
+ms.openlocfilehash: a8372e5079b79cc694ccf51f1b6f7cddcf0fed43
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/14/2019
-ms.locfileid: "54254677"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67946216"
 ---
 # <a name="type-casting-rules-in-xquery"></a>XQuery での型キャストの規則
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 dev_langs:
 - VB
@@ -17,22 +16,22 @@ helpviewer_keywords:
 - input properties [Integration Services]
 - component properties [Integration Services]
 ms.assetid: 51973502-5cc6-4125-9fce-e60fa1b7b796
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 5d9d641ccb2a0e261ea899f4fc086d4ad8de0643
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 5b20a0d2f47e89070712a4063acba4da0225b85d
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48160648"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66060962"
 ---
 # <a name="common-properties"></a>共通プロパティ
   [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] のオブジェクト モデルでは、データ フロー オブジェクトのコンポーネント、入力、出力、入力列、および出力列の各レベルに、共通プロパティとカスタム プロパティがあります。 多くのプロパティの値は読み取り専用で、実行時にデータ フロー エンジンによって割り当てられます。  
   
  ここでは、データ フロー オブジェクトの共通プロパティを一覧で示し、それぞれについて説明します。  
   
--   [コンポーネント](#components)  
+-   [Components](#components)  
   
 -   [入力](#inputs)  
   
@@ -97,7 +96,7 @@ ms.locfileid: "48160648"
 |名前|String|データ フロー コンポーネントの名前。|  
 |PipelineVersion|Integer|コンポーネントを実行するように設計されたデータ フロー タスクのバージョン。|  
 |UsesDispositions|ブール値|コンポーネントにエラー出力があるかどうかを示します。|  
-|[ValidateExternalMetadata]|ブール値|外部列のメタデータを検証するかどうかを示します。 このプロパティの既定値は`True`します。|  
+|[ValidateExternalMetadata]|ブール値|外部列のメタデータを検証するかどうかを示します。 このプロパティの既定値は `True` です。|  
 |バージョン|Integer|コンポーネントのバージョン。|  
   
 ##  <a name="inputs"></a> 入力プロパティ  
@@ -109,14 +108,14 @@ ms.locfileid: "48160648"
 |--------------|---------------|-----------------|  
 |説明|String|入力の説明。|  
 |ErrorOrTruncationOperation|String|行の処理中にエラーや切り捨てが発生する可能性がある場合、その種類を指定するオプションの文字列。|  
-|ErrorRowDisposition|<xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.DTSRowDisposition>|エラーの処理方法を指定する値。 値は、 `Fail component`、 `Ignore failure`、および`Redirect row`します。|  
+|ErrorRowDisposition|<xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.DTSRowDisposition>|エラーの処理方法を指定する値。 値は、`Fail component`、`Ignore failure`、および `Redirect row` です。|  
 |HasSideEffects|ブール値|下流コンポーネントにアタッチされていないとき、および、コンポーネントをデータ フローの実行プランから削除できるかどうかを示す`RunInOptimizedMode`は`true`します。|  
 |ID|Integer|入力を一意に識別する値。|  
 |[IdentificationString]|String|入力を識別する文字列。|  
 |IsSorted|ブール値|入力のデータを並べ替えるかどうかを示します。|  
 |名前|String|入力の名前。|  
 |SourceLocale|Integer|入力データのロケール ID (LCID)。|  
-|TruncationRowDisposition|<xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.DTSRowDisposition>|行の処理中に発生した切り捨てを処理する方法を指定する値。 . 値は、 `Fail component`、 `Ignore failure`、および`Redirect row`します。|  
+|TruncationRowDisposition|<xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.DTSRowDisposition>|行の処理中に発生した切り捨てを処理する方法を指定する値。 . 値は、`Fail component`、`Ignore failure`、および `Redirect row` です。|  
   
  変換先および一部の変換では、エラー出力がサポートされず、これらのコンポーネントの ErrorRowDisposition プロパティおよび TruncationRowDisposition プロパティは読み取り専用です。  
   
@@ -130,14 +129,14 @@ ms.locfileid: "48160648"
 |ComparisonFlags|Integer|文字データ型を持つ列の比較を示すフラグの組。 詳しくは、「 [Comparing String Data](data-flow/comparing-string-data.md)」をご覧ください。|  
 |説明|String|入力列を説明します。|  
 |ErrorOrTruncationOperation|String|行の処理中にエラーや切り捨てが発生する可能性がある場合、その種類を指定するオプションの文字列。|  
-|ErrorRowDisposition|<xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.DTSRowDisposition>|エラーの処理方法を指定する値。 値は、 `Fail component`、 `Ignore failure`、および`Redirect row`します。|  
+|ErrorRowDisposition|<xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.DTSRowDisposition>|エラーの処理方法を指定する値。 値は、`Fail component`、`Ignore failure`、および `Redirect row` です。|  
 |ExternalMetadataColumnID|<xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSExternalMetadataColumn100>|出力列に割り当てられた外部メタデータ列の ID。|  
 |ID|Integer|入力列を一意に識別する値。|  
 |[IdentificationString]|String|入力列を識別する文字列。|  
 |LineageID|Integer|上流列の ID。|  
 |名前|String|入力列の名前。|  
 |SortKeyPosition|Integer|列を並べ替えるかどうか、並べ替える場合はその並べ替え順、および複数の列の並べ替えの順序を示す値。 値 **0** は、その列が並べ替えられないことを示します。  詳細については、「 [マージ変換およびマージ結合変換用にデータを並べ替える](data-flow/transformations/sort-data-for-the-merge-and-merge-join-transformations.md)」を参照してください。|  
-|TruncationRowDisposition|<xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.DTSRowDisposition>|行の処理中に発生した切り捨てを処理する方法を指定する値。 値は、 `Fail component`、 `Ignore failure`、および`Redirect row`します。|  
+|TruncationRowDisposition|<xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.DTSRowDisposition>|行の処理中に発生した切り捨てを処理する方法を指定する値。 値は、`Fail component`、`Ignore failure`、および `Redirect row` です。|  
 |UpstreamComponentName|String|上流コンポーネントの名前。|  
 |UsageType|<xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.DTSUsageType>|コンポーネントが入力列を使用する方法を指定する値。|  
   
@@ -153,7 +152,7 @@ ms.locfileid: "48160648"
 |DeleteOutputOnPathDetached|ブール値|出力がパスに接続されていない場合に、データ フロー エンジンが出力を削除するかどうかを指定する値。|  
 |説明|String|出力を説明します。|  
 |ErrorOrTruncationOperation|String|行の処理中にエラーや切り捨てが発生する可能性がある場合、その種類を指定するオプションの文字列。|  
-|ErrorRowDisposition|<xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.DTSRowDisposition>|エラーの処理方法を指定する値。 値は、 `Fail component`、 `Ignore failure`、および`Redirect row`します。|  
+|ErrorRowDisposition|<xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.DTSRowDisposition>|エラーの処理方法を指定する値。 値は、`Fail component`、`Ignore failure`、および `Redirect row` です。|  
 |ExclusionGroup|Integer|相互排他的な出力のグループを識別する値。|  
 |HasSideEffects|ブール値|コンポーネントが上流コンポーネントにアタッチされていない場合や、`RunInOptimizedMode` が `true` の場合に、データ フローの実行プランからコンポーネントを削除できるかどうかを示します。|  
 |ID|Integer|出力を一意に識別する値。|  
@@ -162,7 +161,7 @@ ms.locfileid: "48160648"
 |IsSorted|ブール値|出力を並べ替えるかどうかを示します。 既定値は `False` です。<br /><br /> **\*\* 重要な\* \*** の値を設定、`IsSorted`プロパティを`True`もデータは並べ替えられません。 このプロパティでは、データが既に並べ替えられている下流コンポーネントにヒントのみを提供します。 詳細については、「 [マージ変換およびマージ結合変換用にデータを並べ替える](data-flow/transformations/sort-data-for-the-merge-and-merge-join-transformations.md)」を参照してください。|  
 |名前|String|出力の名前。|  
 |SynchronousInputID|Integer|出力に同期する入力の ID。|  
-|TruncationRowDisposition|<xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.DTSRowDisposition>|行の処理中に発生した切り捨てを処理する方法を指定する値。 値は、 `Fail component`、 `Ignore failure`、および`Redirect row`します。|  
+|TruncationRowDisposition|<xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.DTSRowDisposition>|行の処理中に発生した切り捨てを処理する方法を指定する値。 値は、`Fail component`、`Ignore failure`、および `Redirect row` です。|  
   
 ###  <a name="outputcolumns"></a> 出力列のプロパティ  
  [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] のオブジェクト モデルでは、出力に出力列のコレクションが含まれています。 データ フロー内のコンポーネントの出力列は、<xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSOutputColumn100> インターフェイスを実装します。  
@@ -174,7 +173,7 @@ ms.locfileid: "48160648"
 |ComparisonFlags|Integer|文字データ型を持つ列の比較を示すフラグの組。 詳しくは、「 [Comparing String Data](data-flow/comparing-string-data.md)」をご覧ください。|  
 |説明|String|出力列を説明します。|  
 |ErrorOrTruncationOperation|String|行の処理中にエラーや切り捨てが発生する可能性がある場合、その種類を指定するオプションの文字列。|  
-|ErrorRowDisposition|<xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.DTSRowDisposition>|エラーの処理方法を指定する値。 値は、 `Fail component`、 `Ignore failure`、および`Redirect row`します。 既定値は `Fail component` です。|  
+|ErrorRowDisposition|<xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.DTSRowDisposition>|エラーの処理方法を指定する値。 値は、`Fail component`、`Ignore failure`、および `Redirect row` です。 既定値は `Fail component` です。|  
 |ExternalMetadataColumnID|Integer|出力列に割り当てられた外部メタデータ列の ID。|  
 |ID|Integer|出力列を一意に識別する値。|  
 |[IdentificationString]|String|出力列を識別する文字列。|  
@@ -182,7 +181,7 @@ ms.locfileid: "48160648"
 |名前|String|出力列の名前。|  
 |SortKeyPosition|Integer|列を並べ替えるかどうか、並べ替える場合はその並べ替え順、および複数の列の並べ替えの順序を示す値。 値 **0** は、その列が並べ替えられないことを示します。 詳細については、「 [Sort Data for the Merge and Merge Join Transformations](data-flow/transformations/sort-data-for-the-merge-and-merge-join-transformations.md)」(マージ変換およびマージ結合変換用にデータを並べ替える方法) を参照してください。|  
 |SpecialFlags|Integer|出力列の特殊なフラグを含む値。|  
-|TruncationRowDisposition|<xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.DTSRowDisposition>|行の処理中に発生した切り捨てを処理する方法を指定する値。 値は、 `Fail component`、 `Ignore failure`、および`Redirect row`します。 既定値は `Fail component` です。|  
+|TruncationRowDisposition|<xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.DTSRowDisposition>|行の処理中に発生した切り捨てを処理する方法を指定する値。 値は、`Fail component`、`Ignore failure`、および `Redirect row` です。 既定値は `Fail component` です。|  
   
  出力列には、データ型プロパティの組も含まれています。  
   
@@ -213,7 +212,7 @@ ms.locfileid: "48160648"
 |有効桁数|Integer|数値列の有効桁数。|  
 |Scale|Integer|数値列の小数点以下桁数。|  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [データ フロー](data-flow/data-flow.md)   
  [変換のカスタム プロパティ](data-flow/transformations/transformation-custom-properties.md)   
  [パスのプロパティ](../../2014/integration-services/path-properties.md)   

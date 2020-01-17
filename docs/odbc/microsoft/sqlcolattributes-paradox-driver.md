@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: bbeef024-d470-4d28-b61b-26997ef41007
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 330cdf7a48b17bab5cb912d3a520b8d98635d652
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 9b7d5967108d605d6b7426dcd662507a49037108
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47695200"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68132664"
 ---
 # <a name="sqlcolattributes-paradox-driver"></a>SQLColAttributes (Paradox ドライバー)
 > [!NOTE]  

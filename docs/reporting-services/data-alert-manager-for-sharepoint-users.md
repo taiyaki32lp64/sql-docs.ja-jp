@@ -2,22 +2,22 @@
 title: SharePoint ユーザー用のデータ警告マネージャー | Microsoft Docs
 ms.date: 07/02/2017
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: reporting-services
 ms.topic: conceptual
 helpviewer_keywords:
 - managing, alerts
 - managing, data alerts
 ms.assetid: 7b9281c8-2f8b-48f7-85d8-7a7a596e3c82
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: df33f55ce855f45f271235ac5b6ff2a8f305e8d8
-ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
-ms.translationtype: HT
+ms.openlocfilehash: 0c0e6085ec4e922619c4f2595c63751e82c5a50a
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51813625"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65571491"
 ---
 # <a name="data-alert-manager-for-sharepoint-users"></a>SharePoint ユーザー用のデータ警告マネージャー
 

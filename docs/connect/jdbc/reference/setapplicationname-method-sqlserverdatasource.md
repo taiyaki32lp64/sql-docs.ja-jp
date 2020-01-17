@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: 24d6e48d-53c4-4da2-a6de-1cdff463c9cd
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 3853262dd5e1a62542387e9b61f8c30f5967f09b
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: 6f0f91762dd168f4136a4a476b47dfe36b749e16
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53210591"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67975564"
 ---
 # <a name="setapplicationname-method-sqlserverdatasource"></a>setApplicationName メソッド (SQLServerDataSource)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

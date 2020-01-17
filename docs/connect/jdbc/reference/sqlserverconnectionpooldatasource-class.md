@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: b00e5a90-2af7-4d04-8ef8-256183777dcf
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 416f9dd730bd1cc085f8a48d1b748584037d1b65
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: bb073be8ef92d44f8821078f60622341638a010d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47692280"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67971650"
 ---
 # <a name="sqlserverconnectionpooldatasource-class"></a>SQLServerConnectionPoolDataSource クラス
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

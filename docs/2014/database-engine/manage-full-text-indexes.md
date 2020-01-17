@@ -11,11 +11,11 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: 459bdc20c9698a8b6271092c57ed0de936c4d7f2
-ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/18/2018
-ms.locfileid: "53591836"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62775044"
 ---
 # <a name="manage-full-text-indexes"></a>フルテキスト インデックスの管理
      
@@ -39,7 +39,7 @@ ms.locfileid: "53591836"
     |**[列]**|フルテキスト インデックスを作成できるテーブル列が表示されます。 選択した列にフルテキスト インデックスが作成されます。 フルテキスト インデックスに含める列はいくつでも選択できます。 詳細については、「 [フルテキスト インデックス プロパティ &#40;[列] ページ&#41;](../../2014/database-engine/full-text-index-properties-columns-page.md)」を参照してください。|  
     |**スケジュール**|このページでは、フルテキスト インデックスを作成するためのテーブルの増分作成を開始する SQL Server エージェント ジョブのスケジュールを作成または管理できます。 詳細については、「 [フルテキスト インデックスの作成](../relational-databases/indexes/indexes.md)」をご覧ください。<br /><br /> <strong>\*\* 重要な\* \*</strong> を終了した後、 **、フルテキスト インデックスのプロパティ**ダイアログ ボックスで、新規作成したスケジュールは、SQL Server エージェント ジョブ (開始テーブルで増分作成をに関連付けられています*database_name*.*table_name*)。|  
   
-6.  [!INCLUDE[clickOK](../includes/clickok-md.md)] をクリックして変更を保存し、**[フルテキスト インデックスのプロパティ]** ダイアログ ボックスを終了します。  
+6.  [!INCLUDE[clickOK](../includes/clickok-md.md)] をクリックして変更を保存し、 **[フルテキスト インデックスのプロパティ]** ダイアログ ボックスを終了します。  
   
 ##  <a name="props"></a> インデックス付きのテーブルと列のプロパティを表示します。  
  OBJECTPROPERTYEX など、[!INCLUDE[tsql](../includes/tsql-md.md)] 関数の中には、さまざまなフルテキスト インデックス プロパティの値を取得できるものがあります。 この情報は、フルテキスト検索の管理およびトラブルシューティングに役立ちます。  

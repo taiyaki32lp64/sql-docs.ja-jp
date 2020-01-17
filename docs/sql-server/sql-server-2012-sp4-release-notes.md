@@ -9,21 +9,20 @@ ms.topic: conceptual
 ms.assetid: 67cb8b3e-3d82-47f4-840d-0f12a3bff565
 author: craigg-msft
 ms.author: craigg
-manager: jhubbard
 monikerRange: = sql-server-2014 || = sqlallproducts-allversions
-ms.openlocfilehash: d9e89edc1deb8e16dc69c58a7f959db74c1e6024
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 6fba15e73edf14b9bb794012c8fe56ec8264a5b2
+ms.sourcegitcommit: 66dbc3b740f4174f3364ba6b68bc8df1e941050f
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56017063"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73632950"
 ---
 # <a name="sql-server-2012-service-pack-release-notes"></a>SQL Server 2012 Service Pack のリリース ノート
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 このトピックには、SQL Server 2012 の 4 つのサービス パックの集約したリリース ノートが含まれています。 各サービス パックは、前のサービス パックの累積です。
 
 Service Pack は、インストール メディアではなくオンラインでのみ入手可能です。以下からダウンロードできます。
-- [SQL Server 2012 SP4 ](https://go.microsoft.com/fwlink/?linkid=846937)
+- [SQL Server 2012 SP4](https://go.microsoft.com/fwlink/?linkid=846937)
 - [SQL Server 2012 SP3](https://support.microsoft.com/help/3072779/sql-server-2012-service-pack-3-release-information)
 - [SQL Server 2012 SP2](https://support.microsoft.com/KB/2958429)
 - [SQL Server 2012 SP1](https://go.microsoft.com/fwlink/p/?LinkID=268158)
@@ -32,9 +31,9 @@ Service Pack は、インストール メディアではなくオンラインで
 
 ### <a name="download-pages"></a>ダウンロード ページ
 
-- [SQL Server 2012 SP4 Feature Pack](https://go.microsoft.com/fwlink/?linkid=846907)
-- [SQL Server 2012 SP4 の更新プログラムのインストール](https://go.microsoft.com/fwlink/?linkid=846829)
-- [SQL Server 2012 SP4 Express](https://go.microsoft.com/fwlink/?linkid=846905)
+- [SQL Server 2012 SP4 Feature Pack](https://www.microsoft.com/download/details.aspx?id=56041)
+- [SQL Server 2012 SP4 の更新プログラムのインストール](https://www.microsoft.com/download/details.aspx?id=56040)
+- [SQL Server 2012 SP4 Express](https://www.microsoft.com/download/details.aspx?id=56042)
 
 
 ### <a name="performance-and-scale-improvements"></a>パフォーマンスとスケーリングの改善
@@ -77,17 +76,17 @@ Service Pack は、インストール メディアではなくオンラインで
 |現在インストールされているバージョン|目的|ダウンロードとインストール|  
 |---|---|---|   
 |32 ビット インストール:|||  
-|SQL Server 2012 のいずれかのエディションの 32 ビット バージョン|SQL Server 2012 SP2 の 32 ビット バージョンにアップグレード|**SQLServer2012SP2-KB2958429-**<arch>**-**<lang id>**.exe** ( [SQL Server 2012 SP2 のダウンロード ページ](https://go.microsoft.com/fwlink/?LinkID=401006)|  
-|SQL Server 2012 RTM Express の 32 ビット バージョン|SQL Server 2012 Express SP2 の 32 ビット バージョンにアップグレード|**SQLEXPR_**<arch>**_**<lang>**.msi** ( [SQL Server 2012 SP2 Express のダウンロード ページ](https://go.microsoft.com/fwlink/?LinkID=401007)|  
-|SQL Server 2012 のクライアントと管理ツールのみの 32 ビット バージョン (SQL Server 2012 Management Studio を含む)|SQL Server 2012 SP2 の 32 ビット バージョンにクライアントと管理ツールをアップグレード|**SQLEXPRWT_**<arch>**_**<lang>**.msi** ( [SQL Server 2012 SP2 Express のダウンロード ページ](https://go.microsoft.com/fwlink/?LinkID=401007)|  
-|SQL Server 2012 Management Studio Express の 32 ビット バージョン|SQL Server 2012 SP2 Management Studio Express の 32 ビット バージョンにアップグレード|**SQLManagementStudio_**<arch>**_**<lang>**.msi** ( [SQL Server 2012 SP2 Express のダウンロード ページ](https://go.microsoft.com/fwlink/?LinkID=401007)|  
-|SQL Server 2012 のいずれかのエディションの 32 ビット バージョンおよびクライアントと管理ツールの 32 ビット バージョン (SQL Server 2012 RTM Management Studio を含む)|SQL Server 2012 SP2 の 32 ビット バージョンにすべての製品をアップグレード|**SQLEXPRADV_**<arch>**_**<lang>**.msi** ( [SQL Server 2012 SP2 Express のダウンロード ページ](https://go.microsoft.com/fwlink/?LinkID=401007)|  
+|SQL Server 2012 のいずれかのエディションの 32 ビット バージョン|SQL Server 2012 SP2 の 32 ビット バージョンにアップグレード|**SQLServer2012SP2-KB2958429-** <arch> **-** <lang id> **.exe** ( [SQL Server 2012 SP2 のダウンロード ページ](https://go.microsoft.com/fwlink/?LinkID=401006)|  
+|SQL Server 2012 RTM Express の 32 ビット バージョン|SQL Server 2012 Express SP2 の 32 ビット バージョンにアップグレード|**SQLEXPR_** <arch> **_** <lang> **.msi** ( [SQL Server 2012 SP2 Express のダウンロード ページ](https://go.microsoft.com/fwlink/?LinkID=401007)|  
+|SQL Server 2012 のクライアントと管理ツールのみの 32 ビット バージョン (SQL Server 2012 Management Studio を含む)|SQL Server 2012 SP2 の 32 ビット バージョンにクライアントと管理ツールをアップグレード|**SQLEXPRWT_** <arch> **_** <lang> **.msi** ( [SQL Server 2012 SP2 Express のダウンロード ページ](https://go.microsoft.com/fwlink/?LinkID=401007)|  
+|SQL Server 2012 Management Studio Express の 32 ビット バージョン|SQL Server 2012 SP2 Management Studio Express の 32 ビット バージョンにアップグレード|**SQLManagementStudio_** <arch> **_** <lang> **.msi** ( [SQL Server 2012 SP2 Express のダウンロード ページ](https://go.microsoft.com/fwlink/?LinkID=401007)|  
+|SQL Server 2012 のいずれかのエディションの 32 ビット バージョンおよびクライアントと管理ツールの 32 ビット バージョン (SQL Server 2012 RTM Management Studio を含む)|SQL Server 2012 SP2 の 32 ビット バージョンにすべての製品をアップグレード|**SQLEXPRADV_** <arch> **_** <lang> **.msi** ( [SQL Server 2012 SP2 Express のダウンロード ページ](https://go.microsoft.com/fwlink/?LinkID=401007)|  
 |[Microsoft SQL Server 2012 RTM Feature Pack](https://www.microsoft.com/download/details.aspx?id=29065) または [Microsoft SQL Server 2012 SP1 Feature Pack](https://go.microsoft.com/fwlink/p/?LinkID=268266)の 1 つ以上のツールの 32 ビット バージョン|Microsoft SQL Server 2012 SP2 用 Feature Pack の 32 ビット バージョンにツールをアップグレード|Microsoft [SQL Server 2012 SP2 Feature Pack のダウンロード ページ](https://go.microsoft.com/fwlink/?LinkID=401008)の 1 つ以上のツール|  
 |64 ビット インストール:|||  
 |SQL Server 2012 のいずれかのエディションの 64 ビット バージョン|SQL Server 2012 SP2 の 64 ビット バージョンにアップグレード|SQLServer2012SP2-KB2958429-<arch>-<langid>.exe ( [SQL Server 2012 SP2 のダウンロード ページ](https://go.microsoft.com/fwlink/?LinkID=401006)から)|  
-|SQL Server 2012 RTM Express の 64 ビット バージョン|SQL Server 2012 SP2 の 64 ビット バージョンにアップグレード|**SQLEXPR_**<arch>**_**<lang>**.msi** ( [SQL Server 2012 SP2 Express のダウンロード ページ](https://go.microsoft.com/fwlink/?LinkID=401007)|  
-|SQL Server 2012 のクライアントと管理ツールのみの 64 ビット バージョン (SQL Server 2012 Management Studio 含む)|SQL Server 2012 SP2 の 64 ビット バージョンにクライアントと管理ツールをアップグレード|**SQLEXPRWT_**<arch>**_**<lang>**.msi** ( [SQL Server 2012 SP2 Express のダウンロード ページ](https://go.microsoft.com/fwlink/?LinkID=401007)|  
-|SQL Server 2012 Management Studio Express の 64 ビット バージョン|SQL Server 2012 SP2 Management Studio Express の 64 ビット バージョンにアップグレード|**SQLManagementStudio_**<arch>**_**<lang>**.msi** ( [SQL Server 2012 SP2 Express のダウンロード ページ](https://go.microsoft.com/fwlink/?LinkID=401007)|  
+|SQL Server 2012 RTM Express の 64 ビット バージョン|SQL Server 2012 SP2 の 64 ビット バージョンにアップグレード|**SQLEXPR_** <arch> **_** <lang> **.msi** ( [SQL Server 2012 SP2 Express のダウンロード ページ](https://go.microsoft.com/fwlink/?LinkID=401007)|  
+|SQL Server 2012 のクライアントと管理ツールのみの 64 ビット バージョン (SQL Server 2012 Management Studio 含む)|SQL Server 2012 SP2 の 64 ビット バージョンにクライアントと管理ツールをアップグレード|**SQLEXPRWT_** <arch> **_** <lang> **.msi** ( [SQL Server 2012 SP2 Express のダウンロード ページ](https://go.microsoft.com/fwlink/?LinkID=401007)|  
+|SQL Server 2012 Management Studio Express の 64 ビット バージョン|SQL Server 2012 SP2 Management Studio Express の 64 ビット バージョンにアップグレード|**SQLManagementStudio_** <arch> **_** <lang> **.msi** ( [SQL Server 2012 SP2 Express のダウンロード ページ](https://go.microsoft.com/fwlink/?LinkID=401007)|  
 |[Microsoft SQL Server 2012 RTM Feature Pack](https://www.microsoft.com/download/details.aspx?id=29065) または [Microsoft SQL Server 2012 SP1 Feature Pack](https://go.microsoft.com/fwlink/p/?LinkID=268266)の 1 つ以上のツールの 64 ビット バージョン|Microsoft SQL Server 2012 SP2 用 Feature Pack の 64 ビット バージョンにツールをアップグレード|Microsoft [SQL Server 2012 SP2 Feature Pack のダウンロード ページ](https://go.microsoft.com/fwlink/?LinkID=401008)の 1 つ以上のツール|   
 
 
@@ -95,7 +94,7 @@ Service Pack は、インストール メディアではなくオンラインで
 
 ### <a name="download-pages"></a>ダウンロード ページ  
 - [SQL Server 2012 SP1 Feature Pack](https://go.microsoft.com/fwlink/p/?LinkID=268158)
-- [SQL Server 2012 SP1 Express](https://go.microsoft.com/fwlink/p/?LinkID=26815)
+- [SQL Server 2012 SP1 Express](https://www.microsoft.com/download/details.aspx?id=35579)
 
 
 ダウンロードとインストールに使用するファイルを確認するには、次の表を参照してください。 サービス パックをインストールする前に、システム要件を正しく満たしていることを確認します。 システム要件は、この表にあるリンクされたダウンロード ページに記載されています。  
@@ -112,7 +111,7 @@ Service Pack は、インストール メディアではなくオンラインで
 |SQL Server 2012 の 32 ビット インストールなし|SP1 を含む 32 ビット バージョンの SQL Server 2012 をインストール (SP1 がプレインストールされた新しいインスタンス)|SQLServer2012SP1-FullSlipstream-x86-ENU.exe **および** SQLServer2012SP1-FullSlipstream-x86-ENU.box ( [こちら](https://go.microsoft.com/fwlink/p/?LinkID=268158)から)|  
 |SQL Server 2012 Management Studio の 32 ビット インストールなし|32 ビットの SQL Server 2012 Management Studio をインストール (SP1 を含む)|SQLManagementStudio_x86_ENU.exe ( [こちら](https://go.microsoft.com/fwlink/p/?LinkId=267905)から)|  
 |SQL Server 2012 RTM Express の 32 ビット バージョンなし|32 ビットの SQL Server 2012 Express をインストール (SP1 を含む)|SQLEXPR32_x86_ENU.exe ( [こちら](https://go.microsoft.com/fwlink/p/?LinkId=267905)から)|  
-|**SQL Server 2008** または **SQL Server 2008 R2**の 32 ビット インストール|32 ビットの SQL Server 2012 (SP1 含む) に**インプレース アップグレード** |SQLServer2012SP1-FullSlipstream-x86-ENU.exe **および** SQLServer2012SP1-FullSlipstream-x86-ENU.box ( [こちら](https://go.microsoft.com/fwlink/p/?LinkID=268158)から)|  
+|**SQL Server 2008** または **SQL Server 2008 R2**の 32 ビット インストール|32 ビットの SQL Server 2012 (SP1 含む) に**インプレース アップグレード**|SQLServer2012SP1-FullSlipstream-x86-ENU.exe **および** SQLServer2012SP1-FullSlipstream-x86-ENU.box ( [こちら](https://go.microsoft.com/fwlink/p/?LinkID=268158)から)|  
 |**64 ビット インストール:**|||  
 |SQL Server 2012 のいずれかのエディションの 64 ビット バージョン|SQL Server 2012 SP1 の 64 ビット バージョンにアップグレード|SQLServer2012SP1-KB2674319-x64-ENU.exe ( [こちら](https://go.microsoft.com/fwlink/p/?LinkID=268158)から)|  
 |SQL Server 2012 RTM Express の 64 ビット バージョン|SQL Server 2012 SP1 の 64 ビット バージョンにアップグレード|SQLServer2012SP1-KB2674319-x64-ENU.exe ( [こちら](https://go.microsoft.com/fwlink/p/?LinkID=268158)から)|  
@@ -123,15 +122,15 @@ Service Pack は、インストール メディアではなくオンラインで
 |SQL Server 2012 の 64 ビット インストールなし|SP1 を含む 64 ビット バージョンの SQL Server 2012 をインストール (SP1 がプレインストールされた新しいインスタンス)|SQLServer2012SP1-FullSlipstream-x64-ENU.exe **および** SQLServer2012SP1-FullSlipstream-x64-ENU.box ( [こちら](https://go.microsoft.com/fwlink/p/?LinkID=268158)から)|  
 |SQL Server 2012 Management Studio の 64 ビット インストールなし|64 ビットの SQL Server 2012 Management Studio をインストール (SP1 含む)|SQLManagementStudio_x64_ENU.exe ( [こちら](https://go.microsoft.com/fwlink/p/?LinkID=267905)から)|  
 |SQL Server 2012 RTM Express の 64 ビット バージョンなし|64 ビットの SQL Server 2012 Express をインストール (SP1 含む)|SQLEXPR_x64_ENU.exe ( [こちら](https://go.microsoft.com/fwlink/p/?LinkID=267905)から)|  
-|**SQL Server 2008** または **SQL Server 2008 R2**の 64 ビット インストール|64 ビットの SQL Server 2012 (SP1 含む) に**インプレース アップグレード** |SQLServer2012SP1-FullSlipstream-x64-ENU.exe **および** SQLServer2012SP1-FullSlipstream-x64-ENU.box ( [こちら](https://go.microsoft.com/fwlink/p/?LinkID=268158)から)|  
+|**SQL Server 2008** または **SQL Server 2008 R2**の 64 ビット インストール|64 ビットの SQL Server 2012 (SP1 含む) に**インプレース アップグレード**|SQLServer2012SP1-FullSlipstream-x64-ENU.exe **および** SQLServer2012SP1-FullSlipstream-x64-ENU.box ( [こちら](https://go.microsoft.com/fwlink/p/?LinkID=268158)から)|  
 
 ### <a name="known-issues-fixed-in-this-service-pack"></a>この Service Pack で修正された既知の問題  
 この Service Pack で修正されたすべてのバグと既知の問題については、 [サポート技術情報記事](https://support.microsoft.com/kb/2674319)を参照してください。   
 
 ### <a name="reinstalling--instances-of-sql-server-failover-cluster-fails-if-you-use-the-same-ip-address"></a>同じ IP アドレスを使用すると SQL Server フェールオーバー クラスターのインスタンスの再インストールに失敗する  
-**問題点:** SQL Server フェールオーバー クラスター インスタンスのインストール中に不適切な IP アドレスを指定すると、インストールは失敗します。 失敗したインスタンスをアンインストールした後に、同じインスタンス名と適切な IP アドレスを使用して SQL Server フェールオーバー クラスター インスタンスを再インストールしようとすると、インストールは失敗します。 このエラーは、前のインストールによって残されたリソース グループが重複するため発生します。  
+**問題点:** SQL Server フェールオーバー クラスター インスタンスのインストール中に不正な IP アドレスを指定すると、インストールは失敗します。 失敗したインスタンスをアンインストールした後に、同じインスタンス名と適切な IP アドレスを使用して SQL Server フェールオーバー クラスター インスタンスを再インストールしようとすると、インストールは失敗します。 このエラーは、前のインストールによって残されたリソース グループが重複するため発生します。  
   
-**回避策:** この問題を解決するには、再インストール時に別のインスタンス名を使用するか、再インストールする前にリソース グループを手動で削除してください。 詳細については、「 [SQL Server フェールオーバー クラスターでのノードの追加または削除](failover-clusters/install/add-or-remove-nodes-in-a-sql-server-failover-cluster-setup.md)」をご覧ください。 
+**回避策:** この問題を解決するには、再インストール時に別のインスタンス名を使用するか、再インストール前にリソース グループを手動で削除してください。 詳細については、「 [SQL Server フェールオーバー クラスターでのノードの追加または削除](failover-clusters/install/add-or-remove-nodes-in-a-sql-server-failover-cluster-setup.md)」をご覧ください。 
   
 ### <a name="analysis-services-and-powerpivot"></a>Analysis Services と PowerPivot  
   
@@ -149,7 +148,7 @@ Service Pack は、インストール メディアではなくオンラインで
 #### <a name="to-use-powerpivot-for-excel-with-excel-2013-you-must-use-the-add-in-that-is-installed-with-excel"></a>Excel 2013 で PowerPivot for Excel を使用する場合は Excel と一緒にインストールされたアドインを使用する必要がある  
 **問題点:** Office 2010 では、PowerPivot for Excel は [https://www.microsoft.com/bi/powerpivot.aspx](https://www.microsoft.com/bi/powerpivot.aspx) からダウンロードできるスタンドアロンのアドインです。 このアドインは、 [Microsoft ダウンロード センター](https://www.microsoft.com/download/details.aspx?id=29074)からもダウンロードできます。 PowerPivot アドインは 2 つのバージョンをダウンロードできることにご留意ください。SQL Server 2008 R2 と SQL Server 2012 にそれぞれ付属するバージョンです。 ただし、Office 2013 の場合、PowerPivot for Excel は Offce に付属していて、Excel のインストール時にインストールされます。 SQL Server 2008 R2 および SQL Server 2012 に付属の PowerPivot for Excel 2010 には Excel 2013 との互換性はありませんが、Excel 2010 と Excel 2013 をサイド バイ サイドで実行する場合は、クライアント コンピューターに PowerPivot for Excel 2010 をインストールできます。 つまり、2 つのバージョンの Excel が共存できるため、対応する PowerPivot アドインも共存できます。  
   
-**回避策:** PowerPivot for Excel 2013 を使用するには、COM アドインを有効にする必要があります。 Excel 2013 で、 **[ファイル]** | **[オプション]** | **[アドイン]** の順にクリックします。**[管理]** ドロップダウン ボックスの一覧で **[COM アドイン]** を選択し、 **[設定]** をクリックします。 **[COM アドイン]** で、 **[Microsoft Office PowerPivot for Excel 2013]** を選択し、 **[OK]** をクリックします。  
+**回避策:** PowerPivot for Excel 2013 を使用するには、COM アドインを有効にする必要があります。 Excel 2013 で、 **[ファイル]**  |  **[オプション]**  |  **[アドイン]** の順にクリックします。 **[管理]** ドロップダウン ボックスの一覧で **[COM アドイン]** を選択し、 **[設定]** をクリックします。 **[COM アドイン]** で、 **[Microsoft Office PowerPivot for Excel 2013]** を選択し、 **[OK]** をクリックします。  
   
 ### <a name="reporting-services"></a>Reporting Services  
   
@@ -185,7 +184,7 @@ Service Pack は、インストール メディアではなくオンラインで
 ### <a name="data-quality-services"></a>Data Quality Services  
   
 #### <a name="dqs-available-in-the-incorrect-edition-of-sql-server-2012"></a>DQS がサポートされていないエディションの SQL Server 2012 で使用可能になる  
-**問題点:**[!INCLUDE[ssSQL11](../includes/sssql11-md.md)] RTM リリースでは、Enterprise、Business Intelligence、Developer 以外のエディションの SQL Server でも Data Quality Services (DQS) 機能を使用できます。 SQL Server 2012 SP1 のインストール後は、Enterprise、Business Intelligence、および Developer 以外のエディションで DQS を使用できなくなります。  
+**問題点:** [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] RTM リリースでは、Enterprise、Business Intelligence、Developer 以外のエディションの SQL Server でも Data Quality Services (DQS) 機能を使用できます。 SQL Server 2012 SP1 のインストール後は、Enterprise、Business Intelligence、および Developer 以外のエディションで DQS を使用できなくなります。  
   
 **回避策**:サポートされていないエディションで DQS を使用している場合は、サポートされているエディションにアップグレードするか、アプリケーションをこの機能に依存しないように変更します。  
   
@@ -226,11 +225,11 @@ DACFx は、すべての DAC シナリオとクライアント ツールで、SX
   
 **SqlPackage.exe (DACFx コマンド ライン ツール) に対する更新**  
   
--   データを含む DACPAC の抽出: データベース スキーマの他にユーザー テーブルのデータを含むライブ SQL Server または Windows Azure SQL データベースから、データベース スナップショット ファイル (.dacpac) を作成します。 これらのパッケージは、SqlPackage.exe の Publish 操作を使用して、新規または既存の SQL Server または Windows Azure SQL データベースにパブリッシュできます。 パッケージに含まれているデータによって、ターゲット データベースの既存のデータは置き換えられます。  
+-   データを含む DACPAC の抽出 - データベース スキーマの他にユーザー テーブルのデータを含むライブ SQL Server または Azure SQL Database から、データベース スナップショット ファイル (.dacpac) を作成します。 これらのパッケージは、SqlPackage.exe の Publish 操作を使用して、新規または既存の SQL Server または Azure SQL Database にパブリッシュできます。 パッケージに含まれているデータによって、ターゲット データベースの既存のデータは置き換えられます。  
   
--   BACPAC のエクスポート: オンプレミス SQL Server から Windows Azure SQL データベースへのデータベースの移行に使用できる、データベース スキーマおよびユーザー データを含むライブ SQL Server または Windows Azure SQL データベースの論理バックアップ ファイル (.bacpac) を作成します。 サポートされているバージョンの SQL Server 間で、Azure と互換性のあるデータベースをエクスポートし、後でインポートできます。  
+-   BACPAC のエクスポート - オンプレミスの SQL Server から Azure SQL Database へのデータベースの移行に使用できる、データベース スキーマおよびユーザー データを含むライブ SQL Server または Azure SQL Database の論理バックアップ ファイル (.bacpac) を作成します。 サポートされているバージョンの SQL Server 間で、Azure と互換性のあるデータベースをエクスポートし、後でインポートできます。  
   
--   BACPAC のインポート: .bacpac ファイルをインポートして、SQL Server または Windows Azure SQL データベースを新規に作成したり、空のデータベースにデータを入力したりできます。  
+-   BACPAC のインポート - .bacpac ファイルをインポートして、SQL Server または Azure SQL Database を新規に作成したり、空のデータベースにデータを入力したりできます。  
   
 SqlPackage.exe の完全なドキュメントは、MSDN の [ここ](https://msdn.microsoft.com/library/hh550080%28v=vs.103%29.aspx)にあります。  
   

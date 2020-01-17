@@ -1,6 +1,5 @@
 ---
-title: ドメインの管理 | Microsoft Docs
-ms.custom: ''
+title: ドメインの管理
 ms.date: 07/31/2012
 ms.prod: sql
 ms.prod_service: data-quality-services
@@ -8,15 +7,14 @@ ms.reviewer: ''
 ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: c5ab71a3-0dac-45b1-be8e-93bf7e0e03ce
-author: leolimsft
-ms.author: lle
-manager: craigg
-ms.openlocfilehash: 86889fa3800ea2e2542ecbbc3e1996b486c14fe9
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
-ms.translationtype: HT
+author: swinarko
+ms.author: sawinark
+ms.openlocfilehash: 40482e599244f0e5102195cd0e34c3718a06d149
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56038783"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75258439"
 ---
 # <a name="managing-a-domain"></a>ドメインの管理
 
@@ -48,12 +46,12 @@ ms.locfileid: "56038783"
   
 |||  
 |-|-|  
-|特定のデータ型を持つデータ フィールドのセマンティック表現を作成し、ドメインの作成方法を指定して、ドメインの出力形式を設定する|[ドメインを作成する](../data-quality-services/create-a-domain.md)|  
-|ドメインを別のドメインにリンクして、ドメインが同じ設定と値を共有できるようにする|[リンク ドメインを作成する](../data-quality-services/create-a-linked-domain.md)|  
-|参照データ サービスを単一または複合ドメインにアタッチする|[参照データにドメインまたは複合ドメインをアタッチする](../data-quality-services/attach-domain-or-composite-domain-to-reference-data.md)|  
-|ナレッジ ベース内の値を変更または拡張する|[ドメイン値を変更する](../data-quality-services/change-domain-values.md)|  
-|検証と標準化の規則を使用する|[ドメイン ルールを作成する](../data-quality-services/create-a-domain-rule.md)|  
-|リレーションを使用してドメインの値の一部である用語を修正する|[用語ベースのリレーションを作成する](../data-quality-services/create-term-based-relations.md)|  
+|特定のデータ型を持つデータ フィールドのセマンティック表現を作成し、ドメインの作成方法を指定して、ドメインの出力形式を設定する|[ドメインの作成](../data-quality-services/create-a-domain.md)|  
+|ドメインを別のドメインにリンクして、ドメインが同じ設定と値を共有できるようにする|[リンク ドメインの作成](../data-quality-services/create-a-linked-domain.md)|  
+|参照データ サービスを単一または複合ドメインにアタッチする|[参照データへのドメインまたは複合ドメインのアタッチ](../data-quality-services/attach-domain-or-composite-domain-to-reference-data.md)|  
+|ナレッジ ベース内の値を変更または拡張する|[ドメイン値の変更](../data-quality-services/change-domain-values.md)|  
+|検証と標準化の規則を使用する|[ドメイン ルールの作成](../data-quality-services/create-a-domain-rule.md)|  
+|リレーションを使用してドメインの値の一部である用語を修正する|[用語ベースのリレーションの作成](../data-quality-services/create-term-based-relations.md)|  
 |ドメイン管理アクティビティを完了、終了、またはキャンセルする|[ドメイン管理アクティビティの終了](https://msdn.microsoft.com/library/ab6505ad-3090-453b-bb01-58435e7fa7c0)|  
   
 ## <a name="related-tasks"></a>Related Tasks  

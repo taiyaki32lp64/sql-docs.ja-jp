@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: b4608fe7-c777-4ba5-b853-4402f02109e3
 author: Shamikg
 ms.author: Shamikg
-manager: craigg
-ms.openlocfilehash: da5b708c4dbf80a1faa7fa74f237b1cc750ea975
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 15c4ff470c78814745be6f3f4c8f898bf4b809ce
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52540900"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68103062"
 ---
 # <a name="creating-script-files-mysqltosql"></a>スクリプト ファイルの作成 (MySQLToSQL)
 SSMA コンソールのアプリケーションを起動すると、スクリプト ファイルを作成する前に、変数値ファイルとサーバー接続ファイルを作成するために必要な場合、最初の手順します。  
@@ -321,7 +320,7 @@ SSMA コンソールのアプリケーションを起動すると、スクリプ
     </...All commands...>  
     ```  
   
-10. **暗号化されたパスワードをオーバーライドします。**'True' の場合、サーバー接続ファイルのサーバー定義のセクションで、またはスクリプト ファイルに上書きの場合は、保護されたストレージに格納されている暗号化されたパスワードが存在するクリア テキスト パスワードが指定されました。 クリア テキストでパスワードが指定されていない場合は、パスワードの入力を求められます。  
+10. **暗号化されたパスワードをオーバーライドします。** 'True' の場合、サーバー接続ファイルのサーバー定義のセクションで、またはスクリプト ファイルに上書きの場合は、保護されたストレージに格納されている暗号化されたパスワードが存在するクリア テキスト パスワードが指定されました。 クリア テキストでパスワードが指定されていない場合は、パスワードの入力を求められます。  
   
     ここでは 2 つのケースが生じます。  
   
@@ -400,6 +399,6 @@ SSMA コンソールのアプリケーションを起動すると、スクリプ
 ## <a name="next-step"></a>次の手順  
 コンソールの運用には、次の手順は[変数値ファイルの作成&#40;MySQLToSQL&#41;](../../ssma/mysql/creating-variable-value-files-mysqltosql.md)します。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
 [変数値ファイルを作成する&#40;MySQLToSQL&#41;](../../ssma/mysql/creating-variable-value-files-mysqltosql.md)  
   

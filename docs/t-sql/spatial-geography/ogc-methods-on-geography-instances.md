@@ -1,7 +1,7 @@
 ---
 title: geography インスタンスの OGC メソッド | Microsoft Docs
 ms.custom: ''
-ms.date: 03/14/2017
+ms.date: 06/27/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -10,22 +10,21 @@ ms.topic: language-reference
 dev_langs:
 - TSQL
 ms.assetid: a33d5db9-aed1-4c96-85bf-9d3b5051c635
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: 989dd7b7fc73a7ec18a44b9ac30e58f060fe5b1f
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+author: MladjoA
+ms.author: mlandzic
+ms.openlocfilehash: a9a7aea8309549f67e203ee2b6fc4141462995dc
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52511225"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68025679"
 ---
 # <a name="ogc-methods-on-geography-instances"></a>geography インスタンスの OGC メソッド
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
 
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、**geography** インスタンスに対して Open Geospatial Consortium (OGC) メソッドをサポートしています。  
   
- OGC 仕様の詳細については、以下を参照してください。  
+ OGC 仕様の詳細については、以下のリソースを参照してください。  
   
  [OGC の仕様、簡易機能アクセス Part 1 - 共通アーキテクチャ](https://go.microsoft.com/fwlink/?LinkId=93627)  
   
@@ -69,7 +68,7 @@ ms.locfileid: "52511225"
   
 -   [STIsEmpty](../../t-sql/spatial-geography/stisempty-geography-data-type.md)  
   
--   [STIsValida](../../t-sql/spatial-geography/stisvalid-geography-data-type.md)  
+-   [STIsValid](../../t-sql/spatial-geography/stisvalid-geography-data-type.md)  
   
 -   [STLength](../../t-sql/spatial-geography/stlength-geography-data-type.md)  
   

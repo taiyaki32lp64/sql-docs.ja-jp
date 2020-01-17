@@ -4,21 +4,20 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 f1_keywords:
 - "10080"
 ms.assetid: eb3b5d01-7b82-4808-a58b-9e096742f8c6
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 625c73aea6a306aaab84ea47842edfd6ebdd0588
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: 4be5a0ba8575467467a6d73a7d6fac27e914463f
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56297220"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66104369"
 ---
 # <a name="report-properties-dialog-box-page-setup-report-builder"></a>[ページ設定] ([レポートのプロパティ] ダイアログ ボックス) (レポート ビルダー)
   選択**ページ設定**上、**レポートのプロパティ**、ダイアログ ボックスをレポート全体のページのオプションを設定します。  

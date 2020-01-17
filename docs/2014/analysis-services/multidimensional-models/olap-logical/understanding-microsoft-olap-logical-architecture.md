@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: analysis-services
 ms.topic: reference
 helpviewer_keywords:
 - Analysis Services, architecture
@@ -15,12 +13,12 @@ ms.assetid: 1b9cae0a-8990-4194-af5f-a1ea5f2aff06
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 3ef5ebb45a1b07470add62eed720547e16cdffab
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 074659d42e1960c5f24cf4afa20668a3d8c823b0
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48091052"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62725486"
 ---
 # <a name="logical-architecture-analysis-services---multidimensional-data"></a>論理アーキテクチャ (Analysis Services - 多次元データ)
   [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] サーバーとクライアントの両方のコンポーネントを使用して、オンライン分析処理 (OLAP) およびビジネス インテリジェンス アプリケーション用のデータ マイニング機能を提供します。  
@@ -29,7 +27,7 @@ ms.locfileid: "48091052"
   
 -   クライアントは、 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] との通信に、コマンドの発行や応答の受信のための SOAP ベースのプロトコルで、Web サービスとして公開されているパブリック標準の XML for Analysis (XMLA) を使用します。 クライアント オブジェクト モデルも XMLA 経由で提供されます。クライアント オブジェクト モデルには、ADOMD.NET などのマネージド プロバイダーまたはネイティブ OLE DB プロバイダーを使用してアクセスできます。  
   
--   クエリ コマンドは、SQL、分析用の業界標準クエリ言語である多次元式 (MDX)、またはデータ マイニング指向の業界標準クエリ言語であるデータ マイニング拡張機能 (DMX) を使用して発行できます。 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] データベース オブジェクトの管理には、Analysis Services スクリプト言語 (ASSL) を使用することもできます。  
+-   次の言語を使用して、クエリ コマンドを発行できます。SQL;多次元式 (MDX)、分析用の業界標準クエリ言語またはデータ マイニング拡張機能 (DMX)、データ マイニング指向、業界標準クエリ言語を選択します。 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] データベース オブジェクトの管理には、Analysis Services スクリプト言語 (ASSL) を使用することもできます。  
   
  [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] では、接続されていないクライアント上のアプリケーションがローカルに格納された多次元データを参照することを可能にするローカル キューブ エンジンもサポートされます。 詳細については、次を参照してください[Analysis Services 開発に関するクライアント アーキテクチャの要件。](../olap-physical/client-architecture-requirements-for-analysis-services-development.md)  
   
@@ -41,7 +39,7 @@ ms.locfileid: "48091052"
  [サーバー オブジェクト&#40;Analysis Services - 多次元データ&#41;](server-objects-analysis-services-multidimensional-data.md)  
   
  **データベース オブジェクト**  
- [データベース オブジェクト&#40;Analysis Services - 多次元データ&#41;](database-objects-analysis-services-multidimensional-data.md)  
+ [データベース オブジェクト &#40;Analysis Services - 多次元データ&#41;](database-objects-analysis-services-multidimensional-data.md)  
   
  **ディメンション オブジェクト**  
  [ディメンション オブジェクト&#40;Analysis Services - 多次元データ&#41;](../../multidimensional-models-olap-logical-dimension-objects/dimension-objects-analysis-services-multidimensional-data.md)  

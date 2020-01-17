@@ -1,163 +1,156 @@
-items:
 - name: データベース エンジン
   href: sql-server-database-engine-overview.md
   items:
-  - name: 新機能 (データベース エンジン)
-    href: whats-new-in-sql-server-2016.md
-  - name: SQL Server データベース エンジンの旧バージョンとの互換性
-    href: sql-server-database-engine-backward-compatibility.md
-    items:
-    - name: SQL Server 2014 データベース エンジンの非推奨の機能
-      href: deprecated-database-engine-features-in-sql-server-2016.md
-    - name: SQL Server 2014 で廃止されたデータベース エンジンの機能
-      href: discontinued-database-engine-functionality-in-sql-server-2016.md
-    - name: SQL Server 2014 におけるデータベース エンジン機能の重大な変更
-      href: breaking-changes-to-database-engine-features-in-sql-server-2016.md
-    - name: SQL Server 2014 におけるデータベース エンジン機能の動作の変更
-      href: behavior-changes-to-database-engine-features-in-sql-server-2014.md
-    - name: フルテキスト検索における旧バージョンとの互換性
-      href: full-text-search-backward-compatibility.md
+    - name: 新機能 (データベース エンジン)
+      href: whats-new-in-sql-server-2016.md
+    - name: SQL Server データベース エンジンの旧バージョンとの互換性
+      href: sql-server-database-engine-backward-compatibility.md
       items:
-      - name: SQL Server 2014 で廃止されたフルテキスト検索機能
-        href: discontinued-full-text-search-features-in-sql-server-2014.md
-      - name: フルテキスト検索の重大な変更
-        href: breaking-changes-to-full-text-search.md
-      - name: フルテキスト検索の動作の変更
-        href: behavior-changes-to-full-text-search.md
-  - name: SQL Server 管理ツールの旧バージョンとの互換性
-    href: sql-server-management-tools-backward-compatibility.md
-    items:
-    - name: SQL Server 2014 の非推奨の管理ツール機能
-      href: deprecated-management-tools-features-in-sql-server-2014.md
-    - name: SQL Server 2014 で廃止された管理ツール機能
-      href: discontinued-management-tools-features-in-sql-server-2014.md
-    - name: SQL Server 2014 の管理ツール機能における重大な変更
-      href: breaking-changes-to-management-tools-features-in-sql-server-2014.md
-    - name: SQL Server 2014 における管理ツール機能の動作の変更
-      href: behavior-changes-to-management-tools-features-in-sql-server-2014.md
+        - name: SQL Server 2014 データベース エンジンの非推奨の機能
+          href: deprecated-database-engine-features-in-sql-server-2016.md
+        - name: SQL Server 2014 で廃止されたデータベース エンジンの機能
+          href: discontinued-database-engine-functionality-in-sql-server-2016.md
+        - name: SQL Server 2014 におけるデータベース エンジン機能の重大な変更
+          href: breaking-changes-to-database-engine-features-in-sql-server-2016.md
+        - name: SQL Server 2014 におけるデータベース エンジン機能の動作の変更
+          href: behavior-changes-to-database-engine-features-in-sql-server-2014.md
+        - name: フルテキスト検索における旧バージョンとの互換性
+          href: full-text-search-backward-compatibility.md
+          items:
+            - name: SQL Server 2014 で廃止されたフルテキスト検索機能
+              href: discontinued-full-text-search-features-in-sql-server-2014.md
+            - name: フルテキスト検索の重大な変更
+              href: breaking-changes-to-full-text-search.md
+            - name: フルテキスト検索の動作の変更
+              href: behavior-changes-to-full-text-search.md
+    - name: SQL Server 管理ツールの旧バージョンとの互換性
+      href: sql-server-management-tools-backward-compatibility.md
+      items:
+        - name: SQL Server 2014 の非推奨の管理ツール機能
+          href: deprecated-management-tools-features-in-sql-server-2014.md
+        - name: SQL Server 2014 で廃止された管理ツール機能
+          href: discontinued-management-tools-features-in-sql-server-2014.md
+        - name: SQL Server 2014 の管理ツール機能における重大な変更
+          href: breaking-changes-to-management-tools-features-in-sql-server-2014.md
+        - name: SQL Server 2014 における管理ツール機能の動作の変更
+          href: behavior-changes-to-management-tools-features-in-sql-server-2014.md
 - name: ビジネス継続性
   href: ../sql-server/failover-clusters/high-availability-solutions-sql-server.md
   items:
-  - name: Always On 可用性グループ
-    href: availability-groups/windows/toc.yml
-  - name: フェールオーバー クラスター インスタンス
-    href: ../sql-server/failover-clusters/toc.yml
-  - name: データベース ミラーリング
-    href: database-mirroring/toc.yml
-  - name: ログ配布
-    href: log-shipping/toc.yml
+    - name: Always On 可用性グループ
+      href: availability-groups/windows/toc.yml
+    - name: フェールオーバー クラスター インスタンス
+      href: ../sql-server/failover-clusters/toc.yml
+    - name: データベース ミラーリング
+      href: database-mirroring/toc.yml
+    - name: ログ配布
+      href: log-shipping/toc.yml
 - name: データベース エンジンの機能とタスク
   href: database-engine-features-and-tasks.md
 - name: データベース エンジンのインスタンス (SQL Server)
   href: configure-windows/database-engine-instances-sql-server.md
   items:
-  - name: データベース エンジンのインスタンスの構成 +
-    href: configure-windows/toc.yml
-  - name: 照合順序と Unicode のサポート +
-    href: ../relational-databases/collations/collation-and-unicode-support.md
-  - name: リンク サーバー (データベース エンジン)
-    href: ../relational-databases/linked-servers/linked-servers-database-engine.md
-    items:
-    - name: リンク サーバーの作成 (SQL Server データベース エンジン)
-      href: ../relational-databases/linked-servers/create-linked-servers-sql-server-database-engine.md
-  - name: ログオン トリガー
-    href: ../relational-databases/triggers/logon-triggers.md
-    items:
-    - name: ログオン トリガーのイベント データのキャプチャ
-      href: ../relational-databases/triggers/capture-logon-trigger-event-data.md
-  - name: データベース エンジン サービスの管理 +
-    href: configure-windows/manage-the-database-engine-services.md
-  - name: サーバー ネットワークの構成 +
-    href: configure-windows/server-network-configuration.md
-  - name: クライアント ネットワーク構成 +
-    href: configure-windows/client-network-configuration.md
-  - name: データベース エンジン スクリプト +
-    href: ../relational-databases/scripting/database-engine-scripting.md
-  - name: メンテナンス プラン +
-    href: ../relational-databases/maintenance-plans/maintenance-plans.md
-  - name: Resource Governor +
-    href: ../relational-databases/resource-governor/resource-governor.md
-  - name: データベース メール +
-    href: ../relational-databases/database-mail/database-mail.md
-  - name: 拡張イベント +
-    href: ../relational-databases/extended-events/extended-events.md
-  - name: SQL トレース +
-    href: ../relational-databases/sql-trace/sql-trace.md
-  - name: SQL Server プロファイラー +
-    href: ../tools/sql-server-profiler/sql-server-profiler.md
-  - name: データ変更の追跡 +
-    href: ../relational-databases/track-changes/track-data-changes-sql-server.md
-  - name: ログ ファイルの表示 +
-    href: ../relational-databases/logs/log-file-viewer.md
-  - name: データベース エンジン チューニング アドバイザー +
-    href: ../relational-databases/performance/database-engine-tuning-advisor.md
-  - name: データベース管理者用の診断接続
-    href: configure-windows/diagnostic-connection-for-database-administrators.md
-  - name: SQL Server のクラウド アダプター
-    href: cloud-adapter-for-sql-server.md
-  - name: SQL Server 2014 Express LocalDB
-    href: configure-windows/sql-server-2016-express-localdb.md
-  - name: リモート サーバー
-    href: configure-windows/remote-servers.md
-  - name: SQL Server モニターの概要
-    href: configure-windows/sql-server-monitor-overview.md
-  - name: Service Broker
-    href: configure-windows/sql-server-service-broker.md
-  - name: バッファー プール拡張
-    href: configure-windows/buffer-pool-extension.md
+    - name: データベース エンジンのインスタンスの構成 +
+      href: configure-windows/toc.yml
+    - name: 照合順序と Unicode のサポート +
+      href: ../relational-databases/collations/collation-and-unicode-support.md
+    - name: リンク サーバー (データベース エンジン)
+      href: ../relational-databases/linked-servers/linked-servers-database-engine.md
+      items:
+        - name: リンク サーバーの作成 (SQL Server データベース エンジン)
+          href: ../relational-databases/linked-servers/create-linked-servers-sql-server-database-engine.md
+    - name: ログオン トリガー
+      href: ../relational-databases/triggers/logon-triggers.md
+      items:
+        - name: ログオン トリガーのイベント データのキャプチャ
+          href: ../relational-databases/triggers/capture-logon-trigger-event-data.md
+    - name: データベース エンジン サービスの管理 +
+      href: configure-windows/manage-the-database-engine-services.md
+    - name: サーバー ネットワークの構成 +
+      href: configure-windows/server-network-configuration.md
+    - name: クライアント ネットワーク構成 +
+      href: configure-windows/client-network-configuration.md
+    - name: データベース エンジン スクリプト +
+      href: ../relational-databases/scripting/database-engine-scripting.md
+    - name: メンテナンス プラン +
+      href: ../relational-databases/maintenance-plans/maintenance-plans.md
+    - name: Resource Governor +
+      href: ../relational-databases/resource-governor/resource-governor.md
+    - name: データベース メール +
+      href: ../relational-databases/database-mail/database-mail.md
+    - name: 拡張イベント +
+      href: ../relational-databases/extended-events/extended-events.md
+    - name: SQL トレース +
+      href: ../relational-databases/sql-trace/sql-trace.md
+    - name: SQL Server プロファイラー +
+      href: ../tools/sql-server-profiler/sql-server-profiler.md
+    - name: データ変更の追跡 +
+      href: ../relational-databases/track-changes/track-data-changes-sql-server.md
+    - name: ログ ファイルの表示 +
+      href: ../relational-databases/logs/log-file-viewer.md
+    - name: データベース エンジン チューニング アドバイザー +
+      href: ../relational-databases/performance/database-engine-tuning-advisor.md
+    - name: データベース管理者用の診断接続
+      href: configure-windows/diagnostic-connection-for-database-administrators.md
+    - name: SQL Server のクラウド アダプター
+      href: cloud-adapter-for-sql-server.md
+    - name: SQL Server 2014 Express LocalDB
+      href: configure-windows/sql-server-2016-express-localdb.md
+    - name: リモート サーバー
+      href: configure-windows/remote-servers.md
+    - name: SQL Server モニターの概要
+      href: configure-windows/sql-server-monitor-overview.md
+    - name: Service Broker
+      href: configure-windows/sql-server-service-broker.md
+    - name: バッファー プール拡張
+      href: configure-windows/buffer-pool-extension.md
 - name: データベース機能 +
   href: ../relational-databases/database-features.md
 - name: データベース エンジンのインスタンス間機能
   href: database-engine-cross-instance-features.md
   items:
-  - name: SQL Server Management Studio +
-    href: ../ssms/sql-server-management-studio-ssms.md
-  - name: データベースのライフサイクル管理
-    href: ../relational-databases/database-lifecycle-management.md
-  - name: SQL Server ユーティリティの機能とタスク +
-    href: ../relational-databases/manage/sql-server-utility-features-and-tasks.md
-  - name: ポリシー ベースの管理を使用したサーバーの管理 +
-    href: ../relational-databases/policy-based-management/administer-servers-by-using-policy-based-management.md
-  - name: サーバーの登録 +
-    href: ../ssms/register-servers/register-servers.md
-  - name: SQL Server 分散再生 +
-    href: ../tools/distributed-replay/sql-server-distributed-replay.md
-  - name: データ コレクション +
-    href: ../relational-databases/data-collection/data-collection.md
-  - name: リソースの利用状況の監視 (システム モニター) +
-    href: ../relational-databases/performance-monitor/monitor-resource-usage-system-monitor.md
-  - name: 中央管理サーバーを使用した複数のサーバーの管理
-    href: ../relational-databases/administer-multiple-servers-using-central-management-servers.md
-  - name: SQL Server 構成マネージャー
-    href: ../relational-databases/sql-server-configuration-manager.md
-  - name: 利用状況モニター
-    href: ../relational-databases/performance-monitor/activity-monitor.md
-    items:
-    - name: 利用状況モニターを開く方法 (SQL Server Management Studio)
-      href: ../relational-databases/performance-monitor/open-activity-monitor-sql-server-management-studio.md
+    - name: SQL Server Management Studio +
+      href: ../ssms/sql-server-management-studio-ssms.md
+    - name: データベースのライフサイクル管理
+      href: ../relational-databases/database-lifecycle-management.md
+    - name: SQL Server ユーティリティの機能とタスク +
+      href: ../relational-databases/manage/sql-server-utility-features-and-tasks.md
+    - name: ポリシー ベースの管理を使用したサーバーの管理 +
+      href: ../relational-databases/policy-based-management/administer-servers-by-using-policy-based-management.md
+    - name: サーバーの登録 +
+      href: ../ssms/register-servers/register-servers.md
+    - name: SQL Server 分散再生 +
+      href: ../tools/distributed-replay/sql-server-distributed-replay.md
+    - name: データ コレクション +
+      href: ../relational-databases/data-collection/data-collection.md
+    - name: リソースの利用状況の監視 (システム モニター) +
+      href: ../relational-databases/performance-monitor/monitor-resource-usage-system-monitor.md
+    - name: 中央管理サーバーを使用した複数のサーバーの管理
+      href: ../relational-databases/administer-multiple-servers-using-central-management-servers.md
+    - name: SQL Server 構成マネージャー
+      href: ../relational-databases/sql-server-configuration-manager.md
+    - name: 利用状況モニター
+      href: ../relational-databases/performance-monitor/activity-monitor.md
+      items:
+        - name: 利用状況モニターを開く方法 (SQL Server Management Studio)
+          href: ../relational-databases/performance-monitor/open-activity-monitor-sql-server-management-studio.md
 - name: SQL Server データベース エンジンと Azure SQL Database のセキュリティ センター +
   href: ../relational-databases/security/security-center-for-sql-server-database-engine-and-azure-sql-database.md
 - name: テクニカル リファレンス
   href: technical-reference-database-engine.md
   items:
-  - name: 機能リファレンス
-    href: feature-reference-database-engine.md
-  - name: コマンド プロンプト ユーティリティ リファレンス (データベース エンジン) +
-    href: ../tools/command-prompt-utility-reference-database-engine.md
-  - name: データベース エンジン PowerShell リファレンス
-    href: database-engine-powershell-reference.md
-    items:
-    - name: Invoke-PolicyEvaluation コマンドレット
-      href: invoke-policyevaluation-cmdlet.md
-    - name: Invoke-Sqlcmd コマンドレット
-      href: invoke-sqlcmd-cmdlet.md
-    - name: クエリ式と Uniform Resource Name
-      href: ../powershell/query-expressions-and-uniform-resource-names.md
+    - name: 機能リファレンス
+      href: feature-reference-database-engine.md
+    - name: コマンド プロンプト ユーティリティ リファレンス (データベース エンジン) +
+      href: ../tools/command-prompt-utility-reference-database-engine.md
+    - name: データベース エンジン PowerShell リファレンス
+      href: database-engine-powershell-reference.md
+      items:
+        - name: Invoke-PolicyEvaluation コマンドレット
+          href: invoke-policyevaluation-cmdlet.md
+        - name: Invoke-Sqlcmd コマンドレット
+          href: invoke-sqlcmd-cmdlet.md
+        - name: クエリ式と Uniform Resource Name
+          href: ../powershell/query-expressions-and-uniform-resource-names.md
 - name: エラーとイベントのリファレンス +
   href: ../relational-databases/errors-events/errors-and-events-reference-database-engine.md
-ms.openlocfilehash: e9d7654eeed121b5d545547305b0a1a6500b8ca5
-ms.sourcegitcommit: 032273bfbc240fe22ac6c1f6601a14a6d99573f7
-ms.translationtype: HT
-ms.contentlocale: ja-JP
-ms.lasthandoff: 02/01/2019
-ms.locfileid: "55513852"

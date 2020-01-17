@@ -1,7 +1,7 @@
 ---
 title: データベースの全体復元 (完全復旧モデル) | Microsoft Docs
 ms.custom: ''
-ms.date: 03/14/2017
+ms.date: 03/15/2017
 ms.prod: sql
 ms.prod_service: backup-restore
 ms.reviewer: ''
@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 5b4c471c-b972-498e-aba9-92cf7a0ea881
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 38c3fd7407955d1c05e7c3bf7550531a4bce2978
-ms.sourcegitcommit: 202ef5b24ed6765c7aaada9c2f4443372064bd60
+ms.openlocfilehash: d7e56c5ceb23d2c42a973c7f8d56edbce5046a86
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/12/2019
-ms.locfileid: "54241983"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72908972"
 ---
 # <a name="complete-database-restores-full-recovery-model"></a>データベースの全体復元 (完全復旧モデル)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -34,21 +33,16 @@ ms.locfileid: "54241983"
   
  特に完全復旧モデルと一括ログ復旧モデルでは、データベースを復元するときに、単一の復元シーケンスを使用する必要があります。 *復元シーケンス* は、1 つ以上の復元フェーズによってデータを移動する、1 つ以上の復元操作で構成されます。  
   
-> [!IMPORTANT]  
->  不明なソースや信頼されていないソースからデータベースをアタッチまたは復元しないことをお勧めします。 そのようなデータベースには、意図しない [!INCLUDE[tsql](../../includes/tsql-md.md)] コードを実行したり、スキーマまたは物理データベース構造を変更することによりエラーを発生させる悪意のあるコードが含まれている可能性があります。 不明または信頼できないソースのデータベースを使用する前に、運用サーバー以外のサーバーでそのデータベースに対し [DBCC CHECKDB](../../t-sql/database-console-commands/dbcc-checkdb-transact-sql.md) を実行し、さらに、そのデータベースのストアド プロシージャやその他のユーザー定義コードなどのコードを調べます。  
-  
- **このトピックの内容**  
-  
--   [障害発生時点へのデータベースの復旧](#PointOfFailure)  
-  
--   [ログ バックアップ内の特定の時点へのデータベースの復元](#PointWithinBackup)  
-  
--   [関連タスク](#RelatedTasks)  
-  
-> [!NOTE]  
->  以前のバージョンの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]からのバックアップに対するサポートの情報については、「 [RESTORE &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-transact-sql.md)」の「互換性サポート」のセクションを参照してください。  
+### <a name="untrusted-sources"></a>信頼されていないソース
+
+不明なソースや信頼されていないソースからのデータベースのアタッチまたは復元は_実行しない_ことをお勧めします。 そのようなデータベースには、意図しない [!INCLUDE[tsql](../../includes/tsql-md.md)] コードを実行したり、スキーマまたは物理データベース構造を変更することによりエラーを発生させる悪意のあるコードが含まれている可能性があります。 不明なソースや信頼されていないソースからのデータベースを使用する場合は、事前に運用サーバー以外のサーバー上のデータベースで [DBCC CHECKDB](../../t-sql/database-console-commands/dbcc-checkdb-transact-sql.md) を実行してください。 さらに、ストアド プロシージャやその他のユーザー定義コードなどのデータベース内に記述されたユーザーのコードを調べてください。
+
+### <a name="backups-from-earlier-versions"></a>以前のバージョンからのバックアップ
+
+以前のバージョンの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]からのバックアップに対するサポートの情報については、「 [RESTORE &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-transact-sql.md)」の「互換性サポート」のセクションを参照してください。
   
 ##  <a name="PointOfFailure"></a> 障害発生時点へのデータベースの復旧  
+
  通常、障害が発生した時点までデータベースを復旧するには、次の基本的な手順が必要です。  
   
 1.  アクティブなトランザクション ログ (ログの末尾と呼ばれます) をバックアップします。 これにより、ログ末尾のバックアップが作成されます。 アクティブなトランザクション ログを使用できない場合は、そのログ部分にあるすべてのトランザクションが失われます。  

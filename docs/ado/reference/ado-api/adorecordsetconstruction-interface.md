@@ -15,20 +15,19 @@ helpviewer_keywords:
 ms.assetid: 08386eba-f1f7-4879-8ffd-8733930ecb2f
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 078b48c36d0ee2a1b3f368b8e6baf7346ed343fa
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 1e1d14255acd4cc7f18abea1c494353ef970903c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47634390"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67920790"
 ---
 # <a name="adorecordsetconstruction-interface"></a>ADORecordsetConstruction インターフェイス
 **ADORecordsetConstruction**インターフェイスは、ADO の構築に使用**レコード セット**から OLE DB オブジェクト**行セット**C/C++ アプリケーション内のオブジェクト。  
   
  このインターフェイスには、次のプロパティがサポートされています。  
   
-## <a name="properties"></a>[プロパティ]  
+## <a name="properties"></a>Properties  
   
 |||  
 |-|-|  
@@ -72,13 +71,13 @@ ms.locfileid: "47634390"
   
  ADO を構築することもできます。 **Recordset**から OLE DB オブジェクト**章**または**RowPosition**オブジェクト。  
   
-## <a name="requirements"></a>要件  
- **バージョン:** ADO 2.0 以降  
+## <a name="requirements"></a>必要条件  
+ **バージョン：** ADO 2.0 以降  
   
  **ライブラリ:** msado15.dll  
   
  **UUID:** 00000283-0000-0010-8000-00AA006D2EA4  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [RecordSet オブジェクト (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)   
  [Rowset プロパティ (ADO)](../../../ado/reference/ado-api/rowset-property-ado.md)

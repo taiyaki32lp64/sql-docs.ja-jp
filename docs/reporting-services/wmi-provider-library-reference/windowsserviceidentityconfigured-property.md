@@ -2,7 +2,7 @@
 title: WindowsServiceIdentityConfigured プロパティ | Microsoft Docs
 ms.date: 03/07/2017
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: wmi-provider-library-reference
 ms.topic: conceptual
 apiname:
@@ -13,14 +13,14 @@ apitype: MOFDef
 helpviewer_keywords:
 - WindowsServiceIdentityConfigured property
 ms.assetid: ebf8e559-7fe4-4a01-9810-85f18fc04596
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: b7fa4c145fdbbd8aa58002bdd5687d38d986c79d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 4787d704141f00c5f0b3c4bf4742bf26feacde60
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47812941"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65571039"
 ---
 # <a name="windowsserviceidentityconfigured-property"></a>WindowsServiceIdentityConfigured プロパティ
   レポート サーバー Windows サービスが実行するように最後に構成された ID を返します。 読み取り専用です。  

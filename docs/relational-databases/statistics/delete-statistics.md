@@ -12,14 +12,13 @@ helpviewer_keywords:
 ms.assetid: eccce0aa-591e-4a1d-bd10-373b022f8749
 author: julieMSFT
 ms.author: jrasnick
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 41eedb9c78254658a87de8531295582448da542e
-ms.sourcegitcommit: 0c1d552b3256e1bd995e3c49e0561589c52c21bf
+ms.openlocfilehash: 588531a01a12dcec1a4832241e29dab38841f944
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/14/2018
-ms.locfileid: "53380795"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72906320"
 ---
 # <a name="delete-statistics"></a>統計の削除
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -67,7 +66,7 @@ ms.locfileid: "53380795"
 5.  削除する統計オブジェクトを右クリックして、 **[削除]** をクリックします。  
   
 6.  **[オブジェクトの削除]** ダイアログ ボックスで、正しい統計が選択されていることを確認し、 **[OK]** をクリックします。  
-  
+
 ##  <a name="TsqlProcedure"></a> Transact-SQL の使用  
   
 #### <a name="to-drop-statistics-from-a-table-or-view"></a>テーブルまたはビューから統計を削除するには  

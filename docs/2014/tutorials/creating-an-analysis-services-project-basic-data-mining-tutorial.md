@@ -1,5 +1,5 @@
 ---
-title: 分析を作成するサービスのプロジェクト (基本的なデータ マイニング チュートリアル) |Microsoft Docs
+title: Analysis Services プロジェクトの作成 (基本的なデータマイニングチュートリアル) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -10,12 +10,12 @@ ms.assetid: 784c0401-0358-4117-9c85-4e8220ce71d9
 author: minewiskan
 ms.author: owend
 manager: kfile
-ms.openlocfilehash: ee6c1a8b765843304d25f1e2ad485ede2badcba4
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: a7fcece285a17e158fcdfe77ef00004afe637541
+ms.sourcegitcommit: f5807ced6df55dfa78ccf402217551a7a3b44764
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56018903"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69494028"
 ---
 # <a name="creating-an-analysis-services-project-basic-data-mining-tutorial"></a>Analysis Services プロジェクトの作成 (基本的なデータ マイニング チュートリアル)
   各 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] プロジェクトは、単一の [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] データベース内のオブジェクトを定義します。 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] データベースには、さまざまな種類のオブジェクトが含まれています。  
@@ -32,7 +32,7 @@ ms.locfileid: "56018903"
   
  既定では、 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] は新しいプロジェクトに対して **localhost** インスタンスを使用します。 名前付きインスタンスまたは別のサーバーを使用している場合は、まずプロジェクトを作成して開き、その後でインスタンス名を変更する必要があります。  
   
- 詳細については[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]プロジェクトを参照してください[Analysis Services プロジェクトを作成する](../analysis-services/lesson-1-1-creating-an-analysis-services-project.md)します。  
+ [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]プロジェクトの詳細については、「 [Analysis Services プロジェクトの作成](../analysis-services/lesson-1-1-creating-an-analysis-services-project.md)」を参照してください。  
   
 ### <a name="to-create-an-analysis-services-project"></a>Analysis Services プロジェクトを作成するには  
   
@@ -44,7 +44,7 @@ ms.locfileid: "56018903"
   
 4.  **[テンプレート]** ペインで、 **[Analysis Services 多次元およびデータ マイニング プロジェクト]** をクリックします。  
   
-5.  **名前**ボックスに新しいプロジェクトの名前、`BasicDataMining`します。  
+5.  **[名前]** ボックスに、新しいプロジェクト`BasicDataMining`の名前を指定します。  
   
 6.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
@@ -57,10 +57,10 @@ ms.locfileid: "56018903"
 3.  **[プロパティ ページ]** ペインの右側にある **[対象]** で、 **[サーバー]** の名前が **localhost**になっていることを確認します。 別のインスタンスを使用する場合は、インスタンスの名前を入力します。 [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
 ## <a name="next-task-in-lesson"></a>このレッスンの次の作業  
- [データ ソースを作成する&#40;基本的なデータ マイニング チュートリアル&#41;](../../2014/tutorials/creating-a-data-source-basic-data-mining-tutorial.md)  
+ [データソース&#40;の作成基本的なデータマイニングチュートリアル&#41;](../../2014/tutorials/creating-a-data-source-basic-data-mining-tutorial.md)  
   
-## <a name="see-also"></a>参照  
- [Analysis Services プロジェクトのビルド &#40;SSDT&#41;](../analysis-services/multidimensional-models/build-analysis-services-projects-ssdt.md)   
- [Analysis Services プロジェクトの作成 (SSDT)](../analysis-services/multidimensional-models/create-an-analysis-services-project-ssdt.md)  
+## <a name="see-also"></a>関連項目  
+ [Analysis Services プロジェクトのビルド &#40;SSDT&#41;](https://docs.microsoft.com/analysis-services/multidimensional-models/build-analysis-services-projects-ssdt)   
+ [Analysis Services プロジェクトの作成 (SSDT)](https://docs.microsoft.com/analysis-services/multidimensional-models/create-an-analysis-services-project-ssdt)  
   
   

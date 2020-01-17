@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 helpviewer_keywords:
 - Upgrade Advisor Report Viewer
@@ -21,12 +20,12 @@ ms.assetid: f5c56f63-4478-40af-abb9-642f58a0026c
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 9fba325ab05844388ceceb1e53b6d4a8cf618468
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: c78630764a26bb8fe281446c1bb997f18d965db7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48208402"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66091594"
 ---
 # <a name="upgrade-advisor-overview"></a>アップグレード アドバイザーの概要
   アップグレード アドバイザーには、[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]、[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]、[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]、および [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] のコンポーネントを分析し、分析結果に関する情報が記載されたレポートを表示するための中央コンソールが用意されています。  

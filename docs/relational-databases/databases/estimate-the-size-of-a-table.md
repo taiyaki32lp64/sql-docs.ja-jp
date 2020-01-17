@@ -25,14 +25,13 @@ helpviewer_keywords:
 ms.assetid: 15c17c92-616f-402e-894b-907a296efe5f
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: f7e8e39f5bf3eb0464907a480e33223ec6d9885c
-ms.sourcegitcommit: 1a5448747ccb2e13e8f3d9f04012ba5ae04bb0a3
+ms.openlocfilehash: 49e63511a23b670575f517640bb0b9f0eb06870a
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51558569"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72909032"
 ---
 # <a name="estimate-the-size-of-a-table"></a>テーブル サイズの見積もり
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -43,7 +42,7 @@ ms.locfileid: "51558569"
 2.  「 [非クラスター化インデックスのサイズの算出](../../relational-databases/databases/estimate-the-size-of-a-nonclustered-index.md)」に記載されている手順に従って、非クラスター化インデックスごとに必要な領域を計算します。  
   
 3.  手順 1. と手順 2. で計算した値を加算します。  
-  
+
 ## <a name="see-also"></a>参照  
  [データベース サイズの見積もり](../../relational-databases/databases/estimate-the-size-of-a-database.md)   
  [ヒープ サイズの見積もり](../../relational-databases/databases/estimate-the-size-of-a-heap.md)   

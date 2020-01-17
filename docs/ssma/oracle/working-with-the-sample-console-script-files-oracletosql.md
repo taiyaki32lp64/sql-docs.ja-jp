@@ -13,13 +13,13 @@ helpviewer_keywords:
 ms.assetid: c6202dcc-b994-457b-9b2f-0cd89e79792d
 author: Shamikg
 ms.author: Shamikg
-manager: v-thobro
-ms.openlocfilehash: 152d8ba2964c8485a1f158b71717067fdea948a2
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+manager: shamikg
+ms.openlocfilehash: fbe3e8c07af283f657926776e906dca4a95f7a7e
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52406019"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68259590"
 ---
 # <a name="working-with-the-sample-console-script-files-oracletosql"></a>サンプルのコンソール スクリプト ファイルの操作 (OracleToSQL)
 いくつかのサンプル ファイルは、ユーザーの参照と使用状況の製品と共に提供されています。 このセクションでは、エンドユーザーのニーズに合わせてこれらのスクリプトを簡単にカスタマイズする方法について説明します。  

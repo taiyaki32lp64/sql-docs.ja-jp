@@ -18,11 +18,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 290454026cc87819bf9ffcf73329bb562e3dc5a4
-ms.sourcegitcommit: 78e32562f9c1fbf2e50d3be645941d4aa457e31f
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/08/2019
-ms.locfileid: "54100877"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62916776"
 ---
 # <a name="upgrade-a-database-using-detach-and-attach-transact-sql"></a>デタッチとアタッチを使用したデータベースのアップグレード (Transact-SQL)
   このトピックでは、デタッチ操作とアタッチ操作を使用し、 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]のデータベースをアップグレードする方法について説明します。 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]にアタッチした後は、データベースが直ちに使用可能となり、自動的にアップグレードされます。  
@@ -39,7 +39,7 @@ ms.locfileid: "54100877"
   
      [デタッチ操作とアタッチ操作の使用](#SSMSProcedure)  
   
--   **補足情報:**[SQL Server データベースのアップグレード後](#FollowUp)  
+-   **補足情報:** [SQL Server データベースのアップグレード後](#FollowUp)  
   
 ##  <a name="BeforeYouBegin"></a> はじめに  
   
@@ -88,7 +88,7 @@ ms.locfileid: "54100877"
     > [!IMPORTANT]  
     >  実稼動データベースの場合は、データベースとトランザクション ログを別のディスクに配置します。  
   
-     ファイルをネットワーク経由でリモート コンピューターのディスクにコピーするには、そのリモート コンピューターの UNC (Universal Naming Convention) 名を使用します。 UNC 名の形式は、 **\\\\**_Servername_**\\**_Sharename_**\\**_Path_**\\**_Filename_です。 ローカル ハード ディスクにファイルを書き込む場合と同様、リモート ディスクでのファイルの読み取りや書き込みに必要な適切な権限が、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]のインスタンスで使用するユーザー アカウントに許可されている必要があります。  
+     ファイルをネットワーク経由でリモート コンピューターのディスクにコピーするには、そのリモート コンピューターの UNC (Universal Naming Convention) 名を使用します。 UNC 名の形式は、 **\\\\** _Servername_ **\\** _Sharename_ **\\** _Path_ **\\** _Filename_です。 ローカル ハード ディスクにファイルを書き込む場合と同様、リモート ディスクでのファイルの読み取りや書き込みに必要な適切な権限が、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]のインスタンスで使用するユーザー アカウントに許可されている必要があります。  
   
 3.  次の [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントを使用して、移動したデータベースとログをアタッチします (ログのアタッチは省略できます)。  
   
@@ -104,7 +104,7 @@ ms.locfileid: "54100877"
   
      [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]では、新しくアタッチされたデータベースはオブジェクト エクスプローラーにすぐに表示されません。 このデータベースを表示するには、オブジェクト エクスプローラーで、 **[表示]** をクリックし、 **[最新の情報に更新]** をクリックします。 オブジェクト エクスプローラーの **[データベース]** ノードを展開すると、データベースの一覧に新しくアタッチされたデータベースが表示されるようになります。  
   
-##  <a name="FollowUp"></a> フォローしてください：SQL Server データベースのアップグレード後  
+##  <a name="FollowUp"></a>補足情報: SQL Server データベースのアップグレード後  
  データベースにフルテキスト インデックスがある場合、アップグレード プロセスでは、 **upgrade_option** サーバー プロパティの設定に応じて、インポート、リセット、または再構築が行われます。 アップグレード オプションがインポート (**upgrade_option** = 2) または再構築 (**upgrade_option** = 0) に設定されている場合、アップグレード中はフルテキスト インデックスを使用できなくなります。 インデックスを作成するデータ量によって、インポートには数時間、再構築には最大でその 10 倍の時間がかかることがあります。 また、アップグレード オプションがインポートに設定されており、フルテキスト カタログが使用できない場合は、関連付けられたフルテキスト インデックスが再構築されます。 **upgrade_option** サーバー プロパティの設定を変更するには、 [sp_fulltext_service](/sql/relational-databases/system-stored-procedures/sp-fulltext-service-transact-sql)を使用します。  
   
 ### <a name="database-compatibility-level-after-upgrade"></a>アップグレード後のデータベース互換性レベル  

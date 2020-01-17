@@ -1,5 +1,5 @@
 ---
-title: SQLServerPreparedStatement のメンバー |Microsoft Docs
+title: SQLServerPreparedStatement Members |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 2363902f-d4c6-4cd4-a5fc-86079eb9e418
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: ec09d5aa1862be0cd16ea33a90755532fd37fbfe
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d99bf6118af71981ad2f45b5c7b722b458cc158c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47605720"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67970757"
 ---
 # <a name="sqlserverpreparedstatement-members"></a>SQLServerPreparedStatement のメンバー
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -56,7 +55,7 @@ ms.locfileid: "47605720"
 |[getMaxFieldSize](../../../connect/jdbc/reference/getmaxfieldsize-method-sqlserverstatement.md)|([SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md) から継承されます) この Statement オブジェクトによって生成される [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) オブジェクトの文字およびバイナリの列値に対して返される最大バイト数を取得します。|  
 |[getMaxRows](../../../connect/jdbc/reference/getmaxrows-method-sqlserverstatement.md)|([SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md) から継承されます) この Statement オブジェクトによって生成される [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) オブジェクトが含むことのできる最大行数を取得します。|  
 |[getMetaData](../../../connect/jdbc/reference/getmetadata-method-sqlserverpreparedstatement.md)|[SQLServerResultSetMetaData Class](../../../connect/jdbc/reference/sqlserverresultsetmetadata-class.md) オブジェクトを取得します。このオブジェクトには、この Statement オブジェクトの実行時に返される [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) オブジェクトの列に関する情報が含まれます。|  
-|[getMoreResults](../../../connect/jdbc/reference/getmoreresults-method-sqlserverstatement.md)|(から継承された[SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md))。このステートメントのオブジェクトの次の結果に移動します。|  
+|[getMoreResults](../../../connect/jdbc/reference/getmoreresults-method-sqlserverstatement.md)|([SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md) から継承されます) このステートメントオブジェクトの次の結果に移動します。|  
 |[getParameterMetaData](../../../connect/jdbc/reference/getparametermetadata-method-sqlserverpreparedstatement.md)|この Statement オブジェクトのパラメーターの数、型、およびプロパティを取得します。|  
 |[getResponseBuffering](../../../connect/jdbc/reference/getresponsebuffering-method-sqlserverstatement.md)|([SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md) から継承されます) [SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md) オブジェクトの応答バッファリング モードを取得します。|  
 |[getQueryTimeout](../../../connect/jdbc/reference/getquerytimeout-method-sqlserverstatement.md)|([SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md) から継承されます) [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)] がこの Statement オブジェクトの実行を待つ秒数を取得します。|  
@@ -79,9 +78,9 @@ ms.locfileid: "47605720"
 |[setBytes](../../../connect/jdbc/reference/setbytes-method-sqlserverpreparedstatement.md)|指定されたパラメーターを、指定された byte 配列に設定します。|  
 |[setCharacterStream](../../../connect/jdbc/reference/setcharacterstream-method-sqlserverpreparedstatement.md)|指定されたパラメーターを、指定された Reader オブジェクトに設定します。|  
 |[setClob](../../../connect/jdbc/reference/setclob-method-sqlserverpreparedstatement.md)|指定されたパラメーターを、渡された Clob オブジェクトに設定します。|  
-|[setCursorName](../../../connect/jdbc/reference/setcursorname-method-sqlserverstatement.md)|([SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md) から継承されます) SQL カーソル名を、指定された文字列に設定します。この文字列は、後に続く実行 (execute) メソッドによって使用されます。|  
+|[setCursorName](../../../connect/jdbc/reference/setcursorname-method-sqlserverstatement.md)|([SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md) から継承されます) SQL カーソル名を、指定された文字列に設定します。これは、後に続く実行 (execute) メソッドによって使用されます。|  
 |[setDate](../../../connect/jdbc/reference/setdate-method-sqlserverpreparedstatement.md)|指定されたパラメーターを、指定された日付の値に設定します。|  
-|[setDateTimeOffset](../../../connect/jdbc/reference/setdatetimeoffset-method-sqlserverpreparedstatement.md)|指定した列の値を設定、 [DateTimeOffset クラス](../../../connect/jdbc/reference/datetimeoffset-class.md)値。|  
+|[setDateTimeOffset](../../../connect/jdbc/reference/setdatetimeoffset-method-sqlserverpreparedstatement.md)|指定された列の値を[DateTimeOffset クラス](../../../connect/jdbc/reference/datetimeoffset-class.md)の値に設定します。|  
 |[setDouble](../../../connect/jdbc/reference/setdouble-method-sqlserverpreparedstatement.md)|指定されたパラメーターを、指定された **double** の値に設定します。|  
 |[setEscapeProcessing](../../../connect/jdbc/reference/setescapeprocessing-method-sqlserverstatement.md)|([SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md) から継承されます) エスケープの処理モードを設定します。|  
 |[setFetchDirection](../../../connect/jdbc/reference/setfetchdirection-method-sqlserverstatement.md)|([SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md) から継承されます) 結果セットの行を処理する方向についてのヒントを JDBC ドライバーに示します。|  
@@ -96,7 +95,7 @@ ms.locfileid: "47605720"
 |[setNull](../../../connect/jdbc/reference/setnull-method-sqlserverpreparedstatement.md)|渡されたパラメーターの型で、指定されたパラメーターを null 値に設定します。|  
 |[setNString](../../../connect/jdbc/reference/setnstring-method-int-java-lang-string.md)|指定されたパラメーターを、指定された **String** オブジェクトに設定します。|  
 |[setObject](../../../connect/jdbc/reference/setobject-method-sqlserverpreparedstatement.md)|渡されたオブジェクトを使用して、指定されたパラメーターの値が設定されます。|  
-|[setPoolable](../../../connect/jdbc/reference/setpoolable-method-sqlserverstatement.md)|([SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md) から継承されます) ステートメントをプールすること、またはプールしないことを要求します。 既定では、SQLServerPreparedStatement オブジェクトは作成時にプールします。|  
+|[setPoolable](../../../connect/jdbc/reference/setpoolable-method-sqlserverstatement.md)|([SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md) から継承されます) ステートメントをプールすること、またはプールしないことを要求します。 既定では、SQLServerPreparedStatement オブジェクトは作成時にプールされます。|  
 |[setQueryTimeout](../../../connect/jdbc/reference/setquerytimeout-method-sqlserverstatement.md)|([SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md) から継承されます) Statement オブジェクトの実行をドライバーが待つ秒数を、指定された秒数に設定します。|  
 |[setRef](../../../connect/jdbc/reference/setref-method-sqlserverpreparedstatement.md)|指定されたパラメーターを、指定された Ref オブジェクトに設定します。|  
 |[setResponseBuffering](../../../connect/jdbc/reference/setresponsebuffering-method-sqlserverstatement.md)|([SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md) から継承されます) [SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md) オブジェクトの応答バッファリング モードを **String full** または **adaptive** に設定します。これらのモードの文字列では、大文字と小文字のどちらも使用できます。|  

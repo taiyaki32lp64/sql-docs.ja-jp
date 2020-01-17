@@ -8,17 +8,20 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: language-reference
 ms.assetid: ed9d7fa3-61a1-4e21-ba43-1ead7dfc74eb
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: 1dbf1b9582cc49bf2881840629ecc42f38260234
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 6d31ad18b9a7de5b045a9ed868d20a0f35ab441b
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47786220"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71281381"
 ---
-# <a name="catalogadddatatapbyguid"></a>catalog.add_data_tap_by_guid
+# <a name="catalogadd_data_tap_by_guid"></a>catalog.add_data_tap_by_guid 
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
   パッケージ データ フロー内の特定のデータ フロー パスに、実行のインスタンスのデータ タップを追加します。  
@@ -44,12 +47,12 @@ catalog add_data_tap_by_guid [ @execution_id = ] execution_id
  [ @dataflow_path_id_string = ] *dataflow_path_id_string*  
  データ フロー パスの識別文字列。 パスは、2 つのデータ フロー コンポーネントを連結します。 パスの **IdentificationString** プロパティは文字列を指定します。  
   
- 識別文字列を特定するには、[!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] で 2 つのデータ フロー コンポーネント間のパスを右クリックし、**[プロパティ]** をクリックします。 **[プロパティ]** ウィンドウに、**[IdentificationString]** プロパティが表示されます。  
+ 識別文字列を特定するには、[!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] で 2 つのデータ フロー コンポーネント間のパスを右クリックし、 **[プロパティ]** をクリックします。 **[プロパティ]** ウィンドウに、 **[IdentificationString]** プロパティが表示されます。  
   
  *dataflow_path_id_string* は **nvarchar (4000)** です。  
   
  [ @data_filename = ] *data_filename*  
- タップされたデータを格納するファイルの名前。 データ フロー タスクが Foreach Loop コンテナーまたは For Loop コンテナーの中で実行される場合、ループの反復ごとにタップされたデータが個別のファイルに格納されます。 各ファイルの先頭には、反復に対応する番号が付けられます。 データ タップ ファイルは、"*\<SQL Server のインストール フォルダー>* \130\DTS\\" フォルダーに書き込まれます。 *data_filename* は **nvarchar (4000)** です。  
+ タップされたデータを格納するファイルの名前。 データ フロー タスクが Foreach Loop コンテナーまたは For Loop コンテナーの中で実行される場合、ループの反復ごとにタップされたデータが個別のファイルに格納されます。 各ファイルの先頭には、反復に対応する番号が付けられます。 データ タップ ファイルは、" *\<SQL Server のインストール フォルダー>* \130\DTS\\" フォルダーに書き込まれます。 *data_filename* は **nvarchar (4000)** です。  
   
  [ @max_rows = ] max_rows  
  データ タップ中にキャプチャされる行の数。 この値が指定されていない場合は、すべての行がキャプチャされます。 max_rows は **int** です。  

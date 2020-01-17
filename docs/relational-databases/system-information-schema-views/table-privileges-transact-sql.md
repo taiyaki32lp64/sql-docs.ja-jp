@@ -18,33 +18,32 @@ helpviewer_keywords:
 ms.assetid: 70269d26-b085-4a98-8a9f-b4742c2848bd
 author: VanMSFT
 ms.author: vanto
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: ea23e4639cb5dd6872092021f04ab35af28f27d5
-ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
+ms.openlocfilehash: db49815f367c9fe0100189e418db90e0bcddd9ec
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/18/2018
-ms.locfileid: "53589256"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68078465"
 ---
-# <a name="tableprivileges-transact-sql"></a>TABLE_PRIVILEGES (Transact-SQL)
+# <a name="tableprivileges-transact-sql"></a>TABLE_PRIVILEGES (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  現在のデータベースにおける現在のユーザーに与えられたテーブル特権、またはこのユーザーが与えるテーブル特権ごとに、1 行のデータを返します。  
+  1 行の各テーブルの特権を付与または現在のデータベースの現在のユーザーによって付与されているデータを返します。  
   
  これらのビューから情報を取得するには、完全修飾名を指定**INFORMATION_SCHEMA** 。_view_name_します。  
   
 |列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
 |**権限の許可者**|**nvarchar(** 128 **)**|特権の設定者です。|  
-|**権限付与対象ユーザー**|**nvarchar(** 128 **)**|特権の被設定者です。|  
-|**TABLE_CATALOG**|**nvarchar(** 128 **)**|テーブル修飾子|  
-|**TABLE_SCHEMA**|**nvarchar(** 128 **)**|テーブルを含むスキーマの名前<br /><br /> <strong>\*\* 重要な\* \*</strong> オブジェクトのスキーマを決定 INFORMATION_SCHEMA ビューを使用しないでください。 オブジェクトのスキーマを調べる唯一の信頼性のある方法は、sys.objects カタログ ビューに対するクエリを実行する方法です。|  
+|**権限付与対象ユーザー**|**nvarchar(** 128 **)**|特権の権限付与対象ユーザー。|  
+|**TABLE_CATALOG**|**nvarchar(** 128 **)**|テーブルの修飾子です。|  
+|**TABLE_SCHEMA**|**nvarchar(** 128 **)**|テーブルを含むスキーマの名前です。<br /><br /> <strong>\*\* 重要な\* \*</strong> オブジェクトのスキーマを決定 INFORMATION_SCHEMA ビューを使用しないでください。 オブジェクトのスキーマを調べる唯一の信頼性のある方法は、sys.objects カタログ ビューに対するクエリを実行する方法です。|  
 |**TABLE_NAME**|**sysname**|テーブル名です。|  
-|**PRIVILEGE_TYPE**|**varchar (** 10 **)**|特権のタイプです。|  
-|**IS_GRANTABLE**|**varchar (** 3 **)**|被設定者が別の人に権限を許可できるかどうかを示します。|  
+|**PRIVILEGE_TYPE**|**varchar(** 10 **)**|特権の種類です。|  
+|**IS_GRANTABLE**|**varchar(** 3 **)**|権限付与対象ユーザーが他のユーザーへのアクセス許可を付与するかどうかを指定します。|  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [システム ビュー &#40;TRANSACT-SQL&#41;](https://msdn.microsoft.com/library/35a6161d-7f43-4e00-bcd3-3091f2015e90)   
  [情報スキーマ ビュー &#40;TRANSACT-SQL&#41;](~/relational-databases/system-information-schema-views/system-information-schema-views-transact-sql.md)   
  [sys.objects &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md)   

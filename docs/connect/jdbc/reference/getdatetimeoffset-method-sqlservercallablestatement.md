@@ -1,5 +1,5 @@
 ---
-title: getDateTimeOffset メソッド (SQLServerCallableStatement) |Microsoft Docs
+title: getDateTimeOffset メソッド (SQLServerCallableStatement) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 7d9d7b05-582a-41df-b2c4-ec4a64d49752
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: c1377b7ae0630d160e9e879553907fb58f04cbe5
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a63f23ef4e9914dfe69c45882098654287c3c9e3
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47850540"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67983808"
 ---
 # <a name="getdatetimeoffset-method-sqlservercallablestatement"></a>getDateTimeOffset メソッド (SQLServerCallableStatement)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -25,7 +24,7 @@ ms.locfileid: "47850540"
   
  パラメーターに渡されたインデックスを使用して、指定されたパラメーターの値が Java プログラミング言語の [DateTimeOffset クラス](../../../connect/jdbc/reference/datetimeoffset-class.md)のオブジェクトとして取得されます。  
   
- 設定することができます、 [DateTimeOffset クラス](../../../connect/jdbc/reference/datetimeoffset-class.md)のパラメーター値[SQLServerCallableStatement.setDateTimeOffset](../../../connect/jdbc/reference/setdatetimeoffset-method-sqlservercallablestatement.md)します。  
+ [Datetimeoffset クラス](../../../connect/jdbc/reference/datetimeoffset-class.md)のパラメーター値は、 [SQLServerCallableStatement](../../../connect/jdbc/reference/setdatetimeoffset-method-sqlservercallablestatement.md)を使用して設定できます。  
   
 ## <a name="overload-list"></a>オーバーロードの一覧  
   

@@ -14,17 +14,20 @@ helpviewer_keywords:
 - debugging [Integration Services], data flow
 - counting rows
 ms.assetid: 1c574f1b-54f7-4c05-8e42-8620e2c1df0f
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: 38152544ed3f0684cc13db7c2f429b46ed9ef5b1
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: c6076e4c02ccb4c91c88a22df7cd7c4a50b0f877
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52521545"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71295120"
 ---
 # <a name="debugging-data-flow"></a>データ フローのデバッグ
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] と [!INCLUDE[ssIS](../../includes/ssis-md.md)] デザイナーには、 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] パッケージのデータ フローのトラブルシューティングを行うために使用できる機能とツールが含まれています。  
   
 -   [!INCLUDE[ssIS](../../includes/ssis-md.md)] デザイナーでは、データ ビューアーが用意されています。  
@@ -70,7 +73,7 @@ ms.locfileid: "52521545"
 |赤|実行されましたがエラーが発生しました。|  
 
 ## <a name="analysis-of-data-flow"></a>データ フローの分析
-   [catalog.execution_data_statistics](../../integration-services/system-views/catalog-execution-data-statistics.md) **SSISDB** データベース ビューを使用して、パッケージのデータ フローを分析できます。 このビューは、データ フロー コンポーネントが下流コンポーネントへデータを送信するたびに 1 行表示します。 この情報を使用して、各コンポーネントに送信される行をより詳しく理解できます。  
+  [catalog.execution_data_statistics](../../integration-services/system-views/catalog-execution-data-statistics.md) **SSISDB** データベース ビューを使用して、パッケージのデータ フローを分析できます。 このビューは、データ フロー コンポーネントが下流コンポーネントへデータを送信するたびに 1 行表示します。 この情報を使用して、各コンポーネントに送信される行をより詳しく理解できます。  
   
 > [!NOTE]  
 >  catalog.execution_data_statistics ビューに関する情報を取得するために、ログ レベルは **詳細** に設定する必要があります。  
@@ -122,7 +125,7 @@ order by source_component_name desc
   
 #### <a name="to-configure-an-error-output-using-the-configure-error-output-dialog-box"></a>[エラー出力の構成] ダイアログ ボックスを使用してエラー出力を構成するには  
   
-1.  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] で、目的のパッケージが含まれている [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] プロジェクトを開きます。  
+1.  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]で、目的のパッケージが含まれている [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] プロジェクトを開きます。  
   
 2.  ソリューション エクスプローラーで、パッケージをダブルクリックして開きます。  
   
@@ -169,7 +172,7 @@ order by source_component_name desc
   
 4.  構成するエラー出力列が含まれているコンポーネントを右クリックし、 **[詳細エディターの表示]** をクリックします。  
   
-5.  **[入力プロパティと出力プロパティ]** タブをクリックして、**[\<コンポーネント名> のエラー出力]** を展開してから **[出力列]** を展開します。  
+5.  **[入力プロパティと出力プロパティ]** タブをクリックして、 **[\<コンポーネント名> のエラー出力]** を展開してから **[出力列]** を展開します。  
   
 6.  列をクリックして、プロパティを更新します。  
   

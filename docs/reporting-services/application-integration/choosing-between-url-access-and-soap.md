@@ -5,15 +5,15 @@ ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: application-integration
 ms.topic: reference
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 monikerRange: = sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: cada882236484e5c7c7325f44b5633479a81f6e1
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
-ms.translationtype: HT
+ms.openlocfilehash: 8a9c28c2e0eeae14dbc25db3c78c3962ddebd89e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50028677"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62704071"
 ---
 # <a name="choosing-between-url-access-and-soap-in-reporting-services"></a>Reporting Services での URL アクセスまたは SOAP の選択
 

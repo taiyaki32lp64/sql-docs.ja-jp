@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: 0c513265-cd0c-4b38-9494-94458c17a16d
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 09c984b0d4a0bfa1fedb57f60532a721b16afccf
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 9a4a271e07dea5a533dcb19b098a3e3de29e535e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47621401"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67973183"
 ---
 # <a name="setquerytimeout-method-sqlserverstatement"></a>setQueryTimeout メソッド (SQLServerStatement)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -44,7 +43,7 @@ public final void setQueryTimeout(int seconds)
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- この setQueryTimeout メソッドは、java.sql.Statement インターフェイスの setQueryTimeout メソッドによって指定されます。  
+ この setquerytimeout メソッドは、java. .sql. Statement インターフェイスの setquerytimeout よって指定されます。  
   
 ## <a name="see-also"></a>参照  
  [SQLServerStatement のメンバー](../../../connect/jdbc/reference/sqlserverstatement-members.md)   

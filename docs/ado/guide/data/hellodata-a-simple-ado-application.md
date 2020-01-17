@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: de4bcd56-dac2-45e6-95ab-9fd7f25878fc
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: ed92b3f83e865d2b8d4f3e3a3a3cb95e291d771e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e666f479d95e3915703dc539ba2731e95175488b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47624680"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67925139"
 ---
 # <a name="hellodata-a-simple-ado-application"></a>HelloData: 単純な ADO アプリケーション
 この単純なアプリケーションの 4 つの主要な ADO 操作の各ステップ: を取得する、確認、編集、およびデータを更新します。 これらの操作は、Microsoft® SQL Server に含まれている Northwind サンプル データベースに対して実行されます。 ADO の基礎に注目して、コードの煩雑さを回避するには、エラー処理の例では最小限です。  
@@ -30,7 +29,7 @@ ms.locfileid: "47624680"
   
 2.  フォームの上部にある 4 つのコマンド ボタンを作成、**名前**と**キャプション**プロパティの値をこのトピックの最後にある表に示すようにします。  
   
-3.  ボタンの下に追加、 **Microsoft DataGrid コントロール**(Msdatgrd.ocx)。 Msdatgrd.ocx ファイルは、Visual Basic に含まれているされ、\windows\system32 または \winnt\system32 ディレクトリに置かれます。 DataGrid コントロールを Visual Basic のツールボックス ウィンドウに追加するには、選択**コンポーネント.** から、**プロジェクト**メニュー。 チェック ボックスをオンを横に"Microsoft DataGrid コントロール (SP3) 6.0 (OLEDB)"をクリックして **[ok]**。 コントロールをプロジェクトに追加するには、Visual Basic フォームをツールボックスから DataGrid コントロールをドラッグします。  
+3.  ボタンの下に追加、 **Microsoft DataGrid コントロール**(Msdatgrd.ocx)。 Msdatgrd.ocx ファイルは、Visual Basic に含まれているされ、\windows\system32 または \winnt\system32 ディレクトリに置かれます。 DataGrid コントロールを Visual Basic のツールボックス ウィンドウに追加するには、選択**コンポーネント.** から、**プロジェクト**メニュー。 チェック ボックスをオンを横に"Microsoft DataGrid コントロール (SP3) 6.0 (OLEDB)"をクリックして **[ok]** 。 コントロールをプロジェクトに追加するには、Visual Basic フォームをツールボックスから DataGrid コントロールをドラッグします。  
   
 4.  作成、**テキスト ボックス**グリッドの下のフォーム上の表に示すように、そのプロパティを設定するとします。 フォームが完了したら、次の図のようになります。  
   
@@ -49,7 +48,7 @@ ms.locfileid: "47624680"
 ||[高さ]|6500|  
 ||[幅]|6500|  
 |MS DataGrid|名前|grdDisplay1|  
-|テキスト ボックス|名前|txtDisplay1|  
+|TextBox|名前|txtDisplay1|  
 ||複数行|true|  
 |コマンド ボタン|名前|cmdGetData|  
 ||[キャプション]|Get Data|  

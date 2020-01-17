@@ -10,17 +10,20 @@ ms.topic: reference
 helpviewer_keywords:
 - Slowly Changing Dimension Wizard
 ms.assetid: e4d62b73-77c5-4b26-9b6d-d5f245768fc8
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: 40de3cf6ba1985d5cee8363cc1ba131534582bf2
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 85f97f8e7fe754a4c52b34f52ecb45d142a43c4b
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47671490"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71297781"
 ---
 # <a name="slowly-changing-dimension-wizard-f1-help"></a>緩やかに変化するディメンション ウィザードの F1 ヘルプ
+
+[!INCLUDE[ssis-appliesto](../../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   **緩やかに変化するディメンション ウィザード** を使用すると、さまざまな種類の緩やかに変化するディメンションへのデータの読み込みを設定できます。 ここでは、 **緩やかに変化するディメンション ウィザード**のページの F1 ヘルプについて紹介します。 このトピックでは、次の内容について紹介します。  
   
  このウィザードの詳細については、「 [Slowly Changing Dimension Transformation](../../../integration-services/data-flow/transformations/slowly-changing-dimension-transformation.md)」を参照してください。  

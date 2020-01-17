@@ -13,11 +13,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: c9b8ed6778a087c2200012c6df1409b187b39329
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54125382"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63199068"
 ---
 # <a name="tutorial-preparing-the-server-for-replication"></a>チュートリアル:レプリケーションに備えたサーバーの準備
   レプリケーション トポロジを構成するには、事前にセキュリティ計画を立てることが重要です。 このチュートリアルでは、レプリケーション トポロジのセキュリティを向上する方法と、データのレプリケートで最初のステップとなるディストリビューションの構成方法を学習します。 他のチュートリアルを行う前に、まずこのチュートリアルを実行してください。  
@@ -35,7 +35,7 @@ ms.locfileid: "54125382"
   
 -   [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] と [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] データベース。 セキュリティ強化のため、既定ではサンプル データベースがインストールされません。  
   
- **このチュートリアルを完了するまでに時間を推定するには。30 分。**  
+ **このチュートリアルの推定所要時間: 30 分。**  
   
 ## <a name="lessons-in-this-tutorial"></a>このチュートリアルで行うレッスン  
   

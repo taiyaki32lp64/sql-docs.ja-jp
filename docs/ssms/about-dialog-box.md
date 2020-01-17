@@ -11,21 +11,20 @@ helpviewer_keywords:
 - status information [SQL Server Management Studio]
 - About dialog box
 ms.assetid: 5fb6f3e9-c511-419b-b0b6-173c057e3a54
-author: stevestein
-ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 3544d981d9d8a206d026b4157aef6336a70f94e2
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 23ee5e291bc1007e11a1342968c9cafbc3440909
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47735560"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68263310"
 ---
 # <a name="about-dialog-box"></a>[バージョン情報] ダイアログ ボックス
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]  
 **[バージョン情報]** ダイアログ ボックスには、製品情報が記載されており、このダイアログ ボックスから製品を実行しているコンピューターに関する情報にアクセスできます。 評価版の場合、 [!INCLUDE[msCoName](../includes/msconame_md.md)] [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] のエントリにはインストールの期限切れまでの日数が表示されます。 このダイアログ ボックスは、 **[ヘルプ]** メニューから利用できます。  
   
-## <a name="options"></a>[変数]  
+## <a name="options"></a>オプション  
 **[コンポーネント名]**  
 インストールされているすべての [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] の項目の名前が一覧表示されます。  
   

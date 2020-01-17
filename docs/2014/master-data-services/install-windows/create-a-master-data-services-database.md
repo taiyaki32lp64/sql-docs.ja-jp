@@ -7,15 +7,15 @@ ms.reviewer: ''
 ms.technology: install
 ms.topic: conceptual
 ms.assetid: 8373bb35-f0f9-4c3c-a53c-dfaa2ce567ac
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: af7e442c1465ac1f93a134ab00da6a9e31242da4
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 1707de1934ff6265268e40a3ab2a805629134e3d
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52755494"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65482941"
 ---
 # <a name="create-a-master-data-services-database"></a>マスター データ サービス データベースの作成
   [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] Web アプリケーションと [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] Web サービスをサポートする新しいデータベースが必要な場合は、 [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] データベースを作成します。  
@@ -42,7 +42,7 @@ ms.locfileid: "52755494"
   
 -   データベースとトランザクション ログをバックアップするように、メンテナンス プランを構成します。 詳細については、「[データベース要件 &#40;マスター データ サービス&#41;](database-requirements-master-data-services.md)」を参照してください。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [マスター データ サービスのインストール](install-master-data-services.md)  
   
   

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 f1_keywords:
 - VS.ToolsOptionsPages.Text_Editor.XML.Tabs
@@ -13,21 +12,21 @@ ms.assetid: 13bf5f8c-aba3-4c05-b8bb-eb475797c9bd
 author: craigg-msft
 ms.author: craigg
 manager: craigg
-ms.openlocfilehash: 30842eec745c87848e4eb1c78c4806639da3ac0b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: ae595b42274e012032e79754650b573b5d80053b
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48050152"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66089128"
 ---
-# <a name="options-text-editorxmltabs-page"></a>[オプション] ([テキスト エディター]: [XML]: [タブ] ページ)
-  このダイアログ ボックスを使用すると、XML ドキュメントの編集に使用される XML エディターのタブの動作を変更できます。 この設定を表示するには、**[ツール]** メニューの **[オプション]** をクリックして、**[テキスト エディター]** フォルダーを展開し、さらに **[XML]** サブフォルダーを展開して、**[タブ]** をクリックします。  
+# <a name="options-text-editorxmltabs-page"></a>オプション ([テキスト エディター]: [XML]: [タブ] ページ)
+  このダイアログ ボックスを使用すると、XML ドキュメントの編集に使用される XML エディターのタブの動作を変更できます。 この設定を表示するには、 **[ツール]** メニューの **[オプション]** をクリックして、 **[テキスト エディター]** フォルダーを展開し、さらに **[XML]** サブフォルダーを展開して、 **[タブ]** をクリックします。  
   
 ## <a name="setting-options-in-multiple-locations"></a>複数の場所でのオプション設定  
- XML エディターのオプションは、**[すべての言語] の [全般]** ダイアログで設定することもできます。 ただし、DMX エディターや MDX エディターなど、他の **エディターに対し、** [すべての言語] [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] のダイアログを使用して異なるオプションを設定する場合は、ここで紹介したダイアログを使用して XML エディターのオプションを設定し直す必要があります。  
+ XML エディターのオプションは、 **[すべての言語] の [全般]** ダイアログで設定することもできます。 ただし、DMX エディターや MDX エディターなど、他の **エディターに対し、** [すべての言語] [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] のダイアログを使用して異なるオプションを設定する場合は、ここで紹介したダイアログを使用して XML エディターのオプションを設定し直す必要があります。  
   
 ## <a name="indenting"></a>インデント  
- **なし**  
+ **None**  
  このオプションが選択されている場合、Enter キーを押したときに作成される新しい行は、インデントされません。 カーソルは、新しい行の 1 列目に置かれます。  
   
  **ブロック**  
@@ -47,6 +46,6 @@ ms.locfileid: "48050152"
  このオプションを選択すると、タブ文字を使用せずにスペース文字だけを挿入してインデントします。 たとえば **[インデント サイズ]** が 5 に設定されている場合、 のメイン ウィンドウで **キーを押すか、ツール バーの [** インデント [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] ] ボタンを押すごとに、5 つのスペース文字が挿入されます。  
   
  **タブを保持します。**  
- このオプションを選択すると、インデントするときにできる限り多くのタブ文字を挿入します。 それぞれのタブ文字が、**[タブ サイズ]** で指定された数のスペースを満たします。 **[インデント サイズ]** が **[タブ サイズ]** の倍数でない場合は、その差を埋めるためにスペース文字が追加されます。  
+ このオプションを選択すると、インデントするときにできる限り多くのタブ文字を挿入します。 それぞれのタブ文字が、 **[タブ サイズ]** で指定された数のスペースを満たします。 **[インデント サイズ]** が **[タブ サイズ]** の倍数でない場合は、その差を埋めるためにスペース文字が追加されます。  
   
   

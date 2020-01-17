@@ -15,16 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - CONCAT_WS function
 ms.assetid: f1375fd7-a2fd-48bf-922a-4f778f0deb1f
-author: MashaMSFT
-ms.author: mathoma
-manager: craigg
+author: MikeRayMSFT
+ms.author: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 4671d92d73335c0b2383b1f43fae1488f1ac0ad6
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: fcdbb300bbc9209f284cd5a92d192a219f79052d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52509543"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68075334"
 ---
 # <a name="concatws-transact-sql"></a>CONCAT_WS (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2017-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2017-asdb-asdw-xxx-md.md)]
@@ -38,7 +37,7 @@ CONCAT_WS ( separator, argument1, argument2 [, argumentN]... )
 
 ## <a name="arguments"></a>引数   
 separator  
-任意の文字型の式です (`char`'、`nchar`'、`nvarchar`、または `varchar`)。
+任意の文字型の式です (`char`、`nchar`、`nvarchar`、または `varchar`)。
 
 argument1, argument2, argument*N*  
 任意のデータ型の式。
@@ -64,7 +63,7 @@ argument1, argument2, argument*N*
 ## <a name="examples"></a>使用例   
 
 ### <a name="a--concatenating-values-with-separator"></a>A.  区切りで値を連結する
-この例では、値を `- ` で区切って、sys.databases テーブルの 3 つの列を連結します。   
+この例では、値を `-` で区切って、sys.databases テーブルの 3 つの列を連結します。   
 
 ```sql
 SELECT CONCAT_WS( ' - ', database_id, recovery_model_desc, containment_desc) AS DatabaseInfo

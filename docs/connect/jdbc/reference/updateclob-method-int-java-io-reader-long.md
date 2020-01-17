@@ -1,5 +1,5 @@
 ---
-title: updateClob (int, java.io.Reader, long) メソッド |Microsoft Docs
+title: updateClob (int, java. io. Reader, long) メソッドMicrosoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 5c958ccb-386a-4dd5-901d-5a106dac2683
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 42ea206399243d9844245b885f0a5c5fda95cbed
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 196960b897b9e351eb7541c181cc0b828959c13a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47724632"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67996648"
 ---
 # <a name="updateclob-method-int-javaioreader-long"></a>updateClob (int, java.io.Reader, long) メソッド
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -39,7 +38,7 @@ public void updateClob(int columnIndex,
   
  *reader*  
   
- リーダー オブジェクト。  
+ リーダーオブジェクト。  
   
  *length*  
   
@@ -49,7 +48,7 @@ public void updateClob(int columnIndex,
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- この updateClob メソッドは、java.sql.ResultSet インターフェイスの updateClob メソッドによって指定されます。  
+ この updateClob メソッドは、java.sql.ResultSet インターフェイスの updateClob メソッドで規定されています。  
   
 ## <a name="see-also"></a>参照  
  [updateClob メソッド &#40;SQLServerResultSet&#41;](../../../connect/jdbc/reference/updateclob-method-sqlserverresultset.md)   

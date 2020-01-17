@@ -13,11 +13,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 41e0ca3ee7ccaa7bb57e5667092c0660e35c4c52
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48054192"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62808679"
 ---
 # <a name="connect-to-server-reporting-services"></a>[サーバーへの接続] \(Reporting Services)
   このダイアログを使用すると、[!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] に接続するときのオプションを表示または指定できます。  
@@ -58,7 +58,7 @@ ms.locfileid: "48054192"
  クリックすると、サーバーの登録やパスワードの保存など、追加のサーバー接続オプションが表示されます。  
   
 ## <a name="see-also"></a>参照  
- [レポート サーバー データベース接続の構成&#40;SSRS 構成マネージャー&#41;](../../2014/sql-server/install/configure-a-report-server-database-connection-ssrs-configuration-manager.md)   
+ [レポート サーバー データベース接続の構成 &#40;SSRS構成マネージャー&#41;](../../2014/sql-server/install/configure-a-report-server-database-connection-ssrs-configuration-manager.md)   
  [Management Studio でレポート サーバーに接続する](../reporting-services/tools/connect-to-a-report-server-in-management-studio.md)   
  [レポート サーバーでの認証](../reporting-services/security/authentication-with-the-report-server.md)  
   

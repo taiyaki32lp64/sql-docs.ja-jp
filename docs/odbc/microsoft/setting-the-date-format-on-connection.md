@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: ba0d5123-db52-448b-8e19-b7647ce4b361
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 2e36192279bfc5730559c795ee076db11394ab94
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 3075893d37a401110afbecacc68e452425ad684b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47654280"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68063465"
 ---
 # <a name="setting-the-date-format-on-connection"></a>接続時の日付形式の設定
 > [!IMPORTANT]  
@@ -27,7 +26,7 @@ ms.locfileid: "47654280"
   
  新しいバージョンの Microsoft ODBC Driver for Oracle は Oracle の日付フィールドの日付の形式を自動的に設定されません。 ドライバーが接続しているときに使用していた`ALTER SESSION SET NLS_DATE_FORMAT ='YYYY-MM-DD HH:MI:SS'`します。  
   
- 日付の書式を設定するには、ALTER セッションのセットを呼び出すし、挿入します。 以下に例を示します。  
+ 日付の書式を設定するには、ALTER セッションのセットを呼び出すし、挿入します。 例:  
   
 ```  
 conn.Execute "ALTER SESSION SET NLS_DATE_FORMAT = 'YYYY-MM-DD HH:MI:SS' "  

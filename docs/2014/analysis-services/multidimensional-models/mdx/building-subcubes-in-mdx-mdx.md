@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - queries [MDX], subcubes
@@ -18,12 +17,12 @@ ms.assetid: 5403a62b-99ac-4d83-b02a-89bf78bf0f46
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 6fbccf5cfd31e79252933a67b2e0c66a73ee6dc3
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: 197ee30aa65179e8a434d04d20a5f5b643b42efd
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52401581"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66074716"
 ---
 # <a name="building-subcubes-in-mdx-mdx"></a>MDX でのサブキューブの作成 (MDX)
   サブキューブは、基になるデータにフィルターを適用したビューを表す、キューブのサブセットです。 キューブをサブキューブに限定することによって、クエリのパフォーマンスを向上させることができます。  

@@ -25,18 +25,17 @@ helpviewer_keywords:
 ms.assetid: e0bbebfa-b7c3-4825-8169-7281f7e6de98
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: 6029f21d65c3732f7aa1aec2ec6a330c8642c991
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 18e916c3f9a9d99ea177d0d266cb20bee44a3868
+ms.sourcegitcommit: e9c1527281f2f3c7c68981a1be94fe587ae49ee9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47715680"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73064679"
 ---
 # <a name="create-broker-priority-transact-sql"></a>CREATE BROKER PRIORITY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  優先順位と、その優先順位を割り当てる [!INCLUDE[ssSB](../../includes/sssb-md.md)] メッセージ交換を判断するための一連の条件を定義します。 優先順位は、メッセージ交換の優先度で指定されているものと同じコントラクトとサービスの組み合わせを使用するすべてのメッセージ交換のエンドポイントに割り当てられます。 優先度は、1 (低) ～ 10 (高) までの範囲の値です。 既定は 5 です。  
+  優先順位と、その優先順位を割り当てる [!INCLUDE[ssSB](../../includes/sssb-md.md)] メッセージ交換を判断するための一連の条件を定義します。 優先順位は、メッセージ交換の優先度で指定されているものと同じコントラクトとサービスの組み合わせを使用するすべてのメッセージ交換のエンドポイントに割り当てられます。 優先度は、1 (低) から 10 (高) までの範囲の値です。 既定値は 5 です。  
   
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -61,7 +60,7 @@ FOR CONVERSATION
  メッセージ交換の優先度の名前を指定します。 名前は現在のデータベース内で一意であり、[!INCLUDE[ssDE](../../includes/ssde-md.md)] の[識別子](../../relational-databases/databases/database-identifiers.md)の規則に従っている必要があります。  
   
  SET  
- 指定したメッセージ交換の優先度をメッセージ交換に適用するかどうかを決定するための条件を指定します。 指定する場合、SET には、CONTRACT_NAME、LOCAL_SERVICE_NAME、REMOTE_SERVICE_NAME、PRIORITY_LEVEL の各条件のうち、少なくとも 1 つを指定する必要があります。 SET を指定しない場合は、3 つの条件にはすべて既定値が設定されます。  
+ 指定したメッセージ交換の優先度をメッセージ交換に適用するかどうかを決定するための条件を指定します。 指定する場合、SET には、次の条件のうち、少なくとも 1 つを指定する必要があります: CONTRACT_NAME、LOCAL_SERVICE_NAME、REMOTE_SERVICE_NAME、または PRIORITY_LEVEL。 SET を指定しない場合は、3 つの条件にはすべて既定値が設定されます。  
   
  CONTRACT_NAME = {*ContractName* | **ANY**}  
  メッセージ交換の優先度をメッセージ交換に適用するかどうかを決定するための条件として使用するコントラクトの名前を指定します。 *ContractName* は [!INCLUDE[ssDE](../../includes/ssde-md.md)] 識別子であり、現在のデータベース内のコントラクトの名前を指定する必要があります。  
@@ -109,7 +108,7 @@ FOR CONVERSATION
  既定値は ANY です。  
   
  PRIORITY_LEVEL = { *PriorityValue* | **DEFAULT** }  
- メッセージ交換の優先度で指定されているコントラクトおよびサービスを使用するすべてのメッセージ交換のエンドポイントに割り当てる優先度を指定します。 *PriorityValue* には、1 (最も低い優先度) ～ 10 (最も高い優先度) の整数リテラルを指定する必要があります。 既定は 5 です。  
+ メッセージ交換の優先度で指定されているコントラクトおよびサービスを使用するすべてのメッセージ交換のエンドポイントに割り当てる優先度を指定します。 *PriorityValue* には、1 (最も低い優先度) ～ 10 (最も高い優先度) の整数リテラルを指定する必要があります。 既定値は 5 です。  
   
 ## <a name="remarks"></a>Remarks  
  [!INCLUDE[ssSB](../../includes/sssb-md.md)] では、メッセージ交換のエンドポイントに優先順位を割り当てます。 この優先順位によって、エンドポイントに関連付けられている操作の優先度が制御されます。 各メッセージ交換には、2 つのメッセージ交換エンドポイントがあります。  
@@ -219,9 +218,9 @@ CREATE BROKER PRIORITY [//Adventure-Works.com/Expenses/BasePriority]
 ```  
   
 ### <a name="d-creating-three-priority-levels-for-a-target-service-by-using-services"></a>D. サービスを使用して、1 つの発信先サービスに対して 3 つの優先順位を作成する  
- ゴールド (高)、シルバー (中)、ブロンズ (低) の 3 つのパフォーマンス レベルを備えたシステムをサポートします。 コントラクトは 1 つですが、各レベルには個別の発信側サービスがあります。 すべての発信側サービスは、中心となる 1 つの発信先サービスと通信します。  
+ 次の 3 つのパフォーマンス レベルを備えたシステムをサポートします: ゴールド (高)、シルバー (中)、ブロンズ (低)。 コントラクトは 1 つですが、各レベルには個別の発信側サービスがあります。 すべての発信側サービスは、中心となる 1 つの発信先サービスと通信します。  
   
-```  
+```sql  
 CREATE BROKER PRIORITY GoldInitToTargetPriority  
     FOR CONVERSATION  
     SET (CONTRACT_NAME = SimpleContract,  
@@ -261,9 +260,9 @@ CREATE BROKER PRIORITY BronzeTargetToInitPriority
 ```  
   
 ### <a name="e-creating-three-priority-levels-for-multiple-services-using-contracts"></a>E. コントラクトを使用して、複数のサービスに対して 3 つの優先順位を作成する  
- ゴールド (高)、シルバー (中)、ブロンズ (低) の 3 つのパフォーマンス レベルを備えたシステムをサポートします。 各レベルには、個別のコントラクトがあります。 これらの優先度は、そのコントラクトを使用するメッセージ交換によって参照されるすべてのサービスに適用されます。  
+ 次の 3 つのパフォーマンス レベルを備えたシステムをサポートします: ゴールド (高)、シルバー (中)、ブロンズ (低)。 各レベルには、個別のコントラクトがあります。 これらの優先度は、そのコントラクトを使用するメッセージ交換によって参照されるすべてのサービスに適用されます。  
   
-```  
+```sql  
 CREATE BROKER PRIORITY GoldPriority  
     FOR CONVERSATION  
     SET (CONTRACT_NAME = GoldContract,  

@@ -9,15 +9,15 @@ ms.topic: conceptual
 helpviewer_keywords:
 - full-text indexes [SQL Server], about
 ms.assetid: f8a98486-5438-44a8-b454-9e6ecbc74f83
-author: douglaslMS
-ms.author: douglasl
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 164ddc7f11b37ce7b6325f177713e6d3eca8635b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: a41f11b200ffe5dfc91479ea54095fd24c90699a
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48054740"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66011544"
 ---
 # <a name="create-and-manage-full-text-indexes"></a>フルテキスト インデックスの作成と管理
   フルテキスト インデックスの情報は、特定の単語や単語の組み合わせをすばやく検索できるフルテキスト クエリをコンパイルするために Full-Text Engine で使用されます。 フルテキスト インデックスには、データベース テーブルの 1 つ以上の列の重要な語およびその場所に関する情報が保存されます。 フルテキスト インデックスは、Full-Text Engine for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]により構築および管理されるトークンベースの特殊な機能インデックスです。 フルテキスト インデックスの作成手順は、他のタイプのインデックスの作成手順とは異なります。 特定の行に格納された値に基づいて B ツリー構造を作成するのではなく、Full-Text Engine は、インデックスを作成するテキストの個々のトークンに基づいて、反転、スタック、および圧縮されたインデックス構造を作成します。  フルテキスト インデックスのサイズを制限する要因となるのは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスが実行されているコンピューターで使用できるメモリ リソースのみです。  
@@ -27,9 +27,9 @@ ms.locfileid: "48054740"
 > [!NOTE]  
 >  [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 以降では、Full-Text Engine は、個別のサービスではなく [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] プロセス内に存在します。 Full-Text Engine をデータベース エンジンに統合することにより、フルテキストの管理、混合クエリの最適化、および全体的なパフォーマンスが向上しています。  
   
- 1 つのテーブルに対し、1 つのフルテキスト インデックスしか使用できません。 フルテキスト インデックスをテーブルに作成するためには、一意で NULL が許容されない列がそのテーブルに 1 つ必要です。 型の列にフルテキスト インデックスを作成できる`char`、 `varchar`、 `nchar`、 `nvarchar`、 `text`、 `ntext`、 `image`、 `xml`、 `varbinary`、および`varbinary(max)`のインデックスを作成できますフルテキスト検索します。 データの列にフルテキスト インデックスを作成する型が`varbinary`、 `varbinary(max)`、 `image`、または`xml`型の列を指定する必要があります。 *型列* は、各行のドキュメントのファイル拡張子 (.doc、.pdf、.xls など) を格納するテーブル列です。  
+ 1 つのテーブルに対し、1 つのフルテキスト インデックスしか使用できません。 フルテキスト インデックスをテーブルに作成するためには、一意で NULL が許容されない列がそのテーブルに 1 つ必要です。 フルテキスト インデックスを作成できるのは、データ型が `char`、`varchar`、`nchar`、`nvarchar`、`text`、`ntext`、`image`、`xml`、`varbinary`、および `varbinary(max)` の列です。これらの列には、フルテキスト検索用のインデックスを作成できます。 データ型が `varbinary`、`varbinary(max)`、`image`、または `xml` の列にフルテキスト インデックスを作成する場合は、型列を指定する必要があります。 *型列* は、各行のドキュメントのファイル拡張子 (.doc、.pdf、.xls など) を格納するテーブル列です。  
   
- フルテキスト インデックスを作成および保守するプロセスを *作成* ( *クロール*とも呼ばれます) といいます。 フルテキスト インデックスの作成には、完全作成、変更の追跡に基づく作成、およびタイムスタンプに基づく増分作成の 3 種類があります。 詳細については、「 [フルテキスト インデックスの作成](populate-full-text-indexes.md)」を参照してください。  
+ フルテキスト インデックスを作成および保守するプロセスを *作成* ( *クロール*とも呼ばれます) といいます。 フルテキスト インデックスの作成には、完全作成、変更の追跡に基づく作成、およびタイムスタンプに基づく増分作成の 3 種類があります。 詳細については、「 [フルテキスト インデックスの作成](populate-full-text-indexes.md)」をご覧ください。  
   
 ##  <a name="tasks"></a> 一般的なタスク  
  **フルテキスト インデックスを作成するには**  

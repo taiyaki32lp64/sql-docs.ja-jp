@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: 898f2d76-9e63-45ef-94da-8034e86004ab
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: ed8c72e0114804780cd3ee090b536eb28135e628
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 506dae205356504c76d47ffe324b82f9f34665f5
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47743270"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68018004"
 ---
 # <a name="change-data-capture---sysdmcdcerrors"></a>変更データ キャプチャ - sys.dm_cdc_errors
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

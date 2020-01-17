@@ -1,1 +1,1 @@
-  [Parallel Data Warehouse 製品ドキュメント](https://www.microsoft.com/en-us/download/details.aspx?id=51610)  
+  [Parallel Data Warehouse 製品ドキュメント](https://www.microsoft.com/download/details.aspx?id=51610)  

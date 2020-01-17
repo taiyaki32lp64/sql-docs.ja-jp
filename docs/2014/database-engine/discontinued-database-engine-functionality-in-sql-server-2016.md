@@ -33,36 +33,36 @@ ms.assetid: d686cdf0-d11d-4dba-9ec8-de1a5f189f25
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: fc6b593694feda96032cb0af45d9b3bdb4cc2a8a
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: 2ebb9b4e3db7cf8f7a19fd582dceb0b19f5c47d0
+ms.sourcegitcommit: 9d3ece500fa0e4a9f4fefc88df4af1db9431c619
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54132620"
+ms.lasthandoff: 06/28/2019
+ms.locfileid: "67463465"
 ---
 # <a name="discontinued-database-engine-functionality-in-sql-server-2014"></a>SQL Server 2014 で廃止されたデータベース エンジンの機能
   このトピックでは、 [!INCLUDE[ssDE](../includes/ssde-md.md)] で使用できなくなった [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]の機能について説明します。  
   
-## <a name="discontinued-features-in-includesssql14includessssql14-mdmd"></a> [!INCLUDE[ssSQL14](../includes/sssql14-md.md)]  
+## <a name="SQL14"></a> 廃止された機能 [!INCLUDE[ssSQL14](../includes/sssql14-md.md)]  
  [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] で削除された機能を次の表に示します。  
   
 |カテゴリ|提供が中止された機能|代替|  
 |--------------|--------------------------|-----------------|  
 |互換性レベル|互換性レベル 90|データベースを互換性レベル 100 以上に設定する必要があります。 互換性レベル 100 未満のデータベースを [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] にアップグレードすると、データベースの互換性レベルはアップグレード操作中に 100 に設定されます。|  
   
-## <a name="discontinued-features-in-includesssql11includessssql11-mdmd"></a> [!INCLUDE[ssSQL11](../includes/sssql11-md.md)]  
+## <a name="Denali"></a> 廃止された機能 [!INCLUDE[ssSQL11](../includes/sssql11-md.md)]  
  [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] で削除された機能を次の表に示します。  
   
 |カテゴリ|提供が中止された機能|代替|  
 |--------------|--------------------------|-----------------|  
 |バックアップと復元|**BACKUP {DATABASE&#124;ログ} WITH PASSWORD**と**バックアップ {データベース&#124;ログ} WITH MEDIAPASSWORD**は廃止されました。 **復元 {データベース&#124;ログ} [MEDIA] のパスワードを使用して**非推奨とされ続けます。|なし|  
-|バックアップと復元|**RESTORE {DATABASE&AMP;#124;ログ}.WITH DBO_ONLY**|**RESTORE {DATABASE&AMP;#124;ログ}....RESTRICTED_USER を**|  
+|バックアップと復元|**RESTORE { DATABASE &#124; LOG } ...WITH DBO_ONLY**|**RESTORE { DATABASE &#124; LOG } ... ...RESTRICTED_USER を**|  
 |互換性レベル|互換性レベル 80|データベースを以上に設定する必要があります互換性レベル 90 です。|  
 |構成オプション|`sp_configure 'user instance timeout'` および `'user instances enabled'`|ローカル データベースの機能を使用します。 詳細については、次を参照してください[SqlLocalDB ユーティリティ。](../tools/sqllocaldb-utility.md)|  
 |接続プロトコル|VIA プロトコルのサポートは中止されました。|代わりに TCP を使用してください。|  
 |データベース オブジェクト|トリガーでの `WITH APPEND` 句の使用|トリガー全体を再作成してください。|  
 |データベース オプション|`sp_dboption`|`ALTER DATABASE`|  
-|メール|SQL Mail|データベース メールを使用してください。 詳細については、次を参照してください。[データベース メール](../relational-databases/database-mail/database-mail.md)と[Use Database Mail Instead of SQL Mail](../relational-databases/policy-based-management/use-database-mail-instead-of-sql-mail.md)します。|  
+|Mail|SQL Mail|データベース メールを使用してください。 詳細については、次を参照してください。[データベース メール](../relational-databases/database-mail/database-mail.md)と[Use Database Mail Instead of SQL Mail](../relational-databases/policy-based-management/use-database-mail-instead-of-sql-mail.md)します。|  
 |メモリ管理|32 ビットの AWE (Address Windowing Extensions) と 32 ビットのホット アド メモリ サポート。|64 ビットのオペレーティング システムを使用します。|  
 |メタデータ|`DATABASEPROPERTY`|`DATABASEPROPERTYEX`|  
 |プログラミング|SQL Server 分散管理オブジェクト (SQL-DMO)。|SQL Server 管理オブジェクト (SMO)|  
@@ -75,8 +75,8 @@ ms.locfileid: "54132620"
 |システム テーブル|sys.database_principal_aliases|別名の代わりにロールを使用してください。|  
 |Transact-SQL|`RAISERROR` という形式の `RAISERROR integer 'string'` は廃止されました。|現在使用してステートメントを書き直してください**raiserror (...)** 構文。|  
 |Transact-SQL 構文|`COMPUTE / COMPUTE BY`|`ROLLUP` を使用してください。|  
-|Transact-SQL 構文|使用**\* =** と **=&#42;**|ANSI 結合構文を使用してください。 詳細については、次を参照してください。 [(TRANSACT-SQL) から。](https://msdn.microsoft.com/library/ms177634\(SQL.105\).aspx)|  
-|XEvent|databases_data_file_size_changed、databases_log_file_size_changed<br /><br /> eventdatabases_log_file_used_size_changed<br /><br /> locks_lock_timeouts_greater_than_0<br /><br /> locks_lock_timeouts|Database_file_size_change、database_file_size_change で置換<br /><br /> database_file_size_change<br /><br /> lock_timeout_greater_than_0<br /><br /> lock_timeout|  
+|Transact-SQL 構文|使用 **\* =** と **=&#42;**|ANSI 結合構文を使用してください。 詳細については、次を参照してください。 [(TRANSACT-SQL) から。](https://msdn.microsoft.com/library/ms177634\(SQL.105\).aspx)|  
+|XEvent|databases_data_file_size_changed, databases_log_file_size_changed<br /><br /> eventdatabases_log_file_used_size_changed<br /><br /> locks_lock_timeouts_greater_than_0<br /><br /> locks_lock_timeouts|Database_file_size_change、database_file_size_change で置換<br /><br /> database_file_size_change<br /><br /> lock_timeout_greater_than_0<br /><br /> lock_timeout|  
   
  **XEvent の追加変更します。**  
   
@@ -93,6 +93,6 @@ ms.locfileid: "54132620"
 -   追加したフィールド: target_kb、pages_kb  
   
 ## <a name="see-also"></a>参照  
- [SQL Server 2014 データベース エンジンの非推奨の機能](deprecated-database-engine-features-in-sql-server-2016.md)  
+ [SQL Server 2014 データベース エンジンの非推奨の機能](deprecated-database-engine-features-in-sql-server-2016.md?view=sql-server-2014)  
   
   

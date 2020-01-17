@@ -1,5 +1,5 @@
 ---
-title: '概要: Excel からのデータのインポート (Excel 用 MDS アドイン) | Microsoft Docs'
+title: 概要:(MDS アドインを Excel の) Excel からデータをインポートする |Microsoft Docs
 ms.custom: microsoft-excel-add-in
 ms.date: 03/01/2017
 ms.prod: sql
@@ -8,17 +8,16 @@ ms.reviewer: ''
 ms.technology: master-data-services
 ms.topic: conceptual
 ms.assetid: ea84a9aa-aeec-411b-ab8d-bc1b14f864a3
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: c0f410c49f1ae4ded84c1077e26e824ba8c2b82f
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
-ms.translationtype: HT
+ms.openlocfilehash: 1da9e1876995f81fd2b40b9ef1bb4b509b4c848d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52502937"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68074485"
 ---
-# <a name="overview-importing-data-from-excel-mds-add-in-for-excel"></a>概要: Excel からのデータのインポート(Excel 用 MDS アドイン)
+# <a name="overview-importing-data-from-excel-mds-add-in-for-excel"></a>概要:Excel からのデータのインポート (Excel 用 MDS アドイン)
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 

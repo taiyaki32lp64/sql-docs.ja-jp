@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: b3466382-71cb-4f82-8318-092a8fcef3df
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: c781113124d456e1ba866546d6ada7a17371d71f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 251ae0e4e94cec903e2c4b5cf687ed9b8b41dfc8
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47667390"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67952398"
 ---
 # <a name="identifiers-limitations"></a>識別子の制限事項
 スペースまたは特殊記号が識別子が含まれる場合は、バック引用符で囲まれた識別子を囲む必要があります。 有効な名前は、うち最初の文字することはできません、スペース、64 文字の文字列です。 有効な名前は、制御文字または特殊文字を含めることはできません: ' &#124; # * でしょうか。 [ ] . ! $ .  

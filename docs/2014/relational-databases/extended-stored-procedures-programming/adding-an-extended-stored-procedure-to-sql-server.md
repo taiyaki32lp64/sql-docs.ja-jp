@@ -15,11 +15,11 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 3a5e5ab2d0dba0d7d39fcf3223f0aeec5ab6a058
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52767925"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62512350"
 ---
 # <a name="adding-an-extended-stored-procedure-to-sql-server"></a>SQL Server への拡張ストアド プロシージャの追加
     
@@ -33,7 +33,7 @@ ms.locfileid: "52767925"
 > [!IMPORTANT]  
 >  システム管理者は、拡張ストアド プロシージャをサーバーに追加し、他のユーザーに実行権限を許可する前に、拡張ストアド プロシージャに有害なコードや悪意のあるコードが含まれていないことを十分に確認する必要があります。  すべてのユーザー入力を検証します。 また、ユーザー入力は検証するまで連結しないでください。 検証していないユーザー入力から作成されたコマンドは、絶対に実行しないでください。  
   
- sp_addextendedproc の最初のパラメーターには、関数の名前を指定します。2 番目のパラメーターには、その関数が含まれている DLL の名前を指定します。 DLL の完全パスを指定することをお勧めします。  
+ sp_addextendedproc の最初のパラメーターには、関数の名前を指定します。2 番目のパラメーターには、その関数が含まれている DLL の名前を指定します。 DLL の完全なパスを指定することをお勧めします。  
   
 > [!IMPORTANT]  
 >  完全パスを使用して登録されなかった既存の DLL は、SQL Server 2005 以降へのアップグレード後に機能しなくなります。 この問題を修正するには、sp_dropextendedproc を使用して DLL の登録を解除し、sp_addextendedproc を使用して完全パスと共に登録し直します。  

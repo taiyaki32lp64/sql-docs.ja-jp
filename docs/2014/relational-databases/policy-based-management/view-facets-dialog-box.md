@@ -13,11 +13,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: f2b84ce093c25faa284033065c329bb14f254a8f
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52818264"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62676858"
 ---
 # <a name="view-facets-dialog-box"></a>[ファセットの表示] ダイアログ ボックス
   このダイアログ ボックスを使用すると、ポリシー ベースの管理ファセットのプロパティを表示できます。 ファセットのプロパティは、ファセットの作成時に定義され、このダイアログ ボックスでは変更できません。  

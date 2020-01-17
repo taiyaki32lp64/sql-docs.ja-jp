@@ -1,5 +1,5 @@
 ---
-title: インデックスの要素 (DTA) |Microsoft Docs
+title: Index 要素 (DTA) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -12,15 +12,14 @@ dev_langs:
 helpviewer_keywords:
 - Index element (DTA)
 ms.assetid: 447d3964-b387-40f6-9189-71386774c29e
-author: stevestein
-ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 97f61bdc47645120fab0e8d7f128eb7b2f55aded
-ms.sourcegitcommit: 0f7cf9b7ab23df15624d27c129ab3a539e8b6457
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 3e7b86c8ac990c7add4856e2c00e43550903f55a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51291888"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68034836"
 ---
 # <a name="index-element-dta"></a>Index 要素 (DTA)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

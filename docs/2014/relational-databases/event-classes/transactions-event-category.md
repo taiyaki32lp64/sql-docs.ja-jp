@@ -17,11 +17,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 076e68de4dc5d4e25f6cabe6b39ac4a61a05033a
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52801104"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63062230"
 ---
 # <a name="transactions-event-category"></a>Transactions イベント カテゴリ
   **Transactions** イベント カテゴリのイベント クラスを使用すると、トランザクションの状態を監視できます。 **TM:** というプレフィックスが付いたイベント クラス名は、トランザクション管理のインターフェイス経由で送信されたトランザクション関連の操作を追跡する場合に使用します。  
@@ -40,7 +40,7 @@ ms.locfileid: "52801104"
 |[TM:Promote Tran Starting イベント クラス](tm-promote-tran-starting-event-class.md)|PROMOTE TRANSACTION 要求が開始されていることを示します。|  
 |[TM:Rollback Tran Completed イベント クラス](tm-rollback-tran-completed-event-class.md)|ROLLBACK TRANSACTION 要求が完了したことを示します。|  
 |[TM:Rollback Tran Starting イベント クラス](tm-rollback-tran-starting-event-class.md)|ROLLBACK TRANSACTION 要求が開始されていることを示します。|  
-|[TM:保存 Tran Completed イベント クラス](tm-save-tran-completed-event-class.md)|SAVE TRANSACTION 要求が完了したことを示します。|  
+|[TM:Save Tran Completed イベント クラス](tm-save-tran-completed-event-class.md)|SAVE TRANSACTION 要求が完了したことを示します。|  
 |[TM:Save Tran Starting イベント クラス](tm-save-tran-starting-event-class.md)|SAVE TRANSACTION 要求が開始されていることを示します。|  
 |[TransactionLog イベント クラス](transactionlog-event-class.md)|トランザクションがデータベース トランザクション ログに書き込まれる時点を追跡します。|  
   

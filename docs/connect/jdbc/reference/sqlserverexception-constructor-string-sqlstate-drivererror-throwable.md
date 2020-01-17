@@ -1,5 +1,5 @@
 ---
-title: SQLServerException コンス トラクター (java.lang.String, SQLState, DriverError, java.lang.Throwable) |Microsoft Docs
+title: SQLServerException コンストラクター (Java.lang.throwable、SQLState、DriverError、java. lang.) |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2018
 ms.prod: sql
@@ -13,18 +13,17 @@ apitype: Assembly
 ms.assetid: ''
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: dc7608582a5ed146b656d41714853ba4c3b21b00
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 13b0e3aea694b0cedb3594cb76650ca7c938eb55
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47679980"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67971092"
 ---
-# <a name="sqlserverexception-constructor-javalangstring-sqlstate-drivererror-javalangthrowable"></a>SQLServerException コンス トラクター (java.lang.String, SQLState, DriverError, java.lang.Throwable)
+# <a name="sqlserverexception-constructor-javalangstring-sqlstate-drivererror-javalangthrowable"></a>SQLServerException コンストラクター (Java.lang.throwable、SQLState、DriverError、java. lang.)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  新しいインスタンスを初期化、 [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)クラスが指定されると、**文字列**オブジェクト、 **sqlstate**オブジェクト、 **drivererror**オブジェクト、および**スロー対象**オブジェクト。
+  **文字列**オブジェクト、 **sqlstate**オブジェクト、 **drivererror**オブジェクト、および**java.lang.throwable**オブジェクトが指定された場合に、 [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)クラスの新しいインスタンスを初期化します。
 
 ## <a name="syntax"></a>構文  
   
@@ -39,19 +38,19 @@ public SQLServerException(java.lang.String errText,
 #### <a name="parameters"></a>パラメーター  
  *errText*  
   
- エラー テキストを保持する文字列。
+ エラーテキストを保持する文字列。
   
  *sqlState*  
   
- SQL の状態を保持する列挙型オブジェクト。
+ SQL の状態を保持する列挙型オブジェクトです。
  
  *driverError*  
   
- ドライバーのエラーを含む列挙オブジェクト。
+ ドライバーエラーを保持する列挙オブジェクト。
  
  *cause*  
   
- 例外の原因を保持するスロー対象オブジェクト。
+ 例外の原因を保持する java.lang.throwable オブジェクト。
   
 ## <a name="see-also"></a>参照  
  [SQLServerException のコンストラクター](../../../connect/jdbc/reference/sqlserverexception-constructors.md)   

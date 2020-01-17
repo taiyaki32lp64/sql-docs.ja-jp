@@ -1,5 +1,5 @@
 ---
-title: IRowsetFind での |Microsoft Docs
+title: 比較 IRowsetFind |Microsoft Docs
 description: IRowsetFind での比較
 ms.custom: ''
 ms.date: 06/14/2018
@@ -12,13 +12,12 @@ helpviewer_keywords:
 - IRowsetFind comparability
 author: pmasl
 ms.author: pelopes
-manager: craigg
-ms.openlocfilehash: 33ddde806c456b59391e06b75d5ab11446b038f7
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 6750e4af88f875b7557671d628fdf2570f8dcff1
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47731840"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67995143"
 ---
 # <a name="comparability-for-irowsetfind"></a>IRowsetFind での比較
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

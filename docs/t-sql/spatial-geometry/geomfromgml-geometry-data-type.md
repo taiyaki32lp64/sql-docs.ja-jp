@@ -15,15 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - GeomFromGML (geometry Data Type)
 ms.assetid: a3f2c84b-a49f-4ce3-ba25-b903fb0c99b4
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: f04cd4feecbaf8f01d2eea06506cf933ebae9fa4
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+author: MladjoA
+ms.author: mlandzic
+ms.openlocfilehash: e48cea62df1e0828a583cfccf35fc4bedf7358cb
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51703421"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68101270"
 ---
 # <a name="geomfromgml-geometry-data-type"></a>GeomFromGml (geometry データ型)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -51,7 +50,7 @@ GeomFromGml ( GML_input, SRID )
 ## <a name="return-types"></a>戻り値の型  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の戻り値の型: **geometry**  
   
- CLR 戻り値の型: **SqlGeometry**  
+ CLR の戻り値の型:**SqlGeometry**  
   
 ## <a name="remarks"></a>Remarks  
  このメソッドでは、入力が正しい形式でない場合に、**FormatException** をスローします。  

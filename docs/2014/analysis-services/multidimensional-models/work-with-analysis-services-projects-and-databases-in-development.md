@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - Analysis Services, projects
@@ -13,12 +12,12 @@ ms.assetid: 39cf9166-fa92-40fe-9962-210a52461257
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 05ec77f2a7c4224b06e764997b6c01ee18ac0579
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 3ab225433ca4ab08d7a7c013fa30dd37c05b9143
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48051824"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66072462"
 ---
 # <a name="working-with-analysis-services-projects-and-databases-during-the-development-phase"></a>開発段階における Analysis Services プロジェクトおよびデータベースの操作
   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] をプロジェクト モードまたはオンライン モードで使用すると、[!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] データベースを開発できます。  

@@ -1,5 +1,5 @@
 ---
-title: トレース テンプレートをエクスポート (SQL Server Profiler) |Microsoft Docs
+title: トレーステンプレートのエクスポート (SQL Server プロファイラー) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -12,15 +12,14 @@ helpviewer_keywords:
 - trace templates [SQL Server]
 - exporting trace templates
 ms.assetid: 5aa5f400-4aba-4081-9ed4-62cf38828438
-author: stevestein
-ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 4f25235980abadd39f08e2c5fa12850016715540
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 60218ad4bd1d50c95764f0191bb42860b1e06107
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47597150"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67930020"
 ---
 # <a name="export-a-trace-template-sql-server-profiler"></a>トレース テンプレートのエクスポート (SQL Server Profiler)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

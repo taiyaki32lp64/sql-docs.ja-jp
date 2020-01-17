@@ -1,22 +1,21 @@
 ---
 title: Windows への PolyBase のインストール | Microsoft Docs
-ms.custom: ''
 ms.date: 09/24/2018
 ms.prod: sql
-ms.reviewer: ''
 ms.technology: polybase
 ms.topic: conceptual
 helpviewer_keywords:
 - PolyBase, installation
-author: rothja
-ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 3c08f8cb48e22ba5ca1546f9fcca63f77868b356
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+author: MikeRayMSFT
+ms.author: mikeray
+ms.reviewer: ''
+monikerRange: '>= sql-server-2016 || =sqlallproducts-allversions'
+ms.openlocfilehash: 007719c2407f6e193b8612ef51944ccbfd3238d3
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53208801"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72908670"
 ---
 # <a name="install-polybase-on-windows"></a>Windows への PolyBase のインストール
 
@@ -30,8 +29,6 @@ SQL Server の試用版は [SQL Server 評価版ソフトウェア](https://www.
    
 - Microsoft .NET Framework 4.5。  
 
-- Oracle Java SE Runtime Environment (JRE). バージョン 7 (7.51 以降) および 8 がサポートされます。 [JRE](https://www.oracle.com/technetwork/java/javase/downloads/jre8-downloads-2133155.html) と [Server JRE](https://www.oracle.com/technetwork/java/javase/downloads/server-jre8-downloads-2133154.html) のどちらも機能します。 [Java SE ダウンロード](https://www.oracle.com/technetwork/java/javase/downloads/index.html)に移動します。 JRE が存在しない場合、インストーラーが失敗します。 JRE9 と JRE10 はサポートされていません。
-
 - 最小メモリ:4 GB。 
    
 - 最小ハード ディスク容量: 2 GB。
@@ -40,15 +37,16 @@ SQL Server の試用版は [SQL Server 評価版ソフトウェア](https://www.
    
 - PolyBase が正常に機能するには、TCP/IP を有効にする必要があります。 TCP/IP は、Developer Edition と Express Edition を除く SQL Server のすべてのエディションで、既定で有効です。 Developer Edition および Express Edition で PolyBase が正常に機能するためには、TCP/IP 接続を有効にする必要があります。 「[サーバー ネットワーク プロトコルの有効化または無効化](../../database-engine/configure-windows/enable-or-disable-a-server-network-protocol.md)」を参照してください。
 
-- MSVC++ 2012。 
 
-> [!NOTE]
-> 
+>[!NOTE] 
 > PolyBase は各マシンで 1 つの SQL Server インスタンスにのみインストールできます。
-> 
-> [!IMPORTANT]
-> 
-> Hadoop に対して計算プッシュダウン機能を使用するには、ターゲットの Hadoop クラスターに、ジョブの履歴サーバーが有効になっている HDFS のコア コンポーネントの YARN と MapReduce がある必要があります。 PolyBase から MapReduce 経由でプッシュダウン クエリを送信し、ジョブの履歴サーバーからステータスをプルします。 いずれかのコンポーネントがない場合、クエリは失敗します。
+
+
+>[!NOTE]
+>PolyBase を使用するには、データベースでの sysadmin または CONTROL SERVER レベルのアクセス許可が必要です。
+
+>[!IMPORTANT]
+>Hadoop に対して計算プッシュダウン機能を使用するには、ターゲットの Hadoop クラスターに、ジョブの履歴サーバーが有効になっている HDFS のコア コンポーネントの YARN と MapReduce がある必要があります。 PolyBase から MapReduce 経由でプッシュダウン クエリを送信し、ジョブの履歴サーバーからステータスをプルします。 いずれかのコンポーネントがない場合、クエリは失敗します。
   
 ## <a name="single-node-or-polybase-scale-out-group"></a>シングル ノードまたは PolyBase スケールアウト グループ
 
@@ -67,18 +65,20 @@ PolyBase スケールアウト グループの場合、次のことを確認し�
    
 1. SQL Server の setup.exe を実行します。   
    
-2. **[インストール]** を選択し、**[SQL Server の新規スタンドアロン インストールを実行するか、既存のインストールに機能を追加します]** を選択します。  
+2. **[インストール]** を選択し、 **[SQL Server の新規スタンドアロン インストールを実行するか、既存のインストールに機能を追加します]** を選択します。  
    
-3. [機能の選択] ページで、**[外部データ用 PolyBase クエリ サービス]** を選択します。  
+3. [機能の選択] ページで、 **[外部データ用 PolyBase クエリ サービス]** を選択します。  
 
    ![PolyBase サービス](../../relational-databases/polybase/media/install-wizard.png "PolyBase サービス")  
    
+   >[!NOTE]
+   >現在、SQL Server 2019 PolyBase には、追加オプションである **HDFS データ ソース用の Java コネクタ**が含まれています。 この機能の詳細については、[SQL Server のプレビュー機能](https://cloudblogs.microsoft.com/sqlserver/2019/04/24/sql-server-2019-community-technology-preview-2-5-is-now-available/)に関する記事を参照してください。
+   
 4. [Server の構成] ページで、**SQL Server PolyBase エンジン サービス**と **SQL Server PolyBase Data Movement Service** を同じアカウントで実行するように構成します。  
-   
-   > [!IMPORTANT] 
-   >
-   >PolyBase スケールアウト グループで、すべてのノード上の PolyBase エンジンおよび PolyBase Data Movement サービスを、同じドメイン アカウントで実行する必要があります。 「[PolyBase スケールアウト グループ](#Enable)」を参照してください。
-   
+
+   >[!IMPORTANT]
+   >PolyBase スケールアウト グループで、すべてのノード上の PolyBase エンジンおよび PolyBase Data Movement サービスを、同じドメイン アカウントで実行する必要があります。 「[PolyBase スケールアウト グループ](#enable)」を参照してください。
+
 5. [PolyBase の構成] ページで、次の 2 つのオプションのいずれかを選択します。 詳細については、「[PolyBase スケールアウト グループ](../../relational-databases/polybase/polybase-scale-out-groups.md) 」を参照してください。  
    
    - スタンドアロンの PolyBase 対応インスタンスとして、SQL Server インスタンスを使用します。  
@@ -91,8 +91,7 @@ PolyBase スケールアウト グループの場合、次のことを確認し�
    
 6. [PolyBase の構成] ページで、少なくとも 6 つのポートを含むポート範囲を指定します。 SQL Server セットアップにより、この範囲の最初の 6 つの利用可能なポートが割り当てられます。  
 
-   > [!IMPORTANT]
-   >
+   >[!IMPORTANT]
    > インストール後に、[PolyBase 機能を有効にする](#enable)必要があります。
 
 
@@ -154,14 +153,13 @@ Setup.exe /Q /ACTION=INSTALL /IACCEPTSQLSERVERLICENSETERMS /FEATURES=SQLEngine,P
 
 ## <a id="enable"></a> PolyBase を有効にする
 
-インストールが完了したら、PolyBase を有効にしてその機能にアクセスできるようにする必要があります。 SQL Server 2019 CTP 2.0 に接続するには、インストール後に PolyBase を有効にする必要があります。 次の Transact-SQL コマンドを使用します。
+インストールが完了したら、PolyBase を有効にしてその機能にアクセスできるようにする必要があります。 次の Transact-SQL コマンドを使用します。 ビッグ データ クラスター インストール中にデプロイされた SQL 2019 インスタンスではこの設定が既定で有効になっています。
 
 
 ```sql
 exec sp_configure @configname = 'polybase enabled', @configvalue = 1;
-RECONFIGURE [ WITH OVERRIDE ]  ;
+RECONFIGURE;
 ```
-その後、インスタンスを再起動する必要があります。
 
 
 ## <a name="post-installation-notes"></a>インストール後の注意  
@@ -192,11 +190,11 @@ SQL Server PolyBase のセットアップでは、コンピューターに次の
 
 1. **コントロール パネル**を開きます。  
 
-2. **[システムとセキュリティ]** を選択し、**[Windows ファイアウォール]** を選択します。  
+2. **[システムとセキュリティ]** を選択し、 **[Windows ファイアウォール]** を選択します。  
    
-3. **[詳細設定]** を選択して、**[受信の規則]** を選択します。  
+3. **[詳細設定]** を選択して、 **[受信の規則]** を選択します。  
    
-4. 無効になっている規則を右クリックして、**[規則の有効化]** を選択します。  
+4. 無効になっている規則を右クリックして、 **[規則の有効化]** を選択します。  
    
 ### <a name="polybase-service-accounts"></a>PolyBase サービス アカウント
 

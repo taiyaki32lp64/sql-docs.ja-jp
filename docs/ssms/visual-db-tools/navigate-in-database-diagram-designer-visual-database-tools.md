@@ -12,15 +12,14 @@ helpviewer_keywords:
 - database diagrams [SQL Server], Database Diagram Designer
 - diagrams [SQL Server], Database Diagram Designer
 ms.assetid: 4ff94dbf-434d-4e2c-b8cb-a3c04e8613c9
-author: stevestein
-ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 16750be8520038500e605f4eb3f6f6939b2ca3a7
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: bba0d3bab215a745161581b79beccc528b274010
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47764010"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68267461"
 ---
 # <a name="navigate-in-database-diagram-designer-visual-database-tools"></a>データベース ダイアグラム デザイナー内でのナビゲーション (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -31,7 +30,7 @@ ms.locfileid: "47764010"
 |データベース ダイアグラムのメニューにアクセスする|Alt + M|  
 |テーブルとリレーションシップ間で移動する (可能な場合)|Tab または Shift + Tab|  
 |テーブルの列間で移動する|方向キー|  
-|選択しているテーブルをダイアグラムから除去する|Del|  
+|選択しているテーブルをダイアグラムから除去する|DELETE|  
 |テーブルまたはリレーションシップをデータベースから削除する|Shift + Del|  
 |ダイアグラム画面間でテーブルを移動する|Ctrl + ↑または Ctrl + ↓|  
 |右/左および上/下へスクロールする|垂直方向の場合 PageUp/PageDown、水平方向の場合 Ctrl + PageUp/PageDown|  

@@ -1,6 +1,5 @@
 ---
-title: フォーマット ファイルを使用したデータ フィールドのスキップ (SQL Server) | Microsoft Docs
-ms.custom: ''
+title: フォーマット ファイルを使用したデータ フィールドのスキップ
 ms.date: 09/19/2016
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
@@ -11,16 +10,16 @@ helpviewer_keywords:
 - format files [SQL Server], skipping data fields
 - skipping data fields when importing
 ms.assetid: 6a76517e-983b-47a1-8f02-661b99859a8b
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
+author: MashaMSFT
+ms.author: mathoma
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 82df9a4dc4a7abce935e87e515cf63f71af0e4b7
-ms.sourcegitcommit: bfa10c54e871700de285d7f819095d51ef70d997
+ms.custom: seo-lt-2019
+ms.openlocfilehash: 88d9e3805891c62998afb131ddee7fb202f18b75
+ms.sourcegitcommit: d00ba0b4696ef7dee31cd0b293a3f54a1beaf458
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/14/2019
-ms.locfileid: "54256787"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "74056321"
 ---
 # <a name="use-a-format-file-to-skip-a-data-field-sql-server"></a>フォーマット ファイルを使用したデータ フィールドのスキップ (SQL Server)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -105,7 +104,7 @@ bcp TestDatabase.dbo.myTestSkipField format nul -c -f D:\BCP\myTestSkipField.fmt
 
 変更されたフォーマット ファイルは次のように反映されます。
 * データ フィールドが 4 つになります。
-* `myTestSkipField.bcp` の最初のデータ フィールドは最初の列にマップされます: ` myTestSkipField.. PersonID`
+* `myTestSkipField.bcp` の最初のデータ フィールドは最初の列にマップされます: `myTestSkipField.. PersonID`
 * `myTestSkipField.bcp` の 2 番目のデータ フィールドはどの列にもマップされません。
 * `myTestSkipField.bcp` の 3 番目のデータ フィールドは 2 番目の列にマップされます: `myTestSkipField.. FirstName`
 * `myTestSkipField.bcp` の 4 番目のデータ フィールドは 3 番目の列にマップされます: `myTestSkipField.. LastName`

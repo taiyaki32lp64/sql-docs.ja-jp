@@ -11,11 +11,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 73415bf802973fcac8cd0fe29c6db3bd5e110f6f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48058452"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63015284"
 ---
 # <a name="migration-issues-for-natively-compiled-stored-procedures"></a>ネイティブ コンパイル ストアド プロシージャの移行に関する問題
   このセクションでは、ネイティブ コンパイル ストアド プロシージャの作成に関するいくつかの事項について説明します。  

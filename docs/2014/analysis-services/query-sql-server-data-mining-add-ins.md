@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - queries [data mining]
@@ -16,12 +15,12 @@ ms.assetid: 16af4a6f-18d4-496a-a304-7a13aa32ee76
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: b596612d711925687087a2263013fdf13a0c491e
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: dcddeb64b14301f08a7dc723ef89737102f257ad
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52418463"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66070480"
 ---
 # <a name="query-sql-server-data-mining-add-ins"></a>クエリ (SQL Server データ マイニング アドイン)
   ![クエリ モデル ボタン、データ マイニング リボン](media/dmc-query.gif "モデルのクエリ ボタン、データ マイニング リボン")  

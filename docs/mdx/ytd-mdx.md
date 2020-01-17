@@ -1,5 +1,5 @@
 ---
-title: Ytd (MDX) |Microsoft ドキュメント
+title: Ytd (MDX) |Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -8,18 +8,17 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-manager: kfile
-ms.openlocfilehash: 67df625611f2451c3442d5d59b56c76dfc14a74a
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.openlocfilehash: 2e3fcd823dea5d651cd7be9295fa4c6bba25380c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34743861"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68125759"
 ---
 # <a name="ytd-mdx"></a>Ytd (MDX)
 
 
-  以降では最初の兄弟、制約の中で指定されたメンバーで終わると、特定のメンバーと同じレベルからメンバーの兄弟のセットを返します、*年*時間ディメンション内のレベルです。  
+  以降で最初の兄弟、という制約の指定したメンバーで終わる、指定されたメンバーと同じレベルのメンバーの兄弟のセットを返します、*年*時間ディメンション内のレベル。  
   
 ## <a name="syntax"></a>構文  
   
@@ -33,12 +32,12 @@ Ytd( [ Member_Expression ] )
  メンバーを 1 つ返す有効な多次元式 (MDX) 式です。  
   
 ## <a name="remarks"></a>コメント  
- 既定値は型のレベルを持つ最初の階層の現在のメンバーではメンバー式が指定されていない場合*年*型の最初の次元の*時間*メジャー グループにします。  
+ メンバー式が指定されていない、既定値は最初の階層の現在のメンバーの種類のレベルを持つ*年*型の最初の次元の*時間*メジャー グループ内。  
   
- **Ytd**関数のショートカット関数では、 [PeriodsToDate](../mdx/periodstodate-mdx.md)関数レベルの基になる属性階層の Type プロパティに設定されている*年*です。 つまり、`Ytd(Member_Expression)`は等価`PeriodsToDate(Year_Level_Expression,Member_Expression)`です。 Type プロパティ設定されている場合、この関数は機能しないことに注意してください*FiscalYears*です。  
+ **Ytd**関数のショートカット関数では、 [PeriodsToDate](../mdx/periodstodate-mdx.md)関数レベルの基になる属性階層の Type プロパティに設定されている*年*します。 つまり、`Ytd(Member_Expression)`と等価`PeriodsToDate(Year_Level_Expression,Member_Expression)`します。 Type プロパティ設定されている場合、この関数は動作しないことに注意してください*FiscalYears*します。  
   
 ## <a name="example"></a>例  
- 次の例は、の合計を返して、`Measures.[Order Quantity]`集計に含まれている 2003 年の最初の 8 月のメンバー、`Date`ディメンションから、 **Adventure Works**キューブ。  
+ 次の例の合計を返して、`Measures.[Order Quantity]`に含まれている 2003 年の最初の 8 月にわたり、メンバー、`Date`ディメンションから、 **Adventure Works**キューブ。  
   
 ```  
 WITH MEMBER [Date].[Calendar].[First8MonthsCY2003] AS  
@@ -54,7 +53,7 @@ WHERE
     [Measures].[Order Quantity]  
 ```  
   
- **Ytd**はでよく使用の組み合わせでパラメーターを指定せず、つまり、 [CurrentMember &#40;MDX&#41; ](../mdx/currentmember-mdx.md)関数で示すように、レポートでは、年度累計の累積合計を表示は、次のクエリ:  
+ **Ytd**つまり指定すると、パラメーターのない組み合わせで頻繁に使用が、 [CurrentMember &#40;MDX&#41; ](../mdx/currentmember-mdx.md)関数は、のようにに、レポートでは、年度累計の累積合計を表示は、次のクエリ:  
   
  `WITH MEMBER MEASURES.YTDDEMO AS`  
   
@@ -66,7 +65,7 @@ WHERE
   
  `FROM [Adventure Works]`  
   
-## <a name="see-also"></a>参照  
- [MDX 関数リファレンス&#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
+## <a name="see-also"></a>関連項目  
+ [MDX 関数リファレンス &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
   
   

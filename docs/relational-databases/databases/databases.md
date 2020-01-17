@@ -14,18 +14,17 @@ helpviewer_keywords:
 ms.assetid: 316eea58-81b8-4bf3-a1fc-801946740e94
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 6d5d185a55423bd0dbdeae792c180ba78f9c89cf
-ms.sourcegitcommit: 1a5448747ccb2e13e8f3d9f04012ba5ae04bb0a3
+ms.openlocfilehash: 2763a57a55a65d049be595d2286343eb5ba323ba
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51558549"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68109698"
 ---
 # <a name="databases"></a>データベース
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のデータベースは、特定の構造化データを格納するテーブルの集合です。 テーブルは一連の行 (レコードまたは組) と列 (属性) から構成されます。 テーブル内の各列は、特定の種類の情報 (日付、名前、金額、数字など) を格納するようにデザインされています。  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のデータベースは、特定の構造化データを格納するテーブルの集合です。 テーブルは一連の行 (レコードまたはタプル) と列 (属性) から構成されます。 テーブル内の各列は、特定の種類の情報 (日付、名前、金額、数字など) を格納するようにデザインされています。  
   
 ## <a name="basic-information-about-databases"></a>データベースに関する基本情報  
  コンピューターには、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスを 1 つまたは複数インストールできます。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の各インスタンスは、1 つまたは複数のデータベースを格納できます。  データベース内には、スキーマと呼ばれるオブジェクト所有権グループが少なくとも 1 つ存在します。 それぞれのスキーマには、テーブル、ビュー、ストアド プロシージャなどのデータベース オブジェクトが存在します。 証明書や非対称キーなど、一部のオブジェクトは、データベースに含まれていますがスキーマには含まれていません。 テーブルの作成の詳細については、「 [テーブル](../../relational-databases/tables/tables.md)」をご覧ください。  

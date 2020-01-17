@@ -14,15 +14,14 @@ dev_langs:
 helpviewer_keywords:
 - sys.sp_rda_reconcile_batch stored procedure
 ms.assetid: 6d21eac3-7b6c-4fe0-8bc4-bf503f3948a6
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: 29bd622dd82a223b235249b611c1bee5d98a5715
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: MikeRayMSFT
+ms.author: mikeray
+ms.openlocfilehash: 98094273d37bf0622eb903b9ad177817e4bb12d1
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47717100"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67905094"
 ---
 # <a name="syssprdareconcilebatch-transact-sql"></a>sys.sp_rda_reconcile_batch (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -44,7 +43,7 @@ sp_rda_reconcile_batch @objname = '@objname'
 ```  
   
 ## <a name="arguments"></a>引数  
- \@objname = '*\@objname*'  
+ \@objname = ' *\@objname*'  
  Stretch 対応 SQL Server テーブルの名前。  
   
 ## <a name="permissions"></a>アクセス許可  

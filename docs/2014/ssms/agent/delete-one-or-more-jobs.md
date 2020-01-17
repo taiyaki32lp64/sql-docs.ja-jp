@@ -16,12 +16,12 @@ ms.assetid: 67dcdad0-57b2-431c-b77f-4ffc926af93d
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: e777fc76a49e7d4ec645133808787e25a702348f
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 0d9df271c457cb0f05f9fdfe70952b6d02224963
+ms.sourcegitcommit: a165052c789a327a3a7202872669ce039bd9e495
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53367114"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72783255"
 ---
 # <a name="delete-one-or-more-jobs"></a>1 つまたは複数のジョブの削除
   このトピックでは、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 、または SQL Server 管理オブジェクトを使用して、 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] で [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]、 [!INCLUDE[tsql](../../includes/tsql-md.md)]、 or SQL Server Management Objects.  
@@ -30,7 +30,7 @@ ms.locfileid: "53367114"
   
 ##  <a name="BeforeYouBegin"></a> はじめに  
   
-###  <a name="Security"></a> セキュリティ  
+###  <a name="Security"></a> Security  
  **sysadmin** 固定サーバー ロールのメンバー以外は、所有しているジョブしか削除できません。  
   
  
@@ -45,7 +45,7 @@ ms.locfileid: "53367114"
   
 3.  **[オブジェクトの削除]** ダイアログ ボックスで、削除するジョブが選択されていることを確認します。  
   
-4.  **[OK]** をクリックします。  
+4.  クリックして **OK**です。  
   
 #### <a name="to-delete-multiple-jobs"></a>複数のジョブを削除するには  
   
@@ -69,7 +69,7 @@ ms.locfileid: "53367114"
   
 3.  次の例をコピーしてクエリ ウィンドウに貼り付け、 **[実行]** をクリックします。  
   
-    ```  
+    ```sql
     USE msdb ;  
     GO  
   
@@ -78,15 +78,10 @@ ms.locfileid: "53367114"
     GO  
     ```  
   
- 詳細については、次を参照してください。 [sp_delete_job &#40;TRANSACT-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-delete-job-transact-sql)します。  
-  
+ 詳細については、「 [sp_delete_job &#40;transact-sql&#41;](/sql/relational-databases/system-stored-procedures/sp-delete-job-transact-sql)」を参照してください。  
 
-  
-##  <a name="SMO"></a> SQL Server 管理オブジェクトの使用  
- **複数のジョブを削除するには**  
-  
- 使用して、 `JobCollection` Visual Basic、Visual c#、PowerShell など、選択したプログラミング言語を使用してクラス。 詳細については、「 [SQL Server 管理オブジェクト (SMO) プログラミング ガイド](https://msdn.microsoft.com/library/ms162169.aspx)」を参照してください。  
-  
+##  <a name="SMO"></a>SQL Server 管理オブジェクトの使用  
 
+### <a name="to-delete-multiple-jobs"></a>複数のジョブを削除するには
   
-  
+ Visual Basic、ビジュアルC#、PowerShell などのプログラミング言語で `JobCollection` クラスを使用します。 詳細については、「 [SQL Server 管理オブジェクト (SMO) プログラミング ガイド](https://msdn.microsoft.com/library/ms162169.aspx)」を参照してください。  

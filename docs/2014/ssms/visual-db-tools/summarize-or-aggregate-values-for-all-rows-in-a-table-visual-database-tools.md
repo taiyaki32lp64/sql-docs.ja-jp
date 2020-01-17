@@ -14,11 +14,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 33d44b48571839d9695893021f6cdc1c8bb63f06
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52812804"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63204611"
 ---
 # <a name="summarize-or-aggregate-values-for-all-rows-in-a-table-visual-database-tools"></a>テーブルにあるすべての行の値の要約または集計 (Visual Database Tools)
   集計関数を使用すると、テーブルのすべての値の要約を作成できます。 たとえば、`titles` テーブルの本の総額を表示するには、次のようなクエリを作成できます。  
@@ -57,7 +57,7 @@ FROM titles
   
      集計する列に別名が自動的に割り当てられます。 この別名は、わかりやすい名前に変更することができます。 詳しくは、「[列の別名の作成 (Visual Database Tools)](create-column-aliases-visual-database-tools.md)」をご覧ください。  
   
-4.  **Group By**グリッド列で、該当する集計関数など、選択します。**合計**、 **Avg**、 **Min**、**最大**、**カウント**します。 結果セットの一意の行だけを集計する場合は、 **[個別の最小値]** など、DISTINCT オプションのある集計関数を選択します。 **[グループ化]**、 **[式]**、または **[Where 条件]** は、すべての行を集計するときには適用されないため、これらのオプションはクリックしないでください。  
+4.  **[グループ化]** グリッド列で、次のような該当する集計関数を選択します: **[合計]** 、 **[平均]** 、 **[最小]** 、 **[最大]** 、 **[カウント]** 。 結果セットの一意の行だけを集計する場合は、 **[個別の最小値]** など、DISTINCT オプションのある集計関数を選択します。 **[グループ化]** 、 **[式]** 、または **[Where 条件]** は、すべての行を集計するときには適用されないため、これらのオプションはクリックしないでください。  
   
      クエリおよびビュー デザイナーにより、 [SQL ペイン](sql-pane-visual-database-tools.md) のステートメントの列名は、指定した集計関数に置き換えられます。 たとえば、SQL ステートメントは次のようになります。  
   
@@ -77,7 +77,7 @@ FROM titles
 > [!NOTE]  
 >  [グループ化] モードを明示的にオフにするまで、集計関数は SQL ペイン内に SQL ステートメントの一部として保持されます。 そのため、クエリの種類を変更したり、ダイアグラム ペインに表示されるテーブルまたはテーブル値オブジェクトを変更したりすると、作成されるクエリに無効な集計関数が含まれる可能性があります。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [クエリ結果の並べ替えとグループ化&#40;Visual Database Tools&#41;](sort-and-group-query-results-visual-database-tools.md)   
  [クエリ結果の要約 (Visual Database Tools)](summarize-query-results-visual-database-tools.md)  
   

@@ -2,18 +2,18 @@
 title: 印刷コントロールを使用したブラウザーからのレポートの印刷 (レポート ビルダーおよび SSRS) | Microsoft Docs
 ms.date: 03/14/2017
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: report-builder
 ms.topic: conceptual
 ms.assetid: 10054250-d915-4bcb-8a1d-26837db4e932
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 13faf9b2519f0a0a21f9811375f476cf5a0fba20
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 535d35ad80f940e7d3ed4a9163b2e65757088e58
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56293064"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65581166"
 ---
 # <a name="print-reports-from-a-browser-with-the-print-control-report-builder-and-ssrs"></a>印刷コントロールを使用したブラウザーからのレポートの印刷 (レポート ビルダーおよび SSRS)
   レポートを表示するための最も一般的なクライアント アプリケーションはブラウザーですが、ブラウザーの印刷機能はレポートの印刷には適していません。 ブラウザーの印刷機能は、Web ページを印刷するための機能です。 通常、ブラウザーから印刷したページには、Web ページ上にあるすべての可視要素と、ページまたは Web サイトを識別するヘッダーおよびフッター情報が含まれます。 ブラウザーからの印刷では現在のウィンドウの内容が印刷されるため、 レポートが数ページあっても最初のページしか印刷されません。また、レポート ページのサイズが印刷ページのサイズより大きい場合には、ページの全体を印刷しきれない場合もあります。  
@@ -26,7 +26,7 @@ ms.locfileid: "56293064"
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
 ## <a name="print-options"></a>印刷オプション  
- レポートの印刷プロパティを構成するには、 **[印刷]** ダイアログ ボックスで **[プロパティ]** ボタンをクリックします。 **[用紙サイズ]** は、レポート定義で定義されているレポート ページ サイズの既定の高さと幅によって決まります。 指定できる値は、利用できるプリンターの種類とその機能によって異なります。 [幅] と [高さ] には、そのコンピューター上で構成されたプリンター ドライバーによって決まる既定値が表示されます。 これらの値を変更すると、指定したサイズでレポートが印刷されます。 ページの幅と高さは、それぞれ **[印刷の向き]**( **[縦]** または **[横]**) で決まります。 表示される既定の印刷の向きは、レポートのページの幅と高さで決まります。  
+ レポートの印刷プロパティを構成するには、 **[印刷]** ダイアログ ボックスで **[プロパティ]** ボタンをクリックします。 **[用紙サイズ]** は、レポート定義で定義されているレポート ページ サイズの既定の高さと幅によって決まります。 指定できる値は、利用できるプリンターの種類とその機能によって異なります。 [幅] と [高さ] には、そのコンピューター上で構成されたプリンター ドライバーによって決まる既定値が表示されます。 これらの値を変更すると、指定したサイズでレポートが印刷されます。 ページの幅と高さは、それぞれ **[印刷の向き]** ( **[縦]** または **[横]** ) で決まります。 表示される既定の印刷の向きは、レポートのページの幅と高さで決まります。  
   
 > [!NOTE]  
 >  **[印刷]** ダイアログ ボックスおよび既定のプリンター設定 (幅、高さ、ページの向き) は、レポート定義で決まります。  

@@ -1,8 +1,8 @@
 ---
 title: ReportingServicesService 構成ファイル | Microsoft Docs
-ms.date: 03/15/2017
+ms.date: 05/30/2019
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: report-server
 ms.topic: conceptual
 helpviewer_keywords:
@@ -10,14 +10,14 @@ helpviewer_keywords:
 - Report Server Windows service, ReportingServicesService configuration file
 - ReportingServicesService configuration file
 ms.assetid: 40f4a401-cb61-4c42-b1ec-01acdacdacd1
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 7a3a3456a816769217c4b1e8f89ee9ffd8cfe91d
-ms.sourcegitcommit: c7febcaff4a51a899bc775a86e764ac60aab22eb
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: dfb0f48bb35e6341e2b2a9a72007ef4eb09c2b9b
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "52711713"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66506631"
 ---
 # <a name="reportingservicesservice-configuration-file"></a>ReportingServicesService 構成ファイル
 
@@ -26,8 +26,13 @@ ms.locfileid: "52711713"
 ReportingServicesService.exe.config ファイルには、トレースを構成する設定が含まれています。  
   
 ## <a name="file-location"></a>ファイルの場所  
- このファイルは、\Reporting Services\Report Server\Bin フォルダーにあります。  
-  
+このファイルは、次のパスのいずれかに存在する可能性があります。  
+
+``` Paths  
+\Reporting Services\Report Server\Bin  
+\Program Files\Microsoft SQL Server Reporting Services\SSRS\ReportServer\bin  
+```  
+ 
 ## <a name="editing-guidelines"></a>編集のガイドライン  
  このファイルを変更して、ログ ファイル名を変更したり、トレース レベルを増減させることができます。 その他の設定は変更しないでください。 手順については、「[Reporting Services の構成ファイル &#40;RSreportserver.config&#41; の変更](../../reporting-services/report-server/modify-a-reporting-services-configuration-file-rsreportserver-config.md)」を参照してください。 トレース ログの詳細については、「 [レポート サーバー サービスのトレース ログ](../../reporting-services/report-server/report-server-service-trace-log.md)」を参照してください。  
   
@@ -86,7 +91,6 @@ ReportingServicesService.exe.config ファイルには、トレースを構成�
 |**ランタイム**|以前のバージョンとの下位互換性をサポートする構成設定を指定します。 Microsoft.ReportingServices.Interfaces の以前のバージョンを対象とする要求を新しいバージョンにリダイレクトするには、Runtime 設定を使用します。<br /><br /> このセクションの構成設定は、すべて [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] の製品ドキュメントで説明されています。 詳細については、MSDN Web サイトまたは [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] ドキュメントの「ランタイム設定スキーマ」を参照してください。|  
   
 ## <a name="see-also"></a>参照  
- [Reporting Services 構成ファイル](../../reporting-services/report-server/reporting-services-configuration-files.md)   
- [Report Server Service Trace Log](../../reporting-services/report-server/report-server-service-trace-log.md)  
-  
+[Reporting Services 構成ファイル](../../reporting-services/report-server/reporting-services-configuration-files.md)  
+[レポート サーバー サービスのトレース ログ](../../reporting-services/report-server/report-server-service-trace-log.md)  
   

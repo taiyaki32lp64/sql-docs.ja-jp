@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: 456c2a47-d395-45f9-9efa-89f3fa2ac621
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: c6fd010dbf16468343b15eb383a5308d94b255da
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 838185def1d562f51d810cebdf79684f341a5903
+ms.sourcegitcommit: f5807ced6df55dfa78ccf402217551a7a3b44764
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48061098"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69493849"
 ---
 # <a name="specifying-attribute-relationships-between-attributes-in-a-user-defined-hierarchy"></a>ユーザー定義階層の属性間での属性リレーションシップの指定
   このチュートリアルで既に学習したように、ユーザー階層に属性階層を配置し、キューブ内を移動するためのパスを作ることができます。 ユーザー階層は、市区町村、州、国などの一般階層を表せるほか、従業員名、役職、部署名のように操作パスのみを表すこともできます。 階層内を移動するユーザーにとっては、どちらのユーザー階層も変わりません。  
@@ -39,7 +38,7 @@ ms.locfileid: "48061098"
   
 3.  ダイアグラムで、 **[Full Name]** 属性を右クリックし、 **[新しい属性リレーションシップ]** をクリックします。  
   
-4.  **[属性リレーションシップの作成]** ダイアログ ボックスで、 **[基になる属性]** を **[Full Name]** にします。 **[関連属性]** を **[Postal Code]** に設定します。 時間が経過するとメンバー間のリレーションシップが変化する可能性があるため、**[リレーションシップの種類]** ボックスの一覧で、リレーションシップの種類の設定は **[可変]** のままにします。  
+4.  **[属性リレーションシップの作成]** ダイアログ ボックスで、 **[基になる属性]** を **[Full Name]** にします。 **[関連属性]** を **[Postal Code]** に設定します。 時間が経過するとメンバー間のリレーションシップが変化する可能性があるため、 **[リレーションシップの種類]** ボックスの一覧で、リレーションシップの種類の設定は **[可変]** のままにします。  
   
 5.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
@@ -47,7 +46,7 @@ ms.locfileid: "48061098"
   
 6.  **[属性リレーションシップ]** ペインで、 **[Geography**-> **Postal Code]** を右クリックし、 **[削除]** をクリックします。  
   
-7.  **[オブジェクトの削除]** ダイアログ ボックスが表示されたら、**[OK]** をクリックします。  
+7.  **[オブジェクトの削除]** ダイアログ ボックスが表示されたら、 **[OK]** をクリックします。  
   
 8.  ダイアグラムで、 **[Postal Code]** 属性を右クリックし、 **[新しい属性リレーションシップ]** をクリックします。  
   
@@ -71,7 +70,7 @@ ms.locfileid: "48061098"
   
 17. **[オブジェクトの削除]** ダイアログ ボックスが表示されたら、 **[OK]** をクリックします。  
   
-18. ダイアグラムで、**[State-Province]** 属性を右クリックし、**[新しい属性リレーションシップ]** をクリックします。  
+18. ダイアグラムで、 **[State-Province]** 属性を右クリックし、 **[新しい属性リレーションシップ]** をクリックします。  
   
 19. **[属性リレーションシップの作成]** ダイアログ ボックスで、 **[基になる属性]** に **[State-Province]** を指定します。 **[関連属性]** を **[Country-Region]** に設定します。 都道府県と国/地域のリレーションシップは時間が経過しても変化しないので、 **[リレーションシップの種類]** ボックスの一覧で、リレーションシップの種類を **[固定]** に設定します。  
   
@@ -135,19 +134,19 @@ ms.locfileid: "48061098"
   
 1.  ダイアグラムで、 **[Month Name]** 属性を右クリックし、 **[新しい属性リレーションシップ]** をクリックします。  
   
-2.  **[属性リレーションシップの作成]** ダイアログ ボックスで、**[基になる属性]** に **[Month Name]** を指定します。 **[関連属性]** を **[Calendar Quarter]** に設定します。 **[リレーションシップの種類]** ボックスの一覧で、リレーションシップの種類を **[固定]** に設定します。  
+2.  **[属性リレーションシップの作成]** ダイアログ ボックスで、 **[基になる属性]** に **[Month Name]** を指定します。 **[関連属性]** を **[Calendar Quarter]** に設定します。 **[リレーションシップの種類]** ボックスの一覧で、リレーションシップの種類を **[固定]** に設定します。  
   
 3.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
 4.  ダイアグラムで、 **[Calendar Quarter]** 属性を右クリックし、 **[新しい属性リレーションシップ]** をクリックします。  
   
-5.  **[属性リレーションシップの作成]** ダイアログ ボックスで、**[基になる属性]** に **[Calendar Quarter]** を指定します。 **[関連属性]** を **[Calendar Semester]** に設定します。 **[リレーションシップの種類]** ボックスの一覧で、リレーションシップの種類を **[固定]** に設定します。  
+5.  **[属性リレーションシップの作成]** ダイアログ ボックスで、 **[基になる属性]** に **[Calendar Quarter]** を指定します。 **[関連属性]** を **[Calendar Semester]** に設定します。 **[リレーションシップの種類]** ボックスの一覧で、リレーションシップの種類を **[固定]** に設定します。  
   
 6.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
 7.  ダイアグラムで、 **[Calendar Semester]** 属性を右クリックし、 **[新しい属性リレーションシップ]** をクリックします。  
   
-8.  **[属性リレーションシップの作成]** ダイアログ ボックスで、**[基になる属性]** に **[Calendar Semester]** を指定します。 **[関連属性]** を **[Calendar Year]** に設定します。 **[リレーションシップの種類]** ボックスの一覧で、リレーションシップの種類を **[固定]** に設定します。  
+8.  **[属性リレーションシップの作成]** ダイアログ ボックスで、 **[基になる属性]** に **[Calendar Semester]** を指定します。 **[関連属性]** を **[Calendar Year]** に設定します。 **[リレーションシップの種類]** ボックスの一覧で、リレーションシップの種類を **[固定]** に設定します。  
   
 9. [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
@@ -155,7 +154,7 @@ ms.locfileid: "48061098"
   
 1.  Geography ディメンションのディメンション デザイナーを開き、 **[属性リレーションシップ]** タブをクリックします。  
   
-2.  ダイアグラムで、**[Postal Code]** 属性を右クリックし、**[新しい属性リレーションシップ]** をクリックします。  
+2.  ダイアグラムで、 **[Postal Code]** 属性を右クリックし、 **[新しい属性リレーションシップ]** をクリックします。  
   
 3.  **[属性リレーションシップの作成]** ダイアログ ボックスで、 **[基になる属性]** に **[Postal Code]** を指定します。 **[関連属性]** を **[City]** に設定します。 **[リレーションシップの種類]** ボックスの一覧で、リレーションシップの種類を **[可変]** に設定します。  
   
@@ -179,13 +178,13 @@ ms.locfileid: "48061098"
   
 13. **[ファイル]** メニューの **[すべてを保存]** をクリックします。  
   
-14. [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] で、**[ビルド]** メニューの **[Analysis Services Tutorial の配置]** をクリックします。  
+14. [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] で、 **[ビルド]** メニューの **[Analysis Services Tutorial の配置]** をクリックします。  
   
 ## <a name="next-task-in-lesson"></a>このレッスンの次の作業  
- [不明なメンバーと NULL 処理のプロパティの定義](../analysis-services/lesson-4-7-defining-the-unknown-member-and-null-processing-properties.md)  
+ [不明なメンバーと NULL 処理のプロパティの定義](lesson-4-7-defining-the-unknown-member-and-null-processing-properties.md)  
   
-## <a name="see-also"></a>参照  
- [属性リレーションシップを定義します。](multidimensional-models/attribute-relationships-define.md)   
+## <a name="see-also"></a>関連項目  
+ [属性リレーションシップの定義](multidimensional-models/attribute-relationships-define.md)   
  [ユーザー階層プロパティ](multidimensional-models-olap-logical-dimension-objects/user-hierarchies-properties.md)  
   
   

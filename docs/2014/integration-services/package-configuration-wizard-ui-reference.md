@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.configwizard.selectobjects.f1
@@ -13,15 +12,15 @@ f1_keywords:
 - sql12.dts.configwizard.finishdtsconfiguration.f1
 - sql12.dts.configwizard.welcome.f1
 ms.assetid: adca6938-6d5a-40ec-950e-dceb79d044fe
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: f984034b21680842bdb4813f4f8d9489edb0913b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 72909e812418d26d9f9f2905b41e686c36f6b670
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48160382"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66056941"
 ---
 # <a name="package-configuration-wizard-ui-reference"></a>パッケージ構成ウィザードの UI リファレンス
   **パッケージ構成ウィザード**を使用すると、[!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] パッケージとそのオブジェクトのプロパティを実行時に更新する構成を作成できます。 このウィザードは、 **[パッケージ構成オーガナイザー]** ダイアログ ボックスで新しい構成を追加するか既存の構成を変更するときに実行されます。 **[パッケージ構成オーガナイザー]** ダイアログ ボックスを開くには、[!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] で **[SSIS]** メニューの **[パッケージ構成]** をクリックします。 詳細については、「[パッケージ構成を作成する](../../2014/integration-services/create-package-configurations.md)」を参照してください。  
@@ -56,7 +55,7 @@ ms.locfileid: "48160382"
 |**環境変数**|構成を環境変数の 1 つに格納します。 この値を選択すると、セクション **[構成の種類]** に動的オプションが表示されます。|  
 |**レジストリ エントリ**|構成をレジストリに格納します。 この値を選択すると、セクション **[構成の種類]** に動的オプションが表示されます。|  
 |**親パッケージ変数**|構成をタスクを含むパッケージに変数として格納します。  この値を選択すると、セクション **[構成の種類]** に動的オプションが表示されます。|  
-|**SQL Server**|構成を [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] のテーブルに格納します。 この値を選択すると、セクション **[構成の種類]** に動的オプションが表示されます。|  
+|**SQL Server**|構成を [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]のテーブルに格納します。 この値を選択すると、セクション **[構成の種類]** に動的オプションが表示されます。|  
   
  **Next**  
  ウィザードのシーケンスの次のページを表示します。  
@@ -119,7 +118,7 @@ ms.locfileid: "48160382"
   
 |値|説明|  
 |-----------|-----------------|  
-|**[接続]**|一覧から接続を選択するか、 **[新規作成]** をクリックし、新しい接続を作成します。|  
+|**Connection**|一覧から接続を選択するか、 **[新規作成]** をクリックし、新しい接続を作成します。|  
 |**[構成テーブル]**|既存のテーブルを選択するか、 **[新規作成]** をクリックし、新しいテーブルを作成する SQL ステートメントを記述します。|  
 |**[構成フィルター]**|既存の構成名を選択するか、新しい名前を入力します。<br /><br /> 多くの SQL Server の構成は同じテーブルに格納でき、各構成には複数の構成アイテムを含むことができます。<br /><br /> このユーザー定義の値はテーブルに格納され、特定の構成に属する構成アイテムの識別に使用されます。|  
   

@@ -17,11 +17,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: c5aa2bd118d99afea6a1ee6ea8f41c646146c32f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48049573"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63162454"
 ---
 # <a name="indexes-on-computed-columns"></a>計算列のインデックス
   次の要件を満たしている限り、計算列にインデックスを定義できます。  
@@ -70,7 +70,7 @@ ms.locfileid: "48049573"
   
 -   `float` データ型または `real` データ型の式ではない。  
   
--   使用していない、`float`または`real`定義内のデータ型。 たとえば、次のステートメントで列`y`は`int`決定的ですが正確でないとします。  
+-   式の定義に `float` データ型や `real` データ型を使用していない。 たとえば、次のステートメントでは、列 `y` は `int` 型で決定的ですが、正確ではありません。  
   
     ```  
     CREATE TABLE t2 (a int, b int, c int, x float,   
@@ -82,7 +82,7 @@ ms.locfileid: "48049573"
     ```  
   
 > [!NOTE]  
->  すべて`float`または`real`式が不正確と見なされ、インデックスのキーにすることはできません。 つまり、`float`または`real`インデックス付きビューではないキー式を使用することができます。 このことは、計算列にも当てはまります。 任意の関数、式、またはユーザー定義関数がいずれかが含まれている場合は、不正確と見なさ`float`または`real`式。 これには、論理式 (比較) も含まれます。  
+>  `float` 型や `real` 型の式はすべて不正確であると見なされ、インデックスのキーにできません。つまり、`float` 型または `real` 型の式はインデックス付きビューで使用できますが、キーとしては使用できません。 このことは、計算列にも当てはまります。 `float` 型や `real` 型の任意の式が含まれている関数、式、またはユーザー定義関数はすべて不正確であると見なされます。 これには、論理式 (比較) も含まれます。  
   
  COLUMNPROPERTY 関数の **IsPrecise** プロパティは、 *computed_column_expression* が正確であるかどうかを示します。  
   
@@ -90,9 +90,9 @@ ms.locfileid: "48049573"
   
 -   *Computed_column_expression*として評価できません、計算列の定義、 `text`、 `ntext`、または`image`データ型。  
   
--   派生した計算列`image`、 `ntext`、 `text`、 `varchar(max)`、 `nvarchar(max)`、 `varbinary(max)`、および`xml`インデックス、計算列のデータ型は、インデックス キー列として使用できる限り、データ型を作成できます。  
+-   `image`、`ntext`、`text`、`varchar(max)`、`nvarchar(max)`、`varbinary(max)`、および `xml` データ型から派生した計算列には、計算列のデータ型をインデックス キー列として使用できる限り、インデックスを作成できます。  
   
--   派生した計算列`image`、 `ntext`、および`text`計算列のデータ型が非キー インデックス列として使用できる限り、データ型は非クラスター化インデックスに非キー (付加) 列を指定できます。  
+-   `image`、`ntext`、および `text` データ型から派生した計算列は、計算列のデータ型を非キー インデックス列として使用できる限り、非クラスター化インデックスの非キー列 (付加列) にすることができます。  
   
  **SET Option Requirements**  
   

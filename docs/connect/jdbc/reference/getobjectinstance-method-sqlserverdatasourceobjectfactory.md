@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: 0a1503e2-e991-4d70-a223-087fc63baf73
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: aab186f41d494e9bddf7885ddf7d9f7b3ff65972
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: de25e608c9fbdbdf6ff91d08e7a6502765bb590e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47849510"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67981053"
 ---
 # <a name="getobjectinstance-method-sqlserverdatasourceobjectfactory"></a>getObjectInstance メソッド (SQLServerDataSourceObjectFactory)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -62,7 +61,7 @@ public java.lang.Object getObjectInstance(java.lang.Object ref,
  java.sql.SQLException  
   
 ## <a name="remarks"></a>Remarks  
- この getObjectInstance メソッドは、javax.naming.spi.ObjectFactory インターフェイスで getObjectInstance メソッドによって指定されます。  
+ この getObjectInstance メソッドは、Javax.naming.spi.objectfactory インターフェイスの getObjectInstance メソッドによって指定されます。  
   
 ## <a name="see-also"></a>参照  
  [SQLServerDataSourceObjectFactory のメソッド](../../../connect/jdbc/reference/sqlserverdatasourceobjectfactory-methods.md)   

@@ -14,11 +14,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 7e7172a7b9b17dfa4553d3179d8cc1a880040f13
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52821806"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63306527"
 ---
 # <a name="create-table-aliases-visual-database-tools"></a>テーブルの別名の作成 (Visual Database Tools)
   別名を使用すると、テーブル名を使った操作が容易になります。 別名は、次の場合に使用すると便利です。  
@@ -39,7 +39,7 @@ ms.locfileid: "52821806"
   
 3.  **[プロパティ]** ウィンドウの **[エイリアス]** フィールドに別名を入力します。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [クエリにテーブルを追加する&#40;Visual Database Tools&#41;](add-tables-to-queries-visual-database-tools.md)   
  [クエリ結果の並べ替えとグループ化&#40;Visual Database Tools&#41;](sort-and-group-query-results-visual-database-tools.md)   
  [クエリ結果の要約&#40;Visual Database Tools&#41;](summarize-query-results-visual-database-tools.md)   

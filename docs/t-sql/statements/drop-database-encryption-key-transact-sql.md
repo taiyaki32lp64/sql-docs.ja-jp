@@ -18,14 +18,13 @@ helpviewer_keywords:
 ms.assetid: 9231bd89-75e1-45c4-b4c8-13f08695af68
 author: VanMSFT
 ms.author: vanto
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 70d624af12c1a97e6e76881b3c2f481179d47c70
-ms.sourcegitcommit: 9c99f992abd5f1c174b3d1e978774dffb99ff218
+ms.openlocfilehash: bbdde51fe1015f224f1868842a80bee72dded4ac
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/17/2019
-ms.locfileid: "54361497"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67898139"
 ---
 # <a name="drop-database-encryption-key-transact-sql"></a>DROP DATABASE ENCRYPTION KEY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-pdw-md.md)]
@@ -44,7 +43,7 @@ DROP DATABASE ENCRYPTION KEY
 ```  
   
 ## <a name="remarks"></a>Remarks  
- データベースが暗号化されている場合は、まず ALTER DATABASE ステートメントを使用してデータベースの暗号化を解除する必要があります。 暗号化解除が完了するまで待機し、その後でデータベース暗号化キーを削除します。 ALTER DATABASE ステートメントについて詳しくは、「[ALTER DATABASE の SET オプション &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-set-options.md)」をご覧ください。 データベースの状態を表示するには、[sys.dm_database_encryption_keys](../../relational-databases/system-dynamic-management-views/sys-dm-database-encryption-keys-transact-sql.md) 動的管理ビューを使います。  
+ データベースが暗号化されている場合は、まず ALTER DATABASE ステートメントを使用してデータベースの暗号化を解除する必要があります。 暗号化の解除が完了するまで待機し、その後でデータベース暗号化キーを削除します。 ALTER DATABASE ステートメントについて詳しくは、「[ALTER DATABASE の SET オプション &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-set-options.md)」をご覧ください。 データベースの状態を表示するには、[sys.dm_database_encryption_keys](../../relational-databases/system-dynamic-management-views/sys-dm-database-encryption-keys-transact-sql.md) 動的管理ビューを使います。  
   
 ## <a name="permissions"></a>アクセス許可  
  データベースに対する CONTROL 権限が必要です。  

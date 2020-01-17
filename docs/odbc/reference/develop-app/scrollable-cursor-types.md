@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: dbd32576-0453-4e90-ae45-1a81cee8259d
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 6290d18ec26fcfa6e2960c3a2c1c408938d9e0e4
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 210b66a800670f033508f903b18778f88ddd4c8b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47720500"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68061635"
 ---
 # <a name="scrollable-cursor-types"></a>スクロール可能なカーソルの種類
 4 つの種類のスクロール可能なカーソルは、静的、動的、キーセット ドリブン、混合。 静的カーソルはほとんどまたはまったく変更を検出しますが、比較的負荷の実装には。 動的カーソルはすべての変更を検出しますが、実装にコストがかかります。 カーソルのキーセット ドリブン、混合は、動的カーソルよりも少ない費用でが、ほとんどの変更を検出する間にあります。  

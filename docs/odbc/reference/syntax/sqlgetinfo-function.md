@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: 49dceccc-d816-4ada-808c-4c6138dccb64
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: f0878b7c0d6e7cea6f1dcdc90fa7e78a2680546b
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: b0e62e7aaba276643a2874a22e74a08214cfe51e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53204891"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68030662"
 ---
 # <a name="sqlgetinfo-function"></a>SQLGetInfo 関数
 **準拠**  
@@ -36,7 +35,7 @@ ms.locfileid: "53204891"
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
   
 SQLRETURN SQLGetInfo(  
      SQLHDBC         ConnectionHandle,  
@@ -48,7 +47,7 @@ SQLRETURN SQLGetInfo(
   
 ## <a name="arguments"></a>引数  
  *ConnectionHandle*  
- [入力]接続ハンドルです。  
+ [入力] 接続ハンドル。  
   
  *情報の種類*  
  [入力]情報の種類。  
@@ -359,14 +358,14 @@ SQLRETURN SQLGetInfo(
  SQL_ACTIVE_ENVIRONMENTS (ODBC 3.0)  
  ドライバーがサポートできるアクティブな環境の最大数を示す SQLUSMALLINT 値を指定します。 指定された制限はありません、または既知の制限は、この値は 0 に設定します。  
   
- SQL_AGGREGATE_FUNCTIONS (ODBC 3.0)  
+ SQL_AGGREGATE_FUNCTIONS(ODBC 3.0)  
  集計関数のサポートを列挙する SQLUINTEGER ビットマスク。  
   
  SQL_AF_ALLSQL_AF_AVGSQL_AF_COUNTSQL_AF_DISTINCTSQL_AF_MAXSQL_AF_MINSQL_AF_SUM  
   
  サポートされている、SQL 92 エントリのレベルに準拠ドライバーはこれらのオプションすべてを返します常にされます。  
   
- SQL_ALTER_DOMAIN (ODBC 3.0)  
+ SQL_ALTER_DOMAIN(ODBC 3.0)  
  内の句を列挙する SQLUINTEGER ビットマスク、 **ALTER ドメイン**ステートメントでは、データ ソースでサポートされる、sql-92 で定義されています。 SQL 92 完全レベル準拠のドライバーは、すべてのビットマスクを常に返します。 「0」の戻り値。 つまり、 **ALTER ドメイン**ステートメントはサポートされていません。  
   
  この機能をサポートする必要があります、sql-92 または FIPS 準拠のレベルは、各ビットマスクの横にかっこに表示されます。  
@@ -387,7 +386,7 @@ SQLRETURN SQLGetInfo(
   
  (完全レベル) SQL_AD_ADD_CONSTRAINT_DEFERRABLE SQL_AD_ADD_CONSTRAINT_NON_DEFERRABLE (完全レベル) SQL_AD_ADD_CONSTRAINT_INITIALLY_DEFERRED (完全レベル) SQL_AD_ADD_CONSTRAINT_INITIALLY_IMMEDIATE (完全レベル)  
   
- SQL_ALTER_TABLE (ODBC 2.0)  
+ SQL_ALTER_TABLE(ODBC 2.0)  
  内の句を列挙する SQLUINTEGER ビットマスク、 **ALTER TABLE**ステートメント、データ ソースでサポートされています。  
   
  この機能をサポートする必要があります、sql-92 または FIPS 準拠のレベルは、各ビットマスクの横にかっこに表示されます。  
@@ -467,7 +466,7 @@ SQLRETURN SQLGetInfo(
   
  SQL_BS_ROW_COUNT_PROC 生成するステートメントの行の数を持つドライバー サポート明示的なプロシージャを = です。  
   
- SQL_BOOKMARK_PERSISTENCE (ODBC 2.0)  
+ SQL_BOOKMARK_PERSISTENCE(ODBC 2.0)  
  ブックマークの永続化、操作を列挙する SQLUINTEGER ビットマスク。  
   
  次のビットマスクは、オプションのブックマークが保持されるかを決定するフラグと共に使用されます。  
@@ -484,7 +483,7 @@ SQLRETURN SQLGetInfo(
   
  SQL_BP_OTHER_HSTMT いずれかに関連付けられているブックマークを = 別のステートメントでステートメントを使用することができます。 SQL_BP_CLOSE または SQL_BP_DROP を指定しない場合は、最初のステートメントでカーソルが開く必要があります。  
   
- SQL_CATALOG_LOCATION (ODBC 2.0)  
+ SQL_CATALOG_LOCATION(ODBC 2.0)  
  修飾テーブル名で、カタログの位置を示す SQLUSMALLINT 値を指定します。  
   
  SQL_CL_STARTSQL_CL_END  
@@ -495,7 +494,7 @@ SQLRETURN SQLGetInfo(
   
  これは、*情報の種類*ODBC 2.0 から ODBC 3.0 の名前を変更した*情報の種類*SQL_QUALIFIER_LOCATION します。  
   
- SQL_CATALOG_NAME (ODBC 3.0)  
+ SQL_CATALOG_NAME(ODBC 3.0)  
  文字の文字列。"Y"そうでない場合、カタログ名または"N"をサーバーがサポートする場合。  
   
  SQL 92 フルのレベルに準拠のドライバーでは、"Y"は常に返します。  
@@ -514,7 +513,7 @@ SQLRETURN SQLGetInfo(
   
  これは、*情報の種類*ODBC 2.0 から ODBC 3.0 の名前を変更した*情報の種類*SQL_QUALIFIER_TERM します。  
   
- SQL_CATALOG_USAGE (ODBC 2.0)  
+ SQL_CATALOG_USAGE(ODBC 2.0)  
  カタログを使用できるステートメントを列挙する SQLUINTEGER ビットマスク。  
   
  次のビットマスクを使用して、カタログを使用できる場所を調べます。  
@@ -536,12 +535,12 @@ SQLRETURN SQLGetInfo(
  SQL_COLLATION_SEQ (ODBC 3.0)  
  照合順序の名前。 これは、既定の文字がこのサーバーの設定の既定の照合順序の名前を示す文字列 (たとえば、' ISO 8859-1' または EBCDIC)。 これが不明の場合は空の文字列が返されます。 SQL 92 フルのレベルに準拠のドライバーは、空でない文字列を常に返します。  
   
- SQL_COLUMN_ALIAS (ODBC 2.0)  
+ SQL_COLUMN_ALIAS(ODBC 2.0)  
  文字の文字列。"Y"データ ソースは、列の別名をサポートしている場合それ以外の場合、"N"です。  
   
  列の別名は、AS 句を使用して、選択リスト内の列に指定できる代替名です。 SQL 92 エントリのレベルに準拠ドライバーでは、"Y"は常に返します。  
   
- SQL_CONCAT_NULL_BEHAVIOR (ODBC 1.0)  
+ SQL_CONCAT_NULL_BEHAVIOR(ODBC 1.0)  
  データ ソースが NULL を連結したものを処理する方法を示す SQLUSMALLINT 値は、NULL 以外の値を持つ文字データ型の列を文字データ型の列を値しました。  
   
  SQL_CB_ = NULL 値になります。  
@@ -566,7 +565,7 @@ SQLRETURN SQLGetInfo(
   
  SQL_FN_CVT_CASTSQL_FN_CVT_CONVERT  
   
- SQL_CORRELATION_NAME (ODBC 1.0)  
+ SQL_CORRELATION_NAME(ODBC 1.0)  
  テーブルの相関名がサポートされているかどうかを示す SQLUSMALLINT 値を指定します。  
   
  SQL_CN_NONE = 関連付けの名前はサポートされていません。  
@@ -577,7 +576,7 @@ SQLRETURN SQLGetInfo(
   
  SQL 92 エントリのレベルに準拠ドライバーでは、SQL_CN_ANY は常に返します。  
   
- SQL_CREATE_ASSERTION (ODBC 3.0)  
+ SQL_CREATE_ASSERTION(ODBC 3.0)  
  内の句を列挙する SQLUINTEGER ビットマスク、**作成アサーション**ステートメントでは、データ ソースでサポートされる、sql-92 で定義されています。  
   
  次のビットマスクを使用して、どの句がサポートされているを調べます。  
@@ -659,7 +658,7 @@ SQLRETURN SQLGetInfo(
   
  (完全レベル) SQL_CT_CONSTRAINT_INITIALLY_DEFERRED SQL_CT_CONSTRAINT_INITIALLY_IMMEDIATE (完全レベル) SQL_CT_CONSTRAINT_DEFERRABLE (完全レベル) SQL_CT_CONSTRAINT_NON_DEFERRABLE (完全レベル)  
   
- SQL_CREATE_TRANSLATION (ODBC 3.0)  
+ SQL_CREATE_TRANSLATION(ODBC 3.0)  
  内の句を列挙する SQLUINTEGER ビットマスク、**作成翻訳**ステートメントでは、データ ソースでサポートされる、sql-92 で定義されています。  
   
  次のビットマスクを使用して、どの句がサポートされているを調べます。  
@@ -714,10 +713,10 @@ SQLRETURN SQLGetInfo(
   
  SQL 92 全体のレベルに準拠ドライバーでは、サポートされている、SQL_INSENSITIVE オプションは常に返します。  
   
- SQL_DATA_SOURCE_NAME (ODBC 1.0)  
+ SQL_DATA_SOURCE_NAME(ODBC 1.0)  
  接続中に使用されたデータ ソース名を持つ文字列を返します。 アプリケーションが呼び出された場合**SQLConnect**、これは、値、 *szDSN*引数。 アプリケーションが呼び出された場合**SQLDriverConnect**または**SQLBrowseConnect**、これは、DSN キーワードと、ドライバーに渡される接続文字列内の値です。 接続文字列が含まれていない場合、 **DSN**キーワード (がある場合など、**ドライバー**キーワード)、これは、空の文字列。  
   
- SQL_DATA_SOURCE_READ_ONLY (ODBC 1.0)  
+ SQL_DATA_SOURCE_READ_ONLY(ODBC 1.0)  
  文字列を返します。 "Y"場合は、それ以外の場合、READ ONLY モードを"N"をデータ ソースが設定されている場合。  
   
  このような特性がデータ ソース自体にのみ関連します。データ ソースにアクセスできるようにするドライバーの特性はありません。 読み取り専用であるデータ ソースとは、読み取り/書き込みであるドライバーを使用できます。 ドライバーが読み取り専用の場合は、すべてのデータ ソースの読み取り専用にする必要があり、SQL_DATA_SOURCE_READ_ONLY を返す必要があります。  
@@ -831,7 +830,7 @@ SQLRETURN SQLGetInfo(
  SQL_DRIVER_VER (ODBC 1.0)  
  ドライバーのバージョンと必要に応じて、ドライバーの説明文字列を返します。 形式は、バージョンには、少なくとも ##. ##. ### 最初の 2 つの数字は、メジャー バージョン、次の 2 つの数字は、マイナーのバージョン、最後の 4 桁の数字は、リリース バージョン。  
   
- SQL_DROP_ASSERTION (ODBC 3.0)  
+ SQL_DROP_ASSERTION(ODBC 3.0)  
  内の句を列挙する SQLUINTEGER ビットマスク、**ドロップ アサーション**ステートメントでは、データ ソースでサポートされる、sql-92 で定義されています。  
   
  次のビットマスクを使用して、どの句がサポートされているを調べます。  
@@ -858,7 +857,7 @@ SQLRETURN SQLGetInfo(
   
  SQL 92 フルのレベルに準拠ドライバーでは、サポートされているため、このオプションは常に返します。  
   
- SQL_DROP_DOMAIN (ODBC 3.0)  
+ SQL_DROP_DOMAIN(ODBC 3.0)  
  内の句を列挙する SQLUINTEGER ビットマスク、**ドロップ ドメイン**ステートメントでは、データ ソースでサポートされる、sql-92 で定義されています。  
   
  次のビットマスクを使用して、どの句がサポートされているを調べます。  
@@ -885,7 +884,7 @@ SQLRETURN SQLGetInfo(
   
  サポートされている、FIPS 過渡期のレベルに準拠ドライバーはこれらのオプションすべてを返します常にされます。  
   
- SQL_DROP_TRANSLATION (ODBC 3.0)  
+ SQL_DROP_TRANSLATION(ODBC 3.0)  
  内の句を列挙する SQLUINTEGER ビットマスク、**ドロップ翻訳**ステートメントでは、データ ソースでサポートされる、sql-92 で定義されています。  
   
  次のビットマスクを使用して、どの句がサポートされているを調べます。  
@@ -990,7 +989,7 @@ SQLRETURN SQLGetInfo(
  SQL_EXPRESSIONS_IN_ORDERBY (ODBC 1.0)  
  文字の文字列。"Y"データ ソース内の式をサポートしている場合、 **ORDER BY**一覧表示します。"N"そうでない場合。  
   
- SQL_FILE_USAGE (ODBC 2.0)  
+ SQL_FILE_USAGE(ODBC 2.0)  
  1 階層のドライバーが直接データ ソース内のファイルを処理する方法を示す SQLUSMALLINT 値を指定します。  
   
  SQL_FILE_NOT_SUPPORTED = ドライバーが 1 階層のドライバーではありません。 たとえば、ORACLE、ドライバーは、2 階層ドライバーです。  
@@ -1021,7 +1020,7 @@ SQLRETURN SQLGetInfo(
   
  これらのビットマスクの説明については、SQL_DYNAMIC_CURSOR_ATTRIBUTES2 を参照してください (および、説明に「動的カーソル」の「カーソルの前方参照専用」に置き換えてください)。  
   
- SQL_GETDATA_EXTENSIONS (ODBC 2.0)  
+ SQL_GETDATA_EXTENSIONS(ODBC 2.0)  
  拡張機能を列挙する、SQLUINTEGER ビットマスク**SQLGetData**します。  
   
  次のビットマスク フラグと共に使用して、ドライバーのサポートの一般的な拡張機能を決定**SQLGetData**:  
@@ -1055,7 +1054,7 @@ SQLRETURN SQLGetInfo(
   
  SQL 92 エントリのレベルに準拠ドライバーでは、サポートされている、SQL_GB_GROUP_BY_EQUALS_SELECT オプションは常に返します。 SQL 92 全体のレベルに準拠ドライバーでは、サポートされている、SQL_GB_COLLATE オプションは常に返します。 いずれのオプションがサポートされている場合、 **GROUP BY**句は、データ ソースでサポートされていません。  
   
- SQL_IDENTIFIER_CASE (ODBC 1.0)  
+ SQL_IDENTIFIER_CASE(ODBC 1.0)  
  値のとおり、SQLUSMALLINT:  
   
  SQL_IC_UPPER = SQL の識別子の小文字は区別されませんに格納されている場合はシステム カタログに大文字です。  
@@ -1184,8 +1183,8 @@ SQLRETURN SQLGetInfo(
   
  付録 CSQL 文法  
   
- SQL_LIKE_ESCAPE_CLAUSE (ODBC 2.0)  
- 文字の文字列。"Y"データ ソースは、パーセント (%) の文字のエスケープ文字をサポートしている場合、およびアンダー スコア (_) の文字に、**など**述語と、ドライバーでの定義に ODBC 構文を**など**述語エスケープ文字。"N"それ以外の場合。  
+ SQL_LIKE_ESCAPE_CLAUSE(ODBC 2.0)  
+ 文字の文字列。"Y"データ ソースは、パーセント (%) の文字のエスケープ文字をサポートしている場合アンダー スコア文字 (_) と、**など**述語とドライバーの定義に ODBC 構文をサポートしています、**など**述語のエスケープ文字。"N"それ以外の場合。  
   
  SQL_MAX_ASYNC_CONCURRENT_STATEMENTS (ODBC 3.0)  
  ドライバーでは、特定の接続をサポートする非同期モードでのアクティブな同時実行ステートメントの最大数を示す SQLUINTEGER 値を指定します。 特定の制限はありません、または既知の制限は、この値は 0 です。  
@@ -1193,14 +1192,14 @@ SQLRETURN SQLGetInfo(
  SQL_MAX_BINARY_LITERAL_LEN (ODBC 2.0)  
  最大長を指定する SQLUINTEGER 値 (リテラル プレフィックスおよびサフィックスによって返されるを除く、16 進数の文字数**SQLGetTypeInfo**) の SQL ステートメント内のバイナリ リテラル。 たとえば、バイナリ リテラル 0xFFAA では、長さは 4 があります。 最大長がないか、長さが不明な場合、この値は 0 に設定します。  
   
- SQL_MAX_CATALOG_NAME_LEN (ODBC 1.0)  
+ SQL_MAX_CATALOG_NAME_LEN(ODBC 1.0)  
  データ ソースのカタログ名の最大長を示す SQLUSMALLINT 値を指定します。 最大長がないか、長さが不明な場合、この値は 0 に設定します。  
   
  FIPS フルのレベルに準拠のドライバーでは、少なくとも 128 を返します。  
   
  これは、*情報の種類*ODBC 2.0 から ODBC 3.0 の名前を変更した*情報の種類*SQL_MAX_QUALIFIER_NAME_LEN します。  
   
- SQL_MAX_CHAR_LITERAL_LEN (ODBC 2.0)  
+ SQL_MAX_CHAR_LITERAL_LEN(ODBC 2.0)  
  最大長を指定する SQLUINTEGER 値 (リテラル プレフィックスおよびサフィックスによって返される文字数**SQLGetTypeInfo**) の SQL ステートメント内の文字リテラル。 最大長がないか、長さが不明な場合、この値は 0 に設定します。  
   
  SQL_MAX_COLUMN_NAME_LEN (ODBC 1.0)  
@@ -1208,15 +1207,15 @@ SQLRETURN SQLGetInfo(
   
  FIPS エントリのレベルに準拠ドライバーでは、18 以上を返します。 FIPS の中間のレベルに準拠のドライバーでは、少なくとも 128 を返します。  
   
- SQL_MAX_COLUMNS_IN_GROUP_BY (ODBC 2.0)  
+ SQL_MAX_COLUMNS_IN_GROUP_BY(ODBC 2.0)  
  許可されている列の最大数を示す SQLUSMALLINT 値を**GROUP BY**句。 指定された制限はありません、または既知の制限は、この値は 0 に設定します。  
   
  FIPS エントリのレベルに準拠ドライバーでは、少なくとも 6 を返します。 FIPS の中間のレベルに準拠のドライバーでは、少なくとも 15 を返します。  
   
- SQL_MAX_COLUMNS_IN_INDEX (ODBC 2.0)  
+ SQL_MAX_COLUMNS_IN_INDEX(ODBC 2.0)  
  インデックスで許可されている列の最大数を示す SQLUSMALLINT 値を指定します。 指定された制限はありません、または既知の制限は、この値は 0 に設定します。  
   
- SQL_MAX_COLUMNS_IN_ORDER_BY (ODBC 2.0)  
+ SQL_MAX_COLUMNS_IN_ORDER_BY(ODBC 2.0)  
  許可されている列の最大数を示す SQLUSMALLINT 値を**ORDER BY**句。 指定された制限はありません、または既知の制限は、この値は 0 に設定します。  
   
  FIPS エントリのレベルに準拠ドライバーでは、少なくとも 6 を返します。 FIPS の中間のレベルに準拠のドライバーでは、少なくとも 15 を返します。  
@@ -1226,12 +1225,12 @@ SQLRETURN SQLGetInfo(
   
  FIPS エントリのレベルに準拠ドライバーでは、少なくとも 100 を返します。 FIPS の中間のレベルに準拠のドライバーでは、少なくとも 250 を返します。  
   
- SQL_MAX_COLUMNS_IN_TABLE (ODBC 2.0)  
+ SQL_MAX_COLUMNS_IN_TABLE(ODBC 2.0)  
  テーブルで許可されている列の最大数を示す SQLUSMALLINT 値を指定します。 指定された制限はありません、または既知の制限は、この値は 0 に設定します。  
   
  FIPS エントリのレベルに準拠ドライバーでは、少なくとも 100 を返します。 FIPS の中間のレベルに準拠のドライバーでは、少なくとも 250 を返します。  
   
- SQL_MAX_CONCURRENT_ACTIVITIES (ODBC 1.0)  
+ SQL_MAX_CONCURRENT_ACTIVITIES(ODBC 1.0)  
  接続の場合、ドライバーがサポートできるアクティブなステートメントの最大数を指定する SQLUSMALLINT 値を指定します。 用語「結果」意味行と、保留中の結果がある場合に、アクティブとして、ステートメントが定義されている、**選択**操作または影響を受ける行を**挿入**、 **UPDATE**、または**削除**(行カウントの場合) などの操作が NEED_DATA 状態にある場合またはします。 この値は、ドライバーまたはデータ ソースのいずれかによって課される制限を反映できます。 指定された制限はありません、または既知の制限は、この値は 0 に設定します。  
   
  これは、*情報の種類*ODBC 2.0 から ODBC 3.0 の名前を変更した*情報の種類*SQL_ACTIVE_STATEMENTS します。  
@@ -1246,7 +1245,7 @@ SQLRETURN SQLGetInfo(
   
  これは、*情報の種類*ODBC 2.0 から ODBC 3.0 の名前を変更した*情報の種類*SQL_ACTIVE_CONNECTIONS します。  
   
- SQL_MAX_IDENTIFIER_LEN (ODBC 3.0)  
+ SQL_MAX_IDENTIFIER_LEN(ODBC 3.0)  
  ユーザー定義の名前のデータ ソースをサポートする文字の最大サイズを示す SQLUSMALLINT します。  
   
  FIPS エントリのレベルに準拠ドライバーでは、18 以上を返します。 FIPS の中間のレベルに準拠のドライバーでは、少なくとも 128 を返します。  
@@ -1257,7 +1256,7 @@ SQLRETURN SQLGetInfo(
  SQL_MAX_PROCEDURE_NAME_LEN (ODBC 1.0)  
  データ ソースでプロシージャ名の最大長を示す SQLUSMALLINT 値を指定します。 最大長がないか、長さが不明な場合、この値は 0 に設定します。  
   
- SQL_MAX_ROW_SIZE (ODBC 2.0)  
+ SQL_MAX_ROW_SIZE(ODBC 2.0)  
  テーブルの 1 つの行の最大長を指定する SQLUINTEGER 値。 指定された制限はありません、または既知の制限は、この値は 0 に設定します。  
   
  2,000 以上では、FIPS エントリ レベル準拠のドライバーを返します。 FIPS の中間のレベルに準拠のドライバーでは、少なくとも 8,000 を返します。  
@@ -1285,7 +1284,7 @@ SQLRETURN SQLGetInfo(
   
  FIPS エントリのレベルに準拠ドライバーでは、少なくとも 15 を返します。 FIPS の中間のレベルに準拠のドライバーでは、少なくとも 50 を返します。  
   
- SQL_MAX_USER_NAME_LEN (ODBC 2.0)  
+ SQL_MAX_USER_NAME_LEN(ODBC 2.0)  
  データ ソースのユーザー名の最大長を示す SQLUSMALLINT 値を指定します。 最大長がないか、長さが不明な場合、この値は 0 に設定します。  
   
  SQL_MULT_RESULT_SETS (ODBC 1.0)  
@@ -1298,7 +1297,7 @@ SQLRETURN SQLGetInfo(
   
  この情報の種類に対して返される情報は、分散トランザクションの場合は適用されません。  
   
- SQL_NEED_LONG_DATA_LEN (ODBC 2.0)  
+ SQL_NEED_LONG_DATA_LEN(ODBC 2.0)  
  文字の文字列。"Y"(データ型は、SQL_LONGVARCHAR、SQL_LONGVARBINARY、または長い形式のデータ ソースに固有のデータ型には) その値の前に長い形式のデータ値の長さがデータ ソースに必要がある場合は、そうでない場合、"N"のデータ ソースに送信されます。 詳細については、次を参照してください。 [SQLBindParameter 関数](../../../odbc/reference/syntax/sqlbindparameter-function.md)と[SQLSetPos 関数](../../../odbc/reference/syntax/sqlsetpos-function.md)します。  
   
  SQL_NON_NULLABLE_COLUMNS (ODBC 1.0)  
@@ -1310,7 +1309,7 @@ SQLRETURN SQLGetInfo(
   
  SQL 92 エントリのレベルに準拠ドライバーでは、SQL_NNC_NON_NULL を返します。  
   
- SQL_NULL_COLLATION (ODBC 2.0)  
+ SQL_NULL_COLLATION(ODBC 2.0)  
  結果セット内の Null の配置場所を指定する SQLUSMALLINT 値:  
   
  SQL_NC_END = null 値は ASC または DESC キーワードに関係なく、結果セットの末尾に並べ替えられます。  
@@ -1330,7 +1329,7 @@ SQLRETURN SQLGetInfo(
   
  SQL_FN_NUM_ABS (ODBC 1.0) (ODBC 1.0) SQL_FN_NUM_ACOS SQL_FN_NUM_ASIN (ODBC 1.0) (ODBC 1.0) SQL_FN_NUM_ATAN SQL_FN_NUM_ATAN2 (ODBC 1.0) (ODBC 1.0) SQL_FN_NUM_CEILING SQL_FN_NUM_COS (ODBC 1.0) (ODBC 1.0) SQL_FN_NUM_COT SQL_FN_NUM_DEGREES (ODBC 2.0) の SQL _FN_NUM_EXP (ODBC 1.0) (ODBC 1.0) SQL_FN_NUM_FLOOR SQL_FN_NUM_LOG (ODBC 1.0) SQL_FN_NUM_LOG10 (ODBC 2.0) SQL_FN_NUM_MOD (ODBC 1.0) (ODBC 1.0) SQL_FN_NUM_PI SQL_FN_NUM_POWER (ODBC 2.0) (ODBC 2.0) SQL_FN_NUM_RADIANS SQL_FN_NUM_RAND (ODBC 1.0) SQL_FN_NUM_ROUND (ODBC 2.0) SQL_FN_NUM_SIGN (ODBC 1.0) SQL_FN_NUM_SIN (ODBC 1.0) (ODBC 1.0) SQL_FN_NUM_SQRT、SQL_FN_NUM_TAN (ODBC 1.0) SQL_FN_NUM_TRUNCATE (ODBC 2.0)  
   
- SQL_ODBC_INTERFACE_CONFORMANCE (ODBC 3.0)  
+ SQL_ODBC_INTERFACE_CONFORMANCE(ODBC 3.0)  
  ODBC 3 のレベルを示す SQLUINTEGER 値 *.x*ドライバーに準拠しているインターフェイス。  
   
  SQL_OIC_CORE:準拠するすべての ODBC ドライバーである最小のレベルが必要です。 このレベルには、接続の機能、準備および SQL ステートメントを実行するための関数、基本的な結果セットのメタデータ関数、関数の基本的なカタログなどの基本的なインターフェイス要素が含まれています。  
@@ -1344,7 +1343,7 @@ SQLRETURN SQLGetInfo(
  SQL_ODBC_VER (ODBC 1.0)  
  ODBC ドライバー マネージャーは、準拠しているのバージョンと文字の文字列。 バージョンの形式は、##. ##. 0000 で、最初の 2 つの数字は、メジャー バージョンと、次の 2 つの数字はマイナー バージョン。 これにより、ドライバー マネージャーでのみが実装されます。  
   
- SQL_OJ_CAPABILITIES (ODBC 2.01)  
+ SQL_OJ_CAPABILITIES(ODBC 2.01)  
  ドライバーとデータ ソースでサポートされる外部結合の種類を列挙する SQLUINTEGER ビットマスク。 次のビットマスクを使用して、種類がサポートされているを調べます。  
   
  SQL_OJ_LEFT = 左外部結合はサポートされています。  
@@ -1390,14 +1389,14 @@ SQLRETURN SQLGetInfo(
  SQL_PROCEDURES (ODBC 1.0)  
  文字の文字列。"Y"データ ソースには、プロシージャと、ドライバーがサポートしている場合は、ODBC のプロシージャの呼び出し構文をサポートしています。"N"それ以外の場合。  
   
- SQL_POS_OPERATIONS (ODBC 2.0)  
+ SQL_POS_OPERATIONS(ODBC 2.0)  
  列挙で操作をサポートする SQLINTEGER ビットマスク**SQLSetPos**します。  
   
  以下のビットマスクは、どのオプションがサポートされているかを決定するフラグと共に使用されます。  
   
  SQL_POS_POSITION (ODBC 2.0) (ODBC 2.0) SQL_POS_REFRESH SQL_POS_UPDATE (ODBC 2.0) (ODBC 2.0) SQL_POS_DELETE SQL_POS_ADD (ODBC 2.0)  
   
- SQL_QUOTED_IDENTIFIER_CASE (ODBC 2.0)  
+ SQL_QUOTED_IDENTIFIER_CASE(ODBC 2.0)  
  値のとおり、SQLUSMALLINT:  
   
  SQL_IC_UPPER 引用符で囲まれた = SQL の識別子の小文字は区別されませんに格納されている場合はシステム カタログに大文字です。  
@@ -1422,7 +1421,7 @@ SQLRETURN SQLGetInfo(
   
  これは、*情報の種類*ODBC 2.0 から ODBC 3.0 の名前を変更した*情報の種類*SQL_OWNER_TERM します。  
   
- SQL_SCHEMA_USAGE (ODBC 2.0)  
+ SQL_SCHEMA_USAGE(ODBC 2.0)  
  スキーマを使用できるステートメントを列挙する SQLUINTEGER ビットマスク。  
   
  SQL_SU_DML_STATEMENTS = すべてのデータ操作言語ステートメントでスキーマがサポートされています。**選択**、**挿入**、**更新**、**削除**、サポートされている場合**更新の選択**と位置指定更新と削除ステートメント。  
@@ -1459,7 +1458,7 @@ SQLRETURN SQLGetInfo(
  スクロール可能なカーソルについては、次を参照してください。[スクロール可能なカーソル](../../../odbc/reference/develop-app/scrollable-cursors.md)します。  
   
  SQL_SEARCH_PATTERN_ESCAPE (ODBC 1.0)  
- ドライバーのサポートの検索パターンで使用できる文字としてパターン一致のメタ文字のアンダー スコア (_)、パーセント記号 (%) の使用を許可するエスケープ文字として指定する文字列。 このエスケープ文字は、検索文字列をサポートするこれらのカタログ関数の引数に対してのみ適用されます。 この文字列が空の場合、ドライバーは、検索パターンのエスケープ文字をサポートしていません。  
+ パターン一致のメタ文字のアンダー スコア (_)、パーセント記号 (%) の使用を許可するエスケープ文字としてサポートするドライバーを指定する文字列検索パターンの有効な文字をします。 このエスケープ文字は、検索文字列をサポートするこれらのカタログ関数の引数に対してのみ適用されます。 この文字列が空の場合、ドライバーは、検索パターンのエスケープ文字をサポートしていません。  
   
  この情報の種類が内のエスケープ文字の一般的なサポートを示していないため、**など**述語、sql-92 含まないこの文字の文字列の要件。  
   
@@ -1573,7 +1572,7 @@ SQLRETURN SQLGetInfo(
   
  (中間レベル) SQL_SVE_CASE、SQL_SVE_CAST (FIPS 過渡期レベル)、(中間レベル) sql_sve_coalesce、SQL_SVE_NULLIF (中間レベル)  
   
- SQL_STANDARD_CLI_CONFORMANCE (ODBC 3.0)  
+ SQL_STANDARD_CLI_CONFORMANCE(ODBC 3.0)  
  ドライバーが準拠する CLI 標準または標準を列挙する SQLUINTEGER ビットマスク。 次のビットマスクを使用して、ドライバーに準拠しているレベルを調べます。  
   
  SQL_SCC_XOPEN_CLI_VERSION1:ドライバーは、開いているグループの CLI バージョン 1 に準拠します。  
@@ -1600,7 +1599,7 @@ SQLRETURN SQLGetInfo(
   
  これらのビットマスクの説明については、SQL_DYNAMIC_CURSOR_ATTRIBUTES2 を参照してください (および、説明に「動的カーソル」を"静的 cursor"に置き換えてください)。  
   
- SQL_STRING_FUNCTIONS (ODBC 1.0)  
+ SQL_STRING_FUNCTIONS(ODBC 1.0)  
  注:情報の種類が ODBC 1.0; で導入されました。各ビットマスクが導入されたバージョンが付いています。  
   
  ドライバーと関連付けられているデータ ソースでサポートされているスカラー文字列関数を列挙する SQLUINTEGER ビットマスク。  
@@ -1654,7 +1653,7 @@ SQLRETURN SQLGetInfo(
   
  FIPS 過渡期のレベルに準拠のドライバーでは、すべてのこれらのビットが設定されているビットマスクは常に返します。  
   
- SQL_TIMEDATE_FUNCTIONS (ODBC 1.0)  
+ SQL_TIMEDATE_FUNCTIONS(ODBC 1.0)  
  注:情報の種類が ODBC 1.0; で導入されました。各ビットマスクが導入されたバージョンが付いています。  
   
  スカラーの日付と時刻の関数のドライバーと関連付けられているデータ ソースでサポートされている列挙 SQLUINTEGER ビットマスク。  
@@ -1693,7 +1692,7 @@ SQLRETURN SQLGetInfo(
   
  SQL 92 エントリのレベルに準拠ドライバーでは、サポートされている、SQL_TXN_SERIALIZABLE は常に返します。 サポートされている、FIPS 過渡期レベルに準拠ドライバーはこれらのオプションすべてを返します常にされます。  
   
- SQL_UNION (ODBC 2.0)  
+ SQL_UNION(ODBC 2.0)  
  列挙のサポート、SQLUINTEGER ビットマスク、**共用体**句。  
   
  SQL_U_UNION、データ ソースがサポートを =、**共用体**句。  
@@ -1702,7 +1701,7 @@ SQLRETURN SQLGetInfo(
   
  サポートされている、SQL 92 エントリのレベルに準拠ドライバーはこれらのオプションの両方を返します常にされます。  
   
- SQL_USER_NAME (ODBC 1.0)  
+ SQL_USER_NAME(ODBC 1.0)  
  ログイン名と異なる場合、特定のデータベースで使用される名前の文字列を返します。  
   
  SQL_XOPEN_CLI_YEAR (ODBC 3.0)  
@@ -1717,14 +1716,14 @@ SQLRETURN SQLGetInfo(
  SQL_ACTIVE_ENVIRONMENTS (ODBC 3.0)  
  ドライバーがサポートできるアクティブな環境の最大数を示す SQLUSMALLINT 値を指定します。 指定された制限はありません、または既知の制限は、この値は 0 に設定します。  
   
- SQL_AGGREGATE_FUNCTIONS (ODBC 3.0)  
+ SQL_AGGREGATE_FUNCTIONS(ODBC 3.0)  
  集計関数のサポートを列挙する SQLUINTEGER ビットマスク。  
   
  SQL_AF_ALLSQL_AF_AVGSQL_AF_COUNTSQL_AF_DISTINCTSQL_AF_MAXSQL_AF_MINSQL_AF_SUM  
   
  サポートされている、SQL 92 エントリのレベルに準拠ドライバーはこれらのオプションすべてを返します常にされます。  
   
- SQL_ALTER_DOMAIN (ODBC 3.0)  
+ SQL_ALTER_DOMAIN(ODBC 3.0)  
  内の句を列挙する SQLUINTEGER ビットマスク、 **ALTER ドメイン**ステートメントでは、データ ソースでサポートされる、sql-92 で定義されています。 SQL 92 完全レベル準拠のドライバー、ビットマスクのすべては常に返します。 「0」の戻り値。 つまり、 **ALTER ドメイン**ステートメントはサポートされていません。  
   
  この機能をサポートする必要があります、sql-92 または FIPS 準拠のレベルは、各ビットマスクの横にかっこに表示されます。  
@@ -1745,7 +1744,7 @@ SQLRETURN SQLGetInfo(
   
  (完全レベル) SQL_AD_ADD_CONSTRAINT_DEFERRABLE SQL_AD_ADD_CONSTRAINT_NON_DEFERRABLE (完全レベル) SQL_AD_ADD_CONSTRAINT_INITIALLY_DEFERRED (完全レベル) SQL_AD_ADD_CONSTRAINT_INITIALLY_IMMEDIATE (完全レベル)  
   
- SQL_ALTER_TABLE (ODBC 2.0)  
+ SQL_ALTER_TABLE(ODBC 2.0)  
  内の句を列挙する SQLUINTEGER ビットマスク、 **ALTER TABLE**ステートメント、データ ソースでサポートされています。  
   
  この機能をサポートする必要があります、sql-92 または FIPS 準拠のレベルは、各ビットマスクの横にかっこに表示されます。  
@@ -1805,7 +1804,7 @@ SQLRETURN SQLGetInfo(
   
  別の使用例について**SQLGetInfo**を参照してください[SQLTables 関数](../../../odbc/reference/syntax/sqltables-function.md)します。  
   
-```  
+```cpp  
 SQLUINTEGER fFuncs;  
   
 SQLGetInfo(hdbc,   

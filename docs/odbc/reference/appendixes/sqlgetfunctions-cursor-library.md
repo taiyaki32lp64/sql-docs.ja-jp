@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 931acd12-4eb6-4a78-9a77-157a18a9a2d0
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 1123a6497207f40bd210edf35b9b4477bc9c7b6b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 1497a7d2ec5951feedb36831ab541413e57152f4
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47694558"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68073934"
 ---
 # <a name="sqlgetfunctions-cursor-library"></a>SQLGetFunctions (カーソル ライブラリ)
 > [!IMPORTANT]  

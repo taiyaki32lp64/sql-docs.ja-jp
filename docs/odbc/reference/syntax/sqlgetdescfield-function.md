@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: f09ff660-1e4a-4370-be85-90d4da0487d3
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: f6762eb4ea9b350a76fc794fa7074af2a107b511
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: cdf2990056c297d217248543812e347b61d3486d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53204091"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68103809"
 ---
 # <a name="sqlgetdescfield-function"></a>SQLGetDescField 関数
 **準拠**  
@@ -36,7 +35,7 @@ ms.locfileid: "53204091"
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
   
 SQLRETURN SQLGetDescField(  
      SQLHDESC        DescriptorHandle,  

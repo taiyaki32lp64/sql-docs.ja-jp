@@ -1,6 +1,7 @@
 ---
-title: 同期のトリガーと制約の動作を制御する | Microsoft Docs
-ms.custom: ''
+title: 同期のトリガーと制約の動作を制御する
+description: SQL Server レプリケーション パブリケーションの同期中に、トリガーが実行されたり、制約が適用されたりしないようにする方法について説明します。
+ms.custom: seo-lt-2019
 ms.date: 03/16/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -20,16 +21,16 @@ helpviewer_keywords:
 ms.assetid: 7c4e0f0e-cadc-4c99-98f4-69799b9b356b
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 461877e2c0a40833ea32780b19c77e5b9d120d09
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
+ms.openlocfilehash: 816bda09c547345f5d05cd511d51c72135f15029
+ms.sourcegitcommit: 02d44167a1ee025ba925a6fefadeea966912954c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47706670"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75321805"
 ---
 # <a name="control-behavior-of-triggers-and-constraints-in-synchronization"></a>同期のトリガーと制約の動作を制御する
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
   同期中、レプリケートされるテーブルでは、[INSERT &#40;Transact-SQL&#41;](../../t-sql/statements/insert-transact-sql.md)、[UPDATE &#40;Transact-SQL&#41;](../../t-sql/queries/update-transact-sql.md)、[DELETE &#40;Transact-SQL&#41;](../../t-sql/statements/delete-transact-sql.md) の各ステートメントがレプリケーション エージェントによって実行され、これらのテーブルに対して設定されていたデータ操作言語 (DML) のトリガーが実行されます。 同期中はこれらのトリガーが起動しないようにしたり、制約が適用されないようにすることが必要になる場合があります。 このときの動作は、トリガーまたは制約がどのように作成されたかによって異なります。  
   
 ### <a name="to-prevent-triggers-from-executing-during-synchronization"></a>同期中にトリガーが実行されないようにするには  

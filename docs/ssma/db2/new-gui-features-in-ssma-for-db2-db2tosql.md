@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: a8ed33e9-185a-492d-a4cf-2fded1aa5c70
 author: Shamikg
 ms.author: Shamikg
-manager: craigg
-ms.openlocfilehash: b15759f9cee25c214ba67c09590f46093d41f22f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: f86951b58fa99f9e9d3973c2c7b188dbd488a641
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47635950"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68084658"
 ---
 # <a name="new-gui-features-in-ssma-for-db2-db2tosql"></a>SSMA for DB2 での新しい GUI 機能 (DB2ToSQL)
 この章では、SSMA ユーザー インターフェイスの新機能について説明します。  

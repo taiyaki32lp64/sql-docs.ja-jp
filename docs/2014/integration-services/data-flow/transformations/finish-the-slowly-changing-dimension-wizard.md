@@ -9,15 +9,15 @@ ms.topic: conceptual
 f1_keywords:
 - sql12.dts.loaddimwizard.finish.f1
 ms.assetid: f8ed1a54-d79a-43ca-80a0-02547d97c0f9
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 1724f44da5d06a212cdb07e4a5bcaec04fd20752
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: fca94c601dff429458fbde9d1614b078004f4d5a
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52804964"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62770368"
 ---
 # <a name="finish-the-slowly-changing-dimension-wizard"></a>[緩やかに変化するディメンション ウィザードの完了]
   **[緩やかに変化するディメンション ウィザードの完了]** ダイアログ ボックスを使用すると、緩やかに変化するディメンションのサポートをウィザードで構築する前に選択内容を確認できます。  

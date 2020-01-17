@@ -19,11 +19,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: be88f92c6dbf2a2fc0f04c3f29c54816174aafa0
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54133472"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63033658"
 ---
 # <a name="create-statistics"></a>統計の作成
   [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] または [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] を使用して、 [!INCLUDE[tsql](../../includes/tsql-md.md)]のテーブルまたはインデックス付きビューの 1 つまたは複数の列で、クエリの最適化に関する統計 (フィルター選択された統計情報を含む) を作成できます。 ほとんどのクエリでは、高品質のクエリ プランに必要な統計がクエリ オプティマイザーによって既に生成されていますが、最適な結果を得るために追加の統計情報を作成する必要がある場合もあります。  
@@ -67,7 +67,7 @@ ms.locfileid: "54133472"
   
 3.  プラス記号をクリックして、新しい統計を作成するテーブルを展開します。  
   
-4.  **[統計]** フォルダーを右クリックし、**[新しい統計]** を選択します。  
+4.  **[統計]** フォルダーを右クリックし、 **[新しい統計]** を選択します。  
   
      **テーブル名**  **ダイアログ ボックスの**_全般_ ページで次のプロパティが表示されます。  
   
@@ -139,7 +139,7 @@ ms.locfileid: "54133472"
   
 6.  **[列の選択]** ダイアログ ボックスで、統計を作成する列のチェック ボックスをオンにし、 **[OK]** をクリックします。  
   
-7.  **[テーブルの新しい統計 - _テーブル名_]** ダイアログ ボックスで、**[OK]** をクリックします。  
+7.  **[テーブルの新しい統計 - _テーブル名_]** ダイアログ ボックスで、 **[OK]** をクリックします。  
   
 ##  <a name="TsqlProcedure"></a> Transact-SQL の使用  
   

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - partitions [Analysis Services], merging
@@ -14,12 +13,12 @@ ms.assetid: b3857b9b-de43-4911-989d-d14da0196f89
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 11f6267cb8546ac21dedeae0c802cbbb9af9ce6b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 365f89286a59057efa39b503eedaedebb875c039
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48063342"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66073649"
 ---
 # <a name="merge-partitions-in-analysis-services-ssas---multidimensional"></a>Analysis Services でのパーティションのマージ (SSAS - 多次元)
   既存の [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] データベース内のパーティションをマージして、同じメジャー グループの複数のパーティションからファクト データを統合することができます。  
@@ -70,7 +69,7 @@ ms.locfileid: "48063342"
 ##  <a name="bkmk_Where"></a> パーティションのマージ後にパーティション ソースを更新  
  パーティションは、データの処理に使用する SQL クエリの WHERE 句などのクエリ、またはパーティションにデータを提供するテーブルや名前付きクエリによって分割されます。 パーティションの `Source` プロパティは、パーティションがクエリまたはテーブルにバインドされているかどうかを示します。  
   
- パーティションをマージすると、パーティションの内容は統合されますが、`Source`プロパティは、パーティションの追加のスコープを反映するように更新されません。 これは、元を保持するパーティションを後で再処理するかどうかは意味`Source`、そのパーティションから不適切なデータが表示されます。 パーティションは、誤って親レベルのデータを集計します。 次の例では、この動作を示します。  
+ パーティションをマージすると、パーティションの内容は統合されますが、`Source` プロパティはパーティションの追加のスコープを反映するように更新されません。 つまり、その後、元の `Source` を保持するパーティションを再処理すると、そのパーティションから不適切なデータを取得することになります。 パーティションは、誤って親レベルのデータを集計します。 次の例では、この動作を示します。  
   
  **問題**  
   
@@ -78,16 +77,16 @@ ms.locfileid: "48063342"
   
  **解決策**  
   
- 解決策は、更新、`Source`プロパティ、調整、WHERE 句または名前付きクエリ、または後続の処理の正確さ、パーティションのスコープを拡張したことを確認する、基になるファクト テーブルからデータを手動でマージします。  
+ この問題を解決するには、WHERE 句または名前付きクエリを調整するか、基になるファクト テーブルから手動でデータをマージするかによって `Source` プロパティを更新し、パーティションのスコープを拡張した状況でその後の処理が正確になるようにします。  
   
  この例では、パーティション 3 をパーティション 2 にマージした後で、マージ後のパーティション 2 で ("Product" = 'ColaDecaf' OR "Product" = 'ColaDiet') のようなフィルターを作成できます。これにより、ColaDecaf と ColaDiet のデータのみをファクト テーブルから取得し、ColaFull のデータは除外するように指定できます。 または、パーティション 2 とパーティション 3 の作成時にフィルターを指定することもできます。これらのフィルターはマージ処理で結合されます。 いずれの場合も、パーティションを処理した後にキューブに重複データが含まれることはなくなります。  
   
  **結論**  
   
- パーティションをマージした後は常に確認、`Source`フィルターがマージされたデータに対して正しいことを確認します。 Q1、Q2、および Q3 の履歴データが含まれたパーティションから始めて、これから Q4 をマージする場合、Q4 が含まれるようにフィルターを調整する必要があります。 そうしないと、その後のパーティションの処理で誤った結果が生成されます。 Q4 にとって正しくなくなります。  
+ パーティションをマージした後は、必ず `Source` をチェックして、マージされたデータに対してフィルターが正しいことを確認してください。 Q1、Q2、および Q3 の履歴データが含まれたパーティションから始めて、これから Q4 をマージする場合、Q4 が含まれるようにフィルターを調整する必要があります。 そうしないと、その後のパーティションの処理で誤った結果が生成されます。 Q4 にとって正しくなくなります。  
   
 ##  <a name="bkmk_fact"></a> ファクト テーブルまたは名前付きクエリによって分割されたパーティションに関する注意事項  
- パーティションは、クエリのほか、テーブルまたは名前付きクエリでも分割できます。 マージ元のパーティションとマージ先のパーティションがデータ ソースまたはデータ ソース ビューで同じファクト テーブルを使用している場合、`Source` プロパティは、パーティションのマージ後に有効になります。 このプロパティでは、結果パーティションに適したファクト テーブル データが指定されます。 結果として得られるパーティションに必要なファクトはファクトに存在するためのテーブルを変更していない、`Source`プロパティが必要です。  
+ パーティションは、クエリのほか、テーブルまたは名前付きクエリでも分割できます。 マージ元のパーティションとマージ先のパーティションがデータ ソースまたはデータ ソース ビューで同じファクト テーブルを使用している場合、`Source` プロパティは、パーティションのマージ後に有効になります。 このプロパティでは、結果パーティションに適したファクト テーブル データが指定されます。 結果パーティションに必要なファクトはファクト テーブル内に存在するので、`Source` プロパティを変更する必要はありません。  
   
  複数のファクト テーブルまたは名前付きクエリのデータを使用するパーティションでは、追加の作業が必要です。 マージ元パーティションのファクト テーブルのファクトは、マージ先パーティションのファクト テーブルに手動でマージする必要があります。  
   
@@ -95,13 +94,13 @@ ms.locfileid: "48063342"
   
  同様の理由で、名前付きクエリから分割されたデータを取得するパーティションを更新する必要もあります。 結合されたパーティションには、以前に別の名前付きクエリから取得した、結合された結果セットを返す名前付きクエリが必要になります。  
   
-## <a name="partition-storage-considerations-molap"></a>パーティション ストレージの注意事項: MOLAP  
+## <a name="partition-storage-considerations-molap"></a>パーティションのストレージに関する考慮事項:[MOLAP]  
  MOLAP パーティションをマージすると、パーティションの多次元構造に格納されているファクトもマージされます。 これにより、内部的に完全で矛盾のないパーティションが作成されます。 ただし、MOLAP パーティションに格納されるファクトは、ファクト テーブル内のファクトのコピーです。 パーティションに対して処理が行われると、多次元構造内のファクトは削除され (完全と更新のみ)、パーティションのデータ ソースとフィルターの指定に従って、ファクト テーブルからデータがコピーされます。 マージ元パーティションで使用されるファクト テーブルがマージ先パーティションのものと異なる場合、マージ元パーティションのファクト テーブルをマージ先パーティションのファクト テーブルに手動でマージして、結果パーティションが処理されるときにデータの完全なセットを利用できるようにしてください。 これは、2 つのパーティションが、それぞれ異なる名前付きクエリに基づいている場合にも適用されます。  
   
 > [!IMPORTANT]  
 >  マージされた MOLAP パーティションに不完全なファクト テーブルが含まれている場合、パーティションには内部的にマージされたファクト テーブル データのコピーが含まれているので、そのパーティションが処理されるまでは正常に動作します。  
   
-## <a name="partition-storage-considerations-holap-and-rolap-partitions"></a>パーティション ストレージの注意事項: HOLAP パーティションと ROLAP パーティション  
+## <a name="partition-storage-considerations-holap-and-rolap-partitions"></a>パーティションのストレージに関する考慮事項:HOLAP パーティションと ROLAP パーティション  
  複数のファクト テーブルを持つ HOLAP パーティションや ROLAP パーティションをマージする場合、ファクト テーブルは自動的にマージされません。 ファクト テーブルを手動でマージしない場合、結果パーティションではマージ先パーティションに関連付けられたファクト テーブルのみを利用できます。 マージ元パーティションに関連付けられたファクトは、結果パーティションのドリル ダウンでは利用できません。また、パーティションが処理されると、集計処理では、利用できないテーブルのデータを集約しなくなります。  
   
 > [!IMPORTANT]  
@@ -132,12 +131,12 @@ ms.locfileid: "48063342"
 ##  <a name="bkmk_partitionsXMLA"></a> XMLA を使用してパーティションをマージする方法  
  詳細については、「[パーティションのマージ &#40;XMLA&#41;](../multidimensional-models-scripting-language-assl-xmla/merging-partitions-xmla.md)」を参照してください。  
   
-## <a name="see-also"></a>参照  
- [処理の Analysis Services オブジェクト](processing-analysis-services-objects.md)   
- [パーティション&#40;Analysis Services - 多次元データ&#41;](../multidimensional-models-olap-logical-cube-objects/partitions-analysis-services-multidimensional-data.md)   
- [作成およびローカル パーティションの管理&#40;Analysis Services&#41;](create-and-manage-a-local-partition-analysis-services.md)   
- [作成し、管理、リモート パーティション&#40;Analysis Services&#41;](create-and-manage-a-remote-partition-analysis-services.md)   
- [パーティションの書き戻しを設定します。](set-partition-writeback.md)   
+## <a name="see-also"></a>関連項目  
+ [Analysis Services オブジェクトの処理](processing-analysis-services-objects.md)   
+ [パーティション &#40;Analysis Services - 多次元データ&#41;](../multidimensional-models-olap-logical-cube-objects/partitions-analysis-services-multidimensional-data.md)   
+ [ローカル パーティションの作成と管理 &#40;Analysis Services&#41;](create-and-manage-a-local-partition-analysis-services.md)   
+ [リモート パーティションの作成と管理 &#40;Analysis Services&#41;](create-and-manage-a-remote-partition-analysis-services.md)   
+ [パーティションの書き戻しの設定](set-partition-writeback.md)   
  [書き込み許可パーティション](../multidimensional-models-olap-logical-cube-objects/partitions-write-enabled-partitions.md)   
  [ディメンションおよびパーティションの文字列ストレージの構成](configure-string-storage-for-dimensions-and-partitions.md)  
   

@@ -12,15 +12,14 @@ helpviewer_keywords:
 - queries [SQL Server], results
 - aggregate queries [SQL Server]
 ms.assetid: c9e15350-ed57-4d95-814d-815fbebfd86b
-author: stevestein
-ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 9236c31b8ae7cb248b0ce78f87d486039b3d704b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: c87d6eae1096d2c59e90895d4de5e44ac18843a4
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47759630"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68263170"
 ---
 # <a name="summarize-query-results-visual-database-tools"></a>クエリ結果の要約 (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

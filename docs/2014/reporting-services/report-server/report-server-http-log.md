@@ -4,21 +4,20 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 helpviewer_keywords:
 - HTTP [Reporting Services]
 ms.assetid: 6cc433b7-165c-4b16-9034-79256dd6735f
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 9eb3cd35267075b6228df993f31dbec021b681bf
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: ca3437315803ff8435640bf58219fe93f96e242a
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56031373"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66103395"
 ---
 # <a name="report-server-http-log"></a>レポート サーバーの HTTP ログ
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] レポート サーバーの HTTP ログ ファイルには、レポート サーバーによって処理された HTTP 要求および HTTP 応答がすべて記録されます。 要求のオーバーフローやタイムアウト エラーは、レポート サーバーに到達しないため、ログ ファイルには記録されません。  
@@ -79,7 +78,7 @@ ms.locfileid: "56031373"
 |CookieSent|サーバーによって送信されたクッキーの内容。|いいえ|  
 |Referrer|クライアントが直前に訪問したサイト。|いいえ|  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [Report Server Service Trace Log](report-server-service-trace-log.md)   
  [Reporting Services のログ ファイルとソース](../report-server/reporting-services-log-files-and-sources.md)   
  [エラーとイベントのリファレンス (Reporting Services)](../troubleshooting/errors-and-events-reference-reporting-services.md)  

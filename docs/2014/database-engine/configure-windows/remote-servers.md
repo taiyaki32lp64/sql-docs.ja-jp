@@ -17,11 +17,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: e8fd1464857b77139ca0bef310eee8be949d77cd
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54123952"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62809790"
 ---
 # <a name="remote-servers"></a>リモート サーバー
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、旧バージョンとの互換性を保つ目的でのみ、リモート サーバーがサポートされています。 新しいアプリケーションでは、リモート サーバーではなく、リンク サーバーを使用してください。 詳しくは、「 [リンク サーバー &#40;データベース エンジン&#41;](../../relational-databases/linked-servers/linked-servers-database-engine.md)」を参照してください。  
@@ -35,7 +35,7 @@ ms.locfileid: "54123952"
   
  通常は、リモート サーバーの構成オプションを設定する必要はありません。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] によって、ローカル コンピューターとリモート コンピューターの両方にリモート サーバー接続を可能にする既定値が設定されます。  
   
- リモート サーバー アクセスが機能するには、ローカルとリモートの両方のコンピューターで **remote access** 構成オプションが 1 に設定されている必要があります。 (これは既定の設定です)。**remote access** は、リモート サーバーからのログインを制御するオプションです。  この構成オプションを再設定するには、[!INCLUDE[tsql](../../includes/tsql-md.md)] **sp_configure** ストアド プロシージャまたは [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] を使用します。 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]を使用してこのオプションを設定する場合は、 **[サーバーのプロパティ]** の [接続] ページで **[このサーバーへのリモート接続を許可する]** チェック ボックスをオンにします。 **[サーバーのプロパティ]** の [接続] ページにアクセスするには、オブジェクト エクスプローラーでサーバー名を右クリックし、 **[プロパティ]** をクリックします。 **[サーバーのプロパティ]** ページで、 **[接続]** ページをクリックします。  
+ リモート サーバー アクセスが機能するには、ローカルとリモートの両方のコンピューターで **remote access** 構成オプションが 1 に設定されている必要があります。 (これは既定の設定です)。**remote access** は、リモート サーバーからのログインを制御するオプションです。 この構成オプションを再設定するには、[!INCLUDE[tsql](../../includes/tsql-md.md)] **sp_configure** ストアド プロシージャまたは [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] を使用します。 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]を使用してこのオプションを設定する場合は、 **[サーバーのプロパティ]** の [接続] ページで **[このサーバーへのリモート接続を許可する]** チェック ボックスをオンにします。 **[サーバーのプロパティ]** の [接続] ページにアクセスするには、オブジェクト エクスプローラーでサーバー名を右クリックし、 **[プロパティ]** をクリックします。 **[サーバーのプロパティ]** ページで、 **[接続]** ページをクリックします。  
   
  ローカル サーバーからリモート サーバー構成を無効にすると、組になっているリモート サーバー上のユーザーはそのローカル サーバーにアクセスできなくなります。  
   
@@ -57,7 +57,7 @@ ms.locfileid: "54123952"
 >  可能な場合は、Windows 認証を使用します。  
   
 ### <a name="remote-server-security-example"></a>リモート サーバーのセキュリティの例  
- **serverSend** と **serverReceive** という [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインストールがあるとします。 **serverReceive** は、 **Sales_Mary**という **serverSend**からの受信ログインを、 **serverReceive** の **Alice** という [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 認証のログインにマップするように構成されています。 **serverSend**からの **Joe**という別の受信ログインは、 **serverReceive** の _Joe_ という[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 認証のログインにマップされます。  
+ **serverSend** と **serverReceive** という [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインストールがあるとします。 **serverReceive** は、 **Sales_Mary**という **serverSend**からの受信ログインを、 **serverReceive** の **Alice** という [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 認証のログインにマップするように構成されています。 **serverSend**からの **Joe**という別の受信ログインは、 **serverReceive**_の_ **Joe** という[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 認証のログインにマップされます。  
   
  次の Transact-SQL コードの例では、 `serverSend` に対して RPC を実行するように `serverReceive`を構成しています。  
   

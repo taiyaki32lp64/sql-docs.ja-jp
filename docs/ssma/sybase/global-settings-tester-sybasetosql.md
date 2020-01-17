@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 6f0b9cea-5a24-4e42-8bbf-c4516b00da23
 author: Shamikg
 ms.author: Shamikg
-manager: craigg
-ms.openlocfilehash: 5d9bf2a94146739a743fc4c310ece1d9c4642d11
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 0070dbed0b683b37c0280b9948ff4b592fea9084
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47607192"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68028991"
 ---
 # <a name="global-settings-tester-sybasetosql"></a>グローバル設定 (テスター) (SybaseToSQL)
 テスト担当者のページを使用して、**グローバル設定**SSMA テスト担当者の設定を指定 ダイアログ ボックス。  
@@ -43,14 +42,14 @@ ms.locfileid: "47607192"
   
 4.  テーブルの比較が失敗したかどうかにユーザーを要求します。  
   
-既定のオプション セット:**をいつでも削除**します。  
+既定のオプション セットは次のとおりです。**いつでも削除**します。  
   
 **データのロールバックを実行します。**  
 この設定では、各テスト・ケースを実行した後、ロールバック操作を実行するかどうかを指定します。 既定のオプション セットは**いいえ**します。  
   
 この設定は次のオプションです。  
   
-1.  はい  
+1.  [はい]  
   
 2.  いいえ  
   
@@ -63,6 +62,6 @@ ms.locfileid: "47607192"
   
 2.  いいえ  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
 [テスト_ケースの準備の終了&#40;SybaseToSQL&#41;](../../ssma/sybase/finishing-test-case-preparation-sybasetosql.md)  
   

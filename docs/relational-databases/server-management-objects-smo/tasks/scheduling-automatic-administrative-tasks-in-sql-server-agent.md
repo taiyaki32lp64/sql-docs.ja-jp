@@ -1,6 +1,6 @@
 ---
-title: SQL Server エージェントでの自動管理タスクをスケジュール設定 |Microsoft Docs
-ms.custom: ''
+title: SQL Server エージェントでの自動管理タスクのスケジュール設定
+ms.custom: seo-dt-2019
 ms.date: 08/06/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -12,16 +12,15 @@ helpviewer_keywords:
 - SQL Server Agent [SMO]
 - automatic administrative SMO tasks
 ms.assetid: 900242ad-d6a2-48e9-8a1b-f0eea4413c16
-author: stevestein
-ms.author: sstein
-manager: craigg
+author: markingmyname
+ms.author: maghan
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 4ab72d89bba748b272322783fb2f14afb8e08bf4
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e2c852cd3f64e603f6eeab2f48a688dc733b4719
+ms.sourcegitcommit: 15fe0bbba963d011472cfbbc06d954d9dbf2d655
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47782860"
+ms.lasthandoff: 11/14/2019
+ms.locfileid: "74094386"
 ---
 # <a name="scheduling-automatic-administrative-tasks-in-sql-server-agent"></a>SQL Server エージェントでの自動管理タスクのスケジュール設定
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
@@ -39,9 +38,9 @@ ms.locfileid: "47782860"
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] エージェント オブジェクトは、<xref:Microsoft.SqlServer.Management.Smo.Agent> 名前空間にあります。  
   
 ## <a name="examples"></a>使用例  
- 提供されているコード例を使用するには、アプリケーションを作成するプログラミング環境、プログラミング テンプレート、およびプログラミング言語を選択する必要があります。 詳細については、次を参照してください。 [Visual C の作成&#35;Visual Studio .NET での SMO プロジェクト](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md)します。  
+ 提供されているコード例を使用するには、アプリケーションを作成するプログラミング環境、プログラミング テンプレート、およびプログラミング言語を選択する必要があります。 詳細については、「 [Visual Studio&#35; .Net での Visual C SMO プロジェクトの作成](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md)」を参照してください。  
   
-プログラムを使用して[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]含める必要があります、エージェント、**を使用して**エージェント名前空間を修飾するステートメント。 他の後のステートメントを挿入**を使用して**アプリケーションでは、宣言の前に、ステートメントなど。
+[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] エージェントを使用するプログラムの場合、エージェントの名前空間を修飾するには、 **using**ステートメントを含める必要があります。 次のように、アプリケーションの宣言の前に、ステートメントを他の**using**ステートメントの後に挿入します。
   
  ```
 using Microsoft.SqlServer.Management.Smo;
@@ -167,9 +166,9 @@ $jbsch.Create();
 ## <a name="creating-an-alert-in-visual-c"></a>Visual C# での警告の作成  
  このコード例では、パフォーマンス条件によってトリガーされる警告を作成しています。 条件は、次の形式で指定する必要があります。  
   
- **ObjectName |CounterName |インスタンス |ComparisionOp |CompValue**  
+ **ObjectName |CounterName |Instance |ComparisionOp |CompValue**  
   
- 警告の通知にはオペレーターが必要です。 <xref:Microsoft.SqlServer.Management.Smo.Agent.Operator>型には角かっこが必要ですので、**演算子**は、[!INCLUDE[csprcs](../../../includes/csprcs-md.md)]キーワード。  
+ 警告の通知にはオペレーターが必要です。 **Operator**は [!INCLUDE[csprcs](../../../includes/csprcs-md.md)] キーワードであるため、<xref:Microsoft.SqlServer.Management.Smo.Agent.Operator> 型には角かっこが必要です。  
   
 ```csharp  
 {  
@@ -200,9 +199,9 @@ $jbsch.Create();
 ## <a name="creating-an-alert-in-powershell"></a>PowerShell での警告の作成  
  このコード例では、パフォーマンス条件によってトリガーされる警告を作成しています。 条件は、次の形式で指定する必要があります。  
   
- **ObjectName |CounterName |インスタンス |ComparisionOp |CompValue**  
+ **ObjectName |CounterName |Instance |ComparisionOp |CompValue**  
   
- 警告の通知にはオペレーターが必要です。 <xref:Microsoft.SqlServer.Management.Smo.Agent.Operator>型には角かっこが必要ですので、**演算子**は、[!INCLUDE[csprcs](../../../includes/csprcs-md.md)]キーワード。  
+ 警告の通知にはオペレーターが必要です。 **Operator**は [!INCLUDE[csprcs](../../../includes/csprcs-md.md)] キーワードであるため、<xref:Microsoft.SqlServer.Management.Smo.Agent.Operator> 型には角かっこが必要です。  
   
 ```powershell  
 #Get a server object which corresponds to the default instance  

@@ -16,15 +16,15 @@ helpviewer_keywords:
 - XML [SQL Server], generating instances
 - white space [XML in SQL Server]
 ms.assetid: dbd6c06f-db6e-44a7-855a-6a55bf374907
-author: douglaslMS
-ms.author: douglasl
+author: MightyPen
+ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 8dea24689dc1dad9836c6ef2a53cf5e40f078c47
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: ae842748d2d510c5c00f329f5e28cd49a0c86ef3
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48077132"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62637610"
 ---
 # <a name="create-instances-of-xml-data"></a>XML データのインスタンスの作成
   このトピックでは、XML インスタンスを生成する方法について説明します。  
@@ -40,7 +40,7 @@ ms.locfileid: "48077132"
 -   一括読み込みを使用する。  
   
 ## <a name="type-casting-string-and-binary-instances"></a>文字列インスタンスとバイナリ インスタンスの型キャスト  
- いずれかを解析することができます、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]などの文字列データ型 **[n]** **[var]****char**、 **[n] text**、 **varbinary**、および**イメージ**に、`xml`のデータ型をキャスト (CAST) または (変換)、文字列に変換する、`xml`データ型。 型指定されていない XML は、正しい形式かどうかが確認されます。 存在する場合は、スキーマが関連付け、`xml`型、検証が実行されることもできます。 詳細については、「 [型指定された XML と型指定されていない XML の比較](compare-typed-xml-to-untyped-xml.md)」を参照してください。  
+ いずれかを解析することができます、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]などの文字列データ型 **[n]** **[var]** **char**、 **[n] text**、 **varbinary**、および**イメージ**に、`xml`のデータ型をキャスト (CAST) または (変換)、文字列に変換する、`xml`データ型。 型指定されていない XML は、正しい形式かどうかが確認されます。 存在する場合は、スキーマが関連付け、`xml`型、検証が実行されることもできます。 詳細については、「 [型指定された XML と型指定されていない XML の比較](compare-typed-xml-to-untyped-xml.md)」を参照してください。  
   
  XML ドキュメントは、UTF-8、UTF-16、windows-1252 など、さまざまなエンコードを使用してエンコードできます。 ここでは、文字列およびバイナリの元のデータ型と XML ドキュメントのエンコード間の相互作用における規則、およびパーサーの動作に関する規則を概説します。  
   
@@ -63,7 +63,7 @@ from OpenRowset(BULK 'filename.xml', SINGLE_BLOB) R(x)
  CLR ユーザー定義型で XML シリアル化を指定している場合は、その型のインスタンスを XML データ型に明示的にキャストすることができます。 CLR ユーザー定義型の XML シリアル化の詳細については、「 [XML Serialization from CLR Database Objects](../../database-engine/dev-guide/xml-serialization-from-clr-database-objects.md)」を参照してください。  
   
 ### <a name="white-space-handling-in-typed-xml"></a>型指定された XML の空白文字の処理  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] で、要素の内容に含まれる空白文字は、開始タグや終了タグなどのマークアップで区切られた空白文字だけのシーケンス内に出現し、エンティティに変換されていない場合、重要でないと見なされます  (CDATA セクションは無視されます)。この空白文字の処理は、W3C (World Wide Web Consortium) から公開されている XML 1.0 仕様の空白文字に関する記述とは異なります。 これは、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の XML パーサーが XML 1.0 の定義に従って、限定された数の DTD サブセットしか認識しないためです。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] でサポートされる限定された DTD サブセット数の詳細については、「[CAST および CONVERT &#40;Transact-SQL&#41;](/sql/t-sql/functions/cast-and-convert-transact-sql)」を参照してください。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] で、要素の内容に含まれる空白文字は、開始タグや終了タグなどのマークアップで区切られた空白文字だけのシーケンス内に出現し、エンティティに変換されていない場合、重要でないと見なされます (CDATA セクションは無視されます)。この空白文字の処理は、W3C (World Wide Web Consortium) から公開されている XML 1.0 仕様の空白文字に関する記述とは異なります。 これは、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の XML パーサーが XML 1.0 の定義に従って、限定された数の DTD サブセットしか認識しないためです。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] でサポートされる限定された DTD サブセット数の詳細については、「[CAST および CONVERT &#40;Transact-SQL&#41;](/sql/t-sql/functions/cast-and-convert-transact-sql)」を参照してください。  
   
  XML パーサーは、既定では、文字列データを XML に変換するときに、次のいずれかの条件に当てはまる場合は、重要ではない空白文字を破棄します。  
   
@@ -71,7 +71,7 @@ from OpenRowset(BULK 'filename.xml', SINGLE_BLOB) R(x)
   
 -   要素またはその先祖の要素の 1 つで有効になっている `xml:space` 属性に既定値が設定されている。  
   
- 以下に例を示します。  
+ 例 :  
   
 ```  
 declare @x xml  
@@ -93,7 +93,7 @@ SELECT CONVERT(xml, N'<root>      <child/>     </root>', 1)
   
  *style* パラメーターが使用されていないか、この値が 0 に設定されていると、xml DT インスタンスの変換では重要でない空白文字は保持されません。 文字列データを xml DT インスタンスに変換するときの、CONVERT 演算子と *style* パラメーターの使用方法の詳細については、「[CAST および CONVERT &#40;Transact-SQL&#41;](/sql/t-sql/functions/cast-and-convert-transact-sql)」を参照してください。  
   
-### <a name="example-cast-a-string-value-to-typed-xml-and-assign-it-to-a-column"></a>例 : 型指定された xml に文字列値をキャストし、列に割り当てる  
+### <a name="example-cast-a-string-value-to-typed-xml-and-assign-it-to-a-column"></a>例: 型指定された xml に文字列値をキャストし、列に割り当てる  
  次の例は、XML フラグメントを含む文字列変数をキャスト、`xml`データ型に格納し、`xml`型の列。  
   
 ```  
@@ -121,7 +121,7 @@ INSERT INTO T VALUES (3, cast (@s as xml))
 INSERT INTO T VALUES (3, convert (xml, @s))   
 ```  
   
-### <a name="example-convert-a-string-to-typed-xml-and-assign-it-to-a-variable"></a>例 : 型指定された xml に文字列を変換し、変数に割り当てる  
+### <a name="example-convert-a-string-to-typed-xml-and-assign-it-to-a-variable"></a>例: 型指定された xml に文字列を変換し、変数に割り当てる  
  次の例では、文字列に変換が`xml`の変数に割り当てられているし、入力、`xml`データ型。  
   
 ```  
@@ -180,10 +180,10 @@ go
  FOR XML の詳細については、「[FOR XML &#40;SQL Server&#41;](for-xml-sql-server.md)」を参照してください。  
   
 > [!NOTE]  
->  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] は、TYPE ディレクティブを使用する FOR XML クエリや、`xml` データ型を使用して SQL 列、変数、および出力パラメーターから XML を返す FOR XML クエリなど、異なるサーバー構成の結果として、`xml` データ型インスタンスをクライアントに返します。 ADO.NET プロバイダーでは、クライアント アプリケーション コードで要求をこの`xml`データ型情報は、サーバーからバイナリ エンコード形式で送信します。 ただし、TYPE ディレクティブを指定しないで FOR XML を使用した場合、XML データは文字列型のデータとして返されます。 どんな場合でも、クライアント プロバイダーは常にいずれかの形式の XML を処理できます。  
+>  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] は、TYPE ディレクティブを使用する FOR XML クエリや、`xml` データ型を使用して SQL 列、変数、および出力パラメーターから XML を返す FOR XML クエリなど、異なるサーバー構成の結果として、`xml` データ型インスタンスをクライアントに返します。 クライアント アプリケーションのコードでは、ADO.NET プロバイダーがこの `xml` データ型情報をサーバーからバイナリ エンコード形式で送信するよう要求します。 ただし、TYPE ディレクティブを指定しないで FOR XML を使用した場合、XML データは文字列型のデータとして返されます。 どんな場合でも、クライアント プロバイダーは常にいずれかの形式の XML を処理できます。  
   
 ## <a name="using-constant-assignments"></a>定数の代入の使用  
- インスタンスが、文字列定数を使用できます、`xml`データ型が必要です。 これは、文字列から XML への暗黙の CAST と同じです。 以下に例を示します。  
+ インスタンスが、文字列定数を使用できます、`xml`データ型が必要です。 これは、文字列から XML への暗黙の CAST と同じです。 例 :  
   
 ```  
 DECLARE @xmlDoc xml  
@@ -213,7 +213,7 @@ INSERT INTO T VALUES (3, '<Cust><Fname>Andrew</Fname><Lname>Fuller</Lname></Cust
 |-----------|-----------------|  
 |[XML データの取得および XML データに対するクエリの実行](retrieve-and-query-xml-data.md)|XML インスタンスをデータベースに格納するときに保持されない部分について説明します。|  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [型指定された XML と型指定されていない XML の比較](compare-typed-xml-to-untyped-xml.md)   
  [xml データ型のメソッド](/sql/t-sql/xml/xml-data-type-methods)   
  [XML データ変更言語 &#40;XML DML&#41;](/sql/t-sql/xml/xml-data-modification-language-xml-dml)   

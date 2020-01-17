@@ -1,5 +1,5 @@
 ---
-title: トレース データを再生 |Microsoft Docs
+title: トレースデータの再生 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -8,15 +8,14 @@ ms.reviewer: ''
 ms.technology: tools-other
 ms.topic: conceptual
 ms.assetid: 19ff5285-fb9d-4fd1-97c4-ec72c311c384
-author: stevestein
-ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 56c40b55b49f4d6e5cd50c696029366e9c63a6d8
-ms.sourcegitcommit: 0f7cf9b7ab23df15624d27c129ab3a539e8b6457
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 7495e00200455be05b621124c0276d07727d58cb
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51291460"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67949956"
 ---
 # <a name="replay-trace-data"></a>トレース データの再生
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -24,7 +23,7 @@ ms.locfileid: "51291460"
   
  分散再生のイベント再生段階を開始するには、管理ツールの **replay** オプションを使用します。 この段階は、トレース データのディスパッチと、分散再生の開始および同期の 2 つの部分で構成されています。  
   
- ![分散再生のイベント](../../tools/distributed-replay/media/eventreplay.gif "分散再生のイベント")  
+ ![分散イベント再生](../../tools/distributed-replay/media/eventreplay.gif "分散イベント再生")  
   
  トレース データは、2 つのシーケンス モード (ストレス モードまたは同期モード) のいずれかで再生できます。 既定の動作では、ストレス モードでトレース データを再生します。 イベント再生段階とシーケンス モードの詳細については、「 [SQL Server Distributed Replay](../../tools/distributed-replay/sql-server-distributed-replay.md)」を参照してください。  
   
@@ -53,7 +52,7 @@ ms.locfileid: "51291460"
   
     4.  (省略可能) **-o** パラメーターを使用して、各クライアントで再生アクティビティを結果のトレース ファイルにキャプチャします。  
   
-    5.  (省略可能) *target_server* パラメーター **-s**を使用して、分散再生クライアントでトレース ワークロードを再生する [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスを指定します。 `<Server>` 要素を使用して、再生構成ファイルの `<ReplayOptions>` 要素で対象サーバーを指定している場合、このパラメーターは必要ありません。  
+    5.  (省略可能) *target_server* パラメーター **-s**を使用して、分散再生クライアントでトレース ワークロードを再生する [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスを指定します。 `<Server>` 要素を使用して、再生構成ファイルの `<ReplayOptions>` 要素でターゲット サーバーを指定している場合、このパラメーターは必要ありません。  
   
     6.  *clients* パラメーター **-w**を使用して、再生に参加する分散再生クライアントを指定します。 クライアント コンピューター名はコンマで区切って指定します。 注: IP アドレスは指定できません。  
   

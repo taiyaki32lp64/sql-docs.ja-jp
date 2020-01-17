@@ -11,11 +11,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 8f8de4a3ce8ac36de33d96b71170cb64eb4dd5da
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48083872"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62753954"
 ---
 # <a name="deprecated-management-tools-features-in-sql-server-2014"></a>SQL Server 2014 の非推奨の管理ツール機能
   このトピックでは、[!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] でまだ使用できるものの、非推奨の管理ツール機能について説明します。 これらの機能は [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]の今後のリリースで削除される予定です。 非推奨の機能を新しいアプリケーションで使用しないでください。  
@@ -26,10 +26,10 @@ ms.locfileid: "48083872"
 |sqlps.exe|警告|  
 |osql.exe|警告|  
 |SQLMail|警告|  
-|SMO クラス : Microsoft.SQLServer.Management.Smo.Information クラス|告知|  
-|SMO クラス : Microsoft.SQLServer.Management.Smo.Settings クラス|告知|  
-|SMO クラス : Microsoft.SQLServer.Management.Smo.DatabaseOptions クラス|告知|  
-|SMO クラス : Microsoft.SqlServer.Management.Smo.DatabaseDdlTrigger.NotForReplication プロパティ|告知|  
+|SMO クラス:Microsoft.SQLServer.Management.Smo.Information クラス|告知|  
+|SMO クラス:Microsoft.SQLServer.Management.Smo.Settings クラス|告知|  
+|SMO クラス:Microsoft.SQLServer.Management.Smo.DatabaseOptions クラス|告知|  
+|SMO クラス:Microsoft.SqlServer.Management.Smo.DatabaseDdlTrigger.NotForReplication プロパティ|告知|  
 |SSMS のデータベース プロジェクト システム (ソース管理の統合を含む)|告知|  
 |Net Send による通知 ([!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] エージェント)|告知|  
 |ポケットベルによる通知 ([!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] エージェント)|告知|  

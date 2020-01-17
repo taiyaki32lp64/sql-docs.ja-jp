@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.dimensionwizard.serverSpecialCalendars.f1
@@ -13,12 +12,12 @@ ms.assetid: 6e28a020-2586-4b13-9333-b499fb1b33af
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 67e4d316b122f44e207037603354f696446aed3f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: fde8172abbebe08fc4aae4cc0282955c2a582d02
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48139442"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66069693"
 ---
 # <a name="select-calendars-dimension-wizard"></a>[カレンダーの選択] (ディメンション ウィザード)
   **[カレンダーの選択]** ページを使用すると、会計カレンダー、レポート カレンダー、製造カレンダー、ISO (国際標準化機構) 8601 カレンダーを表す階層を作成し、時間ディメンションに追加できます。  

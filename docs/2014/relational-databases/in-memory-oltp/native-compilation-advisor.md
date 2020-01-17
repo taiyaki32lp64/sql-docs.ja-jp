@@ -13,12 +13,12 @@ ms.assetid: d3898a47-2985-4a08-bc70-fd8331a01b7b
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 8b72f500a425b7a55cab285a881c3ff915b9fb82
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 5174b5c859fa76ceeccdb99b7a46f510fd62d923
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53358704"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63072771"
 ---
 # <a name="native-compilation-advisor"></a>ネイティブ コンパイル アドバイザー
   トランザクション パフォーマンス レポート ツール (を参照してください[Determining if テーブルまたはストアド プロシージャ Should Be Ported to インメモリ OLTP](determining-if-a-table-or-stored-procedure-should-be-ported-to-in-memory-oltp.md)) ネイティブを使用するポートをデータベース内の解釈されたストアド プロシージャが得られる場合に通知コンパイルします。 ネイティブ コンパイルを使用するように移植するストアド プロシージャを特定した後に、ネイティブ コンパイル アドバイザーを使用すると、解釈されたストアド プロシージャをネイティブ コンパイルに移行する際に役立ちます。 ネイティブ コンパイル ストアド プロシージャの詳細については、「 [Natively Compiled Stored Procedures](natively-compiled-stored-procedures.md)」をご覧ください。  
@@ -39,7 +39,7 @@ ms.locfileid: "53358704"
 ## <a name="code-sample"></a>コード サンプル  
  次のサンプルは、解釈されたストアド プロシージャと、ネイティブ コンパイルに対する同等のストアド プロシージャを示しています。 次のサンプルでは、c:\data というディレクトリがあることを前提にしています。  
   
-```tsql  
+```sql  
 CREATE DATABASE Demo  
 ON  
 PRIMARY(NAME = [Demo_data],  
@@ -96,7 +96,7 @@ exec dbo.InsertOrderXTP @id= 11, @date = '1956-01-01 12:01:00', @status = 2 ;
 select * from SalesOrders  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [インメモリ OLTP への移行](migrating-to-in-memory-oltp.md)  
   
   

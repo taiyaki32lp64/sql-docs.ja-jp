@@ -1,7 +1,7 @@
 ---
-title: チュートリアル:Azure Blob Storage サービスと SQL Server 2016 データベースの使用 | Microsoft Docs
-ms.custom: ''
-ms.date: 01/09/2019
+title: チュートリアル:Azure Blob Storage サービスと SQL Server 2016 データベースの使用
+ms.custom: seo-dt-2019
+ms.date: 01/10/2019
 ms.prod: sql
 ms.technology: ''
 ms.prod_service: database-engine
@@ -14,13 +14,12 @@ applies_to:
 ms.assetid: e69be67d-da1c-41ae-8c9a-6b12c8c2fb61
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: e6833381664fa71f61e6e021d81154afdb0945cb
-ms.sourcegitcommit: c6e71ed14198da67afd7ba722823b1af9b4f4e6f
+ms.openlocfilehash: aba8d7e3dc7aaf48523303ad6f63682c888b3c46
+ms.sourcegitcommit: 15fe0bbba963d011472cfbbc06d954d9dbf2d655
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/16/2019
-ms.locfileid: "54327773"
+ms.lasthandoff: 11/14/2019
+ms.locfileid: "74095693"
 ---
 # <a name="tutorial-use-azure-blob-storage-service-with-sql-server-2016"></a>チュートリアル:Azure Blob Storage サービスと SQL Server 2016 データベースの使用
 
@@ -42,7 +41,7 @@ SQL Server による Microsoft Azure Blob Storage サービスの統合のサポ
 - [SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms) をインストールする。
 - [AdventureWorks2016 サンプル データベース](https://docs.microsoft.com/sql/samples/adventureworks-install-configure)をダウンロードする。
 - ユーザー アカウントを [db_backupoperator](https://docs.microsoft.com/sql/relational-databases/security/authentication-access/database-level-roles) のロールに割り当て、[alter any credential](https://docs.microsoft.com/sql/t-sql/statements/alter-credential-transact-sql) 権限を付与する。 
- 
+
 ## <a name="1---create-stored-access-policy-and-shared-access-storage"></a>1 - 格納済みアクセス ポリシーと共有アクセス ストレージを作成する
 
 このセクションでは [Azure PowerShell](https://azure.microsoft.com/documentation/articles/powershell-install-configure/) スクリプトを使用して、Azure BLOB コンテナーに格納済みアクセス ポリシーを使用した Shared Access Signature を作成します。  
@@ -72,12 +71,12 @@ Shared Access Signature とは、コンテナー、BLOB、キュー、または�
   
 1.  Window PowerShell または Windows PowerShell ISE (前述のバージョン要件を参照してください) を開きます。  
   
-2.  b のスクリプトを編集してから、実行します。  
+2.  以下のスクリプトを編集してから、実行します。  
   
     ```powershell
     # Define global variables for the script  
     $prefixName = '<a prefix name>'  # used as the prefix for the name for various objects  
-    $subscriptionID=='<your subscription ID>'   # the ID  of subscription name you will use  
+    $subscriptionID = '<your subscription ID>'   # the ID  of subscription name you will use  
     $locationName = '<a data center location>'  # the data center region you will use  
     $storageAccountName= $prefixName + 'storage' # the storage account name you will create or use  
     $containerName= $prefixName + 'container'  # the storage container name to which you will attach the SAS policy with its SAS token  
@@ -102,20 +101,20 @@ Shared Access Signature とは、コンテナー、BLOB、キュー、または�
     $accountKeys = Get-AzStorageAccountKey -ResourceGroupName $resourceGroupName -Name $storageAccountName  
   
     # Create a new storage account context using an Azure Resource Manager storage account  
-    $storageContext = New-AzureStorageContext -StorageAccountName $storageAccountName -StorageAccountKey $accountKeys[0].Value
+    $storageContext = New-AzStorageContext -StorageAccountName $storageAccountName -StorageAccountKey $accountKeys[0].Value
 
     # Creates a new container in blob storage  
-    $container = New-AzureStorageContainer -Context $storageContext -Name $containerName  
+    $container = New-AzStorageContainer -Context $storageContext -Name $containerName  
   
     # Sets up a Stored Access Policy and a Shared Access Signature for the new container  
-    $policy = New-AzureStorageContainerStoredAccessPolicy -Container $containerName -Policy $policyName -Context $storageContext -StartTime $(Get-Date).ToUniversalTime().AddMinutes(-5) -ExpiryTime $(Get-Date).ToUniversalTime().AddYears(10) -Permission rwld
+    $policy = New-AzStorageContainerStoredAccessPolicy -Container $containerName -Policy $policyName -Context $storageContext -StartTime $(Get-Date).ToUniversalTime().AddMinutes(-5) -ExpiryTime $(Get-Date).ToUniversalTime().AddYears(10) -Permission rwld
 
     # Gets the Shared Access Signature for the policy  
-    $sas = New-AzureStorageContainerSASToken -name $containerName -Policy $policyName -Context $storageContext
+    $sas = New-AzStorageContainerSASToken -name $containerName -Policy $policyName -Context $storageContext
     Write-Host 'Shared Access Signature= '$($sas.Substring(1))''  
 
     # Sets the variables for the new container you just created
-    $container = Get-AzureStorageContainer -Context $storageContext -Name $containerName
+    $container = Get-AzStorageContainer -Context $storageContext -Name $containerName
     $cbc = $container.CloudBlobContainer 
   
     # Outputs the Transact SQL to the clipboard and to the screen to create the credential using the Shared Access Signature  
@@ -147,17 +146,21 @@ SQL Server 資格情報を作成するには、次の手順を実行します。
     スクリプトは、次のコードのようになります。  
   
     ```sql   
+    /* Example:
     USE master  
-    CREATE CREDENTIAL [https://<mystorageaccountname>.blob.core.windows.net/<mystorageaccountcontainername>] -- this name must match the container path, start with https and must not contain a forward slash at the end, the general format 
-       WITH IDENTITY='SHARED ACCESS SIGNATURE' -- this is a mandatory string and do not change it.   
-       , SECRET = 'sharedaccesssignature' -- this is the shared access signature key that you obtained in section 1.   
-    GO   
-
+    CREATE CREDENTIAL [https://msfttutorial.blob.core.windows.net/containername] 
+    WITH IDENTITY='SHARED ACCESS SIGNATURE'   
+    , SECRET = 'sharedaccesssignature' 
+    GO */
+    
     USE master  
-    CREATE CREDENTIAL [https://msfttutorial.blob.core.windows.net/containername] -- this name must match the container path, start with https and must not contain a forward slash at the end, the general format 
-       WITH IDENTITY='SHARED ACCESS SIGNATURE' -- this is a mandatory string and do not change it.   
-       , SECRET = 'sharedaccesssignature' -- this is the shared access signature key that you obtained in section 1.   
-    GO   
+    CREATE CREDENTIAL [https://<mystorageaccountname>.blob.core.windows.net/<mystorageaccountcontainername>] 
+      -- this name must match the container path, start with https and must not contain a forward slash at the end
+    WITH IDENTITY='SHARED ACCESS SIGNATURE' 
+      -- this is a mandatory string and should not be changed   
+     , SECRET = 'sharedaccesssignature' 
+       -- this is the shared access signature key that you obtained in section 1.   
+    GO    
     ```  
   
 4.  使用可能なすべての資格情報を表示するには、インスタンスに接続されたクエリ ウィンドウで次のステートメントを実行できます。  

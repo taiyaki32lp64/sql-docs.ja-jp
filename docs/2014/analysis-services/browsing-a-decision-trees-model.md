@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - mining models, browsing
@@ -18,12 +17,12 @@ ms.assetid: 6b3dd1ae-caff-41c3-817b-802dc020ff88
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 257d193c84420a0c70ea99ef2a8cadfa9e11eec5
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 17b3a2765781813c832b0b654e4a02475b3ab623
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52525556"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66064666"
 ---
 # <a name="browsing-a-decision-trees-model"></a>デシジョン ツリー モデルの参照
   使用して分類モデルを開く**参照**は対話型デシジョン ツリー ビューアーでのようなモデルが表示されます、[!INCLUDE[msCoName](../includes/msconame-md.md)]デシジョン ツリー ビューアーに[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]します。 ビューアーは、あるデータ グループを別のデータ グループから区別する条件を強調するグラフとして分類結果を表示します。 ツリーの個々のサブセットにドリルダウンして、基になるデータを取得することもできます。  
@@ -154,7 +153,7 @@ ms.locfileid: "52525556"
   
      ![ドリルスルーの結果を Excel に保存される](media/dm13-dectree-drillthroughresults.gif "ドリルスルーの結果は Excel に保存されます")  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [Excel におけるモデルの参照&#40;SQL Server データ マイニング アドイン&#41;](browsing-models-in-excel-sql-server-data-mining-add-ins.md)  
   
   

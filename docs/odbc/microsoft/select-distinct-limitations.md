@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: c8896e28-af94-46e6-bc3f-1af657e38462
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: dcf0f9c907a77df2508a8c38d47509dc25778169
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 69a69e43bd98e9421e3197439c9f0376884c23ab
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47772040"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67987895"
 ---
 # <a name="select-distinct-limitations"></a>SELECT DISTINCT の制限事項
 DISTINCT キーワードは、バイナリ データには適用されません。

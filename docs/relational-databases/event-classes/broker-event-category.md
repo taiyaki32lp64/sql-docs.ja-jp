@@ -1,7 +1,7 @@
 ---
 title: Broker イベント カテゴリ | Microsoft Docs
 ms.custom: ''
-ms.date: 03/01/2017
+ms.date: 05/24/2019
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: supportability
@@ -13,18 +13,19 @@ helpviewer_keywords:
 ms.assetid: 470dc93c-0dda-4d89-829b-937738d59b31
 author: stevestein
 ms.author: sstein
-manager: craigg
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 8f62304b466f5de4716b702f014e39dc72b759b8
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+monikerRange: '>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 8efa6f503f552965e3885d92626e8b5da453e29b
+ms.sourcegitcommit: f5807ced6df55dfa78ccf402217551a7a3b44764
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47856140"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69494097"
 ---
 # <a name="broker-event-category"></a>Broker イベント カテゴリ
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-  **Broker** イベント カテゴリには、一般的な Service Broker イベントが含まれます。  
+
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+
+**Broker** イベント カテゴリには、一般的な Service Broker イベントが含まれます。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
   
@@ -44,6 +45,6 @@ ms.locfileid: "47856140"
  Service Broker には、2 つのセキュリティ監査イベントも提供されます。 これらのイベントの詳細については、「 [Audit Broker Login イベント クラス](../../relational-databases/event-classes/audit-broker-login-event-class.md) 」と「 [Audit Broker Conversation イベント クラス](../../relational-databases/event-classes/audit-broker-conversation-event-class.md)」を参照してください。  
   
 ## <a name="see-also"></a>参照  
- [セキュリティ監査イベント カテゴリ](../../analysis-services/trace-events/security-audit-event-category.md)  
+ [セキュリティ監査イベント カテゴリ](/bi-reference/trace-events/security-audit-event-category)  
   
   

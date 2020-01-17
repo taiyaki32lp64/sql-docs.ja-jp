@@ -18,11 +18,11 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: cf5c0b6c7004f458e424e58d738cce22e97afa2b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48157362"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62919588"
 ---
 # <a name="clr-scalar-valued-functions"></a>CLR スカラー値関数
   スカラー値関数 (SVF) は、文字列値、整数値、ビット値などの単一値を返します。任意の .NET Framework プログラミング言語を使用し、マネージド コードでユーザー定義スカラー値関数を作成できます。 これらの関数からは、[!INCLUDE[tsql](../../includes/tsql-md.md)] コードや他のマネージド コードにアクセスできます。 CLR 統合とマネージ コードの使い分けの利点については、[!INCLUDE[tsql](../../includes/tsql-md.md)]を参照してください[CLR 統合の概要](../clr-integration/clr-integration-overview.md)します。  
@@ -80,7 +80,7 @@ Public Class T
 End Class  
 ```  
   
- コードの 1 行目では、属性にアクセスするために `Microsoft.SqlServer.Server` を参照し、ADO.NET 名前空間にアクセスするために `System.Data.SqlClient`  (この名前空間には、.NET Framework Data Provider for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の `SqlClient` が含まれます) を参照しています。  
+ コードの 1 行目では、属性にアクセスするために `Microsoft.SqlServer.Server` を参照し、ADO.NET 名前空間にアクセスするために `System.Data.SqlClient` (この名前空間には、.NET Framework Data Provider for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の `SqlClient` が含まれます) を参照しています。  
   
  次に、この関数は `SqlFunction` 名前空間の `Microsoft.SqlServer.Server` カスタム属性を受け取ります。 このカスタム属性は、UDF (ユーザー定義関数) がサーバーのデータを読み取るときにインプロセス プロバイダーを使用するかどうかを示します。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、UDF によるデータの更新、挿入、または削除を許可していません。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、インプロセス プロバイダーを使用しない UDF の実行を最適化できます。 これを指定するには、`DataAccessKind` を `DataAccessKind.None` に設定します。 その次の行で、対象のメソッドは public static (Visual Basic .NET では shared) になっています。  
   

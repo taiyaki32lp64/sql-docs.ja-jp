@@ -16,11 +16,11 @@ author: yualan
 ms.author: alayu
 manager: craigg
 ms.openlocfilehash: 6ea2e46b38919ae72ea70440523d75517e6efa92
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52804144"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62512554"
 ---
 # <a name="use-the-systemhealth-session"></a>system_health セッションの使用
   system_health セッションは、既定で [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]に含まれている拡張イベント セッションです。 このセッションは、 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] の起動時に自動的に開始されます。実行中にパフォーマンスに大きな影響が及ぶことはありません。 [!INCLUDE[ssDE](../../includes/ssde-md.md)]のパフォーマンスの問題をトラブルシューティングするのに役立つシステム データを収集します。 そのため、このセッションを停止または削除しないことをお勧めします。  
@@ -70,7 +70,7 @@ WHERE xe.name = 'system_health'
 ## <a name="restoring-the-systemhealth-session"></a>system_health セッションの復元  
  system_health セッションを削除した場合、クエリ エディターで **u_tables.sql** ファイルを実行することでそのセッションを復元できます。 このファイルは次のフォルダーにあります (C: は [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] プログラム ファイルのインストール先ドライブを表しています)。  
   
- C:\Program files \microsoft SQL Server\MSSQL12 します。\< *instanceid*> \MSSQL\Install  
+ C:\Program Files\Microsoft SQL Server\MSSQL12.\<*instanceid*>\MSSQL\Install  
   
  セッションを復元したら、ALTER EVENT SESSION ステートメントを使用するか、オブジェクト エクスプローラーで **[拡張イベント]** ノードを使用して、セッションを開始する必要があります。 ただし、そのようにして開始しない場合でも、次に [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] サービスを再起動したときにセッションは自動的に開始されます。  
   

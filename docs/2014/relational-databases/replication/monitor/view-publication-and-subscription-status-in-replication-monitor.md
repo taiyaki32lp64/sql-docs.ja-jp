@@ -22,11 +22,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 9dad3a2c5f7073ea63608ba5234061a3ffa2102c
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54123932"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62666967"
 ---
 # <a name="view-publication-and-subscription-status-in-replication-monitor"></a>レプリケーション モニターでのパブリケーションおよびサブスクリプションの状態の表示
   [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] レプリケーション モニターには、パブリケーションおよびサブスクリプションの状態情報が表示されます。  
@@ -53,7 +53,7 @@ ms.locfileid: "54123932"
   
  **パブリケーションおよびサブスクリプションの状態を表示するには**  
   
--   レプリケーション モニター:[情報およびレプリケーション モニターを使用してタスクを実行する表示](view-information-and-perform-tasks-replication-monitor.md)します。
+-   レプリケーション モニター:[レプリケーション モニターを使用して情報を表示し、タスクを実行する](view-information-and-perform-tasks-replication-monitor.md)
   
   
 ## <a name="publication-status-values"></a>パブリケーションの状態の値  

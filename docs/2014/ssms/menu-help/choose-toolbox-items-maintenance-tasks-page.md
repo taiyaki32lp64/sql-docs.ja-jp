@@ -16,11 +16,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 24dfd1f587db8d652390be27fa2307a8500c3145
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52764584"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62470049"
 ---
 # <a name="choose-toolbox-items-maintenance-tasks-page"></a>[ツールボックス アイテムの選択] \([メンテナンス タスク] ページ)
   **[ツールボックス アイテムの選択]** ダイアログ ボックスのこのタブには、コンピューターに登録されているメンテナンス タスク コンポーネントがすべて一覧表示され、ツールボックスに表示されているメンテナンス タスクを変更できます。 **[ツールボックス アイテムの選択]** ダイアログ ボックスは、 **[ツール]** メニューから開けます。 コンポーネントの一覧を並べ替えるには、列見出しを選択します。  

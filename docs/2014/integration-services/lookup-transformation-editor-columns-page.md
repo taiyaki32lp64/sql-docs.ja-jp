@@ -4,23 +4,22 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.lookuptransformation.columns.f1
 helpviewer_keywords:
 - Lookup Transformation Editor
 ms.assetid: 690ffef5-fd59-4e95-a27d-4fcf0d6b1c0b
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 627d11fb1a4aafd63a47d8b206988287d5831578
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: e1a32dcbcee6704cb4fecef7b58cbff8354b910a
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48154932"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66057894"
 ---
 # <a name="lookup-transformation-editor-columns-page"></a>[参照変換エディター] ([列] ページ)
   **[参照変換エディター]** ダイアログ ボックスの **[列]** ページを使用すると、元のテーブルと参照テーブルの間に結合を指定したり、参照テーブルから参照列を選択したりできます。  
@@ -53,11 +52,11 @@ ms.locfileid: "48154932"
  **[出力の別名]**  
  各参照列の出力の別名を入力します。 既定では参照列の名前が使用されますが、一意なわかりやすい名前を自由に付けることができます。  
   
-## <a name="see-also"></a>参照  
- [参照変換エディター &#40;[全般] ページ&#41;](general-page-of-integration-services-designers-options.md)   
- [参照変換エディター&#40;接続 ページ&#41;](../../2014/integration-services/lookup-transformation-editor-connection-page.md)   
- [参照変換エディター &#40;[詳細] ページ&#41;](../../2014/integration-services/lookup-transformation-editor-advanced-page.md)   
- [参照変換エディター&#40;エラー出力 ページ&#41;](../../2014/integration-services/lookup-transformation-editor-error-output-page.md)   
+## <a name="see-also"></a>関連項目  
+ [[参照変換エディター] &#40;[全般] ページ&#41;](general-page-of-integration-services-designers-options.md)   
+ [参照変換エディター ([接続] ページ)](../../2014/integration-services/lookup-transformation-editor-connection-page.md)   
+ [参照変換エディター ([詳細設定] ページ)](../../2014/integration-services/lookup-transformation-editor-advanced-page.md)   
+ [[参照変換エディター] &#40;[エラー出力] ページ&#41;](../../2014/integration-services/lookup-transformation-editor-error-output-page.md)   
  [あいまい参照変換](data-flow/transformations/fuzzy-lookup-transformation.md)  
   
   

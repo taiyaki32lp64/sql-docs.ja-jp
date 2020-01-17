@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 55d09344-6682-40f6-b634-036b134ff650
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 6f7d21a1166868603f9389ab4ef5c5b3448b0312
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 4d0016a2849feb5656cb3cd6dd46eff444f37058
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47649640"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68118761"
 ---
 # <a name="bound-descriptor-records"></a>バインドされた記述子レコード
 アプリケーションでは、null 値が含まれないように記述子レコードの SQL_DESC_DATA_PTR フィールドが設定、レコードがあると言います。*バインド*します。  

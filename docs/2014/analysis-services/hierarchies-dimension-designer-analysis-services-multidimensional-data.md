@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 f1_keywords:
 - sql.asvs.dimensiondesigner.dbv.hierarchieslevelspane.f1
@@ -13,12 +12,12 @@ ms.assetid: c37db6c1-b5a5-44e1-ae6d-a96fb9769e68
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 819d073ba286f0674dc3470a7e8d9d6469318b7f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: a68cd859e93105c2fb4aa570dbf727fe7112bdab
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48133992"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66080789"
 ---
 # <a name="hierarchies-dimension-structure-tab-dimension-designer-analysis-services---multidimensional-data"></a>[階層] ([ディメンション構造] タブ、ディメンション デザイナー) (Analysis Services - 多次元データ)
   **[階層]** ペインを使用すると、現在選択されているディメンションの階層とレベルを管理できます。 ユーザー定義階層の作成の詳細については、「 [ユーザー定義階層の作成](multidimensional-models/user-defined-hierarchies-create.md)」を参照してください。  

@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: eeb80fa5-f530-4f21-beee-25f5a4b8ace6
 author: Shamikg
 ms.author: Shamikg
-manager: craigg
-ms.openlocfilehash: 4d7f290459e1da736605acad941602399ec3ea53
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: 5d4936638fc9e283caafffc2f2a7cfdbed396920
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53215299"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68028764"
 ---
 # <a name="project-settings-conversion-sybasetosql"></a>プロジェクトの設定 (変換) (SybaseToSQL)
 [変換] ページ、**プロジェクト設定** ダイアログ ボックスには、SSMA を Sybase Adaptive Server Enterprise (ASE) の構文に変換する方法をカスタマイズする設定が含まれています。[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]または SQL Azure の構文。  
@@ -148,7 +147,7 @@ SSMA が検出した場合、 *format_string*引数、変数を使用してリ�
   
 -   印刷と RAISERROR の関数の文字列リテラルを使用する**新しい文字列を作成する**します。  
   
-    このモードでのプレース ホルダーとローカル変数は、PRINT または RAISERROR ステートメントを使用しない場合、ステートメントは変更されません。 二重のパーセント記号 (%) は、文字列リテラルの印刷での 1 つのパーセント記号 % に変更されます。  
+    このモードでのプレース ホルダーとローカル変数は、PRINT または RAISERROR ステートメントを使用しない場合、ステートメントは変更されません。 二重のパーセント記号 (%)印刷の文字列リテラルで 1 つのパーセント記号 % に変更されます。  
   
     PRINT または RAISERROR ステートメントのプレース ホルダーと 1 つを使用している場合、または次の例に示すような複数のローカル変数。  
   
@@ -183,7 +182,7 @@ SSMA が検出した場合、 *format_string*引数、変数を使用してリ�
   
 -   SSMA 印刷と RAISERROR の各ステートメントに対して新しい変数を作成し、文字列値をその変数を使用には、次のように選択します。**を作成する新しい変数**します。  
   
-    このモードでプレース ホルダーとローカル変数は、PRINT または RAISERROR ステートメントを使用しない場合 SSMA 文字を置き換えますすべて二重パーセント (%) に準拠する 1 つのパーセント記号[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]/SQL Azure の構文。  
+    このモードでのプレース ホルダーとローカル変数は、PRINT または RAISERROR ステートメントを使用しない場合 SSMA 文字を置き換えますすべて二重パーセント (%)準拠する 1 つのパーセント記号と[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]/SQL Azure の構文。  
   
     PRINT または RAISERROR ステートメントのプレース ホルダーと 1 つを使用している場合、または次の例に示すような複数のローカル変数。  
   

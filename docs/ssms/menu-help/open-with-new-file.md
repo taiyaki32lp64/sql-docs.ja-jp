@@ -1,5 +1,5 @@
 ---
-title: '[ファイルを開くアプリケーションの選択]([新しいファイル]) | Microsoft Docs'
+title: '[ファイルを開くアプリケーションの選択] ([新しいファイル]) | Microsoft Docs'
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -10,19 +10,18 @@ ms.topic: conceptual
 helpviewer_keywords:
 - Open With dialog box
 ms.assetid: 9531588c-e7ec-4049-9f9c-ee000c49c5de
-author: stevestein
-ms.author: sstein
-manager: craigg
-ms.openlocfilehash: d1ae2df6aab71a5dc914260f19b13327e1e84a2a
-ms.sourcegitcommit: 40c3b86793d91531a919f598dd312f7e572171ec
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: f0dc393db0da76d48c3d64a04a0ba57cda580ad8
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53328162"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68252054"
 ---
 # <a name="open-with-new-file"></a>[ファイルを開くアプリケーションの選択] \([新しいファイル])
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-1 つ以上のエディターでドキュメントを開くには、**[ファイル]** メニューの **[開く]** をクリックし、次に **[ファイル]** をクリックします。 **[ファイルを開く]** ダイアログ ボックスでファイルを選択し、 **[開く]** の横の矢印をクリックし、次に **[ファイルを開くアプリケーションの選択]** をクリックします。 **[ファイルを開くアプリケーションの選択]** ダイアログ ボックスの **[このファイルを開くのに使用するプログラムを選択してください]** の一覧で、目的のプログラムをクリックし、次に **[開く]** をクリックします。  
+1 つ以上のエディターでドキュメントを開くには、 **[ファイル]** メニューの **[開く]** をクリックし、次に **[ファイル]** をクリックします。 **[ファイルを開く]** ダイアログ ボックスでファイルを選択し、 **[開く]** の横の矢印をクリックし、次に **[ファイルを開くアプリケーションの選択]** をクリックします。 **[ファイルを開くアプリケーションの選択]** ダイアログ ボックスの **[このファイルを開くのに使用するプログラムを選択してください]** の一覧で、目的のプログラムをクリックし、次に **[開く]** をクリックします。  
   
 ## <a name="options"></a>および  
 **[このファイルを開くのに使用するプログラムを選択してください]**  

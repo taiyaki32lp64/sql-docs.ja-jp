@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 helpviewer_keywords:
 - suspended database maintenance plans
@@ -15,12 +14,12 @@ ms.assetid: efac127c-6c81-4c7a-a6c4-9aae5d15545d
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 769bc3ad8b330afd81b14aed1340a67c1d7812ef
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 7d41763582632a92b3a38bdbd67ee55b65f95b6d
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48181442"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66095762"
 ---
 # <a name="database-maintenance-plans-superseded"></a>データベース メンテナンス プランが新しくなった
     

@@ -2,18 +2,18 @@
 title: レポート データセット (SSRS) | Microsoft Docs
 ms.date: 03/14/2017
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: report-data
 ms.topic: conceptual
 ms.assetid: f2e42303-e355-4c1f-bb3b-3338fbdd230d
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: b0c8ec6556a1883e9c677c3db96cb4431227544c
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 921bb8bf3e0b601a567e54bf326c5b35824cc848
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50029151"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "67037948"
 ---
 # <a name="report-datasets-ssrs"></a>レポート データセット (SSRS)
   データをレポートに追加するには、データセットを作成します。 各データセットは、データ ソースに対するクエリ コマンドの実行によって取得された結果セットを表します。 結果セットの列はフィールド コレクションです。 結果セット内の行がデータです。 データセットに実際のデータは格納されていません。 データセットには、データ ソースから特定のデータを取得するために必要な情報が含まれています。  
@@ -92,9 +92,9 @@ ms.locfileid: "50029151"
   
  クエリ デザイナーで、サンプル データを表示し、クエリ コマンド構文を検証するクエリを実行できます。 結果セットの列名は、レポート データ ペインに表示されるフィールド名になります。 結果セットは、データの各行の値の数と同じ数の列と行を持つ、1 つの行セットです。 1 つのクエリからの複数の結果セットはサポートされていません。 一定の数の列を含まず、各行で異なる数のデータ値を生成する可能性がある不規則階層は、サポートされていません。  
   
- クエリを実行するには、デザイン時の資格情報が必要です。 詳細については、「[レポート ビルダーでの資格情報の指定](https://msdn.microsoft.com/library/7412ce68-aece-41c0-8c37-76a0e54b6b53)」または「[データ接続、データ ソース、および接続文字列 &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)」を参照してください。  
+ クエリを実行するには、デザイン時の資格情報が必要です。 詳細については、次を参照してください[資格情報の指定とレポート データ ソースに関する接続情報](specify-credential-and-connection-information-for-report-data-sources.md)と[データ接続、データ ソース、および接続文字列&#40;レポート ビルダーおよび SSRS&#41; ](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)。  
   
- データ拡張機能と外部データ ソースの間の通信は、データ プロバイダーによって処理されます。 サポートされているクエリ コマンド構文、クエリ パラメーター、結果セット内の値のデータ型は、各データ プロバイダーによって決まります。 詳細については、データ拡張機能の特定の型についてのトピックおよび「[クエリ デザイナー &#40;レポート ビルダー&#41;](https://msdn.microsoft.com/library/553f0d4e-8b1d-4148-9321-8b41a1e8e1b9)」を参照してください。  
+ データ拡張機能と外部データ ソースの間の通信は、データ プロバイダーによって処理されます。 サポートされているクエリ コマンド構文、クエリ パラメーター、結果セット内の値のデータ型は、各データ プロバイダーによって決まります。 詳細については、データ拡張機能の特定の型についてのトピックと、「[クエリ デザイン ツール &#40;SSRS&#41;](query-design-tools-ssrs.md)」をご覧ください。  
   
   
 ##  <a name="HowTo"></a> 操作方法に関するトピック  
@@ -120,9 +120,9 @@ ms.locfileid: "50029151"
 ##  <a name="Section"></a> トピックの内容  
  [レポート ビルダーのレポート パーツおよびデータセット](../../reporting-services/report-data/report-parts-and-datasets-in-report-builder.md)  
   
- [レポート ビルダーでのデータ接続、データ ソース、および接続文字列](https://msdn.microsoft.com/library/7e103637-4371-43d7-821c-d269c2cc1b34)  
+ [レポート ビルダーでのデータ接続、データ ソース、および接続文字列](data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)  
   
- [レポート ビルダーでの資格情報の指定](https://msdn.microsoft.com/library/7412ce68-aece-41c0-8c37-76a0e54b6b53)  
+ [レポート データ ソースに関する資格情報と接続情報を指定する](specify-credential-and-connection-information-for-report-data-sources.md)  
   
  [レポート埋め込みデータセットと共有データセット (レポート ビルダーおよび SSRS)](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)  
   
@@ -131,6 +131,6 @@ ms.locfileid: "50029151"
   
 ## <a name="see-also"></a>参照  
  [レポート デザイン ビュー (レポート ビルダー)](../../reporting-services/report-builder/report-design-view-report-builder.md)   
- [レポート作成の概念 (レポート ビルダーおよび SSRS)](../../reporting-services/report-design/report-authoring-concepts-report-builder-and-ssrs.md)  
+ [Reporting Services の概念 (SSRS)](../reporting-services-concepts-ssrs.md)
   
   

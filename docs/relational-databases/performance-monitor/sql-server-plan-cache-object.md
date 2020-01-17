@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 225e2b02-8d2f-4f29-9eba-f5847c36ea99
 author: julieMSFT
 ms.author: jrasnick
-manager: craigg
-ms.openlocfilehash: f7eaab8804139ea5b7468edc6916fcc07e2374b5
-ms.sourcegitcommit: 0c1d552b3256e1bd995e3c49e0561589c52c21bf
+ms.openlocfilehash: a181919a40ce2e53c9fef9887f5c7ec6ff93fc5b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/14/2018
-ms.locfileid: "53379910"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68130845"
 ---
 # <a name="sql-server-plan-cache-object"></a>SQL Server の Plan Cache オブジェクト
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

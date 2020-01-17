@@ -16,16 +16,15 @@ helpviewer_keywords:
 - SIN function
 - sine
 ms.assetid: bc1781e9-185f-4981-929b-e77371be6b26
-author: MashaMSFT
-ms.author: mathoma
-manager: craigg
+author: MikeRayMSFT
+ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: ae1c3a38a1a9b1396e523a17c7ddb692a6f3ccf4
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 08463a1014a6226b12fa652e9bffb54782050289
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47710877"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67907123"
 ---
 # <a name="sin-transact-sql"></a>SIN (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]

@@ -20,20 +20,19 @@ helpviewer_keywords:
 ms.assetid: 1ed2b2b2-c897-41cc-bed5-1c6bc47b9dd2
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: a575a83d0e41dfb39dae33040d367188c4ce2200
-ms.sourcegitcommit: 9f2edcdf958e6afce9a09fb2e572ae36dfe9edb0
+ms.openlocfilehash: bb151279d1435c544de406e67384ce9ca1fdd11e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50099673"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67942065"
 ---
-# <a name="managedbackupspbackupmasterswitch-transact-sql"></a>managed_backup.sp_backup_master_switch (TRANSACT-SQL)
+# <a name="managed_backupsp_backup_master_switch-transact-sql"></a>managed_backup.sp_backup_master_switch (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
-  [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]を一時停止または再開します。  
+  一時停止または再開、[!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]します。  
   
- このストアド プロシージャを使用すると、[!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]を一時的に停止してから再開できます。 これにより、すべての構成設定はそのまま保持され、サービスの再開時にもその設定は維持されています。 [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]が一時停止されると、保持期間は適用されなくなります。 つまり、ファイルをストレージから削除する必要があるかどうか、またはバックアップ ファイルが壊れていたりログ チェーンが分断されたりしているかどうかがチェックされることはありません。  
+ このストアド プロシージャを一時的に停止を使用して、それらの再開[!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]します。 これにより、すべての構成設定はそのまま保持され、サービスの再開時にもその設定は維持されています。 ときに[!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]が一時停止、保有期間は適用されません。 これはストレージからファイルを削除するかどうか、または破損した場合、バックアップ ファイルがあるかどうかを判断するか、ログ チェーンが破損がないことを意味します。  
   
 
   
@@ -48,7 +47,7 @@ EXEC managed_backup.sp_backup_master_switch
   
 ##  <a name="Arguments"></a> 引数  
  @state  
- [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]の状態を設定します。 @stateパラメーターが**ビット**します。 値を 0 に設定した場合は操作が一時停止し、値を 1 に設定した場合は操作が再開されます。  
+ 状態を設定[!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]します。 @stateパラメーターが **ビット** します。 値 0、操作が一時停止しに設定すると、値 1 は操作が再開に設定するとします。  
   
 ## <a name="return-code-value"></a>リターン コード値  
  0 (成功) または 1 (失敗)  
@@ -80,7 +79,7 @@ Go
   
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [Microsoft Azure への SQL Server マネージド バックアップ](../../relational-databases/backup-restore/sql-server-managed-backup-to-microsoft-azure.md)  
   
   

@@ -15,18 +15,17 @@ helpviewer_keywords:
 ms.assetid: 5222c4ff-890c-4d57-8506-c065a5ebfd3e
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: d265f405bdebac9a44461ca3b262935eaaba25bd
-ms.sourcegitcommit: bfa10c54e871700de285d7f819095d51ef70d997
+ms.openlocfilehash: a80d869afe67317476a1d68c28afa5456a4a7366
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/14/2019
-ms.locfileid: "54254477"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68077669"
 ---
 # <a name="functions-on-string-values---lower-case"></a>文字列値に使用する関数 - lower-case
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
-  Lower-case 関数内の各文字を変換する *$arg*と等価の小文字を区別します。 Unicode コード ポイント用の Microsoft Windows バイナリ大文字/小文字変換では、文字を小文字に変換する方法が指定されています。 この標準は、Unicode コード ポイントのマップの標準とは異なります。  
+  Lower-case 関数内の各文字を変換する *$arg*と等価の小文字を区別します。 Unicode コード ポイント用 Microsoft Windows バイナリ大文字/小文字の変換では、文字を小文字に変換する方法を指定します。 この標準は、Unicode コード ポイントの標準のマッピングと同じではありません。  
   
 ## <a name="syntax"></a>構文  
   
@@ -39,7 +38,7 @@ fn:lower-case($arg as xs:string?) as xs:string
   
 |||  
 |-|-|  
-|項目|定義|  
+|用語|定義|  
 |*$arg*|小文字に変換する文字列値。|  
   
 ## <a name="remarks"></a>コメント  
@@ -47,7 +46,7 @@ fn:lower-case($arg as xs:string?) as xs:string
   
 ## <a name="examples"></a>使用例  
   
-### <a name="a-changing-a-string-to-upper-case"></a>A. 文字列を大文字に変更する  
+### <a name="a-changing-a-string-to-upper-case"></a>A. 文字列を大文字に変更します。  
  次の例では、変更、入力文字列 ' abcDEF!@4' 小文字にします。  
   
 ```  
@@ -59,7 +58,7 @@ SELECT @x.value('fn:lower-case(/text()[1])', 'nvarchar(10)');
   
  `abcdef!@4`  
   
-### <a name="b-search-for-a-specific-character-string"></a>B. 特定の文字列を検索する  
+### <a name="b-search-for-a-specific-character-string"></a>B. 特定の文字の文字列を検索します。  
  この例では、lower-case 関数を使用して、大文字と小文字を区別せずに検索を行う方法を示しています。  
   
 ```  
@@ -123,7 +122,7 @@ where CatalogDescription.exist('
   
  `</Prod>`  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [xml データ型に対する XQuery 関数](../xquery/xquery-functions-against-the-xml-data-type.md)  
   
   

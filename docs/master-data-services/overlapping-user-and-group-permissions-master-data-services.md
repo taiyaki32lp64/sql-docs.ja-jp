@@ -1,5 +1,5 @@
 ---
-title: ユーザー アクセス許可とグループ アクセス許可の重複 (マスター データ サービス) | Microsoft Docs
+title: ユーザー権限とグループ権限の重複
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -12,15 +12,14 @@ helpviewer_keywords:
 - permissions [Master Data Services], user and group overlaps
 - groups [Master Data Services], resolving permissions
 ms.assetid: 31c3cf7d-17d4-4474-b6a7-ffcb9fc45b37
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 6b337b716905523d78d3e49d60477c7b6f29f72f
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
-ms.translationtype: HT
+ms.openlocfilehash: 2df45ce2a08e545bc7da11ab3f97df8aa86b0c26
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52765324"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73727935"
 ---
 # <a name="overlapping-user-and-group-permissions-master-data-services"></a>ユーザー権限とグループ権限の重複 (Master Data Services)
 
@@ -38,7 +37,7 @@ ms.locfileid: "52765324"
   
 -   アクセス権限は、グループに適用されるすべての権限の組み合わせになります。 あるグループのオブジェクト権限が **作成** であり、別のグループでは **更新** である場合、適用される権限は **作成** および **更新**になります。  
   
- 上記のルールは、 **[モデル]** タブと **[階層メンバー]** タブに適用されます。 権限は、各タブで解決された後で組み合わされます。 詳細については、「 [権限の決定方法 (マスター データ サービス)](../master-data-services/how-permissions-are-determined-master-data-services.md)になります。  
+ 上記のルールは、 **[モデル]** タブと **[階層メンバー]** タブに適用されます。 権限は、各タブで解決された後で組み合わされます。 詳細については、「[権限の決定方法 (マスター データ サービス)](../master-data-services/how-permissions-are-determined-master-data-services.md)」を参照してください。  
   
 > [!NOTE]  
 >  ユーザー権限とグループ権限の重複がどのように解決されているかは、ユーザー インターフェイスに表示できます。 **[モデル]** タブと **[階層メンバー]** タブにはドロップダウン リストがあり、そこから **[有効]** をクリックして有効な権限を表示できます。  
@@ -54,7 +53,7 @@ ms.locfileid: "52765324"
   
  グループ 2 には、Product エンティティに対する **読み取り** 権限が与えられています。  
   
- 結果:ユーザーの有効な権限は、Product エンティティに対する **更新** 権限となります。  
+ 結果: ユーザーの有効な権限は、Product エンティティに対する **更新** 権限となります。  
   
 ## <a name="example-2"></a>例 2  
  ![mds_conc_user_group_ex_2](../master-data-services/media/mds-conc-user-group-ex-2.gif "mds_conc_user_group_ex_2")  
@@ -67,7 +66,7 @@ ms.locfileid: "52765324"
   
  グループ 2 には、Product エンティティに対する **拒否** 権限が与えられています。  
   
- 結果:ユーザーの有効な権限は、Product エンティティに対する **拒否** 権限となります。  
+ 結果: ユーザーの有効な権限は、Product エンティティに対する **拒否** 権限となります。  
   
 ## <a name="example-3"></a>例 3  
  ![mds_conc_user_group_ex_3](../master-data-services/media/mds-conc-user-group-ex-3.gif "mds_conc_user_group_ex_3")  
@@ -80,10 +79,10 @@ ms.locfileid: "52765324"
   
  グループ 2 には、階層ノードのメンバーのグループに対する **読み取り** 権限が与えられています。  
   
- 結果:ユーザーの有効な権限は、メンバーに対する **更新** 権限となります。  
+ 結果: ユーザーの有効な権限は、メンバーに対する **更新** 権限となります。  
   
 ## <a name="see-also"></a>参照  
  [権限の決定方法 (マスター データ サービス)](../master-data-services/how-permissions-are-determined-master-data-services.md)   
- [モデル アクセス許可とメンバー アクセス許可の重複 (マスター データ サービス)](../master-data-services/overlapping-model-and-member-permissions-master-data-services.md)  
+ [モデル権限とメンバー権限の重複 (マスター データ サービス)](../master-data-services/overlapping-model-and-member-permissions-master-data-services.md)  
   
   

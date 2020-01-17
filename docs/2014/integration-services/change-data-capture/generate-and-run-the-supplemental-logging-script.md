@@ -9,15 +9,15 @@ ms.topic: conceptual
 f1_keywords:
 - supLog
 ms.assetid: 6e940d93-12c6-4cda-9333-5489b245f0e4
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 4d7ba428b22044c8138b57fadd87dc190bd51865
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: b5bfbff70d29e2b7b18c82b323d3ab34a3c6c60e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52779974"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62835477"
 ---
 # <a name="generate-and-run-the-supplemental-logging-script"></a>補足ログ スクリプトの生成および実行
   補足ログを設定する Oracle ソース データベースでスクリプトを実行するには、[変更をキャプチャするためのテーブルの設定] ページを使用します。  

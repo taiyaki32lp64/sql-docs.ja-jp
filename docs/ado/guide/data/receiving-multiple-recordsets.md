@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 2a7ad7a6-f00d-4355-b0b5-d0ab957b0566
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: e70dc047456549b625a1e66250d413009293f4a0
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 6d6e649201b8bf23a1b696d574baea2f4b049e06
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47684237"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67924532"
 ---
 # <a name="receiving-multiple-recordsets"></a>複数のレコードセットの受信
 [Microsoft OLE DB Provider for SQL Server](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-sql-server.md)複数取得できます**レコード セット**オブジェクトが複数の SQL ステートメントを含む 1 つのコマンドの 1 つ**Recordset**あたりの SQL ステートメント。 順序、 **Recordset**s には、コマンド テキスト内の SQL ステートメントの配置の順序が返されます。  

@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 ms.assetid: bfda2e04-2d82-4534-bb50-90925f7386ae
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 472582e7a365a3e9bb9e94e4cb26a1b923519544
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: bc19a1813e81847912ac43f607cead8423850af5
+ms.sourcegitcommit: f912c101d2939084c4ea2e9881eb98e1afa29dad
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56016263"
+ms.lasthandoff: 10/23/2019
+ms.locfileid: "72796367"
 ---
 # <a name="manage-a-reporting-services-sharepoint-service-application"></a>Manage a Reporting Services SharePoint Service Application
   [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] サービス アプリケーションは、SharePoint サーバーの全体管理で管理されます。 管理ページとプロパティ ページを使用して、サービス アプリケーションや一般的な管理タスクの構成を更新できます。  
@@ -44,7 +43,7 @@ ms.locfileid: "56016263"
   
 2.  サービス アプリケーションの名前の近くか、または **[種類]** 列をクリックして列全体を選択し、SharePoint リボンで **[プロパティ]** をクリックします。  
   
- サービス アプリケーションのプロパティの詳細については、次を参照してください。[手順 3。Reporting Services サービス アプリケーションの作成](../../2014/sql-server/install/install-reporting-services-sharepoint-mode-for-sharepoint-2013.md#bkmk_create_serrviceapplication)」の「サービス アプリケーション」セクションをご覧ください。  
+ サービス アプリケーション プロパティの詳細については、「[ 3: Reporting Services サービス アプリケーションの作成](../../2014/sql-server/install/install-reporting-services-sharepoint-mode-for-sharepoint-2013.md#bkmk_create_serrviceapplication)」を参照してください。  
   
 ##  <a name="bkmk_openpages"></a> サービス アプリケーションの管理ページを開くには  
  [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] サービス アプリケーションの管理ページを開くには、次の手順を実行します。  
@@ -91,7 +90,7 @@ ms.locfileid: "56016263"
   
 |設定|コメント|  
 |-------------|--------------|  
-|実行のログ記録を有効にする|既定値は TRUE です。<br /><br /> レポート サーバーでトレース ログを生成するかどうかと、ログの保持日数を指定します。 をクリックします。 ログは、レポート サーバー コンピューターの \Microsoft SQL Server\MSSQL.n\ReportServer\Log フォルダーに格納されます。 サービスを再起動するたび、新しいログ ファイルが生成されます。 ログ ファイルの詳細については、「 [Report Server Service Trace Log](report-server/report-server-service-trace-log.md)」を参照してください。|  
+|実行のログ記録を有効にする|既定値は TRUE です。<br /><br /> レポート サーバーでトレース ログを生成するかどうかと、ログの保持日数を指定します。 と呼ばれています。 ログは、レポート サーバー コンピューターの \Microsoft SQL Server\MSSQL.n\ReportServer\Log フォルダーに格納されます。 サービスを再起動するたび、新しいログ ファイルが生成されます。 ログ ファイルの詳細については、「 [Report Server Service Trace Log](report-server/report-server-service-trace-log.md)」を参照してください。|  
 |実行ログの保持日数|既定の日数は 60 日です。|  
   
  [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] はすべて、SharePoint ULS ログをサポートしています。  詳細については、「 [SharePoint トレース ログの Reporting Services イベントをオンにする (ULS)](report-server/turn-on-reporting-services-events-for-the-sharepoint-trace-log-uls.md)  
@@ -126,7 +125,7 @@ ms.locfileid: "56016263"
 > [!IMPORTANT]  
 >  セキュリティを高めるために、Reporting Services の暗号化キーは定期的に変更することをお勧めします。 キーを変更する推奨されるタイミングは、Reporting Services のメジャー バージョンのアップグレードの直後です。 アップグレード後であれば、アップグレード サイクル以外での Reporting Services の暗号化キーの変更に伴う他のサービスの中断を最小限に抑えることができます。  
   
-|ページ|説明|  
+|[ページ]|Description|  
 |----------|-----------------|  
 |暗号化キーのバックアップ|1) **[パスワード]** ボックスと **[パスワードの確認入力]** ボックスにパスワードを入力し、 **[エクスポート]** をクリックします。 入力したパスワードがドメイン ポリシーの複雑さの要件を満たしていない場合は、警告が表示されます。<br /><br /> 2) キー ファイルを保存する場所を指定するよう求められます。 キー ファイルは、 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]を実行しているコンピューターとは別のコンピューター上に保存することをお勧めします。 既定のファイル名は、サービス アプリケーションと同じ名前です。|  
 |暗号化キーの復元|1) キー ファイルを入力するか、または **[ファイルの場所]** ボックスでファイルの場所を参照します。<br /><br /> 2) **[パスワード]** ボックスで、暗号化ファイルのバックアップに使用されたパスワードを入力します。<br /><br /> 3) **[OK]** をクリックします。|  
@@ -150,20 +149,20 @@ ms.locfileid: "56016263"
   
  UEAccount プロパティを使用して [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] サービス アプリケーションの一覧を返す PowerShell コマンドの例を次に示します。  
   
-```  
-Get-SPRSServiceApplication | select typename, name, service, ueaccountname  
+```powershell
+Get-SPRSServiceApplication | Select typename, name, service, ueaccountname  
 ```  
   
  詳細については、「 [Reporting Services SharePoint モード用の PowerShell コマンドレット](../../2014/reporting-services/powershell-cmdlets-for-reporting-services-sharepoint-mode.md)」をご覧ください。  
   
-### <a name="options"></a>および  
+### <a name="options"></a>[データベースの復元]  
  **[実行アカウントの指定]**  
  アカウントを指定します。  
   
  **アカウント**  
  Windows のドメイン ユーザー アカウントを入力します。 *\<ドメイン>\\<ユーザー アカウント\>* の形式を使用します。  
   
- **Password**  
+ **[パスワード]**  
  パスワードを入力します。  
   
  **[パスワードの確認入力]**  
@@ -172,7 +171,7 @@ Get-SPRSServiceApplication | select typename, name, service, ueaccountname
 ##  <a name="bkmk_email"></a> 電子メールの設定  
  このページを使用すると、レポート サーバーからのレポート サーバー電子メール配信を有効にする簡易メール転送プロトコル (SMTP) の設定を指定できます。 レポート サーバーの電子メール配信拡張機能により、電子メール サブスクリプションを通じてレポートやレポート処理通知を配信できます。 レポート サーバーの電子メール配信拡張機能を使用するには、SMTP サーバーと、差出人フィールドに使用する電子メール アドレスが必要です。  
   
-### <a name="options"></a>および  
+### <a name="options"></a>[データベースの復元]  
  **[SMTP サーバーの使用]**  
  レポート サーバー電子メールが SMTP サーバーによってルーティングされるように指定します。  
   

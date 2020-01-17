@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 9c656963-531e-4cd1-b698-d5f42a9b7ba3
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 5015888cfafcce56c97f2369d418ed7be842dd28
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d44ac908c04338f80c18699319f75a068370c3e0
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47725960"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67938454"
 ---
 # <a name="filteraxis-property-ado-md"></a>FilterAxis プロパティ (ADO MD)
 現在のフィルター情報を示します[セルセット](../../../ado/reference/ado-md-api/cellset-object-ado-md.md)します。  
@@ -38,7 +37,7 @@ ms.locfileid: "47725960"
 ## <a name="applies-to"></a>適用対象  
  [CellSet オブジェクト (ADO MD)](../../../ado/reference/ado-md-api/cellset-object-ado-md.md)  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [軸オブジェクト (ADO MD)](../../../ado/reference/ado-md-api/axis-object-ado-md.md)   
  [Dimension オブジェクト (ADO MD)](../../../ado/reference/ado-md-api/dimension-object-ado-md.md)   
  [DimensionCount プロパティ (ADO MD)](../../../ado/reference/ado-md-api/dimensioncount-property-ado-md.md)

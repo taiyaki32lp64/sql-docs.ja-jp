@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 helpviewer_keywords:
 - aliases [SQL Server], columns
@@ -13,12 +12,12 @@ ms.assetid: fee7328f-6e8d-4005-930b-56fb6f17e0b2
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: dc1b7dc07b959a3ce1ff9ae4c1e82ece0c900431
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 1f4328c6a70c00766979a13bbcf8dc2b8bd77f42
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48175622"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66096319"
 ---
 # <a name="column-aliases-in-order-by-clause-cannot-be-prefixed-by-table-alias"></a>ORDER BY 句の列の別名をテーブル別名によってプレフィックス指定できない
   [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 以降では、ORDER BY 句の列の別名はテーブル別名によってプレフィックス指定できません。  
@@ -71,8 +70,8 @@ FROM Person.Contact p
 ORDER BY p.LastName  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [データベース エンジンのアップグレードに関する問題](../../../2014/sql-server/install/database-engine-upgrade-issues.md)   
- [SQL Server 2014 アップグレード アドバイザー&#91;新規&#93;](/sql/2014/sql-server/install/sql-server-2014-upgrade-advisor)  
+ [SQL Server 2014 アップグレード アドバイザー&#91;新規&#93;](sql-server-2014-upgrade-advisor.md)  
   
   

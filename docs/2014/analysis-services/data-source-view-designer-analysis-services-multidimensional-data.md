@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.dsvdesigner.f1
@@ -15,12 +14,12 @@ ms.assetid: 6f40a074-761f-440b-a999-09b755bd86ce
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: b0fc58cf501cf758c6b76a7445d0abfde3e227ad
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 9153a2d07653872ca6ce1f90e39c90f32da21fba
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48075312"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66082522"
 ---
 # <a name="data-source-view-designer-analysis-services---multidimensional-data"></a>データ ソース ビュー デザイナー (Analysis Services - 多次元データ)
   データ ソース ビュー (DSV) は、多次元モデル内でキューブやディメンションを作成するために使用される外部リレーショナル データ ソースの論理ビューです。  
@@ -46,14 +45,14 @@ ms.locfileid: "48075312"
   
 |||  
 |-|-|  
-|列またはテーブルの名前を変更するか、新しい計算列を作成する。 たとえば、名と姓を結合して、新しフル ネーム列を作成します。|[データ ソース ビューで名前付き計算の定義&#40;Analysis Services&#41;](multidimensional-models/define-named-calculations-in-a-data-source-view-analysis-services.md)|  
-|テーブルのリレーションシップの手動での追加|[データ ソース ビューで論理リレーションシップの定義&#40;Analysis Services&#41;](multidimensional-models/define-logical-relationships-in-a-data-source-view-analysis-services.md)|  
-|T-SQL クエリに基づいて新しいオブジェクトを定義する、名前付きクエリを作成します。|[データ ソース ビューで名前付きクエリの定義&#40;Analysis Services&#41;](multidimensional-models/define-named-queries-in-a-data-source-view-analysis-services.md)|  
-|基になるデータを探索し、モデル オブジェクトによって表される実際のデータ値を表示します。<br /><br /> データ探索では、基になるディメンション テーブルやクエリから返されるデータを視覚的に検査し、コピーすることができます。 既定では、データ探索には上から順に取得するサンプリング方法が使用され、サンプル数は 5,000 ですが、これらの設定は変更できます。|[データ ソース ビュー内のデータを探索&#40;Analysis Services&#41;](multidimensional-models/explore-data-in-a-data-source-view-analysis-services.md)|  
-|DSV のテーブルとリレーションシップのすべてまたは一部の図示|[データ ソース ビュー デザイナーのダイアグラムの使用&#40;Analysis Services&#41;](multidimensional-models/work-with-diagrams-in-data-source-view-designer-analysis-services.md)|  
+|列またはテーブルの名前を変更するか、新しい計算列を作成する。 たとえば、名と姓を結合して、新しフル ネーム列を作成します。|[データ ソース ビューでの名前付き計算の定義 (Analysis Services)](multidimensional-models/define-named-calculations-in-a-data-source-view-analysis-services.md)|  
+|テーブルのリレーションシップの手動での追加|[データ ソース ビューでの論理リレーションシップの定義 (Analysis Services)](multidimensional-models/define-logical-relationships-in-a-data-source-view-analysis-services.md)|  
+|T-SQL クエリに基づいて新しいオブジェクトを定義する、名前付きクエリを作成します。|[データ ソース ビューでの名前付きクエリの定義 (Analysis Services)](multidimensional-models/define-named-queries-in-a-data-source-view-analysis-services.md)|  
+|基になるデータを探索し、モデル オブジェクトによって表される実際のデータ値を表示します。<br /><br /> データ探索では、基になるディメンション テーブルやクエリから返されるデータを視覚的に検査し、コピーすることができます。 既定では、データ探索には上から順に取得するサンプリング方法が使用され、サンプル数は 5,000 ですが、これらの設定は変更できます。|[データ ソース ビューでのデータの検索 (Analysis Services)](multidimensional-models/explore-data-in-a-data-source-view-analysis-services.md)|  
+|DSV のテーブルとリレーションシップのすべてまたは一部の図示|[データ ソース ビュー デザイナーでのダイアグラムの操作 &#40;Analysis Services&#41;](multidimensional-models/work-with-diagrams-in-data-source-view-designer-analysis-services.md)|  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [多次元モデルのデータ ソース ビュー](multidimensional-models/data-source-views-in-multidimensional-models.md)   
- [ソース ビューのテーブルまたはデータ ビューの追加または削除&#40;Analysis Services&#41;](multidimensional-models/adding-or-removing-tables-or-views-in-a-data-source-view-analysis-services.md)  
+ [データ ソース ビューでのテーブルまたはビューの追加または削除 (Analysis Services)](multidimensional-models/adding-or-removing-tables-or-views-in-a-data-source-view-analysis-services.md)  
   
   

@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: c19e9ca6-2a53-4a0c-91ab-80090c3f7229
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 462de181aca55cce38d1e26f7932fe0003a0c323
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 9a19bd01a8ebf54eb3e819bd4a82400b8107e382
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47730326"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67954024"
 ---
 # <a name="getbestrowidentifier-method-sqlserverdatabasemetadata"></a>getBestRowIdentifier メソッド (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -73,7 +72,7 @@ public java.sql.ResultSet getBestRowIdentifier(java.lang.String catalog,
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- この getBestRowIdentifier メソッドは、java.sql.DatabaseMetaData インターフェイスで getBestRowIdentifier メソッドによって指定されます。  
+ この getBestRowIdentifier メソッドは、getBestRowIdentifier メソッドによって、java メタデータインターフェイスで指定されます。  
   
  getBestRowIdentifier メソッドによって返される結果セットには、次の情報が含まれます。  
   
@@ -83,8 +82,8 @@ public java.sql.ResultSet getBestRowIdentifier(java.lang.String catalog,
 |COLUMN_NAME|String|列の名前です。|  
 |DATA_TYPE|short|java.sql.Types の SQL データ型です。|  
 |TYPE_NAME|String|データ型の名前です。|  
-|COLUMN_SIZE|ssNoversion|列の完全桁数です。|  
-|BUFFER_LENGTH|ssNoversion|バッファーの長さです。|  
+|COLUMN_SIZE|INT|列の完全桁数です。|  
+|BUFFER_LENGTH|INT|バッファーの長さです。|  
 |DECIMAL_DIGITS|short|列の小数点以下の桁数です。|  
 |PSEUDO_COLUMN|short|列が擬似列かどうかを示します。 次のいずれかの値を指定できます。<br /><br /> bestRowUnknown (0)<br /><br /> bestRowNotPseudo (1)<br /><br /> bestRowPseudo (2)|  
   

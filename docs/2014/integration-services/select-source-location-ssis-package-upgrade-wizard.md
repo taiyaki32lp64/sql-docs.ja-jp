@@ -4,21 +4,20 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.is.upgradewizard.selectsourcelocation.f1
 ms.assetid: 429f146e-edb4-4401-a225-f2c8468971c5
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 7d553bd07dd72ec136c5ec449f67b84dea2d6c57
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 1ba348d3a47945bf9bb4f375310c5c92e6be7705
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48228543"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66055942"
 ---
 # <a name="select-source-location-ssis-package-upgrade-wizard"></a>[ソースの場所を選択] (SSIS パッケージ アップグレード ウィザード)
   **[ソースの場所を選択]** ページを使用すると、パッケージのアップグレード元を指定できます。  
@@ -68,7 +67,7 @@ ms.locfileid: "48228543"
  **Password**  
  サーバーへの接続時に [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 認証で使用するパスワードを入力します。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [Integration Services パッケージのアップグレード](install-windows/upgrade-integration-services-packages.md)  
   
   

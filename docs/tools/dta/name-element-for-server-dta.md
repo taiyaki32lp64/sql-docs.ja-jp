@@ -1,5 +1,5 @@
 ---
-title: サーバー (DTA) の要素を名 |Microsoft Docs
+title: Server の Name 要素 (DTA) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -12,15 +12,14 @@ dev_langs:
 helpviewer_keywords:
 - Name element
 ms.assetid: 4c94754d-6d62-4357-8ce7-f107ebf90c71
-author: stevestein
-ms.author: sstein
-manager: craigg
-ms.openlocfilehash: b4029b80f14937f01a1de2449a8798802072a126
-ms.sourcegitcommit: 0f7cf9b7ab23df15624d27c129ab3a539e8b6457
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 86a6efb1f088b9ff41e51d74008e53bc7cfb6699
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51291738"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68034694"
 ---
 # <a name="name-element-for-server-dta"></a>Server の Name 要素 (DTA)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

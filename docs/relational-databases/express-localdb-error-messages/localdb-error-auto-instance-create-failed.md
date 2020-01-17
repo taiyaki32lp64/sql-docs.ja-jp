@@ -9,13 +9,12 @@ ms.topic: reference
 ms.assetid: ca7d2c05-2bde-4284-bb17-aa7fd8d7b20a
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 99816e145ede3503f45200f550445e069f80f9e7
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 8920ef798a1ee9f16da8e80f994407ab3a7eedec
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47669640"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67996053"
 ---
 # <a name="localdberrorautoinstancecreatefailed"></a>LOCALDB_ERROR_AUTO_INSTANCE_CREATE_FAILED
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

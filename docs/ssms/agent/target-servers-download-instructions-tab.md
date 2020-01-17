@@ -1,5 +1,5 @@
 ---
-title: '[対象サーバー] ダイアログ ボックス ([ダウンロード命令] タブ) | Microsoft Docs'
+title: '[ターゲット サーバー] ダイアログ ボックス ([ダウンロード命令] タブ) | Microsoft Docs'
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -10,33 +10,32 @@ ms.topic: conceptual
 f1_keywords:
 - sql13.ag.target.download.f1
 ms.assetid: e4043087-816c-4b66-8cd5-f0eba13a7649
-author: stevestein
-ms.author: sstein
-manager: craigg
+author: markingmyname
+ms.author: maghan
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: aeadcc3de3e7b183bf89c09f2287984db814589b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d7609b8f6dd7e5ab4b63b04fe2c559aae10745a3
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47799240"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68256255"
 ---
-# <a name="target-servers-download-instructions-tab"></a>[対象サーバー] ダイアログ ボックス ([ダウンロード命令] タブ)
+# <a name="target-servers-download-instructions-tab"></a>[ターゲット サーバー] ダイアログ ボックス ([ダウンロード命令] タブ)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
 > [!IMPORTANT]  
 > [Azure SQL Database Managed Instance](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance) では現在、すべてではありませんがほとんどの SQL Server エージェントの機能がサポートされています。 詳細については、「[Azure SQL Database Managed Instance と SQL Server の T-SQL の相違点](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent)」を参照してください。
 
-このページを使用すると、1 つ以上の対象サーバーに対するダウンロード命令の表示および更新ができます。  
+このページを使用すると、1 つ以上のターゲット サーバーに対するダウンロード命令の表示および更新ができます。  
   
-## <a name="options"></a>[変数]  
-**[対象サーバー]**  
+## <a name="options"></a>オプション  
+**[ターゲット サーバー]**  
 命令の表示または変更を行うサーバーを選択します。  
   
 **[ジョブ]**  
 命令の表示または変更を行うジョブを選択します。  
   
-**[対象サーバー]**  
+**[ターゲット サーバー]**  
 ダウンロード命令を適用するサーバーの名前が表示されます。  
   
 **操作**  

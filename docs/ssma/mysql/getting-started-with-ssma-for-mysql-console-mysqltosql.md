@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 218d502c-059f-4d48-9aea-61e553d74303
 author: Shamikg
 ms.author: Shamikg
-manager: craigg
-ms.openlocfilehash: 07c1c226d33a213dd9bd071c59d9771a0e0ca736
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 88cf4716ea02b8c5dbcbd73e9839c6bacfbed10b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47848858"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68075423"
 ---
 # <a name="getting-started-with-ssma-for-mysql-console-mysqltosql"></a>SSMA for MySQL コンソール入門 (MySQLToSQL)
 このセクションを起動し、MySQL のコンソール アプリケーションを使用する手順について説明します。 一覧表示、ここで、規則で使用されます SSMA コンソールの一般的な出力ウィンドウ。  

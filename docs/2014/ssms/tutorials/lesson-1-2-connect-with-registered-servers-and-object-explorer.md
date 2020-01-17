@@ -11,11 +11,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 374d75c18adc091eaf6a01ae1164a529a34accee
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52521315"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62636426"
 ---
 # <a name="connect-with-registered-servers-and-object-explorer"></a>登録済みサーバーおよびオブジェクト エクスプローラーを使用した接続
   このチュートリアルでは、登録済みサーバーとオブジェクト エクスプローラーの使用方法について説明します。  

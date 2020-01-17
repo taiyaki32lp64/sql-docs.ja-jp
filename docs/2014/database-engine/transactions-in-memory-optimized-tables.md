@@ -11,11 +11,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: bc72eeeb154749b0e889b495fab79bb8bf86db10
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48195622"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62843105"
 ---
 # <a name="transactions-in-memory-optimized-tables"></a>メモリ最適化テーブルでのトランザクション
   ディスク ベース テーブルでの行のバージョン管理 (SNAPSHOT 分離または READ_COMMITTED_SNAPSHOT を使用) では、オプティミスティック コンカレンシーの形式を使用します。 リーダーとライターは相互にブロックしません。 メモリ最適化テーブルでは、ライターはライターをブロックしません。 ディスク ベース テーブルの行のバージョン管理では、あるトランザクションが行をロックすると、この行を更新しようとする同時実行トランザクションがブロックされます。 メモリ最適化テーブルの場合は、ロックは生じません。 その代わり、2 つのトランザクションで同じ行を更新しようとすると、書き込みと書き込みの競合 (エラー 41302) が発生することになります。  

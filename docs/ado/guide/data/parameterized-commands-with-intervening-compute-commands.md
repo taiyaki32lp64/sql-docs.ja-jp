@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 732f624f-8900-4608-9815-194302d22e8b
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 9e892aed72ba1d74f9bdafc319c71a39546f4402
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: fb6bc2b9f7e53caf28f44daf39815850940b9d3a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52527665"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67924725"
 ---
 # <a name="parameterized-commands-with-intervening-compute-commands"></a>介在する COMPUTE コマンドを含むパラメーター化されたコマンド
 一般的なパラメーター化された shape の APPEND コマンドが親を作成する句を**レコード セット**クエリ コマンドと子を作成するもう 1 つの句**Recordset**でパラメーター化クエリ コマンド -パラメーターのプレース ホルダーを含むコマンドは、(、疑問符"?")。 シェイプ**レコード セット**親が上位のレベルを占有する 2 つのレベルがあり、子は、下位のレベルを占有します。  
@@ -30,5 +29,5 @@ ms.locfileid: "52527665"
   
  介在するを作成するためのコマンドは、この機能を shapeCOMPUTE の能力をグループ化および集計関数を呼び出す一般的な使用**Recordset**子に関する分析情報を持つオブジェクト**レコード セット**. さらに、これはパラメーター化された図形コマンドであるため、毎回、親のチャプター列は、新しい子**Recordset**を取得できます。 間のレベルは、子から派生した、ため、これらも再計算されます。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [データ シェイプの例](../../../ado/guide/data/data-shaping-example.md)

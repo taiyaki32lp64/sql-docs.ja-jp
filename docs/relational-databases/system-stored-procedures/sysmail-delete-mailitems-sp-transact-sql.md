@@ -1,5 +1,5 @@
 ---
-title: sysmail_delete_mailitems_sp (TRANSACT-SQL) |Microsoft Docs
+title: sysmail_delete_mailitems_sp (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -17,18 +17,17 @@ helpviewer_keywords:
 ms.assetid: f87c9f4a-bda1-4bce-84b2-a055a3229ecd
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 4c1e161a678b6834123aabf1eb5126445927a7fe
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ad69cc6933b4f3d51d3b9ec11fad4edd6d555abe
+ms.sourcegitcommit: dc8697bdd950babf419b4f1e93b26bb789d39f4a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47650783"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70846639"
 ---
-# <a name="sysmaildeletemailitemssp-transact-sql"></a>sysmail_delete_mailitems_sp (Transact-SQL)
+# <a name="sysmail_delete_mailitems_sp-transact-sql"></a>sysmail_delete_mailitems_sp (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  データベース メールの内部テーブルから電子メール メッセージを完全に削除します。  
+  データベースメール内部テーブルから電子メールメッセージを完全に削除します。  
   
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -41,22 +40,20 @@ sysmail_delete_mailitems_sp  [ [ @sent_before = ] 'sent_before' ]
 ```  
   
 ## <a name="arguments"></a>引数  
- [ **@sent_before=** ] **'***sent_before***'**  
- として指定された日時まで電子メールを削除、 *@sent_before*引数。 *@sent_before*は**datetime**で、既定値は NULL です。 NULL はすべての日付を表します。  
+`[ \@sent_before = ] 'sent_before'` は、 *sent_before*引数として指定された日時までの電子メールを削除します。 *sent_before*は**datetime**で、既定値は NULL です。 NULL はすべての日付を表します。  
   
- [ **@sent_status=** ] **'***sent_status***'**  
- 指定された型の電子メールを削除*sent_status*します。 *sent_status*は**varchar (8)** 既定値はありません。 有効なエントリは**送信**、**未送信**、**再試行**と**失敗**します。 NULL はすべての状態を表します。  
+*sent_status*によって指定された種類の電子メールを `[ \@sent_status = ] 'sent_status'` 削除します。 *sent_status*は**varchar (8)** で、既定値はありません。 有効なエントリは、**送信済み**、**未送信**、**再試行**中、および**失敗**です。 NULL はすべての状態を表します。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  **0** (成功) または**1** (失敗)  
   
-## <a name="remarks"></a>コメント  
- データベース メール メッセージと添付ファイルに格納されます、 **msdb**データベース。 メッセージを防ぐために定期的に削除する**msdb**が予想よりも大きくと、組織のドキュメント保有期間のプログラムに準拠するようにします。 使用して、 **sysmail_delete_mailitems_sp**ストアド プロシージャをデータベース メールのテーブルから電子メール メッセージを完全に削除します。 日時を指定する引数を使用すると、古い電子メールだけを削除できます。 この場合、引数で指定した日時より前の電子メールが削除されます。 もう 1 つの省略可能な引数を使用すると、特定の種類、として指定した電子メールだけを削除、 **sent_status**引数。 いずれかの引数を指定する必要があります**@sent_before**または **@sent_status**します。 すべてのメッセージを削除する使用 **@sent_before = getdate()** します。  
+## <a name="remarks"></a>Remarks  
+ データベースメールメッセージとその添付ファイルは、 **msdb**データベースに格納されます。 **Msdb**が予想以上に大きくなり、組織のドキュメント保持プログラムに準拠するように、メッセージを定期的に削除する必要があります。 データベースメールテーブルから電子メールメッセージを完全に削除するには、 **sysmail_delete_mailitems_sp**ストアドプロシージャを使用します。 日時を指定する引数を使用すると、古い電子メールだけを削除できます。 この場合、引数で指定した日時より前の電子メールが削除されます。 もう1つの省略可能な引数を使用すると、 **sent_status**の引数として指定された特定の種類の電子メールのみを削除できます。 **\@sent_before**または **\@sent_status**の引数を指定する必要があります。 すべてのメッセージを削除するには、 **\@sent_before = getdate ()** を使用します。  
   
- 電子メールを削除すると、そのメッセージに関係する添付ファイルも削除されます。 電子メールを削除しても、対応するエントリは削除されません**sysmail_event_log**します。 使用[sysmail_delete_log_sp](../../relational-databases/system-stored-procedures/sysmail-delete-log-sp-transact-sql.md)ログからアイテムを削除します。  
+ 電子メールを削除すると、そのメッセージに関係する添付ファイルも削除されます。 電子メールを削除しても、 **sysmail_event_log**内の対応するエントリは削除されません。 [Sysmail_delete_log_sp](../../relational-databases/system-stored-procedures/sysmail-delete-log-sp-transact-sql.md)を使用して、ログから項目を削除します。  
   
 ## <a name="permissions"></a>アクセス許可  
- 既定では、このストアド プロシージャの実行のメンバーに許可されてオフ、 **sysadmin**固定サーバー ロールと**DatabaseMailUserRole**します。 メンバー、 **sysadmin**すべてのユーザーが送信した電子メールを削除するには、この手順を実行できるは、固定サーバー ロール。 メンバーの**DatabaseMailUserRole**のみ、そのユーザーが送信した電子メールを削除できます。  
+ 既定では、このストアドプロシージャは、 **sysadmin**固定サーバーロールおよび**databasemailuserrole**のメンバーに対して実行するために許可されています。 **Sysadmin**固定サーバーロールのメンバーは、このプロシージャを実行して、すべてのユーザーが送信した電子メールを削除できます。 **Databasemailuserrole**のメンバーは、そのユーザーによって送信された電子メールのみを削除できます。  
   
 ## <a name="examples"></a>使用例  
   
@@ -70,8 +67,8 @@ EXECUTE msdb.dbo.sysmail_delete_mailitems_sp @sent_before = @GETDATE;
 GO  
 ```  
   
-### <a name="b-deleting-the-oldest-e-mails"></a>B. 古い電子メールを削除する  
- 次の例よりも古いデータベース メール ログに電子メールを削除します。`October 9, 2005`します。  
+### <a name="b-deleting-the-oldest-e-mails"></a>b. 最も古いメールを削除する  
+ 次の例では、`October 9, 2005`よりも古いデータベースメールログ内の電子メールを削除します。  
   
 ```  
 EXECUTE msdb.dbo.sysmail_delete_mailitems_sp   
@@ -80,7 +77,7 @@ GO
 ```  
   
 ### <a name="c-deleting-all-e-mails-of-a-certain-type"></a>C. 特定の種類のすべての電子メールを削除する  
- 次の例では、データベース メール ログにある失敗した電子メールをすべて削除します。  
+ 次の例では、データベースメールログ内の失敗したすべての電子メールを削除します。  
   
 ```  
 EXECUTE msdb.dbo.sysmail_delete_mailitems_sp   
@@ -89,9 +86,9 @@ GO
 ```  
   
 ## <a name="see-also"></a>参照  
- [sysmail_allitems &#40;TRANSACT-SQL&#41;](../../relational-databases/system-catalog-views/sysmail-allitems-transact-sql.md)   
- [sysmail_event_log &#40;TRANSACT-SQL&#41;](../../relational-databases/system-catalog-views/sysmail-event-log-transact-sql.md)   
- [sysmail_mailattachments &#40;TRANSACT-SQL&#41;](../../relational-databases/system-catalog-views/sysmail-mailattachments-transact-sql.md)   
+ [transact-sql &#40;  の&#41; sysmail_allitems](../../relational-databases/system-catalog-views/sysmail-allitems-transact-sql.md)  
+ [transact-sql &#40;  の&#41; sysmail_event_log](../../relational-databases/system-catalog-views/sysmail-event-log-transact-sql.md)  
+ [transact-sql &#40;  の&#41; sysmail_mailattachments](../../relational-databases/system-catalog-views/sysmail-mailattachments-transact-sql.md)  
  [データベース メール メッセージやイベント ログをアーカイブする SQL Server エージェント ジョブの作成](../../relational-databases/database-mail/create-a-sql-server-agent-job-to-archive-database-mail-messages-and-event-logs.md)  
   
   

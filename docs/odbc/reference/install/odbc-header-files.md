@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 96f97ba3-7e73-4196-abfb-036c5f6d1903
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 8092f220d95847328e1cf37c2ca815f67f539b5b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 99ac5b590fc631292c5fe8ab91e0fafd58c38c70
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47722430"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68093973"
 ---
 # <a name="odbc-header-files"></a>ODBC ヘッダー ファイル
 > [!NOTE]  

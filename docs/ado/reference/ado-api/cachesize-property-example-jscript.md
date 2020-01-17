@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 3675f641-b4b1-48ff-ba33-8d9ea064cd04
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: f8b5dfc7affb2a6db7db0b30fa95087b3e024e00
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ac48cd3397905a3ab0d14d65006cbd4a7656555b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47648840"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67920268"
 ---
 # <a name="cachesize-property-example-jscript"></a>CacheSize プロパティの例 (JScript)
 この例では、 [CacheSize](../../../ado/reference/ado-api/cachesize-property-ado.md)と 30 レコードのキャッシュなしに実行される操作のパフォーマンスの違いを表示するプロパティ。 切り取り、メモ帳または別のテキスト エディターに次のコードを貼り付けてととして保存**CacheSizeJS.asp**します。  
@@ -149,6 +148,6 @@ body {
 <!-- EndCacheSizeJS -->  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [CacheSize プロパティ (ADO)](../../../ado/reference/ado-api/cachesize-property-ado.md)   
  [Recordset オブジェクト (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)

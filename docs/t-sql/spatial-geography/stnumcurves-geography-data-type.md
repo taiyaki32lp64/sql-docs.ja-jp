@@ -15,15 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - STNumCurves method (geography)
 ms.assetid: e98a56c2-8496-4dfd-9b37-7f3c4ca9b2b5
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: 210ca8f9a70c2b355a3fa2362fb422bbd68f7302
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: MladjoA
+ms.author: mlandzic
+ms.openlocfilehash: f7a525dedd8f5cbfbf881da63b7bb40f461bc802
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47753900"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68120932"
 ---
 # <a name="stnumcurves-geography-data-type"></a>STNumCurves (geography データ型)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
@@ -40,7 +39,7 @@ ms.locfileid: "47753900"
 ## <a name="return-types"></a>戻り値の型  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 戻り値の型: **geography**  
   
- CLR の戻り値の型: **SqlGeography**  
+ CLR の戻り値の型:**SqlGeography**  
   
 ## <a name="remarks"></a>Remarks  
  1 次元の空間データ型には、**LineString**、**CircularString**、**CompoundCurve** があります。 空の 1 次元 **geography** インスタンスは 0 を返します。す。  

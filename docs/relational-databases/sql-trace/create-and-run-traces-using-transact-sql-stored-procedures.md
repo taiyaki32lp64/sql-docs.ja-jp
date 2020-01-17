@@ -1,6 +1,6 @@
 ---
-title: Transact-SQL ストアド プロシージャを使用したトレースの作成と実行 | Microsoft Docs
-ms.custom: ''
+title: Transact-SQL ストアド プロシージャを使用したトレースの作成と実行
+ms.custom: seo-dt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 80347417-338d-4bea-8885-91fae5181cfe
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: cba8ed701ee791550c801c87c3ba901d7385ad6a
-ms.sourcegitcommit: ddb682c0061c2a040970ea88c051859330b8ac00
+ms.openlocfilehash: 3d1c5a85072bec1fc304156268680c201ad2245e
+ms.sourcegitcommit: 15fe0bbba963d011472cfbbc06d954d9dbf2d655
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51570941"
+ms.lasthandoff: 11/14/2019
+ms.locfileid: "74095642"
 ---
 # <a name="create-and-run-traces-using-transact-sql-stored-procedures"></a>Transact-SQL ストアド プロシージャを使用したトレースの作成と実行
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

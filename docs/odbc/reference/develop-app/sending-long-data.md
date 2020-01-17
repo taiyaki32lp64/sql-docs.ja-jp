@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: ea989084-a8e6-4737-892e-9ec99dd49caf
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: cc7a140d7de8548f02fde6ab309823bbe1c9c656
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: acb4ff1637c1530527af88affaf437334596016b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47616090"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68094337"
 ---
 # <a name="sending-long-data"></a>長い形式のデータの送信
 Dbms 定義*長いデータ*として任意の文字または 254 文字などの特定のサイズを超えるバイナリ データ。 項目が、長いテキスト ドキュメントまたはビットマップを表す場合など、メモリ内の長い形式のデータ項目全体を格納できない可能性があります。 このようなデータは、1 つのバッファーに格納されることはできません、ため、データ ソース ドライバーに送信する、使用して、パーツで**SQLPutData**ステートメントが実行されるとします。 実行時にデータを送信するパラメーターと呼ばれる*実行時データ パラメーター*します。  
@@ -43,6 +42,6 @@ Dbms 定義*長いデータ*として任意の文字または 254 文字など�
   
 7.  呼び出し**SQLParamData**をすべてのパラメーターのデータ、送信されたことを示すためにもう一度です。 ドライバーが SQL_NEED_DATA と次のパラメーターを識別する値を返すデータが送信されていないすべての実行時データ パラメーターがある場合アプリケーションは、手順 6 を返します。 すべての実行時データ パラメーターのデータを送信すると、ステートメントが実行されます。 **SQLParamData**返します SQL_SUCCESS、SQL_SUCCESS_WITH_INFO やことができますを返す任意の戻り値または診断を**SQLExecute**または**SQLExecDirect**返すことができます。  
   
- 後**SQLExecute**または**SQLExecDirect** SQL_NEED_DATA を返します、ステートメントが必要なデータの状態が最後の実行時データ パラメーターのデータが完全に送信されて、前にします。 ステートメントは、データの必要がある状態では、アプリケーションはのみ呼び出すことができます**SQLPutData**、 **SQLParamData**、 **SQLCancel**、 **SQLGetDiagField**、または**SQLGetDiagRec**; その他のすべての関数は、SQLSTATE HY010 を返す (関数のシーケンス エラーです)。 呼び出す**SQLCancel**ステートメントの実行をキャンセルし、前の状態に戻ります。 詳細については、次を参照してください。[付録 b: ODBC の状態遷移テーブル](../../../odbc/reference/appendixes/appendix-b-odbc-state-transition-tables.md)します。  
+ 後**SQLExecute**または**SQLExecDirect** SQL_NEED_DATA を返します、ステートメントが必要なデータの状態が最後の実行時データ パラメーターのデータが完全に送信されて、前にします。 ステートメントは、データの必要がある状態では、アプリケーションはのみ呼び出すことができます**SQLPutData**、 **SQLParamData**、 **SQLCancel**、 **SQLGetDiagField**、または**SQLGetDiagRec**; その他のすべての関数は、SQLSTATE HY010 を返す (関数のシーケンス エラーです)。 呼び出す**SQLCancel**ステートメントの実行をキャンセルし、前の状態に戻ります。 詳細については、次を参照してください[付録 b:。ODBC の状態遷移テーブル](../../../odbc/reference/appendixes/appendix-b-odbc-state-transition-tables.md)します。  
   
  実行時にデータを送信することの例は、次を参照してください。、 [SQLPutData](../../../odbc/reference/syntax/sqlputdata-function.md)関数の説明。

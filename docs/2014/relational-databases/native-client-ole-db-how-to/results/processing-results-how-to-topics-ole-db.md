@@ -13,11 +13,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: f0ffe1ae426b39742e9d50f343daf913777836cb
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48191512"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63225474"
 ---
 # <a name="processing-results-how-to-topics-ole-db"></a>結果を処理する方法に関するトピック (OLE DB)
   OLE DB アプリケーションの結果の処理では、最初に結果セットの特性を確認し、次にデータをプログラム変数に取り込みます。 コマンドでストアド プロシージャを実行する場合は、ストアド プロシージャからのリターン コードと出力パラメーターの処理方法を理解しておく必要があります。  
@@ -32,7 +32,7 @@ ms.locfileid: "48191512"
   
 -   [結果セットからの行のフェッチ (OLE DB)](fetch-rows-from-a-result-set-ole-db.md)  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>参照  
  [OLE DB の使用法に関するトピック](../ole-db-how-to-topics.md)  
   
   

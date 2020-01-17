@@ -20,15 +20,15 @@ helpviewer_keywords:
 - importing data, SSIS packages
 - sources [Integration Services], copying data
 ms.assetid: c0e4d867-b2a9-4b2a-844b-2fe45be88f81
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 6de4a59d9f042e410e1560c01e253f73811c2451
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 2f3ce90e2670357d0842b0a6ac7838f396465bab
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53374384"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62768167"
 ---
 # <a name="sql-server-import-and-export-wizard"></a>SQL Server インポートおよびエクスポート ウィザード
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]インポートおよびエクスポート ウィザードを作成する最も簡単な方法を提供する[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]先のソースからデータをコピーするパッケージ。  

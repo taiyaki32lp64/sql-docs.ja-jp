@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 290819e1-7b39-4e1e-a93b-801257138b00
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: b595baf25a8b0f3982399c384c169c6af3f1cd81
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e3c8f981d4dc40a4a6f618f3cca387379d51def9
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47612230"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67932978"
 ---
 # <a name="errors-collection-ado"></a>Errors コレクション (ADO)
 すべてが含まれています、[エラー](../../../ado/reference/ado-api/error-object.md)単一のプロバイダーに関連の障害への応答で作成されたオブジェクト。  
@@ -46,6 +45,6 @@ ms.locfileid: "47612230"
   
 -   [エラーのコレクションのプロパティ、メソッド、およびイベント](../../../ado/reference/ado-api/errors-collection-properties-methods-and-events.md)  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [Error オブジェクト](../../../ado/reference/ado-api/error-object.md)   
  [付録 A: プロバイダー](../../../ado/guide/appendixes/appendix-a-providers.md)

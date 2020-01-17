@@ -11,11 +11,11 @@ author: markingmyname
 ms.author: maghan
 manager: kfile
 ms.openlocfilehash: aa992d78e8075459115fb4a298b8c8dba02a8157
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56025293"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62676062"
 ---
 # <a name="lesson-1-creating-the-web-service-client-project"></a>レッスン 1:Web サービス クライアント プロジェクトの作成
   このチュートリアルでは、レポート サーバー Web サービスにアクセスする簡単なコンソール アプリケーションを作成します。 ここでは、[!INCLUDE[vsprvs](../includes/vsprvs-md.md)] で開発することを前提としています。  
@@ -36,7 +36,7 @@ ms.locfileid: "56025293"
   
      ソリューション エクスプ ローラーでプロジェクト ノードを展開します。 Program.cs の既定の名前のファイル (Module1.vb [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[vbprvb](../includes/vbprvb-md.md)]) がプロジェクトに追加されました。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [レッスン 2:Web 参照を追加します。](../../2014/tutorials/lesson-2-adding-a-web-reference.md)   
  [Visual Basic または Visual C を使用してレポート サーバー Web サービスにアクセスする&#35; &#40;SSRS チュートリアル&#41;](../../2014/tutorials/access-report-server-web-service-vb-vcsharp-ssrs-tutorial.md)  
   

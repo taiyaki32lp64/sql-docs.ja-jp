@@ -11,11 +11,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 6918d5542ddda98a0182bc327fbff9eb9af9714e
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52812354"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63154997"
 ---
 # <a name="sql-server-management-studio"></a>SQL Server Management Studio
   [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] は、SQL Server インフラストラクチャを管理するための統合環境です。 [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] には、SQL Server のインスタンスを構成、監視、および管理するためのツールが備わっています。 さらに、データ層コンポーネント (アプリケーションで使用されるデータベースやデータ ウェアハウス) を配置、監視、およびアップグレードするためのツールのほか、クエリやスクリプトを作成するためのツールも用意されています。  
@@ -35,8 +35,8 @@ ms.locfileid: "52812354"
 |[!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)]に付属のビジュアル デザイン ツールを使用する方法について説明します。|[Visual Database Tools](visual-db-tools/visual-database-tools.md)|  
 |[!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] 言語エディターを使用し、クエリおよびスクリプトを対話形式でビルド、デバッグする方法について説明します。|[クエリおよびテキスト エディター &#40;SQL Server Management Studio&#41;](../relational-databases/scripting/query-and-text-editors-sql-server-management-studio.md)|  
   
-## <a name="see-also"></a>参照  
- [チュートリアル:SQL Server Management Studio](tutorials/tutorial-sql-server-management-studio.md)   
- [チュートリアル:TRANSACT-SQL ステートメントの作成](../t-sql/tutorial-writing-transact-sql-statements.md)  
+## <a name="see-also"></a>関連項目  
+ [チュートリアル: SQL Server Management Studio](tutorials/tutorial-sql-server-management-studio.md)   
+ [チュートリアル: Transact-SQL ステートメントの作成](../t-sql/tutorial-writing-transact-sql-statements.md)  
   
   

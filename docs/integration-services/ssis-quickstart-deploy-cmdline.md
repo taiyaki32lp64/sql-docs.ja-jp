@@ -6,17 +6,20 @@ ms.prod: sql
 ms.prod_service: integration-services
 ms.custom: ''
 ms.technology: integration-services
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: 9646251f189a035db3de3190321a68bd34231392
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 182dcae5867cd05d508357160aecb5c46d1d5e82
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47595102"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71281776"
 ---
 # <a name="deploy-an-ssis-project-from-the-command-prompt-with-isdeploymentwizardexe"></a>ISDeploymentWizard.exe を使用して、コマンド プロンプトから SSIS プロジェクトを配置する
+
+[!INCLUDE[ssis-appliesto](../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
 このクイック スタートでは、Integration Services 配置ウィザード `ISDeploymentWizard.exe` を実行して、コマンド プロンプトから、SSIS プロジェクトを配置する方法を示します。
 
 Integration Services 配置ウィザードの詳細については、「[Integration Services 配置ウィザード](packages/deploy-integration-services-ssis-projects-and-packages.md#integration-services-deployment-wizard)」を参照してください。
@@ -42,7 +45,7 @@ SQL Server on Linux に SSIS パッケージをデプロイする場合は、こ
 プロジェクトを Azure SQL Database にデプロイするには、SSIS カタログ データベース (SSISDB) に接続するために必要な接続情報を取得します。 次の手順では、完全修飾サーバー名とログイン情報が必要です。
 
 1. [Azure ポータル](https://portal.azure.com/)にログインします。
-2. 左側のメニューから **[SQL Databases]** を選択し、**[SQL データベース]** ページで SSISDB データベースを選びます。 
+2. 左側のメニューから **[SQL Databases]** を選択し、 **[SQL データベース]** ページで SSISDB データベースを選びます。 
 3. データベースの **[概要]** ページで、完全修飾サーバー名を確認します。 **[クリックしてコピー]** オプションを表示するには、サーバー名にマウス ポインターを移動します。 
 4. Azure SQL Database サーバーのログイン情報を忘れた場合は、[SQL Database サーバー] ページに移動し、サーバーの管理者名を表示します。 必要に応じて、パスワードをリセットできます。
 
@@ -60,28 +63,28 @@ Azure SQL Database サーバーにデプロイする場合、SQL Server 認証�
     `ISDeploymentWizard.exe` を含むフォルダーが `path` 環境変数にない場合、そのディレクトリに変更するために `cd` コマンドを使用する必要がある場合があります。 SQL Server 2017 の場合、このフォルダーは通常 `C:\Program Files (x86)\Microsoft SQL Server\140\DTS\Binn` です。
 
 ## <a name="deploy-a-project-with-the-wizard"></a>ウィザードを使用してプロジェクトを配置する
-1. ウィザードの **[概要]** ページで、概要を確認します。 **[次へ]** をクリックして、**[ソースの選択]** ページを開きます。
+1. ウィザードの **[概要]** ページで、概要を確認します。 **[次へ]** をクリックして、 **[ソースの選択]** ページを開きます。
 
 2. **[ソースの選択]** ページで、配置する既存の SSIS プロジェクトを選びます。
-    -   開発環境でプロジェクトをビルドする方法で作成したプロジェクト デプロイ ファイルをデプロイするには、**[プロジェクト配置ファイル]** を選択し、.ispac ファイルのパスを入力します。
-    -   SSIS カタログ データベースに既にデプロイされているプロジェクトをデプロイするには、**[Integration Services カタログ]** を選択し、サーバー名とカタログ内のプロジェクトのパスを入力します。
+    -   開発環境でプロジェクトをビルドする方法で作成したプロジェクト デプロイ ファイルをデプロイするには、 **[プロジェクト配置ファイル]** を選択し、.ispac ファイルのパスを入力します。
+    -   SSIS カタログ データベースに既にデプロイされているプロジェクトをデプロイするには、 **[Integration Services カタログ]** を選択し、サーバー名とカタログ内のプロジェクトのパスを入力します。
     **[次へ]** をクリックして、 **[配置先の選択]** ページを表示します。
   
 3.  **[配置先の選択]** ページで、プロジェクトの配置先を選びます。
     -   完全修飾サーバー名を入力します。 ターゲット サーバーが Azure SQL Database サーバーの場合、名前は `<server_name>.database.windows.net` 形式になります。
-    -   認証情報を入力し、**[接続]** を選択します。 この記事の「[デプロイ ウィザードでの認証方法](#wizard_auth)」を参照してください。
-    -   次に、**[参照]** を選択し、SSISDB でターゲット フォルダーを選択します。
-    -   **[次へ]** を選択し、**[レビュー]** ページを開きます。 (**[次へ]** ボタンは、**[接続]** を選択した後でないと有効になりません。)
+    -   認証情報を入力し、 **[接続]** を選択します。 この記事の「[デプロイ ウィザードでの認証方法](#wizard_auth)」を参照してください。
+    -   次に、 **[参照]** を選択し、SSISDB でターゲット フォルダーを選択します。
+    -   **[次へ]** を選択し、 **[レビュー]** ページを開きます。 ( **[次へ]** ボタンは、 **[接続]** を選択した後でないと有効になりません。)
 
 4.  **[レビュー]** ページで、選択した設定を確認します。
     -   選択内容を変更するには、 **[戻る]** をクリックするか、左ペインでいずれかの手順をクリックします。
     -   **[配置]** をクリックして、配置プロセスを開始します。
 
-5.  Azure SQL Database サーバーにデプロイしている場合、**[検証]** ページが開き、Azure SSIS Integration Runtime で予定されているパッケージ実行を妨げる既知の問題がないか、プロジェクトのパッケージが調べられます。 詳細については、「[Azure にデプロイされた SSIS パッケージの検証](lift-shift/ssis-azure-validate-packages.md)」を参照してください。
+5.  Azure SQL Database サーバーにデプロイしている場合、 **[検証]** ページが開き、Azure SSIS Integration Runtime で予定されているパッケージ実行を妨げる既知の問題がないか、プロジェクトのパッケージが調べられます。 詳細については、「[Azure にデプロイされた SSIS パッケージの検証](lift-shift/ssis-azure-validate-packages.md)」を参照してください。
 
-6.  配置プロセスが完了すると、**[結果]** ページが開きます。 このページでは、各アクションが成功したか、失敗したかを表示します。
-    -   アクションが失敗した場合は、**[結果]** 列の **[失敗]** をクリックすると、エラーの説明が表示されます。
-    -   必要に応じて、**[レポートの保存]** をクリックして結果を XML ファイルに保存します。
+6.  配置プロセスが完了すると、 **[結果]** ページが開きます。 このページでは、各アクションが成功したか、失敗したかを表示します。
+    -   アクションが失敗した場合は、 **[結果]** 列の **[失敗]** をクリックすると、エラーの説明が表示されます。
+    -   必要に応じて、 **[レポートの保存]** をクリックして結果を XML ファイルに保存します。
     -   **[閉じる]** をクリックしてウィザードを終了します。
 
 ## <a name="next-steps"></a>次の手順

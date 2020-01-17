@@ -20,17 +20,20 @@ helpviewer_keywords:
 - Script component [Integration Services], about Script component
 - Script component [Integration Services]
 ms.assetid: 131c2d0c-2e33-4785-94af-ada5c049821e
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: 3e46ec694b130ca684f5437e04159436a36afd44
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: a40336899e804ee634cf586078ec7c219f31c486
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51641179"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71297877"
 ---
 # <a name="script-component"></a>スクリプト コンポーネント
+
+[!INCLUDE[ssis-appliesto](../../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   スクリプト コンポーネントはスクリプトをホストします。これにより、パッケージにカスタム スクリプト コードを含めて実行できます。 スクリプト コンポーネントは、パッケージ内で次の目的に使用できます。  
   
 -   複数の変換をデータ フロー内で使用する代わりに、複数の変換をデータに適用します。 たとえば、スクリプトによって 2 つの列に値を追加し、その合計の平均を計算できます。  
@@ -115,7 +118,7 @@ ms.locfileid: "51641179"
  スクリプト コンポーネントの詳細については、「[スクリプト コンポーネント エディターでのスクリプト コンポーネントの構成](../../../integration-services/extending-packages-scripting/data-flow-script-component/configuring-the-script-component-in-the-script-component-editor.md)」を参照してください。 スクリプト コンポーネントのプログラミングの詳細については、「 [スクリプト コンポーネントによるデータ フローの拡張](../../../integration-services/extending-packages-scripting/data-flow-script-component/extending-the-data-flow-with-the-script-component.md)」を参照してください。  
   
 ### <a name="options"></a>および  
- **[変換元]**、 **[変換先]**、または **[変換]** のどれを選択するかに応じて、スクリプト変換の構成とスクリプト変換エディターのページが変わります。  
+ **[変換元]** 、 **[変換先]** 、または **[変換]** のどれを選択するかに応じて、スクリプト変換の構成とスクリプト変換エディターのページが変わります。  
   
 ## <a name="script-transformation-editor-connection-managers-page"></a>[スクリプト変換エディター] ([接続マネージャー] ページ)
   **[スクリプト変換エディター]** の **[接続マネージャー]** ページを使用すると、スクリプトで使用される接続を指定できます。  
@@ -130,7 +133,7 @@ ms.locfileid: "51641179"
  接続を表す一意な名前を入力します。  
   
  **接続マネージャー**  
- 使用できる接続マネージャーの一覧から選択するか、[**\<新しい接続>**] を選択して **[SSIS 接続マネージャーの追加]** ダイアログ ボックスを開きます。  
+ 使用できる接続マネージャーの一覧から選択するか、[ **\<新しい接続>** ] を選択して **[SSIS 接続マネージャーの追加]** ダイアログ ボックスを開きます。  
   
  **[説明]**  
  接続の説明を入力します。  
@@ -208,8 +211,8 @@ ms.locfileid: "51641179"
 |**LocaleID**|ロケールを指定して、順序付けおよび日時の変換に関する地域固有の情報を提供します。|  
 |**名前**|わかりやすいコンポーネント名を入力します。|  
 |**[ValidateExternalMetadata]**|スクリプト変換において、デザイン時に外部データ ソースに対して列のメタデータを検証するかどうかを示します。 値 **false** を設定した場合、検証は実行時まで延期されます。|  
-|**[ReadOnlyVariables]**|スクリプト変換が読み取り専用でアクセスする変数の、コンマ区切りの一覧を入力します。<br /><br /> 注: 変数名では大文字と小文字が区別されます。|  
-|**[ReadWriteVariables]**|スクリプト変換が読み取り/書き込み用にアクセスする変数の、コンマ区切りの一覧を入力します。<br /><br /> 注: 変数名では大文字と小文字が区別されます。|  
+|**[ReadOnlyVariables]**|スクリプト変換が読み取り専用でアクセスする変数の、コンマ区切りの一覧を入力します。<br /><br /> 注:変数名の大文字と小文字は区別されます。|  
+|**[ReadWriteVariables]**|スクリプト変換が読み取り/書き込み用にアクセスする変数の、コンマ区切りの一覧を入力します。<br /><br /> 注:変数名の大文字と小文字は区別されます。|  
 |**[ScriptLanguage]**|スクリプト コンポーネントが使用するスクリプト言語を選択します。<br /><br /> スクリプト コンポーネントとスクリプト タスクの既定のスクリプト言語を設定するには、 **[オプション]** ダイアログ ボックスの **[全般]** ページにある **[スクリプト言語]** オプションを使用します。|  
 |**[UserComponentTypeName]**|[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] インフラストラクチャをサポートする <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptComponentHost> クラスと **Microsoft.SqlServer.TxScript** アセンブリを指定します。|  
   

@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: cfae435e-2ac3-4312-8c1e-9ca4a74cd875
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 69707e5026497a1f98ab168d71b4e6b286520fbe
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d3c634ec056d42e97dcbea3422a0e19a33596d54
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47790426"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67923146"
 ---
 # <a name="using-ado-with-ado-md"></a>ADO MD と ADO の併用
 ADO および ADO MD は、関連するが、別のオブジェクト モデルです。 ADO では、データ ソースへの接続、コマンドを実行する、表形式のデータと表形式のスキーマのメタデータの取得、およびプロバイダーのエラー情報を表示するためのオブジェクトを提供します。 ADO MD では、多次元データを取得し、マルチ ディメンション スキーマのメタデータを表示するためのオブジェクトを提供します。  

@@ -13,11 +13,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: bffa36106278b8913a9ecb042e94318c41ce87b5
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52804450"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63022593"
 ---
 # <a name="configure-an-oracle-publisher"></a>Oracle パブリッシャーの構成
   Oracle パブリッシャーからパブリケーションを作成する方法は、通常のスナップショットおよびトランザクション パブリケーションを作成する方法と同じですが、Oracle パブリッシャーからパブリケーションを作成する前に、次の手順を実行する必要があります (手順 1、3、および 4 については、このトピックで詳しく説明します)。  
@@ -41,7 +41,7 @@ ms.locfileid: "52804450"
 > [!NOTE]  
 >  **MSSQLSERVERDISTRIBUTOR** パブリック シノニムと、 **CASCADE** オプションで構成した Oracle レプリケーション ユーザーを削除すると、Oracle パブリッシャーからすべてのレプリケーション オブジェクトが削除されます。  
   
- Oracle レプリケーション ユーザー スキーマのセットアップに役立つサンプル スクリプトが提供されています。 このスクリプトは、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] のインストール後、*\<drive>*:\\\Program Files\Microsoft SQL Server\\*\<InstanceName>* \MSSQL\Install\oracleadmin.sql ディレクトリで使用できます。 このスクリプトについては、「 [Script to Grant Oracle Permissions](script-to-grant-oracle-permissions.md)」でも説明します。  
+ Oracle レプリケーション ユーザー スキーマのセットアップに役立つサンプル スクリプトが提供されています。 このスクリプトは、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] のインストール後、 *\<drive>* :\\\Program Files\Microsoft SQL Server\\ *\<InstanceName>* \MSSQL\Install\oracleadmin.sql ディレクトリで使用できます。 このスクリプトについては、「 [Script to Grant Oracle Permissions](script-to-grant-oracle-permissions.md)」でも説明します。  
   
  DBA 特権を持つアカウントを使用して Oracle データベースに接続し、スクリプトを実行します。 このスクリプトでは、レプリケーション管理ユーザー スキーマのユーザーとパスワード、およびオブジェクトを作成するときに使用する既定のテーブルスペースの入力が要求されます (このテーブルスペースは Oracle データベース内に存在していることが必要です)。 オブジェクトに他のテーブルスペースを指定する方法の詳細については、「[Manage Oracle Tablespaces (Oracle テーブルスペースの管理)](manage-oracle-tablespaces.md)」を参照してください。 ユーザー名と複雑なパスワードを選択しますが、後で Oracle データベースをパブリッシャーとして構成するときにこの情報の入力が要求されるため、どちらもメモしておいてください。 スキーマはレプリケーションに必要なオブジェクトでのみ使用し、このスキーマではパブリッシュするテーブルを作成しないでください。  
   
@@ -82,7 +82,7 @@ ms.locfileid: "52804450"
   
  Oracle Universal Installer が完了したら、Net Configuration Assistant を使用してネットワーク接続を構成します。 ネットワーク接続を構成するには、4 つの情報を指定する必要があります。 Oracle データベース管理者は、データベースとリスナーをセットアップするときにネットワークを構成しています。この情報が不明な場合は、管理者に問い合わせてください。 以下の操作を行う必要があります。  
   
-|アクション|説明|  
+|操作|説明|  
 |------------|-----------------|  
 |データベースを識別する|データベースは 2 とおりの方法で識別できます。 1 つ目は、SID (Oracle System Identifier) を使用する方法で、すべての Oracle リリースで使用できます。 2 つ目は、サービス名を使用する方法で、Oracle リリース 8.0 以降で使用できます。 どちらの方法も、データベースの作成時に構成される値を使用します。データベースのリスナーの構成時に管理者が使用したものと同じ命名方法を、クライアント ネットワーク構成でも使用することが重要です。|  
 |データベースのネットワークの別名を識別する|Oracle データベースへのアクセスに使用するネットワークの別名を指定する必要があります。 Oracle データベースを、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ディストリビューターでパブリッシャーとして識別するときに、この別名を指定します。 ネットワークの別名とは、基本的にはデータベースの作成時に構成されたリモート SID またはサービス名へのポインターです。ネットワークの別名は、各種の Oracle リリースや製品では、ネット サービス名や TNS 別名など、複数の名前で呼ばれています。 SQL*Plus では、ログイン時に "ホスト文字列" パラメーターとしてこの別名の入力画面が表示されます。|  
@@ -122,7 +122,7 @@ ms.locfileid: "52804450"
 > [!NOTE]  
 >  Oracle パブリッシャーの名前を、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ディストリビューターと同じ名前、または同じディストリビューターを使用する [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] パブリッシャーと同じ名前にすることはできません。  
   
- パブリッシャーとして Oracle データベースを識別するときに、Oracle パブリッシング オプションを選択する必要があります。完全なまたは Oracle Gateway。 パブリッシャーを識別した後は、パブリッシャーをいったん削除して再構成しない限り、このオプションは変更できません。 [Complete] オプションでは、スナップショット パブリケーションとトランザクション パブリケーションに、Oracle パブリッシングでサポートされるすべての機能セットが提供されます。 [Oracle (ゲートウェイ)] オプションでは、システム間のゲートウェイとしてレプリケーションが機能する場合にパフォーマンスを向上させるための最適化が行われます。  
+ Oracle データベースをパブリッシャーとして識別する場合は、次の Oracle パブリッシング オプションを選択する必要があります: [Complete] または [Oracle (ゲートウェイ)] パブリッシャーを識別した後は、パブリッシャーをいったん削除して再構成しない限り、このオプションは変更できません。 [Complete] オプションでは、スナップショット パブリケーションとトランザクション パブリケーションに、Oracle パブリッシングでサポートされるすべての機能セットが提供されます。 [Oracle (ゲートウェイ)] オプションでは、システム間のゲートウェイとしてレプリケーションが機能する場合にパフォーマンスを向上させるための最適化が行われます。  
   
  Oracle パブリッシャーを [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ディストリビューターで識別した後、レプリケーションによって Oracle データベースの TNS サービス名と同じ名前のリンク サーバーが作成されます。 このリンク サーバーはレプリケーションでのみ使用できます。 リンク サーバー接続で Oracle パブリッシャーに接続する必要がある場合は、別の TNS サービス名を作成してから、[sp_addlinkedserver &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql) を呼び出すときにこの名前を使用します。  
   

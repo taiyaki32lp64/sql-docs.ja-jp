@@ -1,10 +1,8 @@
 ---
-title: '定数要素を使用した作成: は定数 (SQLXML 4.0) |マイクロソフトのドキュメント'
-ms.custom: ''
+title: 'Sql: 定数 (SQLXML) を使用して定数要素を作成する'
 ms.date: 01/11/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.reviewer: ''
 ms.technology: xml
 ms.topic: reference
 helpviewer_keywords:
@@ -17,36 +15,37 @@ helpviewer_keywords:
 - annotated XSD schemas, constant elements
 ms.assetid: 940eea1b-54f5-445f-b844-c894d9f3941b
 author: MightyPen
-ms.author: douglasl
-manager: craigg
+ms.author: genemi
+ms.reviewer: ''
+ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: fdfceb91bf2f075254ef03319bf79d6d3d71d972
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 45ab0c13ad2c631a438e2a8637e36d192165094b
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56017853"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75257478"
 ---
 # <a name="creating-constant-elements-using-sqlis-constant-sqlxml-40"></a>sql:is-constant を使用した、定数要素の作成 (SQLXML 4.0)
 
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-  定数要素を指定する、データベース テーブルまたは列にマップされない XSD スキーマ内の要素は、-使用することができます、 **sql: は定数**注釈。 この注釈はブール値 (0 = false、1 = true) をとります。 指定できる値は 0、1、true、false です。 **Sql: は定数**任意の属性がない要素に注釈を指定できます。 この注釈を値 true (または 1) と共に要素に指定した場合、その要素は XML ドキュメント内に表示されますが、データベースにはマップされなくなります。  
+  定数要素 (つまり、データベースのテーブルまたは列にマップされない XSD スキーマの要素) を指定するには、 **sql:: 定数**注釈を使用します。 この注釈はブール値 (0 = false、1 = true) をとります。 指定できる値は 0、1、true、false です。 **Sql:: 定数**注釈は、属性を持たない要素に対して指定できます。 この注釈を値 true (または 1) と共に要素に指定した場合、その要素は XML ドキュメント内に表示されますが、データベースにはマップされなくなります。  
   
- **Sql: は定数**の注釈を使用することができます。  
+ **Sql: 定数**注釈は、次の場合に使用できます。  
   
 -   最上位要素を XML ドキュメントに追加する。 XML では、ドキュメントに 1 つの最上位要素 (ルート要素) が必要です。  
   
--   コンテナーの要素を作成するなど、 **\<注文 >** すべての注文をラップする要素。  
+-   すべての注文をラップする** \<注文>** 要素などのコンテナー要素を作成する。  
   
- **Sql: は定数**に注釈を追加できる、  **\<complexType >** 要素。  
+ **Sql: 定数**注釈は、 ** \<complexType>** 要素に追加できます。  
   
-## <a name="examples"></a>使用例  
- 次の例を使用した実際のサンプルを作成するには、特定の条件を満たす必要があります。 詳細については、次を参照してください。 [SQLXML の例を実行するための要件](../../relational-databases/sqlxml/requirements-for-running-sqlxml-examples.md)します。  
+## <a name="examples"></a>例  
+ 次の例を使用した実際のサンプルを作成するには、特定の条件を満たす必要があります。 詳細については、「 [SQLXML の例を実行するための要件](../../relational-databases/sqlxml/requirements-for-running-sqlxml-examples.md)」を参照してください。  
   
 ### <a name="a-specifying-sqlis-constant-to-add-a-container-element"></a>A. sql:is-constant を指定してコンテナー要素を追加する  
- この注釈付き XSD スキーマ、  **\<CustomerOrders >** 指定することで、定数要素として定義されているが、 **sql: は定数**属性値は 1 です。 そのため、  **\<CustomerOrders >** はデータベース テーブルまたは列にマップされていません。 この定数要素から成る、 **\<順序 >** 子要素。  
+ この注釈付き XSD スキーマでは、値が1の**sql:** CustomerOrders 属性を指定することにより、 ** \<>** が定数要素として定義されます。 したがって、 ** \<CustomerOrders>** は、どのデータベーステーブルまたは列にもマップされません。 この定数要素は、 ** \<子要素>順序**で構成されます。  
   
- **\<CustomerOrders >** マップされないデータベースのテーブルまたは列を結果の XML を含むコンテナー要素として表示されます、 **\<順序 >** 子要素。  
+ CustomerOrders>はどのデータベーステーブルまたは列にもマップされませんが、結果の XML には、 ** \<順序>** 子要素を含むコンテナー要素として表示されます。 ** \<**  
   
 ```  
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"  
@@ -107,10 +106,10 @@ ms.locfileid: "56017853"
     ```  
   
 3.  SQLXML 4.0 テスト スクリプト (sqlxml4test.vbs) を作成し、それを使用してテンプレートを実行します。  
+
+     詳細については、「ADO を使用した[SQLXML クエリの実行](../../relational-databases/sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md)」を参照してください。  
   
-     詳細については、次を参照してください。 [SQLXML クエリの実行に ADO を使用する](../../relational-databases/sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md)します。  
-  
- これは、結果セットの一部です。  
+ 結果セットの一部を次に示します。  
   
 ```  
 <ROOT xmlns:sql="urn:schemas-microsoft-com:xml-sql">   

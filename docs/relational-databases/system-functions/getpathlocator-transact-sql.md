@@ -17,18 +17,17 @@ helpviewer_keywords:
 ms.assetid: 78b7e220-445b-4fdf-811b-7253f4f2b058
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 7770ced88953fd64d9ce48b624416b9a7e787f7e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 4cec490522f8bacc774213ec1af5cce1af0eefef
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47699130"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67910252"
 ---
-# <a name="getpathlocator-transact-sql"></a>GetPathLocator (Transact-SQL)
+# <a name="getpathlocator-transact-sql"></a>GetPathLocator (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
-  FileTable 内の指定されたファイルまたはディレクトリのパス ロケーター ID 値を返します。  
+  FileTable 内のパス ロケーターの指定したファイルまたはディレクトリの ID 値を返します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -50,9 +49,9 @@ GetPathLocator(filenamespace_path)
  詳しくは、「 [Work with Directories and Paths in FileTables](../../relational-databases/blob/work-with-directories-and-paths-in-filetables.md)」をご覧ください。  
   
 ## <a name="examples"></a>使用例  
- 使用することができます、 **GetPathLocator**ファイル サーバーからファイルを FileTable に移行するときに機能します。 このシナリオでは、ファイルを FileTable に移動した後、各ファイルの元の UNC パスを FileTable の UNC パスに置き換えます。 完全な例を参照してください。 [Filetable にファイルを読み込む](../../relational-databases/blob/load-files-into-filetables.md)します。  
+ 使用することができます、 **GetPathLocator**ファイル サーバーからファイルを FileTable に移行するときに機能します。 このシナリオで、FileTable にファイルを移動し、各ファイルの元の UNC パスを FileTable の UNC パスに置き換えますしたいです。 完全な例を参照してください。 [Filetable にファイルを読み込む](../../relational-databases/blob/load-files-into-filetables.md)します。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [FileTable 内のディレクトリとパスの操作](../../relational-databases/blob/work-with-directories-and-paths-in-filetables.md)  
   
   

@@ -1,6 +1,7 @@
 ---
-title: マージ レプリケーションのバックアップと復元の方式 | Microsoft Docs
-ms.custom: ''
+title: バックアップと復元の方式 (マージ)
+description: マージ レプリケーションで使用されるデータのバックアップと復元の方式です。
+ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -15,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: b8ae31c6-d76f-4dd7-8f46-17d023ca3eca
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 16f7701ab70e3edab1194732dca70e5c10f98a65
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 448688a54a245cadffa4c0c916d146e7c3e7e115
+ms.sourcegitcommit: 02d44167a1ee025ba925a6fefadeea966912954c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47707910"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75321989"
 ---
 # <a name="strategies-for-backing-up-and-restoring-merge-replication"></a>マージ レプリケーションのバックアップと復元の方式
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -35,7 +35,7 @@ ms.locfileid: "47707910"
   
 -   パブリッシャー、ディストリビューター、およびすべてのサブスクライバーにある **master** および **msdb** システム データベース。 これらのデータベースは、相互に関連するレプリケーション データベースとして、同時にバックアップする必要があります。 たとえば、パブリッシャーでパブリケーション データベースをバックアップするときに、 **master** および **msdb** データベースも同時にバックアップします。 パブリケーション データベースを復元するときは、 **master** および **msdb** データベースのレプリケーションの構成と設定が、パブリケーション データベースと一致していることを確認します。  
   
- 定期的なログ バックアップを実行する場合は、レプリケーション関連の変更をログ バックアップでキャプチャする必要があります。 ログ バックアップを実行しない場合は、レプリケーションに関連する設定を変更するたびに、バックアップを実行する必要があります。 詳細については、「 [一般にバックアップの更新が必要になるアクション](../../../relational-databases/replication/administration/common-actions-requiring-an-updated-backup.md)」を参照してください。  
+ 定期的なログ バックアップを実行する場合は、レプリケーション関連の変更をログ バックアップでキャプチャする必要があります。 ログ バックアップを実行しない場合は、レプリケーションに関連する設定を変更するたびに、バックアップを実行する必要があります。 詳細については、「 [Common Actions Requiring an Updated Backup](../../../relational-databases/replication/administration/common-actions-requiring-an-updated-backup.md)」を参照してください。  
   
  以下で詳しく説明するパブリケーション データベースのバックアップと復元の方法のいずれかを選択し、ディストリビューション データベースとサブスクリプション データベースに対する推奨事項に従ってください。  
   
@@ -56,12 +56,12 @@ ms.locfileid: "47707910"
   
 -   パブリケーションがフィルター選択されていない場合は、最新のサブスクライバーと同期することでパブリケーション データベースを最新の状態に更新できます。  
   
--   パブリケーションがフィルター選択されている場合は、パブリケーションを最新の状態に更新できない場合があります。 たとえば、各サブスクリプションが 1 つの地域 (北、東、南、西のいずれか) の顧客データのみを受信できるようにパーティション分割されているテーブルがあるとします。 データの各パーティションに 1 つ以上のサブスクライバーがある場合、各パーティションのサブスクライバーと同期することにより、パブリケーション データベースを最新の状態に更新できます。 ただし、たとえば、西パーティションのデータがすべてのサブスクライバーにレプリケートされていない場合は、パブリッシャーでこのデータを最新の状態に更新することはできません。  
+-   パブリケーションがフィルター選択されている場合は、パブリケーションを最新の状態に更新できない場合があります。 各サブスクリプションが 1 つの地域の顧客データのみを受信できるようにパーティション分割されているテーブルがあるとします。北、東、南、西のいずれかです。 データの各パーティションに 1 つ以上のサブスクライバーがある場合、各パーティションのサブスクライバーと同期することにより、パブリケーション データベースを最新の状態に更新できます。 ただし、たとえば、西パーティションのデータがすべてのサブスクライバーにレプリケートされていない場合は、パブリッシャーでこのデータを最新の状態に更新することはできません。  
   
 > [!IMPORTANT]  
 >  パブリケーション データベースとサブスクリプション データベースを同期することによって、復元対象のパブリッシュされたテーブルを、バックアップから復元されたパブリッシュされていないテーブルよりも新しい状態にすることができます。  
   
- [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] よりも前のバージョンの [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]を実行しているサブスクライバーと同期する場合は、サブスクリプションを匿名にすることはできません。このサブスクリプションはクライアント サブスクリプションまたはサーバー サブスクリプション (前のリリースではローカル サブスクリプションとグローバル サブスクリプションと呼ばれていました) にする必要があります。  
+ [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] よりも前のバージョンの [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] を実行しているサブスクライバーと同期する場合は、サブスクリプションを匿名にすることはできません。このサブスクリプションは、クライアント サブスクリプションまたはサーバー サブスクリプション (前のリリースではローカル サブスクリプションとグローバル サブスクリプションと呼ばれていました) にする必要があります。  
   
  サブスクリプションを同期するには、「 [Synchronize a Push Subscription](../../../relational-databases/replication/synchronize-a-push-subscription.md) 」および「 [Synchronize a Pull Subscription](../../../relational-databases/replication/synchronize-a-pull-subscription.md)」を参照してください。  
   
@@ -72,7 +72,7 @@ ms.locfileid: "47707910"
   
  サブスクリプションを再初期化するには、「 [Reinitialize a Subscription](../../../relational-databases/replication/reinitialize-a-subscription.md)」を参照してください。  
   
- スナップショットを作成および適用するには、「 [初期スナップショットの作成および適用](../../../relational-databases/replication/create-and-apply-the-initial-snapshot.md) 」および「 [パラメーター化されたフィルターを使用したパブリケーションのスナップショットの作成](../../../relational-databases/replication/create-a-snapshot-for-a-merge-publication-with-parameterized-filters.md)」を参照してください。  
+ スナップショットを作成および適用するには、「 [Create 」および「 Apply the Initial Snapshot](../../../relational-databases/replication/create-and-apply-the-initial-snapshot.md) 」および「 [Create a Snapshot for a Merge Publication with Parameterized Filters](../../../relational-databases/replication/create-a-snapshot-for-a-merge-publication-with-parameterized-filters.md)」を参照してください。  
   
 ## <a name="backing-up-and-restoring-the-distribution-database"></a>ディストリビューション データベースのバックアップと復元  
  マージ レプリケーションでは、ディストリビューション データベースを定期的にバックアップする必要があります。この場合、使用されるバックアップがディストリビューターを使用するすべてのパブリケーションの最短の保有期間よりも古くない限り、特に注意することなく復元できます。 たとえば、保有期間がそれぞれ 10、20、および 30 日に設定されている 3 つのパブリケーションがある場合は、10 日より長く経過したバックアップはデータベースの復元に使用できません。 マージ レプリケーションでは、ディストリビューション データベースの役割が制限されています。変更の追跡に使用されるすべてのデータは保存されず、トランザクション レプリケーションのような、サブスクリプション データベースの転送先となるマージ レプリケーションの変更の一時的な保存場所も用意されません。  
@@ -88,13 +88,13 @@ ms.locfileid: "47707910"
   
  パブリケーションの保有期間を設定する場合は、「[サブスクリプションの有効期限の設定](../../../relational-databases/replication/publish/set-the-expiration-period-for-subscriptions.md)」を参照してください。  
   
- サブスクリプションを同期するには、「 [プッシュ サブスクリプションの同期](../../../relational-databases/replication/synchronize-a-push-subscription.md) 」および「 [プル サブスクリプションの同期](../../../relational-databases/replication/synchronize-a-pull-subscription.md)」を参照してください。  
+ サブスクリプションを同期するには、「 [Synchronize a Push Subscription](../../../relational-databases/replication/synchronize-a-push-subscription.md) 」および「 [Synchronize a Pull Subscription](../../../relational-databases/replication/synchronize-a-pull-subscription.md)」を参照してください。  
   
 ## <a name="backing-up-and-restoring-a-republishing-database"></a>再パブリッシュ データベースのバックアップと復元  
  あるデータベースがパブリッシャーからのデータをサブスクライブしてから、同じデータを別のサブスクリプション データベースにパブリッシュするとき、このデータベースのことを再パブリッシュ データベースと言います。 再パブリッシュ データベースを復元する場合は、このトピックの「パブリケーション データベースのバックアップと復元」および「サブスクリプション データベースのバックアップと復元」で説明されているガイドラインに従ってください。  
   
 ## <a name="see-also"></a>参照  
  [SQL Server データベースのバックアップと復元](../../../relational-databases/backup-restore/back-up-and-restore-of-sql-server-databases.md)   
- [Back Up and Restore Replicated Databases (レプリケートされたデータベースのバックアップと復元)](../../../relational-databases/replication/administration/back-up-and-restore-replicated-databases.md)  
+ [レプリケートされたデータベースのバックアップと復元](../../../relational-databases/replication/administration/back-up-and-restore-replicated-databases.md)  
   
   

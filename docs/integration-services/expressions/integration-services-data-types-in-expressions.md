@@ -11,17 +11,20 @@ helpviewer_keywords:
 - expressions [Integration Services], data types
 - data types [Integration Services], expressions
 ms.assetid: c296ad10-4080-4988-8c2c-2c250f7a1884
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: 978ec0b00cbb4954a7aa6e50e6d182857ac8338a
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 2e2c8c8f77fd0643c503f5b817b050ff64529751
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51639849"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71297547"
 ---
 # <a name="integration-services-data-types-in-expressions"></a>式における Integration Services データ型
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   式エバリュエーターは、 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] データ型を使用します。 データが [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] パッケージのデータ フローに入力されると、データ フロー エンジンはすべての列データを [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] のデータ型に変換します。このため、式が列データを使用するときには、既に [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] のデータ型になっています。 条件分割変換および派生列変換で使用される式は、列データが含まれるデータ フローの一部であるため、列を参照できます。  
   
 ## <a name="variables"></a>変数:  
@@ -122,7 +125,7 @@ ms.locfileid: "51639849"
   
 -   数学関数に渡される引数は、数値データ型に評価される必要があります。 関数または演算によっては、特定の数値データ型が必要となる場合があります。 たとえば HEX 関数では、符号付き整数または符号なし整数が必要です。  
   
--   文字列関数に渡される引数は、DT_STR または DT_WSTR の文字データ型に評価される必要があります。 たとえば、UPPER("flower") などの場合です。 SUBSTRING などの一部の文字列関数では、さらに、文字列の開始位置や長さを指定するために整数の引数が必要となります。  
+-   文字列関数に渡される引数は、次の文字データ型に評価される必要があります。DT_STR または DT_WSTR。 たとえば、UPPER("flower") などの場合です。 SUBSTRING などの一部の文字列関数では、さらに、文字列の開始位置や長さを指定するために整数の引数が必要となります。  
   
 -   日付と時刻の関数に渡される引数は、有効な日付に評価される必要があります。 たとえば、DAY(GETDATE()) などの場合です。 DATEADD などの一部の関数では、さらに、関数が日付に追加する日数を指定するために整数の引数が必要となります。  
   

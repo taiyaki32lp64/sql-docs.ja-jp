@@ -4,21 +4,20 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 helpviewer_keywords:
 - ListReservedURLs method
 ms.assetid: 32335af1-5eae-4420-a0ef-b1e8a3267166
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: d86fc709f3cc322c17514309906355cc4489876e
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: e6d4cf7f550db88a56b7906fb4487b6c33935636
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56012353"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66098264"
 ---
 # <a name="listreservedurls-method-wmi-msreportserverconfigurationsetting"></a>ListReservedURLs メソッド (WMI MSReportServer_ConfigurationSetting)
   レポート サーバー上のすべてのアプリケーション用に予約されている URL を一覧表示します。  

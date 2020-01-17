@@ -12,15 +12,14 @@ f1_keywords:
 helpviewer_keywords:
 - Name Not Found dialog box
 ms.assetid: 74e34004-091b-4ac8-8824-5d6c6f8b1b6b
-author: stevestein
-ms.author: sstein
-manager: craigg
-ms.openlocfilehash: c8ade324c8d3aab68ff0e762f621b9bd69d3b9ff
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: d2ba40f3580a01bb7f72f54bd69407853820a6d7
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47740320"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68264071"
 ---
 # <a name="name-not-found-dialog-box"></a>[名前が見つかりません] ダイアログ ボックス
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -28,7 +27,7 @@ ms.locfileid: "47740320"
   
 ## <a name="uielement-list"></a>UI 要素の一覧  
 **[この情報を訂正して再検索する]**  
-選択すると、 **[このオブジェクトの種類を選択してください]**、 **[オブジェクトの種類]**、および **[オブジェクト名を入力してください]** 領域が利用可能になります。  
+選択すると、 **[このオブジェクトの種類を選択してください]** 、 **[オブジェクトの種類]** 、および **[オブジェクト名を入力してください]** 領域が利用可能になります。  
   
 **[このオブジェクトの種類を選択してください]**  
 **[オブジェクトの種類]** ボタンを使用して選択されたオブジェクトの種類を表示します。  

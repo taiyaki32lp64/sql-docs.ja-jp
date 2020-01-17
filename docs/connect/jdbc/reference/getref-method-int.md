@@ -1,5 +1,5 @@
 ---
-title: getRef (int) メソッド |Microsoft Docs
+title: getRef メソッド (int) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: 905dd02a-0c7f-475b-8be4-341b4359c766
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: d75bf52e220d5c7c5273ab99dbfca5c6e9b2d050
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: f7796b766ac8593f557e64d2ebb6e324abf0ec82
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47726590"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67980593"
 ---
 # <a name="getref-method-int"></a>getRef (int) メソッド
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

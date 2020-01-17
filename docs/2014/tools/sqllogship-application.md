@@ -13,16 +13,16 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 14b9cda05bca998bd113a316692c4c2c2111d091
-ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
+ms.sourcegitcommit: 8cb26b7dd40280a7403d46ee59a4e57be55ab462
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/18/2018
-ms.locfileid: "53590056"
+ms.lasthandoff: 10/17/2019
+ms.locfileid: "63035071"
 ---
 # <a name="sqllogship-application"></a>sqllogship アプリケーション
   **sqllogship** アプリケーションは、ログ配布構成のバックアップ、コピー、復元操作、および関連するクリーンアップ作業を行います。 操作は、 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] の特定のインスタンスで特定のデータベースに対して行われます。  
   
- ![トピック リンク アイコン](../../2014/database-engine/media/topic-link.gif "トピック リンク アイコン")構文表記規則についてを参照してください。[コマンド プロンプト ユーティリティ リファレンス&#40;データベース エンジン&#41;](../tools/command-prompt-utility-reference-database-engine.md)します。  
+ ![トピックリンクアイコン](../../2014/database-engine/media/topic-link.gif "トピック リンク アイコン")構文表記規則については、「[コマンド&#40;プロンプト&#41;ユーティリティリファレンスデータベースエンジン](../tools/command-prompt-utility-reference-database-engine.md)」を参照してください。  
   
 ## <a name="syntax"></a>構文  
   
@@ -55,33 +55,33 @@ instance_name { -backupprimary_id | -copysecondary_id | -restoresecondary_id } [
  **-verboselevel** _level_  
  ログ配布の履歴に追加するメッセージのレベルを指定します。 *level* は、次のいずれかの整数です。  
   
-|level|説明|  
+|Level|[説明]|  
 |-----------|-----------------|  
 |0|トレースおよびデバッグのメッセージを出力しません。|  
-|1|エラー処理メッセージを出力します。|  
+|@shouldalert|エラー処理メッセージを出力します。|  
 |2|警告およびエラー処理メッセージを出力します。|  
 |**3**|情報メッセージ、警告、およびエラー処理メッセージを出力します。 これが既定値です。|  
 |4|すべてのデバッグおよびトレースのメッセージを出力します。|  
   
  **-logintimeout** _timeout_value_  
- サーバー インスタンスへのログインを試みてからタイムアウトするまでの時間を指定します。既定値は 15 秒です。 *timeout_value* のデータ型は **int**_です。_  
+ サーバーインスタンスへのログインを試行してからタイムアウトになるまでの時間を指定します。既定値は15秒です。 *timeout_value* のデータ型は **int**_です。_  
   
  **-querytimeout** _timeout_value_  
- 指定した操作を開始してからタイムアウトするまでの時間を指定します。既定では、タイムアウトはありません。 *timeout_value* のデータ型は **int**_です。_  
+ 指定した操作を開始してからタイムアウトになるまでの時間を指定します。既定では、タイムアウト期間はありません。 *timeout_value* のデータ型は **int**_です。_  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>Remarks  
  可能な限り、バックアップ、コピー、および復元ジョブでバックアップ、コピー、および復元を行うことをお勧めします。 バッチ操作や他のアプリケーションからこれらのジョブを開始するには、 [sp_start_job](/sql/relational-databases/system-stored-procedures/sp-start-job-transact-sql) ストアド プロシージャを呼び出します。  
   
  **sqllogship** で作成されるログ配布の履歴には、ログ配布のバックアップ、コピー、および復元ジョブで作成される履歴も含まれます。 **sqllogship** を繰り返し使用してログ配布構成のバックアップ、コピー、および復元操作を行う場合、対応するログ配布ジョブを無効にすることを検討してください。 詳細については、「 [Disable or Enable a Job](../ssms/agent/disable-or-enable-a-job.md)」をご覧ください。  
   
- **Sqllogship** x:\Program files \microsoft SQL Server\120\Tools\Binn ディレクトリにアプリケーション、SqlLogShip.exe がインストールされています。  
+ **Sqllogship**アプリケーション sqllogship .exe は、X:\PROGRAM の SQL Server\120\Tools\Binn ディレクトリにインストールされます。  
   
 ## <a name="permissions"></a>アクセス許可  
  **sqllogship** では Windows 認証を使用します。 コマンドを実行する Windows 認証アカウントには、Windows のディレクトリ アクセスおよび [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] の権限が必要です。 要件は、 **sqllogship** コマンドで **-backup**、 **-copy**、 **-restore** のいずれのオプションを指定するかで変わります。  
   
 |オプション|ディレクトリ アクセス|アクセス許可|  
 |------------|----------------------|-----------------|  
-|**-backup**|バックアップ ディレクトリの読み取り/書き込みアクセス許可が必要です。|BACKUP ステートメントと同一の権限が必要です。 詳細については、「 [BACKUP &#40;Transact-SQL&#41;](/sql/t-sql/statements/backup-transact-sql)」を参照してください。|  
+|**-backup**|バックアップ ディレクトリの読み取り/書き込みアクセス許可が必要です。|BACKUP ステートメントと同一の権限が必要です。 詳細については、「[BACKUP &#40;Transact-SQL&#41;](/sql/t-sql/statements/backup-transact-sql)」を参照してください。|  
 |**-copy**|バックアップ ディレクトリの読み取りアクセス許可と、コピー ディレクトリの書き込みアクセス許可が必要です。|[sp_help_log_shipping_secondary_database](/sql/relational-databases/system-stored-procedures/sp-help-log-shipping-secondary-database-transact-sql) ストアド プロシージャと同一の権限が必要です。|  
 |**-restore**|コピー ディレクトリの読み取り/書き込みアクセス許可が必要です。|RESTORE ステートメントと同一の権限が必要です。 詳細については、「[RESTORE &#40;Transact-SQL&#41;](/sql/t-sql/statements/restore-statements-transact-sql)」を参照してください。|  
   

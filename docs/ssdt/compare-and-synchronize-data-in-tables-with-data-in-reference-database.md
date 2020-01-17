@@ -8,15 +8,14 @@ ms.technology: ssdt
 ms.reviewer: ''
 ms.topic: conceptual
 ms.assetid: 96d743b0-b69a-45bb-ae0e-62103dca76e2
-author: stevestein
-ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 23b3057a23737eb43206f9615ce2f83bad6f5610
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 055731473f94003440f4a78c6446ec965f1d0a2f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47745110"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67984666"
 ---
 # <a name="compare-and-synchronize-data-in-one-or-more-tables-with-data-in-a-reference-database"></a>1 つ以上のテーブルのデータを参照データベースのデータと比較して同期する
 *ソース* データベースと*ターゲット* データベースのデータを比較し、比較するテーブルを指定できます。 データを確認し、同期する変更を決定することができます。 その後、ターゲットを更新してデータベースを同期するか、Transact\-SQL エディターまたはファイルに更新スクリプトをエクスポートすることができます。  
@@ -27,9 +26,9 @@ ms.locfileid: "47745110"
   
 このセクションのトピックは次のとおりです。  
   
--   [2 つのデータベースのデータを比較および同期する方法](../ssdt/how-to-compare-and-synchronize-the-data-of-two-databases.md)  
+-   [方法:2 つのデータベースのデータを比較および同期する](../ssdt/how-to-compare-and-synchronize-the-data-of-two-databases.md)  
   
--   [データの差異を表示する方法](../ssdt/how-to-view-data-differences.md)  
+-   [方法:データの差異を表示する](../ssdt/how-to-view-data-differences.md)  
   
 ## <a name="requirements"></a>必要条件  
 テーブルまたはビューのデータを比較する場合、ソース データベースのテーブルまたはビューは、ターゲット データベースのテーブルまたはビューといくつかの属性を共有している必要があります。 次の条件を満たしていないテーブルとビューは比較されないため、**新しいデータの比較**ウィザードの 2 ページ目に表示されません。  
@@ -51,10 +50,10 @@ ms.locfileid: "47745110"
   
 **データの比較方法を制御するオプションを設定する:** データを比較する場合、安全に ID 列を無視し、トリガーを無効にして、外部キーを無効にすることができます。 また、更新スクリプトから主キー、インデックス、および UNIQUE 制約を削除することもできます。  
   
-**テーブルのデータを比較し、必要に応じてターゲットをソースと一致するように更新する:** 比較するソース データベースとターゲット データベースを指定して比較を実行した後、**[データ比較]** ウィンドウで結果を確認できます。 差異の詳細だけでなく、データの同期に使用できる更新スクリプトも確認できます。 2 つのデータベース間の差異を特定したら、それぞれの差異に対するアクションを指定できます。 その後、ターゲットを更新するか、Transact\-SQL エディターまたはファイルに更新スクリプトをエクスポートすることができます。 スクリプトをエクスポートすると、変更を適用する前にすべてのユーザーが確認できるようにすることができます。  
+**テーブルのデータを比較し、必要に応じてターゲットをソースと一致するように更新する:** 比較するソース データベースとターゲット データベースを指定して比較を実行した後、 **[データ比較]** ウィンドウで結果を確認できます。 差異の詳細だけでなく、データの同期に使用できる更新スクリプトも確認できます。 2 つのデータベース間の差異を特定したら、それぞれの差異に対するアクションを指定できます。 その後、ターゲットを更新するか、Transact\-SQL エディターまたはファイルに更新スクリプトをエクスポートすることができます。 スクリプトをエクスポートすると、変更を適用する前にすべてのユーザーが確認できるようにすることができます。  
   
 ## <a name="UnderstandingDataCompareResults"></a>比較結果について  
-次の表では、**[データ比較]** ウィンドウの 5 つの列について説明します。  
+次の表では、 **[データ比較]** ウィンドウの 5 つの列について説明します。  
   
 |[列]|注|  
 |----------|---------|  
@@ -69,5 +68,5 @@ ms.locfileid: "47745110"
   
 ## <a name="see-also"></a>参照  
 [SQL Server Data Tools](../ssdt/sql-server-data-tools.md)  
-[スキーマ比較を使用して各種のデータベース定義を比較する方法](../ssdt/how-to-use-schema-compare-to-compare-different-database-definitions.md)  
+[方法:スキーマ比較を使用して各種のデータベース定義を比較する](../ssdt/how-to-use-schema-compare-to-compare-different-database-definitions.md)  
   

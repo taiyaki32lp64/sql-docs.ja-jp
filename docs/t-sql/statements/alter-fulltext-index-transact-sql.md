@@ -21,13 +21,12 @@ helpviewer_keywords:
 ms.assetid: b6fbe9e6-3033-4d1b-b6bf-1437baeefec3
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: 2db3b6241096501190e2d1c8e3978bd349fed7a3
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: f9799b747883f876b413bf540516f5c2a1cbed11
+ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52526197"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "73981813"
 ---
 # <a name="alter-fulltext-index-transact-sql"></a>ALTER FULLTEXT INDEX (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -75,11 +74,11 @@ ALTER FULLTEXT INDEX ON table_name
   
  フルテキスト インデックスを無効にすると、変更の追跡が無効になりますが、フルテキスト インデックスは維持されます。ENABLE を使用することで、いつでもフルテキスト インデックスを有効に戻すことができます。 フルテキスト インデックスがオフになると、フルテキスト インデックス メタデータはシステム テーブル内に残ります。 フルテキスト インデックスがオフのときに CHANGE_TRACKING がオンの状態の場合 (自動または手動更新)、インデックスの状態が停止し、処理中のクロールが停止し、テーブル データへの新しい変更はインデックスに対して追跡または反映されません。  
   
- SET CHANGE_TRACKING {MANUAL | AUTO | OFF}   
+ SET CHANGE_TRACKING {MANUAL | AUTO | OFF}  
  フルテキスト インデックスの対象となるテーブル列の変更 (更新、削除、または挿入) が、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] によってフルテキスト インデックスに反映されるかどうかを指定します。 WRITETEXT および UPDATETEXT によるデータの変更は、フルテキスト インデックスには反映されず、変更の監視でも取得されません。  
   
 > [!NOTE]  
->  変更の追跡と WITH NO POPULATION の相関関係については、後の「解説」を参照してください。  
+>  詳細については、「[変更の追跡と NO POPULATION パラメーターの相関関係](#change-tracking-no-population)」を参照してください。
   
  MANUAL  
  追跡された変更の反映を ALTER FULLTEXT INDEX ...START UPDATE POPULATION [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントの呼び出しによって手動で行うこと ("*手動作成*") を指定します。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェントを使用すると、この [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントを定期的に呼び出すことができます。  
@@ -98,12 +97,12 @@ ALTER FULLTEXT INDEX ON table_name
  TYPE COLUMN および LANGUAGE を ADD 句と一緒に使用して、*column_name* にこのプロパティを設定します。 列を追加する場合、この列に対するフルテキスト クエリが機能するように、テーブル上のフルテキスト インデックスを再作成する必要があります。  
   
 > [!NOTE]  
->  列がフルテキスト インデックスに対して追加または削除された後、フルテキスト インデックスが作成されるかどうかは、変更の追跡が有効になっているかどうかと WITH NO POPULATION が指定されているかどうかによって決まります。 詳細については、後の「解説」を参照してください。  
+>  列がフルテキスト インデックスに対して追加または削除された後、フルテキスト インデックスが作成されるかどうかは、変更の追跡が有効になっているかどうかと WITH NO POPULATION が指定されているかどうかによって決まります。 詳細については、「[変更の追跡と NO POPULATION パラメーターの相関関係](#change-tracking-no-population)」を参照してください。
   
  TYPE COLUMN *type_column_name*  
- **varbinary**、**varbinary(max)**、**image** ドキュメントのドキュメント型を保持するために使用されているテーブル列 *type_column_name* の名前を指定します。 型列と呼ばれるこの列には、ユーザー指定のファイル拡張子 (.doc、.pdf、.xls など) が格納されます。 型列は、 **char**型、 **nchar**型、 **varchar**型、 **nvarchar**型にする必要があります。  
+ **varbinary**、**varbinary(max)** 、**image** ドキュメントのドキュメント型を保持するために使用されているテーブル列 *type_column_name* の名前を指定します。 型列と呼ばれるこの列には、ユーザー指定のファイル拡張子 (.doc、.pdf、.xls など) が格納されます。 型列は、 **char**型、 **nchar**型、 **varchar**型、 **nvarchar**型にする必要があります。  
   
- TYPE COLUMN *type_column_name* を指定できるのは、*column_name* で、データがバイナリ データとして格納される **varbinary**、**varbinary(max)**、**image** 列を指定した場合のみです。それ以外の場合、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ではエラーが返されます。  
+ TYPE COLUMN *type_column_name* を指定できるのは、*column_name* で、データがバイナリ データとして格納される **varbinary**、**varbinary(max)** 、**image** 列を指定した場合のみです。それ以外の場合、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ではエラーが返されます。  
   
 > [!NOTE]  
 >  Full-Text Engine は、インデックスを作成する際に、各テーブル行の型列の省略形を使用して、*column_name* でドキュメントに使用するフルテキスト検索フィルターを特定します。 フィルターはドキュメントをバイナリ ストリームとして読み込み、書式設定情報を削除し、ドキュメントからワード ブレーカー コンポーネントへテキストを送信します。 詳細については、「 [検索用フィルターの構成と管理](../../relational-databases/search/configure-and-manage-filters-for-search.md)」を参照してください。  
@@ -124,11 +123,11 @@ ALTER FULLTEXT INDEX ON table_name
  列のデータ型が BLOB および XML 以外で、複数の言語のテキスト データが含まれている場合や、列に格納されているテキストの言語が不明な場合は、ニュートラル (0x0) 言語リソースを使用します。 データ型が XML または BLOB の列に格納されているドキュメントに対しては、そのドキュメントの言語のエンコードがインデックス作成時に使用されます。 たとえば、データ型が XML の列では、XML ドキュメントの属性 xml:lang によって言語が決定されます。 クエリ時には、フルテキスト クエリ内で *language_term* を指定しない限り、前回 *language_term* に指定された値がフルテキスト クエリの既定の言語になります。  
   
  STATISTICAL_SEMANTICS  
- **適用対象**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]  
+ **適用対象**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 以降。  
   
  キー フレーズを追加で作成し、統計的セマンティック インデックス作成の一部である類似性のインデックスを記録します。 詳細については、「[セマンティック検索 &#40;SQL Server&#41;](../../relational-databases/search/semantic-search-sql-server.md)」を参照してください。  
   
- [ **,**_...n_]  
+ [ **,** _...n_]  
  複数の列を ADD、ALTER、または DROP 句に指定できることを表します。 複数の列を指定する場合は、これらの列をコンマで区切ります。  
   
  WITH NO POPULATION  
@@ -139,10 +138,10 @@ ALTER FULLTEXT INDEX ON table_name
  CHANGE_TRACKING が有効で、WITH NO POPULATION が指定されている場合、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] はエラーを返します。 CHANGE_TRACKING が有効で、WITH NO POPULATION が指定されていない場合、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ではインデックスで完全作成が実行されます。  
   
 > [!NOTE]  
->  変更の追跡と WITH NO POPULATION の相関関係の詳細については、後の「解説」を参照してください。  
+>  詳細については、「[変更の追跡と NO POPULATION パラメーターの相関関係](#change-tracking-no-population)」を参照してください。
   
  {ADD | DROP } STATISTICAL_SEMANTICS  
- **適用対象**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]  
+ **適用対象**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 以降。  
   
  指定された列に対する統計的セマンティック インデックス作成を有効または無効にします。 詳細については、「[セマンティック検索 &#40;SQL Server&#41;](../../relational-databases/search/semantic-search-sql-server.md)」を参照してください。  
   
@@ -152,13 +151,13 @@ ALTER FULLTEXT INDEX ON table_name
  FULL  
  行に対してインデックスが既に作成されていても、フルテキスト インデックス作成でテーブルのすべての行が取得されます。  
   
- INCREMENTAL   
+ INCREMENTAL  
  最後の作成以降に変更された行のみがフルテキスト インデックス作成で取得されます。 INCREMENTAL は、テーブルに **timestamp**型の列がある場合にのみ適用できます。 フルテキスト カタログ内のテーブルに **timestamp** 型の列が含まれていない場合、そのテーブルでは FULL での作成が行われます。  
   
  UPDATE  
  変更の監視インデックスが最後に更新されてから行われた、すべての挿入、更新、削除の処理を指定します。 変更の監視の作成はテーブルで有効になっている必要がありますが、バックグラウンド更新インデックスまたは自動の変更の監視はオンにしないでください。  
   
- {STOP | PAUSE | RESUME } POPULATION   
+ {STOP | PAUSE | RESUME } POPULATION  
  進行中の作成を停止または一時停止します。あるいは、一時停止中の作成を停止または再開します。  
   
  STOP POPULATION によって、自動の変更の監視またはバックグラウンド更新インデックスは停止しません。 変更の監視を停止するには、SET CHANGE_TRACKING OFF を使用します。  
@@ -180,12 +179,12 @@ ALTER FULLTEXT INDEX ON table_name
  詳細については、「 [フルテキスト検索に使用するストップワードとストップリストの構成と管理](../../relational-databases/search/configure-and-manage-stopwords-and-stoplists-for-full-text-search.md)」を参照してください。  
   
  SET SEARCH PROPERTY LIST { OFF | *property_list_name* } [ WITH NO POPULATION ]  
- **適用対象**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]  
+ **適用対象**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 以降。  
   
  インデックスが存在する場合、そのインデックスに関連付けられている検索プロパティ リストを変更します。  
   
  OFF  
- フルテキスト インデックスにプロパティ リストを関連付けないことを指定します。 フルテキスト インデックスの検索プロパティ リストを無効にする場合 (ALTER FULLTEXT INDEX ...セット検索プロパティ リスト OFF)、ベース テーブルでプロパティの検索が可能ではなくなりました。  
+ フルテキスト インデックスにプロパティ リストを関連付けないことを指定します。 フルテキスト インデックスの検索プロパティ リストを無効にする場合 (ALTER FULLTEXT INDEX ...SET SEARCH PROPERTY LIST OFF)、ベース テーブルでのプロパティの検索が可能ではなくなりました。  
   
  既定では、既存の検索プロパティ リストを無効にすると、フルテキスト インデックスが自動的に再作成されます。 検索プロパティ リストを無効にするときに WITH NO POPULATION を指定した場合、自動再作成は行われません。 ただし、都合のよいときにこのフルテキスト インデックスの完全作成を実行することをお勧めします。 フルテキスト インデックスを再作成すると、削除された各検索プロパティのプロパティ固有メタデータが削除されます。その結果、フルテキスト インデックスのサイズが小さくなり効率化します。  
   
@@ -195,7 +194,7 @@ ALTER FULLTEXT INDEX ON table_name
  検索プロパティ リストをフルテキスト インデックスに追加するには、インデックスの再作成を行い、関連付けられている検索プロパティ リストに登録される検索プロパティのインデックスを作成する必要があります。 検索プロパティ リストを追加するときに WITH NO POPULATION を指定した場合は、適切なタイミングでインデックスを作成する必要があります。  
   
 > [!IMPORTANT]  
->  フルテキスト インデックスが以前に別の検索に関連付けられていた場合、インデックスを一貫性のある状態にするには、プロパティ リストを再構築する必要があります。 インデックスは即座に切り捨てられ、完全作成が実行されるまで空になります。 検索プロパティ リストの変更によってインデックスが再構築される場合の詳細については、このトピックの「解説」を参照してください。  
+>  フルテキスト インデックスが以前に別の検索に関連付けられていた場合、インデックスを一貫性のある状態にするには、プロパティ リストを再構築する必要があります。 インデックスは即座に切り捨てられ、完全作成が実行されるまで空になります。 詳細については、「[検索プロパティ リストの変更によるインデックスの再構築](#change-search-property-rebuild-index)」を参照してください。 
   
 > [!NOTE]  
 >  特定の検索プロパティ リストを同じデータベース内の複数のフルテキスト インデックスに関連付けることができます。  
@@ -206,7 +205,7 @@ ALTER FULLTEXT INDEX ON table_name
   
  検索プロパティ リストについて詳しくは、「[検索プロパティ リストを使用したドキュメント プロパティの検索](../../relational-databases/search/search-document-properties-with-search-property-lists.md)」をご覧ください。  
   
-## <a name="interactions-of-change-tracking-and-no-population-parameter"></a>変更の追跡と NO POPULATION パラメーターの相関関係  
+## <a name="change-tracking-no-population"></a> 変更の追跡と NO POPULATION パラメーターの相関関係  
  フルテキスト インデックスが作成されるかどうかは、変更の追跡が有効になっているかどうかと、ALTER FULLTEXT INDEX ステートメントで WITH NO POPULATION が指定されているかどうかによって決まります。 次の表は、その相関関係の結果をまとめたものです。  
   
 |変更の追跡|WITH NO POPULATION|結果|  
@@ -218,7 +217,7 @@ ALTER FULLTEXT INDEX ON table_name
   
  フルテキスト インデックスの作成について詳しくは、「[フルテキスト インデックスの作成](../../relational-databases/search/populate-full-text-indexes.md)」をご覧ください。  
   
-## <a name="changing-the-search-property-list-causes-rebuilding-the-index"></a>検索プロパティ リストの変更によるインデックスの再構築  
+## <a name="change-search-property-rebuild-index"></a> 検索プロパティ リストの変更によるインデックスの再構築  
  フルテキスト インデックスを検索プロパティ リストに初めて関連付けるときには、プロパティに固有の検索語句のインデックスを作成するためにインデックスを再作成する必要があります。 既存のインデックス データの切り捨ては行われません。  
   
  ただし、フルテキスト インデックスを別のプロパティ リストに関連付けると、インデックスが再構築されます。 再構築によりフルテキスト インデックスが即座に切り捨てられ、既存のデータがすべて削除されるため、インデックスの再作成が必要です。 作成処理の間、ベース テーブルでのフルテキスト クエリでは、作成処理によってインデックスが既に作成されているテーブル行のみが検索の対象となります。 再作成されるインデックス データには、新たに追加された検索プロパティ リストの登録済みプロパティのメタデータが含まれます。  
@@ -234,7 +233,7 @@ ALTER FULLTEXT INDEX ON table_name
   
 ### <a name="scenario-a-switching-directly-to-a-different-search-property-list"></a>シナリオ A: 別の検索プロパティ リストに直接切り替える場合  
   
-1.  検索プロパティ リスト `table_1` を持つ `spl_1` にフルテキスト インデックスが作成されます。  
+1.  検索プロパティ リスト `spl_1` を使って `table_1` にフルテキスト インデックスを作成します。  
   
     ```  
     CREATE FULLTEXT INDEX ON table_1 (column_name) KEY INDEX unique_key_index   
@@ -258,7 +257,7 @@ ALTER FULLTEXT INDEX ON table_name
   
 ### <a name="scenario-b-turning-off-the-search-property-list-and-later-associating-the-index-with-any-search-property-list"></a>シナリオ B: 検索プロパティ リストを無効にし、インデックスを任意の検索プロパティ リストに関連付ける場合  
   
-1.  検索プロパティ リスト `table_1` を持つ `spl_1` にフルテキスト インデックスが作成され、完全作成が自動的に実行されます (既定の動作)。  
+1.  検索プロパティ リスト `spl_1` を持つ `table_1` にフルテキスト インデックスが作成され、完全作成が自動的に実行されます (既定の動作)。  
   
     ```  
     CREATE FULLTEXT INDEX ON table_1 (column_name) KEY INDEX unique_key_index   
@@ -308,7 +307,7 @@ GO
   
 ### <a name="b-associating-a-property-list-with-a-full-text-index"></a>B. プロパティ リストをフルテキスト インデックスに関連付ける  
   
-**適用対象**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]  
+**適用対象**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 以降。  
   
  次の例では、`Production.Document` テーブルでフルテキスト インデックスに `DocumentPropertyList` プロパティ リストを関連付けます。 この ALTER FULLTEXT INDEX ステートメントにより、完全作成が開始されます。これは、SET SEARCH PROPERTY LIST 句の既定の動作です。  
   
@@ -325,7 +324,7 @@ GO
   
 ### <a name="c-removing-a-search-property-list"></a>C. 検索プロパティ リストを削除する  
   
-**適用対象**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]  
+**適用対象**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 以降。  
   
  次の例では、`DocumentPropertyList` でフルテキスト インデックスから `Production.Document` プロパティ リストを削除します。 この例では、インデックスからプロパティをすぐに削除する必要はないため、WITH NO POPULATION オプションが指定されています。 ただし、このフルテキスト インデックスに対するプロパティ レベルの検索は実行できなくなります。  
   

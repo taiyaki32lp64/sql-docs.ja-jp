@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 helpviewer_keywords:
 - Upgrade Advisor [SQL Server], when to use
@@ -15,12 +14,12 @@ ms.assetid: 5f26a7b9-1ac2-442c-8316-87b078db3baf
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: b310b51c32e4a0b3254035311c7a10182c06e550
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 8b80e11ffdf12037b466531b0d5b10a2b9f3a2e3
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48076252"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66090954"
 ---
 # <a name="working-with-upgrade-advisor"></a>アップグレード アドバイザーの使用
   [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] に確実にアップグレードできるように、アップグレード アドバイザーには、[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] へのアップグレードの前に、現在のインストールについて対処が必要な問題を検出するための中央コンソールが用意されています。  

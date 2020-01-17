@@ -18,14 +18,13 @@ helpviewer_keywords:
 ms.assetid: a45dfab5-6384-4311-b935-2e23a70c5c10
 author: rothja
 ms.author: jroth
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 5a6f4b6283c6e1a29f273eae5c607478166535af
-ms.sourcegitcommit: bfa10c54e871700de285d7f819095d51ef70d997
+ms.openlocfilehash: 076fd5f22fb7df7801ce0dacb08126a55a735d40
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/14/2019
-ms.locfileid: "54256027"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72905517"
 ---
 # <a name="view-user-defined-functions"></a>ユーザー定義関数の表示
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -70,7 +69,7 @@ ms.locfileid: "54256027"
     -   集計関数  
   
 4.  プロパティを表示する関数を右クリックし、 **[プロパティ]** を選択します。  
-  
+
      **[関数のプロパティ - _function_name_]** ダイアログ ボックスに、次のプロパティが表示されます。  
   
      **[データベース]**  
@@ -88,7 +87,7 @@ ms.locfileid: "54256027"
      **[実行時の権限]**  
      関数の実行コンテキストです。  
   
-     **名前**  
+     **[名前]**  
      現在の関数の名前です。  
   
      **[スキーマ]**  

@@ -1,6 +1,6 @@
 ---
-title: テーブルまたはストアド プロシージャをインメモリ OLTP に移植する必要があるかどうかの確認 | Microsoft Docs
-ms.custom: ''
+title: テーブルまたはストアド プロシージャをインメモリ OLTP に移植する必要があるかどうか
+ms.custom: seo-dt-2019
 ms.date: 08/02/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -13,19 +13,18 @@ helpviewer_keywords:
 ms.assetid: c1ef96f1-290d-4952-8369-2f49f27afee2
 author: MightyPen
 ms.author: genemi
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 2cb94b594be62bf19ad90c00ffaef6145eb90fc9
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 8a11fe894dc9b1e0e9770565bef5f702e29c387f
+ms.sourcegitcommit: 384e7eeb0020e17a018ef8087970038aabdd9bb7
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52531621"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74412703"
 ---
 # <a name="determining-if-a-table-or-stored-procedure-should-be-ported-to-in-memory-oltp"></a>テーブルまたはストアド プロシージャをインメモリ OLTP に移植する必要があるかどうかの確認
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
-  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] のトランザクション パフォーマンス分析レポートは、インメモリ OLTP によりデータベース アプリケーションのパフォーマンスが向上するかどうかを評価するために役立ちます。 また、このレポートを使用すると、アプリケーションでインメモリ OLTP を有効にするために必要な作業量が示されます。 インメモリ OLTP に移植するディスク ベース テーブルを特定した後で [メモリ最適化アドバイザー](../../relational-databases/in-memory-oltp/memory-optimization-advisor.md)を使用すると、テーブルを移行しやすくなります。 同様に、 [Native Compilation Advisor](../../relational-databases/in-memory-oltp/native-compilation-advisor.md) は、ストアド プロシージャをネイティブ コンパイル ストアド プロシージャに移植するために役立ちます。 移行方法については、「[インメモリ OLTP - 一般的なワークロード パターンと移行に関する考慮事項](https://msdn.microsoft.com/library/dn673538.aspx)」を参照してください。  
+  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] のトランザクション パフォーマンス分析レポートは、インメモリ OLTP によりデータベース アプリケーションのパフォーマンスが向上するかどうかを評価するために役立ちます。 また、このレポートを使用すると、アプリケーションでインメモリ OLTP を有効にするために必要な作業量が示されます。 インメモリ OLTP に移植するディスク ベース テーブルを特定した後で [メモリ最適化アドバイザー](../../relational-databases/in-memory-oltp/memory-optimization-advisor.md)を使用すると、テーブルを移行しやすくなります。 同様に、 [Native Compilation Advisor](../../relational-databases/in-memory-oltp/native-compilation-advisor.md) は、ストアド プロシージャをネイティブ コンパイル ストアド プロシージャに移植するために役立ちます。 移行方法については、「[In-Memory OLTP - Common Workload Patterns and Migration Considerations](https://msdn.microsoft.com/library/dn673538.aspx)」(インメモリ OLTP - 一般的なワークロード パターンと移行に関する考慮事項) を参照してください。  
   
  トランザクション パフォーマンス分析レポートは、実稼働データベースに対して、または実稼働ワークロードに類似したアクティブなワークロードを持つテスト データベースに対して直接実行されます。  
   
@@ -43,7 +42,7 @@ ms.locfileid: "52531621"
  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] のインストール時に **[管理ツール - 基本]** または **[管理ツール - 詳細]** を選択するか、または [SQL Server Management Studio をダウンロード](https://msdn.microsoft.com/library/mt238290.aspx)すると、トランザクション パフォーマンス分析レポートと移行アドバイザーが SQL Server Management Studio (SSMS) の一部としてインストールされます。    
   
 ## <a name="transaction-performance-analysis-reports"></a>トランザクション パフォーマンス分析レポート  
- **オブジェクト エクスプローラー** でトランザクション パフォーマンス分析レポートを生成するには、データベースを右クリックし、 **[レポート]**、 **[標準レポート]**、 **[トランザクション パフォーマンス分析の概要]** の順にクリックします。 有意義な分析レポートを生成するには、データベースにアクティブなワークロード、または最近実行されたワークロードがある必要があります。  
+ **オブジェクト エクスプローラー** でトランザクション パフォーマンス分析レポートを生成するには、データベースを右クリックし、 **[レポート]** 、 **[標準レポート]** 、 **[トランザクション パフォーマンス分析の概要]** の順にクリックします。 有意義な分析レポートを生成するには、データベースにアクティブなワークロード、または最近実行されたワークロードがある必要があります。  
   
 ### <a name="tables"></a>テーブル
   
@@ -123,7 +122,7 @@ ms.locfileid: "52531621"
 3.  **[次へ]** をクリックし、タスクの一覧が、 **[チェックリスト生成オプションの構成]** ページの設定と一致することを確認します。  
   
 4.  **[完了]** をクリックし、移行チェックリスト レポートが、選択したオブジェクトに対してのみ生成されたことを確認します。  
-  
+
  このレポートを、メモリ最適化アドバイザー ツールおよびネイティブ コンパイル アドバイザー ツールによって生成されたレポートと比較して、レポートの精度を確認できます。 詳細については、「 [Memory Optimization Advisor](../../relational-databases/in-memory-oltp/memory-optimization-advisor.md) 」および「 [Native Compilation Advisor](../../relational-databases/in-memory-oltp/native-compilation-advisor.md)」を参照してください。  
   
 **SQL Server PowerShell を使用して移行チェックリストを生成するには**  

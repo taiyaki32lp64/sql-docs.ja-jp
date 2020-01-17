@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: 108f0e2c-7dc5-4195-8248-0758a75a314e
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: d63670c93237ff5e48ad1ce16570a8fda36062f4
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 6f98d3bdb5e893d1c120be059e1ad1de446dc8d6
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47642920"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67982253"
 ---
 # <a name="getmaxcolumnsinindex-method-sqlserverdatabasemetadata"></a>getMaxColumnsInIndex メソッド (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -42,7 +41,7 @@ public int getMaxColumnsInIndex()
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- この getMaxColumnsInIndex メソッドは、java.sql.DatabaseMetaData インターフェイスで getMaxColumnsInIndex メソッドによって指定されます。  
+ この getMaxColumnsInIndex メソッドは、java メタデータインターフェイスの getMaxColumnsInIndex メソッドによって指定されます。  
   
 ## <a name="see-also"></a>参照  
  [SQLServerDatabaseMetaData のメソッド](../../../connect/jdbc/reference/sqlserverdatabasemetadata-methods.md)   

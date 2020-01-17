@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.bidtoolset.renametableorcolumn.f1
@@ -13,12 +12,12 @@ ms.assetid: 88061a39-c5aa-403d-a52b-7fdb365fc235
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 4f9a869b4a280f8df44fce4c506c5f77afc7e8f9
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: d9d9f11b8713ea26cd79e95b9edc3f36c0bf3564
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48085584"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66066686"
 ---
 # <a name="rename-a-table-or-column-ssas-tabular"></a>テーブルまたは列名の変更 (SSAS テーブル)
   **テーブルのインポート ウィザード**の **[テーブルとビューの選択]** ページで**表示名**を入力することにより、インポート処理中にテーブルの名前を変更できます。 **テーブルのインポート ウィザード** の **[SQL クエリの指定]** ページでクエリを指定してデータをインポートした場合は、テーブルおよび列の名前を変更することもできます。  
@@ -57,8 +56,8 @@ ms.locfileid: "48085584"
  さらに名前を変更したテーブルを使用する計算、および名前を変更したテーブルの列を使用する計算を更新し、これらの計算から派生したデータも更新して再計算する必要があります。 影響を受けるテーブルと計算の数によっては、完了までに時間がかかることがあります。 このため、テーブル名を変更するタイミングとしては、インポート処理時か、複雑なリレーションシップや計算を構築する前が最適です。  
   
 ## <a name="see-also"></a>参照  
- [テーブルと列&#40;SSAS 表形式&#41;](tables-and-columns-ssas-tabular.md)   
+ [テーブルと列 &#40;SSAS テーブル&#41;](tables-and-columns-ssas-tabular.md)   
  [PowerPivot からインポート&#40;SSAS 表形式&#41;](import-from-power-pivot-ssas-tabular.md)   
- [Analysis Services からのインポート&#40;SSAS 表形式&#41;](import-from-analysis-services-ssas-tabular.md)  
+ [Analysis Services からのインポート (SSAS テーブル)](import-from-analysis-services-ssas-tabular.md)  
   
   

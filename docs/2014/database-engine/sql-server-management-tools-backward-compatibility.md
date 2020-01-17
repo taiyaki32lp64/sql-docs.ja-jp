@@ -11,11 +11,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 1c61e1b980e729cb936c00410a156d8c0dc47d0b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48089832"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62842978"
 ---
 # <a name="sql-server-management-tools-backward-compatibility"></a>SQL Server 管理ツールの旧バージョンとの互換性
   旧バージョンとの互換性のセクションの各トピックでは、[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 各バージョンでの動作の相違について説明します。  

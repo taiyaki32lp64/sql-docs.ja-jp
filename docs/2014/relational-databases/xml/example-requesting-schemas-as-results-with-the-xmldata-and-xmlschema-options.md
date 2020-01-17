@@ -1,5 +1,5 @@
 ---
-title: 例:XMLDATA と XMLSCHEMA オプションの結果としてのスキーマの要求 |Microsoft Docs
+title: '例: XMLDATA オプションと XMLSCHEMA オプションを使用した結果としてのスキーマの要求 | Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -10,17 +10,17 @@ helpviewer_keywords:
 - RAW mode, requesting schema example
 - RAW mode, with XMLDATA and XMLSCHEMA
 ms.assetid: 3504ca38-be66-42b2-8dab-f499c9584840
-author: douglaslMS
-ms.author: douglasl
+author: MightyPen
+ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 8d0337ea25181ab45426353e69a4f37124aa33bc
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: a2a18dd84f5f0a83cc3c6f42bf664c178c1ba6b9
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54126542"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62637928"
 ---
-# <a name="example-requesting-schemas-as-results-with-the-xmldata-and-xmlschema-options"></a>例:XMLDATA と XMLSCHEMA オプションの結果としてのスキーマの要求
+# <a name="example-requesting-schemas-as-results-with-the-xmldata-and-xmlschema-options"></a>例: XMLDATA オプションと XMLSCHEMA オプションを使用した結果としてのスキーマの要求
   次のクエリでは、ドキュメント構造を記述する XML-DATA スキーマが返されます。  
   
 ## <a name="example"></a>例  
@@ -35,7 +35,7 @@ FOR XML RAW, XMLDATA
 GO  
 ```  
   
- これは、結果です。  
+ 結果を次に示します。  
   
 ```  
 <Schema name="Schema1" xmlns="urn:schemas-microsoft-com:xml-data"   
@@ -52,7 +52,7 @@ GO
 ```  
   
 > [!NOTE]
->  <`Schema`> は、名前空間として宣言されます。 異なる複数の FOR XML クエリで複数の XML-Data スキーマを要求するときに、名前空間の競合を避けるために、名前空間識別子 (この例では `Schema1` ) はクエリを実行するたびに変わります。 名前空間の識別子から成る**Schema_n_** 場所**_n_** は整数です。  
+>  <`Schema`> は、名前空間として宣言されます。 異なる複数の FOR XML クエリで複数の XML-Data スキーマを要求するときに、名前空間の競合を避けるために、名前空間識別子 (この例では `Schema1` ) はクエリを実行するたびに変わります。 名前空間の識別子から成る**Schema_n_** 場所 **_n_** は整数です。  
   
  `XMLSCHEMA` オプションを指定することにより、結果の XSD スキーマを要求できます。  
   
@@ -66,7 +66,7 @@ FOR XML RAW, XMLSCHEMA
 GO  
 ```  
   
- これは、結果です。  
+ 結果を次に示します。  
   
 ```  
 <xsd:schema targetNamespace="urn:schemas-microsoft-com:sql:SqlRowSet1" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:sqltypes="https://schemas.microsoft.com/sqlserver/2004/sqltypes" elementFormDefault="qualified">  
@@ -101,7 +101,7 @@ FOR XML RAW, XMLSCHEMA ('urn:example.com')
 GO  
 ```  
   
- これは、結果です。  
+ 結果を次に示します。  
   
 ```  
 <xsd:schema targetNamespace="urn:example.com" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:sqltypes="https://schemas.microsoft.com/sqlserver/2004/sqltypes" elementFormDefault="qualified">  
@@ -123,7 +123,7 @@ GO
 <row xmlns="urn:example.com" ProductModelID="119" Name="Bike Wash" />  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [FOR XML での RAW モードの使用](use-raw-mode-with-for-xml.md)  
   
   

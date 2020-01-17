@@ -15,11 +15,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: a3219168a070a9c264d4fb5457f9e5844734844a
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52775564"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68186111"
 ---
 # <a name="start-sql-server-profiler"></a>SQL Server Profiler の起動
   [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] は、さまざまなシナリオでのトレース出力の収集をサポートするために、いくつかの異なる方法で起動することができます。 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] は、 **[スタート]** メニューや **チューニング アドバイザーの** [ツール] [!INCLUDE[ssDE](../../includes/ssde-md.md)] メニューから起動できるほか、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]から起動することもできます。  
@@ -28,7 +28,7 @@ ms.locfileid: "52775564"
   
 ### <a name="to-start-sql-server-profiler-from-the-start-menu"></a>[スタート] メニューから SQL Server Profiler を起動するには  
   
-1.  **[スタート]** ボタンをクリックし、 **[すべてのプログラム]**、 [!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)]、 **[パフォーマンス ツール]** の順にポイントして、 **[SQL Server Profiler]** をクリックします。  
+1.  **[スタート]** ボタンをクリックし、 **[すべてのプログラム]** 、 [!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)]、 **[パフォーマンス ツール]** の順にポイントして、 **[SQL Server Profiler]** をクリックします。  
   
 ### <a name="to-start-sql-server-profiler-in-database-engine-tuning-advisor"></a>データベース エンジン チューニング アドバイザーで SQL Server Profiler を起動するには  
   
@@ -41,7 +41,7 @@ ms.locfileid: "52775564"
   
 #### <a name="to-start-sql-server-profiler-from-the-tools-menu"></a>[ツール] メニューから SQL Server Profiler を起動するには  
   
-1.   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] **チューニング アドバイザーの** メニューの **[SQL Server Profiler]** から起動することもできます。  
+1.  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] **チューニング アドバイザーの** メニューの **[SQL Server Profiler]** から起動することもできます。  
   
 #### <a name="to-start-sql-server-profiler-from-the-query-editor"></a>クエリ エディターから SQL Server Profiler を起動するには  
   
@@ -61,12 +61,12 @@ ms.locfileid: "52775564"
     > [!NOTE]  
     >  プロセスを選択したときに、利用状況モニターが開いていた場合、接続コンテキストはオブジェクト エクスプローラー接続になります。 トレース テンプレートはサーバーの種類に応じた既定値になります。SPID は、選択されたプロセスの SPID と等しくなります。  
   
-## <a name="net-framework-security"></a>.NET Framework のセキュリティ  
+## <a name="net-framework-security"></a>.NET Framework セキュリティ  
  Windows 認証モードでは、 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] を実行するユーザー アカウントが [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のインスタンスに接続する権限を持っている必要があります。  
   
  [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]でトレースを実行するには、ユーザーが ALTER TRACE 権限も持っている必要があります。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [[SQL Server Profiler]](sql-server-profiler.md)   
  [SQL Server Management Studio の使用 [SQL Server]](../../database-engine/use-sql-server-management-studio.md)  
   

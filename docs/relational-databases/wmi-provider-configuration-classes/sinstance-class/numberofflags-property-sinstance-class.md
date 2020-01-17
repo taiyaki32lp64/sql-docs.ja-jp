@@ -1,6 +1,6 @@
 ---
-title: NumberOfFlags プロパティ (SInstance クラス) |Microsoft Docs
-ms.custom: ''
+title: Number Offラグプロパティ (SInstance)
+ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -17,17 +17,16 @@ helpviewer_keywords:
 ms.assetid: b62005f8-9af3-4fc8-9344-a1ccdb713053
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: 26716906460905b307dfc9ca0e959ec3e61fd224
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 053a53cff621cedc29e8583ebca354c9c067774a
+ms.sourcegitcommit: baa40306cada09e480b4c5ddb44ee8524307a2ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51681160"
+ms.lasthandoff: 11/06/2019
+ms.locfileid: "73659074"
 ---
 # <a name="numberofflags-property-sinstance-class"></a>NumberOfFlags プロパティ (SInstance クラス)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
-  インスタンスのフラグの番号を取得[!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]します。  
+  [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]のインスタンスのフラグの数を取得します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -38,14 +37,14 @@ object.NumberOfFlags [= value]
   
 ## <a name="parts"></a>要素  
  *object*  
- [SInstance クラス](../../../relational-databases/wmi-provider-configuration-classes/sinstance-class/sinstance-class.md)サーバー インスタンスを表すオブジェクト。  
+ サーバーインスタンスを表す[Sinstance クラス](../../../relational-databases/wmi-provider-configuration-classes/sinstance-class/sinstance-class.md)オブジェクト。  
   
 ## <a name="property-valuereturn-value"></a>プロパティ値/戻り値  
- A **uint32**フラグのインスタンスの数を指定する値[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]します。  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]のインスタンスのフラグの数を指定する**uint32**値。  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>解説  
   
 ## <a name="see-also"></a>参照  
- [サーバー ネットワーク プロトコルとネットワーク ライブラリの構成](https://msdn.microsoft.com/library/ms177485\(v=sql.100\).aspx)  
+ [サーバーネットワークプロトコルと Net-library の構成](https://msdn.microsoft.com/library/ms177485\(v=sql.100\).aspx)  
   
   

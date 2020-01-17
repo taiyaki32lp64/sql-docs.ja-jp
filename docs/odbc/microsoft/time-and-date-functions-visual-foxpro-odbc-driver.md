@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: c1fb63b7-af50-45d6-8dec-ae6ea7119527
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: cf8e7552faf9567dab25ee3dc5b7b293034faef0
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 537af13edf943e27a634d3a8ba4f0f85c645251f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52538752"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67912403"
 ---
 # <a name="time-and-date-functions-visual-foxpro-odbc-driver"></a>時刻および日付関数 (Visual FoxPro ODBC ドライバー)
 次の表に、Visual FoxPro ODBC ドライバーでサポートされている ODBC の日付と時刻関数ODBC 構文から同じ関数の場合、Visual FoxPro の文法が異なる場合は、Visual FoxPro のと同じですが一覧表示されます。  
@@ -31,14 +30,14 @@ ms.locfileid: "52538752"
 |ODBC の文法|Visual FoxPro の文法|  
 |------------------|---------------------------|  
 |CURDATE *)*|日付 *)*|  
-|CURTIME *)*|時間 *)*|  
+|CURTIME *( )*|時間 *)*|  
 |DAYNAME *(date_exp)*|CDOW *(date_exp)*|  
-|DAYOFMONTH (*date_exp)*|1 日 *)*|  
+|DAYOFMONTH(*date_exp)*|1 日 *)*|  
 |1 時間 *(time_exp)*||  
 |分 *(time_exp)*||  
 |1 か月 *(time_exp)*||  
 |MONTHNAME *(date_exp)*|CMONTH *(date_exp)*|  
-|今すぐ *)*|DATETIME *)*|  
+|今すぐ *)*|DATETIME *( )*|  
 |2 番目 *(time_exp)*|1 秒 *(time_exp)*|  
 |週 *(date_exp)*||  
 |年 *(date_exp)*||  
@@ -61,7 +60,7 @@ ms.locfileid: "52538752"
 --(*vendor(Microsoft),product(ODBC) ts ''value' *)-  
 ```  
   
- この構文で、 **d**ことを示します*値*の日付、 *- yyyy-mm-dd*形式と**ts**ことを示します*値*のタイムスタンプは、 *- yyyy-mm-dd hh:mm:ss*[.*f.*] 形式。 日付とタイムスタンプのデータの略式の構文は次のとおりです。  
+ この構文で、 **d**ことを示します*値*の日付、 *- yyyy-mm-dd*形式と**ts**ことを示します*値*のタイムスタンプは、 *- yyyy-mm-dd hh:mm:ss*[.*f.* ] 形式。 日付とタイムスタンプのデータの略式の構文は次のとおりです。  
   
 ```  
 {d 'value'}  

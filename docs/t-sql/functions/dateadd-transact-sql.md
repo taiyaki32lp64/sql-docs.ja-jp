@@ -23,22 +23,18 @@ helpviewer_keywords:
 - date and time [SQL Server], DATEADD
 - DATEADD function [SQL Server]
 ms.assetid: 89c5ae32-89c6-47e1-979e-15d97908b9f1
-author: MashaMSFT
-ms.author: mathoma
-manager: craigg
+author: MikeRayMSFT
+ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: c6ad81ca6278b0bf712f1a143c3d683103720c97
-ms.sourcegitcommit: 96032813f6bf1cba680b5e46d82ae1f0f2da3d11
+ms.openlocfilehash: ed302e9361e46b8403cea168201fc6cadaa17986
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/15/2019
-ms.locfileid: "54299048"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68026196"
 ---
 # <a name="dateadd-transact-sql"></a>DATEADD (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
-
-> [!div class="nextstepaction"]
-> [SQL ドキュメントの目次に関するご意見を共有してください。](https://aka.ms/sqldocsurvey)
 
 この関数は、入力 *date* 値の指定 *datepart* に指定 *number* 値 (符号付き整数として) を追加し、その変更後の値を返します。
   
@@ -91,7 +87,8 @@ DATEADD (datepart , number , date )
 *date* の場合、`DATEADD` では、列式、式、文字列リテラル、ユーザー定義の変数が受け入れられます。 文字列リテラル値は **datetime** に解決する必要があります。 あいまいさの問題を排除するために、4 桁の西暦を使用してください。 2 桁の西暦については、「[two digit year cutoff サーバー構成オプションの構成](../../database-engine/configure-windows/configure-the-two-digit-year-cutoff-server-configuration-option.md)」を参照してください。
   
 ## <a name="return-types"></a>戻り値の型
-*date* 引数データ型は、文字列リテラル *date* 値を除き、`DATEADD` 戻り値データ型になります。 文字列リテラルの場合、`DATEADD` は **datetime** 値を返します。 `DATEADD` は、文字列リテラルの秒の小数点以下桁数 (.nnn) が 3 を超えるか、文字列リテラルにタイム ゾーン オフセット部分が含まれる場合、エラーを出します。
+
+このメソッドの戻り値のデータ型は動的です。 戻り値の型は、`date` に与えられた引数によって異なります。 `date` の値が文字列リテラル日付であれば、`DATEADD` からは **datetime** 値が返されます。 別の有効な入力データ型が `date` に指定された場合、`DATEADD` からは同じデータ型が返されます。 `DATEADD` は、文字列リテラルの秒の小数点以下桁数 (.nnn) が 3 を超えるか、文字列リテラルにタイム ゾーン オフセット部分が含まれる場合、エラーを出します。
   
 ## <a name="return-value"></a>戻り値  
   
@@ -129,7 +126,7 @@ SELECT DATEADD(year,2147483647, '20060731');
 SELECT DATEADD(year,-2147483647, '20060731');  
 ```  
   
-## <a name="return-values-for-a-smalldatetime-date-and-a-second-or-fractional-seconds-datepart"></a>smalldatetime に対する戻り値 (秒または 1 秒未満の秒)  
+## <a name="return-values-for-a-smalldatetime-date-and-a-second-or-fractional-seconds-datepart"></a>smalldatetime に対する戻り値 (日付および秒または 1 秒未満の秒)  
 [smalldatetime](../../t-sql/data-types/smalldatetime-transact-sql.md) 値の秒の部分は常に 00 です。 **smalldatetime** *date* 値の場合、次が適用されます。 
 
 -   **second** の *datepart* と -30 から +29 の *number* 値の場合、`DATEADD` によって変更が行われることはありません。  
@@ -237,7 +234,7 @@ microsecond  2007-01-01 13:10:10.1111121
 nanosecond   2007-01-01 13:10:10.1111111  
 ```  
   
-### <a name="b-incrementing-more-than-one-level-of-datepart-in-one-statement"></a>B. 単一のステートメントで datepart を複数単位増やす  
+### <a name="b-incrementing-more-than-one-level-of-datepart-in-one-statement"></a>B. 単一のステートメントで datepart を複数レベル増やす  
 次の各ステートメントは、*date* の *datepart* を付加的に繰り上げる *number* だけ *datepart* を増やします。
   
 ```sql

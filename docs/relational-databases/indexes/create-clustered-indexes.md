@@ -16,14 +16,13 @@ helpviewer_keywords:
 ms.assetid: 47148383-c2c7-4f08-a9e4-7016bf2d1d13
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 514ec88554282cf6e2cf0cc74eb1f35e77091fa9
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 79ce697e86adcd7a2b11d4ec1d5f4564d51692e5
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52539019"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68024990"
 ---
 # <a name="create-clustered-indexes"></a>クラスター化インデックスの作成
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -38,7 +37,7 @@ ms.locfileid: "52539019"
   
      [制限事項と制約事項](#Restrictions)  
   
-     [Security](#Security)  
+     [セキュリティ](#Security)  
   
 -   **テーブルにクラスター化インデックスを作成するために使用するもの:**  
   
@@ -84,11 +83,11 @@ ms.locfileid: "52539019"
   
 1.  オブジェクト エクスプローラーで、クラスター化インデックスを作成するテーブルを展開します。  
   
-2.  **[インデックス]** フォルダーを右クリックし、**[新しいインデックス]** をポイントして、**[クラスター化インデックス...]** を選択します。  
+2.  **[インデックス]** フォルダーを右クリックし、 **[新しいインデックス]** をポイントして、 **[クラスター化インデックス...]** を選択します。  
   
 3.  **[新しいインデックス]** ダイアログ ボックスの **[全般]** ページで、 **[インデックス名]** ボックスに新しいインデックスの名前を入力します。  
   
-4.  **[インデックス キー列]** で、**[追加...]** をクリックします。  
+4.  **[インデックス キー列]** で、 **[追加]** をクリックします。  
   
 5.  _[table\_name_ **から列を選択]** ダイアログ ボックスで、クラスター化インデックスに追加するテーブル列のチェック ボックスをオンにします。  
   
@@ -100,11 +99,11 @@ ms.locfileid: "52539019"
   
 1.  オブジェクト エクスプローラーで、クラスター化インデックスを含むテーブルを作成するデータベースを展開します。  
   
-2.  **[テーブル]** フォルダーを右クリックし、**[新しいテーブル...]** をクリックします。  
+2.  **[テーブル]** フォルダーを右クリックし、 **[新しいテーブル...]** をクリックします。  
   
 3.  通常どおりに新しいテーブルを作成します。 詳しくは、「[テーブルの作成 &#40;データベース エンジン&#41;](../../relational-databases/tables/create-tables-database-engine.md)」を参照してください。  
   
-4.  上の手順で作成した新しいテーブルを右クリックし、**[デザイン]** をクリックします。  
+4.  上の手順で作成した新しいテーブルを右クリックし、 **[デザイン]** をクリックします。  
   
 5.  **[テーブル デザイナー]** メニューの **[インデックス/キー]** をクリックします。  
   

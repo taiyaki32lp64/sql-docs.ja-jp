@@ -11,15 +11,14 @@ helpviewer_keywords:
 - inserting tables
 - adding tables
 ms.assetid: 5440fdf7-ac04-4325-9f32-181f4cd402e5
-author: stevestein
-ms.author: sstein
-manager: craigg
-ms.openlocfilehash: a211647949ff4f234ac0287076e608b83e5a9421
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 7f85f9bf8dec248430c261d369f566616db6f1a2
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52502213"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68263730"
 ---
 # <a name="add-tables-to-diagrams-visual-database-tools"></a>ダイアグラムへのテーブルの追加 (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -31,7 +30,7 @@ ms.locfileid: "52502213"
   
     現在のダイアグラムにテーブルを作成するには、ツール バーの **[新しいテーブル]** をクリックします。  
   
-    - または -  
+    \- または -  
   
     ダイアグラムを右クリックし、 **[新しいテーブル]** をクリックします。  
   

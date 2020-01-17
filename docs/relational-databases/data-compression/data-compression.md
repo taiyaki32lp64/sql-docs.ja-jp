@@ -22,14 +22,13 @@ helpviewer_keywords:
 ms.assetid: 5f33e686-e115-4687-bd39-a00c48646513
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 2370c428d063958079e749c792a60de3b7379ee3
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: e31898c8252084a34ed645e5b3f5113f9893ee48
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53210531"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68055452"
 ---
 # <a name="data-compression"></a>Data Compression
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -139,7 +138,7 @@ REBUILD PARTITION = ALL WITH (
 -   [sys.indexes &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-indexes-transact-sql.md) - **type** 列と **type_desc** 列には、CLUSTERED COLUMNSTORE と NONCLUSTERED COLUMNSTORE が含まれます。  
 -   [sys.partitions &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-partitions-transact-sql.md) - **data_compression** 列と **data_compression_desc** 列には、COLUMNSTORE と COLUMNSTORE_ARCHIVE が含まれます。  
   
-プロシージャ [sp_estimate_data_compression_savings &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-estimate-data-compression-savings-transact-sql.md) は、列ストア インデックスに適用されません。  
+プロシージャ [sp_estimate_data_compression_savings &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-estimate-data-compression-savings-transact-sql.md) も列ストア インデックスに適用されます。  
   
 ## <a name="how-compression-affects-partitioned-tables-and-indexes"></a>パーティション テーブルとパーティション インデックスへの圧縮の影響  
  パーティション テーブルとパーティション インデックスでデータ圧縮を使用する場合は、次の点に注意してください。  

@@ -4,21 +4,20 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.is.upgradewizard.selectdestinationlocation.f1
 ms.assetid: 89274a71-0ffe-4889-84df-f5a7d78459ef
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 63e06bc579879f552fa8406fef463738b96e8459
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: d891f456f9c4922b3c680913f767d4e9b14a76a0
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48172992"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66056007"
 ---
 # <a name="select-destination-location-ssis-package-upgrade-wizard"></a>[アップグレード先の場所を選択] (SSIS パッケージ アップグレード ウィザード)
   **[アップグレード先の場所を選択]** ページを使用すると、アップグレードされたパッケージの保存先を指定できます。  

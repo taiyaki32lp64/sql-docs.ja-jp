@@ -1,6 +1,7 @@
 ---
-title: SQL Server 2016 へのログ配布のアップグレード (Transact-SQL) | Microsoft Docs
-ms.custom: ''
+title: SQL Server 2016 以降へのログ配布のアップグレード
+description: 以前のバージョンから SQL Server 2016 以降にアップグレードするときに、ログ配布のディザスター リカバリー ソリューションを保持するための適切な順序について説明します。
+ms.custom: seo-lt-2019
 ms.date: 02/01/2016
 ms.prod: sql
 ms.reviewer: ''
@@ -11,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: b1289cc3-f5be-40bb-8801-0e3eed40336e
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: dfb48f3af8f7a4cba7030fd8beeff2add3653e9d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: c3ebe7da68b057e9f84d2b83572a337ede278401
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47801680"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75258567"
 ---
 # <a name="upgrading-log-shipping-to-sql-server-2016-transact-sql"></a>SQL Server 2016 へのログ配布のアップグレード (Transact-SQL)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -41,13 +41,13 @@ ms.locfileid: "47801680"
 ##  <a name="Prerequisites"></a> 前提条件  
  作業を開始する前に、次の重要な情報を確認してください。  
   
--   [Supported Version and Edition Upgrades](../../database-engine/install-windows/supported-version-and-edition-upgrades.md): 自分のバージョンの Windows オペレーティング システムと SQL Server から SQL Server 2016 にアップグレードできることを確認します。 たとえば、SQL Server 2005 インスタンスから [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]に直接アップグレードすることはできません。  
+-   [サポートされているバージョンとエディションのアップグレード](../../database-engine/install-windows/supported-version-and-edition-upgrades.md):使用している Windows オペレーティング システムと SQL Server のバージョンから SQL Server 2016 にアップグレードできることを確認します。 たとえば、SQL Server 2005 インスタンスから [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]に直接アップグレードすることはできません。  
   
--   [Choose a Database Engine Upgrade Method](../../database-engine/install-windows/choose-a-database-engine-upgrade-method.md): サポートされるバージョンとエディションのアップグレードに基づいて、適切なアップグレードの方法と手順を選択します。また、自分の環境にインストールされているその他のコンポーネントに基づいて、正しい順序でコンポーネントをアップグレードします。  
+-   [データベース エンジンのアップグレード方法の選択](../../database-engine/install-windows/choose-a-database-engine-upgrade-method.md):サポートされるバージョンとエディションのアップグレードを確認して、適切なアップグレードの方法と手順を選択します。また、環境にインストールされているその他のコンポーネントに基づいて、正しい順序でコンポーネントをアップグレードします。  
   
--   [データベース エンジンのアップグレード計画の策定およびテスト](../../database-engine/install-windows/plan-and-test-the-database-engine-upgrade-plan.md): リリース ノート、アップグレードに関する既知の問題、アップグレード前のチェックリストを確認して、アップグレードの計画を作成およびテストします。  
+-   [データベース エンジンのアップグレード計画の策定およびテスト](../../database-engine/install-windows/plan-and-test-the-database-engine-upgrade-plan.md):リリース ノート、アップグレードに関する既知の問題、アップグレード前のチェックリストを確認して、アップグレードの計画を作成およびテストします。  
   
--   [SQL Server 2016 のインストールに必要なハードウェアおよびソフトウェア](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md): [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]をインストールするためのソフトウェア要件を確認します。 その他のソフトウェアが必要な場合は、ダウンタイムを最小限に抑えるために、アップグレード プロセスを開始する前に、各ノードにソフトウェアをインストールします。  
+-   [SQL Server 2016 のインストールに必要なハードウェアおよびソフトウェア](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md)[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] のインストールにおけるソフトウェア要件を確認します。 その他のソフトウェアが必要な場合は、ダウンタイムを最小限に抑えるために、アップグレード プロセスを開始する前に、各ノードにソフトウェアをインストールします。  
   
 ##  <a name="ProtectData"></a> アップグレード前のデータの保護  
  ログ配布のアップグレードを行う前にデータを保護することをお勧めします。  
@@ -56,7 +56,7 @@ ms.locfileid: "47801680"
   
 1.  すべてのプライマリ データベースを対象にデータベースの完全バックアップを実行します。  
   
-     詳細については、データベースの完全バックアップの作成 [データベースの完全バックアップの作成 &#40;SQL Server&#41;](../../relational-databases/backup-restore/create-a-full-database-backup-sql-server.md)を使用してデータベースの差分バックアップを作成します。  
+     詳細については、「[データベースの完全バックアップの作成 &#40;SQL Server&#41;](../../relational-databases/backup-restore/create-a-full-database-backup-sql-server.md)」を参照してください。  
   
 2.  すべてのプライマリ データベースで [DBCC CHECKDB](../../t-sql/database-console-commands/dbcc-checkdb-transact-sql.md) コマンドを実行します。  
   
@@ -85,7 +85,7 @@ ms.locfileid: "47801680"
  ログ配布は主にディザスター リカバリー ソリューションであるため、最も単純で一般的なシナリオは、プライマリ インスタンスを適切にアップグレードすることです。データベースはこのアップグレード中は使用できなくなります。 サーバーのアップグレードが完了すると、データベースが自動的にオンラインに戻り、データベースのアップグレードが行われます。 データベースのアップグレードが完了すると、ログ配布ジョブが再開されます。  
   
 > [!NOTE]  
->  ログ配布では、[ログ配布のセカンダリへのフェールオーバー &#40;SQL Server&#41;](../../database-engine/log-shipping/fail-over-to-a-log-shipping-secondary-sql-server.md)のオプションもサポートしています。また、[プライマリ ログ配布サーバーとセカンダリ ログ配布サーバー間でのロールの変更 &#40;SQL Server&#41;](../../database-engine/log-shipping/change-roles-between-primary-and-secondary-log-shipping-servers-sql-server.md)もできます。  ただし、ログ配布が高可用性ソリューションとして構成されることは今後ほとんどないため (新しいオプションの方が堅牢性がかなり高い)、フェールオーバーでは通常ダウンタイムが最小化されません。フェールオーバーではシステム データベース オブジェクトが同期されず、昇格したセカンダリを見つけて接続しやすくするためのクライアントを有効にする方が難しいためです。  
+>  ログ配布では、[ログ配布のセカンダリへのフェールオーバー &#40;SQL Server&#41;](../../database-engine/log-shipping/fail-over-to-a-log-shipping-secondary-sql-server.md)のオプションもサポートしています。また、[プライマリ ログ配布サーバーとセカンダリ ログ配布サーバー間でのロールの変更 &#40;SQL Server&#41;](../../database-engine/log-shipping/change-roles-between-primary-and-secondary-log-shipping-servers-sql-server.md)もできます。 ただし、ログ配布が高可用性ソリューションとして構成されることは今後ほとんどないため (新しいオプションの方が堅牢性がかなり高い)、フェールオーバーでは通常ダウンタイムが最小化されません。フェールオーバーではシステム データベース オブジェクトが同期されず、昇格したセカンダリを見つけて接続しやすくするためのクライアントを有効にする方が難しいためです。  
   
 ## <a name="see-also"></a>参照  
  [インストール ウィザードを使用した SQL Server 2016 へのアップグレード &#40;セットアップ&#41;](../../database-engine/install-windows/upgrade-sql-server-using-the-installation-wizard-setup.md)   

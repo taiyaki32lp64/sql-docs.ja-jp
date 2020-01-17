@@ -11,15 +11,14 @@ f1_keywords:
 - vdt.dlgbox.columnselection
 - vdtsql.chm:65548
 ms.assetid: 479bae2c-fee0-4215-b424-1ab779a7e5ca
-author: stevestein
-ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 337f2d0c9dc4a063b6219125e8f6e0ffa188eb61
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 4522bc61c35927c4fdfe524205578f0a06cf6d95
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47845814"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68262516"
 ---
 # <a name="column-selection-dialog-box-visual-database-tools"></a>[列の選択] ダイアログ ボックス (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -27,7 +26,7 @@ ms.locfileid: "47845814"
   
 このダイアログ ボックスは、テーブルを右クリックしてショートカット メニューの **[カスタム ビューの変更]** をクリックしたときに表示されます。  
   
-## <a name="options"></a>[変数]  
+## <a name="options"></a>オプション  
 **[使用できる列]**  
 選択したデータベース テーブル内にあるすべての列の一覧を表示します。 ここに表示される列は、データベース テーブルのプロパティおよびデータベースのタイプによって異なります。 表示する列を強調表示し、矢印ボタンを使用して列を **[選択した列]** ボックスに移動します。  
   

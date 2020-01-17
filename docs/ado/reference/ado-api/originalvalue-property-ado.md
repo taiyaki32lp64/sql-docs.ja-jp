@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 6e33c6ec-14d9-4b1d-ba9b-cb99862e7bac
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 0d25c44883c7f04f1543639ecc870c00ad5beb9d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 512569ce2baa8acabdf8bcbf8f637ebf20e4f613
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47649000"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67917845"
 ---
 # <a name="originalvalue-property-ado"></a>OriginalValue プロパティ (ADO)
 値を示す、[フィールド](../../../ado/reference/ado-api/field-object.md)変更が行われる前に、レコードに存在します。  
@@ -42,7 +41,7 @@ ms.locfileid: "47649000"
 ## <a name="applies-to"></a>適用対象  
  [Field オブジェクト](../../../ado/reference/ado-api/field-object.md)  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [OriginalValue および UnderlyingValue プロパティの例 (VB)](../../../ado/reference/ado-api/originalvalue-and-underlyingvalue-properties-example-vb.md)   
  [OriginalValue および UnderlyingValue プロパティの例 (vc++)](../../../ado/reference/ado-api/originalvalue-and-underlyingvalue-properties-example-vc.md)   
  [UnderlyingValue プロパティ](../../../ado/reference/ado-api/underlyingvalue-property.md)

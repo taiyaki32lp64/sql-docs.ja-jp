@@ -1,5 +1,5 @@
 ---
-title: getMetaData メソッド (SQLServerPreparedStatement) |Microsoft Docs
+title: getMetaData メソッド (SQLServerPreparedStatement) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: 5ed49a53-ed61-4e95-ad67-45957aaabb6a
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: eab31765374c30436062b9d0a7eaa3783c3e651f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: bbc0a0493498f3d216c9e1395f651d8afec70711
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47804810"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67981865"
 ---
 # <a name="getmetadata-method-sqlserverpreparedstatement"></a>getMetaData メソッド (SQLServerPreparedStatement)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -36,13 +35,13 @@ public final java.sql.ResultSetMetaData getMetaData()
 ```  
   
 ## <a name="return-value"></a>戻り値  
- ResultSetMetaData オブジェクト。  
+ ResultSetMetaData オブジェクトです。  
   
 ## <a name="exceptions"></a>例外  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- この getMetaData メソッドは、java.sql.PreparedStatement インターフェイスの getMetaData メソッドによって指定されます。  
+ この getMetaData メソッドは、java.sql.PreparedStatement インターフェイスの getMetaData メソッドで規定されています。  
   
 ## <a name="see-also"></a>参照  
  [SQLServerPreparedStatement のメンバー](../../../connect/jdbc/reference/sqlserverpreparedstatement-members.md)   

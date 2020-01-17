@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 07ce0ef0-72f1-48f4-823d-1b65d28c0926
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: b60f402cdc7ba861a0d0550a92d16fa7dd1f59b7
-ms.sourcegitcommit: 1a5448747ccb2e13e8f3d9f04012ba5ae04bb0a3
+ms.openlocfilehash: 06bf7c811074ba70741fe77b06037f9f69c9cda4
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51557850"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67922473"
 ---
 # <a name="rds-programming-model-with-objects"></a>RDS のプログラミング モデルとオブジェクト
 RDS の目標にアクセスし、IIS などの中間層を介して、データ ソースを更新することです。 プログラミング モデルでは、この目標を達成するために必要なアクティビティのシーケンスを指定します。 オブジェクト モデルでは、メソッドとプロパティが、プログラミング モデルに影響するオブジェクトを指定します。  
@@ -41,7 +40,7 @@ RDS の目標にアクセスし、IIS などの中間層を介して、データ
   
 -   変更、 **Recordset**オブジェクトがサーバーに送信され、データ ソースを更新するために使用 (**rds.DataControl**または**RDSServer.DataFactory**)。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [RDS オブジェクト モデルの概要](../../../ado/guide/remote-data-service/rds-object-model-summary.md)   
  [DataControl オブジェクト (RDS)](../../../ado/reference/rds-api/datacontrol-object-rds.md)   
  [DataFactory オブジェクト (RDSServer)](../../../ado/reference/rds-api/datafactory-object-rdsserver.md)   

@@ -1,6 +1,6 @@
 ---
 title: SQL Server テーブルから列を削除する |Microsoft Docs
-description: SQL Server の OLE DB ドライバーを使用して SQL Server テーブルから列を削除します。
+description: OLE DB Driver for SQL Server を使用して SQL Server テーブルから列を削除する
 ms.custom: ''
 ms.date: 06/14/2018
 ms.prod: sql
@@ -15,24 +15,23 @@ helpviewer_keywords:
 - OLE DB Driver for SQL Server, columns
 author: pmasl
 ms.author: pelopes
-manager: craigg
-ms.openlocfilehash: 8f9bd51d59316fe4a8a67cd03938ee75310a7644
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 7e367c1b0664b0b43007db3a465dcbec0ffa90d9
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47711450"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67993989"
 ---
 # <a name="removing-a-column-from-a-sql-server-table"></a>SQL Server テーブルからの列の削除
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
-  OLE DB Driver for SQL Server を公開、 **itabledefinition::dropcolumn**関数。 コンシューマーはこの関数を使用して、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] テーブルから列を削除できます。  
+  SQL Server の OLE DB ドライバーは、 **Itabledefinition::D ropcolumn**関数を公開します。 コンシューマーはこの関数を使用して、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] テーブルから列を削除できます。  
   
  コンシューマーはテーブル名は、*pTableID* パラメーターの *uName* 共用体の *pwszName* メンバーに Unicode 文字列で指定します。 *pTableID* の *eKind* メンバーを DBKIND_NAME にする必要があります。  
   
- コンシューマーで列の名前を示す、 *pwszName*のメンバー、 *uName*共用体の*pColumnID*パラメーター。 列名は Unicode 文字列で指定します。 *pColumnID* の *eKind* メンバーを DBKIND_NAME にする必要があります。  
+ コンシューマーは、 *pColumnID*パラメーターの*uName*共用体の*pwszName*メンバーに列名を示します。 列名は Unicode 文字列で指定します。 *pColumnID* の *eKind* メンバーを DBKIND_NAME にする必要があります。  
   
 ## <a name="example"></a>例  
   

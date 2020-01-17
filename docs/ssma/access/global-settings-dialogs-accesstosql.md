@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 6c2204f2-d49e-49ba-9c0f-f14cf07fa561
 author: Shamikg
 ms.author: Shamikg
-manager: craigg
-ms.openlocfilehash: dd1068e509a14c9d7388beea3727f2b30dd3ba40
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 5b8ef85b9d0d997ed8aae05fc53aa685a2dcacfa
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47825400"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67986406"
 ---
 # <a name="global-settings-dialogs-accesstosql"></a>グローバル設定 (ダイアログ ボックス) (AccessToSQL)
 ダイアログ ボックスのページを使用して、**グローバル設定** ダイアログ ボックスで、既定のユーザー アクションと SSMA に対する警告の設定を指定します。  

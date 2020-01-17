@@ -15,11 +15,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 350e48c225814052655e4fced89d2f934efa188f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48155904"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62808400"
 ---
 # <a name="connection-properties-dialog-box"></a>[接続プロパティ] ダイアログ ボックス
   このダイアログ ボックスを使用すると、現在の接続プロパティを表示できます。 このダイアログ ボックスは、オブジェクト エクスプローラーの各種のダイアログ ボックスで **[接続のプロパティを表示します]** をクリックすると表示されます。 このページに表示されるプロパティは読み取り専用です。  
@@ -28,7 +28,7 @@ ms.locfileid: "48155904"
   
  SQL Azure のクエリ タイムアウト期間は 30 分であることに注意してください。  
   
-## <a name="authentication"></a>[認証]  
+## <a name="authentication"></a>認証  
  現在の接続の認証プロパティを表示します。 認証プロパティとは、接続が確立されたときのログインと認証方法です。 認証プロパティを変更するには、 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]との接続をいったん解除した後、適切な接続オプションを使用してオブジェクト エクスプローラーを再びサーバーに接続します。  
   
  **[認証方法]**  
@@ -79,7 +79,7 @@ ms.locfileid: "48155904"
  **言語**  
  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 製品の言語バージョン。  
   
- **[照合順序]**  
+ **照合順序**  
  サーバーの照合順序。  
   
 ## <a name="server-environment-category"></a>[サーバー環境] カテゴリ  

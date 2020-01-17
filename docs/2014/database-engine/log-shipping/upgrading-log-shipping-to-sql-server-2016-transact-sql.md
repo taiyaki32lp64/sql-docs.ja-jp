@@ -12,12 +12,12 @@ ms.assetid: b1289cc3-f5be-40bb-8801-0e3eed40336e
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: f4d346379cf0aeb945187b18f7eb1fd7a868b33e
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 19eae2e3ace3859d61048536be9b70bf58ad66f5
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52518102"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62775413"
 ---
 # <a name="upgrade-log-shipping-to-sql-server-2014-transact-sql"></a>SQL Server 2014 へのログ配布のアップグレード (Transact-SQL)
   [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]、 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]、 [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]、または [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]にアップグレードする際には、ログ配布構成を保持することができます。 このトピックでは、ログ配布構成のアップグレードの複数のシナリオとベスト プラクティスについて説明します。  
@@ -79,7 +79,7 @@ ms.locfileid: "52518102"
   
  サーバーのアップグレードが完了すると、データベースが自動的にオンラインに戻り、データベースのアップグレードが行われます。 データベースのアップグレードが完了すると、ログ配布ジョブが再開されます。  
   
-#### <a name="scenario-2-upgrade-primary-server-instance-with-failover"></a>シナリオ 2:フェールオーバーをプライマリ サーバー インスタンスをアップグレードします。  
+#### <a name="scenario-2-upgrade-primary-server-instance-with-failover"></a>シナリオ 2: フェールオーバーをプライマリ サーバー インスタンスをアップグレードします。  
  このシナリオでは、可用性を最大限に高め、ダウンタイムを最小限に抑えることができます。 セカンダリ サーバー インスタンスへの制御されたフェールオーバーを活用して、元のプライマリ サーバー インスタンスをアップグレードする間もデータベースを使用できるようにします。 これにより、プライマリ サーバー インスタンスのアップグレードに要する時間から、フェールオーバーに要する比較的短い時間へと、ダウンタイムを短縮できます。  
   
  フェールオーバーを使用したプライマリ サーバー インスタンスのアップグレードには 3 つの一般的な手順が含まれます。セカンダリ サーバーへの制御されたフェールオーバーの実行、元のプライマリ サーバー インスタンスの [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]へのアップグレード、および [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] プライマリ サーバー インスタンスでのログ配布の設定の 3 つです。 ここではこれらの手順について説明します。  
@@ -130,7 +130,7 @@ ms.locfileid: "52518102"
   
     5.  セカンダリ データベースがオンラインになっている間にデータベースのトランザクション ログがいっぱいにならないように注意してください。 そのためには、トランザクション ログをバックアップする必要がある場合もあります。 その場合は、そのバックアップを他のサーバー インスタンスで復元に使用できるように、共有の場所 ( *バックアップ共有*) にバックアップすることをお勧めします。  
   
-#####  <a name="Procedure2 "></a> 手順 2:元のプライマリ サーバー インスタンスをアップグレードします。 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]  
+#####  <a name="Procedure2"></a> 手順 2:元のプライマリ サーバー インスタンスをアップグレードします。 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]  
  元のプライマリ サーバー インスタンスを [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]にアップグレードした後も、データベースはまだオフラインで、元の形式のままです。  
   
 #####  <a name="Procedure3"></a> 手順 3:ログ配布の設定します。 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]  
@@ -225,5 +225,3 @@ ms.locfileid: "52518102"
  [トランザクション ログのバックアップ &#40;SQL Server&#41;](../../relational-databases/backup-restore/transaction-log-backups-sql-server.md)   
  [トランザクション ログ バックアップの適用 &#40;SQL Server&#41;](../../relational-databases/backup-restore/apply-transaction-log-backups-sql-server.md)   
  [ログ配布テーブルとストアド プロシージャ](log-shipping-tables-and-stored-procedures.md)  
-  
-  

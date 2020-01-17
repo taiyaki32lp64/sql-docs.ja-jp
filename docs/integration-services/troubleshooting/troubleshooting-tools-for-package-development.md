@@ -14,17 +14,20 @@ helpviewer_keywords:
 - errors [Integration Services], troubleshooting
 - packages [Integration Services], troubleshooting
 ms.assetid: 41dd248c-dab3-4318-b8ba-789a42d5c00c
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: 520d34d946f8ba3dc4e3682c2bfadde7c2ca34bc
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 38c5c4daa65542dd8da14fa5c51a1b964a271fff
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47824706"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71296503"
 ---
 # <a name="troubleshooting-tools-for-package-development"></a>パッケージ開発のトラブルシューティング ツール
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] には、 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]でパッケージを開発する際にトラブルシューティングを実行できる機能とツールが用意されています。  
   
 ## <a name="troubleshooting-design-time-validation-issues"></a>デザイン時検証問題のトラブルシューティング  

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.dimensionwizard.selectrelatedtables.f1
@@ -13,12 +12,12 @@ ms.assetid: 82dbd97a-582c-4f60-8d44-fc52dba7b276
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 836e2fd015cf723bc970cb2ae18705928704b261
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: a135df3d3850aebdb9ac6dda08561a7fae21793f
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48213062"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66069290"
 ---
 # <a name="select-related-tables-dimension-wizard"></a>[関連テーブルの選択] (ディメンション ウィザード)
   **[関連テーブルの選択]** ページを使用すると、関連テーブル (データ ソース ビューでメイン ディメンション テーブルが関連付けられるテーブル) をディメンションに含めることができます。  

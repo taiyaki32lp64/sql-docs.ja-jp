@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 06297993-fe72-4446-aa76-3b8bc25444f6
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 4bca5485634769322ce41ea85b4e08801af507d6
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.openlocfilehash: b2412d0e8c01b9c347491c2bd2e89acd81efdbff
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51602143"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67964587"
 ---
 # <a name="connect-property-example-vbscript"></a>Connect プロパティの例 (VBScript)
 > [!IMPORTANT]
@@ -126,7 +125,7 @@ BODY {
 <!-- EndConnectVBS -->  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [接続プロパティ (RDS)](../../../ado/reference/rds-api/connect-property-rds.md)
 
 

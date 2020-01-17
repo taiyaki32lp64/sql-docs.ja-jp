@@ -11,17 +11,20 @@ helpviewer_keywords:
 - sort attributes [Integration Services]
 - output columns [Integration Services]
 ms.assetid: 22ce3f5d-8a88-4423-92c2-60a8f82cd4fd
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: 5826cdd783e7dd50a80d3e3a495dfffd16144f53
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 3a73c3aaf23d74857c1c182e4505fb8d602543a8
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52503242"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71297784"
 ---
 # <a name="sort-data-for-the-merge-and-merge-join-transformations"></a>マージ変換およびマージ結合変換用にデータを並べ替える
+
+[!INCLUDE[ssis-appliesto](../../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)]のマージ変換およびマージ結合変換では、入力データが並べ替えられている必要があります。 入力データは物理的に並べ替える必要があります。さらに、変換元の出力および出力列、または上流の変換の出力および出力列に対して、並べ替えオプションを設定する必要があります。 並べ替えオプションでデータの並べ替えを設定していても、実際にデータの並べ替えが行われない場合、マージ操作やマージ結合操作で予測できない結果が発生します。  
   
 ## <a name="sorting-the-data"></a>データを並べ替える  
@@ -39,7 +42,7 @@ ms.locfileid: "52503242"
   
      並べ替え変換では Windows 照合順序を使用して文字列値を並べ替えます。  
   
-     - または -  
+     \- または -  
   
 -   Transact-SQL の CAST 演算子を使用して最初に **varchar** 値を **nvarchar** 値にキャストし、次に Transact-SQL ORDER BY 句を使用してデータを並べ替えます。  
   

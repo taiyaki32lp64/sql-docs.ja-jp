@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 f1_keywords:
 - Full-Text Search
@@ -14,12 +13,12 @@ ms.assetid: 16c9376b-5fbb-4495-a429-06a2493849c9
 author: craigg-msft
 ms.author: craigg
 manager: craigg
-ms.openlocfilehash: abe169a69cd8c247ba74a24b8e80c3202fa2d5f5
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 575105d61446f2fd272e4087457e7762c1abb2e8
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52511310"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66095084"
 ---
 # <a name="full-text-search-upgrade-options"></a>フルテキスト検索アップグレード オプション
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インストール ウィザードの [フルテキスト検索アップグレード オプション] ページを使用すると、ここでアップグレードするデータベースに対して使用するフルテキスト検索のアップグレード オプションを選択できます。  

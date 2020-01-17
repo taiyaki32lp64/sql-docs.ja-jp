@@ -15,13 +15,12 @@ apitype: DLLExport
 ms.assetid: 033a9c6b-0d7f-4f8a-ab60-33cd6fee0d33
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: 54551e68d80b675ba040373c5c6bc8055a2162a2
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: 5263215c8ccac3d9337f415fe9c279bb3f3ad3ba
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52415869"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68091209"
 ---
 # <a name="localdbgetversions-function"></a>LocalDBGetVersions 関数
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

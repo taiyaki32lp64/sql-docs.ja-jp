@@ -22,16 +22,15 @@ helpviewer_keywords:
 - roll back transactions [SQL Server]
 - savepoints [SQL Server]
 ms.assetid: 6882c5bc-ff74-476a-984b-164aeb036c66
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
+author: rothja
+ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 3cc829d982af7c46d22cdfadd9ff86238771f0ee
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: cfd14c6cd0147d9e4c163a4802f060ecc4374754
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47640380"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68121821"
 ---
 # <a name="rollback-transaction-transact-sql"></a>ROLLBACK TRANSACTION (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -82,7 +81,7 @@ ROLLBACK { TRAN | TRANSACTION }
   
 -   現在のトランザクションのその時点までに加えられたすべてのデータ変更 (トリガーによって行われた変更も含む) がロールバックされます。  
   
--   ROLLBACK ステートメントの実行後、トリガーは残りのすべてのステートメントを継続して実行します。 これらのステートメントのいずれかがデータを変更する場合、その変更はロールバックされません。 残りのステートメントを実行しても入れ子にしたトリガーは起動されません。  
+-   ROLLBACK ステートメントの実行後、トリガーによって残りのすべてのステートメントが継続して実行されます。 これらのステートメントのいずれかがデータを変更する場合、その変更はロールバックされません。 残りのステートメントを実行しても入れ子にしたトリガーは起動されません。  
   
 -   トリガーを起動したステートメントの後で、バッチ内のステートメントは実行されません。  
   
@@ -92,7 +91,7 @@ ROLLBACK { TRAN | TRANSACTION }
   
 カーソル上での ROLLBACK の効果は、次の 3 つのルールによって定義されます。  
   
-1.  CURSOR_CLOSE_ON_COMMIT が ON の場合、ROLLBACK はオープンしているすべてのカーソルをクローズしますが、その割り当ては解除しません。  
+1.  CURSOR_CLOSE_ON_COMMIT が ON の場合、ROLLBACK ではオープンしているすべてのカーソルをクローズしますが、その割り当ては解除しません。  
   
 2.  CURSOR_CLOSE_ON_COMMIT を OFF に設定した場合、ROLLBACK は、オープンしていて同期している静的カーソルおよび非反映型カーソル、あるいは完全に生成されている非同期な静的カーソルのいずれにも影響しません。 他のタイプのオープン カーソルは、クローズしますが、割り当ては解除されません。  
   
@@ -105,7 +104,7 @@ ROLLBACK { TRAN | TRANSACTION }
  ロール **public** のメンバーシップが必要です。  
   
 ## <a name="examples"></a>使用例  
- 次の例は、名前付きトランザクションをロールバックした場合の影響を示しています。 テーブルを作成した後、次のステートメントで名前付きトランザクションが開始され、2 行が挿入され、変数 @TransactionName に指定されたトランザクションがロールバックされます。 名前付きトランザクション外の外側にあるもう 1 つのステートメントで 2 行が挿入されます。 クエリによって、前のステートメントの結果が返されます。   
+ 次の例では、名前付きトランザクションをロールバックした場合の影響を示します。 テーブルを作成した後、次のステートメントで名前付きトランザクションが開始され、2 行が挿入され、変数 @TransactionName に指定されたトランザクションがロールバックされます。 名前付きトランザクション外の外側にあるもう 1 つのステートメントで 2 行が挿入されます。 クエリによって、前のステートメントの結果が返されます。   
   
 ```sql    
 USE tempdb;  

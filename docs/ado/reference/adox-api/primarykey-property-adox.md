@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: 30185312-5e09-4804-852d-e505d660113a
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: f1205c87f1251543521deddd7d1118b602ac7e05
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: afd6ad45295ab5a888c3b392adb0019197710e15
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47723510"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67965540"
 ---
 # <a name="primarykey-property-adox"></a>PrimaryKey プロパティ (ADOX)
 インデックスがテーブルに主キーを表すかどうかを示します。  
@@ -41,6 +40,6 @@ ms.locfileid: "47723510"
 ## <a name="applies-to"></a>適用対象  
  [Index オブジェクト (ADOX)](../../../ado/reference/adox-api/index-object-adox.md)  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [PrimaryKey および Unique プロパティの例 (VB)](../../../ado/reference/adox-api/primarykey-and-unique-properties-example-vb.md)   
  [Index オブジェクト (ADOX)](../../../ado/reference/adox-api/index-object-adox.md)

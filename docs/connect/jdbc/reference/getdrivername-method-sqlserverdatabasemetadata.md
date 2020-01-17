@@ -1,5 +1,5 @@
 ---
-title: getDriverName メソッド (SQLServerDatabaseMetaData) |Microsoft Docs
+title: getDriverName メソッド (SQLServerDatabaseMetaData) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: 2ccec113-ae1b-45b8-a334-13eae04941f3
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: e6b94c20b6f01941b2b45ccd09988f49d4a33912
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a87f82805cad4ce781345ace8b97f4539aa675ad
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47639750"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67983436"
 ---
 # <a name="getdrivername-method-sqlserverdatabasemetadata"></a>getDriverName メソッド (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -42,7 +41,7 @@ public java.lang.String getDriverName()
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- この getDriverName メソッドは、java.sql.DatabaseMetaData インターフェイスの getDriverName メソッドによって指定されます。  
+ この getDriverName メソッドは、java.sql.DatabaseMetaData インターフェイスの getDriverName メソッドで規定されています。  
   
 ## <a name="see-also"></a>参照  
  [SQLServerDatabaseMetaData のメソッド](../../../connect/jdbc/reference/sqlserverdatabasemetadata-methods.md)   

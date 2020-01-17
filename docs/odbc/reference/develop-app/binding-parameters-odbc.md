@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 7538a82b-b08b-4c8f-9809-e4ccea16db11
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: d62c0864678e116e30a0673bdf2625d70de0cedd
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 1bc40d4800e7cd013b7ac908400c0492286314e3
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52501782"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68107634"
 ---
 # <a name="binding-parameters-odbc"></a>パラメーターのバインド (ODBC)
 SQL ステートメント内の各パラメーター、関連付けられている必要がありますまたは*バインド、* ステートメントが実行される前に、アプリケーション内の変数にします。 アプリケーションでは、パラメーターに変数をバインドした場合は、ドライバーにその変数のアドレス、C データ型では、- がについて説明します。 パラメーター自体で SQL データ型、有効桁数、およびなども説明します。 ドライバーでは、そのステートメントを保持し、ステートメントが実行されたときに、変数から値を取得する情報を使用して構造体のこの情報を格納します。  

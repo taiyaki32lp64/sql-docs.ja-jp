@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 4044ba15-f013-4c4c-9fe1-b4410fe9a778
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 63407f75c5bee03d24b5b3f69c2ef94cb38e177e
-ms.sourcegitcommit: fc6a6eedcea2d98c93e33d39c1cecd99fbc9a155
+ms.openlocfilehash: 6b55ebbe5a167b7d70cf606fc4e37e7ede36b486
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49168722"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67916900"
 ---
 # <a name="source-property-ado-error"></a>Source プロパティ (ADO Error)
 オブジェクトまたはアプリケーション エラーの発生源の名前を示します。  

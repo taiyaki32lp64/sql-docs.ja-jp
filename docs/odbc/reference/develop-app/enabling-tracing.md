@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 48e318bd-2487-4708-a698-ea01f36a45e9
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: fb6d8eaf4a1f4eaadc4e8e9a7030b81c373d8377
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 24f80e0e81e4be8895d59256492b868c53aab7b4
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47819920"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68046794"
 ---
 # <a name="enabling-tracing"></a>トレースの有効化
 トレースは、3 つの方法は次で有効にできます。  

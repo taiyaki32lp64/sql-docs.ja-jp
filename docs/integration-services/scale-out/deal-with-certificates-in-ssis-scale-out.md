@@ -10,15 +10,18 @@ ms.custom: performance
 ms.topic: conceptual
 author: haoqian
 ms.author: haoqian
-manager: craigg
-ms.openlocfilehash: 6be7f71593fba0347438a953ffa0732d3f499ae4
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 6c90b71ed61deeadbc0af2592f137893fa676a05
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47764470"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67896964"
 ---
 # <a name="manage-certificates-for-sql-server-integration-services-scale-out"></a>SQL Server Integration Services Scale Out の証明書を管理する
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
 
 Scale Out Master と Scale Out Worker の間の通信を守るために、SSIS Scale Out では 2 つの証明書が使用されます。マスターに 1 つ、ワーカーに 1 つです。 
 
@@ -32,7 +35,7 @@ SQL Server インストール ウィザードの **[Integration Services Scale O
 
 **新しい証明書**。 証明書に対して特別な要件がない場合は、新しい自己署名 SSL 証明書の作成を選択できます。 さらに、証明書で CN を指定できます。 後で Scale Out Worker によって使用されるマスター エンドポイントのホスト名が CN に含まれていることを確認してください。 既定では、マスター ノードの IP アドレスとコンピューターの名前が含まれます。 
 
-**既存の証明書**。 既存の証明書を使用することを選択する場合は、**[参照]** をクリックし、ローカル コンピューターの**ルート**証明書ストアから SSL 証明書を選択します。
+**既存の証明書**。 既存の証明書を使用することを選択する場合は、 **[参照]** をクリックし、ローカル コンピューターの**ルート**証明書ストアから SSL 証明書を選択します。
 
 ### <a name="change-the-scale-out-master-certificate"></a>Scale Out Master 証明書の変更
 
@@ -44,7 +47,7 @@ SQL Server インストール ウィザードの **[Integration Services Scale O
 ```dos
 MakeCert.exe -n CN={master endpoint host} SSISScaleOutMaster.cer -r -ss Root -sr LocalMachine -a sha1
 ```
-例 :
+例:
 
 ```dos
 MakeCert.exe -n CN=MasterMachine SSISScaleOutMaster.cer -r -ss Root -sr LocalMachine -a sha1
@@ -57,7 +60,7 @@ MakeCert.exe -n CN=MasterMachine SSISScaleOutMaster.cer -r -ss Root -sr LocalMac
 netsh http show sslcert ipport=0.0.0.0:{Master port}
 ```
 
-例 :
+例:
 
 ```dos
 netsh http show sslcert ipport=0.0.0.0:8391
@@ -70,7 +73,7 @@ netsh http delete sslcert ipport=0.0.0.0:{Master port}
 netsh http add sslcert ipport=0.0.0.0:{Master port} certhash={SSL Certificate Thumbprint} certstorename=Root appid={original appid}
 ```
 
-例 :
+例:
 
 ```dos
 netsh http delete sslcert ipport=0.0.0.0:8391
@@ -108,7 +111,7 @@ Scale Out Worker 証明書を変更する場合、次の作業を行います。
 MakeCert.exe -n CN={worker machine name};CN={worker machine ip} SSISScaleOutWorker.cer -r -ss My -sr LocalMachine
 ```
 
-例 :
+例:
 
 ```dos
 MakeCert.exe -n CN=WorkerMachine;CN=10.0.2.8 SSISScaleOutWorker.cer -r -ss My -sr LocalMachine
@@ -124,7 +127,7 @@ certmgr.exe /del /c /s /r localmachine My /n {CN of the old certificate}
 winhttpcertcfg.exe -g -c LOCAL_MACHINE\My -s {CN of the new certificate} -a {the account running Scale Out Worker service}
 ```
 
-例 :
+例:
 
 ```dos
 certmgr.exe /del /c /s /r localmachine My /n WorkerMachine

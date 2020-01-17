@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 5f1c2205-191c-4fb4-9bd9-84c878ea46ed
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: e45dff30c67f94abb58afcf19d151dd02d33c161
-ms.sourcegitcommit: 1a5448747ccb2e13e8f3d9f04012ba5ae04bb0a3
+ms.openlocfilehash: 9ea7ea83219780602f8d8d68e5c807178e775bc2
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51559729"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67922702"
 ---
 # <a name="enabling-a-dll-to-run-on-dcom"></a>DCOM 上で実行するための DLL の有効化
 > [!IMPORTANT]
@@ -34,7 +33,7 @@ ms.locfileid: "51559729"
   
 2.  パッケージにビジネス オブジェクトをインストールします。  
   
-     - または -  
+     \- または -  
   
      インポート、 [RDSServer.DataFactory](../../../ado/reference/rds-api/datafactory-object-rdsserver.md)パッケージへのオブジェクト。  
   

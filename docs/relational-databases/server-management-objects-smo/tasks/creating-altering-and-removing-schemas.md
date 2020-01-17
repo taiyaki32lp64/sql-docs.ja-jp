@@ -1,6 +1,5 @@
 ---
-title: 作成、変更、およびスキーマの削除 |マイクロソフトのドキュメント
-ms.custom: ''
+title: スキーマの作成、変更、および削除
 ms.date: 08/06/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -10,16 +9,15 @@ ms.topic: reference
 helpviewer_keywords:
 - schemas [SMO]
 ms.assetid: 3e3619de-c6a2-4280-b2be-4ec9924608fb
-author: stevestein
-ms.author: sstein
-manager: craigg
+author: markingmyname
+ms.author: maghan
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: d82973fd4b413252e5614ff0fe903269d3f45525
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 36141c426bb0d8906e5b2d2d7bb4d21aadace6f2
+ms.sourcegitcommit: 15fe0bbba963d011472cfbbc06d954d9dbf2d655
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47843550"
+ms.lasthandoff: 11/14/2019
+ms.locfileid: "74095914"
 ---
 # <a name="creating-altering-and-removing-schemas"></a>スキーマの作成、変更、および削除
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
@@ -27,7 +25,7 @@ ms.locfileid: "47843550"
   <xref:Microsoft.SqlServer.Management.Smo.Schema> オブジェクトは、データベース オブジェクトの所有権コンテキストを表現します。 <xref:Microsoft.SqlServer.Management.Smo.Database.Schemas%2A> オブジェクトの <xref:Microsoft.SqlServer.Management.Smo.Database> プロパティは、<xref:Microsoft.SqlServer.Management.Smo.Schema> オブジェクトのコレクションを表現します。  
   
 ## <a name="example"></a>例  
- 提供されているコード例を使用するには、アプリケーションを作成するプログラミング環境、プログラミング テンプレート、およびプログラミング言語を選択する必要があります。 詳細については、次を参照してください。 [Visual C の作成&#35;Visual Studio .NET での SMO プロジェクト](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md)します。  
+ 提供されているコード例を使用するには、アプリケーションを作成するプログラミング環境、プログラミング テンプレート、およびプログラミング言語を選択する必要があります。 詳細については、「 [Visual Studio&#35; .Net での Visual C SMO プロジェクトの作成](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md)」を参照してください。  
   
 ## <a name="creating-altering-and-removing-a-schema-in-visual-basic"></a>Visual Basic でのスキーマの作成、変更、および削除  
  このコード例では、スキーマを作成してデータベース オブジェクトに割り当てる方法を示します。 その後、ユーザーに権限を許可し、スキーマに新しいテーブルを作成します。  

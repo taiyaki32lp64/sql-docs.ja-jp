@@ -19,11 +19,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 4519ed412e3148d8e0c70a77c00db969be73a9c0
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52778324"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62917722"
 ---
 # <a name="add-data-or-log-files-to-a-database"></a>データベースに対するデータ ファイルまたはログ ファイルの追加
   このトピックでは、 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] または [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] を使用して、 [!INCLUDE[tsql](../../includes/tsql-md.md)]のデータベースにデータ ファイルまたはログ ファイルを追加する方法について説明します。  
@@ -71,11 +71,11 @@ ms.locfileid: "52778324"
   
 6.  ファイルの種類 (データまたはログ) を選択します。  
   
-7.  データ ファイルの場合、ファイルを含めるファイル グループを一覧から選択するか、**[\<新しいファイル グループ>]** をクリックして新しいファイル グループを作成します。 トランザクション ログはファイル グループに追加できません。  
+7.  データ ファイルの場合、ファイルを含めるファイル グループを一覧から選択するか、 **[\<新しいファイル グループ>]** をクリックして新しいファイル グループを作成します。 トランザクション ログはファイル グループに追加できません。  
   
 8.  ファイルの初期サイズを指定します。 データベースに格納するデータの予想最大量に基づいて、データ ファイルのサイズを可能な限り大きく設定しておきます。  
   
-9. ファイルの拡張方法を指定するには、**[自動拡張]** 列で参照ボタン ( **[...]** ) をクリックします。 次のオプションから選択します。  
+9. ファイルの拡張方法を指定するには、 **[自動拡張]** 列で参照ボタン ( **[...]** ) をクリックします。 次のオプションから選択します。  
   
     1.  データ領域の追加が必要になったときに、現在選択されているファイルを拡張できるようにするには、 **[自動拡張を有効にする]** チェック ボックスをオンにして、次のオプションから選択します。  
   

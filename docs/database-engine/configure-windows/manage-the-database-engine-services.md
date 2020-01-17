@@ -24,20 +24,19 @@ helpviewer_keywords:
 ms.assetid: aa732e43-53ba-4eea-bb9b-089da0766fc1
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 1e00098ec51f33dd89429d0c2af949391c707826
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 6ac35c702783ca5b80367c6f41af9c4c450e0be7
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47756970"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67997968"
 ---
 # <a name="manage-the-database-engine-services"></a>データベース エンジン サービスの管理
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] は、オペレーティング システム上でサービスとして動作します。 サービスとは、システムのバックグラウンドで実行されるアプリケーションの一種です。 通常は、Web サーバー、イベント ログ、ファイル サーバーなど、オペレーティング システムの中核的な機能をサービスによって提供します。 サービスは、コンピューターのデスクトップにユーザー インターフェイスを表示することなく実行できます。 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェント、およびその他のいくつかの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] コンポーネントはサービスとして実行されます。 これらのサービスは、オペレーティング システムの起動時に開始されるのが一般的です。 起動時のサービスの状態は、セットアップ中に行った指定に依存します。一部のサービスは既定では開始されません。 ここでは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の各種サービスの管理について説明します。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]インスタンスにログインする前に、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]インスタンスを開始、停止、一時停止、再開、および再起動する方法を知っておく必要があります。 ログイン後には、サーバーの管理やデータベースに対するクエリなどのタスクを実行することができます。  
   
 ## <a name="using-the-sql-server-service"></a>SQL Server サービスの使用  
- [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]インスタンスを開始すると、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] サービスも開始されます。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] サービスを開始すると、ユーザーはサーバーに対する新しい接続を確立できるようになります。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] サービスの開始と終了は、ローカルまたはリモートからサービスとして行うことができます。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] サービスは、既定のインスタンスの場合は [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (MSSQLSERVER)、名前付きインスタンスの場合は MSSQL$*\<instancename>* と呼ばれます。  
+ [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]インスタンスを開始すると、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] サービスも開始されます。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] サービスを開始すると、ユーザーはサーバーに対する新しい接続を確立できるようになります。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] サービスの開始と終了は、ローカルまたはリモートからサービスとして行うことができます。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] サービスは、既定のインスタンスの場合は [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (MSSQLSERVER)、名前付きインスタンスの場合は MSSQL$ *\<instancename>* と呼ばれます。  
   
 ## <a name="using-sql-server-configuration-manager"></a>SQL Server 構成マネージャーの使用  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 構成マネージャーを使用して、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の各種サービスを停止、開始、または一時停止できます。  
@@ -49,7 +48,7 @@ ms.locfileid: "47756970"
   
  **SQL Server 構成マネージャーを使用するには**  
   
--   **[スタート]** メニューで、 **[すべてのプログラム]**、[ [!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)]]、 **[構成ツール]** の順にポイントして、 **[SQL Server 構成マネージャー]** をクリックします。  
+-   **[スタート]** メニューで、 **[すべてのプログラム]** 、[ [!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)]]、 **[構成ツール]** の順にポイントして、 **[SQL Server 構成マネージャー]** をクリックします。  
   
  **Windows 8 を使用して SQL Server 構成マネージャーにアクセスするには**  
   

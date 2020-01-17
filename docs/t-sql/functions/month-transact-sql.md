@@ -22,23 +22,22 @@ helpviewer_keywords:
 - dates [SQL Server], MONTH
 - MONTH function [SQL Server]
 ms.assetid: 9dd8aff7-b0fc-45df-b316-ead14ee9b8b7
-author: MashaMSFT
-ms.author: mathoma
-manager: craigg
+author: MikeRayMSFT
+ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 78bf0f01db1553f4cb80e26df3385481d4a84271
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d9fc2c8718fd643e5838172831858c51aea6fd47
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47774060"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68130228"
 ---
 # <a name="month-transact-sql"></a>MONTH (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   指定された*日付*の月を表す整数を返します。  
   
- すべての概要については [!INCLUDE[tsql](../../includes/tsql-md.md)] [日付と時刻のデータ型および関数、を参照してください。日付と時刻のデータ型および関数と #40 です。TRANSACT-SQL と #41;.](../../t-sql/functions/date-and-time-data-types-and-functions-transact-sql.md)  
+ すべての [!INCLUDE[tsql](../../includes/tsql-md.md)] 日付および時刻のデータ型と関数の概要については、「[日付と時刻のデータ型および関数 &#40;Transact-SQL&#41;](../../t-sql/functions/date-and-time-data-types-and-functions-transact-sql.md)」を参照してください。  
   
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -56,12 +55,12 @@ MONTH ( date )
  **int**  
   
 ## <a name="return-value"></a>戻り値  
- * * 月には、同じの値が返されます [DATEPART](../../t-sql/functions/datepart-transact-sql.md) (**月**、*日*)。 * *。  
+ MONTH は [DATEPART](../../t-sql/functions/datepart-transact-sql.md) (**month**、*date*) と同じ値を返します。  
   
  *日付*に時刻部分のみが含まれている場合、戻り値は 1、基本の月です。  
   
 ## <a name="examples"></a>使用例  
- 次のステートメントでは、`4` が返されます。 これは、月を表す値です。  
+ 次のステートメントでは、`4` が返されます。 これは月の数値です。  
   
 ```  
 SELECT MONTH('2007-04-30T01:01:01.1234567 -07:00');  
@@ -74,7 +73,7 @@ SELECT YEAR(0), MONTH(0), DAY(0);
 ```  
   
 ## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>例: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] および [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
- 次の例では、`4` が返されます。 これは、月を表す値です。  
+ 次の例では、`4` が返されます。 これは月の数値です。  
   
 ```  
 -- Uses AdventureWorks  

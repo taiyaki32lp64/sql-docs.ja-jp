@@ -33,10 +33,6 @@
   href: upload-a-file-or-report-report-manager.md
 - name: リンク レポートを作成する
   href: create-a-linked-report.md
-- name: クリックスルー レポート (SSRS)
-  href: clickthrough-reports-ssrs.md
-- name: View and Explore Native Mode Reports Using SharePoint Web Parts (SSRS)
-  href: view-and-explore-native-mode-reports-using-sharepoint-web-parts-ssrs.md
 - name: レポートの F1 ヘルプ
   href: ../report-f1-help.md
   items:

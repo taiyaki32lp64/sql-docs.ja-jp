@@ -4,21 +4,20 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 ms.assetid: a6aa2c56-227c-43c5-a28e-c7104131ac5e
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: c04fdad5e53e9d50f6d910f16c8f86b0218f35be
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: c1008202519f1d9bcbf48dfdc4cd4ef3a3cbbe20
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56012783"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66108471"
 ---
-# <a name="lesson-4-define-a-data-connection-and-data-table-for-child-report"></a>レッスン 4:子レポートのデータ接続とデータ テーブルを定義します。
+# <a name="lesson-4-define-a-data-connection-and-data-table-for-child-report"></a>レッスン 4:子レポートのデータ接続とデータ テーブルを定義する
   親レポートを設計した後は、子レポートのデータ接続とデータ テーブルを作成します。 このチュートリアルでは、データ接続先として AdventureWorks2008 データベースを使用しますが、 AdventureWorks2012 データベースに接続することもできます。  
   
 ### <a name="to-define-a-data-connection-and-datatable-by-adding-a-dataset-for-child-report"></a>DataSet を追加してデータ接続と DataTable を定義するには (子レポート用)  
@@ -51,7 +50,7 @@ ms.locfileid: "56012783"
   
 8.  **コマンドの種類を選択**] ページで、[ **SQL ステートメントを使用**、順にクリックします**次**します。  
   
-9. **SQL ステートメントを入力します**ページで、データを取得する次の TRANSACT-SQL クエリを入力、 **AdventureWorks2008**データベースをクリックして **[次へ]**。  
+9. **SQL ステートメントを入力します**ページで、データを取得する次の TRANSACT-SQL クエリを入力、 **AdventureWorks2008**データベースをクリックして **[次へ]** 。  
   
     ```  
     SELECT PurchaseOrderID, PurchaseOrderDetailID, OrderQty, ProductID, ReceivedQty, RejectedQty, StockedQty FROM Purchasing.PurchaseOrderDetail  

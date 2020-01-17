@@ -4,22 +4,21 @@ ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 f1_keywords:
 - "10541"
 - sql12.rtp.rptdesigner.shared.mapcolorrulesgeneral.f1
 ms.assetid: 14ff5fc1-4cf8-4a45-9d98-47a1bf1c52c4
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 7c21f95a8ace66b502de7128711acc1d840c4147
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: e97de85cdd57fdb21aa82379243eb6954358ea38
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56289670"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66108320"
 ---
 # <a name="map-color-rules-dialog-box-general"></a>[全般] ([マップの色のルールのプロパティ] ダイアログ ボックス)
   **[マップの色のルールのプロパティ]** ダイアログ ボックスの **[全般]** を選択すると、このレイヤー上のマップ要素の色オプションを定義できます。 マップ要素には、多角形、線、およびポイントがあります。 データセット フィールドまたは空間データ ソース フィールドからの空間データと分析データに基づいてマップ要素間のリレーションシップを作成している場合に、色ルールを適用できます。  
@@ -40,7 +39,7 @@ ms.locfileid: "56289670"
  独自の色のリストを指定して、分析データを視覚化します。  
   
  **データ フィールド**  
- このオプションは、**[ビジュアライズデータ]** オプションのいずれかを選択すると表示されます。  
+ このオプションは、 **[ビジュアライズデータ]** オプションのいずれかを選択すると表示されます。  
   
  使用する分析データ フィールドをドロップダウン リストから選択します。 リストには、空間データのソースに応じて、空間データ ソースからのフィールドと、空間データと分析データ間のリレーションシップを持つレポート データセットからのフィールドが表示されます。 このようなリレーションシップを作成するには、選択したマップ レイヤーの [分析データ] ページでデータ オプションを設定します。  
   

@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 1157bab7-6ad1-4bdb-a81c-662eea3e7fcd
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 969de4ba4e28398c540636e8f3c6f6649c0dcb30
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: db1216f513f353a6c703805c7aabe7b8dd468115
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47700460"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67993405"
 ---
 # <a name="how-to-retrieve-output-parameters-using-the-sqlsrv-driver"></a>方法: SQLSRV ドライバーを使用して出力パラメーターを取得する
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -121,10 +120,10 @@ sqlsrv_close( $conn);
 ```  
 
 > [!NOTE]
-> 場合の範囲外の値が最終的には bigint 型に出力パラメーターをバインドするときに、[整数](../../t-sql/data-types/int-bigint-smallint-and-tinyint-transact-sql.md)、SQLSRV_SQLTYPE_BIGINT として、SQL フィールドの種類を指定する必要があります。 それ以外の場合、「値が範囲外」例外あります。
+> 出力パラメーターを bigint 型にバインドするときに、値が[整数](../../t-sql/data-types/int-bigint-smallint-and-tinyint-transact-sql.md)の範囲外になる可能性がある場合は、SQL フィールド型を SQLSRV_SQLTYPE_BIGINT として指定する必要があります。 それ以外の場合は、"範囲外の値" の例外が発生する可能性があります。
 
 ## <a name="example-2"></a>例 2
-このコード サンプルでは、出力パラメーターとしての大規模な bigint 値をバインドする方法を示します。  
+このコードサンプルでは、大きな bigint 値を出力パラメーターとしてバインドする方法を示します。  
 
 ```
 <?php

@@ -1,27 +1,27 @@
 ---
 title: CircularString | Microsoft Docs
 ms.custom: ''
-ms.date: 06/13/2017
+ms.date: 10/18/2019
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.technology: ''
 ms.topic: conceptual
 ms.assetid: 9fe06b03-d98c-4337-9f89-54da98f49f9f
-author: douglaslMS
-ms.author: douglasl
+author: MladjoA
+ms.author: mlandzic
 manager: craigg
-ms.openlocfilehash: 001c489d9abf887495ea83cee00cede1463514ca
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: b3eacaba2ad0ddc2c0475d29b151d0a50be98fc0
+ms.sourcegitcommit: 82a1ad732fb31d5fa4368c6270185c3f99827c97
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53376664"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72688704"
 ---
 # <a name="circularstring"></a>CircularString
   `CircularString` は、0 個以上の連続する円弧セグメントのコレクションです。 円弧セグメントは、2 次元平面内の 3 つの点によって定義された曲線セグメントです。最初のポイントを 3 番目のポイントと同じにすることはできません。 円弧セグメントの 3 つのポイントすべてが同一線上にある場合は、円弧セグメントが直線セグメントとして扱われます。  
   
 > [!IMPORTANT]  
->  詳細な説明とで導入された新しい空間機能の例の[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]など、`CircularString`サブタイプは、ダウンロード、ホワイト ペーパー「 [SQL Server 2012 の新しい空間機能](https://go.microsoft.com/fwlink/?LinkId=226407)します。  
+>  `CircularString` サブタイプを含む、[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]で導入された新しい空間機能の詳細な説明と例については、ホワイトペーパー「 [SQL Server 2012 の新しい空間機能」](https://go.microsoft.com/fwlink/?LinkId=226407)をダウンロードしてください。  
   
 ## <a name="circularstring-instances"></a>CircularString インスタンス  
  次の図は有効な `CircularString` インスタンスを示しています。  
@@ -29,9 +29,9 @@ ms.locfileid: "53376664"
  ![](../../database-engine/media/5ff17e34-b578-4873-9d33-79500940d0bc.png "5ff17e34-b578-4873-9d33-79500940d0bc")  
   
 ### <a name="accepted-instances"></a>許容されるインスタンス  
- A`CircularString`いずれかが空、または奇数ポイント、n、には n が含まれていますがある場合、インスタンスは許容 > 1。 次`CircularString`インスタンスは許容されます。  
+ `CircularString` インスタンスは、空であるか、または奇数 (n > 1) である場合に許容されます。 次の `CircularString` インスタンスが受け入れられます。  
   
-```  
+```sql
 DECLARE @g1 geometry = 'CIRCULARSTRING EMPTY';  
 DECLARE @g2 geometry = 'CIRCULARSTRING(1 1, 2 0, -1 1)';  
 DECLARE @g3 geometry = 'CIRCULARSTRING(1 1, 2 0, 2 0, 2 0, 1 1)';  
@@ -39,7 +39,7 @@ DECLARE @g3 geometry = 'CIRCULARSTRING(1 1, 2 0, 2 0, 2 0, 1 1)';
   
  `@g3` の場合、`CircularString` インスタンスは許容されることがありますが、有効ではありません。 次に示す CircularString インスタンスの宣言は許容されません。 この宣言は `System.FormatException`をスローします。  
   
-```  
+```sql
 DECLARE @g geometry = 'CIRCULARSTRING(1 1, 2 0, 2 0, 1 1)';  
 ```  
   
@@ -58,7 +58,7 @@ DECLARE @g geometry = 'CIRCULARSTRING(1 1, 2 0, 2 0, 1 1)';
   
  次の例は、有効な `CircularString` インスタンスを示しています。  
   
-```  
+```sql
 DECLARE @g1 geometry = 'CIRCULARSTRING EMPTY';  
 DECLARE @g2 geometry = 'CIRCULARSTRING(1 1, 2 0, -1 1)';  
 DECLARE @g3 geometry = 'CIRCULARSTRING(1 1, 2 0, 2 0, 1 1, 0 1)';  
@@ -70,7 +70,7 @@ SELECT @g1.STIsValid(), @g2.STIsValid(), @g3.STIsValid(),@g4.STIsValid();
   
  次の例は、無効な CircularString インスタンスを示しています。  
   
-```  
+```sql
 DECLARE @g1 geometry = 'CIRCULARSTRING(1 1, 2 0, 1 1)';  
 DECLARE @g2 geometry = 'CIRCULARSTRING(0 0, 0 0, 0 0)';  
 SELECT @g1.STIsValid(), @g2.STIsValid();  
@@ -90,15 +90,15 @@ SELECT @g1.STIsValid(), @g2.STIsValid();
 ### <a name="a-instantiating-a-geometry-instance-with-an-empty-circularstring"></a>A. 空の CircularString を使用して geometry インスタンスをインスタンス化する  
  次の例は、空の `CircularString` インスタンスを作成する方法を示しています。  
   
-```tsql  
+```sql  
 DECLARE @g geometry;  
 SET @g = geometry::Parse('CIRCULARSTRING EMPTY');  
 ```  
   
-### <a name="b-instantiating-a-geometry-instance-using-a-circularstring-with-one-circular-arc-segment"></a>B. 1 つの CircularString を含む CircularString を使用して geometry インスタンスをインスタンス化する  
+### <a name="b-instantiating-a-geometry-instance-using-a-circularstring-with-one-circular-arc-segment"></a>b. 1 つの CircularString を含む CircularString を使用して geometry インスタンスをインスタンス化する  
  次の例は、1 つの円弧のセグメント (半円) を持つ `CircularString`インスタンスを作成する方法を示しています。  
   
-```tsql  
+```sql  
 DECLARE @g geometry;  
 SET @g = geometry:: STGeomFromText('CIRCULARSTRING(2 0, 1 1, 0 0)', 0);  
 SELECT @g.ToString();  
@@ -107,7 +107,7 @@ SELECT @g.ToString();
 ### <a name="c-instantiating-a-geometry-instance-using-a-circularstring-with-multiple-circular-arc-segments"></a>C. 複数の円弧セグメントを含む CircularString を使用して geometry インスタンスをインスタンス化する  
  次の例は、1 つ以上の円弧のセグメント (完全な円) を持つ `CircularString` インスタンスを作成する方法を示しています。  
   
-```tsql  
+```sql  
 DECLARE @g geometry;  
 SET @g = geometry::Parse('CIRCULARSTRING(2 1, 1 2, 0 1, 1 0, 2 1)');  
 SELECT 'Circumference = ' + CAST(@g.STLength() AS NVARCHAR(10));    
@@ -121,7 +121,7 @@ Circumference = 6.28319
   
  `LineString` の代わりに `CircularString` が使用される場合は出力結果を比較してください。  
   
-```tsql  
+```sql  
 DECLARE @g geometry;  
 SET @g = geometry::STGeomFromText('LINESTRING(2 1, 1 2, 0 1, 1 0, 2 1)', 0);  
 SELECT 'Perimeter = ' + CAST(@g.STLength() AS NVARCHAR(10));  
@@ -133,26 +133,26 @@ SELECT 'Perimeter = ' + CAST(@g.STLength() AS NVARCHAR(10));
 Perimeter = 5.65685  
 ```  
   
- 注意しての値、`CircularString`例が 2 の近くにあるプラン、円の実際の円周であります。  
+ `CircularString` の例の値は、円の実際の円周&#x03c0;である 2 (2 * pi) に近いことに注意してください。  
   
 ### <a name="d-declaring-and-instantiating-a-geometry-instance-with-a-circularstring-in-the-same-statement"></a>D. CircularString を同じステートメント内で使用して geometry インスタンスを宣言およびインスタンス化する  
  このコード スニペットは、`geometry` を同じステートメント内で使用して `CircularString` インスタンスを宣言およびインスタンス化する方法を示しています。  
   
-```tsql  
+```sql  
 DECLARE @g geometry = 'CIRCULARSTRING(0 0, 1 2.1082, 3 6.3246, 0 7, -3 6.3246, -1 2.1082, 0 0)';  
 ```  
   
 ### <a name="e-instantiating-a-geography-instance-with-a-circularstring"></a>E. CircularString を使用して geometry インスタンスをインスタンス化する  
  次の例は、`geography` を使用して `CircularString` インスタンスを宣言およびインスタンス化する方法を示しています。  
   
-```tsql  
+```sql  
 DECLARE @g geography = 'CIRCULARSTRING(-122.358 47.653, -122.348 47.649, -122.348 47.658, -122.358 47.658, -122.358 47.653)';  
 ```  
   
 ### <a name="f-instantiating-a-geometry-instance-with-a-circularstring-that-is-a-straight-line"></a>F. 直線の CircularString を使用して geometry インスタンスをインスタンス化する  
  次の例は、直線の `CircularString` インスタンスを作成する方法を示しています。  
   
-```tsql  
+```sql  
 DECLARE @g geometry;  
 SET @g = geometry::STGeomFromText('CIRCULARSTRING(0 0, 1 2, 2 4)', 0);  
 ```  

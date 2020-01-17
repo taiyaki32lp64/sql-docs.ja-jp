@@ -1,6 +1,7 @@
 ---
-title: データベース ミラーリング セッション中の役割の交代 (SQL Server) | Microsoft Docs
-ms.custom: ''
+title: データベース ミラーの役割の交代
+description: データベース ミラーリングの役割の交代について説明します。
+ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: high-availability
@@ -19,13 +20,12 @@ helpviewer_keywords:
 ms.assetid: a782d60d-0373-4386-bd77-9ec192553700
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: affc717019c031445fc19b429ba0c96186088e59
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b310083d3317c9099532b8d08f2482efe193d95c
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47612890"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75252791"
 ---
 # <a name="role-switching-during-a-database-mirroring-session-sql-server"></a>データベース ミラーリング セッション中の役割の交代 (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -36,7 +36,7 @@ ms.locfileid: "47612890"
   
  次の図は、ミラーリング パートナーである **Partner_A** と **Partner_B**を示しています。一連の自動フェールオーバーまたは手動フェールオーバーで、プリンシパルとミラーの役割を交代しています。  
   
- ![パートナーの役割の切り替え (2 回)](../../database-engine/database-mirroring/media/dbm-roleswitching.gif "パートナーの役割の切り替え (2 回)")  
+ ![パートナーの役割の交代 (2 回)](../../database-engine/database-mirroring/media/dbm-roleswitching.gif "パートナーの役割の交代 (2 回)")  
   
 > [!IMPORTANT]  
 >  役割の交代後、以前のプリンシパル データベースで実行されていたジョブを新しいプリンシパル サーバーで実行するには、その新しいプリンシパル サーバーで再作成する必要があります。 詳細については、「[役割の交代後のログインとジョブの管理 &#40;SQL Server&#41;](../../sql-server/failover-clusters/management-of-logins-and-jobs-after-role-switching-sql-server.md)」を参照してください。  
@@ -52,7 +52,7 @@ ms.locfileid: "47612890"
   
      手動フェールオーバーは、管理用に用意されています。 詳細については、このトピックの「 [手動フェールオーバー](#ManualFailover)」を参照してください。  
   
--   **自動フェールオーバー**  
+-   **Automatic failover**  
   
      ミラーリング監視サーバーを伴う高い安全性モードで、自動フェールオーバーがサポートされます。 ミラーリング監視サーバーとミラー サーバーの相互接続が維持されていて、データベースの同期が完了しているときに、プリンシパル サーバーが使用できなくなった場合のみ、自動フェールオーバーが行われます。 詳細については、このトピックの「 [自動フェールオーバー](#AutomaticFailover)」を参照してください。  
   
@@ -69,9 +69,9 @@ ms.locfileid: "47612890"
   
 ||高パフォーマンス|ミラーリング監視サーバーを伴わない高い安全性モード|ミラーリング監視サーバーを伴う高い安全性モード|  
 |-|----------------------|-----------------------------------------|--------------------------------------|  
-|自動フェールオーバー (automatic failover)|いいえ|いいえ|[ユーザー アカウント制御]|  
-|手動フェールオーバー (manual failover)|いいえ|はい|[ユーザー アカウント制御]|  
-|サービスの強制|[ユーザー アカウント制御]|はい|いいえ|  
+|自動フェールオーバー|いいえ|いいえ|はい|  
+|手動フェールオーバー|いいえ|はい|はい|  
+|サービスの強制|はい|はい|いいえ|  
   
  役割の交代後、すべてのデータベース ユーザーが新しいプリンシパル データベースにアクセスできるようにするには、特定のメタデータが両方のパートナーに存在する必要があります。 また、データベースが定期的にバックアップされ続けるようにするには、新しいプリンシパル サーバーでバックアップ ジョブを作成する必要があります。 詳細については、「[役割の交代後のログインとジョブの管理 &#40;SQL Server&#41;](../../sql-server/failover-clusters/management-of-logins-and-jobs-after-role-switching-sql-server.md)」を参照してください。  
   
@@ -125,7 +125,7 @@ ms.locfileid: "47612890"
     > [!NOTE]  
     >  新しいミラー サーバーによってデータベースの再同期が完了すると、再度フェールオーバーが可能になりますが、今度は反対方向にフェールオーバーされることになります。  
   
- フェールオーバー後は、クライアントから現在のプリンシパル データベースに再接続する必要があります。 詳しくは、「 [データベース ミラーリング セッションへのクライアントの接続 &#40;SQL Server&#41;](../../database-engine/database-mirroring/connect-clients-to-a-database-mirroring-session-sql-server.md)という処理により、一般的にプリンシパルとミラーの役割を相互交換できます。  
+ フェールオーバー後は、クライアントから現在のプリンシパル データベースに再接続する必要があります。 詳細については、このトピックの「 [データベース ミラーリング セッションへのクライアントの接続 &#40;SQL Server&#41;](../../database-engine/database-mirroring/connect-clients-to-a-database-mirroring-session-sql-server.md)」を参照してください。  
   
  **手動フェールオーバーを開始するには**  
   
@@ -159,7 +159,7 @@ ms.locfileid: "47612890"
 -   プリンシパル サーバーとその他のデータベース ミラーリング構成との通信が切断され、ミラー サーバーとミラーリング監視サーバーはクォーラムを保持している。 ただし、すべてのサーバー インスタンスで通信が切断された場合、ミラーリング監視サーバーとミラー サーバーの通信が回復しても、自動フェールオーバーは行われません。  
   
     > [!NOTE]  
-    >  詳細については、「[クォーラム: データベースの可用性にミラーリング監視サーバーが与える影響 &#40;Database Mirroring&#41;](../../database-engine/database-mirroring/quorum-how-a-witness-affects-database-availability-database-mirroring.md)」を参照してください。  
+    >  詳細については、「[クォーラム: データベースの可用性にミラーリング監視サーバーが与える影響 (データベース ミラーリング)](../../database-engine/database-mirroring/quorum-how-a-witness-affects-database-availability-database-mirroring.md)」を参照してください。  
   
 -   プリンシパル サーバーの障害がミラー サーバーによって検出される。  
   
@@ -183,11 +183,11 @@ ms.locfileid: "47612890"
   
  下図に、シングル インスタンスの自動フェールオーバーを示します。  
   
- ![自動フェールオーバー](../../database-engine/database-mirroring/media/dbm-failovauto1round.gif "自動フェールオーバー")  
+ ![Automatic failover](../../database-engine/database-mirroring/media/dbm-failovauto1round.gif "自動フェールオーバー")  
   
  最初、3 台のサーバーすべてが接続されています (セッションには完全なクォーラムがあります)。 **Partner_A** がプリンシパル サーバーで、 **Partner_B** がミラー サーバーです。 **Partner_A** ( **Partner_A**のプリンシパル データベース) が使用できなくなります。 ミラーリング監視サーバーと **Partner_B** は、プリンシパルが使用できなくなったことを認識します。セッションのクォーラムは保持されます。 **Partner_B** がプリンシパル サーバーになり、サーバー内のデータベースのコピーを新しいプリンシパル データベースとして使用可能にします。 その後、 **Partner_A** がセッションに再接続すると、 **Partner_B** がプリンシパルの役割を所有していることが検出されます。 そこで**Partner_A** がミラーの役割を引き継ぎます。  
   
- フェールオーバー後は、クライアントから現在のプリンシパル データベースに再接続する必要があります。 詳しくは、「 [データベース ミラーリング セッションへのクライアントの接続 &#40;SQL Server&#41;](../../database-engine/database-mirroring/connect-clients-to-a-database-mirroring-session-sql-server.md)という処理により、一般的にプリンシパルとミラーの役割を相互交換できます。  
+ フェールオーバー後は、クライアントから現在のプリンシパル データベースに再接続する必要があります。 詳細については、このトピックの「 [データベース ミラーリング セッションへのクライアントの接続 &#40;SQL Server&#41;](../../database-engine/database-mirroring/connect-clients-to-a-database-mirroring-session-sql-server.md)」を参照してください。  
   
 > [!NOTE]  
 >  [!INCLUDE[msCoName](../../includes/msconame-md.md)] 分散トランザクション コーディネーターを使用して準備したトランザクションのうち、フェールオーバーの発生時点ではコミットされていなかったトランザクションは、データベースのフェールオーバー後に中断したと見なされます。  
@@ -208,13 +208,13 @@ ms.locfileid: "47612890"
   
  **ミラーリング監視サーバーを無効にするには**  
   
--   [データベース ミラーリング セッションからミラーリング監視サーバーを削除する &#40;SQL Server&#41;](../../database-engine/database-mirroring/remove-the-witness-from-a-database-mirroring-session-sql-server.md)  
+-   [データベース ミラーリング セッションからのミラーリング監視サーバーの削除 &#40;SQL Server&#41;](../../database-engine/database-mirroring/remove-the-witness-from-a-database-mirroring-session-sql-server.md)  
   
     > [!NOTE]  
     >  トランザクションの安全性を FULL に保ったままミラーリング監視サーバーを無効にすると、セッションは自動フェールオーバーを伴わない高い安全性モードになります。  
   
 ##  <a name="ForcedService"></a> Forced Service (with Possible Data Loss)  
- データベース ミラーリングには、災害復旧方法としてサービスの強制 (データ損失の可能性あり) を利用でき、ミラー サーバーをウォーム スタンバイ サーバーとして使用できます。 サービスを強制できるのは、プリンシパル サーバーが、ミラーリング セッションでミラー サーバーから切断された場合だけです。 サービスを強制するとデータを損失する可能性があるので、サービスの強制は注意深く慎重に使用してください。  
+ データベース ミラーリングには、ディザスター リカバリー方法としてサービスの強制 (データ損失の可能性あり) を利用でき、ミラー サーバーをウォーム スタンバイ サーバーとして使用できます。 サービスを強制できるのは、プリンシパル サーバーが、ミラーリング セッションでミラー サーバーから切断された場合だけです。 サービスを強制するとデータを損失する可能性があるので、サービスの強制は注意深く慎重に使用してください。  
   
  強制的なサービスの起動がサポートされるかどうかは、次に示すように、動作モードとセッションの状態によって異なります。  
   
@@ -242,7 +242,7 @@ ms.locfileid: "47612890"
 ###  <a name="TypicalCaseFS"></a> 強制的なサービスの起動の一般的な事例  
  次の図は、強制的なサービスの起動 (データ損失の可能性あり) の一般的な事例を示しています。  
   
- ![データ損失の可能性があるサービス強制](../../database-engine/database-mirroring/media/dbm-forced-service.gif "データ損失の可能性があるサービス強制")  
+ ![データ損失の可能性があるサービスの強制](../../database-engine/database-mirroring/media/dbm-forced-service.gif "データ損失の可能性があるサービスの強制")  
   
  図では、ミラー サーバー **Partner_B**から元のプリンシパル サーバー **Partner_A**を利用できなくなり、ミラー データベースが切断されます。 クライアントが **Partner_A** を利用できないことを確認した後、データベース管理者は、データを失う可能性がありますが **Partner_B**でサービスを強制します。 **Partner_B** がプリンシパル サーバーになり、データベースが *公開* された状態で (つまり、ミラー化されずに) 実行されます。 この時点で、クライアントは **Partner_B**に再接続できます。  
   
@@ -304,7 +304,7 @@ ms.locfileid: "47612890"
   
  **新しいミラー データベースを作成するには**  
   
- [ミラーリングのためのミラー データベースの準備 &#40;Transact-SQL&#41;](../../database-engine/database-mirroring/prepare-a-mirror-database-for-mirroring-sql-server.md)  
+ [ミラーリングのためのミラー データベースの準備 &#40;SQL Server&#41;](../../database-engine/database-mirroring/prepare-a-mirror-database-for-mirroring-sql-server.md)  
   
  **データベース ミラーリングを開始するには**  
   

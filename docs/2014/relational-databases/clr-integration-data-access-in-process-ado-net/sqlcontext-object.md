@@ -15,11 +15,11 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 223111874ca34ba4df4968c550e6cc47edf2b390
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48062948"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62920044"
 ---
 # <a name="sqlcontext-object"></a>SqlContext オブジェクト
   プロシージャや関数の呼び出し時、CLR (共通言語ランタイム) ユーザー定義型のメソッドの呼び出し時、または任意の [!INCLUDE[msCoName](../../includes/msconame-md.md)] .NET Framework 言語で定義されたトリガーの起動時には、サーバーのマネージド コードを呼び出します。 このコードの実行はユーザー接続の一環として要求されるので、サーバーで実行しているコードから呼び出し元のコンテキストにアクセスできる必要があります。 また、特定のデータ アクセス操作には、コードが呼び出し元のコンテキストで実行されている場合にしか有効にならないものもあります。 たとえば、トリガー操作で使用される inserted 擬似テーブルや deleted 擬似テーブルにアクセスするには、コードが呼び出し元のコンテキストで実行されている必要があります。  
@@ -28,13 +28,13 @@ ms.locfileid: "48062948"
   
  `SqlContext` は、次のコンポーネントへのアクセスを提供します。  
   
--   `SqlPipe`: 結果をクライアントに送信するのに使用する "パイプ" を表す `SqlPipe` オブジェクト。 詳細については、`SqlPipe`オブジェクトを参照してください[SqlPipe オブジェクト](sqlpipe-object.md)します。  
+-   `SqlPipe`:`SqlPipe`オブジェクトは、クライアントに流れる結果が通過「パイプ」を表します。 詳細については、`SqlPipe`オブジェクトを参照してください[SqlPipe オブジェクト](sqlpipe-object.md)します。  
   
--   `SqlTriggerContext`: `SqlTriggerContext` オブジェクトは、CLR トリガー内でしか取得できません。 このオブジェクトでは、トリガーを起動した操作や、更新された列のマップについての情報を提供します。 詳細については、`SqlTriggerContext`オブジェクトを参照してください[SqlTriggerContext オブジェクト](sqltriggercontext-object.md)します。  
+-   `SqlTriggerContext`:`SqlTriggerContext` CLR トリガー内からオブジェクトが取得のみできます。 このオブジェクトでは、トリガーを起動した操作や、更新された列のマップについての情報を提供します。 詳細については、`SqlTriggerContext`オブジェクトを参照してください[SqlTriggerContext オブジェクト](sqltriggercontext-object.md)します。  
   
--   `IsAvailable`: `IsAvailable` プロパティはコンテキスト可用性を判断するために使用されます。  
+-   `IsAvailable`:`IsAvailable`プロパティはコンテキスト可用性を確認するために使用します。  
   
--   `WindowsIdentity`: `WindowsIdentity` プロパティは呼び出し元の Windows ID を取得するために使用されます。  
+-   `WindowsIdentity`:`WindowsIdentity`プロパティを使用して、呼び出し元の Windows id を取得します。  
   
 ## <a name="determining-context-availability"></a>コンテキスト可用性の判断  
  `SqlContext` クラスをクエリすると、現在実行しているコードがインプロセスで実行されているかどうかを判定できます。 これを行うには、`IsAvailable` オブジェクトの `SqlContext` プロパティを確認します。 `IsAvailable` プロパティは読み取り専用で、呼び出し元のコードが [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 内で実行されており、他の `True` メンバーにアクセスできる場合は、`SqlContext` を返します。 `IsAvailable` プロパティから `False` が返された場合、他のすべての `SqlContext` メンバーから `InvalidOperationException` がスローされます (ただし、この例外が使用されている場合に限ります)。 `IsAvailable` プロパティから `False` が返された場合、接続文字列で "context connection=true" が指定されている接続オブジェクトを開く操作は失敗します。  

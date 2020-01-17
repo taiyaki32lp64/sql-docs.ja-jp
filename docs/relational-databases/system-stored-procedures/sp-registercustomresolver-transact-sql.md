@@ -15,18 +15,17 @@ helpviewer_keywords:
 ms.assetid: 6d2b0472-0e1f-4005-833c-735d1940fe93
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: caf82567ffa375d73263eba64232cfd6629d3f97
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 0d003cccfa6fdedd0610ea34f15acb6ee1833e5a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52747494"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68075735"
 ---
-# <a name="spregistercustomresolver-transact-sql"></a>sp_registercustomresolver (Transact-SQL)
+# <a name="sp_registercustomresolver-transact-sql"></a>sp_registercustomresolver (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  マージ レプリケーションの同期処理中に呼び出すことができる、ビジネス ロジック ハンドラーまたは COM ベースのカスタム競合回避モジュールを登録します。 このストアド プロシージャは、ディストリビューター側で実行されます。  
+  ビジネス ロジック ハンドラーまたはマージ レプリケーションの同期処理中に呼び出すことができます (COM) ベースのカスタム リゾルバーを登録します。 このストアド プロシージャは、ディストリビューターで実行されます。  
   
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -42,20 +41,15 @@ sp_registercustomresolver [ @article_resolver = ] 'article_resolver'
 ```  
   
 ## <a name="arguments"></a>引数  
- [  **@article_resolver =** ] **'***article_resolver***'**  
- 登録するカスタム ビジネス ロジックの名前としてわかりやすい名前を指定します。 *article_resolver*は**nvarchar (255)**、既定値はありません。  
+`[ @article_resolver = ] 'article_resolver'` 登録されているカスタム ビジネス ロジックのフレンドリ名を指定します。 *article_resolver*は**nvarchar (255)** 、既定値はありません。  
   
- [  **@resolver_clsid=** ] **'***resolver_clsid***'**  
- 登録する COM オブジェクトの CLSID 値を指定します。 カスタム ビジネス ロジック*resolver_clsid*は**nvarchar (50)**、既定値は NULL です。 ビジネス ロジック ハンドラー アセンブリを登録する場合、このパラメーターは有効な CLSID または NULL に設定する必要があります。  
+`[ @resolver_clsid = ] 'resolver_clsid'` 登録されている COM オブジェクトの CLSID 値を指定します。 カスタム ビジネス ロジック*resolver_clsid*は**nvarchar (50)** 、既定値は NULL です。 このパラメーターの設定は有効な clsid またはビジネス ロジック ハンドラー アセンブリを登録するときに NULL に設定する必要があります。  
   
- [  **@is_dotnet_assembly=** ] **'***@is_dotnet_assembly***'**  
- 登録するカスタム ビジネス ロジックの種類を指定します。 *is_dotnet_assembly*は**nvarchar (50)**、既定値は FALSE。 **true**登録されているカスタム ビジネス ロジックがビジネス ロジック ハンドラー アセンブリであることを示します**false**は COM コンポーネントであることを示します。  
+`[ @is_dotnet_assembly = ] 'is_dotnet_assembly'` 登録されているカスタム ビジネス ロジックの種類を指定します。 *is_dotnet_assembly*は**nvarchar (50)** 、既定値は FALSE。 **true**登録されているカスタム ビジネス ロジックがビジネス ロジック ハンドラー アセンブリであることを示します**false**は COM コンポーネントであることを示します。  
   
- [  **@dotnet_assembly_name=** ] **'***@dotnet_assembly_name***'**  
- ビジネス ロジック ハンドラーを実装するアセンブリの名前を指定します。 *@dotnet_assembly_name*は**nvarchar (255)** 既定値は NULL です。 マージ エージェントの実行可能ファイルがあるディレクトリ、マージ エージェントを同期的に起動するアプリケーションがあるディレクトリ、およびグローバル アセンブリ キャッシュ (GAC) の、いずれとも異なる場所にアセンブリが配置されている場合は、アセンブリの完全なパスを指定する必要があります。  
+`[ @dotnet_assembly_name = ] 'dotnet_assembly_name'` ビジネス ロジック ハンドラーを実装するアセンブリの名前です。 *\@dotnet_assembly_name*は **nvarchar (255)** 既定値は NULL です。 マージ エージェントの実行可能ファイルがあるディレクトリ、マージ エージェントを同期的に起動するアプリケーションがあるディレクトリ、およびグローバル アセンブリ キャッシュ (GAC) の、いずれとも異なる場所にアセンブリが配置されている場合は、アセンブリの完全なパスを指定する必要があります。  
   
- [  **@dotnet_class_name=** ] **'***@dotnet_class_name***'**  
- <xref:Microsoft.SqlServer.Replication.BusinessLogicSupport.BusinessLogicModule> をオーバーライドして、ビジネス ロジック ハンドラーを実装するクラスの名前です。 形式で名前を指定する必要があります**Namespace.Classname**します。 *@dotnet_class_name*は**nvarchar (255)** 既定値は NULL です。  
+`[ @dotnet_class_name = ] 'dotnet_class_name'` オーバーライドするクラスの名前を指定<xref:Microsoft.SqlServer.Replication.BusinessLogicSupport.BusinessLogicModule>ビジネス ロジック ハンドラーを実装します。 形式で名前を指定する必要があります**Namespace.Classname**します。 *\@dotnet_class_name*は **nvarchar (255)** 既定値は NULL です。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  **0** (成功) または**1** (失敗)  
@@ -66,7 +60,7 @@ sp_registercustomresolver [ @article_resolver = ] 'article_resolver'
 ## <a name="permissions"></a>アクセス許可  
  メンバーのみ、 **sysadmin**固定サーバー ロールまたは**db_owner**固定データベース ロールが実行できる**sp_registercustomresolver**します。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [マージ アーティクルのビジネス ロジック ハンドラーの実装](../../relational-databases/replication/implement-a-business-logic-handler-for-a-merge-article.md)   
  [マージ アーティクルのカスタム競合回避モジュールの実装](../../relational-databases/replication/implement-a-custom-conflict-resolver-for-a-merge-article.md)   
  [sp_lookupcustomresolver &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-lookupcustomresolver-transact-sql.md)   

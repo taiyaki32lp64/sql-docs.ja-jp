@@ -1,5 +1,5 @@
 ---
-title: 前のメソッド (SQLServerResultSet) |Microsoft Docs
+title: previous メソッド (SQLServerResultSet) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: 66eb4e10-c375-4b31-ac46-3ba1d9dbf6a0
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 587398c10e693081a9dc6a6c4abb61ff970b2f03
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e1f13c3fedc3cfaa0645eec5a769ed482b339563
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47692321"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67976002"
 ---
 # <a name="previous-method-sqlserverresultset"></a>previous メソッド (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -36,13 +35,13 @@ public boolean previous()
 ```  
   
 ## <a name="return-value"></a>戻り値  
- **true**新しい現在の行が有効な場合。 **false**を処理する行がない場合。  
+ 新しい現在の行が有効な場合は**true**を指定します。 処理する行がなくなった場合は**false** 。  
   
 ## <a name="exceptions"></a>例外  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- この前のメソッドは、java.sql.ResultSet インターフェイスの前のメソッドによって指定されます。  
+ この前のメソッドは、前の手順で指定した、java. ResultSet インターフェイスのメソッドです。  
   
 ## <a name="see-also"></a>参照  
  [SQLServerResultSet のメンバー](../../../connect/jdbc/reference/sqlserverresultset-members.md)   

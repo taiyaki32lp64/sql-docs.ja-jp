@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: 737c3785-e2d4-4b5c-8718-c0e435b50599
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: c3cf07ad3ad0bd5e61a57eeacb46725ea3ef38d6
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 3b4762059620cd4608c7fc817af716bbd7630391
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47615600"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67955983"
 ---
 # <a name="addbatch-method-"></a>addBatch () メソッド
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -39,7 +38,7 @@ public final void addBatch()
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- この addBatch メソッドは、java.sql.PreparedStatement インターフェイスの addBatch メソッドによって指定されます。  
+ この addBatch メソッドは、PreparedStatement インターフェイスの addBatch メソッドによって指定されます。  
   
 ## <a name="see-also"></a>参照  
  [addBatch メソッド &#40;SQLServerPreparedStatement&#41;](../../../connect/jdbc/reference/addbatch-method-sqlserverpreparedstatement.md)   

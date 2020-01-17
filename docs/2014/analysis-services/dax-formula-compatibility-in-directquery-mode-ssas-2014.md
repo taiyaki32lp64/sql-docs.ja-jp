@@ -4,20 +4,18 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: de83cfa9-9ffe-4e24-9c74-96a3876cb4bd
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 8061cf30107a5bdfff6d8af53e70affb93ff9469
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: e588630b4bc9b2dd72e1fb54362b9b024c17bdb5
+ms.sourcegitcommit: 630f7cacdc16368735ec1d955b76d6d030091097
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53372664"
+ms.lasthandoff: 06/24/2019
+ms.locfileid: "67343896"
 ---
 # <a name="dax-formula-compatibility-in-directquery-mode-ssas-2014"></a>DirectQuery モードでの DAX 数式の互換性 (SSAS 2014)
 Analysis Services 表形式モデルでメジャーと使用するための他のカスタム式を作成する Data Analysis Expression (DAX) 言語を使用できます[!INCLUDE[ssGemini](../includes/ssgemini-md.md)]、Excel ブックのデータ モデルと Power BI Desktop データ モデル。 多くの点では、これらの環境を作成するモデルが同じであり、同じメジャー、リレーションシップ、および Kpi を使用するなど。ただし、Analysis Services 表形式のモデルを作成して、DirectQuery モードで展開する場合は、使用できる数式に関していくつかの制限。 このトピックで、これらの違いの概要を説明します、互換性レベル 1100 または 1103 の SQL Server 2014 Analysis Services tabulars モデルおよび DirectQuery モードでは、サポートされていない関数を一覧表示およびサポートされている関数の一覧が可能性があります。異なる結果を返します。  
@@ -80,14 +78,14 @@ DAX のようなキャスト関数はありませんが、多くの比較演算�
 -   ブール値は、比較において、および EXACT、AND、OR、 &amp;&amp;、または || で使用されるときは、常に論理値として扱われます。  
   
 **文字列からブールへのキャスト**  
-インメモリおよび DirectQuery モデルでは、キャストはこれらの文字列のみから許可をブール値には: **""** (空の文字列)、 **"true"**、 **"false"** が空の文字列。false の値にキャストします。  
+インメモリおよび DirectQuery モデルでは、キャストはこれらの文字列のみから許可をブール値には: **""** (空の文字列)、 **"true"** 、 **"false"** が空の文字列。false の値にキャストします。  
   
 他のすべての文字列からブール データ型へのキャストはエラーになります。  
   
 **文字列から日付/時刻へのキャスト**  
 DirectQuery モードでは、文字列表現の日時から実際の **datetime** 値へのキャストは、SQL Server と同じように行われます。  
   
-文字列からへのキャストに適用される規則については**datetime**データ型[!INCLUDE[ssGemini](../includes/ssgemini-md.md)]モデルを参照してください、 [DAX 構文のリファレンス](https://msdn.microsoft.com/library/ee634217.aspx)します。  
+文字列からへのキャストに適用される規則については**datetime**データ型[!INCLUDE[ssGemini](../includes/ssgemini-md.md)]モデルを参照してください、 [DAX 構文のリファレンス](/dax/dax-syntax-reference)します。
   
 インメモリ データ ストアを使用するモデルで日付に対してサポートされるテキスト形式の範囲は、SQL Server でサポートされる日付の文字列形式より制限されます。 ただし、DAX では日付と時刻のカスタム形式がサポートされます。  
   
@@ -135,7 +133,7 @@ SQL Server では、NULL と空白の処理が xVelocity エンジンとは異�
   
 他の対数関数に同じ制限が適用されます。LOG10 および LN にも適用されます。  
   
-DAX での **blank** データ型の詳細については、「 [DAX 構文のリファレンス](https://msdn.microsoft.com/library/ee634217.aspx)」を参照してください。  
+DAX での **blank** データ型の詳細については、「 [DAX 構文のリファレンス](/dax/dax-syntax-reference)」を参照してください。
   
 **0 での除算とブランクでの除算**  
 DirectQuery モードでは、ゼロ (0) による除算または BLANK による除算は常にエラーになります。 SQL Server は無限大の表記をサポートしていず、0 による除算の自然な結果は無限大なので、結果はエラーになります。 ただし、SQL Server は NULL による除算はサポートしており、結果は常に NULL になります。  

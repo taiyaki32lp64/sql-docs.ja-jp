@@ -18,11 +18,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 2159178c2fd26aca54d099f7345dbb62039ee34e
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54131812"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68196429"
 ---
 # <a name="create-indexed-views"></a>インデックス付きビューの作成
   このトピックでは、 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] で、 [!INCLUDE[tsql](../../includes/tsql-md.md)]を使用し、インデックス付きビューを作成する方法について説明します。 ビューに作成する最初のインデックスは、一意なクラスター化インデックスにする必要があります。 一意のクラスター化インデックスを作成した後は、非クラスター化インデックスを追加で作成できます。 ビューに一意のクラスター化インデックスを作成すると、そのビューは、クラスター化インデックスが定義されているテーブルと同じ方法でデータベースに格納されるので、クエリのパフォーマンスが向上します。 クエリ オプティマイザーではインデックス付きビューを使って、クエリの実行速度を高めることができます。 オプティマイザーでビューを代用するかどうかを判別するために、ビューがクエリで参照されている必要はありません。  
@@ -55,7 +55,7 @@ ms.locfileid: "54131812"
   
 -   クエリ オプティマイザーで、クエリ プランの生成にインデックス付きビューが使用される。  
   
-    |SET オプション|必要な値|既定のサーバー値|既定値<br /><br /> OLE DB および ODBC 値|既定値<br /><br /> DB-Library 値|  
+    |SET オプション|必要な値|既定のサーバー値|既定<br /><br /> OLE DB および ODBC 値|既定<br /><br /> DB-Library 値|  
     |-----------------|--------------------|--------------------------|---------------------------------------|-----------------------------------|  
     |ANSI_NULLS|ON|ON|ON|OFF|  
     |ANSI_PADDING|ON|ON|ON|OFF|  
@@ -86,11 +86,11 @@ ms.locfileid: "54131812"
   
 -   インデックスを作成する場合は、IGNORE_DUP_KEY オプションを OFF に設定する必要があります (既定の設定)。  
   
--   ビュー定義では、 _schema_**.**_tablename_ という 2 つの部分から構成される名前でテーブルが参照されていること。  
+-   ビュー定義では、 _schema_ **.** _tablename_ という 2 つの部分から構成される名前でテーブルが参照されていること。  
   
 -   ビューで参照されているユーザー定義関数が、WITH SCHEMABINDING オプションを使用して作成されていること。  
   
--   ビューで参照されているユーザー定義関数が、 _schema_**.**_function_という 2 つの部分から構成される名前で参照されていること。  
+-   ビューで参照されているユーザー定義関数が、 _schema_ **.** _function_という 2 つの部分から構成される名前で参照されていること。  
   
 -   ユーザー定義関数のデータ アクセス プロパティが NO SQL に、外部アクセス プロパティが NO に設定されている必要があります。  
   
@@ -98,7 +98,7 @@ ms.locfileid: "54131812"
   
 -   ビュー定義で使用する CLR ユーザー定義型の CLR 関数やメソッドは、次の表のようにプロパティが設定されている必要があります。  
   
-    |プロパティ|注意|  
+    |プロパティ|注|  
     |--------------|----------|  
     |DETERMINISTIC = TRUE|Microsoft .NET Framework メソッドの属性として、明示的に宣言する必要があります。|  
     |PRECISE = TRUE|.NET Framework メソッドの属性として、明示的に宣言する必要があります。|  
@@ -210,7 +210,7 @@ ms.locfileid: "54131812"
   
  詳細については、「[CREATE VIEW &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-view-transact-sql)」を参照してください。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [CREATE INDEX &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-index-transact-sql)   
  [SET ANSI_NULLS &#40;Transact-SQL&#41;](/sql/t-sql/statements/set-ansi-nulls-transact-sql)   
  [SET ANSI_PADDING &#40;Transact-SQL&#41;](/sql/t-sql/statements/set-ansi-padding-transact-sql)   

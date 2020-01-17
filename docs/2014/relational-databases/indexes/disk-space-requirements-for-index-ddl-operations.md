@@ -17,11 +17,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 7dbb3fafd32ead6587d9c64eb6ccf2294ed4918b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48209672"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63161807"
 ---
 # <a name="disk-space-requirements-for-index-ddl-operations"></a>インデックス DDL 操作に必要なディスク領域
   ディスク領域は、インデックスを作成、再構築、または削除するときの重要な検討事項です。 ディスク領域が不足すると、パフォーマンスが低下したり、インデックス操作が失敗したりする場合があります。 このトピックでは、インデックス DDL (データ定義言語) 操作に必要なディスク領域を判断するのに役立つ一般的な情報を提供します。  

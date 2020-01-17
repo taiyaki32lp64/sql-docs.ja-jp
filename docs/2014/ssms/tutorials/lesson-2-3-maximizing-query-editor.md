@@ -11,11 +11,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 54a598ab383773a3ada43f0cc44892f42ac3ba2f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48105932"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63222534"
 ---
 # <a name="maximizing-query-editor"></a>クエリ エディターの最大化
   プログラミング時には、コードの記述スペースを拡大する必要性が頻繁に発生します。 この方法は 2 つあり、どちらも簡単です。1 つは、クエリ エディター ウィンドウを最大化する方法。もう 1 つは、使用していないツール ウィンドウを非表示にする方法です。  

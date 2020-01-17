@@ -10,15 +10,14 @@ ms.topic: conceptual
 f1_keywords:
 - sql13.swb.common.selectobjecttypes.f1
 ms.assetid: 6d27ab0b-a016-4fb3-9391-74c6a9c1991c
-author: stevestein
-ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 193adba74857bf8d2b70747fecd4eac5973013bb
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: e23786f27c5fa4c0168b6cf93881886111a592d6
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47844960"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68264030"
 ---
 # <a name="select-object-types-object-explorer"></a>[オブジェクトの種類を選択] (オブジェクト エクスプローラー)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

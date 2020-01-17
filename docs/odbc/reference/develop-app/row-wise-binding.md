@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 4f622cf4-0603-47a1-a48b-944c4ef46364
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: c596f4924e9859b3ac61d38f68bacbc3ecd54a2e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: aab33f8805741083fd42e9fbcb25d67a416be319
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47855860"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68061617"
 ---
 # <a name="row-wise-binding"></a>行方向のバインド
 行方向のバインドを使用する場合、アプリケーション 1 つまたは 2 を含む構造体を定義または場合によって 3 では、データが返される対象の各列の要素。 最初の要素は、データ値を保持し、2 番目の要素が長さ/インジケーター バッファーを保持します。 インジケーターと長さの値は SQL_DESC_INDICATOR_PTR、および SQL_DESC_OCTET_LENGTH_PTR 記述子フィールドを別の値に設定しての別のバッファーに格納できます。これが完了している場合、構造体には、3 番目の要素が含まれています。 その後、アプリケーションでは、行セットの行がある多くの要素を含むこれらの構造体の配列を割り当てます。  

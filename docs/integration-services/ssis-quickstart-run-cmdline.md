@@ -6,17 +6,20 @@ ms.prod: sql
 ms.prod_service: integration-services
 ms.custom: ''
 ms.technology: integration-services
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: 28591401a5dab269a90a977a14f83c7dd4df119e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 964fdf4d4abb58d7baf27ee9e2f8b6900a7d0bbb
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47635420"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71295719"
 ---
 # <a name="run-an-ssis-package-from-the-command-prompt-with-dtexecexe"></a>DTExec.exe を使用してコマンド プロンプトから SSIS パッケージを実行する
+
+[!INCLUDE[ssis-appliesto](../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
 このクイックスタートでは、コマンド プロンプトから適切なパラメーターを使用して `DTExec.exe` を実行し、SSIS パッケージを実行する方法を説明します。
 
 > [!NOTE]

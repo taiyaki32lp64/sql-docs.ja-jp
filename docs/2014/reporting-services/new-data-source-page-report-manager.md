@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 ms.assetid: 35563d4c-a3d5-4f95-bf46-605da9dfcbb8
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: aa144386222c489e9b682942873794669f5b31d6
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 9cc4dda934496bbfa33306537b515870f0de23de
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56029103"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66108174"
 ---
 # <a name="new-data-source-page-report-manager"></a>[新しいデータ ソース] ページ (レポート マネージャー)
   [新しいデータ ソース] ページを使用すると、共有データ ソース アイテムを作成できます。 共有データ ソースにより、外部のデータ ソースへの接続が定義されます。 共有データ ソースを使用すると、データ ソースの接続の設定を、そのデータ ソースを使用するレポート、モデル、およびデータ ドリブン サブスクリプションとは別に作成および保持できます。  

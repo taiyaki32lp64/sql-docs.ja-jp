@@ -12,16 +12,15 @@ helpviewer_keywords:
 - SQL Server Agent jobs, starting
 - starting jobs
 ms.assetid: cec9f7f7-d0a7-4239-9dc5-a69c011ebaa0
-author: stevestein
-ms.author: sstein
-manager: craigg
+author: markingmyname
+ms.author: maghan
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 4f3e9780b5eddc14464eb653afcf37770ee7ac86
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: 00a43ad550f911372672d49548efa3039cec6b84
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51698400"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68265208"
 ---
 # <a name="start-a-job"></a>Start a Job
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -35,7 +34,7 @@ ms.locfileid: "51698400"
   
 -   **作業を開始する準備:**  
   
-    [Security](#Security)  
+    [セキュリティ](#Security)  
   
 -   **ジョブを開始する方法:**  
   
@@ -47,8 +46,8 @@ ms.locfileid: "51698400"
   
 ## <a name="BeforeYouBegin"></a>はじめに  
   
-### <a name="Security"></a>Security  
-詳細については、「 [Implement SQL Server Agent Security](../../ssms/agent/implement-sql-server-agent-security.md)」をご覧ください。  
+### <a name="Security"></a>セキュリティ  
+詳細については、「 [SQL Server エージェントのセキュリティの実装](../../ssms/agent/implement-sql-server-agent-security.md)」をご覧ください。  
   
 ## <a name="SSMS"></a>SQL Server Management Studio の使用  
   
@@ -58,13 +57,13 @@ ms.locfileid: "51698400"
   
 2.  **[SQL Server エージェント]** を展開し、 **[ジョブ]** を展開します。 ジョブの開始方法に応じて、次のいずれかを行います。  
   
-    -   単一のサーバーまたはターゲット サーバー上で作業を行っている場合、またはマスター サーバー上でローカル サーバー ジョブを実行している場合、開始するジョブを右クリックして、**[ジョブの開始]** をクリックします。  
+    -   単一のサーバーまたはターゲット サーバー上で作業を行っている場合、またはマスター サーバー上でローカル サーバー ジョブを実行している場合、開始するジョブを右クリックして、 **[ジョブの開始]** をクリックします。  
   
     -   複数のジョブを開始するには、 **[ジョブの利用状況モニター]** を右クリックし、 **[ジョブの利用状況の表示]** をクリックします。 ジョブの利用状況モニターでは、複数のジョブを選択し、選択内容を右クリックして、 **[ジョブの開始]** をクリックできます。  
   
     -   マスター サーバー上で作業を行っていて、すべての対象サーバーで同時にジョブを実行する場合、開始するジョブを右クリックし、 **[ジョブの開始]** をクリックします。次に、 **[すべての対象サーバーで開始]** をクリックします。  
   
-    -   マスター サーバー上で作業を行っていて、ジョブの対象サーバーを指定する場合、開始するジョブを右クリックし、 **[ジョブの開始]** をクリックします。次に、 **[特定の対象サーバーで開始]** をクリックします。 **[ダウンロード命令の通知]** ダイアログ ボックスの **[特定の対象サーバー]** チェック ボックスをオンにし、このジョブが実行される各対象サーバーを選択します。  
+    -   マスター サーバー上で作業を行っていて、ジョブのターゲット サーバーを指定する場合、開始するジョブを右クリックし、 **[ジョブの開始]** をクリックします。次に、 **[特定のターゲット サーバーで開始]** をクリックします。 **[ダウンロード命令の通知]** ダイアログ ボックスの **[特定のターゲット サーバー]** チェック ボックスをオンにし、このジョブが実行される各ターゲット サーバーを選択します。  
   
 ## <a name="TSQL"></a>Transact-SQL の使用  
   

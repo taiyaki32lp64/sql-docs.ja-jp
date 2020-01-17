@@ -8,16 +8,15 @@ ms.reviewer: ''
 ms.technology: configuration
 ms.topic: conceptual
 ms.assetid: 88e0f096-d746-4b7d-a5a4-73c5dc139f30
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-manager: craigg
-ms.openlocfilehash: 4c312116c0cf791a8b617b8c56a2642e048f0e85
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: bed39851559c1206235c5a3d9f4bcb02ab0bf508
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47706952"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68010344"
 ---
 # <a name="analysis-server-ltservergt-sql-server-configuration-manager"></a>分析サーバー &lt;サーバー&gt; (SQL Server 構成マネージャー)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]

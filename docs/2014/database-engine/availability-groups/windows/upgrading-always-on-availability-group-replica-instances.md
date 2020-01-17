@@ -11,11 +11,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 8e9be78ff13d39b4cdcaf60516ac20b9a85648d6
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53357072"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62812944"
 ---
 # <a name="upgrade-and-update-of-availability-group-servers-with-minimal-downtime-and-data-loss"></a>ダウンタイムとデータ損失を最小限に抑えた可用性グループ サーバーのアップグレードおよび更新
   SQL Server 2012 のサーバー インスタンスをサービス パックで更新するとき、または新しいバージョンにアップグレードするときに、順次更新または順次アップグレードを実行することにより、可用性グループのダウンタイムを手動フェールオーバー 1 回分のみに抑えることができます。 SQL Server のバージョンをアップグレードする場合、この操作をローリング アップグレードと呼びます。現在のバージョンの SQL Server に修正プログラムまたはサービス パックを適用して更新する場合、この操作をローリング アップデートと呼びます。  
@@ -104,7 +104,7 @@ ms.locfileid: "53357072"
   
 3.  REMOTE1 をアップグレードまたは更新  
   
-4.  PRIMARY2 をアップグレードまたは更新  
+4.  Upgrade/update PRIMARY2  
   
 5.  FCI1 を PRIMARY2 にフェールオーバーする。  
   

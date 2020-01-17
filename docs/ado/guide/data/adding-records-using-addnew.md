@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: cab4adff-f22f-4fb1-9217-f8138c795268
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 68b1a34a5d23d9aab32b6216eda3b3ef8f977e79
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 36f6bad9a8f0d74a81d02ce64c78d7a91ddc0fa8
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47819528"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67926283"
 ---
 # <a name="adding-records-using-addnew-method"></a>AddNew メソッドを使用してレコードを追加します。
 基本的な構文は、 **AddNew**メソッド。

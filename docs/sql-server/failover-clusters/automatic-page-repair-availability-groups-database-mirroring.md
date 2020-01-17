@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: cf2e3650-5fac-4f34-b50e-d17765578a8e
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 8fa157929e6936ed80ab8ca895b89309d68b960d
-ms.sourcegitcommit: b1990ec4491b5a8097c3675334009cb2876673ef
+ms.openlocfilehash: 9e445d15401b747be6bd690e4ae6884a831e66de
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/17/2018
-ms.locfileid: "49383567"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68035274"
 ---
 # <a name="automatic-page-repair-availability-groups-database-mirroring"></a>ページの自動修復 (可用性グループ: データベース ミラーリング)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -63,7 +62,7 @@ ms.locfileid: "49383567"
   
 -   ページ 9 (データベースのブート ページ)。  
   
--   アロケーション ページ。これには、グローバル アロケーション マップ (GAM) ページ、共有グローバル アロケーション マップ (SGAM) ページ、およびページ空き容量 (PFS) ページなどが含まれます。  
+-   アロケーション ページ:グローバル アロケーション マップ (GAM) ページ、共有グローバル アロケーション マップ (SGAM) ページ、およびページ空き容量 (PFS) ページ。  
   
  
 ##  <a name="PrimaryIOErrors"></a> プリンシパル/プライマリ データベースでの I/O エラーの処理  
@@ -96,7 +95,7 @@ ms.locfileid: "49383567"
  ページの自動修復は、バックグラウンドで実行される非同期プロセスです。 したがって、読み取ることのできないページを要求した場合はデータベース操作に失敗し、その原因を示すエラー コードが返されます。 ミラー化されたデータベースまたは可用性データベースのアプリケーションを開発するときは、失敗した操作を例外として処理できるようにする必要があります。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エラー コードが 823、824、または 829 のときは、その操作を後で再試行してください。  
   
 
-##  <a name="ViewAPRattempts"></a> How To: View Automatic Page-Repair Attempts  
+##  <a name="ViewAPRattempts"></a> 方法:ページの自動修復の試行結果を表示する  
  以下の動的管理ビューは、特定の可用性データベースまたはミラー化された特定のデータベースに対して最近試行されたページの自動修復に対応する行を返します (データベースあたり最大 100 行)。  
   
 -   **Always On 可用性グループ:**  

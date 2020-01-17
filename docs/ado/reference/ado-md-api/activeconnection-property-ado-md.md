@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 2509b32c-a995-4364-9152-d8c83129bdd8
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 9a9ece5a7774ca2b718af90fe041c070fcc99bdb
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ae0b32385b98ac1b48688a7f89bbd7c91842a106
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47789381"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67911592"
 ---
 # <a name="activeconnection-property-ado-md"></a>ActiveConnection プロパティ (ADO MD)
 どの ADO に[接続](../../../ado/reference/ado-api/connection-object-ado.md)オブジェクトの現在のセル セットまたは現在が属するカタログ。  
@@ -63,7 +62,7 @@ ms.locfileid: "47789381"
 |-|-|  
 |[Catalog オブジェクト (ADO MD)](../../../ado/reference/ado-md-api/catalog-object-ado-md.md)|[CellSet オブジェクト (ADO MD)](../../../ado/reference/ado-md-api/cellset-object-ado-md.md)|  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [セルセットの例 (VB)](../../../ado/reference/ado-md-api/cellset-example-vb.md)   
  [接続オブジェクト (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)   
  [Open メソッド (ADO MD)](../../../ado/reference/ado-md-api/open-method-ado-md.md)

@@ -1,8 +1,7 @@
 ---
-title: Data Migration Assistant で SQL Server ログインの移行 |Microsoft Docs
-description: Data Migration Assistant で SQL Server ログインを移行する方法について説明します
-ms.custom: ''
-ms.date: 10/20/2018
+title: Data Migration Assistant を使用して SQL Server ログインを移行する
+description: Data Migration Assistant を使用して SQL Server ログインを移行する方法について説明します
+ms.date: 10/22/2019
 ms.prod: sql
 ms.prod_service: dma
 ms.reviewer: ''
@@ -13,45 +12,48 @@ helpviewer_keywords:
 - Data Migration Assistant, login migration
 ms.assetid: ''
 author: HJToland3
-ms.author: rajpo
-manager: craigg
-ms.openlocfilehash: 20084c0fadbccab9c920cb81b29cf30cb2cf739c
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.author: jtoland
+ms.custom: seo-lt-2019
+ms.openlocfilehash: 368372ab7324b11e9f7fdaa6af94d5ba2c0534ad
+ms.sourcegitcommit: d00ba0b4696ef7dee31cd0b293a3f54a1beaf458
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52392625"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "74056479"
 ---
-# <a name="migrate-sql-server-logins-with-data-migration-assistant"></a>Data Migration Assistant で SQL Server ログインを移行します。
+# <a name="migrate-sql-server-logins-with-data-migration-assistant"></a>Data Migration Assistant を使用して SQL Server ログインを移行する
 
-この記事では、Data Migration Assistant を使用して SQL Server ログインの移行の概要を示します。 
+この記事では、Data Migration Assistant を使用した SQL Server ログインの移行の概要について説明します。
 
-## <a name="which-logins-are-migrated"></a>ログインを移行します。
+> [!IMPORTANT]
+> このトピックは、オンプレミスの製品の新しいバージョンへの SQL Server のアップグレード、または Azure Virtual Machines での SQL Server に関連するシナリオに適用されます。
 
-- (ドメイン ユーザーまたは Windows ドメイン グループ) などの Windows プリンシパル上に基づいてログインを移行することができます。 SQL Server ログインとも呼ばれる、SQL 認証に基づいて作成されたログインを移行することもできます。
+## <a name="which-logins-are-migrated"></a>移行されるログイン
 
-- Data Migration Assistant 現在サポートしていません (証明書にマップされたログイン) のスタンドアロン セキュリティ証明書、スタンドアロン非対称キー (非対称キーにマップされるログイン) および資格情報にマップされたログインに関連付けられているログインします。
+- Windows プリンシパル (ドメインユーザーや Windows ドメイングループなど) に基づいてログインを移行できます。 SQL 認証に基づいて作成されたログインを移行することもできます (SQL Server ログインとも呼ばれます)。
 
-- Data Migration Assistant が動かない、 **sa**ダブル ハッシュ記号で囲まれた名前を持つログインとサーバーの原則 (\#\#)、内部使用のみであります。
+- 現在、Data Migration Assistant では、スタンドアロンのセキュリティ証明書 (証明書にマップされたログイン) に関連付けられているログイン、スタンドアロンの非対称キー (非対称キーにマップされたログイン)、および資格情報にマップされたログインはサポートされていません。
 
-- 既定では、Data Migration Assistant は、移行するすべての修飾ログインを選択します。 必要に応じて、移行する特定のログインを選択できます。 Data Migration Assistant は、修飾のすべてのログインを移行、する場合は、移行されるデータベースでユーザーのログイン マッピングが残ります。 
+- Data Migration Assistant では、 **sa**ログインとサーバーの原則を、2つのハッシュマーク (\#\#) で囲まれた名前で移動しません。これは内部でのみ使用されます。
 
-  特定のログインを移行する場合は、必ずを移行用に選択されたデータベース内の 1 つまたは複数のユーザーにマップされるログインを選択します。
+- 既定では、Data Migration Assistant は、移行するすべての修飾されたログインを選択します。 必要に応じて、移行する特定のログインを選択できます。 すべての修飾されたログインを Data Migration Assistant 移行する場合、ログインユーザーマッピングは、移行されるデータベース内にそのまま残ります。
 
-- ログインの移行の一環として、Data Migration Assistant もユーザー定義サーバー ロールに移動し、サーバー レベルのアクセス許可をユーザー定義サーバー ロールに追加します。 ロールの所有者に設定する**sa**プリンシパル。
+  特定のログインを移行する場合は、移行対象として選択したデータベース内の1人以上のユーザーにマップされているログインを選択してください。
 
-## <a name="during-and-after-migration"></a>移行の前後に
+- ログインの移行の一部として、Data Migration Assistant は、ユーザー定義のサーバーロールを移動し、ユーザー定義のサーバーロールにサーバーレベルの権限を追加します。 ロールの所有者は、 **sa**プリンシパルに設定されます。
 
-- ログインの移行の一環として、Data Migration Assistant、アクセス許可に割り当てます、ターゲット SQL Server でセキュリティ保護可能なソース SQL Server 上に存在します。 
+## <a name="during-and-after-migration"></a>移行中および移行後
 
-  ターゲット SQL Server で、ログインが既に存在する場合は、Data Migration Assistant セキュリティ保護可能リソースに割り当てられた権限のみを移行して全体のログインを再作成されません。
+- ログインの移行の一部として、Data Migration Assistant はソース SQL Server に存在するため、ターゲット SQL Server の securables にアクセス許可を割り当てます。
 
-- Data Migration Assistant は、対象サーバーで、ログインが既に存在する場合は、データベース ユーザーにログインをマップするベスト エフォートです。
+  ログインがターゲット SQL Server に既に存在する場合、Data Migration Assistant は securables に割り当てられたアクセス許可のみを移行し、ログイン全体は再作成されません。
 
-- ログインの移行と推奨される移行後のアクションの全体的な状態を把握する移行の結果を確認することをお勧めします。
+- Data Migration Assistant を使用すると、ログインが対象サーバーに既に存在する場合に、ログインをデータベースユーザーにマップすることができます。
+
+- 移行の結果を確認して、ログインの移行の全体的な状態と、推奨される移行後の操作について理解することをお勧めします。
 
 ## <a name="resources"></a>リソース
 
 [Data Migration Assistant (DMA)](../dma/dma-overview.md)
 
-[Data Migration Assistant:構成設定](../dma/dma-configurationsettings.md)
+[Data Migration Assistant: 構成設定](../dma/dma-configurationsettings.md)

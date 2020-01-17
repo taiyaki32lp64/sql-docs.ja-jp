@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 ms.assetid: 4791a157-b028-4698-905d-f1dd0887aa0d
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 25730e3b53b6da97dee0e734853c3ab9b259aa33
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: 6ab8c48b9c02f7bcf9f2c9457b56cb2533125756
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56291570"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66105976"
 ---
 # <a name="drillthrough-drilldown-subreports-and-nested-data-regions-report-builder-and-ssrs"></a>ドリルスルー、ドリルダウン、サブレポート、および入れ子になったデータ領域 (レポート ビルダーおよび SSRS)
   データをさまざまな方法で整理して、概要と詳細の関係を示すことができます。  たとえば、すべてのデータをレポートに含めておき、最初は詳細データは非表示で、ユーザーがクリックすると表示するようにできます。この動作を *ドリルダウン* アクションといいます。 テーブルやグラフなどのデータ領域をテーブルやマトリックスなどの別のデータ領域内に *入れ子* にして、その入れ子になったデータ領域にデータを表示できます。 メイン レポート内に完全に含まれている *サブレポート* にデータを表示できます。 また、ユーザーがリンクをクリックすると表示される個別のレポートである *詳細* レポートに詳細データを含めることもできます。  
@@ -45,7 +44,7 @@ ms.locfileid: "56291570"
 |データの取得方法|メイン レポートと同時にデータを取得|詳細レポートごとにデータを取得|メイン レポートと同時にすべてのデータを取得|  
 |処理と表示のタイミング|メイン レポートと同時|リンクがクリックされたとき|メイン レポートと同時|  
 |パフォーマンス|低速 (メイン レポートと同時にすべてのデータを取得)|高速 (メイン レポートとは別にデータを取得)|高速 (メイン レポートと同時にすべてのデータを取得)|  
-|パラメーターを使用するかどうか|はい|[はい]|いいえ|  
+|パラメーターを使用するかどうか|[はい]|[はい]|いいえ|  
 |再利用できるかどうか|レポート、または他のレポートのサブレポートか詳細レポートとして再利用可|レポート、または他のレポートのサブレポートか詳細レポートとして再利用可|再利用不可|  
 |置かれる場所|メイン レポートの外部、同じまたは別のレポート サーバー|メイン レポートの外部、同じレポート サーバー|メイン レポートの内部|  
 |表示される場所|メイン レポート内|別のレポート内|メイン レポート内|  

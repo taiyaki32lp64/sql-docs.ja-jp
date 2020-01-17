@@ -1,5 +1,5 @@
 ---
-title: DMX を使用したデータ マイニング モデルのクエリの作成と:チュートリアル (Analysis Services - データ マイニング) |Microsoft Docs
+title: DMX を使用したデータ マイニング モデルの作成とクエリチュートリアル (Analysis Services - データ マイニング) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,13 +13,13 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: 22ed01105a32f460bcbeb2c067299fdf62af2eed
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56012523"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63180555"
 ---
-# <a name="creating-and-querying-data-mining-models-with-dmx-tutorials-analysis-services---data-mining"></a>DMX を使用したデータ マイニング モデルのクエリの作成と:チュートリアル (Analysis Services - データ マイニング)
+# <a name="creating-and-querying-data-mining-models-with-dmx-tutorials-analysis-services---data-mining"></a>DMX を使用したデータ マイニング モデルの作成とクエリチュートリアル (Analysis Services - データ マイニング)
   使用してデータ マイニング ソリューションを作成した後[!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]傾向を予測し、データのパターンを取得して、マイニング モデルの精度を測定するデータ マイニング モデルに対するクエリを作成することができます。  
   
  ステップ バイ ステップ チュートリアルは、次の一覧を使用して、ビルドして使用してデータ マイニング クエリを実行、する方法について役立つ[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]データを最大限に活用できるようにします。  
@@ -36,9 +36,9 @@ ms.locfileid: "56012523"
   
 -   [時系列予測の DMX のチュートリアル](../../2014/tutorials/time-series-prediction-dmx-tutorial.md)  
   
-     このチュートリアルでは、予測モデルを作成して CREATE MODEL (DMX) ステートメントの使用方法を説明します。 次に、関連するモデルを追加し、Microsoft タイム シリーズ アルゴリズムのパラメーターを変更して各モデルの動作をカスタマイズします。 最後に、予測を作成し、新しいデータで予測を更新します。 予測の際に時系列を更新する機能は、[!INCLUDE[ssKatmai](../includes/sskatmai-md.md)] で追加されました。  
+     このチュートリアルでは、予測モデルを作成して CREATE MODEL (DMX) ステートメントの使用方法を説明します。 次に、関連するモデルを追加し、Microsoft Time Series アルゴリズムのパラメーターを変更して各モデルの動作をカスタマイズします。 最後に、予測を作成し、新しいデータで予測を更新します。 予測の際に時系列を更新する機能は、[!INCLUDE[ssKatmai](../includes/sskatmai-md.md)] で追加されました。  
   
-## <a name="reference"></a>参照  
+## <a name="reference"></a>リファレンス  
  [データ マイニング アルゴリズム &#40;Analysis Services - データ マイニング&#41;](../../2014/analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining.md)  
   
  [データ マイニング拡張機能 &#40;DMX&#41; リファレンス](/sql/dmx/data-mining-extensions-dmx-reference)  
@@ -53,7 +53,7 @@ ms.locfileid: "56012523"
   
      このチュートリアルは複数の個別のレッスンをまとめたもので、それぞれのレッスンで異なる種類のモデルについて説明します。 各レッスンで、モデルを作成し、そのモデルを検証してから、モデルをカスタマイズして予測クエリを作成するまでの一連の手順について説明します。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [データ マイニング ソリューション](../../2014/analysis-services/data-mining/data-mining-solutions.md)   
  [データ マイニング ツール](../../2014/analysis-services/data-mining/data-mining-tools.md)   
  [データ マイニング プロジェクト](../../2014/analysis-services/data-mining/data-mining-projects.md)  

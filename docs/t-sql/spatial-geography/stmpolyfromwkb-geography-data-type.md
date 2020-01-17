@@ -15,15 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - STMPolyFromWKB method
 ms.assetid: c4d0e649-0abb-4343-a3f0-3a702c8bbbdb
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: 4949746f339b166fbec593dacd4df5c124cb547a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: MladjoA
+ms.author: mlandzic
+ms.openlocfilehash: bb3ad4cf2da399c32af4ccdcb183ebebc393dbe5
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47730720"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68120935"
 ---
 # <a name="stmpolyfromwkb-geography-data-type"></a>STMPolyFromWKB (geography データ型)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -47,9 +46,9 @@ STMPolyFromWKB ( 'WKB_multipolygon' , SRID )
 ## <a name="return-types"></a>戻り値の型  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 戻り値の型: **geography**  
   
- CLR 戻り値の型: **SqlGeography**  
+ CLR の戻り値の型:**SqlGeography**  
   
- OGC の型: **MultiPolygon**  
+ OGC の型:**MultiPolygon**  
   
 ## <a name="examples"></a>使用例  
  `STMPolyFromWKB()` を使用して `geography` インスタンスを作成する例を次に示します。  

@@ -12,15 +12,14 @@ helpviewer_keywords:
 - solutions [SQL Server Management Studio], item relocation
 - relocating items
 ms.assetid: b40a24eb-f528-4e70-b26e-5eaf6e0ed1ed
-author: stevestein
-ms.author: sstein
-manager: craigg
-ms.openlocfilehash: cb43a2d7d7bf8aec9e1b27863cfbe0c57773cd6f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: a23aea0f4040ca957d1a3866fdf1d63eaf220085
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47752330"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68262816"
 ---
 # <a name="move-items-in-a-solution"></a>ソリューションのアイテムの移動
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

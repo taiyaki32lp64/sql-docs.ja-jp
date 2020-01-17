@@ -1,6 +1,5 @@
 ---
-title: sql:limit- およびフィールドの値 (SQLXML 4.0) |Microsoft Docs
-ms.custom: ''
+title: 'sql: limit-field および sql: limit-value (SQLXML)'
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -17,18 +16,18 @@ helpviewer_keywords:
 ms.assetid: 402c21cf-9566-463f-a928-f94270c11db3
 author: MightyPen
 ms.author: genemi
-manager: craigg
+ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: c345180d4875e935a99be3096eab30497bc49ddd
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: f3c33d097df97bb4cace9500b7aae79b5fd375ea
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56034485"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75246794"
 ---
 # <a name="annotation-interpretation---sqllimit-field-and-sqllimit-value"></a>注釈の解釈 - sql:limit-field および sql:limit-value
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-  XML 一括読み込みの処理、 **sql:limit-フィールド**と**sql:limit-値**注釈が定義に従ってします。 詳細については、次を参照してください。 [sql:limit の値を使用してフィルター処理、および -値&#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-using/filtering-values-using-sql-limit-field-and-sql-limit-value-sqlxml-4-0.md)します。  
+  XML 一括読み込みでは、 **sql: limit-field**注釈と**sql: limit-value**注釈が定義に従って処理されます。 詳細については、「 [sql: limit-field および sql: limit-value &#40;SQLXML 4.0&#41;を使用した値のフィルター選択](../../../relational-databases/sqlxml-annotated-xsd-schemas-using/filtering-values-using-sql-limit-field-and-sql-limit-value-sqlxml-4-0.md)」を参照してください。  
   
  たとえば、データベースに次のテーブルが含まれているとします。  
   
@@ -86,7 +85,7 @@ ms.locfileid: "56034485"
   
 1.  この例のスキーマを SampleSchema.xml として保存します。  
   
-2.  これらのテーブルを作成します。  
+2.  次のテーブルを作成します。  
   
     ```  
     CREATE TABLE Customer(  
@@ -124,7 +123,7 @@ ms.locfileid: "56034485"
     set objBL=Nothing  
     ```  
   
- これは、同等の XDR スキーマです。  
+ これは、これと同等の XDR スキーマです。  
   
 ```  
 <?xml version="1.0" ?>  

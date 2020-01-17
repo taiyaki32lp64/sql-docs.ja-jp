@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: dd7d8cd5-536b-460c-ab5b-cb4752bbdfaa
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: 2987ac3cb84b2e36fc6e78e7ea0466b30a440f4b
-ms.sourcegitcommit: c6e71ed14198da67afd7ba722823b1af9b4f4e6f
+ms.openlocfilehash: 83655bc03b2f55d9d7d426d1fa58ce4e86570d8d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/16/2019
-ms.locfileid: "54326293"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68114987"
 ---
 # <a name="deny-asymmetric-key-permissions-transact-sql"></a>DENY (非対称キーの権限の拒否) (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -48,9 +47,9 @@ DENY { permission  [ ,...n ] }
   
 ## <a name="arguments"></a>引数  
  *permission*  
- 非対称キーに対して拒否できる権限を指定します。 下の表をご覧ください。  
+ 非対称キーに対して拒否できる権限を指定します。 以下に一覧を示します。  
   
- ON ASYMMETRIC KEY **::**_asymmetric_key_name_  
+ ON ASYMMETRIC KEY **::** _asymmetric_key_name_  
  権限を拒否する非対称キーを指定します。 スコープ修飾子 "::" が必要です。  
   
  *database_principal*  

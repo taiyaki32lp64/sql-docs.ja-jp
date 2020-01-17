@@ -19,14 +19,13 @@ helpviewer_keywords:
 ms.assetid: efa20414-2c6b-45a2-a7a9-60110a24da18
 author: VanMSFT
 ms.author: vanto
-manager: craigg
 monikerRange: '>=aps-pdw-2016||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 4107e6c1f675f7fae78ca384c082ef12c2fa309b
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: 11f39b29817716799ec693d6161135010c35a233
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52406459"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68133034"
 ---
 # <a name="sysserverrolemembers-transact-sql"></a>sys.server_role_members (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-pdw-md.md)]
@@ -46,7 +45,7 @@ ms.locfileid: "52406459"
  詳細については、「 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)」を参照してください。  
   
 ## <a name="examples"></a>使用例  
- 次の例では、ロールおよびそのメンバーの名前と ID を返します。  
+ 次の例では、名前と id のロールとメンバーを返します。  
   
 ```  
 SELECT sys.server_role_members.role_principal_id, role.name AS RoleName,   
@@ -58,7 +57,7 @@ JOIN sys.server_principals AS member
     ON sys.server_role_members.member_principal_id = member.principal_id;  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [カタログ ビュー &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
  [セキュリティ カタログ ビュー &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/security-catalog-views-transact-sql.md)   
  [サーバー レベルのロール](../../relational-databases/security/authentication-access/server-level-roles.md)   

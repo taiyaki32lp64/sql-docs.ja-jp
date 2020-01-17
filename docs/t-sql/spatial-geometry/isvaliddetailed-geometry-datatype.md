@@ -12,15 +12,14 @@ dev_langs:
 helpviewer_keywords:
 - IsValidDetailed geometry
 ms.assetid: 5a31e88a-ad7b-4ef7-b773-e2571f1cb3aa
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: 461e6d8a2e71b0d2e56bea083597d6c9bd17ccea
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: MladjoA
+ms.author: mlandzic
+ms.openlocfilehash: f67b291da8de3dcb0ec84891ac69789d132b420b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47816996"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68101221"
 ---
 # <a name="isvaliddetailed-geometry-datatype"></a>IsValidDetailed (geometry データ型)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
@@ -44,7 +43,7 @@ ms.locfileid: "47816996"
   
 |戻り値|[説明]|  
 |------------------|-----------------|  
-|24400|有効です|  
+|24400|有効|  
 |24401|無効です。原因は不明です。|  
 |24402|ポイント {0} がこの型のオブジェクトで無効な孤立点であるため無効です。|  
 |24403|多角形のエッジの一部のペアが重なり合っているため無効です。|  

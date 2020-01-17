@@ -1,6 +1,7 @@
 ---
-title: 'データベース ミラーリング: 相互運用性と共存 (SQL Server) | Microsoft Docs'
-ms.custom: ''
+title: 'データベース ミラーリング: 相互運用性と共存'
+description: SQL Server データベース ミラーリングとその他の SQL Server 機能 (フルテキスト カタログ、データベース スナップショット、ログ配布、レプリケーション、フェールオーバー クラスター インスタンスなど) の共存と相互運用性について説明します。
+ms.custom: seo-lt-2019
 ms.date: 05/17/2016
 ms.prod: sql
 ms.prod_service: high-availability
@@ -13,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 89fef397-e0cf-4e08-b598-25b8d4170523
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 9af53bac702a7e64e48a24166a549dd97f00197f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 045aa94292a4633b8d61e95491d603e0d9897d0d
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47711220"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75254159"
 ---
 # <a name="database-mirroring-interoperability-and-coexistence-sql-server"></a>データベース ミラーリング: 相互運用性と共存 (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

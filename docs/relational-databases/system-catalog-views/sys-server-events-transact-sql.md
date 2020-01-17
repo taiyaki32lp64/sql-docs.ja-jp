@@ -19,15 +19,14 @@ helpviewer_keywords:
 ms.assetid: 996f6c9b-6426-4847-95d9-6b77541422be
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: ce3ad077a62d79518d45c53596fb4334a4498434
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 3613c3da1138a6ec17394a5b6615d78d0a941e56
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47812640"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68133149"
 ---
-# <a name="sysserverevents-transact-sql"></a>sys.server_events (Transact-SQL)
+# <a name="sysserverevents-transact-sql"></a>sys.server_events (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   サーバー レベルのイベント通知またはサーバー レベルの DDL トリガーが起動されるイベントごとに 1 行のデータを保持します。 列**object_id**と**型**サーバー イベントを一意に識別します。  
@@ -35,10 +34,10 @@ ms.locfileid: "47812640"
   
 |列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
-|**object_id**|**int**|起動するサーバー レベル イベント通知またはサーバー レベル DDL トリガーの ID です。|  
-|**type**|**int**|イベント通知または DDL トリガーを起動させるイベントの種類です。|  
+|**object_id**|**int**|起動するには、サーバー レベルのイベント通知またはサーバー レベル DDL トリガーの ID。|  
+|**type**|**int**|起動するには、イベント通知または DDL トリガーを原因となるイベントの種類。|  
 |**type_desc**|**nvarchar(60)**|DDL トリガーまたはイベント通知を起動させるイベントの説明です。|  
-|**event_group_type**|**int**|トリガーまたはイベント通知を作成する対象のイベント グループです。イベント グループが作成対象でない場合は NULL になります。|  
+|**event_group_type**|**int**|トリガーまたはイベント通知が作成されるイベント グループ、またはイベント グループを作成していない場合は null です。|  
 |**event_group_type**|**nvarchar(60)**|トリガーまたはイベント通知が作成されるイベント グループの説明またはイベント グループを作成していない場合は null|  
   
 ## <a name="permissions"></a>アクセス許可  

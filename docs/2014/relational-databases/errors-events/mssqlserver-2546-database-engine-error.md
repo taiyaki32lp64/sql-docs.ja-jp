@@ -13,11 +13,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: ca1a8af843d0183acd46a8b11e00427738d59d0e
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48192652"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62868853"
 ---
 # <a name="mssqlserver2546"></a>MSSQLSERVER_2546
     
@@ -38,7 +38,7 @@ ms.locfileid: "48192652"
 ## <a name="user-action"></a>ユーザーの操作  
  ALTER INDEX を使用してインデックスを再構築します。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [ALTER INDEX &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-index-transact-sql)   
  [インデックスの再編成と再構築](../indexes/indexes.md)  
   

@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: a87d8080-a238-45e5-bc80-9a8625b3810f
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 091073431b3ff349b8ae107fcb6a37bfab94e46e
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.openlocfilehash: 089fad427989c26ed1ed22ec3e9267297a29b820
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51602782"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67949389"
 ---
 # <a name="open-method-ado-md"></a>Open メソッド (ADO MD)
 多次元クエリの結果を取得しに結果を返します、[セルセット](../../../ado/reference/ado-md-api/cellset-object-ado-md.md)します。  
@@ -47,7 +46,7 @@ Cellset.Open Source, ActiveConnection
 ## <a name="applies-to"></a>適用対象  
  [CellSet オブジェクト (ADO MD)](../../../ado/reference/ado-md-api/cellset-object-ado-md.md)  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [セルセットの例 (VB)](../../../ado/reference/ado-md-api/cellset-example-vb.md)   
  [ActiveConnection プロパティ (ADO MD)](../../../ado/reference/ado-md-api/activeconnection-property-ado-md.md)   
  [Close メソッド (ADO MD)](../../../ado/reference/ado-md-api/close-method-ado-md.md)   

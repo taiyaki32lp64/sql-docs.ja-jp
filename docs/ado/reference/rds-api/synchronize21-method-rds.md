@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 6b35f136-9d9a-4bdd-8144-67decfd3c4e9
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 9d2fd1ab1363cc56d2029a0d6ecb4218c518dac4
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.openlocfilehash: 66c3b9ecefd63cf7de1806e6fa838a0204626605
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51602702"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67963251"
 ---
 # <a name="synchronize21-method-rds"></a>Synchronize21 メソッド (RDS)
 ADO 2.1 で使用する接続文字列で指定されたデータベースでは、特定のレコード セットを同期します。  
@@ -56,7 +55,7 @@ object.Synchronize21(ConnectionString As String, HandlerString As String, lSynch
  同期するレコード セットへのポインターへのポインター。  
   
  *pStatusArray*  
- 影響を受ける行の行の状態のセーフ配列を返すために使用バリアントを同期します。 未設定、次の同期オプションのいずれも設定されている場合: *RefreshWithUpdate*、*更新*と*RefreshConflicts*します。  
+ 影響を受ける行の行の状態のセーフ配列を返すために使用バリアントを同期します。 次の同期オプションのいずれも設定されている場合を設定できません。*RefreshWithUpdate*、*更新*と*RefreshConflicts*します。  
   
 ## <a name="remarks"></a>コメント  
  *HandlerString*パラメーターを null にすることができます。 この場合の動作は、RDS サーバーを構成する方法によって異なります。 "MSDFMAP.handler"のハンドラーの文字列では、Microsoft から提供されたハンドラー (Msdfmap.dll) を使用することを示します。 "MASDFMAP.handler,sample.ini"のハンドラーの文字列は、Msdfmap.dll ハンドラーを使用することと、ハンドラーに"sample.ini"引数を渡す必要がありますを示します。 Msdfmap.dll は、方向、sample.ini を使用して、接続およびクエリ文字列を確認すると、引数を解釈します。  

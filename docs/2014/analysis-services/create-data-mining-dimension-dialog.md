@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dm.miningmodeldesigner.createdmdimension.f1
@@ -13,12 +12,12 @@ ms.assetid: a6ed550c-9fae-453d-948a-b3a1f4dbdffa
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 9b842f922c3e3d575467534d8254f16fc7289c25
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 801dbaaa8f267c2936f86644cc4a7ad3de6549a2
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48184992"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66086960"
 ---
 # <a name="create-data-mining-dimension-dialog"></a>[データ マイニング ディメンションの作成] ダイアログ
   **[データ マイニング ディメンションの作成]** ダイアログ ボックスを使用すると、OLAP マイニング モデルに基づいて新しいデータ マイニング ディメンションを作成できます。  

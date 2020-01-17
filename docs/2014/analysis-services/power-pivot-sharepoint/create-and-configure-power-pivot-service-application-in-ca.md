@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: b2e5693e-4af3-453f-83f3-07481ab1ac6a
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: ac1b7ad9e5308437dacf51b7960822e7636ab3e9
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 64997cb3db784ea78a72a7c812c8f88034c2358d
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48168982"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66071583"
 ---
 # <a name="create-and-configure-a-powerpivot-service-application-in-central-administration"></a>サーバーの全体管理での PowerPivot サービス アプリケーションの作成および構成
   PowerPivot サービス アプリケーションは、PowerPivot System サービスの共有サービス インスタンスです。 各サービス アプリケーションは、固有のアプリケーション ID、構成設定、プロパティ、および内部データ ストレージを備えています。  
@@ -109,7 +108,7 @@ ms.locfileid: "48168982"
   
 10. **PowerPivot 自動データ更新アカウント**、PowerPivot データ更新ジョブを実行するための定義済みのアカウントを格納する定義済みの Secure Store Service 対象アプリケーションを指定することができます。 ID ではなく、必ず対象アプリケーション名を指定してください。 自動データ更新の対象アプリケーションは、SQL Server セットアップで [新しいサーバー] オプションを使用して PowerPivot for SharePoint をインストールした場合は自動的に作成されます。 それ以外の場合は、対象アプリケーションを手動で作成する必要があります。 アカウントを構成する方法の詳細については、次を参照してください。 [PowerPivot 自動データ更新アカウントを構成する&#40;PowerPivot for SharePoint&#41;](../configure-unattended-data-refresh-account-powerpivot-sharepoint.md)します。  
   
-11. **[ユーザーによるカスタムの Windows 資格情報の入力を許可する]** チェック ボックスをオンまたはオフにして、スケジュールの所有者が任意の Windows 資格情報を入力してデータ更新スケジュールを実行できるようにするかどうかを指定します。 このチェック ボックスをオンにすると、保存された資格情報のセットごとに対象アプリケーションが PowerPivot サービス アプリケーションによって作成および管理されます。 詳細については、次を参照してください。[格納されている資格情報の構成の PowerPivot データ更新&#40;PowerPivot for SharePoint&#41;](../configure-stored-credentials-data-refresh-powerpivot-sharepoint.md)します。  
+11. **[ユーザーによるカスタムの Windows 資格情報の入力を許可する]** チェック ボックスをオンまたはオフにして、スケジュールの所有者が任意の Windows 資格情報を入力してデータ更新スケジュールを実行できるようにするかどうかを指定します。 このチェック ボックスをオンにすると、保存された資格情報のセットごとに対象アプリケーションが PowerPivot サービス アプリケーションによって作成および管理されます。 詳細については、「[PowerPivot データ更新用の保存された資格情報の構成 &#40;PowerPivot for SharePoint&#41;](../configure-stored-credentials-data-refresh-powerpivot-sharepoint.md)」を参照してください。  
   
 12. **[処理履歴の最大の長さ]** では、データ更新処理の履歴レコードを保持する期間を指定できます。 この情報は、データ更新を使用するブックごとに保持されるデータ更新の履歴ページに表示されます。 PowerPivot 管理ダッシュボードにも表示されます。  
   

@@ -8,17 +8,20 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: tutorial
 ms.assetid: 442c841d-d528-4bf0-8724-7156f909ee50
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: f09760ea7521acb63c95f27821ba93382f8a3f2d
-ms.sourcegitcommit: dd794633466b1da8ead9889f5e633bdf4b3389cd
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 7c4a51bfb9da9abe3e50c85896f32269e3fee5ff
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54143262"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71296096"
 ---
 # <a name="lesson-1-7-add-and-configure-the-ole-db-destination"></a>レッスン 1-7:OLE DB 変換先を追加し、構成する
+
+[!INCLUDE[ssis-appliesto](../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
 
 前回までの実習で、フラット ファイル ソースからデータを抽出し、変換先との互換性のある形式にデータを変換できるパッケージを作成しました。 次は、変換したデータを変換先に読み込みます。 データを読み込むには、データ フローに OLE DB 変換先を追加します。 OLE DB 変換先では、データベース テーブル、ビュー、または SQL コマンドを使用して、OLE DB に準拠するさまざまなデータベースにデータを読み込むことができます。  
   
@@ -30,7 +33,7 @@ ms.locfileid: "54143262"
   
 2.  **[Lookup Date Key]** 変換を選択し、青色の矢印を新しい **[OLE DB 変換先]** にドラッグし、2 つのコンポーネントを接続します。  
   
-3.  **[入出力の選択]** ダイアログの **[出力]** ボックスの一覧で **[参照の一致出力]** を選択し、**[OK]** を選択します。  
+3.  **[入出力の選択]** ダイアログの **[出力]** ボックスの一覧で **[参照の一致出力]** を選択し、 **[OK]** を選択します。  
   
 4.  **[データ フロー]** デザイン画面で、新しい **[OLE DB 変換先]** コンポーネントの名前 **[OLE DB 変換先]** を選択し、その名前を「**Sample OLE DB Destination**」に変更します。  
   
@@ -42,7 +45,7 @@ ms.locfileid: "54143262"
   
 8.  **[新規作成]** ボタンを選択して新しいテーブルを作成します。  スクリプトのテーブル名を **Sample OLE DB Destination** から **NewFactCurrencyRate** に変更します。  **[OK]** を選択します。  
   
-9. **[OK]** を選択すると、ダイアログが閉じ、**[テーブル名またはビュー名]** が自動的に「**NewFactCurrencyRate**」に変更されます。  
+9. **[OK]** を選択すると、ダイアログが閉じ、 **[テーブル名またはビュー名]** が自動的に「**NewFactCurrencyRate**」に変更されます。  
   
 10. **[マッピング]** を選択します。  
   
@@ -50,9 +53,9 @@ ms.locfileid: "54143262"
   
 12. **[OK]** を選択します。  
   
-13. **[Sample OLE DB Destination]** 変換先を右クリックし、**[プロパティ]** を選択します。  
+13. **[Sample OLE DB Destination]** 変換先を右クリックし、 **[プロパティ]** を選択します。  
   
-14. **[プロパティ]** ウィンドウで、**LocaleID** プロパティが **[英語 (米国)]** に、**[DefaultCodePage]** プロパティが **[1252]** に設定されていることを確認します。  
+14. **[プロパティ]** ウィンドウで、**LocaleID** プロパティが **[英語 (米国)]** に、 **[DefaultCodePage]** プロパティが **[1252]** に設定されていることを確認します。  
   
 ## <a name="go-to-next-task"></a>次の実習に進む
 [手順 8:レッスン 1 パッケージに注釈を付け、書式を設定する](../integration-services/lesson-1-8-making-the-lesson-1-package-easier-to-understand.md)  

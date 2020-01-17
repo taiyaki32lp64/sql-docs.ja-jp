@@ -17,15 +17,14 @@ helpviewer_keywords:
 ms.assetid: b3fa7678-dba4-4537-be94-5ae63ca11f81
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: e7996e3f5d91c78a83266c6d5b23ce8b3d381064
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: f4b5e0f04f893bd5f351857a5a1b655d52350c52
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47767940"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67898350"
 ---
-# <a name="xprevokelogin-transact-sql"></a>xp_revokelogin (Transact-SQL)
+# <a name="xprevokelogin-transact-sql"></a>xp_revokelogin (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Windows グループまたはユーザーからのアクセスを取り消します[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]します。  
@@ -43,8 +42,7 @@ xp_revokelogin {[@loginame=] 'login'}
 ```  
   
 ## <a name="arguments"></a>引数  
- [ **@loginame =** ] **'***login***'**  
- アクセスを取り消す Windows ユーザーまたはグループの名前を指定します。 *ログイン*など、ドメイン名を含める必要があります **[advwks \sylvester1]** します。 *ログイン*は**sysname**、既定値はありません。  
+`[ @loginame = ] 'login'` Windows ユーザーまたはグループへのアクセスを取り消すの名前です。 *ログイン*など、ドメイン名を含める必要があります **[advwks \sylvester1]** します。 *ログイン*は**sysname**、既定値はありません。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  0 (成功) または 1 (失敗)  
@@ -55,7 +53,7 @@ xp_revokelogin {[@loginame=] 'login'}
 ## <a name="permissions"></a>アクセス許可  
  サーバーに対する ALTER ANY LOGIN 権限が必要です。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [sp_denylogin &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-denylogin-transact-sql.md)   
  [sp_grantlogin &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-grantlogin-transact-sql.md)   
  [sp_revokelogin &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-revokelogin-transact-sql.md)   

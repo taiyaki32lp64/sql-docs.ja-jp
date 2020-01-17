@@ -8,17 +8,20 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: language-reference
 ms.assetid: 91ed017b-6567-4bf2-b9f1-e2b5c70a5343
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: 376a4e713cb2fe3cac6947da8ae148dcab4285d7
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 8f7474200fa8156ab0663540611803276375ad6b
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47849370"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71281189"
 ---
-# <a name="catalogcreateenvironmentvariable-ssisdb-database"></a>catalog.create_environment_variable (SSISDB データベース)
+# <a name="catalogcreate_environment_variable-ssisdb-database"></a>catalog.create_environment_variable (SSISDB データベース)
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] カタログで環境変数を作成します。  
@@ -93,14 +96,14 @@ catalog.create_environment_variable [@folder_name =] folder_name
   
 |Integration Services データ型|SQL Server データ型|  
 |------------------------------------|--------------------------|  
-|**ブール値**|**bit**|  
+|**Boolean**|**bit**|  
 |**Byte**|**binary**、**varbinary**|  
 |**DateTime**|**datetime**、**datetime2**、**datetimeoffset**、**smalldatetime**|  
 |**Double**|真数型: **decimal**、**numeric**。概数値: **float**、**real**|  
 |**Int16**|**smallint**|  
 |**Int32**|**int**|  
 |**Int64**|**bigint**|  
-|**単一**|真数型: **decimal**、**numeric**。概数値: **float**、**real**|  
+|**Single**|真数型: **decimal**、**numeric**。概数値: **float**、**real**|  
 |**String**|**varchar**、**nvarchar**、**char**|  
 |**UInt32**|**int** (**int** は、使用可能なマッピングに最も近い **Uint32**)|  
 |**UInt64**|**bigint** (**int** は、使用可能なマッピングに最も近い **Uint64**)|  

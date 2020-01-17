@@ -1,1 +1,1 @@
- SQL データ ウェアハウス 
+ SQL Data Warehouse 

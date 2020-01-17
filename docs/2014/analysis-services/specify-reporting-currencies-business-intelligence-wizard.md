@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.biwizard.currencyconversion.currenciestoreport.f1
@@ -13,15 +12,15 @@ ms.assetid: 41bbc3c4-92e0-4b2d-b303-ce62ff9d4348
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: a66e94a9cdafc327737c71cd710847033011dcfa
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 1be12aae3f4b4907fe7464aab1ea4bef6ff5f8dd
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48156522"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66068207"
 ---
 # <a name="specify-reporting-currencies-business-intelligence-wizard"></a>[レポート用通貨の指定] (ビジネス インテリジェンス ウィザード)
-  **[レポート用通貨の指定]** ページを使用すると、**[換算の種類の選択]** ページで指定した多対多または一対多の換算に対応できる通貨換算機能に、レポート用通貨を定義できます  (レポート用通貨とは、**[メジャーの選択]** ページで選択されたメジャーの値の換算に使用される通貨です)。通貨ディメンションから選択したメンバーにより、ビジネス インテリジェンス ウィザードで生成される通貨換算のレポート用通貨ディメンションが定義されます。  
+  **[レポート用通貨の指定]** ページを使用すると、 **[換算の種類の選択]** ページで指定した多対多または一対多の換算に対応できる通貨換算機能に、レポート用通貨を定義できます (レポート用通貨とは、 **[メジャーの選択]** ページで選択されたメジャーの値の換算に使用される通貨です)。通貨ディメンションから選択したメンバーにより、ビジネス インテリジェンス ウィザードで生成される通貨換算のレポート用通貨ディメンションが定義されます。  
   
 > [!NOTE]  
 >  ビジネス インテリジェンス ウィザードをディメンション デザイナーから起動した場合や、 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]のソリューション エクスプローラーでディメンションを右クリックして起動した場合、このページは表示されません。 **[換算の種類の選択]** ページで **[多対一]** を選択した場合も、このページは表示されません。  

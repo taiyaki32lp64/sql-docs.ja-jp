@@ -1,7 +1,7 @@
 ---
 title: BACKUP CERTIFICATE (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 10/04/2018
+ms.date: 04/23/2019
 ms.prod: sql
 ms.prod_service: sql-data-warehouse, pdw, sql-database
 ms.reviewer: ''
@@ -27,14 +27,13 @@ helpviewer_keywords:
 ms.assetid: 509b9462-819b-4c45-baae-3d2d90d14a1c
 author: VanMSFT
 ms.author: vanto
-manager: craigg
 monikerRange: '>=aps-pdw-2016||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
-ms.openlocfilehash: bc908bd4186035bb1c9089139532c9fa413c8a8a
-ms.sourcegitcommit: c6e71ed14198da67afd7ba722823b1af9b4f4e6f
+ms.openlocfilehash: 7b2559ca1eee0f2787fbf74adba97b03671d6faf
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/16/2019
-ms.locfileid: "54327423"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68091765"
 ---
 # <a name="backup-certificate-transact-sql"></a>BACKUP CERTIFICATE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-pdw-md.md)]
@@ -70,24 +69,33 @@ BACKUP CERTIFICATE certname TO FILE ='path_to_file'
 ```  
   
 ## <a name="arguments"></a>引数  
- *path_to_file*  
- 証明書を保存するファイルの完全なパスを、ファイル名を含めて指定します。 このパスには、ローカル パスまたはネットワーク上の場所を示す UNC パスを指定できます。 既定値は [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の DATA フォルダーのパスです。  
-  
- *path_to_private_key_file*  
- 秘密キーを保存するファイルの完全なパスを、ファイル名を含めて指定します。 このパスには、ローカル パスまたはネットワーク上の場所を示す UNC パスを指定できます。 既定値は [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の DATA フォルダーのパスです。  
+ *certname*  
+ バックアップする証明書の名前。
 
- *encryption_password*  
+ TO FILE = '*path_to_file*'  
+ 証明書を保存するファイルの完全なパスを、ファイル名を含めて指定します。 このパスには、ローカル パスまたはネットワーク上の場所を示す UNC パスを指定できます。 ファイル名のみを指定すると、ファイルがインスタンスの既定のユーザー データ フォルダー ([!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] DATA フォルダーであってもなくても構いません) に保存されます。 SQL Server Express LocalDB の場合、インスタンスの既定のユーザー データ フォルダーは、インスタンスを作成したアカウントの `%USERPROFILE%` 環境変数で指定されたパスです。  
+
+ WITH PRIVATE KEY は、証明書の秘密キーをファイルに保存するように指定します。 この句は省略可能です。
+
+ FILE = '*path_to_private_key_file*'  
+ 秘密キーを保存するファイルの完全なパスを、ファイル名を含めて指定します。 このパスには、ローカル パスまたはネットワーク上の場所を示す UNC パスを指定できます。 ファイル名のみを指定すると、ファイルがインスタンスの既定のユーザー データ フォルダー ([!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] DATA フォルダーであってもなくても構いません) に保存されます。 SQL Server Express LocalDB の場合、インスタンスの既定のユーザー データ フォルダーは、インスタンスを作成したアカウントの `%USERPROFILE%` 環境変数で指定されたパスです。  
+
+ ENCRYPTION BY PASSWORD = '*encryption_password*'  
  バックアップ ファイルに秘密キーを書き込む前に、キーを暗号化するため使用するパスワードを指定します。 パスワードに対しては、複雑性がチェックされます。  
   
- *decryption_password*  
+ DECRYPTION BY PASSWORD = '*decryption_password*'  
  秘密キーをバックアップする前に、秘密キーの暗号化を解除するため使用するパスワードを指定します。 証明書がマスター キーによって暗号化されている場合、この引数は必要ありません。 
   
 ## <a name="remarks"></a>Remarks  
  データベースで秘密キーがパスワードによって暗号化されている場合は、暗号化解除パスワードを指定する必要があります。  
   
- 秘密キーをファイルにバックアップする場合は、暗号化が必要です。 証明書の保護に使用するパスワードは、証明書の秘密キーの暗号化に使用するパスワードとは異なります。  
-  
- バックアップした証明書を復元するには、[CREATE CERTIFICATE](../../t-sql/statements/create-certificate-transact-sql.md) ステートメントを使います。
+ 秘密キーをファイルにバックアップする場合は、暗号化が必要です。 ファイル内の秘密キーの保護に使用するパスワードは、データベースで証明書の秘密キーの暗号化に使用するパスワードとは異なります。  
+
+ 秘密キーは、PVK ファイル形式で保存されます。
+
+ 秘密キーを使用してまたは使用せずにバックアップした証明書を復元するには、[CREATE CERTIFICATE](../../t-sql/statements/create-certificate-transact-sql.md) ステートメントを使用します。
+ 
+ データベース内の既存の証明書に秘密キーを復元するには、[ALTER CERTIFICATE](../../t-sql/statements/alter-certificate-transact-sql.md) ステートメントを使用します。
  
  バックアップを実行すると、ファイルは SQL Server インスタンスのサービス アカウントに対して ACL されます。 別のアカウントで実行しているサーバーに証明書を復元する必要がある場合は、ファイルに対するアクセス許可を調整して、新しいアカウントでファイルの読み取りを実行できるようにする必要があります。 
   
@@ -129,6 +137,10 @@ GO
  [CREATE CERTIFICATE &#40;Transact-SQL&#41;](../../t-sql/statements/create-certificate-transact-sql.md)   
  [ALTER CERTIFICATE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-certificate-transact-sql.md)   
  [DROP CERTIFICATE &#40;Transact-SQL&#41;](../../t-sql/statements/drop-certificate-transact-sql.md)  
+ [CERTENCODED &#40;Transact-SQL&#41;](../../t-sql/functions/certencoded-transact-sql.md)  
+ [CERTPRIVATEKEY &#40;Transact-SQL&#41;](../../t-sql/functions/certprivatekey-transact-sql.md)  
+ [CERT_ID &#40;Transact-SQL&#41;](../../t-sql/functions/cert-id-transact-sql.md)  
+ [CERTPROPERTY &#40;Transact-SQL&#41;](../../t-sql/functions/certproperty-transact-sql.md)  
   
   
 

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 12/29/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - nested tables, in association models
@@ -14,12 +13,12 @@ ms.assetid: 4db6462f-93c7-443f-8ff7-39474dc7029e
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: e5ee759c4a23ab2891597fd3a5c884ce7332ea4e
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: 15a86cc55e67b2000eabee62d02fa04de4874f59
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52400475"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66062309"
 ---
 # <a name="associate-wizard-data-mining-client-for-excel"></a>アソシエーション ウィザード (Excel 用データ マイニング クライアント)
   ![データ マイニング リボンの関連付けウィザード](media/dmc-associate.gif "データ マイニング リボンのウィザードを関連付ける")  

@@ -13,11 +13,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 1803850e770b42a411a0e6e7a62096afc9b8d3f7
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48176422"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62762683"
 ---
 # <a name="mssqlserver8601"></a>MSSQLSERVER_8601
     
@@ -30,7 +30,7 @@ ms.locfileid: "48176422"
 |イベント ソース|MSSQLSERVER|  
 |コンポーネント|SQLEngine|  
 |シンボル名|INVALID_INTERFACE_ERR|  
-|メッセージ テキスト|クエリ プロセッサの内部エラー: クエリ プロセッサは、必要なインターフェイスにアクセスできませんでした。|  
+|メッセージ テキスト|内部クエリ プロセッサ エラー:クエリ プロセッサは要求されたインターフェイスにアクセスできませんでした。|  
   
 ## <a name="explanation"></a>説明  
  内部処理エラー。必要なインターフェイスにアクセスできませんでした。  

@@ -1,22 +1,20 @@
 ---
 title: PolyBase の機能と制限事項 | Microsoft Docs
-ms.custom: ''
 ms.date: 09/24/2018
 ms.prod: sql
 ms.technology: polybase
-ms.reviewer: ''
 ms.topic: conceptual
 ms.assetid: 6591994d-6109-4285-9c5b-ecb355f8a111
-author: rothja
-ms.author: jroth
-manager: craigg
+author: MikeRayMSFT
+ms.author: mikeray
+ms.reviewer: ''
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: b2d02e13ea7ad1d74274f4412b6ab2bf476f452c
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: bd4c7e7bb150a0eafbd855e1703713f3781bdc49
+ms.sourcegitcommit: 8732161f26a93de3aa1fb13495e8a6a71519c155
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51665427"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71710452"
 ---
 # <a name="polybase-features-and-limitations"></a>PolyBase の機能と制限事項
 
@@ -31,16 +29,16 @@ PolyBase の主な機能と、これらの機能を利用できる製品を一�
 ||||||
 |-|-|-|-|-|   
 |**機能**|**SQL Server 2016**|**Azure SQL Database**|**Azure SQL Data Warehouse**|**Parallel Data Warehouse**| 
-|で Hadoop データのクエリを実行する [!INCLUDE[tsql](../../includes/tsql-md.md)]|[ユーザー アカウント制御]|いいえ|いいえ|[ユーザー アカウント制御]|
-|Hadoop からデータをインポートする|[ユーザー アカウント制御]|いいえ|いいえ|[ユーザー アカウント制御]|
-|データを Hadoop にエクスポートする  |[ユーザー アカウント制御]|いいえ|いいえ| [ユーザー アカウント制御]|
+|で Hadoop データのクエリを実行する [!INCLUDE[tsql](../../includes/tsql-md.md)]|はい|いいえ|いいえ|はい|
+|Hadoop からデータをインポートする|はい|いいえ|いいえ|はい|
+|データを Hadoop にエクスポートする  |はい|いいえ|いいえ| はい|
 |Azure HDInsight のクエリ、インポート、エクスポート |いいえ|いいえ|いいえ|いいえ
-|クエリの計算を Hadoop にプッシュダウンする|[ユーザー アカウント制御]|いいえ|いいえ|[ユーザー アカウント制御]|  
-|Azure Blob Storage からデータをインポートする|[ユーザー アカウント制御]|いいえ|はい|[ユーザー アカウント制御]| 
-|Azure Blob Storage にデータをエクスポートする|[ユーザー アカウント制御]|いいえ|はい|[ユーザー アカウント制御]|  
+|クエリの計算を Hadoop にプッシュダウンする|はい|いいえ|いいえ|はい|  
+|Azure Blob Storage からデータをインポートする|はい|いいえ|はい|はい| 
+|Azure Blob Storage にデータをエクスポートする|はい|いいえ|はい|はい|  
 |Azure Data Lake Store からデータをインポートする|いいえ|いいえ|はい|いいえ|    
 |Azure Data Lake Store からデータをエクスポートする|いいえ|いいえ|はい|いいえ|
-|Microsoft BI ツールから PolyBase クエリを実行する|[ユーザー アカウント制御]|いいえ|はい|[ユーザー アカウント制御]|   
+|Microsoft BI ツールから PolyBase クエリを実行する|はい|いいえ|はい|はい|   
 
 ## <a name="pushdown-computation-supported-by-t-sql-operators"></a>T-SQL 演算子でサポートされるプッシュダウン計算
 
@@ -49,8 +47,8 @@ SQL Server および APS では、すべての T-SQL 演算子を Hadoop クラ�
 ||||
 |-|-|-| 
 |**演算子の種類**|**Hadoop にプッシュ可能**|**Blob Storage にプッシュ可能**|
-|列のプロジェクション|[ユーザー アカウント制御]|いいえ|
-|述語|[ユーザー アカウント制御]|いいえ|
+|列のプロジェクション|はい|いいえ|
+|述語|はい|いいえ|
 |集計|部分的|いいえ|
 |外部テーブル間の結合|いいえ|いいえ|
 |外部テーブルとローカル テーブル間の結合|いいえ|いいえ|
@@ -61,6 +59,8 @@ SQL Server および APS では、すべての T-SQL 演算子を Hadoop クラ�
 ## <a name="known-limitations"></a>既知の制限事項
 
 PolyBase には次の制限事項があります。
+
+- PolyBase を使用するには、データベースでの sysadmin または CONTROL SERVER レベルのアクセス許可が必要です。
 
 - 可変長列の全長を含む最大行サイズは、SQL Server で 32 KB 以下、または Azure SQL Data Warehouse で 1 MB 以下にする必要があります。
 

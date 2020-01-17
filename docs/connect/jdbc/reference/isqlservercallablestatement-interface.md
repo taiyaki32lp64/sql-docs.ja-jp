@@ -1,5 +1,5 @@
 ---
-title: ISQLServerCallableStatement インターフェイス |Microsoft Docs
+title: ISQLServerCallableStatement Interface |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 030a1631-cfcd-41e0-beb5-47f93c01e8e0
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 0a6d016f51dc5e651475cb5c6c58ed6cd0761b00
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e30758f99b3b3aa1b40319fda91760b253d17a9a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47774648"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67977495"
 ---
 # <a name="isqlservercallablestatement-interface"></a>ISQLServerCallableStatement インターフェイス
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -35,7 +34,7 @@ public interface ISQLServerCallableStatement
 ```  
   
 ## <a name="remarks"></a>Remarks  
- このインターフェイスによって実装されます[SQLServerCallableStatement クラス](../../../connect/jdbc/reference/sqlservercallablestatement-class.md)します。  
+ このインターフェイスは、 [SQLServerCallableStatement クラス](../../../connect/jdbc/reference/sqlservercallablestatement-class.md)によって実装されます。  
   
  このインターフェイスでは、次の [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)] 固有のメソッドが公開されます。  
   

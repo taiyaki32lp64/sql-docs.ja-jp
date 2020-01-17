@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 7e01cb24-2338-4f92-ad46-8d97248e1a4d
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: ea2245c3f57b5ad3b14847f15791575afde1043c
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 583e6de7dc8c3ea05d61dda53c3e630d05e4d5f9
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52537154"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67918748"
 ---
 # <a name="field-ado---wfc-syntax"></a>Field (ADO - WFC 構文)
 ## <a name="package-commswfcdata"></a>パッケージ com.ms.wfc.data  
@@ -35,7 +34,7 @@ public char[] getCharChunk(int len)
 public String getStringChunk(int len)  
 ```  
   
-### <a name="properties"></a>プロパティ  
+### <a name="properties"></a>Properties  
   
 ```  
 public int getActualSize()  
@@ -99,5 +98,5 @@ public Object getObject(Class c)
 public void setObject(Object value)  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [Field オブジェクト](../../../ado/reference/ado-api/field-object.md)

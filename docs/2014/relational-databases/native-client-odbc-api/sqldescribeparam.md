@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 2d52d68cc0cd31e9dbb3da25c46901e126252607
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53359494"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63067735"
 ---
 # <a name="sqldescribeparam"></a>SQLDescribeParam
   任意の SQL ステートメントのパラメーターを記述する、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC ドライバーが構築され、実行、 [!INCLUDE[tsql](../../includes/tsql-md.md)] SQLDescribeParam が準備された ODBC ステートメント ハンドルで呼び出されたときに、SELECT ステートメント。 この結果セットのメタデータにより、準備されたステートメント内のパラメーターの特性が決まります。 SQLDescribeParam は、SQLExecute、SQLExecDirect またはを返す可能性のあるエラー コードを返すことができます。  

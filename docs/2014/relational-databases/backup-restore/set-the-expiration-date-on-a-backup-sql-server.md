@@ -14,12 +14,12 @@ ms.assetid: 76e814df-6487-4893-9f09-7759f1863a5c
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: cccf999eba70242cc259b7063654c56e82b28fef
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 30f5a68f51bf501f243bd129d11051d63a6efabd
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48075642"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62877303"
 ---
 # <a name="set-the-expiration-date-on-a-backup-sql-server"></a>バックアップの有効期限の設定 (SQL Server)
   このトピックでは、 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] で [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] または [!INCLUDE[tsql](../../includes/tsql-md.md)]を使用して、バックアップの有効期限を設定する方法について説明します。  
@@ -36,7 +36,7 @@ ms.locfileid: "48075642"
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> 作業を開始する準備  
+##  <a name="BeforeYouBegin"></a> はじめに  
   
 ###  <a name="Security"></a> セキュリティ  
   
@@ -73,7 +73,7 @@ ms.locfileid: "48075642"
   
 3.  [BACKUP](/sql/t-sql/statements/backup-transact-sql) ステートメントで、 [!INCLUDE[ssDEnoversion](../../../includes/ssdenoversion-md.md)] がいつバックアップを上書きできるようになるかを決定する EXPIREDATE または RETAINDAYS オプションを指定します。 どちらのオプションも指定しない場合、失効日は [media retention](../../database-engine/configure-windows/configure-the-media-retention-server-configuration-option.md) (メディア保持期間) のサーバー設定によって決まります。 この例では、 `EXPIREDATE` オプションを使用して、2015 年 6 月 30 日 (`6/30/2015`) の有効期限を指定します。  
   
-```tsql  
+```sql  
 USE AdventureWorks2012;  
 GO  
 BACKUP DATABASE AdventureWorks2012  
@@ -82,7 +82,7 @@ BACKUP DATABASE AdventureWorks2012
 GO  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [データベースの完全バックアップの作成 &#40;SQL Server&#41;](create-a-full-database-backup-sql-server.md)   
  [ファイルおよびファイル グループのバックアップ &#40;SQL Server&#41;](back-up-files-and-filegroups-sql-server.md)   
  [トランザクション ログのバックアップ &#40;SQL Server&#41;](back-up-a-transaction-log-sql-server.md)   

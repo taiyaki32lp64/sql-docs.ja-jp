@@ -1,33 +1,23 @@
-items:
 - name: Docs
   href: /
   homepage: /
   items:
-  - name: SQL
-    href: /sql/
-    homepage: /sql/index
-    items:
-    - name: APS
-      href: /sql/analytics-platform-system/
-      homepage: /sql/analytics-platform-system/index
-    - name: SSAS
-      href: /sql/analysis-services/
-      homepage: /sql/analysis-services/analysis-services
-    - name: ML
-      href: /sql/advanced-analytics/
-      homepage: /sql/advanced-analytics/what-is-sql-server-machine-learning
-    - name: '[接続]'
-      href: /sql/connect/
-      homepage: /sql/connect/sql-server-drivers
-    - name: SSIS
-      href: /sql/integration-services/
-      homepage: /sql/integration-services/sql-server-integration-services
-    - name: SSRS
-      href: /sql/reporting-services/
-      homepage: /sql/reporting-services/create-deploy-and-manage-mobile-and-paginated-reports
-ms.openlocfilehash: a1a4c6f3d77d9799b1c4592207332f9a0f732c0f
-ms.sourcegitcommit: c1105ce638078d2c941cd656b34f78486e6b2d89
-ms.translationtype: HT
-ms.contentlocale: ja-JP
-ms.lasthandoff: 02/22/2019
-ms.locfileid: "56676010"
+    - name: SQL
+      href: /sql/
+      homepage: /sql/index
+      items:
+        - name: APS
+          href: /sql/analytics-platform-system/
+          homepage: /sql/analytics-platform-system/index
+        - name: ML
+          href: /sql/advanced-analytics/
+          homepage: /sql/advanced-analytics/
+        - name: 接続する
+          href: /sql/connect/
+          homepage: /sql/connect/sql-server-drivers
+        - name: SSIS
+          href: /sql/integration-services/
+          homepage: /sql/integration-services/sql-server-integration-services
+        - name: SSRS
+          href: /sql/reporting-services/
+          homepage: /sql/reporting-services/create-deploy-and-manage-mobile-and-paginated-reports

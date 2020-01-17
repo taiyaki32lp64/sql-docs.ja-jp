@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 24ab3f3a-29c5-4ee1-942e-2634c02d0778
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 02ae773493258afa7c1e3b8e3074347ce08ff4cc
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 137805600b30876baa96e8b795b99b62b140e915
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47639280"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67933596"
 ---
 # <a name="comparebookmarks-method-example-vc"></a>CompareBookmarks メソッドの例 (VC++)
 この例では、 [CompareBookmarks](../../../ado/reference/ado-api/comparebookmarks-method-ado.md)メソッド。 ブックマークの相対値が必要なは、特定のブックマークで特別な何らかの形でない限り、めったにありません。  
@@ -170,6 +169,6 @@ void PrintComError(_com_error &e) {
 }  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [CompareBookmarks メソッド (ADO)](../../../ado/reference/ado-api/comparebookmarks-method-ado.md)   
  [Recordset オブジェクト (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)

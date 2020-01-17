@@ -1,5 +1,5 @@
 ---
-title: updateClob (int, java.sql.Clob) メソッド |Microsoft Docs
+title: updateClob メソッド (int, java .sql. Clob) |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: d2a5e9cb-2631-4f6e-a90c-4bee58e2f7b8
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: adc082cfca814b8f10630fe7b4436b87da13ffc8
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: fb880b72e7ef6dc3a03beba28d3ae9b3ca7d3c44
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47596721"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67999236"
 ---
 # <a name="updateclob-method-int-javasqlclob"></a>updateClob (int, java.sql.Clob) メソッド
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -49,7 +48,7 @@ public void updateClob(int columnIndex,
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- この updateClob メソッドは、java.sql.ResultSet インターフェイスの updateClob メソッドによって指定されます。  
+ この updateClob メソッドは、java.sql.ResultSet インターフェイスの updateClob メソッドで規定されています。  
   
 ## <a name="see-also"></a>参照  
  [updateClob メソッド &#40;SQLServerResultSet&#41;](../../../connect/jdbc/reference/updateclob-method-sqlserverresultset.md)   

@@ -7,24 +7,24 @@ ms.reviewer: ''
 ms.technology: search
 ms.topic: conceptual
 ms.assetid: 29b4488e-4c6a-4bf0-a64d-19e2fdafa7ae
-author: douglaslMS
-ms.author: douglasl
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: eb78a5a7179caf7a42173c2fd752708c0434d2b2
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 9e0eadbbc2d126a001057cf5f9d0e17211c0a93e
+ms.sourcegitcommit: f76b4e96c03ce78d94520e898faa9170463fdf4f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48186452"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70874725"
 ---
 # <a name="revert-the-word-breakers-used-by-search-to-the-previous-version"></a>検索で使用するワード ブレーカーを以前のバージョンに戻す
   [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] では、フルテキスト検索でサポートされているすべての言語 (韓国語を除く) 用のワード ブレーカーおよびステマーのバージョンがインストールされ、有効になります。 このトピックでは、これらのコンポーネントのこのバージョンを前のバージョンに切り替えたり、前のバージョンから新しいバージョンに切り替えたりする方法について説明します。  
   
  このトピックでは、次の言語については説明しません。  
   
--   **英語**。 英語のコンポーネントに戻す、または英語のコンポーネントを復元するには、「 [米国英語と英国英語に使用されるワード ブレーカーの変更](change-the-word-breaker-used-for-us-english-and-uk-english.md)」を参照してください。  
+-   **英語**。 英語のコンポーネントに戻す、または英語のコンポーネントを復元するには、「 [Change the Word Breaker Used for US English and UK English](change-the-word-breaker-used-for-us-english-and-uk-english.md)」を参照してください。  
   
--   **デンマーク語、ポーランド語、およびトルコ語**。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の以前のリリースに含まれていたデンマーク語、ポーランド語、およびトルコ語向けのサードパーティ製のワード ブレーカーは、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] コンポーネントに置き換えられました。  
+-   **デンマーク語、ポーランド語、およびトルコ語**。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の以前のリリースに含まれていたデンマーク語、ポーランド語、およびトルコ語向けのサードパーティ製のワード ブレーカーは、[!INCLUDE[msCoName](../../includes/msconame-md.md)] コンポーネントに置き換えられました。  
   
 -   **チェコ語とギリシャ語**。 チェコ語とギリシャ語向けの新しいワード ブレーカーがあります。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] フルテキスト検索の以前のリリースでは、これらの 2 つの言語のサポートは含まれていません。  
   
@@ -56,7 +56,7 @@ ms.locfileid: "48186452"
   
  **影響を受ける言語の一覧**  
   
-|[言語]|省略形<br />(レジストリで<br />使用)|LCID (LCID)|  
+|言語|省略形<br />(レジストリで<br />使用)|LCID (LCID)|  
 |--------------|---------------------------------------|----------|  
 |ベンガル語|ben|1093|  
 |ブルガリア語|bgr|1026|  
@@ -79,8 +79,8 @@ ms.locfileid: "48186452"
 |ニュートラル|ニュートラル|0000|  
 |ノルウェー語 (ボークモール)|nor|1044|  
 |パンジャーブ語|pan|1094|  
-|ポルトガル語 (ブラジル)|ptb|1046|  
 |ポルトガル語|ptg|2070|  
+|ポルトガル語 (ブラジル) |ptb|1046|  
 |ルーマニア語|rom|1048|  
 |スロバキア語|sky|1051|  
 |スロベニア語|slv|1060|  
@@ -127,7 +127,7 @@ ms.locfileid: "48186452"
   
  **影響を受ける言語の一覧**  
   
-|[言語]|省略形<br />(レジストリで<br />使用)|LCID (LCID)|  
+|言語|省略形<br />(レジストリで<br />使用)|LCID (LCID)|  
 |--------------|---------------------------------------|----------|  
 |アラビア語|ara|1025|  
 |ドイツ語|deu|1031|  
@@ -212,8 +212,8 @@ ms.locfileid: "48186452"
 |---------------|------------------|-------------|  
 |以前の CLSID|7EFD3C7E-9E4B-4a93-9503-DECD74C0AC6D|483B0283-25DB-4c92-9C15-A65925CB95CE|  
 |以前のファイル名|NaturalLanguage6.dll|NaturalLanguage6.dll|  
-|現在の CLSID|04b37e30-c9a9-4a7d-8f20-792fc87ddf71|なし|  
-|現在のファイル名|MSWB7.dll|なし|  
+|現在の CLSID|04b37e30-c9a9-4a7d-8f20-792fc87ddf71|[InclusionThresholdSetting]|  
+|現在のファイル名|MSWB7.dll|[InclusionThresholdSetting]|  
   
  **ドイツ語 (deu)、LCID 1031**  
   
@@ -222,7 +222,7 @@ ms.locfileid: "48186452"
 |以前の CLSID|45EACA36-DBE9-4e4a-A26D-5C201902346D|65170AE4-0AD2-4fa5-B3BA-7CD73E2DA825|  
 |以前のファイル名|NaturalLanguage6.dll|NaturalLanguage6.dll|  
 |現在の CLSID|dfa00c33-bf19-482e-a791-3c785b0149b4|8a474d89-6e2f-419c-8dd5-9b50edc8c787|  
-|現在のファイル名|MsWb7.dll|MSWB7.dll|  
+|現在のファイル名|MSWB7.dll|MSWB7.dll|  
   
  **日本語 (jpn)、LCID 1041**  
   
@@ -230,8 +230,8 @@ ms.locfileid: "48186452"
 |---------------|------------------|-------------|  
 |以前の CLSID|E1E8F15E-8BEC-45df-83BF-50FF84D0CAB5|3D5DF14F-649F-4cbc-853D-F18FEDE9CF5D|  
 |以前のファイル名|NaturalLanguage6.dll|NaturalLanguage6.dll|  
-|現在の CLSID|04096682-6ece-4e9e-90c1-52d81f0422ed|なし|  
-|現在のファイル名|MsWb70011.dll|なし|  
+|現在の CLSID|04096682-6ece-4e9e-90c1-52d81f0422ed|[InclusionThresholdSetting]|  
+|現在のファイル名|MsWb70011.dll|[InclusionThresholdSetting]|  
   
  **オランダ語 (nld)、LCID 1043**  
   
@@ -240,7 +240,7 @@ ms.locfileid: "48186452"
 |以前の CLSID|2C9F6BEB-C5B0-42b6-A5EE-84C24DC0D8EF|F7A465EE-13FB-409a-B878-195B420433AF|  
 |以前のファイル名|NaturalLanguage6.dll|NaturalLanguage6.dll|  
 |現在の CLSID|69483c30-a9af-4552-8f84-a0796ad5285b|CF923CB5-1187-43ab-B053-3E44BED65FFA|  
-|現在のファイル名|MsWb7.dll|MSWB7.dll|  
+|現在のファイル名|MSWB7.dll|MSWB7.dll|  
   
  **ロシア語 (rus)、LCID 1049**  
   
@@ -249,21 +249,21 @@ ms.locfileid: "48186452"
 |以前の CLSID|2CB6CDA4-1C14-4392-A8EC-81EEF1F2E079|E06A0DDD-E81A-4e93-8A8D-F386C3A1B670|  
 |以前のファイル名|NaturalLanguage6.dll|NaturalLanguage6.dll|  
 |現在の CLSID|aaa3d3bd-6de7-4317-91a0-d25e7d3babc3|d42c8b70-adeb-4b81-a52f-c09f24f77dfa|  
-|現在のファイル名|MsWb7.dll|MSWB7.dll|  
+|現在のファイル名|MSWB7.dll|MSWB7.dll|  
   
 ##  <a name="newnew"></a> 以前と現在のファイル名がどちらも NaturalLanguage6.dll でない言語  
  次の表に示す言語では、以前のワード ブレーカーとステマーのファイル名が新しいバージョンのファイル名とは異なります。 以前と現在のファイル名はどちらも NaturalLanguage6.dll ではありません。 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] のセットアップでは、現在と以前の両方のバージョンのコンポーネントを Binn フォルダーにコピーするため、ファイルを置き換える必要はありません。 ただし、以前または現在のバージョンのコンポーネントを指定するようにレジストリ エントリのセットを変更する必要があります。  
   
  **影響を受ける言語の一覧**  
   
-|[言語]|省略形<br />(レジストリで<br />使用)|LCID (LCID)|  
+|言語|省略形<br />(レジストリで<br />使用)|LCID (LCID)|  
 |--------------|---------------------------------------|----------|  
-|簡体字中国語|chs|2052|  
+|Simplified Chinese|chs|2052|  
 |繁体字中国語|cht|1028|  
 |タイ語|tha|1054|  
 |繁体字中国語|zh-hk|3076|  
 |繁体字中国語|zh-mo|5124|  
-|簡体字中国語|zh-sg|4100|  
+|簡体中国語|zh-sg|4100|  
   
  この表は、省略形の列を基準としてアルファベット順に並べられています。  
   
@@ -322,7 +322,7 @@ ms.locfileid: "48186452"
   
  次の一覧は、各言語に使用される省略形を基準としてアルファベット順に並べられています。  
   
- **簡体字中国語 (chs)、LCID 2052**  
+ **簡体中国語 (chs)、LCID 2052**  
   
 |コンポーネント|ワード ブレーカー|  
 |---------------|------------------|  
@@ -346,8 +346,8 @@ ms.locfileid: "48186452"
 |---------------|------------------|-------------|  
 |以前の CLSID|CCA22CF4-59FE-11D1-BBFF-00C04FB97FDA|CEDC01C7-59FE-11D1-BBFF-00C04FB97FDA|  
 |以前のファイル名|Thawbrkr.dll|Thawbrkr.dll|  
-|現在の CLSID|F70C0935-6E9F-4ef1-9F06-7876536DB900|なし|  
-|現在のファイル名|MsWb7001e.dll|なし|  
+|現在の CLSID|F70C0935-6E9F-4ef1-9F06-7876536DB900|[InclusionThresholdSetting]|  
+|現在のファイル名|MsWb7001e.dll|[InclusionThresholdSetting]|  
   
  **繁体字中国語 (zh-hk)、LCID 3076**  
   
@@ -367,7 +367,7 @@ ms.locfileid: "48186452"
 |現在の CLSID|E9B1DF65-08F1-438b-8277-EF462B23A792|  
 |現在のファイル名|MsWb70404.dll|  
   
- **簡体字中国語 (zh-sg)、LCID 4100**  
+ **簡体中国語 (zh-sg)、LCID 4100**  
   
 |コンポーネント|ワード ブレーカー|  
 |---------------|------------------|  
@@ -377,7 +377,7 @@ ms.locfileid: "48186452"
 |現在のファイル名|MsWb70804.dll|  
   
 ## <a name="see-also"></a>参照  
- [米国英語と英国英語に使用されるワード ブレーカーの変更](change-the-word-breaker-used-for-us-english-and-uk-english.md)   
+ [Change the Word Breaker Used for US English and UK English](change-the-word-breaker-used-for-us-english-and-uk-english.md)   
  [フルテキスト検索の動作の変更](../../database-engine/behavior-changes-to-full-text-search.md)  
   
   

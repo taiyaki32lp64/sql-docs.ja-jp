@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - diagram, modifying
@@ -16,12 +15,12 @@ ms.assetid: 5841adea-6650-4fae-8526-26af33edbede
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: f7461464f1e55c9a762dd663e4c770663c10bb1c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: c287e840c07d11a527e980f9f07fb39fb3852739
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48050642"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66065519"
 ---
 # <a name="viewing-data-mining-models-in-visio-data-mining-add-ins"></a>Visio でのデータ マイニング モデルの参照 (データ マイニング アドイン)
   データ マイニング用 Visio 図形は、サーバーに接続して、既存のデータ マイニング モデルを表すダイアグラムを作成します。 ダイアグラムは、Visio のコントロールを使用してカスタマイズできますが、データのドリル ダウン、基になる統計の公開、基になるモデルの操作もすることができます。  
@@ -40,7 +39,7 @@ ms.locfileid: "48050642"
 |Visio 図形|サポートされているモデル|  
 |-----------------|----------------------|  
 |[デシジョン ツリー]|この図形はデシジョン ツリー アルゴリズムまたは線形回帰アルゴリズムに基づくモデルに使用します。|  
-|依存関係ネットワーク|この図形は Naive Bayes、デシジョン ツリー、アソシエーション ルールのいずれかのアルゴリズムに基づくモデルに使用します。|  
+|依存関係ネットワーク|次のアルゴリズムに基づくモデルには、この図形を使用します。Naive Bayes、デシジョン ツリー、またはアソシエーション ルール。|  
 |クラスター|この図形はクラスタリング アルゴリズムに基づくモデルに使用します。|  
   
  マイニング モデルのデータの種類に応じて、ウィザードに表示されるオプションも異なります。 たとえば、連続する数値を含む列はカテゴリ変数とは異なる方法で視覚化されます。  

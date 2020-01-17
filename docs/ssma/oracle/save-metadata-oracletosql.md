@@ -9,13 +9,13 @@ ms.topic: conceptual
 ms.assetid: 9e49c25f-9216-43f4-8e99-2eaab298e215
 author: Shamikg
 ms.author: Shamikg
-manager: v-pelars
-ms.openlocfilehash: 8793e1ddd29d5327a02a2a4077daf4c643a8c316
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: shamikg
+ms.openlocfilehash: 7e45f85a26d2beaaba552707681e574bae4795cc
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47851530"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68266515"
 ---
 # <a name="save-metadata--oracletosql"></a>メタデータの保存 (OracleToSQL)
 **メタデータの保存** ダイアログ ボックスでは、SSMA プロジェクトにメタデータを保存する前にロードするように求められます。 これにより、オフラインで使用してテクニカル サポート担当者などの他のユーザーに送信する完全なプロジェクト ファイルがあります。  
@@ -26,7 +26,7 @@ ms.locfileid: "47851530"
 **名前**  
 プロジェクト内の各データベースの名前。  
   
-**ステータス**  
+**状態**  
 SSMA プロジェクトにメタデータが読み込まれている場合、またはメタデータが不足している場合を示します。  
   
 SSMA は、必要に応じて、プロジェクトにメタデータを読み込みます。 参照メタデータのスキーマを変換すると、メタデータが自動的に読み込まれます。  

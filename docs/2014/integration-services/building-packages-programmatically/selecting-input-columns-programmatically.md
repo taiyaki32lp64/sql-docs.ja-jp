@@ -18,15 +18,15 @@ helpviewer_keywords:
 - data flow [Integration Services], column mapping
 - data flow [Integration Services], components
 ms.assetid: b53b110a-dcf4-4464-ae98-81e892ab74c3
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: d0a7316f78bcc26bfd8b939ab555519780af25df
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: d7c1592058776246ad3df657c3340303a60df296
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53375664"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62771748"
 ---
 # <a name="selecting-input-columns-programmatically"></a>プログラムによる入力列の選択
   プログラムによってコンポーネントを接続したら、変換する列または下流コンポーネントに渡す列を上流コンポーネントから選択します。 コンポーネント用の入力列を選択しないと、コンポーネントはデータ フロー タスクから行を受信しません。  

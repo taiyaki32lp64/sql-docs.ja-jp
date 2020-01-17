@@ -1,86 +1,86 @@
 ---
-title: アプライアンスの物理的なコンポーネントの分析プラットフォーム システム |Microsoft ドキュメント
-description: 名前と説明の PDW アプライアンスとファブリックの物理コンポーネント。
+title: アプライアンスの物理コンポーネント
+description: PDW およびアプライアンスファブリック物理コンポーネントの名前と説明。
 author: mzaman1
-manager: craigg
 ms.prod: sql
 ms.technology: data-warehouse
 ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: 0adbd92d1a29a98a80de65268c53ea63e3941d07
-ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
+ms.custom: seo-dt-2019
+ms.openlocfilehash: 5cbed66f53189668518e04848002ae69adb8c614
+ms.sourcegitcommit: d587a141351e59782c31229bccaa0bff2e869580
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/19/2018
-ms.locfileid: "31538882"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74400908"
 ---
-# <a name="appliance-physical-components---analytics-platform-system"></a>アプライアンスの物理的なコンポーネントの分析プラットフォーム システム
-名前と説明の PDW アプライアンスとファブリックの物理コンポーネント。 
+# <a name="appliance-physical-components---analytics-platform-system"></a>アプライアンスの物理コンポーネント-分析プラットフォームシステム
+PDW およびアプライアンスファブリック物理コンポーネントの名前と説明。 
   
 <!-- MISSING LINKS See also [HDInsight Physical Components &#40;Analytics Platform System&#41;](hdinsight-physical-components.md).  -->  
   
 ## <a name="diagrams"></a>コンポーネント図  
-これは、物理的なコンポーネントと 6 コンピューティング ノード アプライアンスの最初のラックの場所の名前を示しています。  
+物理コンポーネントの名前と、6コンピューティングノードアプライアンスの最初のラックに配置されている場所が表示されます。  
   
-![PDW リージョン コンポーネント名 - HP](./media/pdw-and-appliance-fabric-physical-components/APS_HW_ComponentNames-HP.png "APS_HW_ComponentNames HP")  
+![PDW リージョン コンポーネント名 - HP](./media/pdw-and-appliance-fabric-physical-components/APS_HW_ComponentNames-HP.png "APS_HW_ComponentNames-HP")  
   
-PDW コンポーネントの実際の名前は、ダッシュ、コンポーネント名を続けて、PDW 領域名前です。 たとえば、PDW 地域名が PDW123 の場合は、実際の名前は**PDW123 CTL01**、 **PDW123 CMP01**, などです。  
+PDW コンポーネントの実際の名前は、PDW のリージョン名、ダッシュ、コンポーネント名の順に続きます。 たとえば、PDW のリージョン名が PDW123 の場合、実際の名前は**PDW123-CTL01**、 **PDW123 pqth4a-cmp01**などになります。  
   
-同様に、アプライアンス ファブリック コンポーネントの実際の名前は、ダッシュ、コンポーネント名を続けて、アプライアンス ドメインです。 たとえば、アプライアンスのドメインが FSW123 の場合は、アプライアンス ファブリック Vm は**FSW123 WDS**、 **FSW123 AD01**、 **FSW123 VMM**, などです。  
+同様に、アプライアンスファブリックコンポーネントの実際の名前はアプライアンスドメイン、ダッシュ、コンポーネント名の順になります。 たとえば、アプライアンスドメインが FSW123 の場合、アプライアンスファブリック Vm は**FSW123**、 **FSW123**、 **FSW123**のようになります。  
   
-ここで、6 つの計算ノードを伴う PDW 領域の統合ビューです。  
+次に示すのは、6つのコンピューティングノードを持つ PDW リージョンの統合ビューです。  
   
 ![PDW コンポーネント名](./media/pdw-and-appliance-fabric-physical-components/APS_HW_Names.png "APS_HW_Names")  
   
 ## <a name="pdw"></a>PDW コンポーネント  
-PDW の仮想マシンは、PDW 領域の一部です。  
+PDW の仮想マシンは、PDW のリージョンに含まれています。  
   
 *PDW_region*-CTL01  
-コントロールのノードを実行する仮想マシン。 これにより、HST01 で実行し、HST02 にフェールオーバーすることができます。  
+コントロールノードを実行する仮想マシン。 これは HST01 で実行され、HST02 にフェールオーバーできます。  
   
 > [!WARNING]  
-> SQL Server PDW は、HYPER-V マネージャーを使用して、CTL01 仮想マシンのスナップショットの作成をサポートしていません。 スナップショットは、仮想マシンのバックアップをフェールオーバーしようとすると、エラーが発生するローカル ストレージに依存します。 スナップショットを作成することができますも信頼性で問題が発生、他の VM のパッシブのサーバーにフェールオーバーします。  
+> SQL Server PDW では、Hyper-v マネージャーを使用した CTL01 仮想マシンのスナップショットの作成はサポートされていません。 スナップショットはローカルストレージに依存します。これにより、仮想マシンがバックアップにフェールオーバーしようとした場合にエラーが発生します。 スナップショットを作成すると、パッシブサーバーにフェールオーバーする他の VM の信頼性の問題が発生する可能性もあります。  
   
-*PDW_region*-を通じて CMP01 *PDW_Region*-CMP06  
-コンピューティング ノードを実行する仮想マシン。 図ではこの 6 コンピューティング ノード、ホスト HSA01 実行 HSA06 をコンピューティング ノード Vm CMP01 CMP06 を通じてそれぞれします。  
+*PDW_region*- *PDW_Region*から pqth4a-cmp01-CMP06  
+コンピューティングノードを実行する仮想マシン。 この6コンピューティングノードの図では、HSA06 を介して HSA01 を介してホストがコンピューティングノード Vm をそれぞれ PQTH4A-CMP01 から CMP06 に実行します。  
   
-## <a name="fabric"></a>アプライアンス ファブリック コンポーネント  
-これらのコンポーネントは、アプライアンスのファブリックの一部です。  
+## <a name="fabric"></a>アプライアンスファブリックコンポーネント  
+これらのコンポーネントは、アプライアンスファブリックの一部です。  
   
-### <a name="virtual-machines"></a>仮想マシン  
+### <a name="virtual-machines"></a>Virtual Machines  
 *appliance_domain*-WDS  
-このバーチャル マシン ホスト Analytics Platform System を使用する Windows 展開サービス (WDS)、アプライアンス ネットワーク経由で Windows オペレーティング システムを展開します。 アプライアンス ホストの構成済みの IP アドレスをしなくてもアプライアンス ネットワークに参加できるようにする、DHCP サービスもホストします。  
+この仮想マシンは Windows 展開サービス (WDS) をホストします。これは、分析プラットフォームシステムが、アプライアンスネットワーク経由で Windows オペレーティングシステムを展開します。 また、DHCP サービスもホストします。これにより、アプライアンスホストは、事前に構成された IP アドレスを使用せずにアプライアンスネットワークに参加できます。  
   
-*Appliance_domain*WDS-仮想マシンが HST01 上で実行し、HST02 にフェールオーバーすることができます。 WDS の仮想マシンと VMM バーチャル マシンは、アプライアンスのインストール中に、物理ホスト上に Windows を展開できます。 WDS と VMM は、アプライアンスのライフ サイクル中にホストを交換などの操作を実行します。  
+*Appliance_domain*WDS 仮想マシンは HST01 上で実行され、HST02 にフェールオーバーできます。 WDS 仮想マシンと VMM 仮想マシンで、アプライアンスのインストール中に、物理ホスト上に Windows を展開します。 アプライアンスのライフサイクル中、WDS と VMM はホストの交換などの操作を実行します。  
   
-*appliance_domain*VMM  
-Virtual Machine Manager (VMM) は、仮想マシンで実行され、HST02 にフェールオーバーすることができます。 VMM では、物理ホスト上のオペレーティング システムを展開する System Center をホストします。 VMM では、適用またはすべてのホストとバーチャル マシン間での Windows 更新プログラムを削除する Windows Server Update Services (WSUS) も提供します。  
+*appliance_domain*-VMM  
+Virtual Machine Manager (VMM) は仮想マシンで実行され、HST02 にフェールオーバーできます。 VMM は System Center をホストして、物理ホストにオペレーティングシステムを展開します。 VMM では、すべてのホストとバーチャルマシンで Windows 更新プログラムを適用または削除するための Windows Server Update Services (WSUS) も用意されています。  
   
 *appliance_domain*-AD01、 *appliance_domain*-AD02  
-Active Directory ドメイン サービス ドメイン ネーム システム (DNS) が含まれているは、HST01 と HST02 の両方で、仮想マシンで実行されます。 アプライアンスの高可用性を実現 AD01 および AD02 は複製されたドメイン コント ローラーとフェールオーバーが発生しないようにします。 いずれかが失敗した場合、もう 1 つに既に正しいデータで使用できます。  
+ドメインネームシステム (DNS) を含む Active Directory Domain Services は、HST01 と HST02 の両方の仮想マシンで実行されます。 アプライアンスの高可用性を確保するために、AD01 と AD02 はレプリケートされたドメインコントローラーであり、フェールオーバーは行われません。 失敗した場合は、もう1つは正しいデータで既に利用できます。  
   
 *appliance_domain*-ISCSI01  
-1 つの ISCSI 仮想マシンは、接続されているストレージ (HSA01 HSA06) では、各ホストで実行されます。 この VM では、フェールオーバーされません。  
+記憶域が接続されている各ホストで1つの ISCSI 仮想マシンが実行されます (HSA01-HSA06)。 この VM はフェールオーバーしません。  
   
-### <a name="hosts"></a>Hosts  
-*appliance_domain*-を通じて HST01 *appliance_domain*-HST06  
-PDW 管理ノードとアプライアンスのファブリックの仮想マシンをホストします。 HST03 は、オプションのパッシブ ホストです。  
+### <a name="hosts"></a>ホスト  
+*appliance_domain*- *appliance_domain*から HST01-HST06  
+PDW コントロールノードおよびアプライアンスファブリック仮想マシンのホスト。 HST03 はオプションのパッシブホストです。  
   
-*appliance_domain*-を通じて HSA01 *appliance_domain*-HSA08  
-記憶域を持つホストには、(HSA) が接続されています。 各 HAS ホスト実行する 1 つの計算ノード VM と ISCSI VM いずれか。  
+*appliance_domain*- *appliance_domain*から HSA01-HSA08  
+ストレージが接続されているホスト (HSA)。 各ホストには、1つのコンピューティングノード VM と1つの ISCSI VM が実行されます。  
   
 ### <a name="cluster-for-pdw"></a>PDW のクラスター  
 *appliance_domain*-WFOHST01  
-PDW クラスター WFOHST01 と呼びます。 すべての物理ホストと PDW に属している仮想マシンを管理します。  
+PDW クラスターには WFOHST01 という名前が付けられています。 PDW に属するすべての物理ホストと仮想マシンを管理します。  
   
-### <a name="direct-attached-storage"></a>直接取り付け記憶域  
-*appliance_domain*-を通じて DAS01 *appliance_domain*-DAS03  
-これは、コンピューティング ノードに接続されている、直接接続されたストレージです。 HP には、次の 2 つのコンピューティング ノードごとに 1 つの DAS があります。 Dell とクォンタムは、次の 3 つのコンピューティング ノードごとに 1 つの DAS をあります。  
+### <a name="direct-attached-storage"></a>直接接続ストレージ  
+*appliance_domain*- *appliance_domain*から DAS01-DAS03  
+これは、コンピューティングノードに接続されている直接接続ストレージです。 HP では、2つのコンピューティングノードごとに1つの DAS を使用します。 Dell とクォンタムは、3つのコンピューティングノードごとに1つの DAS を備えています。  
   
 ## <a name="see-also"></a>参照  
 <!-- MISSING LINKS [Hardware Configurations &#40;Analytics Platform System&#41;](../architecture/hardware-configurations.md)  -->  
-[アプライアンス構成&#40;分析プラットフォーム システム&#41;](appliance-configuration.md)  
-[アプライアンスの管理タスク&#40;分析プラットフォーム システム&#41;](appliance-management-tasks.md)  
+[アプライアンス構成 &#40;Analytics Platform System&#41;](appliance-configuration.md)  
+[アプライアンス管理タスク &#40;Analytics Platform System&#41;](appliance-management-tasks.md)  
   

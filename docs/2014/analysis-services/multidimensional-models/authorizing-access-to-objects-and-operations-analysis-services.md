@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.roledesignerdialog.membership.f1
@@ -20,12 +19,12 @@ ms.assetid: af28524e-5eca-4dce-a050-da4f406ee1c7
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 5e19a2faf3bba980ff7329084c073cabb1f696c9
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: d6962452b5615b9b2607007ed86c09eed495f6f1
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48197112"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66077020"
 ---
 # <a name="authorizing-access-to-objects-and-operations-analysis-services"></a>オブジェクトと操作へのアクセスの承認 (Analysis Services)
   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] データベース内のキューブ、ディメンション、マイニング モデルへの管理者以外のユーザー アクセスは、1 つ以上のデータベース ロールのメンバーシップにより許可されます。 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 管理者は、これらのデータベース ロールを作成し、 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] オブジェクトに対する読み取り権限または読み取り/書き込み権限を与え、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows のユーザーとグループを各ロールに割り当てます。  
@@ -38,7 +37,7 @@ ms.locfileid: "48197112"
 ## <a name="list-roles-defined-for-your-database"></a>データベースに対して定義されたロールの一覧表示  
  管理者は、SQL Server Management Studio から簡単な DMV クエリを実行することにより、サーバー上で定義されたすべてのロールの一覧を取得できます。  
   
-1.  SSMS でデータベースを右クリックし、 **[新しいクエリ]** | **[MDX]** の順に選択します。  
+1.  SSMS でデータベースを右クリックし、 **[新しいクエリ]**  |  **[MDX]** の順に選択します。  
   
 2.  次のクエリを入力し、F5 キーを押して実行します。  
   
@@ -51,24 +50,24 @@ ms.locfileid: "48197112"
 ## <a name="top-down-overview-of-analysis-services-authorization"></a>Analysis Services の承認に関するトップダウンの概要  
  ここでは、権限の構成に関する基本的なワークフローについて説明します。  
   
- **手順 1: サーバーの管理**  
+ **ステップ 1: サーバーの管理**  
   
  最初の手順として、サーバー レベルで管理者権限を持つユーザーを決定します。 SQL Server をインストールするローカル管理者は、インストール時に、Analysis Services サーバー管理者として Windows アカウントを 1 つ以上指定するよう求められます。 サーバー管理者には、サーバー上の可能な権限がすべて付与されています。これには、サーバー上の任意のオブジェクトを表示、変更、削除したり、関連付けられているデータを表示したりする権限が含まれます。 インストールが完了したら、サーバー管理者は、アカウントを追加または削除してこのロールのメンバーシップを変更できます。 参照してください[サーバーの管理者アクセス許可の付与&#40;Analysis Services&#41; ](../instances/grant-server-admin-rights-to-an-analysis-services-instance.md)詳細については、このアクセス許可レベル。  
   
- **手順 2: データベースの管理**  
+ **手順 2:データベースの管理**  
   
  次に、テーブルまたは多次元ソリューションが作成されたら、データベースとしてサーバーに配置されます。 サーバー管理者は、問題のあるデータベースに対してフル コントロール権限を持つロールを定義することにより、データベース管理タスクを委任できます。 このロールのメンバーは、データベース内のオブジェクトを処理または照会したり、キューブ、ディメンション、およびデータベース自体にある他のオブジェクトにアクセスするために追加のロールを作成したりできます。 詳細については、「[データベース権限の付与 &#40;Analysis Services&#41;](grant-database-permissions-analysis-services.md)」を参照してください。  
   
- **手順 3: クエリと処理のワークロードへのキューブ アクセスまたはモデル アクセスの有効化**  
+ **ステップ 3:クエリと処理のワークロードのキューブまたはモデルへのアクセスを有効にします。**  
   
- 既定では、キューブまたはテーブル モデルにアクセスできるのは、サーバー管理者とデータベース管理者だけです。 追加のロールの割り当てを指定するアクセス許可を持つ、と共に Windows ユーザーおよびグループ アカウントをキューブまたはモデルをマップする、組織の他のユーザーがこれらのデータ構造を使用できるようにする必要があります`Read`特権。 詳細については、「[キューブ権限またはモデル権限の付与 &#40;Analysis Services&#41;](grant-cube-or-model-permissions-analysis-services.md)」を参照してください。  
+ 既定では、キューブまたはテーブル モデルにアクセスできるのは、サーバー管理者とデータベース管理者だけです。 組織内の他のユーザーがこれらのデータ構造を使用できるようにするには、`Read` 特権を指定する権限と共に、Windows ユーザーおよびグループ アカウントを、キューブまたはモデルにマップするための追加のロール割り当てが必要です。 詳細については、「[キューブ権限またはモデル権限の付与 &#40;Analysis Services&#41;](grant-cube-or-model-permissions-analysis-services.md)」を参照してください。  
   
  処理タスクを他の管理機能と分離することにより、サーバー管理者およびデータベース管理者がこのタスクを他のユーザーに委任したり、スケジュール ソフトウェアを実行するサービス アカウントを指定することによって自動処理を構成したりできるようになります。 詳細については、「[処理権限の付与 &#40;Analysis Services&#41;](grant-process-permissions-analysis-services.md)」を参照してください。  
   
 > [!NOTE]  
 >  ユーザーは、 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] のデータ読み込み元である、基になるリレーショナル データベースのリレーショナル テーブルへの権限は必要とせず、 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] のインスタンスを実行しているコンピューターでのファイル レベルの権限も必要としません。  
   
- **手順 4 (省略可): 内部キューブ オブジェクトへのアクセスの許可または拒否**  
+ **手順 4 (省略可能)。内部キューブ オブジェクトへのアクセス許可または拒否**  
   
  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] は、データ モデル内のディメンション メンバーおよびセルを含む、個別のオブジェクトの設定権限のセキュリティ設定を提供します。 詳細については、「[ディメンション データへのカスタム アクセス権の付与 &#40;Analysis Services&#41;](grant-custom-access-to-dimension-data-analysis-services.md)」および「[セル データへのカスタム アクセス権の付与 &#40;Analysis Services&#41;](grant-custom-access-to-cell-data-analysis-services.md)」を参照してください。  
   
@@ -93,7 +92,7 @@ ms.locfileid: "48197112"
   
 ## <a name="see-also"></a>参照  
  [サーバーの管理者アクセス許可の付与&#40;Analysis Services&#41;](../instances/grant-server-admin-rights-to-an-analysis-services-instance.md)   
- [ロールとアクセス許可&#40;Analysis Services&#41;](roles-and-permissions-analysis-services.md)   
+ [ロールと権限 &#40;Analysis Services&#41;](roles-and-permissions-analysis-services.md)   
  [Analysis Services でサポートされる認証方法](../instances/authentication-methodologies-supported-by-analysis-services.md)  
   
   

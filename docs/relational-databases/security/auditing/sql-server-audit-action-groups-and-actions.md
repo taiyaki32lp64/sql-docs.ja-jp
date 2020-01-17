@@ -21,13 +21,12 @@ helpviewer_keywords:
 ms.assetid: b7422911-7524-4bcd-9ab9-e460d5897b3d
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: 31eb77b8223c13de9fe5a7e098a42462ed4fd915
-ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
+ms.openlocfilehash: 2efe63ae57e80e06d616938c0dcdf77dbe055ac6
+ms.sourcegitcommit: 77293fb1f303ccfd236db9c9041d2fb2f64bce42
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/18/2018
-ms.locfileid: "53591756"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70929704"
 ---
 # <a name="sql-server-audit-action-groups-and-actions"></a>SQL Server 監査のアクション グループとアクション
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -80,7 +79,7 @@ ms.locfileid: "53591756"
 |BACKUP_RESTORE_GROUP|このイベントは、バックアップまたは復元のコマンドが実行されるたびに発生します。 [Audit Backup/Restore イベント クラス](../../../relational-databases/event-classes/audit-backup-and-restore-event-class.md)と同じです。|  
 |BROKER_LOGIN_GROUP|このイベントは、Service Broker トランスポート セキュリティに関する監査メッセージを報告するために発生します。 [Audit Broker Login Event Class](../../../relational-databases/event-classes/audit-broker-login-event-class.md)と同じです。|  
 |DATABASE_CHANGE_GROUP|このイベントは、データベースが作成、変更、または削除されるときに発生します。 このイベントは、任意のデータベースが作成、変更、または削除されるたびに発生します。 [Audit Database Management Event Class](../../../relational-databases/event-classes/audit-database-management-event-class.md)と同じです。|  
-|DATABASE_LOGOUT_GROUP|このイベントは、包含データベースのユーザーがデータベースをログアウトするときに発生します。 Database Logout Event Class と同じです。|  
+|DATABASE_LOGOUT_GROUP|このイベントは、包含データベースのユーザーがデータベースをログアウトするときに発生します。|  
 |DATABASE_MIRRORING_LOGIN_GROUP|このイベントは、データベース ミラーリングのトランスポート セキュリティに関する監査メッセージを報告するために発生します。 [Audit Database Mirroring Login Event Class](../../../relational-databases/event-classes/audit-database-mirroring-login-event-class.md)と同じです。|  
 |DATABASE_OBJECT_ACCESS_GROUP|このイベントは、メッセージ型、アセンブリ、コントラクトなどのデータベース オブジェクトへのアクセスが行われるたびに発生します。 このイベントは、任意のデータベースへの任意のアクセスに対して発生します。 注:大量の監査レコードが生成される可能性があります。<br /><br /> [Audit Database Object Access Event Class](../../../relational-databases/event-classes/audit-database-object-access-event-class.md)と同じです。|  
 |DATABASE_OBJECT_CHANGE_GROUP|このイベントは、スキーマなどのデータベース オブジェクトで、CREATE、ALTER、または DROP ステートメントが実行されたときに発生します。 このイベントは、任意のデータベース オブジェクトが作成、変更、または削除されるたびに発生します。 注:非常に大量の監査レコードが生成される可能性があります。<br /><br /> [Audit Database Object Management Event Class](../../../relational-databases/event-classes/audit-database-object-management-event-class.md)と同じです。|  
@@ -93,8 +92,7 @@ ms.locfileid: "53591756"
 |DATABASE_PRINCIPAL_IMPERSONATION_GROUP|このイベントは、データベースのスコープ内に、EXECUTE AS \<principal> や SETPRINCIPAL などの権限借用の操作が存在するときに発生します。 このイベントは、任意のデータベースで行われた権限の借用に対して発生します。 [Audit Database Principal Impersonation Event Class](../../../relational-databases/event-classes/audit-database-principal-impersonation-event-class.md)と同じです。|  
 |DATABASE_ROLE_MEMBER_CHANGE_GROUP|このイベントは、データベース ロールにログインが追加または削除されるたびに発生します。 このイベント クラスは、sp_addrolemember、sp_changegroup、および sp_droprolemember の各ストアド プロシージャに対して発生します。 このイベントは、任意のデータベースの任意のデータベース ロール メンバーの変更に対して発生します。 [Audit Add Member to DB Role イベント クラス](../../../relational-databases/event-classes/audit-add-member-to-db-role-event-class.md)と同じです。|  
 |DBCC_GROUP|このイベントは、プリンシパルが任意の DBCC コマンドを実行するたびに発生します。 [Audit DBCC Event Class](../../../relational-databases/event-classes/audit-dbcc-event-class.md)と同じです。|  
-|FAILED_DATABASE_AUTHENTICATION_GROUP|プリンシパルが包含データベースにログオンしようとして失敗したことを示します。 このクラスのイベントは、新しい接続によって生じることも、接続プールから再利用された接続によって生じることもあります。 [Audit Login Failed Event Class](../../../relational-databases/event-classes/audit-login-failed-event-class.md)と同じです。|  
-|FAILED_LOGIN_GROUP|プリンシパルが [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] へのログインを試みて失敗したことを示します。 このクラスのイベントは、新しい接続によって生じることも、接続プールから再利用された接続によって生じることもあります。 [Audit Login Failed Event Class](../../../relational-databases/event-classes/audit-login-failed-event-class.md)と同じです。|  
+|FAILED_DATABASE_AUTHENTICATION_GROUP|プリンシパルが包含データベースにログオンしようとして失敗したことを示します。 このクラスのイベントは、新しい接続によって生じることも、接続プールから再利用された接続によって生じることもあります。 [Audit Login Failed Event Class](../../../relational-databases/event-classes/audit-login-failed-event-class.md)と同じです。|    
 |FULLTEXT_GROUP|フルテキスト イベントが発生したことを示します。 [Audit Fulltext Event Class](../../../relational-databases/event-classes/audit-fulltext-event-class.md)と同じです。|  
 |LOGIN_CHANGE_PASSWORD_GROUP|このイベントは、ALTER LOGIN ステートメントまたは sp_password ストアド プロシージャを使用してログインのパスワードが変更されるたびに発生します。 [Audit Login Change Password Event Class](../../../relational-databases/event-classes/audit-login-change-password-event-class.md)と同じです。|  
 |LOGOUT_GROUP|プリンシパルが [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]からログアウトしたことを示します。 このクラスのイベントは、新しい接続によって生じることも、接続プールから再利用された接続によって生じることもあります。 [Audit Logout Event Class](../../../relational-databases/event-classes/audit-logout-event-class.md)と同じです。|  
@@ -106,12 +104,12 @@ ms.locfileid: "53591756"
 |SERVER_OBJECT_OWNERSHIP_CHANGE_GROUP|このイベントは、サーバー スコープ内のオブジェクトの所有者が変更されたときに発生します。 [Audit Server Object Take Ownership Event Class](../../../relational-databases/event-classes/audit-server-object-take-ownership-event-class.md)と同じです。|  
 |SERVER_OBJECT_PERMISSION_CHANGE_GROUP|このイベントは、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]の任意のプリンシパルによって、サーバー オブジェクトの権限に対して GRANT、REVOKE、または DENY が実行されるたびに発生します。 [Audit Server Object GDR Event Class](../../../relational-databases/event-classes/audit-server-object-gdr-event-class.md)と同じです。|  
 |SERVER_OPERATION_GROUP|このイベントは、設定、リソース、外部アクセス、承認の変更などのセキュリティ監査操作が使用されるときに発生します。 [Audit Server Operation Event Class](../../../relational-databases/event-classes/audit-server-operation-event-class.md)と同じです。|  
-|SERVER_PERMISSION_CHANGE_GROUP|このイベントは、ログインの作成など、サーバー スコープでの権限に対して GRANT、REVOKE、または DENY が実行されているときに発生します。 [Audit Server Scope GDR Event Class](../../../relational-databases/event-classes/audit-server-scope-gdr-event-class.md)と同じです。|  
+|SERVER_PERMISSION_CHANGE_GROUP|このイベントは、サーバー スコープでの権限に対して GRANT、REVOKE、または DENY が実行されているときに発生します。 [Audit Server Scope GDR Event Class](../../../relational-databases/event-classes/audit-server-scope-gdr-event-class.md)と同じです。|  
 |SERVER_PRINCIPAL_CHANGE_GROUP|このイベントは、サーバー プリンシパルが作成、変更、または削除されるときに発生します。 [Audit Server Principal Management Event Class](../../../relational-databases/event-classes/audit-server-principal-management-event-class.md)と同じです。<br /><br /> このイベントは、プリンシパルが sp_defaultdb ストアド プロシージャ、sp_defaultlanguage ストアド プロシージャ、または ALTER LOGIN ステートメントを実行したときに発生します。 [Audit Addlogin Event Class](../../../relational-databases/event-classes/audit-addlogin-event-class.md)と同じです。<br /><br /> このイベントは、sp_addlogin ストアド プロシージャおよび sp_droplogin ストアド プロシージャに対して発生します。 [Audit Login Change Property Event Class](../../../relational-databases/event-classes/audit-login-change-property-event-class.md)とも同じです。<br /><br /> このイベントは、sp_grantlogin または sp_revokelogin の各ストアド プロシージャに対して発生します。 [Audit Login GDR Event Class](../../../relational-databases/event-classes/audit-login-gdr-event-class.md)と同じです。|  
 |SERVER_PRINCIPAL_IMPERSONATION_GROUP|このイベントは、サーバーのスコープ内に、EXECUTE AS \<login> などの権限の借用が存在するときに発生します。 [Audit Server Principal Impersonation Event Class](../../../relational-databases/event-classes/audit-server-principal-impersonation-event-class.md)と同じです。|  
 |SERVER_ROLE_MEMBER_CHANGE_GROUP|このイベントは、固定サーバー ロールにログインが追加または削除されるたびに発生します。 このイベントは sp_addsrvrolemember ストアド プロシージャと sp_dropsrvrolemember ストアド プロシージャに対して発生します。 [Audit Add Login to Server Role イベント クラス](../../../relational-databases/event-classes/audit-add-login-to-server-role-event-class.md)と同じです。|  
 |SERVER_STATE_CHANGE_GROUP|このイベントは、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] サービスの状態が変更されたときに発生します。 [Audit Server Starts and Stops Event Class](../../../relational-databases/event-classes/audit-server-starts-and-stops-event-class.md)と同じです。|  
-|SUCCESSFUL_DATABASE_AUTHENTICATION_GROUP|プリンシパルが包含データベースに正常にログインしたことを示します。 Audit Successful Database Authentication Event Class と同じです。|  
+|SUCCESSFUL_DATABASE_AUTHENTICATION_GROUP|プリンシパルが包含データベースに正常にログインしたことを示します。|  
 |SUCCESSFUL_LOGIN_GROUP|プリンシパルが [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]に正常にログインしたことを示します。 このクラスのイベントは、新しい接続によって生じることも、接続プールから再利用された接続によって生じることもあります。 [Audit Login Event Class](../../../relational-databases/event-classes/audit-login-event-class.md)と同じです。|  
 |TRACE_CHANGE_GROUP|このイベントは、ALTER TRACE 権限をチェックするすべてのステートメントで発生します。 [Audit Server Alter Trace Event Class](../../../relational-databases/event-classes/audit-server-alter-trace-event-class.md)と同じです。|  
 |TRANSACTION_GROUP|このイベントは、BEGIN TRANSACTION、ROLLBACK TRANSACTION、COMMIT TRANSACTION の操作で発生し、これらのステートメントの明示的な呼び出しと暗黙のトランザクション操作の両方で発生します。 このイベントは、トランザクションのロールバックによって起こる、個別のステートメントの UNDO 操作によっても発生します。|  
@@ -154,7 +152,7 @@ ms.locfileid: "53591756"
 |SCHEMA_OBJECT_CHANGE_GROUP|このイベントは、スキーマに対して CREATE、ALTER、または DROP の各操作が実行されたときに発生します。 [Audit Schema Object Management Event Class](../../../relational-databases/event-classes/audit-schema-object-management-event-class.md)と同じです。<br /><br /> このイベントはスキーマ オブジェクトで発生します。 [Audit Object Derived Permission Event Class](../../../relational-databases/event-classes/audit-object-derived-permission-event-class.md)と同じです。 [Audit Statement Permission Event Class](../../../relational-databases/event-classes/audit-statement-permission-event-class.md)とも同じです。|  
 |SCHEMA_OBJECT_OWNERSHIP_CHANGE_GROUP|このイベントは、スキーマ オブジェクト (テーブル、プロシージャ、関数など) の所有者を変更する権限について確認が行われる際に発生します。 この確認動作は、ALTER AUTHORIZATION ステートメントを使用してオブジェクトに所有者を割り当てたときに行われます。 [Audit Schema Object Take Ownership Event Class](../../../relational-databases/event-classes/audit-schema-object-take-ownership-event-class.md)と同じです。|  
 |SCHEMA_OBJECT_PERMISSION_CHANGE_GROUP|このイベントは、スキーマ オブジェクトに対して GRANT、DENY、または REVOKE が実行されるたびに発生します。 [Audit Schema Object GDR Event Class](../../../relational-databases/event-classes/audit-schema-object-gdr-event-class.md)と同じです。|  
-|SUCCESSFUL_DATABASE_AUTHENTICATION_GROUP|プリンシパルが包含データベースに正常にログインしたことを示します。 Audit Successful Database Authentication Event Class と同じです。|  
+|SUCCESSFUL_DATABASE_AUTHENTICATION_GROUP|プリンシパルが包含データベースに正常にログインしたことを示します。|  
 |USER_CHANGE_PASSWORD_GROUP|このイベントは、包含データベースのユーザーのパスワードが USER ALTER ステートメントを使用して変更されるたびに発生します。|  
 |USER_DEFINED_AUDIT_GROUP|このグループは、[sp_audit_write &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-audit-write-transact-sql.md) の使用によって発生するイベントを監視します。|  
   
@@ -166,7 +164,7 @@ ms.locfileid: "53591756"
 |SELECT|このイベントは、SELECT が実行されるたびに発生します。|  
 |UPDATE|このイベントは、UPDATE が実行されるたびに発生します。|  
 |INSERT|このイベントは、INSERT が実行されるたびに発生します。|  
-|Del|このイベントは、DELETE が実行されるたびに発生します。|  
+|DELETE|このイベントは、DELETE が実行されるたびに発生します。|  
 |EXECUTE|このイベントは、EXECUTE が実行されるたびに発生します。|  
 |RECEIVE|このイベントは、RECEIVE が実行されるたびに発生します。|  
 |REFERENCES|このイベントは、REFERENCES 権限の確認が行われるたびに発生します。|  
@@ -183,7 +181,7 @@ ms.locfileid: "53591756"
   
 |アクション グループ名|[説明]|  
 |-----------------------|-----------------|  
-|AUDIT_ CHANGE_GROUP|このイベントは、次のいずれかのコマンドが実行されるたびに発生します。<br /><br /> CREATE SERVER AUDIT<br /><br /> ALTER SERVER AUDIT<br /><br /> DROP SERVER AUDIT<br /><br /> CREATE SERVER AUDIT SPECIFICATION<br /><br /> ALTER SERVER AUDIT SPECIFICATION<br /><br /> DROP SERVER AUDIT SPECIFICATION<br /><br /> CREATE DATABASE AUDIT SPECIFICATION<br /><br /> ALTER DATABASE AUDIT SPECIFICATION<br /><br /> DROP DATABASE AUDIT SPECIFICATION|  
+|AUDIT_CHANGE_GROUP|このイベントは、次のいずれかのコマンドが実行されるたびに発生します。<br /><br /> CREATE SERVER AUDIT<br /><br /> ALTER SERVER AUDIT<br /><br /> DROP SERVER AUDIT<br /><br /> CREATE SERVER AUDIT SPECIFICATION<br /><br /> ALTER SERVER AUDIT SPECIFICATION<br /><br /> DROP SERVER AUDIT SPECIFICATION<br /><br /> CREATE DATABASE AUDIT SPECIFICATION<br /><br /> ALTER DATABASE AUDIT SPECIFICATION<br /><br /> DROP DATABASE AUDIT SPECIFICATION|  
   
 ## <a name="related-content"></a>関連コンテンツ  
  [サーバー監査およびサーバー監査の仕様を作成する方法](../../../relational-databases/security/auditing/create-a-server-audit-and-server-audit-specification.md)  

@@ -21,18 +21,17 @@ helpviewer_keywords:
 ms.assetid: ebec77eb-fc02-4feb-b6c5-f0098d43ccb6
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: bdd5a0a3b65c941631f2cbeaa83175c1b48f482c
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: a4711f9673ba5acf7a4a7398588c6e27f80a9179
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56028933"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68024491"
 ---
 # <a name="identity-function-transact-sql"></a>IDENTITY (関数) (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  INTO を伴う SELECT ステートメントでのみ使用 *テーブル* 句を新しいテーブルに id 列を挿入します。 IDENTITY 関数は、CREATE TABLE と ALTER TABLE で使用される IDENTITY プロパティと似ていますが、同じものではありません。  
+  INTO を伴う SELECT ステートメントでのみ使用 *テーブル* 句を新しいテーブルに id 列を挿入します。 似ていますが、IDENTITY 関数は CREATE TABLE と ALTER TABLE で使用される IDENTITY プロパティではありません。  
   
 > [!NOTE]  
 >  複数のテーブルで使用できる自動的に増分する番号、またはテーブルを参照せずにアプリケーションから呼び出すことができる自動的に増分する番号を作成するには、「[シーケンス番号](../../relational-databases/sequence-numbers/sequence-numbers.md)」を参照してください。  
@@ -108,6 +107,6 @@ GO
  [IDENTITY &#40;Property&#41; &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql-identity-property.md)   
  [SELECT@local_variable &#40;Transact-SQL&#41;](../../t-sql/language-elements/select-local-variable-transact-sql.md)   
  [DBCC CHECKIDENT &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-checkident-transact-sql.md)   
- [sys.identity_columns (&) #40 です。TRANSACT-SQL と #41 です。](../../relational-databases/system-catalog-views/sys-identity-columns-transact-sql.md)  
+ [sys.identity_columns &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-identity-columns-transact-sql.md)  
   
   

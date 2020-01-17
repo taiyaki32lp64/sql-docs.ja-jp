@@ -23,11 +23,11 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 817591cec64a4210c4cc573588be1b8ac6dfb8a7
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53358774"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62873809"
 ---
 # <a name="custom-attributes-for-clr-routines"></a>CLR ルーチンのカスタム属性
   共通言語ランタイム (CLR) のルーチン、ユーザー定義型、および登録されているユーザー定義集計に示されている属性を適用できる[!INCLUDE[msCoName](../../../includes/ssnoversion-md.md)]します。 属性が適用されない場合、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] は既定値を想定します。 ここで示す属性は、`Microsoft.SqlServer.Server` 名前空間で定義されています。  

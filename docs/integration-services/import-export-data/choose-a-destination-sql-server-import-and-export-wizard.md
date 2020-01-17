@@ -3,24 +3,26 @@ title: 変換先の選択 (SQL Server インポートおよびエクスポート
 ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
-ms.prod_service: integration-services
 ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql13.dts.impexpwizard.chooseadestination.f1
 ms.assetid: 1898be15-3e69-42d3-8ecb-3733c9f6c8e3
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: 59dcb8932e2c1b4f2dcbe93d879a240743322bde
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 86b2cf26c7af957579c5368ed70262e43db005f1
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47856956"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71285877"
 ---
 # <a name="choose-a-destination-sql-server-import-and-export-wizard"></a>[変換先の選択] (SQL Server インポートおよびエクスポート ウィザード)
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
  データ ソースとデータへの接続方法を指定すると、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インポートおよびエクスポート ウィザードには、 **[変換先の選択]** が表示されます。 このページでは、データの変換先およびデータに接続する方法についての情報を指定します。
   
 使用できるデータの変換先の詳細については、「 [使用できるデータ ソースと変換先](import-and-export-data-with-the-sql-server-import-and-export-wizard.md#wizardSources)」を参照してください。 
@@ -38,7 +40,7 @@ ms.locfileid: "47856956"
 
 -   **変換先で ODBC ドライバーを使用している場合は**、.NET Framework Data Provider for ODBC を選択します。 ドライバー固有の情報を入力します。 ODBC ドライバーは、変換先のドロップダウン リストに記載されていません。 .NET Framework Data Provider for ODBC は ODBC ドライバーのラッパーとして機能します。 詳細については、「[ODBC データ ソースに接続する](../../integration-services/import-export-data/connect-to-an-odbc-data-source-sql-server-import-and-export-wizard.md)」をご覧ください。
 
--   **変換先として使用できるプロバイダーが複数存在する可能性があります。** 通常、変換先で使用できる任意のプロバイダーを選択できます。 たとえば、Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] に接続するには、.NET Framework Data Provider for SQL Server、または SQL Server ODBC ドライバーを使用できます  (その他のプロバイダーもリストに表示されますが、現在はサポートされていません)。 
+-   **変換先として使用できるプロバイダーが複数存在する可能性があります。** 通常、変換先で使用できる任意のプロバイダーを選択できます。 たとえば、Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] に接続するには、.NET Framework Data Provider for SQL Server、または SQL Server ODBC ドライバーを使用できます (その他のプロバイダーもリストに表示されますが、現在はサポートされていません)。 
 
 ## <a name="my-destination-isnt-in-the-list"></a>変換先がリストに表示されない
 -   Microsoft またはサード パーティから**データ プロバイダーをダウンロードする必要があります**。 **[変換先]** のリストに表示される、使用できるデータ プロバイダーのリストに含まれているのは、コンピューターにインストールされているプロバイダーのみです。 使用できる変換先の詳細については、「[使用できるデータ ソースと変換先](import-and-export-data-with-the-sql-server-import-and-export-wizard.md#wizardSources)」を参照してください。
@@ -51,7 +53,7 @@ ms.locfileid: "47856956"
 > 64 ビット バージョンの SQL Server インポートおよびエクスポート ウィザードを使用するには、SQL Server をインストールする必要があります。 SQL Server Data Tools (SSDT) および SQL Server Management Studio (SSMS) は 32 ビット アプリケーションであり、32 ビット バージョンのウィザードを含む、32 ビット ファイルのみがインストールされます。
 
 ## <a name="after-you-choose-a-destination"></a>変換先の選択後
-変換先を選択した後、**[変換先の選択]** ページ の残りの部分で指定するオプションの数は、選択したデータ プロバイダーによって異なります。
+変換先を選択した後、 **[変換先の選択]** ページ の残りの部分で指定するオプションの数は、選択したデータ プロバイダーによって異なります。
 
 よく使われる変換先に接続するには、次のいずれかのページをご覧ください。
 -   [SQL Server への接続](../../integration-services/import-export-data/connect-to-a-sql-server-data-source-sql-server-import-and-export-wizard.md)

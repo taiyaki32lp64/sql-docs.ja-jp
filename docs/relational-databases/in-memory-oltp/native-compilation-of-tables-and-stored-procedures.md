@@ -1,6 +1,6 @@
 ---
-title: テーブルとストアド プロシージャのネイティブ コンパイル | Microsoft Docs
-ms.custom: ''
+title: テーブルとストアド プロシージャのネイティブ コンパイル
+ms.custom: seo-dt-2019
 ms.date: 04/20/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -10,14 +10,13 @@ ms.topic: conceptual
 ms.assetid: 5880fbd9-a23e-464a-8b44-09750eeb2dad
 author: MightyPen
 ms.author: genemi
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 461e85a3df5e14cf26fcae612f47b811064f730e
-ms.sourcegitcommit: ef6e3ec273b0521e7c79d5c2a4cb4dcba1744e67
+ms.openlocfilehash: f14ac7835bab80a15d1fffb3bb58bd9cdb4b44b0
+ms.sourcegitcommit: 384e7eeb0020e17a018ef8087970038aabdd9bb7
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51512767"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74412627"
 ---
 # <a name="native-compilation-of-tables-and-stored-procedures"></a>テーブルとストアド プロシージャのネイティブ コンパイル
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -214,4 +213,4 @@ GO
 
 [メモリ最適化テーブル](../../relational-databases/in-memory-oltp/memory-optimized-tables.md)
 
-[Natively Compiled Stored Procedures](../../relational-databases/in-memory-oltp/natively-compiled-stored-procedures.md)
+[ネイティブ コンパイル ストアド プロシージャ](../../relational-databases/in-memory-oltp/natively-compiled-stored-procedures.md)

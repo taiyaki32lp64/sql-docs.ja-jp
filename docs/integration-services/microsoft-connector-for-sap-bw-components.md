@@ -8,17 +8,20 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: bdf81735-dba7-45ef-8794-0eb67c01475a
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: e819f13bfe16023ad1e4ed835367bcecfffc2a75
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: ba6298d5ead650b5e6f6bc3cb68d0c5926624741
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47654140"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71295867"
 ---
 # <a name="microsoft-connector-for-sap-bw-components"></a>Microsoft Connector for SAP BW のコンポーネント
+
+[!INCLUDE[ssis-appliesto](../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   ここでは、 [!INCLUDE[msCoName](../includes/msconame-md.md)] Connector 1.1 for SAP BW の 3 種類のコンポーネントについてのトピックが含まれています。  
   
 -   SAP BW 接続マネージャー  

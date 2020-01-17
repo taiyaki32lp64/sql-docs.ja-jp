@@ -10,15 +10,15 @@ helpviewer_keywords:
 - data formats [SQL Server], character
 - character formats [SQL Server]
 ms.assetid: d925e66a-1a73-43cd-bc06-1cbdf8174a4d
-author: douglaslMS
-ms.author: douglasl
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: e25c975dca01ee2787a598afbe1a67f09fbab0ce
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: ab658be26dc8ccbdd4e760d0b1bc835ace3b2c38
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48078442"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66011666"
 ---
 # <a name="use-character-format-to-import-or-export-data-sql-server"></a>文字形式を使用したデータのインポートまたはエクスポート (SQL Server)
   後で別のプログラムで使われるテキスト ファイルにデータを一括エクスポートする場合や、別のプログラムにより生成されたテキスト ファイルからデータを一括インポートする場合は、文字形式の使用をお勧めします。  
@@ -42,7 +42,7 @@ ms.locfileid: "48078442"
   
 -   変換中に拡張文字が失われないようにするには、Unicode 文字形式を使用するか、コード ページを指定します。  
   
--   `sql_variant` データが文字形式ファイルに保存される場合は、メタデータなしで保存されます。 各データ値に変換されます`char`暗黙的なデータ変換の規則に従って、書式設定します。 `sql_variant` 型の列にインポートされるときは、`char` 型のデータとしてインポートされます。 以外のデータ型の列にインポートすると`sql_variant`からデータを変換`char`暗黙的な変換を使用しています。 詳細については、「[データ型の変換 &#40;データベース エンジン&#41;](/sql/t-sql/data-types/data-type-conversion-database-engine)」を参照してください。  
+-   `sql_variant` データが文字形式ファイルに保存される場合は、メタデータなしで保存されます。 各データ値は、暗黙的なデータ変換の規則に従って `char` 形式に変換されます。 `sql_variant` 型の列にインポートされるときは、`char` 型のデータとしてインポートされます。 `sql_variant` 型以外のデータ型の列にインポートされるときは、暗黙の変換を使用して `char` から変換されます。 詳細については、「[データ型の変換 &#40;データベース エンジン&#41;](/sql/t-sql/data-types/data-type-conversion-database-engine)」を参照してください。  
   
 -   **Bcp**ユーティリティ エクスポート`money`コンマの区切り記号などの任意の桁区切り記号のされず、小数点後以下 4 桁の文字形式データ ファイルとしての値。 たとえば、値 1,234,567.123456 を含む `money` 型の列は、文字列 1234567.1235 としてデータ ファイルに一括エクスポートされます。  
   
@@ -56,7 +56,7 @@ ms.locfileid: "48078442"
 |**bcp**|**-c**|により、 **bcp**ユーティリティが文字データを使用する<sup>。1</sup>|  
 |BULK INSERT|DATAFILETYPE **='char'**|データの一括インポート時に文字形式を使用します。|  
   
- <sup>1</sup>文字を読み込めません (**-c**) の旧バージョンと互換性のある形式にデータを[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]クライアントを使用して、 **-v**スイッチします。 詳細については、「 [以前のバージョンの SQL Server からのネイティブ形式データおよび文字形式データのインポート](import-native-and-character-format-data-from-earlier-versions-of-sql-server.md)」をご覧ください。  
+ <sup>1</sup>文字を読み込めません ( **-c**) の旧バージョンと互換性のある形式にデータを[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]クライアントを使用して、 **-v**スイッチします。 詳細については、「 [以前のバージョンの SQL Server からのネイティブ形式データおよび文字形式データのインポート](import-native-and-character-format-data-from-earlier-versions-of-sql-server.md)」をご覧ください。  
   
  詳細については、[bcp ユーティリティ](../../tools/bcp-utility.md)、「[BULK INSERT &#40;Transact-SQL&#41;](/sql/t-sql/statements/bulk-insert-transact-sql)」、または「[OPENROWSET &#40;Transact-SQL&#41;](/sql/t-sql/functions/openrowset-transact-sql)」を参照してください。  
   
@@ -97,7 +97,7 @@ SELECT Col1,Col2,Col3 FROM myTestCharData
 |修飾子|説明|  
 |----------------|-----------------|  
 |**-c**|文字形式を指定します。|  
-|**-t** `,`|コンマ (`,`) をフィールド ターミネータとして指定します。<br /><br /> 注: 既定のフィールド ターミネータはタブ文字 (\t) です。 詳細については、「 [フィールド ターミネータと行ターミネータの指定 &#40;SQL Server&#41;](specify-field-and-row-terminators-sql-server.md)」を参照してください。|  
+|**-t** `,`|コンマ (`,`) をフィールド ターミネータとして指定します。<br /><br /> 注:既定のフィールド ターミネータは、タブ文字 (\t) です。 詳細については、「 [フィールド ターミネータと行ターミネータの指定 &#40;SQL Server&#41;](specify-field-and-row-terminators-sql-server.md)」を参照してください。|  
 |**-T**|**bcp** ユーティリティが統合セキュリティを使用した信頼関係接続を使用して [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] に接続することを指定します。 **-T** を指定しない場合、正常にログインするには **-U** と **-P** を指定する必要があります。|  
   
  次の例では、文字形式のデータを `myTestCharData` テーブルから `myTestCharData-c.Dat` という名前の新しいデータ ファイルに一括エクスポートします。このデータ ファイルでは、フィールド ターミネータとしてコンマ (,) が使用されます。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows コマンド プロンプトで、次のように入力します。  

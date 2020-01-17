@@ -12,16 +12,15 @@ helpviewer_keywords:
 - tuning automated administration [SQL Server]
 - monitoring performance [SQL Server], automated administration
 ms.assetid: 671fed35-3859-4b0d-8f38-4dd07436857e
-author: stevestein
-ms.author: sstein
-manager: craigg
+author: markingmyname
+ms.author: maghan
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 4a4623b604e052f9e98e3f1897a97afa8bedabd7
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 4cbe403081080e9550052644c2b1e25d6455ce9b
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47745350"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68261109"
 ---
 # <a name="tune-automated-administration-across-an-enterprise"></a>企業全体の自動管理のチューニング
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]

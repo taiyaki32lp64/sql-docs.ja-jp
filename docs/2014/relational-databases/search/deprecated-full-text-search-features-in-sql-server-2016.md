@@ -11,15 +11,15 @@ helpviewer_keywords:
 - full-text search [SQL Server], deprecated features
 - full-text queries [SQL Server], proximity
 ms.assetid: ab0d799c-ba79-4459-837b-c4862730dafd
-author: douglaslMS
-ms.author: douglasl
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 2b39faa18a310a652b9a0b52c5c50c55060ab0f2
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 1a49d7db68fe32d9794e89db66020d7f90555508
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52799772"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66011399"
 ---
 # <a name="deprecated-full-text-search-features-in-sql-server-2014"></a>SQL Server 2014 の非推奨のフルテキスト検索機能
   このトピックでは、[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] でまだ使用できるものの、非推奨のフルテキスト検索機能について説明します。 これらの機能は [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の今後のリリースで削除される予定です。 非推奨の機能を新しいアプリケーションで使用しないでください。  
@@ -31,8 +31,8 @@ ms.locfileid: "52799772"
   
 |非推奨の機能|代替|機能名|機能 ID|  
 |------------------------|-----------------|------------------|----------------|  
-|FULLTEXTCATALOGPROPERTY プロパティLogSize|[なし] :|FULLTEXTCATALOGPROPERTY **('LogSize')**|211|  
-|FULLTEXTSERVICEPROPERTY プロパティ<br /><br /> ConnectTimeout<br /><br /> DataTimeout|[なし] :|FULLTEXTSERVICEPROPERTY **('ConnectTimeout')**<br /><br /> FULLTEXTSERVICEPROPERTY **('DataTimeout'**)|210<br /><br /> 209|  
+|FULLTEXTCATALOGPROPERTY プロパティ:LogSize|[なし] :|FULLTEXTCATALOGPROPERTY **('LogSize')**|211|  
+|FULLTEXTSERVICEPROPERTY プロパティ<br /><br /> ConnectTimeout<br /><br /> DataTimeout|[なし] :|FULLTEXTSERVICEPROPERTY **('ConnectTimeout')**<br /><br /> FULLTEXTSERVICEPROPERTY **('DataTimeout'** )|210<br /><br /> 209|  
 |sp_fulltext_catalog|CREATE FULL CATALOG<br /><br /> ALTER FULLTEXT CATALOG<br /><br /> DROP FULLTEXT CATALOG|sp_fulltext_catalog|84|  
 |sp_fulltext_column<br /><br /> sp_fulltext_database<br /><br /> sp_fulltext_table|CREATE FULL INDEX<br /><br /> ALTER FULLTEXT INDEX<br /><br /> DROP FULLTEXT INDEX|sp_fulltext_column<br /><br /> sp_fulltext_database<br /><br /> sp_fulltext_table|86<br /><br /> 87<br /><br /> 85|  
 |sp_help_fulltext_catalogs<br /><br /> sp_help_fulltext_catalog_components<br /><br /> sp_help_fulltext_catalogs_cursor<br /><br /> sp_help_fulltext_columns<br /><br /> sp_help_fulltext_columns_cursor<br /><br /> sp_help_fulltext_tables<br /><br /> sp_help_fulltext_tables_cursor|sys.fulltext_catalogs<br /><br /> sys.fulltext_index_columns<br /><br /> sys.fulltext_indexes|sp_help_fulltext_catalogs<br /><br /> sp_help_fulltext_catalog_components<br /><br /> sp_help_fulltext_catalogs_cursor<br /><br /> sp_help_fulltext_columns<br /><br /> sp_help_fulltext_columns_cursor<br /><br /> sp_help_fulltext_table<br /><br /> sp_help_fulltext_tables_cursor|88<br /><br /> 203<br /><br /> 90<br /><br /> 92<br /><br /> 93<br /><br /> 91<br /><br /> 89|  
@@ -48,9 +48,9 @@ ms.locfileid: "52799772"
   
 |非推奨の機能|代替|機能名|機能 ID|  
 |------------------------|-----------------|------------------|----------------|  
-|CONTAINS および CONTAINSTABLE 汎用 NEAR 演算子<br /><br /> {<simple_term> &#124; <prefix_term>}<br /><br /> {<br /><br /> { { NEAR &#124; ~ }    {<simple_term> &#124; <prefix_term>} } [...*n*]<br /><br /> }|カスタム NEAR 演算子<br /><br /> NEAR(<br /><br /> {   {<simple_term> &#124; <prefix_term>} [ ,...*n* ]<br /><br /> &#124; ( {<simple_term> &#124; <prefix_term>} [,...*n*] )<br /><br /> [、\<距離 > [、\<順序 >]<br /><br /> }<br /><br /> )<br /><br /> \<距離 >:: = {*整数* &#124; **最大**}<br /><br /> \<順序 >:: = {TRUE &#124; **FALSE**}|FULLTEXT_OLD_NEAR_SYNTAX|247|  
+|CONTAINS および CONTAINSTABLE 汎用 NEAR 演算子<br /><br /> {<simple_term> &#124; <prefix_term>}<br /><br /> {<br /><br /> { { NEAR &#124; ~ }    {<simple_term> &#124; <prefix_term>} } [...*n*]<br /><br /> }|カスタム NEAR 演算子<br /><br /> NEAR(<br /><br /> {   {<simple_term> &#124; <prefix_term>} [ ,...*n* ]<br /><br /> &#124; ( {<simple_term> &#124; <prefix_term>} [,...*n*] )<br /><br /> [,\<distance> [,\<order>] ]<br /><br /> }<br /><br /> )<br /><br /> \<distance> ::= {*integer* &#124; **MAX**}<br /><br /> \<order> ::= {TRUE &#124; **FALSE**}|FULLTEXT_OLD_NEAR_SYNTAX|247|  
 |CREATE FULLTEXT CATALOG オプション<br /><br /> IN PATH '*rootpath*'<br /><br /> ON FILEGROUP *filegroup*|[なし] :|CREATE FULLTEXT CATLOG IN PATH<br /><br /> なし*|237<br /><br /> [なし] :<sup>*</sup>|  
-|DATABASEPROPERTYEX プロパティ:IsFullTextEnabled|[なし] :|DATABASEPROPERTYEX **('IsFullTextEnabled')**|202|  
+|DATABASEPROPERTYEX プロパティ: IsFullTextEnabled|[なし] :|DATABASEPROPERTYEX **('IsFullTextEnabled')**|202|  
 |sp_detach_db オプション<br /><br /> [ @keepfulltextindexfile = ] '*KeepFulltextIndexFile*'|[なし] :|sp_detach_db @keepfulltextindexfile|226|  
 |sp_fulltext_service アクションの値: resource_usage には機能がありません。|なし|sp_fulltext_service @action=resource_usage|200|  
   

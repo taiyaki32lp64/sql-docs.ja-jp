@@ -1,82 +1,75 @@
-items:
 - name: テーブル モデルのプログラミング
   href: tabular-model-programming-for-compatibility-levels-1050-through-1103.md
 - name: ビジネス インテリジェンス向けの CSDL 注釈 (CSDLBI)
-  href: https://docs.microsoft.com/bi-reference/csdl/csdl-annotations-for-business-intelligence-csdlbi
+  href: 'https://docs.microsoft.com/bi-reference/csdl/csdl-annotations-for-business-intelligence-csdlbi'
   items:
-  - name: CSDLBI の概念
-    href: https://docs.microsoft.com/bi-reference/csdl/csdlbi-concepts
-  - name: レポート デザインの CSDLBI 属性
-    href: https://docs.microsoft.com/bi-reference/csdl/csdlbi-attributes-for-report-design
+    - name: CSDLBI の概念
+      href: 'https://docs.microsoft.com/bi-reference/csdl/csdlbi-concepts'
+    - name: レポート デザインの CSDLBI 属性
+      href: 'https://docs.microsoft.com/bi-reference/csdl/csdlbi-attributes-for-report-design'
 - name: テーブル オブジェクト モデルについて
   href: representation/understanding-tabular-object-model-at-levels-1050-through-1103.md
   items:
-  - name: データベース表現
-    href: representation/database-representation-tabular.md
-  - name: 接続表現
-    href: representation/connection-representation-tabular.md
-  - name: テーブル表現
-    href: representation/tables-representation-tabular.md
-  - name: 計算列表現
-    href: representation/tables-calculated-column-representation.md
-  - name: 計算されるメジャー表現
-    href: representation/tables-calculated-measure-representation.md
-  - name: 階層表現
-    href: representation/tables-hierarchy-representation.md
-  - name: 主要業績評価指標表現
-    href: representation/tables-key-performance-indicator-representation.md
-  - name: パーティション表現
-    href: representation/tables-partition-representation.md
-  - name: リレーションシップ表現
-    href: representation/relationship-representation-tabular.md
-  - name: パースペクティブ表現
-    href: representation/perspective-representation-tabular.md
-  - name: テーブル モデルのクエリ
-    href: representation/querying-a-tabular-model.md
+    - name: データベース表現
+      href: representation/database-representation-tabular.md
+    - name: 接続表現
+      href: representation/connection-representation-tabular.md
+    - name: テーブル表現
+      href: representation/tables-representation-tabular.md
+    - name: 計算列表現
+      href: representation/tables-calculated-column-representation.md
+    - name: 計算されるメジャー表現
+      href: representation/tables-calculated-measure-representation.md
+    - name: 階層表現
+      href: representation/tables-hierarchy-representation.md
+    - name: 主要業績評価指標表現
+      href: representation/tables-key-performance-indicator-representation.md
+    - name: パーティション表現
+      href: representation/tables-partition-representation.md
+    - name: リレーションシップ表現
+      href: representation/relationship-representation-tabular.md
+    - name: パースペクティブ表現
+      href: representation/perspective-representation-tabular.md
+    - name: テーブル モデルのクエリ
+      href: representation/querying-a-tabular-model.md
 - name: CSDLBI テクニカル リファレンス
-  href: https://docs.microsoft.com/bi-reference/csdl/technical-reference-for-bi-annotations-to-csdl
+  href: 'https://docs.microsoft.com/bi-reference/csdl/technical-reference-for-bi-annotations-to-csdl'
   items:
-  - name: AssociationSet 要素 (CSDLBI)
-    href: https://docs.microsoft.com/bi-reference/csdl/associationset-element-csdlbi
-  - name: BaseProperty 要素 (CSDLBI)
-    href: https://docs.microsoft.com/bi-reference/csdl/baseproperty-element-csdlbi
-  - name: DefaultDetails 要素 (CSDLBI)
-    href: https://docs.microsoft.com/bi-reference/csdl/defaultdetails-element-csdlbi
-  - name: DisplayKey 要素 (CSDLBI)
-    href: https://docs.microsoft.com/bi-reference/csdl/displaykey-element-csdlbi
-  - name: EntityContainer 要素 (CSDLBI)
-    href: https://docs.microsoft.com/bi-reference/csdl/entitycontainer-element-csdlbi
-  - name: EntitySet 要素 (CSDLBI)
-    href: https://docs.microsoft.com/bi-reference/csdl/entityset-element-csdlbi
-  - name: EntityType 要素 (CSDLBI)
-    href: https://docs.microsoft.com/bi-reference/csdl/entitytype-element-csdlbi
-  - name: Hierarchy 要素 (CSDLBI)
-    href: https://docs.microsoft.com/bi-reference/csdl/hierarchy-element-csdlbi
-  - name: KPI 要素 (CSDLBI)
-    href: https://docs.microsoft.com/bi-reference/csdl/kpi-element-csdlbi
-  - name: KpiGoal 要素 (CSDLBI)
-    href: https://docs.microsoft.com/bi-reference/csdl/kpigoal-element-csdlbi
-  - name: KpiStatus 要素 (CSDLBI)
-    href: https://docs.microsoft.com/bi-reference/csdl/kpistatus-element-csdlbi
-  - name: Level 要素 (CSDLBI)
-    href: https://docs.microsoft.com/bi-reference/csdl/level-element-csdlbi
-  - name: Measure 要素 (CSDLBI)
-    href: https://docs.microsoft.com/bi-reference/csdl/measure-element-csdlbi
-  - name: Member 要素 (CSDLBI)
-    href: https://docs.microsoft.com/bi-reference/csdl/member-element-csdlbi
-  - name: MemberRef 要素 (CSDLBI)
-    href: https://docs.microsoft.com/bi-reference/csdl/memberref-element-csdlbi
-  - name: NavigationProperty 要素 (CSDLBI)
-    href: https://docs.microsoft.com/bi-reference/csdl/navigationproperty-element-csdlbi
-  - name: Property 要素 (CSDLBI)
-    href: https://docs.microsoft.com/bi-reference/csdl/property-element-csdlbi
-  - name: PropertyRef 要素 (CSDLBI)
-    href: https://docs.microsoft.com/bi-reference/csdl/propertyref-element-csdlbi
+    - name: AssociationSet 要素 (CSDLBI)
+      href: 'https://docs.microsoft.com/bi-reference/csdl/associationset-element-csdlbi'
+    - name: BaseProperty 要素 (CSDLBI)
+      href: 'https://docs.microsoft.com/bi-reference/csdl/baseproperty-element-csdlbi'
+    - name: DefaultDetails 要素 (CSDLBI)
+      href: 'https://docs.microsoft.com/bi-reference/csdl/defaultdetails-element-csdlbi'
+    - name: DisplayKey 要素 (CSDLBI)
+      href: 'https://docs.microsoft.com/bi-reference/csdl/displaykey-element-csdlbi'
+    - name: EntityContainer 要素 (CSDLBI)
+      href: 'https://docs.microsoft.com/bi-reference/csdl/entitycontainer-element-csdlbi'
+    - name: EntitySet 要素 (CSDLBI)
+      href: 'https://docs.microsoft.com/bi-reference/csdl/entityset-element-csdlbi'
+    - name: EntityType 要素 (CSDLBI)
+      href: 'https://docs.microsoft.com/bi-reference/csdl/entitytype-element-csdlbi'
+    - name: Hierarchy 要素 (CSDLBI)
+      href: 'https://docs.microsoft.com/bi-reference/csdl/hierarchy-element-csdlbi'
+    - name: KPI 要素 (CSDLBI)
+      href: 'https://docs.microsoft.com/bi-reference/csdl/kpi-element-csdlbi'
+    - name: KpiGoal 要素 (CSDLBI)
+      href: 'https://docs.microsoft.com/bi-reference/csdl/kpigoal-element-csdlbi'
+    - name: KpiStatus 要素 (CSDLBI)
+      href: 'https://docs.microsoft.com/bi-reference/csdl/kpistatus-element-csdlbi'
+    - name: Level 要素 (CSDLBI)
+      href: 'https://docs.microsoft.com/bi-reference/csdl/level-element-csdlbi'
+    - name: Measure 要素 (CSDLBI)
+      href: 'https://docs.microsoft.com/bi-reference/csdl/measure-element-csdlbi'
+    - name: Member 要素 (CSDLBI)
+      href: 'https://docs.microsoft.com/bi-reference/csdl/member-element-csdlbi'
+    - name: MemberRef 要素 (CSDLBI)
+      href: 'https://docs.microsoft.com/bi-reference/csdl/memberref-element-csdlbi'
+    - name: NavigationProperty 要素 (CSDLBI)
+      href: 'https://docs.microsoft.com/bi-reference/csdl/navigationproperty-element-csdlbi'
+    - name: Property 要素 (CSDLBI)
+      href: 'https://docs.microsoft.com/bi-reference/csdl/property-element-csdlbi'
+    - name: PropertyRef 要素 (CSDLBI)
+      href: 'https://docs.microsoft.com/bi-reference/csdl/propertyref-element-csdlbi'
 - name: IMDEmbedded インターフェイス
   href: imdembeddeddata-interface.md
-ms.openlocfilehash: febd610d6863a751ab484adec7f89cf33fd11d44
-ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
-ms.translationtype: HT
-ms.contentlocale: ja-JP
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50148057"

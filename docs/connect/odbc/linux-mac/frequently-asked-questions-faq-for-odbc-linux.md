@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 65bfd6d2-c83d-4528-a5e1-a85b125a4f4a
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: d2f363fecebfe9a4ee4e586a5c5df703b47aa0e6
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.openlocfilehash: cc31a8ae385f2dbb28db30b299377ab5b38058f9
+ms.sourcegitcommit: e821cd8e5daf95721caa1e64c2815a4523227aa4
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51602982"
+ms.lasthandoff: 08/01/2019
+ms.locfileid: "68702776"
 ---
 # <a name="frequently-asked-questions-faq-for-odbc-linux-and-macos"></a>ODBC Linux と macOS のよく寄せられる質問 (FAQ)
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
@@ -30,21 +29,21 @@ ms.locfileid: "51602982"
   
 **このバージョンのドライバーがサポートしている [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] の機能はどれですか?**
 
-ODBC Driver on Linux および macOS は、LocalDB を除く [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] のすべてのサーバー機能をサポートしています。 詳細については[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]サポートについては、「 [Programming Guidelines](../../../connect/odbc/linux-mac/programming-guidelines.md)します。  
+ODBC Driver on Linux および macOS は、LocalDB を除く [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] のすべてのサーバー機能をサポートしています。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]サポートされている機能の詳細については、「[プログラミングのガイドライン](../../../connect/odbc/linux-mac/programming-guidelines.md)」を参照してください。  
   
 **ドライバーは Kerberos 認証をサポートしますか?**  
-可能。 既存の Kerberos 環境のセットアップがあればを使用してサーバーに接続できる必要があります、 `Trusted_Connection=Yes` DSN または接続文字列オプションです。 詳細については、「[統合認証を使用する](../../../connect/odbc/linux-mac/using-integrated-authentication.md)」を参照してください。  
+可能。 既存の Kerberos 環境を設定している場合は、 `Trusted_Connection=Yes` DSN または接続文字列オプションを使用してサーバーに接続できます。 詳細については、「[統合認証を使用する](../../../connect/odbc/linux-mac/using-integrated-authentication.md)」を参照してください。  
   
 **アプリケーションではどの Unicode エンコードを使用すればよいですか?**  
-SQL_CHAR データには UTF-8、SQL_WCHAR データには UTF-16 を使用してください。  
+SQL_CHAR データには UTF-8、SQL_WCHAR データには UTF-16 を使用してください。 システムのロケールとドライバーのバージョンによっては、いくつかのエンコーディングのいずれかで UTF-8 以外のデータがサポートされる場合もあります。 詳細については、「[プログラミングのガイドライン](../../../connect/odbc/linux-mac/programming-guidelines.md)」を参照してください。
 
 **ドライバーの試用および評価のために、ダウンロードしてドライバーで実行できる ODBC サンプルはありますか?**
 
-サンプルについては、「 [Use Existing MSDN C++ ODBC Samples for the ODBC Driver on Linux (Linux の ODBC ドライバーに既存の MSDN C++ ODBC サンプルを使用する)](https://blogs.msdn.com/b/sqlblog/archive/2012/01/26/use-existing-msdn-c-odbc-samples-for-microsoft-linux-odbc-driver.aspx) 」を参照してください。 またこれは、macOS の ODBC ドライバーに当てはまります。 
+サンプルについては、「 [Use Existing MSDN C++ ODBC Samples for the ODBC Driver on Linux (Linux の ODBC ドライバーに既存の MSDN C++ ODBC サンプルを使用する)](https://blogs.msdn.com/b/sqlblog/archive/2012/01/26/use-existing-msdn-c-odbc-samples-for-microsoft-linux-odbc-driver.aspx) 」を参照してください。 これは macOS ODBC ドライバーにも適用できます。 
 
-**Linux で ODBC ドライバーは、または macOS のオープン ソースですか。**
+**ODBC ドライバーは、Linux または macOS のオープンソースですか。**
 
-Linux と macOS の ODBC ドライバーはオープン ソース製品ではありません。  
+いいえ。 Linux および macOS の ODBC ドライバーは、オープンソース製品ではありません。  
 
 ## <a name="see-also"></a>参照
 [Linux および macOS に Microsoft ODBC Driver for SQL Server をインストールする](../../../connect/odbc/linux-mac/installing-the-microsoft-odbc-driver-for-sql-server.md)

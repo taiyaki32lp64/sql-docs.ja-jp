@@ -4,22 +4,21 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords:
 - deploying packages [Integration Services], deployment utility
 - deployment utility [Integration Services]
 ms.assetid: 354322a4-ae8c-4d92-8e71-42d29dbd0614
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: fe7bd725bc7fc9be7289c4834a3df8f44e36c41b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: e5f7959496cfa2b473fbf5c500f424647df0a1c7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48102202"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66060228"
 ---
 # <a name="create-a-deployment-utility"></a>Create a Deployment Utility
   パッケージ配置の最初の手順は、[!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] プロジェクトの配置ユーティリティを作成することです。 配置ユーティリティは、別のサーバーに [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] プロジェクトのパッケージを配置する際に必要となるファイルを格納したフォルダーです。 配置ユーティリティは [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] プロジェクトが格納されているコンピューター上に作成されます。  
@@ -34,7 +33,7 @@ ms.locfileid: "48102202"
 |--------------|-----------------|  
 |AllowConfigurationChange|配置の際に構成を更新するかどうかを指定する値。|  
 |CreateDeploymentUtility|プロジェクトのビルド時にパッケージ配置ユーティリティを作成するかどうかを指定する値。 配置ユーティリティを作成するには、このプロパティが `True` である必要があります。|  
-|DeploymentOutputPath|配置ユーティリティの場所。[!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] プロジェクトから見た相対的な位置。|  
+|DeploymentOutputPath|配置ユーティリティの場所。 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] プロジェクトから見た相対的な位置。|  
   
  [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] プロジェクトをビルドすると、\<プロジェクト名>.SSISDeploymentManifest.xml というマニフェスト ファイルが作成され、プロジェクトのパッケージのコピーおよびパッケージの依存関係と共に、プロジェクトの bin\Deployment フォルダーまたは DeploymentOutputPath プロパティで指定された場所に格納されます。 マニフェスト ファイルには、プロジェクトに含まれるパッケージ、パッケージの構成、およびその他のファイルの一覧が記述されます。  
   
@@ -46,11 +45,11 @@ ms.locfileid: "48102202"
   
 2.  プロジェクトを右クリックして、 **[プロパティ]** をクリックします。  
   
-3.  **[\<プロジェクト名> プロパティ ページ]** ダイアログ ボックスで、**[配置ユーティリティ]** をクリックします。  
+3.  **[\<プロジェクト名> プロパティ ページ]** ダイアログ ボックスで、 **[配置ユーティリティ]** をクリックします。  
   
 4.  パッケージが配置されている場合は、パッケージの構成を更新するには、設定**AllowConfigurationChanges**に`True`します。  
   
-5.  設定`CreateDeploymentUtility`に`True`します。  
+5.  `CreateDeploymentUtility` を `True` に設定します。  
   
 6.  必要に応じて、`DeploymentOutputPath` プロパティを変更して、配置ユーティリティの場所を更新します。  
   
@@ -60,10 +59,10 @@ ms.locfileid: "48102202"
   
 9. ビルドの進捗状況とエラーが **[出力]** ウィンドウに表示されます。  
   
-## <a name="see-also"></a>参照  
- [パッケージの構成](../../2014/integration-services/package-configurations.md)   
- [パッケージ構成を作成します。](../../2014/integration-services/create-package-configurations.md)   
- [配置ユーティリティを使用してパッケージを配置します。](../../2014/integration-services/deploy-packages-by-using-the-deployment-utility.md)   
+## <a name="see-also"></a>関連項目  
+ [[パッケージ構成]](../../2014/integration-services/package-configurations.md)   
+ [パッケージ構成を作成する](../../2014/integration-services/create-package-configurations.md)   
+ [配置ユーティリティを使用してパッケージを配置する](../../2014/integration-services/deploy-packages-by-using-the-deployment-utility.md)   
  [パッケージの配置&#40;SSIS&#41;](packages/legacy-package-deployment-ssis.md)  
   
   

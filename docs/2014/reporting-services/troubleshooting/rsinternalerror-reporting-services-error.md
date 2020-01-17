@@ -4,21 +4,20 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 helpviewer_keywords:
 - rsInternalError
 ms.assetid: 52613d52-fc78-4870-93f0-7d393ab9c335
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: c7aa0e00646c8fb85f75581286d080dd722f6436
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 302772c87a1e1d4e5cf3ab1e7c5a304e6100b785
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56029444"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66099154"
 ---
 # <a name="rsinternalerror---reporting-services-error"></a>rsInternalError - Reporting Services エラー
     

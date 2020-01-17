@@ -11,11 +11,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 6e016b8fb3986b4fa9431a1d223335affa72d3d5
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52818122"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63188561"
 ---
 # <a name="monitor-instances-of-sql-server-in-the-sql-server-utility"></a>SQL Server ユーティリティでの SQL Server のインスタンスの監視
   

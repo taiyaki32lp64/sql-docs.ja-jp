@@ -15,21 +15,20 @@ dev_langs:
 helpviewer_keywords:
 - RADIANS function
 ms.assetid: e9f69951-ecda-45d9-8909-dcb716b1b1c0
-author: MashaMSFT
-ms.author: mathoma
-manager: craigg
+author: MikeRayMSFT
+ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 4a14f440f8f38c2475d83aa6959e535150e0ac2b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 05093c47ea7e05845f237e0e7c9c3df2c7d59fd6
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47627060"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67914240"
 ---
 # <a name="radians-transact-sql"></a>RADIANS (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-  指定した数値式 (角度) のラジアンを返します。  
+  数値式を角度で入力すると、ラジアンを返します。  
   
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -64,7 +63,7 @@ GO
 (1 row(s) affected)  
 ```  
   
-### <a name="b-using-radians-to-return-the-equivalent-angle-of-a-float-expression"></a>B. RADIANS を使って float 式と同等の角度を返す  
+### <a name="b-using-radians-to-return-the-equivalent-angle-of-a-float-expression"></a>B. RADIANS を使って float 式と同等の角度を返す。  
  次の例では `float` 式を取得し、指定した角度の `RADIANS` を返します。  
   
 ```  
@@ -122,11 +121,11 @@ The RADIANS of the angle is: 3.44022
   
 ## <a name="see-also"></a>参照  
  [CAST および CONVERT &#40;Transact-SQL&#41;](../../t-sql/functions/cast-and-convert-transact-sql.md)   
- [10 進数の数値と #40 です。TRANSACT-SQL と #41 です。](../../t-sql/data-types/decimal-and-numeric-transact-sql.md)   
- [float、real および #40 です。TRANSACT-SQL と #41 です。](../../t-sql/data-types/float-and-real-transact-sql.md)   
- [int、bigint、smallint 型、および tinyint と #40 です。TRANSACT-SQL と #41 です。](../../t-sql/data-types/int-bigint-smallint-and-tinyint-transact-sql.md)   
+ [decimal 型と numeric 型 &#40;Transact-SQL&#41;](../../t-sql/data-types/decimal-and-numeric-transact-sql.md)   
+ [float と real &#40;Transact-SQL&#41;](../../t-sql/data-types/float-and-real-transact-sql.md)   
+ [int、bigint、smallint、tinyint &#40;Transact-SQL&#41;](../../t-sql/data-types/int-bigint-smallint-and-tinyint-transact-sql.md)   
  [数学関数 &#40;Transact-SQL&#41;](../../t-sql/functions/mathematical-functions-transact-sql.md)   
- [money および smallmoney & #40 です。TRANSACT-SQL と #41 です。](../../t-sql/data-types/money-and-smallmoney-transact-sql.md)  
+ [money および smallmoney &#40;Transact-SQL&#41;](../../t-sql/data-types/money-and-smallmoney-transact-sql.md)  
   
   
 

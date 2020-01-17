@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 3aae1107-2f81-413c-8eda-ef96c3df1b8a
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 7cd049d17c3050937d288aca7b6a353c15421386
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d9b0886302a48f7b9b3ee8e261014c0784d51fc0
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47749606"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67930414"
 ---
 # <a name="catalog-example-vb"></a>カタログの例 (VB)
 この Visual Basic プロジェクトでは、MDX を使用して新しいキューブを作成します。 次に、Microsoft Word 文書内のキューブの構造を説明します。  

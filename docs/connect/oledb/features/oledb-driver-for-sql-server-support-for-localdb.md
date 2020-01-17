@@ -10,13 +10,12 @@ ms.technology: connectivity
 ms.topic: reference
 author: pmasl
 ms.author: pelopes
-manager: craigg
-ms.openlocfilehash: 6dc2acb8239c8c4002094ffb6003cb1b9a5fe40e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 64f39be7193fdbfc72b009f58b4fe0047eceef1e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47768960"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67989027"
 ---
 # <a name="ole-db-driver-for-sql-server-support-for-localdb"></a>LocalDB 用 OLE DB Driver for SQL Server のサポート
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -34,7 +33,7 @@ ms.locfileid: "47768960"
   
  要約すると、LocalDB では次の操作を実行できます。  
   
--   使用**sqllocaldb.exe は**を既定のインスタンスの名前を検出します。  
+-   **Sqllocaldb i**を使用して、既定のインスタンスの名前を検出します。  
   
 -   **AttachDBFilename** 接続文字列キーワードを使用して、サーバーをアタッチするデータベース ファイルを指定できます。 **AttachDBFilename** を使用するときに、**Database** 接続文字列キーワードを使用してデータベース名を指定しなかった場合、データベースはアプリケーションの終了時に LocalDB インスタンスから削除されます。  
   
@@ -44,7 +43,7 @@ ms.locfileid: "47768960"
 SERVER=(localdb)\v11.0  
 ```  
   
- 必要に応じて、sqllocaldb.exe を使用して LocalDB インスタンスを作成できます。 また、sqlcmd.exe を使用して、LocalDB インスタンスのデータベースの追加と変更を実行できます。 たとえば、 **sqlcmd-s (localdb) \v11.0**します。  
+ 必要に応じて、sqllocaldb.exe を使用して LocalDB インスタンスを作成できます。 また、sqlcmd.exe を使用して、LocalDB インスタンスのデータベースの追加と変更を実行できます。 たとえば、 **sqlcmd-S (localdb) \ v11.0**のようになります。  
   
 ## <a name="see-also"></a>参照  
  [OLE DB Driver for SQL Server の機能](../../oledb/features/oledb-driver-for-sql-server-features.md)  

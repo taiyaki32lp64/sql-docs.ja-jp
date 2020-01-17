@@ -12,14 +12,14 @@ helpviewer_keywords:
 - removing encryption keys
 - resetting encryption keys
 ms.assetid: 201afe5f-acc9-4a37-b5ec-121dc7df2a61
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: d910518c2811877920c1656b36a771ea6aebc61b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 5bf83ea3eb7ed7f4ef28872b964449d2924aab48
+ms.sourcegitcommit: 312b961cfe3a540d8f304962909cd93d0a9c330b
+ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47747200"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73593533"
 ---
 # <a name="ssrs-encryption-keys---delete-and-re-create-encryption-keys"></a>SSRS の暗号化キー - 暗号化キーの削除と再作成
   暗号化キーの削除および再作成は、日常の暗号化キー メンテナンスには該当しない作業です。 レポート サーバーに対する特定の脅威への対処、またはレポート サーバー データベースにアクセスできなくなったときの最後の手段としてこの作業を行ってください。  
@@ -106,7 +106,7 @@ ms.locfileid: "47747200"
   
 1.  各共有データ ソースに対して、接続文字列を再入力する必要があります。  
   
-2.  保存された資格情報を使用するレポートおよび共有データ ソースごとに、ユーザー名とパスワードを再入力して、これらの情報を保存する必要があります。 詳細については、 [オンライン ブックの「](../../reporting-services/report-data/specify-credential-and-connection-information-for-report-data-sources.md) レポート データ ソースに関する資格情報と接続情報を指定する [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 」を参照してください。  
+2.  保存された資格情報を使用するレポートおよび共有データ ソースごとに、ユーザー名とパスワードを再入力して、これらの情報を保存する必要があります。 詳細については、「 [レポート データ ソースに関する資格情報と接続情報を指定する](../../reporting-services/report-data/specify-credential-and-connection-information-for-report-data-sources.md)」をご覧ください。  
   
 3.  各データ ドリブン サブスクリプションを開いて、資格情報をサブスクリプション データベースに再入力します。  
   

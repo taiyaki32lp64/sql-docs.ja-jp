@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: c0dd4a0f-478d-4c5e-b5d5-7535f211d064
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 4c9e05a45b5f035a500e210c991a33216be318ea
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 8f4efddad1b55ce57c62ce52418539ec06599bb8
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47633450"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67925910"
 ---
 # <a name="boundaries-of-a-recordset"></a>レコードセットの境界
 **レコード セット**サポート、 **BOF**と**EOF**プロパティに、データセットの先頭と末尾をそれぞれ含めます。 考えることができます**BOF**と**EOF**先頭と末尾の位置「ファントム」のレコードとして、 **Recordset**します。 カウント**BOF**と**EOF**、サンプル**レコード セット**ようになりますようになりました。  

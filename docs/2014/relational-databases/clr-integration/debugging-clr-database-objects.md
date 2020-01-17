@@ -17,11 +17,11 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 70b092f81030c7905fe1d771844369f2d59317b9
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53354171"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62919016"
 ---
 # <a name="debugging-clr-database-objects"></a>CLR データベース オブジェクトのデバッグ
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] では、データベース内の [!INCLUDE[tsql](../../../includes/tsql-md.md)] オブジェクトと CLR (共通言語ランタイム) オブジェクトのデバッグがサポートされます。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] でのデバッグの重要な特徴は、セットアップと使用が容易になったことと、SQL Server デバッガーと Microsoft Visual Studio デバッガーが統合されたことです。 さらに、複数の言語にまたがったデバッグを実行できます。 ユーザーは [!INCLUDE[tsql](../../../includes/tsql-md.md)] から CLR オブジェクト (またはその逆) にシームレスにステップインできます。 SQL Server Management Studio の Transact-SQL デバッガーを使用してマネージド データベース オブジェクトをデバッグすることはできませんが、Visual Studio のデバッガーを使用すると、このオブジェクトをデバッグすることができます。 Visual Studio でのマネージド データベース オブジェクトのデバッグでは、サーバーで実行するルーチン内の "step into" ステートメントや "step over" ステートメントなど、一般的なデバッグ機能すべてがサポートされます。 デバッグ中は、ブレークポイントの設定、呼び出し履歴の調査、変数の調査、変数値の変更を行うことができます。 Visual Studio .NET 2003 は、CLR 統合プログラミングまたはデバッグには使用できない点に注意してください。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] には .NET Framework がプレインストールされていますが、Visual Studio .NET 2003 では .NET Framework 2.0 アセンブリを使用できません。  
@@ -50,7 +50,7 @@ ms.locfileid: "53354171"
   
 1.  Microsoft Visual Studio を開き、新しい [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] プロジェクトを作成して、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] のインスタンスでデータベースへの接続を確立します。  
   
-2.  新しい型を作成します。 **ソリューション エクスプ ローラー**、プロジェクトを右クリックし、選択**追加**と**新しい項目.****新しい項目の追加**ウィンドウで、**ストアド プロシージャの**、**ユーザー定義関数**、**ユーザー定義型**、 **トリガー**、**集計**、または**クラス**します。 新しい型のソース ファイルの名前を指定し、クリックして**追加**します。  
+2.  新しい型を作成します。 **ソリューション エクスプ ローラー**、プロジェクトを右クリックし、選択**追加**と**新しい項目.** **新しい項目の追加**ウィンドウで、**ストアド プロシージャの**、**ユーザー定義関数**、**ユーザー定義型**、 **トリガー**、**集計**、または**クラス**します。 新しい型のソース ファイルの名前を指定し、クリックして**追加**します。  
   
 3.  テキスト エディターに新しい型のコードを追加します。 ストアド プロシージャの例のサンプル コードについては、後のセクションを参照してください。  
   

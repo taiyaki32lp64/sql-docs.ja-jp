@@ -1,5 +1,5 @@
 ---
-title: ステートメント ハンドルの解放 |マイクロソフトのドキュメント
+title: ステートメントハンドルを解放する |Microsoft Docs
 ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: sql
@@ -17,24 +17,22 @@ helpviewer_keywords:
 ms.assetid: 96fdff84-0ca7-460a-a240-94ee826ea41c
 author: MightyPen
 ms.author: genemi
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 1c28f3ba81ffbe346572dfba92adb31a7f198af9
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 405e5fd13298892a2c6226015f575ef9b8373148
+ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47598700"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73779420"
 ---
 # <a name="freeing-a-statement-handle"></a>ステートメント ハンドルの解放
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-[!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
 
-  ステートメント ハンドルは、削除して新しいハンドルを割り当てるよりも、再利用する方が効率的です。 アプリケーションでは、任意のステートメント ハンドルで新しい SQL ステートメントを実行する前に、現在のステートメント設定が適切であることを確認する必要があります。 確認する設定には、ステートメント属性、パラメーター バインド、結果セットのバインドがあります。 一般に、パラメーターと結果を設定します、古い SQL ステートメントを呼び出すことによってバインド解除する必要があります[SQLFreeStmt](../../relational-databases/native-client-odbc-api/sqlfreestmt.md) SQL_RESET_PARAMS と SQL_UNBIND オプションし、新しい SQL ステートメントの再バインドします。  
+  ステートメント ハンドルは、削除して新しいハンドルを割り当てるよりも、再利用する方が効率的です。 アプリケーションでは、任意のステートメント ハンドルで新しい SQL ステートメントを実行する前に、現在のステートメント設定が適切であることを確認する必要があります。 確認する設定には、ステートメント属性、パラメーター バインド、結果セットのバインドがあります。 通常、古い SQL ステートメントのパラメーターと結果セットは、SQL_RESET_PARAMS と SQL_UNBIND のオプションで[SQLFreeStmt](../../relational-databases/native-client-odbc-api/sqlfreestmt.md)を呼び出し、新しい sql ステートメントに対して再バインドすることによって、バインドを解除する必要があります。  
   
- 呼び出しステートメントを使用するが、アプリケーションが完了したら、 [SQLFreeHandle](../../relational-databases/native-client-odbc-api/sqlfreehandle.md)ステートメントを解放します。 なお**SQLDisconnect**接続ですべてのステートメントを自動的に解放します。  
+ ステートメントを使用してアプリケーションが終了すると、 [Sqlfreehandle](../../relational-databases/native-client-odbc-api/sqlfreehandle.md)を呼び出してステートメントを解放します。 **Sqldisconnect**は、接続上のすべてのステートメントを自動的に解放することに注意してください。  
   
 ## <a name="see-also"></a>参照  
- [クエリの実行&#40;ODBC&#41;](../../relational-databases/native-client-odbc-queries/executing-queries-odbc.md)  
+ [クエリ&#40;の実行 ODBC&#41;](../../relational-databases/native-client-odbc-queries/executing-queries-odbc.md)  
   
   

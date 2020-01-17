@@ -12,18 +12,20 @@ helpviewer_keywords:
 - Integration Services, what's new
 - what's new [Integration Services]
 ms.assetid: da6999c7-e5e3-4a59-a284-1da635995af1
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: 7d5a8b82d60dcd4c2fae13af02310767e10700cd
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 8a6bd6207df7d0e93c1b6d360643a9d549e90af9
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53205841"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71295042"
 ---
 # <a name="what39s-new-in-integration-services-in-sql-server-2016"></a>SQL Server 2016 の Integration Services の新機能
-[!INCLUDE[feedback-stackoverflow-msdn-connect-md](../includes/feedback-stackoverflow-msdn-connect-md.md)]
+
+[!INCLUDE[ssis-appliesto](../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
 
 このトピックでは、SQL Server 2016 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] で追加または更新された機能について説明します。 これには、SQL Server 2016 のタイム フレーム中に [Integration Services &#40;SSIS&#41; 用の Azure Feature Pack](../integration-services/azure-feature-pack-for-integration-services-ssis.md) で追加または更新された機能も含まれます。  
 
@@ -285,7 +287,7 @@ ms.locfileid: "53205841"
  Excel 接続マネージャー、Excel ソース、および Excel 変換先で、Excel 2016 データ ソースの明示的なサポートが提供されるようになりました。  
 
 ####  <a name="SAPBW"></a> Connector for SAP BW for SQL Server 2016 のリリース  
- SQL Server 2016 Feature Pack の一部として、Microsoft® Connector for SAP BW for Microsoft SQL Server® 2016 がリリースされています。 Feature Pack のコンポーネントをダウンロードするには、「 [Microsoft® SQL Server® 2016 Feature Pack](https://go.microsoft.com/fwlink/?LinkID=746297)」を参照してください。
+ MicrosoftÂ® Connector for SAP BW for Microsoft SQL ServerÂ® 2016 は、SQL Server 2016 Feature Pack の一部としてリリースされています。 Feature Pack のコンポーネントをダウンロードするには、「[MicrosoftÂ® SQL ServerÂ® 2016 Feature Pack](https://go.microsoft.com/fwlink/?LinkID=746297)」を参照してください。
  
 #### <a name="oracleteradata"></a> Connector v4.0 for Oracle および Connector v4.0 for Teradata のリリース
 Microsoft Connector v4.0 for Oracle および Microsoft Connector v4.0 Teradata がリリースされています。 これらのコネクタをダウンロードするには、「 [Microsoft Connectors v4.0 for Oracle and Teradata](https://www.microsoft.com/download/details.aspx?id=52950)」を参照してください。
@@ -346,7 +348,7 @@ SQL Server 2016 Service Pack 1 がインストールされている場合、ODat
  SQL Server インポートおよびエクスポート ウィザードで、データの読み込み元と保存先として Azure BLOB Storage を使用できるようになりました。 詳細については、「[[データ ソースの選択] &#40;SQL Server インポートおよびエクスポート ウィザード&#41;](../integration-services/import-export-data/choose-a-data-source-sql-server-import-and-export-wizard.md)」および「[[変換先の選択] &#40;SQL Server インポートおよびエクスポート ウィザード&#41;](../integration-services/import-export-data/choose-a-destination-sql-server-import-and-export-wizard.md)」を参照してください。 
 
 ####  <a name="CDCOracle"></a> Change Data Capture Designer と Service for Oracle for Microsoft SQL Server 2016 のリリース  
- Microsoft® Change Data Capture Designer と Service for Oracle by Attunity for Microsoft SQL Server® 2016 は、SQL Server 2016 Feature Pack の一部としてリリースされています。  これらのコンポーネントで、Oracle 12c のクラシック インストールをサポートできるようになりました (マルチテナント インストールはサポートされません)。Feature Pack のコンポーネントをダウンロードするには、「 [Microsoft® SQL Server® 2016 Feature Pack](https://go.microsoft.com/fwlink/?LinkID=746297)」を参照してください。  
+ MicrosoftÂ® Change Data Capture Designer と Service for Oracle by Attunity for Microsoft SQL ServerÂ® 2016 は、SQL Server 2016 Feature Pack の一部としてリリースされています。  これらのコンポーネントで、Oracle 12c のクラシック インストールをサポートできるようになりました (マルチテナント インストールはサポートされません)。Feature Pack のコンポーネントをダウンロードするには、「[MicrosoftÂ® SQL ServerÂ® 2016 Feature Pack](https://go.microsoft.com/fwlink/?LinkID=746297)」を参照してください。  
   
 ####  <a name="cdc2016"></a> SQL Server 2016 での CDC コンポーネントの更新  
  CDC (Change Data Capture) Control Task、Source、および Splitter Transformation コンポーネントが、SQL Server 2016 との完全互換性を提供するように更新されています。 新しい機能の追加も動作の変更もありません。  
@@ -367,10 +369,10 @@ SQL Server 2016 Service Pack 1 がインストールされている場合、ODat
   
  [!INCLUDE[ssIS](../includes/ssis-md.md)] では、 **Service Pack 2 で** ValidationDetails [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] プロパティが導入されました。 その時点では、この新しいプロパティは発表されることも文書化されることもありませんでした。 **ValidationDetails** プロパティは、 [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] と [!INCLUDE[ssSQL15](../includes/sssql15-md.md)]でも利用できます。   
 
+[!INCLUDE[get-help-options](../includes/paragraph-content/get-help-options.md)]
+
+[!INCLUDE[contribute-to-content](../includes/paragraph-content/contribute-to-content.md)]
+
 ## <a name="see-also"></a>参照  
  [SQL Server 2016 の新機能](../sql-server/what-s-new-in-sql-server-2016.md)   
  [SQL Server 2016 の各エディションとサポートされる機能](../sql-server/editions-and-supported-features-for-sql-server-2016.md)
-  
-  
-[!INCLUDE[feedback_stackoverflow_msdn_connect_md](../includes/feedback-stackoverflow-msdn-connect-md.md)]
-

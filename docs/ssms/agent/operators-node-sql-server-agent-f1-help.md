@@ -8,16 +8,15 @@ ms.reviewer: ''
 ms.technology: ssms
 ms.topic: conceptual
 ms.assetid: f3665edc-b030-4c83-9ce7-2dfd39c6b398
-author: stevestein
-ms.author: sstein
-manager: craigg
+author: markingmyname
+ms.author: maghan
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: eab612556514bb1f86759d6fd615e9f237a25fc0
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b69dea9e6d91c26806a641eb42f4d210284b6c0d
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47714340"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68260042"
 ---
 # <a name="operators-node-sql-server-agent-f1-help"></a>[オペレーター] ノード (SQL Server エージェントの F1 ヘルプ)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]

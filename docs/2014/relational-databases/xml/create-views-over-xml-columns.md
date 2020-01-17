@@ -9,18 +9,18 @@ ms.topic: conceptual
 helpviewer_keywords:
 - views [XML in SQL Server]
 ms.assetid: eb5f0439-1f69-49c2-8759-e59bda1633b7
-author: douglaslMS
-ms.author: douglasl
+author: MightyPen
+ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 767844d7b195ece286b8f19cc34855bf50185a0c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 2d1e37f341c0606947b37eb10e8e3123ad410204
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48049832"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63301314"
 ---
 # <a name="create-views-over-xml-columns"></a>XML 列でのビューの作成
-  使用することができます、`xml`ビューを作成する型の列。 次の例では、ビューを作成する値を`xml`を使用して型の列を取得、`value()`のメソッド、`xml`データ型。  
+  `xml` 型の列を使用して、ビューを作成することもできます。 次の例では、`xml` データ型の `value()` メソッドを使用して `xml` 型の列の値を取得するビューを作成します。  
   
 ```  
 -- Create the table.  
@@ -55,11 +55,11 @@ ProductID   PName
 1           SomeName   
 ```  
   
- 使用して、次の点に注意してください、`xml`ビューを作成するデータ型。  
+ `xml` データ型を使用してビューを作成する際には次の点に注意してください。  
   
 -   xml データ型は、具体化されたビュー内に作成できます。 具体化されたビューは、xml データ型のメソッドに基づくことはできません。 ただし、ベース テーブルの xml 型の列とは異なる XML スキーマ コレクションにキャストできます。  
   
--   `xml`分散パーティション ビューでデータ型は使用できません。  
+-   分散パーティション ビューには `xml` データ型を使用できません。  
   
 -   ビューに対して実行される SQL 述語は、ビュー定義の XQuery には組み込まれません。  
   

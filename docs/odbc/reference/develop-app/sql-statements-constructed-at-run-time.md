@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: f6554486-d49c-436a-82e3-4c158d26acd8
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 0573851ee93bda4aa33e8645148cf2ee66200bee
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 8333000c9bb806116244ac6d4f654fa195205868
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47848100"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68107463"
 ---
 # <a name="sql-statements-constructed-at-run-time"></a>実行時に構築された SQL ステートメント
 よくアド ホック分析を実行するアプリケーションは、実行時に SQL ステートメントを作成します。 たとえば、スプレッドシート データの取得元となる列を選択するユーザーを許可する可能性があります。  

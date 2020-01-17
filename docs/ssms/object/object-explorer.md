@@ -1,10 +1,7 @@
 ---
 title: オブジェクト エクスプローラー | Microsoft Docs
-ms.custom: ''
-ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
 ms.technology: ssms
 ms.topic: conceptual
 f1_keywords:
@@ -24,17 +21,20 @@ helpviewer_keywords:
 - filtering objects [SQL Server]
 - Object Explorer, about Object Explorer
 ms.assetid: 469ea8e2-79b9-44c8-bb6f-f0e1c5dbf0f2
-author: stevestein
-ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 4201be08286e90848eeafcb3732cfdc198d059ad
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: markingmyname
+ms.author: maghan
+ms.reviewer: ''
+ms.custom: ''
+ms.date: 01/19/2017
+ms.openlocfilehash: 1ef39a04a9b9ae6997b1cd262db43a79c5b5ff49
+ms.sourcegitcommit: da8bb7abd256b2bebee7852dc0164171eeff11be
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47682070"
+ms.lasthandoff: 09/14/2019
+ms.locfileid: "70988147"
 ---
 # <a name="object-explorer"></a>オブジェクト エクスプローラー
+
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] には、 [!INCLUDE[ssDE](../../includes/ssde_md.md)]、 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion_md.md)]、 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]、および [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]のインスタンス内のオブジェクトを管理するための機能が備わっています。  
   

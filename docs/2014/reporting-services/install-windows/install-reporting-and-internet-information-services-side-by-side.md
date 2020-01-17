@@ -4,24 +4,23 @@ ms.custom: ''
 ms.date: 04/27/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 helpviewer_keywords:
 - deploying [Reporting Services], IIS
 ms.assetid: 9b651fa5-f582-4f18-a77d-0dde95d9d211
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 9fed65b504d8e76cdd6c827126ab752950ae821c
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 514774acc7255f2f499bfe7fdd6e731944ab67fe
+ms.sourcegitcommit: 0818f6cc435519699866db07c49133488af323f4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56025373"
+ms.lasthandoff: 06/20/2019
+ms.locfileid: "67285056"
 ---
 # <a name="install-reporting-services-and-internet-information-services-side-by-side-ssrs-native-mode"></a>Reporting Services とインターネット インフォメーション サービスのサイド バイ サイド インストール (SSRS ネイティブ モード)
-   [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] (SSRS) とインターネット インフォメーション サービス (IIS) は、同じコンピューターにインストールして実行できます。 対処する必要のある相互運用性の問題は、使用している IIS のバージョンによって異なります。  
+  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] (SSRS) とインターネット インフォメーション サービス (IIS) は、同じコンピューターにインストールして実行できます。 対処する必要のある相互運用性の問題は、使用している IIS のバージョンによって異なります。  
   
 ||  
 |-|  
@@ -44,9 +43,9 @@ ms.locfileid: "56025373"
   
 |例|要求|  
 |-------------|-------------|  
-|http://123.234.345.456:80/reports|すべての要求に送信される受信 http://123.234.345.456/reports または http://\<computername >]、[ドメイン名サービスがそのホスト名を IP アドレスを解決できるかどうかにレポートします。|  
+|http:\//123.234.345.456:80/reports|Http に送信されるすべての要求を受け取る:\//123.234.345.456/reports または http://\<コンピューター名 >]、[ドメイン名サービスがそのホスト名を IP アドレスを解決できるかどうかにレポートします。|  
 |http://+:80/reports|URL に "reports" という仮想ディレクトリ名が含まれている限り、任意の IP アドレス (またはそのコンピューターの有効なホスト名) に送信されたすべての要求が受信されます。|  
-|http://123.234.345.456:80|指定するすべての要求を受け取る http://123.234.345.456 または http://\<computername > ドメイン名サービスがそのホスト名を IP アドレスを解決できる場合。|  
+|http:\//123.234.345.456:80|Http を指定するすべての要求を受け取る:\//123.234.345.456 または http://\<computername > ドメイン名サービスがそのホスト名を IP アドレスを解決できる場合。|  
 |http://+:80|**[すべて割り当て]** にマップされたすべてのアプリケーション エンドポイントについて、まだ他のアプリケーションによって受信されていない要求が受信されます。|  
 |http://*:80|**[すべて未割り当て]** にマップされたアプリケーション エンドポイントについて、まだ他のアプリケーションによって受信されていない要求が受信されます。|  
   
@@ -68,7 +67,7 @@ ms.locfileid: "56025373"
   
 -   A[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]レポート サーバー インスタンスの URL 予約では、ポート 80 も指定します、レポート マネージャー アプリケーションは、仮想ディレクトリ名の"Reports"を使用することも、既定の構成でインストールします。  
   
- この構成では、 http:// に送信される要求\<computername >: 80/reports は、レポート マネージャーによって受信されます。 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] レポート サーバー インスタンスのインストール後、IIS の Reports 仮想ディレクトリ経由でアクセスされるアプリケーションは、要求を受け取ることができなくなります。  
+ この構成では、http:// に送信される要求\<computername >: 80/reports は、レポート マネージャーによって受信されます。 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] レポート サーバー インスタンスのインストール後、IIS の Reports 仮想ディレクトリ経由でアクセスされるアプリケーションは、要求を受け取ることができなくなります。  
   
  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]の新旧のバージョンをサイド バイ サイド配置で実行した場合、前述したルーティングの問題が発生する可能性があります。 これは、[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] のすべてのバージョンでは、レポート サーバーとレポート マネージャー アプリケーションの仮想ディレクトリ名として "ReportServer" と "Reports" が使用されているため、IIS には "reports" と "reportserver" という仮想ディレクトリが高い確率で存在していると考えられるためです。  
   

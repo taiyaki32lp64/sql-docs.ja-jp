@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: c5067855-20c9-456f-8d63-f375b4297f2e
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: f5eab1c3bf6891f10c897966035dced2ffdc10ba
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: db5d2cb8decde9828acd3005551717ac9f6cef32
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47622110"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68096589"
 ---
 # <a name="create-table-statement-limitations"></a>CREATE TABLE ステートメントの制限事項
 Microsoft Access、Microsoft Excel、または Paradoxdriver を使用すると、列の長さは 255 に設定して、テキストやバイナリ列の長さが指定されていない (または 0 として指定されます)。  

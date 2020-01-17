@@ -17,18 +17,17 @@ helpviewer_keywords:
 ms.assetid: a9a23b90-2c60-4460-80a7-d7e14cc5a6a8
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 8bd1974d8fe99569a402f761a7446891cf3136b4
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 69651cedfa45df20d3a16966dbb8cd5574436bd8
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47779260"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67995511"
 ---
-# <a name="spmshasdbaccess-transact-sql"></a>sp_MShasdbaccess (Transact-SQL)
+# <a name="spmshasdbaccess-transact-sql"></a>sp_MShasdbaccess (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  ユーザーがアクセスできるすべてのデータベースの名前と所有者を一覧表示します。  
+  ユーザーがアクセスを持ってするすべてのデータベースの所有者と名前を一覧表示します。  
   
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -45,7 +44,7 @@ sp_MShasdbaccess
 ## <a name="permissions"></a>アクセス許可  
  実行する権限が与えられて、**パブリック**ロール。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [sys.sysdatabases &#40;Transact-SQL&#41;](../../relational-databases/system-compatibility-views/sys-sysdatabases-transact-sql.md)  
   
   

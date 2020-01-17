@@ -15,17 +15,16 @@ helpviewer_keywords:
 ms.assetid: 7996d3f8-b5f5-4cac-8a66-fc96a42b603e
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: fd92344552371e2e052a958485340b70522cc121
-ms.sourcegitcommit: 1e28f923cda9436a4395a405ebda5149202f8204
+ms.openlocfilehash: 658d03469e2733b0c25513a4d4a89c6ab88b9852
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/25/2019
-ms.locfileid: "55044518"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68063513"
 ---
 # <a name="setting-options-programmatically-for-the-paradox-driver"></a>Paradox ドライバーのプログラムでオプションの設定
 
-|オプション|説明|方法|  
+|OPTION|説明|メソッド|  
 |------------|-----------------|------------|  
 |ディレクトリ|対象となるディレクトリを設定します。|このオプションを動的に設定するには、使用、 **DEFAULTDIR**への呼び出しでキーワード[SQLConfigDataSource](../../odbc/microsoft/sqlconfigdatasource-paradox-driver.md)します。|  
 |照合順序|シーケンスは、フィールドが並べ替えられます。<br /><br /> シーケンスは、ASCII (既定)、国際化、スウェーデン語、フィンランド語、またはノルウェー語、デンマーク語。|このオプションを動的に設定するには、使用、 **COLLATINGSEQUENCE**への呼び出しでキーワード[SQLConfigDataSource](../../odbc/microsoft/sqlconfigdatasource-paradox-driver.md)します。|  

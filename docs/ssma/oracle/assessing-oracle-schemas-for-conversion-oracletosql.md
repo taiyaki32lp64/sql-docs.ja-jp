@@ -11,13 +11,13 @@ helpviewer_keywords:
 ms.assetid: 4de9bcf6-1346-4740-87f9-7f24a8226357
 author: Shamikg
 ms.author: Shamikg
-manager: v-thobro
-ms.openlocfilehash: acf31c29b498562708c7cb049e89a0a7425fd31f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: shamikg
+ms.openlocfilehash: 0ff56be1b7da0376250c7ed021ae78d7144a7645
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47631200"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68264550"
 ---
 # <a name="assessing-oracle-schemas-for-conversion-oracletosql"></a>変換のための Oracle Schemas へのアクセス (OracleToSQL)
 オブジェクトを読み込むし、データを移行する前に[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]、複雑な移行されるとどれ時間だけを決定する必要があります、移行にかかる時間します。 SSMA は、正常に変換されるオブジェクトの割合を示す評価レポートを作成できます。 SSMA では、変換エラーが発生する特定の問題を表示することもできます。  
@@ -37,7 +37,7 @@ SSMA が選択されている Oracle データベースのオブジェクトを�
   
     SSMA は、ウィンドウの下部にあるステータス バーに進行状況が表示されます。 [出力] ペインが表示されている場合は、出力ウィンドウ内のメッセージも表示されます。  
   
-    評価が完了すると、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Migration Assistant for Oracle: 評価レポート ウィンドウが表示されます。  
+    評価が完了すると、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Migration Assistant for Oracle:評価レポート ウィンドウが表示されます。  
   
 ## <a name="using-assessment-reports"></a>評価レポートを使用します。  
 評価レポート ウィンドウには、3 つのペインが含まれています。  

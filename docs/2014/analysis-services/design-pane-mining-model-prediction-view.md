@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dm.miningmodeleditor.prediction.design.f1
@@ -13,12 +12,12 @@ ms.assetid: 17f24c8d-43cd-4f4d-83b3-a41ee8fbe8e8
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 28774dc49ba3052ee01d197570f3de87f7363cf2
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 743eefc1bd13dec480ec8773a8602773ded7ca6b
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48189768"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66081850"
 ---
 # <a name="design-pane-mining-model-prediction-view"></a>[デザイン] ペイン ([マイニング モデル予測] ビュー)
   **デザイン** ペインには、データ マイニング予測クエリ ビルダーがあり、これを利用してデータ マイニング予測クエリを作成できます。 データ ソース ビューから入力データのテーブルを使用する予測クエリを設計して一括予測を生成することも、個々の値を取得する単一予測クエリを作成することもできます。  
@@ -30,11 +29,11 @@ ms.locfileid: "48189768"
 > [!NOTE]  
 >  クエリに手動で何らかの変更を加えた場合、デザイン ビューに戻ると変更は失われます。 DMX クエリを保存するには、Windows クリップボードにクエリをコピーしてからテキスト ファイルに貼り付けます。  
   
- **詳細:** [データ マイニング クエリ](data-mining/data-mining-queries.md)  
+ **詳細情報。** [データ マイニング クエリ](data-mining/data-mining-queries.md)  
   
 ## <a name="options"></a>および  
  **クエリ結果ビューに切り替え**  
- クリックすると、ビューを順に **[デザイン]**、 **[クエリ]**、 **[結果]** ペインに切り替えます。 **[結果]** ペインに切り替えると、クエリが実行されます。  
+ クリックすると、ビューを順に **[デザイン]** 、 **[クエリ]** 、 **[結果]** ペインに切り替えます。 **[結果]** ペインに切り替えると、クエリが実行されます。  
   
  **クエリ結果を保存します。**  
  **[データ マイニングのクエリ結果を保存]** ダイアログ ボックスを開きます。  

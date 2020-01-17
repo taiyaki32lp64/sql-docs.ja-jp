@@ -14,11 +14,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 26c13eb6c9cb142cac3ba0981177fb2c605ab5fa
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52812444"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63297894"
 ---
 # <a name="add-tables-to-diagrams-visual-database-tools"></a>ダイアグラムへのテーブルの追加 (Visual Database Tools)
   データベース ダイアグラムにテーブルを追加すると、そのテーブルの構造の編集や、ダイアグラム内にある他のテーブルとの関連付けを行えます。 テーブルを追加する方法には、ダイアグラムに既存のデータベース テーブルを追加する方法と、データベースで未定義の新しいテーブルを挿入する方法があります。  
@@ -29,7 +29,7 @@ ms.locfileid: "52812444"
   
      現在のダイアグラムにテーブルを作成するには、ツール バーの **[新しいテーブル]** をクリックします。  
   
-     - または -  
+     \- または -  
   
      ダイアグラムを右クリックし、 **[新しいテーブル]** をクリックします。  
   

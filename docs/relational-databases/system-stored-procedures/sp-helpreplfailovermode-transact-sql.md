@@ -1,5 +1,5 @@
 ---
-title: sp_helpreplfailovermode (TRANSACT-SQL) |Microsoft Docs
+title: sp_helpreplfailovermode (Transact-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
@@ -15,18 +15,17 @@ helpviewer_keywords:
 ms.assetid: d1090e42-6840-4bf6-9aa9-327fd8987ec2
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 19fafb4b3ef3737018aaae21992f0b6a859c7ef3
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: b998a11acd71175e8868b669d9491822f60d2b33
+ms.sourcegitcommit: 66dbc3b740f4174f3364ba6b68bc8df1e941050f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52796434"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73632755"
 ---
-# <a name="sphelpreplfailovermode-transact-sql"></a>sp_helpreplfailovermode (Transact-SQL)
+# <a name="sp_helpreplfailovermode-transact-sql"></a>sp_helpreplfailovermode (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  サブスクリプションの現在のフェールオーバー モードを表示します。 このストアド プロシージャは、任意のデータベース上のサブスクライバー側で実行されます。 フェールオーバー モードの詳細については、次を参照してください。[更新可能な Subscriptions for Transactional Replication](../../relational-databases/replication/transactional/updatable-subscriptions-for-transactional-replication.md)します。  
+  サブスクリプションの現在のフェールオーバー モードを表示します。 このストアド プロシージャは、任意のデータベース上のサブスクライバー側で実行されます。 フェールオーバーモードの詳細については、「[トランザクションレプリケーションの更新可能なサブスクリプション](../../relational-databases/replication/transactional/updatable-subscriptions-for-transactional-replication.md)」を参照してください。  
   
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -42,36 +41,31 @@ sp_helpreplfailovermode [ @publisher= ] 'publisher'
 ```  
   
 ## <a name="arguments"></a>引数  
- [ **@publisher=**] **'***publisher***'**  
- サブスクライバーの更新に関係しているパブリッシャーの名前を指定します。 *パブリッシャー*は**sysname**、既定値はありません。 パブリッシャーは、パブリッシング用にあらかじめ構成されている必要があります。  
+`[ @publisher = ] 'publisher'` は、このサブスクライバーの更新に参加しているパブリッシャーの名前です。 *publisher*は**sysname**で、既定値はありません。 パブリッシャーは、既に発行用に構成されている必要があります。  
   
- [  **@publisher_db =**] **'***publisher_db***'**  
- パブリケーション データベースの名前です。 *publisher_db*は**sysname**、既定値はありません。  
+`[ @publisher_db = ] 'publisher_db'` は、パブリケーションデータベースの名前です。 *publisher_db*は**sysname**であり、既定値はありません。  
   
- [ **@publication=**] **'***publication***'**  
- サブスクライバーの更新に関係しているパブリケーションの名前を指定します。 *パブリケーション*は**sysname**、既定値はありません。  
+`[ @publication = ] 'publication'` は、このサブスクライバーの更新に参加しているパブリケーションの名前です。 *publication*は**sysname**,、既定値はありません。  
   
- [  **@failover_mode_id=**] **'***failover_mode_id***' 出力**  
- フェールオーバー モードの整数値を返し、、**出力**パラメーター。 *failover_mode_id*は、 **tinyint** 、既定値は**0**します。 返します**0**即時更新と**1**のキュー更新します。  
+`[ @failover_mode_id = ] 'failover_mode_id' OUTPUT` は、フェールオーバーモードの整数値を返し、は**出力**パラメーターです。 *failover_mode_id*は**tinyint**で、既定値は**0**です。 即時更新の場合は**0** 、キュー更新の場合は**1**を返します。  
   
- [**@failover_mode=**] **'***failover_mode***' 出力**  
- サブスクライバーでデータ変更が行われるモードを返します。 *failover_mode*は、 **nvarchar (10)** 既定値は NULL です。 **出力**パラメーター。  
+`[ @failover_mode = ] 'failover_mode' OUTPUT` は、サブスクライバーでデータ変更が行われるモードを返します。 *failover_mode*は**nvarchar (10)** で、既定値は NULL です。 は**出力**パラメーターです。  
   
-|値|説明|  
+|[値]|説明|  
 |-----------|-----------------|  
-|**イミディ エイト**|即時更新。サブスクライバーでの更新は、2 フェーズ コミット プロトコル (2PC) を使ってパブリッシャーに即座に通知されます。|  
-|**キューに登録**|キュー更新。サブスクライバーでの更新は、キューに格納されます。|  
+|**immediate**|即時更新します。 サブスクライバーで更新プログラムはすぐに 2 フェーズ コミット プロトコル (2 pc) を使用してパブリッシャーに反映されます。|  
+|**queued**|キュー更新。サブスクライバーでの更新は、キューに格納されます。|  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  **0** (成功) または**1** (失敗)  
   
-## <a name="remarks"></a>コメント  
- **sp_helpreplfailovermode**更新エラーが発生した場合、フェールオーバーとしてキューを使用する即時更新サブスクリプションが有効になっているは、スナップショット レプリケーションまたはトランザクション レプリケーションで使用します。  
+## <a name="remarks"></a>Remarks  
+ **sp_helpreplfailovermode**は、フェールオーバーとしてキュー更新を使用した即時更新が有効になっているスナップショットレプリケーションまたはトランザクションレプリケーションで、障害が発生した場合に使用されます。  
   
 ## <a name="permissions"></a>アクセス許可  
- メンバーのみ、 **sysadmin**固定サーバー ロールまたは**db_owner**固定データベース ロールが実行できる**sp_helpreplfailovermode**します。  
+ **Sp_helpreplfailovermode**を実行できるのは、固定サーバーロール**sysadmin**または固定データベースロール**db_owner**のメンバーだけです。  
   
-## <a name="see-also"></a>参照  
- [sp_setreplfailovermode &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-setreplfailovermode-transact-sql.md)  
+## <a name="see-also"></a>関連項目  
+ [sp_setreplfailovermode &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-setreplfailovermode-transact-sql.md)  
   
   

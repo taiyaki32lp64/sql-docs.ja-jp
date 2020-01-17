@@ -15,15 +15,15 @@ helpviewer_keywords:
 - roles [Integration Services]
 - db_ssisltduser role
 ms.assetid: 9702e90c-fada-4978-a473-1b1423017d80
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 9c6f7ef38c779b07b9cbeffc2b9300360620e350
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 43c1c932565ae3df666be10a1b89794ecd720135
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52792875"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62766674"
 ---
 # <a name="integration-services-roles-ssis-service"></a>Integration Services のロール (SSIS サービス)
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 次の 3 つの固定データベース レベル ロールがあります`db_ssisadmin`、 **db_ssisltduser**、および**db_ssisoperator**パッケージへのアクセスを制御するためです。 保存されているパッケージにのみロールを実装することができます、`msdb`データベース[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]します。 パッケージにロールを割り当てるには、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]を使用します。 ロールの割り当てを保存、`msdb`データベース。  

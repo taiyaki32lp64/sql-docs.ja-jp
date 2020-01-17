@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 44a73ddb-18ad-415c-bfbe-126ab2e3290b
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 7b4fd7c20e36ab490430be8be7713e87b986d35b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e946949debc6d5a1fa3c586ece94da58e5241b4d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47733962"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67950044"
 ---
 # <a name="modify-the-controller-and-client-services-accounts"></a>Controller および Client のサービス アカウントの変更
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -25,7 +24,7 @@ ms.locfileid: "47733962"
   
 1.  分散再生サービスがインストールされているコンピューターで、コマンド プロンプトから、「 **dcomcnfg**」と入力します。  
   
-2.  **[サービス]** をダブルクリックし、下へスクロールして、**[[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 分散再生 \<サービス名>]** を右クリックします。次に、**[開始]** または **[停止]** をクリックします。  
+2.  **[サービス]** をダブルクリックし、下へスクロールして、 **[[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 分散再生 \<サービス名>]** を右クリックします。次に、 **[開始]** または **[停止]** をクリックします。  
   
 ### <a name="to-modify-the-distributed-replay-controller-service"></a>分散再生コントローラー サービスを変更するには  
   
@@ -59,9 +58,9 @@ ms.locfileid: "47733962"
   
     2.  分散再生コントローラー サービスがインストールされているコントローラー コンピューターで、コマンド プロンプトから、「**dcomcnfg**」と入力します。  
   
-    3.  **[コンポーネント サービス]** ウィンドウで、**[コンソール ルート]、[コンポーネント サービス]、[コンピューター]、[マイ コンピューター]、[DCOM 構成]、[DReplayController]** に移動します。  
+    3.  **[コンポーネント サービス]** ウィンドウで、 **[コンソール ルート]、[コンポーネント サービス]、[コンピューター]、[マイ コンピューター]、[DCOM 構成]、[DReplayController]** に移動します。  
   
-    4.  **[DReplayController]** を右クリックし、**[プロパティ]** をクリックします。  
+    4.  **[DReplayController]** を右クリックし、 **[プロパティ]** をクリックします。  
   
     5.  **[DReplayController のプロパティ]** ウィンドウの **[セキュリティ]** タブで、 **[起動とアクティブ化のアクセス許可]** セクションの **[編集]** をクリックします。  
   

@@ -12,15 +12,15 @@ helpviewer_keywords:
 - Import and Export Wizard
 - starting Import and Export Wizard
 ms.assetid: 5fc4f6d1-1f6f-444e-9aeb-827f85e1c405
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 4a01ae02feae938c952096216b89858c007aee4f
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 824642cf50923aa7ec879bfedbbb8f4ceaa6d9f3
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53351397"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62768034"
 ---
 # <a name="run-the-sql-server-import-and-export-wizard"></a>SQL Server インポートおよびエクスポート ウィザードを実行する
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インポートおよびエクスポート ウィザードを使用すると、最も簡単な方法でデータ ソース間でデータをコピーしたり、基本パッケージを構築したりすることができます。 ウィザードの詳細については、次を参照してください。 [SQL Server インポートおよびエクスポート ウィザード](import-and-export-data-with-the-sql-server-import-and-export-wizard.md)します。  
@@ -31,19 +31,19 @@ ms.locfileid: "53351397"
   
 -   **開始**メニューで、**すべてのプログラム**、 をポイント**Microsoft SQL Server** 、順にクリックします**データ インポートおよびエクスポート**します。  
   
-     - または -  
+     \- または -  
   
      [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]を右クリックし、 **SSIS パッケージ**フォルダー、およびクリック**SSISImport およびエクスポート ウィザード**します。  
   
-     - または -  
+     \- または -  
   
      [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]の**プロジェクト** メニューのをクリックして**SSISImport およびエクスポート ウィザード**します。  
   
-     - または -  
+     \- または -  
   
-     [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]への接続、[!INCLUDE[ssDE](../../includes/ssde-md.md)]サーバーの種類のデータベースを展開し、データベースを右クリックをポイントして**タスク**、をクリックし、**データのインポート**または**データをエクスポート**.  
+     [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]への接続、[!INCLUDE[ssDE](../../includes/ssde-md.md)]サーバーの種類のデータベースを展開し、データベースを右クリックをポイントして**タスク**、 をクリックし、**データのインポート**または**データをエクスポート**.  
   
-     - または -  
+     \- または -  
   
      コマンド プロンプト ウィンドウで、C:\Program Files\Microsoft SQL Server\100\DTS\Binn にある DTSWizard.exe を実行します。  
   
@@ -71,7 +71,7 @@ ms.locfileid: "53351397"
   
         |プロパティ|値|  
         |--------------|-----------|  
-        |[照合順序]|Latin1_General_CS_AS_KS_WS|  
+        |照合順序|Latin1_General_CS_AS_KS_WS|  
         |復旧モデル|[完全]|  
         |フルテキスト インデックスを使用する|True|  
   

@@ -7,15 +7,15 @@ ms.reviewer: ''
 ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: 837c71ee-48fa-4044-8744-2be9119aaa04
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 649d687b93a2eeff940c92c79b7b966511a1d79d
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 6f1cba6a6a20fc804d29aeb0dbf43d7bebfbb225
+ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56015643"
+ms.lasthandoff: 08/29/2019
+ms.locfileid: "70154456"
 ---
 # <a name="data-quality-services-concepts"></a>Data Quality Services の概念
   このトピックでは、 [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) のナレッジ マネージメント、データ品質プロジェクト、およびデータ品質管理の概念を簡単に説明します。  
@@ -37,7 +37,7 @@ ms.locfileid: "56015643"
   
  **参照データ サービス**  
   
- 参照データを使用すると、参照データの品質を保証する企業のサービスを利用して、データを検証、修正、および強化することができます。 参照データ プロバイダーには、Windows Azure MarketPlace のサービスを使用して接続できます。また、プロバイダーに直接接続することもできます。 詳細については、「 [Reference Data Services in DQS](../../2014/data-quality-services/reference-data-services-in-dqs.md)」をご覧ください。  
+ 参照データを使用すると、参照データの品質を保証する企業のサービスを利用して、データを検証、修正、および強化することができます。 Azure Marketplace のサービスを使用して参照データプロバイダーに接続することも、プロバイダーへの直接接続を使用することもできます。 詳細については、「 [Reference Data Services in DQS](../../2014/data-quality-services/reference-data-services-in-dqs.md)」をご覧ください。  
   
  DQS のナレッジ マネージメントの詳細については、「 [DQS Knowledge Bases and Domains](../../2014/data-quality-services/dqs-knowledge-bases-and-domains.md)」をご覧ください。  
   
@@ -48,9 +48,9 @@ ms.locfileid: "56015643"
   
  DQS でのデータ クレンジングは、DQS ナレッジ ベースのナレッジに基づいて行われます。 DQS のデータ クレンジングは、2 段階のプロセスから成ります。  
   
--   **コンピューター支援型のクレンジング**:DQS では、クレンジング プロジェクトの選択されたナレッジ ベースでナレッジを使用して、修正または提案をデータ ソースの値。  
+-   **コンピューター支援型のクレンジング**: DQS では、クレンジング プロジェクト用に選択したナレッジ ベースのナレッジを使用して、データ ソースの値に対する修正または提案を提示します。  
   
--   **インタラクティブなクレンジング**:データ スチュワードは、変更したり、コンピューター支援型のデータのクレンジング プロセスで提示されたデータ修正を拡張したりするインタラクティブなクレンジング プロセスを実行できます。 このプロセスでは、データ クレンジング プロセスで識別された信頼レベルや統計情報を使用することも、プロジェクトにおける独自の変更を手動で入力することもできます。  
+-   **インタラクティブなクレンジング**: データ スチュワードは、インタラクティブなクレンジング プロセスを実行して、コンピューター支援型のデータ クレンジング プロセスで提示されたデータ修正を変更したり拡張したりできます。 このプロセスでは、データ クレンジング プロセスで識別された信頼レベルや統計情報を使用することも、プロジェクトにおける独自の変更を手動で入力することもできます。  
   
  データ クレンジングの後で、データ スチュワードは、処理されたデータを SQL Server データベース、.csv ファイル、または Excel ファイルにエクスポートできます。 詳細については、「 [Data Cleansing](../../2014/data-quality-services/data-cleansing.md)」をご覧ください。  
   
@@ -89,7 +89,7 @@ ms.locfileid: "56015643"
   
  DQS 管理の詳細については、「 [DQS Administration](../../2014/data-quality-services/dqs-administration.md)」を参照してください。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [Data Quality Services](../../2014/data-quality-services/data-quality-services.md)  
   
   

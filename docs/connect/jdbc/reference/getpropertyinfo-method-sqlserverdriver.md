@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: b5eaad8a-31ef-44ac-af11-d5caa13ac3e2
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 889f530496dd5fa975822702282cc78b99197318
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d89a29af5aa3d2518f94101854371cea757e135c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47624850"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67980668"
 ---
 # <a name="getpropertyinfo-method-sqlserverdriver"></a>getPropertyInfo メソッド (SQLServerDriver)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -52,7 +51,7 @@ public java.sql.DriverPropertyInfo[] getPropertyInfo(java.lang.String Url,
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- この getPropertyInfo メソッドは、java.sql.Driver インターフェイスで getPropertyInfo メソッドによって指定されます。  
+ この getPropertyInfo メソッドは、getPropertyInfo インターフェイスのメソッドによって指定されます。  
   
 ## <a name="see-also"></a>参照  
  [SQLServerDriver のメソッド](../../../connect/jdbc/reference/sqlserverdriver-methods.md)   

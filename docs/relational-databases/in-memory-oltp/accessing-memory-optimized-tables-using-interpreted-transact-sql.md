@@ -1,6 +1,6 @@
 ---
-title: 解釈された Transact-SQL を使用したメモリ最適化テーブルへのアクセス | Microsoft Docs
-ms.custom: ''
+title: 解釈された T-SQL を使用したメモリ最適化テーブル
+ms.custom: seo-dt-2019
 ms.date: 05/31/2016
 ms.prod: sql
 ms.reviewer: ''
@@ -9,14 +9,13 @@ ms.topic: conceptual
 ms.assetid: 92a44d4d-0e53-4fb0-b890-de264c65c95a
 author: MightyPen
 ms.author: genemi
-manager: craigg
 monikerRange: =azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: a28d59165f7c1a7e733807cb4b86d334604da289
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 402b945c68e68f73ba482c20b158f14aba2c818f
+ms.sourcegitcommit: 384e7eeb0020e17a018ef8087970038aabdd9bb7
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51672771"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74412808"
 ---
 # <a name="accessing-memory-optimized-tables-using-interpreted-transact-sql"></a>解釈された Transact-SQL を使用したメモリ最適化テーブルへのアクセス
 [!INCLUDE[tsql-appliesto-ss2014-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2014-asdb-xxxx-xxx-md.md)]
@@ -44,11 +43,11 @@ ms.locfileid: "51672771"
 |領域|サポートされていない|  
 |----------|-----------------|  
 |テーブルへのアクセス|TRUNCATE TABLE<br /><br /> MERGE (ターゲットとしてのメモリ最適化テーブル)<br /><br /> 動的カーソルおよびキーセット カーソル (これらは自動的に静的カーソルに降格されます)。<br /><br /> コンテキスト接続を使用した CLR モジュールからのアクセス。<br /><br /> インデックス付きビューから、メモリ最適化されたテーブルへの参照。|  
-|複数のデータベース間|複数データベースにまたがるクエリ<br /><br /> 複数データベースにまたがるトランザクション<br /><br /> リンク サーバー|  
+|複数のデータベース間|複数データベースにまたがるクエリ<br /><br /> データベースにまたがるトランザクション<br /><br /> リンク サーバー|  
   
 ## <a name="table-hints"></a>テーブル ヒント
 
-テーブル ヒントの詳細については、 [テーブル ヒント &#40;Transact-SQL&#41;](../../t-sql/queries/hints-transact-sql-table.md). [!INCLUDE[hek_2](../../includes/hek-2-md.md)] をサポートするために SNAPSHOT が追加されました。  
+テーブル ヒントの詳細については、 [テーブル ヒント &#40;Transact-SQL&#41;](../../t-sql/queries/hints-transact-sql-table.md). [!INCLUDE[hek_2](../../includes/hek-2-md.md)]をサポートするために SNAPSHOT が追加されました。  
   
 次のテーブル ヒントは、解釈された [!INCLUDE[tsql](../../includes/tsql-md.md)]を使用してメモリ最適化テーブルにアクセスする場合はサポートされません。  
 

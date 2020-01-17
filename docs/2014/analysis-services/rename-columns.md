@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: 5fc8ba1a-2b30-4775-9b3b-c09dee711b3e
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 056f386db58f01f663cc04e82ce04e0c6c6597a6
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: 80d9cae6deae4059327084f531f6a6d958a39ec6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52416693"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66070316"
 ---
 # <a name="lesson-3-rename-columns"></a>レッスン 3: 列名の変更
   このレッスンでは、インポートした各テーブル内の多くの列の名前を変更します。 名前を変更することで、列がより識別しやすくなり、モデル デザイナー内でも、またクライアント アプリケーションでユーザーがフィールドを選択する際にも、移動が行いやすくなります。 詳細については、「[テーブルまたは列名の変更 (SSAS テーブル)](tabular-models/rename-a-table-or-column-ssas-tabular.md)」を参照してください。  
@@ -46,7 +45,7 @@ ms.locfileid: "52416693"
   
      **Customer テーブル**  
   
-    |ソース名|表示名|  
+    |ソース名|フレンドリ名|  
     |-----------------|-------------------|  
     |GeographyKey|[Geography Id]|  
     |CustomerAlternateKey|Customer Alternate Id|  
@@ -72,7 +71,7 @@ ms.locfileid: "52416693"
   
      **Date**  
   
-    |ソース名|表示名|  
+    |ソース名|フレンドリ名|  
     |-----------------|-------------------|  
     |FullDateAlternateKey|date|  
     |DayNumberOfWeek|Day Number of Week|  
@@ -91,7 +90,7 @@ ms.locfileid: "52416693"
   
      **Geography**  
   
-    |ソース名|表示名|  
+    |ソース名|フレンドリ名|  
     |-----------------|-------------------|  
     |GeographyKey|Geography Id|  
     |StateProvinceCode|State Province Code|  
@@ -103,7 +102,7 @@ ms.locfileid: "52416693"
   
      **Product**  
   
-    |ソース名|表示名|  
+    |ソース名|フレンドリ名|  
     |-----------------|-------------------|  
     |ProductKey|[Product Id]|  
     |ProductAlternateKey|Product Alternate Id|  
@@ -137,7 +136,7 @@ ms.locfileid: "52416693"
   
      **Product Subcategory**  
   
-    |ソース名|表示名|  
+    |ソース名|フレンドリ名|  
     |-----------------|-------------------|  
     |ProductSubcategoryKey|Product Subcategory Id|  
     |ProductSubcategoryAlternateKey|Product Subcategory Alternate Id|  
@@ -146,7 +145,7 @@ ms.locfileid: "52416693"
   
      **Internet Sales**  
   
-    |ソース名|表示名|  
+    |ソース名|フレンドリ名|  
     |-----------------|-------------------|  
     |ProductKey|Product Id|  
     |CustomerKey|Customer Id|  

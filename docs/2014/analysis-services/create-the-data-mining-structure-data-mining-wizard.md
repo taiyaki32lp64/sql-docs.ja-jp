@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dm.dmwizard.selectminingtechnique.f1
@@ -13,19 +12,19 @@ ms.assetid: d1ff17b2-fff3-4ed7-a5d6-42d131e59f93
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 06aa74bed451075f0b6749870fa25275703c3181
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 812a08d00fca0b3a61f5cb038e1585fee08c06d3
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48184062"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66086759"
 ---
 # <a name="create-the-data-mining-structure-data-mining-wizard"></a>データ マイニング構造の作成 (データ マイニング ウィザード)
   **[データ マイニング構造の作成]** ページを使用すると、データ マイニング構造および必要に応じて関連するマイニング モデルを作成できます。  
   
  マイニング モデルの作成を選択した場合は、使用するデータ マイニング アルゴリズムも指定する必要があります。 この時点で構造だけを作成する場合は、後からマイニング モデルを構造に追加できます。  
   
- **詳細情報:** [データ マイニング アルゴリズム &#40;Analysis Services - データ マイニング&#41;](data-mining/data-mining-algorithms-analysis-services-data-mining.md)、[データ マイニング ウィザード &#40;Analysis Services - データ マイニング&#41;](data-mining/data-mining-wizard-analysis-services-data-mining.md)、[リレーショナル マイニング構造の作成](data-mining/create-a-relational-mining-structure.md)  
+ **詳細情報。** [データ マイニング アルゴリズム&#40;Analysis Services - データ マイニング&#41;](data-mining/data-mining-algorithms-analysis-services-data-mining.md)、[データ マイニング ウィザード&#40;Analysis Services - データ マイニング&#41;](data-mining/data-mining-wizard-analysis-services-data-mining.md)、[リレーショナル マイニング構造の作成](data-mining/create-a-relational-mining-structure.md)  
   
 ## <a name="options"></a>および  
  **マイニング モデルを含むマイニング構造を作成します。**  

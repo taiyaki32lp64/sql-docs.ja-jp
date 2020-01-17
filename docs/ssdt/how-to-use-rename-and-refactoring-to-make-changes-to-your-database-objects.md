@@ -1,5 +1,5 @@
 ---
-title: 名前の変更とリファクタリングを使用して、データベース オブジェクトを変更する方法 | Microsoft Docs
+title: 方法:名前の変更とリファクタリングを使用して、データベース オブジェクトを変更する | Microsoft Docs
 ms.custom:
 - SSDT
 ms.date: 02/09/2017
@@ -14,17 +14,16 @@ f1_keywords:
 - sql.data.tools.dbrefactoring.moveschemadialog
 - sql.data.tools.dbrefactoring.renameserverdatabasedialog
 ms.assetid: f35520e6-8e6e-47b1-87a3-22c0cf2cabdb
-author: stevestein
-ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 971df125a63ecdd1e46b6b884198886cccbcc378
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 0897d9498ca93e915dba5df9c32c4544fe08767d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47737670"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68097472"
 ---
-# <a name="how-to-use-rename-and-refactoring-to-make-changes-to-your-database-objects"></a>名前の変更とリファクタリングを使用して、データベース オブジェクトを変更する方法
+# <a name="how-to-use-rename-and-refactoring-to-make-changes-to-your-database-objects"></a>方法:名前の変更とリファクタリングを使用して、データベース オブジェクトを変更する
 Transact\-SQL エディターの [リファクター] コンテキスト メニューを使用すると、オブジェクトの名前を変更することも別のスキーマに移動することもできます。また、変更をコミットする前に、影響を受ける領域をすべてプレビューすることもできます。 [リファクター] メニューでは、データベース オブジェクトへのすべての参照を完全修飾することも、データベース プロジェクト内の `SELECT` ステートメントに含まれるワイルドカード文字を展開することもできます。  
   
 > [!NOTE]  
@@ -32,9 +31,9 @@ Transact\-SQL エディターの [リファクター] コンテキスト メニ�
   
 ### <a name="to-rename-a-type"></a>型名を変更するには  
   
-1.  **ソリューション エクスプローラー**で **Products** テーブル (Products.sql) を右クリックし、**[コードの表示]** をクリックして、Transact\-SQL エディターでスクリプトを開きます。  
+1.  **ソリューション エクスプローラー**で **Products** テーブル (Products.sql) を右クリックし、 **[コードの表示]** をクリックして、Transact\-SQL エディターでスクリプトを開きます。  
   
-2.  スクリプト内の `[Products]` を右クリックし、**[リファクター]** をポイントして **[名前の変更]** をクリックします。  
+2.  スクリプト内の `[Products]` を右クリックし、 **[リファクター]** をポイントして **[名前の変更]** をクリックします。  
   
 3.  **[新しい名前]** の値を「**Product**」に変更します。 **[変更のプレビュー]** チェック ボックスをオンにしたまま **[OK]** をクリックします。  
   
@@ -52,13 +51,13 @@ Transact\-SQL エディターの [リファクター] コンテキスト メニ�
   
 10. **[テーブル]** を展開し、**Products** テーブルの名前が変更されていることを確認します。  
   
-11. **Product** を右クリックし、**[データの表示]** をクリックします。 名前変更の操作を行っても、既存のデータはそのまま残ります。  
+11. **Product** を右クリックし、 **[データの表示]** をクリックします。 名前変更の操作を行っても、既存のデータはそのまま残ります。  
   
 ### <a name="to-expand-wildcards"></a>ワイルドカードを展開するには  
   
 1.  **ソリューション エクスプローラー**で **[関数]** ノードを展開し、**GetProductsBySupplier.sql** をダブルクリックします。  
   
-2.  次に示す行のアスタリスクの部分にカーソルを置いて、右クリックします。 **[リファクター]**、**[ワイルドカードの展開]** の順にクリックします。  
+2.  次に示す行のアスタリスクの部分にカーソルを置いて、右クリックします。 **[リファクター]** 、 **[ワイルドカードの展開]** の順にクリックします。  
   
     ```  
     SELECT * from Product p  
@@ -78,7 +77,7 @@ Transact\-SQL エディターの [リファクター] コンテキスト メニ�
   
 1.  Transact\-SQL エディターで **GetProductsBySupplier.sql** が開いていることを確認します。  
   
-2.  次に示す行の `Product` の部分にカーソルを置いて、右クリックします。 **[リファクター]** をポイントし、**[完全修飾名]** をクリックします。  
+2.  次に示す行の `Product` の部分にカーソルを置いて、右クリックします。 **[リファクター]** をポイントし、 **[完全修飾名]** をクリックします。  
   
     ```  
     SELECT [Id], [Name], [ShelfLife], [SupplierId], [CustomerId] from Product p  
@@ -92,9 +91,9 @@ Transact\-SQL エディターの [リファクター] コンテキスト メニ�
   
 ### <a name="to-move-schema"></a>スキーマを移動するには  
   
-1.  移動するオブジェクトを右クリックします。 **[リファクター]**、**[移動スキーマ]** の順にクリックします。  
+1.  移動するオブジェクトを右クリックします。 **[リファクター]** 、 **[移動スキーマ]** の順にクリックします。  
   
 2.  **[新しいスキーマ]** ボックスで、オブジェクトの移動先となるスキーマの名前を入力します。 [OK] をクリックします。  
   
-    **[変更をプレビューする]** チェック ボックスをオンにした場合、**[変更のプレビュー]** ダイアログ ボックスが表示されます。 それ以外の場合は、オブジェクト名が更新され、オブジェクトが新しいスキーマに移動します。  
+    **[変更をプレビューする]** チェック ボックスをオンにした場合、 **[変更のプレビュー]** ダイアログ ボックスが表示されます。 それ以外の場合は、オブジェクト名が更新され、オブジェクトが新しいスキーマに移動します。  
   

@@ -2,7 +2,7 @@
 title: リレーショナル クエリ デザイナーのユーザー インターフェイス (レポート ビルダー) | Microsoft Docs
 ms.date: 03/14/2017
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: report-data
 ms.topic: conceptual
 f1_keywords:
@@ -12,14 +12,14 @@ helpviewer_keywords:
 - accessing data, query designer
 - relational query designer
 ms.assetid: cd5fa70c-5218-40d5-9ae6-02d798b5c485
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 6b0f49608e5245121377ff53a7f2194d3ba09da3
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 59889ce4625b8c8748c83fada670551db8584ea6
+ms.sourcegitcommit: 312b961cfe3a540d8f304962909cd93d0a9c330b
+ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50031291"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73593388"
 ---
 # <a name="relational-query-designer-user-interface-report-builder"></a>リレーショナル クエリ デザイナーのユーザー インターフェイス (レポート ビルダー)
   レポート ビルダーと [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]のレポート デザイナーにはグラフィカル クエリ デザイナーとテキスト ベースのクエリ デザイナーが用意されており、レポート データセットの [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] リレーショナル データベース、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssSDS](../../includes/sssds-md.md)] relational databases リレーショナル データベース、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDWCurrentFull](../../includes/ssdwcurrentfull-md.md)] からレポート データセットに取得するデータを指定するクエリの作成に使用できます。 メタデータを検索してクエリを対話的に作成し、クエリの結果を表示する場合は、グラフィカル クエリ デザイナーを使用します。 グラフィカル クエリ デザイナーで作成されたクエリの表示や、クエリの変更を行う場合は、テキスト ベースのクエリ デザイナーを使用します。 ファイルまたはレポートから既存のクエリをインポートすることもできます。  
@@ -89,7 +89,7 @@ ms.locfileid: "50031291"
   
  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では [!INCLUDE[tsql](../../includes/tsql-md.md)] リレーショナル データベース、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDWCurrentFull](../../includes/ssdwcurrentfull-md.md)] では [!INCLUDE[DWsql](../../includes/dwsql-md.md)]」を参照してください。 いずれの SQL 言語構文でも、クエリ デザイナーに用意されている句、キーワード、および集計がサポートされます。  
   
- [!INCLUDE[tsql](../../includes/tsql-md.md)] の詳細については、msdn.microsoft.com の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [オンライン ブック](https://go.microsoft.com/fwlink/?LinkId=141687)にある「[Transact-SQL リファレンス (データベース エンジン)](../../t-sql/transact-sql-reference-database-engine.md)」を参照してください。  
+ [!INCLUDE[tsql](../../includes/tsql-md.md)] の詳細については、「[Transact-SQL リファレンス &#40;データベース エンジン&#41;](../../t-sql/transact-sql-reference-database-engine.md)」を参照してください。  
   
  次の表では、集計の一覧を示し、それらについて簡単に説明します。  
   
@@ -153,7 +153,7 @@ ms.locfileid: "50031291"
   
 -   **左テーブル** : 結合リレーションシップの一部である最初のテーブルの名前を表示します。  
   
--   **結合の種類** : 自動的に生成されるクエリで使用される SQL の JOIN ステートメントの種類を表示します。 既定では、外部キー制約が検出された場合は INNER JOIN が使用されます。 その他の結合の種類は LEFT JOIN または RIGHT JOIN です。 これらのいずれの結合の種類も該当しない場合は、 **[結合の種類]** 列に **[リレーションシップなし]** と表示されます。 リレーションシップのないテーブルには CROSS JOIN 結合は作成されません。代わりに、左テーブルと右テーブル内の列を結合することでリレーションシップを手動で作成する必要があります。 JOIN の種類の詳細については、msdn.microsoft.com の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [オンラインブック](https://go.microsoft.com/fwlink/?LinkId=141687) の「結合の基礎」を参照してください。  
+-   **結合の種類** : 自動的に生成されるクエリで使用される SQL の JOIN ステートメントの種類を表示します。 既定では、外部キー制約が検出された場合は INNER JOIN が使用されます。 その他の結合の種類は LEFT JOIN または RIGHT JOIN です。 これらのいずれの結合の種類も該当しない場合は、 **[結合の種類]** 列に **[リレーションシップなし]** と表示されます。 リレーションシップのないテーブルには CROSS JOIN 結合は作成されません。代わりに、左テーブルと右テーブル内の列を結合することでリレーションシップを手動で作成する必要があります。  
   
 -   **右テーブル** : 結合リレーションシップの 2 番目のテーブルの名前を表示します。  
   
@@ -195,6 +195,6 @@ ms.locfileid: "50031291"
  クエリを詳細に渡って制御するには、テキスト ベースのクエリ デザイナーを使用します。 テキスト ベースのクエリ デザイナーに切り替えるには、ツール バーの **[テキストとして編集]** をクリックします。 テキスト ベースのクエリ デザイナーでクエリを編集すると、リレーショナル クエリ デザイナーは使用できなくなります。 その後、クエリは常にテキスト ベースのクエリ デザイナーで開かれるようになります。 詳細については、「[テキストベースのクエリ デザイナーのユーザー インターフェイス &#40;レポート ビルダー&#41;](../../reporting-services/report-data/text-based-query-designer-user-interface-report-builder.md)」を参照してください。  
   
 ## <a name="see-also"></a>参照  
- [クエリ デザイナー &#40;レポート ビルダー&#41;](https://msdn.microsoft.com/library/553f0d4e-8b1d-4148-9321-8b41a1e8e1b9)  
+ [クエリ デザイン ツール &#40;SSRS&#41;](query-design-tools-ssrs.md)  
   
   

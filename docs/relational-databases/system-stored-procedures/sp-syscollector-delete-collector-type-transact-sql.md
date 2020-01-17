@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: 3f32905e-0005-42cb-aef1-7bd04c51fbac
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 909f85ee78348ac81822b5ebbd09a98b121bb76d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: c22170fff456a2ed65c295a1974539da20499c52
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47738320"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68000862"
 ---
 # <a name="spsyscollectordeletecollectortype-transact-sql"></a>sp_syscollector_delete_collector_type (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -42,11 +41,9 @@ sp_syscollector_delete_collector_type [[ @collector_type_uid = ] 'collector_type
 ```  
   
 ## <a name="arguments"></a>引数  
- [  **@collector_type_uid =** ] **'***collector_type_uid***'**  
- コレクター型の GUID です。 *collector_type_uid*は**uniqueidentifier**場合、値が必要と*名前*は NULL です。  
+`[ @collector_type_uid = ] 'collector_type_uid'` コレクター型の GUID です。 *collector_type_uid*は**uniqueidentifier**場合、値が必要と*名前*は NULL です。  
   
- [ **@name =** ] **'***name***'**  
- コレクター型の名前を指定します。 *名前*は**sysname**場合、値が必要と*collector_type_uid*は NULL です。  
+`[ @name = ] 'name'` コレクター型の名前です。 *名前*は**sysname**場合、値が必要と*collector_type_uid*は NULL です。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  **0** (成功) または**1** (失敗)  
@@ -54,7 +51,7 @@ sp_syscollector_delete_collector_type [[ @collector_type_uid = ] 'collector_type
 ## <a name="remarks"></a>コメント  
  いずれか*collector_type_uid*または*名前*する必要があります値を持つ、どちらも NULL をすることはできません。  
   
- このコレクション型のコレクション アイテムが存在する場合は、エラーがスローされます。  
+ このコレクション型のコレクション アイテムが存在しない場合、この手順はエラーをスローします。  
   
 ## <a name="permissions"></a>アクセス許可  
  メンバーシップが必要です、 **dc_admin** (EXECUTE 権限) を持つ固定データベース ロールにこのプロシージャを実行します。  
@@ -68,7 +65,7 @@ GO
 EXEC sp_syscollector_delete_collector_type @collector_type_uid = '302E93D1-3424-4be7-AA8E-84813ECF2419';  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [システム ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
  [[データ コレクション]](../../relational-databases/data-collection/data-collection.md)  
   

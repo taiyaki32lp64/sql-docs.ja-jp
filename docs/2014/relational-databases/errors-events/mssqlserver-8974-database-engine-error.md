@@ -13,11 +13,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: c46f6bee67aa84bb805709e01ea911722902a3e8
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48192644"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62762169"
 ---
 # <a name="mssqlserver8974"></a>MSSQLSERVER_8974
     
@@ -30,7 +30,7 @@ ms.locfileid: "48192644"
 |イベント ソース|MSSQLSERVER|  
 |コンポーネント|SQLEngine|  
 |シンボル名|DBCC3_OFF_ROW_DATA_NODE_HAS_TWO_PARENTS|  
-|メッセージ テキスト|テーブル エラー : オブジェクト ID O_ID、インデックス ID I_ID、パーティション ID PN_ID、アロケーション ユニット ID A_ID (型 TYPE)。 ページ P_ID1、スロット S_ID1、テキスト ID TEXT_ID の行以外のデータ ノードが、ページ P_ID2、スロット S_ID2 とページ P_ID3、スロット P_ID3 によって指されています。|  
+|メッセージ テキスト|テーブル エラー:オブジェクト ID O_ID、インデックス ID I_ID、パーティション ID PN_ID、アロケーション ユニット ID A_ID (型 TYPE) です。 ページ P_ID1、スロット S_ID1、テキスト ID TEXT_ID の行以外のデータ ノードが、ページ P_ID2、スロット S_ID2 とページ P_ID3、スロット P_ID3 によって指されています。|  
   
 ## <a name="explanation"></a>説明  
  行外のデータ ノードが、2 件のデータ レコードまたはインデックス レコードで、子ノードの一覧に含まれています。 各ノードに対して可能な親ノードは 1 つだけです。  

@@ -17,11 +17,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 558173381d88eac95fc2b6993e11a1104844abf7
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53356660"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63022197"
 ---
 # <a name="ibm-db2-subscribers"></a>IBM DB2 サブスクライバー
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] は、 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Host Integration Server に含まれている OLE DB プロバイダーを経由した IBM DB2/AS 400、DB2/MVS、および DB2/Universal Database へのプッシュ サブスクリプションをサポートします。  
@@ -121,18 +121,18 @@ ms.locfileid: "53356660"
 |`into`|INT|  
 |`money`|DECIMAL(19,4)|  
 |`nchar(1-4000)`|VARCHAR(1-4000)|  
-|`ntext`|VARCHAR (0)<sup>1</sup>|  
+|`ntext`|VARCHAR(0)<sup>1</sup>|  
 |`numeric(1-31, 0-31)`|DECIMAL(1-31,0-31)|  
 |`numeric(32-38, 0-38)`|VARCHAR(41)|  
 |`nvarchar(1-4000)`|VARCHAR(1-4000)|  
-|`nvarchar(max)`|VARCHAR (0)<sup>1</sup>|  
+|`nvarchar(max)`|VARCHAR(0)<sup>1</sup>|  
 |`real`|real|  
 |`smalldatetime`|timestamp|  
 |`smallint`|SMALLINT|  
 |`smallmoney`|DECIMAL(10,4)|  
 |`sql_variant`|なし|  
 |`sysname`|VARCHAR(128)|  
-|`text`|VARCHAR (0)<sup>1</sup>|  
+|`text`|VARCHAR(0)<sup>1</sup>|  
 |`time(0-7)`|VARCHAR(16)|  
 |`timestamp`|CHAR(8) FOR BIT DATA|  
 |`tinyint`|SMALLINT|  
@@ -140,8 +140,8 @@ ms.locfileid: "53356660"
 |`varbinary(1-8000)`|VARCHAR(1-8000) FOR BIT DATA|  
 |`varchar(1-8000)`|VARCHAR(1-8000)|  
 |`varbinary(max)`|VARCHAR (0) FOR BIT DATA<sup>1</sup>|  
-|`varchar(max)`|VARCHAR (0)<sup>1</sup>|  
-|`xml`|VARCHAR (0)<sup>1</sup>|  
+|`varchar(max)`|VARCHAR(0)<sup>1</sup>|  
+|`xml`|VARCHAR(0)<sup>1</sup>|  
   
  <sup>1</sup> varchar (0) へのマッピングの詳細については、次のセクションを参照してください。  
   

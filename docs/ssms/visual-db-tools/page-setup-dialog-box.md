@@ -10,15 +10,14 @@ ms.topic: conceptual
 f1_keywords:
 - vs.PageSetup
 ms.assetid: 03deb946-34c6-48b1-b639-5e888f47bddb
-author: stevestein
-ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 1be11c13f4cad0a4f54321f6c47729b22ccd87bd
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 2a3354661aa51978bce2381553c978cac9a8fec9
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47745150"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68263268"
 ---
 # <a name="page-setup-dialog-box"></a>[ページ設定] ダイアログ ボックス
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

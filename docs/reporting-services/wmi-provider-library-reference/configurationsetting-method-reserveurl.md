@@ -2,20 +2,20 @@
 title: ReserveURL メソッド (WMI MSReportServer_ConfigurationSetting) | Microsoft Docs
 ms.date: 03/01/2017
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: wmi-provider-library-reference
 ms.topic: conceptual
 helpviewer_keywords:
 - ReservedURL method
 ms.assetid: b9008a62-3edd-4f8a-99f2-7598c2133899
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 51c6c6834fa2f7d0d137d5d9c5236b189e213f3d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: e16dbe378ddab0b04237509a9fc9865d08468bba
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47856784"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65576693"
 ---
 # <a name="configurationsetting-method---reserveurl"></a>ConfigurationSetting メソッド - ReserveURL
   指定したアプリケーションの URL 予約を追加します。  

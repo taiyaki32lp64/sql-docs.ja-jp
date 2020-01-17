@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 8a3bb608-66d7-4128-a3ef-84cb0556de0d
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 43b8864d03e3ec2e563984e203779e5905a15813
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ed0e3ad8027c31a351ddb4506d3b420aa3a1124d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47762762"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67938804"
 ---
 # <a name="update-resync-property-dynamic-ado"></a>Update Resync プロパティ - 動的 (ADO)
 指定するかどうか、 [UpdateBatch](../../../ado/reference/ado-api/updatebatch-method.md)メソッドの後に、暗黙的な[再同期](../../../ado/reference/ado-api/resync-method.md)メソッドの操作であれば、その操作のスコープ。  

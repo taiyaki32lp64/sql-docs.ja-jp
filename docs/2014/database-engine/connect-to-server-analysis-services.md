@@ -13,14 +13,14 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: d7dd13f417ccf7b6240d8e3f8328d0b3cd9371bc
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48140158"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62755595"
 ---
 # <a name="connect-to-server-analysis-services"></a>[サーバーへの接続] \(Analysis Services)
-  このダイアログを使用すると、[!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] に接続するときのオプションを表示または指定できます。  
+  このダイアログを使用すると、 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]に接続するときのオプションを表示または指定できます。  
   
 ## <a name="options"></a>および  
  **サーバーの種類**  
@@ -30,7 +30,7 @@ ms.locfileid: "48140158"
  接続するサーバー インスタンスを選択します。 既定では、最後に接続していたサーバー インスタンスが表示されます。  
   
  **[認証]**  
- Analysis Services のインスタンスに接続するときは、 [!INCLUDE[msCoName](../includes/msconame-md.md)] Windows 認証モードがサポートされます。  
+ Analysis Services のインスタンスに接続するときに、次の認証モードがサポートされます。[!INCLUDE[msCoName](../includes/msconame-md.md)] Windows 認証。  
   
  **Windows 認証モード ([Windows 認証])**  
  **Windows 認証** モードを使用すると、ユーザーは Windows ユーザー アカウントを使用して接続できます。  

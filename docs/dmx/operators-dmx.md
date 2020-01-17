@@ -8,13 +8,12 @@ ms.topic: conceptual
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-manager: kfile
-ms.openlocfilehash: 072d0a36a4803f4de1d50ba066e4e86e5d171c5c
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 2f03c3152e3144b137c079cbdfddeff5b9cd5156
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37989674"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68008167"
 ---
 # <a name="operators-dmx"></a>演算子 (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -41,7 +40,7 @@ ms.locfileid: "37989674"
  複数の単純式を 1 つの複合式に結合する場合、結合した式のデータ型は、演算子のルールとデータ型の優先順位のルールが組み合わされて決定されます。 結果が文字または Unicode 値では場合、[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]の演算子の照合順序の優先順位の規則と規則を組み合わせることによって、結果の照合順序を決定します。 単純式の有効桁数、小数点以下桁数、長さに基づいて結果の有効桁数、小数点以下桁数、長さを指定するルールもあります。  
   
 ## <a name="see-also"></a>参照  
- [データ マイニング拡張機能&#40;DMX&#41;リファレンス](../dmx/data-mining-extensions-dmx-reference.md)   
+ [データ マイニング拡張機能 &#40;DMX&#41; リファレンス](../dmx/data-mining-extensions-dmx-reference.md)   
  [データ マイニング拡張機能&#40;DMX&#41;関数リファレンス](../dmx/data-mining-extensions-dmx-function-reference.md)   
  [データ マイニング拡張機能&#40;DMX&#41;ステートメント リファレンス](../dmx/data-mining-extensions-dmx-statements.md)   
  [データ マイニング拡張機能&#40;DMX&#41;構文表記規則](../dmx/data-mining-extensions-dmx-syntax-conventions.md)   

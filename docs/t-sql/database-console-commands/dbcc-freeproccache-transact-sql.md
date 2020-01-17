@@ -22,16 +22,15 @@ helpviewer_keywords:
 - procedure cache [SQL Server]
 - clearing procedure cache
 ms.assetid: 0e09d210-6f23-4129-aedb-3d56b2980683
-author: uc-msft
+author: pmasl
 ms.author: umajay
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 8c8a970d96475d2682bc58246aa2383bf19e8365
-ms.sourcegitcommit: 467b2c708651a3a2be2c45e36d0006a5bbe87b79
+ms.openlocfilehash: 48eaf7f49976ed8784973c950887dc92252b08e5
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53979738"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68101901"
 ---
 # <a name="dbcc-freeproccache-transact-sql"></a>DBCC FREEPROCCACHE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-pdw-md.md)]
@@ -81,7 +80,7 @@ DBCC FREEPROCCACHE [ ( COMPUTE | ALL ) ]
  すべての情報メッセージを表示しないようにします。  
   
  COMPUTE  
- すべての計算ノードには、クエリ プランのキャッシュを削除します。 これが既定値です。  
+ 各コンピューティング ノードからクエリ プラン キャッシュを削除します。 これが既定値です。  
   
  ALL  
  各計算ノードと各制御ノードからクエリ プラン キャッシュを消去します。  
@@ -113,7 +112,7 @@ DBCC FREEPROCCACHE を使用してプラン キャッシュをクリアする際
 -   user options  
   
 ## <a name="result-sets"></a>結果セット  
-WITH NO_INFOMSGS 句が指定されていない場合は次のメッセージが表示されます。"DBCC の実行が完了しました。 DBCC がエラー メッセージを出力した場合は、システム管理者に相談してください。"
+WITH NO_INFOMSGS 句が指定されていない場合は、DBCC FREEPROCCACHE により次が返されます。"DBCC の実行が完了しました。 DBCC がエラー メッセージを出力した場合は、システム管理者に相談してください。"
   
 ## <a name="permissions"></a>アクセス許可  
 適用対象: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]、[!INCLUDE[ssPDW](../../includes/sspdw-md.md)] 
@@ -123,11 +122,11 @@ WITH NO_INFOMSGS 句が指定されていない場合は次のメッセージが
 - DB_OWNER 固定サーバー ロールのメンバーシップが必要です。  
 
 ## <a name="general-remarks-for-includesssdwincludessssdw-mdmd-and-includesspdwincludessspdw-mdmd"></a>[!INCLUDE[ssSDW](../../includes/sssdw-md.md)] と [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] に関する全般的な解説  
-複数の DBCC FREEPROCCACHE コマンドは、同時に実行することができます。
+複数の DBCC FREEPROCCACHE コマンドを同時に実行することができます。
 [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] または [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] では、プラン キャッシュをクリアすると、以前にキャッシュされたプランが再利用されず、クエリの実行で新しいプランがコンパイルされるため、、クエリのパフォーマンスが一時的に低下する可能性があります。 
 
 計算ノードで DBCC FREEPROCCACHE (COMPUTE) を実行する場合にのみ、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] でクエリが再コンパイルされます。 [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] または [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] の場合、制御ノードで生成される並列クエリ プランの再コンパイルは実行されません。
-実行中には、DBCC FREEPROCCACHE をキャンセルできます。
+実行中に DBCC FREEPROCCACHE をキャンセルできます。
   
 ## <a name="limitations-and-restrictions-for-includesssdwincludessssdw-mdmd-and-includesspdwincludessspdw-mdmd"></a>[!INCLUDE[ssSDW](../../includes/sssdw-md.md)] および [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] の制限事項と制約事項  
 DBCC FREEPROCCACHE はトランザクション内で実行できません。
@@ -191,24 +190,24 @@ GO
 ## <a name="examples-includesssdwincludessssdw-mdmd-and-includesspdwincludessspdw-mdmd"></a>例: [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] および [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
 ### <a name="d-dbcc-freeproccache-basic-syntax-examples"></a>D. DBCC FREEPROCCACHE の基本的な構文の例  
-次の例では、コンピューティング ノードからすべての既存のクエリ プラン キャッシュを削除します。 コンテキストを UserDbSales に設定すると、すべてのデータベースのコンピューティング ノードのクエリ プラン キャッシュが削除されます。 WITH NO_INFOMSGS 句では、情報メッセージが結果に表示されることを防ぎます。  
+次の例では、コンピューティング ノードからすべての既存のクエリ プラン キャッシュを削除します。 コンテキストを UserDbSales に設定すると、すべてのデータベースのコンピューティング ノードのクエリ プラン キャッシュが削除されます。 WITH NO_INFOMSGS 句は、情報メッセージが結果に表示されないようにします。  
   
 ```sql
 USE UserDbSales;  
 DBCC FREEPROCCACHE (COMPUTE) WITH NO_INFOMSGS;
 ```  
   
- 次の例は、前の例と同じ結果が結果に情報メッセージが表示されます。  
+ 次の例では、情報メッセージが結果に表示されることを除き、前の例と同じ結果が表示されます。  
   
 ```sql
 USE UserDbSales;  
 DBCC FREEPROCCACHE (COMPUTE);  
 ```  
   
-情報メッセージが要求した、実行が成功したときに、クエリの結果は、コンピューティング ノードごとに 1 行があります。
+情報メッセージが要求されて実行が成功すると、クエリの結果にはコンピューティング ノードごとに 1 行が含まれます。
   
 ### <a name="e-granting-permission-to-run-dbcc-freeproccache"></a>E. DBCC FREEPROCCACHE を実行する権限を許可します。  
-次の例では、David DBCC FREEPROCCACHE を実行するためのアクセス許可のログインを使用できます。  
+次の例では、ログイン David に DBCC FREEPROCCACHE を実行するアクセス許可を付与します。  
   
 ```sql
 GRANT ALTER SERVER STATE TO David; 

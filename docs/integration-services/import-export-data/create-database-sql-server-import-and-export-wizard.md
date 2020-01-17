@@ -3,24 +3,26 @@ title: '[データベースの作成] (SQL Server インポートおよびエク
 ms.custom: ''
 ms.date: 02/17/2017
 ms.prod: sql
-ms.prod_service: integration-services
 ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql13.dts.impexpwizard.createdatabase.f1
 ms.assetid: 56a8a79f-086c-4bdc-8888-0045bb4b0cbf
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: 3456afaeff6d8eda0ee54bac846fab00c7e35488
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 4900f90f4044b32aea673106ad0a7a2a14a8f5cb
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47807290"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71296286"
 ---
 # <a name="create-database-sql-server-import-and-export-wizard"></a>[データベースの作成] (SQL Server インポートおよびエクスポート ウィザード)
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
 **[変換先の選択]** ページで **[新規]** を選択して新しい SQL Server 変換先データベースを作成する場合、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インポートおよびエクスポート ウィザードに **[データベースの作成]** ダイアログ ボックスが表示されます。 このページでは、新しいデータベースの名前を指定します。 必要に応じて、新しいデータベースとそのログ ファイルの初期サイズと自動拡張の設定を変更することもできます。 
 
 ウィザードの **[データベースの作成]** ダイアログ ボックスでは、新しい SQL Server データベースを作成するために使用できる基本的なオプションのみが提供されます。 新しい [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データベースのすべてのオプションを表示および構成するには、[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] を使用してデータベースを作成するか、ウィザードでデータベースを作成してから構成します。 
@@ -34,7 +36,7 @@ ms.locfileid: "47807290"
 ![インポートおよびエクスポート ウィザードの [データベースの作成] ページ](../../integration-services/import-export-data/media/create-database.png "インポートおよびエクスポート ウィザードの [データベースの作成] ページ")  
 
 ## <a name="provide-a-name-for-the-new-database"></a>新しいデータベースの名前を入力する  
-**名前**  
+**[名前]**  
  対象になる SQL Server データベースの名前を指定します。
  
 ### <a name="naming-requirements"></a>名前付けに関する要件

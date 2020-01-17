@@ -11,15 +11,14 @@ helpviewer_keywords:
 - columns [SQL Server], aliases
 - aliases [SQL Server], columns
 ms.assetid: e2e1c166-8ea7-47a2-b6a7-e419bf0fa3bb
-author: stevestein
-ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 63646779d3b36c389623705a1ba3205a53ef4fe4
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: f63788f06e8d7fa921c06186b691a603a49059b6
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47596622"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68264940"
 ---
 # <a name="create-column-aliases-visual-database-tools"></a>列の別名の作成 (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

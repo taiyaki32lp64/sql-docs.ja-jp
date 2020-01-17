@@ -11,11 +11,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: a1dd2e117207f3737f54e2cd0269c51918a199f2
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52823486"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63286532"
 ---
 # <a name="sql-trace"></a>SQL トレース (SQL Trace)
   SQL トレースでは、トレース定義に一覧表示されているイベント クラスのインスタンスであるイベントが収集されます。 このようなイベントは、フィルターによってトレースから除外したり、対象のキューに登録したりすることができます。 イベントの対象には、ファイルまたは [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 管理オブジェクト (SMO) を指定できます。SMO では、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]を管理するアプリケーションでトレース情報を使用できます。  
@@ -35,7 +35,7 @@ ms.locfileid: "52823486"
  次の用語は SQL トレースの主要な概念を示したものです。  
   
  **イベント**  
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../../includes/ssdenoversion-md.md)]のインスタンス内での操作により発生します。  
+ [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../../includes/ssdenoversion-md.md)]のインスタンス内での操作により発生します。  
   
  **データ列**  
  イベントの属性。  
@@ -91,7 +91,7 @@ ms.locfileid: "52823486"
 |**GUID**|54|トレースで指定されているイベント クラスに依存する GUID 値。|  
 |**FileName**|36|変更されるファイルの論理名。|  
 |**Handle**|33|サーバーとの間で実行を調整するときに ODBC、OLE DB、または DB-Library によって使用される整数。|  
-|**ホスト名** <sup>1</sup>|8|クライアントが実行しているコンピューターの名前。 このデータ列には、クライアントがホスト名を指定している場合にデータが格納されます。 ホスト名を指定するには、HOST_NAME 関数を使用します。|  
+|**HostName** <sup>1</sup>|8|クライアントが実行しているコンピューターの名前。 このデータ列には、クライアントがホスト名を指定している場合にデータが格納されます。 ホスト名を指定するには、HOST_NAME 関数を使用します。|  
 |**IndexID**|24|イベントの影響を受けるオブジェクトに付けられたインデックス用の ID。 オブジェクトのインデックス ID を調べるには、 **sysindexes** システム テーブルの **indid** 列を使用します。|  
 |**IntegerData**|25|トレースにキャプチャされるイベント クラスに依存する整数値。|  
 |**IntegerData2**|55|トレースにキャプチャされるイベント クラスに依存する整数値。|  

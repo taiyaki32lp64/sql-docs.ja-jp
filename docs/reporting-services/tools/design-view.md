@@ -2,7 +2,7 @@
 title: '[デザイン] ビュー | Microsoft Docs'
 ms.date: 05/31/2016
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: tools
 ms.topic: conceptual
 f1_keywords:
@@ -10,14 +10,14 @@ f1_keywords:
 helpviewer_keywords:
 - Layout View dialog box
 ms.assetid: 6fa378aa-442f-4d2f-beab-02a0fb5cd3ce
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: b419975238a2e6031a8fdc6c2ec67b608dbbcc64
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: e0e69efeb8f0b7bd0bdd4fbcb1bcb8a934ffdf6c
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47752370"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65577878"
 ---
 # <a name="design-view"></a>[デザイン] ビュー
 [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] レポート デザイナーで [デザイン] ビューを使用すると、レポートにレポート アイテムを配置できます。 [デザイン] ビューは、デザイン画面またはレイアウト ビューと呼ばれることもあります。  
@@ -55,6 +55,6 @@ ms.locfileid: "47752370"
   
 ## <a name="see-also"></a>参照  
  [ページ ヘッダーとページ フッター (レポート ビルダーおよび SSRS)](../../reporting-services/report-design/page-headers-and-footers-report-builder-and-ssrs.md)   
- [レポート デザインに関するヒント &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/report-design-tips-report-builder-and-ssrs.md)  
+ [レポート デザインに関するヒント (レポート ビルダーおよび SSRS)](../../reporting-services/report-design/report-design-tips-report-builder-and-ssrs.md)  
   
   

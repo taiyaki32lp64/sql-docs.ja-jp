@@ -13,15 +13,15 @@ ms.assetid: 47edefbd-a09b-4087-937a-453cd5c6e061
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: cfb905cb56c053d44b93021838915d3a628241a0
-ms.sourcegitcommit: 480961f14405dc0b096aa8009855dc5a2964f177
+ms.openlocfilehash: d7b5bf6ff2324c8e63b030d03e36794faf0ec9d4
+ms.sourcegitcommit: ab867100949e932f29d25a3c41171f01156e923d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/22/2019
-ms.locfileid: "54420207"
+ms.lasthandoff: 06/27/2019
+ms.locfileid: "67419038"
 ---
 # <a name="breaking-changes-to-database-engine-features-in-sql-server-2014"></a>SQL Server 2014 におけるデータベース エンジン機能の重大な変更
-  このトピックでは、重大な変更を説明します、 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] [!INCLUDE[ssDE](../includes/ssde-md.md)]と以前のバージョンの[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]します。 これらの変更によって、以前のバージョンの [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]に基づくアプリケーション、スクリプト、または機能が使用できなくなる場合があります。 この問題は、アップグレードするときに発生することがあります。 詳細については、「 [Use Upgrade Advisor to Prepare for Upgrades](../sql-server/install/use-upgrade-advisor-to-prepare-for-upgrades.md)」を参照してください。  
+  このトピックでは、[!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] [!INCLUDE[ssDE](../includes/ssde-md.md)] および以前のバージョンの [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] に関する重要な変更について説明します。 これらの変更によって、以前のバージョンの [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]に基づくアプリケーション、スクリプト、または機能が使用できなくなる場合があります。 この問題は、アップグレードするときに発生することがあります。 詳細については、「 [Use Upgrade Advisor to Prepare for Upgrades](../sql-server/install/use-upgrade-advisor-to-prepare-for-upgrades.md)」を参照してください。  
   
 ##  <a name="SQL14"></a> [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] における重大な変更  
  新しい事項はありません。  
@@ -64,7 +64,7 @@ ms.locfileid: "54420207"
   
 |表示|説明|  
 |----------|-----------------|  
-|sys.data_spaces<br /><br /> sys.partition_schemes<br /><br /> sys.filegroups<br /><br /> sys.partition_functions|sys.data_spaces と sys.partition_functions に、新しい列 (is_system) が追加されました  (sys.partition_schemes と sys.filegroups は、sys.data_spaces の列を継承します)。<br /><br /> この列では、値 1 は、そのオブジェクトがフルテキスト インデックス フラグメントに使用されることを示します。<br /><br /> sys.partition_functions、sys.partition_schemes、および sys.filegroups では、この新しい列は末尾の列ではありません。 これらのカタログ ビューから返される列の順序に依存する既存のクエリを修正してください。|  
+|sys.data_spaces<br /><br /> sys.partition_schemes<br /><br /> sys.filegroups<br /><br /> sys.partition_functions|sys.data_spaces と sys.partition_functions に、新しい列 (is_system) が追加されました (sys.partition_schemes と sys.filegroups は、sys.data_spaces の列を継承します)。<br /><br /> この列では、値 1 は、そのオブジェクトがフルテキスト インデックス フラグメントに使用されることを示します。<br /><br /> sys.partition_functions、sys.partition_schemes、および sys.filegroups では、この新しい列は末尾の列ではありません。 これらのカタログ ビューから返される列の順序に依存する既存のクエリを修正してください。|  
   
 ### <a name="sql-clr-data-types-geometry-geography-and-hierarchyid"></a>SQL CLR データ型 (geometry、geography、および hierarchyid)  
  アセンブリ**Microsoft.SqlServer.Types.dll**、バージョン 11.0 に、バージョン 10.0 からアップグレードされましたが、空間データ型と、hierarchyid 型が含まれています。 このアセンブリを参照するカスタム アプリケーションは、次の条件に該当する場合に失敗します。  
@@ -265,9 +265,9 @@ ms.locfileid: "54420207"
 [!INCLUDE[Archived documentation for very old versions of SQL Server](../includes/paragraph-content/previous-versions-archive-documentation-sql-server.md)]
 
 ## <a name="see-also"></a>参照  
- [SQL Server 2014 で廃止されたデータベース エンジンの機能](deprecated-database-engine-features-in-sql-server-2016.md)   
- [SQL Server 2014 におけるデータベース エンジン機能の動作の変更します。](../../2014/database-engine/behavior-changes-to-database-engine-features-in-sql-server-2014.md)   
- [SQL Server 2014 で廃止されたデータベース エンジンの機能](discontinued-database-engine-functionality-in-sql-server-2016.md)   
+ [SQL Server 2014 で廃止されたデータベース エンジンの機能](deprecated-database-engine-features-in-sql-server-2016.md?view=sql-server-2014)   
+ [SQL Server 2014 におけるデータベース エンジン機能の動作の変更します。](../../2014/database-engine/behavior-changes-to-database-engine-features-in-sql-server-2014.md?view=sql-server-2014)   
+ [SQL Server 2014 で廃止されたデータベース エンジンの機能](discontinued-database-engine-functionality-in-sql-server-2016.md?view=sql-server-2014)   
  [SQL Server データベース エンジンの旧バージョンとの互換性](sql-server-database-engine-backward-compatibility.md)   
  [ALTER DATABASE 互換性レベル &#40;TRANSACT-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql-compatibility-level)  
  [SQL Server 2014 の管理ツール機能における重大な変更](breaking-changes-to-management-tools-features-in-sql-server-2014.md?view=sql-server-2014)  

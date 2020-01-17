@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 7e7067d0-6405-4c09-bff3-b1c2f2d783e0
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: d3f0929cc55fcf529e14ec17912f0a474f6e2257
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ff06ece1485ce8f140e1295e8bee3036cc1686a4
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47659346"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67966194"
 ---
 # <a name="groups-and-users-append-changepassword-methods-example-vc"></a>Groups および Users Append、ChangePassword メソッドの例 (VC++)
 この例では、 [Append](../../../ado/reference/adox-api/append-method-adox-groups.md)メソッドの[グループ](../../../ado/reference/adox-api/groups-collection-adox.md)、だけでなく[Append](../../../ado/reference/adox-api/append-method-adox-users.md)メソッドの[ユーザー](../../../ado/reference/adox-api/users-collection-adox.md)新しいを追加することで[グループ](../../../ado/reference/adox-api/group-object-adox.md)され、新しい[ユーザー](../../../ado/reference/adox-api/user-object-adox.md)システムにします。 新しい**グループ**に追加されますが、**グループ**の新しいコレクション**ユーザー**します。 その結果、新しい**ユーザー**に追加されます、**グループ**します。 また、 [ChangePassword](../../../ado/reference/adox-api/changepassword-method-adox.md)メソッドを使用して、指定、**ユーザー**パスワード。  

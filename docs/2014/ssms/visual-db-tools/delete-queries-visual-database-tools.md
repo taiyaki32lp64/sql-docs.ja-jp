@@ -16,11 +16,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 9e046aef7cd5fb4049b4bfb92c99272f625224c2
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52815944"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62670475"
 ---
 # <a name="delete-queries-visual-database-tools"></a>クエリの削除 (Visual Database Tools)
   クエリを削除することにより、プロジェクトからそのクエリを除外し、ファイル システムから完全に削除できます。 次に示す手順で削除されたクエリは、ごみ箱に保存されないため、復元できません。  

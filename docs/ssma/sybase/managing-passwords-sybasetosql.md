@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 9b6a70f9-6840-4140-a059-bb7bd7ccc67c
 author: Shamikg
 ms.author: Shamikg
-manager: craigg
-ms.openlocfilehash: 83fad699c78a1d405d7d67bda544b6c5781fbed5
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 14cd4a9c4fb3c49bfa3bd5778e4872bd7b002017
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52540310"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68028900"
 ---
 # <a name="managing-passwords-sybasetosql"></a>パスワードの管理 (SybaseToSQL)
 このセクションでは、データベースのパスワードとサーバー間でのエクスポートをインポートまたはプロシージャのセキュリティ保護の詳細については。  
@@ -35,9 +34,9 @@ SSMA では、データベースのパスワードをセキュリティで保護
   
 次の 3 つのメソッドのいずれかを使用して有効なパスワードを指定します。  
   
-1.  **テキストを消去します。**'Password' ノードの値の属性には、データベースのパスワードを入力します。 これはスクリプト ファイルまたはサーバー接続ファイルの [サーバー] セクションで、サーバーの定義のノードの下にあります。  
+1.  **テキストを消去します。** 'Password' ノードの値の属性には、データベースのパスワードを入力します。 これはスクリプト ファイルまたはサーバー接続ファイルの [サーバー] セクションで、サーバーの定義のノードの下にあります。  
   
-    パスワードがクリア テキストでは、安全ではありません。 そのため、コンソール出力には、次の警告メッセージになります。*"Server&lt;サーバー id&gt;パスワードはクリア テキストの安全でないフォームでは、SSMA コンソールのアプリケーションには、暗号化を使用してパスワードを保護する - securepassword オプションの詳細は SSMA ヘルプ ファイルを参照してくださいオプションが提供されます情報。"*  
+    パスワードがクリア テキストでは、安全ではありません。 そのため、コンソール出力には、次の警告メッセージになります。 *"Server&lt;サーバー id&gt;パスワードはクリア テキストの安全でないフォームでは、SSMA コンソールのアプリケーションには、暗号化を使用してパスワードを保護する - securepassword オプションの詳細は SSMA ヘルプ ファイルを参照してくださいオプションが提供されます情報。"*  
   
     **暗号化されたパスワード:** この場合、指定したパスワードは、ProtectedStorage.ssma でローカル コンピューターの暗号化された形式で格納されます。  
   
@@ -49,7 +48,7 @@ SSMA では、データベースのパスワードをセキュリティで保護
   
             サーバーの定義 id とその対応する暗号化されたパスワードがローカル コンピューター上のファイルに格納されています。  
             
-            例 1 :   
+            例 1 :  
             
                 Specify password
                 
@@ -131,6 +130,6 @@ SSMA コンソール アプリケーションをセキュリティで保護さ�
     
     Please confirm password: xxxxxxxx  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
 [SSMA コンソール (Sybase) の実行](https://msdn.microsoft.com/ea8950b7-fabc-4aa4-89f8-9573a2617d70)  
   

@@ -2,20 +2,20 @@
 title: ページ分割されたレポートのデータ ソースのプロパティを構成する - SSRS | Microsoft Docs
 ms.date: 05/24/2018
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: report-data
 ms.topic: conceptual
 helpviewer_keywords:
 - data sources [Reporting Services], embedded
 ms.assetid: 27af5195-c845-40e0-9a9c-efe569424022
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 7e50917bd524e8ce8c68bc904e100b673419d684
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 5e134c81fd697d4aa6fc7e5b620c1a71ff462b73
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47843940"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65573194"
 ---
 # <a name="configure-data-source-properties-for-a-paginated-report"></a>ページ分割されたレポートのデータ ソースのプロパティを構成する
   ページ分割されたレポートを実行すると、レポート サーバーは、データ ソースへの接続方法を調べるためにプロパティ情報を取得します。 パブリッシュされたレポートの [データ ソース] プロパティ ページには、データ ソースの種類、接続文字列、および資格情報が指定されています。 これらのプロパティを設定することで、データ ソースの接続情報を、レポートの作成時に指定された元の値から変更することができます。  
@@ -26,7 +26,7 @@ ms.locfileid: "47843940"
   
 1.  Web ポータルで、レポート固有のデータ ソースを構成するレポートに移動します。  
   
-3.  右上隅の省略記号 (**[...]**)、**[管理]** の順に選択します。  
+3.  右上隅の省略記号 ( **[...]** )、 **[管理]** の順に選択します。  
   
 4.  **[データ ソース]** タブをクリックします。レポートの [データ ソース] プロパティ ページが開きます。  
   

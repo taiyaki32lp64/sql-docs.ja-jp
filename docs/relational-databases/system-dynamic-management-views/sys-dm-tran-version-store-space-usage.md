@@ -20,12 +20,12 @@ author: savjani
 ms.author: pariks
 manager: ajayj
 monikerRange: '>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: f8ae2babba09f30b03ea512a85bdc6f06c4bf7f1
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 2a4fac732f784a401206f37fb2af9d3d8e0688ba
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47688280"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68262662"
 ---
 # <a name="sysdmtranversionstorespaceusage-transact-sql"></a>sys.dm_tran_version_store_space_usage (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-2016sp2-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-2016sp2-asdb-xxxx-xxx-md.md)]
@@ -34,7 +34,7 @@ ms.locfileid: "47688280"
   
 バージョン管理された各レコードは、いくつかの追跡または状態情報と共に、バイナリ データとして格納されます。 データベース テーブル内のレコードと同様、バージョン ストア レコードは 8,192 バイトのページに格納されます。 レコードが 8,192 バイトを超える場合は、2 つのレコードに分割されます。  
   
-バージョン レコードはバイナリとして格納されるので、複数のデータベースの照合順序が異なっていても問題にはなりません。 使用**sys.dm_tran_version_store_space_usage** tempdb のサイズの SQL Server インスタンスのデータベース バージョン ストア領域の使用量に基づくを監視して計画します。
+バージョン レコードはバイナリであるため、異なるデータベース照合順序の異なる問題はありません。 使用**sys.dm_tran_version_store_space_usage** tempdb のサイズの SQL Server インスタンスのデータベース バージョン ストア領域の使用量に基づくを監視して計画します。
   
 |列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
@@ -67,7 +67,7 @@ AdventureWorks2016DW      0                    0
 WideWorldImporters        20                   160             
 ```
  
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [動的管理ビューと動的管理関数 &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
  [トランザクション関連の動的管理ビューおよび関数  &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/transaction-related-dynamic-management-views-and-functions-transact-sql.md)  
   

@@ -15,16 +15,15 @@ helpviewer_keywords:
 ms.assetid: aabff9d9-20ea-4b68-b8fd-1e33061bd0ef
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: f3a7db9667f24e11fe6a75f73e0dd7e79522db13
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ba56db60d38f6babc52f81f65f9b94e2c3a2f531
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47837860"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67939695"
 ---
 # <a name="text-file-driver-programming-considerations"></a>テキスト ファイル ドライバーのプログラミングに関する考慮事項
-このセクションのトピックは次のとおりです。  
+このセクションでは、次のトピックについて説明します。  
   
 -   [テキスト ファイル ドライバーのプログラムでオプションの設定](../../odbc/microsoft/setting-options-programmatically-for-the-text-file-driver.md)  
   

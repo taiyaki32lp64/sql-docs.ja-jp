@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 4ac65ed6-e07e-40e4-a282-13bfd92dfa41
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: d38c9727995b20cd23087a0f944ccbfa28bf019d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 330f044d832bf039028cb3d7e92d8929e28e6e79
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47788090"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67946624"
 ---
 # <a name="spupdatetargetservergroup-transact-sql"></a>sp_update_targetservergroup (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -42,11 +41,9 @@ sp_update_targetservergroup
 ```  
   
 ## <a name="arguments"></a>引数  
- [ **@name =**] **'***current_name***'**  
- ターゲット サーバー グループの名前を指定します。 *current_name*は**sysname**、既定値はありません。  
+`[ @name = ] 'current_name'` 対象サーバー グループの名前。 *current_name*は**sysname**、既定値はありません。  
   
- [ **@new_name =**] **'***new_name***'**  
- ターゲット サーバー グループの新しい名前を指定します。 *新しい名前*は**sysname**、既定値はありません。  
+`[ @new_name = ] 'new_name'` 対象サーバー グループの新しい名前。 *新しい名前*は**sysname**、既定値はありません。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  **0** (成功) または**1** (失敗)  

@@ -11,21 +11,20 @@ f1_keywords:
 - vdt.dlgbox.choosetableforinsertfrom
 - vdtsql.chm:69642
 ms.assetid: 4ffd62c1-da72-4daf-832b-cc1268abf351
-author: stevestein
-ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 0d3847dd6f7ce9f5592bdf4c072f0cb2f72e3bdf
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: bdda9fd3bea6454e899031c8adf706a6c1dea94f
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47756220"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68263631"
 ---
 # <a name="choose-target-table-for-insert-results-dialog-box-visual-database-tools"></a>[挿入先のテーブル選択] ダイアログ ボックス (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 INSERT RESULTS クエリの結果として、どのテーブルにデータ行を追加するかを指定できます。 このダイアログ ボックスは、INSERT RESULTS クエリを開始すると表示されます。  
   
-## <a name="options"></a>[変数]  
+## <a name="options"></a>オプション  
 **[挿入先]**  
 行を追加するテーブルの名前を一覧から選択します。 INSERT RESULTS クエリに対して指定できるテーブルは 1 つだけです。  
   

@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 9c1c4cfb-0e3b-4f01-bf57-3fce94c7d1d4
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: 711ac97cd2376cc924075d67b2f25ece1a4744e0
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 57849c8d99700f61c251177c3c3195b2277163ae
+ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52518732"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "73982087"
 ---
 # <a name="alter-resource-pool-transact-sql"></a>ALTER RESOURCE POOL (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -60,7 +59,7 @@ ALTER RESOURCE POOL { pool_name | "default" }
 ```  
   
 ## <a name="arguments"></a>引数  
- { *pool_name* | **"default"** }  
+ { *pool_name* |  **"default"** }  
  既存のユーザー定義のリソース プール、または [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] をインストールする際に作成される既定のリソース プールの名前です。  
   
  "default" を ALTER RESOURCE POOL で使用する場合は、システム予約語の DEFAULT と競合しないように引用符 ("") または角かっこ ([]) で囲む必要があります。 詳細については、「[データベース識別子](../../relational-databases/databases/database-identifiers.md)」を参照してください。  
@@ -75,15 +74,15 @@ ALTER RESOURCE POOL { pool_name | "default" }
  CPU の競合がある場合に、このリソース プールのすべての要求に割り当てられる最大平均 CPU 帯域幅を指定します。 *value* は整数で、既定の設定は 100 です。 *value* の許容範囲は 1 から 100 までです。  
   
  CAP_CPU_PERCENT =*value*  
- **適用対象**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]  
+ **適用対象**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 以降。  
   
  リソース プールでは、要求のターゲットの最大 CPU 容量を指定します。 *value* は整数で、既定の設定は 100 です。 *value* の許容範囲は 1 ～ 100 です。  
   
 > [!NOTE]  
->  統計の性質により、CPU の管理、急増の CAP_CPU_PERCENT で指定された値を超える場合があります。  
+>  CPU の管理の統計の性質により、CAP_CPU_PERCENT で指定された値を超える不定期な急増に気付く場合があります。  
   
  AFFINITY {SCHEDULER = AUTO | (Scheduler_range_spec) | NUMANODE = (NUMA_node_range_spec)}  
- **適用対象**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]  
+ **適用対象**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 以降。  
   
  リソース プールを特定のスケジューラにアタッチします。 既定値は AUTO です。  
   
@@ -106,25 +105,25 @@ INNER JOIN sys.dm_os_schedulers AS sc
  このリソース プールの要求で使用できる合計サーバー メモリを指定します。 *value* は整数で、既定の設定は 100 です。 *value* の許容範囲は 1 から 100 までです。  
   
  MIN_IOPS_PER_VOLUME =*value*  
- **適用対象**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]  
+ **適用対象**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 以降。  
   
  リソース プール用に確保するために、ディスク ボリュームごとに、1 秒あたりの最小 I/O 操作 (IOPS) を指定します。 *value* の許容範囲は 0 から 2^31-1 (2,147,483,647) までです。 プールに最小しきい値を指定しない場合は 0 を指定します。  
   
  MAX_IOPS_PER_VOLUME =*value*  
- **適用対象**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]  
+ **適用対象**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 以降。  
   
  リソース プールに許された、ディスク ボリュームごとの 1 秒あたりの最大 I/O 操作 (IOPS) 回数を指定します。 *value* の許容範囲は 0 から 2^31-1 (2,147,483,647) までです。 プールに無制限のしきい値を設定する場合は 0 を指定します。 既定値は 0 です。  
   
- プールの MAX_IOPS_PER_VOLUME を 0 に設定した場合、プールは管理されなくなり、他のプールで MIN_IOPS_PER_VOLUME が設定されていても、システムですべての IOPS を行うことがあります。 この場合、IO についてこのプールが管理されるようにするには、このプールの MAX_IOPS_PER_VOLUME の値をより大きな数値 (たとえば、最大値 2^31-1) に設定することをお勧めします。  
+ プールの MAX_IOPS_PER_VOLUME を 0 に設定した場合、プールはまったく管理されなくなり、他のプールで MIN_IOPS_PER_VOLUME が設定されていても、システムですべての IOPS を行うことがあります。 この場合、IO についてこのプールが管理されるようにするには、このプールの MAX_IOPS_PER_VOLUME の値をより大きな数値 (たとえば、最大値 2^31-1) に設定することをお勧めします。  
   
 ## <a name="remarks"></a>Remarks  
  MAX_CPU_PERCENT と MAX_MEMORY_PERCENT には、それぞれ MIN_CPU_PERCENT と MIN_MEMORY_PERCENT 以上の値を指定する必要があります。  
   
- MAX_CPU_PERCENT は、使用可能になる場合、MAX_CPU_PERCENT の値を上回る CPU 容量を使用できます。 CAP_CPU_PERCENT 上の定期的な急増にありますが、ワークロード追加の CPU 容量が使用可能な場合にも、同時の期間延長を CAP_CPU_PERCENT を超えることはありません。  
+ MAX_CPU_PERCENT は、使用可能になる場合、MAX_CPU_PERCENT の値を上回る CPU 容量を使用できます。 CAP_CPU_PERCENT を上回る急増が定期的に発生する場合がありますが、追加の CPU 容量が使用可能な場合でも、長時間にわたって CAP_CPU_PERCENT を超えることはありません。  
   
  関連付けられた各コンポーネント (スケジューラまたは NUMA ノード) の CPU 使用率の合計が 100% を超えることはできません。  
   
- DDL ステートメントを実行する場合、リソース ガバナーの状態について詳しく理解しておくことをお勧めします。 詳細については、「[リソース ガバナー](../../relational-databases/resource-governor/resource-governor.md)」を参照してください。  
+ DDL ステートメントを実行する場合、Resource Governor の状態について詳しく理解しておくことをお勧めします。 詳細については、「[リソース ガバナー](../../relational-databases/resource-governor/resource-governor.md)」を参照してください。  
   
  プランを変更し、設定に影響が出るとき、新しい設定は、DBCC FREEPROCCACHE (*pool_name*) の実行後にのみ、前にキャッシュされたプランに反映されます。*pool_name* は Resource Governor リソース プールの名前です。  
   
@@ -139,7 +138,7 @@ INNER JOIN sys.dm_os_schedulers AS sc
  CONTROL SERVER 権限が必要です。  
   
 ## <a name="examples"></a>使用例  
- 次の例では、`default` を `MAX_CPU_PERCENT` に変更する以外は、すべて `25` プールの既定のリソース プール設定が保持されます。  
+ 次の例では、`MAX_CPU_PERCENT` を `25` に変更する以外は、すべて `default` プールの既定のリソース プール設定が保持されます。  
   
 ```  
 ALTER RESOURCE POOL "default"  
@@ -152,7 +151,7 @@ GO
   
  次の例では、`CAP_CPU_PERCENT` はハード キャップを 80% に設定し、`AFFINITY SCHEDULER` は個別値 8 と範囲 12 ～ 16 に設定されています。  
   
-**適用対象**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]  
+**適用対象**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 以降。  
   
 ```  
 ALTER RESOURCE POOL Pool25  

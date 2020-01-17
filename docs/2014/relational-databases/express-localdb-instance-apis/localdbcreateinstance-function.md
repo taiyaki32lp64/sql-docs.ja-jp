@@ -17,11 +17,11 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: d5e46c3d8a8a6836dbc0252177e45e86115abb07
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52776204"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63128796"
 ---
 # <a name="localdbcreateinstance-function"></a>LocalDBCreateInstance 関数
   新しい SQL Server Express LocalDB インスタンスを作成します。  

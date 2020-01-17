@@ -1,6 +1,6 @@
 ---
-title: SQL Server Profiler の使用による SQL トレース コレクション セットの作成 | Microsoft Docs
-ms.custom: ''
+title: プロファイラーで SQL トレース コレクション セットを作成する
+ms.custom: seo-lt-2019
 ms.date: 03/07/2017
 ms.prod: sql
 ms.reviewer: ''
@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: b6941dc0-50f5-475d-82eb-ce7c68117489
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 37f635820ea402c28cf35338d4575a6e8a2e7376
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 5f11e6c98d53cd5008c72510282a0d31019a320d
+ms.sourcegitcommit: d00ba0b4696ef7dee31cd0b293a3f54a1beaf458
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47825320"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "74056447"
 ---
 # <a name="use-sql-server-profiler-to-create-a-sql-trace-collection-set"></a>SQL Server Profiler の使用による SQL トレース コレクション セットの作成
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -26,7 +25,7 @@ ms.locfileid: "47825320"
 1.  [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] トレースの作成とエクスポート  
   
 2.  エクスポートされたトレースに基づく新しいコレクション セットのスクリプト化  
-  
+
  次の手順のシナリオでは、完了に 80 ミリ秒以上かかるストアド プロシージャに関するデータを収集します。 この手順を完了するには、次の操作を実行できる必要があります。  
   
 -   [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] を使用したトレースの作成および構成  
@@ -79,7 +78,7 @@ ms.locfileid: "47825320"
   
 10. ツール バーの **[選択されたトレースの停止]** または **[選択されたトレースの一時停止]** をクリックします。  
   
-11. **[ファイル]** メニューで **[エクスポート]**、 **[トレース定義のスクリプト]** の順にポイントし、 **[SQL トレース コレクション セット]** をクリックします。  
+11. **[ファイル]** メニューで **[エクスポート]** 、 **[トレース定義のスクリプト]** の順にポイントし、 **[SQL トレース コレクション セット]** をクリックします。  
   
 12. **[名前を付けてファイルを保存]** ダイアログ ボックスの **[ファイル名]** ボックスに、トレース定義に使用する名前を入力し、目的の場所に保存します。 この例では、ファイル名はトレース名 (SPgt80) と同じです。  
   
@@ -105,7 +104,7 @@ ms.locfileid: "47825320"
   
     1.  **[管理]** を右クリックし、 **[更新]** をクリックします。  
   
-    2.  **[管理]**、 **[データ コレクション]** の順に展開します。  
+    2.  **[管理]** 、 **[データ コレクション]** の順に展開します。  
   
      **[SPROC_CollectionSet]** コレクション セットは、 **[システム データ コレクション セット]** ノードと同じレベルに表示されます。 既定では、このコレクション セットは無効になっています。  
   

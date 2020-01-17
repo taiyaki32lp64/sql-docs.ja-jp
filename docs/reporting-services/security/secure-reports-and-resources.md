@@ -2,7 +2,7 @@
 title: レポートとリソースの保護 | Microsoft Docs
 ms.date: 03/01/2017
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: security
 ms.topic: conceptual
 helpviewer_keywords:
@@ -12,14 +12,14 @@ helpviewer_keywords:
 - confidential reports [Reporting Services]
 - resources [Reporting Services], security
 ms.assetid: 63cd55c7-fd2a-49e3-a3f8-59eb1a1c6e83
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: dfd46944ef5f54d76f8c426b12656e7652e231f3
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: e6ad66da4f9741753db693792edefd808f69b0e9
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47620133"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65570627"
 ---
 # <a name="secure-reports-and-resources"></a>レポートとリソースの保護
   各レポートおよびリソースのセキュリティを設定して、これらのアイテムへのユーザーのアクセスのレベルを制御できます。 既定では、組み込みの **Administrators** グループのメンバーであるユーザーのみ、レポートの実行、リソースの表示、プロパティの変更、およびアイテムの削除を行うことができます。 他のすべてのユーザーについては、レポートまたはリソースへのアクセスを許可するロール割り当てを作成する必要があります。  

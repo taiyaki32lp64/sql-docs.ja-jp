@@ -11,17 +11,20 @@ f1_keywords:
 - sql13.ssis.ssms.ispackageprop.general.f1
 - sql13.ssis.ssms.packageproperties.f1
 ms.assetid: a70acbf4-5f5c-4606-8ce4-8eb3684233de
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: d494a687462617dbb66e3d631c30d7ae6dca4960
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 906809946b22012e6a8831017fb57769fc6063b8
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52411979"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71298978"
 ---
 # <a name="package-properties-dialog-box"></a>[パッケージのプロパティ] ダイアログ ボックス
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   **[パッケージのプロパティ]** ダイアログ ボックスでは、[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] サーバーに格納されているパッケージのプロパティを表示できます。  
   
  詳細については、「[Integration Services &#40;SSIS&#41; Packages](../integration-services-ssis-packages.md)」(Integration Services &#40;SSIS&#41; のパッケージ) を参照してください。  
@@ -51,7 +54,7 @@ ms.locfileid: "52411979"
   
  **[全般]** ページに表示されるすべてのプロパティは読み取り専用です。  
   
- **名前**  
+ **[名前]**  
  パッケージの名前が表示されます。  
   
  **[Identifier]**  

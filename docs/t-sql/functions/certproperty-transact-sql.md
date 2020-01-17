@@ -17,15 +17,14 @@ helpviewer_keywords:
 - schemas [SQL Server], names
 - CERTPROPERTY function
 ms.assetid: 966c09aa-bc4e-45b0-ba53-c8381871f638
-author: MashaMSFT
-ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 66d30b148aae068c5d86e29f25548996bc958284
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: VanMSFT
+ms.author: vanto
+ms.openlocfilehash: 6a0f2fc8c2af69832150ab5ab229ffc50c84e831
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47807280"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68010483"
 ---
 # <a name="certproperty-transact-sql"></a>CERTPROPERTY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -60,7 +59,7 @@ CertProperty ( Cert_ID , '<PropertyName>' )
 *Cert_Serial_Number*  
 証明書のシリアル番号。
   
-*Subject*  
+*[Subject]*  
 証明書のサブジェクト。
   
  *SID*  
@@ -104,7 +103,7 @@ GO
   
 ## <a name="see-also"></a>参照
 [CREATE CERTIFICATE &#40;Transact-SQL&#41;](../../t-sql/statements/create-certificate-transact-sql.md)  
-[#40 です。 (&)、証明書を変更します。TRANSACT-SQL と #41 です。](../../t-sql/statements/alter-certificate-transact-sql.md)  
+[ALTER CERTIFICATE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-certificate-transact-sql.md)  
 [CERT_ID &#40;Transact-SQL&#41;](../../t-sql/functions/cert-id-transact-sql.md)
 [暗号化階層](../../relational-databases/security/encryption/encryption-hierarchy.md)
 [sys.certificates &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-certificates-transact-sql.md)

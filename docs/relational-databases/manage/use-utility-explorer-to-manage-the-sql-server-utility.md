@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 74012c90-b42e-4171-b27a-9c30cf69ff98
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 08185a514dbba480aaef760532430ff7c1f53bf9
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: d904d16bb54236ee61dd463ca3c7bf829a46c3e3
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51663008"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68115319"
 ---
 # <a name="use-utility-explorer-to-manage-the-sql-server-utility"></a>ユーティリティ エクスプローラーを使用した SQL Server ユーティリティの管理
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -39,7 +38,7 @@ ms.locfileid: "51663008"
 ### <a name="sql-server-utility-navigation-pane"></a>SQL Server ユーティリティのナビゲーション ウィンドウ  
  ユーティリティ エクスプローラーのナビゲーション ウィンドウでは、ユーティリティ コントロール ポイント (UCP) でグループ化された、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ユーティリティ オブジェクトのツリー ビューが表示されます。 フォルダーを展開するには、プラス記号 (+) をクリックするか、ユーティリティ エクスプローラーのナビゲーション ウィンドウ内の UCP 名をダブルクリックします。 フォルダーまたはオブジェクトを右クリックすると、一般的なタスクを実行するためのメニューが表示されます。 ツリー ビューのノードは次のとおりです。  
   
--   ツリー ビューの最上位ノードは、ユーティリティ コントロール ポイント (UCP) です。 ノード名は、"Utility_Name" (ComputerName\UCP_instance_name) のように作成されます。 UCP がない場合は、作成する必要があります。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ユーティリティに接続していない場合は、接続する必要があります。 詳細については、「 [SQL Server ユーティリティの機能とタスク](../../relational-databases/manage/sql-server-utility-features-and-tasks.md)」を参照してください。 ツリー ビューの UCP 名をクリックし、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ユーティリティ エクスプローラーのコンテンツ ウィンドウに、ダッシュボード ビューのデータを読み込みます。 詳細については、「[ユーティリティ ダッシュボード &#40;SQL Server ユーティリティ&#41;](https://msdn.microsoft.com/library/999eb741-4a60-43f6-ab37-2df7dce845c1)」を参照してください。  
+-   ツリー ビューの最上位ノードは、ユーティリティ コントロール ポイント (UCP) です。 ノード名は、"Utility_Name"(ComputerName\UCP_instance_name) のように作成されます。 UCP がない場合は、作成する必要があります。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ユーティリティに接続していない場合は、接続する必要があります。 詳細については、「 [SQL Server ユーティリティの機能とタスク](../../relational-databases/manage/sql-server-utility-features-and-tasks.md)」を参照してください。 ツリー ビューの UCP 名をクリックし、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ユーティリティ エクスプローラーのコンテンツ ウィンドウに、ダッシュボード ビューのデータを読み込みます。 詳細については、「[ユーティリティ ダッシュボード &#40;SQL Server ユーティリティ&#41;](https://msdn.microsoft.com/library/999eb741-4a60-43f6-ab37-2df7dce845c1)」を参照してください。  
   
      UCP ノードを右クリックして、ダッシュボードのデータを更新します。  
   
@@ -47,7 +46,7 @@ ms.locfileid: "51663008"
   
      ツリー ビューの **[配置済みのデータ層アプリケーション]** ノードを右クリックして、フィルターの設定にアクセスしたり、リスト ビューのデータを更新したりします。  
   
--   ツリー ビューの **[マネージド インスタンス]** ノードをクリックし、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ユーティリティのコンテンツ ウィンドウ内のリスト ビューのデータにアクセスします。 コンテンツ ウィンドウの下部にある詳細タブでは、CPU 使用率および記憶域ボリューム使用率に関するデータが表示されるだけでなく、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ユーティリティにある個々の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] マネージド インスタンスに関するポリシーの定義やプロパティの詳細へのアクセスが可能になります。 詳細については、「[マネージド インスタンスの詳細 &amp;#40;SQL Server ユーティリティ&amp;#41;](https://msdn.microsoft.com/library/6e51b7bb-a733-4852-8c33-7f4dbdf931c2)」を参照してください。  
+-   ツリー ビューの **[マネージド インスタンス]** ノードをクリックし、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ユーティリティのコンテンツ ウィンドウ内のリスト ビューのデータにアクセスします。 コンテンツ ウィンドウの下部にある詳細タブでは、CPU 使用率および記憶域ボリューム使用率に関するデータが表示されるだけでなく、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ユーティリティにある個々の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] マネージド インスタンスに関するポリシーの定義やプロパティの詳細へのアクセスが可能になります。 詳細については、「[マネージド インスタンスの詳細 &#40;SQL Server ユーティリティ&#41;](https://msdn.microsoft.com/library/6e51b7bb-a733-4852-8c33-7f4dbdf931c2)」を参照してください。  
   
      ツリー ビューの **[マネージド インスタンス]** ノードを右クリックして、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ユーティリティへの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のマネージド インスタンスの追加、フィルター設定へのアクセス、またはリスト ビューのデータの更新を行います。  
   

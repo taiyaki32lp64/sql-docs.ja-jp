@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 helpviewer_keywords:
 - shared data sources [Reporting Services]
@@ -14,15 +13,15 @@ helpviewer_keywords:
 - deleting shared data sources
 - modifying shared data sources
 ms.assetid: cd7bace3-f8ec-4ee3-8a9f-2f217cdca9f2
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 240799493cc113a0885b0b957849aea25f97593a
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: c554215ba716a35f3e2851a5042be1989ee5648c
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56293740"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66109611"
 ---
 # <a name="create-delete-or-modify-a-shared-data-source-report-manager"></a>共有データ ソースを作成、削除、または変更する (レポート マネージャー)
   共有データ ソースでは、1 つのデータ ソースに対する接続プロパティを指定します。 多数のレポート、モデル、またはデータ ドリブン サブスクリプションで 1 つのデータ ソースを使用する場合は、共有データ ソースを作成することにより、同じ接続情報を複数箇所で管理するオーバーヘッドを低減できます。  
@@ -71,7 +70,7 @@ ms.locfileid: "56293740"
     > [!NOTE]  
     >  [接続テスト] ボタンは、XML データ ソースの種類ではサポートされません。  
   
-10.  **[OK]** をクリックします。  
+10. **[OK]** をクリックします。  
   
 ### <a name="to-modify-a-shared-data-source"></a>共有データ ソースを変更するには  
   

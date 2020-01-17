@@ -1,5 +1,5 @@
 ---
-title: 方向パラメーターを使用して |Microsoft Docs
+title: 方向パラメーターを使用する |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: cfe35e14-49cb-45df-b444-addbb94a773f
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: e5a14252410144e1bb2edd432c5df1d495c6f2cd
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 43de9c84bcb1356961d2e5fa0b0c48d05a72de3d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47655640"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67935796"
 ---
 # <a name="using-directional-parameters"></a>方向パラメーターを使用する
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]

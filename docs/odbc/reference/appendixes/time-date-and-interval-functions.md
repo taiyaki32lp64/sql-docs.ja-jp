@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: bdf054a0-7aba-4e99-a34a-799917376fd5
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: e1303ca724ef6790ae7bcf218ab8ed0e5da4ed38
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: ae10946be501adb16fdda5fa9f053e389eea4bed
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52509273"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68070081"
 ---
 # <a name="time-date-and-interval-functions"></a>時刻、日付、および間隔を扱う関数
 次の表には、ODBC スカラー関数のセットに含まれている日付と時刻の関数が一覧表示します。 どの日付と時刻の関数が呼び出すことによってドライバーによってサポートされているアプリケーションを調べる**SQLGetInfo**で、*情報の種類*SQL_TIMEDATE_FUNCTIONS の。  
@@ -38,20 +37,20 @@ ms.locfileid: "52509273"
   
 |関数|説明|  
 |--------------|-----------------|  
-|**CURRENT_DATE ()** (ODBC 3.0)|現在の日付を返します。|  
+|**CURRENT_DATE( )** (ODBC 3.0)|現在の日付を返します。|  
 |**CURRENT_TIME [(** *時間精度* **)]** (ODBC 3.0)|現在のローカル時間を返します。 *時間精度*引数は、戻り値の秒の有効桁数を決定します。|  
 |**CURRENT_TIMESTAMP**<br /> **[(** *タイムスタンプ精度* **)]** (ODBC 3.0)|タイムスタンプの値として、現在の日付と現地時刻を返します。 *タイムスタンプ精度*引数は、タイムスタンプの秒の有効桁数を決定します。|  
-|**CURDATE ()** (ODBC 1.0)|現在の日付を返します。|  
+|**CURDATE( )** (ODBC 1.0)|現在の日付を返します。|  
 |**CURTIME ()** (ODBC 1.0)|現在のローカル時間を返します。|  
-|**DAYNAME (** *date_exp* **)** (ODBC 2.0)|(たとえば、Sunday ~ Saturday または Sun 1 日のデータ ソースに固有の名前を含む文字列を返しますです。 ～ Sat.、 ドイツ語を使ったデータ ソースの英語版、または Sonntag ~ 場合を使用するデータ ソース) 用の日の部分の*date_exp*します。|  
+|**DAYNAME(** *date_exp* **)** (ODBC 2.0)|(たとえば、Sunday ~ Saturday または Sun 1 日のデータ ソースに固有の名前を含む文字列を返しますです。 \- Sat. ドイツ語を使ったデータ ソースの英語版、または Sonntag ~ 場合を使用するデータ ソース) 用の日の部分の*date_exp*します。|  
 |**DAYOFMONTH (** *date_exp* **)** (ODBC 1.0)|月のフィールドに基づき、月の通算日を返す*date_exp* 1 ~ 31 の範囲の整数値として。|  
 |**DAYOFWEEK (** *date_exp* **)** (ODBC 1.0)|週に基づく週の通算日を返す*date_exp*の範囲の整数値として 1 ~ 7、ここで、1 は日曜日を表します。|  
 |**DAYOFYEAR (** *date_exp* **)** (ODBC 1.0)|[Year] フィールドに基づき、年の通算日を返す*date_exp* 1 ~ 366 の範囲の整数値として。|  
 |**抽出 (** *フィールドの抽出 FROM* *抽出ソース* **)** (ODBC 3.0)|返します、*フィールドの抽出*の部分、*抽出ソース*します。 *抽出ソース*引数は、datetime または間隔の式。 *フィールドの抽出*引数には、次のキーワードのいずれかを指定できます。<br /><br /> 年、月 1 日 1 時間分の 1 秒<br /><br /> 返される値の有効桁数は、実装で定義します。 小数点以下桁数は、0 2 つ目が指定されていない場合、スケールの秒の小数部の有効桁数よりも小さいか、*抽出ソース*フィールド。|  
-|**1 時間 (** *time_exp* **)** (ODBC 1.0)|時間フィールドに基づいて時間を返します*time_exp*として 0 ~ 23 の範囲の整数値。|  
-|**分 (** *time_exp* **)** (ODBC 1.0)|分単位のフィールドに基づいて分が返されます*time_exp*として 0 ~ 59 の範囲の整数値。|  
+|**HOUR(** *time_exp* **)** (ODBC 1.0)|時間フィールドに基づいて時間を返します*time_exp*として 0 ~ 23 の範囲の整数値。|  
+|**MINUTE(** *time_exp* **)** (ODBC 1.0)|分単位のフィールドに基づいて分が返されます*time_exp*として 0 ~ 59 の範囲の整数値。|  
 |**月 (** *date_exp* **)** (ODBC 1.0)|月のフィールドに基づき、月を返します*date_exp* 1 ~ 12 の範囲の整数値として。|  
-|**MONTHNAME (** *date_exp* **)** (ODBC 2.0)|月の部分を (たとえば、January ~ December または英語を使用するデータ ソースの 12 月で 1 月またはドイツ語を使ったデータ ソースの Dezember を通じて Januar) 月のデータ ソースに固有の名前を含む文字列を返します*date_exp*します。|  
+|**MONTHNAME(** *date_exp* **)** (ODBC 2.0)|月の部分を (たとえば、January ~ December または英語を使用するデータ ソースの 12 月で 1 月またはドイツ語を使ったデータ ソースの Dezember を通じて Januar) 月のデータ ソースに固有の名前を含む文字列を返します*date_exp*します。|  
 |**() を今すぐ**(ODBC 1.0)|現在の日付と時刻のタイムスタンプ値を返します。|  
 |**四半期 (** *date_exp* **)** (ODBC 1.0)|における四半期を返します*date_exp*の範囲の整数値として 1 ~ 4、1 を表す年 1 月 1 日 ~ 3 月 31 日。|  
 |**2 番目 (** *time_exp* **)** (ODBC 1.0)|2 番目のフィールドに基づく秒を返します。 *time_exp*として 0 ~ 59 の範囲の整数値。|

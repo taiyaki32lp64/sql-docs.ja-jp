@@ -15,15 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - STArea (geometry Data Type)
 ms.assetid: a7dd6083-c649-4ac3-885d-1234e0db62f1
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: 1e5ecf4856cc0fd2e17e56c876cf40d0bb1db9b9
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: MladjoA
+ms.author: mlandzic
+ms.openlocfilehash: fcaad3c2fb8337c64612d5ef5532bcbc4ed4b91d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47719604"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68100991"
 ---
 # <a name="starea-geometry-data-type"></a>STArea (geometry データ型)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
@@ -40,7 +39,7 @@ ms.locfileid: "47719604"
 ## <a name="return-types"></a>戻り値の型  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 戻り値の型: **float**  
   
- CLR の戻り値の型: **SqlDouble**  
+ CLR の戻り値の型:**SqlDouble**  
   
 ## <a name="remarks"></a>Remarks  
  **geometry** インスタンスに含まれるすべての図形が 0 次元または 1 次元の図形の場合、`STArea()` は 0 を返します。 **geometry** インスタンスが初期化されていない場合、`STArea()` は **NULL** を返します。  

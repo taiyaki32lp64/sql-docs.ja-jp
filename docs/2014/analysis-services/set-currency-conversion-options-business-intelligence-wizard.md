@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.biwizard.currencyconversion.calculationsettings.f1
@@ -13,12 +12,12 @@ ms.assetid: a49d4e1f-bdda-4a83-ab4f-ce8c500e1d6d
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 8ca50d2c29bcc1a4394561b4b5106e4da65afa93
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 97e44dc259c79c7bb1aef5cc5cbff8b06dc6c48e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48205732"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66068745"
 ---
 # <a name="set-currency-conversion-options-business-intelligence-wizard"></a>[通貨換算オプションの設定] (ビジネス インテリジェンス ウィザード)
   **[通貨換算オプションの設定]** ページを使用すると、換算レートを含むメジャー グループに対して通貨換算の計算を定義できます。  
@@ -42,7 +41,7 @@ ms.locfileid: "48205732"
  **サンプル通貨を 1 つのピボット通貨につき x**  
  レート メジャー グループ内の換算レートが、指定されたサンプル通貨に対する乗数を表すことを示します。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [ビジネス インテリジェンス ウィザードの F1 ヘルプ](business-intelligence-wizard-f1-help.md)   
  [キューブ デザイナー &#40;Analysis Services - 多次元データ&#41;](cube-designer-analysis-services-multidimensional-data.md)   
  [ディメンション デザイナー &#40;Analysis Services - 多次元データ&#41;](dimension-designer-analysis-services-multidimensional-data.md)  

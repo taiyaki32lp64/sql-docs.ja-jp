@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: fdff70b0-95d0-447f-9359-97b8d159420d
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 023cc434a0b7f758392de6adbe839661229645e5
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 52008fa75b70bfb4c4b3ea3d25ef1d6fe6977142
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47741380"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67949614"
 ---
 # <a name="level-object-properties-methods-and-events"></a>Level オブジェクトのプロパティ、メソッド、およびイベント
 ## <a name="propertiescollections"></a>プロパティ/コレクション  
@@ -42,5 +41,5 @@ ms.locfileid: "47741380"
 ## <a name="events"></a>イベント  
  [なし] :  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [Level オブジェクト (ADO MD)](../../../ado/reference/ado-md-api/level-object-ado-md.md)

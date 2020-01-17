@@ -17,17 +17,20 @@ helpviewer_keywords:
 - expressions [Integration Services], property expressions
 - property expressions [Integration Services]
 ms.assetid: a4bfc925-3ef6-431e-b1dd-7e0023d3a92d
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: b55b675cf28bd0e61dd74b011aad9c50cd8325fa
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: be976ec58ae275f37262f136a2896ffb6a9c7677
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52531612"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71287873"
 ---
 # <a name="use-property-expressions-in-packages"></a>パッケージでプロパティ式を使用する
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   プロパティ式とは、実行時にプロパティの動的更新を可能にするためにプロパティに割り当てられた式のことです。 たとえば、プロパティ式を使用して、変数に格納された電子メール アドレスを挿入して、メール送信タスクで使用される [宛先] 行を更新できます。  
   
  式は、パッケージ、タスク、Foreach ループ、For ループ、シーケンス、Foreach 列挙子、イベント ハンドラー、パッケージまたはプロジェクト レベルの接続マネージャー、またはログ プロバイダーに追加できます。 これらのオブジェクトの読み取り/書き込みプロパティはすべて、プロパティ式を実装できます。 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] では、データ フロー コンポーネントの一部のカスタム プロパティでプロパティ式を使用することもできます。 変数と優先順位制約では、プロパティ式がサポートされていませんが、式を使用できる特殊なプロパティが使用されています。  
@@ -70,7 +73,7 @@ ms.locfileid: "52531612"
   
  ![プロパティ式のユーザー インターフェイス](../../integration-services/expressions/media/ssis-propertyexpressionui.gif "プロパティ式のユーザー インターフェイス")  
   
- **[プロパティ]** ウィンドウおよび **[式]** ページでは、**[式]** コレクション レベルの参照ボタン **[...]** をクリックして **[プロパティ式エディター]** ダイアログ ボックスを開きます。 プロパティ式エディターでは、プロパティを式にマップし、プロパティ式を入力できます。 グラフィカルな式ツールを使用して式を作成してから検証する場合は、式レベルの参照ボタン **[...]** をクリックして **[式ビルダー]** ダイアログ ボックスを開き、式を作成または変更します。その後、必要に応じて式を検証します。  
+ **[プロパティ]** ウィンドウおよび **[式]** ページでは、 **[式]** コレクション レベルの参照ボタン **[...]** をクリックして **[プロパティ式エディター]** ダイアログ ボックスを開きます。 プロパティ式エディターでは、プロパティを式にマップし、プロパティ式を入力できます。 グラフィカルな式ツールを使用して式を作成してから検証する場合は、式レベルの参照ボタン **[...]** をクリックして **[式ビルダー]** ダイアログ ボックスを開き、式を作成または変更します。その後、必要に応じて式を検証します。  
   
  **[式ビルダー]** ダイアログ ボックスは、 **[プロパティ式エディター]** ダイアログ ボックスから開くこともできます。  
   
@@ -137,11 +140,11 @@ ms.locfileid: "52531612"
   
  Rows Processed:  
   
- NASDAQ: 7058  
+ NASDAQ:7058  
   
- NYSE: 3528  
+ NYSE:3528  
   
- AMEX: 1102  
+ AMEX:1102  
   
 ### <a name="property-expression-for-the-executable-property-of-an-execute-process-task"></a>プロセス実行タスクの Executable プロパティ用のプロパティ式  
  次のプロパティ式を使用すると、プロセス実行タスクの Executable プロパティを設定できます。 この式では、文字列リテラル、演算子、および関数の組み合わせを使用しています。 この式では、DATEPART 関数、GETDATE 関数、および条件演算子を使用しています。  

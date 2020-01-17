@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 05/24/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 ms.assetid: 227da40c-6bd2-48ec-aa9c-50ce6c1ca3a6
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: b759391592a84d0509a8036277ccb6e0cc92a279
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 6ae1ee11edd51153585e9a6738bbfbd59af8974f
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56011505"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66109918"
 ---
 # <a name="cache-refresh-options-report-manager"></a>キャッシュ更新オプション (レポート マネージャー)
   [キャッシュ更新オプション] ページでは、レポートまたは共有データセットのデータの一時コピーを事前にキャッシュに読み込むスケジュールを作成できます。 更新計画には、スケジュールと、パラメーターの値を指定またはオーバーライドするためのオプションが含まれます。 共有データセットの場合、読み取り専用にマークされているパラメーターの値をオーバーライドすることはできません。 更新オプション ページの一部として複数の更新計画を作成して使用できます。  

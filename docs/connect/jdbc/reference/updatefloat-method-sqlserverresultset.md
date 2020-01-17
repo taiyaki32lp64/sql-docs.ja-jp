@@ -1,5 +1,5 @@
 ---
-title: updateFloat メソッド (SQLServerResultSet) |Microsoft Docs
+title: updateFloat メソッド (SQLServerResultSet) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: daa3cff7-2481-4089-a41e-81fe9af1a462
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: f86ab78499d3ad2e75b6046e0576e0ccc50fc522
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: edb8443da58baba0207425a67d5c92810c5e17dc
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47660240"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67998930"
 ---
 # <a name="updatefloat-method-sqlserverresultset"></a>updateFloat メソッド (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

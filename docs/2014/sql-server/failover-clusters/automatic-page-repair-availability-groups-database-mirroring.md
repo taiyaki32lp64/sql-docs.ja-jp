@@ -16,11 +16,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: f4f39024817d3d0aa35c015ed815eb8f412f1c8e
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48070588"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63137515"
 ---
 # <a name="automatic-page-repair-for-availability-groups-and-database-mirroring"></a>ページの自動修復 (可用性グループとデータベース ミラーリング)
   ページの自動修復は、データベース ミラーリングおよび [!INCLUDE[ssHADR](../../includes/sshadr-md.md)]でサポートされます。 特定の種類のエラーによってページが破損し、読み取りができなくなると、データベース ミラーリング パートナー (プリンシパルまたはミラー) または可用性レプリカ (プライマリまたはセカンダリ) が自動的にページの修復を試みます。 ページの読み取りができないパートナー/レプリカは、そのページの新しいコピーを自分のパートナーまたは別のレプリカから要求します。 要求が受け入れられ、新しいコピーを取得できた場合は、読み取り不可能なページが読み取り可能なコピーに置き換えられます。通常、これによりエラーは解決します。  
@@ -52,7 +52,7 @@ ms.locfileid: "48070588"
   
 -   ページ 9 (データベースのブート ページ)。  
   
--   アロケーション ページ。これには、グローバル アロケーション マップ (GAM) ページ、共有グローバル アロケーション マップ (SGAM) ページ、およびページ空き容量 (PFS) ページなどが含まれます。  
+-   アロケーション ページ:グローバル アロケーション マップ (GAM) ページ、共有グローバル アロケーション マップ (SGAM) ページ、およびページ空き容量 (PFS) ページ。  
   
 
   
@@ -88,7 +88,7 @@ ms.locfileid: "48070588"
   
 
   
-##  <a name="ViewAPRattempts"></a> How To: View Automatic Page-Repair Attempts  
+##  <a name="ViewAPRattempts"></a> 方法:ページの自動修復の試行の表示  
  以下の動的管理ビューは、特定の可用性データベースまたはミラー化された特定のデータベースに対して最近試行されたページの自動修復に対応する行を返します (データベースあたり最大 100 行)。  
   
 -   **AlwaysOn 可用性グループ:**  
@@ -105,7 +105,7 @@ ms.locfileid: "48070588"
   
  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [suspect_pages テーブルの管理 &#40;SQL Server&#41;](../../relational-databases/backup-restore/manage-the-suspect-pages-table-sql-server.md)   
  [AlwaysOn 可用性グループの概要&#40;SQL Server&#41;](../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   
  [データベース ミラーリング &#40;SQL Server&#41;](../../database-engine/database-mirroring/database-mirroring-sql-server.md)  

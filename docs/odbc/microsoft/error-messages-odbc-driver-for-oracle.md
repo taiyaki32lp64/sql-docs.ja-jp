@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 6e54fe40-8306-4c2b-9e60-e521705e5b4b
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 35193df4630b9bb613186b09c16d7c42479db686
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: dec8b316b3bf9c59c32cad8bd73a9aba369e6521
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47765676"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68019492"
 ---
 # <a name="error-messages-odbc-driver-for-oracle"></a>エラー メッセージ (ODBC Driver for Oracle)
 > [!IMPORTANT]  

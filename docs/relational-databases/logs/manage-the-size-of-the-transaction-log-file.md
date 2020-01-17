@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 3a70e606-303f-47a8-96d4-2456a18d4297
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 3322acb510ffa57582b27a8a0b2efc728459bf53
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: ff886f2eea70b010a2e64513cd561cf7f78d8dee
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51674851"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68084019"
 ---
 # <a name="manage-the-size-of-the-transaction-log-file"></a>トランザクション ログ ファイルのサイズの管理
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -95,7 +94,7 @@ ms.locfileid: "51674851"
     -  トランザクション ログでは[ファイルの瞬時初期化](../../relational-databases/databases/database-instant-file-initialization.md)を活用できないことに留意してください。そのため、ログ拡張の回数増加が重要になります。 
     -  ベスト プラクティスとしては、トランザクション ログに対して `FILEGROWTH` オプションの値を 1,024 MB 以上に設定しないでください。 `FILEGROWTH` オプションの既定値:  
   
-      |[バージョンのオプション]|[既定値]|  
+      |バージョン|[既定値]|  
       |-------------|--------------------|  
       |[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 以降|データ 64 MB。 ログ ファイル 64 MB。|  
       |[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 以降|データ 1 MB。 ログ ファイル 10%。|  

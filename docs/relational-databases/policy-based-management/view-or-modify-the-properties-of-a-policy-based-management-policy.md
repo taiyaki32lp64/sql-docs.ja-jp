@@ -1,6 +1,7 @@
 ---
-title: ポリシー ベースの管理ポリシーのプロパティの表示または変更 | Microsoft Docs
-ms.custom: ''
+title: ポリシーベースの管理ポリシーのプロパティの表示または変更
+description: SQL Server Management Studio (SSMS) または Transact-SQL (T-SQL) を使用し、SQL Server のポリシーベースの管理ポリシーのプロパティを表示したり、変更したりする方法について説明します。
+ms.custom: seo-lt-2019
 ms.date: 10/06/2016
 ms.prod: sql
 ms.prod_service: database-engine
@@ -13,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: ba805504-5db5-4731-a8da-a0e89cb20c37
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: cf3bb62c4008b870c50c230a6140fff2a6b8b802
-ms.sourcegitcommit: bfa10c54e871700de285d7f819095d51ef70d997
+ms.openlocfilehash: a51ca391fe8cc27ad9447e6b4d18b88787532e34
+ms.sourcegitcommit: 035ad9197cb9799852ed705432740ad52e0a256d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/14/2019
-ms.locfileid: "54254516"
+ms.lasthandoff: 12/31/2019
+ms.locfileid: "75558017"
 ---
 # <a name="view-or-modify-the-properties-of-a-policy-based-management-policy"></a>ポリシー ベースの管理ポリシーのプロパティの表示または変更
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -36,7 +36,7 @@ ms.locfileid: "54254516"
   
 #### <a name="to-view-the-properties-of-all-policies-on-an-object"></a>オブジェクトのすべてのポリシーのプロパティを表示するには  
   
-1.  オブジェクト エクスプローラーで、サーバー、サーバー オブジェクト、データベース、またはデータベース オブジェクトを右クリックして、 **[ポリシー]** をポイントし、 **[表示]** をクリックします。 [**ポリシーの表示 - _オブジェクト名_**] ダイアログ ボックスで使用可能なオプションの詳細については、「[[ポリシーの表示] ダイアログ ボックス](../../relational-databases/policy-based-management/view-policies-dialog-box.md)」を参照してください。  
+1.  オブジェクト エクスプローラーで、サーバー、サーバー オブジェクト、データベース、またはデータベース オブジェクトを右クリックして、 **[ポリシー]** をポイントし、 **[表示]** をクリックします。 [**ポリシーの表示 - _オブジェクト名_** ] ダイアログ ボックスで使用可能なオプションの詳細については、「[[ポリシーの表示] ダイアログ ボックス](../../relational-databases/policy-based-management/view-policies-dialog-box.md)」を参照してください。  
   
 2.  完了したら、 **[閉じる]** をクリックします。  
   

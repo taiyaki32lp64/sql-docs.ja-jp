@@ -10,19 +10,18 @@ ms.topic: conceptual
 f1_keywords:
 - vs.openfile
 ms.assetid: 3e01b9f5-2b0a-4fb3-9da8-984d27d17b8a
-author: stevestein
-ms.author: sstein
-manager: craigg
-ms.openlocfilehash: f504d7d2369f2cdb1014ec2f1f27854e9275075c
-ms.sourcegitcommit: 40c3b86793d91531a919f598dd312f7e572171ec
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 869af839389aec533f132f6e2174d8495ffe1f20
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53327896"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68263325"
 ---
 # <a name="open-file-dialog-box"></a>[ファイルを開く] ダイアログ ボックス
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-ディスクから既存のファイルを開くには、**[ファイルを開く]** ダイアログ ボックスを使用します。 また、このダイアログ ボックスを使用すると、別の言語エンコード オプションを使用して既に開かれているファイルを開くこともできます。  
+ディスクから既存のファイルを開くには、 **[ファイルを開く]** ダイアログ ボックスを使用します。 また、このダイアログ ボックスを使用すると、別の言語エンコード オプションを使用して既に開かれているファイルを開くこともできます。  
   
 このダイアログ ボックスを表示するには、 **[ファイル]** メニューの **[開く]** をクリックし、 **[ファイル]** をクリックします。 このダイアログ ボックスは、 **[外部ツール]** ダイアログ ボックスなどの他の要素のファイルを開く場合にも表示されます。 **[ファイル]** メニューの **[開く]** を選択し、 **[プロジェクト/ソリューション]** を選択して、同様の **[プロジェクトを開く]** ダイアログ ボックスを開きます。  
   

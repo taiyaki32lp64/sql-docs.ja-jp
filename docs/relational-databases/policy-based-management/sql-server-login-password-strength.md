@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: b0862c3a-926b-490c-a37f-382e50146a3e
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: 008f9052d8ac880d3763230257c2628710aac2cb
-ms.sourcegitcommit: ef6e3ec273b0521e7c79d5c2a4cb4dcba1744e67
+ms.openlocfilehash: 8a392547d4e8b43430c2608f36790944eb88287f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51512557"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68043312"
 ---
 # <a name="sql-server-login-password-strength"></a>SQL Server ログイン パスワードの強度
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

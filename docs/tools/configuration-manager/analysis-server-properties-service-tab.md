@@ -8,22 +8,21 @@ ms.reviewer: ''
 ms.technology: configuration
 ms.topic: conceptual
 ms.assetid: 8dbe4bc5-6aa9-48ee-857e-0b4ea764b9cb
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-manager: craigg
-ms.openlocfilehash: dfea32595c7b6d7dfc5bb3d36400f020bb42ef6c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: cb509ac18a22c755a6c349932aa2eab0c4077e98
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47833180"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68010354"
 ---
 # <a name="analysis-server-properties-service-tab"></a>[SQL Server Analysis Services のプロパティ] ダイアログ ボックス ([サービス] タブ)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
   このサービスは、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]です。 [!INCLUDE[ssAS](../../includes/ssas-md.md)] を正しく機能させるには、このサービスを実行する必要があります。 グレー表示になっているプロパティ値をこのアプリケーションで変更することはできません。  
   
-## <a name="options"></a>[変数]  
+## <a name="options"></a>オプション  
  **バイナリ パス**  
  このサービスが使用するプログラム ファイルの場所が表示されます。  
   
@@ -36,7 +35,7 @@ ms.locfileid: "47833180"
  **Host Name**  
  [!INCLUDE[ssAS](../../includes/ssas-md.md)]を実行しているコンピューターまたはクラスターの名前が表示されます。  
   
- **名前**  
+ **[名前]**  
  サービスの表示名が表示されます。  
   
  **プロセス ID**  

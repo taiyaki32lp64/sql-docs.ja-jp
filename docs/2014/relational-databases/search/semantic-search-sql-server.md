@@ -12,15 +12,15 @@ helpviewer_keywords:
 - statistical semantic search [SQL Server]
 - statistical semantic search [SQL Server], overview
 ms.assetid: cd8faa9d-07db-420d-93f4-a2ea7c974b97
-author: douglaslMS
-ms.author: douglasl
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 59e94ef56028c80da3fd04432a2b23997c91a8e5
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 651705426b52b822c3eb8c7cf9d341968bbc088f
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48215652"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66010991"
 ---
 # <a name="semantic-search-sql-server"></a>セマンティック検索 (SQL Server)
   統計的セマンティック検索では、統計的に関連性がある*キー フレーズ*を抽出してインデックスを作成することにより、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データベースに格納されている非構造化ドキュメントを深く解釈することができます。 次に、これらのキー フレーズを使用して、 *類似または関連ドキュメント*を特定してインデックスを作成することもできます。  
@@ -35,7 +35,7 @@ ms.locfileid: "48215652"
 ###  <a name="find1"></a> ドキュメント内のキー フレーズを検索します。  
  次のクエリは、サンプル ドキュメントで識別されたキー フレーズを取得します。 結果は、各キー フレーズの統計的有意性を順位付けするスコアの降順で表されます。 このクエリは、[semantickeyphrasetable &#40;Transact-SQL&#41;](/sql/relational-databases/system-functions/semantickeyphrasetable-transact-sql) 関数を呼び出します。  
   
-```tsql  
+```sql  
 SET @Title = 'Sample Document.docx'  
   
 SELECT @DocID = DocumentID  
@@ -73,7 +73,7 @@ SELECT @Title AS SourceTitle, DocumentTitle AS MatchedTitle,
 ###  <a name="find3"></a> 類似または関連ドキュメントを示すキー フレーズを検索します。  
  次のクエリは、2 つのサンプル ドキュメント間の類似性または関連性を示すキー フレーズを取得します。 結果は、各キー フレーズの重みを順位付けするスコアの降順で表されます。 このクエリは、[semanticsimilaritydetailstable &#40;Transact-SQL&#41;](/sql/relational-databases/system-functions/semanticsimilaritydetailstable-transact-sql) 関数を呼び出します。  
   
-```tsql  
+```sql  
 SET @SourceTitle = 'first.docx'  
 SET @MatchedTitle = 'second.docx'  
   
@@ -111,7 +111,7 @@ SELECT @SourceTitle AS SourceTitle, @MatchedTitle AS MatchedTitle, keyphrase, sc
  [セマンティック検索による類似および関連したドキュメントの取得](find-similar-and-related-documents-with-semantic-search.md)  
  統計的セマンティック インデックス作成用に構成されている列での、類似性または関連性のあるドキュメントやテキスト値の検索方法と、どのように類似または関連しているかという情報の検索方法について説明します。  
   
- [セマンティック検索の管理および監視](manage-and-monitor-semantic-search.md)  
+ [セマンティクス検索の管理および監視](manage-and-monitor-semantic-search.md)  
  セマンティック インデックス作成プロセスと、インデックスの監視および管理に関連するタスクについて説明します。  
   
 ##  <a name="relcontent"></a> 関連コンテンツ  

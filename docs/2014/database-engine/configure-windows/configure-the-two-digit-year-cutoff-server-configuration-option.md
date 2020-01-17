@@ -13,12 +13,12 @@ ms.assetid: d94e81b6-f2e6-47ef-b497-ec3d827a1646
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: da1bf028421855ee08584abae78bd66f75058e6e
-ms.sourcegitcommit: 04dd0620202287869b23cc2fde998a18d3200c66
+ms.openlocfilehash: 973d14a238f109def82cf49f223a1ce2f37888b1
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "52641453"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62787041"
 ---
 # <a name="configure-the-two-digit-year-cutoff-server-configuration-option"></a>two digit year cutoff サーバー構成オプションの構成
   このトピックでは、 **または** を使用して、 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] の [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] two digit year cutoff [!INCLUDE[tsql](../../includes/tsql-md.md)]サーバー構成オプションを構成する方法について説明します。 **two digit year cutoff** オプションでは、2 桁の年を 4 桁の西暦年として解釈する場合に世紀の区切りとする年 (終了年) を 1753 ～ 9999 の整数で指定します。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の既定の期間は 1950 ～ 2049 です。これは、終了年が 2049 であることを表します。 つまり、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、2 桁表記が 49 であれば 2049 年、50 は 1950 年、99 は 1999 年と解釈されます。 旧バージョンとの互換性を保つため、この設定は既定値のままにします。  
@@ -37,7 +37,7 @@ ms.locfileid: "52641453"
   
      [Transact-SQL](#TsqlProcedure)  
   
--   **補足情報:**[Two digit year cutoff オプションを構成した後](#FollowUp)  
+-   **補足情報:** [two digit year cutoff オプションを構成した後](#FollowUp)  
   
 ##  <a name="BeforeYouBegin"></a> はじめに  
   
@@ -60,7 +60,7 @@ ms.locfileid: "52641453"
   
 2.  **[その他のサーバーの設定]** ノードをクリックします。  
   
-3.  **[2 桁の年のサポート]** の **[2 桁の年を****以下の間にある年として解釈]** ボックスに、期間の終了する年を入力または選択します。  
+3.  **[2 桁の年のサポート]** の **[2 桁の年を** **以下の間にある年として解釈]** ボックスに、期間の終了する年を入力または選択します。  
   
 ##  <a name="TsqlProcedure"></a> Transact-SQL の使用  
   
@@ -72,7 +72,7 @@ ms.locfileid: "52641453"
   
 3.  次の例をコピーしてクエリ ウィンドウに貼り付け、 **[実行]** をクリックします。 この例では、 [sp_configure](/sql/relational-databases/system-stored-procedures/sp-configure-transact-sql) を使用して、 `two digit year cutoff` オプションの値を `2030`に設定する方法を示します。  
   
-```tsql  
+```sql  
 USE AdventureWorks2012 ;  
 GO  
 EXEC sp_configure 'show advanced options', 1;  
@@ -88,7 +88,7 @@ GO
   
  詳細については、「 [サーバー構成オプション &#40;SQL Server&#41;](server-configuration-options-sql-server.md)」を参照してください。  
   
-##  <a name="FollowUp"></a> フォローしてください：Two digit year cutoff オプションを構成した後  
+##  <a name="FollowUp"></a>補足情報: two digit year cutoff オプションを構成した後  
  新しい設定は、サーバーを再起動しなくてもすぐに有効になります。  
   
 ## <a name="see-also"></a>参照  

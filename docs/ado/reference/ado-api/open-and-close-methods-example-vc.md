@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: f74a81fd-cbcc-4143-b9f8-774c88dd4fad
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 7c63eb8c02b80927e38cbbe7f32fcee493b66a7a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 436c58b712ee256f6e120b1b30578e8f0cbb4b64
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47714500"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67917931"
 ---
 # <a name="open-and-close-methods-example-vc"></a>Open および Close メソッドの例 (VC++)
 この例では、**オープン**と[閉じる](../../../ado/reference/ado-api/close-method-ado.md)両方のメソッド[Recordset](../../../ado/reference/ado-api/recordset-object-ado.md)と[接続](../../../ado/reference/ado-api/connection-object-ado.md)が開かれているオブジェクト。  
@@ -206,7 +205,7 @@ void PrintComError(_com_error &e) {
 }  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [Close メソッド (ADO)](../../../ado/reference/ado-api/close-method-ado.md)   
  [接続オブジェクト (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)   
  [Open メソッド (ADO Connection)](../../../ado/reference/ado-api/open-method-ado-connection.md)   

@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: ebe92bfa-0721-48aa-9ba6-e7904ad265a1
 author: julieMSFT
 ms.author: jrasnick
-manager: craigg
-ms.openlocfilehash: fd198c72e54ab74cece1b362aadfb77e655bff7d
-ms.sourcegitcommit: 0c1d552b3256e1bd995e3c49e0561589c52c21bf
+ms.openlocfilehash: 12bd415093b8ea35ee82d6d8be2d1591a4f4fbfd
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/14/2018
-ms.locfileid: "53379243"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67987267"
 ---
 # <a name="sql-server-agent-statistics-object"></a>SQL Server エージェントの Statistics オブジェクト
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

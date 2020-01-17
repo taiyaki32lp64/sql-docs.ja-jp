@@ -2,7 +2,7 @@
 title: Reporting Services の電子メール配信 | Microsoft Docs
 ms.date: 03/14/2017
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: subscriptions
 ms.topic: conceptual
 helpviewer_keywords:
@@ -10,14 +10,14 @@ helpviewer_keywords:
 - e-mail [Reporting Services]
 - mail [Reporting Services]
 ms.assetid: fda2f130-97b9-4258-9dbb-e93a70f4d08a
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 5a5ff1c1266e5d2586ec063c18db5c83737f0409
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: b2d5f511fe6008801b25f7c93300911851482025
+ms.sourcegitcommit: 43c3d8939f6f7b0ddc493d8e7a643eb7db634535
+ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47827250"
+ms.lasthandoff: 10/14/2019
+ms.locfileid: "72305044"
 ---
 # <a name="e-mail-delivery-in-reporting-services"></a>Reporting Services の電子メール配信
   SQL Server [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] には、個別のユーザーまたはグループに電子メールでレポートを送信するための電子メール配信拡張機能があります。 電子メールでレポートを配信するには、1) 電子メール配信のレポート サーバーを構成し、2) 標準のサブスクリプションまたはデータ ドリブン サブスクリプションのいずれかを定義します。 単一のサブスクリプションでは、1 通の電子メール メッセージで複数のレポートを配信できません。 ただし、複数のサブスクリプションを作成することはできます。  
@@ -41,9 +41,9 @@ ms.locfileid: "47827250"
   
 -   電子メール メッセージの [件名] 行を使用して通知を送信します。 既定では、サブスクリプション定義の [件名] に以下の変数が含まれます。サブスクリプションが処理されると、これらの変数はレポート固有の情報に置き換えられます。  
   
-     **@ReportName** は、レポート名を指定します。  
+     **\@ReportName** は、レポート名を指定します。  
   
-     **@ExecutionTime** は、レポートが実行された時間を指定します。  
+     **\@ExecutionTime** は、レポートが実行された時間を指定します。  
   
      これらの変数に静的なテキストを追加したり、各サブスクリプションの [件名] のテキストを変更することができます。  
   

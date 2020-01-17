@@ -20,18 +20,17 @@ helpviewer_keywords:
 ms.assetid: 88ceba25-e41a-405f-a416-bb68918a0024
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: ef7aa35eea529857072492d4b1d80ddf92c69ef6
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 9c2b3bf93abd6acfad699f47344f05ddbc34e85a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47726870"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67942475"
 ---
 # <a name="corespremovecollectortype-transact-sql"></a>core.sp_remove_collector_type (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  管理データ ウェアハウス データベースの core.supported_collector_types ビューからエントリを削除します。 このプロシージャは、管理データ ウェアハウス データベースのコンテキストで実行してください。  
+  管理データ ウェアハウス データベースの core.supported_collector_types ビューからエントリを削除します。 管理データ ウェアハウス データベースのコンテキストでプロシージャを実行する必要があります。  
   
  core.supported_collector_types ビューには、管理データ ウェアハウスにデータをアップロードできる登録済みのコレクター型が表示されます。  
   
@@ -45,7 +44,7 @@ core.sp_remove_collector_type [ @collector_type_uid = ] 'collector_type_uid'
 ```  
   
 ## <a name="arguments"></a>引数  
- [ @collector_type_uid =] '*collector_type_uid*'  
+ [ @collector_type_uid = ] '*collector_type_uid*'  
  コレクター型の GUID を指定します。 *collector_type_uid*は**uniqueidentifier**既定値はありません。  
   
 ## <a name="return-code-values"></a>リターン コードの値  

@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: a1c94e4a-7e91-46e0-9fac-07bbbf6dd018
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 0a32b7c56eeeef071319e1e08010113e5924ae6b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b7abf15e3085c83ec3871a74ca0977bd38a443e4
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47838420"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67951441"
 ---
 # <a name="mssqlserver7907"></a>MSSQLSERVER_7907
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -31,7 +30,7 @@ ms.locfileid: "47838420"
 |イベント ソース|MSSQLSERVER|  
 |コンポーネント|SQLEngine|  
 |シンボル名|DBCC2_FS_INVALID_COLUMN_DIRECTORY|  
-|メッセージ テキスト|テーブル エラー : パーティション ID PN_ID のディレクトリ 'DIRECTORY' は有効な FileStream ディレクトリではありません。|  
+|メッセージ テキスト|テーブル エラー:パーティション ID PN_ID のディレクトリ 'DIRECTORY' は有効な FileStream ディレクトリではありません。|  
   
 ## <a name="explanation"></a>説明  
 列ディレクトリの名前は、パーティションのリレーショナル エンジン列 ID です。 列ディレクトリ名を列 ID に変換できない場合、このディレクトリは有効な列ディレクトリではありません。  

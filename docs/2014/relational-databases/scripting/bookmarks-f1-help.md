@@ -1,11 +1,10 @@
 ---
-title: '[ブックマーク] の F1 ヘルプ | Microsoft Docs'
-ms.custom: ''
+title: '[ブックマーク] の F1 ヘルプ'
+ms.custom: seo-lt-2019
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 helpviewer_keywords:
 - SQL Server Management Studio [SQL Server], Help
@@ -15,16 +14,15 @@ ms.assetid: b6feff89-dd6e-41fe-b2f9-449f2532e1c4
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: f0c13eda55eb5b0a3d6d0a7764df2def4972d3bd
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 7375b1fb5e76efae9feea1fa5f3a7384fc39b003
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48180262"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75244785"
 ---
 # <a name="bookmarks-f1-help"></a>[ブックマーク] の F1 ヘルプ
-  ここでは、 **の** [ブックマーク] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]ページの F1 ヘルプを紹介します。  
+
+ ここでは、の [ [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]**ブックマーク**] ページの F1 ヘルプについて紹介します。  
   
- [ブックマークの管理](manage-bookmarks.md)  
-  
-  
+ [ブックマークの管理](manage-bookmarks.md)

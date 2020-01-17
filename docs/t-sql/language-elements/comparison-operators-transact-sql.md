@@ -18,15 +18,14 @@ helpviewer_keywords:
 - comparing expressions
 - comparison operators [SQL Server]
 ms.assetid: b0cc68ef-3029-484c-a917-0c15dcbc230d
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: 32310359f0ecd72349a5ebf3a4f0abcc1a72f5bf
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: a1cc6427e01055a3aa97f8f79f9270dc22579255
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47653390"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68140258"
 ---
 # <a name="comparison-operators-transact-sql"></a>比較演算子 (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -46,7 +45,7 @@ ms.locfileid: "47653390"
 |[\!> (以下)](../../t-sql/language-elements/not-greater-than-transact-sql.md)|より大きくない (ISO 標準外)|  
   
 ## <a name="boolean-data-type"></a>ブール値型  
- 比較演算子の結果は**ブール** データ型になります。 有効値には、TRUE、FALSE、UNKNOWN があります。 **ブール** データ型を返す式は、ブール式とも呼ばれます。  
+ 比較演算子の結果は**ブール** データ型になります。 これには 3 つの値があります。TRUE、FALSE、UNKNOWN です。 **ブール** データ型を返す式は、ブール式とも呼ばれます。  
   
  **ブール** データ型は [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の他のデータ型と異なり、テーブルの列や変数のデータ型として指定することはできず、結果セットで返すこともできません。  
   
@@ -67,6 +66,6 @@ IF (@MyProduct <> 0)
   
 ## <a name="see-also"></a>参照  
  [式 &#40;Transact-SQL&#41;](../../t-sql/language-elements/expressions-transact-sql.md)  
- [演算子 (&) #40 です。TRANSACT-SQL と #41 です。](../../t-sql/language-elements/operators-transact-sql.md)  
+ [演算子 &#40;Transact-SQL&#41;](../../t-sql/language-elements/operators-transact-sql.md)  
   
   

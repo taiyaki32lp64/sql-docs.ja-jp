@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 577d84c1-9285-4580-b6f5-86fbc4827547
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 918a5b7d2d2c4b378172c60afab711a3334176d5
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 7a8c013a5fd87058a202e6d24f4b3148947b5319
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51656112"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68093198"
 ---
 # <a name="boolean-constructor-functions---false-xquery"></a>ブール値コンストラクター関数 - false (XQuery)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]

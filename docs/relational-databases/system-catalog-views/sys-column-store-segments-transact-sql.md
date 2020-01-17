@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: 1253448c-2ec9-4900-ae9f-461d6b51b2ea
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: df7698d222c2c2f0f68138eaa5f6289106b97659
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b8d476e2f21693254eac5fc4712d53ac854e74ff
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47799480"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68140002"
 ---
 # <a name="syscolumnstoresegments-transact-sql"></a>sys.column_store_segments (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2014-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2014-xxxx-xxxx-xxx-md.md)]
@@ -36,23 +35,23 @@ ms.locfileid: "47799480"
 |-----------------|---------------|-----------------|  
 |**partition_id**|**bigint**|パーティション ID を示します。 データベース内で一意です。|  
 |**hobt_id**|**bigint**|この列ストア インデックスを保持するテーブルのヒープまたは B ツリー インデックス (hobt) の ID。|  
-|**column_id**|**int**|列ストアの列の ID。|  
+|**column_id**|**int**|列ストア列の ID。|  
 |**segment_id**|**int**|行グループの ID。 旧バージョンと互換性のため、列名が行グループ ID です。 この場合でも、segment_id を呼び出せる続けます 使用してセグメントを一意に識別できる\<hobt_id で、partition_id、column_id >、< segment_id >。|  
-|**version**|**int**|列セグメント形式のバージョン。|  
+|**version**|**int**|列セグメント形式のバージョンです。|  
 |**encoding_type**|**int**|そのセグメントを使用するエンコードの種類です。<br /><br /> 1 = VALUE_BASED - 非文字列/バイナリないディクショナリ (内部のいくつかのバリエーションを 4 によく似ています)<br /><br /> 2 = VALUE_HASH_BASED - の一般的な値がディクショナリ内の文字列/バイナリ列<br /><br /> 3 = STRING_HASH_BASED - の一般的な値がディクショナリ内の文字列/バイナリ列<br /><br /> 4 = STORE_BY_VALUE_BASED - 非文字列/バイナリない辞書で<br /><br /> 5 = STRING_STORE_BY_VALUE_BASED - ない辞書で文字列/バイナリ<br /><br /> すべてのエンコーディングでは、可能な場合のエンコード ビット パッキングと実行の長さの活用します。|  
 |**row_count**|**int**|行グループ内の行の数。|  
-|**has_nulls**|**int**|列セグメントに NULL 値がある場合は 1。|  
-|**base_id**|**bigint**|エンコードの種類 1 が使用されている場合は、id をベース値です。  エンコードの種類 1 が使用されていない、base_id が-1 に設定します。|  
+|**has_nulls**|**int**|列セグメントに null 値がある場合は 1。|  
+|**base_id**|**bigint**|エンコードの種類 1 が使用されている場合は、ベース値 id。  エンコードの種類 1 が使用されていない、base_id が-1 に設定します。|  
 |**magnitude**|**float**|エンコードの種類 1 が使用されている場合は大きさ。  エンコードの種類 1 が使用されていない、magnitude が-1 に設定します。|  
 |**primary_dictionary_id**|**int**|値 0 は、グローバルのディクショナリを表します。 値-1 は、この列用に作成されたグローバル辞書がないことを示します。|  
 |**secondary_dictionary_id**|**int**|0 以外の値は、この列に現在のセグメント (つまり行グループ) のローカルのディクショナリを指します。 値-1 は、このセグメントのローカルのディクショナリがないことを示します。|  
 |**min_data_id**|**bigint**|列セグメントの最小データ ID。|  
-|**max_data_id**|**bigint**|列セグメントの最大データ ID。|  
+|**max_data_id**|**bigint**|列セグメントの最大データ id。|  
 |**null_value**|**bigint**|NULL を表すために使用される値。|  
-|**on_disk_size**|**bigint**|セグメントのサイズ (バイト単位)。|  
+|**on_disk_size**|**bigint**|(バイト単位) セグメントのサイズ。|  
   
 ## <a name="remarks"></a>コメント  
- 次のクエリは、列ストア インデックスのセグメントに関する情報を返します。  
+ 次のクエリでは、列ストア インデックスのセグメントに関する情報を返します。  
   
 ```sql  
 SELECT i.name, p.object_id, p.index_id, i.type_desc,   

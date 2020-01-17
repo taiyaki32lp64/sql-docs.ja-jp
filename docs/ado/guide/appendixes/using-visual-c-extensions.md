@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: ff759185-df41-4507-8d12-0921894ffbd9
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 30d358dab4ab983109d354238b35b64a3d7976da
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: a9d60695bd033bfc83e3a091490f27f9432782c0
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52544185"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67926452"
 ---
 # <a name="visual-c-extensions"></a>Visual C の拡張機能
 ## <a name="the-iadorecordbinding-interface"></a>IADORecordBinding インターフェイス
@@ -129,7 +128,7 @@ Update(CADORecordBinding *binding)
 
  データを設定するときに*Status*に設定することがあります**adFldNull**を示すために、 **Recordset**フィールドを設定する必要がありますを null にします。
 
-|定数|値|説明|
+|定数|Value|説明|
 |--------------|-----------|-----------------|
 |**adFldOK**|0|Null 以外のフィールドの値が返されました。|
 |**adFldBadAccessor**|1|バインドが無効です。|

@@ -4,21 +4,20 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 f1_keywords:
 - "10128"
 ms.assetid: b54ec058-b910-450b-a634-6092a4f6d840
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 571e95646caa58a94e92768e1a5fbcc8ed7656b3
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 2f44b35fcb8a6568e0dcd4e9d3eba412207d1e83
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56020543"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66107316"
 ---
 # <a name="enter-data-source-credentials-dialog-box-report-builder"></a>[データ ソースの資格情報の入力] ダイアログ ボックス (レポート ビルダー)
   **[データ ソースの資格情報の入力]** ダイアログ ボックスを使用すると、データ ソースからデータを取得するための資格情報を指定できます。  

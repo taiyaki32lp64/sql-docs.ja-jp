@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: f3327ea0-635a-43d4-bd78-c1674f62f1a2
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 78505f010706a39e5278d50219dd4504e33dd67c
-ms.sourcegitcommit: bfa10c54e871700de285d7f819095d51ef70d997
+ms.openlocfilehash: c02d8d115a4336470c0e0d32aebabea63c05ab0b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/14/2019
-ms.locfileid: "54254867"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67923815"
 ---
 # <a name="types-of-events"></a>イベントの種類
 2 つのイベントの種類があります。 「イベントは」操作を開始する前に呼び出されなどの名前に「は」は、通常**WillChangeRecordset**または**WillConnect**します。 イベントが通常は完了した後に呼び出されるイベントを含める"Complete"の名前になど**RecordChangeComplete**または**ConnectComplete**します。 例外の存在 - など**InfoMessage** - が関連付けられている操作が完了した後にこれらが発生します。  
@@ -38,7 +37,7 @@ ms.locfileid: "54254867"
 ## <a name="other-events"></a>その他のイベント  
  他のイベント ハンドラーの名前は、フォームのないイベントは、<strong>は*イベント*</strong>または<strong>*イベント*完了</strong>の後にのみと呼ばれます操作を完了します。 これらのイベントは**切断**、 **EndOfRecordset**、および**InfoMessage**します。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [ADO イベント ハンドラーの概要](../../../ado/guide/data/ado-event-handler-summary.md)   
  [言語で ADO イベントのインスタンス化](../../../ado/guide/data/ado-event-instantiation-by-language.md)   
  [イベント パラメーター](../../../ado/guide/data/event-parameters.md)   

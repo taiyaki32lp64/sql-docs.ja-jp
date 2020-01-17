@@ -10,14 +10,13 @@ ms.topic: conceptual
 ms.assetid: 7a458b9c-3423-4e24-823d-99573544c877
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: b250f4ec67db43c975d61f5944b7d6eaee8ccc73
-ms.sourcegitcommit: c7febcaff4a51a899bc775a86e764ac60aab22eb
+ms.openlocfilehash: 0ceeaedd10d8c9e38664083365ee943422a2ca91
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "52712004"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72907535"
 ---
 # <a name="monitor-and-troubleshoot-memory-usage"></a>メモリ使用量の監視とトラブルシューティング
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -49,7 +48,7 @@ ms.locfileid: "52712004"
 2.  **[新しいクエリ]** をクリックします。  
   
 3.  次のコードを新しいクエリ ウィンドウに貼り付け、各セクションを実行します。  
-  
+
     ```  
     -- create a database to be used  
     CREATE DATABASE IMOLTP_DB  
@@ -138,7 +137,7 @@ ms.locfileid: "52712004"
   
 2.  オブジェクト エクスプローラーで、レポートが必要なデータベースを右クリックします。  
   
-3.  コンテキスト メニューで、 **[レポート]** -> **Standard [レポート]** -> **[メモリ最適化オブジェクトによるメモリ使用量]** の順にクリックします。  
+3.  コンテキスト メニューで、 **[レポート]**  -> **Standard [レポート]**  ->  **[メモリ最適化オブジェクトによるメモリ使用量]** の順にクリックします。  
   
  ![HK_MM_SSMS](../../relational-databases/in-memory-oltp/media/hk-mm-ssms-stdrpt-memuse.gif "HK_MM_SSMS")  
   
@@ -247,7 +246,7 @@ memory_object_address pages_ in_bytes bytes_used type
   
  詳細については、「 [sys.dm_os_memory_objects (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-os-memory-objects-transact-sql.md)」 を参照してください。  
   
-#### <a name="memory-consumed-by-includehek2includeshek-2-mdmd-engine-across-the-instance"></a>インスタンス全体で [!INCLUDE[hek_2](../../includes/hek-2-md.md)] エンジンによって消費されるメモリ  
+#### <a name="memory-consumed-by-includehek_2includeshek-2-mdmd-engine-across-the-instance"></a>インスタンス全体で [!INCLUDE[hek_2](../../includes/hek-2-md.md)] エンジンによって消費されるメモリ  
  [!INCLUDE[hek_2](../../includes/hek-2-md.md)] エンジンとメモリ最適化オブジェクトに割り当てられたメモリは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンス内の他のメモリ コンシューマーと同様に管理されます。 MEMORYCLERK_XTP 型のクラークによって、 [!INCLUDE[hek_2](../../includes/hek-2-md.md)] エンジンに割り当てられたすべてのメモリについて確認できます。 次のクエリを使用して、 [!INCLUDE[hek_2](../../includes/hek-2-md.md)] エンジンによって使用されるすべてのメモリを確認します。  
   
 ```sql  

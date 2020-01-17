@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: 2a577e52-821d-4bd3-ba35-075a6be285c9
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 7e3bee7fa85c98e50fdb940d2dfb23f76f3a462c
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 3bf7682ce42422efb0e47e4272e53933eba92a4e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52504690"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66081559"
 ---
 # <a name="dmx-templates"></a>[DMX テンプレート]
   データ マイニング テンプレートは、高度なクエリをすばやく作成するのに役立ちます。 DMX クエリの一般的な構文は詳しく解説されており、テンプレートを使用すると、引数とデータ ソースをクリックおよびポイントする方法でクエリを簡単に作成できます。  

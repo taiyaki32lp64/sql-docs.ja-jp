@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 5a339f61-c52f-40ad-8deb-d785f72753d4
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 8a80ed397ae494bc686ef76aaeeef10b61662f19
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 14e62555db2e88c6573f3bdca0d4a1a2733d428b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47751500"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68006240"
 ---
 # <a name="column-name-limitations"></a>列名の制限
 列名は、任意の有効な文字 (スペースなど) を含めることができます。 列名に文字、数字、およびアンダー スコアを除くすべての文字が含まれている場合、バック引用符 (') で囲んで、名前を区切る必要があります。  

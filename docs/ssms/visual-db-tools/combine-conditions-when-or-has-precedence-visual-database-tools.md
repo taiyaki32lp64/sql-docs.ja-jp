@@ -14,15 +14,14 @@ helpviewer_keywords:
 - combining search conditions
 - OR operator
 ms.assetid: b30f5ac9-25e7-4163-80ed-44e4bccb455d
-author: stevestein
-ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 5bf6ae9321e0ffc923a2dfbf5e00feab9215d182
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 13b64b2310f3ac29855dc4356fb842f86ef25dbc
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47787560"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68262501"
 ---
 # <a name="combine-conditions-when-or-has-precedence-visual-database-tools"></a>OR が優先する場合の条件の結合 (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

@@ -1,5 +1,5 @@
 ---
-title: getFloat (java.lang.String) メソッド |Microsoft Docs
+title: getFloat メソッド (java.lang.String) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: b6492341-fdc2-449c-9d03-95a5dadf1bb0
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 471fc44de47f89438cff96ac6d3189f6224664eb
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ab60742b06054f5583cc438a68ddb5ed634740f5
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47711870"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67983035"
 ---
 # <a name="getfloat-method-javalangstring"></a>getFloat (java.lang.String) メソッド
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -41,7 +40,7 @@ public float getFloat(java.lang.String sCol)
  パラメーターの名前を含む**文字列**です。  
   
 ## <a name="return-value"></a>戻り値  
- A **float**値。  
+ **浮動小数点**値です。  
   
 ## <a name="exceptions"></a>例外  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
@@ -49,7 +48,7 @@ public float getFloat(java.lang.String sCol)
 ## <a name="remarks"></a>Remarks  
  この getFloat メソッドは、java.sql.CallableStatement インターフェイスの getFloat メソッドで規定されています。  
   
- このメソッドは、数値ベースのすべての型を、Java の **float** の忠実性を使用して返します。  
+ このメソッドは、数値ベースのすべての型を、Java の**float** の忠実性を使用して返します。  
   
 ## <a name="see-also"></a>参照  
  [getFloat メソッド &#40;SQLServerCallableStatement&#41;](../../../connect/jdbc/reference/getfloat-method-sqlservercallablestatement.md)   

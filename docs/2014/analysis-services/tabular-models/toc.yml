@@ -1,4 +1,3 @@
-items:
 - name: テーブル モデリング
   href: tabular-models-ssas.md
 - name: テーブル モデル ソリューション
@@ -12,187 +11,187 @@ items:
 - name: テーブル モデル プロジェクト
   href: tabular-model-projects-ssas-tabular.md
   items:
-  - name: 新しいテーブル モデル プロジェクトの作成
-    href: create-a-new-tabular-model-project-analysis-services.md
-  - name: Analysis Services からのインポート
-    href: import-from-analysis-services-ssas-tabular.md
-  - name: PowerPivot からのインポート
-    href: import-from-power-pivot-ssas-tabular.md
+    - name: 新しいテーブル モデル プロジェクトの作成
+      href: create-a-new-tabular-model-project-analysis-services.md
+    - name: Analysis Services からのインポート
+      href: import-from-analysis-services-ssas-tabular.md
+    - name: PowerPivot からのインポート
+      href: import-from-power-pivot-ssas-tabular.md
 - name: Properties
   href: properties-ssas-tabular.md
   items:
-  - name: Power View レポート プロパティ
-    href: power-view-reporting-properties-ssas-tabular.md
-    items:
-    - name: Power View レポートの既定のフィールド セットの構成
-      href: power-view-configure-default-field-set-for-reports.md
-    - name: Power View レポートのテーブル動作プロパティの構成
-      href: power-view-configure-table-behavior-properties-for-reports.md
-  - name: プロジェクト プロパティ
-    href: project-properties-ssas-tabular.md
-  - name: モデルのプロパティ
-    href: model-properties-ssas-tabular.md
-  - name: テーブルのプロパティ
-    href: table-properties-ssas-tabular.md
-  - name: 列のプロパティ
-    href: column-properties-ssas-tabular.md
-  - name: 既定のデータ モデルと配置プロパティの構成
-    href: configure-default-data-modeling-and-deployment-properties-ssas-tabular.md
+    - name: Power View レポート プロパティ
+      href: power-view-reporting-properties-ssas-tabular.md
+      items:
+        - name: Power View レポートの既定のフィールド セットの構成
+          href: power-view-configure-default-field-set-for-reports.md
+        - name: Power View レポートのテーブル動作プロパティの構成
+          href: power-view-configure-table-behavior-properties-for-reports.md
+    - name: プロジェクト プロパティ
+      href: project-properties-ssas-tabular.md
+    - name: モデルのプロパティ
+      href: model-properties-ssas-tabular.md
+    - name: テーブルのプロパティ
+      href: table-properties-ssas-tabular.md
+    - name: 列のプロパティ
+      href: column-properties-ssas-tabular.md
+    - name: 既定のデータ モデルと配置プロパティの構成
+      href: configure-default-data-modeling-and-deployment-properties-ssas-tabular.md
 - name: ソリューション エクスプローラー
   href: ../data-sources-ssas-tabular.md
   items:
-  - name: サポートされているデータ ソース
-    href: data-sources-supported-ssas-tabular.md
-  - name: サポートされているデータ型
-    href: data-types-supported-ssas-tabular.md
-  - name: 権限借用
-    href: impersonation-ssas-tabular.md
-  - name: データのインポート
-    href: ../import-data-ssas-tabular.md
-    items:
-    - name: リレーショナル データ ソースからのインポート
-      href: ../import-from-a-relational-data-source-ssas-tabular.md
-    - name: 多次元データ ソースからのインポート
-      href: ../import-from-a-multidimensional-data-source-ssas-tabular.md
-    - name: データ フィードからのインポート
-      href: ../import-from-a-data-feed-ssas-tabular.md
-    - name: テキスト ファイルからのインポート
-      href: ../import-from-a-text-file-ssas-tabular.md
-    - name: データのコピーと貼り付け
-      href: ../copy-and-paste-data-ssas-tabular.md
-  - name: データの処理
-    href: ../process-data-ssas-tabular.md
-    items:
-    - name: データの手動処理
-      href: ../manually-process-data-ssas-tabular.md
-    - name: データの処理のトラブルシューティング
-      href: ../troubleshoot-process-data-ssas-tabular.md
-  - name: 既存のデータ ソース接続の編集
-    href: ../edit-an-existing-data-source-connection-ssas-tabular.md
+    - name: サポートされているデータ ソース
+      href: data-sources-supported-ssas-tabular.md
+    - name: サポートされているデータ型
+      href: data-types-supported-ssas-tabular.md
+    - name: 権限借用
+      href: impersonation-ssas-tabular.md
+    - name: データのインポート
+      href: ../import-data-ssas-tabular.md
+      items:
+        - name: リレーショナル データ ソースからのインポート
+          href: ../import-from-a-relational-data-source-ssas-tabular.md
+        - name: 多次元データ ソースからのインポート
+          href: ../import-from-a-multidimensional-data-source-ssas-tabular.md
+        - name: データ フィードからのインポート
+          href: ../import-from-a-data-feed-ssas-tabular.md
+        - name: テキスト ファイルからのインポート
+          href: ../import-from-a-text-file-ssas-tabular.md
+        - name: データのコピーと貼り付け
+          href: ../copy-and-paste-data-ssas-tabular.md
+    - name: データの処理
+      href: ../process-data-ssas-tabular.md
+      items:
+        - name: データの手動処理
+          href: ../manually-process-data-ssas-tabular.md
+        - name: データの処理のトラブルシューティング
+          href: ../troubleshoot-process-data-ssas-tabular.md
+    - name: 既存のデータ ソース接続の編集
+      href: ../edit-an-existing-data-source-connection-ssas-tabular.md
 - name: DirectQuery モード
   href: directquery-mode-ssas-tabular.md
   items:
-  - name: パーティションと DirectQuery モード
-    href: define-partitions-in-directquery-models-ssas-tabular.md
-  - name: DirectQuery デザイン モードの有効化
-    href: enable-directquery-mode-in-ssdt.md
-  - name: DirectQuery パーティションの変更
-    href: ../change-the-directquery-partition-ssas-tabular.md
-  - name: DirectQuery の優先接続方法の設定または変更
-    href: ../set-or-change-the-preferred-connection-method-for-directquery.md
-  - name: DirectQuery の配置シナリオ
-    href: ../directquery-deployment-scenarios-ssas-tabular.md
-  - name: DirectQuery モードでの DAX 数式の互換性 (SSAS 2014)
-    href: ../dax-formula-compatibility-in-directquery-mode-ssas-2014.md
+    - name: パーティションと DirectQuery モード
+      href: define-partitions-in-directquery-models-ssas-tabular.md
+    - name: DirectQuery デザイン モードの有効化
+      href: enable-directquery-mode-in-ssdt.md
+    - name: DirectQuery パーティションの変更
+      href: ../change-the-directquery-partition-ssas-tabular.md
+    - name: DirectQuery の優先接続方法の設定または変更
+      href: ../set-or-change-the-preferred-connection-method-for-directquery.md
+    - name: DirectQuery の配置シナリオ
+      href: ../directquery-deployment-scenarios-ssas-tabular.md
+    - name: DirectQuery モードでの DAX 数式の互換性 (SSAS 2014)
+      href: ../dax-formula-compatibility-in-directquery-mode-ssas-2014.md
 - name: テーブルと列
   href: tables-and-columns-ssas-tabular.md
   items:
-  - name: 列のテーブルへの追加
-    href: add-columns-to-a-table-ssas-tabular.md
-  - name: 列の削除
-    href: delete-a-column-ssas-tabular.md
-  - name: テーブル、列、または行のフィルターのマッピングの変更
-    href: change-table-column-or-row-filter-mappings-ssas-tabular.md
-  - name: タイム インテリジェンスで使用する [日付テーブルとしてマーク] の指定 (SSAS テーブル)
-    href: specify-mark-as-date-table-for-use-with-time-intelligence-ssas-tabular.md
-  - name: テーブルの追加
-    href: add-a-table-ssas-tabular.md
-  - name: テーブルの削除
-    href: delete-a-table-ssas-tabular.md
-  - name: テーブルまたは列名の変更
-    href: rename-a-table-or-column-ssas-tabular.md
-  - name: 列のデータ型の設定
-    href: set-the-data-type-of-a-column-ssas-tabular.md
-  - name: 列の非表示または固定
-    href: hide-or-freeze-columns-ssas-tabular.md
-  - name: 計算列
-    href: ssas-calculated-columns.md
-    items:
-    - name: 計算列の作成
-      href: ssas-calculated-columns-create-a-calculated-column.md
-  - name: データのフィルター処理と並べ替え
-    href: ../filter-and-sort-data-ssas-tabular.md
-    items:
-    - name: テーブル内のデータの並べ替え
-      href: sort-data-in-a-table-ssas-tabular.md
-    - name: テーブル内のデータのフィルター処理
-      href: filter-data-in-a-table-ssas-tabular.md
+    - name: 列のテーブルへの追加
+      href: add-columns-to-a-table-ssas-tabular.md
+    - name: 列の削除
+      href: delete-a-column-ssas-tabular.md
+    - name: テーブル、列、または行のフィルターのマッピングの変更
+      href: change-table-column-or-row-filter-mappings-ssas-tabular.md
+    - name: 'タイム インテリジェンスで使用する [日付テーブルとしてマーク] の指定 (SSAS テーブル)'
+      href: specify-mark-as-date-table-for-use-with-time-intelligence-ssas-tabular.md
+    - name: テーブルの追加
+      href: add-a-table-ssas-tabular.md
+    - name: テーブルの削除
+      href: delete-a-table-ssas-tabular.md
+    - name: テーブルまたは列名の変更
+      href: rename-a-table-or-column-ssas-tabular.md
+    - name: 列のデータ型の設定
+      href: set-the-data-type-of-a-column-ssas-tabular.md
+    - name: 列の非表示または固定
+      href: hide-or-freeze-columns-ssas-tabular.md
+    - name: 計算列
+      href: ssas-calculated-columns.md
+      items:
+        - name: 計算列の作成
+          href: ssas-calculated-columns-create-a-calculated-column.md
+    - name: データのフィルター処理と並べ替え
+      href: ../filter-and-sort-data-ssas-tabular.md
+      items:
+        - name: テーブル内のデータの並べ替え
+          href: sort-data-in-a-table-ssas-tabular.md
+        - name: テーブル内のデータのフィルター処理
+          href: filter-data-in-a-table-ssas-tabular.md
 - name: リレーションシップ
   href: relationships-ssas-tabular.md
   items:
-  - name: 2 つのテーブル間のリレーションシップの作成
-    href: create-a-relationship-between-two-tables-ssas-tabular.md
-  - name: リレーションシップの削除
-    href: delete-relationships-ssas-tabular.md
+    - name: 2 つのテーブル間のリレーションシップの作成
+      href: create-a-relationship-between-two-tables-ssas-tabular.md
+    - name: リレーションシップの削除
+      href: delete-relationships-ssas-tabular.md
 - name: '[新しい名前付きセット]'
   href: calculations-ssas-tabular.md
   items:
-  - name: テーブル モデルでの DAX について
-    href: understanding-dax-in-tabular-models-ssas-tabular.md
+    - name: テーブル モデルでの DAX について
+      href: understanding-dax-in-tabular-models-ssas-tabular.md
 - name: メジャー
   href: measures-ssas-tabular.md
   items:
-  - name: メジャーを作成および管理する
-    href: create-and-manage-measures-ssas-tabular.md
+    - name: メジャーを作成および管理する
+      href: create-and-manage-measures-ssas-tabular.md
 - name: KPI
   href: kpis-ssas-tabular.md
   items:
-  - name: KPI の作成および管理
-    href: create-and-manage-kpis-ssas-tabular.md
+    - name: KPI の作成および管理
+      href: create-and-manage-kpis-ssas-tabular.md
 - name: 階層
   href: hierarchies-ssas-tabular.md
   items:
-  - name: 階層の作成および管理
-    href: create-and-manage-hierarchies-ssas-tabular.md
+    - name: 階層の作成および管理
+      href: create-and-manage-hierarchies-ssas-tabular.md
 - name: '[メジャー グループ]'
   href: partitions-ssas-tabular.md
   items:
-  - name: ワークスペース データベースのパーティションの作成と管理
-    href: create-and-manage-partitions-in-the-workspace-database-ssas-tabular.md
-  - name: ワークスペース データベースのパーティションの処理
-    href: process-partitions-in-the-workspace-database-ssas-tabular.md
+    - name: ワークスペース データベースのパーティションの作成と管理
+      href: create-and-manage-partitions-in-the-workspace-database-ssas-tabular.md
+    - name: ワークスペース データベースのパーティションの処理
+      href: process-partitions-in-the-workspace-database-ssas-tabular.md
 - name: パースペクティブ
   href: perspectives-ssas-tabular.md
   items:
-  - name: パースペクティブの作成と管理
-    href: create-and-manage-perspectives-ssas-tabular.md
+    - name: パースペクティブの作成と管理
+      href: create-and-manage-perspectives-ssas-tabular.md
 - name: ロール
   href: roles-ssas-tabular.md
   items:
-  - name: ロールの作成および管理
-    href: create-and-manage-roles-ssas-tabular.md
+    - name: ロールの作成および管理
+      href: create-and-manage-roles-ssas-tabular.md
 - name: '[Excel で分析]'
   href: analyze-in-excel-ssas-tabular.md
   items:
-  - name: Excel でのテーブル モデルの分析
-    href: analyze-a-tabular-model-in-excel-ssas-tabular.md
+    - name: Excel でのテーブル モデルの分析
+      href: analyze-a-tabular-model-in-excel-ssas-tabular.md
 - name: テーブル モデル ソリューションの配置
   href: tabular-model-solution-deployment-ssas-tabular.md
   items:
-  - name: SQL Server データ ツールからの配置
-    href: deploy-from-sql-server-data-tools-ssas-tabular.md
-  - name: Deploy Model Solutions Using the Deployment Wizard
-    href: ../multidimensional-models/deploy-model-solutions-using-the-deployment-wizard.md
-    items:
-    - name: Analysis Services 配置ウィザードの実行
-      href: ../multidimensional-models/running-the-analysis-services-deployment-wizard.md
-    - name: 配置スクリプトを作成するための入力ファイルについて
-      href: ../multidimensional-models/deployment-script-files-input-used-to-create-deployment-script.md
-  - name: インストール先の指定
-    href: ../multidimensional-models/deployment-script-files-specifying-the-installation-target.md
-  - name: パーティションおよびロールの配置オプションの指定
-    href: ../multidimensional-models/deployment-script-files-partition-and-role-deployment-options.md
-  - name: ソリューションの配置に関する構成設定の指定
-    href: ../multidimensional-models/deployment-script-files-solution-deployment-config-settings.md
-  - name: 処理オプションの指定
-    href: ../multidimensional-models/deployment-script-files-specifying-processing-options.md
-    items:
-    - name: Analysis Services 配置スクリプトについて
-      href: ../multidimensional-models/understanding-the-analysis-services-deployment-script.md
-  - name: 配置ユーティリティを使用したモデル ソリューションの配置
-    href: ../multidimensional-models/deploy-model-solutions-with-the-deployment-utility.md
-  - name: XMLA を使用したモデル ソリューションの配置
-    href: ../multidimensional-models/deploy-model-solutions-using-xmla.md
+    - name: SQL Server データ ツールからの配置
+      href: deploy-from-sql-server-data-tools-ssas-tabular.md
+    - name: Deploy Model Solutions Using the Deployment Wizard
+      href: ../multidimensional-models/deploy-model-solutions-using-the-deployment-wizard.md
+      items:
+        - name: Analysis Services 配置ウィザードの実行
+          href: ../multidimensional-models/running-the-analysis-services-deployment-wizard.md
+        - name: 配置スクリプトを作成するための入力ファイルについて
+          href: ../multidimensional-models/deployment-script-files-input-used-to-create-deployment-script.md
+    - name: インストール先の指定
+      href: ../multidimensional-models/deployment-script-files-specifying-the-installation-target.md
+    - name: パーティションおよびロールの配置オプションの指定
+      href: ../multidimensional-models/deployment-script-files-partition-and-role-deployment-options.md
+    - name: ソリューションの配置に関する構成設定の指定
+      href: ../multidimensional-models/deployment-script-files-solution-deployment-config-settings.md
+    - name: 処理オプションの指定
+      href: ../multidimensional-models/deployment-script-files-specifying-processing-options.md
+      items:
+        - name: Analysis Services 配置スクリプトについて
+          href: ../multidimensional-models/understanding-the-analysis-services-deployment-script.md
+    - name: 配置ユーティリティを使用したモデル ソリューションの配置
+      href: ../multidimensional-models/deploy-model-solutions-with-the-deployment-utility.md
+    - name: XMLA を使用したモデル ソリューションの配置
+      href: ../multidimensional-models/deploy-model-solutions-using-xmla.md
 - name: テーブル モデルの文字列ストレージと照合順序
   href: string-storage-and-collation-in-tabular-models.md
 - name: データベース、テーブル、またはパーティションの処理
@@ -200,48 +199,42 @@ items:
 - name: テーブル モデル ロール
   href: tabular-model-roles-ssas-tabular.md
   items:
-  - name: SSMS を使用したロールの管理
-    href: manage-roles-by-using-ssms-ssas-tabular.md
+    - name: SSMS を使用したロールの管理
+      href: manage-roles-by-using-ssms-ssas-tabular.md
 - name: テーブル モデル パーティション
   href: tabular-model-partitions-ssas-tabular.md
   items:
-  - name: テーブル モデル パーティションの作成および管理
-    href: create-and-manage-tabular-model-partitions-ssas-tabular.md
-  - name: テーブル モデル パーティションの処理
-    href: process-tabular-model-partitions-ssas-tabular.md
+    - name: テーブル モデル パーティションの作成および管理
+      href: create-and-manage-tabular-model-partitions-ssas-tabular.md
+    - name: テーブル モデル パーティションの処理
+      href: process-tabular-model-partitions-ssas-tabular.md
 - name: テーブル モデル データベース
   href: tabular-model-databases-ssas-tabular.md
   items:
-  - name: テーブル モデルのデータベースの In-Memory または DirectQuery アクセスの構成
-    href: enable-directquery-mode-in-ssms.md
-  - name: テーブル モデル データベースへの接続
-    href: connect-to-a-tabular-model-database-ssas.md
-  - name: PowerPivot から復元
-    href: restore-from-power-pivot.md
-  - name: Analysis Services データベースの移動
-    href: ../multidimensional-models/move-an-analysis-services-database.md
-  - name: Analysis Services データベースの同期
-    href: ../multidimensional-models/synchronize-analysis-services-databases.md
-  - name: ReadOnly モードと ReadWrite モードの切り替え
-    href: ../multidimensional-models/switch-an-analysis-services-database-between-readonly-and-readwrite-modes.md
-  - name: Analysis Services データベースの変更または削除
-    href: ../multidimensional-models/modify-or-delete-an-analysis-services-database.md
-  - name: Analysis Services データベースのドキュメントとスクリプトの作成
-    href: ../multidimensional-models/document-and-script-an-analysis-services-database.md
-  - name: Analysis Services データベースのバックアップと復元
-    href: ../multidimensional-models/backup-and-restore-of-analysis-services-databases.md
-    items:
-    - name: バックアップ オプション
-      href: ../multidimensional-models/backup-options.md
-    - name: '[復元オプション]'
-      href: ../multidimensional-models/restore-options.md
-  - name: Analysis Services データベースのインポートとデタッチ
-    href: ../multidimensional-models/attach-and-detach-analysis-services-databases.md
+    - name: テーブル モデルのデータベースの In-Memory または DirectQuery アクセスの構成
+      href: enable-directquery-mode-in-ssms.md
+    - name: テーブル モデル データベースへの接続
+      href: connect-to-a-tabular-model-database-ssas.md
+    - name: PowerPivot から復元
+      href: restore-from-power-pivot.md
+    - name: Analysis Services データベースの移動
+      href: ../multidimensional-models/move-an-analysis-services-database.md
+    - name: Analysis Services データベースの同期
+      href: ../multidimensional-models/synchronize-analysis-services-databases.md
+    - name: ReadOnly モードと ReadWrite モードの切り替え
+      href: ../multidimensional-models/switch-an-analysis-services-database-between-readonly-and-readwrite-modes.md
+    - name: Analysis Services データベースの変更または削除
+      href: ../multidimensional-models/modify-or-delete-an-analysis-services-database.md
+    - name: Analysis Services データベースのドキュメントとスクリプトの作成
+      href: ../multidimensional-models/document-and-script-an-analysis-services-database.md
+    - name: Analysis Services データベースのバックアップと復元
+      href: ../multidimensional-models/backup-and-restore-of-analysis-services-databases.md
+      items:
+        - name: バックアップ オプション
+          href: ../multidimensional-models/backup-options.md
+        - name: '[復元オプション]'
+          href: ../multidimensional-models/restore-options.md
+    - name: Analysis Services データベースのインポートとデタッチ
+      href: ../multidimensional-models/attach-and-detach-analysis-services-databases.md
 - name: テーブル モデル データ アクセス
   href: tabular-model-data-access.md
-ms.openlocfilehash: e0eeb0529829c7366e2973fdc480ea27b0f528bf
-ms.sourcegitcommit: 2e8783e6bedd9597207180941be978f65c2c2a2d
-ms.translationtype: HT
-ms.contentlocale: ja-JP
-ms.lasthandoff: 01/19/2019
-ms.locfileid: "54405632"

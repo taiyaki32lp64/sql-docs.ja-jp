@@ -12,16 +12,15 @@ helpviewer_keywords:
 ms.assetid: 606f2b92-3821-4d11-a207-4c22f6f35619
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: a3f4e831ca0984cee26faf846f3ba13528abe222
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 37f6f109a53ad576a3849b4d8977c457ee3cbef9
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47724547"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67918902"
 ---
 # <a name="errors-collection-properties-methods-and-events"></a>エラーのコレクションのプロパティ、メソッド、およびイベント
-## <a name="properties"></a>[プロパティ]  
+## <a name="properties"></a>Properties  
  [Count プロパティ](../../../ado/reference/ado-api/count-property-ado.md)  
   
  [項目のプロパティ](../../../ado/reference/ado-api/item-property-ado.md)  

@@ -1,5 +1,5 @@
 ---
-title: position メソッド (SQLServerNClob) |Microsoft Docs
+title: position メソッド (SQLServerNClob) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 5b42f036-4cb0-449b-8036-b48e0a14609f
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: a6882083b270825623253d4635afd3077a5a2d75
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 327a22c8e661b35c00d6086d09f2f2a3a83ab8b5
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47810560"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67976332"
 ---
 # <a name="position-method-sqlservernclob"></a>position メソッド (SQLServerNClob)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -27,8 +26,8 @@ ms.locfileid: "47810560"
   
 |[オブジェクト名]|[説明]|  
 |----------|-----------------|  
-|[position メソッド &#40;java.sql.NClob, long&#41;](../../../connect/jdbc/reference/position-method-java-sql-nclob-long.md)|文字位置を取得します。 指定した**NClob**オブジェクト*searchstr*でこれが表示されます**NClob**オブジェクト。|  
-|[position メソッド&#40;java.lang.String, long&#41; &#40;SQLServerNClob&#41;](../../../connect/jdbc/reference/position-method-java-lang-string-long-sqlservernclob.md)|文字位置を取得します。 指定された部分文字列*searchstr*に表示されます、 **NCLOB**これによって表される値**NClob**オブジェクト。|  
+|[position メソッド &#40;java.sql.NClob, long&#41;](../../../connect/jdbc/reference/position-method-java-sql-nclob-long.md)|指定された**NClob** object *searchstr*がこの**NClob**オブジェクトに含まれる文字位置を取得します。|  
+|[position メソッド&#40;(SQLServerNClob, long)&#41; &#40;&#41;](../../../connect/jdbc/reference/position-method-java-lang-string-long-sqlservernclob.md)|この**NCLOB**オブジェクトによって表される**NCLOB**値に、指定した部分文字列*searchstr*がある文字位置を取得します。|  
   
 ## <a name="see-also"></a>参照  
  [SQLServerNClob のメソッド](../../../connect/jdbc/reference/sqlservernclob-methods.md)   

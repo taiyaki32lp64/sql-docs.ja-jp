@@ -1,5 +1,5 @@
 ---
-title: '例: OPENXML の使用 | Microsoft Docs'
+title: '例 : OPENXML の使用 | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: sql
@@ -24,17 +24,16 @@ helpviewer_keywords:
 - element-centric mapping [SQL Server]
 - edge tables
 ms.assetid: 689297f3-adb0-4d8d-bf62-cfda26210164
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: 3f1b27a3889928365f727f4f85cc945f3561d8fd
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: MightyPen
+ms.author: genemi
+ms.openlocfilehash: 4ea3ad1c2f7cb482888f0cd4d31a91f9975745b7
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47849850"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67943385"
 ---
-# <a name="examples-using-openxml"></a>例: OPENXML の使用
+# <a name="examples-using-openxml"></a>例 :OPENXML の使用
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
   このトピックの例では、OPENXML を使用して XML ドキュメントの行セット ビューを作成する方法を示します。 OPENXML の構文の詳細については、「 [OPENXML &#40;Transact-SQL&#41;](../../t-sql/functions/openxml-transact-sql.md)」を参照してください。 ここに示す例では、OPENXML でのメタプロパティの指定を除く OPENXML のすべての側面を示します。 OPENXML のメタプロパティの指定方法の詳細については、「 [OPENXML 内でのメタプロパティの指定](../../relational-databases/xml/specify-metaproperties-in-openxml.md)」を参照してください。  
   
@@ -444,7 +443,7 @@ FROM OPENXML (@docHandle, '/ROOT/Customer')
 EXEC sp_xml_removedocument @docHandle  
 ```  
   
- 結果はエッジ テーブルとして返されます。 エッジ テーブルに対するクエリを作成して、情報を取得できます。 例 :  
+ 結果はエッジ テーブルとして返されます。 エッジ テーブルに対するクエリを作成して、情報を取得できます。 例:  
   
 -   次のクエリにより、ドキュメント内の **Customer** ノードの数が返されます。 WITH 句が指定されていないので、OPENXML からエッジ テーブルが返されます。 SELECT ステートメントにより、エッジ テーブルへのクエリが実行されます。  
   
@@ -476,7 +475,7 @@ EXEC sp_xml_removedocument @docHandle
   
  WITH 句の *SchemaDeclaration* では、 *ColName* パラメーターと *ColType* パラメーターを使用して *ColPattern* も指定されています。 省略可能な *ColPattern* は、次のことを示すために指定する XPath パターンです。  
   
--   行セット内の **ProdID** 列の *ColPattern* に指定された XPath パターン (**.**) により、コンテキスト ノード (現在のノード) が識別されます。 指定された *rowpattern* によって、これは、<`OrderDetail`> 要素の **ProductID** 属性となります。  
+-   行セット内の **ProdID** 列の *ColPattern* に指定された XPath パターン ( **.** ) により、コンテキスト ノード (現在のノード) が識別されます。 指定された *rowpattern* によって、これは、<`OrderDetail`> 要素の **ProductID** 属性となります。  
   
 -   行セット内の **Qty** 列に指定された *ColPattern* である **../\@Quantity** により、コンテキスト ノード \<ProductID> の親ノードである <`OrderDetail`> の **Quantity** 属性が識別されます。  
   
@@ -525,7 +524,7 @@ ProdID      Qty         OID
 ```  
   
 ### <a name="h-specifying-an-xml-document-that-has-multiple-text-nodes"></a>H. 複数のテキスト ノードを含む XML ドキュメントの指定  
- XML ドキュメント内に複数のテキスト ノードがある場合、 *ColPattern*である **text()** が指定された SELECT ステートメントにより、すべてのテキスト ノードではなく最初のテキスト ノードだけが返されます。 例 :  
+ XML ドキュメント内に複数のテキスト ノードがある場合、 *ColPattern*である **text()** が指定された SELECT ステートメントにより、すべてのテキスト ノードではなく最初のテキスト ノードだけが返されます。 例:  
   
 ```  
 DECLARE @h int  

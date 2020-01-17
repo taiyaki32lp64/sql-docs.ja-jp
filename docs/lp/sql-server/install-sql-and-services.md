@@ -7,16 +7,15 @@ ms.topic: hub-page
 ms.prod: sql
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
 ms.date: 12/15/2018
 featureFlags:
 - clicktale
-ms.openlocfilehash: 08d6ef5c0454c8024a70bff66934a516702df668
-ms.sourcegitcommit: 769b71f01052ec9b4fc5eb02d9da9a1a58118029
+ms.openlocfilehash: fe6f37b362f9426bebb1c334eb9b5376ca5c9ab4
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56319273"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68000040"
 ---
 <div id="main" class="v2">
     <div class="container">

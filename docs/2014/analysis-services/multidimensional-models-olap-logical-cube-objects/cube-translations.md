@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: analysis-services
 ms.topic: reference
 helpviewer_keywords:
 - multiple language support [Analysis Services]
@@ -19,12 +17,12 @@ ms.assetid: 4e4fd6a4-d324-4508-b75a-2a57de9ab8ff
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: c32010135b534975f5ddabc86dcf23591d2d457f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: c34024f61f5c7b42030e0acb848783e1acae3d6e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48126002"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62728506"
 ---
 # <a name="cube-translations"></a>キューブの翻訳
   翻訳は、ラベルとキャプションの表示言語を変更する単純なメカニズムです。 各翻訳は、値のペアとして定義されます。翻訳済みテキストの文字列と言語 ID の数値とのペアです。 翻訳は、[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] のすべてのオブジェクトで使用できます。 ディメンションは翻訳された属性値も持つことができます。 クライアント アプリケーションは、ユーザーによって定義された言語設定を検索し、すべてのキャプションとラベルの表示をその言語に切り替えます。 1 つのオブジェクトに対する翻訳の数に制限はありません。  
@@ -40,6 +38,6 @@ ms.locfileid: "48126002"
 ## <a name="see-also"></a>参照  
  [ディメンションの翻訳](../multidimensional-models-olap-logical-dimension-objects/dimension-translations.md)   
  [翻訳&#40;Analysis Services&#41;](../translations-analysis-services.md)   
- [グローバリゼーションのヒントし、ベスト プラクティス&#40;Analysis Services&#41;](../globalization-tips-and-best-practices-analysis-services.md)  
+ [グローバリゼーションのヒントとベスト プラクティス (Analysis Services)](../globalization-tips-and-best-practices-analysis-services.md)  
   
   

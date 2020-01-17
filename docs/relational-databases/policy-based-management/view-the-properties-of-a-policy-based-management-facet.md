@@ -1,6 +1,7 @@
 ---
-title: ポリシー ベースの管理ファセットのプロパティの表示 | Microsoft Docs
-ms.custom: ''
+title: ポリシーベースの管理ファセットのプロパティの表示
+description: SQL Server Management Studio (SSMS) を使用し、SQL Server のポリシーベースの管理ファセットのプロパティを表示する方法について説明します。
+ms.custom: seo-lt-2019
 ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -12,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 022a244c-c2e7-4467-b9a2-c7a27859be22
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: 3616f421a3817f1a3cf56d2e70f5b4fe91927c84
-ms.sourcegitcommit: bfa10c54e871700de285d7f819095d51ef70d997
+ms.openlocfilehash: 3a5a938928817b8ffb5282b2af7d2a505b442302
+ms.sourcegitcommit: 035ad9197cb9799852ed705432740ad52e0a256d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/14/2019
-ms.locfileid: "54256517"
+ms.lasthandoff: 12/31/2019
+ms.locfileid: "75558097"
 ---
 # <a name="view-the-properties-of-a-policy-based-management-facet"></a>ポリシー ベースの管理ファセットのプロパティの表示
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -56,5 +56,4 @@ ms.locfileid: "54256517"
 5.  プロパティを表示するファセットを右クリックし、 **[プロパティ]** をクリックします。 **[ファセットのプロパティ -** facet_name _]_ ダイアログ ボックスで使用可能なオプションの詳細については、「[[ファセットのプロパティ] ダイアログ ボックスの [全般] ページ](../../relational-databases/policy-based-management/facet-properties-dialog-box-general-page.md)」、「[[ファセットのプロパティ] ダイアログ ボックスの [依存ポリシー] ページ](../../relational-databases/policy-based-management/facet-properties-dialog-box-dependent-policies-page.md)」、「[[ファセットのプロパティ] ダイアログ ボックスの [依存条件] ページ](../../relational-databases/policy-based-management/facet-properties-dialog-box-dependent-conditions-page.md)」をご覧ください。  
   
 6.  完了したら、 **[閉じる]** をクリックします。  
-  
-  
+

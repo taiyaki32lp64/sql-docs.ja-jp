@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: a368e264-865c-41ee-be00-d9097255c2ea
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 71a9130c385032acfad7c0c1040b293486bff525
-ms.sourcegitcommit: 1a5448747ccb2e13e8f3d9f04012ba5ae04bb0a3
+ms.openlocfilehash: 14c5436478444e525c7a9753cf3e4e5cddb92f5d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51558709"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67922783"
 ---
 # <a name="customization-file-logs-section"></a>カスタマイズ ファイルの Logs セクション
 **ログ**セクションには操作中にエラーを記録するファイルの名前を示すログ ファイルのエントリが含まれています、 **DataFactory**します。  
@@ -46,7 +45,7 @@ FileName
   
  ログ ファイルは、ユーザー名、HRESULT、日付、および各エラーの時刻が格納されます。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [カスタマイズ ファイル Connect セクション](../../../ado/guide/remote-data-service/customization-file-connect-section.md)   
  [カスタマイズ ファイル SQL セクション](../../../ado/guide/remote-data-service/customization-file-sql-section.md)   
  [カスタマイズ ファイル UserList セクション](../../../ado/guide/remote-data-service/customization-file-userlist-section.md)   

@@ -1,6 +1,6 @@
 ---
-title: ExpirationDate プロパティ (SecurityCertificate クラス) |Microsoft Docs
-ms.custom: ''
+title: ExpirationDate プロパティ (SecurityCertificate)
+ms.custom: seo-lt-2019
 ms.date: 03/06/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: b7fbb9e9-85c1-475b-8e49-7c82fb3740aa
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: cf2b4cd081eb36d74438851094284b6e98d55ba8
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 97d3de804e5edce5d25e1af3b832ebc4103a3815
+ms.sourcegitcommit: baa40306cada09e480b4c5ddb44ee8524307a2ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51656158"
+ms.lasthandoff: 11/06/2019
+ms.locfileid: "73660179"
 ---
 # <a name="expirationdate-property-securitycertificate-class"></a>ExpirationDate プロパティ (SecurityCertificate クラス)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -41,11 +40,11 @@ object.ExpirationDate [= value]
  セキュリティ証明書を表す [SecurityCertificate クラス](../../../relational-databases/wmi-provider-configuration-classes/securitycertificate-class/securitycertificate-class.md) オブジェクト。  
   
 ## <a name="property-valuereturn-value"></a>プロパティ値/戻り値  
- A **uint32**セキュリティ証明書の有効期限を指定する値。  
+ セキュリティ証明書の有効期限を指定する**uint32**値。  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>解説  
   
 ## <a name="see-also"></a>参照  
- [サーバー ネットワーク プロトコルとネットワーク ライブラリの構成](https://msdn.microsoft.com/library/ms177485\(v=sql.100\).aspx)  
+ [サーバーネットワークプロトコルと Net-library の構成](https://msdn.microsoft.com/library/ms177485\(v=sql.100\).aspx)  
   
   

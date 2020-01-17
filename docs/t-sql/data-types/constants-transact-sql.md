@@ -31,28 +31,27 @@ helpviewer_keywords:
 ms.assetid: 58ae3ff3-b1d5-41b2-9a2f-fc7ab8c83e0e
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 5611d597145d784905ead0565bd6230b727fea0e
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: f469222ff5d511447574c1bfb1e0bc2500cfae6d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56017103"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68125970"
 ---
-# <a name="constants-transact-sql"></a>定数 (Transact-SQL)
+# <a name="constants-transact-sql"></a>Constants (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
 リテラル値またはスカラー値としても知られる定数は、特定のデータ値を表す記号です。 定数の形式は、その定数が表す値のデータ型に依存します。
   
 ## <a name="character-string-constants"></a>文字列定数
-文字列定数では、英数字 (a ～ z、A ～ Z、および 0 ～ 9)、感嘆符 (!)、アット マーク (@)、および番号記号 (#) などの特殊文字を単一引用符で囲みます。 COLLATE 句で照合順序を指定しない限り、文字列定数には現在のデータベースの既定の照合順序が割り当てられます。 ユーザーが入力した文字列は、コンピューターのコード ページで評価され、必要に応じてデータベースの既定のコード ページに翻訳されます。
+文字列定数では、英数字 (a ～ z、A ～ Z、および 0 ～ 9)、感嘆符 (!)、アット マーク (@)、および番号記号 (#) などの特殊文字を単一引用符で囲みます。 COLLATE 句で照合順序を指定しない限り、文字列定数には現在のデータベースの既定の照合順序が割り当てられます。 ユーザーが入力する文字列は、コンピューターのコード ページから評価され、必要に応じてデータベースの既定のコード ページに変換されます。
   
 接続に対して QUOTED_IDENTIFIER オプションが OFF に設定されている場合は、文字列を二重引用符で囲むこともできます。ただし、Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client Provider と ODBC ドライバーでは、自動的に SET QUOTED_IDENTIFIER ON が使用されます。 単一引用符を使用することをお勧めします。
   
-単一引用符で囲まれた文字列に単一引用符を埋め込む場合は、単一引用符を 2 つ続けて並べることで 1 つの単一引用符を表します。 文字列が二重引用符で囲まれている場合は該当しません。
+単一引用符で囲まれた文字列に単一引用符を埋め込む場合は、単一引用符を 2 つ続けて並べることで 1 つの単一引用符を表します。 これは、二重引用符で囲む文字列では必要ありません。
   
-次に文字列の例を示します。
+文字列の例は次のとおりです。
   
 ```sql
 'Cincinnati'  
@@ -62,25 +61,25 @@ ms.locfileid: "56017103"
 "O'Brien"  
 ```  
   
-空文字列は、2 つの単一引用符の間に何も挿入しないで表します。 6.x 互換性モードでは、空文字列は 1 つのスペースと見なされます。
+空文字列は、2 つの単一引用符の間に何も挿入しないで表します。 6\.x 互換性モードでは、空文字列は 1 つのスペースと見なされます。
   
-文字列定数では、拡張照合順序がサポートされています。
+文字列は、拡張照合順序をサポートします。
   
 > [!NOTE]  
 >  8,000 バイト以上の文字列定数は **varchar(max)** データ型に分類されます。  
   
 ## <a name="unicode-strings"></a>Unicode 文字列
-Unicode 文字列の形式は文字列と同様ですが、Unicode 文字列には前に識別子 N が付きます。N は、SQL-92 標準の National Language を表します。 プレフィックス N は常に大文字になります。 たとえば、'Michél' は文字定数であり、N'Michél' は Unicode 定数です。 Unicode 定数は Unicode データとして解釈され、コード ページを使用した評価は行われません。 Unicode 定数は照合順序を持ちます。 この照合順序では主に比較と大文字小文字の区別が制御されます。 COLLATE 句で照合順序を指定しない限り、Unicode 定数には現在のデータベースの既定の照合順序が割り当てられます。 文字データでは 1 文字を 1 バイトで格納するのに対し、Unicode データでは 1 文字を 2 バイトで格納します。 詳細については、「 [Collation and Unicode Support](../../relational-databases/collations/collation-and-unicode-support.md)」を参照してください。
+Unicode 文字列の形式は文字列に似ていますが、先頭に N 識別子が付きます (N は、SQL-92 標準で National Language を表します)。 プレフィックス N は大文字にする必要があります。 たとえば、'Michél' は文字定数であり、N'Michél' は Unicode 定数です。 Unicode 定数は Unicode データとして解釈され、コード ページを使用して評価されることはありません。 Unicode 定数は照合順序を持ちます。 この照合順序では主に比較と大文字小文字の区別が制御されます。 COLLATE 句で照合順序を指定しない限り、Unicode 定数には現在のデータベースの既定の照合順序が割り当てられます。 Unicode データは、文字データに対して、1 文字あたり 1 バイトではなく、1 文字あたり 2 バイトを使用して格納されます。 詳細については、「 [Collation and Unicode Support](../../relational-databases/collations/collation-and-unicode-support.md)」を参照してください。
   
-Unicode 文字列定数では、拡張照合順序がサポートされています。
+Unicode 文字列定数は、拡張照合順序をサポートします。
   
 > [!NOTE]  
 >  8,000 バイト以上の Unicode 文字列定数は **nvarchar(max)** データ型に分類されます。  
   
-## <a name="binary-constants"></a>binary 型定数
+## <a name="binary-constants"></a>バイナリ定数
 binary 型定数は 16 進数の文字列であり、`0x` というプレフィックスが付きます。 引用符では囲みません。
   
-次に binary 型文字列の例を示します。
+バイナリ文字列の例は次のとおりです。
   
 ```sql
 0xAE  
@@ -93,7 +92,7 @@ binary 型定数は 16 進数の文字列であり、`0x` というプレフィ�
 >  8,000 バイト以上の binary 型文字列は **varbinary(max)** データ型に分類されます。  
   
 ## <a name="bit-constants"></a>bit 型定数
-**bit** 型定数は数値の 0 または 1 で表します。引用符では囲みません。 bit 型定数に 1 より大きい数値を使用すると、その値は 1 に変換されます。
+**bit** 型定数は数値の 0 または 1 で表します。引用符では囲みません。 1 より大きい数値が使用される場合は、1 に変換されます。
   
 ## <a name="datetime-constants"></a>datetime 型定数
 **datetime** 型定数は、特定の形式の日付文字値で表し、単一引用符で囲みます。
@@ -169,8 +168,8 @@ $542023.14
 0xff19966f868b11d0b42d00c04fc964ff  
 ```  
   
-## <a name="specifying-negative-and-positive-numbers"></a>負または正の数値の指定  
-数値が正であるか負であるかを示すには、数値型定数に **+** または **-** 単項演算子を付加します。 この方法で、符号付き数値を表す数式を作成できます。 **+** または **-** 単項演算子が付加されない場合、正の値になります。
+## <a name="specifying-negative-and-positive-numbers"></a>負の数値と正の数値の指定  
+数値が正であるか負であるかを示すには、数値型定数に **+** または **-** 単項演算子を付加します。 これにより、符号付き数値を表す数値式が作成されます。 **+** または **-** 単項演算子が付加されない場合、正の値になります。
   
 署名 **integer** 式。  
   
@@ -200,11 +199,11 @@ $542023.14
 ```
   
 ## <a name="enhanced-collations"></a>拡張照合順序  
-SQL Server では、拡張照合順序をサポートする文字列定数および Unicode 文字列定数がサポートされています。 詳細については、を参照してください #40。 [部単位で印刷する (& a)。TRANSACT-SQL と #41; ](https://msdn.microsoft.com/library/4ba6b7d8-114a-4f4e-bb38-fe5697add4e9)句。
+SQL Server は、拡張照合順序をサポートする文字および Unicode 文字列定数をサポートしています。 詳細については、[COLLATE &#40;Transact-SQL&#41;](https://msdn.microsoft.com/library/4ba6b7d8-114a-4f4e-bb38-fe5697add4e9) 句をご確認ください。
   
 ## <a name="see-also"></a>参照
 [データ型 &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)  
 [式 &#40;Transact-SQL&#41;](../../t-sql/language-elements/expressions-transact-sql.md)  
-[演算子 (&) #40 です。TRANSACT-SQL と #41 です。](../../t-sql/language-elements/operators-transact-sql.md)
+[演算子 &#40;Transact-SQL&#41;](../../t-sql/language-elements/operators-transact-sql.md)
   
   

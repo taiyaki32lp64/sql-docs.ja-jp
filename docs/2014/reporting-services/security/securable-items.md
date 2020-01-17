@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 helpviewer_keywords:
 - securable items [Reporting Services]
@@ -13,15 +12,15 @@ helpviewer_keywords:
 - security [Reporting Services], securable items listed
 - role-based security [Reporting Services], securable items
 ms.assetid: 27f58d4c-5c7b-4947-af5b-0f1fa60faf5f
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: b20ecf14b789ef87b818463f36eea47879938b4a
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 4c5c4d515ebe6aa9b4b8120ae909f07dccc74de0
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56041063"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66101698"
 ---
 # <a name="securable-items"></a>セキュリティ保護可能なアイテム
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] では、レポート サーバーに保存されているアイテムへのアクセス制御に、ロールベースのセキュリティが使用されます。 レポート サーバーへのユーザー アクセスを許可する場合は、通常次の場所でロールの割り当てのペアを作成します。  
@@ -60,7 +59,7 @@ ms.locfileid: "56041063"
 |共有データ ソース|共有データ ソースをセキュリティで保護して、共有データ ソース アイテムおよびそのプロパティ ページへのアクセスを制限することができます。 詳細については、「 [Secure Shared Data Source Items](secure-shared-data-source-items.md)」(共有データ ソース アイテムをセキュリティで保護する) を参照してください。|  
 |共有データセット|共有データセットをセキュリティで保護し、ユーザーが実行できるアクションの範囲 (定義の表示や変更、特定の共有データセットのプロパティの変更など) を制御できます。<br /><br /> 詳細については、「 [共有データセット アイテムをセキュリティで保護する](secure-shared-dataset-items.md)」を参照してください。|  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [ネイティブ モードのレポート サーバーに対する権限の許可](granting-permissions-on-a-native-mode-report-server.md)   
  [ロールを作成、削除、または変更する (Management Studio)](role-definitions-create-delete-or-modify.md)   
  [レポート サーバーへのユーザー アクセスを許可する (レポート マネージャー)](grant-user-access-to-a-report-server.md)   

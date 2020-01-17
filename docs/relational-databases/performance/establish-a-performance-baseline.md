@@ -20,14 +20,13 @@ helpviewer_keywords:
 ms.assetid: dc5aa8d6-2507-448f-ad86-4196443915fc
 author: julieMSFT
 ms.author: jrasnick
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: be9350e585dbb960b830f3d52e530b3a46317bd4
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: a7912ca171e2bd9fb84d8f1bf7adb04dc7d8acab
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53350882"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67946782"
 ---
 # <a name="establish-a-performance-baseline"></a>パフォーマンスのベースラインの設定
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]

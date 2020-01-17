@@ -17,18 +17,17 @@ helpviewer_keywords:
 ms.assetid: 9fe96e9a-4758-4e4a-baee-3e1217c4426c
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: 04a3fe5351b3c7fc3a6dd711e6e2d638b079c136
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: dd9644253302c6a577c6cc3923bb3a9e3a0d8c0e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47601820"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68037380"
 ---
 # <a name="sysmailupdateprincipalprofilesp-transact-sql"></a>sysmail_update_principalprofile_sp (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  プリンシパルとプロファイルの関連付けについての情報を更新します。  
+  アソシエーションのプリンシパルとプロファイルの間の情報を更新します。  
   
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -42,20 +41,15 @@ sysmail_update_principalprofile_sp { @principal_id = principal_id | @principal_n
 ```  
   
 ## <a name="arguments"></a>引数  
- [ **@principal_id** =] *principal_id*  
- データベース ユーザーまたはロールの ID、 **msdb**の関連付けを変更するデータベース。 *principal_id*は**int**、既定値は NULL です。 いずれか*principal_id*または*principal_name*指定する必要があります。  
+`[ @principal_id = ] principal_id` データベース ユーザーまたはロールの ID、 **msdb**の関連付けを変更するデータベース。 *principal_id*は**int**、既定値は NULL です。 いずれか*principal_id*または*principal_name*指定する必要があります。  
   
- [ **@principal_name** =] **'***principal_name***'**  
- データベース ユーザーまたはロールの名前、 **msdb**を更新するアソシエーションのデータベースです。 *principal_name*は**sysname**、既定値は NULL です。 いずれか*principal_id*または*principal_name*指定することがあります。  
+`[ @principal_name = ] 'principal_name'` データベース ユーザーまたはロールの名前、 **msdb**を更新するアソシエーションのデータベースです。 *principal_name*は**sysname**、既定値は NULL です。 いずれか*principal_id*または*principal_name*指定することがあります。  
   
- [ **@profile_id** = ] *profile_id*  
- 関連付けを変更するプロファイルの ID を指定します。 *profile_id*は**int**、既定値は NULL です。 いずれか*profile_id*または*profile_name*指定する必要があります。  
+`[ @profile_id = ] profile_id` 関連付けを変更するプロファイルの id。 *profile_id*は**int**、既定値は NULL です。 いずれか*profile_id*または*profile_name*指定する必要があります。  
   
- [ **@profile_name** =] **'***profile_name***'**  
- 関連付けを変更するプロファイルの名前を指定します。 *profile_name*は**sysname**、既定値は NULL です。 いずれか*profile_id*または*profile_name*指定する必要があります。  
+`[ @profile_name = ] 'profile_name'` 関連付けを変更するプロファイルの名前。 *profile_name*は**sysname**、既定値は NULL です。 いずれか*profile_id*または*profile_name*指定する必要があります。  
   
- [ **@is_default** =] **'***is_default***'**  
- このプロファイルがデータベース ユーザーの既定のプロファイルかどうかを指定します。 データベース ユーザーが持つことのできる既定のプロファイルは 1 つだけです。 *is_default*は**ビット**、既定値はありません。  
+`[ @is_default = ] 'is_default'` このプロファイルは、データベース ユーザーの既定のプロファイルかどうかです。 データベース ユーザーは、既定のプロファイルを 1 つのみあります。 *is_default*は**ビット**、既定値はありません。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  **0** (成功) または**1** (失敗)  
@@ -63,12 +57,12 @@ sysmail_update_principalprofile_sp { @principal_id = principal_id | @principal_n
 ## <a name="result-sets"></a>結果セット  
  なし  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>コメント  
  このストアド プロシージャでは、指定したプロファイルを、データベース ユーザーの既定のプロファイルにするかどうかを変更します。 データベース ユーザーが持つことのできる既定のプライベート プロファイルは 1 つだけです。  
   
  アソシエーションのプリンシパル名の場合は**パブリック**、アソシエーションのプリンシパル id がまたは**0**、このストアド プロシージャは、パブリック プロファイルを変更します。 既定のパブリック プロファイルは 1 つしか存在できません。  
   
- ときに**@is_default**は '**1**' と、プリンシパルが 1 つ以上のプロファイルに関連付けられた、指定されたプロファイルはプリンシパルの既定のプロファイルになります。 それまで既定のプロファイルであったプロファイルは、引き続きプリンシパルに関連付けられますが、既定のプロファイルではなくなります。  
+ ときに **\@is_default**は '**1**' と、プリンシパルが 1 つ以上のプロファイルに関連付けられた、指定されたプロファイルはプリンシパルの既定のプロファイルになります。 プロファイルされていた既定のプロファイルも、プリンシパルに関連付けられてが、既定のプロファイルではなくなりました。  
   
  ストアド プロシージャ**sysmail_update_principalprofile_sp**では、 **msdb**が所有するデータベースにあり、 **dbo**スキーマ。 現在のデータベースがない場合、3 つの部分の名前を持つプロシージャを実行する必要があります**msdb**します。  
   
@@ -89,7 +83,7 @@ EXECUTE msdb.dbo.sysmail_update_principalprofile_sp
   
  **B.ユーザーの既定のプライベート プロファイルに、プロファイルの設定**  
   
- 次の例では、設定、プロファイル`AdventureWorks Administrator`プリンシパルの既定のプロファイルに`ApplicationUser`で、 **msdb**データベース。 このプロファイルはプリンシパルに既に関連付けられている必要があります。 それまで既定のプロファイルであったプロファイルは、引き続きプリンシパルに関連付けられますが、既定のプロファイルではなくなります。  
+ 次の例では、設定、プロファイル`AdventureWorks Administrator`プリンシパルの既定のプロファイルに`ApplicationUser`で、 **msdb**データベース。 このプロファイルはプリンシパルに既に関連付けられている必要があります。 プロファイルされていた既定のプロファイルも、プリンシパルに関連付けられてが、既定のプロファイルではなくなりました。  
   
 ```  
 EXECUTE msdb.dbo.sysmail_update_principalprofile_sp  

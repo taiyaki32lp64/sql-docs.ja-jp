@@ -1,11 +1,10 @@
 ---
-title: ツールとアプローチの処理 (Analysis Services) |Microsoft Docs
+title: 処理のためのツールと方法 (Analysis Services) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - process [Analysis Services]
@@ -14,12 +13,12 @@ ms.assetid: 82347a16-4145-4655-8adf-2a300f1fdf99
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: c4d37cd9a4ef101f9243fbf5dafdc7df43dfa62c
-ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
+ms.openlocfilehash: a6bcc8e830c682c800f7dbdd586b25b88ca8577f
+ms.sourcegitcommit: 187f6d327421e64f1802a3085f88bbdb0c79b707
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50146307"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69530941"
 ---
 # <a name="tools-and-approaches-for-processing-analysis-services"></a>処理するためのツールと方法 (Analysis Services)
   "処理" とは、Analysis Services がリレーショナル データ ソースにクエリを実行し、そのデータを使用して Analysis Services オブジェクトを設定する操作です。  
@@ -47,7 +46,7 @@ ms.locfileid: "50146307"
  処理は、柔軟に構成できる操作で、オブジェクト レベルで発生する完全処理や増分処理の一連の処理オプションを使用して制御します。 オプションとオブジェクトの処理に関する詳細については、「[処理オプションと設定 &#40;Analysis Services&#41;](processing-options-and-settings-analysis-services.md)」および「[Analysis Services オブジェクトの処理](processing-analysis-services-objects.md)」を参照してください。  
   
 > [!NOTE]  
->  このトピックでは、多次元モデルを処理するためのツールと方法について説明します。 表形式モデルの処理に関する詳細については、次を参照してください。[データベースの処理、テーブル、またはパーティション](../tabular-models/process-database-table-or-partition-analysis-services.md)と[データを処理する&#40;SSAS 表形式&#41;](../process-data-ssas-tabular.md)します。  
+>  このトピックでは、多次元モデルを処理するためのツールと方法について説明します。 テーブルモデルの処理の詳細については、「[データベースの処理、テーブル、またはパーティション分割](../tabular-models/process-database-table-or-partition-analysis-services.md)と[プロセスデータ&#40;SSAS の表形式&#41;](../process-data-ssas-tabular.md)」を参照してください。  
   
 ### <a name="processing-objects-in-sql-server-management-studio"></a>SQL Server Management Studio でのオブジェクトの処理  
   
@@ -123,13 +122,13 @@ ms.locfileid: "50146307"
   
 1.  このリリースの SQL Server からは、オブジェクトの処理に、Analysis Services PowerShell コマンドレットを使用できるようになりました。 対話形式またはスクリプトで、次のコマンドレットを実行できます。  
   
-    -   [Invoke-ProcessCube コマンドレット](/sql/analysis-services/powershell/invoke-processcube-cmdlet)  
+    -   [Invoke-ProcessCube コマンドレット](/powershell/module/sqlserver/invoke-processcube)  
   
-    -   [Invoke-ProcessDimension コマンドレット](/sql/analysis-services/powershell/invoke-processdimension-cmdlet)  
+    -   [Invoke-ProcessDimension コマンドレット](/powershell/module/sqlserver/invoke-processdimension)  
   
-    -   [Invoke-ProcessPartition コマンドレット](/sql/analysis-services/powershell/invoke-processpartition-cmdlet)  
+    -   [Invoke-ProcessPartition コマンドレット](/powershell/module/sqlserver/invoke-processpartition)  
   
-    -   [Invoke-ASCmd コマンドレット](/sql/analysis-services/powershell/invoke-ascmd-cmdlet): 処理コマンドを含んだ XMLA、MDX、または DMX スクリプトを実行するときに使用します。  
+    -   [Invoke-ASCmd コマンドレット](/powershell/module/sqlserver/invoke-ascmd): 処理コマンドを含んだ XMLA、MDX、または DMX スクリプトを実行するときに使用します。  
   
 ### <a name="monitoring-object-processing-using-sql-server-profiler"></a>SQL Server Profiler を使用したオブジェクトの処理の監視  
   
@@ -139,13 +138,13 @@ ms.locfileid: "50146307"
   
 3.  次のイベントを選択します。  
   
-    -   処理の開始時刻と停止時刻を表示するには、**[コマンド開始]** と **Commと End** to show when processing starts と stops  
+    -   処理の開始時刻と停止時刻を表示するには、 **[コマンド開始]** と **Commと End** to show when processing starts と stops  
   
-    -   すべてのエラーをキャプチャするには、**[エラー]**   
+    -   すべてのエラーをキャプチャするには、 **[エラー]**  
   
-    -   処理の状態をレポートし、データを取得するために使用した SQL クエリを表示するには、**[進行状況レポートの開始]**, **[進行状況レポートの現在の状態]**、および **[進行状況レポートの終了]**   
+    -   処理の状態をレポートし、データを取得するために使用した SQL クエリを表示するには、 **[進行状況レポートの開始]** , **[進行状況レポートの現在の状態]** 、および **[進行状況レポートの終了]**  
   
-    -   キューブの計算を表示するには、**[MDX スクリプトの実行の開始]** および **[MDX スクリプトの実行の終了]**   
+    -   キューブの計算を表示するには、 **[MDX スクリプトの実行の開始]** および **[MDX スクリプトの実行の終了]**  
   
     -   処理に関連するパフォーマンスの問題を診断する場合は、必要に応じて、ロック イベントを追加する  
   
@@ -158,6 +157,6 @@ ms.locfileid: "50146307"
 3.  オブジェクトを処理するデータベースへの接続を指定するタスク、および処理のオプションを編集します。 このタスクの実装方法については、「 [Analysis Services 処理タスク](../../integration-services/control-flow/analysis-services-processing-task.md)」を参照してください。  
   
 ## <a name="see-also"></a>参照  
- [多次元モデル オブジェクトの処理](processing-a-multidimensional-model-analysis-services.md)  
+ [多次元モデルオブジェクトの処理](processing-a-multidimensional-model-analysis-services.md)  
   
   

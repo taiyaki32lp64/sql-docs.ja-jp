@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 helpviewer_keywords:
 - Report Designer [Reporting Services], Access reports
@@ -16,15 +15,15 @@ helpviewer_keywords:
 - importing reports
 - modules [Reporting Services]
 ms.assetid: 7ffec331-6365-4c13-8e58-b77a48cffb44
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 2f50d98eaa44d3e323fb72097bc78e9969a30bad
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: 9088ab3e90b4fb341cc8125e45d498783953039d
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56294270"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66100576"
 ---
 # <a name="supported-access-report-features-ssrs"></a>サポートされる Access レポート機能 (SSRS)
   レポート デザイナーにレポートをインポートすると、インポート処理の際に、[!INCLUDE[msCoName](../includes/msconame-md.md)] Access のレポートは、[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] のレポート定義言語 (RDL) ファイルに変換されます。 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] は Access のいくつかの機能をサポートしていますが、Access と [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] の相違のため、アイテムの中には、若干変更されるものや、まったくサポートされないものがあります。 このトピックでは、Access のレポート機能を RDL に変換する方法を説明します。  

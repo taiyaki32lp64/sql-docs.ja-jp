@@ -77,10 +77,10 @@
           href: mining-model-content-for-sequence-clustering-models.md
         - name: Sequence Clustering Model Query Examples
           href: sequence-clustering-model-query-examples.md
-    - name: Microsoft タイム シリーズ アルゴリズム
+    - name: Microsoft Time Series アルゴリズム
       href: microsoft-time-series-algorithm.md
       items:
-        - name: Microsoft タイム シリーズ アルゴリズム テクニカル リファレンス
+        - name: Microsoft Time Series アルゴリズム テクニカル リファレンス
           href: microsoft-time-series-algorithm-technical-reference.md
         - name: タイム シリーズ モデルのマイニング モデル コンテンツ
           href: mining-model-content-for-time-series-models-analysis-services-data-mining.md
@@ -480,7 +480,7 @@
       href: ../profit-chart-sql-server-data-mining-add-ins.md
     - name: クロス検証
       href: ../cross-validation-sql-server-data-mining-add-ins.md
-    - name: '[クエリ]'
+    - name: クエリ
       href: ../query-sql-server-data-mining-add-ins.md
     - name: 詳細データ マイニング クエリ エディター
       href: ../advanced-data-mining-query-editor.md

@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: 9c2b0990-1d3d-4a59-94a0-3cca6fef4681
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 9bb3db70db6d888858ec413de852acccf73b96e5
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 5ae8cb259f1dfa424de37c7342cf1f6081a8c8b8
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47703270"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68000907"
 ---
 # <a name="spsyscollectordeletecollectionitem-transact-sql"></a>sp_syscollector_delete_collection_item (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -45,13 +44,13 @@ sp_syscollector_delete_collection_item [[ @collection_item_id = ] collection_ite
  [ @collection_item_id = ] *collection_item_id*  
  コレクション アイテムの一意な識別子を指定します。 *collection_item_id*は**int**既定値は NULL です。 *collection_item_id*場合、値が必要*名前*は NULL です。  
   
- [ @name =] '*名前*'  
- コレクション アイテムの名前を指定します。 *名前*は**sysname**既定値は NULL です。 *名前*場合、値が必要*collection_item_id*は NULL です。  
+ [ @name = ] '*name*'  
+ コレクション アイテムの名前です。 *名前*は**sysname**既定値は NULL です。 *名前*場合、値が必要*collection_item_id*は NULL です。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  **0** (成功) または**1** (失敗)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>コメント  
  sp_syscollector_delete_collection_item は、msdb システム データベースのコンテキストで実行する必要があります。 コレクション アイテムは、システム コレクション セットから削除できません。  
   
  この操作が実行されている間、コレクション アイテムを含むコレクション セットは停止し、再開されます。  

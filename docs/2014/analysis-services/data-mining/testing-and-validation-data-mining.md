@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - testing data mining models
@@ -29,12 +28,12 @@ ms.assetid: 197144f5-21ed-4009-b448-fe412fb3916c
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 9d6b41901176a57ca65f72efe90cb1644a272e5b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 159760722a62969b79ce738e7928739ff2bb15ca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48077752"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66082798"
 ---
 # <a name="testing-and-validation-data-mining"></a>テストおよび検証 (データ マイニング)
   検証とは、実際のデータに対するマイニング モデルの性能を評価するプロセスです。 運用環境に配置する前に品質や特性を理解してマイニング モデルを検証しておくことが重要です。  
@@ -87,13 +86,13 @@ ms.locfileid: "48077752"
 |トピック|リンク|  
 |------------|-----------|  
 |ウィザードまたは DMX コマンドを使用してテスト用データ セットを設定する方法を学ぶ|[トレーニング データ セットとテスト データ セット](training-and-testing-data-sets.md)|  
-|マイニング構造内のデータの分布と代表性をテストする方法を学ぶ|[クロス検証&#40;Analysis Services - データ マイニング&#41;](cross-validation-analysis-services-data-mining.md)|  
-|[!INCLUDE[ssASCurrent](../../includes/ssascurrent-md.md)]で用意されている精度チャートの種類について学ぶ|[リフト チャート&#40;Analysis Services - データ マイニング&#41;](lift-chart-analysis-services-data-mining.md)<br /><br /> [利益チャート&#40;Analysis Services - データ マイニング&#41;](profit-chart-analysis-services-data-mining.md)<br /><br /> [散布図&#40;Analysis Services - データ マイニング&#41;](scatter-plot-analysis-services-data-mining.md)|  
-|真陽性、偽陽性、真陰性、および偽陰性の実際の数値を評価する分類マトリックス (混同マトリックスと呼ばれることもある) の作成方法について学びます。|[分類マトリックス&#40;Analysis Services - データ マイニング&#41;](classification-matrix-analysis-services-data-mining.md)|  
+|マイニング構造内のデータの分布と代表性をテストする方法を学ぶ|[相互検証 &#40;Analysis Services - データ マイニング&#41;](cross-validation-analysis-services-data-mining.md)|  
+|[!INCLUDE[ssASCurrent](../../includes/ssascurrent-md.md)]で用意されている精度チャートの種類について学ぶ|[リフト チャート (Analysis Services - データ マイニング)](lift-chart-analysis-services-data-mining.md)<br /><br /> [利益チャート (Analysis Services - データ マイニング)](profit-chart-analysis-services-data-mining.md)<br /><br /> [散布図 (Analysis Services - データ マイニング)](scatter-plot-analysis-services-data-mining.md)|  
+|真陽性、偽陽性、真陰性、および偽陰性の実際の数値を評価する分類マトリックス (混同マトリックスと呼ばれることもある) の作成方法について学びます。|[分類マトリックス &#40;Analysis Services - データ マイニング&#41;](classification-matrix-analysis-services-data-mining.md)|  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [データ マイニング ツール](data-mining-tools.md)   
  [データ マイニング ソリューション](data-mining-solutions.md)   
- [テスト、検証タスク、および操作方法&#40;データ マイニング&#41;](testing-and-validation-tasks-and-how-tos-data-mining.md)  
+ [テストおよび検証タスク、および操作方法 (データ マイニング)](testing-and-validation-tasks-and-how-tos-data-mining.md)  
   
   

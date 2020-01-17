@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: b687e376-ee33-470d-b65a-87246bfefe6f
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: b3d6e457d6ef07ff5401e2d6fe97241db9ca84cd
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a0a678d3b5df450377517bc9c94d3771c45f22e0
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47704430"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68012072"
 ---
 # <a name="create-or-delete-a-server-alias-for-use-by-a-client"></a>クライアントが使用するサーバーの別名の作成または削除
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

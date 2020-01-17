@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: f2ac8b3b-f968-41c4-a504-7aee3538b7c7
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 95a71e977f56932d28b9ca0382829d6a30c7b212
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.openlocfilehash: a3885b805f32661f328552674bf9a9d1e98e6fb7
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51600262"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67963676"
 ---
 # <a name="rds-objects"></a>RDS オブジェクト
 > [!IMPORTANT]
@@ -32,7 +31,7 @@ ms.locfileid: "51600262"
 |[DataSpace (RDS)](../../../ado/reference/rds-api/dataspace-object-rds.md)|中間層にあるカスタム ビジネス オブジェクトにクライアント側プロキシを作成します。<br /><br /> **DataSpace**オブジェクトがスクリプトを実行します。|  
 |[IRDSService インターフェイス (RDS)](../../../ado/reference/rds-api/irdsservice-interface-rds.md)|公開、 [InvokeService (RDS)](../../../ado/reference/rds-api/invokeservice-rds.md)メソッドより高機能なバージョンのオブジェクトで要求されたインターフェイスへのポインターを返すために使用します。|  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [RDS API リファレンス](../../../ado/reference/rds-api/rds-api-reference.md)
 
 

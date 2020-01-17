@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - testing data mining models
@@ -18,12 +17,12 @@ ms.assetid: ab77eca1-bd48-4fef-b27f-ff5b648e0501
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 177972c5ca9841d0d206e9c20fd1450568fdcb8c
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: 64783573ee24c5d0224393237fdac94044a1dbf3
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52398016"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66084309"
 ---
 # <a name="lift-chart-analysis-services---data-mining"></a>リフト チャート (Analysis Services - データ マイニング)
   A**リフト チャート**グラフィカルにマイニング モデルと比較した場合は、ランダムな推測に対する改善し、の観点で変化を測定する*リフト*スコア。 データ セットのさまざまな部分とさまざまなモデルのリフト スコアを比較すると、どのモデルが最適で、データ セット内のケースのどの割合が、モデルの予測を適用するメリットを確認できます。  
@@ -112,12 +111,12 @@ ms.locfileid: "52398016"
   
  1 つのリフト チャートに複数のモデルを追加することができます。ただし、すべてのモデルに同じ予測可能な属性が必要です。 属性を共有しないモデルは、 **[入力]** タブの選択で使用できません。  
   
- タイム シリーズ モデルは、リフト チャートまたは利益チャートで表示できません。 タイム シリーズ予測の精度の測定は、履歴データの一部を取っておき、そのデータを予測と比較する方法が一般的です。 詳細については、「 [Microsoft タイム シリーズ アルゴリズム](microsoft-time-series-algorithm.md)」を参照してください。  
+ タイム シリーズ モデルは、リフト チャートまたは利益チャートで表示できません。 タイム シリーズ予測の精度の測定は、履歴データの一部を取っておき、そのデータを予測と比較する方法が一般的です。 詳細については、「 [Microsoft Time Series アルゴリズム](microsoft-time-series-algorithm.md)」を参照してください。  
   
 ### <a name="related-content"></a>関連コンテンツ  
  [トップに戻る](#bkmk_Top)  
   
-## <a name="see-also"></a>参照  
- [テストおよび検証 &#40;データ マイニング&#41;](testing-and-validation-data-mining.md)  
+## <a name="see-also"></a>関連項目  
+ [テストおよび検証 (データ マイニング)](testing-and-validation-data-mining.md)  
   
   

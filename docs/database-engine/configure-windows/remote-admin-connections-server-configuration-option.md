@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: bf32b60a-7a48-401f-b6be-b5e2e46c413f
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: fa577f1d2e995e870ab1ec3fabcd64266427dc7c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 39df0ace2a24cb4c69f38617ba1a7b70f5da2f96
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47788161"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67938203"
 ---
 # <a name="remote-admin-connections-server-configuration-option"></a>remote admin connections サーバー構成オプション
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -33,7 +32,7 @@ ms.locfileid: "47788161"
   
  次の表は、remote admin connections オプションの使用可能な値の一覧です。  
   
-|ReplTest1|Description|  
+|[値]|Description|  
 |-----------|-----------------|  
 |0|ローカル接続のみで DAC を使用できることを示します。|  
 |1|リモート接続で DAC を使用できることを示します。|  

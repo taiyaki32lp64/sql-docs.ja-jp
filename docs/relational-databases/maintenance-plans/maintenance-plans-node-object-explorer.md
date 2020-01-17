@@ -13,13 +13,12 @@ f1_keywords:
 ms.assetid: bf49db09-8b3a-4901-82de-9224a276c55d
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: ce097308e30190f29a07e8cab1e1ba340032d15e
-ms.sourcegitcommit: 6c9d35d03c1c349bc82b9ed0878041d976b703c6
+ms.openlocfilehash: b60809c6e6f5484c2c59acb9a06a880e218c7338
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/06/2018
-ms.locfileid: "51216890"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68115653"
 ---
 # <a name="maintenance-plans-node-object-explorer"></a>[メンテナンス プラン] ノード (オブジェクト エクスプローラー)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: bfa24c46-b7cf-470a-afa1-52301847a448
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 0cbe71d1ff4d19da3baba87210a1444e83d4f98e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: acd1beaa07ab9d1867fe99e519d3969f4efec3ce
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47633780"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67977302"
 ---
 # <a name="issamerm-method-sqlserverxaresource"></a>isSameRM メソッド (SQLServerXAResource)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

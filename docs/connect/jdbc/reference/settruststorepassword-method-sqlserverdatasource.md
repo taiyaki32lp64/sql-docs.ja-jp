@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: fa87cbde-71cc-4f21-bc07-f8ba2b6a0a3f
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 3ca07fcfe446b2bb4cb841ae0f0275fd7073c6e8
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e43a659b26a8f6d8b391c389271a9edd00d0d93c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47658688"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67972181"
 ---
 # <a name="settruststorepassword-method-sqlserverdatasource"></a>setTrustStorePassword メソッド (SQLServerDataSource)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

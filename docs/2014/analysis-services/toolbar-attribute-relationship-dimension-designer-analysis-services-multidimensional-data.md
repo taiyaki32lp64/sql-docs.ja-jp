@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.dimensiondesigner.ardesigner.toolbar.f1
@@ -13,12 +12,12 @@ ms.assetid: 9c0415a8-b780-40dd-a6dd-6ee0e30a24cb
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: b0bc20265b2b880a650cc63a4f2d01f3b084483d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 580641db4007f5a7e414f641a8a0495030405b38
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48209682"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66066224"
 ---
 # <a name="toolbar-attribute-relationship-designer-tab-dimension-designer-analysis-services---multidimensional-data"></a>ツール バー ([属性リレーションシップ] タブ、ディメンション デザイナー) (Analysis Services - 多次元データ)
   ディメンション デザイナーの **[属性リレーションシップ]** タブのツール バーを使用すると、次の手順を実行できます。  

@@ -17,18 +17,17 @@ helpviewer_keywords:
 ms.assetid: 1a5eafa7-384e-4691-ba05-978eb73bbefb
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 3ec03794e60027ea578988dbe38855d8ad14cb09
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 0db0242e5bdd9e04d3d7c424382933121c2e0ac2
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47596800"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67902989"
 ---
 # <a name="sphelpdevice-transact-sql"></a>sp_helpdevice (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Microsoft&amp;#xAE; SQL Server&amp;#x2122; のバックアップ デバイスに関する情報をレポートします。  
+  Microsoft&#xAE; SQL Server&#x2122; のバックアップ デバイスに関する情報をレポートします。  
   
 > [!IMPORTANT]  
 >  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] 使用することをお勧め、 [sys.backup_devices](../../relational-databases/system-catalog-views/sys-backup-devices-transact-sql.md)カタログ ビューを代わりに  
@@ -43,8 +42,7 @@ sp_helpdevice [ [ @devname = ] 'name' ]
 ```  
   
 ## <a name="arguments"></a>引数  
- [ **@devname =** ] **'***name***'**  
- 情報をレポートするバックアップ デバイスの名前を指定します。 値*名前*は常に**sysname**します。  
+`[ @devname = ] 'name'` 情報をレポートするバックアップ デバイスの名前です。 値*名前*は常に**sysname**します。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  0 (成功) または 1 (失敗)  
@@ -53,12 +51,12 @@ sp_helpdevice [ [ @devname = ] 'name' ]
   
 |列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
-|**device_name**|**sysname**|論理デバイス名|  
-|**physical_name**|**nvarchar(260)**|物理ファイル名|  
+|**device_name**|**sysname**|論理デバイス名。|  
+|**physical_name**|**nvarchar(260)**|物理ファイル名。|  
 |**description**|**nvarchar (255)**|デバイスの説明|  
 |**status**|**int**|ステータスの説明に対応する番号、**説明**列。|  
 |**cntrltype**|**smallint**|デバイスのコントローラーの種類<br /><br /> 2 = ディスク デバイス<br /><br /> 5 = テープ デバイス|  
-|**size**|**int**|デバイス サイズ (2 KB ページ単位)|  
+|**size**|**int**|デバイス 2 KB ページ単位のサイズ。|  
   
 ## <a name="remarks"></a>コメント  
  場合*名前*が指定されている**sp_helpdevice**指定したダンプ デバイスに関する情報が表示されます。 場合*名前*が指定されていない**sp_helpdevice**内のすべてのダンプ デバイスに関する情報を表示、 **sys.backup_devices**カタログ ビューです。  
@@ -75,7 +73,7 @@ sp_helpdevice [ [ @devname = ] 'name' ]
 EXEC sp_helpdevice;  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [sp_addumpdevice &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addumpdevice-transact-sql.md)   
  [sp_dropdevice &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropdevice-transact-sql.md)   
  [データベース エンジン ストアド プロシージャ&#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   

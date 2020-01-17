@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: f9160b48-3beb-439c-9694-f084e1afa625
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 91d39b174a0febed1aa6fd57140412828adc843b
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: 65b8bb26a72903644b5985d69efc8adb362fe412
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52419017"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66088478"
 ---
 # <a name="browsing-a-naive-bayes-model"></a>Naive Bayes モデルの参照
   使用して、単純ベイズ モデルを開くときに**参照**、4 つの異なるウィンドウの対話型ビューアーでモデルが表示されます。 ビューアーを使用して、相関関係を調査し、モデルと基になるデータに関する情報を取得します。  

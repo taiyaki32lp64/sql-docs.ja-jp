@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - many-to-many relationships [Analysis Services]
@@ -13,12 +12,12 @@ ms.assetid: edb5f61a-a581-467a-a367-134b7f9b849f
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 93f00a9544512c3c5efb63667d715c57bcf62de9
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: f679387dd1282dba3a4521f40bd11a2e0ba4b26f
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53354012"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66075776"
 ---
 # <a name="define-a-many-to-many-relationship-and-many-to-many-relationship-properties"></a>多対多のリレーションシップと多対多のリレーションシップのプロパティの定義
   このトピックでは、多対多ディメンションを使用する状況と作成方法を含め、Analysis Services 内の多対多ディメンションについて説明します。  
@@ -143,15 +142,15 @@ ms.locfileid: "53354012"
   
 1.  プロジェクトを配置し、キューブを参照して、集計が有効であることを確認します。  
   
-2.  Excel で、**[データ]**  |  **[その他のデータソース]**  |  **[Analysis Services]** をクリックします。 サーバーの名前を入力し、データベースとキューブを選択します。  
+2.  Excel で、 **[データ]**  |  **[その他のデータソース]**  |  **[Analysis Services]** をクリックします。 サーバーの名前を入力し、データベースとキューブを選択します。  
   
 3.  次のものを使用するピボットテーブルを作成します。  
   
-    -   値として**Sales Amount**   
+    -   値として**Sales Amount**  
   
-    -   列で**Sales Reason Name**   
+    -   列で**Sales Reason Name**  
   
-    -   行で**Sales Order Number**   
+    -   行で**Sales Order Number**  
   
 4.  結果を分析します。 サンプル データを使用しているため、最初は、すべての販売注文が同じ値になっているという印象を受けます。 ただし、下へスクロールすると、データに差異があることに気が付きます。  
   
@@ -180,13 +179,13 @@ ms.locfileid: "53354012"
 ##  <a name="bkmk_Learn"></a> Learn more  
  以下のリンクを使用して、この内容を習得するのに役立つ詳細情報を参照してください。  
   
- [Analysis Services で多対多ディメンションを定義する方法](https://go.microsoft.com/fwlink/?LinkId=324759)  
+ [Analysis Services で多対多ディメンションを定義する方法](../lesson-5-3-defining-a-many-to-many-relationship.md)  
   
  [多対多の回転 2.0](https://go.microsoft.com/fwlink/?LinkId=324760)  
   
- [チュートリアル:SQL Server Analysis Services の多対多ディメンションの例](https://go.microsoft.com/fwlink/?LinkId=324761)  
+ [チュートリアル: SQL Server Analysis Services の多対多ディメンションの例](https://go.microsoft.com/fwlink/?LinkId=324761)  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [ディメンション リレーションシップ](../multidimensional-models-olap-logical-cube-objects/dimension-relationships.md)   
  [Analysis Services 多次元モデリング チュートリアル用のサンプル データおよびプロジェクトのインストール](../install-sample-data-and-projects.md)   
  [Analysis Services プロジェクトの配置 &#40;SSDT&#41;](deploy-analysis-services-projects-ssdt.md)   

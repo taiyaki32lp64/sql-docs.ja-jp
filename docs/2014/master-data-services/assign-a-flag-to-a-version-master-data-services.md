@@ -10,15 +10,15 @@ helpviewer_keywords:
 - version flags [Master Data Services], assigning flags
 - versions [Master Data Services], assigning flags
 ms.assetid: 6629ec7e-32e7-4a1e-8b31-eb43c5923766
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: b4a6c9c8d24211476d6f0e520da991c239ba7d24
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: c9f022f0ed2ba9b7bc320407526af0c12ce4073b
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52795504"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65483918"
 ---
 # <a name="assign-a-flag-to-a-version-master-data-services"></a>バージョンにフラグを割り当てる (マスター データ サービス)
   [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]で、バージョンにフラグを割り当てて、ユーザーまたはサブスクライブ システムが使用する必要があるバージョンを示します。  
@@ -48,7 +48,7 @@ ms.locfileid: "52795504"
   
 4.  Enter キーを押して変更を保存します。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [バージョン フラグを作成する (マスター データ サービス)](../../2014/master-data-services/create-a-version-flag-master-data-services.md)   
  [バージョン (マスター データ サービス)](../../2014/master-data-services/versions-master-data-services.md)  
   

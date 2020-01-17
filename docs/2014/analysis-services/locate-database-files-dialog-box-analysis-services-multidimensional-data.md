@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.localdbfilesdialog.f1
@@ -13,12 +12,12 @@ ms.assetid: b38aa670-b8a4-4abb-8b32-c29dc52362f5
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: bf59757e72b8892e0b32202d9e7f5dc9a3d66be3
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 1a013ed1ca80e17f89baba65b89c460b6ee68691
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48117995"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66078028"
 ---
 # <a name="locate-database-files-dialog-box-analysis-services---multidimensional-data"></a>[データベース ファイルの検索] ダイアログ ボックス (Analysis Services - 多次元データ)
   **[データベース ファイルの検索]** ダイアログ ボックスには、 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] インスタンス用に定義されたログ フォルダーとデータ フォルダーで利用可能なファイルの一覧が表示されます。 一覧表示されたファイルを選択することも、必要に応じて異なるフォルダーとファイルを指定することもできます。 **[データベース ファイルの検索]** ダイアログ ボックスを表示するには、次の手順に従います。  

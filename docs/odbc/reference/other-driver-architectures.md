@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 1cad06ee-5940-4361-8d01-7d850db1dd66
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: fd051d018cb6f53b8c08110e26bc66910e3ca4c5
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 8dbfb09a261d7499e07137b7ed830d5a5b92dc73
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47854183"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68086016"
 ---
 # <a name="other-driver-architectures"></a>その他のドライバーのアーキテクチャ
 一部の ODBC ドライバーは、前に説明したアーキテクチャに厳密に準拠しません。 ドライバーは、従来の ODBC ドライバーでは、以外の作業を実行または通常の意味でのドライバーではない可能性があります。  

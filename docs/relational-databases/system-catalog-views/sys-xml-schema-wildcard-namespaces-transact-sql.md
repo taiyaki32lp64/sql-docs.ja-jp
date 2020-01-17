@@ -17,25 +17,24 @@ dev_langs:
 helpviewer_keywords:
 - sys.xml_schema_wildcard_namespaces catalog view
 ms.assetid: a3caa932-41c7-48a9-9b2d-ff090afbb66b
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: 5a73e9854f6d190eabe8b6a1f38fc647e04a4e75
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: MightyPen
+ms.author: genemi
+ms.openlocfilehash: 2d1085968e76771539c0fa439bc35ed86540dcbe
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47617140"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68109461"
 ---
-# <a name="sysxmlschemawildcardnamespaces-transact-sql"></a>sys.xml_schema_wildcard_namespaces (Transact-SQL)
+# <a name="sysxmlschemawildcardnamespaces-transact-sql"></a>sys.xml_schema_wildcard_namespaces (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  XML スキーマ ワイルドカードに対して列挙される名前空間ごとに 1 行のデータを返します。  
+  XML スキーマ ワイルドカードの列挙型の名前空間ごとに 1 行を返します。  
   
 |列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
-|**xml_component_id**|**int**|このカタログ ビューが適用される XML スキーマ コンポーネント (ワイルドカード) の ID。|  
-|**namespace**|**nvarchar (4000)**|XML ワイルドカードで使用される名前空間の URI の名前。|  
+|**xml_component_id**|**int**|これを適用する XML スキーマ コンポーネント (ワイルドカード) の ID。|  
+|**namespace**|**nvarchar (4000)**|名前または XML ワイルドカードで使用される名前空間の URI。|  
   
 ## <a name="permissions"></a>アクセス許可  
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] 詳細については、「 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)」を参照してください。  

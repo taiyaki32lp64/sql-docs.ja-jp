@@ -15,11 +15,11 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 4830a677125cb03e2c53ed78065d94d5265d4a83
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48208432"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62920780"
 ---
 # <a name="assemblies-database-engine"></a>アセンブリ (データベース エンジン)
   このセクションのトピックでは、アセンブリの理解、設計、および実装に役立つ情報について説明します。  

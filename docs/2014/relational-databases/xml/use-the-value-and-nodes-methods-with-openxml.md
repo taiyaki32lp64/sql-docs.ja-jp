@@ -11,22 +11,22 @@ helpviewer_keywords:
 - value method [XML in SQL Server]
 - nodes method [XML in SQL Server]
 ms.assetid: c73dbe55-d685-42eb-b0ee-9f3c5b9d97f3
-author: douglaslMS
-ms.author: douglasl
+author: MightyPen
+ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 15384e112b4d770d49095d0450341f5da89c2bd0
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 377f9ecfd0f3d94388929d78a048bc65e5020a3e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48156062"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63193235"
 ---
 # <a name="use-the-value-and-nodes-methods-with-openxml"></a>OPENXML での value() メソッドと nodes() メソッドの使用
   複数回使用することができます**value()** メソッド`xml`のデータ型の**選択**句の行セットを生成する抽出した値。 **nodes()** メソッドは、追加のクエリに使用するために選択した各ノードの内部参照を生成します。 **nodes()** メソッドと **value()** メソッドを併用すると、行セットに複数の列があるとき、および行セット生成のためのパス式が複雑なときに、効率的に行セットを生成できます。  
   
  **Nodes()** メソッドは、特殊なインスタンス生成`xml`が選択されている別のノードに設定されているそのコンテキストのデータ型。 このような XML インスタンスは、**query()** メソッド、**value()** メソッド、**nodes()** メソッド、および **exist()** メソッドをサポートし、**count(\*)** 集計で使用できます。 それ以外の使用方法ではエラーが発生します。  
   
-## <a name="example-using-nodes"></a>例 : nodes() の使用  
+## <a name="example-using-nodes"></a>例:nodes() の使用  
  名が "David" ではない著者の姓と名を抽出するとします。 2 つの列 FirstName および LastName から構成される行セットとしてこの情報を抽出します。 そのためには次に示すように、 **nodes()** メソッドと **value()** メソッドを使用します。  
   
 ```  
@@ -40,7 +40,7 @@ WHERE  nref.exist('first-name[. != "David"]') = 1
   
  SQL Server 2000 には、 **OpenXml()** を使用して XML インスタンスから行セットを生成する機能があります。 行セットにリレーショナル スキーマを指定し、その中の列に XML インスタンス内の値をどのようにマップするかを指定できます。  
   
-## <a name="example-using-openxml-on-the-xml-data-type"></a>例 : xml データ型での OpenXml() の使用  
+## <a name="example-using-openxml-on-the-xml-data-type"></a>例:xml データ型での OpenXml() の使用  
  上記の例のクエリは、 **OpenXml()** を使用して次のように書き換えることができます。 そのためには、各 XML インスタンスを読み取って XML 変数に代入し、OpenXML に渡すカーソルを作成します。  
   
 ```  
@@ -73,7 +73,7 @@ DEALLOCATE name_cursor
   
  **nodes()** 関数と **value()** 関数を組み合わせると、XML インデックスを効果的に使用できます。 つまり、 **OpenXml**よりもスケーラビリティに優れています。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [OPENXML &#40;SQL Server&#41;](openxml-sql-server.md)  
   
   

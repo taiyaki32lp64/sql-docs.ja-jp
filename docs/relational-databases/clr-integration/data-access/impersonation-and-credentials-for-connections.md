@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: 293dce7d-1db2-4657-992f-8c583d6e9ebb
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 2630dcc4e23757dc9dbb22e23885ea5089e1d274
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: d83ee1d69e7083931a2f6e6befb89912abec43f0
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51670101"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68138681"
 ---
 # <a name="impersonation-and-credentials-for-connections"></a>接続の権限借用と資格情報
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

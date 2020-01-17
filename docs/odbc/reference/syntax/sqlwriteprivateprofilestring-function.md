@@ -19,24 +19,23 @@ helpviewer_keywords:
 ms.assetid: 526f36a4-92ed-4874-9725-82d27c0b86f9
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 4f070b1494cb54d026d65f5a432c5faf834c38aa
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: 4b847576e503fbbbb511d2dda8f60675c298681c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53201741"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68039383"
 ---
 # <a name="sqlwriteprivateprofilestring-function"></a>SQLWritePrivateProfileString 関数
 **準拠**  
  バージョンが導入されました。ODBC 2.0  
   
- **まとめ**  
+ **概要**  
  **SQLWritePrivateProfileString**システム情報の Odbc.ini サブキーに値の名前とデータを書き込みます。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
   
 BOOL SQLWritePrivateProfileString(  
      LPCSTR     lpszSection,  

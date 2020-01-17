@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - SQL Server Management Studio [Analysis Services], databases
@@ -19,12 +18,12 @@ ms.assetid: 78b2f22a-b7bd-4a2b-b6fc-0bff4d2b3168
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: adba97ff78d22ef2e82bb53065952a716f71a1d5
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 5da033881d2a993ea4be6674dcf8b228cad80bf8
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48082802"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66073518"
 ---
 # <a name="multidimensional-model-databases-ssas"></a>多次元モデル データベース (SSAS)
   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] データベースは、データ ソース、データ ソース ビュー、キューブ、ディメンション、およびロールのコレクションです。 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] データベースには、データ マイニング用の構造、およびユーザー定義の関数をデータベースに追加するために使用されるカスタム アセンブリをオプションで含めることができます。  
@@ -50,19 +49,19 @@ ms.locfileid: "48082802"
   
  [Analysis Services データベースの移動](move-an-analysis-services-database.md)  
   
- [多次元データベースの名前変更&#40;Analysis Services&#41;](rename-a-multidimensional-database-analysis-services.md)  
+ [多次元データベース名の変更 (Analysis Services)](rename-a-multidimensional-database-analysis-services.md)  
   
  [互換性レベルの多次元データベースの設定&#40;Analysis Services&#41;](compatibility-level-of-a-multidimensional-database-analysis-services.md)  
   
- [多次元データベースのプロパティ設定&#40;Analysis Services&#41;](set-multidimensional-database-properties-analysis-services.md)  
+ [多次元データベースのプロパティ設定 (Analysis Services)](set-multidimensional-database-properties-analysis-services.md)  
   
  [Analysis Services データベースの同期](synchronize-analysis-services-databases.md)  
   
  [Analysis Services データベースの ReadOnly モードと ReadWrite モードの切り替え](switch-an-analysis-services-database-between-readonly-and-readwrite-modes.md)  
   
 ## <a name="see-also"></a>参照  
- [Analysis Services データベースへのオンライン モードでの接続します。](connect-in-online-mode-to-an-analysis-services-database.md)   
- [Analysis Services プロジェクトの作成&#40;SSDT&#41;](create-an-analysis-services-project-ssdt.md)   
+ [Analysis Services データベースへのオンライン モードでの接続](connect-in-online-mode-to-an-analysis-services-database.md)   
+ [Analysis Services プロジェクトの作成 (SSDT)](create-an-analysis-services-project-ssdt.md)   
  [MDX による多次元データのクエリ](mdx/querying-multidimensional-data-with-mdx.md)  
   
   

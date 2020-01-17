@@ -10,20 +10,19 @@ ms.topic: conceptual
 ms.assetid: 02287122-5dc1-455d-987f-95fd9a69d503
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: f18836d12be9834512783f90a2d7730fcfc98798
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e1396ac28a7e41dbf530f7e4a251876f6c340871
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47845210"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67979943"
 ---
 # <a name="getsendtimeasdatetime-method-sqlserverdatasource"></a>getSendTimeAsDatetime メソッド (SQLServerDataSource)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
   このメソッドは [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] JDBC Driver 3.0 で追加されました。  
   
- 設定を返します、**で sendTimeAsDatetime**接続プロパティです。  
+ **SendTimeAsDatetime**接続プロパティの設定を返します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -33,14 +32,14 @@ public boolean getSendTimeAsDatetime();
 ```  
   
 ## <a name="return-value"></a>戻り値  
- **true** java.sql.Time 値としてサーバーに送信するかどうか、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] **datetime**型。 **false** java.sql.Time 値としてサーバーに送信するかどうか、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] **時間**型。  
+ 値が**datetime**型として[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]サーバーに送信される場合は**true**を指定します。 値が**time**型として[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]サーバーに送信される場合は**false** 。  
   
 ## <a name="remarks"></a>Remarks  
- 参照してください[接続プロパティの設定](../../../connect/jdbc/setting-the-connection-properties.md)の詳細については、**で sendTimeAsDatetime**接続プロパティです。  
+ **SendTimeAsDatetime**接続プロパティの詳細については、「[接続プロパティの設定](../../../connect/jdbc/setting-the-connection-properties.md)」を参照してください。  
   
  [SQLServerDataSource.setSendTimeAsDatetime](../../../connect/jdbc/reference/setsendtimeasdatetime-method-sqlserverdatasource.md) を使用すると、**sendTimeAsDatetime** 接続プロパティをプログラムから設定することができます。  
   
- 詳細については、次を参照してください。[を構成する方法の java.sql.Time 値は、サーバーに送信される](../../../connect/jdbc/configuring-how-java-sql-time-values-are-sent-to-the-server.md)します。  
+ 詳細については、「 [java .sql の時刻値をサーバーに送信する方法の構成](../../../connect/jdbc/configuring-how-java-sql-time-values-are-sent-to-the-server.md)」を参照してください。  
   
 ## <a name="see-also"></a>参照  
  [SQLServerDataSource のメンバー](../../../connect/jdbc/reference/sqlserverdatasource-members.md)   

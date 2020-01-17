@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: a6c8248a-7a01-42e7-aaed-99dc94d50028
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 740a09d9a6bceb9d3f290faa71444df0d1e7c6c7
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 9cb78dae32bb17598ee0e86c26e621be1b6362c6
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47792320"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68068550"
 ---
 # <a name="administration-program"></a>管理プログラム
 > [!NOTE]  

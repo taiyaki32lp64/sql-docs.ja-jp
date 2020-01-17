@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: 7b8d8d9c-74aa-4e6e-88f1-2fc5c74004ae
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 3de84426a1c15f45cebe5438e1ac877f32dc154e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 29c2da8d8b6645ec9d5186f79db80b03626b2978
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47718030"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67980206"
 ---
 # <a name="getscale-method-sqlserverparametermetadata"></a>getScale メソッド (SQLServerParameterMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -47,7 +46,7 @@ public int getScale(int param)
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- この getScale メソッドは、java.sql.ParameterMetaData インターフェイスで getScale メソッドによって指定されます。  
+ この getScale メソッドは、java. .sql. ParameterMetaData インターフェイスの getScale メソッドによって指定されます。  
   
  このメソッドは、列の小数点以下の桁数を取得します。 小数点を持たない型の場合は、"0" を返します。  
   

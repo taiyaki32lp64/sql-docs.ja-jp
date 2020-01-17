@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: 9a7c754c-2d72-4207-b3bd-2afc6047fb3d
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: abae2c5d7a21e8772c00ed6d6ee74a2a551e4984
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 11a92c879995d198658853ef9b5cec9d00449230
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47650320"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67976829"
 ---
 # <a name="movetocurrentrow-method-sqlserverresultset"></a>moveToCurrentRow メソッド (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -39,7 +38,7 @@ public void moveToCurrentRow()
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- この moveToCurrentRow メソッドは、java.sql.ResultSet インターフェイスの moveToCurrentRow メソッドによって指定されます。  
+ この moveToCurrentRow メソッドは、java. ResultSet インターフェイスの moveToCurrentRow メソッドによって指定されます。  
   
  このメソッドは、カーソルが挿入行にない場合は無効です。  
   

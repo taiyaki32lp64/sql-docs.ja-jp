@@ -1,7 +1,7 @@
 ---
-title: データベースの復旧モデルの表示または変更 (SQL Server) | Microsoft Docs
-ms.custom: ''
-ms.date: 08/05/2016
+title: データベースの復旧モデルの設定
+ms.custom: seo-lt-2019
+ms.date: 12/17/2019
 ms.prod: sql
 ms.prod_service: backup-restore
 ms.reviewer: ''
@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: 94918d1d-7c10-4be7-bf9f-27e00b003a0f
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 06c2ec7c039da5cf439649069a9fef1724114bce
-ms.sourcegitcommit: fafb9b5512695b8e3fc2891f9c5e3abd7571d550
+ms.openlocfilehash: 4af4e8b1d0dacb5e08cdd117a14691b909050b09
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/01/2018
-ms.locfileid: "50753518"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75254055"
 ---
 # <a name="view-or-change-the-recovery-model-of-a-database-sql-server"></a>データベースの復旧モデルの表示または変更 (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -33,13 +32,13 @@ ms.locfileid: "50753518"
   
   *復旧モデル* は、トランザクションをログに記録する方法、トランザクション ログのバックアップを必須 (および可能) にするかどうか、利用できる復元操作の種類などを制御するデータベース プロパティです。 復旧モデルの種類は、単純、完全、および一括ログの 3 種類です。 通常、データベースには完全復旧モデルまたは単純復旧モデルが使用されます。 データベースは、任意の時点で別の復旧モデルに切り替えることができます。 **model** データベースは、新しいデータベースの既定の復旧モデルを設定します。  
   
-  [復旧モデル](recovery-models-sql-server.md)についての詳細な説明は、 [SQL Server Recovery Models](https://www.mssqltips.com/sqlservertutorial/2/sql-server-recovery-models/) の提供する「 [SQL Server Recovery Models](https://www.mssqltips.com/)」 (SQL Server 復旧モデル) を参照してください。
+  より詳しい説明については、[復旧モデル](recovery-models-sql-server.md)に関するページをご覧ください。
   
   
 ##  <a name="BeforeYouBegin"></a> はじめる前に  
   
 
--   [完全復旧モデルまたは一括ログ復旧モデル](back-up-a-transaction-log-sql-server.md) **前** に、 [トランザクション ログをバックアップ](recovery-models-sql-server.md)を利用してデータベースを表示または変更する方法について説明します。  
+-   [完全復旧モデルまたは一括ログ復旧モデル](recovery-models-sql-server.md)から切り替える**前**に、[トランザクション ログをバックアップしてください](back-up-a-transaction-log-sql-server.md)。  
   
 -   一括ログ復旧モデルでは特定の時点に復旧できません。 一括ログ復旧モデルでトランザクション ログの復元を必要とするトランザクションを実行すると、データが失われる可能性があります。 障害復旧シナリオでデータをより確実に復旧するには、次の条件下でのみ一括ログ復旧モデルに切り替えることをお勧めします。  
   
@@ -51,7 +50,7 @@ ms.locfileid: "50753518"
   
 **メモ** 一括操作中に完全復旧モデルに切り替える場合は、一括操作のログ記録が最小ログ記録から完全ログ記録に変わり、また、その逆も同様です。  
   
-###  <a name="Security"></a> 必要な権限  
+###  <a name="Security"></a> 必要なアクセス許可  
    データベースに対する ALTER 権限が必要です。  
   
 ##  <a name="SSMSProcedure"></a> SQL Server Management Studio の使用  
@@ -68,10 +67,10 @@ ms.locfileid: "50753518"
   
 5.  **[復旧モデル]** ボックスの一覧に現在の復旧モデルが表示されています。  
   
-6.  復旧モデルを変更する必要がある場合は、別のモデルをこの一覧で選択します。 選択できるのは、 **[完全]**、 **[一括ログ]**、 **[単純]** のいずれかです。  
+6.  復旧モデルを変更する必要がある場合は、別のモデルをこの一覧で選択します。 選択できるのは、 **[完全]** 、 **[一括ログ]** 、 **[単純]** のいずれかです。  
   
 7.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
-  
+
 ##  <a name="TsqlProcedure"></a> Transact-SQL の使用  
   
 #### <a name="to-view-the-recovery-model"></a>復旧モデルを表示するには  
@@ -103,7 +102,7 @@ USE [master] ;
 ALTER DATABASE [model] SET RECOVERY FULL ;  
 ```  
   
-##  <a name="FollowUp"></a> 推奨事項: 復旧モデルを変更した後  
+##  <a name="FollowUp"></a> 推奨事項:復旧モデルを変更した後  
   
 -   **完全復旧モデルと一括ログ復旧モデルの切り替え後の処理**  
   
@@ -137,7 +136,7 @@ ALTER DATABASE [model] SET RECOVERY FULL ;
   
 -   [ジョブの作成](../../ssms/agent/create-a-job.md)  
   
--   [ジョブの有効化または無効化](../../ssms/agent/disable-or-enable-a-job.md)  
+-   [Disable or Enable a Job](../../ssms/agent/disable-or-enable-a-job.md)  
   
 ##  <a name="RelatedContent"></a> 関連コンテンツ  
   

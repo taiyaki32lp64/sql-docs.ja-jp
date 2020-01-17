@@ -1,7 +1,7 @@
 ---
-title: 可用性グループの [パスワードの入力] ページ (レプリカ追加ウィザード)
+title: 'レプリカの追加ウィザード: 可用性グループの [パスワードの入力] ページ'
 description: SQL Server Management Studio のレプリカ追加ウィザードの [パスワードの入力] ページに表示されるプロパティの説明。
-ms.custom: seodec18
+ms.custom: seo-lt-2019
 ms.date: 05/17/2016
 ms.prod: sql
 ms.reviewer: ''
@@ -12,13 +12,12 @@ f1_keywords:
 ms.assetid: e69207a0-c5c4-44e4-ae9a-4afbb67251d1
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 7472049d96abf98f55dcc90486012b33ba13ba66
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: 6277498bd66e2659e0a692d2e62d66501ca1fac8
+ms.sourcegitcommit: f8cf8cc6650a22e0b61779c20ca7428cdb23c850
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53215043"
+ms.lasthandoff: 12/04/2019
+ms.locfileid: "74822211"
 ---
 # <a name="enter-passwords-page-add-replica-wizard-for-always-on-availability-groups"></a>Always On 可用性グループの [パスワードの入力] ページ (レプリカ追加ウィザード)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -29,13 +28,13 @@ ms.locfileid: "53215043"
 ## <a name="enter-passwords-options"></a>パスワード入力オプション  
  **[この SQL Server のインスタンス上のユーザー データベース]** グリッドには、すべてのローカル ユーザー データベースが表示されます。 次の列で構成されます。  
   
- **名前**  
+ **Name**  
  ローカル ユーザー データベースの名前が表示されます。  
   
  **[サイズ]**  
  データベースのサイズが表示されます (サイズをウィザードで使用できる場合)。  
   
- **ステータス**  
+ **状態**  
  データベース マスターキーがあるデータベースに対して " **パスワードが必要です** " と表示されます。 データベース マスター キーのパスワードを **[パスワード]** 列に入力し、 **[更新]** をクリックします。 パスワードを正しく入力した場合、 **[状態]** 列に **[パスワードが入力されました]** が表示されます。  
   
  データベースにデータベース マスター キーがない場合、 **[状態]** 列には **[パスワードは必要ありません]** が表示されます。  

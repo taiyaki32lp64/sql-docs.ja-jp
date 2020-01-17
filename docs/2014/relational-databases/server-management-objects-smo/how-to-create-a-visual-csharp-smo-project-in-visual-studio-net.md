@@ -13,11 +13,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 371da8231138fb43e9b001808b9fb88ad09543b5
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52799510"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63131643"
 ---
 # <a name="create-a-visual-c-smo-project-in-visual-studio-net"></a>Visual Studio .NET での Visual C# SMO プロジェクトの作成
   このセクションでは、簡単な SMO コンソール アプリケーションを構築する方法について説明します。  
@@ -30,7 +30,7 @@ ms.locfileid: "52799510"
   
 2.  **[ファイル]** メニューの **[新しいプロジェクト]** をクリックします。 **[新しいプロジェクト]** ダイアログ ボックスが表示されます。  
   
-3.  **プロジェクトの種類**ダイアログ ボックスで、 **Visual c#**、し、 **Windows**します。 [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)]インストールされたテンプレート ウィンドウで、 **Windows アプリケーション**します。  
+3.  **プロジェクトの種類**ダイアログ ボックスで、 **Visual c#** 、し、 **Windows**します。 [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)]インストールされたテンプレート ウィンドウで、 **Windows アプリケーション**します。  
   
 4.  (省略可能)**名前**フィールドに、新しいアプリケーションの名前を入力  
   

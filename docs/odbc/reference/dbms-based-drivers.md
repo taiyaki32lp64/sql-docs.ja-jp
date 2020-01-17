@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: e2208ee0-4cd6-4f0d-bb71-a0b54f7d9330
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: cc35f7bceff2d9e92b70448040bb602117b76c84
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: fcd2221d9a0bb9cba42745901e5f00a6f8c8415e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47629640"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68111249"
 ---
 # <a name="dbms-based-drivers"></a>DBMS ベースのドライバー
 DBMS ベースのドライバーはドライバーを使用するためのスタンドアロン データベース エンジンを提供する、Oracle または SQL Server などのデータ ソースで使用されます。 これらのドライバー、スタンドアロンのエンジンです。 物理データにアクセスします。これは、SQL ステートメントを送信し、エンジンから結果を取得します。  

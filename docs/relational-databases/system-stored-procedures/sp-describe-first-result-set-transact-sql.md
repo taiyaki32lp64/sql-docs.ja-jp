@@ -17,19 +17,18 @@ helpviewer_keywords:
 ms.assetid: f2355a75-3a8e-43e6-96ad-4f41038f6d22
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 62abd4d684c809e9dbf3f2863091f1f103808d87
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: dc58447e9893647dfa73643f14455d715625478e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52400635"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68053050"
 ---
-# <a name="spdescribefirstresultset-transact-sql"></a>sp_describe_first_result_set (TRANSACT-SQL)
+# <a name="spdescribefirstresultset-transact-sql"></a>sp_describe_first_result_set (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-all-md](../../includes/tsql-appliesto-ss2012-all-md.md)]
 
-  最初の考えられる結果セットのメタデータを返します、[!INCLUDE[tsql](../../includes/tsql-md.md)]バッチ。 バッチから結果が返されない場合は、空の結果セットを返します。 エラーが発生、[!INCLUDE[ssDE](../../includes/ssde-md.md)]静的分析を実行することによって実行される最初のクエリのメタデータを判断することはできません。 動的管理ビュー [sys.dm_exec_describe_first_result_set &#40;TRANSACT-SQL&#41; ](../../relational-databases/system-dynamic-management-views/sys-dm-exec-describe-first-result-set-transact-sql.md)同じ情報を返します。  
+  最初の考えられる結果セットのメタデータを返します、[!INCLUDE[tsql](../../includes/tsql-md.md)]バッチ。 バッチに結果が返されない場合は、設定、空の結果を返します。 エラーが発生、[!INCLUDE[ssDE](../../includes/ssde-md.md)]静的分析を実行することによって実行される最初のクエリのメタデータを判断することはできません。 動的管理ビュー [sys.dm_exec_describe_first_result_set &#40;TRANSACT-SQL&#41; ](../../relational-databases/system-dynamic-management-views/sys-dm-exec-describe-first-result-set-transact-sql.md)同じ情報を返します。  
   
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -43,38 +42,35 @@ sp_describe_first_result_set [ @tsql = ] N'Transact-SQL_batch'
 ```  
   
 ## <a name="arguments"></a>引数  
- [  **\@tsql =** ] **'***Transact SQL_batch***'**  
- 1 つ以上の [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントです。 *Transact SQL_batch*あります**nvarchar (***n***)** または**nvarchar (max)** します。  
+`[ \@tsql = ] 'Transact-SQL_batch'` 1 つまたは複数[!INCLUDE[tsql](../../includes/tsql-md.md)]ステートメント。 *Transact SQL_batch*あります**nvarchar (***n***)** または**nvarchar (max)** します。  
   
- [  **\@params =** ] **N'***パラメーター***'**  
- \@params パラメーターの宣言文字列の提供、[!INCLUDE[tsql](../../includes/tsql-md.md)]バッチは、これは、sp_executesql と同様にします。 パラメーターがあります**nvarchar (n)** または**nvarchar (max)** します。  
+`[ \@params = ] N'parameters'` \@params パラメーターの宣言文字列の提供、[!INCLUDE[tsql](../../includes/tsql-md.md)]バッチは、これは、sp_executesql と同様にします。 パラメーターがあります**nvarchar (n)** または**nvarchar (max)** します。  
   
  1 つの文字列に埋め込まれたすべてのパラメーターの定義を含む、 [!INCLUDE[tsql](../../includes/tsql-md.md)] *_batch*します。 この文字列は Unicode 定数または Unicode 変数にする必要があります。 各パラメーター定義は、パラメーター名とデータ型で構成されます。 *n*は追加のパラメーター定義を示すプレース ホルダーです。 ステートメントで指定されたすべてのパラメーターを定義する必要があります\@params します。 場合、[!INCLUDE[tsql](../../includes/tsql-md.md)]ステートメントまたはステートメント内のバッチは、パラメーターを含まない\@params は必要ありません。 NULL は、このパラメーターの既定値です。  
   
- [  **\@browse_information_mode =** ] *tinyint*  
- 追加のキー列とソース テーブル情報が返されるかどうかを指定します。 1 に設定すると、各クエリに FOR BROWSE オプションが含まれているように分析されます。 追加のキー列とソース テーブル情報が返されます。  
+`[ \@browse_information_mode = ] tinyint` 追加のキー列とソース テーブル情報が返されるかどうかを指定します。 場合は、クエリに FOR BROWSE オプションが含まれている場合に、1、各クエリに設定するが分析されます。 追加のキー列とソース テーブル情報が返されます。  
   
--   0 に設定すると、情報は返されません。  
+-   かどうかは 0 に設定すると、情報は返されません。  
   
--   1 に設定すると、各クエリに FOR BROWSE オプションが含まれているように分析されます。 ベースのテーブル名がソース列情報として返されます。  
+-   場合は、クエリに FOR BROWSE オプションが含まれている場合に、1、各クエリに設定するが分析されます。 ベースのテーブル名がソース列情報として返されます。  
   
--   2 に設定すると、各クエリはカーソルを準備するか実行するために使用されているように分析されます。 ビュー名がソース列情報として返されます。  
+-   かどうかは 2 に設定すると、各クエリはように分析は、準備またはカーソルを実行中で使用されます。 ビュー名がソース列情報として返されます。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
- **sp_describe_first_result_set**常に成功した場合に 0 の状態を返します。 プロシージャは、エラーをスローします。 プロシージャが RPC として呼び出された場合は、状態の戻り値は sys.dm_exec_describe_first_result_set の error_type 列に記述されているエラーの種類が設定されます。 プロシージャが [!INCLUDE[tsql](../../includes/tsql-md.md)] から呼び出されると、エラーの場合であっても戻り値は常に 0 です。  
+ **sp_describe_first_result_set**常に成功した場合に 0 の状態を返します。 プロシージャは、エラーをスローします。 プロシージャが RPC として呼び出された場合は、状態の戻り値は sys.dm_exec_describe_first_result_set の error_type 列に記述されているエラーの種類が設定されます。 プロシージャが呼び出された場合[!INCLUDE[tsql](../../includes/tsql-md.md)]、戻り値は常に 0、エラーがある場合でもです。  
   
 ## <a name="result-sets"></a>結果セット  
  この共通メタデータは、結果のメタデータの各列に対する 1 行の結果セットとして返されます。 各行には、列の種類と NULL 値の許容属性が次のセクションに示す形式で記述されます。 最初のステートメントは、各コントロールのパスが存在しない場合は、0 行を含む結果セットが返されます。  
   
 |列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
-|**is_hidden**|**bit NOT NULL**|この列が、参照情報のために追加された余分な列で、実際に結果セットには表示されないかどうかを示します。|  
+|**is_hidden**|**bit NOT NULL**|列が、参照情報のために追加された追加の列であると、それが表示されないこと実際に結果セットを示します。|  
 |**column_ordinal**|**int NOT NULL**|結果セット内の列の位置を示す序数を格納します。 最初の列の位置は 1 として指定されます。|  
-|**name**|**sysname NULL**|列の名前を確認できる場合は、その名前を格納します。 それ以外の場合、NULL が格納されます。|  
-|**is_nullable**|**bit NOT NULL**|列が NULL を許可する場合は 1、NULL を許可しない場合は 0、NULL を許可するかどうかを特定できない場合は 1 を格納します。|  
+|**name**|**sysname NULL**|列の名前を確認できる場合は、その名前を格納します。 それ以外の場合、NULL が含まれます。|  
+|**is_nullable**|**bit NOT NULL**|列は Null を許可する場合に特定できない場合に、Null を列に Null を許容しない場合は 0 と 1 を許可する場合は、値 1 が含まれています。|  
 |**system_type_id**|**int NOT NULL**|Sys.types で指定された列のデータ型の system_type_id を格納します。 CLR 型の場合は、system_type_name 列が NULL を返しても、この列は値 240 を返します。|  
 |**system_type_name**|**nvarchar(256) NULL**|列のデータ型に指定されている名前と引数 (長さ、有効桁数、小数点以下桁数など) を格納します。 データ型がユーザー定義の別名型の場合は、基になるシステム型がここで指定されます。 CLR ユーザー定義型の場合は、この列には NULL が返されます。|  
-|**max_length**|**smallint NOT NULL**|列の最大長 (バイト単位) です。<br /><br /> -1 = 列のデータ型は**varchar (max)**、 **nvarchar (max)**、 **varbinary (max)**、または**xml**します。<br /><br /> **テキスト**、列、 **max_length**値は 16 かによって設定された値になります**sp_tableoption 'text in row'** します。|  
+|**max_length**|**smallint NOT NULL**|列の最大長 (バイト単位) です。<br /><br /> -1 = 列のデータ型は**varchar (max)** 、 **nvarchar (max)** 、 **varbinary (max)** 、または**xml**します。<br /><br /> **テキスト**、列、 **max_length**値は 16 かによって設定された値になります**sp_tableoption 'text in row'** します。|  
 |**有効桁数 (precision)**|**tinyint NOT NULL**|数値ベースの場合は、列の有効桁数です。 それ以外の場合 0 を返します。|  
 |**scale**|**tinyint NOT NULL**|数値ベースの場合は、列の小数点以下桁数です。 それ以外の場合 0 を返します。|  
 |**collation_name**|**sysname NULL**|文字ベースの場合は、列の照合順序の名前です。 それ以外の場合、NULL を返します。|  
@@ -88,7 +84,7 @@ sp_describe_first_result_set [ @tsql = ] N'Transact-SQL_batch'
 |**xml_collection_schema**|**sysname NULL**|この型に関連付けられている XML スキーマ コレクションが定義されているスキーマを格納します。 この列は、返される型が XML スキーマ コレクションに関連付けられていない場合は NULL を返します。|  
 |**xml_collection_name**|**sysname NULL**|この型に関連付けられている XML スキーマ コレクションの名前を格納します。 この列は、返される型が XML スキーマ コレクションに関連付けられていない場合は NULL を返します。|  
 |**is_xml_document**|**bit NOT NULL**|返されたデータ型が XML で、その型が XML フラグメントではなく完全な XML ドキュメント (ルート ノードを含む) であると保証される場合、1 を返します。 それ以外の場合 0 を返します。|  
-|**is_case_sensitive**|**bit NOT NULL**|この列が大文字と小文字を区別する文字列型の場合は 1、それ以外の場合は 0 を返します。|  
+|**is_case_sensitive**|**bit NOT NULL**|されていない場合、列が大文字の文字列型で、0 の場合は、1 を返します。|  
 |**is_fixed_length_clr_type**|**bit NOT NULL**|されていない場合、列が固定長の CLR 型と 0 の場合は、1 を返します。|  
 |**source_server**|**sysname**|この結果内の列によって返された元のサーバーの名前です (リモート サーバーから発生する場合)。 Sys.servers に表示される、名前が与えられます。 この列がローカル サーバー上で発生した場合、または元のサーバーを特定できない場合は NULL を返します。 参照情報が要求された場合にのみ設定されます。|  
 |**source_database**|**sysname**|この結果内の列によって返された元のデータベースの名前です。 データベースを特定できない場合は NULL を返します。 参照情報が要求された場合にのみ設定されます。|  
@@ -100,7 +96,7 @@ sp_describe_first_result_set [ @tsql = ] N'Transact-SQL_batch'
 |**is_updateable**|**bit NULL**|この列が更新可能である場合は 1、それ以外の場合は 0 を返します。 更新可能であることを確認できない場合は NULL を返します。|  
 |**is_computed_column**|**bit NULL**|この列が計算列の場合は 1、それ以外の場合は 0 を返します。 列が計算列を特定できない場合は、NULL を返します。|  
 |**is_sparse_column_set**|**bit NULL**|この列がスパース列の場合は 1、それ以外の場合は 0 を返します。 列がスパース列セットの一部であることを特定できない場合は、NULL を返します。|  
-|**ordinal_in_order_by_list**|**smallint NULL**|ORDER BY リストにおけるこの列の位置を返します。 この列が ORDER BY リストにない場合、または ORDER BY リストを一意に特定できない場合は NULL を返します。|  
+|**ordinal_in_order_by_list**|**smallint NULL**|ORDER BY リストにおけるこの列の位置。 列が ORDER BY リストに表示されない場合、または ORDER BY リストを一意に特定できない場合は、NULL を返します。|  
 |**order_by_list_length**|**smallint NULL**|ORDER BY リストの長さを返します。 ORDER BY リストがない場合、または ORDER BY リストを一意に特定できない場合は NULL を返します。 この値がによって返されるすべての行で同じになることに注意してください。 **sp_describe_first_result_set します。**|  
 |**order_by_is_descending**|**smallint NULL**|Ordinal_in_order_by_list が NULL でない場合、 **order_by_is_descending**列は、この列の ORDER BY 句の方向を報告します。 それ以外の場合は、NULL が報告されます。|  
 |**tds_type_id**|**int NOT NULL**|内部使用です。|  
@@ -123,23 +119,23 @@ sp_describe_first_result_set [ @tsql = ] N'Transact-SQL_batch'
   
 -   場合、入力[!INCLUDE[tsql](../../includes/tsql-md.md)]バッチで宣言されているパラメーターに同じ名前のローカル変数を宣言します\@params します。  
   
--   ステートメント内に一時テーブルが使用されている場合。  
+-   場合は、ステートメントは、一時テーブルを使用します。  
   
--   後からクエリを実行するパーマネント テーブルの作成がクエリに含まれる場合。  
+-   クエリには、クエリを実行し、永続的なテーブルの作成が含まれています。  
   
- その他のすべてのチェックが成功した場合、入力バッチ内のすべての制御フロー パスが考慮されます。 このを考慮に入れたすべての制御フロー ステートメント (GOTO、IF/ELSE、WHILE、および[!INCLUDE[tsql](../../includes/tsql-md.md)]TRY/CATCH ブロック)、プロシージャは、動的と[!INCLUDE[tsql](../../includes/tsql-md.md)]バッチ、または EXEC ステートメント、DDL ステートメントをして入力バッチから呼び出されたトリガー発生させる DDL トリガーまたは対象のテーブルまたはテーブルが外部キー制約のカスケード操作により変更されるトリガーを起動する DML ステートメント。 可能性のあるコントロール パスが多数ある場合は、ある時点でアルゴリズムが停止します。  
+ その他のすべてのチェックが成功した場合、入力バッチ内のすべての制御フロー パスと見なされます。 このを考慮に入れたすべての制御フロー ステートメント (GOTO、IF/ELSE、WHILE、および[!INCLUDE[tsql](../../includes/tsql-md.md)]TRY/CATCH ブロック)、プロシージャは、動的と[!INCLUDE[tsql](../../includes/tsql-md.md)]バッチ、または EXEC ステートメント、DDL ステートメントをして入力バッチから呼び出されたトリガー発生させる DDL トリガーまたは対象のテーブルまたはテーブルが外部キー制約のカスケード操作により変更されるトリガーを起動する DML ステートメント。 多くの可能なコントロール パスの場合はある時点でアルゴリズムを停止します。  
   
  各制御フロー パスの最初のステートメント (あれば) を返す結果セットが続く**sp_describe_first_result_set**します。  
   
- バッチ内で考えら得る最初のステートメントが複数見つかった場合、それらの結果の列の数、列名、NULL 値の許容属性、およびデータ型が異なる場合があります。 これらの違いを処理する方法の詳細について、ここに記載します。  
+ 複数の使用可能な最初のステートメントがバッチ内で見つかったときにその結果できます列、列名、null 許容属性、およびデータ型の数が異なります。 これらの違いを処理する方法の詳細について、ここに記載します。  
   
 -   列の数が異なる場合は、エラーがスローされ、結果は返されません。  
   
 -   列名が異なる場合は、返される列名が NULL に設定されます。  
   
--   NULL 値の許容属性が異なる場合は、返される NULL 値の許容属性は "NULL を許容" になります。  
+-   Null 値の許容とは異なること返される null 値許容属性が Null を許容します。  
   
--   データ型が異なる場合は、エラーがスローされ、以下の場合を除いて結果は返されません。  
+-   データ型が異なる場合は、エラーがスローされ、次の場合を除いて結果は返されません。  
   
     -   **varchar (a)** に**varchar(a')** 場所、' > をします。  
   
@@ -163,13 +159,13 @@ sp_describe_first_result_set [ @tsql = ] N'Transact-SQL_batch'
 ### <a name="typical-examples"></a>一般的な例  
   
 #### <a name="a-simple-example"></a>A. 簡単な例  
- 次の例は、1 つのクエリから返される結果セットを示します。  
+ 次の例では、1 つのクエリから返される結果について説明します。  
   
 ```  
 sp_describe_first_result_set @tsql = N'SELECT object_id, name, type_desc FROM sys.indexes'  
 ```  
   
- 次の例は、パラメーターを含む 1 つのクエリから返される結果セットを示します。  
+ 次の例では、パラメーターを含む 1 つのクエリから返される結果を示します。  
   
 ```  
 sp_describe_first_result_set @tsql =   
@@ -182,7 +178,7 @@ WHERE object_id = @id1'
 #### <a name="b-browse-mode-examples"></a>B. ブラウズ モードの使用例  
  次の 3 つの例では、異なるブラウズ情報モード間の主要な違いを示します。 クエリ結果には、関係する列だけが含まれています。  
   
- 0 を使用した例は、情報は返されないことを示します。  
+ 情報がないことを示します。 0 の使用例が返されます。  
   
 ```sql  
 CREATE TABLE dbo.t (a int PRIMARY KEY, b1 int);  
@@ -194,11 +190,11 @@ EXEC sp_describe_first_result_set N'SELECT b2 AS b3 FROM dbo.v', null, 0;
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
-|is_hidden|column_ordinal|NAME|source_schema|source_table|source_column|is_part_of_unique_key|  
+|is_hidden|column_ordinal|NAME|source_schema|ソース テーブル|source_column|is_part_of_unique_key|  
 |----------------|---------------------|----------|--------------------|-------------------|--------------------|-------------------------------|  
 |0|1|b3|NULL|NULL|NULL|NULL|  
   
- 1 を使用した例は、クエリに FOR BROWSE オプションが含まれているかのように情報が返されることを示します。  
+ 1 示すを使用した例は、クエリに FOR BROWSE オプションが含まれている場合、情報を返します。  
   
 ```sql  
 EXEC sp_describe_first_result_set N'SELECT b2 AS b3 FROM v', null, 1  
@@ -207,12 +203,12 @@ EXEC sp_describe_first_result_set N'SELECT b2 AS b3 FROM v', null, 1
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
-|is_hidden|column_ordinal|NAME|source_schema|source_table|source_column|is_part_of_unique_key|  
+|is_hidden|column_ordinal|NAME|source_schema|ソース テーブル|source_column|is_part_of_unique_key|  
 |----------------|---------------------|----------|--------------------|-------------------|--------------------|-------------------------------|  
 |0|1|b3|dbo|t|B1|0|  
 |1|2|a|dbo|t|a|1|  
   
- 2 を使用した例は、カーソルを準備しているかのように分析されることを示します。  
+ カーソルを準備する場合、分析対象を示す 2 を使用する例です。  
   
 ```sql  
 EXEC sp_describe_first_result_set N'SELECT b2 AS b3 FROM v', null, 2  
@@ -220,7 +216,7 @@ EXEC sp_describe_first_result_set N'SELECT b2 AS b3 FROM v', null, 2
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
-|is_hidden|column_ordinal|NAME|source_schema|source_table|source_column|is_part_of_unique_key|  
+|is_hidden|column_ordinal|NAME|source_schema|ソース テーブル|source_column|is_part_of_unique_key|  
 |----------------|---------------------|----------|--------------------|-------------------|--------------------|-------------------------------|  
 |0|1|B3|dbo|v|B2|0|  
 |1|2|ROWSTAT|NULL|NULL|NULL|0|  
@@ -234,7 +230,7 @@ CREATE TABLE dbo.t2 (a smallint NOT NULL, d varchar(20) NOT NULL, e int NOT NULL
 ```  
   
 #### <a name="error-because-the-number-of-columns-differ"></a>列の数の違いによるエラー  
- この例では、考えられる最初の結果セットの間で、列の数が異なります。  
+ この例では最初の結果セットが異なるできるだけの列の数。  
   
 ```  
 sp_describe_first_result_set @tsql =   
@@ -261,8 +257,8 @@ ELSE
   
  結果:エラー、型の不一致 (**int**と**smallint**)。  
   
-#### <a name="column-name-cannot-be-determined"></a>列名の特定不可  
- 考えられる最初の結果セットの間で、列の同じ可変長型の長さ、NULL 値の許容属性、列名が異なります。  
+#### <a name="column-name-cannot-be-determined"></a>列名を確認することはできません。  
+ 可能な最初の結果セットが異なる同じ可変長型、null 許容属性、および列名の長さの列:  
   
 ```  
 sp_describe_first_result_set @tsql =   
@@ -275,7 +271,7 @@ ELSE
   
  結果:\<不明な列名 > **varchar (20) NULL**  
   
-#### <a name="column-name-forced-to-be-identical-through-aliasing"></a>別名を使用して強制的に列名を同じにする  
+#### <a name="column-name-forced-to-be-identical-through-aliasing"></a>別名の指定と同じでなければ強制的に列名  
  前の例と同じですが、列の別名を使用して列名を同じにしています。  
   
 ```  
@@ -289,8 +285,8 @@ ELSE
   
  Result: b **varchar(20)NULL**  
   
-#### <a name="error-because-column-types-cannot-be-matched"></a>列の型の不一致によるエラー  
- 考えられる、異なる最初の結果セットの間で、列の型が異なります。  
+#### <a name="error-because-column-types-cannot-be-matched"></a>エラー列の型が一致することはできませんので、  
+ 考えられる、異なる列の型が異なる最初の結果セット。  
   
 ```  
 sp_describe_first_result_set @tsql =   
@@ -301,10 +297,10 @@ ELSE
     SELECT c FROM t1;'  
 ```  
   
- 結果:エラー、型の不一致 (**varchar (10)** と**nvarchar (10)**)。  
+ 結果:エラー、型の不一致 (**varchar (10)** と**nvarchar (10)** )。  
   
-#### <a name="result-set-can-return-an-error"></a>結果セットがエラーを返す  
- 最初の結果セットがエラーまたは結果セットです。  
+#### <a name="result-set-can-return-an-error"></a>結果セットはエラーを返すことができます。  
+ 最初の結果セットはエラーまたは結果セットです。  
   
 ```  
 sp_describe_first_result_set @tsql =   
@@ -319,7 +315,7 @@ SELECT e FROM t2; -- Ignored, not a possible first result set.;'
   
  結果: **intNULL**  
   
-#### <a name="some-code-paths-return-no-results"></a>いくつかのコード パスが結果を返さない  
+#### <a name="some-code-paths-return-no-results"></a>一部のコード パスに結果が返されない  
  最初の結果セットが null または結果セットです。  
   
 ```  
@@ -332,8 +328,8 @@ SELECT a FROM t1;'
   
  結果: **intNULL**  
   
-#### <a name="result-from-dynamic-sql"></a>動的 SQL からの結果  
- 最初の結果セットが、リテラル文字列であるため検出可能な動的 SQL です。  
+#### <a name="result-from-dynamic-sql"></a>動的 SQL からの結果します。  
+ 最初の結果セットは、リテラル文字列であるために、探索可能な動的 SQL です。  
   
 ```  
 sp_describe_first_result_set @tsql =   
@@ -355,7 +351,7 @@ IF(1=1)
 EXEC(@SQL); '  
 ```  
   
- 結果:エラー状態。 動的 SQL のため、結果を検出できません。  
+ 結果:エラー状態。 動的 SQL のため結果を検出できません。  
   
 #### <a name="result-set-specified-by-user"></a>ユーザー指定の結果セット  
  最初の結果セットがユーザーにより手動で指定されています。  
@@ -387,9 +383,9 @@ N'
 , @params = N'@p int'  
 ```  
   
- 結果:エラー状態。 t1 は dbo.t1 または s1.t1、それぞれの列の数が異なるかを指定できます。  
+ 結果:エラー状態。 t1 は dbo.t1 または s1.t1、それぞれ異なる数の列のいずれかを指定できます。  
   
-#### <a name="result-even-with-ambiguous-result-set"></a>あいまいな結果セットによる結果  
+#### <a name="result-even-with-ambiguous-result-set"></a>あいまいな結果セットを使用しても結果します。  
  前の例と同じ前提を使用します。  
   
 ```  
@@ -402,7 +398,7 @@ N'
   
  結果: **int NULL** dbo.t1.a と s1.t1.a 型であるため、 **int**と異なる null 許容属性。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [sp_describe_undeclared_parameters &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-describe-undeclared-parameters-transact-sql.md)   
  [sys.dm_exec_describe_first_result_set &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-describe-first-result-set-transact-sql.md)   
  [sys.dm_exec_describe_first_result_set_for_object &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-describe-first-result-set-for-object-transact-sql.md)  

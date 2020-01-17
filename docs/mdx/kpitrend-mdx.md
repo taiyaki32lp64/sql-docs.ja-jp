@@ -1,5 +1,5 @@
 ---
-title: KPITrend (MDX) |Microsoft ドキュメント
+title: KPITrend (MDX) |Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -8,13 +8,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-manager: kfile
-ms.openlocfilehash: d5d1a211e473cf2eed96603d91b581a52e9062d7
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.openlocfilehash: 26e33a84ff50fca00151dc124403bac9daa2d89d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34739761"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67905860"
 ---
 # <a name="kpitrend-mdx"></a>KPITrend (MDX)
 
@@ -30,13 +29,13 @@ KPITrend(KPI_Name)
   
 ## <a name="arguments"></a>引数  
  *Kpi 名*  
- KPI の名前を指定する有効な文字列式です。  
+ KPI の名前を指定する有効な文字列式。  
   
 ## <a name="remarks"></a>コメント  
- 傾向値は通常、-1 ～ 1 の範囲の正規化された値です。  
+ 傾向値は、一般に、-1 ~ 1 の間の正規化された値です。  
   
 ## <a name="example"></a>例  
- 次の例では、Fiscal Year 属性階層の 3 つのメンバーの子孫について、Channel Revenue メジャーに対応する KPI 値、KPI 目標、KPI 状態、および KPI 傾向を返しています。  
+ 次の例では、KPI の値、KPI 目標、KPI の状態、および、Fiscal Year 属性階層の 3 つのメンバーの子孫に対する、channel revenue メジャーの KPI の傾向を返します。  
   
 ```  
 SELECT  
@@ -54,7 +53,7 @@ Descendants
 FROM [Adventure Works]  
 ```  
   
-## <a name="see-also"></a>参照  
- [MDX 関数リファレンス&#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
+## <a name="see-also"></a>関連項目  
+ [MDX 関数リファレンス &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
   
   

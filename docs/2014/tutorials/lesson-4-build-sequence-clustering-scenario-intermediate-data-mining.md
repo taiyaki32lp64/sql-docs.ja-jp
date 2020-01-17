@@ -15,11 +15,11 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: d34125b7b750daa1da25c9e8788172b5d9ca2c35
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56014183"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62710604"
 ---
 # <a name="lesson-4-building-a-sequence-clustering-scenario-intermediate-data-mining-tutorial"></a>レッスン 4:シーケンス クラスター シナリオ (中級者向けデータ マイニング チュートリアル) の作成
   [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)] のマーケティング部門は、顧客が [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)] Web サイトをどのように閲覧するのかを把握しようとしています。 同社は、顧客が製品を買い物かごに入れる順序に一定のパターンがあるのではないかと推測しています。 マーケティング部門は、顧客がどのような場合に関連商品を買い物かごに追加するかを把握するために、購入順序を分析しようとしています。 この情報を使用すると、Web サイトのフローを効率化し、別の製品も購入するように顧客を導くことができます。  

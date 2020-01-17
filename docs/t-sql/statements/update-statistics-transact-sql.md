@@ -20,14 +20,13 @@ helpviewer_keywords:
 ms.assetid: 919158f2-38d0-4f68-82ab-e1633bd0d308
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: f91d98f48031f34f4c1c1ef91c86c1cbb60520fd
-ms.sourcegitcommit: 85fd3e1751de97a16399575397ab72ebd977c8e9
+ms.openlocfilehash: c7727d197e8a0ecb1009ea33c04311f3b63e5ff4
+ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/17/2018
-ms.locfileid: "53531067"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "73982564"
 ---
 # <a name="update-statistics-transact-sql"></a>UPDATE STATISTICS (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -97,16 +96,16 @@ UPDATE STATISTICS [ schema_name . ] table_name
  AUTO_CREATE_STATISTICS について詳しくは、「[ALTER DATABASE の SET オプション &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-set-options.md)」をご覧ください。 テーブルまたはビューのすべてのインデックスを表示するには、[sp_helpindex](../../relational-databases/system-stored-procedures/sp-helpindex-transact-sql.md) を使用します。  
   
  FULLSCAN  
- テーブルまたはインデックス付きビュー内のすべての行をスキャンして統計を計算します。 FULLSCAN と SAMPLE 100 PERCENT は同じ結果になります。 FULLSCAN では SAMPLE オプションは使用できません。  
+ テーブルまたはインデックス付きビュー内のすべての行をスキャンして統計を計算します。 FULLSCAN と SAMPLE 100 PERCENT は同じ結果になります。 SAMPLE オプションには FULLSCAN を使用できません。  
   
  SAMPLE *number* { PERCENT | ROWS }  
- テーブルやインデックス付きビューに含まれている行について、クエリ オプティマイザーで統計を更新する際に使用するおおよその割合または数を指定します。 PERCENT の場合、*number* には 0 ～ 100 を指定します。ROWS の場合、*number* には 0 ～合計行数を指定します。 クエリ オプティマイザーによってサンプリングされる行の実際の割合や行数が、指定した割合や行数と一致しない場合もあります。 たとえば、データ ページではすべての行がスキャンされます。  
+ クエリ オプティマイザーが統計を更新するときに使用する、テーブルやインデックス付きビューに含まれている行のおおよその割合または数を指定します。 PERCENT の場合、*number* には 0 ～ 100 を指定します。ROWS の場合、*number* には 0 ～合計行数を指定します。 クエリ オプティマイザーによってサンプリングされる行の実際の割合や行数が、指定した割合や行数と一致しない場合もあります。 たとえば、データ ページではすべての行がスキャンされます。  
   
- SAMPLE は、既定のサンプリングに基づくクエリ プランが最適ではない特殊な場合に使用できます。 既定ではクエリ オプティマイザーはサンプリングを使用して統計的に有意なサンプル サイズを決定するため、SAMPLE を指定する必要はほとんどありませんが、高品質のクエリ プランを作成する場合は、SAMPLE が必要になります。 
+ SAMPLE は、既定のサンプリングに基づくクエリ プランが最適ではない特殊な場合に使用できます。 クエリ オプティマイザーは、既定でサンプリングを使用して統計的に有意なサンプル サイズを決定するため、SAMPLE を指定する必要はほとんどありませんが、高品質のクエリ プランを作成する場合は、SAMPLE が必要です。 
  
 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 以降では、データのサンプリングによる統計の作成が並列で実行できるようになりました (互換性レベル 130 を使用している場合)。これにより、統計情報収集のパフォーマンスが上がります。 テーブル サイズが一定のしきい値を超えると、クエリ オプティマイザーは並列サンプリングによる統計を使用します。 
    
- SAMPLE では FULLSCAN オプションは使用できません。 SAMPLE も FULLSCAN も指定しない場合、既定ではクエリ オプティマイザーはサンプリングしたデータを使用してサンプル サイズを計算します。  
+ FULLSCAN オプションには SAMPLE を使用できません。 SAMPLE も FULLSCAN も指定しない場合、既定でサンプリングしたデータが使用され、サンプル サイズが計算されます。  
   
  0 PERCENT や 0 ROWS を指定することはお勧めしません。 0 PERCENT または 0 ROWS を指定した場合、統計オブジェクトは更新されますが、統計データは含まれません。  
   
@@ -126,20 +125,23 @@ PERSIST_SAMPLE_PERCENT = { ON | OFF }
  > AUTO_UPDATE_STATISTICS が実行された場合、保存されたサンプリング率が使用可能な場合はそのサンプリング率が使用され、そうでない場合は既定のサンプリング率が使用されます。
  > RESAMPLE の動作は、このオプションの影響を受けません。
  
+ > [!NOTE]
+ > テーブルが切り捨てられた場合、切り捨てられた HoBT に基づいて作成されたすべての統計は、既定のサンプリング率を使用するように戻されます。
+ 
  > [!TIP] 
  > [DBCC SHOW_STATISTICS](../../t-sql/database-console-commands/dbcc-show-statistics-transact-sql.md) と [sys.dm_db_stats_properties](../../relational-databases/system-dynamic-management-views/sys-dm-db-stats-properties-transact-sql.md) は、選択した統計について保存されたサンプル率値を公開します。
  
- **適用対象**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1 CU4 以降) から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] ([!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU1 以降)。  
+ **適用対象**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1 CU4 以降) 以降 ([!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU1 以降)。  
  
  ON PARTITIONS ( { \<partition_number> | \<range> } [, ...n] ) ] ON PARTITIONS 句で指定したパーティションを対象としたリーフ レベルの統計を強制的に再計算してから、それらをマージして全体統計を構築します。 異なるサンプル レートで構築されたパーティションの統計はマージできないため、WITH RESAMPLE が必要になります。  
   
-**適用対象**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
+**適用対象**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 以降
   
  ALL | COLUMNS | INDEX  
- すべての既存の統計、1 つ以上の列で作成された統計、またはインデックスに対して作成された統計を更新します。 何も指定しない場合は、テーブルまたはインデックス付きビューのすべての統計が更新されます。  
+ すべての既存の統計、1 つ以上の列で作成された統計、またはインデックスに対して作成された統計を更新します。 何も指定しない場合は、UPDATE STATISTICS ステートメントによりテーブルまたはインデックス付きビューのすべての統計が更新されます。  
   
  NORECOMPUTE  
- 指定した統計の自動統計更新オプション (AUTO_UPDATE_STATISTICS) を無効にします。 このオプションを指定すると、現在の更新は実行され、その後の更新が無効になります。  
+ 指定した統計の自動統計更新オプション (AUTO_UPDATE_STATISTICS) を無効にします。 このオプションを指定すると、クエリ オプティマイザーはこの統計の更新を実行し、その後の更新を無効にします。  
   
  AUTO_UPDATE_STATISTICS オプションの動作を再有効化するには、NORECOMPUTE オプションを指定せずに UPDATE STATISTICS を再実行するか、または **sp_autostats** を実行します。  
   
@@ -161,7 +163,7 @@ PERSIST_SAMPLE_PERCENT = { ON | OFF }
 -   内部テーブルに対して作成された統計。  
 -   空間インデックスまたは XML インデックスを使用して作成された統計。  
   
-**適用対象**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
+**適用対象**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 以降
 
 MAXDOP = *max_degree_of_parallelism*  
 **適用対象**:[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 および [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3 以降)。  
@@ -183,16 +185,16 @@ MAXDOP = *max_degree_of_parallelism*
 
 ## <a name="remarks"></a>Remarks  
   
-### <a name="when-to-use-update-statistics"></a>UPDATE STATISTICS を使用する場合  
+### <a name="when-to-use-update-statistics"></a>いつ UPDATE STATISTICS を使用するか  
  `UPDATE STATISTICS` を使用する場合の詳細については、「[統計](../../relational-databases/statistics/statistics.md)」を参照してください。  
 
 ### <a name="limitations-and-restrictions"></a>制限事項と制約事項  
-* テーブルの外部では、統計を更新することはできません。 外部テーブルの統計を更新するには、削除し、統計を再作成します。  
+* テーブルの外部では、統計を更新することはできません。 外部テーブルの統計を更新するには、統計を削除して再作成します。  
 * `MAXDOP` オプションは、`STATS_STREAM`、`ROWCOUNT`、および `PAGECOUNT` の各オプションと互換性がありません。
 * `MAXDOP` オプションは、Resource Governor ワークロード グループの `MAX_DOP` の設定によって制限されます (使用されている場合)。
 
-### <a name="updating-all-statistics-with-spupdatestats"></a>sp_updatestats によるすべての統計の更新  
-データベース内のすべてのユーザー定義および内部テーブルの統計を更新する方法については、ストアド プロシージャ [sp_updatestats &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-updatestats-transact-sql.md) の説明を参照してください。 たとえば次のコマンドは、sp_updatestats を呼び出してデータベースのすべての統計を更新します。  
+### <a name="updating-all-statistics-with-sp_updatestats"></a>sp_updatestats によるすべての統計の更新  
+データベース内のすべてのユーザー定義および内部テーブルの統計を更新する方法については、ストアド プロシージャ [sp_updatestats &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-updatestats-transact-sql.md) の説明を参照してください。 たとえば、次のコマンドは、sp_updatestats を呼び出してデータベースのすべての統計を更新します。  
   
 ```sql  
 EXEC sp_updatestats;  

@@ -1,5 +1,5 @@
 ---
-title: 大きなデータの取得 |Microsoft Docs
+title: 大きなデータを取得する |Microsoft Docs
 ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
@@ -15,20 +15,18 @@ helpviewer_keywords:
 ms.assetid: a31c5632-96aa-483f-a307-004c5149fbc0
 author: MightyPen
 ms.author: genemi
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 8dc42531a8e0cfcc844939ca86639ad68cebcd09
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 0922ed161eb691386b1870f03a8597b6a4872f74
+ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47795620"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73775506"
 ---
 # <a name="getting-large-data"></a>大きなデータの取得
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-[!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
 
-  一般に、コンシューマーを作成するコードを分離する必要があります、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB プロバイダーのストレージ オブジェクトにより参照されないデータを処理する他のコードから、 **ISequentialStream**インターフェイス ポインター。  
+  一般に、コンシューマーは、 **ISequentialStream**インターフェイスポインターによって参照されていないデータを処理する他のコードから、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB プロバイダーストレージオブジェクトを作成するコードを分離する必要があります。  
   
  このトピックでは、次の関数で使用可能な機能について説明します。  
   
@@ -38,9 +36,9 @@ ms.locfileid: "47795620"
   
 -   ICommand::Execute  
   
- コンシューマーがへの呼び出し内のデータの単一の行のみをフェッチする必要があります (行セット プロパティ グループ) 内の DBPROP_ACCESSORDER プロパティが値 DBPROPVAL_AO_SEQUENTIAL または DBPROPVAL_AO_SEQUENTIALSTORAGEOBJECTS のいずれかに設定されている場合、 **GetNextRows**メソッド BLOB データがバッファーされていないためです。 DBPROP_ACCESSORDER の値を DBPROPVAL_AO_RANDOM に設定した場合は、**GetNextRows** で複数行のデータをフェッチできます。  
+ DBPROP_ACCESSORDER プロパティ (行セットプロパティグループ) が DBPROPVAL_AO_SEQUENTIAL または DBPROPVAL_AO_SEQUENTIALSTORAGEOBJECTS のいずれかの値に設定されている場合、コンシューマーは**GetNextRows**メソッドの呼び出しで1行のデータのみをフェッチする必要があります。これは、BLOB データがバッファリングされていないためです。 DBPROP_ACCESSORDER の値を DBPROPVAL_AO_RANDOM に設定した場合は、**GetNextRows** で複数行のデータをフェッチできます。  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB プロバイダーから大規模なデータが取得されない[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]コンシューマーの要求されるまでです。 コンシューマーは、すべての短いデータを 1 つのアクセサーにバインドし、次に 1 つ以上の一時アクセサーを使用して、必要に応じて大きなデータ値を取得する必要があります。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB プロバイダーは、コンシューマーによって要求されるまで、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] から大きなデータを取得しません。 コンシューマーは、すべての短いデータを 1 つのアクセサーにバインドし、次に 1 つ以上の一時アクセサーを使用して、必要に応じて大きなデータ値を取得する必要があります。  
   
 ## <a name="example"></a>例  
  次の例では、大きなデータ値を 1 つの列から取得します。  

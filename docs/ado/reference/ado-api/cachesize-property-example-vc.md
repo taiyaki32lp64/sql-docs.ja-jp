@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: e0e7b7ba-3943-43cb-a2cd-0e4667187973
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 1ab5188ec0854eb52c5edf736ee94e67d50cadcf
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 98670a6f63392a3f208eb7719b0be52a9422d59a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47802910"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67920257"
 ---
 # <a name="cachesize-property-example-vc"></a>CacheSize プロパティの例 (VC++)
 この例では、 [CacheSize](../../../ado/reference/ado-api/cachesize-property-ado.md)と 30 レコードのキャッシュなしに実行される操作のパフォーマンスの違いを表示するプロパティ。  
@@ -161,6 +160,6 @@ void PrintComError(_com_error &e) {
 }  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [CacheSize プロパティ (ADO)](../../../ado/reference/ado-api/cachesize-property-ado.md)   
  [Recordset オブジェクト (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)

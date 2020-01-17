@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - Cube Designer
@@ -13,12 +12,12 @@ ms.assetid: a6692467-da88-4312-8b03-d812f2ae5a96
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: a4333b9d2c15097b1954144738543250bb591621
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: c0c52d2598c2fff79d9d7dd6cb99468871f12639
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48155422"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66086606"
 ---
 # <a name="cube-designer-analysis-services---multidimensional-data"></a>キューブ デザイナー (Analysis Services - 多次元データ)
   [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] の**キューブ デザイナー**を使用すると、キューブに含まれているメジャー グループやメジャー、キューブ ディメンションやディメンション リレーションシップ、計算、主要業績評価指標 (KPI)、アクション、パーティション、パースペクティブ、および翻訳を含む、既存のキューブのさまざまなプロパティを編集したり、キューブに含まれているデータを参照したりできます。 **キューブ デザイナー** ダイアログ ボックスを表示するには、次の手順に従います。  
@@ -43,7 +42,7 @@ ms.locfileid: "48155422"
 |**翻訳**|キューブに含まれる、メジャー グループ、メジャー、キューブ ディメンション、パースペクティブ、KPI、アクション、名前付きセット、および計算されるメンバーに対する翻訳の作成と変更を行います。 このタブの詳細については、「[Translations &#40;Cube Designer&#41; &#40;Analysis Services - Multidimensional Data&#41;](translations-cube-designer-analysis-services-multidimensional-data.md)」([翻訳] &#40;キューブ デザイナー&#41; &#40;Analysis Services - 多次元データ&#41;) を参照してください。|  
 |**ブラウザー**|キューブのデータおよびメタデータを参照します。 このタブの詳細については、「[Browser &#40;Cube Designer&#41; &#40;Analysis Services - Multidimensional Data&#41;](browser-cube-designer-analysis-services-multidimensional-data.md)」([ブラウザー] &#40;キューブ デザイナー&#41; &#40;Analysis Services - 多次元データ&#41;) を参照してください。|  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [キューブ オブジェクト&#40;Analysis Services - 多次元データ&#41;](multidimensional-models-olap-logical-cube-objects/cube-objects-analysis-services-multidimensional-data.md)   
  [多次元モデルのキューブ](multidimensional-models/cubes-in-multidimensional-models.md)   
  [Analysis Services のデザイナーおよびダイアログ ボックス&#40;多次元データ&#41;](analysis-services-designers-and-dialog-boxes-multidimensional-data.md)  

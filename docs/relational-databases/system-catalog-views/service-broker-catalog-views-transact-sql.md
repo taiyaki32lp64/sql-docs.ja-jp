@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 00682b5e-4720-422e-a5ec-4a96f26e1300
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 1d8be2ed7dbf353935e46fcd09a45070838c0852
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: d589cceb34e446fe983aefe2930443afaea781fb
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51664587"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68018262"
 ---
 # <a name="service-broker-catalog-views-transact-sql"></a>Service Broker カタログ ビュー (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -38,7 +37,7 @@ ms.locfileid: "51664587"
 |[sys.routes](../../relational-databases/system-catalog-views/sys-routes-transact-sql.md)|[sys.services](../../relational-databases/system-catalog-views/sys-services-transact-sql.md)|  
 |[sys.service_contract_message_usages](../../relational-databases/system-catalog-views/sys-service-contract-message-usages-transact-sql.md)|[sys.transmission_queue](../../relational-databases/system-catalog-views/sys-transmission-queue-transact-sql.md)|  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [カタログ ビュー &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
  [システム ビュー &#40;TRANSACT-SQL&#41;](https://msdn.microsoft.com/library/35a6161d-7f43-4e00-bcd3-3091f2015e90)   
  [sys.service_broker_endpoints &#40;TRANSACT-SQL&#41;](../../relational-databases/system-catalog-views/sys-service-broker-endpoints-transact-sql.md)   

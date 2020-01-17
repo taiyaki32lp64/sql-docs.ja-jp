@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: 3e104c9e-66d4-436b-8b5b-a00ff667c95b
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 502de6978195dd323cad23944ab9c3c9d47cf7eb
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 58135670e18af30dd8795cc124eb43908f611e24
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47736130"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67969985"
 ---
 # <a name="storeslowercasequotedidentifiers-method-sqlserverdatabasemetadata"></a>storesLowerCaseQuotedIdentifiers メソッド (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -42,7 +41,7 @@ public boolean storesLowerCaseQuotedIdentifiers()
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- この storesLowerCaseQuotedIdentifiers メソッドは、java.sql.DatabaseMetaData インターフェイスで storesLowerCaseQuotedIdentifiers メソッドによって指定されます。  
+ この storesLowerCaseQuotedIdentifiers メソッドは、storesLowerCaseQuotedIdentifiers メソッドによって、java メタデータインターフェイスで指定されます。  
   
 ## <a name="see-also"></a>参照  
  [SQLServerDatabaseMetaData のメソッド](../../../connect/jdbc/reference/sqlserverdatabasemetadata-methods.md)   

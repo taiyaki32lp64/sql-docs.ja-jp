@@ -1,5 +1,5 @@
 ---
-title: getObject (int) メソッド |Microsoft Docs
+title: getObject メソッド (int) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: c4b8366b-c065-48e1-b712-19e2d9834228
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: a1e7e6e1e47f38f2616e0322ee964c5a2c43be5a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: db0b8768c599ebf8fcef127139b9fb8bd6d8ec50
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47650360"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67981226"
 ---
 # <a name="getobject-method-int"></a>getObject (int) メソッド
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -47,7 +46,7 @@ public java.lang.Object getObject(int index)
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- この getObject メソッドは、java.sql.CallableStatement インターフェイスの getObject メソッドで指定されています。  
+ この getObject メソッドは、java.sql.CallableStatement インターフェイスの getObject メソッドで規定されています。  
   
  このメソッドは、指定された列の値を Java オブジェクトとして返します。 この Java オブジェクトの型は、JDBC 仕様に指定されている組み込み型のマッピングに基づく、列の SQL 型に対応する既定の Java オブジェクト型です。 値が SQL NULL の場合、ドライバーは Java の null を返します。  
   

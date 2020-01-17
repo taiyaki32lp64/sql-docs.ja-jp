@@ -1,6 +1,7 @@
 ---
-title: ディスク I/O サブシステムの I/O 遅延問題の確認 | Microsoft Docs
-ms.custom: ''
+title: ディスク IO サブシステムの IO 遅延の問題の確認
+description: SQL Server によるポリシーベース管理のエラー メッセージ 833 がないか、イベント ログを確認することで、ディスク IO サブシステムの IO 遅延問題を確認するためのポリシーを有効にする方法について説明します。
+ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -12,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 23863340-d8e0-48d6-928b-462745885d37
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: 8f02049b36b030e6b2852ef2f5cac4f1eea737c9
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 0cf1dc8196ef8e248da485b01efc4bf192d4248c
+ms.sourcegitcommit: 035ad9197cb9799852ed705432740ad52e0a256d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51668972"
+ms.lasthandoff: 12/31/2019
+ms.locfileid: "75558177"
 ---
 # <a name="check-disk-input-and-output-subsystem-for-io-delay-problems"></a>ディスク I/O サブシステムの I/O 遅延問題の確認
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -42,6 +42,4 @@ ms.locfileid: "51668972"
   
  [サポート技術情報の資料 897284](https://go.microsoft.com/fwlink/?linkid=117743)  
   
- [SQL Server I/O Basics, Chapter 2](https://go.microsoft.com/fwlink/?LinkId=69370)  
-  
-  
+ [SQL Server I/O Basics, Chapter 2](/previous-versions/sql/sql-server-2005/administrator/cc917726(v=technet.10))

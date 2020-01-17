@@ -1,6 +1,7 @@
 ---
-title: データベース ミラーリング モニターの起動 (SQL Server Management Studio) | Microsoft Docs
-ms.custom: ''
+title: データベース ミラーリング モニターの起動 (SSMS)
+description: SQL Server Management Studio (SSMS) GUI 内でデータベース ミラーリング モニターを起動する方法について説明します。
+ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: high-availability
@@ -14,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 53165335-97ca-4f88-8e78-22f1839dee98
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: de3acb2eb2d8d6e805e098ffa8a5f4d439c2d09c
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: 7c096cf3bba17eb92d9141383c604e3558c834cd
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53214243"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75252770"
 ---
 # <a name="start-database-mirroring-monitor-sql-server-management-studio"></a>データベース ミラーリング モニターの起動 (SQL Server Management Studio)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

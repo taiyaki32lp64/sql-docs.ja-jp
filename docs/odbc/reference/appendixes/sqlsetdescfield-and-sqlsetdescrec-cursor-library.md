@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 4ccff067-85cd-4bfa-a6cd-7f28051fb5b9
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: b390df48e676290696ae8080c8f671fd0e37bad8
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 5a21af2a2067498a3ec495013554b70d6a86455a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47727720"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68125571"
 ---
 # <a name="sqlsetdescfield-and-sqlsetdescrec-cursor-library"></a>SQLSetDescField および SQLSetDescRec (カーソル ライブラリ)
 > [!IMPORTANT]  
@@ -55,7 +54,7 @@ ms.locfileid: "47727720"
   
  カーソル ライブラリへの呼び出しを実行する**SQLSetDescRec**ブックマーク列。  
   
- ODBC 2 代表です。*x*ドライバー、カーソル ライブラリは、SQLSTATE HY090 を返します (無効な文字列長またはバッファー長) と**SQLSetDescField**または**SQLSetDescRec**が呼び出され、SQL_DESC_OCTET_ を設定するにはブックマークのレコードを ARD を 4 に等しくない値の長さフィールドです。 ODBC 3 は、使用する場合 *.x*ドライバー、カーソル ライブラリにより、バッファー サイズを変更します。  
+ ODBC を使用する場合*2.x*ドライバー、カーソル ライブラリは、SQLSTATE HY090 を返します (無効な文字列長またはバッファー長) と**SQLSetDescField**または**SQLSetDescRec**が呼び出されます4 に等しくない値に、ARD のブックマーク レコードの SQL_DESC_OCTET_LENGTH フィールドを設定します。 ODBC を使用する場合*3.x*ドライバー、カーソル ライブラリにより、バッファーのサイズを変更します。  
   
  カーソル ライブラリを実行します**SQLSetDescField** SQL_DESC_BIND_OFFSET_PTR、SQL_DESC_BIND_TYPE、SQL_DESC_ROW_ARRAY_SIZE、または SQL_DESC_ROW_STATUS_PTR フィールドの値を返すに呼び出されます。 これらのフィールドは、ブックマークの行だけでなく、任意の行に対して返されます。  
   

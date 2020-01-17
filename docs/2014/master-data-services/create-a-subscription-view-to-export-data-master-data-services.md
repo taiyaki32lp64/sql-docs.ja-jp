@@ -10,15 +10,15 @@ helpviewer_keywords:
 - subscription views [Master Data Services], creating
 - creating subscription views [Master Data Services]
 ms.assetid: a5e28961-af16-414a-9845-d2e06aac5214
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: cf14f942857361256febd4329a116c2d349659a0
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: c4a2f747192b1cddefeac256d4470a2b345305de
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52747934"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65479950"
 ---
 # <a name="create-a-subscription-view-master-data-services"></a>サブスクリプション ビューを作成する (マスター データ サービス)
   サブスクリプション ビューを作成して、データのビューを作成するとき、[!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]サブスクライブ システムで使用するデータベース。  

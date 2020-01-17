@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: b7e48e9c-8912-4003-b4ef-30aa44de06a7
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: b5f033ac12569c7de61af071930d6c8d58d8b611
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: bf2ef856d8970bf60b3f1f329c57a2379eb528dc
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47693420"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68094019"
 ---
 # <a name="installing-odbc-components"></a>ODBC コンポーネントのインストール
 > [!NOTE]  

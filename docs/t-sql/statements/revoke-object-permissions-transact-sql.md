@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 99c7146e-d2e7-4f1a-80ff-21a05bc5e8bb
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: 8e7c288fb10eb1473835f29fa538c49d2fe47585
-ms.sourcegitcommit: c6e71ed14198da67afd7ba722823b1af9b4f4e6f
+ms.openlocfilehash: 0e374b0042ec4b46b8c64e71b86d45d1f4cd3062
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/16/2019
-ms.locfileid: "54327703"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68140901"
 ---
 # <a name="revoke-object-permissions-transact-sql"></a>REVOKE (オブジェクトの権限の取り消し) (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -77,7 +76,7 @@ REVOKE [ GRANT OPTION FOR ] <permission> [ ,...n ] ON
  [!INCLUDE[vcpransi](../../includes/vcpransi-md.md)]-92 準拠のために用意されています。 ALL の動作は変更されません。  
   
  *column*  
- 権限を取り消すテーブル、ビュー、またはテーブル値関数内の列の名前を指定します。 かっこ () は、必要があります。 列で拒否できるのは、SELECT、REFERENCES、および UPDATE の各権限だけです。 *column* は permission 句内、またはセキュリティ保護可能なリソースの名前の後に指定できます。  
+ 権限を取り消すテーブル、ビュー、またはテーブル値関数内の列の名前を指定します。 かっこ () が必要です。 列で拒否できるのは、SELECT、REFERENCES、および UPDATE の各権限だけです。 *column* は permission 句内、またはセキュリティ保護可能なリソースの名前の後に指定できます。  
   
  ON [ OBJECT :: ] [ *schema_name* ] . *object_name*  
  権限を取り消すオブジェクトを指定します。 OBJECT 句は、*schema_name* を指定する場合は省略可能です。 OBJECT 句を使用する場合は、スコープ修飾子 (::) が必要です。 *schema_name* が指定されていない場合、既定のスキーマが使用されます。 *schema_name* が指定されている場合、スキーマのスコープ修飾子 (.) が必要です。  
@@ -85,7 +84,7 @@ REVOKE [ GRANT OPTION FOR ] <permission> [ ,...n ] ON
  { FROM | TO } \<database_principal> 権限を取り消すプリンシパルを指定します。  
   
  GRANT OPTION  
- 指定した権限を他のプリンシパルに許可するための権利が、取り消されます。 権限自体は取り消されません。  
+ 指定した権限を他のプリンシパルに許可するための権利が、取り消されることを示します。 権限自体は取り消されません。  
   
 > [!IMPORTANT]  
 >  指定した権限が GRANT オプションなしでプリンシパルに許可されている場合は、その権限自体が取り消されます。  
@@ -131,7 +130,7 @@ REVOKE [ GRANT OPTION FOR ] <permission> [ ,...n ] ON
 |-----------------------|----------------------------------|----------------------------------|  
 |ALTER|CONTROL|ALTER|  
 |CONTROL|CONTROL|CONTROL|  
-|Del|CONTROL|Del|  
+|DELETE|CONTROL|DELETE|  
 |EXECUTE|CONTROL|EXECUTE|  
 |INSERT|CONTROL|INSERT|  
 |RECEIVE|CONTROL|CONTROL|  

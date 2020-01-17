@@ -1,8 +1,8 @@
 ---
-title: アップグレードする SQL Server の Database 実験 Assistant ソリューションの概要
-description: データベースの実験のアシスタントの概要
-ms.custom: ''
-ms.date: 01/08/2019
+title: Database Experimentation Assistant の概要
+description: Database Experimentation Assistant の概要
+ms.custom: seo-lt-2019
+ms.date: 12/12/2019
 ms.prod: sql
 ms.prod_service: dea
 ms.suite: sql
@@ -10,102 +10,109 @@ ms.technology: dea
 ms.tgt_pltfrm: ''
 ms.topic: conceptual
 author: HJToland3
-ms.author: ajaykar
-ms.reviewer: douglasl
-manager: craigg
-ms.openlocfilehash: 1c2a28a5dc83d22a327bf797358d5edae69eb82b
-ms.sourcegitcommit: 9ea11d738503223b46d2be5db6fed6af6265aecc
+ms.author: rajsell
+ms.reviewer: mathoma
+ms.openlocfilehash: 939ff20fd0b708e949aee41d8aa2f3f59b63a9eb
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/07/2019
-ms.locfileid: "56987828"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75247121"
 ---
-# <a name="overview-of-database-experimentation-assistant"></a>データベースの実験のアシスタントの概要
+# <a name="overview-of-database-experimentation-assistant"></a>Database Experimentation Assistant の概要
 
-データベース実験アシスタント (DEA) は、SQL Server のアップグレード実験ソリューションです。 DEA 対象のバージョンが SQL Server の特定のワークロードを評価することができます。 以前の SQL Server バージョン (2005年以降) から SQL Server の最新のバージョンにアップグレードしたお客様は、ツールで提供される分析のメトリックを使用できます。 
+Database Experimentation Assistant (DEA) は SQL Server アップグレードの実験ソリューションです。 DEA は、特定のワークロードの対象となるバージョンの SQL Server を評価するのに役立ちます。 以前のバージョンの SQL Server (2005 以降) から新しいバージョンの SQL Server にアップグレードする場合は、ツールに用意されている分析メトリックを使用できます。
 
-DEA 分析のメトリックは次のとおりです。
-- 互換性エラーが発生したクエリ
-- 低下したクエリおよびクエリ プラン
-- その他のワークロード比較データ
+分析メトリックは次のとおりです。
 
-データの比較については、信頼性の高いと、正常なアップグレード エクスペリエンスにつながります。
+- 互換性エラーが発生しているクエリ。
+- 低下したクエリとクエリプラン。
+- その他のワークロード比較データ。
 
-DEA とデモを 19 分については、次のビデオをご覧ください。
+比較データを使用すると、信頼度が高くなり、確実にアップグレードを成功させることができます。
 
-> [!VIDEO https://channel9.msdn.com/Shows/Data-Exposed/Introducing-the-Database-Experimentation-Assistant/player]
+## <a name="get-dea"></a>DEA を取得する
 
-## <a name="get-dea"></a>DEA を取得します。
+DEA をインストールするには、最新バージョンのツールを[ダウンロード](https://www.microsoft.com/download/details.aspx?id=54090)します。 次に、 **DatabaseExperimentationAssistant**ファイルを実行します。
 
-DEA をインストールする[ダウンロード](https://www.microsoft.com/download/details.aspx?id=54090)ツールの最新バージョン。 実行し、 **DatabaseExperimentationAssistant.exe**ファイル。
+## <a name="solution-architecture-for-comparing-workloads"></a>ワークロードを比較するためのソリューションアーキテクチャ
 
-## <a name="solution-architecture-for-comparing-workloads"></a>ワークロードを比較するためのソリューション アーキテクチャ
-
-次の図は、ワークロードの比較については、ソリューションのアーキテクチャを示します。 ワークロードの比較は、SQL Server 2008 から SQL Server 2016 へのアップグレード中に DEA および Distributed Replay を使用します。
+次の図は、ワークロード比較のソリューションアーキテクチャを示しています。 ワークロードの比較では、SQL Server 2008 から SQL Server 2016 へのアップグレード時に DEA と分散再生を使用します。
 
 ![ワークロード比較ソリューションのアーキテクチャ](./media/database-experimentation-assistant-overview/dea-overview-compare-solution-architecture.png)
 
-## <a name="dea-prerequisites"></a>DEA の前提条件
+## <a name="dea-prerequisites"></a>前提条件を排除する
 
-以下は、DEA を実行するためのいくつかの前提条件です。
-- ハードウェアの最小要件:3.5 GB の RAM、シングルコア マシン。
-- 最適なハードウェア要件:(3.5 GB RAM 以上の) と 8 コア CPU。 プロセッサを 8 個を超えるコアを搭載 DEA ランタイムを強化します。
-- さらに 33% のパフォーマンス トレースのサイズは、店 A、B、およびレポートの分析データベースに必要です。
+DEA を実行するための前提条件を次に示します。
 
-## <a name="configure-dea"></a>DEA を構成します。
+- 最小ハードウェア要件: 3.5 GB の RAM を搭載したシングルコアコンピューター。
+- 理想的なハードウェア要件: 8 コア CPU (3.5 GB 以上の RAM)。 8個を超えるコアを持つプロセッサは、実行時間が短縮されます。
+- 、B、およびレポート分析データベースを格納するには、さらに33% のパフォーマンストレースサイズが必要です。
 
-前提条件となる環境のアーキテクチャ推奨 DEA をインストールする*分散再生コント ローラーと同じコンピューター上*します。 この実習では、コンピューター間の呼び出しを回避し、構成を簡略化します。
+## <a name="configure-dea"></a>DEA の構成
 
-### <a name="required-configuration-for-workload-comparison-by-using-dea"></a>DEA を使用してワークロードの比較のために必要な構成
+前提条件となる環境アーキテクチャでは、DEA を*分散再生コントローラーと同じコンピューターに*インストールすることをお勧めします。 これにより、コンピューター間の呼び出しが回避され、構成が簡単になります。
 
-DEA は、Windows 認証を使用して、データベース サーバーに接続します。 DEA を実行しているユーザーは、Windows 認証を使用してデータベース サーバー (ソース、ターゲット、および分析) に接続できることを確認します。
+### <a name="required-configuration-for-workload-comparison-using-dea"></a>DEA を使用したワークロード比較のために必要な構成
 
-**構成要件をキャプチャ**:
+DEA は、Windows 認証を使用してデータベースサーバーに接続します。 DEA を実行するユーザーが Windows 認証を使用してデータベースサーバー (ソース、ターゲット、および分析) に接続できることを確認してください。
 
-*   DEA を実行しているユーザーは、Windows 認証を使用して、ソース データベース サーバーに接続できます。
-*   DEA を実行しているユーザーは、ソース データベース サーバー上の sysadmin 権限を持っています。
-*   ソース データベース サーバーを実行してサービス アカウントでは、トレース フォルダーのパスへの書き込みアクセスを持っています。
+**構成要件のキャプチャ**
 
-詳細については、次を参照してください、[キャプチャに関する FAQ。](database-experimentation-assistant-capture-trace.md#frequently-asked-questions-about-trace-capture)
+トレースをキャプチャするには、DEA を実行しているユーザーが必要です。
 
-**構成要件を再生**: 
+- Windows 認証を使用して、ソースデータベースサーバーに接続できます。
+- には、ソースデータベースサーバーに対する sysadmin 権限があります。
 
-*   DEA を実行しているユーザーは、Windows 認証を使用して、ターゲット データベース サーバーに接続できます。
-*   DEA を実行しているユーザーは、ターゲット データベースのサーバーで sysadmin 権限を持っています。
-*   対象のデータベース サーバーを実行しているサービス アカウントでは、トレース フォルダーのパスへの書き込みアクセスを持っています。
-*   分散再生クライアントを実行しているサービス アカウントは、Windows 認証を使用して、ターゲット データベース サーバーに接続できます。
-*   DEA は COM インターフェイスを使用して Distributed Replay controller と通信します。 分散再生コント ローラー上の受信要求の TCP ポートが開いていることを確認します。
+また、ソースデータベースサーバーを実行しているサービスアカウントには、トレースフォルダーパスへの書き込みアクセス権が必要です。
 
-詳細については、次を参照してください、[再生に関する FAQ。](database-experimentation-assistant-replay-trace.md#frequently-asked-questions-about-trace-replay)
+詳細については、「[トレースキャプチャに関してよく寄せられる質問](database-experimentation-assistant-capture-trace.md#frequently-asked-questions-about-trace-capture)」を参照してください。
 
-**分析の構成要件**: 
+**再生構成の要件**
 
-*   DEA を実行しているユーザーは、Windows 認証を使用して、分析データベース サーバーに接続できます。
-*   DEA を実行しているユーザーは、ソース データベース サーバー上の sysadmin 権限を持っています。
+トレースを再生するには、DEA を実行しているユーザーである必要があります。
 
-詳細については、次を参照してください、[分析に関する FAQ。](database-experimentation-assistant-create-report.md#frequently-asked-questions-about-analysis-reports)
+- Windows 認証を使用してターゲットデータベースサーバーに接続できます。
+- には、ターゲットデータベースサーバーに対する sysadmin 権限があります。
 
-## <a name="set-up-telemetry"></a>製品利用統計情報を設定します。
+さらに、トレースを再生するには、次のものが必要です。
 
-DEA が Microsoft に製品利用統計情報を送信するインターネット対応機能です。 Microsoft は、製品のエクスペリエンスを強化するためにテレメトリを収集します。 製品利用統計情報は省略可能です。 収集される情報は、local audit のコンピューターにも保存されます。 常に、収集される情報を確認できます。 DEA からのすべてのログ ファイルは、%temp% に保存されます\\DEA フォルダー。
+- ターゲットデータベースサーバーを実行しているサービスアカウントには、トレースフォルダーパスへの書き込みアクセス権があります。
+- 分散再生クライアントを実行しているサービスアカウントは、Windows 認証を使用してターゲットデータベースサーバーに接続できます。
+- 分散再生コントローラーで受信した要求に対して TCP ポートが開かれています。 DEA は、COM インターフェイスを使用して、分散再生コントローラーと通信します。
 
-収集するイベントを決定できます。 また、収集されたイベントを Microsoft に送信されるかどうかも決定します。 イベントの 4 つの種類があります。
+詳細については、「[トレースの再生に関してよく寄せ](database-experimentation-assistant-replay-trace.md#frequently-asked-questions-about-trace-replay)られる質問」を参照してください。
 
-*   **TraceEvent**:アプリケーション (たとえば、「トリガーされた停止キャプチャ」) の使用状況イベント。
-*   **例外**:アプリケーションの使用状況の中にスローされる例外。
-*   **DiagnosticEvent**:問題が発生したときに、診断を支援するために、イベント ログ (*いない*Microsoft に送信される)。
-*   **FeedbackEvent**:アプリケーションを使用して送信されるユーザーからのフィードバック。
+**分析の構成要件**
 
-次の手順は、収集するイベントを選択する方法を説明し、Microsoft にイベントを送信するかどうか。
+分析を実行するには、DEA を実行するユーザーが必要です。
 
-1.  DEA がインストールされている場所に移動 (たとえば、c:\\Program Files (x86)\\Microsoft Corporation\\データベース実験アシスタント)。
-2.  2 つの .config ファイルを開きます。(アプリケーション) の DEA.exe.config と DEACmd.exe.config (CLI) のです。
-3.  イベントの種類の収集を停止するには、値を設定*イベント*(たとえば、 **TraceEvent**) に**false**します。 もう一度イベントの収集を開始するに値を設定します。 **true**します。
-4.  イベントのローカル コピーの保存を停止するには、値を設定**TraceLoggerEnabled**に**false**します。 ローカル コピーをもう一度保存を開始する値を設定**true**します。
-5.  イベントを Microsoft に送信を停止するには、値を設定**AppInsightsLoggerEnabled**に**false**します。 もう一度 Microsoft にイベントの送信を開始する値を設定**true**します。
+- では、Windows 認証を使用して分析データベースサーバーに接続できます。
+- には、ソースデータベースサーバーに対する sysadmin 権限があります。
 
-DEA に準拠するもの、 [Microsoft プライバシーに関する声明](https://aka.ms/dea-privacy)します。
+詳細については、「[分析レポートに関してよく寄せ](database-experimentation-assistant-create-report.md#frequently-asked-questions-about-analysis-reports)られる質問」を参照してください。
 
-## <a name="next-steps"></a>次のステップ
+## <a name="set-up-telemetry"></a>テレメトリの設定
 
-[開始](database-experimentation-assistant-get-started.md)キャプチャ、再生、およびトレースを分析に必要な手順について説明します。
+DEA にはインターネット対応の機能があり、製品のエクスペリエンスを向上させるために利用できるテレメトリ情報を Microsoft に送信できます。 収集された情報は、ローカル監査のためにコンピューターにも保存されるので、収集された情報を常に確認できます。 すべての DEA ログファイルは、% temp%\\dea フォルダーに保存されます。
+
+テレメトリデータは、次の4種類のイベントで収集できます。
+
+- **Traceevent**: アプリケーションの使用状況イベント (たとえば、"トリガーされたキャプチャ停止")。
+- **例外**: アプリケーションの使用中に例外がスローされました。
+- **DiagnosticEvent**: 問題が発生した場合の診断を支援するイベントログ (Microsoft に送信さ*れません*)。
+- **FeedbackEvent**: アプリケーションを通じて送信されるユーザーフィードバック。
+
+テレメトリデータの収集と送信は任意です。 収集されるイベントと収集されるイベントを指定するには、次の手順を実行します。
+
+1. DEA がインストールされている場所 (たとえば、C:\\Program Files (x86)\\Microsoft Corporation\\Database Experimentation Assistant) に移動します。
+2. 必要に応じて、**構成ファイル (** アプリケーションの場合) と**DEACMD .exe** (CLI の場合) を開いて変更し、シナリオに対処します。
+    - イベントの種類の収集を停止するには、*イベント*の値 ( **traceevent**など) を**false**に設定します。 イベントの収集を再開するには、値を**true**に設定します。
+    - イベントのローカルコピーの保存を停止するには、 **TraceLoggerEnabled**の値を**false**に設定します。 ローカルコピーの保存を再び開始するには、値を**true**に設定します。
+    - Microsoft へのイベントの送信を停止するには、 **AppInsightsLoggerEnabled**の値を**false**に設定します。 再度 Microsoft へのイベント送信を開始するには、値を**true**に設定します。
+
+DEA は、Microsoft の[プライバシー](https://aka.ms/dea-privacy)に関する声明によって管理されます。
+
+## <a name="see-also"></a>参照
+
+- この記事では、2つの環境におけるワークロードの比較に関連するプロセスについて説明します。[ワークロード比較プロセスの概要](database-experimentation-assistant-get-started.md)について説明します。

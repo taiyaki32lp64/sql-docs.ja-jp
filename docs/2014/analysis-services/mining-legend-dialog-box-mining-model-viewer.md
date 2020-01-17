@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dm.miningmodeleditor.nodelegend.f1
@@ -15,17 +14,17 @@ ms.assetid: 9040e213-a6fd-420e-be3e-37cc3a17c111
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 5366db29a8e3fbfc286684b372c9f71d0cf6a7ff
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 44c109694f0a3263ff1ad40d1c343a1af91ce630
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48218722"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66077766"
 ---
 # <a name="mining-legend-dialog-box-mining-model-viewer"></a>[マイニング凡例] ダイアログ ボックス (マイニング モデル ビューアー)
   マイニング モデル ビューアーで選択したノードまたはアイテムの詳細情報を取得するには、 **[マイニング凡例]** ダイアログ ボックスを使用します。  
   
- マイニング凡例には、モデルの種類に応じてさまざまな種類の情報が表示されます。 たとえば、タイム シリーズ モデルで、履歴データを示す線グラフ上の 1 点をクリックすると、 **マイニング凡例** には数値が表示されます。 クラスター モデルに対して使用するビューアーでは、 **マイニング凡例** には、属性のプロファイルで使用されるカラー キーが表示されます。 各コンテキストにおけるマイニング凡例の使用方法については、**「オプション」** セクションのリンクを参照してください。  
+ マイニング凡例には、モデルの種類に応じてさまざまな種類の情報が表示されます。 たとえば、タイム シリーズ モデルで、履歴データを示す線グラフ上の 1 点をクリックすると、 **マイニング凡例** には数値が表示されます。 クラスター モデルに対して使用するビューアーでは、 **マイニング凡例** には、属性のプロファイルで使用されるカラー キーが表示されます。 各コンテキストにおけるマイニング凡例の使用方法については、 **「オプション」** セクションのリンクを参照してください。  
   
  マイニング凡例は、すべてのモデル ビューで使用されるわけではありません。 たとえば、次の種類のモデル用のビューアーでは、他の UI オプションを使用して詳細情報を用意するので、凡例は使用しません。  
   
@@ -54,8 +53,8 @@ ms.locfileid: "48218722"
  [Microsoft ツリー ビューアーを使用したモデルの参照](data-mining/browse-a-model-using-the-microsoft-tree-viewer.md)  
   
 ## <a name="see-also"></a>参照  
- [データ マイニング アルゴリズム&#40;Analysis Services - データ マイニング&#41;](data-mining/data-mining-algorithms-analysis-services-data-mining.md)   
- [マイニング モデル ビューアー&#40;データ マイニング モデル デザイナー&#41;](mining-model-viewers-data-mining-model-designer.md)   
+ [データ マイニング アルゴリズム &#40;Analysis Services - データ マイニング&#41;](data-mining/data-mining-algorithms-analysis-services-data-mining.md)   
+ [マイニング モデル ビューアー (データ マイニング モデル デザイナー)](mining-model-viewers-data-mining-model-designer.md)   
  [データ マイニング モデル ビューアー](data-mining/data-mining-model-viewers.md)  
   
   

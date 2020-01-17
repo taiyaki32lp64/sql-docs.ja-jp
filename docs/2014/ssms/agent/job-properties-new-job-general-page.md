@@ -13,11 +13,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 47f4f0abf784118dd94b62d7b8e08a2e060c639a
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52760884"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68211389"
 ---
 # <a name="job-properties-and-new-job-general-page"></a>ジョブのプロパティと新しいジョブ ([全般] ページ)
   このページを使用すると、[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェント ジョブの全般プロパティを表示したり、変更したりできます。  
@@ -56,7 +56,7 @@ ms.locfileid: "52760884"
  **[ジョブ履歴の表示]**  
  ジョブ履歴を表示します。 **[ジョブのプロパティ] の [全般]** ページでのみ表示されます。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [ジョブの実装](implement-jobs.md)   
  [ジョブ カテゴリ:ジョブ カテゴリを管理します。](job-categories-manage-job-categories.md)  
   

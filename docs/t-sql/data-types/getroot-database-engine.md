@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 240b70f1-eeda-44ab-b4bb-9e4af80fa7c0
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 7f6a820b9f19d1102ed5cf16b469401acf5449d3
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 58f5389953c2257c7478ad54665cfdeeb0a805c4
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56039593"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68077931"
 ---
 # <a name="getroot-database-engine"></a>GetRoot (データベース エンジン)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -48,7 +47,7 @@ static SqlHierarchyId GetRoot ( )
 **CLR 戻り値の型:SqlHierarchyId**
   
 ## <a name="remarks"></a>Remarks  
-階層ツリーのルート ノードを確認するときに使用します。
+階層ツリー内のルート ノードを決定するために使用されます。
   
 ## <a name="examples"></a>使用例  
   

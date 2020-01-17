@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 3b671f49-c4cc-44fd-801e-e738a8c79415
 author: Shamikg
 ms.author: Shamikg
-manager: craigg
-ms.openlocfilehash: 29dd391a094f37334008e98af60bcdc2396a997a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 209ed616f3993a0a93b802ddeca39a7065485afc
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47676290"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68051533"
 ---
 # <a name="refresh-from-database-accesstosql"></a>データベース (AccessToSQL) からの更新します。
 **データベースからの更新** ダイアログ ボックスを使用して Access データベースから更新するには、どのオブジェクトを選択できます。 ダイアログ ボックス内の行は色分け、メタデータの状態に基づいて。  

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.bidtoolset.kpi.f1
@@ -13,12 +12,12 @@ ms.assetid: c96026c2-4394-4c3c-986b-4c95a4421900
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: dde3d1c12dd4f5b037d24030ae9ec96ae9f97dd0
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: fc0bd941392c208ad693be21a391d7b9e3f587a1
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52405147"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66067506"
 ---
 # <a name="create-and-manage-kpis-ssas-tabular"></a>KPI の作成および管理 (SSAS テーブル)
   このトピックでは、テーブル モデルで KPI (主要業績評価指標) を作成、編集、または削除する方法を説明します。 KPI を作成するには、KPI のベース値に評価されるメジャーを選択します。 次に、[主要業績評価指標] ダイアログ ボックスで、評価結果が対象の値になる 2 番目のメジャーまたは絶対値を選択します。 ベース メジャーと対象のメジャーの間のパフォーマンスを測定する、状態のしきい値を定義します。  
@@ -83,7 +82,7 @@ ms.locfileid: "52405147"
 |[説明]|Alt + D|  
 |傾向|Alt + T|  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [KPI &#40;SSAS テーブル&#41;](kpis-ssas-tabular.md)   
  [メジャー &#40;SSAS テーブル&#41;](measures-ssas-tabular.md)   
  [メジャーを作成および管理する &#40;SSAS テーブル&#41;](create-and-manage-measures-ssas-tabular.md)  

@@ -11,15 +11,14 @@ helpviewer_keywords:
 - xml data type [SQL Server], variables
 - xml data type [SQL Server], columns
 ms.assetid: 8994ab6e-5519-4ba2-97a1-fac8af6f72db
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: 4c4098547eabaaca930fd6eef2b857dbf062bc7f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: MightyPen
+ms.author: genemi
+ms.openlocfilehash: 16cb419ef7cc893575e91c695158e9d7b66ce2c0
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47797990"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67984868"
 ---
 # <a name="create-xml-data-type-variables-and-columns"></a>XML データ型の変数と列の作成
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -68,7 +67,7 @@ CREATE TABLE T (XmlColumn xml
                   default CAST(N'<element1/><element2/>' AS xml))  
 ```  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]**xml** 型の列に対する NULL 制約および NOT NULL 制約もサポートされます。 例 :  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]**xml** 型の列に対する NULL 制約および NOT NULL 制約もサポートされます。 例:  
   
 ```  
 CREATE TABLE T (XmlColumn xml NOT NULL)  

@@ -12,15 +12,14 @@ dev_langs:
 helpviewer_keywords:
 - ConvexHullAggregate method (geometry)
 ms.assetid: ca3d3b55-e02d-4599-8817-a54f5e047db8
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: 7ea5ea886e6692670e75aed204fa2a367f348191
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: MladjoA
+ms.author: mlandzic
+ms.openlocfilehash: c35ca3cfecd0eca0b08c0a1437cd8b57570126b1
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47767230"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68017515"
 ---
 # <a name="convexhullaggregate-geometry-data-type"></a>ConvexHullAggregate (geometry データ型)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]

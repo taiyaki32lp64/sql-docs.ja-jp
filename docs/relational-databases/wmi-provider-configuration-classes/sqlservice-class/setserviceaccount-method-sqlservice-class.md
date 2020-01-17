@@ -1,6 +1,6 @@
 ---
-title: SetServiceAccount メソッド (SqlService クラス) |Microsoft Docs
-ms.custom: ''
+title: SetServiceAccount メソッド (SqlService)
+ms.custom: seo-lt-2019
 ms.date: 03/03/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: d5782892-e9d8-4d48-92af-b3afe9610f84
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: 43fb8aefcee5880cd941b8d88553c7ef6d266632
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: b500ca0f879430f0e5655348bdeebda0e0921292
+ms.sourcegitcommit: baa40306cada09e480b4c5ddb44ee8524307a2ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51675671"
+ms.lasthandoff: 11/06/2019
+ms.locfileid: "73660897"
 ---
 # <a name="setserviceaccount-method-sqlservice-class"></a>SetServiceAccount メソッド (SqlService クラス)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -46,19 +45,19 @@ object.SetServiceAccount(ServiceStartName , ServiceStartPassword)
   
 -   アカウントがビルトイン ドメインに属している場合、\Username を指定することができます。  
   
--   NULL が指定されている場合、サービスとしてログオンする、 **LocalSystem**アカウント。  
+-   NULL を指定した場合、サービスは**LocalSystem**アカウントとしてログオンします。  
   
- カーネルまたはシステム レベルのドライバーの*StartName*ドライバー オブジェクト名を含む \FileSystem\Rdr または \Driver\Xns の I/O システムが、デバイス ドライバーの読み込みに使用します。 NULL が指定された場合、ドライバーは、I/O システムがサービス名に基づいて作成した既定のオブジェクト名 (たとえば、DWDOM\Admin) で実行されます。  
+ カーネルまたはシステムレベルのドライバーの場合、 *StartName*にはドライバーオブジェクト名 (\ Filesystem\r dr または \Driver\Xns) が含まれます。この名前は、i/o システムがデバイスドライバーを読み込むために使用します。 NULL が指定された場合、ドライバーは、I/O システムがサービス名に基づいて作成した既定のオブジェクト名 (たとえば、DWDOM\Admin) で実行されます。  
   
  *ServiceStartPassword*  
- アカウント名のパスワードを指定する文字列値、 *StartName*パラメーター。 パスワードを変更しない場合は NULL を指定します。 サービスがパスワードを持っていない場合は、空の文字列を指定します。  
+ *StartName*パラメーターのアカウント名のパスワードを示す文字列値です。 パスワードを変更しない場合は NULL を指定します。 サービスがパスワードを持っていない場合は、空の文字列を指定します。  
   
 ## <a name="property-valuereturn-value"></a>プロパティ値/戻り値  
- A **uint32**値は、サービスが正常に変更された場合は 0 または 1 の場合は、要求はサポートされていません。 それ以外の数値はエラーを示します。  
+ **Uint32**値。サービスが正常に変更された場合は0、要求がサポートされていない場合は1になります。 それ以外の数値はエラーを示します。  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>解説  
   
 ## <a name="see-also"></a>参照  
- [開始とサービスの停止](https://technet.microsoft.com/library/ms174886\(v=sql.105\).aspx)  
+ [サービスの開始と停止](https://technet.microsoft.com/library/ms174886\(v=sql.105\).aspx)  
   
   

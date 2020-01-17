@@ -16,11 +16,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 78a7f93dc2d906f86a83f1cfd2518b39cd73c9e0
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52751224"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62510024"
 ---
 # <a name="save-changes"></a>[変更の保存]
   **[はい]** をクリックするまでは一覧表示された項目への変更が保存されない、という警告が表示されます。  

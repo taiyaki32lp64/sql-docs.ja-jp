@@ -26,22 +26,19 @@ helpviewer_keywords:
 - BEGIN TRY statement
 - CATCH block
 ms.assetid: 248df62a-7334-4bca-8262-235a28f4b07f
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
+author: rothja
+ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 1487803dbbcb2ef09dd182dea2eaffa6a967badf
-ms.sourcegitcommit: 96032813f6bf1cba680b5e46d82ae1f0f2da3d11
+ms.openlocfilehash: 1ccb51c6934a60fa60fa7fbcb12967928d63de92
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/15/2019
-ms.locfileid: "54298929"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68121556"
 ---
 # <a name="trycatch-transact-sql"></a>TRY...CATCH (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-  > [!div class="nextstepaction"]
-  > [SQL ドキュメントの目次に関するご意見を共有してください。](https://aka.ms/sqldocsurvey)
 
   [!INCLUDE[tsql](../../includes/tsql-md.md)] のエラー処理を実装します。これは [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual C# 言語および [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual C++ 言語での例外処理に似ています。 [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントのグループを TRY ブロックで囲むことができます。 TRY ブロック内でエラーが発生すると、CATCH ブロックで囲まれた別のステートメントのグループに制御が渡されます。  
   
@@ -73,15 +70,15 @@ END CATCH
   
  TRY...CATCH 構造は複数のバッチをまたぐことはできません。 TRY...CATCH 構造は、[!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントの複数のブロックをまたぐことはできません。 たとえば、TRY...CATCH 構造で [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントの 2 つの BEGIN...END ブロックをまたいだり、IF...ELSE 構造をまたいだりすることはできません。  
   
- TRY ブロックで囲まれたコードでエラーが発生しなかった場合は、TRY ブロック内の最後のステートメントの実行が完了すると、END CATCH ステートメントの直後にあるステートメントに制御が渡されます。 TRY ブロックで囲まれたコードでエラーが発生した場合は、CATCH ブロック内の最初のステートメントに制御が渡されます。 END CATCH ステートメントがストアド プロシージャまたはトリガー内の最後のステートメントである場合は、そのストアド プロシージャの呼び出しまたはトリガーの起動を実行したステートメントに制御が渡されます。  
+ TRY ブロックで囲まれたコードでエラーが発生しなかった場合は、TRY ブロック内の最後のステートメントの実行が完了すると、END CATCH ステートメントの直後にあるステートメントに制御が渡されます。 TRY ブロックで囲まれたコードでエラーが発生した場合は、関連する CATCH ブロックの最初のステートメントに制御が渡されます。 END CATCH ステートメントがストアド プロシージャまたはトリガー内の最後のステートメントである場合は、そのストアド プロシージャを呼び出した、またはトリガーを起動したステートメントに制御が渡されます。  
   
- CATCH ブロック内のコードが完了すると、END CATCH ステートメントの直後にあるステートメントに制御が渡されます。 CATCH ブロックによってトラップされたエラーは、呼び出し元のアプリケーションに返されません。 エラー情報の一部をアプリケーションに返す必要がある場合は、CATCH ブロック内のコードでその処理を行います。これには、SELECT 結果セットや、RAISERROR ステートメントおよび PRINT ステートメントなどのメカニズムを使用します。  
+ CATCH ブロック内のコードが完了すると、END CATCH ステートメントの直後にあるステートメントに制御が渡されます。 CATCH ブロックによってトラップされたエラーは、呼び出し元のアプリケーションに返されません。 エラー情報の一部をアプリケーションに返す必要がある場合は、CATCH ブロック内のコードがその処理を行います。これには、SELECT 結果セットや、RAISERROR ステートメントおよび PRINT ステートメントなどのメカニズムが使用されます。  
   
  TRY...CATCH 構造は入れ子にすることができます。 TRY ブロックと CATCH ブロックのどちらにも、入れ子になった TRY...CATCH 構造を含めることができます。 たとえば、CATCH ブロックに TRY...CATCH 構造を埋め込み、CATCH コードによって発生したエラーを処理することができます。  
   
  CATCH ブロックで発生したエラーは、他の場所で生成されたエラーと同じように扱われます。 CATCH ブロックに入れ子になった TRY...CATCH 構造が含まれている場合、入れ子になった TRY ブロックでエラーが発生すると、入れ子になった CATCH ブロックに制御が渡されます。 入れ子になった TRY...CATCH 構造が存在しない場合、エラーは呼び出し元に返されます。  
   
- TRY...CATCH 構造では、TRY ブロック内のコードによって実行されたストアド プロシージャまたはトリガーからの処理されないエラーが検出されます。 また、ストアド プロシージャまたはトリガーに独自の TRY...CATCH 構造を含めて、それらのコードによって生成されたエラーを処理することもできます。 たとえば、TRY ブロックでストアド プロシージャを実行し、そのストアド プロシージャでエラーが発生した場合、次の方法でエラーを処理できます。  
+ TRY...CATCH 構造では、TRY ブロック内のコードによって実行されたストアド プロシージャまたはトリガーからの処理されないエラーが検出されます。 また、ストアド プロシージャまたはトリガーに独自の TRY...CATCH 構造を含めて、それらのコードによって生成されたエラーを処理することもできます。 たとえば、TRY ブロックでストアド プロシージャが実行され、そのストアド プロシージャでエラーが発生した場合、次の方法でエラーを処理できます。  
   
 -   ストアド プロシージャに独自の TRY...CATCH 構造が含まれていない場合、エラーが発生すると、EXECUTE ステートメントを含んでいる TRY ブロックに関連付けられた CATCH ブロックに制御が返されます。  
   
@@ -92,7 +89,7 @@ END CATCH
  TRY...CATCH 構造をユーザー定義関数内で使用することはできません。  
   
 ## <a name="retrieving-error-information"></a>エラー情報の取得  
- CATCH ブロックのスコープ内では、次のシステム関数を使用して、CATCH ブロックが実行される原因となったエラーに関する情報を取得できます。  
+ CATCH ブロックのスコープでは、次のシステム関数を使用して、CATCH ブロックが実行される原因となったエラーに関する情報を取得できます。  
   
 -   [ERROR_NUMBER()](../../t-sql/functions/error-number-transact-sql.md) は、エラーの番号を返します。  
   
@@ -106,7 +103,7 @@ END CATCH
   
 -   [ERROR_MESSAGE()](../../t-sql/functions/error-message-transact-sql.md) は、エラー メッセージのテキストの全文を返します。 このテキストには、長さ、オブジェクト名、回数など、置き換え可能なパラメーターに提供される値が含まれます。  
   
-CATCH ブロックのスコープの外側から呼び出されると、これらの関数は NULL を返します。 エラー情報は、CATCH ブロックのスコープ内のどこからでも、これらの関数を使用して取得できます。 たとえば、次のスクリプトでは、エラー処理関数を含んでいるストアド プロシージャを示しています。 `CATCH` 構造の `TRY...CATCH` ブロックでは、このストアド プロシージャを呼び出して、エラーに関する情報を返しています。  
+CATCH ブロックのスコープの外側から呼び出されると、これらの関数は NULL を返します。 エラー情報は、CATCH ブロックのスコープ内のどこからでも、これらの関数を使用して取得できます。 たとえば、次のスクリプトは、エラー処理関数を含むストアド プロシージャです。 `CATCH` 構造の `TRY...CATCH` ブロックでは、このストアド プロシージャを呼び出して、エラーに関する情報を返しています。  
   
 ```sql  
 -- Verify that the stored procedure does not already exist.  
@@ -204,7 +201,7 @@ END CATCH;
 ```  
   
 ## <a name="uncommittable-transactions-and-xactstate"></a>コミット不可能なトランザクションと XACT_STATE  
- TRY ブロックで生成されたエラーによって現在のトランザクションの状態が無効になる場合、トランザクションはコミット不可能なトランザクションとして分類されます。 通常は TRY ブロックの外部でトランザクションを終了させるエラーが、TRY ブロックの内部で発生すると、トランザクションはコミット不可能な状態になります。 コミット不可能なトランザクションでは、読み取り操作または ROLLBACK TRANSACTION のみを実行できます。 このトランザクションで、書き込み操作または COMMIT TRANSACTION を生成する [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントを実行することはできません。 XACT_STATE 関数は、トランザクションがコミット不可能なトランザクションと分類されている場合、値 -1 を返します。 バッチが完了すると、[!INCLUDE[ssDE](../../includes/ssde-md.md)]によってコミット不可能なトランザクションがロールバックされます。 トランザクションがコミット不可能な状態になったときにエラー メッセージが送信されなかった場合、バッチが完了すると、エラー メッセージがクライアント アプリケーションに送信されます。 これは、コミット不可能なトランザクションが検出され、ロールバックされたことを示します。  
+ TRY ブロックで生成されたエラーによって現在のトランザクションの状態が無効になる場合、そのトランザクションはコミット不可能なトランザクションに分類されます。 通常は TRY ブロックの外部でトランザクションを終了させるエラーが、TRY ブロックの内部で発生すると、トランザクションはコミット不可能な状態になります。 コミット不可能なトランザクションでは、読み取り操作または ROLLBACK TRANSACTION のみを実行できます。 このトランザクションで、書き込み操作または COMMIT TRANSACTION を生成する [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントを実行することはできません。 XACT_STATE 関数は、トランザクションがコミット不可能なトランザクションと分類されている場合、値 -1 を返します。 バッチが完了すると、[!INCLUDE[ssDE](../../includes/ssde-md.md)]によってコミット不可能なトランザクションがロールバックされます。 トランザクションがコミット不可能な状態になったときにエラー メッセージが送信されなかった場合、バッチが完了すると、エラー メッセージがクライアント アプリケーションに送信されます。 これは、コミット不可能なトランザクションが検出され、ロールバックされたことを示します。  
   
  コミット不可能なトランザクションと XACT_STATE 関数の詳細については、「[XACT_STATE &#40;Transact-SQL&#41;](../../t-sql/functions/xact-state-transact-sql.md)」を参照してください。  
   

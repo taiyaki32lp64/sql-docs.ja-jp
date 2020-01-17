@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 5ecb4bf1-b8d1-47cf-9cb1-7a18acc11ce2
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 1f2cc7956f36ee6fad113efd1cfe5afd5f58baff
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 32d538e31ca3f4a0d9b23411ebcb7b282df46b33
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47782990"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67970312"
 ---
 # <a name="sqlserverxaconnection-class"></a>SQLServerXAConnection クラス
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -37,7 +36,7 @@ public class SQLServerXAConnection
 ```  
   
 ## <a name="remarks"></a>Remarks  
- SQLServerXAConnection オブジェクトは、[SQLServerXAResource](../../../connect/jdbc/reference/sqlserverxaresource-class.md) オブジェクトを使用して分散トランザクションに参加させることができます。 中間層サーバーの一部は、通常、トランザクション マネージャーは、SQLServerXAResource オブジェクトを介して SQLServerXAConnection オブジェクトを管理します。  
+ SQLServerXAConnection オブジェクトは、[SQLServerXAResource](../../../connect/jdbc/reference/sqlserverxaresource-class.md) オブジェクトを使用して分散トランザクションに参加させることができます。 トランザクションマネージャー (通常は中間層サーバーの一部) は、SQLServerXAResource オブジェクトを介して SQLServerXAConnection オブジェクトを管理します。  
   
 > [!NOTE]  
 >  通常、アプリケーション プログラマがこのインターフェイスを直接使用することはありません。 このインターフェイスは主に、中間層サーバーで動作しているトランザクション マネージャーによって使用されます。  

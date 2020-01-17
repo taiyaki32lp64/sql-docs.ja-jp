@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: f1dfb3e8-a7bd-46c3-92b6-c19531e8409d
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 782dec08b76a9e5a97719d6af39e2c30c0f92d19
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 1e2dd512ab529f1fb5d216f4a2e459cd601d40e8
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47797390"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67943755"
 ---
 # <a name="schema-views"></a>スキーマ ビュー
 ODBC カタログ関数を呼び出すことによって、または INFORMATION_SCHEMA ビューを使用して、アプリケーションは、DBMS からメタデータ情報を取得できます。 ビューは、ANSI sql-92 標準で定義されます。  

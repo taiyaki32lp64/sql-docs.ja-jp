@@ -12,16 +12,15 @@ helpviewer_keywords:
 - bookmarks [SQL Server Management Studio]
 - SQL Server Management Studio Help [SQL Server], bookmarks
 ms.assetid: b6feff89-dd6e-41fe-b2f9-449f2532e1c4
-author: stevestein
-ms.author: sstein
-manager: craigg
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 22c7831bd4083ef542fce01c87526af506225c52
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: 51eebf67e51b5d2eaa25e251914a50bc203521fd
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51643072"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68264848"
 ---
 # <a name="bookmarks-f1-help"></a>[ブックマーク] の F1 ヘルプ
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

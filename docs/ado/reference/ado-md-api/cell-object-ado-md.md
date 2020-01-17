@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: dcc2f044-b785-4a29-9bc5-b673f66eedf9
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: df7b93e00ddff15c320152e3fa2bc1f104caa3a4
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: bbf97a4095f2295b8851f87ba20ab083938e70ed
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47612526"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67947742"
 ---
 # <a name="cell-object-ado-md"></a>Cell オブジェクト (ADO MD)
 セル セットに含まれる軸座標が交差する位置にデータを表します。  
@@ -56,7 +55,7 @@ ms.locfileid: "47612526"
   
 -   [プロパティ、メソッド、およびイベント](../../../ado/reference/ado-md-api/cell-object-properties-methods-and-events.md)  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [軸の例 (VBScript)](../../../ado/reference/ado-md-api/axis-example-vbscript.md)   
  [Cellset オブジェクト (ADO MD)](../../../ado/reference/ado-md-api/cellset-object-ado-md.md)   
  [Positions コレクション (ADO MD)](../../../ado/reference/ado-md-api/positions-collection-ado-md.md)   

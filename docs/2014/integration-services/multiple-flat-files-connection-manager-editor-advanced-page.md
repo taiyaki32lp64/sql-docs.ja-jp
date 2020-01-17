@@ -4,23 +4,22 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.multifile.advanced.f1
 helpviewer_keywords:
 - Multiple Flat Files Connection Manager Editor
 ms.assetid: fc883131-c03d-4ab3-8220-b51cbe243a82
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 83e6aae7d4383440f148a8de1480cb8f1658e89c
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: de238c1012a255ceb59086e542d5529b8b907915
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52542746"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66057548"
 ---
 # <a name="multiple-flat-files-connection-manager-editor-advanced-page"></a>[複数フラット ファイル接続マネージャー エディター] ([詳細設定] ページ)
   **[複数フラット ファイル接続マネージャー エディター]** ダイアログ ボックスの **[詳細設定]** ページを使用すると、フラット ファイル接続マネージャーが接続するテキスト ファイルの各列のデータ型や区切り記号などのプロパティを設定できます。  

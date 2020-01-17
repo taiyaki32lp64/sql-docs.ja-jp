@@ -1,5 +1,5 @@
 ---
-title: トレースとトレース テンプレートの保存 |Microsoft Docs
+title: トレースとトレーステンプレートを保存する |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -17,15 +17,14 @@ helpviewer_keywords:
 - importing trace templates
 - SQL Server Profiler, templates
 ms.assetid: 957e6bf8-e7a3-4a59-a1cd-0a41538a8158
-author: stevestein
-ms.author: sstein
-manager: craigg
-ms.openlocfilehash: bf12d70f78a18b24b7fd6638d788d4e5b436c21c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 9d3c8a9ddcaa11f4bcfae6e5abd4c000f1ffbdba
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47653411"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67928742"
 ---
 # <a name="save-traces-and-trace-templates"></a>トレースとトレース テンプレートの保存
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

@@ -13,15 +13,15 @@ helpviewer_keywords:
 - SQL Server Integration Services, functions
 - SSIS, functions
 ms.assetid: e9a41a31-94f4-46a4-b737-c707dd59ce48
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 9a3b62c843508d100623549097b670487dd16641
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: f70cde85aca7b08003d27ee3bd2fc61cbc0a45f1
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52801934"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62769128"
 ---
 # <a name="functions-ssis-expression"></a>関数 (SSIS 式)
   式言語には、式で使用するための関数セットが含まれています。 式で 1 つの関数を使用することもできますが、通常、式は関数と演算子を組み合わせて使用したり、複数の関数を使用します。  
@@ -94,7 +94,7 @@ ms.locfileid: "52801934"
   
  式の名前は大文字で表示されますが、大文字と小文字は区別されません。 たとえば、"null" は "NULL" を使用した場合と同様に機能します。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [演算子 &#40;SSIS 式&#41;](operators-ssis-expression.md)   
  [Integration Services 式の詳細の例](examples-of-advanced-integration-services-expressions.md)   
  [Integration Services &#40;SSIS&#41; 式](integration-services-ssis-expressions.md)  

@@ -1,6 +1,6 @@
 ---
-title: メモリ最適化テーブルを持つデータベースのリソース プールへのバインド | Microsoft Docs
-ms.custom: ''
+title: メモリ最適化テーブルを持つデータベースのリソース プールへのバインド
+ms.custom: seo-dt-2019
 ms.date: 08/29/2016
 ms.prod: sql
 ms.prod_service: database-engine
@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: f222b1d5-d2fa-4269-8294-4575a0e78636
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: e176906e41e815733ac50f2e1b9e0db90a8d3a5a
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 8bc12c4ef792fe1df3d9855df72e025a2dafa6ac
+ms.sourcegitcommit: 384e7eeb0020e17a018ef8087970038aabdd9bb7
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52513152"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74412763"
 ---
 # <a name="bind-a-database-with-memory-optimized-tables-to-a-resource-pool"></a>メモリ最適化テーブルを持つデータベースのリソース プールへのバインド
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -68,7 +67,7 @@ GO
 ###  <a name="bkmk_DeterminePercent"></a> MIN_MEMORY_PERCENT と MAX_MEMORY_PERCENT の最小値の決定  
  メモリ最適化テーブルに必要なメモリを確認したら、使用可能なメモリの何パーセントが必要になるかを特定し、メモリの割合をその値以上に設定する必要があります。  
   
- **例:**   
+ **例:**    
 この例では、計算の結果、メモリ最適化テーブルおよびインデックスに 16 GB のメモリが必要であると確認されたものとします。 また、使用できるメモリとして 32 GB がコミットされていると想定します。  
   
  一見すると、MIN_MEMORY_PERCENT と MAX_MEMORY_PERCENT は 50 (16 は 32 の 50%) に設定する必要があるように思われます。  しかし、それではメモリ最適化テーブルに十分なメモリが与えられません。 後に示す表 (「[メモリ最適化テーブルおよびインデックスで使用可能なメモリの割合](../../relational-databases/in-memory-oltp/bind-a-database-with-memory-optimized-tables-to-a-resource-pool.md#bkmk_PercentAvailable)」) によると、コミットされたメモリが 32 GB の場合、メモリ最適化テーブルとインデックスで使用できるのはその 80% だけです。  このため、最小と最大の割合は、コミットされたメモリではなく使用可能なメモリに基づいて計算します。  
@@ -87,7 +86,7 @@ GO
 ###  <a name="bkmk_CreateResourcePool"></a> リソース プールの作成とメモリの構成  
  メモリ最適化テーブルのメモリを構成するときは、MAX_MEMORY_PERCENT ではなく MIN_MEMORY_PERCENT に基づいてキャパシティ プランニングを実施する必要があります。  MIN_MEMORY_PERCENT と MAX_MEMORY_PERCENT については、「[ALTER RESOURCE POOL &#40;Transact-SQL&#41;](../../t-sql/statements/alter-resource-pool-transact-sql.md)」を参照してください。 この結果、メモリ最適化テーブルが使用できるメモリをより適切に予測することができます。MIN_MEMORY_PERCENT を指定すると、他のリソース プールにメモリの制約を加えて、この値に応じたメモリが確保されるためです。 メモリを確実に使用できるようにし、さらにメモリ不足が発生しないようにするには、MIN_MEMORY_PERCENT と MAX_MEMORY_PERCENT を同じ値にします。 コミットされたメモリの量に対してメモリ最適化テーブルで使用できるメモリの割合については、後の「 [メモリ最適化テーブルおよびインデックスで使用可能なメモリの割合](../../relational-databases/in-memory-oltp/bind-a-database-with-memory-optimized-tables-to-a-resource-pool.md#bkmk_PercentAvailable) 」をご覧ください。  
   
- VM 環境での操作の詳細については、「 [ベスト プラクティス: VM 環境でのインメモリ OLTP の使用](https://msdn.microsoft.com/library/27ec7eb3-3a24-41db-aa65-2f206514c6f9) 」をご覧ください。  
+ VM 環境での操作の詳細については、「[ベスト プラクティス: VM 環境でのインメモリ OLTP の使用](https://msdn.microsoft.com/library/27ec7eb3-3a24-41db-aa65-2f206514c6f9)」を参照してください。  
   
  次の [!INCLUDE[tsql](../../includes/tsql-md.md)] コードでは、使用可能なメモリを 50% に指定して、Pool_IMOLTP という名前のリソース プールを作成します。  プールが作成された後、Pool_IMOLTP が含まれるようにリソース ガバナーが再構成されます。  
   
@@ -143,7 +142,7 @@ GO
  これで、データベースがリソース プールにバインドされました。  
   
 ##  <a name="bkmk_ChangeAllocation"></a> 既存のプール内での MIN_MEMORY_PERCENT と MAX_MEMORY_PERCENT の変更  
- サーバーにメモリを追加した場合や、メモリ最適化テーブルに必要なメモリの量が変わった場合は、MIN_MEMORY_PERCENT と MAX_MEMORY_PERCENT の値を変更する必要があることがあります。 次の手順では、リソース プールで MIN_MEMORY_PERCENT と MAX_MEMORY_PERCENT の値を変更する方法を示します。 MIN_MEMORY_PERCENT と MAX_MEMORY_PERCENT に使用する値については、以下のセクションをご覧ください。  詳細については、「 [ベスト プラクティス: VM 環境でのインメモリ OLTP の使用](https://msdn.microsoft.com/library/27ec7eb3-3a24-41db-aa65-2f206514c6f9) 」をご覧ください。  
+ サーバーにメモリを追加した場合や、メモリ最適化テーブルに必要なメモリの量が変わった場合は、MIN_MEMORY_PERCENT と MAX_MEMORY_PERCENT の値を変更する必要があることがあります。 次の手順では、リソース プールで MIN_MEMORY_PERCENT と MAX_MEMORY_PERCENT の値を変更する方法を示します。 MIN_MEMORY_PERCENT と MAX_MEMORY_PERCENT に使用する値については、以下のセクションをご覧ください。  詳細については、「[ベストプラクティス: VM 環境でのインメモリ OLTP の使用](https://msdn.microsoft.com/library/27ec7eb3-3a24-41db-aa65-2f206514c6f9)」のトピックを参照してください。  
   
 1.  `ALTER RESOURCE POOL` を使用して MIN_MEMORY_PERCENT と MAX_MEMORY_PERCENT の両方の値を変更します。  
   

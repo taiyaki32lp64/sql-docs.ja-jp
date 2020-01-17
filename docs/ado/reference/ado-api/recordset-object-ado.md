@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: ede1415f-c3df-4cc5-a05b-2576b2b84b60
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 1bf2aab4e9f11ff3dae9852dd80007867fe5a462
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e76bc993b6f3fed781b8458bc7cf4a70081cd167
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47770830"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67931365"
 ---
 # <a name="recordset-object-ado"></a>Recordset オブジェクト (ADO)
 ベース テーブル、またはコマンドの実行の結果からレコードのセット全体を表します。 いつでもでも、 **Recordset**オブジェクトとして現在のレコード セット内で 1 つのレコードのみを参照します。  
@@ -77,7 +76,7 @@ Debug.Print objRs(0)              '  the Value of Item(0).
   
 -   [レコード セット オブジェクトのプロパティ、メソッド、およびイベント](../../../ado/reference/ado-api/recordset-object-properties-methods-and-events.md)  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [接続オブジェクト (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)   
  [フィールド コレクション (ADO)](../../../ado/reference/ado-api/fields-collection-ado.md)   
  [Properties コレクション (ADO)](../../../ado/reference/ado-api/properties-collection-ado.md)   

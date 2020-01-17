@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: ed19a07c-83fe-4582-9c9e-41b1ce571850
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: fca08d3b59c9d7c53713ad3ec74c439dddc57c07
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 3d918c816bc4a4053435fcd5d71f94c09f9c4ace
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47798820"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67997928"
 ---
 # <a name="ph-timeout-server-configuration-option"></a>PH timeout サーバー構成オプション
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

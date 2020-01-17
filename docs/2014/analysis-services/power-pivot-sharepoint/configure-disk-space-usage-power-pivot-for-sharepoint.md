@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: 201a3fda-f162-45d7-bf39-74dcb92fd0e6
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 0ffd00cde83f99f1147a85b06e93e3816fb6e376
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: fc45827a349dc38054db98e3a435f18a42bdaa0f
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53354512"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66071807"
 ---
 # <a name="configure-disk-space-usage-powerpivot-for-sharepoint"></a>ディスクの使用領域の構成 (PowerPivot for SharePoint)
   PowerPivot for SharePoint の配置では、再読み込みを高速化するために、ホスト コンピューターのディスク領域を使用して、PowerPivot データベースをキャッシュします。 後ですばやく再読み込みして新しい要求を処理できるように、メモリに読み込まれているすべての PowerPivot データベースが最初にディスクにキャッシュされます。 既定では、PowerPivot for SharePoint は、使用できるすべてのディスク領域を使用してデータベースをキャッシュします。ただし、この動作は、使用するディスク領域を制限するプロパティを設定することにより変更できます。  
@@ -51,11 +50,11 @@ ms.locfileid: "53354512"
   
  システム レベルでは、ディスク領域が少なくなったときに通知する電子メールによる警告を作成できます。 Microsoft System Center には、電子メール警告機能があります。 また、ファイル サーバー リソース マネージャー、タスク スケジューラ、または PowerShell スクリプトを使用して、警告を設定することもできます。 次のリンクでは、ディスク領域不足に関する通知を設定するための有用な情報が提供されています。  
   
--   [新しいファイル サーバー リソース マネージャーでは](https://technet.microsoft.com/library/hh831746.aspx)(https://technet.microsoft.com/library/hh831746.aspx)します。  
+-   [新しいファイル サーバー リソース マネージャーでは](https://technet.microsoft.com/library/hh831746.aspx)(https://technet.microsoft.com/library/hh831746.aspx) します。  
   
--   [Windows Server 2008 R2 のファイル サーバー リソース マネージャーのステップ バイ ステップ ガイド](https://go.microsoft.com/fwlink/?LinkID=204875)(https://go.microsoft.com/fwlink/?LinkID=204875)します。  
+-   [Windows Server 2008 R2 のファイル サーバー リソース マネージャーのステップ バイ ステップ ガイド](https://go.microsoft.com/fwlink/?LinkID=204875)(https://go.microsoft.com/fwlink/?LinkID=204875) します。  
   
--   [Windows Server 2008 でディスクの空き領域のアラートの設定](https://go.microsoft.com/fwlink/?LinkID=204870)(https://go.microsoft.com/fwlink/?LinkID=204870)します。  
+-   [Windows Server 2008 でディスクの空き領域のアラートの設定](https://go.microsoft.com/fwlink/?LinkID=204870)(https://go.microsoft.com/fwlink/?LinkID=204870) します。  
   
 ## <a name="how-to-limit-the-amount-of-disk-space-used-for-storing-cached-files"></a>キャッシュされたファイルの格納に使用するディスク領域のサイズを制限する方法  
   

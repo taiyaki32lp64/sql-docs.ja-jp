@@ -1,5 +1,5 @@
 ---
-title: setIntegratedSecurity メソッド (SQLServerDataSource) |Microsoft Docs
+title: Setインテグレーション Atedsecurity メソッド (SQLServerDataSource) |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: 4c968ee4-b041-424a-bf69-cc2c4a4f51c6
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: b5919545e08b2de0578080e7dbc538ea2581f587
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 79d9090df19851af3a778e23b7919f28081f32ef
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47690910"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67974144"
 ---
 # <a name="setintegratedsecurity-method-sqlserverdatasource"></a>setIntegratedSecurity メソッド (SQLServerDataSource)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -46,7 +45,7 @@ public void setIntegratedSecurity(boolean enable)
 > [!NOTE]  
 >  このプロパティは、[!INCLUDE[msCoName](../../../includes/msconame_md.md)] Windows オペレーティング システムのみでサポートされています。  
   
- 詳細については、統合認証を使用して、次を参照してください。[接続 URL の構築](../../../connect/jdbc/building-the-connection-url.md)します。  
+ 統合認証の使用方法の詳細については、「[接続 URL の構築](../../../connect/jdbc/building-the-connection-url.md)」を参照してください。  
   
 ## <a name="see-also"></a>参照  
  [SQLServerDataSource のメンバー](../../../connect/jdbc/reference/sqlserverdatasource-members.md)   

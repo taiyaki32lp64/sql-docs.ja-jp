@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 3f8c07a6-5542-495b-ad29-487ed64f0101
 author: Shamikg
 ms.author: Shamikg
-manager: craigg
-ms.openlocfilehash: c2b8e9404b447c098fb4513fe0cea261da04626a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 14c817420c13e7355c43324bf09fcb3abc6737dc
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47651700"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68020860"
 ---
 # <a name="user-interface-reference-sybasetosql"></a>ユーザー インターフェイス リファレンス (SybaseToSQL)
 このセクションには、ヘルプ トピックが含まれています。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Migration Assistant (SSMA) for Sybase します。  
@@ -46,7 +45,7 @@ ms.locfileid: "47651700"
 |[プロジェクトの設定&#40;の種類のマッピング&#41; &#40;SybaseToSQL&#41;](../../ssma/sybase/project-settings-type-mapping-sybasetosql.md)|型マッピングのページを使用して、**プロジェクト設定**SSMA for Sybase のプロジェクトですべてのデータベースとデータベース オブジェクトの既定の型マッピングを指定する ダイアログ ボックス。|  
 |[メタデータの保存&#40;SybaseToSQL&#41;](../../ssma/sybase/save-metadata-sybasetosql.md)|**メタデータの保存**メタデータが不足しているプロジェクトを保存するときに、ダイアログ ボックスが表示されます。|  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
 [Ssma for Sybase 作業の開始&#40;SybaseToSQL&#41;](../../ssma/sybase/getting-started-with-ssma-for-sybase-sybasetosql.md)  
 [SQL Server - Azure SQL DB への Sybase ASE データベース移行&#40;SybaseToSQL&#41;](../../ssma/sybase/migrating-sybase-ase-databases-to-sql-server-azure-sql-db-sybasetosql.md)  
   

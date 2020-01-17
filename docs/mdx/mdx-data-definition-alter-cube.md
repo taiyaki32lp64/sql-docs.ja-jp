@@ -8,18 +8,17 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-manager: kfile
-ms.openlocfilehash: f9a15108875c7e519948f0e73e0a87d08b70c975
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: 750f8ae7a1b9275bdab734a15134d255916e7d44
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51698300"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68098522"
 ---
 # <a name="mdx-data-definition---alter-cube"></a>MDX データ操作 - ALTER CUBE
 
 
-  指定されたキューブの構造を変更します。通常、ディメンションの書き戻しをサポートするために使用されます。 アプリケーションでの書き戻しの使用に関する詳細については、このブログの投稿を参照してください: [Analysis Services (ブログ) での書き戻しアプリケーションの構築](https://go.microsoft.com/fwlink/?LinkId=394977)  
+  指定されたキューブの構造を変更します。通常、ディメンションの書き戻しをサポートするために使用されます。 アプリケーションでの書き戻しの使用に関する詳細については、このブログの投稿を参照してください。[Analysis Services (ブログ) での書き戻しアプリケーションの構築](https://go.microsoft.com/fwlink/?LinkId=394977)  
   
  ディメンションの書き戻しを同時に実行すると、デッドロックが発生する可能性があります。この場合、最初の書き戻しがブロックされコミットできなくなります。これは、共有ロックが 2 番目の書き戻しによって保持されているためです。 このような状況では、エラーは生成されません。また、どのような操作も実行されません。 最終的には、タイムアウトと変更がロールバックされます。  
   

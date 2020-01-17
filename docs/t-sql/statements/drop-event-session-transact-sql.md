@@ -16,15 +16,14 @@ helpviewer_keywords:
 - event sessions [SQL Server]
 - DROP EVENT SESSION statement
 ms.assetid: 92eabe4b-24e2-43b1-978c-31a199964b90
-author: CarlRabeler
-ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: a1edffab8e94c9ee171b3be4203d08b23df83452
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+author: MightyPen
+ms.author: genemi
+ms.openlocfilehash: b408b030a27b1e6ebe0fc94db8b6ee32cbb837ed
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52404447"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67898048"
 ---
 # <a name="drop-event-session-transact-sql"></a>DROP EVENT SESSION (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -42,7 +41,7 @@ ON SERVER
   
 ## <a name="arguments"></a>引数  
  *event_session_name*  
- 既存のイベント セッションの名前を指定します。  
+ 既存のイベント セッションの名前です。  
   
 ## <a name="remarks"></a>Remarks  
  イベント セッションを削除すると、ターゲットやセッション パラメーターなどの構成情報がすべて完全に削除されます。  

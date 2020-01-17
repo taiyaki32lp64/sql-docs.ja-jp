@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: ce5e8efc-6a2d-40d5-a658-8dd35cd1dd09
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: fa9303f5108ef97f077764122481565df1937a4b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: dac34e8b3559b4d77aec411fd636ac7850932a4f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47618810"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68096399"
 ---
 # <a name="dbase-driver-programming-considerations"></a>dBASE ドライバーのプログラミングに関する考慮事項
 このセクションでは、次のトピックを扱います。  

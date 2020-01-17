@@ -13,11 +13,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 6b892adaf02f13ec7de150ae1de9966a65ac1d7b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48195512"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63200388"
 ---
 # <a name="executing-queries-how-to-topics-odbc"></a>クエリを実行する方法に関するトピック (ODBC)
   ODBC アプリケーションで SQL ステートメントを実行するには、ステートメント ハンドルを割り当て、ステートメント属性を設定し、SQL ステートメントを準備して実行する必要があります。  
@@ -32,7 +32,7 @@ ms.locfileid: "48195512"
   
 -   [準備し、ステートメントを実行&#40;ODBC&#41;](prepare-and-execute-a-statement-odbc.md)  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [ODBC の使用法に関するトピック](../odbc-how-to-topics.md)  
   
   

@@ -12,16 +12,15 @@ helpviewer_keywords:
 ms.assetid: 3d9ec89a-cc85-4091-b6f0-2bb6a6826d5e
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 70e0fc63ac67b9e475e1e9fb65a81fadd3293c59
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: c692a9a1ab7e3d412925affab0f6d1df18fd6dc1
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47828770"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67966812"
 ---
 # <a name="columns-collection-properties-methods-and-events"></a>Columns コレクションのプロパティ、メソッド、およびイベント
-## <a name="properties"></a>[プロパティ]  
+## <a name="properties"></a>Properties  
  [Count プロパティ](../../../ado/reference/ado-api/count-property-ado.md)  
   
  [項目のプロパティ](../../../ado/reference/ado-api/item-property-ado.md)  
@@ -36,5 +35,5 @@ ms.locfileid: "47828770"
 ## <a name="events"></a>イベント  
  [なし] :  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [Columns コレクション (ADOX)](../../../ado/reference/adox-api/columns-collection-adox.md)

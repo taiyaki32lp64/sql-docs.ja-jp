@@ -11,14 +11,13 @@ helpviewer_keywords:
 ms.assetid: c9836484-39c5-4a89-b080-3567783b6fff
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 50ce60ace7d5d1ceaaf0d02dc0bed84d541278ef
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b039f0cb4ff6aa944adf981ad5fa26e1cc4cbeea
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47635080"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67911172"
 ---
 # <a name="server-memory-change-event-class"></a>Server Memory Change イベント クラス
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -26,20 +25,20 @@ ms.locfileid: "47635080"
   
 ## <a name="server-memory-change-event-class-data-columns"></a>Server Memory Change イベント クラスのデータ列  
   
-|データ列名|データ型|[説明]|列 ID|[ユーザー アカウント制御]|  
+|データ列名|データ型|[説明]|列 ID|はい|  
 |----------------------|---------------|-----------------|---------------|---------|  
 |**EventClass**|**int**|イベントの種類 = 81。|27|いいえ|  
 |**EventSequence**|**int**|要求内の特定のイベントのシーケンス。|51|いいえ|  
-|**EventSubClass**|**int**|イベント サブクラスの種類。<br /><br /> 1 = メモリ増加<br /><br /> 2 = メモリ減少|21|[ユーザー アカウント制御]|  
-|**IntegerData**|**int**|メガバイト (MB) 単位の新しいメモリ サイズ。|25|[ユーザー アカウント制御]|  
-|**IsSystem**|**int**|イベントがシステム プロセスとユーザー プロセスのどちらで発生したか。 1 はシステム、0 はユーザーです。|60|[ユーザー アカウント制御]|  
-|**RequestID**|**int**|ステートメントが含まれている要求の ID。|49|[ユーザー アカウント制御]|  
+|**EventSubClass**|**int**|イベント サブクラスの種類。<br /><br /> 1 = メモリ増加<br /><br /> 2 = メモリ減少|21|はい|  
+|**IntegerData**|**int**|メガバイト (MB) 単位の新しいメモリ サイズ。|25|はい|  
+|**IsSystem**|**int**|イベントがシステム プロセスとユーザー プロセスのどちらで発生したか。 1 はシステム、0 はユーザーです。|60|はい|  
+|**RequestID**|**int**|ステートメントが含まれている要求の ID。|49|はい|  
 |**ServerName**|**nvarchar**|トレースされている [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスの名前。|26|いいえ|  
-|**SessionLoginName**|**nvarchar**|セッションを開始したユーザーのログイン名。 たとえば、Login1 を使用して [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] に接続し、Login2 でステートメントを実行すると、 **SessionLoginName** には Login1 が表示され、 **LoginName** には Login2 が表示されます。 この列には、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ログインと Windows ログインの両方が表示されます。|64|[ユーザー アカウント制御]|  
-|**SPID**|**int**|イベントが発生したセッションの ID。|12|[ユーザー アカウント制御]|  
-|**StartTime**|**datetime**|イベントの開始時刻 (取得できた場合)。|14|[ユーザー アカウント制御]|  
-|**TransactionID**|**bigint**|システムによって割り当てられたトランザクション ID。|4|[ユーザー アカウント制御]|  
-|**XactSequence**|**bigint**|現在のトランザクションを説明するトークン。|50|[ユーザー アカウント制御]|  
+|**SessionLoginName**|**nvarchar**|セッションを開始したユーザーのログイン名。 たとえば、Login1 を使用して [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] に接続し、Login2 でステートメントを実行すると、 **SessionLoginName** には Login1 が表示され、 **LoginName** には Login2 が表示されます。 この列には、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ログインと Windows ログインの両方が表示されます。|64|はい|  
+|**SPID**|**int**|イベントが発生したセッションの ID。|12|はい|  
+|**StartTime**|**datetime**|イベントの開始時刻 (取得できた場合)。|14|はい|  
+|**TransactionID**|**bigint**|システムによって割り当てられたトランザクション ID。|4|はい|  
+|**XactSequence**|**bigint**|現在のトランザクションを説明するトークン。|50|はい|  
   
 ## <a name="see-also"></a>参照  
  [拡張イベント](../../relational-databases/extended-events/extended-events.md)   

@@ -9,14 +9,14 @@ f1_keywords:
 helpviewer_keywords:
 - SQL11.rsconfigtool.emailsettings.F1
 ms.assetid: cdad1529-bfa6-41fb-9863-d9ff1b802577
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: b2c8e71f65f4b6dfe4f5fe74f6030049d67c735f
-ms.sourcegitcommit: 170c275ece5969ff0c8c413987c4f2062459db21
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 872c7e4d501017627fcc64eca7ed48204c9d3533
+ms.sourcegitcommit: 312b961cfe3a540d8f304962909cd93d0a9c330b
+ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/11/2019
-ms.locfileid: "54226569"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73593816"
 ---
 # <a name="e-mail-settings---reporting-services-native-mode-configuration-manager"></a>電子メールの設定 - Reporting Services のネイティブ モード (構成マネージャー)
 Reporting Services にはメール配信拡張機能があり、メールを使用してレポートを配布できます。 電子メール サブスクリプションをどのように定義するかに応じて、配信は、通知、リンク、添付ファイル、または埋め込みレポートから構成されます。 電子メール配信拡張機能は、既存のメール サーバー テクノロジと連携して動作します。 メール サーバーは、SMTP サーバーまたはフォワーダーである必要があります。 レポート サーバーは、オペレーティング システムに用意されている Collaboration Data Objects (CDO) ライブラリ (cdosys.dll) を通じて SMTP サーバーに接続します。
@@ -41,7 +41,7 @@ Reporting Services にはメール配信拡張機能があり、メールを使�
 
 - SMTP サーバーと、電子メールを送信する権限のあるユーザー アカウントを指定するだけの場合は、Reporting Services 構成マネージャーを使用します。 これらは、レポート サーバーの電子メール配信拡張機能を構成するために最低限必要な設定です。
 
-- (省略可能) テキスト エディターを使用して、RSreportserver.config ファイルで追加の設定を指定します。 このファイルには、レポート サーバーの電子メール配信の構成設定がすべて含まれています。 ローカル SMTP サーバーを使用する場合や、電子メールの配信を特定のホストに限定する場合は、これらのファイルで追加の設定を指定する必要があります。 構成ファイルの検索と変更の詳細については、SQL Server オンライン ブックの「 [Reporting Services の構成ファイル (RSreportserver.config) の変更](../../reporting-services/report-server/modify-a-reporting-services-configuration-file-rsreportserver-config.md) 」をご覧ください。
+- (省略可能) テキスト エディターを使用して、RSreportserver.config ファイルで追加の設定を指定します。 このファイルには、レポート サーバーの電子メール配信の構成設定がすべて含まれています。 ローカル SMTP サーバーを使用する場合や、電子メールの配信を特定のホストに限定する場合は、これらのファイルで追加の設定を指定する必要があります。 構成ファイルの検索と変更の詳細については、「[Reporting Services の構成ファイル (RSreportserver.config) の変更](../../reporting-services/report-server/modify-a-reporting-services-configuration-file-rsreportserver-config.md)」を参照してください。
 
 > [!NOTE] 
 > レポート サーバーの電子メール設定は CDO に基づいています。 特定の設定に関する詳細については、CDO の製品マニュアルを参照してください。
@@ -66,7 +66,7 @@ Reporting Services にはメール配信拡張機能があり、メールを使�
      
      - **[ユーザー名とパスワード (基本)]** では、メール サーバーに接続するためのユーザー名とパスワードを指定できます。 **[セキュリティで保護された接続を使用]** を選んで、暗号化された接続でメール サーバーに接続することもできます。
      
-          このオプションを選ぶと、rsreportserver.config で `<SendUsing>` の値が **2** に、 `<SMTPAuthenticate>` の値が **1** に設定されます。**[セキュリティで保護された接続を使用]** を選ぶと、`SMTPUseSSL` が **True** に設定されます。 **[ユーザー名]** は暗号化された値として `<SendUserName>` に設定されます。 **[パスワード]** は暗号化された値として `<SendPassword>` に設定されます。
+          このオプションを選ぶと、rsreportserver.config で `<SendUsing>` の値が **2** に、 `<SMTPAuthenticate>` の値が **1** に設定されます。 **[セキュリティで保護された接続を使用]** を選ぶと、`SMTPUseSSL` が **True** に設定されます。 **[ユーザー名]** は暗号化された値として `<SendUserName>` に設定されます。 **[パスワード]** は暗号化された値として `<SendPassword>` に設定されます。
      
      - **[レポート サーバー サービス アカウント (NTLM)]** では、レポート サーバー用に指定したサービス アカウントが使用されます。 認証用にレポート サーバー サービス アカウントを使用する場合は、そのサービス アカウントに SMTP サーバー上での **Send As** アクセス許可があることを確認します。
      
@@ -77,7 +77,7 @@ Reporting Services にはメール配信拡張機能があり、メールを使�
 6. 必要に応じて、rsreportserver.config 内でメール構成用に追加フィールドを調整することもできます。
 
 ## <a name="example-report-server-e-mail-configuration"></a>レポート サーバーの電子メール構成の例
-次の例は、リモート SMTP サーバーに対する RSreportserver.config ファイルでの設定を示しています。 設定に関する説明と有効な値については、SQL Server オンライン ブックの「 [Rsreportserver.config 構成ファイル](../../reporting-services/report-server/rsreportserver-config-configuration-file.md) 」をご覧ください。
+次の例は、リモート SMTP サーバーに対する RSreportserver.config ファイルでの設定を示しています。 設定に関する説明と有効な値を読み取るには、「[Rsreportserver.config 構成ファイル](../../reporting-services/report-server/rsreportserver-config-configuration-file.md)」を参照してください。
 
 ```
 <RSEmailDPConfiguration>

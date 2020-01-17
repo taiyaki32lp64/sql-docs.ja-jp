@@ -1,5 +1,5 @@
 ---
-title: :Errorinfo |Microsoft Docs
+title: 'PDOStatement:: errorInfo |Microsoft Docs'
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: e45bebe8-ea4c-49b6-93db-cf1ae65f530c
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 1fc81be8628145c63a3d9c2296846ca19b0cc39b
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.openlocfilehash: 15686a93c5e23a476968332479897d2fb5b90220
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51605622"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67993070"
 ---
 # <a name="pdostatementerrorinfo"></a>PDOStatement::errorInfo
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]

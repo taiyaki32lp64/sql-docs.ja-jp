@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - tables [Analysis Services], prediction queries
@@ -14,15 +13,15 @@ ms.assetid: 00d330a0-879d-4da0-9f29-53c288116f4d
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: e7741d2acf1e26e4e5a424c823a435fb37ff1d71
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 89eaf3b59f6d779a01168b00d51acbee1e96ca7e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48119062"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66085845"
 ---
 # <a name="choose-and-map-input-data-for-a-prediction-query"></a>予測クエリの入力データの選択およびマップ
-  マイニング モデルから予測を作成する場合は、一般に新しいデータをモデルに供給することでこの操作を行います  (例外はタイム シリーズ モデルで、履歴データのみに基づいて予測を行うことができます)。モデルに新しいデータを提供するには、データがデータ ソース ビューの一部として使用可能であることを確認する必要があります。 予測に使用するデータがあらかじめわかっている場合は、モデルの作成に使用するデータ ソース ビューにそのデータを含めることができます。 それ以外の場合は、新しいデータ ソース ビューを作成する必要があります。 詳細については、「 [多次元モデルのデータ ソース ビュー](../multidimensional-models/data-source-views-in-multidimensional-models.md)」を参照してください。  
+  マイニング モデルから予測を作成する場合は、一般に新しいデータをモデルに供給することでこの操作を行います (例外はタイム シリーズ モデルで、履歴データのみに基づいて予測を行うことができます)。モデルに新しいデータを提供するには、データがデータ ソース ビューの一部として使用可能であることを確認する必要があります。 予測に使用するデータがあらかじめわかっている場合は、モデルの作成に使用するデータ ソース ビューにそのデータを含めることができます。 それ以外の場合は、新しいデータ ソース ビューを作成する必要があります。 詳細については、「 [多次元モデルのデータ ソース ビュー](../multidimensional-models/data-source-views-in-multidimensional-models.md)」を参照してください。  
   
  必要なデータが一対多の結合で複数の表に含まれている場合があります。 これはデータがアソシエーション モデルまたはシーケンス クラスター モデルに使用されるケースであり、製品またはトランザクションの詳細を含む入れ子になったテーブルにリンクしているケース テーブルを使用します。 モデルでケースが入れ子になったテーブル構造を使用する場合は、予測に使用するデータにもケースが入れ子になったテーブル構造が必要です。  
   
@@ -119,6 +118,6 @@ ms.locfileid: "48119062"
      リレーションシップが既に存在する場合は、マイニング モデルの列が、入力テーブル内の同じ名前の列に自動的にマップされます。 入れ子になったテーブルとケース テーブル間のリレーションシップは、 **[結合の変更]** をクリックし、 **[リレーションシップの作成]** ダイアログ ボックスを開いて変更できます。  
   
 ## <a name="see-also"></a>参照  
- [予測クエリ&#40;データ マイニング&#41;](prediction-queries-data-mining.md)  
+ [予測クエリ (データ マイニング)](prediction-queries-data-mining.md)  
   
   

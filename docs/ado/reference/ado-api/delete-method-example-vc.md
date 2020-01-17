@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 7cc78fb5-2701-49dc-bc22-06613b10cecb
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 975140d00a0566f1776e7a3743d82fc3077b43ff
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: af20890a9c75ee815145b78f1c10de377b861436
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47835400"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67933102"
 ---
 # <a name="delete-method-example-vc"></a>Delete メソッドの例 (VC++)
 この例では、[削除](../../../ado/reference/ado-api/delete-method-ado-recordset.md)から指定されたレコードを削除する方法、 [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md)します。  
@@ -272,7 +271,7 @@ void PrintComError(_com_error &e) {
 TC4203  
 ```  
   
-## <a name="sample-output"></a>サンプル出力  
+## <a name="sample-output"></a>出力例  
   
 ```  
 Before delete there are 7 titles with 20 percent royalty :  
@@ -294,6 +293,6 @@ MC2222
 BU7832  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [Delete メソッド (ADO Recordset)](../../../ado/reference/ado-api/delete-method-ado-recordset.md)   
  [Recordset オブジェクト (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)

@@ -13,11 +13,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 102b3defa150707412012d506e0e9e542d80b9a0
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48126357"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62813253"
 ---
 # <a name="view-availability-group-properties-sql-server"></a>可用性グループのプロパティの表示 (SQL Server)
   このトピックでは、[!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] で [!INCLUDE[tsql](../../../includes/tsql-md.md)] または [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] を使用して、AlwaysOn 可用性グループの可用性グループのプロパティを表示する方法について説明します。  
@@ -31,9 +31,9 @@ ms.locfileid: "48126357"
   
 2.  **[AlwaysOn 高可用性]** ノードと **[可用性グループ]** ノードを展開します。  
   
-3.  表示するプロパティを持つ可用性グループを右クリックし、**[プロパティ]** をクリックします。  
+3.  表示するプロパティを持つ可用性グループを右クリックし、 **[プロパティ]** をクリックします。  
   
-4.  **[可用性グループのプロパティ]** ダイアログ ボックスで、**[全般]** および **[バックアップの設定]** ページを使用して、選択された可用性グループのプロパティを表示し、必要に応じて変更します。 詳細については、「[[可用性グループのプロパティ]: [新しい可用性グループ] &#40;[全般] ページ&#41;](availability-group-properties-new-availability-group-general-page.md)」、「[[可用性グループのプロパティ]: [新しい可用性グループ] &#40;[バックアップの設定] ページ&#41;](availability-group-properties-new-availability-group-backup-preferences-page.md)」を参照してください。  
+4.  **[可用性グループのプロパティ]** ダイアログ ボックスで、 **[全般]** および **[バックアップの設定]** ページを使用して、選択された可用性グループのプロパティを表示し、必要に応じて変更します。 詳細については、次を参照してください。[可用性グループのプロパティと、新しい可用性グループ&#40;[全般] ページ&#41;](availability-group-properties-new-availability-group-general-page.md)と[可用性グループのプロパティ。新しい可用性グループ&#40;の設定 ページをバックアップ&#41;](availability-group-properties-new-availability-group-backup-preferences-page.md)します。  
   
      **[権限]** ページを使用して、可用性グループに関連付けられている現在のログイン、ロール、および明示的な権限を表示できます。 詳細については、「 [[権限] ページまたは [セキュリティ保護可能なリソース] ページ](../../../relational-databases/security/permissions-or-securables-page.md)」を参照してください。  
   
@@ -100,7 +100,7 @@ ms.locfileid: "48126357"
   
 
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [AlwaysOn 可用性グループの概要&#40;SQL Server&#41; ](overview-of-always-on-availability-groups-sql-server.md) [可用性グループの監視&#40;TRANSACT-SQL&#41; ](monitor-availability-groups-transact-sql.md) [AlwaysOn 運用上の問題のポリシー可用性グループ&#40;SQL Server&#41;](always-on-policies-for-operational-issues-always-on-availability.md) 
   
   

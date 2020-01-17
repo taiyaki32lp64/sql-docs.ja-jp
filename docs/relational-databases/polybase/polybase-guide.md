@@ -1,9 +1,7 @@
 ---
 title: PolyBase とは | Microsoft Docs
-ms.date: 09/24/2018
+ms.date: 06/10/2019
 ms.prod: sql
-ms.reviewer: ''
-ms.custom: ''
 ms.technology: polybase
 ms.topic: overview
 f1_keywords:
@@ -16,22 +14,23 @@ helpviewer_keywords:
 - Hadoop export
 - Hadoop export, PolyBase overview
 - Hadoop import, PolyBase overview
-author: rothja
-ms.author: jroth
-manager: craigg
-ms.openlocfilehash: e91afc38ec7cfa4d37217a3152ca731d3c8dac39
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: MikeRayMSFT
+ms.author: mikeray
+ms.reviewer: ''
+monikerRange: '>=sql-server-2016||>=sql-server-linux-2017||=sqlallproducts-allversions||>=aps-pdw-2016||=azure-sqldw-latest'
+ms.openlocfilehash: 7e9e09cece42b84e5fa9691aa0d353d2ed22431b
+ms.sourcegitcommit: 8732161f26a93de3aa1fb13495e8a6a71519c155
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47844610"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71710580"
 ---
 # <a name="what-is-polybase"></a>PolyBase とは
 
-[!INCLUDE[appliesto-ss-xxxx-asdw-pdw-md-winonly](../../includes/appliesto-ss-xxxx-asdw-pdw-md-winonly.md)]
+[!INCLUDE[appliesto-ss-xxxx-asdw-pdw-md](../../includes/appliesto-ss-xxxx-asdw-pdw-md.md)]
 
 <!--SQL Server 2016/2017-->
-::: moniker range="= sql-server-2016 || = sql-server-2017"
+::: moniker range="= sql-server-2016 || = sql-server-2017 || >= aps-pdw-2016 || = azure-sqldw-latest"
 
 PolyBase を使用すると、SQL Server 2016 インスタンスで Hadoop からデータを読み取る Transact-SQL クエリを処理できるようになります。 同じクエリで SQL Server のリレーショナル テーブルにアクセスすることもできます。 また、PolyBase では、同じクエリで Hadoop と SQL Server のデータを結合させることもできます。 SQL Server では、[外部テーブル](../../t-sql/statements/create-external-table-transact-sql.md)または[外部データ ソース](../../t-sql/statements/create-external-data-source-transact-sql.md)によって Hadoop と接続します。
 
@@ -40,13 +39,13 @@ PolyBase を使用すると、SQL Server 2016 インスタンスで Hadoop か�
 PolyBase では、クエリ全体を最適化するために計算の一部が Hadoop ノードにプッシュされます。 しかし、PolyBase の外部アクセスは Hadoop だけではありません。 その他の構造化されていない非リレーショナル テーブルもサポートしています (区切られたテキスト ファイルなど)。
 
 > [!TIP]
-> SQL Server 2019 CTP 2.0 では、SQL Server、Oracle、Teradata、および MongoDB を含む新しい PolyBase 用のコネクタが導入されています。 詳細については、[ SQL Server 2019 CTP 2.0 用の PolyBase のドキュメント](polybase-guide.md?view=sql-server-ver15)を参照してください。
+> SQL Server 2019 では、SQL Server、Oracle、Teradata、および MongoDB を含む新しい PolyBase 用のコネクタが導入されています。 詳細については、[ SQL Server 2019 用の PolyBase のドキュメント](polybase-guide.md?view=sql-server-ver15)に関するページを参照してください。
 
 ::: moniker-end
 <!--SQL Server 2019-->
-::: moniker range=">= sql-server-ver15 || =sqlallproducts-allversions"
+::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 || =sqlallproducts-allversions"
 
-PolyBase を使用すると、外部データ ソースからデータを読み取る Transact-SQL クエリを SQL Server インスタンスで処理できるようになります。 SQL Server 2016 以降は、Hadoop と Azure Blob Storage 内の外部データにアクセスできます。 SQL Server 2019 CTP 2.0 以降、PolyBase を使用して、[SQL Server](polybase-configure-sql-server.md)[Oracle](polybase-configure-oracle.md)[Teradata](polybase-configure-teradata.md)および [MongoDB](polybase-configure-mongodb.md)内の外部データにアクセスできるようになります。
+PolyBase を使用すると、外部データ ソースからデータを読み取る Transact-SQL クエリを SQL Server インスタンスで処理できるようになります。 SQL Server 2016 以降は、Hadoop と Azure Blob Storage 内の外部データにアクセスできます。 SQL Server 2019 以降、PolyBase を使用して、[SQL Server](polybase-configure-sql-server.md)、[Oracle](polybase-configure-oracle.md)、[Teradata](polybase-configure-teradata.md)、および [MongoDB](polybase-configure-mongodb.md) 内の外部データにアクセスできるようになりました。
 
 外部データにアクセスするのと同じクエリでは、SQL Server インスタンス内のリレーショナル テーブルを対象にすることもできます。 これにより、外部ソースのデータとデータベース内の高価値のリレーショナル データを組み合わせることができます。 SQL Server では、[外部テーブル](../../t-sql/statements/create-external-table-transact-sql.md)または[外部データ ソース](../../t-sql/statements/create-external-data-source-transact-sql.md)によって Hadoop と接続します。
 
@@ -97,25 +96,29 @@ PolyBase を使用すると、SQL Server で次のシナリオに対応できま
 
 - **コンピューティング リソースをスケーリングする。** クエリのパフォーマンスを向上させるために、SQL Server [PolyBase スケールアウト グループ](../../relational-databases/polybase/polybase-scale-out-groups.md)を使用できます。 これにより、SQL Server インスタンスと Hadoop ノードの間の並列データ転送が可能になります。また、外部データに対する操作のためのコンピューティング リソースが追加されます。
 
+<!--SQL Server 2016/2017-->
+::: moniker range="=sql-server-2016||=sql-server-2017"
+
 ## <a name="next-steps"></a>次の手順
 
 PolyBase を使用する前に [PolyBase 機能をインストールする](polybase-installation.md)必要があります。 その後、使用するデータ ソースに応じて、次の構成ガイドを参照してください。
-
-<!--SQL Server 2016/2017-->
-::: moniker range="= sql-server-2016 || = sql-server-2017"
 
 - [Hadoop](polybase-configure-hadoop.md)
 - [Azure Blob Storage](polybase-configure-azure-blob-storage.md)
 
 ::: moniker-end
 <!--SQL Server 2019-->
-::: moniker range=">= sql-server-ver15 || =sqlallproducts-allversions"
+::: moniker range=">= sql-server-linux-ver15||>= sql-server-ver15||=sqlallproducts-allversions"
 
+## <a name="next-steps"></a>次の手順
+
+PolyBase を使用する前に [PolyBase 機能をインストールする](polybase-installation.md)必要があります。 その後、使用するデータ ソースに応じて、次の構成ガイドを参照してください。
 - [Hadoop](polybase-configure-hadoop.md)
 - [Azure Blob Storage](polybase-configure-azure-blob-storage.md)
 - [SQL Server](polybase-configure-sql-server.md)
 - [Oracle](polybase-configure-oracle.md)
 - [Teradata](polybase-configure-teradata.md)
 - [MongoDB](polybase-configure-mongodb.md)
+- [ODBC ジェネリック型](polybase-configure-odbc-generic.md)
 
 ::: moniker-end

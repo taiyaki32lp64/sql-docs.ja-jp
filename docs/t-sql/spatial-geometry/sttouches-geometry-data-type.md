@@ -15,15 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - STTouches (geometry Data Type)
 ms.assetid: af3650b4-26da-4600-9cc2-1be71dd76a14
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: d04746833ce8077261cf9b5b624e17556ee4a093
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: MladjoA
+ms.author: mlandzic
+ms.openlocfilehash: 93ea5be3c2f9a4ecdd415471da16ca21eb1f08c9
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47665140"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68066241"
 ---
 # <a name="sttouches-geometry-data-type"></a>STTouches (geometry データ型)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -44,7 +43,7 @@ ms.locfileid: "47665140"
 ## <a name="return-types"></a>戻り値の型  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 戻り値の型: **bit**  
   
- CLR の戻り値の型: **SqlBoolean**  
+ CLR の戻り値の型:**SqlBoolean**  
   
 ## <a name="remarks"></a>Remarks  
  2 つの **geometry** インスタンスの地点のセットは交差しているが、内部が交差していない場合、これらのインスタンスは接しています。  

@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: e75240c2-b749-471e-b6ea-98cae232efbe
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 189dc8604883d8d91a8bc223c54dd3cb5c14969e
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.openlocfilehash: 97597e15bc5cd8ee8d3008c97f3a4e8b07b2d43d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51599823"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67964323"
 ---
 # <a name="datafactory-object-rdsserver"></a>DataFactory オブジェクト (RDSServer)
 > [!IMPORTANT]
@@ -43,7 +42,7 @@ ms.locfileid: "51599823"
   
 -   [DataControl オブジェクト (RDSServer) のプロパティ、メソッド、およびイベント](../../../ado/reference/rds-api/datafactory-object-rdsserver-properties-methods-and-events.md)  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [DataFactory オブジェクト、クエリ メソッド、および CreateObject メソッドの例 (VBScript)](../../../ado/reference/rds-api/datafactory-object-query-method-and-createobject-method-example-vbscript.md)
 
 

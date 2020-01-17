@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: 955ca6d6-9d5b-47a4-a87c-59bd23f1bf74
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 9f3544ce4297117be11b3ba68821e3b621fbc400
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: fb8a451d9904edffe665d90dba5bd3ba1c18aac3
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52411279"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66071742"
 ---
 # <a name="configure-usage-data-collection-for-powerpivot-for-sharepoint"></a>使用状況データ収集の構成 (対象は PowerPivot for SharePoint)
   使用状況データ収集は、ファーム レベルの SharePoint 機能です。 PowerPivot for SharePoint では、このシステムを使用および拡張して、PowerPivot のデータやサービスがどのように使用されているかを示すレポートが PowerPivot 管理ダッシュボードに用意されています。 SharePoint のインストール方法によっては、使用状況データ収集がファームに対して無効になっていることがあります。 ファーム管理者は、使用状況のログ記録を有効にして、PowerPivot 管理ダッシュボードに表示される使用状況データを作成する必要があります。  
@@ -49,7 +48,7 @@ ms.locfileid: "52411279"
   
 1.  サーバーの全体管理で **[監視]** をクリックします。  
   
-2.   **[レポート]** セクションで、 **[使用状況と正常性のデータ収集の構成]** をクリックします。  
+2.  **[レポート]** セクションで、 **[使用状況と正常性のデータ収集の構成]** をクリックします。  
   
 3.  **[利用状況データの収集を有効にする]** をオンにします。  
   

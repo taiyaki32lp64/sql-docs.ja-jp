@@ -23,21 +23,20 @@ helpviewer_keywords:
 - system usernames [SQL Server]
 - users [SQL Server], names
 ms.assetid: 565984cd-60c6-4df7-83ea-2349b838ccb2
-author: MashaMSFT
-ms.author: mathoma
-manager: craigg
+author: MikeRayMSFT
+ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: aba7d702a9e7a6e89bb76c23fd570efee1b4e470
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 188248ea2a09875e71905878a9d9f85c3ebfcd78
+ms.sourcegitcommit: f688a37bb6deac2e5b7730344165bbe2c57f9b9c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47705940"
+ms.lasthandoff: 11/08/2019
+ms.locfileid: "73843569"
 ---
-# <a name="systemuser-transact-sql"></a>SYSTEM_USER (Transact-SQL)
+# <a name="system_user-transact-sql"></a>SYSTEM_USER (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-pdw-md.md)]
 
-  現在のログインに既定値が指定されていない場合に、システム提供の値をテーブルに挿入します。  
+  既定値が指定されていない場合、現在のユーザー用のシステム定義の値をテーブルに挿入することができます。  
   
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -48,20 +47,20 @@ SYSTEM_USER
 ```  
   
 ## <a name="return-types"></a>戻り値の型  
- **nchar**  
+ **nvarchar(128)**  
   
 ## <a name="remarks"></a>Remarks  
  SYSTEM_USER 関数は、CREATE TABLE および ALTER TABLE ステートメント内で DEFAULT 制約と共に使用できます。 標準的な関数としても使用できます。  
   
  ユーザー名とログイン名が異なる場合、SYSTEM_USER ではログイン名が返されます。  
   
- 現在のユーザーが Windows 認証を使用して [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] にログインしている場合、*ドメイン*\\*user_login_name* という形式で SYSTEM_USER は Windows ログインの識別名を返します。 現在のユーザーが SQL Server 認証によって [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] にログインした場合は、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ログインの識別名が返されます。たとえば、`WillisJo` としてログインしたユーザーの場合は `WillisJo` が返されます。  
+ 現在のユーザーが Windows 認証によって [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] にログインされた場合、SYSTEM_USER から、次の形式で Windows ログインの識別名が返されます。*DOMAIN*\\*user_login_name*。 現在のユーザーが SQL Server 認証によって [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] にログインした場合は、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ログインの識別名が返されます。たとえば、`WillisJo` としてログインしたユーザーの場合は `WillisJo` が返されます。  
   
- SYSTEM_USER では、現在の実行コンテキストの名前が返されます。 EXECUTE AS ステートメントを使用してコンテキストが切り替えられていた場合、SYSTEM_USER では権限が借用されたコンテキストの名前が返されます。  
+ SYSTEM_USER では、現在の実行コンテキストの名前が返されます。 EXECUTE AS ステートメントを使用してコンテキストを切り替えた場合、SYSTEM_USER では権限を借用したコンテキストの名前が返されます。  
   
 ## <a name="examples"></a>使用例  
   
-### <a name="a-using-systemuser-to-return-the-current-system-user-name"></a>A. SYSTEM_USER を使用して現在のシステム ユーザー名を返す  
+### <a name="a-using-system_user-to-return-the-current-system-user-name"></a>A. SYSTEM_USER を使用して現在のシステム ユーザー名を返す  
  次の例では、`char` 変数を宣言し、`SYSTEM_USER` の現在の値をこの変数に格納した後、変数に格納されている値を出力します。  
   
 ```  
@@ -80,7 +79,7 @@ The current system user is: WillisJo
 (1 row(s) affected)
  ```  
   
-### <a name="b-using-systemuser-with-default-constraints"></a>B. SYSTEM_USER を DEFAULT 制約と共に使用する  
+### <a name="b-using-system_user-with-default-constraints"></a>B. SYSTEM_USER を DEFAULT 制約と共に使用する  
  次の例では、テーブルを作成し、`SYSTEM_USER` 列の `DEFAULT` 制約として `SRep_tracking_user` を使用します。  
   
 ```  
@@ -130,7 +129,7 @@ Territory_id Rep_id Last_sale            SRep_tracking_user
   
 ## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>例: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] および [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
-### <a name="c-using-systemuser-to-return-the-current-system-user-name"></a>C: SYSTEM_USER を使用して現在のシステム ユーザー名を返す  
+### <a name="c-using-system_user-to-return-the-current-system-user-name"></a>C:  SYSTEM_USER を使用して現在のシステム ユーザー名を返す  
  次の例では、`SYSTEM_USER` の現在の値を返します。  
   
 ```  
@@ -143,7 +142,7 @@ SELECT SYSTEM_USER;
  [CURRENT_TIMESTAMP &#40;Transact-SQL&#41;](../../t-sql/functions/current-timestamp-transact-sql.md)   
  [CURRENT_USER &#40;Transact-SQL&#41;](../../t-sql/functions/current-user-transact-sql.md)   
  [SESSION_USER &#40;Transact-SQL&#41;](../../t-sql/functions/session-user-transact-sql.md)   
- [システム関数 &#40;Transact-SQL&#41;](../../relational-databases/system-functions/system-functions-for-transact-sql.md)   
+ [システム関数 &#40;Transact-SQL&#41;](../../relational-databases/system-functions/system-functions-category-transact-sql.md)   
  [USER &#40;Transact-SQL&#41;](../../t-sql/functions/user-transact-sql.md)  
   
   

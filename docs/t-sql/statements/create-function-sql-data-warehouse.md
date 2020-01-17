@@ -12,19 +12,18 @@ dev_langs:
 ms.assetid: 8cad1b2c-5ea0-4001-9060-2f6832ccd057
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 90437ce089bba33e5282ca01e907dfac7afe77ab
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: f5510d6c75380e48008740ab8a0f5b1c9f500fe5
+ms.sourcegitcommit: e9c1527281f2f3c7c68981a1be94fe587ae49ee9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51699710"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73064541"
 ---
-# <a name="create-function-sql-data-warehouse"></a>関数 (SQL データ ウェアハウス) を作成します。
+# <a name="create-function-sql-data-warehouse"></a>CREATE FUNCTION (SQL Data Warehouse)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
 
-  [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] でユーザー定義関数を作成します。 ユーザー定義の関数は、 [!INCLUDE[tsql](../../includes/tsql-md.md)] ルーチン パラメーターを受け取るが、複雑な計算などの操作を実行し、値としては、そのアクションの結果を返します。 戻り値は、スカラー (単一) 値である必要があります。 このステートメントを使用して、次の方法で使用できる再利用可能なルーチンを作成します。  
+  [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] でユーザー定義関数を作成します。 ユーザー定義の関数は、パラメーターを受け取り、複雑な計算などの操作を実行する [!INCLUDE[tsql](../../includes/tsql-md.md)] ルーチンであり、そのアクションの結果を値として返します。 戻り値は、スカラー (単一) 値である必要があります。 このステートメントを使用して、次の方法で使用できる再利用可能なルーチンを作成します。  
   
 -   SELECT などの [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメント内で使用する  
   
@@ -70,7 +69,7 @@ RETURNS return_data_type
  ユーザー定義関数が属するスキーマの名前を指定します。  
   
  *function_name*  
- ユーザー定義関数の名前です。 関数名では、識別子の規則に従う必要があり、およびそのスキーマ、データベース内で一意である必要があります。  
+ ユーザー定義関数の名前です。 関数名は、識別子の規則に準拠する必要があり、そのスキーマ、データベース内で一意である必要があります。  
   
 > [!NOTE]  
 >  パラメーターを指定しない場合でも、関数名の後にはかっこが必要です。  
@@ -86,7 +85,7 @@ RETURNS return_data_type
 >  ストアド プロシージャまたはユーザー定義関数でパラメーターを渡すとき、あるいはバッチ ステートメントで変数を宣言して設定するときには、ANSI_WARNINGS が無視されます。 たとえば、変数を **char(3)** と定義し、これに 4 文字以上の値を設定すると、データが定義されたサイズに合わせて切り捨てられてから、INSERT または UPDATE ステートメントが成功します。  
   
  *parameter_data_type*  
- パラメーター データ型。 [!INCLUDE[tsql](../../includes/tsql-md.md)] 関数でサポートされるすべてのスカラー データ型 [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] は許可します。 タイムスタンプ (rowversion) データ型はサポートされていません。  
+ パラメーター データ型。 [!INCLUDE[tsql](../../includes/tsql-md.md)] 関数は、[!INCLUDE[ssSDW](../../includes/sssdw-md.md)] でサポートされるすべてのスカラー データ型を許可します。 タイムスタンプ (rowversion) データ型はサポートされていません。  
   
  [ =*default* ]  
  パラメーターの既定値です。 *default* 値が定義されている場合は、パラメーターに値を指定せずに関数を実行できます。  
@@ -111,7 +110,7 @@ RETURNS return_data_type
  SCHEMABINDING  
  参照するデータベース オブジェクトに対して、その関数がバインドされるように指定します。 SCHEMABINDING を指定した場合、ベース オブジェクトに対して関数定義に影響を与えるような変更は行えません。 まず関数定義を変更または削除して、変更するオブジェクトとの依存関係を解消する必要があります。  
   
- 関数からその参照先のオブジェクトへのバインドは、次のいずれかの操作が行われた場合にのみ削除されます。  
+ 関数が参照するオブジェクトへのバインドは、次のいずれかの操作が行われた場合にのみ削除されます。  
   
 -   関数を削除した場合。  
   
@@ -121,21 +120,21 @@ RETURNS return_data_type
   
 -   関数によって参照されているすべてのユーザー定義関数もスキーマにバインドします。  
   
--   関数は、およびその他のユーザー定義関数の関数が参照は、1 つまたは 2 部構成の名前を使用して参照されます。  
+-   関数と関数によって参照されるその他の UDF は、1 つのパーツまたは 2 つのパーツの名前を使用して参照されます。  
   
--   のみの組み込み関数と同じデータベース内には、その他の Udf は、ユーザー定義関数の本体で参照できます。  
+-   同じデータベース内の組み込み関数とその他の UDF のみを、UDF の本体内で参照することができます。  
   
--   CREATE FUNCTION ステートメントを実行したユーザーが、その関数が参照するデータベース オブジェクトに対する REFERENCES 権限を持っている。  
+-   CREATE FUNCTION ステートメントを実行したユーザーには、関数で参照するデータベース オブジェクトの REFERENCES 権限があります。  
   
- SCHEMABINDING を使用して変更を削除するには  
+ SCHEMABINDING を削除するには、ALTER を使用します。  
   
  RETURNS NULL ON NULL INPUT | **CALLED ON NULL INPUT**  
  スカラー値関数の **OnNULLCall** 属性を指定します。 指定しない場合は、既定で CALLED ON NULL INPUT が暗黙的に使用されます。 つまり、NULL が引数として渡された場合でも、関数本体が実行されます。  
   
 ## <a name="best-practices"></a>ベスト プラクティス  
- ユーザー定義関数の作成時に SCHEMABINDING 句を使用しないと、基になるオブジェクトに加えられた変更が関数の定義に影響して、関数が呼び出されたときに予期しない結果が生じる可能性があります。 基になるオブジェクトに対する変更によって関数が古くならないように、次のいずれかの操作を行うことをお勧めします。  
+ ユーザー定義関数が SCHEMABINDING 句を使って作成されていない場合、基になるオブジェクトに行った変更は関数の定義に影響し、呼び出されたときに予期しない結果が生じる可能性があります。 基になるオブジェクトに対する変更によって関数が古くならないように、次のいずれかの操作を行うことをお勧めします。  
   
--   関数を作成するときに WITH SCHEMABINDING 句を指定します。 これにより、関数定義で参照されているオブジェクトは、一緒に関数も変更しない限り変更できなくなります。  
+-   関数を作成しているときに、WITH SCHEMABINDING 句を指定します。 これにより、関数定義で参照されているオブジェクトは、一緒に関数も変更しない限り変更できなくなります。  
   
 ## <a name="interoperability"></a>相互運用性  
  関数で有効なステートメントは以下のとおりです。  
@@ -144,7 +143,7 @@ RETURNS return_data_type
   
 -   TRY...CATCH ステートメント以外の流れ制御ステートメント。  
   
--   ローカル データ変数を定義するステートメントを宣言します。  
+-   ローカル データ変数を定義する DECLARE ステートメント。  
   
 ## <a name="limitations-and-restrictions"></a>制限事項と制約事項  
  ユーザー定義関数は、データベースの状態を変更するアクションの実行に使用することはできません。  
@@ -154,9 +153,9 @@ RETURNS return_data_type
 ## <a name="metadata"></a>メタデータ  
  このセクションでは、ユーザー定義関数に関するメタデータを返すために使用できるシステム カタログ ビューを示します。  
   
- [sys.sql_modules](../../relational-databases/system-catalog-views/sys-sql-modules-transact-sql.md): [!INCLUDE[tsql](../../includes/tsql-md.md)] ユーザー定義関数の定義を表示します。 例 :  
+ [sys.sql_modules](../../relational-databases/system-catalog-views/sys-sql-modules-transact-sql.md) : [!INCLUDE[tsql](../../includes/tsql-md.md)] ユーザー定義関数の定義を表示します。 例:  
   
-```  
+```sql  
 SELECT definition, type   
 FROM sys.sql_modules AS m  
 JOIN sys.objects AS o   
@@ -166,7 +165,7 @@ GO
   
 ```  
   
- [sys.parameters](../../relational-databases/system-catalog-views/sys-parameters-transact-sql.md): ユーザー定義関数で定義されているパラメーターの情報を表示します。  
+ [sys.parameters](../../relational-databases/system-catalog-views/sys-parameters-transact-sql.md) : ユーザー定義関数で定義されているパラメーターの情報を表示します。  
   
  [sys.sql_expression_dependencies](../../relational-databases/system-catalog-views/sys-sql-expression-dependencies-transact-sql.md) : 関数が参照する基になるオブジェクトを表示します。  
   
@@ -175,10 +174,10 @@ GO
   
 ## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>例: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] および [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
-### <a name="a-using-a-scalar-valued-user-defined-function-to-change-a-data-type"></a>A. ユーザー定義のスカラー値関数を使用して、データ型を変更するには  
+### <a name="a-using-a-scalar-valued-user-defined-function-to-change-a-data-type"></a>A. データ型を変更するために、スカラー値ユーザー定義関数を使用する  
  この単純な関数は、**int** データ型として入力を取り、**decimal(10,2)** データ型として出力を返します。  
   
-```  
+```sql  
 CREATE FUNCTION dbo.ConvertInput (@MyValueIn int)  
 RETURNS decimal(10,2)  
 AS  

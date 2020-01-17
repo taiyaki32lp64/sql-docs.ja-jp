@@ -4,20 +4,19 @@ ms.custom: ''
 ms.date: 05/17/2018
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - Analysis Services wizards
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 25f4cf1cb5a7bf38fb49157667fccbdf70a0218b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: e183adbba2007e6ff79361631e23f3f510458e6f
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48218982"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66065641"
 ---
 # <a name="ui-wizards-for-data-mining-analysis"></a>データ マイニング分析の UI ウィザード
 

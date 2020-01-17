@@ -15,11 +15,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: f5fca9032df4f1327933580a306215fd2fd47854
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54135972"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68211815"
 ---
 # <a name="rename-columns-database-engine"></a>列名の変更 (データベース エンジン)
   [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] では、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] または [!INCLUDE[tsql](../../includes/tsql-md.md)]を使用してテーブル列の名前を変更することができます。  
@@ -64,7 +64,7 @@ ms.locfileid: "54135972"
   
 2.  **[列名]** の下の変更する名前を選択して、新しい名前を入力します。  
   
-3.  **ファイル** メニューの **table name**_の保存_をクリックします。  
+3.  **[ファイル]** メニューの **[<_テーブル名_> を保存]** をクリックします。  
   
 > [!NOTE]  
 >  **[列のプロパティ]** タブで列の名前を変更することもできます。名前を変更する列を選択して、 **[名前]** に新しい値を入力します。  
@@ -78,7 +78,7 @@ ms.locfileid: "54135972"
   
 2.  [標準] ツール バーの **[新しいクエリ]** をクリックします。  
   
-3.  次の例では、 `TerritoryID` テーブル内の `Sales.SalesTerritory` 列の名前を `TerrID`に変更します。 次の例をコピーしてクエリ ウィンドウに貼り付け、 **[実行]** をクリックします。  
+3.  3\. 次の例では、`Sales.SalesTerritory` テーブル内の `TerritoryID` 列の名前を `TerrID` に変更します。 次の例をコピーしてクエリ ウィンドウに貼り付け、 **[実行]** をクリックします。  
   
     ```  
     USE AdventureWorks2012;  

@@ -15,19 +15,18 @@ helpviewer_keywords:
 - SQL Server Agent jobs, history
 - historical information [SQL Server], jobs
 ms.assetid: ddee1ce8-9d1b-4017-9894-bf7256aed95d
-author: stevestein
-ms.author: sstein
-manager: craigg
+author: markingmyname
+ms.author: maghan
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 64534d4f6dbf033dc4031a36343eaa0e12d21877
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 5dea3b0a7eb9076bb778a14a4c8ab1834df0b93e
+ms.sourcegitcommit: 58f1d5498c87bfe0f6ec4fd9d7bbe723be47896b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47620800"
+ms.lasthandoff: 08/13/2019
+ms.locfileid: "68995838"
 ---
 # <a name="resize-the-job-history-log"></a>Resize the Job History Log
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md.md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 > [!IMPORTANT]  
 > [Azure SQL Database Managed Instance](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance) では現在、すべてではありませんがほとんどの SQL Server エージェントの機能がサポートされています。 詳細については、「[Azure SQL Database Managed Instance と SQL Server の T-SQL の相違点](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent)」を参照してください。
@@ -36,7 +35,7 @@ ms.locfileid: "47620800"
   
 -   **作業を開始する準備:**  
   
-    [Security](#Security)  
+    [セキュリティ](#Security)  
   
 -   **ジョブ履歴ログのサイズ制限を設定する方法:**  
   
@@ -44,8 +43,8 @@ ms.locfileid: "47620800"
   
 ## <a name="BeforeYouBegin"></a>はじめに  
   
-### <a name="Security"></a>Security  
-詳細については、「 [Implement SQL Server Agent Security](../../ssms/agent/implement-sql-server-agent-security.md)」をご覧ください。  
+### <a name="Security"></a>セキュリティ  
+詳細については、「 [SQL Server エージェントのセキュリティの実装](../../ssms/agent/implement-sql-server-agent-security.md)」をご覧ください。  
   
 ## <a name="SSMS"></a>SQL Server Management Studio の使用  
   
@@ -55,7 +54,7 @@ ms.locfileid: "47620800"
   
 2.  **[SQL Server エージェント]** を右クリックし、 **[プロパティ]** をクリックします。  
   
-3.  **[履歴]** ページを選択し、 **[ジョブ履歴ログのサイズを制限する]** チェック ボックスがオンになっていることを確認します。  
+3.  **[履歴]** ページを選択し、 **[ジョブ履歴ログのサイズを制限する]** がオンになっていることを確認します。  
   
 4.  **[ジョブ履歴ログの最大サイズ (行)]** ボックスで、ジョブ履歴ログに使用できる最大行数を入力します。  
   
@@ -69,5 +68,5 @@ ms.locfileid: "47620800"
   
 3.  **[履歴]** ページを選択し、 **[自動的にエージェントの履歴を削除する]** チェック ボックスをオンにします。  
   
-4.  適切な **[日]**、 **[週]**、または **[月]** を選択します。  
+4.  適切な **[日]** 、 **[週]** 、または **[月]** を選択します。  
   

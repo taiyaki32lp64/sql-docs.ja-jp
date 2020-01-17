@@ -2,7 +2,7 @@
 title: RSReportServer.Config で表示拡張機能パラメーターをカスタマイズする | Microsoft Docs
 ms.date: 03/20/2017
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: reporting-services
 ms.topic: conceptual
 helpviewer_keywords:
@@ -13,14 +13,14 @@ helpviewer_keywords:
 - overriding report rendering behavior
 - extensions [Reporting Services], rendering
 ms.assetid: 3bf7ab2b-70bb-41c8-acda-227994d15aed
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: fdd3fb449e43fdfd2877150a50afdc1c29eb6327
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 2d5266de3f5fe52a75c1027addd02ca32488c38b
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47846717"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65571588"
 ---
 # <a name="customize-rendering-extension-parameters-in-rsreportserverconfig"></a>RSReportServer.Config で表示拡張機能パラメーターをカスタマイズする
   RSReportServer 構成ファイルで表示拡張機能パラメーターを設定すると、[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] レポート サーバーで実行されるレポートについて、既定のレポート表示動作をオーバーライドできます。 表示拡張機能パラメーターは、次のように目的に応じて変更できます。  

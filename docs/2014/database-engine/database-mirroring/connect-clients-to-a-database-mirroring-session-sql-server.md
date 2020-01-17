@@ -16,11 +16,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 183dba1f69634ea6931dc14cc6aa3fb6d6eca6ee
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54132542"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62755341"
 ---
 # <a name="connect-clients-to-a-database-mirroring-session-sql-server"></a>データベース ミラーリング セッションへのクライアントの接続 (SQL Server)
   データベース ミラーリング セッションに接続するには、クライアント側で [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client または .NET Framework Data Provider for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]を使用できます。 これらのデータ アクセス プロバイダーは、 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] データベース用に構成されると、両方ともデータベース ミラーリングを完全にサポートします。 ミラー化されたデータベースの使用に関するプログラミングの注意点については、「 [Using Database Mirroring](../../relational-databases/native-client/features/using-database-mirroring.md)」を参照してください。 さらに、現在のプリンシパル サーバー インスタンスは使用可能であり、クライアントのログインがサーバー インスタンス上に作成されている必要があります。 詳細については、「 [孤立ユーザーのトラブルシューティング &#40;SQL Server&#41;](../../sql-server/failover-clusters/troubleshoot-orphaned-users-sql-server.md)を実行します。 データベース ミラーリング セッションへのクライアント接続では、ミラーリング監視サーバー インスタンスが存在していても使用されません。  
@@ -166,7 +166,7 @@ Server=123.34.45.56,4724;
   
  再試行時間は、次の式を使用して計算されます。  
   
- _RetryTime_ **=** _PreviousRetryTime_ **+ (** 0.08 **&#42;** _LoginTimeout_**)**  
+ _RetryTime_ **=** _PreviousRetryTime_ **+(** 0.08 **&#42;**_LoginTimeout_**)**  
   
  ここでは、 *PreviousRetryTime* の初期値は 0 です。  
   
@@ -174,10 +174,10 @@ Server=123.34.45.56,4724;
   
 |四捨五入|*RetryTime* の計算|接続試行ごとの再試行時間|  
 |-----------|-----------------------------|----------------------------|  
-|1|0 **+ (** 0.08 **&#42;** 15 **)**|1.2 秒|  
-|2|1.2 **+ (** 0.08 **&#42;** 15 **)**|2.4 秒|  
-|3|2.4 **+ (** 0.08 **&#42;** 15 **)**|3.6 秒|  
-|4|3.6 **+ (** 0.08 **&#42;** 15 **)**|4.8 秒|   
+|1|0 **+(** 0.08 **&#42;** 15 **)**|1.2 秒|  
+|2|1.2 **+(** 0.08 **&#42;** 15 **)**|2.4 秒|  
+|3|2.4 **+(** 0.08 **&#42;** 15 **)**|3.6 秒|  
+|4|3.6 **+(** 0.08 **&#42;** 15 **)**|4.8 秒|   
   
  次の図では、連続する接続試行のそれぞれがタイムアウトする再試行時間を示しています。  
   

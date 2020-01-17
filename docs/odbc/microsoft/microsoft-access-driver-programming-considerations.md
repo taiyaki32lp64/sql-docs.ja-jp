@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 2d2f09c0-18ef-45a4-a72a-d7a3bdcef646
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 75708c6b714806e54afc5802f8084c9635958acb
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 9adf9fae067ca87db14138fa267563ddd5dd1c79
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47694598"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68045125"
 ---
 # <a name="microsoft-access-driver-programming-considerations"></a>Microsoft Access ドライバーのプログラミングに関する考慮事項
 このセクションでは、次のトピックを扱います。  

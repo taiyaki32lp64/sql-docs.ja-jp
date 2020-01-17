@@ -15,11 +15,11 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: fa30824e32faae5feee1612305c1ca292d44e8e4
-ms.sourcegitcommit: 78e32562f9c1fbf2e50d3be645941d4aa457e31f
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/08/2019
-ms.locfileid: "54100167"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63012019"
 ---
 # <a name="view-a-sql-server-audit-log"></a>SQL Server 監査ログの表示
   このトピックでは、 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] を使用して [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]で SQL Server 監査ログを表示する方法について説明します。  
@@ -49,7 +49,7 @@ ms.locfileid: "54100167"
   
 2.  **[監査]** フォルダーを展開します。  
   
-3.  表示する監査ログを右クリックし、 **[監査ログの表示]** をクリックします。 開き、**ログ ファイルの表示 -**_server_name_  ダイアログ ボックス。 詳細については、「 [Log File Viewer F1 Help](../../logs/log-file-viewer-f1-help.md)」を参照してください。  
+3.  表示する監査ログを右クリックし、 **[監査ログの表示]** をクリックします。 開き、**ログ ファイルの表示 -** _server_name_  ダイアログ ボックス。 詳細については、「 [Log File Viewer F1 Help](../../logs/log-file-viewer-f1-help.md)」を参照してください。  
   
 4.  完了したら、 **[閉じる]** をクリックします。  
   

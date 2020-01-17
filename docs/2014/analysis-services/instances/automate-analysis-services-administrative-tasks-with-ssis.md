@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - Execute DDL Task [Analysis Services]
@@ -14,12 +13,12 @@ ms.assetid: e960a9a2-80b4-45da-9369-bc560ecdccac
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: d5d1b3d68038843e15717564e25cb88c181c2bda
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 23efdeddd568c815ad22ce6cf0b5d2026bab813e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48099262"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66080332"
 ---
 # <a name="automate-analysis-services-administrative-tasks-with-ssis"></a>SSIS による Analysis Services 管理タスクの自動化
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] を使用すると、DDL スクリプト、キューブおよびマイニング モデルの処理タスク、データ マイニング クエリ タスクの実行を自動化できます。 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] は、制御フローおよびメンテナンス タスクの集合と考えることができ、これらをリンクしてシーケンシャルおよび並列のデータ処理ジョブを作成できます。  
@@ -43,6 +42,6 @@ ms.locfileid: "48099262"
  [ディメンション処理変換先](../../integration-services/data-flow/dimension-processing-destination.md)   
  [データ マイニング クエリ変換](../../integration-services/data-flow/transformations/data-mining-query-transformation.md)   
  [多次元モデル オブジェクトの処理](../multidimensional-models/processing-a-multidimensional-model-analysis-services.md)   
- [Analysis Services での管理タスクのスクリプト作成](../script-administrative-tasks-in-analysis-services.md)  
+ [Analysis Services の管理タスクのスクリプト作成](../script-administrative-tasks-in-analysis-services.md)  
   
   

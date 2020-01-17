@@ -6,21 +6,18 @@ ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.technology: ssms
 ms.topic: conceptual
-f1_keywords:
-- vs.newproject
-- vs.addnewproject
 helpviewer_keywords:
 - projects [SQL Server Management Studio], creating
 ms.assetid: 7897be19-365b-4b06-bcf0-8a669f67a673
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: a33663ff92a093ea63f183cf8efb901d133a5a27
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 3c36d070701712158587f283df0f55cffadac2ca
+ms.sourcegitcommit: d0d2505d3d517e7b3ea9c4aef4d6fd08aeb28d54
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52751744"
+ms.lasthandoff: 06/18/2019
+ms.locfileid: "67197594"
 ---
 # <a name="create-a-project"></a>プロジェクトを作成する
   既存のソリューション内に、1 つ以上のプロジェクトを作成できます。  
@@ -92,9 +89,9 @@ ms.locfileid: "52751744"
      **[ソース管理に追加]**  
      このチェック ボックスをオンにすると、 **[OK]** をクリックしたときにソース管理アプリケーションが開きます。 ソース管理アプリケーションにより求められる情報をすべて入力します。 このオプションを使用するには、ソース管理クライアント アプリケーションをインストールしておく必要があります。  
   
-4.  **[OK]** をクリックします。  
+4.  [**OK**] をクリックします。  
   
- スクリプト プロジェクトの名前は設定できますが、フォルダー名は [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] によって設定され、変更できません。 **[新しいプロジェクトの追加]** ダイアログ ボックスを使用すると、共通のフォルダーのセットを示すドライブとパスを指定できます。 **ソリューション エクスプローラー**でソリューション アイコンを右クリックし、 **[追加]** をクリックします。 スクリプト プロジェクト フォルダーの既定の場所です。C:\Documents and Settings\\*username*\My Documents\SQL Server Management studio \projects\\します。  
+ スクリプト プロジェクトの名前は設定できますが、フォルダー名は [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] によって設定され、変更できません。 **[新しいプロジェクトの追加]** ダイアログ ボックスを使用すると、共通のフォルダーのセットを示すドライブとパスを指定できます。 **ソリューション エクスプローラー**でソリューション アイコンを右クリックし、 **[追加]** をクリックします。 スクリプト プロジェクト フォルダーの既定の場所は、C:\Documents and Settings\\*username*\My Documents\SQL Server Management Studio\Projects\\ です。  
   
 ## <a name="see-also"></a>参照  
  [ソリューション エクスプ ローラー](solution-explorer.md)   

@@ -10,14 +10,13 @@ ms.topic: quickstart
 ms.assetid: e1328615-6b59-4473-8a8d-4f360f73187d
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 3d1d5699a32b62de823846e64757a1842a9337ad
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: 2a242b02d14536036b53ee265413e28f5aeab231
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56294450"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72908025"
 ---
 # <a name="get-started-with-columnstore-for-real-time-operational-analytics"></a>列ストアを使用したリアルタイム運用分析の概要
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -84,7 +83,7 @@ ms.locfileid: "56294450"
     ```  
   
 3.  必要な操作はこれだけです。  
-  
+
  アプリケーションに変更を加えることがなく、リアルタイム運用分析を実行する準備が整いました。  分析クエリは列ストア インデックスに対して実行され、OLTP 操作は OLTP BTree インデックスに対して継続的に実行されます。 OLTP ワークロードは引き続き実行されますが、列ストア インデックスの管理に追加のオーバーヘッドが発生します。 次のセクションでパフォーマンスの最適化について説明します。  
   
 ## <a name="blog-posts"></a>ブログ記事  
@@ -105,8 +104,6 @@ ms.locfileid: "56294450"
 -   [圧縮遅延を使用して非クラスター化列ストア インデックスのメンテナンスの影響を最小限に抑える - パフォーマンス番号](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2016/03/06/real-time-operational-analytics-compression-delay-option-with-ncci-and-the-performance/)  
   
 -   [メモリ最適化テーブルによるリアルタイム運用分析](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2016/03/07/real-time-operational-analytics-memory-optimized-table-and-columnstore-index/)  
-  
--   [列ストア インデックスによるインデックス断片化の最小化](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2016/03/07/columnstore-index-defragmentation-using-reorganize-command/)  
   
 -   [列ストア インデックスと行グループのマージ ポリシー](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2016/03/08/columnstore-index-merge-policy-for-reorganize/)  
   
@@ -168,13 +165,13 @@ Group By customername
   
  ![クエリ プラン](../../relational-databases/indexes/media/query-plan-columnstore.png "クエリ プラン")  
   
-  [フィルター処理された非クラスター化列ストア インデックス](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2016/03/06/real-time-operational-analytics-filtered-nonclustered-columnstore-index-ncci/)の詳細については、ブログを参照してください。  
+ [フィルター処理された非クラスター化列ストア インデックス](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2016/03/06/real-time-operational-analytics-filtered-nonclustered-columnstore-index-ncci/)の詳細については、ブログを参照してください。  
   
 ## <a name="performance-tip-2-offload-analytics-to-always-on-readable-secondary"></a>パフォーマンス ヒント 2:AlwaysOn 読み取り可能セカンダリに対する分析の負荷を軽減する  
  列ストア インデックスのメンテナンスはフィルター処理された列ストア インデックスを使用して最小限に抑えることはできますが、それでも分析クエリには多大なコンピューティング リソース (CPU、IO、メモリ) が必要であり、運用ワークロードのパフォーマンスに影響します。 ほとんどのミッション クリティカルなワークロードについては、AlwaysOn 構成を使用することをお勧めします。 この構成では、負荷を読み取り可能セカンダリにオフロードすることで、実行中の分析の影響を除去できます。  
   
 ## <a name="performance-tip-3-reducing-index-fragmentation-by-keeping-hot-data-in-delta-rowgroups"></a>パフォーマンス ヒント 3:ホット データを DELTA 行グループに保持することでインデックスの断片化を削減する  
- 列ストア インデックスのあるテーブルは、圧縮された行をワークロードが更新/削除する場合に、(削除された行によって) 大幅に断片化されることがあります。 断片化された列ストア インデックスは、メモリと記憶域の非効率的な使用につながります。 リソースの非効率的な使用だけでなく、余分な IO と結果セットから削除された行をフィルター処理する必要があるため、分析クエリのパフォーマンスにも悪影響を及ぼします。  
+ 圧縮された行がワークロードによって更新/削除された場合、列ストア インデックスのあるテーブルは (削除された行によって) 大幅に断片化されることがあります。 断片化された列ストア インデックスは、メモリと記憶域の非効率的な使用につながります。 リソースの非効率的な使用だけでなく、余分な IO と結果セットから削除された行をフィルター処理する必要があるため、分析クエリのパフォーマンスにも悪影響を及ぼします。  
   
  削除された行は、REORGANIZE コマンドを使用してインデックスのデフラグを実行するか、テーブル全体または影響を受けているパーティションの列ストア インデックスを再構築するまで、物理的には削除されません。 REORGANIZE とインデックスの REBUILD は高コストな操作であり、ワークロードに使用されるリソースを取り除きます。 さらに、行の圧縮が早すぎる場合は、更新により何度も再圧縮する必要性が出てくるため、無駄な圧縮によるオーバーヘッドにつながる可能性があります。  
 インデックスの断片化は、COMPRESSION_DELAY オプションを使用して最小限に抑えることができます。  
@@ -196,7 +193,7 @@ CREATE NONCLUSTERED COLUMNSTORE index t_colstor_cci on t_colstor (accountkey, ac
 ;  
 ```  
   
-  [圧縮遅延](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2016/03/06/real-time-operational-analytics-compression-delay-option-for-nonclustered-columnstore-index-ncci/)の詳細については、ブログを参照してください。  
+ [圧縮遅延](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2016/03/06/real-time-operational-analytics-compression-delay-option-for-nonclustered-columnstore-index-ncci/)の詳細については、ブログを参照してください。  
   
  推奨されているベスト プラクティスを次に示します。  
   
@@ -225,6 +222,5 @@ ORDER BY created_time DESC
  [列ストア インデックス データの読み込み](../../relational-databases/indexes/columnstore-indexes-data-loading-guidance.md)   
  [列ストア インデックスのクエリ パフォーマンス](../../relational-databases/indexes/columnstore-indexes-query-performance.md)   
  [データ ウェアハウスの列ストア インデックス](../../relational-databases/indexes/columnstore-indexes-data-warehouse.md)   
- [列ストア インデックスの最適化](../../relational-databases/indexes/columnstore-indexes-defragmentation.md)  
-  
+ [インデックスの再編成と再構築](../../relational-databases/indexes/reorganize-and-rebuild-indexes.md)
   

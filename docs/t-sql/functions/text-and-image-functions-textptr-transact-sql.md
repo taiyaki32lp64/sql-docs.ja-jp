@@ -18,15 +18,14 @@ helpviewer_keywords:
 - text-pointer values
 - displaying text pointer values
 ms.assetid: 2672b8cb-f747-46f3-9358-9b49b3583b8e
-author: MashaMSFT
-ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 890819799317034e4f89b372a0af742afa3422e5
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+author: MikeRayMSFT
+ms.author: mikeray
+ms.openlocfilehash: d0e511e34b782c444bcdf6c778bb89dfebd4fab4
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51699779"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68099035"
 ---
 # <a name="text-and-image-functions---textptr-transact-sql"></a>テキスト関数とイメージ関数 - TEXTPTR (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -53,20 +52,20 @@ TEXTPTR ( column )
  **varbinary**  
   
 ## <a name="remarks"></a>Remarks  
- 行内テキストがあるテーブルの場合、TEXTPTR は、処理されるテキストのハンドルを返します。 テキストの値が NULL である場合も、有効なテキスト ポインターを取得できます。  
+ 行内テキストがあるテーブルの場合、TEXTPTR では、処理するテキストのハンドルが返されます。 テキストの値が NULL である場合も、有効なテキスト ポインターを取得できます。  
   
- ビューの列に対して TEXTPTR 関数を使用することはできません。 テーブルの列に対してのみ使用できます。 ビューの列に対して TEXTPTR 関数を使用するには、[ALTER DATABASE 互換性レベル](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md)を使用して互換性レベルを 80 に設定する必要があります。 テーブルに行内テキストがなく、**text**、**ntext**、または **image** 列が UPDATETEXT ステートメントで初期化されていない場合、TEXTPTR は NULL ポインターを返します。  
+ ビューの列に対して TEXTPTR 関数を使用することはできません。 それはテーブルの列に対してのみ使用できます。 ビューの列に対して TEXTPTR 関数を使用するには、[ALTER DATABASE 互換性レベル](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md)を使用して互換性レベルを 80 に設定する必要があります。 テーブルに行内テキストがなく、**text**、**ntext**、または **image** 列が UPDATETEXT ステートメントで初期化されていない場合、TEXTPTR は NULL ポインターを返します。  
   
- テキスト ポインターが存在するかどうかをテストするには、TEXTVALID を使ってください。 有効なテキスト ポインターがないと、UPDATETEXT、WRITETEXT、READTEXT は使用できません。  
+ テキスト ポインターが存在するかどうかをテストするには、TEXTVALID を使用します。 有効なテキスト ポインターがないと、UPDATETEXT、WRITETEXT、READTEXT は使用できません。  
   
  これらの関数とステートメントは、**text**、**ntext**、**image** データを操作する場合にも役立ちます。  
   
 |関数またはステートメント|[説明]|  
 |---------------------------|-----------------|  
-|PATINDEX<b>('</b>_%pattern%_**' ,** _expression_**)**|**text** または **ntext** 列で指定された文字列の文字位置を返します。|  
-|DATALENGTH<b>(</b>_expression_**)**|**text**、**ntext**、**image** 列のデータの長さを返します。|  
+|PATINDEX<b>('</b> _%pattern%_ **' ,** _expression_ **)**|**text** または **ntext** 列で指定された文字列の文字位置を返します。|  
+|DATALENGTH<b>(</b>_expression_ **)**|**text**、**ntext**、**image** 列のデータの長さを返します。|  
 |[SET TEXTSIZE]|SELECT ステートメントで返される **text**、**ntext**、または **image** データの制限値をバイト単位で返します。|  
-|SUBSTRING<b>(</b>_text_column_, _start_, _length_**)**|指定された *start* オフセットと *length* で指定される **varchar** 文字列を返します。 長さは 8 KB 未満で指定してください。|  
+|SUBSTRING<b>(</b>_text_column_, _start_, _length_ **)**|指定された *start* オフセットと *length* で指定される **varchar** 文字列を返します。 長さは 8 KB 未満で指定してください。|  
   
 ## <a name="examples"></a>使用例  
   
@@ -105,7 +104,7 @@ COMMIT;
 ```  
   
 ### <a name="c-returning-text-data"></a>C. テキスト データを返す  
- 次の例では、`pub_id` テーブルから `pr_info` 列、および `pub_info` 列の 16 バイトのテキスト ポインターを選択します。  
+ 次の例では、`pub_info` テーブルから `pub_id` 列、および `pr_info` 列の 16 バイトのテキスト ポインターを選択します。  
   
 ```  
 USE pubs;  

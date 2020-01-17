@@ -1,64 +1,62 @@
 ---
-title: Linux 上の SQL Server にデータのコピーを一括 |Microsoft Docs
+title: データを SQL Server on Linux に一括コピーする
 description: ''
-author: rothja
-ms.author: jroth
-manager: craigg
+author: VanMSFT
+ms.author: vanto
 ms.date: 01/30/2018
 ms.topic: conceptual
 ms.prod: sql
-ms.custom: sql-linux
 ms.technology: linux
 ms.assetid: 7b93d0d7-7946-4b78-b33a-57d6307cdfa9
-ms.openlocfilehash: 506d98acd28b38d0ce8867f96229632a306ae680
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
-ms.translationtype: MT
+ms.openlocfilehash: b611ef63532dd855648354bb85fc96f7cb52bd60
+ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47812153"
+ms.lasthandoff: 07/25/2019
+ms.locfileid: "68127321"
 ---
-# <a name="bulk-copy-data-with-bcp-to-sql-server-on-linux"></a>SQL Server on Linux に bcp を使用したデータの一括コピー
+# <a name="bulk-copy-data-with-bcp-to-sql-server-on-linux"></a>bcp を使用してデータを SQL Server on Linux に一括コピーする
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
-この記事では、使用する方法を示します、 [bcp](../tools/bcp-utility.md)コマンド ライン ユーティリティを Linux 上の SQL Server のインスタンスと、ユーザー指定の形式でデータ ファイルのデータの一括コピーします。
+この記事では、[bcp](../tools/bcp-utility.md) コマンドライン ユーティリティを使用して、ユーザーが指定した形式で SQL Server on Linux のインスタンスとデータ ファイルとの間でデータを一括コピーする方法について説明します。
 
-使用することができます`bcp`SQL Server テーブルに大量の行をインポートするか、SQL Server テーブルからデータをデータ ファイルにエクスポートします。 Queryout オプションと共に使用する場合を除く`bcp`Transact SQL の知識は必要ありません。 `bcp`コマンド ライン ユーティリティで、オンプレミスで実行されている Microsoft SQL Server または Linux、Windows または Docker と Azure SQL Database および Azure SQL Data Warehouse では、クラウドでの動作します。
+`bcp` を使用すると、大量の行を SQL Server テーブルにインポートすることや、SQL Server テーブルからデータ ファイルにデータをエクスポートすることができます。 queryout オプションと併用する場合を除き、`bcp` では Transact-SQL の知識は必要ありません。 `bcp` コマンドライン ユーティリティは、オンプレミスまたはクラウドの Linux、Windows、または Docker で実行されている Microsoft SQL Server、および Azure SQL Database または Azure SQL Data Warehouse で使用できます。
 
 この記事で取り上げるテクニック:
-- 使用してテーブルにデータをインポート、`bcp in`コマンド
-- 使用してテーブルからデータをエクスポート、`bcp out`コマンド
+- `bcp in` コマンドを使用してテーブルにデータをインポートする
+- `bcp out` コマンドを使用してテーブルからデータをエクスポートする
 
-## <a name="install-the-sql-server-command-line-tools"></a>SQL Server コマンド ライン ツールをインストールします。
+## <a name="install-the-sql-server-command-line-tools"></a>SQL Server コマンドライン ツールをインストールする
 
-`bcp` SQL Server on Linux で自動的にインストールされていない SQL Server コマンド ライン ツールの一部です。 SQL Server コマンド ライン ツールを Linux コンピューターに既にインストールしていない、それらをインストールする必要があります。 ツールをインストールする方法の詳細については、次の一覧から、Linux ディストリビューションを選択します。
+`bcp` は SQL Server のコマンドライン ツールの一部です。これらは、SQL Server on Linux と共に自動的にインストールされません。 Linux マシンに SQL Server コマンドライン ツールをまだインストールしていない場合は、インストールする必要があります。 ツールをインストールする方法の詳細については、次の一覧から Linux ディストリビューションを選択してください。
 
 - [Red Hat Enterprise Linux (RHEL)](sql-server-linux-setup-tools.md#RHEL)
 - [Ubuntu](sql-server-linux-setup-tools.md#ubuntu)
 - [SUSE Linux Enterprise Server (SLES)](sql-server-linux-setup-tools.md#SLES)
 
-## <a name="import-data-with-bcp"></a>Bcp を使用したデータのインポート
+## <a name="import-data-with-bcp"></a>bcp を使用してデータをインポートする
 
-このチュートリアルで作成するサンプル データベースとテーブルをローカルの SQL Server インスタンスで (**localhost**) をクリックして`bcp`ディスク上のテキスト ファイルからサンプル テーブルに読み込む。
+このチュートリアルでは、ローカル SQL Server インスタンス (**localhost**) にサンプル データベースとテーブルを作成し、`bcp` を使用してディスク上のテキスト ファイルからサンプル テーブルに読み込みます。
 
-### <a name="create-a-sample-database-and-table"></a>サンプル データベースとテーブルを作成します。
+### <a name="create-a-sample-database-and-table"></a>サンプル データベースとテーブルを作成する
 
-このチュートリアルの残りの部分で使用されている単純なテーブルにサンプル データベースを作成してみましょう。
+まず、このチュートリアルの残りの部分で使用する単純なテーブルを含むサンプル データベースを作成します。
 
-1. Linux ボックスでは、コマンド ターミナルを開きます。
+1. Linux ボックスで、コマンド ターミナルを開きます。
 
-2. コピーして、ターミナル ウィンドウに、次のコマンドを貼り付けます。 これらのコマンドを使用して、 **sqlcmd**サンプル データベースを作成するコマンド ライン ユーティリティ (**BcpSampleDB**) とテーブル (**TestEmployees**) ローカルの SQL Server インスタンス (上**localhost**)。 置き換えてください、`username`と`<your_password>`に応じてコマンドを実行する前にします。
+2. 次のコマンドをコピーしてターミナル ウィンドウに貼り付けます。 これらのコマンドは、**sqlcmd** コマンドライン ユーティリティを使用して、サンプル データベース (**BcpSampleDB**) とテーブル (**TestEmployees**) をローカル SQL Server インスタンス (**localhost**) に作成します。 コマンドを実行する前に、必要に応じて `username` と`<your_password>` を置き換えます。
 
-データベースを作成**BcpSampleDB**:
+データベース **BcpSampleDB** を作成します。
 ```bash 
 sqlcmd -S localhost -U sa -P <your_password> -Q "CREATE DATABASE BcpSampleDB;"
 ```
-テーブルを作成する**TestEmployees**データベース**BcpSampleDB**:
+データベース **BcpSampleDB** にテーブル **TestEmployees** を作成します。
 ```bash 
 sqlcmd -S localhost -U sa -P <your_password> -d BcpSampleDB -Q "CREATE TABLE TestEmployees (Id INT IDENTITY(1,1) NOT NULL PRIMARY KEY, Name NVARCHAR(50), Location NVARCHAR(50));"
 ```
-### <a name="create-the-source-data-file"></a>ソース データ ファイルを作成します。
-コピーして、ターミナル ウィンドウに次のコマンドを貼り付けます。 使用して、組み込み`cat`サンプル テキスト データ ファイルを 3 つのレコードを作成するコマンドと、ホーム ディレクトリにファイルを保存する **~/test_data.txt**します。 レコードのフィールドはコンマで区切られます。
+### <a name="create-the-source-data-file"></a>ソース データ ファイルを作成する
+次のコマンドをコピーしてターミナル ウィンドウに貼り付けます。 組み込みの `cat` コマンドを使用して、3 つのレコードがあるサンプル テキスト データ ファイルを作成し、ホーム ディレクトリに **~/test_data.txt** という名前でファイルを保存します。 レコード内のフィールドはコンマ区切りです。
 
 ```bash
 cat > ~/test_data.txt << EOF
@@ -68,42 +66,42 @@ cat > ~/test_data.txt << EOF
 EOF
 ```
 
-ターミナル ウィンドウで、次のコマンドを実行して、データ ファイルが正しく作成されたことを確認することができます。
+ターミナル ウィンドウで次のコマンドを実行して、データ ファイルが正しく作成されたことを確認できます。
 ```bash 
 cat ~/test_data.txt
 ```
 
-これにより、ターミナル ウィンドウで、次が表示する必要があります。
+これにより、ターミナル ウィンドウに次の内容が表示されます。
 ```bash
 1,Jared,Australia
 2,Nikita,India
 3,Tom,Germany
 ```
 
-### <a name="import-data-from-the-source-data-file"></a>データ ソースのデータ ファイルからインポートします。
-コピーして、ターミナル ウィンドウに、次のコマンドを貼り付けます。 このコマンドを使用して`bcp`ローカルの SQL Server インスタンスに接続する (**localhost**)、データ ファイルからデータをインポートし、(**~/test_data.txt**) テーブルに (**TestEmployees**) データベースに (**BcpSampleDB**)。 ユーザー名に置き換えてくださいと`<your_password>`に応じてコマンドを実行する前にします。
+### <a name="import-data-from-the-source-data-file"></a>ソース データ ファイルからデータをインポートする
+次のコマンドをコピーしてターミナル ウィンドウに貼り付けます。 このコマンドでは、`bcp` を使用してローカルの SQL Server インスタンス (**localhost**) に接続し、データ ファイル ( **~/test_data.txt**) のデータをデータベース (**BcpSampleDB**) のテーブル (**TestEmployees**) にインポートします。 コマンドを実行する前に、必要に応じてユーザー名と `<your_password>` を置き換えます。
 
 ```bash 
 bcp TestEmployees in ~/test_data.txt -S localhost -U sa -P <your_password> -d BcpSampleDB -c -t  ','
 ```
 
-使用しましたコマンド ライン パラメーターの概要を次に示します`bcp`この例では。
+この例で `bcp` に使用したコマンドライン パラメーターの概要は次のとおりです。
 - `-S`: 接続先となる SQL Server のインスタンスを指定します
-- `-U`: ID が SQL Server への接続に使用するログインを指定します
-- `-P`: ログイン ID のパスワードを指定します。
+- `-U`: SQL Server への接続に使用されるログイン ID を指定します
+- `-P`: ログイン ID のパスワードを指定します
 - `-d`: 接続先のデータベースを指定します
 - `-c`: 文字データ型を使用して操作を実行します
-- `-t`: フィールド ターミネータを指定します。 使用している`comma`データ ファイル内のレコードのフィールド ターミネータとして
+- `-t`: フィールド ターミネータを指定します。 ここでは、データ ファイル内のレコードのフィールド ターミネータとして `comma` を使用しています
 
 > [!NOTE]
-> この例ではカスタムの行終端記号が指定されていません。 テキストのデータ ファイル内の行で正常に終了された`newline`使用して、`cat`前に、データ ファイルを作成するコマンド。
+> この例では、カスタムの行ターミネータを指定していません。 以前に `cat` コマンドを使用してデータ ファイルを作成したときは、テキスト データ ファイルの行は `newline` で正しく終了していました。
 
-データが、ターミナル ウィンドウで、次のコマンドを実行して正常にインポートされたことを確認することができます。 置き換えてください、`username`と`<your_password>`に応じてコマンドを実行する前にします。
+ターミナル ウィンドウで次のコマンドを実行して、データが正常にインポートされたことを確認できます。 コマンドを実行する前に、必要に応じて `username` と `<your_password>` を置き換えます。
 ```bash 
 sqlcmd -S localhost -d BcpSampleDB -U sa -P <your_password> -I -Q "SELECT * FROM TestEmployees;"
 ```
 
-これは、次の結果を表示する必要があります。
+これにより、次の結果が表示されます。
 ```bash
 Id          Name                Location
 ----------- ------------------- -------------------
@@ -114,30 +112,30 @@ Id          Name                Location
 (3 rows affected)
 ```
 
-## <a name="export-data-with-bcp"></a>Bcp を使用したデータのエクスポート
+## <a name="export-data-with-bcp"></a>bcp を使用してデータをエクスポートする
 
-このチュートリアルで使用する`bcp`新しいデータ ファイルに以前に作成したサンプル テーブルからデータをエクスポートします。
+このチュートリアルでは、`bcp` を使用して、先ほど作成したサンプル テーブルのデータを新しいデータ ファイルにエクスポートします。
 
-コピーして、ターミナル ウィンドウに、次のコマンドを貼り付けます。 これらのコマンドを使用して、`bcp`テーブルからデータをエクスポートするコマンド ライン ユーティリティ**TestEmployees**データベース**BcpSampleDB**と呼ばれる新しいデータ ファイルに **~/test_export.txt**.  ユーザー名に置き換えてくださいと`<your_password>`に応じてコマンドを実行する前にします。
+次のコマンドをコピーしてターミナル ウィンドウに貼り付けます。 これらのコマンドでは、`bcp` コマンドライン ユーティリティを使用し、データベース **BcpSampleDB** のテーブル **TestEmployees** から **~/test_export.txt** という新しいデータ ファイルにデータをエクスポートします。  コマンドを実行する前に、必要に応じてユーザー名と `<your_password>` を置き換えます。
 
 ```bash 
 bcp TestEmployees out ~/test_export.txt -S localhost -U sa -P <your_password> -d BcpSampleDB -c -t ','
 ```
 
-ターミナル ウィンドウで、次のコマンドを実行して、データが正しくエクスポートされたことを確認することができます。
+ターミナル ウィンドウで次のコマンドを実行して、データが正しくエクスポートされたことを確認できます。
 ```bash 
 cat ~/test_export.txt
 ```
 
-これにより、ターミナル ウィンドウで、次が表示する必要があります。
+これにより、ターミナル ウィンドウに次の内容が表示されます。
 ```
 1,Jared,Australia
 2,Nikita,India
 3,Tom,Germany
 ```
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 - [bcp ユーティリティ](../tools/bcp-utility.md)
-- [Bcp を使用した互換性のためのデータの形式](../relational-databases/import-export/specify-data-formats-for-compatibility-when-using-bcp-sql-server.md)
-- [一括挿入を使用した一括データのインポート](../relational-databases/import-export/import-bulk-data-by-using-bulk-insert-or-openrowset-bulk-sql-server.md)
-- [一括挿入 (TRANSACT-SQL)](../t-sql/statements/bulk-insert-transact-sql.md)
+- [bcp を使用した互換性のためのデータ形式の指定](../relational-databases/import-export/specify-data-formats-for-compatibility-when-using-bcp-sql-server.md)
+- [BULK INSERT を使用した一括データのインポート](../relational-databases/import-export/import-bulk-data-by-using-bulk-insert-or-openrowset-bulk-sql-server.md)
+- [BULK INSERT (Transact-SQL)](../t-sql/statements/bulk-insert-transact-sql.md)

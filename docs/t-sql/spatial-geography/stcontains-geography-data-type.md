@@ -12,15 +12,14 @@ dev_langs:
 helpviewer_keywords:
 - STContains method (geography)
 ms.assetid: b10e8f0a-2926-449a-82ea-be42543420ca
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: 9fa8502097b203be8ea6a94f13ebc3eb136e1640
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: MladjoA
+ms.author: mlandzic
+ms.openlocfilehash: c5947d1793b39a0bf6aba9729b9f4b1ca7305fab
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47824100"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68042465"
 ---
 # <a name="stcontains--geography-data-type"></a>STContains (geography データ型)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
@@ -41,7 +40,7 @@ ms.locfileid: "47824100"
 ## <a name="return-types"></a>戻り値の型  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 戻り値の型: **bit**  
   
- CLR の戻り値の型: **SqlBoolean**  
+ CLR の戻り値の型:**SqlBoolean**  
   
 ## <a name="remarks"></a>Remarks  
  呼び出し元の **geography** インスタンスに、メソッドに渡される **geography** インスタンスが空間的に含まれる場合は 1 を返します。それ以外の場合は 0 を返します。 2 つの **geography** インスタンスの SRID が同じでない場合は、**null** を返します。  

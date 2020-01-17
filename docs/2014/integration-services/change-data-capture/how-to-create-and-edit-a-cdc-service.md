@@ -7,15 +7,15 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 1b3d47a5-dc89-482d-bbc7-fff04f194c43
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 64204c8eb91d17a266e10f0a2b7fb938a0148397
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 525e60450e1cae635cd3a825108dc5a68f80fe42
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52779914"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62771293"
 ---
 # <a name="how-to-create-and-edit-a-cdc-service"></a>CDC Service を作成および編集する方法
   この手順では、CDC Service 構成コンソールから新しい Oracle CDC Service を作成および編集する方法について説明します。  
@@ -60,7 +60,7 @@ ms.locfileid: "52779914"
   
 5.  [Oracle への接続] ダイアログ ボックスで **[OK]** をクリックします。 両方のダイアログ ボックスが閉じ、サービスが更新および登録されます。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [Attunity の Change Data Capture Designer for Oracle](change-data-capture-designer-for-oracle-by-attunity.md)   
  [Create and Edit an Oracle CDC Service](create-and-edit-an-oracle-cdc-service.md)  
   

@@ -1,6 +1,7 @@
 ---
-title: トランザクション レプリケーションの待機時間の計測および接続の検証 | Microsoft Docs
-ms.custom: ''
+title: 待機時間の計測と接続の検証 (トランザクション)
+description: SQL Server Management Studio (SSMS)、Transact-SQL (T-SQL)、またはレプリケーション管理オブジェクト (RMO) でレプリケーション モニターを使用し、SQL Server でトランザクション パブリケーションの待機時間を計測して、接続を検証する方法について説明します。
+ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -16,16 +17,16 @@ helpviewer_keywords:
 ms.assetid: 4addd426-7523-4067-8d7d-ca6bae4c9e34
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 36db42ae91837a8a003558878f4b59801e3059af
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
+ms.openlocfilehash: 355840dee0c7ff327968457a54f55730665d5afe
+ms.sourcegitcommit: 02d44167a1ee025ba925a6fefadeea966912954c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47640890"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75321855"
 ---
 # <a name="measure-latency-and-validate-connections-for-transactional-replication"></a>トランザクション レプリケーションの待機時間の計測および接続の検証
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
   このトピックでは、 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] でレプリケーション モニター、 [!INCLUDE[tsql](../../../includes/tsql-md.md)]、またはレプリケーション管理オブジェクト (RMO) を使用し、トランザクション レプリケーションの待機時間を計測して接続を検証する方法について説明します。 トランザクション レプリケーションには、トレーサー トークン機能が用意されており、これによって簡単にトランザクション レプリケーション トポロジにおける待機時間を計測したり、パブリッシャー、ディストリビューター、およびサブスクライバーの間の接続を検証したりすることができます。 トークン (小さなデータ) は、通常のレプリケートされたトランザクションのようにマークが付けられてパブリケーション データベースのトランザクション ログに書き込まれ、システムを介して送信されることで、次の計算が可能になります。  
   
 -   パブリッシャーでコミットされるトランザクションと、ディストリビューターでディストリビューション データベース内に挿入される対応するコマンドの間での経過時間。  
@@ -52,20 +53,20 @@ ms.locfileid: "47640890"
   
      [レプリケーション管理オブジェクト (Replication Management Objects)](#RMOProcedure)  
   
-##  <a name="BeforeYouBegin"></a> 作業を開始する準備  
+##  <a name="BeforeYouBegin"></a> はじめに  
   
 ###  <a name="Restrictions"></a> 制限事項と制約事項  
  トレーサー トークンは、システムを停止する場合にも役立ちます。このとき、すべての処理を停止して、すべてのノードがすべての未処理の変更を受信したかどうかを検証します。 詳細については、「[レプリケーション トポロジの停止 &#40;レプリケーション Transact-SQL プログラミング&#41;](../../../relational-databases/replication/administration/quiesce-a-replication-topology-replication-transact-sql-programming.md)」を参照してください。  
   
- トレーサー トークンを使用するには、特定のバージョンの [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]を使用する必要があります。  
+ トレーサー トークンを使用するには、特定のバージョンの [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] を使用する必要があります。  
   
--   ディストリビューターは [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] 以降である必要があります。  
+-   ディストリビューターは、[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] 以降である必要があります。  
   
 -   パブリッシャーは [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] 以降であるか、Oracle パブリッシャーである必要があります。  
   
--   プッシュ サブスクリプションでは、サブスクライバーが [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 7.0 以降である場合に、トレーサー トークン統計がパブリッシャー、ディストリビューター、およびサブスクライバーから収集されます。  
+-   プッシュ サブスクリプションでは、サブスクライバーが [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 7.0 以降である場合に、トレーサー トークン統計がパブリッシャー、ディストリビューター、サブスクライバーから収集されます。  
   
--   プル サブスクリプションでは、サブスクライバーが [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] 以降である場合にのみ、トレーサー トークン統計がサブスクライバーから収集されます。 サブスクライバーが [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 7.0 または [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssVersion2000](../../../includes/ssversion2000-md.md)]である場合は、統計はパブリッシャーおよびディストリビューターからのみ収集されます。  
+-   プル サブスクリプションでは、サブスクライバーが [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] 以降である場合にのみ、トレーサー トークン統計がサブスクライバーから収集されます。 サブスクライバーが [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 7.0 または [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssVersion2000](../../../includes/ssversion2000-md.md)] である場合は、統計はパブリッシャーおよびディストリビューターからのみ収集されます。  
   
  その他にも、次のような問題点と制限事項について注意する必要があります。  
   
@@ -90,7 +91,7 @@ ms.locfileid: "47640890"
   
 3.  **[トレーサーの挿入]** をクリックします。  
   
-4.  **[パブリッシャーからディストリビューターまで]** 列、 **[ディストリビューターからサブスクライバーまで]** 列、および **[合計待機時間]** 列で、トレーサー トークンの経過時間を表示します。 **[保留中]** と表示された場合は、トークンが特定のポイントに到達していないことを示します。  
+4.  次の列にトレーサー トークンの経過時間を表示します。 **[Publisher to Distributor]\(パブリッシャーからディストリビューターまで\)** 、 **[Distributor to Subscriber]\(ディストリビューターからサブスクライバーまで\)** 、 **[合計待機時間]** 。 **[保留中]** と表示された場合は、トークンが特定のポイントに到達していないことを示します。  
   
 #### <a name="to-view-information-on-a-tracer-token-inserted-previously"></a>以前に挿入したトレーサー トークンの情報を表示するには  
   
@@ -100,7 +101,7 @@ ms.locfileid: "47640890"
   
 3.  **[挿入された時間]** ボックスで時間を選択します。  
   
-4.  **[パブリッシャーからディストリビューターまで]** 列、 **[ディストリビューターからサブスクライバーまで]** 列、および **[合計待機時間]** 列で、トレーサー トークンの経過時間を表示します。 **[保留中]** と表示された場合は、トークンが特定のポイントに到達していないことを示します。  
+4.  次の列にトレーサー トークンの経過時間を表示します。 **[Publisher to Distributor]\(パブリッシャーからディストリビューターまで\)** 、 **[Distributor to Subscriber]\(ディストリビューターからサブスクライバーまで\)** 、 **[合計待機時間]** 。 **[保留中]** と表示された場合は、トークンが特定のポイントに到達していないことを示します。  
   
     > [!NOTE]  
     >  トレーサー トークン情報は、ディストリビューション データベースの履歴保持期間の制約を受けるその他の履歴データと同じ期間保持されます。 ディストリビューション データベースのプロパティの変更方法の詳細については、「[ディストリビューターとパブリッシャーのプロパティの表示および変更](../../../relational-databases/replication/view-and-modify-distributor-and-publisher-properties.md)」を参照してください。  
@@ -113,21 +114,21 @@ ms.locfileid: "47640890"
   
 2.  (省略可) パブリッシャー側のパブリケーション データベースに対して、[sp_helpsubscription &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-helpsubscription-transact-sql.md) を実行します。 サブスクリプションが存在すること、および状態がアクティブであることを確認します。  
   
-3.  パブリッシャー側のパブリケーション データベースに対して、[sp_posttracertoken &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-posttracertoken-transact-sql.md) を実行して、**@publication** を指定します。 **@tracer_token_id** 出力パラメーターの値をメモします。  
+3.  パブリッシャー側のパブリケーション データベースに対して、[sp_posttracertoken &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-posttracertoken-transact-sql.md) を実行して、 **\@publication** を指定します。 **\@tracer_token_id** 出力パラメーターの値を確認します。  
   
 #### <a name="to-determine-latency-and-validate-connections-for-a-transactional-publication"></a>待機時間を決定し、トランザクション パブリケーションの接続を確認するには  
   
 1.  上述の手順を使用して、トレーサー トークンをパブリケーションに通知します。  
   
-2.  パブリッシャー側のパブリケーション データベースに対して、**@publication** を指定して、[sp_helptracertokens &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-helptracertokens-transact-sql.md) を実行します。 パブリケーションに通知されたすべてのトレーサー トークンのリストが返されます。 結果セットの目的の **tracer_id** を確認します。  
+2.  パブリッシャー側のパブリケーション データベースに対して、 **\@publication** を指定して、[sp_helptracertokens &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-helptracertokens-transact-sql.md) を実行します。 パブリケーションに通知されたすべてのトレーサー トークンのリストが返されます。 結果セットの目的の **tracer_id** を確認します。  
   
-3.  パブリッシャー側のパブリケーション データベースで、**@publication** を指定し、**@tracer_id** に手順 2 のトレーサー トークン ID を指定して、[sp_helptracertokenhistory &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-helptracertokenhistory-transact-sql.md) を実行します。 選択したトレーサー トークンの待機情報が返されます。  
+3.  パブリッシャー側のパブリケーション データベースで、 **\@publication** を指定し、 **\@tracer_id** に手順 2 のトレーサー トークン ID を指定して、[sp_helptracertokenhistory &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-helptracertokenhistory-transact-sql.md) を実行します。 選択したトレーサー トークンの待機情報が返されます。  
   
 #### <a name="to-remove-tracer-tokens"></a>トレーサー トークンを削除するには  
   
-1.  パブリッシャー側のパブリケーション データベースに対して、**@publication** を指定して、[sp_helptracertokens &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-helptracertokens-transact-sql.md) を実行します。 パブリケーションに通知されたすべてのトレーサー トークンのリストが返されます。 結果セットの削除するトレーサー トークンの **tracer_id** を確認します。  
+1.  パブリッシャー側のパブリケーション データベースに対して、 **\@publication** を指定して、[sp_helptracertokens &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-helptracertokens-transact-sql.md) を実行します。 パブリケーションに通知されたすべてのトレーサー トークンのリストが返されます。 結果セットの削除するトレーサー トークンの **tracer_id** を確認します。  
   
-2.  パブリッシャー側のパブリケーション データベースで、**@publication** を指定し、**@tracer_id** に手順 2 の削除するトレーサー トークン ID を指定して、[sp_deletetracertokenhistory &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-deletetracertokenhistory-transact-sql.md) を実行します。  
+2.  パブリッシャー側のパブリケーション データベースで、 **\@publication** を指定し、`@tracer_id` に手順 2 の削除するトレーサー トークン ID を指定して、[sp_deletetracertokenhistory &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-deletetracertokenhistory-transact-sql.md) を実行します。  
   
 ###  <a name="TsqlExample"></a> 例 (Transact-SQL)  
  次の例では、トレーサー トークン レコードを通知し、返された通知済みトレーサー トークンの ID を使用して待機時間情報を表示します。  

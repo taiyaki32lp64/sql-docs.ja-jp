@@ -2,7 +2,7 @@
 title: MSReportServer_Instance メソッド | Microsoft Docs
 ms.date: 06/09/2016
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: wmi-provider-library-reference
 ms.topic: conceptual
 apiname:
@@ -13,14 +13,14 @@ apitype: MOFDef
 helpviewer_keywords:
 - MSReportServer_Instance class
 ms.assetid: ed079327-0bb0-4245-adb5-e46a90cf3586
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 7328f126419cead51a1a5aee4517e9e8b61474c0
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 9ceb89253cea8feac0b4255984b30aa7fd74216d
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47810450"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65571115"
 ---
 # <a name="msreportserverinstance-methods"></a>MSReportServer_Instance メソッド
   MSReportServer_Instance クラスは、インストールされているレポート サーバーにクライアントが接続するために必要な基本情報を提供します。  

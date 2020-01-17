@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 573f8f27-babd-4e2f-bf9a-270ee7024975
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: e22b5fa8d21ca693f0ea332714f2f594f8bd997c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 4a5d11102989e3194f3b878b94610e4802084f97
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47614460"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67922990"
 ---
 # <a name="referencing-the-ado-libraries"></a>ADO ライブラリを参照する
 ADO の最新バージョンとしてパッケージ化*msado15.dll*します。 最新のバージョンの ADO MD と ADOX としてパッケージ化*msadom.dll*と*msadox.dll*、それぞれします。 既定でこれらのライブラリがインストールされている *$installDir*ここで、 *$installDir* ADO ライブラリがコンピューターにインストールされてされているディレクトリのパスを意味します。 アプリケーションで ADO ライブラリを使用するには、必要がありますで参照するに明示的にアプリケーション プロジェクト。  

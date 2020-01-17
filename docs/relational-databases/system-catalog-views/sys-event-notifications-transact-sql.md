@@ -19,32 +19,31 @@ helpviewer_keywords:
 ms.assetid: 136a76ee-2b35-4418-ab46-fda2d51f7d99
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 60fb1fd10b448e7dc71d06aecaa36385f882f62f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 736083db5043dd8bcb9dce9f828a9191c582c872
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47755180"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68048420"
 ---
-# <a name="syseventnotifications-transact-sql"></a>sys.event_notifications (Transact-SQL)
+# <a name="syseventnotifications-transact-sql"></a>sys.event_notifications (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   イベント通知では、あるオブジェクトごとの行を返します**sys.objects.type** EN を = です。  
   
 |列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
-|**name**|**sysname**|イベント通知の名前。|  
+|**name**|**sysname**|イベント通知名です。|  
 |**object_id**|**int**|オブジェクト ID 番号。 データベース内で一意です。|  
 |**parent_class**|**tinyint**|親のクラスです。<br /><br /> 0 = データベース<br /><br /> 1 = オブジェクトまたは列|  
 |**parent_class_desc**|**nvarchar(60)**|DATABASE<br /><br /> OBJECT_OR_COLUMN|  
-|**parent_id**|**int**|親オブジェクトの 0 以外の ID。<br /><br /> 0 = 親クラスはデータベースです。|  
+|**parent_id**|**int**|親オブジェクトの 0 以外の ID。<br /><br /> 0 = 親クラスは、データベースです。|  
 |**create_date**|**datetime**|作成された日付。|  
 |**modify_date**|**datetime**|常に = **create_date**します。|  
 |**service_name**|**nvarchar (256)**|通知の送信先のサービスの名前です。|  
-|**broker_instance**|**nvarchar(128)**|通知の送信先であるブローカー インスタンス。|  
-|**principal_id**|**int**|イベント通知を所有するデータベース プリンシパルの ID。|  
+|**broker_instance**|**nvarchar(128)**|ブローカー インスタンスが、通知が送信されます。|  
+|**principal_id**|**int**|このイベント通知を所有するデータベース プリンシパルの ID。|  
 |**creator_sid**|**varbinary(85)**|イベント通知を作成したログインの SID。<br /><br /> FAN_IN オプションが指定されていない場合は NULL です。|  
   
 ## <a name="permissions"></a>アクセス許可  

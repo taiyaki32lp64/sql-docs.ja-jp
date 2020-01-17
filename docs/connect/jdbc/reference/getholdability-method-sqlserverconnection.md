@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: b1644791-c36a-4837-86c4-9299537ee1c2
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 932939a7302c58f59d018264bf73d7ae8019de99
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 6f7dfc9609443febe545bd3b6ac7a6cdf75e1756
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47611370"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67982930"
 ---
 # <a name="getholdability-method-sqlserverconnection"></a>getHoldability メソッド (SQLServerConnection)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -46,7 +45,7 @@ public int getHoldability()
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- この getHoldability メソッドは、java.sql.Connection インターフェイスの getHoldability メソッドによって指定されます。  
+ この getHoldability メソッドは、getHoldability インターフェイスのメソッドによって指定されます。  
   
 ## <a name="see-also"></a>参照  
  [SQLServerConnection のメンバー](../../../connect/jdbc/reference/sqlserverconnection-members.md)   

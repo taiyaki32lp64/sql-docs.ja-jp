@@ -2,32 +2,33 @@
 title: PDF デバイス情報設定 | Microsoft Docs
 ms.date: 03/16/2018
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: reporting-services
 ms.topic: conceptual
 helpviewer_keywords:
 - device information settings [Reporting Services], PDF rendering
 - PDF [Reporting Services]
 ms.assetid: 9a4aabe5-dbdc-4884-b999-1200983fee47
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 489d883f6169061d760be938e198ca88c95f0570
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 5442980dd2f67cf72e301a82ae3730f90a173116
+ms.sourcegitcommit: 75fe364317a518fcf31381ce6b7bb72ff6b2b93f
+ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47623200"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70911329"
 ---
 # <a name="pdf-device-information-settings"></a>PDF デバイス情報の設定
   次の表は、PDF 形式のレポートを表示するデバイス情報の設定を示しています。  
   
-|設定|ReplTest1|  
+|設定|[値]|  
 |-------------|-----------|  
 | **AccessiblePDF** | サイズは大きいが、読み上げと移動のためのスクリーン リーダーやその他の支援技術で使いやすい、アクセシブル/タグ付き PDF をレンダリングするかどうかを示します。 既定値は **false**です。 [Power BI Report Server (2018 年 3 月) 以降で使用可能です] |
 |**[列]**|レポートに設定する列の数。 この値により、レポートの元の設定はオーバーライドされます。|  
 |**ColumnSpacing**|レポートに設定する列の間隔。 この値により、レポートの元の設定はオーバーライドされます。|  
 |**DpiX**|出力デバイスの x 方向の解像度。|  
 |**DpiY**|出力デバイスの y 方向の解像度。|  
+|**EmbedFonts**|PDF ファイルにフォントを埋め込むかどうかを示します。サイズは大きくなりますが、レポートフォントはすべてのクライアントに対して正しく表示されます。 値が**None**の場合、フォントの埋め込みは無効になります。|  
 |**EndPage**|表示するレポートの最後のページ。 既定値は **StartPage**の値です。|  
 |**HumanReadablePDF**|サイズは大きいが、プレーンテキスト エディターで人間が読みやすい、未圧縮の PDF ファイルをレンダリングするかどうかを示します。 既定値は **false**です。|  
 |**MarginBottom**|レポートに設定する下余白の値 (インチ単位)。 整数または小数の値の後に "in" を付ける必要があります (たとえば、1in)。 この値により、レポートの元の設定はオーバーライドされます。|  

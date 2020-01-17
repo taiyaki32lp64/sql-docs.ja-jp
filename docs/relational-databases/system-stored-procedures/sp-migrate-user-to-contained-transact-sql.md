@@ -1,7 +1,7 @@
 ---
 title: sp_migrate_user_to_contained (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
-ms.date: 03/14/2017
+ms.date: 06/11/2019
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
@@ -17,20 +17,20 @@ helpviewer_keywords:
 ms.assetid: b3a49ff6-46ad-4ee7-b6fe-7e54213dc33e
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 7761a5602e1700949b8ae072342cd65927a24b9b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d5bcafb24313851f58fd18fc19ebabd0ee98f6dd
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47843980"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68022332"
 ---
 # <a name="spmigrateusertocontained-transact-sql"></a>sp_migrate_user_to_contained (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
   変換にマップされているデータベース ユーザー、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]パスワードを持つ包含データベース ユーザーへのログイン。 包含データベースでは、データベースがインストールされている [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスの依存関係を削除するには、このプロシージャを使用します。 **sp_migrate_user_to_contained** 、元のユーザーを区切る[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]ログイン、パスワードや既定の言語などの設定、包含データベースに対して個別に管理できるようにします。 **sp_migrate_user_to_contained**の別のインスタンスに包含データベースを移動する前に使用することができます、[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]現在への依存関係を排除する[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]インスタンス ログインします。  
   
- **注**この手順は、包含データベースでのみ使用します。 詳細については、「 [包含データベース](../../relational-databases/databases/contained-databases.md)」を参照してください。  
+> [!NOTE]
+> 使用する場合は注意**sp_migrate_user_to_contained**効果を反転することはできません。 この手順は、包含データベースでのみ使用されます。 詳細については、「 [包含データベース](../../relational-databases/databases/contained-databases.md)」を参照してください。  
   
 ## <a name="syntax"></a>構文  
   
@@ -45,10 +45,10 @@ sp_migrate_user_to_contained [ @username = ] N'user' ,
  [ **@username =** ] **N'***ユーザー***'**  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 認証ログインにマップされた、現在の包含データベースのユーザーの名前を指定します。 値が**sysname**、既定値は**NULL**します。  
   
- [ **@rename =** ] **N'***copy_login_name***'** | **N'***keep_name***'**  
+ [ **@rename =** ] **N'***copy_login_name***'**  | **N'***keep_name***'**  
  ログインに基づくデータベース ユーザーのログイン名よりも、別のユーザー名のときに使用*keep_name*移行中にデータベース ユーザー名を保持します。 使用*copy_login_name* user の代わりに、ログインの名前を持つ新しい包含データベース ユーザーを作成します。 ログインに基づくデータベース ユーザーがログイン名と同じユーザー名を持つ場合は、どちらのオプションでも、名前を変更することなく包含データベース ユーザーが作成されます。  
   
- [ **@disablelogin =** ] **N'***disable_login***'** | **N'***do_not_disable_login***'**  
+ [ **@disablelogin =** ] **N'***disable_login***'**  | **N'***do_not_disable_login***'**  
  *disable_login* master データベースにログインを無効にします。 ログインが無効にするとを接続する接続が、包含データベースの名前を入力する必要があります、**初期カタログ**接続文字列の一部として。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
@@ -80,7 +80,7 @@ sp_migrate_user_to_contained [ @username = ] N'user' ,
 ## <a name="examples"></a>使用例  
   
 ### <a name="a-migrating-a-single-user"></a>A. 単一のユーザーを移行する  
- 次の例では、移行、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]という名前のログイン`Barry`パスワードを持つ包含データベース ユーザーにします。 ユーザー名は変更されずに保持され、ログインは有効のままとなります。  
+ 次の例では、移行、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]という名前のログイン`Barry`パスワードを持つ包含データベース ユーザーにします。 この例では、ユーザー名を変更することはできませんし、ログインを有効になっている保持されます。  
   
 ```sql  
 sp_migrate_user_to_contained   

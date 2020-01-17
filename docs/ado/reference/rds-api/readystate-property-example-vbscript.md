@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: e3e18da4-0511-4ece-a35d-699978bc28c6
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: eb3da04956a0306453bbbeab057a381fc5d136ea
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.openlocfilehash: 5b27a26eede798b8a8f8df9d76451125f042510a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51607082"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67963603"
 ---
 # <a name="readystate-property-example-vbscript"></a>ReadyState プロパティの例 (VBScript)
 > [!IMPORTANT]
@@ -110,7 +109,7 @@ body {
 <!-- EndReadyStateVBS -->  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [DataControl オブジェクト (RDS)](../../../ado/reference/rds-api/datacontrol-object-rds.md)   
  [ReadyState プロパティ (RDS)](../../../ado/reference/rds-api/readystate-property-rds.md)
 

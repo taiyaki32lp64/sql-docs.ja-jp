@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 ms.assetid: a8cd209a-e5d3-4dce-ab2d-f271f6c54955
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 5d6f0dc131c4d85bf93a8b36fde0a77d3192843a
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: 84f9b681ee632e922f5ab349bf1a72fbea63f911
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56285640"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66105250"
 ---
 # <a name="inscope-function-report-builder-and-ssrs"></a>InScope 関数 (レポート ビルダーおよび SSRS)
   アイテムの現在のインスタンスが、指定したスコープ内にあるかどうかを示します。  

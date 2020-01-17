@@ -11,15 +11,15 @@ helpviewer_keywords:
 - queries [XML in SQL Server], nested FOR XML
 - nested FOR XML queries
 ms.assetid: 7604161a-a958-446d-b102-7dee432979d0
-author: douglaslMS
-ms.author: douglasl
+author: MightyPen
+ms.author: genemi
 manager: craigg
-ms.openlocfilehash: a804585f215b7328890d2f0400c77307af7b1b4b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: f7a06d30f25f5c78236fe30f148b254ee817dfc0
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48211142"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63232406"
 ---
 # <a name="use-nested-for-xml-queries"></a>入れ子になった FOR XML クエリの使用
   `xml`データ型と[FOR XML クエリで TYPE ディレクティブ](type-directive-in-for-xml-queries.md)クライアントとサーバーで処理する FOR XML クエリによって返された XML を有効にします。  
@@ -39,7 +39,7 @@ SELECT @x
 --<row ProductModelID="119" Name="Bike Wash" />  
 ```  
   
- さらに、変数に返された XML を処理することができます`@x`のいずれかを使用して、`xml`データ型のメソッド。 たとえば、 `ProductModelID` value() メソッド [を使用して、](/sql/t-sql/xml/value-method-xml-data-type)属性の値を取得できます。  
+ いずれかの `xml` データ型メソッドを使用して、変数 `@x` に返された XML にさらに処理を加えることができます。 たとえば、 `ProductModelID` value() メソッド [を使用して、](/sql/t-sql/xml/value-method-xml-data-type)属性の値を取得できます。  
   
 ```  
 DECLARE @i int;  
@@ -66,7 +66,7 @@ FOR XML RAW, TYPE,ROOT('myRoot');
 </myRoot>  
 ```  
   
- 結果であるため`xml`の種類を指定できますいずれかの`xml`次のクエリで示すように、データの型をこの XML に対して直接メソッド。 クエリでは、[query() メソッド (xml データ型)](/sql/t-sql/xml/query-method-xml-data-type) が使用され、<`row`> 要素の最初の <`myRoot`> 子要素が取得されます。  
+ 結果は `xml` 型なので、次のクエリのように、この XML に対していずれかの `xml` データ型メソッドを直接指定することができます。 クエリでは、[query() メソッド (xml データ型)](/sql/t-sql/xml/query-method-xml-data-type) が使用され、<`row`> 要素の最初の <`myRoot`> 子要素が取得されます。  
   
 ```  
 SELECT  (SELECT ProductModelID, Name  
@@ -83,7 +83,7 @@ SELECT  (SELECT ProductModelID, Name
 ```  
   
 ## <a name="returning-inner-for-xml-query-results-to-outer-queries-as-xml-type-instances"></a>内側の FOR XML クエリの結果を外側のクエリに xml 型インスタンスとして返す  
- 入れ子になった書き込める`FOR XML`クエリとして、内側のクエリの結果が返されます、`xml`型で外側のクエリにします。 以下に例を示します。  
+ 入れ子構造の `FOR XML` クエリを記述して、内側のクエリの結果を `xml` 型で外側のクエリに返すことができます。 例 :  
   
 ```  
 SELECT Col1,   

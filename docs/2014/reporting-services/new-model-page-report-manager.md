@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 ms.assetid: 27d5bf66-b0e7-489e-a830-ffe2ec8e5350
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: df14375ad8ae54377f7dbbd599d0bcc7b50aa2d6
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 5b9fdcac2499cdf33d98ba636596218c14704f9d
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56010793"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66108208"
 ---
 # <a name="new-model-page-report-manager"></a>[新しいモデル] ページ (レポート マネージャー)
   このページでは、共有データ ソースから既定のレポート モデルを生成できます。 レポート モデルを生成できるのは、 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 多次元データ ソース、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] リレーショナル データ ソース、および Oracle リレーショナル データ ソースだけです。  

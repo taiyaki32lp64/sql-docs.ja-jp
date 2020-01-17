@@ -1,5 +1,5 @@
 ---
-title: sys.sp_rda_set_query_mode (TRANSACT-SQL) |Microsoft Docs
+title: sp_rda_set_query_mode (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -14,20 +14,19 @@ dev_langs:
 helpviewer_keywords:
 - sys.sp_rda_set_query_mode stored procedure
 ms.assetid: 65a0b390-cf87-4db7-972a-1fdf13456c88
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: c6b2fd8fd64bd8d7df6429a21c3f27266657964e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: MikeRayMSFT
+ms.author: mikeray
+ms.openlocfilehash: 98796b89486ce59b289c83a74e5c466a6522b557
+ms.sourcegitcommit: 710d60e7974e2c4c52aebe36fceb6e2bbd52727c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47740550"
+ms.lasthandoff: 10/11/2019
+ms.locfileid: "72278326"
 ---
-# <a name="syssprdasetquerymode-transact-sql"></a>sys.sp_rda_set_query_mode (TRANSACT-SQL)
+# <a name="syssp_rda_set_query_mode-transact-sql"></a>sp_rda_set_query_mode (Transact-sql)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
-  現在の Stretch 対応データベースとそのテーブルに対するクエリがローカルとリモートの両方のデータ (既定)、またはローカルのデータのみを返すかどうかを指定します。  
+  現在の Stretch が有効なデータベースとそのテーブルに対するクエリがローカルデータとリモートデータの両方を返すかどうかを指定します (既定)。またはローカルデータのみを返します。  
   
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -40,41 +39,41 @@ sp_rda_set_query_mode [ @mode = ] @mode
 ```  
   
 ## <a name="arguments"></a>引数  
- [ @mode = ] *@mode*  
- 次の値の 1 つです。  
+ [@mode =] *\@モード*  
+ 次のいずれかの値を指定します。  
   
--   **無効になっている**Stretch 対応テーブルに対するすべてのクエリは失敗します。  
+-   **無効**Stretch が有効なテーブルに対するすべてのクエリが失敗します。  
   
--   **LOCAL_ONLY** Stretch 対応テーブルに対するクエリがローカル データだけを返します。  
+-   **LOCAL_ONLY**Stretch が有効なテーブルに対するクエリでは、ローカルデータのみが返されます。  
   
--   **LOCAL_AND_REMOTE** Stretch 対応テーブルに対するクエリは、ローカルとリモートの両方のデータを返します。 これは既定の動作です。  
+-   **LOCAL_AND_REMOTE**Stretch が有効なテーブルに対するクエリでは、ローカルデータとリモートデータの両方が返されます。 これは既定の動作です。  
   
- [ @force = ]  *@force*  
- 検証を伴わないクエリ モードを変更する場合は 1 に設定できるオプションのビット値です。  
+ [@force =] *\@強制*  
+ 検証せずにクエリモードを変更する場合は、1に設定できるビット値を指定します。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
- 0 (成功) または >0 (失敗)  
+ 0 (成功) または > 0 (失敗)  
   
 ## <a name="permissions"></a>アクセス許可  
  Db_owner アクセス許可が必要です。  
   
-## <a name="remarks"></a>コメント  
- 次の拡張ストアド プロシージャでは、Stretch 対応データベースのクエリ モードも設定します。  
+## <a name="remarks"></a>Remarks  
+ 次の拡張ストアドプロシージャは、Stretch 対応データベースのクエリモードも設定します。  
   
 -   **sp_rda_deauthorize_db**  
   
-     実行した後**sp_rda_deauthorize_db** 、Stretch 対応データベースとテーブルに対するすべてのクエリは失敗します。 つまり、クエリ モードは無効に設定します。 このモードを終了するには、次のいずれかの操作を行います。  
+     **Sp_rda_deauthorize_db**を実行すると、Stretch が有効なデータベースとテーブルに対するすべてのクエリが失敗します。 つまり、クエリモードは [無効] に設定されます。 このモードを終了するには、次のいずれかの操作を行います。  
   
-    -   実行[sys.sp_rda_reauthorize_db &#40;TRANSACT-SQL&#41; ](../../relational-databases/system-stored-procedures/sys-sp-rda-reauthorize-db-transact-sql.md)リモート Azure データベースに再接続します。 この操作に自動的にリセット クエリ モード LOCAL_AND_REMOTE、Stretch Database の既定の動作はします。 つまり、クエリは、ローカルとリモートの両方のデータから結果を返します。  
+    -   [Sp_rda_reauthorize_db &#40;transact-sql&#41; ](../../relational-databases/system-stored-procedures/sys-sp-rda-reauthorize-db-transact-sql.md)を実行して、リモートの Azure データベースに再接続します。 この操作により、クエリモードが自動的に LOCAL_AND_REMOTE にリセットされます。これは Stretch Database の既定の動作です。 つまり、クエリはローカルとリモートの両方のデータから結果を返します。  
   
-    -   実行[sys.sp_rda_set_query_mode](../../relational-databases/system-stored-procedures/sys-sp-rda-set-query-mode-transact-sql.md)をクエリがローカルのデータのみに対して引き続き実行できるように、LOCAL_ONLY 引数。  
+    -   ローカルデータに対してのみクエリを実行できるようにするには、LOCAL_ONLY 引数を指定して sp_rda_set_query_mode を実行し[ます](../../relational-databases/system-stored-procedures/sys-sp-rda-set-query-mode-transact-sql.md)。  
   
 -   **sp_rda_reauthorize_db**  
   
-     実行すると[sys.sp_rda_reauthorize_db &#40;TRANSACT-SQL&#41; ](../../relational-databases/system-stored-procedures/sys-sp-rda-reauthorize-db-transact-sql.md)リモート Azure データベースに再接続すると、この操作が自動的にリセットされたクエリ モード LOCAL_AND_REMOTE で、既定の動作のを Stretch Database。 つまり、クエリは、ローカルとリモートの両方のデータから結果を返します。  
+     [ &#40;Transact-sql&#41;を sp_rda_reauthorize_db](../../relational-databases/system-stored-procedures/sys-sp-rda-reauthorize-db-transact-sql.md)実行してリモートの Azure データベースに再接続すると、この操作によってクエリモードが自動的に LOCAL_AND_REMOTE にリセットされます。これは、Stretch Database の既定の動作です。 つまり、クエリはローカルとリモートの両方のデータから結果を返します。  
   
 ## <a name="see-also"></a>参照  
- [sys.sp_rda_deauthorize_db &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-rda-deauthorize-db-transact-sql.md)   
+ [sp_rda_deauthorize_db &#40;transact-sql&#41; ](../../relational-databases/system-stored-procedures/sys-sp-rda-deauthorize-db-transact-sql.md)   
  [Stretch Database](../../sql-server/stretch-database/stretch-database.md)  
   
   

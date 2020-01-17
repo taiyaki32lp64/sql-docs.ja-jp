@@ -1,5 +1,5 @@
 ---
-title: '[システム管理] 機能領域 (マスター データ マネージャー) | Microsoft Docs'
+title: '[システム管理] 機能領域'
 ms.custom: ''
 ms.date: 04/01/2016
 ms.prod: sql
@@ -8,15 +8,14 @@ ms.reviewer: ''
 ms.technology: master-data-services
 ms.topic: conceptual
 ms.assetid: 4254e825-d76a-4daf-961f-087b961644a7
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 05818605e5f8abb9a069f9ca3bcd5d09c00487c3
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
-ms.translationtype: HT
+ms.openlocfilehash: e128ba2b53383c83bc58ba66526e9768355e140b
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52814824"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73727864"
 ---
 # <a name="system-administration-functional-area-master-data-manager"></a>[システム管理] 機能領域 (マスター データ マネージャー)
 

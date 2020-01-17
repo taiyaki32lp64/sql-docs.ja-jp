@@ -11,15 +11,15 @@ helpviewer_keywords:
 - format files [SQL Server], non-XML format files
 - bulk importing [SQL Server], format files
 ms.assetid: f566db3e-0a3b-4a61-9c84-49f8d42f5760
-author: douglaslMS
-ms.author: douglasl
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 5640a50f50d113e21e276acdf09955a2cddedb57
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 6554691ce8debb96d4b0ee350ef98d2bfc57f02c
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48080482"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66011880"
 ---
 # <a name="non-xml-format-files-sql-server"></a>XML 以外のフォーマット ファイル (SQL Server)
   [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]では、一括エクスポートおよび一括インポート用に 2 種類のフォーマット ファイルがサポートされています。 *XML 以外のフォーマット ファイル* と *XML フォーマット ファイル*です。  
@@ -58,7 +58,7 @@ ms.locfileid: "48080482"
   
 |フォーマット ファイル フィールド|説明|  
 |------------------------|-----------------|  
-|バージョン|このバージョン番号は **ではなく**bcp [!INCLUDE[tsql](../../includes/tsql-md.md)]だけで認識されます。 **bcp** ユーティリティのバージョン番号です。次の値があります。<br /><br /> 9.0 = [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]<br /><br /> 10.0 = [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)]<br /><br /> 11.0 = [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)]<br /><br /> 12.0 = [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)]<br /><br /> 注: フォーマット ファイルの読み取りに使用される **bcp** ユーティリティ (Bcp.exe) のバージョンは、フォーマット ファイルの作成に使用されたバージョン、またはそれ以降のバージョンである必要があります。 たとえば、[!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] の **bcp** では、[!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)] の **bcp** によって生成されるバージョン 10.0 のフォーマット ファイルを読み取ることができますが、[!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)] の **bcp** では、[!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)] の **bcp** によって生成されるバージョン 12.0 のフォーマット ファイルを読み取ることができません。|  
+|バージョン|このバージョン番号は **ではなく**bcp [!INCLUDE[tsql](../../includes/tsql-md.md)]だけで認識されます。 **bcp** ユーティリティのバージョン番号です。次の値があります。<br /><br /> 9.0 = [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]<br /><br /> 10.0 = [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)]<br /><br /> 11.0 = [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)]<br /><br /> 12.0 = [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)]<br /><br /> 注:フォーマット ファイルの読み取りに使用される **bcp** ユーティリティ (Bcp.exe) のバージョンは、フォーマット ファイルの作成に使用されたバージョン、またはそれ以降のバージョンである必要があります。 たとえば、[!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] の **bcp** では、[!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)] の **bcp** によって生成されるバージョン 10.0 のフォーマット ファイルを読み取ることができますが、[!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)] の **bcp** では、[!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)] の **bcp** によって生成されるバージョン 12.0 のフォーマット ファイルを読み取ることができません。|  
 |列の数|データ ファイルのフィールドの数。 この数は、すべての行で同じである必要があります。|  
   
  他のフォーマット ファイル フィールドには、一括インポートまたは一括エクスポートされるデータ フィールドが記述されます。 各データ フィールドは、フォーマット ファイル内に個別の行を必要とします。 フォーマット ファイルの各行には、次の表で示すフォーマット ファイル フィールドの値が含まれます。  
@@ -107,7 +107,7 @@ ms.locfileid: "48080482"
 -   [フォーマット ファイルを使用したテーブル列とデータ ファイル フィールドのマッピング &#40;SQL Server&#41;](use-a-format-file-to-map-table-columns-to-data-file-fields-sql-server.md)  
   
 ## <a name="see-also"></a>参照  
- [bcp ユーティリティ](../../tools/bcp-utility.md)   
+ [bcp Utility](../../tools/bcp-utility.md)   
  [フォーマット ファイルの作成 &#40;SQL Server&#41;](create-a-format-file-sql-server.md)   
  [XML フォーマット ファイル &#40;SQL Server&#41;](xml-format-files-sql-server.md)   
  [データのインポートまたはエクスポート用のフォーマット ファイル &#40;SQL Server&#41;](format-files-for-importing-or-exporting-data-sql-server.md)  

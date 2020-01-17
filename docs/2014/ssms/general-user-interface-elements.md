@@ -14,14 +14,14 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 47ce33e0d0a8cf76a90beb1fa3cc6ddfda27606f
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52764334"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63316142"
 ---
 # <a name="general-user-interface-elements"></a>一般的なユーザー インターフェイス要素
-  [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] の基本的な要素には、**エディター**、**[プロパティ]** ウィンドウ、**ツールボックス**などがあります。  
+  [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] の基本的な要素には、**エディター**、 **[プロパティ]** ウィンドウ、**ツールボックス**などがあります。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
  [[バージョン情報] ダイアログ ボックス](about-dialog-box.md)  

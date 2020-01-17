@@ -1,5 +1,5 @@
 ---
-title: トレース テンプレートの変更 |Microsoft Docs
+title: トレーステンプレートの変更 |Microsoft Docs
 ms.custom: ''
 ms.date: 07/12/2017
 ms.prod: sql
@@ -14,15 +14,14 @@ helpviewer_keywords:
 - modifying trace templates
 - SQL Server Profiler, templates
 ms.assetid: 75b62a54-8d16-4599-bd2d-c42cfcc209f4
-author: stevestein
-ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 7ca5a8fff488f827360f02a96992e01dcc3accb5
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 55a7cdf539a675fd6d3c86ace8cc837ed1e92358
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47747510"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68074873"
 ---
 # <a name="modify-trace-templates"></a>トレース テンプレートの変更
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -44,12 +43,12 @@ ms.locfileid: "47747510"
   
     -   フィルターを追加するには、データ列名をクリックし、 **[フィルターの編集]** ダイアログ ボックスにフィルターの条件を指定します。 また、データ列名を右クリックし、 **[列フィルターの編集]** をクリックすることによっても **[フィルターの編集]** ダイアログ ボックスを起動できます。 **[OK]** をクリックしてフィルターを追加します。  
   
-4.  **[保存]** をクリックするか、**[名前を付けて保存]** をクリックして別の名前でトレース テンプレートを保存します。  
+4.  **[保存]** をクリックするか、 **[名前を付けて保存]** をクリックして別の名前でトレース テンプレートを保存します。  
   
 ## <a name="next-steps"></a>次の手順  
 [トレースを開始する](../../tools/sql-server-profiler/start-a-trace.md)  
 [トレースを作成する](../../tools/sql-server-profiler/create-a-trace-sql-server-profiler.md)  
 [Transact-SQL を使用して既存のトレースを変更する](../../relational-databases/sql-trace/modify-an-existing-trace-transact-sql.md)  
 [SQL Server Profiler を使用してトレース ファイルに含めるイベントとデータ列を指定する](../../tools/sql-server-profiler/specify-events-and-data-columns-for-a-trace-file-sql-server-profiler.md)  
-[sp-トレース-setevent-transact sql](../../relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql.md)  
+[sp-trace-setevent-transact-sql](../../relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql.md)  
   

@@ -21,15 +21,14 @@ helpviewer_keywords:
 - constraints [SQL Server], consistency checks
 - integrity [SQL Server], constraints
 ms.assetid: da6c9cee-6687-46e8-b504-738551f9068b
-author: uc-msft
+author: pmasl
 ms.author: umajay
-manager: craigg
-ms.openlocfilehash: 1e93d0f71ab7c59a7bd0c43ea6badbc95bd8ee80
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 4fb6bc14742d4aa25c47af59bc1be72ebfffa5a4
+ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52525345"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "73982395"
 ---
 # <a name="dbcc-checkconstraints-transact-sql"></a>DBCC CHECKCONSTRAINTS (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -89,19 +88,19 @@ WHERE <table_being_checked.fkey1> IS NOT NULL
 クエリ データは temp テーブルに格納されます。 指定したすべてのテーブルまたは制約がチェックされた後、結果セットが返されます。
 DBCC CHECKCONSTRAINTS では、FOREIGN KEY 制約と CHECK 制約の整合性はチェックされますが、テーブルのディスク上のデータ構造に関する整合性はチェックされません。 このようなデータ構造のチェックは、[DBCC CHECKDB](../../t-sql/database-console-commands/dbcc-checkdb-transact-sql.md) および [DBCC CHECKTABLE](../../t-sql/database-console-commands/dbcc-checktable-transact-sql.md) で実行できます。
   
-**適用対象**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
+**適用対象**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 以降
   
 *table_name* または *table_id* が指定されており、システムのバージョン管理で有効になっている場合、DBCC CHECKCONSTRAINTS では、指定したテーブルで、テンポラル データの整合性チェックも行います。 このコマンドでは、*NO_INFOMSGS* が指定されていない場合、それぞれの整合性違反を別の行に出力します。 出力の形式は ([pkcol1], [pkcol2]..) = (\<pkcol1_value>, \<pkcol2_value>...)AND \<一時的なテーブルのレコードに関する問題> です。
   
-|[確認]|チェックが失敗した場合の出力に追加の情報|  
+|[確認]|チェックが失敗した場合の出力の追加情報|  
 |-----------|-----------------------------------------------|  
 |PeriodEndColumn ≥ PeriodStartColumn (current)|[sys_end] = '{0}' AND MAX(DATETIME2) = '9999-12-31 23:59:59.99999'|  
 |PeriodEndColumn ≥ PeriodStartColumn (current, history)|[sys_start] = '{0}' AND [sys_end] = '{1}'|  
 |PeriodStartColumn < current_utc_time (current)|[sys_start] = '{0}' AND SYSUTCTIME|  
 |PeriodEndColumn < current_utc_time (history)|[sys_end] = '{0}' AND SYSUTCTIME|  
-|重複|(sys_start1, sys_end1) , (sys_start2, sys_end2) 2 つの重複するレコード。<br /><br /> レコードが重複している 2 以上の場合がある場合、出力は、1 組の重複を示す複数の行でがあります。|  
+|重複|(sys_start1, sys_end1) , (sys_start2, sys_end2) 2 つの重複するレコード。<br /><br /> 重複するレコードが 2 つ以上ある場合、出力は複数行になり、各行で重複の各ペアが示されます。|  
   
-のみ一時的な整合性チェックを実行するために、constraint_name または constraint_id を指定する方法はありません。
+テンポラル整合性チェックのみを実行するために、constraint_name または constraint_id を指定する方法はありません。
   
 ## <a name="result-sets"></a>結果セット  
 DBCC CHECKCONSTRAINTS では、次の列を含む行セットが返されます。

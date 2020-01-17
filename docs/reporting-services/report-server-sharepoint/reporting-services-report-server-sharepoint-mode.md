@@ -2,18 +2,18 @@
 title: Reporting Services レポート サーバー (SharePoint モード) | Microsoft Docs
 ms.date: 09/26/2017
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: report-server-sharepoint
 ms.topic: conceptual
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 51ef41f83e7122d0ab6fc1bc1149fd2eb257215e
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
-ms.translationtype: HT
+ms.openlocfilehash: af25232f5a1603f25814309270813188c05a89fc
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52529741"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68262353"
 ---
 # <a name="reporting-services-report-server-sharepoint-mode"></a>Reporting Services レポート サーバー (SharePoint モード)
 
@@ -114,11 +114,11 @@ ms.locfileid: "52529741"
   
  SharePoint 製品の配置内で動作するようにレポート サーバーを構成すると、複数の言語が表示されることがあります。 ユーザー インターフェイス、ドキュメント、メッセージは次の言語で表示されます。  
   
--   Reporting Services から提供されるすべてのアプリケーション ページ、ツール、エラー、警告、およびメッセージは、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の言語のうち Reporting Services インスタンスによって使用される言語で表示されます。  
+- Reporting Services から提供されるすべてのアプリケーション ページ、ツール、エラー、警告、およびメッセージは、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の言語のうち Reporting Services インスタンスによって使用される言語で表示されます。  
   
--   SharePoint サイトで開くアプリケーション ページ、レポート ビューアー Web パーツ、およびレポート ビルダーは、Reporting Services アドインでサポートされている言語のいずれかで表示されます。 サポートされている言語の一覧を表示するには、[SQL Server ダウンロード](https://msdn.microsoft.com/sql/downloads/)にアクセスし、SQL Server 2016 Reporting Services アドインのダウンロード ページを開いてください。  
+- SharePoint サイトで開くアプリケーション ページ、レポート ビューアー Web パーツ、およびレポート ビルダーは、Reporting Services アドインでサポートされている言語のいずれかで表示されます。 サポートされている言語の一覧を表示するには、[SQL Server ダウンロード](https://msdn.microsoft.com/sql/downloads/)にアクセスし、SQL Server 2016 Reporting Services アドインのダウンロード ページを開いてください。  
   
--   SharePoint サイト、SharePoint のサーバーの全体管理、オンライン ヘルプ、メッセージは、Office Server 製品でサポートされる言語で使用できます。  
+- SharePoint サイト、SharePoint のサーバーの全体管理、オンライン ヘルプ、メッセージは、Office Server 製品でサポートされる言語で使用できます。  
   
  使用している SharePoint の製品またはテクノロジの言語とレポート サーバーの言語が異なる場合、Reporting Services では言語ファミリの中で最も近い言語が使用されます。 近い言語が使用できない場合、レポート サーバーでは英語が使用されます。  
   
@@ -136,8 +136,7 @@ ms.locfileid: "52529741"
 
 ## <a name="next-steps"></a>次の手順
 
-[SharePoint 用 Reporting Services アドインのインストールまたはアンインストール](../../reporting-services/install-windows/install-or-uninstall-the-reporting-services-add-in-for-sharepoint.md)   
-[SharePoint サイトのレポート ビューアー Web パーツ](../../reporting-services/report-server-sharepoint/report-viewer-web-part-on-a-sharepoint-site.md)   
-[SharePoint 統合用の SSRS 2012 の構成に関するクイズ](https://go.microsoft.com/fwlink/?LinkId=306443)  
+[SharePoint 用 Reporting Services アドインのインストールまたはアンインストール](../../reporting-services/install-windows/install-or-uninstall-the-reporting-services-add-in-for-sharepoint.md)
+[SharePoint サイトのレポート ビューアー Web パーツ ](../../reporting-services/report-server-sharepoint/report-viewer-web-part-on-a-sharepoint-site.md)
 
 その他の質問 [Reporting Services のフォーラムに質問してみてください](https://go.microsoft.com/fwlink/?LinkId=620231)

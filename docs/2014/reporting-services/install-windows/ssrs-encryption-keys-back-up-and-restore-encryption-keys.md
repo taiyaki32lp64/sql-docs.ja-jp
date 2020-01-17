@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 helpviewer_keywords:
 - backing up encryption keys [Reporting Services]
@@ -13,15 +12,15 @@ helpviewer_keywords:
 - encryption keys [Reporting Services]
 - symmetric keys [Reporting Services]
 ms.assetid: 6773d5df-03ef-4781-beb7-9f6825bac979
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 558c27c978ec6343b6185fab3792906c6d21ad52
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 72400601ebb6b9a01b4db09ea9799b64e9c5e1c9
+ms.sourcegitcommit: f912c101d2939084c4ea2e9881eb98e1afa29dad
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56036593"
+ms.lasthandoff: 10/23/2019
+ms.locfileid: "72796397"
 ---
 # <a name="back-up-and-restore-reporting-services-encryption-keys"></a>Reporting Services の暗号化キーのバックアップと復元
   レポート サーバー構成で重要なのは、機密情報の暗号化に使用される対称キーのバックアップ コピーの作成です。 キーのバックアップ コピーは多くのルーチン処理で必要とされ、キーのバックアップ コピーにより新しいインストールで既存のレポート サーバー データベースを再利用できます。  
@@ -47,7 +46,7 @@ ms.locfileid: "56036593"
 ## <a name="backing-up-the-encryption-keys"></a>暗号化キーのバックアップ  
  対称キーのバックアップは、指定するファイルにキーを書き込み、指定したパスワードを使用してそのキーにスクランブルをかける処理です。 対称キーが暗号化されていない状態で格納されることはないので、ディスクに格納する際は、キーを暗号化するためのパスワードを指定する必要があります。 ファイルの作成後、セキュリティで保護された場所にファイルを保存します。ファイルのロックを解除するために使用する **パスワードを覚えておく** 必要があります。 対称キーをバックアップするために、次のツールを使用できます。  
   
- **ネイティブ モード:** いずれか、Reporting Services 構成マネージャーまたは**rskeymgmt**ユーティリティ。  
+ **ネイティブ モード:** Reporting Services 構成マネージャーか **rskeymgmt** ユーティリティのどちらか。  
   
  **SharePoint モード:** SharePoint サーバーの全体管理ページまたは PowerShell。  
   
@@ -70,7 +69,7 @@ ms.locfileid: "56036593"
   
 1.  レポート サーバーをホストするコンピューターのローカルで **rskeymgmt.exe** を実行します。 抽出用の `-e` 引数を使用してキーをコピーし、ファイル名を入力して、パスワードを指定する必要があります。 指定する必要がある引数の例を次に示します。  
   
-    ```  
+    ```cmd
     rskeymgmt -e -f d:\rsdbkey.snk -p<password>  
     ```  
   
@@ -103,11 +102,9 @@ ms.locfileid: "56036593"
   
 1.  レポート サーバーをホストするコンピューターのローカルで **rskeymgmt.exe** を実行します。 キーを復元するには、`-a` 引数を使用します。 完全修飾ファイル名を入力し、パスワードを指定する必要があります。 指定する必要がある引数の例を次に示します。  
   
-    ```  
+    ```cmd
     rskeymgmt -a -f d:\rsdbkey.snk -p<password>  
     ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>「  
  [暗号化キーの構成と管理 &#40;SSRS 構成マネージャー&#41;](ssrs-encryption-keys-manage-encryption-keys.md)  
-  
-  

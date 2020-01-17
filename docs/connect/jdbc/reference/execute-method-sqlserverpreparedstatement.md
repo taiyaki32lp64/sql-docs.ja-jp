@@ -1,5 +1,5 @@
 ---
-title: execute メソッド (SQLServerPreparedStatement) |Microsoft Docs
+title: execute メソッド (SQLServerPreparedStatement) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: db876c2e-dffe-4ef2-8fea-486cf27b0eb3
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 6c6d6c3fe6b7e4b859ed26ecd171a9b1a9e02899
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 90ea4731b4004c908cfcd60f31f51205f893431f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47812280"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67954947"
 ---
 # <a name="execute-method-sqlserverpreparedstatement"></a>execute メソッド (SQLServerPreparedStatement)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

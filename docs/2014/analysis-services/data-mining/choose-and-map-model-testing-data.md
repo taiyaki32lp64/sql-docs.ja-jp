@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - columns [data mining], mining accuracy charts
@@ -16,12 +15,12 @@ ms.assetid: be0d9f20-40c3-4dac-81da-281cfe724126
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: ac7a8f813aa884cc4267c73fbcedc88eecfb0a36
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 81f206f33bdf3dbdf9d74b8de1010c6998d6bdcc
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52542301"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66085758"
 ---
 # <a name="choose-and-map-model-testing-data"></a>モデルのテスト データの選択およびマップ
   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]で精度チャートを作成するには、モデルのテストに使用されるデータを選択し、データをモデルにマップする必要があります。  
@@ -108,7 +107,7 @@ ms.locfileid: "52542301"
   
 8.  必要なテーブルがない場合は、ダイアログ ボックスを閉じ、対象のテーブルを含む新しいデータ ソース ビューを作成します。 データソースビューの作成方法については、「[データ ソース ビューの定義 &#40;Analysis Services&#41;](../multidimensional-models/defining-a-data-source-view-analysis-services.md)」を参照してください。  
   
-9. マイニング モデルに入れ子になったテーブルが含まれている場合は、**[入れ子になったテーブルの選択]** をクリックし、データ ソース ビューのテーブルの一覧から入れ子になったテーブルを選択します。 [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
+9. マイニング モデルに入れ子になったテーブルが含まれている場合は、 **[入れ子になったテーブルの選択]** をクリックし、データ ソース ビューのテーブルの一覧から入れ子になったテーブルを選択します。 [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
 10. 変更するマッピングの結合線を選択し、 **[接続の変更]** をクリックします。  
   

@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: 4ab6a671-9573-4b95-8c23-364306c60d25
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 792b09cc57fbfb1438c6c4e9d372beb6547635d5
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ae80a8c33f68ad2f3d2c85b1343a5cc0f2b423c5
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47697780"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67952874"
 ---
 # <a name="getcolumnprivileges-method-sqlserverdatabasemetadata"></a>getColumnPrivileges メソッド (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -62,7 +61,7 @@ public java.sql.ResultSet getColumnPrivileges(java.lang.String catalog,
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- この getColumnPrivileges メソッドは、java.sql.DatabaseMetaData インターフェイスで getColumnPrivileges メソッドによって指定されます。  
+ この getColumnPrivileges メソッドは、java.sql.DatabaseMetaData インターフェイスの getColumnPrivileges メソッドで規定されています。  
   
  getColumnPrivileges メソッドによって返される結果セットには、次の情報が含まれます。  
   

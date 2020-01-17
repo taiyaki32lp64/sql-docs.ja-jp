@@ -9,15 +9,15 @@ ms.topic: conceptual
 f1_keywords:
 - sql12.dts.impexpwizard.performingoperation.f1
 ms.assetid: 83259509-71d6-4a64-a7f2-4e9603b30bd4
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 8a4e1bfd6fffcb9360f92b6b270718edc03da8bb
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: ffb9c242b30c3b0ddfc1cadae20ea261c616475b
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52801714"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62767904"
 ---
 # <a name="performing-operation-sql-server-import-and-export-wizard"></a>[操作を実行しています] (SQL Server インポートおよびエクスポート ウィザード)
   使用して、**操作を実行して**ページで、進行状況と、インポート/エクスポート操作の結果を表示し、必要な場合は、操作を中断します。  
@@ -36,7 +36,7 @@ ms.locfileid: "52801714"
  **メッセージ**  
  アクションによって生成された表示メッセージおよびエラー メッセージを表示します。  
   
- **Assert**  
+ **[フィルター]**  
  エラー、警告、または成功したアクションのみを表示するかどうかを選択します。 選択して、既定の表示に戻すことができます**すべてのアクションを表示**します。  
   
  **[停止]**  

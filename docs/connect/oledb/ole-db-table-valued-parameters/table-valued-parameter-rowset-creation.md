@@ -1,6 +1,6 @@
 ---
-title: テーブル値パラメーター行セットの作成 |Microsoft Docs
-description: 静的および動的なテーブル値パラメーター行セットの作成
+title: テーブル値パラメーターの行セットの作成 |Microsoft Docs
+description: 静的および動的なテーブル値パラメーターの行セットの作成
 ms.custom: ''
 ms.date: 06/14/2018
 ms.prod: sql
@@ -12,13 +12,12 @@ helpviewer_keywords:
 - table-valued parameters, rowset creation
 author: pmasl
 ms.author: pelopes
-manager: craigg
-ms.openlocfilehash: 2b8e85b4ebfa679dda4e980df54cd11a06b1946d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: c771d8bde657b464b29a109dadd7a4d6fa33fbdb
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47805400"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67994106"
 ---
 # <a name="table-valued-parameter-rowset-creation"></a>テーブル値パラメーターの行セットの作成
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -30,11 +29,11 @@ ms.locfileid: "47805400"
  テーブル値パラメーターの行セット オブジェクトは、コンシューマーが、複数のセッション レベルのインターフェイスを使用して、入力パラメーターに対して明示的に作成します。 テーブル値パラメーターの行セット オブジェクトは、テーブル値パラメーターごとに 1 つのインスタンスがあります。 コンシューマーは、既知のメタデータ情報を指定するか (静的なシナリオ)、プロバイダー インターフェイスを使用してメタデータ情報を検出する (動的なシナリオ) ことにより、テーブル値パラメーターの行セット オブジェクトを作成できます。 この後の各セクションで、これらの 2 つのシナリオについて説明します。  
   
 ## <a name="static-scenario"></a>静的なシナリオ  
- 型情報がわかっている場合、コンシューマーは、テーブル値パラメーターに対応するテーブル値パラメーター行セット オブジェクトをインスタンス化するのに ITableDefinitionWithConstraints::CreateTableWithConstraints を使用します。  
+ 型情報がわかっている場合、コンシューマーは ITableDefinitionWithConstraints:: CreateTableWithConstraints を使用して、テーブル値パラメーターに対応するテーブル値パラメーターの行セットオブジェクトをインスタンス化します。  
   
- *Guid*フィールド (*pTableID*パラメーター) 特殊な GUID (CLSID_ROWSET_TVP) が含まれています。 *pwszName* メンバーには、コンシューマーがインスタンスを作成するテーブル値パラメーターの型の名前を含めます。 *eKind* フィールドは、DBKIND_GUID_NAME に設定されます。 この名前は、ステートメントがアドホック SQL の場合に必要です。プロシージャ呼び出しの場合、名前は省略可能です。  
+ *Guid*フィールド (*ptableid*パラメーター) には、特別な guid (CLSID_ROWSET_TVP) が含まれています。 *pwszName* メンバーには、コンシューマーがインスタンスを作成するテーブル値パラメーターの型の名前を含めます。 *eKind* フィールドは、DBKIND_GUID_NAME に設定されます。 この名前は、ステートメントがアドホック SQL の場合に必要です。プロシージャ呼び出しの場合、名前は省略可能です。  
   
- コンシューマーでは、集計、 *pUnkOuter* controlling IUnknown のパラメーター。  
+ 集計の場合、コンシューマーは制御 IUnknown に*pUnkOuter*パラメーターを渡します。  
   
  テーブル値パラメーターの行セット オブジェクトのプロパティは読み取り専用のため、コンシューマーでは *rgPropertySets* のどのプロパティも設定する必要はありません。  
   
@@ -42,16 +41,16 @@ ms.locfileid: "47805400"
   
  コンシューマーでは、テーブル値パラメーターの行セット オブジェクトから対応する情報を取得するために、IRowsetInfo::GetProperties を使用します。  
   
- 計算するには、null、一意、に関する情報を取得し、各列のステータスの更新、コンシューマーは、icolumnsrowset::getcolumnsrowset または icolumnsinfo::getcolumninfo を使用できます。 これらのメソッドでは、各テーブル値パラメーターの行セットの列に関する詳細情報が取得できます。  
+ 各列の null、一意、計算、および更新の各状態に関する情報を取得するために、コンシューマーは IColumnsRowset:: GetColumnsRowset または IColumnsInfo:: GetColumnInfo を使用できます。 これらのメソッドでは、各テーブル値パラメーターの行セットの列に関する詳細情報が取得できます。  
   
- コンシューマーは、テーブル値パラメーターの列ごとに型を指定します。 この方法は、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] でテーブルを作成する際に列を指定する方法と似ています。 コンシューマーが OLE DB ドライバーからを介して SQL Server のテーブル値パラメーター行セット オブジェクトを取得、 *ppRowset*出力パラメーター。  
+ コンシューマーは、テーブル値パラメーターの列ごとに型を指定します。 この方法は、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] でテーブルを作成する際に列を指定する方法と似ています。 コンシューマーは、 *ppRowset*出力パラメーターを使用して、SQL Server 用の OLE DB ドライバーからテーブル値パラメーターの行セットオブジェクトを取得します。  
   
 ## <a name="dynamic-scenario"></a>動的なシナリオ  
- コンシューマーに型情報がない場合は、テーブル値パラメーター行セット オブジェクトをインスタンス化する iopenrowset::openrowset を使用してください。 すべてのコンシューマーは、プロバイダーに型名を知らせる必要があります。  
+ コンシューマーが型情報を持っていない場合は、IOpenRowset:: OpenRowset を使用してテーブル値パラメーターの行セットオブジェクトをインスタンス化する必要があります。 すべてのコンシューマーは、プロバイダーに型名を知らせる必要があります。  
   
  このシナリオでは、プロバイダーがコンシューマーに代わって、テーブル値パラメーターの行セット オブジェクトに関する型情報をサーバーから取得します。  
   
- *PTableID*と*pUnkOuter*パラメーターは、静的なシナリオのように設定する必要があります。 その後、OLE DB Driver for SQL Server が型情報 (列情報と制約) をサーバーから取得し、*ppRowset* パラメーターを使用してテーブル値パラメーターの行セット オブジェクトを返します。 この操作にはサーバーとの通信が必要になるため、静的なシナリオよりもパフォーマンスが低くなります。 動的なシナリオは、パラメーター化されたプロシージャ呼び出しでのみ動作します。  
+ *Ptableid*パラメーターと*pUnkOuter*パラメーターは、静的なシナリオのように設定する必要があります。 その後、OLE DB Driver for SQL Server が型情報 (列情報と制約) をサーバーから取得し、*ppRowset* パラメーターを使用してテーブル値パラメーターの行セット オブジェクトを返します。 この操作にはサーバーとの通信が必要になるため、静的なシナリオよりもパフォーマンスが低くなります。 動的なシナリオは、パラメーター化されたプロシージャ呼び出しでのみ動作します。  
   
 ## <a name="see-also"></a>参照  
  [テーブル値パラメーター &#40;OLE DB&#41;](../../oledb/ole-db-table-valued-parameters/table-valued-parameters-ole-db.md)   

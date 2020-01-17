@@ -4,23 +4,22 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.packageconfigurationorganizer.f1
 helpviewer_keywords:
 - Package Configurations Organizer dialog box
 ms.assetid: f20ae6cb-9e6a-4d24-88ff-d7a903a4e8d3
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 34789e64c2e8bc1892827b414a89975377c75cfc
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: d5313118f7949818d341a47744a69cf13c43dbc9
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48085972"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66056965"
 ---
 # <a name="package-configurations-organizer"></a>[パッケージ構成オーガナイザー]
   **[パッケージ構成オーガナイザー]** ダイアログ ボックスを使用すると、パッケージ構成を有効にし、現在のパッケージの構成の一覧を表示して、構成の優先読み込み順序を指定できます。  
@@ -66,7 +65,7 @@ ms.locfileid: "48085972"
  **矢印**  
  構成を選択し、上矢印および下矢印を使用して、構成を一覧の上または下に移動します。 構成は、一覧に表示された順序で読み込まれます。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [パッケージ構成を作成する](../../2014/integration-services/create-package-configurations.md)  
   
   

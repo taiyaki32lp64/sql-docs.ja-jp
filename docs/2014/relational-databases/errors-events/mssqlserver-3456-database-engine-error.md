@@ -13,11 +13,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: b2077d736f15787fe35a4a18d5c03dbd9ddd36a4
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48141192"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62914291"
 ---
 # <a name="mssqlserver3456"></a>MSSQLSERVER_3456
     
@@ -30,7 +30,7 @@ ms.locfileid: "48141192"
 |イベント ソース|MSSQLSERVER|  
 |コンポーネント|SQLEngine|  
 |シンボル名|REC_REDOLSNMISMATCH|  
-|メッセージ テキスト|トランザクション ID %S_XID、ページ %S_PGID、データベース '%.*ls' (データベース ID %d) のログ レコード %S_LSN を再実行できませんでした。 ページ: LSN = %S_LSN、型 = %ld。 ログ: OpCode = %ld、コンテキスト %ld、PrevPageLSN: %S_LSN。 データベースをバックアップから復元するか、データベースを修復してください。|  
+|メッセージ テキスト|トランザクション ID %S_XID、ページ %S_PGID、データベース '%.*ls' (データベース ID %d) のログ レコード %S_LSN を再実行できませんでした。 ページ:LSN = %S_LSN、型 = %ld。 ログ:OpCode = %ld、コンテキスト %ld、PrevPageLSN: %S_LSN。 データベースをバックアップから復元するか、データベースを修復してください。|  
   
 ## <a name="explanation"></a>説明  
  復元操作で、トランザクション ログを再実行できませんでした。 このエラーによって、データベースは SUSPECT 状態になっています。 プライマリ ファイル グループ、また場合によってはその他のファイル グループには、問題があり、損傷している可能性があります。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の起動中はデータベースを復旧できないため、データベースを使用できません。 問題を解決するには、ユーザーによる操作が必要です。  

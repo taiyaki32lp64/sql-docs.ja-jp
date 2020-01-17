@@ -12,19 +12,18 @@ f1_keywords:
 ms.assetid: 70adec34-078c-4ae0-9961-d6a8318340e7
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: 0251f8649b7999439255e49a344d0d5ac894f801
-ms.sourcegitcommit: ef6e3ec273b0521e7c79d5c2a4cb4dcba1744e67
+ms.openlocfilehash: 0d1c9ec4a0f26a48f281b3f9d91fdbbc745a5391
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51511998"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68054413"
 ---
 # <a name="view-facets-dialog-box"></a>[ファセットの表示] ダイアログ ボックス
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   このダイアログ ボックスを使用すると、ポリシー ベースの管理ファセットのプロパティを表示できます。 ファセットのプロパティは、ファセットの作成時に定義され、このダイアログ ボックスでは変更できません。  
   
-## <a name="options"></a>[変数]  
+## <a name="options"></a>オプション  
  **ファセット**  
  現在選択されているファセットの名前。  
   

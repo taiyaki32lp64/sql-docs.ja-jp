@@ -15,18 +15,17 @@ helpviewer_keywords:
 ms.assetid: ebe1a2ab-e9f1-43a2-8f94-b190c9613d70
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 851106109d195ae6f5d6f66d3944e486d58504c1
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 2a26fd370e80cb288ee62b0fc53ed6670300172e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47753640"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67917612"
 ---
 # <a name="persistformatenum"></a>PersistFormatEnum
 保存先となる形式を指定します、 [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md)します。  
   
-|定数|値|説明|  
+|定数|Value|説明|  
 |--------------|-----------|-----------------|  
 |**adPersistADTG**|0|Microsoft 高度なデータ TableGram (adtg 形式) の形式を示します。|  
 |**adPersistADO**|1|ADO の拡張マークアップ言語 (XML) 形式が使用されることを示します。 この値は adPersistXML と同じでは、下位互換のためです。|  

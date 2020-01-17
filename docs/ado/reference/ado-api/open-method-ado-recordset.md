@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 3236749c-4b71-4235-89e2-ccdfaaa9319d
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: c2b02ac3d8e95bb583515dfa780f473402ea798f
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: 16142f200e6fd6e7c141b4f1fe6d45fe8917bc28
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53206321"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67931905"
 ---
 # <a name="open-method-ado-recordset"></a>Open メソッド (ADO Recordset)
 カーソルをオープンする[Recordset](../../../ado/reference/ado-api/recordset-object-ado.md)オブジェクト。  

@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 619716b5-95dc-4538-82ae-4b90b9da8ebc
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 1d6e7c28e628254fd33269ab4ee200fee0067870
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 6fe9798b6a9f560621eba9806e25081f72e316c8
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47741050"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68122544"
 ---
 # <a name="sphelpfilegroup-transact-sql"></a>sp_helpfilegroup (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -40,8 +39,7 @@ sp_helpfilegroup [ [ @filegroupname = ] 'name' ]
 ```  
   
 ## <a name="arguments"></a>引数  
- [ **@filegroupname =** ] **'***name***'**  
- データベース内のファイル グループの論理名を指定します。 *名前*は**sysname**、既定値は NULL です。 場合*名前*が指定されていない、現在のデータベース内のすべてのファイル グループが一覧表示され、結果セット セクションに表示される設定最初の結果だけが表示されます。  
+`[ @filegroupname = ] 'name'` 現在のデータベース内のファイル グループの論理名です。 *名前* は **sysname** 、既定値は NULL です。 場合*名前*が指定されていない、現在のデータベース内のすべてのファイル グループが一覧表示され、結果セット セクションに表示される設定最初の結果だけが表示されます。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  0 (成功) または 1 (失敗)  
@@ -52,18 +50,18 @@ sp_helpfilegroup [ [ @filegroupname = ] 'name' ]
 |-----------------|---------------|-----------------|  
 |**groupname**|**sysname**|ファイル グループの名前。|  
 |**groupid**|**smallint**|数値ファイル グループ識別子です。|  
-|**filecount**|**int**|ファイル グループ内のファイル数です。|  
+|**filecount**|**int**|ファイル グループ内のファイルの数。|  
   
  場合*名前*は指定すると、ファイル グループ内の各ファイルの 1 つの行が返されます。  
   
 |列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
-|**file_in_group**|**sysname**|ファイル グループ内のファイルの論理名です。|  
+|**file_in_group**|**sysname**|グループ内のファイルの論理名。|  
 |**fileid**|**smallint**|数値ファイル識別子です。|  
-|**filename**|**nchar(260)**|ディレクトリ パスを含むファイルの物理名です。|  
+|**filename**|**nchar(260)**|ディレクトリ パスを含むファイルの物理名。|  
 |**size**|**nvarchar(15)**|ファイル サイズ (KB 単位) です。|  
 |**maxsize**|**nvarchar(15)**|ファイルの最大サイズ。<br /><br /> この値は、ファイルのサイズの上限です。 このフィールドの値が UNLIMITED である場合、ディスクがいっぱいになるまでファイルを拡張できることを示します。|  
-|**growth**|**nvarchar(15)**|ファイルを拡張するときの増分です。 これは、新しい領域が必要するたびに、ファイルに追加される領域の容量を示します。<br /><br /> 0 = ファイルのサイズは固定されており、容量を追加することはできません。|  
+|**growth**|**nvarchar(15)**|ファイルの拡張増分値。 これは、新しい領域が必要するたびに、ファイルに追加される領域の容量を示します。<br /><br /> 0 = ファイルのサイズは固定されており、容量を追加することはできません。|  
   
 ## <a name="permissions"></a>アクセス許可  
  ロール **public** のメンバーシップが必要です。  

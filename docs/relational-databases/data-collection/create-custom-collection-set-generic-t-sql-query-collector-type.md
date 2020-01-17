@@ -1,6 +1,6 @@
 ---
-title: カスタム コレクション セットの作成 - ジェネリック T-SQL Query コレクター型 | Microsoft Docs
-ms.custom: ''
+title: カスタム コレクション セットの作成 - ジェネリック T-SQL Query コレクター型
+ms.custom: seo-lt-2019
 ms.date: 03/07/2017
 ms.prod: sql
 ms.reviewer: ''
@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 6b06db5b-cfdc-4ce0-addd-ec643460605b
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 7184a6d2e3f10889233f6ed4b2057755dc9bdd72
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b27dda40294185f923d74b61dfd1b10ce7301ba9
+ms.sourcegitcommit: d00ba0b4696ef7dee31cd0b293a3f54a1beaf458
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47610440"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "74055577"
 ---
 # <a name="create-custom-collection-set---generic-t-sql-query-collector-type"></a>カスタム コレクション セットの作成 - ジェネリック T-SQL Query コレクター型
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

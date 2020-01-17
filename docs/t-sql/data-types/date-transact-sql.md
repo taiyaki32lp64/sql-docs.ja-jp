@@ -21,14 +21,13 @@ helpviewer_keywords:
 ms.assetid: c963e8b4-5a85-4bd0-9d48-3f8da8f6516b
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 076c4927ee5f3811b9c3415c1db30cc7cfa2a6a2
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: ae7ab885ced505ccf7da03d388e8063c276fc0d9
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56287182"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68113709"
 ---
 # <a name="date-transact-sql"></a>date (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -41,12 +40,12 @@ ms.locfileid: "56287182"
 |--------------|-----------|  
 |構文|**date**|  
 |使用方法|DECLARE \@MyDate **date**<br /><br /> CREATE TABLE Table1 ( Column1 **date** )|  
-|既定の文字列リテラル形式<br /><br /> (下位のクライアントに使用)|-YYYY-MM-DD<br /><br /> 詳細については、以下の「下位クライアントの下位互換性」セクションを参照してください。|  
+|既定の文字列リテラル形式<br /><br /> (下位クライアントに使用)|YYYY-MM-DD<br /><br /> 詳細については、後述の「下位クライアントの下位互換性」セクションを参照してください。|  
 |範囲|0001-01-01 ～ 9999-12-31 (Informatica の場合は 1582-10-15 ～ 9999-12-31)<br /><br /> 1 年 1 月 1 日 CE (Common Era) から 9999 年 12 月 31 日 CE (Informatica の場合は 1582 年 10 月 15 日 CE から 9999 年 12 月 31 日 CE)|  
 |要素範囲|YYYY は、0001 ～ 9999 の年を表す 4 桁の数字です。 Informatica では、YYYY は 1582 ～ 9999 の範囲に制限されます。<br /><br /> MM は、指定された年の 01 ～ 12 の月を表す 2 桁の数字です。<br /><br /> DD は、指定された月の (月に応じて) 01 から 31 の日を表す 2 桁の数字です。|  
 |文字長|10 文字|  
 |有効桁数、小数点以下桁数|10, 0|  
-|ストレージのサイズ|3 バイト、固定|  
+|ストレージ サイズ|3 バイト、固定|  
 |ストレージ構造|1 つの 3 バイト整数で日付を格納します。|  
 |精度|1 日|  
 |既定値|1900-01-01<br /><br /> この値は、**time** から **datetime2** または **datetimeoffset** への暗黙的な変換で、付加的な日付要素として使用されます。|  
@@ -60,7 +59,7 @@ ms.locfileid: "56287182"
   
 |数値|[説明]|  
 |-------------|-----------------|  
-|mdy<br /><br /> [m]m/dd/[yy]yy<br /><br /> [m] m - dd-[yy] yy<br /><br /> [m]m.dd.[yy]yy<br /><br /> myd<br /><br /> mm/[yy]yy/dd<br /><br /> mm-[yy]yy/dd<br /><br /> [m]m.[yy]yy.dd<br /><br /> dmy<br /><br /> dd/[m]m/[yy]yy<br /><br /> dd-[m]m-[yy]yy<br /><br /> dd.[m]m.[yy]yy<br /><br /> dym<br /><br /> dd/[yy]yy/[m]m<br /><br /> dd-[yy]yy-[m]m<br /><br /> dd.[yy]yy.[m]m<br /><br /> ymd<br /><br /> [yy]yy/[m]m/dd<br /><br /> [yy]yy-[m]m-dd<br /><br /> [yy]yy-[m]m-dd|[m]m、dd、および [yy]yy は、スラッシュ (/)、ハイフン (-)、またはピリオド (.) で区切られた文字列の月、日、および年を表します。<br /><br /> 4 桁または 2 桁の年だけがサポートされています。 可能な限り 4 桁の年を使用してください。 2 桁の年を 4 桁の西暦年として解釈する場合に、基準になる年を 0001 ～ 9999 の範囲の整数で指定するには、「[two digit year cutoff サーバー構成オプションの構成](../../database-engine/configure-windows/configure-the-two-digit-year-cutoff-server-configuration-option.md)」を使用します。<br /><br /> **メモ** Informatica では、YYYY は 1582 ～ 9999 の範囲に制限されます。<br /><br /> 2 桁の西暦が、終了年の末尾の 2 桁の数値以下である場合は、終了年と同じ世紀として解釈されます。 終了年の末尾の 2 桁の数値よりも大きい場合は、終了年の 1 つ前の世紀と解釈されます。 たとえば、two digit year cutoff が 2049 (既定値) である場合、2 桁表記が 49 であれば、2049 年と解釈されます。2 桁表記が 50 であれば、1950 年と解釈されます。<br /><br /> 既定の日付形式は、現在の言語設定によって決まります。 日付形式は、[SET LANGUAGE](../../t-sql/statements/set-language-transact-sql.md) ステートメントおよび [SET DATEFORMAT](../../t-sql/statements/set-dateformat-transact-sql.md) ステートメントを使って変更できます。<br /><br /> **date** では、**ydm** 形式はサポートされません。|  
+|mdy<br /><br /> [m]m/dd/[yy]yy<br /><br /> [m]m-dd-[yy]yy<br /><br /> [m]m.dd.[yy]yy<br /><br /> myd<br /><br /> mm/[yy]yy/dd<br /><br /> mm-[yy]yy/dd<br /><br /> [m]m.[yy]yy.dd<br /><br /> dmy<br /><br /> dd/[m]m/[yy]yy<br /><br /> dd-[m]m-[yy]yy<br /><br /> dd.[m]m.[yy]yy<br /><br /> dym<br /><br /> dd/[yy]yy/[m]m<br /><br /> dd-[yy]yy-[m]m<br /><br /> dd.[yy]yy.[m]m<br /><br /> ymd<br /><br /> [yy]yy/[m]m/dd<br /><br /> [yy]yy-[m]m-dd<br /><br /> [yy]yy-[m]m-dd|[m]m、dd、および [yy]yy は、スラッシュ (/)、ハイフン (-)、またはピリオド (.) で区切られた文字列の月、日、および年を表します。<br /><br /> 4 桁または 2 桁の年だけがサポートされています。 可能な限り 4 桁の年を使用してください。 2 桁の年を 4 桁の西暦年として解釈する場合に、基準になる年を 0001 ～ 9999 の範囲の整数で指定するには、「[two digit year cutoff サーバー構成オプションの構成](../../database-engine/configure-windows/configure-the-two-digit-year-cutoff-server-configuration-option.md)」を使用します。<br /><br /> **メモ** Informatica では、YYYY は 1582 ～ 9999 の範囲に制限されます。<br /><br /> 2 桁の西暦が、終了年の末尾の 2 桁の数値以下である場合は、終了年と同じ世紀として解釈されます。 終了年の末尾の 2 桁の数値よりも大きい場合は、終了年の 1 つ前の世紀と解釈されます。 たとえば、two digit year cutoff が 2049 (既定値) である場合、2 桁表記が 49 であれば、2049 年と解釈されます。2 桁表記が 50 であれば、1950 年と解釈されます。<br /><br /> 既定の日付形式は、現在の言語設定によって決まります。 日付形式は、[SET LANGUAGE](../../t-sql/statements/set-language-transact-sql.md) ステートメントおよび [SET DATEFORMAT](../../t-sql/statements/set-dateformat-transact-sql.md) ステートメントを使って変更できます。<br /><br /> **date** では、**ydm** 形式はサポートされません。|  
   
 |アルファベット|[説明]|  
 |------------------|-----------------|  
@@ -68,7 +67,7 @@ ms.locfileid: "56287182"
   
 |ISO 8601|[説明]|  
 |--------------|----------------|  
-|-YYYY-MM-DD<br /><br /> YYYYMMDD|SQL 標準と同じです。 この形式は、国際標準として定義されている唯一の形式です。|  
+|YYYY-MM-DD<br /><br /> YYYYMMDD|SQL 標準と同じです。 この形式は、国際標準として定義されている唯一の形式です。|  
   
 |区切りなし|[説明]|  
 |-----------------|-----------------|  
@@ -80,7 +79,7 @@ ms.locfileid: "56287182"
   
 |W3C XML 形式|[説明]|  
 |--------------------|-----------------|  
-|yyyy-mm-ddTZD|XML/SOAP 用にサポートされています。<br /><br /> TZD は、タイム ゾーン指定子 (Z または +hh:mm または -hh:mm) です。<br /><br /> -   hh:mm はタイム ゾーン オフセットを表します。 hh は、タイム ゾーン オフセットの時間数を表す 0 ～ 14 の 2 桁の数字です。<br />-   MM は、タイム ゾーン オフセットの付加的な分数を表す 0 ～ 59 の 2 桁の数字です。<br />-   タイム ゾーン オフセットでは、+ (正符号) または - (負符号) を必ず指定します。 この符号は、ローカル時刻を取得する際に、協定世界時 (UTC) の時刻を基準としてタイム ゾーン オフセットを加算するか、減算するかを示します。 タイム ゾーン オフセットの有効範囲は -14:00 ～ +14:00 までです。|  
+|yyyy-mm-ddTZD|XML/SOAP 用にサポートされています。<br /><br /> TZD は、タイム ゾーン指定子 (Z または +hh:mm または -hh:mm) です。<br /><br /> -   hh:mm はタイム ゾーン オフセットを表します。 hh は、タイム ゾーン オフセットの時間数を表す 0 から 14 の 2 桁の数字です。<br />-   MM は、タイム ゾーン オフセットの付加的な分数を表す 0 ～ 59 の 2 桁の数字です。<br />-   タイム ゾーン オフセットでは、+ (正負号) または - (負符号) を必ず指定します。 この符号は、ローカル時刻を取得する際に、協定世界時 (UTC) の時刻を基準としてタイム ゾーン オフセットを加算するか、減算するかを示します。 タイム ゾーン オフセットの有効範囲は -14:00 ～ +14:00 までです。|  
   
 ## <a name="ansi-and-iso-8601-compliance"></a>ANSI および ISO 8601 への準拠  
 **date** は、グレゴリオ暦に対する ANSI SQL 標準の定義に準拠します。「NOTE 85 - Datetime data types will allow dates in the Gregorian format to be stored in the date range 0001-01-01 CE through 9999-12-31 CE.」(注 85 - Datetime データ型は、日付の範囲 0001-01-01 CE から 9999-12-31 で格納される、グレゴリオ形式の日付を許可します。)
@@ -96,12 +95,12 @@ ms.locfileid: "56287182"
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のデータ型|下位クライアントに渡される既定の文字列リテラル形式|下位 ODBC|下位 OLEDB|下位 JDBC|下位 SQLCLIENT|  
 | --- | --- | --- | --- | --- | --- |
 |**time**|hh:mm:ss[.nnnnnnn]|SQL_WVARCHAR または SQL_VARCHAR|DBTYPE_WSTR または DBTYPE_STR|Java.sql.String|String または SqString|  
-|**date**|-YYYY-MM-DD|SQL_WVARCHAR または SQL_VARCHAR|DBTYPE_WSTR または DBTYPE_STR|Java.sql.String|String または SqString|  
+|**date**|YYYY-MM-DD|SQL_WVARCHAR または SQL_VARCHAR|DBTYPE_WSTR または DBTYPE_STR|Java.sql.String|String または SqString|  
 |**datetime2**|YYYY-MM-DD hh:mm:ss[.nnnnnnn]|SQL_WVARCHAR または SQL_VARCHAR|DBTYPE_WSTR または DBTYPE_STR|Java.sql.String|String または SqString|  
 |**datetimeoffset**|YYYY-MM-DD hh:mm:ss[.nnnnnnn] [+&#124;-]hh:mm|SQL_WVARCHAR または SQL_VARCHAR|DBTYPE_WSTR または DBTYPE_STR|Java.sql.String|String または SqString|  
   
 ## <a name="converting-date-and-time-data"></a>日付と時刻のデータ型の変換
-日付と時刻のデータ型に変換する場合、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] で日付または時刻と認識されない値はすべて拒否されます。 日付と時刻のデータでの CAST および CONVERT 関数の使用方法の詳細については、を参照してください。 [CAST および CONVERT & #40 です。TRANSACT-SQL と #41;](../../t-sql/functions/cast-and-convert-transact-sql.md).  
+日付と時刻のデータ型に変換する場合、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] で日付または時刻と認識されない値はすべて拒否されます。 CAST 関数および CONVERT 関数で日付と時刻のデータを使用する方法については、「[CAST および CONVERT &#40;Transact-SQL&#41;](../../t-sql/functions/cast-and-convert-transact-sql.md)」をご覧ください。  
   
 ### <a name="converting-date-to-other-date-and-time-types"></a>date から他の日付/時刻データ型への変換
 
@@ -178,19 +177,19 @@ SELECT @date AS '@date', @datetime2 AS '@datetime2(3)';
   
 |入力文字列リテラル|**date**|  
 |---|---|
-|ODBC 日付|ODBC 文字列リテラルは、**datetime** データ型にマップされます。 ODBC 日付時刻リテラルから **date** 型への代入演算を行うと、**datetime** 型とこれらの型との間で、変換規則で定義されている暗黙的な変換が行われます。|  
-|ODBC 時刻|上記の ODBC 日付の規則を参照。|  
-|ODBC 日付時刻|上記の ODBC 日付の規則を参照。|  
+|ODBC DATE|ODBC 文字列リテラルは、**datetime** データ型にマップされます。 ODBC 日付時刻リテラルから **date** 型への代入演算を行うと、**datetime** 型とこれらの型との間で、変換規則で定義されている暗黙的な変換が行われます。|  
+|ODBC TIME|上記の ODBC 日付の規則を参照。|  
+|ODBC DATETIME|上記の ODBC 日付の規則を参照。|  
 |DATE のみ|単純変換|  
-|TIME のみ|既定値が設定される|  
-|タイム ゾーンのみ|既定値が設定される|  
-|日付 + 時刻|入力文字列の日付部分が使用される|  
-|日付 + タイム ゾーン|許可されていません。|  
-|時刻 + タイム ゾーン|既定値が設定される|  
-|日付 + 時刻 + タイム ゾーン|ローカル datetime の日付部分が使用される|  
+|TIME のみ|既定値が指定されます。|  
+|タイム ゾーンのみ|既定値が指定されます。|  
+|DATE + TIME|入力文字列の日付部分が使用される|  
+|DATE + TIMEZONE|許可されていません。|  
+|TIME + TIMEZONE|既定値が指定されます。|  
+|DATE + TIME + TIMEZONE|ローカル DATETIME の DATE 部分が使用されます。|  
   
 ## <a name="examples"></a>使用例  
-次の例では、文字列をそれぞれの日付および時刻データ型にキャストした結果を比較します。
+次の例では、文字列をそれぞれの date および time データ型にキャストした結果を比較します。
   
 ```sql
 SELECT   

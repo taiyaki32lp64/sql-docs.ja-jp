@@ -15,11 +15,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 3c643ad9a84c6afe5b6ff08fd6716753ef42f79e
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48131693"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62807269"
 ---
 # <a name="database-mirroring-and-database-snapshots-sql-server"></a>データベース ミラーリングとデータベース スナップショット (SQL Server)
   可用性を維持するために運用しているミラー データベースを利用して、レポート作成の負荷を軽減できます。 ミラー データベースをレポート作成に利用するには、ミラー データベースでデータベース スナップショットを作成し、クライアント接続要求を最新のスナップショットに出力します。 データベース スナップショットは、その作成時に存在していたソース データベースの静的な読み取り専用スナップショットであり、トランザクションに一貫性があります。 ミラー データベースにデータベース スナップショットを作成するには、データベースは同期済みのミラーリング状態になっている必要があります。  
@@ -78,7 +78,7 @@ ms.locfileid: "48131693"
 -   [データベース スナップショットの削除 &#40;Transact-SQL&#41;](../../relational-databases/databases/drop-a-database-snapshot-transact-sql.md)  
 
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [Database Snapshots &#40;SQL Server&#41;](../../relational-databases/databases/database-snapshots-sql-server.md)   
  [データベース ミラーリング セッションへのクライアントの接続 &#40;SQL Server&#41;](connect-clients-to-a-database-mirroring-session-sql-server.md)  
   

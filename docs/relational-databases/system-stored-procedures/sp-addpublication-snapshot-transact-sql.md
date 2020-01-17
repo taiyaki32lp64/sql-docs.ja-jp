@@ -1,5 +1,5 @@
 ---
-title: sp_addpublication_snapshot (TRANSACT-SQL) |Microsoft Docs
+title: sp_addpublication_snapshot (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/15/2018
 ms.prod: sql
@@ -15,16 +15,15 @@ helpviewer_keywords:
 ms.assetid: 192b6214-df6e-44a3-bdd4-9d933a981619
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: dc55175177aec3db50df14bc27ec425c5eedf97f
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: c32ea67eef368a17b129989e3f05c29ab0533d72
+ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54128072"
+ms.lasthandoff: 08/03/2019
+ms.locfileid: "68769110"
 ---
 # <a name="spaddpublicationsnapshot-transact-sql"></a>sp_addpublication_snapshot (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
   指定されたパブリケーションのスナップショット エージェントを作成します。 このストアド プロシージャは、パブリッシャー側でパブリケーション データベースについて実行されます。  
   
@@ -58,117 +57,99 @@ sp_addpublication_snapshot [ @publication= ] 'publication'
 ```  
   
 ## <a name="arguments"></a>引数  
- [  **@publication=**] **'**_パブリケーション_**'**  
- パブリケーションの名前です。 *パブリケーション*は**sysname**、既定値はありません。  
+`[ @publication = ] 'publication'`パブリケーションの名前を指定します。 *パブリケーション* は **sysname** 、既定値はありません。  
   
- [  **@frequency_type=**] *frequency_type*  
- スナップショット エージェントの実行頻度を指定します。 *frequency_type*は**int**値は次のいずれかを指定できます。  
+`[ @frequency_type = ] frequency_type`スナップショットエージェントを実行する頻度を指定します。 *frequency_type*は**int**,、値は次のいずれかを指定することができます。  
   
 |値|説明|  
 |-----------|-----------------|  
 |**1**|1 回のみ|  
 |**4** (既定値)|毎日|  
-|**8**|毎週|  
-|**16**|毎月|  
+|**8**|業務.|  
+|**16**|支払い.|  
 |**32**|月単位に frequency_interval で示される間隔|  
-|**64**|ときに[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]エージェントが起動します。|  
-|**128**|コンピューターがアイドル状態のときに実行|  
+|**64**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]エージェントの起動時。|  
+|**128**|コンピューターがアイドル状態のときに実行する|  
   
- [  **@frequency_interval=**] *frequency_interval*  
- 設定した頻度に適用する値は、 *frequency_type*します。 *frequency_interval*は**int**値は次のいずれかを指定できます。  
+`[ @frequency_interval = ] frequency_interval`*Frequency_type*によって設定された頻度に適用する値を指定します。 *frequency_interval*は**int**,、値は次のいずれかを指定することができます。  
   
-|frequency_type の値|frequency_interval への影響|  
+|Frequency_type の値|frequency_interval への影響|  
 |------------------------------|-----------------------------------|  
-|**1**|*frequency_interval*は使用されません。|  
-|**4** (既定値)|すべて*frequency_interval*既定値は日単位、日。|  
-|**8**|*frequency_interval*は、次の 1 つ以上 (と組み合わせて、 [ &#124; (ビット演算 OR)](../../t-sql/language-elements/bitwise-or-transact-sql.md)論理演算子)。<br /><br /> **1**日曜日を =&#124;<br /><br /> **2** = 月曜日&#124;<br /><br /> **4** = 火曜日&#124;<br /><br /> **8** = 水曜日&#124;<br /><br /> **16** = 木曜日&#124;<br /><br /> **32** = 金曜日&#124;<br /><br /> **64** = 土曜日|  
-|**16**|*Frequency_interval*します月の日。|  
-|**32**|*frequency_interval*は、次の 1 つです。<br /><br /> **1**日曜日を =&#124;<br /><br /> **2** = 月曜日&#124;<br /><br /> **3** = 火曜日&#124;<br /><br /> **4** = 水曜日&#124;<br /><br /> **5** = 木曜日&#124;<br /><br /> **6** = 金曜日&#124;<br /><br /> **7** = 土曜日&#124;<br /><br /> **8** = 日&#124;<br /><br /> **9** = 平日&#124;<br /><br /> **10** = 土日|  
-|**64**|*frequency_interval*は使用されません。|  
-|**128**|*frequency_interval*は使用されません。|  
+|**1**|*frequency_interval*は使用されていません。|  
+|**4** (既定値)|*Frequency_interval*日ごと。既定値は毎日です。|  
+|**8**|*frequency_interval*は、次のうちの1つ以上 ( [ &#124;ビットごとの or)](../../t-sql/language-elements/bitwise-or-transact-sql.md)論理演算子と組み合わせたものです。<br /><br /> **1** = 日曜日&#124;<br /><br /> **2** = 月曜日&#124;<br /><br /> **4** = 火曜日&#124;<br /><br /> **8** = 水曜日&#124;<br /><br /> **16** = 木曜日&#124;<br /><br /> **32** = 金曜日&#124;<br /><br /> **64** = 土曜日|  
+|**16**|月の*frequency_interval*日。|  
+|**32**|*frequency_interval*は次のいずれかです。<br /><br /> **1** = 日曜日&#124;<br /><br /> **2** = 月曜日&#124;<br /><br /> **3** = 火曜日&#124;<br /><br /> **4** = 水曜日&#124;<br /><br /> **5** = 木曜日&#124;<br /><br /> **6** = 金曜日&#124;<br /><br /> **7** = 土曜日&#124;<br /><br /> **8** = 日&#124;<br /><br /> **9** = 平日&#124;<br /><br /> **10** = 週末|  
+|**64**|*frequency_interval*は使用されていません。|  
+|**128**|*frequency_interval*は使用されていません。|  
   
- [  **@frequency_subday=**] *frequency_subday*  
- 単位を*freq_subday_interval*します。 *frequency_subday*は**int**、これらの値のいずれかを指定できます。  
+`[ @frequency_subday = ] frequency_subday`*Freq_subday_interval*の単位を示します。 *frequency_subday*は**int**,、これらの値のいずれかを指定することができます。  
   
 |値|説明|  
 |-----------|-----------------|  
 |**1**|1 回。|  
-|**2**|第 2 週|  
+|**2**|Second|  
 |**4** (既定値)|Minute|  
 |**8**|Hour|  
   
- [  **@frequency_subday_interval=**] *frequency_subday_interval*  
- 間隔は、 *frequency_subday*します。 *frequency_subday_interval*は**int**、既定値は 5、5 分を意味します。  
+`[ @frequency_subday_interval = ] frequency_subday_interval`*Frequency_subday*の間隔を指定します。 *frequency_subday_interval*は**int**,、既定値は5の場合は5分ごとです。  
   
- [  **@frequency_relative_interval=**] *frequency_relative_interval*  
- スナップショット エージェントを実行する日付を指定します。 *frequency_relative_interval*は**int**、既定値は 1 です。  
+`[ @frequency_relative_interval = ] frequency_relative_interval`スナップショットエージェントが実行される日付を指定します。 *frequency_relative_interval*は**int**,、既定値は1です。  
   
- [  **@frequency_recurrence_factor=**] *frequency_recurrence_factor*  
- 使用される定期実行係数*frequency_type*します。 *frequency_recurrence_factor*は**int**、既定値は 0。  
+`[ @frequency_recurrence_factor = ] frequency_recurrence_factor`*Frequency_type*によって使用される定期実行係数を示します。 *frequency_recurrence_factor*は**int**,、既定値は0です。  
   
- [  **@active_start_date=**] *active_start_date*  
- スナップショット エージェントを最初にスケジュール設定する日付を、YYYYMMDD 形式で指定します。 *active_start_date*は**int**、既定値は 0。  
+`[ @active_start_date = ] active_start_date`スナップショットエージェントを最初にスケジュール設定する日付を YYYYMMDD 形式で指定します。 *active_start_date*は**int**,、既定値は0です。  
   
- [  **@active_end_date=**] *active_end_date*  
- スナップショット エージェントのスケジュール設定を停止する日付を、YYYYMMDD 形式で指定します。 *active_end_date*は**int**、既定値は 99991231、9999 年 12 月 31 日。  
+`[ @active_end_date = ] active_end_date`スナップショットエージェントのスケジュール設定を停止する日付を YYYYMMDD 形式で指定します。 *active_end_date*は**int**,、既定値は 99991231,、9999年12月31日を意味します。  
   
- [  **@active_start_time_of_day=**] *active_start_time_of_day*  
- スナップショット エージェントを最初にスケジュール設定する時刻を HHMMSS 形式で指定します。 *active_start_time_of_day*は**int**、既定値は 0。  
+`[ @active_start_time_of_day = ] active_start_time_of_day`スナップショットエージェントを最初にスケジュール設定する時刻を HHMMSS 形式で指定します。 *active_start_time_of_day*は**int**,、既定値は0です。  
   
- [  **@active_end_time_of_day=**] *active_end_time_of_day*  
- スナップショット エージェントのスケジュール設定を停止する時刻を HHMMSS 形式で指定します。 *active_end_time_of_day*は**int**既定値は 235959、午後 11時 59分: 59 を意味 24 時間制です。  
+`[ @active_end_time_of_day = ] active_end_time_of_day`スナップショットエージェントのスケジュール設定を停止する時刻を HHMMSS 形式で指定します。 *active_end_time_of_day*は**int**,、既定値は 235959,、11:59:59 pm 24時間制として測定されます。  
   
- [  **@snapshot_job_name =** ] **'**_snapshot_agent_name_**'**  
- 既存のジョブが使用されている場合、既存のスナップショット エージェントのジョブ名を指定します。 *snapshot_agent_name*は**nvarchar (100)** 既定値は NULL です。 このパラメーターは内部でのみ使用するため、新しいパブリケーションを作成するときに指定する必要はありません。 場合*snapshot_agent_name*が指定されると、 *job_login*と*job_password* NULL にする必要があります。  
+`[ @snapshot_job_name = ] 'snapshot_agent_name'`既存のジョブが使用されている場合は、既存のスナップショットエージェントジョブ名の名前を指定します。 *snapshot_agent_name*は**nvarchar (100)** 、既定値は NULL です。 このパラメーターは内部で使用するため、新しいパブリケーションを作成するときには指定しないでください。 *Snapshot_agent_name*を指定する場合は、 *job_login*と*job_password*を NULL にする必要があります。  
   
- [ **@publisher_security_mode**=] *publisher_security_mode*  
- パブリッシャーへの接続時にエージェントが使用するセキュリティ モードを指定します。 *publisher_security_mode*は**smallint**、既定値は 1 です。 **0**指定[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]認証、および**1** Windows 認証を指定します。 値**0**を指定する必要があります以外[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]パブリッシャーです。 [!INCLUDE[ssNoteWinAuthentication](../../includes/ssnotewinauthentication-md.md)]  
+`[ @publisher_security_mode = ] publisher_security_mode`パブリッシャーに接続するときにエージェントが使用するセキュリティモードを示します。 *publisher_security_mode*は**smallint**,、既定値は1です。 **0 は認証を**、1は Windows 認証を指定します。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 以外[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のパブリッシャーには、値**0**を指定する必要があります。 [!INCLUDE[ssNoteWinAuthentication](../../includes/ssnotewinauthentication-md.md)]  
   
- [ **@publisher_login**=] **'**_publisher_login_**'**  
- パブリッシャーへの接続時に使用するログインを指定します。 *publisher_login*は**sysname**、既定値は NULL です。 *publisher_login*場合に指定する必要があります*publisher_security_mode*は**0**します。 場合*publisher_login* null と*publisher_security_mode*は**1**で指定したアカウント*job_login*ときに使用されますパブリッシャーに接続します。  
+`[ @publisher_login = ] 'publisher_login'`パブリッシャーに接続するときに使用するログインを示します。 *publisher_login* は **sysname** 、既定値は NULL です。 *publisher_security_mode*が**0**の場合は、 *publisher_login*を指定する必要があります。 *Publisher_login*が NULL で、 *publisher_security_mode*が**1**の場合は、 *job_login*に指定されたアカウントがパブリッシャーに接続するときに使用されます。  
   
- [ **@publisher_password**=] **'**_publisher_password_**'**  
- パブリッシャーへの接続時に使用するパスワードを指定します。 *publisher_password*は**sysname**、既定値は NULL です。  
+`[ @publisher_password = ] 'publisher_password'`パブリッシャーに接続するときに使用するパスワードを入力します。 *publisher_password* は **sysname** 、既定値は NULL です。  
   
 > [!IMPORTANT]  
->  スクリプト ファイルに認証情報を格納しないでください。 セキュリティを強化するため、実行時にログイン名とパスワードを指定することをお勧めします。  
+>  認証情報をスクリプトファイルに保存しないでください。 セキュリティを強化するために、実行時にログイン名とパスワードを指定することをお勧めします。  
   
- [ **@job_login**=] **'**_job_login_**'**  
- エージェントを実行するアカウントのログインです。 Azure SQL Database マネージ インスタンス、SQL Server アカウントを使用します。 *job_login*は**nvarchar (257)**、既定値は NULL です。 このアカウントは、ディストリビューターへのエージェント接続で常に使用されます。 新しいスナップショット エージェント ジョブを作成するときにはこのパラメーターを指定する必要があります。  
+`[ @job_login = ] 'job_login'`エージェントを実行するアカウントのログインを指定します。 Azure SQL Database Managed Instance で、SQL Server アカウントを使用します。 *job_login*は**nvarchar (257)** ,、既定値は NULL です。 このアカウントは、ディストリビューターへのエージェント接続に常に使用されます。 新しいスナップショットエージェントジョブを作成するときに、このパラメーターを指定する必要があります。  
   
 > [!NOTE]
->  非[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]パブリッシャーの場合、こので指定されたのと同じログインをする必要があります[sp_adddistpublisher &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-adddistpublisher-transact-sql.md)します。  
+>  以外[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のパブリッシャーの場合は、 [sp_adddistpublisher &#40;&#41;](../../relational-databases/system-stored-procedures/sp-adddistpublisher-transact-sql.md)で指定されたログインと同じである必要があります。  
   
- [ **@job_password**=] **'**_job_password_**'**  
- エージェントを実行する Windows アカウント用のパスワードを指定します。 *job_password*は**sysname**、既定値はありません。 新しいスナップショット エージェント ジョブを作成するときにはこのパラメーターを指定する必要があります。  
+`[ @job_password = ] 'job_password'`エージェントを実行する Windows アカウントのパスワードを指定します。 *job_password* は **sysname** 、既定値はありません。 新しいスナップショットエージェントジョブを作成するときに、このパラメーターを指定する必要があります。  
   
 > [!IMPORTANT]  
->  スクリプト ファイルに認証情報を格納しないでください。 セキュリティを強化するため、実行時にログイン名とパスワードを指定することをお勧めします。  
+>  認証情報をスクリプトファイルに保存しないでください。 セキュリティを強化するために、実行時にログイン名とパスワードを指定することをお勧めします。  
   
- [ **@publisher**=] **'**_パブリッシャー_**'**  
- 以外を指定[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]パブリッシャーです。 *パブリッシャー*は**sysname**、既定値は NULL です。  
+`[ @publisher = ] 'publisher'`以外[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のパブリッシャーを指定します。 *publisher*は**sysname**で、既定値は NULL です。  
   
 > [!NOTE]  
->  *パブリッシャー*でスナップショット エージェントを作成するときに使用されません、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]パブリッシャーです。  
+>  パブリッシャーで[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]スナップショットエージェントを作成する場合は、パブリッシャーを使用しないでください。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  **0** (成功) または**1** (失敗)  
   
 ## <a name="remarks"></a>コメント  
- **sp_addpublication_snapshot**はスナップショット レプリケーション、トランザクション レプリケーション、およびマージ レプリケーションで使用します。  
+ **sp_addpublication_snapshot**は、スナップショットレプリケーション、トランザクションレプリケーション、およびマージレプリケーションで使用します。  
   
 ## <a name="example"></a>例  
  [!code-sql[HowTo#sp_AddTranPub](../../relational-databases/replication/codesnippet/tsql/sp-addpublication-snapsh_1.sql)]  
   
 ## <a name="permissions"></a>アクセス許可  
- メンバーのみ、 **sysadmin**固定サーバー ロールまたは**db_owner**固定データベース ロールが実行できる**sp_addpublication_snapshot**します。  
+ **Sp_addpublication_snapshot**を実行できるのは、固定サーバーロール**sysadmin**または固定データベースロール**db_owner**のメンバーだけです。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [Create a Publication](../../relational-databases/replication/publish/create-a-publication.md)   
  [スナップショットの作成および適用](../../relational-databases/replication/create-and-apply-the-initial-snapshot.md)   
- [sp_addpublication &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addpublication-transact-sql.md)   
- [sp_changepublication_snapshot &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-changepublication-snapshot-transact-sql.md)   
- [sp_startpublication_snapshot &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-startpublication-snapshot-transact-sql.md)   
+ [sp_addpublication &#40;transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-addpublication-transact-sql.md)   
+ [sp_changepublication_snapshot &#40;transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-changepublication-snapshot-transact-sql.md)   
+ [sp_startpublication_snapshot &#40;transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-startpublication-snapshot-transact-sql.md)   
  [レプリケーション ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)  
   
   

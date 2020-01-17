@@ -1,28 +1,28 @@
 ---
-title: チュートリアル:マトリックス レポートの作成 (レポート ビルダー) | Microsoft Docs
+title: 'チュートリアル: マトリックス レポートの作成 (レポート ビルダー) | Microsoft Docs'
 ms.date: 06/23/2016
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: reporting-services
 ms.topic: conceptual
 ms.assetid: 9ee19c2e-2a8c-4bb0-9274-04a5812c2e96
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 812885a0638c9acf56cc0fc91f4f47915d6455cb
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: ed53800a1b45dd79548c59aaab57f71bd700d94d
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56291680"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63294670"
 ---
-# <a name="tutorial-creating-a-matrix-report-report-builder"></a>チュートリアル:マトリックス レポートの作成 (レポート ビルダー)
+# <a name="tutorial-creating-a-matrix-report-report-builder"></a>チュートリアル: マトリックス レポートの作成 (レポート ビルダー)
 このチュートリアルでは、入れ子になった行および列グループ内のサンプル売上データのマトリックスを使用して、 [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] のページ分割されたレポートを作成する方法について説明します。 
 
 また、隣接する列グループの作成、列の書式設定、およびテキストの回転も行います。 次の図に、ここで作成するレポートと同様のレポートを示します。  
   
 ![report-builder-matrix-tutorial](../reporting-services/media/report-builder-matrix-tutorial.png)
    
-このチュートリアルの推定所要時間:20 分  
+このチュートリアルの推定所要時間 : 20 分  
   
 ## <a name="requirements"></a>必要条件  
 要件については、「 [チュートリアルの前提条件](../reporting-services/prerequisites-for-tutorials-report-builder.md)」を参照してください。 
@@ -39,7 +39,7 @@ ms.locfileid: "56291680"
   
     **[新しいレポートまたはデータセット]** ダイアログ ボックスが開きます。  
   
-    **[新しいレポートまたはデータセット]** ダイアログ ボックスが表示されない場合、**[ファイル]** メニューで **[新規作成]** を選択します。  
+    **[新しいレポートまたはデータセット]** ダイアログ ボックスが表示されない場合、 **[ファイル]** メニューで **[新規作成]** を選択します。  
   
 2.  左ペインで、 **[新しいレポート]** が選択されていることを確認します。  
   
@@ -49,7 +49,7 @@ ms.locfileid: "56291680"
   
 5.  **[次へ]** をクリックします。  
   
-6.  **[データ ソースへの接続の選択]** ページで、既存のデータ ソースを選択するか、レポート サーバーを参照してデータ ソースを選択します。 使用できるデータ ソースがなく、レポート サーバーにもアクセスできない場合は、代わりに埋め込みデータ ソースを使用できます。 埋め込みデータ ソースの作成の詳細については、「[チュートリアル:基本的な表レポートの作成 &#40;レポート ビルダー&#41;](../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md)」を参照してください。  
+6.  **[データ ソースへの接続の選択]** ページで、既存のデータ ソースを選択するか、レポート サーバーを参照してデータ ソースを選択します。 使用できるデータ ソースがなく、レポート サーバーにもアクセスできない場合は、代わりに埋め込みデータ ソースを使用できます。 埋め込みデータ ソースの作成については、「[チュートリアル: 基本的な表レポートの作成 (レポート ビルダー)](../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md)」を参照してください。  
   
 7.  **[次へ]** をクリックします。  
   
@@ -133,7 +133,7 @@ ms.locfileid: "56291680"
   
 13. **[完了]** をクリックします。  
   
-    マトリックスがデザイン画面に追加されます。 [行グループ] ペインには 2 つの行グループが表示されます。Territory と SalesDate です。 [列グループ] ペインには 2 つの列グループが表示されます。Subcategory と Product です。 詳細データは、データセット クエリによって取得されるすべてのデータです。  
+    マトリックスがデザイン画面に追加されます。 行グループ ペインには、Territory と SalesDate の 2 つの行グループが表示されます。 列グループ ペインには、Subcategory と Product の 2 つの行グループが表示されます。 詳細データは、データセット クエリによって取得されるすべてのデータです。  
     
     ![report-builder-row-and-column-groups](../reporting-services/media/report-builder-row-and-column-groups.png)
   
@@ -154,9 +154,9 @@ ms.locfileid: "56291680"
   
 2.  Ctrl&lt;/localizedText&gt; キーを押しながら、 `[Sum(Sales)]`が格納されている 9 つのセルを選択します。  
   
-3.  **[ホーム]** タブで、**[数値]** > **[通貨]** の順に選択します。 書式設定された通貨を表示するようにセルが変化します。  
+3.  **[ホーム]** タブで、 **[数値]**  >  **[通貨]** の順に選択します。 書式設定された通貨を表示するようにセルが変化します。  
   
-    地域設定が英語 (米国) の場合、既定のサンプル テキストは **[$12,345.00]** です。 通貨値の例が表示されない場合は、 **[数値]** グループで、 **[プレースホルダーのスタイル]** > **[サンプルの値]** の順にクリックします。  
+    地域設定が英語 (米国) の場合、既定のサンプル テキストは **[$12,345.00]** です。 通貨値の例が表示されない場合は、 **[数値]** グループで、 **[プレースホルダーのスタイル]**  >  **[サンプルの値]** の順にクリックします。  
     
     ![report-builder-placeholder-value](../reporting-services/media/report-builder-placeholder-value.png)
   
@@ -260,7 +260,7 @@ ms.locfileid: "56291680"
   
 5.  新たに結合されたセルを右クリックして、 **[テキスト ボックスのプロパティ]** をクリックします。  
   
-6.  **[罫線]** タブで、**[プリセット]** > **[なし]** の順に選択します。
+6.  **[罫線]** タブで、 **[プリセット]**  >  **[なし]** の順に選択します。
   
 9. [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
@@ -277,7 +277,7 @@ ms.locfileid: "56291680"
   
 2.  レポート本文の一番上にある **"クリックしてタイトルを追加"** という文字列が含まれているテキスト ボックスを選択し、Delete キーを押します。  
   
-3.  **[挿入]** タブで、**[ヘッダー]** > **[ヘッダーの追加]** の順に選択します。  
+3.  **[挿入]** タブで、 **[ヘッダー]**  >  **[ヘッダーの追加]** の順に選択します。  
   
     ヘッダーがレポート本文の先頭に追加されます。  
   
@@ -285,7 +285,7 @@ ms.locfileid: "56291680"
   
 5.  テキスト ボックスに「 **Territory、Subcategory、および Day ごとの売上**」と入力します。  
   
-6.  入力したテキストを選択し、**[ホーム]** タブで次のように **[フォント]** を選択します。
+6.  入力したテキストを選択し、 **[ホーム]** タブで次のように **[フォント]** を選択します。
     * **サイズ: 24 pt**
     * **色: 茶色**
  
@@ -318,7 +318,7 @@ ms.locfileid: "56291680"
   
 1.  **レポート ビルダー** のボタンの **[名前を付けて保存]** をクリックします。  
   
-2.  **[デスクトップ]**、 **[マイ ドキュメント]**、または **[マイ コンピューター]** をクリックして、レポートを保存するフォルダーを参照します。  
+2.  **[デスクトップ]** 、 **[マイ ドキュメント]** 、または **[マイ コンピューター]** をクリックして、レポートを保存するフォルダーを参照します。  
   
 3.  **[名前]** に表示されている既定の名前を「 **SalesByTerritorySubcategory**」に変更します。  
   
@@ -335,7 +335,7 @@ ms.locfileid: "56291680"
   
 2.  次が格納されたセルを選択します。 `[Territory].` 
 
-    >**注**:テキストではなくセルを選択します。 WritingMode プロパティは、セルにのみ使用できます。
+    >**注**: テキストではなくセルを選択します。 WritingMode プロパティは、セルにのみ使用できます。
     
      ![report-builder-select-territory-cell](../reporting-services/media/report-builder-select-territory-cell.png)
   

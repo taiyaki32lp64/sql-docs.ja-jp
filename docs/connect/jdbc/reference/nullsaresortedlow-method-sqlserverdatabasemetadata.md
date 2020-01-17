@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: 30c06a9d-3513-42d0-8b2a-5a20ac31eb0e
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: a066a8196b14b7c7eac7912eb916dfd43ea989b9
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 2259a68458b6ec1d82019bec7167ca167aa99d9e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47805980"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67976645"
 ---
 # <a name="nullsaresortedlow-method-sqlserverdatabasemetadata"></a>nullsAreSortedLow メソッド (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -42,7 +41,7 @@ public boolean nullsAreSortedLow()
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- この nullsAreSortedLow メソッドは、java.sql.DatabaseMetaData インターフェイスで nullsAreSortedLow メソッドによって指定されます。  
+ この nullsAreSortedLow メソッドは、nullsAreSortedLow メソッドによって、java メタデータインターフェイスで指定されます。  
   
 ## <a name="see-also"></a>参照  
  [SQLServerDatabaseMetaData のメソッド](../../../connect/jdbc/reference/sqlserverdatabasemetadata-methods.md)   

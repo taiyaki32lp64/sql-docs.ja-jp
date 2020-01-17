@@ -1,5 +1,5 @@
 ---
-title: テーブル要素をスキーマ (DTA) |Microsoft Docs
+title: Schema の Table 要素 (DTA) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -12,15 +12,14 @@ dev_langs:
 helpviewer_keywords:
 - Table element [DTA]
 ms.assetid: a59e8319-05d1-47f3-af39-7d970ab8e7dc
-author: stevestein
-ms.author: sstein
-manager: craigg
-ms.openlocfilehash: e6a2b0e5b416775124fb1cc36a9b68dde6c1d676
-ms.sourcegitcommit: 0f7cf9b7ab23df15624d27c129ab3a539e8b6457
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 0064376a229e2fe9f87fe09048c9e923810d4172
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51292488"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68105959"
 ---
 # <a name="table-element-for-schema-dta"></a>Schema の Table 要素 (DTA)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

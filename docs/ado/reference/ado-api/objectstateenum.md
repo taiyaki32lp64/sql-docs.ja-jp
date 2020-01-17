@@ -15,18 +15,17 @@ helpviewer_keywords:
 ms.assetid: 32746558-097b-4749-989e-519aadf7e3f4
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 560e95bdafe3f5bbae82b200d8f7db0dcb121911
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 708d146aaa40d873e0a519c860a047d4b1f93161
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47713740"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67931923"
 ---
 # <a name="objectstateenum"></a>ObjectStateEnum
 オブジェクトがオープンかクローズは、コマンドの実行またはデータを取得するデータ ソースに接続するかどうかを指定します。  
   
-|定数|値|説明|  
+|定数|Value|説明|  
 |--------------|-----------|-----------------|  
 |**adStateClosed**|0|オブジェクトが閉じられたことを示します。|  
 |**adStateOpen**|1|オブジェクトが開かれていることを示します。|  

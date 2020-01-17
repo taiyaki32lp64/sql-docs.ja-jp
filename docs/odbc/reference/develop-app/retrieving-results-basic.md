@@ -14,16 +14,15 @@ helpviewer_keywords:
 ms.assetid: 052870e3-3f3f-4f07-91da-b649348225f4
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 8eb98d7c17663894e1bacdc27e431d6a54f45d3b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 7abe4dd2f0bfb0b5302022d8e50cddc7df84f192
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47772210"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68020471"
 ---
 # <a name="retrieving-results-basic"></a>結果の取得 (基本)
-A*結果セット*は特定の条件に一致するデータ ソースで行のセットです。 これは、クエリの実行結果し、するが表形式で、アプリケーションで使用できる概念テーブルです。 **選択**ステートメント、カタログ関数、およびいくつかの手順は、結果セットを作成します。 次の例では、最初の SQL ステートメントのすべての行と、Orders テーブルのすべての列を含む結果セットを作成して 2 番目の SQL ステートメントは、Orders テーブル内の行の OrderID、営業担当者、および状態の列を含む結果セットを作成します。状態の開く。  
+*結果セット*は特定の条件に一致するデータ ソースで行のセットです。 これは、クエリの実行結果し、するが表形式で、アプリケーションで使用できる概念テーブルです。 **SELECT**ステートメント、カタログ関数、およびいくつかの手順は、結果セットを作成します。 次の例では、最初の SQL ステートメントのすべての行と、Orders テーブルのすべての列を含む結果セットを作成して 2 番目の SQL ステートメントは、Orders テーブル内の行の OrderID、営業担当者、および状態の列を含む結果セットを作成します。状態の開く。  
   
 ```  
 SELECT * FROM Orders  

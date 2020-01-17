@@ -4,21 +4,20 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 f1_keywords:
 - "10027"
 ms.assetid: 2887ad5f-015f-4197-8388-c59f78d32f52
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 43668ec1da730687ea422511021ebe64deec9d30
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: 007740fbbf7a01139a7b3c1a679e1737d2f29a7e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56288890"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66109582"
 ---
 # <a name="cube-selection-dialog-box-report-builder"></a>[キューブの選択] ダイアログ ボックス (レポート ビルダー)
   **[キューブの選択]** ダイアログ ボックスを使用すると、レポートのデータ ソースとして別のキューブを選択できます。 別のキューブを選択することにより、クエリは無効になります。  

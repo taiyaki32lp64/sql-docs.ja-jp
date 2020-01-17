@@ -15,18 +15,17 @@ dev_langs:
 helpviewer_keywords:
 - sp_fulltext_database
 ms.assetid: eeb1e151-eb00-484c-8fd1-5641e621ffc6
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
+author: MikeRayMSFT
+ms.author: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 11f2886a261ebe760616dade945e652b620918a3
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 0c27f2efcfc15cc1ff9d53f735c08fad922f9466
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47841922"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68124278"
 ---
-# <a name="spfulltextdatabase-transact-sql"></a>sp_fulltext_database (Transact-SQL)
+# <a name="spfulltextdatabase-transact-sql"></a>sp_fulltext_database (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   フルテキスト カタログにも何も起こりません[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]以降のバージョンとの下位互換性のみがサポートされます。 **sp_fulltext_database**は、特定のデータベースの Full-text Engine を無効になりません。 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] でユーザーが作成したすべてのデータベースでは、常にフルテキスト インデックスが有効になっています。  
@@ -44,8 +43,7 @@ sp_fulltext_database [@action=] 'action'
 ```  
   
 ## <a name="arguments"></a>引数  
- [  **@action=**] **'***アクション***'**  
- 実行する操作を指定します。 **アクション**は**varchar (20)**、これらの値のいずれかを指定できます。  
+`[ @action = ] 'action'` 実行する操作です。 **アクション**は**varchar (20)** 、これらの値のいずれかを指定できます。  
   
 |値|説明|  
 |-----------|-----------------|  
@@ -59,12 +57,12 @@ sp_fulltext_database [@action=] 'action'
  なし  
   
 ## <a name="remarks"></a>コメント  
- [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 以降のバージョンでは、フルテキスト インデックスを無効にすることはできません。 フルテキスト インデックス作成を無効にするから行が削除されません**sysfulltextcatalogs**され、フルテキストが有効なテーブルが、フルテキスト インデックス作成を不要になったマークされていることを示していません。 すべてのフルテキスト メタデータ定義はシステム テーブルに残ります。  
+ [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 以降のバージョンでは、フルテキスト インデックスを無効にすることはできません。 フルテキスト インデックス作成を無効にするから行が削除されません**sysfulltextcatalogs**され、フルテキストが有効なテーブルが、フルテキスト インデックス作成を不要になったマークされていることを示していません。 すべてのフルテキスト メタデータ定義では、システム テーブルに存在します。  
   
 ## <a name="permissions"></a>アクセス許可  
  メンバーのみ、 **sysadmin**固定サーバー ロールと**db_owner**固定データベース ロールが実行できる**sp_fulltext_database**します。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [DATABASEPROPERTYEX &#40;Transact-SQL&#41;](../../t-sql/functions/databasepropertyex-transact-sql.md)   
  [FULLTEXTSERVICEPROPERTY &#40;Transact-SQL&#41;](../../t-sql/functions/fulltextserviceproperty-transact-sql.md)   
  [システム ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  

@@ -10,15 +10,15 @@ helpviewer_keywords:
 - bulk importing [SQL Server], format files
 - format files [SQL Server], importing data using
 ms.assetid: 2956df78-833f-45fa-8a10-41d6522562b9
-author: douglaslMS
-ms.author: douglasl
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: fddec2033997a1b76f34fa9a2fe006d385bc0132
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 772dbb86188bf164a2e135f7bb9b71a1cc030745
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53364084"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66011766"
 ---
 # <a name="use-a-format-file-to-bulk-import-data-sql-server"></a>データの一括インポートでのフォーマット ファイルの使用 (SQL Server)
   このトピックでは、一括インポート操作でのフォーマット ファイルの使用方法について説明します。 フォーマット ファイルでは、データ ファイルのフィールドがテーブルの列にマップされます。  XML 以外のフォーマット ファイルまたは XML フォーマット ファイルを使用して、データを一括インポートできます。この操作には、**bcp** コマンド、または[!INCLUDE[tsql](../../includes/tsql-md.md)] コマンドの BULK INSERT か INSERT ... SELECT * FROM OPENROWSET(BULK...) を使用します。  
@@ -41,7 +41,7 @@ ms.locfileid: "53364084"
  詳細については、「[bcp ユーティリティ](../../tools/bcp-utility.md)」、「[BULK INSERT &#40;Transact-SQL&#41;](/sql/t-sql/statements/bulk-insert-transact-sql)」、または「[OPENROWSET &#40;Transact-SQL&#41;](/sql/t-sql/functions/openrowset-transact-sql)」を参照してください。  
   
 > [!NOTE]  
->  SQLXML データを一括エクスポートまたは一括インポートするには、フォーマット ファイルで次のいずれかのデータ型を使用します。SQLCHAR または SQLVARYCHAR (データは、クライアント コード ページまたは照合順序で暗黙的に指定するコード ページに送信される)、SQLNCHAR または SQLNVARCHAR (データは Unicode として送ら)、SQLBINARY または SQLVARYBIN (データは変換なし送信) します。  
+>  SQLXML データを一括エクスポートまたは一括インポートするには、フォーマット ファイルで次のいずれかのデータ型を使用します。SQLCHAR または SQLVARYCHAR (データはクライアント コード ページまたは照合順序で暗黙的に指定されるコード ページで送られます)、SQLNCHAR または SQLNVARCHAR (データは Unicode として送られます)、SQLBINARY または SQLVARYBIN (データは変換なしで送られます)。  
   
 ## <a name="examples"></a>使用例  
  このセクションの例では、**bcp** コマンド、BULK INSERT ステートメント、および INSERT ...SELECT * FROM OPENROWSET(BULK...) ステートメントを使用してデータを一括インポートする場合のフォーマット ファイルの使用方法を示します。 一括インポートの例を実行する前に、サンプル テーブル、データ ファイル、およびフォーマット ファイルを作成する必要があります。  

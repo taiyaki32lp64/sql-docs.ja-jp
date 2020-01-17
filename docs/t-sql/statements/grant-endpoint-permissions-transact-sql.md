@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 9eda885c-fc3a-4c9d-8de6-ce07fb35a934
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: 0e655ac992946cfe08a8ef63c7b6b8de3f8fef45
-ms.sourcegitcommit: c6e71ed14198da67afd7ba722823b1af9b4f4e6f
+ms.openlocfilehash: 53cac5548d231896b72e0786516c1e32c994869a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/16/2019
-ms.locfileid: "54326453"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68050841"
 ---
 # <a name="grant-endpoint-permissions-transact-sql"></a>GRANT (エンドポイントの権限の許可) (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -52,8 +51,8 @@ GRANT permission  [ ,...n ] ON ENDPOINT :: endpoint_name
  *permission*  
  エンドポイントで許可できる権限を指定します。 権限の一覧については、後の「解説」を参照してください。  
   
- ON ENDPOINT **::**_endpoint_name_  
- 権限を許可するエンドポイントを指定します。 スコープ修飾子 (**::**) が必要です。  
+ ON ENDPOINT **::** _endpoint_name_  
+ 権限を許可するエンドポイントを指定します。 スコープ修飾子 ( **::** ) が必要です。  
   
  TO \<server_principal>  
  権限を許可する [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ログインを指定します。  

@@ -15,18 +15,17 @@ helpviewer_keywords:
 ms.assetid: fa039662-6eb6-47d9-952c-229a4dffa81d
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: f1766cf3e1ee6390ae4e0b7b346ae2c313d88c87
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 9f9c089e1e0c0c9b8788922ad566a1ee6bcd9c6b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51667149"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68018283"
 ---
-# <a name="server-wide-configuration-catalog-views-transact-sql"></a>サーバー全体の構成に関するカタログ ビュー (Transact-SQL)
+# <a name="server-wide-configuration-catalog-views-transact-sql"></a>サーバー全体の構成に関するカタログ ビュー (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  ここでは、次のカタログ ビューについて説明します。  
+  このセクションには、次のカタログ ビューが含まれています。  
   
 |||  
 |-|-|  
@@ -35,7 +34,7 @@ ms.locfileid: "51667149"
 |[sys.traces](../../relational-databases/system-catalog-views/sys-traces-transact-sql.md)|[sys.trace_event_bindings](../../relational-databases/system-catalog-views/sys-trace-event-bindings-transact-sql.md)|  
 |[sys.trace_categories](../../relational-databases/system-catalog-views/sys-trace-categories-transact-sql.md)|[sys.trace_subclass_values](../../relational-databases/system-catalog-views/sys-trace-subclass-values-transact-sql.md)|  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [カタログ ビュー &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
  [システム ビュー &#40;TRANSACT-SQL&#41;](https://msdn.microsoft.com/library/35a6161d-7f43-4e00-bcd3-3091f2015e90)  
   

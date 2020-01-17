@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 58bea3e9-d552-447f-b3ad-ce1dab213b72
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 7e02d42d6d63608ccb70dc984e05ae11578d3160
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 615625ca396e5f2ae094962457cc9e746730ddcf
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52528860"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68067414"
 ---
 # <a name="data-buffer-type"></a>データ バッファーの種類
 バッファーの C データ型は、アプリケーションによって指定されます。 1 つの変数には、アプリケーションは、変数を割り当てるときに発生します。 汎用的なメモリの使用は、void - 型のポインターで指し示されるメモリ場合、アプリケーションが特定の種類にメモリをキャストです。 ドライバーは、2 つの方法でこの型を検出します。  

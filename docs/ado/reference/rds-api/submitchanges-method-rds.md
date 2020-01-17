@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 250062a4-13c4-4bed-807d-8b9ad81536d4
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: a0655a76463f7a0a1507fa2767eade3cb37c48a8
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.openlocfilehash: 783ad55a2355759f7625d536272f5243cd1c61c4
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51602622"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67963287"
 ---
 # <a name="submitchanges-method-rds"></a>SubmitChanges メソッド (RDS)
 保留中のローカル キャッシュと更新の変更を送信する[Recordset](../../../ado/reference/ado-api/recordset-object-ado.md)で指定されたデータ ソースに、 [Connect](../../../ado/reference/rds-api/connect-property-rds.md)プロパティまたは[URL](../../../ado/reference/rds-api/url-property-rds.md)プロパティ。  
@@ -41,7 +40,7 @@ DataControl.SubmitChanges DataFactory.SubmitChanges Connection, Recordset
  *DataFactory*  
  オブジェクト変数を表す、 [RDSServer.DataFactory](../../../ado/reference/rds-api/datafactory-object-rdsserver.md)オブジェクト。  
   
- *[接続]*  
+ *Connection*  
  A**文字列**で作成された接続を表す値、 **rds.DataControl**オブジェクトの[Connect](../../../ado/reference/rds-api/connect-property-rds.md)プロパティ。  
   
  *レコード セット*  
@@ -64,7 +63,7 @@ DataControl.SubmitChanges DataFactory.SubmitChanges Connection, Recordset
 |-|-|  
 |[DataControl オブジェクト (RDS)](../../../ado/reference/rds-api/datacontrol-object-rds.md)|[DataFactory オブジェクト (RDSServer)](../../../ado/reference/rds-api/datafactory-object-rdsserver.md)|  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [SubmitChanges メソッドの例 (VBScript)](../../../ado/reference/rds-api/submitchanges-method-example-vbscript.md)   
  [アドレス帳のコマンド ボタン](../../../ado/guide/remote-data-service/address-book-command-buttons.md)   
  [CancelUpdate メソッド (RDS)](../../../ado/reference/rds-api/cancelupdate-method-rds.md)   

@@ -15,15 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - Lat method
 ms.assetid: 051d66bc-04de-4c58-861c-760dc5b859b5
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: fda04401334546cde33ca14034d344c8b444e138
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: MladjoA
+ms.author: mlandzic
+ms.openlocfilehash: 7da6aca6ccc5180d379ff853267d2de9f682cfb9
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47804317"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68040096"
 ---
 # <a name="lat-geography-data-type"></a>Lat (geography データ型)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -39,7 +38,7 @@ ms.locfileid: "47804317"
 ## <a name="return-types"></a>戻り値の型  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の型: **float**  
   
- CLR の型: **SqlDouble**  
+ CLR の型:**SqlDouble**  
   
 ## <a name="remarks"></a>Remarks  
  OpenGIS モデルでは、Lat は単一地点のデータで構成される **geography** インスタンスにのみ定義されます。 **geography** インスタンスに複数の地点が含まれる場合、このプロパティは NULL を返します。 このプロパティは正確で、読み取り専用です。  

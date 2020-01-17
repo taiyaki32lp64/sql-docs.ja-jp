@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 58b0865a-1cde-4046-9761-51e471294023
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 9fcddefa3ce439d53263526759ce2c776c254090
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 417a5048d809cb4498c543c589324e151a843a18
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47830570"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67955391"
 ---
 # <a name="createclob-method-sqlserverconnection"></a>createClob メソッド (SQLServerConnection)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -37,9 +36,9 @@ public java.sql.Clob createClob()
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- この createClob メソッドは、java.sql.Connection インターフェイスの createClob メソッドによって指定されます。  
+ この createClob メソッドは、java. .sql. 接続インターフェイスの createClob メソッドによって指定されます。  
   
- このメソッドは置換の必要性[SQLServerClob のコンス トラクター &#40;SQLServerConnection、java.lang.String&#41;](../../../connect/jdbc/reference/sqlserverclob-constructor-sqlserverconnection-java-lang-string.md)します。  
+ このメソッドは[、 &#40;&#41;SQLServerClob コンストラクター SQLServerConnection](../../../connect/jdbc/reference/sqlserverclob-constructor-sqlserverconnection-java-lang-string.md)の必要性を置き換えます。  
   
 ## <a name="see-also"></a>参照  
  [SQLServerConnection のメンバー](../../../connect/jdbc/reference/sqlserverconnection-members.md)   

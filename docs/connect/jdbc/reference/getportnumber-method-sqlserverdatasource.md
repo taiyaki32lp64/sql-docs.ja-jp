@@ -1,5 +1,5 @@
 ---
-title: getPortNumber メソッド (SQLServerDataSource) |Microsoft Docs
+title: getPortNumber メソッド () |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: e5dc38d0-4340-4ad7-a56e-1d2a0f0fd846
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 30b2387b4685440de737ad9e6be7d351ded86506
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 20850d10352a583abd7e0a8bd9747b6346ec3aaa
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47736640"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67980837"
 ---
 # <a name="getportnumber-method-sqlserverdatasource"></a>getPortNumber メソッド (SQLServerDataSource)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -42,7 +41,7 @@ public int getPortNumber()
  このポート番号は、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] へのソケット接続を開くときに使用される TCP/IP ポート番号です。 portNumber プロパティが設定されていない場合、getPortNumber メソッドは既定値の 1433 を返します。  
   
 > [!NOTE]  
->  [SetPortNumber](../../../connect/jdbc/reference/setportnumber-method-sqlserverdatasource.md)メソッドでは、任意の範囲に渡されたポート値のチェックは実行しません。 エラーをトリガーすることがなく 99999 などの無効な番号を渡すことができます。  
+>  [Setportnumber](../../../connect/jdbc/reference/setportnumber-method-sqlserverdatasource.md)メソッドでは、渡されたポート値に対する範囲チェックは行われません。 エラーをトリガーすることなく、99999のように、無効な不法番号を渡すことができます。  
   
 ## <a name="see-also"></a>参照  
  [SQLServerDataSource のメンバー](../../../connect/jdbc/reference/sqlserverdatasource-members.md)   

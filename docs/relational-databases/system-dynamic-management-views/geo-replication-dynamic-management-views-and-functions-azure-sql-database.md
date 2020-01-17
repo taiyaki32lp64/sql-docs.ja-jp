@@ -15,19 +15,18 @@ helpviewer_keywords:
 ms.assetid: c98a06f6-c205-42f0-9f2a-4668c6103bc8
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 90ac9318f8a2398b1264db7a4d4806f84954deb5
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 0b849b6c1edaea011311ed2faf90b5c550c26bd3
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47599771"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68130739"
 ---
 # <a name="geo-replication-dynamic-management-views-and-functions-azure-sql-database"></a>地理的レプリケーション動的管理ビューおよび関数 (Azure SQL データベース)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
-  このセクションには、地理的レプリケーションについての情報を表示する次のカタログ ビューが含まれています。  
+  このセクションには、geo レプリケーションについての情報を表示する次のカタログ ビューが含まれています。  
   
 |||  
 |-|-|  

@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: a5029bcb-7d5d-44a0-ae28-0efd10d2a714
 author: Shamikg
 ms.author: Shamikg
-manager: craigg
-ms.openlocfilehash: a03a18bb5231ebf40c91a6cc94b0bb78aa536c16
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 45c4f7b9d3c997db98e3a570136b5bf24b4d8e58
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47716580"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67989614"
 ---
 # <a name="global-settings-editor-db2tosql"></a>グローバル設定 (エディター) (DB2ToSQL)
 エディター ページを使用して、**グローバル設定** ダイアログ ボックスのコード エディター ウィンドウの設定を指定します。  

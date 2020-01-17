@@ -8,15 +8,14 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-manager: kfile
-ms.openlocfilehash: ae6b6602d7968bb444dcf4838537bb000b97dd53
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: 45063e9f2aca6a924289d4d52434535d16c9a08e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52418401"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68055711"
 ---
-# <a name="or-mdx"></a>OR (MDX)
+# <a name="or-mdx"></a>または (MDX)
 
 
   2 つの数値式の論理和を実行します。  
@@ -30,10 +29,10 @@ Expression1 OR Expression2
   
 #### <a name="parameters"></a>パラメーター  
  Expression1  
- 数値を返す有効な多次元式 (MDX) 式です。  
+ 数値の値を返す有効な多次元式 (MDX) 式。  
   
  Expression2  
- 数値を返す有効な MDX 式です。  
+ 数値の値を返す有効な MDX 式です。  
   
 ## <a name="return-value"></a>戻り値  
  ブール値を返す**true**にいずれかまたは両方の引数が評価される場合**true**、それ以外の**false**します。  
@@ -66,7 +65,7 @@ FROM [Adventure Works]
 WHERE(MEASURES.ORDEMO)  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [MDX 演算子リファレンス&#40;MDX&#41;](../mdx/mdx-operator-reference-mdx.md)  
   
   

@@ -15,13 +15,12 @@ apitype: DLLExport
 ms.assetid: 37cb2a7e-672a-4223-b6f3-a94d7b8d58cd
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: 388bc59e67be7e92abdb1eb9493454c2fd7feee0
-ms.sourcegitcommit: ddb682c0061c2a040970ea88c051859330b8ac00
+ms.openlocfilehash: 1b96875c1e8f105cbda0298c5b058e21913a8c8c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51571032"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68091280"
 ---
 # <a name="localdbdeleteinstance-function"></a>LocalDBDeleteInstance 関数
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

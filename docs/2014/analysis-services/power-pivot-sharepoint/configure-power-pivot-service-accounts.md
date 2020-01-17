@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 03/09/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: 76a85cd0-af93-40c9-9adf-9eb0f80b30c1
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 2883427b45cb408323db91935ebbccee0792825f
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: b90944c3260af69f29fbae8a93f5865c1f3c6d1e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52526661"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66071858"
 ---
 # <a name="configure-powerpivot-service-accounts"></a>PowerPivot サービス アカウントの構成
   [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] のインストールには、サーバー処理をサポートする 2 つのサービスが含まれます。 **SQL Server Analysis Services (PowerPivot)** サービスは、アプリケーション サーバー上の PowerPivot データの処理およびクエリのサポートを提供する Windows サービスです。 このサービスのログイン アカウントは、SharePoint 統合モードで Analysis Services をインストールするときに、SQL Server セットアップで必ず指定します。  
@@ -39,13 +38,13 @@ ms.locfileid: "52526661"
   
  [アカウント要件と権限](#requirements)  
   
- [トラブルシューティング。手動で管理アクセス許可を付与します。](#updatemanually)  
+ [トラブルシューティング: 手動で管理アクセス許可を付与します。](#updatemanually)  
   
- [トラブルシューティング。解決するには HTTP 503 エラー中央管理サイトまたは SharePoint Foundation の有効期限が切れたパスワードによる Web アプリケーション サービス](#expired)  
+ [トラブルシューティング: 解決するには HTTP 503 エラー中央管理サイトまたは SharePoint Foundation の有効期限が切れたパスワードによる Web アプリケーション サービス](#expired)  
   
 ##  <a name="bkmk_passwordssas"></a> SQL Server Analysis Services (PowerPivot) インスタンスの有効期限切れのパスワードを更新します。  
   
-1.  [スタート] ボタンをクリックし、 **[管理ツール]**、 **[サービス]** の順にクリックします。 ダブルクリック**SQL Server Analysis Services (PowerPivot)** します。 **[ログオン]** をクリックし、アカウントの新しいパスワードを入力します。  
+1.  [スタート] ボタンをクリックし、 **[管理ツール]** 、 **[サービス]** の順にクリックします。 ダブルクリック**SQL Server Analysis Services (PowerPivot)** します。 **[ログオン]** をクリックし、アカウントの新しいパスワードを入力します。  
   
 2.  サーバーの全体管理で、[セキュリティ] セクションの **[管理アカウントの構成]** をクリックします。  
   
@@ -116,7 +115,7 @@ ms.locfileid: "52526661"
 |権限の要件|このアカウントには、コンピューターのローカルのシステム管理者権限は必要ありません。 ただし、同じコンピューターにインストールされているローカル [!INCLUDE[ssGeminiSrv](../../includes/ssgeminisrv-md.md)] に対する Analysis Services のシステム管理者権限が必要です。 これらの権限は、SQL Server セットアップを実行したり、サーバーの全体管理でアプリケーション プール ID を設定または変更したりすると、自動的に付与されます。<br /><br /> 管理権限は、 [!INCLUDE[ssGeminiSrv](../../includes/ssgeminisrv-md.md)]にクエリを転送する場合に必要です。 また、状態の監視、非アクティブなセッションの終了、およびトレース イベントのリッスンにも必要です。<br /><br /> このアカウントには、PowerPivot サービス アプリケーション データベースに対する接続、読み取り、および書き込みの権限が必要です。 これらの権限は、アプリケーションの作成時に自動的に付与され、サーバーの全体管理でアカウントやパスワードを変更した場合にも自動的に更新されます。<br /><br /> PowerPivot サービス アプリケーションでは、ファイルの取得前に、データを表示する権限が SharePoint ユーザーにあるかどうかを確認しますが、ユーザーの権限の借用は行いません。 そのため、権限の借用に関する権限の要件はありません。|  
 |スケールアウトの要件|[なし] :|  
   
-##  <a name="updatemanually"></a> トラブルシューティング。管理権限の手動による付与  
+##  <a name="updatemanually"></a> トラブルシューティング。手動で管理アクセス許可を付与します。  
  資格情報を更新するユーザーがコンピューターのロカール管理者でない場合、管理者権限は更新されません。 この場合は、管理者権限を手動で付与できます。 最も簡単な方法でこの操作を行うには、サーバーの全体管理で PowerPivot の構成タイマー ジョブを実行します。 この方法を使用すると、ファーム内のすべての PowerPivot サーバーの権限をリセットできます。 この方法は、SharePoint タイマー ジョブがファームの管理者およびコンピューターのローカル管理者の両方として実行されている場合にのみ使用できる点に注意してください。  
   
 1.  [監視] で、 **[ジョブ定義の確認]** をクリックします。  
@@ -151,7 +150,7 @@ ms.locfileid: "52526661"
   
 11. PowerPivot サービス アプリケーション プールを使用するアカウントの名前を入力し、クリックして**OK**します。  
   
-##  <a name="expired"></a> トラブルシューティング。サーバーの全体管理または SharePoint Foundation Web アプリケーション サービスのパスワードの期限切れによる HTTP 503 エラーの解決  
+##  <a name="expired"></a> トラブルシューティング。解決するには HTTP 503 エラー中央管理サイトまたは SharePoint Foundation の有効期限が切れたパスワードによる Web アプリケーション サービス  
  アカウントのリセットまたはパスワードの期限切れが原因で、サーバーの全体管理サービスまたは SharePoint Foundation Web アプリケーション サービスが停止する場合は、SharePoint サーバーの全体管理あるいは SharePoint サイトを開こうとすると、"サービスを利用できません" という HTTP 503 エラー メッセージが表示されます。 サーバーをオンラインに戻すには、次の手順を実行します。 サーバーの全体管理を使用できる場合は、続行して期限切れのアカウント情報を更新できます。  
   
 1.  [管理ツール] で、 **[インターネット インフォメーション サービス マネージャー]** をクリックします。  

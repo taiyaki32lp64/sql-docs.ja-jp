@@ -2,18 +2,18 @@
 title: Reporting Services レポートの問題のトラブルシューティング | Microsoft Docs
 ms.date: 02/27/2016
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: troubleshooting
 ms.topic: conceptual
 ms.assetid: a705d103-85b1-49b5-b27f-332b1040d029
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 22511322e7480b5123b05d2888a90a6032f86b74
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 5217684ab98bd70a996f0a8a0bb50170daf57bf0
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47668860"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65573876"
 ---
 # <a name="troubleshoot--reporting-services-report-issues"></a>Reporting Services レポートの問題のトラブルシューティング
 このトピックは、 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion.md)] レポートのデザイン、レポートのプレビュー、ネイティブ モードまたは SharePoint モードのレポート サーバーへのレポートのパブリッシュ、レポート サーバーでのレポートの表示、別のファイル形式へのレポートのエクスポートに関する問題のトラブルシューティングを行ううえで参考になります。  

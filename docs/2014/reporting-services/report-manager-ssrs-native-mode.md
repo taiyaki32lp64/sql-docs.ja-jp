@@ -1,32 +1,20 @@
 ---
 title: レポート マネージャー (SSRS ネイティブ モード) |Microsoft Docs
-ms.custom: ''
-ms.date: 06/13/2017
 ms.prod: sql-server-2014
-ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
-helpviewer_keywords:
-- reports [Reporting Services], managing
-- Report Manager [Reporting Services], about Report Manager
-- customizing Report Manager
-- Report Manager [Reporting Services], customizing
-- report servers [Reporting Services], administering
-- browsing reports [Reporting Services]
-- administering reports
-- Report Manager [Reporting Services]
-- components [Reporting Services], Report Manager
-ms.assetid: 80949f9d-58f5-48e3-9342-9e9bf4e57896
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: a505bb3f4647fa98e7cc2bccfbd64b5c3545c0e7
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.reviewer: ''
+ms.custom: ''
+ms.date: 04/26/2019
+ms.openlocfilehash: 55581ae96660732ee01bf12fa37e1c5e8ac9634e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56289017"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "64568384"
 ---
 # <a name="report-manager--ssrs-native-mode"></a>レポート マネージャー (SSRS ネイティブ モード)
   レポート マネージャーは、レポートへのアクセスと管理を行う Web ベースのツールです。HTTP 接続を使用して、リモート コンピューターから 1 つのレポート サーバー インスタンスを管理するために使用します。 また、レポート マネージャーでレポートの表示とナビゲーションを行うこともできます。 このトピックの内容  
@@ -48,7 +36,7 @@ ms.locfileid: "56289017"
   
 -   レポート実行プロパティ、レポート履歴、およびレポート パラメーターの構成。  
   
--    [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] データ ソースまたは [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] リレーショナル データ ソースに接続してデータを取得するレポート モデルの作成。  
+-   [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] データ ソースまたは [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] リレーショナル データ ソースに接続してデータを取得するレポート モデルの作成。  
   
 -   モデル内の特定のエンティティへのアクセスを許可するモデル アイテム セキュリティの設定、または事前に作成した定義済みのクリックスルー レポートへのエンティティのマップ。  
   
@@ -113,13 +101,11 @@ ms.locfileid: "56289017"
 |![共有データ ソースのアイコン](media/hlp-16datasource.png "共有データ ソースのアイコン")|共有データ ソース アイテム|共有データ ソースのアイコンをクリックすると、データ ソースのプロパティ ページ、レポートの一覧、およびサブスクリプションの一覧が開きます。|  
 |![プロパティ ページのアイコン](media/hlp-16prop.gif "プロパティ ページ アイコン")|プロパティ ページ|プロパティ ページのアイコンをクリックすると、プロパティおよびセキュリティを設定するためのその他のページにアクセスできます。|  
   
-## <a name="see-also"></a>参照  
- [URL の構成 &#40;SSRS 構成マネージャー&#41;](install-windows/configure-a-url-ssrs-configuration-manager.md)   
- [Reporting Services と Power View のブラウザー サポートの計画&#40;Reporting Services 2014&#41;](../../2014/reporting-services/browser-support-for-reporting-services-and-power-view.md)   
- [レポート ビルダー &#40;SSRS&#41;](tools/report-builder-authoring-environment-ssrs.md)   
- [Reporting Services ツール](tools/reporting-services-tools.md)   
- [レポート サーバー コンテンツの管理 &#40;SSRS ネイティブ モード&#41;](report-server/report-server-content-management-ssrs-native-mode.md)   
- [SharePoint Web パーツを使用してネイティブ モードのレポートの詳細を表示および&#40;SSRS&#41;](reports/view-and-explore-native-mode-reports-using-sharepoint-web-parts-ssrs.md)   
- [レポート マネージャー F1 ヘルプ](../../2014/reporting-services/report-manager-f1-help.md)  
-  
-  
+## <a name="see-also"></a>関連項目
+
+- [URL の構成 &#40;SSRS 構成マネージャー&#41;](install-windows/configure-a-url-ssrs-configuration-manager.md)
+- [Reporting Services と Power View のブラウザー サポートの計画&#40;Reporting Services 2014&#41;](../../2014/reporting-services/browser-support-for-reporting-services-and-power-view.md)
+- [レポート ビルダー &#40;SSRS&#41;](tools/report-builder-authoring-environment-ssrs.md)
+- - [Reporting Services ツール](tools/reporting-services-tools.md)
+- [レポート サーバー コンテンツの管理 &#40;SSRS ネイティブ モード&#41;](report-server/report-server-content-management-ssrs-native-mode.md)  
+[レポート マネージャー F1 ヘルプ](../../2014/reporting-services/report-manager-f1-help.md)

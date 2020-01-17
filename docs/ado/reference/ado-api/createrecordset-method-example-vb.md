@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 2de8fd02-0f49-4d47-8bd3-397726d1c644
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: a924314c4de47a62e835708478e093a72f3b3c57
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: bb1bda7808b8875da5982b70e749f45ec15e5958
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47830110"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67919343"
 ---
 # <a name="createrecordset-method-example-vb"></a>CreateRecordset メソッドの例 (VB)
 作成することができます、[レコード セット](../../../ado/reference/ado-api/recordset-object-ado.md)オブジェクトし、列の情報を指定します。 データを挿入することができますし、**レコード セット**オブジェクト。 行セットの基になるバッファー挿入します。  

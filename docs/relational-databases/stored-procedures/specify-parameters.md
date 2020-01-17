@@ -14,14 +14,13 @@ helpviewer_keywords:
 ms.assetid: 902314fe-5f9c-4d0d-a0b7-27e67c9c70ec
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 079a54bdbf107ec9f83e1078fedba1be84374c5b
-ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
+ms.openlocfilehash: 6b2ac27ecf2ca02acde1cefba87aaf828f8a3317
+ms.sourcegitcommit: 52d3902e7b34b14d70362e5bad1526a3ca614147
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/18/2018
-ms.locfileid: "53589136"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70110271"
 ---
 # <a name="specify-parameters"></a>パラメーターの指定
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -62,13 +61,13 @@ GO
 ## <a name="specifying-parameter-names"></a>パラメーター名の指定  
  プロシージャを作成してパラメーター名を宣言する際には、パラメーター名の先頭を 1 つの \@ 文字にし、そのプロシージャのスコープ内でパラメーター名が一意になるようにする必要があります。  
   
- パラメーターに明示的に名前を付け、プロシージャ呼び出しで各パラメーターに適切な値を代入することで、パラメーターを任意の順序で指定できます。 たとえば、**my_proc** というプロシージャが **\@first**、**\@second**、および **\@third** という 3 つのパラメーターを必要とする場合、プロシージャに渡される値は、`EXECUTE my_proc @second = 2, @first = 1, @third = 3;` ようにパラメーター名に代入できます。  
+ パラメーターに明示的に名前を付け、プロシージャ呼び出しで各パラメーターに適切な値を代入することで、パラメーターを任意の順序で指定できます。 たとえば、**my_proc** というプロシージャが **\@first**、 **\@second**、および **\@third** という 3 つのパラメーターを必要とする場合、プロシージャに渡される値は、`EXECUTE my_proc @second = 2, @first = 1, @third = 3;` ようにパラメーター名に代入できます。  
   
 > [!NOTE]  
->  1 つのパラメーター値を **\@parameter =**_value_ の形式で指定した場合は、後続のパラメーターもすべてこの形式で指定する必要があります。 パラメーター値を **\@parameter =**_value_ の形式で渡さない場合は、CREATE PROCEDURE ステートメント内のパラメーターと同じ順序 (左から右) で値を指定する必要があります。  
+>  1 つのパラメーター値を **\@parameter =** _value_ の形式で指定した場合は、後続のパラメーターもすべてこの形式で指定する必要があります。 パラメーター値を **\@parameter =** _value_ の形式で渡さない場合は、CREATE PROCEDURE ステートメント内のパラメーターと同じ順序 (左から右) で値を指定する必要があります。  
   
 > [!WARNING]  
->  **\@parameter =**_value_ の形式で渡すパラメーターのスペルが間違っていると、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] によってエラーが生成され、プロシージャは実行されません。  
+>  **\@parameter =** _value_ の形式で渡すパラメーターのスペルが間違っていると、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] によってエラーが生成され、プロシージャは実行されません。  
   
 ## <a name="specifying-parameter-data-types"></a>パラメーターのデータ型の指定  
  パラメーターを CREATE PROCEDURE ステートメントで宣言する場合は、パラメーターのデータ型を定義する必要があります。 パラメーターのデータ型により、プロシージャの呼び出し時にパラメーターとして指定できる値の型と範囲が決まります。 たとえば、 **tinyint** データ型のパラメーターを定義した場合は、そのパラメーターに渡す値として 0 ～ 255 の範囲の数値だけを指定できます。 指定したデータ型と互換性がない値を使用してプロシージャを実行すると、エラーが返されます。  
@@ -84,6 +83,9 @@ GO
   
 > [!NOTE]  
 >  既定値が空白または句読点を含む文字列の場合、または数字で始まる場合 (たとえば 6xxx)、単一引用符で囲む必要があります。  
+
+> [!NOTE] 
+> 既定のパラメーターは、Azure SQL Data Warehouse または Parallel Data Warehouse ではサポートされていません。 
   
  パラメーターに対して既定値として適切に値を指定できない場合は、NULL を既定値として指定してください。 パラメーターの値なしでプロシージャを実行する場合は、プロシージャからカスタマイズされたメッセージが返されるようにすることをお勧めします。  
   
@@ -128,7 +130,7 @@ EXEC Sales.uspGetSalesYTD N'Blythe';
 GO  
 ```  
   
- 既定値が指定されているパラメーターは省略できますが、パラメーターの一覧を切り捨てることしかできません。 たとえば、プロシージャに 5 つのパラメーターがある場合は、4 番目と 5 番目のパラメーターを両方とも省略できます。 ただし、**\@parameter =**_value_ の形式でパラメーターを指定しない限り、4 番目のパラメーターを省略して 5 番目のパラメーターを指定することはできません。  
+ 既定値が指定されているパラメーターは省略できますが、パラメーターの一覧を切り捨てることしかできません。 たとえば、プロシージャに 5 つのパラメーターがある場合は、4 番目と 5 番目のパラメーターを両方とも省略できます。 ただし、 **\@parameter =** _value_ の形式でパラメーターを指定しない限り、4 番目のパラメーターを省略して 5 番目のパラメーターを指定することはできません。  
   
 ## <a name="specifying-parameter-direction"></a>パラメーターの方向の指定  
  パラメーターの方向は、入力または出力です。入力の場合は、値がプロシージャの本体に渡されます。出力の場合は、プロシージャが呼び出し元のプログラムに値を返します。 既定値は入力パラメーターです。  
@@ -166,10 +168,10 @@ GO
   
 ```  
   
- `usp_GetList` を実行し、原価が $700 未満である [!INCLUDE[ssSampleDBCoShort](../../includes/sssampledbcoshort-md.md)] 製品 (自転車) の一覧を返します。 ここではフロー制御言語と共に OUTPUT パラメーターの **\@cost** および **\@compareprices** を使用して、**[メッセージ]** ウィンドウにメッセージを返します。  
+ `usp_GetList` を実行し、原価が $700 未満である [!INCLUDE[ssSampleDBCoShort](../../includes/sssampledbcoshort-md.md)] 製品 (自転車) の一覧を返します。 ここではフロー制御言語と共に OUTPUT パラメーターの **\@cost** および **\@compareprices** を使用して、 **[メッセージ]** ウィンドウにメッセージを返します。  
   
 > [!NOTE]  
->  プロシージャの作成中にも変数の使用中にも、OUTPUT 変数を定義する必要があります。 パラメーター名と変数名が一致する必要はありません。 ただし、データ型とパラメーターの位置は一致する必要があります (**\@listprice=** _variable_ が使用されている場合は除きます)。  
+>  プロシージャの作成中にも変数の使用中にも、OUTPUT 変数を定義する必要があります。 パラメーター名と変数名が一致する必要はありません。 ただし、データ型とパラメーターの位置は一致する必要があります ( **\@listprice=** _variable_ が使用されている場合は除きます)。  
   
 ```  
 DECLARE @ComparePrice money, @Cost money ;  

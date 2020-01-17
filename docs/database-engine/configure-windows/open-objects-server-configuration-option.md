@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: c8424d3c-86ba-4cc5-bf0c-be4ce44bdd04
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 3c07aa73aea0edf5aa6b8e4b37cc1fceccf1f079
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 526a196c280e4a8b62db27be4c8644315379b2d3
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47846030"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67997947"
 ---
 # <a name="open-objects-server-configuration-option"></a>open objects サーバー構成オプション
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

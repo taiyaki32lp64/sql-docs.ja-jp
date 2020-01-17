@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: add88e48-ada3-4c0c-a5ac-e78903d3ff41
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: b81acf6c60bd11e03a598e349e145dbf72e174b4
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: 86488da93470a61a54638e9c60e6e1795a9da4dc
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53205291"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68125752"
 ---
 # <a name="bookmark-c-data-type"></a>Bookmark C データ型
 ブックマークの C データ型では、ブックマークを取得するアプリケーション。 ブックマーク C 型は可変長; できるブックマークの値を取得する場合のみ使用されます。他のデータ型に変換する必要がありますされません。 アプリケーションの取得と設定のいずれかから結果の列 0 ブックマーク**SQLBulkOperations** SQL_ADD の操作)、(で**SQLFetch**、 **SQLFetchScroll**、または**SQLGetData**します。 詳細については、次を参照してください。[ブックマーク](../../../odbc/reference/develop-app/bookmarks-odbc.md)します。  
@@ -30,7 +29,7 @@ ms.locfileid: "53205291"
  次の表の値*CType*ブックマーク C データ型では、ブックマーク C データ型、およびこのデータの定義を実装する ODBC C データ型を SQL から入力します。H.  
   
 > [!NOTE]
->  SQL_C_BOOKMARK のデータ型は非推奨とされました。 ODBC 3 *.x*アプリケーションは SQL_C_BOOKMARK を使用しないでください。 ODBC 3 *.x*ドライバーは ODBC 2 を使用する場合にのみ、SQL_C_BOOKMARK をサポートする必要があります *。x*を使用するアプリケーション。 ドライバー マネージャーは、ODBC 2 で動作するアプリケーションに SQL_C_BOOKMARK SQL_C_VARBOOKMARK をマップします。*x*ドライバー。  
+>  SQL_C_BOOKMARK のデータ型は非推奨とされました。 ODBC *3.x*アプリケーションは SQL_C_BOOKMARK を使用しないでください。 ODBC *3.x*ドライバーは ODBC を使って作業する場合にのみ、SQL_C_BOOKMARK をサポートする必要があります*2.x*を使用するアプリケーション。 ドライバー マネージャーが、ODBC を使って、アプリケーションが動作する際に、SQL_C_BOOKMARK に SQL_C_VARBOOKMARK をマップ*2.x*ドライバー。  
   
 |C 型識別子|ODBC C の typedef|C 型|  
 |-----------------------|--------------------|------------|  

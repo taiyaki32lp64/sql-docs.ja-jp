@@ -13,11 +13,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 88f9fff576b52e83073bbf917a43edf0a7648086
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52753784"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63023578"
 ---
 # <a name="mssqleng021797"></a>MSSQL_ENG021797
     
@@ -30,7 +30,7 @@ ms.locfileid: "52753784"
 |イベント ソース|MSSQLSERVER|  
 |コンポーネント|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|  
 |シンボル名||  
-|メッセージ テキスト|'%s' は、形式で有効な Windows ログインである必要があります。'Machine \login' または 'domain \login'。 '%s' については、マニュアルを参照してください。|  
+|メッセージ テキスト|'%s' は、形式で有効な Windows ログインである必要があります。有効な Windows ログインを指定してください。 '%s' については、マニュアルを参照してください。|  
   
 ## <a name="explanation"></a>説明  
  このエラーは、 **@job_login** パラメーターに指定された値が NULL または無効の場合に、以下のレプリケーション ストアド プロシージャにより発生します。 このエラーは、 **db_owner** 固定データベース ロールのメンバーが、以前のバージョンの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]からのスクリプトを実行すると発生する場合があります。 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]ではセキュリティ モデルが変更されたため、これらのスクリプトは更新する必要があります。  
@@ -54,7 +54,7 @@ ms.locfileid: "52753784"
 ## <a name="user-action"></a>ユーザーの操作  
  各プロシージャの **@job_login** パラメーターに対し、有効な Windows アカウントが指定されていることを確認します。 以前のバージョンの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]からのレプリケーション スクリプトがある場合は、 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]に必要なストアド プロシージャやパラメーターをこれらのスクリプトに含めるように更新します。 詳細については、「[レプリケーション スクリプトのアップグレード &#40;レプリケーション Transact-SQL プログラミング&#41;](administration/upgrade-replication-scripts-replication-transact-sql-programming.md)」を参照してください。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [エラーとイベントのリファレンス &#40;レプリケーション&#41;](errors-and-events-reference-replication.md)  
   
   

@@ -23,11 +23,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 87bfaef1ad5dc4c9b1f907c27955ca3f156038a8
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52791324"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63067808"
 ---
 # <a name="results-pane-visual-database-tools"></a>結果ペイン (Visual Database Tools)
   結果ペインには、最後に実行された選択クエリの結果が表示されます。 他の種類のクエリ結果は、メッセージ ボックスに表示されます。結果ペインを表示するには、クエリまたはビューを表示または作成するか、テーブルのデータを返します。 結果ペインが既定で表示されない場合は、 **[クエリ デザイナー]** メニューの **[ペイン]** をポイントし、 **[結果]** をクリックします。  
@@ -62,7 +62,7 @@ ms.locfileid: "52791324"
   
  クエリが変更されると、結果ペインの右下端に警告アイコンと "クエリが変更されました。" というテキストが表示され、 ペインの左上端にも警告アイコンが表示されます。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [クエリを作成する&#40;Visual Database Tools&#41;](create-queries-visual-database-tools.md)   
  [クエリを実行して&#40;Visual Database Tools&#41;](run-queries-visual-database-tools.md)   
  [クエリおよびビューの操作方法に関するトピックを設計&#40;Visual Database Tools&#41;](design-queries-and-views-how-to-topics-visual-database-tools.md)   

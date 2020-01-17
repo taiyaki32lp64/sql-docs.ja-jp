@@ -3,28 +3,30 @@ title: SQL Server インポートおよびエクスポート ウィザードの�
 ms.custom: ''
 ms.date: 01/11/2017
 ms.prod: sql
-ms.prod_service: integration-services
 ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 669be403-cb17-4b12-bbbf-e7a74003c4b6
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: 05dcf3c0c5850b95aa9d657ee228138b0ca0e57d
-ms.sourcegitcommit: bfa10c54e871700de285d7f819095d51ef70d997
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 1610f98d77ba4a762a63f3ccf5a445393537d36b
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/14/2019
-ms.locfileid: "54256847"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71296334"
 ---
 # <a name="data-type-mapping-in-the-sql-server-import-and-export-wizard"></a>SQL Server インポートおよびエクスポート ウィザードのデータ型マッピング
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インポートおよびエクスポート ウィザードでは、列の名前、データ型、およびデータ型プロパティを新しい変換先テーブルとファイルに設定できますが、列の値についてカスタム変換を指定することはできません。 このため、変換元から変換先へのデータ型の組み込みマッピングが重要になります。  
   
 ##  <a name="wizardMapping"></a> ウィザードが変換元と変換先の間でデータ型をマップする方法
 ウィザードは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] によってインストールされたマッピング ファイルを使用して、データベース システムまたはバージョン間でデータ型をマップします。 たとえば、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データ型から Oracle データ型にマップできます。 既定では、XML 形式のマッピング ファイルは次のフォルダにインストールされます。
--   **C:\Program Files\Microsoft SQL Server\130\DTSMappingFiles\** (64 ビットの場合)
--   **C:\Program Files (x86)\Microsoft SQL Server\130\DTSMappingFiles\** (32 ビットの場合)  
+-   **C:\Program Files\Microsoft SQL Server\130\DTSMappingFiles\\** (64 ビットの場合)
+-   **C:\Program Files (x86)\Microsoft SQL Server\130\DTSMappingFiles\\** (32 ビットの場合)。  
   
  既存のマッピング ファイルを編集した、または新しいマッピング ファイルをフォルダーに追加した場合は、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インポートおよびエクスポート ウィザードまたは [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] を終了してから再度開いて、新しいファイルまたは更新したファイルを読み込む必要があります。  
  

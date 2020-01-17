@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 4e9d0374-0927-4f17-bab9-2215b1b8fea8
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: cc4056c3db21534e45d1b679d6289ddaeb4cea12
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 013ca0abae914b511a564ee4d67bd01d398f8bb5
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51672741"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68064204"
 ---
 # <a name="database-engine-extended-stored-procedures---reference"></a>データベース エンジン拡張ストアド プロシージャ - リファレンス
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

@@ -20,13 +20,12 @@ helpviewer_keywords:
 ms.assetid: da98e9b9-a4ac-4a9d-bae6-e9252b1fe1e5
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 58df84bf96306a2cfbc0567a3d5f6cb13514a06e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 7dfc63aaa6f162d382d6d8b3c627ff078c76825c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47805570"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68079063"
 ---
 # <a name="prompting-the-user-for-connection-information"></a>接続情報をユーザーに確認する
 アプリケーションで使用する場合**SQLConnect**接続についてユーザーに確認する必要がある、ユーザー名やパスワードなど、行う必要があります自体。 これにより、アプリケーションは「ルック アンド フィール」を制御することが、中には、ドライバー固有のコードを格納するアプリケーションを強制的に可能性があります。 これは、アプリケーションは、ドライバー固有の接続情報をユーザーに確認する必要がある場合に発生します。 これは、汎用的なアプリケーションの場合、アプリケーションが書き込まれるときに存在しないドライバーを含むすべてのドライバーを使用するように設計されて不可能な状況を表示します。  

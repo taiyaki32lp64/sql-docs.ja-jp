@@ -8,22 +8,21 @@ ms.reviewer: ''
 ms.technology: configuration
 ms.topic: conceptual
 ms.assetid: 2a2e1dbf-02b9-4893-aaf0-c0e4a2c9b4f9
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-manager: craigg
-ms.openlocfilehash: 047b201f19275d8bd39b624d6380c99497380135
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e99d8aab84cb06727d5f396a2d89573642b7e70d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47600500"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68058349"
 ---
 # <a name="report-server-properties-service-tab"></a>[SQL Server Reporting Services のプロパティ] ダイアログ ボックス ([サービス] タブ)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
   このサービスは、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のレポート サーバー サービスです。 グレー表示になっているプロパティ値をこのアプリケーションで変更することはできません。  
   
-## <a name="options"></a>[変数]  
+## <a name="options"></a>オプション  
  **バイナリ パス**  
  このサービスが使用するプログラム ファイルの場所が表示されます。  
   
@@ -36,7 +35,7 @@ ms.locfileid: "47600500"
  **Host Name**  
  フルテキスト検索を実行しているコンピューターまたはクラスターの名前が表示されます。  
   
- **名前**  
+ **[名前]**  
  サービスの表示名が表示されます。  
   
  **プロセス ID**  

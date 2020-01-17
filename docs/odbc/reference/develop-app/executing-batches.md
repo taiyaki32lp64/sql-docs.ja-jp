@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: f082c717-4f82-4820-a2fa-ba607d8fd872
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 53e1afcc780ff06d1d453f94deac984163099444
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 84d3cf65284d767d437987c8ff2b21793466106e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52541222"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67901266"
 ---
 # <a name="executing-batches"></a>バッチの実行
 アプリケーションでは、ステートメントのバッチを実行する前に、サポートされているかどうかをまずおください。 これは、アプリケーション呼び出しを行う**SQLGetInfo** SQL_BATCH_SUPPORT、SQL_PARAM_ARRAY_ROW_COUNTS、および SQL_PARAM_ARRAY_SELECTS オプションを使用します。 最初のオプションは、行の数を生成して、結果セットを生成するステートメントは明示的なバッチおよび行の数と結果の可用性に関する情報を返しますの設定で後者の 2 つのオプションの中に、プロシージャでサポートされてがパラメーター化するかどうかを返します実行します。  

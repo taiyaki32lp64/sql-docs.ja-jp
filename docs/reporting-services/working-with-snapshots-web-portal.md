@@ -6,20 +6,20 @@ ms.prod_service: reporting-services-native
 ms.technology: reporting-services
 ms.topic: conceptual
 ms.assetid: 9ae20556-e243-4a60-b076-9fd9e82c7355
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 9cffd51ef8da35c7ee8c1e424c2cddbac92955cd
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 698c78dced26e7981fb7a651c22530909427b796
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52517282"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68222566"
 ---
 # <a name="working-with-snapshots-web-portal"></a>スナップショットの操作 (Web ポータル)
 
 [!INCLUDE[ssrs-appliesto](../includes/ssrs-appliesto.md)] [!INCLUDE[ssrs-appliesto-2016-and-later](../includes/ssrs-appliesto-2016-and-later.md)] [!INCLUDE[ssrs-appliesto-pbirsi](../includes/ssrs-appliesto-pbirs.md)]
 
-レポートに対するスナップショットの作成を制御するには、レポートの **参照ボタン ([...])**、**[管理]** と選択し、**[キャッシュ]** または **[履歴スナップショット]** を選択します。  
+レポートに対するスナップショットの作成を制御するには、レポートの **参照ボタン ([...])** 、 **[管理]** と選択し、 **[キャッシュ]** または **[履歴スナップショット]** を選択します。  
   
 > [!NOTE]
 > SQL Server エージェント サービスを開始する必要があります。  

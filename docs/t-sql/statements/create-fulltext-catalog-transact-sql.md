@@ -26,13 +26,12 @@ helpviewer_keywords:
 ms.assetid: d7a8bd93-e2d7-4a40-82ef-39069e65523b
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: 4cdbd5b93bdc5d99e397cbbeb923b19da728d393
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 1e8fa047a65663f918bfcce4a92692f1c443f77a
+ms.sourcegitcommit: e9c1527281f2f3c7c68981a1be94fe587ae49ee9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47794881"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73064661"
 ---
 # <a name="create-fulltext-catalog-transact-sql"></a>CREATE FULLTEXT CATALOG (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -71,18 +70,18 @@ CREATE FULLTEXT CATALOG catalog_name
  ON FILEGROUP *filegroup*  
  [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 以降、この句は無効です。  
   
- IN PATH **'**_rootpath_**'**  
+ IN PATH **'** _rootpath_ **'**  
  > [!NOTE]  
 >  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]  
   
  [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 以降、この句は無効です。  
   
- ACCENT_SENSITIVITY = {ON|OFF}   
+ ACCENT_SENSITIVITY = {ON|OFF}  
  カタログのフルテキスト インデックス作成でアクセントを区別するかどうかを指定します。 このプロパティを変更すると、インデックスの再構築が必要になります。 既定では、データベースの照合順序の指定に従って、アクセントの区別が決定されます。 データベースの照合順序を表示するには、**sys.databases** カタログ ビューを使います。  
   
  フルテキスト カタログのアクセントの区別に関する現在のプロパティ設定を確認するには、*catalog_name* に対して、FULLTEXTCATALOGPROPERTY 関数を **accentsensitivity** プロパティ値と共に使用します。 値 '1' が返された場合、フルテキスト カタログではアクセントが区別され、値 '0' が返された場合、アクセントは区別されません。  
   
- AS DEFAULT   
+ AS DEFAULT  
  カタログが既定のカタログであることを指定します。 フルテキスト カタログを明示的に指定せずにフルテキスト インデックスを作成するときには、既定のカタログが使用されます。 既存のフルテキスト カタログが既に AS DEFAULT となっている場合、この新しいカタログを AS DEFAULT として設定すると、新しいカタログが既定のフルテキスト カタログになります。  
   
  AUTHORIZATION *owner_name*  
@@ -107,7 +106,7 @@ CREATE FULLTEXT CATALOG catalog_name
 ## <a name="examples"></a>使用例  
  次の例では、フルテキスト カタログとフルテキスト インデックスを作成します。  
   
-```  
+```sql  
 USE AdventureWorks2012;  
 GO  
 CREATE FULLTEXT CATALOG ftCatalog AS DEFAULT;  

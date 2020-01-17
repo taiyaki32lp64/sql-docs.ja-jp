@@ -1,24 +1,23 @@
 ---
-title: レッスン 1:レポート サーバー プロジェクト (Reporting Services) の作成 |Microsoft Docs
+title: レッスン 1:レポート サーバー プロジェクトの作成 (Reporting Services) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 ms.assetid: 675671ca-e6c9-48a2-82e9-386778f3a49f
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 48ad3fd25dd842ca1f4979a6875887d6ad656508
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: 3f97834b5df61df836b7cfd4cc4d890877f8855a
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56286470"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66108531"
 ---
-# <a name="lesson-1-creating-a-report-server-project-reporting-services"></a>レッスン 1:(Reporting Services) のレポート サーバー プロジェクトの作成
+# <a name="lesson-1-creating-a-report-server-project-reporting-services"></a>レッスン 1:レポート サーバー プロジェクトの作成 (Reporting Services)
   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] でレポートを作成するには、まずレポート サーバー プロジェクトを作成して、レポート定義ファイル (.rdl) やその他レポートに必要なリソース ファイルを格納できるようにする必要があります。 次に、実際のレポート定義ファイルを作成し、レポートのデータ ソース、データセット、レイアウトを定義します。 作成したレポートを実行すると、実際のデータが取得され、レイアウト定義に従って画面上に表示されるので、その状態からエクスポート、印刷、保存を行うことができます。  
   
  このレッスンでは、 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]でレポート サーバー プロジェクトを作成する方法を学習します。 レポート サーバー プロジェクトを使用して、レポート サーバーで実行するレポートを作成します。  
@@ -52,12 +51,12 @@ ms.locfileid: "56286470"
   
      レポート デザイナーを開き、デザイン ビューで新しい .rdl ファイルを表示します。  
   
- レポート デザイナーは、 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] で実行される [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]コンポーネントです。 2 つのビューがあります。**デザイン**と**プレビュー**します。 ビューを変更するには該当するタブをクリックします。  
+ レポート デザイナーは、 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] で実行される [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]コンポーネントです。 2 つのビューがあります。 **[デザイン]** と **[プレビュー]** です。 ビューを変更するには該当するタブをクリックします。  
   
  **[レポート データ]** ペインでデータを定義します。 **[デザイン]** ビューではレポートのレイアウトを定義します。 **[プレビュー]** ビューではレポートを実行して結果を確認できます。  
   
 ## <a name="next-task"></a>次の作業  
- ここでは、"Tutorial" というレポート プロジェクトを作成し、このレポート プロジェクトにレポート定義ファイル (.rdl) を追加しました。 次に、レポートで使用するデータ ソースを指定します。 参照してください[レッスン 2。接続情報を指定する&#40;Reporting Services&#41;](lesson-2-specifying-connection-information-reporting-services.md)します。  
+ ここでは、"Tutorial" というレポート プロジェクトを作成し、このレポート プロジェクトにレポート定義ファイル (.rdl) を追加しました。 次に、レポートで使用するデータ ソースを指定します。 「[レッスン 2:接続情報の指定 &#40;Reporting Services&#41;](lesson-2-specifying-connection-information-reporting-services.md)」を参照してください。  
   
 ## <a name="see-also"></a>参照  
  [基本的なテーブル レポートの作成 (SSRS チュートリアル)](create-a-basic-table-report-ssrs-tutorial.md)  

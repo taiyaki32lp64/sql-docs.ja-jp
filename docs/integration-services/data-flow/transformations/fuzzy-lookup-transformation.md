@@ -31,17 +31,20 @@ helpviewer_keywords:
 - missing values replaced [Integration Services]
 - similarity thresholds [Integration Services]
 ms.assetid: 019db426-3de2-4ca9-8667-79fd9a47a068
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: ad931e49146aacdfcae92cca008ffce681ae5dd4
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 723c8f8b34ceb9e96ae6da196a64f766b18857ef
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52540895"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71291493"
 ---
 # <a name="fuzzy-lookup-transformation"></a>あいまい参照変換
+
+[!INCLUDE[ssis-appliesto](../../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   あいまい参照変換では、データの標準化、データの修正、不足している値の提供など、データのクリーン タスクを実行します。  
   
 > [!NOTE]  
@@ -146,7 +149,7 @@ ms.locfileid: "52540895"
 > [!NOTE]  
 >  あいまい参照変換の **Exhaustive** プロパティおよび **MaxMemoryUsage** プロパティは、 **[あいまい参照変換エディター]** ではアクセスできませんが、 **[詳細エディター]** を使用して設定できます。 さらに、 **MaxOutputMatchesPerInput** の 100 より大きい値は、 **[詳細エディター]** でのみ指定できます。 これらのプロパティの詳細については、「 [変換のカスタム プロパティ](../../../integration-services/data-flow/transformations/transformation-custom-properties.md)」の「あいまい参照変換」を参照してください。  
   
-### <a name="options"></a>[変数]  
+### <a name="options"></a>オプション  
  **[キャッシュなし]**  
  一覧から既存の OLE DB 接続マネージャーを選択するか、 **[新規作成]** をクリックして新しい接続を作成します。  
   
@@ -182,11 +185,11 @@ ms.locfileid: "52540895"
 ## <a name="fuzzy-lookup-transformation-editor-columns-tab"></a>[あいまい参照変換エディター] ([列] タブ)
   **[あいまい参照変換エディター]** ダイアログ ボックスの **[列]** タブを使用すると、入力列および出力列のプロパティを設定できます。  
   
-### <a name="options"></a>[変数]  
+### <a name="options"></a>オプション  
  **使用できる入力列**  
  入力列をドラッグして、使用できる参照列に接続します。 これらの列は、サポートされているデータ型と一致する必要があります。 マッピングする行を選択して右クリックし、 [[リレーションシップの作成]](../../../integration-services/data-flow/transformations/create-relationships.md) ダイアログ ボックスでマッピングを編集します。  
   
- **名前**  
+ **[名前]**  
  使用可能な入力列の名前が表示されます。  
   
  **[パススルー]**  
@@ -204,7 +207,7 @@ ms.locfileid: "52540895"
 ## <a name="fuzzy-lookup-transformation-editor-advanced-tab"></a>[あいまい参照変換エディター] ([詳細設定] タブ)
   **[あいまい参照変換エディター]** ダイアログ ボックスの **[詳細設定]** タブを使用すると、あいまい参照のパラメーターを設定できます。  
   
-### <a name="options"></a>[変数]  
+### <a name="options"></a>オプション  
  **[参照ごとの出力に対する最大一致数]**  
  変換で返される、各入力行の一致の最大数を指定します。 既定値は **1**です。  
   

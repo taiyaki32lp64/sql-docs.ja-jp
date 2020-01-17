@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: c3937d1e-9872-47e5-a22e-b147637f2388
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: f0db2028840491a448cb0bf3bd07cbb6dfe10fe8
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.openlocfilehash: 1c449e2a7c52b069478a07e4e2fa902c3b0527e1
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51601202"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67919098"
 ---
 # <a name="deleterecord-and-moverecord-methods-example-vb"></a>DeleteRecord および MoveRecord メソッドの例 (VB)
 この例では、コピー、移動、編集、および Web フォルダーに発行されたテキスト ファイルの内容を削除する方法を示します。 その他のプロパティとメソッドを含める[GetChildren](../../../ado/reference/ado-api/getchildren-method-ado.md)、 [ParentURL](../../../ado/reference/ado-api/parenturl-property-ado.md)、[ソース](../../../ado/reference/ado-api/source-property-ado-record.md)、および[フラッシュ](../../../ado/reference/ado-api/flush-method-ado.md)します。  
@@ -149,7 +148,7 @@ End Sub
 'EndDeleteRecordVB  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [DeleteRecord メソッド (ADO)](../../../ado/reference/ado-api/deleterecord-method-ado.md)   
  [Flush メソッド (ADO)](../../../ado/reference/ado-api/flush-method-ado.md)   
  [GetChildren メソッド (ADO)](../../../ado/reference/ado-api/getchildren-method-ado.md)   

@@ -13,11 +13,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 8179b9452852777bb6d2a06018d0bf86598a5bf8
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52399415"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63207020"
 ---
 # <a name="conversions-from-c-to-sql"></a>C から SQL への変換
   このトピックでは、C 型から変換する際に考慮する問題を示します[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]日付/時刻型です。  
@@ -62,7 +62,7 @@ ms.locfileid: "52399415"
 |13|データの損失を伴う切り捨てが行われると、"文字列データの右側が切り捨てられました" というメッセージで SQLSTATE 22001 の診断レコードが生成されます。<br /><br /> 秒の小数部桁数 (スケール) は、以下に従って変換先列のサイズから決定されます。<br /><br /> **種類:** SQL_C_TYPE_TIMESTAMP<br /><br /> 暗黙の小数点以下桁数<br /><br /> 0<br /><br /> 19<br /><br /> 暗黙の小数点以下桁数<br /><br /> 1..9<br /><br /> 21..29<br /><br /> ただし、SQL_C_TYPE_TIMESTAMP では、データを損失することなく秒の小数部を 3 桁で表すことができる場合で、かつ、列のサイズが 23 以上である場合、ちょうど 3 桁になるように秒の小数部が生成されます。 この動作により、以前の ODBC ドライバーを使用して開発されたアプリケーションの下位互換性が保証されます。<br /><br /> テーブルの範囲よりサイズが大きい列の場合は、9 桁と見なされます。 この変換では、秒の小数点以下桁数が 9 桁まで許容されます。これは、ODBC で許容される最大桁数です。<br /><br /> 列サイズ 0 は、ODBC では可変長文字型のサイズが無制限であることを意味します (SQL_C_TYPE_TIMESTAMP の 3 桁ルールが適用されなければ 9 桁)。 固定長文字型の列サイズ 0 を指定すると、エラーになります。|  
 |なし|既存の [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 以前のバージョンの動作が維持されます。|  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [日付と時刻の強化&#40;ODBC&#41;](date-and-time-improvements-odbc.md)  
   
   

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 f1_keywords:
 - installation prerequisites, Setup
@@ -16,17 +15,17 @@ ms.assetid: cd1454dc-2585-4b14-83b3-ee9aec6f7e75
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 010f9ef7cfd46acb0b3245601af93cf150313227
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 98f7dd23615cf86e4c20a84eae6bc39ff6489bc3
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48171032"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66094348"
 ---
 # <a name="installation-prerequisites"></a>インストールの前提条件
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] を正常にインストールするには、インストール対象のコンピューターに以下のソフトウェア コンポーネントが用意されている必要があります。 これらは [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] セットアップ プログラムによりインストールされます。  
   
--   [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] すべてのエディション: バージョン 4.0 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]  
+-   [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] Version 4.0 ([!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] のすべてのエディション)  
   
 -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] セットアップ サポート ファイル  
   

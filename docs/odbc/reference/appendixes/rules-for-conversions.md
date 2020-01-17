@@ -15,24 +15,23 @@ helpviewer_keywords:
 ms.assetid: 89f846a3-001d-496a-9843-ac9c38dc1762
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: a3ecee500204303dfcbcd8e179b9cb9cb0a94bae
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 9ca64355a80ce8892f0ea0494e165d934d8d7a88
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47706100"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68057092"
 ---
 # <a name="rules-for-conversions"></a>変換規則
 数値リテラルを使用する変換のこのセクションでは、規則が適用されます。 これらの規則のためには、次の用語が定義されています。  
   
--   *割り当ての保存:* データベースのテーブルの列にデータを送信するときにします。 呼び出し中に発生したこの**SQLExecute**、 **SQLExecDirect**、および**SQLSetPos**します。 ストアの割り当て中にデータベース列を参照して「ターゲット」と「ソース」アプリケーション バッファー内のデータを参照します。  
+-   *割り当てを保存するには。* ときに、データベースのテーブルの列にデータを送信します。 呼び出し中に発生したこの**SQLExecute**、 **SQLExecDirect**、および**SQLSetPos**します。 ストアの割り当て中にデータベース列を参照して「ターゲット」と「ソース」アプリケーション バッファー内のデータを参照します。  
   
--   *割り当ての取得:* アプリケーション バッファーに、データベースからデータを取得するときにします。 呼び出し中に発生したこの**SQLFetch**、 **SQLGetData**、 **SQLFetchScroll**、および**SQLSetPos**します。 取得の割り当て中にアプリケーション バッファーを指す"target"と「ソース」データベースの列を参照します。  
+-   *取得の割り当て:* ときに、アプリケーションのバッファーにデータをデータベースから取得しています。 呼び出し中に発生したこの**SQLFetch**、 **SQLGetData**、 **SQLFetchScroll**、および**SQLSetPos**します。 取得の割り当て中にアプリケーション バッファーを指す"target"と「ソース」データベースの列を参照します。  
   
 -   *CS:* 文字のコピー元の値。  
   
--   *NT:* 数値ターゲット内の値。  
+-   *NT:* 数値のターゲット内の値。  
   
 -   *NS:* 数値のソースの値。  
   
@@ -76,7 +75,7 @@ ms.locfileid: "47706100"
   
     -   NS が 0 未満の場合は、結果である Y を使用します。  
   
-         '-' &AMP;#124; &AMP;#124; YP  
+         '-' &#124; &#124; YP  
   
          場所 '&#124;&#124;' 文字列連結演算子です。  
   

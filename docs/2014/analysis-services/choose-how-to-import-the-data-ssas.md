@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.bidtoolset.choosehowtoimpdata.f1
@@ -13,12 +12,12 @@ ms.assetid: 17dc6903-c239-46aa-a3b0-6e3156accacc
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: de6a4bf18a6502eba733fd48728e846ba8d1d20f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 482d3b072eaa4db2c3aee84986590dd9d505b347
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48054352"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66088139"
 ---
 # <a name="choose-how-to-import-the-data-ssas"></a>[データのインポート方法の選択] (SSAS)
   **テーブルのインポート ウィザード** のこのページを使用すると、選択したデータ ソースからデータをインポートする方法を選択できます。 [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]からウィザードにアクセスするには、 **[モデル]** メニューの **[データ ソースからのインポート]** をクリックします。  

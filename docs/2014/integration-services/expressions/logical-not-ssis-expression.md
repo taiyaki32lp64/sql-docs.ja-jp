@@ -10,15 +10,15 @@ helpviewer_keywords:
 - logical Not (!)
 - '! (logical Not)'
 ms.assetid: d5c4d1e1-7be4-4d25-bcd9-5b6ddb53b3b3
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 9856f1ecb67a00f73782de1a23c361ca35ea83f4
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: bfcd8337105766d91e097d35201d749c86ca840e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52779084"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62769038"
 ---
 # <a name="-logical-not-ssis-expression"></a>! (論理 Not) (SSIS 式)
   ブール型のオペランドを否定します。  

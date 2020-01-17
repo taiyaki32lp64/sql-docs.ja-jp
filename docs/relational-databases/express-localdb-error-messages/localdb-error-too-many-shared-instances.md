@@ -9,13 +9,12 @@ ms.topic: reference
 ms.assetid: c1595263-6264-4a43-9535-5eb76ece3a57
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: aee9b29650e1ec8bf684a38d14f1fb2fa267652f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 86a76c02f6fbd2d4d47772950fa08af656701ac0
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47738290"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68011011"
 ---
 # <a name="localdberrortoomanysharedinstances"></a>LOCALDB_ERROR_TOO_MANY_SHARED_INSTANCES
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

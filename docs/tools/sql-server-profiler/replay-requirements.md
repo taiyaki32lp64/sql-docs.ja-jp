@@ -1,5 +1,5 @@
 ---
-title: 再生の要件 |Microsoft Docs
+title: 再生要件 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -13,15 +13,14 @@ helpviewer_keywords:
 - replaying traces
 - TSQL_Replay template [SQL Server]
 ms.assetid: 0e01dfc7-84b9-47f6-8bf7-b0656df4fa7d
-author: stevestein
-ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 0190da311010fc91bcb852af12441bc4c0126848
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: d4a4cf18a4bf6131e41e45343244a747c4651a2f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47848370"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67928894"
 ---
 # <a name="replay-requirements"></a>再生を実行するための必要条件
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

@@ -16,14 +16,13 @@ helpviewer_keywords:
 ms.assetid: 74f19992-8082-4ed7-92a1-04fe676ee82d
 author: VanMSFT
 ms.author: vanto
-manager: craigg
 monikerRange: '>=aps-pdw-2016||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 1467b692a574d7f3497d5f0426a841543cdeee76
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 869ee9f88d8cb52f10fbb9120b6815868f7de5fe
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52520898"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68094951"
 ---
 # <a name="create-a-server-role"></a>サーバー ロールの作成
 [!INCLUDE[appliesto-ss-xxxx-xxxx-pdw-md](../../../includes/appliesto-ss-xxxx-xxxx-pdw-md.md)]
@@ -35,7 +34,7 @@ ms.locfileid: "52520898"
   
      [制限事項と制約事項](#Restrictions)  
   
-     [Security](#Security)  
+     [セキュリティ](#Security)  
   
 -   **新しいサーバー ロールを作成する方法:**  
   
@@ -70,7 +69,7 @@ ms.locfileid: "52520898"
   
 2.  **[セキュリティ]** フォルダーを展開します。  
   
-3.  **[サーバー ロール]** フォルダーを右クリックし、**[新しいサーバー ロール]** を選択します。  
+3.  **[サーバー ロール]** フォルダーを右クリックし、 **[新しいサーバー ロール]** を選択します。  
   
 4.  **[全般]** ページの **[新しいサーバー ロール - _server\_role\_name_]** ダイアログ ボックスで、新しいサーバー ロールの名前を **[サーバー ロール名]** ボックスに入力します。  
   
@@ -78,7 +77,7 @@ ms.locfileid: "52520898"
   
 6.  **[セキュリティ保護可能なリソース]** で、1 つ以上のサーバーレベルのセキュリティ保護可能なリソースを選択します。 セキュリティ保護可能なリソースを選択すると、サーバー ロールに、そのセキュリティ保護可能なリソースに対する権限を許可または拒否できます。  
   
-7.  **[権限: 明示的]** ボックスで、選択されたセキュリティ保護可能なリソースに対するこのサーバー ロールの権限について、許可、許可の許可、または拒否のいずれかのチェック ボックスをオンにします。 選択されたセキュリティ保護可能なリソースすべてに対して権限を許可または拒否できない場合、権限は部分的に選択された形で表されます。  
+7.  **[権限: 明示的]** ボックスで、選択されたセキュリティ保護可能なリソースに対するこのサーバー ロールの権限について、許可、許可の許可、または拒否を行います。 選択されたセキュリティ保護可能なリソースすべてに対して権限を許可または拒否できない場合、権限は部分的に選択された形で表されます。  
   
 8.  **[メンバー]** ページで **[追加]** ボタンを使用して、新しいサーバー ロールに個人またはグループを表すログインを追加します。  
   

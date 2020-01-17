@@ -2,17 +2,17 @@
 title: SharePoint 統合モードで Reporting Services の RDL サンドボックスの有効化と無効化 | Microsoft Docs
 ms.date: 09/25/2017
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: report-server-sharepoint
 ms.topic: conceptual
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 183d7272049c7981a8a3f53a811087866c05c666
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: cc2f32dd81e8dd505b6eaa79359ce10c757ea744
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52412749"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65577769"
 ---
 # <a name="enable-and-disable-rdl-sandboxing-for-reporting-services-in-sharepoint-integrated-mode"></a>SharePoint 統合モードで Reporting Services の RDL サンドボックスの有効化と無効化
 
@@ -128,7 +128,7 @@ RDL (レポート定義言語) サンドボックス機能を使用すると、�
   
  許可一覧に [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] .NET Framework の関数を追加するには、Microsoft.VisualBasic 名前空間の対応する型を許可一覧に追加します。  
   
- 許可一覧に [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] .NET Framework の型キーワードを追加するには、対応する CLR 型を許可一覧に追加します。 たとえば、[!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] .NET Framework のキーワード **Integer** を使用するには、**\<RDLSandboxing>** 要素に次の XML フラグメントを追加します。  
+ 許可一覧に [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] .NET Framework の型キーワードを追加するには、対応する CLR 型を許可一覧に追加します。 たとえば、[!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] .NET Framework のキーワード **Integer** を使用するには、 **\<RDLSandboxing>** 要素に次の XML フラグメントを追加します。  
   
 ```  
 <Allow Namespace="System">Int32</Allow>  
@@ -158,7 +158,7 @@ RDL (レポート定義言語) サンドボックス機能を使用すると、�
   
 ### <a name="working-with-operators-and-new"></a>演算子と New の操作
 
- 既定では、 [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] .NET Framework の言語演算子は、 **New**を除いて常に許可されます。 **New** 演算子は、**\<Allow>** 要素の **AllowNew** 属性によって制御されます。 既定のコレクション アクセサー演算子 **!** や [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] .NET Framework のキャスト マクロ ( **CInt**など) のような、他の言語演算子は常に許可されます。  
+ 既定では、 [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] .NET Framework の言語演算子は、 **New**を除いて常に許可されます。 **New** 演算子は、 **\<Allow>** 要素の **AllowNew** 属性によって制御されます。 既定のコレクション アクセサー演算子 **!** や [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] .NET Framework のキャスト マクロ ( **CInt**など) のような、他の言語演算子は常に許可されます。  
   
  カスタム演算子を含め、ブロック一覧への演算子の追加はサポートされていません。 特定の型に対して演算子を除外するには、次の手順を実行する必要があります。  
   

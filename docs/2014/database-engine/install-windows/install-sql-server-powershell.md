@@ -11,11 +11,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: a90a30a0ae7fe09d49b1d42b577b13370c48c0de
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53360934"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62775442"
 ---
 # <a name="install-sql-server-powershell"></a>SQL Server PowerShell のインストール
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] セットアップは、Windows PowerShell 2.0 をインストールしていないのに、PowerShell コンポーネントを含む [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 機能を選択したことが検出された場合に停止します。 Windows 管理フレームワークを使用して PowerShell をインストールしてから、セットアップを再実行する必要があります。  
@@ -39,7 +39,7 @@ ms.locfileid: "53360934"
   
  セットアップの終了後に Windows PowerShell がアンインストールされると、Windows PowerShell 用の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 機能は機能しなくなります。 Windows PowerShell をアンインストールできるのは Windows ユーザーです。また、Windows PowerShell のアンインストールは、Windows オペレーティング システムのアップグレードで必要になる場合があります。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] PowerShell 機能を使用するには、Windows Management Framework を使用して PowerShell 2.0 を再インストールする必要があります。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [SQL Server PowerShell](../../powershell/sql-server-powershell.md)  
   
   

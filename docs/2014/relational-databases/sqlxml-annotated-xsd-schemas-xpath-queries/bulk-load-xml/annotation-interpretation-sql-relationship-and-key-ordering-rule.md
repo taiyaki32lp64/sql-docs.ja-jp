@@ -11,20 +11,20 @@ helpviewer_keywords:
 - key ordering rules [SQLXML]
 - relationship annotation
 ms.assetid: 914cb152-09f5-4b08-b35d-71940e4e9986
-author: douglaslMS
-ms.author: douglasl
+author: MightyPen
+ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 71eef27236a42f7e1869cb619b7ba557785ba4e7
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 521614f8755261d0348ab95132c527c736c96311
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52787184"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66013510"
 ---
 # <a name="sqlrelationship-and-the-key-ordering-rule-sqlxml-40"></a>sql:relationship とキーの順序付け規則 (SQLXML 4.0)
   XML 一括読み込みでは、ノードがスコープ内に入るときにレコードが生成され、ノードがスコープ外に出るときに、これらのレコードが Microsoft [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] に送信されます。したがって、レコードのデータはノードのスコープ内に存在する必要があります。  
   
- これで、次の XSD スキーマを検討してください間の一対多リレーションシップ**\<顧客 >** と**\<順序 >** 要素 (1 人の顧客は、多数の注文を配置できます)使用して指定された、`<sql:relationship>`要素。  
+ これで、次の XSD スキーマを検討してください間の一対多リレーションシップ **\<顧客 >** と **\<順序 >** 要素 (1 人の顧客は、多数の注文を配置できます)使用して指定された、`<sql:relationship>`要素。  
   
 ```  
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"<>   

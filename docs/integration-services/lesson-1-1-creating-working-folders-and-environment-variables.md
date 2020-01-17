@@ -8,17 +8,20 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: tutorial
 ms.assetid: 45091ba2-ea3d-4399-9814-489d812b42cc
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: 51cd0ab995803c9582f91f5a9a732838736ac526
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 08de88d45b31e4c00c9ce5a7790405c6da1542a2
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53207681"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71284134"
 ---
 # <a name="lesson-1-1---creating-working-folders-and-environment-variables"></a>レッスン 1-1 - 作業フォルダーと環境変数の作成
+
+[!INCLUDE[ssis-appliesto](../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
 このタスクでは、この後のチュートリアル タスクで使用する作業フォルダー (C:\DeploymentTutorial) と新しいシステム環境変数 (`DataTransfer` および `LoadXMLData`) を作成します。  
   
 作業フォルダーは、C ドライブのルートにあります。 別のドライブまたは場所を使用する必要がある場合は、変更してかまいません。 ただし、この場所を書き留めておいて、チュートリアルで DeploymentTutorial 作業フォルダーの場所が参照されたときに、該当する場所を使用する必要があります。  

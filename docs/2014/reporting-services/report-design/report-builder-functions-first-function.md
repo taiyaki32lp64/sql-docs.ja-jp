@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 ms.assetid: d0914520-30c5-4d63-9b59-8d9342ed63b9
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 9991e6f0301a69026bf037e31e5df95917228e0e
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: a47169bc3c628e4bf33fb9ed6a19e612320b585c
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56293440"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66105264"
 ---
 # <a name="first-function-report-builder-and-ssrs"></a>First 関数 (レポート ビルダーおよび SSRS)
   指定された式の指定されたスコープの最初の値を返します。  

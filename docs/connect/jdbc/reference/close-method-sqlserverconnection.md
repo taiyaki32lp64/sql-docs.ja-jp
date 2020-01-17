@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: f0f26585-bdf7-4737-b434-8c7e115c8e94
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 8c62d7187305bf0b5122d60d0ddf728bd1a98549
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 87bce635f81db5c2b5e98768524d79082a940e2e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47597771"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67955673"
 ---
 # <a name="close-method-sqlserverconnection"></a>close メソッド (SQLServerConnection)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

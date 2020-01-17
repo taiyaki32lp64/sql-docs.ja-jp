@@ -13,15 +13,15 @@ helpviewer_keywords:
 - control flow [Integration Services], containers
 - SQL Server Integration Services containers
 ms.assetid: 1b725922-ec59-4a47-9d55-e079463058f3
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 572c8bbcf31c588e8e7d6b117ef8393a09cae512
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 172aa2a77293dd7e9a9ee50bfe0002a71c59cbb9
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52760014"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62831351"
 ---
 # <a name="integration-services-containers"></a>Integration Services コンテナー
   コンテナーとは、パッケージに構造を提供し、タスクにサービスを提供する [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] のオブジェクトのことです。 コンテナーは、パッケージ内の制御フローの反復をサポートし、タスクおよびコンテナーを意味のある作業単位にグループ化します。 コンテナーには、タスクの他に別のコンテナーを含めることができます。  
@@ -51,23 +51,23 @@ ms.locfileid: "52760014"
   
 |プロパティ|説明|  
 |--------------|-----------------|  
-|`DelayValidation`|コンテナーの検証を実行時まで遅らせるかどうかを示すブール値です。 このプロパティの既定値は、`False` です。<br /><br /> 詳細については、「 <xref:Microsoft.SqlServer.Dts.Runtime.DtsContainer.DelayValidation%2A> 」を参照してください。|  
-|`Description`|コンテナーの説明です。 このプロパティに格納されるのは文字列で、空白にすることもできます。<br /><br /> 詳細については、「 <xref:Microsoft.SqlServer.Dts.Runtime.DtsContainer.Description%2A> 」を参照してください。|  
-|`Disable`|コンテナーを実行するかどうかを示すブール値です。 このプロパティの既定値は、`False` です。<br /><br /> 詳細については、「 <xref:Microsoft.SqlServer.Dts.Runtime.DtsContainer.Disable%2A> 」を参照してください。|  
+|`DelayValidation`|コンテナーの検証を実行時まで遅らせるかどうかを示すブール値です。 このプロパティの既定値は、`False` です。<br /><br /> 詳細については、「<xref:Microsoft.SqlServer.Dts.Runtime.DtsContainer.DelayValidation%2A>」を参照してください。|  
+|`Description`|コンテナーの説明です。 このプロパティに格納されるのは文字列で、空白にすることもできます。<br /><br /> 詳細については、「<xref:Microsoft.SqlServer.Dts.Runtime.DtsContainer.Description%2A>」を参照してください。|  
+|`Disable`|コンテナーを実行するかどうかを示すブール値です。 このプロパティの既定値は、`False` です。<br /><br /> 詳細については、「<xref:Microsoft.SqlServer.Dts.Runtime.DtsContainer.Disable%2A>」を参照してください。|  
 |`DisableEventHandlers`|コンテナーに関連付けられているイベント ハンドラーを実行するかどうかを示すブール値です。 このプロパティの既定値は、`False` です。|  
-|`FailPackageOnFailure`|コンテナーでエラーが発生した場合、パッケージが失敗するかどうかを示すブール値です。 このプロパティの既定値は、`False` です。<br /><br /> 詳細については、「 <xref:Microsoft.SqlServer.Dts.Runtime.DtsContainer.FailPackageOnFailure%2A> 」を参照してください。|  
-|`FailParentOnFailure`|コンテナーでエラーが発生した場合、親コンテナーが失敗するかどうかを示すブール値です。 このプロパティの既定値は、`False` です。<br /><br /> 詳細については、「 <xref:Microsoft.SqlServer.Dts.Runtime.DtsContainer.FailParentOnFailure%2A> 」を参照してください。|  
-|`ForcedExecutionValue`|`ForceExecutionValue` が `True` に設定されている場合は、コンテナーのオプションの実行値を含むオブジェクトです。 このプロパティの既定値は **0**です。<br /><br /> 詳細については、「 <xref:Microsoft.SqlServer.Dts.Runtime.DtsContainer.ForcedExecutionValue%2A> 」を参照してください。|  
+|`FailPackageOnFailure`|コンテナーでエラーが発生した場合、パッケージが失敗するかどうかを示すブール値です。 このプロパティの既定値は、`False` です。<br /><br /> 詳細については、「<xref:Microsoft.SqlServer.Dts.Runtime.DtsContainer.FailPackageOnFailure%2A>」を参照してください。|  
+|`FailParentOnFailure`|コンテナーでエラーが発生した場合、親コンテナーが失敗するかどうかを示すブール値です。 このプロパティの既定値は、`False` です。<br /><br /> 詳細については、「<xref:Microsoft.SqlServer.Dts.Runtime.DtsContainer.FailParentOnFailure%2A>」を参照してください。|  
+|`ForcedExecutionValue`|`ForceExecutionValue` が `True` に設定されている場合は、コンテナーのオプションの実行値を含むオブジェクトです。 このプロパティの既定値は **0**です。<br /><br /> 詳細については、「<xref:Microsoft.SqlServer.Dts.Runtime.DtsContainer.ForcedExecutionValue%2A>」を参照してください。|  
 |`ForcedExecutionValueType`|`ForcedExecutionValue` のデータ型です。 このプロパティの既定値は `Int32` です。|  
-|`ForceExecutionResult`|パッケージまたはコンテナーの強制実行結果を示す値です。 有効値は、`None`、`Success`、`Failure`、および `Completion` です。 このプロパティの既定値は、`None` です。<br /><br /> 詳細については、「 <xref:Microsoft.SqlServer.Dts.Runtime.DtsContainer.ForceExecutionResult%2A> 」を参照してください。|  
-|`ForceExecutionValue`|コンテナーのオプションの実行値に特定の値を適用する必要があるかどうかを示すブール値です。 このプロパティの既定値は `False` です。<br /><br /> 詳細については、「 <xref:Microsoft.SqlServer.Dts.Runtime.DtsContainer.ForceExecutionValue%2A> 」を参照してください。|  
+|`ForceExecutionResult`|パッケージまたはコンテナーの強制実行結果を示す値です。 有効値は、`None`、`Success`、`Failure`、および `Completion` です。 このプロパティの既定値は、`None` です。<br /><br /> 詳細については、「<xref:Microsoft.SqlServer.Dts.Runtime.DtsContainer.ForceExecutionResult%2A>」を参照してください。|  
+|`ForceExecutionValue`|コンテナーのオプションの実行値に特定の値を適用する必要があるかどうかを示すブール値です。 このプロパティの既定値は `False` です。<br /><br /> 詳細については、「<xref:Microsoft.SqlServer.Dts.Runtime.DtsContainer.ForceExecutionValue%2A>」を参照してください。|  
 |`ID`|コンテナー GUID です。パッケージの作成時に割り当てられます。 このプロパティは読み取り専用です。<br /><br /> <xref:Microsoft.SqlServer.Dts.Runtime.DtsContainer.ID%2A> 。|  
-|`IsolationLevel`|コンテナー トランザクションの分離レベルです。 値は、`Unspecified`、`Chaos`、`ReadUncommitted`、`ReadCommitted`、`RepeatableRead`、`Serializable`、および `Snapshot` です。 このプロパティの既定値は `Serializable` です。 詳細については、「 <xref:Microsoft.SqlServer.Dts.Runtime.DtsContainer.IsolationLevel%2A> 」を参照してください。|  
-|`LocaleID`|Microsoft Win32 ロケールです。 このプロパティの既定値は、ローカル コンピューター上のオペレーティング システムのロケールです。<br /><br /> 詳細については、「 <xref:Microsoft.SqlServer.Dts.Runtime.DtsContainer.LocaleID%2A> 」を参照してください。|  
-|`LoggingMode`|コンテナーのログ記録の動作を指定する値です。 値は、`Disabled`、`Enabled`、および `UseParentSetting` です。 このプロパティの既定値は `UseParentSetting` です。 詳細については、「 <xref:Microsoft.SqlServer.Dts.Runtime.DTSLoggingMode> 」を参照してください。|  
-|`MaximumErrorCount`|コンテナーが実行を停止するまでに発生が許可される、最大エラー数を示します。 このプロパティの既定値は **1**です。<br /><br /> 詳細については、「 <xref:Microsoft.SqlServer.Dts.Runtime.DtsContainer.MaximumErrorCount%2A> 」を参照してください。|  
-|`Name`|コンテナーの名前です。<br /><br /> 詳細については、「 <xref:Microsoft.SqlServer.Dts.Runtime.DtsContainer.Name%2A> 」を参照してください。|  
-|`TransactionOption`|コンテナーに対するトランザクションの関与を示します。 値は、 `NotSupported`、 `Supported`、`Required`します。 このプロパティの既定値は `Supported` です。 詳細については、「 <xref:Microsoft.SqlServer.Dts.Runtime.DTSTransactionOption> 」を参照してください。|  
+|`IsolationLevel`|コンテナー トランザクションの分離レベルです。 値は、`Unspecified`、`Chaos`、`ReadUncommitted`、`ReadCommitted`、`RepeatableRead`、`Serializable`、および `Snapshot` です。 このプロパティの既定値は `Serializable` です。 詳細については、「<xref:Microsoft.SqlServer.Dts.Runtime.DtsContainer.IsolationLevel%2A>」を参照してください。|  
+|`LocaleID`|Microsoft Win32 ロケールです。 このプロパティの既定値は、ローカル コンピューター上のオペレーティング システムのロケールです。<br /><br /> 詳細については、「<xref:Microsoft.SqlServer.Dts.Runtime.DtsContainer.LocaleID%2A>」を参照してください。|  
+|`LoggingMode`|コンテナーのログ記録の動作を指定する値です。 値は、`Disabled`、`Enabled`、および `UseParentSetting` です。 このプロパティの既定値は `UseParentSetting` です。 詳細については、「<xref:Microsoft.SqlServer.Dts.Runtime.DTSLoggingMode>」を参照してください。|  
+|`MaximumErrorCount`|コンテナーが実行を停止するまでに発生が許可される、最大エラー数を示します。 このプロパティの既定値は **1**です。<br /><br /> 詳細については、「<xref:Microsoft.SqlServer.Dts.Runtime.DtsContainer.MaximumErrorCount%2A>」を参照してください。|  
+|`Name`|コンテナーの名前です。<br /><br /> 詳細については、「<xref:Microsoft.SqlServer.Dts.Runtime.DtsContainer.Name%2A>」を参照してください。|  
+|`TransactionOption`|コンテナーに対するトランザクションの関与を示します。 値は、 `NotSupported`、 `Supported`、`Required`します。 このプロパティの既定値は `Supported` です。 詳細については、「<xref:Microsoft.SqlServer.Dts.Runtime.DTSTransactionOption>」を参照してください。|  
   
  Foreach ループ、For ループ、シーケンス、およびタスク ホストの各コンテナーをプログラムで構成する際に使用できるすべてのプロパティの詳細については、以下の [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] API のトピックを参照してください。  
   

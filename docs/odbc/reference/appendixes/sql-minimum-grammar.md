@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 4f36d785-104f-4fec-93be-f201203bc7c7
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 26cf76200010edae7f85993ec33eb3722f35e94e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 85b1f59efd809c604458bd7b99882705db240e9a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47818906"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68057009"
 ---
 # <a name="sql-minimum-grammar"></a>SQL の最小限の文法
 このセクションでは、ODBC ドライバーのサポートが必要な最低限の SQL 構文について説明します。 このセクションで説明する構文は、SQL 92 のエントリ レベルの構文のサブセットです。  
@@ -31,16 +30,16 @@ ms.locfileid: "47818906"
 ## <a name="statement"></a>ステートメントから削除してください。  
  *create table ステートメント*:: =  
   
- CREATE TABLE*ベース テーブル名*  
+ CREATE TABLE *base-table-name*  
   
- (*列識別子のデータ型*[*、列識別子のデータ型*]...)  
+ (*列識別子のデータ型*[ *、列識別子のデータ型*]...)  
   
 > [!IMPORTANT]  
 >  として、*データ型*で、 *create table ステートメント*、アプリケーションがによって返される結果セットの TYPE_NAME 列からデータ型を使用する必要があります**SQLGetTypeInfo**します。  
   
  *delete ステートメント検索*:: =  
   
- DELETE FROM*テーブル名*[場所*検索条件*]  
+ DELETE FROM *table-name* [WHERE *search-condition*]  
   
  *drop-テーブル-ステートメント*:: =  
   
@@ -72,7 +71,7 @@ ms.locfileid: "47818906"
   
  &#124; です。*update ステートメントの検索*  
   
- *update ステートメントの検索*  
+ *update-statement-searched*  
   
  UPDATE*テーブル名*  
   

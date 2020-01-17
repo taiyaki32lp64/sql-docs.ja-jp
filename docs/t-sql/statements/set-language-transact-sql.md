@@ -21,14 +21,13 @@ helpviewer_keywords:
 ms.assetid: 0ec0e5cf-e115-4be9-a0db-e65837d6fa45
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 784d3f707bf57338a8385a1c4837e9b77fd43f2f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ac79430a87cccb7b67ce81a3cb6ca9b05d0a04db
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47609551"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67928930"
 ---
 # <a name="set-language-transact-sql"></a>SET LANGUAGE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-asdw-xxx-md.md)]
@@ -46,8 +45,8 @@ SET LANGUAGE { [ N ] 'language' | @language_var }
 ```  
   
 ## <a name="arguments"></a>引数  
- **[N]** **'**_language_**'** | **@**_language\_var_  
- [sys.syslanguages](../../relational-databases/system-compatibility-views/sys-syslanguages-transact-sql.md) に格納されている言語の名前を指定します。 Unicode、または Unicode に変換される DBCS のいずれかを指定できます。 言語を Unicode で指定するには、**N'**_language_**'** を使用します。 変数として指定する場合、変数のデータ型は **sysname** であることが必要です。  
+ **[N]** **'** _language_ **'**  |  **@** _language\_var_  
+ [sys.syslanguages](../../relational-databases/system-compatibility-views/sys-syslanguages-transact-sql.md) に格納されている言語の名前を指定します。 Unicode、または Unicode に変換される DBCS のいずれかを指定できます。 言語を Unicode で指定するには、**N'** _language_ **'** を使用します。 変数として指定する場合、変数のデータ型は **sysname** であることが必要です。  
   
 ## <a name="remarks"></a>Remarks  
  SET LANGUAGE は、解析時ではなく実行時に設定されます。  

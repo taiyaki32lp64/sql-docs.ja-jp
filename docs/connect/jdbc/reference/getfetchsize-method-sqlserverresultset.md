@@ -1,5 +1,5 @@
 ---
-title: getFetchSize メソッド (SQLServerResultSet) |Microsoft Docs
+title: getFetchSize メソッド (SQLServerResultSet) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: 7bc96930-b0c9-42f6-8df9-1d8d824408b3
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: c35c68d931005262f11c023a17f059cbe7c32936
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 874d4032fc3306b180d0fafefc7a4ac085b5af29
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47630530"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67983204"
 ---
 # <a name="getfetchsize-method-sqlserverresultset"></a>getFetchSize メソッド (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -42,7 +41,7 @@ public int getFetchSize()
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- この getFetchSize メソッドは、java.sql.ResultSet インターフェイスの getFetchSize メソッドによって指定されます。  
+ この getFetchSize メソッドは、java. ResultSet インターフェイスの getFetchSize メソッドによって指定されます。  
   
 ## <a name="see-also"></a>参照  
  [SQLServerResultSet のメンバー](../../../connect/jdbc/reference/sqlserverresultset-members.md)   

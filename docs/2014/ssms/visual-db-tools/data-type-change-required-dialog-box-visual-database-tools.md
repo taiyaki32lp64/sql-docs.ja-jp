@@ -14,11 +14,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: b04814ed725dde1a579ed969000b280816c1880a
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52812594"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63270569"
 ---
 # <a name="data-type-change-required-dialog-box-visual-database-tools"></a>[データ型の変更を要求] ダイアログ ボックス (Visual Database Tools)
   リレーションシップを定義した列のデータ型、長さ、小数部桁数、有効桁数、または照合順序を変更したときに表示されます。  

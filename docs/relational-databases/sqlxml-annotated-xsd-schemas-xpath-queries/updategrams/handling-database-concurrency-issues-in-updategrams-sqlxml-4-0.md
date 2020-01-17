@@ -1,6 +1,5 @@
 ---
-title: アップデート グラム (SQLXML 4.0) でデータベースの同時実行の問題の処理 |マイクロソフトのドキュメント
-ms.custom: ''
+title: アップデートグラムでのデータベースの同時実行に関する問題 (SQLXML)
 ms.date: 03/16/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -20,25 +19,25 @@ helpviewer_keywords:
 ms.assetid: d4b908d1-b25b-4ad9-8478-9cd882e8c44e
 author: MightyPen
 ms.author: genemi
-manager: craigg
+ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: ee4f532954092bd7e969e666fe05dcbeb320b42c
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: eb77a6499472d116ad3b30028ce1566b68b81122
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56023043"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75241287"
 ---
 # <a name="handling-database-concurrency-issues-in-updategrams-sqlxml-40"></a>アップデートグラムでのデータベース コンカレンシーに関する問題への対応 (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-  アップデートグラムは、他のデータベースの更新メカニズムと同様に、マルチサーバー環境での同時実行更新に対応しています。 アップデートグラムではオプティミスティック コンカレンシーが使用されます。この機能では、更新するデータがデータベースからの読み取り後に他のユーザー アプリケーションによって変更され邸内事を確認するために、選択フィールド データの比較がスナップショットとして使用されます。 アップデート グラムでこれらのスナップショット値を含める、 **\<する前に >** アップデート グラムのブロック。 指定されている値をチェックするアップデート グラムでデータベースを更新する前に、 **\<する前に >** 更新が有効であることを確認するデータベースの現在の値に対してブロック。  
+  アップデートグラムは、他のデータベースの更新メカニズムと同様に、マルチサーバー環境での同時実行更新に対応しています。 アップデートグラムではオプティミスティック コンカレンシーが使用されます。この機能では、更新するデータがデータベースからの読み取り後に他のユーザー アプリケーションによって変更され邸内事を確認するために、選択フィールド データの比較がスナップショットとして使用されます。 アップデートグラムでは、これらのスナップショット値がアップデートグラムの** \<before>** ブロックに含まれています。 アップデートグラムでは、データベースを更新する前に、更新プログラムが** \<** 有効であることを確認するために、データベース内の現在の値に対して before>block に指定されている値をチェックします。  
   
  アップデートグラムでは、オプティミスティック コンカレンシーによる保護を低 (なし)、中、高の 3 レベルで使用できます。 必要な保護レベルを適用するには、アップデートグラムで適切に指定する必要があります。  
   
 ## <a name="lowest-level-of-protection"></a>最低レベルの保護  
- このレベルでは、最後のデータベースの読み取り後に行われたその他の更新を無視して更新操作を実行します。 このような場合は、主キー列でのみを指定する、 **\<する前に >** 、レコードを識別するためにブロックし、で更新された情報を指定する、 **\<後 >** ブロックです。  
+ このレベルでは、最後のデータベースの読み取り後に行われたその他の更新を無視して更新操作を実行します。 このような場合は、 ** \<before>** block で主キー列のみを指定してレコードを識別し、更新** \<後**の情報を after>ブロックに指定します。  
   
- たとえば次のアップデートグラムでは、以前の電話番号に関係なく、新しい連絡先の電話番号として正しい番号を設定できます。 通知方法、 **\<する前に >** ブロックが主キー列 (ContactID) だけを指定します。  
+ たとえば次のアップデートグラムでは、以前の電話番号に関係なく、新しい連絡先の電話番号として正しい番号を設定できます。 ** \<Before>** block によって、主キー列 (ContactID) のみが指定されていることに注意してください。  
   
 ```  
 <ROOT xmlns:updg="urn:schemas-microsoft-com:xml-updategram">  
@@ -56,9 +55,9 @@ ms.locfileid: "56023043"
 ## <a name="intermediate-level-of-protection"></a>中レベルの保護  
  この保護レベルでは、トランザクションで読み取ったレコードが他のトランザクションによって変更されていないことを確認するため、アップデートグラムにおいて、更新するデータの現在の値とデータベース列の値が比較されます。  
   
- で更新している列の主キー列を指定することで、この保護レベルを取得できます、 **\<する前に >** ブロックします。  
+ この保護レベルを取得するには、主キー列と更新する列を [ ** \<before>** block] で指定します。  
   
- たとえば、このアップデートグラムでは、Person.Contact テーブルで、ContactID が 1 となっている連絡先の Phone 列の値が変更されます。 **\<する前に >** ブロックを指定します、 **Phone**この属性値が更新された値を適用する前に、データベース内の対応する列の値を一致させる属性.  
+ たとえば、このアップデートグラムでは、Person.Contact テーブルで、ContactID が 1 となっている連絡先の Phone 列の値が変更されます。 ** \<Before>** block は**Phone**属性を指定して、更新された値を適用する前に、この属性値がデータベース内の対応する列の値と一致するようにします。  
   
 ```  
 <ROOT xmlns:updg="urn:schemas-microsoft-com:xml-updategram">  
@@ -78,11 +77,11 @@ ms.locfileid: "56023043"
   
  同時実行更新に高レベルの保護を適用するには、次の 2 つの方法があります。  
   
--   内のテーブルの追加の列の指定、 **\<する前に >** ブロックします。  
+-   テーブルの追加の列を [ ** \<before>** ブロックの前に指定します。  
   
-     追加の列を指定する場合、 **\<する前に >** ブロック、アップデート グラムでは、更新プログラムを適用する前に、データベースに含まれていた値を持つこれらの列に対して指定されている値を比較します。 トランザクションで読み取ったレコード列のいずれかが変更されている場合、アップデートグラムで更新は実行されません。  
+     [ ** \<Before>** ] ブロックで追加の列を指定した場合、アップデートグラムでは、更新プログラムを適用する前に、これらの列に指定されている値と、データベース内の値が比較されます。 トランザクションで読み取ったレコード列のいずれかが変更されている場合、アップデートグラムで更新は実行されません。  
   
-     たとえば、次のアップデート グラムの勤務時間名をソフトウェア更新プログラムがで追加の列 (StartTime、EndTime) を指定します、 **\<する前に >** ブロック、高いレベルの同時実行に対する保護が要求されています更新します。  
+     たとえば、次のアップデートグラムでは、シフト名を更新しますが、 ** \<前の>** ブロックで追加の列 (StartTime、EndTime) を指定することで、同時更新に対するより高いレベルの保護を要求します。  
   
     ```  
     <ROOT xmlns:updg="urn:schemas-microsoft-com:xml-updategram">  
@@ -100,15 +99,15 @@ ms.locfileid: "56023043"
     </ROOT>  
     ```  
   
-     この例では、最高レベルの保護を指定のレコードのすべての列の値を指定することによって、 **\<する前に >** ブロックします。  
+     この例では、 ** \<[before>** ブロックのレコードのすべての列の値を指定することにより、最も高いレベルの保護を指定します。  
   
--   Timestamp 列を指定 (該当する場合)、 **\<する前に >** ブロックします。  
+-   [ ** \<Before>** block] で timestamp 列 (使用可能な場合) を指定します。  
   
-     すべてのレコード列を指定する代わりに、 **\<する前に**> ブロックを指定するだけのタイムスタンプ列 (テーブルには 1 つ) の場合に主キー列と共に、 **\<する前に>** ブロックします。 データベースでは、レコードが更新されるたびにタイムスタンプ列が一意な値に更新されます。 この場合、アップデートグラムではタイムスタンプの値とデータベースの対応する値を比較します。 データベースに格納されているタイムスタンプ値はバイナリ値です。 スキーマでしたがって、timestamp 列を指定する必要があります**dt:type="bin.hex"**、 **dt:type="bin.base64"**、または**sql:datatype ="timestamp"** します。 (どちらかを指定することができます、 **xml**データ型、または[!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]データ型です)。  
+     [ ** \<Before**> block] ですべてのレコード列を指定する代わりに、timestamp 列 (テーブルにテーブルがある場合) と、 ** \<[before>** block] の主キー列を指定するだけで済みます。 データベースでは、レコードが更新されるたびにタイムスタンプ列が一意な値に更新されます。 この場合、アップデートグラムではタイムスタンプの値とデータベースの対応する値を比較します。 データベースに格納されているタイムスタンプ値はバイナリ値です。 したがって、timestamp 列は、スキーマで**dt: type = "bin. hex"**、 **dt: type = "bin. base64"**、または**sql: datatype = "timestamp"** として指定する必要があります。 ( **Xml**データ型または[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]データ型のいずれかを指定できます)。  
   
 #### <a name="to-test-the-updategram"></a>アップデートグラムをテストするには  
   
-1.  このテーブルを作成、 **tempdb**データベース。  
+1.  **Tempdb**データベースに次のテーブルを作成します。  
   
     ```  
     USE tempdb  
@@ -168,9 +167,9 @@ ms.locfileid: "56023043"
   
 5.  SQLXML 4.0 テスト スクリプト (sqlxml4test.vbs) を作成し、それを使用してテンプレートを実行します。  
   
-     詳細については、次を参照してください。 [SQLXML 4.0 クエリの実行に ADO を使用する](../../../relational-databases/sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md)します。  
+     詳細については、「ADO を使用した[SQLXML 4.0 クエリの実行](../../../relational-databases/sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md)」を参照してください。  
   
- これは、同等の XDR スキーマです。  
+ これは、これと同等の XDR スキーマです。  
   
 ```  
 <?xml version="1.0" ?>  
@@ -190,6 +189,6 @@ ms.locfileid: "56023043"
 ```  
   
 ## <a name="see-also"></a>参照  
- [アップデート グラムのセキュリティに関する考慮事項&#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/security/updategram-security-considerations-sqlxml-4-0.md)  
+ [SQLXML 4.0&#41;&#40;アップデートグラムのセキュリティに関する考慮事項](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/security/updategram-security-considerations-sqlxml-4-0.md)  
   
   

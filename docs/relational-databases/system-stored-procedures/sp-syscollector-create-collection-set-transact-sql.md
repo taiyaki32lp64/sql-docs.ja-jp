@@ -18,21 +18,20 @@ helpviewer_keywords:
 ms.assetid: 69e9ff0f-c409-43fc-89f6-40c3974e972c
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 3fc1e3d8db223173fcd5d9ac55f608ddeffa3aa3
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e859ed97afdc3dfbb4e39a93b8691d044ceca37d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47688250"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68032640"
 ---
-# <a name="spsyscollectorcreatecollectionset-transact-sql"></a>sp_syscollector_create_collection_set (Transact-SQL)
+# <a name="spsyscollectorcreatecollectionset-transact-sql"></a>sp_syscollector_create_collection_set (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  新しいコレクション セットを作成します。 このストアド プロシージャを使用すると、データ コレクション用のカスタム コレクション セットを作成できます。  
+  新しいコレクション セットを作成します。 このストアド プロシージャを使用して、データ収集の設定、カスタム コレクションを作成することができます。  
   
 > [!WARNING]  
->  プロキシとして構成されている Windows アカウントがまだログインしていない非対話型または対話型のユーザーの場合、プロファイル ディレクトリは存在せず、ステージング ディレクトリの作成は失敗します。 したがって、ドメイン コントローラーでプロキシ アカウントを使用している場合は、プロファイル ディレクトリが確実に作成されているようにするため、少なくとも 1 回は使用されている対話型アカウントを指定する必要があります。  
+>  プロキシとして構成されている Windows アカウントが非対話型または対話型のユーザーではまだログインしていない場合、プロファイル ディレクトリは存在しませんし、ステージング ディレクトリの作成は失敗します。 したがって、ドメイン コントローラーでプロキシ アカウントを使用している場合は、プロファイル ディレクトリが確実に作成されているようにするため、少なくとも 1 回は使用されている対話型アカウントを指定する必要があります。  
   
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -56,46 +55,37 @@ sp_syscollector_create_collection_set
 ```  
   
 ## <a name="arguments"></a>引数  
- [  **@name =** ] '*名前*'  
- コレクション セットの名前を指定します。 *名前*は**sysname**空の文字列または NULL にすることはできません。  
+`[ @name = ] 'name'` コレクション セットの名前です。 *名前*は**sysname**空の文字列または NULL にすることはできません。  
   
  *名前*で一意である必要があります。 現在のコレクション セットの名前の一覧については、syscollector_collection_sets システム ビューにクエリを実行します。  
   
- [  **@target =** ] '*ターゲット*'  
- 将来使用するために予約されています。 *名前*は**nvarchar (128)** 既定値は NULL です。  
+`[ @target = ] 'target'` 将来使用するために予約されています。 *名前*は**nvarchar (128)** 既定値は NULL です。  
   
- [ **@collection_mode =** ] *collection_mode*  
- データを収集し、格納する方法を指定します。 *collection_mode*は**smallint**値は次のいずれかを指定できます。  
+`[ @collection_mode = ] collection_mode` データが収集および保存の方法を指定します。 *collection_mode*は**smallint**値は次のいずれかを指定できます。  
   
- 0 - キャッシュ モード。 データの収集とアップロードは個別のスケジュールに従います。 連続コレクションのキャッシュ モードを指定します。  
+ 0 - キャッシュ モード。 データの収集とアップロードは個別のスケジュールです。 継続的なコレクションのキャッシュ モードを指定します。  
   
- 1 - 非キャッシュ モード。 データの収集とアップロードは、同じスケジュールでは。 アドホック コレクションまたはスナップショット コレクションの非キャッシュ モードを指定します。  
+ 1-非キャッシュ モード。 データの収集とアップロードは、同じスケジュールでは。 アドホック コレクションまたはスナップショット コレクションの非キャッシュ モードを指定します。  
   
  既定値*collection_mode*は 0 です。 ときに*collection_mode*は 0 です。 *schedule_uid*または*schedule_name*指定する必要があります。  
   
- [ **@days_until_expiration =** ] *days_until_expiration*  
- 収集したデータを管理データ ウェアハウスに保管しておく日数です。 *days_until_expiration*は**smallint**で、既定値は 730 (2 年)。 *days_until_expiration* 0 または正の整数にする必要があります。  
+`[ @days_until_expiration = ] days_until_expiration` 管理データ ウェアハウスに収集されたデータが保存されている日の数です。 *days_until_expiration*は**smallint**で、既定値は 730 (2 年)。 *days_until_expiration* 0 または正の整数にする必要があります。  
   
- [ **@proxy_id =** ] *proxy_id*  
- 一意の識別子には、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]エージェント プロキシ アカウント。 *proxy_id*は**int**既定値は NULL です。 指定した場合*proxy_name* NULL にする必要があります。 取得する*proxy_id*、sysproxies システム テーブルをクエリします。 dc_admin 固定データベース ロールには、プロキシにアクセスする権限が必要です。 詳細については、次を参照してください。 [SQL Server エージェント プロキシの作成](../../ssms/agent/create-a-sql-server-agent-proxy.md)です。  
+`[ @proxy_id = ] proxy_id` 一意の識別子には、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]エージェント プロキシ アカウント。 *proxy_id*は**int**既定値は NULL です。 指定した場合*proxy_name* NULL にする必要があります。 取得する*proxy_id*、sysproxies システム テーブルをクエリします。 Dc_admin 固定データベース ロールは、プロキシにアクセスする権限が必要です。 詳細については、次を参照してください。 [SQL Server エージェント プロキシの作成](../../ssms/agent/create-a-sql-server-agent-proxy.md)です。  
   
- [  **@proxy_name =** ] '*proxy_name*'  
- プロキシ アカウントの名前です。 *proxy_name*は**sysname**既定値は NULL です。 指定した場合*proxy_id* NULL にする必要があります。 取得する*proxy_name*、sysproxies システム テーブルをクエリします。  
+`[ @proxy_name = ] 'proxy_name'` プロキシ アカウントの名前です。 *proxy_name*は**sysname**既定値は NULL です。 指定した場合*proxy_id* NULL にする必要があります。 取得する*proxy_name*、sysproxies システム テーブルをクエリします。  
   
- [  **@schedule_uid =** ] '*schedule_uid*'  
- スケジュールを参照する GUID です。 *schedule_uid*は**uniqueidentifier**既定値は NULL です。 指定した場合*schedule_name* NULL にする必要があります。 取得する*schedule_uid*、sysschedules システム テーブルをクエリします。  
+`[ @schedule_uid = ] 'schedule_uid'` スケジュールを参照する GUID。 *schedule_uid*は**uniqueidentifier**既定値は NULL です。 指定した場合*schedule_name* NULL にする必要があります。 取得する*schedule_uid*、sysschedules システム テーブルをクエリします。  
   
  ときに*collection_mode*を 0 に設定されている*schedule_uid*または*schedule_name*指定する必要があります。 ときに*collection_mode*を 1 に設定されている*schedule_uid*または*schedule_name*指定されている場合は無視されます。  
   
- [  **@schedule_name =** ] '*schedule_name*'  
- スケジュールの名前です。 *schedule_name*は**sysname**既定値は NULL です。 指定した場合*schedule_uid* NULL にする必要があります。 取得する*schedule_name*、sysschedules システム テーブルをクエリします。  
+`[ @schedule_name = ] 'schedule_name'` スケジュールの名前です。 *schedule_name*は**sysname**既定値は NULL です。 指定した場合*schedule_uid* NULL にする必要があります。 取得する*schedule_name*、sysschedules システム テーブルをクエリします。  
   
- [ **@logging_level =** ] *logging_level*  
- ログ レベルです。 *logging_level*は**smallint**次の値のいずれかの。  
+`[ @logging_level = ] logging_level` ログ記録レベルです。 *logging_level*は**smallint**次の値のいずれかの。  
   
  0 - ログの実行情報と[!INCLUDE[ssIS](../../includes/ssis-md.md)]イベントを追跡します。  
   
--   コレクション セットの開始/停止  
+-   開始/停止のコレクション セット  
   
 -   パッケージの開始/停止  
   
@@ -113,14 +103,11 @@ sp_syscollector_create_collection_set
   
  既定値*logging_level*は 1 です。  
   
- [  **@description =** ] '*説明*'  
- コレクション セットの説明です。 *説明*は**nvarchar (4000)** 既定値は NULL です。  
+`[ @description = ] 'description'` コレクション セットの説明です。 *説明*は**nvarchar (4000)** 既定値は NULL です。  
   
- [ **@collection_set_id =** ] *collection_set_id*  
- コレクション セットの一意なローカル識別子を指定します。 *collection_set_id*は**int**出力を含む必要があります。  
+`[ @collection_set_id = ] collection_set_id` コレクション セットの一意なローカル識別子です。 *collection_set_id*は**int**出力を含む必要があります。  
   
- [  **@collection_set_uid =** ] '*collection_set_uid*'  
- コレクション セットの場合は GUID です。 *collection_set_uid*は**uniqueidentifier**出力で、既定値は NULL です。  
+`[ @collection_set_uid = ] 'collection_set_uid'` コレクション セットの GUID です。 *collection_set_uid*は**uniqueidentifier**出力で、既定値は NULL です。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  **0** (成功) または**1** (失敗)  
@@ -133,7 +120,7 @@ sp_syscollector_create_collection_set
   
 ## <a name="examples"></a>使用例  
   
-### <a name="a-creating-a-collection-set-by-using-default-values"></a>A. 既定値を使用してコレクション セットを作成する  
+### <a name="a-creating-a-collection-set-by-using-default-values"></a>A. 既定値を使用して設定コレクションを作成します。  
  次の例では、必須パラメーターのみを指定してコレクション セットを作成します。 `@collection_mode` 必須ではありませんが (キャッシュ済み)、既定のコレクション モードは、スケジュール ID またはスケジュール名のいずれかを指定する必要があります。  
   
 ```  
@@ -148,8 +135,8 @@ EXECUTE dbo.sp_syscollector_create_collection_set
 GO  
 ```  
   
-### <a name="b-creating-a-collection-set-by-using-specified-values"></a>B. 値を指定してコレクション セットを作成する  
- 次の例では、多数のパラメーターの値を指定してコレクション セットを作成します。  
+### <a name="b-creating-a-collection-set-by-using-specified-values"></a>B. 指定した値を使用して設定コレクションを作成します。  
+ 次の例では、多くのパラメーターの値を指定してコレクション セットを作成します。  
   
 ```  
 USE msdb;  

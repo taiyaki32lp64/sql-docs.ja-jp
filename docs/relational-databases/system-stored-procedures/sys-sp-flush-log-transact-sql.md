@@ -19,15 +19,14 @@ helpviewer_keywords:
 ms.assetid: 75cc9f52-3b1f-4754-b1e7-ce0dd3323bc9
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: fba195d53911264716c73b54ea8c639ca37951e6
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: 61c4cceab6c816d63226216a54d4f647e92e592d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52418313"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68066685"
 ---
-# <a name="sysspflushlog-transact-sql"></a>sys.sp_flush_log (Transact-SQL)
+# <a name="sysspflushlog-transact-sql"></a>sys.sp_flush_log (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
   現在のデータベースのトランザクション ログをディスクに書き出します。これによって、以前にコミットされた遅延持続性トランザクションがすべてメモリからディスクに書き込まれます。  
@@ -50,7 +49,7 @@ sys.sp_flush_log
  [なし] :  
   
 ## <a name="return-code-values"></a>リターン コードの値  
- リターン コードが 1 の場合は成功を示します。  それ以外の値は失敗を示します。  
+ 1 のリターン コードでは、成功を示します。  その他の値では、エラーを示します。  
   
 ## <a name="result-sets"></a>結果セット  
  [なし] :  

@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 6debd41d-9f4c-4f4c-a44b-2993da5306f0
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 97179574407dca56026f9d5216e4978069cffc1e
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 6902b82c74e953d6009d7e5352608477d92122d6
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52527329"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68051133"
 ---
 # <a name="errors-and-batches"></a>エラーおよびバッチ
 SQL ステートメントのバッチの実行中にエラーが発生したときに次の 4 つの結果の 1 つは可能です。 (可能な各結果はデータ ソースに固有では、バッチ内に含まれるステートメントにも依存)。  

@@ -15,16 +15,15 @@ helpviewer_keywords:
 ms.assetid: 1ee59754-59c8-48e2-a4fb-242fa788c1f9
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: a3a8bf1b5817156bb21b9ceddf9d68400d85d7b1
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 23208742a3c103bd25a38477a55106485fea018d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47798590"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67918910"
 ---
 # <a name="error-visual-c-syntax-index-with-import"></a>エラー (Visual C 構文のインデックスで #import)
-## <a name="properties"></a>[プロパティ]  
+## <a name="properties"></a>Properties  
   
 ```  
 _bstr_t GetDescription( );  
@@ -49,5 +48,5 @@ _bstr_t GetSQLState( );
 __declspec(property(get=GetSQLState)) _bstr_t SQLState;  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [Error オブジェクト](../../../ado/reference/ado-api/error-object.md)

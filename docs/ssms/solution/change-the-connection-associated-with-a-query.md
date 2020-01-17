@@ -13,15 +13,14 @@ helpviewer_keywords:
 - projects [SQL Server Management Studio], query connections
 - query associations [SQL Server Management Studio]
 ms.assetid: 7b8851b8-eccb-4e6c-944a-68fa90fc5870
-author: stevestein
-ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 9fa1094b16041e038b58a967ee6841e663fcd628
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: df01100b7e98d9891aae39a3e5f85ac0358f3e44
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47605190"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68258050"
 ---
 # <a name="change-the-connection-associated-with-a-query"></a>クエリに関連付けられた接続の変更
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

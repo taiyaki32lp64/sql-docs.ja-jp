@@ -1,5 +1,5 @@
 ---
-title: 要素 (DTA) のインデックスの名前を付けます |Microsoft Docs
+title: Index の Name 要素 (DTA) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -12,15 +12,14 @@ dev_langs:
 helpviewer_keywords:
 - Name element
 ms.assetid: 2300e9cf-f0a8-49e6-b1f5-45ffe03ccb5f
-author: stevestein
-ms.author: sstein
-manager: craigg
-ms.openlocfilehash: bbe942dcbea82432e9182af07fe362d32dda8494
-ms.sourcegitcommit: 0f7cf9b7ab23df15624d27c129ab3a539e8b6457
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: f2d9ba05cb38d98823d6bf37cab92194e9e610d1
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51291269"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68034715"
 ---
 # <a name="name-element-for-index-dta"></a>Index の Name 要素 (DTA)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

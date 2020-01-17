@@ -15,11 +15,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 4e18ce61356947754423cfb878cf47f90534b40f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48146912"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62869222"
 ---
 # <a name="mssqlserver233"></a>MSSQLSERVER_233
     
@@ -32,7 +32,7 @@ ms.locfileid: "48146912"
 |イベント ソース|MSSQLSERVER|  
 |コンポーネント|SQLEngine|  
 |シンボル名||  
-|メッセージ テキスト|サーバーとの接続は正常に確立されましたが、ログイン プロセスでエラーが発生しました。 (プロバイダー: 共有メモリ プロバイダー、エラー: 0 - パイプの他端にプロセスがありません。) (Microsoft SQL Server、エラー: 233)|  
+|メッセージ テキスト|サーバーとの接続は正常に確立されましたが、ログイン プロセスでエラーが発生しました。 (プロバイダー:共有メモリ プロバイダー、エラー:0 - パイプの他端にプロセスがありません。) (Microsoft SQL Server、エラー:233)|  
   
 ## <a name="explanation"></a>説明  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] クライアントがサーバーに接続できません。 このエラーは、サーバーがリモート接続を許可するように構成されていないことが原因で発生することがあります。  

@@ -14,23 +14,23 @@ helpviewer_keywords:
 - SSIS Script component, configuring
 - Script component [Integration Services], configuring
 ms.assetid: 586dd799-f383-4d6d-b1a1-f09233d14f0a
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: a702321888ad49a9ca5e3bea90abdde6924c8dc8
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 1b2b588c61742d5ab9c57d934b0f4f11230f1ca5
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53360104"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62894816"
 ---
 # <a name="configuring-the-script-component-in-the-script-component-editor"></a>スクリプト コンポーネント エディターでのスクリプト コンポーネントの構成
-  スクリプト コンポーネント内でカスタム コードを記述する前に、作成するデータ フロー コンポーネントの種類 (変換元、変換、または変換先) を選択し、**[スクリプト変換エディター]** でスクリプト コンポーネントのメタデータおよびプロパティを構成する必要があります。  
+  スクリプト コンポーネント内でカスタム コードを記述する前に、作成するデータ フロー コンポーネントの種類 (変換元、変換、または変換先) を選択し、 **[スクリプト変換エディター]** でスクリプト コンポーネントのメタデータおよびプロパティを構成する必要があります。  
   
 ## <a name="selecting-the-type-of-component-to-create"></a>作成するコンポーネントの種類の選択  
- [!INCLUDE[ssIS](../../../includes/ssis-md.md)] デザイナーの [データ フロー] ペインにスクリプト コンポーネントを追加すると、**[スクリプト コンポーネントの種類を選択]** ダイアログ ボックスが表示されます。 コンポーネントをあらかじめ、変換元、変換、または変換先として構成しておきます。 最初にこれを選択したら、引き続き **[スクリプト変換エディター]** でスクリプト コンポーネントを構成できます。  
+ [!INCLUDE[ssIS](../../../includes/ssis-md.md)] デザイナーの [データ フロー] ペインにスクリプト コンポーネントを追加すると、 **[スクリプト コンポーネントの種類を選択]** ダイアログ ボックスが表示されます。 コンポーネントをあらかじめ、変換元、変換、または変換先として構成しておきます。 最初にこれを選択したら、引き続き **[スクリプト変換エディター]** でスクリプト コンポーネントを構成できます。  
   
- スクリプト コンポーネントの既定のスクリプト言語を設定するには、**[オプション]** ダイアログ ボックスの **[全般]** ページにある **[スクリプト言語]** オプションを使用します。 詳細については、「 [General Page](../../general-page-of-integration-services-designers-options.md)」を参照してください。  
+ スクリプト コンポーネントの既定のスクリプト言語を設定するには、 **[オプション]** ダイアログ ボックスの **[全般]** ページにある **[スクリプト言語]** オプションを使用します。 詳細については、「 [General Page](../../general-page-of-integration-services-designers-options.md)」を参照してください。  
   
 ## <a name="understanding-the-two-design-time-modes"></a>デザイン時の 2 つのモードについて  
  [!INCLUDE[ssIS](../../../includes/ssis-md.md)] デザイナーでは、スクリプト コンポーネントにメタデータ デザイン モードとコード デザイン モードの 2 つのモードがあります。  
@@ -47,7 +47,7 @@ ms.locfileid: "53360104"
  カスタム エディターで構成する必要のあるプロパティは、スクリプト コンポーネントの使用法に応じて異なります。 スクリプト コンポーネントは、変換元、変換、または変換先として構成できます。 コンポーネントの使用方法に応じて、入力または出力のどちらか、またはその両方がサポートされます。 記述するカスタム コードでは、入力および出力の行と列が処理されます。  
   
 ### <a name="inputs-columns-page-of-the-script-transformation-editor"></a>[スクリプト変換エディター] の [入力列] ページ  
- 変換および変換先では、**[スクリプト変換エディター]** の **[入力列]** ページが表示されます。変換元では表示されません。 このページでは、使用できる入力列から、使用するカスタム スクリプトを選択し、その入力列に読み取り専用でアクセスするか、または読み取り/書き込みでアクセスするかを指定します。  
+ 変換および変換先では、 **[スクリプト変換エディター]** の **[入力列]** ページが表示されます。変換元では表示されません。 このページでは、使用できる入力列から、使用するカスタム スクリプトを選択し、その入力列に読み取り専用でアクセスするか、または読み取り/書き込みでアクセスするかを指定します。  
   
  このメタデータに基づいて生成されるコード プロジェクトでは、BufferWrapper プロジェクト アイテムに、各入力のクラスが含まれます。このクラスには、選択した各入力列用の型指定されたアクセサー プロパティが含まれています。 たとえば、整数値を選択する**CustomerID**列と文字列**CustomerName**という名前の入力からの列`CustomerInput`、BufferWrapper プロジェクト アイテムが含まれます、`CustomerInput`クラス派生した<xref:Microsoft.SqlServer.Dts.Pipeline.ScriptBuffer>、および`CustomerInput`クラスが名前付き整数のプロパティを公開**CustomerID**という名前の文字列プロパティと**CustomerName**します。 この規則により、次のような型チェック付きのコードが記述できます。  
   
@@ -59,7 +59,7 @@ Dim currentCustomerName as String = CustomerInput.CustomerName
  特定の種類のデータ フロー コンポーネントの入力列を構成する方法の詳細については、「[特定の種類のスクリプト コンポーネントの開発](../../extending-packages-scripting-data-flow-script-component-types/developing-specific-types-of-script-components.md)」で、該当する例を参照してください。  
   
 ### <a name="inputs-and-outputs-page-of-the-script-transformation-editor"></a>[スクリプト変換エディター] の [入力および出力] ページ  
- 変換元、変換、および変換先では、**[スクリプト変換エディター]** の **[入力および出力]** ページが表示されます。 このページでは、カスタム スクリプトで使用する入力、出力、および出力列を追加、削除、および構成します。ただし、次のような制限があります。  
+ 変換元、変換、および変換先では、 **[スクリプト変換エディター]** の **[入力および出力]** ページが表示されます。 このページでは、カスタム スクリプトで使用する入力、出力、および出力列を追加、削除、および構成します。ただし、次のような制限があります。  
   
 -   スクリプト コンポーネントを変換元として使用する場合、入力はありませんが複数の出力がサポートされます。  
   
@@ -69,7 +69,7 @@ Dim currentCustomerName as String = CustomerInput.CustomerName
   
  このメタデータに基づいて生成されるコード プロジェクトでは、BufferWrapper プロジェクト アイテムに、各入力および出力のクラスが含まれます。 という名前の出力を作成する場合など`CustomerOutput`、BufferWrapper プロジェクト アイテムが含まれます、`CustomerOutput`から派生したクラス<xref:Microsoft.SqlServer.Dts.Pipeline.ScriptBuffer>、および`CustomerOutput`クラスが作成された各出力列の型指定されたアクセサー プロパティを格納します。  
   
- 出力列は、**[入力および出力]** ページでのみ構成できます。 変換および変換先の入力列は、**[入力列]** ページで選択できます。 BufferWrapper プロジェクト アイテムで作成された、型指定されたアクセサー プロパティは、出力列の書き込み専用プロパティです。 入力列のアクセサー プロパティは、**[入力列]** ページで各列に選択した使用法の種類に応じて、読み取り専用または読み取り/書き込みのプロパティになります。  
+ 出力列は、 **[入力および出力]** ページでのみ構成できます。 変換および変換先の入力列は、 **[入力列]** ページで選択できます。 BufferWrapper プロジェクト アイテムで作成された、型指定されたアクセサー プロパティは、出力列の書き込み専用プロパティです。 入力列のアクセサー プロパティは、 **[入力列]** ページで各列に選択した使用法の種類に応じて、読み取り専用または読み取り/書き込みのプロパティになります。  
   
  特定の種類のデータ フロー コンポーネントの入力および出力を構成する方法の詳細については、「[特定の種類のスクリプト コンポーネントの開発](../../extending-packages-scripting-data-flow-script-component-types/developing-specific-types-of-script-components.md)」で、該当する例を参照してください。  
   
@@ -128,7 +128,7 @@ Dim myADONETConnectionManager As IDTSConnectionManager100 = _
   
 ![Integration Services のアイコン (小)](../../media/dts-16.gif "Integration Services アイコン (小)")**Integration Services の日付を維持します。**<br /> マイクロソフトが提供する最新のダウンロード、アーティクル、サンプル、ビデオ、およびコミュニティで選択されたソリューションについては、MSDN の [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] のページを参照してください。<br /><br /> [MSDN の Integration Services のページを参照してください。](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> これらの更新が自動で通知されるようにするには、ページの RSS フィードを定期受信します。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [スクリプト コンポーネントのコーディングおよびデバッグ](coding-and-debugging-the-script-component.md)  
   
   

@@ -11,15 +11,15 @@ f1_keywords:
 helpviewer_keywords:
 - Data Profiling Task Editor
 ms.assetid: eec15906-d757-4079-b2f6-aca4e52b3b4c
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 7bef22daeb42b0c08e7668dec533e663057f1a8b
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 8462f85dc6c804020f12b9bc989d683c5a4ad0ba
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52805034"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62832226"
 ---
 # <a name="data-profiling-task-editor-general-page"></a>[データ プロファイル タスク エディター] ([全般] ページ)
   **[データ プロファイル タスク エディター]** の **[全般]** ページを使用すると、次のオプションを構成できます。  
@@ -52,8 +52,8 @@ ms.locfileid: "52805034"
   
 |値|説明|  
 |-----------|-----------------|  
-|**[FileConnection]**|ファイル接続マネージャーで指定された場所にあるファイルにプロファイル出力を保存します。<br /><br /> 注:使用するファイル接続マネージャーを指定する、**先**オプション。|  
-|**変数**|プロファイル出力をパッケージ変数に保存します。<br /><br /> 注:使用するパッケージ変数を指定する、**先**オプション。|  
+|**[FileConnection]**|ファイル接続マネージャーで指定された場所にあるファイルにプロファイル出力を保存します。<br /><br /> 注:使用するファイル接続マネージャーは **[Destination]** オプションで指定します。|  
+|**変数**|プロファイル出力をパッケージ変数に保存します。<br /><br /> 注:使用するパッケージ変数は **[Destination]** オプションで指定します。|  
   
  **変換先**  
  データ プロファイル出力を含むファイル接続マネージャーまたはパッケージ変数を指定します。  
@@ -76,7 +76,7 @@ ms.locfileid: "52805034"
  Data Profile Viewer を開きます。 スタンドアロンの Data Profile Viewer は、データ プロファイル タスクのデータ プロファイル出力を表示します。 データ プロファイル出力は、 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] パッケージ内でデータ プロファイル タスクを実行してデータ プロファイルを計算した後に表示できます。  
   
 > [!NOTE]  
->  *\<ドライブ>*:\Program Files (x86) | Program Files\Microsoft SQL Server\110\DTS\Binn フォルダーの DataProfileViewer.exe を実行して、Data Profile Viewer を開くこともできます。  
+>  *\<ドライブ>* :\Program Files (x86) | Program Files\Microsoft SQL Server\110\DTS\Binn フォルダーの DataProfileViewer.exe を実行して、Data Profile Viewer を開くこともできます。  
   
 ## <a name="see-also"></a>参照  
  [単一テーブル クイック プロファイル フォーム &#40;データ プロファイル タスク&#41;](single-table-quick-profile-form-data-profiling-task.md)   

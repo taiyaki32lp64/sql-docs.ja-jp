@@ -1,6 +1,5 @@
 ---
-title: WITHOUT_ARRAY_WRAPPER オプションを使用して JSON から角かっこを削除する | Microsoft Docs
-ms.custom: ''
+title: WITHOUT_ARRAY_WRAPPER オプションを使用して JSON から角かっこを削除する
 ms.date: 06/02/2016
 ms.prod: sql
 ms.reviewer: genemi
@@ -11,16 +10,16 @@ helpviewer_keywords:
 ms.assetid: aa86c2d1-458e-465f-abfa-75470137d054
 author: jovanpop-msft
 ms.author: jovanpop
-manager: craigg
+ms.custom: seo-dt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 9269f629a3d8212fb398485dcadc3a0edf2e8d94
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 7de18ecb5bf47c8d1fc03f95716bbebfb27cf7ae
+ms.sourcegitcommit: 15fe0bbba963d011472cfbbc06d954d9dbf2d655
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56016673"
+ms.lasthandoff: 11/14/2019
+ms.locfileid: "74096092"
 ---
-# <a name="remove-square-brackets-from-json---withoutarraywrapper-option"></a>WITHOUT_ARRAY_WRAPPER オプションを使用して JSON から角かっこを削除する
+# <a name="remove-square-brackets-from-json---without_array_wrapper-option"></a>WITHOUT_ARRAY_WRAPPER オプションを使用して JSON から角かっこを削除する
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
 既定で **FOR JSON** 句の JSON 出力を囲んでいる角かっこを削除するには、 **WITHOUT_ARRAY_WRAPPER** オプションを指定します。 単一要素の配列の代わりに、単一の JSON オブジェクトを出力として生成するには、このオプションと単一行の結果を使います。

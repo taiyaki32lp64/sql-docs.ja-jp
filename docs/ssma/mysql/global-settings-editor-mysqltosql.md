@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 1ac003b5-493a-49a5-be2b-fedbc6e2cc11
 author: Shamikg
 ms.author: Shamikg
-manager: craigg
-ms.openlocfilehash: 7cfe49aaade3a2854a62c8927102859a7f37ca9d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a8fd4998a491d17c493588acfa7df9092f66f6e4
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47815961"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68075412"
 ---
 # <a name="global-settings-editor-mysqltosql"></a>グローバル設定 (エディター) (MySQLToSQL)
 エディター ページを使用して、**グローバル設定** ダイアログ ボックスのコード エディター ウィンドウの設定を指定します。  

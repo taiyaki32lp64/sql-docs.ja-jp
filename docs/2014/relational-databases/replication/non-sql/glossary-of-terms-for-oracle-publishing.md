@@ -13,11 +13,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: fa1959a4f0fa6a2afa2fdf585d0c82d1238a019b
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52781124"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63022391"
 ---
 # <a name="glossary-of-terms-for-oracle-publishing"></a>Oracle パブリッシングの用語
   Oracle パブリッシングの構成および管理を行う場合には、以下に示す Oracle の用語を理解している必要があります。 Oracle の用語の完全な一覧については、Oracle のオンライン マニュアルを参照してください。  
@@ -55,7 +55,7 @@ ms.locfileid: "52781124"
  ユーザー スキーマは、特定のデータベース オブジェクトのセットを所有するデータベース ユーザーとして考えることができます。 レプリケーションの管理ユーザー スキーマは、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] のレプリケーション処理により Oracle データベース内で作成されたすべてのオブジェクトを所有します。ただし、パブリック シノニム **MSSQLSERVERDISTRIBUTOR** は除きます。  
   
 ## <a name="see-also"></a>参照  
- [Configure an Oracle Publisher (Oracle パブリッシャーの構成)](configure-an-oracle-publisher.md)   
+ [Oracle パブリッシャーの構成](configure-an-oracle-publisher.md)   
  [Oracle パブリッシャー上で作成されたオブジェクト](objects-created-on-the-oracle-publisher.md)   
  [SQL Server 以外のパブリッシャー](non-sql-server-publishers.md)   
  [Oracle Publishing Overview](oracle-publishing-overview.md)  

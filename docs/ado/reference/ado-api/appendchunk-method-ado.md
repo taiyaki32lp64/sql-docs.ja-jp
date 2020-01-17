@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: c648b5a8-d4f1-4d16-836e-3957feb03617
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 4ac0174a223571e29973ad854f9350a6e60f1de9
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: f9d575460daf0f801f6d6dd2e80b0c67f4886dc7
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47812000"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67920561"
 ---
 # <a name="appendchunk-method-ado"></a>AppendChunk メソッド (ADO)
 大きなテキストまたはバイナリ データにデータを追加します。[フィールド](../../../ado/reference/ado-api/field-object.md)、または、[パラメーター](../../../ado/reference/ado-api/parameter-object.md)オブジェクト。  
@@ -65,7 +64,7 @@ object.AppendChunk Data
 |-|-|  
 |[Field オブジェクト](../../../ado/reference/ado-api/field-object.md)|[Parameter オブジェクト](../../../ado/reference/ado-api/parameter-object.md)|  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [AppendChunk および GetChunk メソッドの例 (VB)](../../../ado/reference/ado-api/appendchunk-and-getchunk-methods-example-vb.md)   
  [AppendChunk および GetChunk メソッドの例 (vc++)](../../../ado/reference/ado-api/appendchunk-and-getchunk-methods-example-vc.md)   
  [Attributes プロパティ (ADO)](../../../ado/reference/ado-api/attributes-property-ado.md)   

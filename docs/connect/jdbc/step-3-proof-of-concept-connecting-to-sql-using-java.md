@@ -1,7 +1,7 @@
 ---
 title: 'ステップ 3: Java を使用した SQL への接続を概念実証する | Microsoft Docs'
 ms.custom: ''
-ms.date: 01/21/2019
+ms.date: 08/12/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,21 +10,20 @@ ms.topic: conceptual
 ms.assetid: 1504a348-1774-47ab-8967-288ec3985ae4
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 305be93a342b66a18cae6de4f60ba9efa98e1738
-ms.sourcegitcommit: 879a5c6eca99e0e9cc946c653d4ced165905d9c6
+ms.openlocfilehash: a0def25f7fc19344c3548353bbd15ffa27e65caa
+ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/05/2019
-ms.locfileid: "55736903"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "69027509"
 ---
 # <a name="step-3-proof-of-concept-connecting-to-sql-using-java"></a>ステップ 3: Java を使用した SQL への接続を概念実証する
   
 この例は概念実証としてのみ検討してください。 わかりやすさのためにサンプル コードは簡略化されており、Microsoft が推奨するベスト プラクティスを表しているとは限りません。  
   
-## <a name="step-1--connect"></a>手順 1: 接続する  
+## <a name="step-1-connect"></a>手順 1: 接続する  
   
-接続クラスを使用すると、SQL Database に接続します。   
+接続クラスを使用して SQL Database に接続します。   
   
 ```java  
 import java.sql.Connection;
@@ -56,7 +55,7 @@ public class SQLDatabaseConnection {
 ```  
   
 ## <a name="step-2-execute-a-query"></a>手順 2: クエリの実行  
-このサンプルでは、Azure SQL Database に接続する、SELECT ステートメントを実行し、選択した行を返します。   
+このサンプルでは、Azure SQL Database に接続し、SELECT ステートメントを実行して、選択した行を返します。   
   
 ```java  
 import java.sql.Connection;
@@ -100,8 +99,8 @@ public class SQLDatabaseConnection {
 }
 ```  
   
-## <a name="step-3-insert-a-row"></a>手順 3:行を挿入します。  
-この例で INSERT ステートメントを実行、パラメーターを渡して、主キーの自動生成された値を取得します。   
+## <a name="step-3-insert-a-row"></a>手順 3: 行を挿入する  
+この例では、INSERT ステートメントを実行し、パラメーターを渡して、自動生成された主キー値を取得します。   
   
 ```java  
 import java.sql.Connection;
@@ -150,4 +149,4 @@ public class SQLDatabaseConnection {
 ```  
   
 ## <a name="additional-samples"></a>その他のサンプル  
-[サンプル JDBC Driver アプリケーション](../../connect/jdbc/sample-jdbc-driver-applications.md)
+[サンプル JDBC ドライバー アプリケーション](../../connect/jdbc/sample-jdbc-driver-applications.md)

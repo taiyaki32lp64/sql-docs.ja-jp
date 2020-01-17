@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: a9b287f5-04b0-4514-8143-f67879ca9842
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 3e626c924e7b84312877b47f811329e215f47e42
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: bee7d185d5f598a2f0a086bb7e3bea49ddfff88c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47846863"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67924911"
 ---
 # <a name="more-about-recordset-persistence"></a>レコードセットの保持に関する詳細情報
 ADO レコード セット オブジェクトのサポートの内容を格納する、**レコード セット**を使用してファイル内のオブジェクトその[保存](../../../ado/reference/ado-api/save-method.md)メソッド。 永続的に保存されたファイルがローカルに存在してドライブ、サーバー、またはサイトとして、Web 上の URL。 ファイルを復元して、いずれかで、後で、[オープン](../../../ado/reference/ado-api/open-method-ado-recordset.md)のメソッド、 **Recordset**オブジェクトまたは[Execute](../../../ado/reference/ado-api/execute-method-ado-connection.md)のメソッド、[接続](../../../ado/reference/ado-api/connection-object-ado.md)オブジェクト。  

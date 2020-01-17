@@ -12,12 +12,12 @@ ms.assetid: c08c26d8-5a62-487e-a4ee-4c529e4f9287
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 8e22c0edc9c88871c4dee79ba927eb39ea9eab41
-ms.sourcegitcommit: 04dd0620202287869b23cc2fde998a18d3200c66
+ms.openlocfilehash: e0f9a295cb5c49b9a88d70187cd49527df5ba83b
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "52641333"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62811677"
 ---
 # <a name="configure-the-default-language-server-configuration-option"></a>default language サーバー構成オプションの構成
   このトピックでは、 **または** を使用して、 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] の [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] default language [!INCLUDE[tsql](../../includes/tsql-md.md)]サーバー構成オプションを構成する方法について説明します。 **default language** は、新しく作成したすべてのログインで使用される既定の言語を指定するオプションです。 既定の言語を設定するには、目的の言語の **langid** 値を指定します。 **langid** 値は、 **sys.syslanguages** 互換性ビューをクエリすることによって取得できます。  
@@ -36,7 +36,7 @@ ms.locfileid: "52641333"
   
      [Transact-SQL](#TsqlProcedure)  
   
--   **補足情報:**[Default language オプションを構成した後](#FollowUp)  
+-   **補足情報:** [default language オプションを構成した後](#FollowUp)  
   
 ##  <a name="BeforeYouBegin"></a> はじめに  
   
@@ -53,11 +53,11 @@ ms.locfileid: "52641333"
   
 #### <a name="to-configure-the-default-language-option"></a>default language オプションを構成するには  
   
-1.  オブジェクト エクスプローラーで、サーバーを右クリックし、**[プロパティ]** をクリックします。  
+1.  オブジェクト エクスプローラーで、サーバーを右クリックし、 **[プロパティ]** をクリックします。  
   
 2.  **[その他のサーバーの設定]** ノードをクリックします。  
   
-3.   **[ユーザーの既定の言語]** ボックスで、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] がシステム メッセージの表示に使用する言語を選択します。  
+3.  **[ユーザーの既定の言語]** ボックスで、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] がシステム メッセージの表示に使用する言語を選択します。  
   
      既定の言語は English (英語) です。  
   
@@ -71,7 +71,7 @@ ms.locfileid: "52641333"
   
 3.  次の例をコピーしてクエリ ウィンドウに貼り付け、 **[実行]** をクリックします。 この例では、 [sp_configure](/sql/relational-databases/system-stored-procedures/sp-configure-transact-sql) を使用して、 `default language` オプションをフランス語 (`2`) に設定する方法を示します。  
   
-```tsql  
+```sql  
 USE AdventureWorks2012 ;  
 GO  
 EXEC sp_configure 'default language', 2 ;  
@@ -82,10 +82,10 @@ GO
   
  詳細については、「 [サーバー構成オプション &#40;SQL Server&#41;](server-configuration-options-sql-server.md)」を参照してください。  
   
-##  <a name="FollowUp"></a> フォローしてください：Default language オプションを構成した後  
+##  <a name="FollowUp"></a>補足情報: default language オプションを構成した後  
  新しい設定は、サーバーを再起動しなくてもすぐに有効になります。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [CREATE LOGIN &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-login-transact-sql)   
  [ALTER LOGIN &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-login-transact-sql)   
  [CREATE USER &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-user-transact-sql)   

@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: f0bd6283-83ab-4a0a-b825-ec4cdccf03e1
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: fd044a5ea530a1b932561fcd1fe60d52b108ad09
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: f6fbf7a0cf66db8bbcc2f2f69d603bc5d32fb74d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47793751"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67980370"
 ---
 # <a name="getresultsetholdability-method-sqlserverdatabasemetadata"></a>getResultSetHoldability メソッド (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -42,7 +41,7 @@ public int getResultSetHoldability()
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- この getResultSetHoldability メソッドは、java.sql.DatabaseMetaData インターフェイスで getResultSetHoldability メソッドによって指定されます。  
+ この getResultSetHoldability メソッドは、getResultSetHoldability メソッドによって、java メタデータインターフェイスで指定されます。  
   
  [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)] を [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] データベースと共に使用している場合、このメソッドは 1 が返されます。これは、定数 ResultSet.HOLD_CURSORS_OVER_COMMIT と等価です。  
   

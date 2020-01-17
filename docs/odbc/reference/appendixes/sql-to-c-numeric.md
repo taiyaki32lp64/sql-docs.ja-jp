@@ -1,5 +1,5 @@
 ---
-title: 'SQL c: からNumeric |Microsoft Docs'
+title: 'SQL から C へ: Numeric |Microsoft Docs'
 ms.custom: ''
 ms.date: 01/19/2019
 ms.prod: sql
@@ -14,15 +14,14 @@ helpviewer_keywords:
 ms.assetid: 76f8b5d5-4bd0-4dcb-a90a-698340e0d36e
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 9abd536110222f8e30a781b6d648402335837f61
-ms.sourcegitcommit: 480961f14405dc0b096aa8009855dc5a2964f177
+ms.openlocfilehash: a23e60b161c09367cfb079cea1f7ca146b4ebee5
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/22/2019
-ms.locfileid: "54420007"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68056851"
 ---
-# <a name="sql-to-c-numeric"></a>SQL c: から数値
+# <a name="sql-to-c-numeric"></a>SQL から C へ: 数値
 
 識別子の数値の ODBC SQL データ型に次のとおりです。
 
@@ -45,7 +44,7 @@ ms.locfileid: "54420007"
 |SQL_C_FLOAT<br /><br /> SQL_C_DOUBLE|データは、数の変換先のデータ型の範囲内で、[a]<br /><br /> データが数の変換先のデータ型の範囲外 [a]|データ<br /><br /> 未定義。|C データ型のサイズ<br /><br /> 未定義。|n/a<br /><br /> 22003|  
 |SQL_C_BIT|データが 0 または 1 [a]<br /><br /> データが 2 よりも小さいと等しくない [a] の 1、0 より大きい<br /><br /> データが 0 未満またはより大きい、または [a] の 2|データ<br /><br /> 切り捨てられたデータ<br /><br /> 未定義。|1 [b]<br /><br /> 1 [b]<br /><br /> 未定義。|n/a<br /><br /> 01S07<br /><br /> 22003|  
 |SQL_C_BINARY|データのバイト長 < = *BufferLength*<br /><br /> データのバイト長 > *BufferLength*|データ<br /><br /> 未定義。|データの長さ<br /><br /> 未定義。|n/a<br /><br /> 22003|  
-|SQL_C_INTERVAL_MONTH[c] SQL_C_INTERVAL_YEAR[c] SQL_C_INTERVAL_DAY[c] SQL_C_INTERVAL_HOUR[c] SQL_C_INTERVAL_MINUTE[c] SQL_C_INTERVAL_SECOND[c]|データは切り捨てられません<br /><br /> 秒の小数部分が切り捨てられます<br /><br /> 数値の切り捨ての全体の一部|データ<br /><br /> 切り捨てられたデータ<br /><br /> 未定義。|バイト単位でデータの長さ<br /><br /> バイト単位でデータの長さ<br /><br /> 未定義。|n/a<br /><br /> 01S07<br /><br /> 22015|  
+|SQL_C_INTERVAL_MONTH [c] SQL_C_INTERVAL_YEAR [c] [c] SQL_C_INTERVAL_DAY SQL_C_INTERVAL_HOUR [c] SQL_C_INTERVAL_MINUTE [c] SQL_C_INTERVAL_SECOND [c]|データは切り捨てられません<br /><br /> 秒の小数部分が切り捨てられます<br /><br /> 数値の切り捨ての全体の一部|データ<br /><br /> 切り捨てられたデータ<br /><br /> 未定義。|バイト単位でデータの長さ<br /><br /> バイト単位でデータの長さ<br /><br /> 未定義。|n/a<br /><br /> 01S07<br /><br /> 22015|  
 |SQL_C_INTERVAL_YEAR_TO_MONTH SQL_C_INTERVAL_DAY_TO_HOUR SQL_C_INTERVAL_DAY_TO_MINUTE SQL_C_INTERVAL_DAY_TO_SECOND SQL_C_INTERVAL_HOUR_TO_MINUTE SQL_C_INTERVAL_HOUR_TO_SECOND|数値の切り捨ての全体の一部|未定義。|未定義。|22015|  
   
  [a] の値*BufferLength*この変換は無視されます。 ドライバーでのサイズ **TargetValuePtr* C データ型のサイズです。  

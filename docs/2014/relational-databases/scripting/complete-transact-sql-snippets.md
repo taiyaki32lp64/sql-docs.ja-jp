@@ -1,11 +1,10 @@
 ---
-title: Transact-SQL スニペットの作成 | Microsoft Docs
-ms.custom: ''
+title: Transact-SQL スニペットの作成
+ms.custom: seo-lt-2019
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 helpviewer_keywords:
 - IntelliSense [SQL Server], completing snippets
@@ -15,18 +14,21 @@ ms.assetid: a8316a58-bb57-485e-845f-84c23360314c
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 4e1e6438128398b0210da20f68efcd88bb2f6eec
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 98c72aad94c34f40538670a7a7c8df945a9c4970
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48092572"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75244928"
 ---
 # <a name="complete-transact-sql-snippets"></a>Transact-SQL スニペットの作成
+  
   [!INCLUDE[tsql](../../includes/tsql-md.md)] コード スニペットがスクリプトに挿入されると、スニペットのコンテンツを編集して [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントを作成できます。  
   
 ## <a name="completing-snippets"></a>スニペットの作成  
- [!INCLUDE[tsql](../../includes/tsql-md.md)] スニペットをスクリプトに追加した場合、挿入されたスニペット ステートメントには 1 つ以上の置換ポイントが含まれ、強調表示されます。 置換ポイント上にマウス ポインターを置くと、指定できる構文要素の説明を含むツールヒントが表示されます。 [!INCLUDE[ssDE](../../includes/ssde-md.md)] クエリ エディターは、ソース ファイルを閉じるまで、スニペットを周囲のスクリプトと区別します。 ソース ファイルを閉じるまで、置換ポイントはアクティブのままになります。  
+ 
+  [!INCLUDE[tsql](../../includes/tsql-md.md)] スニペットをスクリプトに追加した場合、挿入されたスニペット ステートメントには 1 つ以上の置換ポイントが含まれ、強調表示されます。 置換ポイント上にマウス ポインターを置くと、指定できる構文要素の説明を含むツールヒントが表示されます。 
+  [!INCLUDE[ssDE](../../includes/ssde-md.md)] クエリ エディターは、ソース ファイルを閉じるまで、スニペットを周囲のスクリプトと区別します。 ソース ファイルを閉じるまで、置換ポイントはアクティブのままになります。  
   
  スニペットによって挿入されたテンプレート コードに追加の構文要素も追加できます。 たとえば、テーブルの作成スニペット テンプレートは、2 列の定義を生成します。3 列以上のテーブルを作成するには、列定義を追加する必要があります。  
   
@@ -38,8 +40,8 @@ ms.locfileid: "48092572"
   
 3.  一覧からアイテムを選択するか、置換を入力します。  
   
-## <a name="see-also"></a>関連項目  
- [Transact-SQL スニペットの挿入](insert-transact-sql-snippets.md)   
- [ブロックの挿入 Transact-SQL スニペットの挿入](insert-surround-with-transact-sql-snippets.md)  
+## <a name="see-also"></a>参照  
+ [Transact-sql スニペットの挿入](insert-transact-sql-snippets.md)   
+ [ブロックの挿入 Transact-sql スニペット](insert-surround-with-transact-sql-snippets.md)  
   
   

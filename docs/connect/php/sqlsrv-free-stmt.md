@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 3c71f432-36ad-41e1-8ac7-587c82539448
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 7188935f0466a58c444f72e02ce541a646e1b41f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a6f062d1237cfc92c5697fa005b3f78268aa48f6
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47610759"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67992718"
 ---
 # <a name="sqlsrvfreestmt"></a>sqlsrv_free_stmt
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - documenting models
@@ -16,12 +15,12 @@ ms.assetid: 0a663e11-e40c-4708-ad18-fabb6c976fa4
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 34cae1b1fa4c63f0de28ad4389c1b2d304fc2d88
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: afe304e3fa76be805a64e9bd662bc21500ac2fa7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48118074"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66081589"
 ---
 # <a name="documenting-mining-models-data-mining-add-ins-for-excel"></a>マイニング モデルのドキュメント化とスケーリング (Excel 用データ マイニング アドイン)
   ![ドキュメント モデルのボタン、データ マイニング リボン](media/dmc-docmodel.gif "モデルのドキュメント化ボタン、データ マイニング リボン")  
@@ -36,7 +35,7 @@ ms.locfileid: "48118074"
   
 3.  **モデルの選択**ダイアログ ボックスは、レポート、モデルを選択しをクリックして**次**します。 実行する必要があります、**ドキュメント モデル**ウィザードを個別に各モデルを文書化します。  
   
-4.  **ドキュメントの詳細の選択** ダイアログ ボックスで、2 つのオプションのいずれかを選択:**情報**または**概要情報**します。  
+4.  **ドキュメントの詳細の選択** ダイアログ ボックスで、2 つのオプションのいずれかを選択します。**情報を入力**または**概要情報**します。  
   
 5.  **[完了]** をクリックします。  
   

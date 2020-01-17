@@ -15,13 +15,12 @@ apitype: DLLExport
 ms.assetid: 21eb3b9a-7d32-455b-89bb-f624198cd202
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: 255d268a179e06959ad852534d7df0c567cc5a25
-ms.sourcegitcommit: ddb682c0061c2a040970ea88c051859330b8ac00
+ms.openlocfilehash: f19226e4945d2f163247b7d94f029a6c5b6ee4af
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51570383"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68091264"
 ---
 # <a name="localdbshareinstance-function"></a>LocalDBShareInstance 関数
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

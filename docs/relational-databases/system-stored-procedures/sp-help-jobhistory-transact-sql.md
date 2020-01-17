@@ -17,15 +17,14 @@ helpviewer_keywords:
 ms.assetid: a944d44e-411b-4735-8ce4-73888d4262d7
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: c355fb36e5bc0562b4e20b48ab2a3f33e182c22c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 10033b2525ba28e79bd31a73bd9e71a7cca15e42
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47742200"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68054931"
 ---
-# <a name="sphelpjobhistory-transact-sql"></a>sp_help_jobhistory (Transact-SQL)
+# <a name="sphelpjobhistory-transact-sql"></a>sp_help_jobhistory (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   マルチサーバー管理ドメインに所属するサーバーのジョブに関する情報を提供します。  
@@ -54,59 +53,44 @@ sp_help_jobhistory [ [ @job_id = ] job_id ]
 ```  
   
 ## <a name="arguments"></a>引数  
- [ **@job_id=** ] *job_id*  
- ジョブの識別番号。 *job_id*は**uniqueidentifier**、既定値は NULL です。  
+`[ @job_id = ] job_id` ジョブの識別番号。 *job_id*は**uniqueidentifier**、既定値は NULL です。  
   
- [ **@job_name=** ] **'***job_name***'**  
- ジョブの名前を指定します。 *job_name*は**sysname**、既定値は NULL です。  
+`[ @job_name = ] 'job_name'` ジョブの名前。 *job_name*は**sysname**、既定値は NULL です。  
   
- [ **@step_id=** ] *step_id*  
- ステップの識別番号を指定します。 *step_id*は**int**、既定値は NULL です。  
+`[ @step_id = ] step_id` ステップの識別番号。 *step_id*は**int**、既定値は NULL です。  
   
- [ **@sql_message_id=** ] *sql_message_id*  
- ジョブの実行時に Microsoft SQL Server で返されるエラー メッセージの識別番号を指定します。 *sql_message_id*は**int**、既定値は NULL です。  
+`[ @sql_message_id = ] sql_message_id` ジョブを実行するときに、Microsoft SQL Server によって返されるエラー メッセージの識別番号。 *sql_message_id*は**int**、既定値は NULL です。  
   
- [ **@sql_severity=** ] *sql_severity*  
- ジョブの実行時に SQL Server で返されるエラー メッセージの重大度を指定します。 *sql_severity*は**int**、既定値は NULL です。  
+`[ @sql_severity = ] sql_severity` ジョブを実行するときに、SQL Server によって返されるエラー メッセージの重大度レベル。 *sql_severity*は**int**、既定値は NULL です。  
   
- [ **@start_run_date=** ] *start_run_date*  
- ジョブを開始した日付を指定します。 *start_run_date*は**int**、既定値は NULL です。 *start_run_date*必要があります形式で入力 yyyymmdd 形式で指定、YYYY は 4 桁の年、MM は 2 桁の月、DD は 2 桁の日の名前。  
+`[ @start_run_date = ] start_run_date` ジョブが開始された日付。 *start_run_date*は**int**、既定値は NULL です。 *start_run_date*必要があります形式で入力 yyyymmdd 形式で指定、YYYY は 4 桁の年、MM は 2 桁の月、DD は 2 桁の日の名前。  
   
- [ **@end_run_date=** ] *end_run_date*  
- ジョブが完了した日付を指定します。 *end_run_date*は**int**、既定値は NULL です。 *end_run_date*必要があります形式で入力 yyyymmdd 形式で指定、YYYY は 4 桁の年、MM は 2 桁の月、DD は 2 桁の日の名前。  
+`[ @end_run_date = ] end_run_date` ジョブが完了した日付。 *end_run_date*は**int**、既定値は NULL です。 *end_run_date*必要があります形式で入力 yyyymmdd 形式で指定、YYYY は 4 桁の年、MM は 2 桁の月、DD は 2 桁の日の名前。  
   
- [ **@start_run_time=** ] *start_run_time*  
- ジョブを開始した時刻を指定します。 *start_run_time*は**int**、既定値は NULL です。 *start_run_time*必要があります形式で入力 hhmmss で、HH は、1 日の 2 文字の 1 時間、MM は、1 日の 2 桁の分 SS は、1 日の 2 桁の秒。  
+`[ @start_run_time = ] start_run_time` ジョブが開始された時刻。 *start_run_time*は**int**、既定値は NULL です。 *start_run_time*必要があります形式で入力 hhmmss で、HH は、1 日の 2 文字の 1 時間、MM は、1 日の 2 桁の分 SS は、1 日の 2 桁の秒。  
   
- [ **@end_run_time=** ] *end_run_time*  
- ジョブが完了した時刻を指定します。 *end_run_time*は**int**、既定値は NULL です。 *end_run_time*必要があります形式で入力 hhmmss で、HH は、1 日の 2 文字の 1 時間、MM は、1 日の 2 桁の分 SS は、1 日の 2 桁の秒。  
+`[ @end_run_time = ] end_run_time` ジョブの実行を完了した時刻。 *end_run_time*は**int**、既定値は NULL です。 *end_run_time*必要があります形式で入力 hhmmss で、HH は、1 日の 2 文字の 1 時間、MM は、1 日の 2 桁の分 SS は、1 日の 2 桁の秒。  
   
- [  **@minimum_run_duration=** ] *minimum_run_duration*  
- ジョブを完了するのに必要な最小時間を指定します。 *minimum_run_duration*は**int**、既定値は NULL です。 *minimum_run_duration*必要があります形式で入力 hhmmss で、HH は、1 日の 2 文字の 1 時間、MM は、1 日の 2 桁の分 SS は、1 日の 2 桁の秒。  
+`[ @minimum_run_duration = ] minimum_run_duration` ジョブの終了までの時間の最小長。 *minimum_run_duration*は**int**、既定値は NULL です。 *minimum_run_duration*必要があります形式で入力 hhmmss で、HH は、1 日の 2 文字の 1 時間、MM は、1 日の 2 桁の分 SS は、1 日の 2 桁の秒。  
   
- [ **@run_status=** ] *run_status*  
- ジョブの実行状態。 *run_status*は**int**、既定値は null の場合、これらの値のいずれかを指定できます。  
+`[ @run_status = ] run_status` ジョブの実行状態。 *run_status*は**int**、既定値は null の場合、これらの値のいずれかを指定できます。  
   
-|値|説明|  
+|[値]|説明|  
 |-----------|-----------------|  
-|**0**|失敗|  
+|**0**|Failed|  
 |**1**|成功しました|  
 |**2**|再試行 (ステップのみ)|  
 |**3**|Canceled|  
-|**4**|実行中メッセージ|  
+|**4**|実行中のメッセージ|  
 |**5**|Unknown|  
   
- [ **@minimum_retries=** ] *minimum_retries*  
- ジョブの実行を再試行する最小回数を指定します。 *minimum_retries*は**int**、既定値は NULL です。  
+`[ @minimum_retries = ] minimum_retries` ジョブが実行を再試行する最小回数。 *minimum_retries*は**int**、既定値は NULL です。  
   
- [ **@oldest_first=** ] *oldest_first*  
- ジョブを古い順に出力するかどうかを指定します。 *oldest_first*は**int**、既定値は**0**、最初、最新のジョブを提供します。 **1**最初に、最も古いジョブを表示します。  
+`[ @oldest_first = ] oldest_first` 最初に出力された最も古いジョブを表示するかどうかです。 *oldest_first*は**int**、既定値は**0**、最初、最新のジョブを提供します。 **1**最初に、最も古いジョブを表示します。  
   
- [ **@server=** ] **'***server***'**  
- ジョブを実行したサーバーの名前を示します。 *server*は**nvarchar (30)**、既定値は NULL です。  
+`[ @server = ] 'server'` ジョブが実行されたサーバーの名前。 *server*は**nvarchar (30)** 、既定値は NULL です。  
   
- [  **@mode=** ] **'***モード***'**  
- SQL Server が、結果セット内のすべての列を出力するかどうか (**完全**) または列の概要。 *モード*は**varchar (7)**、既定値は**概要**します。  
+`[ @mode = ] 'mode'` SQL Server が、結果セット内のすべての列を出力するかどうか (**完全**) または列の概要。 *モード*は**varchar (7)** 、既定値は**概要**します。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  **0** (成功) または**1** (失敗)  
@@ -118,21 +102,21 @@ sp_help_jobhistory [ [ @job_id = ] job_id ]
 |-----------------|---------------|-----------------|  
 |**instance_id**|**int**|履歴エントリの識別番号。|  
 |**job_id**|**uniqueidentifier**|ジョブ識別番号。|  
-|**job_name**|**sysname**|ジョブ名。|  
+|**job_name**|**sysname**|ジョブの名前。|  
 |**step_id**|**int**|ステップ識別番号 (なります**0**ジョブ履歴の)。|  
 |**step_name**|**sysname**|ステップ名。ジョブ履歴の場合は NULL です。|  
 |**sql_message_id**|**int**|[!INCLUDE[tsql](../../includes/tsql-md.md)] ステップの場合、コマンドの実行中に最も新しく発生した [!INCLUDE[tsql](../../includes/tsql-md.md)] エラーの番号。|  
 |**sql_severity**|**int**|[!INCLUDE[tsql](../../includes/tsql-md.md)] ステップの場合、コマンドの実行中に発生した最も重大な [!INCLUDE[tsql](../../includes/tsql-md.md)] エラーの重大度。|  
 |**message**|**nvarchar(1024)**|ジョブまたはステップの履歴メッセージ。|  
 |**run_status**|**int**|ジョブまたはステップの結果。|  
-|**run_date**|**int**|ジョブまたはステップの実行を開始した日付。|  
-|**run_time**|**int**|ジョブまたはステップの実行を開始した時刻。|  
+|**run_date**|**int**|日付と、ジョブまたはステップが実行を開始します。|  
+|**run_time**|**int**|ジョブまたはステップが実行を開始します。|  
 |**run_duration**|**int**|ジョブまたはステップを実行してからの経過時間 (HHMMSS 形式)。|  
-|**operator_emailed**|**nvarchar(20)**|このジョブに関する電子メールを送信したオペレーター。ステップ履歴の場合は NULL です。|  
-|**operator_netsent**|**nvarchar(20)**|このジョブに関するネットワーク メッセージを送信したオペレーター。ステップ履歴の場合は NULL です。|  
-|**operator_paged**|**nvarchar(20)**|このジョブに関するページを送信したオペレーター。ステップ履歴の場合は NULL です。|  
-|**retries_attempted**|**int**|ステップの再試行回数。ジョブ履歴の場合は常に 0 です。|  
-|**server**|**nvarchar(30)**|ステップまたはジョブを実行するサーバー。 常に (**ローカル**)。|  
+|**operator_emailed**|**nvarchar(20)**|このジョブに関する電子メールを送信したオペレーター (ステップ履歴の場合は NULL)。|  
+|**operator_netsent**|**nvarchar(20)**|このジョブに関するネットワーク メッセージを送信したオペレーター (ステップ履歴の場合は NULL)。|  
+|**operator_paged**|**nvarchar(20)**|このジョブに関するページを送信したオペレーター (ステップ履歴の場合は NULL)。|  
+|**retries_attempted**|**int**|ステップの再試行回数 (常にジョブ履歴の 0)。|  
+|**server**|**nvarchar(30)**|サーバーのステップまたはジョブを実行します。 常に (**ローカル**)。|  
   
 ## <a name="remarks"></a>コメント  
  **sp_help_jobhistory**指定のスケジュールされたジョブの履歴レポートを返します。 どのパラメーターも指定しない場合は、レポートにはすべての定期ジョブの履歴が含まれます。  
@@ -152,7 +136,7 @@ sp_help_jobhistory [ [ @job_id = ] job_id ]
   
 ## <a name="examples"></a>使用例  
   
-### <a name="a-listing-all-job-information-for-a-job"></a>A. すべてのジョブに関する情報を一覧表示する  
+### <a name="a-listing-all-job-information-for-a-job"></a>A. ジョブのジョブ情報をすべて一覧表示  
  次の例は、すべてのジョブ情報を一覧表示、`NightlyBackups`ジョブ。  
   
 ```  
@@ -179,7 +163,7 @@ EXEC dbo.sp_help_jobhistory
 GO  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [sp_purge_jobhistory &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-purge-jobhistory-transact-sql.md)   
  [システム ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   

@@ -15,15 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - STIsValid (geometry Data Type)
 ms.assetid: 6da39bea-0f67-4660-98fc-d7214f9b2138
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: b3d22ecff8c4cc4598f6c991a3c695c5d098bff6
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: MladjoA
+ms.author: mlandzic
+ms.openlocfilehash: 3aa054a04b236c419b833df42ba668926e97e312
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47700910"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68030876"
 ---
 # <a name="stisvalid-geometry-data-type"></a>STIsValid (geometry データ型)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -40,7 +39,7 @@ Open Geospatial Consortium (OGC) の型に基づいて **geometry** インスタ
 ## <a name="return-types"></a>戻り値の型  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 戻り値の型: **bit**  
   
- CLR の戻り値の型: **SqlBoolean**  
+ CLR の戻り値の型:**SqlBoolean**  
   
 ## <a name="remarks"></a>Remarks  
  **geometry** インスタンスの OGC 型は、[STGeometryType()](../../t-sql/spatial-geometry/stgeometrytype-geometry-data-type.md) を呼び出すことによって判別できます。  

@@ -14,17 +14,20 @@ helpviewer_keywords:
 - tasks [Integration Services], packages
 - adding package tasks
 ms.assetid: 5d4652d5-228c-4238-905c-346dd8503fdf
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: c0d7ed0444b123ff0b5bc5d52727d2fcf83724b7
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 7357e1508172e5b4debbdea99967314c45d53bf4
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52543878"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71299069"
 ---
 # <a name="adding-tasks-programmatically"></a>プログラムによるタスクの追加
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   ランタイム エンジン内の次の種類のオブジェクトに、タスクを追加できます。  
   
 -   <xref:Microsoft.SqlServer.Dts.Runtime.Package>  

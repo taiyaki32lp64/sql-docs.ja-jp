@@ -1,7 +1,7 @@
 ---
 title: SQL Server のアクセスを許可するための Windows ファイアウォールの構成 | Microsoft Docs
-ms.custom: ''
-ms.date: 05/17/2017
+ms.custom: sqlfreshmay19
+ms.date: 05/15/2019
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: install
@@ -22,13 +22,12 @@ helpviewer_keywords:
 ms.assetid: f55c6a0e-b6bd-4803-b51a-f3a419803024
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 18808e95920384ec9b17e0514a286a675531322b
-ms.sourcegitcommit: a13256f484eee2f52c812646cc989eb0ce6cf6aa
+ms.openlocfilehash: abae05ff73ff1da46bda029b32320a9deccfbf51
+ms.sourcegitcommit: baa40306cada09e480b4c5ddb44ee8524307a2ab
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/25/2019
-ms.locfileid: "56803307"
+ms.lasthandoff: 11/06/2019
+ms.locfileid: "73637977"
 ---
 # <a name="configure-the-windows-firewall-to-allow-sql-server-access"></a>Configure the Windows Firewall to Allow SQL Server Access
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -38,32 +37,28 @@ ms.locfileid: "56803307"
 ファイアウォールを経由して [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスにアクセスするには、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]」などのファイアウォールのマニュアルを参照してください。 ファイアウォールは [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows のコンポーネントです。 他社製のファイアウォール プログラムをインストールすることもできます。 この記事では、Windows ファイアウォールを構成する方法について説明しますが、基本的な原則は他のファイアウォール プログラムにも適用されます。  
   
 > [!NOTE]  
->  この記事では、ファイアウォール構成の概要について説明し、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 管理者を対象とした情報がまとめられています。 ファイアウォールの詳細および管理ファイアウォール情報については、「 [セキュリティが強化された Windows ファイアウォールの設計ガイド](https://go.microsoft.com/fwlink/?LinkID=116904)」などのファイアウォールのマニュアルを参照してください。  
+>  この記事では、ファイアウォール構成の概要について説明し、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 管理者を対象とした情報がまとめられています。 ファイアウォールの詳細および管理ファイアウォール情報については、[Windows ファイアウォール セキュリティ展開ガイド](/windows/security/threat-protection/windows-firewall/windows-firewall-with-advanced-security-deployment-guide)などのファイアウォールのマニュアルを参照してください。  
   
- コントロール パネルの **[Windows ファイアウォール]** と、セキュリティが強化された Windows ファイアウォールの Microsoft 管理コンソール (MMC) スナップインの操作に慣れているユーザーや、どのファイアウォール設定を構成するかがわかっているユーザーは、次の一覧にある記事に直接進んでください。  
+ **Windows ファイアウォール**の管理に慣れており、構成すべきファイアウォール設定を理解しているユーザーは、より高度な記事にそのまま進むことができます。  
   
--   [データベース エンジン アクセスを有効にするための Windows ファイアウォールを構成する](../../database-engine/configure-windows/configure-a-windows-firewall-for-database-engine-access.md)  
-  
--   [Analysis Services のアクセスを許可するための Windows ファイアウォールの構成](../../analysis-services/instances/configure-the-windows-firewall-to-allow-analysis-services-access.md)  
-  
+-   [データベース エンジン アクセスを有効にするための Windows ファイアウォールを構成する](../../database-engine/configure-windows/configure-a-windows-firewall-for-database-engine-access.md)    
+-   [Analysis Services のアクセスを許可するための Windows ファイアウォールの構成](https://docs.microsoft.com/analysis-services/instances/configure-the-windows-firewall-to-allow-analysis-services-access)    
 -   [レポート サーバー アクセスに対するファイアウォールの構成](../../reporting-services/report-server/configure-a-firewall-for-report-server-access.md)  
   
 ##  <a name="BKMK_basic"></a> ファイアウォールに関する基本情報  
- ファイアウォールは、受信パケットを調べて一連のルールと比較することによって機能します。 ルールでパケットの使用が許可されている場合、パケットはファイアウォールを通過して TCP/IP プロトコルに渡され、さらに処理が行われます。 ルールでパケットの使用が許可されていない場合は、ファイアウォールでパケットが破棄され、ログ記録が有効になっている場合は、ファイアウォール ログ ファイルにエントリが作成されます。  
+ ファイアウォールは、受信パケットを調べて一連のルールと比較することによって機能します。 規則で指定された基準をパケットが満たしている場合、パケットはファイアウォールを通過して TCP/IP プロトコルに渡され、さらに処理が行われます。 規則で指定された基準をパケットが満たしていない場合は、ファイアウォールでパケットが破棄され、ログ記録が有効になっていれば、ファイアウォール ログ ファイルにエントリが作成されます。  
   
  次のいずれかの方法で、許可されたトラフィックの一覧が追加されます。  
+
+- **自動**: ファイアウォールが有効になっているコンピューターで通信が開始されると、それに対する応答が許可されるよう、ファイアウォールによって一覧内にエントリが作成されます。 この応答は、要請されたトラフィックと見なされ、構成する必要のある項目はありません。 
   
--   ファイアウォールが有効になっているコンピューターで通信が開始されると、それに対する応答が許可されるようにファイアウォールによって一覧内にエントリが作成されます。 受信した応答は、要請されたトラフィックと見なされるので、この応答を構成する必要はありません。  
-  
--   管理者がファイアウォールの例外を構成します。 これにより、コンピューターで実行されている指定したプログラムへのアクセス、またはコンピューター上の指定した接続ポートへのアクセスが許可されます。 この場合、サーバー、リスナー、またはピアとして機能しているコンピューターは、要請されていない受信トラフィックを受け入れます。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]に接続するには、この種類の構成を完了している必要があります。  
+-   **手動**: 管理者がファイアウォールの例外を構成します。 これにより、指定されたプログラムへの、またはコンピューター上のポートへのアクセスが許可されます。 この場合、サーバー、リスナー、またはピアとして機能しているコンピューターは、要請されていない受信トラフィックを受け入れます。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]に接続するには、この種類の構成を完了している必要があります。  
   
  ファイアウォール戦略の選択は、特定のポートを開くか閉じるかを単に決定するよりも複雑です。 企業に合ったファイアウォール戦略を策定するときは、必ず使用できるすべてのルールと構成オプションについて検討してください。 この記事では、可能なファイアウォール オプションすべてを検討するわけではありません。 次のドキュメントを確認することをお勧めします。  
   
- [セキュリティが強化された Windows ファイアウォール ファースト ステップ ガイド](https://go.microsoft.com/fwlink/?LinkId=116080)  
-  
- [セキュリティが強化された Windows ファイアウォールの設計ガイド](https://go.microsoft.com/fwlink/?LinkId=116904)  
-  
- [サーバーとドメインの分離の概要](https://go.microsoft.com/fwlink/?LinkId=116081)  
+ [Windows ファイアウォール展開ガイド](/windows/security/threat-protection/windows-firewall/windows-firewall-with-advanced-security-deployment-guide)    
+ [Windows ファイアウォール設計ガイド](/windows/security/threat-protection/windows-firewall/windows-firewall-with-advanced-security-design-guide)    
+ [サーバーとドメインの分離の概要](/windows/security/threat-protection/windows-firewall/domain-isolation-policy-design)  
   
 ##  <a name="BKMK_default"></a> 既定のファイアウォール設定  
  ファイアウォール構成を計画するには、まずオペレーティング システムのファイアウォールについて現在の状態を確認します。 オペレーティング システムが前のバージョンからアップグレードされた場合、以前のファイアウォール設定が維持されている可能性があります。 また、他の管理者やドメイン内のグループ ポリシーによってファイアウォール設定が変更された可能性もあります。  
@@ -94,32 +89,34 @@ ms.locfileid: "56803307"
   
      **netsh**の詳細については、次のリンクを参照してください。  
   
-    -   [Netsh.exe ツールとコマンド ライン スイッチの使用方法](https://support.microsoft.com/kb/242468)  
-  
-    -   ["netsh firewall" コンテキストの代わりに "netsh advfirewall firewall" コンテキストを使用して、Windows Server 2008 および Windows Vista で Windows ファイアウォールの動作を制御する方法](https://support.microsoft.com/kb/947709)  
-  
-    -   ["profile=all" パラメーターと共に "netsh firewall" コマンドを使用しても、Windows Vista ベースのコンピューターでパブリック プロファイルが構成されない](https://support.microsoft.com/kb/947213)  
+    -   [Netsh コマンドの構文、コンテキスト、および書式設定](/windows-server/networking/technologies/netsh/netsh-contexts)    
+    -   ["netsh firewall" コンテキストの代わりに "netsh advfirewall firewall" コンテキストを使用して、Windows Server 2008 および Windows Vista で Windows ファイアウォールの動作を制御する方法](https://support.microsoft.com/kb/947709)    
+
     
-- **Linux の場合**:Linux では、アクセスするサービスに関連付けられたポートを開く必要もあります。 Linux の異なるディストリビューションと異なるファイアウォールには、独自のプロシージャがあります。 2 つの例については、[Red Hat での SQL Server](https://review.docs.microsoft.com/sql/linux/quickstart-install-connect-red-hat?view=sqlallproducts-allversions) に関するページと [SUSE での SQL Server](https://review.docs.microsoft.com/sql/linux/quickstart-install-connect-suse?view=sqlallproducts-allversions) に関するページを参照してください。 
+- **Linux の場合**:Linux では、アクセスするサービスに関連付けられたポートを開く必要もあります。 Linux の異なるディストリビューションと異なるファイアウォールには、独自のプロシージャがあります。 2 つの例については、[Red Hat での SQL Server](../../linux/quickstart-install-connect-red-hat.md) に関するページと [SUSE での SQL Server](../../linux/quickstart-install-connect-suse.md) に関するページを参照してください。 
   
 ## <a name="ports-used-by-includessnoversionincludesssnoversion-mdmd"></a>で使用されるポート [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
  次の表で、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]で使用されるポートを確認できます。  
   
 ###  <a name="BKMK_ssde"></a> Ports Used By the Database Engine  
+ 
+
+既定では、SQL Server と関連データベース サービスで使用される一般的なポート:TCP **1433**、**4022**、**135**、**1434**、UDP **1434**。 次の表では、これらのポートについてより詳細に説明します。 名前付きインスタンスでは[動的ポート](#BKMK_dynamic_ports)が使用されます。
+ 
  次の表に、 [!INCLUDE[ssDE](../../includes/ssde-md.md)]で頻繁に使用されるポートの一覧を示します。  
   
 |シナリオ|Port|コメント|  
 |--------------|----------|--------------|  
-|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の既定のインスタンス|TCP ポート 1433|これは、ファイアウォールを通過することを許可されている最も一般的なポートです。 [!INCLUDE[ssDE](../../includes/ssde-md.md)]の既定のインストール、またはコンピューターで実行中の唯一のインスタンスである名前付きインスタンスへの、通常の接続に適用されます (名前付きインスタンスには注意事項があります。 後の「[動的ポート](#BKMK_dynamic_ports)」を参照してください)。|  
-|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 名前付きインスタンス|TCP ポートは、 [!INCLUDE[ssDE](../../includes/ssde-md.md)] の起動時に決定される動的ポートです。|後の「 [動的ポート](#BKMK_dynamic_ports)」の説明を参照してください。 名前付きインスタンスを使用している場合、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser サービスで UDP ポート 1434 が必要になる可能性があります。|  
-|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 名前付きインスタンス|管理者が構成するポート番号|後の「 [動的ポート](#BKMK_dynamic_ports)」の説明を参照してください。|  
+|TCP 経由で実行されている既定のインスタンス|TCP ポート 1433|これは、ファイアウォールを通過することを許可されている最も一般的なポートです。 [!INCLUDE[ssDE](../../includes/ssde-md.md)]の既定のインストール、またはコンピューターで実行中の唯一のインスタンスである名前付きインスタンスへの、通常の接続に適用されます (名前付きインスタンスには注意事項があります。 後の「[動的ポート](#BKMK_dynamic_ports)」を参照してください)。|  
+|既定のポートを持つ名前付きインスタンス|TCP ポートは、 [!INCLUDE[ssDE](../../includes/ssde-md.md)] の起動時に決定される動的ポートです。|後の「 [動的ポート](#BKMK_dynamic_ports)」の説明を参照してください。 名前付きインスタンスを使用している場合、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser サービスで UDP ポート 1434 が必要になる可能性があります。|  
+| 固定ポートを持つ名前付きインスタンス |管理者が構成するポート番号|後の「 [動的ポート](#BKMK_dynamic_ports)」の説明を参照してください。|  
 |専用管理者接続|TCP ポート 1434 (既定のインスタンスに使用)。 その他のポートは名前付きインスタンスに使用されます。 ポート番号については、エラー ログを確認してください。|既定では、専用管理者接続 (DAC) へのリモート接続は有効になっていません。 リモート DAC を有効にするには、セキュリティ構成ファセットを使用します。 詳細については、「 [Surface Area Configuration](../../relational-databases/security/surface-area-configuration.md)」を参照してください。|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser サービス|UDP ポート 1434|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser サービスは、名前付きインスタンスへの着信接続をリッスンし、その名前付きインスタンスに対応する TCP ポート番号をクライアントに提供します。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の名前付きインスタンスが使用されている場合は、通常 [!INCLUDE[ssDE](../../includes/ssde-md.md)] Browser サービスを開始します。 名前付きインスタンスの特定のポートに接続するようにクライアントが構成されている場合は、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser サービスを開始する必要はありません。|  
-|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンス|HTTP エンドポイントの作成時に指定できます。 既定の TCP ポートは、CLEAR_PORT トラフィックでは 80、SSL_PORT トラフィックでは 443 です。|URL を使用した HTTP 接続に使用されます。|  
-|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の既定のインスタンス|TCP ポート 443|URL を使用した HTTPS 接続に使用されます。 HTTPS は、Secure Sockets Layer (SSL) を使用した HTTP 接続です。|  
+|HTTP エンドポイントを持つインスタンス|HTTP エンドポイントの作成時に指定できます。 既定の TCP ポートは、CLEAR_PORT トラフィックでは 80、SSL_PORT トラフィックでは 443 です。|URL を使用した HTTP 接続に使用されます。|  
+|HTTPS エンドポイントを持つ既定のインスタンス |TCP ポート 443|URL を使用した HTTPS 接続に使用されます。 HTTPS は、Secure Sockets Layer (SSL) を使用した HTTP 接続です。|  
 |[!INCLUDE[ssSB](../../includes/sssb-md.md)]|TCP ポート 4022。 使用されるポートを確認するには、次のクエリを実行します。<br /><br /> `SELECT name, protocol_desc, port, state_desc`<br /><br /> `FROM sys.tcp_endpoints`<br /><br /> `WHERE type_desc = 'SERVICE_BROKER'`|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssSB](../../includes/sssb-md.md)]の既定のポートはありませんが、これがオンライン ブックの例で使用される通常の構成です。|  
-|データベース ミラーリング|管理者が選択したポート。 ポートを特定するには、次のクエリを実行します。<br /><br /> `SELECT name, protocol_desc, port, state_desc FROM sys.tcp_endpoints`<br /><br /> `WHERE type_desc = 'DATABASE_MIRRORING'`|データベース ミラーリングに既定のポートはありませんが、オンライン ブックの例では、TCP ポート 5022 または 7022 を使用しています。 特に自動フェールオーバーを伴う高い安全性モードでは、使用中のミラーリング エンドポイントが中断しないようにすることはきわめて重要です。 ファイアウォール構成によりクォーラムが分割されないようにする必要があります。 詳細については、「[サーバー ネットワーク アドレスの指定 &#40;データベース ミラーリング&#41;](../../database-engine/database-mirroring/specify-a-server-network-address-database-mirroring.md)」を参照してください。|  
-|のレプリケーション|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] へのレプリケーション接続では、一般的な正規の [!INCLUDE[ssDE](../../includes/ssde-md.md)] ポートを使用します (既定のインスタンスに使用される TCP ポート 1433 など)。<br /><br /> レプリケーション スナップショットのための Web 同期と FTP/UNC アクセスには、ファイアウォール上で追加のポートを開く必要があります。 ある場所から別の場所に初期データおよびスキーマを転送するために、レプリケーションでは FTP (TCP ポート 21)、HTTP (TCP ポート 80) を使用した同期、またはファイル共有を使用できます。 ファイル共有では、NetBIOS を使用する場合、UDP ポート 137 と 138、および TCP ポート 139 を使用します。 ファイル共有は TCP ポート 445 を使用します。|HTTP を使用した同期のために、レプリケーションでは IIS エンドポイント (既定ではポート 80 だが構成可能) を使用しますが、IIS プロセスは標準のポート (既定のインスタンスの場合は 1433) を使用してバックエンドの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] に接続します。<br /><br /> FTP を使用した Web 同期時は、サブスクライバーと IIS の間ではなく、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 発行者と IIS の間で FTP 転送が行われます。|  
+|データベース ミラーリング|管理者が選択したポート。 ポートを特定するには、次のクエリを実行します。<br /><br /> `SELECT name, protocol_desc, port, state_desc FROM sys.tcp_endpoints`<br /><br /> `WHERE type_desc = 'DATABASE_MIRRORING'`|データベース ミラーリングに既定のポートはありませんが、オンライン ブックの例では、TCP ポート 5022 または 7022 を使用しています。 特に自動フェールオーバーを伴う高い安全性モードでは、使用中のミラーリング エンドポイントが中断しないようにすることが重要です。 ファイアウォール構成によりクォーラムが分割されないようにする必要があります。 詳細については、「[サーバー ネットワーク アドレスの指定 &#40;データベース ミラーリング&#41;](../../database-engine/database-mirroring/specify-a-server-network-address-database-mirroring.md)」を参照してください。|  
+|レプリケーション|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] へのレプリケーション接続では、一般的な正規の [!INCLUDE[ssDE](../../includes/ssde-md.md)] ポートを使用します (既定のインスタンスに使用される TCP ポート 1433 など)。<br /><br /> レプリケーション スナップショットのための Web 同期と FTP/UNC アクセスには、ファイアウォール上で追加のポートを開く必要があります。 ある場所から別の場所に初期データおよびスキーマを転送するために、レプリケーションでは FTP (TCP ポート 21)、HTTP (TCP ポート 80) を使用した同期、またはファイル共有を使用できます。 ファイル共有では、NetBIOS を使用する場合、UDP ポート 137 と 138、および TCP ポート 139 を使用します。 ファイル共有は TCP ポート 445 を使用します。|HTTP を使用した同期のために、レプリケーションでは IIS エンドポイント (既定ではポート 80 だが構成可能) を使用しますが、IIS プロセスは標準のポート (既定のインスタンスの場合は 1433) を使用してバックエンドの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] に接続します。<br /><br /> FTP を使用した Web 同期時は、サブスクライバーと IIS の間ではなく、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 発行者と IIS の間で FTP 転送が行われます。|  
 |[!INCLUDE[tsql](../../includes/tsql-md.md)] デバッガー|TCP ポート 135<br /><br /> 「 [ポート 135 に関する注意事項](#BKMK_port_135)」を参照してください。<br /><br /> [IPsec](#BKMK_IPsec) の例外が必要な場合もあります。|[!INCLUDE[vsprvs](../../includes/vsprvs-md.md)]ホスト コンピューターで [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] を使用している場合は、 **Devenv.exe** を例外リストに追加し、TCP ポート 135 を開く必要もあります。<br /><br /> [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]ホスト コンピューターで [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] を使用している場合は、 **ssms.exe** を例外リストに追加し、TCP ポート 135 を開く必要もあります。 詳細については、「 [Transact-SQL デバッガーの構成](../../relational-databases/scripting/configure-firewall-rules-before-running-the-tsql-debugger.md)」を参照してください。|  
   
  [!INCLUDE[ssDE](../../includes/ssde-md.md)]で Windows ファイアウォールを構成する詳細な手順については、「 [データベース エンジン アクセスを有効にするための Windows ファイアウォールを構成する](../../database-engine/configure-windows/configure-a-windows-firewall-for-database-engine-access.md)」を参照してください。  
@@ -131,29 +128,26 @@ ms.locfileid: "56803307"
   
 ##### <a name="to-add-a-program-exception-to-the-firewall-using-windows-firewall-with-advanced-security"></a>セキュリティが強化された Windows ファイアウォールを使用して、ファイアウォールにプログラムの例外を追加するには
   
-1. [スタート] メニューから「*wf.msc*」と入力します。 **[セキュリティが強化された Windows ファイアウォール]** をクリックします。
-
-1. 左側のペインで、**[受信の規則]** をクリックします。
-
-1. 右側のペインの **[操作]** の **[新しい規則]** をクリックします。**新規の受信の規則ウィザード**が開きます。
-
-1. **[規則の種類]** で、**[プログラム]** をクリックします。 **[次へ]** をクリックします。
-
-1. **[プログラム]** で **[このプログラムのパス]** をクリックします。 **[参照]** をクリックして SQL Server のインスタンスを検索します。 sqlservr.exe というプログラムです。 通常は以下の場所にあります。
+1. [スタート] メニューから「*wf.msc*」と入力します。 **[セキュリティが強化された Windows ファイアウォール]** を選択します。
+1. 左側のウィンドウで、 **[受信の規則]** を選択します。
+1. 右側のウィンドウで、 **[アクション]** の **[新しい規則]** を選択します。**新規の受信の規則ウィザード**が開きます。
+1. **[規則の種類]** で  **[プログラム]** を選択します。 **[次へ]** を選択します。
+1. **[プログラム]** で **[このプログラムのパス]** を選択します。 **[参照]** を選択して SQL Server のインスタンスを検索します。 sqlservr.exe というプログラムです。 通常は以下の場所にあります。
 
    `C:\Program Files\Microsoft SQL Server\MSSQL13.<InstanceName>\MSSQL\Binn\sqlservr.exe`
 
-   **[次へ]** をクリックします。
+   **[次へ]** を選択します。
 
-1. **[操作]** で、**[接続を許可する]** をクリックします。  
-
-1. [プロファイル] に 3 つのプロフィールすべてを含めます。 **[次へ]** をクリックします。
-
-1. **[名前]** に規則の名前を入力します。 **[完了]** をクリックします。
+1. **[操作]** で、 **[接続を許可する]** をクリックします。  
+1. [プロファイル] に 3 つのプロフィールすべてを含めます。 **[次へ]** を選択します。
+1. **[名前]** に規則の名前を入力します。 **[完了]** を選択します。
 
 エンドポイントの詳細については、「[複数の TCP ポートでリッスンするデータベース エンジンの構成](../../database-engine/configure-windows/configure-the-database-engine-to-listen-on-multiple-tcp-ports.md)」と「[エンドポイントのカタログ ビュー &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/endpoints-catalog-views-transact-sql.md)」を参照してください。 
   
 ###  <a name="BKMK_ssas"></a> Analysis Services で使用されるポート  
+ 
+既定では、SQL Server Analysis Services と関連サービスで使用される一般的なポート:TCP **2382**、**2383**、**80**、**443**。 次の表では、これらのポートについてより詳細に説明します。  
+ 
  次の表に、 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]で頻繁に使用されるポートの一覧を示します。  
   
 |機能|Port|コメント|  
@@ -165,9 +159,13 @@ ms.locfileid: "56803307"
   
  ユーザーが IIS やインターネットを経由して [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] にアクセスする場合は、IIS がリッスンするポートを開き、クライアントの接続文字列にそのポートを指定する必要があります。 この場合、 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]に直接アクセスするためのポートを開く必要はありません。 必要のない他のすべてのポートと共に、既定のポート 2389 およびポート 2382 を制限する必要があります。  
   
- [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]で Windows ファイアウォールを構成する詳細な手順については、「 [Analysis Services のアクセスを許可するための Windows ファイアウォールの構成](../../analysis-services/instances/configure-the-windows-firewall-to-allow-analysis-services-access.md)」を参照してください。  
+ [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]で Windows ファイアウォールを構成する詳細な手順については、「 [Analysis Services のアクセスを許可するための Windows ファイアウォールの構成](https://docs.microsoft.com/analysis-services/instances/configure-the-windows-firewall-to-allow-analysis-services-access)」を参照してください。  
   
 ###  <a name="BKMK_ssrs"></a> Reporting Services で使用されるポート  
+
+既定では、SQL Server Reporting Services と関連サービスで使用される一般的なポート:TCP **80**、**443**。 次の表では、これらのポートについてより詳細に説明します。 
+
+
 次の表に、 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]で頻繁に使用されるポートの一覧を示します。  
   
 |機能|Port|コメント|  
@@ -184,7 +182,7 @@ ms.locfileid: "56803307"
 |-------------|----------|--------------|  
 |[!INCLUDE[msCoName](../../includes/msconame-md.md)] リモート プロシージャ呼び出し (MS RPC)<br /><br /> [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] ランタイムで使用されます。|TCP ポート 135<br /><br /> 「 [ポート 135 に関する注意事項](#BKMK_port_135)」を参照してください。|[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] サービスでは、ポート 135 で DCOM を使用します。 サービス コントロール マネージャーではポート 135 を使用して、 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] サービスの開始と停止、実行中のサービスに対する制御要求の転送などのタスクを実行します。 ポート番号を変更することはできません。<br /><br /> このポートは、 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] またはカスタム アプリケーションから [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] サービスのリモート インスタンスに接続する場合にのみ、開く必要があります。|  
   
-[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] で Windows ファイアウォールを構成する詳細な手順については、[Integration Services サービス、SSIS サービス](../../integration-services/service/integration-services-service-ssis-service.md)に関するページをご覧ください。  
+[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] で Windows ファイアウォールを構成する詳細な手順については、[Integration Services サービス、SSIS サービス](../../integration-services/service/configure-a-windows-firewall-for-access-to-the-ssis-service.md?view=sql-server-2014)に関するページをご覧ください。  
   
 ###  <a name="BKMK_additional_ports"></a> 追加のポートとサービス  
 次の表に、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] が依存している可能性があるポートとサービスの一覧を示します。  
@@ -193,7 +191,7 @@ ms.locfileid: "56803307"
 |--------------|----------|--------------|  
 |Windows Management Instrumentation (Windows Management Instrumentation)<br /><br /> WMI の詳細については、「 [WMI Provider for Configuration Management Concepts](../../relational-databases/wmi-provider-configuration/wmi-provider-for-configuration-management.md)」を参照してください。|WMI は、DCOM によってポートが割り当てられている共有サービス ホストの一部として実行されます。 WMI では TCP ポート 135 を使用している可能性があります。<br /><br /> 「 [ポート 135 に関する注意事項](#BKMK_port_135)」を参照してください。|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 構成マネージャーでは、WMI を使用してサービスの一覧を表示し、管理します。 **[Windows Management Instrumentation (WMI)]** のあらかじめ構成されたルール グループを使用することをお勧めします。 詳細については、後の「 [その他のファイアウォール ルールの操作](#BKMK_other_rules) 」を参照してください。|  
 |[!INCLUDE[msCoName](../../includes/msconame-md.md)] 分散トランザクション コーディネーター (MS DTC)|TCP ポート 135<br /><br /> 「 [ポート 135 に関する注意事項](#BKMK_port_135)」を参照してください。|アプリケーションで分散トランザクションを使用する場合は、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 分散トランザクション コーディネーター (MS DTC) トラフィックが、各 MS DTC インスタンス間、および [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]などのリソース マネージャーと MS DTC との間を流れるように、ファイアウォールを構成することが必要になる可能性があります。 **[分散トランザクション コーディネーター]** のあらかじめ構成されたルール グループを使用することをお勧めします。<br /><br /> 個別のリソース グループのクラスター全体に対して 1 つの共有 MS DTC が構成されている場合は、ファイアウォールに sqlservr.exe を例外として追加する必要があります。|  
-|[!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] の参照ボタンを押すと、UDP を使用して [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser サービスに接続できます。 詳細については、「[SQL Server Browser サービス &#40;データベース エンジンと SSAS&#41;](../../database-engine/configure-windows/sql-server-browser-service-database-engine-and-ssas.md)」を参照してください。参照してください。|UDP ポート 1434|UDP はコネクションレスのプロトコルです。<br /><br /> ファイアウォールには、 [INetFwProfile インターフェイスの UnicastResponsesToMulticastBroadcastDisabled プロパティ](https://go.microsoft.com/fwlink/?LinkId=118371) という設定があります。この設定は、ブロードキャスト (またはマルチキャスト) UDP 要求へのユニキャスト応答に関するファイアウォールの動作を制御します。  この設定には次の 2 つの動作があります。<br /><br /> 設定が TRUE の場合、ブロードキャスト要求へのユニキャスト応答はまったく許可されません。 サービスの列挙は失敗します。<br /><br /> 設定が FALSE (既定) の場合、ユニキャスト応答が 3 秒間許可されます。 この時間の長さは構成できません。 混雑しているネットワークや待機時間の長いネットワークまたは負荷の大きいサーバーで [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスを列挙しようとすると、一覧の一部しか返されない可能性があり、ユーザーの混乱を招くことがあります。|  
+|[!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] の参照ボタンを押すと、UDP を使用して [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser サービスに接続できます。 詳細については、「[SQL Server Browser サービス &#40;データベース エンジンと SSAS&#41;](../../database-engine/configure-windows/sql-server-browser-service-database-engine-and-ssas.md)」を参照してください。参照してください。|UDP ポート 1434|UDP はコネクションレスのプロトコルです。<br /><br /> ファイアウォールの設定 ([INetFwProfile インターフェイスの UnicastResponsesToMulticastBroadcastDisabled プロパティ](https://go.microsoft.com/fwlink/?LinkId=118371)) により、ブロードキャスト (またはマルチキャスト) UDP 要求へのユニキャスト応答に関するファイアウォールの動作が制御されます。  この設定には次の 2 つの動作があります。<br /><br /> 設定が TRUE の場合、ブロードキャスト要求へのユニキャスト応答はまったく許可されません。 サービスの列挙は失敗します。<br /><br /> 設定が FALSE (既定) の場合、ユニキャスト応答が 3 秒間許可されます。 この時間の長さは構成できません。 混雑しているネットワークや待機時間の長いネットワークまたは負荷の大きいサーバーで [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスを列挙しようとすると、一覧の一部しか返されない可能性があり、ユーザーの混乱を招くことがあります。|  
 |<a name="BKMK_IPsec"></a> IPsec トラフィック|UDP ポート 500 および UDP ポート 4500|ドメインのポリシーにより IPsec 経由でネットワーク通信を行う必要がある場合は、UDP ポート 4500 と UDP ポート 500 も例外の一覧に追加する必要があります。 IPsec は、Windows ファイアウォール スナップインの **新規の受信の規則ウィザード** を使用するオプションです。 詳細については、後の「 [セキュリティが強化された Windows ファイアウォールのスナップインの使用](#BKMK_WF_msc) 」を参照してください。|  
 |信頼されたドメインでの Windows 認証の使用|認証要求を許可するようにファイアウォールを構成する必要があります。|詳細については、「 [ドメインの信頼関係を使用するためのファイアウォールの構成方法](https://support.microsoft.com/kb/179442/)」を参照してください。|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] と Windows のクラスタリング|クラスタリングでは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]に直接関連付けられていない追加のポートが必要です。|詳細については、「 [クラスターで使用するネットワークを有効にする](https://go.microsoft.com/fwlink/?LinkId=118372)」を参照してください。|  
@@ -204,12 +202,9 @@ ms.locfileid: "56803307"
   
  ポート 135 の詳細については、次の資料を参照してください。  
   
--   [Windows サーバー システムのサービス概要とネットワーク ポート要件](https://support.microsoft.com/kb/832017)  
-  
+-   [Windows サーバー システムのサービス概要とネットワーク ポート要件](https://support.microsoft.com/kb/832017)   
 -   [製品 CD-ROM の Windows Server 2003 サポート ツールを使用した、RPC エンドポイント マッパー エラーのトラブルシューティング](https://support.microsoft.com/kb/839880)  
-  
--   [リモート プロシージャ呼び出し (RPC)](https://go.microsoft.com/fwlink/?LinkId=118375)  
-  
+-   [リモート プロシージャ呼び出し (RPC)](https://go.microsoft.com/fwlink/?LinkId=118375)    
 -   [ファイアウォールで動作するように RPC の動的ポート割り当てを構成する方法](https://support.microsoft.com/kb/154596/)  
   
 ##  <a name="BKMK_other_rules"></a> その他のファイアウォール ルールの操作  
@@ -218,22 +213,18 @@ ms.locfileid: "56803307"
  セキュリティが強化された Windows ファイアウォールの MMC スナップインを使用して、該当する許可ルールと一致するトラフィックを許可できます。 したがって、どちらもポート 80 に該当する、パラメーターの異なるルールが 2 つある場合、いずれかのルールと一致するトラフィックが許可されます。 一方のルールでローカル サブネットからのポート 80 経由のトラフィックが許可され、もう一方のルールで任意のアドレスからのトラフィックが許可される場合、結果として、発信元に関係なくポート 80 へのすべてのトラフィックが許可されます。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]へのアクセスを有効に管理するために、管理者はサーバーで有効になっているすべてのファイアウォール ルールを定期的に確認する必要があります。  
   
 ##  <a name="BKMK_profiles"></a> ファイアウォール プロファイルの概要  
- ファイアウォール プロファイルについては、「 [セキュリティが強化された Windows ファイアウォール ファースト ステップ ガイド](https://go.microsoft.com/fwlink/?LinkId=116080) 」の「 **ネットワークの場所を認識するホスト ファイアウォール**」を参照してください。 要約すると、オペレーティング システムでは、接続性、接続状態、およびカテゴリに関して、接続する各ネットワークが識別され記憶されます。  
+ オペレーティング システムではファイアウォール プロファイルを使用して、接続性、接続状態、およびカテゴリに関して、接続する各ネットワークが識別され記憶されます。  
   
  セキュリティが強化された Windows ファイアウォールでは、ネットワークの場所として 3 種類の設定があります。  
   
--   ドメイン。 Windows では、コンピューターが参加しているドメインのドメイン コントローラーへのアクセスを認証できます。  
-  
--   パブリック。 ドメイン ネットワーク以外のすべてのネットワークがパブリックとして最初に分類されます。 インターネットへの直接接続となるネットワーク、または空港やコーヒー ショップのような公共の場所にあるネットワークです。  
-  
--   プライベート。 ユーザーまたはアプリケーションによってプライベートと見なされるネットワークです。 信頼されたネットワークだけをプライベート ネットワークと見なす必要があります。 通常は、ホーム ネットワークまたは小規模ビジネス ネットワークをプライベートと見なすことができます。  
+-   **ドメイン**: Windows では、コンピューターが参加しているドメインのドメイン コントローラーへのアクセスを認証できます。
+-   **パブリック**: ドメイン ネットワーク以外のすべてのネットワークがパブリックとして最初に分類されます。 インターネットへの直接接続となるネットワーク、または空港やコーヒー ショップのような公共の場所にあるネットワークです。
+-   **プライベート**: ユーザーまたはアプリケーションによってプライベートと見なされるネットワークです。 信頼されたネットワークだけをプライベート ネットワークと見なす必要があります。 通常は、ホーム ネットワークまたは小規模ビジネス ネットワークをプライベートと見なすことができます。  
   
  管理者はネットワークの場所の種類ごとにプロファイルを作成できます。各プロファイルに、さまざまなファイアウォール ポリシーを指定できます。 どの時点においても 1 つのプロファイルのみが適用されます。 次のようなプロファイル順序が適用されます。  
   
-1.  Windows では、コンピューターが参加しているドメインのドメイン コントローラーへのアクセスに対してすべてのインターフェイスが認証される場合、ドメイン プロファイルが適用されます。  
-  
-2.  すべてのインターフェイスがドメイン コントローラーに対して認証されるか、プライベート ネットワークの場所として分類されるネットワークに接続されている場合、プライベート プロファイルが適用されます。  
-  
+1.  Windows では、コンピューターが参加しているドメインのドメイン コントローラーへのアクセスに対してすべてのインターフェイスが認証される場合、ドメイン プロファイルが適用されます。    
+2.  すべてのインターフェイスがドメイン コントローラーに対して認証されるか、プライベート ネットワークの場所として分類されるネットワークに接続されている場合、プライベート プロファイルが適用されます。    
 3.  それ以外の場合は、パブリック プロファイルが適用されます。  
   
  セキュリティが強化された Windows ファイアウォールの MMC スナップインを使用して、すべてのファイアウォール プロファイルを表示し、構成できます。 コントロール パネルの **[Windows ファイアウォール]** では、現在のプロファイルのみを構成できます。  
@@ -252,49 +243,34 @@ ms.locfileid: "56803307"
   
 3.  次のいずれかのオプションを選択します。  
   
-    -   **[任意のコンピューター (インターネット上のコンピューターを含む)]**  
+    -   **[任意のコンピューター (インターネット上のコンピューターを含む)]** : 推奨されません。 この設定によって、自分のコンピューターのアドレスを指定した任意のコンピューターが、特定のプログラムまたはポートに接続できるようになります。 このような設定は、インターネット上の匿名ユーザーに情報を提供できるようにするために必要な場合がありますが、悪意のあるユーザーの攻撃にさらされるリスクが大きくなります。 この設定を有効にし、[エッジ トラバーサルを許可する] オプションなどのネットワーク アドレス変換 (NAT) トラバーサルも許可する場合は、悪意のあるユーザーの攻撃にさらされる可能性がさらに高くなります。  
   
-         推奨されません。 この設定によって、自分のコンピューターのアドレスを指定した任意のコンピューターが、特定のプログラムまたはポートに接続できるようになります。 このような設定は、インターネット上の匿名ユーザーに情報を提供できるようにするために必要な場合がありますが、悪意のあるユーザーの攻撃にさらされるリスクが大きくなります。 この設定を有効にし、[エッジ トラバーサルを許可する] オプションなどのネットワーク アドレス変換 (NAT) トラバーサルも許可する場合は、悪意のあるユーザーの攻撃にさらされる可能性がさらに高くなります。  
+    -   **[ユーザーのネットワーク (サブネット) のみ]** : **[任意のコンピューター]** より安全な設定です。 ネットワークのローカル サブネット上のコンピューターのみがプログラムまたはポートに接続できます。  
   
-    -   **[ユーザーのネットワーク (サブネット) のみ]**  
-  
-         **[任意のコンピューター]** より安全な設定です。 ネットワークのローカル サブネット上のコンピューターのみがプログラムまたはポートに接続できます。  
-  
-    -   **[カスタムの一覧]**  
-  
-     作成した一覧に IP アドレスが載っているコンピューターだけが接続できます。 この設定は、 **[ユーザーのネットワーク (サブネット) のみ]** よりもさらに安全ですが、DHCP を使用するクライアント コンピューターでは、その IP アドレスが変更されることがあります。 その場合、意図していたコンピューターは接続することができません。 その代わり、認証の対象として意図していなかった別のコンピューターに一覧の IP アドレスが割り当てられてしまい、そのコンピューターから接続できるようになる可能性があります。 **[カスタムの一覧]** オプションは、固定 IP アドレスを使用するように構成されている他のサーバーの一覧を作成する場合に適しています。ただし、侵入者が IP アドレスを偽装する可能性もあります。 ファイアウォール ルールを制限することは、最低限のネットワーク インフラストラクチャです。  
+    -   **[カスタムの一覧]** : 一覧に IP アドレスが載っているコンピューターだけが接続できます。 この設定は、 **[ユーザーのネットワーク (サブネット) のみ]** よりもさらに安全ですが、DHCP を使用するクライアント コンピューターでは、その IP アドレスが変更されることがあります。 その場合、意図していたコンピューターは接続することができません。 その代わり、認証の対象として意図していなかった別のコンピューターに一覧の IP アドレスが割り当てられてしまい、そのコンピューターから接続できるようになる可能性があります。 **[カスタムの一覧]** オプションは、固定 IP アドレスを使用するように構成されている他のサーバーの一覧を作成する場合に適しています。ただし、侵入者が IP アドレスを偽装する可能性もあります。 ファイアウォール ルールを制限することは、最低限のネットワーク インフラストラクチャです。  
   
 ##  <a name="BKMK_WF_msc"></a> セキュリティが強化された Windows ファイアウォールのスナップインの使用  
  セキュリティが強化された Windows ファイアウォールの MMC スナップインを使用して、さらに詳細なファイアウォール設定を構成できます。 スナップインにはルール ウィザードが組み込まれており、コントロール パネルの **[Windows ファイアウォール]** では使用できない設定も表示されます。 これらの設定は次のとおりです。  
   
 -   暗号化の設定  
-  
--   サービスの制限  
-  
--   名前によってコンピューターの接続を制限する  
-  
+-   サービスの制限   
+-   名前によってコンピューターの接続を制限する    
 -   特定のユーザーまたはプロファイルに接続を制限する  
-  
--   エッジ トラバーサルにより、トラフィックが NAT (Network Address Translation) ルーターをバイパスするのを許可する  
-  
--   送信ルールを構成する  
-  
--   セキュリティ ルールを構成する  
-  
+-   エッジ トラバーサルにより、トラフィックが NAT (Network Address Translation) ルーターをバイパスするのを許可する    
+-   送信ルールを構成する    
+-   セキュリティ ルールを構成する    
 -   着信接続用に IPsec を要求する  
   
 ### <a name="to-create-a-new-firewall-rule-using-the-new-rule-wizard"></a>新しい規則ウィザードを使用して、新しいファイアウォール ルールを作成するには  
   
-1.  [スタート] ボタンをクリックし、 **[ファイル名を指定して実行]** をクリックして「 **WF.msc**」と入力し、 **[OK]** をクリックします。  
-  
-2.  **[セキュリティが強化された Windows ファイアウォール]** の左ウィンドウの **[受信の規則]** を右クリックし、 **[新しい規則]** をクリックします。  
-  
+1.  [スタート] メニューで **[ファイル名を指定して実行]** を選択し、「**WF.msc**」と入力して、 **[OK]** を選択します。    
+2.  **[セキュリティが強化された Windows ファイアウォール]** の左ウィンドウにある **[受信の規則]** を右クリックし、 **[新しい規則]** を選択します。   
 3.  **新規の受信の規則ウィザード** で、必要な設定を行います。  
   
 ##  <a name="BKMK_troubleshooting"></a> ファイアウォール設定のトラブルシューティング  
  ファイアウォールの問題をトラブルシューティングする場合は、次のツールと手法が役立ちます。  
   
--   有効なポート ステータスは、ポートに関連付けられているすべてのルールの和集合です。 ポートを経由するアクセスをブロックしようとするときは、そのポート番号を参照しているすべてのルールの確認が有効な場合があります。 このためには、セキュリティが強化された Windows ファイアウォールの MMC スナップインを使用して、ポート番号によって受信ルールと送信ルールを並べ替えます。  
+-   有効なポート ステータスは、ポートに関連付けられているすべてのルールの和集合です。 ポートを経由するアクセスをブロックしようとするときは、そのポート番号を参照しているすべての規則の確認が有効となる場合があります。 このためには、セキュリティが強化された Windows ファイアウォールの MMC スナップインを使用して、ポート番号によって受信ルールと送信ルールを並べ替えます。  
   
 -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] を実行しているコンピューターでアクティブになっているポートを確認します。 この確認処理では、リッスンしている TCP/IP ポートの確認とポートのステータスの確認も行います。  
   
@@ -308,7 +284,7 @@ ms.locfileid: "56803307"
   
          **-n** スイッチは、 **netstat** に対して、アクティブな TCP 接続のアドレスおよびポート番号を数字で表示するように指示します。 **-a** スイッチは、 **netstat** に対して、コンピューターがリッスンしている TCP ポートおよび UDP ポートを表示するように指示します。  
   
--   **PortQry** ユーティリティを使用して、TCP/IP ポートのステータスを LISTENING、NOT LISTENING、FILTERED としてレポートできます。 (FILTERED ステータスは、ポートが、LISTENING、NOT LISTENING のどちらか不明で、ユーティリティがポートからの応答を受信していないことを示します)。**PortQry** ユーティリティは、 [Microsoft ダウンロード センター](https://go.microsoft.com/fwlink/?LinkId=28590)からダウンロードできます。  
+-   **PortQry** ユーティリティを使用して、TCP/IP ポートのステータスを LISTENING、NOT LISTENING、FILTERED としてレポートできます。 (FILTERED ステータスは、ポートが、LISTENING、NOT LISTENING のどちらか不明で、ユーティリティがポートからの応答を受信していないことを示します)。**PortQry** ユーティリティは、 [Microsoft ダウンロード センター](https://www.microsoft.com/download/details.aspx?id=17148)からダウンロードできます。  
   
 ## <a name="see-also"></a>参照  
  [Windows サーバー システムのサービス概要とネットワーク ポート要件](https://support.microsoft.com/kb/832017)   

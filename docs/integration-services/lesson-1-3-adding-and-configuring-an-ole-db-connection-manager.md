@@ -8,17 +8,20 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: tutorial
 ms.assetid: e7b74cba-a0e5-4478-af12-3f81b9484e9e
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: f014affc4ce58243ab629c3bbf12b607d6b7954f
-ms.sourcegitcommit: dd794633466b1da8ead9889f5e633bdf4b3389cd
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 4bf9a4a922c8aeed7ca344b423193e8b01c19037
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54143512"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71296142"
 ---
 # <a name="lesson-1-3-add-and-configure-an-ole-db-connection-manager"></a>レッスン 1-3:OLE DB 接続マネージャーを追加し、構成する
+
+[!INCLUDE[ssis-appliesto](../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
 
 データ ソースに接続するためのフラット ファイル接続マネージャーを追加したら、データの変換先に接続するための OLE DB 接続マネージャーを追加します。 パッケージに OLE DB 接続マネージャーを追加すれば、OLE DB 対応のデータ ソースからデータを抽出したり、OLE DB 対応のデータ ソースへデータを読み込んだりできるようになります。 OLE DB 接続マネージャーでは、接続に必要なサーバー、認証方法、既定のデータベースを指定できます。  
   
@@ -26,11 +29,11 @@ ms.locfileid: "54143512"
   
 ## <a name="add-and-configure-an-ole-db-connection-manager"></a>OLE DB 接続マネージャーを追加し、構成する
 
-1. **[ソリューション エクスプローラー]** ウィンドウで **[接続マネージャー]** を右クリックし、**[新しい接続マネージャー]** を選択します。
+1. **[ソリューション エクスプローラー]** ウィンドウで **[接続マネージャー]** を右クリックし、 **[新しい接続マネージャー]** を選択します。
 
-1. **[SSIS 接続マネージャーの追加]** ダイアログで **[OLEDB]**、**[追加]** の順に選択します。
+1. **[SSIS 接続マネージャーの追加]** ダイアログで **[OLEDB]** 、 **[追加]** の順に選択します。
     
-2. **[OLE DB 接続マネージャーの構成]** ダイアログ ボックスで、**[新規作成]** を選択します。  
+2. **[OLE DB 接続マネージャーの構成]** ダイアログ ボックスで、 **[新規作成]** を選択します。  
   
 3. **[サーバー名]** に「 **localhost**」と入力します。  
   

@@ -2,21 +2,21 @@
 title: レポート サーバー ExecutionLog と ExecutionLog3 ビュー | Microsoft Docs
 ms.date: 03/01/2017
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: report-server
 ms.topic: conceptual
 helpviewer_keywords:
 - logs [Reporting Services], execution
 - execution logs [Reporting Services]
 ms.assetid: a7ead67d-1404-4e67-97e7-4c7b0d942070
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 17819ebf76409602108fe6eaa656a44190a12ab0
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: ef54bf0cdc471b814a09ad0638f81655c7c02c61
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52414100"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65619692"
 ---
 # <a name="report-server-executionlog-and-the-executionlog3-view"></a>レポート サーバー ExecutionLog と ExecutionLog3 ビュー
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]レポート サーバー実行ログには、サーバー上で実行するレポート、またはネイティブ モードのスケールアウト配置や SharePoint ファーム内の複数のサーバー上で実行するレポートに関する情報が含まれます。 レポート実行ログを使用して、レポートを要求する頻度、最も多く使用される出力形式、および各処理フェーズでかかる処理時間 (単位はミリ秒) を調査できます。 このログには、レポートのデータセット クエリの実行にかかった時間とデータの処理にかかった時間に関する情報が記録されます。 レポート サーバー管理者は、ログの情報を確認して実行時間が長いタスクを特定し、レポート作成者に対して改善の余地があるレポートの領域 (データセットや処理) について提案することができます。  
@@ -122,7 +122,7 @@ select * from ExecutionLog3 order by TimeStart DESC
 |TimeProcessing|レポートの処理にかかった時間 (単位はミリ秒)。|  
 |TimeRendering|レポートの表示にかかった時間 (単位はミリ秒)。|  
 |Source|レポート実行のソース。 有効値は次のとおりです。<br /><br /> Live<br /><br /> Cache: キャッシュされた実行を示します。たとえば、データセット クエリは、ライブで実行されません。<br /><br /> スナップショット<br /><br /> 履歴<br /><br /> AdHoc: 詳細レポートに基づいて動的に生成されたレポート モデル、または処理および表示にレポート サーバーを使用するクライアントでプレビューされているレポート ビルダー レポートを示します。<br /><br /> Session: 既に確立されたセッション内のフォローアップ要求を示します。  たとえば、最初の要求がページ 1 の表示であり、フォローアップ要求は現在のセッション状態での Excel へのエクスポートである場合などが考えられます。<br /><br /> Rdce: レポート定義カスタマイズ拡張機能を示します。 RDCE カスタム拡張機能では、レポート実行時にレポート定義を処理エンジンに渡す前に動的にカスタマイズできます。|  
-|Status|状態 (rsSuccess またはエラー コード。複数のエラーが発生する場合は、最初のエラーのみ記録)。|  
+|状態|状態 (rsSuccess またはエラー コード。複数のエラーが発生する場合は、最初のエラーのみ記録)。|  
 |ByteCount|表示されるレポートのサイズ (バイト単位)。|  
 |RowCount|クエリから返される行数。|  
 |AdditionalInfo|実行に関する追加情報を格納する XML プロパティ バッグ。 内容は行ごとに異なります。|  
@@ -260,8 +260,6 @@ select * from ExecutionLog3 order by TimeStart DESC
   
 -   **ExternalImages**  
   
-     追加されたバージョン: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]  
-  
      値の単位はミリ秒です。 このデータはパフォーマンスに関する問題の診断に使用できます。 外部 Web サーバーからイメージを取得するのに時間がかかり、レポートの実行全体が遅くなる場合があります。  
   
     ```  
@@ -273,8 +271,6 @@ select * from ExecutionLog3 order by TimeStart DESC
     ```  
   
 -   **接続**  
-  
-     追加されたバージョン: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]  
   
      複数のレベルから成る構造体  
   
@@ -322,9 +318,9 @@ select * from ExecutionLog2 order by TimeStart DESC
  次の表に、レポート実行ログに取得されるデータを示します。  
   
 |[列]|[説明]|  
-|------------|-----------------|  
+|------------|------------------------------------------------------------|  
 |InstanceName|要求を処理したレポート サーバー インスタンスの名前。|  
-|ReportPath|レポートのパス構造。  たとえば、"test" というレポートがレポート マネージャーのルート フォルダーにある場合、ReportPath は "/test" となります。<br /><br /> "test" という名前のレポートがレポート マネージャー "samples" フォルダーに保存されている場合は、ReportPath は "/Samples/test/" となります。|  
+|ReportPath|レポートのパス構造。 ルート フォルダーに "test" として保存されたレポートの ReportPath は "/test" となります。<br /><br /> "test" という名前のレポートが "samples" フォルダーに保存されている場合、ReportPath は "/Samples/test/" となります。|  
 |UserName|ユーザー識別子。|  
 |[ExecutionID]||  
 |RequestType|要求の種類 (ユーザーまたはシステム)。|  

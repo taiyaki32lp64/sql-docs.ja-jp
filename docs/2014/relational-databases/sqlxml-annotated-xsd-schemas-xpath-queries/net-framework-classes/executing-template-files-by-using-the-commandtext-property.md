@@ -13,15 +13,15 @@ helpviewer_keywords:
 - executing template files [SQLXML]
 - CommandText property
 ms.assetid: f1b1278d-252d-4a06-836e-4ef77f338ef9
-author: douglaslMS
-ms.author: douglasl
+author: MightyPen
+ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 6b52ed239cd8e27e6304c1335b57a6598f441cac
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: f1635358fc136c9faba3ce18b1d278ee1e407411
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52812194"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66012509"
 ---
 # <a name="executing-template-files-by-using-the-commandtext-property"></a>CommandText プロパティを使用した、テンプレート ファイルの実行
   この例では、SQL または XPath クエリで構成されるテンプレート ファイルを指定して、CommandTextproperty を使用して、方法を示します。 SQL または XPath クエリを指定する、CommandText の値として、代わりに、値としてファイル名を指定できます。 次の例では、CommandType プロパティは SqlXmlCommandType.TemplateFile として指定されます。  

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.roledesignerdialog.dimensions.f1
@@ -18,12 +17,12 @@ ms.assetid: be5b2746-0336-4b12-827e-131462bdf605
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 20893db4e26824b06a1e21e47f74147312a7257d
-ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
+ms.openlocfilehash: 3efce85f27db9d0695ea56e9940ab563ed40537a
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50146327"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66074954"
 ---
 # <a name="grant-permissions-on-a-dimension-analysis-services"></a>ディメンションに対する権限の付与 (Analysis Services)
   ディメンション セキュリティは、ディメンション データではなくディメンション オブジェクトに対する権限を設定するために使用します。 通常、ディメンションに対する権限を設定する場合は、処理操作へのアクセスを許可または拒否することが主な目的です。  

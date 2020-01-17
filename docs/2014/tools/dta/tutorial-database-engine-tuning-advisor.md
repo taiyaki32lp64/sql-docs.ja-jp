@@ -14,11 +14,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 484919274e7b7df3c49ce03668950807c3627d30
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52767614"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63268372"
 ---
 # <a name="tutorial-database-engine-tuning-advisor"></a>チュートリアル:Database Engine Tuning Advisor
   データベース エンジン チューニング アドバイザーのチュートリアルへようこそ。 データベース エンジン チューニング アドバイザーは、指定されたデータベースでクエリがどのように処理されるのかを調査し、インデックス、インデックス付きビュー、パーティション分割などのデータベース構造を更新することによって、クエリ処理のパフォーマンスを強化するようユーザーに提案します。  
@@ -31,7 +31,7 @@ ms.locfileid: "52767614"
  [レッスン 1:データベース エンジン チューニング アドバイザーでの基本操作](../../relational-databases/performance/database-engine-tuning-advisor.md)  
  このレッスンでは、データベース エンジン チューニング アドバイザーの新しい GUI に慣れ親しみ、表示オプションとレイアウトの設定方法を学習します。  
   
- [レッスン 2:データベース エンジン チューニング アドバイザーを使用します。](lesson-2-using-database-engine-tuning-advisor.md)  
+ [レッスン 2:データベース エンジン チューニング アドバイザーの使用](lesson-2-using-database-engine-tuning-advisor.md)  
  このレッスンでは、データベース エンジン チューニング アドバイザーの GUI を使った基本的なチューニング タスクの実行方法を学習します。  
   
  [レッスン 3:Dta コマンド プロンプト ユーティリティの使用](lesson-3-using-the-dta-command-prompt-utility.md)  

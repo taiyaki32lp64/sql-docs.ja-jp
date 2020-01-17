@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: faa96f7e-be92-47b1-8bc5-4dbba5331655
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 0262cb9928d678b814f39b21cf6e66efb69b494a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 8f6aa21345fe4ba16c06a5ead3381a6e1ccdef8e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47810330"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68070379"
 ---
 # <a name="spcleandbfreespace-transact-sql"></a>sp_clean_db_free_space (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -43,17 +42,17 @@ sp_clean_db_free_space
 ```  
   
 ## <a name="arguments"></a>引数  
- [ @dbname=] '*database_name*'  
+ [ @dbname= ] '*database_name*'  
  クリーニングするデータベースの名前です。 *dbname*は**sysname** NULL にすることはできません。  
   
  [ @cleaning_delay=] '*delay_in_seconds*'  
- ページをクリーニングする間隔を指定します。 この値を指定することにより、I/O システムへの影響を低減することができます。 *delay_in_seconds*は**int**既定値は 0。  
+ ページをクリーニングする間隔を指定します。 これにより、I/O システムへの影響を軽減できます。 *delay_in_seconds*は**int**既定値は 0。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  0 (成功) または 1 (失敗)  
   
 ## <a name="remarks"></a>コメント  
- テーブルからの削除操作または更新操作を引き起こす行への参照を削除することに移動する行はページの領域を解放すぐにできます。 ただし、特定の状況下では、行がゴースト レコードとして、物理的にデータ ページ上に残ってしまう場合があります。 ゴースト レコードは、バックグラウンド プロセスによって定期的に削除されます。 この残存データがによって返されない、[!INCLUDE[ssDE](../../includes/ssde-md.md)]クエリに応答します。 ただし、データまたはバックアップ ファイルの物理的なセキュリティに不安があるような環境では、sp_clean_db_free_space を使用することで、これらのゴースト レコードをクリーニングすることができます。  
+ テーブルからの削除操作または更新操作を引き起こす行への参照を削除することに移動する行はページの領域を解放すぐにできます。 ただし、特定の状況下では、行がゴースト レコードとして、物理的にデータ ページ上に残ってしまう場合があります。 ゴースト レコードは、バック グラウンド プロセスで定期的に削除されます。 この残存データがによって返されない、[!INCLUDE[ssDE](../../includes/ssde-md.md)]クエリに応答します。 ただし、データまたはバックアップ ファイルの物理的なセキュリティに不安があるような環境では、sp_clean_db_free_space を使用することで、これらのゴースト レコードをクリーニングすることができます。  
   
  sp_clean_db_free_space の実行にかかる時間は、ファイルのサイズ、使用可能な空き領域、および、ディスク容量によって異なります。 sp_clean_db_free_space プロシージャは、I/O アクティビティに著しく影響する場合があるため、通常の業務時間を避けて実行することをお勧めします。  
   
@@ -62,7 +61,7 @@ sp_clean_db_free_space
  関連する[sp_clean_db_file_free_space](../../relational-databases/system-stored-procedures/sp-clean-db-file-free-space-transact-sql.md)ストアド プロシージャは、1 つのファイルをクリーンアップできます。  
   
 ## <a name="permissions"></a>アクセス許可  
- db_owner データベース ロールのメンバーシップが必要です。  
+ Db_owner データベース ロールのメンバーシップが必要です。  
   
 ## <a name="examples"></a>使用例  
  次の例からのすべての残存情報をクリーンアップする、`AdventureWorks2012`データベース。  
@@ -74,7 +73,7 @@ EXEC sp_clean_db_free_space
 @dbname = N'AdventureWorks2012' ;  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [データベース エンジン ストアド プロシージャ&#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)
  <br>[ゴースト クリーンアップ プロセス ガイド](../ghost-record-cleanup-process-guide.md) 
   

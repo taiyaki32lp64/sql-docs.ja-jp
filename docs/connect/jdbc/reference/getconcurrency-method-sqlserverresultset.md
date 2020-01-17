@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: 207e25f4-769c-4ff3-913c-3517b06208e4
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 6daf6d4d9f4c0d9ec018a9a1ff135760d64b63e7
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 5d0d59186e15dc07d1d4e91ac673c456ec592d01
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47795730"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67952824"
 ---
 # <a name="getconcurrency-method-sqlserverresultset"></a>getConcurrency メソッド (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -46,7 +45,7 @@ public int getConcurrency()
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- この getConcurrency メソッドは、java.sql.ResultSet インターフェイスの getConcurrency メソッドによって指定されます。  
+ この getConcurrency メソッドは、java. ResultSet インターフェイスの getConcurrency メソッドによって指定されます。  
   
  使用されるコンカレンシーは、結果セットを作成した [SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md) オブジェクトによって決定されます。  
   

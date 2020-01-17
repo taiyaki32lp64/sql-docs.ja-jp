@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: 8d2e79a4-5daf-458e-a536-d8b6e588753e
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 7f54d31426773f294a4a23f059c9f906d430056f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 8ad9a20ab8abd40123ec4e4d7369373e68699205
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47721760"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68028364"
 ---
 # <a name="processing-select-for-update-statements"></a>SELECT FOR UPDATE ステートメントの処理
 > [!IMPORTANT]  

@@ -1,5 +1,5 @@
 ---
-title: BottomCount (MDX) |Microsoft ドキュメント
+title: BottomCount (MDX) |Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -8,13 +8,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-manager: kfile
-ms.openlocfilehash: 424c928f64b784070520f4cebe450dd5465fea41
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.openlocfilehash: bd09c823e09270ebf7c9851b3c6760baf720db39
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34739781"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68016949"
 ---
 # <a name="bottomcount-mdx"></a>BottomCount (MDX)
 
@@ -32,19 +31,19 @@ BottomCount(Set_Expression, Count [,Numeric_Expression])
  *Set_Expression*  
  セットを返す有効な多次元式 (MDX) です。  
   
- *カウント*  
+ *Count*  
  返す組の数を指定する有効な数値式です。  
   
  *Numeric_Expression*  
- 有効な数値式です。通常は、数値を返すセル座標の多次元式 (MDX) 式です。  
+ 有効な数値式は、通常、数値を返すセル座標の多次元式 (MDX) 式です。  
   
 ## <a name="remarks"></a>コメント  
- 数値式が指定されている場合、指定されたセットに対して評価した、指定された数値式の値に基づいて、セット内の組を昇順で並べ替えます。 **BottomCount**関数し、指定した数の最小値で組を返します。  
+ 数値式が指定されている場合、この関数は、昇順で、セットに対して評価された指定された数値式の値に基づいて指定されたセット内の組を並べ替えます。 **BottomCount**関数が、最低の値の組の指定された数を返します。  
   
 > [!IMPORTANT]  
->  **BottomCount**関数は、like、 [TopCount](../mdx/topcount-mdx.md)関数を常に階層を解除します。  
+>  **BottomCount**関数は、このような[TopCount](../mdx/topcount-mdx.md)関数を常に階層を解除します。  
   
- 数値式が指定されていない場合、関数のセットを返しますメンバー、自然な順序で、並べ替えを行わずと同様の動作、 [Tail (MDX)](../mdx/tail-mdx.md)関数。  
+ 数値式が指定されていない場合、関数のセットを返しますメンバー、自然な順序で、並べ替えを行わず同様の動作、 [Tail (MDX)](../mdx/tail-mdx.md)関数。  
   
 ## <a name="example"></a>例  
  次の例では、Product SubCategory のメンバーを Reseller Sales Amount メジャーに基づいて並べ替え、売上金額が下から 5 番目までのメンバーについて、年度ごとの Reseller Order Quantity メジャーを返しています。  
@@ -61,7 +60,7 @@ WHERE
     [Measures].[Reseller Order Quantity]  
 ```  
   
-## <a name="see-also"></a>参照  
- [MDX 関数リファレンス&#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
+## <a name="see-also"></a>関連項目  
+ [MDX 関数リファレンス &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: sp_delete_jobsteplog (TRANSACT-SQL) |Microsoft Docs
+title: sp_delete_jobsteplog (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 08/09/2016
 ms.prod: sql
@@ -17,18 +17,17 @@ helpviewer_keywords:
 ms.assetid: e9ef4c99-abde-4038-b6a3-a25dcbaf0958
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 719038f8ce72bdb05ad9dbf3c3585c377abb3a75
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 66b353c7fc79b49cb9cd3fb9fe228075f3a0d473
+ms.sourcegitcommit: 43c3d8939f6f7b0ddc493d8e7a643eb7db634535
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52526236"
+ms.lasthandoff: 10/14/2019
+ms.locfileid: "72305093"
 ---
-# <a name="spdeletejobsteplog-transact-sql"></a>sp_delete_jobsteplog (Transact-SQL)
+# <a name="sp_delete_jobsteplog-transact-sql"></a>sp_delete_jobsteplog (Transact-sql)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  引数で指定したすべての [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェント ジョブ ステップ ログを削除します。 このストアド プロシージャを使用して、維持するために、 **sysjobstepslogs**テーブルに、 **msdb**データベース。  
+  引数で指定したすべての [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェント ジョブ ステップ ログを削除します。 このストアドプロシージャを使用して、 **msdb**データベースの**sysjobstepslogs**テーブルを保持します。  
   
   
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
@@ -44,38 +43,32 @@ sp_delete_jobsteplog { [ @job_id = ] 'job_id' | [ @job_name = ] 'job_name' }
 ```  
   
 ## <a name="arguments"></a>引数  
- [  **@job_id =**] **'**_job_id_**'**  
- 削除するジョブ ステップ ログを含むジョブのジョブ識別番号を指定します。 *job_id*は**int**、既定値は NULL です。  
+削除するジョブステップのログを含むジョブのジョブ識別番号を `[ @job_id = ] 'job_id'` します。 *job_id*は**int**,、既定値は NULL です。  
   
- [  **@job_name =**] **'**_job_name_**'**  
- ジョブの名前を指定します。 *job_name*は**sysname**、既定値は NULL です。  
+ジョブの名前 `[ @job_name = ] 'job_name'` ます。 *job_name*は**sysname**,、既定値は NULL です。  
   
-> **注:** いずれか*job_id*または*job_name*指定する必要がありますが、両方を指定することはできません。  
+> **注:** *Job_id*または*job_name*のいずれかを指定する必要がありますが、両方を指定することはできません。  
   
- [ **@step_id =**] *step_id*  
- ジョブ ステップ ログを削除するジョブ ステップの識別番号を指定します。 ジョブ内のすべてのジョブ ステップ ログを削除する場合を除き、含まれない場合、 **@older_than**または**@larger_than**が指定されています。 *step_id*は**int**、既定値は NULL です。  
+ジョブステップログを削除するジョブのステップの識別番号を `[ @step_id = ] step_id` します。 含まれていない場合は、 **\@older_than**または **\@larger_than**が指定されていない限り、ジョブ内のすべてのジョブステップのログが削除されます。 *step_id*は**int**,、既定値は NULL です。  
   
- [  **@step_name =**] **'**_step_name_**'**  
- ジョブ ステップ ログを削除するジョブ ステップの名前を指定します。 *step_name*は**sysname**、既定値は NULL です。  
+ジョブステップログを削除するジョブのステップの名前を `[ @step_name = ] 'step_name'` します。 *step_name*は**sysname**,、既定値は NULL です。  
   
-> **注:** いずれか*step_id*または*step_name*指定できますが、両方を指定することはできません。  
+> **注:** *Step_id*または*step_name*のいずれかを指定できますが、両方を指定することはできません。  
   
- [  **@older_than =**] **'**_日付_**'**  
- 保持しておく一番古いジョブ ステップ ログの日時を指定します。 この日時より前のジョブ ステップ ログはすべて削除されます。 *日付*は**datetime**、既定値は NULL です。 両方**@older_than**と**@larger_than**を指定できます。  
+保持する最も古いジョブステップログの日付と時刻を `[ @older_than = ] 'date'` します。 この日時より前のジョブ ステップ ログはすべて削除されます。 *日付*は**datetime**,、既定値は NULL です。 **\@older_than**と **\@larger_than**の両方を指定できます。  
   
- [  **@larger_than =**] **'**_size_in_bytes_**'**  
- 保持するジョブ ステップ ログの最大サイズをバイト単位で指定します。 このサイズより大きいすべてのジョブ ステップ ログは、削除されます。 両方**@larger_than**と**@older_than**を指定できます。  
+保持する最大のジョブステップログのサイズ (バイト単位) を `[ @larger_than = ] 'size_in_bytes'` します。 このサイズより大きいすべてのジョブ ステップ ログは、削除されます。 **\@larger_than**と **\@older_than**の両方を指定できます。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  **0** (成功) または**1** (失敗)  
   
 ## <a name="result-sets"></a>結果セット  
- なし  
+ [InclusionThresholdSetting]  
   
-## <a name="remarks"></a>コメント  
- **sp_delete_jobsteplog**では、 **msdb**データベース。  
+## <a name="remarks"></a>Remarks  
+ **sp_delete_jobsteplog**は**msdb**データベースにあります。  
   
- 場合を除く引数を持たない**@job_id**または**@job_name**は指定すると、指定したジョブのすべてのジョブ ステップ ログが削除されます。  
+ **\@job_id**または **\@job_name**以外の引数が指定されていない場合は、指定されたジョブのすべてのジョブステップログが削除されます。  
   
 ## <a name="permissions"></a>アクセス許可  
  既定では、このストアド プロシージャを実行できるのは、 **sysadmin** 固定サーバー ロールのメンバーです。 他のユーザーには、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] msdb **データベースの次のいずれかの** エージェント固定データベース ロールが許可されている必要があります。  
@@ -86,14 +79,14 @@ sp_delete_jobsteplog { [ @job_id = ] 'job_id' | [ @job_name = ] 'job_name' }
   
 -   **SQLAgentOperatorRole**  
   
- これらのロールの権限の詳細については、「 [SQL Server エージェントの固定データベース ロール](../../ssms/agent/sql-server-agent-fixed-database-roles.md)」を参照してください。  
+ これらのロールの権限の詳細については、「[SQL Server エージェントの固定データベース ロール](../../ssms/agent/sql-server-agent-fixed-database-roles.md)」を参照してください。  
   
- メンバーだけ**sysadmin**別のユーザーが所有するジョブ ステップ ログを削除することができます。  
+ 別のユーザーが所有するジョブステップログを削除できるのは、 **sysadmin**のメンバーだけです。  
   
 ## <a name="examples"></a>使用例  
   
-### <a name="a-removing-all-job-step-logs-from-a-job"></a>A. ジョブからすべてのジョブ ステップ ログを削除する  
- 次の例では、ジョブ `Weekly Sales Data Backup` のすべてのジョブ ステップ ログを削除します。  
+### <a name="a-removing-all-job-step-logs-from-a-job"></a>A. ジョブからすべてのジョブステップログを削除する  
+ 次の例では、ジョブ `Weekly Sales Data Backup`のすべてのジョブステップログを削除します。  
   
 ```  
 USE msdb ;  
@@ -104,7 +97,7 @@ EXEC dbo.sp_delete_jobsteplog
 GO  
 ```  
   
-### <a name="b-removing-the-job-step-log-for-a-particular-job-step"></a>B. 特定のジョブ ステップに対するジョブ ステップ ログを削除する  
+### <a name="b-removing-the-job-step-log-for-a-particular-job-step"></a>b. 特定のジョブステップのジョブステップログを削除する  
  次の例では、ジョブ `Weekly Sales Data Backup` のステップ 2 に対するジョブ ステップ ログを削除します。  
   
 ```  
@@ -117,8 +110,8 @@ EXEC dbo.sp_delete_jobsteplog
 GO  
 ```  
   
-### <a name="c-removing-all-job-step-logs-based-on-age-and-size"></a>C. 有効期間とサイズに基づいてすべてのジョブ ステップ ログを削除する  
- 次の例では、ジョブ `Weekly Sales Data Backup` から、2005 年 10 月 25 日の昼より前の、100 MB より大きいすべてのジョブ ステップ ログを削除します。  
+### <a name="c-removing-all-job-step-logs-based-on-age-and-size"></a>C. 有効期間とサイズに基づいてすべてのジョブステップログを削除する  
+ 次の例では、ジョブ `Weekly Sales Data Backup`から、2005年10月25日から 100 mb を超えるすべてのジョブステップログを削除します。  
   
 ```  
 USE msdb ;  
@@ -132,7 +125,7 @@ GO
 ```  
   
 ## <a name="see-also"></a>参照  
- [sp_help_jobsteplog &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-jobsteplog-transact-sql.md)   
- [SQL Server エージェント ストアド プロシージャ&#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sql-server-agent-stored-procedures-transact-sql.md)  
+ [transact-sql &#40;  の&#41; sp_help_jobsteplog](../../relational-databases/system-stored-procedures/sp-help-jobsteplog-transact-sql.md)  
+ [ストアドプロシージャ&#40;の SQL Server エージェント transact-sql&#41;](../../relational-databases/system-stored-procedures/sql-server-agent-stored-procedures-transact-sql.md)  
   
   

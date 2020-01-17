@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: e6bad449-ebdb-4dd3-886a-9e6f1e7ee5d2
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 682a7aa30596af8a3727eec0daaba4e9fd412ac4
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 3796f772dedb961ec34eb0639034350989f99142
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47601620"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67931054"
 ---
 # <a name="size-property-ado-parameter"></a>Size プロパティ (ADO Parameter)
 バイト数または文字で、最大サイズを示す、[パラメーター](../../../ado/reference/ado-api/parameter-object.md)オブジェクト。  
@@ -43,7 +42,7 @@ ms.locfileid: "47601620"
 ## <a name="applies-to"></a>適用対象  
  [Parameter オブジェクト](../../../ado/reference/ado-api/parameter-object.md)  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [ActiveConnection、CommandText、CommandTimeout、CommandType、サイズ、および方向プロパティの例 (VB)](../../../ado/reference/ado-api/activeconnection-commandtext-commandtimeout-commandtype-size-example-vb.md)   
  [ActiveConnection、CommandText、CommandTimeout、CommandType、サイズ、および方向プロパティの例 (vc++)](../../../ado/reference/ado-api/activeconnection-commandtext-commandtimeout-commandtype-size-example-vc.md)   
  [ActiveConnection、CommandText、CommandTimeout、CommandType、サイズ、および方向プロパティの例 (JScript)](../../../ado/reference/ado-api/activeconnection-commandtext-timeout-type-size-example-jscript.md)   

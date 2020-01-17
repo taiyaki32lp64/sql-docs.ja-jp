@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: dda2a3c4-76ef-40a6-b3a1-9e95bed61618
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 59110f66c512845ff5ce1f2f246c05c63fa755b9
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: f6b1544f5562468db03a649c263993039a722a3c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47751289"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68139299"
 ---
 # <a name="generic-applications"></a>汎用アプリケーション
 汎用アプリケーション、データベースからデータを取得するスプレッドシートなど、ハード コーディングされたタスクの実行場合があります。 さまざまなユーザーが入力して、SQL ステートメントを実行できる汎用クエリ アプリケーションなどのユーザー定義のタスクを実行する場合もします。 どのような汎用アプリケーションが共通は、さまざまな異なる Dbms で動作する必要があることと、開発者がわからない事前なりますこれらの Dbms です。  

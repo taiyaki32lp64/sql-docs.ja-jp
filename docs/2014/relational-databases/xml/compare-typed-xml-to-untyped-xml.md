@@ -22,18 +22,18 @@ helpviewer_keywords:
 - XML [SQL Server], untyped
 - xml data type [SQL Server], parameters
 ms.assetid: 4bc50af9-2f7d-49df-bb01-854d080c72c7
-author: douglaslMS
-ms.author: douglasl
+author: MightyPen
+ms.author: genemi
 manager: craigg
-ms.openlocfilehash: a318e2729c6d03770b5d7c8e41412cef182f641a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 98cbaa59ea78e0033e9a534915987576347db604
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48163062"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62637620"
 ---
 # <a name="compare-typed-xml-to-untyped-xml"></a>型指定された XML と型指定されていない XML の比較
-  `xml` 型の変数、パラメーター、および列を作成できます。 必要に応じて、変数、パラメーター、または列の XML スキーマのコレクションを関連付けることができます`xml`型。 ここで、`xml`データ型のインスタンスと呼びます*型指定された*します。 それ以外の場合は、XML インスタンスを *型指定されていない*と呼びます。  
+  `xml` 型の変数、パラメーター、および列を作成できます。 必要に応じて、XML スキーマのコレクションを、`xml` 型の変数、パラメーター、または列に関連付けることができます。 ここで、`xml`データ型のインスタンスと呼びます*型指定された*します。 それ以外の場合は、XML インスタンスを *型指定されていない*と呼びます。  
   
 ## <a name="well-formed-xml-and-the-xml-data-type"></a>適切な形式の XML と xml データ型  
  `xml` データ型には、ISO 標準の `xml` データ型が実装されています。 したがって、型指定されていない XML 列には、適切な形式の XML Version 1.0 ドキュメントを保存できるほか、テキスト ノードや任意の数の最上位要素が含まれた、いわゆる XML コンテンツ フラグメントを保存することもできます。 システムにより、データが適切な形式であることが確認されます。このとき XML スキーマに列をバインドする必要はなく、広義の適切な形式でないデータは拒否されます。 このことは、型指定されていない XML の変数やパラメーターにも該当します。  
@@ -46,7 +46,7 @@ ms.locfileid: "48163062"
 -   **データ型情報。** スキーマでは、`xml` データ型のインスタンス内の属性と要素の型に関する情報が提供されます。 この型情報により、インスタンスに含まれている値には、型指定されていない `xml` より正確な演算のセマンティクスが提供されます。 たとえば、10 進数の算術演算は 10 進数値では実行できますが、文字列値では実行できません。 スキーマで型情報が指定されるので、型指定された XML ストレージは、型指定されていない XML よりも大幅に小さくすることができます。  
   
 ## <a name="choosing-typed-or-untyped-xml"></a>型指定された XML と型指定されていない XML の選択  
- 型指定されていない使用`xml`次の状況でのデータ型。  
+ 次の条件に該当する場合は、型指定されていない `xml` データ型を使用してください。  
   
 -   XML データに対応するスキーマがない場合。  
   
@@ -63,19 +63,19 @@ ms.locfileid: "48163062"
  型指定された XML の列、パラメーター、および変数には、XML ドキュメントまたは XML コンテンツを保存できます。 ただし、宣言のときに保存の対象がドキュメントなのかコンテンツなのかをフラグで指定する必要があります。 また、XML スキーマのコレクションを指定する必要があります。 各 XML インスタンスの最上位要素が 1 つだけの場合、DOCUMENT を指定します。 それ以外の場合は CONTENT を指定します。 クエリのコンパイルで型を確認するとき、クエリ コンパイラにより DOCUMENT フラグが使用され、シングルトンの最上位要素が推測されます。  
   
 ## <a name="creating-typed-xml"></a>型指定された XML の作成  
- 型指定されたを作成する前に`xml`変数、パラメーター、または列を使用して、XML スキーマ コレクションを登録する必要がありますまず[CREATE XML SCHEMA COLLECTION &#40;TRANSACT-SQL&#41;](/sql/t-sql/statements/create-xml-schema-collection-transact-sql)します。 変数、パラメーター、またはの列に XML スキーマ コレクションを関連付けることができますし、`xml`データ型。  
+ 型指定されたを作成する前に`xml`変数、パラメーター、または列を使用して、XML スキーマ コレクションを登録する必要がありますまず[CREATE XML SCHEMA COLLECTION &#40;TRANSACT-SQL&#41;](/sql/t-sql/statements/create-xml-schema-collection-transact-sql)します。 その後、XML スキーマ コレクションを `xml` データ型の変数、パラメーター、または列に関連付けることができます。  
   
  次の例では、XML スキーマ コレクション名を指定する際に、2 つの要素で構成された名前付け規則が使用されます。 最初の要素はスキーマ名で、2 番目の要素は XML スキーマ コレクション名です。  
   
-### <a name="example-associating-a-schema-collection-with-an-xml-type-variable"></a>例 : スキーマ コレクションと xml 型の変数の関連付け  
+### <a name="example-associating-a-schema-collection-with-an-xml-type-variable"></a>例: スキーマ コレクションと xml 型の変数の関連付け  
  次の例では、作成、`xml`型の変数と、それにスキーマ コレクションを関連付けます。 例で指定されているスキーマ コレクションは、 **AdventureWorks** のデータベースに既にインポートされています。  
   
 ```  
 DECLARE @x xml (Production.ProductDescriptionSchemaCollection);   
 ```  
   
-### <a name="example-specifying-a-schema-for-an-xml-type-column"></a>例 : xml 型の列のスキーマの指定  
- 次の例を含むテーブルを作成する、`xml`列を入力し、列のスキーマを指定します。  
+### <a name="example-specifying-a-schema-for-an-xml-type-column"></a>例: xml 型の列のスキーマの指定  
+ 次の例では、`xml` 型の列を持つテーブルを作成し、列のスキーマを指定します。  
   
 ```  
 CREATE TABLE T1(  
@@ -83,8 +83,8 @@ CREATE TABLE T1(
  Col2 xml (Production.ProductDescriptionSchemaCollection)) ;  
 ```  
   
-### <a name="example-passing-an-xml-type-parameter-to-a-stored-procedure"></a>例 : xml 型のパラメーターのストアド プロシージャへの受け渡し  
- 次の例では、`xml`ストアド プロシージャのパラメーターを入力し、変数にスキーマを指定します。  
+### <a name="example-passing-an-xml-type-parameter-to-a-stored-procedure"></a>例: xml 型のパラメーターのストアド プロシージャへの受け渡し  
+ 次の例では、`xml` 型のパラメーターをストアド プロシージャに渡し、変数にスキーマを指定します。  
   
 ```  
 CREATE PROCEDURE SampleProc   
@@ -97,16 +97,16 @@ AS
   
 -   XML スキーマ コレクションは、「 [CREATE XML SCHEMA COLLECTION (Transact-SQL)](/sql/t-sql/statements/create-xml-schema-collection-transact-sql)」を使用して登録されたデータベースでのみ使用できます。  
   
--   場合に、型指定された文字列からキャストする`xml`検証と型指定されたコレクション内の XML スキーマ名前空間に基づくデータ型、解析も実行します。  
+-   文字列から型指定された `xml` データ型にキャストする場合、指定したコレクションの XML スキーマの名前空間に基づいて、解析時に検証と型指定も行われます。  
   
 -   型指定された `xml` データ型から、型指定されていない `xml` データ型にキャストできます。その逆も可能です。  
   
- SQL Server で XML を生成するその他の方法の詳細については、「 [XML データのインスタンスの作成](create-instances-of-xml-data.md)」を参照してください。 XML が生成されると、割り当てることができますのいずれか、`xml`データ型の変数またはに格納されている`xml`追加処理用の列を入力します。  
+ SQL Server で XML を生成するその他の方法の詳細については、「 [XML データのインスタンスの作成](create-instances-of-xml-data.md)」を参照してください。 XML を生成後、それを `xml` データ型の変数に代入できます。また、その後の処理のために `xml` 型の列に格納することもできます。  
   
- データ型の階層で、`xml`データ型の下に表示`sql_variant`とユーザー定義型を超えることは、組み込み型のいずれか。  
+ データ型の階層では、`xml` データ型は `sql_variant` やユーザー定義型の下、組み込み型の上に表示されます。  
   
-### <a name="example-specifying-facets-to-constrain-a-typed-xml-column"></a>例 : 型指定された xml 列を制約するためのファセットの指定  
- 型指定された`xml`列に格納されているインスタンスごとに 1 つだけ、最上位の要素を許可する列を制限することができます。 これを行うには、次の例で示すように、テーブルを作成するときに、オプションの `DOCUMENT` ファセットを指定します。  
+### <a name="example-specifying-facets-to-constrain-a-typed-xml-column"></a>例: 型指定された xml 列を制約するためのファセットの指定  
+ 型指定された `xml` 列では、格納されているインスタンスごとに、最上位要素を 1 つだけ許可するように、列を制約できます。 これを行うには、次の例で示すように、テーブルを作成するときに、オプションの `DOCUMENT` ファセットを指定します。  
   
 ```  
 CREATE TABLE T(Col1 xml   
@@ -116,7 +116,7 @@ DROP TABLE T;
 GO  
 ```  
   
- 既定では、インスタンスは、型指定された保存`xml`列が XML ドキュメントではなく、XML コンテンツとして格納されます。 これにより、次のことが可能になります。  
+ 既定では、型指定された `xml` 列に格納されるインスタンスは、XML ドキュメントではなく、XML コンテンツとして格納されます。 これにより、次のことが可能になります。  
   
 -   ゼロ (0) 個以上の最上位要素  
   
@@ -129,7 +129,7 @@ CREATE TABLE T(Col1 xml(CONTENT Production.ProductDescriptionSchemaCollection));
 GO -- Default  
 ```  
   
- `xml` 型 (型指定された xml) を定義する場所ならどこでも、オプションの DOCUMENT/CONTENT ファセットを指定することができます。 たとえば、作成する場合、型指定された`xml`変数を追加できます DOCUMENT/CONTENT ファセットを次に示すようにします。  
+ `xml` 型 (型指定された xml) を定義する場所ならどこでも、オプションの DOCUMENT/CONTENT ファセットを指定することができます。 たとえば、型指定された `xml` 変数を作成するときに、次に示すように DOCUMENT/CONTENT ファセットを追加できます。  
   
 ```  
 declare @x xml (DOCUMENT Production.ProductDescriptionSchemaCollection);  
@@ -155,7 +155,7 @@ declare @x xml (DOCUMENT Production.ProductDescriptionSchemaCollection);
   
  負の年が含まれていても、単純な SQL SELECT ステートメントを使用して XML データ型全体を取得することはできます。 負の年は、新たにサポートされた範囲内の年に置き換えるか、要素や属性の型を **xs:string**に変更することをお勧めします。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [XML データのインスタンスの作成](create-instances-of-xml-data.md)   
  [xml データ型のメソッド](/sql/t-sql/xml/xml-data-type-methods)   
  [XML データ変更言語 &#40;XML DML&#41;](/sql/t-sql/xml/xml-data-modification-language-xml-dml)   

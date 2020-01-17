@@ -1,7 +1,7 @@
 ---
-title: MSSQL JDBC ドライバーのバッチ挿入操作の一括コピー API を使用して |Microsoft Docs
+title: MSSQL JDBC Driver で一括コピー API を使用してバッチ挿入操作を実行する |Microsoft Docs
 ms.custom: ''
-ms.date: 01/21/2019
+ms.date: 08/12/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,68 +10,67 @@ ms.topic: conceptual
 ms.assetid: ''
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: c3d3c7cc4d8dd7beeb620a211b2f41a1d1105a04
-ms.sourcegitcommit: 879a5c6eca99e0e9cc946c653d4ced165905d9c6
+ms.openlocfilehash: 3050cdf87775a67618902dfbb88b656003020769
+ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/05/2019
-ms.locfileid: "55737103"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "69027103"
 ---
 # <a name="using-bulk-copy-api-for-batch-insert-operation"></a>バッチ挿入操作に一括コピー API を使用する
 
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
-バッチの一括コピー API を使用して SQL Server サポート用の Microsoft JDBC Driver 7.0 では、Azure Data Warehouse の操作を挿入します。 この機能では、挿入操作のバッチを実行するときに下にある一括コピー操作を実行するドライバーを有効にすることができます。 正規表現のバッチである、ドライバーと同じデータの挿入中にパフォーマンスの向上を実現するためにドライバーの目的は、操作を挿入します。 ドライバーは、通常のバッチ挿入操作の代わりの一括コピー API を利用するユーザーの SQL クエリを解析します。 バッチの一括コピー API を有効にするさまざまな方法は挿入機能と制限事項の一覧を次に示します。 このページには、使用状況とパフォーマンスの向上を説明する小規模なサンプル コードも含まれています。
+Microsoft JDBC Driver 7.0 for SQL Server は、Azure Data Warehouse に対する一括コピー API の使用をサポートしています。 この機能を使用すると、バッチ挿入操作の実行時にドライバーが一括コピー操作を実行できるようになります。 ドライバーは、通常のバッチ挿入操作と同じデータを挿入するときに、パフォーマンスを向上させることを目的としています。 ドライバーは、通常のバッチ挿入操作の代わりに、一括コピー API を利用して、ユーザーの SQL クエリを解析します。 バッチ挿入機能の一括コピー API とその制限事項の一覧を有効にするためのさまざまな方法を以下に示します。 このページには、使用状況とパフォーマンスの向上を示す小さなサンプルコードも含まれています。
 
-この機能は、PreparedStatement および CallableStatement ののみ`executeBatch()`  &  `executeLargeBatch()` Api。
+この機能は、PreparedStatement および callablestatement の`executeBatch()`  &  `executeLargeBatch()` api にのみ適用されます。
 
-## <a name="pre-requisites"></a>前提条件
+## <a name="prerequisites"></a>Prerequisites
 
-一括挿入を一括コピー API を有効にする 2 つの前提条件があります。
+一括コピー API を有効にするには、次の2つの前提条件があります。
 
-* サーバーは、Azure Data Warehouse である必要があります。
-* クエリは、insert クエリである必要があります (クエリは、コメントを含めることができますが、この機能を有効になる INSERT キーワードを使用してクエリを開始する必要があります)。
+* サーバーは Azure Data Warehouse である必要があります。
+* クエリは挿入クエリである必要があります (クエリにはコメントが含まれている場合がありますが、この機能を有効にするには、クエリの先頭に INSERT キーワードを使用する必要があります)。
 
-## <a name="enabling-bulk-copy-api-for-batch-insert"></a>一括挿入の一括コピー API を有効にします。
+## <a name="enabling-bulk-copy-api-for-batch-insert"></a>バッチ挿入用の一括コピー API の有効化
 
-一括挿入を一括コピー API を有効にする 3 つの方法はあります。
+一括コピー API を有効にするには、次の3つの方法があります。
 
-### <a name="1-enabling-with-connection-property"></a>1.接続プロパティを有効にします。
+### <a name="1-enabling-with-connection-property"></a>1.接続プロパティを使用した有効化
 
-追加**useBulkCopyForBatchInsert = true;** 接続文字列がこの機能を有効します。
+**Usebulkcopyforbatchinsert = true;** を接続文字列に追加すると、この機能が有効になります。
 
 ```java
 Connection connection = DriverManager.getConnection("jdbc:sqlserver://<server>:<port>;userName=<user>;password=<password>;database=<database>;useBulkCopyForBatchInsert=true;");
 ```
 
-### <a name="2-enabling-with-setusebulkcopyforbatchinsert-method-from-sqlserverconnection-object"></a>2.SQLServerConnection オブジェクトから setUseBulkCopyForBatchInsert() メソッドを使用して有効にします。
+### <a name="2-enabling-with-setusebulkcopyforbatchinsert-method-from-sqlserverconnection-object"></a>2.SQLServerConnection オブジェクトから setUseBulkCopyForBatchInsert () メソッドを使用して有効にする
 
-呼び出す**SQLServerConnection.setUseBulkCopyForBatchInsert(true)** この機能を有効にします。
+**SQLServerConnection を**呼び出すと、この機能が有効になります。
 
-**SQLServerConnection.getUseBulkCopyForBatchInsert()** の現在の値を取得します。 **useBulkCopyForBatchInsert**接続プロパティです。
+SQLServerConnection は、 **usebulkcopyforbatchinsert**接続プロパティの現在の値を取得し**ます。**
 
-値は、 **useBulkCopyForBatchInsert**の初期化時に各 PreparedStatement の定数を保持します。 呼び出す**SQLServerConnection.setUseBulkCopyForBatchInsert()** 作成済みの PreparedStatement に関しては、その値には影響しません。
+**Usebulkcopyforbatchinsert**の値は、初期化時に PreparedStatement ごとに変わりません。 後続の SQLServerConnection の呼び出しは、その値に関して、既に作成された PreparedStatement には影響しません **。**
 
-### <a name="3-enabling-with-setusebulkcopyforbatchinsert-method-from-sqlserverdatasource-object"></a>3.SQLServerDataSource オブジェクトから setUseBulkCopyForBatchInsert() メソッドを使用して有効にします。
+### <a name="3-enabling-with-setusebulkcopyforbatchinsert-method-from-sqlserverdatasource-object"></a>3.SQLServerDataSource オブジェクトから setUseBulkCopyForBatchInsert () メソッドを使用して有効にする
 
-上記に似ていますが SQLServerDataSource を使用して、SQLServerConnection オブジェクトを作成します。 どちらの方法も、同じ結果が得られます。
+上記と同様ですが、SQLServerDataSource を使用して SQLServerConnection オブジェクトを作成します。 どちらの方法も、同じ結果が得られます。
 
 ## <a name="known-limitations"></a>既知の制限事項
 
-現在、この機能に適用されるこれらの制限は。
+現在、この機能に適用される制限事項があります。
 
-* パラメーター化されていない値を含むクエリの挿入 (たとえば、 `INSERT INTO TABLE VALUES (?, 2`)) はサポートされていません。 ワイルドカード (?) は、この関数でのみサポートされているパラメーターです。
-* 挿入 INSERT SELECT 式が含まれるクエリ (たとえば、 `INSERT INTO TABLE SELECT * FROM TABLE2`) ではサポートされていません。
-* 複数値の式を含むクエリの挿入 (たとえば、 `INSERT INTO TABLE VALUES (1, 2) (3, 4)`) はサポートされていません。
-* OPTION 句の後に、複数のテーブルと結合または後に別のクエリの挿入クエリはサポートされていません。
-* 一括コピーの API の制限により`MONEY`、 `SMALLMONEY`、 `DATE`、 `DATETIME`、 `DATETIMEOFFSET`、 `SMALLDATETIME`、 `TIME`、 `GEOMETRY`、および`GEOGRAPHY`データ型は現在サポートされていませんこの機能です。
+* パラメーター化されていない値 (など`INSERT INTO TABLE VALUES (?, 2`) を含む Insert クエリはサポートされていません。 この関数でサポートされているパラメーターは、ワイルドカード (?) だけです。
+* 挿入選択式 (など`INSERT INTO TABLE SELECT * FROM TABLE2`) を含む insert クエリはサポートされていません。
+* 複数の値式 (など`INSERT INTO TABLE VALUES (1, 2) (3, 4)`) を含む Insert クエリはサポートされていません。
+* OPTION 句が後に続く Insert クエリ、複数のテーブルと結合されたクエリ、または別のクエリの後に続く挿入クエリはサポートされていません。
+* 一括コピー API `MONEY` `SMALLMONEY` `DATE`の制限`GEOGRAPHY`により、、、、、、、、、およびの各データ型は現在、この場合はサポートされていません。 `DATETIME` `DATETIMEOFFSET` `SMALLDATETIME` `TIME` `GEOMETRY`機能.
 
-以外のため、クエリが失敗した場合"SQL server"関連のエラー、ドライバーは一括挿入を元のロジックにエラー メッセージとフォールバックが記録されます。
+"SQL server" に関連するエラーがないためにクエリが失敗した場合、ドライバーはエラーメッセージをログに記録し、バッチ挿入の元のロジックにフォールバックします。
 
 ## <a name="example"></a>例
 
-ユース ケースをバッチ挿入操作の Azure の DW に対して、1000 を超える数の行の両方 (正規表現と一括コピー API) のシナリオを示すコードの例を次に示します。
+次に示すのは、(通常の一括コピー API) シナリオで、1000行の Azure DW に対するバッチ挿入操作のユースケースを示すコード例です。
 
 ```java
     public static void main(String[] args) throws Exception

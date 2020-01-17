@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 6e7b3631-38d5-4375-b565-21d2e3f36ae0
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 760b5443def7ba775dedbf6fcc23ef949c024a62
-ms.sourcegitcommit: 0f7cf9b7ab23df15624d27c129ab3a539e8b6457
+ms.openlocfilehash: 4538b78cb64a5017230f0a879f5bf20a02df0341
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51290689"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67946512"
 ---
 # <a name="ordered-and-unordered-expressions-xquery"></a>順序付けられた式と順序付けられていない式 (XQuery)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -32,7 +31,7 @@ ms.locfileid: "51290689"
   
  その他**注文**と**順序付けられていない**XQuery 仕様で説明する構文はサポートされていません。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [XQuery 式](../xquery/xquery-expressions.md)   
  [FLWOR ステートメントおよびイテレーション&#40;XQuery&#41;](../xquery/flwor-statement-and-iteration-xquery.md)   
  [パス式&#40;XQuery&#41;](../xquery/path-expressions-xquery.md)  

@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 513f071a-d5e6-4ed5-acca-269bf76323c5
 author: Shamikg
 ms.author: Shamikg
-manager: craigg
-ms.openlocfilehash: d6daf0e74ff8c7a7c65441bc98afc9c47964ef0b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: cd8dfbd7aa4205424c45861f6ada1113f76d344e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47745470"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68029172"
 ---
 # <a name="edit-type-mapping-sybasetosql"></a>型のマッピングの編集 (SybaseToSQL)
 **型マッピングの編集** ダイアログ ボックスでは、ソースと変換先のデータベース オブジェクトの間で型をマップする方法を指定することができます。  

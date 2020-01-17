@@ -1,10 +1,8 @@
 ---
-title: 検索プロパティ リストを使用したドキュメント プロパティの検索 | Microsoft Docs
-ms.custom: ''
+title: 検索プロパティ リストを使用したドキュメント プロパティの検索
 ms.date: 03/06/2017
 ms.prod: sql
 ms.prod_service: search, sql-database
-ms.reviewer: ''
 ms.technology: search
 ms.topic: conceptual
 helpviewer_keywords:
@@ -16,16 +14,17 @@ helpviewer_keywords:
 - search property lists [SQL Server], about
 - property searching [SQL Server]
 ms.assetid: ffae5914-b1b2-4267-b927-37e8382e0a9e
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
+author: pmasl
+ms.author: pelopes
+ms.reviewer: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 1f6bb16f3e6b7c2cd7c2e2a01a40132f7df6e585
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.custom: seo-lt-2019
+ms.openlocfilehash: b4251879180966f3e40d2e1d070be04c5f8e5547
+ms.sourcegitcommit: d00ba0b4696ef7dee31cd0b293a3f54a1beaf458
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52503054"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "74056098"
 ---
 # <a name="search-document-properties-with-search-property-lists"></a>検索プロパティ リストを使用したドキュメント プロパティの検索
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -42,7 +41,7 @@ ms.locfileid: "52503054"
   
  次の図は、Title と Keywords の 2 つのプロパティを指定する検索プロパティ リストの論理的なビューを示しています。 Keywords のプロパティ リスト名は "Tags" です。 これらのプロパティは、F29F85E0-4FF9-1068-AB91-08002B27B3D9 という GUID を持つ同じプロパティ セットに属します。 Title のプロパティ整数識別子は 2、Tags (Keywords) のプロパティ整数識別子は 5 です。 Full-Text Engine は、各プロパティを、検索プロパティ リストで一意となる内部プロパティ ID に適宜関連付けます。 Title プロパティの内部プロパティ ID は 1、Tags プロパティの内部プロパティ ID は 2 になります。  
   
- ![内部テーブルへの検索プロパティ リストのマッピング](../../relational-databases/search/media/ifts-spl-w-title-and-keywords.gif "内部テーブルへの検索プロパティ リストのマッピング")  
+ ![検索プロパティ リストを内部テーブルにマッピングする](../../relational-databases/search/media/ifts-spl-w-title-and-keywords.gif "検索プロパティ リストを内部テーブルにマッピングする")  
   
  内部プロパティ ID は、プロパティのプロパティ整数識別子とは異なる場合があります。 特定のプロパティを複数の検索プロパティ リストに登録した場合、検索プロパティ リストごとに異なる内部プロパティ ID が割り当てられる可能性があります。 たとえば、ある検索プロパティ リストでは内部プロパティ ID が 4 である一方で、別の検索プロパティ リストでは内部プロパティ ID が 1 であったり 3 であったりする場合があります。 これに対し、プロパティ整数識別子はプロパティに固有な識別子であるため、プロパティがどこで使用されるかに関係なく同じ値になります。  
   
@@ -89,7 +88,7 @@ ms.locfileid: "52503054"
   
     -   **[既存の検索プロパティ リストから作成する]**  
   
-     詳細については、「 [New Search Property List](https://msdn.microsoft.com/library/ffca78e9-8608-4b15-bd38-b2d78da4247a)」を参照してください。  
+     詳細については、「 [New Search Property List](/sql/database-engine/new-search-property-list)」を参照してください。  
   
 8.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
@@ -202,7 +201,7 @@ GO
   
     2.  ドキュメント プロパティを追加するには、リストの末尾で **\*** の右側の空白行をクリックして、新しいプロパティの値を入力します。  
   
-         これらの値の詳細については、「 [検索プロパティ リスト エディター](https://msdn.microsoft.com/library/0f3ced6e-0dfd-49fc-b175-82378c3d668e)」を参照してください。 Microsoft によって定義されているプロパティのこれらの値を取得する方法については、「 [検索プロパティのプロパティ セット GUID およびプロパティ整数 ID の取得](../../relational-databases/search/find-property-set-guids-and-property-integer-ids-for-search-properties.md)」を参照してください。 独立系ソフトウェア ベンダー (ISV) によって定義されたプロパティの詳細については、そのベンダーのマニュアルを参照してください。  
+         これらの値の詳細については、「 [検索プロパティ リスト エディター](/sql/database-engine/search-property-list-editor)」を参照してください。 Microsoft によって定義されているプロパティのこれらの値を取得する方法については、「 [検索プロパティのプロパティ セット GUID およびプロパティ整数 ID の取得](../../relational-databases/search/find-property-set-guids-and-property-integer-ids-for-search-properties.md)」を参照してください。 独立系ソフトウェア ベンダー (ISV) によって定義されたプロパティの詳細については、そのベンダーのマニュアルを参照してください。  
   
 7.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   

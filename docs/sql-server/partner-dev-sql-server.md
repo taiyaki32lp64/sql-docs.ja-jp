@@ -1,21 +1,20 @@
 ---
-title: SQL Server 開発のパートナー | Microsoft Docs
+title: 開発 SQL Server パートナー
 description: サーバー開発のソリューションを提供しているサードパーティ パートナーの一覧を表示します。
 ms.topic: conceptual
-ms.custom: ''
+ms.custom: seo-dt-2019
 ms.date: 09/17/2017
 ms.prod: sql
 ms.technology: ''
 ms.prod_service: database-engine
 ms.author: mikeray
 author: MikeRayMSFT
-manager: craigg
-ms.openlocfilehash: c47021ce06d51b833ede6ee75f1e575e4b078314
-ms.sourcegitcommit: 1e28f923cda9436a4395a405ebda5149202f8204
+ms.openlocfilehash: c865464022ba18e03be5baa5b66b4b4a87ce2799
+ms.sourcegitcommit: 15fe0bbba963d011472cfbbc06d954d9dbf2d655
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/25/2019
-ms.locfileid: "55044905"
+ms.lasthandoff: 11/14/2019
+ms.locfileid: "74095857"
 ---
 # <a name="sql-server-development-partners"></a>SQL Server 開発のパートナー
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -29,7 +28,7 @@ SQL Server データベース ソリューションの開発をサポートす�
 |![click2cloud][2] |**Click2Cloud Inc.**<br>Click2Cloud Inc. によって、開発者コミュニティは、適切なツールセットを使用してプログラミング言語、フレームワーク、サービスを柔軟に選択できるようになります。 Click2Cloud のツールキットを使用して、開発者は "Linux 上の SQL" コンテナーを作成し、アプリケーションにアタッチできるだけでなく、セキュリティで保護されたマルチテナントのアーキテクチャを構築できます。 コンテナーは、任意のクラウドベースのコンテナー プラットフォームに個別に配置できます。|[Marketplace][click2cloud_marketplace]<br>[Web サイト][click2cloud_website]<br>[Twitter][click2cloud_twitter]<br>[ビデオ][click2cloud_youtube] |
 
 ## <a name="next-steps"></a>次の手順
-その他のパートナーの詳細については、[高可用性、ディザスター リカバリーのパートナー][hadr_partners]、[管理パートナー][management_partners]、[監視パートナー][monitor_partners]をご確認ください。
+その他のパートナーについて詳しくは、[高可用性とディザスター リカバリーのパートナー][hadr_partners]、[管理パートナー][management_partners]、[監視パートナー][monitor_partners]に関するページをご覧ください。
 
 <!--Image references-->
 [1]: ./media/partner-hadr-sql-server/idera_logo.png

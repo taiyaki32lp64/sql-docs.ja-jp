@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: d0cbf214-fc2e-4917-8d31-1d71c9ffa61d
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: b95e728b975cba41b8c9986dc00d42a9b913dc5e
-ms.sourcegitcommit: ef6e3ec273b0521e7c79d5c2a4cb4dcba1744e67
+ms.openlocfilehash: 2f2be2bae147355557925bba1bd475ee9583447d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51512327"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68086920"
 ---
 # <a name="policy-based-management-storage"></a>ポリシー ベースの管理のストレージ
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

@@ -4,21 +4,20 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 helpviewer_keywords:
 - linked reports [Reporting Services], creating
 ms.assetid: 12be8341-cb57-45e8-a421-2bf66b50234d
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 0ad789a8246479c16ed5ceba17c3e7d9cf19d6ea
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: d0df6a3bdb6f542b02b62ccf4aa6614da290551f
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56010893"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66102697"
 ---
 # <a name="create-a-linked-report"></a>リンク レポートを作成する
   リンク レポートは、既存のレポートへのアクセス ポイントとなるレポート サーバー アイテムです。 概念的には、プログラムを実行したりファイルを開くのに使用する、プログラム ショートカットに似ています。  
@@ -43,7 +42,7 @@ ms.locfileid: "56010893"
   
      ![リンク レポート アイコン](../media/hlp-16linked.gif "リンク レポート アイコン")  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [レポートを開閉する (レポート マネージャー)](../reports/open-and-close-a-report-report-manager.md)   
  [新しいリンク レポート ページ (レポート マネージャー)](../new-linked-report-page-report-manager.md)   
  [アイテムの場所の選択 ページ &#40;レポート マネージャー&#41;](../choose-item-location-page-report-manager.md)   

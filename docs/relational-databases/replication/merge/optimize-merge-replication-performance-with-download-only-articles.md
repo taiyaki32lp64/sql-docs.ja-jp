@@ -1,6 +1,7 @@
 ---
-title: ダウンロード専用アーティクルを使用したマージ レプリケーションのパフォーマンス最適化 | Microsoft Docs
-ms.custom: ''
+title: ダウンロード専用アーティクルのパフォーマンスの最適化 (マージ)
+description: マージ レプリケーションで使用されるダウンロード専用アーティクルのパフォーマンスを最適化する方法について説明します。
+ms.custom: seo-lt-2019
 ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -14,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 8851faa6-e6df-4ea5-a6ea-2a3471680fa3
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 7dadf635e055a06a8f86349c73d4921c124f7f4c
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: b2e5ba71eab133751b9ae58d912b933b6821178d
+ms.sourcegitcommit: 02d44167a1ee025ba925a6fefadeea966912954c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54123802"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75321457"
 ---
 # <a name="optimize-merge-replication-performance-with-download-only-articles"></a>ダウンロード専用アーティクルを使用したマージ レプリケーションのパフォーマンス最適化
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

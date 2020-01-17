@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 1c79e271-21ec-41a8-8163-c5e89f0001a7
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 4194cf7bea9d2a7cb52ea255ee7a858cdf4de6e5
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ba871d6d0e84b8068cb36a3ed2516a2665db28d4
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47716310"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67932435"
 ---
 # <a name="index-property"></a>Index プロパティ
 有効なインデックスを現在の名前を示します、 [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md)オブジェクト。  
@@ -46,14 +45,14 @@ ms.locfileid: "47716310"
   
  インデックスを設定する場合は、 [LockType](../../../ado/reference/ado-api/locktype-property-ado.md)プロパティは**adLockPessimistic**または**adLockOptimistic**、し、暗黙[UpdateBatch](../../../ado/reference/ado-api/updatebatch-method.md)操作が実行されます。 これにより、現在および影響を受けるグループが解放されます。 任意の既存のフィルターがリリースされ、並べ替えられたの最初の行に現在の行位置が変更された**Recordset**します。  
   
- **インデックス**と共にプロパティが使用される、[シーク](../../../ado/reference/ado-api/seek-method.md)メソッド。 基になるプロバイダーがサポートされていない場合、**インデックス**プロパティ、つまり、**シーク**メソッドの使用を検討、[検索](../../../ado/reference/ado-api/find-method-ado.md)メソッド代わりにします。 決定かどうか、**レコード セット**オブジェクトのインデックスをサポートしている、[サポート](../../../ado/reference/ado-api/supports-method.md)**(adIndex)** メソッド。  
+ **インデックス**と共にプロパティが使用される、[シーク](../../../ado/reference/ado-api/seek-method.md)メソッド。 基になるプロバイダーがサポートされていない場合、**インデックス**プロパティ、つまり、**シーク**メソッドの使用を検討、[検索](../../../ado/reference/ado-api/find-method-ado.md)メソッド代わりにします。 決定かどうか、**レコード セット**オブジェクトのインデックスをサポートしている、[サポート](../../../ado/reference/ado-api/supports-method.md) **(adIndex)** メソッド。  
   
  組み込み**インデックス**プロパティが動的に関連しない[最適化](../../../ado/reference/ado-api/optimize-property-dynamic-ado.md)プロパティ、インデックスを扱う、両方が。  
   
 ## <a name="applies-to"></a>適用対象  
  [Recordset オブジェクト (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [Seek メソッドおよび Index プロパティの例 (VB)](../../../ado/reference/ado-api/seek-method-and-index-property-example-vb.md)   
  [Index オブジェクト (ADOX)](../../../ado/reference/adox-api/index-object-adox.md)   
  [Seek メソッド](../../../ado/reference/ado-api/seek-method.md)

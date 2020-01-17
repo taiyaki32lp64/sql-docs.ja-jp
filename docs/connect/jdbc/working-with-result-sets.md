@@ -1,7 +1,7 @@
 ---
-title: 結果セットの操作 |Microsoft Docs
+title: 結果セットを操作する |Microsoft Docs
 ms.custom: ''
-ms.date: 01/19/2017
+ms.date: 08/12/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,15 +10,14 @@ ms.topic: conceptual
 ms.assetid: 4fc4b1c6-3075-4ad7-9244-865d9ede7ae6
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 85bf644f78e2c727681ae293eb144b765079d7d1
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d38cb92fbbf83f9b8a110d2e17f60af70c177ab4
+ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47713470"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "69025439"
 ---
-# <a name="working-with-result-sets"></a>結果セットの処理
+# <a name="working-with-result-sets"></a>結果セットの操作
 
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
@@ -27,7 +26,7 @@ ms.locfileid: "47713470"
 また、SQLServerResultSet オブジェクトは、このオブジェクトのデータ行間を移動したり、オブジェクトに含まれるデータを取得または設定したり、基になるデータベースの変更に対するさまざまなレベルの応答性を確立したりするためのメソッドを提供します。  
   
 > [!NOTE]  
-> 変更に対する応答性など、結果セットの管理の詳細については、次を参照してください。 [JDBC ドライバーでの結果セットの管理](../../connect/jdbc/managing-result-sets-with-the-jdbc-driver.md)します。  
+> 変更に対する感度など、結果セットの管理の詳細については、「 [JDBC ドライバーを使用した結果セットの管理](../../connect/jdbc/managing-result-sets-with-the-jdbc-driver.md)」を参照してください。  
   
 このセクションのトピックでは、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データベースに含まれているデータを操作するために結果セットを使用できるさまざまな方法について説明します。  
   
@@ -41,5 +40,5 @@ ms.locfileid: "47713470"
   
 ## <a name="see-also"></a>参照
 
- [サンプル JDBC Driver アプリケーション](../../connect/jdbc/sample-jdbc-driver-applications.md)  
+ [サンプル JDBC ドライバー アプリケーション](../../connect/jdbc/sample-jdbc-driver-applications.md)  
   

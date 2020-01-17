@@ -7,24 +7,24 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 215c14de-fc3f-46de-a022-bf69b9ea2a96
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 42006c68a50497034817cfe8df6c9172ea0cdc3b
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: b99676a9f51bf76dc9db294365a5a628dd25fa2e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56036913"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65488472"
 ---
 # <a name="lesson-2-cleansing-supplier-data-using-the-suppliers-knowledge-base"></a>レッスン 2:Suppliers ナレッジ ベースを使用して仕入先データをクレンジングする
   このレッスンでを使用して Excel ファイルの仕入先データをクレンジングする、 **Suppliers**最初のレッスンで作成したナレッジ ベース。 DQS でのデータ クレンジングが含まれています、**コンピューター支援型プロセス**データは、ナレッジ ベース内のナレッジに準拠する方法を分析し、**対話型プロセス**確認および変更することができますコンピューター支援型プロセスの結果。 データ クレンジング機能は、データ ソース内の不適切なデータを識別し、不適切なデータを修正するか、修正を提案します。 また、ドメイン値、シノニムの先頭の値、ドメイン ルール、用語ベースのリレーション、および参照データを使用して、顧客データを標準化および拡充します。 対話形式で、コンピューター支援型プロセスによって提案された変更を承認または拒否できます。 参照してください[データ クレンジング](https://msdn.microsoft.com/library/gg524800.aspx)の詳細。  
   
  コンピューター支援型のプロセスでは、DQS クライアントのメイン ページで [構成] オプションを使用して構成できる次のしきい値が使用されます。  
   
--   **提案の最小スコア:** 値の変更を提案するために DQS によって使用される最小スコア (信頼レベル) です。  
+-   **提案の最小スコア:** 最小スコアまたは信頼レベルでは値を提案するために DQS によって使用されます。  
   
--   **自動修正の最小スコア:** 値を自動修正するために DQS によって使用される最小スコア (信頼レベル) です。  
+-   **自動修正の最小スコア:** 最小スコアまたは信頼レベルでは自動的に値を修正するために DQS によって使用されます。  
   
  参照してください[クレンジングと照合のしきい値の値を構成する](https://msdn.microsoft.com/library/hh510415.aspx)これらの設定を構成する方法の詳細について。  
   
@@ -43,6 +43,6 @@ ms.locfileid: "56036913"
 6.  クレンジング プロジェクトから新しいルール、値、修正などのナレッジ ベース内のナレッジを拡張するドメインに値をインポートしてください.  
   
 ## <a name="next-step"></a>次の手順  
- [タスク 1:データ品質プロジェクトを作成します。](../../2014/tutorials/task-1-creating-a-data-quality-project.md)  
+ [タスク 1: データ品質プロジェクトを作成します。](../../2014/tutorials/task-1-creating-a-data-quality-project.md)  
   
   

@@ -18,18 +18,17 @@ helpviewer_keywords:
 - augmented operators, /=
 - /= (divide equals)
 ms.assetid: 9ab25d1e-5c98-4dd7-b2cd-9f49499c86e7
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
+author: rothja
+ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: df1840c0b97dcf43703e5d5fec447923af9265c9
-ms.sourcegitcommit: 1e28f923cda9436a4395a405ebda5149202f8204
+ms.openlocfilehash: a761f50c734132a0219fc4e7063dc4adf764d601
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/25/2019
-ms.locfileid: "55046176"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67894799"
 ---
-# <a name="-division-assignment-transact-sql"></a>/= (除算代入) (TRANSACT-SQL)
+# <a name="-division-assignment-transact-sql"></a>/= (除算代入) (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   1 つの数値を別の数値で除算し、値に演算の結果を設定します。 たとえば、変数 @x が 34 である場合、`@x /= 2` は @x の元の値を取得し、2 で除算して、@x にその新しい値 (17) を設定します。  

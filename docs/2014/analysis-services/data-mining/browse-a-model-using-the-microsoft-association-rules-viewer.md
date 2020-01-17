@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - itemsets [Analysis Services]
@@ -21,15 +20,15 @@ ms.assetid: 538fc01b-8eb1-467a-9b66-3cd57cf7489f
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 25fa0df8f0e3575b8767020721b56b4a19ac529d
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: e7c3764d18d26d739023bbbb744236273e5cfd1a
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52538816"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66086158"
 ---
 # <a name="browse-a-model-using-the-microsoft-association-rules-viewer"></a>Microsoft アソシエーション ルール ビューアーを使用したモデルの参照
-   [!INCLUDE[msCoName](../../includes/msconame-md.md)]  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] アソシエーション ルール ビューアーには、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] アソシエーション アルゴリズムを使用して作成されたマイニング モデルが表示されます。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] アソシエーション アルゴリズムは、マーケット バスケット分析に使用できるデータ マイニング モデルを作成するときに使用するアソシエーション アルゴリズムです。 このアルゴリズムの詳細については、「 [Microsoft Association Algorithm](microsoft-association-algorithm.md)」を参照してください。  
+  [!INCLUDE[msCoName](../../includes/msconame-md.md)]  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] アソシエーション ルール ビューアーには、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] アソシエーション アルゴリズムを使用して作成されたマイニング モデルが表示されます。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] アソシエーション アルゴリズムは、マーケット バスケット分析に使用できるデータ マイニング モデルを作成するときに使用するアソシエーション アルゴリズムです。 このアルゴリズムの詳細については、「 [Microsoft Association Algorithm](microsoft-association-algorithm.md)」を参照してください。  
   
  [!INCLUDE[msCoName](../../includes/msconame-md.md)] アソシエーション アルゴリズムを使用する主な理由は次のとおりです。  
   
@@ -71,7 +70,7 @@ ms.locfileid: "52538816"
 ###  <a name="BKMK_Rules"></a> ルール  
  **[ルール]** タブには、アソシエーション アルゴリズムで発見されたルールが表示されます。 **ルール** タブには、次の列を含む grid が含まれています。**確率**、**重要度**、および**ルール**します。 確率は、ルールの結果が発生する可能性を示します。 重要度では、ルールの有用性が測定されます。 ルールが発生する確率が高くても、ルールの有用性自体は低い場合があります。 [重要度] 列は、これに対処しています。 たとえば、すべてのアイテムセットに特定の状態の属性が含まれている場合、確率が非常に高くても、状態を予測するルールはあまり意味がありません。 重要度が高いほど、ルールはより重要になります。  
   
- **[アイテムセット]** タブでのフィルター処理と同様に、 **[最小の確率]** と **[最小の重要度]** を使用してルールをフィルター処理できます。**[ルールのフィルター]** を使用して、ルールに含まれている属性の状態に基づいてルールをフィルター処理することもできます。  
+ **[アイテムセット]** タブでのフィルター処理と同様に、 **[最小の確率]** と **[最小の重要度]** を使用してルールをフィルター処理できます。 **[ルールのフィルター]** を使用して、ルールに含まれている属性の状態に基づいてルールをフィルター処理することもできます。  
   
  列見出しをクリックすると、グリッド内の行を並べ替えることができます。  
   

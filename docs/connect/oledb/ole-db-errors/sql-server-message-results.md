@@ -1,5 +1,5 @@
 ---
-title: SQL Server のメッセージ結果 |Microsoft Docs
+title: SQL Server メッセージの結果 |Microsoft Docs
 description: SQL Server のメッセージ結果
 ms.custom: ''
 ms.date: 06/14/2018
@@ -14,13 +14,12 @@ helpviewer_keywords:
 - OLE DB error handling, SQL Server message results
 author: pmasl
 ms.author: pelopes
-manager: craigg
-ms.openlocfilehash: be796d00763c4004be121ae6ee25ef849d871cc5
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 05d731f418bad21f9e8ec32c620b352c5663994a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47619070"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67994921"
 ---
 # <a name="sql-server-message-results"></a>SQL Server のメッセージ結果
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -39,9 +38,9 @@ ms.locfileid: "47619070"
   
 -   SET STATISTICS  
   
- 上記のステートメントでは、行セットや行数の結果が返されるのではなく、ステートメントから 1 つ以上の情報メッセージが返されるか、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] から情報メッセージが返されます。 実行に成功、OLE DB Driver for SQL Server が S_OK を返すし、メッセージは、OLE DB Driver for SQL Server コンシューマーを使用できます。  
+ 上記のステートメントでは、行セットや行数の結果が返されるのではなく、ステートメントから 1 つ以上の情報メッセージが返されるか、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] から情報メッセージが返されます。 正常に実行されると、SQL Server の OLE DB ドライバーから S_OK が返され、SQL Server コンシューマーの OLE DB ドライバーでメッセージを使用できるようになります。  
   
- OLE DB Driver for SQL Server が S_OK が返され、1 つまたは複数情報メッセージの多くの実行に使用可能なの[!INCLUDE[tsql](../../../includes/tsql-md.md)]ステートメント、または、OLE DB Driver for SQL Server メンバー関数のコンシューマー実行します。  
+ SQL Server の OLE DB ドライバーは S_OK を返し、多く[!INCLUDE[tsql](../../../includes/tsql-md.md)]のステートメントの実行後、または SQL Server メンバー関数の OLE DB ドライバーのコンシューマー実行に従って、1つまたは複数の情報メッセージを使用できます。  
   
  OLE DB Driver for SQL Server のコンシューマーがクエリ テキストの動的な指定を許可する場合、メンバー関数を実行するたびにエラー インターフェイスをチェックする必要があります。このチェックは、リターン コードの値、返される **IRowset** インターフェイス参照や **IMultipleResults** インターフェイス参照の有無、および処理された行数に関係なく行う必要があります。  
   

@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: cb75d281-43ef-4f4a-b754-2c4ee3b62ae7
 author: Shamikg
 ms.author: Shamikg
-manager: craigg
-ms.openlocfilehash: 840f73d0732d0789d378c6f1bceb100c58e01bb6
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 8a6d45f7e621f9b6516d4cc1211a8627174ae9b3
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47624470"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67944605"
 ---
 # <a name="viewing-test-case-reports-sybasetosql"></a>テスト ケースのレポートの表示 (SybaseToSQL)
 テスト_ケースのレポートは、テスト検証の結果とテストの一般的な情報を示します。 失敗した場合、テスト、検証済みのオブジェクト内の一致しないデータに関する情報も表示されます。  
@@ -45,7 +44,7 @@ ms.locfileid: "47624470"
 **終了処理**  
 としての実行の状態を表示**成功**または**エラー**します。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
 [テスト_ケースを実行している&#40;SybaseToSQL&#41;](../../ssma/sybase/running-test-cases-sybasetosql.md)  
 [移行されたデータベース オブジェクトのテスト&#40;SybaseToSQL&#41;](../../ssma/sybase/testing-migrated-database-objects-sybasetosql.md)  
   

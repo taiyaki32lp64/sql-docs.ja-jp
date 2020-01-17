@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 03/09/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: 5b5aed99-1760-4bc7-b248-52ecb0b97ebc
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 55bf692e1b24bb0184f9b126a0bde5c0ee7e0657
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 2530d42c70b506fe927d35fd4e6f862e22e1ea1a
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52513266"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66078927"
 ---
 # <a name="modifying-the-customer-dimension"></a>Customer ディメンションの変更
   キューブのディメンションの使いやすさと機能性を向上させる方法は数多くあります。 このトピックの実習では、Customer ディメンションを変更します。  
@@ -106,7 +105,7 @@ ms.locfileid: "52513266"
   
 4.  **名前**プロパティ フィールドに「`Full Name`します。  
   
-5.  をクリックして、 **NameColumn**プロパティは、下部にあるフィールドし、クリックし、参照 (**.**) ボタンをクリックする、**名前列** ダイアログ ボックス。  
+5.  をクリックして、 **NameColumn**プロパティは、下部にあるフィールドし、クリックし、参照 ( **.** ) ボタンをクリックする、**名前列** ダイアログ ボックス。  
   
 6.  選択`FullName`の下部にある、**基になる列**ボックスの一覧をクリックして**OK**。  
   
@@ -178,15 +177,15 @@ ms.locfileid: "52513266"
   
 2.  **[属性]** ペインで、 **[City]** 属性をクリックします。  
   
-3.  **[プロパティ]** ウィンドウで、下部付近の **[KeyColumns]** フィールドをクリックし、参照ボタン (**[...]**) をクリックします。  
+3.  **[プロパティ]** ウィンドウで、下部付近の **[KeyColumns]** フィールドをクリックし、参照ボタン ( **[...]** ) をクリックします。  
   
-4.  **[キー列]** ダイアログ ボックスの **[使用できる列]** ボックスの一覧で **[StateProvinceName]** 列を選択し、**[>]** をクリックします。  
+4.  **[キー列]** ダイアログ ボックスの **[使用できる列]** ボックスの一覧で **[StateProvinceName]** 列を選択し、 **[>]** をクリックします。  
   
      **[City]** 列と **[StateProvinceName]** 列が **[キー列]** ボックスの一覧に表示されるようになりました。  
   
 5.  **[OK]** をクリックします。  
   
-6.  **City** 属性の **NameColumn** プロパティを設定するには、[プロパティ] ウィンドウで **[NameColumn]** フィールドをクリックし、参照ボタン (**[...]**) をクリックします。  
+6.  **City** 属性の **NameColumn** プロパティを設定するには、[プロパティ] ウィンドウで **[NameColumn]** フィールドをクリックし、参照ボタン ( **[...]** ) をクリックします。  
   
 7.  **[名前列]** ダイアログ ボックスの **[基になる列]** ボックスの一覧で **[City]** を選択し、 **[OK]** をクリックします。  
   
@@ -198,15 +197,15 @@ ms.locfileid: "52513266"
   
 2.  **属性**ウィンドウで、をクリックして、`State-Province`属性。  
   
-3.  **[プロパティ]** ウィンドウで **[KeyColumns]** フィールドをクリックし、参照ボタン (**[...]**) をクリックします。  
+3.  **[プロパティ]** ウィンドウで **[KeyColumns]** フィールドをクリックし、参照ボタン ( **[...]** ) をクリックします。  
   
-4.  **[キー列]** ダイアログ ボックスの **[使用できる列]** ボックスの一覧で **[EnglishCountryRegionName]** 列を選択し、**[>]** をクリックします。  
+4.  **[キー列]** ダイアログ ボックスの **[使用できる列]** ボックスの一覧で **[EnglishCountryRegionName]** 列を選択し、 **[>]** をクリックします。  
   
      **[EnglishCountryRegionName]** 列と **[StateProvinceName]** 列が **[キー列]** ボックスの一覧に表示されるようになりました。  
   
 5.  **[OK]** をクリックします。  
   
-6.  設定する、 **NameColumn**のプロパティ、`State-Province`属性をクリックして、 **NameColumn**プロパティ ウィンドウでフィールドし、クリックし、参照 (**.**) ボタンをクリックします。  
+6.  設定する、 **NameColumn**のプロパティ、`State-Province`属性をクリックして、 **NameColumn**プロパティ ウィンドウでフィールドし、クリックし、参照 ( **.** ) ボタンをクリックします。  
   
 7.  **[名前列]** ダイアログ ボックスの **[基になる列]** ボックスの一覧で **[StateProvinceName]** を選択し、 **[OK]** をクリックします。  
   

@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 0bc0d5e8-b092-413e-a0ee-7ef2c516d324
 author: Shamikg
 ms.author: Shamikg
-manager: craigg
-ms.openlocfilehash: 6e6801fec8392336f3351513a2db9111bafaaa60
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d3f818b7e6041761d3684ac35374298c47335de5
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47701540"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68029071"
 ---
 # <a name="global-settings-editor-sybasetosql"></a>グローバル設定 (エディター) (SybaseToSQL)
 エディター ページを使用して、**グローバル設定** ダイアログ ボックスのコード エディター ウィンドウの設定を指定します。  

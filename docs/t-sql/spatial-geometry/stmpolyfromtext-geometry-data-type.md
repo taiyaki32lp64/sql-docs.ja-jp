@@ -15,15 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - STMPolyFromText (geometry Data Type)
 ms.assetid: f087a61c-f063-4fb8-8f1c-251a2fed76a1
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: b090d9b0568b58779c8f363db5436d17c6a87d74
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: MladjoA
+ms.author: mlandzic
+ms.openlocfilehash: 2c67174927ea913f50bc23db7e940a79e224dcf2
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47596020"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67894706"
 ---
 # <a name="stmpolyfromtext-geometry-data-type"></a>STMPolyFromText (geometry データ型)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -47,9 +46,9 @@ STMPolyFromText ( 'multipolygon_tagged_text' , SRID )
 ## <a name="return-types"></a>戻り値の型  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の戻り値の型: **geometry**  
   
- CLR の戻り値の型: **Sql Geometry**  
+ CLR の戻り値の型:**Sql Geometry**  
   
- OGC の型: **MultiPolygon**  
+ OGC の型:**MultiPolygon**  
   
 ## <a name="remarks"></a>Remarks  
  このメソッドでは、入力が正しい形式でない場合に、**FormatException** をスローします。  

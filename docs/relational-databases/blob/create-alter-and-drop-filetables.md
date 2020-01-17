@@ -3,7 +3,6 @@ title: FileTable の作成、変更、および削除 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
-ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: filestream
 ms.topic: conceptual
@@ -12,15 +11,14 @@ helpviewer_keywords:
 - FileTables [SQL Server], dropping
 - FileTables [SQL Server], creating
 ms.assetid: 47d69e37-8778-4630-809b-2261b5c41c2c
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: ecf449319df1d2edc24a061165a983ba08b24347
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+author: MikeRayMSFT
+ms.author: mikeray
+ms.openlocfilehash: 7ed2d476be0ba9a22b42e5c7e60789a4059ea73c
+ms.sourcegitcommit: ffb87aa292fc9b545c4258749c28df1bd88d7342
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52542373"
+ms.lasthandoff: 10/02/2019
+ms.locfileid: "71816735"
 ---
 # <a name="create-alter-and-drop-filetables"></a>FileTable の作成、変更、および削除
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -37,7 +35,7 @@ ms.locfileid: "52542373"
   
 -   自動的に作成される 3 つの主キーと一意の制約で使用する名前。  
   
-###  <a name="HowToCreate"></a> 方法: FileTable を作成する  
+###  <a name="HowToCreate"></a>方法:FileTable を作成する  
  **Transact-SQL を使用して FileTable を作成する**  
  FileTable を作成するには、**AS FileTable** オプションを指定して [CREATE TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql.md) ステートメントを呼び出します。 FileTable には固定スキーマがあるため、列の一覧を指定する必要はありません。 新しい FileTable には次の設定を指定できます。  
   
@@ -58,7 +56,7 @@ ms.locfileid: "52542373"
     2.  **FILETABLE_COLLATE_FILENAME**の値を指定しない場合、または、 **database_default**を指定した場合は、現在のデータベースの照合順序が列に継承されます。 現在のデータベースの照合順序で大文字と小文字が区別される場合は、エラーが発生し、 **CREATE TABLE** 操作は失敗します。  
   
 3.  自動的に作成される 3 つの主キーと一意の制約で使用する名前を指定することもできます。 名前を指定しなかった場合、このトピックで後述するように、システムで名前が自動生成されます。  
-  
+
     -   **FILETABLE_PRIMARY_KEY_CONSTRAINT_NAME**  
   
     -   **FILETABLE_STREAMID_UNIQUE_CONSTRAINT_NAME**  
@@ -109,7 +107,7 @@ GO
   
  ALTER TABLE ステートメントを使用して FileTable 名前空間 (システム定義の制約を含む) を有効または無効にする方法の詳細については、「 [FileTable の管理](../../relational-databases/blob/manage-filetables.md)」を参照してください。  
   
-###  <a name="HowToChange"></a> 方法: FileTable のディレクトリを変更する  
+###  <a name="HowToChange"></a> 方法:FileTable のディレクトリを変更する  
  **Transact-SQL を使用して FileTable のディレクトリを変更する**  
  ALTER TABLE ステートメントを呼び出し、有効な新しい値を **FILETABLE_DIRECTORY** SET オプションに指定します。  
   
@@ -177,7 +175,7 @@ GO
 |CHECK 制約|システム定義の CHECK 制約によって、次の要件が適用されます。<br /><br /> 有効なファイル名。<br /><br /> 有効なファイル属性。<br /><br /> 親オブジェクトをディレクトリにする。<br /><br /> 名前空間の階層は、ファイル操作中にロックされる。|  
   
  **システム定義の制約の名前付け規則**  
- 上で説明したシステム定義の制約は、**\<constraintType>_\<tablename>[\_\<columnname>]\_\<uniquifier>** という形式で名前が付けられます。  
+ 上で説明したシステム定義の制約は、 **\<constraintType>_\<tablename>[\_\<columnname>]\_\<uniquifier>** という形式で名前が付けられます。  
   
 -   *<constraint_type>* は CK (CHECK 制約)、DF (DEFAULT 制約)、FK (外部キー)、PK (主キー)、または UQ (一意制約) です。  
   

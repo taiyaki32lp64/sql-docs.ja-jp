@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: ce37fa06-c581-4d80-9a9b-c3aa66408909
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: f06f62768637ebb48ffa6e1cfd2560ff3b53c383
-ms.sourcegitcommit: 96b2355d54dfad259826e88bdff91cc9344e16f2
+ms.openlocfilehash: 2e4681bb9e1fd1028ee1ddc2bd7f72efc03fb6c7
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51350416"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67923186"
 ---
 # <a name="overview-of-multidimensional-schemas-and-data"></a>多次元スキーマとデータの概要
 ## <a name="understanding-multidimensional-schemas"></a>多次元スキーマの理解  
@@ -32,12 +31,12 @@ ms.locfileid: "51350416"
   
  A*メンバー*がディメンション内のデータ項目。 通常、キャプションを作成したり、メンバーを使用して、データベースのメジャーを記述します。  
   
- キューブがによって表される[CubeDef](../../../ado/reference/ado-md-api/cubedef-object-ado-md.md) ADO MD オブジェクト ディメンション、階層、レベル、およびメンバーも、対応する ADO MD オブジェクトによって表される:[ディメンション](../../../ado/reference/ado-md-api/dimension-object-ado-md.md)、[階層](../../../ado/reference/ado-md-api/hierarchy-object-ado-md.md)、[レベル](../../../ado/reference/ado-md-api/level-object-ado-md.md)、および[メンバー](../../../ado/reference/ado-md-api/member-object-ado-md.md)します。  
+ キューブがによって表される[CubeDef](../../../ado/reference/ado-md-api/cubedef-object-ado-md.md) ADO MD オブジェクト ディメンション、階層、レベル、およびメンバーは、対応する ADO MD オブジェクトによっても表されます。[ディメンション](../../../ado/reference/ado-md-api/dimension-object-ado-md.md)、[階層](../../../ado/reference/ado-md-api/hierarchy-object-ado-md.md)、[レベル](../../../ado/reference/ado-md-api/level-object-ado-md.md)、および[メンバー](../../../ado/reference/ado-md-api/member-object-ado-md.md)します。  
   
 ### <a name="dimensions"></a>ディメンション  
  キューブのディメンションは、ビジネス エンティティと、データベースでモデル化するデータの種類によって異なります。 通常、各ディメンションは、独立したエントリ ポイントまたはデータを選択するためのメカニズムです。  
   
- たとえば、売上データを含むキューブは、次の 5 つのディメンション: 販売員、Geography、時刻、製品、およびメジャー。 メジャー ディメンションには、他のディメンションが分類して売上データの値をグループ化する方法を表すときに、実際の売上データの値が含まれています。  
+ たとえば、売上データを含むキューブでは、次の 5 つのディメンションがあります。販売員、Geography、時刻、製品、およびメジャー。 メジャー ディメンションには、他のディメンションが分類して売上データの値をグループ化する方法を表すときに、実際の売上データの値が含まれています。  
   
  Geography ディメンションでは、次のメンバーのセットがあります。  
   
@@ -82,9 +81,9 @@ Hamburg, Munich, Stuttgart}
   
  メンバーは、ディメンションごとに 1 つまたは複数の階層に統合できます。 時間ディメンションを検討してください。 ある日レベルの Year レベルにロールアップする 2 つの方法。  
   
- この例では、もう 1 つの特性も示しています。 年度の四半期の階層のあらゆるレベルに、年、週の階層レベルが週の一部のメンバーは表示されません。 そのため、階層はディメンションのすべてのメンバーを含める必要はありません。  
+ この例では、もう 1 つの特性も示しています。年度の四半期の階層のあらゆるレベルでは、年、週階層の週レベルの一部のメンバーは表示されません。 そのため、階層はディメンションのすべてのメンバーを含める必要はありません。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [ADO MD オブジェクト モデル](../../../ado/reference/ado-md-api/ado-md-object-model.md)   
  [ADO (多次元) (ADO MD)](../../../ado/guide/multidimensional/ado-multidimensional-ado-md.md)   
  [ADO MD を使用したプログラミング](../../../ado/guide/multidimensional/programming-with-ado-md.md)   

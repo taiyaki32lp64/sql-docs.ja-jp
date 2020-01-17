@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: b35d2f4a-449c-4170-aab6-9ff88c890043
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: fe7074c592c837d292257bcaa18f3eb0638a6515
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.openlocfilehash: 1f097d66259e51e2883dd350a33f7d7ff6a6bbba
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51606722"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67963983"
 ---
 # <a name="internettimeout-property-example-vb"></a>InternetTimeout プロパティの例 (VB)
 > [!IMPORTANT]
@@ -76,7 +75,7 @@ End Sub
 'EndInternetTimeoutVB  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [DataControl オブジェクト (RDS)](../../../ado/reference/rds-api/datacontrol-object-rds.md)   
  [DataSpace オブジェクト (RDS)](../../../ado/reference/rds-api/dataspace-object-rds.md)   
  [InternetTimeout プロパティ (RDS)](../../../ado/reference/rds-api/internettimeout-property-rds.md)

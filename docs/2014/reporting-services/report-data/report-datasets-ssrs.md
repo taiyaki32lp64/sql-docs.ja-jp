@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 ms.assetid: f2e42303-e355-4c1f-bb3b-3338fbdd230d
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: cb76a3dfff5ec980d94e3ecf27de6b588c98cf1a
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 019ca09c83b0b3011e9940d9a4c988ce223e192f
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56040513"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66107121"
 ---
 # <a name="add-data-to-a-report-report-builder-and-ssrs"></a>レポートへのデータの追加 (レポート ビルダーおよび SSRS)
   データをレポートに追加するには、データセットを作成します。 各データセットは、データ ソースに対するクエリ コマンドの実行によって取得された結果セットを表します。 結果セットの列はフィールド コレクションです。 結果セット内の行がデータです。 データセットに実際のデータは格納されていません。 データセットには、データ ソースから特定のデータを取得するために必要な情報が含まれています。  
@@ -39,7 +38,7 @@ ms.locfileid: "56040513"
   
  また、レポート パーツ (レポート パーツが依存するデータセットが含まれています) を追加することによって、データセットをレポートに追加することもできます。 [!INCLUDE[ssRBrptparts](../../../includes/ssrbrptparts-md.md)]  
   
- データを表示するレポートを作成する方法については、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]データベースを参照してください[チュートリアル。基本的なテーブル レポートを作成する&#40;レポート ビルダー&#41;](../tutorial-creating-a-basic-table-report-report-builder.md)します。 独自のデータを含むレポートを作成するには、次を参照してください。[チュートリアル。オフラインのクイック グラフ レポートの作成&#40;レポート ビルダー&#41;](../report-builder/tutorial-create-a-quick-chart-report-offline-report-builder.md)します。  
+ データを表示するレポートを作成する方法については、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]データベースを参照してください[チュートリアル。基本的な表レポートの作成 &#40;レポート ビルダー&#41;](../tutorial-creating-a-basic-table-report-report-builder.md)」を参照してください。 独自のデータを含むレポートを作成するには、次を参照してください。[チュートリアル。オフラインでのクイック グラフ レポートの作成 &#40;レポート ビルダー&#41;](../report-builder/tutorial-create-a-quick-chart-report-offline-report-builder.md)」を参照してください。  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
@@ -77,9 +76,7 @@ ms.locfileid: "56040513"
 -   [レポート パーツ &#40;レポート ビルダーおよび SSRS&#41;](../report-parts-report-builder-and-ssrs.md)  
   
 -   [データのフィルター、グループ化、および並べ替え &#40;レポート ビルダーおよび SSRS&#41;](../report-design/filter-group-and-sort-data-report-builder-and-ssrs.md)  
-  
- ![[トップに戻る] リンクで使用される矢印アイコン](../../2014-toc/media/uparrow16x16.gif "[トップに戻る] リンクで使用される矢印アイコン") [トップに戻る](#BackToTop)  
-  
+
 ##  <a name="QuickStart"></a> レポート パーツによるデータの追加  
  レポート パーツには、そのレポート パーツが依存するデータセットが含まれています。 これらのデータセットは、レポート サーバーで使用可能な共有データ ソースに基づいて構築されます。 レポート ビルダーでレポート パーツをレポートに追加すると、手動で追加した場合と同様に、依存データセットもレポートに追加されます。 たとえば、事前に定義されたグラフにデータセットが含まれているとします。 データを表示するには、レポートをプレビューします。  
   
@@ -89,9 +86,7 @@ ms.locfileid: "56040513"
  レポート パーツ、共有データ ソース、および共有データセットは事前に定義され、レポート サーバーに保存されます。 これらにアクセスするには、レポート サーバーに接続して、サーバー モードでレポート ビルダーを開く必要があります。 レポート サーバーに対する書き込み権限を持っている場合は、これらを使用して独自の新しいバージョンを作成できます。  
   
 -   詳細については、「[レポート パーツ (レポート ビルダーおよび SSRS)](../report-parts-report-builder-and-ssrs.md)」および「[レポート デザイナーでのレポート パーツ (SSRS)](../report-design/report-parts-in-report-designer-ssrs.md)」を参照してください。  
-  
- ![[トップに戻る] リンクで使用される矢印アイコン](../../2014-toc/media/uparrow16x16.gif "[トップに戻る] リンクで使用される矢印アイコン") [トップに戻る](#BackToTop)  
-  
+
 ##  <a name="Queries"></a> クエリとクエリ デザイナー  
  データ ソースからどのデータを使用するかを指定するには、クエリ コマンドを作成します。 データ ソースの種類ごとに、クエリの作成に役立つ *クエリ デザイナー* が関連付けられています。 クエリ デザイナーには、グラフィカルなものとテキスト ベースのものがあります。 グラフィカル クエリ デザイナーでは、外部データ ソースのデータを表すメタデータを表示し、フィールドやエンティティをクエリ デザイン領域にドラッグしてクエリを対話的に構築します。 テキスト ベースのクエリ デザイナーでは、外部データ ソースによってサポートされるクエリ構文でクエリを書き込んだりインポートしたりします。  
   
@@ -100,9 +95,7 @@ ms.locfileid: "56040513"
  クエリを実行するには、デザイン時の資格情報が必要です。 詳細については、次を参照してください。[レポート ビルダーでの資格情報の指定](../specify-credentials-in-report-builder.md)と[データ接続、データ ソース、および Reporting Services の接続文字列](../data-connections-data-sources-and-connection-strings-in-reporting-services.md)します。  
   
  データ拡張機能と外部データ ソースの間の通信は、データ プロバイダーによって処理されます。 サポートされているクエリ コマンド構文、クエリ パラメーター、結果セット内の値のデータ型は、各データ プロバイダーによって決まります。 詳細については、データ拡張機能の特定の型についてのトピックおよび「[クエリ デザイナー &#40;レポート ビルダー&#41;](../query-designers-report-builder.md)」を参照してください。  
-  
- ![[トップに戻る] リンクで使用される矢印アイコン](../../2014-toc/media/uparrow16x16.gif "[トップに戻る] リンクで使用される矢印アイコン") [トップに戻る](#BackToTop)  
-  
+
 ##  <a name="HowTo"></a> 操作方法に関するトピック  
  [データ接続またはデータ ソース追加および確認&#40;レポート ビルダーおよび SSRS&#41;](add-and-verify-a-data-connection-report-builder-and-ssrs.md)  
   
@@ -121,9 +114,7 @@ ms.locfileid: "56040513"
  [クエリ パラメーターのレポート パラメーターへの関連付け &#40;レポート ビルダーおよび SSRS&#41;](associate-a-query-parameter-with-a-report-parameter-report-builder-and-ssrs.md)  
   
  [Analysis Services の MDX クエリ デザイナーでのパラメーターの定義 &#40;レポート ビルダーおよび SSRS&#41;](define-parameters-in-the-mdx-query-designer-for-analysis-services.md)  
-  
- ![[トップに戻る] リンクで使用される矢印アイコン](../../2014-toc/media/uparrow16x16.gif "[トップに戻る] リンクで使用される矢印アイコン") [トップに戻る](#BackToTop)  
-  
+
 ##  <a name="Section"></a> トピックの内容  
  [レポート ビルダーのレポート パーツおよびデータセット](report-parts-and-datasets-in-report-builder.md)  
   
@@ -134,11 +125,7 @@ ms.locfileid: "56040513"
  [レポート埋め込みデータセットと共有データセット &#40;レポート ビルダーおよび SSRS&#41;](report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)  
   
  [データセット フィールド コレクション &#40;レポート ビルダーおよび SSRS&#41;](dataset-fields-collection-report-builder-and-ssrs.md)  
-  
- ![[トップに戻る] リンクで使用される矢印アイコン](../../2014-toc/media/uparrow16x16.gif "[トップに戻る] リンクで使用される矢印アイコン") [トップに戻る](#BackToTop)  
-  
+
 ## <a name="see-also"></a>参照  
  [レポート デザイン ビュー (レポート ビルダー)](../report-builder/report-design-view-report-builder.md)   
  [レポート作成の概念 (レポート ビルダーおよび SSRS)](../report-design/report-authoring-concepts-report-builder-and-ssrs.md)  
-  
-  

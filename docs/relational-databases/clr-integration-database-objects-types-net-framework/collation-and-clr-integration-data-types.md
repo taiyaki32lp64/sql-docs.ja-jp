@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 6ebaed8e-2e2b-4f6d-bf4b-bc25452de441
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: f99bb2f8aac2278fd25713ce43e23e1a5f1d14a5
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 51345c498277cc7013bbc05784022f65d77aef65
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47678310"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68081346"
 ---
 # <a name="collation-and-clr-integration-data-types"></a>照合順序と CLR 統合データ型
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -28,7 +27,7 @@ ms.locfileid: "47678310"
 ## <a name="parameter-collation"></a>パラメーターの照合順序  
  型のルーチンは、共通言語ランタイム (CLR) のルーチンを作成すると、CLR メソッドのパラメーターのバインドを**SQLString**、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]データベースの既定の照合順序でパラメーターのインスタンスを作成します。呼び出し元のルーチンを含むです。 パラメーターがない場合、 **SqlType** (たとえば、**文字列**なく**SQLString**)、データベースの照合順序情報は、パラメーターに関連付けられていません。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [.NET Framework での SQL Server データ型](../../relational-databases/clr-integration-database-objects-types-net-framework/sql-server-data-types-in-the-net-framework.md)  
   
   

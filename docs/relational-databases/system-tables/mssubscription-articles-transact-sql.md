@@ -1,5 +1,5 @@
 ---
-title: MSsubscription_articles (TRANSACT-SQL) |Microsoft Docs
+title: MSsubscription_articles (Transact-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: sql
@@ -17,15 +17,14 @@ helpviewer_keywords:
 ms.assetid: dbc1737f-261e-4017-b9cd-703b9fc4ac78
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 36d6c5db3f675c570237a436557bbe6827af09e2
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 8518c787f876152787ee30a20b9f25f936b9fa86
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52758554"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68139777"
 ---
-# <a name="mssubscriptionarticles-transact-sql"></a>MSsubscription_articles (Transact-SQL)
+# <a name="mssubscription_articles-transact-sql"></a>MSsubscription_articles (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   **MSsubscription_articles**テーブルには、キュー サブスクリプション内のアーティクルに関する情報が含まれています。 このテーブルは、レプリケーションの種類がキュー更新の場合と、フェールオーバーとしてキュー更新を行う即時更新の場合にのみ設定されます。  
@@ -36,11 +35,11 @@ ms.locfileid: "52758554"
 |**artid**|**int**|アーティクル ID を**sysarticles**テーブル。|  
 |**article**|**sysname**|アーティクルの名前、 **sysarticles**テーブル。|  
 |**dest_table**|**sysname**|変換先テーブルの名前、 **sysarticles**テーブル。|  
-|**所有者**|**sysname**|サブスクリプションの所有者|  
-|**cft_table**|**sysname**|レプリケーションのタイプがキュー更新の場合、アーティクルの競合テーブルの名前|  
+|**owner**|**sysname**|サブスクリプションの所有者|  
+|**cft_table**|**sysname**|このアーティクルは、キュー更新レプリケーションの種類の競合テーブルの名前。|  
   
-## <a name="see-also"></a>参照  
- [レプリケーション テーブル &#40; です。TRANSACT-SQL と &#41; です。](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
+## <a name="see-also"></a>関連項目  
+ [レプリケーション テーブル &#40;Transact-SQL&#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
  [レプリケーション ビュー &#40;Transact-SQL&#41;](../../relational-databases/system-views/replication-views-transact-sql.md)  
   
   

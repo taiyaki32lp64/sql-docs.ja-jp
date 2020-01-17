@@ -15,15 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - STLength method
 ms.assetid: 774560ab-4a4a-4058-b043-1e67cf6fb9eb
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: a07da59b2ed5d6da4ee6cf6180cfb65470ee5793
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: MladjoA
+ms.author: mlandzic
+ms.openlocfilehash: 61487b976322f8725f9398e54f8292919ff0ca58
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47764760"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68139107"
 ---
 # <a name="stlength-geography-data-type"></a>STLength (geography データ型)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
@@ -40,7 +39,7 @@ ms.locfileid: "47764760"
 ## <a name="return-types"></a>戻り値の型  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 戻り値の型: **float**  
   
- CLR の戻り値の型: **SqlDouble**  
+ CLR の戻り値の型:**SqlDouble**  
   
 ## <a name="remarks"></a>Remarks  
  **geography** インスタンスが閉じられている場合、長さはインスタンスの周囲の合計長として計算されます。多角形の長さとは、周囲の長さです。地点の長さは 0 です。 **GeometryCollection** の長さは、コレクションに含まれるすべての **geography** インスタンスの合計長として計算されます。  

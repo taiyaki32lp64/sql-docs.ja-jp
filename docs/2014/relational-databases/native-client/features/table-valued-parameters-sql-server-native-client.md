@@ -14,11 +14,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 6eea28d6bccfa8d0f785f3b27e98141e94dd313c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48207814"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68206621"
 ---
 # <a name="table-valued-parameters-sql-server-native-client"></a>テーブル値パラメーター (SQL Server Native Client)
   [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)] で導入されたテーブル値パラメーターを使用すると、複数行のデータを効率的にサーバーに渡すことができます。 テーブル値パラメーターの機能はパラメーター配列に似ていますが、より柔軟性が高く、[!INCLUDE[tsql](../../../includes/tsql-md.md)] との統合も緊密です。また、多くの場合、パフォーマンスが向上します。 テーブル値パラメーターはセットベースの操作にも使用できますが、パラメーター配列は使用できません。  

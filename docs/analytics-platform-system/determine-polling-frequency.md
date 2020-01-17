@@ -1,40 +1,40 @@
 ---
-title: ポーリング間隔 - Analytics Platform System の決定 |Microsoft Docs
-description: この記事では、Analytics Platform System appliance のアラートのポーリング頻度を決定する方法について説明します。
+title: ポーリング間隔の決定
+description: この記事では、Analytics Platform System appliance alerts のポーリング頻度を確認する方法について説明します。
 author: mzaman1
-manager: craigg
 ms.prod: sql
 ms.technology: data-warehouse
 ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: eec9e3e211c68b7f56fe6829a70064317b96e646
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.custom: seo-dt-2019
+ms.openlocfilehash: 005fe3d14a7314f7339157064b248a81044a1dfb
+ms.sourcegitcommit: d587a141351e59782c31229bccaa0bff2e869580
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52519575"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74401210"
 ---
-# <a name="determine-polling-frequency"></a>ポーリング間隔を決定します。
-この記事では、Analytics Platform System appliance のアラートのポーリング頻度を決定する方法について説明します。  
+# <a name="determine-polling-frequency"></a>ポーリング頻度を決定する
+この記事では、Analytics Platform System appliance alerts のポーリング頻度を確認する方法について説明します。  
   
-## <a name="to-determine-the-polling-frequency"></a>ポーリングの頻度を決定するには  
-PDW は現在サポートしていないためプロアクティブな通知アラートが発生したときに、監視ソリューションを継続的に、アプライアンスの Dll をポーリングする必要があります。  内部的には、PDW では、さまざまな間隔で、コンポーネントをポーリングします。  
+## <a name="to-determine-the-polling-frequency"></a>ポーリング頻度を確認するには  
+PDW では、アラートが発生したときにプロアクティブ通知が現在サポートされていないため、監視ソリューションはアプライアンス Dll を継続的にポーリングする必要があります。  内部では、PDW がさまざまな間隔でコンポーネントをポーリングします。  
   
--   クラスター - 60 秒  
+-   クラスター-60 秒  
   
--   ハートビート - 60 秒  
+-   ハートビート-60 秒  
   
--   すべての他のコンポーネント - 5 分  
+-   その他すべてのコンポーネント-5 分  
   
--   パフォーマンス カウンター - 3 秒  
+-   パフォーマンスカウンター-3 秒  
   
-System Center によっても使用される一般的なアラートをポーリングする間隔は**15 分ごと**します。  当然ながら、多くの場合より小さいかを照会することが 6 時間未満ごとにポーリングをお勧めできません。  
+アラートをポーリングする一般的な間隔は、System Center でも使用されます。これは、 **15 分ごと**に行われます。  当然ながら、クエリをより頻繁に実行することもできますが、ポーリングは6時間ごとに行わないことをお勧めします。  
   
-頻繁にポーリングすることが許容されるが、煩雑になります。 ポーリング頻度が高すぎる、 [sys.dm_pdw_nodes_exec_requests](https://msdn.microsoft.com/library/ms177648(v=sql11).aspx) DMV。  ポーリング頻度が高すぎることが困難なユーザー クエリのパフォーマンスを診断する際に問題が非表示をすばやくロールします。  
+ポーリングの頻度は高くなりますが、ポーリングが頻繁に実行されると、 [sys. dm_pdw_nodes_exec_requests](https://msdn.microsoft.com/library/ms177648(v=sql11).aspx) DMV が煩雑になる可能性があります。  ポーリングが頻繁に行われると、ユーザーがクエリのパフォーマンスに関する問題を簡単に表示できなくなる可能性があります。  
   
 ## <a name="see-also"></a>参照  
 <!-- MISSING LINKS [Common Metadata Query Examples &#40;SQL Server PDW&#41;](../sqlpdw/common-metadata-query-examples-sql-server-pdw.md)  -->  
-[アプライアンスの監視&#40;Analytics Platform System&#41;](appliance-monitoring.md)  
+[アプライアンス監視 &#40;Analytics Platform System&#41;](appliance-monitoring.md)  
   

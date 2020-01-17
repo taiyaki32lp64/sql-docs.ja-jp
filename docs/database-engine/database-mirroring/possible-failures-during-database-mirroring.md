@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: d7031f58-5f49-4e6d-9a62-9b420f2bb17e
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 133774f407a50d4d3a63c489d01286c6c0b1b394
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 9d8530425db1353a22365b0de165619f6e8eee74
+ms.sourcegitcommit: f76b4e96c03ce78d94520e898faa9170463fdf4f
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47751890"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70874286"
 ---
 # <a name="possible-failures-during-database-mirroring"></a>データベース ミラーリング中に発生する可能性のあるエラー
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -81,7 +80,7 @@ ms.locfileid: "47751890"
   
 -   TCP リンクのタイムアウト、パケットの紛失または破損、不正な順序のパケットなどのネットワーク エラー。  
   
--   オペレーティング システム、サーバー、またはデータベースの停止状態。  
+-   オペレーティング システム、サーバー、またはデータベースの応答の停止。  
   
 -   Windows サーバーのタイムアウト。  
   
@@ -111,7 +110,7 @@ ms.locfileid: "47751890"
   
 ## <a name="see-also"></a>参照  
  [役割の交代中に発生するサービスの中断時間の算出 &#40;データベース ミラーリング&#41;](../../database-engine/database-mirroring/estimate-the-interruption-of-service-during-role-switching-database-mirroring.md)   
- [データベース ミラーリングの動作モード](../../database-engine/database-mirroring/database-mirroring-operating-modes.md)   
+ [Database Mirroring Operating Modes](../../database-engine/database-mirroring/database-mirroring-operating-modes.md)   
  [データベース ミラーリング セッション中の役割の交代 &#40;SQL Server&#41;](../../database-engine/database-mirroring/role-switching-during-a-database-mirroring-session-sql-server.md)   
  [データベース ミラーリング &#40;SQL Server&#41;](../../database-engine/database-mirroring/database-mirroring-sql-server.md)  
   

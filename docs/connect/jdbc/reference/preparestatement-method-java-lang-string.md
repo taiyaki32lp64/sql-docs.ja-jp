@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: 72b5c4a5-1382-4b2c-80a0-47c97c5f52d3
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 1bec0d56782a7e9cacd236011c79aba2ab2c806a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 81623f6495540e70ae44755228b0c309df957b4f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47814490"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67976135"
 ---
 # <a name="preparestatement-method-javalangstring-int"></a>prepareStatement (java.lang.String, int[]) メソッド
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -39,20 +38,20 @@ public java.sql.PreparedStatement prepareStatement(java.lang.String sql,
 #### <a name="parameters"></a>パラメーター  
  *sql*  
   
- A**文字列**SQL ステートメントを格納しています。  
+ SQL ステートメントを含む**文字列**です。  
   
  *columnIndexes*  
   
  int 配列です。  
   
 ## <a name="return-value"></a>戻り値  
- PreparedStatement オブジェクト。  
+ PreparedStatement オブジェクトです。  
   
 ## <a name="exceptions"></a>例外  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- この prepareStatement メソッドは、java.sql.Connection インターフェイスの prepareStatement メソッドによって指定されます。  
+ この指定されたステートメントメソッドは、java. .sql. 接続インターフェイスの "ドステートメント" メソッドによって指定されます。  
   
 ## <a name="see-also"></a>参照  
  [prepareStatement メソッド &#40;SQLServerConnection&#41;](../../../connect/jdbc/reference/preparestatement-method-sqlserverconnection.md)   

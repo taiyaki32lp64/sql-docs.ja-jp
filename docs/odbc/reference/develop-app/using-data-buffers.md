@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 06b9f603-b395-497c-979b-d3ec3d6db375
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: edddcb07702a33e6c2ce5f11feaf1716fc59573b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 4b3128e0b8be8ec5bfaa2c4f0e7e64ce866b6295
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47603081"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68079581"
 ---
 # <a name="using-data-buffers"></a>データ バッファーの使用
 データ バッファーは、3 つの情報で示されます。 その種類、アドレス、およびバイトの長さ。 関数では、これらの情報のいずれかの必要があるあり、既に理解されません、たびに、引数を使用するアプリケーションに渡すことがあります。  

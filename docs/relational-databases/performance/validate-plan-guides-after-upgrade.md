@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: a55ebd88-6f58-454d-b1c4-991b88add522
 author: julieMSFT
 ms.author: jrasnick
-manager: craigg
-ms.openlocfilehash: c48e61c2ed1a6e262e4168eaa959c316b793f800
-ms.sourcegitcommit: dd794633466b1da8ead9889f5e633bdf4b3389cd
+ms.openlocfilehash: 35f02764a62d780819ba0ee4549d3f307df72af4
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54143139"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67986738"
 ---
 # <a name="validate-plan-guides-after-upgrade"></a>アップグレード後のプラン ガイドの検証
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]

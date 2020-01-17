@@ -11,15 +11,14 @@ helpviewer_keywords:
 ms.assetid: 47fb4212-2165-4fec-bc41-6d548465d7be
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 617fed01d22eebba515966a0c820824d6fd39896
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 4e780d6afaddc5ac3af0e87e6b629fb39c987879
+ms.sourcegitcommit: 43c3d8939f6f7b0ddc493d8e7a643eb7db634535
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47788130"
+ms.lasthandoff: 10/14/2019
+ms.locfileid: "72305031"
 ---
-# <a name="mssqlserver137"></a>MSSQLSERVER_137
+# <a name="mssqlserver_137"></a>MSSQLSERVER_137
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   
 ## <a name="details"></a>詳細  
@@ -34,13 +33,13 @@ ms.locfileid: "47788130"
 |メッセージ テキスト|スカラー変数 "% * ls" を宣言してください。|  
   
 ## <a name="explanation"></a>説明  
-このエラーは、SQL スクリプトで、変数を宣言する前にその変数を使用しようとした場合に発生します。 次の例では、SET ステートメントおよび SELECT ステートメントの両方でエラー 137 が発生します。これは **@mycol** が宣言されていないためです。  
+このエラーは、SQL スクリプトで、変数を宣言する前にその変数を使用しようとした場合に発生します。 次の例では、SET ステートメントおよび SELECT ステートメントの両方でエラー 137 が発生します。これは **\@mycol** が宣言されていないためです。  
   
 SET @mycol = 'ContactName';  
   
 SELECT @mycol;  
   
-このエラーのより複雑な原因の 1 つは、EXECUTE ステートメントの外部で宣言された変数を使用することです。 たとえば、SELECT ステートメントで指定した変数 **@mycol** は、SELECT ステートメントのローカル変数であり、EXECUTE ステートメントにとっては外部の変数です。  
+このエラーのより複雑な原因の 1 つは、EXECUTE ステートメントの外部で宣言された変数を使用することです。 たとえば、SELECT ステートメントで指定した変数 **\@mycol** は、SELECT ステートメントのローカル変数であり、EXECUTE ステートメントにとっては外部の変数です。  
   
 USE AdventureWorks2012;  
   
@@ -55,7 +54,7 @@ EXECUTE ('SELECT @mycol FROM Production.Product;');
 ## <a name="user-action"></a>ユーザーの操作  
 SQL スクリプトで使用する変数がスクリプト内の別の場所で事前に宣言されていることを確認します。  
   
-外部で宣言された EXECUTE ステートメント内の変数を参照しないようにスクリプトを修正します。 例 :  
+外部で宣言された EXECUTE ステートメント内の変数を参照しないようにスクリプトを修正します。 例:  
   
 USE AdventureWorks2012;  
   

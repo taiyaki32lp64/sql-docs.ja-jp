@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 9f8cf1b2-3def-453f-a0ff-4646c5f15262
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: e648bd9dcb3c6a073419cde42587f1be706fff4d
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 0ea83f40c6d6e595277a173c181c24f33e382393
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52513900"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67924886"
 ---
 # <a name="more-ways-to-move-in-a-recordset"></a>レコードセット内を移動する他の方法
 次の 4 つのメソッドを移動、またはスクロールしてで使用される、 **Recordset**:[MoveFirst、MoveLast、MoveNext、MovePrevious](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)します。 (これらのメソッドの一部は順方向専用カーソルで使用できます。)  

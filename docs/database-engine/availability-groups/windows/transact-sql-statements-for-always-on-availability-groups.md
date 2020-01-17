@@ -1,6 +1,7 @@
 ---
-title: AlwaysOn 可用性グループの Transact-SQL ステートメント | Microsoft Docs
-ms.custom: ''
+title: 可用性グループの Transact-SQL ステートメント
+description: Always On 可用性グループの配置、作成、管理をサポートする Transact-SQL (T-SQL) ステートメントを導入します。
+ms.custom: seo-lt-2019
 ms.date: 05/17/2016
 ms.prod: sql
 ms.reviewer: ''
@@ -12,33 +13,19 @@ helpviewer_keywords:
 ms.assetid: 184d0a81-2259-4db9-9d0d-01aac0b502c8
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 730ce9da4a2e44dec103b6c0620acae176f969d1
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 5ef8cd17f7a6db5058fd10d26de9f8674846ed03
+ms.sourcegitcommit: f8cf8cc6650a22e0b61779c20ca7428cdb23c850
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52506555"
+ms.lasthandoff: 12/04/2019
+ms.locfileid: "74822205"
 ---
-# <a name="transact-sql-statements-for-always-on-availability-groups"></a>AlwaysOn 可用性グループの Transact-SQL ステートメント
+# <a name="transact-sql-statements-for-always-on-availability-groups"></a>Always On 可用性グループの Transact-SQL ステートメント
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
   このトピックでは、 [!INCLUDE[tsql](../../../includes/tsql-md.md)] の配置のほか、可用性グループ、可用性レプリカ、および可用性データベースの作成と管理をサポートする [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] ステートメントについて説明します。  
   
- **このトピックの内容**  
-  
--   [CREATE ENDPOINT](#CreateEndpoint)  
-  
--   [CREATE AVAILABILITY GROUP](#CreateAG)  
-  
--   [ALTER AVAILABILITY GROUP](#AlterAG)  
-  
--   [ALTER DATABASE SET HADR のオプション](#AlterDb)  
-  
--   [DROP AVAILABILITY GROUP](#DropAG)  
-  
--   [AVAILABILITY GROUP Transact-SQL ステートメントの制限事項](#Restrictions)  
-  
+ 
 ##  <a name="CreateEndpoint"></a> CREATE ENDPOINT  
  [CREATE ENDPOINT ...FOR DATABASE_MIRRORING](../../../t-sql/statements/create-endpoint-transact-sql.md) は、サーバー インスタンス上にデータベース ミラーリング エンドポイントが存在しない場合に、データベース ミラーリング エンドポイントを作成します。 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] またはデータベース ミラーリングの配置を検討しているすべてのサーバー インスタンスには、データベース ミラーリング エンドポイントが必要です。  
   
@@ -74,6 +61,6 @@ ms.locfileid: "52506555"
 -   [!INCLUDE[tsql](../../../includes/tsql-md.md)] ステートメントを実行したときに、別の可用性グループ アクションまたは復旧が進行中であった場合は、エラーが返されます。 必要に応じて、アクションまたは復旧の完了を待ってステートメントを再試行してください。  
   
 ## <a name="see-also"></a>参照  
- [AlwaysOn 可用性グループの概要 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)  
+ [Always On 可用性グループの概要 &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)  
   
   

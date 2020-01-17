@@ -10,21 +10,20 @@ ms.topic: conceptual
 f1_keywords:
 - vdt.dlgbox.indexcolumns
 ms.assetid: 855860ae-528f-48ab-80e3-f53e7cb8c33f
-author: stevestein
-ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 9e0420481b54fe906c54110060248c80905ddc57
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: b66e60835d0f74c30752dfc6917098d7b0c29332
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47744296"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68254146"
 ---
 # <a name="index-columns-dialog-box-visual-database-tools"></a>[インデックスの列] ダイアログ ボックス (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 このダイアログ ボックスでは、インデックスの列を選択し、その並べ替え順を設定できます。 インデックスは 1 つ以上の列を使用できます。また、各列は昇順または降順に並べ替えることができます。 このダイアログ ボックスを表示するには、 **[インデックス/キー]** ダイアログ ボックスの **[全般]** セクションで、 **[列]** 行の参照ボタンをクリックします。  
   
-## <a name="options"></a>[変数]  
+## <a name="options"></a>オプション  
 **列名**  
 このインデックスに加える列を選択します。 その列をインデックスから削除するには、 **<None>** を選択します。  
   

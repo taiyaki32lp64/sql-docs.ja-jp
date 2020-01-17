@@ -1,5 +1,5 @@
 ---
-title: データ ソース ウィザード画面 4 (ODBC Driver for SQL Server) |Microsoft Docs
+title: データソースウィザードの画面 4 (SQL Server 用 ODBC ドライバー) |Microsoft Docs
 ms.custom: ''
 ms.date: 09/27/2017
 ms.prod: sql
@@ -10,19 +10,18 @@ ms.topic: conceptual
 ms.assetid: 76326eeb-1144-4b9f-85db-50524c655d30
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 2c8a5a785f7c208d8543f9ec3a27d34b34f7a918
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 177888dd1034bb1edcb870db38b00bbc418cb261
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47724370"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67989459"
 ---
 # <a name="data-source-wizard-screen-4"></a>データ ソース ウィザード画面 4
 
 SQL Server メッセージに使用する言語、文字セットの翻訳、および ODBC Driver for SQL Server で地域設定を使用するかどうかを指定します。 また、実行時間の長いクエリのログ記録、およびドライバー統計情報の設定を制御することもできます。
 
-## <a name="options"></a>[変数]
+## <a name="options"></a>オプション
 
 ### <a name="change-the-language-of-sql-server-system-messages-to"></a>[SQL Server のシステム メッセージを以下の言語に変更する]
 
@@ -34,7 +33,7 @@ SQL Server の各インスタンスには、システム メッセージの複�
 
 ### <a name="trust-server-certificate"></a>[サーバー証明書を信頼する]
 
-このオプションは、該当する場合にのみ**強力な暗号化を使用して、データの**を有効にします。 選択した場合、サーバーの証明書は、サーバーの適切なホスト名があり、信頼された証明書機関から発行するのには検証されません。 
+このオプションは **、[データに強力な暗号化を使用**する] が有効になっている場合にのみ適用されます。 この設定を選択した場合、サーバーの証明書は、サーバーの正しいホスト名を持っているか検証されず、信頼された証明機関によって発行されます。 
 
 ### <a name="perform-translation-for-character-data"></a>[文字データを変換する]
 
@@ -48,7 +47,7 @@ SQL Server の各インスタンスには、システム メッセージの複�
 
 ### <a name="save-long-running-queries-to-the-log-file"></a>[実行時間が長いクエリを以下のログ ファイルに保存する]
 
-ドライバーが、保存するクエリの**最短所用時間**の値よりも長い時間がかかっているすべてのクエリをログに記録するように指定します。 実行時間の長いクエリのログは、指定されたファイルに記録されます。 ログ ファイルを指定するには、ボックスに完全なパスとファイル名を入力するか、**[参照]** をクリックし、既存のファイル ディレクトリ内を移動してログ ファイルを選択します。
+ドライバーが、保存するクエリの**最短所用時間**の値よりも長い時間がかかっているすべてのクエリをログに記録するように指定します。 実行時間の長いクエリのログは、指定されたファイルに記録されます。 ログ ファイルを指定するには、ボックスに完全なパスとファイル名を入力するか、 **[参照]** をクリックし、既存のファイル ディレクトリ内を移動してログ ファイルを選択します。
 
 ### <a name="long-query-time-milliseconds"></a>[保存するクエリの最短所要時間 (ミリ秒)]
 
@@ -56,17 +55,17 @@ SQL Server の各インスタンスには、システム メッセージの複�
 
 ### <a name="log-odbc-driver-statistics-to-the-log-file"></a>[ODBC ドライバーの統計情報ログを以下のログ ファイルに保存する]
 
-統計情報がログに記録されるよう指定します。 統計情報のログは、指定したファイルに記録されます。 ログ ファイルを指定するには、ボックスに完全なパスとファイル名を入力するか、**[参照]** をクリックし、既存のファイル ディレクトリ内を移動してログ ファイルを選択します。
+統計情報がログに記録されるよう指定します。 統計情報のログは、指定したファイルに記録されます。 ログ ファイルを指定するには、ボックスに完全なパスとファイル名を入力するか、 **[参照]** をクリックし、既存のファイル ディレクトリ内を移動してログ ファイルを選択します。
 
 統計情報ログはタブで区切られており、タブ区切りのファイルをサポートする Microsoft Excel やその他のアプリケーションで分析できます。
 
 ### <a name="connect-retry-count"></a>接続再試行回数
 
-失敗した接続の試行を再試行する回数を指定します。
+失敗した接続試行を再試行する回数を指定します。
 
 ### <a name="connect-retry-interval-seconds"></a>接続再試行間隔(秒)
 
-各接続の再試行間隔 (秒) の数を指定します。 この操作の詳細については、**接続再試行回数**オプションを参照してください[Windows ODBC ドライバーの接続レジリエンシー](../../../connect/odbc/windows/connection-resiliency-in-the-windows-odbc-driver.md)。
+各接続再試行の間隔を秒数で指定します。 この操作と **[接続の再試行回数]** オプションの詳細については、「 [Windows ODBC ドライバーの接続の回復性](../../../connect/odbc/windows/connection-resiliency-in-the-windows-odbc-driver.md)」を参照してください。
 
 ### <a name="back"></a>戻る
 
@@ -74,7 +73,7 @@ SQL Server の各インスタンスには、システム メッセージの複�
 
 ### <a name="finish"></a>[完了]
 
-クリックすることができる場合、この画面で指定した情報が完了したら、**完了**します。 ウィザードの他の画面に指定されたすべての属性を使用して DSN が作成され、新しく作成した DSN をテストする機会が提供されます。
+この画面で指定された情報が完了したら、 **[完了]** をクリックします。 このウィザードの他の画面で指定されたすべての属性を使用して DSN が作成され、新しく作成された DSN をテストする機会が与えられます。
 
 ## <a name="next-steps"></a>次の手順
 

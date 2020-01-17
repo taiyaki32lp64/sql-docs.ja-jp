@@ -1,5 +1,5 @@
 ---
-title: setNCharacterStream メソッド リーダー オブジェクトを |Microsoft Docs
+title: Setn文字ストリームメソッドから Reader オブジェクト |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 77905630-0135-46ad-a419-215e648996e2
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: c70efc5220c5d09098d60eab19ae736fa2d87c44
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: cdefec49aebd2c5042d9fb8f99486a0ee8d3811e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47617080"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67973854"
 ---
 # <a name="setncharacterstream-method-sqlservercallablestatement"></a>setNCharacterStream メソッド (SQLServerCallableStatement)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

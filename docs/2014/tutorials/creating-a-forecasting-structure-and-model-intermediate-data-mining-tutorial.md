@@ -11,11 +11,11 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: 6e631a8983705d4f58e4b193823c9a255284f346
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56015253"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63204813"
 ---
 # <a name="creating-a-forecasting-structure-and-model-intermediate-data-mining-tutorial"></a>Forecasting 構造およびモデルの作成 (中級者向けデータ マイニング チュートリアル)
   次に、データ マイニング ウィザードを使用して、先ほど作成したデータ ソース ビューに基づく新しいマイニング構造とマイニング モデルを作成します。 この作業では、マイニング モデルで [!INCLUDE[msCoName](../includes/msconame-md.md)] タイム シリーズ アルゴリズムが使用されるように指定します。  

@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 048ae16d-31c3-489a-9f1e-1400a3bacd39
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 767c8f3eb96182fad541cac224759e065ae4ac3a
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: a6f5e2b2bcd92c0a17ccada2ca755cbc14b9d647
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54131272"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68032492"
 ---
 # <a name="sql-server-monitor-overview"></a>SQL Server モニターの概要
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -57,7 +56,7 @@ ms.locfileid: "54131272"
   
 -   データベース ミラーリング  
   
--   のレプリケーション  
+-   レプリケーション  
   
  **SQL Server Management Studio を使用してデータベース ミラーリングを監視するには**  
   

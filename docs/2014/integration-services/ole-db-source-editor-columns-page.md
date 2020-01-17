@@ -4,23 +4,22 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.oledbsourceadapter.columns.f1
 helpviewer_keywords:
 - OLE DB Source Editor
 ms.assetid: bfbb0ae1-7759-4d45-8865-31df36ae5b34
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 915479d218e8ecee950609a5431bdb0331242fcf
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 453bed2f366c4b2bd51fd706d5d56ea6ccf01f01
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48125506"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66057029"
 ---
 # <a name="ole-db-source-editor-columns-page"></a>[OLE DB ソース エディター] ([列] ページ)
   **[OLE DB ソース エディター]** ダイアログ ボックスの **[列]** ページを使用すると、出力列をそれぞれの外部 (変換元) 列にマップできます。  
@@ -39,9 +38,9 @@ ms.locfileid: "48125506"
   
 ## <a name="see-also"></a>参照  
  [Integration Services のエラーおよびメッセージのリファレンス](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [OLE DB ソース エディター&#40;接続マネージャー ページ&#41;](../../2014/integration-services/ole-db-source-editor-connection-manager-page.md)   
- [OLE DB ソース エディター&#40;エラー出力 ページ&#41;](../../2014/integration-services/ole-db-source-editor-error-output-page.md)   
- [OLE DB ソースを使用してデータを抽出します。](data-flow/extract-data-by-using-the-ole-db-source.md)   
+ [OLE DB ソース エディター &#40;[接続マネージャー] ページ&#41;](../../2014/integration-services/ole-db-source-editor-connection-manager-page.md)   
+ [OLE DB ソース エディター &#40;[エラー出力] ページ&#41;](../../2014/integration-services/ole-db-source-editor-error-output-page.md)   
+ [OLE DB ソースを使用してデータを抽出する](data-flow/extract-data-by-using-the-ole-db-source.md)   
  [OLE DB 接続マネージャー](connection-manager/ole-db-connection-manager.md)  
   
   

@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 6df2e9cd-de10-4629-97bd-32f2782616c7
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: b3f40621645aad2d1e52cb0a89baa8ff29b01446
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 6c09ddcac1409da08fedeaf946ac7fb9f6ef668e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47680660"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67952442"
 ---
 # <a name="hardware-and-software-requirements-odbc"></a>ハードウェアとソフトウェアの要件 (ODBC)
 このトピックでは、ODBC のデスクトップ データベース ドライバーを使用するための要件を一覧表示します。  

@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: 34e2d508-7b64-4503-a4f0-c6c6ad5f8a44
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 82b2d4a687c490ed1909a27fc55fdece9cc3662c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: f9240218b05af2c642ff374cb7e14d2a6c5dd616
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48083216"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66066609"
 ---
 # <a name="set-the-data-type-of-a-column-ssas-tabular"></a>列のデータ型の設定 (SSAS テーブル)
   モデルにデータをインポートするか、データを貼り付けると、モデル デザイナーによってデータ型の検出と適用が自動的に行われます。 データをモデルに追加したら、列のデータ型を手動で変更してデータの格納方法を変更できます。 代わりに、データの格納方法を変更せずに表示形式だけを変更することもできます。  
@@ -66,9 +65,9 @@ ms.locfileid: "48083216"
   
  そのデータ型がサポートされていても、新しいデータ型の範囲でサポートされていない値が見つかった場合は、モデル デザイナーによって別のエラーが表示されます。この場合は、続行する前にデータ値を修正する必要があります。  
   
- Business intelligence semantic model で使用されるデータ型の詳細については、暗黙的に変換、およびさまざまなデータ型がどのような数式で使用しを参照してください[型でサポートされているデータ&#40;SSAS 表形式&#41;](data-types-supported-ssas-tabular.md).  
+ Business Intelligence Semantic Model で使用されるデータ型、それらのデータ型の暗黙的な変換、および数式でさまざまなデータ型を使用する方法の詳細については、 [サポートされているデータ型 (SSAS テーブル)](data-types-supported-ssas-tabular.md)」を参照してください。  
   
 ## <a name="see-also"></a>参照  
- [サポートされるデータ型&#40;SSAS 表形式&#41;](data-types-supported-ssas-tabular.md)  
+ [サポートされているデータ型 (SSAS テーブル)](data-types-supported-ssas-tabular.md)  
   
   

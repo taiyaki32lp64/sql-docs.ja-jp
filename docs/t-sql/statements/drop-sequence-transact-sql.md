@@ -18,15 +18,14 @@ helpviewer_keywords:
 ms.assetid: c25772d3-61af-4aa7-b58b-a6f67a793e3d
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: 3f8779cf1460fdf2ca7aecbc4b57d52d6d542807
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: 740c8bff60f56b94304b789e901ec3b1d945fd17
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53205481"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68077720"
 ---
-# <a name="drop-sequence-transact-sql"></a>ドロップ シーケンス (TRANSACT-SQL)
+# <a name="drop-sequence-transact-sql"></a>DROP SEQUENCE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
 
   現在のデータベースからシーケンス オブジェクトを削除します。  
@@ -36,7 +35,7 @@ ms.locfileid: "53205481"
 ## <a name="syntax"></a>構文  
   
 ```  
-DROP SEQUENCE [ IF EXISTS ] { [ database_name . [ schema_name ] . | schema_name. ]    sequence_name } [ ,...n ]  
+DROP SEQUENCE [ IF EXISTS ] { database_name.schema_name.sequence_name | schema_name.sequence_name | sequence_name } [ ,...n ]  
  [ ; ]  
 ```  
   
@@ -44,7 +43,7 @@ DROP SEQUENCE [ IF EXISTS ] { [ database_name . [ schema_name ] . | schema_name.
  *IF EXISTS*  
  **適用対象**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] から[現在のバージョン](https://go.microsoft.com/fwlink/p/?LinkId=299658)まで)。  
   
- 条件付きでは既に存在する場合にのみ、シーケンスを削除します。  
+ 条件付きではすでに存在する場合にのみ、シーケンスを削除します。  
   
  *database_name*  
  シーケンス オブジェクトが作成されたデータベースの名前を指定します。  

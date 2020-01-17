@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 ms.assetid: 4de53c3c-c6fc-49ce-b692-3609fc0b3ec5
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: a7b4f0a499ccbb41e185774cac687f8a8be3c2d5
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: 66883f42947ba54205a5f272bb6bbfd5a90376f9
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56292600"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66106575"
 ---
 # <a name="add-or-delete-a-group-in-a-data-region-report-builder-and-ssrs"></a>データ領域でのグループの追加または削除 (レポート ビルダーおよび SSRS)
   計算や表示の対象として、特定の値または式のセットによってデータを整理する場合は、グループをデータ領域に追加します。 グループには、データセットのどのデータがそのグループに含まれるかを示す名前と式を割り当てます。 グループの詳細については、「 [グループについて (レポート ビルダーおよび SSRS)](understanding-groups-report-builder-and-ssrs.md)」を参照してください。  
@@ -47,7 +46,7 @@ ms.locfileid: "56292600"
   
 2.  **[名前]** に、グループの名前を入力します。  
   
-3.  **[グループ式]** で、式を入力するか式ボタン (**[fx]**) をクリックして、式を作成します。  
+3.  **[グループ式]** で、式を入力するか式ボタン ( **[fx]** ) をクリックして、式を作成します。  
   
 4.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
@@ -73,7 +72,7 @@ ms.locfileid: "56292600"
   
 3.  **[名前]** ボックスに、グループの名前を入力します。  
   
-4.  **[グループ式]** で、単純な式を入力または選択するか、式ボタン (**[fx]**) をクリックして、グループ式を作成します。  
+4.  **[グループ式]** で、単純な式を入力または選択するか、式ボタン ( **[fx]** ) をクリックして、グループ式を作成します。  
   
 5.  **[追加]** をクリックして追加の式を作成します。 指定するすべての式が論理 AND を使用して結合され、このグループのデータを指定します。  
   

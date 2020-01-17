@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: de94cd2e-2d48-49fb-9ebd-a2d90c79bf62
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: fd6417c10be286164b9d56a0c2587dfd63a1de23
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 5b1dc7b961dd0b85824ea180cbc4815d5488a360
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51670340"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68004505"
 ---
 # <a name="logical-expressions-xquery"></a>論理式 (XQuery)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -44,11 +43,11 @@ expression1 or expression2
   
 -   テスト式の結果が 1 つ以上のノードのシーケンスになった場合、式の結果は True になります。  
   
--   それ以外の場合は、静的エラーが発生します。  
+-   それ以外の場合、静的エラーが発生します。  
   
  論理**と**と**または**演算子は、標準の論理セマンティクスで、式の結果のブール値に適用されます。  
   
- 次のクエリは、特定の製品モデルについて、正面からの小さな写真である <`Picture`> 要素を製品カタログから取得します。 製品の説明ドキュメントごとに、サイズや角度など、異なる属性を持つ 1 つ以上の製品写真をカタログに格納できることに注意してください。  
+ 次のクエリでは、正面からの小さな写真を製品カタログからに取得します <`Picture`> の特定の製品モデルの要素。 製品の説明ドキュメントごとに、サイズや角度など、異なる属性を持つ 1 つ以上の製品写真をカタログに格納できることに注意してください。  
   
 ```  
 SELECT CatalogDescription.query('  
@@ -74,7 +73,7 @@ where ProductModelID=19
   
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [XQuery 式](../xquery/xquery-expressions.md)  
   
   

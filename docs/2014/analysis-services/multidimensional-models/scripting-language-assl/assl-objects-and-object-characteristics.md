@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: analysis-services
 ms.topic: reference
 helpviewer_keywords:
 - reference exceptions [Analysis Services Scripting Language]
@@ -21,12 +19,12 @@ ms.assetid: 6e5c28b5-c0bc-4ccd-82e5-e174bbb71386
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: d83728b33a4cbf0ce76eea3c577302c7d7ffaf25
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: aee5e7b94aaaca2b35e34f8c4d49c2834189f114
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48082852"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62736617"
 ---
 # <a name="assl-objects-and-object-characteristics"></a>ASSL オブジェクトとオブジェクトの特性
   Analysis Services スクリプト言語 (ASSL) のオブジェクトは、オブジェクト グループ、継承、名前付け、展開、および処理に関して特定のガイドラインに従います。  
@@ -57,7 +55,7 @@ ms.locfileid: "48082852"
   
 -   サーバーまたはデータベースに関連付けられているコマンド  
   
--   データ ソース  
+-   [データ ソース]  
   
  主要なオブジェクトには、その履歴と状態を追跡するための次のプロパティがあります。  
   
@@ -90,9 +88,9 @@ ms.locfileid: "48082852"
   
 |列挙値|許可されている\<Alter >|説明|  
 |-----------------------|---------------------------|-----------------|  
-|*ReferenceOnly*|いいえ|要求されたオブジェクトおよび含まれているすべての主要なオブジェクトの名前、ID、およびタイムスタンプだけを再帰的に返します。|  
+|*ReferenceOnly*|no|要求されたオブジェクトおよび含まれているすべての主要なオブジェクトの名前、ID、およびタイムスタンプだけを再帰的に返します。|  
 |*ObjectProperties*|はい|要求されたオブジェクトと含まれいているマイナー オブジェクトを展開し、含まれている主要なオブジェクトは返しません。|  
-|*ExpandObject*|いいえ|同じ*objectproperties です*名前、ID、および含まれる主要なオブジェクトのタイムスタンプにも返されます。|  
+|*ExpandObject*|no|同じ*objectproperties です*名前、ID、および含まれる主要なオブジェクトのタイムスタンプにも返されます。|  
 |*ExpandFull*|はい|要求されたオブジェクトと含まれているすべてのオブジェクトを再帰的に完全に展開します。|  
   
  この ASSL 参照セクションについて説明します、 *ExpandFull*表現。 他のすべての `ObjectExpansion` レベルがこのレベルから派生します。  

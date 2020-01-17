@@ -10,22 +10,21 @@ ms.topic: language-reference
 dev_langs:
 - TSQL
 ms.assetid: d1822f1b-c1dd-4f2f-ab7c-6617c05a2b6c
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: 2e5ffebd88c962313e525b110100bf82d2865e40
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+author: MladjoA
+ms.author: mlandzic
+ms.openlocfilehash: 00c70a3b5b7bfba6bcd04fd622b4520c3a419848
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52535485"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67930468"
 ---
-# <a name="extended-methods-on-geography-instances"></a>geography インスタンスの拡張メソッド
+# <a name="extended-methods-on-geography-instances"></a>Geography インスタンスの拡張メソッド
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
 
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、Open Geospatial Consortium (OGC) の geography インスタンスに関する拡張メソッドをいくつかサポートしています。  
   
- OGC 仕様の詳細については、以下を参照してください。  
+ OGC 仕様の詳細については、以下のリソースを参照してください。  
   
 -   [OGC の仕様、簡易機能アクセス Part 1 - 共通アーキテクチャ](https://go.microsoft.com/fwlink/?LinkId=93627)  
   

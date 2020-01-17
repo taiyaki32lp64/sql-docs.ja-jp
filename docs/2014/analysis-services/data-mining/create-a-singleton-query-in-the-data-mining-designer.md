@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - singleton queries [Analysis Services]
@@ -14,12 +13,12 @@ ms.assetid: 6cdca8a0-cf16-46eb-a652-0bff820625ab
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 1413171abde49f8ae35ef55664135ba924cee5f0
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 795347e0ef2bdee226daff57e85e2b02f8b00c9e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48196052"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66085308"
 ---
 # <a name="create-a-singleton-query-in-the-data-mining-designer"></a>データ マイニング デザイナーでの単一クエリの作成
   単一クエリは、1 つのケースに関する予測を作成する場合に便利です。 単一クエリの詳細については、「 [データ マイニング クエリ](data-mining-queries.md)」を参照してください。  
@@ -81,6 +80,6 @@ AS [t]
      新しい画面が開き、クエリの結果が表示されます。 作成した DMX ステートメントを表示するには、 **[SQL]** をクリックします。  
   
 ## <a name="see-also"></a>参照  
- [予測クエリ&#40;データ マイニング&#41;](prediction-queries-data-mining.md)  
+ [予測クエリ (データ マイニング)](prediction-queries-data-mining.md)  
   
   

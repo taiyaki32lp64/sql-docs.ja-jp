@@ -1,5 +1,5 @@
 ---
-title: setDate メソッドの日付をカレンダー - int |Microsoft Docs
+title: setDate メソッドから date および calendar-int |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: 2c46f694-6dc4-429f-a037-a3bad369a7c8
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 5abb09e3868de54fc924c434359b7af5ae393504
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 04cd1f41909cdd5088548eebdd15e2246ae64cd7
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47596711"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67974479"
 ---
 # <a name="setdate-method-int-javasqldate-javautilcalendar"></a>setDate (int, java.sql.Date, java.util.Calendar) メソッド
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -44,11 +43,11 @@ public final void setDate(int n,
   
  *x*  
   
- Date オブジェクト。  
+ Date オブジェクトです。  
   
- *cal*  
+ *カレンダー*  
   
- 暦オブジェクト。  
+ Calendar オブジェクト。  
   
 ## <a name="exceptions"></a>例外  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  

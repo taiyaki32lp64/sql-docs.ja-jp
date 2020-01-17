@@ -1,11 +1,10 @@
 ---
-title: アップグレード アドバイザーを使用したアップグレードの準備 |Microsoft Docs
+title: Upgrade Advisor を使用してアップグレードを準備する |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 helpviewer_keywords:
 - Upgrade Advisor [SQL Server]
@@ -17,12 +16,12 @@ ms.assetid: d85b0833-ddeb-42e3-9397-97ea60d521b7
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 8b12b22af124250fe05baab5d08a6585de061b56
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: ab9c51ba125a7489d693a1af6b16e432e8fb7099
+ms.sourcegitcommit: 66dbc3b740f4174f3364ba6b68bc8df1e941050f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53368074"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73632736"
 ---
 # <a name="use-upgrade-advisor-to-prepare-for-upgrades"></a>アップグレード アドバイザーを使用したアップグレードの準備
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] アップグレード アドバイザーは、[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] へのアップグレードの準備に役立ちます。 アップグレード アドバイザーでは、以前のバージョンの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] でインストールされたコンポーネントが分析され、アップグレードの前または後に修正する必要がある問題を示すレポートが生成されます。  
@@ -65,23 +64,23 @@ ms.locfileid: "53368074"
   
 -   [!INCLUDE[firstref_longhorn](../../includes/firstref-longhorn-md.md)] SP2、Windows 7 SP1、および [!INCLUDE[winserver2008r2](../../includes/winserver2008r2-md.md)] SP1。  
   
--   Windows インストーラー 4.5 以降のバージョン。 Windows インストーラーをインストールすることができます、 [Windows インストーラー Web サイト](https://go.microsoft.com/fwlink/?LinkId=49112)します。  
+-   Windows インストーラー 4.5 以降のバージョン。 [Windows インストーラー Web サイト](https://www.microsoft.com/download/details.aspx?id=8483)から Windows インストーラーをインストールできます。  
   
--   Microsoft .NET Framework 4。 .NET framework 4 がで使用できる、 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 、製品メディアとの間、 [.NET Framework 4 ダウンロード ページ](https://go.microsoft.com/fwlink/?LinkId=209895)します。  
+-   Microsoft .NET Framework 4。 .NET Framework 4 は、[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 製品メディアと[.NET Framework 4 ダウンロードページ](https://go.microsoft.com/fwlink/?LinkId=209895)で入手できます。  
   
-    -   [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] メディアから .NET Framework 4 をインストールするには、ディスク ドライブのルートに移動します。 \Redist フォルダーをダブルクリック、DotNetFrameworks フォルダーをダブルクリックし、dotNetFx40_Full_x86_x64.exe (32 ビット オペレーティング システムまたは 64 ビットのオペレーティング システム用) を実行します。  
+    -   [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] メディアから .NET Framework 4 をインストールするには、ディスク ドライブのルートに移動します。 次に、[]、[redist] フォルダーの順にダブルクリックし、[DotNetFrameworks] フォルダーをダブルクリックして dotNetFx40_Full_x86_x64 (32 ビットオペレーティングシステムの場合は、64ビットオペレーティングシステムの場合) を実行します。  
   
- アップグレード アドバイザーを Web からインストールするには、ダウンロード ページのダウンロード ボタンをクリックします。 その後すぐにインストールを実行するか、または SQLUA.msi ファイルを保存して後から実行できます。 製品ディスクからインストールする場合は、製品ディスクから直接 SQLUA.msi を実行します。  
+ アップグレード アドバイザーを Web からインストールするには、ダウンロード ページのダウンロード ボタンをクリックします。 その後すぐにインストールを実行するか、または SQLUA.msi ファイルを保存して後から実行できます。 製品ディスクからをインストールする場合は、製品ディスクから直接 SQLUA .msi を実行します。  
   
- アップグレード アドバイザーをインストールした後からを開くことができます、**開始**メニュー。  
+ アップグレードアドバイザーをインストールすると、 **[スタート]** メニューから開くことができます。  
   
--   クリックして**開始**、 をポイント**すべてのプログラム**、 をポイント[!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)]、順にクリックします**[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]アップグレード アドバイザー**します。  
+-   **[スタート]** をクリックし、 **[すべてのプログラム]** 、[[!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)]] の順にポイントして、[ **[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] Upgrade Advisor**] をクリックします。  
   
  詳細については、アップグレード アドバイザーのダウンロードおよび [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] のリリース ノートに収録されているアップグレード アドバイザーのドキュメントを参照してください。  
   
 ## <a name="see-also"></a>参照  
- [複数のバージョンおよび SQL Server のインスタンスを使用します。](../../../2014/sql-server/install/work-with-multiple-versions-and-instances-of-sql-server.md)   
- [サポートされているバージョンとエディションのアップグレード](../../database-engine/install-windows/supported-version-and-edition-upgrades.md)   
+ [SQL Server の複数のバージョンとインスタンスを操作](../../../2014/sql-server/install/work-with-multiple-versions-and-instances-of-sql-server.md)する   
+ [サポートされるバージョンとエディションのアップグレード](../../database-engine/install-windows/supported-version-and-edition-upgrades.md)   
  [旧バージョンとの互換性](../../../2014/getting-started/backward-compatibility.md)  
   
   

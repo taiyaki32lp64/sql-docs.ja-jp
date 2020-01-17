@@ -11,14 +11,14 @@ helpviewer_keywords:
 - report items [Reporting Services], properties
 - items [Reporting Services], properties
 ms.assetid: 21edec6d-9897-48fb-8c75-182305b1dbdb
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: f0a00d57eae7045e8eb06624115d0814ed5a86f5
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 645382a105edd65248d82c0f325d88c37857d0e2
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47759530"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63128824"
 ---
 # <a name="reporting-services-properties---report-server-item-properties"></a>Reporting Services のプロパティ - レポート サーバー アイテムのプロパティ
   アイテム プロパティは、レポート サーバー データベースのアイテムに固有のプロパティです。 アイテム プロパティには、レポート、リンク レポート、フォルダー、リソース、モデル、データ ソースなどがあります。  
@@ -37,7 +37,7 @@ ms.locfileid: "47759530"
 |**ID**|レポート サーバー データベースのアイテムの ID。|  
 |**ModifiedBy**|レポート サーバー データベースのアイテムを最後に変更したユーザーの名前。|  
 |**ModifiedDate**|ユーザーがアイテムを最後に変更した日付と時刻。|  
-|**名前**|レポート サーバー データベースのアイテムの名前。|  
+|**[名前]**|レポート サーバー データベースのアイテムの名前。|  
 |**[パス]**|アイテムの完全なパス名です。 レポート サーバー データベースのアイテムのパスの長さは最大 260 字です。|  
 |**[サイズ]**|レポート サーバー データベースのアイテムのサイズ (バイト単位)。|  
 |**型**|レポート サーバー データベースのアイテムの種類。|  

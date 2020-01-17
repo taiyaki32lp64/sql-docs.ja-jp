@@ -13,11 +13,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: b5f5c2385b4c58447db008544124ae9048566958
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52805844"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63199945"
 ---
 # <a name="web-server-information"></a>Web サーバー情報
   Web サーバー情報は、マージ レプリケーションの Web 同期オプションを使用する場合に必要です。 Web 同期の構成の詳細については、「[Configure Web Synchronization (Web 同期の構成)](configure-web-synchronization.md)」をご覧ください。  
@@ -29,11 +29,11 @@ ms.locfileid: "52805844"
  **[各サブスクライバーが Web サーバーに接続する方法を指定します。]**  
  Web サーバーへの接続に使用される認証の種類を指定します。 IIS サーバーへの接続用の [基本認証] を SSL (Secure Sockets Layer) と組み合わせて使用することをお勧めします。 [基本認証] を選択した場合は、サブスクライバーから IIS サーバーへの接続に使用されるログインとパスワードを入力してください。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [Create a Pull Subscription](create-a-pull-subscription.md)   
  [プル サブスクリプションのプロパティの表示または変更](view-and-modify-pull-subscription-properties.md)   
  [SQL Server 以外のサブスクライバー](non-sql/non-sql-server-subscribers.md)   
- [Subscribe to Publications](subscribe-to-publications.md)   
+ [パブリケーションのサブスクライブ](subscribe-to-publications.md)   
  [マージ レプリケーションの Web 同期](web-synchronization-for-merge-replication.md)  
   
   

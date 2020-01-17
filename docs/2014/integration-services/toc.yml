@@ -224,114 +224,114 @@
       href: extending-packages-scripting/extending-packages-with-scripting.md
 - name: Integration Services のチュートリアル
   href: integration-services-tutorials.md
-- name: 'SSIS チュートリアル: 簡単な ETL パッケージの作成'
+- name: 'SSIS チュートリアル:簡単な ETL パッケージの作成'
   href: ssis-how-to-create-an-etl-package.md
   items:
-    - name: 'レッスン 1: プロジェクトと基本パッケージの作成'
+    - name: 'レッスン 1:プロジェクトと基本パッケージの作成'
       href: lesson-1-create-a-project-and-basic-package-with-ssis.md
       items:
-        - name: '手順 1: 新しい Integration Services プロジェクトの作成'
+        - name: '手順 1:新しい Integration Services プロジェクトの作成'
           href: lesson-1-1-creating-a-new-integration-services-project.md
-        - name: '手順 2: フラット ファイル接続マネージャーの追加と構成'
+        - name: '手順 2:フラット ファイル接続マネージャーの追加と構成'
           href: lesson-1-2-adding-and-configuring-a-flat-file-connection-manager.md
-        - name: '手順 3: OLE DB 接続マネージャーの追加と構成'
+        - name: '手順 3:OLE DB 接続マネージャーの追加と構成'
           href: lesson-1-3-adding-and-configuring-an-ole-db-connection-manager.md
-        - name: '手順 4: パッケージへのデータ フロー タスクの追加'
+        - name: '手順 4:パッケージへのデータ フロー タスクの追加'
           href: lesson-1-4-adding-a-data-flow-task-to-the-package.md
-        - name: '手順 5: フラット ファイル ソースの追加と構成'
+        - name: '手順 5:フラット ファイル ソースの追加と構成'
           href: lesson-1-5-adding-and-configuring-the-flat-file-source.md
-        - name: '手順 6 : 参照変換の追加と構成'
+        - name: '手順 6:参照変換の追加と構成'
           href: lesson-1-6-adding-and-configuring-the-lookup-transformations.md
-        - name: '手順 7 : OLE DB 変換先の追加と構成'
+        - name: '手順 7:OLE DB 変換先の追加と構成'
           href: lesson-1-7-adding-and-configuring-the-ole-db-destination.md
-        - name: '手順 8: レッスン 1 のパッケージをわかりやすくする作業'
+        - name: '手順 8:レッスン 1 のパッケージをわかりやすくする作業'
           href: lesson-1-8-making-the-lesson-1-package-easier-to-understand.md
-        - name: '手順 9: レッスン 1 のチュートリアル パッケージのテスト'
+        - name: '手順 9:レッスン 1 のチュートリアル パッケージのテスト'
           href: lesson-1-9-testing-the-lesson-1-tutorial-package.md
-    - name: 'レッスン 2 : ループの追加'
+    - name: 'レッスン 2:ループの追加'
       href: lesson-2-adding-looping-with-ssis.md
       items:
-        - name: '手順 1: レッスン 1 のパッケージのコピー'
+        - name: '手順 1:レッスン 1 のパッケージのコピー'
           href: lesson-2-1-copying-the-lesson-1-package.md
-        - name: '手順 2: Foreach ループ コンテナーの追加と構成'
+        - name: '手順 2:Foreach ループ コンテナーの追加と構成'
           href: lesson-2-2-adding-and-configuring-the-foreach-loop-container.md
-        - name: '手順 3: フラット ファイル接続マネージャーの変更'
+        - name: '手順 3:フラット ファイル接続マネージャーの変更'
           href: lesson-2-3-modifying-the-flat-file-connection-manager.md
-        - name: '手順 4: レッスン 2 のチュートリアル パッケージのテスト'
+        - name: '手順 4:レッスン 2 のチュートリアル パッケージのテスト'
           href: lesson-2-4-testing-the-lesson-2-tutorial-package.md
-    - name: 'レッスン 3 : ログ機能の追加'
+    - name: 'レッスン 3:ログ機能の追加'
       href: lesson-3-add-logging-with-ssis.md
       items:
-        - name: '手順 1: レッスン 2 のパッケージのコピー'
+        - name: '手順 1:レッスン 2 のパッケージのコピー'
           href: lesson-3-1-copying-the-lesson-2-package.md
         - name: '手順 2:ログ機能の追加と設定'
           href: lesson-3-2-adding-and-configuring-logging.md
-        - name: '手順 3: レッスン 3 のチュートリアル パッケージのテスト'
+        - name: '手順 3:レッスン 3 のチュートリアル パッケージのテスト'
           href: lesson-3-3-testing-the-lesson-3-tutorial-package.md
-    - name: 'レッスン 4 : エラー フロー リダイレクションの追加'
+    - name: 'レッスン 4:エラー フロー リダイレクトの追加'
       href: lesson-4-add-error-flow-redirection-with-ssis.md
       items:
-        - name: '手順 1: レッスン 3 のパッケージのコピー'
+        - name: '手順 1:レッスン 3 のパッケージのコピー'
           href: lesson-4-1-copying-the-lesson-3-package.md
-        - name: '手順 2: 破損ファイルの作成'
+        - name: '手順 2:破損ファイルの作成'
           href: lesson-4-2-creating-a-corrupted-file.md
-        - name: '手順 3 : エラー フロー リダイレクトの追加'
+        - name: '手順 3:エラー フロー リダイレクトの追加'
           href: lesson-4-3-adding-error-flow-redirection.md
-        - name: '手順 4 : フラット ファイル変換先の追加'
+        - name: '手順 4:フラット ファイル変換先の追加'
           href: lesson-4-4-adding-a-flat-file-destination.md
-        - name: '手順 5: レッスン 4 のチュートリアル パッケージのテスト'
+        - name: '手順 5:レッスン 4 のチュートリアル パッケージのテスト'
           href: lesson-4-5-testing-the-lesson-4-tutorial-package.md
     - name: 'レッスン 5: パッケージ配置モデルのパッケージ構成の追加'
       href: lesson-5-add-ssis-package-configurations-for-the-package-deployment-model.md
       items:
-        - name: '手順 1: レッスン 4 のパッケージのコピー'
+        - name: '手順 1:レッスン 4 のパッケージのコピー'
           href: lesson-5-1-copying-the-lesson-4-package.md
-        - name: '手順 2 : パッケージ構成の有効化と構成'
+        - name: '手順 2:パッケージ構成の有効化と構成'
           href: lesson-5-2-enabling-and-configuring-package-configurations.md
-        - name: '手順 3 : Directory プロパティの構成値の変更'
+        - name: '手順 3:Directory プロパティの構成値の変更'
           href: lesson-5-3-modifying-the-directory-property-configuration-value.md
         - name: '手順 4:レッスン 5 のチュートリアル パッケージのテスト'
           href: lesson-5-4-testing-the-lesson-5-tutorial-package.md
     - name: 'レッスン 6: プロジェクト配置モデルを持つパラメーターを使用する'
       href: lesson-6-using-parameters-with-the-project-deployment-model-in-ssis.md
       items:
-        - name: '手順 1: レッスン 5 のパッケージのコピー'
+        - name: '手順 1:レッスン 5 のパッケージのコピー'
           href: lesson-6-1-copying-the-lesson-5-package.md
-        - name: '手順 2: プロジェクトをプロジェクト配置モデルに変換する'
+        - name: '手順 2:プロジェクトをプロジェクト配置モデルに変換する'
           href: lesson-6-2-converting-the-project-to-the-project-deployment-model.md
-        - name: '手順 3: レッスン 6 のパッケージのテスト'
+        - name: '手順 3:レッスン 6 のパッケージのコピー'
           href: lesson-6-3-testing-the-lesson-6-package.md
-        - name: '手順 4: レッスン 6 のパッケージの展開'
+        - name: '手順 4:レッスン 6 のパッケージの展開'
           href: lesson-6-4-deploying-the-lesson-6-package.md
-- name: 'SSIS チュートリアル : パッケージの配置'
+- name: 'SSIS チュートリアル:パッケージの配置'
   href: deploy-packages-with-ssis.md
   items:
-    - name: 'レッスン 1: 配置バンドルを作成する準備'
+    - name: 'レッスン 1:配置バンドルを作成する準備'
       href: lesson-1-preparing-to-create-the-deployment-bundle.md
       items:
-        - name: '手順 1: 作業フォルダーと環境変数の作成'
+        - name: '手順 1:作業フォルダーと環境変数の作成'
           href: lesson-1-1-creating-working-folders-and-environment-variables.md
-        - name: '手順 2: 配置プロジェクトの作成'
+        - name: '手順 2:配置プロジェクトの作成'
           href: lesson-1-2-creating-the-deployment-project.md
-        - name: '手順 3: パッケージとその他のファイルの追加'
+        - name: '手順 3:パッケージとその他のファイルの追加'
           href: lesson-1-3-adding-packages-and-other-files.md
-        - name: '手順 4: パッケージ構成の追加'
+        - name: '手順 4:パッケージ構成の追加'
           href: lesson-1-4-adding-package-configurations.md
-        - name: '手順 5: 更新したパッケージのテスト'
+        - name: '手順 5:更新したパッケージのテスト'
           href: lesson-1-5-testing-the-updated-packages.md
-    - name: 'レッスン 2: 配置バンドルの作成'
+    - name: 'レッスン 2:配置バンドルの作成'
       href: lesson-2-create-the-deployment-bundle-in-ssis.md
       items:
-        - name: '手順 1: 配置ユーティリティの構築'
+        - name: '手順 1:配置ユーティリティの構築'
           href: lesson-2-1-building-the-deployment-utility.md
-        - name: '手順 2: 配置バンドルの確認'
+        - name: '手順 2:配置バンドルの確認'
           href: lesson-2-2-verifying-the-deployment-bundle.md
-    - name: 'レッスン 3: パッケージのインストール'
+    - name: 'レッスン 3:パッケージのインストール'
       href: lesson-3-install-ssis-package.md
       items:
-        - name: '手順 1: 配置バンドルのコピー'
+        - name: '手順 1:配置バンドルのコピー'
           href: lesson-3-1-copying-the-deployment-bundle.md
-        - name: '手順 2: パッケージ インストール ウィザードの実行'
+        - name: '手順 2:パッケージ インストール ウィザードの実行'
           href: lesson-3-2-running-the-package-installation-wizard.md
-        - name: '手順 3 : 配置したパッケージのテスト'
+        - name: '手順 3:配置したパッケージのテスト'
           href: lesson-3-3-testing-the-deployed-packages.md

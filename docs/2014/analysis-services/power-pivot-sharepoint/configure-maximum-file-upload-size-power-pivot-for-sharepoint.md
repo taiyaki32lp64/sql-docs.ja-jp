@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: ac516c63-1e79-4ae8-bca6-32d3c1a09c00
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 96e4cf621a1c0f7f701012ed479797fc450d1533
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 3b6e367d0bc73de31f46b8533cded824bdb19504
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48131572"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66071823"
 ---
 # <a name="configure-maximum-file-upload-size-powerpivot-for-sharepoint"></a>アップロードするファイルの最大サイズの構成 (PowerPivot for SharePoint)
   PowerPivot ブックには大量のデータが含まれる場合が多く、SharePoint のアップロードで許容されるファイルの最大サイズを超過することがあります。 最大サイズを超過したファイルをアップロードしようとすると、SharePoint で次のエラーが発生します。  

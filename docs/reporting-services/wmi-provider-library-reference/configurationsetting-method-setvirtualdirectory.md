@@ -2,20 +2,20 @@
 title: SetVirtualDirectory メソッド (WMI MSReportServer_ConfigurationSetting) | Microsoft Docs
 ms.date: 03/01/2017
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: wmi-provider-library-reference
 ms.topic: conceptual
 helpviewer_keywords:
 - SetVirtualDirectory method
 ms.assetid: 1a25cb1d-38d5-401a-970b-87b642a780e4
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: ec27288ab12d74dd89a34f5c238d77c507913cf1
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 3e00728af89cf85beb53ef667e91f4011b3fd9e0
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47847720"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65573555"
 ---
 # <a name="configurationsetting-method---setvirtualdirectory"></a>ConfigurationSetting メソッド - SetVirtualDirectory
   指定したアプリケーションの仮想ディレクトリの名前を設定します。  

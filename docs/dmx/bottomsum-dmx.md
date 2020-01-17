@@ -8,13 +8,12 @@ ms.topic: conceptual
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-manager: kfile
-ms.openlocfilehash: 9879f2b4ce405ac59568876cd22e381c0dfad2bd
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: de7fb2d398979bb1f3ced1319f068b70bff54c63
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52528478"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68889768"
 ---
 # <a name="bottomsum-dmx"></a>BottomSum (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -29,18 +28,18 @@ BottomSum(<table expression>, <rank expression>, <sum>)
 ```  
   
 ## <a name="applies-to"></a>適用対象  
- など、テーブルを返す式、\<テーブルの列参照 >、またはテーブルを返す関数。  
+ テーブル列参照 > などのテーブルを返す\<式、またはテーブルを返す関数。  
   
 ## <a name="return-type"></a>戻り値の型  
- \<テーブル式 >  
+ \<テーブル式の >  
   
 ## <a name="remarks"></a>コメント  
- **BottomSum**関数は、ランクの増加順に最下位行を返します。 ランクがの評価値に基づいて、\<式をランク付け > 行ごとに、引数ようにの合計、\<式をランク付け > の値がで指定された合計では、少なくとも、 \<sum > 引数。 **BottomSum**中に指定された合計値可能性のある最も小さい要素数を返します。  
+ **BottomSum**関数は、順位の昇順で一番下の行を返します。 ランクは、各行の順位式 > 引数の\<評価値に基づいています。これは、> 値\<の順位付け式の合計が、 \<sum > 引数で指定されている指定された合計以上であることを示します。 **BottomSum**は、指定された合計値を維持しながら、可能な限り最小の要素数を返します。  
   
 ## <a name="examples"></a>使用例  
- 次の例を使用して作成した Association モデルに対する予測クエリの作成、 [Basic Data Mining Tutorial](https://msdn.microsoft.com/library/6602edb6-d160-43fb-83c8-9df5dddfeb9c)します。  
+ 次の例では、「[基本的なデータマイニングチュートリアル](https://msdn.microsoft.com/library/6602edb6-d160-43fb-83c8-9df5dddfeb9c)」を使用して作成したアソシエーションモデルに対して予測クエリを作成します。  
   
- BottomSum のしくみを理解するのには、最初に、入れ子になったテーブルのみを返す予測クエリを実行に役立つ場合があります。  
+ BottomSum の動作を理解するために、入れ子になったテーブルのみを返す予測クエリを最初に実行すると便利な場合があります。  
   
 ```  
 SELECT Predict ([Association].[v Assoc Seq Line Items], INCLUDE_STATISTICS, 10)  
@@ -51,7 +50,7 @@ SELECT (SELECT 'Women''s Mountain Shorts' as [Model]) AS [v Assoc Seq Line Items
 ```  
   
 > [!NOTE]  
->  この例では、入力値として指定された値には単一引用符が含まれているため、この単一引用符の前にもう 1 つ単一引用符に追加してエスケープする必要があります。 エスケープ文字を挿入するための構文がわからない場合は、予測クエリ ビルダーを使用してクエリを作成できます。 ドロップダウン リストから値を選択すると、必要なエスケープ文字が挿入されます。 詳細については、次を参照してください。[データ マイニング デザイナーで単一クエリの作成](../analysis-services/data-mining/create-a-singleton-query-in-the-data-mining-designer.md)です。  
+>  この例では、入力値として指定された値には単一引用符が含まれているため、この単一引用符の前にもう 1 つ単一引用符に追加してエスケープする必要があります。 エスケープ文字を挿入するための構文がわからない場合は、予測クエリ ビルダーを使用してクエリを作成できます。 ドロップダウン リストから値を選択すると、必要なエスケープ文字が挿入されます。 詳細については、「[データマイニングデザイナーでの単一クエリの作成](https://docs.microsoft.com/analysis-services/data-mining/create-a-singleton-query-in-the-data-mining-designer)」を参照してください。  
   
  例の結果を次に示します。  
   
@@ -68,7 +67,7 @@ SELECT (SELECT 'Women''s Mountain Shorts' as [Model]) AS [v Assoc Seq Line Items
 |Mountain Bottle Cage|1367|0.091874454|0.087780332|  
 |Road Bottle Cage|1195|0.080314537|0.077173962|  
   
- BottomSum 関数は、このクエリの結果を受け取り、その合計の最小値を持つ行を指定した数を返します。  
+ BottomSum 関数は、このクエリの結果を受け取り、指定されたカウントに合計される最小値を持つ行を返します。  
   
 ```  
 SELECT   
@@ -83,24 +82,24 @@ NATURAL PREDICTION JOIN
 (SELECT (SELECT 'Women''s Mountain Shorts' as [Model]) AS [v Assoc Seq Line Items]) AS t  
 ```  
   
- BottomSum 関数の最初の引数は、テーブルの列の名前です。 この例では、Predict 関数を呼び出すと、INCLUDE_STATISTICS 引数を使用して入れ子になったテーブルが返されます。  
+ BottomSum 関数の最初の引数は、テーブル列の名前です。 この例では、Predict 関数を呼び出し、INCLUDE_STATISTICS 引数を使用して、入れ子になったテーブルが返されます。  
   
- BottomSum 関数は、2 番目の引数は、結果の順序を使用する入れ子になったテーブル列です。 この例では、INCLUDE_STATISTICS オプションによって $SUPPORT 列、$PROBABILTY 列、および $ADJUSTED PROBABILITY 列が返されます。 この例では $PROBABILITY を使用して、合計して 50% 以上の確率になる行を返します。  
+ BottomSum 関数の2番目の引数は、結果の並べ替えに使用する入れ子になったテーブルの列です。 この例では、INCLUDE_STATISTICS オプションによって $SUPPORT 列、$PROBABILTY 列、および $ADJUSTED PROBABILITY 列が返されます。 この例では $PROBABILITY を使用して、合計して 50% 以上の確率になる行を返します。  
   
- BottomSum 関数の 3 番目の引数は、double 型の値として、対象の合計を指定します。 合計が 10% の確率となる、カウントが最小の製品の行を取得するには「1」と入力します。  
+ 3番目の引数、BottomSum 関数は、ターゲットの合計を double として指定します。 合計が 10% の確率となる、カウントが最小の製品の行を取得するには「1」と入力します。  
   
  例の結果を次に示します。  
   
 |[モデル]|$SUPPORT|$PROBABILITY|$ADJUSTEDPROBABILITY|  
 |-----------|--------------|------------------|--------------------------|  
-|Road Bottle Cage|1195|0.08.|[0.07].|  
-|Mountain Bottle Cage|1367|0.09.|0.08.|  
+|Road Bottle Cage|1195|0.08...|0.07...|  
+|Mountain Bottle Cage|1367|0.09...|0.08...|  
   
- **注**BottomSum の使用状況を示すためにのみこの例が提供されます。 データセットのサイズに応じて、このクエリの実行には長い時間がかかる場合があります。  
+ **メモ**この例は、BottomSum の使用方法を示すことだけを目的としています。 データセットのサイズに応じて、このクエリの実行には長い時間がかかる場合があります。  
   
 ## <a name="see-also"></a>参照  
- [関数&#40;DMX&#41;](../dmx/functions-dmx.md)   
- [一般的な予測関数&#40;DMX&#41;](../dmx/general-prediction-functions-dmx.md)   
- [BottomPercent &#40;DMX&#41;](../dmx/bottompercent-dmx.md)  
+ [DMX &#40;関数&#41;](../dmx/functions-dmx.md)   
+ [一般的な予測&#40;関数 DMX&#41;](../dmx/general-prediction-functions-dmx.md)   
+ [DMX の&#40;割合&#41;](../dmx/bottompercent-dmx.md)  
   
   

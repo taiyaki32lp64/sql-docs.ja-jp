@@ -17,11 +17,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 484ef7dead58a6e8ae35639cdc6218d5c8223bd9
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53363824"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62990186"
 ---
 # <a name="uninstall-an-existing-instance-of-sql-server-setup"></a>SQL Server の既存のインスタンスのアンインストール (セットアップ)
   ここでは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のスタンドアロン インスタンスをアンインストールする方法について説明します。 また、このトピックの手順を実行してシステムを準備し、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]を再インストールできるようにします。  
@@ -70,7 +70,7 @@ ms.locfileid: "53363824"
   
     -   ReportServer[$InstanceName]TempDB (これは [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] の既定の一時データベースです)  
   
-2.  **ローカル セキュリティ グループの削除。**  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]をアンインストールする前に、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] コンポーネントのローカル セキュリティ グループを削除します。  
+2.  **ローカル セキュリティ グループの削除。** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]をアンインストールする前に、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] コンポーネントのローカル セキュリティ グループを削除します。  
   
 3.  **サービス** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **をすべて停止します。** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] コンポーネントをアンインストールする前に、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] サービスをすべて停止することをお勧めします。 アクティブな接続が存在すると、アンインストールに失敗する場合があるためです。  
   
@@ -80,7 +80,7 @@ ms.locfileid: "53363824"
   
 1.  アンインストール プロセスを開始するには、 **コントロール パネル** で **[プログラムと機能]** をクリックします。  
   
-2.  右クリックして**[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]** 選択**アンインストール**します。 次に、 **[削除]** をクリックします。 これにより、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インストール ウィザードが起動します。  
+2.  右クリックして **[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]** 選択**アンインストール**します。 次に、 **[削除]** をクリックします。 これにより、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インストール ウィザードが起動します。  
   
      セットアップ サポート ルールが実行され、コンピューターの構成が確認されます。 続行するには、 **[次へ]** をクリックします。  
   
@@ -104,7 +104,7 @@ ms.locfileid: "53363824"
   
 2.  アンインストールが失敗した原因を解決できない場合は、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] サポートに問い合わせてください。 重要なファイルを誤って削除した場合など、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] を再インストールする前に、オペレーティング システムの再インストールが必要になる場合もあります。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [SQL Server セットアップ ログ ファイルの表示と読み取り](../../database-engine/install-windows/view-and-read-sql-server-setup-log-files.md)  
   
   

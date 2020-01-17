@@ -14,16 +14,15 @@ helpviewer_keywords:
 - tokens [SQL Server]
 - escape macros [SQL Server Agent]
 ms.assetid: 105bbb66-0ade-4b46-b8e4-f849e5fc4d43
-author: stevestein
-ms.author: sstein
-manager: craigg
+author: markingmyname
+ms.author: maghan
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 0efaf8bd3fb62aa673adbb91281e365882d283bd
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: 13ee039c9f3a70b5468d3d7b726b1600e8f80339
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53205391"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68260887"
 ---
 # <a name="use-tokens-in-job-steps"></a>ジョブ ステップでのトークンの使用
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -33,15 +32,11 @@ ms.locfileid: "53205391"
 
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェントを使用すると、 [!INCLUDE[tsql](../../includes/tsql-md.md)] ジョブ ステップ スクリプトでトークンを使用できます。 ジョブ ステップを記述するときにトークンを使用すると、ソフトウェア プログラムを記述するときの変数と同じような柔軟性が得られます。 ジョブ ステップ スクリプトにトークンを挿入した後、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] サブシステムでジョブ ステップが実行される前に、 [!INCLUDE[tsql](../../includes/tsql-md.md)] エージェントにより実行時にトークンが置き換えられます。  
   
-> [!IMPORTANT]
-> [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] Service Pack 1 以降では、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェントのジョブ ステップ トークンの構文が変更されています。 その結果、エスケープ マクロには、ジョブ ステップで使用するすべてのトークンを含める必要があります。すべてのトークンが含まれていないと、ジョブ ステップは失敗します。 エスケープ マクロの使用およびトークンを使用する [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェントのジョブ ステップの更新については、「トークンの使用について」、「[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェントのトークンとマクロ」、「マクロを使用するジョブ ステップの更新」を参照してください。 さらに、 [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] エージェントのジョブ ステップ トークンの呼び出しに角かっこを使用していた [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の構文 (たとえば、"`[DATE]`") も変更されました。 つまり、トークン名はかっこで囲み、トークン構文の先頭にはドル記号 (`$`) を付けることが必要になりました。 例 :  
-> 
-> `$(ESCAPE_`*マクロ名*`(DATE))`  
   
 ## <a name="understanding-using-tokens"></a>トークンの使用について  
   
 > [!IMPORTANT]  
-> Windows イベント ログに対して書き込みのアクセス許可を持っている Windows ユーザーであればだれでも、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェントの警告または WMI 警告によってアクティブ化されるジョブ ステップにアクセスできます。 このセキュリティ上のリスクを避けるために、警告によってアクティブになるジョブで使用できる [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェント トークンは、既定で無効になっています。 このようなトークンには、**A-DBN**、**A-SVR**、**A-ERR**、**A-SEV**、**A-MSG**、**WMI(**_property_**)** があります。 このリリースでは、トークンの使用はすべての警告に拡張されていることに注意してください。  
+> Windows イベント ログに対して書き込みのアクセス許可を持っている Windows ユーザーであればだれでも、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェントの警告または WMI 警告によってアクティブ化されるジョブ ステップにアクセスできます。 このセキュリティ上のリスクを避けるために、警告によってアクティブになるジョブで使用できる [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェント トークンは、既定で無効になっています。 このようなトークンには、**A-DBN**、**A-SVR**、**A-ERR**、**A-SEV**、**A-MSG**、**WMI(** _property_ **)** があります。 このリリースでは、トークンの使用はすべての警告に拡張されていることに注意してください。  
 >   
 > これらのトークンを使用する必要がある場合は、まず、Administrators グループなどの信頼されている Windows セキュリティ グループのメンバーのみが、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] が存在するコンピューターのイベント ログに対して書き込みのアクセス許可を持っていることを確認してください。 確認したら、[オブジェクト エクスプローラー] で **[SQL Server エージェント]** を右クリックし、 **[プロパティ]** をクリックします。次に、 **[警告システム]** ページで、 **[警告に応答するすべてのジョブのトークンを置き換える]** チェック ボックスをオンにして、これらのトークンを有効にします。  
   
@@ -82,34 +77,30 @@ ms.locfileid: "53205391"
 |**(MSSA)**|マスター SQLServerAgent サービス名。|  
 |**(OSCMD)**|**CmdExec** ジョブ ステップの実行に使用されるプログラムのプレフィックス。|  
 |**(SQLDIR)**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] がインストールされているディレクトリ。 特に指定しない限り、この値は C:\Program Files\Microsoft SQL Server\MSSQL です。|  
-|**(SQLLOGDIR)**|SQL Server のエラー ログ フォルダー パスを表す置換トークン。たとえば、$ (ESCAPE_SQUOTE (SQLLOGDIR))。|  
+|**(SQLLOGDIR)**|SQL Server のエラー ログ フォルダー パスを表す置換トークン。たとえば、$ (ESCAPE_SQUOTE (SQLLOGDIR))。 このトークンは、SQL Server 2014 以降でのみ利用できます。|  
 |**(STEPCT)**|対象となるステップが実行された回数。ただし、再試行は除きます。 ステップ コマンドでこの値を使用して、マルチステップ ループを強制終了させることができます。|  
 |**(STEPID)**|ステップ ID。|  
 |**(SRVR)**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]を実行しているコンピューターの名前。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスが名前付きインスタンスである場合は、これにインスタンス名が含まれます。|  
 |**(TIME)**|HHMMSS 形式で表す現在の時刻。|  
 |**(STRTTM)**|HHMMSS 形式で表すジョブの実行開始時刻。|  
 |**(STRTDT)**|YYYYMMDD 形式で表すジョブの実行開始日。|  
-|**(WMI (**_プロパティ_**))**|WMI 警告に応答して実行されるジョブの場合、 *プロパティ*で指定したプロパティの値。 たとえば、 `$(WMI(DatabaseName))` では、警告が実行される原因となった WMI イベントの **DatabaseName** プロパティの値が得られます。|  
+|**(WMI (** _プロパティ_ **))**|WMI 警告に応答して実行されるジョブの場合、 *プロパティ*で指定したプロパティの値。 たとえば、 `$(WMI(DatabaseName))` では、警告が実行される原因となった WMI イベントの **DatabaseName** プロパティの値が得られます。|  
   
 ### <a name="sql-server-agent-escape-macros"></a>SQL Server エージェントのエスケープ マクロ  
   
 |エスケープ マクロ|[説明]|  
 |-----------------|---------------|  
-|**$(ESCAPE_SQUOTE(**_token\_name_**))**|トークンの置換後の文字列にある単一引用符 (') をエスケープします。 1 つの単一引用符を 2 つの連続する単一引用符に置き換えます。|  
-|**$(ESCAPE_DQUOTE(**_token\_name_**))**|トークンの置換後の文字列にある二重引用符 (") をエスケープします。 1 つの二重引用符を 2 つの連続する二重引用符に置き換えます。|  
-|**$(ESCAPE_RBRACKET(**_token\_name_**))**|トークンの置換後の文字列にある右角かっこ (]) をエスケープします。 1 つの右角かっこを 2 つの連続する右角かっこに置き換えます。|  
-|**$(ESCAPE_NONE(**_token\_name_**))**|文字列内の文字をエスケープせずにトークンを置き換えます。 このマクロは、トークンの置換後の文字列を信頼されたユーザーのみが必要としている環境で、旧バージョンとの互換性をサポートするために用意されています。 詳細については、このトピックの「マクロを使用するジョブ ステップの更新」を参照してください。|  
+|**$(ESCAPE_SQUOTE(** _token\_name_ **))**|トークンの置換後の文字列にある単一引用符 (') をエスケープします。 1 つの単一引用符を 2 つの連続する単一引用符に置き換えます。|  
+|**$(ESCAPE_DQUOTE(** _token\_name_ **))**|トークンの置換後の文字列にある二重引用符 (") をエスケープします。 1 つの二重引用符を 2 つの連続する二重引用符に置き換えます。|  
+|**$(ESCAPE_RBRACKET(** _token\_name_ **))**|トークンの置換後の文字列にある右角かっこ (]) をエスケープします。 1 つの右角かっこを 2 つの連続する右角かっこに置き換えます。|  
+|**$(ESCAPE_NONE(** _token\_name_ **))**|文字列内の文字をエスケープせずにトークンを置き換えます。 このマクロは、トークンの置換後の文字列を信頼されたユーザーのみが必要としている環境で、旧バージョンとの互換性をサポートするために用意されています。 詳細については、このトピックの「マクロを使用するジョブ ステップの更新」を参照してください。|  
   
 ## <a name="updating-job-steps-to-use-macros"></a>マクロを使用するジョブ ステップの更新  
-[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] Service Pack 1 以降では、エスケープ マクロを伴わないトークンを含むジョブ ステップは失敗し、エラー メッセージが返されます。このエラー メッセージは、ジョブを実行する前にマクロで更新する必要のあるトークンがジョブ ステップに 1 つ以上含まれていることを示します。  
-  
-[!INCLUDE[msCoName](../../includes/msconame_md.md)] サポート技術情報の資料 915845「[SQL Server 2005 Service Pack 1 をインストールした後に、トークンを使用するジョブ ステップがジョブに含まれる場合、SQL Server エージェント ジョブが失敗します。](https://support.microsoft.com/kb/915845)」に記載されているスクリプトを使用すると、**ESCAPE_NONE** マクロを含むトークンを使用するすべてのジョブ ステップを更新できます。 このスクリプトを使用した後、トークンを使用するジョブ ステップをできるだけ早く確認し、 **ESCAPE_NONE** マクロを、ジョブ ステップのコンテキストに適したエスケープ マクロに置き換えることをお勧めします。  
-  
 次の表では、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェントでトークンの置換がどのように処理されるのかを説明します。 警告トークンの置換の有効と無効を切り替えるには、オブジェクト エクスプローラーで **[SQL Server エージェント]** を右クリックし、 **[プロパティ]** を選択します。次に、 **[警告システム]** ページの **[警告に応答するすべてのジョブのトークンを置き換える]** チェック ボックスをオンまたはオフにします。  
   
 |トークンの構文|警告トークンの置換が有効な場合|警告トークンの置換が無効な場合|  
 |----------------|------------------------------|-------------------------------|  
-|ESCAPE マクロを使用する|ジョブ内のすべてのトークンが正常に置き換えられます。|警告によってアクティブ化されるトークンは置き換えられません。 このようなトークンには、 **A-DBN**、 **A-SVR**、 **A-ERR**、 **A-SEV**、 **A-MSG**、および **WMI(**_プロパティ_**)** があります。 他の静的なトークンは正常に置き換えられます。|  
+|ESCAPE マクロを使用する|ジョブ内のすべてのトークンが正常に置き換えられます。|警告によってアクティブ化されるトークンは置き換えられません。 このようなトークンには、 **A-DBN**、 **A-SVR**、 **A-ERR**、 **A-SEV**、 **A-MSG**、および **WMI(** _プロパティ_ **)** があります。 他の静的なトークンは正常に置き換えられます。|  
 |ESCAPE マクロを使用しない|トークンを含んでいるすべてのジョブが失敗します。|トークンを含んでいるすべてのジョブが失敗します。|  
   
 ## <a name="token-syntax-update-examples"></a>トークンの構文の更新例  

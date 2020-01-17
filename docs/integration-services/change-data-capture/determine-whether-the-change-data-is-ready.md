@@ -10,17 +10,20 @@ ms.topic: conceptual
 helpviewer_keywords:
 - incremental load [Integration Services],determining readiness
 ms.assetid: 04935f35-96cc-4d70-a250-0fd326f8daff
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: 16801a8865260a1175fe4786869272774ed8b2c6
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 025961e39a4f0b1beb0588f0dc7ef2c668bd09a2
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47596200"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71294770"
 ---
 # <a name="determine-whether-the-change-data-is-ready"></a>データの変更の準備ができているかどうかを判断する
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   変更データの増分読み込みを実行する [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] パッケージの制御フローにおいて、2 番目のタスクは、選択した間隔の変更データが準備できていることを確認することです。 選択したエンドポイントまでの変更が非同期キャプチャ プロセスでまだ一部処理されていない可能性があるため、この手順が必要となります。  
   
 > [!NOTE]  
@@ -174,9 +177,9 @@ ms.locfileid: "47596200"
   
     3.  **[式]** に「`@DataReady == 0 && @TimeoutCount <= @TimeoutCeiling`」と入力します。  
   
-    4.  **[論理 AND (すべての制約が True と評価される必要があります)**] が選択されていない場合は、選択します。  
+    4.  **[論理 AND (すべての制約が True と評価される必要があります)** ] が選択されていない場合は、選択します。  
   
-4.  **[スクリプト タスク エディター]** の **[スクリプト]** ページの **[ReadOnlyVariables]** で、**[User::DelaySeconds]** 整数変数を一覧から選択します。  
+4.  **[スクリプト タスク エディター]** の **[スクリプト]** ページの **[ReadOnlyVariables]** で、 **[User::DelaySeconds]** 整数変数を一覧から選択します。  
   
 5.  **[スクリプト タスク エディター]** の **[スクリプト]** ページで、 **[スクリプトの編集]** をクリックしてスクリプト開発環境を開きます。  
   
@@ -220,7 +223,7 @@ ms.locfileid: "47596200"
   
     3.  **[式]** に「 `@DataReady == 0`」と入力します。  
   
-    4.  **[論理 AND (すべての制約が True と評価される必要があります)**] が選択されていない場合は、選択します。  
+    4.  **[論理 AND (すべての制約が True と評価される必要があります)** ] が選択されていない場合は、選択します。  
   
          この選択により、制約と式の両方の条件が True であることが必要になります。  
   
@@ -266,7 +269,7 @@ ms.locfileid: "47596200"
   
     3.  **[式]** に「`@DataReady == 1 || @DataReady == 5`」と入力します。  
   
-    4.  **[論理 AND (すべての制約が True と評価される必要があります)**] が選択されていない場合は、選択します。  
+    4.  **[論理 AND (すべての制約が True と評価される必要があります)** ] が選択されていない場合は、選択します。  
   
          この選択により、制約と式の両方の条件が True であることが必要になります。  
   

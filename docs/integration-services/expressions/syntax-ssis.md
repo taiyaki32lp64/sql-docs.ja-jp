@@ -11,25 +11,28 @@ helpviewer_keywords:
 - expressions [Integration Services], syntax
 - syntax [Integration Services]
 ms.assetid: 61c053c5-1182-4ad0-b804-51cbd19aa0ba
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: aff448a0d571ecd5d0eb3ce4ffa60e5a2c5440b5
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 9c0e005ee8dbb1c01cdaf5d3af031fd9ffba31ac
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51638203"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71288256"
 ---
 # <a name="syntax-ssis"></a>構文 (SSIS)
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 式の構文は、C 言語および C# 言語が使用する構文と同様です。 式には、識別子 (列および変数)、リテラル、演算子、関数などの要素が含まれます。 このトピックでは、式エバリュエーターの構文がさまざまな式要素を適用する際の、一意の必要条件の概要について説明します。  
   
 > [!NOTE]  
 >  前のリリースの [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]では、式の評価結果の [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] データ型が DT_WSTR または DT_STR であるとき、結果の文字数が 4,000 文字に制限されていました。 この制限はなくなっています。  
   
- 特定の演算子と関数を使用するサンプル式については、「[演算子 (SSIS 式)](../../integration-services/expressions/operators-ssis-expression.md)」および「[関数 (SSIS 式)](../../integration-services/expressions/functions-ssis-expression.md)」の各演算子と関数のトピックを参照してください。  
+ 特定の演算子と関数を使用するサンプル式については、「[演算子 &#40;SSIS 式&#41;](../../integration-services/expressions/operators-ssis-expression.md)」と「[関数 &#40;SSIS 式&#41;](../../integration-services/expressions/functions-ssis-expression.md)」の演算子または関数別のトピックを参照してください。  
   
- 複数の演算子と関数、および識別子とリテラルを使用するサンプル式については、「[Integration Services 式の詳細の例](../../integration-services/expressions/examples-of-advanced-integration-services-expressions.md)」を参照してください。  
+ 複数の演算子と関数、および識別子とリテラルを使用するサンプル式については、「 [Integration Services 式の詳細の例](../../integration-services/expressions/examples-of-advanced-integration-services-expressions.md)」を参照してください。  
   
  プロパティの式で使用するサンプル式については、「 [パッケージでプロパティ式を使用する](../../integration-services/expressions/use-property-expressions-in-packages.md)」を参照してください。  
   
@@ -41,7 +44,7 @@ ms.locfileid: "51638203"
 ## <a name="literals"></a>リテラル  
  式には、数値、文字列、およびブール値のリテラルを含めることができます。 文字列リテラルを式で使用するには、引用符で囲む必要があります。 数値リテラルおよびブール値のリテラルには、引用符は付けません。 式言語には、通常エスケープされる文字のエスケープ シーケンスが含まれます。 詳細については、「[リテラル (SSIS)](../../integration-services/expressions/numeric-string-and-boolean-literals.md)」を参照してください。  
   
-## <a name="operators"></a>演算子  
+## <a name="operators"></a>オペレーター  
  式エバリュエーターで提供される演算子セットの機能は、Transact-SQL、C++、C# などの言語に含まれる、演算子セットの機能と同様です。 ただし、式言語には別の演算子が含まれており、周知の記号とは異なる記号が使用されます。 詳細については、「[演算子 (SSIS)](../../integration-services/expressions/operators-ssis-expression.md)」を参照してください。  
   
 ### <a name="namespace-resolution-operator"></a>名前空間を解決する演算子  

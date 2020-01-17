@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - actions [Analysis Services]
@@ -17,12 +16,12 @@ ms.assetid: 07229bb2-805c-427e-8455-69c9ca5d01e0
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 47c289b312b411259e341ab0ef9cc01085f314f1
-ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
+ms.openlocfilehash: 3ff4e330950a3fca54ba8ab08456157156836c0f
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50146590"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66077589"
 ---
 # <a name="actions-analysis-services---multidimensional-data"></a>アクション (Analysis Services - 多次元データ)
   アクションにはさまざまな種類があり、適切に作成する必要があります。 アクションの種類は次のとおりです。  

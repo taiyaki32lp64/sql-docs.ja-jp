@@ -2,26 +2,26 @@
 title: 画像デバイス情報設定 | Microsoft Docs
 ms.date: 03/16/2017
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: reporting-services
 ms.topic: conceptual
 helpviewer_keywords:
 - images [Reporting Services], rendering
 - device information settings [Reporting Services], IMAGE rendering
 ms.assetid: edad9498-69f7-4726-8699-fa615f704dff
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: b59fcf947a283ef60f5dd34f60e2cf365092cfa7
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 295784ba9f2c14ce0f73f9639ec6ed129e447e76
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47738730"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65503080"
 ---
 # <a name="image-device-information-settings"></a>画像デバイス情報設定
   次の表は、IMAGE 形式で表示するためのデバイス情報設定を示しています。  
   
-|設定|ReplTest1|  
+|設定|[値]|  
 |-------------|-----------|  
 |**[列]**|レポートに設定する列の数。 この値により、レポートの元の設定はオーバーライドされます。|  
 |**ColumnSpacing**|レポートに設定する列の間隔。 この値により、レポートの元の設定はオーバーライドされます。|  

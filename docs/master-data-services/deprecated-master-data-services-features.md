@@ -1,5 +1,5 @@
 ---
-title: 非推奨のマスター データ サービス機能 | Microsoft Docs
+title: 非推奨のマスター データ サービス機能
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -8,15 +8,15 @@ ms.reviewer: ''
 ms.technology: master-data-services
 ms.topic: conceptual
 ms.assetid: d8506bda-66dd-45a4-bfc9-3a10fa665acc
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: erikre
-ms.openlocfilehash: cee36fff695390d770a0dc65d3cbb7b321c3de4d
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
-ms.translationtype: HT
+ms.openlocfilehash: e6e2247cd3648e78df0349ec8de2b63f29e52e94
+ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52765114"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73729347"
 ---
 # <a name="deprecated-master-data-services-features"></a>非推奨のマスター データ サービス機能
 
@@ -53,7 +53,7 @@ ms.locfileid: "52765114"
 * [メンバー リビジョン履歴](../master-data-services/member-revision-history-master-data-services.md)
   
 ## <a name="external-resources"></a>外部リソース  
- msdn.com のブログ投稿「[Deprecated: Explicit Hierarchies and Collections (非推奨: 明示的階層とコレクション)](https://go.microsoft.com/fwlink/p/?LinkId=615373)」  
+ msdn.com のブログ投稿「 [Deprecated: Explicit Hierarchies and Collections (非推奨: 明示的階層とコレクション)](https://go.microsoft.com/fwlink/p/?LinkId=615373)」  
   
 ## <a name="see-also"></a>参照  
  [提供が中止されたマスター データ サービス機能](../master-data-services/discontinued-master-data-services-features.md)  

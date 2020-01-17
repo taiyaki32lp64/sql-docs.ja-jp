@@ -7,15 +7,15 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 0617fca6-1bc1-4ad2-9986-fab94ea0a6f0
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: c6cdd755fa9a999905d1afe10dfffad51c4be5bb
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: a2d9e58d622efd5951f95d3e3b9907a4289df9e5
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52779724"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62835823"
 ---
 # <a name="change-data-capture-service-for-oracle-by-attunity-f1-help"></a>Change Data Capture Service for Oracle by Attunity の F1 ヘルプ
   ローカルの Oracle CDC Service の定義、更新、および削除を実行するには、CDC Service 構成コンソールを使用します。  

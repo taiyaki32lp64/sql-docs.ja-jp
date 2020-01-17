@@ -14,15 +14,15 @@ helpviewer_keywords:
 - spatial storage [SQL Server]
 - geodetic spatial data [SQL Server], designing
 ms.assetid: 41a132a1-09e2-4426-b9df-225270cb8e15
-author: douglaslMS
-ms.author: douglasl
+author: MladjoA
+ms.author: mlandzic
 manager: craigg
-ms.openlocfilehash: fb30ce3e7115bad41d26dd126b6f8b9ae9e0b934
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 7bd529f67f9184f86d4a9ec704e9cf7af972f3f3
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53373951"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66014056"
 ---
 # <a name="spatial-data-sql-server"></a>空間データ (SQL Server)
   空間データは、幾何オブジェクトの物理的な位置と形状に関する情報を表します。 それらのオブジェクトは、点の位置である場合もあれば、国、道、湖などのより複雑なオブジェクトである場合もあります。  

@@ -2,20 +2,20 @@
 title: ConfigurationSetting プロパティ - VirtualDirectoryReportServer | Microsoft Docs
 ms.date: 03/01/2017
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: wmi-provider-library-reference
 ms.topic: conceptual
 helpviewer_keywords:
 - VirtualDirectoryReportServer property
 ms.assetid: 3e0e860a-afe9-47ce-ae6a-f8c7ca26494f
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: c852b1cae4a741cd8f5cfd0287ddf918e7efced0
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 162106619fce4a8868064abd42687041203221bc
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47649550"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65569180"
 ---
 # <a name="configurationsetting-property---virtualdirectoryreportserver"></a>ConfigurationSetting プロパティ - VirtualDirectoryReportServer
   レポート サーバー アプリケーションの仮想ディレクトリを返します。 読み取り専用です。  

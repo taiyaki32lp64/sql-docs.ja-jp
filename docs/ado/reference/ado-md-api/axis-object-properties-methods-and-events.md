@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 89ec13b9-6324-4a95-92a7-3230d46bd02f
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 2e0dac54b808bac4b9928d2ab2a4e8fcd50f970d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e4fcd8137344f3902df25e27b011c36872f26790
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47760420"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67930507"
 ---
 # <a name="axis-object-properties-methods-and-events"></a>Axis オブジェクトのプロパティ、メソッド、およびイベント
 ## <a name="propertiescollections"></a>プロパティ/コレクション  
@@ -37,5 +36,5 @@ ms.locfileid: "47760420"
 ## <a name="events"></a>イベント  
  [なし] :  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [Axis オブジェクト (ADO MD)](../../../ado/reference/ado-md-api/axis-object-ado-md.md)

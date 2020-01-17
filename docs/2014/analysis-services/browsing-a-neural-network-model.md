@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 12/29/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - mining models, browsing
@@ -17,12 +16,12 @@ ms.assetid: e4224cb7-115b-4889-ac07-03f096fb55fc
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 169b7b266ab8230c2cc669353b6e02f66b9f1c65
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 3e4dcb323a309125695df6d3c483f8996d36fdfd
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48218582"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66088449"
 ---
 # <a name="browsing-a-neural-network-model"></a>ニューラル ネットワーク モデルの参照
   **[参照]** を使用してニューラル ネットワークまたはロジスティック回帰モデルを開くと、[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] のニューラル ネットワーク モデル ビューアーに似た対話型ビューアーにモデルが表示されます。 ビューアーは、相関関係の調査、およびモデルと基になるデータのパターンに関する情報の取得に役立ちます。  
@@ -79,7 +78,7 @@ ms.locfileid: "48218582"
   
     -   **リフト**は、この特定の属性と値のペアが結果の昇格にどの程度有益かを示します。  
   
-     注: どの列にマウス ポインターを置いた場合でも、ツールヒントには同じ情報が表示されます。  
+     注:ツールヒントには、1 つの列またはその他の上にマウスを置くかどうかに関係なく、同じ情報が含まれています。  
   
  [ページのトップへ](#BKMK_Tabs)  
   
@@ -128,13 +127,13 @@ ms.locfileid: "48218582"
  [ページのトップへ](#BKMK_Tabs)  
   
 ## <a name="more-about-neural-network-models"></a>ニューラル ネットワーク モデルの詳細  
- ビューアーに表示される情報は、このモデルの種類専用のストアド プロシージャである System.Microsoft.AnalysisServices.System.DataMining.NeuralNet.GetAttributeScores を使用してサーバーから取得されます。  
+ ビューアーの情報は、このモデルの種類に固有のストアド プロシージャを使用して、サーバーから取得されます。ある System.Microsoft.AnalysisServices.System.DataMining.NeuralNet.GetAttributeScores します。  
   
  アドインを使用して予測可能な属性を複数持つモデルを作成する場合は、**[詳細設定]** モデリング オプションを使用します。  
   
  詳細については、「[マイニング構造の作成 &#40;SQL Server データ マイニング アドイン&#41;](create-mining-structure-sql-server-data-mining-add-ins.md)」および「[構造へのモデルの追加 &#40;Excel 用データ マイニング アドイン&#41;](add-model-to-structure-data-mining-add-ins-for-excel.md)」を参照してください。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [Excel におけるモデルの参照&#40;SQL Server データ マイニング アドイン&#41;](browsing-models-in-excel-sql-server-data-mining-add-ins.md)  
   
   

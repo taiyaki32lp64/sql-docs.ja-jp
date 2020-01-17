@@ -26,11 +26,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: c9b0bb789dc7571a988c434f526070546d8db454
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52780724"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68211047"
 ---
 # <a name="sql-server-profiler"></a>SQL Server Profiler
   [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] は、トレースを作成および管理し、トレースの結果を分析および再生するために使用する機能の豊富なインターフェイスです。 キャプチャされたイベントはトレース ファイルに保存され、後で分析したり、問題の発生したステップを厳密に再現して診断する際に利用できます。  
@@ -67,7 +67,7 @@ ms.locfileid: "52780724"
 > [!NOTE]  
 >  [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]を使用するときは、SQL トレースを理解しておくと役に立ちます。 詳細については、「 [SQL Trace](../../relational-databases/sql-trace/sql-trace.md)」を参照してください。  
   
- **イベント**  
+ **Event**  
  イベントとは、 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]のインスタンス内で発生するアクションです。 次に例を示します。  
   
 -   ログインの接続、失敗、および接続解除。  
@@ -119,7 +119,7 @@ ms.locfileid: "52780724"
   
  SQL Server では、SQL Server のインスタンスをトレースするために 2 とおりの方法が用意されています。つまり、[!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] を使用してトレースする方法と、システム ストアド プロシージャを使用してトレースする方法です。  
   
- **Assert**  
+ **[フィルター]**  
  トレースまたはテンプレートを作成する際には、指定したイベントで収集されたデータをフィルターで選択する基準を定義できます。 トレースが大きくなりすぎないようにするためには、イベント データのサブセットだけが収集されるようにフィルターを適用します。 たとえば、トレースでキャプチャする Microsoft Windows のユーザー名を特定のユーザーに限定して出力データを絞り込むことができます。  
   
  フィルターが設定されていない場合は、選択したイベント クラスのすべてのイベントがトレースに出力されます。  
@@ -183,7 +183,7 @@ ms.locfileid: "52780724"
 |SQL Server Profiler の状況依存ヘルプ トピックについて紹介します。|[SQL Server Profiler の F1 ヘルプ](sql-server-profiler-f1-help.md)|  
 |[!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] でパフォーマンスと利用状況を監視する際に使用される一連のシステム ストアド プロシージャを紹介します。|[SQL Server Profiler のストアド プロシージャ &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sql-server-profiler-stored-procedures-transact-sql)|  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [Locks イベント カテゴリ](../../relational-databases/event-classes/locks-event-category.md)   
  [Sessions イベント カテゴリ](../../relational-databases/event-classes/sessions-event-category.md)   
  [Stored Procedures イベント カテゴリ](../../relational-databases/event-classes/stored-procedures-event-category.md)   

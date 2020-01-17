@@ -12,15 +12,15 @@ helpviewer_keywords:
 - Analysis Services Processing task
 - processing objects [Integration Services]
 ms.assetid: e5748836-b4ce-4e17-ab6b-617a336f02f4
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 3c5b5d52b1f4b2c2c260854230b53ccbe99aa641
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 02023482a2f3537872b50ac70f8bfd68d2128e1b
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52766544"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62832967"
 ---
 # <a name="analysis-services-processing-task"></a>Analysis Services 処理タスク
   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 処理タスクは、テーブル モデル、キューブ、ディメンション、マイニング モデルなどの [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] オブジェクトを処理します。  
@@ -39,7 +39,7 @@ ms.locfileid: "52766544"
   
 -   [Analysis Services DDL 実行タスク](analysis-services-execute-ddl-task.md)  
   
--   [データ マイニング クエリ タスク](data-mining-query-task.md)  
+-   [Data Mining Query Task](data-mining-query-task.md)  
   
 ## <a name="object-processing"></a>オブジェクト処理  
  複数のオブジェクトを同時に処理できます。 複数のオブジェクトを処理する場合は、バッチ内のすべてのオブジェクトの処理に適用する設定を定義します。  

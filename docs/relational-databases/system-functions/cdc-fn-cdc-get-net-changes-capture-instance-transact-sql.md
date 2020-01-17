@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 43ab0d1b-ead4-471c-85f3-f6c4b9372aab
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 8d60f772d7848d0e207f83b5c7a1a10da4b43b37
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 77fb03c71bd0773cc8f004a89c28c1925284876b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47804940"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68043045"
 ---
 # <a name="cdcfncdcgetnetchangesltcaptureinstancegt-transact-sql"></a>cdc.fn_cdc_get_net_changes_&lt;capture_instance&gt; (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -73,7 +72,7 @@ cdc.fn_cdc_get_net_changes_capture_instance ( from_lsn , to_lsn , '<row_filter_o
  行およびメタデータ列 _ _ $start_lsn の行に適用するために必要な操作に最終的な変更の LSN を返しますと\_ \_$operation します。 さらに、更新操作を返す場合 (\_\_$operation = 4) で返される値で更新プログラムで変更されたキャプチャ対象列がマークされている\_ \_$update_mask します。  
   
  all with merge  
- 行に対する最終的な変更の LSN が、メタデータ列 __$start_lsn に返されます。 列\_ \_$operation には、2 つの値のいずれかになります。 削除と変更を適用するために必要な操作が挿入または更新プログラムのいずれかであることを示す 5 の場合は 1 です。 列\_ \_$update_mask は常に NULL です。  
+ 行に対する最終的な変更の LSN が、メタデータ列 __$start_lsn に返されます。 列\_ \_$operation には、2 つの値のいずれかになります。削除と変更を適用するために必要な操作が挿入または更新プログラムのいずれかであることを示す 5 の場合は 1 です。 列\_ \_$update_mask は常に NULL です。  
   
  特定の変更に必要な操作を厳密に特定するロジックではクエリが複雑になってしまいます。そのため、このオプションでは、変更データの適用に必要な操作が、挿入と更新のいずれかであることがわかればよく、両者を明確に区別する必要がない場合に、より高いパフォーマンスでクエリを実行できるように設計されています。 このオプションは、マージ操作が、直接などに使用できるターゲット環境で最も魅力的な[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]環境。  
   

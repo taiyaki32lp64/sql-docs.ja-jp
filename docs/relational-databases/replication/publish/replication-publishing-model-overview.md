@@ -22,16 +22,16 @@ helpviewer_keywords:
 ms.assetid: b9567832-e6a8-45b2-a3ed-ea12aa002f4b
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 5b191c87206ba16a51243a71b0aeea3df1f08590
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
+ms.openlocfilehash: 95d2a3538cb775efb346d59e7db75c238e35c5d6
+ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47845436"
+ms.lasthandoff: 08/03/2019
+ms.locfileid: "68769802"
 ---
 # <a name="replication-publishing-model-overview"></a>レプリケーションのパブリッシング モデルの概要
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
   レプリケーションでは、パブリッシャー (出版社)、ディストリビューター (流通業者)、サブスクライバー (購読者)、パブリケーション (出版物)、アーティクル (記事)、サブスクリプション (定期購読物) など、レプリケーション トポロジ内のコンポーネントを出版業界にたとえて表しています。 雑誌を例にとって考えると、 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] のレプリケーションを理解しやすくなります。  
   
 -   雑誌のパブリッシャー (出版社) は、1 つ以上のパブリケーション (出版物) を発行します。  

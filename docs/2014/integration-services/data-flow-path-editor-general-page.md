@@ -4,23 +4,22 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.patheditor.general.f1
 helpviewer_keywords:
 - Data Flow Path Editor dialog box
 ms.assetid: 72a9ff1d-3748-41d1-a9b2-63f4a77bba24
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 43403bd87ba8cd836e035f14a9456b6338e0c92d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: e044d001c88edef9d1e8d4ab453b85853994cf7b
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48216752"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66059963"
 ---
 # <a name="data-flow-path-editor-general-page"></a>[データ フロー パス エディター] ([全般] ページ)
   **[データ フロー パス エディター]** ダイアログ ボックスを使用すると、パス プロパティの設置、列メタデータの表示、およびパスにアタッチされるデータ ビューアーの管理を行うことができます。  
@@ -49,7 +48,7 @@ ms.locfileid: "48216752"
  **[SourceName]**  
  パスの先頭の出力を表示します。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [データ フロー パス エディター&#40;メタデータ ページ&#41;](../../2014/integration-services/data-flow-path-editor-metadata-page.md)   
  [データ フロー パス エディター&#40;データ ビューアー ページ&#41;](../../2014/integration-services/data-flow-path-editor-data-viewers-page.md)   
  [データ フロー](data-flow/data-flow.md)   

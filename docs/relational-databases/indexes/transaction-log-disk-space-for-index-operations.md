@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 4f8a4922-4507-4072-be67-c690528d5c3b
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: c87ba4da07186df8ebf0b3bb9aed5e2e3e5ce01f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 4af90d16e4e81b5d2ee1dc73de78826073d1cbff
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47748720"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67909460"
 ---
 # <a name="transaction-log-disk-space-for-index-operations"></a>インデックス操作用のトランザクション ログのディスク領域
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

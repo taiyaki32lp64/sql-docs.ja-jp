@@ -1,5 +1,5 @@
 ---
-title: 'レッスン 2: スナップショット フォルダーの準備 |Microsoft Docs'
+title: レッスン 2:スナップショット フォルダーの準備 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,13 +13,13 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: 5ec45b0a29f9f4c8fb1e6a9b683e47797f194885
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54128492"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62721021"
 ---
-# <a name="lesson-2-preparing-the-snapshot-folder"></a>レッスン 2: スナップショット フォルダーの準備
+# <a name="lesson-2-preparing-the-snapshot-folder"></a>レッスン 2:スナップショット フォルダーの準備
   このレッスンでは、パブリケーション スナップショットの作成と保存に使用されるスナップショット フォルダーを設定する方法を学習します。  
   
 ### <a name="to-create-a-share-for-the-snapshot-folder-and-assign-permissions"></a>スナップショット フォルダーの共有を作成し、アクセス許可を与えるには  
@@ -51,9 +51,9 @@ ms.locfileid: "54128492"
 10. **[OK]** をクリックして **[repldata のプロパティ]** ダイアログ ボックスを閉じると、repldata 共有フォルダーが作成されます。  
   
 ## <a name="next-steps"></a>次の手順  
- ここでは、スナップショット フォルダーの共有を構成しました。 次は、ディストリビューションを構成します。 参照してください[レッスン 3。ディストリビューションの構成](lesson-3-configuring-distribution.md)します。  
+ ここでは、スナップショット フォルダーの共有を構成しました。 次は、ディストリビューションを構成します。 「[レッスン 3:ディストリビューションの構成](lesson-3-configuring-distribution.md)します。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [スナップショット フォルダーのセキュリティ保護](security/secure-the-snapshot-folder.md)  
   
   

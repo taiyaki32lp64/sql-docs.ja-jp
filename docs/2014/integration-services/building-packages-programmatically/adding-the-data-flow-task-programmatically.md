@@ -15,20 +15,20 @@ helpviewer_keywords:
 - data flow task [Integration Services], adding
 - MainPipe object
 ms.assetid: 0ca03712-a82e-4aa7-949b-f869a8936ddf
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: c9772198054595d82f648cec0cba8b6154039bae
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: b72669c44e3cf95076473c207c50cbcabf54b1ee
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53368434"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62836928"
 ---
 # <a name="adding-the-data-flow-task-programmatically"></a>プログラムによるデータ フロー タスクの追加
   [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] にはデータ フロー タスクというタスクがあります。これは、オブジェクト モデルでは <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper> 名前空間として表されます。 データ フロー タスクは、パッケージの実行時にデータを変換、移動する目的専用の、特殊で高性能なタスクです。 他のタスクと同様、データ フロー タスクは <xref:Microsoft.SqlServer.Dts.Runtime.TaskHost> オブジェクトによってラップされており、ランタイム エンジンはこれを単にパッケージ内のタスクの 1 つとして扱います。 ただし、データ フロー内には、別にデータ フロー コンポーネントというオブジェクトもあります。 これは変換元から変換先にデータを移動するコンポーネントで、その際に変換を経由する場合もあります。 コンポーネントには、移動の方向とデータの変換方法が定義されています。 データ フロー タスクを設定するには、タスクにコンポーネントを追加し、それを接続します。これにより、データ フローの確立と目的の変換を実行します。  
   
- データ フロー タスク内のコンポーネントの 3 つの種類があります。**データ フロー ソース**、**データ フロー変換**、および**データ フローの変換先**順序で表示されて、[!INCLUDE[ssIS](../../includes/ssis-md.md)]デザイナーのツールボックスです。 これらの種類は単に変換元、変換、変換先と呼ばれる場合もあります。 名前からもわかるように、データは変換元から変換へと流れ、次に変換から変換先へと流れます。 これはデータ フローの概念をごく簡単に説明したにすぎません。データ フロー タスクは柔軟で強力なタスクであり、複数の変換元を処理することも、複数の変換先に出力を送信する変換を多数接続することもできます。  
+ データ フロー タスク内のコンポーネントには、 **[データ フローの変換元]** 、 **[データ フロー変換]** 、 **[データ フローの変換先]** の 3 種類があり、[!INCLUDE[ssIS](../../includes/ssis-md.md)] デザイナー ツールボックスにこの順序で表示されています。 これらの種類は単に変換元、変換、変換先と呼ばれる場合もあります。 名前からもわかるように、データは変換元から変換へと流れ、次に変換から変換先へと流れます。 これはデータ フローの概念をごく簡単に説明したにすぎません。データ フロー タスクは柔軟で強力なタスクであり、複数の変換元を処理することも、複数の変換先に出力を送信する変換を多数接続することもできます。  
   
  データ フロー タスクをパッケージに追加する方法は、他のタスクの場合と同じです。 タスクを追加したら、コンポーネントをデータ フロー タスクに追加したり、タスク内でコンポーネントを設定および接続することにより、データ フロー タスクを設定します。  
   

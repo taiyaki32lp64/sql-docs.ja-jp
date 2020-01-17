@@ -1,5 +1,5 @@
 ---
-title: Instr (MDX) |Microsoft ドキュメント
+title: Instr (MDX) |Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -8,18 +8,17 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-manager: kfile
-ms.openlocfilehash: 4f4bfab3bc18958a51bb05c68e90c17a1359d046
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.openlocfilehash: 201580b71086dfe39e669966070dae2dca72e3eb
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34740821"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68105303"
 ---
 # <a name="instr-mdx"></a>Instr (MDX)
 
 
-  1 つ目の文字列の、2 つ目の文字列内での最初の出現位置を返します。  
+  別の 1 つの文字列の最初に見つかった位置を返します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -29,30 +28,30 @@ InStr([start, ]searched_string, search_string[, compare])
   
 ## <a name="arguments"></a>引数  
  *start*  
- (省略可) 各検索の開始位置を設定する数値式。 この値が省略された場合、検索は最初の文字位置から開始します。 start が null の場合、関数の戻り値は未定義となります。  
+ (省略可能)各検索の開始位置を設定する数値式。 この値を省略すると、最初の文字位置から検索を開始します。 start が null の場合、関数の戻り値は未定義となります。  
   
  *searched_string*  
- 検索する文字列式を指定します。  
+ 検索する文字列式です。  
   
  *search_string*  
- 検索するのには、文字列式です。  
+ 文字列式を検索します。  
   
- *比較*  
- (省略可) 整数値です。 この引数は常に無視されます。 その他の互換性に定義されている**Instr**他の言語の関数。  
+ *Compare*  
+ (省略可) 整数値です。 この引数は常に無視されます。 その他の互換性のために定義されている**Instr**他の言語で機能します。  
   
 ## <a name="return-value"></a>戻り値  
- 開始位置を表す整数値*String2*で*String1*です。  
+ 開始位置を表す整数値*String2*で*String1*します。  
   
- また、 **InStr**関数、条件に応じて次の表に示す値を返します。  
+ また、 **InStr**関数は、条件に応じて次の表に記載した値を返します。  
   
 |条件|戻り値|  
 |---------------|------------------|  
 |String1 の長さが 0|ゼロ (0)|  
 |String1 が NULL|未定義|  
-|String2 の長さが 0|start|  
+|String2 が長さ 0|start|  
 |String2 が NULL|未定義|  
 |String2 が見つからない|ゼロ (0)|  
-|start が Len(String2) よりも大きい|ゼロ (0)|  
+|start が len (string2) よりも大きい|ゼロ (0)|  
   
 ## <a name="remarks"></a>コメント  
   
@@ -60,7 +59,7 @@ InStr([start, ]searched_string, search_string[, compare])
 >  **Instr**常に大文字と小文字を実行します。  
   
 ## <a name="example"></a>例  
- 次の例の使用方法を示しています、 **Instr**関数とは異なる結果を返すシナリオです。  
+ 次の例では、使用状況、 **Instr**関数を示すさまざまなシナリオが発生します。  
   
 ```  
 with   
@@ -100,15 +99,15 @@ from [Adventure Works]
 |-|-|  
 ||[結果]|  
 |小文字の文字列で小文字を検索|16|  
-|小文字文字列で大文字を検索|16|  
+|大文字を小文字の文字列で検索します。|16|  
 |検索した文字列が空|0|  
-|検索した文字列が NULL|未定義|  
-|検索する文字列が空|1|  
+|検索した文字列が null|未定義|  
+|検索文字列が空|1|  
 |検索する文字列が開始位置 10 から空|10|  
 |検索する文字列が NULL|未定義|  
 |開始位置 10 から検索|16|  
-|開始位置 17 から検索されない|0|  
+|開始位置 17 からが見つかりません|0|  
 |NULL で開始|未定義|  
-|検索した長さを超えて開始|0|  
+|検索した長さを超えて開始します。|0|  
   
   

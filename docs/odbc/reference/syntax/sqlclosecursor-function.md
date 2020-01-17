@@ -1,7 +1,7 @@
 ---
-title: SQLCloseCursor 関数 |Microsoft Docs
+title: Sqlcloセキュリティー関数 |Microsoft Docs
 ms.custom: ''
-ms.date: 01/19/2017
+ms.date: 07/18/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -11,6 +11,7 @@ apiname:
 - SQLCloseCursor
 apilocation:
 - sqlsrv32.dll
+- odbc32.dll
 apitype: dllExport
 f1_keywords:
 - SQLCloseCursor
@@ -19,24 +20,23 @@ helpviewer_keywords:
 ms.assetid: 05b0a054-e28d-4e16-b5b0-07418486b372
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 912e4d109a9e769442c65d292ff190d79705eb21
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: ef336a4deb734c0e44f9c15ae7f9faf0dcb32d93
+ms.sourcegitcommit: c1382268152585aa77688162d2286798fd8a06bb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53201541"
+ms.lasthandoff: 07/19/2019
+ms.locfileid: "68343147"
 ---
 # <a name="sqlclosecursor-function"></a>SQLCloseCursor 関数
-**準拠**  
- バージョンが導入されました。ODBC 3.0 規格に準拠します。ISO 92  
+**互換性**  
+ 導入されたバージョン:ODBC 3.0 標準準拠:ISO 92  
   
  **まとめ**  
- **SQLCloseCursor**でステートメントが開かれたし、保留中の結果を破棄するカーソルを閉じます。  
+ **Sqlcloは**、ステートメントで開かれているカーソルを閉じ、保留中の結果を破棄します。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
   
 SQLRETURN SQLCloseCursor(  
      SQLHSTMT     StatementHandle);  
@@ -44,42 +44,42 @@ SQLRETURN SQLCloseCursor(
   
 ## <a name="arguments"></a>引数  
  *StatementHandle*  
- [入力]ステートメント ハンドルです。  
+ 代入ステートメントハンドル。  
   
 ## <a name="returns"></a>戻り値  
- SQL_SUCCESS、SQL_SUCCESS_WITH_INFO、SQL_ERROR、または SQL_INVALID_HANDLE します。  
+ SQL_SUCCESS、SQL_SUCCESS_WITH_INFO、SQL_ERROR、または SQL_INVALID_HANDLE。  
   
 ## <a name="diagnostics"></a>診断  
- ときに**SQLCloseCursor** SQL_ERROR または SQL_SUCCESS_WITH_INFO、関連付けられている SQLSTATE 値を返しますを呼び出すことによって取得される可能性があります**SQLGetDiagRec**で、 *HandleType* SQL の_HANDLE_STMT と*処理*の*StatementHandle*します。 次の表に、一般的にによって返される SQLSTATE 値**SQLCloseCursor** ; この関数のコンテキストでそれぞれについて説明しますと表記"(DM)"の前にドライバー マネージャーによって返されるについての説明。 SQLSTATE 値ごとに関連付けられているリターン コードは明記しない限り、SQL_ERROR です。  
+ **Sqlcloに**よって SQL_ERROR または SQL_SUCCESS_WITH_INFO が返される場合、SQL_HANDLE_STMT の*Handletype*と*StatementHandle*の*ハンドル*を指定して**SQLGetDiagRec**を呼び出すことによって、関連付けられた SQLSTATE 値を取得できます。 次の表に、 **Sqlcloに**よって一般的に返される SQLSTATE 値の一覧を示し、この関数のコンテキストでそれぞれについて説明します。"(DM)" という表記は、ドライバーマネージャーによって返される SQLSTATEs の説明の前にあります。 特に記載がない限り、各 SQLSTATE 値に関連付けられているリターンコードは SQL_ERROR です。  
   
 |SQLSTATE|[エラー]|説明|  
 |--------------|-----------|-----------------|  
-|01000|一般的な警告|ドライバー固有の情報メッセージです。 (関数は、SQL_SUCCESS_WITH_INFO を返します)。|  
-|24000|カーソル状態が無効|開いているカーソルがなかった、 *StatementHandle*します。 (これは、ODBC 3 のみが返されます。*x*ドライバー)。|  
-|HY000|一般的なエラー|これがなかった固有の SQLSTATE とする実装に固有の SQLSTATE が定義されていない、エラーが発生しました。 によって返されるエラー メッセージ**SQLGetDiagRec**で、  *\*MessageText*バッファーは、エラーとその原因について説明します。|  
-|HY001|メモリの割り当てエラー|ドライバーは、実行または関数の完了をサポートするために必要なメモリを割り当てることができませんでした。|  
-|HY010|関数のシーケンス エラー|(DM) に関連付けられている接続ハンドルの非同期的に実行中の関数が呼び出された、 *StatementHandle*この関数が呼び出されたときに実行されているとします。<br /><br /> (DM) を非同期的に実行中の関数が呼び出された、 *StatementHandle*この関数が呼び出されたときに実行されているとします。<br /><br /> (DM) **SQLExecute**、 **SQLExecDirect**、 **SQLBulkOperations**、または**SQLSetPos**に対して呼び出された、 *StatementHandle* SQL_NEED_DATA が返されます。 すべての実行時データ パラメーターまたは列のデータが送信される前に、この関数が呼び出されました。|  
-|HY013|メモリ管理エラー|基になるメモリ オブジェクトにアクセスできませんでした、場合によってメモリ不足が原因であるために、関数呼び出しを処理できませんでした。|  
-|HY117|不明なトランザクションの状態のため、接続が中断されます。 のみを切断して、読み取り専用の関数が許可されます。|(DM) 中断状態の詳細については、次を参照してください。 [SQLEndTran 関数](../../../odbc/reference/syntax/sqlendtran-function.md)します。|  
-|HYT01|接続がタイムアウトしました|データ ソースが要求に応答する前に、接続のタイムアウト期間が終了しました。 によって、接続タイムアウト期間が設定されます**SQLSetConnectAttr**、SQL_ATTR_CONNECTION_TIMEOUT します。|  
-|IM001|ドライバーでは、この関数はサポートされていません|(DM) に、ドライバーが関連付けられている、 *StatementHandle*関数をサポートしていません。|  
+|01000|一般警告|ドライバー固有の情報メッセージ。 (関数は SQL_SUCCESS_WITH_INFO を返します)。|  
+|24000|カーソル状態が無効|*StatementHandle*で開かれているカーソルはありません。 (これは、ODBC 3 によってのみ返されます。*x*ドライバー。)|  
+|HY000|一般エラー|特定の SQLSTATE がなく、実装固有の SQLSTATE が定義されていないエラーが発生しました。 Messagetext バッファーの**SQLGetDiagRec によっ**て返されるエラーメッセージには、エラーとその原因が記述されています。  *\**|  
+|HY001|メモリ割り当てエラー|ドライバーは、関数の実行または完了をサポートするために必要なメモリを割り当てることができませんでした。|  
+|HY010|関数のシーケンスエラー|(DM) 非同期的に実行する関数が、 *StatementHandle*に関連付けられた接続ハンドルに対して呼び出されましたが、この関数が呼び出されたときにまだ実行されていました。<br /><br /> (DM) 非同期的に実行する関数が*StatementHandle*に対して呼び出されましたが、この関数が呼び出されたときにまだ実行されていました。<br /><br /> (DM) **Sqlexecute**、 **SQLExecDirect**、 **sqlbulkoperations**、または**SQLSetPos**が*StatementHandle*に対して呼び出され、SQL_NEED_DATA が返されました。 この関数は、実行時データのすべてのパラメーターまたは列に対してデータが送信される前に呼び出されました。|  
+|HY013|メモリ管理エラー|基になるメモリオブジェクトにアクセスできなかったため、関数呼び出しを処理できませんでした。メモリ不足の状態が原因である可能性があります。|  
+|HY117|トランザクションの状態が不明なため、接続が中断されました。 切断と読み取り専用の機能のみが許可されます。|(DM) 中断状態の詳細については、「 [SQLEndTran 関数](../../../odbc/reference/syntax/sqlendtran-function.md)」を参照してください。|  
+|HYT01|接続タイムアウトの期限が切れました|データソースが要求に応答する前に、接続のタイムアウト期間が経過しました。 接続タイムアウト期間は、 **SQLSetConnectAttr**、SQL_ATTR_CONNECTION_TIMEOUT によって設定されます。|  
+|IM001|ドライバーはこの機能をサポートしていません|(DM) *StatementHandle*に関連付けられているドライバーでは、関数はサポートされていません。|  
   
 ## <a name="comments"></a>コメント  
- **SQLCloseCursor**カーソルが開いていない場合は、SQLSTATE 24000 (無効なカーソル状態) を返します。 呼び出す**SQLCloseCursor**呼び出しと同じですが**SQLFreeStmt** SQL_CLOSE オプションでは、例外を使用する**SQLFreeStmt** SQL_CLOSE にも何も起こりません、アプリケーションのステートメントで開いているカーソルがない場合は、while **SQLCloseCursor** SQLSTATE 24000 (無効なカーソル状態) を返します。  
+ カーソルが開いていない場合、 **Sqlcloが**24000 返されます。 **Sqlcloを**呼び出すことは、SQL_CLOSE オプションを使用して**SQLFreeStmt**を呼び出すことと同じです。ただし、ステートメント **でカーソルが開かれていない場合、SQLFreeStmt with SQL_CLOSE はアプリケーションに影響しません。Sqlcloは**、SQLSTATE 24000 (無効なカーソル状態) を返します。  
   
 > [!NOTE]  
->  ODBC 3 場合。*x* ODBC 2 を使用するアプリケーション *。x*ドライバー呼び出し**SQLCloseCursor**カーソルが開いていないときに、ドライバー マネージャーがマップされるため、SQLSTATE 24000 (無効なカーソル状態) は返されませんが**SQLCloseCursor** に**SQLFreeStmt** SQL_CLOSE とします。  
+>  ODBC 3 の場合。*x*アプリケーションが ODBC 2 で動作する。*x*ドライバーは**sqlcloを**呼び出します。カーソルが開いていない場合、SQLSTATE 24000 (無効なカーソル状態) は返されません。これは、 ドライバーマネージャーが**sqlcloSQLFreeStmt**を SQL_CLOSE にマップするためです。  
   
- 詳細については、次を参照してください。[カーソルを閉じる](../../../odbc/reference/develop-app/closing-the-cursor.md)します。  
+ 詳細については、「[カーソルを閉じる](../../../odbc/reference/develop-app/closing-the-cursor.md)」を参照してください。  
   
 ## <a name="code-example"></a>コード例  
- 参照してください[SQLBrowseConnect 関数](../../../odbc/reference/syntax/sqlbrowseconnect-function.md)と[SQLConnect 関数](../../../odbc/reference/syntax/sqlconnect-function.md)します。  
+ 「 [SQLBrowseConnect 関数](../../../odbc/reference/syntax/sqlbrowseconnect-function.md)と[SQLConnect 関数](../../../odbc/reference/syntax/sqlconnect-function.md)」を参照してください。  
   
 ## <a name="related-functions"></a>関連する関数  
   
 |詳細|参照先|  
 |---------------------------|---------|  
-|ステートメントの処理をキャンセル|[SQLCancel 関数](../../../odbc/reference/syntax/sqlcancel-function.md)|  
+|ステートメント処理の取り消し|[SQLCancel 関数](../../../odbc/reference/syntax/sqlcancel-function.md)|  
 |ハンドルの解放|[SQLFreeHandle 関数](../../../odbc/reference/syntax/sqlfreehandle-function.md)|  
 |複数の結果セットの処理|[SQLMoreResults 関数](../../../odbc/reference/syntax/sqlmoreresults-function.md)|  
   

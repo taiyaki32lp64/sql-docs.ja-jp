@@ -17,21 +17,20 @@ helpviewer_keywords:
 - repeated spaces
 - SPACE function
 ms.assetid: b4fac3b8-2d47-4c11-a6a6-009e5a538f40
-author: MashaMSFT
-ms.author: mathoma
-manager: craigg
+author: MikeRayMSFT
+ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 6cac75622a3966859156c526e8922111a58f6396
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: c04af45ee0188c2520ccad6b65f50be2021cdf10
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47604072"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67907062"
 ---
 # <a name="space-transact-sql"></a>SPACE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-  連続する空白文字で構成される文字列を返します。  
+  連続するスペースの文字列を返します。  
   
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -43,7 +42,7 @@ SPACE ( integer_expression )
   
 ## <a name="arguments"></a>引数  
  *integer_expression*  
- 空白文字の個数を表す正の整数を指定します。 場合 であれば、*任意* は負の場合、null 文字列が返されます。  
+ 空白文字の数を示す正の整数です。 場合 であれば、*任意* は負の場合、null 文字列が返されます。  
   
  詳細については、「[式 &#40;Transact-SQL&#41;](../../t-sql/language-elements/expressions-transact-sql.md)」を参照してください。  
   
@@ -51,7 +50,7 @@ SPACE ( integer_expression )
  **varchar**  
   
 ## <a name="remarks"></a>Remarks  
- Unicode データに空白文字を含める場合、または 8,000 文字以上の空白文字を返す場合は、SPACE ではなく REPLICATE を使用します。  
+ Unicode データに空白文字を含めるには、または 8000 文字を超える空白文字を返すには、SPACE ではなく REPLICATE を使用します。  
   
 ## <a name="examples"></a>使用例  
  次の例では、`Person` の `AdventureWorks2012` テーブルに格納されている人名の姓を取り出して、コンマ、空白文字 2 つ、および名を連結します。  

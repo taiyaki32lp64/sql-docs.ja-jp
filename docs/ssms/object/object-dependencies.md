@@ -10,15 +10,14 @@ ms.topic: conceptual
 f1_keywords:
 - sql13.swb.common.objectdependencies.f1
 ms.assetid: c63d1160-3f3d-45df-99be-6fe081125fb5
-author: stevestein
-ms.author: sstein
-manager: craigg
-ms.openlocfilehash: fca3b535b31a3524389804442bb61370fb164008
-ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 78be395cccceff6c01152b38ddf9aa7008a273c8
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/18/2018
-ms.locfileid: "53591536"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68264092"
 ---
 # <a name="object-dependencies"></a>[オブジェクトの依存関係]
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -32,11 +31,11 @@ ms.locfileid: "53591536"
 **[\<_選択したオブジェクト_> に依存するオブジェクト]**  
 このボタンをクリックすると、依存関係が監視され、選択されているオブジェクトに依存するオブジェクトの一覧が表示されます。  
   
-**[****\<_選択したオブジェクト_> が依存するオブジェクト]**  
+**[** **\<_選択したオブジェクト_> が依存するオブジェクト]**  
 このボタンをクリックすると、依存関係が監視され、選択されているオブジェクトが依存するオブジェクトの一覧が表示されます。  
   
 **依存関係**  
-[*<selected object>* **に依存するオブジェクト]** をクリックした場合は、選択されているオブジェクトに依存するオブジェクトの階層ビューが表示されます。 [*<selected object>* **が依存する****オブジェクト**] をクリックすると、選択されているオブジェクトが依存するオブジェクトの階層ビューが表示されます。  
+[ *<selected object>* **に依存するオブジェクト]** をクリックした場合は、選択されているオブジェクトに依存するオブジェクトの階層ビューが表示されます。 [ *<selected object>* **が依存する** **オブジェクト**] をクリックすると、選択されているオブジェクトが依存するオブジェクトの階層ビューが表示されます。  
   
 **名前**  
 上記の **[依存関係]** ツリー ビューで選択されたオブジェクトの名前が表示されます。  

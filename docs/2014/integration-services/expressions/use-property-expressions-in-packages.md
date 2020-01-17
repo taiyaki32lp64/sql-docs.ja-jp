@@ -16,15 +16,15 @@ helpviewer_keywords:
 - expressions [Integration Services], property expressions
 - property expressions [Integration Services]
 ms.assetid: a4bfc925-3ef6-431e-b1dd-7e0023d3a92d
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: a6dd870de31e6b3be65cac62cda84c3e9c9635c7
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: dd78d7fb5f80b766dc7c51ae077d2a241c34d59c
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53373374"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62768855"
 ---
 # <a name="use-property-expressions-in-packages"></a>パッケージでプロパティ式を使用する
   プロパティ式とは、実行時にプロパティの動的更新を可能にするためにプロパティに割り当てられた式のことです。 たとえば、プロパティ式を使用して、変数に格納された電子メール アドレスを挿入して、メール送信タスクで使用される [宛先] 行を更新できます。  
@@ -69,7 +69,7 @@ ms.locfileid: "53373374"
   
  ![プロパティ式のユーザー インターフェイス](../media/ssis-propertyexpressionui.gif "プロパティ式のユーザー インターフェイス")  
   
- **[プロパティ]** ウィンドウおよび **[式]** ページでは、**[式]** コレクション レベルの参照ボタン **[...]** をクリックして **[プロパティ式エディター]** ダイアログ ボックスを開きます。 プロパティ式エディターでは、プロパティを式にマップし、プロパティ式を入力できます。 グラフィカルな式ツールを使用して式を作成してから検証する場合は、式レベルの参照ボタン **[...]** をクリックして **[式ビルダー]** ダイアログ ボックスを開き、式を作成または変更します。その後、必要に応じて式を検証します。  
+ **[プロパティ]** ウィンドウおよび **[式]** ページでは、 **[式]** コレクション レベルの参照ボタン **[...]** をクリックして **[プロパティ式エディター]** ダイアログ ボックスを開きます。 プロパティ式エディターでは、プロパティを式にマップし、プロパティ式を入力できます。 グラフィカルな式ツールを使用して式を作成してから検証する場合は、式レベルの参照ボタン **[...]** をクリックして **[式ビルダー]** ダイアログ ボックスを開き、式を作成または変更します。その後、必要に応じて式を検証します。  
   
  **[式ビルダー]** ダイアログ ボックスは、 **[プロパティ式エディター]** ダイアログ ボックスから開くこともできます。  
   
@@ -125,7 +125,7 @@ ms.locfileid: "53373374"
   
  パッケージの名前が EmailRowCountPP であり、3/4/2005 に実行され、実行された期間が 9 秒間であった場合、この式は次の文字列に評価されます。  
   
- PExpression には、パッケージが-->:(EmailRowCountPP)開始: 3/4/2005 11時 06分: 18 AM 期間: 9 秒。  
+ PExpression-->Package: (EmailRowCountPP) Started:3/4/2005 11:06:18 AM Duration:9 seconds.  
   
 ### <a name="property-expression-for-the-message-of-an-e-mail-message"></a>電子メール メッセージのメッセージ用のプロパティ式  
  次のプロパティ式を使用すると、メール送信タスクの MessageSource プロパティを設定できます。 この式では、文字列リテラル、ユーザー定義変数、および連結演算子 (+) の組み合わせを使用しています。 ユーザー定義変数の名前は、 `nasdaqrawrows`、 `nyserawrows`、および `amexrawrows`です。 文字列 "\n" は、復帰を示します。  

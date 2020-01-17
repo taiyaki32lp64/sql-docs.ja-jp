@@ -13,11 +13,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 14c2fff96c89ee696df1a437f958e4560bfab142
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52771864"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63204530"
 ---
 # <a name="table-valued-object-column-properties-visual-database-tools"></a>テーブル値オブジェクト (列) のプロパティ (Visual Database Tools)
   クエリ デザイナーとビュー デザイナーの **[ダイアグラム]** ペインでテーブル値オブジェクト内の列を選択したときに、このプロパティが表示されます。  
@@ -35,12 +35,12 @@ ms.locfileid: "52771864"
  選択した列の名前が表示されます。  
   
  **クエリ デザイナー カテゴリ**  
- 展開すると、 **[NULL を許容]**、 **[照合順序]**、 **[長さ]**、 **[データ型]**、 **[精度]**、 **[スケール]**、 **[サイズ]** のプロパティが表示されます。  
+ 展開すると、 **[NULL を許容]** 、 **[照合順序]** 、 **[長さ]** 、 **[データ型]** 、 **[精度]** 、 **[スケール]** 、 **[サイズ]** のプロパティが表示されます。  
   
  **[NULL を許容]**  
  列のデータ型で NULL が許容されるかどうかが表示されます。  
   
- **[照合順序]**  
+ **照合順序**  
  選択した列における照合順序の設定が表示されます。 照合順序は、Table Designer の [列のプロパティ] タブで設定できます。  
   
  **データ型**  

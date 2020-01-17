@@ -1,29 +1,29 @@
 ---
-title: SQL Server の拡張イベントに対するシステム ビューからの SELECT と JOIN | Microsoft Docs
-ms.custom: ''
+title: 拡張イベントに対するシステム ビューからの SELECT と JOIN
 ms.date: 08/02/2016
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
 ms.technology: xevents
-ms.topic: conceptual
+ms.topic: tutorial
 ms.assetid: 04521d7f-588c-4259-abc2-1a2857eb05ec
 author: MightyPen
 ms.author: genemi
-manager: craigg
+ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 3c4ed3aff940dd68614fd5534302fdfb65d3c59b
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: d3bcb7e272c1a5120b65018aab781546ba8d0f2b
+ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51666831"
+ms.lasthandoff: 12/19/2019
+ms.locfileid: "75242899"
 ---
 # <a name="selects-and-joins-from-system-views-for-extended-events-in-sql-server"></a>SQL Server の拡張イベントに対するシステム ビューからの SELECT と JOIN
+
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
 
-この記事では、Microsoft SQL Server および Azure SQL Database クラウド サービスの拡張イベントに関連するシステム ビューの 2 つのセットについて説明します。 以下のことについて説明します。
+この記事では、SQL Server および Azure SQL Database の拡張イベントに関連するシステム ビューの 2 つのセットについて説明します。 以下のことについて説明します。
 
 - さまざまなシステム ビューを結合 (JOIN) する方法。
 - システム ビューから特定の種類の情報を選択 (SELECT) する方法。
@@ -55,7 +55,7 @@ ms.locfileid: "51666831"
 
 - 実行中のイベント セッションの *現在のアクティビティ* に関する情報が格納されます。 ただし、これらの DMV はセッションの定義に関してはほとんどわかりません。
     - 現在すべてのイベント セッションが停止されていても、さまざまなパッケージがサーバー起動時にアクティブなメモリに読み込まれるので、ビュー *sys.dm_xe_packages* に対する SELECT からは行が返ります。
-    - 同じ理由から、 *sys.dm_xe_objects* *sys.dm_xe_object_columns* would also still return rows.
+    - 同じ理由から、*sys.dm_xe_objects* *sys.dm_xe_object_columns* も行を返します。
 
 
 - 拡張イベント DMV の名前プレフィックス:
@@ -113,33 +113,33 @@ ms.locfileid: "51666831"
 ### <a name="b1-ssms-ui-perspective"></a>B.1 SSMS UI パースペクティブ
 
 
-SSMS の **オブジェクト エクスプローラー**で、 **[管理]** 、 **[拡張イベント]** > **[セッション]** を右クリックして **[新しいセッション]** > **[管理]**」をご覧ください。
+SSMS の **オブジェクト エクスプローラー**で、 **[管理]** 、 **[拡張イベント]**  >  **[セッション]** を右クリックして **[新しいセッション]**  >  **[管理]** 」をご覧ください。
 
 大きい **[新しいセッション]** ダイアログの最初の **[全般]** セクションで、 **[サーバーの起動時にイベント セッションを開始する]** がオンになっています。
 
 ![[新しいセッション] > [全般]、[サーバーの起動時にイベント セッションを開始する]](../../relational-databases/extended-events/media/xevents-ssms-ac105-eventname-startup.png)
 
 
-次に、**[イベント]** セクションでは **[lock_deadlock]** イベントが選択されています。 このイベントに対して、3 つの **アクション** が選択されています。 これは **[構成]** ボタンがクリックされたことを意味し、クリックされた後でボタンはグレーになっています。
+次に、 **[イベント]** セクションでは **[lock_deadlock]** イベントが選択されています。 このイベントに対して、3 つの **アクション** が選択されています。 これは **[構成]** ボタンがクリックされたことを意味し、クリックされた後でボタンはグレーになっています。
 
 ![[新しいセッション] > [イベント]、[グローバル フィールド (アクション)]](../../relational-databases/extended-events/media/xevents-ssms-ac110-actions-global.png)
 
 
 <a name="resource_type_PAGE_cat_view"></a>
 
-次に、同じ **[イベント]** > **[構成]** セクションでは、[**resource_type** が **PAGE**](#resource_type_dmv_actual_row) に設定されています。 これは、**resource_type** の値が **PAGE** 以外の場合はイベント データがイベント エンジンからターゲットに送信されないことを意味します。
+次に、同じ **[イベント]**  >  **[構成]** セクションでは、[**resource_type** が **PAGE**](#resource_type_dmv_actual_row) に設定されています。 これは、**resource_type** の値が **PAGE** 以外の場合はイベント データがイベント エンジンからターゲットに送信されないことを意味します。
 
 データベース名とカウンターの述語フィルターを確認します。
 
 ![[新しいセッション] > [イベント]、[フィルター (述語)] フィールド (アクション)](../../relational-databases/extended-events/media/xevents-ssms-ac115-predicate-db.png)
 
 
-次に、**[データ ストレージ]** セクションでは、**[event_file]** がターゲットとして選択されています。 さらに、**[ファイル ロールオーバーを有効にする]** オプションがオンになっています。
+次に、 **[データ ストレージ]** セクションでは、 **[event_file]** がターゲットとして選択されています。 さらに、 **[ファイル ロールオーバーを有効にする]** オプションがオンになっています。
 
 ![[新しいセッション] > [データ ストレージ]、eventfile_enablefileroleover](../../relational-databases/extended-events/media/xevents-ssms-ac120-target-eventfile.png)
 
 
-最後に、**[詳細]** セクションでは、**[ディスパッチの最大待機時間]** の値が 4 秒に短縮されています。
+最後に、 **[詳細]** セクションでは、 **[ディスパッチの最大待機時間]** の値が 4 秒に短縮されています。
 
 ![[新しいセッション] > [詳細]、[ディスパッチの最大待機時間]](../../relational-databases/extended-events/media/xevents-ssms-ac125-latency4.png)
 
@@ -154,7 +154,7 @@ SSMS の **オブジェクト エクスプローラー**で、 **[管理]** 、 
 
 イベント セッション定義の作成方法にかかわらず、SSMS UI では、セッションを完全に一致する Transact-SQL スクリプトにリバース エンジニアリングできます。 前に示した [新しいセッション] のスクリーンショットで示されている指定と、次に示す生成された T-SQL **CREATE EVENT SESSION** スクリプトの句を比較してください。
 
-イベント セッションをリバース エンジニアリングするには、 **オブジェクト エクスプローラー** でセッション ノードを右クリックし、 **[セッションをスクリプト化]** > **[CREATE]** > **[クリップボード]**」をご覧ください。
+イベント セッションをリバース エンジニアリングするには、 **オブジェクト エクスプローラー** でセッション ノードを右クリックし、 **[セッションをスクリプト化]**  >  **[CREATE]**  >  **[クリップボード]** 」をご覧ください。
 
 SSMS でリバース エンジニアリングすることにより、次の T-SQL スクリプトが作成されます。 次のスクリプトは空白のみを使用して手作業で整形されています。
 
@@ -251,7 +251,7 @@ SELECT
         s.name              AS [Session-Name],
         '3_EVENT_ACTION'    AS [Clause-Type],
 
-        e.package + '.' + a.name
+        a.package + '.' + a.name
                             AS [Parameter-Name],
 
         '(Not_Applicable)'  AS [Parameter-Value]
@@ -345,7 +345,7 @@ ORDER BY
 ```
 
 
-#### <a name="output"></a>[出力]
+#### <a name="output"></a>Output
 
 
 次に示すのは、前の SELECT JOIN UNION を実行した実際の出力です。 出力のパラメーターの名前と値は、前の CREATE EVENT SESSION ステートメントと対応します。
@@ -419,7 +419,7 @@ SELECT  --C.1
 ```
 
 
-#### <a name="output"></a>[出力]
+#### <a name="output"></a>Output
 
 パッケージのリストです。
 
@@ -477,7 +477,7 @@ SELECT  --C.2
 ```
 
 
-#### <a name="output"></a>出力
+#### <a name="output"></a>Output
 
 オブジェクト タイプごとのオブジェクトの数です。 約 1915 個のオブジェクトがあります。
 
@@ -532,7 +532,7 @@ SELECT  --C.3
 ```
 
 
-#### <a name="output"></a>[出力]
+#### <a name="output"></a>Output
 
 次に示すのは上の SELECT によって返されるオブジェクトの例です。
 
@@ -605,7 +605,7 @@ SELECT  -- C.4
 ```
 
 
-#### <a name="output"></a>[出力]
+#### <a name="output"></a>Output
 
 前の SELECT、WHERE `o.name = 'lock_deadlock'`では次の行が返されます。
 
@@ -644,7 +644,7 @@ sqlserver   lock_deadlock   transaction_id
 
 <a name="section_C_5_map_values_fields"></a>
 
-### <a name="c5-sysdmxemapvalues-and-event-fields"></a>C.5 *sys.dm_xe_map_values* とイベント フィールド
+### <a name="c5-sysdm_xe_map_values-and-event-fields"></a>C.5 *sys.dm_xe_map_values* とイベント フィールド
 
 
 次の SELECT には、 *sys.dm_xe_map_values*という名前の巧妙なビューに対する JOIN が含まれます。
@@ -693,7 +693,7 @@ SELECT  --C.5
 ```
 
 
-#### <a name="output"></a>[出力]
+#### <a name="output"></a>Output
 
 <a name="resource_type_dmv_actual_row"></a>
 
@@ -765,7 +765,7 @@ SELECT  --C.6
 ```
 
 
-#### <a name="output"></a>[出力]
+#### <a name="output"></a>Output
 
 次のパラメーター行は、SQL Server 2016 で前の SELECT で返された結果の一部です。
 
@@ -786,7 +786,7 @@ package0   event_file   metadatafile         unicode_string_ptr   Not_mandatory 
 
 <a name="section_C_7_dmv_select_target_data_column"></a>
 
-### <a name="c7-dmv-select-casting-targetdata-column-to-xml"></a>C.7 target_data 列を XML にキャストする DMV SELECT
+### <a name="c7-dmv-select-casting-target_data-column-to-xml"></a>C.7 target_data 列を XML にキャストする DMV SELECT
 
 
 この DMV SELECT は、アクティブなイベント セッションのターゲットからデータ行を返します。 データは XML にキャストされており、返されたセルをクリックして SSMS で簡単に表示できます。
@@ -854,7 +854,7 @@ XML-Cast セルをクリックすると、次の出力が表示されます。
 
 <a name="section_C_8_select_function_disk"></a>
 
-### <a name="c8-select-from-a-function-to-retrieve-eventfile-data-from-disk-drive"></a>C.8 ディスク ドライブから event_file データを取得する関数の SELECT
+### <a name="c8-select-from-a-function-to-retrieve-event_file-data-from-disk-drive"></a>C.8 ディスク ドライブから event_file データを取得する関数の SELECT
 
 
 イベント セッションがデータを収集した後で停止されたものとします。 セッションが event_file ターゲットを使用するように定義されている場合でも、関数 *sys.fn_xe_target_read_file*を呼び出すことによってデータを取得できます。

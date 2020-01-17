@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 023d94b9-3ed6-46d3-9a66-f2872f505bbb
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 6bfb6ff3ba39400278db23931b4c9420e506c973
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ea36de05f813fc32a90a855bd0c08d020cf1f9a9
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47687090"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67987922"
 ---
 # <a name="scalar-function-limitations"></a>スカラー関数の制限事項
 スカラー関数は、ODBC の正規の形式を使用してでのみサポートされます。

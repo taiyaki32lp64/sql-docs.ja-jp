@@ -4,18 +4,17 @@ description: Windows で読み取りスケール ワークロードの Always On
 ms.custom: seodec18
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
 ms.reviewer: ''
 ms.date: 05/24/2018
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: high-availability
-ms.openlocfilehash: 4338f5fc90012fd5fb0882575032eb375c206c1d
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: 3ff0064a228cb756614dec2ff54a91f4f03d374c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53207731"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67991157"
 ---
 # <a name="configure-read-scale-for-an-always-on-availability-group"></a>Always On 可用性グループの読み取りスケールを構成する
 

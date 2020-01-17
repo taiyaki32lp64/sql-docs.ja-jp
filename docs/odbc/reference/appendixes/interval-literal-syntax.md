@@ -14,18 +14,17 @@ helpviewer_keywords:
 ms.assetid: 2f2d22c1-51d6-4055-9f5a-53bc31e9fea0
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: d477dbc6b54d7ebd82b7e2ef8611f5f6dd807e83
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 6352a5ae894adb09f714a78386bfecfa3ce1df77
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47694056"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68041625"
 ---
 # <a name="interval-literal-syntax"></a>Interval のリテラルの構文
 次の構文は、ODBC で interval のリテラルに使用されます。  
   
- *間隔リテラル:: = 間隔*[+*&#124;*-]*間隔文字列間隔修飾子*  
+ *間隔リテラル:: = 間隔*[+ *&#124;* -]*間隔文字列間隔修飾子*  
   
  *間隔文字列*:: =*見積もり*{*年-月-リテラル*&#124; です。*日付時刻リテラル*}*見積もり*  
   

@@ -10,34 +10,17 @@ ms.topic: conceptual
 ms.assetid: dfd2b639-8fd4-4cb9-b134-768a3898f9e6
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 52a1bde0da61988793463aa725a5b0a4003b2e12
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: 767de0e7c255a96ba9aa4b2c7201c423b1269d80
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53203352"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68014680"
 ---
 # <a name="monitor-performance-for-always-on-availability-groups"></a>Always On 可用性グループのパフォーマンスを監視する
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   Always On 可用性グループのパフォーマンス面は、ミッション クリティカルなデータベースに対するサービス レベル アグリーメント (SLA) を維持する上で重要です。 可用性グループがセカンダリ レプリカにログを配布する方法を理解することで、可用性実装の回復時刻の目標 (RTO) および回復ポイントの目標 (RPO) の推定、ならびにパフォーマンスに問題がある可用性グループまたはレプリカにおけるボトルネックの特定が容易になります。 この記事では、同期プロセスについて説明し、主要なメトリックの計算方法を示すと共に、一般的なパフォーマンス トラブルシューティング シナリオへのリンクをいくつか紹介します。  
-  
- 次のトピックが含まれています。  
-  
--   [データ同期プロセス](#BKMK_DATA_SYNC_PROCESS)  
-  
--   [フロー制御ゲート](#BKMK_FLOW_CONTROL_GATES)  
-  
--   [フェールオーバー時間 (RTO) の推定](#BKMK_RTO)  
-  
--   [データ損失の可能性 (RPO) の推定](#BKMK_RPO)  
-  
--   [RTO と RPO の監視](#BKMK_Monitoring_for_RTO_and_RPO)  
-  
--   [パフォーマンスのトラブルシューティング シナリオ](#BKMK_SCENARIOS)  
-  
--   [有用な拡張イベント](#BKMK_XEVENTS)  
-  
+   
 ##  <a name="data-synchronization-process"></a>データ同期プロセス  
  完全に同期するまでの時間を推定し、ボトルネックを特定するには、同期プロセスを理解する必要があります。 パフォーマンスのボトルネックはプロセス内の任意の箇所で発生する可能性があります。ボトルネックの場所を特定することで、基になっている問題をさらに詳しく調べることができます。 次の図と表に、データの同期プロセスを示します。  
   
@@ -48,7 +31,7 @@ ms.locfileid: "53203352"
 |**Sequence**|**ステップの説明**|**コメント**|**有用なメトリック**|  
 |1|ログの生成|ログ データがディスクにフラッシュされます。 このログはセカンダリ レプリカにレプリケートする必要があります。 ログ レコードによって送信キューが入力されます。|[SQL Server: データベース > Log bytes flushed\sec](~/relational-databases/performance-monitor/sql-server-databases-object.md)|  
 |2|キャプチャ|各データベースに関するログがキャプチャされ、対応するパートナー キュー (データベース レプリカ ペアごとに 1 つ) に送信されます。 このキャプチャ プロセスは、可用性レプリカが接続されていて何らかの理由でデータ移動が中断されていない限り、継続されます。データベース レプリカのペアは同期中または同期済みのいずれかであると表示されます。 キャプチャ プロセスによるメッセージのスキャンおよびエンキューに時間がかかる場合は、ログ送信キューがビルドされます。|[SQL Server: 可用性レプリカ > レプリカに送信されたバイト数\秒](~/relational-databases/performance-monitor/sql-server-availability-replica.md)。可用性レプリカのキューに配置されたすべてのデータベース メッセージの合計を集計したものです。<br /><br /> プライマリ レプリカの [log_send_queue_size](~/relational-databases/system-dynamic-management-views/sys-dm-hadr-database-replica-states-transact-sql.md) (KB) と[log_bytes_send_rate](~/relational-databases/system-dynamic-management-views/sys-dm-hadr-database-replica-states-transact-sql.md) (KB/秒)。|  
-|3|Send|各データベース レプリカ キュー内のメッセージがデキューされ、それぞれのセカンダリ レプリカにネットワーク経由で送信されます。|[SQL Server: 可用性レプリカ > トランスポートに送信されたバイト数\秒](~/relational-databases/performance-monitor/sql-server-availability-replica.md) および [SQL Server: 可用性レプリカ > メッセージ確認応答時間](~/relational-databases/performance-monitor/sql-server-availability-replica.md) (ms)|  
+|3|Send|各データベース レプリカ キュー内のメッセージがデキューされ、それぞれのセカンダリ レプリカにネットワーク経由で送信されます。|[SQL Server: 可用性レプリカ > トランスポートに送信されたバイト数\秒](~/relational-databases/performance-monitor/sql-server-availability-replica.md)|  
 |4|受信とキャッシュ|各セカンダリ レプリカがメッセージを受信しキャッシュします。|パフォーマンス カウンター [SQL Server: 可用性レプリカ > Log Bytes Received/sec](~/relational-databases/performance-monitor/sql-server-availability-replica.md)|  
 |5|書き込み|書き込みのためログがセカンダリ レプリカにフラッシュされます。 ログのフラッシュ後、プライマリ レプリカに確認応答が返送されます。<br /><br /> ログが書き込まれると、データ損失は回避されます。|パフォーマンス カウンター [SQL Server: データベース > Log Bytes Flushed/sec](~/relational-databases/performance-monitor/sql-server-databases-object.md)<br /><br /> 待機の種類 [HADR_LOGCAPTURE_SYNC](~/relational-databases/system-dynamic-management-views/sys-dm-os-wait-stats-transact-sql.md)|  
 |6|やり直し|セカンダリ レプリカでページのフラッシュを再実行します。 再実行されるのを待機する間、ページは再実行キューに保持されます。|[SQL Server: データベース レプリカ > Redone Bytes/sec](~/relational-databases/performance-monitor/sql-server-database-replica.md)<br /><br /> [redo_queue_size](~/relational-databases/system-dynamic-management-views/sys-dm-hadr-database-replica-states-transact-sql.md) (KB) と [redo_rate](~/relational-databases/system-dynamic-management-views/sys-dm-hadr-database-replica-states-transact-sql.md)。<br /><br /> 待機の種類 [REDO_SYNC](~/relational-databases/system-dynamic-management-views/sys-dm-os-wait-stats-transact-sql.md)|  
@@ -106,8 +89,8 @@ ms.locfileid: "53203352"
 Always On 可用性グループで、セカンダリ レプリカでホストされているデータベースに対する RTO と RPO が計算され、表示されます。 プライマリ レプリカのダッシュボードで、RTO と RPO がセカンダリ レプリカごとにグループ化されます。 
 
 ダッシュボード内に RTO と RPO を表示するには、次の操作を行います。
-1. SQL Server Management Studio で、**[Always On 可用性グループ]** ノードを展開し、可用性グループの名前を右クリックして **[ダッシュボードの表示]** を選択します。 
-1. **[グループ化]** タブで、**[列の追加と削除]** を選択します。**[推定復旧時間 (秒)]** (RTO) と **[推定データ損失 (時間)]** (RPO) の両方のチェック ボックスをオンにします。 
+1. SQL Server Management Studio で、 **[Always On 可用性グループ]** ノードを展開し、可用性グループの名前を右クリックして **[ダッシュボードの表示]** を選択します。 
+1. **[グループ化]** タブで、 **[列の追加と削除]** を選択します。 **[推定復旧時間 (秒)]** (RTO) と **[推定データ損失 (時間)]** (RPO) の両方のチェック ボックスをオンにします。 
 
    ![rto-rpo-dashboard.png](media/rto-rpo-dashboard.png)
 
@@ -331,7 +314,7 @@ DMV の [sys.dm_hadr_database_replica_states](../../../relational-databases/syst
 ##  <a name="monitoring-for-rto-and-rpo"></a>RTO と RPO の監視  
  このセクションでは、可用性グループの RTO および RPO メトリックを監視する方法を実演します。 この実演の内容は、「[The Always On health model, part 2: Extending the health model](https://blogs.msdn.com/b/sqlalwayson/archive/2012/02/13/extending-the-alwayson-health-model.aspx)」 (Always On 正常性モデル、パート 2: 正常性モデルの拡張) で提供している GUI のチュートリアルに類似しています。  
   
- [フェールオーバー時間 (RTO) の推定](#BKMK_RTO) および[データ損失の可能性 (RPO) の推定](#BKMK_RPO) におけるフェールオーバー時間の計算およびデータ損失の可能性の計算の要素は、ポリシー管理ファセット "**データベース レプリカ状態**" の中でパフォーマンス メトリックとして便利に提供されています (「[SQL Server オブジェクトのポリシー ベースの管理ファセットの表示](~/relational-databases/policy-based-management/view-the-policy-based-management-facets-on-a-sql-server-object.md)」を参照)。 この 2 つのメトリックはスケジュールに従って監視することができます。メトリックが指定の RTO および RPO を超えた場合はそれぞれアラートが返されます。  
+ [フェールオーバー時間 (RTO) の推定](#estimating-failover-time-rto) および[データ損失の可能性 (RPO) の推定](#estimating-potential-data-loss-rpo) におけるフェールオーバー時間の計算およびデータ損失の可能性の計算の要素は、ポリシー管理ファセット "**データベース レプリカ状態**" の中でパフォーマンス メトリックとして便利に提供されています (「[SQL Server オブジェクトのポリシー ベースの管理ファセットの表示](~/relational-databases/policy-based-management/view-the-policy-based-management-facets-on-a-sql-server-object.md)」を参照)。 この 2 つのメトリックはスケジュールに従って監視することができます。メトリックが指定の RTO および RPO を超えた場合はそれぞれアラートが返されます。  
   
  デモ スクリプトでは、以下の特性を備え、それぞれのスケジュールに従って実行される 2 つのシステム ポリシーが作成されます。  
   
@@ -349,9 +332,9 @@ DMV の [sys.dm_hadr_database_replica_states](../../../relational-databases/syst
 
 1.  まだ開始していない場合は、[SQL Server エージェント サービスを開始](~/ssms/agent/start-stop-or-pause-the-sql-server-agent-service.md)します。  
   
-2.  SQL Server Management Studio で、**[ツール]** メニューの **[オプション]** をクリックします。  
+2.  SQL Server Management Studio で、 **[ツール]** メニューの **[オプション]** をクリックします。  
   
-3.  **[SQL Server Always On]** タブで **[ユーザー定義の Always On ポリシーを有効にする]** を選択し、**[OK]** をクリックします。  
+3.  **[SQL Server Always On]** タブで **[ユーザー定義の Always On ポリシーを有効にする]** を選択し、 **[OK]** をクリックします。  
   
      この設定により、適切に構成されたカスタム ポリシーを Always On ダッシュボードに表示できるようになります。  
   
@@ -409,9 +392,9 @@ DMV の [sys.dm_hadr_database_replica_states](../../../relational-databases/syst
   
              この設定により、ポリシーは必ず、ローカルの可用性レプリカがプライマリ レプリカである可用性グループのみで評価されます。  
   
-        -   **[評価モード]**:**スケジュールで実行**  
+        -   **[評価モード]** :**スケジュールで実行**  
   
-        -   **[スケジュール]**:**CollectorSchedule_Every_5min**  
+        -   **[スケジュール]** :**CollectorSchedule_Every_5min**  
   
         -   **有効**: **選択**  
   
@@ -435,9 +418,9 @@ DMV の [sys.dm_hadr_database_replica_states](../../../relational-databases/syst
   
         -   **対象**: **IsPrimaryReplica AvailabilityGroup** の**すべての DatabaseReplicaState**  
   
-        -   **[評価モード]**:**スケジュールで実行**  
+        -   **[評価モード]** :**スケジュールで実行**  
   
-        -   **[スケジュール]**:**CollectorSchedule_Every_30min**  
+        -   **[スケジュール]** :**CollectorSchedule_Every_30min**  
   
         -   **有効**: **選択**  
   
@@ -474,5 +457,3 @@ DMV の [sys.dm_hadr_database_replica_states](../../../relational-databases/syst
 |hadr_dump_primary_progress|`alwayson`|デバッグ|プライマリ|  
 |hadr_dump_log_progress|`alwayson`|デバッグ|プライマリ|  
 |hadr_undo_of_redo_log_scan|`alwayson`|分析|セカンダリ|  
-  
-  

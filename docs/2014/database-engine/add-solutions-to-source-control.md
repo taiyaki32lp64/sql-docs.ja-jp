@@ -14,11 +14,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 7dc540b21000766cd6e33ecb1811536993857f00
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48120539"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62815704"
 ---
 # <a name="add-solutions-to-source-control"></a>ソース管理へのソリューションの追加
   通常、ソース管理にソリューションを追加する場合は、ソリューション全体、およびソリューションに含まれているすべてのプロジェクトを追加します。 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] を使用して、ソース管理にソリューションを追加できます。  

@@ -12,17 +12,20 @@ f1_keywords:
 - sql13.ssis.ssms.iscreatefolder.f1
 - sql13.ssis.ssms.isfolderprop.general.f1
 ms.assetid: d9a2bfae-fcc8-46be-b588-4a9db03f7e45
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: 4d274d7ae201b1f83ad05d9ab177ebd0c20d7617
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 19f23e57fdb77a88ecf7c7b531c9c837e2c740ce
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47678066"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71298997"
 ---
 # <a name="folder-properties-dialog-box"></a>[フォルダーのプロパティ] ダイアログ ボックス
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   フォルダーには、 **SSISDB** カタログ内のプロジェクトおよび環境が含まれます。 フォルダーごとに、フォルダーの内容に適用される権限を定義します。 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] の権限の詳細については、「[catalog.grant_permission &#40;SSISDB データベース&#41;](../../integration-services/system-stored-procedures/catalog-grant-permission-ssisdb-database.md)」をご覧ください。  
   
 ## <a name="to-set-folder-description-and-permissions"></a>フォルダーの説明と権限を設定するには  

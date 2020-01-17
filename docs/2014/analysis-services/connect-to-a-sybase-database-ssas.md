@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.bidtoolset.connsybasedb.f1
@@ -13,12 +12,12 @@ ms.assetid: b4ebdc57-8b2a-4950-b489-88360e6c82c5
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 01b011ba7b321252f90f74289cfe13a2257f2ea3
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 0305b7d205b6de84ef72edd481df01e725df826b
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48074092"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66087179"
 ---
 # <a name="connect-to-a-sybase-database-ssas"></a>[Sybase データベースへの接続] (SSAS)
   **テーブルのインポート ウィザード**のこのページを使用すると、Sybase データベースに接続するための設定を指定できます。 [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]からウィザードにアクセスするには、 **[モデル]** メニューの **[データ ソースからのインポート]** をクリックします。  

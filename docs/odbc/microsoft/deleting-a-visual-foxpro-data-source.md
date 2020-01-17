@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 8468957a-632a-4d7b-a3e1-66b34e7df639
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 9578e5a1b894078b3dfdd33b81893780afc804b7
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 7ba7c1956bc03835131a440bfe9ad37469a7858e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47606130"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68112101"
 ---
 # <a name="deleting-a-visual-foxpro-data-source"></a>Visual FoxPro データ ソースの削除
 ### <a name="to-delete-a-visual-foxpro-data-source"></a>Visual FoxPro データ ソースを削除するには  

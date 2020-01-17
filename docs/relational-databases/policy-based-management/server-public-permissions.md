@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 9a276caa-ea38-473d-92bc-26302bfcf660
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: 98ac248a005b7be8c2786275f30c23c129a39887
-ms.sourcegitcommit: ef6e3ec273b0521e7c79d5c2a4cb4dcba1744e67
+ms.openlocfilehash: 4d600a5bf3e5667fdd3bd247e2e479a6c870ff21
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51511967"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68021713"
 ---
 # <a name="server-public-permissions"></a>サーバーのパブリック権限
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

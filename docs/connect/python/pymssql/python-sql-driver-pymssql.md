@@ -1,5 +1,5 @@
 ---
-title: Python SQL ドライバー - pymssql |Microsoft Docs
+title: Python SQL ドライバー-pymssql |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 34edf89e-4335-4ef6-827a-54b7af9cc9fd
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 8e6bbff25d47fb5c5a3336f24e9ce49d18c5b41b
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.openlocfilehash: 3cce0d9a3a488824cf1a3ef686b508157e029363
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51600702"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67992544"
 ---
 # <a name="python-sql-driver---pymssql"></a>Python SQL ドライバー - pymssql
 [!INCLUDE[Driver_Python_Download](../../../includes/driver_python_download.md)]
@@ -28,4 +27,4 @@ ms.locfileid: "51600702"
 * [ステップ 3: pymssql を使用した SQL への接続を概念実証する](../../../connect/python/pymssql/step-3-proof-of-concept-connecting-to-sql-using-pymssql.md)  
 
 ## <a name="documentation"></a>ドキュメント
-* [pymssql ドキュメント](https://pymssql.org)  
+* [pymssql のドキュメント](https://pymssql.org)  

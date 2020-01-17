@@ -1,5 +1,5 @@
 ---
-title: getSubString メソッド (SQLServerNClob) |Microsoft Docs
+title: getSubString メソッド (SQLServerNClob) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 1d91c930-1bac-4da9-b9a5-ac2cfd31541b
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: f283115f4629e778d9b6fc4a94ccaf85064da6c4
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: cf2caa03e047bb53ca946153205492c417448e85
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47648960"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67979320"
 ---
 # <a name="getsubstring-method-sqlservernclob"></a>getSubString メソッド (SQLServerNClob)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -32,7 +31,7 @@ public java.lang.String getSubString(long pos,
 ```  
   
 #### <a name="parameters"></a>パラメーター  
- *pos*  
+ *po*  
   
  抽出する部分文字列の先頭の文字です。 先頭の文字の位置は 1 です。  
   
@@ -41,13 +40,13 @@ public java.lang.String getSubString(long pos,
  コピーする連続した文字の文字数です。  
   
 ## <a name="return-value"></a>戻り値  
- A**文字列**内の指定した部分文字列は、 **NCLOB**します。  
+ **NCLOB** の指定された substring である**文字列**です。  
   
 ## <a name="exceptions"></a>例外  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- この getSubString メソッドは、java.sql.NClob インターフェイスに getSubString メソッドによって指定されます。  
+ この getSubString メソッドは、java.sql.NClob インターフェイスの getSubString メソッドで規定されています。  
   
  null または長さが 0 の NCLOB から 0 文字を取得しようとすると、空の文字列が返されます。 長さが 0 の NCLOB で、位置 1 以外の場所で任意の長さの文字を取得しようとすると、位置の例外がスローされます。  
   

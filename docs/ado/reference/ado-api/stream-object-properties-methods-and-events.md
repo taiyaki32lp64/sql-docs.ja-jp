@@ -12,16 +12,15 @@ helpviewer_keywords:
 ms.assetid: 9b0eed90-c38c-4aa6-9040-5827f8c46b94
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 7f775bf1d77ed23e153610f7b6d6cbf5c17ce544
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 326019b8e870739954c059475d851dbac62e0b57
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47697203"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67930677"
 ---
 # <a name="stream-object-properties-methods-and-events"></a>Stream オブジェクトのプロパティ、メソッド、およびイベント
-## <a name="properties"></a>[プロパティ]  
+## <a name="properties"></a>Properties  
  [Charset プロパティ](../../../ado/reference/ado-api/charset-property-ado.md)  
   
  [EOS プロパティ](../../../ado/reference/ado-api/eos-property.md)  
@@ -70,5 +69,5 @@ ms.locfileid: "47697203"
 ## <a name="events"></a>イベント  
  [なし] :  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [Stream オブジェクト (ADO)](../../../ado/reference/ado-api/stream-object-ado.md)

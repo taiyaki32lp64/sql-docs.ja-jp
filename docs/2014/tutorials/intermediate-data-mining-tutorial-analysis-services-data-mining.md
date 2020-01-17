@@ -11,11 +11,11 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: 4c244701d8a58765061ef3bde1f918c8be5a941d
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56025363"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63017177"
 ---
 # <a name="intermediate-data-mining-tutorial-analysis-services---data-mining"></a>中級者向けデータ マイニング チュートリアル (Analysis Services - データ マイニング)
   [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] データ マイニング モデルの作成と操作の統合環境を提供します。 データ ソースへのバインド、同じデータでの複数のモデルの作成とテスト、および予測分析で使用するモデルの配置を簡単に行うことができます。  

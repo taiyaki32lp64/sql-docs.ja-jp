@@ -10,15 +10,15 @@ helpviewer_keywords:
 - creating collections [Master Data Services]
 - collections [Master Data Services], creating
 ms.assetid: 3d4f152c-863c-4385-bca9-a9fcd0402e1f
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 1c0e899ebc7180fdfbe234c893cb364d3f9d01ee
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: f7ea763aa9c0bd187b2207dc50a1f678c295f3b9
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52782354"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65483390"
 ---
 # <a name="create-a-collection-master-data-services"></a>コレクションを作成する (Master Data Services)
   [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]では、リーフ メンバーまたは統合メンバーの一覧表示を作成する必要があるときは、コレクションを作成します。 コレクションは、エンティティのすべてのメンバーを含む必要はありません。  
@@ -50,7 +50,7 @@ ms.locfileid: "52782354"
   
 8.  必要に応じて、 **[説明]** ボックスにコレクションの説明を入力します。  
   
-9. **[OK]** をクリックします。  
+9. [**OK**] をクリックします。  
   
 ## <a name="next-steps"></a>次の手順  
   

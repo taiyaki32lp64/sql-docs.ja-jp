@@ -12,15 +12,14 @@ dev_langs:
 helpviewer_keywords:
 - EnvelopeAggregate method (geometry)
 ms.assetid: c4c15abe-0fe9-441d-9d42-6572e264869c
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: 00b45ed5ff3fcefbd803ecbb6d50aefbda20aaa0
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: MladjoA
+ms.author: mlandzic
+ms.openlocfilehash: aec6618297f0ed38bfea5e730a452d4ccc9fae9b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47761030"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68081183"
 ---
 # <a name="envelopeaggregate-geometry-data-type"></a>EnvelopeAggregate (geometry データ型)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]

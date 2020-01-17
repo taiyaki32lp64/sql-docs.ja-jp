@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 3fa4eca8-691c-467d-bfa7-39c59cdb9c8d
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 5c4aa7b22e2d7b419db0e80d723ab7b0d875c2a0
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: da416fd8953dce575f5a4aa09f22f113d135b9a3
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47778600"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68103902"
 ---
 # <a name="batch-processing"></a>バッチ処理
 SQL ステートメントのバッチのサポートは、広範囲にわたるはないため、アプリケーションの相互運用可能な条件付きで、またはまったく使用それらにする必要があります。 詳細については、次を参照してください。[を実行するバッチ](../../../odbc/reference/develop-app/executing-batches.md)します。

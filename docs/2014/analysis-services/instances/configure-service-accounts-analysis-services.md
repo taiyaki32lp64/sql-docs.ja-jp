@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - security [Analysis Services], logon accounts
@@ -16,12 +15,12 @@ ms.assetid: b481bd51-e077-42f6-8598-ce08c1a38716
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 7b6be38afc2c95d6cfce80bcefa6ad0b3ab954fe
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: 8dfde906f7cadc01b9c7a4abbe32be1bd0408986
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54125502"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66080186"
 ---
 # <a name="configure-service-accounts-analysis-services"></a>サービス アカウントの構成 (Analysis Services)
   製品全体のアカウントの準備については、 [を含めて、すべての](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md)サービスに関する包括的なサービス アカウントの情報を提供するトピック、「 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Windows サービス アカウントと権限の構成 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]」を参照してください。 有効なアカウントの種類、セットアップで割り当てられた Windows 特権、ファイル システムの権限、レジストリの権限などについては、前のトピックをご覧ください。  
@@ -39,7 +38,7 @@ ms.locfileid: "54125502"
 ## <a name="logon-account-recommendations"></a>ログオン アカウントに関する推奨事項  
  フェールオーバー クラスターでは、Analysis Services のすべてのインスタンスが Windows ドメイン ユーザー アカウントを使用するように構成する必要があります。 すべてのインスタンスに、同じアカウントを割り当てます。 詳細については、「 [Analysis Services をクラスター化する方法](https://msdn.microsoft.com/library/dn736073.aspx) 」を参照してください。  
   
- スタンドアロンのインスタンスは、既定のインスタンスの場合は既定の仮想アカウント **NT Service\MSSQLServerOLAPService** を使用しなければならず、名前付きインスタンスの場合は **NT Service\MSOLAP$**_instance-name_ を使用します。 この推奨事項は、すべてのサーバー モードの Analysis Services インスタンスに適用されます。オペレーティング システムには Windows Server 2008 R2 以降、Analysis Services には SQL Server 2012 を想定しています。  
+ スタンドアロンのインスタンスは、既定のインスタンスの場合は既定の仮想アカウント **NT Service\MSSQLServerOLAPService** を使用しなければならず、名前付きインスタンスの場合は **NT Service\MSOLAP$** _instance-name_ を使用します。 この推奨事項は、すべてのサーバー モードの Analysis Services インスタンスに適用されます。オペレーティング システムには Windows Server 2008 R2 以降、Analysis Services には SQL Server 2012 を想定しています。  
   
 ## <a name="granting-permissions-to-analysis-services"></a>Analysis Services へのアクセス許可の付与  
  このセクションでは、Analysis Services がローカルの内部操作 (実行可能ファイルの開始、構成ファイルの読み取り、データ ディレクトリからのデータベースの読み込みなど) に必要とするアクセス許可を説明します。 必要としているのがその情報ではなく、外部データ アクセスやその他のサービスおよびアプリケーションとの相互運用性のためのアクセス許可の設定のガイダンスである場合は、このトピックで後述する「 [特定のサーバー操作に対する追加のアクセス許可の付与](#bkmk_tasks) 」を参照してください。  
@@ -67,7 +66,7 @@ ms.locfileid: "54125502"
   
 |||  
 |-|-|  
-|**[プロセス ワーキング セットの増加]** (SeIncreaseWorkingSetPrivilege)|この特権は、既定では **[ユーザー]** セキュリティ グループを介してすべてのユーザーが使用可能です。 このグループの特権を削除してサーバーをロックすると、Analysis Services が起動に失敗して、次のエラーがログに記録される可能性があります。「クライアントには必要な特権がありません。」 このエラーが発生した場合は、特権を適切な Analysis Services セキュリティ グループに付与することで、Analysis Services に特権を復元します。|  
+|**[プロセス ワーキング セットの増加]** (SeIncreaseWorkingSetPrivilege)|この特権は、既定では **[ユーザー]** セキュリティ グループを介してすべてのユーザーが使用可能です。 サーバーをロックするにはこのグループの権限を削除することで、Analysis Services が、このエラーをログ記録を開始するには、失敗。「必要な特権が保持していませんクライアント。」 このエラーが発生した場合は、特権を適切な Analysis Services セキュリティ グループに付与することで、Analysis Services に特権を復元します。|  
 |**[プロセスに対してメモリ クォータを調整する]** (SeIncreaseQuotaSizePrivilege)|この特権は、プロセスのリソースが十分でないためにプロセスの実行を完了できない場合に、さらに多くのメモリを要求するために使用します (メモリ量は、インスタンス用に設定されたメモリしきい値に依存します)。|  
 |**[メモリ内のページのロック]** (SeLockMemoryPrivilege)|この特権が必要になるのは、ページングが完全にオフになっているときのみです。 既定では、表形式サーバー インスタンスは Windows ページング ファイルを使用しますが、`VertiPaqPagingPolicy` を 0 に設定して、Windows ページングを使用しないようにすることもできます。<br /><br /> `VertiPaqPagingPolicy` を 1 (既定) にすると、表形式サーバー インスタンスは Windows ページング ファイルを使用します。 割り当てはロックされないため、必要に応じてページ アウトされます。 ページングが使用されているため、メモリ内のページをロックする必要はありません。 したがっての既定の構成 (場所`VertiPaqPagingPolicy`= 1)、付与する必要はありません、**メモリ内のページのロック**特権を表形式インスタンス。<br /><br /> `VertiPaqPagingPolicy` を 0 にした場合。 Analysis Services のページングをオフにした場合は、割り当てがロックされ、 **[メモリ内のページのロック]** 特権が表形式インスタンスに付与されます。 このように設定され、かつ **[メモリ内のページのロック]** 特権がある場合、システムでメモリ不足が発生しているときは、Analysis Services に対して行われたメモリ割り当てをページ アウトできません。 Analysis Services に依存、**メモリ内のページのロック**が適用されているとアクセス許可`VertiPaqPagingPolicy`= 0。 Windows ページングをオフにすることはお勧めしません。 このようにすると、ページングが許可されている場合には正常に処理されるような操作でメモリ不足エラーが発生する率が高まります。 参照してください[メモリ プロパティ](../server-properties/memory-properties.md)の詳細については`VertiPaqPagingPolicy`します。|  
   
@@ -123,7 +122,7 @@ ms.locfileid: "54125502"
   
      メンバーの SID は、手順 1 で示したサービスごとの SID と一致する必要があります。  
   
-3.  **[Windows エクスプローラー]** | **[Program Files]** | **[Microsoft SQL Server]** | Msasxx.mssqlserver | **[OLAP]** | **[bin]** を使用して、フォルダーのセキュリティ プロパティが、手順 2 のセキュリティ グループに付与されていることを確認します。  
+3.  **[Windows エクスプローラー]**  |  **[Program Files]**  |  **[Microsoft SQL Server]** | Msasxx.mssqlserver | **[OLAP]**  |  **[bin]** を使用して、フォルダーのセキュリティ プロパティが、手順 2 のセキュリティ グループに付与されていることを確認します。  
   
 > [!NOTE]  
 >  SID は削除したり変更したりしないでください。 誤って削除するサービスごとの SID を復元するを参照してください。 [ https://support.microsoft.com/kb/2620201](https://support.microsoft.com/kb/2620201)します。  
@@ -149,7 +148,7 @@ ms.locfileid: "54125502"
 |[書き戻し]|リモート サーバー上に定義された Analysis Services のデータベース ロールへの、サービス アカウントの追加|書き戻しは、クライアント アプリケーションで有効にされている場合に、データ分析中に新しいデータ値の作成を可能にする多次元モデルの機能です。 ディメンションまたはキューブ内で書き戻しが有効な場合は、 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] サービス アカウントに、ソースの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] リレーショナル データベースの書き戻しテーブルに対する書き込み権限が必要です。 このテーブルがまだ存在しておらず、作成する必要がある場合は、 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] サービス アカウントに、指定の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データベース内でテーブルを作成するための権限も必要です。|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] リレーショナル データベース内のクエリ ログ テーブルへの書き込み|サービス アカウントのデータベース ログインの作成、およびクエリ ログ テーブルに対する書き込み権限の割り当て|以降の分析用にデータベース テーブル内に使用状況データを収集するために、クエリ ログ記録を有効にできます。 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] サービス アカウントには、指定の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データベースのクエリ ログ テーブルに対する書き込み権限が必要です。 このテーブルがまだ存在しておらず、作成する必要がある場合は、 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] ログオン アカウントに、指定の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データベース内でテーブルを作成するための権限も必要です。 詳細については、 [使用法に基づく最適化ウィザードによる SQL Server Analysis Services のパフォーマンスの向上 (ブログ)](http://www.mssqltips.com/sqlservertip/2876/improve-sql-server-analysis-services-performance-with-the-usage-based-optimization-wizard/) および [Analysis Services でのクエリのログ記録 (ブログ)](http://weblogs.asp.net/miked/archive/2013/07/31/query-logging-in-analysis-services.aspx)を参照してください。|  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [を含めて、すべての](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md)   
  [SQL Server サービス アカウントとサービスごとの SID (ブログ)](http://www.travisgan.com/2013/06/sql-server-service-account-and-per.html)   
  [サービス SID を使用してサービスを分離する SQL Server (サポート技術情報の記事)](https://support.microsoft.com/kb/2620201)   

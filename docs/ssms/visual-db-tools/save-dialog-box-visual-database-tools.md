@@ -11,15 +11,14 @@ f1_keywords:
 - vdtsql.chm:65541
 - vdt.dlgbox.save
 ms.assetid: 2db60e24-79b5-4943-8891-f1684e16ce3d
-author: stevestein
-ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 2a2a05ecd4156d7ec93f7ae543409cab99044f96
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 6b7e883a5b4ea87e98faec08f58edb2743cb9a72
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47849420"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68266896"
 ---
 # <a name="save-dialog-box-visual-database-tools"></a>[上書き保存] ダイアログ ボックス (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -28,7 +27,7 @@ ms.locfileid: "47849420"
 > [!NOTE]  
 > テーブル デザイナーのテーブルに対して行った変更は、テーブルを保存するまでデータベースにはコミットされません。 いったんテーブルを保存すると、変更を取り消すことはできなくなります。 未保存の変更を破棄するには、開いているすべてのテーブルを保存しないで閉じます。  
   
-## <a name="options"></a>[変数]  
+## <a name="options"></a>オプション  
 **[該当テーブルに関する警告]**  
 選択したテーブルを次に保存するときに、このダイアログ ボックスを表示するかどうかを指定します。 既定では、このチェック ボックスはオンです。 このオプションをオフにしても、 **[オプション]** ダイアログ ボックスで再びオンにできます。  
   

@@ -15,11 +15,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 2bc763d621d15f982a2670483683d3862e678c98
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53367624"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63283676"
 ---
 # <a name="server-element-for-configuration-dta"></a>Configuration の Server 要素 (DTA)
   データベース エンジン チューニング アドバイザーで仮想的な構成 (`Configuration` 要素で指定する構成) を評価する対象のサーバーの識別情報が含まれます。  

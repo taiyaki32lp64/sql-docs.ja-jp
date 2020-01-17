@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: 95924a8b-a43c-4133-aff6-1d712e60e234
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 6448931a922fbf32cec94a24731da5bd4d8c88b3
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: c19e8cd92f7ee7aafcf6dd23e9c179f2557e628f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47598680"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67955998"
 ---
 # <a name="addbatch-method-sqlserverstatement"></a>addBatch メソッド (SQLServerStatement)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -38,13 +37,13 @@ public void addBatch(java.lang.String sql)
 #### <a name="parameters"></a>パラメーター  
  *sql*  
   
- A**文字列**SQL ステートメントを格納しています。  
+ SQL ステートメントを含む**文字列**です。  
   
 ## <a name="exceptions"></a>例外  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- この addBatch メソッドは、java.sql.Statement インターフェイスの addBatch メソッドによって指定されます。  
+ この addBatch メソッドは、java. .sql. ステートメントインターフェイスの addBatch メソッドによって指定されます。  
   
 ## <a name="see-also"></a>参照  
  [SQLServerStatement のメンバー](../../../connect/jdbc/reference/sqlserverstatement-members.md)   

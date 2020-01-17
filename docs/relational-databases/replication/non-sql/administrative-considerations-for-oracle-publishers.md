@@ -1,6 +1,7 @@
 ---
-title: Oracle パブリッシャーの管理上の注意点 | Microsoft Docs
-ms.custom: ''
+title: Oracle パブリッシャーの管理上の注意点
+description: Oracle パブリッシャーが SQL Server サブスクライバーに変更をパブリッシュする場合の管理上の注意点です。
+ms.custom: seo-lt-2019
 ms.date: 03/01/2017
 ms.prod: sql
 ms.prod_service: database-engine
@@ -13,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: cfd81fb5-419b-4a1b-97c4-be7c9d4ee289
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 1b264de2077e213bb27e062ff4ba504e75cd1b2e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 8f8a436035c18f7bd6e5a1867ebe92433e4e5951
+ms.sourcegitcommit: 02d44167a1ee025ba925a6fefadeea966912954c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47841180"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75321901"
 ---
 # <a name="administrative-considerations-for-oracle-publishers"></a>Oracle パブリッシャーの管理上の注意点
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -60,12 +60,12 @@ ms.locfileid: "47841180"
 -   ログに記録されない操作の実行  
   
 ## <a name="dropping-or-modifying-replication-objects"></a>レプリケーション オブジェクトの削除と変更  
- パブリッシャー レベルの追跡テーブル、トリガー、シーケンス、ストアド プロシージャを削除または変更するには、パブリッシャーを削除して再構成する必要があります。 これらのオブジェクトの一部の一覧については、「[Objects Created on the Oracle Publisher](../../../relational-databases/replication/non-sql/objects-created-on-the-oracle-publisher.md)」 (Oracle パブリッシャーで作成されたオブジェクト) を参照してください。  
+ パブリッシャー レベルの追跡テーブル、トリガー、シーケンス、ストアド プロシージャを削除または変更するには、パブリッシャーを削除して再構成する必要があります。 これらのオブジェクトの一部の一覧については、「[Oracle パブリッシャー上で作成されたオブジェクト](../../../relational-databases/replication/non-sql/objects-created-on-the-oracle-publisher.md)」を参照してください。  
   
- パブリッシャーの削除と再構成の詳細については、「 [Troubleshooting Oracle Publishers](../../../relational-databases/replication/non-sql/troubleshooting-oracle-publishers.md)」の「パブリッシャーの再構成が必要になる変更」を参照してください。  
+ パブリッシャーの削除と再構成の詳細については、「[Oracle パブリッシャーのトラブルシューティング](../../../relational-databases/replication/non-sql/troubleshooting-oracle-publishers.md)」の「パブリッシャーの再構成が必要になる変更」を参照してください。  
   
 ## <a name="see-also"></a>参照  
- [Configure an Oracle Publisher (Oracle パブリッシャーの構成)](../../../relational-databases/replication/non-sql/configure-an-oracle-publisher.md)   
+ [Oracle パブリッシャーの構成](../../../relational-databases/replication/non-sql/configure-an-oracle-publisher.md)   
  [Oracle パブリッシャーの設計上の注意点および制限](../../../relational-databases/replication/non-sql/design-considerations-and-limitations-for-oracle-publishers.md)   
  [Oracle パブリッシングの概要](../../../relational-databases/replication/non-sql/oracle-publishing-overview.md)  
   

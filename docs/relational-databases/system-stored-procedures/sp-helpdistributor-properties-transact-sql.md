@@ -1,5 +1,5 @@
 ---
-title: sp_helpdistributor_properties (TRANSACT-SQL) |Microsoft Docs
+title: sp_helpdistributor_properties (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: sql
@@ -15,16 +15,15 @@ helpviewer_keywords:
 ms.assetid: ee267724-3244-49eb-84c9-f38dbefdd639
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: fe85b3e088e5ae39cdd70a599bdcf917aed00233
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: e4cacb78e797583dbd45954f09c89a774c381966
+ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52773744"
+ms.lasthandoff: 08/03/2019
+ms.locfileid: "68770920"
 ---
 # <a name="sphelpdistributorproperties-transact-sql"></a>sp_helpdistributor_properties (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
   ディストリビューターのプロパティを返します。 このストアド プロシージャは、ディストリビューター側でディストリビューション データベースについて実行されます。  
   
@@ -41,18 +40,18 @@ sp_helpdistributor_properties
   
 |列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
-|**heartbeat_interval**|**int**|エージェントが進行状況のメッセージをログに記録せずに実行を継続できる最大時間 (分単位)。|  
+|**heartbeat_interval**|**int**|エージェントが進行状況メッセージをログに記録せずに実行できる最大時間 (分) です。|  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  **0** (成功) または**1** (失敗)  
   
 ## <a name="remarks"></a>コメント  
- **sp_helpdistributor_properties**はあらゆる種類のレプリケーションで使用します。  
+ **sp_helpdistributor_properties**は、すべての種類のレプリケーションで使用されます。  
   
 ## <a name="permissions"></a>アクセス許可  
- メンバーのみ、 **sysadmin**のメンバー、固定サーバー ロール、 **db_owner**または**replmonitor**内のユーザー、ディストリビューション データベースの固定データベース ロール、このディストリビューターを使用するパブリケーションのパブリケーション アクセス リスト (PAL) が実行できる**sp_helpdistributor_properties**します。  
+ **Sysadmin**固定サーバーロールのメンバー、ディストリビューションデータベースの固定データベースロール**db_owner**または**replmonitor**のメンバー、またはこのディストリビューターを使用するパブリケーションのパブリケーションアクセスリスト (PAL) のユーザーだけが使用できます。**sp_helpdistributor_properties**を実行します。  
   
-## <a name="see-also"></a>参照  
- [sp_changedistributor_property &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-changedistributor-property-transact-sql.md)  
+## <a name="see-also"></a>関連項目  
+ [sp_changedistributor_property &#40;transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-changedistributor-property-transact-sql.md)  
   
   

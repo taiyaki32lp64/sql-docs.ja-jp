@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: b5e1d26d-b41d-4e35-8c7c-972426473dfb
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: b50f5245ed476fd09acd2556b4f7f5e2186fce10
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 2a06e51f5c5077a70f9b5a76ecdf4922d8e006f7
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47756820"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67921108"
 ---
 # <a name="ado-collections"></a>ADO のコレクション
 これらのコレクションと ADO オブジェクト間のリレーションシップが表現されて、 [ADO オブジェクト モデル](../../../ado/reference/ado-api/ado-object-model.md)します。  
@@ -37,7 +36,7 @@ ms.locfileid: "47756820"
  [ADO の API リファレンス](../../../ado/reference/ado-api/ado-api-reference.md)   
  [ADO の動的プロパティ](../../../ado/reference/ado-api/ado-dynamic-properties.md)   
  [ADO の列挙定数](../../../ado/reference/ado-api/ado-enumerated-constants.md)   
- [付録 b: ADO エラー](../../../ado/guide/appendixes/appendix-b-ado-errors.md)   
+ [付録 B: ADO エラー](../../../ado/guide/appendixes/appendix-b-ado-errors.md)   
  [ADO イベント](../../../ado/reference/ado-api/ado-events.md)   
  [ADO メソッド](../../../ado/reference/ado-api/ado-methods.md)   
  [ADO オブジェクト モデル](../../../ado/reference/ado-api/ado-object-model.md)   

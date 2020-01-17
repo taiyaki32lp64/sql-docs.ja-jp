@@ -11,17 +11,20 @@ f1_keywords:
 - sql13.ssis.ssms.isprojectvalidate.f1
 - sql13.ssis.ssms.ispackagevalidate.f1
 ms.assetid: 134e14ce-4f8d-4a20-889a-918014c841d8
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: 6cb781222e14e8baf67a52af62096a8ee8c55ba7
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 049bb90dddf4bbfb03b222a675bd4008eb83cc14
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52419233"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71294870"
 ---
 # <a name="validate-dialog-box"></a>[検証] ダイアログ ボックス
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   **のプロジェクトまたはパッケージの一般的な問題を確認するには、** [検証] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] ダイアログ ボックスを使用します。  
   
  問題がある場合は、ダイアログ ボックスの上部にメッセージが表示されます。 それ以外の場合は、上部に "準備完了" と表示されます。  
@@ -71,7 +74,7 @@ ms.locfileid: "52419233"
  **コンテナー**  
  接続マネージャーを含むオブジェクトを一覧表示します。  
   
- **名前**  
+ **[名前]**  
  接続マネージャーの名前を一覧表示します。  
   
  **プロパティ名**  

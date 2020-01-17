@@ -7,15 +7,15 @@ ms.reviewer: ''
 ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: 24ba466d-a7d3-49e7-9111-b348399c9e58
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 2a3861e7de24e4fdf43ea11cf447b448c9d17b48
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 93b160b6e513ad866126df8b401b82ee1270be84
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56022863"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65489647"
 ---
 # <a name="task-9-adding-union-all-transform-to-combine-correct-and-corrected-records"></a>タスク 9:全体結合変換を追加して適切なレコードと修正済みレコードを結合する
   ここでは、全体結合変換をデータ フローに追加します。 全体結合変換は、複数の入力を 1 つの出力に結合します。 このシナリオでは、1 つのストリームに適切なレコードと修正済みレコードを結合します。  

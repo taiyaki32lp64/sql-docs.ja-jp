@@ -14,15 +14,14 @@ dev_langs:
 helpviewer_keywords:
 - IsNull method
 ms.assetid: c031074f-bfda-4584-a3bf-4e7c324f237f
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: 1bd0fd55824edfde8f3216516f9e93a7ec385baf
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: MladjoA
+ms.author: mlandzic
+ms.openlocfilehash: aaae21e3a47465011f6644901d0ac886da6846f2
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47767090"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67930222"
 ---
 # <a name="isnull-geography-data-type"></a>IsNull (geography データ型)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -39,7 +38,7 @@ ms.locfileid: "47767090"
 ## <a name="return-types"></a>戻り値の型  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 型: **bit**  
   
- CLR の型: **SqlBoolean**  
+ CLR の型:**SqlBoolean**  
   
 ## <a name="remarks"></a>Remarks  
  `IsNull` では、**geography** インスタンスが NULL かどうかをテストできます。 このテストの結果は若干複雑であるため注意してください。インスタンスが NULL でなければ 0 を返し、インスタンスが NULL であれば NULL を返します。  

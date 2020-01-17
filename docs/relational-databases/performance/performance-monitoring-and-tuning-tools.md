@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: 31529dfe-68e7-49f7-b3c2-39fcecf33a95
 author: julieMSFT
 ms.author: jrasnick
-manager: craigg
-ms.openlocfilehash: 03d8b1fd3b76452a0a1027075f9569a746a30edf
-ms.sourcegitcommit: 202ef5b24ed6765c7aaada9c2f4443372064bd60
+ms.openlocfilehash: d900593848561bba17e186f48632bf299fe9a7cd
+ms.sourcegitcommit: eae9efe2a2d3758685e85039ffb8fa698aa47f9b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/12/2019
-ms.locfileid: "54241443"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73962405"
 ---
 # <a name="performance-monitoring-and-tuning-tools"></a>パフォーマンス監視およびチューニング ツール
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -34,7 +33,7 @@ ms.locfileid: "54241443"
   
 |ツール|[説明]|  
 |----------|-----------------|  
-|[組み込み関数 &#40;Transact-SQL&#41;](~/t-sql/functions/functions.md)|組み込み関数では、サーバーが起動してからの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の利用状況に関するスナップショット統計が表示されます。この統計は、あらかじめ定義された [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] カウンターに格納されます。 たとえば、**@@CPU_BUSY** には、CPU が [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] コードを実行している時間が格納されます。**@@CONNECTIONS** には、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の接続数または接続試行数が格納されます。**@@PACKET_ERRORS** には、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 接続で発生するネットワーク パケット数が格納されます。|  
+|[組み込み関数 &#40;Transact-SQL&#41;](~/t-sql/functions/functions.md)|組み込み関数では、サーバーが起動してからの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の利用状況に関するスナップショット統計が表示されます。この統計は、あらかじめ定義された [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] カウンターに格納されます。 たとえば、 **\@\@CPU_BUSY** には、CPU が [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] コードを実行している時間が格納されます。 **\@\@CONNECTIONS** には、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の接続数または接続試行数が格納されます。 **\@\@PACKET_ERRORS** には、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 接続で発生するネットワーク パケット数が格納されます。|  
 |[DBCC &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-transact-sql.md)|DBCC (データベース コンソール コマンド) ステートメントによって、パフォーマンス統計とデータベースの論理的および物理的一貫性を確認できます。|  
 |[データベース エンジン チューニング アドバイザー (DTA)](../../relational-databases/performance/database-engine-tuning-advisor.md)|データベース エンジン チューニング アドバイザーでは、チューニングするデータベースに対して実行した [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントのパフォーマンス効果が分析されます。 データベース エンジン チューニング アドバイザーでは、インデックス、インデックス付きビュー、およびパーティションを追加、削除、または変更するための推奨設定が提供されます。|  
 |[Database Experimentation Assistant (DEA)](https://www.microsoft.com/download/details.aspx?id=54090)|Database Experimentation Assistant (DEA) は、SQL Server の新しい A/B テスト ソリューションです。 これは、特定のワークロードに対してターゲット バージョンの [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] を評価する場合に役立ちます。 以前の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] バージョン ([!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 以降) から任意の新しいバージョンの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] にアップグレードすると、DEA で比較分析メトリックを使用できるようになります。|
@@ -56,14 +55,14 @@ ms.locfileid: "54241443"
 ## <a name="choosing-a-monitoring-tool"></a>監視ツールの選択  
  どの監視ツールを使用するかは、監視対象のイベントまたは利用状況によって決まります。  
   
-|イベントまたは利用状況|拡張イベント|SQL Server Profiler|Distributed Replay|システム モニター|利用状況モニター|Transact-SQL|エラー ログ|パフォーマンス ダッシュボード|  
+|イベントまたは利用状況|拡張イベント|SQL Server プロファイラー|Distributed Replay|システム モニター|利用状況モニター|Transact-SQL|エラー ログ|パフォーマンス ダッシュボード|  
 |-----------------------|-----------------------|-------------------------|------------------------|--------------------|----------------------|-------------------|----------------|----------------|   
-|傾向分析|可|[はい]||可|||||  
+|傾向分析|はい|はい||はい|||||  
 |キャプチャしたイベントの再生||可 (1 台のコンピューターから)|可 (複数のコンピューターから)||||||  
-|アドホック監視|可<sup>1</sup>|可|||[はい]|[はい]|[はい]|可|  
-|警告の生成||||可|||||  
-|グラフィック インターフェイス|可|[はい]||[はい]|[はい]||[はい]|可|  
-|カスタム アプリケーション内での使用|可|はい<sup>2</sup>||||可|||  
+|アドホック監視|可<sup>1</sup>|はい|||はい|はい|はい|はい|  
+|警告の生成||||はい|||||  
+|グラフィック インターフェイス|はい|はい||はい|はい||はい|はい|  
+|カスタム アプリケーション内での使用|はい|はい<sup>2</sup>||||はい|||  
   
  <sup>1</sup> [SQL Server Management Studio XEvent Profiler](../../relational-databases/extended-events/use-the-ssms-xe-profiler.md) の使用    
  <sup>2</sup> [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] システム ストアド プロシージャの使用。  

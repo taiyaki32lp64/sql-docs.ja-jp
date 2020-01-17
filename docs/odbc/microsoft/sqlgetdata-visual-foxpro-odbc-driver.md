@@ -12,21 +12,20 @@ helpviewer_keywords:
 ms.assetid: fbf1b1eb-ecab-43d6-9099-3d627344e0fe
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: e9922927a9527fa3085581b547fd53ec701aed31
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ee603023798638b7bd5c25a72d1018d379da2075
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47793464"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68003320"
 ---
 # <a name="sqlgetdata-visual-foxpro-odbc-driver"></a>SQLGetData (Visual FoxPro ODBC ドライバー)
 > [!NOTE]  
 >  このトピックでには、Visual FoxPro ODBC ドライバー固有の情報が含まれています。 この関数の詳細については、該当するトピックを参照してください。 [ODBC API リファレンス](../../odbc/reference/syntax/odbc-api-reference.md)します。  
   
- サポート: 完全な  
+ サポート:[完全]  
   
- レベル 1 の ODBC API 準拠:  
+ ODBC API 準拠:レベル 1  
   
  指定された結果セットの現在のレコードの 1 つのフィールドの値を取得します。  
   

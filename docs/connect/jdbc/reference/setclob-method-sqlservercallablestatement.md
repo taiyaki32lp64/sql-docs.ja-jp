@@ -1,5 +1,5 @@
 ---
-title: setClob メソッド (SQLServerCallableStatement) |Microsoft Docs
+title: setClob メソッド (SQLServerCallableStatement) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 222ea248-1185-4c33-ae10-5158bf3f6430
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: fd934afd6e40b417bb7cfe8542daa15b94a7669d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 4c3c6e2b0331f00e5d9fe5d7212a1a48bff8e2c0
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47732570"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67974525"
 ---
 # <a name="setclob-method-sqlservercallablestatement"></a>setClob メソッド (SQLServerCallableStatement)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

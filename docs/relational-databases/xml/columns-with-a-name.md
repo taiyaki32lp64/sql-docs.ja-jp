@@ -1,7 +1,7 @@
 ---
 title: 名前のある列 | Microsoft Docs
-ms.custom: ''
-ms.date: 03/01/2017
+ms.custom: fresh2019may
+ms.date: 05/22/2019
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
@@ -10,19 +10,20 @@ ms.topic: conceptual
 helpviewer_keywords:
 - names [SQL Server], columns with
 ms.assetid: c994e089-4cfc-4e9b-b7fc-e74f6014b51a
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: 1df8cfd097e66853ab549360e1df6faf044ae80b
-ms.sourcegitcommit: bfa10c54e871700de285d7f819095d51ef70d997
+author: MightyPen
+ms.author: genemi
+ms.openlocfilehash: 855f7c079d592c095ce3754cd5c6fc799139324e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/14/2019
-ms.locfileid: "54255847"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68113051"
 ---
 # <a name="columns-with-a-name"></a>名前のある列
+
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
-  行セット内の名前のある列が、大文字と小文字を区別して結果の XML にマップされる条件を次に示します。  
+
+行セット内の名前のある列が、大文字と小文字を区別して結果の XML にマップされる条件を次に示します。  
   
 -   列名がアット マーク (\@) で始まる場合。  
   
@@ -37,20 +38,17 @@ ms.locfileid: "54255847"
 ## <a name="column-name-starts-with-an-at-sign-"></a>列名がアット マーク (\@) で始まる場合  
  列名がアット マーク (\@) で始まり、スラッシュ (/) を含んでいない場合は、対応する列値を持つ `row` 要素の属性が作成されます。 たとえば、次のクエリは 2 列 (\@PmId、Name) の行セットを返します。 結果の XML では、対応する `row` 要素に **PmId** 属性が追加され、ProductModelID の値が割り当てられます。  
   
-```  
-  
+```sql
 SELECT ProductModelID as "@PmId",  
        Name  
 FROM Production.ProductModel  
 WHERE ProductModelID=7  
-FOR XML PATH   
-go  
-  
+FOR XML PATH;
 ```  
   
  結果を次に示します。  
   
-```  
+```xml
 <row PmId="7">  
   <Name>HL Touring Frame</Name>  
 </row>  
@@ -58,13 +56,12 @@ go
   
  属性は、同一レベルでは要素ノード、テキスト ノードなどの他の種類のノードよりも前に指定する必要があります。 次のクエリはエラーを返します。  
   
-```  
+```sql
 SELECT Name,  
        ProductModelID as "@PmId"  
 FROM Production.ProductModel  
 WHERE ProductModelID=7  
-FOR XML PATH   
-go  
+FOR XML PATH;
 ```  
   
 ## <a name="column-name-does-not-start-with-an-at-sign-"></a>列名がアット マーク (\@) で始まらない場合  
@@ -72,14 +69,14 @@ go
   
  次のクエリでは列名 result が指定されています。 したがって、`row` 要素には `result` 子要素が追加されます。  
   
-```  
+```sql
 SELECT 2+2 as result  
-for xml PATH  
+for xml PATH;
 ```  
   
  結果を次に示します。  
   
-```  
+```xml
 <row>  
   <result>4</result>  
 </row>  
@@ -87,22 +84,22 @@ for xml PATH
   
  次のクエリでは、**xml** 型の Instructions 列に対して指定した XQuery から返される XML に対応する列の名前として、ManuWorkCenterInformation を指定しています。 したがって、`row` 要素の子として、`ManuWorkCenterInformation` 要素が追加されます。  
   
-```  
-SELECT   
-       ProductModelID,  
-       Name,  
-       Instructions.query('declare namespace MI="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions";  
-                /MI:root/MI:Location   
-              ') as ManuWorkCenterInformation  
+```sql
+SELECT
+  ProductModelID,  
+  Name,  
+  Instructions.query(
+    'declare namespace MI="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions";
+     /MI:root/MI:Location
+    ') as ManuWorkCenterInformation  
 FROM Production.ProductModel  
 WHERE ProductModelID=7  
-FOR XML PATH   
-go  
+FOR XML PATH;
 ```  
   
  結果を次に示します。  
   
-```  
+```xml
 <row>  
   <ProductModelID>7</ProductModelID>  
   <Name>HL Touring Frame</Name>  
@@ -119,20 +116,20 @@ go
   
  たとえば次のクエリは、従業員の ID と名前を返します。従業員名は、First、Middle、および Last から構成される複合型の要素 EmpName で表現されます。  
   
-```  
+```sql
 SELECT EmployeeID "@EmpID",   
        FirstName  "EmpName/First",   
        MiddleName "EmpName/Middle",   
        LastName   "EmpName/Last"  
 FROM   HumanResources.Employee E, Person.Contact C  
-WHERE  E.EmployeeID = C.ContactID  
-AND    E.EmployeeID=1  
-FOR XML PATH  
+WHERE  E.EmployeeID = C.ContactID  AND
+       E.EmployeeID=1  
+FOR XML PATH;
 ```  
   
  PATH モードでは、列名は XML を作成する際のパスとして使用されます。 従業員 ID の値を含む列名は '\@' で始まっているため、**EmpID** 属性が `row` 要素に追加されます。 それ以外のすべての列の列名には、階層を示すスラッシュ ('/') が含まれています。 結果の XML では、`row` 要素の下に `EmpName` 子要素があり、`EmpName` 子要素には `First`、`Middle`、および `Last` 子要素があります。  
   
-```  
+```xml
 <row EmpID="1">  
   <EmpName>  
     <First>Gustavo</First>  
@@ -143,21 +140,21 @@ FOR XML PATH
   
  この従業員のミドル ネームは NULL です。既定では、要素や属性がない状態に NULL 値がマップされます。 値が NULL であっても要素を生成するには、次のクエリのように XSINIL を指定した ELEMENTS ディレクティブを使用します。  
   
-```  
+```sql
 SELECT EmployeeID "@EmpID",   
        FirstName  "EmpName/First",   
        MiddleName "EmpName/Middle",   
        LastName   "EmpName/Last"  
 FROM   HumanResources.Employee E, Person.Contact C  
-WHERE  E.EmployeeID = C.ContactID  
-AND    E.EmployeeID=1  
-FOR XML PATH, ELEMENTS XSINIL  
+WHERE  E.EmployeeID = C.ContactID  AND
+       E.EmployeeID=1  
+FOR XML PATH, ELEMENTS XSINIL;
 ```  
   
  結果を次に示します。  
   
-```  
-<row xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"   
+```xml
+<row xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
       EmpID="1">  
   <EmpName>  
     <First>Gustavo</First>  
@@ -171,7 +168,7 @@ FOR XML PATH, ELEMENTS XSINIL
   
  次のクエリでは従業員の ID と名前以外に住所を取得します。 住所列の列名のパスにより、`row` 要素に `Address` 子要素が追加され、`Address` 要素の子要素として詳しい住所が追加されます。  
   
-```  
+```sql
 SELECT EmployeeID   "@EmpID",   
        FirstName    "EmpName/First",   
        MiddleName   "EmpName/Middle",   
@@ -179,16 +176,18 @@ SELECT EmployeeID   "@EmpID",
        AddressLine1 "Address/AddrLine1",  
        AddressLine2 "Address/AddrLIne2",  
        City         "Address/City"  
-FROM   HumanResources.Employee E, Person.Contact C, Person.Address A  
+FROM   HumanResources.Employee E,
+       Person.Contact C,
+       Person.Address A  
 WHERE  E.EmployeeID = C.ContactID  
 AND    E.AddressID = A.AddressID  
 AND    E.EmployeeID=1  
-FOR XML PATH  
+FOR XML PATH;
 ```  
   
  結果を次に示します。  
   
-```  
+```xml
 <row EmpID="1">  
   <EmpName>  
     <First>Gustavo</First>  
@@ -207,7 +206,7 @@ FOR XML PATH
 ## <a name="one-column-has-a-different-name"></a>名前の異なる列がある場合  
  変更を加えた次のクエリに示すように、異なる名前の列が間にある場合、グループは分割されます。 上のクエリで示した FirstName、MiddleName、および LastName から構成されるグループは、FirstName 列と MiddleName 列の間に住所列を追加すると分割されます。  
   
-```  
+```sql
 SELECT EmployeeID "@EmpID",   
        FirstName "EmpName/First",   
        AddressLine1 "Address/AddrLine1",  
@@ -215,18 +214,20 @@ SELECT EmployeeID "@EmpID",
        City "Address/City",  
        MiddleName "EmpName/Middle",   
        LastName "EmpName/Last"  
-FROM   HumanResources.EmployeeAddress E, Person.Contact C, Person.Address A  
+FROM   HumanResources.EmployeeAddress E,
+       Person.Contact C,
+       Person.Address A  
 WHERE  E.EmployeeID = C.ContactID  
 AND    E.AddressID = A.AddressID  
 AND    E.EmployeeID=1  
-FOR XML PATH  
+FOR XML PATH;
 ```  
   
  このクエリの結果、`EmpName` 要素が 2 つ作成されます。 最初の `EmpName` 要素には `FirstName` 子要素が、2 番目の `EmpName` 要素には `MiddleName` 子要素と `LastName` 子要素が含まれます。  
   
  結果を次に示します。  
   
-```  
+```xml
 <row EmpID="1">  
   <EmpName>  
     <First>Gustavo</First>  

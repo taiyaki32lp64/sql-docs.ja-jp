@@ -12,16 +12,15 @@ helpviewer_keywords:
 - bulk importing [SQL Server], examples
 - bulk exporting [SQL Server], examples
 ms.assetid: 27da45a0-c1f4-4bf4-ab24-6196e80d3834
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
+author: MashaMSFT
+ms.author: mathoma
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 2605b777e4cb7adfbf04ee0ebace0e76868b8a98
-ms.sourcegitcommit: ef15fa253d98c62538bf9b6fe191af7f8ef8f6c8
+ms.openlocfilehash: a95168f9c932b187a77d0d8e97511fd0070ea8ba
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/24/2018
-ms.locfileid: "49991161"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68035682"
 ---
 # <a name="humanresourcesmyteam-sample-table-sql-server"></a>HumanResources.myTeam サンプル テーブル (SQL Server)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -35,7 +34,7 @@ ms.locfileid: "49991161"
 |[列]|データ型|NULL 値の許容|[説明]|  
 |------------|---------------|-----------------|-----------------|  
 |**EmployeeID**|**smallint**|不可|行の主キー。 チーム メンバーの従業員 ID。|  
-|**名前**|**nvarchar (50)**|不可|チーム メンバーの名前。|  
+|**[名前]**|**nvarchar (50)**|不可|チーム メンバーの名前。|  
 |**Title**|**nvarchar (50)**|[可]|チームにおける従業員の肩書き。|  
 |**背景情報**|**nvarchar (50)**|不可|行が最後に更新された日時 (既定値)。|  
   

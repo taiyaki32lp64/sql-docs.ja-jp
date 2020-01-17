@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 ms.assetid: 8464ab9d-afe1-4490-955f-9f3319bcbf8d
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: adabb736dd34b35ee98f4ed46b84fd9205d504b5
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: e2b54bbbd6b989890c1d31a545c95117c4b6cbe2
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56012133"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66109704"
 ---
 # <a name="create-a-data-alert-in-data-alert-designer"></a>警告デザイナーでのデータ警告の作成
   データ警告の定義は、データ警告デザイナーで作成します。 作成した警告定義は、保存後、再度データ警告デザイナーで開いて編集し、保存し直すことができます。 警告定義の編集の詳細については、「 [データ警告マネージャーでのデータ警告の管理](manage-my-data-alerts-in-data-alert-manager.md) 」および「 [警告デザイナーでのデータ警告の編集](edit-a-data-alert-in-alert-designer.md)」を参照してください。  
@@ -65,7 +64,7 @@ ms.locfileid: "56012133"
   
      一覧表示される比較演算子は、選択した列のデータ型によって異なります。 日付データ型の列の場合、ルールのしきい値の横にカレンダーのアイコンが表示されます。 カレンダーの日付をクリックするか日付を入力してデータを入力できます。  
   
-     データ警告デザイナーでは、2 つの比較モードを提供します。**値入力モード**と**フィールド選択モード**します。 既定のモードは **[値入力モード]** です。 OR 句は、 **[値入力モード]** で **is** 比較を使用している場合にのみ追加できます。  
+     データ警告デザイナーには 2 つの比較モードが用意されています。**[値入力モード]** と **[フィールドの選択モード]** です。 既定のモードは **[値入力モード]** です。 OR 句は、 **[値入力モード]** で **is** 比較を使用している場合にのみ追加できます。  
   
 9. OR 句を追加するには、下矢印をクリックし、 **[値入力モード]** をクリックします。  
   
@@ -116,7 +115,7 @@ ms.locfileid: "56012133"
   
 22. **[保存]** をクリックします。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [データ警告デザイナー](../../2014/reporting-services/data-alert-designer.md)   
  [警告管理者用のデータ警告マネージャー](../../2014/reporting-services/data-alert-manager-for-alerting-administrators.md)   
  [Reporting Services Data Alerts](../ssms/agent/alerts.md)  

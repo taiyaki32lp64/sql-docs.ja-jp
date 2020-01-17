@@ -10,11 +10,11 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: 056f52a9cd22c162354dc0467394486b3427e745
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48121168"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63011296"
 ---
 # <a name="transparent-data-encryption-with-azure-sql-database"></a>Azure SQL Database での Transparent Data Encryption
 参照してください[Azure SQL Database での Transparent Data Encryption](../../database-engine/transparent-data-encryption-with-azure-sql-database.md)します。

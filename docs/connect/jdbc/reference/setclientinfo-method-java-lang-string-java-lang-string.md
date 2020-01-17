@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 8d050831-8305-48a8-bd22-207932111040
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 6ad28a2c578a4026d4152bb7056b00e8d3a05afd
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 7673bf2aff3d5ea60966a8594d3b4ab13950f92d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47667326"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67974634"
 ---
 # <a name="setclientinfo-method-javalangstring-javalangstring"></a>setClientInfo (java.lang.String, java.lang.String) メソッド
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -44,7 +43,7 @@ public void setClientInfo (java.lang.String name,
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- この setClientInfo メソッドは、java.sql.Connection インターフェイスの setClientInfo メソッドによって指定されます。  
+ この setClientInfo メソッドは、java. .sql. 接続インターフェイスの setClientInfo メソッドによって指定されます。  
   
  [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)] ではクライアント情報のプロパティをサポートしていません。 JDBC Driver 2.0 では、このメソッドはプロパティの警告を生成します。 アプリケーションは、[SQLServerConnection](../../../connect/jdbc/reference/sqlserverconnection-class.md) クラスの [getWarnings](../../../connect/jdbc/reference/getwarnings-method-sqlserverconnection.md) メソッドを使用して警告を取得する必要があります。  
   

@@ -17,11 +17,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 0643c6fbf8e9a6aa649d4d335117bcb4f5b35208
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52803074"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68206853"
 ---
 # <a name="maintenance-plans"></a>メンテナンス プラン
   メンテナンス プランでは、データベースを最適化したり、データベースを定期的にバックアップしたり、データベースの不整合をなくしたりするために必要なタスクのワークフローを作成します。 メンテナンス プラン ウィザードでも主要なメンテナンス プランを作成できますが、プランを手動で作成するとより柔軟性が高くなります。  
@@ -56,7 +56,7 @@ ms.locfileid: "52803074"
   
 -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェント ジョブを実行します。 これにより、さまざまなアクションを実行するジョブと、それらのジョブを実行するメンテナンス プランを作成できます。  
   
- メンテナンス タスクで生成される結果は、レポートとしてテキスト ファイルに書き込むことや、`sysmaintplan_log` 内のメンテナンス プラン用のテーブルである `sysmaintplan_logdetail` や `msdb` に書き込むことができます。 ログ ファイル ビューアーで結果を参照するには、**[メンテナンス プラン]** を右クリックし、**[履歴の表示]** をクリックします。  
+ メンテナンス タスクで生成される結果は、レポートとしてテキスト ファイルに書き込むことや、`sysmaintplan_log` 内のメンテナンス プラン用のテーブルである `sysmaintplan_logdetail` や `msdb` に書き込むことができます。 ログ ファイル ビューアーで結果を参照するには、 **[メンテナンス プラン]** を右クリックし、 **[履歴の表示]** をクリックします。  
   
 ## <a name="related-tasks"></a>Related Tasks  
  メンテナンス プランの基礎知識については、次の各トピックを参照してください。  

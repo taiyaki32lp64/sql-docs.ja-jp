@@ -7,15 +7,15 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: b736aa6d-c154-44a0-be08-f25733fca1d9
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 6152a2a06a6814a5e31fd744e9080b0ef53d536c
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 202fd03beea5ec2fbf4b3fc29978ba9e112010df
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52790834"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62900836"
 ---
 # <a name="sql-server-destination-custom-properties"></a>SQL Server 変換先のカスタム プロパティ
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 変換先には、カスタム プロパティと、すべてのデータ フロー コンポーネントに共通するプロパティの両方があります。  
@@ -44,6 +44,6 @@ ms.locfileid: "52790834"
  詳細については、「 [SQL Server 変換先](sql-server-destination.md)」をご覧ください。  
   
 ## <a name="see-also"></a>参照  
- [Common Properties](../common-properties.md)  
+ [共通プロパティ](../common-properties.md)  
   
   

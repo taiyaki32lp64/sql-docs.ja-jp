@@ -14,11 +14,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 81e4bafbd596894a8cecbeb707a5d8be698c1f3b
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52764404"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63031936"
 ---
 # <a name="options-sql-server-object-explorer-scripting-page"></a>オプション (SQL Server オブジェクト エクスプ ローラー-スクリプト作成 ページ)
   このページを使用すると、 **オブジェクト エクスプローラー**内にあるオブジェクトのコンテキスト メニューの次の各コマンドに適用されるスクリプト オプションを設定できます。  
@@ -39,7 +39,7 @@ ms.locfileid: "52764404"
   
 ### <a name="general-scripting-options"></a>[全般スクリプト作成オプション]  
  **[各ステートメントを区切る]**  
- バッチ区切り記号を使用して、個々の [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントを区切ります。 **クエリ エディター**の既定のバッチ区切り記号を変更するには、 **[ツール]**/**[オプション]**/**[クエリ実行]**/**[SQL Server]**/**[全般]**/**[バッチ区切り記号]** の順に選択します。 既定値は False です。 詳細については、次を参照してください。[移動&#40;TRANSACT-SQL&#41;](/sql/t-sql/language-elements/sql-server-utilities-statements-go)します。  
+ バッチ区切り記号を使用して、個々の [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントを区切ります。 **クエリ エディター**の既定のバッチ区切り記号を変更するには、 **[ツール]** / **[オプション]** / **[クエリ実行]** / **[SQL Server]** / **[全般]** / **[バッチ区切り記号]** の順に選択します。 既定値は False です。 詳細については、次を参照してください。[移動&#40;TRANSACT-SQL&#41;](/sql/t-sql/language-elements/sql-server-utilities-statements-go)します。  
   
  **[説明用ヘッダーを含める]**  
  スクリプトをオブジェクトごとのセクションに分割し、説明用のコメントを追加します。 既定値は True です。 詳細については、次を参照してください。[コメント&#40;TRANSACT-SQL&#41;](/sql/t-sql/language-elements/comment-transact-sql)します。  
@@ -82,7 +82,7 @@ ms.locfileid: "52764404"
  次のオプションは、テーブルまたはビューのスクリプトのみに適用されます。  
   
  **[ユーザー定義データ型から基本データ型に変換します]**  
- ユーザー定義データ型を元の基本型に変換します。 スクリプトを実行するデータベースに、ソース データベースのユーザー定義データ型が存在しない場合は、True を使用します。 ユーザー定義データ型を保持する場合は、False を使用します。 既定値は False です。 詳細については、次を参照してください。[の種類の作成 & #40 です。TRANSACT-SQL と #41 です](/sql/t-sql/statements/create-type-transact-sql)。  
+ ユーザー定義データ型を元の基本型に変換します。 スクリプトを実行するデータベースに、ソース データベースのユーザー定義データ型が存在しない場合は、True を使用します。 ユーザー定義データ型を保持する場合は、False を使用します。 既定値は False です。 詳細については、[の種類の作成 & #40 を参照してください。TRANSACT-SQL と #41 です](/sql/t-sql/statements/create-type-transact-sql)。  
   
  **[SET ANSI PADDING コマンドを生成する]**  
  各 CREATE TABLE ステートメントの前後に SET ANSI_PADDING ステートメントを追加します。 既定値は True です。 詳細については、「[SET ANSI_PADDING &#40;Transact-SQL&#41;](/sql/t-sql/statements/set-ansi-padding-transact-sql)」を参照してください。  

@@ -12,13 +12,13 @@ helpviewer_keywords:
 ms.assetid: 667a5e4a-6848-4973-a72d-1287f64718ac
 author: Shamikg
 ms.author: Shamikg
-manager: v-thobro
-ms.openlocfilehash: 09cfb2bb9d4d07f410ad901d3fcf0d2a458e00f3
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: shamikg
+ms.openlocfilehash: 25cd6eb9c811548e6300c944c65c5530185d46e8
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47781000"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68264503"
 ---
 # <a name="getting-started-with-ssma--for-oracle-console-oracletosql"></a>SSMA for Oracle コンソール入門 (OracleToSQL)
 このセクションを起動し、Oracle のコンソール アプリケーションを使用する手順について説明します。 一覧表示、ここで、規則で使用されます SSMA コンソールの一般的な出力ウィンドウ。  

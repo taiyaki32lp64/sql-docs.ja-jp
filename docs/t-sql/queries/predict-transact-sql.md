@@ -1,11 +1,11 @@
 ---
 title: PREDICT (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 12/03/2018
+ms.date: 10/24/2019
 ms.prod: sql
 ms.prod_service: sql-database
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: machine-learning
 ms.topic: language-reference
 f1_keywords:
 - PREDICT
@@ -14,21 +14,20 @@ dev_langs:
 - TSQL
 helpviewer_keywords:
 - PREDICT clause
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
+author: dphansen
+ms.author: davidph
 monikerRange: '>=sql-server-2017||=azuresqldb-current||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: c909ac69819fc66f734b33fd8b2badce6069cdef
-ms.sourcegitcommit: 7419a8c957c212e60422a5d87a253683031dc467
+ms.openlocfilehash: c97363e7f13c3b42cf447ecf69929171544f3a6b
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/05/2018
-ms.locfileid: "52951634"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72907259"
 ---
 # <a name="predict-transact-sql"></a>PREDICT (Transact-SQL)  
 [!INCLUDE[tsql-appliesto-ss2017-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-asdb-xxxx-xxx-md.md)]
 
-格納されているモデルに基づいて予測値やスコアを生成します。  
+格納されているモデルに基づいて予測値やスコアを生成します。 詳細については、「[PREDICT T-SQL 関数を使用したネイティブ スコアリング](../../advanced-analytics/sql-native-scoring.md)」をご覧ください。
 
 ## <a name="syntax"></a>構文
 
@@ -93,7 +92,7 @@ WITH 句は、`PREDICT` 関数によって返される出力のスキーマを�
 
 ## <a name="remarks"></a>Remarks
 
-`PREDICT` 関数は、SQL Server 2017 以降のすべてのエディションでサポートされています。 このサポートには、SQL Server 2017 on Linux が含まれます。 `PREDICT` は、クラウドの Azure SQL Database でもサポートされます。 これらのサポートはすべて、他の機械学習機能が有効になっているかどうかに関係なく機能します。
+`PREDICT` 関数は、SQL Server 2017 以降のすべてのエディションで、Windows および Linux 上でサポートされています。 `PREDICT` は、クラウドの Azure SQL Database でもサポートされます。 これらのサポートはすべて、他の機械学習機能が有効になっているかどうかに関係なく機能します。
 
 `PREDICT` 関数を使用するサーバーに、R、Python、または別の機械学習言語をインストールする必要はありません。 別の環境でモデルをトレーニングし、`PREDICT` で使用するためにそれを SQL Server テーブルに保存することも、保存されたモデルがある SQL Server の別のインスタンスからモデルを呼び出すこともできます。
 
@@ -180,3 +179,7 @@ FROM PREDICT( MODEL = @logitObj,  DATA = new_kyphosis_data AS d,
   computeStdErr = 1, interval = 'confidence')
 WITH (pred float, stdErr float, pred_lower float, pred_higher float) AS p;
 ```
+
+## <a name="next-steps"></a>次の手順
+
+- [PREDICT T-SQL 関数を使用したネイティブ スコアリング](../../advanced-analytics/sql-native-scoring.md)

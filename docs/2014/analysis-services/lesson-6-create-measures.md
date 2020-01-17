@@ -4,21 +4,20 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: 01bd2ad7-09b7-49ae-ad80-83f25da301aa
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: f7fdd611d1757712baa13e58ba31d78a2081f3d7
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: ef207028ab1b4f6bc084f3f4e515ae37630b771d
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48213242"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66078431"
 ---
-# <a name="lesson-7-create-measures"></a>レッスン 7: メジャーの作成
+# <a name="lesson-7-create-measures"></a>レッスン 7: メジャーを作成する
   このレッスンでは、モデルに含められるメジャーを作成します。 前のレッスンで作成した計算列と同様、メジャーは、基本的には、DAX 数式を使用して作成される計算です。 ただし、計算列とは違い、メジャーはユーザーが選択した "*フィルター*" に基づいて評価されます (たとえば、PivotTable 内の行ラベル フィールドに追加された特定の列やスライサーなど)。   フィルター内の各セルの値は、適用されたメジャーによって計算されます。 メジャーは強力で柔軟な計算なので、ほとんどすべてのテーブル モデルに含めて、数値データに対する動的な計算を実行できます。 詳細については、「[メジャー (SSAS テーブル)](tabular-models/measures-ssas-tabular.md)」を参照してください。  
   
  メジャーを作成するには、メジャー グリッドを使用します。 既定では、各テーブルに空のメジャー グリッドがあります。ただし、通常はすべてのテーブルにメジャーを作成することはありません。 メジャー グリッドは、モデル デザイナーのデータ ビューで、テーブルの下に表示されます。 テーブルのメジャー グリッドを表示または非表示にするには、 **[テーブル]** メニューをクリックし、 **[メジャー グリッドの表示]** をクリックします。  
@@ -27,10 +26,10 @@ ms.locfileid: "48213242"
   
  このレッスンでは、数式バーに DAX 数式を入力する方法と、オート SUM 機能を使用する方法の両方でメジャーを作成します。  
   
- このレッスンの推定所要時間: **30 分**  
+ このレッスンを完了するまでに時間を推定するには。**30 分**  
   
 ## <a name="prerequisites"></a>前提条件  
- このトピックはテーブル モデリング チュートリアルの一部であり、チュートリアルでの順番に従って実行する必要があります。 このレッスンの実習を行う前に、前のレッスン「[レッスン 6: 計算列の作成](lesson-5-create-calculated-columns.md)」を完了している必要があります。  
+ このトピックはテーブル モデリング チュートリアルの一部であり、チュートリアルでの順番に従って実行する必要があります。 このレッスンでは、タスクを実行する前に、前のレッスンを完了が必要があります。[レッスン 6:計算列を作成](lesson-5-create-calculated-columns.md)です。  
   
 ## <a name="create-measures"></a>メジャーを作成する  
   
@@ -92,13 +91,13 @@ ms.locfileid: "48213242"
     |[メジャー名]|[列]|オート SUM (∑)|[数式]|  
     |------------------|------------|-------------------|-------------|  
     |Internet Order Lines Count|Sales Order Line Number|Count|=COUNT([Sales Order Line Number])|  
-    |Internet Total Units|Order Quantity|SUM|=SUM([Order Quantity])|  
-    |Internet Total Discount Amount|Discount Amount|SUM|=SUM([Discount Amount])|  
-    |Internet Total Product Cost|Total Product Cost|SUM|=SUM([Total Product Cost])|  
-    |Internet Total Sales|Sales Amount|SUM|=SUM([Sales Amount])|  
-    |Internet Total Margin|Margin|SUM|=SUM([Margin])|  
-    |Internet Total Tax Amt|Tax Amt|SUM|=SUM([Tax Amt])|  
-    |Internet Total Freight|Freight|SUM|=SUM([Freight])|  
+    |Internet Total Units|Order Quantity|Sum|=SUM([Order Quantity])|  
+    |Internet Total Discount Amount|Discount Amount|Sum|=SUM([Discount Amount])|  
+    |Internet Total Product Cost|Total Product Cost|Sum|=SUM([Total Product Cost])|  
+    |Internet Total Sales|Sales Amount|Sum|=SUM([Sales Amount])|  
+    |Internet Total Margin|Margin|Sum|=SUM([Margin])|  
+    |Internet Total Tax Amt|Tax Amt|Sum|=SUM([Tax Amt])|  
+    |Internet Total Freight|Freight|Sum|=SUM([Freight])|  
   
 2.  メジャー グリッド内で空のセルをクリックし、数式バーを使用して、次の名前のメジャーを作成します。  
   
@@ -117,6 +116,6 @@ ms.locfileid: "48213242"
  Internet Sales テーブル用に作成されたメジャーは、ユーザー選択のフィルターによって定義された項目に関する重要な財務データ (売上、コスト、利益率など) を分析するためにも使用できます。  
   
 ## <a name="next-step"></a>次の手順  
- このチュートリアルを続行するには、次のレッスン「[レッスン 8: 主要業績評価指標の作成](lesson-7-create-key-performance-indicators.md)」に進んでください。  
+ このチュートリアルを続行するには、次のレッスンに移動します。[レッスン 8: 主要業績評価指標の作成](lesson-7-create-key-performance-indicators.md)です。  
   
   

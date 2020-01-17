@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 77938da0-2afd-4455-8826-f4a6a9440cb3
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: d37032b9c13d9447ba5879e5e29bd91256c75398
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: 92b80f727ce87606b0c1c58954b0743734880422
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54133440"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68021257"
 ---
 # <a name="queue-reader-agent-security"></a>[キュー リーダー エージェントのセキュリティ]
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

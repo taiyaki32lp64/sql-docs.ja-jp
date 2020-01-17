@@ -12,21 +12,20 @@ helpviewer_keywords:
 ms.assetid: 5f25e20b-a4ef-42da-aeb6-00e0510fb1cc
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 05cc6dc2647b5297b8d7176cd4bc70261b78cb71
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: f29be5e03a6cc9c1c91809db2b8ec7c686e90f11
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47733060"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67898628"
 ---
 # <a name="sqlgettypeinfo-visual-foxpro-odbc-driver"></a>SQLGetTypeInfo (Visual FoxPro ODBC ドライバー)
 > [!NOTE]  
 >  このトピックでには、Visual FoxPro ODBC ドライバー固有の情報が含まれています。 この関数の詳細については、該当するトピックを参照してください。 [ODBC API リファレンス](../../odbc/reference/syntax/odbc-api-reference.md)します。  
   
- サポート: 完全な  
+ サポート:[完全]  
   
- レベル 1 の ODBC API 準拠:  
+ ODBC API 準拠:レベル 1  
   
  データ ソースでサポートされるデータ型に関する情報を返します。 ドライバーは、SQL 結果セット内の情報を返します。 次の表は、ODBC データ型と対応する Visual FoxPro データ型を示します。  
   
@@ -51,6 +50,6 @@ ms.locfileid: "47733060"
 |SQL_VARBINARY|メモ (バイナリ) *、一般的な|  
 |SQL_VARCHAR|文字|  
   
- * 既定の種類  
+ \* 既定の種類  
   
  Visual FoxPro データの種類の詳細については、次を参照してください。 [CREATE TABLE](../../odbc/microsoft/create-table-sql-command.md)します。 この関数の詳細については、次を参照してください。 [SQLGetTypeInfo](../../odbc/reference/syntax/sqlgettypeinfo-function.md)で、 *ODBC プログラマ リファレンス*します。

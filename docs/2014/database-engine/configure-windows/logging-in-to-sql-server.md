@@ -21,12 +21,12 @@ ms.assetid: 77158a9a-d638-4818-90a1-cb2eb57df514
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 7f054808a5432c7be95eeb419308012603f46069
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: d1536592d7a5463dc1e15df20aee4fe188323cf5
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53369314"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62782115"
 ---
 # <a name="logging-in-to-sql-server"></a>SQL Server へのログイン
   任意のグラフィカルな管理ツール、またはコマンド プロンプトを使用して、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスにログインできます。  
@@ -71,7 +71,7 @@ ms.locfileid: "53369314"
 ## <a name="verifying-your-connection-protocol"></a>接続プロトコルの確認  
  [!INCLUDE[ssDE](../../includes/ssde-md.md)]に接続している場合、次のクエリは現在の接続に使用されているプロトコルと認証方法 (NTLM または Kerberos) を返し、接続が暗号化されているかどうかを示します。  
   
-```tsql  
+```sql  
 SELECT net_transport, auth_scheme, encrypt_option   
 FROM sys.dm_exec_connections   
 WHERE session_id = @@SPID;  

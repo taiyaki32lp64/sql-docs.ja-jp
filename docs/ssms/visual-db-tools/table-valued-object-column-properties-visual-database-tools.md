@@ -10,15 +10,14 @@ ms.topic: conceptual
 f1_keywords:
 - vdt.designers.properties.QueryViewColumn
 ms.assetid: 212d9bcd-aded-4313-a6b9-d7e2270e5954
-author: stevestein
-ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 81ab7f8547376344a1106a473f6f5ef69a3b1b9f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 020c695ecd85de811586b55f2b739caab1590b8f
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47792980"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68261474"
 ---
 # <a name="table-valued-object-column-properties-visual-database-tools"></a>テーブル値オブジェクト (列) のプロパティ (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -33,11 +32,11 @@ ms.locfileid: "47792980"
 **[IDENTITY] カテゴリ**  
 展開すると、 **[名前]** プロパティが表示されます。  
   
-**名前**  
+**[名前]**  
 選択した列の名前が表示されます。  
   
 **クエリ デザイナー カテゴリ**  
-展開すると、 **[NULL を許容]**、 **[照合順序]**、 **[長さ]**、 **[データ型]**、 **[精度]**、 **[スケール]**、 **[サイズ]** のプロパティが表示されます。  
+展開すると、 **[NULL を許容]** 、 **[照合順序]** 、 **[長さ]** 、 **[データ型]** 、 **[精度]** 、 **[スケール]** 、 **[サイズ]** のプロパティが表示されます。  
   
 **[NULL を許容]**  
 列のデータ型で NULL が許容されるかどうかが表示されます。  

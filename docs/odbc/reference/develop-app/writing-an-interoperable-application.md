@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 8b42b8ae-7862-4b63-a0b3-2a204e0c43a5
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 8e559eab5787a64b6bdf0850147d7d9128fc435c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: f24e50b7f6dd8b129a2777ce1132ec426b7ea182
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47757260"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68078983"
 ---
 # <a name="writing-an-interoperable-application"></a>相互運用可能なアプリケーションの作成
 アプリケーションでは、1 つ以上のドライバーに対して同じコードを使用するたびにそのコードがそれらのドライバーの間で相互運用可能な場合があります。 ほとんどの場合、これは、簡単な作業です。 たとえば、順方向専用カーソルに行をフェッチするコードは、すべてのドライバーは同じです。 場合によっては、難しくこれができます。 たとえば、SQL ステートメントで使用するための識別子を構築するコードは、識別子の場合、引用符で囲む、1 部、2 つの部分、および 3 つの部分の名前付け規則を考慮する必要があります。  

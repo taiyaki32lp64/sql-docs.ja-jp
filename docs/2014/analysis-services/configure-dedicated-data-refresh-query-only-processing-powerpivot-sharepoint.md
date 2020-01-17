@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: 5e027605-1086-4941-bb01-f315df8f829b
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 1c3b42834bc12048680c97465810832f5431441d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: eaf62d2bbe6e6becc21bbf5e870c9fe442c96f74
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48168188"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66087510"
 ---
 # <a name="configure-dedicated-data-refresh-or-query-only-processing-powerpivot-for-sharepoint"></a>データ更新専用またはクエリ専用処理 (PowerPivot for SharePoint を) 構成します。
   SharePoint 統合モードでは、データ更新専用の処理やクエリ専用の処理など、特定の種類の処理要求をサポートするように Analysis Services サーバー インスタンスを構成できます。 既定では、どちらの種類の読み込み要求も有効になっています。 これらのどちらかの種類を無効にすることで、専用のクエリ エンジンまたはデータ更新サーバーを作成することができます。  
@@ -62,7 +61,7 @@ ms.locfileid: "48168188"
   
 |設定|有効な値|説明|  
 |-------------|------------------|-----------------|  
-|既定値|RAM に基づいて計算されます。|既定値は、使用可能なメモリの量を 4 GB で除算して求められます。 既定値を式で計算することで、システムの容量に応じて設定を調整できるようになっています。<br /><br /> 注: 4 ギガバイト除数が実際の PowerPivot データ ソースの多数のサンプリングの RAM 使用量に基づいて選択します。 PowerPivot の物理的または論理的なアーキテクチャに基づくものではありません。|  
+|既定値|RAM に基づいて計算されます。|既定値は、使用可能なメモリの量を 4 GB で除算して求められます。 既定値を式で計算することで、システムの容量に応じて設定を調整できるようになっています。<br /><br /> 注:4 ギガバイト除数は、実際の PowerPivot データ ソースの多数のサンプリングの RAM 使用量に基づく選択されました。 PowerPivot の物理的または論理的なアーキテクチャに基づくものではありません。|  
 |最大値|CPU の数に基づいて計算されます。|指定できる同時ジョブの最大数は、コンピューターのプロセッサの数に基づきます。 たとえば、4 ソケットのクアッドコア コンピューターの場合、同時に実行できるジョブの最大数は 16 です。|  
   
 #### <a name="increasing-the-default-value-to-a-higher-value"></a>既定値を大きくする  
@@ -83,7 +82,7 @@ ms.locfileid: "48168188"
   
  各データ更新ジョブの負荷の特性は、更新するデータ ソースの数とサイズによって異なります。 1 つのデータ ソースから成る行数が少ないブックの方が、多数のデータ ソースから成る大規模な行セットのブックよりも負荷は少なくなります。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [SharePoint 2010 での PowerPivot データ更新](powerpivot-data-refresh-with-sharepoint-2010.md)  
   
   

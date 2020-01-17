@@ -14,11 +14,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 179e7aaea331ba565ca5afae7bd51754e23b9718
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48173222"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62876196"
 ---
 # <a name="differential-backups-sql-server"></a>差分バックアップ (SQL Server)
   このトピックで取り上げるバックアップと復元は、すべての [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データベースに当てはまります。  
@@ -72,7 +72,7 @@ ms.locfileid: "48173222"
 -   [データベースの差分バックアップの復元 &#40;SQL Server&#41;](restore-a-differential-database-backup-sql-server.md)  
   
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [バックアップの概要 &#40;SQL Server&#41;](backup-overview-sql-server.md)   
  [データベースの完全バックアップ &#40;SQL Server&#41;](full-database-backups-sql-server.md)   
  [データベースの全体復元 &#40;完全復旧モデル&#41;](complete-database-restores-full-recovery-model.md)   

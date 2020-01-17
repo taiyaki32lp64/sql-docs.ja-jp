@@ -19,11 +19,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 311285545abae9ae9f80b264204b88485aac71aa
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52812914"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63205707"
 ---
 # <a name="upgrade-database-diagrams-from-previous-editions-visual-database-tools"></a>旧エディションのデータベース ダイアグラムのアップグレード (Visual Database Tools)
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] でデータベース ダイアグラム化を設定すると、旧エディションの [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]データベース上に作成されたデータベース ダイアグラムは自動的にアップグレードされます。 ダイアグラムの表示の設定手順について[データベース ダイアグラム デザイナーの設定&#40;Visual Database Tools&#41;](visual-database-tools.md)します。  
@@ -38,7 +38,7 @@ ms.locfileid: "52812914"
   
      これにより、データベースに格納されたダイアグラムがアップグレードされます。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [データベース ダイアグラムの所有権について&#40;Visual Database Tools&#41;](understand-database-diagram-ownership-visual-database-tools.md)   
  [データベース ダイアグラム デザイナーの設定 (Visual Database Tools)](visual-database-tools.md)  
   

@@ -13,11 +13,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: dfaba668e4f2328610656db6a61f01960814bff0
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52784424"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68189507"
 ---
 # <a name="create-a-sql-server-agent-proxy"></a>Create a SQL Server Agent Proxy
   このトピックでは、 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] または [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] を使用して、 [!INCLUDE[tsql](../../includes/tsql-md.md)]で SQL Server エージェント プロキシを作成する方法について説明します。  
@@ -56,7 +56,7 @@ ms.locfileid: "52784424"
   
 ####  <a name="Permissions"></a> Permissions  
   
--   **sysadmin** 固定サーバー ロールのメンバーだけに、プロキシ アカウントを作成、変更、または削除できる権限があります。 以外のユーザーがメンバーの**sysadmin**固定サーバー ロールは、次のいずれかに追加する必要があります[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]エージェント固定データベース ロールで、 **msdb**プロキシを使用するデータベース。**SQLAgentUserRole**、 **SQLAgentReaderRole**、または**SQLAgentOperatorRole**します。  
+-   **sysadmin** 固定サーバー ロールのメンバーだけに、プロキシ アカウントを作成、変更、または削除できる権限があります。 固定サーバー ロール **sysadmin** のメンバーではないユーザーは、**msdb** データベースの次の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェント固定データベース ロールのいずれかに追加されないと、プロキシを使用できません。**SQLAgentUserRole**、**SQLAgentReaderRole**、**SQLAgentOperatorRole**。  
   
 -   プロキシに加えて資格情報を作成する場合は、`ALTER ANY CREDENTIAL` 権限が必要です。  
   

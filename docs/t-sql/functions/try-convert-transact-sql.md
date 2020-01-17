@@ -3,7 +3,7 @@ title: TRY_CONVERT (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
-ms.prod_service: database-engine, sql-database
+ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
 ms.technology: t-sql
 ms.topic: language-reference
@@ -15,20 +15,20 @@ dev_langs:
 helpviewer_keywords:
 - TRY_CONVERT function
 ms.assetid: 3e6e7825-6482-4cb2-a8c2-9abc99e265a6
-author: MashaMSFT
-ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 869215272d0600344721e047b9958ff01a72e228
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: MikeRayMSFT
+ms.author: mikeray
+monikerRange: = azuresqldb-current||>= sql-server-2016 ||>= sql-server-linux-2017||= sqlallproducts-allversions||>= aps-pdw-2016||= azure-sqldw-latest
+ms.openlocfilehash: ace985045db2bf10b1ef0e80a2b05ea3e0cb85ca
+ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47744260"
+ms.lasthandoff: 08/29/2019
+ms.locfileid: "70151963"
 ---
-# <a name="tryconvert-transact-sql"></a>TRY_CONVERT (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
+# <a name="try_convert-transact-sql"></a>TRY_CONVERT (Transact-SQL)
+[!INCLUDE[tsql-appliesto-ss2012-all-md](../../includes/tsql-appliesto-ss2012-all-md.md)]
 
-  キャストが成功した場合は、指定したデータ型にキャストされた値を返します。それ以外の場合は null を返します。  
+  指定されたデータ型へのキャストが成功した場合は、キャストされる値が返されます。それ以外の場合は、null が返されます。  
   
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -54,7 +54,7 @@ TRY_CONVERT ( data_type [ ( length ) ], expression [, style ] )
  許容される値の範囲は、*data_type* の値によって決まります。 *style* が null の場合、**TRY_CONVERT** は null を返します。  
   
 ## <a name="return-types"></a>戻り値の型  
- キャストが成功した場合は、指定したデータ型にキャストされた値を返します。それ以外の場合は null を返します。  
+ 指定されたデータ型へのキャストが成功した場合は、キャストされる値が返されます。それ以外の場合は、null が返されます。  
   
 ## <a name="remarks"></a>Remarks  
  **TRY_CONVERT** は渡された値を使用して、指定された *data_type* への変換を試みます。 キャストが成功した場合、**TRY_CONVERT** は指定された *data_type* と同じ値を返します。エラーが発生した場合は null が返されます。 ただし、明示的に許可されない変換を要求すると、**TRY_CONVERT** はエラーが発生して失敗します。  
@@ -65,8 +65,8 @@ TRY_CONVERT ( data_type [ ( length ) ], expression [, style ] )
   
 ## <a name="examples"></a>使用例  
   
-### <a name="a-tryconvert-returns-null"></a>A. TRY_CONVERT は null を返します。  
- 次の例では、キャストに失敗すると TRY_CONVERT は null を返します。  
+### <a name="a-try_convert-returns-null"></a>A. TRY_CONVERT は null を返します。  
+ 次の例は、キャストが失敗した場合に TRY_CONVERT から null が返されることを示しています。  
   
 ```sql  
 SELECT   
@@ -105,7 +105,7 @@ NULL
 (1 row(s) affected)  
 ```  
   
-### <a name="b-tryconvert-fails-with-an-error"></a>B. TRY_CONVERT でエラーが発生して失敗する  
+### <a name="b-try_convert-fails-with-an-error"></a>B. TRY_CONVERT でエラーが発生して失敗する  
  次の例では、キャストが明示的に許可されていない場合に TRY_CONVERT がエラーを返すことを示します。  
   
 ```sql  
@@ -119,7 +119,7 @@ GO
 Explicit conversion from data type int to xml is not allowed.  
 ```  
   
-### <a name="c-tryconvert-succeeds"></a>C. TRY_CONVERT が成功する  
+### <a name="c-try_convert-succeeds"></a>C. TRY_CONVERT が成功する  
  この例は、式を求められている形式にする必要があることを示しています。  
   
 ```  

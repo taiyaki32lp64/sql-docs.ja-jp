@@ -10,12 +10,12 @@ ms.assetid: 162d1392-39d2-4436-a4d9-ee5c47864c5a
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 95b67c3db68d1641f6025ddacc1fd1370f26738b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 3b1bc12baf31a0e1d5edb344c538341cf2ad1be0
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48129832"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62468338"
 ---
 # <a name="application-level-partitioning"></a>アプリケーション レベルのパーティション分割
   このサンプルでは、特定の日付の前か後どちらであるかによって、メモリ最適化テーブルかディスク ベース テーブルのいずれかにデータが保存される、アプリケーション レベルのパーティション分割を示します。 新しいまたはと等しいすべての注文、 *hotDate*は、メモリ最適化テーブルとすべての注文の前に、 *hotDate*ディスク ベース テーブルにします。 多くの同時トランザクションが含まれる極端な OLTP ワークロードを前提とします。 複数の同時実行トランザクションが *hotDate*を変更しようとしている場合でも、このビジネス ルール (メモリ最適化テーブルの最近の注文) を適用する必要があります。  
@@ -26,7 +26,7 @@ ms.locfileid: "48129832"
   
 ## <a name="code-listing"></a>コード リスト  
   
-```tsql  
+```sql  
 USE MASTER  
 GO  
   

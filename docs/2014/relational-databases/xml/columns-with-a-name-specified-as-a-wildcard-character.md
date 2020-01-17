@@ -9,15 +9,15 @@ ms.topic: conceptual
 helpviewer_keywords:
 - names [SQL Server], columns with
 ms.assetid: d9551df1-5bb4-4c0b-880a-5bb049834884
-author: douglaslMS
-ms.author: douglasl
+author: MightyPen
+ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 899ea4a4f60fb3e8981de4119697864a24f57093
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: f1ec180247a3df15af58f95e041a0c426a35cdb4
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53362801"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62637742"
 ---
 # <a name="columns-with-a-name-specified-as-a-wildcard-character"></a>名前をワイルドカード文字で指定した列
   列名にワイルドカード文字 (\*) を指定した場合は、列名が指定されていない場合のように、列の内容が挿入されます。 `xml` 型以外の列の場合は、次の例で示すように内容がテキスト ノードとして挿入されます。  
@@ -36,7 +36,7 @@ WHERE E.BusinessEntityID=1
 FOR XML PATH;  
 ```  
   
- これは、結果です。  
+ 結果を次に示します。  
   
  `<row EmpID="1">KenJS??nchez</row>`  
   

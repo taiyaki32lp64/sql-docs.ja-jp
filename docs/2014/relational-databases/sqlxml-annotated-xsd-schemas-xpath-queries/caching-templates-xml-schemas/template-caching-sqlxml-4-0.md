@@ -11,15 +11,15 @@ helpviewer_keywords:
 - cache [SQLXML]
 - templates [SQLXML], caching
 ms.assetid: 73e151c6-b24e-4422-a116-51e0846bc6f5
-author: douglaslMS
-ms.author: douglasl
+author: MightyPen
+ms.author: genemi
 manager: craigg
-ms.openlocfilehash: d38459f470bf75d12d9fcd69da96a4d772776c01
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 0024066a5a687828cc59d5053d62e891bbf198d5
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52793714"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66013210"
 ---
 # <a name="template-caching-sqlxml-40"></a>テンプレートのキャッシュ (SQLXML 4.0)
   テンプレートをキャッシュすると、パフォーマンスが大幅に向上します。 テンプレートのキャッシュを設定している場合、テンプレートは初回実行時にメモリに残るので、 以降のテンプレート実行でパフォーマンスが向上します。  
@@ -42,7 +42,7 @@ HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\MSSQLServer\Client\SQLXML4\TemplateCacheSi
 > [!NOTE]  
 >  テンプレートのパラメーターとコマンド プロパティはキャッシュされません。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [スキーマ キャッシュ&#40;SQLXML 4.0&#41;](schema-caching-sqlxml-4-0.md)   
  [XSL のキャッシュ&#40;SQLXML 4.0&#41;](xsl-caching-sqlxml-4-0.md)  
   

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - predictions [Analysis Services], DMX prediction queries
@@ -19,12 +18,12 @@ ms.assetid: a8952427-fd8c-4300-8f62-25f57ac1be0c
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 8b5d5ab4c6b62dd9afd4ac922b0604c6ffdbd075
-ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
+ms.openlocfilehash: 7c59d3a18c1fd36f82e8ea60e42d1b9f6e2f34c2
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50148237"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66084978"
 ---
 # <a name="data-mining-query-interfaces"></a>データ マイニング クエリ インターフェイス
   データ マイニング クエリは、データ マイニング拡張機能 (DMX) の言語に基づいています。 DMX は、分類、リスク分析、推奨設定の生成、線形回帰などのすべての予測およびモデリングのタスクに使用できます。 またモデル処理時に生成されたパターンおよび統計を取得することもできます。  

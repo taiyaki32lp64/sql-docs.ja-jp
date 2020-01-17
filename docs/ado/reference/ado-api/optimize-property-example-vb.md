@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 652194af-cfa4-4aa0-a6d6-fa409bbc3f98
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 673d1508db939e1b689dca03e2cdf390fc075e65
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: f36c0c574917e4f73533a400ea60f363aeb9d74b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47786630"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67917812"
 ---
 # <a name="optimize-property-example-vb"></a>Optimize プロパティの例 (VB)
 この例では、[フィールド](../../../ado/reference/ado-api/field-object.md)オブジェクトの動的**最適化**プロパティ。 ***Zip***のフィールド、***作成者***テーブルに、 ***Pubs***データベースのインデックス付けされていません。 設定、[最適化](../../../ado/reference/ado-api/optimize-property-dynamic-ado.md)プロパティを**True**上、 ***zip***フィールドのパフォーマンスを向上させるインデックスの構築に ADO の承認、 [を見つける](../../../ado/reference/ado-api/find-method-ado.md)メソッド。  
@@ -87,6 +86,6 @@ End Sub
 'EndOptimizeVB  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [Field オブジェクト](../../../ado/reference/ado-api/field-object.md)   
  [Optimize プロパティ - 動的 (ADO)](../../../ado/reference/ado-api/optimize-property-dynamic-ado.md)

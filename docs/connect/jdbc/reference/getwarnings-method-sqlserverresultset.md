@@ -1,5 +1,5 @@
 ---
-title: getWarnings メソッド (SQLServerResultSet) |Microsoft Docs
+title: getWarnings メソッド (SQLServerResultSet) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: eb4339b0-383b-4337-a935-e8ec3f0d4123
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 4c7032c175ad4f26cd11a31dc376fb240e1a8401
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 242ad42751fac88a08046346915f298378a66b39
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47726550"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67978092"
 ---
 # <a name="getwarnings-method-sqlserverresultset"></a>getWarnings メソッド (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -39,13 +38,13 @@ public java.sql.SQLWarning getWarnings()
 ```  
   
 ## <a name="return-value"></a>戻り値  
- オブジェクトを行いません。  
+ SQLWarning オブジェクト。  
   
 ## <a name="exceptions"></a>例外  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- この getWarnings メソッドは、java.sql.ResultSet インターフェイスの getWarnings メソッドによって指定されます。  
+ この getWarnings メソッドは、getWarnings インターフェイスのメソッドによって指定されます。  
   
 ## <a name="see-also"></a>参照  
  [SQLServerResultSet のメンバー](../../../connect/jdbc/reference/sqlserverresultset-members.md)   

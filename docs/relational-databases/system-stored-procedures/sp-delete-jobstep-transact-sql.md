@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 421ede8e-ad57-474a-9fb9-92f70a3e77e3
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 9408fe7939b5a34a18ecde2b1a98f68ac19e49a3
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 8e55465dfe2424144d74bc40492fdb897d4aa72b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47628541"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68130623"
 ---
 # <a name="spdeletejobstep-transact-sql"></a>sp_delete_jobstep (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -42,16 +41,13 @@ sp_delete_jobstep { [ @job_id = ] job_id | [ @job_name = ] 'job_name' } ,
 ```  
   
 ## <a name="arguments"></a>引数  
- [ **@job_id=** ] *job_id*  
- ステップを削除するジョブの識別番号を指定します。 *job_id*は**uniqueidentifier**、既定値は NULL です。  
+`[ @job_id = ] job_id` ステップの削除元となるジョブの識別番号。 *job_id*は**uniqueidentifier**、既定値は NULL です。  
   
- [ **@job_name=** ] **'***job_name***'**  
- ステップを削除するジョブの名前を指定します。 *job_name*は**sysname**、既定値は NULL です。  
+`[ @job_name = ] 'job_name'` ステップの削除元となるジョブの名前。 *job_name*は**sysname**、既定値は NULL です。  
   
-> **注:** か*job_id*または*job_name*指定する必要があります。 両方を指定することはできません。  
+> **注:** いずれか*job_id*または*job_name*指定する必要があります。 両方を指定することはできません。  
   
- [ **@step_id=** ] *step_id*  
- 削除するステップの識別番号を指定します。 *step_id*は**int**、既定値はありません。  
+`[ @step_id = ] step_id` 削除するステップの識別番号。 *step_id*は**int**、既定値はありません。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  **0** (成功) または**1** (失敗)  
@@ -94,7 +90,7 @@ EXEC dbo.sp_delete_jobstep
 GO  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [表示またはジョブの変更](../../ssms/agent/view-or-modify-jobs.md)   
  [sp_add_jobstep &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-jobstep-transact-sql.md)   
  [sp_update_jobstep &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-update-jobstep-transact-sql.md)   

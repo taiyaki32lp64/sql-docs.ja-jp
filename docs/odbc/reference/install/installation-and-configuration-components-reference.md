@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: c48b4303-6f39-4b5e-9134-1113cdef0e43
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: aad19b3cb15c02e5db8e2635641a88f298c898c5
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ca15d3946dffe67c28d285c95f62d8956b276fb5
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47713170"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68094152"
 ---
 # <a name="installation-and-configuration-components-reference"></a>インストールと構成コンポーネントのリファレンス
 > [!NOTE]  

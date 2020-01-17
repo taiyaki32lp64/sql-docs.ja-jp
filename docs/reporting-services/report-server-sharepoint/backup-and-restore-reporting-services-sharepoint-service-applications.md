@@ -2,18 +2,18 @@
 title: Reporting Services SharePoint サービス アプリケーションのバックアップと復元 | Microsoft Docs
 ms.date: 09/25/2017
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: report-server-sharepoint
 ms.topic: conceptual
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 35273d3b60abf328f916907a0a6cfeb8b6a206c6
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
-ms.translationtype: HT
+ms.openlocfilehash: 93f3eb7db9c00f98d1d4270e9febc105eb6ef6b3
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52405716"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "65574344"
 ---
 # <a name="back-up-and-restore-reporting-services-sharepoint-service-applications"></a>Reporting Services SharePoint サービス アプリケーションのバックアップと復元
 
@@ -59,13 +59,13 @@ ms.locfileid: "52405716"
 
 サービス アプリケーションをバックアップするには、次の手順を実行します。  
   
-1.  SharePoint サーバーの全体管理で、**[バックアップおよび復元]** グループの **[バックアップの実行]** を選択します。  
+1.  SharePoint サーバーの全体管理で、 **[バックアップおよび復元]** グループの **[バックアップの実行]** を選択します。  
   
 2.  **[共有サービス]** ノードで、 **[共有サービス アプリケーション]** を展開し、サービス アプリケーションを選択します。 種類は **[SQL Server Reporting Services サービス アプリケーション]** になります。  
   
 3.  **[次へ]** を選択します。  
   
-4.  **[バックアップの場所]** にパスを入力し、**[バックアップの開始]** を選択します。  
+4.  **[バックアップの場所]** にパスを入力し、 **[バックアップの開始]** を選択します。  
   
 5.  上記のプロセスを繰り返します。ただし、サービス アプリケーションを選択する代わりに、 **[共有サービス プロキシ]** ノードを展開し、サービス アプリケーション プロキシを選択します。 種類は **[SQL Server Reporting Services サービス アプリケーション プロキシ]** になります。  
   
@@ -79,7 +79,7 @@ ms.locfileid: "52405716"
 
  **実行アカウント** : サービス アプリケーションが実行アカウントを使用しているかどうかを確認するには、次の手順を実行します。  
   
-1.  SharePoint サーバーの全体管理で、**[アプリケーション管理]** グループの **[サービス アプリケーションの管理]** を選びます。  
+1.  SharePoint サーバーの全体管理で、 **[アプリケーション管理]** グループの **[サービス アプリケーションの管理]** を選びます。  
   
 2.  サービス アプリケーションの名前を選択し、SharePoint リボンで **[管理]** を選択します。  
   
@@ -89,7 +89,7 @@ ms.locfileid: "52405716"
   
  **データベース認証** : サービス アプリケーションがデータベース認証用に Windows 認証を使用しているかどうかを確認するには、次の手順を実行します。  
   
-1.  SharePoint サーバーの全体管理で、**[アプリケーション管理]** グループの **[サービス アプリケーションの管理]** を選びます。  
+1.  SharePoint サーバーの全体管理で、 **[アプリケーション管理]** グループの **[サービス アプリケーションの管理]** を選びます。  
   
 2.  サービス アプリケーションの名前を選択し、SharePoint リボンで **[プロパティ]** を選択します。  
   
@@ -109,13 +109,13 @@ ms.locfileid: "52405716"
   
 ### <a name="restore-the-service-application-using-sharepoint-central-administration"></a>SharePoint サーバーの全体管理を使用してサービス アプリケーションを復元する
   
-1.  SharePoint サーバーの全体管理で、**[バックアップおよび復元]** グループの **[バックアップからの復元を実行する]** を選択します。  
+1.  SharePoint サーバーの全体管理で、 **[バックアップおよび復元]** グループの **[バックアップからの復元を実行する]** を選択します。  
   
-2.  **[バックアップ ディレクトリの場所]** ボックスにバックアップ ファイルのパスを入力し、**[更新]** を選択します。  
+2.  **[バックアップ ディレクトリの場所]** ボックスにバックアップ ファイルのパスを入力し、 **[更新]** を選択します。  
   
-3.  **[トップ コンポーネント]** ボックスの一覧からサービス アプリケーションのバックアップを選択し、**[次へ]** を選択します。  
+3.  **[トップ コンポーネント]** ボックスの一覧からサービス アプリケーションのバックアップを選択し、 **[次へ]** を選択します。  
   
-4.  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] アプリケーションを選択し、**[次へ]** を選択します。  
+4.  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] アプリケーションを選択し、 **[次へ]** を選択します。  
   
 5.  **[ログイン名とパスワード]** セクションで、ログイン名のパスワードを入力します。 ログイン名ボックスには、サービス アプリケーションがバックアップ以前に使用していたログインが自動入力されます。  
   
@@ -137,7 +137,7 @@ ms.locfileid: "52405716"
 
  **実行アカウント** : サービス アプリケーションが実行アカウントを使用していた場合は、次の手順を実行して実行アカウントを構成します。  
   
-1.  SharePoint サーバーの全体管理で、**[アプリケーション管理]** グループの **[サービス アプリケーションの管理]** を選びます。  
+1.  SharePoint サーバーの全体管理で、 **[アプリケーション管理]** グループの **[サービス アプリケーションの管理]** を選びます。  
   
 2.  サービス アプリケーションの名前を選択し、SharePoint リボンで **[管理]** を選択します。  
   
@@ -149,7 +149,7 @@ ms.locfileid: "52405716"
   
  **データベース認証** : サービス アプリケーションがデータベース認証用に Windows 認証を使用していた場合は、次の手順を実行します。  
   
-1.  SharePoint サーバーの全体管理で、**[アプリケーション管理]** グループの **[サービス アプリケーションの管理]** を選びます。  
+1.  SharePoint サーバーの全体管理で、 **[アプリケーション管理]** グループの **[サービス アプリケーションの管理]** を選びます。  
   
 2.  サービス アプリケーションの名前を選択し、SharePoint リボンで **[プロパティ]** を選択します。  
   

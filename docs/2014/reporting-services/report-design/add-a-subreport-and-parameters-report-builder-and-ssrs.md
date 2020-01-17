@@ -4,22 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 f1_keywords:
 - "10093"
 - sql12.rtp.rptdesigner.subreportproperties.general.f1
 ms.assetid: 94f960f8-a629-4f1e-8277-c3b8f0680d98
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 78b17e2efee1c88f442218ece9d53382db17ceff
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: 906f4527bdca38f4571a2e1686f885a2857e47c3
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56286320"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66106779"
 ---
 # <a name="add-a-subreport-and-parameters-report-builder-and-ssrs"></a>サブレポートおよびパラメーターの追加 (レポート ビルダーおよび SSRS)
   複数の関連レポートのコンテナーであるメイン レポートを作成する場合は、レポートにサブレポートを追加します。 サブレポートは別のレポートへの参照です。 これらのレポートをデータ値で関係付けるには (たとえば、複数のレポートに同じ顧客のデータを表示する場合)、サブレポートとしてパラメーター化されたレポート (特定の顧客の詳細を示すレポートなど) をデザインする必要があります。 サブレポートをメイン レポートに追加するときは、サブレポートに渡すパラメーターを指定できます。  
@@ -72,7 +71,7 @@ ms.locfileid: "56286320"
   
      サブレポート パラメーターの順序を変更しても、サブレポートの処理には影響しません。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [サブレポート &#40;レポート ビルダーおよび SSRS&#41;](subreports-report-builder-and-ssrs.md)   
  [レンダリングの動作 &#40;レポート ビルダーおよび SSRS&#41;](rendering-behaviors-report-builder-and-ssrs.md)  
   

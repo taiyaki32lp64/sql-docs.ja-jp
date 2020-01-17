@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 4b5d6790-6c29-42aa-bf78-d9cfb8ad7965
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: b9a97e1e63e3896cd451c68d6198baa991945e7a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 48b3a6987e6c7b6c3754f5041d90d248520345ab
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47704529"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67933087"
 ---
 # <a name="description-property"></a>Description プロパティ
 について説明します、[エラー](../../../ado/reference/ado-api/error-object.md)オブジェクト。  

@@ -1,84 +1,83 @@
 ---
-title: チュートリアル:作成の詳細レポートとメイン レポート (レポート ビルダー) |Microsoft Docs
+title: チュートリアル:詳細レポートとメイン レポートの作成 (レポート ビルダー) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 ms.assetid: 7168c8d3-cef5-4c4a-a0bf-fff1ac5b8b71
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: b150ff5fd1e69a9c6ac8ea7e2f2ef2b60d32ffb8
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: b074195ecda842e0270f3cadce790be30fdce7cc
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56289870"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68892380"
 ---
-# <a name="tutorial-creating-drillthrough-and-main-reports-report-builder"></a>チュートリアル:詳細レポートとメイン レポート (レポート ビルダー) を作成します。
-  このチュートリアルでは、詳細レポートとメイン レポートの 2 種類のレポートの作成方法を説明します。 これらのレポートで使用する売上データのサンプルは、Analysis Services キューブから取得します。 次の図は、レポートを作成します。  
+# <a name="tutorial-creating-drillthrough-and-main-reports-report-builder"></a>チュートリアル:詳細レポートとメイン レポートの作成 (レポート ビルダー)
+  このチュートリアルでは、詳細レポートとメイン レポートの 2 種類のレポートの作成方法を説明します。 これらのレポートで使用する売上データのサンプルは、Analysis Services キューブから取得します。 次の図は、作成するレポートを示しています。  
   
  ![rs_DrillthroughCubeTutorial](../../2014/tutorials/media/rs-drillthroughcubetutorial.gif "rs_DrillthroughCubeTutorial")  
   
- 次の図は、フィールド値、Games and Toys、ドリルスルー レポートのタイトルのメイン レポートの表示を示します。 この詳細レポートには、Games and Toys 製品カテゴリに関連するデータが含まれています。  
+ 次の図は、メインレポートのフィールド値 [Games] と [Toys] が詳細レポートのタイトルにどのように表示されるかを示しています。 この詳細レポートには、Games and Toys 製品カテゴリに関連するデータが含まれています。  
   
  ![rs_DrillthroughCubeTutorialParmExpr](../../2014/tutorials/media/rs-drillthroughcubetutorialparmexpr.gif "rs_DrillthroughCubeTutorialParmExpr")  
   
 ## <a name="what-you-will-learn"></a>学習する内容  
- **ドリルスルー レポートでは、学習する方法。**  
+ **詳細レポートでは、次の方法を学習します。**  
   
-1.  [テーブルまたはマトリックス ウィザードから詳細マトリックス レポートとデータセットを作成します。](#DMatrixAndDataset)  
+1.  [テーブルまたはマトリックスウィザードを通じて、ドリルスルーマトリックスレポートとデータセットを作成する](#DMatrixAndDataset)  
   
-    1.  [データ接続を指定します。](#DConnection)  
+    1.  [データ接続を指定する](#DConnection)  
   
-    2.  [MDX クエリを作成します。](#DMDXQuery)  
+    2.  [MDX クエリを作成する](#DMDXQuery)  
   
-    3.  [データをグループ スタイルにまとめる](#DLayout)  
+    3.  [データをグループ化のスタイルで整理する](#DLayout)  
   
-    4.  [小計と合計を追加します。](#DTotals)  
+    4.  [小計と合計の追加](#DTotals)  
   
-    5.  [スタイルを選択します。](#DStyle)  
+    5.  [スタイルの選択](#DStyle)  
   
-2.  [データに通貨の形式](#DFormat)  
+2.  [データを通貨として書式設定する](#DFormat)  
   
-3.  [スパーク ラインの売上の値を表示する列を追加します。](#DSparkline)  
+3.  [売上の値をスパークラインで表示する列を追加する](#DSparkline)  
   
-4.  [レポート タイトルの製品カテゴリ名を追加します。](#DReportTitle)  
+4.  [製品カテゴリ名を含むレポートタイトルを追加する](#DReportTitle)  
   
-5.  [パラメーターのプロパティを更新します。](#DParameter)  
+5.  [パラメータープロパティの更新](#DParameter)  
   
-6.  [レポートを SharePoint ライブラリに保存します。](#DSave)  
+6.  [SharePoint ライブラリへのレポートの保存](#DSave)  
   
- **メイン レポートでは、学習する方法。**  
+ **メインレポートでは、次の方法を学習します。**  
   
-1.  [テーブルまたはマトリックス ウィザードからメイン マトリックス レポートとデータセットを作成します。](#MMatrixAndDataset)  
+1.  [テーブルまたはマトリックスウィザードからメインマトリックスレポートとデータセットを作成する](#MMatrixAndDataset)  
   
-    1.  [データ接続を指定します。](#MConnection)  
+    1.  [データ接続を指定する](#MConnection)  
   
-    2.  [MDX クエリを作成します。](#MMDXQuery)  
+    2.  [MDX クエリを作成する](#MMDXQuery)  
   
     3.  [データをグループにまとめる](#MLayout)  
   
-    4.  [小計と合計を追加します。](#MTotals)  
+    4.  [小計と合計の追加](#MTotals)  
   
-    5.  [スタイルを選択します。](#MStyle)  
+    5.  [スタイルの選択](#MStyle)  
   
 2.  [総計行を削除します。](#MGrandTotal)  
   
-3.  [ドリルスルーのためのテキスト ボックス アクションを構成します。](#MDrillthrough)  
+3.  [ドリルスルーのテキストボックスアクションを構成する](#MDrillthrough)  
   
-4.  [数値インジケーターを置き換える](#MIndicators)  
+4.  [数値をインジケーターに置き換える](#MIndicators)  
   
-5.  [パラメーターのプロパティを更新します。](#MParameter)  
+5.  [パラメータープロパティの更新](#MParameter)  
   
-6.  [レポート タイトルを追加します。](#MTitle)  
+6.  [レポートタイトルを追加する](#MTitle)  
   
-7.  [レポートを SharePoint ライブラリに保存します。](#MSave)  
+7.  [SharePoint ライブラリへのレポートの保存](#MSave)  
   
-8.  [メイン レポートと詳細レポートを実行します。](#MRunReports)  
+8.  [メインレポートと詳細レポートを実行する](#MRunReports)  
   
  このチュートリアルの推定所要時間:30 分。  
   
@@ -90,15 +89,15 @@ ms.locfileid: "56289870"
   
 #### <a name="to-create-a-new-report"></a>新しいレポートを作成するには  
   
-1.  クリックして**開始**、 をポイント**プログラム**、 をポイント[!INCLUDE[ssCurrentUI](../includes/sscurrentui-md.md)]**レポート ビルダー**、順にクリックします**レポート ビルダー**します。  
+1.  **[スタート]** をクリックし、[プログラム[!INCLUDE[ssCurrentUI](../includes/sscurrentui-md.md)] ]、 **[レポートビルダー]** の順にポイントし、 **[レポートビルダー]** をクリックします。  
   
-     **Getting Started**  ダイアログ ボックスが表示されます。 表示されない場合から、**レポート ビルダー**ボタン、**新規**します。  
+     **[はじめに]** ダイアログボックスが表示されます。 表示されない場合は、 **[レポートビルダー]** ボタンの **[新規]** をクリックします。  
   
 2.  左ペインで、 **[新しいレポート]** が選択されていることを確認します。  
   
 3.  右ペインで、 **[テーブルまたはマトリックス ウィザード]** が選択されていることを確認します。  
   
-##  <a name="DConnection"></a> 1a します。 データ接続を指定する  
+##  <a name="DConnection"></a>sr-1. データ接続を指定する  
  データ接続には、Analysis Services キューブや [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] データベースなどの外部データ ソースに接続するときに必要な情報が含まれます。 データ接続を指定するには、レポート サーバーの共有データ ソースを使用するか、このレポートでのみ使用する埋め込みデータ ソースを作成します。 このチュートリアルでは、埋め込みデータ ソースを使用します。 共有データ ソースの使用方法の詳細については、「[別の方法でデータ接続を取得する (レポート ビルダー)](../reporting-services/alternative-ways-to-get-a-data-connection-report-builder.md)」を参照してください。  
   
 #### <a name="to-create-an-embedded-data-source"></a>埋め込みデータ ソースを作成するには  
@@ -144,17 +143,17 @@ ms.locfileid: "56289870"
   
 14. **[次へ]** をクリックします。  
   
-##  <a name="DMDXQuery"></a> 1b します。 MDX クエリを作成する  
+##  <a name="DMDXQuery"></a>ドル. MDX クエリを作成する  
  レポートでは、クエリが事前に定義された共有データセットを使用するか、そのレポートでのみ使用する埋め込みデータセットを作成できます。 このチュートリアルでは、埋め込みデータセットを作成します。  
   
 #### <a name="to-create-query-filters"></a>クエリ フィルターを作成するには  
   
-1.  **[クエリのデザイン]** ページのメタデータ ペインで、**[ (...) ]** ボタンをクリックします。  
+1.  **[クエリのデザイン]** ページのメタデータ ペインで、 **[ (...) ]** ボタンをクリックします。  
   
 2.  **[キューブの選択]** ダイアログ ボックスで、Sales をクリックし、 **[OK]** をクリックします。  
   
     > [!TIP]  
-    >  MDX クエリを手動で作成しない場合は、![デザイン モードへの切り替え](../analysis-services/media/rsqdicon-designmode.gif "デザイン モードへの切り替え") アイコンをクリックしてクエリ デザイナーをクエリ モードに切り替えて、下の完成した MDX をクエリ デザイナーに貼り付けます。その後、「[データセットを作成するには](#DSkip)」の手順 6 に進みます。  
+    >  MDX クエリを手動で作成しない場合は、![デザイン モードへの切り替え](https://docs.microsoft.com/analysis-services/analysis-services/media/rsqdicon-designmode.gif "デザイン モードへの切り替え") アイコンをクリックしてクエリ デザイナーをクエリ モードに切り替えて、下の完成した MDX をクエリ デザイナーに貼り付けます。その後、「[データセットを作成するには](#DSkip)」の手順 6 に進みます。  
   
     ```  
     SELECT NON EMPTY { [Measures].[Sales Amount], [Measures].[Sales Return Amount] } ON COLUMNS, NON EMPTY { ([Channel].[Channel Name].[Channel Name].ALLMEMBERS * [Product].[Product Category Name].[Product Category Name].ALLMEMBERS * [Product].[Product Subcategory Name].[Product Subcategory Name].ALLMEMBERS ) } DIMENSION PROPERTIES MEMBER_CAPTION, MEMBER_UNIQUE_NAME ON ROWS FROM ( SELECT ( { [Date].[Calendar Year].&[2009] } ) ON COLUMNS FROM ( SELECT ( { [Sales Territory].[Sales Territory Group].&[North America] } ) ON COLUMNS FROM ( SELECT ( STRTOSET(@ProductProductCategoryName, CONSTRAINED) ) ON COLUMNS FROM ( SELECT ( { [Channel].[Channel Name].&[2], [Channel].[Channel Name].&[4] } ) ON COLUMNS FROM [Sales])))) WHERE ( [Sales Territory].[Sales Territory Group].&[North America], [Date].[Calendar Year].&[2009] ) CELL PROPERTIES VALUE, BACK_COLOR, FORE_COLOR, FORMATTED_VALUE, FORMAT_STRING, FONT_NAME, FONT_SIZE, FONT_FLAGS  
@@ -168,7 +167,7 @@ ms.locfileid: "56289870"
   
 5.  フィルター式の一覧で、 **[All Channel]** を展開し、 **[Online]** と **[Reseller]** をクリックして、 **[OK]** をクリックします。  
   
-     クエリをこれらのチャネルのみを含めるフィルターが含まれるようになりました。Online と Reseller のみに制限するフィルターがクエリに追加されます。  
+     これで、次のチャネルのみを含めるフィルターがクエリに追加されます:オンラインおよび再販業者。  
   
 6.  Sales Territory ディメンションを展開し、Sales Territory Group を **[階層]** 列 ( **Channel Name**の下) にドラッグします。  
   
@@ -197,7 +196,7 @@ ms.locfileid: "56289870"
     > [!NOTE]  
     >  このパラメーターは、製品カテゴリの名前を格納します。 メイン レポートで製品カテゴリの名前をクリックすると、その名前が、このパラメーターを使用して詳細レポートに渡されます。  
   
-###  <a name="DSkip"></a> データセットを作成するには  
+###  <a name="DSkip"></a>データセットを作成するには  
   
 1.  Channel ディメンションから Channel Name をデータ ペインにドラッグします。  
   
@@ -205,7 +204,7 @@ ms.locfileid: "56289870"
   
 3.  Product ディメンションから Product Subcategory Name をデータ ペインにドラッグして、Product Category Name の右側に配置します。  
   
-4.  メタデータ ペインで、 **[メジャー]**、Sales の順に展開します。  
+4.  メタデータ ペインで、 **[メジャー]** 、Sales の順に展開します。  
   
 5.  Sales Amount メジャーをデータ ペインにドラッグして、Product Subcategory Name の右側に配置します。  
   
@@ -213,7 +212,7 @@ ms.locfileid: "56289870"
   
 7.  **[次へ]** をクリックします。  
   
-##  <a name="DLayout"></a> 1 c。 データをグループにまとめる  
+##  <a name="DLayout"></a>1c. データをグループにまとめる  
  データをグループ化するフィールドを選択し、詳細データおよび集計データを表示する行と列を含むマトリックスをデザインします。  
   
 #### <a name="to-organize-data-into-groups"></a>データをグループにまとめるには  
@@ -239,7 +238,7 @@ ms.locfileid: "56289870"
   
 6.  **[次へ]** をクリックします。  
   
-##  <a name="DTotals"></a> 1 次元です。 小計と合計を追加する  
+##  <a name="DTotals"></a>引か. 小計と合計を追加する  
  グループを作成したら、フィールドの集計値を表示する行を追加して書式を設定できます。 すべてのデータを表示するか、グループ化されたデータの展開と折りたたみをユーザーが対話的に行えるようにするかも選択できます。  
   
 #### <a name="to-add-subtotals-and-totals"></a>小計と合計を追加するには  
@@ -250,12 +249,12 @@ ms.locfileid: "56289870"
   
 2.  **[次へ]** をクリックします。  
   
-##  <a name="DStyle"></a> 1e します。 スタイルを選択する  
+##  <a name="DStyle"></a>1e. スタイルを選択する  
  スタイルは、フォント スタイル、色、および罫線のスタイルを指定します。  
   
 #### <a name="to-specify-a-style"></a>スタイルを指定するには  
   
-1.  **スタイルの選択**] ページの [スタイルのウィンドウで、スレートを選択します。  
+1.  **スタイルの選択** ページのスタイルペインで、スレート を選択します。  
   
 2.  **[完了]** をクリックします。  
   
@@ -316,7 +315,7 @@ ms.locfileid: "56289870"
   
 2.  デザイン画面で、 **[クリックしてタイトルを追加]** をクリックします。  
   
-3.  「 **Sales and Returns for Category:**」と入力します。  
+3.  「 **Sales and Returns for Category:** 」と入力します。  
   
 4.  右クリックして **[プレースホルダーの作成]** をクリックします。  
   
@@ -341,7 +340,7 @@ ms.locfileid: "56289870"
   
 1.  レポート データ ペインで **[パラメーター]** を展開します。  
   
-2.  \@ProductProductCategoryName を右クリックし、**[パラメーターのプロパティ]** をクリックします。  
+2.  \@ProductProductCategoryName を右クリックし、 **[パラメーターのプロパティ]** をクリックします。  
   
     > [!NOTE]  
     >  名前の横の \@ 文字は、これがパラメーターであることを示しています。  
@@ -390,16 +389,16 @@ ms.locfileid: "56289870"
   
 7.  **[保存]** をクリックします。  
   
-##  <a name="MMatrixAndDataset"></a> 1.テーブルまたはマトリックス ウィザードを使用して新しいレポートを作成する  
+##  <a name="MMatrixAndDataset"></a> 1.テーブルまたはマトリックスウィザードから新しいレポートを作成する  
  **[作業の開始]** ダイアログ ボックスから、 **テーブルまたはマトリックス ウィザード**を使用してマトリックス レポートを作成します。  
   
 #### <a name="to-create-a-new-report"></a>新しいレポートを作成するには  
   
-1.  クリックして**開始**、 をポイント**プログラム**、 をポイント[!INCLUDE[ssCurrentUI](../includes/sscurrentui-md.md)]**レポート ビルダー**、順にクリックします**レポート ビルダー**します。  
+1.  **[スタート]** をクリックし、[プログラム[!INCLUDE[ssCurrentUI](../includes/sscurrentui-md.md)] ]、 **[レポートビルダー]** の順にポイントし、 **[レポートビルダー]** をクリックします。  
   
 2.  **[作業の開始]** ダイアログ ボックスで、 **[新しいレポート]** が選択されていることを確認し、 **[テーブルまたはマトリックス ウィザード]** をクリックします。  
   
-##  <a name="MConnection"></a> 1a します。 データ接続を指定する  
+##  <a name="MConnection"></a>sr-1. データ接続を指定する  
  メイン レポートに埋め込みデータ ソースを追加します。  
   
 #### <a name="to-create-an-embedded-data-source"></a>埋め込みデータ ソースを作成するには  
@@ -438,7 +437,7 @@ ms.locfileid: "56289870"
   
 14. **[次へ]** をクリックします。  
   
-##  <a name="MMDXQuery"></a> 1b します。 MDX クエリを作成する  
+##  <a name="MMDXQuery"></a>ドル. MDX クエリを作成する  
  次に、埋め込みデータセットを作成します。 これを行うには、クエリ デザイナーを使用して、フィルター、パラメーター、および計算されるメンバーと、データセット自体を作成します。  
   
 #### <a name="to-create-query-filters"></a>クエリ フィルターを作成するには  
@@ -448,7 +447,7 @@ ms.locfileid: "56289870"
 2.  **[キューブの選択]** ダイアログ ボックスで、Sales をクリックし、 **[OK]** をクリックします。  
   
     > [!TIP]  
-    >  MDX クエリを手動で作成しない場合は、![デザイン モードへの切り替え](../analysis-services/media/rsqdicon-designmode.gif "デザイン モードへの切り替え") アイコンをクリックしてクエリ デザイナーをクエリ モードに切り替えて、下の完成した MDX をクエリ デザイナーに貼り付けます。その後、「[データセットを作成するには](#MSkip)」の手順 5 に進みます。  
+    >  MDX クエリを手動で作成しない場合は、![デザイン モードへの切り替え](https://docs.microsoft.com/analysis-services/analysis-services/media/rsqdicon-designmode.gif "デザイン モードへの切り替え") アイコンをクリックしてクエリ デザイナーをクエリ モードに切り替えて、下の完成した MDX をクエリ デザイナーに貼り付けます。その後、「[データセットを作成するには](#MSkip)」の手順 5 に進みます。  
   
     ```  
     WITH MEMBER [Measures].[Net QTY] AS [Measures].[Sales Quantity] -[Measures].[Sales Return Quantity] MEMBER [Measures].[Net Sales] AS [Measures].[Sales Amount] - [Measures].[Sales Return Amount] SELECT NON EMPTY { [Measures].[Net QTY], [Measures].[Net Sales] } ON COLUMNS, NON EMPTY { ([Channel].[Channel Name].[Channel Name].ALLMEMBERS * [Product].[Product Category Name].[Product Category Name].ALLMEMBERS ) } DIMENSION PROPERTIES MEMBER_CAPTION, MEMBER_UNIQUE_NAME ON ROWS FROM ( SELECT ( { [Date].[Calendar Year].&[2009] } ) ON COLUMNS FROM ( SELECT ( STRTOSET(@ProductProductCategoryName, CONSTRAINED) ) ON COLUMNS FROM ( SELECT ( { [Sales Territory].[Sales Territory Group].&[North America] } ) ON COLUMNS FROM ( SELECT ( { [Channel].[Channel Name].&[2], [Channel].[Channel Name].&[4] } ) ON COLUMNS FROM [Sales])))) WHERE ( [Sales Territory].[Sales Territory Group].&[North America], [Date].[Calendar Year].&[2009] ) CELL PROPERTIES VALUE, BACK_COLOR, FORE_COLOR, FORMATTED_VALUE, FORMAT_STRING, FONT_NAME, FONT_SIZE, FONT_FLAGSQuery text: Code.  
@@ -462,7 +461,7 @@ ms.locfileid: "56289870"
   
 5.  フィルター式の一覧で、 **[All Channel]** を展開し、 **[Online]** と **[Reseller]** をクリックして、 **[OK]** をクリックします。  
   
-     クエリをこれらのチャネルのみを含めるフィルターが含まれるようになりました。Online と Reseller のみに制限するフィルターがクエリに追加されます。  
+     これで、次のチャネルのみを含めるフィルターがクエリに追加されます:オンラインおよび再販業者。  
   
 6.  Sales Territory ディメンションを展開し、Sales Territory Group を **[階層]** 列 ( **Channel Name**の下) にドラッグします。  
   
@@ -508,7 +507,7 @@ ms.locfileid: "56289870"
   
 5.  **[計算されるメンバー]** を右クリックし、 **[新しい計算されるメンバー]** をクリックします。  
   
-6.  メタデータ ペインで、 **[メジャー]**、Sales の順に展開します。  
+6.  メタデータ ペインで、 **[メジャー]** 、Sales の順に展開します。  
   
 7.  Sales Amount メジャーを **[式]** ボックスにドラッグし、マイナス記号 (-) を入力します。次に、Sales Return Amount メジャーを **[式]** ボックスにドラッグして、マイナス記号の後に配置します。  
   
@@ -520,7 +519,7 @@ ms.locfileid: "56289870"
   
 8.  **[名前]** ボックスに「  **Net Sales**」と入力し、 **[OK]** をクリックします。計算されるメンバー ペインに、計算されるメンバー **Net Sales** が表示されます。  
   
-###  <a name="MSkip"></a> データセットを作成するには  
+###  <a name="MSkip"></a>データセットを作成するには  
   
 1.  Channel ディメンションから Channel Name をデータ ペインにドラッグします。  
   
@@ -536,7 +535,7 @@ ms.locfileid: "56289870"
   
 6.  **[次へ]** をクリックします。  
   
-##  <a name="MLayout"></a> 1 c。 データをグループにまとめる  
+##  <a name="MLayout"></a>1c. データをグループにまとめる  
  データをグループ化するフィールドを選択し、詳細データおよび集計データを表示する行と列を含むマトリックスをデザインします。  
   
 #### <a name="to-organize-data-into-groups"></a>データをグループにまとめるには  
@@ -547,7 +546,7 @@ ms.locfileid: "56289870"
   
 3.  `Net_QTY` を **[値]** にドラッグします。  
   
-     `Net_QTY` は Sum 関数 (数値フィールドの既定の集計関数) を使用して自動的に集計されます。 値は `[Sum(Net_QTY)]`です。  
+     `Net_QTY` は Sum 関数 (数値フィールドの既定の集計関数) を使用して自動的に集計されます。 値が `[Sum(Net_QTY)]` です。  
   
      使用可能なその他の集計関数を表示するには、ドロップダウン リストを開きます。 集計関数は変更しないでください。  
   
@@ -555,23 +554,23 @@ ms.locfileid: "56289870"
   
      手順 3. および 4. で、マトリックスに表示するデータが指定されます。  
   
-##  <a name="MTotals"></a> 1 次元です。 小計と合計を追加する  
+##  <a name="MTotals"></a>引か. 小計と合計を追加する  
  レポートには小計と総計を表示できます。 メイン レポートのデータはインジケーターとして表示されるため、ウィザードの完了後に総計を削除します。  
   
 #### <a name="to-add-subtotals-and-grand-totals"></a>小計と総計を追加するには  
   
 1.  **[レイアウトの選択]** ページの **[オプション]** で、 **[小計と総計を表示]** が選択されていることを確認します。  
   
-     ウィザードのプレビュー ペインに、4 行を含むマトリックスが表示されます。  レポートを実行すると、各行は次のように表示されます。最初の行が列グループになり、2 行目に列見出し、3 行目に製品カテゴリのデータ (`[Sum(Net_ QTY)]` と `[Sum(Net_Sales)]`)、4 行目に合計が含まれます。  
+     ウィザードのプレビュー ペインに、4 行を含むマトリックスが表示されます。  レポートを実行すると、各行は次のように表示されます。最初の行は列グループ、2番目の行には列見出し、3行目には製品カテゴリデータ`[Sum(Net_ QTY)]` ( `[Sum(Net_Sales)]`と)、4番目の行には合計が含まれています。  
   
 2.  **[次へ]** をクリックします。  
   
-##  <a name="MStyle"></a> 1e します。 スタイルを選択する  
+##  <a name="MStyle"></a>1e. スタイルを選択する  
  レポートに "スレート" スタイルを適用します。 これは、詳細レポートで使用されているのと同じスタイルです。  
   
 #### <a name="to-specify-a-style"></a>スタイルを指定するには  
   
-1.  **スタイルの選択**] ページの [スタイルのウィンドウで、スレートを選択します。  
+1.  **スタイルの選択** ページのスタイルペインで、スレート を選択します。  
   
 2.  **[完了]** をクリックします。  
   
@@ -599,7 +598,7 @@ ms.locfileid: "56289870"
   
 3.  **[アクション]** タブをクリックします。  
   
-4.   **[レポートに移動する]** を選択します。  
+4.  **[レポートに移動する]** を選択します。  
   
 5.  **[レポートの指定]** で、 **[参照]** をクリックして、ResellerVSOnlineDrillthrough という名前の詳細レポートを指定します。  
   
@@ -685,7 +684,7 @@ ms.locfileid: "56289870"
   
 1.  デザイン画面で、 **[クリックしてタイトルを追加]** をクリックします。  
   
-2.  型**2009 Product Category Sales:Online と Reseller Category:** します。  
+2.  「**2009 Product Category Sales:Online and Reseller Category:** 」と入力します。  
   
 3.  入力したテキストを選択します。  
   
@@ -719,7 +718,7 @@ ms.locfileid: "56289870"
   
 7.  **[保存]** をクリックします。  
   
-##  <a name="MRunReports"></a> 8.メイン レポートと詳細レポートを実行する  
+##  <a name="MRunReports"></a>8.メイン レポートと詳細レポートを実行する  
  メイン レポートを実行し、製品カテゴリの列の値をクリックして詳細レポートを実行します。  
   
 #### <a name="to-run-the-reports"></a>レポートを実行するには  
@@ -738,7 +737,7 @@ ms.locfileid: "56289870"
   
 5.  必要に応じて、他の製品カテゴリの名前をクリックして動作を確認します。  
   
-## <a name="see-also"></a>参照  
- [チュートリアル&#40;レポート ビルダー&#41;](report-builder-tutorials.md)  
+## <a name="see-also"></a>関連項目  
+ [チュートリアル&#40;レポートビルダー&#41;](report-builder-tutorials.md)  
   
   

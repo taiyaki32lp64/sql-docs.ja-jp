@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: 105a5319-0f4c-4d08-964b-cc52f8e28ec1
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 49f586249657b2f10a166c975608fd2b539d67ea
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a0407ac8ec711d6d7ab8b1b2fb8afa245f53049d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47740870"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67978326"
 ---
 # <a name="geturl-method-javalangstring-sqlserverresultset"></a>getURL (java.lang.String) メソッド (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -41,7 +40,7 @@ public java.net.URL getURL(java.lang.String sColumn)
  列名を含む**文字列**です。  
   
 ## <a name="return-value"></a>戻り値  
- URL のオブジェクト。  
+ URL オブジェクト。  
   
 ## <a name="exceptions"></a>例外  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  

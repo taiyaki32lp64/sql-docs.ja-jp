@@ -15,14 +15,13 @@ helpviewer_keywords:
 ms.assetid: 1865fb7c-f480-4100-9007-df5364cd002a
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 18e1db56b747f5932a5fd6ee727cd99864517682
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 0624b61302dca01b5549a064f417d6c698ce02a4
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47762020"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72907109"
 ---
 # <a name="view-the-table-definition"></a>テーブルの定義の表示
 [!INCLUDE[tsql-appliesto-ss2016-all-md](../../includes/tsql-appliesto-ss2016-all-md.md)]
@@ -33,7 +32,7 @@ ms.locfileid: "47762020"
   
 -   **作業を開始する準備:**  
   
-     [Security](#Security)  
+     [セキュリティ](#Security)  
   
 -   **テーブルのプロパティを表示する方法:**  
   
@@ -41,7 +40,7 @@ ms.locfileid: "47762020"
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> 作業を開始する準備  
+##  <a name="BeforeYouBegin"></a> はじめに  
   
 ###  <a name="Security"></a> セキュリティ  
   
@@ -55,7 +54,7 @@ ms.locfileid: "47762020"
 1.  オブジェクト エクスプローラーで、プロパティを表示するテーブルを選択します。  
   
 2.  テーブルを右クリックし、ショートカット メニューの **[プロパティ]** をクリックします。 詳細については、「 [テーブルのプロパティ](../../relational-databases/tables/table-properties-ssms.md)」を参照してください。  
-  
+
 ##  <a name="TsqlProcedure"></a> Transact-SQL の使用  
   
 #### <a name="to-show-table-properties"></a>テーブルのプロパティを表示するには  

@@ -14,11 +14,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: de6a778f9cdbfb7ab916f40a5250ca4f9e20c811
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53377494"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63072382"
 ---
 # <a name="determining-if-a-table-or-stored-procedure-should-be-ported-to-in-memory-oltp"></a>テーブルまたはストアド プロシージャをインメモリ OLTP に移植する必要があるかどうかの確認
   トランザクション パフォーマンス コレクター[!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]インメモリ OLTP データベース アプリケーションのパフォーマンスが向上する場合に評価するのに役立ちます。 また、トランザクション パフォーマンス分析レポートによって、アプリケーションでインメモリ OLTP を有効にするために必要な作業量が示されます。 インメモリ OLTP に移植するディスク ベース テーブルを特定した後で [メモリ最適化アドバイザー](memory-optimization-advisor.md)を使用すると、テーブルを移行しやすくなります。 同様に、 [Native Compilation Advisor](native-compilation-advisor.md) は、ストアド プロシージャをネイティブ コンパイル ストアド プロシージャに移植するために役立ちます。  
@@ -123,7 +123,7 @@ ms.locfileid: "53377494"
   
  SQL Server 2012 またはそれ以降のバージョンのでは、データ コレクターを構成できます[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]します。  
   
- トランザクションがプロファイルされる場所とは異なるインスタンス上の管理データ ウェアハウス データベースにデータ コレクターがデータをアップロードするためには、適切な資格情報が設定された [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] エージェント プロキシが必要です。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] エージェント プロキシを有効にするには、ドメイン対応のログインを持つ資格情報を最初に設定する必要があります。 ドメイン対応のログインは、管理データ ウェアハウス データベースの `mdw_admin` グループのメンバーである必要があります。 参照してください[方法。作成 (SQL Server Management Studio) の資格情報を](../security/authentication-access/create-a-credential.md)資格情報を作成する方法についてはします。  
+ トランザクションがプロファイルされる場所とは異なるインスタンス上の管理データ ウェアハウス データベースにデータ コレクターがデータをアップロードするためには、適切な資格情報が設定された [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] エージェント プロキシが必要です。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] エージェント プロキシを有効にするには、ドメイン対応のログインを持つ資格情報を最初に設定する必要があります。 ドメイン対応のログインは、管理データ ウェアハウス データベースの `mdw_admin` グループのメンバーである必要があります。 「[作成 (SQL Server Management Studio) の資格情報を](../security/authentication-access/create-a-credential.md)資格情報を作成する方法についてはします。  
   
  別のインスタンスの管理データ ウェアハウス データベースにアップロードするようにデータ コレクションを構成するには  
   

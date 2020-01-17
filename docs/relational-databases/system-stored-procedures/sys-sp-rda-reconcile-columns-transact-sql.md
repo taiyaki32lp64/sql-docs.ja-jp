@@ -14,15 +14,14 @@ dev_langs:
 helpviewer_keywords:
 - sys.sp_rda_reconcile_columns stored procedure
 ms.assetid: 60d9cc4e-1828-450b-9d88-5b8485800d73
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: c4d2a8377466876270bcedd07138cf9cf30ef211
-ms.sourcegitcommit: 110e5e09ab3f301c530c3f6363013239febf0ce5
+author: MikeRayMSFT
+ms.author: mikeray
+ms.openlocfilehash: 7ad2fd6c51f5b5463e4e4c10745b2ff245bd691d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/10/2018
-ms.locfileid: "48906322"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68083675"
 ---
 # <a name="syssprdareconcilecolumns-transact-sql"></a>sys.sp_rda_reconcile_columns (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -45,11 +44,11 @@ sp_rda_reconcile_columns @objname = '@objname'
 ```  
   
 ## <a name="arguments"></a>引数  
- \@objname = '*\@objname*'  
+ \@objname = ' *\@objname*'  
  Stretch 対応 SQL Server テーブルの名前。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
- 0 (成功) または >0 (失敗)  
+ 0 (成功) または > 0 (失敗)  
   
 ## <a name="permissions"></a>アクセス許可  
  Db_owner アクセス許可が必要です。  

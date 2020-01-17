@@ -20,13 +20,12 @@ helpviewer_keywords:
 ms.assetid: 0511136a-1b6b-4095-aa45-39e77b67aba2
 author: julieMSFT
 ms.author: jrasnick
-manager: craigg
-ms.openlocfilehash: fd07a79e9ebfd562c0d9ca61ebaa14581d55af10
-ms.sourcegitcommit: 0c1d552b3256e1bd995e3c49e0561589c52c21bf
+ms.openlocfilehash: 5d5783646a4ba6e5cad78b0cdcada16a8d27501c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/14/2018
-ms.locfileid: "53379503"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68024821"
 ---
 # <a name="create-a-sql-server-database-alert"></a>SQL Server データベース警告の作成
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

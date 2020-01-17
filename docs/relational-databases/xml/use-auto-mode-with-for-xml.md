@@ -13,15 +13,14 @@ helpviewer_keywords:
 - FOR XML AUTO mode
 - AUTO FOR XML mode
 ms.assetid: 7140d656-1d42-4f01-a533-5251429f4450
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: 1c1a278a1d712b464fba279112c1652d676f2542
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: MightyPen
+ms.author: genemi
+ms.openlocfilehash: 5331a474d24d2204ca81e37427fc2615ecede622
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47690750"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68077997"
 ---
 # <a name="use-auto-mode-with-for-xml"></a>FOR XML での AUTO モードの使用
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -138,7 +137,7 @@ FOR XML AUTO, ELEMENTS
   
 -   [返される XML を構造化する際の AUTO モード ヒューリスティック](../../relational-databases/xml/auto-mode-heuristics-in-shaping-returned-xml.md)  
   
--   [例 : AUTO モードの使用](../../relational-databases/xml/examples-using-auto-mode.md)  
+-   [例: AUTO モードの使用](../../relational-databases/xml/examples-using-auto-mode.md)  
   
 ## <a name="see-also"></a>参照  
  [SELECT &#40;Transact-SQL&#41;](../../t-sql/queries/select-transact-sql.md)   

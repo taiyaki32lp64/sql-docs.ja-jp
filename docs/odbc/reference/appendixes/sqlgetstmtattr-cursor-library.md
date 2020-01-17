@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 6c34e1ef-4273-4afb-a7d3-f9017ab69c5e
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: f9eef3ceba6fed1315d68038299640c772e92c9d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 1b6f12b4b60e1914cab5ab1a52f48b0ac939aa8e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47750790"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68073851"
 ---
 # <a name="sqlgetstmtattr-cursor-library"></a>SQLGetStmtAttr (カーソル ライブラリ)
 > [!IMPORTANT]  
